@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "e927382c_898214aa",
+        "filename": "tests/node-qunit/mobile.startup/Overlay.test.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-10-24T19:04:52Z",
+      "side": 1,
+      "message": "Thank you, done in latest patch",
+      "parentUuid": "eb2459e3_4ae050c9",
+      "revId": "45011b04d70473da51804b1984d325afc6454c87",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "289a731f_ae774289",
         "filename": "tests/node-qunit/mobile.startup/Overlay.test.js",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2018-10-24T16:59:54Z",
       "side": 1,
       "message": "This should probably come above the line above the assertion, otherwise it should be in teardown.",
+      "revId": "45011b04d70473da51804b1984d325afc6454c87",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e7e0803b_cddacc79",
+        "filename": "tests/node-qunit/mobile.startup/Overlay.test.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-10-24T19:04:52Z",
+      "side": 1,
+      "message": "Done in latest patch, but I don\u0027t fully understand why - is it for style / readability? If not, I\u0027m confused why because I think that line would still run even if the preceding assertion failed",
+      "parentUuid": "289a731f_ae774289",
       "revId": "45011b04d70473da51804b1984d325afc6454c87",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
