@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "d54346ea_fab0be03",
+        "filename": "extension.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 1307,
+      "author": {
+        "id": 5095
+      },
+      "writtenOn": "2018-10-24T18:46:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8e83b619_de0fb8fb",
+      "revId": "7d3c2872b7763b6ffe98585f8e38570f244dbfda",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3fe94f8b_11d5a38b",
         "filename": "resources/mobile.editor.overlay/BlockMessage.js",
         "patchSetId": 4
@@ -66,6 +84,24 @@
       "side": 1,
       "message": "That\u0027s a good question. I\u0027ll have to ask and get back to you on this.",
       "parentUuid": "3fe94f8b_11d5a38b",
+      "revId": "7d3c2872b7763b6ffe98585f8e38570f244dbfda",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "47a5f6a9_4f550d15",
+        "filename": "resources/mobile.editor.overlay/BlockMessage.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 5095
+      },
+      "writtenOn": "2018-10-24T18:46:01Z",
+      "side": 1,
+      "message": "I asked and it is fine to track when the Blocked Notice is displayed so we are gonna leave it here",
+      "parentUuid": "49943f0f_720da68d",
       "revId": "7d3c2872b7763b6ffe98585f8e38570f244dbfda",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
