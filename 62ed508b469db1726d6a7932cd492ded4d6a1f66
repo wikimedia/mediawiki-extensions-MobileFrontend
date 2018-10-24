@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "91dc8738_b0471672",
+        "filename": "tests/node-qunit/mobile.startup/Overlay.test.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-10-24T21:45:42Z",
+      "side": 1,
+      "message": "I think the hide can probably be dropped TBH\nIt seems to be doing cleanup (making sure the overlay is not in the page) but we can deal with this later.",
+      "revId": "62ed508b469db1726d6a7932cd492ded4d6a1f66",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
