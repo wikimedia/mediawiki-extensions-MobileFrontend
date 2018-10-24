@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d19d24d4_6dbb1b0f",
+        "filename": "resources/mobile.editor.overlay/BlockMessage.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-10-24T22:19:35Z",
+      "side": 1,
+      "message": "I think the buckets are wrong here?\nLooking at the current graphite counters, they all seem to be\nof the form MediaWiki.\u003cExtensionName\u003e.\u003cAnything goes\u003e\n\nMobileFrontend makes use of the prefix `MediaWiki.mobile`\n\n\nMediaWiki.mobile.BlockNotices.wiki.shown might make more sense here for consistency.",
+      "revId": "0af7dd48b9743643d7d980f997995b5f918a2ea0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
