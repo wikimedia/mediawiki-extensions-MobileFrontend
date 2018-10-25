@@ -88,6 +88,24 @@
       "revId": "0af7dd48b9743643d7d980f997995b5f918a2ea0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b9d27efb_8e932d82",
+        "filename": "resources/mobile.editor.overlay/BlockMessage.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 5095
+      },
+      "writtenOn": "2018-10-25T19:00:05Z",
+      "side": 1,
+      "message": "no worries. actually thank you for taking the time and giving feedback",
+      "parentUuid": "cb395810_2a9ce6eb",
+      "revId": "0af7dd48b9743643d7d980f997995b5f918a2ea0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
