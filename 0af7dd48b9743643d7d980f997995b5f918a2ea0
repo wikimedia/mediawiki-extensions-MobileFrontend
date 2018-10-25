@@ -16,6 +16,24 @@
       "revId": "0af7dd48b9743643d7d980f997995b5f918a2ea0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b1f12933_8f233dfb",
+        "filename": "resources/mobile.editor.overlay/BlockMessage.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 5095
+      },
+      "writtenOn": "2018-10-25T05:12:14Z",
+      "side": 1,
+      "message": "Technically you are right, based on the docs it is in the \"wrong\" bucket. \nThe reason behind this is that we are gonna track \"block displays\" in different places and I figured it would make sense to have it organized under \"MediaWiki.BlockNotices\".\n\nHere is how this is gonna be like in the end so you get an idea of what I\u0027m talking about: \nMediaWiki.BlockNotices.[wikiname].[MobileFrontend|VisualEditor|Wikitext|Api].shown\n\nI don\u0027t have any strong preference about this and I\u0027m open to change it but it look reasonable to me to have it all under BlockNotices.",
+      "parentUuid": "d19d24d4_6dbb1b0f",
+      "revId": "0af7dd48b9743643d7d980f997995b5f918a2ea0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
