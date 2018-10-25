@@ -70,6 +70,24 @@
       "revId": "0af7dd48b9743643d7d980f997995b5f918a2ea0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cb395810_2a9ce6eb",
+        "filename": "resources/mobile.editor.overlay/BlockMessage.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-10-25T18:57:41Z",
+      "side": 1,
+      "message": "sorry about that. i hadnt had my morning coffee",
+      "parentUuid": "0598b07f_f90a4d70",
+      "revId": "0af7dd48b9743643d7d980f997995b5f918a2ea0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
