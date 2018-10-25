@@ -52,6 +52,24 @@
       "revId": "0af7dd48b9743643d7d980f997995b5f918a2ea0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0598b07f_f90a4d70",
+        "filename": "resources/mobile.editor.overlay/BlockMessage.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 5095
+      },
+      "writtenOn": "2018-10-25T18:09:36Z",
+      "side": 1,
+      "message": "the \"counter\" prefix is so the counter handler picks it up. It is not part of the bucket \"key(?)\". It is currently being used in other places too (https://codesearch.wmflabs.org/extensions/?q\u003dcounter%5C.MediaWiki\u0026i\u003dnope\u0026files\u003d\u0026repos\u003d)\n\nDocs about that below\nhttps://wikitech.wikimedia.org/wiki/Graphite#statsv\n\nhttps://github.com/wikimedia/mediawiki-extensions-WikimediaEvents/blob/3cd62f95f49d23a475770a98e48e16c65c8fa2b2/modules/all/ext.wikimediaEvents.statsd.js#L67",
+      "parentUuid": "27896e67_d907e70d",
+      "revId": "0af7dd48b9743643d7d980f997995b5f918a2ea0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
