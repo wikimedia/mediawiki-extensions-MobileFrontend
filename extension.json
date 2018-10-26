@@ -403,7 +403,7 @@
 				"mediawiki.confirmCloseWindow"
 			],
 			"scripts": [
-				"resources/mobile.editor.common/schemaEdit.js",
+				"resources/mobile.editor.common/schemaEditAttemptStep.js",
 				"resources/mobile.editor.common/AbuseFilterOverlay.js",
 				"resources/mobile.editor.common/AbuseFilterPanel.js",
 				"resources/mobile.editor.common/EditorOverlayBase.js"
