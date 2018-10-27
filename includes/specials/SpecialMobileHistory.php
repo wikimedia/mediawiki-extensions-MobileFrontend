@@ -204,8 +204,8 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 			$bytes -= $prev->getSize();
 		}
 		$isMinor = $rev->isMinor();
-		$this->renderFeedItemHtml( $ts, $diffLink, $username, $comment, $title, $user->isAnon(), $bytes,
-			$isMinor );
+		$this->renderFeedItemHtml( $ts, $diffLink, $username, $comment, $title,
+			$rev->getUser( Revision::FOR_THIS_USER, $user ) === 0, $bytes, $isMinor );
 	}
 
 	/**
