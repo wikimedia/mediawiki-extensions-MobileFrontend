@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4f2ce5f1_3c9b523a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2018-10-27T13:14:10Z",
+      "side": 1,
+      "message": "Order of information is wrong\n\nhttps://www.mediawiki.org/wiki/Gerrit/Commit_message_guidelines",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 12
+      },
+      "revId": "655236c925b03ac7c886057b2847f919cbb7b071",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fdf2513e_384ae1f6",
+        "filename": "includes/specials/MobileSpecialPageFeed.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2018-10-27T13:14:10Z",
+      "side": 1,
+      "message": "Not exactly true\n\n\t * Fetch revision\u0027s user id if it\u0027s available to the specified audience.\n\t * If the specified audience does not have access to it, zero will be\n\t * returned.",
+      "range": {
+        "startLine": 123,
+        "startChar": 4,
+        "endLine": 123,
+        "endChar": 60
+      },
+      "revId": "655236c925b03ac7c886057b2847f919cbb7b071",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4d0c5605_e0aec465",
+        "filename": "includes/specials/MobileSpecialPageFeed.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2018-10-27T13:14:10Z",
+      "side": 1,
+      "message": "?",
+      "range": {
+        "startLine": 126,
+        "startChar": 17,
+        "endLine": 126,
+        "endChar": 23
+      },
+      "revId": "655236c925b03ac7c886057b2847f919cbb7b071",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "327bdea4_54cadb78",
+        "filename": "includes/specials/MobileSpecialPageFeed.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2018-10-27T13:14:10Z",
+      "side": 1,
+      "message": "Is this name descriptive enough? Is the Revision Anonymous? Does that make sense?",
+      "range": {
+        "startLine": 128,
+        "startChar": 20,
+        "endLine": 128,
+        "endChar": 29
+      },
+      "revId": "655236c925b03ac7c886057b2847f919cbb7b071",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "75eaf6a8_c0e304e1",
+        "filename": "includes/specials/MobileSpecialPageFeed.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2018-10-27T13:14:10Z",
+      "side": 1,
+      "message": "There is no need for the temporary variable",
+      "range": {
+        "startLine": 129,
+        "startChar": 2,
+        "endLine": 130,
+        "endChar": 23
+      },
+      "revId": "655236c925b03ac7c886057b2847f919cbb7b071",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
