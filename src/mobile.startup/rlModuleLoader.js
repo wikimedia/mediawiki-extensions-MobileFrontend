@@ -1,4 +1,6 @@
-var LoadingOverlay = require( './LoadingOverlay' );
+var
+	LoadingOverlay = require( './LoadingOverlay' ),
+	util = require( './util' );
 
 /**
  * Utility library for looking up details on the current user
@@ -37,6 +39,8 @@ module.exports = {
 			return loadingOverlay;
 		}, function () {
 			hideOverlayIfNeeded();
+
+			return util.Deferred().reject().promise();
 		} );
 	}
 };
