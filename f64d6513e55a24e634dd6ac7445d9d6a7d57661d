@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "f5dea021_3671985b",
+        "filename": "resources/mobile.editor.overlay/BlockMessage.hogan",
+        "patchSetId": 8
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 4911
+      },
+      "writtenOn": "2018-10-29T13:59:29Z",
+      "side": 1,
+      "message": "I have no idea, I stole it from `creatorHeader` below. But yes it looks like functions work in mustache (as far as I can tell) http://mustache.github.io/mustache.5.html",
+      "parentUuid": "da2123be_9d54d79c",
+      "revId": "f64d6513e55a24e634dd6ac7445d9d6a7d57661d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6495e972_9769f92e",
         "filename": "tests/qunit/mobile.editor.api/EditorGateway.test.js",
         "patchSetId": 8
@@ -30,6 +48,24 @@
       "writtenOn": "2018-10-24T17:02:55Z",
       "side": 1,
       "message": "thanks this is great!\nit makes 100% clear what the responsibilities of getBlockInfo are!\n\nAre there unhappy paths that should be covered?\ne.g. what if the page has become unblocked in the short time period and this responds with no blocked code?",
+      "revId": "f64d6513e55a24e634dd6ac7445d9d6a7d57661d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "11fbf497_180ef20d",
+        "filename": "tests/qunit/mobile.editor.api/EditorGateway.test.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 4911
+      },
+      "writtenOn": "2018-10-29T13:59:29Z",
+      "side": 1,
+      "message": "If that were to happen, you\u0027d have to try to edit again, which I believe is the same thing that happens right now.",
+      "parentUuid": "6495e972_9769f92e",
       "revId": "f64d6513e55a24e634dd6ac7445d9d6a7d57661d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
