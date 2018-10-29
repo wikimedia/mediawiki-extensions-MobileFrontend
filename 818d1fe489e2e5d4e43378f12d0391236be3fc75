@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "b762df05_7ca37665",
+        "filename": "resources/mobile.editor.common/schemaEditAttemptStep.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2018-10-29T19:34:52Z",
+      "side": 1,
+      "message": "Good catch",
+      "parentUuid": "7dfc675d_700e877f",
+      "revId": "818d1fe489e2e5d4e43378f12d0391236be3fc75",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ea856058_bd619a54",
         "filename": "resources/mobile.editor.common/schemaEditAttemptStep.js",
         "patchSetId": 4
@@ -33,6 +51,24 @@
       "revId": "818d1fe489e2e5d4e43378f12d0391236be3fc75",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ff003f8a_b584a378",
+        "filename": "resources/mobile.editor.common/schemaEditAttemptStep.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2018-10-29T19:34:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ea856058_bd619a54",
+      "revId": "818d1fe489e2e5d4e43378f12d0391236be3fc75",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
