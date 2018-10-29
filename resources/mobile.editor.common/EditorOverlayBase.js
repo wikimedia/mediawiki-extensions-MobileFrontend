@@ -167,15 +167,17 @@
 			'click .submit': 'onClickSubmit'
 		} ),
 		/**
-		 * Logs an event to  http://meta.wikimedia.org/wiki/Schema:Edit
+		 * Logs an event to http://meta.wikimedia.org/wiki/Schema:EditAttemptStep
 		 * @memberof EditorOverlayBase
 		 * @instance
 		 * @param {Object} data
 		 */
 		log: function ( data ) {
-			mw.track( 'mf.schemaEdit', util.extend( data, {
-				editor: this.editor,
-				editingSessionId: this.sessionId
+			mw.track( 'mf.schemaEditAttemptStep', util.extend( data, {
+				// eslint-disable-next-line camelcase
+				editor_interface: this.editor,
+				// eslint-disable-next-line camelcase
+				editing_session_id: this.sessionId
 			} ) );
 		},
 
