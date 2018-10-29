@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e997014e_3f4ffb51",
+        "filename": "resources/mobile.editor.common/EditorOverlayBase.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 170,
+      "author": {
+        "id": 6097
+      },
+      "writtenOn": "2018-10-29T15:52:18Z",
+      "side": 1,
+      "message": "should be Edit2",
+      "revId": "8c8004e1d86b687ab768469109774adaaba5e91a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
