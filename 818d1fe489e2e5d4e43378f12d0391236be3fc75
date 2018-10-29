@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7dfc675d_700e877f",
+        "filename": "resources/mobile.editor.common/schemaEditAttemptStep.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 6097
+      },
+      "writtenOn": "2018-10-29T19:25:14Z",
+      "side": 1,
+      "message": "I think this should be wgWMESchemaEditAttemptStepSamplingRate",
+      "revId": "818d1fe489e2e5d4e43378f12d0391236be3fc75",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ea856058_bd619a54",
+        "filename": "resources/mobile.editor.common/schemaEditAttemptStep.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 6097
+      },
+      "writtenOn": "2018-10-29T19:25:14Z",
+      "side": 1,
+      "message": "should be `wgWMESchemaEditAttemptStepOversample`",
+      "revId": "818d1fe489e2e5d4e43378f12d0391236be3fc75",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
