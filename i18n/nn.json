@@ -123,6 +123,8 @@
 	"mobile-frontend-nearby-requirements": "Diverre stør ikkje nettlesaren {{SITENAME}}-funksjonen «Nær her».",
 	"mobile-frontend-nearby-requirements-guidance": "Freist ein annan nettlesar eller slå på JavaScript om du har slege det av.",
 	"mobile-frontend-nearby-title": "Nær her",
+	"mobile-frontend-nearby-info-description": "Du kan lesa interessante {{SITENAME}}-artiklar om stader nær deg",
+	"mobile-frontend-nearby-info-show-button": "Vis artiklar i nærleiken",
 	"mobile-frontend-news-items": "Nyhende",
 	"mobile-frontend-opt-in-explain": "Ved å verta med på betatestinga, vil du få tilgang til funksjonar under utrøyning; med den kostnaden at du kan møta på feil og vanskar.",
 	"mobile-frontend-overlay-close": "Lat att",
