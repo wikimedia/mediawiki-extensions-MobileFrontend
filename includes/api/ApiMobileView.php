@@ -22,11 +22,11 @@ class ApiMobileView extends ApiBase {
 	protected $usePageImages;
 	/** @var string Saves in which language the content should be output */
 	private $variant;
-	/** @var Integer Saves at which character the section content start at */
+	/** @var integer Saves at which character the section content start at */
 	private $offset;
-	/** @var Integer Saves value to specify the max length of a sections content */
+	/** @var integer Saves value to specify the max length of a sections content */
 	private $maxlen;
-	/** @var file|boolean Saves a File Object, or false if no file exist */
+	/** @var resource|boolean Saves a File Object, or false if no file exist */
 	private $file;
 
 	/**
@@ -44,7 +44,7 @@ class ApiMobileView extends ApiBase {
 	 * @param string $propNames requested list of pageprops separated by '|'. If '*'
 	 *  all page props will be returned.
 	 * @param array $data data available as returned by getData
-	 * @return Array associative
+	 * @return array associative
 	 */
 	public function getMobileViewPageProps( $propNames, $data ) {
 		if ( array_key_exists( 'pageprops', $data ) ) {
@@ -263,8 +263,8 @@ class ApiMobileView extends ApiBase {
 	/**
 	 * Adds the short description of the page to the result if available.
 	 * @param ApiResult $resultObj API result object
-	 * @param array $pageprops page props
-	 * @param string $moduleName name of the module being executed by this instance
+	 * @param array $pageprops Page props
+	 * @param string $moduleName Name of the module being executed by this instance
 	 */
 	private function addDescriptionToResult( ApiResult $resultObj, array $pageprops, $moduleName ) {
 		if ( array_key_exists( 'wikibase-shortdesc', $pageprops ) ) {
@@ -330,7 +330,7 @@ class ApiMobileView extends ApiBase {
 	 * Wrapper that returns a page image for a given title
 	 *
 	 * @param Title $title Page title
-	 * @return bool|File
+	 * @return bool|resource
 	 */
 	protected function getPageImage( Title $title ) {
 		return PageImages::getPageImage( $title );
@@ -341,7 +341,7 @@ class ApiMobileView extends ApiBase {
 	 *
 	 * @param Title|string $title Page title
 	 * @param array $options Options for wfFindFile (see RepoGroup::findFile)
-	 * @return bool|File
+	 * @return bool|resource
 	 */
 	protected function findFile( $title, $options = [] ) {
 		return wfFindFile( $title, $options );
@@ -506,12 +506,12 @@ class ApiMobileView extends ApiBase {
 
 	/**
 	 * Parses section data
-	 * @param string $html representing the entire page
+	 * @param string $html Representing the entire page
 	 * @param Title $title Page title
 	 * @param ParserOutput $parserOutput
-	 * @param int|null $revId this is a temporary parameter to avoid debug log warnings.
+	 * @param int|null $revId This is a temporary parameter to avoid debug log warnings.
 	 *  Long term the call to wfDebugLog should be moved outside this method (optional)
-	 * @return array structure representing the list of sections and their properties:
+	 * @return array Structure representing the list of sections and their properties:
 	 *  - refsections: [] where all keys are section ids of sections with refs
 	 *    that contain references
 	 *  - sections: [] a structured array of all the sections inside the page
