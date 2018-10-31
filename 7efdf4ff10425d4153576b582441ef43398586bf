@@ -16,6 +16,24 @@
       "revId": "7efdf4ff10425d4153576b582441ef43398586bf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f2fc03d_745c5e2c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-10-31T17:35:01Z",
+      "side": 1,
+      "message": "https://phabricator.wikimedia.org/T208448",
+      "parentUuid": "8d0aa835_d0b10939",
+      "revId": "7efdf4ff10425d4153576b582441ef43398586bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
