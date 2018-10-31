@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ddf3bce4_18faf67d",
+        "filename": "tests/node-qunit/mobile.startup/extendSearchParams.test.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-10-31T23:00:16Z",
+      "side": 1,
+      "message": "Per our test guidelines[1], should this be \"MobileFrontend extendSearchParams.js\"?\n\n[1] https://www.mediawiki.org/wiki/Reading/Web/QUnit_test_guidelines",
+      "range": {
+        "startLine": 6,
+        "startChar": 15,
+        "endLine": 6,
+        "endChar": 34
+      },
+      "revId": "59e2e1819c82606dfd237d8bb6e6f1692b0916dc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8fcee45d_6a9e074f",
+        "filename": "tests/node-qunit/mobile.startup/extendSearchParams.test.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-10-31T23:00:16Z",
+      "side": 1,
+      "message": "I think this will actually need the dom util as well when jQuery.tearDown is added to the afterEach hook. I believe  the reason it works now is because other tests didn\u0027t call jQuery.tearDown properly (leading to side effects).",
+      "range": {
+        "startLine": 10,
+        "startChar": 2,
+        "endLine": 10,
+        "endChar": 34
+      },
+      "revId": "59e2e1819c82606dfd237d8bb6e6f1692b0916dc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "19ed88ef_5df20b82",
+        "filename": "tests/node-qunit/mobile.startup/extendSearchParams.test.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-10-31T23:00:16Z",
+      "side": 1,
+      "message": "I think jQuery.tearDown() needs to also be called in this hook",
+      "range": {
+        "startLine": 26,
+        "startChar": 0,
+        "endLine": 28,
+        "endChar": 2
+      },
+      "revId": "59e2e1819c82606dfd237d8bb6e6f1692b0916dc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ad00a424_110d0051",
+        "filename": "tests/node-qunit/mobile.startup/extendSearchParams.test.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-10-31T23:00:16Z",
+      "side": 1,
+      "message": "Since this module only exports a single function, it  personally feels redundant to me to list the function name in each test, but I\u0027m fine keeping it if you / others feel it\u0027s helpful.",
+      "range": {
+        "startLine": 31,
+        "startChar": 13,
+        "endLine": 31,
+        "endChar": 32
+      },
+      "revId": "59e2e1819c82606dfd237d8bb6e6f1692b0916dc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
