@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1b257eff_3628eaf7",
+        "filename": "includes/specials/SpecialMobileContributions.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2018-10-31T22:38:25Z",
+      "side": 1,
+      "message": "This needs to be a string, not a User object; caused T208469, fixed in Ibaaccc255.",
+      "range": {
+        "startLine": 79,
+        "startChar": 17,
+        "endLine": 79,
+        "endChar": 28
+      },
+      "revId": "b9f6ff62dbd5df1d5a9d715472e00ee684c5997f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
