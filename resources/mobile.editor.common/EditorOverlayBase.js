@@ -367,14 +367,18 @@
 		 * @return {boolean|jQuery.Promise} Boolean, or promise resolving with a boolean
 		 */
 		hide: function () {
-			var self = this;
+			var windowManager,
+				self = this;
 			if ( this.hasChanged() ) {
-				return OO.ui.confirm( mw.msg( 'mobile-frontend-editor-cancel-confirm' ) ).then( function ( confirmed ) {
-					if ( confirmed ) {
-						self.allowCloseWindow.release();
-						Overlay.prototype.hide.call( self );
-					}
-				} );
+				windowManager = OO.ui.getWindowManager();
+				windowManager.addWindows( [ new mw.widgets.AbandonEditDialog() ] );
+				return windowManager.openWindow( 'abandonedit' )
+					.closed.then( function ( data ) {
+						if ( data && data.action === 'discard' ) {
+							self.allowCloseWindow.release();
+							Overlay.prototype.hide.call( self );
+						}
+					} );
 			} else {
 				this.allowCloseWindow.release();
 				return Overlay.prototype.hide.call( self );

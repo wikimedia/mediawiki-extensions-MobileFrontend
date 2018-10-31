@@ -400,7 +400,8 @@
 				"mobile.startup",
 				"mobile.messageBox",
 				"mediawiki.util",
-				"mediawiki.confirmCloseWindow"
+				"mediawiki.confirmCloseWindow",
+				"mediawiki.widgets.AbandonEditDialog"
 			],
 			"scripts": [
 				"resources/mobile.editor.common/schemaEditAttemptStep.js",
