@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "b2a5a057_e1e757c9",
+        "filename": "includes/transforms/AddMobileTocTransform.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-10-31T22:05:30Z",
+      "side": 1,
+      "message": "Does it need to be a h2 or would a div with a role make more sense?",
+      "revId": "5ac796ecab53c0ab4becaf0162316a408e8d81ea",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "96ba6c43_99fb22a5",
         "filename": "includes/transforms/AddMobileTocTransform.php",
         "patchSetId": 2
