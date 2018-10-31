@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ba972ac9_43f9a7c1",
+        "filename": "includes/transforms/AddMobileTocTransform.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2018-10-31T22:18:32Z",
+      "side": 1,
+      "message": "From a screen reader perspective (and maybe also for SEO, although I doubt this, cause the content is more important) it seems useful (as long as we don\u0027t provide the other sections as `\u003csection\u003e`s.",
+      "parentUuid": "b2a5a057_e1e757c9",
+      "revId": "5ac796ecab53c0ab4becaf0162316a408e8d81ea",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "96ba6c43_99fb22a5",
         "filename": "includes/transforms/AddMobileTocTransform.php",
         "patchSetId": 2
