@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8d0aa835_d0b10939",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-10-31T17:00:43Z",
+      "side": 1,
+      "message": "Yes.\n\nhttps://www.mediawiki.org/wiki/Manual:Coding_conventions/PHP#Comments_and_documentation suggests (but doesn\u0027t make explicit) that bool is preferred.\n\nI\u0027d suggest being bold and revising that wiki page.\n\n\nIdeally this stuff should be linted and there should be a sniff for this. I could have sworn there was a PHP sniff to do this.\nI\u0027d suggest raising an issue for this against https://github.com/wikimedia/mediawiki-tools-codesniffer",
+      "revId": "7efdf4ff10425d4153576b582441ef43398586bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
