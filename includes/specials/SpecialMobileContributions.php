@@ -76,7 +76,7 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 					$this->renderHeaderBar( $this->user->getUserPage() );
 				}
 				$pager = new ContribsPager( $this->getContext(), ContribsPager::processDateFilter( [
-					'target' => $this->user,
+					'target' => $this->user->getName(),
 					// All option setting is baked into SpecialContribution::execute
 					// Until that method gets refactored we will ignore all options
 					// See https://phabricator.wikimedia.org/T199429
