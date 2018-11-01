@@ -5,7 +5,7 @@ use MobileFrontend\Features\Feature;
 
 /**
  * @group MobileFrontend
- * @coversDefaultClass MobileFrontend\Features\FeaturesManager
+ * @coversDefaultClass \MobileFrontend\Features\FeaturesManager
  */
 class FeaturesManagerTest extends MediaWikiTestCase {
 

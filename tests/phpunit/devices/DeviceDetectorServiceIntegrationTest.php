@@ -53,10 +53,10 @@ class DeviceDetectorServiceIntegrationTest extends MediaWikiTestCase {
 	}
 
 	/**
-	 * @covers MobileFrontend\Devices\DeviceDetectorService::factory
-	 * @covers MobileFrontend\Devices\DeviceDetectorService::detectDeviceProperties
-	 * @covers MobileFrontend\Devices\DeviceProperties::isMobileDevice
-	 * @covers MobileFrontend\Devices\DeviceProperties::isTabletDevice
+	 * @covers \MobileFrontend\Devices\DeviceDetectorService::factory
+	 * @covers \MobileFrontend\Devices\DeviceDetectorService::detectDeviceProperties
+	 * @covers \MobileFrontend\Devices\DeviceProperties::isMobileDevice
+	 * @covers \MobileFrontend\Devices\DeviceProperties::isTabletDevice
 	 */
 	public function testItShouldHandleRequestsFromMobileUAs() {
 		$this->whenTheRequestIsFromAMobileUA();
@@ -68,10 +68,10 @@ class DeviceDetectorServiceIntegrationTest extends MediaWikiTestCase {
 	}
 
 	/**
-	 * @covers MobileFrontend\Devices\DeviceDetectorService::factory
-	 * @covers MobileFrontend\Devices\DeviceDetectorService::detectDeviceProperties
-	 * @covers MobileFrontend\Devices\DeviceProperties::isMobileDevice
-	 * @covers MobileFrontend\Devices\DeviceProperties::isTabletDevice
+	 * @covers \MobileFrontend\Devices\DeviceDetectorService::factory
+	 * @covers \MobileFrontend\Devices\DeviceDetectorService::detectDeviceProperties
+	 * @covers \MobileFrontend\Devices\DeviceProperties::isMobileDevice
+	 * @covers \MobileFrontend\Devices\DeviceProperties::isTabletDevice
 	 */
 	public function testItShouldHandleARequestFromDesktopBrowsers() {
 		$properties = $this->detectDeviceProperties();
@@ -81,10 +81,10 @@ class DeviceDetectorServiceIntegrationTest extends MediaWikiTestCase {
 	}
 
 	/**
-	 * @covers MobileFrontend\Devices\DeviceDetectorService::factory
-	 * @covers MobileFrontend\Devices\DeviceDetectorService::detectDeviceProperties
-	 * @covers MobileFrontend\Devices\DeviceProperties::isMobileDevice
-	 * @covers MobileFrontend\Devices\DeviceProperties::isTabletDevice
+	 * @covers \MobileFrontend\Devices\DeviceDetectorService::factory
+	 * @covers \MobileFrontend\Devices\DeviceDetectorService::detectDeviceProperties
+	 * @covers \MobileFrontend\Devices\DeviceProperties::isMobileDevice
+	 * @covers \MobileFrontend\Devices\DeviceProperties::isTabletDevice
 	 */
 	public function testItShouldPrioritizeTheCustomRequestHeader() {
 		// @codingStandardsIgnoreStart
@@ -102,10 +102,10 @@ class DeviceDetectorServiceIntegrationTest extends MediaWikiTestCase {
 
 	/**
 	 * @fixme Should this really be the case?
-	 * @covers MobileFrontend\Devices\DeviceDetectorService::factory
-	 * @covers MobileFrontend\Devices\DeviceDetectorService::detectDeviceProperties
-	 * @covers MobileFrontend\Devices\DeviceProperties::isMobileDevice
-	 * @covers MobileFrontend\Devices\DeviceProperties::isTabletDevice
+	 * @covers \MobileFrontend\Devices\DeviceDetectorService::factory
+	 * @covers \MobileFrontend\Devices\DeviceDetectorService::detectDeviceProperties
+	 * @covers \MobileFrontend\Devices\DeviceProperties::isMobileDevice
+	 * @covers \MobileFrontend\Devices\DeviceProperties::isTabletDevice
 	 */
 	public function testItShouldPrioritizeTheAmfEnvironmentVariables() {
 		$this->request->setHeader( 'X-Subdomain', 'M' );
@@ -122,8 +122,8 @@ class DeviceDetectorServiceIntegrationTest extends MediaWikiTestCase {
 	}
 
 	/**
-	 * @covers MobileFrontend\Devices\DeviceDetectorService::factory
-	 * @covers MobileFrontend\Devices\DeviceDetectorService::detectDeviceProperties
+	 * @covers \MobileFrontend\Devices\DeviceDetectorService::factory
+	 * @covers \MobileFrontend\Devices\DeviceDetectorService::detectDeviceProperties
 	 */
 	public function testItShouldHandleDeviceDetectionBeingDisabled() {
 		$this->setMwGlobals( 'wgMFAutodetectMobileView', false );

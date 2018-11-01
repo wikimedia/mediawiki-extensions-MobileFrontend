@@ -45,9 +45,9 @@ class DeviceDetectorServiceTest extends MediaWikiTestCase {
 	}
 
 	/**
-	 * @covers MobileFrontend\Devices\DeviceDetectorService::detectDeviceProperties
-	 * @covers MobileFrontend\Devices\DeviceDetectorService::__construct
-	 * @covers MobileFrontend\Devices\DeviceProperties::__construct
+	 * @covers \MobileFrontend\Devices\DeviceDetectorService::detectDeviceProperties
+	 * @covers \MobileFrontend\Devices\DeviceDetectorService::__construct
+	 * @covers \MobileFrontend\Devices\DeviceProperties::__construct
 	 */
 	public function testItShouldHandleOneChild() {
 		$expectedProperties = new DeviceProperties( true, false );
@@ -59,9 +59,9 @@ class DeviceDetectorServiceTest extends MediaWikiTestCase {
 	}
 
 	/**
-	 * @covers MobileFrontend\Devices\DeviceDetectorService::detectDeviceProperties
-	 * @covers MobileFrontend\Devices\DeviceDetectorService::__construct
-	 * @covers MobileFrontend\Devices\DeviceProperties::__construct
+	 * @covers \MobileFrontend\Devices\DeviceDetectorService::detectDeviceProperties
+	 * @covers \MobileFrontend\Devices\DeviceDetectorService::__construct
+	 * @covers \MobileFrontend\Devices\DeviceProperties::__construct
 	 */
 	public function testItShouldHandleManyChildren() {
 		$expectedProperties = new DeviceProperties( true, false );
@@ -77,8 +77,8 @@ class DeviceDetectorServiceTest extends MediaWikiTestCase {
 	}
 
 	/**
-	 * @covers MobileFrontend\Devices\DeviceDetectorService::detectDeviceProperties
-	 * @covers MobileFrontend\Devices\DeviceDetectorService::__construct
+	 * @covers \MobileFrontend\Devices\DeviceDetectorService::detectDeviceProperties
+	 * @covers \MobileFrontend\Devices\DeviceDetectorService::__construct
 	 */
 	public function testItShouldHandleZeroChildren() {
 		$detector = $this->createDetector( [] );

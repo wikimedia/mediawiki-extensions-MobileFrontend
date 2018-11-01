@@ -13,12 +13,12 @@ use MobileFrontend\Devices\CustomHeaderDeviceDetector;
 class CustomHeaderDeviceDetectorTest extends MediaWikiTestCase {
 
 	/**
-	 * @var GlobalVarConfig
+	 * @var \GlobalVarConfig
 	 */
 	private $config;
 
 	/**
-	 * @var UADeviceDetector
+	 * @var \MobileFrontend\Devices\UADeviceDetector
 	 */
 	private $detector;
 
@@ -38,7 +38,7 @@ class CustomHeaderDeviceDetectorTest extends MediaWikiTestCase {
 	}
 
 	/**
-	 * @covers MobileFrontend\Devices\CustomHeaderDeviceDetector::detectDeviceProperties
+	 * @covers \MobileFrontend\Devices\CustomHeaderDeviceDetector::detectDeviceProperties
 	 */
 	public function testIsNullWhenCustomHeaderIsntPresent() {
 		$this->assertNull(
@@ -47,10 +47,10 @@ class CustomHeaderDeviceDetectorTest extends MediaWikiTestCase {
 	}
 
 	/**
-	 * @covers MobileFrontend\Devices\CustomHeaderDeviceDetector::detectDeviceProperties
-	 * @covers MobileFrontend\Devices\CustomHeaderDeviceDetector::__construct
-	 * @covers MobileFrontend\Devices\DeviceProperties::isMobileDevice
-	 * @covers MobileFrontend\Devices\DeviceProperties::isTabletDevice
+	 * @covers \MobileFrontend\Devices\CustomHeaderDeviceDetector::detectDeviceProperties
+	 * @covers \MobileFrontend\Devices\CustomHeaderDeviceDetector::__construct
+	 * @covers \MobileFrontend\Devices\DeviceProperties::isMobileDevice
+	 * @covers \MobileFrontend\Devices\DeviceProperties::isTabletDevice
 	 */
 	public function testIsMobileWhenMobileHeaderIsPresent() {
 		$this->request->setHeader( 'FooHeader',  '' );

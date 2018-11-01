@@ -1,5 +1,7 @@
 <?php
 
+use Psr\Log\LoggerInterface;
+
 /**
  * @group MobileFrontend
  */
@@ -154,7 +156,7 @@ class SpecialMobileLanguagesTest extends MediaWikiTestCase {
 		];
 		$expected = [];
 
-		$loggerMock = $this->getMock( \Psr\Log\LoggerInterface::class );
+		$loggerMock = $this->getMock( LoggerInterface::class );
 		$loggerMock->expects( $this->once() )
 			->method( 'warning' )
 			->with( $this->isType( 'string' ), $this->equalTo(
