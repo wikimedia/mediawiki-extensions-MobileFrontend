@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ff14d328_02ac9394",
+        "filename": "resources/mobile.editor.overlay/EditorOverlay.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 488,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-01T00:02:02Z",
+      "side": 0,
+      "message": "I have specifically checked to see if I can edit my user talk page after being blocked and I can so good job!",
+      "revId": "23ebff983783ebe8c7782a8af1c76a827c383295",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
