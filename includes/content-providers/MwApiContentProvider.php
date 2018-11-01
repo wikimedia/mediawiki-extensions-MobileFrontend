@@ -40,7 +40,7 @@ class MwApiContentProvider implements IContentProvider {
 		if ( !$title ) {
 			return '';
 		}
-		$query = 'action=parse&prop=text|modules|langlinks&page=';
+		$query = 'action=parse&prop=text|modules|properties|langlinks&page=';
 		$url = $this->baseUrl . '?formatversion=2&format=json&' . $query;
 		$url .= rawurlencode( $title->getPrefixedDBkey() );
 		$url .= '&useskin=' . $this->skinName;
@@ -52,6 +52,10 @@ class MwApiContentProvider implements IContentProvider {
 
 			$out->addModules( $parse['modules'] );
 			$out->addModuleStyles( $parse['modulestyles'] );
+			// Copy page properties across
+			foreach ( $parse['properties'] as $key => $val ) {
+				$out->setProperty( $key, $val );
+			}
 			// Forward certain variables so that the page is not registered as "missing"
 			$out->addJsConfigVars( [
 				'wgArticleId' => $parse['pageid'],
