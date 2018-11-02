@@ -433,27 +433,28 @@
 			}
 
 			blockInfo = {
+				partial: data.blockinfo.blockpartial || false,
+				user: data.userinfo,
 				creator: {
-					name: data.block.by,
+					name: data.blockinfo.blockedby,
 					// NS_USER === 2
 					url: mw.util.getUrl(
 						mw.config.get( 'wgFormattedNamespaces' )[2] + ':' +
-						data.block.by
-					),
-					gender: data.blockedByUser.gender
+						data.blockinfo.blockedby
+					)
 				},
 				expiry: null,
 				duration: null,
 				reason: ''
 			};
 
-			expiry = data.block.expiry;
-			if ( expiry !== 'infinity' ) {
+			expiry = data.blockinfo.blockexpiry;
+			if ( [ 'infinite', 'indefinite', 'infinity', 'never' ].indexOf( expiry ) === -1 ) {
 				blockInfo.expiry = moment( expiry ).format( 'LLL' );
 				blockInfo.duration = moment().to( expiry, true );
 			}
 
-			reason = data.block.reason;
+			reason = data.blockinfo.blockreason;
 			if ( reason ) {
 				blockInfo.reason = jqueryMsgParse( reason ) || mw.html.escape( reason );
 			} else {
@@ -480,12 +481,11 @@
 			this.gateway.getContent()
 				.then( function ( result ) {
 					var block, message,
-						content = result.text,
-						userTalkPage = mw.config.get( 'wgNamespaceNumber' ) === 3;
+						content = result.text;
 
 					self.setContent( content );
 					// check if user is blocked
-					if ( result.block && !( userTalkPage && result.block.allowusertalk ) ) {
+					if ( result.blockinfo ) {
 						// Lazy-load moment only if it's needed,
 						// it's somewhat large (it is already used on
 						// mobile by Echo's notifications panel, where it's also lazy-loaded)

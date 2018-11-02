@@ -35,11 +35,14 @@
 				progressive: true,
 				additionalClassNames: 'cancel'
 			} ).options,
-			title: mw.msg( 'mobile-frontend-editor-blocked-drawer-title' ),
+			createTitle: function () {
+				return this.partial ? mw.msg( 'mobile-frontend-editor-blocked-drawer-title-partial' ) : mw.msg( 'mobile-frontend-editor-blocked-drawer-title' );
+			},
 			reasonHeader: mw.msg( 'mobile-frontend-editor-blocked-drawer-reason-header' ),
 			creatorHeader: function () {
+				// The gender is the subject (the blockee) not the object (the blocker).
 				return mw.msg( 'mobile-frontend-editor-blocked-drawer-creator-header',
-					this.creator.gender || 'unknown' );
+					this.user.options.gender || 'unknown' );
 			},
 			expiryHeader: mw.msg( 'mobile-frontend-editor-blocked-drawer-expiry-header' )
 		} ),

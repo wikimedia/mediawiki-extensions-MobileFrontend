@@ -24,6 +24,34 @@
 
 	EditorGateway.prototype = {
 		/**
+		 * Get the block (if there is one) from the result.
+		 * @memberof EditorGateway
+		 * @param {Object} pageObj
+		 * @return {Object|null}
+		 */
+		getBlockInfo: function ( pageObj ) {
+			var blockedError;
+
+			if ( pageObj.actions &&
+				pageObj.actions.edit &&
+				Array.isArray( pageObj.actions.edit )
+			) {
+				blockedError = pageObj.actions.edit.find( function ( error ) {
+					return [ 'blocked', 'autoblocked' ].indexOf( error.code ) !== -1;
+				} );
+
+				if ( blockedError && blockedError.data && blockedError.data.blockinfo ) {
+					// Preload library used by EditorOverlay
+					// to format block expiry datetime and duration
+					mw.loader.load( 'moment' );
+
+					return blockedError.data.blockinfo;
+				}
+			}
+
+			return null;
+		},
+		/**
 		 * Get the content of a page.
 		 * @memberof EditorGateway
 		 * @instance
@@ -36,9 +64,8 @@
 			function resolve() {
 				return util.Deferred().resolve( {
 					text: self.content || '',
-					user: self.userinfo,
-					block: self.block,
-					blockedByUser: self.blockedByUser
+					blockinfo: self.blockinfo,
+					userinfo: self.userinfo
 				} );
 			}
 
@@ -47,14 +74,14 @@
 			} else {
 				options = {
 					action: 'query',
-					prop: 'revisions',
+					prop: [ 'revisions', 'info' ],
+					meta: 'userinfo',
 					rvprop: [ 'content', 'timestamp' ],
 					titles: self.title,
 					// get block information for this user
-					// (meta=userinfo is the only way to find autoblocks,
-					// we can't use list=blocks&bkusers/bkip for this)
-					meta: 'userinfo',
-					uiprop: 'blockinfo',
+					intestactions: 'edit',
+					intestactionsdetail: 'full',
+					uiprop: 'options',
 					formatversion: 2
 				};
 				// Load text of old revision if desired
@@ -81,36 +108,14 @@
 						self.content = revision.content;
 						self.timestamp = revision.timestamp;
 					}
+
+					self.userinfo = resp.query.userinfo;
+
 					// save content a second time to be able to check for changes
 					self.originalContent = self.content;
-					self.userinfo = resp.query.userinfo;
-					self.block = null;
-					self.blockedByUser = null;
+					self.blockinfo = self.getBlockInfo( pageObj );
 
-					if ( !self.userinfo.blockid ) {
-						return resolve();
-					} else {
-						// Preload library used by EditorOverlay
-						// to format block expiry datetime and duration
-						mw.loader.load( 'moment' );
-
-						// Look up additional block information:
-						// * Block flags - 'allowusertalk' for talk pages
-						// * Blocker's gender for localisation messages
-						return self.api.get( {
-							list: 'blocks|users',
-							bkids: self.userinfo.blockid,
-							bkprop: 'by|expiry|reason|flags',
-							ususers: self.userinfo.blockedby,
-							usprop: 'gender',
-							formatversion: 2
-						} ).then( function ( resp ) {
-							self.block = resp.query.blocks[0];
-							self.blockedByUser = resp.query.users[0];
-
-							return resolve();
-						} );
-					}
+					return resolve();
 				} );
 			}
 		},

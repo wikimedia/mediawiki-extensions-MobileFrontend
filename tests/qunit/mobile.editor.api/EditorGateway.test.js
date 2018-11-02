@@ -33,11 +33,13 @@
 		gateway.getContent();
 		assert.ok( this.spy.calledWith( {
 			action: 'query',
-			prop: 'revisions',
+			prop: [ 'revisions', 'info' ],
+			meta: 'userinfo',
 			rvprop: [ 'content', 'timestamp' ],
 			titles: 'MediaWiki:Test.css',
-			meta: 'userinfo',
-			uiprop: 'blockinfo',
+			intestactions: 'edit',
+			intestactionsdetail: 'full',
+			uiprop: 'options',
 			formatversion: 2
 		} ), 'rvsection not passed to api request' );
 	} );
@@ -54,6 +56,7 @@
 
 		return gateway.getContent().then( function ( resp ) {
 			assert.strictEqual( resp.text, 'section', 'return section content' );
+			assert.strictEqual( resp.blockinfo, null );
 			return gateway.getContent();
 		} ).then( function () {
 			assert.strictEqual( spy.callCount, 1, 'cache content' );
@@ -72,6 +75,7 @@
 
 		return gateway.getContent().then( function ( resp ) {
 			assert.strictEqual( resp.text, '', 'return empty section' );
+			assert.strictEqual( resp.blockinfo, undefined );
 			assert.notOk( spy.called, 'don\'t try to retrieve content using API' );
 		} );
 	} );
@@ -91,6 +95,33 @@
 		} ) );
 
 		assert.rejects( gateway.getContent(), /^rvnosuchsection$/, 'return error code' );
+	} );
+
+	QUnit.test( '#getBlockInfo', function ( assert ) {
+		var gateway = new EditorGateway( {
+				api: new mw.Api(),
+				title: 'test'
+			} ),
+			blockinfo = {
+				blockedby: 'Test'
+			},
+			pageObj = {
+				revisions: [
+					{}
+				],
+				actions: {
+					edit: [
+						{
+							code: 'blocked',
+							data: {
+								blockinfo: blockinfo
+							}
+						}
+					]
+				}
+			};
+
+		assert.strictEqual( blockinfo, gateway.getBlockInfo( pageObj ) );
 	} );
 
 	QUnit.test( '#save, success', function ( assert ) {
