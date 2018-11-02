@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7f20d279_3d3b6ee1",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 281,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-02T14:50:53Z",
+      "side": 1,
+      "message": "This hook should be removed too (the default was false and we wanted to check whether it was needed!)",
+      "revId": "3e762cbf72f88465a06eca90f3934fc919663bbc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
