@@ -278,18 +278,6 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		$form_options = $this->getFormOptions();
 
 		ChangeTags::modifyDisplayQuery( $tables, $fields, $conds, $join_conds, $query_options, '' );
-		// Per T206274
-		// This config flag exists to allow quick rollback.
-		// It's not meant for public consumption and defaults to false.
-		// Code can be safely removed when  I2cfc51497fefecefd5c82f3415e370301add14d6 has been
-		// in production for at least 2 weeks and we have not heard any complaints from users.
-		if ( $this->getConfig()->get( 'MFWatchlistRunsChangesListSpecialPageQuery' ) ) {
-			Hooks::run(
-				'ChangesListSpecialPageQuery',
-				// @codingStandardsIgnoreLine
-				[ 'Watchlist', &$tables, &$fields, &$conds, &$query_options, &$join_conds, $form_options ]
-			);
-		}
 
 		return $dbr->select( $tables, $fields, $conds, __METHOD__, $query_options, $join_conds );
 	}
