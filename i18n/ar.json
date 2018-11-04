@@ -76,6 +76,7 @@
 	"mobile-frontend-editor-anon": "حرر بلا تسجيل الدخول",
 	"mobile-frontend-editor-anonwarning": "'''تحذير:''' لم تقم بالدخول. سيكون عنوان الآيبي خاصتك مرئيًا للعامة عند قيامك بأي تعديل. إذا '''سجلت دخولك''' أو '''أنشأت حسابًا'''، تعديلاتك ستنسب لاسم المستخدم خاصتك، مع المزيد من الميزات الأخرى.",
 	"mobile-frontend-editor-blocked-drawer-title": "تم منع حسابك من تحرير {{SITENAME}}",
+	"mobile-frontend-editor-blocked-drawer-title-partial": "تم منع حسابك من تحرير هذه الصفحة",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "سبب المنع",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|تم المنع}} بواسطة",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "ستنتهي صلاحية المنع في",

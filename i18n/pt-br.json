@@ -71,6 +71,7 @@
 	"mobile-frontend-editor-anon": "Edite sem iniciar sessão",
 	"mobile-frontend-editor-anonwarning": "<strong>Aviso:</strong>: Você não está logado. Seu endereço IP será visível publicamente se você fizer alguma edição. Se você <strong>logar</strong> ou <strong>criar uma conta</​​strong>, suas edições serão atribuídas ao seu nome de usuário, juntamente com outros benefícios.",
 	"mobile-frontend-editor-blocked-drawer-title": "Sua conta foi bloqueada para edição em {{SITENAME}}",
+	"mobile-frontend-editor-blocked-drawer-title-partial": "Sua conta foi bloqueada para editar esta página",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Razão para o bloqueio",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Bloqueado|Bloqueada}} por",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "O bloqueio expira em",

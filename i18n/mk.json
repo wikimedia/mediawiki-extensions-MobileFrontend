@@ -50,6 +50,7 @@
 	"mobile-frontend-editor-anon": "Уреди без најава",
 	"mobile-frontend-editor-anonwarning": "<strong>Предупредување:</strong> Не сте најавени. Вашата IP-адреса ќе биде јавно видлива ако уредувате. Ако <strong>се најавите</strong> или <strong>направите сметка</strong>, тогаш уредувањата ќе се припишуваат на вашето корисничко име, покрај другите погодности.",
 	"mobile-frontend-editor-blocked-drawer-title": "Нашата сметка има забрана за уредување на {{SITENAME}}",
+	"mobile-frontend-editor-blocked-drawer-title-partial": "Вашата сметка е блокирана и не може да ја уредува страницава",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Причина за забраната",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Забранил}}",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "Истекува",

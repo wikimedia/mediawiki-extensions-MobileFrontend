@@ -72,6 +72,7 @@
 	"mobile-frontend-editor-anon": "Editar sem iniciar sessão",
 	"mobile-frontend-editor-anonwarning": "<strong>Aviso</strong>: Não iniciou sessão. O seu endereço IP será registado no histórico de edições desta página. Se <strong>iniciar sessão</strong> ou <strong>criar uma conta</strong>, as suas edições serão registadas com o seu nome de utilizador, podendo ainda usufruir de outros benefícios.",
 	"mobile-frontend-editor-blocked-drawer-title": "A sua conta foi bloqueada para edição em {{SITENAME}}",
+	"mobile-frontend-editor-blocked-drawer-title-partial": "Foi-lhe bloqueada a capacidade de editar esta página",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Motivo do bloqueio",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Bloqueado|Bloqueada}} por",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "O bloqueio expira em",

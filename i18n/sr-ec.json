@@ -42,6 +42,7 @@
 	"mobile-frontend-editor-anon": "Уреди без пријављивања",
 	"mobile-frontend-editor-anonwarning": "<strong>Упозорење:</strong> Нисте пријављени. Ако објавите страницу, Ваша IP адреса ће бити јавно видљива у њеној историји измена и другде. Ако се <strong>пријавите</strong> или <strong>отворите налог</strong>, поред осталих погодности које добијате Ваше измене ће бити приписиване Вашем корисничком имену.",
 	"mobile-frontend-editor-blocked-drawer-title": "Ваш налог је блокиран на пројекту {{SITENAME}}",
+	"mobile-frontend-editor-blocked-drawer-title-partial": "Вашем налогу је блокирано уређивање ове странице.",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Разлог блокаде",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Блокирао|Блокирала}} Вас је",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "Блокада ће истећи за",
