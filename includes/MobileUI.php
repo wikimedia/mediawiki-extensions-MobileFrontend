@@ -31,7 +31,7 @@ class MobileUI {
 	 *  with the iconed element
 	 * @return string class name for use with HTML element
 	 */
-	public static function semanticClass( $base, $modifier, $additionalClassNames = '' ) {
+	private static function semanticClass( $base, $modifier, $additionalClassNames = '' ) {
 		$modifier = empty( $modifier ) ? '' : 'mw-ui-' . $modifier;
 		return $base . ' ' . $modifier . ' ' . $additionalClassNames;
 	}
