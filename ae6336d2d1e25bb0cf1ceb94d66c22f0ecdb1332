@@ -1,0 +1,228 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ffb06ae1_d0d212f3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-05T16:46:53Z",
+      "side": 1,
+      "message": "It\u0027s a very minor point but, in my view, this change makes the code friendlier at the tradeoff of increased complexity.",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 25
+      },
+      "revId": "ae6336d2d1e25bb0cf1ceb94d66c22f0ecdb1332",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4ecfb432_07739606",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-05T16:46:53Z",
+      "side": 1,
+      "message": "Are we just getting a shebang with this change? I\u0027m not objecting I just wanted to understand this point better.",
+      "range": {
+        "startLine": 10,
+        "startChar": 2,
+        "endLine": 11,
+        "endChar": 14
+      },
+      "revId": "ae6336d2d1e25bb0cf1ceb94d66c22f0ecdb1332",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "13b6a99d_b145ec2d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-05T16:46:53Z",
+      "side": 1,
+      "message": "Should we do a nonvoting job instead? This would allow us to see errors from *all* committers but only act on them as wanted.",
+      "range": {
+        "startLine": 12,
+        "startChar": 2,
+        "endLine": 13,
+        "endChar": 60
+      },
+      "revId": "ae6336d2d1e25bb0cf1ceb94d66c22f0ecdb1332",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "745317af_d9478b43",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-05T16:46:53Z",
+      "side": 1,
+      "message": "I recommend adding a `set -euo pipefail` to the start of every Bash script and `set -eu` to every Shell script. This will give the sanest functionality available in Ba/Sh.",
+      "revId": "ae6336d2d1e25bb0cf1ceb94d66c22f0ecdb1332",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "14ca8799_ca6a9c9e",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-05T16:46:53Z",
+      "side": 1,
+      "message": "Isn\u0027t this implied?",
+      "range": {
+        "startLine": 3,
+        "startChar": 11,
+        "endLine": 3,
+        "endChar": 16
+      },
+      "revId": "ae6336d2d1e25bb0cf1ceb94d66c22f0ecdb1332",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "29e72295_80c013f3",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-05T16:46:53Z",
+      "side": 1,
+      "message": "Do we need a subshell here?",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 1
+      },
+      "revId": "ae6336d2d1e25bb0cf1ceb94d66c22f0ecdb1332",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0543e71e_eb555fe0",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-05T16:46:53Z",
+      "side": 1,
+      "message": "Should we use tabs?",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 5,
+        "endChar": 4
+      },
+      "revId": "ae6336d2d1e25bb0cf1ceb94d66c22f0ecdb1332",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a4383b95_57db4fd0",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-05T16:46:53Z",
+      "side": 1,
+      "message": "Trailing spaces.",
+      "range": {
+        "startLine": 8,
+        "startChar": 14,
+        "endLine": 8,
+        "endChar": 15
+      },
+      "revId": "ae6336d2d1e25bb0cf1ceb94d66c22f0ecdb1332",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8042fc4e_242152d7",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-05T16:46:53Z",
+      "side": 1,
+      "message": "This might print better on one line:\n\n echo \"I will now check that you built them using the correct Node.js v$(\u003c .nvmrc ). You are using $(node -v).\"",
+      "range": {
+        "startLine": 7,
+        "startChar": 4,
+        "endLine": 8,
+        "endChar": 14
+      },
+      "revId": "ae6336d2d1e25bb0cf1ceb94d66c22f0ecdb1332",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "116805e0_590ba8ba",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-05T16:46:53Z",
+      "side": 1,
+      "message": "This isn\u0027t very helpful advice if the previous check shows the user has the correct version. I think we should advise the user to blast their node_modules and perform a clean npm install and build.",
+      "range": {
+        "startLine": 17,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 99
+      },
+      "revId": "ae6336d2d1e25bb0cf1ceb94d66c22f0ecdb1332",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
