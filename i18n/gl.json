@@ -59,6 +59,7 @@
 	"mobile-frontend-editor-anonwarning": "<strong>Aviso</strong>: non accedeu ao sistema. O seu enderezo IP será visible publicamente se fai calquera edición. Se <strong>accede ao sistema</strong> ou <strong>crea unha conta</strong>, as súas edicións atribuiranse ao seu nome de usuario, xunto con outros beneficios.",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Motivo para o bloqueo",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:1$|Bloqueado|Bloqueada}} por",
+	"mobile-frontend-editor-blocked-drawer-expiry-header": "O bloqueo caducará o",
 	"mobile-frontend-editor-generic-block-reason": "Razón descoñecida",
 	"mobile-frontend-editor-cancel": "Cancelar",
 	"mobile-frontend-editor-cancel-confirm": "Está seguro de querer deixar a edición?",
@@ -137,6 +138,7 @@
 	"mobile-frontend-main-menu-settings-heading": "Configuracións",
 	"mobile-frontend-media-details": "Detalles",
 	"mobile-frontend-media-license-link": "Información sobre a licenza",
+	"mobile-frontend-media-load-fail-retry": "Actualizar",
 	"mobile-frontend-missing-image": "Imaxe",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 km}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",
@@ -276,5 +278,6 @@
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Tamaño da fonte",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Controla o tamaño da fonte da súa experiencia de lectura.",
 	"mobile-frontend-beta-only": "A funcionalidade só atópase dispoñíbel no modo beta",
-	"mobile-frontend-console-recruit": "Saiba máis sobre a forma en como construímos o noso sitio móbil @ https://www.mediawiki.org/wiki/Extension:MobileFrontend"
+	"mobile-frontend-console-recruit": "Saiba máis sobre a forma en como construímos o noso sitio móbil @ https://www.mediawiki.org/wiki/Extension:MobileFrontend",
+	"prefs-mobile": "Preferencias móbiles"
 }
