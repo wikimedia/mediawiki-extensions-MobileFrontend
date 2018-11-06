@@ -4,16 +4,14 @@
  * @class context
  * @singleton
  */
-var context = {
+module.exports = {
 	/**
 	 * Gets current mobile mode
 	 * @memberof context
 	 * @instance
-	 * @return {string} Name of mode
+	 * @return {string|null} Name of mode - either `stable` or `beta`. It is `null` if desktop.
 	 */
 	getMode: function () {
 		return mw.config.get( 'wgMFMode' );
 	}
 };
-
-module.exports = context;
