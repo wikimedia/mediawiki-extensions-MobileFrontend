@@ -71,6 +71,30 @@
     },
     {
       "key": {
+        "uuid": "489e906f_76af1430",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-06T01:39:11Z",
+      "side": 1,
+      "message": "I looked into this, and I don\u0027t think it\u0027s possible to have a non-voting job based on error code. We\u0027d need to set up a specific job in CI which runs something other than npm test e.g. npm run warn. I\u0027m not sure if that\u0027s worthy of our effort... \n\nMy feeling is that not seeing the resources/dist change should be enough for reviewers to flag. If src is changed but not resources/dist and it\u0027s not been mentioned in the commit message I\u0027d expect that to be a -1.\n\nthoughts?",
+      "parentUuid": "13b6a99d_b145ec2d",
+      "range": {
+        "startLine": 12,
+        "startChar": 2,
+        "endLine": 13,
+        "endChar": 60
+      },
+      "revId": "ae6336d2d1e25bb0cf1ceb94d66c22f0ecdb1332",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "745317af_d9478b43",
         "filename": "dev-scripts/check_bundle.sh",
         "patchSetId": 2
@@ -82,6 +106,24 @@
       "writtenOn": "2018-11-05T16:46:53Z",
       "side": 1,
       "message": "I recommend adding a `set -euo pipefail` to the start of every Bash script and `set -eu` to every Shell script. This will give the sanest functionality available in Ba/Sh.",
+      "revId": "ae6336d2d1e25bb0cf1ceb94d66c22f0ecdb1332",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f65818aa_cfea51ce",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-06T01:39:11Z",
+      "side": 1,
+      "message": "might need your help on this one.\ni\u0027m bashful to admit that my bash is not so good.",
+      "parentUuid": "745317af_d9478b43",
       "revId": "ae6336d2d1e25bb0cf1ceb94d66c22f0ecdb1332",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
@@ -157,6 +199,30 @@
     },
     {
       "key": {
+        "uuid": "fa47b8ec_d1dddc1d",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-06T01:39:11Z",
+      "side": 1,
+      "message": "i guesssss :(",
+      "parentUuid": "0543e71e_eb555fe0",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 5,
+        "endChar": 4
+      },
+      "revId": "ae6336d2d1e25bb0cf1ceb94d66c22f0ecdb1332",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "a4383b95_57db4fd0",
         "filename": "dev-scripts/check_bundle.sh",
         "patchSetId": 2
@@ -214,6 +280,30 @@
       "writtenOn": "2018-11-05T16:46:53Z",
       "side": 1,
       "message": "This isn\u0027t very helpful advice if the previous check shows the user has the correct version. I think we should advise the user to blast their node_modules and perform a clean npm install and build.",
+      "range": {
+        "startLine": 17,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 99
+      },
+      "revId": "ae6336d2d1e25bb0cf1ceb94d66c22f0ecdb1332",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4ecb8ccb_59b21324",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-06T01:39:11Z",
+      "side": 1,
+      "message": "True dat. I\u0027ll amend this with additional instructions.",
+      "parentUuid": "116805e0_590ba8ba",
       "range": {
         "startLine": 17,
         "startChar": 0,
