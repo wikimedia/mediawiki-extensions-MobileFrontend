@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d9e6005b_1327bbba",
+        "filename": "tests/node-qunit/mobile.startup/View.test.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-11-06T21:02:23Z",
+      "side": 1,
+      "message": "There is already a test with the name of \"View#render (with isTemplateMode)\". Can you make this title more descriptive so that we know this one is testing the ability to rerender?",
+      "range": {
+        "startLine": 70,
+        "startChar": 13,
+        "endLine": 70,
+        "endChar": 41
+      },
+      "revId": "f63386ca24fa3e7756f78e78cc8271063f39c257",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "acb3371a_b659a587",
+        "filename": "tests/node-qunit/mobile.startup/View.test.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-11-06T21:02:23Z",
+      "side": 1,
+      "message": "What is the purpose of passing this? I don\u0027t see it being used anywhere",
+      "range": {
+        "startLine": 87,
+        "startChar": 1,
+        "endLine": 87,
+        "endChar": 13
+      },
+      "revId": "f63386ca24fa3e7756f78e78cc8271063f39c257",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
