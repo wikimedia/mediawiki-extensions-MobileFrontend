@@ -95,6 +95,30 @@
     },
     {
       "key": {
+        "uuid": "ba552604_038db230",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-06T02:40:27Z",
+      "side": 1,
+      "message": "I was thinking that a nonvoting job would also be a signal to people who have trouble building assets that their change will have no effect or worse. For example, changing the return type of a function in mobile.startup that mobile.issues depends on may cause an error. Perhaps this is a corner case.",
+      "parentUuid": "489e906f_76af1430",
+      "range": {
+        "startLine": 12,
+        "startChar": 2,
+        "endLine": 13,
+        "endChar": 60
+      },
+      "revId": "ae6336d2d1e25bb0cf1ceb94d66c22f0ecdb1332",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "745317af_d9478b43",
         "filename": "dev-scripts/check_bundle.sh",
         "patchSetId": 2
@@ -124,6 +148,24 @@
       "side": 1,
       "message": "might need your help on this one.\ni\u0027m bashful to admit that my bash is not so good.",
       "parentUuid": "745317af_d9478b43",
+      "revId": "ae6336d2d1e25bb0cf1ceb94d66c22f0ecdb1332",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fd19ac00_6222826b",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-06T02:40:27Z",
+      "side": 1,
+      "message": "All you need is:\n\n #!/usr/bin/env bash\n set -euo pipefail",
+      "parentUuid": "f65818aa_cfea51ce",
       "revId": "ae6336d2d1e25bb0cf1ceb94d66c22f0ecdb1332",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
@@ -176,6 +218,30 @@
     },
     {
       "key": {
+        "uuid": "1fb7d97f_6901f83a",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-06T02:40:27Z",
+      "side": 1,
+      "message": "Just drop the parentheses.",
+      "parentUuid": "29e72295_80c013f3",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 1
+      },
+      "revId": "ae6336d2d1e25bb0cf1ceb94d66c22f0ecdb1332",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "0543e71e_eb555fe0",
         "filename": "dev-scripts/check_bundle.sh",
         "patchSetId": 2
@@ -211,6 +277,30 @@
       "side": 1,
       "message": "i guesssss :(",
       "parentUuid": "0543e71e_eb555fe0",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 5,
+        "endChar": 4
+      },
+      "revId": "ae6336d2d1e25bb0cf1ceb94d66c22f0ecdb1332",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "edcbea2f_d189f16d",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-06T02:40:27Z",
+      "side": 1,
+      "message": "You know I hate tabs but I figured we could be consistently unhappy.",
+      "parentUuid": "fa47b8ec_d1dddc1d",
       "range": {
         "startLine": 5,
         "startChar": 0,
