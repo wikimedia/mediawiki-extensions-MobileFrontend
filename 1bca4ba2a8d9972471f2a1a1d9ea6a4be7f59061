@@ -2,6 +2,190 @@
   "comments": [
     {
       "key": {
+        "uuid": "e9e50479_32e4bd15",
+        "filename": "tests/phpunit/MobileUITest.php",
+        "patchSetId": 16
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-06T20:12:10Z",
+      "side": 1,
+      "message": "Please, try to avoid static variables. Those are difficult to test and usually cause some side effects (something changed the globally accessible static variable and forgot to reset it. The static variable will remain it\u0027s value even if destroy the class (as this is not given instance value). Your tests `testSemanticClass`, `testButtonClass`, `testAnchorClass` change the value of `self::$element` but to not reset it. \n\nLooks like you need that value in the dataProviders to properly initialize the array returned by data provider, and you\u0027re using only one provider that uses this dynamically updated value to build the test data for three different test scenarios. This flow is broken as the PHPUnit first initializes all dataProviders (calls those functions before it executes tests), and then run tests one by one. \nIt means that each test you created will get the data build when `self::$element` is empty string.\nEven if dataProvider was called just before calling the test, still the PHPUnit execution is sth like that:\n```\n   $data \u003d callDataProviderForTestMethod();\n   foreach($data as $args) {\n      callTestMethodWithArgs($args);\n   }\n```\nYour test method sets up the `self::$element`, which is already to late as the provider was already called.\n\n\nTry to think how to do those tests without the static variable. Hint: you will need separate provider for each test but try to not duplicate the code.",
+      "range": {
+        "startLine": 7,
+        "startChar": 1,
+        "endLine": 7,
+        "endChar": 29
+      },
+      "revId": "1bca4ba2a8d9972471f2a1a1d9ea6a4be7f59061",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f34407e1_f85d698a",
+        "filename": "tests/phpunit/MobileUITest.php",
+        "patchSetId": 16
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-06T20:12:10Z",
+      "side": 1,
+      "message": "setUp/tearDown are used to set up the test environment, if there is nothing to do, we don\u0027t need to create those.\n\nYou can safely remove the setUp() and tearDown() functions. During the execution if those functions are not define in the MobileUITest, test runner will execute those functions from MediaWikiTestCase.",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 2
+      },
+      "revId": "1bca4ba2a8d9972471f2a1a1d9ea6a4be7f59061",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "398422d4_2c2b617c",
+        "filename": "tests/phpunit/MobileUITest.php",
+        "patchSetId": 16
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-06T20:12:10Z",
+      "side": 1,
+      "message": "what you did is good. You can leave it like that. I wanted to mention that there is a nice trick, if your test class covers only one Class, you can add the `@coversDefaultClass MobileUI` in the MobileUITest PHPDoc block, and then you can omit the class name, sth like `@covers ::iconClass`.",
+      "range": {
+        "startLine": 15,
+        "startChar": 4,
+        "endLine": 15,
+        "endChar": 31
+      },
+      "revId": "1bca4ba2a8d9972471f2a1a1d9ea6a4be7f59061",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6a8f2cd7_a97a6362",
+        "filename": "tests/phpunit/MobileUITest.php",
+        "patchSetId": 16
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-06T20:12:10Z",
+      "side": 1,
+      "message": "Looks like `MobileUI::semanticClass` is used only in the MobileUI by buttonClass and anchorClass, maybe we can make that method private, and skip the tests for it? Just threat that as internals. \nUnitTests should be written only for public methods, if semanticClass becomes private we can skip testing that function, as testButtonClass and testAnchorClass will test it.\n\nIf you do that, please keep in mind that you have to state that given test case is testing both the method your calling and the `semanticClass` method.\n\n/cc @jdlroboson",
+      "range": {
+        "startLine": 31,
+        "startChar": 17,
+        "endLine": 31,
+        "endChar": 34
+      },
+      "revId": "1bca4ba2a8d9972471f2a1a1d9ea6a4be7f59061",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "af616344_1b8e671c",
+        "filename": "tests/phpunit/MobileUITest.php",
+        "patchSetId": 16
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-06T20:12:10Z",
+      "side": 1,
+      "message": "this should be the `$expectedValue`",
+      "range": {
+        "startLine": 46,
+        "startChar": 43,
+        "endLine": 46,
+        "endChar": 63
+      },
+      "revId": "1bca4ba2a8d9972471f2a1a1d9ea6a4be7f59061",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2789215c_615c1753",
+        "filename": "tests/phpunit/MobileUITest.php",
+        "patchSetId": 16
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-06T20:12:10Z",
+      "side": 1,
+      "message": "this is the `$actualValue`, the value function returns.",
+      "range": {
+        "startLine": 49,
+        "startChar": 2,
+        "endLine": 49,
+        "endChar": 24
+      },
+      "revId": "1bca4ba2a8d9972471f2a1a1d9ea6a4be7f59061",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "454574da_81d22510",
+        "filename": "tests/phpunit/MobileUITest.php",
+        "patchSetId": 16
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-06T20:12:10Z",
+      "side": 1,
+      "message": "I think you probably want to test the buttonClass() method here",
+      "range": {
+        "startLine": 49,
+        "startChar": 37,
+        "endLine": 49,
+        "endChar": 50
+      },
+      "revId": "1bca4ba2a8d9972471f2a1a1d9ea6a4be7f59061",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6a43eb71_23f5d27b",
+        "filename": "tests/phpunit/MobileUITest.php",
+        "patchSetId": 16
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-06T20:12:10Z",
+      "side": 1,
+      "message": "I think you probably want to test the anchorClass() method here",
+      "range": {
+        "startLine": 63,
+        "startChar": 37,
+        "endLine": 63,
+        "endChar": 50
+      },
+      "revId": "1bca4ba2a8d9972471f2a1a1d9ea6a4be7f59061",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fc0694e5_e1941183",
         "filename": "tests/phpunit/MobileUITest.php",
         "patchSetId": 16
@@ -101,6 +285,29 @@
       "side": 1,
       "message": "Yes, for readability, that looks better. Thanks!",
       "parentUuid": "da6b0d1f_d959aac2",
+      "revId": "1bca4ba2a8d9972471f2a1a1d9ea6a4be7f59061",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3b76faa6_9639735d",
+        "filename": "tests/phpunit/MobileUITest.php",
+        "patchSetId": 16
+      },
+      "lineNbr": 177,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-06T20:12:10Z",
+      "side": 1,
+      "message": "see comment regarding the setUp() function.",
+      "range": {
+        "startLine": 175,
+        "startChar": 1,
+        "endLine": 177,
+        "endChar": 2
+      },
       "revId": "1bca4ba2a8d9972471f2a1a1d9ea6a4be7f59061",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
