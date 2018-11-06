@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "0d6e83cc_f94878f6",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-06T21:04:13Z",
+      "side": 1,
+      "message": "Doesn\u0027t moving this into a shell script reduce the complexity of the package.json ?\n\nI\u0027ve dropped the \"simplify\" word.",
+      "parentUuid": "ffb06ae1_d0d212f3",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 25
+      },
+      "revId": "ae6336d2d1e25bb0cf1ceb94d66c22f0ecdb1332",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "4ecfb432_07739606",
         "filename": "/COMMIT_MSG",
         "patchSetId": 2
@@ -119,6 +143,30 @@
     },
     {
       "key": {
+        "uuid": "a86a7692_6a33196d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-06T21:04:13Z",
+      "side": 1,
+      "message": "I agree, but it\u0027s going to require some coordination and understanding of the CI stack to make this happen, and I personally cannot commit to this right now.",
+      "parentUuid": "ba552604_038db230",
+      "range": {
+        "startLine": 12,
+        "startChar": 2,
+        "endLine": 13,
+        "endChar": 60
+      },
+      "revId": "ae6336d2d1e25bb0cf1ceb94d66c22f0ecdb1332",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "745317af_d9478b43",
         "filename": "dev-scripts/check_bundle.sh",
         "patchSetId": 2
@@ -166,6 +214,24 @@
       "side": 1,
       "message": "All you need is:\n\n #!/usr/bin/env bash\n set -euo pipefail",
       "parentUuid": "f65818aa_cfea51ce",
+      "revId": "ae6336d2d1e25bb0cf1ceb94d66c22f0ecdb1332",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e20eabdc_fc377a6b",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-06T21:04:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fd19ac00_6222826b",
       "revId": "ae6336d2d1e25bb0cf1ceb94d66c22f0ecdb1332",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
@@ -242,6 +308,30 @@
     },
     {
       "key": {
+        "uuid": "4c775b49_1a0a0045",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-06T21:04:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1fb7d97f_6901f83a",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 1
+      },
+      "revId": "ae6336d2d1e25bb0cf1ceb94d66c22f0ecdb1332",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "0543e71e_eb555fe0",
         "filename": "dev-scripts/check_bundle.sh",
         "patchSetId": 2
@@ -301,6 +391,30 @@
       "side": 1,
       "message": "You know I hate tabs but I figured we could be consistently unhappy.",
       "parentUuid": "fa47b8ec_d1dddc1d",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 5,
+        "endChar": 4
+      },
+      "revId": "ae6336d2d1e25bb0cf1ceb94d66c22f0ecdb1332",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8b5da9f0_bf13a171",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-06T21:04:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "edcbea2f_d189f16d",
       "range": {
         "startLine": 5,
         "startChar": 0,
@@ -393,6 +507,30 @@
       "writtenOn": "2018-11-06T01:39:11Z",
       "side": 1,
       "message": "True dat. I\u0027ll amend this with additional instructions.",
+      "parentUuid": "116805e0_590ba8ba",
+      "range": {
+        "startLine": 17,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 99
+      },
+      "revId": "ae6336d2d1e25bb0cf1ceb94d66c22f0ecdb1332",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "74054937_aa85771c",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-06T21:04:13Z",
+      "side": 1,
+      "message": "Done",
       "parentUuid": "116805e0_590ba8ba",
       "range": {
         "startLine": 17,
