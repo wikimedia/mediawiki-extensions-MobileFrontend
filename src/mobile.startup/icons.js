@@ -14,6 +14,8 @@ var
  * @uses Icon
  */
 module.exports = {
+	// Exported to support testing and stubbing
+	Icon: Icon,
 	/**
 	 * Gets a spinner icon.
 	 *
@@ -27,7 +29,7 @@ module.exports = {
 	spinner: function ( options ) {
 		options = options || {};
 
-		return new Icon( util.extend( options, {
+		return new this.Icon( util.extend( options, {
 			name: 'spinner',
 			label: mw.msg( 'mobile-frontend-loading-message' ),
 			additionalClassNames: 'spinner loading'
