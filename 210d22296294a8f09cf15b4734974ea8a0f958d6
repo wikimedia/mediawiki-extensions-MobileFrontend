@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "143ad939_4760c545",
+        "filename": "tests/phpunit/MobileUITest.php",
+        "patchSetId": 23
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-06T22:04:49Z",
+      "side": 1,
+      "message": "we shouldn\u0027t test the private methods, just add `@covers ::semanticMethod` both in testButtonClass and testAnchorClass.\n\nThen this test can go away.",
+      "range": {
+        "startLine": 29,
+        "startChar": 2,
+        "endLine": 30,
+        "endChar": 46
+      },
+      "revId": "210d22296294a8f09cf15b4734974ea8a0f958d6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
