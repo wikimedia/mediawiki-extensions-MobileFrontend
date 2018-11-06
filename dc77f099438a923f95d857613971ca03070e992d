@@ -87,6 +87,24 @@
       "revId": "dc77f099438a923f95d857613971ca03070e992d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa96c1c6_d71fde27",
+        "filename": "tests/phpunit/MobileUITest.php",
+        "patchSetId": 19
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-06T21:34:58Z",
+      "side": 1,
+      "message": "Removing testSemanticClass() drops coverage to 83.33% so I\u0027ll include it and skip as Pmiazga suggested and also add context as suggested by Jon :)",
+      "parentUuid": "ca6d244f_28a84e7c",
+      "revId": "dc77f099438a923f95d857613971ca03070e992d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
