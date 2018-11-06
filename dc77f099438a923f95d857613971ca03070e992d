@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "da0d4eee_e5c5934e",
+        "filename": "tests/phpunit/MobileUITest.php",
+        "patchSetId": 19
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-06T21:17:04Z",
+      "side": 1,
+      "message": "per https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/471839/16/tests/phpunit/MobileUITest.php@31\n\"Looks like `MobileUI::semanticClass` is used only in the MobileUI by buttonClass and anchorClass\"\n\nPersonally, I\u0027d love to see that change in this one (make semanticClass private and drop this test altogether)\n\nbut at very least we should add a FIXME  here.",
+      "revId": "dc77f099438a923f95d857613971ca03070e992d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3b138a94_13dd99ef",
+        "filename": "tests/phpunit/MobileUITest.php",
+        "patchSetId": 19
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-06T21:17:04Z",
+      "side": 1,
+      "message": "Right now if this fails, no context is given to the user. Maybe provider should also provide a human readable message?",
+      "revId": "dc77f099438a923f95d857613971ca03070e992d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
