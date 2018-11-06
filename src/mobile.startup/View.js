@@ -253,14 +253,16 @@ mfExtend( View, {
 	 * @chainable
 	 */
 	render: function ( data ) {
-		var html;
+		var $el, html;
 		util.extend( this.options, data );
 		this.preRender();
 		this.undelegateEvents();
 		if ( this.template && !this.options.skipTemplateRender ) {
 			html = this.template.render( this.options, this.templatePartials );
 			if ( this.isTemplateMode ) {
-				this.$el = $( html );
+				$el = $( html );
+				this.$el.replaceWith( $el );
+				this.$el = $el;
 			} else {
 				this.$el.html( html );
 			}

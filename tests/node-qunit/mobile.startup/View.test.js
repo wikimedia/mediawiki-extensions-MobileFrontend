@@ -125,13 +125,14 @@ QUnit.test( 'View#delegateEvents', function ( assert ) {
 } );
 
 QUnit.test( 'View#render (with isTemplateMode)', function ( assert ) {
-	var view, view2;
+	var view, view2, textFirstRun,
+		$parent = $( '<div>' );
 	function TemplateModeView() {
 		View.apply( this, arguments );
 	}
 
 	mfExtend( TemplateModeView, View, {
-		template: Hogan.compile( '<p class="foo"><span>test</span></p>' ),
+		template: Hogan.compile( '<p class="foo"><span>{{text}}</span></p>' ),
 		isTemplateMode: true
 	} );
 
@@ -145,11 +146,20 @@ QUnit.test( 'View#render (with isTemplateMode)', function ( assert ) {
 	} );
 
 	view = new TemplateModeView();
+	textFirstRun = view.$el.text();
 	view2 = new ContainerView();
 	view.render();
 	view2.render();
+	// attach to the DOM
+	view.$el.appendTo( $parent );
+	// and then do a second render...
+	view.render( { text: 'hello' } );
 	assert.ok( view.$el.hasClass( 'foo' ) );
 	assert.ok( view2.$el.hasClass( 'bar' ) );
+	assert.strictEqual( textFirstRun, '', 'first run, no text defined' );
+	assert.strictEqual( view.$el.text(), 'hello', 'second run, text has been defined' );
+	assert.strictEqual( view.$el.parent( $parent ).length, 1,
+		'A re-rendered view thats attached to the DOM remains attached to the DOM' );
 } );
 
 QUnit.test( 'View#render events (with isTemplateMode)', function ( assert ) {
