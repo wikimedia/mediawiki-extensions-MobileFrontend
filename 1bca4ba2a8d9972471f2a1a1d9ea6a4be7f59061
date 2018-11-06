@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6dcfd684_c07ef908",
+        "filename": "tests/phpunit/MobileUITest.php",
+        "patchSetId": 16
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-06T19:06:25Z",
+      "side": 1,
+      "message": "So I think that case should be tested as well. Thanks",
+      "parentUuid": "fc0694e5_e1941183",
+      "revId": "1bca4ba2a8d9972471f2a1a1d9ea6a4be7f59061",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "736e6f22_ec563147",
         "filename": "tests/phpunit/MobileUITest.php",
         "patchSetId": 16
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "0f8a7b52_7d2c9053",
+        "filename": "tests/phpunit/MobileUITest.php",
+        "patchSetId": 16
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-06T19:06:25Z",
+      "side": 1,
+      "message": "No, it changes as it\u0027s being set for each test run. So it can be \u0027element\u0027, \u0027button\u0027 or \u0027anchor\u0027 based on the specific test case. But yes, iconTypeElement sounds better. Will change it.",
+      "parentUuid": "736e6f22_ec563147",
+      "revId": "1bca4ba2a8d9972471f2a1a1d9ea6a4be7f59061",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "da6b0d1f_d959aac2",
         "filename": "tests/phpunit/MobileUITest.php",
         "patchSetId": 16
@@ -47,6 +83,24 @@
       "writtenOn": "2018-11-06T19:01:48Z",
       "side": 1,
       "message": "you might want to consider doing\n\n\"mw-ui-$element additionalclasses\" for readability.",
+      "revId": "1bca4ba2a8d9972471f2a1a1d9ea6a4be7f59061",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8efca394_70bc22f1",
+        "filename": "tests/phpunit/MobileUITest.php",
+        "patchSetId": 16
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-06T19:06:25Z",
+      "side": 1,
+      "message": "Yes, for readability, that looks better. Thanks!",
+      "parentUuid": "da6b0d1f_d959aac2",
       "revId": "1bca4ba2a8d9972471f2a1a1d9ea6a4be7f59061",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
