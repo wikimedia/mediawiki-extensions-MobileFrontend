@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "86e67494_d07a781e",
+        "filename": "tests/node-qunit/mobile.startup/View.test.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-06T21:09:43Z",
+      "side": 1,
+      "message": "Even better I\u0027ll merge this test into that one!\nThanks for spotting that.",
+      "parentUuid": "d9e6005b_1327bbba",
+      "range": {
+        "startLine": 70,
+        "startChar": 13,
+        "endLine": 70,
+        "endChar": 41
+      },
+      "revId": "f63386ca24fa3e7756f78e78cc8271063f39c257",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "acb3371a_b659a587",
         "filename": "tests/node-qunit/mobile.startup/View.test.js",
         "patchSetId": 1
@@ -36,6 +60,30 @@
       "writtenOn": "2018-11-06T21:02:23Z",
       "side": 1,
       "message": "What is the purpose of passing this? I don\u0027t see it being used anywhere",
+      "range": {
+        "startLine": 87,
+        "startChar": 1,
+        "endLine": 87,
+        "endChar": 13
+      },
+      "revId": "f63386ca24fa3e7756f78e78cc8271063f39c257",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6a2a60e0_bccdc61f",
+        "filename": "tests/node-qunit/mobile.startup/View.test.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-06T21:09:43Z",
+      "side": 1,
+      "message": "whoops unnecessary artifact from an earlier version. Removing...",
+      "parentUuid": "acb3371a_b659a587",
       "range": {
         "startLine": 87,
         "startChar": 1,
