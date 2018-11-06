@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6861c012_b90c6ab4",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-06T21:26:59Z",
+      "side": 1,
+      "message": "help needed here stephen. No idea what this is about.",
+      "revId": "9911faf6abc50fb3ca2ed3bbd085f5b57927c72c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "95bf6b9c_ded36d32",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-06T21:26:59Z",
+      "side": 1,
+      "message": "todo...",
+      "revId": "9911faf6abc50fb3ca2ed3bbd085f5b57927c72c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
