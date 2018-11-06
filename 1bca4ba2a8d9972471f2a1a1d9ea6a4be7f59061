@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fc0694e5_e1941183",
+        "filename": "tests/phpunit/MobileUITest.php",
+        "patchSetId": 16
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-06T19:01:48Z",
+      "side": 1,
+      "message": "what if something other than \"element\" is the 2nd parameter?",
+      "revId": "1bca4ba2a8d9972471f2a1a1d9ea6a4be7f59061",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "736e6f22_ec563147",
+        "filename": "tests/phpunit/MobileUITest.php",
+        "patchSetId": 16
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-06T19:01:48Z",
+      "side": 1,
+      "message": "It feels like self::element should be a constant? It never seems to be any other value than \"element\".\n\nAlso $element is not the most descriptive name.\niconTypeElement seems more useful\n\n(also add a constant for iconTypeBefore)",
+      "revId": "1bca4ba2a8d9972471f2a1a1d9ea6a4be7f59061",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da6b0d1f_d959aac2",
+        "filename": "tests/phpunit/MobileUITest.php",
+        "patchSetId": 16
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-06T19:01:48Z",
+      "side": 1,
+      "message": "you might want to consider doing\n\n\"mw-ui-$element additionalclasses\" for readability.",
+      "revId": "1bca4ba2a8d9972471f2a1a1d9ea6a4be7f59061",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
