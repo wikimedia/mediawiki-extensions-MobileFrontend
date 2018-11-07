@@ -80,6 +80,14 @@
 	"mobile-frontend-editor-switch-visual-editor": "Byt til visuell endring",
 	"mobile-frontend-editor-viewing-source-page": "<strong>Ser på kjelda til</strong><span> $1</span>",
 	"mobile-frontend-editor-wait": "Lagrar endring, vent litt.",
+	"mobile-frontend-expand-sections-description": "Vid alltid ut alle bolkar som standard.",
+	"mobile-frontend-expand-sections-status": "Vid ut alle bolkar",
+	"mobile-frontend-fontchanger-link": "Skriftstorleik",
+	"mobile-frontend-fontchanger-desc": "Still inn skriftstorleiken for lettare lesing.",
+	"mobile-frontend-fontchanger-option-small": "Liten",
+	"mobile-frontend-fontchanger-option-medium": "Vanleg",
+	"mobile-frontend-fontchanger-option-large": "Stor",
+	"mobile-frontend-fontchanger-option-xlarge": "Ekstra stor",
 	"mobile-frontend-featured-article": "Utvalt innhald i dag",
 	"mobile-frontend-generic-404-title": "Feil - fann ikkje sida",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} vert laga av folk som deg.</strong><br />Logg inn for å bidra.",
@@ -140,6 +148,7 @@
 	"mobile-frontend-search-content": "Søk i sider",
 	"mobile-frontend-search-content-no-results": "<b>{{int:mobile-frontend-search-content}}</b> for å sjå om denne formuleringa dukkar opp nokon stad.",
 	"mobile-frontend-search-no-results": "Inga side har denne tittelen.",
+	"mobile-frontend-settings-tagline": "Leseinnstillingar",
 	"mobile-frontend-settings-beta": "Beta",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Kva har du i tankane?",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Emne",
@@ -179,5 +188,7 @@
 	"tag-mobile_web_edit-description": "Endring gjord frå mobil nettstad",
 	"mobile-frontend-loading-message": "Lastar ...",
 	"mobile-frontend-panel-ok": "Okei",
-	"mobile-frontend-panel-cancel": "Nei takk"
+	"mobile-frontend-panel-cancel": "Nei takk",
+	"mobile-frontend-mobile-option-MFLazyLoadReferences": "Last referansar etter trong",
+	"mobile-frontend-mobile-option-MFLazyLoadReferences-description": "Last berre inn referansar når dei trengst"
 }

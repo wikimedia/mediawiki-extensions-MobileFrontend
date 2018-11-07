@@ -18,6 +18,7 @@
 	"mobile-frontend-diffview-editcount": "{{PLURAL:$1|بیر|$1}} دَییشیکلیک",
 	"mobile-frontend-diffview-title": "$1-ه دَییشیکلیک",
 	"mobile-frontend-editor-editing-page": "<span><strong>$1 </strong> دَییشدیریلیر</span>",
+	"mobile-frontend-editor-switch-editor": "دییشدیریجینی دَییش",
 	"mobile-frontend-featured-article": "گونون سئچیلمیش یازی سی",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} سیزین کیمی آدام‌لارین الی ایله یارانیب‌دیر.</strong><br /> قاتیلماق اوچون حسابینیزا گیرین.",
 	"mobile-frontend-language-heading": "<strong>دیل‌لر</strong>",
