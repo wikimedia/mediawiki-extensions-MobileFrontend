@@ -52,6 +52,24 @@
       "revId": "f296346dd763cc090a1c6525a506902426421a14",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "00a2efac_5cf2581f",
+        "filename": "tests/node-qunit/mobile.startup/Panel.test.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-07T22:23:30Z",
+      "side": 1,
+      "message": "(i don\u0027t remember the history). If browser animations work on modern browsers I\u0027d be wiling to remove this code.",
+      "parentUuid": "d69a6e5e_af9a616c",
+      "revId": "f296346dd763cc090a1c6525a506902426421a14",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
