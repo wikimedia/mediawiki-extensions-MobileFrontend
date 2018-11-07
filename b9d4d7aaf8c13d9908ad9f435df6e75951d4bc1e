@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "754d8ab6_fb4bcf46",
+        "filename": "tests/node-qunit/mobile.startup/Button.test.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-07T19:47:39Z",
+      "side": 1,
+      "message": "This is testing the internals of View which makes me a little uncomfortable (we might not want to make options public in future for instance or rename it to props)\n\nInstead of doing this, how would you feel about taking a similar approach to https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/472070/4/tests/node-qunit/mobile.startup/icons.test.js and using a spy to check what Button get\u0027s called with?",
+      "revId": "b9d4d7aaf8c13d9908ad9f435df6e75951d4bc1e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "43d5ec2f_f489b3d8",
+        "filename": "tests/node-qunit/mobile.startup/Button.test.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-07T19:47:39Z",
+      "side": 1,
+      "message": "This one actually checks the output unlike the one above.\nThis is a fine strategy, but my comment above provides an alternative.\nI\u0027d like to work out whether we want to test the output or that View gets called with the right parameters.\n\nTesting this way does make it difficult for us to change $el at any point.",
+      "revId": "b9d4d7aaf8c13d9908ad9f435df6e75951d4bc1e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
