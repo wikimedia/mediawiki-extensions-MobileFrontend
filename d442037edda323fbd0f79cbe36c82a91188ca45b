@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c93db56e_11dccd1d",
+        "filename": "tests/node-qunit/mobile.startup/Section.test.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-07T19:54:02Z",
+      "side": 1,
+      "message": "I\u0027m a bit curious why we set anchor, subsections and all those other properties.\n \nI\u0027d also suggest making the 3rd parameter more descriptive. We\u0027re exposing anchor as an explicit property on Section.\n\nMy question now is why (what is using these as a public api if anything?) cannot see any obvious uses...\n\nFor completeness if we do need to expose them, it would be good to explicit check all the things we expose in a test. For instance right now we\u0027re not verifying subsections is set even though implicitly that\u0027s a public API.",
+      "revId": "d442037edda323fbd0f79cbe36c82a91188ca45b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f3845907_7d887ef9",
+        "filename": "tests/node-qunit/mobile.startup/Section.test.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-07T19:54:02Z",
+      "side": 1,
+      "message": "this seems to test View.js ?\nShould we instead test View gets called with this option?",
+      "revId": "d442037edda323fbd0f79cbe36c82a91188ca45b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
