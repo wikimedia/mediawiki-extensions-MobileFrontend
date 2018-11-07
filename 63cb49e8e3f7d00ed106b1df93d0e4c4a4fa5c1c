@@ -16,6 +16,24 @@
       "revId": "63cb49e8e3f7d00ed106b1df93d0e4c4a4fa5c1c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a771e132_f2ab8580",
+        "filename": "tests/phpunit/MobileUITest.php",
+        "patchSetId": 24
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-07T09:18:47Z",
+      "side": 1,
+      "message": "Yeah, I did some mixup with the naming, sorry. For simplicity, I just used \"$expected\" and \"$actual\" now for all the test cases.",
+      "parentUuid": "3ad355a8_ffd7aa31",
+      "revId": "63cb49e8e3f7d00ed106b1df93d0e4c4a4fa5c1c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
