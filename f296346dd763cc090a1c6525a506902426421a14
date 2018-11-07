@@ -34,6 +34,24 @@
       "revId": "f296346dd763cc090a1c6525a506902426421a14",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d69a6e5e_af9a616c",
+        "filename": "tests/node-qunit/mobile.startup/Panel.test.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-07T21:21:46Z",
+      "side": 1,
+      "message": "It looks like this is documented in the code and seems to relate to animations.\n\"/ use setTimeout to allow the browser to redraw if render() was called\n                        // just before show(); this is important for animations to work\n                        // (0ms doesn\u0027t work on Firefox, 10ms is enough)\n\"\nMaybe that logic should live outside Panel in future?",
+      "parentUuid": "292ee071_906706f5",
+      "revId": "f296346dd763cc090a1c6525a506902426421a14",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
