@@ -210,21 +210,6 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	}
 
 	/**
-	 * Get a FormOptions object containing the default options. This object is almost empty,
-	 * as there are no options on the MobileWatchlist page. The ChangesListSpecialPageQuery
-	 * hook requires the FormOptions object (as example to add new options/filters) we have
-	 * to pass it, even if SpecialMobileWatchlist do not use  it.
-	 *
-	 *
-	 * @todo most probably if some extensions add filters to feedQuery we should show
-	 * the form and allow user to change/reset filters
-	 * @return FormOptions
-	 */
-	protected function getFormOptions() {
-		return new FormOptions();
-	}
-
-	/**
 	 * Get watchlist items for feed view
 	 * @return ResultWrapper
 	 *
@@ -275,7 +260,6 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 				$fields[] = 'page_latest';
 			}
 		}
-		$form_options = $this->getFormOptions();
 
 		ChangeTags::modifyDisplayQuery( $tables, $fields, $conds, $join_conds, $query_options, '' );
 
