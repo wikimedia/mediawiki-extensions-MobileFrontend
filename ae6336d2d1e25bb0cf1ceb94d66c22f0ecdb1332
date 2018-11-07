@@ -332,6 +332,30 @@
     },
     {
       "key": {
+        "uuid": "6476d5d2_7226504f",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-07T01:21:55Z",
+      "side": 1,
+      "message": "HEAD^ is not implied.\n\nIf running in jenkins the code is already checked in and not in cache. I want both cache and checked in code.\n\nHave added a note.",
+      "parentUuid": "4c775b49_1a0a0045",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 1
+      },
+      "revId": "ae6336d2d1e25bb0cf1ceb94d66c22f0ecdb1332",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "0543e71e_eb555fe0",
         "filename": "dev-scripts/check_bundle.sh",
         "patchSetId": 2
