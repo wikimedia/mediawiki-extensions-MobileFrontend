@@ -50,6 +50,8 @@ mfExtend( Panel, View, {
 			// use setTimeout to allow the browser to redraw if render() was called
 			// just before show(); this is important for animations to work
 			// (0ms doesn't work on Firefox, 10ms is enough)
+			//
+			// FIXME: setTimeout should be reconsidered in T209129
 			setTimeout( function () {
 				self.$el.addClass( 'visible animated' );
 				self.emit( 'show' );
