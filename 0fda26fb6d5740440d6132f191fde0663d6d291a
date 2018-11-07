@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "00fd973e_cdc0add1",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 899,
+      "author": {
+        "id": 243
+      },
+      "writtenOn": "2018-11-07T21:06:51Z",
+      "side": 1,
+      "message": "A bit too much spacing here, I think? (Generally speaking we use $array[$index] in PHP but array[ index ] in JS and at least the JS stuff is enforced and that\u0027s lovably confusing in my opinion!)",
+      "range": {
+        "startLine": 899,
+        "startChar": 18,
+        "endLine": 899,
+        "endChar": 19
+      },
+      "revId": "0fda26fb6d5740440d6132f191fde0663d6d291a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aa2484f5_4712c829",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 899,
+      "author": {
+        "id": 243
+      },
+      "writtenOn": "2018-11-07T21:06:51Z",
+      "side": 1,
+      "message": "Should probably be escaped or something safer, I\u0027d imagine? Because text allows HTML and generally speaking we don\u0027t want that in new code.",
+      "range": {
+        "startLine": 899,
+        "startChar": 53,
+        "endLine": 899,
+        "endChar": 57
+      },
+      "revId": "0fda26fb6d5740440d6132f191fde0663d6d291a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2eab8873_ad7e1cd2",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 908,
+      "author": {
+        "id": 243
+      },
+      "writtenOn": "2018-11-07T21:06:51Z",
+      "side": 1,
+      "message": "A bit too much spacing here too, I believe.",
+      "range": {
+        "startLine": 908,
+        "startChar": 17,
+        "endLine": 908,
+        "endChar": 18
+      },
+      "revId": "0fda26fb6d5740440d6132f191fde0663d6d291a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
