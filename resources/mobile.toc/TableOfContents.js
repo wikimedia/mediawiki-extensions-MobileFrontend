@@ -39,11 +39,6 @@
 		 * @memberof TableOfContents
 		 * @instance
 		 */
-		tagName: 'div',
-		/**
-		 * @memberof TableOfContents
-		 * @instance
-		 */
 		className: 'toc-mobile',
 		/**
 		 * @memberof TableOfContents

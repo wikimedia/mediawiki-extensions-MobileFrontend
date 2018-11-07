@@ -76,11 +76,6 @@
 		 * @memberof Watchstar
 		 * @instance
 		 */
-		tagName: 'div',
-		/**
-		 * @memberof Watchstar
-		 * @instance
-		 */
 		className: watchIcon.getClassName(),
 		/**
 		 * @memberof Watchstar
