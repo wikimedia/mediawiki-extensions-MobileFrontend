@@ -16,6 +16,24 @@
       "revId": "f296346dd763cc090a1c6525a506902426421a14",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "292ee071_906706f5",
+        "filename": "tests/node-qunit/mobile.startup/Panel.test.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-11-07T21:13:55Z",
+      "side": 1,
+      "message": "I think that would make this test easier, yes. I was wondering why the show() and hide() actions needed to be async to begin with though. I saw the comment in show(), but still don\u0027t understand. Do you know the history behind that?",
+      "parentUuid": "8627e234_6019518c",
+      "revId": "f296346dd763cc090a1c6525a506902426421a14",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
