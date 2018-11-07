@@ -48,6 +48,30 @@
     },
     {
       "key": {
+        "uuid": "222a60ac_d2fc90ea",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 899,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-07T21:42:19Z",
+      "side": 1,
+      "message": "would this be plain or escaped? Interestingly, the code this is based off (SpecialPreferences::generateSkinOptions) uses  $skinname \u003d htmlspecialchars( $msg-\u003etext() );",
+      "parentUuid": "aa2484f5_4712c829",
+      "range": {
+        "startLine": 899,
+        "startChar": 53,
+        "endLine": 899,
+        "endChar": 57
+      },
+      "revId": "0fda26fb6d5740440d6132f191fde0663d6d291a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2eab8873_ad7e1cd2",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 3
@@ -59,6 +83,30 @@
       "writtenOn": "2018-11-07T21:06:51Z",
       "side": 1,
       "message": "A bit too much spacing here too, I believe.",
+      "range": {
+        "startLine": 908,
+        "startChar": 17,
+        "endLine": 908,
+        "endChar": 18
+      },
+      "revId": "0fda26fb6d5740440d6132f191fde0663d6d291a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5629141e_5288165a",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 908,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-07T21:42:19Z",
+      "side": 1,
+      "message": "phpcs should probably be decisive about which code style to use. We\u0027re using a mix of this inside MobileFrontend :/",
+      "parentUuid": "2eab8873_ad7e1cd2",
       "range": {
         "startLine": 908,
         "startChar": 17,
