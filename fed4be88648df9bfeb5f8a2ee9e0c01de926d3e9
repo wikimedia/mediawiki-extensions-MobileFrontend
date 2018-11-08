@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "90b3f380_d0f0a223",
+        "filename": "tests/phpunit/models/MobileCollectionTest.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-08T18:39:17Z",
+      "side": 1,
+      "message": "What would the test look like without a setup?\nMight it be a little cleaner?\nI usually try to use setup/teardown purely for mock stubbing.\n\nA helper function outside the test might also be useful, but this line seems rather simple to me.",
+      "revId": "fed4be88648df9bfeb5f8a2ee9e0c01de926d3e9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ea6ff24_8c1a2606",
+        "filename": "tests/phpunit/models/MobileCollectionTest.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-08T18:39:17Z",
+      "side": 1,
+      "message": "Is a teardown truly needed?\n Why not use local variables?",
+      "revId": "fed4be88648df9bfeb5f8a2ee9e0c01de926d3e9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
