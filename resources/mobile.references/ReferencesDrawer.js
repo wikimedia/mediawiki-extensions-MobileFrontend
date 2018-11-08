@@ -2,7 +2,7 @@
 	var Drawer = M.require( 'mobile.startup/Drawer' ),
 		util = M.require( 'mobile.startup/util' ),
 		icons = M.require( 'mobile.startup/icons' ),
-		ReferencesGateway = M.require( 'mobile.references.gateway/ReferencesGateway' ),
+		ReferencesGateway = M.require( 'mobile.startup' ).ReferencesGateway,
 		Icon = M.require( 'mobile.startup/Icon' );
 
 	/**

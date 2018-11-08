@@ -11,6 +11,9 @@ var exports,
 	cache = require( './cache' ),
 	Button = require( './Button' ),
 	Icon = require( './Icon' ),
+	ReferencesGateway = require( './ReferencesGateway' ),
+	ReferencesHtmlScraperGateway = require( './ReferencesHtmlScraperGateway' ),
+	ReferencesMobileViewGateway = require( './ReferencesMobileViewGateway' ),
 	icons = require( './icons' ),
 	Panel = require( './Panel' ),
 	Section = require( './Section' ),
@@ -39,6 +42,9 @@ OO.mfExtend = mfExtend;
 // `mfModules['mobile.startup'].moduleLoader.require('mobile.startup/LoadingOverlay')`.
 exports = {
 	extendSearchParams: extendSearchParams,
+	ReferencesGateway: ReferencesGateway,
+	ReferencesHtmlScraperGateway: ReferencesHtmlScraperGateway,
+	ReferencesMobileViewGateway: ReferencesMobileViewGateway,
 	moduleLoader: moduleLoader,
 	time: time,
 	util: util,
@@ -94,6 +100,12 @@ mw.mobileFrontend.define( 'mobile.startup/PageList', PageList );
 mw.mobileFrontend.define( 'mobile.startup/toast', toast );
 mw.mobileFrontend.define( 'mobile.startup/rlModuleLoader', rlModuleLoader );
 mw.mobileFrontend.deprecate( 'mobile.search.util/extendSearchParams', extendSearchParams, 'mobile.startup' );
+mw.mobileFrontend.deprecate( 'mobile.references.gateway/ReferencesGateway', ReferencesGateway, 'mobile.startup' );
+mw.mobileFrontend.deprecate( 'mobile.references.gateway/ReferencesHtmlScraperGateway',
+	ReferencesHtmlScraperGateway, 'mobile.startup' );
+mw.mobileFrontend.deprecate( 'mobile.references.gateway/ReferencesMobileViewGateway',
+	ReferencesMobileViewGateway, 'mobile.startup' );
+
 // Setup a single export for new modules to fold all of the above lines into.
 // One export to rule them all!
 mw.mobileFrontend.define( 'mobile.startup', exports );

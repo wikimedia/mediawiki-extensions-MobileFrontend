@@ -6,7 +6,7 @@ var
 	Section = require( './Section' ),
 	Thumbnail = require( './Thumbnail' ),
 	View = require( './View' ),
-	HEADING_SELECTOR = mw.config.get( 'wgMFMobileFormatterHeadings' ).join( ',' ),
+	HEADING_SELECTOR = mw.config.get( 'wgMFMobileFormatterHeadings', [ 'h1', 'h2', 'h3', 'h4', 'h5' ] ).join( ',' ),
 	BLACKLISTED_THUMBNAIL_CLASS_SELECTORS = [ 'noviewer', 'metadata' ];
 
 /**
