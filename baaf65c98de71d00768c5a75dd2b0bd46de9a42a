@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9c89263e_5e7e3e10",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 8
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-08T00:24:16Z",
+      "side": 1,
+      "message": "Please try `set -euo pipefail` again. I think the issue is the diff against `HEAD^`.",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 2,
+        "endChar": 7
+      },
+      "revId": "baaf65c98de71d00768c5a75dd2b0bd46de9a42a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d4b81acc_93713806",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 8
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-08T00:24:16Z",
+      "side": 1,
+      "message": "This seems incorrect to me. For example:\n\n git checkout origin/master\n touch foo\n git add foo\n git diff --cached HEAD^\n # Diff shown is actually the parent of HEAD",
+      "range": {
+        "startLine": 4,
+        "startChar": 7,
+        "endLine": 4,
+        "endChar": 12
+      },
+      "revId": "baaf65c98de71d00768c5a75dd2b0bd46de9a42a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5e121092_1c2f6b18",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 8
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-08T00:24:16Z",
+      "side": 1,
+      "message": "Doesn\u0027t `--cached` cover this?",
+      "range": {
+        "startLine": 6,
+        "startChar": 13,
+        "endLine": 6,
+        "endChar": 32
+      },
+      "revId": "baaf65c98de71d00768c5a75dd2b0bd46de9a42a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ad152b6_83bf76b6",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 8
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-08T00:24:16Z",
+      "side": 1,
+      "message": "I recommend this all appear on a single line in the output and let the terminal wrap it. For example:\n\n cat \u003c\u003c eof\n There are changes to resources/dist. I will now check that \n you built\n them using the correct Node.js version, v$(\u003c .nvmrc). You are currently \n using\n $(node -v).\n eof",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 8
+      },
+      "revId": "baaf65c98de71d00768c5a75dd2b0bd46de9a42a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3dd86c7c_f6aeeedc",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 8
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-08T00:24:16Z",
+      "side": 1,
+      "message": "Consider concatenating these lines as well and allowing the terminal to wrap it.",
+      "range": {
+        "startLine": 20,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 134
+      },
+      "revId": "baaf65c98de71d00768c5a75dd2b0bd46de9a42a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
