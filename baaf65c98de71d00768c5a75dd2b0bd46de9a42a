@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "ec5f9228_f1de09ec",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 8
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-08T00:56:23Z",
+      "side": 1,
+      "message": "https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/472361 check-bundle uses `set -euo pipefail`  \n\nThe error message `./dev-scripts/check_bundle.sh: 2: set: Illegal option -o pipefail` doesn\u0027t suggest anything to do with HEAD^ unless I\u0027m missing something.",
+      "parentUuid": "9c89263e_5e7e3e10",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 2,
+        "endChar": 7
+      },
+      "revId": "baaf65c98de71d00768c5a75dd2b0bd46de9a42a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d4b81acc_93713806",
         "filename": "dev-scripts/check_bundle.sh",
         "patchSetId": 8
@@ -36,6 +60,30 @@
       "writtenOn": "2018-11-08T00:24:16Z",
       "side": 1,
       "message": "This seems incorrect to me. For example:\n\n git checkout origin/master\n touch foo\n git add foo\n git diff --cached HEAD^\n # Diff shown is actually the parent of HEAD",
+      "range": {
+        "startLine": 4,
+        "startChar": 7,
+        "endLine": 4,
+        "endChar": 12
+      },
+      "revId": "baaf65c98de71d00768c5a75dd2b0bd46de9a42a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a8ea378e_eabd670f",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 8
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-08T00:56:23Z",
+      "side": 1,
+      "message": "This is important because otherwise CI will not pick them up. What we need is both unstaged and committed changes.\n\nTry the following:\n```\ngit checkout origin/master\n touch foo\n git add foo\ngit commit --amend --no-verify\ngit diff --cached HEAD^\n```\ncompare with\n```\ngit diff --cached\n```\n\nRunning\n```\n/dev-scripts/check_bundle.sh\n```\nneeds to complain when the resources/dist have already been committed.",
+      "parentUuid": "d4b81acc_93713806",
       "range": {
         "startLine": 4,
         "startChar": 7,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "81803fec_d68d8992",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 8
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-08T00:56:23Z",
+      "side": 1,
+      "message": "HEAD^ is actually for CI not newly staged changes.",
+      "parentUuid": "5e121092_1c2f6b18",
+      "range": {
+        "startLine": 6,
+        "startChar": 13,
+        "endLine": 6,
+        "endChar": 32
+      },
+      "revId": "baaf65c98de71d00768c5a75dd2b0bd46de9a42a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7ad152b6_83bf76b6",
         "filename": "dev-scripts/check_bundle.sh",
         "patchSetId": 8
@@ -94,6 +166,30 @@
     },
     {
       "key": {
+        "uuid": "5b01d42c_e7bae266",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 8
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-08T00:56:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7ad152b6_83bf76b6",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 8
+      },
+      "revId": "baaf65c98de71d00768c5a75dd2b0bd46de9a42a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3dd86c7c_f6aeeedc",
         "filename": "dev-scripts/check_bundle.sh",
         "patchSetId": 8
@@ -105,6 +201,30 @@
       "writtenOn": "2018-11-08T00:24:16Z",
       "side": 1,
       "message": "Consider concatenating these lines as well and allowing the terminal to wrap it.",
+      "range": {
+        "startLine": 20,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 134
+      },
+      "revId": "baaf65c98de71d00768c5a75dd2b0bd46de9a42a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "be8568b3_73c1c747",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 8
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-08T00:56:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3dd86c7c_f6aeeedc",
       "range": {
         "startLine": 20,
         "startChar": 0,
