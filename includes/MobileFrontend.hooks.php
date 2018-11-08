@@ -454,24 +454,32 @@ class MobileFrontendHooks {
 
 		// Get the licensing agreement that is displayed in the uploading interface.
 		$vars += [
+			// Page.js
 			'wgMFMobileFormatterHeadings' => $config->get( 'MFMobileFormatterHeadings' ),
+			// extendSearchParams
 			'wgMFSearchAPIParams' => $searchParams,
 			'wgMFQueryPropModules' => $pageProps,
+			// SearchGateway.js
 			'wgMFSearchGenerator' => $config->get( 'MFSearchGenerator' ),
-			'wgMFNearbyEndpoint' => $config->get( 'MFNearbyEndpoint' ),
+			// PhotoListGateway.js, SearchGateway.js
 			'wgMFThumbnailSizes' => [
 				'tiny' => MobilePage::TINY_IMAGE_WIDTH,
 				'small' => MobilePage::SMALL_IMAGE_WIDTH,
 			],
+			// EditorOverlayBase.js
 			'wgMFEditorOptions' => $config->get( 'MFEditorOptions' ),
+			// Skin.js
 			'wgMFLicense' => MobileFrontendSkinHooks::getLicense( 'editor' ),
+			// schemaMobileWebSearch.js
 			'wgMFSchemaSearchSampleRate' => $config->get( 'MFSchemaSearchSampleRate' ),
+			// mobile.init
 			'wgMFExperiments' => $config->get( 'MFExperiments' ),
 			'wgMFEnableJSConsoleRecruitment' => $config->get( 'MFEnableJSConsoleRecruitment' ),
-			'wgMFPhotoUploadEndpoint' =>
-				$config->get( 'MFPhotoUploadEndpoint' ) ? $config->get( 'MFPhotoUploadEndpoint' ) : '',
+			// Browser.js
 			'wgMFDeviceWidthTablet' => self::DEVICE_WIDTH_TABLET,
+			// toggle.js
 			'wgMFCollapseSectionsByDefault' => $config->get( 'MFCollapseSectionsByDefault' ),
+			// BlockMessage.js
 			'wgMFTrackBlockNotices' => $config->get( 'MFTrackBlockNotices' ),
 		];
 

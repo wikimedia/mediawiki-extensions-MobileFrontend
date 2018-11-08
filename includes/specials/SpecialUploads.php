@@ -25,10 +25,10 @@ class SpecialUploads extends MobileSpecialPage {
 			// uploads by a particular user, i.e Special:Uploads/username, are shown even to anons
 			$this->setHeaders();
 			$output = $this->getOutput();
-			$output->addJsConfigVars(
-				'wgMFPhotoUploadEndpoint',
-				$this->getMFConfig()->get( 'MFPhotoUploadEndpoint' )
-			);
+			$config = $this->getMFConfig();
+			$output->addJsConfigVars( [
+				'wgMFPhotoUploadEndpoint' => $config->get( 'MFPhotoUploadEndpoint', '' )
+			] );
 
 			if ( $par !== '' && $par !== null ) {
 				$user = User::newFromName( $par );
