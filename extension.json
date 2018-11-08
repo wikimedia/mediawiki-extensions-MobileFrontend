@@ -133,13 +133,6 @@
 				"toc": "resources/mobile.toc.images/contents-ltr.svg"
 			}
 		},
-		"mobile.references.images": {
-			"class": "ResourceLoaderImageModule",
-			"selector": ".mw-ui-icon-mf-{name}:before",
-			"images": {
-				"citation": "resources/mobile.references.images/cite.svg"
-			}
-		},
 		"mobile.messageBox.styles": {
 			"targets": [
 				"mobile",
@@ -259,6 +252,7 @@
 			"class": "ResourceLoaderImageModule",
 			"selector": ".mw-ui-icon-mf-{name}:before",
 			"images": {
+				"citation": "resources/mobile.startup.images/cite.svg",
 				"error": "resources/mobile.startup.images/error.svg",
 				"watch": "resources/mobile.startup.images/watch.svg",
 				"watched": "resources/mobile.startup.images/watched.svg"
@@ -687,7 +681,7 @@
 				"mobile.references.gateway",
 				"mobile.startup",
 				"mobile.editor.api",
-				"mobile.references.images"
+				"mobile.startup.images"
 			],
 			"messages": [
 				"mobile-frontend-references-citation-error",
