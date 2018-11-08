@@ -234,6 +234,29 @@
       "revId": "baaf65c98de71d00768c5a75dd2b0bd46de9a42a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b473606a_3c254344",
+        "filename": "package.json",
+        "patchSetId": 8
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-08T21:48:21Z",
+      "side": 1,
+      "message": "Specifying `sh` explicitly here prevents the interpreter specified in the shebang from running AFAIK. I think this should be `./dev-scripts/check-bundle.sh`.",
+      "range": {
+        "startLine": 13,
+        "startChar": 20,
+        "endLine": 13,
+        "endChar": 52
+      },
+      "revId": "baaf65c98de71d00768c5a75dd2b0bd46de9a42a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
