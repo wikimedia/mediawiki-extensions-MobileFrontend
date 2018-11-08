@@ -48,6 +48,144 @@
     },
     {
       "key": {
+        "uuid": "99af7216_b0042b72",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 10
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-08T23:26:04Z",
+      "side": 1,
+      "message": "I think this can all be removed.",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 36
+      },
+      "revId": "02a247a93250c2df39b04c982c37273e8e181894",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "32cf49ae_6b591cb8",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 10
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-08T23:26:04Z",
+      "side": 1,
+      "message": "And this could be \"$@\"",
+      "range": {
+        "startLine": 17,
+        "startChar": 9,
+        "endLine": 17,
+        "endChar": 14
+      },
+      "revId": "02a247a93250c2df39b04c982c37273e8e181894",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c3c16f7c_bd77ec67",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 10
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-08T23:26:04Z",
+      "side": 1,
+      "message": "Typo",
+      "range": {
+        "startLine": 19,
+        "startChar": 35,
+        "endLine": 19,
+        "endChar": 36
+      },
+      "revId": "02a247a93250c2df39b04c982c37273e8e181894",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "29e582d1_f819707c",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 10
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-08T23:26:04Z",
+      "side": 1,
+      "message": "Consider adding a period and moving this up to the previous line so the terminal can wrap it.",
+      "range": {
+        "startLine": 20,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 1
+      },
+      "revId": "02a247a93250c2df39b04c982c37273e8e181894",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fccb4699_d2a08426",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 10
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-08T23:26:04Z",
+      "side": 1,
+      "message": "Typo",
+      "range": {
+        "startLine": 21,
+        "startChar": 25,
+        "endLine": 21,
+        "endChar": 26
+      },
+      "revId": "02a247a93250c2df39b04c982c37273e8e181894",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cf33d33b_4a3ce019",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 10
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-08T23:26:04Z",
+      "side": 1,
+      "message": "This script would be more focused if the bundlesize check was kept in package.json. This script otherwise only concerns the Git build status.",
+      "range": {
+        "startLine": 37,
+        "startChar": 1,
+        "endLine": 37,
+        "endChar": 11
+      },
+      "revId": "02a247a93250c2df39b04c982c37273e8e181894",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "230b68b9_a6d80d24",
         "filename": "package.json",
         "patchSetId": 10
