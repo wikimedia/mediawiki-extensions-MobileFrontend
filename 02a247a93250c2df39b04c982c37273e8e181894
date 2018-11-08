@@ -1,0 +1,165 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7ee611e0_36c1a6c6",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 10
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-08T23:22:30Z",
+      "side": 1,
+      "message": "These can now be removed.",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 6,
+        "endChar": 3
+      },
+      "revId": "02a247a93250c2df39b04c982c37273e8e181894",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aa37f6d3_21a3b4f8",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 10
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-08T23:22:30Z",
+      "side": 1,
+      "message": "Maybe it would be better to error when no argument is passed than to supply a default. What do you think?",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 21
+      },
+      "revId": "02a247a93250c2df39b04c982c37273e8e181894",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "230b68b9_a6d80d24",
+        "filename": "package.json",
+        "patchSetId": 10
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-08T23:22:30Z",
+      "side": 1,
+      "message": "Do you mind if we use -s here too?",
+      "range": {
+        "startLine": 13,
+        "startChar": 42,
+        "endLine": 13,
+        "endChar": 43
+      },
+      "revId": "02a247a93250c2df39b04c982c37273e8e181894",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b6f068d6_d63a6e41",
+        "filename": "package.json",
+        "patchSetId": 10
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-08T23:22:30Z",
+      "side": 1,
+      "message": "test:all may be better inlined as it doesn\u0027t really test everything and isn\u0027t very lengthy.",
+      "range": {
+        "startLine": 13,
+        "startChar": 5,
+        "endLine": 13,
+        "endChar": 9
+      },
+      "revId": "02a247a93250c2df39b04c982c37273e8e181894",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "76f4fc4e_39f9602f",
+        "filename": "package.json",
+        "patchSetId": 10
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-08T23:22:30Z",
+      "side": 1,
+      "message": "test:bundle and test:bundle-cached should be similar. Can we remove this?",
+      "range": {
+        "startLine": 14,
+        "startChar": 62,
+        "endLine": 14,
+        "endChar": 90
+      },
+      "revId": "02a247a93250c2df39b04c982c37273e8e181894",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a1a59203_8578aeeb",
+        "filename": "package.json",
+        "patchSetId": 10
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-08T23:22:30Z",
+      "side": 1,
+      "message": "How about instead of two scripts, we have one and pass the argument:\n\n \"test:bundle\": \"bash ./dev-scripts/check_bundle.sh\"\n \"precommit\": \"... \u0026\u0026 npm -s run test:bundle -- --cached \u0026\u0026 ...\"",
+      "range": {
+        "startLine": 15,
+        "startChar": 5,
+        "endLine": 15,
+        "endChar": 23
+      },
+      "revId": "02a247a93250c2df39b04c982c37273e8e181894",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7e0b97ee_3541e830",
+        "filename": "package.json",
+        "patchSetId": 10
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-08T23:22:30Z",
+      "side": 1,
+      "message": "No need to quote here",
+      "range": {
+        "startLine": 15,
+        "startChar": 62,
+        "endLine": 15,
+        "endChar": 63
+      },
+      "revId": "02a247a93250c2df39b04c982c37273e8e181894",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
