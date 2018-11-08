@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3c4e65ef_f00cdf3b",
+        "filename": "src/mobile.startup/Panel.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-08T23:57:14Z",
+      "side": 0,
+      "message": "Looks like we need this.\nLet\u0027s link to https://phabricator.wikimedia.org/T209129 in the comment so we remember what this is for in future (with a FIXME)",
+      "revId": "5217102d3dd3c5c40aa07f897bdce3c098031f5c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
