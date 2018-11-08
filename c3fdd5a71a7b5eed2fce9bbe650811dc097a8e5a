@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ea2fd13c_25fc4696",
+        "filename": "tests/phpunit/models/images/Einstein_1921_by_F_Schmutzer_-_restoration.jpg",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-08T18:45:43Z",
+      "side": 1,
+      "message": "This file should not be necessary - explore stubbing to avoid any Input/output operations.",
+      "revId": "c3fdd5a71a7b5eed2fce9bbe650811dc097a8e5a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

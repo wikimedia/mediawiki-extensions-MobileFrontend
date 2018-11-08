@@ -22,6 +22,30 @@
       "revId": "fa4b23c63668378ef302f1d89dcbe4c7c87ff72c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6fad7a53_971e9d54",
+        "filename": "tests/phpunit/models/MobilePageTest.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-08T18:45:43Z",
+      "side": 1,
+      "message": "File is an abstract class.\nMAybe LocalFile is what you need?\n\nProbably what you want to do is use a mock here - a class that extends File  eg. MockFile and pass that around.",
+      "parentUuid": "d17530f4_1a9b8a51",
+      "range": {
+        "startLine": 18,
+        "startChar": 16,
+        "endLine": 18,
+        "endChar": 20
+      },
+      "revId": "fa4b23c63668378ef302f1d89dcbe4c7c87ff72c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
