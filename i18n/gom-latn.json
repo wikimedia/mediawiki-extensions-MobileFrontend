@@ -5,7 +5,7 @@
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "Bodolachem apros na",
-	"mobile-frontend-copyright": "Hantuntlem mozkur $1-chea ontorgot uplobdh asa jem miren her nondi korunk nant.",
+	"mobile-frontend-copyright": "Mozkur $1 hachea khala uplobdh asa kheriz her nondi kelea xivai.",
 	"mobile-frontend-featured-article": "Aizchem ashyachem akarshan",
 	"mobile-frontend-last-modified-date": "$1, $2 vaztam kel'lo akherchem bodol",
 	"mobile-frontend-news-items": "Khobrani",
@@ -14,5 +14,5 @@
 	"mobile-frontend-view": "Mobile-avruti",
 	"mobile-frontend-view-desktop": "Komputer-avruti",
 	"tag-mobile_edit": "Mobail bodol",
-	"tag-mobile_web_edit": "Mobail saiti vorvim kel'le bodlopam"
+	"tag-mobile_web_edit": "Mobail sayti vorvim kel'le bodol"
 }
