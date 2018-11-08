@@ -84,6 +84,7 @@ function setupEditor( page, skin ) {
 				contentDir: $content.attr( 'dir' ),
 				sessionId: user.generateRandomSessionId()
 			},
+			loadingOverlay = loader.newLoadingOverlay(),
 			visualEditorNamespaces = ( veConfig && veConfig.namespaces ) || [],
 			initMechanism = mw.util.getParamValue( 'redlink' ) ? 'new' : 'click';
 
@@ -130,6 +131,8 @@ function setupEditor( page, skin ) {
 			editorOptions.sectionId = page.isWikiText() ? +sectionId : null;
 		}
 
+		loadingOverlay.appendTo( document.body );
+
 		// Check whether VisualEditor should be loaded
 		if ( isVisualEditorEnabled &&
 
@@ -155,12 +158,37 @@ function setupEditor( page, skin ) {
 			logInit( 'visualeditor' );
 			// Inform other interested code that we're loading the editor
 			mw.hook( 'mobileFrontend.editorOpening' ).fire();
-			return loader.loadModule( [ 'mobile.editor.ve' ] ).then( function () {
+
+			// Display an overlay identical to loader.loadModule( ... )
+			loadingOverlay.show();
+
+			editorOptions.mode = 'visual';
+			editorOptions.dataPromise = mw.loader.using( 'ext.visualEditor.targetLoader' ).then( function () {
+				return mw.libs.ve.targetLoader.requestPageData(
+					editorOptions.mode,
+					editorOptions.title,
+					{
+						sessionStore: true,
+						section: editorOptions.sectionId || null,
+						oldId: editorOptions.oldId || undefined,
+						// Should be ve.init.mw.MobileFrontendArticleTarget.static.trackingName,
+						// but the class hasn't loaded yet.
+						targetName: 'mobile'
+					} );
+			} );
+			return mw.loader.using( 'ext.visualEditor.targetLoader' ).then( function () {
+				mw.libs.ve.targetLoader.addPlugin( 'mobile.editor.ve' );
+				return mw.libs.ve.targetLoader.loadModules( editorOptions.mode );
+			} ).then( function () {
 				var VisualEditorOverlay = M.require( 'mobile.editor.overlay/VisualEditorOverlay' ),
 					EditorOverlay = M.require( 'mobile.editor.overlay/EditorOverlay' );
 				editorOptions.EditorOverlay = EditorOverlay;
+				loadingOverlay.hide();
 				return new VisualEditorOverlay( editorOptions );
-			}, loadSourceEditor );
+			}, function () {
+				loadingOverlay.hide();
+				return loadSourceEditor();
+			} );
 		} else {
 			return loadSourceEditor();
 		}
