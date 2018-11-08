@@ -281,6 +281,30 @@
       "revId": "baaf65c98de71d00768c5a75dd2b0bd46de9a42a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "822a1c78_7003a879",
+        "filename": "package.json",
+        "patchSetId": 8
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-08T22:04:20Z",
+      "side": 1,
+      "message": "The `sh` as mentioned in the phab ticket is to help windows developers.",
+      "parentUuid": "e1a10b27_3d7a4919",
+      "range": {
+        "startLine": 13,
+        "startChar": 20,
+        "endLine": 13,
+        "endChar": 52
+      },
+      "revId": "baaf65c98de71d00768c5a75dd2b0bd46de9a42a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
