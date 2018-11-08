@@ -16,6 +16,24 @@
       "revId": "43c4c9bb09d27283f76dfe7c5e347d1c4be76a0c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "88084d9e_f7a16d96",
+        "filename": "src/mobile.startup/OverlayManager.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 298,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2018-11-08T20:13:31Z",
+      "side": 1,
+      "message": "I can change it if that\u0027s the convention, but in Minerva it was done just like this: \t\toverlayManager \u003d new OverlayManager( require( \u0027mediawiki.router\u0027 ) ),",
+      "parentUuid": "543a3f49_aad4ed74",
+      "revId": "43c4c9bb09d27283f76dfe7c5e347d1c4be76a0c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
