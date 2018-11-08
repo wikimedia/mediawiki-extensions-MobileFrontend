@@ -701,14 +701,6 @@
 				"mobile-frontend-categories-hidden"
 			]
 		},
-		"mobile.references": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"deprecated": true,
-			"dependencies": [ "mobile.startup" ]
-		},
 		"mobile.toggle": {
 			"targets": [
 				"mobile",
