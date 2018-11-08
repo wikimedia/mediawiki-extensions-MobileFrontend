@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "970f5c81_d3604eee",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 899,
+      "author": {
+        "id": 99
+      },
+      "writtenOn": "2018-11-08T02:40:01Z",
+      "side": 1,
+      "message": "If the type is select (but not multiselect or radio) then the options field should not be escaped, as htmlform will do that for you.\n\nHowever, its probably less confusing to use \u0027options-messages\u0027 instead of \u0027options\u0027 in the HTMLForm array.",
+      "range": {
+        "startLine": 899,
+        "startChar": 18,
+        "endLine": 899,
+        "endChar": 61
+      },
+      "revId": "c2dd563c7902dd1320954d7cb4c1cb1def31d798",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
