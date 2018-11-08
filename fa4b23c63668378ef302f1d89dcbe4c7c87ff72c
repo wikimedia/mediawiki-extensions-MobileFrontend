@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d17530f4_1a9b8a51",
+        "filename": "tests/phpunit/models/MobilePageTest.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-08T14:57:55Z",
+      "side": 1,
+      "message": "I can\u0027t use the File class here, I don\u0027t know why. Here is the class I\u0027m talking about: https://doc.wikimedia.org/mediawiki-core/master/php/classFile.html. Any hints? It says the class is not found :(",
+      "range": {
+        "startLine": 18,
+        "startChar": 16,
+        "endLine": 18,
+        "endChar": 20
+      },
+      "revId": "fa4b23c63668378ef302f1d89dcbe4c7c87ff72c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
