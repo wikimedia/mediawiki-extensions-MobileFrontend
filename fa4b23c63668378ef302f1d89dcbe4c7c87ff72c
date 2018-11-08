@@ -46,6 +46,30 @@
       "revId": "fa4b23c63668378ef302f1d89dcbe4c7c87ff72c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a012dcab_82ff5de2",
+        "filename": "tests/phpunit/models/MobilePageTest.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-08T21:56:49Z",
+      "side": 1,
+      "message": "setting up `$this-\u003efile` here is totally correct if you need the `file` variable in all tests. Similar goes with `mPageWithNoFile` and `mPageWithFile`. `setUp` is a function that prepares the test environment, it sets up the things that shared for all tests, in this scenario only `pageImagesInstalled` is shared across most of the tests and it\u0027s good to keep it here.\n\nEverything else you can declare in the test functions as local variables. Those variables will be disposed after test is executed so you don\u0027t have to worry about cleaning it up.\n\nMy second thought is around using File(), or LocalFile as Jdlrobson writes. IMHO we should pass Mocks/Data objects. Tests should be independent. To execute tests you shouldn\u0027t require internet connection, nor disk drive. When you\u0027re testing class X, you shouldn\u0027t use class Y (that\u0027s pure scenario, in most cases very difficult to put it into live). If you need to pass some dependencies (like the File object here), instead of creating FileObject you can create a mock that implements File. By doing that you not only don\u0027t rely on internet/disk drive access but you also can verify, that the function you\u0027re testing sticks to contract (for example - values are not hardcoded but read from dependency via getters). \n\nPlease refer to https://phpunit.de/manual/6.5/en/test-doubles.html\nAlso you can find some nice examples here: https://github.com/wikimedia/mediawiki-extensions-Popups/blob/master/tests/phpunit/PopupsGadgetsIntegrationTest.php",
+      "parentUuid": "d17530f4_1a9b8a51",
+      "range": {
+        "startLine": 18,
+        "startChar": 16,
+        "endLine": 18,
+        "endChar": 20
+      },
+      "revId": "fa4b23c63668378ef302f1d89dcbe4c7c87ff72c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
