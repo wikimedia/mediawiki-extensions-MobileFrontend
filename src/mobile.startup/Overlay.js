@@ -51,13 +51,12 @@ mfExtend( Overlay, View, {
 	hideOnExitClick: true,
 
 	/**
-	 * use '#mw-mf-viewport' rather than 'body' - for some reasons this has
-	 * odd consequences on Opera Mobile (see bug 52361)
+	 * Defines an element that the Overlay should automatically be appended to.
 	 * @memberof Overlay
 	 * @instance
 	 * @property {string|jQuery.Object}
 	 */
-	appendToElement: '#mw-mf-viewport',
+	appendToElement: 'body',
 
 	/**
 	 * Default class name
