@@ -40,9 +40,16 @@ QUnit.module( 'MobileFrontend mobile.startup/OverlayManager', {
 		fakeRouter = new OO.EventEmitter();
 		fakeRouter.getPath = sandbox.stub().returns( '' );
 		fakeRouter.back = sandbox.spy();
+		sandbox.stub( mw.loader, 'require' ).withArgs( 'mediawiki.router' ).returns( fakeRouter );
 		overlayManager = new OverlayManager( fakeRouter );
 	},
 	afterEach: function () { sandbox.restore(); }
+} );
+
+QUnit.test( '#getSingleton', function ( assert ) {
+	var singleton = OverlayManager.getSingleton();
+	assert.ok( singleton instanceof OverlayManager, 'singleton exists' );
+	assert.strictEqual( singleton, OverlayManager.getSingleton(), 'same object returned each time' );
 } );
 
 QUnit.test( '#add', function ( assert ) {

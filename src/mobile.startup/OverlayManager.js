@@ -1,6 +1,7 @@
 var
 	util = require( './util' ),
-	mfExtend = require( './mfExtend' );
+	mfExtend = require( './mfExtend' ),
+	overlayManager = null;
 
 /**
  * Manages opening and closing overlays when the URL hash changes to one
@@ -286,5 +287,17 @@ mfExtend( OverlayManager, {
 		this._showOverlay( overlay );
 	}
 } );
+
+/**
+ * Retrieve a singleton instance using 'mediawiki.router'.
+ * @memberof OverlayManager
+ * @return {OverlayManager}
+ */
+OverlayManager.getSingleton = function () {
+	if ( !overlayManager ) {
+		overlayManager = new OverlayManager( mw.loader.require( 'mediawiki.router' ) );
+	}
+	return overlayManager;
+};
 
 module.exports = OverlayManager;

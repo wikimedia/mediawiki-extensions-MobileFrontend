@@ -314,6 +314,7 @@
 				"mediawiki.util",
 				"mediawiki.api",
 				"mediawiki.viewport",
+				"mediawiki.router",
 				"jquery.throttle-debounce"
 			],
 			"templates": {

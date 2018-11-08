@@ -62,7 +62,10 @@ module.exports = function newMockMediaWiki() {
 		user: {},
 		util: { getUrl: function ( title ) { return title; } },
 		loader: {
-			using: function () {}
+			using: function () {},
+			require: function () {
+				return {};
+			}
 		}
 	};
 };
