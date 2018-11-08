@@ -27,7 +27,7 @@ class SpecialUploads extends MobileSpecialPage {
 			$output = $this->getOutput();
 			$config = $this->getMFConfig();
 			$output->addJsConfigVars( [
-				'wgMFPhotoUploadEndpoint' => $config->get( 'MFPhotoUploadEndpoint', '' )
+				'wgMFPhotoUploadEndpoint' => $config->get( 'MFPhotoUploadEndpoint' )
 			] );
 
 			if ( $par !== '' && $par !== null ) {
