@@ -66,8 +66,6 @@
 			if ( this.target ) {
 				this.target.destroy();
 				this.target = null;
-				// TODO: Make this abortable so we can destroy a not-yet created target
-				this.targetPromise = null;
 			}
 		},
 		/**
@@ -76,29 +74,16 @@
 		 * @instance
 		 */
 		show: function () {
-			var overlay = this;
 			EditorOverlayBase.prototype.show.apply( this, arguments );
-			if ( this.targetPromise ) {
-				return;
-			}
-			// FIXME: we have to initialize MobileFrontendArticleTarget after this.$el
-			// is attached to DOM, maybe we should attach it earlier and hide
-			// overlays in a different way?
-			this.targetPromise = mw.loader.using( 'ext.visualEditor.targetLoader' )
-				.then( mw.libs.ve.targetLoader.loadModules )
-				.then( function () {
-					overlay.target = ve.init.mw.targetFactory.create( 'article', overlay, {
-						$element: overlay.$el,
-						// || null so that scrolling is not triggered for the lead (0) section
-						// (which has no header to scroll to)
-						section: overlay.options.sectionId || null
-					} );
-					overlay.target.load();
-					overlay.saved = false;
-				}, function ( e ) {
-					mw.log.warn( 'VisualEditor failed to load: ' + e );
-					overlay.hide();
-				} );
+
+			this.target = ve.init.mw.targetFactory.create( 'article', this, {
+				$element: this.$el,
+				// || null so that scrolling is not triggered for the lead (0) section
+				// (which has no header to scroll to)
+				section: this.options.sectionId || null
+			} );
+			this.target.load( this.options.dataPromise );
+			this.saved = false;
 		},
 		/**
 		 * @inheritdoc

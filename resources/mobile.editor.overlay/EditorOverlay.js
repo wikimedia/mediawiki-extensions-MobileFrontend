@@ -521,10 +521,14 @@
 			// Load the VisualEditor and replace the SourceEditor overlay with it
 			this.showSpinner();
 			this.$content.hide();
-			mw.loader.using(
-				'mobile.editor.ve',
+			mw.loader.using( 'ext.visualEditor.targetLoader' ).then( function () {
+				mw.libs.ve.targetLoader.addPlugin( 'mobile.editor.ve' );
+				return mw.libs.ve.targetLoader.loadModules( 'visual' );
+			} ).then(
 				function () {
-					var VisualEditorOverlay = M.require( 'mobile.editor.ve/VisualEditorOverlay' );
+					// mobile.editor.ve is loaded by the addPlugin call above, but the
+					// resource-modules linter doesn't notice this, so disable on next line.
+					var VisualEditorOverlay = M.require( 'mobile.editor.ve/VisualEditorOverlay' ); // resource-modules-disable-line
 
 					self.hideSpinner();
 					self.overlayManager.replaceCurrent( new VisualEditorOverlay( options ) );
