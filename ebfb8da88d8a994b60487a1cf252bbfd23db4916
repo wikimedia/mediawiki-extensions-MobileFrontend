@@ -16,6 +16,24 @@
       "revId": "ebfb8da88d8a994b60487a1cf252bbfd23db4916",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d8012c20_875fc612",
+        "filename": "tests/phpunit/models/MobileCollectionTest.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-09T18:31:38Z",
+      "side": 1,
+      "message": "Okay Jon, the reason why we can\u0027t just call $mbCollection-\u003egetPages() is because -\u003epages property is private and doing the binding exposes a way in which we can play around with the instance of the object and the property visibility. Also, see this: http://php.net/manual/en/closure.bind.php.\n\nIn addition, this method is far better and faster than ReflectionMethod. :)",
+      "parentUuid": "0bba7791_e53a3161",
+      "revId": "ebfb8da88d8a994b60487a1cf252bbfd23db4916",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
