@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0bba7791_e53a3161",
+        "filename": "tests/phpunit/models/MobileCollectionTest.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-09T17:33:40Z",
+      "side": 1,
+      "message": "I don\u0027t totally understand why you can\u0027t just call $pages \u003d $mbCollection-\u003egetPages() below.\n\nI\u0027m not seeing this pattern (using closure:bind) anywhere inside our code bases (https://github.com/search?l\u003dPHP\u0026p\u003d4\u0026q\u003dorg%3Awikimedia+Closure%3A%3Abind\u0026type\u003dCode)\n\nThis is a learning opportunity for me too.. :)",
+      "revId": "ebfb8da88d8a994b60487a1cf252bbfd23db4916",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
