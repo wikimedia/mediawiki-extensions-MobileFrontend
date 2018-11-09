@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d18773e0_0443489f",
+        "filename": "tests/node-qunit/mobile.startup/context.test.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-09T00:02:43Z",
+      "side": 1,
+      "message": "Nick and I discussed this and decided to limit this to one stub as it\u0027s not adding that much value.",
+      "range": {
+        "startLine": 17,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 33
+      },
+      "revId": "1a7793cbf6a2dc4e748d3ffc3dda226a79e3bd0d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
