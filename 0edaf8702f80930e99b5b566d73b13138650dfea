@@ -22,6 +22,30 @@
       "revId": "0edaf8702f80930e99b5b566d73b13138650dfea",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1500140b_e3b03b95",
+        "filename": "resources/mobile.special.mobileoptions.styles/mobileoptions.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-09T16:41:22Z",
+      "side": 1,
+      "message": "Special:MobileOptions can run in multiple modes and this rule is not needed for non-Minerva.\nI think actually what you want here is to look at the CSS inside Minerva.\n(specifically skinStyles/mobile.special.styles/minerva.less)",
+      "parentUuid": "1ea6f7d0_eb348ffe",
+      "range": {
+        "startLine": 101,
+        "startChar": 0,
+        "endLine": 104,
+        "endChar": 1
+      },
+      "revId": "0edaf8702f80930e99b5b566d73b13138650dfea",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
