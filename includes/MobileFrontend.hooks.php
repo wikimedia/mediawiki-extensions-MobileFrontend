@@ -1159,7 +1159,7 @@ class MobileFrontendHooks {
 	 * Handler for MakeGlobalVariablesScript hook.
 	 * For values that depend on the current page, user or request state.
 	 *
-	 * @see http://www.mediawiki.org/wiki/Manual:Hooks/MakeGlobalVariablesScript
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/MakeGlobalVariablesScript
 	 * @param array &$vars Variables to be added into the output
 	 * @param OutputPage $out OutputPage instance calling the hook
 	 * @return bool true in all cases
@@ -1197,7 +1197,7 @@ class MobileFrontendHooks {
 	 * URLs which are transformed according to the wgMobileUrlTemplate, so
 	 * that both mobile and non-mobile URL variants get purged.
 	 *
-	 * @see * http://www.mediawiki.org/wiki/Manual:Hooks/TitleSquidURLs
+	 * @see * https://www.mediawiki.org/wiki/Manual:Hooks/TitleSquidURLs
 	 * @param Title $title the article title
 	 * @param array &$urls the set of URLs to purge
 	 */
