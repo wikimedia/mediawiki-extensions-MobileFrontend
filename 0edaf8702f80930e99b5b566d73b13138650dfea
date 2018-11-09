@@ -46,6 +46,30 @@
       "revId": "0edaf8702f80930e99b5b566d73b13138650dfea",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "63c3a2a6_4c15c441",
+        "filename": "resources/mobile.special.mobileoptions.styles/mobileoptions.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-09T16:42:00Z",
+      "side": 1,
+      "message": "e.g. http://localhost:8888/w/index.php/Special:MobileOptions?useskin\u003dvector",
+      "parentUuid": "1500140b_e3b03b95",
+      "range": {
+        "startLine": 101,
+        "startChar": 0,
+        "endLine": 104,
+        "endChar": 1
+      },
+      "revId": "0edaf8702f80930e99b5b566d73b13138650dfea",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
