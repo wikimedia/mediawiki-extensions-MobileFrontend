@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "90499fc2_489f5383",
+        "filename": "src/mobile.startup/context.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-09T00:03:05Z",
+      "side": 1,
+      "message": "update to say the values can be stable, beta or null",
+      "range": {
+        "startLine": 12,
+        "startChar": 25,
+        "endLine": 12,
+        "endChar": 56
+      },
+      "revId": "1a7793cbf6a2dc4e748d3ffc3dda226a79e3bd0d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d18773e0_0443489f",
         "filename": "tests/node-qunit/mobile.startup/context.test.js",
         "patchSetId": 4
