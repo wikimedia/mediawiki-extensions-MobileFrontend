@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1ea6f7d0_eb348ffe",
+        "filename": "resources/mobile.special.mobileoptions.styles/mobileoptions.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-09T16:00:35Z",
+      "side": 1,
+      "message": "From my local test, this CSS breaks the default mobile web view. So the padding is not there for both cases.",
+      "range": {
+        "startLine": 101,
+        "startChar": 0,
+        "endLine": 104,
+        "endChar": 1
+      },
+      "revId": "0edaf8702f80930e99b5b566d73b13138650dfea",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
