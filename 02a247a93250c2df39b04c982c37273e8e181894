@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "80c1f727_a359a97d",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 10
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-09T00:22:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7ee611e0_36c1a6c6",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 6,
+        "endChar": 3
+      },
+      "revId": "02a247a93250c2df39b04c982c37273e8e181894",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "aa37f6d3_21a3b4f8",
         "filename": "dev-scripts/check_bundle.sh",
         "patchSetId": 10
@@ -36,6 +60,30 @@
       "writtenOn": "2018-11-08T23:22:30Z",
       "side": 1,
       "message": "Maybe it would be better to error when no argument is passed than to supply a default. What do you think?",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 21
+      },
+      "revId": "02a247a93250c2df39b04c982c37273e8e181894",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "101e1a58_87e79871",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 10
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-09T00:22:36Z",
+      "side": 1,
+      "message": "i\u0027ve taken your suggestion below",
+      "parentUuid": "aa37f6d3_21a3b4f8",
       "range": {
         "startLine": 10,
         "startChar": 0,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "770c7e09_2b4d69ad",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 10
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-09T00:22:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "99af7216_b0042b72",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 36
+      },
+      "revId": "02a247a93250c2df39b04c982c37273e8e181894",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "32cf49ae_6b591cb8",
         "filename": "dev-scripts/check_bundle.sh",
         "patchSetId": 10
@@ -94,6 +166,30 @@
     },
     {
       "key": {
+        "uuid": "27e46b95_0d086b6f",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 10
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-09T00:22:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "32cf49ae_6b591cb8",
+      "range": {
+        "startLine": 17,
+        "startChar": 9,
+        "endLine": 17,
+        "endChar": 14
+      },
+      "revId": "02a247a93250c2df39b04c982c37273e8e181894",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c3c16f7c_bd77ec67",
         "filename": "dev-scripts/check_bundle.sh",
         "patchSetId": 10
@@ -105,6 +201,30 @@
       "writtenOn": "2018-11-08T23:26:04Z",
       "side": 1,
       "message": "Typo",
+      "range": {
+        "startLine": 19,
+        "startChar": 35,
+        "endLine": 19,
+        "endChar": 36
+      },
+      "revId": "02a247a93250c2df39b04c982c37273e8e181894",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f6f20cb3_615b0930",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 10
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-09T00:22:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c3c16f7c_bd77ec67",
       "range": {
         "startLine": 19,
         "startChar": 35,
@@ -151,6 +271,30 @@
       "writtenOn": "2018-11-08T23:26:04Z",
       "side": 1,
       "message": "Typo",
+      "range": {
+        "startLine": 21,
+        "startChar": 25,
+        "endLine": 21,
+        "endChar": 26
+      },
+      "revId": "02a247a93250c2df39b04c982c37273e8e181894",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "51bd6c62_504bf289",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 10
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-09T00:22:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fccb4699_d2a08426",
       "range": {
         "startLine": 21,
         "startChar": 25,
@@ -232,6 +376,30 @@
     },
     {
       "key": {
+        "uuid": "d142c443_c1882597",
+        "filename": "package.json",
+        "patchSetId": 10
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-09T00:22:36Z",
+      "side": 1,
+      "message": "I\u0027m using it in 2 places though.. here and above, so didn\u0027t want to repeat myself.",
+      "parentUuid": "b6f068d6_d63a6e41",
+      "range": {
+        "startLine": 13,
+        "startChar": 5,
+        "endLine": 13,
+        "endChar": 9
+      },
+      "revId": "02a247a93250c2df39b04c982c37273e8e181894",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "76f4fc4e_39f9602f",
         "filename": "package.json",
         "patchSetId": 10
@@ -243,6 +411,30 @@
       "writtenOn": "2018-11-08T23:22:30Z",
       "side": 1,
       "message": "test:bundle and test:bundle-cached should be similar. Can we remove this?",
+      "range": {
+        "startLine": 14,
+        "startChar": 62,
+        "endLine": 14,
+        "endChar": 90
+      },
+      "revId": "02a247a93250c2df39b04c982c37273e8e181894",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1061ada4_d578df23",
+        "filename": "package.json",
+        "patchSetId": 10
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-09T00:22:36Z",
+      "side": 1,
+      "message": "Moved it to test:all",
+      "parentUuid": "76f4fc4e_39f9602f",
       "range": {
         "startLine": 14,
         "startChar": 62,
@@ -289,6 +481,30 @@
       "writtenOn": "2018-11-08T23:22:30Z",
       "side": 1,
       "message": "No need to quote here",
+      "range": {
+        "startLine": 15,
+        "startChar": 62,
+        "endLine": 15,
+        "endChar": 63
+      },
+      "revId": "02a247a93250c2df39b04c982c37273e8e181894",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1f11af62_cd4a86fe",
+        "filename": "package.json",
+        "patchSetId": 10
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-09T00:22:36Z",
+      "side": 1,
+      "message": "Done. TBH I prefer the name as it makes it clearer about what this is actually testing. The precommit might grow in length and be hard to decode. Given we already confused this job between precommit and check assets in jenkins is seems like a good idea to make this crystal clear!",
+      "parentUuid": "7e0b97ee_3541e830",
       "range": {
         "startLine": 15,
         "startChar": 62,
