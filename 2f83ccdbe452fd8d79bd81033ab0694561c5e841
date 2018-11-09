@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1148d3d0_e358eb36",
+        "filename": "tests/node-qunit/mobile.startup/icons.test.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-09T00:05:24Z",
+      "side": 1,
+      "message": "add jquery teardown",
+      "revId": "2f83ccdbe452fd8d79bd81033ab0694561c5e841",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
