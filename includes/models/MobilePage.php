@@ -3,7 +3,7 @@
 /**
  * Retrieves information specific to a mobile page
  * Currently this only provides helper functions for loading PageImage associated with a page
- * @todo FIXME: Rename when this class when its purpose becomes clearer
+ * @todo FIXME: Rename this class when its purpose becomes clearer
  */
 class MobilePage {
 	const SMALL_IMAGE_WIDTH = 150;
