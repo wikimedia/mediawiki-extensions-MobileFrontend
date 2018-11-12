@@ -2,10 +2,12 @@
 
 /**
  * @group MobileFrontend
+ * @coversDefaultClass InlineDifferenceEngine
  */
 class InlineDifferenceEngineTest extends MediaWikiTestCase {
 	/**
-	 * @covers InlineDifferenceEngine::generateTextDiffBody
+	 * @covers ::generateTextDiffBody
+	 * @covers ::generateContentDiffBody
 	 */
 	public function testInlineDiffs() {
 		// Test that covers all possibilities, must match 004.phpt from wikidiff2
