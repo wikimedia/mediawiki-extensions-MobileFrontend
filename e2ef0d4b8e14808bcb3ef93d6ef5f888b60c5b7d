@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "77c66476_9a9222b0",
+        "filename": "includes/WMFBaseDomainExtractor.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-12T18:38:45Z",
+      "side": 1,
+      "message": "Okay.. so I\u0027m taking a closer look and I think I understand what you are getting at.\n\nIt seems getCookieDomain only calls extractSubdomain if:\n$this-\u003ematchBaseHostname( $host, $this-\u003ewmfMultiDomainWikiHosts );\n\nSo removing this code is likely fine, but we should make in the function signature that $fullHostname should be in an expected format and will throw errors if not given in that format.",
+      "revId": "e2ef0d4b8e14808bcb3ef93d6ef5f888b60c5b7d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
