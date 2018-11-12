@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7ed2c03b_c3810a7f",
+        "filename": "includes/WMFBaseDomainExtractor.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-12T18:29:19Z",
+      "side": 0,
+      "message": "what if wgServer is mediawiki.org ?",
+      "revId": "e98089aa0c8ba0f514823e980c163d703edde550",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
