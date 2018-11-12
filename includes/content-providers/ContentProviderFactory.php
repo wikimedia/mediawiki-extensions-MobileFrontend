@@ -49,8 +49,9 @@ class ContentProviderFactory {
 				return new $contentProviderClass( $baseUrl, $out );
 			case self::MW_API:
 				$skinName = $out->getSkin()->getSkinName();
+				$rev = $out->getRequest()->getIntOrNull( 'oldid' );
 				$baseUrl = $config->get( 'MFMwApiContentProviderBaseUri' );
-				return new $contentProviderClass( $baseUrl, $out, $skinName );
+				return new $contentProviderClass( $baseUrl, $out, $skinName, $rev );
 			case self::PHP_PARSER:
 				return self::getDefaultParser( $html );
 			default:
