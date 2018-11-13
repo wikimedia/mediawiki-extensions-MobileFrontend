@@ -448,6 +448,32 @@
 				"mobile-frontend-editor-abusefilter-read-more"
 			]
 		},
+		"mobile.editor": {
+			"targets": [
+				"mobile",
+				"desktop"
+			],
+			"dependencies": [
+				"mediawiki.api",
+				"mediawiki.jqueryMsg",
+				"mediawiki.router",
+				"mediawiki.storage",
+				"mediawiki.Uri",
+				"mediawiki.user",
+				"mediawiki.util",
+				"mobile.startup",
+				"mobile.init"
+			],
+			"messages": [
+				"mobile-frontend-editor-disabled",
+				"mobile-frontend-editor-disabled-anon",
+				"mobile-frontend-editor-uploadenable",
+				"apierror-readonly"
+			],
+			"scripts": [
+				"resources/mobile.editor/init.js"
+			]
+		},
 		"mobile.editor.overlay": {
 			"targets": [
 				"mobile",
