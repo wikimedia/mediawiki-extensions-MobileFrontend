@@ -33,6 +33,24 @@
       "revId": "b06b2a1b9f8084de53f5bcabf289ca0d8c908a21",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "35a4f403_7068f085",
+        "filename": "includes/WMFBaseDomainExtractor.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-13T18:42:54Z",
+      "side": 1,
+      "message": "Ahh yes, it\u0027s already in the commit message. Forgot to remove it :)",
+      "parentUuid": "c4d38a1b_deba471c",
+      "revId": "b06b2a1b9f8084de53f5bcabf289ca0d8c908a21",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
