@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "85f3b2e7_fc02d777",
+        "filename": "includes/WMFBaseDomainExtractor.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-13T16:31:36Z",
+      "side": 1,
+      "message": "I added the code below above this line but it won\u0027t work :(\n\n```\nif ( !filter_var( $fullHostname, FILTER_VALIDATE_DOMAIN ) ) {\n\t\t\tthrow new \\InvalidArgumentException(\n\t\t\t\t\u0027Only accepts valid domains. Argument supplied was: \u0027 . $fullHostname\n\t\t\t);\n}\n```\n\nIt gives me errors around undefined constant FILTER_VALIDATE_DOMAIN.",
+      "range": {
+        "startLine": 107,
+        "startChar": 2,
+        "endLine": 107,
+        "endChar": 34
+      },
+      "revId": "a9d407dfbb94d7ba507866b60cffb843e909f9d4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
