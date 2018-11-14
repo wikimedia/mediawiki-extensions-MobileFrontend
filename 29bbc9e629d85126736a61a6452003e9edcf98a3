@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "efcbc2d2_a347498d",
+        "filename": "src/mobile.startup/View.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 221,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-11-14T20:47:38Z",
+      "side": 1,
+      "message": "I think this is okay, just wanted to double check that clients of View are always expected to pass at least an empty object into View\u0027s constructor e.g. we should expect not to get a`Cannot read property className of undefined` error here?",
+      "range": {
+        "startLine": 221,
+        "startChar": 21,
+        "endLine": 221,
+        "endChar": 36
+      },
+      "revId": "29bbc9e629d85126736a61a6452003e9edcf98a3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
