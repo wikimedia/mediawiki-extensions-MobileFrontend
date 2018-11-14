@@ -32,7 +32,7 @@
 		};
 
 	skin = new Skin( skinData );
-	M.define( 'mobile.init/skin', skin ); // resource-modules-disable-line
+	M.define( 'mobile.init/skin', skin );
 
 	/**
 	 * Given 2 functions, it returns a function that will run both with it's

@@ -700,6 +700,19 @@ class MobileFrontendHooks {
 	}
 
 	/**
+	 * Checks whether the editor can handle the existing content handler type.
+	 *
+	 * @param Title $title
+	 * @return bool
+	 */
+	protected static function isPageContentModelEditable( Title $title ) {
+		$contentHandler = ContentHandler::getForTitle( $title );
+
+		return $contentHandler->supportsDirectEditing()
+			&& $contentHandler->supportsDirectApiEditing();
+	}
+
+	/**
 	 * BeforePageDisplay hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/BeforePageDisplay
 	 *
@@ -811,6 +824,13 @@ class MobileFrontendHooks {
 			// We load MediaWiki:Mobile.css/js instead
 			// We load mobile.init so that lazy loading images works on all skins
 			$out->addModules( [ 'mobile.site', 'mobile.init' ] );
+			if ( !$title->isSpecialPage() && self::isPageContentModelEditable( $title ) ) {
+				// TODO: Mobile editor doesn't work well with other skins yet (it looks horribly broken
+				// without some styles that are only defined by Minerva).
+				if ( $skin->getSkinName() === 'minerva' ) {
+					$out->addModules( [ 'mobile.editor' ] );
+				}
+			}
 			if ( $title->isMainPage() && $config->get( 'MFMobileMainPageCss' ) ) {
 				$out->addModuleStyles( [ 'mobile.mainpage.css' ] );
 			}
