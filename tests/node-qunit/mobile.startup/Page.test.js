@@ -35,7 +35,6 @@ QUnit.module( 'MobileFrontend Page', {
 		sandbox = sinon.sandbox.create();
 		dom.setUp( sandbox, global );
 		mw.setUp( sandbox, global );
-		global.mw.config.set( 'wgMFMobileFormatterHeadings', [ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' ] );
 		jQuery.setUp( sandbox, global );
 		oo.setUp( sandbox, global );
 

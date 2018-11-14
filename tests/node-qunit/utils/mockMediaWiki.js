@@ -21,11 +21,8 @@ module.exports = function newMockMediaWiki() {
 			};
 		},
 		config: {
-			get: function ( name ) {
-				return config[name];
-			},
-			set: function ( name, val ) {
-				config[name] = val;
+			get: function ( name, fallback ) {
+				return config[name] || fallback;
 			}
 		},
 		html: {
