@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "a9c41794_fa97e645",
+        "filename": "tests/node-qunit/mobile.startup/ReferencesHtmlScraperGateway.test.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-14T20:23:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c5d4561f_157a1432",
+      "range": {
+        "startLine": 12,
+        "startChar": 15,
+        "endLine": 12,
+        "endChar": 61
+      },
+      "revId": "77a0e14f6cf933e06f33579e3df572a14b4c4a43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3f57d2f4_5ca08fe7",
         "filename": "tests/node-qunit/mobile.startup/ReferencesHtmlScraperGateway.test.js",
         "patchSetId": 5
@@ -60,6 +84,30 @@
       "writtenOn": "2018-11-14T01:13:40Z",
       "side": 1,
       "message": "small typo",
+      "range": {
+        "startLine": 26,
+        "startChar": 30,
+        "endLine": 26,
+        "endChar": 40
+      },
+      "revId": "77a0e14f6cf933e06f33579e3df572a14b4c4a43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3ec407c5_77553bac",
+        "filename": "tests/node-qunit/mobile.startup/ReferencesHtmlScraperGateway.test.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-14T20:23:22Z",
+      "side": 1,
+      "message": "removed because of line below",
+      "parentUuid": "3f57d2f4_5ca08fe7",
       "range": {
         "startLine": 26,
         "startChar": 30,
@@ -95,6 +143,30 @@
     },
     {
       "key": {
+        "uuid": "0bb93363_2ba0e355",
+        "filename": "tests/node-qunit/mobile.startup/ReferencesHtmlScraperGateway.test.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-14T20:23:22Z",
+      "side": 1,
+      "message": "W00t! good find!",
+      "parentUuid": "0fd6717f_a8ba7d45",
+      "range": {
+        "startLine": 26,
+        "startChar": 0,
+        "endLine": 27,
+        "endChar": 63
+      },
+      "revId": "77a0e14f6cf933e06f33579e3df572a14b4c4a43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "54465083_80ce4fec",
         "filename": "tests/node-qunit/mobile.startup/ReferencesHtmlScraperGateway.test.js",
         "patchSetId": 5
@@ -106,6 +178,30 @@
       "writtenOn": "2018-11-14T01:13:40Z",
       "side": 1,
       "message": "can this be \"getReference() checking good references\" per test name conventions?",
+      "range": {
+        "startLine": 35,
+        "startChar": 13,
+        "endLine": 35,
+        "endChar": 36
+      },
+      "revId": "77a0e14f6cf933e06f33579e3df572a14b4c4a43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f1c31423_d9de1aa1",
+        "filename": "tests/node-qunit/mobile.startup/ReferencesHtmlScraperGateway.test.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-14T20:23:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "54465083_80ce4fec",
       "range": {
         "startLine": 35,
         "startChar": 13,
@@ -141,6 +237,30 @@
     },
     {
       "key": {
+        "uuid": "75b5afdd_6dd2e971",
+        "filename": "tests/node-qunit/mobile.startup/ReferencesHtmlScraperGateway.test.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-14T20:23:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3e618025_16cc0863",
+      "range": {
+        "startLine": 41,
+        "startChar": 13,
+        "endLine": 41,
+        "endChar": 35
+      },
+      "revId": "77a0e14f6cf933e06f33579e3df572a14b4c4a43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "97bb9fb0_9505462f",
         "filename": "tests/node-qunit/mobile.startup/ReferencesHtmlScraperGateway.test.js",
         "patchSetId": 5
@@ -152,6 +272,30 @@
       "writtenOn": "2018-11-14T01:13:40Z",
       "side": 1,
       "message": "can this be \"getReference() checking encoded references\" per test name conventions?",
+      "range": {
+        "startLine": 47,
+        "startChar": 13,
+        "endLine": 47,
+        "endChar": 39
+      },
+      "revId": "77a0e14f6cf933e06f33579e3df572a14b4c4a43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a4e51af7_3dd42315",
+        "filename": "tests/node-qunit/mobile.startup/ReferencesHtmlScraperGateway.test.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-14T20:23:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "97bb9fb0_9505462f",
       "range": {
         "startLine": 47,
         "startChar": 13,
@@ -211,6 +355,30 @@
     },
     {
       "key": {
+        "uuid": "a2d73d8d_5aa54016",
+        "filename": "tests/node-qunit/mobile.startup/ReferencesMobileViewGateway.test.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-14T20:23:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e0a703b7_219079e6",
+      "range": {
+        "startLine": 14,
+        "startChar": 15,
+        "endLine": 14,
+        "endChar": 60
+      },
+      "revId": "77a0e14f6cf933e06f33579e3df572a14b4c4a43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "19b0639e_410f8d4d",
         "filename": "tests/node-qunit/mobile.startup/ReferencesMobileViewGateway.test.js",
         "patchSetId": 5
@@ -222,6 +390,30 @@
       "writtenOn": "2018-11-14T01:13:40Z",
       "side": 1,
       "message": "getReferencesList() Gateway only hits api once despite multiple calls",
+      "range": {
+        "startLine": 62,
+        "startChar": 13,
+        "endLine": 62,
+        "endChar": 62
+      },
+      "revId": "77a0e14f6cf933e06f33579e3df572a14b4c4a43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c754164f_b987cdd5",
+        "filename": "tests/node-qunit/mobile.startup/ReferencesMobileViewGateway.test.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-14T20:23:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "19b0639e_410f8d4d",
       "range": {
         "startLine": 62,
         "startChar": 13,
@@ -257,6 +449,30 @@
     },
     {
       "key": {
+        "uuid": "17b4ec89_5393eed1",
+        "filename": "tests/node-qunit/mobile.startup/ReferencesMobileViewGateway.test.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-14T20:23:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d1b65f7c_9dbf47ac",
+      "range": {
+        "startLine": 71,
+        "startChar": 13,
+        "endLine": 71,
+        "endChar": 36
+      },
+      "revId": "77a0e14f6cf933e06f33579e3df572a14b4c4a43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a53487ee_8460e5d4",
         "filename": "tests/node-qunit/mobile.startup/ReferencesMobileViewGateway.test.js",
         "patchSetId": 5
@@ -268,6 +484,30 @@
       "writtenOn": "2018-11-14T01:13:40Z",
       "side": 1,
       "message": "getReference() checking good reference (subsequent calls)",
+      "range": {
+        "startLine": 77,
+        "startChar": 13,
+        "endLine": 77,
+        "endChar": 55
+      },
+      "revId": "77a0e14f6cf933e06f33579e3df572a14b4c4a43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cdc46f49_9f54e109",
+        "filename": "tests/node-qunit/mobile.startup/ReferencesMobileViewGateway.test.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-14T20:23:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a53487ee_8460e5d4",
       "range": {
         "startLine": 77,
         "startChar": 13,
@@ -326,6 +566,30 @@
     },
     {
       "key": {
+        "uuid": "c255d31a_18ae8662",
+        "filename": "tests/node-qunit/mobile.startup/ReferencesMobileViewGateway.test.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-14T20:23:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b828b8a6_47a804aa",
+      "range": {
+        "startLine": 92,
+        "startChar": 13,
+        "endLine": 92,
+        "endChar": 52
+      },
+      "revId": "77a0e14f6cf933e06f33579e3df572a14b4c4a43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ad1863bb_d4e4f369",
         "filename": "tests/node-qunit/mobile.startup/ReferencesMobileViewGateway.test.js",
         "patchSetId": 5
@@ -337,6 +601,30 @@
       "writtenOn": "2018-11-14T01:13:40Z",
       "side": 1,
       "message": "getReference() checking reference when gateway rejects",
+      "range": {
+        "startLine": 99,
+        "startChar": 13,
+        "endLine": 99,
+        "endChar": 52
+      },
+      "revId": "77a0e14f6cf933e06f33579e3df572a14b4c4a43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f811e719_e027bc07",
+        "filename": "tests/node-qunit/mobile.startup/ReferencesMobileViewGateway.test.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-14T20:23:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ad1863bb_d4e4f369",
       "range": {
         "startLine": 99,
         "startChar": 13,
@@ -384,6 +672,30 @@
       "side": 1,
       "message": "Last time I checked this was needed for the headless tests. I can pull this into a separate patchset if that helps.",
       "parentUuid": "48bea183_7f774c2b",
+      "range": {
+        "startLine": 24,
+        "startChar": 3,
+        "endLine": 25,
+        "endChar": 36
+      },
+      "revId": "77a0e14f6cf933e06f33579e3df572a14b4c4a43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "58ba8031_ab177f0b",
+        "filename": "tests/node-qunit/utils/mockMediaWiki.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-14T20:23:22Z",
+      "side": 1,
+      "message": "Looks like we\u0027re leaking due to know mediaWiki teardown.\nI\u0027ve pulled this out into a separate patchset..\nglobal.mw.config.set( \u0027wgMFMobileFormatterHeadings\u0027, [ \u0027h1\u0027, \u0027h2\u0027, \u0027h3\u0027, \u0027h4\u0027, \u0027h5\u0027, \u0027h6\u0027 ] );\n\nSince this is important and notable I\u0027ve pulled this out into a separate patchset:\nhttps://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/473603 Don\u0027t pollute the MediaWiki global in tests",
+      "parentUuid": "8b91ca00_fb6261f1",
       "range": {
         "startLine": 24,
         "startChar": 3,
