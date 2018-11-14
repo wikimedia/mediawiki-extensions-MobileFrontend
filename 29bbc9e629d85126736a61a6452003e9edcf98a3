@@ -22,6 +22,30 @@
       "revId": "29bbc9e629d85126736a61a6452003e9edcf98a3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6270dfcf_3837ec16",
+        "filename": "src/mobile.startup/View.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 221,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-14T21:46:45Z",
+      "side": 1,
+      "message": "Before we were assuming className is set on View, so we can continue to assume that.\n\n$( \u0027body\u0027 ).addClass( undefined ) is safe.",
+      "parentUuid": "efcbc2d2_a347498d",
+      "range": {
+        "startLine": 221,
+        "startChar": 21,
+        "endLine": 221,
+        "endChar": 36
+      },
+      "revId": "29bbc9e629d85126736a61a6452003e9edcf98a3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
