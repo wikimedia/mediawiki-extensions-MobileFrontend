@@ -1,0 +1,326 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d585ac60_5f3d5e5f",
+        "filename": "tests/node-qunit/mobile.startup/ReferencesHtmlScraperGateway.test.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-11-14T01:13:40Z",
+      "side": 1,
+      "message": "Should probably be \"MobileFrontend: ReferencesHtmlScraperGateway.test.js\"[1]\n\n[1] https://www.mediawiki.org/wiki/Reading/Web/QUnit_test_guidelines",
+      "range": {
+        "startLine": 12,
+        "startChar": 15,
+        "endLine": 12,
+        "endChar": 61
+      },
+      "revId": "77a0e14f6cf933e06f33579e3df572a14b4c4a43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3f57d2f4_5ca08fe7",
+        "filename": "tests/node-qunit/mobile.startup/ReferencesHtmlScraperGateway.test.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-11-14T01:13:40Z",
+      "side": 1,
+      "message": "small typo",
+      "range": {
+        "startLine": 26,
+        "startChar": 30,
+        "endLine": 26,
+        "endChar": 40
+      },
+      "revId": "77a0e14f6cf933e06f33579e3df572a14b4c4a43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0fd6717f_a8ba7d45",
+        "filename": "tests/node-qunit/mobile.startup/ReferencesHtmlScraperGateway.test.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-11-14T01:13:40Z",
+      "side": 1,
+      "message": "Actually, I don\u0027t think these two lines are needed. Page calls getUrl() in its constructor so by the time this stub is in place, Page has already done the call. More importantly, if you remove the line, the tests still pass.",
+      "range": {
+        "startLine": 26,
+        "startChar": 0,
+        "endLine": 27,
+        "endChar": 63
+      },
+      "revId": "77a0e14f6cf933e06f33579e3df572a14b4c4a43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "54465083_80ce4fec",
+        "filename": "tests/node-qunit/mobile.startup/ReferencesHtmlScraperGateway.test.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-11-14T01:13:40Z",
+      "side": 1,
+      "message": "can this be \"getReference() checking good references\" per test name conventions?",
+      "range": {
+        "startLine": 35,
+        "startChar": 13,
+        "endLine": 35,
+        "endChar": 36
+      },
+      "revId": "77a0e14f6cf933e06f33579e3df572a14b4c4a43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3e618025_16cc0863",
+        "filename": "tests/node-qunit/mobile.startup/ReferencesHtmlScraperGateway.test.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-11-14T01:13:40Z",
+      "side": 1,
+      "message": "can this be \"getReference() checking bad references\" per test name conventions?",
+      "range": {
+        "startLine": 41,
+        "startChar": 13,
+        "endLine": 41,
+        "endChar": 35
+      },
+      "revId": "77a0e14f6cf933e06f33579e3df572a14b4c4a43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "97bb9fb0_9505462f",
+        "filename": "tests/node-qunit/mobile.startup/ReferencesHtmlScraperGateway.test.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-11-14T01:13:40Z",
+      "side": 1,
+      "message": "can this be \"getReference() checking encoded references\" per test name conventions?",
+      "range": {
+        "startLine": 47,
+        "startChar": 13,
+        "endLine": 47,
+        "endChar": 39
+      },
+      "revId": "77a0e14f6cf933e06f33579e3df572a14b4c4a43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "be09fa0c_bfa8ed5e",
+        "filename": "tests/node-qunit/mobile.startup/ReferencesMobileViewGateway.test.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-11-14T01:13:40Z",
+      "side": 1,
+      "message": "Should probably be \"MobileFrontend: ReferencesMobileViewGateway.test.js\"[1]\n\n[1] https://www.mediawiki.org/wiki/Reading/Web/QUnit_test_guidelines",
+      "range": {
+        "startLine": 14,
+        "startChar": 15,
+        "endLine": 14,
+        "endChar": 60
+      },
+      "revId": "77a0e14f6cf933e06f33579e3df572a14b4c4a43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "19b0639e_410f8d4d",
+        "filename": "tests/node-qunit/mobile.startup/ReferencesMobileViewGateway.test.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-11-14T01:13:40Z",
+      "side": 1,
+      "message": "getReferencesList() Gateway only hits api once despite multiple calls",
+      "range": {
+        "startLine": 62,
+        "startChar": 13,
+        "endLine": 62,
+        "endChar": 62
+      },
+      "revId": "77a0e14f6cf933e06f33579e3df572a14b4c4a43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d1b65f7c_9dbf47ac",
+        "filename": "tests/node-qunit/mobile.startup/ReferencesMobileViewGateway.test.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-11-14T01:13:40Z",
+      "side": 1,
+      "message": "getReference() checking good reference",
+      "range": {
+        "startLine": 71,
+        "startChar": 13,
+        "endLine": 71,
+        "endChar": 36
+      },
+      "revId": "77a0e14f6cf933e06f33579e3df572a14b4c4a43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a53487ee_8460e5d4",
+        "filename": "tests/node-qunit/mobile.startup/ReferencesMobileViewGateway.test.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-11-14T01:13:40Z",
+      "side": 1,
+      "message": "getReference() checking good reference (subsequent calls)",
+      "range": {
+        "startLine": 77,
+        "startChar": 13,
+        "endLine": 77,
+        "endChar": 55
+      },
+      "revId": "77a0e14f6cf933e06f33579e3df572a14b4c4a43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4a105804_52f1d656",
+        "filename": "tests/node-qunit/mobile.startup/ReferencesMobileViewGateway.test.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-11-14T01:13:40Z",
+      "side": 1,
+      "message": "getReference() checking bad reference",
+      "range": {
+        "startLine": 85,
+        "startChar": 13,
+        "endLine": 85,
+        "endChar": 35
+      },
+      "revId": "77a0e14f6cf933e06f33579e3df572a14b4c4a43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b828b8a6_47a804aa",
+        "filename": "tests/node-qunit/mobile.startup/ReferencesMobileViewGateway.test.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-11-14T01:13:40Z",
+      "side": 1,
+      "message": "getReference() checking reference on non-existent page",
+      "range": {
+        "startLine": 92,
+        "startChar": 13,
+        "endLine": 92,
+        "endChar": 52
+      },
+      "revId": "77a0e14f6cf933e06f33579e3df572a14b4c4a43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ad1863bb_d4e4f369",
+        "filename": "tests/node-qunit/mobile.startup/ReferencesMobileViewGateway.test.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-11-14T01:13:40Z",
+      "side": 1,
+      "message": "getReference() checking reference when gateway rejects",
+      "range": {
+        "startLine": 99,
+        "startChar": 13,
+        "endLine": 99,
+        "endChar": 52
+      },
+      "revId": "77a0e14f6cf933e06f33579e3df572a14b4c4a43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "48bea183_7f774c2b",
+        "filename": "tests/node-qunit/utils/mockMediaWiki.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-11-14T01:13:40Z",
+      "side": 1,
+      "message": "Is this change being used anywhere? I ask because the tests seem to pass without it and was wondering if we could do stubbing in the tests themselves if this behavior is desired",
+      "range": {
+        "startLine": 24,
+        "startChar": 3,
+        "endLine": 25,
+        "endChar": 36
+      },
+      "revId": "77a0e14f6cf933e06f33579e3df572a14b4c4a43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
