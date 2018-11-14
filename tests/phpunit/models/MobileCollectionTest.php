@@ -12,9 +12,9 @@ class MobileCollectionTest extends MediaWikiTestCase {
 		$mobileCollection = new MobileCollection();
 
 		// Should return 0 by default as $pages = [];
-		$expected = $mobileCollection->count();
+		$actual = $mobileCollection->count();
 
-		$this->assertSame( $expected, 0 );
+		$this->assertSame( 0, $actual );
 	}
 
 	/**
@@ -25,14 +25,14 @@ class MobileCollectionTest extends MediaWikiTestCase {
 		$mobileCollection = new MobileCollection();
 		$mobilePage = new MobilePage( Title::newMainPage(), false );
 		$mobileCollection->add( $mobilePage );
-		$expected = $mobileCollection->count();
+		$actual = $mobileCollection->count();
 
-		$this->assertSame( $expected, 1 );
+		$this->assertSame( 1, $actual );
 
 		$mobileCollection->add( $mobilePage );
-		$expected = $mobileCollection->count();
+		$actual = $mobileCollection->count();
 
-		$this->assertSame( $expected, 2 );
+		$this->assertSame( 2, $actual );
 	}
 
 	/**
@@ -51,14 +51,14 @@ class MobileCollectionTest extends MediaWikiTestCase {
 		$mobileCollection->add( $mobilePage );
 		$mobileCollection->add( $mobilePage );
 
-		$expected = $mobileCollection->count();
-		$this->assertSame( $expected, 3 );
+		$actual = $mobileCollection->count();
+		$this->assertSame( 3, $actual );
 
 		// Create a page of type Title and assert on it.
-		$actual = Title::newFromText( 'Page_test', NS_MAIN );
+		$expected = Title::newFromText( 'Page_test', NS_MAIN );
 
 		foreach ( $mobileCollection as $mbPage ) {
-			$expected = $mbPage->getTitle();
+			$actual = $mbPage->getTitle();
 			$this->assertSame( $expected, $actual );
 		}
 	}
