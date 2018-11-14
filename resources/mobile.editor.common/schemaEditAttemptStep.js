@@ -3,7 +3,7 @@ mw.loader.using( [ 'schema.EditAttemptStep', 'ext.eventLogging.subscriber' ] ).t
 		// Schema provided by ext.eventLogging.subscriber class
 		Schema = mw.eventLog.Schema, // resource-modules-disable-line
 		user = M.require( 'mobile.startup/user' ),
-		sampleRate = mw.config.get( 'wgWMESchemaEditAttemptStepSampleRate' ),
+		sampleRate = mw.config.get( 'wgWMESchemaEditAttemptStepSamplingRate' ),
 		actionPrefixMap = {
 			saveIntent: 'save_intent',
 			saveAttempt: 'save_attempt',
