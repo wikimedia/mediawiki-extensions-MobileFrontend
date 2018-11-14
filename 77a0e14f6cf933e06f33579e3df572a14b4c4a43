@@ -321,6 +321,30 @@
       "revId": "77a0e14f6cf933e06f33579e3df572a14b4c4a43",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8b91ca00_fb6261f1",
+        "filename": "tests/node-qunit/utils/mockMediaWiki.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-14T01:18:41Z",
+      "side": 1,
+      "message": "Last time I checked this was needed for the headless tests. I can pull this into a separate patchset if that helps.",
+      "parentUuid": "48bea183_7f774c2b",
+      "range": {
+        "startLine": 24,
+        "startChar": 3,
+        "endLine": 25,
+        "endChar": 36
+      },
+      "revId": "77a0e14f6cf933e06f33579e3df572a14b4c4a43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
