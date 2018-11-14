@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "c5d4561f_157a1432",
+        "filename": "tests/node-qunit/mobile.startup/ReferencesHtmlScraperGateway.test.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-11-14T01:31:54Z",
+      "side": 1,
+      "message": "^^ actually there shouldn\u0027t be a colon in that title. Sorry for confusion. Should be:\n\n\"MobileFrontend ReferencesHtmlScraperGateway.test.js\"",
+      "parentUuid": "d585ac60_5f3d5e5f",
+      "range": {
+        "startLine": 12,
+        "startChar": 15,
+        "endLine": 12,
+        "endChar": 61
+      },
+      "revId": "77a0e14f6cf933e06f33579e3df572a14b4c4a43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3f57d2f4_5ca08fe7",
         "filename": "tests/node-qunit/mobile.startup/ReferencesHtmlScraperGateway.test.js",
         "patchSetId": 5
@@ -151,6 +175,30 @@
       "writtenOn": "2018-11-14T01:13:40Z",
       "side": 1,
       "message": "Should probably be \"MobileFrontend: ReferencesMobileViewGateway.test.js\"[1]\n\n[1] https://www.mediawiki.org/wiki/Reading/Web/QUnit_test_guidelines",
+      "range": {
+        "startLine": 14,
+        "startChar": 15,
+        "endLine": 14,
+        "endChar": 60
+      },
+      "revId": "77a0e14f6cf933e06f33579e3df572a14b4c4a43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e0a703b7_219079e6",
+        "filename": "tests/node-qunit/mobile.startup/ReferencesMobileViewGateway.test.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-11-14T01:31:54Z",
+      "side": 1,
+      "message": "Sorry, no colon needed: \"MobileFrontend ReferencesMobileViewGateway.test.js\"",
+      "parentUuid": "be09fa0c_bfa8ed5e",
       "range": {
         "startLine": 14,
         "startChar": 15,
