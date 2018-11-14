@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5659e929_293d6121",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 7
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-11-14T22:18:25Z",
+      "side": 1,
+      "message": "Can this be removed now?",
+      "range": {
+        "startLine": 11,
+        "startChar": 2,
+        "endLine": 11,
+        "endChar": 15
+      },
+      "revId": "2743bade9aa1fca929feec7d13ed9af6608377e6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "19ca2854_94e7701b",
+        "filename": "tests/node-qunit/mobile.startup/ReferencesMobileViewGateway.test.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-11-14T22:18:25Z",
+      "side": 1,
+      "message": "Same thing with these lines - tests pass without. Can we remove?",
+      "range": {
+        "startLine": 39,
+        "startChar": 0,
+        "endLine": 40,
+        "endChar": 63
+      },
+      "revId": "2743bade9aa1fca929feec7d13ed9af6608377e6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
