@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cc0b2fcb_4a9e836e",
+        "filename": "tests/phpunit/MobileFrontend.bodyTest.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-14T21:04:11Z",
+      "side": 1,
+      "message": "Is using wikidata.org items going to work on local wiki if a call is made to ExtMobileFrontend::getWikibaseEntity( $item );? I\u0027m not sure how this work and I\u0027ve tried local wiki too but it keeps returning null.",
+      "range": {
+        "startLine": 20,
+        "startChar": 2,
+        "endLine": 20,
+        "endChar": 15
+      },
+      "revId": "121cb7197c2a6d43041060e3c12568a0d6423e8d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
