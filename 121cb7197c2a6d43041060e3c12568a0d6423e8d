@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "a82ebf2b_1bccd130",
+        "filename": "tests/phpunit/MobileFrontend.bodyTest.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-14T21:59:15Z",
+      "side": 1,
+      "message": "WikiBase client is not installed for most mobile frontend users so\n$this-\u003eisWikibaseClient is always going to be false for me.\nSo this becomes (at least for me) an integration test.\n\nWe already test integration with Wikibase in our integration tests in tests/browser so I\u0027d prefer this to be a reliable unit test for the functionality.",
+      "revId": "121cb7197c2a6d43041060e3c12568a0d6423e8d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "cc0b2fcb_4a9e836e",
         "filename": "tests/phpunit/MobileFrontend.bodyTest.php",
         "patchSetId": 5
@@ -13,6 +30,30 @@
       "writtenOn": "2018-11-14T21:04:11Z",
       "side": 1,
       "message": "Is using wikidata.org items going to work on local wiki if a call is made to ExtMobileFrontend::getWikibaseEntity( $item );? I\u0027m not sure how this work and I\u0027ve tried local wiki too but it keeps returning null.",
+      "range": {
+        "startLine": 20,
+        "startChar": 2,
+        "endLine": 20,
+        "endChar": 15
+      },
+      "revId": "121cb7197c2a6d43041060e3c12568a0d6423e8d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c4f9f210_a78e0d59",
+        "filename": "tests/phpunit/MobileFrontend.bodyTest.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-14T21:59:15Z",
+      "side": 1,
+      "message": "Nope. :)\n\nThis should make use of some kind of stub for\nWikibaseClient::getDefaultInstance\nthat returns something that looks like a \"EntityDocument\"\n\nExtMobileFrontend is pretty complicated so you might want to look at another file in the mean time while you are still learning (unless you want the challenge so early! :))\n\nThe transforms folder and includes/MobileFrontend.skin.hooks.php  might be a better place to write tests first!",
+      "parentUuid": "cc0b2fcb_4a9e836e",
       "range": {
         "startLine": 20,
         "startChar": 2,
