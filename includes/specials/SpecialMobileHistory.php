@@ -118,6 +118,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 			// enter article history view
 			$this->title = Title::newFromText( $par );
 			if ( $this->title && $this->title->exists() ) {
+				$this->getSkin()->setRelevantTitle( $this->title );
 				// make sure, the content of the page supports the default history page
 				if ( !self::shouldUseSpecialHistory( $this->title, $this->getUser() ) ) {
 					// and if not, redirect to the default history action
