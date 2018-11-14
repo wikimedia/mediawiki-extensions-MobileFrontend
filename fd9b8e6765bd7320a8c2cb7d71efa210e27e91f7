@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3793f74a_35a9bc9b",
+        "filename": "tests/phpunit/models/MobilePageTest.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-14T22:03:22Z",
+      "side": 1,
+      "message": "This is an HTML file and requires an internet connection to access. Should this be tests/phpunit/models/images/Einstein_1921_by_F_Schmutzer_-_restoration.jpg ?",
+      "range": {
+        "startLine": 18,
+        "startChar": 23,
+        "endLine": 18,
+        "endChar": 68
+      },
+      "revId": "fd9b8e6765bd7320a8c2cb7d71efa210e27e91f7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b3d04deb_728e9a8c",
+        "filename": "tests/phpunit/models/MobilePageTest.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-14T22:03:22Z",
+      "side": 1,
+      "message": "It feels wrong to use skip in this way and I\u0027d much rather test the two paths that exist when it does or doesn\u0027t exist.\n\nConsider passing PageImages as an optional parameter to the constructor to support mocking\n\ne.g.\npublic function __construct( Title $title, $file \u003d false, $pageImagesClass \u003d null ) {",
+      "revId": "fd9b8e6765bd7320a8c2cb7d71efa210e27e91f7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
