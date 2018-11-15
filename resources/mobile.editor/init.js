@@ -103,16 +103,14 @@
 			 * @method
 			 */
 			function logInit( editor ) {
-				// If MobileFrontend is not available this will not be possible so
-				// check first.
-				mw.loader.using( 'mobile.loggingSchemas.edit' ).then( function () {
-					mw.track( 'mf.schemaEdit', {
-						action: 'init',
-						type: 'section',
-						mechanism: initMechanism,
-						editor: editor,
-						editingSessionId: editorOptions.sessionId
-					} );
+				mw.track( 'mf.schemaEditAttemptStep', {
+					action: 'init',
+					type: 'section',
+					mechanism: initMechanism,
+					/* eslint-disable camelcase */
+					editor_interface: editor,
+					editing_session_id: editorOptions.sessionId
+					/* eslint-enable camelcase */
 				} );
 			}
 
