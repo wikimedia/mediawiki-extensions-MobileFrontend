@@ -13,6 +13,7 @@
 		BetaOptinPanel = M.require( 'mobile.init/BetaOptinPanel' ),
 		gateway = new PageGateway( new mw.Api() ),
 		util = mw.util,
+		mobile = M.require( 'mobile.startup' ),
 		mfUtil = M.require( 'mobile.startup/util' ),
 		$window = mfUtil.getWindow(),
 		$html = mfUtil.getDocument(),
@@ -22,9 +23,7 @@
 		experiments = mw.experiments,
 		activeExperiments = mw.config.get( 'wgMFExperiments' ) || {},
 		Skin = M.require( 'mobile.startup/Skin' ),
-		ReferencesMobileViewGateway = M.require(
-			'mobile.references.gateway/ReferencesMobileViewGateway'
-		),
+		ReferencesMobileViewGateway = mobile.ReferencesMobileViewGateway,
 		skinData = {
 			el: 'body',
 			page: getCurrentPage(),

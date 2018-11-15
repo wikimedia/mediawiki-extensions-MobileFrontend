@@ -1,5 +1,5 @@
 /* eslint-env es6 */
-var page, page2, skinPage;
+var page, page2, skinPage, referencesPage, lazyLoadedReferencesPage;
 
 /**
  * Important..
@@ -49,7 +49,42 @@ skinPage = `<div id="mw-content-text">
 	</div>
 </div>`;
 
+referencesPage = `<div id="mfe-test-references">
+<sup id="cite_ref-1" class="reference">
+	<a href="#cite_note-1">[1]</a>
+</sup>
+<p>
+	sup with encoded href attribute
+	<sup id="cite_ref-Obama_1995,_2004,_pp._9–10_11-0" class="reference">
+		<a href="#cite_note-Obama_1995,_2004,_pp._9%E2%80%9310-11">[11]</a>
+	</sup>
+</p>
+<ol class="references">
+	<li id="cite_note-1">
+		<span class="mw-cite-backlink">
+			<a href="#cite_ref-1">↑</a>
+		</span> <span class="reference-text">hello</span>
+	</li>
+	<li id="cite_note-Obama_1995,_2004,_pp._9–10-11">
+		<span class="mw-cite-backlink">
+			<a href="#cite_ref-1">↑</a>
+		</span> <span class="reference-text">found</span>
+	</li>
+</ol>
+</div>`;
+
+lazyLoadedReferencesPage = `<div>
+<h2><span class="mw-headline" id="1.0">A1</span></h1>
+<div>text</div>
+<h2>references</h2>
+<div>
+	<a class="mf-lazy-references-placeholder">View citations</a>
+</div>
+</div>`;
+
 module.exports = {
+	lazyLoadedReferencesPage: lazyLoadedReferencesPage,
+	referencesPage: referencesPage,
 	skinPage: skinPage,
 	page: page,
 	page2: page2

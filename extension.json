@@ -261,7 +261,6 @@
 		"mobile.init": {
 			"dependencies": [
 				"mediawiki.experiments",
-				"mobile.references.gateway",
 				"mobile.startup"
 			],
 			"targets": [
@@ -704,7 +703,6 @@
 				"desktop"
 			],
 			"dependencies": [
-				"mobile.references.gateway",
 				"mobile.startup",
 				"mobile.editor.api",
 				"mobile.startup.images"
@@ -721,21 +719,6 @@
 			},
 			"scripts": [
 				"resources/mobile.references/ReferencesDrawer.js"
-			]
-		},
-		"mobile.references.gateway": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"dependencies": [
-				"mediawiki.api",
-				"mobile.startup"
-			],
-			"scripts": [
-				"resources/mobile.references.gateway/ReferencesGateway.js",
-				"resources/mobile.references.gateway/ReferencesHtmlScraperGateway.js",
-				"resources/mobile.references.gateway/ReferencesMobileViewGateway.js"
 			]
 		},
 		"mobile.toggle": {
