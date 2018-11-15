@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "355dfa7a_80b4f2ae",
+        "filename": "includes/api/ApiParseExtender.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 6565
+      },
+      "writtenOn": "2018-11-15T23:09:14Z",
+      "side": 1,
+      "message": "Not written by me. All I wrote were lines 68-73.",
+      "parentUuid": "08c2b386_43bd7980",
+      "revId": "0b0f7f172097c26bd584d39bebce129a22a94d13",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "570b15c7_9e8d0015",
         "filename": "includes/api/ApiParseExtender.php",
         "patchSetId": 1
@@ -33,6 +51,24 @@
       "revId": "0b0f7f172097c26bd584d39bebce129a22a94d13",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "19e4f412_6c51be1b",
+        "filename": "includes/api/ApiParseExtender.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 6565
+      },
+      "writtenOn": "2018-11-15T23:09:14Z",
+      "side": 1,
+      "message": "See above response",
+      "parentUuid": "570b15c7_9e8d0015",
+      "revId": "0b0f7f172097c26bd584d39bebce129a22a94d13",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     },
     {
       "key": {
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "b66a74e3_508c231c",
+        "filename": "includes/api/ApiParseExtender.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 6565
+      },
+      "writtenOn": "2018-11-15T23:09:14Z",
+      "side": 1,
+      "message": "Suggested by bawolff to fix problems I was having without it. See https://pastebin.com/tUK4rBFw. I don\u0027t know what that method is and seems to work OK when tested.",
+      "parentUuid": "ba74d7c7_ed046c52",
+      "revId": "0b0f7f172097c26bd584d39bebce129a22a94d13",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "72966c0e_416544cb",
         "filename": "includes/api/ApiParseExtender.php",
         "patchSetId": 1
@@ -67,6 +121,24 @@
       "revId": "0b0f7f172097c26bd584d39bebce129a22a94d13",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "64570c4f_e9097c91",
+        "filename": "includes/api/ApiParseExtender.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 6565
+      },
+      "writtenOn": "2018-11-15T23:09:14Z",
+      "side": 1,
+      "message": "I\u0027m assuming you mean the accidentally left comment. Removed now.",
+      "parentUuid": "72966c0e_416544cb",
+      "revId": "0b0f7f172097c26bd584d39bebce129a22a94d13",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
