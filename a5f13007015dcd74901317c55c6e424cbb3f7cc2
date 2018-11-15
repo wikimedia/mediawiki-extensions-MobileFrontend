@@ -1,0 +1,78 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8273d543_0392d8e1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-15T23:53:51Z",
+      "side": 1,
+      "message": "typo",
+      "range": {
+        "startLine": 14,
+        "startChar": 42,
+        "endLine": 14,
+        "endChar": 47
+      },
+      "revId": "a5f13007015dcd74901317c55c6e424cbb3f7cc2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3e0d768b_b259894d",
+        "filename": "src/mobile.startup/rlModuleLoader.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-15T23:53:51Z",
+      "side": 1,
+      "message": "What if loadModule took a 4th optional parameter.. an instance of a loading overlay? Is this something we\u0027ve considered?",
+      "revId": "a5f13007015dcd74901317c55c6e424cbb3f7cc2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa1ff987_8aacdcb6",
+        "filename": "tests/node-qunit/mobile.startup/rlModuleLoader.test.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-15T23:53:51Z",
+      "side": 1,
+      "message": "nitpick: can we move the helper to the top of the file, so it\u0027s not buried inside the tests?",
+      "revId": "a5f13007015dcd74901317c55c6e424cbb3f7cc2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1202adba_0f3c4945",
+        "filename": "tests/node-qunit/mobile.startup/rlModuleLoader.test.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-15T23:53:51Z",
+      "side": 1,
+      "message": "Any reason we can\u0027t put this in the beforeEAch?",
+      "revId": "a5f13007015dcd74901317c55c6e424cbb3f7cc2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
