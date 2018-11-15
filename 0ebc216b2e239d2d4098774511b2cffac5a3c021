@@ -16,6 +16,24 @@
       "revId": "0ebc216b2e239d2d4098774511b2cffac5a3c021",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7926f9d3_39cf0cbd",
+        "filename": "tests/phpunit/models/MobilePageTest.php",
+        "patchSetId": 12
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-15T20:51:40Z",
+      "side": 1,
+      "message": "Maybe I didn\u0027t understand you well but it\u0027s used to check if the PageImages extension is installed or not.",
+      "parentUuid": "2eaa8c38_93a5e1b4",
+      "revId": "0ebc216b2e239d2d4098774511b2cffac5a3c021",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
