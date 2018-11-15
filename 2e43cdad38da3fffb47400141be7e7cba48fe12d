@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f908da7_c790815c",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-11-15T00:26:57Z",
+      "side": 1,
+      "message": "duplicate line",
+      "range": {
+        "startLine": 103,
+        "startChar": 0,
+        "endLine": 103,
+        "endChar": 109
+      },
+      "revId": "2e43cdad38da3fffb47400141be7e7cba48fe12d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
