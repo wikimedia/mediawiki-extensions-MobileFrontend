@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2eaa8c38_93a5e1b4",
+        "filename": "tests/phpunit/models/MobilePageTest.php",
+        "patchSetId": 12
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-15T20:49:54Z",
+      "side": 1,
+      "message": "This will vary depending on setup. \nWhat is it used for?",
+      "revId": "0ebc216b2e239d2d4098774511b2cffac5a3c021",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
