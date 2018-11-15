@@ -24,7 +24,11 @@
 	 * @fires SearchOverlay#search-result-click
 	 */
 	function SearchOverlay( options ) {
-		Overlay.call( this, options );
+		Overlay.call( this,
+			util.extend( options, {
+				className: 'overlay search-overlay'
+			} )
+		);
 		this.api = options.api;
 		// eslint-disable-next-line new-cap
 		this.gateway = new options.gatewayClass( this.api );
@@ -47,11 +51,6 @@
 			content: mw.template.get( 'mobile.search', 'content.hogan' ),
 			icon: Icon.prototype.template
 		} ),
-		/**
-		 * @memberof SearchOverlay
-		 * @instance
-		 */
-		className: 'overlay search-overlay',
 		/**
 		 * @memberof SearchOverlay
 		 * @instance

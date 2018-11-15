@@ -19,7 +19,11 @@
 			this._loadCategories.bind( this ) );
 		this.gateway = new CategoryGateway( options.api );
 		M.on( 'category-added', this._loadCategories.bind( this ) );
-		Overlay.apply( this, arguments );
+		Overlay.call( this,
+			util.extend( options, {
+				className: 'category-overlay overlay'
+			} )
+		);
 	}
 
 	OO.mfExtend( CategoryOverlay, Overlay, {
@@ -48,12 +52,6 @@
 			normalcatlink: mw.msg( 'mobile-frontend-categories-normal' ),
 			hiddencatlink: mw.msg( 'mobile-frontend-categories-hidden' )
 		} ),
-		/**
-		 * @inheritdoc
-		 * @memberof CategoryOverlay
-		 * @instance
-		 */
-		className: 'category-overlay overlay',
 		/**
 		 * @inheritdoc
 		 * @memberof CategoryOverlay

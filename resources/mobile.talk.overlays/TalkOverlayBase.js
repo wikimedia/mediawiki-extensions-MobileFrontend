@@ -1,5 +1,6 @@
 ( function ( M ) {
 	var PageGateway = M.require( 'mobile.startup/PageGateway' ),
+		util = M.require( 'mobile.startup/util' ),
 		Overlay = M.require( 'mobile.startup/Overlay' );
 
 	/**
@@ -15,7 +16,11 @@
 		this.pageGateway = new PageGateway( options.api );
 		// FIXME: This should be using a gateway e.g. TalkGateway, PageGateway or EditorGateway
 		this.editorApi = options.api;
-		Overlay.apply( this, arguments );
+		Overlay.call( this,
+			util.extend( options, {
+				className: 'talk-overlay overlay'
+			} )
+		);
 	}
 	OO.mfExtend( TalkOverlayBase, Overlay, {
 		/**
@@ -35,12 +40,7 @@
 		 */
 		autosign: function ( text ) {
 			return /~{3,5}/.test( text ) ? text : text + ' ~~~~';
-		},
-		/**
-		 * @memberof TalkOverlayBase
-		 * @instance
-		 */
-		className: 'talk-overlay overlay'
+		}
 	} );
 
 	M.define( 'mobile.talk.overlays/TalkOverlayBase', TalkOverlayBase );
