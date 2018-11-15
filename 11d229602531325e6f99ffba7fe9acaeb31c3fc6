@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "08b0599e_dae31ac5",
+        "filename": "includes/content-providers/ContentProviderFactory.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-15T21:46:40Z",
+      "side": 1,
+      "message": "I\u0027ll use getInt",
+      "parentUuid": "a6f853d4_9e7927db",
+      "range": {
+        "startLine": 42,
+        "startChar": 9,
+        "endLine": 42,
+        "endChar": 52
+      },
+      "revId": "11d229602531325e6f99ffba7fe9acaeb31c3fc6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a5929b5e_32d2685e",
         "filename": "includes/content-providers/MwApiContentProvider.php",
         "patchSetId": 1
@@ -36,6 +60,30 @@
       "writtenOn": "2018-11-15T16:55:28Z",
       "side": 1,
       "message": "PHP has no number, please use int",
+      "range": {
+        "startLine": 24,
+        "startChar": 9,
+        "endLine": 24,
+        "endChar": 15
+      },
+      "revId": "11d229602531325e6f99ffba7fe9acaeb31c3fc6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "48e838da_5d99cea3",
+        "filename": "includes/content-providers/MwApiContentProvider.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-15T21:46:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a5929b5e_32d2685e",
       "range": {
         "startLine": 24,
         "startChar": 9,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "a7159451_a087a0ed",
+        "filename": "includes/content-providers/MwApiContentProvider.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-15T21:46:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f6bc1c24_a6d008e0",
+      "range": {
+        "startLine": 32,
+        "startChar": 11,
+        "endLine": 32,
+        "endChar": 17
+      },
+      "revId": "11d229602531325e6f99ffba7fe9acaeb31c3fc6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e806e080_9f348486",
         "filename": "includes/content-providers/MwApiContentProvider.php",
         "patchSetId": 1
@@ -82,6 +154,30 @@
       "writtenOn": "2018-11-15T16:55:28Z",
       "side": 1,
       "message": "if you pass the $revId, then title is not necessary, also the `$title` is required only if `$revId` is not passed. IMHO lets move this logic into `else{}` block on line 55.",
+      "range": {
+        "startLine": 46,
+        "startChar": 0,
+        "endLine": 49,
+        "endChar": 3
+      },
+      "revId": "11d229602531325e6f99ffba7fe9acaeb31c3fc6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e8dc1cf6_7897930f",
+        "filename": "includes/content-providers/MwApiContentProvider.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-15T21:46:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e806e080_9f348486",
       "range": {
         "startLine": 46,
         "startChar": 0,
