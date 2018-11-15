@@ -8,6 +8,10 @@ var
  * @singleton
  */
 module.exports = {
+	// Exported to support testing and stubbing
+	newLoadingOverlay: function () {
+		return new LoadingOverlay();
+	},
 	/**
 	 * Loads a module via ResourceLoader
 	 * and displays a full screen LoadingOverlay during load time.
@@ -21,7 +25,7 @@ module.exports = {
 	 * @return {jQuery.Promise}
 	 */
 	loadModule: function ( name, delegateHide, showLoadingOverlay ) {
-		var loadingOverlay = new LoadingOverlay();
+		var loadingOverlay = this.newLoadingOverlay();
 
 		showLoadingOverlay = ( showLoadingOverlay !== undefined ) ? showLoadingOverlay : true;
 		if ( showLoadingOverlay ) {
