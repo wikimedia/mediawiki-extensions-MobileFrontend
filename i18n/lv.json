@@ -40,6 +40,7 @@
 	"mobile-frontend-editor-cancel": "Atcelt",
 	"mobile-frontend-editor-captcha-try-again": "Nepareizs kods, mēģini vēlreiz.",
 	"mobile-frontend-editor-continue": "Tālāk",
+	"mobile-frontend-editor-disabled": "Šī lapa ir aizsargāta, lai novērstu vandalismu.",
 	"mobile-frontend-editor-editing": "Labošana",
 	"mobile-frontend-editor-editing-page": "<span><strong>Labo</strong> $1</span>",
 	"mobile-frontend-editor-error": "Kļūda, labojumi nav saglabāti.",

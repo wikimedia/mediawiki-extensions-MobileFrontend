@@ -54,6 +54,7 @@
 	"mobile-frontend-editor-cancel-confirm": "का वास्तव में आप आपन संपादन छोड़ल चाहत बानी?",
 	"mobile-frontend-editor-captcha-try-again": "गलत कोड, दोबारा कोसिस करीं।",
 	"mobile-frontend-editor-continue": "आगे",
+	"mobile-frontend-editor-disabled": "उतपात रोके खातिर एह पन्ना के सुरक्षित कइल गइल बा।",
 	"mobile-frontend-editor-editing": "संपादन",
 	"mobile-frontend-editor-editing-page": "<span>$1 <strong>संपादित होता</strong></span>",
 	"mobile-frontend-editor-error": "खराबी, संपादन ना सहेजल जा पाइल।",

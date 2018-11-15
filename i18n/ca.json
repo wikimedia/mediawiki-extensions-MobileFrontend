@@ -71,6 +71,7 @@
 	"mobile-frontend-editor-cancel-confirm": "Realment voleu abandonar la vostra edició?",
 	"mobile-frontend-editor-captcha-try-again": "Codi incorrecte, proveu-ho un altre cop.",
 	"mobile-frontend-editor-continue": "Següent",
+	"mobile-frontend-editor-disabled": "Aquesta pàgina està protegida per a evitar el vandalisme.",
 	"mobile-frontend-editor-editing": "Modificant",
 	"mobile-frontend-editor-editing-page": "<span><strong>Modificant</strong> $1</span>",
 	"mobile-frontend-editor-error": "Error, edició no desada.",

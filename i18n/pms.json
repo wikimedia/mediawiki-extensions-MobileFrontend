@@ -32,6 +32,7 @@
 	"mobile-frontend-editor-cancel-confirm": "Veul-lo për da bon lassé perde soa modìfica?",
 	"mobile-frontend-editor-captcha-try-again": "Còdes gram, ch'a preuva torna.",
 	"mobile-frontend-editor-continue": "Continué",
+	"mobile-frontend-editor-disabled": "Costa pàgina a l'é proteta për evité dij vandalism.",
 	"mobile-frontend-editor-editing-page": "<strong>Modìfica</strong> ëd <span>$1</span>",
 	"mobile-frontend-editor-error": "Eror, la modìfica a l'é nen ëstàita salvà.",
 	"mobile-frontend-editor-error-conflict": "Eror, n'àutr utent a l'ha modificà costa pàgina.",

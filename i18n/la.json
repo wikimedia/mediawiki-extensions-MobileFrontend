@@ -30,6 +30,7 @@
 	"mobile-frontend-editor-cancel": "Dimittere",
 	"mobile-frontend-editor-cancel-confirm": "Recensionem dimittere?",
 	"mobile-frontend-editor-continue": "Pergere",
+	"mobile-frontend-editor-disabled": "Tibi permissum non est hanc paginam recensere",
 	"mobile-frontend-editor-error": "Error, recensio non servata est.",
 	"mobile-frontend-editor-error-conflict": "Error, alius simul eandem paginam recensuit.",
 	"mobile-frontend-editor-error-loading": "Partem aperire non contigit.",

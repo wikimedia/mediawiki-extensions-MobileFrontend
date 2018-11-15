@@ -31,6 +31,7 @@
 	"mobile-frontend-editor-cancel": "ناگارل",
 	"mobile-frontend-editor-cancel-confirm": "ایا تاسو ډاډه یاست چې تاسو خپل سمونونه پریښودل غواړئ؟",
 	"mobile-frontend-editor-continue": "راتلونکی",
+	"mobile-frontend-editor-disabled": "دا مخ د ورانکاري د مخنیوي لپاره ژغورل شوی.",
 	"mobile-frontend-editor-editing": "سمېدنې کې دی",
 	"mobile-frontend-editor-editing-page": "<span><strong>سمېدنې کي دي</strong> $1</span>",
 	"mobile-frontend-editor-error": "تيروتنه، سمون تر سره نشو.",

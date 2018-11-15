@@ -33,6 +33,7 @@
 	"mobile-frontend-editor-cancel-confirm": "ଆପଣ ସତରେ ନିଜର ସମ୍ପାଦନା ବାତିଲ କରିବାକୁ ଚାହାଁନ୍ତି?",
 	"mobile-frontend-editor-captcha-try-again": "କୋଡ଼ଟି ଭୁଲ ଦେଇଛନ୍ତି, ଆଉଥରେ ଚେଷ୍ଟା କରନ୍ତୁ ।",
 	"mobile-frontend-editor-continue": "ଚାଲୁ ରଖିନ୍ତୁ",
+	"mobile-frontend-editor-disabled": "ଅନୀତିକର ସମ୍ପାଦନାରୁ ରକ୍ଷାକରିବା ପାଇଁ ଏହି ପୃଷ୍ଠାଟିକୁ କିଳାଯାଇଛି ।",
 	"mobile-frontend-editor-editing-page": "ଆପଣ \"<span> $1</span>\" ପ୍ରସଙ୍ଗଟି<strong>ସମ୍ପାଦନା କରୁଛନ୍ତି</strong>",
 	"mobile-frontend-editor-error": "ଅଘଟଣଟିଏ ଘଟିଲା, ସମ୍ପାଦନାଟି ସାଇତା ଯାଇନଥିଲା!",
 	"mobile-frontend-editor-error-conflict": "ଅଘଟଣଟିଏ ଘଟିଲା, ଆଉ ଜଣେ ସଭ୍ୟ ଏହି ପୃଷ୍ଠାଟିକୁ ସମ୍ପାଦନା କରୁଛନ୍ତି ।",

@@ -34,6 +34,7 @@
 	"mobile-frontend-editor-cancel-confirm": "Ydych chi wir am roi'r gorau i'ch golygiad?",
 	"mobile-frontend-editor-captcha-try-again": "Cod anghywir, ceisiwch eto.",
 	"mobile-frontend-editor-continue": "Nesaf",
+	"mobile-frontend-editor-disabled": "Mae'r dudalen hon wedi ei gwarchod rhag cael ei fandaleiddio.",
 	"mobile-frontend-editor-editing-page": "<strong>Wrthi'n golygu</strong><span> $1</span>",
 	"mobile-frontend-editor-error": "Gwall, ni roddwyd y golygiad ar gadw.",
 	"mobile-frontend-editor-error-conflict": "Gwall; mae defnyddiwr arall wedi golygu'r dudalen hon.",

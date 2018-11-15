@@ -53,6 +53,7 @@
 	"mobile-frontend-editor-cancel-confirm": "Er du viss på at du ynskjer å kasta endringa di?",
 	"mobile-frontend-editor-captcha-try-again": "Feil kode, prøv igjen.",
 	"mobile-frontend-editor-continue": "Neste",
+	"mobile-frontend-editor-disabled": "Denne sida er verna for å motvirka hærverk.",
 	"mobile-frontend-editor-editing": "Endrar",
 	"mobile-frontend-editor-editing-page": "<span><strong>Endrar</strong> $1</span>",
 	"mobile-frontend-editor-error": "Feil, endringa vart ikkje lagra.",
