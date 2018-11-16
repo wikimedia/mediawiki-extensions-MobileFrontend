@@ -51,6 +51,24 @@
       "revId": "cd17b25aea5c128d922cb9b228bf71f147d9b19a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "07ff393a_6b62323c",
+        "filename": "tests/phpunit/features/FeatureTest.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-16T21:15:17Z",
+      "side": 1,
+      "message": "This wasn\u0027t quite what I meant.\nYou only need to the madeUpConfigVariable as a property if you move the new Feature into a test\n\ne.g.\n```\n\tpublic function testIsAvailableDefault() {\n                $feature \u003d new Feature( \u0027TestName\u0027, \u0027test-group\u0027, $this-\u003emadeUpConfigVariable );\n\t\t$actual \u003d $feature-\u003eisAvailable( \u0027default\u0027 );\n```\n\nIf you want to keep it as it is now, you can remove the private $madeUpConfigVariable; and just retain the covers statement for the same effect (although given you are only indirectly testing the constructor inside the test itself it might be better to make that move)!",
+      "parentUuid": "9c294543_8f06757a",
+      "revId": "cd17b25aea5c128d922cb9b228bf71f147d9b19a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
