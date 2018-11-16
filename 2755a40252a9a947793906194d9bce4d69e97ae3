@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "589be2dd_02306404",
+        "filename": "tests/phpunit/models/MobilePageTest.php",
+        "patchSetId": 19
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-16T19:21:36Z",
+      "side": 1,
+      "message": "This can be turned from $this-\u003efileWidthLessThanHeight into $fileWidthLessThanHeight\n\nNo need to be shared across tests (and could lead to side effects)",
+      "revId": "2755a40252a9a947793906194d9bce4d69e97ae3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
