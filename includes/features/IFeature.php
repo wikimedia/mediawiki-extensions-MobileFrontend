@@ -1,4 +1,5 @@
 <?php
+
 namespace MobileFrontend\Features;
 
 interface IFeature {

@@ -1,4 +1,5 @@
 <?php
+
 namespace MobileFrontend\Features;
 
 /**
@@ -75,5 +76,4 @@ class Feature implements IFeature {
 	public function getDescriptionKey() {
 		return $this->group . '-mobile-option-' . $this->name . '-description';
 	}
-
 }
