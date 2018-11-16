@@ -87,6 +87,24 @@
       "revId": "cd17b25aea5c128d922cb9b228bf71f147d9b19a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f903a52a_dbe1818a",
+        "filename": "tests/phpunit/features/FeatureTest.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-16T21:30:12Z",
+      "side": 1,
+      "message": "@Jon, won\u0027t there be code dup of\n```\n$feature \u003d new Feature(\n    \u0027TestName\u0027, \u0027test-group\u0027, $this-\u003emadeUpConfigVariable\n);\n```\nfor doing that in each test methods?",
+      "parentUuid": "a627b3e7_e5123ac6",
+      "revId": "cd17b25aea5c128d922cb9b228bf71f147d9b19a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
