@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "d6197b1a_84703840",
+        "filename": "includes/api/ApiParseExtender.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2018-11-16T18:47:50Z",
+      "side": 1,
+      "message": "If you wind up changing the logic here a bit more thoroughly as I suggested below on line 74, you might take the opportunity to clean up some tech debt while you\u0027re reworking the logic.",
+      "parentUuid": "355dfa7a_80b4f2ae",
+      "revId": "0b0f7f172097c26bd584d39bebce129a22a94d13",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "570b15c7_9e8d0015",
         "filename": "includes/api/ApiParseExtender.php",
         "patchSetId": 1
@@ -139,6 +157,24 @@
       "revId": "0b0f7f172097c26bd584d39bebce129a22a94d13",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0a92d127_ec38c3c5",
+        "filename": "includes/api/ApiParseExtender.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2018-11-16T18:47:50Z",
+      "side": 1,
+      "message": "I meant lines 67-74.",
+      "parentUuid": "64570c4f_e9097c91",
+      "revId": "0b0f7f172097c26bd584d39bebce129a22a94d13",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
