@@ -23,7 +23,8 @@ function assertShowHideWorksWhenSuccessful( assert, firstArg, secondArg, thirdAr
 
 	this.deferred.resolve();
 
-	return result.then( function () {
+	return result.then( function ( overlay ) {
+		assert.strictEqual( overlay, self.stub, 'Promise resolves to overlay instance' );
 		assert.strictEqual( self.stub.show.callCount, 1, 'LoadingOverlay show() called once' );
 		assert.strictEqual( self.stub.hide.callCount, 1, 'LoadingOverlay hide() called once' );
 		assert.strictEqual( self.stub.hide.getCall( 0 ).args.length, 0, 'LoadingOverlay hide() called with no args' );
@@ -108,7 +109,8 @@ QUnit.test( '#loadModule when instructed to show/not hide overlay and successful
 
 	this.deferred.resolve();
 
-	return result.then( function () {
+	return result.then( function ( overlay ) {
+		assert.strictEqual( overlay, self.stub, 'Promise resolves to overlay instance' );
 		assert.strictEqual( self.stub.show.callCount, 1, 'LoadingOverlay show() called once' );
 		assert.strictEqual( self.stub.hide.callCount, 0, 'LoadingOverlay hide() not called' );
 	} );
@@ -146,7 +148,8 @@ QUnit.test( '#loadModule when instructed to not show overlay and successful', fu
 
 	this.deferred.resolve();
 
-	return result.then( function () {
+	return result.then( function ( overlay ) {
+		assert.strictEqual( overlay, self.stub, 'Promise resolves to overlay instance' );
 		assert.strictEqual( self.stub.show.callCount, 0, 'LoadingOverlay show() not called' );
 		assert.strictEqual( self.stub.hide.callCount, 0, 'LoadingOverlay hide() not called' );
 	} );
