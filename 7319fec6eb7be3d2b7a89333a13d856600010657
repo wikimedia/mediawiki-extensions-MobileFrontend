@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "53a886af_964dcb33",
+        "filename": "tests/phpunit/models/MobilePageTest.php",
+        "patchSetId": 15
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2018-11-16T16:16:39Z",
+      "side": 1,
+      "message": "I think all of these assertions are actually the wrong way around too?\n\nif you are hard coding \u0027\u0027, then that must be your expected value.\nRight now $expected is the result that you actually want to test / check.",
+      "range": {
+        "startLine": 109,
+        "startChar": 22,
+        "endLine": 109,
+        "endChar": 35
+      },
+      "revId": "7319fec6eb7be3d2b7a89333a13d856600010657",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5bf56de8_efccb8d8",
         "filename": "tests/phpunit/models/MobilePageTest.php",
         "patchSetId": 15
