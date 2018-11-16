@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "638d9039_f7b652c5",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 16
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-16T18:57:34Z",
+      "side": 1,
+      "message": "The usage on line 6 makes sense but here you may want to quote the termination sequence, `\u0027eof\u0027`, to avoid unintentional substitution of `npm run build`.",
+      "range": {
+        "startLine": 20,
+        "startChar": 10,
+        "endLine": 20,
+        "endChar": 13
+      },
+      "revId": "fc8f66872451dccb20c056d83b521b259db4e525",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
