@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5bf56de8_efccb8d8",
+        "filename": "tests/phpunit/models/MobilePageTest.php",
+        "patchSetId": 15
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2018-11-16T16:14:30Z",
+      "side": 1,
+      "message": "It would be better to instead change this condition and mark the test as skilled if pageimages is installed?",
+      "range": {
+        "startLine": 114,
+        "startChar": 2,
+        "endLine": 115,
+        "endChar": 28
+      },
+      "revId": "7319fec6eb7be3d2b7a89333a13d856600010657",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
