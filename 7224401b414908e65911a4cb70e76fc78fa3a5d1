@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b8c9e51a_c5d0ed0c",
+        "filename": "src/mobile.startup/rlModuleLoader.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-16T17:29:03Z",
+      "side": 1,
+      "message": "What do you think of passing this as a loadModule parameter instead?",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 3
+      },
+      "revId": "7224401b414908e65911a4cb70e76fc78fa3a5d1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b28e859f_3ed4fd50",
+        "filename": "tests/node-qunit/mobile.startup/rlModuleLoader.test.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-16T17:29:03Z",
+      "side": 1,
+      "message": "The construction of this object feels pretty light. Did you consider moving it to locals instead?",
+      "range": {
+        "startLine": 50,
+        "startChar": 2,
+        "endLine": 50,
+        "endChar": 34
+      },
+      "revId": "7224401b414908e65911a4cb70e76fc78fa3a5d1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
