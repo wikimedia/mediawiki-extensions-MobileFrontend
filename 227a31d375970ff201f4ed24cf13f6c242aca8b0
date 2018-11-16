@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "487dc1cd_76bd74a2",
+        "filename": "resources/mobile.special.mobilediff.scripts/init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-16T17:33:06Z",
+      "side": 0,
+      "message": "These are important. They specifically say where we\u0027ve marked it as being acceptable to use jQuery.\nThese should all be retained.\n\nYou can replace this with /* global $ */ to the same effect.",
+      "revId": "227a31d375970ff201f4ed24cf13f6c242aca8b0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
