@@ -28,6 +28,7 @@ var exports,
 	CtaDrawer = require( './CtaDrawer' ),
 	PageList = require( './PageList' ),
 	toast = require( './toast' ),
+	ReferencesDrawer = require( './ReferencesDrawer' ),
 	extendSearchParams = require( './extendSearchParams' ),
 	rlModuleLoader = require( './rlModuleLoader' );
 
@@ -42,6 +43,7 @@ OO.mfExtend = mfExtend;
 // `mfModules['mobile.startup'].moduleLoader.require('mobile.startup/LoadingOverlay')`.
 exports = {
 	extendSearchParams: extendSearchParams,
+	ReferencesDrawer: ReferencesDrawer,
 	ReferencesGateway: ReferencesGateway,
 	ReferencesHtmlScraperGateway: ReferencesHtmlScraperGateway,
 	ReferencesMobileViewGateway: ReferencesMobileViewGateway,
@@ -100,6 +102,7 @@ mw.mobileFrontend.define( 'mobile.startup/PageList', PageList );
 mw.mobileFrontend.define( 'mobile.startup/toast', toast );
 mw.mobileFrontend.define( 'mobile.startup/rlModuleLoader', rlModuleLoader );
 mw.mobileFrontend.deprecate( 'mobile.search.util/extendSearchParams', extendSearchParams, 'mobile.startup' );
+mw.mobileFrontend.deprecate( 'mobile.references/ReferencesDrawer', ReferencesDrawer, 'mobile.startup' );
 mw.mobileFrontend.deprecate( 'mobile.references.gateway/ReferencesGateway', ReferencesGateway, 'mobile.startup' );
 mw.mobileFrontend.deprecate( 'mobile.references.gateway/ReferencesHtmlScraperGateway',
 	ReferencesHtmlScraperGateway, 'mobile.startup' );
