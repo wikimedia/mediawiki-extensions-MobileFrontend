@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "df70c00d_90b147e6",
+        "filename": "extension.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 324,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-16T16:22:10Z",
+      "side": 1,
+      "message": "I like the new name but won\u0027t it break the deprecated resource redirection? Same question for the message rekeying and stylesheet rename.",
+      "range": {
+        "startLine": 324,
+        "startChar": 5,
+        "endLine": 324,
+        "endChar": 27
+      },
+      "revId": "250129c68d693f5ba011718cdd758e1281b3ba56",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "054800de_9d1da524",
+        "filename": "extension.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 683,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-16T16:22:10Z",
+      "side": 1,
+      "message": "Is this the equivalent of .deprecate() for all resource types? If so, how does it know where to redirect to?",
+      "range": {
+        "startLine": 683,
+        "startChar": 3,
+        "endLine": 683,
+        "endChar": 15
+      },
+      "revId": "250129c68d693f5ba011718cdd758e1281b3ba56",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
