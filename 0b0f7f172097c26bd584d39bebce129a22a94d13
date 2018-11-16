@@ -193,6 +193,24 @@
       "revId": "0b0f7f172097c26bd584d39bebce129a22a94d13",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e1707926_05f71bf5",
+        "filename": "includes/api/ApiParseExtender.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2018-11-16T23:09:53Z",
+      "side": 1,
+      "message": "I was avoiding just giving the answer because I don\u0027t know how much work GCI expects students to figure out on their own.\n\nThere\u0027s no example code I know of, because I don\u0027t know of anything else that does what you\u0027re doing here.\n\nWhat I suggested is to delete line 39, and replace lines 67-74 here with just\n\n $result-\u003eaddValue( [ \u0027parse\u0027 ], \u0027text\u0027, $text, ApiResult::OVERRIDE | ApiResult::NO_SIZE_CHECK );\n\nThat should do it.\n\nYou could also remove the bits I flagged as dead code above if you want to pay down some #Technical-Debt while you\u0027re here.",
+      "parentUuid": "5bef1622_645e4768",
+      "revId": "0b0f7f172097c26bd584d39bebce129a22a94d13",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
