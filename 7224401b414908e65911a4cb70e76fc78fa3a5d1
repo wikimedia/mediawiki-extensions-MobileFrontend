@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "2fc305cd_e06fccac",
+        "filename": "src/mobile.startup/rlModuleLoader.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-11-16T17:53:25Z",
+      "side": 1,
+      "message": "Jon raised the same point in PS1, but my response got buried so posting it again:\n\n\"I agree that\u0027s a better approach, but it warrants more discussion.\n\nloadModule\u0027s last param (showLoadingOverlay) is already optional. I also don\u0027t see the purpose of it - seems like it reduces the function to just calling `mw.loader.using`. Furthermore, from what I can tell, Minerva and MF are not using that third param. Is this param needed?\n\nIf not, I would rather deprecate the third param and replace it with the loading overlay instance param that you suggested. We could make the third param be optional, a boolean, or an instance of loadingOverlay as an intermediary step. What do you think?\"",
+      "parentUuid": "b8c9e51a_c5d0ed0c",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 3
+      },
+      "revId": "7224401b414908e65911a4cb70e76fc78fa3a5d1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b28e859f_3ed4fd50",
         "filename": "tests/node-qunit/mobile.startup/rlModuleLoader.test.js",
         "patchSetId": 3
@@ -36,6 +60,30 @@
       "writtenOn": "2018-11-16T17:29:03Z",
       "side": 1,
       "message": "The construction of this object feels pretty light. Did you consider moving it to locals instead?",
+      "range": {
+        "startLine": 50,
+        "startChar": 2,
+        "endLine": 50,
+        "endChar": 34
+      },
+      "revId": "7224401b414908e65911a4cb70e76fc78fa3a5d1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e48aaf92_bb4fe58f",
+        "filename": "tests/node-qunit/mobile.startup/rlModuleLoader.test.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-11-16T17:53:25Z",
+      "side": 1,
+      "message": "I put it here to avoid duplication albeit it would be minimal to replicate in each test. If that improves readability, I am happy to do it though",
+      "parentUuid": "b28e859f_3ed4fd50",
       "range": {
         "startLine": 50,
         "startChar": 2,
