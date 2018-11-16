@@ -175,6 +175,24 @@
       "revId": "0b0f7f172097c26bd584d39bebce129a22a94d13",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5bef1622_645e4768",
+        "filename": "includes/api/ApiParseExtender.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-16T21:38:02Z",
+      "side": 1,
+      "message": "\"So, why not do exactly that by using the ApiResult::OVERRIDE and ApiResult::NO_SIZE_CHECK flags to $result-\u003eaddValue(), instead of deleting everything with $result-\u003ereset() and then adding it all back in?\"\n\n@anomie can you expand on this a little given Pjht is new to our codebase. To be honest even I\u0027m having a hard time following what you mean here.\n\nCould you point him to some example code that does this?",
+      "parentUuid": "0a92d127_ec38c3c5",
+      "revId": "0b0f7f172097c26bd584d39bebce129a22a94d13",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }

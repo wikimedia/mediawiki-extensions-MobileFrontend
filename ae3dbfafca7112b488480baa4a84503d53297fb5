@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cb199454_0deb7d93",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-16T21:38:02Z",
+      "side": 1,
+      "message": "A commit message is a really important part of code review - it shares a little into your thinking and makes it easier for people to review it.\n\nPlease expand this commit message to explain what you\u0027ve done; what you\u0027ve considered and why you think this is the best solution.",
+      "revId": "ae3dbfafca7112b488480baa4a84503d53297fb5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ac1eecc8_3d0c99af",
+        "filename": "includes/api/ApiParseExtender.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-16T21:38:02Z",
+      "side": 1,
+      "message": "When I run `composer test` locally I\u0027m getting a bunch of errors. This will block your code from merging so these will need to be fixed up!",
+      "revId": "ae3dbfafca7112b488480baa4a84503d53297fb5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
