@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "91df0453_40a5ab3c",
+        "filename": "extension.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 324,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-16T17:23:51Z",
+      "side": 1,
+      "message": "Nope. Because, templates are meant to be private and only accessed by the JS that includes them. They are not subject to any kind of caching.",
+      "parentUuid": "df70c00d_90b147e6",
+      "range": {
+        "startLine": 324,
+        "startChar": 5,
+        "endLine": 324,
+        "endChar": 27
+      },
+      "revId": "250129c68d693f5ba011718cdd758e1281b3ba56",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "054800de_9d1da524",
         "filename": "extension.json",
         "patchSetId": 5
@@ -36,6 +60,30 @@
       "writtenOn": "2018-11-16T16:22:10Z",
       "side": 1,
       "message": "Is this the equivalent of .deprecate() for all resource types? If so, how does it know where to redirect to?",
+      "range": {
+        "startLine": 683,
+        "startChar": 3,
+        "endLine": 683,
+        "endChar": 15
+      },
+      "revId": "250129c68d693f5ba011718cdd758e1281b3ba56",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d070f424_15a3b4be",
+        "filename": "extension.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 683,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-16T17:23:51Z",
+      "side": 1,
+      "message": "This results in a console warning that you shouldn\u0027t use mobile.references.\n\nIt\u0027s basically an empty module with a single dependency to mobile.startup (a redirect)\n\nThe reason this exists is Minerva references mobile.references. This module will be removed in https://gerrit.wikimedia.org/r/472576 but we have to do the Minerva and MobileFrontend dependency hokey pokey to turn it around.\n\nThat\u0027s what it\u0027s all about.",
+      "parentUuid": "054800de_9d1da524",
       "range": {
         "startLine": 683,
         "startChar": 3,
