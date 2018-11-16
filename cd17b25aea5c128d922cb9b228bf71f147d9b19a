@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "26e2a6cf_ac228a26",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-16T20:32:25Z",
+      "side": 1,
+      "message": "if you decide not to fix the other 2 functions, please mention the code coverage this doesn\u0027t add and why.",
+      "revId": "cd17b25aea5c128d922cb9b228bf71f147d9b19a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5f558517_5e93dee4",
+        "filename": "tests/phpunit/features/FeatureTest.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-16T20:32:25Z",
+      "side": 1,
+      "message": "Make madeUpConfigVariable a property\n\nand then move this line into the tests themselves\n\ne.g.\n$feature \u003d new Feature( \u0027TestName\u0027, \u0027test-group\u0027, $this-\u003emadeUpConfigVariable );\n\nAdd @covers FeatureTest::__construct and you\u0027ll have the constructor covered!",
+      "revId": "cd17b25aea5c128d922cb9b228bf71f147d9b19a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
