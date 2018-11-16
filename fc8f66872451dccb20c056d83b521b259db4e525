@@ -22,6 +22,30 @@
       "revId": "fc8f66872451dccb20c056d83b521b259db4e525",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "43b63322_391a9475",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 16
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-16T19:39:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "638d9039_f7b652c5",
+      "range": {
+        "startLine": 20,
+        "startChar": 10,
+        "endLine": 20,
+        "endChar": 13
+      },
+      "revId": "fc8f66872451dccb20c056d83b521b259db4e525",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
