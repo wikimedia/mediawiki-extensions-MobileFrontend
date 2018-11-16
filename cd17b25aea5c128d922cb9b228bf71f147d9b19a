@@ -105,6 +105,24 @@
       "revId": "cd17b25aea5c128d922cb9b228bf71f147d9b19a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8f5548fd_2eea09af",
+        "filename": "tests/phpunit/features/FeatureTest.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-16T21:39:23Z",
+      "side": 1,
+      "message": "It makes the tests more readable IMO as you don\u0027t need to jump up to setup to see what parameters have been given. Readability is sometimes more important than duplication.\n\nYou can change the names of the group/feature if it makes you feel better :)",
+      "parentUuid": "f903a52a_dbe1818a",
+      "revId": "cd17b25aea5c128d922cb9b228bf71f147d9b19a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
