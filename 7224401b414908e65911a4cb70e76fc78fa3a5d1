@@ -73,6 +73,23 @@
     },
     {
       "key": {
+        "uuid": "ca79cf70_a241cc4f",
+        "filename": "src/mobile.startup/rlModuleLoader.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-16T20:50:51Z",
+      "side": 1,
+      "message": "As you say this appears to never be set to falsey.\n\nThere is one usage of delegateHide in Minerva:\n\treturn loader.loadModule( \u0027mobile.languages.structured\u0027, true ).then( function ( loadingOverlay ) {\n\nbut again.. it\u0027s the default.\nLet\u0027s deprecate the 2nd parameter as well?",
+      "revId": "7224401b414908e65911a4cb70e76fc78fa3a5d1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b28e859f_3ed4fd50",
         "filename": "tests/node-qunit/mobile.startup/rlModuleLoader.test.js",
         "patchSetId": 3
