@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <ruleset>
-	<rule ref="./vendor/mediawiki/mediawiki-codesniffer/MediaWiki">
-	</rule>
+	<rule ref="./vendor/mediawiki/mediawiki-codesniffer/MediaWiki" />
 	<rule ref="Generic.Files.LineLength">
 		<exclude-pattern>MobileFrontend\.alias\.php</exclude-pattern>
 	</rule>
