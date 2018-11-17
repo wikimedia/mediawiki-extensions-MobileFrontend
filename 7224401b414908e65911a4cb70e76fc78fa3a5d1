@@ -90,6 +90,24 @@
     },
     {
       "key": {
+        "uuid": "197bf2f8_68a386d0",
+        "filename": "src/mobile.startup/rlModuleLoader.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-11-17T01:37:35Z",
+      "side": 1,
+      "message": "I think a falsey value is actually the default for delegateHide. Passing true means the client will handle hiding the Overlay and it looks like a couple places in Minerva depend on that functionality so I don\u0027t know if we can deprecate the second param",
+      "parentUuid": "ca79cf70_a241cc4f",
+      "revId": "7224401b414908e65911a4cb70e76fc78fa3a5d1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b28e859f_3ed4fd50",
         "filename": "tests/node-qunit/mobile.startup/rlModuleLoader.test.js",
         "patchSetId": 3
