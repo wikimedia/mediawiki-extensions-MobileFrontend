@@ -2,11 +2,12 @@
 
 /**
  * @group MobileFrontend
+ * @coversDefaultClass MobileFrontendSkinHooks
  */
 class MobileFrontendSkinHooksTest extends MediaWikiTestCase {
 	/**
 	 * @dataProvider getGetPluralLicenseInfo
-	 * @covers MobileFrontendSkinHooks::getPluralLicenseInfo
+	 * @covers ::getPluralLicenseInfo
 	 */
 	public function testGetPluralLicenseInfo( $isDisabledValue, $license, $expectedResult ) {
 		$msgObj = $this->getMockBuilder( 'Message' )
@@ -25,7 +26,7 @@ class MobileFrontendSkinHooksTest extends MediaWikiTestCase {
 			->method( 'text' )
 			->will( $this->returnValue( 'and ' ) );
 
-		$this->assertEquals(
+		$this->assertSame(
 			$expectedResult,
 			MobileFrontendSkinHooks::getPluralLicenseInfo( $license, $msgObj )
 		);
@@ -38,6 +39,8 @@ class MobileFrontendSkinHooksTest extends MediaWikiTestCase {
 			[ true, 'test and test', 1 ],
 			[ false, 'test', 1 ],
 			[ true, 'test', 1 ],
+			[ false, null, 1 ],
+			[ true, null, 1 ]
 		];
 	}
 }
