@@ -51,7 +51,7 @@
 	"mobile-frontend-editor-captcha-try-again": "Погрешан код, покушајте поново.",
 	"mobile-frontend-editor-continue": "Следеће",
 	"mobile-frontend-editor-disabled": "Ова страница је заштићена ради спречавања вандализма.",
-	"mobile-frontend-editor-disabled-anon": "Морате да се пријавите да бисте уредили ову страницу.",
+	"mobile-frontend-editor-disabled-anon": "Морате да се пријавите да бисте изменили ову страницу.",
 	"mobile-frontend-editor-editing": "Уређивање",
 	"mobile-frontend-editor-editing-page": "<span><strong>Уређујете страницу</strong> $1</span>",
 	"mobile-frontend-editor-error": "Грешка, измена није сачувана.",
