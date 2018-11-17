@@ -211,6 +211,24 @@
       "revId": "0b0f7f172097c26bd584d39bebce129a22a94d13",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ba80eb60_1b3a54ef",
+        "filename": "includes/api/ApiParseExtender.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 6565
+      },
+      "writtenOn": "2018-11-17T17:46:39Z",
+      "side": 1,
+      "message": "Um, lines 68-73 are the entire solution! Why in the world would I get rid of those lines?!",
+      "parentUuid": "e1707926_05f71bf5",
+      "revId": "0b0f7f172097c26bd584d39bebce129a22a94d13",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
