@@ -16,6 +16,24 @@
       "revId": "1f172de1ee0fa4088e85cc2358514283666cc40e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bfb89832_f859e0da",
+        "filename": "tests/qunit/.eslintrc.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2018-11-18T22:09:14Z",
+      "side": 1,
+      "message": "This is in the qunit sub-folder. Previously you had \"jquery\":true set, which includes allowing the \"$\" global, so this make no change to that.",
+      "parentUuid": "1e609b2c_73c4ff14",
+      "revId": "1f172de1ee0fa4088e85cc2358514283666cc40e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
