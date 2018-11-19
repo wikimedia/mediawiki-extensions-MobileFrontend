@@ -213,6 +213,30 @@
     },
     {
       "key": {
+        "uuid": "b64b0a88_8e30765a",
+        "filename": "tests/phpunit/models/MobilePageTest.php",
+        "patchSetId": 27
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-19T23:13:00Z",
+      "side": 1,
+      "message": "Not anymore since we\u0027re getting rid of the hard dependency on PageImages.",
+      "parentUuid": "40c6b5dc_63578f3b",
+      "range": {
+        "startLine": 128,
+        "startChar": 17,
+        "endLine": 128,
+        "endChar": 61
+      },
+      "revId": "456fb445be99a59929b605c1e188fdedc2a022c3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c2ed1b7c_56c99015",
         "filename": "tests/phpunit/models/MobilePageTest.php",
         "patchSetId": 27
@@ -224,6 +248,30 @@
       "writtenOn": "2018-11-19T21:13:10Z",
       "side": 1,
       "message": "do we need PageImages extension?",
+      "range": {
+        "startLine": 148,
+        "startChar": 17,
+        "endLine": 148,
+        "endChar": 64
+      },
+      "revId": "456fb445be99a59929b605c1e188fdedc2a022c3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f3ffc830_b8111b35",
+        "filename": "tests/phpunit/models/MobilePageTest.php",
+        "patchSetId": 27
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-19T23:13:00Z",
+      "side": 1,
+      "message": "Not anymore since we\u0027re getting rid of the hard dependency on PageImages.",
+      "parentUuid": "c2ed1b7c_56c99015",
       "range": {
         "startLine": 148,
         "startChar": 17,
