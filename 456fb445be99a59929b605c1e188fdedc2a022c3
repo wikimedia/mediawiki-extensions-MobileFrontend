@@ -1,0 +1,142 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a5ede6f6_060384ac",
+        "filename": "tests/phpunit/models/MobilePageTest.php",
+        "patchSetId": 27
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-19T21:13:10Z",
+      "side": 1,
+      "message": "it\u0027s just a hint, quite often you create Title using the TITLE_TEXT. You can create a helper function something like:\n\n    private function getTestTitle() {\n        return Title::newFromText( \u0027Image\u0027, NS_MAIN );\n    }\n\nYou can keep the const, but it\u0027s not necessary in that scenario as the `getTestTitle()` will be the only function using it. Then everywhere in test isntead of calling Title directly, you can just do `$this-\u003egetTestTitle();` Similar as you did with `mockFileFactory()`",
+      "range": {
+        "startLine": 8,
+        "startChar": 6,
+        "endLine": 8,
+        "endChar": 17
+      },
+      "revId": "456fb445be99a59929b605c1e188fdedc2a022c3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f764fe74_14aaa376",
+        "filename": "tests/phpunit/models/MobilePageTest.php",
+        "patchSetId": 27
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-19T21:13:10Z",
+      "side": 1,
+      "message": "I love it!",
+      "range": {
+        "startLine": 23,
+        "startChar": 18,
+        "endLine": 23,
+        "endChar": 46
+      },
+      "revId": "456fb445be99a59929b605c1e188fdedc2a022c3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1f52f004_cca2c326",
+        "filename": "tests/phpunit/models/MobilePageTest.php",
+        "patchSetId": 27
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-19T21:13:10Z",
+      "side": 1,
+      "message": "You shouldn\u0027t create two Title objects. Only one is more than enough. If you pass object `$title` to the MobilePage - PHP will not store the copy of `$title` object, it will store the object identifier which allows to find the real object,  and then you call `$mPageWithNoTitle-\u003egetTitle()`, you will get the `$title` object back (the same object). Title::newFromText\n\nSo, in short, you create A, pass the A to MobilePage, then you create B, and you expect that MobilePage-\u003egetTitle() (which returns A), returns something that looks like A. Instead of you should create A, create MobilePage, passing A, and then call getTitle() and verify that you still get A.\n\nIn this scenario it works only because Title::newFromText() for the same Title it returns the same object.\n\n    Title::newFromText maintains a cache to avoid expensive re-normalization of commonly used titles. (https://github.com/wikimedia/mediawiki/blob/master/includes/Title.php#L44) \n\nYou shouldn\u0027t depend on some internal quirky logic of Title.php, now for same Title it returns same copy, but if we change that in the future, and the Title::newFromText() will return a new object everytime you call, this test will break.\n\nMore info about objects and references in PHP: http://ca2.php.net/manual/en/language.oop5.references.php",
+      "range": {
+        "startLine": 54,
+        "startChar": 3,
+        "endLine": 54,
+        "endChar": 50
+      },
+      "revId": "456fb445be99a59929b605c1e188fdedc2a022c3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7005b209_d3a32c6a",
+        "filename": "tests/phpunit/models/MobilePageTest.php",
+        "patchSetId": 27
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-19T21:13:10Z",
+      "side": 1,
+      "message": "probably an if(){} statement missing, first check the extension, and if it exists do the test.\n\nFor this one, and the one below - a good practice is to exit test early, if first line in the test has something like:\n\n  if (!$this-\u003epageImagesInstalled) {\n      return $this-\u003emarkTestSkipped( ... );\n  }\n\nThen the person who reads the unit test will immediately know that this test requires an extension. But that\u0027s not something we do very often, you can skip that. IMHO it\u0027s a more clear way, instead of executing test conditionally, just exit early.",
+      "range": {
+        "startLine": 100,
+        "startChar": 2,
+        "endLine": 100,
+        "endChar": 60
+      },
+      "revId": "456fb445be99a59929b605c1e188fdedc2a022c3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "40c6b5dc_63578f3b",
+        "filename": "tests/phpunit/models/MobilePageTest.php",
+        "patchSetId": 27
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-19T21:13:10Z",
+      "side": 1,
+      "message": "do we need the PageImages Extension here?",
+      "range": {
+        "startLine": 128,
+        "startChar": 17,
+        "endLine": 128,
+        "endChar": 61
+      },
+      "revId": "456fb445be99a59929b605c1e188fdedc2a022c3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c2ed1b7c_56c99015",
+        "filename": "tests/phpunit/models/MobilePageTest.php",
+        "patchSetId": 27
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-19T21:13:10Z",
+      "side": 1,
+      "message": "do we need PageImages extension?",
+      "range": {
+        "startLine": 148,
+        "startChar": 17,
+        "endLine": 148,
+        "endChar": 64
+      },
+      "revId": "456fb445be99a59929b605c1e188fdedc2a022c3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
