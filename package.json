@@ -45,7 +45,7 @@
     "stylelint": "9.3.0",
     "stylelint-config-wikimedia": "0.4.3",
     "svgo": "1.1.1",
-    "webpack": "4.20.2",
+    "webpack": "4.21.0",
     "webpack-cli": "3.1.2"
   },
   "bundlesize": [
