@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "92af7962_c446096b",
+        "filename": "includes/models/MobilePage.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-19T21:28:54Z",
+      "side": 1,
+      "message": "I think we can break the dependency, do we need to depend on the PageImages extension in the constructor?\n\nI would make the constructor dumb and always expect both `$title` and the $file, and then, in the code, or always pass the `$title`, and `$file`, or create a builder.\n\nLooks like the MobilePage is created only in one place (SpecialMobileEditWatchlist::executeViewEditWatchlist()), maybe we can move that logic there, and remove the PageImages related logic.\n\nAlso, if you take a closer look, the SpecialMobileEditWatchlist is already handling the page images, most probably there is no need to try to fetch the image here.",
+      "range": {
+        "startLine": 45,
+        "startChar": 4,
+        "endLine": 45,
+        "endChar": 53
+      },
+      "revId": "671eceeec23922d5b12b37fa1000f8f296b7a44b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f15c1e9c_2b2c78ea",
+        "filename": "includes/models/MobilePage.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-19T21:28:54Z",
+      "side": 1,
+      "message": "you do the check in",
+      "range": {
+        "startLine": 161,
+        "startChar": 2,
+        "endLine": 161,
+        "endChar": 45
+      },
+      "revId": "671eceeec23922d5b12b37fa1000f8f296b7a44b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
