@@ -65,8 +65,12 @@ class ApiParseExtender {
 					$text = $mf->getText();
 				}
 				$data['parse']['text'] = $text;
-
-				$result->addValue( null, $module->getModuleName(), $data['parse'] );
+				foreach ( $data as $name => $value ) {
+					if ( ApiResult::isMetadataKey( $name ) ) {
+						continue;
+					}
+					$result->addValue( null, $name, $value );
+				}
 			}
 		}
 		return true;
