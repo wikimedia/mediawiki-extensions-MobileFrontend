@@ -2,7 +2,7 @@
 
 /**
  * Retrieves information specific to a mobile page
- * Currently this only provides helper functions for loading PageImage associated with a page
+ * Currently this only provides helper functions for creating Page Thumbnail
  * @todo FIXME: Rename this class when its purpose becomes clearer
  */
 class MobilePage {
@@ -25,10 +25,6 @@ class MobilePage {
 	 * @var File Associated page image file (see PageImages extension)
 	 */
 	private $file;
-	/**
-	 * @var boolean Whether to use page images
-	 */
-	private $usePageImages;
 
 	/**
 	 * @param Title $title Page title
@@ -36,11 +32,7 @@ class MobilePage {
 	 */
 	public function __construct( Title $title, $file = false ) {
 		$this->title = $title;
-		// @todo FIXME: check existence
-		if ( ExtensionRegistry::getInstance()->isLoaded( 'PageImages' ) ) {
-			$this->usePageImages = true;
-			$this->file = $file ? $file : PageImages::getPageImage( $title );
-		}
+		$this->file = $file;
 	}
 
 	/**
@@ -151,33 +143,29 @@ class MobilePage {
 	 * @return string
 	 */
 	private function getPageImageHtml( $size, $useBackgroundImage = false ) {
-		$imageHtml = '';
-		// FIXME: Use more generic classes - no longer restricted to lists
-		if ( $this->usePageImages ) {
-			$file = $this->file;
-			if ( $file ) {
-				$thumb = $file->transform( [ 'width' => $size ] );
-				if ( $thumb && $thumb->getUrl() ) {
-					$className = 'list-thumb ';
-					$className .= $thumb->getWidth() > $thumb->getHeight()
-						? 'list-thumb-y'
-						: 'list-thumb-x';
-					$props = [
-						'class' => $className,
-					];
-
-					$imgUrl = wfExpandUrl( $thumb->getUrl(), PROTO_CURRENT );
-					if ( $useBackgroundImage ) {
-						$props['style'] = 'background-image: url("' . wfExpandUrl( $imgUrl, PROTO_CURRENT ) . '")';
-						$text = '';
-					} else {
-						$props['src'] = $imgUrl;
-						$text = $this->title->getText();
-					}
-					$imageHtml = Html::element( $useBackgroundImage ? 'div' : 'img', $props, $text );
-				}
-			}
+		if ( !$this->file ) {
+			return '';
 		}
-		return $imageHtml;
+		// FIXME: Use more generic classes - no longer restricted to lists
+		$thumb = $this->file->transform( [ 'width' => $size ] );
+		if ( $thumb && $thumb->getUrl() ) {
+			$className = 'list-thumb ';
+			$className .= $thumb->getWidth() > $thumb->getHeight()
+				? 'list-thumb-y'
+				: 'list-thumb-x';
+			$props = [
+				'class' => $className,
+			];
+
+			$imgUrl = wfExpandUrl( $thumb->getUrl(), PROTO_CURRENT );
+			if ( $useBackgroundImage ) {
+				$props['style'] = 'background-image: url("' . wfExpandUrl( $imgUrl, PROTO_CURRENT ) . '")';
+				$text = '';
+			} else {
+				$props['src'] = $imgUrl;
+				$text = $this->title->getText();
+			}
+			return Html::element( $useBackgroundImage ? 'div' : 'img', $props, $text );
+		}
 	}
 }
