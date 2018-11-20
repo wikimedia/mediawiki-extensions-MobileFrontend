@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "4097d7e2_f47a18cb",
+        "filename": "includes/models/MobilePage.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-20T11:49:20Z",
+      "side": 1,
+      "message": "Thanks @Pmiazga, I think there is more to this brilliant idea you\u0027ve shared. More things will need to be changed if this code is moved to SpecialMobileEditWatchlist class, I guess?\n\nAnd to be honest, I\u0027ve not fully understood this idea but I see the line of reasoning, could you, if possible, add a PS on this what you mean, so I can see? The current patch looses the dependency a bit which seems to work fine but yes, please add your idea :) My fear here is not to break things that will harm the codebase in general.",
+      "parentUuid": "92af7962_c446096b",
+      "range": {
+        "startLine": 45,
+        "startChar": 4,
+        "endLine": 45,
+        "endChar": 53
+      },
+      "revId": "671eceeec23922d5b12b37fa1000f8f296b7a44b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f15c1e9c_2b2c78ea",
         "filename": "includes/models/MobilePage.php",
         "patchSetId": 4
@@ -36,6 +60,30 @@
       "writtenOn": "2018-11-19T21:28:54Z",
       "side": 1,
       "message": "you do the check in",
+      "range": {
+        "startLine": 161,
+        "startChar": 2,
+        "endLine": 161,
+        "endChar": 45
+      },
+      "revId": "671eceeec23922d5b12b37fa1000f8f296b7a44b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "798a8c8f_f2d26291",
+        "filename": "includes/models/MobilePage.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-20T11:49:20Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "f15c1e9c_2b2c78ea",
       "range": {
         "startLine": 161,
         "startChar": 2,
