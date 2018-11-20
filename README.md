@@ -541,7 +541,7 @@ The default skin for MobileFrontend.
 
 #### $wgMFNamespacesWithoutCollapsibleSections
 
-In which namespaces sections shoudn't be collapsed.
+In which namespaces sections shouldn't be collapsed.
 
 * Type: `Array`
 * Default:
