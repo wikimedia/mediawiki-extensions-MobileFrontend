@@ -16,6 +16,24 @@
       "revId": "4d99414555b87f1c5d29ea1a3801f213bbab30f4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1821d0e9_7b58e951",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 37
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-20T21:59:21Z",
+      "side": 1,
+      "message": "Patches are on the way! It has to get to 100! So this is just an increment :) The patch had a blocker so I wanted to be sure this will go through before work continues as it was getting complicated with the blocker :)",
+      "parentUuid": "6903128f_15c65fa3",
+      "revId": "4d99414555b87f1c5d29ea1a3801f213bbab30f4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
