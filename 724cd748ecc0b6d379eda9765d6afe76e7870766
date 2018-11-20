@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "88e09137_278c7fa5",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 38
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-20T23:14:34Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "5ee00839_9f4b5221",
+      "revId": "724cd748ecc0b6d379eda9765d6afe76e7870766",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1f2ebb72_1e2b3740",
         "filename": "/COMMIT_MSG",
         "patchSetId": 38
@@ -30,6 +48,30 @@
       "writtenOn": "2018-11-20T22:51:05Z",
       "side": 1,
       "message": "It\u0027s 43.86 % now.. :)",
+      "range": {
+        "startLine": 26,
+        "startChar": 41,
+        "endLine": 26,
+        "endChar": 48
+      },
+      "revId": "724cd748ecc0b6d379eda9765d6afe76e7870766",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8db727ea_0ceec986",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 38
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-20T23:14:34Z",
+      "side": 1,
+      "message": "Woooo! I didn\u0027t notice. I\u0027ll fix all these now. :) Thanks!",
+      "parentUuid": "1f2ebb72_1e2b3740",
       "range": {
         "startLine": 26,
         "startChar": 41,
