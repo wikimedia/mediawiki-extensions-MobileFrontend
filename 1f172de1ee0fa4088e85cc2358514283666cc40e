@@ -34,6 +34,24 @@
       "revId": "1f172de1ee0fa4088e85cc2358514283666cc40e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "171389b6_1744ec30",
+        "filename": "tests/qunit/.eslintrc.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-20T19:24:31Z",
+      "side": 1,
+      "message": "This folder will soon be removed - we are in the process of moving these to tests/node-qunit which doesn\u0027t allow jQuery so this is not a biggy.",
+      "parentUuid": "bfb89832_f859e0da",
+      "revId": "1f172de1ee0fa4088e85cc2358514283666cc40e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
