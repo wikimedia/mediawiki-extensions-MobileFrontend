@@ -37,20 +37,9 @@ class ApiParseExtender {
 			if ( isset( $data['parse']['text'] ) && $params['mobileformat'] ) {
 				$result = $module->getResult();
 				$result->reset();
-
 				$title = Title::newFromText( $data['parse']['title'] );
 				$text = $data['parse']['text'];
-				if ( is_array( $text ) ) {
-					if ( isset( $text[ApiResult::META_CONTENT] ) ) {
-						$contentKey = $text[ApiResult::META_CONTENT];
-					} else {
-						$contentKey = '*';
-					}
-					$html = MobileFormatter::wrapHTML( $text[$contentKey] );
-				} else {
-					$html = MobileFormatter::wrapHTML( $text );
-				}
-				$mf = new MobileFormatter( $html, $title );
+				$mf = new MobileFormatter( MobileFormatter::wrapHTML( $text ), $title );
 				$mf->setRemoveMedia( $params['noimages'] );
 				$mf->setIsMainPage( $params['mainpage'] && $mfSpecialCaseMainPage );
 				$mf->enableExpandableSections( !$params['mainpage'] );
@@ -58,13 +47,7 @@ class ApiParseExtender {
 				// HACK: need a nice way to request a TOC-free HTML in the first place
 				$mf->remove( [ '.toc', '.mw-headline-anchor' ] );
 				$mf->filterContent();
-
-				if ( is_array( $text ) ) {
-					$text[$contentKey] = $mf->getText();
-				} else {
-					$text = $mf->getText();
-				}
-				$data['parse']['text'] = $text;
+				$data['parse']['text'] = $mf->getText();
 				foreach ( $data as $name => $value ) {
 					if ( ApiResult::isMetadataKey( $name ) ) {
 						continue;
