@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "15559935_d18eeedd",
+        "filename": "src/mobile.startup/rlModuleLoader.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-20T22:48:49Z",
+      "side": 1,
+      "message": "Provided we don\u0027t need deprecation warnings (see below), couldn\u0027t this be simplified to :\n\n\t\tloadingOverlay \u003d loadingOverlay || new LoadingOverlay();",
+      "revId": "a66b98b663769f39862f4a30b42f63c93d009d96",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c081ea0f_81ce2af8",
+        "filename": "src/mobile.startup/rlModuleLoader.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-20T22:48:49Z",
+      "side": 1,
+      "message": "Do we need a deprecation warning if no usages exist?",
+      "revId": "a66b98b663769f39862f4a30b42f63c93d009d96",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
