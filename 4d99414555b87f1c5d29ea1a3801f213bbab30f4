@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6903128f_15c65fa3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 37
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-20T21:56:12Z",
+      "side": 1,
+      "message": "What are the reasons for stopping at 21.31% coverage?\nAny risks we\u0027ve uncovered or is this simply an incremental step towards 100% and we can expect new patches to follow?",
+      "revId": "4d99414555b87f1c5d29ea1a3801f213bbab30f4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
