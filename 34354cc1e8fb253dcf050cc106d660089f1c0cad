@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c74308ec_d1b0cbeb",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-20T21:37:33Z",
+      "side": 1,
+      "message": "I think this commit message could do with some more  explanation!",
+      "revId": "34354cc1e8fb253dcf050cc106d660089f1c0cad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "12da9107_16f420e2",
+        "filename": "tests/node-qunit/utils/view.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-20T21:37:33Z",
+      "side": 1,
+      "message": "Can you document what this should be used for? Not clear from the commit message and a description of this would be helpful.\n\nIn particular, it\u0027s not clear to me what  require.cache and require.resolve are (are those webpack internals? or node internals?)",
+      "revId": "34354cc1e8fb253dcf050cc106d660089f1c0cad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
