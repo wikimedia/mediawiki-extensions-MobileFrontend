@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cb8ac68e_7279946a",
+        "filename": "includes/content-providers/ContentProviderFactory.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-20T23:23:42Z",
+      "side": 1,
+      "message": "in this scenario revId will never be null, it will be always 0.",
+      "range": {
+        "startLine": 54,
+        "startChar": 65,
+        "endLine": 54,
+        "endChar": 69
+      },
+      "revId": "59a7afe4f24dc4f38e2e232f234b0a26b6dc0ba4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
