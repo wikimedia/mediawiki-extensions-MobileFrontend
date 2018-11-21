@@ -3,7 +3,7 @@
 		util = M.require( 'mobile.startup/util' ),
 		Page = M.require( 'mobile.startup/Page' ),
 		Anchor = M.require( 'mobile.startup/Anchor' ),
-		user = M.require( 'mobile.startup/user' );
+		user = mw.user;
 	/**
 	 * Overlay for talk page
 	 * @extends TalkOverlayBase

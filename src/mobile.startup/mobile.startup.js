@@ -3,7 +3,6 @@ var
 	mfExtend = require( './mfExtend' ),
 	context = require( './context' ),
 	time = require( './time' ),
-	user = require( './user' ),
 	util = require( './util' ),
 	View = require( './View' ),
 	PageGateway = require( './PageGateway' ),
@@ -48,7 +47,6 @@ mw.mobileFrontend.define( 'mobile.startup/Browser', Browser );
 mw.mobileFrontend.define( 'mobile.startup/cache', cache );
 mw.mobileFrontend.define( 'mobile.startup/time', time );
 mw.mobileFrontend.define( 'mobile.startup/context', context );
-mw.mobileFrontend.define( 'mobile.startup/user', user );
 mw.mobileFrontend.define( 'mobile.startup/PageGateway', PageGateway );
 mw.mobileFrontend.define( 'mobile.startup/Button', Button );
 mw.mobileFrontend.define( 'mobile.startup/Icon', Icon );

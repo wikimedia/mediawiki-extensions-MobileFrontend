@@ -2,7 +2,7 @@
 
 	var
 		WatchstarPageList = M.require( 'mobile.pagelist.scripts/WatchstarPageList' ),
-		user = M.require( 'mobile.startup/user' ),
+		user = mw.user,
 		util = M.require( 'mobile.startup/util' ),
 		Icon = M.require( 'mobile.startup/Icon' ),
 		watchIconName = new Icon( {

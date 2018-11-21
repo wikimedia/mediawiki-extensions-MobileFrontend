@@ -1,7 +1,7 @@
 ( function ( M ) {
 
 	var WatchList = M.require( 'mobile.watchlist/WatchList' ),
-		user = M.require( 'mobile.startup/user' ),
+		user = mw.user,
 		Icon = M.require( 'mobile.startup/Icon' ),
 		watchIconName = new Icon( {
 			name: 'watched'

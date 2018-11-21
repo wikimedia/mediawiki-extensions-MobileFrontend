@@ -7,7 +7,7 @@
 		watchIcon = new Icon( {
 			name: 'watched'
 		} ),
-		user = M.require( 'mobile.startup/user' ),
+		user = mw.user,
 		Page = M.require( 'mobile.startup/Page' );
 
 	QUnit.module( 'MobileFrontend: Watchstar.js Anon', {

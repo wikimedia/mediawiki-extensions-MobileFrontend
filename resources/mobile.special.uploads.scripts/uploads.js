@@ -1,7 +1,7 @@
 /* global jQuery */
 ( function ( M, $ ) {
 	var
-		user = M.require( 'mobile.startup/user' ),
+		user = mw.user,
 		PhotoList = M.require( 'mobile.gallery/PhotoList' ),
 		pageParams = mw.config.get( 'wgPageName' ).split( '/' ),
 		currentUserName = user.getName(),

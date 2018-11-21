@@ -2,7 +2,7 @@
 
 	var PageList = M.require( 'mobile.startup/PageList' ),
 		Watchstar = M.require( 'mobile.watchstar/Watchstar' ),
-		user = M.require( 'mobile.startup/user' ),
+		user = mw.user,
 		util = M.require( 'mobile.startup/util' ),
 		Page = M.require( 'mobile.startup/Page' ),
 		WatchstarGateway = M.require( 'mobile.watchstar/WatchstarGateway' );

@@ -2,7 +2,7 @@
 	var TalkOverlayBase = M.require( 'mobile.talk.overlays/TalkOverlayBase' ),
 		util = M.require( 'mobile.startup/util' ),
 		popup = M.require( 'mobile.startup/toast' ),
-		user = M.require( 'mobile.startup/user' ),
+		user = mw.user,
 		Page = M.require( 'mobile.startup/Page' ),
 		Button = M.require( 'mobile.startup/Button' );
 

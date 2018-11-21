@@ -12,7 +12,7 @@
 			additionalClassNames: 'watch-this-article watched'
 		} ),
 		toast = M.require( 'mobile.startup/toast' ),
-		user = M.require( 'mobile.startup/user' ),
+		user = mw.user,
 		CtaDrawer = M.require( 'mobile.startup/CtaDrawer' );
 
 	/**
