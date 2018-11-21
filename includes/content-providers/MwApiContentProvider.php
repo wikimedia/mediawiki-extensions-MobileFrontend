@@ -21,14 +21,21 @@ class MwApiContentProvider implements IContentProvider {
 	private $skinName;
 
 	/**
+	 * @var int|null revision (optional) of the page to be provided by the provider.
+	 */
+	private $revId;
+
+	/**
 	 * @param string $baseUrl for the MediaWiki API to be used minus query string e.g. /w/api.php
 	 * @param OutputPage $out so that the ResourceLoader modules specific to the page can be added
 	 * @param string $skinName the skin name the content is being provided for
+	 * @param int|null $revId optional
 	 */
-	public function __construct( $baseUrl, OutputPage $out, $skinName ) {
+	public function __construct( $baseUrl, OutputPage $out, $skinName, $revId = null ) {
 		$this->baseUrl = $baseUrl;
 		$this->out = $out;
 		$this->skinName = $skinName;
+		$this->revId = $revId;
 	}
 
 	/**
@@ -36,13 +43,17 @@ class MwApiContentProvider implements IContentProvider {
 	 */
 	public function getHTML() {
 		$out = $this->out;
-		$title = $out->getTitle();
-		if ( !$title ) {
-			return '';
-		}
-		$query = 'action=parse&prop=text|modules|properties|langlinks&page=';
+		$query = 'action=parse&prop=text|modules|properties|langlinks';
 		$url = $this->baseUrl . '?formatversion=2&format=json&' . $query;
-		$url .= rawurlencode( $title->getPrefixedDBkey() );
+		if ( $this->revId ) {
+			$url .= '&oldid=' . rawurlencode( $this->revId );
+		} else {
+			$title = $out->getTitle();
+			if ( !$title ) {
+				return '';
+			}
+			$url .= '&page=' . rawurlencode( $title->getPrefixedDBkey() );
+		}
 		$url .= '&useskin=' . $this->skinName;
 
 		$resp = file_get_contents( $url, false );
