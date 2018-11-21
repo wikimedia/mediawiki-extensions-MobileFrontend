@@ -69,6 +69,30 @@
       "revId": "1a632c9a381251ff7c9cb8c4b986e7fbc5293836",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6064b8b2_375d4a35",
+        "filename": "includes/WMFBaseDomainExtractor.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-21T19:19:56Z",
+      "side": 0,
+      "message": "ok, I gave it a longer thought and I think it should stay like that. If `$needle` is empty it should return false (as we\u0027re doing domain matching here).\n\nThe only thing I would add is a comment that when `$needle` is empty then it returns false. It\u0027s an edge case that is not going to happen at this moment, but someone some time in the future might re-use that code. It\u0027s good to list all function limitations. If you want to be sure clean, then most probably we can change this function name to something more descriptive, like `isTheSameDomain($host, $domain);`",
+      "parentUuid": "ed89ff05_cc3c52d1",
+      "range": {
+        "startLine": 116,
+        "startChar": 2,
+        "endLine": 118,
+        "endChar": 3
+      },
+      "revId": "1a632c9a381251ff7c9cb8c4b986e7fbc5293836",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
