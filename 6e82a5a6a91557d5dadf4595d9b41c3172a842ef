@@ -1,0 +1,142 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "84488b87_0bcd6081",
+        "filename": "tests/phpunit/models/MobilePageTest.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-21T19:38:40Z",
+      "side": 1,
+      "message": "please use `Revision::class`",
+      "range": {
+        "startLine": 45,
+        "startChar": 41,
+        "endLine": 45,
+        "endChar": 52
+      },
+      "revId": "6e82a5a6a91557d5dadf4595d9b41c3172a842ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bfcecf1d_fed1a072",
+        "filename": "tests/phpunit/models/MobilePageTest.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-21T19:38:40Z",
+      "side": 1,
+      "message": "`Revision::getUser()` returns int, not a string. Even if we mock the stuff, we should be consistent with the class implementation.",
+      "range": {
+        "startLine": 58,
+        "startChar": 18,
+        "endLine": 58,
+        "endChar": 26
+      },
+      "revId": "6e82a5a6a91557d5dadf4595d9b41c3172a842ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4a81f211_cea768e3",
+        "filename": "tests/phpunit/models/MobilePageTest.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-21T19:38:40Z",
+      "side": 1,
+      "message": "if the `revisionTimestamp` is null it will use `$this-\u003egetRevision()-\u003egetTimestamp()`, for that test probably we should mock the Revision object.",
+      "range": {
+        "startLine": 89,
+        "startChar": 25,
+        "endLine": 89,
+        "endChar": 43
+      },
+      "revId": "6e82a5a6a91557d5dadf4595d9b41c3172a842ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e589e040_d65f30ed",
+        "filename": "tests/phpunit/models/MobilePageTest.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-21T19:38:40Z",
+      "side": 1,
+      "message": "what I sometimes do, I create a constant, something like:\n   const ANONYMOUS_USER_NAME \u003d \u0027127.0.0.1\u0027;\n\nand then here it would be:\n    $this-\u003eassertSame( self::ANONYMOUS_USER_NAME, $actual[\u0027name\u0027]);\n\nWe should be able to read the code as poem, first write for humans, then write for computers. It happens to me to create a constant to describe value, for example we have something like that in our code:\n\n    const GADGET_ENABLED \u003d true;\n\nthen in code you have statement \n\n   $this-\u003emock()\n       [...]\n       -\u003ewillReturn( self::GADGET_ENABLED );\n\nif you leave `willReturn( true );` it\u0027s not that clear what is the purpose of that function, with a constant you don\u0027t have to think about that as it explains itself.",
+      "range": {
+        "startLine": 114,
+        "startChar": 22,
+        "endLine": 114,
+        "endChar": 31
+      },
+      "revId": "6e82a5a6a91557d5dadf4595d9b41c3172a842ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7fe4ca37_1900877d",
+        "filename": "tests/phpunit/models/MobilePageTest.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-21T19:38:40Z",
+      "side": 1,
+      "message": "why it\u0027s 1540757229? it would be nice to write some explanation for that magical number (same as you did with 127.0.0.1), or use a constant with a nice self-explanatory name.",
+      "range": {
+        "startLine": 116,
+        "startChar": 22,
+        "endLine": 116,
+        "endChar": 32
+      },
+      "revId": "6e82a5a6a91557d5dadf4595d9b41c3172a842ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dc923924_75245959",
+        "filename": "tests/phpunit/models/MobilePageTest.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 288,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-21T19:38:40Z",
+      "side": 1,
+      "message": "that shouldn\u0027t be a problem, but as a common practice (at least the one I know, maybe different extensions file follow different way) is that we put those extra classes first. So the order follows in the way code expects stuff. If you need class X, you should declare it before it\u0027s used.\n\nOf course it doesn\u0027t matter with PHP because first it analyzes the whole file, and then it executes so the order is not that important. But as I said - it\u0027s a good practice.",
+      "range": {
+        "startLine": 288,
+        "startChar": 0,
+        "endLine": 288,
+        "endChar": 5
+      },
+      "revId": "6e82a5a6a91557d5dadf4595d9b41c3172a842ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
