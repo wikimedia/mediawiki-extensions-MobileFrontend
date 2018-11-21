@@ -93,6 +93,30 @@
       "revId": "1a632c9a381251ff7c9cb8c4b986e7fbc5293836",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "62f7fea5_236500b9",
+        "filename": "includes/WMFBaseDomainExtractor.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-21T19:33:40Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "6064b8b2_375d4a35",
+      "range": {
+        "startLine": 116,
+        "startChar": 2,
+        "endLine": 118,
+        "endChar": 3
+      },
+      "revId": "1a632c9a381251ff7c9cb8c4b986e7fbc5293836",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
