@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f0a915f8_d5d5014d",
+        "filename": "tests/phpunit/models/MobilePageTest.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-21T14:08:11Z",
+      "side": 1,
+      "message": "you don\u0027t need to assign it to variable, you can just return it.",
+      "range": {
+        "startLine": 47,
+        "startChar": 2,
+        "endLine": 47,
+        "endChar": 15
+      },
+      "revId": "92634e904358686eb2782cb6775e735ab63a462e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4823f18f_aa5bab1f",
+        "filename": "tests/phpunit/models/MobilePageTest.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-21T14:08:11Z",
+      "side": 1,
+      "message": "please see my comment regards testGetLatestEdit()",
+      "range": {
+        "startLine": 56,
+        "startChar": 17,
+        "endLine": 56,
+        "endChar": 36
+      },
+      "revId": "92634e904358686eb2782cb6775e735ab63a462e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dec5cfff_88c1f590",
+        "filename": "tests/phpunit/models/MobilePageTest.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-21T14:08:11Z",
+      "side": 1,
+      "message": "This test tests bit more than expected, if you check the MobilePage::testGetLatestEdit, it:\n - calls `$this-\u003egetRevision()`\n - which calls `Revision::newKnownCurrent()` and passes wfGetDb() result, which btw is ignored o_O\n - then on $revision is calls `$rev-\u003egetUser()`\n\nIntegration tests should call real objects to see that everything works properly and all objects are passed properly.\n\nUnit tests should run in isolation, you don\u0027t want to call `Revision::newKnonwCurrent()`, because that might cause side effects. If you check the Revision::GetUser() it can call `mRecord-\u003egetUser()` which calls `audienceCan()` which does access checks.  As you see, even imple $revision-\u003egetUser() can already do much much more than we expect. Thats both the beauty and the curse of really complex projects like MediaWiki.\n\nPlease, try to think how to override the Revision, so at least you can test both scenarios (when user is present, and when not present). Maybe there is no possibility for the user not to be present (it\u0027s always defined), then that if() statement is not necessary (some old code that we can remove).",
+      "range": {
+        "startLine": 76,
+        "startChar": 17,
+        "endLine": 76,
+        "endChar": 34
+      },
+      "revId": "92634e904358686eb2782cb6775e735ab63a462e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
