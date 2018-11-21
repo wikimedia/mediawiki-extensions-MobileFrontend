@@ -22,6 +22,53 @@
       "revId": "1a632c9a381251ff7c9cb8c4b986e7fbc5293836",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5e19e60e_ea71a99e",
+        "filename": "includes/WMFBaseDomainExtractor.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-21T15:35:55Z",
+      "side": 0,
+      "message": "Ack",
+      "parentUuid": "e38a6afe_6e455dcc",
+      "range": {
+        "startLine": 101,
+        "startChar": 3,
+        "endLine": 101,
+        "endChar": 22
+      },
+      "revId": "1a632c9a381251ff7c9cb8c4b986e7fbc5293836",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ed89ff05_cc3c52d1",
+        "filename": "includes/WMFBaseDomainExtractor.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-21T15:35:55Z",
+      "side": 0,
+      "message": "So @Pmiazga, this should stay?",
+      "range": {
+        "startLine": 116,
+        "startChar": 2,
+        "endLine": 118,
+        "endChar": 3
+      },
+      "revId": "1a632c9a381251ff7c9cb8c4b986e7fbc5293836",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
