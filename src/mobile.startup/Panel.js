@@ -1,5 +1,6 @@
 var
 	mfExtend = require( './mfExtend' ),
+	util = require( './util' ),
 	View = require( './View' );
 
 /**
@@ -7,19 +8,17 @@ var
  * @class Panel
  * @extends View
  *
- * @param {Object} options Configuration options
+ * @param {Object} props Configuration options
  */
-function Panel() {
-	View.apply( this, arguments );
+function Panel( props ) {
+	View.call( this,
+		util.extend( {}, props, {
+			className: 'panel'
+		} )
+	);
 }
 
 mfExtend( Panel, View, {
-	/**
-	 * @inheritdoc
-	 * @memberof Panel
-	 * @instance
-	 */
-	className: 'panel',
 	// in milliseconds
 	minHideDelay: 10,
 	events: {

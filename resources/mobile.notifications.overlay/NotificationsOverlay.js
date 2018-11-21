@@ -18,6 +18,7 @@
 			maxNotificationCount = mw.config.get( 'wgEchoMaxNotificationCount' ),
 			echoApi = new mw.echo.api.EchoApi();
 
+		options.isBorderBox = false;
 		Overlay.apply( this, options );
 
 		// Anchor tag that corresponds to a notifications badge
@@ -97,7 +98,6 @@
 
 	OO.mfExtend( NotificationsOverlay, Overlay, {
 		className: 'overlay notifications-overlay navigation-drawer',
-		isBorderBox: false,
 		/**
 		 * @memberof NotificationsOverlay
 		 * @instance
