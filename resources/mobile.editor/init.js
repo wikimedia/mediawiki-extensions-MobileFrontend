@@ -11,7 +11,7 @@
 		// #ca-edit, .mw-editsection are standard MediaWiki elements
 		// .edit-link comes from MobileFrontend user page creation CTA
 		$allEditLinks = $( '#ca-edit a, .mw-editsection a, .edit-link' ),
-		user = M.require( 'mobile.startup/user' ),
+		user = mw.user,
 		popup = M.require( 'mobile.startup/toast' ),
 		CtaDrawer = M.require( 'mobile.startup/CtaDrawer' ),
 		// FIXME: Disable on IE < 10 for time being
@@ -22,6 +22,7 @@
 		isNewPage = currentPage.options.id === 0,
 		isNewFile = currentPage.inNamespace( 'file' ) && isNewPage,
 		veConfig = mw.config.get( 'wgVisualEditorConfig' ),
+		editCount = mw.config.get( 'wgUserEditCount' ),
 		// FIXME: Should we consider default site options and user prefs?
 		isVisualEditorEnabled = veConfig,
 		editorPath = /^\/editor\/(\d+|all)$/;
@@ -84,7 +85,7 @@
 					title: page.title,
 					isAnon: user.isAnon(),
 					isNewPage: isNewPage,
-					isNewEditor: user.getEditCount() === 0,
+					editCount: editCount,
 					oldId: mw.util.getParamValue( 'oldid' ),
 					contentLang: $content.attr( 'lang' ),
 					contentDir: $content.attr( 'dir' ),
