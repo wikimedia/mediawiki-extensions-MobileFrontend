@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
+
 /**
  * Retrieves information specific to a mobile page
  * Currently this only provides helper functions for creating Page Thumbnail
@@ -40,11 +42,8 @@ class MobilePage {
 	 */
 	private function getRevision() {
 		if ( $this->rev === null ) {
-			$this->rev = Revision::newKnownCurrent(
-				wfGetDB( DB_REPLICA ),
-				$this->title->getArticleID(),
-				$this->title->getLatestRevID()
-			);
+			$this->rev = MediaWikiServices::getInstance()->getRevisionStore()
+				->getRevisionByTitle( $this->title );
 		}
 		return $this->rev;
 	}
@@ -167,5 +166,6 @@ class MobilePage {
 			}
 			return Html::element( $useBackgroundImage ? 'div' : 'img', $props, $text );
 		}
+		return '';
 	}
 }
