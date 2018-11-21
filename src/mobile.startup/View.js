@@ -91,13 +91,6 @@ function View() {
 OO.mixinClass( View, OO.EventEmitter );
 mfExtend( View, {
 	/**
-	 * A css class to apply to the containing element of the View.
-	 * @memberof View
-	 * @instance
-	 * @property {string} className
-	 */
-	className: undefined,
-	/**
 	 * Name of tag that contains the rendered template
 	 * @memberof View
 	 * @instance
@@ -112,14 +105,6 @@ mfExtend( View, {
 	 * @property {boolean} isTemplateMode
 	 */
 	isTemplateMode: false,
-
-	/**
-	 * Whether border box box sizing model should be used
-	 * @memberof View
-	 * @instance
-	 * @property {boolean} isBorderBox
-	 */
-	isBorderBox: true,
 	/**
 	 * @memberof View
 	 * @instance
@@ -218,8 +203,17 @@ mfExtend( View, {
 	 * @param {Object} props
 	 */
 	_postInitialize: function ( props ) {
+		// Default value is true!
+		var isBorderBox = true;
+		if ( props.isBorderBox !== undefined ) {
+			isBorderBox = props.isBorderBox;
+		} else if ( this.isBorderBox !== undefined ) {
+			// Support for the old way of setting border box class.
+			// This will be deprecated in future.
+			isBorderBox = this.isBorderBox;
+		}
 		this.$el.addClass( props.className || this.className );
-		if ( this.isBorderBox ) {
+		if ( isBorderBox ) {
 			// FIXME: Merge with className property (?)
 			this.$el.addClass( 'view-border-box' );
 		}
