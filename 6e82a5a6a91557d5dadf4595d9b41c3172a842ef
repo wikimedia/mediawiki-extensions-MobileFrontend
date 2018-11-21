@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "49ef4c3a_ce4b36d1",
+        "filename": "tests/phpunit/models/MobilePageTest.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-21T22:26:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "84488b87_0bcd6081",
+      "range": {
+        "startLine": 45,
+        "startChar": 41,
+        "endLine": 45,
+        "endChar": 52
+      },
+      "revId": "6e82a5a6a91557d5dadf4595d9b41c3172a842ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "bfcecf1d_fed1a072",
         "filename": "tests/phpunit/models/MobilePageTest.php",
         "patchSetId": 9
@@ -36,6 +60,30 @@
       "writtenOn": "2018-11-21T19:38:40Z",
       "side": 1,
       "message": "`Revision::getUser()` returns int, not a string. Even if we mock the stuff, we should be consistent with the class implementation.",
+      "range": {
+        "startLine": 58,
+        "startChar": 18,
+        "endLine": 58,
+        "endChar": 26
+      },
+      "revId": "6e82a5a6a91557d5dadf4595d9b41c3172a842ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7487e3d6_fb30343b",
+        "filename": "tests/phpunit/models/MobilePageTest.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-21T22:26:40Z",
+      "side": 1,
+      "message": "True, I missed that :(, fixed!",
+      "parentUuid": "bfcecf1d_fed1a072",
       "range": {
         "startLine": 58,
         "startChar": 18,
@@ -94,6 +142,30 @@
     },
     {
       "key": {
+        "uuid": "80548b71_43f7200a",
+        "filename": "tests/phpunit/models/MobilePageTest.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-21T22:26:40Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "e589e040_d65f30ed",
+      "range": {
+        "startLine": 114,
+        "startChar": 22,
+        "endLine": 114,
+        "endChar": 31
+      },
+      "revId": "6e82a5a6a91557d5dadf4595d9b41c3172a842ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7fe4ca37_1900877d",
         "filename": "tests/phpunit/models/MobilePageTest.php",
         "patchSetId": 9
@@ -117,6 +189,30 @@
     },
     {
       "key": {
+        "uuid": "ece0bd77_3a1eaa64",
+        "filename": "tests/phpunit/models/MobilePageTest.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-21T22:26:40Z",
+      "side": 1,
+      "message": "Cool, this has been fixed!",
+      "parentUuid": "7fe4ca37_1900877d",
+      "range": {
+        "startLine": 116,
+        "startChar": 22,
+        "endLine": 116,
+        "endChar": 32
+      },
+      "revId": "6e82a5a6a91557d5dadf4595d9b41c3172a842ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "dc923924_75245959",
         "filename": "tests/phpunit/models/MobilePageTest.php",
         "patchSetId": 9
@@ -128,6 +224,30 @@
       "writtenOn": "2018-11-21T19:38:40Z",
       "side": 1,
       "message": "that shouldn\u0027t be a problem, but as a common practice (at least the one I know, maybe different extensions file follow different way) is that we put those extra classes first. So the order follows in the way code expects stuff. If you need class X, you should declare it before it\u0027s used.\n\nOf course it doesn\u0027t matter with PHP because first it analyzes the whole file, and then it executes so the order is not that important. But as I said - it\u0027s a good practice.",
+      "range": {
+        "startLine": 288,
+        "startChar": 0,
+        "endLine": 288,
+        "endChar": 5
+      },
+      "revId": "6e82a5a6a91557d5dadf4595d9b41c3172a842ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ff4eff0d_eafd1eb8",
+        "filename": "tests/phpunit/models/MobilePageTest.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 288,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-21T22:26:40Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "dc923924_75245959",
       "range": {
         "startLine": 288,
         "startChar": 0,
