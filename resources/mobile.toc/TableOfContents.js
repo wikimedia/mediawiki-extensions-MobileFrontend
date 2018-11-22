@@ -9,7 +9,7 @@
 	 * @uses Icon
 	 */
 	function TableOfContents() {
-		View.apply( this, {
+		View.call( this, {
 			className: 'toc-mobile',
 			tocIcon: new Icon( {
 				name: 'toc',
