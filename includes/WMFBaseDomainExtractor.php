@@ -48,10 +48,19 @@ class WMFBaseDomainExtractor implements BaseDomainExtractorInterface {
 	 * Although some browsers will accept cookies without the initial . in domain
 	 * RFC 2109 requires it to be included.
 	 *
+	 * $server must be a valid URL (i.e. with the scheme included, http or https
+	 * or protocol-relative e.g. //en.m.wikipedia.org'). NULL and empty strings
+	 * can also be taken but will return NULL or empty string respectively.
+	 *
 	 * @param string $server URL
-	 * @return string Hostname
+	 * @return string|null Hostname
 	 */
 	public function getCookieDomain( $server ) {
+		// Per http://php.net/manual/en/function.parse-url.php,
+		// If the requested component doesn't exist within the given
+		// URL, NULL will be returned. So wfParseUrl() will return
+		// NULL as it calls parse_url() if a valid server URL is not
+		// given except it's an empty string.
 		$parsedUrl = wfParseUrl( $server );
 		$host = $parsedUrl['host'];
 
@@ -96,16 +105,15 @@ class WMFBaseDomainExtractor implements BaseDomainExtractorInterface {
 	 */
 	private function extractSubdomain( $fullHostname, $baseDomain ) {
 		$length = strlen( $baseDomain );
+
 		$subdomains = explode( '.', substr( $fullHostname, 0, -$length ) );
-		if ( count( $subdomains ) == 0 ) {
-			return $baseDomain;
-		}
 		$subdomain = array_pop( $subdomains );
 		return $subdomain . $baseDomain;
 	}
 
 	/**
-	 * Check that $haystack ends with $needle
+	 * Check that $haystack ends with $needle. When $needle is
+	 * empty, it should return false.
 	 *
 	 * @param string $haystack
 	 * @param string $needle

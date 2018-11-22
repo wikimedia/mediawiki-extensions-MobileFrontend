@@ -27,6 +27,7 @@ class WMFBaseDomainExtractorTest extends \PHPUnit\Framework\TestCase {
 			[ 'http://wikiversity.org', '.wikiversity.org' ],
 			[ 'https://office.wikimedia.org', '.office.wikimedia.org' ],
 			[ 'https://commons.wikimedia.org', '.commons.wikimedia.org' ],
+			[ 'https://mediawiki.org', '.mediawiki.org' ],
 			// Beta cluster
 			[ 'http://en.wikipedia.beta.wmflabs.org', '.wikipedia.beta.wmflabs.org' ],
 			[ 'https://en.m.wikipedia.beta.wmflabs.org', '.wikipedia.beta.wmflabs.org' ],
@@ -42,7 +43,12 @@ class WMFBaseDomainExtractorTest extends \PHPUnit\Framework\TestCase {
 			[ 'http://wiki.test.com.pl', 'wiki.test.com.pl' ],
 			// Vagrant instances
 			[ 'http://php5.local.wmftest.net:8080/', '.local.wmftest.net' ],
-			[ 'https://wiki.local.wmftest.net:8080/', '.local.wmftest.net' ]
+			[ 'https://wiki.local.wmftest.net:8080/', '.local.wmftest.net' ],
+			// Edge cases
+			[ 'mediawiki.org', null ],
+			[ 'TestString', null ],
+			[ '', '' ],
+			[ null, null ]
 		];
 	}
 }
