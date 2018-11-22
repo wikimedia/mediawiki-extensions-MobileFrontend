@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c8b44b6e_951afe9d",
+        "filename": "src/mobile.startup/Skin.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-22T19:21:31Z",
+      "side": 1,
+      "message": "The problem with doing this is that when we try and add test coverage for  getSectionId with  mw.config.get( \u0027wgMFLazyLoadReferences\u0027 ) truthy (no test currently exists) we\u0027ll need to introduce stubbing for mw.mobileFrontend inside tests/node-qunit/utils/mockMediaWiki.js \n\nIT also hides away a dependency of this module and given crucially we\u0027re not testing it, it worries me that we\u0027re setting ourselves up for a breakage due to code loading in the wrong order.\n\nPersonally, I preferred the old way of doing this by making this an explict import.\n\nI\u0027d much rather spend some time now deprecating the use of the global event emitter instead of doing this.",
+      "revId": "4550377280b94447f16d8036f5f5954f9a26ce8e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "632b23d7_319e7869",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-22T19:21:31Z",
+      "side": 1,
+      "message": "I like this change and support it.\n\nMaybe we should split this patch into 2, since there are 2 things going on here so this doesn\u0027t get blocked by my concerns around the global event emitter.",
+      "revId": "4550377280b94447f16d8036f5f5954f9a26ce8e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

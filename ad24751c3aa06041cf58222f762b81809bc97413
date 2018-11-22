@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7819f558_83852ce2",
+        "filename": "src/mobile.startup/moduleLoaderSingleton.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-22T19:21:31Z",
+      "side": 0,
+      "message": "Rather than doing this, would it not make more sense to separate the global event emitter out of ModuleLoader so that we can make it crystal clear where it\u0027s being used and concentrate on removing it altogether per our objective in https://phabricator.wikimedia.org/T156186?",
+      "revId": "ad24751c3aa06041cf58222f762b81809bc97413",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
