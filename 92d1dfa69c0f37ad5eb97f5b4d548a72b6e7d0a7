@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ca159fd2_f8f651b7",
+        "filename": "tests/phpunit/models/MobilePageTest.php",
+        "patchSetId": 12
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-22T00:18:11Z",
+      "side": 1,
+      "message": "This is the guy causing the failures! 0 returns \u0027\u0027, 1 returns \u0027UTSysop\u0027, etc. Let me try 2 and see as it passes locally!",
+      "range": {
+        "startLine": 65,
+        "startChar": 3,
+        "endLine": 65,
+        "endChar": 21
+      },
+      "revId": "92d1dfa69c0f37ad5eb97f5b4d548a72b6e7d0a7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
