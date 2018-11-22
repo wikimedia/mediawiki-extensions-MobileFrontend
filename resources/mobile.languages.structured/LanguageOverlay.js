@@ -29,17 +29,14 @@
 		options.allLanguagesCount = languages.all.length;
 		options.suggestedLanguages = languages.suggested;
 		options.suggestedLanguagesCount = languages.suggested.length;
-
-		Overlay.call( this, options );
+		Overlay.call( this,
+			util.extend( options, {
+				className: 'overlay language-overlay'
+			} )
+		);
 	}
 
 	OO.mfExtend( LanguageOverlay, Overlay, {
-		/**
-		 * @inheritdoc
-		 * @memberof LanguageOverlay
-		 * @instance
-		 */
-		className: Overlay.prototype.className + ' language-overlay',
 		/**
 		 * @memberof LanguageOverlay
 		 * @instance
