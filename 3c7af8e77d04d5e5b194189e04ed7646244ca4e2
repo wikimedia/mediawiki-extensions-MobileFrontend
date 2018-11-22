@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3cd1e734_f10f8830",
+        "filename": "resources/mobile.editor.ve/VisualEditorOverlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-22T20:59:49Z",
+      "side": 1,
+      "message": "what about isBorderBox? should we add it here?",
+      "range": {
+        "startLine": 13,
+        "startChar": 27,
+        "endLine": 13,
+        "endChar": 34
+      },
+      "revId": "3c7af8e77d04d5e5b194189e04ed7646244ca4e2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4173fc4d_061900e7",
+        "filename": "resources/mobile.editor.ve/VisualEditorOverlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-22T20:59:49Z",
+      "side": 1,
+      "message": "in most places we call `call` instead of `apply`, do we want to change it also here?",
+      "range": {
+        "startLine": 14,
+        "startChar": 20,
+        "endLine": 14,
+        "endChar": 25
+      },
+      "revId": "3c7af8e77d04d5e5b194189e04ed7646244ca4e2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
