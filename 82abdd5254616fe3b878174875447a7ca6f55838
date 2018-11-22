@@ -1,0 +1,188 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "225e1d24_3b6db97d",
+        "filename": "tests/phpunit/models/MobilePageTest.php",
+        "patchSetId": 19
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-22T19:22:15Z",
+      "side": 1,
+      "message": "I think you want the RevisionRecord mock here, not the `RevisionStore`",
+      "range": {
+        "startLine": 57,
+        "startChar": 41,
+        "endLine": 57,
+        "endChar": 54
+      },
+      "revId": "82abdd5254616fe3b878174875447a7ca6f55838",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e4ba4a2_1b683e5c",
+        "filename": "tests/phpunit/models/MobilePageTest.php",
+        "patchSetId": 19
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-22T19:22:15Z",
+      "side": 1,
+      "message": "we have the Revision class, we shouldn\u0027t call this `$revisionMock` as some people may think that it\u0027s the mock of Revision object. I think you want the $revisionRecordMock here, as this mock is a result of RevisionStore::getRevisionByTitle()",
+      "range": {
+        "startLine": 57,
+        "startChar": 2,
+        "endLine": 57,
+        "endChar": 15
+      },
+      "revId": "82abdd5254616fe3b878174875447a7ca6f55838",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fbfb65b1_18a1fefd",
+        "filename": "tests/phpunit/models/MobilePageTest.php",
+        "patchSetId": 19
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-22T19:22:15Z",
+      "side": 1,
+      "message": "can we come with some better variable name? just $mock is ok, but it\u0027s nice to be descriptive.",
+      "range": {
+        "startLine": 70,
+        "startChar": 2,
+        "endLine": 70,
+        "endChar": 7
+      },
+      "revId": "82abdd5254616fe3b878174875447a7ca6f55838",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d1d85c30_31daa5fc",
+        "filename": "tests/phpunit/models/MobilePageTest.php",
+        "patchSetId": 19
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-22T19:22:15Z",
+      "side": 1,
+      "message": "$title param missing",
+      "range": {
+        "startLine": 102,
+        "startChar": 5,
+        "endLine": 102,
+        "endChar": 10
+      },
+      "revId": "82abdd5254616fe3b878174875447a7ca6f55838",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cb5fbb86_ada97510",
+        "filename": "tests/phpunit/models/MobilePageTest.php",
+        "patchSetId": 19
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-22T19:22:15Z",
+      "side": 1,
+      "message": "when working on objects, please define types",
+      "range": {
+        "startLine": 105,
+        "startChar": 41,
+        "endLine": 105,
+        "endChar": 47
+      },
+      "revId": "82abdd5254616fe3b878174875447a7ca6f55838",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "59d17dd4_50ee14a6",
+        "filename": "tests/phpunit/models/MobilePageTest.php",
+        "patchSetId": 19
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-22T19:22:15Z",
+      "side": 1,
+      "message": "setLatestTimestamp() is not called here",
+      "range": {
+        "startLine": 133,
+        "startChar": 14,
+        "endLine": 133,
+        "endChar": 32
+      },
+      "revId": "82abdd5254616fe3b878174875447a7ca6f55838",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "92c4ddc0_457c424e",
+        "filename": "tests/phpunit/models/MobilePageTest.php",
+        "patchSetId": 19
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-22T19:22:15Z",
+      "side": 1,
+      "message": "setLatestTimestamp() is not called here",
+      "range": {
+        "startLine": 148,
+        "startChar": 14,
+        "endLine": 148,
+        "endChar": 32
+      },
+      "revId": "82abdd5254616fe3b878174875447a7ca6f55838",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9fb44ccc_d8a60e91",
+        "filename": "tests/phpunit/models/MobilePageTest.php",
+        "patchSetId": 19
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-22T19:22:15Z",
+      "side": 1,
+      "message": "you can make put that as a separate function (a different test case)",
+      "range": {
+        "startLine": 182,
+        "startChar": 2,
+        "endLine": 182,
+        "endChar": 45
+      },
+      "revId": "82abdd5254616fe3b878174875447a7ca6f55838",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
