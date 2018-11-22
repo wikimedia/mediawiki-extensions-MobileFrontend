@@ -19,6 +19,47 @@
     },
     {
       "key": {
+        "uuid": "9ec1f18c_68259477",
+        "filename": "tests/phpunit/MobileFrontend.bodyTest.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-22T19:45:44Z",
+      "side": 1,
+      "message": "I agree with Jdlrobson, we shouldn\u0027t use namespace that might be not defined.",
+      "parentUuid": "a82ebf2b_1bccd130",
+      "revId": "121cb7197c2a6d43041060e3c12568a0d6423e8d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "608639a1_4505b3b1",
+        "filename": "tests/phpunit/MobileFrontend.bodyTest.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-22T19:45:44Z",
+      "side": 1,
+      "message": "all tests are WIkibase realted, add a check here, if Wikibase extension is not installed (use ExtensionRegistry, not class_exists()) just skip all tests in one place.",
+      "range": {
+        "startLine": 12,
+        "startChar": 17,
+        "endLine": 12,
+        "endChar": 22
+      },
+      "revId": "121cb7197c2a6d43041060e3c12568a0d6423e8d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "cc0b2fcb_4a9e836e",
         "filename": "tests/phpunit/MobileFrontend.bodyTest.php",
         "patchSetId": 5
@@ -63,6 +104,52 @@
       "revId": "121cb7197c2a6d43041060e3c12568a0d6423e8d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5fdbc459_912ecd30",
+        "filename": "tests/phpunit/MobileFrontend.bodyTest.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-22T19:45:44Z",
+      "side": 1,
+      "message": "if the class doesn\u0027t exist, we should skip it",
+      "range": {
+        "startLine": 27,
+        "startChar": 2,
+        "endLine": 27,
+        "endChar": 41
+      },
+      "revId": "121cb7197c2a6d43041060e3c12568a0d6423e8d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5415817b_96ae1d51",
+        "filename": "tests/phpunit/MobileFrontend.bodyTest.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-22T19:45:44Z",
+      "side": 1,
+      "message": "if this is just a variable you don\u0027t have to unset.. tearDown() should be used to clear cache, disconnect from servers, clean up datatabases, etc. You don\u0027t have to unset every variable you created. The Garbage Collection will do that for you.",
+      "range": {
+        "startLine": 56,
+        "startChar": 2,
+        "endLine": 56,
+        "endChar": 7
+      },
+      "revId": "121cb7197c2a6d43041060e3c12568a0d6423e8d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
