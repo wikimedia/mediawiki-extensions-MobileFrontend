@@ -16,6 +16,24 @@
       "revId": "a93af06fc128e87e7cb88dd7c591a3f2a7afe0af",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a5554360_cc6438f7",
+        "filename": "src/mobile.startup/View.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 207,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-22T18:05:19Z",
+      "side": 1,
+      "message": "Fair point. I\u0027ve adjusted this to use an if statement to make this clearer.\nWhat I\u0027m trying to do here is avoid accessing this.isBorderBox and triggering the deprecation warning when its undefined.",
+      "parentUuid": "54072b33_4a38b1c6",
+      "revId": "a93af06fc128e87e7cb88dd7c591a3f2a7afe0af",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
