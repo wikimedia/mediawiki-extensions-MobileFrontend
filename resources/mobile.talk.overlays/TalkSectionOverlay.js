@@ -1,7 +1,9 @@
 ( function ( M ) {
-	var TalkOverlayBase = M.require( 'mobile.talk.overlays/TalkOverlayBase' ),
+	var PageGateway = M.require( 'mobile.startup/PageGateway' ),
+		Overlay = M.require( 'mobile.startup/Overlay' ),
 		util = M.require( 'mobile.startup/util' ),
 		popup = M.require( 'mobile.startup/toast' ),
+		autosign = M.require( 'mobile.talk.overlays/autosign' ),
 		user = mw.user,
 		Page = M.require( 'mobile.startup/Page' ),
 		Button = M.require( 'mobile.startup/Button' );
@@ -9,24 +11,32 @@
 	/**
 	 * Overlay for showing talk page section
 	 * @class TalkSectionOverlay
-	 * @extends TalkOverlayBase
+	 * @extends Overlay
+	 * @uses PageGateway
 	 * @uses Page
 	 * @uses Button
 	 * @uses Toast
+	 * @param {Object} options
 	 */
-	function TalkSectionOverlay() {
-		TalkOverlayBase.apply( this, arguments );
+	function TalkSectionOverlay( options ) {
+		this.editorApi = options.api;
+		this.pageGateway = new PageGateway( options.api );
+		Overlay.call( this,
+			util.extend( options, {
+				className: 'talk-overlay overlay'
+			} )
+		);
 	}
 
-	OO.mfExtend( TalkSectionOverlay, TalkOverlayBase, {
-		templatePartials: util.extend( {}, TalkOverlayBase.prototype.templatePartials, {
+	OO.mfExtend( TalkSectionOverlay, Overlay, {
+		templatePartials: util.extend( {}, Overlay.prototype.templatePartials, {
 			header: mw.template.get( 'mobile.talk.overlays', 'Section/header.hogan' ),
 			content: mw.template.get( 'mobile.talk.overlays', 'Section/content.hogan' )
 		} ),
 		/**
 		 * @memberof TalkSectionOverlay
 		 * @instance
-		 * @mixes TalkOverlayBase#defaults
+		 * @mixes Overlay#defaults
 		 * @property {Object} defaults Default options hash.
 		 * @property {string} defaults.title Title.
 		 * @property {Section} defaults.section that is currently being viewed in overlay.
@@ -34,7 +44,7 @@
 		 * @property {string} defaults.info Message that informs the user their talk reply will be
 		 * automatically signed.
 		 */
-		defaults: util.extend( {}, TalkOverlayBase.prototype.defaults, {
+		defaults: util.extend( {}, Overlay.prototype.defaults, {
 			saveButton: new Button( {
 				block: true,
 				additionalClassNames: 'save-button',
@@ -51,7 +61,7 @@
 		 * @memberof TalkSectionOverlay
 		 * @instance
 		 */
-		events: util.extend( {}, TalkOverlayBase.prototype.events, {
+		events: util.extend( {}, Overlay.prototype.events, {
 			'focus textarea': 'onFocusTextarea',
 			'click .save-button': 'onSaveClick'
 		} ),
@@ -63,7 +73,7 @@
 		 * @instance
 		 */
 		postRender: function () {
-			TalkOverlayBase.prototype.postRender.apply( this );
+			Overlay.prototype.postRender.apply( this );
 			this.$saveButton = this.$( '.save-button' );
 			if ( !this.options.section ) {
 				this.renderFromApi( this.options );
@@ -127,7 +137,7 @@
 				this.showSpinner();
 				this.$saveButton.prop( 'disabled', true );
 				// sign and add newline to front
-				val = '\n\n' + this.autosign( val );
+				val = '\n\n' + autosign( val );
 				// FIXME: This should be using a gateway
 				// e.g. TalkGateway, PageGateway or EditorGateway
 				this.editorApi.postWithToken( 'csrf', {

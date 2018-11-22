@@ -586,7 +586,7 @@
 				"mobile.editor.common"
 			],
 			"scripts": [
-				"resources/mobile.talk.overlays/TalkOverlayBase.js",
+				"resources/mobile.talk.overlays/autosign.js",
 				"resources/mobile.talk.overlays/TalkSectionOverlay.js",
 				"resources/mobile.talk.overlays/TalkSectionAddOverlay.js",
 				"resources/mobile.talk.overlays/TalkOverlay.js"
