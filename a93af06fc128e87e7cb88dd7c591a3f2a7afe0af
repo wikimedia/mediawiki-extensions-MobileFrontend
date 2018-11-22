@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "54072b33_4a38b1c6",
+        "filename": "src/mobile.startup/View.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 207,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-11-22T11:49:27Z",
+      "side": 1,
+      "message": "Although this nested ternary is concise, I\u0027m having a hard time understanding what it actually means. Is this kind of like setting \"true\" by default? If that\u0027s the case, then I think splitting this out into if statements might be more readable. Maybe like this? (not sure but I think there\u0027s a precedence here, like try props first, then `this` right?)\n\n    var isBorderBox \u003d true;\n    if ( props.isBorderBox || this.isBorderBox ) {\n        isBorderBox \u003d props.isBorderBox || this.isBorderBox;\n    }",
+      "revId": "a93af06fc128e87e7cb88dd7c591a3f2a7afe0af",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
