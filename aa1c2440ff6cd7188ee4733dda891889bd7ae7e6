@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "a160708c_75b11d0c",
+        "filename": "tests/phpunit/models/MobilePageTest.php",
+        "patchSetId": 28
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-23T15:19:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e7629261_1717510c",
+      "range": {
+        "startLine": 55,
+        "startChar": 4,
+        "endLine": 55,
+        "endChar": 8
+      },
+      "revId": "aa1c2440ff6cd7188ee4733dda891889bd7ae7e6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c55c556c_e4429f47",
         "filename": "tests/phpunit/models/MobilePageTest.php",
         "patchSetId": 28
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "389f4a36_2c736167",
+        "filename": "tests/phpunit/models/MobilePageTest.php",
+        "patchSetId": 28
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-23T15:19:31Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "c55c556c_e4429f47",
+      "range": {
+        "startLine": 112,
+        "startChar": 4,
+        "endLine": 112,
+        "endChar": 41
+      },
+      "revId": "aa1c2440ff6cd7188ee4733dda891889bd7ae7e6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "587fdb6d_20cedf44",
         "filename": "tests/phpunit/models/MobilePageTest.php",
         "patchSetId": 28
@@ -59,6 +107,30 @@
       "writtenOn": "2018-11-23T15:02:44Z",
       "side": 1,
       "message": "missing @return annotation",
+      "range": {
+        "startLine": 121,
+        "startChar": 1,
+        "endLine": 121,
+        "endChar": 4
+      },
+      "revId": "aa1c2440ff6cd7188ee4733dda891889bd7ae7e6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ac4ef1a_7de44326",
+        "filename": "tests/phpunit/models/MobilePageTest.php",
+        "patchSetId": 28
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-23T15:19:31Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "587fdb6d_20cedf44",
       "range": {
         "startLine": 121,
         "startChar": 1,
