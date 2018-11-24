@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e586adff_864fd807",
+        "filename": "includes/api/ApiParseExtender.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2018-11-24T01:54:01Z",
+      "side": 1,
+      "message": "Why remove and re-add the whole \u0027parse\u0027 array, instead of just overwriting the one \u0027text\u0027 field?",
+      "revId": "f48c4c61e5dcb126001f3e24c499697f83237941",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
