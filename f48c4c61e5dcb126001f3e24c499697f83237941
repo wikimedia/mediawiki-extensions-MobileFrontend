@@ -34,6 +34,24 @@
       "revId": "f48c4c61e5dcb126001f3e24c499697f83237941",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8fdb93e6_3b96125b",
+        "filename": "includes/api/ApiParseExtender.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2018-11-24T23:23:06Z",
+      "side": 1,
+      "message": "addValue(), using the OVERRIDE flag to overwrite and (optionally, but probably a good idea here) NO_SIZE_CHECK to prevent it from counting the size against the limit.\n\n  $result-\u003eaddValue( [ \u0027parse\u0027 ], \u0027text\u0027, $text, ApiResult::OVERRIDE | ApiResult::NO_SIZE_CHECK );",
+      "parentUuid": "8c6d232a_96d24fb9",
+      "revId": "f48c4c61e5dcb126001f3e24c499697f83237941",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
