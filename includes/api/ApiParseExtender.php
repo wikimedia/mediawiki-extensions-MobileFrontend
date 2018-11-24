@@ -32,11 +32,10 @@ class ApiParseExtender {
 			->getMFConfig()->get( 'MFSpecialCaseMainPage' );
 
 		if ( $module->getModuleName() == 'parse' ) {
-			$data = $module->getResult()->getResultData();
+			$result = $module->getResult();
+			$data = $result->getResultData();
 			$params = $module->extractRequestParams();
 			if ( isset( $data['parse']['text'] ) && $params['mobileformat'] ) {
-				$result = $module->getResult();
-				$result->reset();
 				$title = Title::newFromText( $data['parse']['title'] );
 				$text = $data['parse']['text'];
 				$mf = new MobileFormatter( MobileFormatter::wrapHTML( $text ), $title );
@@ -47,13 +46,8 @@ class ApiParseExtender {
 				// HACK: need a nice way to request a TOC-free HTML in the first place
 				$mf->remove( [ '.toc', '.mw-headline-anchor' ] );
 				$mf->filterContent();
-				$data['parse']['text'] = $mf->getText();
-				foreach ( $data as $name => $value ) {
-					if ( ApiResult::isMetadataKey( $name ) ) {
-						continue;
-					}
-					$result->addValue( null, $name, $value );
-				}
+				$result->addValue( [ 'parse' ], 'text', $mf->getText(),
+					ApiResult::OVERRIDE | ApiResult::NO_SIZE_CHECK );
 			}
 		}
 		return true;
