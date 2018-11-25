@@ -133,7 +133,7 @@
 	"mobile-frontend-featured-article": "Artykuł na medal",
 	"mobile-frontend-generic-404-desc": "Nie można odnaleźć strony, której szukasz.",
 	"mobile-frontend-generic-404-title": "Błąd - nie znaleziono strony",
-	"mobile-frontend-generic-login-new": "<strong>Projekt {{SITENAME}} tworzą tacy ludzie jak Ty.</strong><br />Zaloguj się, aby go rozwijać.",
+	"mobile-frontend-generic-login-new": "<strong>{{GRAMMAR:B.lp|{{SITENAME}}}} tworzą tacy ludzie jak Ty.</strong><br />Zaloguj się, aby ją rozwijać.",
 	"mobile-frontend-history-404-desc": "Nie można zobaczyć historii strony, która nie istnieje. Może została usunięta bądź wybrano błędny link.",
 	"mobile-frontend-history-404-title": "Nie ma takiej strony",
 	"mobile-frontend-history-no-results": "Do podanego filtra nie pasują żadne wyniki.",
