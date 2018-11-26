@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "69ea2500_659c0dbf",
+        "filename": "resources/mobile.nearby/Nearby.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-26T21:41:15Z",
+      "side": 1,
+      "message": "Use M.require( \u0027mobile.startup\u0027 ).WatchstarPageList",
+      "revId": "a661dded7de41a3d0cf6c252c1e2526b8244b4bc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9498da2f_023a7b61",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-26T21:41:15Z",
+      "side": 1,
+      "message": "See note about using M.require( \u0027mobile.startup \u0027 )",
+      "revId": "a661dded7de41a3d0cf6c252c1e2526b8244b4bc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5bdc752e_3827d494",
+        "filename": "resources/mobile.watchlist/WatchList.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-26T21:41:15Z",
+      "side": 1,
+      "message": "See note about using M.require( \u0027mobile.startup \u0027 )",
+      "revId": "a661dded7de41a3d0cf6c252c1e2526b8244b4bc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1ac3178c_21f1d39d",
+        "filename": "src/mobile.startup/Watchstar.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-26T21:41:15Z",
+      "side": 1,
+      "message": "Future opportunistic refactor: we should move this to icons.js",
+      "revId": "a661dded7de41a3d0cf6c252c1e2526b8244b4bc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa964308_bd4de292",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-26T21:41:15Z",
+      "side": 1,
+      "message": "I suggest removing these 2 lines and instead using mw.mobileFrontend.require( \u0027mobile.startup\u0027 ) where needed (note the lack of ReferenceDrawer defines... the mobile.startup module already contains the module we need without the future deprecation cost!",
+      "revId": "a661dded7de41a3d0cf6c252c1e2526b8244b4bc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c79e84f0_74cc111e",
+        "filename": "tests/node-qunit/mobile.watchstar/Watchstar.test.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-26T21:41:15Z",
+      "side": 1,
+      "message": "let\u0027s use the util module (I believe we talked about this but didn\u0027t capture..whoops) and remove this line.",
+      "revId": "a661dded7de41a3d0cf6c252c1e2526b8244b4bc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "60eee974_ab55cd54",
+        "filename": "tests/node-qunit/utils/mockMediaWiki.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-26T21:41:15Z",
+      "side": 1,
+      "message": "Is this meant to be on the mw object?",
+      "revId": "a661dded7de41a3d0cf6c252c1e2526b8244b4bc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
