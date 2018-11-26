@@ -52,6 +52,24 @@
       "revId": "299f46597f4f9b98e9dfe3f88a7d31c0383ccccd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a158d785_5765447b",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-26T22:33:23Z",
+      "side": 1,
+      "message": "Taking away the RequestContext::getMain()-\u003e* makes it same I think! Thanks! Will apply this now!",
+      "parentUuid": "274d844a_56bce3bb",
+      "revId": "299f46597f4f9b98e9dfe3f88a7d31c0383ccccd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
