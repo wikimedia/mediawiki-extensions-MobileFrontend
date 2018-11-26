@@ -16,6 +16,24 @@
       "revId": "b9892fa9e5c1d0804f59215d120aada791459259",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a83f57e7_a3e8f80f",
+        "filename": "tests/phpunit/content-providers/DefaultContentProviderTest.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-26T21:59:02Z",
+      "side": 1,
+      "message": "Sweet!",
+      "parentUuid": "7358e553_d5c33b98",
+      "revId": "b9892fa9e5c1d0804f59215d120aada791459259",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
