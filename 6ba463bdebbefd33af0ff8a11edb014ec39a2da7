@@ -46,6 +46,30 @@
       "revId": "6ba463bdebbefd33af0ff8a11edb014ec39a2da7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1dd61ace_f81bb11d",
+        "filename": "tests/phpunit/content-providers/McsContentProviderTest.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-26T22:10:05Z",
+      "side": 1,
+      "message": "Ack! That makes a lot of sense. Thought about that too but was thinking there is something better than that. But let\u0027s hear if @Piotr has something in mind before I ride on ;). Thanks!",
+      "parentUuid": "1f3ba75f_98911246",
+      "range": {
+        "startLine": 73,
+        "startChar": 2,
+        "endLine": 75,
+        "endChar": 4
+      },
+      "revId": "6ba463bdebbefd33af0ff8a11edb014ec39a2da7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
