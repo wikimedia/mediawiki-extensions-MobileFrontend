@@ -30,6 +30,7 @@ QUnit.test( 'creates a link if passed href option', function ( assert ) {
 		} );
 
 	assert.strictEqual( button.$el[0].tagName, 'A' );
+	assert.strictEqual( button.$el[0].getAttribute( 'href' ), 'https://www.foo.com' );
 } );
 
 QUnit.test( 'does not add href attribute when not a link', function ( assert ) {
