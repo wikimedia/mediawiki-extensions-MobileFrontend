@@ -34,6 +34,24 @@
       "revId": "299f46597f4f9b98e9dfe3f88a7d31c0383ccccd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "274d844a_56bce3bb",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-26T22:29:58Z",
+      "side": 1,
+      "message": "This is what the code looks like to me on RequestContext\n```\n        public function setConfig( Config $config ) {\n                $this-\u003econfig \u003d $config;\n        }\n        public function getConfig() {\n                if ( $this-\u003econfig \u003d\u003d\u003d null ) {\n                        // @todo In the future, we could move this to WebStart.php so\n                        // the Config object is ready for when initialization happens\n                        $this-\u003econfig \u003d MediaWikiServices::getInstance()-\u003egetMainConfig();\n                }\n\n                return $this-\u003econfig;\n        }\n```\n\nSo isn\u0027t this the same as:\nreturn  new MultiConfig( [ new HashConfig( $configs ) ] )\n?",
+      "parentUuid": "1ad2bc88_0fdda7d8",
+      "revId": "299f46597f4f9b98e9dfe3f88a7d31c0383ccccd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
