@@ -1151,7 +1151,7 @@
 		},
 		"MFEnableMobilePreferences": false,
 		"MFContentProviderTryLocalContentFirst": true,
-		"MFContentProviderClass": "MobileFrontend\\ContentProviders\\DefaultContentProvider",
+		"MFContentProviderClass": "MobileFrontend\\ContentProviders\\McsContentProvider",
 		"MFMwApiContentProviderBaseUri": "https://en.wikipedia.org/w/api.php",
 		"MFMcsContentProviderBaseUri": "https://en.wikipedia.org/api/rest_v1",
 		"MFEnableXAnalyticsLogging": false,
