@@ -16,6 +16,24 @@
       "revId": "299f46597f4f9b98e9dfe3f88a7d31c0383ccccd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1ad2bc88_0fdda7d8",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-26T22:07:56Z",
+      "side": 1,
+      "message": "What I see is a little difference between setConfig() and getConfig().\n\nSo `setConfig()` sets the config but doesn\u0027t return it hence mutator.\n\nBut `getConfig()` actually returns the value of $this-\u003econfig hence accessor. So I think to get the config in this case, we\u0027ll mutate it then use the accessor to get it\u0027s value? Removing the accessor will make all the tests to fail.",
+      "parentUuid": "9d4d41db_f4434877",
+      "revId": "299f46597f4f9b98e9dfe3f88a7d31c0383ccccd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
