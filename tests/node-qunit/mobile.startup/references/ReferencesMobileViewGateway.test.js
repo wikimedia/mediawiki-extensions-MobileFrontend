@@ -1,14 +1,14 @@
 var referencesGatewayRejector, referencesGatewayEmpty, page, api, referencesGateway,
 	sandbox, ReferencesMobileViewGateway, Page,
 	sinon = require( 'sinon' ),
-	ReferencesGateway = require( './../../../src/mobile.startup/ReferencesGateway' ),
-	util = require( './../../../src/mobile.startup/util' ),
-	mediaWiki = require( '../utils/mw' ),
-	oo = require( '../utils/oo' ),
-	jQuery = require( '../utils/jQuery' ),
-	dom = require( '../utils/dom' ),
-	lazyLoadedReferencesPage = require( '../utils/PageInputs.html' ).lazyLoadedReferencesPage,
-	cache = require( './../../../src/mobile.startup/cache' ),
+	ReferencesGateway = require( './../../../../src/mobile.startup/references/ReferencesGateway' ),
+	util = require( '../../../../src/mobile.startup/util' ),
+	mediaWiki = require( '../../utils/mw' ),
+	oo = require( '../../utils/oo' ),
+	jQuery = require( '../../utils/jQuery' ),
+	dom = require( '../../utils/dom' ),
+	lazyLoadedReferencesPage = require( '../../utils/PageInputs.html' ).lazyLoadedReferencesPage,
+	cache = require( '../../../../src/mobile.startup/cache' ),
 	MemoryCache = cache.MemoryCache;
 
 QUnit.module( 'MobileFrontend ReferencesMobileViewGateway.test.js', {
@@ -18,8 +18,8 @@ QUnit.module( 'MobileFrontend ReferencesMobileViewGateway.test.js', {
 		jQuery.setUp( sandbox, global );
 		oo.setUp( sandbox, global );
 		mediaWiki.setUp( sandbox, global );
-		ReferencesMobileViewGateway = require( './../../../src/mobile.startup/ReferencesMobileViewGateway' );
-		Page = require( './../../../src/mobile.startup/Page' );
+		ReferencesMobileViewGateway = require( './../../../../src/mobile.startup/references/ReferencesMobileViewGateway' );
+		Page = require( '../../../../src/mobile.startup/Page' );
 
 		page = new Page( {
 			el: util.parseHTML( lazyLoadedReferencesPage ),

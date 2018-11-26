@@ -1,9 +1,9 @@
-var Drawer = require( './Drawer' ),
-	util = require( './util' ),
-	icons = require( './icons' ),
-	mfExtend = require( './mfExtend' ),
+var Drawer = require( './../Drawer' ),
+	util = require( './../util' ),
+	icons = require( './../icons' ),
+	mfExtend = require( './../mfExtend' ),
 	ReferencesGateway = require( './ReferencesGateway' ),
-	Icon = require( './Icon' );
+	Icon = require( './../Icon' );
 
 /**
  * Drawer for references

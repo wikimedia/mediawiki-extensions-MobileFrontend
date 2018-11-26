@@ -1,10 +1,10 @@
 var ReferencesHtmlScraperGateway =
 	require( './ReferencesHtmlScraperGateway' ),
-	cache = require( './cache' ),
+	cache = require( './../cache' ),
 	ReferencesGateway = require( './ReferencesGateway' ),
 	MemoryCache = cache.MemoryCache,
-	util = require( './util' ),
-	mfExtend = require( './mfExtend' ),
+	util = require( './../util' ),
+	mfExtend = require( './../mfExtend' ),
 	NoCache = cache.NoCache,
 	referencesMobileViewGateway = null;
 

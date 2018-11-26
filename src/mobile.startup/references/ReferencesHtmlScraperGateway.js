@@ -1,6 +1,6 @@
 var ReferencesGateway = require( './ReferencesGateway' ),
-	mfExtend = require( './mfExtend' ),
-	util = require( './util' );
+	mfExtend = require( './../mfExtend' ),
+	util = require( './../util' );
 
 /**
  * Gateway for retrieving references via the content of the Page

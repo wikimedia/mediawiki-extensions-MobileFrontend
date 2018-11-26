@@ -1,12 +1,12 @@
 var sandbox, page, gateway, drawer,
 	ReferenceDrawer, Page,
 	sinon = require( 'sinon' ),
-	oo = require( '../utils/oo' ),
-	dom = require( '../utils/dom' ),
-	jQuery = require( '../utils/jQuery' ),
-	mediaWiki = require( '../utils/mw' ),
-	util = require( '../../../src/mobile.startup/util' ),
-	ReferencesGateway = require( '../../../src/mobile.startup/ReferencesGateway' );
+	oo = require( '../../utils/oo' ),
+	dom = require( '../../utils/dom' ),
+	jQuery = require( '../../utils/jQuery' ),
+	mediaWiki = require( '../../utils/mw' ),
+	util = require( '../../../../src/mobile.startup/util' ),
+	ReferencesGateway = require( '../../../../src/mobile.startup/references/ReferencesGateway' );
 
 QUnit.module( 'MobileFrontend: ReferencesDrawer', {
 	beforeEach: function () {
@@ -15,8 +15,8 @@ QUnit.module( 'MobileFrontend: ReferencesDrawer', {
 		jQuery.setUp( sandbox, global );
 		oo.setUp( sandbox, global );
 		mediaWiki.setUp( sandbox, global );
-		Page = require( '../../../src/mobile.startup/Page' );
-		ReferenceDrawer = require( '../../../src/mobile.startup/ReferencesDrawer' );
+		Page = require( '../../../../src/mobile.startup/Page' );
+		ReferenceDrawer = require( '../../../../src/mobile.startup/references/ReferencesDrawer' );
 		gateway = {
 			getReference: function () {}
 		};
