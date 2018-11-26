@@ -130,7 +130,7 @@
 				val = '\n\n' + this.autosign( val );
 				// FIXME: This should be using a gateway
 				// e.g. TalkGateway, PageGateway or EditorGateway
-				this.editorApi.postWithToken( 'edit', {
+				this.editorApi.postWithToken( 'csrf', {
 					action: 'edit',
 					title: this.options.title,
 					section: this.options.id,
