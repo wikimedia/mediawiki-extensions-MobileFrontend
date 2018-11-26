@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7358e553_d5c33b98",
+        "filename": "tests/phpunit/content-providers/DefaultContentProviderTest.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-26T21:45:35Z",
+      "side": 1,
+      "message": "They are all duplicates right?\nYou can just provide [ \"\u003ca\u003eanchor\u003c/a\u003e\" ]\nand use it directly as expected rather than reference it twice.\n\npublic function testGetHtml( $expected ) {\n\n$this-\u003eassertSame( $expected, $actual );",
+      "revId": "b9892fa9e5c1d0804f59215d120aada791459259",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
