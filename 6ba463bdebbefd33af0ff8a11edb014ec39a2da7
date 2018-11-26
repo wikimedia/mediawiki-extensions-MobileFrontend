@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6406a1fe_0d41944b",
+        "filename": "tests/phpunit/content-providers/McsContentProviderTest.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-26T13:47:10Z",
+      "side": 1,
+      "message": "We don\u0027t require internet connections for this but then how can we mock something like file_get_content() or what could be done in this case?\n\n@Pmiazga, any heads up? Thanks :)",
+      "range": {
+        "startLine": 73,
+        "startChar": 2,
+        "endLine": 75,
+        "endChar": 4
+      },
+      "revId": "6ba463bdebbefd33af0ff8a11edb014ec39a2da7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
