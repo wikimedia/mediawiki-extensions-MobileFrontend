@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9d4d41db_f4434877",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-26T21:50:31Z",
+      "side": 1,
+      "message": "It seems a bit strange to me to use RequestContext in this way.\n\nThe parameter you pass to setConfig is the same as the one returned/... no?\n\nLooking at includes/context/RequestContext.php that\u0027s the impression I\u0027m getting..",
+      "revId": "299f46597f4f9b98e9dfe3f88a7d31c0383ccccd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
