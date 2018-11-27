@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ec41dd7_d5688e54",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-27T19:32:04Z",
+      "side": 1,
+      "message": "getIntOrNull() is called on $outputPage-\u003egetRequest() object, not on the $output object.",
+      "range": {
+        "startLine": 29,
+        "startChar": 57,
+        "endLine": 29,
+        "endChar": 69
+      },
+      "revId": "3453dc3a5e3939ee10221b67de4bd5ca6416c172",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4d4ba892_0b6fdbd8",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-27T19:32:04Z",
+      "side": 1,
+      "message": "this is called on the $out-\u003egetSkin()",
+      "range": {
+        "startLine": 29,
+        "startChar": 42,
+        "endLine": 29,
+        "endChar": 53
+      },
+      "revId": "3453dc3a5e3939ee10221b67de4bd5ca6416c172",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "433b7bfa_279d72d1",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-27T19:32:04Z",
+      "side": 1,
+      "message": "if in test I dump value of the $skin or $val it will:\n\nshow me\n  ../ContentProviderFactory.php:53:\nstring(6) \"vector\"\n  ../ContentProviderFactory.php:53:\nNULL\n\nif you don\u0027t use those, you don\u0027t have to mock them.",
+      "range": {
+        "startLine": 35,
+        "startChar": 0,
+        "endLine": 39,
+        "endChar": 25
+      },
+      "revId": "3453dc3a5e3939ee10221b67de4bd5ca6416c172",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "70d72f30_80413318",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-27T19:32:04Z",
+      "side": 1,
+      "message": "this test is tricky, you should verify that the content provide returns you something else than the \u003ca\u003eAnchor\u003c/a\u003e, for example you should have a mock content provider, that returns \u003ctable\u003eTable\u003c/table\u003e, provide the \u003ca\u003eAnchor\u003c/a\u003e as $html, and then verify that $provider-\u003egetHtml() returns you the table.\n\nCurrently the test is No-op. \n\nThis might require some bigger refactoring and you may have to use the ServiceWirings, think about that :).",
+      "range": {
+        "startLine": 117,
+        "startChar": 17,
+        "endLine": 117,
+        "endChar": 80
+      },
+      "revId": "3453dc3a5e3939ee10221b67de4bd5ca6416c172",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

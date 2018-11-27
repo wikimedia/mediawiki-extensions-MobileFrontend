@@ -143,6 +143,30 @@
     },
     {
       "key": {
+        "uuid": "252811d9_acba7d10",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-27T19:32:04Z",
+      "side": 1,
+      "message": "This is a common pitfall when you write tests after you write code. I agree that the if(){} branch is already tested and current tests should be fine. But in the future, if someone is going to change something - there are no tests to verify that code works correctly when Title object is not present.\n\nOur tests should test all edge cases (like Title doesn\u0027t exist), having 100% coverage right now will not protect us from all possible issues in the future :).",
+      "parentUuid": "121d3a48_bb04c605",
+      "range": {
+        "startLine": 36,
+        "startChar": 3,
+        "endLine": 36,
+        "endChar": 24
+      },
+      "revId": "5bea8d51bf14f2068aeaf70b707860be091a61ca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0d260e5b_ca4cd28b",
         "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
         "patchSetId": 6
