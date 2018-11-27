@@ -22,12 +22,7 @@ mfExtend( Drawer, Panel, {
 	 * @property {string} defaults.cancelButton HTML of the button that closes the drawer.
 	 */
 	defaults: util.extend( {}, Panel.prototype.defaults, {
-		cancelButton: new Icon( {
-			tagName: 'a',
-			name: 'close-invert',
-			additionalClassNames: 'cancel',
-			label: mw.msg( 'mobile-frontend-overlay-close' )
-		} ).toHtmlString(),
+		// Used by CtaDrawer, BlockMessage.
 		collapseIcon: new Icon( {
 			name: 'arrow',
 			additionalClassNames: 'cancel'
