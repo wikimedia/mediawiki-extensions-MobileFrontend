@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "a57b8cb9_45d5b46b",
+        "filename": "resources/mobile.nearby/Nearby.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-11-27T11:57:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "69ea2500_659c0dbf",
+      "revId": "a661dded7de41a3d0cf6c252c1e2526b8244b4bc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9498da2f_023a7b61",
         "filename": "resources/mobile.search/SearchOverlay.js",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2018-11-26T21:41:15Z",
       "side": 1,
       "message": "See note about using M.require( \u0027mobile.startup \u0027 )",
+      "revId": "a661dded7de41a3d0cf6c252c1e2526b8244b4bc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3f2cc74e_8e41ec1f",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-11-27T11:57:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9498da2f_023a7b61",
       "revId": "a661dded7de41a3d0cf6c252c1e2526b8244b4bc",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "8de31251_66ea1827",
+        "filename": "resources/mobile.watchlist/WatchList.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-11-27T11:57:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5bdc752e_3827d494",
+      "revId": "a661dded7de41a3d0cf6c252c1e2526b8244b4bc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1ac3178c_21f1d39d",
         "filename": "src/mobile.startup/Watchstar.js",
         "patchSetId": 1
@@ -64,6 +118,24 @@
       "writtenOn": "2018-11-26T21:41:15Z",
       "side": 1,
       "message": "Future opportunistic refactor: we should move this to icons.js",
+      "revId": "a661dded7de41a3d0cf6c252c1e2526b8244b4bc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "142bc350_cebd53dc",
+        "filename": "src/mobile.startup/Watchstar.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-11-27T11:57:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1ac3178c_21f1d39d",
       "revId": "a661dded7de41a3d0cf6c252c1e2526b8244b4bc",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -104,6 +176,24 @@
     },
     {
       "key": {
+        "uuid": "2a919f9c_2cc3777c",
+        "filename": "tests/node-qunit/mobile.watchstar/Watchstar.test.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-11-27T11:57:40Z",
+      "side": 1,
+      "message": "I replaced the $.Deferred with util.Deferred, but still had to keep $ for uses like `$(\u003cdiv/\u003e)`.",
+      "parentUuid": "c79e84f0_74cc111e",
+      "revId": "a661dded7de41a3d0cf6c252c1e2526b8244b4bc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "60eee974_ab55cd54",
         "filename": "tests/node-qunit/utils/mockMediaWiki.js",
         "patchSetId": 1
@@ -115,6 +205,24 @@
       "writtenOn": "2018-11-26T21:41:15Z",
       "side": 1,
       "message": "Is this meant to be on the mw object?",
+      "revId": "a661dded7de41a3d0cf6c252c1e2526b8244b4bc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2b5f16d6_19e61ac9",
+        "filename": "tests/node-qunit/utils/mockMediaWiki.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-11-27T11:57:40Z",
+      "side": 1,
+      "message": "Oops, removed.",
+      "parentUuid": "60eee974_ab55cd54",
       "revId": "a661dded7de41a3d0cf6c252c1e2526b8244b4bc",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
