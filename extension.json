@@ -313,7 +313,7 @@
 			"templates": {
 				"PageListItem.hogan": "resources/mobile.startup/PageListItem.hogan",
 				"PageList.hogan": "resources/mobile.startup/PageList.hogan",
-				"Cta.hogan": "resources/mobile.startup/CtaDrawer.hogan",
+				"CtaDrawer.hogan": "resources/mobile.startup/CtaDrawer.hogan",
 				"header.hogan": "resources/mobile.startup/OverlayHeader.hogan",
 				"Overlay.hogan": "resources/mobile.startup/Overlay.hogan",
 				"LoadingOverlay.hogan": "resources/mobile.startup/LoadingOverlay.hogan",
