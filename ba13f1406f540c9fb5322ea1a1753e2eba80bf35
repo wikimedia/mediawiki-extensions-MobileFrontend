@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0682489d_b814e773",
+        "filename": "extension.json",
+        "patchSetId": 11
+      },
+      "lineNbr": 704,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-27T23:57:47Z",
+      "side": 1,
+      "message": "The less file, messages and styles should be merged into mobile.startup. Without doing this, these styles don\u0027t get loaded on certain pages. In particular, when I hit the watchstar I no longer see a watchstar animation and the toasts display with broken messages.\n\n\nNo need to leave an alias here since nothing references mobile.watchstar module.",
+      "revId": "ba13f1406f540c9fb5322ea1a1753e2eba80bf35",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

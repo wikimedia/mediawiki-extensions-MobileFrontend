@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0bb106b2_b3823def",
+        "filename": "extension.json",
+        "patchSetId": 11
+      },
+      "lineNbr": 200,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-27T23:57:47Z",
+      "side": 0,
+      "message": "resources/mobile.pagelist.scripts/WatchstarPageList.js still exists! Needs removing!",
+      "revId": "a9aa7554d15d0b5bbf39a160e777947ff2a48a9a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
