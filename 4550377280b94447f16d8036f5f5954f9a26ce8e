@@ -33,6 +33,24 @@
       "revId": "4550377280b94447f16d8036f5f5954f9a26ce8e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8bf04015_08b801bf",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-27T15:49:04Z",
+      "side": 1,
+      "message": "Moved to I5c833902b8881fd15f9f74e63254f24a5eb85dc2.",
+      "parentUuid": "632b23d7_319e7869",
+      "revId": "4550377280b94447f16d8036f5f5954f9a26ce8e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
