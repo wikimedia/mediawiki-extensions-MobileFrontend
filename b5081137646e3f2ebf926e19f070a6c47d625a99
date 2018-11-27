@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "938e38f3_30e25263",
+        "filename": "includes/content-providers/McsContentProvider.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-27T19:38:53Z",
+      "side": 1,
+      "message": "Please, check the HttpRequestFactory class in the MediaWiki codebase - it\u0027s available via MediaWikiServices -\u003e this means you can inject your mock service to test that.",
+      "range": {
+        "startLine": 62,
+        "startChar": 14,
+        "endLine": 62,
+        "endChar": 31
+      },
+      "revId": "b5081137646e3f2ebf926e19f070a6c47d625a99",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
