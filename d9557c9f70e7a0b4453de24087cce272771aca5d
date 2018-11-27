@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4c3c75b8_88c25f5f",
+        "filename": "src/mobile.startup/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-27T18:15:51Z",
+      "side": 1,
+      "message": "I\u0027m personally not a fan of dispersing our readmes but we can figure that out in another patchset.",
+      "revId": "d9557c9f70e7a0b4453de24087cce272771aca5d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
