@@ -1,0 +1,142 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f1a15efa_853c0cc6",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-27T01:52:52Z",
+      "side": 1,
+      "message": "We don\u0027t need to build such configs as the MediaWikiTestCase already cares about the configuration. Mocking config be useful if you want to mock it, but if the only thing you want to do is to override config - use\n\n  $this-\u003esetMwGlobals( $config );\n\nJust keep in mind, most probably you\u0027ll need to add `wg` prefix to the config keys.\nI prefer to pass mocks, but please check the MediaWikiTestCase, when it comes to configs, there is some logic there, also not everything uses Config objects, sometimes old extensions use the global variables (I know, it\u0027s bad but that\u0027s how it works). When it comes to mock configuration, IMHO it\u0027s better to use built-in tools. In this scenario providing a mock is the proper (when it comes to theory) approach, but in the MediaWiki-land - when it comes to the configs - we have to use what MediaWikiTestCase provides.",
+      "range": {
+        "startLine": 14,
+        "startChar": 3,
+        "endLine": 14,
+        "endChar": 33
+      },
+      "revId": "5bea8d51bf14f2068aeaf70b707860be091a61ca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "46d03db3_14966d2a",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-27T01:52:52Z",
+      "side": 1,
+      "message": "if you decide to follow that way -\u003e Multiconfig is not required, you can return the HashConfig only",
+      "range": {
+        "startLine": 20,
+        "startChar": 13,
+        "endLine": 20,
+        "endChar": 24
+      },
+      "revId": "5bea8d51bf14f2068aeaf70b707860be091a61ca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f66d902b_dfb644d6",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-27T01:52:52Z",
+      "side": 1,
+      "message": "what if title doesn\u0027t exist ($mockTitle-\u003eexists() \u003d\u003d\u003d false) or it is not defined ($out-\u003egetTitle() \u003d\u003d\u003d null) ?",
+      "range": {
+        "startLine": 36,
+        "startChar": 3,
+        "endLine": 36,
+        "endChar": 24
+      },
+      "revId": "5bea8d51bf14f2068aeaf70b707860be091a61ca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0d260e5b_ca4cd28b",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-27T01:52:52Z",
+      "side": 1,
+      "message": "that implementation is correct, and you can stick to that. I just wanted to say that there is another way to do it, just add in the phpdocblock:\n  \n  @expectedException RuntimeException",
+      "range": {
+        "startLine": 60,
+        "startChar": 9,
+        "endLine": 60,
+        "endChar": 29
+      },
+      "revId": "5bea8d51bf14f2068aeaf70b707860be091a61ca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a471505e_4bf74af5",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-27T01:52:52Z",
+      "side": 1,
+      "message": "as I said earlier, here you can:\n\n  $this-\u003esetMwGlobals(\u0027MFContentProviderClass\u0027, \u0027\u0027);\n  $provider \u003d ContentProvider::getProvider(GlobalVarConfig::getInstance(), ....)",
+      "range": {
+        "startLine": 63,
+        "startChar": 0,
+        "endLine": 65,
+        "endChar": 4
+      },
+      "revId": "5bea8d51bf14f2068aeaf70b707860be091a61ca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "27f32efb_dbf8cfa4",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-27T01:52:52Z",
+      "side": 1,
+      "message": "why do we need those?",
+      "range": {
+        "startLine": 126,
+        "startChar": 0,
+        "endLine": 127,
+        "endChar": 36
+      },
+      "revId": "5bea8d51bf14f2068aeaf70b707860be091a61ca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
