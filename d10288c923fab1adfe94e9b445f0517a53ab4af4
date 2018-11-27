@@ -22,6 +22,30 @@
       "revId": "d10288c923fab1adfe94e9b445f0517a53ab4af4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3279959e_f632f94b",
+        "filename": "tests/node-qunit/utils/mockMediaWiki.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-27T21:38:01Z",
+      "side": 1,
+      "message": "I can\u0027t think of a good reason why we should ever be using set. It\u0027s supposed to be for ResourceLoader internals.\n\nIt looks like the only usage was in our own tests, so I\u0027d be open to removing this method altogether. That way a ReferenceError is thrown.\n\nHow does that sound?",
+      "parentUuid": "73c5eb73_d971d35f",
+      "range": {
+        "startLine": 27,
+        "startChar": 17,
+        "endLine": 27,
+        "endChar": 22
+      },
+      "revId": "d10288c923fab1adfe94e9b445f0517a53ab4af4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
