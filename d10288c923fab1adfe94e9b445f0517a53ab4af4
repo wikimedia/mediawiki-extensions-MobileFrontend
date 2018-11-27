@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "73c5eb73_d971d35f",
+        "filename": "tests/node-qunit/utils/mockMediaWiki.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-11-27T20:59:10Z",
+      "side": 1,
+      "message": "instead of silently ignore, maybe we should show some error, tell user that this is disabled in tests? I already can see myself trying to set some configs and then spend an hour on debugging whats wrong.",
+      "range": {
+        "startLine": 27,
+        "startChar": 17,
+        "endLine": 27,
+        "endChar": 22
+      },
+      "revId": "d10288c923fab1adfe94e9b445f0517a53ab4af4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
