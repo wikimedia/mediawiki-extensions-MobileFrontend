@@ -1,4 +1,4 @@
-var exports,
+var
 	moduleLoader = require( './moduleLoaderSingleton' ),
 	mfExtend = require( './mfExtend' ),
 	context = require( './context' ),
@@ -38,40 +38,6 @@ mw.log.deprecate( moduleLoader, 'on', moduleLoader.on,
 
 OO.mfExtend = mfExtend;
 
-// Expose the entry chunk through libraryTarget and library. This allows
-// arbitrary file access via ResourceLoader like
-// `mfModules['mobile.startup'].moduleLoader.require('mobile.startup/LoadingOverlay')`.
-exports = {
-	extendSearchParams: extendSearchParams,
-	ReferencesDrawer: ReferencesDrawer,
-	ReferencesGateway: ReferencesGateway,
-	ReferencesHtmlScraperGateway: ReferencesHtmlScraperGateway,
-	ReferencesMobileViewGateway: ReferencesMobileViewGateway,
-	moduleLoader: moduleLoader,
-	time: time,
-	util: util,
-	View: View,
-	Browser: Browser,
-	context: context,
-	cache: cache,
-	Button: Button,
-	Icon: Icon,
-	icons: icons,
-	Panel: Panel,
-	Section: Section,
-	Page: Page,
-	Anchor: Anchor,
-	Skin: Skin,
-	OverlayManager: OverlayManager,
-	Overlay: Overlay,
-	LoadingOverlay: LoadingOverlay,
-	Drawer: Drawer,
-	CtaDrawer: CtaDrawer,
-	PageList: PageList,
-	toast: toast,
-	rlModuleLoader: rlModuleLoader
-};
-
 // I know there is a temptation to use moduleLoader here, but if you do resource-modules will fail
 // as webpack might change the variable name. Using mw.mobileFrontend means that the variable
 // will not be recast.
@@ -109,7 +75,40 @@ mw.mobileFrontend.deprecate( 'mobile.references.gateway/ReferencesHtmlScraperGat
 mw.mobileFrontend.deprecate( 'mobile.references.gateway/ReferencesMobileViewGateway',
 	ReferencesMobileViewGateway, 'mobile.startup' );
 
+// Expose the entry chunk through libraryTarget and library. This allows
+// arbitrary file access via ResourceLoader like
+// `mfModules['mobile.startup'].moduleLoader.require('mobile.startup/LoadingOverlay')`.
+module.exports = {
+	extendSearchParams: extendSearchParams,
+	ReferencesDrawer: ReferencesDrawer,
+	ReferencesGateway: ReferencesGateway,
+	ReferencesHtmlScraperGateway: ReferencesHtmlScraperGateway,
+	ReferencesMobileViewGateway: ReferencesMobileViewGateway,
+	moduleLoader: moduleLoader,
+	time: time,
+	util: util,
+	View: View,
+	Browser: Browser,
+	context: context,
+	cache: cache,
+	Button: Button,
+	Icon: Icon,
+	icons: icons,
+	Panel: Panel,
+	Section: Section,
+	Page: Page,
+	Anchor: Anchor,
+	Skin: Skin,
+	OverlayManager: OverlayManager,
+	Overlay: Overlay,
+	LoadingOverlay: LoadingOverlay,
+	Drawer: Drawer,
+	CtaDrawer: CtaDrawer,
+	PageList: PageList,
+	toast: toast,
+	rlModuleLoader: rlModuleLoader
+};
+
 // Setup a single export for new modules to fold all of the above lines into.
 // One export to rule them all!
-mw.mobileFrontend.define( 'mobile.startup', exports );
-module.exports = exports;
+mw.mobileFrontend.define( 'mobile.startup', module.exports );
