@@ -2,6 +2,7 @@
 	var Overlay = M.require( 'mobile.startup/Overlay' ),
 		util = M.require( 'mobile.startup/util' ),
 		Icon = M.require( 'mobile.startup/Icon' ),
+		icons = M.require( 'mobile.startup' ).icons,
 		Button = M.require( 'mobile.startup/Button' ),
 		LoadErrorMessage = M.require( 'mobile.mediaViewer/LoadErrorMessage' ),
 		ImageGateway = M.require( 'mobile.mediaViewer/ImageGateway' ),
@@ -63,13 +64,7 @@
 		 * @property {Thumbnail[]} defaults.thumbnails a list of thumbnails to browse
 		 */
 		defaults: util.extend( {}, Overlay.prototype.defaults, {
-			cancelButton: new Icon( {
-				tagName: 'button',
-				// Uses a dark theme so swap out the icon
-				name: 'overlay-close-gray',
-				additionalClassNames: 'cancel',
-				label: mw.msg( 'mobile-frontend-overlay-close' )
-			} ).toHtmlString(),
+			cancelButton: icons.cancel( 'gray' ).toHtmlString(),
 			detailsButton: new Button( {
 				label: mw.msg( 'mobile-frontend-media-details' ),
 				additionalClassNames: 'button',
