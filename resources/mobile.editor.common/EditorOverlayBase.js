@@ -4,7 +4,6 @@
 		PageGateway = M.require( 'mobile.startup/PageGateway' ),
 		Icon = M.require( 'mobile.startup/Icon' ),
 		toast = M.require( 'mobile.startup/toast' ),
-		user = M.require( 'mobile.startup/user' ),
 		MessageBox = M.require( 'mobile.messageBox/MessageBox' ),
 		mwUser = mw.user;
 
@@ -48,6 +47,7 @@
 	 * @uses Icon
 	 * @uses user
 	 * @param {Object} options Configuration options
+	 * @param {number|null} options.editCount of user
 	 */
 	function EditorOverlayBase( options ) {
 		var self = this;
@@ -60,9 +60,9 @@
 			options.summaryRequestMsg = mw.msg( 'mobile-frontend-editor-summary' );
 		}
 		this.pageGateway = new PageGateway( options.api );
-		this.editCount = user.getEditCount();
+		this.editCount = options.editCount;
 		this.isNewPage = options.isNewPage;
-		this.isNewEditor = options.isNewEditor;
+		this.isNewEditor = options.editCount === 0;
 		this.sectionId = options.sectionId;
 		this.config = mw.config.get( 'wgMFEditorOptions' );
 		this.sessionId = options.sessionId;
