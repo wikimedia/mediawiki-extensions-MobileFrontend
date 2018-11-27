@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "e8cca164_5eeedd9c",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-27T12:18:46Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "f1a15efa_853c0cc6",
+      "range": {
+        "startLine": 14,
+        "startChar": 3,
+        "endLine": 14,
+        "endChar": 33
+      },
+      "revId": "5bea8d51bf14f2068aeaf70b707860be091a61ca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "46d03db3_14966d2a",
         "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
         "patchSetId": 6
@@ -36,6 +60,30 @@
       "writtenOn": "2018-11-27T01:52:52Z",
       "side": 1,
       "message": "if you decide to follow that way -\u003e Multiconfig is not required, you can return the HashConfig only",
+      "range": {
+        "startLine": 20,
+        "startChar": 13,
+        "endLine": 20,
+        "endChar": 24
+      },
+      "revId": "5bea8d51bf14f2068aeaf70b707860be091a61ca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1594ea5e_69cb6b9f",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-27T12:18:46Z",
+      "side": 1,
+      "message": "No longer needed as I\u0027ll be using $this-\u003esetMwGlobals() approach.",
+      "parentUuid": "46d03db3_14966d2a",
       "range": {
         "startLine": 20,
         "startChar": 13,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "121d3a48_bb04c605",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-27T12:18:46Z",
+      "side": 1,
+      "message": "I think I should write a test case to handle that path?\n\nBut if $mockTitle-\u003eexist() \u003d\u003d\u003d false or the other condition, this condition will fail;\n```\nif ( $preserveLocalContent \u0026\u0026 $title \u0026\u0026 $title-\u003eexists() ) {\n```\n\nI\u0027ve already tested the path using $preserveLocalContent when I set `$config-\u003eget( \u0027MFContentProviderTryLocalContentFirst\u0027 );` returns false via `$this-\u003esetMwGlobals( \u0027wgMFContentProviderTryLocalContentFirst\u0027, false );`\n\nBut if I should test when the title doesn\u0027t exist, I can write test for that :)",
+      "parentUuid": "f66d902b_dfb644d6",
+      "range": {
+        "startLine": 36,
+        "startChar": 3,
+        "endLine": 36,
+        "endChar": 24
+      },
+      "revId": "5bea8d51bf14f2068aeaf70b707860be091a61ca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0d260e5b_ca4cd28b",
         "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
         "patchSetId": 6
@@ -82,6 +154,30 @@
       "writtenOn": "2018-11-27T01:52:52Z",
       "side": 1,
       "message": "that implementation is correct, and you can stick to that. I just wanted to say that there is another way to do it, just add in the phpdocblock:\n  \n  @expectedException RuntimeException",
+      "range": {
+        "startLine": 60,
+        "startChar": 9,
+        "endLine": 60,
+        "endChar": 29
+      },
+      "revId": "5bea8d51bf14f2068aeaf70b707860be091a61ca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8db3cb05_c2dd2015",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-27T12:18:46Z",
+      "side": 1,
+      "message": "Ack! Thanks a lot! I\u0027m aware of this but I just picked one and started using + this seems to be what is used in the MediaWiki ecosystem :)",
+      "parentUuid": "0d260e5b_ca4cd28b",
       "range": {
         "startLine": 60,
         "startChar": 9,
@@ -117,6 +213,30 @@
     },
     {
       "key": {
+        "uuid": "e1e1f2e7_52578bf4",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-27T12:18:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a471505e_4bf74af5",
+      "range": {
+        "startLine": 63,
+        "startChar": 0,
+        "endLine": 65,
+        "endChar": 4
+      },
+      "revId": "5bea8d51bf14f2068aeaf70b707860be091a61ca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "27f32efb_dbf8cfa4",
         "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
         "patchSetId": 6
@@ -128,6 +248,30 @@
       "writtenOn": "2018-11-27T01:52:52Z",
       "side": 1,
       "message": "why do we need those?",
+      "range": {
+        "startLine": 126,
+        "startChar": 0,
+        "endLine": 127,
+        "endChar": 36
+      },
+      "revId": "5bea8d51bf14f2068aeaf70b707860be091a61ca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5527c982_bd92fbe0",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-27T12:18:46Z",
+      "side": 1,
+      "message": "No longer needed with the new approach!",
+      "parentUuid": "27f32efb_dbf8cfa4",
       "range": {
         "startLine": 126,
         "startChar": 0,
