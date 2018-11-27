@@ -43,7 +43,7 @@ QUnit.module( 'MobileFrontend mobile.startup/OverlayManager', {
 		sandbox.stub( mw.loader, 'require' ).withArgs( 'mediawiki.router' ).returns( fakeRouter );
 		overlayManager = new OverlayManager( fakeRouter );
 	},
-	afterEach: function () { sandbox.restore(); }
+	afterEach: function () { jQuery.tearDown(); sandbox.restore(); }
 } );
 
 QUnit.test( '#getSingleton', function ( assert ) {

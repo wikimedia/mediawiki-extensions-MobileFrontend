@@ -19,7 +19,7 @@ QUnit.module( 'MobileFrontend Browser.js', {
 		tmpDOM = window.document.implementation.createHTMLDocument( 'Test' );
 		$html = $( tmpDOM );
 	},
-	afterEach: function () { sandbox.restore(); }
+	afterEach: function () { jQuery.tearDown(); sandbox.restore(); }
 } );
 
 QUnit.test( 'isIos()', function ( assert ) {

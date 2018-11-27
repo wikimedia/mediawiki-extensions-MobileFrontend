@@ -22,7 +22,7 @@ QUnit.module( 'MobileFrontend PageGateway', {
 		this.api = new mw.Api();
 		pageGateway = new PageGateway( this.api );
 	},
-	afterEach: function () { sandbox.restore(); }
+	afterEach: function () { jQuery.tearDown(); sandbox.restore(); }
 } );
 
 QUnit.test( '#getPage (h1s)', function ( assert ) {
