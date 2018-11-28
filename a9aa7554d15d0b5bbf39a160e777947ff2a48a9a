@@ -16,6 +16,24 @@
       "revId": "a9aa7554d15d0b5bbf39a160e777947ff2a48a9a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5e443e5f_982ae10f",
+        "filename": "extension.json",
+        "patchSetId": 11
+      },
+      "lineNbr": 200,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-11-28T09:57:07Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "0bb106b2_b3823def",
+      "revId": "a9aa7554d15d0b5bbf39a160e777947ff2a48a9a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
