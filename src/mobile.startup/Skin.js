@@ -49,14 +49,14 @@ function getSectionId( $el ) {
  * @fires Skin#click
  * @fires Skin#references-loaded
  * @fires Skin#changed
- * @param {Object} options Configuration options
- * @param {OO.EventEmitter} options.eventBus Object used to listen for
+ * @param {Object} params Configuration options
+ * @param {OO.EventEmitter} params.eventBus Object used to listen for
  * before-section-toggled, scroll:throttled, resize:throttled, and
  * section-toggled events
- *
  */
-function Skin( options ) {
-	var self = this;
+function Skin( params ) {
+	var self = this,
+		options = util.extend( {}, params );
 
 	this.page = options.page;
 	this.name = options.name;
@@ -65,6 +65,7 @@ function Skin( options ) {
 		mw.log.warn( 'Skin: Use of mainMenu is deprecated.' );
 	}
 	this.eventBus = options.eventBus;
+	options.isBorderBox = false;
 	View.call( this, options );
 	this.referencesGateway = options.referencesGateway;
 
@@ -82,13 +83,6 @@ function Skin( options ) {
 }
 
 mfExtend( Skin, View, {
-	/**
-	 * Skin contains components that we do not control
-	 * @inheritdoc
-	 * @memberof Skin
-	 * @instance
-	 */
-	isBorderBox: false,
 	/**
 	 * @memberof Skin
 	 * @instance

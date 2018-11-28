@@ -10,11 +10,14 @@
 	 * @extend Overlay
 	 * @uses mw.Api
 	 *
-	 * @param {Object} options Configuration options
+	 * @param {Object} params Configuration options
 	 */
-	NotificationsOverlay = function ( options ) {
+	NotificationsOverlay = function ( params ) {
 		var modelManager, unreadCounter, wrapperWidget,
 			self = this,
+			options = util.extend( {}, {
+				isBorderBox: false
+			}, params ),
 			maxNotificationCount = mw.config.get( 'wgEchoMaxNotificationCount' ),
 			echoApi = new mw.echo.api.EchoApi();
 
@@ -97,7 +100,6 @@
 
 	OO.mfExtend( NotificationsOverlay, Overlay, {
 		className: 'overlay notifications-overlay navigation-drawer',
-		isBorderBox: false,
 		/**
 		 * @memberof NotificationsOverlay
 		 * @instance

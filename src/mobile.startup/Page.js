@@ -19,30 +19,33 @@ var
  * @param {Object} options Configuration options
  */
 function Page( options ) {
-	var thumb;
-	// If thumbnail is not passed it should be made false (truthy) so that it
-	// renders a placeholder when absent.
-	if ( options.thumbnail === undefined ) {
-		options.thumbnail = false;
-	}
-	this.options = options;
-	options.languageUrl = mw.util.getUrl( 'Special:MobileLanguages/' + options.title );
-	View.call( this, options );
+
+	util.extend( this, {
+		options: options,
+		title: options.title,
+		displayTitle: options.displayTitle,
+		url: options.url || mw.util.getUrl( options.title ),
+		id: options.id,
+		wikidataDescription: options.wikidataDescription,
+		thumbnail: ( Object.prototype.hasOwnProperty.call( options, 'thumbnail' ) ) ?
+			options.thumbnail : false,
+		isMissing: ( options.isMissing !== undefined ) ?
+			options.isMissing : options.id === 0
+	} );
+
+	this.options.isBorderBox = false;
+	this.options.languageUrl = mw.util.getUrl( 'Special:MobileLanguages/' + this.title );
+
+	View.call( this, this.options );
+
 	// Fallback if no displayTitle provided
-	options.displayTitle = this.getDisplayTitle();
-	// allow usage in templates.
-	// FIXME: Should View map all options to properties?
-	this.title = options.title;
-	this.displayTitle = options.displayTitle;
-	this.thumbnail = options.thumbnail;
-	this.url = options.url || mw.util.getUrl( options.title );
-	this.id = options.id;
-	this.isMissing = options.isMissing !== undefined ? options.isMissing : options.id === 0;
-	thumb = this.thumbnail;
-	if ( thumb && thumb.width ) {
-		this.thumbnail.isLandscape = thumb.width > thumb.height;
+	if ( !this.displayTitle ) {
+		this.displayTitle = this.getDisplayTitle();
 	}
-	this.wikidataDescription = options.wikidataDescription;
+
+	if ( this.thumbnail && this.thumbnail.width ) {
+		this.thumbnail.isLandscape = this.thumbnail.width > this.thumbnail.height;
+	}
 }
 
 mfExtend( Page, View, {
@@ -90,12 +93,6 @@ mfExtend( Page, View, {
 			height: undefined
 		}
 	},
-	/**
-	 * @inheritdoc
-	 * @memberof Page
-	 * @instance
-	 */
-	isBorderBox: false,
 	/**
 	 * Retrieve the title that should be displayed to the user
 	 * @memberof Page

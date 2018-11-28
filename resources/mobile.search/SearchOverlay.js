@@ -17,18 +17,21 @@
 	 * @uses SearchGateway
 	 * @uses Icon
 	 *
-	 * @param {Object} options Configuration options
+	 * @param {Object} params Configuration options
 	 * @fires SearchOverlay#search-show
 	 * @fires SearchOverlay#search-start
 	 * @fires SearchOverlay#search-results
 	 * @fires SearchOverlay#search-result-click
 	 */
-	function SearchOverlay( options ) {
-		Overlay.call( this,
-			util.extend( options, {
+	function SearchOverlay( params ) {
+		var defaultParams = {
+				isBorderBox: false,
 				className: 'overlay search-overlay'
-			} )
-		);
+			},
+			options = util.extend( {}, defaultParams, params );
+
+		Overlay.call( this, options );
+
 		this.api = options.api;
 		// eslint-disable-next-line new-cap
 		this.gateway = new options.gatewayClass( this.api );
@@ -37,11 +40,6 @@
 	}
 
 	OO.mfExtend( SearchOverlay, Overlay, {
-		/**
-		 * @memberof SearchOverlay
-		 * @instance
-		 */
-		isBorderBox: false,
 		/**
 		 * @memberof SearchOverlay
 		 * @instance

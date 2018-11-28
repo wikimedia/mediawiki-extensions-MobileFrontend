@@ -15,11 +15,14 @@
 	 *
 	 * @fires watched
 	 * @fires watch
-	 * @param {Object} options Configuration options
-	 * @param {OO.EventEmitter} options.eventBus Object used to listen for scroll:throttled events
+	 * @param {Object} params Configuration options
+	 * @param {OO.EventEmitter} params.eventBus Object used to listen for scroll:throttled events
 	 */
-	function WatchList( options ) {
-		var lastTitle;
+	function WatchList( params ) {
+		var lastTitle,
+			options = util.extend( {}, {
+				isBorderBox: false
+			}, params );
 
 		// Set up infinite scroll helper and listen to events
 		this.scrollEndEventEmitter = new ScrollEndEventEmitter( options.eventBus );
@@ -31,15 +34,10 @@
 		}
 		this.gateway = new WatchListGateway( options.api, lastTitle );
 
-		WatchstarPageList.apply( this, arguments );
+		WatchstarPageList.call( this, options );
 	}
 
 	OO.mfExtend( WatchList, WatchstarPageList, {
-		/**
-		 * @memberof WatchList
-		 * @instance
-		 */
-		isBorderBox: false,
 		/**
 		 * @inheritdoc
 		 * @memberof WatchList

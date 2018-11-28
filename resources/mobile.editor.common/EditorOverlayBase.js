@@ -46,11 +46,14 @@
 	 * @extends Overlay
 	 * @uses Icon
 	 * @uses user
-	 * @param {Object} options Configuration options
-	 * @param {number|null} options.editCount of user
+	 * @param {Object} params Configuration options
+	 * @param {number|null} params.editCount of user
 	 */
-	function EditorOverlayBase( options ) {
-		var self = this;
+	function EditorOverlayBase( params ) {
+		var self = this,
+			options = util.extend( {}, {
+				isBorderBox: false
+			}, params );
 
 		if ( options.isNewPage ) {
 			options.placeholder = mw.msg( 'mobile-frontend-editor-placeholder-new-page', mwUser );
@@ -80,7 +83,7 @@
 			namespace: 'editwarning'
 		} );
 
-		Overlay.apply( this, arguments );
+		Overlay.call( this, options );
 	}
 
 	OO.mfExtend( EditorOverlayBase, Overlay, {

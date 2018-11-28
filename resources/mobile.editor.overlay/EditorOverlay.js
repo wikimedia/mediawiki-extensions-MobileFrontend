@@ -53,12 +53,6 @@
 		 * @memberof EditorOverlay
 		 * @instance
 		 */
-		isBorderBox: false,
-		/**
-		 * @inheritdoc
-		 * @memberof EditorOverlay
-		 * @instance
-		 */
 		templatePartials: util.extend( {}, EditorOverlayBase.prototype.templatePartials, {
 			content: mw.template.get( 'mobile.editor.overlay', 'content.hogan' ),
 			messageBox: MessageBox.prototype.template,
