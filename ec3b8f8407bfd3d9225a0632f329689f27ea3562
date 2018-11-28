@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "05aa1564_43e5e23d",
+        "filename": "src/mobile.startup/Overlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-28T15:13:39Z",
+      "side": 0,
+      "message": "Is it ok for this to be overlay-close-gray now?",
+      "range": {
+        "startLine": 94,
+        "startChar": 10,
+        "endLine": 94,
+        "endChar": 23
+      },
+      "revId": "ec3b8f8407bfd3d9225a0632f329689f27ea3562",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
