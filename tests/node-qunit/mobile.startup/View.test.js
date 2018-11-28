@@ -218,6 +218,11 @@ QUnit.test( 'View with className option', function ( assert ) {
 			'className not defined on a normal View'
 		],
 		[
+			new View( { isBorderBox: false } ),
+			undefined,
+			'Passing isBorderBox option removes default view-border-box class'
+		],
+		[
 			new ViewWithClassNameProp( {} ),
 			'apple',
 			'if no option passed, property on View used'
@@ -225,6 +230,14 @@ QUnit.test( 'View with className option', function ( assert ) {
 		[
 			new ViewWithClassNameProp( { className: 'banana' } ),
 			'banana',
+			'option passed, property on View is overriden'
+		],
+		[
+			new ViewWithClassNameProp( {
+				className: 'banana',
+				isBorderBox: true
+			} ),
+			'banana view-border-box',
 			'option passed, property on View is overriden'
 		]
 	].forEach( function ( test ) {

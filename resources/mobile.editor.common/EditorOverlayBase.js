@@ -55,6 +55,7 @@
 		if ( options.isNewPage ) {
 			options.placeholder = mw.msg( 'mobile-frontend-editor-placeholder-new-page', mwUser );
 		}
+		options.isBorderBox = false;
 		// change the message to request a summary when not in article namespace
 		if ( mw.config.get( 'wgNamespaceNumber' ) !== 0 ) {
 			options.summaryRequestMsg = mw.msg( 'mobile-frontend-editor-summary' );

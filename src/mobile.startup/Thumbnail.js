@@ -1,5 +1,6 @@
 var
 	mfExtend = require( './mfExtend' ),
+	util = require( './util' ),
 	View = require( './View' );
 
 /**
@@ -7,9 +8,14 @@ var
  *
  * @class Thumbnail
  * @extends View
+ * @param {Object} options
  */
-function Thumbnail() {
-	View.apply( this, arguments );
+function Thumbnail( options ) {
+	View.call( this,
+		util.extend( {}, options, {
+			isBorderBox: false
+		} )
+	);
 }
 
 mfExtend( Thumbnail, View, {
@@ -24,12 +30,6 @@ mfExtend( Thumbnail, View, {
 	defaults: {
 		filename: undefined
 	},
-	/**
-	 * @inheritdoc
-	 * @memberof Thumbnail
-	 * @instance
-	 */
-	isBorderBox: false,
 	/**
 	 * @inheritdoc
 	 * @memberof Thumbnail

@@ -28,12 +28,6 @@
 		 * @memberof VisualEditorOverlay
 		 * @instance
 		 */
-		isBorderBox: false,
-		/**
-		 * @inheritdoc
-		 * @memberof VisualEditorOverlay
-		 * @instance
-		 */
 		templatePartials: util.extend( {}, EditorOverlayBase.prototype.templatePartials, {
 			editHeader: mw.template.get( 'mobile.editor.ve', 'toolbarVE.hogan' ),
 			content: mw.template.get( 'mobile.editor.ve', 'contentVE.hogan' )

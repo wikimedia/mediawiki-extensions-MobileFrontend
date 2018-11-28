@@ -26,6 +26,7 @@
 	function SearchOverlay( options ) {
 		Overlay.call( this,
 			util.extend( options, {
+				isBorderBox: false,
 				className: 'overlay search-overlay'
 			} )
 		);
@@ -37,11 +38,6 @@
 	}
 
 	OO.mfExtend( SearchOverlay, Overlay, {
-		/**
-		 * @memberof SearchOverlay
-		 * @instance
-		 */
-		isBorderBox: false,
 		/**
 		 * @memberof SearchOverlay
 		 * @instance

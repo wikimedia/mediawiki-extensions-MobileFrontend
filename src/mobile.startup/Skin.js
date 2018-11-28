@@ -62,6 +62,7 @@ function Skin( options ) {
 		this.mainMenu = options.mainMenu;
 		mw.log.warn( 'Skin: Use of mainMenu is deprecated.' );
 	}
+	options.isBorderBox = false;
 	View.call( this, options );
 	this.referencesGateway = options.referencesGateway;
 
@@ -79,13 +80,6 @@ function Skin( options ) {
 }
 
 mfExtend( Skin, View, {
-	/**
-	 * Skin contains components that we do not control
-	 * @inheritdoc
-	 * @memberof Skin
-	 * @instance
-	 */
-	isBorderBox: false,
 	/**
 	 * @memberof Skin
 	 * @instance
