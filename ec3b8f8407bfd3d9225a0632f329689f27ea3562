@@ -22,6 +22,30 @@
       "revId": "ec3b8f8407bfd3d9225a0632f329689f27ea3562",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "05ee796b_98861f99",
+        "filename": "src/mobile.startup/Overlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-28T23:51:27Z",
+      "side": 0,
+      "message": "Nice catch. Nope. I\u0027ve fixed the cancel function to take a variant since the -gray suffix is a variant of the same icon.",
+      "parentUuid": "05aa1564_43e5e23d",
+      "range": {
+        "startLine": 94,
+        "startChar": 10,
+        "endLine": 94,
+        "endChar": 23
+      },
+      "revId": "ec3b8f8407bfd3d9225a0632f329689f27ea3562",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
