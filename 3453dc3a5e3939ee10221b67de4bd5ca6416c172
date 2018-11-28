@@ -48,6 +48,54 @@
     },
     {
       "key": {
+        "uuid": "4854d3ec_67994f89",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-28T15:43:53Z",
+      "side": 1,
+      "message": "Fixed! Thanks :)",
+      "parentUuid": "5ec41dd7_d5688e54",
+      "range": {
+        "startLine": 29,
+        "startChar": 57,
+        "endLine": 29,
+        "endChar": 69
+      },
+      "revId": "3453dc3a5e3939ee10221b67de4bd5ca6416c172",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2a1f0810_73458458",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-28T15:43:53Z",
+      "side": 1,
+      "message": "Fixed! Thanks :)",
+      "parentUuid": "4d4ba892_0b6fdbd8",
+      "range": {
+        "startLine": 29,
+        "startChar": 42,
+        "endLine": 29,
+        "endChar": 53
+      },
+      "revId": "3453dc3a5e3939ee10221b67de4bd5ca6416c172",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "433b7bfa_279d72d1",
         "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
         "patchSetId": 7
@@ -59,6 +107,30 @@
       "writtenOn": "2018-11-27T19:32:04Z",
       "side": 1,
       "message": "if in test I dump value of the $skin or $val it will:\n\nshow me\n  ../ContentProviderFactory.php:53:\nstring(6) \"vector\"\n  ../ContentProviderFactory.php:53:\nNULL\n\nif you don\u0027t use those, you don\u0027t have to mock them.",
+      "range": {
+        "startLine": 35,
+        "startChar": 0,
+        "endLine": 39,
+        "endChar": 25
+      },
+      "revId": "3453dc3a5e3939ee10221b67de4bd5ca6416c172",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "23ef7c3c_1dcbf580",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-28T15:43:53Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "433b7bfa_279d72d1",
       "range": {
         "startLine": 35,
         "startChar": 0,
