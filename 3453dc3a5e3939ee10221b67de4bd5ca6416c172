@@ -163,6 +163,30 @@
       "revId": "3453dc3a5e3939ee10221b67de4bd5ca6416c172",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6f43bcaf_8279dc54",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-28T16:06:02Z",
+      "side": 1,
+      "message": "\"The ServiceWirings\" :D\n\nThanks and I\u0027ll handle this in another PS. All issues above has been addressed already (only this is left for now). Will deal with it once head is clear :)",
+      "parentUuid": "70d72f30_80413318",
+      "range": {
+        "startLine": 117,
+        "startChar": 17,
+        "endLine": 117,
+        "endChar": 80
+      },
+      "revId": "3453dc3a5e3939ee10221b67de4bd5ca6416c172",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
