@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f7f4a977_9e322c8a",
+        "filename": "tests/phpunit/content-providers/McsContentProviderTest.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-28T18:32:40Z",
+      "side": 1,
+      "message": "Maybe I\u0027m doing something wrong here @Piotr, please let me know if you have better ideas, thanks!",
+      "range": {
+        "startLine": 120,
+        "startChar": 2,
+        "endLine": 124,
+        "endChar": 47
+      },
+      "revId": "adf1546fbf7687e784e599424a7340aab3517776",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
