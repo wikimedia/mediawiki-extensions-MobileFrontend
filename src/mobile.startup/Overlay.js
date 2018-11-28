@@ -16,18 +16,13 @@ var
  * @uses Button
  * @fires Overlay#Overlay-exit
  * @fires Overlay#hide
- * @param {Object} props
  */
-function Overlay( props ) {
+function Overlay() {
 	this.isIos = browser.isIos();
 	this.useVirtualKeyboardHack = browser.isIos( 4 ) || browser.isIos( 5 );
 	// Set to true when overlay has failed to load
 	this.hasLoadError = false;
-	View.call( this,
-		util.extend( {}, props, {
-			className: 'overlay'
-		} )
-	);
+	View.apply( this, arguments );
 }
 
 mfExtend( Overlay, View, {
@@ -62,6 +57,14 @@ mfExtend( Overlay, View, {
 	 * @property {string|jQuery.Object}
 	 */
 	appendToElement: 'body',
+
+	/**
+	 * Default class name
+	 * @memberof Overlay
+	 * @instance
+	 * @property {string}
+	 */
+	className: 'overlay',
 	templatePartials: {
 		header: mw.template.get( 'mobile.startup', 'header.hogan' ),
 		anchor: Anchor.prototype.template,
