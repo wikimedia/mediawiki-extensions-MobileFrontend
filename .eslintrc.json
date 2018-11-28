@@ -45,7 +45,6 @@
 				"message": "Please use typeof"
 			}
 		],
-		"dot-notation": [ "error", { "allowKeywords": true } ],
 		"object-property-newline": "error",
 		"computed-property-spacing": 0,
 		"no-use-before-define": 0,
