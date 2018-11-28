@@ -54,7 +54,6 @@
 		return dBlockedContent.then( function () {
 			assert.ok(
 				messageStub.calledWith( {
-					className: 'panel',
 					partial: false,
 					user: {
 						options: {

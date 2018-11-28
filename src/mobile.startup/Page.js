@@ -26,7 +26,6 @@ function Page( options ) {
 		options.thumbnail = false;
 	}
 	this.options = options;
-	options.isBorderBox = false;
 	options.languageUrl = mw.util.getUrl( 'Special:MobileLanguages/' + options.title );
 	View.call( this, options );
 	// Fallback if no displayTitle provided
@@ -91,6 +90,12 @@ mfExtend( Page, View, {
 			height: undefined
 		}
 	},
+	/**
+	 * @inheritdoc
+	 * @memberof Page
+	 * @instance
+	 */
+	isBorderBox: false,
 	/**
 	 * Retrieve the title that should be displayed to the user
 	 * @memberof Page

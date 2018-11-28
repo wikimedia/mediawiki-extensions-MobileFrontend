@@ -28,13 +28,17 @@
 		if ( options.el ) {
 			lastTitle = this.getLastTitle( options.el );
 		}
-		options.isBorderBox = false;
 		this.gateway = new WatchListGateway( options.api, lastTitle );
 
-		WatchstarPageList.call( this, options );
+		WatchstarPageList.apply( this, arguments );
 	}
 
 	OO.mfExtend( WatchList, WatchstarPageList, {
+		/**
+		 * @memberof WatchList
+		 * @instance
+		 */
+		isBorderBox: false,
 		/**
 		 * @inheritdoc
 		 * @memberof WatchList
