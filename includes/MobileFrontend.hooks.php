@@ -478,7 +478,7 @@ class MobileFrontendHooks {
 			// toggle.js
 			'wgMFCollapseSectionsByDefault' => $config->get( 'MFCollapseSectionsByDefault' ),
 			// BlockMessage.js
-			'wgMFTrackBlockNotices' => $config->get( 'MFTrackBlockNotices' ),
+			'wgEnableBlockNoticeStats' => $config->get( 'EnableBlockNoticeStats' ),
 		];
 
 		return true;
