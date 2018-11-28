@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f8c0a189_712ed753",
+        "filename": "resources/mobile.editor.common/schemaEditAttemptStep.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2018-11-28T12:09:59Z",
+      "side": 1,
+      "message": "In the VE version we put the actual logging in the else block, do you want to do the same here?",
+      "revId": "2280c1fd6de78d92bfd9b1219256a6865c317b88",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
