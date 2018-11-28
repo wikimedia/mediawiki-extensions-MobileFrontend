@@ -64,7 +64,7 @@
 
 			Drawer.prototype.onShowDrawer.apply( this );
 
-			if ( mw.config.get( 'wgMFTrackBlockNotices' ) ) {
+			if ( mw.config.get( 'wgEnableBlockNoticeStats' ) ) {
 				mw.track( 'counter.MediaWiki.BlockNotices.' + wiki + '.MobileFrontend.shown', 1 );
 			}
 		},
