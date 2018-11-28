@@ -167,6 +167,30 @@
     },
     {
       "key": {
+        "uuid": "5111b445_881c4f70",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-11-28T15:52:09Z",
+      "side": 1,
+      "message": "I\u0027ll write a test case for this :), thanks!",
+      "parentUuid": "252811d9_acba7d10",
+      "range": {
+        "startLine": 36,
+        "startChar": 3,
+        "endLine": 36,
+        "endChar": 24
+      },
+      "revId": "5bea8d51bf14f2068aeaf70b707860be091a61ca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0d260e5b_ca4cd28b",
         "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
         "patchSetId": 6
