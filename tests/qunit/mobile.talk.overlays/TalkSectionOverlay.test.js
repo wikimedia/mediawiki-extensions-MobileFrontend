@@ -65,7 +65,7 @@
 
 		overlay.$textarea.val( 'Testcomment' );
 		overlay.onSaveClick();
-		assert.ok( spy.calledWith( 'edit', {
+		assert.ok( spy.calledWith( 'csrf', {
 			action: 'edit',
 			title: 'Talk:Test',
 			section: 1,

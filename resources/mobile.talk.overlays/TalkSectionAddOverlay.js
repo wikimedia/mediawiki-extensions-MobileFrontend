@@ -194,7 +194,7 @@
 			this.$( '.content' ).empty().addClass( 'loading' );
 			// FIXME: while saving: a spinner would be nice
 			// FIXME: This should be using a gateway e.g. TalkGateway, PageGateway or EditorGateway
-			return this.editorApi.postWithToken( 'edit', {
+			return this.editorApi.postWithToken( 'csrf', {
 				action: 'edit',
 				section: 'new',
 				sectiontitle: heading,

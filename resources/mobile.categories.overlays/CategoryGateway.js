@@ -37,7 +37,7 @@
 		 * @return {jQuery.Deferred}
 		 */
 		save: function ( title, categories ) {
-			return this.api.postWithToken( 'edit', {
+			return this.api.postWithToken( 'csrf', {
 				action: 'edit',
 				title: title,
 				appendtext: categories,

@@ -194,7 +194,7 @@
 				}
 
 				// eslint-disable-next-line no-restricted-properties
-				self.api.postWithToken( 'edit', apiOptions ).then( function ( data ) {
+				self.api.postWithToken( 'csrf', apiOptions ).then( function ( data ) {
 					var code, warning;
 					if ( data && data.edit && data.edit.result === 'Success' ) {
 						self.hasChanged = false;
