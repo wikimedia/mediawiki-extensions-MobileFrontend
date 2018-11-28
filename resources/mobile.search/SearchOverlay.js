@@ -5,7 +5,7 @@
 		util = M.require( 'mobile.startup/util' ),
 		Anchor = M.require( 'mobile.startup/Anchor' ),
 		Icon = M.require( 'mobile.startup/Icon' ),
-		WatchstarPageList = M.require( 'mobile.pagelist.scripts/WatchstarPageList' ),
+		WatchstarPageList = M.require( 'mobile.startup' ).WatchstarPageList,
 		SEARCH_DELAY = 300,
 		SEARCH_SPINNER_DELAY = 2000,
 		feedbackLink = mw.config.get( 'wgCirrusSearchFeedbackLink' );

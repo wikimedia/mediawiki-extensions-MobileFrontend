@@ -34,5 +34,17 @@ module.exports = {
 			label: mw.msg( 'mobile-frontend-loading-message' ),
 			additionalClassNames: 'spinner loading'
 		} ) );
+	},
+	watchIcon: function () {
+		return new this.Icon( {
+			name: 'watch',
+			additionalClassNames: 'watch-this-article'
+		} );
+	},
+	watchedIcon: function () {
+		return new this.Icon( {
+			name: 'watched',
+			additionalClassNames: 'watch-this-article watched'
+		} );
 	}
 };

@@ -4,7 +4,7 @@
 		MessageBox = M.require( 'mobile.messageBox/MessageBox' ),
 		NearbyGateway = M.require( 'mobile.nearby/NearbyGateway' ),
 		util = M.require( 'mobile.startup/util' ),
-		WatchstarPageList = M.require( 'mobile.pagelist.scripts/WatchstarPageList' );
+		WatchstarPageList = M.require( 'mobile.startup' ).WatchstarPageList;
 
 	/**
 	 * List of nearby pages

@@ -1,7 +1,7 @@
 ( function ( M ) {
 	var
 		PageList = M.require( 'mobile.startup/PageList' ),
-		WatchstarPageList = M.require( 'mobile.pagelist.scripts/WatchstarPageList' ),
+		WatchstarPageList = M.require( 'mobile.startup' ).WatchstarPageList,
 		ScrollEndEventEmitter = M.require( 'mobile.scrollEndEventEmitter/ScrollEndEventEmitter' ),
 		util = M.require( 'mobile.startup/util' ),
 		WatchListGateway = M.require( 'mobile.watchlist/WatchListGateway' );

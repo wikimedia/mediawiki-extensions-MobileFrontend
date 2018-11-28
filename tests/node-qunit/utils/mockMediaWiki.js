@@ -17,7 +17,8 @@ module.exports = function newMockMediaWiki() {
 	return {
 		Api: function () {
 			return {
-				get: function () {}
+				get: function () {},
+				postWithToken: function () {}
 			};
 		},
 		config: {
@@ -54,15 +55,25 @@ module.exports = function newMockMediaWiki() {
 						'utf8'
 					);
 				return hogan.compile( templateString );
-			}
+			},
+			compile: function () {}
 		},
-		user: {},
+		user: {
+			isAnon: function () {}
+		},
 		util: { getUrl: function ( title ) { return title; } },
 		loader: {
 			using: function () {},
 			require: function () {
 				return {};
 			}
-		}
+		},
+		requestIdleCallback: function ( fn ) {
+			return fn();
+		},
+		storage: {
+			get: function () {}
+		},
+		notify: function () {}
 	};
 };

@@ -187,19 +187,6 @@
 				"resources/dist/mediawiki.template.hogan.js"
 			]
 		},
-		"mobile.pagelist.scripts": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"dependencies": [
-				"mobile.watchstar",
-				"mobile.startup"
-			],
-			"scripts": [
-				"resources/mobile.pagelist.scripts/WatchstarPageList.js"
-			]
-		},
 		"mobile.watchlist": {
 			"targets": [
 				"mobile",
@@ -207,8 +194,7 @@
 			],
 			"dependencies": [
 				"mobile.scrollEndEventEmitter",
-				"mobile.startup",
-				"mobile.pagelist.scripts"
+				"mobile.startup"
 			],
 			"scripts": [
 				"resources/mobile.watchlist/WatchListGateway.js",
@@ -348,7 +334,14 @@
 				"mobile-frontend-loading-message",
 				"mobile-frontend-editor-licensing",
 				"mobile-frontend-editor-licensing-with-terms",
-				"mobile-frontend-editor-terms-link"
+				"mobile-frontend-editor-terms-link",
+				"watchthispage",
+				"unwatchthispage",
+				"mobile-frontend-watchlist-error",
+				"mobile-frontend-watchlist-add",
+				"mobile-frontend-watchlist-removed",
+				"mobile-frontend-watchlist-cta",
+				"mobile-frontend-watchlist-please-wait"
 			],
 			"styles": [
 				"resources/mobile.startup/icon.less",
@@ -356,7 +349,8 @@
 				"resources/mobile.startup/Overlay.less",
 				"resources/mobile.startup/LoadingOverlay.less",
 				"resources/mobile.startup/drawer.less",
-				"resources/mobile.startup/ReferencesDrawer.less"
+				"resources/mobile.startup/ReferencesDrawer.less",
+				"resources/mobile.watchstar/watchstar.less"
 			],
 			"scripts": [
 				"resources/dist/mobile.startup.js"
@@ -537,7 +531,6 @@
 				"desktop"
 			],
 			"dependencies": [
-				"mobile.pagelist.scripts",
 				"mobile.startup",
 				"mobile.search.images"
 			],
@@ -721,25 +714,9 @@
 				"mobile",
 				"desktop"
 			],
+			"deprecated": true,
 			"dependencies": [
-				"mobile.startup",
-				"mobile.ajax.styles"
-			],
-			"scripts": [
-				"resources/mobile.watchstar/WatchstarGateway.js",
-				"resources/mobile.watchstar/Watchstar.js"
-			],
-			"styles": [
-				"resources/mobile.watchstar/watchstar.less"
-			],
-			"messages": [
-				"watchthispage",
-				"unwatchthispage",
-				"mobile-frontend-watchlist-error",
-				"mobile-frontend-watchlist-add",
-				"mobile-frontend-watchlist-removed",
-				"mobile-frontend-watchlist-cta",
-				"mobile-frontend-watchlist-please-wait"
+				"mobile.startup"
 			]
 		},
 		"mobile.languages.structured": {
@@ -777,7 +754,6 @@
 				"mobile.ajax.styles",
 				"mobile.special.nearby.styles",
 				"mediawiki.language",
-				"mobile.pagelist.scripts",
 				"mobile.foreignApi",
 				"mobile.messageBox",
 				"mobile.startup",

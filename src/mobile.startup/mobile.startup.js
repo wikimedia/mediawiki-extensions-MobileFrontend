@@ -29,6 +29,8 @@ var
 	PageList = require( './PageList' ),
 	toast = require( './toast' ),
 	extendSearchParams = require( './extendSearchParams' ),
+	Watchstar = require( './watchstar/Watchstar' ),
+	WatchstarPageList = require( './watchstar/WatchstarPageList' ),
 	rlModuleLoader = require( './rlModuleLoader' );
 
 mw.mobileFrontend = moduleLoader;
@@ -72,6 +74,8 @@ mw.mobileFrontend.deprecate( 'mobile.references.gateway/ReferencesHtmlScraperGat
 	ReferencesHtmlScraperGateway, 'mobile.startup' );
 mw.mobileFrontend.deprecate( 'mobile.references.gateway/ReferencesMobileViewGateway',
 	ReferencesMobileViewGateway, 'mobile.startup' );
+mw.mobileFrontend.deprecate( 'mobile.watchstar/Watchstar', Watchstar, 'mobile.startup' );
+mw.mobileFrontend.deprecate( 'mobile.pagelist.scripts/WatchstarPageList', WatchstarPageList, 'mobile.startup' );
 
 // Expose the entry chunk through libraryTarget and library. This allows
 // arbitrary file access via ResourceLoader like
@@ -104,6 +108,8 @@ module.exports = {
 	CtaDrawer: CtaDrawer,
 	PageList: PageList,
 	toast: toast,
+	Watchstar: Watchstar,
+	WatchstarPageList: WatchstarPageList,
 	rlModuleLoader: rlModuleLoader
 };
 
