@@ -1,10 +1,10 @@
 /* global jQuery */
 ( function ( M, config, msg, loader, $ ) {
 	/** @event */
-	var NEARBY_EVENT_POST_RENDER = 'Nearby-postRender',
+	var api,
+		NEARBY_EVENT_POST_RENDER = 'Nearby-postRender',
 		LocationProvider = M.require( 'mobile.nearby/LocationProvider' ),
 		LoadingOverlay = mw.mobileFrontend.require( 'mobile.startup/LoadingOverlay' ),
-		endpoint = config.get( 'wgMFNearbyEndpoint' ),
 		router = require( 'mediawiki.router' ),
 		Nearby = M.require( 'mobile.nearby/Nearby' ),
 		util = M.require( 'mobile.startup/util' ),
@@ -57,20 +57,9 @@
 	/**
 	 * Initialize or instantiate Nearby with options
 	 * @param {Object} opt
+	 * @param {mw.Api} opt.api instance
 	 */
 	function refresh( opt ) {
-		// check, if the api object (options.api) is already created and set
-		if ( options.api === undefined ) {
-			// decide, what api module to use to retrieve the pages
-			if ( endpoint ) {
-				loader.using( 'mobile.foreignApi' ).then( function () {
-					var JSONPForeignApi = M.require( 'mobile.foreignApi/JSONPForeignApi' );
-					options.api = new JSONPForeignApi( endpoint );
-				} );
-			} else {
-				options.api = new mw.Api();
-			}
-		}
 		// make sure, that the api object (if created above) is added to the options object used
 		// in the Nearby module
 		opt = util.extend( {}, opt, options );
@@ -97,6 +86,29 @@
 
 	// Routing on the nearby view
 
+	/**
+	 * Return a working instance of an api that can be used
+	 * to obtain nearby information.
+	 * @return {JQuery.Deferred<mw.Api>} that resolves with an mw.Api
+	 */
+	function getApi() {
+		var d = util.Deferred(),
+			endpoint = config.get( 'wgMFNearbyEndpoint' );
+
+		if ( api ) {
+			d.resolve( api );
+		} else if ( endpoint ) {
+			loader.using( 'mobile.foreignApi' ).then( function () {
+				var Api = M.require( 'mobile.foreignApi/JSONPForeignApi' );
+				api = new Api( endpoint );
+				d.resolve( api );
+			} );
+		} else {
+			api = new mw.Api();
+			d.resolve( api );
+		}
+		return d;
+	}
 	/*
 	 * #/coords/lat,long
 	 */
@@ -109,7 +121,9 @@
 
 		hideInitialScreen();
 		// Search with coordinates
-		refresh( options );
+		getApi().then( function ( api ) {
+			refresh( util.extend( options, { api: api } ) );
+		} );
 	} );
 
 	/*
@@ -118,9 +132,12 @@
 	router.route( /^\/page\/(.+)$/, function ( pageTitle ) {
 		hideInitialScreen();
 		overlay.hide();
-		refresh( util.extend( {}, options, {
-			pageTitle: mw.Uri.decode( pageTitle )
-		} ) );
+		getApi().then( function ( api ) {
+			refresh( util.extend( {}, options, {
+				api: api,
+				pageTitle: mw.Uri.decode( pageTitle )
+			} ) );
+		} );
 	} );
 
 	router.checkRoute();
