@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b049d12e_71778791",
+        "filename": "resources/mobile.editor.common/schemaEditAttemptStep.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2018-11-28T13:27:22Z",
+      "side": 1,
+      "message": "We don\u0027t need to load this module, see https://phabricator.wikimedia.org/T205744",
+      "revId": "fb00c6b18566b1aa81d71eaa509b7c54b9219b77",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
