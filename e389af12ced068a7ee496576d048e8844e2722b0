@@ -16,6 +16,24 @@
       "revId": "e389af12ced068a7ee496576d048e8844e2722b0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "969d3fdb_abb9c124",
+        "filename": "resources/mobile.editor.common/schemaEditAttemptStep.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 2915
+      },
+      "writtenOn": "2018-11-28T00:18:42Z",
+      "side": 1,
+      "message": "Just habit, really. I\u0027ll change it.",
+      "parentUuid": "ab86c4c5_b355e6e6",
+      "revId": "e389af12ced068a7ee496576d048e8844e2722b0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
