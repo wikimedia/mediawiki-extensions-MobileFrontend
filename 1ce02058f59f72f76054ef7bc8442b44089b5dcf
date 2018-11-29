@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c69bf446_02a2b1e4",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-29T17:28:33Z",
+      "side": 1,
+      "message": "Consider using a const for \u003ca\u003eanchor\u003c/a\u003e or changing the input for each of the tests to make it clearer where failures are happening/coming from.",
+      "revId": "1ce02058f59f72f76054ef7bc8442b44089b5dcf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

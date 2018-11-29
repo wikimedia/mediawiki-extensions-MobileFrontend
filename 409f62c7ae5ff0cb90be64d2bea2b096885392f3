@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "56c60aa8_6544f7a1",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-29T17:28:33Z",
+      "side": 1,
+      "message": "Why is HiddenPrefs passed? Wy is PHPSessionHandling passed? Can you document as this seems unrelated to the class we are testing.",
+      "revId": "409f62c7ae5ff0cb90be64d2bea2b096885392f3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a0b8b510_51265829",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-29T17:28:33Z",
+      "side": 1,
+      "message": "same as below? Would it help to use a common variable?",
+      "range": {
+        "startLine": 154,
+        "startChar": 30,
+        "endLine": 154,
+        "endChar": 44
+      },
+      "revId": "409f62c7ae5ff0cb90be64d2bea2b096885392f3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
