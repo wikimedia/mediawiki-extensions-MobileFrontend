@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "dd797f53_6a1b441e",
+        "filename": "tests/node-qunit/mobile.startup/CtaDrawer.test.html.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-29T21:40:16Z",
+      "side": 1,
+      "message": "This is for the browser tests.",
+      "parentUuid": "bfa9f612_247a6eac",
+      "range": {
+        "startLine": 9,
+        "startChar": 11,
+        "endLine": 9,
+        "endChar": 16
+      },
+      "revId": "51244e563ed78b64c4aac7b7d887faacf0b61d9e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "508f9f29_3a906303",
         "filename": "tests/node-qunit/mobile.startup/CtaDrawer.test.js",
         "patchSetId": 2
@@ -42,6 +66,24 @@
     },
     {
       "key": {
+        "uuid": "9b0aa299_67095dba",
+        "filename": "tests/node-qunit/mobile.startup/CtaDrawer.test.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-29T21:40:16Z",
+      "side": 1,
+      "message": "Fixed. If you check out CtaDrawer.test.html.js, it\u0027s just a JavaScript string. I\u0027m replacing the spaces with \\s* to allow for the rendered HTML to have some whitespace flexibility.",
+      "parentUuid": "508f9f29_3a906303",
+      "revId": "51244e563ed78b64c4aac7b7d887faacf0b61d9e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "240fd83e_d328983e",
         "filename": "tests/node-qunit/mobile.startup/CtaDrawer.test.js",
         "patchSetId": 2
@@ -53,6 +95,24 @@
       "writtenOn": "2018-11-29T21:18:02Z",
       "side": 1,
       "message": "why do we need to test the outerHTML? Why not just use indexOf and/or jQuery search selectors to test certain elements?",
+      "revId": "51244e563ed78b64c4aac7b7d887faacf0b61d9e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f73dc94c_586eac02",
+        "filename": "tests/node-qunit/mobile.startup/CtaDrawer.test.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-29T21:40:16Z",
+      "side": 1,
+      "message": "I want to test the full HTML, not just the children, and I tried to avoid jQuery. I can test this piecewise with indexOf / children / querySelector / ... but I think it will be even uglier...",
+      "parentUuid": "240fd83e_d328983e",
       "revId": "51244e563ed78b64c4aac7b7d887faacf0b61d9e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false

@@ -16,6 +16,24 @@
       "revId": "de87f2ae5c000900d10ba49f7247bbd0b3e229eb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "02984add_98159ddd",
+        "filename": "tests/node-qunit/mobile.startup/CtaDrawer.test.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-29T21:40:16Z",
+      "side": 1,
+      "message": "Good idea. Fixed here and in Drawer.",
+      "parentUuid": "ba7d6ebb_9915feb4",
+      "revId": "de87f2ae5c000900d10ba49f7247bbd0b3e229eb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
