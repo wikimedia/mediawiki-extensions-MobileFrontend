@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "59b894cf_480fdfe3",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 600,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2018-11-29T17:16:57Z",
+      "side": 0,
+      "message": "This will cause a whole bunch of cache misses initially. Is that desirable? My guess is that it\u0027s 👌 as the cache expiry is only 1 hour and we miss more than we hit [0] and no one seems to notice.\n\nIf not, then we could keep this line here with the falsy value (false or 0?) so that we\u0027ll still fetch pre-existing cached items.\n\n[0] https://grafana.wikimedia.org/dashboard/db/reading-web-mobileview-api?orgId\u003d1",
+      "revId": "79bb8d182bb95276982035cc6f60c85341fc70b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
