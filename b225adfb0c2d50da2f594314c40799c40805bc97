@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "063c2ef0_54be9c35",
+        "filename": "tests/node-qunit/mobile.startup/CtaDrawer.test.html.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-29T23:31:02Z",
+      "side": 1,
+      "message": "why not just stub the message so it\u0027s always  mobile-frontend-watchlist-cta-button-login ?",
+      "revId": "b225adfb0c2d50da2f594314c40799c40805bc97",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4f6f1d8e_f9681e64",
+        "filename": "tests/node-qunit/mobile.startup/CtaDrawer.test.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-29T23:31:02Z",
+      "side": 1,
+      "message": "So the problem I have with this is it\u0027s going to change every time CtaDrawer.hogan changes and is not tied to those templates in any way.\n\nHow about instead of doing this we a helper function for flattening HTML like this:\nhttps://phabricator.wikimedia.org/P7871\n\nI don\u0027t see much benefit in having the template of all it\u0027s being used is to validate HTML doesn\u0027t change.",
+      "revId": "b225adfb0c2d50da2f594314c40799c40805bc97",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6014f317_3cbb6c94",
+        "filename": "tests/node-qunit/mobile.startup/CtaDrawer.test.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-29T23:31:02Z",
+      "side": 1,
+      "message": "why not assert.ok( sinon.assert.match( subject.$el.get( 0 ).outerHTML, html ) ) ?",
+      "revId": "b225adfb0c2d50da2f594314c40799c40805bc97",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
