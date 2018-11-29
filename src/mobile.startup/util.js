@@ -105,6 +105,10 @@ module.exports = {
 	/**
 	 * Wrapper for jQuery.extend method. In future this can be bound to Object.assign
 	 * when support allows.
+	 *
+	 * Warning: if only one argument is supplied to util.extend(), this means the target argument
+	 * was omitted. In this case, the jQuery object itself is assumed to be the target.
+	 *
 	 * @memberof util
 	 * @instance
 	 * @return {Object}

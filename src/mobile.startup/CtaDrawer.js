@@ -6,15 +6,26 @@ var
 	Anchor = require( './Anchor' );
 
 /**
-	 * This creates the drawer at the bottom of the screen that appears when an anonymous
-	 * user tries to perform an action that requires being logged in. It presents the user
-	 * with options to log in or sign up for a new account.
-	 * @class CtaDrawer
-	 * @extends Drawer
-	 * @uses Button
-	 * @uses Icon
-	 * @uses Anchor
-	 */
+ * @typedef {string|number|boolean|undefined} QueryVal
+ * @typedef {Object.<string, QueryVal|QueryVal[]>} QueryParams
+ *
+ * @typedef {Object} Options
+ * @prop {string} [returnTo]
+ * @prop {QueryParams} [queryParams]
+ * @prop {QueryParams} [signupQueryParams]
+ */
+
+/**
+ * This creates the drawer at the bottom of the screen that appears when an anonymous
+ * user tries to perform an action that requires being logged in. It presents the user
+ * with options to log in or sign up for a new account.
+ * @class CtaDrawer
+ * @extends Drawer
+ * @uses Button
+ * @uses Icon
+ * @uses Anchor
+ * @param {...Options} options
+ */
 function CtaDrawer() {
 	Drawer.apply( this, arguments );
 }
@@ -58,6 +69,8 @@ mfExtend( CtaDrawer, Drawer, {
 		 * @instance
 		 */
 	events: util.extend( {}, Drawer.prototype.events, {
+		// Needed by Minerva's red link drawer in skins.minerva.scripts/init.js. There's no .hide
+		// class in CtaDrawer.
 		'click .hide': 'hide'
 	} ),
 	/**
@@ -66,22 +79,47 @@ mfExtend( CtaDrawer, Drawer, {
 		 * @instance
 		 */
 	preRender: function () {
-		var params = util.extend( {
-				// use wgPageName as this includes the namespace if outside Main
-				returnto: this.options.returnTo || mw.config.get( 'wgPageName' )
-			}, this.options.queryParams ),
-			signupParams = util.extend( {
-				type: 'signup'
-			}, this.options.signupQueryParams );
+		var params = redirectParams( this.options.queryParams, this.options.returnTo );
 
-		// Give the button and the anchor a default target, if it isn't set already
+		// Give the button and the anchor a default target, if it isn't set already. Buttons are
+		// customized by Minerva's red link drawer, skins.minerva.scripts/init.js.
 		if ( !this.options.progressiveButton.href ) {
 			this.options.progressiveButton.href = mw.util.getUrl( 'Special:UserLogin', params );
 		}
 		if ( !this.options.actionAnchor.href ) {
-			this.options.actionAnchor.href = mw.util.getUrl( 'Special:UserLogin', util.extend( params, signupParams ) );
+			this.options.actionAnchor.href = mw.util.getUrl(
+				'Special:UserLogin', signUpParams( params, this.options.signupQueryParams )
+			);
 		}
 	}
 } );
+
+/**
+ * Special:UserLogin post-request redirect query parameters.
+ * @param {QueryParams} params
+ * @param {string} [redirectURL]
+ * @return {QueryParams}
+ */
+function redirectParams( params, redirectURL ) {
+	return util.extend( {
+		// use wgPageName as this includes the namespace if outside Main
+		returnto: redirectURL || mw.config.get( 'wgPageName' )
+	}, params );
+}
+
+/**
+ * Special:UserLogin account creation query parameters.
+ * @param {...QueryParams} params
+ * @return {QueryParams}
+ */
+function signUpParams() {
+	[].push.call( arguments, { type: 'signup' } );
+	return util.extend.apply( util, arguments );
+}
+
+CtaDrawer.prototype.test = {
+	redirectParams: redirectParams,
+	signUpParams: signUpParams
+};
 
 module.exports = CtaDrawer;

@@ -10,9 +10,7 @@ var
 	util = require( '../../../src/mobile.startup/util' ),
 
 	// Variables
-	parent,
-	parentID = 'drawerParent',
-	copyAppendToElement;
+	parent;
 
 // util.docReady() usage appears to be necessary over
 // `document.addEventListener('DOMContentLoaded', ...)` as the latter fires before the subject's
@@ -20,6 +18,8 @@ var
 
 QUnit.module( 'MobileFrontend Drawer.js', {
 	beforeEach: function () {
+		var parentID = 'drawerParent';
+
 		sandbox = sinon.sandbox.create();
 
 		// Set up required by all Views.
@@ -34,10 +34,9 @@ QUnit.module( 'MobileFrontend Drawer.js', {
 		Drawer = require( '../../../src/mobile.startup/Drawer' );
 
 		// Rewire the prototype, not the instance, since this property is used during construction.
-		copyAppendToElement = Drawer.prototype.appendToElement;
-		Drawer.prototype.appendToElement = '#' + parentID;
+		sandbox.stub( Drawer.prototype, 'appendToElement', '#' + parentID );
 
-		// Create a disposable host Element.
+		// Create a disposable host Element. See T209129.
 		parent = document.createElement( 'div' );
 		parent.id = parentID;
 		document.documentElement.appendChild( parent );
@@ -47,10 +46,6 @@ QUnit.module( 'MobileFrontend Drawer.js', {
 		// Discard host Element.
 		document.documentElement.removeChild( parent );
 		parent = undefined;
-
-		// Restore prototype.
-		Drawer.prototype.appendToElement = copyAppendToElement;
-		copyAppendToElement = undefined;
 
 		Drawer = undefined;
 
