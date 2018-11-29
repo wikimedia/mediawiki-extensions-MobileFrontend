@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1d60960e_84d079bc",
+        "filename": "tests/node-qunit/mobile.startup/Drawer.test.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 163,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-29T00:14:58Z",
+      "side": 1,
+      "message": "I\u0027m still on the fence about doing this, but there are also benefits to doing this.",
+      "revId": "addda9fd411a32429fb9c793a94e32d2a195a53d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
