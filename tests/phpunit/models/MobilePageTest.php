@@ -9,9 +9,6 @@ use MediaWiki\Revision\RevisionRecord;
  * @covers ::__construct()
  */
 class MobilePageTest extends MediaWikiTestCase {
-	// Anonymous username is 127.0.0.1 (localhost IP addr)
-	const ANONYMOUS_USER_NAME = '127.0.0.1';
-
 	// Timestamp from MW format to Unix format
 	// TS_MW is '20181028200709' and to Unix gives
 	// '1540757229' using the wfTimestamp() function.
@@ -53,9 +50,11 @@ class MobilePageTest extends MediaWikiTestCase {
 
 	/**
 	 * Mock the RevisionStore class
+	 * @param Title $title
+	 * @param TestUser $testUser
 	 * @return RevisionStore
 	 */
-	private function mockRevisionStore( $title ) {
+	private function mockRevisionStore( Title $title, TestUser $testUser = null ) {
 		// Create a mock of the RevisionRecord class.
 		$revisionRecordMock = $this->getMockForAbstractClass(
 			RevisionRecord::class,
@@ -71,9 +70,21 @@ class MobilePageTest extends MediaWikiTestCase {
 			->method( 'getTimestamp' )
 			->willReturn( self::TS_MW );
 
-		$revisionRecordMock->expects( $this->any() )
-			->method( 'getUser' )
-			->willReturn( -1 );
+		if ( $testUser ) {
+			$userId = $testUser->getUser()->getId();
+
+			$userIdentity = $this->getMockBuilder( \MediaWiki\User\UserIdentity::class )
+				->setMethods( [ 'getId', 'getName', 'getActorId', 'equals' ] )
+				->getMock();
+
+			$userIdentity->expects( $this->any() )
+				->method( 'getId' )
+				->willReturn( $userId );
+
+			$revisionRecordMock->expects( $this->atLeastOnce() )
+				->method( 'getUser' )
+				->willReturn( $userIdentity );
+		}
 
 		// Create a mock of the RevisionStore class that returns the RevisionRecord
 		// mock when getRevisionByTitle() method is called.
@@ -175,7 +186,9 @@ class MobilePageTest extends MediaWikiTestCase {
 	 */
 	public function testGetLatestEdit() {
 		$title = $this->createTestTitle();
-		$revMock = $this->mockRevisionStore( $title );
+		$testUser = self::getTestUser();
+		$revMock = $this->mockRevisionStore( $title, $testUser );
+
 		$mobilePage = new MobilePage( $title, false );
 		$this->setService( 'RevisionStore', $revMock );
 		$actual = $mobilePage->getLatestEdit();
@@ -185,7 +198,7 @@ class MobilePageTest extends MediaWikiTestCase {
 		$this->assertArrayHasKey( 'name', $actual );
 		$this->assertArrayHasKey( 'gender', $actual );
 		$this->assertSame( self::TS_MW_TO_TS_UNIX, $actual['timestamp'] );
-		$this->assertSame( self::ANONYMOUS_USER_NAME, $actual['name'] );
+		$this->assertSame( $testUser->getUser()->getName(), $actual['name'] );
 		$this->assertSame( 'unknown', $actual['gender'] );
 	}
 
