@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bfa9f612_247a6eac",
+        "filename": "tests/node-qunit/mobile.startup/CtaDrawer.test.html.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-29T21:18:02Z",
+      "side": 1,
+      "message": "i\u0027m not really sure what\u0027s going on here, but I don\u0027t like calling this CtaDrawer.test.html.js if the HTML is not really HTML.",
+      "range": {
+        "startLine": 9,
+        "startChar": 11,
+        "endLine": 9,
+        "endChar": 16
+      },
+      "revId": "51244e563ed78b64c4aac7b7d887faacf0b61d9e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "508f9f29_3a906303",
+        "filename": "tests/node-qunit/mobile.startup/CtaDrawer.test.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-29T21:18:02Z",
+      "side": 1,
+      "message": "Could you document this, I\u0027m not eally clear what\u0027s going on here. Why is an HTML input passed to a RegExp?",
+      "revId": "51244e563ed78b64c4aac7b7d887faacf0b61d9e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "240fd83e_d328983e",
+        "filename": "tests/node-qunit/mobile.startup/CtaDrawer.test.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-29T21:18:02Z",
+      "side": 1,
+      "message": "why do we need to test the outerHTML? Why not just use indexOf and/or jQuery search selectors to test certain elements?",
+      "revId": "51244e563ed78b64c4aac7b7d887faacf0b61d9e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
