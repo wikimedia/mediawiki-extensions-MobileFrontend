@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Revision\RevisionRecord;
 
 /**
  * Retrieves information specific to a mobile page
@@ -38,7 +39,7 @@ class MobilePage {
 	}
 
 	/**
-	 * @return Revision|bool
+	 * @return RevisionRecord|bool
 	 */
 	private function getRevision() {
 		if ( $this->rev === null ) {
@@ -84,9 +85,9 @@ class MobilePage {
 		];
 		if ( $rev ) {
 			$edit['timestamp'] = wfTimestamp( TS_UNIX, $rev->getTimestamp() );
-			$userId = $rev->getUser();
-			if ( $userId ) {
-				$revUser = User::newFromId( $userId );
+			$userIdentity = $rev->getUser();
+			if ( $userIdentity ) {
+				$revUser = User::newFromIdentity( $userIdentity );
 				$edit['name'] = $revUser->getName();
 				$edit['gender'] = $revUser->getOption( 'gender' );
 			}
