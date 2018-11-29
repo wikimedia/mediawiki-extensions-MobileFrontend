@@ -10,6 +10,7 @@ mw.loader.using( [ 'schema.EditAttemptStep', 'ext.eventLogging.subscriber' ] ).t
 			saveFailure: 'save_failure'
 		},
 		timing = {},
+		trackdebug = !!mw.util.getParamValue( 'trackdebug' ),
 		/**
 		 * Edit schema
 		 * https://meta.wikimedia.org/wiki/Schema:EditAttemptStep
@@ -102,7 +103,11 @@ mw.loader.using( [ 'schema.EditAttemptStep', 'ext.eventLogging.subscriber' ] ).t
 			timing[ data.action ] = timeStamp;
 		}
 
-		schemaEditAttemptStep.log( data, mw.config.get( 'wgWMESchemaEditAttemptStepOversample' ) ? 1 : sampleRate );
+		if ( trackdebug ) {
+			mw.log( topic, data );
+		} else {
+			schemaEditAttemptStep.log( data, mw.config.get( 'wgWMESchemaEditAttemptStepOversample' ) ? 1 : sampleRate );
+		}
 	} );
 
 } );
