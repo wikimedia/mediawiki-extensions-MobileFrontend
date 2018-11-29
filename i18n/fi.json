@@ -22,7 +22,8 @@
 			"Jack Phoenix",
 			"01miki10",
 			"Pyscowicz",
-			"Surjection"
+			"Surjection",
+			"Valtlait"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Muokkaako käyttäjä mobiilikäyttöliittymän kautta",
@@ -126,7 +127,7 @@
 	"mobile-frontend-languages-404-title": "Kielten virhe",
 	"mobile-frontend-languages-header": "Kielet",
 	"mobile-frontend-languages-header-page": "$1 - Kielet",
-	"mobile-frontend-languages-nonexistent-title": "Sivua \"$1\" ei ole.",
+	"mobile-frontend-languages-nonexistent-title": "Sivua ”$1” ei ole.",
 	"mobile-frontend-languages-text": "$1 on saatavilla {{PLURAL:$2|yhdellä kielellä|$2 kielellä}}.",
 	"mobile-frontend-languages-variant-header": "{{#language:{{CONTENTLANG}}}} kielimuodot",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Ehdotetut kielet",
@@ -166,7 +167,7 @@
 	"mobile-frontend-overlay-close": "Sulje",
 	"mobile-frontend-overlay-continue": "Jatka",
 	"mobile-frontend-page-edit-summary": "<span><strong>Yhteenveto</strong> $1</span>",
-	"mobile-frontend-photo-upload-invalid-user": "Käyttäjää \"$1\" ei ole rekisteröity.",
+	"mobile-frontend-photo-upload-invalid-user": "Käyttäjää ”$1” ei ole rekisteröity.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> lataus|<span>$1</span> latausta}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "Yli 500 tallennettua tiedostoa",
 	"mobile-frontend-privacy-link-text": "Yksityisyys",
