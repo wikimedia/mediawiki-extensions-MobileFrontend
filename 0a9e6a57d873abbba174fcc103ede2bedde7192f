@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c0a0a909_399b2db5",
+        "filename": "src/mobile.startup/Overlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-11-29T22:36:07Z",
+      "side": 1,
+      "message": "By doing this, aren\u0027t we clobbering SearchOverlay props. i.e. SearchOverlay\u0027s will pass {className: \u0027search-overlay\u0027} as props but Overlay will then clobber that and make it { className: \u0027overlay\u0027 } eliminating the \u0027search-overlay\u0027 class from SearchOverlay?",
+      "range": {
+        "startLine": 27,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 5
+      },
+      "revId": "0a9e6a57d873abbba174fcc103ede2bedde7192f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
