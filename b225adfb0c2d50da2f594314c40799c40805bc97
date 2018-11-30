@@ -162,6 +162,24 @@
     },
     {
       "key": {
+        "uuid": "d8593681_09c18119",
+        "filename": "tests/node-qunit/mobile.startup/CtaDrawer.test.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-30T19:54:53Z",
+      "side": 1,
+      "message": "Summary: I think we should give this approach a fair trial and don\u0027t understand all the resistance.\n\n\u003e Yeh but there\u0027s still regex strings in that which are not valid html.  Maybe CtaDrawer.test.regex might make a better name but even with that change I worry this test is overly complicating things.\n\nThe reason the RegExps are needed is because the URL contains the path to the current page, Special:JavaScriptTest in the case of the browser QUnit tests. This URL should differ in the Node.js tests. The RegExp seems reasonable.\n\n\u003e 1) It feels like the reason we are having so much trouble here is we fake template loading in our tests so the HTML mismatches what is actually used in production. Our template loading in headless mode is a file loading hack. it doesn\u0027t represent how we do things in production. It seems we are trying hard in this patch to work around that... plus it gives the false impression we\u0027re testing end to end.\n\nI think this is independent of this patch. CtaDrawer.test.html.js is just the expectation. The input does come from the file loading hack but I think that\u0027s useful and, as it uses production Mustache files, adequately production-like for now.\n\n\u003e 2) More crucially, to me, we already test the usability of CtaDrawers in tests/browser/features/pageactions.feature reliably on every commit and against the beta cluster every day so I don\u0027t see much value in checking the actual HTML of this method. These tests at least ensure things display.\n\nI hate these slow flaky tests and never run them myself unless assigned to. One of the reasons for MFA was replacing them. The test I propose in this patchset is integration-like in that the Views may compose other Views but any code may compose other code. It may be controversial that we compare the HTML outputs generated but this isn\u0027t very different than comparing to a known good screenshot or an API response. It just happens to be nestled alongside other unit tests and runs just as fast.\n\nI know updating tests is a chore but I hate introducing bugs in seemingly independent code elsewhere when I make a change. I say we give this a go and if tests are breaking all the time, we modify or delete them. Why not try this?\n\n\u003e 3) These unit tests could be more granular and simplified to test smaller pieces (via spies on methods that are called, or querying the DOM like Nick did in https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/472193/) rather than checking the entire HTML itself. I don\u0027t feel this is something we will want to do for every View especially given the large refactors we might expect come February which will likely change HTML.\n\nThis works for testing very pointed outputs. For example, we could test that a attribute has the expected value. However, this class doesn\u0027t do much itself other than be rendered and, given its composition, it\u0027s awfully nice to have a well-formatted, preserved copy of that rendering saved in the code that breaks when one of its composed children changes so we can verify the impact is expected or not and update the test as needed.\n\n\u003e Whitespace doesn\u0027t seem to be a big deal but:\n\u003e class could change\n\u003e the hide behaviour that\u0027s used by the red link overlay (https://gerrit.wikimedia.org/r/476576) is likely to change\n\nYep, no argument, this test is brittle. However, the alternatives discussed are worse in my opinion.\n\n\u003e the href behaviour (https://gerrit.wikimedia.org/r/476579) seems important and can change with different inputs\n\nThe RegExp helps minimize changes needed.\n\n\u003e it\u0027s not clear what happens when certain options are not set.\n\nThis concern is independent of the approach. It\u0027s not clear to me either. The subject sits on top of a big hierarchy. This test just verifies the behavior of the subclass\u0027 deviations.",
+      "parentUuid": "26dbccb0_ae959862",
+      "revId": "b225adfb0c2d50da2f594314c40799c40805bc97",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6014f317_3cbb6c94",
         "filename": "tests/node-qunit/mobile.startup/CtaDrawer.test.js",
         "patchSetId": 3
