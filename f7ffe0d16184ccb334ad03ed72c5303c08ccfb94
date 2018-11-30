@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d7561575_19acbb8f",
+        "filename": "src/mobile.startup/View.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-11-30T11:04:52Z",
+      "side": 1,
+      "message": "I think `className` is confusing here since that\u0027s also the name of `this.className`. Maybe `combinedClasses` instead?",
+      "range": {
+        "startLine": 206,
+        "startChar": 6,
+        "endLine": 206,
+        "endChar": 15
+      },
+      "revId": "f7ffe0d16184ccb334ad03ed72c5303c08ccfb94",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f04939d3_6e632fab",
+        "filename": "src/mobile.startup/View.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-11-30T11:04:52Z",
+      "side": 1,
+      "message": "If we\u0027re checking for `this.className` before `props.className`, shouldn\u0027t we follow the same order for `isBorderBox`?",
+      "revId": "f7ffe0d16184ccb334ad03ed72c5303c08ccfb94",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
