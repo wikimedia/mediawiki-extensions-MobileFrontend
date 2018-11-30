@@ -73,6 +73,30 @@
     },
     {
       "key": {
+        "uuid": "ae2f4897_873edab3",
+        "filename": "tests/node-qunit/mobile.startup/CtaDrawer.test.html.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-30T15:25:52Z",
+      "side": 1,
+      "message": "No, QUnit tests running in the browser.",
+      "parentUuid": "2f2e2890_7c63a408",
+      "range": {
+        "startLine": 9,
+        "startChar": 11,
+        "endLine": 9,
+        "endChar": 16
+      },
+      "revId": "51244e563ed78b64c4aac7b7d887faacf0b61d9e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "508f9f29_3a906303",
         "filename": "tests/node-qunit/mobile.startup/CtaDrawer.test.js",
         "patchSetId": 2

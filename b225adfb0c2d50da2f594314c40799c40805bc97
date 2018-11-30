@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "3a4224d4_45c198bc",
+        "filename": "tests/node-qunit/mobile.startup/CtaDrawer.test.html.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-30T15:25:52Z",
+      "side": 1,
+      "message": "I wanted to avoid writing extra code that only supports our weird QUnit browser tests. Since I have a regex here already, this was perfect.",
+      "parentUuid": "063c2ef0_54be9c35",
+      "revId": "b225adfb0c2d50da2f594314c40799c40805bc97",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4f6f1d8e_f9681e64",
         "filename": "tests/node-qunit/mobile.startup/CtaDrawer.test.js",
         "patchSetId": 3
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "f0474d7c_42f3f969",
+        "filename": "tests/node-qunit/mobile.startup/CtaDrawer.test.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-30T15:25:52Z",
+      "side": 1,
+      "message": "\u003e So the problem I have with this is it\u0027s going to change every time CtaDrawer.hogan changes and is not tied to those templates in any way.\n\nIsn\u0027t this is a problem with testing the HTML of any our components?\n\n\u003e https://phabricator.wikimedia.org/P7871\n\u003e \u0027\u003cdiv class\u003d\"drawer position-fixed view-border-box\"\u003e\u003cdiv class\u003d\"mw-ui-icon mw-ui-icon-mf-arrow mw-ui-icon-element cancel\" title\u003d\"\"\u003e\u003c/div\u003e\u003cp\u003e\u003c/p\u003e\u003ca href\u003d\"Special:UserLogin\" class\u003d\"mw-ui-button mw-ui-progressive \"\u003emobile-frontend-watchlist-cta-button-login\u003c/a\u003e\u003cdiv\u003e\u003ca href\u003d\"Special:UserLogin\" class\u003d\"mw-ui-anchor mw-ui-progressive \"\u003emobile-frontend-watchlist-cta-button-signup\u003c/a\u003e\u003c/div\u003e\u003c/div\u003e\u0027\n\nThis is that mile long string option I mentioned I wanted to avoid. Keeping some sensible formatting seems vastly superior to me and is quite similar indeed to the code you yourself wrote in PageInputs.html.js.\n\n\u003e function stripWhitespaceHTML( str ) {\n\u003e \treturn str.replace( /\\s+/g, \u0027 \u0027 )\n\u003e \t\t// strip spaces before opening tags\n\u003e \t\t.replace( / \u003c/g, \u0027\u003c\u0027 );\n\u003e }\n\nHow is this better than the approach I\u0027ve suggested? You\u0027ve simply switched what we\u0027re RegExp-ing and stripped whitespace instead of allowing it.\n\n\u003e I don\u0027t see much benefit in having the template of all it\u0027s being used is to validate HTML doesn\u0027t change.\n\nI\u0027m happy to abandon this patch.",
+      "parentUuid": "4f6f1d8e_f9681e64",
+      "revId": "b225adfb0c2d50da2f594314c40799c40805bc97",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6014f317_3cbb6c94",
         "filename": "tests/node-qunit/mobile.startup/CtaDrawer.test.js",
         "patchSetId": 3
@@ -47,6 +83,24 @@
       "writtenOn": "2018-11-29T23:31:02Z",
       "side": 1,
       "message": "why not assert.ok( sinon.assert.match( subject.$el.get( 0 ).outerHTML, html ) ) ?",
+      "revId": "b225adfb0c2d50da2f594314c40799c40805bc97",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "de33a667_e11ffa71",
+        "filename": "tests/node-qunit/mobile.startup/CtaDrawer.test.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-30T15:25:52Z",
+      "side": 1,
+      "message": "sinon.assert.match() appears to assert correctly by itself. Asserting an assertion is less readable to me. assert.ok( true ) is just the workaround for QUnit.",
+      "parentUuid": "6014f317_3cbb6c94",
       "revId": "b225adfb0c2d50da2f594314c40799c40805bc97",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
