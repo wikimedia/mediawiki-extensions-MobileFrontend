@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6bbd2339_ca36f76d",
+        "filename": "resources/mobile.special.nearby.scripts/nearby.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-30T16:03:34Z",
+      "side": 1,
+      "message": "I\u0027ve updated this to JQuery.Deferred\u003cmw.Api\u003e.",
+      "range": {
+        "startLine": 92,
+        "startChar": 13,
+        "endLine": 92,
+        "endChar": 28
+      },
+      "revId": "369bf841aa812fef897892e5a621e6f24ce53fc4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
