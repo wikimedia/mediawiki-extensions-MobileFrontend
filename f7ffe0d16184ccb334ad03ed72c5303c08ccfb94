@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "04a5d93d_d24ba6c2",
+        "filename": "src/mobile.startup/View.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-30T17:41:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d7561575_19acbb8f",
+      "range": {
+        "startLine": 206,
+        "startChar": 6,
+        "endLine": 206,
+        "endChar": 15
+      },
+      "revId": "f7ffe0d16184ccb334ad03ed72c5303c08ccfb94",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f04939d3_6e632fab",
         "filename": "src/mobile.startup/View.js",
         "patchSetId": 3
@@ -36,6 +60,24 @@
       "writtenOn": "2018-11-30T11:04:52Z",
       "side": 1,
       "message": "If we\u0027re checking for `this.className` before `props.className`, shouldn\u0027t we follow the same order for `isBorderBox`?",
+      "revId": "f7ffe0d16184ccb334ad03ed72c5303c08ccfb94",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "789c0023_ddc9fd35",
+        "filename": "src/mobile.startup/View.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-30T17:41:17Z",
+      "side": 1,
+      "message": "Lemme have a look. It looks like this breaks the test so either the tests are wrong or this code is right... be back with you shortly",
+      "parentUuid": "f04939d3_6e632fab",
       "revId": "f7ffe0d16184ccb334ad03ed72c5303c08ccfb94",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
