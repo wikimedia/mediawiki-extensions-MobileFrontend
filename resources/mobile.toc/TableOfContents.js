@@ -1,5 +1,6 @@
 ( function ( M ) {
 	var View = M.require( 'mobile.startup/View' ),
+		util = M.require( 'mobile.startup/util' ),
 		Icon = M.require( 'mobile.startup/Icon' );
 
 	/**
@@ -7,16 +8,18 @@
 	 * @class TableOfContents
 	 * @extends View
 	 * @uses Icon
+	 * @param {Object} props
+	 * @param {Section[]} props.sections
 	 */
-	function TableOfContents() {
-		View.call( this, {
+	function TableOfContents( props ) {
+		View.call( this, util.extend( {
 			className: 'toc-mobile',
 			tocIcon: new Icon( {
 				name: 'toc',
 				additionalClassNames: 'toc-button'
 			} ).toHtmlString(),
 			contentsMsg: mw.msg( 'toc' )
-		} );
+		}, props ) );
 	}
 
 	OO.mfExtend( TableOfContents, View, {
