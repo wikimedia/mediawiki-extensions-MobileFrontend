@@ -48,6 +48,30 @@
     },
     {
       "key": {
+        "uuid": "c47b90aa_992288cd",
+        "filename": "resources/mobile.editor.common/EditorOverlayBase.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-30T18:24:08Z",
+      "side": 1,
+      "message": "This function is already ignoring a bunch of properties being passed (e.g. placeholder gets trumped if isNewPage is eyet)\n\nFor completeness and predictably yes we probably should be setting this using util.extend, but I\u0027d hope we wouldn\u0027t use isBorderBox on things that extend this class!\n\nWe should work towards ridding ourselves of this class altogether.",
+      "parentUuid": "691dcfed_112ba142",
+      "range": {
+        "startLine": 58,
+        "startChar": 2,
+        "endLine": 58,
+        "endChar": 30
+      },
+      "revId": "8b195e637a5a745e4ad2ad6027c3b3bd47be5ab5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f07ea13c_6b6ee798",
         "filename": "resources/mobile.notifications.overlay/NotificationsOverlay.js",
         "patchSetId": 4
