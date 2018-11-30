@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "f40112a0_db1698b3",
+        "filename": "tests/node-qunit/mobile.startup/CtaDrawer.test.html.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-30T17:22:42Z",
+      "side": 1,
+      "message": "Stubbed.",
+      "parentUuid": "a12376bc_9b6cc817",
+      "revId": "b225adfb0c2d50da2f594314c40799c40805bc97",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4f6f1d8e_f9681e64",
         "filename": "tests/node-qunit/mobile.startup/CtaDrawer.test.js",
         "patchSetId": 3
@@ -108,6 +126,24 @@
     },
     {
       "key": {
+        "uuid": "c673a60d_fb2ec127",
+        "filename": "tests/node-qunit/mobile.startup/CtaDrawer.test.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-30T17:22:42Z",
+      "side": 1,
+      "message": "\u003e It took me a while to just understand this test.\n\nIf I can\u0027t read a string then I won\u0027t. The string suggested is over 300 characters long. On a single line, it\u0027s definitely in the \"won\u0027t\" bucket. The approach I\u0027ve suggested may take an upfront 5 minute investment to understand how it\u0027s wired in but then it\u0027s easily readable and editable. A formatted string is a clear readability win in my opinion.\n\n\u003e When I see a file like CtaDrawer.test.html.js I expect it to just be HTML and when I see it out of context (e.g. in gerrit/git diff) it surprises me. When I see it here I realise it\u0027s actually a RegEx (and all the mental tax that comes with understanding a RegEx.) and then I wonder why...\n\nI\u0027ve removed the two label RegExps...",
+      "parentUuid": "452a66f9_38c74ef8",
+      "revId": "b225adfb0c2d50da2f594314c40799c40805bc97",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6014f317_3cbb6c94",
         "filename": "tests/node-qunit/mobile.startup/CtaDrawer.test.js",
         "patchSetId": 3
@@ -155,6 +191,24 @@
       "side": 1,
       "message": "Okay. was curious as i\u0027m only used to seeing this line inside async callbacks\n\nSeems strange that you have to do assert.ok( true ). I assume above throws an exception if there is a problem?\n\nIs this something solved in a future qunit upgrade?",
       "parentUuid": "de33a667_e11ffa71",
+      "revId": "b225adfb0c2d50da2f594314c40799c40805bc97",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "18f77f66_1663caed",
+        "filename": "tests/node-qunit/mobile.startup/CtaDrawer.test.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-30T17:22:42Z",
+      "side": 1,
+      "message": "assert.expect(0) is preferable but unfortunately seems to behave differently in the browser. I\u0027m not interested in investigating in QUnit / Sinon.JS interactions since we\u0027re so many versions behind on the latter.\n\nWhere an assertion is used, I try to keep it near the termination of the test. For async tests, this is in the callback.",
+      "parentUuid": "ecfec22e_c947d2e1",
       "revId": "b225adfb0c2d50da2f594314c40799c40805bc97",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
