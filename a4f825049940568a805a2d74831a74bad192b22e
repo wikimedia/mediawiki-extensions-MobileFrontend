@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e47a937_ab59ae27",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-30T18:54:56Z",
+      "side": 1,
+      "message": "It oes look like it\u0027s being used in the \"No thanks\" link in the red link overlay. (when I visit http://localhost:8888/w/index.php/Townrow_Peak and click a red link)\n\nThis was pulled out in Minerva during the migration.\n\nThis is super confusing.\nThis should be a property passed by that code in Minerva (which https://gerrit.wikimedia.org/r/468188 would make  possible)",
+      "revId": "a4f825049940568a805a2d74831a74bad192b22e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
