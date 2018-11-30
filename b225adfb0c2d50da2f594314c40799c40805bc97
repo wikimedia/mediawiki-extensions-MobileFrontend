@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "608e65f7_d74df75e",
+        "filename": "tests/node-qunit/mobile.startup/CtaDrawer.test.html.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-30T21:54:40Z",
+      "side": 1,
+      "message": "given this is the output of a template property, I\u0027m not sure why we can\u0027t set this ourselves.\n\nWe can also stub the mw.util.getUrl call as well.\nNote that Special:Userlogin is also not always the URL for the login page depending on your configuration (it\u0027s impacted by language for instance).",
+      "range": {
+        "startLine": 9,
+        "startChar": 11,
+        "endLine": 9,
+        "endChar": 38
+      },
+      "revId": "b225adfb0c2d50da2f594314c40799c40805bc97",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "063c2ef0_54be9c35",
         "filename": "tests/node-qunit/mobile.startup/CtaDrawer.test.html.js",
         "patchSetId": 3
@@ -67,6 +90,24 @@
       "side": 1,
       "message": "Stubbed.",
       "parentUuid": "a12376bc_9b6cc817",
+      "revId": "b225adfb0c2d50da2f594314c40799c40805bc97",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "51a607b5_e18adb16",
+        "filename": "tests/node-qunit/mobile.startup/CtaDrawer.test.html.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-30T21:54:40Z",
+      "side": 1,
+      "message": "I\u0027m not seeing this stubbed in PS7?\n\nAnother reason to do this is that mediawiki messages can and will change AND we support multiple languages.\n\nFor instance, if a translator decided to change \"Log in\" to \"Sign in\" all our tests would fail. It\u0027s safer in both environments to stub rather than resorting to this regex. You can also set wgLanguageCode to \u0027fr\u0027 and this will also break. I imagine Piotr is running in Polish so let\u0027s not break those tests for him.\n\nWe might also consider\nreplacing \nmsg: function ( id ) { return id; },\nwith a noop to encourage this pattern of stubbing messages.",
+      "parentUuid": "f40112a0_db1698b3",
       "revId": "b225adfb0c2d50da2f594314c40799c40805bc97",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -174,6 +215,24 @@
       "side": 1,
       "message": "Summary: I think we should give this approach a fair trial and don\u0027t understand all the resistance.\n\n\u003e Yeh but there\u0027s still regex strings in that which are not valid html.  Maybe CtaDrawer.test.regex might make a better name but even with that change I worry this test is overly complicating things.\n\nThe reason the RegExps are needed is because the URL contains the path to the current page, Special:JavaScriptTest in the case of the browser QUnit tests. This URL should differ in the Node.js tests. The RegExp seems reasonable.\n\n\u003e 1) It feels like the reason we are having so much trouble here is we fake template loading in our tests so the HTML mismatches what is actually used in production. Our template loading in headless mode is a file loading hack. it doesn\u0027t represent how we do things in production. It seems we are trying hard in this patch to work around that... plus it gives the false impression we\u0027re testing end to end.\n\nI think this is independent of this patch. CtaDrawer.test.html.js is just the expectation. The input does come from the file loading hack but I think that\u0027s useful and, as it uses production Mustache files, adequately production-like for now.\n\n\u003e 2) More crucially, to me, we already test the usability of CtaDrawers in tests/browser/features/pageactions.feature reliably on every commit and against the beta cluster every day so I don\u0027t see much value in checking the actual HTML of this method. These tests at least ensure things display.\n\nI hate these slow flaky tests and never run them myself unless assigned to. One of the reasons for MFA was replacing them. The test I propose in this patchset is integration-like in that the Views may compose other Views but any code may compose other code. It may be controversial that we compare the HTML outputs generated but this isn\u0027t very different than comparing to a known good screenshot or an API response. It just happens to be nestled alongside other unit tests and runs just as fast.\n\nI know updating tests is a chore but I hate introducing bugs in seemingly independent code elsewhere when I make a change. I say we give this a go and if tests are breaking all the time, we modify or delete them. Why not try this?\n\n\u003e 3) These unit tests could be more granular and simplified to test smaller pieces (via spies on methods that are called, or querying the DOM like Nick did in https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/472193/) rather than checking the entire HTML itself. I don\u0027t feel this is something we will want to do for every View especially given the large refactors we might expect come February which will likely change HTML.\n\nThis works for testing very pointed outputs. For example, we could test that a attribute has the expected value. However, this class doesn\u0027t do much itself other than be rendered and, given its composition, it\u0027s awfully nice to have a well-formatted, preserved copy of that rendering saved in the code that breaks when one of its composed children changes so we can verify the impact is expected or not and update the test as needed.\n\n\u003e Whitespace doesn\u0027t seem to be a big deal but:\n\u003e class could change\n\u003e the hide behaviour that\u0027s used by the red link overlay (https://gerrit.wikimedia.org/r/476576) is likely to change\n\nYep, no argument, this test is brittle. However, the alternatives discussed are worse in my opinion.\n\n\u003e the href behaviour (https://gerrit.wikimedia.org/r/476579) seems important and can change with different inputs\n\nThe RegExp helps minimize changes needed.\n\n\u003e it\u0027s not clear what happens when certain options are not set.\n\nThis concern is independent of the approach. It\u0027s not clear to me either. The subject sits on top of a big hierarchy. This test just verifies the behavior of the subclass\u0027 deviations.",
       "parentUuid": "26dbccb0_ae959862",
+      "revId": "b225adfb0c2d50da2f594314c40799c40805bc97",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c5b36b85_6641d5b6",
+        "filename": "tests/node-qunit/mobile.startup/CtaDrawer.test.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-30T21:54:40Z",
+      "side": 1,
+      "message": "\u003e Summary: I think we should give this approach a fair trial and don\u0027t understand all the resistance.\n\nI\u0027m sorry you feel that ways and that I\u0027m not being fair.\n\nIn case it wasn\u0027t clear, while I don\u0027t share the idea that testing output HTML of a view is useful, I\u0027m happy to give /that/ a go and I\u0027m not blocking that from happening.\n\nIf I reflect on what my blocking concerns are about this patch, I think I can boil it down to 1 thing:\nhtml \u003d new RegExp( require( \u0027./CtaDrawer.test.html\u0027 ).replace( /\\s+/g, \u0027\\\\s*\u0027 ) );\nshould become\nrequire( \u0027./CtaDrawer.test.html\u0027 ).replace( /\\s+/g, \u0027\\\\s*\u0027 )\n\nThis looks very achievable without compromising on what you are trying to achieve by doing the following:\n\n1) Stub the mw.msg and make this output predictable (while we support Special:JavaScript/qunit this is important and whether we like it or not we need to support that)\n2) Stub mw.util.getUrl so the URL is predictable for the same reasons.\n\nSee my comment in the other file to why this important (language and configuration)",
+      "parentUuid": "d8593681_09c18119",
       "revId": "b225adfb0c2d50da2f594314c40799c40805bc97",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
