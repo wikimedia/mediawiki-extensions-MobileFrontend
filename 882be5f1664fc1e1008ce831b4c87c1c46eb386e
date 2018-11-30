@@ -22,6 +22,30 @@
       "revId": "882be5f1664fc1e1008ce831b4c87c1c46eb386e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2a2c8ef4_11f32ef1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-30T17:49:40Z",
+      "side": 1,
+      "message": "Also, this can cause patches that rebase cleanly to unexpectedly fail in CI due to our gate tests.",
+      "parentUuid": "574787d4_5bf663ce",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 7
+      },
+      "revId": "882be5f1664fc1e1008ce831b4c87c1c46eb386e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
