@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "873c4be4_49d4ae53",
+        "filename": "src/mobile.startup/View.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-11-30T01:03:52Z",
+      "side": 1,
+      "message": "I\u0027m confused on what the intended purpose of the deprecation message is.\n\nCurrently, lines like 225 \u0026 226 in View\u0027s own _postInitialize method querying `this.isBorderBox` and `this.className` will trigger this message. (I noticed this on the Watchstar console messages)\n\nIf the intended purpose of this is to stop classes that inherit from View from setting className \u0026 isBorderBox on their prototype, would it be better to change this to mw.log.warn instead? \n\nIf the intended purpose of this is to stop classes from querying isBorderBox and className properties that belong to other classes, would it be better to put this below the this.initialize.apply in order to stop internal calls from triggering it?",
+      "range": {
+        "startLine": 94,
+        "startChar": 3,
+        "endLine": 94,
+        "endChar": 54
+      },
+      "revId": "e73f679f941a149078f4d6c136e7fe03226f070b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
