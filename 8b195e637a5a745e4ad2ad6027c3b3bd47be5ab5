@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "691dcfed_112ba142",
+        "filename": "resources/mobile.editor.common/EditorOverlayBase.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-11-30T17:46:35Z",
+      "side": 1,
+      "message": "Shouldn\u0027t we only set this if isBorderBox is undefined on options?  Currently, I think EditorOverlayBase will overwrite any isBorderBox option passed down (e.g. if EditorOverlay passed isBorderBox, it would be clobbered by this line)",
+      "range": {
+        "startLine": 58,
+        "startChar": 2,
+        "endLine": 58,
+        "endChar": 30
+      },
+      "revId": "8b195e637a5a745e4ad2ad6027c3b3bd47be5ab5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
