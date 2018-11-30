@@ -22,6 +22,30 @@
       "revId": "e73f679f941a149078f4d6c136e7fe03226f070b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1656efe8_970855ea",
+        "filename": "src/mobile.startup/View.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-30T01:10:28Z",
+      "side": 1,
+      "message": "The intention is to log a warning whenever these values are accessed.\n\nChecking if they are set once and calling mw.log.warn  within this function would also work.\n\n\nI believe this.className triggers the warning but using with an operator won\u0027t e.g. typeof this.className \u003d\u003d\u003d undefined ... but I may be wrong..\n\n\nHope this makes clear what my intention was as I suspect I won\u0027t be around to see this one through to the finish line.",
+      "parentUuid": "873c4be4_49d4ae53",
+      "range": {
+        "startLine": 94,
+        "startChar": 3,
+        "endLine": 94,
+        "endChar": 54
+      },
+      "revId": "e73f679f941a149078f4d6c136e7fe03226f070b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
