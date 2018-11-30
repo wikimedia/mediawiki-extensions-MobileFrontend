@@ -70,6 +70,30 @@
       "revId": "e73f679f941a149078f4d6c136e7fe03226f070b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f9d73ede_d309752c",
+        "filename": "src/mobile.startup/View.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-11-30T20:15:42Z",
+      "side": 1,
+      "message": "Thanks for the explanation. My concern was just that it was a little too noisy. \n\nIf you start webpack in dev mode (npm start) on this patch and check the chrome console, you\u0027ll see two className deprecation warnings both stemming from Watchstar and they are triggered by View\u0027s own queries of this.className in its _postInitialize method. That\u0027s why I was wondering if it would be better to just use mw.log.warn here instead - that way it would only warn classes that are using className/isBorderBox on their prototype and inheriting from View.\n\nI don\u0027t think it\u0027s a big deal though especially considering that this deprecation notice will hopefully be short lived.",
+      "parentUuid": "a4e400aa_4331f490",
+      "range": {
+        "startLine": 94,
+        "startChar": 3,
+        "endLine": 94,
+        "endChar": 54
+      },
+      "revId": "e73f679f941a149078f4d6c136e7fe03226f070b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
