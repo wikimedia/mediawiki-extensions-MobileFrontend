@@ -144,6 +144,24 @@
     },
     {
       "key": {
+        "uuid": "26dbccb0_ae959862",
+        "filename": "tests/node-qunit/mobile.startup/CtaDrawer.test.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-30T19:13:33Z",
+      "side": 1,
+      "message": "Yeh but there\u0027s still regex strings in that which are not valid html.  Maybe CtaDrawer.test.regex might make a better name but even with that change I worry this test is overly complicating things.\n\n1) It feels like the reason we are having so much trouble here is we fake template loading in our tests so the HTML mismatches what is actually used in production. Our template loading in headless mode is a file loading hack. it doesn\u0027t represent how we do things in production. It seems we are trying hard in this patch to work around that... plus it gives the false impression we\u0027re testing end to end.\n\n2) More crucially, to me, we already test the usability of CtaDrawers in tests/browser/features/pageactions.feature reliably on every commit and against the beta cluster every day so I don\u0027t see much value in checking the actual HTML of this method. These tests at least ensure things display.\n\n3) These unit tests could be more granular and simplified to test smaller pieces (via spies on methods that are called, or querying the DOM like Nick did in https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/472193/) rather than checking the entire HTML itself. I don\u0027t feel this is something we will want to do for every View especially given the large refactors we might expect come February which will likely change HTML.\n\nThings that would make a refactor safer would be identifying upfront what can and what can\u0027t change. Whitespace doesn\u0027t seem to be a big deal but:\n* class could change\n* the hide behaviour that\u0027s used by the red link overlay (https://gerrit.wikimedia.org/r/476576) is likely to change\n* the href behaviour (https://gerrit.wikimedia.org/r/476579) seems important and can change with different inputs\n* it\u0027s not clear what happens when certain options are not set.\n\nThese seem more useful than checking the HTML.\n\nI\u0027ll let others chime in but that\u0027s where I stand on this change and testing View\u0027s in general (https://phabricator.wikimedia.org/T209126) which I guess is what we\u0027re trying to work out here :).",
+      "parentUuid": "c673a60d_fb2ec127",
+      "revId": "b225adfb0c2d50da2f594314c40799c40805bc97",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6014f317_3cbb6c94",
         "filename": "tests/node-qunit/mobile.startup/CtaDrawer.test.js",
         "patchSetId": 3
