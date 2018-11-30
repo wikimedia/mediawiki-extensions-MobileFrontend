@@ -7,17 +7,17 @@
 	/**
 	 * @class BetaOptinPanel
 	 * @extends Panel
+	 * @param {Object} props
 	 */
-	function BetaOptinPanel() {
-		Panel.apply( this, arguments );
+	function BetaOptinPanel( props ) {
+		Panel.call( this,
+			util.extend( {
+				className: 'panel panel-inline visible'
+			}, props )
+		);
 	}
 
 	OO.mfExtend( BetaOptinPanel, Panel, {
-		/**
-		 * @memberof BetaOptinPanel
-		 * @instance
-		 */
-		className: 'panel panel-inline visible',
 		/**
 		 * @memberof BetaOptinPanel
 		 * @instance

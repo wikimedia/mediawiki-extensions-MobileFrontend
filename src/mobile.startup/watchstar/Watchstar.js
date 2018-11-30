@@ -1,6 +1,7 @@
 var View = require( '../View' ),
 	WatchstarGateway = require( './WatchstarGateway' ),
 	icons = require( '../icons' ),
+	util = require( '../util' ),
 	mfExtend = require( '../mfExtend' ),
 	toast = require( '../toast' ),
 	user = mw.user,
@@ -19,8 +20,12 @@ var View = require( '../View' ),
  *
  * @param {Object} options Configuration options
  */
-function Watchstar() {
-	View.apply( this, arguments );
+function Watchstar( options ) {
+	View.call( this,
+		util.extend( {
+			className: icons.watchIcon().getClassName()
+		}, options )
+	);
 }
 
 mfExtend( Watchstar, View, {
@@ -63,11 +68,6 @@ mfExtend( Watchstar, View, {
 			warning: 'mobile-frontend-watchlist-signup-action'
 		}
 	},
-	/**
-	 * @memberof Watchstar
-	 * @instance
-	 */
-	className: icons.watchIcon().getClassName(),
 	/**
 	 * @memberof Watchstar
 	 * @instance

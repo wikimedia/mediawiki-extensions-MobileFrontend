@@ -16,12 +16,13 @@
 		var modelManager, unreadCounter, wrapperWidget,
 			self = this,
 			options = util.extend( {}, {
-				isBorderBox: false
+				isBorderBox: false,
+				className: 'overlay notifications-overlay navigation-drawer'
 			}, params ),
 			maxNotificationCount = mw.config.get( 'wgEchoMaxNotificationCount' ),
 			echoApi = new mw.echo.api.EchoApi();
 
-		Overlay.apply( this, options );
+		Overlay.call( this, options );
 
 		// Anchor tag that corresponds to a notifications badge
 		this.badge = options.badge;
@@ -99,7 +100,6 @@
 	};
 
 	OO.mfExtend( NotificationsOverlay, Overlay, {
-		className: 'overlay notifications-overlay navigation-drawer',
 		/**
 		 * @memberof NotificationsOverlay
 		 * @instance
