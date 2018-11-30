@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "a12376bc_9b6cc817",
+        "filename": "tests/node-qunit/mobile.startup/CtaDrawer.test.html.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-30T15:48:10Z",
+      "side": 1,
+      "message": "Personally it confuses me seeing mobile-frontend-watchlist-cta-button-login here as I have to work out where it comes from.\n\nStubbing would make that explicit and I see that as useful for our headless unit tests.\n\nThe lack of stubbing here is made this file into a weird regex which makes things even more confusing.",
+      "parentUuid": "3a4224d4_45c198bc",
+      "revId": "b225adfb0c2d50da2f594314c40799c40805bc97",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4f6f1d8e_f9681e64",
         "filename": "tests/node-qunit/mobile.startup/CtaDrawer.test.js",
         "patchSetId": 3
@@ -72,6 +90,24 @@
     },
     {
       "key": {
+        "uuid": "452a66f9_38c74ef8",
+        "filename": "tests/node-qunit/mobile.startup/CtaDrawer.test.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-30T15:48:10Z",
+      "side": 1,
+      "message": "FWIW I don\u0027t see any problems with a long string but I can also see why we might want to avoid that. I don\u0027t feel strongly either way, but if  the goal is just to check this HTML it seems like a lot of work to avoid writing a long string and a lot of work to test the output HTML. It took me a while to just understand this test.\n\nWhen I see a file like CtaDrawer.test.html.js I expect it to just be HTML and when I see it out of context (e.g. in gerrit/git diff) it surprises me. When I see it here I realise it\u0027s actually a RegEx (and all the mental tax that comes with understanding a RegEx.) and then I wonder why...\n\nMy thought was if you had a named function explaining what\u0027s going on here, and a pure HTML input, there would be less room for misunderstanding / confusion.",
+      "parentUuid": "f0474d7c_42f3f969",
+      "revId": "b225adfb0c2d50da2f594314c40799c40805bc97",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6014f317_3cbb6c94",
         "filename": "tests/node-qunit/mobile.startup/CtaDrawer.test.js",
         "patchSetId": 3
@@ -101,6 +137,24 @@
       "side": 1,
       "message": "sinon.assert.match() appears to assert correctly by itself. Asserting an assertion is less readable to me. assert.ok( true ) is just the workaround for QUnit.",
       "parentUuid": "6014f317_3cbb6c94",
+      "revId": "b225adfb0c2d50da2f594314c40799c40805bc97",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ecfec22e_c947d2e1",
+        "filename": "tests/node-qunit/mobile.startup/CtaDrawer.test.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-30T15:48:10Z",
+      "side": 1,
+      "message": "Okay. was curious as i\u0027m only used to seeing this line inside async callbacks\n\nSeems strange that you have to do assert.ok( true ). I assume above throws an exception if there is a problem?\n\nIs this something solved in a future qunit upgrade?",
+      "parentUuid": "de33a667_e11ffa71",
       "revId": "b225adfb0c2d50da2f594314c40799c40805bc97",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
