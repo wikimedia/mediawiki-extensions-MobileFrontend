@@ -56,12 +56,26 @@ module.exports = {
 			additionalClassNames: 'spinner loading'
 		} ) );
 	},
+	/**
+	 * Gets a non-filled watch star icon.
+	 *
+	 * @memberof icons
+	 * @instance
+	 * @return {Icon}
+	 */
 	watchIcon: function () {
 		return new this.Icon( {
 			name: 'watch',
 			additionalClassNames: 'watch-this-article'
 		} );
 	},
+	/**
+	 * Gets a filled watch star icon.
+	 *
+	 * @memberof icons
+	 * @instance
+	 * @return {Icon}
+	 */
 	watchedIcon: function () {
 		return new this.Icon( {
 			name: 'watched',
