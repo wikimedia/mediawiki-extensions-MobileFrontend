@@ -80,7 +80,7 @@
 	"mobile-frontend-editor-terms-link": "[$1 شرائط استعمال]",
 	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|کیا آپ واقعی {{SITENAME}} پر نیا صفحہ تخلیق کرنا چاہتے ہیں}}؟",
 	"mobile-frontend-editor-placeholder": "یہ قطعہ خالی ہے۔ اس کی توسیع میں پہل کریں!",
-	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|آپ {{SITENAME}} نیا صفحہ تخلیق کررہے ہیں}}!",
+	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|آپ}} {{SITENAME}} پر نیا صفحہ تخلیق کر رہے ہیں!",
 	"mobile-frontend-editor-previewing-page": "<span><strong>نمائش</strong> $1</span>",
 	"mobile-frontend-editor-redirect-title": "خانہ ترمیم کی جانب مراجعت کر رہے ہیں...",
 	"mobile-frontend-editor-save": "محفوظ",
