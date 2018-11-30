@@ -89,12 +89,7 @@ mfExtend( Overlay, View, {
 	 */
 	defaults: {
 		saveMsg: mw.msg( 'mobile-frontend-editor-save' ),
-		cancelButton: new Icon( {
-			tagName: 'button',
-			name: 'overlay-close',
-			additionalClassNames: 'cancel',
-			label: mw.msg( 'mobile-frontend-overlay-close' )
-		} ).toHtmlString(),
+		cancelButton: icons.cancel().toHtmlString(),
 		backButton: new Icon( {
 			tagName: 'button',
 			name: 'back',

@@ -26,11 +26,7 @@ mfExtend( ReferencesDrawer, Drawer, {
 	 */
 	defaults: util.extend( {}, Drawer.prototype.defaults, {
 		spinner: icons.spinner().toHtmlString(),
-		cancelButton: new Icon( {
-			name: 'overlay-close-gray',
-			additionalClassNames: 'cancel',
-			label: mw.msg( 'mobile-frontend-overlay-close' )
-		} ).toHtmlString(),
+		cancelButton: icons.cancel( 'gray' ).toHtmlString(),
 		citation: new Icon( {
 			isSmall: true,
 			name: 'citation',

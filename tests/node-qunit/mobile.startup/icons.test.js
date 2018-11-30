@@ -21,6 +21,26 @@ QUnit.module( 'MobileFrontend icons.js', {
 	}
 } );
 
+QUnit.test( '#cancel()', function ( assert ) {
+	icons.cancel();
+	assert.deepEqual( spy.getCall( 0 ).args[ 0 ], {
+		tagName: 'button',
+		name: icons.CANCEL_GLYPH,
+		additionalClassNames: 'cancel',
+		label: mw.msg( 'mobile-frontend-overlay-close' )
+	}, 'Options are passed down' );
+} );
+
+QUnit.test( '#cancel(variant)', function ( assert ) {
+	icons.cancel( 'gray' );
+	assert.deepEqual( spy.getCall( 0 ).args[ 0 ], {
+		tagName: 'button',
+		name: icons.CANCEL_GLYPH + '-gray',
+		additionalClassNames: 'cancel',
+		label: mw.msg( 'mobile-frontend-overlay-close' )
+	}, 'Options are passed down' );
+} );
+
 QUnit.test( '#spinner()', function ( assert ) {
 	icons.spinner( {
 		foo: 'will be passed down',

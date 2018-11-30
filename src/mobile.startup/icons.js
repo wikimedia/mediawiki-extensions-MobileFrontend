@@ -1,4 +1,5 @@
 var
+	CANCEL_GLYPH = 'overlay-close',
 	Icon = require( './Icon' ),
 	util = require( './util' );
 
@@ -14,8 +15,28 @@ var
  * @uses Icon
  */
 module.exports = {
+	CANCEL_GLYPH: CANCEL_GLYPH,
 	// Exported to support testing and stubbing
 	Icon: Icon,
+	/**
+	 * Gets a cancel icon
+	 *
+	 * The icon should be used to inform the user that the front-end is
+	 * communicating with the back-end.
+	 * @memberof icons
+	 * @instance
+	 * @param {string} variant
+	 * @return {Icon}
+	 */
+	cancel: function ( variant ) {
+		var glyph = variant ? CANCEL_GLYPH + '-' + variant : CANCEL_GLYPH;
+		return new this.Icon( {
+			tagName: 'button',
+			name: glyph,
+			additionalClassNames: 'cancel',
+			label: mw.msg( 'mobile-frontend-overlay-close' )
+		} );
+	},
 	/**
 	 * Gets a spinner icon.
 	 *
