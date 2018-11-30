@@ -46,6 +46,30 @@
       "revId": "e73f679f941a149078f4d6c136e7fe03226f070b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a4e400aa_4331f490",
+        "filename": "src/mobile.startup/View.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-11-30T18:40:55Z",
+      "side": 1,
+      "message": "So after this patch I see several deprecated warnings about not using the property.\n\nWhen I write the patch \u003e https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/476905 Remove deprecation warnings for className usage, they go away. \n\nSo I\u0027m pretty sure this patch is working as intended.\n\nDid my explanation of how this works help?",
+      "parentUuid": "1656efe8_970855ea",
+      "range": {
+        "startLine": 94,
+        "startChar": 3,
+        "endLine": 94,
+        "endChar": 54
+      },
+      "revId": "e73f679f941a149078f4d6c136e7fe03226f070b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
