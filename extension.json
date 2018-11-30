@@ -350,7 +350,7 @@
 				"resources/mobile.startup/LoadingOverlay.less",
 				"resources/mobile.startup/drawer.less",
 				"resources/mobile.startup/ReferencesDrawer.less",
-				"resources/mobile.watchstar/watchstar.less"
+				"resources/mobile.startup/watchstar.less"
 			],
 			"scripts": [
 				"resources/dist/mobile.startup.js"
