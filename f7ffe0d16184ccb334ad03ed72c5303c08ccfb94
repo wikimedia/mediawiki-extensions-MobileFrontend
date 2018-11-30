@@ -39,6 +39,29 @@
       "revId": "f7ffe0d16184ccb334ad03ed72c5303c08ccfb94",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6b1b1aeb_be6d9284",
+        "filename": "tests/node-qunit/mobile.startup/View.test.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 241,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-11-30T17:31:34Z",
+      "side": 1,
+      "message": "Jan brought up a good point. I would expect view-border-box to not be present since ViewWithClassNameProp has isBorderBox on its prototype. Shouldn\u0027t that trump any passed in options (as className does)?",
+      "range": {
+        "startLine": 241,
+        "startChar": 10,
+        "endLine": 241,
+        "endChar": 25
+      },
+      "revId": "f7ffe0d16184ccb334ad03ed72c5303c08ccfb94",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
