@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "574787d4_5bf663ce",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-11-30T16:14:50Z",
+      "side": 1,
+      "message": "Not a big deal, of course, but I would say though that it makes it much easier to review other changes when their builds don\u0027t have to account for changes other patchsets.",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 7
+      },
+      "revId": "882be5f1664fc1e1008ce831b4c87c1c46eb386e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
