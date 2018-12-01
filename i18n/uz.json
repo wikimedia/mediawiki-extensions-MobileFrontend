@@ -4,11 +4,13 @@
 			"Abdulla",
 			"Casual",
 			"CoderSI",
-			"Sociologist"
+			"Sociologist",
+			"Malikxan"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Xavfsizlik matnini kiriting",
 	"mobile-frontend-clear-search": "Tozala",
+	"mobile-frontend-copyright": "Aksi belgilanmagan kontent $1 ostida foydalanish mumkin.",
 	"mobile-frontend-desc": "Mobil interfeys",
 	"mobile-frontend-diffview-anonymous": "Anonim foydalanuvchi",
 	"mobile-frontend-diffview-editcount": "<div>$1</div>ta tahrir",
