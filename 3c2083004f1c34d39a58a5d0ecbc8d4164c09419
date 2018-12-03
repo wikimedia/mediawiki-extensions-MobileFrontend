@@ -1,0 +1,188 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "95bae8b0_fb2ba7fe",
+        "filename": "src/mobile.startup/View.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 202,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-03T15:56:38Z",
+      "side": 1,
+      "message": "I think this should be View.",
+      "range": {
+        "startLine": 202,
+        "startChar": 12,
+        "endLine": 202,
+        "endChar": 18
+      },
+      "revId": "3c2083004f1c34d39a58a5d0ecbc8d4164c09419",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0568af27_fd53f2e2",
+        "filename": "src/mobile.startup/View.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 203,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-03T15:56:38Z",
+      "side": 1,
+      "message": "Is this a map of string|number|symbol to strings or are other values allowed like function?",
+      "range": {
+        "startLine": 203,
+        "startChar": 12,
+        "endLine": 203,
+        "endChar": 18
+      },
+      "revId": "3c2083004f1c34d39a58a5d0ecbc8d4164c09419",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0cefbf56_0c01c989",
+        "filename": "src/mobile.startup/View.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 205,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-03T15:56:38Z",
+      "side": 1,
+      "message": "Why not make this optional (default to undefined)?",
+      "range": {
+        "startLine": 205,
+        "startChar": 20,
+        "endLine": 205,
+        "endChar": 32
+      },
+      "revId": "3c2083004f1c34d39a58a5d0ecbc8d4164c09419",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1957b2f8_028bddfe",
+        "filename": "src/mobile.startup/View.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 210,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-03T15:56:38Z",
+      "side": 1,
+      "message": "I can\u0027t see a reason to use a temporary variable here. This can be rewritten to exclude the extra state:\n\n\n\t\tif ( self[ propName ] !\u003d\u003d undefined ) {\n\t\t\treturn self[ propName ];\n\t\t}\n\t\tif ( props[ propName ] !\u003d\u003d undefined ) {\n\t\t\treturn props[ propName ];\n\t\t}\n\t\treturn defaultValue;\n\nAre there any follow up TODOs that should be documented in the code like, \"Don\u0027t build on this. This is a workaround to be eliminated in T123.\"?",
+      "range": {
+        "startLine": 210,
+        "startChar": 2,
+        "endLine": 210,
+        "endChar": 33
+      },
+      "revId": "3c2083004f1c34d39a58a5d0ecbc8d4164c09419",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "080f8add_6be1ee9e",
+        "filename": "src/mobile.startup/View.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 211,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-03T15:56:38Z",
+      "side": 1,
+      "message": "I think it would be better to check for key existence rather than property values to allow for undefined values to be set.",
+      "range": {
+        "startLine": 211,
+        "startChar": 7,
+        "endLine": 211,
+        "endChar": 23
+      },
+      "revId": "3c2083004f1c34d39a58a5d0ecbc8d4164c09419",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d3bd3180_47765e0c",
+        "filename": "src/mobile.startup/View.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 229,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-03T15:56:38Z",
+      "side": 1,
+      "message": "According to the JSDocs, this should be a string, `true.toString()`.",
+      "range": {
+        "startLine": 229,
+        "startChar": 73,
+        "endLine": 229,
+        "endChar": 77
+      },
+      "revId": "3c2083004f1c34d39a58a5d0ecbc8d4164c09419",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2fa06e6c_315fdc1e",
+        "filename": "src/mobile.startup/View.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 236,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-03T15:56:38Z",
+      "side": 1,
+      "message": "This name is confusing to me. When I read \"is\", my expectations are that a boolean value will be used. I think you chose it to match the weird property name but wonder if `borderBoxClass` or something else would be more appropriate for the local usage in this function.\n\nThe variable and manual delimiter insertion could be eliminated altogether with a slight tweak:\n\n this.$el.addClass( className )\n if ( this._resolveInheritedProp( this, props, \u0027isBorderBox\u0027, true ) ) {\n   this.$el.addClass( BORDER_BOX_CLASS )\n }",
+      "range": {
+        "startLine": 236,
+        "startChar": 3,
+        "endLine": 236,
+        "endChar": 14
+      },
+      "revId": "3c2083004f1c34d39a58a5d0ecbc8d4164c09419",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8456e9ee_3343640c",
+        "filename": "tests/node-qunit/mobile.startup/View.test.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 219,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-03T15:56:38Z",
+      "side": 1,
+      "message": "I think this tests the no props case and the following tests the empty props case. Consider noting the distinction like \"className not defined on a normal View without props\" and \"className not defined on a normal View with empty props\".",
+      "range": {
+        "startLine": 219,
+        "startChar": 3,
+        "endLine": 219,
+        "endChar": 43
+      },
+      "revId": "3c2083004f1c34d39a58a5d0ecbc8d4164c09419",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
