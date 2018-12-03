@@ -114,6 +114,24 @@
     },
     {
       "key": {
+        "uuid": "367d6e42_931b629e",
+        "filename": "tests/node-qunit/mobile.startup/CtaDrawer.test.html.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-03T18:46:11Z",
+      "side": 1,
+      "message": "\u003e I\u0027m not seeing this stubbed in PS7?\n\nYeesh, I appear to have botched this in PS6. I\u0027ve double checked 5..8 and reconciled the differences in PS9.",
+      "parentUuid": "51a607b5_e18adb16",
+      "revId": "b225adfb0c2d50da2f594314c40799c40805bc97",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4f6f1d8e_f9681e64",
         "filename": "tests/node-qunit/mobile.startup/CtaDrawer.test.js",
         "patchSetId": 3
@@ -233,6 +251,24 @@
       "side": 1,
       "message": "\u003e Summary: I think we should give this approach a fair trial and don\u0027t understand all the resistance.\n\nI\u0027m sorry you feel that ways and that I\u0027m not being fair.\n\nIn case it wasn\u0027t clear, while I don\u0027t share the idea that testing output HTML of a view is useful, I\u0027m happy to give /that/ a go and I\u0027m not blocking that from happening.\n\nIf I reflect on what my blocking concerns are about this patch, I think I can boil it down to 1 thing:\nhtml \u003d new RegExp( require( \u0027./CtaDrawer.test.html\u0027 ).replace( /\\s+/g, \u0027\\\\s*\u0027 ) );\nshould become\nrequire( \u0027./CtaDrawer.test.html\u0027 ).replace( /\\s+/g, \u0027\\\\s*\u0027 )\n\nThis looks very achievable without compromising on what you are trying to achieve by doing the following:\n\n1) Stub the mw.msg and make this output predictable (while we support Special:JavaScript/qunit this is important and whether we like it or not we need to support that)\n2) Stub mw.util.getUrl so the URL is predictable for the same reasons.\n\nSee my comment in the other file to why this important (language and configuration)",
       "parentUuid": "d8593681_09c18119",
+      "revId": "b225adfb0c2d50da2f594314c40799c40805bc97",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6f5ce296_2ca6c9d5",
+        "filename": "tests/node-qunit/mobile.startup/CtaDrawer.test.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-03T18:46:11Z",
+      "side": 1,
+      "message": "\u003e require( \u0027./CtaDrawer.test.html\u0027 ).replace( /\\s+/g, \u0027\\\\s*\u0027 )\n\nDone with a caveat. There are no regular expressions in CtaDrawer.test.html.js but replacing spaces with regular expressions, `replace( /\\s+/g, \u0027\\\\s*\u0027 )`, requires a wrapping `RegExp`.",
+      "parentUuid": "c5b36b85_6641d5b6",
       "revId": "b225adfb0c2d50da2f594314c40799c40805bc97",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
