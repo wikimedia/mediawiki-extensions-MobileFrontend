@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e94bbc3a_384a9880",
+        "filename": "resources/dist/mediawiki.template.hogan.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-04T20:42:54Z",
+      "side": 1,
+      "message": "Not necessarily a blocker but do you know why these files differ? When I compare debug builds of mediawiki.template.hogan.js before and after this change, they do not. Is this an issue with our uglification? I would like to avoid unknown changes to our build products if only so we\u0027re better prepared for code-splitting and caching discussions later.",
+      "revId": "335ef77494eaa71ccbb300e2171891b1ff2cfed3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "260f30fe_4873b278",
+        "filename": "resources/mobile.init/init.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-04T20:42:54Z",
+      "side": 1,
+      "message": "What were your thoughts on picking a singleton pattern? I have no qualms with making a single instance of something but obviously we wish to avoid globals.\n\nI was thinking this could be a parameter passed in which would let us move the singleton to mobile.startup.js and eliminate its usage as a global. However, I guess we\u0027d have to do some big refactoring as soon as we move the code to source and drop the IIFE which would be a task in itself.\n\nI was just hoping to hear your insights on the approach taken. The commit message talks about injecting the dependency which I normally associate with passing from the point of instantiation to every consumer. This seems like a hybrid approach where we pass the dependency when it\u0027s practical to do so and use the global otherwise.",
+      "range": {
+        "startLine": 32,
+        "startChar": 3,
+        "endLine": 32,
+        "endChar": 21
+      },
+      "revId": "335ef77494eaa71ccbb300e2171891b1ff2cfed3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
