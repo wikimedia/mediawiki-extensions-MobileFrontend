@@ -8,11 +8,15 @@
 	 * Overlay for talk page
 	 * @extends TalkOverlayBase
 	 * @class TalkOverlay
+	 * @param {Object} options
+	 * @param {OO.EventEmitter} options.eventBus Object used to listen for
+	 * talk-discussion-added events
 	 * @uses Page
 	 * @uses TalkSectionOverlay
 	 * @uses TalkSectionAddOverlay
 	 */
-	function TalkOverlay() {
+	function TalkOverlay( options ) {
+		this.eventBus = options.eventBus;
 		TalkOverlayBase.apply( this, arguments );
 	}
 
@@ -163,7 +167,7 @@
 		 */
 		_setupAddDiscussionButton: function () {
 			var $add = this.$( '.header-action .add' );
-			M.on( 'talk-discussion-added', this._loadContent.bind( this ) );
+			this.eventBus.on( 'talk-discussion-added', this._loadContent.bind( this ) );
 			if ( !user.isAnon() ) {
 				$add.removeClass( 'hidden' );
 			} else {

@@ -35,7 +35,10 @@
 	QUnit.test( '#TalkOverlay (new page; anonymous)', function ( assert ) {
 		var options = {
 				api: this.api,
-				title: 'Talk:No exist'
+				title: 'Talk:No exist',
+				eventBus: {
+					on: function () {}
+				}
 			},
 			overlay = new TalkOverlay( options ),
 			page,
@@ -66,7 +69,10 @@
 		mw.config.set( 'wgUserName', 'FlorianSW' );
 		overlay = new TalkOverlay( {
 			api: this.api,
-			title: 'Talk:No exist'
+			title: 'Talk:No exist',
+			eventBus: {
+				on: function () {}
+			}
 		} );
 
 		assert.ok( overlay.$( '.add' ).length > 0, 'There is an "Add discussion" button' );
@@ -80,7 +86,10 @@
 	QUnit.test( '#TalkOverlay (existing page lists section headings)', function ( assert ) {
 		var overlay = new TalkOverlay( {
 			api: this.api,
-			title: 'Talk:Topic'
+			title: 'Talk:Topic',
+			eventBus: {
+				on: function () {}
+			}
 		} );
 
 		return this.getPageDeferredResolve.then( function () {
