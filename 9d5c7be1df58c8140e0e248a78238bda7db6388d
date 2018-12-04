@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bce246ed_624810fd",
+        "filename": "src/mobile.startup/View.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 208,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-04T18:40:42Z",
+      "side": 1,
+      "message": "Should this include numbers? Objects? undefined?",
+      "range": {
+        "startLine": 208,
+        "startChar": 12,
+        "endLine": 208,
+        "endChar": 26
+      },
+      "revId": "9d5c7be1df58c8140e0e248a78238bda7db6388d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6984ce73_e4aabe15",
+        "filename": "src/mobile.startup/View.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 210,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-04T18:40:42Z",
+      "side": 1,
+      "message": "This type should match the typing for defaultValue since it\u0027s a possible return path.",
+      "range": {
+        "startLine": 210,
+        "startChar": 13,
+        "endLine": 210,
+        "endChar": 19
+      },
+      "revId": "9d5c7be1df58c8140e0e248a78238bda7db6388d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "717e7e71_575babc6",
+        "filename": "src/mobile.startup/View.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 214,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-04T18:40:42Z",
+      "side": 1,
+      "message": "Do we want inheritance on props? I thought inheritance was only necessary for self.",
+      "range": {
+        "startLine": 214,
+        "startChar": 7,
+        "endLine": 214,
+        "endChar": 24
+      },
+      "revId": "9d5c7be1df58c8140e0e248a78238bda7db6388d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
