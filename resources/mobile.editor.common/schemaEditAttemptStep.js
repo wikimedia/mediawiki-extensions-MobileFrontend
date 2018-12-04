@@ -36,8 +36,8 @@
 					mw_version: mw.config.get( 'wgVersion' ),
 					platform: 'phone',
 					integration: 'page',
-					page_token: mw.user.getPageviewToken(),
-					session_token: mw.user.sessionId(),
+					page_token: user.getPageviewToken(),
+					session_token: user.sessionId(),
 					version: 1
 				}
 			);

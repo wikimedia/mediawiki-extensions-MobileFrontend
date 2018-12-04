@@ -247,7 +247,10 @@
 		"mobile.init": {
 			"dependencies": [
 				"mediawiki.experiments",
-				"mobile.startup"
+				"mediawiki.user",
+				"mediawiki.util",
+				"mobile.startup",
+				"user.tokens"
 			],
 			"targets": [
 				"mobile",
@@ -391,6 +394,7 @@
 				"mobile.editor.api",
 				"mobile.startup",
 				"mobile.messageBox",
+				"mediawiki.user",
 				"mediawiki.util",
 				"mediawiki.confirmCloseWindow",
 				"mediawiki.widgets.AbandonEditDialog"
@@ -482,8 +486,8 @@
 				"oojs-ui.styles.icons-editing-core",
 				"mediawiki.util",
 				"mediawiki.notification",
-				"mediawiki.user",
-				"mediawiki.editfont.styles"
+				"mediawiki.editfont.styles",
+				"user.options"
 			],
 			"scripts": [
 				"resources/mobile.editor.overlay/BlockMessage.js",
@@ -531,6 +535,7 @@
 				"desktop"
 			],
 			"dependencies": [
+				"mediawiki.user",
 				"mobile.startup",
 				"mobile.search.images"
 			],
@@ -574,6 +579,7 @@
 				"desktop"
 			],
 			"dependencies": [
+				"mediawiki.user",
 				"mediawiki.util",
 				"mediawiki.ui.anchor",
 				"mobile.editor.common"
@@ -852,9 +858,10 @@
 		"mobile.special.watchlist.scripts": {
 			"targets": "mobile",
 			"dependencies": [
-				"mobile.startup",
 				"mediawiki.api",
-				"mobile.watchlist"
+				"mobile.startup",
+				"mobile.watchlist",
+				"user.options"
 			],
 			"scripts": [
 				"resources/mobile.special.watchlist.scripts/watchlist.js"
@@ -943,6 +950,7 @@
 				"desktop"
 			],
 			"dependencies": [
+				"mediawiki.user",
 				"mobile.gallery",
 				"mobile.startup"
 			],
