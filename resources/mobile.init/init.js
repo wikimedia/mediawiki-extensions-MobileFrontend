@@ -1,4 +1,4 @@
-/* global jQuery */
+/* global $ */
 
 // FIXME: make this an object with a constructor to facilitate testing
 // (see https://bugzilla.wikimedia.org/show_bug.cgi?id=44264)
@@ -7,7 +7,7 @@
  * @class mw.mobileFrontend
  * @singleton
  */
-( function ( M, $, storage ) {
+( function ( M, storage ) {
 	var currentPage, skin,
 		PageGateway = M.require( 'mobile.startup/PageGateway' ),
 		BetaOptinPanel = M.require( 'mobile.init/BetaOptinPanel' ),
@@ -194,4 +194,4 @@
 	} );
 
 	/* eslint-enable no-console */
-}( mw.mobileFrontend, jQuery, mw.storage ) );
+}( mw.mobileFrontend, mw.storage ) );

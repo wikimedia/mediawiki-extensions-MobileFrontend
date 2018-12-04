@@ -1,4 +1,4 @@
-( function ( M, $ ) {
+( function ( M ) {
 	var ImageOverlay = M.require( 'mobile.mediaViewer/ImageOverlay' );
 
 	QUnit.module( 'MobileFrontend mobile.mediaViewer/ImageOverlay', {
@@ -145,4 +145,4 @@
 		} );
 	} );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

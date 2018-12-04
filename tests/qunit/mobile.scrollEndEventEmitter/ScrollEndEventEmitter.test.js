@@ -1,4 +1,4 @@
-( function ( M, $ ) {
+( function ( M ) {
 	var
 		ScrollEndEventEmitter = M.require( 'mobile.scrollEndEventEmitter/ScrollEndEventEmitter' ),
 		eventBus = M.require( 'mobile.startup/eventBusSingleton' );
@@ -62,4 +62,4 @@
 		assert.strictEqual( emitSpy.called, false, 'emit should not be called' );
 	} );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

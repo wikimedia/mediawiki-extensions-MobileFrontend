@@ -1,4 +1,4 @@
-( function ( M, $ ) {
+( function ( M ) {
 
 	var PageGateway = M.require( 'mobile.startup/PageGateway' ),
 		user = mw.user,
@@ -104,4 +104,4 @@
 		} );
 	} );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

@@ -1,5 +1,5 @@
-/* global jQuery */
-( function ( M, $ ) {
+/* global $ */
+( function ( M ) {
 	var storage = mw.storage,
 		browser = M.require( 'mobile.startup/Browser' ).getSingleton(),
 		toast = M.require( 'mobile.startup/toast' ),
@@ -172,4 +172,4 @@
 	}
 
 	mw.loader.using( 'oojs-ui-widgets' ).then( initLocalStorageElements );
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

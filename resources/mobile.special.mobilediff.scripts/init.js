@@ -1,11 +1,11 @@
-/* global jQuery */
+/* global $ */
 /*!
  * Animate patrol links to use asynchronous API requests to
  * patrol pages, rather than navigating to a different URI.
  *
  * @author Florian Schmidt <florian.schmidt.welzow@t-online.de>
  */
-( function ( M, $ ) {
+( function ( M ) {
 	var user = mw.user;
 
 	if ( !user.tokens.exists( 'patrolToken' ) ) {
@@ -68,4 +68,4 @@
 			e.preventDefault();
 		} );
 	} );
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

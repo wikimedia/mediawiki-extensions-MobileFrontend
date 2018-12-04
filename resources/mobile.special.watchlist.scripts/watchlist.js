@@ -1,5 +1,5 @@
-/* global jQuery */
-( function ( M, $ ) {
+/* global $ */
+( function ( M ) {
 	var WatchList = M.require( 'mobile.watchlist/WatchList' ),
 		eventBus = M.require( 'mobile.startup/eventBusSingleton' ),
 		VIEW_OPTION_NAME = 'mfWatchlistView',
@@ -42,4 +42,4 @@
 		}
 	} );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

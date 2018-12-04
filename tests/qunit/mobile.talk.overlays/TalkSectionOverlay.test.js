@@ -1,4 +1,4 @@
-( function ( M, $ ) {
+( function ( M ) {
 
 	var TalkSectionOverlay = M.require( 'mobile.talk.overlays/TalkSectionOverlay' ),
 		user = mw.user,
@@ -90,4 +90,4 @@
 		assert.ok( overlay.$( '.comment' ).length > 0, 'There is a visible comment box' );
 	} );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

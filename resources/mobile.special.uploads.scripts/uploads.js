@@ -1,5 +1,5 @@
-/* global jQuery */
-( function ( M, $ ) {
+/* global $ */
+( function ( M ) {
 	var
 		user = mw.user,
 		PhotoList = M.require( 'mobile.gallery/PhotoList' ),
@@ -41,4 +41,4 @@
 		}
 	}
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

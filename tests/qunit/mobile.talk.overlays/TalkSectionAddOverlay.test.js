@@ -1,4 +1,4 @@
-( function ( M, $ ) {
+( function ( M ) {
 
 	var TalkSectionAddOverlay = M.require( 'mobile.talk.overlays/TalkSectionAddOverlay' );
 
@@ -29,4 +29,4 @@
 		} );
 	} );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

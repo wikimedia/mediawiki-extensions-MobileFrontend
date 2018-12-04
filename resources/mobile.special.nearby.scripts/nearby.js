@@ -1,5 +1,5 @@
-/* global jQuery */
-( function ( M, config, msg, loader, $, EventEmitter ) {
+/* global $ */
+( function ( M, config, msg, loader ) {
 	/** @event */
 	var api,
 		NEARBY_EVENT_POST_RENDER = 'Nearby-postRender',
@@ -9,7 +9,7 @@
 		Nearby = M.require( 'mobile.nearby/Nearby' ),
 		util = M.require( 'mobile.startup/util' ),
 		$infoContainer = $( '#mf-nearby-info-holder' ),
-		eventBus = new EventEmitter(),
+		eventBus = new OO.EventEmitter(),
 		nearby,
 		options = {
 			eventBus: eventBus,
@@ -165,4 +165,4 @@
 		} );
 	} );
 
-}( mw.mobileFrontend, mw.config, mw.msg, mw.loader, jQuery, OO.EventEmitter ) );
+}( mw.mobileFrontend, mw.config, mw.msg, mw.loader ) );

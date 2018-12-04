@@ -1,4 +1,4 @@
-( function ( M, $ ) {
+( function ( M ) {
 	var CategoryGateway = M.require( 'mobile.categories.overlays/CategoryGateway' );
 
 	QUnit.module( 'MobileFrontend mobile.categories.overlays/CategoryGateway', {
@@ -63,4 +63,4 @@
 		} ), 'invalid data passed to post api request' );
 	} );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

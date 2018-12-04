@@ -1,4 +1,4 @@
-( function ( $, M ) {
+( function ( M ) {
 
 	var WatchListGateway = M.require( 'mobile.watchlist/WatchListGateway' ),
 		response = {
@@ -168,4 +168,4 @@
 		} );
 	} );
 
-}( jQuery, mw.mobileFrontend ) );
+}( mw.mobileFrontend ) );
