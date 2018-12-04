@@ -22,6 +22,30 @@
       "revId": "c34f31b29f93437281ba88e176ef86d805f3a314",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c0e31e23_4f25741a",
+        "filename": "tests/qunit/.eslintrc.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2018-12-04T22:01:32Z",
+      "side": 1,
+      "message": "That should be a separate commit.",
+      "parentUuid": "66d265c6_7d199861",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 2
+      },
+      "revId": "c34f31b29f93437281ba88e176ef86d805f3a314",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }

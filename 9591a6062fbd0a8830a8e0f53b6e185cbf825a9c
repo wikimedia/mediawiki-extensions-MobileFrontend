@@ -22,6 +22,30 @@
       "revId": "9591a6062fbd0a8830a8e0f53b6e185cbf825a9c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "934b80fc_40701b81",
+        "filename": ".eslintrc.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2018-12-04T22:01:32Z",
+      "side": 0,
+      "message": "jQuery has never been in the core config, it\u0027s just left over from before root:true was set.",
+      "parentUuid": "2270941e_85ca5ab2",
+      "range": {
+        "startLine": 6,
+        "startChar": 2,
+        "endLine": 6,
+        "endChar": 17
+      },
+      "revId": "9591a6062fbd0a8830a8e0f53b6e185cbf825a9c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
