@@ -35,8 +35,6 @@ var
 	eventBusSingleton = require( './eventBusSingleton' );
 
 mw.mobileFrontend = moduleLoader;
-mw.log.deprecate( moduleLoader, 'on', moduleLoader.on,
-	'The global EventEmitter should not be used (T156186).' );
 
 OO.mfExtend = mfExtend;
 

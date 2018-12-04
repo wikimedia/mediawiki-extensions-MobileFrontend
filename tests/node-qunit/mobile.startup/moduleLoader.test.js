@@ -1,13 +1,11 @@
 var
 	ModuleLoader,
-	oo = require( '../utils/oo' ),
 	sinon = require( 'sinon' );
 /** @type {sinon.SinonSandbox} */ var sandbox; // eslint-disable-line one-var
 
 QUnit.module( 'MobileFrontend ModuleLoader', {
 	beforeEach: function () {
 		sandbox = sinon.sandbox.create();
-		oo.setUp( sandbox, global );
 
 		ModuleLoader = require( '../../../src/mobile.startup/moduleLoader' );
 		this.loader = new ModuleLoader();

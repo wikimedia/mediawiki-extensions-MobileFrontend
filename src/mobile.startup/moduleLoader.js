@@ -5,7 +5,6 @@
  * ResourceLoader modules).
  *
  * @class ModuleLoader
- * @extends OO.EventEmitter
  */
 function ModuleLoader() {
 	/**
@@ -13,7 +12,6 @@ function ModuleLoader() {
 	 * @private
 	 */
 	this._register = {};
-	OO.EventEmitter.call( this );
 }
 
 ModuleLoader.prototype = {
@@ -99,7 +97,5 @@ ModuleLoader.prototype = {
 		mw.log.deprecate( this._register, id, obj, msg );
 	}
 };
-
-OO.mixinClass( ModuleLoader, OO.EventEmitter );
 
 module.exports = ModuleLoader;
