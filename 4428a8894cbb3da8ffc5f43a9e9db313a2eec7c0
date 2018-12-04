@@ -1,0 +1,165 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "23ca48e1_d3913631",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-12-04T14:13:31Z",
+      "side": 1,
+      "message": "ContextSource doesn\u0027t implement getSkinName, nor getIntOrNull",
+      "range": {
+        "startLine": 37,
+        "startChar": 5,
+        "endLine": 37,
+        "endChar": 35
+      },
+      "revId": "4428a8894cbb3da8ffc5f43a9e9db313a2eec7c0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "67927fa4_a9a82353",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-12-04T14:13:31Z",
+      "side": 1,
+      "message": "instead of mocking, you can provide FauxRequest class",
+      "range": {
+        "startLine": 56,
+        "startChar": 17,
+        "endLine": 56,
+        "endChar": 35
+      },
+      "revId": "4428a8894cbb3da8ffc5f43a9e9db313a2eec7c0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "19eafea4_13f744a7",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-12-04T14:13:31Z",
+      "side": 1,
+      "message": "getSkin returns an object of type `Skin`, not `ContextSource`.",
+      "range": {
+        "startLine": 59,
+        "startChar": 17,
+        "endLine": 59,
+        "endChar": 35
+      },
+      "revId": "4428a8894cbb3da8ffc5f43a9e9db313a2eec7c0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f73fe2fa_44b06f88",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-12-04T14:13:31Z",
+      "side": 1,
+      "message": "it\u0027s nice to do something like:\n\n$mockTitle-\u003eexpect($this-\u003eatLeastOnce())\n    -\u003emethod(\u0027exists\u0027)\n    -\u003ewillReturn( false );\n\nYou\u0027re creating mock and you say that function that uses it, should call `exists`.",
+      "range": {
+        "startLine": 77,
+        "startChar": 2,
+        "endLine": 77,
+        "endChar": 31
+      },
+      "revId": "4428a8894cbb3da8ffc5f43a9e9db313a2eec7c0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "25fd98b3_15d4e11d",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-12-04T14:13:31Z",
+      "side": 1,
+      "message": "you can pass an array if you like, sth like:\n\n  $this-\u003esetMwGlobals( [ \n    \u0027wgMFContentProviderClass\u0027 \u003d\u003e DefaultContentProvider::class,\n    \u0027wgMFContentProviderTryLocalContentFirst\u0027 \u003d\u003e true\n  ] );",
+      "range": {
+        "startLine": 114,
+        "startChar": 2,
+        "endLine": 115,
+        "endChar": 73
+      },
+      "revId": "4428a8894cbb3da8ffc5f43a9e9db313a2eec7c0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "90136c85_cd97d9e7",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-12-04T14:13:31Z",
+      "side": 1,
+      "message": "I can agree that its not possible to test McsContent provider and MwApi content provider (that we pass proper flags to it). \n\nIn a follow-up patch, could you try to think how to modify this test to verify that McsContentProvider is initialized with proper parameters?",
+      "range": {
+        "startLine": 145,
+        "startChar": 17,
+        "endLine": 145,
+        "endChar": 54
+      },
+      "revId": "4428a8894cbb3da8ffc5f43a9e9db313a2eec7c0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "527cc9f0_eb6dedb3",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 187,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2018-12-04T14:13:31Z",
+      "side": 1,
+      "message": "setting `wgMFContentProviderTryLocalContentFirst` to true and using DefaultContentProvider class has no sense, as you cannot check that `wgMFContentProviderTryLocalContentFirst` is properly used.\n\nWhy? If you pass wgMFContentProviderTryLocalContentFirst\u003dtrue, it means that you\u0027ll use the `DefaultContentProvider` all the time. The only way to check that `wgMFContentProviderTryLocalContentFirst` is properly used is to pass different content provider, that returns something else and then verify what is the $provider class.\n\nThis can be easily done, please provide different provider class, but set the LocalContentFirst flag, then check the type of what ContentProviderFactory::getProvider() returns you. It should be DefaultContentProvider no matter what you provide in `WgMFContentProviderClass`.  I saw that you\u0027re already using the `$this-\u003eassertInstanceOf()`, thats what you need",
+      "range": {
+        "startLine": 187,
+        "startChar": 22,
+        "endLine": 187,
+        "endChar": 79
+      },
+      "revId": "4428a8894cbb3da8ffc5f43a9e9db313a2eec7c0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
