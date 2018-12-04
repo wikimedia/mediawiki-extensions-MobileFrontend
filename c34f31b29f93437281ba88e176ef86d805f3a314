@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "66d265c6_7d199861",
+        "filename": "tests/qunit/.eslintrc.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-04T20:15:08Z",
+      "side": 1,
+      "message": "I think these should be added per file as well. We\u0027re trying to avoid usage of jQuery and requiring an explicit exception seems preferable to enabling it universally.",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 2
+      },
+      "revId": "c34f31b29f93437281ba88e176ef86d805f3a314",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
