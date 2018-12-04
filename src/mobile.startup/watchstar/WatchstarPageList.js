@@ -121,7 +121,9 @@ mfExtend( WatchstarPageList, PageList, {
 		var self = this;
 
 		// Rendering Watchstars for anonymous users is not useful. Nothing to do.
-		if ( user.isAnon() ) { return; }
+		if ( user.isAnon() ) {
+			return;
+		}
 
 		// Create watch stars for each entry in list
 		$items.each( function ( _, item ) {

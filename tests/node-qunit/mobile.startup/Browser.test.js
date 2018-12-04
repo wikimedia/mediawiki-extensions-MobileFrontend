@@ -19,7 +19,10 @@ QUnit.module( 'MobileFrontend Browser.js', {
 		tmpDOM = window.document.implementation.createHTMLDocument( 'Test' );
 		$html = $( tmpDOM );
 	},
-	afterEach: function () { jQuery.tearDown(); sandbox.restore(); }
+	afterEach: function () {
+		jQuery.tearDown();
+		sandbox.restore();
+	}
 } );
 
 QUnit.test( 'isIos()', function ( assert ) {
@@ -74,7 +77,9 @@ QUnit.test( 'lockViewport()', function ( assert ) {
 
 QUnit.test( 'isWideScreen()', function ( assert ) {
 	var browser = new Browser( 'Mozilla/5.0 (iPad; CPU OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko)', $html );
-	sandbox.stub( mw.config, 'get', function () { return '720px'; } );
+	sandbox.stub( mw.config, 'get', function () {
+		return '720px';
+	} );
 	assert.strictEqual( browser.isWideScreen(), true );
 } );
 

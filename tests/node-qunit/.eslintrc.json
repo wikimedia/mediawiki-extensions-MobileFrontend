@@ -1,9 +1,7 @@
 {
 	"extends": [
+		"wikimedia/server",
 		"wikimedia/qunit",
 		"../../.eslintrc.json"
-	],
-	"env": {
-		"node": true
-	}
+	]
 }

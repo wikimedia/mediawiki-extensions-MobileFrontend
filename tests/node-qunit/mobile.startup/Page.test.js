@@ -123,7 +123,10 @@ QUnit.module( 'MobileFrontend Page', {
 			) // end .html()
 		} ); // end new Page();
 	},
-	afterEach: function () { jQuery.tearDown(); sandbox.restore(); }
+	afterEach: function () {
+		jQuery.tearDown();
+		sandbox.restore();
+	}
 } );
 
 QUnit.test( '#findInSectionLead', function ( assert ) {

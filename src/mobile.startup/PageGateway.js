@@ -34,7 +34,10 @@ function assignToParent( listOfSections, child ) {
  * @return {Array} Ordered array of sections
  */
 function transformSections( sections ) {
-	var sectionLevels = sections.map( function ( s ) { return s.level; } ),
+	var
+		sectionLevels = sections.map( function ( s ) {
+			return s.level;
+		} ),
 		existingSectionLevels = sectionLevels.filter( function ( level ) {
 			return !!level;
 		} ),

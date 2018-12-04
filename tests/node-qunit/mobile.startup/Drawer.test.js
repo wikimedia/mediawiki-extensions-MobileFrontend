@@ -82,7 +82,10 @@ QUnit.test( 'consumes clicks', function ( assert ) {
 		event = new window.Event( 'click' ),
 		subject = new Drawer();
 
-	event.stopPropagation = function () { assert.ok( true ); done(); };
+	event.stopPropagation = function () {
+		assert.ok( true );
+		done();
+	};
 	subject.$el.get( 0 ).dispatchEvent( event );
 } );
 

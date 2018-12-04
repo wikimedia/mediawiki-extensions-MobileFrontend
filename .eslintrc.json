@@ -1,6 +1,9 @@
 {
 	"root": true,
-	"extends": "wikimedia",
+	"extends": [
+		"wikimedia",
+		".eslintshared.json"
+	],
 	"env": {
 		"browser": true
 	},
@@ -8,45 +11,5 @@
 		"OO": false,
 		"mw": false,
 		"Hogan": false
-	},
-	"rules": {
-		"no-restricted-properties": [2,
-			{
-				"property": "done",
-				"message": "The method `done` if used with Deferred objects is incompatible with ES6 Promises. Please use `then`."
-			},
-			{
-				"property": "fail",
-				"message": "The method `fail` if used with Deferred objects is incompatible with ES6 Promises. Please use `then`."
-			},
-			{
-				"property": "always",
-				"message": "The method `always` if used with Deferred objects is incompatible with ES6 Promises. Please use `then`."
-			},
-			{
-				"object": "window",
-				"property": "history",
-				"message": "Please use mediawiki.router"
-			},
-			{
-				"object": "window",
-				"property": "location",
-				"message": "Please use mediawiki.router"
-			},
-			{
-				"object": "$",
-				"property": "noop",
-				"message": "Use function() {}"
-			},
-			{
-				"object": "$",
-				"property": "isFunction",
-				"message": "Please use typeof"
-			}
-		],
-		"object-property-newline": "error",
-		"computed-property-spacing": 0,
-		"no-use-before-define": 0,
-		"no-underscore-dangle": 0
 	}
 }

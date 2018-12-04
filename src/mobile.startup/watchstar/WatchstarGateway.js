@@ -65,7 +65,9 @@ WatchstarGateway.prototype = {
 	 */
 	getStatusesByID: function ( ids ) {
 		var self = this;
-		if ( !ids.length ) { return util.Deferred().resolve( {} ); }
+		if ( !ids.length ) {
+			return util.Deferred().resolve( {} );
+		}
 
 		return this.api.get( {
 			formatversion: 2,
@@ -86,7 +88,9 @@ WatchstarGateway.prototype = {
 	 */
 	getStatusesByTitle: function ( titles ) {
 		var self = this;
-		if ( !titles.length ) { return util.Deferred().resolve( {} ); }
+		if ( !titles.length ) {
+			return util.Deferred().resolve( {} );
+		}
 
 		return this.api.get( {
 			formatversion: 2,

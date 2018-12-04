@@ -159,6 +159,8 @@ module.exports = {
 	 * @return {OO.EventEmitter} The source.
 	 */
 	repeatEvent: function ( src, proxy, event, args ) {
-		return src.on( event, function ( args ) { return proxy.emit( event, args ); }, args );
+		return src.on( event, function ( args ) {
+			return proxy.emit( event, args );
+		}, args );
 	}
 };

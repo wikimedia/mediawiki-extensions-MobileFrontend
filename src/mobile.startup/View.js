@@ -290,12 +290,12 @@ mfExtend( View, {
 	/**
 	 * Set callbacks, where `this.events` is a hash of
 	 *
-	 * {"event selector": "callback"}
+	 * { 'event selector': 'callback' }
 	 *
 	 * {
-	 *	'mousedown .title': 'edit',
-	 *	'click .button': 'save',
-	 *	'click .open': function(e) { ... }
+	 *   'mousedown .title': 'edit',
+	 *   'click .button': 'save',
+	 *   'click .open': function(e) { ... }
 	 * }
 	 *
 	 * pairs. Callbacks will be bound to the view, with `this` set properly.

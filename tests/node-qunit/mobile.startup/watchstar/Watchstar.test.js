@@ -65,7 +65,9 @@ QUnit.test( 'Anonymous user opens drawer', function ( assert ) {
 QUnit.test( 'Logged in user watches article', function ( assert ) {
 	var w, $el, postWithTokenDeferred, apiSpy;
 	// setting user as logged in
-	sandbox.stub( user, 'isAnon', function () { return false; } );
+	sandbox.stub( user, 'isAnon', function () {
+		return false;
+	} );
 
 	w = new Watchstar( {
 		api: new mw.Api(),
@@ -93,7 +95,9 @@ QUnit.test( 'Logged in user unwatches article', function ( assert ) {
 	var w, $el, postWithTokenDeferred, apiSpy;
 
 	// setting user as logged in
-	sandbox.stub( user, 'isAnon', function () { return false; } );
+	sandbox.stub( user, 'isAnon', function () {
+		return false;
+	} );
 
 	w = new Watchstar( {
 		api: new mw.Api(),
