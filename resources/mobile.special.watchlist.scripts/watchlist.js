@@ -1,6 +1,7 @@
 /* global jQuery */
 ( function ( M, $ ) {
 	var WatchList = M.require( 'mobile.watchlist/WatchList' ),
+		eventBus = M.require( 'mobile.startup/eventBusSingleton' ),
 		VIEW_OPTION_NAME = 'mfWatchlistView',
 		userOptions = mw.user.options.get(),
 		FILTER_OPTION_NAME = 'mfWatchlistFilter';
@@ -18,7 +19,8 @@
 				api: new mw.Api(),
 				el: $watchlist,
 				funnel: 'watchlist',
-				skipTemplateRender: true
+				skipTemplateRender: true,
+				eventBus: eventBus
 			} );
 		}
 		// not needed now we have JS view which has infinite scrolling

@@ -31,7 +31,8 @@ var
 	extendSearchParams = require( './extendSearchParams' ),
 	Watchstar = require( './watchstar/Watchstar' ),
 	WatchstarPageList = require( './watchstar/WatchstarPageList' ),
-	rlModuleLoader = require( './rlModuleLoader' );
+	rlModuleLoader = require( './rlModuleLoader' ),
+	eventBusSingleton = require( './eventBusSingleton' );
 
 mw.mobileFrontend = moduleLoader;
 mw.log.deprecate( moduleLoader, 'on', moduleLoader.on,
@@ -67,6 +68,7 @@ mw.mobileFrontend.define( 'mobile.startup/CtaDrawer', CtaDrawer );
 mw.mobileFrontend.define( 'mobile.startup/PageList', PageList );
 mw.mobileFrontend.define( 'mobile.startup/toast', toast );
 mw.mobileFrontend.define( 'mobile.startup/rlModuleLoader', rlModuleLoader );
+mw.mobileFrontend.define( 'mobile.startup/eventBusSingleton', eventBusSingleton );
 mw.mobileFrontend.deprecate( 'mobile.search.util/extendSearchParams', extendSearchParams, 'mobile.startup' );
 mw.mobileFrontend.deprecate( 'mobile.references/ReferencesDrawer', ReferencesDrawer, 'mobile.startup' );
 mw.mobileFrontend.deprecate( 'mobile.references.gateway/ReferencesGateway', ReferencesGateway, 'mobile.startup' );
@@ -110,7 +112,8 @@ module.exports = {
 	toast: toast,
 	Watchstar: Watchstar,
 	WatchstarPageList: WatchstarPageList,
-	rlModuleLoader: rlModuleLoader
+	rlModuleLoader: rlModuleLoader,
+	eventBusSingleton: eventBusSingleton
 };
 
 // Setup a single export for new modules to fold all of the above lines into.

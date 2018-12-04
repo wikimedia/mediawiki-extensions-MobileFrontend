@@ -50,7 +50,10 @@
 			gateway: this.imageGateway,
 			title: decodeURIComponent( this.image.url ),
 			caption: 'The Montgomery in 2012.',
-			router: this.router
+			router: this.router,
+			eventBus: {
+				on: function () {}
+			}
 		} );
 
 		return this.imageGateway.getThumb().then( function () {
@@ -71,7 +74,10 @@
 			gateway: imageGateway,
 			title: decodeURIComponent( this.image.url ),
 			caption: 'The Montgomery in 2012.',
-			router: this.router
+			router: this.router,
+			eventBus: {
+				on: function () {}
+			}
 		} );
 
 		return imageGateway.getThumb().catch( function () {
@@ -92,7 +98,10 @@
 			title: decodeURIComponent( this.image.url ),
 			caption: 'The Montgomery in 2012.',
 			thumbnails: this.thumbnails,
-			router: this.router
+			router: this.router,
+			eventBus: {
+				on: function () {}
+			}
 		} );
 
 		return imageGateway.getThumb().catch( function () {
@@ -116,7 +125,10 @@
 			title: decodeURIComponent( this.image.url ),
 			caption: 'The Montgomery in 2012.',
 			thumbnails: this.thumbnails,
-			router: this.router
+			router: this.router,
+			eventBus: {
+				on: function () {}
+			}
 		} );
 
 		return this.imageGateway.getThumb().then( function () {

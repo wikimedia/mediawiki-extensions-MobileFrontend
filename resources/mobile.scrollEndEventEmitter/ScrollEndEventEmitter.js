@@ -25,7 +25,8 @@
 	 *     @example
 	 *     <code>
 	 *       var ScrollEndEventEmitter =
-	 *         M.require( 'mobile.scrollEndEventEmitter/ScrollEndEventEmitter' );
+	 *         M.require( 'mobile.scrollEndEventEmitter/ScrollEndEventEmitter' ),
+	 *         eventBus = M.require( 'mobile.startup/eventBusSingleton' );
 	 *       OO.mfExtend( PhotoList, View, {
 	 *         //...
 	 *         initialize: function ( options ) {
@@ -33,7 +34,7 @@
 	 *             username: options.username
 	 *           } );
 	 *           // 1. Set up infinite scroll helper and listen to events
-	 *           this.scrollEndEventEmitter = new ScrollEndEventEmitter( 1000 );
+	 *           this.scrollEndEventEmitter = new ScrollEndEventEmitter( eventBus, 1000 );
 	 *           this.scrollEndEventEmitter.on( ScrollEndEventEmitter.EVENT_SCROLL_END,
 	 *             this._loadPhotos.bind( this ) );
 	 *           View.prototype.initialize.apply( this, arguments );
@@ -55,11 +56,13 @@
 	 *     </code>
 	 *
 	 * @fires ScrollEndEventEmitter#ScrollEndEventEmitter-scrollEnd
-	 * @param {number} threshold distance in pixels used to calculate if scroll
+	 * @param {Object} eventBus object to listen for scroll:throttled events
+	 * @param {number} [threshold=100] distance in pixels used to calculate if scroll
 	 * position is near the end of the $el
 	 */
-	function ScrollEndEventEmitter( threshold ) {
+	function ScrollEndEventEmitter( eventBus, threshold ) {
 		this.threshold = threshold || 100;
+		this.eventBus = eventBus;
 		this.enable();
 		OO.EventEmitter.call( this );
 	}
@@ -81,7 +84,7 @@
 		_bindScroll: function () {
 			if ( !this._scrollHandler ) {
 				this._scrollHandler = this._onScroll.bind( this );
-				M.on( 'scroll:throttled', this._scrollHandler );
+				this.eventBus.on( 'scroll:throttled', this._scrollHandler );
 			}
 		},
 		/**
@@ -92,7 +95,7 @@
 		 */
 		_unbindScroll: function () {
 			if ( this._scrollHandler ) {
-				M.off( 'scroll:throttled', this._scrollHandler );
+				this.eventBus.off( 'scroll:throttled', this._scrollHandler );
 				this._scrollHandler = null;
 			}
 		},

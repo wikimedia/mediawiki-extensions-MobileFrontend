@@ -23,11 +23,13 @@
 		experiments = mw.experiments,
 		activeExperiments = mw.config.get( 'wgMFExperiments' ) || {},
 		Skin = M.require( 'mobile.startup/Skin' ),
+		eventBus = M.require( 'mobile.startup/eventBusSingleton' ),
 		ReferencesMobileViewGateway = mobile.ReferencesMobileViewGateway,
 		skinData = {
 			el: 'body',
 			page: getCurrentPage(),
-			referencesGateway: ReferencesMobileViewGateway.getSingleton()
+			referencesGateway: ReferencesMobileViewGateway.getSingleton(),
+			eventBus: eventBus
 		};
 
 	skin = new Skin( skinData );
@@ -66,12 +68,12 @@
 
 	$window
 		.on( 'resize', apply2(
-			$.debounce( 100, $.proxy( M, 'emit', 'resize' ) ),
-			$.throttle( 200, $.proxy( M, 'emit', 'resize:throttled' ) )
+			$.debounce( 100, $.proxy( eventBus, 'emit', 'resize' ) ),
+			$.throttle( 200, $.proxy( eventBus, 'emit', 'resize:throttled' ) )
 		) )
 		.on( 'scroll', apply2(
-			$.debounce( 100, $.proxy( M, 'emit', 'scroll' ) ),
-			$.throttle( 200, $.proxy( M, 'emit', 'scroll:throttled' ) )
+			$.debounce( 100, $.proxy( eventBus, 'emit', 'scroll' ) ),
+			$.throttle( 200, $.proxy( eventBus, 'emit', 'scroll:throttled' ) )
 		) );
 
 	/**
