@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "f8df6fc1_779fa521",
+        "filename": "tests/phpunit/content-providers/McsContentProviderTest.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-12-05T21:25:04Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "bd4c56cf_222c5b84",
+      "range": {
+        "startLine": 28,
+        "startChar": 43,
+        "endLine": 28,
+        "endChar": 50
+      },
+      "revId": "a5727ca0e5e81d5ee81dcd0099fe4df39eb6f561",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "47158485_d4c93dc6",
         "filename": "tests/phpunit/content-providers/McsContentProviderTest.php",
         "patchSetId": 14
@@ -36,6 +60,30 @@
       "writtenOn": "2018-12-05T21:21:12Z",
       "side": 1,
       "message": "exactly same code happens 3 times in the unit test. It\u0027s ok, but next time please make it DRY (Do not repeat yourself), having a single method \"mockOutputPage($title)\" would do the job :)",
+      "range": {
+        "startLine": 128,
+        "startChar": 0,
+        "endLine": 135,
+        "endChar": 32
+      },
+      "revId": "a5727ca0e5e81d5ee81dcd0099fe4df39eb6f561",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d6de9c90_3191aa77",
+        "filename": "tests/phpunit/content-providers/McsContentProviderTest.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-12-05T21:25:04Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "47158485_d4c93dc6",
       "range": {
         "startLine": 128,
         "startChar": 0,
