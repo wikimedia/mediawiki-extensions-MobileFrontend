@@ -167,6 +167,8 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	 * Bytes added/removed
 	 * Day and time of edit
 	 * Edit Comment
+	 *
+	 * @param bool $unhide
 	 */
 	private function showHeader( $unhide = false ) {
 		if ( $this->rev->isMinor() ) {
@@ -184,6 +186,8 @@ class SpecialMobileDiff extends MobileSpecialPage {
 
 	/**
 	 * Get the edit comment
+	 *
+	 * @param bool $unhide
 	 * @return string Build HTML for edit comment section
 	 */
 	private function getCommentHTML( $unhide = false ) {
