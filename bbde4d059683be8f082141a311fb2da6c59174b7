@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4734e60d_afe6ee1d",
+        "filename": "src/mobile.startup/CtaDrawer.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-12-05T02:17:02Z",
+      "side": 1,
+      "message": "Please correct me if I\u0027m wrong, but I don\u0027t think we are testing the following logic given that we are initializing CtaDrawer with empty options:\n\n1) There should be a \u0027returnto\u0027 query param on the progressiveButton href (if not overridden by this.options.queryParams) and this.options.returnTo should take precedence over mw.config.get(\u0027wgPageName\u0027) when setting that.\n2) Other query params can be passed through options.queryParams and should appear in the progressiveButton href.\n3) There should be a \u0027type\u003dsignup\u0027 query param on the actionAnchor href (if not overridden by options.signupQueryParams)\n4) Other query params can be passed through options.signupQueryParams and should be appear on the actionAnchor href\n\nGranted this logic is not that complex but, off hand, it seems useful to me to include in this test file. What are your thoughts?",
+      "range": {
+        "startLine": 71,
+        "startChar": 0,
+        "endLine": 77,
+        "endChar": 38
+      },
+      "revId": "bbde4d059683be8f082141a311fb2da6c59174b7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
