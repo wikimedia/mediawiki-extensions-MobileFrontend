@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "82248b93_4eca3e85",
+        "filename": "src/mobile.startup/View.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 208,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-12-05T13:16:52Z",
+      "side": 1,
+      "message": "Who\u0027s to say? Could be anything right?",
+      "parentUuid": "bce246ed_624810fd",
+      "range": {
+        "startLine": 208,
+        "startChar": 12,
+        "endLine": 208,
+        "endChar": 26
+      },
+      "revId": "9d5c7be1df58c8140e0e248a78238bda7db6388d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6984ce73_e4aabe15",
         "filename": "src/mobile.startup/View.js",
         "patchSetId": 7
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "cfbb8eec_c83f5c47",
+        "filename": "src/mobile.startup/View.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 210,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-12-05T13:16:52Z",
+      "side": 1,
+      "message": "Done?",
+      "parentUuid": "6984ce73_e4aabe15",
+      "range": {
+        "startLine": 210,
+        "startChar": 13,
+        "endLine": 210,
+        "endChar": 19
+      },
+      "revId": "9d5c7be1df58c8140e0e248a78238bda7db6388d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "717e7e71_575babc6",
         "filename": "src/mobile.startup/View.js",
         "patchSetId": 7
@@ -59,6 +107,30 @@
       "writtenOn": "2018-12-04T18:40:42Z",
       "side": 1,
       "message": "Do we want inheritance on props? I thought inheritance was only necessary for self.",
+      "range": {
+        "startLine": 214,
+        "startChar": 7,
+        "endLine": 214,
+        "endChar": 24
+      },
+      "revId": "9d5c7be1df58c8140e0e248a78238bda7db6388d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b1db0aab_4829ce54",
+        "filename": "src/mobile.startup/View.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 214,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-12-05T13:16:52Z",
+      "side": 1,
+      "message": "Done. Good point.",
+      "parentUuid": "717e7e71_575babc6",
       "range": {
         "startLine": 214,
         "startChar": 7,
