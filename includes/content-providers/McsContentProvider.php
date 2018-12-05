@@ -3,6 +3,7 @@
 namespace MobileFrontend\ContentProviders;
 
 use OutputPage;
+use MediaWiki\MediaWikiServices;
 
 /**
  * Sources content from the Mobile-Content-Service
@@ -50,6 +51,22 @@ class McsContentProvider implements IContentProvider {
 	}
 
 	/**
+	 * @param string $url URL to fetch the content
+	 * @return string
+	 */
+	protected function fileGetContents( $url ) {
+		$response = MediaWikiServices::getInstance()->getHttpRequestFactory()
+			->create( $url );
+
+		$status = $response->execute();
+		if ( !$status->isOK() ) {
+			return '';
+		}
+
+		return $response->getContent();
+	}
+
+	/**
 	 * @inheritDoc
 	 */
 	public function getHTML() {
@@ -60,11 +77,8 @@ class McsContentProvider implements IContentProvider {
 		}
 		$url = $this->baseUrl . '/page/mobile-sections/';
 		$url .= urlencode( $title->getPrefixedDBKey() );
-		// file_get_contents() will throw php warning when server returns 404. MCS will return 404
-		// when article is not available, we're handling that case so we can safely ignore error
-		// MediaWiki PHPCS forbids silencing errors but there is no other way to ignore 404 warning
-		// @codingStandardsIgnoreLine
-		$resp = @file_get_contents( $url, false );
+
+		$resp = $this->fileGetContents( $url );
 		if ( $resp ) {
 			$json = json_decode( $resp, true );
 			if ( is_array( $json ) ) {
