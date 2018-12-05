@@ -199,12 +199,30 @@ QUnit.test( 'View with className option', function ( assert ) {
 	function ViewWithClassNameProp() {
 		View.apply( this, arguments );
 	}
+	function ViewWithClassNameAndBorderBoxProp() {
+		View.apply( this, arguments );
+	}
 
-	mfExtend( ViewWithClassNameProp, View, {
+	mfExtend( ViewWithClassNameAndBorderBoxProp, View, {
 		isBorderBox: false,
 		className: 'apple'
 	} );
+
+	mfExtend( ViewWithClassNameProp, View, {
+		className: 'apple'
+	} );
+
 	[
+		[
+			new View(),
+			'view-border-box',
+			'className not defined on a normal View without options'
+		],
+		[
+			new View( {} ),
+			'view-border-box',
+			'className not defined on a normal View with empty options'
+		],
 		[
 			new View( {
 				className: 'banana'
@@ -213,19 +231,56 @@ QUnit.test( 'View with className option', function ( assert ) {
 			'option is passed to View (along with default isBorderBox property)'
 		],
 		[
-			new View( {} ),
+			new View( { isBorderBox: false } ),
+			undefined,
+			'Passing isBorderBox option removes default view-border-box class'
+		],
+		[
+			new View( { isBorderBox: true } ),
 			'view-border-box',
-			'className not defined on a normal View'
+			'Passing isBorderBox option as true retains default view-border-box class'
 		],
 		[
-			new ViewWithClassNameProp( {} ),
+			new ViewWithClassNameAndBorderBoxProp(),
 			'apple',
-			'if no option passed, property on View used'
+			'if no options passed, inherited property on View used'
 		],
 		[
-			new ViewWithClassNameProp( { className: 'banana' } ),
-			'banana',
-			'option passed, property on View is overriden'
+			new ViewWithClassNameAndBorderBoxProp( {} ),
+			'apple',
+			'if empty options passed, inherited property on View used'
+		],
+		[
+			new ViewWithClassNameAndBorderBoxProp( { className: 'banana' } ),
+			'apple',
+			'option passed but property on View is more important because inheritance chains (T210670)'
+		],
+		[
+			new ViewWithClassNameProp( {
+				className: 'banana',
+				isBorderBox: false
+			} ),
+			'apple',
+			'prototype.className is used instead of options.className\n' +
+			'options.isBorderBox is used as no prototype.isBorderBox. (T210670)'
+		],
+		[
+			new ViewWithClassNameProp( {
+				className: 'banana',
+				isBorderBox: true
+			} ),
+			'apple view-border-box',
+			'prototype.className is used instead of options.className\n' +
+			'options.isBorderBox is used as no prototype.isBorderBox. (T210670)'
+		],
+		[
+			new ViewWithClassNameAndBorderBoxProp( {
+				className: 'banana',
+				isBorderBox: true
+			} ),
+			'apple',
+			'prototype.className is used instead of options.className\n' +
+			'prototype.isBorderBox is used instead of options.isBorderBox (T210670).'
 		]
 	].forEach( function ( test ) {
 		assert.strictEqual( test[0].$el.attr( 'class' ), test[1], test[2] );
