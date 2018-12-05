@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "b3940066_defe637d",
+        "filename": "resources/dist/mediawiki.template.hogan.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-12-05T20:26:53Z",
+      "side": 1,
+      "message": "Good observation, I hadn\u0027t noticed that, and I\u0027m not sure why that dist/mediawiki.template.hogan.js file changes. As you can see, I didn\u0027t touch the src/.../mediawiki.template.hogan.js file. You can see it changed in my smaller patch here as well:\n\nId990b0e1a53221d5c1cb3e3012aed0e27d801fc2\n\nI also tried seeing what would happen if I checked out the previous revision of that file and ran my patch - it broke a bunch of things so it seems like this change is necessary...",
+      "parentUuid": "e94bbc3a_384a9880",
+      "revId": "335ef77494eaa71ccbb300e2171891b1ff2cfed3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "260f30fe_4873b278",
         "filename": "resources/mobile.init/init.js",
         "patchSetId": 3
@@ -30,6 +48,30 @@
       "writtenOn": "2018-12-04T20:42:54Z",
       "side": 1,
       "message": "What were your thoughts on picking a singleton pattern? I have no qualms with making a single instance of something but obviously we wish to avoid globals.\n\nI was thinking this could be a parameter passed in which would let us move the singleton to mobile.startup.js and eliminate its usage as a global. However, I guess we\u0027d have to do some big refactoring as soon as we move the code to source and drop the IIFE which would be a task in itself.\n\nI was just hoping to hear your insights on the approach taken. The commit message talks about injecting the dependency which I normally associate with passing from the point of instantiation to every consumer. This seems like a hybrid approach where we pass the dependency when it\u0027s practical to do so and use the global otherwise.",
+      "range": {
+        "startLine": 32,
+        "startChar": 3,
+        "endLine": 32,
+        "endChar": 21
+      },
+      "revId": "335ef77494eaa71ccbb300e2171891b1ff2cfed3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b5b4e9ea_612ce1be",
+        "filename": "resources/mobile.init/init.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-12-05T20:26:53Z",
+      "side": 1,
+      "message": "I don\u0027t particularly like the singleton pattern, but I felt it was appropriate usage here (and other places) as this file (and other \"initialization\" scripts (files that initialize objects) haven\u0027t been ported to webpack and the refactor work required to do that felt out of scope for this task. Additionally, we have initialization scripts in both MF (such as this one) and in Minerva (e.g. skins.minerva.scripts/init.js) that need to share an event bus because they currently listen to or emit the same events. \n\nI see these patches as a good first step for our event emitter situation, but not the final step that should be taken. I tried to push out the reference to to the singleton as far out as pragmatically possible right now to the initialization scripts (turns out there are many!) and from there on use DI to pass around the event bus. Your comment made me realize that I think a comment is warranted in the eventBusSingleton.js file that it should be judiciously imported (not in component files but in files responsible for initializing the components) which I think sets up well for later refactoring.",
+      "parentUuid": "260f30fe_4873b278",
       "range": {
         "startLine": 32,
         "startChar": 3,
