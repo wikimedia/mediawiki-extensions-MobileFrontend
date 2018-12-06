@@ -307,7 +307,7 @@
 				"icon.hogan": "resources/mobile.startup/icon.hogan",
 				"Section.hogan": "resources/mobile.startup/Section.hogan",
 				"button.hogan": "resources/mobile.startup/button.hogan",
-				"ReferencesDrawer.hogan": "resources/mobile.startup/ReferencesDrawer.hogan"
+				"ReferencesDrawer.hogan": "resources/mobile.startup/references/ReferencesDrawer.hogan"
 			},
 			"messages": [
 				"mobile-frontend-references-citation-error",
@@ -349,8 +349,8 @@
 				"resources/mobile.startup/Overlay.less",
 				"resources/mobile.startup/LoadingOverlay.less",
 				"resources/mobile.startup/drawer.less",
-				"resources/mobile.startup/ReferencesDrawer.less",
-				"resources/mobile.startup/watchstar.less"
+				"resources/mobile.startup/references/ReferencesDrawer.less",
+				"resources/mobile.startup/watchstar/watchstar.less"
 			],
 			"scripts": [
 				"resources/dist/mobile.startup.js"
