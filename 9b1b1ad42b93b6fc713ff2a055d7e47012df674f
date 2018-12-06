@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c1d8ea34_27391ef1",
+        "filename": "src/mobile.startup/CtaDrawer.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-12-06T23:51:56Z",
+      "side": 1,
+      "message": "Not sure how big of a deal this is, but In the production code, it looks like only the options.signupQueryParams can override the default \u0027type\u0027 property on signupQueryParams, whereas the code here makes it so that options.queryParams or options.signupQueryParams could potentially clobber it\n\nThis might result in issues if options.queryParams included a type property but options.signUpQueryParams did not (and the default of type: signup was expected to appear on the actionAnchor button).",
+      "range": {
+        "startLine": 116,
+        "startChar": 1,
+        "endLine": 116,
+        "endChar": 63
+      },
+      "revId": "9b1b1ad42b93b6fc713ff2a055d7e47012df674f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "54441c1e_e60f3360",
+        "filename": "src/mobile.startup/CtaDrawer.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-12-06T23:51:56Z",
+      "side": 1,
+      "message": "The primary concern I have with this is that this makes initialization of this component different than how we initialize most of our other components (new CtaDrawer.CtaDrawer() vs new CtaDrawer), and therefore its not what I would expect.\n\nAre there any alternatives we can do so that we can keep `module.exports \u003d CtaDrawer`? Some thoughts I had were:\n\n1) Make the mw.util.getUrl handle a set of different inputs (e.g. either utilizing sinon\u0027s .withArgs/.returns or adding more conditionals to the stub you have now) and test that the outputted hrefs are in line with the params expectations. \n\n2) Make these private functions part of CtaDrawer\u0027s prototype so that you can test them. I know that is less than ideal too but I would prefer that over changing how we initialize this component.",
+      "range": {
+        "startLine": 120,
+        "startChar": 0,
+        "endLine": 126,
+        "endChar": 2
+      },
+      "revId": "9b1b1ad42b93b6fc713ff2a055d7e47012df674f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
