@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "bb1d20ca_70dedd3f",
+        "filename": "src/mobile.startup/rlModuleLoader.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-12-06T17:23:51Z",
+      "side": 1,
+      "message": "Done. I was concerned about other extensions possibly using this but if that is unwarranted than I\u0027m all for removing it",
+      "parentUuid": "15559935_d18eeedd",
+      "revId": "a66b98b663769f39862f4a30b42f63c93d009d96",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c081ea0f_81ce2af8",
         "filename": "src/mobile.startup/rlModuleLoader.js",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2018-11-20T22:48:49Z",
       "side": 1,
       "message": "Do we need a deprecation warning if no usages exist?",
+      "revId": "a66b98b663769f39862f4a30b42f63c93d009d96",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dd9f4f30_173d33c3",
+        "filename": "src/mobile.startup/rlModuleLoader.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-12-06T17:23:51Z",
+      "side": 1,
+      "message": "Nope",
+      "parentUuid": "c081ea0f_81ce2af8",
       "revId": "a66b98b663769f39862f4a30b42f63c93d009d96",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
