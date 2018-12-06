@@ -240,7 +240,9 @@
 				"citation": "resources/mobile.startup.images/cite.svg",
 				"error": "resources/mobile.startup.images/error.svg",
 				"watch": "resources/mobile.startup.images/watch.svg",
-				"watched": "resources/mobile.startup.images/watched.svg"
+				"watched": "resources/mobile.startup.images/watched.svg",
+				"search-clear": "resources/mobile.startup.images/search/search-clear.svg",
+				"search-content": "resources/mobile.startup.images/search/search-content.svg"
 			}
 		},
 		"mobile.init": {
@@ -522,14 +524,6 @@
 				"stop-hand": "resources/mobile.editor.images/stop-hand.svg"
 			}
 		},
-		"mobile.search.images": {
-			"class": "ResourceLoaderImageModule",
-			"selector": ".mw-ui-icon-mf-{name}:before",
-			"images": {
-				"clear": "resources/mobile.search.images/clear.svg",
-				"search-content": "resources/mobile.search.images/search-content.svg"
-			}
-		},
 		"mobile.search": {
 			"targets": [
 				"mobile",
@@ -537,8 +531,7 @@
 			],
 			"dependencies": [
 				"mediawiki.user",
-				"mobile.startup",
-				"mobile.search.images"
+				"mobile.startup"
 			],
 			"styles": [
 				"resources/mobile.search/SearchOverlay.less"
