@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "38a9b64a_42688c36",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-12-06T22:34:30Z",
+      "side": 1,
+      "message": "Going out on a limb and guessing \"not intentional\"... doesn\u0027t look like it broke anything. 👍",
+      "parentUuid": "57b9c429_67f95005",
+      "range": {
+        "startLine": 28,
+        "startChar": 16,
+        "endLine": 28,
+        "endChar": 23
+      },
+      "revId": "9ccf38655ca5f6b137c56b7c8161f70a9eac9bb3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "41b01b05_0ea4d5e5",
         "filename": "src/mobile.startup/Panel.js",
         "patchSetId": 7
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "cbac9d23_b60c0dcc",
+        "filename": "src/mobile.startup/Panel.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-12-06T22:34:30Z",
+      "side": 1,
+      "message": "I think so.",
+      "parentUuid": "41b01b05_0ea4d5e5",
+      "range": {
+        "startLine": 15,
+        "startChar": 15,
+        "endLine": 15,
+        "endChar": 17
+      },
+      "revId": "9ccf38655ca5f6b137c56b7c8161f70a9eac9bb3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "13ee0d08_cdbeeee1",
         "filename": "src/mobile.startup/Thumbnail.js",
         "patchSetId": 7
@@ -59,6 +107,30 @@
       "writtenOn": "2018-12-06T19:47:16Z",
       "side": 1,
       "message": "I have a similar question about className in another file but would it be better to allow clients to override isBorderBox by specifying it here?",
+      "range": {
+        "startLine": 15,
+        "startChar": 15,
+        "endLine": 15,
+        "endChar": 17
+      },
+      "revId": "9ccf38655ca5f6b137c56b7c8161f70a9eac9bb3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f6b4d897_82c73efd",
+        "filename": "src/mobile.startup/Thumbnail.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-12-06T22:34:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "13ee0d08_cdbeeee1",
       "range": {
         "startLine": 15,
         "startChar": 15,

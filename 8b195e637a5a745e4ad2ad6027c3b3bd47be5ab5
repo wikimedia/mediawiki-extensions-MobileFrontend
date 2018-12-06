@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "64c0ee9f_f98cf58e",
+        "filename": "resources/mobile.editor.common/EditorOverlayBase.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-12-06T22:34:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cc668f9b_88139f67",
+      "range": {
+        "startLine": 56,
+        "startChar": 3,
+        "endLine": 56,
+        "endChar": 22
+      },
+      "revId": "8b195e637a5a745e4ad2ad6027c3b3bd47be5ab5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "691dcfed_112ba142",
         "filename": "resources/mobile.editor.common/EditorOverlayBase.js",
         "patchSetId": 4
@@ -72,6 +96,30 @@
     },
     {
       "key": {
+        "uuid": "dd08849b_6fd5f347",
+        "filename": "resources/mobile.editor.common/EditorOverlayBase.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-12-06T22:34:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "691dcfed_112ba142",
+      "range": {
+        "startLine": 58,
+        "startChar": 2,
+        "endLine": 58,
+        "endChar": 30
+      },
+      "revId": "8b195e637a5a745e4ad2ad6027c3b3bd47be5ab5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f07ea13c_6b6ee798",
         "filename": "resources/mobile.notifications.overlay/NotificationsOverlay.js",
         "patchSetId": 4
@@ -83,6 +131,30 @@
       "writtenOn": "2018-11-30T18:18:09Z",
       "side": 1,
       "message": "Same can be said here",
+      "range": {
+        "startLine": 21,
+        "startChar": 2,
+        "endLine": 21,
+        "endChar": 30
+      },
+      "revId": "8b195e637a5a745e4ad2ad6027c3b3bd47be5ab5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c9fdbd96_00992dc9",
+        "filename": "resources/mobile.notifications.overlay/NotificationsOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-12-06T22:34:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f07ea13c_6b6ee798",
       "range": {
         "startLine": 21,
         "startChar": 2,
@@ -118,6 +190,30 @@
     },
     {
       "key": {
+        "uuid": "ca19ba45_23925311",
+        "filename": "resources/mobile.watchlist/WatchList.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-12-06T22:34:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "aa284a62_acc2ac8a",
+      "range": {
+        "startLine": 31,
+        "startChar": 2,
+        "endLine": 31,
+        "endChar": 30
+      },
+      "revId": "8b195e637a5a745e4ad2ad6027c3b3bd47be5ab5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fcce8f48_7d300254",
         "filename": "src/mobile.startup/Page.js",
         "patchSetId": 4
@@ -129,6 +225,30 @@
       "writtenOn": "2018-11-30T18:18:09Z",
       "side": 1,
       "message": "same can be said here",
+      "range": {
+        "startLine": 29,
+        "startChar": 1,
+        "endLine": 29,
+        "endChar": 29
+      },
+      "revId": "8b195e637a5a745e4ad2ad6027c3b3bd47be5ab5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "06aa03dc_4ef1d54d",
+        "filename": "src/mobile.startup/Page.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-12-06T22:34:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fcce8f48_7d300254",
       "range": {
         "startLine": 29,
         "startChar": 1,
@@ -164,6 +284,30 @@
     },
     {
       "key": {
+        "uuid": "1a2d638d_b609c757",
+        "filename": "src/mobile.startup/Page.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-12-06T22:34:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "82da9bdc_1281625c",
+      "range": {
+        "startLine": 30,
+        "startChar": 1,
+        "endLine": 30,
+        "endChar": 84
+      },
+      "revId": "8b195e637a5a745e4ad2ad6027c3b3bd47be5ab5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e1166b2b_722c1625",
         "filename": "src/mobile.startup/Page.js",
         "patchSetId": 4
@@ -187,6 +331,30 @@
     },
     {
       "key": {
+        "uuid": "1d79bd8d_05eba388",
+        "filename": "src/mobile.startup/Page.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-12-06T22:34:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e1166b2b_722c1625",
+      "range": {
+        "startLine": 33,
+        "startChar": 1,
+        "endLine": 33,
+        "endChar": 47
+      },
+      "revId": "8b195e637a5a745e4ad2ad6027c3b3bd47be5ab5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "36724279_fed8fb44",
         "filename": "src/mobile.startup/Skin.js",
         "patchSetId": 4
@@ -198,6 +366,30 @@
       "writtenOn": "2018-11-30T18:18:09Z",
       "side": 1,
       "message": "and here",
+      "range": {
+        "startLine": 65,
+        "startChar": 1,
+        "endLine": 65,
+        "endChar": 29
+      },
+      "revId": "8b195e637a5a745e4ad2ad6027c3b3bd47be5ab5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8bc88a66_93158185",
+        "filename": "src/mobile.startup/Skin.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-12-06T22:34:30Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "36724279_fed8fb44",
       "range": {
         "startLine": 65,
         "startChar": 1,
