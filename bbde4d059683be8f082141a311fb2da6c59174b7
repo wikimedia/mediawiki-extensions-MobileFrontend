@@ -22,6 +22,30 @@
       "revId": "bbde4d059683be8f082141a311fb2da6c59174b7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "75dfe144_25837253",
+        "filename": "src/mobile.startup/CtaDrawer.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-06T19:32:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4734e60d_afe6ee1d",
+      "range": {
+        "startLine": 71,
+        "startChar": 0,
+        "endLine": 77,
+        "endChar": 38
+      },
+      "revId": "bbde4d059683be8f082141a311fb2da6c59174b7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
