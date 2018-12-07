@@ -20,7 +20,6 @@
 		this.scrollEndEventEmitter.on( ScrollEndEventEmitter.EVENT_SCROLL_END,
 			this._loadCategories.bind( this ) );
 		this.gateway = new CategoryGateway( options.api );
-		options.eventBus.on( 'category-added', this._loadCategories.bind( this ) );
 		Overlay.call( this,
 			util.extend( options, {
 				className: 'category-overlay overlay'

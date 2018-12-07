@@ -623,6 +623,7 @@
 			],
 			"dependencies": [
 				"mediawiki.Title",
+				"mediawiki.router",
 				"mobile.startup",
 				"mobile.editor.common",
 				"mobile.scrollEndEventEmitter",

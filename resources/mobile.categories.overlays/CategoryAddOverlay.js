@@ -4,7 +4,8 @@
 		CategoryGateway = M.require( 'mobile.categories.overlays/CategoryGateway' ),
 		CategoryLookupInputWidget = M.require( 'mobile.categories.overlays/CategoryLookupInputWidget' ),
 		icons = M.require( 'mobile.startup/icons' ),
-		toast = M.require( 'mobile.startup/toast' );
+		toast = M.require( 'mobile.startup/toast' ),
+		router = require( 'mediawiki.router' );
 
 	/**
 	 * Displays the list of categories for a page
@@ -137,7 +138,9 @@
 			} else {
 				// save the new categories
 				this.gateway.save( this.title, newCategories ).then( function () {
-					self.eventBus.emit( 'category-added' );
+					// we're closing the overlay to show the user
+					// that the action was completed successful
+					router.navigate( '#' );
 				}, function () {
 					self.showHidden( '.initial-header' );
 					self.$safeButton.prop( 'disabled', false );
