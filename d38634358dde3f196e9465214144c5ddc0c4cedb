@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "d02da7ab_2aac6182",
+        "filename": "resources/mobile.categories.overlays/CategoryOverlay.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-12-07T22:29:39Z",
+      "side": 1,
+      "message": "Wasn\u0027t really sure....ScrollEndEventEmitter listens to the scroll:throttled event and CategoryOverlay is currently initializing ScrollEnd and passing the same event bus to it, so I thought so?",
+      "parentUuid": "0559a205_fe2b647c",
+      "range": {
+        "startLine": 16,
+        "startChar": 4,
+        "endLine": 16,
+        "endChar": 31
+      },
+      "revId": "d38634358dde3f196e9465214144c5ddc0c4cedb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "575e4abf_01220505",
         "filename": "resources/mobile.scrollEndEventEmitter/ScrollEndEventEmitter.js",
         "patchSetId": 8
@@ -36,6 +60,30 @@
       "writtenOn": "2018-12-07T16:07:48Z",
       "side": 1,
       "message": "Is this still necessary since the event bus is passed in?",
+      "range": {
+        "startLine": 69,
+        "startChar": 1,
+        "endLine": 69,
+        "endChar": 57
+      },
+      "revId": "d38634358dde3f196e9465214144c5ddc0c4cedb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ed7c5115_8b1e012a",
+        "filename": "resources/mobile.scrollEndEventEmitter/ScrollEndEventEmitter.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-12-07T22:29:39Z",
+      "side": 1,
+      "message": "This one is interesting because ScrollEndEventEmitter needs to listen to scroll events (currently emitted by mobile.init/init.js) but it also emits its own local \u0027scroll end\u0027 event that is specific to its $el property. Given that there can be multiple ScrollEndEventEmitter instances for different elements, we probably don\u0027t want to emit the event on the same event bus passed in. One thought I had is we could make this class take a callback function instead of emitting its event. I\u0027ve also made a super-happy-dev-time topic relating to this topic",
+      "parentUuid": "575e4abf_01220505",
       "range": {
         "startLine": 69,
         "startChar": 1,
@@ -82,6 +130,30 @@
       "writtenOn": "2018-12-07T16:07:48Z",
       "side": 1,
       "message": "I\u0027m not opposed to this change, so don\u0027t feel inclined to eliminate it for my sake, but I\u0027ll mention that I think we lose some benefits of an options bag if we immediately destructure it and it only has one usage that\u0027s internal. Also, this change highlights a previous shortcoming which is that these JSDocs seem more appropriate on the constructor where external clients will actually pass these parameters in.",
+      "range": {
+        "startLine": 247,
+        "startChar": 0,
+        "endLine": 250,
+        "endChar": 31
+      },
+      "revId": "d38634358dde3f196e9465214144c5ddc0c4cedb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6f083b9e_c7bd00eb",
+        "filename": "resources/mobile.toggle/toggle.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 250,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-12-07T22:29:39Z",
+      "side": 1,
+      "message": "I agree with that - this function\u0027s signature should be left as is. Fixed in latest patch. I also copied the jdoc to the constructor",
+      "parentUuid": "85981339_0a3a7e7c",
       "range": {
         "startLine": 247,
         "startChar": 0,
