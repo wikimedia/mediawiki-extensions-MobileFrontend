@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a63b555a_6d674257",
+        "filename": "resources/mobile.editor.common/EditorOverlayBase.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-12-07T20:34:20Z",
+      "side": 1,
+      "message": "is there a reason this wasn\u0027t moved to the first util.extend?",
+      "range": {
+        "startLine": 85,
+        "startChar": 3,
+        "endLine": 85,
+        "endChar": 21
+      },
+      "revId": "cf7c2f274ef27759381bf78f3ba9c72a93c3ab3e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ea17b717_caeb0126",
+        "filename": "resources/mobile.notifications.overlay/NotificationsOverlay.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-12-07T20:34:20Z",
+      "side": 1,
+      "message": "i\u0027m wondering why this doesn\u0027t follow the same pattern as the SearchOverlay where it is default that can be overwritten? If it is required for the component to work, can we add a comment stating that?",
+      "range": {
+        "startLine": 22,
+        "startChar": 2,
+        "endLine": 22,
+        "endChar": 30
+      },
+      "revId": "cf7c2f274ef27759381bf78f3ba9c72a93c3ab3e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "db47e823_822e3a37",
+        "filename": "resources/mobile.watchlist/WatchList.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-12-07T20:34:20Z",
+      "side": 1,
+      "message": "i\u0027m wondering why this doesn\u0027t follow the same pattern as the SearchOverlay where it is default that can be overwritten? If it is required for the component, can we add a comment stating that?",
+      "range": {
+        "startLine": 32,
+        "startChar": 2,
+        "endLine": 32,
+        "endChar": 30
+      },
+      "revId": "cf7c2f274ef27759381bf78f3ba9c72a93c3ab3e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
