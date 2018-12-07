@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0559a205_fe2b647c",
+        "filename": "resources/mobile.categories.overlays/CategoryOverlay.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-07T16:07:48Z",
+      "side": 1,
+      "message": "Is this applicable here?",
+      "range": {
+        "startLine": 16,
+        "startChar": 4,
+        "endLine": 16,
+        "endChar": 31
+      },
+      "revId": "d38634358dde3f196e9465214144c5ddc0c4cedb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "575e4abf_01220505",
+        "filename": "resources/mobile.scrollEndEventEmitter/ScrollEndEventEmitter.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-07T16:07:48Z",
+      "side": 1,
+      "message": "Is this still necessary since the event bus is passed in?",
+      "range": {
+        "startLine": 69,
+        "startChar": 1,
+        "endLine": 69,
+        "endChar": 57
+      },
+      "revId": "d38634358dde3f196e9465214144c5ddc0c4cedb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "53a89af9_70d35f69",
+        "filename": "resources/mobile.toggle/toggle.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-07T16:07:48Z",
+      "side": 1,
+      "message": "Is it correct for this to both be an EventEmitter and require one?",
+      "range": {
+        "startLine": 21,
+        "startChar": 2,
+        "endLine": 21,
+        "endChar": 31
+      },
+      "revId": "d38634358dde3f196e9465214144c5ddc0c4cedb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "85981339_0a3a7e7c",
+        "filename": "resources/mobile.toggle/toggle.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 250,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-07T16:07:48Z",
+      "side": 1,
+      "message": "I\u0027m not opposed to this change, so don\u0027t feel inclined to eliminate it for my sake, but I\u0027ll mention that I think we lose some benefits of an options bag if we immediately destructure it and it only has one usage that\u0027s internal. Also, this change highlights a previous shortcoming which is that these JSDocs seem more appropriate on the constructor where external clients will actually pass these parameters in.",
+      "range": {
+        "startLine": 247,
+        "startChar": 0,
+        "endLine": 250,
+        "endChar": 31
+      },
+      "revId": "d38634358dde3f196e9465214144c5ddc0c4cedb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
