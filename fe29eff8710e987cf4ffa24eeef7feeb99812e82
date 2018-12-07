@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "69c4a1fc_0ce06605",
+        "filename": "resources/mobile.nearby/Nearby.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-12-07T02:35:33Z",
+      "side": 1,
+      "message": "Done (and thanks for noticing! I was wondering about that)",
+      "parentUuid": "d71d397f_82fb44f8",
+      "range": {
+        "startLine": 16,
+        "startChar": 12,
+        "endLine": 16,
+        "endChar": 18
+      },
+      "revId": "fe29eff8710e987cf4ffa24eeef7feeb99812e82",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "22cb3cf3_16364afc",
         "filename": "resources/mobile.special.nearby.scripts/nearby.js",
         "patchSetId": 4
@@ -36,6 +60,30 @@
       "writtenOn": "2018-12-06T20:25:22Z",
       "side": 1,
       "message": "It\u0027s excellent that this is now a passed in dependency! I think you\u0027ve already consider this for future work but I hope we can eventually pass a nearby-specific instance of OO.EventEmitter here instead of relying on a singleton.",
+      "range": {
+        "startLine": 15,
+        "startChar": 3,
+        "endLine": 15,
+        "endChar": 22
+      },
+      "revId": "fe29eff8710e987cf4ffa24eeef7feeb99812e82",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "97b3cf63_4f088c81",
+        "filename": "resources/mobile.special.nearby.scripts/nearby.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-12-07T02:35:33Z",
+      "side": 1,
+      "message": "Yeah I was debating if it was wise to have multiple event buses but I think the localization is worth it so I went ahead and passed in a more localized instance in this patch and next patch (Talk Overlay).",
+      "parentUuid": "22cb3cf3_16364afc",
       "range": {
         "startLine": 15,
         "startChar": 3,
