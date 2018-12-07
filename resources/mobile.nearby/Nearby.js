@@ -13,6 +13,7 @@
 	 * @extends WatchstarPageList
 	 *
 	 * @param {Object} options Configuration options
+	 * @param {OO.EventEmitter} options.eventBus Object used to emit Nearby-postRender events
 	 * @param {Function} [options.onItemClick] Callback invoked when a result is
 	 *                                         clicked. Defaults to nop.
 	 */
@@ -25,6 +26,7 @@
 		this.nearbyApi = new NearbyGateway( {
 			api: options.api
 		} );
+		this.eventBus = options.eventBus;
 
 		if ( options.errorType ) {
 			options.errorOptions = self._errorOptions( options.errorType );
@@ -162,6 +164,8 @@
 		 * @instance
 		 */
 		postRender: function () {
+			var self = this;
+
 			if ( !this._isLoading ) {
 				this.$( '.page-list' ).removeClass( 'hidden' );
 			}
@@ -170,7 +174,7 @@
 			this.$( function () {
 				// todo: use the local emitter when refresh() doesn't recreate the
 				//       OO.EventEmitter by calling the super's constructor.
-				M.emit( NEARBY_EVENT_POST_RENDER );
+				self.eventBus.emit( NEARBY_EVENT_POST_RENDER );
 			} );
 		},
 		/**
