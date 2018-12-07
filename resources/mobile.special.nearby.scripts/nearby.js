@@ -1,5 +1,5 @@
 /* global jQuery */
-( function ( M, config, msg, loader, $ ) {
+( function ( M, config, msg, loader, $, EventEmitter ) {
 	/** @event */
 	var api,
 		NEARBY_EVENT_POST_RENDER = 'Nearby-postRender',
@@ -9,8 +9,10 @@
 		Nearby = M.require( 'mobile.nearby/Nearby' ),
 		util = M.require( 'mobile.startup/util' ),
 		$infoContainer = $( '#mf-nearby-info-holder' ),
+		eventBus = new EventEmitter(),
 		nearby,
 		options = {
+			eventBus: eventBus,
 			el: $( '#mw-mf-nearby' ),
 			funnel: 'nearby',
 			onItemClick: function ( ev ) {
@@ -68,7 +70,7 @@
 			nearby = new Nearby( opt );
 			// todo: use the local emitter when refresh() doesn't recreate the
 			//       OO.EventEmitter by calling the super's constructor.
-			M.on( NEARBY_EVENT_POST_RENDER, function () {
+			eventBus.on( NEARBY_EVENT_POST_RENDER, function () {
 				var fragment = router.getPath(), el;
 				if ( isFragmentIdentifier( fragment ) ) {
 					// The hash is expected to be an identifier selector (unless the
@@ -163,4 +165,4 @@
 		} );
 	} );
 
-}( mw.mobileFrontend, mw.config, mw.msg, mw.loader, jQuery ) );
+}( mw.mobileFrontend, mw.config, mw.msg, mw.loader, jQuery, OO.EventEmitter ) );

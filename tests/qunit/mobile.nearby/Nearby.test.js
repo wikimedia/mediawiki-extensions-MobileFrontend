@@ -22,7 +22,10 @@
 				latitude: 37.7,
 				longitude: -122,
 				range: 1000,
-				el: $el
+				el: $el,
+				eventBus: {
+					emit: function () {}
+				}
 			};
 		nearby = new Nearby( opts );
 
@@ -91,7 +94,10 @@
 				latitude: 37.7,
 				longitude: -122,
 				range: 1000,
-				el: $el
+				el: $el,
+				eventBus: {
+					emit: function () {}
+				}
 			};
 
 		nearby = new Nearby( opts );
@@ -122,7 +128,10 @@
 				latitude: 37.7,
 				longitude: -122,
 				range: 1000,
-				el: $el
+				el: $el,
+				eventBus: {
+					emit: function () {}
+				}
 			};
 		nearby = new Nearby( opts );
 		return nearby.refresh( opts ).then( function () {
@@ -152,7 +161,10 @@
 				api: api,
 				pageTitle: pageTitle,
 				range: 1000,
-				el: $el
+				el: $el,
+				eventBus: {
+					emit: function () {}
+				}
 			};
 		nearby = new Nearby( opts );
 		nearby.refresh( opts );
