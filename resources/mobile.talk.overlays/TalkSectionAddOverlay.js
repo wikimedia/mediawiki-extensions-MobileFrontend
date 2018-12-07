@@ -13,11 +13,14 @@
 	 * @param {Object} options Configuration options
 	 * @param {Object} options.title Title of the talk page being modified
 	 * @param {Object} options.currentPageTitle Title of the page before the overlay appears
+	 * @param {OO.EventEmitter} options.eventBus Object used to emit talk-added-wo-overlay
+	 * and talk-discussion-added events
 	 */
 	function TalkSectionAddOverlay( options ) {
 		TalkOverlayBase.apply( this, arguments );
 		this.title = options.title;
 		this.currentPageTitle = options.currentPageTitle;
+		this.eventBus = options.eventBus;
 		// Variable to indicate, if the overlay will be closed by the save function
 		// or by the user. If this is false and there is content in the input fields,
 		// the user will be asked, if he want to abandon his changes before we close
@@ -136,11 +139,11 @@
 			this.save().then( function ( status ) {
 				if ( status === 'ok' ) {
 					if ( isOnTalkPage ) {
-						M.emit( 'talk-added-wo-overlay' );
+						self.eventBus.emit( 'talk-added-wo-overlay' );
 					} else {
 						self.pageGateway.invalidatePage( self.title );
 						toast.show( mw.msg( 'mobile-frontend-talk-topic-feedback' ) );
-						M.emit( 'talk-discussion-added' );
+						self.eventBus.emit( 'talk-discussion-added' );
 						self.hide();
 					}
 				}
