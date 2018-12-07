@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "be60410c_5078fa7d",
+        "filename": "src/mobile.startup/CtaDrawer.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-07T16:56:00Z",
+      "side": 1,
+      "message": "Thanks, this was unintentional. Fixed.",
+      "parentUuid": "c1d8ea34_27391ef1",
+      "range": {
+        "startLine": 116,
+        "startChar": 1,
+        "endLine": 116,
+        "endChar": 63
+      },
+      "revId": "9b1b1ad42b93b6fc713ff2a055d7e47012df674f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "54441c1e_e60f3360",
         "filename": "src/mobile.startup/CtaDrawer.js",
         "patchSetId": 12
@@ -36,6 +60,30 @@
       "writtenOn": "2018-12-06T23:51:56Z",
       "side": 1,
       "message": "The primary concern I have with this is that this makes initialization of this component different than how we initialize most of our other components (new CtaDrawer.CtaDrawer() vs new CtaDrawer), and therefore its not what I would expect.\n\nAre there any alternatives we can do so that we can keep `module.exports \u003d CtaDrawer`? Some thoughts I had were:\n\n1) Make the mw.util.getUrl handle a set of different inputs (e.g. either utilizing sinon\u0027s .withArgs/.returns or adding more conditionals to the stub you have now) and test that the outputted hrefs are in line with the params expectations. \n\n2) Make these private functions part of CtaDrawer\u0027s prototype so that you can test them. I know that is less than ideal too but I would prefer that over changing how we initialize this component.",
+      "range": {
+        "startLine": 120,
+        "startChar": 0,
+        "endLine": 126,
+        "endChar": 2
+      },
+      "revId": "9b1b1ad42b93b6fc713ff2a055d7e47012df674f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cda30d1e_a7b38f0f",
+        "filename": "src/mobile.startup/CtaDrawer.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-07T16:56:00Z",
+      "side": 1,
+      "message": "I\u0027ve taken the second approach and attached the functions to the prototype outside of mfExtend. I think this improves the readability as it\u0027s clear that the functions are independent of CtaDrawer state. I hope we can change these to exports in the future.",
+      "parentUuid": "54441c1e_e60f3360",
       "range": {
         "startLine": 120,
         "startChar": 0,
