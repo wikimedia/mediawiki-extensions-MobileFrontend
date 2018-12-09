@@ -2,6 +2,7 @@
 
 namespace MobileFrontend\ContentProviders;
 
+use FormatJson;
 use OutputPage;
 use MediaWiki\MediaWikiServices;
 
@@ -80,7 +81,7 @@ class McsContentProvider implements IContentProvider {
 
 		$resp = $this->fileGetContents( $url );
 		if ( $resp ) {
-			$json = json_decode( $resp, true );
+			$json = FormatJson::decode( $resp, true );
 			if ( is_array( $json ) ) {
 				return $this->buildHtmlFromResponse( $json );
 			} else {
