@@ -15,7 +15,14 @@
 			this.$container = $( '<div>' ).html( sectionHtml );
 			this.$section0 = this.$container.find( 'h2' ).eq( 0 );
 			this.sandbox.stub( browser, 'isWideScreen' ).returns( false );
-			toggle = new Toggler( this.$container, '', page );
+			toggle = new Toggler( {
+				$container: this.$container,
+				prefix: '',
+				page: page,
+				eventBus: {
+					emit: function () {}
+				}
+			} );
 			toggle.toggle( this.$section0 );
 		},
 		afterEach: function () {
@@ -96,7 +103,14 @@
 		beforeEach: function () {
 			this.$container = $( '<div>' ).html( sectionHtml );
 			this.sandbox.stub( browser, 'isWideScreen' ).returns( true );
-			toggle = new Toggler( this.$container, '', page );
+			toggle = new Toggler( {
+				$container: this.$container,
+				prefix: '',
+				page: page,
+				eventBus: {
+					emit: function () {}
+				}
+			} );
 		},
 		afterEach: function () {
 			window.location.hash = '#';
@@ -119,7 +133,14 @@
 			this.sandbox.stub( mw.config, 'get' ).withArgs( 'wgMFCollapseSectionsByDefault' ).returns( false );
 			mw.storage.set( 'expandSections', 'true' );
 			this.$container = $( '<div>' ).html( sectionHtml );
-			toggle = new Toggler( this.$container, '', page );
+			toggle = new Toggler( {
+				$container: this.$container,
+				prefix: '',
+				page: page,
+				eventBus: {
+					emit: function () {}
+				}
+			} );
 		},
 		afterEach: function () {
 			window.location.hash = '#';
@@ -140,7 +161,14 @@
 			this.sandbox.stub( mw.config, 'get' ).withArgs( 'wgMFCollapseSectionsByDefault' ).returns( true );
 			this.$container = $( '<div>' ).html( sectionHtml );
 			this.sandbox.stub( browser, 'isWideScreen' ).returns( false );
-			toggle = new Toggler( this.$container, '', page );
+			toggle = new Toggler( {
+				$container: this.$container,
+				prefix: '',
+				page: page,
+				eventBus: {
+					emit: function () {}
+				}
+			} );
 		},
 		afterEach: function () {
 			window.location.hash = '#';
@@ -182,7 +210,14 @@
 			this.sandbox.stub( mw.config, 'get' ).withArgs( 'wgMFCollapseSectionsByDefault' ).returns( true );
 			this.sandbox.stub( browser, 'isWideScreen' ).returns( false );
 			this.$container = $( '<div>' ).html( sectionHtml );
-			toggle = new Toggler( this.$container, '', page );
+			toggle = new Toggler( {
+				$container: this.$container,
+				prefix: '',
+				page: page,
+				eventBus: {
+					emit: function () {}
+				}
+			} );
 			this.$section = this.$container.find( 'h2' );
 			this.headline = this.$section.find( 'span' ).attr( 'id' );
 			this.pageTitle = page.title;
@@ -310,7 +345,14 @@
 			'manually created section state has been saved correctly'
 		);
 
-		toggle = new Toggler( this.$container, '', page );
+		toggle = new Toggler( {
+			$container: this.$container,
+			prefix: '',
+			page: page,
+			eventBus: {
+				emit: function () {}
+			}
+		} );
 
 		this.expandedSections = Toggler._getExpandedSections( page );
 		assert.strictEqual( typeof this.expandedSections[ this.pageTitle ][ this.headline ],

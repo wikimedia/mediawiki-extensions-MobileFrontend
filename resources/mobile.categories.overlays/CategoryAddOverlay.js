@@ -12,9 +12,11 @@
 	 * @extends Overlay
 	 * @uses CategoryGateway
 	 * @param {Object} options Configuration options
+	 * @param {OO.EventEmitter} options.eventBus Object used to emit category-added events
 	 */
 	function CategoryAddOverlay( options ) {
 		options.heading = mw.msg( 'mobile-frontend-categories-add-heading', options.title );
+		this.eventBus = options.eventBus;
 		Overlay.apply( this, arguments );
 	}
 
@@ -137,7 +139,7 @@
 			} else {
 				// save the new categories
 				this.gateway.save( this.title, newCategories ).then( function () {
-					M.emit( 'category-added' );
+					self.eventBus.emit( 'category-added' );
 				}, function () {
 					self.showHidden( '.initial-header' );
 					self.$safeButton.prop( 'disabled', false );

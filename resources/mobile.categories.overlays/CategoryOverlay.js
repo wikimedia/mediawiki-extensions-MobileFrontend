@@ -12,13 +12,15 @@
 	 * @uses CategoryGateway
 	 *
 	 * @param {Object} options Configuration options
+	 * @param {OO.EventEmitter} options.eventBus Object used to listen for category-added
+	 * and scroll:throttled events
 	 */
 	function CategoryOverlay( options ) {
-		this.scrollEndEventEmitter = new ScrollEndEventEmitter();
+		this.scrollEndEventEmitter = new ScrollEndEventEmitter( options.eventBus );
 		this.scrollEndEventEmitter.on( ScrollEndEventEmitter.EVENT_SCROLL_END,
 			this._loadCategories.bind( this ) );
 		this.gateway = new CategoryGateway( options.api );
-		M.on( 'category-added', this._loadCategories.bind( this ) );
+		options.eventBus.on( 'category-added', this._loadCategories.bind( this ) );
 		Overlay.call( this,
 			util.extend( options, {
 				className: 'category-overlay overlay'

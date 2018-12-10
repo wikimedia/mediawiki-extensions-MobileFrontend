@@ -16,12 +16,13 @@
 	 * @fires watched
 	 * @fires watch
 	 * @param {Object} options Configuration options
+	 * @param {OO.EventEmitter} options.eventBus Object used to listen for scroll:throttled events
 	 */
 	function WatchList( options ) {
 		var lastTitle;
 
 		// Set up infinite scroll helper and listen to events
-		this.scrollEndEventEmitter = new ScrollEndEventEmitter();
+		this.scrollEndEventEmitter = new ScrollEndEventEmitter( options.eventBus );
 		this.scrollEndEventEmitter.on( ScrollEndEventEmitter.EVENT_SCROLL_END,
 			this._loadPages.bind( this ) );
 

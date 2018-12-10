@@ -19,12 +19,14 @@
 	 * @fires ImageOverlay#ImageOverlay-exit
 	 * @fires ImageOverlay#ImageOverlay-slide
 	 * @param {Object} options Configuration options
+	 * @param {OO.EventEmitter} options.eventBus Object used to listen for resize:throttled events
 	 */
 	function ImageOverlay( options ) {
 		this.gateway = options.gateway || new ImageGateway( {
 			api: options.api
 		} );
 		this.router = options.router || router;
+		this.eventBus = options.eventBus;
 
 		Overlay.apply( this, arguments );
 	}
@@ -279,7 +281,7 @@
 				showLoadFailMsg();
 			} );
 
-			M.on( 'resize:throttled', this._positionImage.bind( this ) );
+			this.eventBus.on( 'resize:throttled', this._positionImage.bind( this ) );
 		},
 
 		/**

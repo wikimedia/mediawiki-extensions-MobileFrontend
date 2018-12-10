@@ -40,7 +40,11 @@ QUnit.module( 'MobileFrontend Skin.js', {
 			.withArgs( page, 'More_refs' ).returns( util.Deferred().resolve( util.parseHTML( '<p>' ).html( '<p>E</p><p>F</p>' ).children() ) );
 		this.skin = new Skin( {
 			referencesGateway: stub,
-			page: page
+			page: page,
+			eventBus: {
+				on: function () {},
+				off: function () {}
+			}
 		} );
 	},
 	afterEach: function () { sandbox.restore(); }

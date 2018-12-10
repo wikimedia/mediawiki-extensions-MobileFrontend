@@ -14,6 +14,7 @@
 	 * @extends View
 	 *
 	 * @param {Object} options Configuration options
+	 * @param {OO.EventEmitter} options.eventBus Object used to listen for scroll:throttled events
 	 */
 	function PhotoList( options ) {
 		var gatewayOptions = {
@@ -27,7 +28,7 @@
 		}
 		this.gateway = new PhotoListGateway( gatewayOptions );
 		// Set up infinite scroll
-		this.scrollEndEventEmitter = new ScrollEndEventEmitter( 1000 );
+		this.scrollEndEventEmitter = new ScrollEndEventEmitter( options.eventBus, 1000 );
 		this.scrollEndEventEmitter.on( ScrollEndEventEmitter.EVENT_SCROLL_END,
 			this._loadPhotos.bind( this ) );
 		View.call( this, options );

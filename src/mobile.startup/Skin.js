@@ -8,8 +8,7 @@ var
 	icons = require( './icons' ),
 	viewport = mw.viewport,
 	spinner = icons.spinner(),
-	mfExtend = require( './mfExtend' ),
-	M = require( './moduleLoaderSingleton' );
+	mfExtend = require( './mfExtend' );
 
 /**
  * Get the id of the section $el belongs to.
@@ -50,8 +49,11 @@ function getSectionId( $el ) {
  * @fires Skin#click
  * @fires Skin#references-loaded
  * @fires Skin#changed
- *
  * @param {Object} options Configuration options
+ * @param {OO.EventEmitter} options.eventBus Object used to listen for
+ * before-section-toggled, scroll:throttled, resize:throttled, and
+ * section-toggled events
+ *
  */
 function Skin( options ) {
 	var self = this;
@@ -62,6 +64,7 @@ function Skin( options ) {
 		this.mainMenu = options.mainMenu;
 		mw.log.warn( 'Skin: Use of mainMenu is deprecated.' );
 	}
+	this.eventBus = options.eventBus;
 	View.call( this, options );
 	this.referencesGateway = options.referencesGateway;
 
@@ -74,7 +77,7 @@ function Skin( options ) {
 	}
 
 	if ( mw.config.get( 'wgMFLazyLoadReferences' ) ) {
-		M.on( 'before-section-toggled', this.lazyLoadReferences.bind( this ) );
+		this.eventBus.on( 'before-section-toggled', this.lazyLoadReferences.bind( this ) );
 	}
 }
 
@@ -193,9 +196,9 @@ mfExtend( Skin, View, {
 
 			// When no images are left unbind all events
 			if ( !imagePlaceholders.length ) {
-				M.off( 'scroll:throttled', _loadImages );
-				M.off( 'resize:throttled', _loadImages );
-				M.off( 'section-toggled', _loadImages );
+				self.eventBus.off( 'scroll:throttled', _loadImages );
+				self.eventBus.off( 'resize:throttled', _loadImages );
+				self.eventBus.off( 'section-toggled', _loadImages );
 				self.off( 'changed', _loadImages );
 			}
 
@@ -203,9 +206,9 @@ mfExtend( Skin, View, {
 			return loadImagesList( images );
 		}
 
-		M.on( 'scroll:throttled', _loadImages );
-		M.on( 'resize:throttled', _loadImages );
-		M.on( 'section-toggled', _loadImages );
+		this.eventBus.on( 'scroll:throttled', _loadImages );
+		this.eventBus.on( 'resize:throttled', _loadImages );
+		this.eventBus.on( 'section-toggled', _loadImages );
 		this.on( 'changed', _loadImages );
 
 		return _loadImages();

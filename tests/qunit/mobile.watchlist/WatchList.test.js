@@ -19,6 +19,10 @@
 			done = assert.async(),
 			spy = this.spy,
 			pl = new WatchList( {
+				eventBus: {
+					on: function () {},
+					off: function () {}
+				},
 				api: new mw.Api(),
 				pages: [
 					{ title: 'Title 30' },

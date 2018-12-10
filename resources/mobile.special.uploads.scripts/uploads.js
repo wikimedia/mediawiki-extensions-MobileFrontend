@@ -3,6 +3,7 @@
 	var
 		user = mw.user,
 		PhotoList = M.require( 'mobile.gallery/PhotoList' ),
+		eventBus = M.require( 'mobile.startup/eventBusSingleton' ),
 		pageParams = mw.config.get( 'wgPageName' ).split( '/' ),
 		currentUserName = user.getName(),
 		corsUrl = mw.config.get( 'wgMFPhotoUploadEndpoint' ),
@@ -18,7 +19,8 @@
 		if ( $( '.errorbox' ).length === 0 ) {
 			new PhotoList( {
 				api: api,
-				username: userName
+				username: userName,
+				eventBus: eventBus
 			} ).appendTo( '#mw-content-text .content' );
 		}
 	}
