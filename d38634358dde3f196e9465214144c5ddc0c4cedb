@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "99b47803_84fa562f",
+        "filename": "resources/mobile.categories.overlays/CategoryOverlay.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-10T15:18:42Z",
+      "side": 1,
+      "message": "That makes sense. ScrollEndEventEmitter only consumes the global event bus because it has to.",
+      "parentUuid": "d02da7ab_2aac6182",
+      "range": {
+        "startLine": 16,
+        "startChar": 4,
+        "endLine": 16,
+        "endChar": 31
+      },
+      "revId": "d38634358dde3f196e9465214144c5ddc0c4cedb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "575e4abf_01220505",
         "filename": "resources/mobile.scrollEndEventEmitter/ScrollEndEventEmitter.js",
         "patchSetId": 8
@@ -84,6 +108,30 @@
       "side": 1,
       "message": "This one is interesting because ScrollEndEventEmitter needs to listen to scroll events (currently emitted by mobile.init/init.js) but it also emits its own local \u0027scroll end\u0027 event that is specific to its $el property. Given that there can be multiple ScrollEndEventEmitter instances for different elements, we probably don\u0027t want to emit the event on the same event bus passed in. One thought I had is we could make this class take a callback function instead of emitting its event. I\u0027ve also made a super-happy-dev-time topic relating to this topic",
       "parentUuid": "575e4abf_01220505",
+      "range": {
+        "startLine": 69,
+        "startChar": 1,
+        "endLine": 69,
+        "endChar": 57
+      },
+      "revId": "d38634358dde3f196e9465214144c5ddc0c4cedb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "33a2f545_2905e2c9",
+        "filename": "resources/mobile.scrollEndEventEmitter/ScrollEndEventEmitter.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-10T15:18:42Z",
+      "side": 1,
+      "message": "I lost sight of the reason we were passing in an event bus in the first place which was to shuttle around global events. This makes sense as you have it.",
+      "parentUuid": "ed7c5115_8b1e012a",
       "range": {
         "startLine": 69,
         "startChar": 1,
