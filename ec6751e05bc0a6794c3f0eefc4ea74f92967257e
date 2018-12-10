@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4fecdc7f_330cf68a",
+        "filename": "src/mobile.startup/moduleLoader.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-10T15:44:37Z",
+      "side": 0,
+      "message": "It looks like OO can be removed as a test dependency now for tests/node-qunit/mobile.startup/moduleLoader.test.js.",
+      "range": {
+        "startLine": 8,
+        "startChar": 3,
+        "endLine": 8,
+        "endChar": 27
+      },
+      "revId": "ec6751e05bc0a6794c3f0eefc4ea74f92967257e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
