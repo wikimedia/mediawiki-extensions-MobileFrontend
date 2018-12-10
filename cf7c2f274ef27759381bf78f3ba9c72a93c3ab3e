@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "4a8b680d_8e97545c",
+        "filename": "resources/mobile.editor.common/EditorOverlayBase.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-12-10T09:20:19Z",
+      "side": 1,
+      "message": "Overlooked, done.",
+      "parentUuid": "a63b555a_6d674257",
+      "range": {
+        "startLine": 85,
+        "startChar": 3,
+        "endLine": 85,
+        "endChar": 21
+      },
+      "revId": "cf7c2f274ef27759381bf78f3ba9c72a93c3ab3e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ea17b717_caeb0126",
         "filename": "resources/mobile.notifications.overlay/NotificationsOverlay.js",
         "patchSetId": 8
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "e31e20f0_769fe8fa",
+        "filename": "resources/mobile.notifications.overlay/NotificationsOverlay.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-12-10T09:20:19Z",
+      "side": 1,
+      "message": "Done. I took a look at Minerva and MF and this value isn\u0027t being overridden anywhere that I can tell, so I moved it into the \u0027defaults\u0027 stop.",
+      "parentUuid": "ea17b717_caeb0126",
+      "range": {
+        "startLine": 22,
+        "startChar": 2,
+        "endLine": 22,
+        "endChar": 30
+      },
+      "revId": "cf7c2f274ef27759381bf78f3ba9c72a93c3ab3e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "db47e823_822e3a37",
         "filename": "resources/mobile.watchlist/WatchList.js",
         "patchSetId": 8
@@ -59,6 +107,30 @@
       "writtenOn": "2018-12-07T20:34:20Z",
       "side": 1,
       "message": "i\u0027m wondering why this doesn\u0027t follow the same pattern as the SearchOverlay where it is default that can be overwritten? If it is required for the component, can we add a comment stating that?",
+      "range": {
+        "startLine": 32,
+        "startChar": 2,
+        "endLine": 32,
+        "endChar": 30
+      },
+      "revId": "cf7c2f274ef27759381bf78f3ba9c72a93c3ab3e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "320ff449_0bdb57fc",
+        "filename": "resources/mobile.watchlist/WatchList.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-12-10T09:20:19Z",
+      "side": 1,
+      "message": "Done. Also moved into the \u0027defaults\u0027 spot.",
+      "parentUuid": "db47e823_822e3a37",
       "range": {
         "startLine": 32,
         "startChar": 2,
