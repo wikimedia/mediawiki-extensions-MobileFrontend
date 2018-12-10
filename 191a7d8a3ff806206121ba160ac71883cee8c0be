@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "61585454_cb3b3a47",
+        "filename": "extension.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-10T16:15:35Z",
+      "side": 0,
+      "message": "More changes are needed to remove this module. It\u0027s referenced in PHP-land.",
+      "range": {
+        "startLine": 85,
+        "startChar": 3,
+        "endLine": 85,
+        "endChar": 25
+      },
+      "revId": "191a7d8a3ff806206121ba160ac71883cee8c0be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
