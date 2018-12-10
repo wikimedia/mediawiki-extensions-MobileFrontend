@@ -8,21 +8,10 @@
 		<exclude-pattern>tests/phpunit/*</exclude-pattern>
 		<exclude-pattern>includes/MobileFrontend\.*\.php</exclude-pattern>
 	</rule>
-	<rule ref="MediaWiki.Commenting.FunctionComment.MissingParamComment">
-		<severity>1</severity>
-	</rule>
 	<rule ref="Generic.Files.OneObjectStructurePerFile.MultipleFound">
 		<exclude-pattern>tests/phpunit/*</exclude-pattern>
 	</rule>
 	<file>.</file>
 	<arg name="extensions" value="php,php5,inc"/>
 	<arg name="encoding" value="UTF-8"/>
-
-	<rule ref="Squiz.Functions.FunctionDeclarationArgumentSpacing">
-		<properties>
-			<property name="equalsSpacing" value="1" />
-			<property name="requiredSpacesAfterOpen" value="1"/>
-			<property name="requiredSpacesBeforeClose" value="1" />
-		</properties>
-	</rule>
 </ruleset>
