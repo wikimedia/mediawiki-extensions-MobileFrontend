@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "2f7a870e_d79ef719",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-12-11T13:47:20Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "23ca48e1_d3913631",
+      "range": {
+        "startLine": 37,
+        "startChar": 5,
+        "endLine": 37,
+        "endChar": 35
+      },
+      "revId": "4428a8894cbb3da8ffc5f43a9e9db313a2eec7c0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "67927fa4_a9a82353",
         "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
         "patchSetId": 9
@@ -36,6 +60,30 @@
       "writtenOn": "2018-12-04T14:13:31Z",
       "side": 1,
       "message": "instead of mocking, you can provide FauxRequest class",
+      "range": {
+        "startLine": 56,
+        "startChar": 17,
+        "endLine": 56,
+        "endChar": 35
+      },
+      "revId": "4428a8894cbb3da8ffc5f43a9e9db313a2eec7c0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fe751c13_ec7dee2c",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-12-11T13:47:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "67927fa4_a9a82353",
       "range": {
         "startLine": 56,
         "startChar": 17,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "b2c370fc_83587c36",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-12-11T13:47:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "19eafea4_13f744a7",
+      "range": {
+        "startLine": 59,
+        "startChar": 17,
+        "endLine": 59,
+        "endChar": 35
+      },
+      "revId": "4428a8894cbb3da8ffc5f43a9e9db313a2eec7c0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f73fe2fa_44b06f88",
         "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
         "patchSetId": 9
@@ -82,6 +154,30 @@
       "writtenOn": "2018-12-04T14:13:31Z",
       "side": 1,
       "message": "it\u0027s nice to do something like:\n\n$mockTitle-\u003eexpect($this-\u003eatLeastOnce())\n    -\u003emethod(\u0027exists\u0027)\n    -\u003ewillReturn( false );\n\nYou\u0027re creating mock and you say that function that uses it, should call `exists`.",
+      "range": {
+        "startLine": 77,
+        "startChar": 2,
+        "endLine": 77,
+        "endChar": 31
+      },
+      "revId": "4428a8894cbb3da8ffc5f43a9e9db313a2eec7c0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ac9e0084_0dcb2917",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-12-11T13:47:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f73fe2fa_44b06f88",
       "range": {
         "startLine": 77,
         "startChar": 2,
@@ -117,6 +213,30 @@
     },
     {
       "key": {
+        "uuid": "5a755e16_73baa2d3",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-12-11T13:47:20Z",
+      "side": 1,
+      "message": "Cool! Thanks a lot, I was thinking about this too because having repeated calls to `setMwGlobals` is not nice.",
+      "parentUuid": "25fd98b3_15d4e11d",
+      "range": {
+        "startLine": 114,
+        "startChar": 2,
+        "endLine": 115,
+        "endChar": 73
+      },
+      "revId": "4428a8894cbb3da8ffc5f43a9e9db313a2eec7c0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "90136c85_cd97d9e7",
         "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
         "patchSetId": 9
@@ -140,6 +260,30 @@
     },
     {
       "key": {
+        "uuid": "f288c5ad_0e65c2a4",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-12-11T13:47:20Z",
+      "side": 1,
+      "message": "Yes, I can think about that :) and will make a follow up patch!",
+      "parentUuid": "90136c85_cd97d9e7",
+      "range": {
+        "startLine": 145,
+        "startChar": 17,
+        "endLine": 145,
+        "endChar": 54
+      },
+      "revId": "4428a8894cbb3da8ffc5f43a9e9db313a2eec7c0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "527cc9f0_eb6dedb3",
         "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
         "patchSetId": 9
@@ -151,6 +295,30 @@
       "writtenOn": "2018-12-04T14:13:31Z",
       "side": 1,
       "message": "setting `wgMFContentProviderTryLocalContentFirst` to true and using DefaultContentProvider class has no sense, as you cannot check that `wgMFContentProviderTryLocalContentFirst` is properly used.\n\nWhy? If you pass wgMFContentProviderTryLocalContentFirst\u003dtrue, it means that you\u0027ll use the `DefaultContentProvider` all the time. The only way to check that `wgMFContentProviderTryLocalContentFirst` is properly used is to pass different content provider, that returns something else and then verify what is the $provider class.\n\nThis can be easily done, please provide different provider class, but set the LocalContentFirst flag, then check the type of what ContentProviderFactory::getProvider() returns you. It should be DefaultContentProvider no matter what you provide in `WgMFContentProviderClass`.  I saw that you\u0027re already using the `$this-\u003eassertInstanceOf()`, thats what you need",
+      "range": {
+        "startLine": 187,
+        "startChar": 22,
+        "endLine": 187,
+        "endChar": 79
+      },
+      "revId": "4428a8894cbb3da8ffc5f43a9e9db313a2eec7c0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "385b6693_ae8a4dac",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 187,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-12-11T13:47:20Z",
+      "side": 1,
+      "message": "Still TODO. PS11 will handle this part!",
+      "parentUuid": "527cc9f0_eb6dedb3",
       "range": {
         "startLine": 187,
         "startChar": 22,
