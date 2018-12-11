@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bf9f8695_2badfc98",
+        "filename": "src/mobile.startup/CtaDrawer.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-12-11T18:46:34Z",
+      "side": 1,
+      "message": "nice!",
+      "revId": "678fba66fa12120644a832f45b24d44c6b712abc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "75607a65_215634e3",
+        "filename": "tests/node-qunit/mobile.startup/CtaDrawer.test.html.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-12-11T18:46:34Z",
+      "side": 1,
+      "message": "what\u0027s with the spaces in the attributes?\nCould these be documented at the top of the file as it\u0027s not obvious to me why they exist.",
+      "range": {
+        "startLine": 10,
+        "startChar": 12,
+        "endLine": 10,
+        "endChar": 20
+      },
+      "revId": "678fba66fa12120644a832f45b24d44c6b712abc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
