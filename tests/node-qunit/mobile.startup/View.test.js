@@ -1,6 +1,7 @@
 /* global $ */
 var
 	Hogan = require( 'hogan.js' ),
+	mw = require( '../utils/mw' ),
 	jQuery = require( '../utils/jQuery' ),
 	mfExtend = 	require( '../../../src/mobile.startup/mfExtend' ),
 	oo = require( '../utils/oo' ),
@@ -13,6 +14,7 @@ QUnit.module( 'MobileFrontend mobile.startup/View', {
 		sandbox = sinon.sandbox.create();
 		jQuery.setUp( sandbox, global );
 		oo.setUp( sandbox, global );
+		mw.setUp( sandbox, global );
 
 		View = require( '../../../src/mobile.startup/View' );
 	},

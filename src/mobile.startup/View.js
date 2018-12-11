@@ -1,6 +1,7 @@
 /* global $ */
 var util = require( './util' ),
 	mfExtend = require( './mfExtend' ),
+	DEPRECATED_PROPERTIES = [ 'isBorderBox', 'className' ],
 	// Cached regex to split keys for `delegate`.
 	delegateEventSplitter = /^(\S+)\s*(.*)$/,
 	idCounter = 0;
@@ -85,7 +86,15 @@ function uniqueId( prefix ) {
  * @class View
  * @mixins OO.EventEmitter
  */
+
 function View() {
+	var self = this;
+	DEPRECATED_PROPERTIES.forEach( function ( property ) {
+		if ( self[ property ] !== undefined ) {
+			mw.log.deprecate( self, property, self[ property ],
+				'Setting `' + property + '` on the View is deprecated. Please use options.' );
+		}
+	} );
 	this.initialize.apply( this, arguments );
 }
 OO.mixinClass( View, OO.EventEmitter );
