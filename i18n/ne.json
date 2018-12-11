@@ -8,7 +8,8 @@
 			"राम प्रसाद जोशी",
 			"सरोज कुमार ढकाल",
 			"Krish Dulal",
-			"Nirajan pant"
+			"Nirajan pant",
+			"Parbat subedi"
 		]
 	},
 	"mobile-frontend-categories-add": "वर्ग थपियो",
@@ -22,6 +23,7 @@
 	"mobile-frontend-editor-continue": "अर्को",
 	"mobile-frontend-editor-editing": "सम्पादन",
 	"mobile-frontend-editor-editing-page": "<span><strong>सम्पादन</strong> $1</span>",
+	"mobile-frontend-editor-error": "सम्पादन सुरक्षित हुन सकेन",
 	"mobile-frontend-editor-previewing-page": "<span><strong>पूर्वावलोकन</strong> $1</span>",
 	"mobile-frontend-editor-save": "संग्रह गर्ने",
 	"mobile-frontend-editor-summary": "सारांश:",
