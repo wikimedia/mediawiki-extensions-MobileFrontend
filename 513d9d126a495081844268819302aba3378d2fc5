@@ -19,6 +19,41 @@
     },
     {
       "key": {
+        "uuid": "7ed03db6_1e2f13f0",
+        "filename": ".eslintshared.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-12-11T18:53:51Z",
+      "side": 1,
+      "message": "Im a bit confused what\u0027s going on here too, so please can this be explained a little in the commit message?",
+      "parentUuid": "8b7df4d2_6e704152",
+      "revId": "513d9d126a495081844268819302aba3378d2fc5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cf8dcf9b_4033be04",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-12-11T18:53:51Z",
+      "side": 1,
+      "message": "For a change that touches many files,  to understand what impact this change has, I\u0027d really appreciate one of either\n*  a longer commit message a task here summarising the change\n* a handy link to the release notes\n* a phab ticket that has either of the above 2 things",
+      "revId": "513d9d126a495081844268819302aba3378d2fc5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "645af371_e487a4d3",
         "filename": "resources/mobile.editor.api/EditorGateway.js",
         "patchSetId": 3
@@ -36,6 +71,64 @@
         "endLine": 39,
         "endChar": 34
       },
+      "revId": "513d9d126a495081844268819302aba3378d2fc5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "900b91ee_d3d8d744",
+        "filename": "resources/mobile.editor.api/EditorGateway.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-12-11T18:53:51Z",
+      "side": 1,
+      "message": "Agreed.\nGuessing Anti-Harrassment team should be made aware of this change too.",
+      "parentUuid": "645af371_e487a4d3",
+      "range": {
+        "startLine": 39,
+        "startChar": 7,
+        "endLine": 39,
+        "endChar": 34
+      },
+      "revId": "513d9d126a495081844268819302aba3378d2fc5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c3fb2774_8d032d37",
+        "filename": "src/mobile.startup/PageGateway.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-12-11T18:53:51Z",
+      "side": 1,
+      "message": "im guessing a new rule got introduced here? I like the rule, but it would be nice to call this out in commit message as its a significant change to the coding standards.",
+      "revId": "513d9d126a495081844268819302aba3378d2fc5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2491defa_31a47478",
+        "filename": "src/mobile.startup/View.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-12-11T18:53:51Z",
+      "side": 1,
+      "message": "Why does eslint touch documentation?",
       "revId": "513d9d126a495081844268819302aba3378d2fc5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
