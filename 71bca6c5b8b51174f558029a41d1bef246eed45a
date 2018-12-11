@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c3265b7d_0691c948",
+        "filename": "resources/mobile.categories.overlays/CategoryAddOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-12-11T20:53:38Z",
+      "side": 1,
+      "message": "Should be lowercased as require( \u0027mediawiki.router\u0027 ) returns a singleton not a class and we use uppercase variable names only for classes.",
+      "revId": "71bca6c5b8b51174f558029a41d1bef246eed45a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6bcb6e2a_9f86380c",
+        "filename": "resources/mobile.categories.overlays/CategoryAddOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-12-11T20:53:38Z",
+      "side": 1,
+      "message": "This recently got modified in ec6751e05b to be eventBus.emit",
+      "revId": "71bca6c5b8b51174f558029a41d1bef246eed45a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f49ab6ae_0ca03194",
+        "filename": "resources/mobile.categories.overlays/CategoryAddOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-12-11T20:53:38Z",
+      "side": 1,
+      "message": "Let\u0027s make this a constant and put it at the top of the file so we can tweak this later if we can improve this elsewhere!",
+      "range": {
+        "startLine": 145,
+        "startChar": 8,
+        "endLine": 145,
+        "endChar": 13
+      },
+      "revId": "71bca6c5b8b51174f558029a41d1bef246eed45a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
