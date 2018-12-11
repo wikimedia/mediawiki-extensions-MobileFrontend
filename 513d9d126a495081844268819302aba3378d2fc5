@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "645af371_e487a4d3",
+        "filename": "resources/mobile.editor.api/EditorGateway.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2018-12-11T08:48:29Z",
+      "side": 1,
+      "message": "This sounds like it should get a Phabricator ticket assigned, so the team responsible for this code is aware and deals with it in a timely manner.",
+      "range": {
+        "startLine": 39,
+        "startChar": 7,
+        "endLine": 39,
+        "endChar": 34
+      },
+      "revId": "513d9d126a495081844268819302aba3378d2fc5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
