@@ -596,55 +596,37 @@
 					}
 
 					self.onSaveComplete();
-				}, function ( data, code, response ) {
-					var msg,
-						msgHeading,
-						// When save failed with one of these error codes, the returned
-						// message in response.error.info will be forwarded to the user.
-						// FIXME: This shouldn't be needed when info texts are all localized.
-						whitelistedErrorInfo = [
-							'blocked',
-							'autoblocked'
-						],
-						key = response && response.error && response.error.code,
-						typeMap = {
-							editconflict: 'editConflict',
-							wasdeleted: 'editPageDeleted',
-							'abusefilter-disallowed': 'extensionAbuseFilter',
-							captcha: 'extensionCaptcha',
-							spamprotectiontext: 'extensionSpamBlacklist',
-							'titleblacklist-forbidden-edit': 'extensionTitleBlacklist'
-						};
-					if ( data.type === 'captcha' ) {
-						self.captchaId = data.details.id;
-						self.handleCaptcha( data.details );
-						key = 'captcha';
-					} else if ( data.type === 'abusefilter' ) {
-						self._showAbuseFilter( data.details.type, data.details.message );
-					} else if ( data.type === 'readonly' ) {
-						msgHeading = mw.msg( 'apierror-readonly' );
-						msg = data.details.readonlyreason;
-					} else {
-						if ( key === 'editconflict' ) {
-							msg = mw.msg( 'mobile-frontend-editor-error-conflict' );
-						} else if ( whitelistedErrorInfo.indexOf( key ) > -1 ) {
-							msg = response.error.info;
-						} else {
-							msg = mw.msg( 'mobile-frontend-editor-error' );
-						}
-					}
-
-					if ( msg || msgHeading ) {
-						self.reportError( msg, msgHeading );
-						self.showHidden( '.save-header, .save-panel' );
-					}
-
-					self.log( {
-						action: 'saveFailure',
-						message: msg,
-						type: typeMap[key] || 'responseUnknown'
-					} );
+				}, function ( data ) {
+					self.onSaveFailure( data );
 				} );
+		},
+
+		/**
+		 * Executed when page save fails. Handles error display and bookkeeping,
+		 * passes logging duties to the parent.
+		 * @inheritdoc
+		 * @memberof EditorOverlay
+		 * @instance
+		 */
+		onSaveFailure: function ( data ) {
+			var heading,
+				msg = this.saveFailureMessage( data );
+
+			if ( data.type === 'captcha' ) {
+				this.captchaId = data.details.id;
+				this.handleCaptcha( data.details );
+			} else if ( data.type === 'abusefilter' ) {
+				this._showAbuseFilter( data.details.type, data.details.message );
+			} else if ( data.type === 'readonly' ) {
+				heading = mw.msg( 'apierror-readonly' );
+			}
+
+			if ( msg || heading ) {
+				this.reportError( msg, heading );
+				this.showHidden( '.save-header, .save-panel' );
+			}
+
+			EditorOverlayBase.prototype.onSaveFailure.apply( this, arguments );
 		},
 
 		/**

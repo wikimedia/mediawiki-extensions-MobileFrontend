@@ -1,5 +1,6 @@
 ( function ( M, ve ) {
 	var EditorOverlayBase = M.require( 'mobile.editor.common/EditorOverlayBase' ),
+		EditorGateway = M.require( 'mobile.editor.api/EditorGateway' ),
 		util = M.require( 'mobile.startup/util' );
 
 	/**
@@ -18,6 +19,16 @@
 			}, options )
 		);
 		this.isNewPage = options.isNewPage;
+
+		// Gateway present for a few utility purposes; the VE articletarget
+		// handles the actual API calls separately
+		this.gateway = new EditorGateway( {
+			api: options.api,
+			title: options.title,
+			sectionId: options.sectionId,
+			oldId: options.oldId,
+			isNewPage: options.isNewPage
+		} );
 	}
 
 	OO.mfExtend( VisualEditorOverlay, EditorOverlayBase, {
