@@ -328,6 +328,30 @@
       "revId": "4428a8894cbb3da8ffc5f43a9e9db313a2eec7c0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6f9ff6c1_fcbdd711",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 187,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-12-11T14:42:38Z",
+      "side": 1,
+      "message": "Done in PS11.",
+      "parentUuid": "385b6693_ae8a4dac",
+      "range": {
+        "startLine": 187,
+        "startChar": 22,
+        "endLine": 187,
+        "endChar": 79
+      },
+      "revId": "4428a8894cbb3da8ffc5f43a9e9db313a2eec7c0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
