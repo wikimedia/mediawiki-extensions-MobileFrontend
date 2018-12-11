@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "66c5b265_bf448668",
+        "filename": "resources/mobile.categories.overlays/CategoryAddOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-12-11T23:57:39Z",
+      "side": 1,
+      "message": "LukBukkit it looks like this delay does not need to be so big on Wikipedia.org\n\nCan I thus suggest we make this configurable? I\u0027d rather have a smaller number if possible.\n\nAlso I can\u0027t see to find a phabricator ticket tracking this issue, as 7.5s on any wiki is not desirable and I wonder if we can fix the API part of this.",
+      "revId": "18fb847d960a1c8b66bcaf10eb0bb91242991fc0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a10b71f_482c94d3",
         "filename": "resources/mobile.categories.overlays/CategoryAddOverlay.js",
         "patchSetId": 3
@@ -13,6 +30,23 @@
       "writtenOn": "2018-12-11T23:07:57Z",
       "side": 1,
       "message": "This comment would be better above reloadDelay as if that delay changes to 200, this comment won\u0027t make sense :)",
+      "revId": "18fb847d960a1c8b66bcaf10eb0bb91242991fc0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e4403d1c_bad03684",
+        "filename": "resources/mobile.categories.overlays/CategoryOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-12-11T23:57:39Z",
+      "side": 1,
+      "message": "Why do we need to empty?",
       "revId": "18fb847d960a1c8b66bcaf10eb0bb91242991fc0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
