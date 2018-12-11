@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "031e2f32_4be417b2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 7
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-12-11T01:53:41Z",
+      "side": 1,
+      "message": "I removed the mw reference from Panel.test.js and Section.test.js and the tests seemed to pass which makes sense to me because the deprecation warning will only be executed if the className or isBorderBox properties are detected.\n\nA couple of View\u0027s tests failed because the tests are not passing in the className in the constructor but can we make those tests do that instead?",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 13,
+        "endChar": 39
+      },
+      "revId": "0b4bcbecc2009962fd79b17c3a22ce467e661a81",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
