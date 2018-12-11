@@ -97,10 +97,12 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.onWindowScroll = function () {
 	var $window, windowTop, contentTop,
 		surface = this.surface,
 		target = this;
-	// The window can only scroll in iOS if the keyboard has been opened
-	if ( this.useScrollContainer ) {
-		// iOS applies a scroll offset to the window to move the cursor
-		// into view. Apply this offset to the surface instead.
+	// iOS applies a scroll offset to the window when opening the keyboard to move the cursor into
+	// view. On the editing surface, this is not necessary (we set large padding-bottom so that the
+	// keyboard covers nothing); apply this offset to the surface instead. But in dialogs allow it
+	// to happen, otherwise the user can't scroll to see whatever is underneath the keyboard.
+	// (T210559)
+	if ( this.useScrollContainer && !surface.dialogs.getCurrentWindow() ) {
 		$window = $( target.getElementWindow() );
 		windowTop = $window.scrollTop();
 		contentTop = target.$scrollContainer.scrollTop();
