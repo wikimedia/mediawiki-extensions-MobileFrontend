@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a10b71f_482c94d3",
+        "filename": "resources/mobile.categories.overlays/CategoryAddOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-12-11T23:07:57Z",
+      "side": 1,
+      "message": "This comment would be better above reloadDelay as if that delay changes to 200, this comment won\u0027t make sense :)",
+      "revId": "18fb847d960a1c8b66bcaf10eb0bb91242991fc0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
