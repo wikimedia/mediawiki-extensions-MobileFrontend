@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ea2cd2f2_aedb686d",
+        "filename": "package.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-11T15:55:16Z",
+      "side": 0,
+      "message": "Aren\u0027t these still required as peer dependencies? If not, please add a note to the commit message so the decision is easily uncovered later.",
+      "revId": "5a4494cf4e05442491d334b382871ef524f0f754",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}

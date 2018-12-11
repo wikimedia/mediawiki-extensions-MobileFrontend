@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "8b7df4d2_6e704152",
+        "filename": ".eslintshared.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-11T15:55:16Z",
+      "side": 1,
+      "message": "I was baffled by this change. All ESLint configs seem to extend the root config which includes this file. I wondered, what is the purpose for separation?\n\nThe docs[0] describe extends:\n\n\u003e ESLint extends configurations recursively so a base configuration can also have an extends property.\n\nTo me, this reads that including the root config will include all configs that it extends and all configs they extend and so forth. However, when I test it, that doesn\u0027t seem to be the case. That is, extends does not appear to be recursive.\n\nI\u0027m also confused why we wouldn\u0027t want these settings to apply to \ntests/node-qunit/.eslintrc.json.\n\nWould you please add your insights to the commit message so no one else will have to derive a correct understanding?\n\n[0] https://eslint.org/docs/user-guide/configuring#extending-configuration-files",
+      "revId": "513d9d126a495081844268819302aba3378d2fc5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "645af371_e487a4d3",
         "filename": "resources/mobile.editor.api/EditorGateway.js",
         "patchSetId": 3
