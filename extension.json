@@ -208,7 +208,6 @@
 			],
 			"dependencies": [
 				"mobile.startup",
-				"mobile.toggle",
 				"mobile.toc.images"
 			],
 			"scripts": [
@@ -353,7 +352,8 @@
 				"resources/mobile.startup/LoadingOverlay.less",
 				"resources/mobile.startup/drawer.less",
 				"resources/mobile.startup/references/ReferencesDrawer.less",
-				"resources/mobile.startup/watchstar/watchstar.less"
+				"resources/mobile.startup/watchstar/watchstar.less",
+				"resources/mobile.startup/Toggler.less"
 			],
 			"scripts": [
 				"resources/dist/mobile.startup.js"
@@ -706,14 +706,9 @@
 				"mobile",
 				"desktop"
 			],
+			"deprecated": true,
 			"dependencies": [
 				"mobile.startup"
-			],
-			"styles": [
-				"resources/mobile.toggle/toggle.less"
-			],
-			"scripts": [
-				"resources/mobile.toggle/toggle.js"
 			]
 		},
 		"mobile.watchstar": {

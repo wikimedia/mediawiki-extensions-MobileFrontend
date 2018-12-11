@@ -72,7 +72,9 @@ module.exports = function newMockMediaWiki() {
 			return fn();
 		},
 		storage: {
-			get: function () {}
+			get: function () {},
+			set: function () {},
+			remove: function () {}
 		},
 		notify: function () {}
 	};
