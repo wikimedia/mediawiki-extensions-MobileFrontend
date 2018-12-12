@@ -1,10 +1,11 @@
 @import '../../mobile.less/mobile.variables';
 @import 'mediawiki.ui/variables';
 
-// Necessary for fallback editor preview.
+// `.previewnote p` is necessary for fallback editor preview.
+// `.warningbox, .mw-revision` are used for messages on login screen
+// (They're more informational than actual warnings.)
+// FIXME: standardise latter two classes
 .previewnote p,
-// Used for messages on login screen (They're more informational than actual warnings.)
-// FIXME: standardise these two classes
 .warningbox,
 .mw-revision {
 	border: 1px solid @colorGray12;
