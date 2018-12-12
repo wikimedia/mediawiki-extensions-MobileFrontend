@@ -45,6 +45,30 @@
       "revId": "1decbec1a1a7a6928b90518f03b7f3f880a5a9f4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ed4a4706_9338efa4",
+        "filename": "tests/node-qunit/mobile.startup/Toggler.test.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-12-12T18:37:01Z",
+      "side": 1,
+      "message": "I thought that `sandbox.restore()` would delete this variable, and at this point it would only exist when running in the browser. That\u0027s not how it works?",
+      "parentUuid": "677a1094_884ed1b2",
+      "range": {
+        "startLine": 63,
+        "startChar": 0,
+        "endLine": 66,
+        "endChar": 3
+      },
+      "revId": "1decbec1a1a7a6928b90518f03b7f3f880a5a9f4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
