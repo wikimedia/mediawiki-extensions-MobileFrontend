@@ -25,6 +25,23 @@
     },
     {
       "key": {
+        "uuid": "65fb4017_7eca6b95",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 360,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-12-12T23:12:47Z",
+      "side": 1,
+      "message": "interesting.. https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/479349 Hygiene: Drop unused test template",
+      "revId": "1decbec1a1a7a6928b90518f03b7f3f880a5a9f4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "677a1094_884ed1b2",
         "filename": "tests/node-qunit/mobile.startup/Toggler.test.js",
         "patchSetId": 2
