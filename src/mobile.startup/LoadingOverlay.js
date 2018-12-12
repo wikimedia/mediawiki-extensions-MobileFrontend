@@ -9,15 +9,12 @@ var
  * @extends Overlay
  */
 function LoadingOverlay() {
-	Overlay.apply( this, arguments );
+	Overlay.call( this, {
+		className: 'overlay overlay-loading'
+	} );
 }
 
 mfExtend( LoadingOverlay, Overlay, {
-	/**
-	 * @memberof LoadingOverlay
-	 * @instance
-	 */
-	className: 'overlay overlay-loading',
 	/**
 	 * @memberof LoadingOverlay
 	 * @instance

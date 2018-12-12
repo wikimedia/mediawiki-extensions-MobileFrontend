@@ -54,7 +54,7 @@
 		return dBlockedContent.then( function () {
 			assert.ok(
 				messageStub.calledWith( {
-					className: 'panel',
+					className: 'drawer position-fixed',
 					partial: false,
 					user: {
 						options: {

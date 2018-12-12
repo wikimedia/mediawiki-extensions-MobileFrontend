@@ -1,6 +1,7 @@
 ( function ( M ) {
-	var
-		View = M.require( 'mobile.startup/View' ),
+	var mobile = M.require( 'mobile.startup' ),
+		util = mobile.util,
+		View = mobile.View,
 		AbuseFilterOverlay = M.require( 'mobile.editor.common/AbuseFilterOverlay' );
 
 	/**
@@ -15,7 +16,11 @@
 	function AbuseFilterPanel( options ) {
 		this.isDisallowed = false;
 		this.overlayManager = options.overlayManager;
-		View.apply( this, arguments );
+		View.call( this,
+			util.extend( {
+				className: 'panel hidden'
+			}, options )
+		);
 	}
 
 	OO.mfExtend( AbuseFilterPanel, View, {
@@ -36,11 +41,6 @@
 		 * @instance
 		 */
 		template: mw.template.get( 'mobile.editor.common', 'AbuseFilterPanel.hogan' ),
-		/**
-		 * @memberof AbuseFilterPanel
-		 * @instance
-		 */
-		className: 'panel hidden',
 		/**
 		 * Show the panel. Create a route to show AbuseFilterOverlay with message.
 		 * @memberof AbuseFilterPanel

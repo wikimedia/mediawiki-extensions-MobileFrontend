@@ -219,7 +219,6 @@ mfExtend( View, {
 	 * @return {*}
 	 */
 	_resolveInheritedProp: function ( self, props, propName, defaultValue ) {
-
 		if ( propName in self ) { return self[ propName ]; }
 
 		if ( Object.prototype.hasOwnProperty.call( props, propName ) ) {

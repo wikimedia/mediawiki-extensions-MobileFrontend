@@ -10,9 +10,14 @@ var Drawer = require( './../Drawer' ),
  * @class ReferencesDrawer
  * @extends Drawer
  * @uses Icon
+ * @param {Object} props
  */
-function ReferencesDrawer() {
-	Drawer.apply( this, arguments );
+function ReferencesDrawer( props ) {
+	Drawer.call( this,
+		util.extend( {
+			className: 'drawer position-fixed text references'
+		}, props )
+	);
 }
 
 mfExtend( ReferencesDrawer, Drawer, {
@@ -55,11 +60,6 @@ mfExtend( ReferencesDrawer, Drawer, {
 	show: function () {
 		return Drawer.prototype.show.apply( this, arguments );
 	},
-	/**
-	 * @memberof ReferencesDrawer
-	 * @instance
-	 */
-	className: 'drawer position-fixed text references',
 	/**
 	 * @memberof ReferencesDrawer
 	 * @instance

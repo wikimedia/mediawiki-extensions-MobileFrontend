@@ -9,9 +9,14 @@
 	 * is related to the abusefilter extension.
 	 * @class AbuseFilterOverlay
 	 * @extends Overlay
+	 * @param {Object} props
 	 */
-	function AbuseFilterOverlay() {
-		Overlay.apply( this, arguments );
+	function AbuseFilterOverlay( props ) {
+		Overlay.call( this,
+			util.extend( {
+				className: 'overlay abusefilter-overlay'
+			}, props )
+		);
 	}
 
 	OO.mfExtend( AbuseFilterOverlay, Overlay, {
@@ -36,11 +41,6 @@
 			button: Button.prototype.template,
 			content: mw.template.get( 'mobile.editor.common', 'AbuseFilterOverlay.hogan' )
 		} ),
-		/**
-		 * @memberof AbuseFilterOverlay
-		 * @instance
-		 */
-		className: 'overlay abusefilter-overlay',
 		/**
 		 * @inheritdoc
 		 * @memberof AbuseFilterOverlay
