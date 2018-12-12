@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "9051008e_69c3463a",
+        "filename": "resources/mobile.categories.overlays/CategoryAddOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-12-12T16:17:32Z",
+      "side": 1,
+      "message": "Mmm.\nSo I guess this also might not be enough time on certain configurations, right? :/",
+      "parentUuid": "6ab5bd5d_14d730b4",
+      "revId": "18fb847d960a1c8b66bcaf10eb0bb91242991fc0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a10b71f_482c94d3",
         "filename": "resources/mobile.categories.overlays/CategoryAddOverlay.js",
         "patchSetId": 3
@@ -83,6 +101,24 @@
       "side": 1,
       "message": "The _loadCategories function only appends newly loaded categories. It doesn\u0027t delete anything, because (as far as I could unterstand it) when your scroll down, it should be able to load another \"page\" or bundle of categories. It should work like a infinite scrolling view.",
       "parentUuid": "e4403d1c_bad03684",
+      "revId": "18fb847d960a1c8b66bcaf10eb0bb91242991fc0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "094819b0_c91a9adb",
+        "filename": "resources/mobile.categories.overlays/CategoryOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-12-12T16:17:32Z",
+      "side": 1,
+      "message": "Oh I see, so this resets the gateway and empties the list of categories so that it\u0027s compatible with loadCategories. Could you please add an inline comment here, to explain what\u0027s happening?",
+      "parentUuid": "5de9aac3_4bf3e90b",
       "revId": "18fb847d960a1c8b66bcaf10eb0bb91242991fc0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
