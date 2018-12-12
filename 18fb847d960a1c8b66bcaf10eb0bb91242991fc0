@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6ab5bd5d_14d730b4",
+        "filename": "resources/mobile.categories.overlays/CategoryAddOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 4362
+      },
+      "writtenOn": "2018-12-12T15:53:34Z",
+      "side": 1,
+      "message": "You\u0027re right. It\u0027s a good idea to make this configurable.\n\nThe solution to fix the time problem is to set up job queue, but this won\u0027t be configured automatically when installing MediaWiki.\nRead more: https://www.mediawiki.org/wiki/Manual:Job_queue#Set_up",
+      "parentUuid": "66c5b265_bf448668",
+      "revId": "18fb847d960a1c8b66bcaf10eb0bb91242991fc0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a10b71f_482c94d3",
         "filename": "resources/mobile.categories.overlays/CategoryAddOverlay.js",
         "patchSetId": 3
@@ -50,6 +68,24 @@
       "revId": "18fb847d960a1c8b66bcaf10eb0bb91242991fc0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5de9aac3_4bf3e90b",
+        "filename": "resources/mobile.categories.overlays/CategoryOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 4362
+      },
+      "writtenOn": "2018-12-12T15:53:34Z",
+      "side": 1,
+      "message": "The _loadCategories function only appends newly loaded categories. It doesn\u0027t delete anything, because (as far as I could unterstand it) when your scroll down, it should be able to load another \"page\" or bundle of categories. It should work like a infinite scrolling view.",
+      "parentUuid": "e4403d1c_bad03684",
+      "revId": "18fb847d960a1c8b66bcaf10eb0bb91242991fc0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
