@@ -388,6 +388,7 @@
 			],
 			"dependencies": [
 				"oojs-ui",
+				"mediawiki.ui.input",
 				"mobile.editor.api",
 				"mobile.startup",
 				"mobile.messageBox",
