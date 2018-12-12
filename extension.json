@@ -534,27 +534,6 @@
 				"stop-hand": "resources/mobile.editor.images/stop-hand.svg"
 			}
 		},
-		"mobile.search": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"deprecated": true,
-			"dependencies": [
-				"mediawiki.user",
-				"mobile.startup"
-			]
-		},
-		"mobile.search.api": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"deprecated": true,
-			"dependencies": [
-				"mobile.startup"
-			]
-		},
 		"mobile.talk.overlays": {
 			"targets": [
 				"mobile",
@@ -678,16 +657,6 @@
 				"mobile-frontend-categories-add-wait",
 				"mobile-frontend-categories-normal",
 				"mobile-frontend-categories-hidden"
-			]
-		},
-		"mobile.watchstar": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"deprecated": true,
-			"dependencies": [
-				"mobile.startup"
 			]
 		},
 		"mobile.languages.structured": {
