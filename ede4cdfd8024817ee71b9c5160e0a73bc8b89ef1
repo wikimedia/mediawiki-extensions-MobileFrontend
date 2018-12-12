@@ -59,6 +59,40 @@
     },
     {
       "key": {
+        "uuid": "958f3dc4_3ceff70a",
+        "filename": "extension.json",
+        "patchSetId": 10
+      },
+      "lineNbr": 537,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-12-12T23:06:32Z",
+      "side": 1,
+      "message": "This shouldn\u0027t be needed. mobile.search.images is never added using addModuleStyles (so not subject to caching) and is not referenced in any other extensions.",
+      "revId": "ede4cdfd8024817ee71b9c5160e0a73bc8b89ef1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5dd47214_7dad080e",
+        "filename": "extension.json",
+        "patchSetId": 10
+      },
+      "lineNbr": 542,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-12-12T23:06:32Z",
+      "side": 1,
+      "message": "(but this one is as mobile.search is referenced in Minerva) - once those references have been updated the whole module can be removed.",
+      "revId": "ede4cdfd8024817ee71b9c5160e0a73bc8b89ef1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "62ad85a8_83881255",
         "filename": "tests/node-qunit/utils/mockMediaWiki.js",
         "patchSetId": 10
