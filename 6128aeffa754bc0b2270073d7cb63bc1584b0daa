@@ -117,6 +117,30 @@
       "revId": "6128aeffa754bc0b2270073d7cb63bc1584b0daa",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9413c87c_1a3e86ad",
+        "filename": "resources/mobile.messageBox.styles/messageBox.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2018-12-12T21:16:54Z",
+      "side": 1,
+      "message": "Sure",
+      "parentUuid": "7362b9eb_3c83639d",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 15
+      },
+      "revId": "6128aeffa754bc0b2270073d7cb63bc1584b0daa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
