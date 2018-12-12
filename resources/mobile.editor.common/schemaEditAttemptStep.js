@@ -68,7 +68,7 @@
 					mw.log.warn( 'mf.schemaEditAttemptStep: Do not rely on default timing value for saveSuccess/saveFailure' );
 					return -1;
 				case 'abort':
-					switch ( event.type ) {
+					switch ( event.abort_type ) {
 						case 'preinit':
 							return timeStamp - timing.init;
 						case 'nochange':
@@ -105,10 +105,21 @@
 			data.is_oversample =
 				!mw.eventLog.inSample( 1 / sampleRate ); // resource-modules-disable-line
 
-			if ( data.action === 'abort' ) {
+			if ( data.action === 'abort' && data.abort_type !== 'switchnochange' ) {
 				timing = {};
 			} else {
 				timing[ data.action ] = timeStamp;
+			}
+
+			// Switching between visual and source produces a chain of
+			// abort/ready events and no init event, so suppress them for
+			// consistency with desktop VE's logging.
+			if ( data.abort_type === 'switchnochange' ) {
+				return;
+			}
+			if ( timing.abort && data.action === 'ready' ) {
+				delete timing.abort;
+				return;
 			}
 
 			if ( trackdebug ) {
