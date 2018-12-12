@@ -1,0 +1,95 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e35052d8_f98dff99",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 10
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-12-12T23:03:58Z",
+      "side": 1,
+      "message": "typo",
+      "range": {
+        "startLine": 33,
+        "startChar": 31,
+        "endLine": 33,
+        "endChar": 35
+      },
+      "revId": "ede4cdfd8024817ee71b9c5160e0a73bc8b89ef1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "316b49af_3432f9c3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 10
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-12-12T23:03:58Z",
+      "side": 1,
+      "message": "So is this a dependency?",
+      "revId": "ede4cdfd8024817ee71b9c5160e0a73bc8b89ef1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "44093c4b_4c5da820",
+        "filename": "extension.json",
+        "patchSetId": 10
+      },
+      "lineNbr": 314,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-12-12T23:03:58Z",
+      "side": 1,
+      "message": "It would probably make sense to rename the templates separately (along with references) to keep consistency and limit the scope of this change.",
+      "revId": "ede4cdfd8024817ee71b9c5160e0a73bc8b89ef1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "62ad85a8_83881255",
+        "filename": "tests/node-qunit/utils/mockMediaWiki.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-12-12T23:03:58Z",
+      "side": 1,
+      "message": "I\u0027m curious about why this happens.",
+      "revId": "ede4cdfd8024817ee71b9c5160e0a73bc8b89ef1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5b28beae_0eac3f01",
+        "filename": "tests/node-qunit/utils/mockMediaWiki.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-12-12T23:03:58Z",
+      "side": 1,
+      "message": "why do we need to return something here? Doesn\u0027t it make sense to stub this in all our tests for predictability?",
+      "revId": "ede4cdfd8024817ee71b9c5160e0a73bc8b89ef1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
