@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e83acf0_d2bf0a00",
+        "filename": "extension.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 290,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-12-12T01:30:23Z",
+      "side": 0,
+      "message": "This is used in src/mobile.startup/watchstar/Watchstar.js and src/mobile.startup/watchstar/WatchstarPageList.js which is bundled into resources/dist/mobile.startup.js",
+      "revId": "9591a6062fbd0a8830a8e0f53b6e185cbf825a9c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
