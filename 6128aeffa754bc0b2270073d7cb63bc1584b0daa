@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "d0fba1c4_a762e76e",
+        "filename": "resources/mobile.editor.ve/editor.ve.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2018-12-12T19:58:41Z",
+      "side": 1,
+      "message": "That reference points to \u0027../../mobile.less/mobile.variables\u0027 which is imported at top of \u0027editor.less\u0027. @targetIconSize is only defined here again with no reference/import to \u0027mobile.variables\u0027.",
+      "parentUuid": "a7edbcd6_fa077a28",
+      "range": {
+        "startLine": 25,
+        "startChar": 2,
+        "endLine": 25,
+        "endChar": 24
+      },
+      "revId": "6128aeffa754bc0b2270073d7cb63bc1584b0daa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2d261c47_5ab8df45",
         "filename": "resources/mobile.messageBox.styles/messageBox.less",
         "patchSetId": 1
@@ -36,6 +60,30 @@
       "writtenOn": "2018-12-12T15:00:54Z",
       "side": 1,
       "message": "I don\u0027t object to these style changes but the previously attached comment is no longer clear. Please consider updating it.",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 15
+      },
+      "revId": "6128aeffa754bc0b2270073d7cb63bc1584b0daa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ada19e90_c8e6a958",
+        "filename": "resources/mobile.messageBox.styles/messageBox.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2018-12-12T19:58:41Z",
+      "side": 1,
+      "message": "stylelint seems to have a bug here, that doesn\u0027t allow to separate selectors by comments. I don\u0027t have a good solution, the other would be to disable stylelint rule, but I don\u0027t think that\u0027s worth it…?",
+      "parentUuid": "2d261c47_5ab8df45",
       "range": {
         "startLine": 7,
         "startChar": 0,

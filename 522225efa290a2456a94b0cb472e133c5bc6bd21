@@ -22,6 +22,30 @@
       "revId": "522225efa290a2456a94b0cb472e133c5bc6bd21",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ac122b55_f6a42561",
+        "filename": "package.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2018-12-12T19:58:41Z",
+      "side": 0,
+      "message": "No, it defines stylelint as dependency – in my understanding that should be sufficient.",
+      "parentUuid": "79257855_5eebc094",
+      "range": {
+        "startLine": 45,
+        "startChar": 5,
+        "endLine": 45,
+        "endChar": 14
+      },
+      "revId": "522225efa290a2456a94b0cb472e133c5bc6bd21",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
