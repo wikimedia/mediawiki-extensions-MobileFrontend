@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "4e48dd28_61919c85",
+        "filename": "resources/mobile.categories.overlays/CategoryAddOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-12-12T16:21:01Z",
+      "side": 1,
+      "message": "Do we know where the delay for the cronjob is defined?\nIf so maybe we could tie this value to that.\n\nHowever, if the delay is more than 7s, we probably want to consider a different solution here, for example:\n* inserting a notice that new categories will take time to appear.\n* Rewriting and \"faking\" the refresh via JS  (as in https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/460986/)\n* Using localStorage, to ensure \"pending\" categories are added to responses.\n\nI\u0027m not 100% sure what the right solution here is.",
+      "parentUuid": "9051008e_69c3463a",
+      "revId": "18fb847d960a1c8b66bcaf10eb0bb91242991fc0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a10b71f_482c94d3",
         "filename": "resources/mobile.categories.overlays/CategoryAddOverlay.js",
         "patchSetId": 3
