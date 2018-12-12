@@ -155,9 +155,9 @@
 		line-height: inherit;
 	}
 
-	// @iconGutterWidth and @iconSize are imported from mediawiki.ui/variables
-	@iconWidth: @iconSize + ( 2 * @iconGutterWidth );
 	.slider-button {
+		// @iconGutterWidth and @iconSize are imported from mediawiki.ui/variables
+		@iconWidth: @iconSize + ( 2 * @iconGutterWidth );
 		position: absolute;
 		top: 0;
 		min-width: 60px; // T198018: A width any smaller than 60px is too small of a touch area
@@ -190,7 +190,6 @@
 }
 
 .overlay-header {
-
 	.overlay-title {
 		// Expand the title as wide as possible to limit the size of the
 		// header-action. (Both are displayed as table-cells.)
