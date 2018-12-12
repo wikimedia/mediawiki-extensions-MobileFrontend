@@ -89,7 +89,7 @@
 					oldId: mw.util.getParamValue( 'oldid' ),
 					contentLang: $content.attr( 'lang' ),
 					contentDir: $content.attr( 'dir' ),
-					sessionId: mw.user.generateRandomSessionId()
+					sessionId: user.generateRandomSessionId()
 				},
 				visualEditorNamespaces = veConfig && veConfig.namespaces,
 				initMechanism = mw.util.getParamValue( 'redlink' ) ? 'new' : 'click';
