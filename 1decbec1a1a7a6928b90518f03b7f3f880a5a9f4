@@ -73,6 +73,30 @@
     },
     {
       "key": {
+        "uuid": "c6b47563_549c6930",
+        "filename": "extension.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 702,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-12-13T17:28:51Z",
+      "side": 1,
+      "message": "Actually.. it is a good idea to keep this. If nothing else, it reminds us to remove this module as soon as we\u0027ve updated the require statements in Minerva.\n\nThis deprecation notice should hopefully be short lived and not hit production, as I\u0027d expect this task to be swiftly followed up with the Minerva change and then the complete removal of this module.\n\nThis patch: Deprecation notices for including module mobile.toggle + M.require usage\nAfter Minerva patch: Deprecation notices for including module mobile.toggle\nAfter new MF patch to remove this module: No deprecation notices.\n\nIt would be very easy to miss the last step without doing this!",
+      "parentUuid": "ab286dee_2125d05f",
+      "range": {
+        "startLine": 702,
+        "startChar": 3,
+        "endLine": 702,
+        "endChar": 22
+      },
+      "revId": "1decbec1a1a7a6928b90518f03b7f3f880a5a9f4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "65fb4017_7eca6b95",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 2
