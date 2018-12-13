@@ -34,6 +34,24 @@
       "revId": "d3d3fd38551f62ad7aede6b4b7adfd822016c0f7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e6139d42_649e0124",
+        "filename": "resources/mobile.categories.overlays/CategoryOverlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 4362
+      },
+      "writtenOn": "2018-12-13T18:20:17Z",
+      "side": 1,
+      "message": "Yeah I guess both of these options will be very simple, but robust. \nI\u0027ll work on this tomorrow",
+      "parentUuid": "c75b0bb7_7810e08b",
+      "revId": "d3d3fd38551f62ad7aede6b4b7adfd822016c0f7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
