@@ -143,7 +143,7 @@
 		$heading.data( 'indicator', indicator );
 
 		/**
-		 * Global event emitted before a section is being toggled
+		 * Event emitted before a section is being toggled
 		 *
 		 * @event section-toggling
 		 * @type {Object}
@@ -167,7 +167,7 @@
 			} );
 
 		/**
-		 * Global event emitted after a section has been toggled
+		 * Event emitted after a section has been toggled
 		 * @event section-toggled
 		 * @type {Object}
 		 * @property {bool} wasExpanded
