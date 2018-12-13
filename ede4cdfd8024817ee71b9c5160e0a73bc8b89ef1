@@ -93,6 +93,23 @@
     },
     {
       "key": {
+        "uuid": "5c4572e0_33ce1986",
+        "filename": "tests/node-qunit/mobile.startup/search/SearchGateway.test.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-12-13T17:17:29Z",
+      "side": 1,
+      "message": "Doesn\u0027t this beforeEach override the one at the top of the file? I would expect SearchGateway to be undefined in the next test, since it\u0027s not being re-declared here, and is being set to undefined in the `afterEach`.🤷‍♂️",
+      "revId": "ede4cdfd8024817ee71b9c5160e0a73bc8b89ef1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "62ad85a8_83881255",
         "filename": "tests/node-qunit/utils/mockMediaWiki.js",
         "patchSetId": 10
