@@ -4,7 +4,7 @@
 
 	QUnit.module( 'MobileFrontend: MobileWebSearchLogger', {
 		beforeEach: function () {
-			this.logger = new MobileWebSearchLogger( this.schema );
+			this.logger = new MobileWebSearchLogger();
 			this.spy = this.sandbox.stub( mw, 'track' );
 		}
 	} );
