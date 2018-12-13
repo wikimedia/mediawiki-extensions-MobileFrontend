@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "a8bec8dd_460df232",
+        "filename": "extension.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 702,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-12-13T11:36:44Z",
+      "side": 1,
+      "message": "I haven\u0027t found any documentation on this, but perusing the source code, the only functionally I could find attached to this value is that it sends a deprecation message to mw.log.\n\nhttps://github.com/wikimedia/mediawiki/blob/f03d31af05dbe6acaad00bc76ff4aa02aee2f77f/includes/resourceloader/ResourceLoaderModule.php#L141\n\n...I checked my console logs and it appears that yes, this just outputs an extra log warning, which we\u0027re already doing on the client-side M.defines, so this should be removed.",
+      "parentUuid": "d25e5bd7_48ce8942",
+      "range": {
+        "startLine": 702,
+        "startChar": 3,
+        "endLine": 702,
+        "endChar": 22
+      },
+      "revId": "1decbec1a1a7a6928b90518f03b7f3f880a5a9f4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "65fb4017_7eca6b95",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 2
