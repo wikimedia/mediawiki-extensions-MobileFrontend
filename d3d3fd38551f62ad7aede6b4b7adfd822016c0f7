@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1392c888_753a1a66",
+        "filename": "resources/mobile.categories.overlays/CategoryOverlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-12-13T00:08:25Z",
+      "side": 1,
+      "message": "The more I play with this, the more unsure I am about it. For instance, if I click the tab organizational and then hit add category I do not see the new category.\n\nAlso even with the high lag, on my badly setup machine, the categories dont\u0027 add themselves.\n\nI\u0027m starting to wonder if instead of this, we should reload the entire page via a window.reload() or history.back(); reload...",
+      "revId": "d3d3fd38551f62ad7aede6b4b7adfd822016c0f7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
