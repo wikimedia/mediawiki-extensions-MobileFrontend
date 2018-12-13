@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "c76bfc77_5ea9f544",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 10
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-13T19:28:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e35052d8_f98dff99",
+      "range": {
+        "startLine": 33,
+        "startChar": 31,
+        "endLine": 33,
+        "endChar": 35
+      },
+      "revId": "ede4cdfd8024817ee71b9c5160e0a73bc8b89ef1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "316b49af_3432f9c3",
         "filename": "/COMMIT_MSG",
         "patchSetId": 10
@@ -36,6 +60,24 @@
       "writtenOn": "2018-12-12T23:03:58Z",
       "side": 1,
       "message": "So is this a dependency?",
+      "revId": "ede4cdfd8024817ee71b9c5160e0a73bc8b89ef1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2df51e1b_f56b0848",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 10
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-13T19:28:43Z",
+      "side": 1,
+      "message": "No, Minerva Depends-On this patch.",
+      "parentUuid": "316b49af_3432f9c3",
       "revId": "ede4cdfd8024817ee71b9c5160e0a73bc8b89ef1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -76,6 +118,24 @@
     },
     {
       "key": {
+        "uuid": "dff553b0_492f8698",
+        "filename": "extension.json",
+        "patchSetId": 10
+      },
+      "lineNbr": 537,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-13T19:28:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "958f3dc4_3ceff70a",
+      "revId": "ede4cdfd8024817ee71b9c5160e0a73bc8b89ef1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5dd47214_7dad080e",
         "filename": "extension.json",
         "patchSetId": 10
@@ -93,6 +153,24 @@
     },
     {
       "key": {
+        "uuid": "fa2c6f8b_7e140b55",
+        "filename": "extension.json",
+        "patchSetId": 10
+      },
+      "lineNbr": 542,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-13T19:28:43Z",
+      "side": 1,
+      "message": "That\u0027s the follow-up patch.",
+      "parentUuid": "5dd47214_7dad080e",
+      "revId": "ede4cdfd8024817ee71b9c5160e0a73bc8b89ef1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1e93bd56_0fb4bc41",
         "filename": "tests/node-qunit/mobile.startup/search/SearchGateway.test.js",
         "patchSetId": 10
@@ -104,6 +182,24 @@
       "writtenOn": "2018-12-13T17:25:28Z",
       "side": 1,
       "message": "The indent here appears to be incorrect?",
+      "revId": "ede4cdfd8024817ee71b9c5160e0a73bc8b89ef1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "77f221dc_cfc199eb",
+        "filename": "tests/node-qunit/mobile.startup/search/SearchGateway.test.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-13T19:28:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1e93bd56_0fb4bc41",
       "revId": "ede4cdfd8024817ee71b9c5160e0a73bc8b89ef1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -180,6 +276,24 @@
     },
     {
       "key": {
+        "uuid": "e179aaa0_29ccd039",
+        "filename": "tests/node-qunit/utils/mockMediaWiki.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-13T19:28:43Z",
+      "side": 1,
+      "message": "WatchstarGateway uses this function and search has watchstars.",
+      "parentUuid": "62ad85a8_83881255",
+      "revId": "ede4cdfd8024817ee71b9c5160e0a73bc8b89ef1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5b28beae_0eac3f01",
         "filename": "tests/node-qunit/utils/mockMediaWiki.js",
         "patchSetId": 10
@@ -191,6 +305,24 @@
       "writtenOn": "2018-12-12T23:03:58Z",
       "side": 1,
       "message": "why do we need to return something here? Doesn\u0027t it make sense to stub this in all our tests for predictability?",
+      "revId": "ede4cdfd8024817ee71b9c5160e0a73bc8b89ef1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b94c4e9f_af0dc227",
+        "filename": "tests/node-qunit/utils/mockMediaWiki.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-13T19:28:43Z",
+      "side": 1,
+      "message": "One of the search tests verifies that session token differs. I see your point but it also seems reasonable to approximate the actual implementation. I\u0027m happy to change it if you disagree.",
+      "parentUuid": "5b28beae_0eac3f01",
       "revId": "ede4cdfd8024817ee71b9c5160e0a73bc8b89ef1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
