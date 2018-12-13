@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "95dfaacf_d07e328a",
+        "filename": "extension.json",
+        "patchSetId": 13
+      },
+      "lineNbr": 246,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-13T21:23:37Z",
+      "side": 1,
+      "message": "Thank you for spotting. Fixed.",
+      "parentUuid": "3d05022e_43e8cd69",
+      "revId": "55ace56c21ce70f4300b8e9267107da68434b676",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "908b25ef_f6e09cd7",
         "filename": "resources/mobile.search/SearchOverlay.js",
         "patchSetId": 13
