@@ -324,8 +324,12 @@
 				this.nextStep = 'onStageChanges';
 			}
 			this.$errorNoticeContainer = this.$el.find( '#error-notice-container' );
+
 			Overlay.prototype.postRender.apply( this );
+
 			this.showHidden( '.initial-header' );
+			// Inform other interested code that the editor has loaded
+			mw.hook( 'mobileFrontend.editorOpened' ).fire();
 		},
 		/**
 		 * Back button click handler
@@ -379,11 +383,13 @@
 					.closed.then( function ( data ) {
 						if ( data && data.action === 'discard' ) {
 							self.allowCloseWindow.release();
+							mw.hook( 'mobileFrontend.editorClosed' ).fire();
 							Overlay.prototype.hide.call( self );
 						}
 					} );
 			} else {
 				this.allowCloseWindow.release();
+				mw.hook( 'mobileFrontend.editorClosed' ).fire();
 				return Overlay.prototype.hide.call( self );
 			}
 		},
