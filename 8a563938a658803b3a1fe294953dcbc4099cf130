@@ -42,6 +42,24 @@
     },
     {
       "key": {
+        "uuid": "7a61fe44_ae19c2b3",
+        "filename": "extension.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 704,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-12-13T17:49:06Z",
+      "side": 1,
+      "message": "mmm... I get console errors when I do that, so it looks like your previous workflow suggestion is the one that works. (.i.e. leave this here, remove references in Minerva, then remove this).",
+      "parentUuid": "3df33dd1_5360001b",
+      "revId": "8a563938a658803b3a1fe294953dcbc4099cf130",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a8398e28_8566a3a2",
         "filename": "tests/node-qunit/mobile.startup/Toggler.test.js",
         "patchSetId": 3
