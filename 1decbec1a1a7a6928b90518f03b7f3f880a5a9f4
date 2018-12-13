@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "ab286dee_2125d05f",
+        "filename": "extension.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 702,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-12-13T12:21:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d25e5bd7_48ce8942",
+      "range": {
+        "startLine": 702,
+        "startChar": 3,
+        "endLine": 702,
+        "endChar": 22
+      },
+      "revId": "1decbec1a1a7a6928b90518f03b7f3f880a5a9f4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "65fb4017_7eca6b95",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 2
@@ -125,6 +149,30 @@
       "side": 1,
       "message": "Should this move before the call to sandbox.restore()?",
       "parentUuid": "ed4a4706_9338efa4",
+      "range": {
+        "startLine": 63,
+        "startChar": 0,
+        "endLine": 66,
+        "endChar": 3
+      },
+      "revId": "1decbec1a1a7a6928b90518f03b7f3f880a5a9f4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4939c558_bc0c035e",
+        "filename": "tests/node-qunit/mobile.startup/Toggler.test.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-12-13T12:21:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "582aed29_47f9259c",
       "range": {
         "startLine": 63,
         "startChar": 0,
