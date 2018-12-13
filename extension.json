@@ -312,7 +312,9 @@
 				"icon.hogan": "resources/mobile.startup/icon.hogan",
 				"Section.hogan": "resources/mobile.startup/Section.hogan",
 				"button.hogan": "resources/mobile.startup/button.hogan",
-				"ReferencesDrawer.hogan": "resources/mobile.startup/references/ReferencesDrawer.hogan"
+				"ReferencesDrawer.hogan": "resources/mobile.startup/references/ReferencesDrawer.hogan",
+				"search/SearchHeader.hogan": "resources/mobile.startup/search/SearchHeader.hogan",
+				"search/SearchContent.hogan": "resources/mobile.startup/search/SearchContent.hogan"
 			},
 			"messages": [
 				"mobile-frontend-references-citation-error",
@@ -356,7 +358,8 @@
 				"resources/mobile.startup/drawer.less",
 				"resources/mobile.startup/references/ReferencesDrawer.less",
 				"resources/mobile.startup/watchstar/watchstar.less",
-				"resources/mobile.startup/Toggler.less"
+				"resources/mobile.startup/Toggler.less",
+				"resources/mobile.startup/search/SearchOverlay.less"
 			],
 			"scripts": [
 				"resources/dist/mobile.startup.js"
@@ -534,18 +537,11 @@
 				"mediawiki.user",
 				"mobile.startup"
 			],
-			"styles": [
-				"resources/mobile.search/SearchOverlay.less"
-			],
 			"scripts": [
 				"resources/mobile.search/schemaMobileWebSearch.js",
 				"resources/mobile.search/SearchOverlay.js",
 				"resources/mobile.search/MobileWebSearchLogger.js"
 			],
-			"templates": {
-				"header.hogan": "resources/mobile.search/header.hogan",
-				"content.hogan": "resources/mobile.search/content.hogan"
-			},
 			"messages": [
 				"mobile-frontend-clear-search",
 				"mobile-frontend-search-content",

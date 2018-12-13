@@ -45,8 +45,8 @@
 		 * @instance
 		 */
 		templatePartials: util.extend( {}, Overlay.prototype.templatePartials, {
-			header: mw.template.get( 'mobile.search', 'header.hogan' ),
-			content: mw.template.get( 'mobile.search', 'content.hogan' ),
+			header: mw.template.get( 'mobile.startup', 'search/SearchHeader.hogan' ),
+			content: mw.template.get( 'mobile.startup', 'search/SearchContent.hogan' ),
 			icon: Icon.prototype.template
 		} ),
 		/**
