@@ -93,6 +93,23 @@
     },
     {
       "key": {
+        "uuid": "1e93bd56_0fb4bc41",
+        "filename": "tests/node-qunit/mobile.startup/search/SearchGateway.test.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-13T17:25:28Z",
+      "side": 1,
+      "message": "The indent here appears to be incorrect?",
+      "revId": "ede4cdfd8024817ee71b9c5160e0a73bc8b89ef1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5c4572e0_33ce1986",
         "filename": "tests/node-qunit/mobile.startup/search/SearchGateway.test.js",
         "patchSetId": 10
@@ -104,6 +121,24 @@
       "writtenOn": "2018-12-13T17:17:29Z",
       "side": 1,
       "message": "Doesn\u0027t this beforeEach override the one at the top of the file? I would expect SearchGateway to be undefined in the next test, since it\u0027s not being re-declared here, and is being set to undefined in the `afterEach`.🤷‍♂️",
+      "revId": "ede4cdfd8024817ee71b9c5160e0a73bc8b89ef1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "83c8276c_08c223d6",
+        "filename": "tests/node-qunit/mobile.startup/search/SearchGateway.test.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-13T17:25:28Z",
+      "side": 1,
+      "message": "My understanding is that this is a nested module. https://api.qunitjs.com/QUnit/module",
+      "parentUuid": "5c4572e0_33ce1986",
       "revId": "ede4cdfd8024817ee71b9c5160e0a73bc8b89ef1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
