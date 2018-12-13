@@ -358,7 +358,6 @@ class MobileFrontendHooks {
 			'dependencies' => $dependencies,
 			'templates' => [
 				'section.hogan' => 'tests/qunit/tests.mobilefrontend/section.hogan',
-				'issues.hogan' => 'tests/qunit/tests.mobilefrontend/issues.hogan',
 			],
 			'localBasePath' => $localBasePath,
 			'remoteExtPath' => 'MobileFrontend',
