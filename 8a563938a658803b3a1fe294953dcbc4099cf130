@@ -128,6 +128,30 @@
       "revId": "8a563938a658803b3a1fe294953dcbc4099cf130",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4b2465a7_826205f8",
+        "filename": "tests/node-qunit/mobile.startup/Toggler.test.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-12-13T23:17:28Z",
+      "side": 1,
+      "message": "Fixed this in PS4. Apparently with Sinon you don\u0027t have to tear down the stub to create a new return value, you can just specify a new return value 👍",
+      "parentUuid": "2f6ee54e_4887b4ae",
+      "range": {
+        "startLine": 195,
+        "startChar": 1,
+        "endLine": 195,
+        "endChar": 32
+      },
+      "revId": "8a563938a658803b3a1fe294953dcbc4099cf130",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
