@@ -16,6 +16,24 @@
       "revId": "d3d3fd38551f62ad7aede6b4b7adfd822016c0f7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c75b0bb7_7810e08b",
+        "filename": "resources/mobile.categories.overlays/CategoryOverlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-12-13T17:36:34Z",
+      "side": 1,
+      "message": "How you feel about instead making this an entire page reload or simply closing the overlay to force the editor to reopen it?\n\nI think this sends a clear message that the workflow is complete. Editors can open the category overlay again (which hopefully leaves enough time in production for the job queue to have been handled)",
+      "parentUuid": "1392c888_753a1a66",
+      "revId": "d3d3fd38551f62ad7aede6b4b7adfd822016c0f7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
