@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "497c4ebb_f88841df",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-13T15:40:17Z",
+      "side": 1,
+      "message": "Is there any reason not to make this future patch now?",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 11,
+        "endChar": 44
+      },
+      "revId": "8a563938a658803b3a1fe294953dcbc4099cf130",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a8398e28_8566a3a2",
+        "filename": "tests/node-qunit/mobile.startup/Toggler.test.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-13T15:40:17Z",
+      "side": 1,
+      "message": "What is this for? I thought the sandbox restore wipe out all stubs.",
+      "range": {
+        "startLine": 195,
+        "startChar": 1,
+        "endLine": 195,
+        "endChar": 32
+      },
+      "revId": "8a563938a658803b3a1fe294953dcbc4099cf130",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
