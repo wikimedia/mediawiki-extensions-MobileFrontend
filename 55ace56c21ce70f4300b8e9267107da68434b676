@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3d05022e_43e8cd69",
+        "filename": "extension.json",
+        "patchSetId": 13
+      },
+      "lineNbr": 246,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-12-13T21:12:15Z",
+      "side": 1,
+      "message": "See comment in other file.\nThis breaks these icons.",
+      "revId": "55ace56c21ce70f4300b8e9267107da68434b676",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "908b25ef_f6e09cd7",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-12-13T21:12:15Z",
+      "side": 1,
+      "message": "This breaks the icons for me.",
+      "revId": "55ace56c21ce70f4300b8e9267107da68434b676",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ddf2ed69_4005a680",
+        "filename": "resources/mobile.search/SearchOverlay.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-12-13T21:12:15Z",
+      "side": 1,
+      "message": "Ditto.\n\nNote the name is used in the css selector and / is not valid in a class name, resulting in the class:\n\n\"mw-ui-icon mw-ui-icon-mf-search/search-content mw-ui-icon-element  \"\n\nThere should be no need to rename these.",
+      "revId": "55ace56c21ce70f4300b8e9267107da68434b676",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
