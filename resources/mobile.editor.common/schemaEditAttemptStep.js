@@ -43,6 +43,13 @@
 			);
 			/* eslint-enable camelcase */
 
+		function log() {
+			// mw.log is a no-op unless resource loader is in debug mode, so
+			// this allows trackdebug to work independently (T211698)
+			// eslint-disable-next-line no-console
+			console.log.apply( console, arguments );
+		}
+
 		function computeDuration( action, event, timeStamp ) {
 			// This is duplicated from the VisualEditor extension
 			// (ve.init.mw.trackSubscriber.js). Changes to this should be kept in
@@ -123,7 +130,7 @@
 			}
 
 			if ( trackdebug ) {
-				mw.log( topic + '.' + data.action, duration + 'ms', data );
+				log( topic + '.' + data.action, duration + 'ms', data );
 			} else {
 				schemaEditAttemptStep.log( data, mw.config.get( 'wgWMESchemaEditAttemptStepOversample' ) ? 1 : sampleRate );
 			}
