@@ -33,7 +33,8 @@ var
 	WatchstarPageList = require( './watchstar/WatchstarPageList' ),
 	rlModuleLoader = require( './rlModuleLoader' ),
 	eventBusSingleton = require( './eventBusSingleton' ),
-	Toggler = require( './Toggler' );
+	Toggler = require( './Toggler' ),
+	SearchGateway = require( './search/SearchGateway' );
 
 mw.mobileFrontend = moduleLoader;
 
@@ -78,6 +79,7 @@ mw.mobileFrontend.deprecate( 'mobile.references.gateway/ReferencesMobileViewGate
 mw.mobileFrontend.deprecate( 'mobile.watchstar/Watchstar', Watchstar, 'mobile.startup' );
 mw.mobileFrontend.deprecate( 'mobile.pagelist.scripts/WatchstarPageList', WatchstarPageList, 'mobile.startup' );
 mw.mobileFrontend.deprecate( 'mobile.toggle/Toggler', Toggler, 'mobile.startup' );
+mw.mobileFrontend.deprecate( 'mobile.search.api/SearchGateway', SearchGateway, 'mobile.startup' );
 
 // Expose the entry chunk through libraryTarget and library. This allows
 // arbitrary file access via ResourceLoader like
@@ -114,7 +116,10 @@ module.exports = {
 	WatchstarPageList: WatchstarPageList,
 	rlModuleLoader: rlModuleLoader,
 	eventBusSingleton: eventBusSingleton,
-	Toggler: Toggler
+	Toggler: Toggler,
+	search: {
+		SearchGateway: SearchGateway
+	}
 };
 
 // Setup a single export for new modules to fold all of the above lines into.

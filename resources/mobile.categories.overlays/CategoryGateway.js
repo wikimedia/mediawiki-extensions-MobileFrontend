@@ -1,7 +1,9 @@
 ( function ( M ) {
-	var prototype,
-		util = M.require( 'mobile.startup/util' ),
-		SearchGateway = M.require( 'mobile.search.api/SearchGateway' );
+	var
+		prototype,
+		mobile = M.require( 'mobile.startup' ),
+		util = mobile.util,
+		SearchGateway = mobile.search.SearchGateway;
 
 	/**
 	 * Api for CategoryOverlay
