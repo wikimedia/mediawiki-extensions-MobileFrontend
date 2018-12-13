@@ -34,6 +34,9 @@ var
 	rlModuleLoader = require( './rlModuleLoader' ),
 	eventBusSingleton = require( './eventBusSingleton' ),
 	Toggler = require( './Toggler' ),
+	SearchOverlay = require( './search/SearchOverlay' ),
+	schemaMobileWebSearch = require( './search/schemaMobileWebSearch' ),
+	MobileWebSearchLogger = require( './search/MobileWebSearchLogger' ),
 	SearchGateway = require( './search/SearchGateway' );
 
 mw.mobileFrontend = moduleLoader;
@@ -79,6 +82,8 @@ mw.mobileFrontend.deprecate( 'mobile.references.gateway/ReferencesMobileViewGate
 mw.mobileFrontend.deprecate( 'mobile.watchstar/Watchstar', Watchstar, 'mobile.startup' );
 mw.mobileFrontend.deprecate( 'mobile.pagelist.scripts/WatchstarPageList', WatchstarPageList, 'mobile.startup' );
 mw.mobileFrontend.deprecate( 'mobile.toggle/Toggler', Toggler, 'mobile.startup' );
+mw.mobileFrontend.deprecate( 'mobile.search/SearchOverlay', SearchOverlay, 'mobile.startup' );
+mw.mobileFrontend.deprecate( 'mobile.search/MobileWebSearchLogger', MobileWebSearchLogger, 'mobile.startup' );
 mw.mobileFrontend.deprecate( 'mobile.search.api/SearchGateway', SearchGateway, 'mobile.startup' );
 
 // Expose the entry chunk through libraryTarget and library. This allows
@@ -118,6 +123,8 @@ module.exports = {
 	eventBusSingleton: eventBusSingleton,
 	Toggler: Toggler,
 	search: {
+		SearchOverlay: SearchOverlay,
+		MobileWebSearchLogger: MobileWebSearchLogger,
 		SearchGateway: SearchGateway
 	}
 };
@@ -125,3 +132,5 @@ module.exports = {
 // Setup a single export for new modules to fold all of the above lines into.
 // One export to rule them all!
 mw.mobileFrontend.define( 'mobile.startup', module.exports );
+
+schemaMobileWebSearch.subscribeMobileWebSearchSchema();

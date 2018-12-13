@@ -348,7 +348,13 @@
 				"mobile-frontend-watchlist-add",
 				"mobile-frontend-watchlist-removed",
 				"mobile-frontend-watchlist-cta",
-				"mobile-frontend-watchlist-please-wait"
+				"mobile-frontend-watchlist-please-wait",
+				"mobile-frontend-clear-search",
+				"mobile-frontend-search-content",
+				"mobile-frontend-search-no-results",
+				"mobile-frontend-search-content-no-results",
+				"mobile-frontend-search-feedback-prompt",
+				"mobile-frontend-search-feedback-link-text"
 			],
 			"styles": [
 				"resources/mobile.startup/icon.less",
@@ -533,22 +539,10 @@
 				"mobile",
 				"desktop"
 			],
+			"deprecated": true,
 			"dependencies": [
 				"mediawiki.user",
 				"mobile.startup"
-			],
-			"scripts": [
-				"resources/mobile.search/schemaMobileWebSearch.js",
-				"resources/mobile.search/SearchOverlay.js",
-				"resources/mobile.search/MobileWebSearchLogger.js"
-			],
-			"messages": [
-				"mobile-frontend-clear-search",
-				"mobile-frontend-search-content",
-				"mobile-frontend-search-no-results",
-				"mobile-frontend-search-content-no-results",
-				"mobile-frontend-search-feedback-prompt",
-				"mobile-frontend-search-feedback-link-text"
 			]
 		},
 		"mobile.search.api": {
@@ -651,7 +645,6 @@
 			"dependencies": [
 				"mediawiki.Title",
 				"mobile.startup",
-				"mobile.search",
 				"mobile.editor.common",
 				"mobile.scrollEndEventEmitter",
 				"oojs-ui.styles.icons-interactions",

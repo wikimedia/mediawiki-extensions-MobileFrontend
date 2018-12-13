@@ -109,8 +109,8 @@ module.exports = {
 		// up-to-date and rounded to the nearest 10th of a kilobyte so that code sizing costs are
 		// well understood. Related to bundlesize minified, gzipped compressed file size tests.
 		// Note: entrypoint size implicitly includes the mobile.startup.runtime entry.
-		maxAssetSize: 45.7 * 1024,
-		maxEntrypointSize: 47.1 * 1024,
+		maxAssetSize: 52 * 1024,
+		maxEntrypointSize: 53.5 * 1024,
 
 		// The default filter excludes map files but we rename ours. Also, any modules prefixed with
 		// "tests." are excluded from performance checks as they are not shipped to end users.
