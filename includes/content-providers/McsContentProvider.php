@@ -2,6 +2,7 @@
 
 namespace MobileFrontend\ContentProviders;
 
+use FormatJson;
 use OutputPage;
 
 /**
@@ -66,7 +67,7 @@ class McsContentProvider implements IContentProvider {
 		// @codingStandardsIgnoreLine
 		$resp = @file_get_contents( $url, false );
 		if ( $resp ) {
-			$json = json_decode( $resp, true );
+			$json = FormatJson::decode( $resp, true );
 			if ( is_array( $json ) ) {
 				return $this->buildHtmlFromResponse( $json );
 			} else {
