@@ -47,7 +47,10 @@ QUnit.module( 'MobileFrontend Skin.js', {
 			}
 		} );
 	},
-	afterEach: function () { sandbox.restore(); }
+	afterEach: function () {
+		jQuery.tearDown();
+		sandbox.restore();
+	}
 } );
 
 QUnit.test( '#loadImagesList (success)', function ( assert ) {

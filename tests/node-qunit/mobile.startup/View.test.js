@@ -3,7 +3,8 @@ var
 	Hogan = require( 'hogan.js' ),
 	mw = require( '../utils/mw' ),
 	jQuery = require( '../utils/jQuery' ),
-	mfExtend = 	require( '../../../src/mobile.startup/mfExtend' ),
+	dom = require( '../utils/dom' ),
+	mfExtend = require( '../../../src/mobile.startup/mfExtend' ),
 	oo = require( '../utils/oo' ),
 	sinon = require( 'sinon' ),
 	View;
@@ -12,13 +13,17 @@ var
 QUnit.module( 'MobileFrontend mobile.startup/View', {
 	beforeEach: function () {
 		sandbox = sinon.sandbox.create();
+		dom.setUp( sandbox, global );
 		jQuery.setUp( sandbox, global );
 		oo.setUp( sandbox, global );
 		mw.setUp( sandbox, global );
 
 		View = require( '../../../src/mobile.startup/View' );
 	},
-	afterEach: function () { sandbox.restore(); }
+	afterEach: function () {
+		jQuery.tearDown();
+		sandbox.restore();
+	}
 } );
 
 QUnit.test( 'View', function ( assert ) {
