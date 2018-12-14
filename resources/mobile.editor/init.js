@@ -124,6 +124,8 @@
 			 */
 			function loadSourceEditor() {
 				logInit( 'wikitext' );
+				// Inform other interested code that we're loading the editor
+				mw.hook( 'mobileFrontend.editorOpening' ).fire();
 
 				return loader.loadModule( 'mobile.editor.overlay' ).then( function () {
 					var EditorOverlay = M.require( 'mobile.editor.overlay/EditorOverlay' );
@@ -158,6 +160,8 @@
 				editorOverride !== 'SourceEditor'
 			) {
 				logInit( 'visualeditor' );
+				// Inform other interested code that we're loading the editor
+				mw.hook( 'mobileFrontend.editorOpening' ).fire();
 				return loader.loadModule( 'mobile.editor.ve' ).then( function () {
 					var VisualEditorOverlay = M.require( 'mobile.editor.ve/VisualEditorOverlay' );
 					return new VisualEditorOverlay( editorOptions );
