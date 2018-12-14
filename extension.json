@@ -694,16 +694,6 @@
 				"mobile-frontend-categories-hidden"
 			]
 		},
-		"mobile.toggle": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"deprecated": true,
-			"dependencies": [
-				"mobile.startup"
-			]
-		},
 		"mobile.watchstar": {
 			"targets": [
 				"mobile",
