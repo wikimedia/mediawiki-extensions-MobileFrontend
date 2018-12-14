@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "64656c2d_356c2e3f",
+        "filename": ".eslintshared.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2018-12-14T16:32:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7ed03db6_1e2f13f0",
+      "revId": "513d9d126a495081844268819302aba3378d2fc5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "cf8dcf9b_4033be04",
         "filename": "/COMMIT_MSG",
         "patchSetId": 3
@@ -48,6 +66,24 @@
       "writtenOn": "2018-12-11T18:53:51Z",
       "side": 1,
       "message": "For a change that touches many files,  to understand what impact this change has, I\u0027d really appreciate one of either\n*  a longer commit message a task here summarising the change\n* a handy link to the release notes\n* a phab ticket that has either of the above 2 things",
+      "revId": "513d9d126a495081844268819302aba3378d2fc5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e49810d_3bb821cd",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2018-12-14T16:32:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cf8dcf9b_4033be04",
       "revId": "513d9d126a495081844268819302aba3378d2fc5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -101,6 +137,30 @@
     },
     {
       "key": {
+        "uuid": "506dc420_10d28b5c",
+        "filename": "resources/mobile.editor.api/EditorGateway.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2018-12-14T16:32:57Z",
+      "side": 1,
+      "message": "Filed as T211986",
+      "parentUuid": "900b91ee_d3d8d744",
+      "range": {
+        "startLine": 39,
+        "startChar": 7,
+        "endLine": 39,
+        "endChar": 34
+      },
+      "revId": "513d9d126a495081844268819302aba3378d2fc5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c3fb2774_8d032d37",
         "filename": "src/mobile.startup/PageGateway.js",
         "patchSetId": 3
@@ -118,6 +178,24 @@
     },
     {
       "key": {
+        "uuid": "a53b8e7a_21b120be",
+        "filename": "src/mobile.startup/PageGateway.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2018-12-14T16:32:57Z",
+      "side": 1,
+      "message": "max-statements-per-line",
+      "parentUuid": "c3fb2774_8d032d37",
+      "revId": "513d9d126a495081844268819302aba3378d2fc5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2491defa_31a47478",
         "filename": "src/mobile.startup/View.js",
         "patchSetId": 3
@@ -129,6 +207,24 @@
       "writtenOn": "2018-12-11T18:53:51Z",
       "side": 1,
       "message": "Why does eslint touch documentation?",
+      "revId": "513d9d126a495081844268819302aba3378d2fc5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f6672ef1_57072eed",
+        "filename": "src/mobile.startup/View.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2018-12-14T16:32:57Z",
+      "side": 1,
+      "message": "Sadly the new no-tabs rule, which fixes a bunch of issues in the code, also enforced no tabs in comments (it also fixes /*\\tComment */). It\u0027s too hard to work around so we\u0027ve just let it be.",
+      "parentUuid": "2491defa_31a47478",
       "revId": "513d9d126a495081844268819302aba3378d2fc5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
