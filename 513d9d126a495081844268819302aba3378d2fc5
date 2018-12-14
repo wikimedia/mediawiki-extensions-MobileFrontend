@@ -228,6 +228,24 @@
       "revId": "513d9d126a495081844268819302aba3378d2fc5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ff6c058_70e52dd7",
+        "filename": "src/mobile.startup/View.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2018-12-14T17:05:57Z",
+      "side": 1,
+      "message": "See https://github.com/wikimedia/eslint-config-wikimedia/issues/116",
+      "parentUuid": "f6672ef1_57072eed",
+      "revId": "513d9d126a495081844268819302aba3378d2fc5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
