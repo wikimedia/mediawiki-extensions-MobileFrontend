@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5601bd52_05844420",
+        "filename": "resources/mobile.categories.overlays/CategoryGateway.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-12-14T01:05:13Z",
+      "side": 1,
+      "message": "I\u0027ve been using mobile \u003d M.require( \u0027mobile.startup\u0027 ). Should  we standardise on one variable name?\n\nI think the problem is we don\u0027t have a name for this library of things...",
+      "revId": "e3d1a2492afc60832f35032e46b85180abe3a022",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "605cb001_6fd4e0d4",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-12-14T01:05:13Z",
+      "side": 1,
+      "message": "interesting!\n\nWhat\u0027s your long term plan?\nDoesn\u0027t this make renaming folders harder?\n\nIf something references M.require( \u0027mobile.startup\u0027 ).search.SearchGateway and we want to move SearchGateway to gateways, how would we handle that while keeping master mergeable?",
+      "revId": "e3d1a2492afc60832f35032e46b85180abe3a022",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "62fb821d_38099dcf",
+        "filename": "tests/node-qunit/utils/mockMediaWiki.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-12-14T01:05:13Z",
+      "side": 1,
+      "message": "Am curious about the motivation to pull this here.\nCan you expand in commit msg?",
+      "revId": "e3d1a2492afc60832f35032e46b85180abe3a022",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
