@@ -33,6 +33,24 @@
       "revId": "d62d3b110ffd4c0173b06168bca04a80989149c4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "94bb113d_38b34a0f",
+        "filename": "tests/node-qunit/mobile.startup/Toggler.test.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2018-12-14T08:30:56Z",
+      "side": 1,
+      "message": "Ha, good point. PS6 removes the hogan dependency.",
+      "parentUuid": "0e2bb586_2bb6253e",
+      "revId": "d62d3b110ffd4c0173b06168bca04a80989149c4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
