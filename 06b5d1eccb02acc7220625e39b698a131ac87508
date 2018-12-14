@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "664ff55c_109f8fe2",
+        "filename": ".eslintshared.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-12-14T19:14:08Z",
+      "side": 1,
+      "message": "Maybe call this .eslintMobileFrontendAdditionalRules.json ?\nThis seems more descriptive.",
+      "revId": "06b5d1eccb02acc7220625e39b698a131ac87508",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "491ecb59_0e5e89f1",
+        "filename": "resources/mobile.editor.api/EditorGateway.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-12-14T19:14:08Z",
+      "side": 1,
+      "message": "Is there a phab ticket for this? What\u0027s wrong with using Array.find ?",
+      "revId": "06b5d1eccb02acc7220625e39b698a131ac87508",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
