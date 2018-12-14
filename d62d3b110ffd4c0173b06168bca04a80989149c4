@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "48a8ce15_463e3d4c",
+        "filename": "tests/node-qunit/mobile.startup/Toggler.test.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-12-14T00:53:43Z",
+      "side": 1,
+      "message": "Is Hogan actually needed for this test?",
+      "revId": "d62d3b110ffd4c0173b06168bca04a80989149c4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2bb586_2bb6253e",
+        "filename": "tests/node-qunit/mobile.startup/Toggler.test.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-12-14T00:53:43Z",
+      "side": 1,
+      "message": "Why are we running Hogan on something that\u0027s already HTML with no template variables?\nWhy not use jQuery",
+      "revId": "d62d3b110ffd4c0173b06168bca04a80989149c4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
