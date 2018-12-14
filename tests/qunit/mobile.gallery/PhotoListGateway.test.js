@@ -1,4 +1,4 @@
-( function ( M, $ ) {
+( function ( M ) {
 
 	var m = M.require( 'mobile.gallery/PhotoListGateway' );
 
@@ -23,4 +23,4 @@
 		} );
 	} );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

@@ -1,4 +1,4 @@
-( function ( $, M ) {
+( function ( M ) {
 
 	var SearchGateway = M.require( 'mobile.search.api/SearchGateway' );
 
@@ -134,4 +134,4 @@
 		} );
 
 	} );
-}( jQuery, mw.mobileFrontend ) );
+}( mw.mobileFrontend ) );

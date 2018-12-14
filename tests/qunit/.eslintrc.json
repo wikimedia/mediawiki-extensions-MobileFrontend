@@ -4,8 +4,10 @@
 		"../../.eslintrc.json"
 	],
 	"env": {
-		"qunit": true,
-		"jquery": true
+		"qunit": true
+	},
+	"globals": {
+		"$": false
 	},
 	"rules": {
 		"no-restricted-properties": 0

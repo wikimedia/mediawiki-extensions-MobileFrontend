@@ -1,5 +1,5 @@
-/* global jQuery */
-( function ( M, $ ) {
+/* global $ */
+( function ( M ) {
 
 	var
 		router = require( 'mediawiki.router' ),
@@ -304,4 +304,4 @@
 		// Edit button is currently hidden. A call to init() will update it as needed.
 		init();
 	}
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

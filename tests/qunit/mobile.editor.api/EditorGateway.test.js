@@ -1,4 +1,4 @@
-( function ( M, $ ) {
+( function ( M ) {
 	var EditorGateway = M.require( 'mobile.editor.api/EditorGateway' );
 
 	QUnit.module( 'MobileFrontend mobile.editor.api/EditorGateway', {
@@ -697,4 +697,4 @@
 		} );
 	} );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

@@ -1,4 +1,4 @@
-( function ( M, $ ) {
+( function ( M ) {
 	var m,
 		NearbyGateway = M.require( 'mobile.nearby/NearbyGateway' );
 
@@ -119,4 +119,4 @@
 		} );
 	} );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );

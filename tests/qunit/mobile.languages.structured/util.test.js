@@ -1,4 +1,4 @@
-( function ( $, M ) {
+( function ( M ) {
 	var util = M.require( 'mobile.languages.structured/util' );
 
 	QUnit.module( 'MobileFrontend: Structured LanguageOverlay', {
@@ -226,4 +226,4 @@
 		} );
 	} );
 
-}( jQuery, mw.mobileFrontend ) );
+}( mw.mobileFrontend ) );

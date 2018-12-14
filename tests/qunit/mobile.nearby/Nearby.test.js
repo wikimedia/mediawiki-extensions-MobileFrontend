@@ -1,4 +1,4 @@
-( function ( M, $ ) {
+( function ( M ) {
 
 	var NearbyGateway = M.require( 'mobile.nearby/NearbyGateway' ),
 		api = {
@@ -171,4 +171,4 @@
 		assert.ok( this.spy.calledWithMatch( pageTitle, 1000 ), 'Check API got called' );
 	} );
 
-}( mw.mobileFrontend, jQuery ) );
+}( mw.mobileFrontend ) );
