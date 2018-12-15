@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "30e9cc83_6ce3ebe6",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 11
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-12-15T13:49:13Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "74f40372_a2c6cdbe",
+      "range": {
+        "startLine": 9,
+        "startChar": 70,
+        "endLine": 9,
+        "endChar": 77
+      },
+      "revId": "1fefc91a95043077c0dd72affddfc85dd3a5e8fa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "db5bb5f4_eb6af3ee",
         "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
         "patchSetId": 11
@@ -36,6 +60,30 @@
       "writtenOn": "2018-12-13T23:08:12Z",
       "side": 1,
       "message": "You don\u0027t have to mock the FauxRequest, the FauxRequest is a mock itself.",
+      "range": {
+        "startLine": 29,
+        "startChar": 2,
+        "endLine": 29,
+        "endChar": 60
+      },
+      "revId": "1fefc91a95043077c0dd72affddfc85dd3a5e8fa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "87442646_8e67a4af",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-12-15T13:49:13Z",
+      "side": 1,
+      "message": "I\u0027m not sure but I get this when I don\u0027t mock FauxRequest (when running the tests);\n```\nError: Call to a member function getIntOrNull() on string\n```\n\nAlso, looking at the FauxRequest class, I\u0027m not sure it\u0027s a mock, but please help me clarify.",
+      "parentUuid": "db5bb5f4_eb6af3ee",
       "range": {
         "startLine": 29,
         "startChar": 2,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "f7fe43c2_0c340f78",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-12-15T13:49:13Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "9f363cce_4a20b224",
+      "range": {
+        "startLine": 52,
+        "startChar": 2,
+        "endLine": 53,
+        "endChar": 4
+      },
+      "revId": "1fefc91a95043077c0dd72affddfc85dd3a5e8fa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "821456e4_75506536",
         "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
         "patchSetId": 11
@@ -82,6 +154,30 @@
       "writtenOn": "2018-12-13T23:08:12Z",
       "side": 1,
       "message": "same as testGetProviderWithMwApiContentProvider",
+      "range": {
+        "startLine": 124,
+        "startChar": 17,
+        "endLine": 124,
+        "endChar": 54
+      },
+      "revId": "1fefc91a95043077c0dd72affddfc85dd3a5e8fa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fdc9218f_1cbf4ec5",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-12-15T13:49:13Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "821456e4_75506536",
       "range": {
         "startLine": 124,
         "startChar": 17,
@@ -117,6 +213,30 @@
     },
     {
       "key": {
+        "uuid": "9c19295a_3f9da7d0",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-12-15T13:49:13Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "119ec82f_979eb9a0",
+      "range": {
+        "startLine": 143,
+        "startChar": 17,
+        "endLine": 143,
+        "endChar": 60
+      },
+      "revId": "1fefc91a95043077c0dd72affddfc85dd3a5e8fa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e19d4e0a_6fd5fa43",
         "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
         "patchSetId": 11
@@ -140,6 +260,30 @@
     },
     {
       "key": {
+        "uuid": "2f03b68f_1e7ff998",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 179,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-12-15T13:49:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e19d4e0a_6fd5fa43",
+      "range": {
+        "startLine": 179,
+        "startChar": 18,
+        "endLine": 179,
+        "endChar": 26
+      },
+      "revId": "1fefc91a95043077c0dd72affddfc85dd3a5e8fa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "808338dc_4ba39325",
         "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
         "patchSetId": 11
@@ -151,6 +295,30 @@
       "writtenOn": "2018-12-13T23:08:12Z",
       "side": 1,
       "message": "it\u0027s good that you\u0027re testing all possible cases, but that\u0027s not necessary. If we have it, let\u0027s keep it. \n\nThis test is testing that if `wgMFContentProviderTryLocalContentFirst` is set to true, it will return DefaultContentProvider no matter which provider is passed. It means there are only two valid scenarios (wgMFContentProviderTryLocalContentFirst is true and when wgMFContentProviderTryLocalContentFirst is false). The provider should return two cases for true and for false. We don\u0027t need to test each provider.",
+      "range": {
+        "startLine": 198,
+        "startChar": 15,
+        "endLine": 198,
+        "endChar": 29
+      },
+      "revId": "1fefc91a95043077c0dd72affddfc85dd3a5e8fa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "200ad963_ff17d285",
+        "filename": "tests/phpunit/content-providers/ContentProviderFactoryTest.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2018-12-15T13:49:13Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "808338dc_4ba39325",
       "range": {
         "startLine": 198,
         "startChar": 15,
