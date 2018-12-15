@@ -314,5 +314,6 @@
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Управляйте размером шрифта для своего процесса чтения.",
 	"mobile-frontend-beta-only": "Функция доступна только в рамках бета-тестирования.",
 	"mobile-frontend-console-recruit": "Узнать подробнее о том, как мы строим наш мобильный сайт @ https://www.mediawiki.org/wiki/Extension:MobileFrontend",
+	"mobile-frontend-skin-pref": "Какую тему оформления вы хотели бы использовать при использовании мобильного?",
 	"prefs-mobile": "Мобильные настройки"
 }

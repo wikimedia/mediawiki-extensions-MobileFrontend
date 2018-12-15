@@ -316,5 +316,6 @@
 	"mobile-frontend-beta-only": "ویژگی‌ها فقط در نسخهٔ آزمایشی وجود دارند",
 	"mobile-frontend-console-recruit": "برای آگاهی از نحوهٔ ساخت سایت برای موبایل @ https://www.mediawiki.org/wiki/Extension:MobileFrontend را مشاهده کنید",
 	"mobile-frontend-special-pages-pref": "بهینه و ساده‌سازی صفحات ویژه برای نمایش در تلفن همراه (پیشنهاد می‌شود)",
+	"mobile-frontend-skin-pref": "زمان استفاده از تلفن همراه کدام پوسته را ترجیح می‌دهید؟",
 	"prefs-mobile": "ترجیحات تلفن همراه"
 }

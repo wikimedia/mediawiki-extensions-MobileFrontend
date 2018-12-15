@@ -326,5 +326,6 @@
 	"mobile-frontend-beta-only": "功能只在测试模式可用",
 	"mobile-frontend-console-recruit": "了解更多有关我们如何构造移动网站的详情，请参见：https://www.mediawiki.org/wiki/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "优化并简化移动端的特殊页面（推荐）",
+	"mobile-frontend-skin-pref": "哪一种皮肤您喜欢在移动端上使用？",
 	"prefs-mobile": "移动参数设置"
 }
