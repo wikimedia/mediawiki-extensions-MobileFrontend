@@ -141,6 +141,14 @@ Enable mobile preferences in Special:Preferences (currently only accessible in d
 * Type: `Boolean`
 * Default: `false`
 
+#### $wgMFEnableMobilePreferencesSkin
+
+Allow users to change their mobile skin in a similar way to their desktop skin. Will display in Special:Preferences provided
+that $wgMFEnableMobilePreferences is also truthy.
+
+* Type: `Boolean`
+* Default: `false`
+
 #### $wgMFExperiments
 
 A list of experiments active on the skin.
