@@ -52,6 +52,24 @@
       "revId": "d3d3fd38551f62ad7aede6b4b7adfd822016c0f7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1397718c_5a1201b9",
+        "filename": "resources/mobile.categories.overlays/CategoryOverlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 4362
+      },
+      "writtenOn": "2018-12-15T16:29:58Z",
+      "side": 1,
+      "message": "Maybe the new patch is good solution. It closes the overlay and editors can reopen it.",
+      "parentUuid": "e6139d42_649e0124",
+      "revId": "d3d3fd38551f62ad7aede6b4b7adfd822016c0f7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
