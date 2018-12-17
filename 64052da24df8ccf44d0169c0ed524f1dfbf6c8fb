@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e34d02b4_6cfc6efa",
+        "filename": "src/mobile.startup/View.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-17T22:33:04Z",
+      "side": 0,
+      "message": "I don\u0027t object to this change but FYI I might be bringing it back soon for events!",
+      "revId": "64052da24df8ccf44d0169c0ed524f1dfbf6c8fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
