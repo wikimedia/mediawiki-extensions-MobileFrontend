@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "734ed4b6_bd27f6c1",
+        "filename": "resources/mobile.categories.overlays/CategoryGateway.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-17T16:04:16Z",
+      "side": 1,
+      "message": "mobile sounds reasonable given the prevalence of mobile.*. Renamed.",
+      "parentUuid": "5601bd52_05844420",
+      "revId": "e3d1a2492afc60832f35032e46b85180abe3a022",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "605cb001_6fd4e0d4",
         "filename": "src/mobile.startup/mobile.startup.js",
         "patchSetId": 3
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "6d031d14_3523bc69",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-17T16:04:16Z",
+      "side": 1,
+      "message": "I was thinking that keeping the exports distinct by feature would be useful for consumers as well as conceptualization. For example, a client may not care about how MobileFrontend presents search result UI but may want to leverage the API veneer and unmarshalling in the HTTP layer or only care about nearby.\n\nWRT further refactoring, MobileFrontend can swap `M.require(\u0027mobile.startup\u0027).search.SearchGateway` for a deprecation redirect function or update MinervaNeue to use `var mobile \u003d M.require(\u0027mobile.startup\u0027), SearchGateway \u003d mobile.search.SearchGateway || mobile.gateway.SearchGateway`.\n\nHappy to remove.",
+      "parentUuid": "605cb001_6fd4e0d4",
+      "revId": "e3d1a2492afc60832f35032e46b85180abe3a022",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "62fb821d_38099dcf",
         "filename": "tests/node-qunit/utils/mockMediaWiki.js",
         "patchSetId": 3
@@ -47,6 +83,24 @@
       "writtenOn": "2018-12-14T01:05:13Z",
       "side": 1,
       "message": "Am curious about the motivation to pull this here.\nCan you expand in commit msg?",
+      "revId": "e3d1a2492afc60832f35032e46b85180abe3a022",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "74ecdd43_6bff9919",
+        "filename": "tests/node-qunit/utils/mockMediaWiki.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-17T16:04:16Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "62fb821d_38099dcf",
       "revId": "e3d1a2492afc60832f35032e46b85180abe3a022",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
