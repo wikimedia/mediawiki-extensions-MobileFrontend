@@ -1,11 +1,10 @@
 ( function ( M ) {
 
-	var TalkOverlayBase = M.require( 'mobile.talk.overlays/TalkOverlayBase' );
+	var autosign = M.require( 'mobile.talk.overlays/autosign' );
 
-	QUnit.module( 'MobileFrontend TalkOverlayBase' );
+	QUnit.module( 'MobileFrontend mobile.talk.overlays' );
 
-	QUnit.test( '#TalkOverlay (autosign)', function ( assert ) {
-		var overlay = new TalkOverlayBase( {} );
+	QUnit.test( '#autosign', function ( assert ) {
 		[
 			// Forgot to sign
 			[ 'foo', 'foo ~~~~' ],
@@ -20,7 +19,7 @@
 			// Unconventional signing 2
 			[ '~~~~ yolo', '~~~~ yolo' ]
 		].forEach( function ( testCase ) {
-			assert.strictEqual( overlay.autosign( testCase[0] ), testCase[1], 'Autosigning works as expected' );
+			assert.strictEqual( autosign( testCase[0] ), testCase[1], 'Autosigning works as expected' );
 		} );
 	} );
 

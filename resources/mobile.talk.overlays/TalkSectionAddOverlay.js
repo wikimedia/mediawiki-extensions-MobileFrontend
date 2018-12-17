@@ -1,13 +1,15 @@
 ( function ( M ) {
-	var TalkOverlayBase = M.require( 'mobile.talk.overlays/TalkOverlayBase' ),
+	var Overlay = M.require( 'mobile.startup/Overlay' ),
+		PageGateway = M.require( 'mobile.startup/PageGateway' ),
 		util = M.require( 'mobile.startup/util' ),
+		autosign = M.require( 'mobile.talk.overlays/autosign' ),
 		toast = M.require( 'mobile.startup/toast' ),
 		Icon = M.require( 'mobile.startup/Icon' );
 
 	/**
 	 * Overlay for adding a talk section
 	 * @class TalkSectionAddOverlay
-	 * @extends TalkOverlayBase
+	 * @extends Overlay
 	 * @uses Toast
 	 *
 	 * @param {Object} options Configuration options
@@ -17,7 +19,13 @@
 	 * and talk-discussion-added events
 	 */
 	function TalkSectionAddOverlay( options ) {
-		TalkOverlayBase.apply( this, arguments );
+		this.editorApi = options.api;
+		this.pageGateway = new PageGateway( options.api );
+		Overlay.call( this,
+			util.extend( options, {
+				className: 'talk-overlay overlay'
+			} )
+		);
 		this.title = options.title;
 		this.currentPageTitle = options.currentPageTitle;
 		this.eventBus = options.eventBus;
@@ -28,11 +36,11 @@
 		this._saveHit = false;
 	}
 
-	OO.mfExtend( TalkSectionAddOverlay, TalkOverlayBase, {
+	OO.mfExtend( TalkSectionAddOverlay, Overlay, {
 		/**
 		 * @memberof TalkSectionAddOverlay
 		 * @instance
-		 * @mixes TalkOverlayBase#defaults
+		 * @mixes Overlay#defaults
 		 * @property {Object} defaults Default options hash.
 		 * @property {string} defaults.cancelMsg Caption for cancel button on edit form.
 		 * @property {string} defaults.topicTitlePlaceHolder Placeholder text to prompt user to add
@@ -42,7 +50,7 @@
 		 * @property {string} defaults.editingMsg Label for button which
 		 *  submits a new talk page topic.
 		 */
-		defaults: util.extend( {}, TalkOverlayBase.prototype.defaults, {
+		defaults: util.extend( {}, Overlay.prototype.defaults, {
 			cancelMsg: mw.msg( 'mobile-frontend-editor-cancel' ),
 			topicTitlePlaceHolder: mw.msg( 'mobile-frontend-talk-add-overlay-subject-placeholder' ),
 			topicContentPlaceHolder: mw.msg( 'mobile-frontend-talk-add-overlay-content-placeholder' ),
@@ -65,7 +73,7 @@
 		 * @memberof TalkSectionAddOverlay
 		 * @instance
 		 */
-		templatePartials: util.extend( {}, TalkOverlayBase.prototype.templatePartials, {
+		templatePartials: util.extend( {}, Overlay.prototype.templatePartials, {
 			contentHeader: mw.template.get( 'mobile.talk.overlays', 'SectionAddOverlay/contentHeader.hogan' ),
 			saveHeader: mw.template.get( 'mobile.editor.common', 'saveHeader.hogan' )
 		} ),
@@ -74,7 +82,7 @@
 		 * @memberof TalkSectionAddOverlay
 		 * @instance
 		 */
-		events: util.extend( {}, TalkOverlayBase.prototype.events, {
+		events: util.extend( {}, Overlay.prototype.events, {
 			'input .wikitext-editor, .summary': 'onTextInput',
 			'change .wikitext-editor, .summary': 'onTextInput',
 			'click .confirm-save': 'onSaveClick'
@@ -85,7 +93,7 @@
 		 * @instance
 		 */
 		postRender: function () {
-			TalkOverlayBase.prototype.postRender.call( this );
+			Overlay.prototype.postRender.call( this );
 			this.showHidden( '.initial-header' );
 			this.$confirm = this.$( 'button.confirm-save' );
 			this.$subject = this.$( '.summary' );
@@ -104,7 +112,7 @@
 			// TODO: Replace with an OOUI dialog
 			// eslint-disable-next-line no-alert
 			if ( this._saveHit || empty || window.confirm( confirmMessage ) ) {
-				return TalkOverlayBase.prototype.hide.apply( this, arguments );
+				return Overlay.prototype.hide.apply( this, arguments );
 			} else {
 				return false;
 			}
@@ -203,7 +211,7 @@
 				sectiontitle: heading,
 				title: self.title,
 				summary: mw.msg( 'newsectionsummary', heading ),
-				text: this.autosign( text )
+				text: autosign( text )
 			} ).then( function () {
 				return 'ok';
 			}, function ( msg ) {

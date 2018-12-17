@@ -1,33 +1,43 @@
 ( function ( M ) {
-	var TalkOverlayBase = M.require( 'mobile.talk.overlays/TalkOverlayBase' ),
+	var
+		PageGateway = M.require( 'mobile.startup/PageGateway' ),
+		Overlay = M.require( 'mobile.startup/Overlay' ),
 		util = M.require( 'mobile.startup/util' ),
 		Page = M.require( 'mobile.startup/Page' ),
 		Anchor = M.require( 'mobile.startup/Anchor' ),
 		user = mw.user;
 	/**
 	 * Overlay for talk page
-	 * @extends TalkOverlayBase
+	 * @extends Overlay
 	 * @class TalkOverlay
 	 * @param {Object} options
 	 * @param {OO.EventEmitter} options.eventBus Object used to listen for
 	 * talk-discussion-added events
+	 * @uses PageGateway
 	 * @uses Page
 	 * @uses TalkSectionOverlay
 	 * @uses TalkSectionAddOverlay
 	 */
 	function TalkOverlay( options ) {
 		this.eventBus = options.eventBus;
-		TalkOverlayBase.apply( this, arguments );
+		this.pageGateway = new PageGateway( options.api );
+		// FIXME: This should be using a gateway e.g. TalkGateway, PageGateway or EditorGateway
+		this.editorApi = options.api;
+		Overlay.call( this,
+			util.extend( options, {
+				className: 'talk-overlay overlay'
+			} )
+		);
 	}
 
-	OO.mfExtend( TalkOverlay, TalkOverlayBase, {
-		templatePartials: util.extend( {}, TalkOverlayBase.prototype.templatePartials, {
+	OO.mfExtend( TalkOverlay, Overlay, {
+		templatePartials: util.extend( {}, Overlay.prototype.templatePartials, {
 			content: mw.template.get( 'mobile.talk.overlays', 'content.hogan' )
 		} ),
 		/**
 		 * @memberof TalkOverlay
 		 * @instance
-		 * @mixes TalkOverlayBase#defaults
+		 * @mixes Overlay#defaults
 		 * @property {Object} defaults Default options hash.
 		 * @property {Array} defaults.headings A list of {Section} objects to render heading links
 		 * for. If not set ajax request will be performed.
@@ -40,7 +50,7 @@
 		 * generating header buttons. Default list includes an 'add' button, which opens
 		 * a new talk overlay.
 		 */
-		defaults: util.extend( {}, TalkOverlayBase.prototype.defaults, {
+		defaults: util.extend( {}, Overlay.prototype.defaults, {
 			headings: undefined,
 			heading: '<strong>' + mw.msg( 'mobile-frontend-talk-overlay-header' ) + '</strong>',
 			leadHeading: mw.msg( 'mobile-frontend-talk-overlay-lead-header' ),
@@ -63,7 +73,7 @@
 		 * @instance
 		 */
 		postRender: function () {
-			TalkOverlayBase.prototype.postRender.apply( this );
+			Overlay.prototype.postRender.apply( this );
 			this.$board = this.$( '.board' );
 			this.$( '.talk-fullpage' ).attr( 'href', mw.util.getUrl( this.options.title ) )
 				.removeClass( 'hidden' );
@@ -81,7 +91,7 @@
 		 */
 		showSpinner: function () {
 			this.$board.hide();
-			TalkOverlayBase.prototype.showSpinner.apply( this, arguments );
+			Overlay.prototype.showSpinner.apply( this, arguments );
 		},
 
 		/**
@@ -90,7 +100,7 @@
 		 * @instance
 		 */
 		hideSpinner: function () {
-			TalkOverlayBase.prototype.hideSpinner.apply( this, arguments );
+			Overlay.prototype.hideSpinner.apply( this, arguments );
 			this.$board.show();
 		},
 
