@@ -1,7 +1,7 @@
 /* global $ */
 var util = require( './util' ),
 	mfExtend = require( './mfExtend' ),
-	DEPRECATED_PROPERTIES = [ 'isBorderBox', 'className' ],
+	DEPRECATED_PROPERTIES = [],
 	// Cached regex to split keys for `delegate`.
 	delegateEventSplitter = /^(\S+)\s*(.*)$/,
 	idCounter = 0;
@@ -205,30 +205,6 @@ mfExtend( View, {
 	},
 
 	/**
-	 * Resolves inherited properties by prioritizing the property attached to `self` over the
-	 * on attached to the `props` object. Returns the value of that property or `defaultValue`.
-	 *
-	 * NOTE: Passing values through `this` is being deprecated in favor of explicit parameters.
-	 * see https://phabricator.wikimedia.org/T209007 for details.
-	 *
-	 * @param {View} self
-	 * @param {Object} props
-	 * @param {string} propName
-	 * @param {*} [defaultValue]
-	 *
-	 * @return {*}
-	 */
-	_resolveInheritedProp: function ( self, props, propName, defaultValue ) {
-		if ( propName in self ) { return self[ propName ]; }
-
-		if ( Object.prototype.hasOwnProperty.call( props, propName ) ) {
-			return props[ propName ];
-		}
-
-		return defaultValue;
-	},
-
-	/**
 	 * Called when this.$el is ready.
 	 * @memberof View
 	 * @instance
@@ -238,13 +214,11 @@ mfExtend( View, {
 	_postInitialize: function ( props ) {
 		var
 			BORDER_BOX_CLASS = 'view-border-box',
-			className = this._resolveInheritedProp( this, props, 'className', '' );
+			className = props.className;
 
 		this.$el.addClass( className );
-
-		// unless `isBorderBox` is explicitly passed in as `false`
-		// by either `this` or `props`add the `BORDER_BOX_CLASS`.
-		if ( this._resolveInheritedProp( this, props, 'isBorderBox' ) !== false ) {
+		// border-box will be added provided this flag is not set
+		if ( props.isBorderBox !== false ) {
 			this.$el.addClass( BORDER_BOX_CLASS );
 		}
 

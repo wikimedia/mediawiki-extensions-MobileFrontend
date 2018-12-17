@@ -144,11 +144,10 @@ QUnit.test( 'View#render (with isTemplateMode)', function ( assert ) {
 	} );
 
 	function ContainerView() {
-		View.apply( this, arguments );
+		View.call( this, { className: 'bar' } );
 	}
 
 	mfExtend( ContainerView, View, {
-		className: 'bar',
 		template: Hogan.compile( '<p class="foo"><span>test</span></p>' )
 	} );
 
@@ -203,32 +202,16 @@ QUnit.test( 'View#render events (with isTemplateMode)', function ( assert ) {
 } );
 
 QUnit.test( 'View with className option', function ( assert ) {
-	function ViewWithClassNameProp() {
-		View.apply( this, arguments );
-	}
-	function ViewWithClassNameAndBorderBoxProp() {
-		View.apply( this, arguments );
-	}
-
-	mfExtend( ViewWithClassNameAndBorderBoxProp, View, {
-		isBorderBox: false,
-		className: 'apple'
-	} );
-
-	mfExtend( ViewWithClassNameProp, View, {
-		className: 'apple'
-	} );
-
 	[
 		[
 			new View(),
 			'view-border-box',
-			'className not defined on a normal View without options'
+			'className not defined on a normal View without options and isBorderBox is default'
 		],
 		[
 			new View( {} ),
 			'view-border-box',
-			'className not defined on a normal View with empty options'
+			'className not defined on a normal View with empty options and isBorderBox is default'
 		],
 		[
 			new View( {
@@ -246,48 +229,6 @@ QUnit.test( 'View with className option', function ( assert ) {
 			new View( { isBorderBox: true } ),
 			'view-border-box',
 			'Passing isBorderBox option as true retains default view-border-box class'
-		],
-		[
-			new ViewWithClassNameAndBorderBoxProp(),
-			'apple',
-			'if no options passed, inherited property on View used'
-		],
-		[
-			new ViewWithClassNameAndBorderBoxProp( {} ),
-			'apple',
-			'if empty options passed, inherited property on View used'
-		],
-		[
-			new ViewWithClassNameAndBorderBoxProp( { className: 'banana' } ),
-			'apple',
-			'option passed but property on View is more important because inheritance chains (T210670)'
-		],
-		[
-			new ViewWithClassNameProp( {
-				className: 'banana',
-				isBorderBox: false
-			} ),
-			'apple',
-			'prototype.className is used instead of options.className\n' +
-			'options.isBorderBox is used as no prototype.isBorderBox. (T210670)'
-		],
-		[
-			new ViewWithClassNameProp( {
-				className: 'banana',
-				isBorderBox: true
-			} ),
-			'apple view-border-box',
-			'prototype.className is used instead of options.className\n' +
-			'options.isBorderBox is used as no prototype.isBorderBox. (T210670)'
-		],
-		[
-			new ViewWithClassNameAndBorderBoxProp( {
-				className: 'banana',
-				isBorderBox: true
-			} ),
-			'apple',
-			'prototype.className is used instead of options.className\n' +
-			'prototype.isBorderBox is used instead of options.isBorderBox (T210670).'
 		]
 	].forEach( function ( test ) {
 		assert.strictEqual( test[0].$el.attr( 'class' ), test[1], test[2] );
