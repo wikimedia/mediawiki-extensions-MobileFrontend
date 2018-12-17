@@ -283,6 +283,7 @@
 				"mediawiki.template.hogan",
 				"mediawiki.ui.button",
 				"mediawiki.ui.icon",
+				"mediawiki.Title",
 				"mobile.pagelist.styles",
 				"mobile.pagesummary.styles",
 				"mediawiki.notify",
@@ -559,12 +560,9 @@
 				"mobile",
 				"desktop"
 			],
+			"deprecated": true,
 			"dependencies": [
-				"mobile.startup",
-				"mediawiki.Title"
-			],
-			"scripts": [
-				"resources/mobile.search.api/SearchGateway.js"
+				"mobile.startup"
 			]
 		},
 		"mobile.talk.overlays": {
@@ -657,7 +655,6 @@
 			"dependencies": [
 				"mediawiki.Title",
 				"mobile.startup",
-				"mobile.search.api",
 				"mobile.search",
 				"mobile.editor.common",
 				"mobile.scrollEndEventEmitter",

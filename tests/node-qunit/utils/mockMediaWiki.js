@@ -12,15 +12,14 @@ var
 	fs = require( 'fs' ),
 	resourceLoaderModules = require( '../../../extension.json' ).ResourceModules;
 
+function Api() {}
+Api.prototype.get = function () {};
+Api.prototype.postWithToken = function () {};
+
 module.exports = function newMockMediaWiki() {
 	var config = { wgNamespaceIds: namespaceIDs };
 	return {
-		Api: function () {
-			return {
-				get: function () {},
-				postWithToken: function () {}
-			};
-		},
+		Api: Api,
 		config: {
 			get: function ( name, fallback ) {
 				return config[name] || fallback;
