@@ -58,8 +58,10 @@ module.exports = function newMockMediaWiki() {
 			compile: function () {}
 		},
 		user: {
-			isAnon: function () {}
+			isAnon: function () {},
+			generateRandomSessionId: function () { return Math.random().toString(); }
 		},
+		track: function () {},
 		util: { getUrl: function ( title ) { return title; } },
 		loader: {
 			using: function () {},
