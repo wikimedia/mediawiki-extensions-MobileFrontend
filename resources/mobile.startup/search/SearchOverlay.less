@@ -1,4 +1,4 @@
-@import '../../mobile.less/mobile.variables';
+@import '../../../mobile.less/mobile.variables';
 @import 'mediawiki.mixins.animation';
 
 @thumbGap: 15px;
@@ -6,7 +6,7 @@
 @colorSpinnerOverlayBackground: #fff;
 @clearIconRightGutterWidth: 0.5em;
 
-.search-overlay {
+.overlay.search-overlay {
 	background: #fff;
 
 	a.mw-ui-icon {
@@ -174,7 +174,7 @@
 }
 
 .animations {
-	.search-overlay {
+	.overlay.search-overlay {
 		&.visible {
 			.animation( fadeIn 0.5s );
 		}
