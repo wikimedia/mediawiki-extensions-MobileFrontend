@@ -323,6 +323,5 @@
 	"mobile-frontend-beta-only": "Tooltip for lock icons on mobile settings page.",
 	"mobile-frontend-console-recruit": "Message that will shown in the JavaScript console to developers. Can be overriden on wiki.",
 	"mobile-frontend-special-pages-pref": "This preference allows editors to disable special page optimisations in mobile. It is enabled by default.",
-	"mobile-frontend-skin-pref": "This preference allows editors to set a preferred skin for mobile.",
 	"prefs-mobile": "Header for mobile section of user preferences"
 }

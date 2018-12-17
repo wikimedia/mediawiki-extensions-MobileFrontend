@@ -15,8 +15,6 @@ use MediaWiki\Auth\AuthenticationRequest;
  * Any changes relating to Minerva should go into Minerva.hooks.php
  */
 class MobileFrontendHooks {
-	const DESKTOP_PREFERENCES_SKIN = 'skin';
-	const MOBILE_PREFERENCES_SKIN = 'mobileskin';
 	const MOBILE_PREFERENCES_SECTION = 'rendering/mobile';
 	const MOBILE_PREFERENCES_SPECIAL_PAGES = 'mobile-specialpages';
 	const ENABLE_SPECIAL_PAGE_OPTIMISATIONS = '1';
@@ -127,7 +125,7 @@ class MobileFrontendHooks {
 		// setting the mobileskin preferences (api only currently)
 		$userSkin = $context->getRequest()->getVal(
 			'useskin',
-			$context->getUser()->getOption( self::MOBILE_PREFERENCES_SKIN )
+			$context->getUser()->getOption( 'mobileskin' )
 		);
 		if ( $userSkin ) {
 			// Normalize the key in case the user is passing gibberish or has old preferences
@@ -138,6 +136,7 @@ class MobileFrontendHooks {
 				return false;
 			}
 		}
+
 		$skin = self::getDefaultMobileSkin( $context, $mobileContext );
 		Hooks::run( 'RequestContextCreateSkinMobile', [ $mobileContext, $skin ] );
 
@@ -870,18 +869,8 @@ class MobileFrontendHooks {
 	 * @param array &$wgDefaultUserOptions Reference to default options array
 	 */
 	public static function onUserGetDefaultOptions( &$wgDefaultUserOptions ) {
-		$ctx = MobileContext::singleton();
-		try {
-			$mobileSkin = self::getDefaultMobileSkin( $ctx, $ctx );
-			$skin = $mobileSkin->getSkinName();
-		} catch ( RuntimeException $e ) {
-			// If a default Mobile skin is not defined assume the desktop skin.
-			$skin = $wgDefaultUserOptions[self::DESKTOP_PREFERENCES_SKIN];
-		}
-
 		$wgDefaultUserOptions += [
 			self::MOBILE_PREFERENCES_SPECIAL_PAGES => self::ENABLE_SPECIAL_PAGE_OPTIMISATIONS,
-			self::MOBILE_PREFERENCES_SKIN => $skin,
 		];
 	}
 
@@ -912,23 +901,6 @@ class MobileFrontendHooks {
 				'help-message' => 'mobile-frontend-special-pages-pref',
 				'section' => self::MOBILE_PREFERENCES_SECTION
 			];
-
-			if ( $config->get( 'MFEnableMobilePreferencesSkin' ) ) {
-				// preference that allow a user to define their mobile skin
-				$skinKeys = array_keys( Skin::getAllowedSkins() );
-				$skinOptions = [];
-				foreach ( $skinKeys as $skinKey ) {
-					$skinOptions["skinname-$skinKey"] = $skinKey;
-				}
-				$option = [
-					'type' => 'select',
-					'label-message' => 'mobile-frontend-skin-pref',
-					'help-message' => 'mobile-frontend-skin-pref',
-					'options-messages' => $skinOptions,
-					'section' => self::MOBILE_PREFERENCES_SECTION
-				];
-				$preferences[self::MOBILE_PREFERENCES_SKIN] = $option;
-			}
 		}
 
 		return true;
