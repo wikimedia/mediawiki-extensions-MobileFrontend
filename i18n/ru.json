@@ -48,7 +48,8 @@
 			"Stjn",
 			"Vlad5250",
 			"Shaleych",
-			"Movses"
+			"Movses",
+			"Nk88"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Редактирует ли участник через мобильный интерфейс",
@@ -70,6 +71,7 @@
 	"mobile-frontend-cite-error": "Возникла проблема при попытке загрузки цитирования из-за некорректного идентификатора версии.",
 	"mobile-frontend-cite-none-available": "На этой странице отсутствуют ссылки на источники.",
 	"mobile-frontend-clear-search": "Очистить",
+	"mobile-frontend-contributions-404-desc": "Невозможно искать вклады без пользователя или с пользователем, которого не существует.",
 	"mobile-frontend-contributions-404-title": "Пользователь не найден",
 	"mobile-frontend-copyright": "Содержание доступно по лицензии $1 (если не указано иное).",
 	"mobile-frontend-desc": "Мобильный интерфейс",
@@ -131,7 +133,7 @@
 	"mobile-frontend-editor-switch-confirm": "Вы должны сохранить свою правку перед переключением в другой режим редактирования.",
 	"mobile-frontend-editor-switch-editor": "Переключить редактор",
 	"mobile-frontend-editor-switch-visual-editor": "Переключить на Визуальный редактор",
-	"mobile-frontend-editor-uploadenable": "Пожалуйста, для возможности редактирования загрузите сначала фото.",
+	"mobile-frontend-editor-uploadenable": "Пожалуйста, загрузите фотографию, чтобы включить редактирование.",
 	"mobile-frontend-editor-viewing-source-page": "<strong>Просмотр исходного текста</strong><span> $1</span>",
 	"mobile-frontend-editor-wait": "Сохранение правки, пожалуйста, подождите.",
 	"mobile-frontend-expand-sections-description": "Всегда по умолчанию раскрывать разделы всех страниц.",
@@ -279,6 +281,7 @@
 	"apihelp-mobileview-summary": "Возвращает данные, необходимые для мобильных представлений.",
 	"apihelp-mobileview-param-page": "Заголовок страницы для обработки.",
 	"apihelp-mobileview-param-sectionprop": "Какую информацию о разделах получать.",
+	"apihelp-mobileview-param-variant": "Преобразуйте контент в этот языковой вариант.",
 	"apihelp-mobileview-param-noimages": "Вернуть HTML без изображений.",
 	"apihelp-mobileview-param-thumbsize": "Максимальные размеры эскизов.",
 	"apihelp-mobileview-param-thumbwidth": "Максимальная ширина миниатюры",
@@ -314,6 +317,5 @@
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Управляйте размером шрифта для своего процесса чтения.",
 	"mobile-frontend-beta-only": "Функция доступна только в рамках бета-тестирования.",
 	"mobile-frontend-console-recruit": "Узнать подробнее о том, как мы строим наш мобильный сайт @ https://www.mediawiki.org/wiki/Extension:MobileFrontend",
-	"mobile-frontend-skin-pref": "Какую тему оформления вы хотели бы использовать при использовании мобильного?",
 	"prefs-mobile": "Мобильные настройки"
 }

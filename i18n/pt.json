@@ -307,6 +307,5 @@
 	"mobile-frontend-beta-only": "A funcionalidade está disponível apenas no modo beta",
 	"mobile-frontend-console-recruit": "Saiba mais sobre a forma como construímos o nosso sítio móvel @ https://www.mediawiki.org/wiki/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Otimizar e simplificar as páginas especiais quando estiver em dispositivos móveis (recomendado)",
-	"mobile-frontend-skin-pref": "Que tema quer usar no dispositivo móvel?",
 	"prefs-mobile": "Preferências em dispositivos móveis"
 }
