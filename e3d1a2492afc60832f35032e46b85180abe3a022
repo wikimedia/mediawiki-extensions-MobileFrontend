@@ -72,6 +72,24 @@
     },
     {
       "key": {
+        "uuid": "554e7291_34b66402",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-12-17T21:22:38Z",
+      "side": 1,
+      "message": "Okay that makes sense\nI guess we\u0027d need to use\nmw.log.deprecate( M.require( \u0027mobile.startup\u0027 ).search );\nrather than M.deprecate.\n\nI guess this applies to all these properties though?\n\nWe\u0027ll have to be careful to remember to do this if we touch this in further.",
+      "parentUuid": "6d031d14_3523bc69",
+      "revId": "e3d1a2492afc60832f35032e46b85180abe3a022",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "62fb821d_38099dcf",
         "filename": "tests/node-qunit/utils/mockMediaWiki.js",
         "patchSetId": 3
