@@ -46,6 +46,30 @@
       "revId": "6bd74cebe362a59711abcfd3186cfae6e79b53e1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c4f4b6cd_0d72db1b",
+        "filename": "resources/mobile.editor.api/EditorGateway.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-18T18:28:09Z",
+      "side": 1,
+      "message": "Ah, quite right. I can see my mistake now. Thanks for the follow up.",
+      "parentUuid": "477a0393_87802626",
+      "range": {
+        "startLine": 39,
+        "startChar": 0,
+        "endLine": 45,
+        "endChar": 8
+      },
+      "revId": "6bd74cebe362a59711abcfd3186cfae6e79b53e1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
