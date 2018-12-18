@@ -52,6 +52,7 @@
 	function EditorOverlayBase( params ) {
 		var self = this,
 			options = util.extend( {}, {
+				className: 'overlay editor-overlay',
 				isBorderBox: false
 			}, params );
 
@@ -154,12 +155,6 @@
 		 * @instance
 		 */
 		template: mw.template.get( 'mobile.editor.common', 'EditorOverlayBase.hogan' ),
-		/**
-		 * @inheritdoc
-		 * @memberof EditorOverlayBase
-		 * @instance
-		 */
-		className: 'overlay editor-overlay',
 		/**
 		 * @memberof EditorOverlayBase
 		 * @instance

@@ -17,7 +17,11 @@
 	function CategoryAddOverlay( options ) {
 		options.heading = mw.msg( 'mobile-frontend-categories-add-heading', options.title );
 		this.eventBus = options.eventBus;
-		Overlay.apply( this, arguments );
+		Overlay.call( this,
+			util.extend( {
+				className: 'category-overlay overlay'
+			}, options )
+		);
 	}
 
 	OO.mfExtend( CategoryAddOverlay, Overlay, {
@@ -45,12 +49,6 @@
 			'click .save': 'onSaveClick',
 			'click .suggestion': 'onCategoryClick'
 		} ),
-		/**
-		 * @inheritdoc
-		 * @memberof CategoryAddOverlay
-		 * @instance
-		 */
-		className: 'category-overlay overlay',
 		/**
 		 * @inheritdoc
 		 * @memberof CategoryAddOverlay

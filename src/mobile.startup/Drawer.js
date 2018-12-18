@@ -8,9 +8,14 @@ var
  * A {@link View} that pops up from the bottom of the screen.
  * @class Drawer
  * @extends Panel
+ * @param {Object} props
  */
-function Drawer() {
-	Panel.apply( this, arguments );
+function Drawer( props ) {
+	Panel.call( this,
+		util.extend( {
+			className: 'drawer position-fixed'
+		}, props )
+	);
 }
 
 mfExtend( Drawer, Panel, {
@@ -35,11 +40,6 @@ mfExtend( Drawer, Panel, {
 	templatePartials: util.extend( {}, Panel.prototype.templatePartials, {
 		icon: Icon.prototype.template
 	} ),
-	/**
-	 * @memberof Drawer
-	 * @instance
-	 */
-	className: 'drawer position-fixed',
 	/**
 	 * Defines an element that the Drawer should automatically be appended to.
 	 * @memberof Drawer

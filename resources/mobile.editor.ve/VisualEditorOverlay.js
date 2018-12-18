@@ -11,7 +11,12 @@
 	 */
 	function VisualEditorOverlay( options ) {
 		this.applyHeaderOptions( options, true );
-		EditorOverlayBase.apply( this, arguments );
+		EditorOverlayBase.call( this,
+			util.extend( {}, {
+				isBorderBox: false,
+				className: 'overlay editor-overlay editor-overlay-ve'
+			}, options )
+		);
 		this.isNewPage = options.isNewPage;
 	}
 
@@ -32,12 +37,6 @@
 			editHeader: mw.template.get( 'mobile.editor.ve', 'toolbarVE.hogan' ),
 			content: mw.template.get( 'mobile.editor.ve', 'contentVE.hogan' )
 		} ),
-		/**
-		 * @inheritdoc
-		 * @memberof VisualEditorOverlay
-		 * @instance
-		 */
-		className: 'overlay editor-overlay editor-overlay-ve',
 		/**
 		 * @memberof VisualEditorOverlay
 		 * @instance

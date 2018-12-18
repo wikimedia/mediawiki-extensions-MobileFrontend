@@ -28,7 +28,11 @@
 		this.router = options.router || router;
 		this.eventBus = options.eventBus;
 
-		Overlay.apply( this, arguments );
+		Overlay.call( this,
+			util.extend( {
+				className: 'overlay media-viewer'
+			}, options )
+		);
 	}
 
 	OO.mfExtend( ImageOverlay, Overlay, {
@@ -43,11 +47,6 @@
 		 * @instance
 		 */
 		hideOnExitClick: false,
-		/**
-		 * @memberof ImageOverlay
-		 * @instance
-		 */
-		className: 'overlay media-viewer',
 		/**
 		 * @memberof ImageOverlay
 		 * @instance
