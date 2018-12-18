@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "99f735c1_d18bf774",
+        "filename": "src/mobile.startup/OverlayManager.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-18T15:18:56Z",
+      "side": 1,
+      "message": "Do we need to wrap this in util.domReady()?",
+      "range": {
+        "startLine": 56,
+        "startChar": 0,
+        "endLine": 58,
+        "endChar": 3
+      },
+      "revId": "97b7c51bd56d4f0bab2633ddc2813d4d8cc919da",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
