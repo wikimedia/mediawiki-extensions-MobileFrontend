@@ -22,6 +22,30 @@
       "revId": "6bd74cebe362a59711abcfd3186cfae6e79b53e1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "477a0393_87802626",
+        "filename": "resources/mobile.editor.api/EditorGateway.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 4911
+      },
+      "writtenOn": "2018-12-18T18:24:19Z",
+      "side": 1,
+      "message": "It looks like .some() returns a boolean https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some#Return_value\n\nIn your first example, `blockedError` is a boolean in your second it throws an error because error will be undefined",
+      "parentUuid": "5f2cc63e_e6ee9e20",
+      "range": {
+        "startLine": 39,
+        "startChar": 0,
+        "endLine": 45,
+        "endChar": 8
+      },
+      "revId": "6bd74cebe362a59711abcfd3186cfae6e79b53e1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
