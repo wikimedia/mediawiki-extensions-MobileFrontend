@@ -22,6 +22,30 @@
       "revId": "7dc6765c4d99dfbd86de4ceecf1e7d87a1a4244c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9dd68b22_e97fb304",
+        "filename": "src/mobile.startup/LoadingOverlay.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-12-18T19:28:03Z",
+      "side": 1,
+      "message": "possibly (I\u0027d prefer to simply drop the capital letter \"L\" and call it loadingOverlay)\n\nThat said it\u0027s referred LoadingOverlay throughout our codebase (Minerva + MobileFrontend), so for consistency I\u0027d want to handle the rename and the deprecation of M.require( \u0027mobile.startup\u0027 ).LoadingOverlay together in a separate patchset since it\u0027s non-trivial",
+      "parentUuid": "6b8ad13a_afba37c8",
+      "range": {
+        "startLine": 11,
+        "startChar": 9,
+        "endLine": 11,
+        "endChar": 23
+      },
+      "revId": "7dc6765c4d99dfbd86de4ceecf1e7d87a1a4244c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
