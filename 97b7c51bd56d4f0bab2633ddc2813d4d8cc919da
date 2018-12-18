@@ -22,6 +22,30 @@
       "revId": "97b7c51bd56d4f0bab2633ddc2813d4d8cc919da",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f4629b8_00305c6e",
+        "filename": "src/mobile.startup/OverlayManager.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-12-18T20:14:02Z",
+      "side": 1,
+      "message": "I don\u0027t believe so.\n\nHistorically certain pages loaded code in the head (e.g. Special:Nearby\") but I don\u0027t think this is the case anymore. We can assume that when this code is running the DOM is ready.",
+      "parentUuid": "99f735c1_d18bf774",
+      "range": {
+        "startLine": 56,
+        "startChar": 0,
+        "endLine": 58,
+        "endChar": 3
+      },
+      "revId": "97b7c51bd56d4f0bab2633ddc2813d4d8cc919da",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
