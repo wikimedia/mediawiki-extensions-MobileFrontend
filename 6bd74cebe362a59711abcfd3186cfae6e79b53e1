@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f2cc63e_e6ee9e20",
+        "filename": "resources/mobile.editor.api/EditorGateway.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-18T16:55:08Z",
+      "side": 1,
+      "message": "I\u0027m not sure if you\u0027ve already considered it but here\u0027s a different style that is a little closer to the original implementation:\n\n blockedError \u003d pageObj.actions.edit.some( function ( error ) {\n   return [ \u0027blocked\u0027, \u0027autoblocked\u0027 ].indexOf( error.code ) !\u003d\u003d -1\n } );\n\nIf you want the error itself then:\n\n blockedError \u003d pageObj.actions.edit.some( function ( error ) {\n   return [ \u0027blocked\u0027, \u0027autoblocked\u0027 ].indexOf( error.code ) \u003d\u003d\u003d -1\n } ) ? undefined : error;",
+      "range": {
+        "startLine": 39,
+        "startChar": 0,
+        "endLine": 45,
+        "endChar": 8
+      },
+      "revId": "6bd74cebe362a59711abcfd3186cfae6e79b53e1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
