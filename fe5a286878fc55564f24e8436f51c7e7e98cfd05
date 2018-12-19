@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ada30789_01375aeb",
+        "filename": "resources/mobile.editor.common/EditorOverlayBase.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 326,
+      "author": {
+        "id": 6097
+      },
+      "writtenOn": "2018-12-19T02:43:20Z",
+      "side": 0,
+      "message": "Please see https://gerrit.wikimedia.org/r/c/mediawiki/extensions/GrowthExperiments/+/480691 for why I am proposing to move this.",
+      "revId": "fe5a286878fc55564f24e8436f51c7e7e98cfd05",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}

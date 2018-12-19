@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bf82a678_53d2eed8",
+        "filename": "resources/mobile.editor.overlay/EditorOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 532,
+      "author": {
+        "id": 6097
+      },
+      "writtenOn": "2018-12-19T02:43:20Z",
+      "side": 1,
+      "message": "Arguably this could be renamed to mobileFrontend.visualEditorOpened, and the one below, mobileFrontend.sourceEditorOpened. I feel ambivalent about it; if you prefer that change please let me know!",
+      "revId": "3e1339a6940d42c010fc432850af4f115509c9ec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
