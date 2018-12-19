@@ -254,7 +254,7 @@
 	"mobile.css": "/* CSS المعروض هنا سيؤثر على مستخدمي موقع المحمول */",
 	"mobile.js": "/* أي JavaScript هنا سيتم تحميله لمستخدمي موقع المحمول */",
 	"nearby": "صفحات فيها مواضيع قريبة منك",
-	"tag-mobile_edit": "تحرير من الجوال",
+	"tag-mobile_edit": "تحرير من المحمول",
 	"tag-mobile_edit-description": "تعديل من المحمول (ويب أو تطبيق)",
 	"tag-mobile_web_edit": "تعديل ويب جوال",
 	"tag-mobile_web_edit-description": "تعديل من موقع الويب الخاص بالمحمول",
