@@ -323,6 +323,9 @@
 			Overlay.prototype.postRender.apply( this );
 
 			this.showHidden( '.initial-header' );
+		},
+		show: function () {
+			Overlay.prototype.show.call( this );
 			// Inform other interested code that the editor has loaded
 			mw.hook( 'mobileFrontend.editorOpened' ).fire();
 		},
