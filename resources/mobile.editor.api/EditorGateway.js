@@ -36,8 +36,12 @@
 				pageObj.actions.edit &&
 				Array.isArray( pageObj.actions.edit )
 			) {
-				blockedError = pageObj.actions.edit.find( function ( error ) {
-					return [ 'blocked', 'autoblocked' ].indexOf( error.code ) !== -1;
+				pageObj.actions.edit.some( function ( error ) {
+					if ( [ 'blocked', 'autoblocked' ].indexOf( error.code ) !== -1 ) {
+						blockedError = error;
+						return true;
+					}
+					return false;
 				} );
 
 				if ( blockedError && blockedError.data && blockedError.data.blockinfo ) {
