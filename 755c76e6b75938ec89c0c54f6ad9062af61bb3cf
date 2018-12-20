@@ -16,6 +16,24 @@
       "revId": "755c76e6b75938ec89c0c54f6ad9062af61bb3cf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fdb08e7f_14eeb320",
+        "filename": "src/mobile.startup/CtaDrawer.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-20T19:39:56Z",
+      "side": 0,
+      "message": "Shoot, I had that change locally but forgot to push it up. Thanks for spotting this error.\n\nI think the Depends-On should actually be on this patch, MobileFrontend depends on Minerva, since it\u0027s safe for the option to be ignored when the property exists but it\u0027s unsafe for the property to not exist when the option does not exist.",
+      "parentUuid": "45ef33ce_38b44038",
+      "revId": "755c76e6b75938ec89c0c54f6ad9062af61bb3cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
