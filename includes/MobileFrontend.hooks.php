@@ -354,6 +354,11 @@ class MobileFrontendHooks {
 		}
 
 		$testFiles[] = 'resources/dist/tests.mobilefrontend.js';
+		// Need to explicitly list this dependency because its tests are run by
+		// tests.mobilefrontend.js, but it is not part of the mobile.startup module
+		// (it's lazy loaded). Therefore, it's templates/messages will not be loaded
+		// by the above code.
+		$dependencies[] = 'mobile.languages.structured';
 		$testModule = [
 			'dependencies' => $dependencies,
 			'localBasePath' => $localBasePath,

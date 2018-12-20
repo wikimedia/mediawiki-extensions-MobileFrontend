@@ -367,6 +367,7 @@
 				"resources/mobile.startup/search/SearchOverlay.less"
 			],
 			"scripts": [
+				"resources/dist/mobile.common.js",
 				"resources/dist/mobile.startup.js"
 			]
 		},
@@ -669,8 +670,7 @@
 				"mobile.startup"
 			],
 			"scripts": [
-				"resources/mobile.languages.structured/util.js",
-				"resources/mobile.languages.structured/LanguageOverlay.js"
+				"resources/dist/mobile.languages.structured.js"
 			],
 			"styles": [
 				"resources/mobile.languages.structured/LanguageOverlay.less"

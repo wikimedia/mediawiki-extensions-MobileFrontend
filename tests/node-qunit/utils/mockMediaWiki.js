@@ -39,7 +39,8 @@ module.exports = function newMockMediaWiki() {
 			}
 		},
 		log: {
-			deprecate: function () {}
+			deprecate: function () {},
+			warn: function () {}
 		},
 		msg: function ( id ) { return id; },
 		now: Date.now.bind( Date ),
