@@ -2,6 +2,7 @@ var
 	sinon = require( 'sinon' ),
 	dom = require( '../utils/dom' ),
 	jQuery = require( '../utils/jQuery' ),
+	mediaWiki = require( '../utils/mw' ),
 	oo = require( '../utils/oo' ),
 	Panel,
 	sandbox;
@@ -12,6 +13,7 @@ QUnit.module( 'MobileFrontend Panel.js', {
 		dom.setUp( sandbox, global );
 		jQuery.setUp( sandbox, global );
 		oo.setUp( sandbox, global );
+		mediaWiki.setUp( sandbox, global );
 		Panel = require( '../../../src/mobile.startup/Panel' );
 	},
 	afterEach: function () {

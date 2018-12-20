@@ -1,7 +1,7 @@
 /* global $ */
 var util = require( './util' ),
 	mfExtend = require( './mfExtend' ),
-	DEPRECATED_PROPERTIES = [],
+	DEPRECATED_PROPERTIES = [ 'events' ],
 	// Cached regex to split keys for `delegate`.
 	delegateEventSplitter = /^(\S+)\s*(.*)$/,
 	idCounter = 0;
@@ -54,26 +54,34 @@ function uniqueId( prefix ) {
  *
  * Example:
  * ```js
- *     var MyComponent = View.extend( {
- *       events: {
- *	       'mousedown .title': 'edit',
- *	       'click .button': 'save',
- *	       'click .open': function(e) { ... }
- *       },
- *       edit: function ( ev ) {
- *         //...
- *       },
- *       save: function ( ev ) {
- *         //...
- *       }
- *     } );
+ *     var
+ *       MyComponent = View.extend( {
+ *         edit: function ( ev ) {
+ *           //...
+ *         },
+ *         save: function ( ev ) {
+ *           //...
+ *         }
+ *       } ),
+ *       instance = new MyComponent({
+ *         events: {
+ *           'mousedown .title': 'edit',
+ *           'click .button': 'save',
+ *           'click .open': function(e) { ... }
+ *         }
+ *       });
  * ```
  *
  * Example:
  * ```js
  *     var View, section;
  *     function Section( options ) {
- *       View.call( this, options );
+ *       var defaultOptions = {
+ *         events: {
+ *           // ...
+ *         }
+ *       }
+ *       View.call( this, util.extends( {}, defaultOptions, options ) );
  *     }
  *     View = require( './View' );
  *     require( './mfExtend' )( Section, View, {
@@ -157,17 +165,11 @@ mfExtend( View, {
 	defaults: {},
 
 	/**
-	 * Default events map
-	 * @memberof View
-	 * @instance
-	 */
-	events: null,
-
-	/**
 	 * Run once during construction to set up the View
 	 * @memberof View
 	 * @instance
 	 * @param {Object} options Object passed to the constructor.
+	 * @param {Object.<string, string>} [options.events]
 	 */
 	initialize: function ( options ) {
 		var self = this;
@@ -306,8 +308,9 @@ mfExtend( View, {
 	 */
 	delegateEvents: function ( events ) {
 		var match, key, method;
-		// Take either the events parameter or the this.events to process
-		events = events || this.events;
+		// Take either the events parameter or the this.events to process. this.events is
+		// deprecated. See DEPRECATED_PROPERTIES.
+		events = events || this.options.events || this.events;
 		if ( events ) {
 			// Remove current events before re-binding them
 			this.undelegateEvents();
