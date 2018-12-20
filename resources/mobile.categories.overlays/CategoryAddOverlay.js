@@ -141,6 +141,7 @@
 					// we're closing the overlay to show the user
 					// that the action was completed successful
 					router.navigate( '#' );
+					mw.notify( mw.msg( 'mobile-frontend-categories-notification' ) );
 				}, function () {
 					self.showHidden( '.initial-header' );
 					self.$safeButton.prop( 'disabled', false );

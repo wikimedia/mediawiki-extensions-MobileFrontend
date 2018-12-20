@@ -645,6 +645,7 @@
 				"CategoryAddOverlayHeader.hogan": "resources/mobile.categories.overlays/CategoryAddOverlayHeader.hogan"
 			},
 			"messages": [
+				"mobile-frontend-categories-notification",
 				"mobile-frontend-categories-heading",
 				"mobile-frontend-categories-subheading",
 				"mobile-frontend-categories-nocat",
