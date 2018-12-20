@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "45ef33ce_38b44038",
+        "filename": "src/mobile.startup/CtaDrawer.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-12-20T19:13:13Z",
+      "side": 0,
+      "message": "This comment still applies. Clicking \"No, thanks.\" on the red link drawer after clicking a red link in http://localhost:8888/w/index.php/Deccan_sultanates has no effect. best to add a Depends-On patch to a change in Minerva to make this no longer necessary!",
+      "revId": "755c76e6b75938ec89c0c54f6ad9062af61bb3cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
