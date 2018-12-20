@@ -24,10 +24,10 @@ var
  * @uses Button
  * @uses Icon
  * @uses Anchor
- * @param {...Options} options
+ * @param {Options} options
  */
-function CtaDrawer() {
-	Drawer.apply( this, arguments );
+function CtaDrawer( options ) {
+	Drawer.call( this, options );
 }
 
 mfExtend( CtaDrawer, Drawer, {
@@ -63,16 +63,6 @@ mfExtend( CtaDrawer, Drawer, {
 		 * @instance
 		 */
 	template: mw.template.get( 'mobile.startup', 'CtaDrawer.hogan' ),
-	/**
-		 * @inheritdoc
-		 * @memberof CtaDrawer
-		 * @instance
-		 */
-	events: util.extend( {}, Drawer.prototype.events, {
-		// Needed by Minerva's red link drawer in skins.minerva.scripts/init.js. There's no .hide
-		// class in CtaDrawer.
-		'click .hide': 'hide'
-	} ),
 	/**
 		 * @inheritdoc
 		 * @memberof CtaDrawer
