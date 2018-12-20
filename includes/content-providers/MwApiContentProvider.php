@@ -3,6 +3,8 @@
 namespace MobileFrontend\ContentProviders;
 
 use OutputPage;
+use FormatJson;
+use MediaWiki\MediaWikiServices;
 
 class MwApiContentProvider implements IContentProvider {
 	/**
@@ -39,6 +41,22 @@ class MwApiContentProvider implements IContentProvider {
 	}
 
 	/**
+	 * @param string $url URL to fetch the content
+	 * @return string
+	 */
+	protected function fileGetContents( $url ) {
+		$response = MediaWikiServices::getInstance()->getHttpRequestFactory()
+			->create( $url );
+
+		$status = $response->execute();
+		if ( !$status->isOK() ) {
+			return '';
+		}
+
+		return $response->getContent();
+	}
+
+	/**
 	 * @inheritDoc
 	 */
 	public function getHTML() {
@@ -56,8 +74,8 @@ class MwApiContentProvider implements IContentProvider {
 		}
 		$url .= '&useskin=' . $this->skinName;
 
-		$resp = file_get_contents( $url, false );
-		$json = json_decode( $resp, true );
+		$resp = $this->fileGetContents( $url );
+		$json = FormatJson::decode( $resp, true );
 		if ( !is_bool( $json ) && array_key_exists( 'parse', $json ) ) {
 			$parse = $json['parse'];
 
