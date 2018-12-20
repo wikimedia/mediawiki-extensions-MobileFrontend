@@ -224,7 +224,7 @@ mfExtend( View, {
 			this.$el.addClass( BORDER_BOX_CLASS );
 		}
 
-		this.render( this.options );
+		this.render( {} );
 	},
 
 	/**
