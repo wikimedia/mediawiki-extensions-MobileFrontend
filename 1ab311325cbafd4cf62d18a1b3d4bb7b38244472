@@ -94,6 +94,47 @@
       "revId": "1ab311325cbafd4cf62d18a1b3d4bb7b38244472",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eb14a222_db4190bf",
+        "filename": "extension.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 370,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-12-21T17:43:54Z",
+      "side": 1,
+      "message": "It might be worth putting this in mediawiki.template.hogan  to play it save given the issues we had with the error spike in Safari before\n\nI\u0027m guessing mobile.startup and mobile.common will eventually converge as we merge more code.\n\nI\u0027m imagining a venn diagram:\nhttps://files.slack.com/files-tmb/T024KLHS4-FF158JD9V-70cd672f0e/screen_shot_2018-12-21_at_9.41.57_am_360.png",
+      "parentUuid": "45d55ec3_8f187918",
+      "range": {
+        "startLine": 370,
+        "startChar": 4,
+        "endLine": 370,
+        "endChar": 37
+      },
+      "revId": "1ab311325cbafd4cf62d18a1b3d4bb7b38244472",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "48ef8c52_f33d3bab",
+        "filename": "src/mobile.languages.structured/util.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2018-12-21T17:43:54Z",
+      "side": 1,
+      "message": "Do we need to use util like this?\nWhy not export { getDir: getDir } at the bottom instead?\n\nI don\u0027t think any of these functions use `this`",
+      "revId": "1ab311325cbafd4cf62d18a1b3d4bb7b38244472",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
