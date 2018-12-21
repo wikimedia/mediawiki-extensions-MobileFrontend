@@ -22,6 +22,30 @@
       "revId": "1ab311325cbafd4cf62d18a1b3d4bb7b38244472",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "579818f6_41590561",
+        "filename": "extension.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 370,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-12-21T17:24:04Z",
+      "side": 1,
+      "message": "mobile.startup.runtime, mobile.startup, and mobile.common.js is our common denominator. mobile.common.js are all the modules that are shared between at least two of the entry points in `SPLIT_CHUNKS_WHITELIST` (right now there are only two - mobile.startup.js and mobile.languages.structured (an async bundle)).",
+      "parentUuid": "7ee8a5ef_e5895571",
+      "range": {
+        "startLine": 370,
+        "startChar": 4,
+        "endLine": 370,
+        "endChar": 37
+      },
+      "revId": "1ab311325cbafd4cf62d18a1b3d4bb7b38244472",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
