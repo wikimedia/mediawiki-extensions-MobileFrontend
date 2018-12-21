@@ -5,6 +5,13 @@
 @userInfoHeight: 8em;
 @userInfoPadding: 1em;
 
+// Enable smooth scrolling on mobile diff page T200927
+// this is currently a draft specification available on Chrome/Firefox
+// https://caniuse.com/#feat=css-scroll-behavior
+body.mw-special-MobileDiff {
+	scroll-behavior: smooth;
+}
+
 #mw-mf-page-center {
 	// See https://phabricator.wikimedia.org/T144579#2699879
 	// This prevents the footer margin bottom from collapsing on iOS9.3
