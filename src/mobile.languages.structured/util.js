@@ -1,6 +1,7 @@
 var
 	log = mw.log,
-	mfUtils = require( '../mobile.startup/util' );
+	mfUtils = require( '../mobile.startup/util' ),
+	rtlLanguages = require( './rtlLanguages' );
 
 /**
  * Return the device language if it's in the list of article languages.
@@ -59,43 +60,7 @@ module.exports = {
 	 * @return {Object} language with 'lang' key and new 'dir' key.
 	 */
 	getDir: function ( language ) {
-		var dir = [
-			'aeb',
-			'aeb-arab',
-			'ar',
-			'arc',
-			'arq',
-			'arz',
-			'azb',
-			'bcc',
-			'bgn',
-			'bqi',
-			'ckb',
-			'dv',
-			'fa',
-			'glk',
-			'he',
-			'khw',
-			'kk-arab',
-			'kk-cn',
-			'ks',
-			'ks-arab',
-			'ku-arab',
-			'lki',
-			'lrc',
-			'luz',
-			'mzn',
-			'pnb',
-			'ps',
-			'sd',
-			'sdh',
-			'skr',
-			'skr-arab',
-			'ug',
-			'ug-arab',
-			'ur',
-			'yi'
-		].indexOf( language.lang ) > -1 ? 'rtl' : 'ltr';
+		var dir = rtlLanguages.indexOf( language.lang ) > -1 ? 'rtl' : 'ltr';
 		return mfUtils.extend( {}, language, { dir: dir } );
 	},
 
