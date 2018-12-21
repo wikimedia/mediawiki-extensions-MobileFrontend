@@ -194,6 +194,24 @@
       "revId": "1ab311325cbafd4cf62d18a1b3d4bb7b38244472",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0a255953_228f56e0",
+        "filename": "src/mobile.languages.structured/util.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-12-21T22:10:48Z",
+      "side": 1,
+      "message": "done in Icac57fb0cea14090bb1ad359e475265aced6f01a",
+      "parentUuid": "9f875184_557ef2ea",
+      "revId": "1ab311325cbafd4cf62d18a1b3d4bb7b38244472",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
