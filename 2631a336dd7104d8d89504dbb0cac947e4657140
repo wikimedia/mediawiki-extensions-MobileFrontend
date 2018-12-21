@@ -22,6 +22,30 @@
       "revId": "2631a336dd7104d8d89504dbb0cac947e4657140",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e05c341f_452b2a70",
+        "filename": "webpack.config.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-12-21T19:07:43Z",
+      "side": 1,
+      "message": "tldr; I\u0027m not sure how to make webpack do that, do you?\n\nIf we used webpack\u0027s lazy loading there would only be one new chunk created for language overlay (and no common chunk). However, there were hurdles involved with that (listed in commit msg). \n\nTherefore, this bundle splitting method was used, but I\u0027m not sure how to make webpack produce only one new chunk for language overlay and which doesn\u0027t also contain modules from mobile.startup. It seems like webpack\u0027s `reuseExistingChunk` could be used here, but I couldn\u0027t make it work.",
+      "parentUuid": "4170d1b7_26739bca",
+      "range": {
+        "startLine": 14,
+        "startChar": 3,
+        "endLine": 14,
+        "endChar": 17
+      },
+      "revId": "2631a336dd7104d8d89504dbb0cac947e4657140",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
