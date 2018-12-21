@@ -15,7 +15,14 @@
 	 */
 	NotificationsFilterOverlay = function ( options ) {
 		var self = this;
-		Overlay.apply( this, options );
+
+		Overlay.call(
+			this,
+			util.extend( {
+				// FIXME: notification-overlay class to be generalized
+				className: 'overlay notifications-filter-overlay notifications-overlay navigation-drawer'
+			}, options )
+		);
 
 		// Initialize
 		this.on( 'hide', function () {
@@ -38,12 +45,6 @@
 	};
 
 	OO.mfExtend( NotificationsFilterOverlay, Overlay, {
-		// FIXME: notification-overlay class to be generalized
-		/**
-		 * @memberof NotificationsFilterOverlay
-		 * @instance
-		 */
-		className: 'overlay notifications-filter-overlay notifications-overlay navigation-drawer',
 		/**
 		 * @memberof NotificationsFilterOverlay
 		 * @instance
