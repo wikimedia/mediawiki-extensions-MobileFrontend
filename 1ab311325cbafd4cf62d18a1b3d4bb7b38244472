@@ -121,6 +121,30 @@
     },
     {
       "key": {
+        "uuid": "5f58c54d_8d6a36ac",
+        "filename": "extension.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 370,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-12-21T22:10:03Z",
+      "side": 1,
+      "message": "I can do that, but Isn\u0027t the mediawiki.template.hogan module used by QuickSurvey\u0027s and RelatedArticles? Would that negatively impact their load? \n\nI also thought the issue with the past errors were that the webpack runtime wasn\u0027t loaded in time, but I don\u0027t think that problem would happen again because mediawiki.template.hogan will be loaded (and thus the webpack runtime) well before mobile.startup executes.",
+      "parentUuid": "eb14a222_db4190bf",
+      "range": {
+        "startLine": 370,
+        "startChar": 4,
+        "endLine": 370,
+        "endChar": 37
+      },
+      "revId": "1ab311325cbafd4cf62d18a1b3d4bb7b38244472",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "48ef8c52_f33d3bab",
         "filename": "src/mobile.languages.structured/util.js",
         "patchSetId": 5
@@ -132,6 +156,24 @@
       "writtenOn": "2018-12-21T17:43:54Z",
       "side": 1,
       "message": "Do we need to use util like this?\nWhy not export { getDir: getDir } at the bottom instead?\n\nI don\u0027t think any of these functions use `this`",
+      "revId": "1ab311325cbafd4cf62d18a1b3d4bb7b38244472",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f315dd68_625967d2",
+        "filename": "src/mobile.languages.structured/util.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2018-12-21T22:10:03Z",
+      "side": 1,
+      "message": "To clarify, are you suggesting like:\n\n```\nmodule.exports \u003d {\n  getDir: function () {\n    ...\n  }\n```\n\nor \n\n```\nvar getDir \u003d function () {\n}\n\nmodule.exports \u003d {\n  getDir: getDir\n}\n```\n\nIf the former, I think we would need to use `this` in a few places because util is referenced right now in some of these functions.",
+      "parentUuid": "48ef8c52_f33d3bab",
       "revId": "1ab311325cbafd4cf62d18a1b3d4bb7b38244472",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
