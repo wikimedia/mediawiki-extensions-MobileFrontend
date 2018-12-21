@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4170d1b7_26739bca",
+        "filename": "webpack.config.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2018-12-21T18:58:27Z",
+      "side": 1,
+      "message": "Why do we need to excise code from the common denominator, mobile.startup? Can we stuff common code directly into mobile.startup instead of creating mobile.common?",
+      "range": {
+        "startLine": 14,
+        "startChar": 3,
+        "endLine": 14,
+        "endChar": 17
+      },
+      "revId": "2631a336dd7104d8d89504dbb0cac947e4657140",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
