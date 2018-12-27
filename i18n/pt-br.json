@@ -35,6 +35,7 @@
 	"mobile-frontend-categories-nomatch": "Nenhuma categoria encontrada para sua consulta. Você deve tentar outra.",
 	"mobile-frontend-categories-nodata": "Ocorreu um erro. Você adicionou algumas categorias para salvar?",
 	"mobile-frontend-categories-summary": "Adicionado às categorias",
+	"mobile-frontend-categories-notification": "Categorias foram atualizadas com sucesso.",
 	"mobile-frontend-categories-add-heading": "<strong>Adicionar<span> $1</span> a novas categorias</strong>",
 	"mobile-frontend-categories-add-wait": "Salvando categorias,por favor, aguarde.",
 	"mobile-frontend-categories-normal": "Baseada no conteúdo",

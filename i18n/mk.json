@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Bjankuloski06"
+			"Bjankuloski06",
+			"Vlad5250"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Дали корисникот уредува од мобилниот посредник",
@@ -14,6 +15,7 @@
 	"mobile-frontend-categories-nomatch": "Не најдов категорија што одговара на бараното. Обидете се со друга.",
 	"mobile-frontend-categories-nodata": "Се појави грешка. Дали додадовте категории за зачувување?",
 	"mobile-frontend-categories-summary": "Ставено во категории",
+	"mobile-frontend-categories-notification": "Категориите се успешно подновени.",
 	"mobile-frontend-categories-add-heading": "<strong>Ставена<span> $1</span> во нови категории</strong>",
 	"mobile-frontend-categories-add-wait": "Ги зачувувам категориите. Почекајте.",
 	"mobile-frontend-categories-normal": "Содржински",
@@ -49,7 +51,7 @@
 	"mobile-frontend-editor-abusefilter-warning": "Предупредување: Дали сте сигурни дека сакате да го зачувате уредувањето? Може да е проблематично.",
 	"mobile-frontend-editor-anon": "Уреди без најава",
 	"mobile-frontend-editor-anonwarning": "<strong>Предупредување:</strong> Не сте најавени. Вашата IP-адреса ќе биде јавно видлива ако уредувате. Ако <strong>се најавите</strong> или <strong>направите сметка</strong>, тогаш уредувањата ќе се припишуваат на вашето корисничко име, покрај другите погодности.",
-	"mobile-frontend-editor-blocked-drawer-title": "Нашата сметка има забрана за уредување на {{SITENAME}}",
+	"mobile-frontend-editor-blocked-drawer-title": "Вашата сметка има забрана за уредување на {{SITENAME}}",
 	"mobile-frontend-editor-blocked-drawer-title-partial": "Вашата сметка е блокирана и не може да ја уредува страницава",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Причина за забраната",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Забранил}}",

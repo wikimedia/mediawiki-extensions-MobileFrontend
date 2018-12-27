@@ -42,6 +42,7 @@
 	"mobile-frontend-categories-nomatch": "您的查詢條件沒有找到任何分類，您應嘗試使用其他條件。",
 	"mobile-frontend-categories-nodata": "發生錯誤，您是否已加入要儲存分類？",
 	"mobile-frontend-categories-summary": "已加入至分類",
+	"mobile-frontend-categories-notification": "分類已更新成功。",
 	"mobile-frontend-categories-add-heading": "<strong>新增 <span>$1</span> 至新分類</strong>",
 	"mobile-frontend-categories-add-wait": "儲存分類中，請稍候。",
 	"mobile-frontend-categories-normal": "內容基於",

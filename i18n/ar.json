@@ -40,6 +40,7 @@
 	"mobile-frontend-categories-nomatch": "الاستعلام الخاص بك لم يجد اي فئة. عليك أن تحاول واحد آخر.",
 	"mobile-frontend-categories-nodata": "هناك خطأ ما. هل قمت بإضافة أية تصنيفات؟",
 	"mobile-frontend-categories-summary": "أضيفت للتصنيفات",
+	"mobile-frontend-categories-notification": "التصنيفات تم تحديثها بنجاح.",
 	"mobile-frontend-categories-add-heading": "<strong>إضافة<span> $1</span> إلى تصنيفات جديدة</strong>",
 	"mobile-frontend-categories-add-wait": "جارٍ حفظ التصنيفات، يرجى الانتظار.",
 	"mobile-frontend-categories-normal": "صفحات المحتوى",

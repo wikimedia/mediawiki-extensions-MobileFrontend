@@ -49,6 +49,7 @@
 	"mobile-frontend-categories-nomatch": "Nie znaleziono kategorii dla zapytania. Spróbuj innego.",
 	"mobile-frontend-categories-nodata": "Wystąpił błąd. Czy dodałeś kategorie przed zapisaniem?",
 	"mobile-frontend-categories-summary": "Dodano do kategorii",
+	"mobile-frontend-categories-notification": "Kategorie zostały pomyślnie zaktualizowane.",
 	"mobile-frontend-categories-add-heading": "<strong>Dodaj stronę<span> $1</span> do nowych kategorii</strong>",
 	"mobile-frontend-categories-add-wait": "Zapisywanie kategorii, proszę czekać.",
 	"mobile-frontend-categories-normal": "Dotyczące zawartości",

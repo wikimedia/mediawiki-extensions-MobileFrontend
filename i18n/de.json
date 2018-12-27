@@ -31,6 +31,7 @@
 	"mobile-frontend-categories-nomatch": "Es wurde keine Kategorie für deine Anfrage gefunden. Du solltest eine andere versuchen.",
 	"mobile-frontend-categories-nodata": "Es gab einen Fehler. Hast du einige Kategorien zum Speichern hinzugefügt?",
 	"mobile-frontend-categories-summary": "Zu Kategorien hinzugefügt",
+	"mobile-frontend-categories-notification": "Die Kategorien wurden erfolgreich aktualisiert.",
 	"mobile-frontend-categories-add-heading": "<strong><span>$1</span> zu neuen Kategorien hinzufügen</strong>",
 	"mobile-frontend-categories-add-wait": "Speichere Kategorien, bitte warten.",
 	"mobile-frontend-categories-normal": "Inhaltsbasiert",

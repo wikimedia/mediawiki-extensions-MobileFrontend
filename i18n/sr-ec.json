@@ -23,6 +23,7 @@
 	"mobile-frontend-categories-nomatch": "Нису пронађене категорије које одговарају упиту. Покушајте још једном.",
 	"mobile-frontend-categories-nodata": "Дошло је до грешке. Јесте ли додали категорије за чување?",
 	"mobile-frontend-categories-summary": "Додато у категорије",
+	"mobile-frontend-categories-notification": "Категорије су успешно ажуриране.",
 	"mobile-frontend-categories-add-heading": "<strong>Додавање странице <span> $1</span> у нове категорије</strong>",
 	"mobile-frontend-categories-add-wait": "Чување категорија, сачекајте.",
 	"mobile-frontend-categories-normal": "Садржинске",
