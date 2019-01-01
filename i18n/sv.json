@@ -28,6 +28,7 @@
 	"mobile-frontend-categories-nomatch": "Ingen kategori hittad för din fråga. Du kan prova en annan.",
 	"mobile-frontend-categories-nodata": "Det uppstod ett fel. Har du lagt till några kategorier att spara?",
 	"mobile-frontend-categories-summary": "Lades till i kategori",
+	"mobile-frontend-categories-notification": "Kategorierna har uppdaterats.",
 	"mobile-frontend-categories-add-heading": "<strong>Lade till<span> $1</span> i nya kategorier</strong>",
 	"mobile-frontend-categories-add-wait": "Sparar kategorier, var god vänta.",
 	"mobile-frontend-categories-normal": "Innehållsbaserad",

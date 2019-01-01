@@ -101,6 +101,8 @@
 	"mobile-frontend-user-page-no-owner-page-yet": "Все още нямате потребителска страница",
 	"nearby": "Страници по теми, близо до вас",
 	"tag-mobile_edit": "Редакция чрез мобилно устройство",
+	"tag-mobile_edit-description": "Редакция чрез мобилно устройство (мреж. страница или извършник)",
 	"tag-mobile_web_edit": "Редакция чрез мобилно приложение",
+	"tag-mobile_web_edit-description": "Редакция, направена чрез мобилен уеб сайт",
 	"mobile-frontend-console-recruit": "Научете повече за това как изграждаме мобилния сайт @ https://www.mediawiki.org/wiki/Extension:MobileFrontend"
 }

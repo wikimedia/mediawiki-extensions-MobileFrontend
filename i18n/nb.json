@@ -28,6 +28,7 @@
 	"mobile-frontend-categories-nomatch": "Ingen kategorier funnet. Prøv et annet søk.",
 	"mobile-frontend-categories-nodata": "Det oppsto en feil. Har du lagt til noen kategorier du ønsker å lagre?",
 	"mobile-frontend-categories-summary": "Lagt til til kategorier",
+	"mobile-frontend-categories-notification": "Kategoriene har blitt oppdatert.",
 	"mobile-frontend-categories-add-heading": "<strong>Legg til <span> $1</span> i nye kategorier</strong>",
 	"mobile-frontend-categories-add-wait": "Lagrer kategorier, vennligst vent.",
 	"mobile-frontend-categories-normal": "Innholdsbasert",
