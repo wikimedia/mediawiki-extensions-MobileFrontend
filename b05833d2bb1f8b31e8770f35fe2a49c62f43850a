@@ -16,6 +16,47 @@
       "revId": "b05833d2bb1f8b31e8770f35fe2a49c62f43850a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "466922cc_dda17270",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-01-02T21:51:37Z",
+      "side": 1,
+      "message": "Hello @Jdlrobson, thanks for your reviews and welcome back (happy new year 2019). Yes, there is a reason for it not reaching 100%, I\u0027ll point it out in the code itself.\n\nAlso, we can document it (preferable) or make it reach 100% (not very useful).",
+      "parentUuid": "3c174b37_d5b9150b",
+      "revId": "b05833d2bb1f8b31e8770f35fe2a49c62f43850a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0a6200eb_2ea1beb3",
+        "filename": "tests/phpunit/content-providers/MwApiContentProviderTest.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-01-02T21:51:37Z",
+      "side": 1,
+      "message": "Here is the reason! So we\u0027re only considering the case where -\u003eisOK() returns a true and the `return \u0027\u0027` is not executed in $this-\u003efileGetContent() method. Actually, there is no use-case for this yet, it was just a means to defend the system when a request is made so upon bad status, it should return an empty string rather than some weird bunch of errors.\n\nSo if we really want to get to 100%, we\u0027ll need a mock for when -\u003eisOK() returns false so the return line can be executed but do we need it?",
+      "range": {
+        "startLine": 36,
+        "startChar": 2,
+        "endLine": 37,
+        "endChar": 24
+      },
+      "revId": "b05833d2bb1f8b31e8770f35fe2a49c62f43850a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
