@@ -22,6 +22,30 @@
       "revId": "ec22300c66b4641c1c9eeedea2a5011ac918a8c8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "afd4508e_7c02a84b",
+        "filename": "resources/mobile.categories.overlays/CategoryWidget.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-02T21:41:21Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "ebd878c8_04c70ab2",
+      "range": {
+        "startLine": 78,
+        "startChar": 3,
+        "endLine": 78,
+        "endChar": 46
+      },
+      "revId": "ec22300c66b4641c1c9eeedea2a5011ac918a8c8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }

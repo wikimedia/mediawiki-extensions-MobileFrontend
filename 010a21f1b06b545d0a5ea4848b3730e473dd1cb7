@@ -48,6 +48,30 @@
     },
     {
       "key": {
+        "uuid": "f785e3c1_821d293b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-02T21:41:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fb4a9953_480bf194",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 44
+      },
+      "revId": "010a21f1b06b545d0a5ea4848b3730e473dd1cb7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "aa59de11_21c3b924",
         "filename": "resources/mobile.categories.overlays/CategoryWidget.js",
         "patchSetId": 8
@@ -59,6 +83,30 @@
       "writtenOn": "2019-01-02T21:07:54Z",
       "side": 1,
       "message": "What is the distinction between a Widget and a View? Do we need a new term?",
+      "range": {
+        "startLine": 26,
+        "startChar": 22,
+        "endLine": 26,
+        "endChar": 28
+      },
+      "revId": "010a21f1b06b545d0a5ea4848b3730e473dd1cb7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b41581d5_606a70da",
+        "filename": "resources/mobile.categories.overlays/CategoryWidget.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-02T21:41:21Z",
+      "side": 1,
+      "message": "I couldn\u0027t work out a good name. Widget seemed like a generic enough term.\n\nWould CategoryView make more sense to you?",
+      "parentUuid": "aa59de11_21c3b924",
       "range": {
         "startLine": 26,
         "startChar": 22,
@@ -94,6 +142,30 @@
     },
     {
       "key": {
+        "uuid": "dfb8eebe_13d96321",
+        "filename": "resources/mobile.categories.overlays/CategoryWidget.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-02T21:41:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4ebfb730_c391e189",
+      "range": {
+        "startLine": 34,
+        "startChar": 29,
+        "endLine": 34,
+        "endChar": 43
+      },
+      "revId": "010a21f1b06b545d0a5ea4848b3730e473dd1cb7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3906aaf9_1f317351",
         "filename": "resources/mobile.categories.overlays/CategoryWidget.js",
         "patchSetId": 8
@@ -105,6 +177,30 @@
       "writtenOn": "2019-01-02T21:07:54Z",
       "side": 1,
       "message": "With this patch, we\u0027ve eliminated the idea of Overlays being the place to put all the non-View, assembly and orchestration, and glue logic. Now Overlays are just component configurations with a specific presentation.\n\nI\u0027m not opposed to this patch as an intermediate change, but where do we stuff responsibilities like `_loadCategories()` long term? I like the idea of \"dumb\" views and thought the Overlay was a good spot for at least gluing together components for the use case of an overlay _presentation_. Longer term, I would prefer to isolate these chunks and pass them in as dependencies. This would make the views both dumb and reusable.",
+      "range": {
+        "startLine": 91,
+        "startChar": 2,
+        "endLine": 91,
+        "endChar": 17
+      },
+      "revId": "010a21f1b06b545d0a5ea4848b3730e473dd1cb7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "440387ea_72440e4b",
+        "filename": "resources/mobile.categories.overlays/CategoryWidget.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-02T21:41:21Z",
+      "side": 1,
+      "message": "I\u0027m not 100% sure yet, but I am definitely seeing this as an intermediate change. Long term this should be moved out of the View. I\u0027ve added a note in the function call.\n\nI think the next step would be to update the categoryOverlay factory function to be responsible for this.\n\nI have some ideas here: https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/471335/",
+      "parentUuid": "3906aaf9_1f317351",
       "range": {
         "startLine": 91,
         "startChar": 2,
@@ -140,6 +236,30 @@
     },
     {
       "key": {
+        "uuid": "2caa9be2_9e6fd3b0",
+        "filename": "resources/mobile.categories.overlays/getCategoryOverlay.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-02T21:41:21Z",
+      "side": 1,
+      "message": "Done. I\u0027ve gone with categoryOverlay to be consistent with downloadIcon and pageIssuesOverlay?",
+      "parentUuid": "80b09b5d_67a170d7",
+      "range": {
+        "startLine": 12,
+        "startChar": 10,
+        "endLine": 12,
+        "endChar": 28
+      },
+      "revId": "010a21f1b06b545d0a5ea4848b3730e473dd1cb7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "45bcad38_dc64bd62",
         "filename": "resources/mobile.categories.overlays/getCategoryOverlay.js",
         "patchSetId": 8
@@ -151,6 +271,30 @@
       "writtenOn": "2019-01-02T21:07:54Z",
       "side": 1,
       "message": "Would it be possible to avoid passing the client\u0027s options object directly here? It obscures what options are needed by the Overlay and what are needed by the View.",
+      "range": {
+        "startLine": 27,
+        "startChar": 20,
+        "endLine": 27,
+        "endChar": 27
+      },
+      "revId": "010a21f1b06b545d0a5ea4848b3730e473dd1cb7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "540b1c44_94ea4a36",
+        "filename": "resources/mobile.categories.overlays/getCategoryOverlay.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-02T21:41:21Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "45bcad38_dc64bd62",
       "range": {
         "startLine": 27,
         "startChar": 20,
