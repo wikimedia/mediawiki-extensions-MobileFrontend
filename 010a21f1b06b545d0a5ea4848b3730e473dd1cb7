@@ -1,0 +1,165 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aa861ca0_e0f67a4d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-02T21:07:54Z",
+      "side": 1,
+      "message": "\\o/",
+      "range": {
+        "startLine": 9,
+        "startChar": 14,
+        "endLine": 9,
+        "endChar": 61
+      },
+      "revId": "010a21f1b06b545d0a5ea4848b3730e473dd1cb7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fb4a9953_480bf194",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-02T21:07:54Z",
+      "side": 1,
+      "message": "This seems like an important detail that you\u0027ve identified. Would you mind adding a little more context? I don\u0027t understand why it\u0027s noteworthy.",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 44
+      },
+      "revId": "010a21f1b06b545d0a5ea4848b3730e473dd1cb7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aa59de11_21c3b924",
+        "filename": "resources/mobile.categories.overlays/CategoryWidget.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-02T21:07:54Z",
+      "side": 1,
+      "message": "What is the distinction between a Widget and a View? Do we need a new term?",
+      "range": {
+        "startLine": 26,
+        "startChar": 22,
+        "endLine": 26,
+        "endChar": 28
+      },
+      "revId": "010a21f1b06b545d0a5ea4848b3730e473dd1cb7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ebfb730_c391e189",
+        "filename": "resources/mobile.categories.overlays/CategoryWidget.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-02T21:07:54Z",
+      "side": 1,
+      "message": "Should this be View?",
+      "range": {
+        "startLine": 34,
+        "startChar": 29,
+        "endLine": 34,
+        "endChar": 43
+      },
+      "revId": "010a21f1b06b545d0a5ea4848b3730e473dd1cb7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3906aaf9_1f317351",
+        "filename": "resources/mobile.categories.overlays/CategoryWidget.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-02T21:07:54Z",
+      "side": 1,
+      "message": "With this patch, we\u0027ve eliminated the idea of Overlays being the place to put all the non-View, assembly and orchestration, and glue logic. Now Overlays are just component configurations with a specific presentation.\n\nI\u0027m not opposed to this patch as an intermediate change, but where do we stuff responsibilities like `_loadCategories()` long term? I like the idea of \"dumb\" views and thought the Overlay was a good spot for at least gluing together components for the use case of an overlay _presentation_. Longer term, I would prefer to isolate these chunks and pass them in as dependencies. This would make the views both dumb and reusable.",
+      "range": {
+        "startLine": 91,
+        "startChar": 2,
+        "endLine": 91,
+        "endChar": 17
+      },
+      "revId": "010a21f1b06b545d0a5ea4848b3730e473dd1cb7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "80b09b5d_67a170d7",
+        "filename": "resources/mobile.categories.overlays/getCategoryOverlay.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-02T21:07:54Z",
+      "side": 1,
+      "message": "Things that are gotten can come from anywhere. \"categoryOverlayFactory.js\" and \"newCategoryOverlay()\" would clarify this is a standard assembly pattern for a CategoryOverlay.",
+      "range": {
+        "startLine": 12,
+        "startChar": 10,
+        "endLine": 12,
+        "endChar": 28
+      },
+      "revId": "010a21f1b06b545d0a5ea4848b3730e473dd1cb7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "45bcad38_dc64bd62",
+        "filename": "resources/mobile.categories.overlays/getCategoryOverlay.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-02T21:07:54Z",
+      "side": 1,
+      "message": "Would it be possible to avoid passing the client\u0027s options object directly here? It obscures what options are needed by the Overlay and what are needed by the View.",
+      "range": {
+        "startLine": 27,
+        "startChar": 20,
+        "endLine": 27,
+        "endChar": 27
+      },
+      "revId": "010a21f1b06b545d0a5ea4848b3730e473dd1cb7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
