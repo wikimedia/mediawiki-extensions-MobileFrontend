@@ -204,6 +204,24 @@
     },
     {
       "key": {
+        "uuid": "15fd40d0_1b2aee8b",
+        "filename": "src/mobile.languages.structured/util.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-02T23:16:04Z",
+      "side": 1,
+      "message": "Either works for me, but I think the second is the path of least resistance as you quite rightly point out.\n\nRemoving util seems like a good outcome on the long term.",
+      "parentUuid": "f315dd68_625967d2",
+      "revId": "1ab311325cbafd4cf62d18a1b3d4bb7b38244472",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9f875184_557ef2ea",
         "filename": "src/mobile.languages.structured/util.js",
         "patchSetId": 5
