@@ -145,6 +145,30 @@
     },
     {
       "key": {
+        "uuid": "a918d190_d079de98",
+        "filename": "extension.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 370,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-02T23:15:08Z",
+      "side": 1,
+      "message": "QuickSurveys and RelatedArticles only load this code on mobile.\n\nThere is MAGIC that avoids loading this in desktop (loading a Mustache module in core instead)",
+      "parentUuid": "5f58c54d_8d6a36ac",
+      "range": {
+        "startLine": 370,
+        "startChar": 4,
+        "endLine": 370,
+        "endChar": 37
+      },
+      "revId": "1ab311325cbafd4cf62d18a1b3d4bb7b38244472",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "48ef8c52_f33d3bab",
         "filename": "src/mobile.languages.structured/util.js",
         "patchSetId": 5
