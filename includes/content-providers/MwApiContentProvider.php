@@ -80,7 +80,9 @@ class MwApiContentProvider implements IContentProvider {
 
 		$resp = $this->fileGetContents( $url );
 		$json = FormatJson::decode( $resp, true );
-		if ( !is_bool( $json ) && array_key_exists( 'parse', $json ) ) {
+		// As $this->fileGetContents() may return '' in some cases, doing;
+		// FormatJson::decode( '', true ); will return "null" so check it.
+		if ( $json !== null && !is_bool( $json ) && array_key_exists( 'parse', $json ) ) {
 			$parse = $json['parse'];
 
 			$out->addModules( $parse['modules'] );
