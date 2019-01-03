@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6362cf6a_9dfb2c28",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 481,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-03T22:52:02Z",
+      "side": 1,
+      "message": "can we use wgScriptPath?",
+      "range": {
+        "startLine": 481,
+        "startChar": 4,
+        "endLine": 481,
+        "endChar": 33
+      },
+      "revId": "75991759016ac5d992daf0f345221c4c580823d0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
