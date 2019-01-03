@@ -119,7 +119,7 @@ JAVASCRIPT;
 	 * @param array $attribs An associative array of extra HTML attributes to add to the link
 	 * @return array Associative array containing the license text and link
 	 */
-	public static function getLicense( $context, $attribs = [] ) {
+	public static function getLicense( $context, array $attribs = [] ) {
 		$config = MobileContext::singleton()->getConfig();
 		$rightsPage = $config->get( 'RightsPage' );
 		$rightsUrl = $config->get( 'RightsUrl' );
