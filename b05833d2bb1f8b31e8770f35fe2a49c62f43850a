@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "f025cfb8_8f1e7991",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-03T18:46:13Z",
+      "side": 1,
+      "message": "Happy new year D3r1ck01 :D",
+      "parentUuid": "466922cc_dda17270",
+      "revId": "b05833d2bb1f8b31e8770f35fe2a49c62f43850a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0a6200eb_2ea1beb3",
         "filename": "tests/phpunit/content-providers/MwApiContentProviderTest.php",
         "patchSetId": 4
