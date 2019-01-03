@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1e07d3a9_b491a1a5",
+        "filename": "src/mobile.startup/Overlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-03T19:42:20Z",
+      "side": 1,
+      "message": "Can this be removed now? No longer referenced..",
+      "revId": "3b62bad6ed98e173283d7ee41dd59dea1733cdf2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

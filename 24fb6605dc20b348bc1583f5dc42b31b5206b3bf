@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "309be7d6_d03ca494",
+        "filename": "src/mobile.startup/Overlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 234,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-03T19:42:20Z",
+      "side": 0,
+      "message": "Doesn\u0027t this make the appendToElement property redundant?",
+      "revId": "24fb6605dc20b348bc1583f5dc42b31b5206b3bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
