@@ -59,10 +59,9 @@ module.exports = {
 		}
 	},
 	optimization: {
-		// Generate a single Webpack bootstrap chunk for ResourceLoader modules to share.
-		// This will be packaged inside the mobile.startup module which should be a dependency for
-		// all modules.
-		// The inefficient  alternative is for each module to bundle its own runtime.
+		// Generate a single Webpack bootstrap chunk for ResourceLoader modules to share. This will
+		// be packaged inside the mediawiki.template.hogan module which should be a dependency for
+		// all modules. The inefficient  alternative is for each module to bundle its own runtime.
 		// The terms bootloader and runtime are used interchangeably.
 		runtimeChunk: { name: 'mobile.startup.runtime' },
 
