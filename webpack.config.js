@@ -99,6 +99,18 @@ module.exports = {
 			'./mockMediaWiki': path.resolve( __dirname, 'tests/node-qunit/utils/blank.json' )
 		}
 	},
+	module: {
+		rules: [ {
+			test: /\.js$/,
+			exclude: /node_modules/,
+			use: {
+				loader: 'babel-loader',
+				options: {
+					cacheDirectory: true
+				}
+			}
+		} ]
+	},
 	optimization: {
 		// Don't produce production output when a build error occurs.
 		noEmitOnErrors: isProduction,
