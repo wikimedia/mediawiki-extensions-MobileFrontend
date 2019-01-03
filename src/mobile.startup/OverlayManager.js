@@ -1,3 +1,4 @@
+/* global $ */
 var
 	util = require( './util' ),
 	mfExtend = require( './mfExtend' ),
@@ -12,8 +13,9 @@ var
  *
  * @class OverlayManager
  * @param {Router} router
+ * @param {string} appendToSelector
  */
-function OverlayManager( router ) {
+function OverlayManager( router, appendToSelector ) {
 	router.on( 'route', this._checkRoute.bind( this ) );
 	this.router = router;
 	// use an object instead of an array for entries so that we don't
@@ -22,6 +24,11 @@ function OverlayManager( router ) {
 	// stack of all the open overlays, stack[0] is the latest one
 	this.stack = [];
 	this.hideCurrent = true;
+	// Set the element that overlays will be appended to
+	if ( !appendToSelector ) {
+		mw.log.warn( 'appendToSelector will soon be a required parameter to OverlayManager' );
+	}
+	this.appendToSelector = appendToSelector || 'body';
 }
 
 mfExtend( OverlayManager, {
@@ -39,6 +46,17 @@ mfExtend( OverlayManager, {
 		this.router.back();
 	},
 
+	/** Attach overlay to DOM
+	 * @memberof OverlayManager
+	 * @instance
+	 * @private
+	 * @param {Overlay} overlay to attach
+	*/
+	_attachOverlay: function ( overlay ) {
+		if ( !overlay.$el.parents().length ) {
+			$( this.appendToSelector ).append( overlay.$el );
+		}
+	},
 	/**
 	 * Show the overlay and bind the '_om_hide' event to _onHideOverlay.
 	 * @memberof OverlayManager
@@ -46,10 +64,12 @@ mfExtend( OverlayManager, {
 	 * @private
 	 * @param {Overlay} overlay to show
 	 */
-	_showOverlay: function ( overlay ) {
+	_show: function ( overlay ) {
+
 		// if hidden using overlay (not hardware) button, update the state
 		overlay.once( '_om_hide', this._onHideOverlay.bind( this ) );
 
+		this._attachOverlay( overlay );
 		overlay.show();
 	},
 
@@ -102,7 +122,7 @@ mfExtend( OverlayManager, {
 		if ( match ) {
 			if ( match.overlay ) {
 				// if the match is an overlay that was previously opened, reuse it
-				self._showOverlay( match.overlay );
+				self._show( match.overlay );
 			} else {
 				// else create an overlay using the factory function result (either
 				// a promise or an overlay)
@@ -112,12 +132,12 @@ mfExtend( OverlayManager, {
 					factoryResult.then( function ( overlay ) {
 						match.overlay = overlay;
 						attachHideEvent( overlay );
-						self._showOverlay( overlay );
+						self._show( overlay );
 					} );
 				} else {
 					match.overlay = factoryResult;
 					attachHideEvent( match.overlay );
-					self._showOverlay( factoryResult );
+					self._show( factoryResult );
 				}
 			}
 		}
@@ -284,7 +304,7 @@ mfExtend( OverlayManager, {
 		}
 		this._hideOverlay( this.stack[0].overlay );
 		this.stack[0].overlay = overlay;
-		this._showOverlay( overlay );
+		this._show( overlay );
 	}
 } );
 
@@ -295,7 +315,7 @@ mfExtend( OverlayManager, {
  */
 OverlayManager.getSingleton = function () {
 	if ( !overlayManager ) {
-		overlayManager = new OverlayManager( mw.loader.require( 'mediawiki.router' ) );
+		overlayManager = new OverlayManager( mw.loader.require( 'mediawiki.router' ), 'body' );
 	}
 	return overlayManager;
 };

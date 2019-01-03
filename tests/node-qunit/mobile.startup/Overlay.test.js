@@ -41,16 +41,13 @@ QUnit.module( 'MobileFrontend: Overlay.js', {
 
 QUnit.test( 'Simple overlay', function ( assert ) {
 	var overlay = new Overlay( {
-			heading: '<h2>Title</h2>',
-			content: 'Text'
+			heading: '<h2>Overlay Title</h2>'
 		} ),
-		parentNode;
+		headingNode;
 
-	overlay.show();
-	parentNode = overlay.$el[ 0 ].parentNode;
-	overlay.hide();
+	headingNode = overlay.$el.find( 'h2:contains("Overlay Title")' );
 
-	assert.ok( parentNode, 'In DOM' );
+	assert.strictEqual( headingNode.length, 1 );
 } );
 
 QUnit.test( 'HTML overlay', function ( assert ) {

@@ -54,13 +54,6 @@ mfExtend( Overlay, View, {
 	 */
 	hideOnExitClick: true,
 
-	/**
-	 * Defines an element that the Overlay should automatically be appended to.
-	 * @memberof Overlay
-	 * @instance
-	 * @property {string|jQuery.Object}
-	 */
-	appendToElement: 'body',
 	templatePartials: {
 		header: mw.template.get( 'mobile.startup', 'header.hogan' ),
 		anchor: Anchor.prototype.template,
@@ -229,7 +222,6 @@ mfExtend( Overlay, View, {
 			$html = util.getDocument(),
 			$window = util.getWindow();
 
-		this.$el.appendTo( this.appendToElement );
 		this.scrollTop = window.pageYOffset;
 
 		if ( this.fullScreen ) {

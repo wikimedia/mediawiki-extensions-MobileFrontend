@@ -1,3 +1,4 @@
+/* global $ */
 var
 	sinon = require( 'sinon' ),
 	dom = require( '../utils/dom' ),
@@ -32,6 +33,7 @@ QUnit.module( 'MobileFrontend mobile.startup/OverlayManager', {
 				this.emit( 'hide' );
 				return true;
 			};
+			fakeOverlay.$el = $( 'div' );
 			sandbox.spy( fakeOverlay, 'hide' );
 			util.extend( fakeOverlay, options );
 			return fakeOverlay;
@@ -41,7 +43,7 @@ QUnit.module( 'MobileFrontend mobile.startup/OverlayManager', {
 		fakeRouter.getPath = sandbox.stub().returns( '' );
 		fakeRouter.back = sandbox.spy();
 		sandbox.stub( mw.loader, 'require' ).withArgs( 'mediawiki.router' ).returns( fakeRouter );
-		overlayManager = new OverlayManager( fakeRouter );
+		overlayManager = new OverlayManager( fakeRouter, 'body' );
 	},
 	afterEach: function () { jQuery.tearDown(); sandbox.restore(); }
 } );
@@ -63,6 +65,20 @@ QUnit.test( '#add', function ( assert ) {
 	} );
 
 	assert.strictEqual( fakeOverlay.show.callCount, 1, 'show registered overlay' );
+} );
+
+QUnit.test( '#show', function ( assert ) {
+	var fakeOverlay = this.createFakeOverlay(),
+		showSpy = sandbox.spy( overlayManager, '_show' );
+
+	overlayManager.add( /^showTest$/, function () {
+		return fakeOverlay;
+	} );
+	fakeRouter.emit( 'route', {
+		path: 'showTest'
+	} );
+
+	assert.strictEqual( showSpy.callCount, 1, 'OverlayManager.show called on route change' );
 } );
 
 QUnit.test( '#add, with $.Deferred factory', function ( assert ) {
