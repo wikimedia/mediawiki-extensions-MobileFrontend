@@ -45,6 +45,8 @@ QUnit.test( 'it extends the parameters', function ( assert ) {
 			prop: [ 'corge' ]
 		} ),
 		expectedParams = {
+			action: 'query',
+			formatversion: 2,
 			qux: 'quux',
 			foo: 'bar', // from wgMFSearchAPIParams
 			prop: [ 'corge', 'baz', 'description' ] // from wgMFQueryPropModules and Wikibase-specific
@@ -79,6 +81,8 @@ QUnit.test( 'it prioritizes MobileFrontend configuration', function ( assert ) {
 			foo: 'quux'
 		} ),
 		expectedParams = {
+			action: 'query',
+			formatversion: 2,
 			foo: 'bar',
 			prop: [ 'baz', 'description' ]
 		};
@@ -101,6 +105,8 @@ QUnit.test( 'it is variadic', function ( assert ) {
 			}
 		),
 		expectedParams = {
+			action: 'query',
+			formatversion: 2,
 			foo: 'bar',
 			baz: 'qux',
 			quux: 'corge',

@@ -1,5 +1,6 @@
 var sectionTemplate = mw.template.get( 'mobile.startup', 'Section.hogan' ),
 	util = require( './util.js' ),
+	actionParams = require( './actionParams' ),
 	cache = {};
 
 /**
@@ -103,7 +104,7 @@ PageGateway.prototype = {
 	getPage: function ( title, endpoint, leadOnly ) {
 		var timestamp,
 			d = util.Deferred(),
-			options = endpoint ? {
+			params = endpoint ? {
 				url: endpoint,
 				dataType: 'jsonp'
 			} : {},
@@ -111,8 +112,8 @@ PageGateway.prototype = {
 				edit: [ '*' ]
 			};
 
-		if ( !cache[title] ) {
-			cache[title] = this.api.get( {
+		util.extend( params,
+			actionParams( {
 				action: 'mobileview',
 				page: title,
 				variant: mw.config.get( 'wgPageContentLanguage' ),
@@ -121,7 +122,11 @@ PageGateway.prototype = {
 				noheadings: 'yes',
 				sectionprop: 'level|line|anchor',
 				sections: leadOnly ? 0 : 'all'
-			}, options ).then( function ( resp ) {
+			} )
+		);
+
+		if ( !cache[title] ) {
+			cache[title] = this.api.get( params ).then( function ( resp ) {
 				var sections, lastModified, resolveObj, mv;
 
 				if ( resp.error ) {
@@ -247,15 +252,13 @@ PageGateway.prototype = {
 	 */
 	getPageLanguages: function ( title, language ) {
 		var self = this,
-			args = {
-				action: 'query',
+			args = actionParams( {
 				meta: 'siteinfo',
 				siprop: 'general',
 				prop: 'langlinks',
 				lllimit: 'max',
-				titles: title,
-				formatversion: 2
-			};
+				titles: title
+			} );
 
 		if ( language ) {
 			args.llprop = 'url|autonym|langname';

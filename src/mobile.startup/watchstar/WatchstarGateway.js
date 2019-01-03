@@ -1,4 +1,5 @@
-var util = require( '../util' );
+var util = require( '../util' ),
+	actionParams = require( '../actionParams' );
 
 /**
  * @typedef {string|number} PageID Page ID. 0 / "0" is a special no-ID value.
@@ -92,13 +93,11 @@ WatchstarGateway.prototype = {
 			return util.Deferred().resolve( {} );
 		}
 
-		return this.api.get( {
-			formatversion: 2,
-			action: 'query',
+		return this.api.get( actionParams( {
 			prop: 'info',
 			inprop: 'watched',
 			titles: titles
-		} ).then( function ( rsp ) {
+		} ) ).then( function ( rsp ) {
 			return self._unmarshalGetResponse( rsp );
 		} );
 	},

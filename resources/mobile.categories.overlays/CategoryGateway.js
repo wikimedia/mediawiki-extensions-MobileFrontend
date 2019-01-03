@@ -2,6 +2,7 @@
 	var
 		prototype,
 		mobile = M.require( 'mobile.startup' ),
+		actionParams = mobile.actionParams,
 		util = mobile.util,
 		SearchGateway = mobile.search.SearchGateway;
 
@@ -55,20 +56,19 @@
 		 *                                   jQuery.Deferred otherwise.
 		 */
 		getCategories: function ( title ) {
-			var self = this;
+			var self = this, params;
 
 			if ( this.canContinue === false ) {
 				return false;
 			}
 
-			return this.api.get( util.extend( {}, {
-				action: 'query',
+			params = util.extend( {}, {
 				prop: 'categories',
 				titles: title,
 				clprop: 'hidden',
-				cllimit: 50,
-				formatversion: 2
-			}, this.continueParams ) ).then( function ( data ) {
+				cllimit: 50
+			}, this.continueParams );
+			return this.api.get( actionParams( params ) ).then( function ( data ) {
 				if ( data.continue !== undefined ) {
 					self.continueParams = data.continue;
 				} else {

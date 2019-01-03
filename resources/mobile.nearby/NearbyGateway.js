@@ -98,8 +98,7 @@
 				generator: 'geosearch',
 				ggsradius: range,
 				ggsnamespace: ns,
-				ggslimit: limit,
-				formatversion: 2
+				ggslimit: limit
 			}, params );
 
 			if ( params.ggscoord ) {

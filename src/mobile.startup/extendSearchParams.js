@@ -1,8 +1,9 @@
-var util = require( './util' );
+var util = require( './util' ),
+	actionParams = require( './actionParams.js' );
 
 /**
  * Extends the API query parameters to include those parameters required to also fetch Wikibase
- * descriptions and appropriately sized thumbnail images.
+ * descriptions and appropriately sized thumbnail images as well as those required to make a query.
  *
  * This function wraps `util.extend` with some Wikibase-specific configuration
  * variable management
@@ -61,6 +62,6 @@ function extendSearchParams( feature ) {
 		// A foreign api is being accessed! Enable anonymous CORS queries!
 		result.origin = '*';
 	}
-	return result;
+	return actionParams( result );
 }
 module.exports = extendSearchParams;

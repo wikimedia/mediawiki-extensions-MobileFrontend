@@ -1,5 +1,7 @@
 ( function ( M ) {
-	var util = M.require( 'mobile.startup/util' );
+	var mobile = M.require( 'mobile.startup' ),
+		util = mobile.util,
+		actionParams = mobile.actionParams;
 
 	/**
 	 * API that helps save and retrieve page content
@@ -76,8 +78,7 @@
 			if ( this.content !== undefined ) {
 				return resolve();
 			} else {
-				options = {
-					action: 'query',
+				options = actionParams( {
 					prop: [ 'revisions', 'info' ],
 					meta: 'userinfo',
 					rvprop: [ 'content', 'timestamp' ],
@@ -85,9 +86,8 @@
 					// get block information for this user
 					intestactions: 'edit',
 					intestactionsdetail: 'full',
-					uiprop: 'options',
-					formatversion: 2
-				};
+					uiprop: 'options'
+				} );
 				// Load text of old revision if desired
 				if ( this.oldId ) {
 					options.rvstartid = this.oldId;

@@ -1,4 +1,5 @@
 var sizeBuckets = [ 320, 640, 800, 1024, 1280, 1920, 2560, 2880 ],
+	actionParams = require( './../mobile.startup/actionParams' ),
 	util = require( './../mobile.startup/util' );
 
 /**
@@ -38,17 +39,15 @@ ImageGateway.prototype.getThumb = function ( title ) {
 			window.devicePixelRatio : 1;
 
 	if ( !cachedThumb ) {
-		this._cache[title] = this.api.get( {
-			action: 'query',
+		this._cache[title] = this.api.get( actionParams( {
 			prop: 'imageinfo',
 			titles: title,
-			formatversion: 2,
 			iiprop: [ 'url', 'extmetadata' ],
 			// request an image devicePixelRatio times bigger than the reported screen size
 			// for retina displays and zooming
 			iiurlwidth: findSizeBucket( $window.width() * imageSizeMultiplier ),
 			iiurlheight: findSizeBucket( $window.height() * imageSizeMultiplier )
-		} ).then( function ( resp ) {
+		} ) ).then( function ( resp ) {
 			// imageinfo is undefined for missing pages.
 			if ( resp.query && resp.query.pages &&
 				resp.query.pages[0] && resp.query.pages[0].imageinfo ) {
