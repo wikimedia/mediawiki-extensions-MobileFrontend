@@ -91,12 +91,12 @@ class ExtMobileFrontend {
 	/**
 	 * Generate user page content for non-existent user pages
 	 *
-	 * @param OutputPage $output
+	 * @param IContextSource $output
 	 * @param User $pageUser owner of the user page
 	 * @param Title $title
 	 * @return string
 	 */
-	public static function getUserPageContent( $output, $pageUser, $title ) {
+	public static function getUserPageContent( IContextSource $output, User $pageUser, Title $title ) {
 		$context = MobileContext::singleton();
 		$pageUsername = $pageUser->getName();
 		// Is the current user viewing their own page?
