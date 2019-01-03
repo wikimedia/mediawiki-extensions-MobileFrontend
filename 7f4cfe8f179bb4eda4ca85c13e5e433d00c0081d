@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "007af7c7_c6273a1a",
+        "filename": "src/mobile.languages.structured/util.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-01-03T22:14:43Z",
+      "side": 1,
+      "message": "bah noticed misaligned comment. will fix.",
+      "range": {
+        "startLine": 147,
+        "startChar": 0,
+        "endLine": 149,
+        "endChar": 5
+      },
+      "revId": "7f4cfe8f179bb4eda4ca85c13e5e433d00c0081d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
