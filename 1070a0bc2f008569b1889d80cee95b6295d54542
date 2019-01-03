@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "d1ec3a76_cef8a45e",
+        "filename": "extension.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 1137,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-03T23:14:41Z",
+      "side": 0,
+      "message": "Not any more.. I3a4b8fa55fc7f29c90f7173d1d973d5f4f759a6b",
+      "parentUuid": "c9d8d6f2_4816c17e",
+      "range": {
+        "startLine": 1137,
+        "startChar": 3,
+        "endLine": 1137,
+        "endChar": 19
+      },
+      "revId": "1070a0bc2f008569b1889d80cee95b6295d54542",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1ddac9c4_2575ab8e",
         "filename": "includes/specials/SpecialNearby.php",
         "patchSetId": 2
@@ -36,6 +60,30 @@
       "writtenOn": "2019-01-03T22:52:02Z",
       "side": 0,
       "message": "Remove it also from README.md",
+      "range": {
+        "startLine": 30,
+        "startChar": 42,
+        "endLine": 30,
+        "endChar": 58
+      },
+      "revId": "1070a0bc2f008569b1889d80cee95b6295d54542",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2a97fbe1_840ec7c3",
+        "filename": "includes/specials/SpecialNearby.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-03T23:14:41Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "1ddac9c4_2575ab8e",
       "range": {
         "startLine": 30,
         "startChar": 42,
