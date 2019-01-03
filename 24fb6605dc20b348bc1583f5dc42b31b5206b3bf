@@ -22,6 +22,30 @@
       "revId": "24fb6605dc20b348bc1583f5dc42b31b5206b3bf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e9c0ce29_41eb440c",
+        "filename": "includes/MobileFrontend.skin.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-01-03T13:20:57Z",
+      "side": 1,
+      "message": "Ack! Will double check and do a follow up patch! Thanks",
+      "parentUuid": "6079bb2c_84e8e384",
+      "range": {
+        "startLine": 122,
+        "startChar": 52,
+        "endLine": 122,
+        "endChar": 60
+      },
+      "revId": "24fb6605dc20b348bc1583f5dc42b31b5206b3bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
