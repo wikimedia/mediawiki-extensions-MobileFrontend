@@ -71,7 +71,7 @@ class MobileFormatter extends HtmlFormatter {
 	 * @param string $html Text to process
 	 * @param Title $title Title to which $html belongs
 	 */
-	public function __construct( $html, $title ) {
+	public function __construct( $html, Title $title ) {
 		parent::__construct( $html );
 
 		$this->title = $title;
@@ -215,7 +215,7 @@ class MobileFormatter extends HtmlFormatter {
 	 * @param array $options options about the transformations per section
 	 */
 	private function filterContentInSection(
-		$el, DOMDocument $doc, $sectionNumber, $options = []
+		$el, DOMDocument $doc, $sectionNumber, array $options = []
 	) {
 		if ( !$this->removeMedia && $options['images'] && $sectionNumber > 0 ) {
 			$this->lazyTransform->apply( $el );
@@ -426,7 +426,9 @@ class MobileFormatter extends HtmlFormatter {
 	 * @param integer $sectionNumber
 	 * @param bool $isCollapsible
 	 */
-	private function prepareHeading( DOMDocument $doc, $heading, $sectionNumber, $isCollapsible ) {
+	private function prepareHeading(
+		DOMDocument $doc, DOMElement $heading, $sectionNumber, $isCollapsible
+	) {
 		$className = $heading->hasAttribute( 'class' ) ? $heading->getAttribute( 'class' ) . ' ' : '';
 		$heading->setAttribute( 'class', $className . 'section-heading' );
 		if ( $isCollapsible ) {
