@@ -46,6 +46,30 @@
       "revId": "24fb6605dc20b348bc1583f5dc42b31b5206b3bf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4377e3e7_31d84b71",
+        "filename": "includes/MobileFrontend.skin.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-01-03T13:43:44Z",
+      "side": 1,
+      "message": "@Thiemo, I just feel we should allow this variable for now! It\u0027s optional so leaving it will not be any harm. By default, it\u0027s an empty array so one never knows, it maybe used in the future.",
+      "parentUuid": "e9c0ce29_41eb440c",
+      "range": {
+        "startLine": 122,
+        "startChar": 52,
+        "endLine": 122,
+        "endChar": 60
+      },
+      "revId": "24fb6605dc20b348bc1583f5dc42b31b5206b3bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
