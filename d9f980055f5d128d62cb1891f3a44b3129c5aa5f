@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ac5cbca_62ee2af7",
+        "filename": "resources/mobile.categories.overlays/CategoryWidget.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-03T16:01:38Z",
+      "side": 1,
+      "message": "Won\u0027t this be undefined?",
+      "range": {
+        "startLine": 37,
+        "startChar": 54,
+        "endLine": 37,
+        "endChar": 88
+      },
+      "revId": "d9f980055f5d128d62cb1891f3a44b3129c5aa5f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

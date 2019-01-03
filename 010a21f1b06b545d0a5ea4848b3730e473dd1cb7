@@ -119,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "d6e6522a_41880b38",
+        "filename": "resources/mobile.categories.overlays/CategoryWidget.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-03T16:01:38Z",
+      "side": 1,
+      "message": "View would be a lot clearer to me. I believe it\u0027s true that an Overlay can accept any View.",
+      "parentUuid": "b41581d5_606a70da",
+      "range": {
+        "startLine": 26,
+        "startChar": 22,
+        "endLine": 26,
+        "endChar": 28
+      },
+      "revId": "010a21f1b06b545d0a5ea4848b3730e473dd1cb7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4ebfb730_c391e189",
         "filename": "resources/mobile.categories.overlays/CategoryWidget.js",
         "patchSetId": 8
@@ -248,6 +272,30 @@
       "side": 1,
       "message": "Done. I\u0027ve gone with categoryOverlay to be consistent with downloadIcon and pageIssuesOverlay?",
       "parentUuid": "80b09b5d_67a170d7",
+      "range": {
+        "startLine": 12,
+        "startChar": 10,
+        "endLine": 12,
+        "endChar": 28
+      },
+      "revId": "010a21f1b06b545d0a5ea4848b3730e473dd1cb7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bab28086_fbccbb74",
+        "filename": "resources/mobile.categories.overlays/getCategoryOverlay.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-03T16:01:38Z",
+      "side": 1,
+      "message": "Works for me.",
+      "parentUuid": "2caa9be2_9e6fd3b0",
       "range": {
         "startLine": 12,
         "startChar": 10,
