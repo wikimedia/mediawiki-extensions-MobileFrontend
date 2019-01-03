@@ -42,7 +42,8 @@
 			"A2093064",
 			"Liuxingy",
 			"Hanyanbo98",
-			"D41D8CD98F"
+			"D41D8CD98F",
+			"A Chinese Wikipedian"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "用户是否通过移动版界面编辑",
@@ -55,6 +56,7 @@
 	"mobile-frontend-categories-nomatch": "您的查询未找到分类。您应该再换一个试试。",
 	"mobile-frontend-categories-nodata": "发生错误。您已经添加了一些要保存的分类了吗？",
 	"mobile-frontend-categories-summary": "已添加至分类",
+	"mobile-frontend-categories-notification": "分类已更新。",
 	"mobile-frontend-categories-add-heading": "<strong>添加<span> $1</span> 到新分类</strong>",
 	"mobile-frontend-categories-add-wait": "正在保存分类，请稍候。",
 	"mobile-frontend-categories-normal": "基于内容",
@@ -223,7 +225,6 @@
 	"mobile-frontend-talk-explained": "以下会话当前活跃",
 	"mobile-frontend-talk-explained-empty": "没有关于该页面的讨论。",
 	"mobile-frontend-talk-overlay-header": "讨论",
-	"mobile-frontend-talk-overlay-lead-header": "未命名讨论",
 	"mobile-frontend-talk-reply": "回复",
 	"mobile-frontend-talk-reply-info": "请注意，您的回复将自动以您的用户名签名。",
 	"mobile-frontend-talk-reply-success": "您的回复已保存至讨论页。",
