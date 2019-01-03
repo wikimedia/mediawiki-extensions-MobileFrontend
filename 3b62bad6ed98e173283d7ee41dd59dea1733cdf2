@@ -16,6 +16,40 @@
       "revId": "3b62bad6ed98e173283d7ee41dd59dea1733cdf2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fd937def_494c27c7",
+        "filename": "src/mobile.startup/OverlayManager.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-03T19:46:35Z",
+      "side": 1,
+      "message": "Do we want this to be public? Or should we make it part of show ?",
+      "revId": "3b62bad6ed98e173283d7ee41dd59dea1733cdf2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "68d733f1_044953d7",
+        "filename": "src/mobile.startup/OverlayManager.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-03T19:46:35Z",
+      "side": 1,
+      "message": "Should change this right? Looks like this is public now!",
+      "revId": "3b62bad6ed98e173283d7ee41dd59dea1733cdf2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
