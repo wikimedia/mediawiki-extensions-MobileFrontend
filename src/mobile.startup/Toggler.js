@@ -8,29 +8,30 @@ var browser = require( './Browser' ).getSingleton(),
 	Icon = require( './Icon' );
 
 /**
-* A class for enabling toggling
-*
-* @class Toggler
-* @param {Object} options
-* @param {OO.EventEmitter} options.eventBus Object used to emit before-section-toggled
-* and section-toggled events
-* @param {jQuery.Object} options.$container to apply toggling to
-* @param {string} options.prefix a prefix to use for the id.
-* @param {Page} [options.page] to allow storage of session for future visits
-* @param {Page} [options.isClosed] whether the element should begin closed
-* and section-toggled events
-*/
+ * A class for enabling toggling
+ *
+ * @class Toggler
+ * @param {Object} options
+ * @param {OO.EventEmitter} options.eventBus Object used to emit before-section-toggled
+ * and section-toggled events
+ * @param {jQuery.Object} options.$container to apply toggling to
+ * @param {string} options.prefix a prefix to use for the id.
+ * @param {Page} [options.page] to allow storage of session for future visits
+ * @param {Page} [options.isClosed] whether the element should begin closed
+ * and section-toggled events
+ */
 function Toggler( options ) {
 	this.eventBus = options.eventBus;
 	this._enable( options.$container, options.prefix, options.page, options.isClosed );
 }
+
 /**
-* Using the settings module looks at what sections were previously expanded on
-* existing page.
-*
-* @param {Page} page
-* @return {Object} representing open sections
-*/
+ * Using the settings module looks at what sections were previously expanded on
+ * existing page.
+ *
+ * @param {Page} page
+ * @return {Object} representing open sections
+ */
 function getExpandedSections( page ) {
 	var expandedSections = JSON.parse(
 		mw.storage.get( 'expandedSections' ) || '{}'
@@ -50,12 +51,12 @@ function saveExpandedSections( expandedSections ) {
 }
 
 /**
-* Given an expanded heading, store it to localStorage.
-* If the heading is collapsed, remove it from localStorage.
-*
-* @param {jQuery.Object} $heading - A heading belonging to a section
-* @param {Page} page
-*/
+ * Given an expanded heading, store it to localStorage.
+ * If the heading is collapsed, remove it from localStorage.
+ *
+ * @param {jQuery.Object} $heading - A heading belonging to a section
+ * @param {Page} page
+ */
 function storeSectionToggleState( $heading, page ) {
 	var headline = $heading.find( 'span' ).attr( 'id' ),
 		isSectionOpen = $heading.hasClass( 'open-block' ),
@@ -73,11 +74,11 @@ function storeSectionToggleState( $heading, page ) {
 }
 
 /**
-* Expand sections that were previously expanded before leaving this page.
-* @param {Toggler} toggler
-* @param {jQuery.Object} $container
-* @param {Page} page
-*/
+ * Expand sections that were previously expanded before leaving this page.
+ * @param {Toggler} toggler
+ * @param {jQuery.Object} $container
+ * @param {Page} page
+ */
 function expandStoredSections( toggler, $container, page ) {
 	var $sectionHeading, $headline,
 		expandedSections = getExpandedSections( page ),
@@ -97,10 +98,10 @@ function expandStoredSections( toggler, $container, page ) {
 }
 
 /**
-* Clean obsolete (saved more than a day ago) expanded sections from
-* localStorage.
-* @param {Page} page
-*/
+ * Clean obsolete (saved more than a day ago) expanded sections from
+ * localStorage.
+ * @param {Page} page
+ */
 function cleanObsoleteStoredSections( page ) {
 	var now = ( new Date() ).getTime(),
 		expandedSections = getExpandedSections( page ),
@@ -121,12 +122,12 @@ function cleanObsoleteStoredSections( page ) {
 }
 
 /**
-* Given a heading, toggle it and any of its children
-*
-* @memberof Toggler
-* @instance
-* @param {jQuery.Object} $heading A heading belonging to a section
-*/
+ * Given a heading, toggle it and any of its children
+ *
+ * @memberof Toggler
+ * @instance
+ * @param {jQuery.Object} $heading A heading belonging to a section
+ */
 Toggler.prototype.toggle = function ( $heading ) {
 	var indicator,
 		wasExpanded = $heading.is( '.open-block' ),
@@ -180,11 +181,11 @@ Toggler.prototype.toggle = function ( $heading ) {
 };
 
 /**
-* Enables toggling via enter and space keys
-*
-* @param {Toggler} toggler instance.
-* @param {jQuery.Object} $heading
-*/
+ * Enables toggling via enter and space keys
+ *
+ * @param {Toggler} toggler instance.
+ * @param {jQuery.Object} $heading
+ */
 function enableKeyboardActions( toggler, $heading ) {
 	$heading.on( 'keypress', function ( ev ) {
 		if ( ev.which === 13 || ev.which === 32 ) {
@@ -197,13 +198,13 @@ function enableKeyboardActions( toggler, $heading ) {
 }
 
 /**
-* Reveals an element and its parent section as identified by it's id
-*
-* @memberof Toggler
-* @instance
-* @param {string} selector A css selector that identifies a single element
-* @param {Object} $container jQuery element to search in
-*/
+ * Reveals an element and its parent section as identified by it's id
+ *
+ * @memberof Toggler
+ * @instance
+ * @param {string} selector A css selector that identifies a single element
+ * @param {Object} $container jQuery element to search in
+ */
 Toggler.prototype.reveal = function ( selector, $container ) {
 	var $target, $heading;
 
@@ -226,17 +227,17 @@ Toggler.prototype.reveal = function ( selector, $container ) {
 };
 
 /**
-* Enables section toggling in a given container when wgMFCollapseSectionsByDefault
-* is enabled.
-*
-* @memberof Toggler
-* @instance
-* @param {jQuery.Object} $container to apply toggling to
-* @param {string} prefix a prefix to use for the id.
-* @param {Page} [page] to allow storage of session for future visits
-* @param {Page} [isClosed] whether the element should begin closed
-* @private
-*/
+ * Enables section toggling in a given container when wgMFCollapseSectionsByDefault
+ * is enabled.
+ *
+ * @memberof Toggler
+ * @instance
+ * @param {jQuery.Object} $container to apply toggling to
+ * @param {string} prefix a prefix to use for the id.
+ * @param {Page} [page] to allow storage of session for future visits
+ * @param {Page} [isClosed] whether the element should begin closed
+ * @private
+ */
 Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 	var tagName, expandSections, indicator, $content,
 		$firstHeading,
