@@ -8,9 +8,11 @@
 	 *
 	 * @param {Object} options Configuration options
 	 * @param {mw.Api} options.api
+	 * @param {string} options.url for overriding default URI for API queries
 	 */
 	function PhotoListGateway( options ) {
 		this.api = options.api;
+		this.url = options.url;
 		this.username = options.username;
 		this.category = options.category;
 		this.limit = 10;
@@ -101,6 +103,10 @@
 				} );
 			}
 
+			if ( this.url ) {
+				// A foreign api is being accessed! Enable anonymous CORS queries!
+				query.origin = '*';
+			}
 			return query;
 		},
 		/**
@@ -113,7 +119,7 @@
 		getPhotos: function () {
 			var self = this;
 
-			return this.api.ajax( this.getQuery() ).then( function ( resp ) {
+			return this.api.ajax( this.getQuery(), { url: this.url } ).then( function ( resp ) {
 				var photos = [];
 				if ( resp.query && resp.query.pages ) {
 					// FIXME: [API] in an ideal world imageData would be a sorted array

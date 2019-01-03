@@ -193,6 +193,20 @@ When using a ContentProvider in MFContentProviderClass, specify whether you want
 * Type: `boolean`
 * Default: `true`
 
+#### MFContentProviderScriptPath
+
+When set will override the default script path to a foreign content provider
+e.g.
+`https://en.wikipedia.org/w`
+will route queries (e.g. API) to English Wikipedia.
+
+Note, this will make the wiki read only. Non-anonymous HTTP requests will throw CORS error.
+This may also cause compatibility problems with other extensions.
+This should not be used in production, it is strictly for development purposes.
+
+* Type: `string`
+* Default: ''
+
 #### $wgMFMobileMainPageCss
 
 Allow editors to edit MediaWiki:MobileMainPage.css to serve render blocking css to the main
@@ -350,16 +364,6 @@ Whether geodata related functionality should be enabled.
 
 * Type: `Boolean`
 * Default: `false`
-
-#### $wgMFNearbyEndpoint
-
-An optional alternative api to query for nearby pages, e.g.
-<https://en.m.wikipedia.org/w/api.php>
-
-If set forces nearby to operate in JSONP mode.
-
-* Type: `String`
-* Default: `''`
 
 #### $wgMFSearchAPIParams
 

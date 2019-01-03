@@ -6,7 +6,7 @@
 		eventBus = M.require( 'mobile.startup/eventBusSingleton' ),
 		pageParams = mw.config.get( 'wgPageName' ).split( '/' ),
 		currentUserName = user.getName(),
-		corsUrl = mw.config.get( 'wgMFPhotoUploadEndpoint' ),
+		corsUrl = mw.config.get( 'wgMFPhotoUploadEndpoint' ) || undefined,
 		userName = pageParams[1] ? pageParams[1] : currentUserName;
 
 	/**
@@ -18,6 +18,7 @@
 		// we might have an invalid username
 		if ( $( '.errorbox' ).length === 0 ) {
 			new PhotoList( {
+				url: corsUrl,
 				api: api,
 				username: userName,
 				eventBus: eventBus
@@ -27,18 +28,9 @@
 
 	// Assume we are on the special page.
 	if ( userName ) {
-		if ( corsUrl ) {
-			mw.loader.using( 'mobile.foreignApi' ).then( function () {
-				var JSONPForeignApi = M.require( 'mobile.foreignApi/JSONPForeignApi' );
-				$( function () {
-					init( new JSONPForeignApi( corsUrl ) );
-				} );
-			} );
-		} else {
-			$( function () {
-				init( new mw.Api() );
-			} );
-		}
+		$( function () {
+			init( new mw.Api() );
+		} );
 	}
 
 }( mw.mobileFrontend ) );

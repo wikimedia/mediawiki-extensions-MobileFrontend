@@ -1,7 +1,7 @@
 /* global $ */
-( function ( M, config, msg, loader ) {
+( function ( M, msg ) {
 	/** @event */
-	var api,
+	var api = new mw.Api(),
 		NEARBY_EVENT_POST_RENDER = 'Nearby-postRender',
 		LocationProvider = M.require( 'mobile.nearby/LocationProvider' ),
 		loadingOverlay = mw.mobileFrontend.require( 'mobile.startup' ).loadingOverlay,
@@ -88,29 +88,6 @@
 
 	// Routing on the nearby view
 
-	/**
-	 * Return a working instance of an api that can be used
-	 * to obtain nearby information.
-	 * @return {JQuery.Deferred<mw.Api>} that resolves with an mw.Api
-	 */
-	function getApi() {
-		var d = util.Deferred(),
-			endpoint = config.get( 'wgMFNearbyEndpoint' );
-
-		if ( api ) {
-			d.resolve( api );
-		} else if ( endpoint ) {
-			loader.using( 'mobile.foreignApi' ).then( function () {
-				var Api = M.require( 'mobile.foreignApi/JSONPForeignApi' );
-				api = new Api( endpoint );
-				d.resolve( api );
-			} );
-		} else {
-			api = new mw.Api();
-			d.resolve( api );
-		}
-		return d;
-	}
 	/*
 	 * #/coords/lat,long
 	 */
@@ -123,9 +100,7 @@
 
 		hideInitialScreen();
 		// Search with coordinates
-		getApi().then( function ( api ) {
-			refresh( util.extend( options, { api: api } ) );
-		} );
+		refresh( util.extend( options, { api: api } ) );
 	} );
 
 	/*
@@ -134,12 +109,10 @@
 	router.route( /^\/page\/(.+)$/, function ( pageTitle ) {
 		hideInitialScreen();
 		overlay.hide();
-		getApi().then( function ( api ) {
-			refresh( util.extend( {}, options, {
-				api: api,
-				pageTitle: mw.Uri.decode( pageTitle )
-			} ) );
-		} );
+		refresh( util.extend( {}, options, {
+			api: api,
+			pageTitle: mw.Uri.decode( pageTitle )
+		} ) );
 	} );
 
 	router.checkRoute();
@@ -165,4 +138,4 @@
 		} );
 	} );
 
-}( mw.mobileFrontend, mw.config, mw.msg, mw.loader ) );
+}( mw.mobileFrontend, mw.msg ) );

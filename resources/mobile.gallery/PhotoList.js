@@ -15,9 +15,11 @@
 	 *
 	 * @param {Object} options Configuration options
 	 * @param {OO.EventEmitter} options.eventBus Object used to listen for scroll:throttled events
+	 * @param {string} options.url for overriding default URI for API queries
 	 */
 	function PhotoList( options ) {
 		var gatewayOptions = {
+			url: options.url,
 			api: options.api
 		};
 

@@ -371,19 +371,6 @@
 				"resources/dist/mobile.startup.js"
 			]
 		},
-		"mobile.foreignApi": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"dependencies": [
-				"mobile.startup",
-				"mediawiki.ForeignApi.core"
-			],
-			"scripts": [
-				"resources/mobile.foreignApi/JSONPForeignApi.js"
-			]
-		},
 		"mobile.editor.api": {
 			"targets": [
 				"mobile",
@@ -693,7 +680,6 @@
 				"mobile.ajax.styles",
 				"mobile.special.nearby.styles",
 				"mediawiki.language",
-				"mobile.foreignApi",
 				"mobile.messageBox",
 				"mobile.startup",
 				"mobile.nearby.images"
@@ -1070,6 +1056,7 @@
 		"MFContentProviderTryLocalContentFirst": true,
 		"MFContentProviderClass": "MobileFrontend\\ContentProviders\\DefaultContentProvider",
 		"MFMwApiContentProviderBaseUri": "https://en.wikipedia.org/w/api.php",
+		"MFContentProviderScriptPath": "",
 		"MFMcsContentProviderBaseUri": "https://en.wikipedia.org/api/rest_v1",
 		"MFEnableXAnalyticsLogging": false,
 		"MFAppPackageId": false,
@@ -1132,7 +1119,6 @@
 		},
 		"MFNearbyRange": 10000,
 		"MFNearby": false,
-		"MFNearbyEndpoint": "",
 		"MFSearchAPIParams": {
 			"ppprop": "displaytitle"
 		},

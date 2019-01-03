@@ -27,7 +27,6 @@ class SpecialNearby extends MobileSpecialPage {
 		// set config
 		$output->addJsConfigVars( [
 			'wgMFNearbyRange' => $config->get( 'MFNearbyRange' ),
-			'wgMFNearbyEndpoint' => $config->get( 'MFNearbyEndpoint' ),
 		] );
 		$output->addModuleStyles( [ 'mobile.nearby.images' ] );
 		$output->setPageTitle( $this->msg( 'mobile-frontend-nearby-title' ) );

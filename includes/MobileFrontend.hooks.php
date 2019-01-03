@@ -451,6 +451,12 @@ class MobileFrontendHooks {
 				'pilimit' => 50,
 			] );
 		}
+		$contentProviderApi = $config->get( 'MFContentProviderScriptPath' );
+		if ( $contentProviderApi ) {
+			// It's very possible this might break compatibility with other extensions
+			// so this should not be used outside development :). Please see README.md
+			$vars[ 'wgScriptPath' ] = $contentProviderApi;
+		}
 
 		// Get the licensing agreement that is displayed in the uploading interface.
 		$vars += [
@@ -479,6 +485,11 @@ class MobileFrontendHooks {
 			'wgMFDeviceWidthTablet' => self::DEVICE_WIDTH_TABLET,
 			// toggle.js
 			'wgMFCollapseSectionsByDefault' => $config->get( 'MFCollapseSectionsByDefault' ),
+			// extendSearchParams.js
+			// The purpose of this is to report to the client that we are using a custom path
+			// and signal to API requests that the origin parameter should be used.
+			// A boolean would also suffice here but let's keep things simple and pass verbatim
+			'wgMFContentProviderScriptPath' => $config->get( 'MFContentProviderScriptPath' ),
 			// BlockMessage.js
 			'wgEnableBlockNoticeStats' => $config->get( 'EnableBlockNoticeStats' ),
 		];

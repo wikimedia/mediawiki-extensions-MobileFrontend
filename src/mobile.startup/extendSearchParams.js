@@ -25,6 +25,7 @@ var util = require( './util' );
  */
 function extendSearchParams( feature ) {
 	var displayWikibaseDescriptions = mw.config.get( 'wgMFDisplayWikibaseDescriptions', {} ),
+		scriptPath = mw.config.get( 'wgMFContentProviderScriptPath' ),
 		args,
 		result;
 
@@ -56,6 +57,10 @@ function extendSearchParams( feature ) {
 		}
 	}
 
+	if ( scriptPath ) {
+		// A foreign api is being accessed! Enable anonymous CORS queries!
+		result.origin = '*';
+	}
 	return result;
 }
 module.exports = extendSearchParams;
