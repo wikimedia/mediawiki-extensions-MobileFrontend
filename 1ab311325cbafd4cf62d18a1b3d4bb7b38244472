@@ -169,6 +169,30 @@
     },
     {
       "key": {
+        "uuid": "b958887f_90c92f11",
+        "filename": "extension.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 370,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-01-03T20:14:36Z",
+      "side": 1,
+      "message": "Do you think it will cause issues by leaving it as is? To me, the webpack.runtime.issues were resolved by placing `mobile.startup.runtime.js` before \u0027mediawiki.template.hogan.js\u0027 within the \u0027mediawiki.template.hogan\u0027 module in extension.json.\n\nGiven that mobile.startup.js depends on that module and that mobile.common.js is really just a split off of mobile.startup.js, I would prefer to keep that within the \u0027mobile.startup\u0027 module in extension.json if possible as that is the least confusing to me.",
+      "parentUuid": "a918d190_d079de98",
+      "range": {
+        "startLine": 370,
+        "startChar": 4,
+        "endLine": 370,
+        "endChar": 37
+      },
+      "revId": "1ab311325cbafd4cf62d18a1b3d4bb7b38244472",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "48ef8c52_f33d3bab",
         "filename": "src/mobile.languages.structured/util.js",
         "patchSetId": 5
@@ -216,6 +240,24 @@
       "side": 1,
       "message": "Either works for me, but I think the second is the path of least resistance as you quite rightly point out.\n\nRemoving util seems like a good outcome on the long term.",
       "parentUuid": "f315dd68_625967d2",
+      "revId": "1ab311325cbafd4cf62d18a1b3d4bb7b38244472",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e9040b9_9903dde4",
+        "filename": "src/mobile.languages.structured/util.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-01-03T20:14:36Z",
+      "side": 1,
+      "message": "Done in I1659cd66422f36d874d5acdbef8f0cf788ede5a9",
+      "parentUuid": "15fd40d0_1b2aee8b",
       "revId": "1ab311325cbafd4cf62d18a1b3d4bb7b38244472",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
