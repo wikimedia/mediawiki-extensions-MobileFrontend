@@ -37,6 +37,7 @@ class FeaturesManager {
 	/**
 	 * Register a new MobileFronted feature
 	 * @param IFeature $feature Feature to register
+	 * @throws \RuntimeException
 	 */
 	public function registerFeature( IFeature $feature ) {
 		if ( array_key_exists( $feature->getId(), $this->features ) ) {

@@ -29,7 +29,7 @@ class Feature implements IFeature {
 	 * @param string $group feature group (used as a translation prefix)
 	 * @param array $options Feature options
 	 */
-	public function __construct( $name, $group = 'mobile-frontend', $options = [] ) {
+	public function __construct( $name, $group = 'mobile-frontend', array $options = [] ) {
 		$this->name = $name;
 		$this->group = $group;
 		$this->options = $options;
