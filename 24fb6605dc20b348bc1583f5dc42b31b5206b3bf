@@ -70,6 +70,30 @@
       "revId": "24fb6605dc20b348bc1583f5dc42b31b5206b3bf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "00040fde_e0bdc4f7",
+        "filename": "includes/MobileFrontend.skin.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2019-01-03T13:56:42Z",
+      "side": 1,
+      "message": "Sure, sounds good! You are right, there is no harm in keeping this parameter.",
+      "parentUuid": "4377e3e7_31d84b71",
+      "range": {
+        "startLine": 122,
+        "startChar": 52,
+        "endLine": 122,
+        "endChar": 60
+      },
+      "revId": "24fb6605dc20b348bc1583f5dc42b31b5206b3bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
