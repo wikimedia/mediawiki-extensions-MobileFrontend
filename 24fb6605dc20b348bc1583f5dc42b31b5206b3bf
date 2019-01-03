@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6079bb2c_84e8e384",
+        "filename": "includes/MobileFrontend.skin.hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2019-01-03T13:16:32Z",
+      "side": 1,
+      "message": "As far as I can see this parameter is never used:\n\nhttps://codesearch.wmflabs.org/search/?q\u003d%3AgetLicense%5C%28\n\nIt could as well be removed.",
+      "range": {
+        "startLine": 122,
+        "startChar": 52,
+        "endLine": 122,
+        "endChar": 60
+      },
+      "revId": "24fb6605dc20b348bc1583f5dc42b31b5206b3bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
