@@ -190,6 +190,30 @@
     },
     {
       "key": {
+        "uuid": "6bd5a575_4f23ae57",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-01-03T23:47:06Z",
+      "side": 1,
+      "message": "Ticket created at https://phabricator.wikimedia.org/T212913",
+      "parentUuid": "b6883a9b_38b4193b",
+      "range": {
+        "startLine": 59,
+        "startChar": 33,
+        "endLine": 59,
+        "endChar": 62
+      },
+      "revId": "d36e0422254ad4e9af7fb8b1bde1d04695855de8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4a5dae50_e5507d24",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 8
