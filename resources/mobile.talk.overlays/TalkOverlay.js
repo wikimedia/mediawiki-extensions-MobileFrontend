@@ -42,8 +42,6 @@
 		 * @property {Array} defaults.headings A list of {Section} objects to render heading links
 		 * for. If not set ajax request will be performed.
 		 * @property {string} defaults.heading Heading for talk overlay.
-		 * @property {string} defaults.leadHeading Heading for a discussion which has no heading
-		 * (lead section of talk page).
 		 * @property {string} defaults.headerButtonsListClassName Class name of the header buttons
 		 * list
 		 * @property {Array} defaults.headerButtons Objects that will be used as defaults for
@@ -53,7 +51,6 @@
 		defaults: util.extend( {}, Overlay.prototype.defaults, {
 			headings: undefined,
 			heading: '<strong>' + mw.msg( 'mobile-frontend-talk-overlay-header' ) + '</strong>',
-			leadHeading: mw.msg( 'mobile-frontend-talk-overlay-lead-header' ),
 			headerButtonsListClassName: 'header-action',
 			headerButtons: [ {
 				href: '#/talk/new',

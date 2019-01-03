@@ -220,7 +220,6 @@
 	"mobile-frontend-talk-explained": "Explains that the user is seeing talk page headings",
 	"mobile-frontend-talk-explained-empty": "Explains why the list is empty.",
 	"mobile-frontend-talk-overlay-header": "Heading for talk overlay.\n{{Identical|Talk}}",
-	"mobile-frontend-talk-overlay-lead-header": "Heading for a discussion which has no heading (lead section of talk page)",
 	"mobile-frontend-talk-reply": "Reply heading.\n{{Identical|Reply}}",
 	"mobile-frontend-talk-reply-info": "Inform the user their talk reply will be automatically signed.",
 	"mobile-frontend-talk-reply-success": "Toast message when you have saved a reply successfully.",
