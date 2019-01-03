@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f00c465b_422f5439",
+        "filename": "includes/MobileFrontend.body.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2019-01-03T13:25:20Z",
+      "side": 1,
+      "message": "This parameter is used a single time below, to call getUser. This method is declared on the IContextSource interface. So the most narrow interface we can use here is IContextSource.\n\nAll code calling this with an OutputPage object will continue to work just fine.\n\nSo this is a non-breaking change that gives us the benefit of narrowing this broad interface down, and thus making this code a little easier to read.",
+      "range": {
+        "startLine": 99,
+        "startChar": 44,
+        "endLine": 99,
+        "endChar": 62
+      },
+      "revId": "849ab383362dd84fc1cf4b721246f12cbf8d724d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
