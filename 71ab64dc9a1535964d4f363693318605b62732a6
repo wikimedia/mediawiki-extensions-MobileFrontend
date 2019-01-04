@@ -22,6 +22,30 @@
       "revId": "71ab64dc9a1535964d4f363693318605b62732a6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "10f06e37_334d2962",
+        "filename": "extension.json",
+        "patchSetId": 7
+      },
+      "lineNbr": 552,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-04T17:05:06Z",
+      "side": 1,
+      "message": "Hmm.. I feel it would be a bit inconsistent as right now View is not a suffix for any View.\n\nWould that mean TalkOverlay became TalkOverlayView ?\n\nAlso, TalkBoard has model like behaviour (for the time being e.g. gateways)\n \nI think if we had pure View\u0027s that would make sense, but right now we don\u0027t so it could be misleading. Maybe something to consider further down the road?",
+      "parentUuid": "cad73f47_25a10fef",
+      "range": {
+        "startLine": 552,
+        "startChar": 40,
+        "endLine": 552,
+        "endChar": 45
+      },
+      "revId": "71ab64dc9a1535964d4f363693318605b62732a6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
