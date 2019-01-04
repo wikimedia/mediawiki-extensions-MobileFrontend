@@ -3,7 +3,7 @@ const
 	CleanPlugin = require( 'clean-webpack-plugin' ),
 	glob = require( 'glob' ),
 	path = require( 'path' ),
-	prod = process.env.NODE_ENV === 'production',
+	isProduction = process.env.NODE_ENV === 'production',
 	// The output directory for all build artifacts. Only absolute paths are accepted by
 	// output.path.
 	distDir = path.resolve( __dirname, 'resources/dist' ),
@@ -26,7 +26,7 @@ module.exports = {
 
 	// Fail on the first build error instead of tolerating it for prod builds. This seems to
 	// correspond to optimization.noEmitOnErrors.
-	bail: prod,
+	bail: isProduction,
 
 	// Specify that all paths are relative the Webpack configuration directory not the current
 	// working directory.
@@ -113,7 +113,7 @@ module.exports = {
 		},
 
 		// Don't produce production output when a build error occurs.
-		noEmitOnErrors: prod
+		noEmitOnErrors: isProduction
 	},
 
 	output: {
@@ -149,7 +149,7 @@ module.exports = {
 
 	performance: {
 		// Size violations for prod builds fail; development builds are unchecked.
-		hints: prod ? 'error' : false,
+		hints: isProduction ? 'error' : false,
 
 		// Minified uncompressed size limits for chunks / assets and entrypoints. Keep these numbers
 		// up-to-date and rounded to the nearest 10th of a kilobyte so that code sizing costs are
