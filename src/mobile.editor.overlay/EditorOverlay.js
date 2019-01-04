@@ -40,10 +40,6 @@ function EditorOverlay( options ) {
 	} else {
 		options.editingMsg = mw.msg( 'mobile-frontend-editor-editing-page', options.title );
 	}
-	if ( options.isAnon ) {
-		// add required data for anonymous editing warning
-		options = this._prepareAnonWarning( options );
-	}
 	// be explicit here. This may have been initialized from VE.
 	options.isVisualEditor = false;
 	options.previewingMsg = mw.msg( 'mobile-frontend-editor-previewing-page', options.title );
@@ -63,41 +59,7 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 	 * @instance
 	 */
 	templatePartials: util.extend( {}, EditorOverlayBase.prototype.templatePartials, {
-		content: mw.template.get( 'mobile.editor.overlay', 'content.hogan' ),
-		messageBox: MessageBox.prototype.template,
-		anonWarning: mw.template.get( 'mobile.editor.overlay', 'EditorOverlayAnonWarning.hogan' )
-	} ),
-	/**
-	 * @memberof EditorOverlay
-	 * @instance
-	 * @mixes EditorOverlayBase#defaults
-	 * @property {Object} defaults Default options hash.
-	 * @property {Object} defaults.loginButton options to render an sign in button
-	 * @property {Object} defaults.signupButton options to render a sign up button
-	 * @property {Object} defaults.anonButton options to render an edit anonymously button
-	 * @property {Object} defaults.warningOptions options for a MessageBox
-	 *  to display anonymous message warning
-	 * @property {mw.Api} defaults.api an api module to retrieve pages
-	 */
-	defaults: util.extend( {}, EditorOverlayBase.prototype.defaults, {
-		loginButton: new Button( {
-			block: true,
-			label: mw.msg( 'mobile-frontend-watchlist-cta-button-login' )
-		} ).options,
-		signupButton: new Button( {
-			block: true,
-			label: mw.msg( 'mobile-frontend-watchlist-cta-button-signup' )
-		} ).options,
-		anonButton: new Button( {
-			label: mw.msg( 'mobile-frontend-editor-anon' ),
-			block: true,
-			additionalClassNames: 'continue anonymous',
-			progressive: true
-		} ).options,
-		warningOptions: {
-			className: 'warningbox anon-msg',
-			msg: mw.msg( 'mobile-frontend-editor-anonwarning' )
-		}
+		content: mw.template.get( 'mobile.editor.overlay', 'content.hogan' )
 	} ),
 	/**
 	 * @memberof EditorOverlay
@@ -164,7 +126,9 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 	 * @instance
 	 */
 	postRender: function () {
-		var self = this;
+		var self = this,
+			options = this.options,
+			$anonWarning = this.$el.find( '.anonwarning' );
 
 		if ( this.isVisualEditorEnabled() ) {
 			mw.loader.using( 'ext.visualEditor.switching' ).then( function () {
@@ -215,8 +179,20 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 		this.$preview = this.$el.find( '.preview' );
 		this.$content = this.$el.find( '.wikitext-editor' );
 		this.$content.addClass( 'mw-editfont-' + mw.user.options.get( 'editfont' ) );
-		if ( self.options.isAnon ) {
-			this.$anonWarning = this.$el.find( '.anonwarning' );
+		if ( options.isAnon ) {
+			// add anonymous warning actions if present
+			if ( $anonWarning.length ) {
+				$anonWarning.find( ' > div' ).prepend(
+					new MessageBox( {
+						className: 'warningbox anon-msg',
+						msg: mw.msg( 'mobile-frontend-editor-anonwarning' )
+					} ).$el
+				);
+				if ( options.isAnon ) {
+					this._renderAnonWarning( $anonWarning, options );
+				}
+			}
+			this.$anonWarning = $anonWarning;
 			this.$content.hide();
 			// the user has to click login, signup or edit without login,
 			// disable "Next" button on top right
@@ -247,10 +223,10 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 	 * @memberof EditorOverlay
 	 * @instance
 	 * @private
-	 * @param {Object} options object
-	 * @return {Object} Object with all options
+	 * @param {jQuery.Element} $anonWarning
+	 * @param {Object} options
 	 */
-	_prepareAnonWarning: function ( options ) {
+	_renderAnonWarning: function ( $anonWarning, options ) {
 		var params = util.extend( {
 			// use wgPageName as this includes the namespace if outside Main
 				returnto: options.returnTo || mw.config.get( 'wgPageName' ),
@@ -260,16 +236,31 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 			signupParams = util.extend( {
 				type: 'signup',
 				warning: 'mobile-frontend-edit-signup-action'
-			}, options.signupQueryParams );
+			}, options.signupQueryParams ),
+			anonymousEditorActions = [
+				new Button( {
+					label: mw.msg( 'mobile-frontend-editor-anon' ),
+					block: true,
+					additionalClassNames: 'continue anonymous',
+					progressive: true
+				} ),
+				new Button( {
+					block: true,
+					href: mw.util.getUrl( 'Special:UserLogin', params ),
+					label: mw.msg( 'mobile-frontend-watchlist-cta-button-login' )
+				} ),
+				new Button( {
+					block: true,
+					href: mw.util.getUrl( 'Special:UserLogin', util.extend( params, signupParams ) ),
+					label: mw.msg( 'mobile-frontend-watchlist-cta-button-signup' )
+				} )
+			];
 
-		options.loginButton = util.extend( {
-			href: mw.util.getUrl( 'Special:UserLogin', params )
-		}, this.defaults.loginButton );
-		options.signupButton = util.extend( {
-			href: mw.util.getUrl( 'Special:UserLogin', util.extend( params, signupParams ) )
-		}, this.defaults.signupButton );
-
-		return options;
+		$anonWarning.find( '.actions' ).append(
+			anonymousEditorActions.map( function ( action ) {
+				return action.$el;
+			} )
+		);
 	},
 
 	/**

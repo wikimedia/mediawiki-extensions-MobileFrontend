@@ -3,7 +3,10 @@
 	<div class="preview content"></div>
 	{{#isAnon}}
 	<div class="anonwarning content">
-		{{>anonWarning}}
+		<div>
+			<!-- warning will go here -->
+			<div class="actions"></div>
+		</div>
 	</div>
 	{{/isAnon}}
 </div>

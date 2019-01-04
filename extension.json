@@ -347,7 +347,6 @@
 				"previewHeader.hogan": "resources/mobile.editor.overlay/previewHeader.hogan",
 				"saveHeader.hogan": "resources/mobile.editor.overlay/saveHeader.hogan",
 				"EditorOverlayBase.hogan": "resources/mobile.editor.overlay/EditorOverlayBase.hogan",
-				"EditorOverlayAnonWarning.hogan": "resources/mobile.editor.overlay/EditorOverlayAnonWarning.hogan",
 				"contentVE.hogan": "resources/mobile.editor.overlay/contentVE.hogan",
 				"toolbarVE.hogan": "resources/mobile.editor.overlay/toolbarVE.hogan",
 				"BlockMessage.hogan": "resources/mobile.editor.overlay/BlockMessage.hogan",
