@@ -70,6 +70,16 @@ module.exports = {
 		}
 	},
 	optimization: {
+		// Don't produce production output when a build error occurs.
+		noEmitOnErrors: isProduction,
+
+		// Use filenames instead of unstable numerical identifiers for file references. This
+		// increases the gzipped bundle size some but makes the build products easier to debug and
+		// appear deterministic. I.e., code changes will only alter the bundle they're packed in
+		// instead of shifting the identifiers in other bundles.
+		// https://webpack.js.org/guides/caching/#deterministic-hashes (namedModules replaces NamedModulesPlugin.)
+		namedModules: true,
+
 		// Generate a single Webpack bootstrap chunk for ResourceLoader modules to share. This will
 		// be packaged inside the mediawiki.template.hogan module which should be a dependency for
 		// all modules. The inefficient  alternative is for each module to bundle its own runtime.
@@ -110,10 +120,7 @@ module.exports = {
 						chunk.name )
 				}
 			}
-		},
-
-		// Don't produce production output when a build error occurs.
-		noEmitOnErrors: isProduction
+		}
 	},
 
 	output: {
@@ -156,8 +163,8 @@ module.exports = {
 		// well understood. Related to bundlesize minified, gzipped compressed file size tests.
 		// Note: entrypoint size implicitly includes the mobile.startup.runtime and mobile.common
 		// chunks.
-		maxAssetSize: 41.5 * 1024,
-		maxEntrypointSize: 53.3 * 1024,
+		maxAssetSize: 47.0 * 1024,
+		maxEntrypointSize: 59.6 * 1024,
 
 		// The default filter excludes map files but we rename ours. Also, any modules prefixed with
 		// "tests." are excluded from performance checks as they are not shipped to end users.

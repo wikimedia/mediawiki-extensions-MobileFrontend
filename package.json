@@ -58,15 +58,15 @@
     },
     {
       "path": "resources/dist/mobile.common.js",
-      "maxSize": "3.6KB"
+      "maxSize": "3.7KB"
     },
     {
       "path": "resources/dist/mobile.startup.js",
-      "maxSize": "12.8KB"
+      "maxSize": "13.2KB"
     },
     {
       "path": "resources/dist/mobile.languages.structured.js",
-      "maxSize": "1.6KB"
+      "maxSize": "1.7KB"
     }
   ]
 }
