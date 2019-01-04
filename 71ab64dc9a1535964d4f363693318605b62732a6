@@ -46,6 +46,30 @@
       "revId": "71ab64dc9a1535964d4f363693318605b62732a6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e9e4e472_91dae687",
+        "filename": "extension.json",
+        "patchSetId": 7
+      },
+      "lineNbr": 552,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-04T17:27:20Z",
+      "side": 1,
+      "message": "Overlays are a special kind of View so calling a specific Overlay itself SpecificOverlayView would be redundant. I think their special distinctions from Views are:\n\n- They\u0027re only expected to be presented by the OverlayManager.\n- Historically, they\u0027ve been top level application user entry points like talk and edit, and are often associated with location changes.\n- In the past, they\u0027ve glued together multiple UI components and *supply whatever dependencies* the UI required like gateways or feature detection.\n- ...?\n\nThat isn\u0027t to say that Views haven\u0027t dipped into these responsibilities in (many) places but that\u0027s my interpretation of the intention. If there isn\u0027t a distinction, we certainly _should_ call Overlays Views.\n\nOn a related note, Page is a View, but it shouldn\u0027t be so I wouldn\u0027t call it PageView. (Although, I would split out a PageView from it. See T206335.)\n\nTalkBoard is the View injected into the TalkOverlay so it makes sense to me to call it TalkView, TalkBoardView, or even TalkOverlayView if we want to establish a pattern that each Overlay has a root View called FooOverlayView.",
+      "parentUuid": "10f06e37_334d2962",
+      "range": {
+        "startLine": 552,
+        "startChar": 40,
+        "endLine": 552,
+        "endChar": 45
+      },
+      "revId": "71ab64dc9a1535964d4f363693318605b62732a6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
