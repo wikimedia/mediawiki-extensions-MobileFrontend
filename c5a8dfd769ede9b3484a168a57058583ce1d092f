@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c7fd93d9_5066a0c3",
+        "filename": "extension.json",
+        "patchSetId": 13
+      },
+      "lineNbr": 371,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-04T20:55:13Z",
+      "side": 1,
+      "message": "I\u0027m now wondering that when the webpack migration completes whether mobile.startup.js will end up as an empty file.\n\nIf it doesn\u0027t, I\u0027m going to be curious about what\u0027s in there!",
+      "revId": "c5a8dfd769ede9b3484a168a57058583ce1d092f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

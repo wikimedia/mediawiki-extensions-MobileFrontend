@@ -285,6 +285,30 @@
     },
     {
       "key": {
+        "uuid": "bc683ef2_3336c70c",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 360,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-04T20:55:13Z",
+      "side": 1,
+      "message": "Good catch Stephen.\n\nThis can actually be dropped entirely.\n\nresources/dist/tests.mobilefrontend.js is a ___complete___ webpack bundle for all the tests and without code splitting and will include the required code from mobile.languages.structured.\n\nRemember.. we\u0027re using file import/export paths and mobile.languages.structured only provides a M.define export that is unused in tests.\n\nYou can see this for yourself by visiting Special:JavaScript/qunit and seeing the tests appear.",
+      "parentUuid": "bf9ce9d9_b1450d05",
+      "range": {
+        "startLine": 356,
+        "startChar": 0,
+        "endLine": 360,
+        "endChar": 50
+      },
+      "revId": "d36e0422254ad4e9af7fb8b1bde1d04695855de8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0189b475_5642c038",
         "filename": "src/mobile.languages.structured/mobile.languages.structured.js",
         "patchSetId": 8
