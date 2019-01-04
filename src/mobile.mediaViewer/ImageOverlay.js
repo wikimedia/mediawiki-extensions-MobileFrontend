@@ -4,6 +4,20 @@ var Overlay = require( './../mobile.startup/Overlay' ),
 	Icon = require( './../mobile.startup/Icon' ),
 	icons = require( './../mobile.startup/icons' ),
 	Button = require( './../mobile.startup/Button' ),
+	cancelButton = icons.cancel( 'gray' ),
+	detailsButton = new Button( {
+		label: mw.msg( 'mobile-frontend-media-details' ),
+		additionalClassNames: 'button',
+		progressive: true
+	} ),
+	slideLeftButton = new Icon( {
+		rotation: 90,
+		name: 'arrow-invert'
+	} ),
+	slideRightButton = new Icon( {
+		rotation: -90,
+		name: 'arrow-invert'
+	} ),
 	LoadErrorMessage = require( './LoadErrorMessage' ),
 	ImageGateway = require( './ImageGateway' ),
 	// FIXME: mw.loader.require is a private function but there's no other way to get hold of
@@ -71,28 +85,12 @@ mfExtend( ImageOverlay, Overlay, {
 	 * @mixes Overlay#defaults
 	 * @property {Object} defaults Default options hash.
 	 * @property {mw.Api} defaults.api instance of API to use
-	 * @property {string} defaults.cancelButton HTML of the cancel button.
-	 * @property {Object} defaults.detailsButton options for details button
 	 * @property {string} defaults.licenseLinkMsg Link to license information in media viewer.
 	 * @property {Thumbnail[]} defaults.thumbnails a list of thumbnails to browse
 	 */
 	defaults: util.extend( {}, Overlay.prototype.defaults, {
-		cancelButton: icons.cancel( 'gray' ).toHtmlString(),
-		detailsButton: new Button( {
-			label: mw.msg( 'mobile-frontend-media-details' ),
-			additionalClassNames: 'button',
-			progressive: true
-		} ).options,
 		licenseLinkMsg: mw.msg( 'mobile-frontend-media-license-link' ),
-		thumbnails: [],
-		slideLeftButton: new Icon( {
-			rotation: 90,
-			name: 'arrow-invert'
-		} ).toHtmlString(),
-		slideRightButton: new Icon( {
-			rotation: -90,
-			name: 'arrow-invert'
-		} ).toHtmlString()
+		thumbnails: []
 	} ),
 	/**
 	 * Event handler for slide event
@@ -173,17 +171,9 @@ mfExtend( ImageOverlay, Overlay, {
 	 */
 	postRender: function () {
 		var $img,
+			$spinner = icons.spinner().$el,
 			thumbs = this.options.thumbnails || [],
 			self = this;
-
-		/**
-		 * Hide the spinner
-		 * @method
-		 * @ignore
-		 */
-		function removeLoader() {
-			self.hideSpinner();
-		}
 
 		/**
 		 * Display media load failure message
@@ -193,7 +183,7 @@ mfExtend( ImageOverlay, Overlay, {
 		function showLoadFailMsg() {
 			self.hasLoadError = true;
 
-			removeLoader();
+			$spinner.hide();
 			// hide broken image if present
 			self.$el.find( '.image img' ).hide();
 
@@ -221,13 +211,15 @@ mfExtend( ImageOverlay, Overlay, {
 		}
 
 		this.$details = this.$el.find( '.details' );
+		this.$el.find( '.image' ).append( $spinner );
 
 		Overlay.prototype.postRender.apply( this );
+		this.$details.prepend( detailsButton.$el );
 
 		this.gateway.getThumb( self.options.title ).then( function ( data ) {
 			var author, url = data.descriptionurl + '#mw-jump-to-license';
 
-			removeLoader();
+			$spinner.hide();
 
 			self.thumbWidth = data.thumbwidth;
 			self.thumbHeight = data.thumbheight;
@@ -354,7 +346,11 @@ mfExtend( ImageOverlay, Overlay, {
 				} );
 			}
 		}
+
 		this.$el.find( '.image-wrapper' ).css( 'bottom', detailsHeight );
+		this.$el.find( '.slider-button.prev' ).append( slideLeftButton.$el );
+		this.$el.find( '.slider-button.next' ).append( slideRightButton.$el );
+		cancelButton.$el.insertBefore( this.$details );
 	},
 
 	/**
