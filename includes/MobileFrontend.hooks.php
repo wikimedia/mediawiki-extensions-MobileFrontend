@@ -354,10 +354,10 @@ class MobileFrontendHooks {
 		}
 
 		$testFiles[] = 'resources/dist/tests.mobilefrontend.js';
-		// Need to explicitly list this dependency because its tests are run by
-		// tests.mobilefrontend.js, but it is not part of the mobile.startup module
-		// (it's lazy loaded). Therefore, it's templates/messages will not be loaded
-		// by the above code.
+		// Need to explicitly list any dependencies which have templates for
+		// compatibility with Special:JavaScript/qunit/plain mode
+		// When modules no longer have templates, these can safely be removed.
+		$dependencies[] = 'mobile.startup';
 		$dependencies[] = 'mobile.languages.structured';
 		$testModule = [
 			'dependencies' => $dependencies,
