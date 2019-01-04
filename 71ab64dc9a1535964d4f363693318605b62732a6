@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cad73f47_25a10fef",
+        "filename": "extension.json",
+        "patchSetId": 7
+      },
+      "lineNbr": 552,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-04T15:54:50Z",
+      "side": 1,
+      "message": "What do you think about calling this TalkBoardView? I\u0027ve added a note to talk about View naming more generally in the next super happy dev time.",
+      "range": {
+        "startLine": 552,
+        "startChar": 40,
+        "endLine": 552,
+        "endChar": 45
+      },
+      "revId": "71ab64dc9a1535964d4f363693318605b62732a6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
