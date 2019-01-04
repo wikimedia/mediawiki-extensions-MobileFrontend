@@ -26,21 +26,14 @@ mfExtend( Drawer, Panel, {
 	 * @instance
 	 * @mixes Panel#defaults
 	 * @property {Object} defaults Default options hash.
-	 * @property {string} defaults.cancelButton HTML of the button that closes the drawer.
+	 * @property {Icon} defaults.collapseIcon
 	 */
 	defaults: util.extend( {}, Panel.prototype.defaults, {
 		// Used by CtaDrawer, BlockMessage.
 		collapseIcon: new Icon( {
 			name: 'arrow',
 			additionalClassNames: 'cancel'
-		} ).options
-	} ),
-	/**
-	 * @memberof Drawer
-	 * @instance
-	 */
-	templatePartials: util.extend( {}, Panel.prototype.templatePartials, {
-		icon: Icon.prototype.template
+		} )
 	} ),
 	/**
 	 * Defines an element that the Drawer should automatically be appended to.
@@ -64,6 +57,8 @@ mfExtend( Drawer, Panel, {
 	 */
 	postRender: function () {
 		var self = this;
+		// append the collapse icon at the top of the drawer
+		this.$el.prepend( this.options.collapseIcon.$el );
 		// This module might be loaded at the top of the page e.g. Special:Uploads
 		// Thus ensure we wait for the DOM to be loaded
 		util.docReady( function () {

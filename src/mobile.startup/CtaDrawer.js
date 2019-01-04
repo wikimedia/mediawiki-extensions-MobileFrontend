@@ -47,23 +47,29 @@ mfExtend( CtaDrawer, Drawer, {
 	/**
 	 * @memberof CtaDrawer
 	 * @instance
+	 * @mixes Drawer#defaults
+	 * @property {Object} defaults Default options hash.
+	 * @property {Object} defaults.collapseIcon options for Icon for collapsing the drawer
+	 * @property {Object} defaults.progressiveButton options for Button element for signing in
+	 * @property {Object} defaults.actionAnchor options for Anchor element for signing up
 	 */
-	templatePartials: util.extend( {}, Drawer.prototype.templatePartials, {
-		button: Button.prototype.template,
-		anchor: Anchor.prototype.template
+	defaults: util.extend( {}, Drawer.prototype.defaults, {
+		progressiveButton: {
+			progressive: true,
+			label: mw.msg( 'mobile-frontend-watchlist-cta-button-login' )
+		},
+		actionAnchor: {
+			progressive: true,
+			label: mw.msg( 'mobile-frontend-watchlist-cta-button-signup' )
+		}
 	} ),
 	/**
 		 * @memberof CtaDrawer
 		 * @instance
 		 */
 	template: util.template( `
-{{#collapseIcon}}{{>icon}}{{/collapseIcon}}
 <p>{{content}}</p>
-{{#progressiveButton}}{{>button}}{{/progressiveButton}}
-<div>
-	{{#actionAnchor}}{{>anchor}}{{/actionAnchor}}
-	{{#closeAnchor}}{{>anchor}}{{/closeAnchor}}
-</div>
+<div class="cta-drawer__anchors"></div>
 	` ),
 	/**
 		 * @inheritdoc
@@ -83,6 +89,30 @@ mfExtend( CtaDrawer, Drawer, {
 				'Special:UserLogin', signUpParams( params, this.options.signupQueryParams )
 			);
 		}
+	},
+	/**
+	 * @inheritdoc
+	 */
+	postRender: function () {
+		var options = this.options,
+			anchors = [];
+		if ( options.actionAnchor ) {
+			anchors.push( new Anchor( options.actionAnchor ) );
+		}
+		if ( options.closeAnchor ) {
+			anchors.push( new Anchor( options.closeAnchor ) );
+		}
+		Drawer.prototype.postRender.apply( this, arguments );
+		if ( options.progressiveButton ) {
+			( new Button( options.progressiveButton ) ).$el.insertBefore(
+				this.$el.find( '.cta-drawer__anchors' )
+			);
+		}
+		this.$el.find( '.cta-drawer__anchors' ).append(
+			anchors.map( function ( anchor ) {
+				return anchor.$el;
+			} )
+		);
 	}
 } );
 

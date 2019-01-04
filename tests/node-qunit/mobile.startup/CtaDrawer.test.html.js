@@ -9,7 +9,7 @@ module.exports = {
 			<a href=" logIn " class=" mw-ui-button mw-ui-progressive ">
 				Log in
 			</a>
-			<div>
+			<div class="cta-drawer__anchors">
 				<a href=" signUp " class=" mw-ui-anchor mw-ui-progressive ">
 					Sign up
 				</a>
@@ -25,7 +25,7 @@ module.exports = {
 			<a href=" customLogIn " class=" mw-ui-button mw-ui-progressive ">
 				custom log in
 			</a>
-			<div>
+			<div class="cta-drawer__anchors">
 				<a href=" customSignUp " class=" mw-ui-anchor mw-ui-progressive ">
 					custom sign up
 				</a>

@@ -31,18 +31,16 @@ mfExtend( AbuseFilterOverlay, Overlay, {
 		confirmButton: new Button( {
 			additionalClassNames: 'cancel',
 			progressive: true
-		} ).options
+		} )
 	} ),
 	/**
 	 * @memberof AbuseFilterOverlay
 	 * @instance
 	 */
 	templatePartials: util.extend( {}, Overlay.prototype.templatePartials, {
-		button: Button.prototype.template,
 		content: util.template( `
 <div class="content">
 	{{{message}}}
-	{{#confirmButton}}{{>button}}{{/confirmButton}}
 </div>
 		` )
 	} ),
@@ -55,6 +53,7 @@ mfExtend( AbuseFilterOverlay, Overlay, {
 		Overlay.prototype.postRender.apply( this );
 		// make links open in separate tabs
 		this.$el.find( 'a' ).attr( 'target', '_blank' );
+		this.$el.find( '.content' ).append( this.options.confirmButton.$el );
 	}
 } );
 

@@ -116,9 +116,10 @@ QUnit.module( 'MobileFrontend CtaDrawer.js', {
 				subject = new CtaDrawer(),
 				// Import the expected HTML as a string and replace spaces with a \s*. This allows
 				// the HTML some flexibility in how it's rendered.
-				html = new RegExp( require( './CtaDrawer.test.html' ).defaultURLs.replace( /\s+/g, '\\s*' ) );
+				html = new RegExp( require( './CtaDrawer.test.html' ).defaultURLs
+					.replace( /\n/g, ' ' ).replace( /\s+/g, '\\s*' ) );
 
-			sinon.assert.match( subject.$el.get( 0 ).outerHTML, html );
+			sinon.assert.match( subject.$el.get( 0 ).outerHTML.replace( /\n/g, ' ' ), html );
 			assert.ok( true );
 		} );
 
@@ -136,9 +137,10 @@ QUnit.module( 'MobileFrontend CtaDrawer.js', {
 						href: 'customSignUp'
 					} ).options
 				} ),
-				html = new RegExp( require( './CtaDrawer.test.html' ).overrideURLs.replace( /\s+/g, '\\s*' ) );
+				html = new RegExp( require( './CtaDrawer.test.html' )
+					.overrideURLs.replace( /\n/g, ' ' ).replace( /\s+/g, '\\s*' ) );
 
-			sinon.assert.match( subject.$el.get( 0 ).outerHTML, html );
+			sinon.assert.match( subject.$el.get( 0 ).outerHTML.replace( /\n/g, ' ' ), html );
 			assert.ok( true );
 		} );
 	} );

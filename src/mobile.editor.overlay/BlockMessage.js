@@ -23,17 +23,17 @@ mfExtend( BlockMessage, Drawer, {
 	defaults: util.extend( {}, Drawer.prototype.defaults, {
 		stopHandIcon: new Icon( {
 			name: 'stop-hand'
-		} ).options,
+		} ),
 		userIcon: new Icon( {
 			tagName: 'span',
 			name: 'profile'
-		} ).options,
+		} ),
 		okButton: new Button( {
 			label: mw.msg( 'ok' ),
 			tagName: 'button',
 			progressive: true,
 			additionalClassNames: 'cancel'
-		} ).options,
+		} ),
 		createDetailsAnchorHref: function () {
 			return mw.util.getUrl( 'Special:BlockList', { wpTarget: '#' + this.blockId } );
 		},
@@ -52,13 +52,19 @@ mfExtend( BlockMessage, Drawer, {
 		expiryHeader: mw.msg( 'mobile-frontend-editor-blocked-drawer-expiry-header' )
 	} ),
 	/**
-	 * @memberof BlockMessage
-	 * @instance
+	 * @inheritdoc
 	 */
-	templatePartials: util.extend( {}, Drawer.prototype.templatePartials, {
-		button: Button.prototype.template,
-		icon: Icon.prototype.template
-	} ),
+	postRender: function () {
+		this.$el.find( '.block-message-creator a' ).prepend(
+			this.options.userIcon.$el
+		);
+		this.$el.find( '.block-message-icon' ).append(
+			this.options.stopHandIcon.$el
+		);
+		this.$el.find( '.block-message-buttons' ).append(
+			this.options.okButton.$el
+		);
+	},
 	/**
 	 * @memberof BlockMessage
 	 * @instance
@@ -66,9 +72,7 @@ mfExtend( BlockMessage, Drawer, {
 	template: util.template( `
 {{#collapseIcon}}{{>icon}}{{/collapseIcon}}
 <div class="block-message">
-  <div class="block-message-icon">
-    {{#stopHandIcon}}{{>icon}}{{/stopHandIcon}}
-  </div>
+  <div class="block-message-icon"></div>
   <div class="block-message-info">
     <div class="block-message-item block-message-title">
       <h5>{{ createTitle }}</h5>
@@ -82,7 +86,7 @@ mfExtend( BlockMessage, Drawer, {
       {{/reason}}
       <div class="block-message-item block-message-creator">
         <h6>{{ creatorHeader }}</h6>
-        <div><strong><a href="{{ creator.url }}">{{#userIcon}}{{>icon}}{{/userIcon}}{{ creator.name }}</a></strong></div>
+        <div><strong><a href="{{ creator.url }}">{{ creator.name }}</a></strong></div>
       </div>
       {{#expiry}}
         <div class="block-message-item">
@@ -92,9 +96,6 @@ mfExtend( BlockMessage, Drawer, {
       {{/expiry}}
     </div>
     <div class="block-message-item block-message-buttons">
-      {{#okButton}}
-        {{>button}}
-      {{/okButton}}
       <a href="{{ createDetailsAnchorHref }}">{{ createDetailsAnchorLabel }}</a>
     </div>
   </div>

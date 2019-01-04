@@ -63,7 +63,7 @@ mfExtend( SearchOverlay, Overlay, {
 		<input class="search" type="search" name="search" autocomplete="off" placeholder="{{placeholderMsg}}" aria-label="{{placeholderMsg}}" value="{{searchTerm}}">
 	</form>
 	{{! See: T136243. Do not put the clear button inside the form as hitting enter on the input element triggers a button click, rather than submitting the form. }}
-	{{#clearIcon}}{{>icon}}{{/clearIcon}}
+	{{! clear icon goes here}}
 </div>
 <ul>
 	<li>{{{cancelButton}}}</li>
@@ -72,10 +72,10 @@ mfExtend( SearchOverlay, Overlay, {
 		content: util.template( `
 <div class="search-content overlay-header">
 	<ul>
-		<li>{{#searchContentIcon}}{{>icon}}{{/searchContentIcon}}</li>
+		<li>{{! search content icon goes here }}</li>
 	</ul>
 	<div class="caption">
-		<p class="with-results">{{#searchContentIcon}}{{label}}{{/searchContentIcon}}</p>
+		<p class="with-results">{{searchContentLabel}}</p>
 		<p class="without-results">{{noResultsMsg}}</p>
 		<p class="without-results">{{{searchContentNoResultsMsg}}}</p>
 	</div>
@@ -88,14 +88,10 @@ mfExtend( SearchOverlay, Overlay, {
 	{{#feedback}}
 		<div class="search-feedback">
 			{{prompt}}
-			{{#feedback}}
-				{{>anchor}}
-			{{/feedback}}
 		</div>
 	{{/feedback}}
 </div>
-		` ),
-		icon: Icon.prototype.template
+		` )
 	} ),
 	/**
 	 * @memberof SearchOverlay
@@ -105,9 +101,10 @@ mfExtend( SearchOverlay, Overlay, {
 	 * @property {SearchGateway} defaults.gatewayClass The class to use to setup an API gateway.
 	 *  FIXME: Should be removed when wikidata descriptions in stable (T101719)
 	 * @property {Router} defaults.router instance
-	 * @property {Object} defaults.clearIcon options for the button that clears the search text.
-	 * @property {Object} defaults.searchContentIcon options for the button that allows you to
+	 * @property {Icon} defaults.clearIcon options for the button that clears the search text.
+	 * @property {Icon} defaults.searchContentIcon options for the button that allows you to
 	 *  search within content
+	 * @property {string} defaults.searchContentLabel inviting user to do full text search
 	 * @property {string} defaults.searchTerm Search text.
 	 * @property {string} defaults.placeholderMsg Search input placeholder text.
 	 * @property {string} defaults.clearMsg Tooltip for clear button that appears when you type
@@ -130,14 +127,15 @@ mfExtend( SearchOverlay, Overlay, {
 			isSmall: true,
 			label: mw.msg( 'mobile-frontend-clear-search' ),
 			additionalClassNames: 'clear'
-		} ).options,
+		} ),
 		searchContentIcon: new Icon( {
 			tagName: 'a',
 			// When this icon is clicked we want to reset the hash for subsequent views
 			href: '#',
 			name: 'search-content',
 			label: mw.msg( 'mobile-frontend-search-content' )
-		} ).options,
+		} ),
+		searchContentLabel: mw.msg( 'mobile-frontend-search-content' ),
 		searchTerm: '',
 		placeholderMsg: '',
 		noResultsMsg: mw.msg( 'mobile-frontend-search-no-results' ),
@@ -147,7 +145,7 @@ mfExtend( SearchOverlay, Overlay, {
 			feedback: new Anchor( {
 				label: mw.msg( 'mobile-frontend-search-feedback-link-text' ),
 				href: feedbackLink
-			} ).options,
+			} ),
 			prompt: mw.msg( 'mobile-frontend-search-feedback-prompt' )
 		}
 	} ),
@@ -280,6 +278,7 @@ mfExtend( SearchOverlay, Overlay, {
 	 */
 	postRender: function () {
 		var self = this,
+			options = this.options,
 			timer;
 
 		Overlay.prototype.postRender.call( this );
@@ -290,6 +289,8 @@ mfExtend( SearchOverlay, Overlay, {
 		this.$searchFeedback = this.$el.find( '.search-feedback' ).hide();
 		this.$resultContainer = this.$el.find( '.results-list-container' );
 
+		this.$el.find( '.overlay-title' ).append( options.clearIcon.$el );
+		this.$searchContent.find( 'li' ).append( options.searchContentIcon.$el );
 		/**
 		 * Hide the spinner and abort timed spinner shows.
 		 */
@@ -313,6 +314,9 @@ mfExtend( SearchOverlay, Overlay, {
 		// Hide the clear button if the search input is empty
 		if ( self.$input.val() === '' ) {
 			this.$clear.hide();
+		}
+		if ( options.feedback && options.feedback.feedback ) {
+			this.$el.find( '.search-feedback' ).append( options.feedback.feedback.$el );
 		}
 	},
 

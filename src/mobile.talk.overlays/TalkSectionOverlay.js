@@ -57,7 +57,6 @@ mfExtend( TalkSectionOverlay, Overlay, {
 				{{info}}
 				{{{licenseMsg}}}
 			</p>
-			{{#saveButton}}{{>button}}{{/saveButton}}
 		</div>
 	</div>
 </div>
@@ -71,6 +70,7 @@ mfExtend( TalkSectionOverlay, Overlay, {
 	 * @property {string} defaults.title Title.
 	 * @property {Section} defaults.section that is currently being viewed in overlay.
 	 * @property {string} defaults.reply Reply heading.
+	 * @property {Button} defaults.saveButton
 	 * @property {string} defaults.info Message that informs the user their talk reply will be
 	 * automatically signed.
 	 */
@@ -81,7 +81,7 @@ mfExtend( TalkSectionOverlay, Overlay, {
 			progressive: true,
 			label: mw.config.get( 'wgEditSubmitButtonLabelPublish' ) ?
 				mw.msg( 'mobile-frontend-editor-publish' ) : mw.msg( 'mobile-frontend-editor-save' )
-		} ).options,
+		} ),
 		title: undefined,
 		section: undefined,
 		reply: mw.msg( 'mobile-frontend-talk-reply' ),
@@ -96,7 +96,8 @@ mfExtend( TalkSectionOverlay, Overlay, {
 	 */
 	postRender: function () {
 		Overlay.prototype.postRender.apply( this );
-		this.$saveButton = this.$el.find( '.save-button' );
+		this.$saveButton = this.options.saveButton.$el;
+		this.$el.find( '.comment-content' ).append( this.$saveButton );
 		if ( !this.options.section ) {
 			this.renderFromApi( this.options );
 		} else {

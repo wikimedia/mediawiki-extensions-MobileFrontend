@@ -1,7 +1,6 @@
 var
 	View = require( './View' ),
 	Icon = require( './Icon' ),
-	Button = require( './Button' ),
 	Anchor = require( './Anchor' ),
 	icons = require( './icons' ),
 	util = require( './util' ),
@@ -80,9 +79,7 @@ mfExtend( Overlay, View, {
 	{{/headerButtons}}
 </div>
 {{/hasActions}}
-		` ),
-		anchor: Anchor.prototype.template,
-		button: Button.prototype.template
+		` )
 	},
 	template: util.template( `
 {{^noHeader}}
@@ -96,7 +93,7 @@ mfExtend( Overlay, View, {
 <div class="overlay-content">
 	{{>content}}
 </div>
-<div class="overlay-footer-container position-fixed">{{#footerAnchor}}{{>anchor}}{{/footerAnchor}}</div>
+<div class="overlay-footer-container position-fixed"></div>
 	` ),
 	/**
 	 * @memberof Overlay
@@ -172,6 +169,7 @@ mfExtend( Overlay, View, {
 	 * @instance
 	 */
 	postRender: function () {
+		const footerAnchor = this.options.footerAnchor;
 		this.$overlayContent = this.$el.find( '.overlay-content' );
 		this.$spinner = this.$el.find( '.spinner' );
 		if ( this.isIos ) {
@@ -184,6 +182,9 @@ mfExtend( Overlay, View, {
 				return component.$el;
 			} )
 		);
+		if ( footerAnchor ) {
+			this.$el.find( '.overlay-footer-container' ).append( new Anchor( footerAnchor ).$el );
+		}
 	},
 
 	/**
