@@ -16,6 +16,24 @@
       "revId": "c5a8dfd769ede9b3484a168a57058583ce1d092f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "295c0c49_65caba6d",
+        "filename": "extension.json",
+        "patchSetId": 13
+      },
+      "lineNbr": 371,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-01-04T21:27:10Z",
+      "side": 1,
+      "message": "It will be interesting to see. My guess is it there will still be some modules left in mobile.startup.js unless our set of lazy loaded chunks make use of all of the mobile.startup modules (which I didn\u0027t think was the case but maybe I\u0027m wrong?)",
+      "parentUuid": "c7fd93d9_5066a0c3",
+      "revId": "c5a8dfd769ede9b3484a168a57058583ce1d092f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
