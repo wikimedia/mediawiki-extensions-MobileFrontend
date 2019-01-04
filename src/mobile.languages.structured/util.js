@@ -4,6 +4,27 @@ var
 	rtlLanguages = require( './rtlLanguages' );
 
 /**
+ * @typedef {Object} Language
+ * @prop {string} autonym of language e.g. français
+ * @prop {string} langname in the user's current language e.g French
+ * @prop {string} title of the page in the language e.g. Espagne
+ * @prop {string} dir (rtl or ltr)
+ * @prop {string} url of the page
+ *
+ * @typedef {Object} SuggestedLanguage
+ * @prop {string} autonym of language e.g. français
+ * @prop {string} langname in the user's current language e.g French
+ * @prop {string} title of the page in the language e.g. Espagne
+ * @prop {string} dir (rtl or ltr)
+ * @prop {string} url of the page
+ * @prop {number} frequency of times the language has been used by the given user
+ *
+ * @typedef {Object} StructuredLanguages
+ * @prop {Language[]} all languages that are available
+ * @prop {SuggestedLanguage[]} suggested languages based on users browsing history
+ */
+
+/**
  * Return the device language if it's in the list of article languages.
  * If the language is a variant of a general language, and if the article
  * is not available in that language, then return the general language
@@ -81,7 +102,7 @@ module.exports = {
 	 * @param {Array|boolean} variants language variant objects or false if no variants exist
 	 * @param {Object} frequentlyUsedLanguages list of the frequently used languages
 	 * @param {string} [deviceLanguage] the device's primary language
-	 * @return {Object[]}
+	 * @return {StructuredLanguages}
 	 */
 	getStructuredLanguages: function (
 		languages, variants, frequentlyUsedLanguages, deviceLanguage
