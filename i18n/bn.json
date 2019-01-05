@@ -20,7 +20,7 @@
 	"mobile-frontend-categories-nomatch": "আপনার অনুসন্ধানের জন্য কোন বিষয়শ্রেণী পাওয়া যায়নি। আপনার অন্য একটি চেষ্টা করা উচিত।",
 	"mobile-frontend-categories-nodata": "একটি ত্রুটি হয়েছিল। আপনি কি সংরক্ষণ করতে কিছু বিষয়শ্রেণী যোগ করেছিলেন?",
 	"mobile-frontend-categories-summary": "বিষয়শ্রেণীতে যোগ করা হয়েছে",
-	"mobile-frontend-categories-notification": "বিষয়শ্রেণী সফলভাবে হালনাগাদ করা হয়েছে।",
+	"mobile-frontend-categories-notification": "বিষয়শ্রেণী হালনাগাদ করা হয়েছে।",
 	"mobile-frontend-categories-add-heading": "<strong>নতুন বিষয়শ্রেণীতে<span> $1</span> যোগ করুন</strong>",
 	"mobile-frontend-categories-add-wait": "বিষয়শ্রেণী সংরক্ষণ করা হচ্ছে, অনুগ্রহ করে অপেক্ষা করুন।",
 	"mobile-frontend-categories-normal": "বিষয়বস্তু ভিত্তিক",
