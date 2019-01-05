@@ -70,6 +70,30 @@
       "revId": "71ab64dc9a1535964d4f363693318605b62732a6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d72ef5c7_bf95fc53",
+        "filename": "extension.json",
+        "patchSetId": 7
+      },
+      "lineNbr": 552,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-05T00:42:06Z",
+      "side": 1,
+      "message": "I think this would be a good conversation to have (I see similar naming problems with the factories) but for me, right now we are in a transitory state and the names should reflect their current state, not their ideal state.\n\nA TalkBoard is not a View yet. It hits APIs and does all sorts of other things that View\u0027s should not be concerning themselves with.\n\nLonger term, I\u0027d also like us to think about these things as /components/ rather than /views/.\n\nRegardless I\u0027d prefer any name change to be done across the codebase rather than in this one particular patch. MessageBox for instance is not MessageBoxView in current form. Is a Drawer a DrawerView? If not, why? Is a Section a SectionView or something else?",
+      "parentUuid": "e9e4e472_91dae687",
+      "range": {
+        "startLine": 552,
+        "startChar": 40,
+        "endLine": 552,
+        "endChar": 45
+      },
+      "revId": "71ab64dc9a1535964d4f363693318605b62732a6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
