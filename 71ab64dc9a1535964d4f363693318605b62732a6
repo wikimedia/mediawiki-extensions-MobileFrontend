@@ -118,6 +118,30 @@
       "revId": "71ab64dc9a1535964d4f363693318605b62732a6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c8c9e702_6d899525",
+        "filename": "extension.json",
+        "patchSetId": 7
+      },
+      "lineNbr": 552,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-07T19:03:25Z",
+      "side": 1,
+      "message": "Does this name need to block this particular (and related) changes ?\n\nThis feels like a good discussion to have that should be done carefully while considering all MobileFrontend\u0027s components and where we want to get them to be.\n\nPersonally I feel like any View suffix\u0027s would be redundant if we had a better folder hierarchy giving context\ne.g. src/components/TalkBoard.js",
+      "parentUuid": "dbc9cb83_a5a8d131",
+      "range": {
+        "startLine": 552,
+        "startChar": 40,
+        "endLine": 552,
+        "endChar": 45
+      },
+      "revId": "71ab64dc9a1535964d4f363693318605b62732a6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
