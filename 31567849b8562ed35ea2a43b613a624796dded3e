@@ -22,6 +22,30 @@
       "revId": "31567849b8562ed35ea2a43b613a624796dded3e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b842e3c5_08a8f625",
+        "filename": "webpack.config.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-07T23:29:48Z",
+      "side": 1,
+      "message": "Done! I see this also shrinks the bundle size as expected. Phew.",
+      "parentUuid": "7093c8ed_d2afb75d",
+      "range": {
+        "startLine": 123,
+        "startChar": 28,
+        "endLine": 123,
+        "endChar": 62
+      },
+      "revId": "31567849b8562ed35ea2a43b613a624796dded3e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
