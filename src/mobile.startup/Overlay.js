@@ -78,7 +78,6 @@ mfExtend( Overlay, View, {
 	 * @property {string} defaults.headerButtonsListClassName A comma separated string of class
 	 * names of the wrapper of the header buttons.
 	 * @property {boolean} defaults.headerChrome Whether the header has chrome.
-	 * @property {boolean} defaults.fixedHeader Whether the header is fixed.
 	 * @property {string} defaults.spinner HTML of the spinner icon.
 	 * @property {Object} [defaults.footerAnchor] options for an optional Anchor
 	 *  that can appear in the footer
@@ -94,7 +93,6 @@ mfExtend( Overlay, View, {
 		} ).toHtmlString(),
 		headerButtonsListClassName: '',
 		headerChrome: false,
-		fixedHeader: true,
 		spinner: icons.spinner().toHtmlString()
 	},
 	/**
