@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2f930f97_81ff0a72",
+        "filename": "src/mobile.languages.structured/util.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-07T15:28:00Z",
+      "side": 1,
+      "message": "+1 for JSDocs which make JavaScript sane.\n\nI\u0027m not opposed to this JSDoc style but the TypeScript parser unfortunately doesn\u0027t seem to support extension this way (SuggestedLanguage is said to be identical to Language). You may get better typing using an alternative such as:\n\n /**\n  * A Language with user view frequency.\n  * @typedef {Language \u0026 {frequency: number}} SuggestedLanguage\n  */\n\nOr creating a temporary typedef:\n\n /**\n  * @typedef {Object} _SuggestedLanguage\n  * @prop {number} frequency how many times the language has been viewed by the user\n  * @typedef {Language \u0026 _SuggestedLanguage} SuggestedLanguage\n  */\n\nOr using a declaration file, e.g., util.d.d.ts:\n\n  interface Language {\n    /** of language e.g. français */\n    autonym: string\n    /** in the user\u0027s current language e.g French */\n    langname: string\n    /** of the page in the language e.g. Espagne */\n    title: string\n    dir: \u0027ltr\u0027 | \u0027rtl\u0027\n    url: string\n  }\n\n  interface SuggestedLanguage extends Language {\n    /** how many times the language has been viewed by the user */\n    frequency: number\n  }\n\n  interface StructuredLanguages {\n    /** languages that are available */\n    all: ReadonlyArray\u003cLanguage\u003e\n    /** languages based on users browsing history */\n    suggested: ReadonlyArray\u003cSuggestedLanguage\u003e\n  }\n\nOr perhaps another means I\u0027m unfamiliar with.",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 2
+      },
+      "revId": "7753dc61c4557323d183e8f65e8620d7fd2b7a23",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
