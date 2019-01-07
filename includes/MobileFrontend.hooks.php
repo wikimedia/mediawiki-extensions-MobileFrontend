@@ -359,6 +359,7 @@ class MobileFrontendHooks {
 		// When modules no longer have templates, these can safely be removed.
 		$dependencies[] = 'mobile.startup';
 		$dependencies[] = 'mobile.languages.structured';
+		$dependencies[] = 'mobile.mediaViewer';
 		$testModule = [
 			'dependencies' => $dependencies,
 			'localBasePath' => $localBasePath,

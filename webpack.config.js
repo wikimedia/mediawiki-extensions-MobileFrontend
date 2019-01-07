@@ -13,6 +13,7 @@ const
 		tests: 'tests.mobilefrontend',
 		hogan: 'mediawiki.template.hogan',
 		startup: 'mobile.startup',
+		mediaViewer: 'mobile.mediaViewer',
 		languages: 'mobile.languages.structured'
 	};
 
@@ -53,10 +54,13 @@ module.exports = {
 
 		[ENTRIES.hogan]: './src/mediawiki.template.hogan/mediawiki.template.hogan.js',
 		[ENTRIES.startup]: './src/mobile.startup/mobile.startup.js',
-		// T210210: Make a new chunk (which will be lazy loaded by resource loader).
+		// Make some chunks which will be lazy loaded by resource loader.
 		// If we utilize webpack lazy loading instead of resource loader lazy
 		// loading, we won't be required to explicitly create this new chunk and
 		// this can be removed.
+		// T210209
+		[ENTRIES.mediaViewer]: './src/mobile.mediaViewer/mobile.mediaViewer.js',
+		// T210210
 		[ENTRIES.languages]: './src/mobile.languages.structured/mobile.languages.structured.js'
 	},
 
@@ -116,8 +120,8 @@ module.exports = {
 					// this cacheGroup
 					enforce: true,
 					// Only consider splitting chunks off of these whitelisted entry names
-					chunks: ( chunk ) => [ ENTRIES.startup, ENTRIES.languages ].includes(
-						chunk.name )
+					chunks: ( chunk ) => [ ENTRIES.startup,
+						ENTRIES.mediaViewer, ENTRIES.languages ].includes( chunk.name )
 				}
 			}
 		}
