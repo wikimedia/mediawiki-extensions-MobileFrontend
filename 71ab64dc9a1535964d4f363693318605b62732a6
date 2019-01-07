@@ -94,6 +94,30 @@
       "revId": "71ab64dc9a1535964d4f363693318605b62732a6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dbc9cb83_a5a8d131",
+        "filename": "extension.json",
+        "patchSetId": 7
+      },
+      "lineNbr": 552,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-07T15:49:04Z",
+      "side": 1,
+      "message": "\u003e but for me, right now we are in a transitory state and the names should reflect their current state, not their ideal state.\n\nFor me, \"TalkBoard\" is a View first and a bag of other stuff second for a couple reasons:\n\n- It extends View.\n- Every Overlay has a View and were I working on TalkOverlay\u0027s UI, I would start by looking for Talk*View not Talk\u003cNewTerm\u003e. Even just knowing the user\u0027s UI entry point for non-View code is very useful.\n- Views are heavyweight and carry many view-only responsibilities despite any additional non-View code.\n\nFor these reasons, I would rather identify Views first and split off other stuff like Gateways as able later even if the naming was muddy in the interim.\n\n\u003e Longer term, I\u0027d also like us to think about these things as /components/ rather than /views/.\n\nI don\u0027t think I am getting the full benefit of this guidance as it\u0027s written. Can you clarify or reframe?\n\n\u003e Regardless I\u0027d prefer any name change to be done across the codebase rather than in this one particular patch. MessageBox for instance is not MessageBoxView in current form. Is a Drawer a DrawerView? If not, why? Is a Section a SectionView or something else?\n\nThis is true but all or nearly all Overlays are *Overlay. I would rather start calling things Views than ambiguous terms, especially new names.\n\nSectionView sounds good. DrawerView sounds fine too unless we have a very strong Drawer interface across multiple Views we want to distinguish with a new name.",
+      "parentUuid": "d72ef5c7_bf95fc53",
+      "range": {
+        "startLine": 552,
+        "startChar": 40,
+        "endLine": 552,
+        "endChar": 45
+      },
+      "revId": "71ab64dc9a1535964d4f363693318605b62732a6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
