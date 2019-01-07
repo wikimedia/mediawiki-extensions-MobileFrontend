@@ -16,6 +16,24 @@
       "revId": "24fb6605dc20b348bc1583f5dc42b31b5206b3bf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f226051f_5a57fa91",
+        "filename": "src/mobile.startup/Overlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 234,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2019-01-07T09:48:44Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "309be7d6_d03ca494",
+      "revId": "24fb6605dc20b348bc1583f5dc42b31b5206b3bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }

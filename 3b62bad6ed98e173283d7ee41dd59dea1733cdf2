@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8b3639a2_1592bf2e",
+        "filename": "src/mobile.startup/Overlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2019-01-07T09:48:44Z",
+      "side": 1,
+      "message": "Good point! Done.",
+      "parentUuid": "1e07d3a9_b491a1a5",
+      "revId": "3b62bad6ed98e173283d7ee41dd59dea1733cdf2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fd937def_494c27c7",
         "filename": "src/mobile.startup/OverlayManager.js",
         "patchSetId": 1
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "13246aa4_d17054dd",
+        "filename": "src/mobile.startup/OverlayManager.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2019-01-07T09:48:44Z",
+      "side": 1,
+      "message": "I\u0027ll make it private for now. We can change it later if it turns out it needs to be public.",
+      "parentUuid": "fd937def_494c27c7",
+      "revId": "3b62bad6ed98e173283d7ee41dd59dea1733cdf2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "68d733f1_044953d7",
         "filename": "src/mobile.startup/OverlayManager.js",
         "patchSetId": 1
@@ -47,6 +83,24 @@
       "writtenOn": "2019-01-03T19:46:35Z",
       "side": 1,
       "message": "Should change this right? Looks like this is public now!",
+      "revId": "3b62bad6ed98e173283d7ee41dd59dea1733cdf2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2a7c2f14_28a5ca1b",
+        "filename": "src/mobile.startup/OverlayManager.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2019-01-07T09:48:44Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "68d733f1_044953d7",
       "revId": "3b62bad6ed98e173283d7ee41dd59dea1733cdf2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
