@@ -22,6 +22,30 @@
       "revId": "542a507f7bf11acc6b709864d73ae4dc80c981e3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "09ac9921_1587f383",
+        "filename": "resources/mobile.special.nearby.scripts/nearby.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-08T21:03:57Z",
+      "side": 1,
+      "message": "Exactly.\nDone in PS8",
+      "parentUuid": "8cfa73bb_12afb365",
+      "range": {
+        "startLine": 96,
+        "startChar": 0,
+        "endLine": 103,
+        "endChar": 2
+      },
+      "revId": "542a507f7bf11acc6b709864d73ae4dc80c981e3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
