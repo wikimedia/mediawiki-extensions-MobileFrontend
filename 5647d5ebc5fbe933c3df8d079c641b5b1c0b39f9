@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bd1b4b0e_e76b40cf",
+        "filename": "tests/phpunit/content-providers/McsContentProviderTest.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-08T12:24:51Z",
+      "side": 1,
+      "message": "both $url and $rawResponse are not used",
+      "range": {
+        "startLine": 66,
+        "startChar": 38,
+        "endLine": 66,
+        "endChar": 57
+      },
+      "revId": "5647d5ebc5fbe933c3df8d079c641b5b1c0b39f9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
