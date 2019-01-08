@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e779650b_24b08496",
+        "filename": "src/mobile.startup/Drawer.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-08T15:59:44Z",
+      "side": 1,
+      "message": "This seems like a nice configuration to expose but we\u0027ll have to support it. Unless we need it, what do you think of moving this to file scope?",
+      "range": {
+        "startLine": 37,
+        "startChar": 0,
+        "endLine": 43,
+        "endChar": 21
+      },
+      "revId": "8f30e6e1974d294c6d40e47b6c55b6af8a9c26d2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "51c46eb1_401d2bda",
+        "filename": "src/mobile.startup/Drawer.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-08T15:59:44Z",
+      "side": 1,
+      "message": "Hide now occurs asynchronously. Do we need to guard against an already shown drawer here or cancel a pending hide timeout?",
+      "range": {
+        "startLine": 98,
+        "startChar": 0,
+        "endLine": 99,
+        "endChar": 60
+      },
+      "revId": "8f30e6e1974d294c6d40e47b6c55b6af8a9c26d2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
