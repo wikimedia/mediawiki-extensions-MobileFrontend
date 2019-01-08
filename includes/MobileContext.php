@@ -747,7 +747,7 @@ class MobileContext extends ContextSource {
 	 * Update host of given URL to conform to mobile URL template.
 	 * @param array &$parsedUrl Result of parseUrl() or wfParseUrl()
 	 */
-	protected function updateMobileUrlHost( &$parsedUrl ) {
+	protected function updateMobileUrlHost( array &$parsedUrl ) {
 		if ( IP::isIPAddress( $parsedUrl['host'] ) ) {
 			// Do not update host when IP is used
 			return;
@@ -785,7 +785,7 @@ class MobileContext extends ContextSource {
 	 * Update the host of a given URL to strip out any mobile tokens
 	 * @param array &$parsedUrl Result of parseUrl() or wfParseUrl()
 	 */
-	protected function updateDesktopUrlHost( &$parsedUrl ) {
+	protected function updateDesktopUrlHost( array &$parsedUrl ) {
 		$server = $this->getConfig()->get( 'Server' );
 
 		$mobileUrlHostTemplate = $this->parseMobileUrlTemplate( 'host' );
@@ -801,7 +801,7 @@ class MobileContext extends ContextSource {
 	 * Update the query portion of a given URL to remove any 'useformat' params
 	 * @param array &$parsedUrl Result of parseUrl() or wfParseUrl()
 	 */
-	protected function updateDesktopUrlQuery( &$parsedUrl ) {
+	protected function updateDesktopUrlQuery( array &$parsedUrl ) {
 		if ( isset( $parsedUrl['query'] ) && strpos( $parsedUrl['query'], 'useformat' ) !== false ) {
 			$query = wfCgiToArray( $parsedUrl['query'] );
 			unset( $query['useformat'] );
@@ -819,7 +819,7 @@ class MobileContext extends ContextSource {
 	 *
 	 * @param array &$parsedUrl Result of parseUrl() or wfParseUrl()
 	 */
-	protected function updateMobileUrlPath( &$parsedUrl ) {
+	protected function updateMobileUrlPath( array &$parsedUrl ) {
 		$scriptPath = $this->getConfig()->get( 'ScriptPath' );
 
 		$mobileUrlPathTemplate = $this->parseMobileUrlTemplate( 'path' );
