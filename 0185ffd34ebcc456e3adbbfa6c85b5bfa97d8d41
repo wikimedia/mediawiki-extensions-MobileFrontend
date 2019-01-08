@@ -73,6 +73,30 @@
     },
     {
       "key": {
+        "uuid": "21b33434_90c19e17",
+        "filename": "src/mobile.mediaViewer/mobile.mediaViewer.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-08T20:45:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "97f6a189_7b4a1882",
+      "range": {
+        "startLine": 1,
+        "startChar": 4,
+        "endLine": 1,
+        "endChar": 25
+      },
+      "revId": "0185ffd34ebcc456e3adbbfa6c85b5bfa97d8d41",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fa9f3f0d_1340f9d7",
         "filename": "src/mobile.mediaViewer/mobile.mediaViewer.js",
         "patchSetId": 3

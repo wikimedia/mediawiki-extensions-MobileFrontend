@@ -22,6 +22,30 @@
       "revId": "4cbbff3e0a7ecf66f8ca14a02566aee58d8569b2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a86a7819_b458de0b",
+        "filename": "resources/mobile.mediaViewer/ImageOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-08T20:45:33Z",
+      "side": 0,
+      "message": "With the import of the moduleSingleton this is now happening. Thanks for pointing that out.",
+      "parentUuid": "b43da359_a7d00ab8",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 6,
+        "endChar": 48
+      },
+      "revId": "4cbbff3e0a7ecf66f8ca14a02566aee58d8569b2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
