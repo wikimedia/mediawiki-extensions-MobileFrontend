@@ -22,6 +22,121 @@
       "revId": "5647d5ebc5fbe933c3df8d079c641b5b1c0b39f9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f834fe8_047f7bec",
+        "filename": "tests/phpunit/content-providers/McsContentProviderTest.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2019-01-08T12:27:02Z",
+      "side": 1,
+      "message": "These parameters are not used and should be removed.",
+      "range": {
+        "startLine": 66,
+        "startChar": 38,
+        "endLine": 66,
+        "endChar": 56
+      },
+      "revId": "5647d5ebc5fbe933c3df8d079c641b5b1c0b39f9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "842d4ee7_6c120533",
+        "filename": "tests/phpunit/content-providers/McsContentProviderTest.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2019-01-08T12:27:02Z",
+      "side": 1,
+      "message": "The StatusValue class is very trivial and does not need to be mocked. Just use\n\n StatusValue::newFatal( \u0027fatal\u0027 );",
+      "range": {
+        "startLine": 67,
+        "startChar": 2,
+        "endLine": 69,
+        "endChar": 25
+      },
+      "revId": "5647d5ebc5fbe933c3df8d079c641b5b1c0b39f9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c8aef56b_21b1274d",
+        "filename": "tests/phpunit/content-providers/McsContentProviderTest.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2019-01-08T12:27:02Z",
+      "side": 1,
+      "message": "Can\u0027t we use creatMock() here? That would be much simpler.",
+      "range": {
+        "startLine": 71,
+        "startChar": 31,
+        "endLine": 71,
+        "endChar": 54
+      },
+      "revId": "5647d5ebc5fbe933c3df8d079c641b5b1c0b39f9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "62f1fc16_70e62058",
+        "filename": "tests/phpunit/content-providers/McsContentProviderTest.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2019-01-08T12:27:02Z",
+      "side": 1,
+      "message": "I have never seen this being used anywhere. As far as I understand PHPUnit counts (all) calls being made to this mock. One would use -\u003eat() when a certain call order is expected. But this is not relevant here. There is only one call.\n\nYou can remove most of the -\u003eexpects() parts entirely. The test below does not really care *how* the fatal status came to be. It just cares *that* it happened. This is successfully checked by the assertion in the test below.",
+      "range": {
+        "startLine": 80,
+        "startChar": 32,
+        "endLine": 80,
+        "endChar": 46
+      },
+      "revId": "5647d5ebc5fbe933c3df8d079c641b5b1c0b39f9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "12f86223_52f4265e",
+        "filename": "tests/phpunit/content-providers/McsContentProviderTest.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2019-01-08T12:27:02Z",
+      "side": 1,
+      "message": "I tried to return a \"good\" status here, but the test still succeeds. This shouldn\u0027t be. The test is supposed to cover what happens when this status is bad, in contrast to when it is good.\n\nThe assertion below will succeed in many situations, because multiple code paths return empty strings.\n\nI added an -\u003eexpects( $this-\u003enever() )-\u003emethod( \u0027getContent\u0027 ) in my follow-up patch to fix this.",
+      "range": {
+        "startLine": 82,
+        "startChar": 17,
+        "endLine": 82,
+        "endChar": 31
+      },
+      "revId": "5647d5ebc5fbe933c3df8d079c641b5b1c0b39f9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
