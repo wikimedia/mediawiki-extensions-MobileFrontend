@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "4a932b5a_ad1053f3",
+        "filename": "src/mobile.mediaViewer/mobile.mediaViewer.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-08T18:05:33Z",
+      "side": 1,
+      "message": "How?\nsrc/mobile.startup/mobile.startup.js  would need to export mw.mobileFrontend but right now it\u0027s exporting files.",
+      "parentUuid": "ec5c7e44_371b5e4f",
+      "range": {
+        "startLine": 1,
+        "startChar": 4,
+        "endLine": 1,
+        "endChar": 25
+      },
+      "revId": "0185ffd34ebcc456e3adbbfa6c85b5bfa97d8d41",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fa9f3f0d_1340f9d7",
         "filename": "src/mobile.mediaViewer/mobile.mediaViewer.js",
         "patchSetId": 3
@@ -36,6 +60,24 @@
       "writtenOn": "2019-01-08T15:27:38Z",
       "side": 1,
       "message": "We should add a module.exports here or drop it from mobile.languages.structured and mobile.startup.",
+      "revId": "0185ffd34ebcc456e3adbbfa6c85b5bfa97d8d41",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fc83e051_8093f622",
+        "filename": "src/mobile.mediaViewer/mobile.mediaViewer.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-08T18:05:33Z",
+      "side": 1,
+      "message": "The only reason for this file is so that Minerva can access the code. What\u0027s the benefit of exposing them via module.exports which will add them unnecessarily to a global?\n\n\u003e or drop it from mobile.languages.structured and mobile.startup.\nI\u0027m down with this. TBH I\u0027m not 100% sure what benefit exporting in these files is giving us.\n\nIf the latter ported mw.mobileFrontend instead that would help with the above comment.",
+      "parentUuid": "fa9f3f0d_1340f9d7",
       "revId": "0185ffd34ebcc456e3adbbfa6c85b5bfa97d8d41",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
