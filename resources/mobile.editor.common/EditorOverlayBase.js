@@ -327,7 +327,7 @@
 		show: function () {
 			Overlay.prototype.show.call( this );
 			// Inform other interested code that the editor has loaded
-			mw.hook( 'mobileFrontend.editorOpened' ).fire();
+			mw.hook( 'mobileFrontend.editorOpened' ).fire( this.editor );
 		},
 		/**
 		 * Back button click handler
