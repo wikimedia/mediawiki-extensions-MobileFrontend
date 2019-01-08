@@ -207,21 +207,6 @@ mfExtend( Skin, View, {
 		return _loadImages();
 	},
 	/**
-	 * @deprecated
-	 * Load an image on demand
-	 * @memberof Skin
-	 * @instance
-	 * @param {Array} [images] a list of images that have not been loaded.
-	 *  If none given all will be loaded.
-	 * @return {jQuery.Deferred}
-	 */
-	loadImagesList: function ( images ) {
-		return lazyImageLoader.loadImages(
-			this.$.bind( this ), images || this.getUnloadedImages()
-		);
-	},
-
-	/**
 	 * Load the references section content from API if it's not already loaded.
 	 *
 	 * All references tags content will be loaded per section.
