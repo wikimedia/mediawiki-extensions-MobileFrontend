@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3685e41d_e418be99",
+        "filename": "package.json",
+        "patchSetId": 6
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-08T15:54:36Z",
+      "side": 0,
+      "message": "I think this change was unintentional.",
+      "range": {
+        "startLine": 7,
+        "startChar": 18,
+        "endLine": 7,
+        "endChar": 35
+      },
+      "revId": "542a507f7bf11acc6b709864d73ae4dc80c981e3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b3a90cc9_0215ae8e",
+        "filename": "tests/node-qunit/mobile.startup/watchstar/WatchstarGateway.test.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-08T15:54:36Z",
+      "side": 0,
+      "message": "Why delete this file?",
+      "revId": "542a507f7bf11acc6b709864d73ae4dc80c981e3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

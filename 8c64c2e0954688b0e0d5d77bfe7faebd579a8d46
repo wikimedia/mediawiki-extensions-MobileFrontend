@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "93c57989_edfd61c2",
+        "filename": "src/mobile.startup/queryProps.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-08T15:54:36Z",
+      "side": 1,
+      "message": "This code forms Action API parameters. What do you think of calling it actionParams to distinguish it from other property / option usage and clarify the target implementation? I think it\u0027s true that every action API request requires an action parameter, so it could take an action argument explicitly, if you like, or the default you have here is probably fine too.",
+      "revId": "8c64c2e0954688b0e0d5d77bfe7faebd579a8d46",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
