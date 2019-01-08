@@ -53,38 +53,6 @@ QUnit.module( 'MobileFrontend Skin.js', {
 	}
 } );
 
-QUnit.test( '#loadImagesList (success)', function ( assert ) {
-	var stub = sandbox.stub( this.skin, 'loadImage' )
-		.returns( util.Deferred().resolve() );
-
-	return this.skin.loadImagesList( [
-		util.parseHTML( '<div>' ), util.parseHTML( '<div>' )
-	] ).then( function () {
-		assert.strictEqual( stub.callCount, 2,
-			'Stub was called twice and resolves successfully.' );
-	} );
-} );
-
-QUnit.test( '#loadImagesList (one image fails)', function ( assert ) {
-	var stub = sandbox.stub( this.skin, 'loadImage' );
-
-	stub.onCall( 0 ).returns( util.Deferred().resolve() );
-	stub.onCall( 1 ).returns( util.Deferred().reject() );
-
-	return this.skin.loadImagesList( [
-		util.parseHTML( '<div>' ), util.parseHTML( '<div>' )
-	] ).catch( function () {
-		assert.strictEqual( stub.callCount, 2,
-			'Stub was called twice and overall result was failure.' );
-	} );
-} );
-
-QUnit.test( '#loadImagesList (empty list)', function ( assert ) {
-	return this.skin.loadImagesList( [] ).then( function () {
-		assert.ok( true, 'An empty list always resolves successfully' );
-	} );
-} );
-
 QUnit.test( '#lazyLoadReferences', function ( assert ) {
 	var $content = util.parseHTML( '<div>' ).append( pages.skinPage );
 

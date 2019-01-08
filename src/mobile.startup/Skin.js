@@ -1,10 +1,10 @@
 var
 	browser = require( './Browser' ).getSingleton(),
+	lazyImageLoader = require( './lazyImages/lazyImageLoader' ),
 	View = require( './View' ),
 	util = require( './util' ),
 	Page = require( './Page' ),
 	Deferred = util.Deferred,
-	when = util.when,
 	icons = require( './icons' ),
 	viewport = mw.viewport,
 	spinner = icons.spinner(),
@@ -154,7 +154,6 @@ mfExtend( Skin, View, {
 	setupImageLoading: function ( $container ) {
 		var self = this,
 			offset = util.getWindow().height() * 1.5,
-			loadImagesList = this.loadImagesList.bind( this ),
 			imagePlaceholders = this.getUnloadedImages( $container );
 
 		/**
@@ -197,7 +196,7 @@ mfExtend( Skin, View, {
 			}
 
 			// load any remaining images.
-			return loadImagesList( images );
+			return lazyImageLoader.loadImages( self.$.bind( self ), images );
 		}
 
 		this.eventBus.on( 'scroll:throttled', _loadImages );
@@ -208,6 +207,7 @@ mfExtend( Skin, View, {
 		return _loadImages();
 	},
 	/**
+	 * @deprecated
 	 * Load an image on demand
 	 * @memberof Skin
 	 * @instance
@@ -216,55 +216,9 @@ mfExtend( Skin, View, {
 	 * @return {jQuery.Deferred}
 	 */
 	loadImagesList: function ( images ) {
-		var callbacks,
-			$ = this.$.bind( this ),
-			loadImage = this.loadImage.bind( this );
-
-		images = images || this.getUnloadedImages();
-		callbacks = images.map( function ( placeholder ) {
-			return loadImage( $( placeholder ) );
-		} );
-
-		return when.apply( null, callbacks );
-	},
-	/**
-	 * Load an image on demand
-	 * @memberof Skin
-	 * @instance
-	 * @param {jQuery.Object} $placeholder
-	 * @return {jQuery.Deferred}
-	 */
-	loadImage: function ( $placeholder ) {
-		var
-			d = Deferred(),
-			width = $placeholder.attr( 'data-width' ),
-			height = $placeholder.attr( 'data-height' ),
-			// document must be passed to ensure image will start downloading
-			$downloadingImage = util.parseHTML( '<img>', this.$el[0].ownerDocument );
-
-		// When the image has loaded
-		$downloadingImage.on( 'load', function () {
-			// Swap the HTML inside the placeholder (to keep the layout and
-			// dimensions the same and not trigger layouts
-			$downloadingImage.addClass( 'image-lazy-loaded' );
-			$placeholder.replaceWith( $downloadingImage );
-			d.resolve();
-		} );
-		$downloadingImage.on( 'error', function () {
-			d.reject();
-		} );
-
-		// Trigger image download after binding the load handler
-		$downloadingImage.attr( {
-			class: $placeholder.attr( 'data-class' ),
-			width: width,
-			height: height,
-			src: $placeholder.attr( 'data-src' ),
-			alt: $placeholder.attr( 'data-alt' ),
-			style: $placeholder.attr( 'style' ),
-			srcset: $placeholder.attr( 'data-srcset' )
-		} );
-		return d;
+		return lazyImageLoader.loadImages(
+			this.$.bind( this ), images || this.getUnloadedImages()
+		);
 	},
 
 	/**
@@ -286,7 +240,6 @@ mfExtend( Skin, View, {
 		var $content, $spinner,
 			gateway = this.referencesGateway,
 			getUnloadedImages = this.getUnloadedImages.bind( this ),
-			loadImagesList = this.loadImagesList.bind( this ),
 			self = this;
 
 		// If the section was expanded before toggling, do not load anything as
@@ -304,7 +257,7 @@ mfExtend( Skin, View, {
 
 		function loadImagesAndSetData() {
 			// lazy load images if any
-			loadImagesList( getUnloadedImages( $content ) );
+			lazyImageLoader.loadImages( self.$.bind( self ), getUnloadedImages( $content ) );
 			// Do not attempt further loading even if we're unable to load this time.
 			$content.data( 'are-references-loaded', 1 );
 		}

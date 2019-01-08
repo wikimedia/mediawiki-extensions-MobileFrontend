@@ -40,7 +40,8 @@ var
 	schemaMobileWebSearch = require( './search/schemaMobileWebSearch' ),
 	MobileWebSearchLogger = require( './search/MobileWebSearchLogger' ),
 	SearchGateway = require( './search/SearchGateway' ),
-	ScrollEndEventEmitter = require( './ScrollEndEventEmitter' );
+	ScrollEndEventEmitter = require( './ScrollEndEventEmitter' ),
+	lazyImageLoader = require( './lazyImages/lazyImageLoader' );
 
 mw.mobileFrontend = moduleLoader;
 
@@ -134,6 +135,9 @@ module.exports = {
 		SearchOverlay: SearchOverlay,
 		MobileWebSearchLogger: MobileWebSearchLogger,
 		SearchGateway: SearchGateway
+	},
+	lazyImages: {
+		lazyImageLoader: lazyImageLoader
 	},
 	ScrollEndEventEmitter: ScrollEndEventEmitter
 };
