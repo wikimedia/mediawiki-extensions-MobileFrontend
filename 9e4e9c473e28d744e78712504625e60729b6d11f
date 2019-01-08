@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "68e4ed4f_0777f884",
+        "filename": "extension.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-08T23:36:35Z",
+      "side": 1,
+      "message": "Does this have to be specific to AMC? Compared to the other namespaces this one seems a little limited.\n\nI\u0027m curious about how we could fold in similar code relating to beta mode and user preferences.\n\nMaybe SkinPreferencesManager might be better here.\n\nAlso how are we going to integrate this with Minerva in such a way where MobileFrontend is or is not installed?\n\nIt would be useful to see some notes/write up about the plan for these things (if any).",
+      "revId": "9e4e9c473e28d744e78712504625e60729b6d11f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9efcddaa_b55941f8",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 235,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-08T23:36:35Z",
+      "side": 1,
+      "message": "why not make this a property inside the constructor given all the usages?",
+      "revId": "9e4e9c473e28d744e78712504625e60729b6d11f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6fc0673c_31f61459",
+        "filename": "resources/mobile.special.mobileoptions.scripts/mobileoptions.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-08T23:36:35Z",
+      "side": 1,
+      "message": "Please add jsdoc documenting the function signature so we can understand what these things are without having to read the rest of the code at a later date.",
+      "revId": "9e4e9c473e28d744e78712504625e60729b6d11f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5473deaa_f1280339",
+        "filename": "resources/mobile.special.mobileoptions.scripts/mobileoptions.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-08T23:36:35Z",
+      "side": 1,
+      "message": "This feels a little hacky and could be resolved by passing in an array of elements (see below)",
+      "revId": "9e4e9c473e28d744e78712504625e60729b6d11f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "62900a56_5e5538a9",
+        "filename": "resources/mobile.special.mobileoptions.scripts/mobileoptions.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 172,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-08T23:36:35Z",
+      "side": 1,
+      "message": "nice! Any reason not to make this method infuseToggles  and pass an array of inputs in ?",
+      "revId": "9e4e9c473e28d744e78712504625e60729b6d11f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
