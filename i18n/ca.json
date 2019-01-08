@@ -28,6 +28,7 @@
 	"mobile-frontend-categories-nomatch": "Cap categoria trobada per la vostra consulta. Hauríeu de provar-ho amb una altra.",
 	"mobile-frontend-categories-nodata": "Hi ha hagut un error. Heu afegit alguna categoria per desar?",
 	"mobile-frontend-categories-summary": "Afegit a les categories",
+	"mobile-frontend-categories-notification": "S’han actualitzat les categories.",
 	"mobile-frontend-categories-add-heading": "<strong>Afegeix<span> $1</span> a noves categories</strong>",
 	"mobile-frontend-categories-add-wait": "Desant categories, espereu.",
 	"mobile-frontend-categories-normal": "Basades en contingut",

@@ -5,7 +5,8 @@
 			"Nullzero",
 			"Octahedron80",
 			"Aefgh39622",
-			"Ans"
+			"Ans",
+			"B20180"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "เลือกว่าจะให้ผู้ใช้แก้ไขผ่านอินเทอร์เฟซสำหรับอุปกรณ์เคลื่อนที่หรือไม่",
@@ -18,6 +19,7 @@
 	"mobile-frontend-categories-nomatch": "ไม่พบหมวดหมู่สำหรับคิวรีของคุณ กรุณาลองรายการอื่น",
 	"mobile-frontend-categories-nodata": "มีข้อผิดพลาดเกิดขึ้น คุณได้เพิ่มหมวดหมู่ที่คุณจะบันทึกแล้วหรือยัง?",
 	"mobile-frontend-categories-summary": "เพิ่มลงในหมวดหมู่แล้ว",
+	"mobile-frontend-categories-notification": "หมวดหมู่ได้รับการอัปเดต",
 	"mobile-frontend-categories-add-heading": "<strong>เพิ่ม<span> $1</span> ลงในหมวดหมู่ใหม่</strong>",
 	"mobile-frontend-categories-add-wait": "กำลังบันทึกหมวดหมู่ กรุณารอสักครู่",
 	"mobile-frontend-categories-normal": "อ้างอิงตามเนื้อหา",

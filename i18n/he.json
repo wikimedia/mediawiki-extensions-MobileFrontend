@@ -29,7 +29,7 @@
 	"mobile-frontend-categories-nomatch": "לא נמצאה קטגוריה שמתאימה לשאילתה שלך. כדאי לך לנסות משהו אחר.",
 	"mobile-frontend-categories-nodata": "אירעה שגיאה. האם הוספת קטגוריות לשמור?",
 	"mobile-frontend-categories-summary": "קטגוריות שהדף נוסף אליהן",
-	"mobile-frontend-categories-notification": "הקטגוריות עודכנו בהצלחה.",
+	"mobile-frontend-categories-notification": "הקטגוריות עודכנו.",
 	"mobile-frontend-categories-add-heading": "<strong>הוספת <span>$1</span> לקטגוריות חדשות</strong>",
 	"mobile-frontend-categories-add-wait": "שמירת קטגוריות, נא להמתין.",
 	"mobile-frontend-categories-normal": "תוכן",
