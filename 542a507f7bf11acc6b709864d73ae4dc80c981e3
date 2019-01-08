@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8cfa73bb_12afb365",
+        "filename": "resources/mobile.special.nearby.scripts/nearby.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-08T15:32:27Z",
+      "side": 1,
+      "message": "Can we just initialize api at declaration time and drop getApi()?",
+      "range": {
+        "startLine": 96,
+        "startChar": 0,
+        "endLine": 103,
+        "endChar": 2
+      },
+      "revId": "542a507f7bf11acc6b709864d73ae4dc80c981e3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
