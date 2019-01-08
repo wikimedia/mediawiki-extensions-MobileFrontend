@@ -1,5 +1,5 @@
-var LanguageOverlay = require( './LanguageOverlay' );
+var m = require( './../mobile.startup/moduleLoaderSingleton' ),
+	LanguageOverlay = require( './LanguageOverlay' );
 
-mw.mobileFrontend.define( 'mobile.languages.structured/LanguageOverlay', LanguageOverlay );
-
-module.exports = LanguageOverlay;
+// Exposed for Minerva integration
+m.define( 'mobile.languages.structured/LanguageOverlay', LanguageOverlay );
