@@ -25,6 +25,47 @@
     },
     {
       "key": {
+        "uuid": "92788eaf_997ab890",
+        "filename": "src/mobile.startup/Drawer.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-08T20:56:47Z",
+      "side": 1,
+      "message": "I think this would make a good parameter to hideDrawer.\n\nHow does this differ from Panel.prototype.minHideDelay ?\nIt\u0027s not completely clear if these 2 are related in any way and why the new animationDelay is added in this patchset.\n\nCan you explain why it wasn\u0027t needed before but is now?",
+      "parentUuid": "e779650b_24b08496",
+      "range": {
+        "startLine": 37,
+        "startChar": 0,
+        "endLine": 43,
+        "endChar": 21
+      },
+      "revId": "8f30e6e1974d294c6d40e47b6c55b6af8a9c26d2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "21a3e83e_86a26194",
+        "filename": "src/mobile.startup/Drawer.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-08T20:56:47Z",
+      "side": 1,
+      "message": "Isn\u0027t the goal to move this outside the Drawer class altogether?\n\ne.g. I was expecting referenceDrawerFactory inside\nMinervaNeue/resources/skins.minerva.scripts/references.js to be updated to append the drawer to the DOM itself.\n\nI would expect this to throw a deprecation warning.",
+      "revId": "8f30e6e1974d294c6d40e47b6c55b6af8a9c26d2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "51c46eb1_401d2bda",
         "filename": "src/mobile.startup/Drawer.js",
         "patchSetId": 4
