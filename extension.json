@@ -49,7 +49,8 @@
 		"MobileFrontend\\Devices\\": "includes/devices/",
 		"MobileFrontend\\Transforms\\": "includes/transforms/",
 		"MobileFrontend\\Features\\" : "includes/features/",
-		"MobileFrontend\\ResourceLoaderModules\\": "includes/modules/"
+		"MobileFrontend\\ResourceLoaderModules\\": "includes/modules/",
+		"MobileFrontend\\AMC\\": "includes/amc/"
 	},
 	"AutoloadClasses": {
 		"ExtMobileFrontend": "includes/MobileFrontend.body.php",
@@ -987,7 +988,8 @@
 			"MobileFrontendHooks::onTitleSquidURLs"
 		],
 		"UserGetDefaultOptions": [
-			"MobileFrontendHooks::onUserGetDefaultOptions"
+			"MobileFrontendHooks::onUserGetDefaultOptions",
+			"MobileFrontend\\AMC\\Hooks::onUserGetDefaultOptions"
 		],
 		"GetDifferenceEngine": [
 			"MobileFrontendHooks::onGetDifferenceEngine"
@@ -1123,7 +1125,8 @@
 		"MFManifestBackgroundColor": "#fff",
 		"MFLogWrappedInfoboxes": true,
 		"MFSiteStylesRenderBlocking": false,
-		"MFWatchlistEditCountThreshold": 10
+		"MFWatchlistEditCountThreshold": 10,
+		"MFAdvancedMobileContributions": false
 	},
 	"ServiceWiringFiles": [
 		"includes/ServiceWiring.php"
