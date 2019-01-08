@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1038aa44_adbd4e9c",
+        "filename": "includes/content-providers/McsContentProvider.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-08T12:54:49Z",
+      "side": 0,
+      "message": "good catch",
+      "range": {
+        "startLine": 26,
+        "startChar": 40,
+        "endLine": 26,
+        "endChar": 55
+      },
+      "revId": "5647d5ebc5fbe933c3df8d079c641b5b1c0b39f9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "988038b1_ca8cc18a",
+        "filename": "tests/phpunit/content-providers/McsContentProviderTest.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-08T12:54:49Z",
+      "side": 0,
+      "message": "we could leave that ($this-\u003eonce()), to make sure that Mcs uses the http factory only once, but it\u0027s a minor.",
+      "range": {
+        "startLine": 85,
+        "startChar": 19,
+        "endLine": 85,
+        "endChar": 43
+      },
+      "revId": "5647d5ebc5fbe933c3df8d079c641b5b1c0b39f9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
