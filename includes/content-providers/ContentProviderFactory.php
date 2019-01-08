@@ -17,8 +17,7 @@ class ContentProviderFactory {
 	 * @suppress SecurityCheck-XSS OutputPage::getHtml is a hack, but safe html
 	 */
 	protected static function getDefaultParser( $html ) {
-		$parser = self::PHP_PARSER;
-		return new $parser( $html );
+		return new DefaultContentProvider( $html );
 	}
 
 	/**
@@ -46,12 +45,12 @@ class ContentProviderFactory {
 		switch ( $contentProviderClass ) {
 			case self::MCS_API:
 				$baseUrl = $config->get( 'MFMcsContentProviderBaseUri' );
-				return new $contentProviderClass( $baseUrl, $out );
+				return new McsContentProvider( $baseUrl, $title );
 			case self::MW_API:
 				$skinName = $out->getSkin()->getSkinName();
 				$rev = $out->getRequest()->getIntOrNull( 'oldid' );
 				$baseUrl = $config->get( 'MFMwApiContentProviderBaseUri' );
-				return new $contentProviderClass( $baseUrl, $out, $skinName, $rev );
+				return new MwApiContentProvider( $baseUrl, $out, $skinName, $rev );
 			case self::PHP_PARSER:
 				return self::getDefaultParser( $html );
 			default:

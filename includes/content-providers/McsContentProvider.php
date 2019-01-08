@@ -3,8 +3,8 @@
 namespace MobileFrontend\ContentProviders;
 
 use FormatJson;
-use OutputPage;
 use MediaWiki\MediaWikiServices;
+use Title;
 
 /**
  * Sources content from the Mobile-Content-Service
@@ -12,20 +12,18 @@ use MediaWiki\MediaWikiServices;
  * @since
  */
 class McsContentProvider implements IContentProvider {
-	/** @var OutputPage */
-	private $out;
+	/** @var Title|null */
+	private $title;
 	/** @var string */
 	private $baseUrl;
 
 	/**
-	 * Constructor
-	 *
 	 * @param string $baseUrl for the MediaWiki API to be used minus query string e.g. /w/api.php
-	 * @param OutputPage $out so that the ResourceLoader modules specific to the page can be added
+	 * @param Title|null $title
 	 */
-	public function __construct( $baseUrl, OutputPage $out ) {
+	public function __construct( $baseUrl, Title $title = null ) {
 		$this->baseUrl = $baseUrl;
-		$this->out = $out;
+		$this->title = $title;
 	}
 
 	/**
@@ -71,11 +69,11 @@ class McsContentProvider implements IContentProvider {
 	 * @inheritDoc
 	 */
 	public function getHTML() {
-		$out = $this->out;
-		$title = $out->getTitle();
+		$title = $this->title;
 		if ( !$title ) {
 			return '';
 		}
+
 		$url = $this->baseUrl . '/page/mobile-sections/';
 		$url .= urlencode( $title->getPrefixedDBKey() );
 

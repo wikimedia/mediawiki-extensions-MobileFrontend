@@ -12,40 +12,27 @@ class McsContentProviderTest extends MediaWikiTestCase {
 	const BASE_URL = '/w/api.php';
 
 	/**
-	 * Create an object of the McsContentProvider class
 	 * @param string $baseUrl
-	 * @param OutputPage $outputPage
+	 * @param Title|null $title
 	 * @return McsContentProvider
 	 */
-	private function makeMcsContentProvider( $baseUrl, OutputPage $outputPage ) {
-		return new McsContentProvider( $baseUrl, $outputPage );
+	private function makeMcsContentProvider( $baseUrl, Title $title = null ) {
+		return new McsContentProvider( $baseUrl, $title );
 	}
 
-	/**
-	 * Create test title helper function
-	 */
 	private function createTestTitle() {
 		return Title::newFromText( 'Test Title' );
 	}
 
+	/**
+	 * @return HttpRequestFactory
+	 */
 	private function mockHTTPFactory( $url, $rawResponse ) {
-		$mockStatus = $this->createMock( StatusValue::class );
-		$mockStatus->method( 'isOK' )
-			->willReturn( true );
-
-		$httpRequestMock = $this->getMockForAbstractClass(
-			MWHttpRequest::class,
-			[],
-			'',
-			false,
-			false,
-			true,
-			[ 'execute', 'getContent' ]
-		);
+		$httpRequestMock = $this->createMock( MWHttpRequest::class );
 
 		$httpRequestMock->expects( $this->at( 0 ) )
 			->method( 'execute' )
-			->willReturn( $mockStatus );
+			->willReturn( StatusValue::newGood() );
 
 		$httpRequestMock->expects( $this->at( 1 ) )
 			->method( 'getContent' )
@@ -62,47 +49,21 @@ class McsContentProviderTest extends MediaWikiTestCase {
 
 	/**
 	 * Mock bad HTTP factory so ->isOK() returns false
+	 * @return HttpRequestFactory
 	 */
-	private function mockBadHTTPFactory( $url, $rawResponse ) {
-		$mockBadStatus = $this->createMock( StatusValue::class );
-		$mockBadStatus->method( 'isOK' )
-			->willReturn( false );
-
-		$badHttpRequestMock = $this->getMockForAbstractClass(
-			MWHttpRequest::class,
-			[],
-			'',
-			false,
-			false,
-			true,
-			[ 'execute' ]
-		);
-		$badHttpRequestMock->expects( $this->at( 0 ) )
-			->method( 'execute' )
-			->willReturn( $mockBadStatus );
+	private function mockBadHTTPFactory() {
+		$badHttpRequestMock = $this->createMock( MWHttpRequest::class );
+		$badHttpRequestMock->method( 'execute' )
+			->willReturn( StatusValue::newFatal( 'fatal' ) );
+		$badHttpRequestMock->expects( $this->never() )
+			->method( 'getContent' )
+			->willReturn( '{}' );
 
 		$badFactoryMock = $this->createMock( HttpRequestFactory::class );
-		$badFactoryMock->expects( $this->once() )
-			->method( 'create' )
+		$badFactoryMock->method( 'create' )
 			->willReturn( $badHttpRequestMock );
 
 		return $badFactoryMock;
-	}
-
-	/**
-	 * @param Title $title
-	 * @return OutputPage Mocked OutputPage
-	 */
-	private function mockOutputPage( Title $title ) {
-		$mockOutputPage = $this->getMockBuilder( OutputPage::class )
-			->disableOriginalConstructor()
-			->setMethods( [ 'getTitle', 'getPrefixedDBKey' ] )
-			->getMock();
-		$mockOutputPage->method( 'getTitle' )
-			->willReturn( $title );
-		$mockOutputPage->method( 'getPrefixedDBKey' )
-			->willReturn( $title->getPrefixedDBkey() );
-		return $mockOutputPage;
 	}
 
 	/**
@@ -111,11 +72,10 @@ class McsContentProviderTest extends MediaWikiTestCase {
 	 * @covers ::fileGetContents
 	 */
 	public function testHttpRequestIsNotOK() {
-		$mockOutputPage = $this->mockOutputPage( $this->createTestTitle() );
+		$title = $this->createTestTitle();
 
-		$url = self::BASE_URL . '/page/mobile-sections/Test_Title';
-		$this->setService( 'HttpRequestFactory', $this->mockBadHTTPFactory( $url, 'text' ) );
-		$mcsContentProvider = $this->makeMcsContentProvider( self::BASE_URL, $mockOutputPage );
+		$this->setService( 'HttpRequestFactory', $this->mockBadHTTPFactory() );
+		$mcsContentProvider = $this->makeMcsContentProvider( self::BASE_URL, $title );
 		$actual = $mcsContentProvider->getHTML();
 
 		$this->assertSame( '', $actual );
@@ -125,15 +85,7 @@ class McsContentProviderTest extends MediaWikiTestCase {
 	 * @covers ::getHTML
 	 */
 	public function testGetHtmlWithNoTitle() {
-		$mockOutputPage = $this->getMockBuilder( OutputPage::class )
-			->disableOriginalConstructor()
-			->setMethods( [ 'getTitle' ] )
-			->getMock();
-
-		$mockOutputPage->method( 'getTitle' )
-			->willReturn( null );
-
-		$mcsContentProvider = $this->makeMcsContentProvider( self::BASE_URL, $mockOutputPage );
+		$mcsContentProvider = $this->makeMcsContentProvider( self::BASE_URL, null );
 
 		$actual = $mcsContentProvider->getHTML();
 		$this->assertSame( '', $actual );
@@ -143,22 +95,10 @@ class McsContentProviderTest extends MediaWikiTestCase {
 	 * @covers ::getHTML
 	 */
 	public function testGetHtmlWithOperationNotOkay() {
-		$mockStatusFalse = $this->createMock( StatusValue::class );
-		$mockStatusFalse->method( 'isOK' )
-			->willReturn( false );
-
-		$httpFalseRequestMock = $this->getMockForAbstractClass(
-			MWHttpRequest::class,
-			[],
-			'',
-			false,
-			false,
-			true,
-			[ 'execute' ]
-		);
+		$httpFalseRequestMock = $this->createMock( MWHttpRequest::class );
 
 		$httpFalseRequestMock->method( 'execute' )
-			->willReturn( $mockStatusFalse );
+			->willReturn( StatusValue::newFatal( 'fatal' ) );
 
 		$factoryMock = $this->createMock( HttpRequestFactory::class );
 		$factoryMock->expects( $this->once() )
@@ -166,10 +106,10 @@ class McsContentProviderTest extends MediaWikiTestCase {
 			->with( self::BASE_URL . '/page/mobile-sections/Test_Title' )
 			->willReturn( $httpFalseRequestMock );
 
-		$mockOutputPage = $this->mockOutputPage( $this->createTestTitle() );
+		$title = $this->createTestTitle();
 
 		$this->setService( 'HttpRequestFactory', $factoryMock );
-		$mcsContentProvider = $this->makeMcsContentProvider( self::BASE_URL, $mockOutputPage );
+		$mcsContentProvider = $this->makeMcsContentProvider( self::BASE_URL, $title );
 		$actual = $mcsContentProvider->getHTML();
 
 		$this->assertSame( '', $actual );
@@ -180,11 +120,11 @@ class McsContentProviderTest extends MediaWikiTestCase {
 	 * @covers ::fileGetContents
 	 */
 	public function testGetHtmlWithResponseDecodedNotArray() {
-		$mockOutputPage = $this->mockOutputPage( $this->createTestTitle() );
+		$title = $this->createTestTitle();
 
 		$url = self::BASE_URL . '/page/mobile-sections/Test_Title';
 		$this->setService( 'HttpRequestFactory', $this->mockHTTPFactory( $url, 'text' ) );
-		$mcsContentProvider = $this->makeMcsContentProvider( self::BASE_URL, $mockOutputPage );
+		$mcsContentProvider = $this->makeMcsContentProvider( self::BASE_URL, $title );
 		$actual = $mcsContentProvider->getHTML();
 
 		$this->assertSame( '', $actual );
@@ -199,11 +139,11 @@ class McsContentProviderTest extends MediaWikiTestCase {
 	public function testGetHtmlWithValidResponse() {
 		$sampleResponse = '{"lead": {"sections": [{"text": "value"}]}, "remaining": {"sections": ' .
 			'[{"line": "l", "toclevel": 1, "text": "t"}]}}';
-		$mockOutputPage = $this->mockOutputPage( $this->createTestTitle() );
+		$title = $this->createTestTitle();
 
 		$url = self::BASE_URL . '/page/mobile-sections/Test_Title';
 		$this->setService( 'HttpRequestFactory', $this->mockHTTPFactory( $url, $sampleResponse ) );
-		$mcsContentProvider = $this->makeMcsContentProvider( self::BASE_URL, $mockOutputPage );
+		$mcsContentProvider = $this->makeMcsContentProvider( self::BASE_URL, $title );
 		$actual = $mcsContentProvider->getHTML();
 
 		$expected = "value<h2>l</h2>t";
