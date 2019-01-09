@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f5bf75f_40beb619",
+        "filename": "resources/mobile.categories.overlays/CategoryGateway.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-09T20:54:44Z",
+      "side": 1,
+      "message": "Using `params` here would be more consistent with the new naming.",
+      "range": {
+        "startLine": 59,
+        "startChar": 20,
+        "endLine": 59,
+        "endChar": 25
+      },
+      "revId": "fe82aad7df522a2370370f8502d0e6913ca38760",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "befb6c79_96017d33",
+        "filename": "src/mobile.startup/actionParams.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-09T20:54:44Z",
+      "side": 1,
+      "message": "`Params`",
+      "range": {
+        "startLine": 2,
+        "startChar": 8,
+        "endLine": 2,
+        "endChar": 13
+      },
+      "revId": "fe82aad7df522a2370370f8502d0e6913ca38760",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "76654501_9144f48f",
+        "filename": "src/mobile.startup/actionParams.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-09T20:54:44Z",
+      "side": 1,
+      "message": "`params` seems more appropriate with the new name.",
+      "range": {
+        "startLine": 12,
+        "startChar": 23,
+        "endLine": 12,
+        "endChar": 33
+      },
+      "revId": "fe82aad7df522a2370370f8502d0e6913ca38760",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
