@@ -429,17 +429,22 @@
 			],
 			"scripts": [
 				"resources/mobile.editor.overlay/BlockMessage.js",
-				"resources/mobile.editor.overlay/EditorOverlay.js"
+				"resources/mobile.editor.overlay/EditorOverlay.js",
+				"resources/mobile.editor.overlay/VisualEditorOverlay.js"
 			],
 			"styles": [
-				"resources/mobile.editor.overlay/BlockMessage.less"
+				"resources/mobile.editor.overlay/BlockMessage.less",
+				"resources/mobile.editor.overlay/editor.ve.less"
 			],
 			"templates": {
+				"contentVE.hogan": "resources/mobile.editor.overlay/contentVE.hogan",
+				"toolbarVE.hogan": "resources/mobile.editor.overlay/toolbarVE.hogan",
 				"BlockMessage.hogan": "resources/mobile.editor.overlay/BlockMessage.hogan",
 				"content.hogan": "resources/mobile.editor.overlay/content.hogan"
 			},
 			"messages": [
 				"ok",
+				"mobile-frontend-editor-editing",
 				"mobile-frontend-editor-blocked-drawer-title",
 				"mobile-frontend-editor-blocked-drawer-title-partial",
 				"mobile-frontend-editor-blocked-drawer-reason-header",

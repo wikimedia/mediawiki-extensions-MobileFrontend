@@ -527,9 +527,7 @@
 				return mw.libs.ve.targetLoader.loadModules( 'visual' );
 			} ).then(
 				function () {
-					// mobile.editor.ve is loaded by the addPlugin call above, but the
-					// resource-modules linter doesn't notice this, so disable on next line.
-					var VisualEditorOverlay = M.require( 'mobile.editor.ve/VisualEditorOverlay' ); // resource-modules-disable-line
+					var VisualEditorOverlay = M.require( 'mobile.editor.overlay/VisualEditorOverlay' );
 
 					self.hideSpinner();
 					self.overlayManager.replaceCurrent( new VisualEditorOverlay( options ) );

@@ -999,24 +999,11 @@ class MobileFrontendHooks {
 				'mobile.editor.ve' => $resourceBoilerplate + [
 					'dependencies' => [
 						'ext.visualEditor.mobileArticleTarget',
-						'mobile.editor.common',
-						'mobile.editor.api',
+						'mobile.editor.overlay',
 						'mobile.startup',
 					],
 					'scripts' => [
-						'resources/mobile.editor.ve/ve.init.mw.MobileFrontendArticleTarget.js',
-						'resources/mobile.editor.ve/VisualEditorOverlay.js',
-					],
-					'styles' => [
-						'resources/mobile.editor.ve/editor.ve.less',
-					],
-					'templates' => [
-						'contentVE.hogan' => 'resources/mobile.editor.ve/contentVE.hogan',
-						'toolbarVE.hogan' => 'resources/mobile.editor.ve/toolbarVE.hogan',
-					],
-					'messages' => [
-						'mobile-frontend-page-edit-summary',
-						'mobile-frontend-editor-editing',
+						'resources/mobile.editor.ve/ve.init.mw.MobileFrontendArticleTarget.js'
 					],
 					'targets' => [
 						'mobile',

@@ -162,8 +162,8 @@
 				logInit( 'visualeditor' );
 				// Inform other interested code that we're loading the editor
 				mw.hook( 'mobileFrontend.editorOpening' ).fire();
-				return loader.loadModule( 'mobile.editor.ve' ).then( function () {
-					var VisualEditorOverlay = M.require( 'mobile.editor.ve/VisualEditorOverlay' );
+				return loader.loadModule( [ 'mobile.editor.ve' ] ).then( function () {
+					var VisualEditorOverlay = M.require( 'mobile.editor.overlay/VisualEditorOverlay' );
 					return new VisualEditorOverlay( editorOptions );
 				}, loadSourceEditor );
 			} else {
