@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "054a141b_ccab3c1f",
+        "filename": "tests/phpunit/content-providers/MwApiContentProviderTest.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-01-09T21:40:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e81df47d_000b84bb",
+      "range": {
+        "startLine": 35,
+        "startChar": 2,
+        "endLine": 37,
+        "endChar": 24
+      },
+      "revId": "7f1f1b8f1072f7c7375673978001f0c6bc16e01f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7bf310f5_dd1b17a4",
         "filename": "tests/phpunit/content-providers/MwApiContentProviderTest.php",
         "patchSetId": 8
@@ -36,6 +60,30 @@
       "writtenOn": "2019-01-08T16:46:41Z",
       "side": 1,
       "message": "as Thiemo said, we can use $this-\u003ecreateMock()",
+      "range": {
+        "startLine": 39,
+        "startChar": 21,
+        "endLine": 46,
+        "endChar": 30
+      },
+      "revId": "7f1f1b8f1072f7c7375673978001f0c6bc16e01f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "36e75cb0_273177d7",
+        "filename": "tests/phpunit/content-providers/MwApiContentProviderTest.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-01-09T21:40:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7bf310f5_dd1b17a4",
       "range": {
         "startLine": 39,
         "startChar": 21,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "05449ae6_423bf519",
+        "filename": "tests/phpunit/content-providers/MwApiContentProviderTest.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-01-09T21:40:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "23701d62_890483d3",
+      "range": {
+        "startLine": 67,
+        "startChar": 2,
+        "endLine": 69,
+        "endChar": 25
+      },
+      "revId": "7f1f1b8f1072f7c7375673978001f0c6bc16e01f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "22c202e0_cd80dfaa",
         "filename": "tests/phpunit/content-providers/MwApiContentProviderTest.php",
         "patchSetId": 8
@@ -82,6 +154,30 @@
       "writtenOn": "2019-01-08T16:46:41Z",
       "side": 1,
       "message": "please verify that all data is set, you\u0027ll need to mock a couple more methods in the OutputPage mock (addModules, addModuleStyles, setProperty, addJsConfigVars and setLanguageLinks)",
+      "range": {
+        "startLine": 183,
+        "startChar": 25,
+        "endLine": 188,
+        "endChar": 31
+      },
+      "revId": "7f1f1b8f1072f7c7375673978001f0c6bc16e01f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f205978c_4052e68e",
+        "filename": "tests/phpunit/content-providers/MwApiContentProviderTest.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 188,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-01-09T21:40:28Z",
+      "side": 1,
+      "message": "Yes, I agree with you, will handle this in PS10. PS9 applies the feedback above!",
+      "parentUuid": "22c202e0_cd80dfaa",
       "range": {
         "startLine": 183,
         "startChar": 25,
