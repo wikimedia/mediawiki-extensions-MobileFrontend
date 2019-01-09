@@ -20,7 +20,7 @@ var
 				touched: '2018-05-01T01:39:12Z',
 				lastrevid: 10,
 				length: 3,
-				'new': true,
+				new: true,
 				watched: false
 			}, {
 				pageid: 456,
@@ -33,7 +33,7 @@ var
 				touched: '2018-05-01T01:43:31Z',
 				lastrevid: 24,
 				length: 3,
-				'new': true,
+				new: true,
 				watched: true
 			} ]
 		}

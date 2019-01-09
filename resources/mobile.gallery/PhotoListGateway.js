@@ -15,7 +15,7 @@
 		this.category = options.category;
 		this.limit = 10;
 		this.continueParams = {
-			'continue': ''
+			continue: ''
 		};
 		this.canContinue = true;
 	}
