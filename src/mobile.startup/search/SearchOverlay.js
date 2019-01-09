@@ -169,7 +169,7 @@ mfExtend( SearchOverlay, Overlay, {
 			// Firefox doesn't allow submission of a form not in the DOM
 			// so temporarily re-add it
 			$form.appendTo( $el );
-			$form.submit();
+			$form.trigger( 'submit' );
 		}, 0 );
 	},
 

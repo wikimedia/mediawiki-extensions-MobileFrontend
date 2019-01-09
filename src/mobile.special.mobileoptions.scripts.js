@@ -27,7 +27,8 @@ function createLabel( heading, description ) {
 	var $label = $( '<div>' );
 	$label.append( $( '<strong>' ).text( heading ) );
 	$label.append(
-		$( '<div class="option-description">' )
+		$( '<div>' )
+			.addClass( 'option-description' )
 			.text( description )
 	);
 
@@ -159,7 +160,7 @@ function infuseToggles( toggleElements, $form ) {
 			// Let's call submit on the form after toggle button transition is done
 			// (0.25s, defined in OOUI)
 			setTimeout( function () {
-				$form.submit();
+				$form.trigger( 'submit' );
 			}, 250 );
 		} );
 	} );

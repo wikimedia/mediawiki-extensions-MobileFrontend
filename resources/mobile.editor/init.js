@@ -91,7 +91,7 @@
 					contentDir: $content.attr( 'dir' ),
 					sessionId: user.generateRandomSessionId()
 				},
-				visualEditorNamespaces = veConfig && veConfig.namespaces,
+				visualEditorNamespaces = ( veConfig && veConfig.namespaces ) || [],
 				initMechanism = mw.util.getParamValue( 'redlink' ) ? 'new' : 'click';
 
 			/**
@@ -144,7 +144,7 @@
 				page.isWikiText() &&
 
 				// Only in enabled namespaces
-				$.inArray( mw.config.get( 'wgNamespaceNumber' ), visualEditorNamespaces ) > -1 &&
+				visualEditorNamespaces.indexOf( mw.config.get( 'wgNamespaceNumber' ) ) !== -1 &&
 
 				// Not on pages which are outputs of the Page Translation feature
 				mw.config.get( 'wgTranslatePageTranslation' ) !== 'translation' &&
