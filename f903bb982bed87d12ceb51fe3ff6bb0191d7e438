@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b5a29544_167f2857",
+        "filename": "extension.json",
+        "patchSetId": 9
+      },
+      "lineNbr": 374,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-09T21:07:24Z",
+      "side": 0,
+      "message": "Hot stuff.",
+      "revId": "f903bb982bed87d12ceb51fe3ff6bb0191d7e438",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "34f1ed65_32ff0a84",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 455,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-09T21:07:24Z",
+      "side": 1,
+      "message": "This works well but seems like a hack. Will this contaminate other extensions? If so, please consider adding a comment.",
+      "range": {
+        "startLine": 455,
+        "startChar": 3,
+        "endLine": 455,
+        "endChar": 49
+      },
+      "revId": "d593ad0db2b4d464599202a9e127427a1a9fdd20",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
