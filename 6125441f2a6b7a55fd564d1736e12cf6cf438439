@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "910f652a_9d4ce542",
+        "filename": "src/mobile.startup/rlModuleLoader.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-09T18:55:29Z",
+      "side": 1,
+      "message": "Should this be `string[]`?",
+      "range": {
+        "startLine": 20,
+        "startChar": 19,
+        "endLine": 20,
+        "endChar": 24
+      },
+      "revId": "6125441f2a6b7a55fd564d1736e12cf6cf438439",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
