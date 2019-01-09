@@ -600,9 +600,7 @@
 				"resources/mobile.mediaViewer/mediaViewer.less"
 			],
 			"scripts": [
-				"resources/mobile.mediaViewer/LoadErrorMessage.js",
-				"resources/mobile.mediaViewer/ImageGateway.js",
-				"resources/mobile.mediaViewer/ImageOverlay.js"
+				"resources/dist/mobile.mediaViewer.js"
 			],
 			"templates": {
 				"LoadErrorMessage.hogan": "resources/mobile.mediaViewer/LoadErrorMessage.hogan",
