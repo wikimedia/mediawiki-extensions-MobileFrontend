@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2c3510e2_aafcbdb1",
+        "filename": "extension.json",
+        "patchSetId": 15
+      },
+      "lineNbr": 644,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-09T21:38:20Z",
+      "side": 1,
+      "message": "Maybe we should call this CategoryTab.",
+      "range": {
+        "startLine": 644,
+        "startChar": 68,
+        "endLine": 644,
+        "endChar": 84
+      },
+      "revId": "1f49da5e4bc0fe50147081df8490a9ab26256418",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2bc9873e_1bbe5c56",
+        "filename": "resources/mobile.categories.overlays/CategoryTabs.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-09T21:38:20Z",
+      "side": 1,
+      "message": "I think this is undefined.",
+      "range": {
+        "startLine": 38,
+        "startChar": 54,
+        "endLine": 38,
+        "endChar": 85
+      },
+      "revId": "1f49da5e4bc0fe50147081df8490a9ab26256418",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
