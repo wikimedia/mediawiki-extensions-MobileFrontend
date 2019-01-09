@@ -13,6 +13,7 @@ const
 		tests: 'tests.mobilefrontend',
 		hogan: 'mediawiki.template.hogan',
 		startup: 'mobile.startup',
+		notifications: 'mobile.notifications.overlay',
 		mediaViewer: 'mobile.mediaViewer',
 		languages: 'mobile.languages.structured'
 	};
@@ -58,8 +59,9 @@ module.exports = {
 		// If we utilize webpack lazy loading instead of resource loader lazy
 		// loading, we won't be required to explicitly create this new chunk and
 		// this can be removed.
-		// T210209
 		[ENTRIES.mediaViewer]: './src/mobile.mediaViewer/mobile.mediaViewer.js',
+		// T213111
+		[ENTRIES.notifications]: './src/mobile.notifications.overlay/mobile.notifications.overlay.js',
 		// T210210
 		[ENTRIES.languages]: './src/mobile.languages.structured/mobile.languages.structured.js'
 	},
@@ -121,6 +123,7 @@ module.exports = {
 					enforce: true,
 					// Only consider splitting chunks off of these whitelisted entry names
 					chunks: ( chunk ) => [ ENTRIES.startup,
+						ENTRIES.notifications,
 						ENTRIES.mediaViewer, ENTRIES.languages ].includes( chunk.name )
 				}
 			}

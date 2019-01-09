@@ -67,6 +67,10 @@
       "maxSize": "1.7KB"
     },
     {
+      "path": "resources/dist/mobile.notifications.overlay.js",
+      "maxSize": "1.4KB"
+    },
+    {
       "path": "resources/dist/mobile.mediaViewer.js",
       "maxSize": "2.3KB"
     }

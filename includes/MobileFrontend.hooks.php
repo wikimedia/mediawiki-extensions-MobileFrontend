@@ -1033,8 +1033,7 @@ class MobileFrontendHooks {
 						'oojs-ui.styles.icons-interactions',
 					],
 					'scripts' => [
-						'resources/mobile.notifications.overlay/NotificationsOverlay.js',
-						'resources/mobile.notifications.overlay/NotificationsFilterOverlay.js',
+						'resources/dist/mobile.notifications.overlay.js',
 					],
 					'styles' => [
 						'resources/mobile.notifications.overlay/NotificationsOverlay.less',
@@ -1048,13 +1047,6 @@ class MobileFrontendHooks {
 						'echo-overlay-link',
 						'echo-mark-all-as-read-confirmation',
 					],
-					'targets' => [ 'mobile', 'desktop' ],
-				],
-				'mobile.notifications.filter.overlay' => [
-					'dependencies' => [
-						'mobile.notifications.overlay',
-					],
-					'deprecated' => 'Please use "mobile.notifications.overlay" instead.',
 					'targets' => [ 'mobile', 'desktop' ],
 				],
 			] );
