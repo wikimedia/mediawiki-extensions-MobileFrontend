@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "00349bf6_ad1e4fb5",
+        "filename": "src/mobile.startup/Drawer.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-09T21:15:18Z",
+      "side": 1,
+      "message": "Are `this.appendToElement` and `this.$el.parent()` one and the same? If so, consider renaming `appendToElement` to `parentElement` and replacing `this.$el.parent()` usages.",
+      "range": {
+        "startLine": 98,
+        "startChar": 17,
+        "endLine": 98,
+        "endChar": 37
+      },
+      "revId": "d314df4a12e5a25fb120b288f5f079a4590aa258",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
