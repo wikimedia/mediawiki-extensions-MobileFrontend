@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "6598ae91_28488e37",
+        "filename": "resources/mobile.categories.overlays/CategoryGateway.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-09T20:55:52Z",
+      "side": 1,
+      "message": "roger that!",
+      "parentUuid": "5f5bf75f_40beb619",
+      "range": {
+        "startLine": 59,
+        "startChar": 20,
+        "endLine": 59,
+        "endChar": 25
+      },
+      "revId": "fe82aad7df522a2370370f8502d0e6913ca38760",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "befb6c79_96017d33",
         "filename": "src/mobile.startup/actionParams.js",
         "patchSetId": 8
