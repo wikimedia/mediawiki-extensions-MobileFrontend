@@ -142,6 +142,30 @@
       "revId": "71ab64dc9a1535964d4f363693318605b62732a6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "53c2fb44_58c89d44",
+        "filename": "extension.json",
+        "patchSetId": 7
+      },
+      "lineNbr": 552,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-09T21:24:59Z",
+      "side": 1,
+      "message": "\u003e src/components/TalkBoard.js\n\nIf we organize by feature, this naming may be problematic. I propose something like:\n\n- src/talk/TalkBoard.js (model)\n- src/talk/TalkBoardView.js\n- src/talk/TalkGateway.js\n\nTalkOverlay then composes TalkBoardView with its dependencies, the TalkBoard model and TalkGateway.",
+      "parentUuid": "c8c9e702_6d899525",
+      "range": {
+        "startLine": 552,
+        "startChar": 40,
+        "endLine": 552,
+        "endChar": 45
+      },
+      "revId": "71ab64dc9a1535964d4f363693318605b62732a6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
