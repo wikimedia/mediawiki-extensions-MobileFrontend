@@ -187,19 +187,6 @@
 				"resources/dist/mediawiki.template.hogan.js"
 			]
 		},
-		"mobile.watchlist": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"dependencies": [
-				"mobile.startup"
-			],
-			"scripts": [
-				"resources/mobile.watchlist/WatchListGateway.js",
-				"resources/mobile.watchlist/WatchList.js"
-			]
-		},
 		"mobile.toc": {
 			"targets": [
 				"mobile",
@@ -765,11 +752,10 @@
 			"dependencies": [
 				"mediawiki.api",
 				"mobile.startup",
-				"mobile.watchlist",
 				"user.options"
 			],
 			"scripts": [
-				"resources/mobile.special.watchlist.scripts/watchlist.js"
+				"resources/dist/mobile.special.watchlist.scripts.js"
 			]
 		},
 		"mobile.special.mobilecite.styles": {

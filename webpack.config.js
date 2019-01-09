@@ -15,7 +15,8 @@ const
 		startup: 'mobile.startup',
 		notifications: 'mobile.notifications.overlay',
 		mediaViewer: 'mobile.mediaViewer',
-		languages: 'mobile.languages.structured'
+		languages: 'mobile.languages.structured',
+		watchlist: 'mobile.special.watchlist.scripts'
 	};
 
 module.exports = {
@@ -63,7 +64,9 @@ module.exports = {
 		// T213111
 		[ENTRIES.notifications]: './src/mobile.notifications.overlay/mobile.notifications.overlay.js',
 		// T210210
-		[ENTRIES.languages]: './src/mobile.languages.structured/mobile.languages.structured.js'
+		[ENTRIES.languages]: './src/mobile.languages.structured/mobile.languages.structured.js',
+		// T212823 Make a chunk for each mobile special page
+		[ENTRIES.watchlist]: './src/mobile.special.watchlist.scripts/mobile.special.watchlist.scripts.js'
 	},
 
 	// tests.mobilefrontend has additional dependencies but they're provided externally. This code
@@ -102,12 +105,14 @@ module.exports = {
 				vendors: false,
 				// TT210210: This was undesirably added when trying to get lazy loaded
 				// modules to work (e.g. ENTRIES.languages). It will excise modules
-				// shared between lazy loaded chunks and mobile.startup into a new
-				// 'mobile.common' chunk. Ideally, the common chunk would be merged into
-				// the mobile.startup chunk and would not exist. However, there was
+				// shared between the chunks listed in the whitelist entry array into a
+				// new 'mobile.common' chunk. Ideally, the common chunk would be merged
+				// into the mobile.startup chunk and would not exist. However, there was
 				// difficulty in making webpack cleanly do this. When we overcome
 				// webpack lazy loading hurdles (or figure out a way to make webpack use
-				// mobile.startup as the common chunk), we won't be required to do this.
+				// mobile.startup as the common chunk), we won't be required to do this
+				// for lazy loaded chunks although it might still be valuable for
+				// special page chunks.
 				common: {
 					name: 'mobile.common',
 					// Minimum num of chunks module must share before excising into common
@@ -122,9 +127,13 @@ module.exports = {
 					// this cacheGroup
 					enforce: true,
 					// Only consider splitting chunks off of these whitelisted entry names
-					chunks: ( chunk ) => [ ENTRIES.startup,
+					chunks: ( chunk ) => [
+						ENTRIES.startup,
 						ENTRIES.notifications,
-						ENTRIES.mediaViewer, ENTRIES.languages ].includes( chunk.name )
+						ENTRIES.mediaViewer,
+						ENTRIES.languages,
+						ENTRIES.watchlist
+					].includes( chunk.name )
 				}
 			}
 		}
