@@ -300,7 +300,7 @@ class MobileFormatter extends HtmlFormatter {
 		foreach ( $doc->getElementsByTagName( 'img' ) as $element ) {
 			$domElemsToReplace[] = $element;
 		}
-		/** @var $element DOMElement */
+		/** @var DOMElement $element */
 		foreach ( $domElemsToReplace as $element ) {
 			$alt = $element->getAttribute( 'alt' );
 			if ( $alt === '' ) {
