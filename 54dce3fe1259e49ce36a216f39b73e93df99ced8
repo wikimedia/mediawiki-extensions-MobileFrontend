@@ -22,6 +22,30 @@
       "revId": "54dce3fe1259e49ce36a216f39b73e93df99ced8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6fdf20fe_1996b95d",
+        "filename": "webpack.config.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-10T16:15:17Z",
+      "side": 1,
+      "message": "We\u0027re not introducing any new code to mobile.startup that\u0027s not already there.\n\nNotificationsOverlay only uses Overlay, util and Anchor all of which are already used by LanguageOverlay and all within mobile.startup.\n\n\u003e ag Anchor resources/dist/mobile.common.js\n\u003e ag Overlay resources/dist/mobile.common.js\n\u003e ag util resources/dist/mobile.common.js\n\n\u003e the last chunk added here reduced the bundle size, \nAs I\u0027d expect, I\u0027m not seeing any reduction to the bundle size. Can you clarify what you mean here?",
+      "parentUuid": "c09815b7_943c8c4d",
+      "range": {
+        "startLine": 126,
+        "startChar": 6,
+        "endLine": 126,
+        "endChar": 28
+      },
+      "revId": "54dce3fe1259e49ce36a216f39b73e93df99ced8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
