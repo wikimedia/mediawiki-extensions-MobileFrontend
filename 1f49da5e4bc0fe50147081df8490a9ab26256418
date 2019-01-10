@@ -93,6 +93,30 @@
       "revId": "1f49da5e4bc0fe50147081df8490a9ab26256418",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a573852_44384817",
+        "filename": "resources/mobile.categories.overlays/CategoryTabs.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-10T00:30:53Z",
+      "side": 1,
+      "message": "Given that we\u0027re striving to keep our files small, isolated, and understood in a single read, my preference would be to remove redundant code such as this. I understand an argument could be made that this is a defensive practice, but personally I find it confusing since I can look up in the file and see that it is undefined and then I wonder if some terrible client sets it. I guess a minor point but there\u0027s my 2 cents.",
+      "parentUuid": "3f1883b3_7b7b6022",
+      "range": {
+        "startLine": 38,
+        "startChar": 54,
+        "endLine": 38,
+        "endChar": 85
+      },
+      "revId": "1f49da5e4bc0fe50147081df8490a9ab26256418",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
