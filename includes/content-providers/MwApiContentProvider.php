@@ -32,12 +32,16 @@ class MwApiContentProvider implements IContentProvider {
 	 * @param OutputPage $out so that the ResourceLoader modules specific to the page can be added
 	 * @param string $skinName the skin name the content is being provided for
 	 * @param int|null $revId optional
+	 * @param bool $provideTagline optional
 	 */
-	public function __construct( $baseUrl, OutputPage $out, $skinName, $revId = null ) {
+	public function __construct( $baseUrl, OutputPage $out, $skinName, $revId = null,
+		$provideTagline = false
+	) {
 		$this->baseUrl = $baseUrl;
 		$this->out = $out;
 		$this->skinName = $skinName;
 		$this->revId = $revId;
+		$this->provideTagline = $provideTagline;
 	}
 
 	/**
@@ -61,7 +65,7 @@ class MwApiContentProvider implements IContentProvider {
 	 */
 	public function getHTML() {
 		$out = $this->out;
-		$query = 'action=parse&prop=text|modules|properties|langlinks';
+		$query = 'action=parse&prop=revid|text|modules|properties|langlinks';
 		$url = $this->baseUrl . '?formatversion=2&format=json&' . $query;
 		if ( $this->revId ) {
 			$url .= '&oldid=' . rawurlencode( $this->revId );
@@ -81,13 +85,21 @@ class MwApiContentProvider implements IContentProvider {
 
 			$out->addModules( $parse['modules'] );
 			$out->addModuleStyles( $parse['modulestyles'] );
+			$parserProps = $parse['properties'];
+			if ( $this->provideTagline && isset( $parserProps['wikibase-shortdesc'] ) ) {
+				// special handling for wikidata descriptions (T212216)
+				// Note, due to varnish cache, ContentProviders run on OutputPage, but
+				// currently ParserOutput is used for Wikidata descriptions which happens before this
+				$out->setProperty( 'wgMFDescription', $parserProps['wikibase-shortdesc'] );
+			}
 			// Copy page properties across
-			foreach ( $parse['properties'] as $key => $val ) {
+			foreach ( $parserProps as $key => $val ) {
 				$out->setProperty( $key, $val );
 			}
 			// Forward certain variables so that the page is not registered as "missing"
 			$out->addJsConfigVars( [
 				'wgArticleId' => $parse['pageid'],
+				'wgRevisionId' => $parse['revid'],
 			] );
 			if ( array_key_exists( 'langlinks', $parse ) ) {
 				$langlinks = [];

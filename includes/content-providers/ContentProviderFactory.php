@@ -25,11 +25,15 @@ class ContentProviderFactory {
 	 * @param OutputPage $out to allow the addition of modules and styles
 	 *  as required by the content
 	 * @param string $html available HTML
+	 * @param bool $provideTagline (optional) whether wikidata descriptions
+	 *  should be provided for if the provider supports it.
 	 * @throws RuntimeException Thrown when specified ContentProvider doesn't exist
 	 * @return IContentProvider
 	 * @suppress SecurityCheck-XSS OutputPage::getHtml is a hack, but safe html
 	 */
-	public static function getProvider( Config $config, OutputPage $out, $html ) {
+	public static function getProvider( Config $config, OutputPage $out, $html,
+		$provideTagline = false
+	) {
 		$contentProviderClass = $config->get( 'MFContentProviderClass' );
 
 		if ( !class_exists( $contentProviderClass ) ) {
@@ -50,7 +54,7 @@ class ContentProviderFactory {
 				$skinName = $out->getSkin()->getSkinName();
 				$rev = $out->getRequest()->getIntOrNull( 'oldid' );
 				$baseUrl = $config->get( 'MFMwApiContentProviderBaseUri' );
-				return new MwApiContentProvider( $baseUrl, $out, $skinName, $rev );
+				return new MwApiContentProvider( $baseUrl, $out, $skinName, $rev, $provideTagline );
 			case self::PHP_PARSER:
 				return self::getDefaultParser( $html );
 			default:
