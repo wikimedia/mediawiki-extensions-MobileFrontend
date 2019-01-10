@@ -16,6 +16,24 @@
       "revId": "248c18700eb86ae88161b68a40626d61ce25cde6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0f0f5b8b_aef371bb",
+        "filename": "src/mobile.mediaViewer/ImageGateway.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-10T16:36:19Z",
+      "side": 0,
+      "message": "How about:\n\n module.exports \u003d {\n   ImageGateway,\n   test: { findSizeBucket }\n }",
+      "parentUuid": "08926bd9_0119d699",
+      "revId": "248c18700eb86ae88161b68a40626d61ce25cde6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
