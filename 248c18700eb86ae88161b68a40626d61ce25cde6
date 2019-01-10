@@ -34,6 +34,24 @@
       "revId": "248c18700eb86ae88161b68a40626d61ce25cde6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7c2d3bd7_3a163943",
+        "filename": "src/mobile.mediaViewer/ImageGateway.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-10T17:49:33Z",
+      "side": 0,
+      "message": "Can but requires updating the existing imports to ImageGateway so I shied away from it.\n\nShall I abandon this patchset then?",
+      "parentUuid": "0f0f5b8b_aef371bb",
+      "revId": "248c18700eb86ae88161b68a40626d61ce25cde6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
