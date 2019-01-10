@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6efcb1ff_cc0de5af",
+        "filename": "src/mobile.mediaViewer/findSizeBucket.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-10T15:42:46Z",
+      "side": 1,
+      "message": "I think that separating this code improves the testability of it given the crazy dependencies required for the gateway. However, unless we can share this code elsewhere, I\u0027m not sure the concern makes much sense to isolate.\n\nI don\u0027t feel strongly about this and it\u0027s easy to collapse back into the gateway so feel free to self-+2 if you find it useful.",
+      "revId": "32c40409c7b78abd33f9ed6f705da1c470b9078d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
