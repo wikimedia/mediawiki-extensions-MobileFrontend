@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f9345da_d760c36c",
+        "filename": "src/mobile.startup/Skin.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-10T20:09:16Z",
+      "side": 1,
+      "message": "While I think your changes here make complete sense I\u0027m struggling to see how they match to the spike questions. What is your proposal about this call here? Keeping it? Changing it?",
+      "revId": "1c7887ea13a866fccf6e5d38c86475a7d29a8834",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7e3b86b0_0abe20c7",
+        "filename": "src/mobile.startup/Skin.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 211,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-10T20:09:16Z",
+      "side": 1,
+      "message": "Indent problem",
+      "revId": "1c7887ea13a866fccf6e5d38c86475a7d29a8834",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "924fc77f_353e2dac",
+        "filename": "src/mobile.startup/lazyImages/lazyImageLoader.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-10T20:09:16Z",
+      "side": 1,
+      "message": "do we even need the callbacks var?",
+      "revId": "1c7887ea13a866fccf6e5d38c86475a7d29a8834",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "99a851c9_7405b3d8",
+        "filename": "src/mobile.startup/lazyImages/lazyImageLoader.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-10T20:09:16Z",
+      "side": 1,
+      "message": "Why not one single module.exports at the end of the file?",
+      "revId": "1c7887ea13a866fccf6e5d38c86475a7d29a8834",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5be4a11f_2df173e9",
+        "filename": "src/mobile.startup/lazyImages/lazyImageLoader.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-10T20:09:16Z",
+      "side": 1,
+      "message": "Should/can we chain here?",
+      "revId": "1c7887ea13a866fccf6e5d38c86475a7d29a8834",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d70ef966_0fe87cf2",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-10T20:09:16Z",
+      "side": 1,
+      "message": "Do we need to export this publicly?\nIs there any benefit of making this accessible to extensions/skins?",
+      "revId": "1c7887ea13a866fccf6e5d38c86475a7d29a8834",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
