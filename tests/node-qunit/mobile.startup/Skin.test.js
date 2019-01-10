@@ -53,11 +53,11 @@ QUnit.module( 'MobileFrontend Skin.js', {
 	}
 } );
 
-QUnit.test( '#lazyLoadReferences', function ( assert ) {
+QUnit.test( '#lazyLoadReferences collapsed', function ( assert ) {
 	var $content = util.parseHTML( '<div>' ).append( pages.skinPage );
 
 	return this.skin.lazyLoadReferences( {
-		wasExpanded: false,
+		expanded: false,
 		page: this.skin.page,
 		isReferenceSection: true,
 		$heading: $content.find( '#Notes_and_references' ).parent()
@@ -66,6 +66,20 @@ QUnit.test( '#lazyLoadReferences', function ( assert ) {
 			'TextPNotesARefsBno forgetMore refs1E2F3',
 			'Check all the references section is populated correctly.' );
 	} );
+} );
+
+QUnit.test( '#lazyLoadReferences expanded', function ( assert ) {
+	var
+		$content = util.parseHTML( '<div>' ).append( pages.skinPage ),
+		result;
+
+	result = this.skin.lazyLoadReferences( {
+		expanded: true,
+		page: this.skin.page,
+		isReferenceSection: true,
+		$heading: $content.find( '#Notes_and_references' ).parent()
+	} );
+	assert.strictEqual( result, undefined );
 } );
 
 QUnit.test( '#getSectionId', function ( assert ) {

@@ -51,8 +51,7 @@ function getSectionId( $el ) {
  * @fires Skin#changed
  * @param {Object} params Configuration options
  * @param {OO.EventEmitter} params.eventBus Object used to listen for
- * before-section-toggled, scroll:throttled, resize:throttled, and
- * section-toggled events
+ * scroll:throttled, resize:throttled, and section-toggled events
  */
 function Skin( params ) {
 	var self = this,
@@ -78,7 +77,7 @@ function Skin( params ) {
 	}
 
 	if ( mw.config.get( 'wgMFLazyLoadReferences' ) ) {
-		this.eventBus.on( 'before-section-toggled', this.lazyLoadReferences.bind( this ) );
+		this.eventBus.on( 'section-toggled', this.lazyLoadReferences.bind( this ) );
 	}
 }
 
@@ -212,14 +211,8 @@ mfExtend( Skin, View, {
 	 * All references tags content will be loaded per section.
 	 * @memberof Skin
 	 * @instance
-	 * @param {Object} data Information about the section. It's in the following form:
-	 * {
-	 *     @property {string} page,
-	 *     @property {boolean} wasExpanded,
-	 *     @property {jQuery.Object} $heading,
-	 *     @property {boolean} isReferenceSection
-	 * }
-	 * @return {jQuery.Promise} rejected when not a reference section.
+	 * @param {ToggledEvent} data Information about the section.
+	 * @return {jQuery.Promise|void} rejected when not a reference section.
 	 */
 	lazyLoadReferences: function ( data ) {
 		var $content, $spinner,
@@ -232,7 +225,7 @@ mfExtend( Skin, View, {
 		// Also return early if lazy loading is not required or the section is
 		// not a reference section
 		if (
-			data.wasExpanded ||
+			data.expanded ||
 			!data.isReferenceSection
 		) {
 			return;

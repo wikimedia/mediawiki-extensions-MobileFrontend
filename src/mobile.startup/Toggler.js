@@ -8,17 +8,24 @@ var browser = require( './Browser' ).getSingleton(),
 	Icon = require( './Icon' );
 
 /**
+ *
+ * @typedef {Object} ToggledEvent
+ * @prop {boolean} expanded True if section is opened, false if closed.
+ * @prop {Page} page
+ * @prop {boolean} isReferenceSection
+ * @prop {JQuery.Object} $heading
+ */
+
+/**
  * A class for enabling toggling
  *
  * @class Toggler
  * @param {Object} options
- * @param {OO.EventEmitter} options.eventBus Object used to emit before-section-toggled
- * and section-toggled events
+ * @param {OO.EventEmitter} options.eventBus Object used to emit section-toggled events.
  * @param {jQuery.Object} options.$container to apply toggling to
  * @param {string} options.prefix a prefix to use for the id.
  * @param {Page} [options.page] to allow storage of session for future visits
- * @param {Page} [options.isClosed] whether the element should begin closed
- * and section-toggled events
+ * @param {Page} [options.isClosed]
  */
 function Toggler( options ) {
 	this.eventBus = options.eventBus;
@@ -33,9 +40,7 @@ function Toggler( options ) {
  * @return {Object} representing open sections
  */
 function getExpandedSections( page ) {
-	var expandedSections = JSON.parse(
-		mw.storage.get( 'expandedSections' ) || '{}'
-	);
+	var expandedSections = JSON.parse( mw.storage.get( 'expandedSections' ) || '{}' );
 	expandedSections[page.title] = expandedSections[page.title] || {};
 	return expandedSections;
 }
@@ -132,7 +137,6 @@ Toggler.prototype.toggle = function ( $heading ) {
 	var indicator,
 		wasExpanded = $heading.is( '.open-block' ),
 		page = $heading.data( 'page' ),
-		sectionNumber = $heading.data( 'section-number' ),
 		$content = $heading.next();
 
 	$heading.toggleClass( 'open-block' );
@@ -141,23 +145,6 @@ Toggler.prototype.toggle = function ( $heading ) {
 	arrowOptions.rotation = wasExpanded ? 0 : 180;
 	indicator = new Icon( arrowOptions ).prependTo( $heading );
 	$heading.data( 'indicator', indicator );
-
-	/**
-	 * Global event emitted before a section is being toggled
-	 *
-	 * @event section-toggling
-	 * @type {Object}
-	 * @property {Page} page
-	 * @property {bool} wasExpanded
-	 * @property {bool} isReferenceSection
-	 * @property {jQuery.Object} $heading
-	 */
-	this.eventBus.emit( 'before-section-toggled', {
-		page: page,
-		wasExpanded: wasExpanded,
-		$heading: $heading,
-		isReferenceSection: Boolean( $content.attr( 'data-is-reference-section' ) )
-	} );
 
 	$content
 		.toggleClass( 'open-block' )
@@ -169,11 +156,14 @@ Toggler.prototype.toggle = function ( $heading ) {
 	/**
 	 * Global event emitted after a section has been toggled
 	 * @event section-toggled
-	 * @type {Object}
-	 * @property {bool} wasExpanded
-	 * @property {number} sectionNumber
+	 * @type {ToggledEvent}
 	 */
-	this.eventBus.emit( 'section-toggled', wasExpanded, sectionNumber );
+	this.eventBus.emit( 'section-toggled', {
+		expanded: wasExpanded,
+		page: page,
+		isReferenceSection: Boolean( $content.attr( 'data-is-reference-section' ) ),
+		$heading: $heading
+	} );
 
 	if ( !browser.isWideScreen() ) {
 		storeSectionToggleState( $heading, page );
