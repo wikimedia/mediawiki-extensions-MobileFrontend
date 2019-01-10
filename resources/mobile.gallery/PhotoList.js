@@ -2,7 +2,7 @@
 	var icons = M.require( 'mobile.startup/icons' ),
 		PhotoListGateway = M.require( 'mobile.gallery/PhotoListGateway' ),
 		PhotoItem = M.require( 'mobile.gallery/PhotoItem' ),
-		ScrollEndEventEmitter = M.require( 'mobile.scrollEndEventEmitter/ScrollEndEventEmitter' ),
+		ScrollEndEventEmitter = M.require( 'mobile.startup' ).ScrollEndEventEmitter,
 		View = M.require( 'mobile.startup/View' );
 
 	/**

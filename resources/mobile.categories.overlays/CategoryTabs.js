@@ -1,7 +1,7 @@
 ( function ( M ) {
 
 	var View = M.require( 'mobile.startup/View' ),
-		ScrollEndEventEmitter = M.require( 'mobile.scrollEndEventEmitter/ScrollEndEventEmitter' ),
+		ScrollEndEventEmitter = M.require( 'mobile.startup' ).ScrollEndEventEmitter,
 		CategoryGateway = M.require( 'mobile.categories.overlays/CategoryGateway' );
 
 	/**

@@ -38,7 +38,8 @@ var
 	SearchOverlay = require( './search/SearchOverlay' ),
 	schemaMobileWebSearch = require( './search/schemaMobileWebSearch' ),
 	MobileWebSearchLogger = require( './search/MobileWebSearchLogger' ),
-	SearchGateway = require( './search/SearchGateway' );
+	SearchGateway = require( './search/SearchGateway' ),
+	ScrollEndEventEmitter = require( './ScrollEndEventEmitter' );
 
 mw.mobileFrontend = moduleLoader;
 
@@ -128,7 +129,8 @@ module.exports = {
 		SearchOverlay: SearchOverlay,
 		MobileWebSearchLogger: MobileWebSearchLogger,
 		SearchGateway: SearchGateway
-	}
+	},
+	ScrollEndEventEmitter: ScrollEndEventEmitter
 };
 
 // Setup a single export for new modules to fold all of the above lines into.

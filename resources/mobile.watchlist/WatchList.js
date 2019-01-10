@@ -2,7 +2,7 @@
 	var
 		PageList = M.require( 'mobile.startup/PageList' ),
 		WatchstarPageList = M.require( 'mobile.startup' ).WatchstarPageList,
-		ScrollEndEventEmitter = M.require( 'mobile.scrollEndEventEmitter/ScrollEndEventEmitter' ),
+		ScrollEndEventEmitter = M.require( 'mobile.startup' ).ScrollEndEventEmitter,
 		util = M.require( 'mobile.startup/util' ),
 		WatchListGateway = M.require( 'mobile.watchlist/WatchListGateway' );
 
