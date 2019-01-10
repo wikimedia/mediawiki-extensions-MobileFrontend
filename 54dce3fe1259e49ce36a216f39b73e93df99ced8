@@ -46,6 +46,30 @@
       "revId": "54dce3fe1259e49ce36a216f39b73e93df99ced8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fdeb8412_ec110358",
+        "filename": "webpack.config.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-10T16:54:33Z",
+      "side": 1,
+      "message": "Ah, make sense. Thanks for checking this. No further concerns on my part.",
+      "parentUuid": "6fdf20fe_1996b95d",
+      "range": {
+        "startLine": 126,
+        "startChar": 6,
+        "endLine": 126,
+        "endChar": 28
+      },
+      "revId": "54dce3fe1259e49ce36a216f39b73e93df99ced8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
