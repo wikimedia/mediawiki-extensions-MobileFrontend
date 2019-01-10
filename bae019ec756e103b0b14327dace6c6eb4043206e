@@ -16,6 +16,24 @@
       "revId": "bae019ec756e103b0b14327dace6c6eb4043206e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a0b253c0_cacbc7a3",
+        "filename": "includes/content-providers/MwApiContentProvider.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-01-10T21:24:53Z",
+      "side": 1,
+      "message": "Yeah. This makes sense since PHP interprets \u0027\u0027 as a false, the alternative will work also. Now the which one is cleaner, in this case, since we know if operation fails, we should return \u0027\u0027, I think I would go for;\n```\nif ( $resp \u003d\u003d\u003d \u0027\u0027 ) {\n    return $resp;\n}\n```\n\nReason being that maybe sometime in the future, we may want to expand on $this-\u003efileGetContents() to return other things different from \u0027\u0027?",
+      "parentUuid": "d7661a8e_2e8dccdf",
+      "revId": "bae019ec756e103b0b14327dace6c6eb4043206e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
