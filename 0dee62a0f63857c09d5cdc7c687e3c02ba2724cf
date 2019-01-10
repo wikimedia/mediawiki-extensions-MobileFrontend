@@ -1,0 +1,159 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e0ab9499_addb2687",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-10T17:25:24Z",
+      "side": 1,
+      "message": "Why do we want to request this module through ResourceLoader if it\u0027s now in mobile.common.js?",
+      "range": {
+        "startLine": 13,
+        "startChar": 21,
+        "endLine": 14,
+        "endChar": 54
+      },
+      "revId": "0dee62a0f63857c09d5cdc7c687e3c02ba2724cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "398e6a6b_41719c12",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-10T17:25:24Z",
+      "side": 1,
+      "message": "I thought you were thinking of moving scrollEndEventEmitter.js under src/mobile.startup explicitly?",
+      "range": {
+        "startLine": 28,
+        "startChar": 15,
+        "endLine": 28,
+        "endChar": 52
+      },
+      "revId": "0dee62a0f63857c09d5cdc7c687e3c02ba2724cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "764d08d1_76389e48",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-10T17:25:24Z",
+      "side": 1,
+      "message": "This sounds like a fine change to make regardless of the reason but I don\u0027t quite follow why the headless tests choked on M.require.",
+      "range": {
+        "startLine": 37,
+        "startChar": 0,
+        "endLine": 37,
+        "endChar": 60
+      },
+      "revId": "0dee62a0f63857c09d5cdc7c687e3c02ba2724cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e33a169_c1eaf4c0",
+        "filename": "src/mobile.watchlist/WatchList.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-10T17:25:24Z",
+      "side": 1,
+      "message": "On a scale of 1 to Webpack, how angry would you be if I asked you to separate this change into a new patchset?\n\nAs near as I can tell, there are no outside users of this constructor, no one extends it, and the ancestors don\u0027t use an eventBus property but it still seems a little risky. It makes sense if you want to keep it all in this patchset and I support you, but please double check usages.",
+      "range": {
+        "startLine": 28,
+        "startChar": 30,
+        "endLine": 28,
+        "endChar": 59
+      },
+      "revId": "0dee62a0f63857c09d5cdc7c687e3c02ba2724cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bbb8f538_2f7fdc57",
+        "filename": "src/mobile.watchlist/mobile.watchlist.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-10T17:25:24Z",
+      "side": 1,
+      "message": "Jon\u0027s been using lowercase m for requires lately... Not sure which we want. For parameters, we use capital M. Nothing to block this patch but something to think about.",
+      "range": {
+        "startLine": 4,
+        "startChar": 1,
+        "endLine": 4,
+        "endChar": 58
+      },
+      "revId": "0dee62a0f63857c09d5cdc7c687e3c02ba2724cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ed9d6c5d_74aa6037",
+        "filename": "src/mobile.watchlist/mobile.watchlist.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-10T17:25:24Z",
+      "side": 1,
+      "message": "Maybe our bundle size would be better of scrollEndEventEmitter was Webpackified and we could use a plain require.",
+      "range": {
+        "startLine": 5,
+        "startChar": 25,
+        "endLine": 5,
+        "endChar": 90
+      },
+      "revId": "0dee62a0f63857c09d5cdc7c687e3c02ba2724cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bf55fb7a_dbf79a8c",
+        "filename": "src/mobile.watchlist/mobile.watchlist.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-10T17:25:24Z",
+      "side": 1,
+      "message": "Do we need any M.define thingies here?",
+      "revId": "0dee62a0f63857c09d5cdc7c687e3c02ba2724cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
