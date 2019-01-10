@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dda9c89d_5013690b",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-10T23:53:51Z",
+      "side": 1,
+      "message": "As resource-modules complains, you\u0027ll need to update all usages of ScrollEndEventEmitter as part of this change\n\n(mobile.scrollEndEventEmitter/ScrollEndEventEmitter not defined in any source files)\n\nThis module is not used anywhere outside MobileFrontend so you can actually skip adding this line.",
+      "revId": "945a07de231df9491a31fcb2b4605aefa43313c7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
