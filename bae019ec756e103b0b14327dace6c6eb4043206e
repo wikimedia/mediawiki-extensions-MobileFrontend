@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d7661a8e_2e8dccdf",
+        "filename": "includes/content-providers/MwApiContentProvider.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-10T21:18:34Z",
+      "side": 1,
+      "message": "could just return $resp right?\n\nAlternatively, if ( !$resp ) { return \u0027\u0027; }",
+      "revId": "bae019ec756e103b0b14327dace6c6eb4043206e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
