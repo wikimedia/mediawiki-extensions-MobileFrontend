@@ -65,7 +65,7 @@ class LegacyMainPageTransform implements IMobileTransform, MessageLocalizer {
 		}
 
 		// Go through all the collected Main Page DOM elements and format them for mobile
-		/** @var $element DOMElement */
+		/** @var DOMElement $element */
 		foreach ( $elements as $element ) {
 			if ( $element->hasAttribute( 'id' ) ) {
 				$id = $element->getAttribute( 'id' );
