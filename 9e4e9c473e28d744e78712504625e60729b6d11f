@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "cae3a4f4_79cc3ca4",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 235,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-10T02:07:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9efcddaa_b55941f8",
+      "revId": "9e4e9c473e28d744e78712504625e60729b6d11f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6fc0673c_31f61459",
         "filename": "resources/mobile.special.mobileoptions.scripts/mobileoptions.js",
         "patchSetId": 1
@@ -47,6 +65,24 @@
       "writtenOn": "2019-01-08T23:36:35Z",
       "side": 1,
       "message": "Please add jsdoc documenting the function signature so we can understand what these things are without having to read the rest of the code at a later date.",
+      "revId": "9e4e9c473e28d744e78712504625e60729b6d11f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bba26922_87d0d9d6",
+        "filename": "resources/mobile.special.mobileoptions.scripts/mobileoptions.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-10T02:07:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6fc0673c_31f61459",
       "revId": "9e4e9c473e28d744e78712504625e60729b6d11f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -70,6 +106,24 @@
     },
     {
       "key": {
+        "uuid": "700a4233_24d83b25",
+        "filename": "resources/mobile.special.mobileoptions.scripts/mobileoptions.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-10T02:07:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5473deaa_f1280339",
+      "revId": "9e4e9c473e28d744e78712504625e60729b6d11f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "62900a56_5e5538a9",
         "filename": "resources/mobile.special.mobileoptions.scripts/mobileoptions.js",
         "patchSetId": 1
@@ -81,6 +135,24 @@
       "writtenOn": "2019-01-08T23:36:35Z",
       "side": 1,
       "message": "nice! Any reason not to make this method infuseToggles  and pass an array of inputs in ?",
+      "revId": "9e4e9c473e28d744e78712504625e60729b6d11f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1e70c1b5_18c88add",
+        "filename": "resources/mobile.special.mobileoptions.scripts/mobileoptions.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 172,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-10T02:07:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "62900a56_5e5538a9",
       "revId": "9e4e9c473e28d744e78712504625e60729b6d11f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
