@@ -135,7 +135,7 @@ mfExtend( Skin, View, {
 	 * @instance
 	 * @param {jQuery.Object} [$container] The container that should be
 	 *  searched for image placeholders. Defaults to "#content".
-	 * @return {Array} of unloaded image placeholders in the page
+	 * @return {HTMLElement[]} of unloaded image placeholders in the page
 	 */
 	getUnloadedImages: function ( $container ) {
 		$container = $container || this.$( '#content' );
@@ -196,7 +196,7 @@ mfExtend( Skin, View, {
 			}
 
 			// load any remaining images.
-			return lazyImageLoader.loadImages( self.$.bind( self ), images );
+			return lazyImageLoader.loadImages( images );
 		}
 
 		this.eventBus.on( 'scroll:throttled', _loadImages );
@@ -242,7 +242,7 @@ mfExtend( Skin, View, {
 
 		function loadImagesAndSetData() {
 			// lazy load images if any
-			lazyImageLoader.loadImages( self.$.bind( self ), getUnloadedImages( $content ) );
+			lazyImageLoader.loadImages( getUnloadedImages( $content ) );
 			// Do not attempt further loading even if we're unable to load this time.
 			$content.data( 'are-references-loaded', 1 );
 		}

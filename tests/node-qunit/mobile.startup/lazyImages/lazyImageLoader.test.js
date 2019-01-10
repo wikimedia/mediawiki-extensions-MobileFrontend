@@ -1,5 +1,3 @@
-/* global $ */
-
 var
 	jQuery = require( '../../utils/jQuery' ),
 	dom = require( '../../utils/dom' ),
@@ -26,7 +24,7 @@ QUnit.test( '#loadImages (success)', function ( assert ) {
 	var stub = sandbox.stub( lazyImageLoader, 'loadImage' )
 		.returns( util.Deferred().resolve() );
 
-	return lazyImageLoader.loadImages( $.find, [
+	return lazyImageLoader.loadImages( [
 		util.parseHTML( '<div>' ), util.parseHTML( '<div>' )
 	] ).then( function () {
 		assert.strictEqual( stub.callCount, 2,
@@ -40,7 +38,7 @@ QUnit.test( '#loadImages (one image fails)', function ( assert ) {
 	stub.onCall( 0 ).returns( util.Deferred().resolve() );
 	stub.onCall( 1 ).returns( util.Deferred().reject() );
 
-	return lazyImageLoader.loadImages( $.find, [
+	return lazyImageLoader.loadImages( [
 		util.parseHTML( '<div>' ), util.parseHTML( '<div>' )
 	] ).catch( function () {
 		assert.strictEqual( stub.callCount, 2,
@@ -49,7 +47,7 @@ QUnit.test( '#loadImages (one image fails)', function ( assert ) {
 } );
 
 QUnit.test( '#loadImages (empty list)', function ( assert ) {
-	return lazyImageLoader.loadImages( $.find, [] ).then( function () {
+	return lazyImageLoader.loadImages( [] ).then( function () {
 		assert.ok( true, 'An empty list always resolves successfully' );
 	} );
 } );

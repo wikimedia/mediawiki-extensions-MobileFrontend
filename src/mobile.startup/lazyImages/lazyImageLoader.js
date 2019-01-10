@@ -1,41 +1,46 @@
-var
-	util = require( '../util' ),
-	Deferred = util.Deferred,
-	when = util.when;
+var util = require( '../util' );
 
 /**
  * Load an image on demand
- * @param {JQuery.find} find
- * @param {Array} images a list of images that have not been loaded.
+ * @param {HTMLElement[]|JQuery.find} placeholdersOrDeprecatedFind a list of images that have not
+ *                                                                 been loaded.
+ * @param {HTMLElement[]} deprecatedPlaceholders
  * @return {jQuery.Deferred}
  */
-module.exports.loadImages = function ( find, images ) {
-	var callbacks = images.map( function ( placeholder ) {
-		return module.exports.loadImage( find( placeholder ) );
-	} );
+module.exports.loadImages = function ( placeholdersOrDeprecatedFind, deprecatedPlaceholders ) {
+	var placeholders =
+		typeof placeholdersOrDeprecatedFind === 'function' ?
+			deprecatedPlaceholders :
+			placeholdersOrDeprecatedFind;
 
-	return when.apply( null, callbacks );
+	// jQuery.when() is variadic and does not accept an array. Simulate spread with apply.
+	return util.when.apply( util, placeholders.map( function ( placeholder ) {
+		return module.exports.loadImage( placeholder );
+	} )
+	);
 };
 
 /**
  * Load an image on demand
- * @param {jQuery.Object} $placeholder
+ * @param {HTMLElement} placeholder
  * @return {jQuery.Deferred}
  */
-module.exports.loadImage = function ( $placeholder ) {
+module.exports.loadImage = function ( placeholder ) {
 	var
-		d = Deferred(),
-		width = $placeholder.attr( 'data-width' ),
-		height = $placeholder.attr( 'data-height' ),
+		d = util.Deferred(),
+		width = placeholder.getAttribute( 'data-width' ),
+		height = placeholder.getAttribute( 'data-height' ),
 		// document must be passed to ensure image will start downloading
-		$downloadingImage = util.parseHTML( '<img>', $placeholder[0].ownerDocument );
+		$downloadingImage = util.parseHTML( '<img>', placeholder.ownerDocument );
 
 	// When the image has loaded
 	$downloadingImage.on( 'load', function () {
 		// Swap the HTML inside the placeholder (to keep the layout and
 		// dimensions the same and not trigger layouts
 		$downloadingImage.addClass( 'image-lazy-loaded' );
-		$placeholder.replaceWith( $downloadingImage );
+		if ( placeholder.parentNode ) {
+			placeholder.parentNode.replaceChild( $downloadingImage[0], placeholder );
+		}
 		d.resolve();
 	} );
 	$downloadingImage.on( 'error', function () {
@@ -44,13 +49,13 @@ module.exports.loadImage = function ( $placeholder ) {
 
 	// Trigger image download after binding the load handler
 	$downloadingImage.attr( {
-		class: $placeholder.attr( 'data-class' ),
+		class: placeholder.getAttribute( 'data-class' ),
 		width: width,
 		height: height,
-		src: $placeholder.attr( 'data-src' ),
-		alt: $placeholder.attr( 'data-alt' ),
-		style: $placeholder.attr( 'style' ),
-		srcset: $placeholder.attr( 'data-srcset' )
+		src: placeholder.getAttribute( 'data-src' ),
+		alt: placeholder.getAttribute( 'data-alt' ),
+		style: placeholder.getAttribute( 'style' ),
+		srcset: placeholder.getAttribute( 'data-srcset' )
 	} );
 	return d;
 };
