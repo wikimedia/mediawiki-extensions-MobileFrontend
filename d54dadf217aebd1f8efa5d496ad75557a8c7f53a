@@ -1,0 +1,337 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "606e2725_ba776608",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-10T16:33:25Z",
+      "side": 1,
+      "message": "Is this an experiment? From what I can tell, it seems as sure a thing as any of the code we write.",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 65
+      },
+      "revId": "d54dadf217aebd1f8efa5d496ad75557a8c7f53a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "817cf509_fb90fe80",
+        "filename": "extension.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 1197,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-10T16:33:25Z",
+      "side": 1,
+      "message": "What do you think of adding this to the readme?",
+      "range": {
+        "startLine": 1197,
+        "startChar": 3,
+        "endLine": 1197,
+        "endChar": 32
+      },
+      "revId": "d54dadf217aebd1f8efa5d496ad75557a8c7f53a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d9fbefa9_7c5fb6e2",
+        "filename": "i18n/qqq.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 324,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-10T16:33:25Z",
+      "side": 1,
+      "message": "Consider linking to the project page: https://www.mediawiki.org/wiki/Reading/Web/Advanced_mobile_contributions",
+      "range": {
+        "startLine": 324,
+        "startChar": 62,
+        "endLine": 324,
+        "endChar": 114
+      },
+      "revId": "d54dadf217aebd1f8efa5d496ad75557a8c7f53a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e5a9f0d7_7bc5f085",
+        "filename": "i18n/qqq.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 324,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-10T16:33:25Z",
+      "side": 1,
+      "message": "Is AMC a temporary experiment?",
+      "range": {
+        "startLine": 324,
+        "startChar": 36,
+        "endLine": 324,
+        "endChar": 47
+      },
+      "revId": "d54dadf217aebd1f8efa5d496ad75557a8c7f53a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f650c8ea_a6857683",
+        "filename": "includes/amc/Manager.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-10T16:33:25Z",
+      "side": 1,
+      "message": "This seems to only manage whether the feature is enabled or disabled. Consider calling this FeatureManager. What do you think of writing this in a more functional style? This class effectively manages the state of a boolean and I wonder if that justifies its existence.",
+      "revId": "d54dadf217aebd1f8efa5d496ad75557a8c7f53a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ad4326c_77469d78",
+        "filename": "includes/amc/Manager.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-10T16:33:25Z",
+      "side": 1,
+      "message": "Do we want to cache this information? Why not calculate it on each invocation? Do you think we\u0027d ever notice the performance hit?",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 22
+      },
+      "revId": "d54dadf217aebd1f8efa5d496ad75557a8c7f53a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "36a54b46_60bca6ed",
+        "filename": "includes/amc/Manager.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-10T16:33:25Z",
+      "side": 1,
+      "message": "Since Manager accepts user information, is it possible to collapse this class and the UserManager class?",
+      "range": {
+        "startLine": 24,
+        "startChar": 47,
+        "endLine": 24,
+        "endChar": 54
+      },
+      "revId": "d54dadf217aebd1f8efa5d496ad75557a8c7f53a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cbc64703_d7a1fc3f",
+        "filename": "includes/amc/UserMode.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-10T16:33:25Z",
+      "side": 1,
+      "message": "This class looks like it would benefit from some unit tests.",
+      "revId": "d54dadf217aebd1f8efa5d496ad75557a8c7f53a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a0f7355_b49d57d4",
+        "filename": "includes/amc/UserMode.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-10T16:33:25Z",
+      "side": 1,
+      "message": "This looks like a prefix for a set of options. What do you think of calling this mf_amc_mode?\n\nAlso, consider changing this to an enumeration (0, 1, 2, 3, ...) where 0 is DEFAULT_MODE and 1 is ADVANCED_MODE which would allow for more modes as needed.",
+      "range": {
+        "startLine": 10,
+        "startChar": 31,
+        "endLine": 10,
+        "endChar": 37
+      },
+      "revId": "d54dadf217aebd1f8efa5d496ad75557a8c7f53a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f5118bb1_338acfea",
+        "filename": "includes/amc/UserMode.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-10T16:33:25Z",
+      "side": 1,
+      "message": "How about $manager?",
+      "range": {
+        "startLine": 19,
+        "startChar": 9,
+        "endLine": 19,
+        "endChar": 13
+      },
+      "revId": "d54dadf217aebd1f8efa5d496ad75557a8c7f53a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3bffc75f_d1695dbe",
+        "filename": "includes/amc/UserMode.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-10T16:33:25Z",
+      "side": 1,
+      "message": "Since this is a local and there is only one manager, $manager seems more appropriate given the AMC Manager class itself doesn\u0027t offer the distinction.",
+      "range": {
+        "startLine": 27,
+        "startChar": 38,
+        "endLine": 27,
+        "endChar": 49
+      },
+      "revId": "d54dadf217aebd1f8efa5d496ad75557a8c7f53a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6394b0d5_cfb31ac2",
+        "filename": "includes/amc/UserMode.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-10T16:33:25Z",
+      "side": 1,
+      "message": "How about `return $this-\u003eamc-\u003eisAvailable() \u0026\u0026 $this-\u003euser-\u003egetBoolOption( self::USER_OPTION_MODE_AMC )`?",
+      "range": {
+        "startLine": 37,
+        "startChar": 0,
+        "endLine": 40,
+        "endChar": 66
+      },
+      "revId": "d54dadf217aebd1f8efa5d496ad75557a8c7f53a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4f42198f_290924f5",
+        "filename": "includes/amc/UserMode.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-10T16:33:25Z",
+      "side": 1,
+      "message": "Is a local useful here? $this-\u003euser already seems nicely short.",
+      "range": {
+        "startLine": 52,
+        "startChar": 2,
+        "endLine": 52,
+        "endChar": 22
+      },
+      "revId": "d54dadf217aebd1f8efa5d496ad75557a8c7f53a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "39d04575_9bbceddc",
+        "filename": "includes/amc/UserMode.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-10T16:33:25Z",
+      "side": 1,
+      "message": "What does this do? Is it asynchronous?",
+      "range": {
+        "startLine": 55,
+        "startChar": 2,
+        "endLine": 55,
+        "endChar": 36
+      },
+      "revId": "d54dadf217aebd1f8efa5d496ad75557a8c7f53a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f4c27bcd_8766957b",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-10T16:33:25Z",
+      "side": 1,
+      "message": "What do you think about making a new function that just builds the AMC part of the form?",
+      "range": {
+        "startLine": 95,
+        "startChar": 0,
+        "endLine": 121,
+        "endChar": 5
+      },
+      "revId": "d54dadf217aebd1f8efa5d496ad75557a8c7f53a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
