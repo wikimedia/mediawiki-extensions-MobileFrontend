@@ -111,6 +111,24 @@
     },
     {
       "key": {
+        "uuid": "0d56be00_38db0ffa",
+        "filename": "includes/amc/Manager.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-10T16:52:39Z",
+      "side": 1,
+      "message": "\u003e What do you think of writing this in a more functional style?\n\nTo clarify, I\u0027m concerned we\u0027re adding a lot of state and code which can be an endless source of bugs.",
+      "parentUuid": "f650c8ea_a6857683",
+      "revId": "d54dadf217aebd1f8efa5d496ad75557a8c7f53a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ad4326c_77469d78",
         "filename": "includes/amc/Manager.php",
         "patchSetId": 3
