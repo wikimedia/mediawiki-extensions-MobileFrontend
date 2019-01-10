@@ -71,6 +71,23 @@
     },
     {
       "key": {
+        "uuid": "914e8a2b_15cb3aa6",
+        "filename": "extension.json",
+        "patchSetId": 8
+      },
+      "lineNbr": 772,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-10T19:46:36Z",
+      "side": 1,
+      "message": "As discussed, name should reflect module name for consistency\ne.g.\nresources/dist/mobile.special.watchlist.scripts.js",
+      "revId": "0dee62a0f63857c09d5cdc7c687e3c02ba2724cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e33a169_c1eaf4c0",
         "filename": "src/mobile.watchlist/WatchList.js",
         "patchSetId": 8
@@ -117,6 +134,30 @@
     },
     {
       "key": {
+        "uuid": "adb1a71c_378ace17",
+        "filename": "src/mobile.watchlist/mobile.watchlist.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-10T19:46:36Z",
+      "side": 1,
+      "message": "yeh I figured since this is a singleton not a class that made more sense.",
+      "parentUuid": "bbb8f538_2f7fdc57",
+      "range": {
+        "startLine": 4,
+        "startChar": 1,
+        "endLine": 4,
+        "endChar": 58
+      },
+      "revId": "0dee62a0f63857c09d5cdc7c687e3c02ba2724cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ed9d6c5d_74aa6037",
         "filename": "src/mobile.watchlist/mobile.watchlist.js",
         "patchSetId": 8
@@ -140,6 +181,30 @@
     },
     {
       "key": {
+        "uuid": "bced4fdd_5e8d763c",
+        "filename": "src/mobile.watchlist/mobile.watchlist.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-10T19:46:36Z",
+      "side": 1,
+      "message": "Yeh I\u0027d suggest folding mobile.scrollEndEventEmitter into mobile.startup first which would remove the need for any of this.",
+      "parentUuid": "ed9d6c5d_74aa6037",
+      "range": {
+        "startLine": 5,
+        "startChar": 25,
+        "endLine": 5,
+        "endChar": 90
+      },
+      "revId": "0dee62a0f63857c09d5cdc7c687e3c02ba2724cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "bf55fb7a_dbf79a8c",
         "filename": "src/mobile.watchlist/mobile.watchlist.js",
         "patchSetId": 8
@@ -151,6 +216,40 @@
       "writtenOn": "2019-01-10T17:25:24Z",
       "side": 1,
       "message": "Do we need any M.define thingies here?",
+      "revId": "0dee62a0f63857c09d5cdc7c687e3c02ba2724cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a413d690_6b6ef889",
+        "filename": "src/mobile.watchlist/mobile.watchlist.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-10T19:46:36Z",
+      "side": 1,
+      "message": "Note this task https://phabricator.wikimedia.org/T213279 - while we\u0027re here, feels like a good opportunity to fix in a follow up.",
+      "revId": "0dee62a0f63857c09d5cdc7c687e3c02ba2724cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "572e4b3b_4e5f1342",
+        "filename": "src/mobile.watchlist/mobile.watchlist.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-10T19:46:36Z",
+      "side": 1,
+      "message": "We should probably move all this code into init, in a follow up and reduce this to $( init );",
       "revId": "0dee62a0f63857c09d5cdc7c687e3c02ba2724cf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
