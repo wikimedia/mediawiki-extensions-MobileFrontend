@@ -22,6 +22,23 @@
       "revId": "ebeabc9a21a1160ad44a0210510a4037be497e38",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e46d1b74_1d77b9c1",
+        "filename": "src/mobile.startup/toc/TableOfContents.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2019-01-11T19:16:18Z",
+      "side": 1,
+      "message": "Can you explain why it\u0027s better to inject this on postRender? It seems like having it in the template would be more predictable, as it wouldn\u0027t be prone to breakage if the template changes. \n\nAlso, a \u0027new\u0027 without a var feels like it\u0027s breaking our linting rules (if only in spirit :P) https://eslint.org/docs/rules/no-new",
+      "revId": "ebeabc9a21a1160ad44a0210510a4037be497e38",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
