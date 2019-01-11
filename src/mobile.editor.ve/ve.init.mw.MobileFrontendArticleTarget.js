@@ -276,9 +276,11 @@ MobileFrontendArticleTarget.prototype.showSaveDialog = function () {
  * @instance
  */
 MobileFrontendArticleTarget.prototype.saveComplete = function () {
+	var fragment = this.getSectionFragmentFromPage();
 	// Parent method
 	MobileFrontendArticleTarget.super.prototype.saveComplete.apply( this, arguments );
 
+	this.overlay.sectionLine = '#' + fragment;
 	this.overlay.onSaveComplete();
 };
 
