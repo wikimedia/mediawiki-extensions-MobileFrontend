@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "1a88fa19_353046b2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-11T10:58:07Z",
+      "side": 1,
+      "message": "The copy on Special:MobileOptions says it\u0027s experiment (please check the https://phabricator.wikimedia.org/T211197 Mockup)",
+      "parentUuid": "606e2725_ba776608",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 65
+      },
+      "revId": "d54dadf217aebd1f8efa5d496ad75557a8c7f53a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "817cf509_fb90fe80",
         "filename": "extension.json",
         "patchSetId": 3
@@ -94,6 +118,54 @@
     },
     {
       "key": {
+        "uuid": "a6c20e0e_779118bf",
+        "filename": "i18n/qqq.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 324,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-11T10:58:07Z",
+      "side": 1,
+      "message": "The copy says that. if it goes stable then we will remove the \"experiment\" part from the label (leave only \"mobile-frontend-mobile-option-amc-description\").\n\nIf you check the Mockup from https://phabricator.wikimedia.org/T211197 it used to say \"it\u0027s an experiment to ....\", but now I see there is different mockup.",
+      "parentUuid": "e5a9f0d7_7bc5f085",
+      "range": {
+        "startLine": 324,
+        "startChar": 36,
+        "endLine": 324,
+        "endChar": 47
+      },
+      "revId": "d54dadf217aebd1f8efa5d496ad75557a8c7f53a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eaf8eb51_63bb1ae8",
+        "filename": "i18n/qqq.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 324,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-11T10:58:07Z",
+      "side": 1,
+      "message": "is there a way to link to the project page?? I didn\u0027t see any occurrences where we link to the http page in qqq.json files",
+      "parentUuid": "d9fbefa9_7c5fb6e2",
+      "range": {
+        "startLine": 324,
+        "startChar": 62,
+        "endLine": 324,
+        "endChar": 114
+      },
+      "revId": "d54dadf217aebd1f8efa5d496ad75557a8c7f53a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f650c8ea_a6857683",
         "filename": "includes/amc/Manager.php",
         "patchSetId": 3
@@ -129,6 +201,24 @@
     },
     {
       "key": {
+        "uuid": "2d9737cf_1bb8ceed",
+        "filename": "includes/amc/Manager.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-11T10:58:07Z",
+      "side": 1,
+      "message": "We already have a FeatureManager and it\u0027s a bit different thing. I don\u0027t think that having only Manager is a bad thing as it is in the AMC namespace. I\u0027d like to try avoid constructs like `AMC/AMCManager`.\n\nThis class is a place to store the global AMC state, for now, it\u0027s only deciding is it on or off. Later we will add checking the URL parameters here and maybe other stuff.\n\nI agree, currently, it stores only one state of boolean (with some super small logic how to calculate that boolean), but I couldn\u0027t see any other good place to store it. MobileContext is already a huge blob of everything, and the AMC/UserModel is a class that handles only User-related logic. This class handles the AMC global-related logic.",
+      "parentUuid": "f650c8ea_a6857683",
+      "revId": "d54dadf217aebd1f8efa5d496ad75557a8c7f53a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ad4326c_77469d78",
         "filename": "includes/amc/Manager.php",
         "patchSetId": 3
@@ -152,6 +242,30 @@
     },
     {
       "key": {
+        "uuid": "f7588e96_a59d70e3",
+        "filename": "includes/amc/Manager.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-11T10:58:07Z",
+      "side": 1,
+      "message": "that\u0027s a good question, I followed this rule because most probably that state will not change during the request. The only place where session user object changes are the login/logout pages.\n\nThe service gets initialized only when we need it, at that moment the session user object is most probably properly created/unset.",
+      "parentUuid": "5ad4326c_77469d78",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 22
+      },
+      "revId": "d54dadf217aebd1f8efa5d496ad75557a8c7f53a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "36a54b46_60bca6ed",
         "filename": "includes/amc/Manager.php",
         "patchSetId": 3
@@ -163,6 +277,30 @@
       "writtenOn": "2019-01-10T16:33:25Z",
       "side": 1,
       "message": "Since Manager accepts user information, is it possible to collapse this class and the UserManager class?",
+      "range": {
+        "startLine": 24,
+        "startChar": 47,
+        "endLine": 24,
+        "endChar": 54
+      },
+      "revId": "d54dadf217aebd1f8efa5d496ad75557a8c7f53a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6fefc7cd_1f40592f",
+        "filename": "includes/amc/Manager.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-11T10:58:07Z",
+      "side": 1,
+      "message": "Not really, this class is responsible for global AMC status. We pass `isAnon` only because we decided to disable the feature for anonymous users, if we decide to serve AMC for all users then the `isAnon` param will go away. Later we will pass `Request` object to allow enabling AMC by passing $_GET param. I want to follow Single Responsibility Rule - that\u0027s why I don\u0027t want to push everything into UserMode object.\n\nThe second thing is naming, now we have Manager::isAvailable() and UserMode::isEnabled(), if we decide to stuff everything into one class then we will need to come up with some more descriptive naming to indicate whether function checks the global AMC state or the user AMC state. With having two classes separate it\u0027s easier to maintain short names and logic is properly separated between MobileFrontend-centric logic and the User-centric logic.",
+      "parentUuid": "36a54b46_60bca6ed",
       "range": {
         "startLine": 24,
         "startChar": 47,
@@ -215,6 +353,30 @@
     },
     {
       "key": {
+        "uuid": "b9c11f5a_35a38f5a",
+        "filename": "includes/amc/UserMode.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-11T10:58:07Z",
+      "side": 1,
+      "message": "It\u0027s a good idea, I\u0027ll follow-up on this.",
+      "parentUuid": "9a0f7355_b49d57d4",
+      "range": {
+        "startLine": 10,
+        "startChar": 31,
+        "endLine": 10,
+        "endChar": 37
+      },
+      "revId": "d54dadf217aebd1f8efa5d496ad75557a8c7f53a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f5118bb1_338acfea",
         "filename": "includes/amc/UserMode.php",
         "patchSetId": 3
@@ -226,6 +388,30 @@
       "writtenOn": "2019-01-10T16:33:25Z",
       "side": 1,
       "message": "How about $manager?",
+      "range": {
+        "startLine": 19,
+        "startChar": 9,
+        "endLine": 19,
+        "endChar": 13
+      },
+      "revId": "d54dadf217aebd1f8efa5d496ad75557a8c7f53a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d7b14e89_3b035f89",
+        "filename": "includes/amc/UserMode.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-11T10:58:07Z",
+      "side": 1,
+      "message": "I used $amc as it reads much better, example:\n\n  if ( $this-\u003emanager-\u003eisAvailable() { .... });\n\nvs\n  \n  if ( $this-\u003eamc-\u003eisAvailable() { .... } );\n\n\nIn the first line you wonder - what is the manager, what it does, you need to verify whats that. \nIn the second line it\u0027s self explantory - if the amc is available - do something.",
+      "parentUuid": "f5118bb1_338acfea",
       "range": {
         "startLine": 19,
         "startChar": 9,
@@ -261,6 +447,30 @@
     },
     {
       "key": {
+        "uuid": "a07596ea_8a745b72",
+        "filename": "includes/amc/UserMode.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-11T10:58:07Z",
+      "side": 1,
+      "message": "check the previous comment",
+      "parentUuid": "3bffc75f_d1695dbe",
+      "range": {
+        "startLine": 27,
+        "startChar": 38,
+        "endLine": 27,
+        "endChar": 49
+      },
+      "revId": "d54dadf217aebd1f8efa5d496ad75557a8c7f53a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6394b0d5_cfb31ac2",
         "filename": "includes/amc/UserMode.php",
         "patchSetId": 3
@@ -272,6 +482,30 @@
       "writtenOn": "2019-01-10T16:33:25Z",
       "side": 1,
       "message": "How about `return $this-\u003eamc-\u003eisAvailable() \u0026\u0026 $this-\u003euser-\u003egetBoolOption( self::USER_OPTION_MODE_AMC )`?",
+      "range": {
+        "startLine": 37,
+        "startChar": 0,
+        "endLine": 40,
+        "endChar": 66
+      },
+      "revId": "d54dadf217aebd1f8efa5d496ad75557a8c7f53a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fd7308ea_73d9f931",
+        "filename": "includes/amc/UserMode.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-11T10:58:07Z",
+      "side": 1,
+      "message": "That\u0027s also a good way to put a check, I left if this way to make it more clear, that if AMC is not available just exit early without any other checks (like if we decide to add cookie handling here).",
+      "parentUuid": "6394b0d5_cfb31ac2",
       "range": {
         "startLine": 37,
         "startChar": 0,
@@ -307,6 +541,30 @@
     },
     {
       "key": {
+        "uuid": "57ac0ccb_9d0733a3",
+        "filename": "includes/amc/UserMode.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-11T10:58:07Z",
+      "side": 1,
+      "message": "it is required. The `$user` is passed via `use ( $user ... )` later, you need a local variable as you cannot pass the `$this-\u003euser`.",
+      "parentUuid": "4f42198f_290924f5",
+      "range": {
+        "startLine": 52,
+        "startChar": 2,
+        "endLine": 52,
+        "endChar": 22
+      },
+      "revId": "d54dadf217aebd1f8efa5d496ad75557a8c7f53a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "39d04575_9bbceddc",
         "filename": "includes/amc/UserMode.php",
         "patchSetId": 3
@@ -330,6 +588,30 @@
     },
     {
       "key": {
+        "uuid": "2c8ce326_4ffcb3c5",
+        "filename": "includes/amc/UserMode.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-11T10:58:07Z",
+      "side": 1,
+      "message": "In web request mode, deferred updates can be run at the end of the request, after the HTTP response has been sent. Because it is sent after serving HTTP response updating the database will not block clients.\n\nIn short, we postpone the database update till the end of the request to serve HTTP response asap.",
+      "parentUuid": "39d04575_9bbceddc",
+      "range": {
+        "startLine": 55,
+        "startChar": 2,
+        "endLine": 55,
+        "endChar": 36
+      },
+      "revId": "d54dadf217aebd1f8efa5d496ad75557a8c7f53a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f4c27bcd_8766957b",
         "filename": "includes/specials/SpecialMobileOptions.php",
         "patchSetId": 3
@@ -341,6 +623,30 @@
       "writtenOn": "2019-01-10T16:33:25Z",
       "side": 1,
       "message": "What do you think about making a new function that just builds the AMC part of the form?",
+      "range": {
+        "startLine": 95,
+        "startChar": 0,
+        "endLine": 121,
+        "endChar": 5
+      },
+      "revId": "d54dadf217aebd1f8efa5d496ad75557a8c7f53a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c9cd1dd5_0f77f249",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-11T10:58:07Z",
+      "side": 1,
+      "message": "I think that the Special:MobileOptions needs refactoring anyway, everything is built like that and I kept that \"style\" it to make it consistent.",
+      "parentUuid": "f4c27bcd_8766957b",
       "range": {
         "startLine": 95,
         "startChar": 0,
