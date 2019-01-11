@@ -4,7 +4,6 @@ var View = require( '../View' ),
 	util = require( '../util' ),
 	mfExtend = require( '../mfExtend' ),
 	toast = require( '../toast' ),
-	user = mw.user,
 	CtaDrawer = require( '../CtaDrawer' );
 
 /**
@@ -109,7 +108,7 @@ mfExtend( Watchstar, View, {
 		this.$el.attr( 'title', this.options.tooltip );
 
 		// Add watched class if necessary
-		if ( !user.isAnon() && this._watched ) {
+		if ( !mw.user.isAnon() && this._watched ) {
 			this.$el.addClass( watchedClass ).removeClass( unwatchedClass );
 		} else {
 			this.$el.addClass( unwatchedClass ).removeClass( watchedClass );
@@ -194,7 +193,7 @@ mfExtend( Watchstar, View, {
 	 * @instance
 	 */
 	onStatusToggle: function () {
-		if ( user.isAnon() ) {
+		if ( mw.user.isAnon() ) {
 			this.onStatusToggleAnon.apply( this, arguments );
 		} else {
 			this.onStatusToggleUser.apply( this, arguments );
