@@ -22,6 +22,30 @@
       "revId": "d69db83f8927dd4845607ff75e03a492c47bc67a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a8e6cca4_c3e7f2fa",
+        "filename": "includes/content-providers/MwApiContentProvider.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-11T00:43:15Z",
+      "side": 1,
+      "message": "\u003e Also, I\u0027m not sure, but wgMFDescription - looks like it\u0027s a js config, not property. shouldn\u0027t we use `$out-\u003eaddJsConfigVars()` for that?\nThis is not JS config.\nJS Config is ready later from OutputPage.\n\nWe could set wikibase-shortdesc but nothing I know of is using that directly so YAGNI?",
+      "parentUuid": "7a44f42c_4d36a10f",
+      "range": {
+        "startLine": 87,
+        "startChar": 19,
+        "endLine": 87,
+        "endChar": 36
+      },
+      "revId": "d69db83f8927dd4845607ff75e03a492c47bc67a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
