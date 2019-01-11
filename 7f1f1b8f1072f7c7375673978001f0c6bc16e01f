@@ -187,6 +187,30 @@
       "revId": "7f1f1b8f1072f7c7375673978001f0c6bc16e01f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "313525a9_56b11c05",
+        "filename": "tests/phpunit/content-providers/MwApiContentProviderTest.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 188,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-01-11T20:21:51Z",
+      "side": 1,
+      "message": "@Pmiazga, I\u0027ve got a question, these methods are actually used to set particular properties in the output page object (in this case) and these methods also have methods for getting the values of these properties after setting them. How can we mock the method that sets them?\n\nI\u0027ve dumped the $mwApiContentProvider object on L171 and seen that properties are actually set but it\u0027s not yet clear how to go about mocking the methods you mentioned, a little help please? :)",
+      "parentUuid": "f205978c_4052e68e",
+      "range": {
+        "startLine": 183,
+        "startChar": 25,
+        "endLine": 188,
+        "endChar": 31
+      },
+      "revId": "7f1f1b8f1072f7c7375673978001f0c6bc16e01f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
