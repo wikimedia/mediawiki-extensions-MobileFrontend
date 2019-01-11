@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d7954145_b1edbfeb",
+        "filename": "extension.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-11T00:20:24Z",
+      "side": 1,
+      "message": "Any reason not to rename this guy? Given that this is mingling with a bunch of other images, content-ltr seems too ambiguous to me. Also, what do you think about toc subdirectory to match the source subdirectory used?",
+      "range": {
+        "startLine": 220,
+        "startChar": 44,
+        "endLine": 220,
+        "endChar": 56
+      },
+      "revId": "ebeabc9a21a1160ad44a0210510a4037be497e38",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
