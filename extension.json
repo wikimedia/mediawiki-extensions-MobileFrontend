@@ -193,7 +193,6 @@
 				"desktop"
 			],
 			"dependencies": [
-				"mobile.scrollEndEventEmitter",
 				"mobile.startup"
 			],
 			"scripts": [
@@ -611,7 +610,6 @@
 				"mediawiki.router",
 				"mobile.startup",
 				"mobile.editor.common",
-				"mobile.scrollEndEventEmitter",
 				"oojs-ui.styles.icons-interactions",
 				"oojs-ui"
 			],
@@ -720,8 +718,7 @@
 				"desktop"
 			],
 			"dependencies": [
-				"mobile.startup",
-				"mobile.scrollEndEventEmitter"
+				"mobile.startup"
 			],
 			"templates": {
 				"PhotoItem.hogan": "resources/mobile.gallery/PhotoItem.hogan",
@@ -737,18 +734,6 @@
 				"resources/mobile.gallery/PhotoListGateway.js",
 				"resources/mobile.gallery/PhotoItem.js",
 				"resources/mobile.gallery/PhotoList.js"
-			]
-		},
-		"mobile.scrollEndEventEmitter": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"dependencies": [
-				"mobile.startup"
-			],
-			"scripts": [
-				"resources/mobile.scrollEndEventEmitter/ScrollEndEventEmitter.js"
 			]
 		},
 		"mobile.mainpage.css": {
