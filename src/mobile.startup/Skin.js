@@ -256,7 +256,7 @@ mfExtend( Skin, View, {
 
 		// Trigger image download after binding the load handler
 		$downloadingImage.attr( {
-			'class': $placeholder.attr( 'data-class' ),
+			class: $placeholder.attr( 'data-class' ),
 			width: width,
 			height: height,
 			src: $placeholder.attr( 'data-src' ),

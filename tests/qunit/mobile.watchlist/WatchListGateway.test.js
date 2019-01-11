@@ -2,7 +2,7 @@
 
 	var WatchListGateway = M.require( 'mobile.watchlist/WatchListGateway' ),
 		response = {
-			'continue': {
+			continue: {
 				pageimages: {
 					picontinue: 9
 				}
@@ -63,7 +63,7 @@
 						touched: '2015-01-12T13:04:23Z',
 						lastrevid: 1307,
 						length: 1392,
-						'new': ''
+						new: ''
 					},
 					{
 						pageid: 720,
@@ -74,7 +74,7 @@
 						touched: '2015-01-12T13:04:35Z',
 						lastrevid: 1319,
 						length: 54839,
-						'new': ''
+						new: ''
 					},
 					{
 						ns: 0,
@@ -109,7 +109,7 @@
 		var lastTitle = 'Albert Einstein',
 			gateway = new WatchListGateway( new mw.Api(), lastTitle ),
 			response1 = $.extend( {}, response, {
-				'continue': {
+				continue: {
 					watchlistraw: {
 						gwrcontinue: '0|Albert Einstein'
 					}

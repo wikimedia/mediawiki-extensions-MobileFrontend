@@ -95,7 +95,7 @@ module.exports = {
 			cacheGroups: {
 				// Turn off webpack's default 'default' cache group.
 				// https://webpack.js.org/plugins/split-chunks-plugin/#optimization-splitchunks
-				'default': false,
+				default: false,
 				// Turn off webpack's default 'vendors' cache group. If this is desired
 				// later on, we can explicitly turn this on for clarity.
 				// https://webpack.js.org/plugins/split-chunks-plugin/#optimization-splitchunks
