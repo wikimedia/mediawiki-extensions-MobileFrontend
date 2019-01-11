@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d8acfbd9_c5d58307",
+        "filename": ".eslintshared.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-11T19:39:36Z",
+      "side": 1,
+      "message": "why deprecated-3.3 ?\nSeems strange to me that we\u0027re adding a deprecated plugin...",
+      "range": {
+        "startLine": 3,
+        "startChar": 27,
+        "endLine": 3,
+        "endChar": 41
+      },
+      "revId": "067675d74a134b608ef16f49993e5065207b96df",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
