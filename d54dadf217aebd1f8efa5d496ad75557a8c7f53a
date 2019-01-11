@@ -219,6 +219,24 @@
     },
     {
       "key": {
+        "uuid": "451b47e1_9325239a",
+        "filename": "includes/amc/Manager.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-11T10:59:43Z",
+      "side": 1,
+      "message": "Functional sounds good as this does only check but the problem is that our PHP is done mostly functional way, all services are objects, I don\u0027t want to mix Object Oriented approach and the functional approach as it may provide more confusion than good.",
+      "parentUuid": "0d56be00_38db0ffa",
+      "revId": "d54dadf217aebd1f8efa5d496ad75557a8c7f53a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5ad4326c_77469d78",
         "filename": "includes/amc/Manager.php",
         "patchSetId": 3
