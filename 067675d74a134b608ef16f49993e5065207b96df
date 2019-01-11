@@ -22,6 +22,30 @@
       "revId": "067675d74a134b608ef16f49993e5065207b96df",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "40efb231_063ccbde",
+        "filename": ".eslintshared.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2019-01-11T19:42:06Z",
+      "side": 1,
+      "message": "\"deprecated-3.3\" is \"code which shouldn\u0027t be used if you\u0027re using jQuery 3.3\", which we do in Wikimedia production. There are matching ones for older versions of jQuery where newer replacements don\u0027t yet exist.",
+      "parentUuid": "d8acfbd9_c5d58307",
+      "range": {
+        "startLine": 3,
+        "startChar": 27,
+        "endLine": 3,
+        "endChar": 41
+      },
+      "revId": "067675d74a134b608ef16f49993e5065207b96df",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
