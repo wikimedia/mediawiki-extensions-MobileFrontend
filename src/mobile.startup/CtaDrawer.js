@@ -13,6 +13,8 @@ var
  * @prop {string} [returnTo]
  * @prop {QueryParams} [queryParams]
  * @prop {QueryParams} [signupQueryParams]
+ * @prop {Object} [options.progressiveButton] template options for Button element for signing in
+ * @prop {Object} [options.actionAnchor] template options for Anchor element for signing up
  */
 
 /**
@@ -27,33 +29,25 @@ var
  * @param {Options} options
  */
 function CtaDrawer( options ) {
-	Drawer.call( this, options );
+	Drawer.call( this,
+		util.extend( {}, Drawer.prototype.defaults, {
+			progressiveButton: new Button( {
+				progressive: true,
+				label: mw.msg( 'mobile-frontend-watchlist-cta-button-login' )
+			} ).options,
+			actionAnchor: new Anchor( {
+				progressive: true,
+				label: mw.msg( 'mobile-frontend-watchlist-cta-button-signup' )
+			} ).options
+		}, options )
+	);
 }
 
 mfExtend( CtaDrawer, Drawer, {
 	/**
-		 * @memberof CtaDrawer
-		 * @instance
-		 * @mixes Drawer#defaults
-		 * @property {Object} defaults Default options hash.
-		 * @property {Object} defaults.collapseIcon options for Icon for collapsing the drawer
-		 * @property {Object} defaults.progressiveButton options for Button element for signing in
-		 * @property {Object} defaults.actionAnchor options for Anchor element for signing up
-		 */
-	defaults: util.extend( {}, Drawer.prototype.defaults, {
-		progressiveButton: new Button( {
-			progressive: true,
-			label: mw.msg( 'mobile-frontend-watchlist-cta-button-login' )
-		} ).options,
-		actionAnchor: new Anchor( {
-			progressive: true,
-			label: mw.msg( 'mobile-frontend-watchlist-cta-button-signup' )
-		} ).options
-	} ),
-	/**
-		 * @memberof CtaDrawer
-		 * @instance
-		 */
+	 * @memberof CtaDrawer
+	 * @instance
+	 */
 	templatePartials: util.extend( {}, Drawer.prototype.templatePartials, {
 		button: Button.prototype.template,
 		anchor: Anchor.prototype.template
