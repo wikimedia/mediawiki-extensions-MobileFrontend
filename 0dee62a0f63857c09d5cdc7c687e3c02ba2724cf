@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "b15e753e_cfc55a2a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-01-11T20:27:34Z",
+      "side": 1,
+      "message": "With Ia865fe48183ce80a1b7c7dc8bc98b048dc9ad210, ScrollEndEventEmitter is collapsed into mobile.startup so this is not longer relevant.",
+      "parentUuid": "e0ab9499_addb2687",
+      "range": {
+        "startLine": 13,
+        "startChar": 21,
+        "endLine": 14,
+        "endChar": 54
+      },
+      "revId": "0dee62a0f63857c09d5cdc7c687e3c02ba2724cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "398e6a6b_41719c12",
         "filename": "/COMMIT_MSG",
         "patchSetId": 8
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "597511db_4f2f3051",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-01-11T20:27:34Z",
+      "side": 1,
+      "message": "With Ia865fe48183ce80a1b7c7dc8bc98b048dc9ad210, ScrollEndEventEmitter is collapsed into mobile.startup",
+      "parentUuid": "398e6a6b_41719c12",
+      "range": {
+        "startLine": 28,
+        "startChar": 15,
+        "endLine": 28,
+        "endChar": 52
+      },
+      "revId": "0dee62a0f63857c09d5cdc7c687e3c02ba2724cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "764d08d1_76389e48",
         "filename": "/COMMIT_MSG",
         "patchSetId": 8
@@ -59,6 +107,30 @@
       "writtenOn": "2019-01-10T17:25:24Z",
       "side": 1,
       "message": "This sounds like a fine change to make regardless of the reason but I don\u0027t quite follow why the headless tests choked on M.require.",
+      "range": {
+        "startLine": 37,
+        "startChar": 0,
+        "endLine": 37,
+        "endChar": 60
+      },
+      "revId": "0dee62a0f63857c09d5cdc7c687e3c02ba2724cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3db0e9f3_27d36091",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-01-11T20:27:34Z",
+      "side": 1,
+      "message": "This change is no longer in the latest patch as scrollEndEventEmitter was included into mobile.startup",
+      "parentUuid": "764d08d1_76389e48",
       "range": {
         "startLine": 37,
         "startChar": 0,
@@ -111,6 +183,30 @@
     },
     {
       "key": {
+        "uuid": "2ecc1eb8_c08b7b5f",
+        "filename": "src/mobile.watchlist/WatchList.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-01-11T20:27:34Z",
+      "side": 1,
+      "message": "no longer in latest patch",
+      "parentUuid": "0e33a169_c1eaf4c0",
+      "range": {
+        "startLine": 28,
+        "startChar": 30,
+        "endLine": 28,
+        "endChar": 59
+      },
+      "revId": "0dee62a0f63857c09d5cdc7c687e3c02ba2724cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "bbb8f538_2f7fdc57",
         "filename": "src/mobile.watchlist/mobile.watchlist.js",
         "patchSetId": 8
@@ -145,6 +241,30 @@
       "writtenOn": "2019-01-10T19:46:36Z",
       "side": 1,
       "message": "yeh I figured since this is a singleton not a class that made more sense.",
+      "parentUuid": "bbb8f538_2f7fdc57",
+      "range": {
+        "startLine": 4,
+        "startChar": 1,
+        "endLine": 4,
+        "endChar": 58
+      },
+      "revId": "0dee62a0f63857c09d5cdc7c687e3c02ba2724cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f3169fa9_bbb8f206",
+        "filename": "src/mobile.watchlist/mobile.watchlist.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-01-11T20:27:34Z",
+      "side": 1,
+      "message": "No longer in latest patch",
       "parentUuid": "bbb8f538_2f7fdc57",
       "range": {
         "startLine": 4,
@@ -205,6 +325,30 @@
     },
     {
       "key": {
+        "uuid": "21d7a6ea_2c999af9",
+        "filename": "src/mobile.watchlist/mobile.watchlist.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-01-11T20:27:34Z",
+      "side": 1,
+      "message": "With Ia865fe48183ce80a1b7c7dc8bc98b048dc9ad210, ScrollEndEventEmitter is collapsed into mobile.startup",
+      "parentUuid": "bced4fdd_5e8d763c",
+      "range": {
+        "startLine": 5,
+        "startChar": 25,
+        "endLine": 5,
+        "endChar": 90
+      },
+      "revId": "0dee62a0f63857c09d5cdc7c687e3c02ba2724cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "bf55fb7a_dbf79a8c",
         "filename": "src/mobile.watchlist/mobile.watchlist.js",
         "patchSetId": 8
@@ -216,6 +360,24 @@
       "writtenOn": "2019-01-10T17:25:24Z",
       "side": 1,
       "message": "Do we need any M.define thingies here?",
+      "revId": "0dee62a0f63857c09d5cdc7c687e3c02ba2724cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5481cd99_f374c0ce",
+        "filename": "src/mobile.watchlist/mobile.watchlist.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-01-11T20:27:34Z",
+      "side": 1,
+      "message": "Nothing else use watchlist as far as I can tell, so I don\u0027t believe so",
+      "parentUuid": "bf55fb7a_dbf79a8c",
       "revId": "0dee62a0f63857c09d5cdc7c687e3c02ba2724cf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
