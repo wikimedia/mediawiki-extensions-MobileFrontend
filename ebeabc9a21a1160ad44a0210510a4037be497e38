@@ -39,6 +39,24 @@
       "revId": "ebeabc9a21a1160ad44a0210510a4037be497e38",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9fc03d65_5454736c",
+        "filename": "src/mobile.startup/toc/TableOfContents.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-11T19:30:35Z",
+      "side": 1,
+      "message": "It\u0027s better because we can make full use of the Icon and its capabilities. \n\nPreviously the use of toHtmlString meant we were unnecessarily creating a component and then rendering its associated HTML\n\nIt would be like doing this in React:\n\n\u003cView\u003e{{ _dangerouslyInsertHtml: preact.renderToString( \u003cButton /\u003e ) }\u003c/View\u003e\n\nLong term this will make it much easier to reduce our components down to factory functions (see DownloadIcon and ShareIcon in Minerva for example) and cut our need for inheritance!\n\nI\u0027d like to get us to a point where  table of contents looks like this\n\nfunction toc( {) {\nreturn \u003cdiv class\u003d\"toc-mobile\"\u003e\n\u003ch2\u003e\u003cIcon name\u003dtoc /\u003e\u003cspan\u003e{{contentsMsg}}\u003c/span\u003e\u003c/h2\u003e\n\u003cdiv\u003e\n        \u003cul\u003e\n        {{sections.map((props)\u003d\u003etocHeading(props)}}\n        \u003c/ul\u003e\n\u003c/div\u003e\n\u003cdiv style\u003d\"clear:both;\"\u003e\u003c/div\u003e\n\u003c/div\u003e\n}\n\nThis works towards that.",
+      "parentUuid": "e46d1b74_1d77b9c1",
+      "revId": "ebeabc9a21a1160ad44a0210510a4037be497e38",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
