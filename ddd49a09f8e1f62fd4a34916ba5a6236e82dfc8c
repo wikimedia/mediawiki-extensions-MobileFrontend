@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e6da6411_e7f4b62a",
+        "filename": "resources/mobile.gallery/PhotoListGateway.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-11T19:41:20Z",
+      "side": 1,
+      "message": "continue is a keyword.. this should throw an error with quote-props. The fact it isn\u0027t alarms me.",
+      "revId": "ddd49a09f8e1f62fd4a34916ba5a6236e82dfc8c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
