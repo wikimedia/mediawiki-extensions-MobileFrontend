@@ -26,6 +26,7 @@ var
 	Overlay = require( './Overlay' ),
 	loadingOverlay = require( './loadingOverlay' ),
 	Drawer = require( './Drawer' ),
+	TableOfContents = require( './toc/TableOfContents' ),
 	CtaDrawer = require( './CtaDrawer' ),
 	PageList = require( './PageList' ),
 	toast = require( './toast' ),
@@ -87,6 +88,7 @@ mw.mobileFrontend.deprecate( 'mobile.toggle/Toggler', Toggler, 'mobile.startup' 
 mw.mobileFrontend.deprecate( 'mobile.search/SearchOverlay', SearchOverlay, 'mobile.startup' );
 mw.mobileFrontend.deprecate( 'mobile.search/MobileWebSearchLogger', MobileWebSearchLogger, 'mobile.startup' );
 mw.mobileFrontend.deprecate( 'mobile.search.api/SearchGateway', SearchGateway, 'mobile.startup' );
+mw.mobileFrontend.deprecate( 'mobile.toc/TableOfContents', TableOfContents, 'mobile.startup' );
 
 // Expose the entry chunk through libraryTarget and library. This allows
 // arbitrary file access via ResourceLoader like
@@ -125,6 +127,9 @@ module.exports = {
 	rlModuleLoader: rlModuleLoader,
 	eventBusSingleton: eventBusSingleton,
 	Toggler: Toggler,
+	toc: {
+		TableOfContents: TableOfContents
+	},
 	search: {
 		SearchOverlay: SearchOverlay,
 		MobileWebSearchLogger: MobileWebSearchLogger,

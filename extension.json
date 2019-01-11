@@ -126,13 +126,6 @@
 				"overlay-close": "resources/mobile.startup.images.variants/close.svg"
 			}
 		},
-		"mobile.toc.images": {
-			"class": "ResourceLoaderImageModule",
-			"selector": ".mw-ui-icon-mf-{name}:before",
-			"images": {
-				"toc": "resources/mobile.toc.images/contents-ltr.svg"
-			}
-		},
 		"mobile.messageBox.styles": {
 			"targets": [
 				"mobile",
@@ -193,22 +186,9 @@
 				"desktop"
 			],
 			"dependencies": [
-				"mobile.startup",
-				"mobile.toc.images"
+				"mobile.startup"
 			],
-			"scripts": [
-				"resources/mobile.toc/TableOfContents.js"
-			],
-			"styles": [
-				"resources/mobile.toc/toc.less"
-			],
-			"templates": {
-				"toc.hogan": "resources/mobile.toc/toc.hogan",
-				"heading.hogan": "resources/mobile.toc/tocHeading.hogan"
-			},
-			"messages": [
-				"toc"
-			]
+			"deprecated": true
 		},
 		"mobile.ajax.styles": {
 			"targets": [
@@ -223,6 +203,7 @@
 			"class": "ResourceLoaderImageModule",
 			"selector": ".mw-ui-icon-mf-{name}:before",
 			"images": {
+				"toc": "resources/mobile.startup.images/toc-ltr.svg",
 				"citation": "resources/mobile.startup.images/cite.svg",
 				"error": "resources/mobile.startup.images/error.svg",
 				"watch": "resources/mobile.startup.images/watch.svg",
@@ -298,10 +279,13 @@
 				"Section.hogan": "resources/mobile.startup/Section.hogan",
 				"button.hogan": "resources/mobile.startup/button.hogan",
 				"ReferencesDrawer.hogan": "resources/mobile.startup/references/ReferencesDrawer.hogan",
+				"TableOfContents.hogan": "resources/mobile.startup/toc/TableOfContents.hogan",
+				"TableOfContentsHeading.hogan": "resources/mobile.startup/toc/TableOfContentsHeading.hogan",
 				"search/SearchHeader.hogan": "resources/mobile.startup/search/SearchHeader.hogan",
 				"search/SearchContent.hogan": "resources/mobile.startup/search/SearchContent.hogan"
 			},
 			"messages": [
+				"toc",
 				"mobile-frontend-references-citation-error",
 				"mobile-frontend-references-citation",
 				"mobile-frontend-watchlist-cta-button-signup",
@@ -350,7 +334,8 @@
 				"resources/mobile.startup/references/ReferencesDrawer.less",
 				"resources/mobile.startup/watchstar/watchstar.less",
 				"resources/mobile.startup/Toggler.less",
-				"resources/mobile.startup/search/SearchOverlay.less"
+				"resources/mobile.startup/search/SearchOverlay.less",
+				"resources/mobile.startup/toc/TableOfContents.less"
 			],
 			"scripts": [
 				"resources/dist/mobile.common.js",

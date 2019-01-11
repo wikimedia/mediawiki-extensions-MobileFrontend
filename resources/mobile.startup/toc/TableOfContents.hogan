@@ -1,4 +1,4 @@
-<h2>{{{tocIcon}}}<span>{{contentsMsg}}</span></h2>
+<h2><span>{{contentsMsg}}</span></h2>
 <div>
 	<ul>
 	{{#sections}}
