@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2d893f04_a29dc9a1",
+        "filename": "resources/mobile.editor.api/EditorGateway.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 261,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2019-01-11T14:09:54Z",
+      "side": 1,
+      "message": "For a follow-up: abuse filter now populates provides more structured data, so we can just check for the abusefilter property\n\n {\n    \"code\":\"abusefilter-warning\",\n    \"message\":{\n       \"key\":\"abusefilter-warning\",\n       \"params\":[\n          \"MyFilter\",\n          1\n       ]\n    },\n    \"abusefilter\":{\n       \"id\":1,\n       \"description\":\"MyFilter\",\n       \"actions\":[\n          \"warn\"\n       ]\n    },\n    \"info\":\"Hit AbuseFilter: MyFilter\",\n    \"warning\":\"\u003cb\u003eWarning:\u003c/b\u003e This action has been automatically identified as harmful.\\nUnconstructive actions will be quickly reverted,\\nand egregious or repeated unconstructive editing will result in your account or IP address being blocked.\\nIf you believe this action to be constructive, you may submit it again to confirm it.\\nA brief description of the abuse rule which your action matched is: MyFilter\",\n    \"result\":\"Failure\"\n }",
+      "revId": "b40776693b124b781ffc72fe2c9bc3afd1c01805",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
