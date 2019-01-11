@@ -72,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "8861f1ae_ed29b117",
+        "filename": "extension.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 1197,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-11T23:06:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "817cf509_fb90fe80",
+      "range": {
+        "startLine": 1197,
+        "startChar": 3,
+        "endLine": 1197,
+        "endChar": 32
+      },
+      "revId": "d54dadf217aebd1f8efa5d496ad75557a8c7f53a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d9fbefa9_7c5fb6e2",
         "filename": "i18n/qqq.json",
         "patchSetId": 3
@@ -272,6 +296,30 @@
       "side": 1,
       "message": "that\u0027s a good question, I followed this rule because most probably that state will not change during the request. The only place where session user object changes are the login/logout pages.\n\nThe service gets initialized only when we need it, at that moment the session user object is most probably properly created/unset.",
       "parentUuid": "5ad4326c_77469d78",
+      "range": {
+        "startLine": 12,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 22
+      },
+      "revId": "d54dadf217aebd1f8efa5d496ad75557a8c7f53a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0409a2b6_b6873d30",
+        "filename": "includes/amc/Manager.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-11T23:06:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f7588e96_a59d70e3",
       "range": {
         "startLine": 12,
         "startChar": 0,
