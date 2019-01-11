@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "f3adcfc1_7ffbd30e",
+        "filename": "src/mobile.startup/Skin.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 206,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-11T00:40:57Z",
+      "side": 1,
+      "message": "More patches are coming. I want to make Toggler require a callback that triggers on section open / close. That\u0027s easy.\n\nThe hard part is wiring in the existing system. Skin, which listens for toggle section events and loads images accordingly, is decoupled from Toggle construction. I need that ability to load images in the callback at Toggler construction time in multiple places but Skin is a smorgasbord of concerns such that I\u0027m lost within it.\n\nMy first step is to refactor the lazy image loading bits out. They\u0027re quite tidy themselves but it\u0027s hard to see given all the other concerns in Skin. The placeholder replacement is about done now but I want to move some of the \"images remaining\" state out into some kind of transform thingamob. I\u0027ll then use that thingamob in the Toggler as needed with the final patchset zapping the .on() / .emit() calls.\n\nOr something. Even if this experiment fails, I think these foundational patches are nice improvements in themselves so I have some confidence in my work.",
+      "parentUuid": "5f9345da_d760c36c",
+      "revId": "1c7887ea13a866fccf6e5d38c86475a7d29a8834",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7e3b86b0_0abe20c7",
         "filename": "src/mobile.startup/Skin.js",
         "patchSetId": 4
@@ -53,6 +71,24 @@
     },
     {
       "key": {
+        "uuid": "68542dd6_2b40d932",
+        "filename": "src/mobile.startup/lazyImages/lazyImageLoader.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-11T00:40:57Z",
+      "side": 1,
+      "message": "Per commit message, this patch tries to minimize changes. It\u0027s a good note though and that improvement happens in this patch: https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/483515/3/src/mobile.startup/lazyImages/lazyImageLoader.js",
+      "parentUuid": "924fc77f_353e2dac",
+      "revId": "1c7887ea13a866fccf6e5d38c86475a7d29a8834",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "99a851c9_7405b3d8",
         "filename": "src/mobile.startup/lazyImages/lazyImageLoader.js",
         "patchSetId": 4
@@ -64,6 +100,24 @@
       "writtenOn": "2019-01-10T20:09:16Z",
       "side": 1,
       "message": "Why not one single module.exports at the end of the file?",
+      "revId": "1c7887ea13a866fccf6e5d38c86475a7d29a8834",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "59e0d3b3_3107163a",
+        "filename": "src/mobile.startup/lazyImages/lazyImageLoader.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-11T00:40:57Z",
+      "side": 1,
+      "message": "I\u0027m not pleased with this approach but it allowed me to easily stub loadImage() in the tests (which aren\u0027t especially thorough in their present form). Without rewriting the tests, do you have any ideas for how I can improve this?",
+      "parentUuid": "99a851c9_7405b3d8",
       "revId": "1c7887ea13a866fccf6e5d38c86475a7d29a8834",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -87,6 +141,24 @@
     },
     {
       "key": {
+        "uuid": "fd16451c_c7620df5",
+        "filename": "src/mobile.startup/lazyImages/lazyImageLoader.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-11T00:40:57Z",
+      "side": 1,
+      "message": "This was just copy and paste. Maybe we can have a task to thoroughly review and revise this code as needed?",
+      "parentUuid": "5be4a11f_2df173e9",
+      "revId": "1c7887ea13a866fccf6e5d38c86475a7d29a8834",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d70ef966_0fe87cf2",
         "filename": "src/mobile.startup/mobile.startup.js",
         "patchSetId": 4
@@ -98,6 +170,24 @@
       "writtenOn": "2019-01-10T20:09:16Z",
       "side": 1,
       "message": "Do we need to export this publicly?\nIs there any benefit of making this accessible to extensions/skins?",
+      "revId": "1c7887ea13a866fccf6e5d38c86475a7d29a8834",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3992315e_64364b3e",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-11T00:40:57Z",
+      "side": 1,
+      "message": "I will needs it in the Toggler callback.",
+      "parentUuid": "d70ef966_0fe87cf2",
       "revId": "1c7887ea13a866fccf6e5d38c86475a7d29a8834",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
