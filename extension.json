@@ -899,13 +899,16 @@
 			"MobileFrontendHooks::onSpecialPageInitList"
 		],
 		"ListDefinedTags": [
-			"MobileFrontendHooks::onListDefinedTags"
+			"MobileFrontendHooks::onListDefinedTags",
+			"MobileFrontend\\AMC\\Hooks::onListDefinedTags"
 		],
 		"ChangeTagsListActive": [
-			"MobileFrontendHooks::onListDefinedTags"
+			"MobileFrontendHooks::onListDefinedTags",
+			"MobileFrontend\\AMC\\Hooks::onListDefinedTags"
 		],
 		"RecentChange_save": [
-			"MobileFrontendHooks::onRecentChangeSave"
+			"MobileFrontendHooks::onRecentChangeSave",
+			"MobileFrontend\\AMC\\Hooks::onRecentChangeSave"
 		],
 		"AbuseFilter-generateUserVars": [
 			"MobileFrontendHooks::onAbuseFilterGenerateUserVars"

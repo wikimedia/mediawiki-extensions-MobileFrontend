@@ -1,6 +1,7 @@
 <?php
 namespace MobileFrontend\AMC;
 
+use MediaWiki\MediaWikiServices;
 use \RuntimeException;
 use \DeferredUpdates;
 use Wikimedia\Assert\Assert;
@@ -69,6 +70,20 @@ class UserMode {
 			$latestUser->setOption( self::USER_OPTION_MODE_AMC, $toSet );
 			$latestUser->saveSettings();
 		} );
+	}
+
+	/**
+	 * Create UserMode for given user
+	 * NamedConstructor used by hooks system
+	 *
+	 * @param \User $user
+	 * @return UserMode
+	 */
+	public static function newForUser( \User $user ) {
+		return new UserMode(
+			MediaWikiServices::getInstance()->getService( 'MobileFrontend.AMC.Manager' ),
+			$user
+		);
 	}
 
 }

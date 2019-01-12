@@ -265,6 +265,8 @@
 	"nearby": "Pages on topics near you",
 	"tag-mobile_edit": "Mobile edit",
 	"tag-mobile_edit-description": "Edit made from mobile (web or app)",
+	"tag-advanced_mobile_edit": "Advanced mobile edit",
+	"tag-advanced_mobile_edit-description": "Edit made by user with Advanced Mobile Contributions mode",
 	"tag-mobile_web_edit": "Mobile web edit",
 	"tag-mobile_web_edit-description": "Edit made from mobile web site",
 	"apihelp-mobileview-description": "Returns data needed for mobile views.",
