@@ -62,7 +62,7 @@
 	"mobile-frontend-categories-nomatch": "По вашему запросу категории не найдены. Попробуйте поискать по-другому.",
 	"mobile-frontend-categories-nodata": "Произошла ошибка. Вы добавили какие-нибудь категории для сохранения?",
 	"mobile-frontend-categories-summary": "Добавлено в категории",
-	"mobile-frontend-categories-notification": "Категории успешно обновлены.",
+	"mobile-frontend-categories-notification": "Категории были обновлены.",
 	"mobile-frontend-categories-add-heading": "<strong>Добавьте <span> $1</span> в новые категории</strong>",
 	"mobile-frontend-categories-add-wait": "Категории сохраняются. Подождите, пожалуйста.",
 	"mobile-frontend-categories-normal": "На основе содержания",

@@ -15,7 +15,7 @@
 	"mobile-frontend-categories-nomatch": "Не најдов категорија што одговара на бараното. Обидете се со друга.",
 	"mobile-frontend-categories-nodata": "Се појави грешка. Дали додадовте категории за зачувување?",
 	"mobile-frontend-categories-summary": "Ставено во категории",
-	"mobile-frontend-categories-notification": "Категориите се успешно подновени.",
+	"mobile-frontend-categories-notification": "Категориите се подновени.",
 	"mobile-frontend-categories-add-heading": "<strong>Ставена<span> $1</span> во нови категории</strong>",
 	"mobile-frontend-categories-add-wait": "Ги зачувувам категориите. Почекајте.",
 	"mobile-frontend-categories-normal": "Содржински",
