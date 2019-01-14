@@ -72,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "9be65cff_a465456b",
+        "filename": "extension.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 1198,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-14T23:13:45Z",
+      "side": 1,
+      "message": "it\u0027s a boolean, true or false. We map it to \u00271\u0027 or \u00270\u0027 before we store it in the user_options table.",
+      "parentUuid": "517d638d_6024edaa",
+      "range": {
+        "startLine": 1198,
+        "startChar": 35,
+        "endLine": 1198,
+        "endChar": 40
+      },
+      "revId": "d4633f8110a07f4ecb4537f47b961d9e583378e9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b2f2375b_ec3f880c",
         "filename": "includes/amc/Manager.php",
         "patchSetId": 4
@@ -83,6 +107,30 @@
       "writtenOn": "2019-01-14T17:31:38Z",
       "side": 1,
       "message": "Please add an @var for this member too.",
+      "range": {
+        "startLine": 24,
+        "startChar": 2,
+        "endLine": 24,
+        "endChar": 16
+      },
+      "revId": "d4633f8110a07f4ecb4537f47b961d9e583378e9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e7b66917_9937d4b1",
+        "filename": "includes/amc/Manager.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-14T23:13:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b2f2375b_ec3f880c",
       "range": {
         "startLine": 24,
         "startChar": 2,
@@ -118,6 +166,30 @@
     },
     {
       "key": {
+        "uuid": "4c6d49c6_c00451d8",
+        "filename": "includes/amc/UserMode.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-14T23:13:45Z",
+      "side": 1,
+      "message": "at this moment default is disabled, but it may change in the future, I don\u0027t want to hardcode disabled as default, what we can do is to introduce a new constant OPTION_DEFAULT, \n\n  const OPTION_DEFAULT \u003d self::OPTION_DISABLED;\n\nand then, if we decide to put the default opt-in into config it will be much easier to find it.",
+      "parentUuid": "3e11c394_ddad15bb",
+      "range": {
+        "startLine": 19,
+        "startChar": 7,
+        "endLine": 19,
+        "endChar": 22
+      },
+      "revId": "d4633f8110a07f4ecb4537f47b961d9e583378e9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f4f0c1cf_68d3ae07",
         "filename": "includes/amc/UserMode.php",
         "patchSetId": 4
@@ -141,6 +213,30 @@
     },
     {
       "key": {
+        "uuid": "f559e9f4_47971bd0",
+        "filename": "includes/amc/UserMode.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-14T23:13:45Z",
+      "side": 1,
+      "message": "In future I want to implement IUserMode or IMobileMode, and both AMC/UserMode and Beta/UserMode will implement same interface. Thanks to that we will have a unified interface to handle all possible modes in MobileFrontend.",
+      "parentUuid": "f4f0c1cf_68d3ae07",
+      "range": {
+        "startLine": 44,
+        "startChar": 17,
+        "endLine": 44,
+        "endChar": 26
+      },
+      "revId": "d4633f8110a07f4ecb4537f47b961d9e583378e9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "665696ba_49f536b7",
         "filename": "includes/amc/UserMode.php",
         "patchSetId": 4
@@ -152,6 +248,30 @@
       "writtenOn": "2019-01-14T17:31:38Z",
       "side": 1,
       "message": "How about setMode($mode)?",
+      "range": {
+        "startLine": 54,
+        "startChar": 17,
+        "endLine": 54,
+        "endChar": 43
+      },
+      "revId": "d4633f8110a07f4ecb4537f47b961d9e583378e9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6fb991cc_181916a8",
+        "filename": "includes/amc/UserMode.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-14T23:13:45Z",
+      "side": 1,
+      "message": "setMode( $mode ) tells there can be many possible modes, but the system has only two states (disabled/enabled). \n\nInstead of setIsEnabled() I really think about having two methods \"enable()\" and \"disable()\" to make it super clear what it does.\n\nRead more: https://www.martinfowler.com/bliki/FlagArgument.html and https://medium.com/@amlcurran/clean-code-the-curse-of-a-boolean-parameter-c237a830b7a3",
+      "parentUuid": "665696ba_49f536b7",
       "range": {
         "startLine": 54,
         "startChar": 17,
@@ -211,6 +331,30 @@
     },
     {
       "key": {
+        "uuid": "a3fba4ab_8a5812ea",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-14T23:13:45Z",
+      "side": 1,
+      "message": "It uses OOUI elements, and later we use ` OO.ui.infuse()` - if we decide to write our own templates we will always have to match the OOUI state, if OOUI changes something we will have to update our template. I think it\u0027s safer just to use the OOUI here.",
+      "parentUuid": "1b92a32c_e74d431a",
+      "range": {
+        "startLine": 76,
+        "startChar": 0,
+        "endLine": 93,
+        "endChar": 5
+      },
+      "revId": "d4633f8110a07f4ecb4537f47b961d9e583378e9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0a930eed_453e3ec6",
         "filename": "includes/specials/SpecialMobileOptions.php",
         "patchSetId": 4
@@ -257,6 +401,30 @@
     },
     {
       "key": {
+        "uuid": "97b44816_17222bb5",
+        "filename": "resources/mobile.special.mobileoptions.scripts/mobileoptions.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-14T23:13:45Z",
+      "side": 1,
+      "message": "Done. Out of curiosity? is there any difference? (other than JQuery.Object[] is a short notation?)",
+      "parentUuid": "31be1316_4d2ef57d",
+      "range": {
+        "startLine": 116,
+        "startChar": 12,
+        "endLine": 116,
+        "endChar": 32
+      },
+      "revId": "d4633f8110a07f4ecb4537f47b961d9e583378e9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e94de1f6_fffe1cbf",
         "filename": "resources/mobile.special.mobileoptions.scripts/mobileoptions.js",
         "patchSetId": 4
@@ -268,6 +436,30 @@
       "writtenOn": "2019-01-14T17:31:38Z",
       "side": 1,
       "message": "I think we should call this $toggleElement to indicate jQuery.",
+      "range": {
+        "startLine": 120,
+        "startChar": 37,
+        "endLine": 120,
+        "endChar": 50
+      },
+      "revId": "d4633f8110a07f4ecb4537f47b961d9e583378e9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "60173088_a03338f7",
+        "filename": "resources/mobile.special.mobileoptions.scripts/mobileoptions.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-14T23:13:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e94de1f6_fffe1cbf",
       "range": {
         "startLine": 120,
         "startChar": 37,
