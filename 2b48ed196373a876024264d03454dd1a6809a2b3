@@ -22,6 +22,30 @@
       "revId": "2b48ed196373a876024264d03454dd1a6809a2b3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c83e997e_4cb07fa0",
+        "filename": "src/mobile.startup/Skin.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 211,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-14T21:44:39Z",
+      "side": 1,
+      "message": "fixed",
+      "parentUuid": "c1640bd0_b4d5be08",
+      "range": {
+        "startLine": 211,
+        "startChar": 0,
+        "endLine": 211,
+        "endChar": 16
+      },
+      "revId": "2b48ed196373a876024264d03454dd1a6809a2b3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
