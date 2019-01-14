@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c1640bd0_b4d5be08",
+        "filename": "src/mobile.startup/Skin.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 211,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-01-14T21:40:37Z",
+      "side": 1,
+      "message": "space alert",
+      "range": {
+        "startLine": 211,
+        "startChar": 0,
+        "endLine": 211,
+        "endChar": 16
+      },
+      "revId": "2b48ed196373a876024264d03454dd1a6809a2b3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
