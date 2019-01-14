@@ -71,6 +71,30 @@
     },
     {
       "key": {
+        "uuid": "30a00b49_14a4be4b",
+        "filename": "src/mobile.languages.structured/util.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-14T23:41:34Z",
+      "side": 1,
+      "message": "there doesn\u0027t feel like a great solution to me here.\n\nHow about making frequency an optional parameter and just having the Language type?\n\n * @prop {number} [frequency[ of times the language has been used by the given user",
+      "parentUuid": "c87d8972_5da038b2",
+      "range": {
+        "startLine": 14,
+        "startChar": 13,
+        "endLine": 14,
+        "endChar": 21
+      },
+      "revId": "7394bec0c306f8f91c212302b98589cdab3d4d23",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "34a37a2a_206208e6",
         "filename": "src/mobile.startup/Overlay.js",
         "patchSetId": 8
