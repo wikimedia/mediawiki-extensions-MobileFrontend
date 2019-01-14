@@ -22,6 +22,30 @@
       "revId": "6d3494441a39e667de8e70ffd4ee035291dd11d3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a07a403a_85e61203",
+        "filename": "src/mobile.startup/Skin.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-14T20:31:52Z",
+      "side": 1,
+      "message": "Actually, that should be fine since multiple functions are used.",
+      "parentUuid": "7ea7cdcc_b930eb80",
+      "range": {
+        "startLine": 80,
+        "startChar": 20,
+        "endLine": 80,
+        "endChar": 37
+      },
+      "revId": "6d3494441a39e667de8e70ffd4ee035291dd11d3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
