@@ -23,6 +23,8 @@ module.exports = {
 	// Apply the rule of silence: https://wikipedia.org/wiki/Unix_philosophy.
 	stats: {
 		all: false,
+		// Output a timestamp when a build completes. Useful when watching files.
+		builtAt: true,
 		errors: true,
 		warnings: true
 	},
