@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9c27cd4b_01c2ebde",
+        "filename": "includes/content-providers/MwApiContentProvider.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-14T21:31:36Z",
+      "side": 1,
+      "message": "Alternatively I could use the FeatureManager here to check it again.\n\nThe problem is to do with hook order - the ParserOutput hook runs BEFORE the content provider.",
+      "revId": "6fcc7918ad4f2f2341aee83653a353a4fc8000d3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
