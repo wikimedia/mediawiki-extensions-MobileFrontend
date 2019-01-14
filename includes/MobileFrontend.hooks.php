@@ -1093,21 +1093,21 @@ class MobileFrontendHooks {
 	 */
 	public static function onOutputPageParserOutput( $outputPage, ParserOutput $po ) {
 		$context = MobileContext::singleton();
+		$featureManager = \MediaWiki\MediaWikiServices::getInstance()
+			->getService( 'MobileFrontend.FeaturesManager' );
+		$title = $outputPage->getTitle();
+		$descriptionsEnabled = !$title->isMainPage() &&
+			$title->getNamespace() === NS_MAIN &&
+			$featureManager->isFeatureAvailableInContext(
+				'MFEnableWikidataDescriptions', $context
+			) && $context->shouldShowWikibaseDescriptions( 'tagline' );
 
-		if ( $context->shouldDisplayMobileView() ) {
-			$title = $outputPage->getTitle();
-			// Only set the tagline if the feature has been enabled and the article is in the main namespace
-			if ( $context->shouldShowWikibaseDescriptions( 'tagline' ) &&
-				!$title->isMainPage() &&
-				$title->getNamespace() === NS_MAIN
-			) {
-				$desc = self::findTagline( $po, function ( $item ) {
-					return ExtMobileFrontend::getWikibaseDescription( $item );
-				} );
-				if ( $desc ) {
-					self::setTagline( $outputPage, $desc );
-				}
-			}
+		// Only set the tagline if the feature has been enabled and the article is in the main namespace
+		if ( $context->shouldDisplayMobileView() && $descriptionsEnabled ) {
+			$desc = self::findTagline( $po, function ( $item ) {
+				return ExtMobileFrontend::getWikibaseDescription( $item );
+			} );
+			self::setTagline( $outputPage, $desc || '' );
 		}
 		return true;
 	}
