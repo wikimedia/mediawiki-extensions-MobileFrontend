@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a0b0966d_accecde7",
+        "filename": "includes/amc/Hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-14T16:42:11Z",
+      "side": 1,
+      "message": "The Manager seems like an odd place for a tag. Why not make a new class, Tags:AMC_EDIT, or Constants::AMC_EDIT_TAG?",
+      "range": {
+        "startLine": 29,
+        "startChar": 12,
+        "endLine": 29,
+        "endChar": 33
+      },
+      "revId": "a1c1b3cf84d8597e5f3cf49fe254b1084c4301aa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b54a3f9d_b1095621",
+        "filename": "includes/amc/Hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-14T16:42:11Z",
+      "side": 1,
+      "message": "What do you think about renaming `isEnabled()` to `isAdvanced()`? That will make it clear the mode you\u0027re talking about being enable is \"advanced user mode\".",
+      "range": {
+        "startLine": 44,
+        "startChar": 7,
+        "endLine": 44,
+        "endChar": 29
+      },
+      "revId": "a1c1b3cf84d8597e5f3cf49fe254b1084c4301aa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d42b842b_9bc1107d",
+        "filename": "includes/amc/UserMode.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-14T16:42:11Z",
+      "side": 1,
+      "message": "Why is this called Manager if it\u0027s obtained via getService?",
+      "range": {
+        "startLine": 84,
+        "startChar": 69,
+        "endLine": 84,
+        "endChar": 76
+      },
+      "revId": "a1c1b3cf84d8597e5f3cf49fe254b1084c4301aa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
