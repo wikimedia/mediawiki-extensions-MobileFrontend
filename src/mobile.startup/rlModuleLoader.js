@@ -29,6 +29,7 @@ module.exports = {
 
 		showLoadingOverlay = ( showLoadingOverlay !== undefined ) ? showLoadingOverlay : true;
 		if ( showLoadingOverlay ) {
+			loadingOverlay.appendTo( document.body );
 			loadingOverlay.show();
 		}
 

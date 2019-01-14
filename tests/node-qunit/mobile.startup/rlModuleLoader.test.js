@@ -45,6 +45,7 @@ QUnit.module( 'MobileFrontend rlModuleLoader.js', {
 		sandbox.stub( global.window, 'scrollTo' );
 
 		this.stub = {
+			appendTo: sandbox.spy(),
 			show: sandbox.spy(),
 			hide: sandbox.spy()
 		};
@@ -89,6 +90,7 @@ QUnit.test( '#loadModule when instructed to show/hide overlay and not successful
 	assert.rejects( result, 'returned promise rejects' );
 	return result.catch( function () {
 		assert.strictEqual( self.stub.show.callCount, 1, 'LoadingOverlay show() called once' );
+		assert.strictEqual( self.stub.appendTo.callCount, 1, 'LoadingOverlay appendTo() called once' );
 		assert.strictEqual( self.stub.hide.callCount, 1, 'LoadingOverlay hide() called once' );
 		assert.strictEqual( self.stub.hide.getCall( 0 ).args.length, 0, 'LoadingOverlay hide() called with no args' );
 	} );
