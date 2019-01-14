@@ -46,6 +46,30 @@
       "revId": "d69db83f8927dd4845607ff75e03a492c47bc67a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "60b2e42e_dae66c5c",
+        "filename": "includes/content-providers/MwApiContentProvider.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-14T16:53:30Z",
+      "side": 1,
+      "message": "what about https://github.com/wikimedia/mediawiki-extensions-Wikibase/blob/40dd975ae37c3c5d132823884fccaf827d66b80c/client/includes/Hooks/ShortDescHandler.php#L88?",
+      "parentUuid": "a8e6cca4_c3e7f2fa",
+      "range": {
+        "startLine": 87,
+        "startChar": 19,
+        "endLine": 87,
+        "endChar": 36
+      },
+      "revId": "d69db83f8927dd4845607ff75e03a492c47bc67a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
