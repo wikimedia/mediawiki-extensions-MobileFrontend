@@ -16,6 +16,24 @@
       "revId": "6fcc7918ad4f2f2341aee83653a353a4fc8000d3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "138aee16_63a9a3b7",
+        "filename": "includes/content-providers/MwApiContentProvider.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-14T23:39:33Z",
+      "side": 1,
+      "message": "I\u0027m not super happy with this line, but it provides a local way to test Wikidata descriptions without a Wikidata setup which is very important to me.\n\nI don\u0027t want to take the risk of a larger refactor of wikidata descriptions at this point.",
+      "parentUuid": "9c27cd4b_01c2ebde",
+      "revId": "6fcc7918ad4f2f2341aee83653a353a4fc8000d3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
