@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b0b3c210_9a979b8b",
+        "filename": "src/mobile.languages.structured/LanguageOverlay.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-14T15:16:39Z",
+      "side": 1,
+      "message": "Consider adding an `@prop {WhateverTheTypeIs} languages` JSDoc.",
+      "range": {
+        "startLine": 19,
+        "startChar": 1,
+        "endLine": 19,
+        "endChar": 16
+      },
+      "revId": "7394bec0c306f8f91c212302b98589cdab3d4d23",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2c5950dc_5dd18a3a",
+        "filename": "src/mobile.languages.structured/LanguageOverlay.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-14T15:16:39Z",
+      "side": 1,
+      "message": "Adding local state doesn\u0027t seem necessary here in my opinion.",
+      "range": {
+        "startLine": 64,
+        "startChar": 2,
+        "endLine": 64,
+        "endChar": 33
+      },
+      "revId": "7394bec0c306f8f91c212302b98589cdab3d4d23",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c87d8972_5da038b2",
+        "filename": "src/mobile.languages.structured/util.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-14T15:16:39Z",
+      "side": 1,
+      "message": "Per earlier conversation, this typing doesn\u0027t work for me. It\u0027s not a blocker, and I\u0027m glad you wrote it, but the typing is TypeScript incorrect and I would prefer an alternative approach be used (there are a couple ideas in an earlier comment).",
+      "range": {
+        "startLine": 14,
+        "startChar": 13,
+        "endLine": 14,
+        "endChar": 21
+      },
+      "revId": "7394bec0c306f8f91c212302b98589cdab3d4d23",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "34a37a2a_206208e6",
+        "filename": "src/mobile.startup/Overlay.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-14T15:16:39Z",
+      "side": 1,
+      "message": "Instead of changing the parameter passed in, what do you think about leaving that unmodified and moving the util.extend() call inline?",
+      "range": {
+        "startLine": 31,
+        "startChar": 1,
+        "endLine": 31,
+        "endChar": 6
+      },
+      "revId": "7394bec0c306f8f91c212302b98589cdab3d4d23",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
