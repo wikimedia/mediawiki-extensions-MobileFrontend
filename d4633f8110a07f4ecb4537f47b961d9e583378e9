@@ -1,0 +1,211 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "517d638d_6024edaa",
+        "filename": "extension.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 1198,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-14T17:31:38Z",
+      "side": 1,
+      "message": "I think this should be 0",
+      "range": {
+        "startLine": 1198,
+        "startChar": 35,
+        "endLine": 1198,
+        "endChar": 40
+      },
+      "revId": "d4633f8110a07f4ecb4537f47b961d9e583378e9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b2f2375b_ec3f880c",
+        "filename": "includes/amc/Manager.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-14T17:31:38Z",
+      "side": 1,
+      "message": "Please add an @var for this member too.",
+      "range": {
+        "startLine": 24,
+        "startChar": 2,
+        "endLine": 24,
+        "endChar": 16
+      },
+      "revId": "d4633f8110a07f4ecb4537f47b961d9e583378e9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3e11c394_ddad15bb",
+        "filename": "includes/amc/UserMode.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-14T17:31:38Z",
+      "side": 1,
+      "message": "What do you think about calling this default mode or standard mode or something like that? AMC is kind of an enhancement mode and disabling that functionality leaves baseline functionality available.",
+      "range": {
+        "startLine": 19,
+        "startChar": 7,
+        "endLine": 19,
+        "endChar": 22
+      },
+      "revId": "d4633f8110a07f4ecb4537f47b961d9e583378e9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f4f0c1cf_68d3ae07",
+        "filename": "includes/amc/UserMode.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-14T17:31:38Z",
+      "side": 1,
+      "message": "How about isAdvanced()?",
+      "range": {
+        "startLine": 44,
+        "startChar": 17,
+        "endLine": 44,
+        "endChar": 26
+      },
+      "revId": "d4633f8110a07f4ecb4537f47b961d9e583378e9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "665696ba_49f536b7",
+        "filename": "includes/amc/UserMode.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-14T17:31:38Z",
+      "side": 1,
+      "message": "How about setMode($mode)?",
+      "range": {
+        "startLine": 54,
+        "startChar": 17,
+        "endLine": 54,
+        "endChar": 43
+      },
+      "revId": "d4633f8110a07f4ecb4537f47b961d9e583378e9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1b92a32c_e74d431a",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-14T17:31:38Z",
+      "side": 1,
+      "message": "Does it make more sense to use a Mustache template?",
+      "range": {
+        "startLine": 76,
+        "startChar": 0,
+        "endLine": 93,
+        "endChar": 5
+      },
+      "revId": "d4633f8110a07f4ecb4537f47b961d9e583378e9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0a930eed_453e3ec6",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 250,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-14T17:31:38Z",
+      "side": 1,
+      "message": "What do you think of moving this to a symbol?",
+      "range": {
+        "startLine": 250,
+        "startChar": 48,
+        "endLine": 250,
+        "endChar": 57
+      },
+      "revId": "d4633f8110a07f4ecb4537f47b961d9e583378e9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "31be1316_4d2ef57d",
+        "filename": "resources/mobile.special.mobileoptions.scripts/mobileoptions.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-14T17:31:38Z",
+      "side": 1,
+      "message": "How about JQuery.Object[]?",
+      "range": {
+        "startLine": 116,
+        "startChar": 12,
+        "endLine": 116,
+        "endChar": 32
+      },
+      "revId": "d4633f8110a07f4ecb4537f47b961d9e583378e9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e94de1f6_fffe1cbf",
+        "filename": "resources/mobile.special.mobileoptions.scripts/mobileoptions.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-14T17:31:38Z",
+      "side": 1,
+      "message": "I think we should call this $toggleElement to indicate jQuery.",
+      "range": {
+        "startLine": 120,
+        "startChar": 37,
+        "endLine": 120,
+        "endChar": 50
+      },
+      "revId": "d4633f8110a07f4ecb4537f47b961d9e583378e9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

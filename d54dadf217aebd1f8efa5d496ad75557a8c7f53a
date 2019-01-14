@@ -443,6 +443,30 @@
     },
     {
       "key": {
+        "uuid": "92525a1a_448e4321",
+        "filename": "includes/amc/UserMode.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-14T17:31:38Z",
+      "side": 1,
+      "message": "According to the readme, this is still a boolean. Thoughts?",
+      "parentUuid": "b9c11f5a_35a38f5a",
+      "range": {
+        "startLine": 10,
+        "startChar": 31,
+        "endLine": 10,
+        "endChar": 37
+      },
+      "revId": "d54dadf217aebd1f8efa5d496ad75557a8c7f53a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f5118bb1_338acfea",
         "filename": "includes/amc/UserMode.php",
         "patchSetId": 3
