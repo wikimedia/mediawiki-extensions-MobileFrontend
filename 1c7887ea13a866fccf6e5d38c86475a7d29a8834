@@ -54,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "e926592e_39588546",
+        "filename": "src/mobile.startup/Skin.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 211,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-14T21:44:58Z",
+      "side": 1,
+      "message": "fixed",
+      "parentUuid": "7e3b86b0_0abe20c7",
+      "revId": "1c7887ea13a866fccf6e5d38c86475a7d29a8834",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "924fc77f_353e2dac",
         "filename": "src/mobile.startup/lazyImages/lazyImageLoader.js",
         "patchSetId": 4
