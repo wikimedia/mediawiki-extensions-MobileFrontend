@@ -72,7 +72,7 @@ function Skin( params ) {
 		mw.config.get( 'wgMFLazyLoadImages' )
 	) {
 		util.docReady( function () {
-			self.setupImageLoading();
+			self.setupImageLoading( document.getElementById( 'content' ) );
 		} );
 	}
 
@@ -129,31 +129,19 @@ mfExtend( Skin, View, {
 		this.$( '#mw-mf-page-center' ).on( 'click', this.emit.bind( this, 'click' ) );
 	},
 	/**
-	 * Get images that have not yet been loaded in the page
-	 * @memberof Skin
-	 * @instance
-	 * @param {jQuery.Object} [$container] The container that should be
-	 *  searched for image placeholders. Defaults to "#content".
-	 * @return {HTMLElement[]} of unloaded image placeholders in the page
-	 */
-	getUnloadedImages: function ( $container ) {
-		$container = $container || this.$( '#content' );
-		return $container.find( '.lazy-image-placeholder' ).toArray();
-	},
-	/**
 	 * Setup listeners to watch unloaded images and load them into the page
 	 * as and when they are needed.
 	 * @memberof Skin
 	 * @instance
-	 * @param {jQuery.Object} [$container] The container that should be
-	 *  searched for image placeholders. Defaults to "#content".
+	 * @param {jQuery.Object} container The container that should be
+	 *  searched for image placeholders.
 	 * @return {jQuery.Deferred} which will be resolved when the attempts to
 	 *  load all images subject to loading have been completed.
 	 */
-	setupImageLoading: function ( $container ) {
+	setupImageLoading: function ( container ) {
 		var self = this,
 			offset = util.getWindow().height() * 1.5,
-			imagePlaceholders = this.getUnloadedImages( $container );
+			imagePlaceholders = lazyImageLoader.queryPlaceholders( container );
 
 		/**
 		 * Check whether an image should be loaded based on its proximity to the
@@ -217,7 +205,6 @@ mfExtend( Skin, View, {
 	lazyLoadReferences: function ( data ) {
 		var $content, $spinner,
 			gateway = this.referencesGateway,
-			getUnloadedImages = this.getUnloadedImages.bind( this ),
 			self = this;
 
 		// If the section was expanded before toggling, do not load anything as
@@ -235,7 +222,7 @@ mfExtend( Skin, View, {
 
 		function loadImagesAndSetData() {
 			// lazy load images if any
-			lazyImageLoader.loadImages( getUnloadedImages( $content ) );
+			lazyImageLoader.loadImages( lazyImageLoader.queryPlaceholders( $content[0] ) );
 			// Do not attempt further loading even if we're unable to load this time.
 			$content.data( 'are-references-loaded', 1 );
 		}

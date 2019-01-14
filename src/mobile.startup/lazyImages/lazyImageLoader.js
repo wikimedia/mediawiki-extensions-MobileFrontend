@@ -1,6 +1,14 @@
 var util = require( '../util' );
 
 /**
+ * @param {HTMLElement} root
+ * @return {HTMLElement[]}
+ */
+module.exports.queryPlaceholders = function ( root ) {
+	return Array.prototype.slice.call( root.querySelectorAll( '.lazy-image-placeholder' ) );
+};
+
+/**
  * Load an image on demand
  * @param {HTMLElement[]|JQuery.find} placeholdersOrDeprecatedFind a list of images that have not
  *                                                                 been loaded.
