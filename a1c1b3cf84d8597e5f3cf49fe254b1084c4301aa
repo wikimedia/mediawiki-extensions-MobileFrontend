@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "c3ae11a7_4d69e5ee",
+        "filename": "includes/amc/Hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-14T18:59:51Z",
+      "side": 1,
+      "message": "For now it\u0027s just constant, I\u0027m not sure if it\u0027s ok to create a new class just to create one constant, I hope that we will get more constants soon so we can nicely organize those (and most probably create a new class).\n\nThe reason to not create a new class is performance, in the PHP there is still small overhead (even with caching), when new file has to be read (once per execution), even if it is stored in cache system still has to do iostat to retrieve last-modified information, and based on that value it decides whether to re-fetch the php file or use the cached version.",
+      "parentUuid": "a0b0966d_accecde7",
+      "range": {
+        "startLine": 29,
+        "startChar": 12,
+        "endLine": 29,
+        "endChar": 33
+      },
+      "revId": "a1c1b3cf84d8597e5f3cf49fe254b1084c4301aa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b54a3f9d_b1095621",
         "filename": "includes/amc/Hooks.php",
         "patchSetId": 1
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "9d01ba1e_26aa1784",
+        "filename": "includes/amc/Hooks.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-14T18:59:51Z",
+      "side": 1,
+      "message": "that sounds pretty nice and I thought about it for a little bit. I like the idea of \n  \n  $userMode-\u003eisAdvanced()\n\nbut it will not match the overall picture. In the near future I want to provide a unified interface to handle all possible modes (so beta and amc). The UserMode will implement `IMobileMode` interface and we will have shared logic to switch between different modes.",
+      "parentUuid": "b54a3f9d_b1095621",
+      "range": {
+        "startLine": 44,
+        "startChar": 7,
+        "endLine": 44,
+        "endChar": 29
+      },
+      "revId": "a1c1b3cf84d8597e5f3cf49fe254b1084c4301aa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d42b842b_9bc1107d",
         "filename": "includes/amc/UserMode.php",
         "patchSetId": 1
@@ -59,6 +107,30 @@
       "writtenOn": "2019-01-14T16:42:11Z",
       "side": 1,
       "message": "Why is this called Manager if it\u0027s obtained via getService?",
+      "range": {
+        "startLine": 84,
+        "startChar": 69,
+        "endLine": 84,
+        "endChar": 76
+      },
+      "revId": "a1c1b3cf84d8597e5f3cf49fe254b1084c4301aa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "83846de5_7584b468",
+        "filename": "includes/amc/UserMode.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-14T18:59:51Z",
+      "side": 1,
+      "message": "Becase Manager is a service. MediaWikiService is a Service Locator implementation, it contains a map of available lazy loaded services. Each service is initialized only when code tries to fetch that service.\n\nPlease check the convenience getters in MediaWikiServices (https://github.com/wikimedia/mediawiki/blob/master/includes/MediaWikiServices.php#L409), when you want to retrieve a service you call $services-\u003egetService( SERVICE_NAME ). And the service can be anything, a factory, config, repository, database, etc.",
+      "parentUuid": "d42b842b_9bc1107d",
       "range": {
         "startLine": 84,
         "startChar": 69,
