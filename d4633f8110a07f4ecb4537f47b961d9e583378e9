@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "3da3db39_c0453304",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-14T19:15:08Z",
+      "side": 1,
+      "message": "typo",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 8
+      },
+      "revId": "d4633f8110a07f4ecb4537f47b961d9e583378e9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "517d638d_6024edaa",
         "filename": "extension.json",
         "patchSetId": 4
@@ -13,6 +36,30 @@
       "writtenOn": "2019-01-14T17:31:38Z",
       "side": 1,
       "message": "I think this should be 0",
+      "range": {
+        "startLine": 1198,
+        "startChar": 35,
+        "endLine": 1198,
+        "endChar": 40
+      },
+      "revId": "d4633f8110a07f4ecb4537f47b961d9e583378e9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1de4d3f8_647abb79",
+        "filename": "extension.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 1198,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-14T19:15:08Z",
+      "side": 1,
+      "message": "False looks correct to me? This is not a preference but a feature flag right?",
+      "parentUuid": "517d638d_6024edaa",
       "range": {
         "startLine": 1198,
         "startChar": 35,
@@ -128,6 +175,30 @@
       "writtenOn": "2019-01-14T17:31:38Z",
       "side": 1,
       "message": "Does it make more sense to use a Mustache template?",
+      "range": {
+        "startLine": 76,
+        "startChar": 0,
+        "endLine": 93,
+        "endChar": 5
+      },
+      "revId": "d4633f8110a07f4ecb4537f47b961d9e583378e9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cc48cd88_f6182894",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-14T19:15:08Z",
+      "side": 1,
+      "message": "Does OOUI support Mustache templates? I fear not :/",
+      "parentUuid": "1b92a32c_e74d431a",
       "range": {
         "startLine": 76,
         "startChar": 0,
