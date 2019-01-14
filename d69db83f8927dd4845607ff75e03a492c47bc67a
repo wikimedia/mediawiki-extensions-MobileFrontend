@@ -70,6 +70,30 @@
       "revId": "d69db83f8927dd4845607ff75e03a492c47bc67a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "08dd213f_f6774c39",
+        "filename": "includes/content-providers/MwApiContentProvider.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-14T21:30:50Z",
+      "side": 1,
+      "message": "We can set both but I can\u0027t promise you it will integrate whatever that code is doing (it depends on order the hooks run).\n\nUpdate sets both with a comment.",
+      "parentUuid": "60b2e42e_dae66c5c",
+      "range": {
+        "startLine": 87,
+        "startChar": 19,
+        "endLine": 87,
+        "endChar": 36
+      },
+      "revId": "d69db83f8927dd4845607ff75e03a492c47bc67a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
