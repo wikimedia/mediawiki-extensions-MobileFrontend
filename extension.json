@@ -615,30 +615,6 @@
 				"info": "resources/mobile.nearby.images/nearby-article-illustration.svg"
 			}
 		},
-		"mobile.gallery": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"dependencies": [
-				"mobile.startup"
-			],
-			"templates": {
-				"PhotoItem.hogan": "resources/mobile.gallery/PhotoItem.hogan",
-				"PhotoList.hogan": "resources/mobile.gallery/PhotoList.hogan"
-			},
-			"messages": [
-				"mobile-frontend-donate-image-nouploads"
-			],
-			"styles": [
-				"resources/mobile.gallery/gallery.less"
-			],
-			"scripts": [
-				"resources/mobile.gallery/PhotoListGateway.js",
-				"resources/mobile.gallery/PhotoItem.js",
-				"resources/mobile.gallery/PhotoList.js"
-			]
-		},
 		"mobile.mainpage.css": {
 			"class": "MobileFrontend\\ResourceLoaderModules\\MobileMainPageStyleModule"
 		},
@@ -777,11 +753,20 @@
 			],
 			"dependencies": [
 				"mediawiki.user",
-				"mobile.gallery",
 				"mobile.startup"
 			],
+			"templates": {
+				"PhotoItem.hogan": "resources/mobile.special.uploads.scripts/PhotoItem.hogan",
+				"PhotoList.hogan": "resources/mobile.special.uploads.scripts/PhotoList.hogan"
+			},
+			"messages": [
+				"mobile-frontend-donate-image-nouploads"
+			],
+			"styles": [
+				"resources/mobile.special.uploads.scripts/gallery.less"
+			],
 			"scripts": [
-				"resources/mobile.special.uploads.scripts/uploads.js"
+				"resources/dist/mobile.special.uploads.scripts.js"
 			]
 		},
 		"mobile.special.uploads.styles": {
