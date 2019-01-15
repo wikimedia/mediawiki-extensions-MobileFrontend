@@ -154,6 +154,23 @@
       "revId": "d96646e1e0fb9d8682e62dec4b65221be18744a5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bd353733_ce5763bb",
+        "filename": "resources/mobile.special.mobileoptions.scripts/mobileoptions.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-15T20:53:11Z",
+      "side": 1,
+      "message": "Can you rebase this off of https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/484341/\n\nIt will be useful to see it in webpack, and I might be tempted to add tests!",
+      "revId": "d96646e1e0fb9d8682e62dec4b65221be18744a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
