@@ -211,6 +211,30 @@
       "revId": "7f1f1b8f1072f7c7375673978001f0c6bc16e01f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cf82ff05_30091bd2",
+        "filename": "tests/phpunit/content-providers/MwApiContentProviderTest.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 188,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-15T19:45:37Z",
+      "side": 1,
+      "message": "MWApiContentProvider only sets those values, to check that it\u0027s set properly you can do one of those two\n\n - mock the methods `addModules`, `addModulesStyles` ... and check that those are called with proper params\n - don\u0027t mock those, use OutputPage getters to verify those properties are set. \n\nThe second approach is a bit easier, if OutputPage is only a container (for example setLanguageLinks() does nothing, doesn\u0027t postprocess the data you\u0027re storing) then there is no need to stub setLanguageLinks method.\n\nIn different words (lets assume we\u0027re testing $myclass):\n\n   $data \u003d [\u0027somedata\u0027];\n   $myclass-\u003esetProperties( $data );\n   $myclass-\u003egetProperties() \u003d\u003d\u003d $data;\n\nthen just add assertions that Myclass getProperties() returns what you need, there is no need to mock the setProperties setter.\n\nOn the other, if there is any processing built into the method (like replacing spaces into _, or removing duplicates, for example check OutputPage::addCategoryLinks() which does lots of things when setting categoryLinks) then it\u0027s easier to stub the `addCategoryLinks()`. Why?, to verify that category links are properly set you would need to put some logic from addCategoryLinks into mock, there is no need to that. The OutputPage unit test should verify that all category links are properly set. You just want to verify that those are properly passed to the object. In that case, create a stub that verifies if addCategoryLinks() method is called with proper data.\n\nI hope it\u0027s clear. if what you set is what you get -\u003e just do assertion without stubbing method. If there is some processing involved - stubbing is the easier way.\n\nAlso, please keep in mind, that things like `addModules()` add something, OutputPage can have some $modules already defined. Instead of `assertSame`, most probably it would be the easiest to just use $this-\u003eassertArraySubset() - this will verify if that array has all keys you set (it can have more, but not less).",
+      "parentUuid": "313525a9_56b11c05",
+      "range": {
+        "startLine": 183,
+        "startChar": 25,
+        "endLine": 188,
+        "endChar": 31
+      },
+      "revId": "7f1f1b8f1072f7c7375673978001f0c6bc16e01f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
