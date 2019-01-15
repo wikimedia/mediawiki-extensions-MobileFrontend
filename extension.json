@@ -180,15 +180,6 @@
 				"resources/dist/mediawiki.template.hogan.js"
 			]
 		},
-		"mobile.ajax.styles": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"styles": [
-				"resources/mobile.ajax.styles/spinner.less"
-			]
-		},
 		"mobile.startup.images": {
 			"class": "ResourceLoaderImageModule",
 			"selector": ".mw-ui-icon-mf-{name}:before",
@@ -245,7 +236,6 @@
 				"mediawiki.notify",
 				"mobile.startup.images",
 				"mobile.startup.images.variants",
-				"mobile.ajax.styles",
 				"mediawiki.language",
 				"mediawiki.jqueryMsg",
 				"mediawiki.user",
@@ -315,6 +305,7 @@
 				"mobile-frontend-search-feedback-link-text"
 			],
 			"styles": [
+				"resources/mobile.startup/spinner.less",
 				"resources/mobile.startup/icon.less",
 				"resources/mobile.startup/panel.less",
 				"resources/mobile.startup/Overlay.less",
@@ -637,7 +628,6 @@
 				"desktop"
 			],
 			"dependencies": [
-				"mobile.ajax.styles",
 				"mobile.special.nearby.styles",
 				"mediawiki.language",
 				"mobile.messageBox",
