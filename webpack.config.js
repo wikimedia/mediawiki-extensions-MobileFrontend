@@ -16,6 +16,10 @@ const
 		notifications: 'mobile.notifications.overlay',
 		mediaViewer: 'mobile.mediaViewer',
 		languages: 'mobile.languages.structured',
+		mobileInit: 'mobile.init',
+		mobileOptions: 'mobile.special.mobileoptions.scripts',
+		mobileDiff: 'mobile.special.mobilediff.scripts',
+		userLogin: 'mobile.special.userlogin.scripts',
 		watchlist: 'mobile.special.watchlist.scripts'
 	};
 
@@ -67,7 +71,12 @@ module.exports = {
 		[ENTRIES.notifications]: './src/mobile.notifications.overlay/mobile.notifications.overlay.js',
 		// T210210
 		[ENTRIES.languages]: './src/mobile.languages.structured/mobile.languages.structured.js',
+		// all mobile skins,
+		[ENTRIES.mobileInit]: './src/mobile.init/mobile.init.js',
 		// T212823 Make a chunk for each mobile special page
+		[ENTRIES.mobileDiff]: './src/mobile.special.mobilediff.scripts.js',
+		[ENTRIES.mobileOptions]: './src/mobile.special.mobileoptions.scripts.js',
+		[ENTRIES.userLogin]: './src/mobile.special.userlogin.scripts.js',
 		[ENTRIES.watchlist]: './src/mobile.special.watchlist.scripts/mobile.special.watchlist.scripts.js'
 	},
 
@@ -134,6 +143,10 @@ module.exports = {
 						ENTRIES.notifications,
 						ENTRIES.mediaViewer,
 						ENTRIES.languages,
+						ENTRIES.mobileInit,
+						ENTRIES.mobileDiff,
+						ENTRIES.mobileOptions,
+						ENTRIES.userLogin,
 						ENTRIES.watchlist
 					].includes( chunk.name )
 				}

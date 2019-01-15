@@ -56,11 +56,15 @@
     },
     {
       "path": "resources/dist/mobile.common.js",
-      "maxSize": "8.8KB"
+      "maxSize": "11.4KB"
+    },
+    {
+      "path": "resources/dist/mobile.init.js",
+      "maxSize": "1.5KB"
     },
     {
       "path": "resources/dist/mobile.startup.js",
-      "maxSize": "9.2KB"
+      "maxSize": "6.4KB"
     },
     {
       "path": "resources/dist/mobile.languages.structured.js",
@@ -73,6 +77,18 @@
     {
       "path": "resources/dist/mobile.mediaViewer.js",
       "maxSize": "2.3KB"
+    },
+    {
+      "path": "resources/dist/mobile.special.mobilediff.scripts.js",
+      "maxSize": "0.8KB"
+    },
+    {
+      "path": "resources/dist/mobile.special.mobileoptions.scripts.js",
+      "maxSize": "1KB"
+    },
+    {
+      "path": "resources/dist/mobile.special.userlogin.scripts.js",
+      "maxSize": "0.3KB"
     },
     {
       "path": "resources/dist/mobile.special.watchlist.scripts.js",

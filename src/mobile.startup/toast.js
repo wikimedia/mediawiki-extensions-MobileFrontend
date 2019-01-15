@@ -15,7 +15,8 @@ function Toast() {
  * @memberof Toast
  * @instance
  * @param {string} msg Message to show in the toast
- * @param {Object} options CSS class to add to the element if a string.
+ * @param {Object|string} [options]
+ *  If a string (deprecated) CSS class to add to the element
  *  If an object, more options for the notification see mw.notification.show.
  *  For backwards compatibility reasons if a string is given it will be
  *  treated as options.type
@@ -58,7 +59,7 @@ Toast.prototype.hide = function () {
  * @memberof Toast
  * @instance
  * @param {string} content Content to be placed in element
- * @param {string} className class to add to element
+ * @param {string} [className] class to add to element
  */
 Toast.prototype.showOnPageReload = function ( content, className ) {
 	if ( mw.storage.get( storageKey ) ) {

@@ -237,8 +237,7 @@
 				"resources/mobile.init/mobile.less"
 			],
 			"scripts": [
-				"resources/mobile.init/BetaOptinPanel.js",
-				"resources/mobile.init/init.js"
+				"resources/dist/mobile.init.js"
 			]
 		},
 		"mobile.startup": {
@@ -764,7 +763,7 @@
 				"mobile.startup"
 			],
 			"scripts": [
-				"resources/mobile.special.mobileoptions.scripts/mobileoptions.js"
+				"resources/dist/mobile.special.mobileoptions.scripts.js"
 			],
 			"messages": [
 				"mobile-frontend-settings-save",
@@ -797,7 +796,7 @@
 				"desktop"
 			],
 			"scripts": [
-				"resources/mobile.special.userlogin.scripts/userlogin.js"
+				"resources/dist/mobile.special.userlogin.scripts.js"
 			]
 		},
 		"mobile.special.nearby.scripts": {
@@ -869,7 +868,7 @@
 				"markedaspatrollederror-noautopatrol"
 			],
 			"scripts": [
-				"resources/mobile.special.mobilediff.scripts/init.js"
+				"resources/dist/mobile.special.mobilediff.scripts.js"
 			]
 		},
 		"mobile.special.mobilediff.styles": {
