@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "5414c031_6d0f34a6",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-15T23:23:22Z",
+      "side": 1,
+      "message": "intentional typo! but have fixed to avoid confusion :)",
+      "parentUuid": "3a74f084_b067f630",
+      "range": {
+        "startLine": 15,
+        "startChar": 44,
+        "endLine": 15,
+        "endChar": 49
+      },
+      "revId": "640a8396edf19be1358298304728dd8a73dfda21",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "762039b9_f06e979c",
         "filename": "src/mobile.startup/toast.js",
         "patchSetId": 6
@@ -36,6 +60,30 @@
       "writtenOn": "2019-01-15T23:11:31Z",
       "side": 1,
       "message": "can this line be modified too? It seems like it is expecting an object, if given (not a string as the message suggests).",
+      "range": {
+        "startLine": 18,
+        "startChar": 29,
+        "endLine": 18,
+        "endChar": 73
+      },
+      "revId": "640a8396edf19be1358298304728dd8a73dfda21",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e2e95a37_27b5aa14",
+        "filename": "src/mobile.startup/toast.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-15T23:23:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "762039b9_f06e979c",
       "range": {
         "startLine": 18,
         "startChar": 29,
