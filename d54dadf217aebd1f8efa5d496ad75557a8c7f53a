@@ -702,6 +702,30 @@
     },
     {
       "key": {
+        "uuid": "ecb7367c_dd260ba2",
+        "filename": "includes/amc/UserMode.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-01-15T01:36:56Z",
+      "side": 1,
+      "message": "What did you say happens if this were to fail? Is the client notified in any way?",
+      "parentUuid": "2c8ce326_4ffcb3c5",
+      "range": {
+        "startLine": 55,
+        "startChar": 2,
+        "endLine": 55,
+        "endChar": 36
+      },
+      "revId": "d54dadf217aebd1f8efa5d496ad75557a8c7f53a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f4c27bcd_8766957b",
         "filename": "includes/specials/SpecialMobileOptions.php",
         "patchSetId": 3
