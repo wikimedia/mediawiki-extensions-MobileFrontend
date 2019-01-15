@@ -95,6 +95,30 @@
     },
     {
       "key": {
+        "uuid": "f165f617_59d35666",
+        "filename": "src/mobile.languages.structured/util.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-15T00:37:41Z",
+      "side": 1,
+      "message": "Changing the functional code like that seems worse to me. Does an @ignore allow you to use the TypeScript-friendly format of `Language \u0026 {frequency: number}`? If not, let\u0027s just go with what you got.",
+      "parentUuid": "30a00b49_14a4be4b",
+      "range": {
+        "startLine": 14,
+        "startChar": 13,
+        "endLine": 14,
+        "endChar": 21
+      },
+      "revId": "7394bec0c306f8f91c212302b98589cdab3d4d23",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "34a37a2a_206208e6",
         "filename": "src/mobile.startup/Overlay.js",
         "patchSetId": 8
