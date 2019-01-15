@@ -71,6 +71,30 @@
     },
     {
       "key": {
+        "uuid": "cd6000fa_1647ae7f",
+        "filename": "includes/amc/Hooks.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-15T21:52:08Z",
+      "side": 1,
+      "message": "the problem is it can, we pass a reference, so any hook can override that variable to anything they want.\n\nThis is a big problem with our hooks system, I prefer to keep it safe, and if non-array is passed, in some cases PHP will silently cast it to an array or throw a warning (depends on the case). If we annotate this an array and someone passes something else - it fails badly.",
+      "parentUuid": "95f46bc0_9efc64b2",
+      "range": {
+        "startLine": 16,
+        "startChar": 49,
+        "endLine": 16,
+        "endChar": 69
+      },
+      "revId": "d96646e1e0fb9d8682e62dec4b65221be18744a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "25ad3ab8_fbf969b8",
         "filename": "includes/amc/Manager.php",
         "patchSetId": 5
@@ -88,6 +112,24 @@
     },
     {
       "key": {
+        "uuid": "090d188d_dbd121de",
+        "filename": "includes/amc/Manager.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-15T21:52:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "25ad3ab8_fbf969b8",
+      "revId": "d96646e1e0fb9d8682e62dec4b65221be18744a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "704b5219_715db872",
         "filename": "includes/amc/Manager.php",
         "patchSetId": 5
@@ -99,6 +141,30 @@
       "writtenOn": "2019-01-15T01:48:13Z",
       "side": 1,
       "message": "This can be removed?",
+      "range": {
+        "startLine": 28,
+        "startChar": 0,
+        "endLine": 28,
+        "endChar": 24
+      },
+      "revId": "d96646e1e0fb9d8682e62dec4b65221be18744a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "788b7a19_b0251f98",
+        "filename": "includes/amc/Manager.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-15T21:52:08Z",
+      "side": 1,
+      "message": "yes, it should. fixed",
+      "parentUuid": "704b5219_715db872",
       "range": {
         "startLine": 28,
         "startChar": 0,
@@ -134,6 +200,30 @@
     },
     {
       "key": {
+        "uuid": "49845a59_5dcf70e7",
+        "filename": "includes/amc/UserMode.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-15T21:52:08Z",
+      "side": 1,
+      "message": "Yes, it should go. I kept it to make linter happy but looks like it doesn\u0027t care any more (I remember that sometime ago it was required to put a method comment).",
+      "parentUuid": "13255297_14ad2c72",
+      "range": {
+        "startLine": 31,
+        "startChar": 0,
+        "endLine": 31,
+        "endChar": 25
+      },
+      "revId": "d96646e1e0fb9d8682e62dec4b65221be18744a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "db916b98_099892c5",
         "filename": "includes/specials/SpecialMobileOptions.php",
         "patchSetId": 5
@@ -157,6 +247,30 @@
     },
     {
       "key": {
+        "uuid": "d797bc78_e07e61c0",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-15T21:52:08Z",
+      "side": 1,
+      "message": "That was already there, most probably because of the linter.",
+      "parentUuid": "db916b98_099892c5",
+      "range": {
+        "startLine": 26,
+        "startChar": 1,
+        "endLine": 28,
+        "endChar": 4
+      },
+      "revId": "d96646e1e0fb9d8682e62dec4b65221be18744a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "bd353733_ce5763bb",
         "filename": "resources/mobile.special.mobileoptions.scripts/mobileoptions.js",
         "patchSetId": 5
@@ -168,6 +282,24 @@
       "writtenOn": "2019-01-15T20:53:11Z",
       "side": 1,
       "message": "Can you rebase this off of https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/484341/\n\nIt will be useful to see it in webpack, and I might be tempted to add tests!",
+      "revId": "d96646e1e0fb9d8682e62dec4b65221be18744a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "add7c0e6_d963788d",
+        "filename": "resources/mobile.special.mobileoptions.scripts/mobileoptions.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-15T21:52:08Z",
+      "side": 1,
+      "message": "will try",
+      "parentUuid": "bd353733_ce5763bb",
       "revId": "d96646e1e0fb9d8682e62dec4b65221be18744a5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false

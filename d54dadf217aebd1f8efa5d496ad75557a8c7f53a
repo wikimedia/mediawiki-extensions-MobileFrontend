@@ -467,6 +467,30 @@
     },
     {
       "key": {
+        "uuid": "05abf8c1_2d970d5e",
+        "filename": "includes/amc/UserMode.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-15T21:52:08Z",
+      "side": 1,
+      "message": "The value stored in config is boolean, the value stored in user_options is \u00270\u0027 or \u00271\u0027.",
+      "parentUuid": "92525a1a_448e4321",
+      "range": {
+        "startLine": 10,
+        "startChar": 31,
+        "endLine": 10,
+        "endChar": 37
+      },
+      "revId": "d54dadf217aebd1f8efa5d496ad75557a8c7f53a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f5118bb1_338acfea",
         "filename": "includes/amc/UserMode.php",
         "patchSetId": 3
@@ -714,6 +738,30 @@
       "side": 1,
       "message": "What did you say happens if this were to fail? Is the client notified in any way?",
       "parentUuid": "2c8ce326_4ffcb3c5",
+      "range": {
+        "startLine": 55,
+        "startChar": 2,
+        "endLine": 55,
+        "endChar": 36
+      },
+      "revId": "d54dadf217aebd1f8efa5d496ad75557a8c7f53a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "424911cf_9e49695e",
+        "filename": "includes/amc/UserMode.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-15T21:52:08Z",
+      "side": 1,
+      "message": "when something bad happens the exception is thrown and presented to the user. I think that this case is already covered by the MediaWiki code.",
+      "parentUuid": "ecb7367c_dd260ba2",
       "range": {
         "startLine": 55,
         "startChar": 2,
