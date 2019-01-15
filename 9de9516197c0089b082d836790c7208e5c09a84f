@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "03f8fb85_0ecd0336",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1112,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-15T14:39:39Z",
+      "side": 1,
+      "message": "I think this if should be pulled out a level so it can get the benefit of the new wgMFDescription clear logic. The outer conditional, `if ( $descriptionsEnabled )`, sets `$desc`. Something like:\n\n if ( $descriptionsEnabled ) {\n   $desc \u003d self::findTagline( $po, function ( $item ) {\n     return ExtMobileFrontend::getWikibaseDescription( $item );\n   } );\n }\n self::setTagline( $outputPage, $desc || \u0027\u0027 );",
+      "range": {
+        "startLine": 1110,
+        "startChar": 0,
+        "endLine": 1112,
+        "endChar": 5
+      },
+      "revId": "9de9516197c0089b082d836790c7208e5c09a84f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
