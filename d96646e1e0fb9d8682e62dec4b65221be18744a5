@@ -1,0 +1,159 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7bc63b2e_c06dd2c5",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-01-15T01:48:13Z",
+      "side": 1,
+      "message": "\"Introduce\"",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 8
+      },
+      "revId": "d96646e1e0fb9d8682e62dec4b65221be18744a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bf95f1e3_cc053757",
+        "filename": "includes/ServiceWiring.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-01-15T01:48:13Z",
+      "side": 1,
+      "message": "Oh my, this makes me very happy :)",
+      "range": {
+        "startLine": 36,
+        "startChar": 0,
+        "endLine": 45,
+        "endChar": 2
+      },
+      "revId": "d96646e1e0fb9d8682e62dec4b65221be18744a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "95f46bc0_9efc64b2",
+        "filename": "includes/amc/Hooks.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-01-15T01:48:13Z",
+      "side": 1,
+      "message": "Is there a possibility this can be something else apart from an array? Reading https://www.mediawiki.org/wiki/Manual:Hooks/UserGetDefaultOptions seems. Maybe we should add a type hint but it seems core doesn\u0027t type hint this so maybe we can just leave it as is for now!",
+      "range": {
+        "startLine": 16,
+        "startChar": 49,
+        "endLine": 16,
+        "endChar": 69
+      },
+      "revId": "d96646e1e0fb9d8682e62dec4b65221be18744a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "25ad3ab8_fbf969b8",
+        "filename": "includes/amc/Manager.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-01-15T01:48:13Z",
+      "side": 1,
+      "message": "This new line can go?",
+      "revId": "d96646e1e0fb9d8682e62dec4b65221be18744a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "704b5219_715db872",
+        "filename": "includes/amc/Manager.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-01-15T01:48:13Z",
+      "side": 1,
+      "message": "This can be removed?",
+      "range": {
+        "startLine": 28,
+        "startChar": 0,
+        "endLine": 28,
+        "endChar": 24
+      },
+      "revId": "d96646e1e0fb9d8682e62dec4b65221be18744a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "13255297_14ad2c72",
+        "filename": "includes/amc/UserMode.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-01-15T01:48:13Z",
+      "side": 1,
+      "message": "This can go too? Reason being we already know it\u0027s UserMode\u0027s constructor method.",
+      "range": {
+        "startLine": 31,
+        "startChar": 0,
+        "endLine": 31,
+        "endChar": 25
+      },
+      "revId": "d96646e1e0fb9d8682e62dec4b65221be18744a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "db916b98_099892c5",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-01-15T01:48:13Z",
+      "side": 1,
+      "message": "This an go too?",
+      "range": {
+        "startLine": 26,
+        "startChar": 1,
+        "endLine": 28,
+        "endChar": 4
+      },
+      "revId": "d96646e1e0fb9d8682e62dec4b65221be18744a5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
