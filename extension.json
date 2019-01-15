@@ -608,39 +608,6 @@
 				"mobile-frontend-languages-structured-overlay-search-input-placeholder"
 			]
 		},
-		"mobile.nearby": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"dependencies": [
-				"mobile.special.nearby.styles",
-				"mediawiki.language",
-				"mobile.startup",
-				"mobile.nearby.images"
-			],
-			"messages": [
-				"mobile-frontend-nearby-distance",
-				"mobile-frontend-nearby-distance-meters",
-				"mobile-frontend-nearby-requirements",
-				"mobile-frontend-nearby-requirements-guidance",
-				"mobile-frontend-nearby-error",
-				"mobile-frontend-nearby-error-guidance",
-				"mobile-frontend-nearby-loading",
-				"mobile-frontend-nearby-noresults",
-				"mobile-frontend-nearby-noresults-guidance",
-				"mobile-frontend-nearby-location-unavailable",
-				"mobile-frontend-nearby-permission-denied"
-			],
-			"scripts": [
-				"resources/mobile.nearby/LocationProvider.js",
-				"resources/mobile.nearby/NearbyGateway.js",
-				"resources/mobile.nearby/Nearby.js"
-			],
-			"templates": {
-				"Nearby.hogan": "resources/mobile.nearby/nearby.hogan"
-			}
-		},
 		"mobile.nearby.images": {
 			"class": "ResourceLoaderImageModule",
 			"selector": ".mw-ui-mf-nearby-image-{name}:before",
@@ -770,13 +737,32 @@
 				"desktop"
 			],
 			"dependencies": [
-				"mobile.nearby",
+				"mobile.special.nearby.styles",
+				"mediawiki.language",
+				"mobile.startup",
+				"mobile.nearby.images",
 				"mediawiki.router",
 				"mediawiki.Uri"
 			],
+			"messages": [
+				"mobile-frontend-nearby-distance",
+				"mobile-frontend-nearby-distance-meters",
+				"mobile-frontend-nearby-requirements",
+				"mobile-frontend-nearby-requirements-guidance",
+				"mobile-frontend-nearby-error",
+				"mobile-frontend-nearby-error-guidance",
+				"mobile-frontend-nearby-loading",
+				"mobile-frontend-nearby-noresults",
+				"mobile-frontend-nearby-noresults-guidance",
+				"mobile-frontend-nearby-location-unavailable",
+				"mobile-frontend-nearby-permission-denied"
+			],
 			"scripts": [
-				"resources/mobile.special.nearby.scripts/nearby.js"
-			]
+				"resources/dist/mobile.special.nearby.scripts.js"
+			],
+			"templates": {
+				"Nearby.hogan": "resources/mobile.special.nearby.scripts/nearby.hogan"
+			}
 		},
 		"mobile.special.history.styles": {
 			"targets": "mobile",

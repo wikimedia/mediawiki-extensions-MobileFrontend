@@ -360,6 +360,7 @@ class MobileFrontendHooks {
 		$dependencies[] = 'mobile.startup';
 		$dependencies[] = 'mobile.languages.structured';
 		$dependencies[] = 'mobile.mediaViewer';
+		$dependencies[] = 'mobile.special.nearby.scripts';
 		$testModule = [
 			'dependencies' => $dependencies,
 			'localBasePath' => $localBasePath,

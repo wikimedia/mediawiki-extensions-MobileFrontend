@@ -38,6 +38,9 @@ module.exports = function newMockMediaWiki() {
 				} );
 			}
 		},
+		language: {
+			convertNumber: function () {}
+		},
 		log: {
 			deprecate: function () {},
 			warn: function () {}
