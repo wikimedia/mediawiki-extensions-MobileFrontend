@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a9efe687_08d175f9",
+        "filename": "includes/features/UserModes.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-16T18:45:47Z",
+      "side": 1,
+      "message": "This is not used for now.",
+      "range": {
+        "startLine": 34,
+        "startChar": 1,
+        "endLine": 34,
+        "endChar": 31
+      },
+      "revId": "a396f147823077048e8f33767f9ee9c124b686a9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
