@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "541cc80a_628c19a3",
+        "filename": "src/mobile.startup/lazyImages/lazyImageLoader.js",
+        "patchSetId": 14
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-16T21:17:55Z",
+      "side": 1,
+      "message": "Fixed.",
+      "parentUuid": "d90ba55f_2fd427b4",
+      "range": {
+        "startLine": 9,
+        "startChar": 18,
+        "endLine": 9,
+        "endChar": 26
+      },
+      "revId": "20e3f7574c1f5fe074fadb21a8e0bb1809452d1b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a093ba50_f59111a2",
         "filename": "src/mobile.startup/lazyImages/lazyImageLoader.js",
         "patchSetId": 14
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "e59f81c8_5370f600",
+        "filename": "src/mobile.startup/lazyImages/lazyImageLoader.js",
+        "patchSetId": 14
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-16T21:17:55Z",
+      "side": 1,
+      "message": "Fixed.",
+      "parentUuid": "a093ba50_f59111a2",
+      "range": {
+        "startLine": 10,
+        "startChar": 4,
+        "endLine": 10,
+        "endChar": 37
+      },
+      "revId": "20e3f7574c1f5fe074fadb21a8e0bb1809452d1b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d6bf8580_ebfcfcac",
         "filename": "src/mobile.startup/lazyImages/lazyImageLoader.js",
         "patchSetId": 14
@@ -59,6 +107,30 @@
       "writtenOn": "2019-01-16T21:09:55Z",
       "side": 1,
       "message": "This isn\u0027t a blocker bc I know you\u0027re trying to minimize changes but I\u0027m curious why this parameter is needed. What is the difference between: \n\n```\nfind(placeholder)\n``` \n\nand \n\n```\n$(placeholder)\n```\n\nIt seems like the if the latter was used, we might be able to drop the find param, but I\u0027m probably missing something.",
+      "range": {
+        "startLine": 13,
+        "startChar": 39,
+        "endLine": 13,
+        "endChar": 43
+      },
+      "revId": "20e3f7574c1f5fe074fadb21a8e0bb1809452d1b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "20606ef6_f0583ac0",
+        "filename": "src/mobile.startup/lazyImages/lazyImageLoader.js",
+        "patchSetId": 14
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-16T21:17:55Z",
+      "side": 1,
+      "message": "find is View.$() which becomes View.$el.find() with the given View\u0027s context. We\u0027re trying to minimize jQuery usage and there\u0027s no util.find(). This parameter disappears in a later patchset.",
+      "parentUuid": "d6bf8580_ebfcfcac",
       "range": {
         "startLine": 13,
         "startChar": 39,
