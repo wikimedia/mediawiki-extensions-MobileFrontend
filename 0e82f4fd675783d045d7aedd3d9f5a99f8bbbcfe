@@ -16,6 +16,24 @@
       "revId": "0e82f4fd675783d045d7aedd3d9f5a99f8bbbcfe",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "891b7578_001ed9d7",
+        "filename": "extension.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 308,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-16T22:11:38Z",
+      "side": 1,
+      "message": "Nope. I\u0027m moving it to mobile.startup which is loaded on all mobile pages.",
+      "parentUuid": "90ef61a4_a4bb8446",
+      "revId": "0e82f4fd675783d045d7aedd3d9f5a99f8bbbcfe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
