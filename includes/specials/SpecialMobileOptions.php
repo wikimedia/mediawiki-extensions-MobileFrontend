@@ -1,6 +1,7 @@
 <?php
 
 use MobileFrontend\Features\IFeature;
+use MediaWiki\MediaWikiServices;
 
 /**
  * Adds a special page with mobile specific preferences
@@ -12,10 +13,20 @@ class SpecialMobileOptions extends MobileSpecialPage {
 	protected $hasDesktopVersion = true;
 
 	/**
-	 * Construct function
+	 * @var MediaWikiServices;
 	 */
+	private $services;
+
+	/**
+	 * Advanced Mobile Contributions mode
+	 * @var \MobileFrontend\AMC\Manager
+	 */
+	private $amc;
+
 	public function __construct() {
 		parent::__construct( 'MobileOptions' );
+		$this->services = MediaWikiServices::getInstance();
+		$this->amc = $this->services->getService( 'MobileFrontend.AMC.Manager' );
 	}
 
 	/**
@@ -49,6 +60,35 @@ class SpecialMobileOptions extends MobileSpecialPage {
 		}
 	}
 
+	private function buildAMCToggle() {
+		/** @var \MobileFrontend\AMC\UserMode $userMode */
+			$userMode = $this->services->getService( 'MobileFrontend.AMC.UserMode' );
+			$amcToggle = new OOUI\CheckboxInputWidget( [
+				'name' => 'enableAMC',
+				'infusable' => true,
+				'selected' => $userMode->isEnabled(),
+				'id' => 'enable-amc-toggle',
+				'value' => '1',
+			] );
+			return new OOUI\FieldLayout(
+				$amcToggle,
+				[
+					'label' => new OOUI\LabelWidget( [
+						'input' => $amcToggle,
+						'label' => new OOUI\HtmlSnippet(
+							Html::openElement( 'div' ) .
+							Html::rawElement( 'strong', [],
+								$this->msg( 'mobile-frontend-mobile-option-amc' )->parse() ) .
+							Html::rawElement( 'div', [ 'class' => 'option-description' ],
+								$this->msg( 'mobile-frontend-mobile-option-amc-experiment-description' )->parse()
+							) .
+							Html::closeElement( 'div' )
+						)
+					] ),
+					'id' => 'amc-field',
+				]
+			);
+	}
 	/**
 	 * Render the settings form (with actual set settings) and add it to the
 	 * output as well as any supporting modules.
@@ -77,6 +117,9 @@ class SpecialMobileOptions extends MobileSpecialPage {
 		] );
 		$form->addClasses( [ 'mw-mf-settings' ] );
 
+		if ( $this->amc->isAvailable() ) {
+			$fields[] = $this->buildAMCToggle();
+		}
 		// beta settings
 		$isInBeta = $context->isBetaGroupMember();
 		if ( $this->getMFConfig()->get( 'MFEnableBeta' ) ) {
@@ -106,8 +149,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 				]
 			);
 
-			$manager = \MediaWiki\MediaWikiServices::getInstance()
-				->getService( 'MobileFrontend.FeaturesManager' );
+			$manager = $this->services->getService( 'MobileFrontend.FeaturesManager' );
 
 			$features = array_diff(
 				$manager->getAvailable( IFeature::CONFIG_BETA ),
@@ -199,6 +241,12 @@ class SpecialMobileOptions extends MobileSpecialPage {
 		}
 
 		$group = $request->getBool( 'enableBeta' ) ? 'beta' : '';
+		if ( $this->amc->isAvailable() ) {
+			/** @var \MobileFrontend\AMC\UserMode $userMode */
+			$userMode = $this->services->getService( 'MobileFrontend.AMC.UserMode' );
+			$userMode->setIsEnabled( $request->getBool( 'enableAMC' ) );
+		}
+
 		$context->setMobileMode( $group );
 		$url = $this->getPageTitle()->getFullURL( 'success' );
 		$context->getOutput()->redirect( MobileContext::singleton()->getMobileUrl( $url ) );

@@ -529,6 +529,13 @@ Whether beta mode is enabled.
 * Type: `Boolean`
 * Default: `false`
 
+#### $wgMFAdvancedMobileContributions
+
+Whether Advanced Mobile Contributions mode is available for users.
+
+* Type: `Boolean`
+* Default: `false`
+
 #### MFBetaFeedbackLink
 
 Link to feedback page for beta features. If false no feedback link will be shown.

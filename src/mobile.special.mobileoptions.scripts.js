@@ -109,53 +109,79 @@ function addExpandAllSectionsToForm( $form ) {
 }
 
 /**
- * Add features, that depends on localStorage, such as "exapnd all sections" or "fontchanger".
+ * Helper method to infuse checkbox elements with OO magic
+ * Additionally it applies all known hacks to make it mobile friendly
+ *
+ * @param {jQuery.Object[]} toggleElements an array of toggle elements to infuse
+ * @param {jQuery.Object} $form form to submit when there is interaction with toggle
+ */
+function infuseToggles( toggleElements, $form ) {
+	toggleElements.forEach( function ( $toggleElement ) {
+		var toggleSwitch,
+			enableToggle,
+			$checkbox;
+
+		enableToggle = OO.ui.infuse( $toggleElement );
+		$checkbox = enableToggle.$element;
+
+		toggleSwitch = new OO.ui.ToggleSwitchWidget( {
+			value: enableToggle.isSelected()
+		} );
+		// Strangely the ToggleSwitchWidget does not behave as an input so any change
+		// to it is not reflected in the form. (see T182466)
+		// Ideally we'd replaceWith here and not have to hide the original element.
+		toggleSwitch.$element.insertAfter( $checkbox );
+		// although the checkbox is hidden already, that is done via visibility
+		// as a result, it still takes up space. We don't want it to any more now that the
+		// new toggle switch has been added.
+		$checkbox.hide();
+
+		// listening on checkbox change is required to make the clicking on label working.
+		// Otherwise clicking on label changes the checkbox "checked" state
+		// but it's not reflected in the toggle switch
+		$checkbox.on( 'change', function () {
+			// disable checkbox as submit is delayed by 0.25s
+			$checkbox.attr( 'disabled', true );
+			toggleSwitch.setValue( enableToggle.isSelected() );
+		} );
+		toggleSwitch.on( 'change', function ( value ) {
+			// ugly hack, we're delaying submit form by 0.25s
+			// and we want to disable registering clicks
+			// we want to disable the toggleSwitch
+			// but we cannot use setDisabled(true) as it makes button gray
+			toggleSwitch.setValue = function () {};
+
+			$checkbox.find( 'input' )
+				.prop( 'checked', value );
+			notify( true );
+			// On some Android devices animation gets stuck in the middle as browser
+			// starts submitting the form.
+			// Let's call submit on the form after toggle button transition is done
+			// (0.25s, defined in OOUI)
+			setTimeout( function () {
+				$form.submit();
+			}, 250 );
+		} );
+	} );
+}
+
+/**
+ * Add features, that depends on localStorage, such as "expand all sections" or "fontchanger".
  * The checkbox is used for turning on/off expansion of all sections on page load.
  */
-function initLocalStorageElements() {
-	var toggleSwitch,
-		enableToggle = OO.ui.infuse( $( '#enable-beta-toggle' ) ),
-		$checkbox = enableToggle.$element,
-		$form = $( '#mobile-options' );
+function initMobileOptions() {
+	var $form = $( '#mobile-options' ),
+		betaToggle = $( '#enable-beta-toggle' ),
+		amcToggle = $( '#enable-amc-toggle' ),
+		toggles = [];
 
-	toggleSwitch = new OO.ui.ToggleSwitchWidget( {
-		value: enableToggle.isSelected()
-	} );
-	// Strangely the ToggleSwitchWidget does not behave as an input so any change
-	// to it is not reflected in the form. (see T182466)
-	// Ideally we'd replaceWith here and not have to hide the original element.
-	toggleSwitch.$element.insertAfter( $checkbox );
-	// although the checkbox is hidden already, that is done via visibility
-	// as a result, it still takes up space. We don't want it to any more now that the
-	// new toggle switch has been added.
-	$checkbox.hide();
-
-	// listening on checkbox change is required to make the clicking on label working. Otherwise
-	// clicking on label changes the checkbox "checked" state
-	// but it's not reflected in the toggle switch
-	$checkbox.on( 'change', function () {
-		// disable checkbox as submit is delayed by 0.25s
-		$checkbox.attr( 'disabled', true );
-		toggleSwitch.setValue( enableToggle.isSelected() );
-	} );
-	toggleSwitch.on( 'change', function ( value ) {
-		// ugly hack, we're delaying submit form by 0.25s
-		// and we want to disable registering clicks
-		// we want to disable the toggleSwitch
-		// but we cannot use setDisabled(true) as it makes button gray
-		toggleSwitch.setValue = function () {};
-
-		$checkbox.find( 'input' )
-			.prop( 'checked', value );
-		notify( true );
-		// On some Android devices animation gets stuck in the middle as browser
-		// starts submitting the form.
-		// Let's call submit on the form after toggle button transition is done
-		// (0.25s, defined in OOUI)
-		setTimeout( function () {
-			$form.submit();
-		}, 250 );
-	} );
+	if ( betaToggle ) {
+		toggles.push( betaToggle );
+	}
+	if ( amcToggle ) {
+		toggles.push( amcToggle );
+	}
+	infuseToggles( toggles, $form );
 
 	if ( mw.config.get( 'wgMFExpandAllSectionsUserOption' ) &&
 		// Don't show this option on large screens since it's only honored for small screens.
@@ -170,4 +196,4 @@ function initLocalStorageElements() {
 	}
 }
 
-mw.loader.using( 'oojs-ui-widgets' ).then( initLocalStorageElements );
+mw.loader.using( 'oojs-ui-widgets' ).then( initMobileOptions );
