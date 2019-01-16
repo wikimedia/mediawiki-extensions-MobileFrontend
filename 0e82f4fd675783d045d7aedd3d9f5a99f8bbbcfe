@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "90ef61a4_a4bb8446",
+        "filename": "extension.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 308,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2019-01-16T21:49:15Z",
+      "side": 1,
+      "message": "You\u0027re removing spinner.less completely in current patch? Which I would be very careful with, having seen spinner in a few places on mobile",
+      "revId": "0e82f4fd675783d045d7aedd3d9f5a99f8bbbcfe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
