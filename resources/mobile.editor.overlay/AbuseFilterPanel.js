@@ -40,7 +40,7 @@
 		 * @memberof AbuseFilterPanel
 		 * @instance
 		 */
-		template: mw.template.get( 'mobile.editor.common', 'AbuseFilterPanel.hogan' ),
+		template: mw.template.get( 'mobile.editor.overlay', 'AbuseFilterPanel.hogan' ),
 		/**
 		 * Show the panel. Create a route to show AbuseFilterOverlay with message.
 		 * @memberof AbuseFilterPanel

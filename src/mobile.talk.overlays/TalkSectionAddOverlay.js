@@ -76,7 +76,7 @@ mfExtend( TalkSectionAddOverlay, Overlay, {
 	 */
 	templatePartials: util.extend( {}, Overlay.prototype.templatePartials, {
 		contentHeader: mw.template.get( 'mobile.talk.overlays', 'SectionAddOverlay/contentHeader.hogan' ),
-		saveHeader: mw.template.get( 'mobile.editor.common', 'saveHeader.hogan' )
+		saveHeader: mw.template.get( 'mobile.editor.overlay', 'saveHeader.hogan' )
 	} ),
 	/**
 	 * @inheritdoc

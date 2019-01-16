@@ -310,83 +310,6 @@
 				"resources/dist/mobile.startup.js"
 			]
 		},
-		"mobile.editor.api": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"dependencies": [
-				"mobile.startup"
-			],
-			"scripts": [
-				"resources/mobile.editor.api/EditorGateway.js"
-			]
-		},
-		"mobile.editor.common": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"dependencies": [
-				"oojs-ui",
-				"mediawiki.ui.input",
-				"mobile.editor.api",
-				"mobile.startup",
-				"mediawiki.user",
-				"mediawiki.util",
-				"mediawiki.confirmCloseWindow",
-				"mediawiki.widgets.AbandonEditDialog"
-			],
-			"scripts": [
-				"resources/mobile.editor.common/schemaEditAttemptStep.js",
-				"resources/mobile.editor.common/AbuseFilterOverlay.js",
-				"resources/mobile.editor.common/AbuseFilterPanel.js",
-				"resources/mobile.editor.common/EditorOverlayBase.js"
-			],
-			"styles": [
-				"resources/mobile.editor.common/editor.less"
-			],
-			"templates": {
-				"AbuseFilterOverlay.hogan": "resources/mobile.editor.common/AbuseFilterOverlay.hogan",
-				"AbuseFilterPanel.hogan": "resources/mobile.editor.common/AbuseFilterPanel.hogan",
-				"editHeader.hogan": "resources/mobile.editor.common/editHeader.hogan",
-				"previewHeader.hogan": "resources/mobile.editor.common/previewHeader.hogan",
-				"saveHeader.hogan": "resources/mobile.editor.common/saveHeader.hogan",
-				"EditorOverlayBase.hogan": "resources/mobile.editor.common/EditorOverlayBase.hogan",
-				"EditorOverlayAnonWarning.hogan": "resources/mobile.editor.common/EditorOverlayAnonWarning.hogan"
-			},
-			"messages": [
-				"mobile-frontend-editor-continue",
-				"mobile-frontend-editor-cancel",
-				"mobile-frontend-editor-keep-editing",
-				"mobile-frontend-editor-placeholder",
-				"mobile-frontend-editor-placeholder-new-page",
-				"mobile-frontend-editor-summary",
-				"mobile-frontend-editor-summary-request",
-				"mobile-frontend-editor-summary-placeholder",
-				"mobile-frontend-editor-cancel-confirm",
-				"mobile-frontend-editor-new-page-confirm",
-				"mobile-frontend-editor-wait",
-				"mobile-frontend-editor-success",
-				"mobile-frontend-editor-success-landmark-1",
-				"mobile-frontend-editor-success-new-page",
-				"mobile-frontend-editor-error",
-				"mobile-frontend-editor-error-conflict",
-				"mobile-frontend-editor-error-loading",
-				"mobile-frontend-editor-error-preview",
-				"mobile-frontend-account-create-captcha-placeholder",
-				"mobile-frontend-editor-captcha-try-again",
-				"mobile-frontend-editor-editing-page",
-				"mobile-frontend-editor-previewing-page",
-				"mobile-frontend-editor-switch-confirm",
-				"mobile-frontend-editor-switch-editor",
-				"mobile-frontend-editor-switch-visual-editor",
-				"mobile-frontend-editor-anonwarning",
-				"mobile-frontend-editor-abusefilter-warning",
-				"mobile-frontend-editor-abusefilter-disallow",
-				"mobile-frontend-editor-abusefilter-read-more"
-			]
-		},
 		"mobile.editor": {
 			"targets": [
 				"mobile",
@@ -419,30 +342,77 @@
 				"desktop"
 			],
 			"dependencies": [
-				"mobile.editor.common",
 				"mobile.editor.images",
 				"oojs-ui.styles.icons-editing-core",
 				"mediawiki.util",
 				"mediawiki.notification",
 				"mediawiki.editfont.styles",
-				"user.options"
+				"user.options",
+				"oojs-ui",
+				"mediawiki.ui.input",
+				"mobile.startup",
+				"mediawiki.user",
+				"mediawiki.confirmCloseWindow",
+				"mediawiki.widgets.AbandonEditDialog"
 			],
 			"scripts": [
+				"resources/mobile.editor.overlay/EditorGateway.js",
+				"resources/mobile.editor.overlay/schemaEditAttemptStep.js",
+				"resources/mobile.editor.overlay/AbuseFilterOverlay.js",
+				"resources/mobile.editor.overlay/AbuseFilterPanel.js",
+				"resources/mobile.editor.overlay/EditorOverlayBase.js",
 				"resources/mobile.editor.overlay/BlockMessage.js",
 				"resources/mobile.editor.overlay/EditorOverlay.js",
 				"resources/mobile.editor.overlay/VisualEditorOverlay.js"
 			],
 			"styles": [
+				"resources/mobile.editor.overlay/editor.less",
 				"resources/mobile.editor.overlay/BlockMessage.less",
 				"resources/mobile.editor.overlay/editor.ve.less"
 			],
 			"templates": {
+				"AbuseFilterOverlay.hogan": "resources/mobile.editor.overlay/AbuseFilterOverlay.hogan",
+				"AbuseFilterPanel.hogan": "resources/mobile.editor.overlay/AbuseFilterPanel.hogan",
+				"editHeader.hogan": "resources/mobile.editor.overlay/editHeader.hogan",
+				"previewHeader.hogan": "resources/mobile.editor.overlay/previewHeader.hogan",
+				"saveHeader.hogan": "resources/mobile.editor.overlay/saveHeader.hogan",
+				"EditorOverlayBase.hogan": "resources/mobile.editor.overlay/EditorOverlayBase.hogan",
+				"EditorOverlayAnonWarning.hogan": "resources/mobile.editor.overlay/EditorOverlayAnonWarning.hogan",
 				"contentVE.hogan": "resources/mobile.editor.overlay/contentVE.hogan",
 				"toolbarVE.hogan": "resources/mobile.editor.overlay/toolbarVE.hogan",
 				"BlockMessage.hogan": "resources/mobile.editor.overlay/BlockMessage.hogan",
 				"content.hogan": "resources/mobile.editor.overlay/content.hogan"
 			},
 			"messages": [
+				"mobile-frontend-editor-continue",
+				"mobile-frontend-editor-cancel",
+				"mobile-frontend-editor-keep-editing",
+				"mobile-frontend-editor-placeholder",
+				"mobile-frontend-editor-placeholder-new-page",
+				"mobile-frontend-editor-summary",
+				"mobile-frontend-editor-summary-request",
+				"mobile-frontend-editor-summary-placeholder",
+				"mobile-frontend-editor-cancel-confirm",
+				"mobile-frontend-editor-new-page-confirm",
+				"mobile-frontend-editor-wait",
+				"mobile-frontend-editor-success",
+				"mobile-frontend-editor-success-landmark-1",
+				"mobile-frontend-editor-success-new-page",
+				"mobile-frontend-editor-error",
+				"mobile-frontend-editor-error-conflict",
+				"mobile-frontend-editor-error-loading",
+				"mobile-frontend-editor-error-preview",
+				"mobile-frontend-account-create-captcha-placeholder",
+				"mobile-frontend-editor-captcha-try-again",
+				"mobile-frontend-editor-editing-page",
+				"mobile-frontend-editor-previewing-page",
+				"mobile-frontend-editor-switch-confirm",
+				"mobile-frontend-editor-switch-editor",
+				"mobile-frontend-editor-switch-visual-editor",
+				"mobile-frontend-editor-anonwarning",
+				"mobile-frontend-editor-abusefilter-warning",
+				"mobile-frontend-editor-abusefilter-disallow",
+				"mobile-frontend-editor-abusefilter-read-more",
 				"ok",
 				"mobile-frontend-editor-editing",
 				"mobile-frontend-editor-blocked-drawer-title",
@@ -473,7 +443,7 @@
 				"mediawiki.user",
 				"mediawiki.util",
 				"mediawiki.ui.anchor",
-				"mobile.editor.common"
+				"mobile.editor.overlay"
 			],
 			"scripts": [
 				"resources/dist/mobile.talk.overlays.js"
@@ -549,7 +519,7 @@
 				"mediawiki.Title",
 				"mediawiki.router",
 				"mobile.startup",
-				"mobile.editor.common",
+				"mobile.editor.overlay",
 				"oojs-ui.styles.icons-interactions",
 				"oojs-ui"
 			],
