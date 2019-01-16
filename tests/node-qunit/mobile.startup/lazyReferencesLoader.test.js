@@ -4,48 +4,22 @@ var
 	dom = require( '../utils/dom' ),
 	mediaWiki = require( '../utils/mw' ),
 	oo = require( '../utils/oo' ),
+	lazyReferencesLoader,
 	sinon = require( 'sinon' ),
 	util = require( '../../../src/mobile.startup/util' ),
 	sandbox,
-	Skin,
 	Page;
 
-QUnit.module( 'MobileFrontend Skin.js', {
+QUnit.module( 'MobileFrontend lazyReferencesLoader.js', {
 	beforeEach: function () {
-		var stub = {
-				getReferencesLists: function () {},
-				getReferencesList: function () {}
-			},
-			page;
 		sandbox = sinon.sandbox.create();
 		dom.setUp( sandbox, global );
 		jQuery.setUp( sandbox, global );
 		oo.setUp( sandbox, global );
 		mediaWiki.setUp( sandbox, global );
 
-		Skin = require( '../../../src/mobile.startup/Skin' );
 		Page = require( '../../../src/mobile.startup/Page' );
-
-		page = new Page( {
-			title: 'Foo'
-		} );
-
-		// Skin will request tablet modules - avoid this
-		sandbox.stub( mw.loader, 'using' ).returns( util.Deferred().resolve() );
-		sandbox.stub( stub, 'getReferencesLists' ).returns( util.Deferred().resolve( {} ) );
-		sandbox.stub( stub, 'getReferencesList' )
-			.withArgs( page, 'Notes_and_references' ).returns( util.Deferred().resolve( util.parseHTML( '<p>' ).text( 'P' ) ) )
-			.withArgs( page, 'Notes' ).returns( util.Deferred().resolve( util.parseHTML( '<p>' ).text( 'A' ) ) )
-			.withArgs( page, 'Refs' ).returns( util.Deferred().resolve( util.parseHTML( '<p>' ).text( 'B' ) ) )
-			.withArgs( page, 'More_refs' ).returns( util.Deferred().resolve( util.parseHTML( '<p>' ).html( '<p>E</p><p>F</p>' ).children() ) );
-		this.skin = new Skin( {
-			referencesGateway: stub,
-			page: page,
-			eventBus: {
-				on: function () {},
-				off: function () {}
-			}
-		} );
+		lazyReferencesLoader = require( '../../../src/mobile.startup/lazyReferencesLoader' );
 	},
 	afterEach: function () {
 		jQuery.tearDown();
@@ -53,32 +27,60 @@ QUnit.module( 'MobileFrontend Skin.js', {
 	}
 } );
 
-QUnit.test( '#lazyLoadReferences collapsed', function ( assert ) {
-	var $content = util.parseHTML( '<div>' ).append( pages.skinPage );
+QUnit.test( '#lazyReferencesLoader collapsed', function ( assert ) {
+	var
+		$content = util.parseHTML( '<div>' ).append( pages.skinPage ),
+		eventBus = {
+			on: function () {},
+			off: function () {},
+			emit: function () {}
+		},
+		gateway = {
+			getReferencesLists: function () {},
+			getReferencesList: function () {}
+		},
+		page = new Page( { title: 'Foo' } );
 
-	return this.skin.lazyLoadReferences( {
+	sandbox.stub( gateway, 'getReferencesLists' ).returns( util.Deferred().resolve( {} ) );
+	sandbox.stub( gateway, 'getReferencesList' )
+		.withArgs( page, 'Notes_and_references' ).returns( util.Deferred().resolve( util.parseHTML( '<p>' ).text( 'P' ) ) )
+		.withArgs( page, 'Notes' ).returns( util.Deferred().resolve( util.parseHTML( '<p>' ).text( 'A' ) ) )
+		.withArgs( page, 'Refs' ).returns( util.Deferred().resolve( util.parseHTML( '<p>' ).text( 'B' ) ) )
+		.withArgs( page, 'More_refs' ).returns( util.Deferred().resolve( util.parseHTML( '<p>' ).html( '<p>E</p><p>F</p>' ).children() ) );
+
+	return lazyReferencesLoader.loadReferences( eventBus, {
 		expanded: false,
-		page: this.skin.page,
+		page: page,
 		isReferenceSection: true,
 		$heading: $content.find( '#Notes_and_references' ).parent()
-	} ).then( function () {
+	}, gateway, page ).then( function () {
 		assert.strictEqual( $content.find( '.mf-section-2' ).text().replace( /[\t\n]/g, '' ),
 			'TextPNotesARefsBno forgetMore refs1E2F3',
 			'Check all the references section is populated correctly.' );
 	} );
 } );
 
-QUnit.test( '#lazyLoadReferences expanded', function ( assert ) {
+QUnit.test( '#lazyReferencesLoader expanded', function ( assert ) {
 	var
 		$content = util.parseHTML( '<div>' ).append( pages.skinPage ),
+		eventBus = {
+			on: function () {},
+			off: function () {},
+			emit: function () {}
+		},
+		gateway = {
+			getReferencesLists: function () {},
+			getReferencesList: function () {}
+		},
+		page = new Page( { title: 'Foo' } ),
 		result;
 
-	result = this.skin.lazyLoadReferences( {
+	result = lazyReferencesLoader.loadReferences( eventBus, {
 		expanded: true,
-		page: this.skin.page,
+		page: page,
 		isReferenceSection: true,
 		$heading: $content.find( '#Notes_and_references' ).parent()
-	} );
+	}, gateway, page );
 	assert.strictEqual( result, undefined );
 } );
 
@@ -135,24 +137,24 @@ QUnit.test( '#getSectionId', function ( assert ) {
 		);
 
 	assert.strictEqual(
-		Skin.getSectionId( $el.find( '.element' ) ),
+		lazyReferencesLoader.test.getSectionId( $el.find( '.element' ) ),
 		'subheading'
 	);
 	assert.strictEqual(
-		Skin.getSectionId( $elTwo.find( '.element' ) ),
+		lazyReferencesLoader.test.getSectionId( $elTwo.find( '.element' ) ),
 		'Notes',
 		'https://phabricator.wikimedia.org/T146394'
 	);
 	assert.strictEqual(
-		Skin.getSectionId( $elThree.find( '.element' ) ),
+		lazyReferencesLoader.test.getSectionId( $elThree.find( '.element' ) ),
 		'heading'
 	);
 	assert.strictEqual(
-		Skin.getSectionId( $elFour.find( '.element' ) ),
+		lazyReferencesLoader.test.getSectionId( $elFour.find( '.element' ) ),
 		null
 	);
 	assert.strictEqual(
-		Skin.getSectionId( $elFive.find( '.element' ) ),
+		lazyReferencesLoader.test.getSectionId( $elFive.find( '.element' ) ),
 		'Bar'
 	);
 } );
