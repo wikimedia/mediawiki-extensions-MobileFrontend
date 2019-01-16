@@ -1,7 +1,7 @@
 ( function ( M ) {
 	/** @event */
 	var NEARBY_EVENT_POST_RENDER = 'Nearby-postRender',
-		MessageBox = M.require( 'mobile.messageBox/MessageBox' ),
+		MessageBox = M.require( 'mobile.startup' ).MessageBox,
 		NearbyGateway = M.require( 'mobile.nearby/NearbyGateway' ),
 		util = M.require( 'mobile.startup/util' ),
 		WatchstarPageList = M.require( 'mobile.startup' ).WatchstarPageList;

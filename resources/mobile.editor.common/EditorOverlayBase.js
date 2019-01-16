@@ -4,7 +4,7 @@
 		PageGateway = M.require( 'mobile.startup/PageGateway' ),
 		Icon = M.require( 'mobile.startup/Icon' ),
 		toast = M.require( 'mobile.startup/toast' ),
-		MessageBox = M.require( 'mobile.messageBox/MessageBox' ),
+		MessageBox = M.require( 'mobile.startup' ).MessageBox,
 		mwUser = mw.user;
 
 	/**

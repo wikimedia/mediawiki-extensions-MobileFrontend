@@ -6,7 +6,7 @@
 		AbuseFilterPanel = M.require( 'mobile.editor.common/AbuseFilterPanel' ),
 		Button = M.require( 'mobile.startup/Button' ),
 		BlockMessage = M.require( 'mobile.editor.overlay/BlockMessage' ),
-		MessageBox = M.require( 'mobile.messageBox/MessageBox' );
+		MessageBox = M.require( 'mobile.startup' ).MessageBox;
 
 	/**
 	 * Overlay that shows an editor

@@ -41,7 +41,8 @@ var
 	MobileWebSearchLogger = require( './search/MobileWebSearchLogger' ),
 	SearchGateway = require( './search/SearchGateway' ),
 	ScrollEndEventEmitter = require( './ScrollEndEventEmitter' ),
-	lazyImageLoader = require( './lazyImages/lazyImageLoader' );
+	lazyImageLoader = require( './lazyImages/lazyImageLoader' ),
+	MessageBox = require( './MessageBox' );
 
 mw.mobileFrontend = moduleLoader;
 
@@ -139,7 +140,8 @@ module.exports = {
 	lazyImages: {
 		lazyImageLoader: lazyImageLoader
 	},
-	ScrollEndEventEmitter: ScrollEndEventEmitter
+	ScrollEndEventEmitter: ScrollEndEventEmitter,
+	MessageBox: MessageBox
 };
 
 // Setup a single export for new modules to fold all of the above lines into.

@@ -151,22 +151,6 @@
 				"resources/mobile.userpage.styles/userpage.less"
 			]
 		},
-		"mobile.messageBox": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"dependencies": [
-				"mobile.startup",
-				"mobile.messageBox.styles"
-			],
-			"templates": {
-				"MessageBox.hogan": "resources/mobile.messageBox/MessageBox.hogan"
-			},
-			"scripts": [
-				"resources/mobile.messageBox/MessageBox.js"
-			]
-		},
 		"mediawiki.template.hogan": {
 			"targets": [
 				"mobile",
@@ -255,7 +239,8 @@
 				"mediawiki.api",
 				"mediawiki.viewport",
 				"mediawiki.router",
-				"jquery.throttle-debounce"
+				"jquery.throttle-debounce",
+				"mobile.messageBox.styles"
 			],
 			"templates": {
 				"PageListItem.hogan": "resources/mobile.startup/PageListItem.hogan",
@@ -271,7 +256,8 @@
 				"TableOfContents.hogan": "resources/mobile.startup/toc/TableOfContents.hogan",
 				"TableOfContentsHeading.hogan": "resources/mobile.startup/toc/TableOfContentsHeading.hogan",
 				"search/SearchHeader.hogan": "resources/mobile.startup/search/SearchHeader.hogan",
-				"search/SearchContent.hogan": "resources/mobile.startup/search/SearchContent.hogan"
+				"search/SearchContent.hogan": "resources/mobile.startup/search/SearchContent.hogan",
+				"MessageBox.hogan": "resources/mobile.startup/MessageBox.hogan"
 			},
 			"messages": [
 				"toc",
@@ -353,7 +339,6 @@
 				"mediawiki.ui.input",
 				"mobile.editor.api",
 				"mobile.startup",
-				"mobile.messageBox",
 				"mediawiki.user",
 				"mediawiki.util",
 				"mediawiki.confirmCloseWindow",
@@ -640,7 +625,6 @@
 				"mobile.ajax.styles",
 				"mobile.special.nearby.styles",
 				"mediawiki.language",
-				"mobile.messageBox",
 				"mobile.startup",
 				"mobile.nearby.images"
 			],
