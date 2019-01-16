@@ -22,6 +22,30 @@
       "revId": "438ad3da97658075d6e7098ffb5528076434ce84",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "67a0355e_564f123c",
+        "filename": "tests/node-qunit/mobile.startup/lazyImages/lazyImageLoader.test.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-16T19:57:31Z",
+      "side": 1,
+      "message": "Fixed. Thanks!",
+      "parentUuid": "232f0a47_32d99549",
+      "range": {
+        "startLine": 12,
+        "startChar": 30,
+        "endLine": 12,
+        "endChar": 37
+      },
+      "revId": "438ad3da97658075d6e7098ffb5528076434ce84",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
