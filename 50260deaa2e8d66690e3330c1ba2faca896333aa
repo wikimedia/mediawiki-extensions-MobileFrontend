@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c9bad3eb_808f10db",
+        "filename": "webpack.config.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-16T22:21:19Z",
+      "side": 1,
+      "message": "let\u0027s try and keep this in \"Attempted\" alphabetical order (right now it\u0027s common code, features, entry points)\n\nSpecifically let\u0027s put this under mobileDiff",
+      "revId": "50260deaa2e8d66690e3330c1ba2faca896333aa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
