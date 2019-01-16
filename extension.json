@@ -180,16 +180,6 @@
 				"resources/dist/mediawiki.template.hogan.js"
 			]
 		},
-		"mobile.toc": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"dependencies": [
-				"mobile.startup"
-			],
-			"deprecated": true
-		},
 		"mobile.ajax.styles": {
 			"targets": [
 				"mobile",
