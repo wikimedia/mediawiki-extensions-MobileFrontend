@@ -1,12 +1,14 @@
 <?php
 namespace MobileFrontend\AMC;
 
-use MediaWiki\MediaWikiServices;
-use \RuntimeException;
 use \DeferredUpdates;
+use MediaWiki\MediaWikiServices;
+use MobileFrontend\Features\IUserMode;
+use \RuntimeException;
 use Wikimedia\Assert\Assert;
 
-class UserMode {
+class UserMode implements IUserMode {
+
 	const USER_OPTION_MODE_AMC = 'mf_amc_optin';
 
 	/**
@@ -39,6 +41,13 @@ class UserMode {
 	}
 
 	/**
+	 * @return string
+	 */
+	public function getModeIdentifier() {
+		return $this->amc->getModeIdentifier();
+	}
+
+	/**
 	 * Return information if the AMC mode is enabled by user
 	 * @return bool
 	 */
@@ -52,7 +61,7 @@ class UserMode {
 	 * @param bool $isEnabled
 	 * @throws RuntimeException when mode is disabled
 	 */
-	public function setIsEnabled( $isEnabled ) {
+	public function setEnabled( $isEnabled ) {
 		$toSet = $isEnabled ? self::OPTION_ENABLED : self::OPTION_DISABLED;
 		if ( !$this->amc->isAvailable() ) {
 			throw new RuntimeException( 'AMC Mode is not available' );

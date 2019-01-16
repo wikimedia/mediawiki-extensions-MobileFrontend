@@ -1,6 +1,5 @@
 <?php
 
-use MobileFrontend\Features\IFeature;
 use MediaWiki\MediaWikiServices;
 
 /**
@@ -176,8 +175,8 @@ class SpecialMobileOptions extends MobileSpecialPage {
 			$manager = $this->services->getService( 'MobileFrontend.FeaturesManager' );
 
 			$features = array_diff(
-				$manager->getAvailable( IFeature::CONFIG_BETA ),
-				$manager->getAvailable( IFeature::CONFIG_STABLE )
+				$manager->getAvailableForMode( new \MobileFrontend\Features\BetaUserMode( $context ) ),
+				$manager->getAvailableForMode( new \MobileFrontend\Features\StableUserMode( $context ) )
 			);
 
 			$classNames = [ 'mobile-options-beta-feature' ];
@@ -268,7 +267,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 		if ( $this->amc->isAvailable() ) {
 			/** @var \MobileFrontend\AMC\UserMode $userMode */
 			$userMode = $this->services->getService( 'MobileFrontend.AMC.UserMode' );
-			$userMode->setIsEnabled( $request->getBool( 'enableAMC' ) );
+			$userMode->setEnabled( $request->getBool( 'enableAMC' ) );
 		}
 
 		$context->setMobileMode( $group );

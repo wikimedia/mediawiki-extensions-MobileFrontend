@@ -16,6 +16,12 @@ final class Manager {
 	const AMC_MODE_CONFIG_NAME = 'MFAdvancedMobileContributions';
 
 	/**
+	 * Mode identifier used in feature configs
+	 * @var string
+	 */
+	const AMC_MODE_IDENTIFIER = 'amc';
+
+	/**
 	 * Change tag
 	 * All edits when has AMC enabled will be tagged with AMC_EDIT_TAG
 	 */
@@ -61,4 +67,12 @@ final class Manager {
 			&& !$this->context->getUser()->isAnon();
 	}
 
+	/**
+	 * Get the mode identifier (used in configs)
+	 *
+	 * @return string
+	 */
+	public function getModeIdentifier() {
+		return self::AMC_MODE_IDENTIFIER;
+	}
 }

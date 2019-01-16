@@ -2,6 +2,11 @@
 
 namespace MobileFrontend\Features;
 
+/**
+ * Represents single mobile feature
+ *
+ * @package MobileFrontend\Features
+ */
 interface IFeature {
 
 	/**
@@ -38,11 +43,11 @@ interface IFeature {
 	public function __toString();
 
 	/**
-	 * Check feature availability in given mode ( Stable, beta, alpha etc )
-	 * @param string $mode Mode
+	 * Check feature availability in given user mode ( Stable, beta, alpha etc )
+	 * @param IUserMode $mode UserMode
 	 * @return bool
 	 */
-	public function isAvailable( $mode );
+	public function isAvailable( IUserMode $mode );
 	/**
 	 * The feature name defined as a translation tag
 	 * ex: mobile-frontend-mobile-option-MFLazyLoadReferences

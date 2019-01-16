@@ -9,11 +9,18 @@ return [
 		return $services->getService( 'ConfigFactory' )
 			->makeConfig( 'mobilefrontend' );
 	},
-
+	'MobileFrontend.UserModes' => function ( MediaWikiServices $services ) {
+		$modes = new \MobileFrontend\Features\UserModes();
+		$modes->registerMode( new \MobileFrontend\Features\StableUserMode( MobileContext::singleton() ) );
+		$modes->registerMode( new \MobileFrontend\Features\BetaUserMode( MobileContext::singleton() ) );
+		$modes->registerMode( $services->getService( 'MobileFrontend.AMC.UserMode' ) );
+		return $modes;
+	},
 	'MobileFrontend.FeaturesManager' => function ( MediaWikiServices $services ) {
 		$config = $services->getService( 'MobileFrontend.Config' );
+		$userModes = $services->getService( 'MobileFrontend.UserModes' );
 
-		$manager = new FeaturesManager();
+		$manager = new FeaturesManager( $userModes );
 		// register default features
 		// maybe we can get all available features by looping through MobileFrontend.Feature.*
 		// and register it here, it would be nice to have something like

@@ -45,9 +45,8 @@ class Feature implements IFeature {
 	/**
 	 * @inheritDoc
 	 */
-	public function isAvailable( $mode ) {
-		return array_key_exists( $mode, $this->options ) ?
-			$this->options[ $mode ] : self::DEFAULT_ENABLED_MODE;
+	public function isAvailable( IUserMode $userMode ) {
+		return $this->options[ $userMode->getModeIdentifier() ] ?? self::DEFAULT_ENABLED_MODE;
 	}
 
 	/**

@@ -22,10 +22,14 @@ class FeatureTest extends MediaWikiTestCase {
 	 * @covers ::isAvailable
 	 */
 	public function testIsAvailableDefault() {
+		$modeMock = $this->getMock( \MobileFrontend\Features\IUserMode::class );
+		$modeMock->method( 'getModeIdentifier' )
+			->willReturn( 'default' );
+
 		$feature = new Feature(
 			'TestName', 'test-group', $this->madeUpConfigVariable
 		);
-		$actual = $feature->isAvailable( 'default' );
+		$actual = $feature->isAvailable( $modeMock );
 
 		$this->assertFalse( $actual );
 	}
@@ -34,13 +38,21 @@ class FeatureTest extends MediaWikiTestCase {
 	 * @covers ::isAvailable
 	 */
 	public function testIsAvailable() {
+		$betaMock = $this->getMock( \MobileFrontend\Features\IUserMode::class );
+		$betaMock->method( 'getModeIdentifier' )
+			->willReturn( 'beta' );
+
+		$stableMock = $this->getMock( \MobileFrontend\Features\IUserMode::class );
+		$stableMock->method( 'getModeIdentifier' )
+			->willReturn( 'base' );
+
 		$feature = new Feature(
 			'TestName', 'test-group', $this->madeUpConfigVariable
 		);
-		$actual = $feature->isAvailable( 'beta' );
+		$actual = $feature->isAvailable( $betaMock );
 		$this->assertTrue( $actual );
 
-		$actual = $feature->isAvailable( 'base' );
+		$actual = $feature->isAvailable( $stableMock );
 		$this->assertFalse( $actual );
 	}
 
