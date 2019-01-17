@@ -35,7 +35,8 @@ return [
 	},
 	'MobileFrontend.AMC.Manager' => function ( MediaWikiServices $services ) {
 		$config = $services->getService( 'MobileFrontend.Config' );
-		return new MobileFrontend\AMC\Manager( $config, MobileContext::singleton() );
+		$context = MobileContext::singleton();
+		return new MobileFrontend\AMC\Manager( $config, $context, $context->shouldDisplayMobileView() );
 	},
 	'MobileFrontend.AMC.UserMode' => function ( MediaWikiServices $services ) {
 		return new MobileFrontend\AMC\UserMode(

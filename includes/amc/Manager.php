@@ -10,6 +10,9 @@ use IContextSource;
  * @package MobileFrontend\AMC
  */
 final class Manager {
+	/**
+	 * A config name used to enable/disable the AMC mode
+	 */
 	const AMC_MODE_CONFIG_NAME = 'MFAdvancedMobileContributions';
 
 	/**
@@ -31,12 +34,20 @@ final class Manager {
 	private $config;
 
 	/**
-	 * @param \Config $config Config object
-	 * @param \IContextSource $context
+	 * Is Mobile mode active for current session
+	 * @var bool
 	 */
-	public function __construct( Config $config, IContextSource $context ) {
+	private $usingMobileMode;
+
+	/**
+	 * @param Config $config Config object
+	 * @param IContextSource $context Request context
+	 * @param bool $usingMobileMode Flag whether user is browsing in the mobile version
+	 */
+	public function __construct( Config $config, IContextSource $context, $usingMobileMode ) {
 		$this->config = $config;
 		$this->context = $context;
+		$this->usingMobileMode = $usingMobileMode;
 	}
 
 	/**
@@ -45,7 +56,8 @@ final class Manager {
 	 * @throws \ConfigException
 	 */
 	public function isAvailable() {
-		return $this->config->get( self::AMC_MODE_CONFIG_NAME )
+		return $this->usingMobileMode
+			&& $this->config->get( self::AMC_MODE_CONFIG_NAME )
 			&& !$this->context->getUser()->isAnon();
 	}
 
