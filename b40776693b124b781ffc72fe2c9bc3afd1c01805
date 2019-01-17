@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "c32a6bdf_b3f4d55a",
+        "filename": "resources/mobile.editor.api/EditorGateway.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 223,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-17T22:05:57Z",
+      "side": 1,
+      "message": "You could also expose this at the bottom of the file like so:\nM.define( \u0027mobile.editor.api/parseSaveError\u0027, parseSaveError );",
+      "parentUuid": "6de3a1da_276e0431",
+      "revId": "b40776693b124b781ffc72fe2c9bc3afd1c01805",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2d893f04_a29dc9a1",
         "filename": "resources/mobile.editor.api/EditorGateway.js",
         "patchSetId": 2
