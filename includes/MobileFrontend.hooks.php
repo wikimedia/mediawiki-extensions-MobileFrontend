@@ -361,6 +361,7 @@ class MobileFrontendHooks {
 		$dependencies[] = 'mobile.languages.structured';
 		$dependencies[] = 'mobile.mediaViewer';
 		$dependencies[] = 'mobile.special.nearby.scripts';
+		$dependencies[] = 'mobile.talk.overlays';
 		$testModule = [
 			'dependencies' => $dependencies,
 			'localBasePath' => $localBasePath,

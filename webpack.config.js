@@ -13,10 +13,11 @@ const
 		tests: 'tests.mobilefrontend',
 		hogan: 'mediawiki.template.hogan',
 		startup: 'mobile.startup',
-		notifications: 'mobile.notifications.overlay',
-		mediaViewer: 'mobile.mediaViewer',
 		languages: 'mobile.languages.structured',
+		mediaViewer: 'mobile.mediaViewer',
 		mobileInit: 'mobile.init',
+		notifications: 'mobile.notifications.overlay',
+		talk: 'mobile.talk.overlays',
 		mobileOptions: 'mobile.special.mobileoptions.scripts',
 		mobileDiff: 'mobile.special.mobilediff.scripts',
 		nearby: 'mobile.special.nearby.scripts',
@@ -68,11 +69,10 @@ module.exports = {
 		// If we utilize webpack lazy loading instead of resource loader lazy
 		// loading, we won't be required to explicitly create this new chunk and
 		// this can be removed.
-		[ENTRIES.mediaViewer]: './src/mobile.mediaViewer/mobile.mediaViewer.js',
-		// T213111
-		[ENTRIES.notifications]: './src/mobile.notifications.overlay/mobile.notifications.overlay.js',
-		// T210210
 		[ENTRIES.languages]: './src/mobile.languages.structured/mobile.languages.structured.js',
+		[ENTRIES.mediaViewer]: './src/mobile.mediaViewer/mobile.mediaViewer.js',
+		[ENTRIES.notifications]: './src/mobile.notifications.overlay/mobile.notifications.overlay.js',
+		[ENTRIES.talk]: './src/mobile.talk.overlays/mobile.talk.overlays.js',
 		// all mobile skins,
 		[ENTRIES.mobileInit]: './src/mobile.init/mobile.init.js',
 		// T212823 Make a chunk for each mobile special page
@@ -144,16 +144,17 @@ module.exports = {
 					// Only consider splitting chunks off of these whitelisted entry names
 					chunks: ( chunk ) => [
 						ENTRIES.startup,
-						ENTRIES.notifications,
-						ENTRIES.mediaViewer,
 						ENTRIES.languages,
+						ENTRIES.mediaViewer,
+						ENTRIES.notifications,
+						ENTRIES.talk,
 						ENTRIES.mobileInit,
 						ENTRIES.mobileDiff,
 						ENTRIES.mobileOptions,
 						ENTRIES.nearby,
 						ENTRIES.userLogin,
-						ENTRIES.watchlist,
-						ENTRIES.uploads
+						ENTRIES.uploads,
+						ENTRIES.watchlist
 					].includes( chunk.name )
 				}
 			}

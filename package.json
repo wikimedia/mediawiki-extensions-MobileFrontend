@@ -97,6 +97,10 @@
     {
       "path": "resources/dist/mobile.special.watchlist.scripts.js",
       "maxSize": "1.4KB"
+    },
+    {
+      "path": "resources/dist/mobile.talk.overlays.js",
+      "maxSize": "2.6KB"
     }
   ]
 }
