@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6de3a1da_276e0431",
+        "filename": "resources/mobile.editor.api/EditorGateway.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 223,
+      "author": {
+        "id": 2915
+      },
+      "writtenOn": "2019-01-17T15:27:47Z",
+      "side": 1,
+      "message": "It\u0027s exposed so that it can be used in ve.init.mw.MobileFrontendArticleTarget.js as well.",
+      "parentUuid": "44b68542_21650ef6",
+      "revId": "b40776693b124b781ffc72fe2c9bc3afd1c01805",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2d893f04_a29dc9a1",
         "filename": "resources/mobile.editor.api/EditorGateway.js",
         "patchSetId": 2
