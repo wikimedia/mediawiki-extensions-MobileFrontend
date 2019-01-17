@@ -1,0 +1,165 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c3c45bd0_f5610617",
+        "filename": "src/mobile.startup/Drawer.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-17T14:58:07Z",
+      "side": 1,
+      "message": "Is it intentional to blend props into the Drawer instance?",
+      "range": {
+        "startLine": 15,
+        "startChar": 1,
+        "endLine": 15,
+        "endChar": 27
+      },
+      "revId": "28d49947f488a21cb8df1e63ab907e364246eb92",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b30a5cc1_e9cd64d4",
+        "filename": "src/mobile.startup/Drawer.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-17T14:58:07Z",
+      "side": 1,
+      "message": "Not new to this patch but consider renaming this.appendToElement to this.$appendToElement if it\u0027s a jQuery element.",
+      "range": {
+        "startLine": 81,
+        "startChar": 41,
+        "endLine": 81,
+        "endChar": 56
+      },
+      "revId": "28d49947f488a21cb8df1e63ab907e364246eb92",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4278a8f8_cb45e2d0",
+        "filename": "src/mobile.startup/Drawer.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-17T14:58:07Z",
+      "side": 1,
+      "message": "It looks like $appendToEl is optional. Please update the parameter\u0027s JSDoc `[$appendToEl]`.",
+      "range": {
+        "startLine": 81,
+        "startChar": 21,
+        "endLine": 81,
+        "endChar": 56
+      },
+      "revId": "28d49947f488a21cb8df1e63ab907e364246eb92",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "81a095b4_bcb15551",
+        "filename": "src/mobile.startup/Drawer.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-17T14:58:07Z",
+      "side": 1,
+      "message": "Isn\u0027t appendToElement already jQueryious?",
+      "range": {
+        "startLine": 84,
+        "startChar": 2,
+        "endLine": 84,
+        "endChar": 22
+      },
+      "revId": "28d49947f488a21cb8df1e63ab907e364246eb92",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1833dc4e_f6ed49f1",
+        "filename": "src/mobile.startup/Drawer.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-17T14:58:07Z",
+      "side": 1,
+      "message": "You may wish to unregister these event listeners in hide. If a client calls show, hide, show, hide may be called multiple times on click / scroll.",
+      "range": {
+        "startLine": 89,
+        "startChar": 9,
+        "endLine": 89,
+        "endChar": 13
+      },
+      "revId": "28d49947f488a21cb8df1e63ab907e364246eb92",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cd78ecae_51ced578",
+        "filename": "src/mobile.startup/Drawer.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-17T14:58:07Z",
+      "side": 1,
+      "message": "I think this can be done with classList using two calls to remove. If jQuery is wanted instead, it probably makes sense to initialize appendToElement as a jQuery type.\n\nhttps://developer.mozilla.org/en-US/docs/Web/API/Element/classList",
+      "range": {
+        "startLine": 104,
+        "startChar": 2,
+        "endLine": 104,
+        "endChar": 27
+      },
+      "revId": "28d49947f488a21cb8df1e63ab907e364246eb92",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "89eb9d6a_c34df8f6",
+        "filename": "src/mobile.startup/Panel.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-17T14:58:07Z",
+      "side": 1,
+      "message": "This guard doesn\u0027t seem to be necessary:\n\n var foo \u003d $(\u0027\u003cdiv\u003e\u0027)\n foo.addClass(\u0027bar\u0027)\n foo.addClass(\u0027bar\u0027)\n foo.attr(\u0027class\u0027) // \u003d\u003e \u0027bar\u0027",
+      "range": {
+        "startLine": 44,
+        "startChar": 2,
+        "endLine": 44,
+        "endChar": 27
+      },
+      "revId": "28d49947f488a21cb8df1e63ab907e364246eb92",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
