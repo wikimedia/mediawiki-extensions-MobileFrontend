@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "462fa515_b87ef33b",
+        "filename": "src/mobile.startup/lazyImages/lazyImageLoader.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-17T01:22:51Z",
+      "side": 0,
+      "message": "I know we\u0027ve talked about moving off jquery, but I\u0027m not sure that doing so here offers over than leading to inconsistent code and opening up a can of worms - when do we use native dom methods and when not?\n\nI\u0027d rather do this across the codebase after much consideration of the pros and cons (if any).",
+      "revId": "81f8a5085184d57f06bbc1ae314c24fd40e0f9ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
