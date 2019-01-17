@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "30ba006a_6410adad",
+        "filename": "src/mobile.startup/lazyImages/lazyImageLoader.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-17T22:03:44Z",
+      "side": 1,
+      "message": "Mixing jQuery and non-jquery in a single file seems very strange to me.\nIt would make sense if we used no jquery at all here, but right now it just leaves me with questions such as why does this use jquery and this doesn\u0027t?\nAlso jQuery\u0027s methods do handle some particular corner cases which you lose when switching to native.\nSome more specifics below.\n\nIf we switch to native methods entirely, I\u0027d like us to throw eslint warnings for jQuery style usages like how we did for Deferreds and migrate everywhere, but I think this is worth stopping and talking about as a group before committing to either partially or completely since we will need to communicate this to our repository stakeholders e.g. performance/editing.",
+      "revId": "e082972e8581dd9de0d60a4012dcc24d217b0f1f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "01c943d4_99b8cb78",
+        "filename": "src/mobile.startup/lazyImages/lazyImageLoader.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-17T22:03:44Z",
+      "side": 1,
+      "message": "Likewise. Why not setAttribute?",
+      "revId": "e082972e8581dd9de0d60a4012dcc24d217b0f1f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "410ac080_038677d9",
+        "filename": "src/mobile.startup/lazyImages/lazyImageLoader.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-17T22:03:44Z",
+      "side": 1,
+      "message": "What if  parentNode no longer exists?\nreplaceWith protects against that\nhttps://github.com/jquery/jquery/blob/9b77def560212d12fef2d0b9c12aa50727e3e5d7/src/manipulation.js#L449",
+      "revId": "e082972e8581dd9de0d60a4012dcc24d217b0f1f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a95f6c42_119d45f9",
+        "filename": "src/mobile.startup/lazyImages/lazyImageLoader.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-17T22:03:44Z",
+      "side": 1,
+      "message": "It\u0027s a little weird to me to mix attr usage in getAttribute usage. Shouldn\u0027t we  consistent, especially in the same file?\n\nI also prefer the brevity of attr to getAttribute - it\u0027s available so why not use it and makes code a lot more readable? What\u0027s the advantage of making this kind of change if we don\u0027t make it across the board and throw jquery away in the process?\n\n(for reference the jquery attr function:\nhttps://github.com/jquery/jquery/blob/e743cbd28553267f955f71ea7248377915613fd9/src/attributes/attr.js#L28\n)",
+      "revId": "e082972e8581dd9de0d60a4012dcc24d217b0f1f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
