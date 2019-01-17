@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "7f5e7734_9f2bfcd3",
+        "filename": "includes/amc/Manager.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-17T19:20:59Z",
+      "side": 1,
+      "message": "I\u0027m more than happy that someone asked that question.\n\nSo the MobileContext is a wrapper for everything, a God Object. If something didn\u0027t have it\u0027s own place, it was stored in MobileContext, with time MobileContext grow and grow and now, this class is a \"bag of stuff\" that knows:\n - if the mobile mode is on\n - how to toggle the mobile view\n - how to enable/disable beta\n - do we show the first paragraph before infobox\n - list of blacklisted pages\n - mobile analytics (storing/setting/sending)\n - mobile content transformations\n - mobile url template, creating mobile URLs\n - creating desktop urls\n - mobile device detection\n - handling cookies (beta, mobile redirect, use format)\n - how to redirect to mobile page\n - stripping responsive images\n\n\nBy depending on MediaWiki core IContextSource I\u0027m following the \"Program to an interface, not an implementation\" principle. Instead of depending on some MofileFrontend internals that we\u0027re going to refactor anyway I depend to the main source of truth - the IContextSource from the MW Core.\n\nThanks to that:\n - if we decide to remove AMC from MobileFrontend and make it a part of Minerva -\u003e it will be possible to do it as there is no dependency (I\u0027m trying to keep dependencies as weak as possible)\n - Because we do not depend on MobileContext, any new change has to be thought through (how to implement stuff properly), instead of blindly \"lets put in MobileContext\".\n\n\nMy long-term dream is to get rid of MobileContext entirely, as IMHO that class is just a wrapper for RequestContext that provides lots of utility functions. I really hope that sometime in the future we will be able to push mobile mode handling into core (domain switching,  making IContextSource aware of the mobile context).",
+      "parentUuid": "fc438c53_228f571b",
+      "range": {
+        "startLine": 44,
+        "startChar": 11,
+        "endLine": 44,
+        "endChar": 25
+      },
+      "revId": "4acc7c99115d121debbdc1cbdbb7c8f21191f8eb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "77416a6b_624025b4",
         "filename": "includes/amc/Manager.php",
         "patchSetId": 1
