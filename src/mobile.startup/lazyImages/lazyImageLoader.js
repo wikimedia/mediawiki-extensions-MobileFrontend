@@ -31,39 +31,37 @@ module.exports.loadImages = function ( placeholdersOrDeprecatedFind, deprecatedP
 /**
  * Load an image on demand
  * @param {HTMLElement} placeholder
- * @return {jQuery.Deferred}
+ * @return {JQuery.Deferred<'load'|'error'>}
  */
 module.exports.loadImage = function ( placeholder ) {
 	var
 		d = util.Deferred(),
-		width = placeholder.getAttribute( 'data-width' ),
-		height = placeholder.getAttribute( 'data-height' ),
-		// document must be passed to ensure image will start downloading
-		$downloadingImage = util.parseHTML( '<img>', placeholder.ownerDocument );
+		width = placeholder.getAttribute( 'data-width' ) || '0',
+		height = placeholder.getAttribute( 'data-height' ) || '0',
+		downloadingImage = new Image( parseInt( width, 10 ), parseInt( height, 10 ) );
+
+	downloadingImage.className = placeholder.getAttribute( 'data-class' ) || '';
+	downloadingImage.alt = placeholder.getAttribute( 'data-alt' ) || '';
+	downloadingImage.setAttribute( 'style', placeholder.getAttribute( 'style' ) || '' );
 
 	// When the image has loaded
-	$downloadingImage.on( 'load', function () {
+	downloadingImage.addEventListener( 'load', function () {
 		// Swap the HTML inside the placeholder (to keep the layout and
 		// dimensions the same and not trigger layouts
-		$downloadingImage.addClass( 'image-lazy-loaded' );
+		downloadingImage.classList.add( 'image-lazy-loaded' );
 		if ( placeholder.parentNode ) {
-			placeholder.parentNode.replaceChild( $downloadingImage[0], placeholder );
+			placeholder.parentNode.replaceChild( downloadingImage, placeholder );
 		}
-		d.resolve();
-	} );
-	$downloadingImage.on( 'error', function () {
-		d.reject();
-	} );
+		d.resolve( 'load' );
+	}, { once: true } );
+	downloadingImage.addEventListener( 'error', function () {
+		// Never reject. Quietly resolve so that jQuery.when() awaits for all Deferreds to complete.
+		// Reevaluate using Deferred.reject in T136693.
+		d.resolve( 'error' );
+	}, { once: true } );
 
 	// Trigger image download after binding the load handler
-	$downloadingImage.attr( {
-		class: placeholder.getAttribute( 'data-class' ),
-		width: width,
-		height: height,
-		src: placeholder.getAttribute( 'data-src' ),
-		alt: placeholder.getAttribute( 'data-alt' ),
-		style: placeholder.getAttribute( 'style' ),
-		srcset: placeholder.getAttribute( 'data-srcset' )
-	} );
+	downloadingImage.src = placeholder.getAttribute( 'data-src' ) || '';
+	downloadingImage.srcset = placeholder.getAttribute( 'data-srcset' ) || '';
 	return d;
 };
