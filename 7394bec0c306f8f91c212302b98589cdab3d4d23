@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "f8eaa628_dbc557a7",
+        "filename": "src/mobile.languages.structured/LanguageOverlay.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-17T22:13:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b0b3c210_9a979b8b",
+      "range": {
+        "startLine": 19,
+        "startChar": 1,
+        "endLine": 19,
+        "endChar": 16
+      },
+      "revId": "7394bec0c306f8f91c212302b98589cdab3d4d23",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2c5950dc_5dd18a3a",
         "filename": "src/mobile.languages.structured/LanguageOverlay.js",
         "patchSetId": 8
@@ -36,6 +60,30 @@
       "writtenOn": "2019-01-14T15:16:39Z",
       "side": 1,
       "message": "Adding local state doesn\u0027t seem necessary here in my opinion.",
+      "range": {
+        "startLine": 64,
+        "startChar": 2,
+        "endLine": 64,
+        "endChar": 33
+      },
+      "revId": "7394bec0c306f8f91c212302b98589cdab3d4d23",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2b088568_0d3d60bd",
+        "filename": "src/mobile.languages.structured/LanguageOverlay.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-17T22:13:26Z",
+      "side": 1,
+      "message": "It was just a little tedious writing this 4 times below...\n\nThis will go away as soon as we pull out the LanguageList View",
+      "parentUuid": "2c5950dc_5dd18a3a",
       "range": {
         "startLine": 64,
         "startChar": 2,
@@ -119,6 +167,30 @@
     },
     {
       "key": {
+        "uuid": "5c76a4a1_a5bb35c1",
+        "filename": "src/mobile.languages.structured/util.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-17T22:13:26Z",
+      "side": 1,
+      "message": "Sadly not :/\n\nERROR: Unable to parse a tag\u0027s type expression for source file /Users/jrobson/git/core/extensions/MobileFrontend/src/mobile.languages.structured/util.js in line 6 with tag title \"typedef\" and text \"{Language \u0026 {frequency: number}} SuggestedLanguage\": Invalid type expression \"Language \u0026 {frequency: number}\": Expected \"|\" but \"\u0026\" found.\n\nI\u0027ve copy pasted instead. Doesn\u0027t seem like the worse thing in the world given they are objects that could change.",
+      "parentUuid": "f165f617_59d35666",
+      "range": {
+        "startLine": 14,
+        "startChar": 13,
+        "endLine": 14,
+        "endChar": 21
+      },
+      "revId": "7394bec0c306f8f91c212302b98589cdab3d4d23",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "34a37a2a_206208e6",
         "filename": "src/mobile.startup/Overlay.js",
         "patchSetId": 8
@@ -130,6 +202,30 @@
       "writtenOn": "2019-01-14T15:16:39Z",
       "side": 1,
       "message": "Instead of changing the parameter passed in, what do you think about leaving that unmodified and moving the util.extend() call inline?",
+      "range": {
+        "startLine": 31,
+        "startChar": 1,
+        "endLine": 31,
+        "endChar": 6
+      },
+      "revId": "7394bec0c306f8f91c212302b98589cdab3d4d23",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6a8fecf7_af4964d7",
+        "filename": "src/mobile.startup/Overlay.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-17T22:13:26Z",
+      "side": 1,
+      "message": "I\u0027m not sure I\u0027ve completely understood you here but please see PS9",
+      "parentUuid": "34a37a2a_206208e6",
       "range": {
         "startLine": 31,
         "startChar": 1,
