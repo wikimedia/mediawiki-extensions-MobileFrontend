@@ -92,9 +92,10 @@ class MwApiContentProvider implements IContentProvider {
 				// currently ParserOutput is used for Wikidata descriptions which happens before this
 				$out->setProperty( 'wgMFDescription', $parserProps['wikibase-shortdesc'] );
 			}
-			// Copy page properties across
-			foreach ( $parserProps as $key => $val ) {
-				$out->setProperty( $key, $val );
+			$ignoreKeys = [ 'noexternallanglinks' ];
+			// Copy page properties across excluding a few we know not to work due to php serialisation)
+			foreach ( array_diff( array_keys( $parserProps ), $ignoreKeys ) as $key ) {
+				$out->setProperty( $key,  $parserProps[ $key ] );
 			}
 			// Forward certain variables so that the page is not registered as "missing"
 			$out->addJsConfigVars( [
