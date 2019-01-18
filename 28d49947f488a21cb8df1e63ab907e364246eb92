@@ -117,6 +117,30 @@
     },
     {
       "key": {
+        "uuid": "b24034e2_ca2a6432",
+        "filename": "src/mobile.startup/Drawer.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2019-01-18T10:46:08Z",
+      "side": 1,
+      "message": "I hope that\u0027s what `util.getWindow().off( \u0027.drawer\u0027 );` is doing in hide. I\u0027m not too familiar with these namespaced jQuery events, so I\u0027ll double check that.",
+      "parentUuid": "1833dc4e_f6ed49f1",
+      "range": {
+        "startLine": 89,
+        "startChar": 9,
+        "endLine": 89,
+        "endChar": 13
+      },
+      "revId": "28d49947f488a21cb8df1e63ab907e364246eb92",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "cd78ecae_51ced578",
         "filename": "src/mobile.startup/Drawer.js",
         "patchSetId": 1
