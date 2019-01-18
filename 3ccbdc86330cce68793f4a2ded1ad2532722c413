@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b4613664_d5191b2b",
+        "filename": "src/mobile.startup/Anchor.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-18T20:58:51Z",
+      "side": 1,
+      "message": "If it\u0027s useful, we can retain this as a distinct file but call it anchor.js instead of anchor.hogan and export the template literal. It seems less an issue here but Overlay.js may benefit.",
+      "range": {
+        "startLine": 45,
+        "startChar": 27,
+        "endLine": 50,
+        "endChar": 18
+      },
+      "revId": "3ccbdc86330cce68793f4a2ded1ad2532722c413",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
