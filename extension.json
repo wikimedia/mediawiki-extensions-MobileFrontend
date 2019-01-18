@@ -548,11 +548,7 @@
 				"oojs-ui"
 			],
 			"scripts": [
-				"resources/mobile.categories.overlays/CategoryGateway.js",
-				"resources/mobile.categories.overlays/CategoryLookupInputWidget.js",
-				"resources/mobile.categories.overlays/CategoryTabs.js",
-				"resources/mobile.categories.overlays/categoryOverlay.js",
-				"resources/mobile.categories.overlays/CategoryAddOverlay.js"
+				"resources/dist/mobile.categories.overlays.js"
 			],
 			"styles": [
 				"resources/mobile.categories.overlays/categories.less"

@@ -56,7 +56,7 @@
     },
     {
       "path": "resources/dist/mobile.common.js",
-      "maxSize": "11.5KB"
+      "maxSize": "11.9KB"
     },
     {
       "path": "resources/dist/mobile.init.js",
@@ -101,6 +101,10 @@
     {
       "path": "resources/dist/mobile.talk.overlays.js",
       "maxSize": "2.6KB"
+    },
+    {
+      "path": "resources/dist/mobile.categories.overlays.js",
+      "maxSize": "2.4KB"
     }
   ]
 }
