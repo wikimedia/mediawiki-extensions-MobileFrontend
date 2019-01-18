@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b79b69fc_0ee1a876",
+        "filename": "src/mobile.languages.structured/LanguageOverlay.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-18T18:37:48Z",
+      "side": 1,
+      "message": "typo",
+      "range": {
+        "startLine": 20,
+        "startChar": 41,
+        "endLine": 20,
+        "endChar": 49
+      },
+      "revId": "fe820b6725819028184b04536ef9fd3624ecbaea",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
