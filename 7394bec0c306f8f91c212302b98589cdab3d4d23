@@ -235,6 +235,30 @@
       "revId": "7394bec0c306f8f91c212302b98589cdab3d4d23",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c10a2bcf_d66621a7",
+        "filename": "src/mobile.startup/Overlay.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-18T18:13:24Z",
+      "side": 1,
+      "message": "Looks like this is what broke the close button. I knew there was a reason I was doing this in a strange way.",
+      "parentUuid": "6a8fecf7_af4964d7",
+      "range": {
+        "startLine": 31,
+        "startChar": 1,
+        "endLine": 31,
+        "endChar": 6
+      },
+      "revId": "7394bec0c306f8f91c212302b98589cdab3d4d23",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }

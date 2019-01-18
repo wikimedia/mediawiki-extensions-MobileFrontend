@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "51843fda_7244043f",
+        "filename": "src/mobile.startup/Overlay.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-18T18:13:24Z",
+      "side": 1,
+      "message": "okay so this is broken as we need to override the events that come in. Since we override in the 2nd part with props this is a noop\nI\u0027ve restored how this looked in the older patchset.",
+      "revId": "c354e0db63d529087fbc3c8869af92b2c9da060b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
