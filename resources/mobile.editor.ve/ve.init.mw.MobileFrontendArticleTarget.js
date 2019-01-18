@@ -42,6 +42,8 @@ OO.inheritClass( ve.init.mw.MobileFrontendArticleTarget, ve.init.mw.MobileArticl
 
 /* Static Properties */
 
+ve.init.mw.MobileFrontendArticleTarget.static.parseSaveError = mw.mobileFrontend.require( 'mobile.editor.api/parseSaveError' );
+
 /* Methods */
 
 /**
@@ -280,6 +282,26 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.saveComplete = function () {
 	ve.init.mw.MobileFrontendArticleTarget.super.prototype.saveComplete.apply( this, arguments );
 
 	this.overlay.onSaveComplete();
+};
+
+/**
+ * FIXME: @inheritdoc once this file is in the right repo
+ * @memberof MobileFrontendArticleTarget
+ * @instance
+ * @param {HTMLDocument} doc HTML document we tried to save
+ * @param {Object} saveData Options that were used
+ * @param {boolean} wasRetry Whether this was a retry after a 'badtoken' error
+ * @param {Object} jqXHR
+ * @param {string} status Text status message
+ * @param {Object|null} response API response data
+ */
+// eslint-disable-next-line max-len
+ve.init.mw.MobileFrontendArticleTarget.prototype.saveFail = function ( doc, saveData, wasRetry, jqXHR, status, response ) {
+
+	// parent method
+	ve.init.mw.MobileFrontendArticleTarget.super.prototype.saveFail.apply( this, arguments );
+
+	this.overlay.onSaveFailure( this.constructor.static.parseSaveError( response, status ) );
 };
 
 /**

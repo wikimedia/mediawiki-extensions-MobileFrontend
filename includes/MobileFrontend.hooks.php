@@ -1000,6 +1000,7 @@ class MobileFrontendHooks {
 					'dependencies' => [
 						'ext.visualEditor.mobileArticleTarget',
 						'mobile.editor.common',
+						'mobile.editor.api',
 						'mobile.startup',
 					],
 					'scripts' => [
