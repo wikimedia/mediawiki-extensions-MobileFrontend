@@ -16,7 +16,6 @@ QUnit.module( 'MobileFrontend WatchList.js', {
 		oo.setUp( sandbox, global );
 		mediaWiki.setUp( sandbox, global );
 
-		this.spy = sandbox.stub( mw.Api.prototype, 'get' );
 		sandbox.stub( mw.user, 'isAnon' ).returns( false );
 
 		WatchList = require( '../../../src/mobile.special.watchlist.scripts/WatchList' );
@@ -30,14 +29,15 @@ QUnit.module( 'MobileFrontend WatchList.js', {
 
 QUnit.test( 'In watched mode', function ( assert ) {
 	var
-		done = assert.async(),
-		spy = this.spy,
+		stub = {
+			get: sandbox.stub()
+		},
 		pl = new WatchList( {
 			eventBus: {
 				on: function () {},
 				off: function () {}
 			},
-			api: new mw.Api(),
+			api: stub,
 			pages: [
 				{ title: 'Title 30' },
 				{ title: 'Title 50' },
@@ -54,11 +54,7 @@ QUnit.test( 'In watched mode', function ( assert ) {
 	// Avoid API requests due to scroll events (https://phabricator.wikimedia.org/T116258)
 	pl.scrollEndEventEmitter.disable();
 
-	// Wait for an internal API call to happen as a side-effect of construction.
-	window.setTimeout( function () {
-		assert.ok( spy.notCalled, 'Callback avoided' );
-		assert.strictEqual( pl.$el.find( '.watch-this-article' ).length, 3, '3 articles have watch stars...' );
-		assert.strictEqual( pl.$el.find( '.' + watchIconName ).length, 3, '...and all are marked as watched.' );
-		done();
-	}, 2000 );
+	assert.ok( stub.get.notCalled, 'Callback avoided' );
+	assert.strictEqual( pl.$el.find( '.watch-this-article' ).length, 3, '3 articles have watch stars...' );
+	assert.strictEqual( pl.$el.find( '.' + watchIconName ).length, 3, '...and all are marked as watched.' );
 } );
