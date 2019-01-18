@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "0ad827bc_e94b8b81",
+        "filename": "resources/mobile.editor.api/EditorGateway.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 223,
+      "author": {
+        "id": 2915
+      },
+      "writtenOn": "2019-01-18T16:57:25Z",
+      "side": 1,
+      "message": "Hm, fair point. I\u0027m not used to thinking of that as an option, since we don\u0027t really use that style in VE.",
+      "parentUuid": "c32a6bdf_b3f4d55a",
+      "revId": "b40776693b124b781ffc72fe2c9bc3afd1c01805",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2d893f04_a29dc9a1",
         "filename": "resources/mobile.editor.api/EditorGateway.js",
         "patchSetId": 2
