@@ -13,6 +13,7 @@ const
 		tests: 'tests.mobilefrontend',
 		hogan: 'mediawiki.template.hogan',
 		startup: 'mobile.startup',
+		categories: 'mobile.categories.overlays',
 		languages: 'mobile.languages.structured',
 		mediaViewer: 'mobile.mediaViewer',
 		mobileInit: 'mobile.init',
@@ -69,6 +70,7 @@ module.exports = {
 		// If we utilize webpack lazy loading instead of resource loader lazy
 		// loading, we won't be required to explicitly create this new chunk and
 		// this can be removed.
+		[ENTRIES.categories]: './src/mobile.categories.overlays/mobile.categories.overlays.js',
 		[ENTRIES.languages]: './src/mobile.languages.structured/mobile.languages.structured.js',
 		[ENTRIES.mediaViewer]: './src/mobile.mediaViewer/mobile.mediaViewer.js',
 		[ENTRIES.notifications]: './src/mobile.notifications.overlay/mobile.notifications.overlay.js',
@@ -144,6 +146,7 @@ module.exports = {
 					// Only consider splitting chunks off of these whitelisted entry names
 					chunks: ( chunk ) => [
 						ENTRIES.startup,
+						ENTRIES.categories,
 						ENTRIES.languages,
 						ENTRIES.mediaViewer,
 						ENTRIES.notifications,
