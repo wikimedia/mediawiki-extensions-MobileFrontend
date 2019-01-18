@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "0f5f7bbc_f0708468",
+        "filename": "src/mobile.startup/TopicTitleList.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-18T21:25:03Z",
+      "side": 1,
+      "message": "I\u0027d like to minimize the API I need to be aware of when subclassing View. Right now, there\u0027s a whole bunch of properties a subclass can override to be read View. If it was just template and isTemplateMode that I as a subclasser needed to be aware of, that would be quite fantastic.",
+      "parentUuid": "cd71c0c6_86994c1c",
+      "revId": "90cfd8f2e9b9b564e37596f345e308beb238839c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "54d30262_157b6831",
         "filename": "src/mobile.startup/TopicTitleList.js",
         "patchSetId": 8
@@ -48,6 +66,24 @@
       "writtenOn": "2019-01-18T21:18:34Z",
       "side": 1,
       "message": "What are your thoughts on inlining templates like so and moving off ResourceLoader?",
+      "revId": "90cfd8f2e9b9b564e37596f345e308beb238839c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f7e88896_9b0ff406",
+        "filename": "src/mobile.startup/TopicTitleList.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-18T21:25:03Z",
+      "side": 1,
+      "message": "Keeping a layer of indirection (Webpack and friends) between what\u0027s shipped and code written sounds excellent to me. I\u0027m not sure about inlining vs importing a file (e.g., https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/extensions/Popups/+/master/src/ui/templates/pagePreview/pagePreview.js).",
+      "parentUuid": "54d30262_157b6831",
       "revId": "90cfd8f2e9b9b564e37596f345e308beb238839c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
