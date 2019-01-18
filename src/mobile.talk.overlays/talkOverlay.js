@@ -5,12 +5,12 @@ var
 	Overlay = require( '../mobile.startup/Overlay' );
 
 /**
-	 * Produce an overlay for talk page
-	 * @uses Overlay
-	 * @param {Object} options
-	 * @param {Api} options.api
-	 * @return {Overlay}
-	 */
+ * Produce an overlay for talk page
+ * @uses Overlay
+ * @param {Object} options
+ * @param {Api} options.api
+ * @return {Overlay}
+ */
 function talkOverlay( options ) {
 	var overlay,
 		board = new TalkBoard( options );
