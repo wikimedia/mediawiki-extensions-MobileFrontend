@@ -16,6 +16,41 @@
       "revId": "90cfd8f2e9b9b564e37596f345e308beb238839c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cd71c0c6_86994c1c",
+        "filename": "src/mobile.startup/TopicTitleList.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-18T21:18:34Z",
+      "side": 1,
+      "message": "Not quite sure I understand.\n\nthe important thing is to handle the inheritance of the View template code. With ES6 we might be able to do this like so (untested)\n\nclass TopicTitleList extends View {\n   constructor() {\n      super();\n      this.isTemplateMode  \u003d true; this.template \u003d ...\n   }\n}",
+      "parentUuid": "c03a7cf1_04ec3eef",
+      "revId": "90cfd8f2e9b9b564e37596f345e308beb238839c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "54d30262_157b6831",
+        "filename": "src/mobile.startup/TopicTitleList.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-18T21:18:34Z",
+      "side": 1,
+      "message": "What are your thoughts on inlining templates like so and moving off ResourceLoader?",
+      "revId": "90cfd8f2e9b9b564e37596f345e308beb238839c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
