@@ -16,20 +16,21 @@ var Overlay = require( '../mobile.startup/Overlay' ),
  * @param {string} [options.deviceLanguage] the device's primary language
  */
 function LanguageOverlay( options ) {
-	var languages;
-
-	languages = langUtil.getStructuredLanguages(
+	/**
+	 * @prop {StructuredLanguages} languages` JSDoc.
+	 */
+	this.languages = langUtil.getStructuredLanguages(
 		options.languages,
 		options.variants,
 		langUtil.getFrequentlyUsedLanguages(),
 		options.deviceLanguage
 	);
-	options.allLanguages = languages.all;
-	options.allLanguagesCount = languages.all.length;
-	options.suggestedLanguages = languages.suggested;
-	options.suggestedLanguagesCount = languages.suggested.length;
 	Overlay.call( this,
 		util.extend( options, {
+			events: {
+				'click a': 'onLinkClick',
+				'input .search': 'onSearchInput'
+			},
 			className: 'overlay language-overlay'
 		} )
 	);
@@ -61,13 +62,17 @@ mfExtend( LanguageOverlay, Overlay, {
 	} ),
 	/**
 	 * @inheritdoc
-	 * @memberof LanguageOverlay
-	 * @instance
 	 */
-	events: util.extend( {}, Overlay.prototype.events, {
-		'click a': 'onLinkClick',
-		'input .search': 'onSearchInput'
-	} ),
+	preRender: function () {
+		var languages = this.languages;
+		// Update options with template properties before we perform the render.
+		util.extend( this.options, {
+			allLanguages: languages.all,
+			allLanguagesCount: languages.all.length,
+			suggestedLanguages: languages.suggested,
+			suggestedLanguagesCount: languages.suggested.length
+		} );
+	},
 	/**
 	 * @inheritdoc
 	 * @memberof LanguageOverlay
