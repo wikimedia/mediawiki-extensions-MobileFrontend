@@ -22,6 +22,30 @@
       "revId": "3ccbdc86330cce68793f4a2ded1ad2532722c413",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bf354924_bc367b59",
+        "filename": "src/mobile.startup/Anchor.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-18T21:21:09Z",
+      "side": 1,
+      "message": "my thinking was that having the templates inlined rather than a separate file would make refactoring easier. Provided view\u0027s are simple like this one, there\u0027s a lot of benefits to seeing the properties the template takes alongside the template itself.",
+      "parentUuid": "b4613664_d5191b2b",
+      "range": {
+        "startLine": 45,
+        "startChar": 27,
+        "endLine": 50,
+        "endChar": 18
+      },
+      "revId": "3ccbdc86330cce68793f4a2ded1ad2532722c413",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
