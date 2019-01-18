@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c03a7cf1_04ec3eef",
+        "filename": "src/mobile.startup/TopicTitleList.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-18T21:03:03Z",
+      "side": 1,
+      "message": "This file looks a lot nicer (readable) than some of our other existing components. If it needed extra methods, could we hang them off the prototype directly instead of using mfExtend? It would be wonderful to not have to consider what\u0027s inherited from View so much.",
+      "revId": "90cfd8f2e9b9b564e37596f345e308beb238839c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
