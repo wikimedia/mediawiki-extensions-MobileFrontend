@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9b9010c6_5b4f26ef",
+        "filename": "includes/features/FeaturesManager.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-18T18:28:42Z",
+      "side": 1,
+      "message": "Is it correct to initialized this to an array?",
+      "range": {
+        "startLine": 30,
+        "startChar": 19,
+        "endLine": 30,
+        "endChar": 24
+      },
+      "revId": "bdc2ffb348680d8259e7a83d61327c565741807a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "636a058d_93e6b421",
+        "filename": "includes/features/IUserMode.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-18T18:28:42Z",
+      "side": 1,
+      "message": "Is the \"is\" informative here? `setEnabled()` seems more natural.",
+      "range": {
+        "startLine": 29,
+        "startChar": 20,
+        "endLine": 29,
+        "endChar": 22
+      },
+      "revId": "bdc2ffb348680d8259e7a83d61327c565741807a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "42b39cb2_306a746e",
+        "filename": "includes/features/UserModes.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-18T18:28:42Z",
+      "side": 1,
+      "message": "Obviously doesn\u0027t make a bit of difference but \"isEnabled\" seems more natural than \"getEnabled\" at the expense of \"g\" no longer showing all getters.",
+      "range": {
+        "startLine": 34,
+        "startChar": 17,
+        "endLine": 34,
+        "endChar": 27
+      },
+      "revId": "bdc2ffb348680d8259e7a83d61327c565741807a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
