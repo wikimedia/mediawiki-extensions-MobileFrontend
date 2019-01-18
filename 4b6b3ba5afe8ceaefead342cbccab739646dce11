@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae6a8667_0ff4f1ba",
+        "filename": "resources/mobile.mediaViewer/ImageOverlay.hogan",
+        "patchSetId": 6
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-18T17:10:53Z",
+      "side": 0,
+      "message": "This isn\u0027t a complaint but I want to acknowledge that I perceive this patch improves the ability to eliminate partials at the expense of the easiness of converting to a JSX-like syntax later. It\u0027s just a tradeoff.",
+      "revId": "4b6b3ba5afe8ceaefead342cbccab739646dce11",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
