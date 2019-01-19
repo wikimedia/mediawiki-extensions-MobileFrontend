@@ -66,12 +66,12 @@ function apply2( fn1, fn2 ) {
 
 $window
 	.on( 'resize', apply2(
-		$.debounce( 100, eventBus.bind( 'emit', 'resize' ) ),
-		$.throttle( 200, eventBus.bind( 'emit', 'resize:throttled' ) )
+		$.debounce( 100, function () { eventBus.emit( 'resize' ); } ),
+		$.throttle( 200, function () { eventBus.emit( 'resize:throttled' ); } )
 	) )
 	.on( 'scroll', apply2(
-		$.debounce( 100, eventBus.bind( 'emit', 'scroll' ) ),
-		$.throttle( 200, eventBus.bind( 'emit', 'scroll:throttled' ) )
+		$.debounce( 100, function () { eventBus.emit( 'scroll' ); } ),
+		$.throttle( 200, function () { eventBus.emit( 'scroll:throttled' ); } )
 	) );
 
 /**
