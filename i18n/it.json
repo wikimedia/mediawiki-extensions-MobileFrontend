@@ -40,6 +40,8 @@
 	"mobile-frontend-categories-summary": "Aggiunto alle categorie",
 	"mobile-frontend-categories-notification": "Le categorie sono state aggiornate.",
 	"mobile-frontend-categories-add-heading": "<strong>Aggiungere<span> $1</span> alle nuove categorie</strong>",
+	"mobile-frontend-categories-normal": "Circa il contenuto",
+	"mobile-frontend-categories-hidden": "Organizzative",
 	"mobile-frontend-changeslist-nocomment": "nessun oggetto della modifica",
 	"mobile-frontend-cite-error-title": "Errore durante il caricamento delle citazioni",
 	"mobile-frontend-cite-error": "Si è verificato un problema durante il tentativo di caricamento delle citazioni a causa di un identificativo di versione errato.",

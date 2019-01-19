@@ -9,11 +9,12 @@
 			"सरोज कुमार ढकाल",
 			"Krish Dulal",
 			"Nirajan pant",
-			"Parbat subedi"
+			"Parbat subedi",
+			"पर्वत सुबेदी"
 		]
 	},
 	"mobile-frontend-categories-add": "वर्ग थपियो",
-	"mobile-frontend-categories-notification": "श्रेणी सफलता पूर्वक अद्यावधिक भएको छ",
+	"mobile-frontend-categories-notification": "श्रेणी सफलता पूर्वक अद्यावधिक गरिएको छ",
 	"mobile-frontend-changeslist-nocomment": "कुनै सम्पादन सारांश छैन",
 	"mobile-frontend-clear-search": "सफागर्ने",
 	"mobile-frontend-copyright": "सामाग्री $1 अनुसार उपलब्ध छ, खुलाइएको अवस्था बाहेकको हकमा ।",
@@ -27,9 +28,10 @@
 	"mobile-frontend-editor-error": "सम्पादन सुरक्षित हुन सकेन",
 	"mobile-frontend-editor-previewing-page": "<span><strong>पूर्वावलोकन</strong> $1</span>",
 	"mobile-frontend-editor-save": "संग्रह गर्ने",
-	"mobile-frontend-editor-success": "तपाईको सम्पादन सुरक्षित भएको छ",
+	"mobile-frontend-editor-success": "तपाईको सम्पादन सङ्ग्रह गरिएको छ",
 	"mobile-frontend-editor-summary-request": "तपाईंले यस पृष्ठमा कसरी सुधार ल्याउनुभयो?",
 	"mobile-frontend-editor-summary": "सारांश:",
+	"mobile-frontend-editor-wait": "सम्पादन सङ्ग्रह हुँदैन, कृपया प्रतीक्षा गर्नुहोस्",
 	"mobile-frontend-fontchanger-link": "फन्ट आकार",
 	"mobile-frontend-featured-article": "आजको विशेष सामग्री",
 	"mobile-frontend-languages-404-title": "भाषा त्रुटि",
@@ -68,8 +70,10 @@
 	"mobile-frontend-watchlist-more": "थप",
 	"mobile-frontend-user-page-describe-yourself-editors": "सम्पादकहरू",
 	"tag-mobile_edit": "मोबाइल सम्पादन",
+	"tag-advanced_mobile_edit": "उन्नत मोबाइल सम्पादन",
 	"tag-mobile_web_edit": "मोबाइल वेब सम्पादन",
 	"mobile-frontend-loading-message": "लोड हुदैछ...",
 	"mobile-frontend-panel-ok": "ठीक",
-	"mobile-frontend-panel-cancel": "हैन पर्दैन"
+	"mobile-frontend-panel-cancel": "हैन पर्दैन",
+	"mobile-frontend-mobile-option-amc": "उन्नत मोबाइल योगदानहरू"
 }
