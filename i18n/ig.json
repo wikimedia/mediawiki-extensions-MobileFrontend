@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ukabia"
+			"Ukabia",
+			"Uzoma Ozurumba"
 		]
 	},
 	"mobile-frontend-categories-heading": "<strong>Ụdàkọ</strong>",
@@ -11,5 +12,6 @@
 	"mobile-frontend-save-settings": "Dònye",
 	"mobile-frontend-talk-overlay-header": "Nkàta",
 	"mobile-frontend-watchlist-filter-talk": "Nkàta",
-	"tag-mobile_edit": "ḿmezi m̀pàn'aka"
+	"tag-mobile_edit": "ḿmezi m̀pàn'aka",
+	"tag-mobile_web_edit": "Ndezi web nke mbugharị"
 }

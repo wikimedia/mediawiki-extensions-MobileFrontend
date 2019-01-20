@@ -276,6 +276,7 @@
 	"mobile-frontend-send-feedback": "Visszajelzés küldése",
 	"mobile-frontend-mobile-option-MFLazyLoadImages-description": "Fényképek betöltése csak akkor, ha valóban szükség van rájuk.",
 	"mobile-frontend-mobile-option-MFLazyLoadImages": "Fényképek késleltetett betöltése",
+	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "Bevezető bekezdés",
 	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption": "Szakaszok kibontása alapértelmezetten",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Betűméret",
 	"mobile-frontend-beta-only": "Csak a béta módban elérhető funkció",
