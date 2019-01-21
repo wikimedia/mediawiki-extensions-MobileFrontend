@@ -182,6 +182,7 @@
 							// check if any changes have been made,
 							// and if so, tell the user they have to save first.
 							if ( !self.gateway.hasChanged ) {
+								// TODO: Be more selective in which options we pass between editors
 								self._switchToVisualEditor( self.options );
 							} else {
 								// TODO: Replace with an OOUI dialog

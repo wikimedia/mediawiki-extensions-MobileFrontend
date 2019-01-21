@@ -12,11 +12,13 @@
 	 */
 	function VisualEditorOverlay( options ) {
 		this.applyHeaderOptions( options, true );
+		// When switch, all options from the source mode editor are passed
+		// to VE, so ensure these settings override them.
 		EditorOverlayBase.call( this,
-			util.extend( {}, {
+			util.extend( {}, options, {
 				isBorderBox: false,
 				className: 'overlay editor-overlay editor-overlay-ve'
-			}, options )
+			} )
 		);
 		this.isNewPage = options.isNewPage;
 
