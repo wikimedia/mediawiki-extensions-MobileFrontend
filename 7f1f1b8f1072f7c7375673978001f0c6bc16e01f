@@ -235,6 +235,30 @@
       "revId": "7f1f1b8f1072f7c7375673978001f0c6bc16e01f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "56a23ca1_1c0fe326",
+        "filename": "tests/phpunit/content-providers/MwApiContentProviderTest.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 188,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-01-21T08:24:46Z",
+      "side": 1,
+      "message": "Thanks a lot @Pmiazga. PS11 addresses all methods :)",
+      "parentUuid": "cf82ff05_30091bd2",
+      "range": {
+        "startLine": 183,
+        "startChar": 25,
+        "endLine": 188,
+        "endChar": 31
+      },
+      "revId": "7f1f1b8f1072f7c7375673978001f0c6bc16e01f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
