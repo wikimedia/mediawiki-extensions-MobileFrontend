@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0093cabc_eb08b5db",
+        "filename": "i18n/en.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-22T22:05:42Z",
+      "side": 1,
+      "message": "this letter \"O\" should be lowercased.",
+      "range": {
+        "startLine": 154,
+        "startChar": 57,
+        "endLine": 154,
+        "endChar": 59
+      },
+      "revId": "e8561be22b85100261cbe68dbb8d9dd73ab62f66",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
