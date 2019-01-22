@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b7443a92_07beba40",
+        "filename": "resources/mobile.editor.overlay/EditorOverlay.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 525,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-22T18:48:30Z",
+      "side": 0,
+      "message": "Do we still need this? I ask only because MobileFrontendArticleTarget sounds like something a targetLoader would want.",
+      "range": {
+        "startLine": 525,
+        "startChar": 54,
+        "endLine": 525,
+        "endChar": 56
+      },
+      "revId": "f40705bf34295dc6b1eecc108b655384feecf4e3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
