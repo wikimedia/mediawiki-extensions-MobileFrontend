@@ -16,6 +16,24 @@
       "revId": "458b54dc7f78445387348c973acce16073f5bd9d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5dfdbe48_4e36ce30",
+        "filename": "resources/mobile.editor.ve/ve.init.mw.MobileFrontendArticleTarget.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 305,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-22T23:58:47Z",
+      "side": 1,
+      "message": "The problem with doing this is clicking back will take you back into the mobile editor overlay. If that\u0027s what you want great, if not, that could be confusing and inconsistent with other overlays.\n\nhttps://gerrit.wikimedia.org/r/#/c/oojs/router/+/481955/ might help this a little as it would allow you to use replaceState here.",
+      "parentUuid": "92aac698_ba3423fe",
+      "revId": "458b54dc7f78445387348c973acce16073f5bd9d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
