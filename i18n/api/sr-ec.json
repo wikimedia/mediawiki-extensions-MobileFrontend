@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"BadDog"
+		]
+	},
+	"apihelp-mobileview-description": "Враћа податке потребне за приказе за мобилне уређаје.",
+	"apihelp-mobileview-summary": "Враћа податке потребне за приказе за мобилне уређаје.",
+	"apihelp-mobileview-param-page": "Наслов странице за обрађивање",
+	"apihelp-mobileview-param-noimages": "Враћање HTML-а без слика.",
+	"apiwarn-mobilefrontend-sectionsnotfound": "{{PLURAL:$2|Одељак $1 није пронађен.|Одељци $1 нису пронађени}}."
+}

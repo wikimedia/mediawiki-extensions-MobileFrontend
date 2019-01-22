@@ -1,0 +1,31 @@
+{
+	"@metadata": {
+		"authors": [
+			"Pikne"
+		]
+	},
+	"apihelp-mobileview-description": "Tagastab mobiilivaadetele vajalikud andmed.",
+	"apihelp-mobileview-param-page": "Töödeldava lehekülje pealkiri.",
+	"apihelp-mobileview-param-redirect": "Kas tuleks järgida ümbersuunamisi.",
+	"apihelp-mobileview-param-sections": "Püstkriipsudega eraldatud loetelu alaosanumbritest, millele vastavate alaosade tekst tagastada. \"all\" tagastab kõik alaosad. Vahemik vormingus \"1-4\" tagastab alaosad 1, 2, 3 ja 4. Ilma teise numbrita vahemik, nt \"1-\", tagastab kõik alaosad kuni lõpuni. Sisendit \"references\" saab kasutada, et tagastada kõik alaosad, mis sisaldavad viiteid.",
+	"apihelp-mobileview-param-prop": "Millist teavet hankida:\n;text: Valitud alaosade HTML.\n;sections: Teave lehekülje kõigi alaosade kohta.\n;normalizedtitle: Lehekülje normaliseeritud pealkiri.\n;lastmodified: Lehekülje viimase muutmise ISO 8601 ajatempel, nt \"2014-04-13T22:42:14Z\".\n;lastmodifiedby: Teave kasutajast, kes lehekülge viimati muutis.\n;revision: Tagasta lehekülje praeguse redaktsiooni identifikaator.\n;protection: Teave kaitsetaseme kohta.\n;editable: Kas antud kasutaja saab lehekülge redigeerida. Sisselogitud kasutajate puhul võetakse siinkohal arvesse kõiki tegureid, aga sisselogimata kasutajate puhul ei arvestata blokeeritud olekuga.\n;languagecount: Kui paljudes keeltes on lehekülg saadaval, üldarv.\n;hasvariants: Kas lehekülg on saadaval teistes keelevariantides.\n;displaytitle: Lehekülje viimistletud pealkiri, milles rakendatakse võlusõna &#123;&#123;DISPLAYTITLE&#125;&#125; ja muud sarnast.\n;pageprops: Leheatribuudid.",
+	"apihelp-mobileview-param-prop-withimages": "Millist teavet hankida:\n;text: Valitud alaosade HTML.\n;sections: Teave lehekülje kõigi alaosade kohta.\n;normalizedtitle: Lehekülje normaliseeritud pealkiri.\n;lastmodified: Lehekülje viimase muutmise ISO 8601 ajatempel, nt \"2014-04-13T22:42:14Z\".\n;lastmodifiedby: Teave kasutajast, kes lehekülge viimati muutis.\n;revision: Tagasta lehekülje praeguse redaktsiooni identifikaator.\n;protection: Teave kaitsetaseme kohta.\n;editable: Kas antud kasutaja saab lehekülge redigeerida. Sisselogitud kasutajate puhul võetakse siinkohal arvesse kõiki tegureid, aga sisselogimata kasutajate puhul ei arvestata blokeeritud olekuga.\n;languagecount: Kui paljudes keeltes on lehekülg saadaval, üldarv.\n;hasvariants: Kas lehekülg on saadaval teistes keelevariantides.\n;displaytitle: Lehekülje viimistletud pealkiri, milles rakendatakse võlusõna &#123;&#123;DISPLAYTITLE&#125;&#125; ja muud sarnast.\n;pageprops: Leheatribuudid.\n;image: Teave selle leheküljega seotud pildi kohta.\n;thumb: Selle leheküljega seotud pildi pisipilt.",
+	"apihelp-mobileview-param-sectionprop": "Millist teavet alaosade kohta hankida.",
+	"apihelp-mobileview-param-pageprops": "Millised leheatribuudid tagastada, püstkriipsudega (\"|\") eraldatud loetelu või \"*\" kõigi atribuutide jaoks.",
+	"apihelp-mobileview-param-variant": "Teisenda sellesse keelevarianti.",
+	"apihelp-mobileview-param-noimages": "Tagasta HTML ilma piltideta.",
+	"apihelp-mobileview-param-noheadings": "Ära kaasa arva pealkirju väljundisse.",
+	"apihelp-mobileview-param-notransform": "Ära transformeeri HTML-i ümber mobiiliomaseks versiooniks.",
+	"apihelp-mobileview-param-onlyrequestedsections": "Tagasta ainult päritud alaosad isegi atribuudiga $1prop=sections.",
+	"apihelp-mobileview-param-offset": "Kohtle kogu teksti ühe sõnena ja tagasta alamsõne, mis algab selles punktis.",
+	"apihelp-mobileview-param-maxlen": "Kohtle kogu teksti ühe sõnena ja piira tulemus selle pikkusega.",
+	"apihelp-mobileview-param-thumbsize": "Pisipildi suuruse ülemmäär.",
+	"apihelp-mobileview-param-thumbwidth": "Pisipildi laiuse ülemmäär.",
+	"apihelp-mobileview-param-thumbheight": "Pisipildi kõrguse ülemmäär.",
+	"apihelp-mobileview-example-1": "Hangi teave lehekülje [[Doom metal]] alaosa 0 kohta",
+	"apihelp-mobileview-example-2": "Hangi teave lehekülje [[Candlemass]] alaosa 0 ja viiteid sisaldavate alaosade kohta",
+	"apihelp-mobileview-example-3": "Hangi teave lehekülje [[Candlemass]] alaosa 1 ja järgnevate alaosade ning viiteid sisaldavate alaosade kohta",
+	"apihelp-parse-param-mobileformat": "Tagasta parsimisväljund mobiiliseadmetele sobivas vormingus.",
+	"apihelp-parse-param-noimages": "Keela pildid mobiiliväljundis.",
+	"apihelp-parse-param-mainpage": "Rakenda transformatsioone mobiiliversiooni esilehel."
+}

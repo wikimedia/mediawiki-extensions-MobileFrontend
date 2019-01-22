@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"NoiX180"
+		]
+	},
+	"apihelp-mobileview-param-page": "Sesirah kaca sing arep digarap.",
+	"apihelp-mobileview-param-redirect": "Alihan marang sembarang papan kudu ditutaké.",
+	"apihelp-mobileview-param-sectionprop": "Katerangan ngenani pérangan sing dikarepaké.",
+	"apihelp-mobileview-param-variant": "Sulih kontèn marang varian basa iki.",
+	"apihelp-mobileview-param-noimages": "Balèkaké HTML tanpa gambar.",
+	"apihelp-mobileview-param-noheadings": "Aja lebokaké sesirahan ing weton.",
+	"apihelp-mobileview-param-notransform": "Aja robah HTML dadi vèrsi kusus punsèl.",
+	"apihelp-mobileview-param-onlyrequestedsections": "Balèkaké mligi pérangan sing dikarepaké masiya mawa $1prop=sections.",
+	"apihelp-mobileview-param-offset": "Pitambuh yèn kabèh kasil wujud tèks iku saroncèn, lan balèkaké anak roncèn wiwit titikan iki.",
+	"apihelp-mobileview-param-thumbsize": "Alang-ujur thumbnail maksimum.",
+	"apihelp-mobileview-param-thumbwidth": "Amba thumbnail maksimum.",
+	"apihelp-mobileview-param-thumbheight": "Dhuwur thumbnail maksimum.",
+	"apihelp-mobileview-param-revision": "Nyuwun révisi mirunggan.",
+	"apihelp-mobileview-example-1": "Nyuwun katerangan ngenani pérangan 0 saka [[Doom metal]]",
+	"apiwarn-mobilefrontend-sectionsnotfound": "{{PLURAL:$2|Pérangan|Pérangan}} $1 ora ana."
+}

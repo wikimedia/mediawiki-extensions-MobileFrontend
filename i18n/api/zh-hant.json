@@ -1,0 +1,41 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cwlin0416",
+			"Kly",
+			"LNDDYL"
+		]
+	},
+	"apihelp-mobileview-description": "回傳手機檢視需要的資料。",
+	"apihelp-mobileview-summary": "回傳手機檢視需要的資料。",
+	"apihelp-mobileview-param-page": "要處理的頁面標題。",
+	"apihelp-mobileview-param-redirect": "是否允許重新導向。",
+	"apihelp-mobileview-param-sections": "用於回傳文字的以豎線區分章節號碼清單。「all」用於回傳所有內容。範圍格式「1-4」代表取得第 1、2、3、4 章節。不帶第二個數字的範圍格式，例如「1-」代表著取得第 1 段之後到底的所以內容。「references」可用於指定回傳所有包含到參考資料的章節。",
+	"apihelp-mobileview-param-prop": "要取得的資訊：\n;text：已選的 HTML 段落。\n;sections：有關頁面上所有段落的資訊。\n;normalizedtitle:標準化頁面標題。\n;lastmodified：用於頁面最後修改時的 ISO 8601 時間戳記，例如：「2014-04-13T22:42:14Z」。\n;lastmodifiedby：有關最後對頁面修改的使用者資訊。\n;revision：回傳頁面目前的修訂 ID。\n;protection：有關保護層級的資訊。\n;editable：目前使用者是否可編輯此頁面。此包含所有對於登入使用者，且不對匿名使用者封鎖狀態的要素。\n;languagecount：頁面可用的語言數目。\n;hasvariants：頁面是否在其它語言變體裡可用。\n;displaytitle：頁面的呈現標題，帶有像 &#123;&#123;DISPLAYTITLE&#125;&#125; 這樣套用的內容。\n;pageprops：頁面屬性。",
+	"apihelp-mobileview-param-prop-withimages": "要取得的資訊：\n;text：已選的 HTML 段落。\n;sections：有關頁面上所有段落的資訊。\n;normalizedtitle:標準化頁面標題。\n;lastmodified：用於頁面最後修改時的 ISO 8601 時間戳記，例如：「2014-04-13T22:42:14Z」。\n;lastmodifiedby：有關最後對頁面修改的使用者資訊。\n;revision：回傳頁面目前的修訂 ID。\n;protection：有關保護層級的資訊。\n;editable：目前使用者是否可編輯此頁面。此包含所有對於登入使用者，且不對匿名使用者封鎖狀態的要素。\n;languagecount：頁面可用的語言數目。\n;hasvariants：頁面是否在其它語言變體裡可用。\n;displaytitle：頁面的呈現標題，帶有像 &#123;&#123;DISPLAYTITLE&#125;&#125; 這樣套用的內容。\n;pageprops：頁面屬性。\n;image:關聯至此頁面的圖片之相關資訊。\n;thumb：關聯至此頁面的圖片之縮圖。",
+	"apihelp-mobileview-param-sectionprop": "要取得的章節相關資訊。",
+	"apihelp-mobileview-param-pageprops": "回傳的頁面屬性，豎線字元「|」分隔的清單、或是對應所有屬性的「*」。",
+	"apihelp-mobileview-param-variant": "內容轉換為此語言變體。",
+	"apihelp-mobileview-param-noimages": "回傳不含圖片的 HTML。",
+	"apihelp-mobileview-param-noheadings": "輸出時不包含標頭。",
+	"apihelp-mobileview-param-notransform": "不要改變 HTML 至手機特定版。",
+	"apihelp-mobileview-param-onlyrequestedsections": "僅回傳像 $1prop=sections 的請求章節。",
+	"apihelp-mobileview-param-offset": "將所有文字結果考慮成單一字串，並限制結果至此長度。",
+	"apihelp-mobileview-param-maxlen": "將所有文字結果考慮成單一字串，並限制結果至此長度。",
+	"apihelp-mobileview-param-thumbsize": "最大縮圖尺寸。",
+	"apihelp-mobileview-param-thumbwidth": "最大縮圖寬度。",
+	"apihelp-mobileview-param-thumbheight": "最大縮圖高度。",
+	"apihelp-mobileview-param-revision": "請求一個特定的修訂。",
+	"apihelp-mobileview-example-1": "取得關於 [[Doom metal]] 的第 0 章節的資訊",
+	"apihelp-mobileview-example-2": "取得第 0 段章節，以及包含 [[Candlemass]] 的參考資料之章節相關資訊",
+	"apihelp-mobileview-example-3": "取得包含第 1 段章節之後，以及包含 [[Candlemass]] 的參考資料之章節相關資訊",
+	"apihelp-parse-param-mobileformat": "以適合於行動裝置的格式回傳解析輸出內容。",
+	"apihelp-parse-param-noimages": "在手機輸出中停用圖片。",
+	"apihelp-parse-param-mainpage": "套用手機首頁轉換。",
+	"apihelp-webapp-manifest-description": "回傳 webapp manifest。",
+	"apihelp-webapp-manifest-summary": "回傳 webapp manifest。",
+	"apierror-mobilefrontend-badidtitle": "錯誤的修訂 ID/標題組合。",
+	"apierror-mobilefrontend-toomanysizeparams": "<var>thumbsize</var> 與 <var>thumbwidth</var> 跟 <var>thumbheight</var> 互斥。",
+	"apiwarn-mobilefrontend-ignoringnoheadings": "<var>noheadings</var> 在首頁上沒有意義，忽略。",
+	"apiwarn-mobilefrontend-sectionsnotfound": "找不到{{PLURAL:$2|章節|章節}} $1。"
+}

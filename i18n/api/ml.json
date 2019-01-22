@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Praveenp"
+		]
+	},
+	"apihelp-mobileview-param-page": "കൈകാര്യം ചെയ്യേണ്ട താളിന്റെ തലക്കെട്ട്.",
+	"apihelp-mobileview-param-thumbsize": "ലഘുചിത്രത്തിന്റെ പരമാവധി വലിപ്പം",
+	"apihelp-mobileview-param-thumbwidth": "ലഘുചിത്രത്തിന്റെ പരമാവധി വീതി.",
+	"apihelp-mobileview-param-thumbheight": "ലഘുചിത്രത്തിന്റെ പരമാവധി ഉയരം."
+}

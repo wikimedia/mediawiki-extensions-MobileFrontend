@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"C.R.",
+			"Ruthven"
+		]
+	},
+	"apihelp-mobileview-description": "Ritorna date ca nce serveno p' 'e vedute 'e mobbele.",
+	"apihelp-mobileview-param-page": "Titolo d' 'a paggena a prucessà.",
+	"apihelp-mobileview-param-redirect": "Si 'e redirect s'avesser'a secutà.",
+	"apihelp-mobileview-param-sections": "N'elenco separato 'e pallicche -, n'elenco 'e nummere 'e seziona ca returnassero nu testo. \"tuttuquante\" se ponno ausà pe' turnà tuttuquante. Valure 'n furmato \"1-4\" vonno dicere ca se pigliassero seziune 1,2,3,4. Valure senza 'o nummero appriesso, e.g. \"1-\" vò dicere ca se piglia tutto nfin'a ll'avé tutto tutto sano sano. \"riferimente\" se putessero ausà pe' specificà ca tutt' 'e seziune ca cuntenessero riferimente s'avesser'a turnà.",
+	"apihelp-mobileview-param-prop": "Che nfurmazione piglià:\n;text:HTML d' 'e seziune scigliute.\n;sections:Nfurmazione ncopp'a tutt' 'e sseziune 'e sta paggena.\n;normalizedtitle:Titulo 'e paggena normalizzata.\n;lastmodified:'O tiempo (ISO 8601) 'e quanno sta paggena ha sito cagnata ll'urdema vota, es. \"2014-04-13T22:42:14Z\".\n;lastmodifiedby: Nfurmazione ncopp'a ll'utente ca cagnaje 'a paggena pe urdemo.\n;revision:Torna ll'ID p' 'a verziona 'e mo 'e sta paggena.\n;protection:Nfurmaziune ncopp' 'o livello 'e pruteziona.\n;editable:Si ll'utente 'e mo può cagnà sta paggena o no. Chisto ncludesse tutt' 'e particulare 'e ll'utenti trasuti ma nun dice niente p' 'o stato bluccato d'anonime.\n;languagecount:Nummero 'e llengue int' 'e quale 'a paggena esiste.\n;hasvariants:Si 'a paggena esiste dint'a n'ati varianti 'e llengue.\n;displaytitle:'O titulo d' 'a paggena, cu &#123;&#123;DISPLAYTITLE&#125;&#125; e chiste apprecate.\n;pageprops:Proprietà d' 'a paggena.",
+	"apihelp-mobileview-param-prop-withimages": "Che nfurmazione piglià:\n;text:HTML d' 'e seziune scigliute.\n;sections:Nfurmazione ncopp'a tutt' 'e sseziune 'e sta paggena.\n;normalizedtitle:Titulo 'e paggena normalizzata.\n;lastmodified:'O tiempo (ISO 8601) 'e quanno sta paggena ha sito cagnata ll'urdema vota, es. \"2014-04-13T22:42:14Z\".\n;lastmodifiedby: Nfurmazione ncopp'a ll'utente ca cagnaje 'a paggena pe urdemo.\n;revision:Torna ll'ID p' 'a verziona 'e mo 'e sta paggena.\n;protection:Nfurmaziune ncopp' 'o livello 'e pruteziona.\n;editable:Si ll'utente 'e mo può cagnà sta paggena o no. Chisto ncludesse tutt' 'e particulare 'e ll'utenti trasuti ma nun dice niente p' 'o stato bluccato d'anonime.\n;languagecount:Nummero 'e llengue int' 'e quale 'a paggena esiste.\n;hasvariants:Si 'a paggena esiste dint'a n'ati varianti 'e llengue.\n;displaytitle:'O titulo d' 'a paggena, cu &#123;&#123;DISPLAYTITLE&#125;&#125; e chiste apprecate.\n;pageprops:Proprietà d' 'a paggena.\n;image:Nfurmaziune ncopp'a na fiùra suocia a sta paggena.\n;thumb:Miniatura 'e na fiùra suocia a sta paggena.",
+	"apihelp-mobileview-param-sectionprop": "Che nfurmaziune s'avess'a piglià.",
+	"apihelp-mobileview-param-pageprops": "Che pruprietà d' 'a paggena s'avisser'a turnà, n'elenco spartuto 'e pallicche (\"|\") o \"*\" pe' tutt' 'e pruprietà.",
+	"apihelp-mobileview-param-variant": "Scagna 'e cuntenute dint'a sta variante 'e lengua.",
+	"apihelp-mobileview-param-noimages": "Tuorna HTML senza immaggene.",
+	"apihelp-mobileview-param-noheadings": "Nun appennere cap' 'e paggena dint'a ll'output.",
+	"apihelp-mobileview-param-notransform": "Nun scagnà HTML dint'a na verzione 'e mobbele specifica.",
+	"apihelp-mobileview-param-onlyrequestedsections": "Turnà surtanto 'e seziune addimannate pure si $1prop=sections.",
+	"apihelp-mobileview-param-offset": "Piglià comme fosse 'o testo dint'a na stringa, e turnà 'a sottostringa accummincianno 'a stu punto.",
+	"apihelp-mobileview-param-maxlen": "Piglià comme fosse ca tutt' 'o testo fosse na stringa, e miette 'o lemmeto 'e risultate a stu luongo.",
+	"apihelp-mobileview-param-thumbsize": "Massime diminziune 'e miniatura.",
+	"apihelp-mobileview-param-thumbwidth": "Massima ampiezza d' 'a miniatura",
+	"apihelp-mobileview-param-thumbheight": "Massima autezza d' 'a miniatura.",
+	"apihelp-mobileview-param-revision": "Addimanna na verziona specifica.",
+	"apihelp-mobileview-example-1": "Piglia nfurmaziune ncopp' 'a seziona 0 'e [[Doom metal]]",
+	"apihelp-mobileview-example-2": "Piglia nfurmaziune ncopp'a seziona 0 e 'e seziune cuntenenno riferimiente 'e [[Candlemass]]",
+	"apihelp-mobileview-example-3": "Piglia nfurmaziune ncopp' 'e seziune 1 e aroppo e pure 'e seziune cuntenenno riferimiente 'e [[Candlemass]]",
+	"apihelp-parse-param-mobileformat": "Tuorna nu risultato scagnato a nu furmato ca trasisse pure dint'a ll'apparicchie mobbele",
+	"apihelp-parse-param-noimages": "Stuta ll'immaggene ncopp'a l'output mobbele.",
+	"apihelp-parse-param-mainpage": "Appreca 'e scagnamiente prencepale 'e paggene mobbele."
+}

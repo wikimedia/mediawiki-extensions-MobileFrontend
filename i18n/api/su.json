@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Uchup19",
+			"WikiKaruhun"
+		]
+	},
+	"apihelp-mobileview-description": "Balikeun deui data nu diperlukeun pikeun pidangan sélulér.",
+	"apihelp-mobileview-param-page": "Judul kaca proséskeuneun",
+	"apihelp-mobileview-param-redirect": "Kamana baé ogé kudu dituturkeun.",
+	"apihelp-mobileview-param-sectionprop": "Info ngeunaan bagéan naon nu baris dicokot téh.",
+	"apihelp-mobileview-param-pageprops": "Properti kaca mana nu rék dibalikkeun, simbul (\"|\") misahkeun daptar atawa \"*\" pikeun sakumna properti.",
+	"apihelp-mobileview-param-variant": "Tarjamahkeun eusina kana ieu basa.",
+	"apihelp-mobileview-param-noimages": "Balikeun deui HTML tanpa gambar.",
+	"apihelp-mobileview-param-noheadings": "Ulah mamawa judul kana kaluaran.",
+	"apihelp-mobileview-param-notransform": "Ulah ngarobah HTML kana vérsi husus sélulér.",
+	"apihelp-mobileview-param-onlyrequestedsections": "Balikkeun deuina ukur bagéan anu dipénta sanajan bagéan $1prop",
+	"apihelp-mobileview-param-offset": "Jadikeun sakabéh téks hasil minangka hiji string, sarta balikeun substring ti titik ieu.",
+	"apihelp-mobileview-param-maxlen": "Jadikeun sakabéh téks hasil minangka hiji string, sarta watesan hasilna kana panjangna ieu.",
+	"apihelp-mobileview-param-thumbsize": "Diménsi maksimum miniatur.",
+	"apihelp-mobileview-param-thumbwidth": "Rubak maksimum miniatur.",
+	"apihelp-mobileview-param-thumbheight": "Jangkung maksimum miniatur.",
+	"apihelp-mobileview-param-revision": "Pundut révisi tinangtu",
+	"apihelp-mobileview-example-1": "Cokot info ngeunaan bagéan 0 tina [[Doom metal]]",
+	"apihelp-mobileview-example-2": "Cokot info ngeunaan bagéan 0 jeung bagéan nu ngandung rujukan tina [[Candlemass]]",
+	"apihelp-mobileview-example-3": "Cokot info ngeunaan bagéan 1 jeung nu panganyarna sarta bagéan nu ngandung rujukan tina [[Candlemass]]",
+	"apihelp-parse-param-mobileformat": "Malikkeun deui hasil kaluaran dina format anu luyu jeung pakakas sélulér.",
+	"apihelp-parse-param-noimages": "Pareuman gambar dina piangan sélulér.",
+	"apihelp-parse-param-mainpage": "Larapkeun tranformasi tepas sélulér.",
+	"apihelp-webapp-manifest-description": "Balikeun deui kaca aplikasi nyata",
+	"apierror-mobilefrontend-badidtitle": "Kombinasi révisi id/judul goréng.",
+	"apierror-mobilefrontend-toomanysizeparams": "\n<Var>thumbsize</var> silih éksklusif jeung <var>thumbwidth</var> sarta <var>thumbheight</var>.",
+	"apiwarn-mobilefrontend-ignoringnoheadings": "<Var>noheadings</var> teu ngasupkeun kana tepas, antepkeun.",
+	"apiwarn-mobilefrontend-sectionsnotfound": "{{PLURAL:$2|Bagéan}} $1 teu kapanggih."
+}

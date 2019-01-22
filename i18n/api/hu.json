@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bencemac",
+			"Tacsipacsi"
+		]
+	},
+	"apihelp-mobileview-description": "A mobil nézetekhez szükséges adatokat adja vissza.",
+	"apihelp-mobileview-summary": "A mobil nézetekhez szükséges adatokat adja vissza.",
+	"apihelp-mobileview-param-page": "A feldolgozandó lap címe.",
+	"apihelp-mobileview-param-redirect": "Az átirányításokat kövesse-e.",
+	"apihelp-mobileview-param-sectionprop": "Milyen információkra van szükség a szakaszokról.",
+	"apihelp-mobileview-param-variant": "A tartalom átalakítása erre a nyelvvariánsra",
+	"apihelp-mobileview-param-noimages": "Visszatérés HTML-lel, képek nélkül.",
+	"apihelp-mobileview-param-noheadings": "Szakaszcímek kihagyása a kimenetből.",
+	"apihelp-mobileview-param-notransform": "Ne alakítsa át a HTML-t mobilspecifikusra.",
+	"apihelp-mobileview-param-onlyrequestedsections": "Csak a kért szakaszok visszaadása, még a(z) $1prop=sections paraméter esetén is.",
+	"apihelp-mobileview-param-thumbsize": "Maximális bélyegképméretek.",
+	"apihelp-mobileview-param-thumbwidth": "Maximális bélyegképszélesség.",
+	"apihelp-mobileview-param-thumbheight": "Maximális bélyegképmagasság.",
+	"apihelp-mobileview-param-revision": "Egy adott lapváltozat kérése.",
+	"apihelp-mobileview-example-1": "Információ a [[Doom metal]] 0. szakaszáról (bevezetőjéről)",
+	"apihelp-mobileview-example-2": "Információ a [[Candlemass]] 0. szakaszáról (bevezetőjéről) és forráshivatkozásokat tartalmazó szakaszairól",
+	"apihelp-mobileview-example-3": "Információ a [[Candlemass]] 1. és későbbi szakaszairól, valamint a forráshivatkozásokat tartalmazó szakaszairól",
+	"apihelp-parse-param-mobileformat": "A feldolgozás eredményének visszaadása mobileszközöknek megfelelő formátumban.",
+	"apihelp-parse-param-noimages": "Képek letiltása a mobilkimenetben.",
+	"apihelp-parse-param-mainpage": "Mobilkezdőlap-átalakítások érvényesítése.",
+	"apierror-mobilefrontend-badidtitle": "Hibás lapváltozat-azonosító/cím kombináció.",
+	"apierror-mobilefrontend-toomanysizeparams": "A <var>thumbsize</var> kölcsönösen kizárja egymást a <var>thumbwidth</var> és <var>thumbheight</var> paraméterekkel.",
+	"apiwarn-mobilefrontend-ignoringnoheadings": "A <var>noheadings</var> paraméternek nincs értelme a kezdőlapon, figyelmen kívül hagyva.",
+	"apiwarn-mobilefrontend-sectionsnotfound": "A(z) $1 {{PLURAL:$2|szakasz nem található|szakaszok nem találhatók}}."
+}

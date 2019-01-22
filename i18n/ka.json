@@ -159,7 +159,6 @@
 	"tag-mobile_edit": "რედაქტირება მობილურით",
 	"tag-mobile_edit-description": "მობილური ხელსაწყოდან რედაქტირება (საიტი ან აპლიკაცია)",
 	"tag-mobile_web_edit": "რედაქტირება საიტის მობილური ვერსიით",
-	"apihelp-mobileview-param-noimages": "დააბრუნე HTML სურათების გარეშე",
 	"mobile-frontend-loading-message": "იტვირთება...",
 	"mobile-frontend-panel-ok": "კარგი",
 	"mobile-frontend-panel-cancel": "არა, გმადლობთ",

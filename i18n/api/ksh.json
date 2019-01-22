@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Purodha"
+		]
+	},
+	"apihelp-mobileview-description": "Jiff dahte uß, di för Aanseeschte op mobihle Apparahte jebruch wähde.",
+	"apihelp-mobileview-param-page": "De Övverschreff vun dä Sigg zom Beärbeide.",
+	"apihelp-mobileview-param-redirect": "Ov mer Ömleidonge follje sullte.",
+	"apihelp-mobileview-param-sectionprop": "Wat för en Aanjahbe övver Affschnedde ze holle.",
+	"apihelp-mobileview-param-variant": "Donn dä Ennhalld en di Schreff udder dä Dijaläk vun dä Schprohch wandelle.",
+	"apihelp-mobileview-param-noimages": "Jiff et <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"HyperText Transfer Protocol\">HTTP<i> uß, der ohne Bellder.",
+	"apihelp-mobileview-param-noheadings": "Donn kein Övverschreffte ußjävve.",
+	"apihelp-mobileview-param-notransform": "Donn et <i lang=\"en\" xml:lang=\"en\" dir=\"ltr\" title=\"HyperText Transfer Protocol\">HTTP<i> nit en de Väsjohn för mobihle Apparahte ömwandelle.",
+	"apihelp-mobileview-param-thumbsize": "De jrühßte Afmäßonge för Minnibelldsche.",
+	"apihelp-mobileview-param-thumbwidth": "De jrühßte Breide för Minnibelldsche.",
+	"apihelp-mobileview-param-thumbheight": "De jrühßte Hühde för Minnibelldsche.",
+	"apihelp-mobileview-param-revision": "Noh en beschtemmpte Väsjohn frohe.",
+	"apihelp-mobileview-example-1": "Holl Aanjahbe övver der Affschnett 0 vun dä Sigg „<code lang=\"en\" xml:lang=\"en\" dir=\"ltr\">[[Doom metal]]</code>“",
+	"apihelp-mobileview-example-2": "Holl Aanjahbe övver der Affschnett 0 un Affschnedde woh ene Lengk op di Sigg „<code lang=\"en\" xml:lang=\"en\" dir=\"ltr\">[[Candlemass]]</code>“ dren es.",
+	"apihelp-parse-param-noimages": "Donn de Bellder för de Ußjahbe aan Mobihjerähte affschallde."
+}

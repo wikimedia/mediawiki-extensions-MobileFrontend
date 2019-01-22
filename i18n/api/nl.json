@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mainframe98",
+			"Siebrand",
+			"Sjoerddebruin"
+		]
+	},
+	"apihelp-mobileview-param-page": "Titel van de pagina om te verwerken.",
+	"apihelp-mobileview-param-redirect": "Of doorverwijzingen gevolgt moeten worden.",
+	"apihelp-mobileview-param-noimages": "HTML zonder afbeeldingen opvragen.",
+	"apihelp-mobileview-param-revision": "Een specifieke versie opvragen.",
+	"apihelp-parse-param-noimages": "Afbeeldingen uitschakelen in de mobiele uitvoer.",
+	"apiwarn-mobilefrontend-sectionsnotfound": "{{PLURAL:$2|Kopje|Kopjes}} $1 niet gevonden."
+}

@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Tweety"
+		]
+	},
+	"apihelp-mobileview-param-redirect": "ڇا چورڻ جو ضروري پيڇو ڪجي.",
+	"apihelp-mobileview-param-noimages": "ڏيکاريو HTML تصويرون کان سواءِ.",
+	"apihelp-mobileview-param-thumbsize": "ٿنبنيل جي وڌ ۾ وڌ ايراضي.",
+	"apihelp-mobileview-param-thumbwidth": "ٿنبنيل جي وڌ ۾ وڌ ويڪر.",
+	"apihelp-mobileview-param-thumbheight": "ٿنبنيل جي وڌ ۾ وڌ اوچائي.",
+	"apierror-mobilefrontend-badidtitle": "مسودي جي خراب آءِ ڊي/موضوع ملاوٽ",
+	"apiwarn-mobilefrontend-sectionsnotfound": "{{PLURAL:$2|ڀاڱو|ڀاڱا}} $1 نه آهي(ن)."
+}

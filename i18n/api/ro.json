@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Minisarm"
+		]
+	},
+	"apihelp-mobileview-description": "Returnează datele necesare pentru vizualizările mobile.",
+	"apihelp-mobileview-param-page": "Titlul paginii de procesat.",
+	"apihelp-mobileview-param-noimages": "Returnează HTML fără imagini.",
+	"apihelp-mobileview-param-thumbsize": "Dimensiunile maxime pentru miniaturi."
+}

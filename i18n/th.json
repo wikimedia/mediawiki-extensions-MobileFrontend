@@ -233,8 +233,6 @@
 	"tag-advanced_mobile_edit-description": "แก้ไขโดยผู้ใช้ด้วยโหมดการมีส่วนร่วมขั้นสูงสำหรับมือถือ",
 	"tag-mobile_web_edit": "แก้ไขจากเว็บสำหรับอุปกรณ์เคลื่อนที่",
 	"tag-mobile_web_edit-description": "แก้ไขจากเว็บไซต์สำหรับอุปกรณ์เคลื่อนที่",
-	"apihelp-mobileview-param-thumbwidth": "ความกว้างสูงสุดของรูปขนาดย่อ",
-	"apihelp-mobileview-param-thumbheight": "ความสูงสูงสุดของรูปขนาดย่อ",
 	"mobile-frontend-loading-message": "กำลังโหลด…",
 	"mobile-frontend-panel-ok": "ตกลง",
 	"mobile-frontend-panel-cancel": "ไม่ ขอบคุณ",

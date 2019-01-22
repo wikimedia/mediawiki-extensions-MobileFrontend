@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"Albertas",
+			"Manvydasz"
+		]
+	},
+	"apihelp-mobileview-description": "Grąžina duomenis, reikalingus mobiliojo peržiūroms.",
+	"apihelp-mobileview-param-page": "Pavadinimas puslapio, kurį apdoroti.",
+	"apihelp-mobileview-param-redirect": "Ar nukreipimas turėtų būti sekamas.",
+	"apihelp-mobileview-param-sections": "Vertikaliais brūkšniais atskirtų sekcijų numerių sąrašas, kuriam grąžinti tekstą. \"all\" gali būti naudojamas grąžinti visiems. Rėžiai pateikti \"1-4\" formatu, nurodo 1,2,3,4. Rėžiai be antrojo skaičio, pvz. \"1-\" žymi visus iki pabaigos. \"references\" gali būti naudojamas nurodyti visiems skyriams, kuriuose yra nuorodų.",
+	"apihelp-mobileview-param-prop": "Kurią informaciją gauti:\n;text:Pasirinkto skyriaus HTML.\n;sections:Informacija apie visus puslapio skyrius.\n;normalizedtitle:Normalizuotas puslapio pavadinimas.\n;lastmodified:ISO 8601 laiko žymė kada puslapis paskutinį kartą buvo redaguotas, pav. \"2014-04-13T22:42:14Z\".\n;lastmodifiedby:Informacija apie naudotoją, kuris paskutinis redagavo puslapį.\n;revision:Grąžinti dabartinės puslapio versijos ID.\n;protection:Informacija apie apsaugos lygius.\n;editable:Ar dabartinis naudotojas gali redaguoti puslapį. Į tai įeina visi visi prisijungusių naudotojų faktoriai, bet ne anoniminių naudotojų užblokavimo statusas.\n;languagecount:Skaičius kalbų, kuriomis prieinamas puslapis.\n;hasvariants:Ar puslapis prieinamas kitais kalbos variantais.\n;displaytitle:Naudojamas puslapio pavadinimas su &#123;&#123;DISPLAYTITLE&#125;&#125; ir panašiais nustatymais.\n;pageprops:Puslapio savybės.",
+	"apihelp-mobileview-param-prop-withimages": "Kurią informaciją gauti:\n;text:Pasirinkto skyriaus HTML.\n;sections:Informacija apie visus puslapio skyrius.\n;normalizedtitle:Normalizuotas puslapio pavadinimas.\n;lastmodified:ISO 8601 laiko žymė, nurodanti, kada buvo paskutinį kartą redaguota, pvz. \"2014-04-13T22:42:14Z\".\n;lastmodifiedby:Informacija apie naudotoją, kuris paskutinis redagavo puslapį.\n;revision:Grąžinti dabartinės puslapio versijos ID.\n;protection:Informacija apie apsaugos lygius.\n;editable:Ar dabartinis naudotojas gali redaguoti šį puslapį. Į tai įeina visi prisijungusių naudotojų faktoriai, bet neįeina anoniminių naudotojų užblokavimo statusas.\n;languagecount:Skaičius kalbų, kuriomis prieinamas puslapis.\n;hasvariants:Ar puslapis prieinamas kitais kalbų variantais.\n;displaytitle:Naudojamas puslapio pavadinimas, turintis &#123;&#123;DISPLAYTITLE&#125;&#125; arba panašų įrašą.\n;pageprops:Puslapio savybės.\n;image:Informacija paveikslėlio, susieto su šiuo puslapiu.\n;thumb:Miniatiūra paveikslėlio, susieto su šiuo puslapiu.",
+	"apihelp-mobileview-param-sectionprop": "Kurią informaciją apie skyrių gauti.",
+	"apihelp-mobileview-param-pageprops": "Kurias puslapio savybes grąžinti, vertikaliais brūkšniais (\"|\") atskirtų reikšmių sąrašas arba \"*\" visoms savybėms.",
+	"apihelp-mobileview-param-variant": "Konvertuoti turinį į kitą kalbos variantą.",
+	"apihelp-mobileview-param-noimages": "Grąžinti HTML be paveikslėlių.",
+	"apihelp-mobileview-param-noheadings": "Antraščių nereikia įterpti į išeigą.",
+	"apihelp-mobileview-param-notransform": "Nereikia transformuoti HTML į mobiliems būdingą versiją.",
+	"apihelp-mobileview-param-onlyrequestedsections": "Grąžinti tik prašomus skyrius, net su $1prop=sections.",
+	"apihelp-mobileview-param-offset": "Laikyti, kad visas rezultato tekstas yra viena eilutė ir grąžinti poeilutį prasidedantį nuo čia.",
+	"apihelp-mobileview-param-maxlen": "Laikyti, kad visas rezultato tekstas yra viena eilutė, ir apriboti rezultato ilgį iki tokio ilgio.",
+	"apihelp-mobileview-param-thumbsize": "Maksimalūs miniatiūros matmenys.",
+	"apihelp-mobileview-param-thumbwidth": "Maksimalus miniatiūros plotis.",
+	"apihelp-mobileview-param-thumbheight": "Maksimalus miniatiūros aukštis.",
+	"apihelp-mobileview-example-1": "Gauti informaciją apie skyrių 0 iš [[Doom metal]]",
+	"apihelp-mobileview-example-2": "Gauti informaciją apie skyrių 0 ir skyrius, kuriuose yra [[Candlemass]] nuorodos",
+	"apihelp-mobileview-example-3": "Gauti informaciją apie skyrių 1 ir vėlesnius bei skyrius, kuriuose yra [[Candlemass]] nuorodos",
+	"apihelp-parse-param-mobileformat": "Grąžinti išanalizuotą išvestį formatu, tinkamu mobiliems įrenginiams.",
+	"apihelp-parse-param-noimages": "Išjungti paveikslėlius mobiliajame įrenginyje.",
+	"apihelp-parse-param-mainpage": "Pritaikyti mobilių pagrindinio puslapio transformacijas.",
+	"apiwarn-mobilefrontend-sectionsnotfound": "{{PLURAL:$2|Nerastas $1 skyrius|Nerasti $1 skyriai|Nerasta $1 skyrių}}"
+}

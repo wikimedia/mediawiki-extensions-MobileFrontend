@@ -139,6 +139,5 @@
 	"nearby": "Paginas con themas vicin a te",
 	"tag-mobile_edit": "Modification per mobile",
 	"tag-mobile_edit-description": "Modification facite per mobile (web o app)",
-	"tag-mobile_web_edit": "Modification per web mobile",
-	"apihelp-mobileview-param-revision": "Requestar un version specific."
+	"tag-mobile_web_edit": "Modification per web mobile"
 }

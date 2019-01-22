@@ -1,0 +1,34 @@
+{
+	"@metadata": {
+		"authors": [
+			"Minh Nguyen",
+			"Vinhtantran"
+		]
+	},
+	"apihelp-mobileview-description": "Trả về dữ liệu cần thiết để hiển thị di động.",
+	"apihelp-mobileview-summary": "Trả về dữ liệu cần thiết để hiển thị di động.",
+	"apihelp-mobileview-param-page": "Tựa đề trang cần xử lý.",
+	"apihelp-mobileview-param-redirect": "Có cho phép đổi hướng hay không.",
+	"apihelp-mobileview-param-sections": "Danh sách đề mục (viết bằng số phân tách bằng dấu gạch) cần trả văn bản về. \"all\" có thể được dùng để trả về toàn bộ. Những khoảng số có dạng \"1-4\" có nghĩa là hãy lấy các đề mục 1,2,3,4. Các khoảng không có số thứ hai, như \"1-\" có nghĩa là lấy toàn bộ cho đến cuối. \"references\" có thể được dùng để chỉ định tất cả các phần có nguồn tham khảo sẽ được trả về.",
+	"apihelp-mobileview-param-prop": "Thông tin cần lấy:\n;text: Mã HTML của những đề mục đã chọn.\n;sections: Thông tin về tất cả các đề mục trong trang.\n;normalizedtitle: Tựa đề trang được chuẩn hóa.\n;lastmodified: Dấu thời gian theo chuẩn ISO 8601 cho lần sửa đổi cuối, ví dụ \"2014-04-13T22:42:14Z\".\n;lastmodifiedby: Thông tin về thành viên đã có sửa đổi cuối cùng tại trang.\n;revision: Trả về mã phiên bản hiện tại của trang.\n;protection: Thông tin về mức độ khóa của trang.\n;editable: Liệu người dùng hiện tại có thể sửa được trang hay không. Thông số này bao gồm toàn bộ các yếu tố của thành viên đăng nhập, nhưng không bao gồm tình trạng khóa của thành viên vô danh.\n;languagecount: Số ngôn ngữ của trang.\n;hasvariants: Trang này có tồn tại trong các biến thể ngôn ngữ khác không.\n;displaytitle: Tựa đề trang, dạng &#123;&#123;TÊNTRANG&#125;&#125; hoặc tương tự như vậy.\n;pageprops: Thuộc tính trang.",
+	"apihelp-mobileview-param-prop-withimages": "Thông tin cần lấy:\n;text: Mã HTML của những đề mục đã chọn.\n;sections: Thông tin về tất cả các đề mục trong trang.\n;normalizedtitle: Tựa đề trang được chuẩn hóa.\n;lastmodified: Dấu thời gian theo chuẩn ISO 8601 cho lần sửa đổi cuối, ví dụ \"2014-04-13T22:42:14Z\".\n;lastmodifiedby: Thông tin về thành viên đã có sửa đổi cuối cùng tại trang.\n;revision: Trả về mã phiên bản hiện tại của trang.\n;protection: Thông tin về mức độ khóa của trang.\n;editable: Liệu người dùng hiện tại có thể sửa được trang hay không. Thông số này bao gồm toàn bộ các yếu tố của thành viên đăng nhập, nhưng không bao gồm tình trạng khóa của thành viên vô danh.\n;languagecount: Số ngôn ngữ của trang.\n;hasvariants: Trang này có tồn tại trong các biến thể ngôn ngữ khác không.\n;displaytitle: Tựa đề trang, dạng &#123;&#123;TÊNTRANG&#125;&#125; hoặc tương tự như vậy.\n;pageprops: Thuộc tính trang.\n;image: Thông tin về một hình có trong trang.\n;thumb: Ảnh thu nhỏ của một hình có trong trang.",
+	"apihelp-mobileview-param-sectionprop": "Muốn lấy thông tin nào về đề mục.",
+	"apihelp-mobileview-param-pageprops": "Thuộc tính nào của trang sẽ trả về, danh sách phân tách bằng dấu gạch sổ (\"|\") hoặc \"*\" để trả về toàn bộ thuộc tính.",
+	"apihelp-mobileview-param-variant": "Đổi nội dung trang biến thể ngôn ngữ này.",
+	"apihelp-mobileview-param-noimages": "Cho ra mã HTML không có hình ảnh.",
+	"apihelp-mobileview-param-noheadings": "Đừng ghi tiêu đề vào nội dung xuất.",
+	"apihelp-mobileview-param-notransform": "Đừng đổi HTML sang phiên bản di động.",
+	"apihelp-mobileview-param-onlyrequestedsections": "Chỉ trả về các đề mục được yêu cầu thậm chí khi bật $1prop=sections.",
+	"apihelp-mobileview-param-offset": "Xem tất cả kết quả văn bản chỉ là 1 chuỗi duy nhất, và trả về chuỗi con bắt đầu từ điểm này.",
+	"apihelp-mobileview-param-maxlen": "Xem tất cả các kết quả văn bản chỉ là một chuỗi duy nhất, và giới hạn kết quả với chiều dài này.",
+	"apihelp-mobileview-param-thumbsize": "Kích thước tối đa của hình nhỏ.",
+	"apihelp-mobileview-param-thumbwidth": "Chiều rộng tối đa của hình thu nhỏ.",
+	"apihelp-mobileview-param-thumbheight": "Chiều cao tối đa của hình thu nhỏ.",
+	"apihelp-mobileview-param-revision": "Yêu cầu một phiên bản cụ thể.",
+	"apihelp-mobileview-example-1": "Lấy thông tin về đề mục 0 của trang [[Doom metal]]",
+	"apihelp-mobileview-example-2": "Lấy thông tin về đề mục 0 và các đề mục có chứa tham khảo của trang [[Candlemass]]",
+	"apihelp-mobileview-example-3": "Lấy thông tin về đề mục 1 trở về sau và các đề mục có chứa tham khảo trong trang [[Candlemass]]",
+	"apihelp-parse-param-mobileformat": "Trả về văn bản đã lọc theo một định dạng thích hợp với thiết bị di động.",
+	"apihelp-parse-param-noimages": "Tắt hình ảnh trên di động.",
+	"apihelp-parse-param-mainpage": "Áp dụng chuyển đổi trang chính di động."
+}

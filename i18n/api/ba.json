@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kaganer",
+			"Lizalizaufa",
+			"Азат Хәлилов",
+			"Гизатуллина",
+			"Янмурза Баки"
+		]
+	},
+	"apihelp-mobileview-description": "Мобиль тәҡдим итеү өсөн кәрәк мәғлүмәттәрҙе кире ҡайтара.",
+	"apihelp-mobileview-param-page": "Эшкәртеү өсөн яһалған биттең атамаһы.",
+	"apihelp-mobileview-param-redirect": "Ли редиректтар үтәлергә тейеш.",
+	"apihelp-mobileview-param-sections": "Айырылған тексҡа күсеү өсөн номерланған торба-айырыусы.\"\"all\"  барыһы өсөн ҡулланыла.\"1-4\" форматы 1,2,3,4 бүлектәрҙе аңлата. Икенсе һаны булмаған \"1-\" диапазоны аҙаҡҡа ҡәҙәре тигәнде аңлата.\"һылтанмалар\" - һылтанмалары булған бар бүлектәрҙе лә кире ҡайтарыуҙы аңлата.",
+	"apihelp-mobileview-param-sectionprop": "Бүлектәр тураһында ниндәй мәғлүмәт алырға.",
+	"apihelp-mobileview-param-variant": "Контентты телдең ошо вариантына конверсиялау",
+	"apihelp-mobileview-param-noimages": "HTML-ды рәсемһеҙ кире алырға.",
+	"apihelp-mobileview-param-noheadings": "\nСығыу исемен индермәҫкә",
+	"apihelp-mobileview-param-notransform": "HTML-ды махсус мобиль версияларға үҙгәртмәҫкә",
+	"apihelp-mobileview-param-thumbsize": "Эскиздарҙың максималь дәүмәле.",
+	"apihelp-mobileview-param-thumbwidth": "Миниатюраның максималь дәүмәле.",
+	"apihelp-mobileview-param-thumbheight": "Миниатюраның максималь бейеклеге.",
+	"apihelp-mobileview-example-1": "[[Doom metal]] мәҡәләлә 0 бүлеге тураһында мәғлүмәт алырға.",
+	"apihelp-parse-param-noimages": "Мобиль сайтта рәсемдәрҙе күрһәтмәҫкә"
+}

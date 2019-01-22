@@ -1,0 +1,41 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ainali",
+			"Lokal Profil",
+			"WikiPhoenix"
+		]
+	},
+	"apihelp-mobileview-description": "Returnerar data som krävs för mobilt visningsläge.",
+	"apihelp-mobileview-summary": "Returnerar data som krävs för mobilt visningsläge.",
+	"apihelp-mobileview-param-page": "Titeln på sidan att bearbeta.",
+	"apihelp-mobileview-param-redirect": "Om omdirigeringar ska följas.",
+	"apihelp-mobileview-param-sections": "Lodstrecksseparerad lista av avsnittsnummer för vilka text ska returneras. \"all\" kan användas för att returnera alla. Intervaller i formatet \"1-4\" betyder hämta avsnitt 1,2,3,4. Intervaller utan ett andra nummer, t.ex. \"1-\" betyder hämta alla tills slutet. \"references\" kan användas för att ange att alla avsnitt som innehåller referenser ska returneras.",
+	"apihelp-mobileview-param-prop": "Vilken information som ska hämtas:\n;text:HTML för de valda avsnitten.\n;sections:Information om alla avsnitt på sidan.\n;normalizedtitle:Normaliserad sidtitel.\n;lastmodified:ISO 8601-tidsstämpel för när sidan sist redigerades, t.ex. \"2014-04-13T22:42:14Z\".\n;lastmodifiedby:Information om användaren som sist redigerade sidan.\n;revision:Returnera aktuellt versions-ID för sidan.\n;protection:Information om skyddsnivå.\n;editable:Om den aktuella användaren kan redigera denna sida. Detta inkluderar alla faktorer för inloggade användare men inte blockeringsstatus för oinloggade.\n;languagecount:Antal språk som sidan finns tillgänglig på.\n;hasvariants:Om sidan finns tillgänglig på andra språkvarianter.\n;displaytitle:Den renderade titeln för sidan, med &#123;&#123;DISPLAYTITLE&#125;&#125; och liknande applicerat.\n;pageprops:Sidegenskaper.",
+	"apihelp-mobileview-param-prop-withimages": "Vilken information som ska hämtas:\n;text:HTML för de valda avsnitten.\n;sections:Information om alla avsnitt på sidan.\n;normalizedtitle:Normaliserad sidtitel.\n;lastmodified:ISO 8601-tidsstämpel för när sidan sist redigerades, t.ex. \"2014-04-13T22:42:14Z\".\n;lastmodifiedby:Information om användaren som sist redigerade sidan.\n;revision:Returnera aktuellt versions-ID för sidan.\n;protection:Information om skyddsnivå.\n;editable:Om den aktuella användaren kan redigera denna sida. Detta inkluderar alla faktorer för inloggade användare men inte blockeringsstatus för oinloggade.\n;languagecount:Antal språk som sidan finns tillgänglig på.\n;hasvariants:Om sidan finns tillgänglig på andra språkvarianter.\n;displaytitle:Den renderade titeln för sidan, med &#123;&#123;DISPLAYTITLE&#125;&#125; och liknande applicerat.\n;pageprops:Sidegenskaper.\n;image:Information om en bild associerad med sidan.\n;thumb:Miniatyr av en bild associerad med sidan.",
+	"apihelp-mobileview-param-sectionprop": "Vilken information om avsnitt som ska hämtas.",
+	"apihelp-mobileview-param-pageprops": "Vilka sidegenskaper som ska returneras, en lodstrecksseparerad (\"|\") lista eller \"*\" för alla egenskaper.",
+	"apihelp-mobileview-param-variant": "Konvertera innehållet till denna språkvariant.",
+	"apihelp-mobileview-param-noimages": "Returnera HTML utan bilder.",
+	"apihelp-mobileview-param-noheadings": "Inkludera inte rubriker i utdata.",
+	"apihelp-mobileview-param-notransform": "Konvertera inte HTML till mobilspecifik version.",
+	"apihelp-mobileview-param-onlyrequestedsections": "Returnera endast begärda avsnitt även med $1prop=sections.",
+	"apihelp-mobileview-param-offset": "Låtsas att alla textresultat är en sträng, och returnera understrängen som startar vid detta värde.",
+	"apihelp-mobileview-param-maxlen": "Låtsas att alla textresultat är en sträng, och begränsa resultatet till denna längd.",
+	"apihelp-mobileview-param-thumbsize": "Maximala dimensioner för miniatyr.",
+	"apihelp-mobileview-param-thumbwidth": "Maximal miniatyrbredd.",
+	"apihelp-mobileview-param-thumbheight": "Maximal miniatyrhöjd.",
+	"apihelp-mobileview-param-revision": "Begär en specifik sidversion.",
+	"apihelp-mobileview-example-1": "Hämta information om avsnitt 0 i [[Doom metal]]",
+	"apihelp-mobileview-example-2": "Hämta information om avsnitt 0 och stycken innehållande referenser i [[Candlemass]]",
+	"apihelp-mobileview-example-3": "Hämta information om avsnitt 1 och senare samt avsnitt innehållande referenser i [[Candlemass]]",
+	"apihelp-parse-param-mobileformat": "Returnera tolk-utdata i ett format som passar mobila enheter.",
+	"apihelp-parse-param-noimages": "Inaktivera bilder i mobil utdata.",
+	"apihelp-parse-param-mainpage": "Applicera mobila transformationer av huvudsidan.",
+	"apihelp-webapp-manifest-description": "Returnerar ett webbappsmanifest.",
+	"apihelp-webapp-manifest-summary": "Returnerar ett webbappsmanifest.",
+	"apierror-mobilefrontend-badidtitle": "Dålig kombination av sidversions-ID/titel.",
+	"apierror-mobilefrontend-toomanysizeparams": "<var>thumbsize</var> är ömsesidigt uteslutande med <var>thumbwidth</var> och <var>thumbheight</var>.",
+	"apiwarn-mobilefrontend-ignoringnoheadings": "<var>noheadings</var> är meningslös på huvudsidan, ignoreras.",
+	"apiwarn-mobilefrontend-sectionsnotfound": "{{PLURAL:$2|Avsnittet|Avsnitten}} $1 hittades inte."
+}

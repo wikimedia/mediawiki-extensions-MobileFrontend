@@ -1,0 +1,40 @@
+{
+	"@metadata": {
+		"authors": [
+			"Danmichaelo",
+			"Jon Harald Søby"
+		]
+	},
+	"apihelp-mobileview-description": "Returnerer data som trengs for mobilvisning.",
+	"apihelp-mobileview-summary": "Returnerer data som trengs for mobilvisning.",
+	"apihelp-mobileview-param-page": "Tittelen på siden som skal bearbeides.",
+	"apihelp-mobileview-param-redirect": "Hvorvidt omdirigeringer skal følges.",
+	"apihelp-mobileview-param-sections": "Strek-separert liste over seksjonsnumre som skal returnere tekst. «all» kan brukes for å returnere alle. Intervaller på formatet «1-4» returnerer seksjon 1, 2, 3 og 4. Intervaller uten et siste nummer, f.eks. «1-» betyr å hente alt fra det første tallet til slutten. «references» kan brukes for å spesifisere at alle seksjoner som inneholder referanser skal returneres.",
+	"apihelp-mobileview-param-prop": "Hvilken informasjon skal hentes:\n;text:HTML for valgte seksjoner\n;sections:Informasjon om alle seksjonene på siden.\n;normalizedtitle:Normalisert sidetittel.\n;lastmodified:ISO 8601-tidsstempel for når siden sist ble endret, f.eks. «2014-04-13T22:42:14Z».\n;lastmodifiedby:Informasjon om brukeren som gjorde siste endring på siden.\n;revision:Returnerer den nåværende revisjons-ID-en til siden.\n;protection:Informasjon om beskyttelsesnivået.\n;editable:Hvorvidt den nåværende brukeren kan redigere siden. Dette inkluderer alle faktorer for innloggede brukere, men ikke blokkeringsstatus for ikke-innloggede brukere.\n;languagecount:Antall språk siden er tilgjengelig på.\n;hasvariants:Hvorvidt siden er tilgjengelig på andre språkvarianter.\n;displaytitle:Sidetittelen som vises etter at &#123;&#123;DISPLAYTITLE:&#125;&#125; har trådt i kraft.\n;pageprops:Sideegenskaper.",
+	"apihelp-mobileview-param-prop-withimages": "Hvilken informasjon skal hentes:\n;text:HTML for valgte seksjoner\n;sections:Informasjon om alle seksjonene på siden.\n;normalizedtitle:Normalisert sidetittel.\n;lastmodified:ISO 8601-tidsstempel for når siden sist ble endret, f.eks. «2014-04-13T22:42:14Z».\n;lastmodifiedby:Informasjon om brukeren som gjorde siste endring på siden.\n;revision:Returnerer den nåværende revisjons-ID-en til siden.\n;protection:Informasjon om beskyttelsesnivået.\n;editable:Hvorvidt den nåværende brukeren kan redigere siden. Dette inkluderer alle faktorer for innloggede brukere, men ikke blokkeringsstatus for ikke-innloggede brukere.\n;languagecount:Antall språk siden er tilgjengelig på.\n;hasvariants:Hvorvidt siden er tilgjengelig på andre språkvarianter.\n;displaytitle:Sidetittelen som vises etter at &#123;&#123;DISPLAYTITLE:&#125;&#125; har trådt i kraft.\n;pageprops:Sideegenskaper.\n;image:Informasjon om et bilde som assosieres med denne siden.\n;thumb:Miniatyrversjonen av bildet som er assosiert med denne siden.",
+	"apihelp-mobileview-param-sectionprop": "Hvilken informasjon om seksjoner som skal hentes.",
+	"apihelp-mobileview-param-pageprops": "Hvilke sideegenskaper skal returneres, en vertikalstrekseparert liste («|») eller «*» for alle egenskaper.",
+	"apihelp-mobileview-param-variant": "Konverter innholdet til denne språkvarianten.",
+	"apihelp-mobileview-param-noimages": "Returner HTML uten bilder.",
+	"apihelp-mobileview-param-noheadings": "Ikke inkluder topptekster i resultatet.",
+	"apihelp-mobileview-param-notransform": "Ikke transformer HTML til mobilspesifikk versjon.",
+	"apihelp-mobileview-param-onlyrequestedsections": "Returner kun etterspurte seksjoner, også med $1prop=sections.",
+	"apihelp-mobileview-param-offset": "Lat som hele tekstresultatet er én streng, og returner understrengen som starter ved dette punktet.",
+	"apihelp-mobileview-param-maxlen": "Lat som hele tekstresultatet er én streng, og begrens resultatet til denne lengden.",
+	"apihelp-mobileview-param-thumbsize": "Maksimale dimensjoner for miniatyrbilde.",
+	"apihelp-mobileview-param-thumbwidth": "Maksimal miniatyrbredde.",
+	"apihelp-mobileview-param-thumbheight": "Maksimal miniatyrhøyde.",
+	"apihelp-mobileview-param-revision": "Be om en bestemt revisjon.",
+	"apihelp-mobileview-example-1": "Få informasjon om seksjon 0 av [[Doom metal]]",
+	"apihelp-mobileview-example-2": "Få informasjon om seksjon 0 og seksjoner som har referanser fra [[Candlemass]]",
+	"apihelp-mobileview-example-3": "Få informasjon om seksjon 1 og senere og seksjoner som har referanser fra [[Candlemass]]",
+	"apihelp-parse-param-mobileformat": "Returner parserresultat i et format som passer for mobile enheter.",
+	"apihelp-parse-param-noimages": "Slå av bilder i mobilresultater.",
+	"apihelp-parse-param-mainpage": "Bruk forsideomgjøring for mobil.",
+	"apihelp-webapp-manifest-description": "Returnerer et webapp-manifest.",
+	"apihelp-webapp-manifest-summary": "Returnerer et webapp-manifest.",
+	"apierror-mobilefrontend-badidtitle": "Ugyldig revisjons- og tittelkombinasjon",
+	"apierror-mobilefrontend-toomanysizeparams": "<var>thumbsize</var> er gjensidig utelukkende med <var>thumbwidth</var> og <var>thumbheight</var>.",
+	"apiwarn-mobilefrontend-ignoringnoheadings": "<var>noheadings</var> gir ingen mening på hovedsiden, ignorerer.",
+	"apiwarn-mobilefrontend-sectionsnotfound": "{{PLURAL:$2|Seksjonen|Seksjonene}} $1 ble ikke funnet."
+}

@@ -1,0 +1,41 @@
+{
+	"@metadata": {
+		"authors": [
+			"D41D8CD98F",
+			"Hudafu",
+			"Liuxinyu970226"
+		]
+	},
+	"apihelp-mobileview-description": "返回移动浏览需要的数据。",
+	"apihelp-mobileview-summary": "返回移动浏览需要的数据。",
+	"apihelp-mobileview-param-page": "待处理的页面标题。",
+	"apihelp-mobileview-param-redirect": "是否允许重定向。",
+	"apihelp-mobileview-param-sections": "用于返回文本的逗号分隔的段数列表。“all”可用于返回所有的。格式范围“1-4”是指获取1、2、3、4段。没有指定第二个数字的范围，例如“1-”意思是获取所有直到末尾。“references”可被用于指定所有包含参考资料的段落应该被返回。",
+	"apihelp-mobileview-param-prop": "要获得的信息：\n;text:选定段落的HTML。\n;sections:有关页面上所有段落的信息。\n;normalizedtitle:标准化的页面标题。\n;lastmodified:页面最近修改时的 ISO 8601 时间戳，例如“2014-04-13T22:42:14Z”。\n;lastmodifiedby:有关最近修改页面的用户的信息。\n;revision:返回页面的当前修订版本ID。\n;protection:有关保护级别的信息。\n;editable:当前用户是否可以编辑此页面。这考虑所有用于登录用户的因素，但不考虑匿名用户的封禁状态。\n;languagecount:此页面可用的语言数。\n;hasvariants:此页面在其他语言变体中是否可用。\n;displaytitle:页面的渲染标题，&#123;&#123;DISPLAYTITLE&#125;&#125;等代码生效。\n;pageprops:页面属性。",
+	"apihelp-mobileview-param-prop-withimages": "要获取的信息：\n;text:选定段落的HTML。\n;sections:有关页面上所有段落的信息。\n;normalizedtitle:标准化的页面标题。\n;lastmodified:页面最近修改时的 ISO 8601 时间戳，例如“2014-04-13T22:42:14Z”。\n;lastmodifiedby:有关最近修改页面的用户的信息。\n;revision:返回页面的当前修订版本ID。\n;protection:有关保护级别的信息。\n;editable:当前用户是否可以编辑此页面。这包括所有用于登录用户但不会封禁匿名用户的因素。\n;languagecount:此页面可用的语言数。\n;hasvariants:此页面在其他语言变体中是否可用。\n;displaytitle:页面的渲染标题，带&#123;&#123;DISPLAYTITLE&#125;&#125;和这样的代码。\n;pageprops:页面属性。\n;image:有关与此页面相关的图片的信息。\n;thumb:与此页面相关的图片的缩略图。",
+	"apihelp-mobileview-param-sectionprop": "要获取的有关操作的信息。",
+	"apihelp-mobileview-param-pageprops": "返回的页面属性，竖线（“|”）分隔列表或“*”对于所有属性。",
+	"apihelp-mobileview-param-variant": "转换内容至这种语言变体。",
+	"apihelp-mobileview-param-noimages": "返回不带图片的HTML。",
+	"apihelp-mobileview-param-noheadings": "输出时不包含标题。",
+	"apihelp-mobileview-param-notransform": "不要改变HTML至移动适配版。",
+	"apihelp-mobileview-param-onlyrequestedsections": "只返回请求的与$1prop=sections一样的段落。",
+	"apihelp-mobileview-param-offset": "假装所有文本结果是一个字符串，并返回此点位开始的子字符串。",
+	"apihelp-mobileview-param-maxlen": "假装所有文本结果是一个字符串，并限制结果至此长度。",
+	"apihelp-mobileview-param-thumbsize": "最大缩略图尺寸。",
+	"apihelp-mobileview-param-thumbwidth": "最大缩略图宽度。",
+	"apihelp-mobileview-param-thumbheight": "最大缩略图高度。",
+	"apihelp-mobileview-param-revision": "请求一个特定修订版本。",
+	"apihelp-mobileview-example-1": "获取有关[[Doom metal]]的第0章节的信息",
+	"apihelp-mobileview-example-2": "获取有关第0节和包含[[Candlemass]]的参考资料的段落的信息",
+	"apihelp-mobileview-example-3": "获得有关第1节及以后，和包含[[Candlemass]]的参考资料的段落的信息",
+	"apihelp-parse-param-mobileformat": "以适配移动设备的格式返回解析输出。",
+	"apihelp-parse-param-noimages": "在移动输出中禁用图片。",
+	"apihelp-parse-param-mainpage": "应用移动首页转换。",
+	"apihelp-webapp-manifest-description": "返回webapp证明。",
+	"apihelp-webapp-manifest-summary": "返回webapp证明。",
+	"apierror-mobilefrontend-badidtitle": "错误的修订id/标题组合。",
+	"apierror-mobilefrontend-toomanysizeparams": "<var>thumbsize</var>与<var>thumbwidth</var>和<var>thumbheight</var>互斥。",
+	"apiwarn-mobilefrontend-ignoringnoheadings": "<var>noheadings</var>在首页上没有意义，予以忽略。",
+	"apiwarn-mobilefrontend-sectionsnotfound": "找不到{{PLURAL:$2|章节}}$1。"
+}

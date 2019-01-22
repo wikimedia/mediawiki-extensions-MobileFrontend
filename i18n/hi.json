@@ -20,7 +20,8 @@
 			"Anamdas",
 			"Jayprakash12345",
 			"Innocentbunny",
-			"Nitin1485"
+			"Nitin1485",
+			"Prong$31"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "कन्फर्मेशन कोड दर्ज करें",
@@ -182,9 +183,9 @@
 	"nearby": "आप के पास के पृष्ठ",
 	"tag-mobile_edit": "मोबाइल संपादन",
 	"tag-mobile_edit-description": "मोबाइल से किया गया संपादन",
+	"tag-advanced_mobile_edit": "उन्नत मोबाइल सम्पादन",
 	"tag-mobile_web_edit": "मोबाइल वेब सम्पादन",
 	"tag-mobile_web_edit-description": "यह सम्पादन मोबाइल जालस्थल से किया गया",
-	"apihelp-mobileview-param-page": "आगे बढ़ने के लिए इस लेख का नाम दें।",
 	"mobile-frontend-loading-message": "लोड हो रहा है ...",
 	"mobile-frontend-panel-ok": "ठीक",
 	"mobile-frontend-panel-cancel": "नहीं धन्यवाद",
@@ -196,6 +197,7 @@
 	"mobile-frontend-mobile-option-MFLazyLoadImages-description": "छवियाँ केवल तब लोड करें जब आवश्यक हो।",
 	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption": "सभी वर्गों को डिफ़ॉल्ट रूप से विस्तृत करें",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "फ़ॉन्ट का आकार",
+	"mobile-frontend-mobile-option-amc": "उन्नत मोबाइल सम्पादन",
 	"mobile-frontend-beta-only": "यह फ़ीचर केवल बीटा मोड में उपलब्ध है",
 	"mobile-frontend-console-recruit": "\\o/ हमें आपकी मदद चाहिए! यह एक मुक्त स्रोत सॉफ़्टवेयर है और हमें इसे बनाने के लिए स्वयंसेवक चाहिए। इसे बेहतर बनाइये और इसके जावास्क्रिप्ट कंसोल में आपको जो भी बग्स मिलें उन्हें ठीक कर दीजिए!\n\nआपको हमारा बैकलॉग यहाँ मिल जाएगा: https://phabricator.wikimedia.org/project/profile/67/"
 }

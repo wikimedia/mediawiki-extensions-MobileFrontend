@@ -1,0 +1,43 @@
+{
+	"@metadata": {
+		"authors": [
+			"Abanima",
+			"Maroen1990",
+			"Meno25",
+			"Mido",
+			"علاء"
+		]
+	},
+	"apihelp-mobileview-description": "يعطي البيانات الضرورية لعرض نسخة المحمول.",
+	"apihelp-mobileview-summary": "يرجع البيانات المطلوبة لمشاهدات المحمول.",
+	"apihelp-mobileview-param-page": "عنوان الصفحة المطلوب معالجتها.",
+	"apihelp-mobileview-param-redirect": "ما إذا كان من المطلوب تتبع التحويلات.",
+	"apihelp-mobileview-param-sections": "قائمة مفصولة بالPipe بعناوين الأقسام لإرجاع النص لها. \"all\" يمكن استخدامها لإرجاع الكل. النطاقات بالصيغة \"1-4\" تعني الحصول على الأقسام 1,2,3,4. النطاقات بدون رقم ثاني، مثلا \"1-\" تعني الحصول على الكل حتى النهاية. \"references\" يمكن استخدامها لتحديد أن كل الأقسام المحتوية على مراجع ينبغي أن يتم إرجاعها.",
+	"apihelp-mobileview-param-prop": "أي المعلومات للحصول عليها:\n;text:HTML للأقسام المختارة.\n;sections:المعلومات حول كل الأقسام في الصفحة.\n;normalizedtitle:عنوان الصفحة بعد التسوية.\n;lastmodified:الطابع الزمني بصيغة ISO 8601 لآخر مرة تم تعديل الصفحة فيها، مثلا \"2014-04-13T22:42:14Z\".\n;lastmodifiedby:معلومات حول المستخدم الذي عدل الصفحة آخر مرة.\n;revision:يرجع رقم المراجعة الحالي للصفحة.\n;protection:معلومات حول مستوى الحماية.\n;editable:ما إذا كان يمكن للمستخدم الحالي تعديل هذه الصفحة. هذا يشمل كل العوامل للمستخدمين المسجلين الدخول لكن ليس حالة المنع للمجهولين.\n;languagecount:عدد اللغات التي الصفحة متوفرة فيها.\n;hasvariants:ما إذا كانت الصفحة متوفرة بتنويعات لغة أخرى أم لا.\n;displaytitle:عنوان الصفحة بعد المعالجة، مع تطبيق &#123;&#123;DISPLAYTITLE&#125;&#125; ومثلها.\n;pageprops:خصائص الصفحة.",
+	"apihelp-mobileview-param-prop-withimages": "أي المعلومات للحصول عليها:\n;text:HTML للأقسام المختارة.\n;sections:معلومات حول كل الأقسام على الصفحة.\n;normalizedtitle:عنوان الصفحة بعد التسوية.\n;lastmodified:الطابع الزمني بصيغة ISO 8601 لمتى تم تعديل الصفحة لآخر مرة، مثلا \"2014-04-13T22:42:14Z\".\n;lastmodifiedby:معلومات حول المستخدم الذي عدل الصفحة لآخر مرة.\n;revision:يرجع رقم المراجعة الحالية للصفحة.\n;protection:معلومات حول مستوى الحماية.\n;editable:ما إذا كان يمكن للمستخدم الحالي تعديل هذه الصفحة. هذا يشمل كل العوامل للمستخدمين المسجلين الدخول لكن ليس حالة المنع للمجهولين.\n;languagecount:عدد اللغات التي الصفحة متوفرة فيها.\n;hasvariants:ما إذا الصفحة متوفرة بتنويعات لغة أخرى أم لا.\n;displaytitle:عنوان الصفحة بعد المعالجة، مع تطبيق &#123;&#123;DISPLAYTITLE&#125;&#125; ومثلها.\n;pageprops:خصائص الصفحة.\n;image:معلومات حول صورة مرتبطة بهذه الصفحة.\n;thumb:صورة مصغرة لصورة مرتبطة بهذه الصفحة.",
+	"apihelp-mobileview-param-sectionprop": "المعلومات الواجب استخلاصها عن المقاطع.",
+	"apihelp-mobileview-param-pageprops": "الخصائص الواجب سردها في النتائج: قائمة مفصولة بخطوط عمودية («|») أو «*» لإعطاء جميع الخصائص.",
+	"apihelp-mobileview-param-variant": "تحويل المحتوى إلى هذه اللهجة.",
+	"apihelp-mobileview-param-noimages": "إعطاء HTML بلا صور.",
+	"apihelp-mobileview-param-noheadings": "عدم تضمين العناوين في الخرج.",
+	"apihelp-mobileview-param-notransform": "عدم تحويل HTML إلى النسخة الخاصة بالجوال.",
+	"apihelp-mobileview-param-onlyrequestedsections": "أرجع فقط الأقسام المطلوبة حتى مع $1prop=sections.",
+	"apihelp-mobileview-param-offset": "تظاهر أن كلا النتيجة النصية هي سلسلة حروف واحدة، وأرجع سلسلة الحروف الفرعية بدءا من هذه النقطة.",
+	"apihelp-mobileview-param-maxlen": "تظاهر أن كل النتيجة النصية هي سلسلة حروف واحدة، وحدد النتيجة لهذا الطول.",
+	"apihelp-mobileview-param-thumbsize": "القيمة القصوى لبعدي الصورة المصغرة.",
+	"apihelp-mobileview-param-thumbwidth": "أقصى عرض الصورة المصغرة.",
+	"apihelp-mobileview-param-thumbheight": "ارتفاع الصورة المصغرة أقصى.",
+	"apihelp-mobileview-param-revision": "اطلب مراجعة محددة.",
+	"apihelp-mobileview-example-1": "الحصول على المعلومات حول القسم 0 من [[Doom metal]]",
+	"apihelp-mobileview-example-2": "الحصول على المعلومات حول القسم 0 والأقسام التي تحتوي على المراجع ل[[Candlemass]]",
+	"apihelp-mobileview-example-3": "الحصول على المعلومات حول الأقسام 1 وما بعدها والأقسام التي تحتوي على مراجع ل[[Candlemass]]",
+	"apihelp-parse-param-mobileformat": "أرجع خرج محلل بصيغة مناسبة للأجهزة المحمولة.",
+	"apihelp-parse-param-noimages": "تعطيل الصور في خرج المحمول.",
+	"apihelp-parse-param-mainpage": "تطبيق تحويلات المحمول الخاصة بالصفحة الرئيسية",
+	"apihelp-webapp-manifest-description": "يرجع webapp manifest.",
+	"apihelp-webapp-manifest-summary": "يرجع webapp manifest.",
+	"apierror-mobilefrontend-badidtitle": "توافق رقم/عنوان مراجعة سيء.",
+	"apierror-mobilefrontend-toomanysizeparams": "<var>thumbsize</var> يتنافى مع <var>thumbwidth</var> و <var>thumbheight</var>.",
+	"apiwarn-mobilefrontend-ignoringnoheadings": "<var>noheadings</var> ليس لها معنى على الصفحة الرئيسية، جارٍ تجاهلها.",
+	"apiwarn-mobilefrontend-sectionsnotfound": "{{PLURAL:$2|قسم|أقسام}} $1 لم يتم العثور عليها."
+}

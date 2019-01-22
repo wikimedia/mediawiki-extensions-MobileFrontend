@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ykhwong",
+			"아라"
+		]
+	},
+	"apihelp-mobileview-description": "모바일 보기에 필요한 데이터를 반환합니다.",
+	"apihelp-mobileview-summary": "모바일 보기에 필요한 데이터를 반환합니다.",
+	"apihelp-mobileview-param-page": "진행할 문서의 제목.",
+	"apihelp-mobileview-param-redirect": "넘겨주기가 있는지에 따라 따라야합니다.",
+	"apihelp-mobileview-param-noimages": "그림 없이 HTML을 반환합니다.",
+	"apihelp-mobileview-param-noheadings": "출력에 표제를 포함하지 않습니다.",
+	"apihelp-mobileview-param-thumbsize": "최대 섬네일 치수.",
+	"apihelp-mobileview-param-thumbwidth": "최대 섬네일 너비.",
+	"apihelp-mobileview-param-thumbheight": "최대 섬네일 높이.",
+	"apihelp-mobileview-param-revision": "특정 판을 요청합니다.",
+	"apihelp-mobileview-example-1": "[[Doom metal]]의 문단 0에 관한 정보를 가져옵니다",
+	"apihelp-mobileview-example-2": "[[Candlemass]]의 참조를 포함하는 문단 0 및 문단들에 관한 정보를 가져옵니다",
+	"apihelp-mobileview-example-3": "[[Candlemass]]의 참조를 포함하는 문단 1 및 그 이후 문단들에 관한 정보를 가져옵니다",
+	"apihelp-parse-param-mobileformat": "모바일 장치에 적합한 형태의 구문 분석 출력을 반환합니다.",
+	"apihelp-parse-param-noimages": "모바일 출력에 그림을 보여주지 않습니다.",
+	"apihelp-parse-param-mainpage": "모바일 대문 변환을 적용합니다.",
+	"apihelp-webapp-manifest-description": "웹앱 매니페스트를 반환합니다.",
+	"apihelp-webapp-manifest-summary": "웹앱 매니페스트를 반환합니다.",
+	"apierror-mobilefrontend-badidtitle": "잘못된 판 id/제목 결합입니다.",
+	"apiwarn-mobilefrontend-sectionsnotfound": "$1 {{PLURAL:$2|문단}}을 찾을 수 없습니다."
+}

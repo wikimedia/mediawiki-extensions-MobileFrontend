@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Pyscowicz"
+		]
+	},
+	"apihelp-mobileview-param-noimages": "Palautta HTML ilman kuvia.",
+	"apihelp-mobileview-param-thumbwidth": "Suurin esikatselukuvan leveys.",
+	"apihelp-mobileview-param-thumbheight": "Suurin esikatselukuvan korkeus."
+}

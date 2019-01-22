@@ -1,0 +1,39 @@
+{
+	"@metadata": {
+		"authors": [
+			"Xuacu"
+		]
+	},
+	"apihelp-mobileview-description": "Devuelve los datos que necesiten les vistes con móviles.",
+	"apihelp-mobileview-summary": "Devuelve los datos que necesiten les vistes con móviles.",
+	"apihelp-mobileview-param-page": "Títulu de la páxina a procesar.",
+	"apihelp-mobileview-param-redirect": "Si tienen de siguise les redireiciones.",
+	"apihelp-mobileview-param-sections": "Llista separada por barres verticales (|) de númberos de seición de los que devolver testu. Puede usase \"all\" pa devolvelos toos. Los rangos en formatu \"1-4\" signifiquen devolver les secciones 1, 2, 3, 4. Los rangos sin el segundu númberu, p. ex. \"1-\" indiquen devolver d'esi puntu al final. \"references\" (referencies) puede usase pa indicar que se devuelvan toles secciones que contengan referencies.",
+	"apihelp-mobileview-param-prop": "Qué información algamar:\n;text:HTML de les seiciones esbillaes.\n;sections:Información sobro toles seiciones de la páxina.\n;normalizedtitle:Títulu normalizáu de la páxina.\n;lastmodified:Marca de tiempu ISO 8601 de cuando la páxina cambió por última vez, p. ex. \"2014-04-13T22:42:14Z\".\n;lastmodifiedby:Información sobro l'usuariu que cambió por última vez la páxina.\n;revision:Devuelve l'identificador de la revisión actual de la páxina.\n;protection:Información sobro'l nivel de protección.\n;editable:Indica si l'usuariu actual puede editar esta páxina. Esto incluye tolos factores pa los usuarios con sesión aniciada pero non l'estáu de bloquéu de los anónimos.\n;languagecount:Númberu de llingües nes que ta disponible la páxina.\n;hasvariants:Si la páxina ta disponible n'otres variantes de la llingua.\n;displaytitle:El títulu renderizáu de la páxina, aplicando &#123;&#123;DISPLAYTITLE&#125;&#125; y asemeyaos.\n;pageprops:Propiedaes de la páxina.",
+	"apihelp-mobileview-param-prop-withimages": "Qué información algamar:\n;text:HTML de les seiciones esbillaes.\n;sections:Información sobro toles seiciones de la páxina.\n;normalizedtitle:Títulu normalizáu de la páxina.\n;lastmodified:Marca de tiempu ISO 8601 de cuando la páxina cambió por última vez, p. ex. \"2014-04-13T22:42:14Z\".\n;lastmodifiedby:Información sobro l'usuariu que cambió por última vez la páxina.\n;revision:Devuelve l'identificador de la revisión actual de la páxina.\n;protection:Información sobro'l nivel de protección.\n;editable:Indica si l'usuariu actual puede editar esta páxina. Esto incluye tolos factores pa los usuarios con sesión aniciada pero non l'estáu de bloquéu de los anónimos.\n;languagecount:Númberu de llingües nes que ta disponible la páxina.\n;hasvariants:Si la páxina ta disponible n'otres variantes de la llingua.\n;displaytitle:El títulu renderizáu de la páxina, aplicando &#123;&#123;DISPLAYTITLE&#125;&#125; y asemeyaos.\n;pageprops:Propiedaes de la páxina.\n;image:Información sobro una imaxe asociada con esta páxina.\n;thumb:Miniatura d'una imaxe asociada con esta páxina.",
+	"apihelp-mobileview-param-sectionprop": "Qué información de les seiciones algamar.",
+	"apihelp-mobileview-param-pageprops": "Que propiedaes de páxina devolver, llista separada por barres verticales (\"|\") o \"*\" pa toles propiedaes.",
+	"apihelp-mobileview-param-variant": "Convertir el conteníu a esta variante de la llingua.",
+	"apihelp-mobileview-param-noimages": "Devolver HTML sin imaxes.",
+	"apihelp-mobileview-param-noheadings": "Nun incluir les testeres na salida.",
+	"apihelp-mobileview-param-notransform": "Nun tresformar el HTML a una versión específica pa móviles.",
+	"apihelp-mobileview-param-onlyrequestedsections": "Devolver solo les seiciones solicitaes inda con $1prop=sections.",
+	"apihelp-mobileview-param-offset": "Simular que'l testu completu del resultáu ye una cadena de caráuteres, y devolver la subcadena que principia nesti puntu.",
+	"apihelp-mobileview-param-maxlen": "Simular que'l testu completu del resultáu ye una cadena de caráuteres, y llendar el resultáu a esti llargor.",
+	"apihelp-mobileview-param-thumbsize": "Dimensiones máximes de les miniatures",
+	"apihelp-mobileview-param-thumbwidth": "Anchor máximu de miniatures.",
+	"apihelp-mobileview-param-thumbheight": "Altor máximu de miniatures.",
+	"apihelp-mobileview-param-revision": "Solicitar una revisión determinada.",
+	"apihelp-mobileview-example-1": "Algamar información sobro la seición 0 de [[Doom metal]]",
+	"apihelp-mobileview-example-2": "Algamar información sobro la seición 0 y les seiciones que contienen referencies de [[Candlemass]]",
+	"apihelp-mobileview-example-3": "Algamar información sobro la seición 1 y posteriores, y de les seiciones que contien referencies de [[Candlemass]]",
+	"apihelp-parse-param-mobileformat": "Devolver la salida del analís nun formatu afayadizu pa preseos móviles.",
+	"apihelp-parse-param-noimages": "Desactivar les imaxes na salida pa móvil",
+	"apihelp-parse-param-mainpage": "Aplicar les tresformaciones de la páxina principal pa móviles.",
+	"apihelp-webapp-manifest-description": "Devuelve un manifest de webapp.",
+	"apihelp-webapp-manifest-summary": "Devuelve un manifest de webapp.",
+	"apierror-mobilefrontend-badidtitle": "Mala combinación d'id de revisión/títulu.",
+	"apierror-mobilefrontend-toomanysizeparams": "<var>thumbsize</var> ye mutuamente esclusivu con <var>thumbwidth</var> y <var>thumbheight</var>.",
+	"apiwarn-mobilefrontend-ignoringnoheadings": "<var>noheadings</var> nun tien xaciu na páxina principal, inórase.",
+	"apiwarn-mobilefrontend-sectionsnotfound": "Nun s'{{PLURAL:$2|alcuentra la seición|alcuentren les seiciones}} $1."
+}

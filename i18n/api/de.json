@@ -1,0 +1,42 @@
+{
+	"@metadata": {
+		"authors": [
+			"Creepario",
+			"Florian",
+			"MGChecker",
+			"Metalhead64",
+			"Predatorix"
+		]
+	},
+	"apihelp-mobileview-description": "Gibt Daten zurück, die für mobile Ansichten benötigt werden.",
+	"apihelp-mobileview-summary": "Gibt nötige Daten für mobile Ansichten zurück.",
+	"apihelp-mobileview-param-page": "Titel der zu verarbeitenden Seite.",
+	"apihelp-mobileview-param-redirect": "Ob Weiterleitungen gefolgt werden soll.",
+	"apihelp-mobileview-param-sections": "Durch senkrechte Striche getrennte Liste von Abschnittsnummern, für die Text zurückgegeben werden soll. „Alle“ kann verwendet werden, um alle zurückzugeben. Bereiche, die im Format „1-4“ geschrieben werden, bedeuten Abschnitte 1,2,3,4. Bereiche ohne nachfolgende Zahl wie „1-“ bedeuten alle nachfolgenden Abschnitte. „Referenzen“ kann verwendet werden, um alle Abschnitte mit Referenzen zurückzugeben.",
+	"apihelp-mobileview-param-prop": "Welche Information man erhält:\n;text:HTML von ausgeählten Abschnitten.\n;sections:Informationen über alle Abschnitte auf der Seite.\n;normalizedtitle:Den normalisierten Seitennamen.\n;lastmodified:Einen ISO 8601-Zeitstempel von wann die Seite als letztes bearbeitet wurde, wie z.B \"2014-04-13T22:42:14Z\".\n;lastmodifiedby:Informationen über den Nutzer, der die Seite als letztes bearbeitet hat.\n;revision:Gibt die momentane Versionsnummer der Seite wieder.\n;protection:Informationen über die Seitensperre.\n;editable:Ob der aktuelle Nutzer diese Seite bearbeiten kann. Dies beinhaltet alle Faktoren für nicht eingeloggte Nutzer aber nicht den Blockiert-Status für Anonyme.\n;languagecount:Anzahl der Sprachen, in welche diese Seite verfügbar ist.\n;hasvariants:Ob diese Seite auch in anderen Sprach-Variation verfügbar ist.\n;displaytitle:Den gerenderten Titel der Seite, mit &#123;&#123;DISPLAYTITLE&#125;&#125; und weitere angewandt.\n;pageprops:Die Seiten-Eigenschaften.",
+	"apihelp-mobileview-param-sectionprop": "Welche Informationen über Abschnitte abgerufen werden sollen.",
+	"apihelp-mobileview-param-pageprops": "Seiteneigenschaften, die zurückgegeben werden sollen, als Liste mit senkrechten Strichen („|“) getrennt oder „*“ für alle Eigenschaften.",
+	"apihelp-mobileview-param-variant": "Konvertiert Inhalt in diese Sprachvariante.",
+	"apihelp-mobileview-param-noimages": "HTML ohne Bilder zurückgeben.",
+	"apihelp-mobileview-param-noheadings": "Schließt keine Überschriften in der Ausgabe ein.",
+	"apihelp-mobileview-param-notransform": "Wandelt HTML nicht in eine mobilspezifische Version um.",
+	"apihelp-mobileview-param-onlyrequestedsections": "Gebe nur angeforderte Abschnitte zurück, die mit $1prop=Abschnitte übereinstimmen.",
+	"apihelp-mobileview-param-offset": "Betrachte alle Textergebnisse zusammen als eine einzelne Zeichenkette und gebe die Teilkette ab diesem Punkt zurück.",
+	"apihelp-mobileview-param-maxlen": "Betrachte alle Textergebnisse zusammen als eine einzelne Zeichenkette und begrenzte das Ergebnis auf diese Länge.",
+	"apihelp-mobileview-param-thumbsize": "Maximale Abmessungen des Vorschaubildes.",
+	"apihelp-mobileview-param-thumbwidth": "Maximale Vorschaubild-Breite.",
+	"apihelp-mobileview-param-thumbheight": "Maximale Vorschaubild-Höhe.",
+	"apihelp-mobileview-param-revision": "Ruft eine spezielle Version ab.",
+	"apihelp-mobileview-example-1": "Ruft Informationen zum Abschnitt 0 von [[Doom metal]] ab",
+	"apihelp-mobileview-example-2": "Hole Informationen über Abschnitt 0 und zu Abschnitten, die Verweise auf [[Candlemass]] beinhalten",
+	"apihelp-mobileview-example-3": "Hole Informationen über Abschnitt 1 und folgende, sowie Abschnitte die Verweise auf [[Candlemass]] beinhalten",
+	"apihelp-parse-param-mobileformat": "Gebe die Verarbeitungsausgabe in einem für Mobilgeräte tauglichen Format aus.",
+	"apihelp-parse-param-noimages": "Bilder in der mobilen Ansicht deaktivieren.",
+	"apihelp-parse-param-mainpage": "Wendet mobile Umwandlungen der Hauptseite an.",
+	"apihelp-webapp-manifest-description": "Gibt ein Webapp-Manifest zurück.",
+	"apihelp-webapp-manifest-summary": "Gibt ein Webapp-Manifest zurück.",
+	"apierror-mobilefrontend-badidtitle": "Ungültige Versionskennung-/Titel-Kombination.",
+	"apierror-mobilefrontend-toomanysizeparams": "<var>thumbsize</var> schließt sich gegenseitig mit <var>thumbwidth</var> und <var>thumbheight</var> aus.",
+	"apiwarn-mobilefrontend-ignoringnoheadings": "<var>noheadings</var> macht auf der Hauptseite keinen Sinn. Wird ignoriert.",
+	"apiwarn-mobilefrontend-sectionsnotfound": "{{PLURAL:$2|Abschnitt|Abschnitte}} $1 nicht gefunden."
+}

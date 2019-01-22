@@ -1,0 +1,40 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80",
+			"YaronSh"
+		]
+	},
+	"apihelp-mobileview-description": "מחזיר נתונים שנחוצים לתצוגות ניידות.",
+	"apihelp-mobileview-summary": "החזרת נתונים שנחוצים לצפיות ניידות.",
+	"apihelp-mobileview-param-page": "כותרת הדף לעיבוד.",
+	"apihelp-mobileview-param-redirect": "האם לעקוב אחר הפניות.",
+	"apihelp-mobileview-param-sections": "רשימה מופרדת במקלות (\"|\") של מספרי פסקאות שעבורם צריך להחזיר טקסט. \"all\" ייתן את כולן. טווחים בצורת \"1-4\" ייתנו את פסקאות 1,2,3,4. טווחים בלי המספר השני, למשל \"1-\" ייתנו את כל הפסקאות עד הסוף. אפשר להשתמש בערך \"references\" כדי לציין שיש לקבל את כל הפסקאות שמכילות הערות שוליים.",
+	"apihelp-mobileview-param-prop": "איזה מידע לקבל:\n;text:HTML עבור הפסקאות שנבחרו.\n;sections:מידע על כל הפסקאות בדף.\n;normalizedtitle:כותרת דף מנורמלת.\n;lastmodified:חותם־זמן ISO 8601 של הזמן האחרון של שינוי הדף, למשל \"2014-04-13T22:42:14Z\".\n;lastmodifiedby:מידע על המשתמש האחרון ששינה את הדף.\n;revision:החזרת מזהה הגרסה הנוכחי של הדף.\n;protection:מידע על רמת ההגנה על הדף.\n;editable:האם המשתמש הנוכחי יכול לערוך את הדף. זה כולל את כל הגורמים למשתמשים שנכנסו לחשבון אבל לא מצב חסימה של משתמשים אלמוניים.\n;languagecount:בכמה שפות הדף זמין.\n;hasvariants:האם הדף זמין בהגווני שפה אחרים.\n;displaytitle:הכותרת המתוצגת של הדף עם החלת &#123;&#123;DISPLAYTITLE&#125;&#125; וכיו\"ב.\n;pageprops:מאפייני דף.",
+	"apihelp-mobileview-param-prop-withimages": "איזה מידע לקבל:\n;text:HTML עבור הפסקאות שנבחרו.\n;sections:מידע על כל הפסקאות בדף.\n;normalizedtitle:כותרת דף מנורמלת.\n;lastmodified:חותם־זמן ISO 8601 של הזמן האחרון של שינוי הדף, למשל \"2014-04-13T22:42:14Z\".\n;lastmodifiedby:מידע על המשתמש האחרון ששינה את הדף.\n;revision:החזרת מזהה הגרסה הנוכחי של הדף.\n;protection:מידע על רמת ההגנה על הדף.\n;editable:האם המשתמש הנוכחי יכול לערוך את הדף. זה כולל את כל הגורמים למשתמשים שנכנסו לחשבון אבל לא מצב חסימה של משתמשים אלמוניים.\n;languagecount:בכמה שפות הדף זמין.\n;hasvariants:האם הדף זמין בהגווני שפה אחרים.\n;displaytitle:הכותרת המתוצגת של הדף עם החלת &#123;&#123;DISPLAYTITLE&#125;&#125; וכיו\"ב.\n;pageprops:מאפייני דף.\n;image:מידע על תמונה שמשויכת לדף הזה.\n;thumb:גרסה ממוזערת של תמונה שמשויכת לדף הזה.",
+	"apihelp-mobileview-param-sectionprop": "איזה מידע לקבל על פסקאות.",
+	"apihelp-mobileview-param-pageprops": "אילו מאפייני דף לקבל, רשימה מופרדת במקל (\"|\") או \"*\" עבור כל המאפיינים.",
+	"apihelp-mobileview-param-variant": "להמיר תוכן להגוון השפה הזה.",
+	"apihelp-mobileview-param-noimages": "להחזיר HTML ללא תמונות.",
+	"apihelp-mobileview-param-noheadings": "לא לכלול כותרות בפלט.",
+	"apihelp-mobileview-param-notransform": "לא להמיר HTML לגרסה ייחודית לניידים.",
+	"apihelp-mobileview-param-onlyrequestedsections": "להחזיר רק את הפסקאות המבוקשות אפילו עם $1prop=sections.",
+	"apihelp-mobileview-param-offset": "להעמיד פנים שכל הטקסט הוא מחרוזת אחת, ולהחזיר את התת־מחרוזת שמתחילה בנקודה הזאת.",
+	"apihelp-mobileview-param-maxlen": "להעמיד פנים שכל הטקסט הוא מחרוזת אחת, ולהגביל את התוצאה לאורך הזה.",
+	"apihelp-mobileview-param-thumbsize": "ממדים מרביים לתמונה הממוזערת.",
+	"apihelp-mobileview-param-thumbwidth": "רוחב מרבי לתמונה הממוזערת.",
+	"apihelp-mobileview-param-thumbheight": "גובה מרבי לתמונה הממוזערת.",
+	"apihelp-mobileview-param-revision": "בקשת גרסה מסוימת.",
+	"apihelp-mobileview-example-1": "קבלת פרטים על מקטע 0 של [[Doom metal]]",
+	"apihelp-mobileview-example-2": "קבלת פרטים על מקטע 0 ומקטעים שכוללים הפניות של [[Candlemass]]",
+	"apihelp-mobileview-example-3": "קבלת פרטים על מקטעים 1 ואילך ומקטעים שכוללים הפניות של [[Candlemass]]",
+	"apihelp-parse-param-mobileformat": "החזרת פלט הפענוח בתסדיר שתואם להתקנים ניידים.",
+	"apihelp-parse-param-noimages": "נטרול תמונות בפלט לנייד.",
+	"apihelp-parse-param-mainpage": "החלת התאמות של העמוד הראשי לנייד.",
+	"apihelp-webapp-manifest-description": "מחזיר מצהר (manifest) של יישום רשת.",
+	"apihelp-webapp-manifest-summary": "החזרת המניפסט של יישום הרשת.",
+	"apierror-mobilefrontend-badidtitle": "שילוב גרוע של מזהה גרסה וכותרת.",
+	"apierror-mobilefrontend-toomanysizeparams": "פרמטר <var>thumbsize</var> מונע את האפשרות להשתמש בפרמטרים <var>thumbwidth</var> ו־<var>thumbheight</var>.",
+	"apiwarn-mobilefrontend-ignoringnoheadings": "בדף הראשי אין משמעות ל־<var>noheadings</var>, נתעלם ממנו.",
+	"apiwarn-mobilefrontend-sectionsnotfound": "{{PLURAL:$2|הפִסקה $1 לא נמצאה|הפִסקאות $1 לא נמצאו}}."
+}

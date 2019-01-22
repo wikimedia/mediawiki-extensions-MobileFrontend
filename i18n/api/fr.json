@@ -1,0 +1,43 @@
+{
+	"@metadata": {
+		"authors": [
+			"Element303",
+			"Gomoko",
+			"MPlauche",
+			"Orlodrim",
+			"Wladek92"
+		]
+	},
+	"apihelp-mobileview-description": "Retourne les données nécessaires pour les vues mobiles.",
+	"apihelp-mobileview-summary": "Renvoie les données nécessaires pour les affichages mobile.",
+	"apihelp-mobileview-param-page": "Titre de la page à traiter.",
+	"apihelp-mobileview-param-redirect": "Si les redirections doivent être suivies.",
+	"apihelp-mobileview-param-sections": "Une liste séparée de traits verticaux correspondant aux numéros de sections pour lesquelles retourner du texte. 'toutes' peut être utilisé pour un retour de toutes les sections. Les gammes dans le format '1-4' signifie 'obtenir les sections 1,2,3,4'. Les gammes manquant un deuxième chiffre, par exemple '1-', signifie 'obtenir toutes les sections jusqu'à la fin de la série'. 'références' peut être utilisé pour spécifier que toutes les sections contenant des références doivent être retournées.",
+	"apihelp-mobileview-param-prop": "Les informations à obtenir:\n;texte:HTML des articles sélectionnés.\n;sections:Informations sur toutes les sections de la page.\n;normalizedtitle:Titre normalisé de la page.\n;dernière modification:ISO 8601 date de la dernière modification, par exemple, '2014-04-13T22:42:14Z'.\n;lastmodifiedby:Informations sur l'utilisateur qui a modifié la page dernièrement.\n;révision:le Retour de l'identification de la révision actuelle de la page.\n;protection:Informations sur le niveau de protection.\n;modifiable:Si l'utilisateur actuel peut modifier cette page. Cela comprend tous les facteurs pour les utilisateurs enregistrés, mais pas le statut bloqué pour les utilisateurs anonymes.\n;languagecount:Nombre de langues dans laquelle la page est disponible.\n;hasvariants:Si la page est disponible dans d'autres variantes de la langue.\n;displaytitle:Le titre rendu de la page, avec {{DISPLAYTITLE}} et telles informations appliquées.\n;pageprops:propriétés de la Page.",
+	"apihelp-mobileview-param-prop-withimages": "Les informations à obtenir:\n;texte:HTML des articles sélectionnés.\n;sections:Informations sur toutes les sections de la page.\n;normalizedtitle:Titre normalisé de la page.\n;dernière modification:ISO 8601 date de la dernière modification, par exemple, '2014-04-13T22:42:14Z'.\n;lastmodifiedby:Informations sur l'utilisateur qui a modifié la page dernièrement.\n;révision:le Retour de l'identification de la révision actuelle de la page.\n;protection:Informations sur le niveau de protection.\n;modifiable:Si l'utilisateur actuel peut modifier cette page. Cela comprend tous les facteurs pour les utilisateurs enregistrés, mais pas le statut bloqué pour les utilisateurs anonymes.\n;languagecount:Nombre de langues dans laquelle la page est disponible.\n;hasvariants:Si la page est disponible dans d'autres variantes de la langue.\n;displaytitle:Le titre rendu de la page, avec {{DISPLAYTITLE}} et telles informations appliquées.\n;pageprops:propriétés de la Page.\n;image: Informations d'une image associée à cette page.\n;thumb; Vignette d'une image associée à cette page.",
+	"apihelp-mobileview-param-sectionprop": "Lesquelles des informations sur les sections obtenir.",
+	"apihelp-mobileview-param-pageprops": "Quelles propriétés de page retourner, une liste séparée de trait verticale ('|') ou bien '*' pour toutes les propriétés.",
+	"apihelp-mobileview-param-variant": "Convertir le contenu dans cette variante de la langue.",
+	"apihelp-mobileview-param-noimages": "Retourner HTML sans images.",
+	"apihelp-mobileview-param-noheadings": "Ne pas inclure les en-têtes dans la production.",
+	"apihelp-mobileview-param-notransform": "Ne pas transformer le HTML dans la version spécifique aux mobiles.",
+	"apihelp-mobileview-param-onlyrequestedsections": "Retourner uniquement les sections demandées, même celles contentant les $1prop=sections.",
+	"apihelp-mobileview-param-offset": "Traiter tout résultat textuel d'une seule chaîne de caractères, et retournez la sous-chaîne à partir de ce point.",
+	"apihelp-mobileview-param-maxlen": "Traiter tout résultat textuel d'une seule chaîne de caractères, et limitez le résultat à cette longueur.",
+	"apihelp-mobileview-param-thumbsize": "Les dimensions maximales des vignettes.",
+	"apihelp-mobileview-param-thumbwidth": "Largeur maximum de la vignette.",
+	"apihelp-mobileview-param-thumbheight": "Hauteur maximale de la vignette.",
+	"apihelp-mobileview-param-revision": "Demande une révision spécifique.",
+	"apihelp-mobileview-example-1": "Obtenir des informations au sujet de la section 0 de [[Doom metal]]",
+	"apihelp-mobileview-example-2": "Obtenir des informations au sujet de section 0 et des sections contenant des références de [[Candlemass]]",
+	"apihelp-mobileview-example-3": "Obtenir des informations au sujet de sections 1 de même qu'à celles qui suivent, et pour addition, les sections qui contiennent des références de [[Candlemass]]",
+	"apihelp-parse-param-mobileformat": "Retourner l'analyse de sortie dans un format adapté aux appareils mobiles.",
+	"apihelp-parse-param-noimages": "Désactiver les images en sortie mobile.",
+	"apihelp-parse-param-mainpage": "Appliquer les transformations pour appareil mobile spécifiques à la page d’accueil.",
+	"apihelp-webapp-manifest-description": "Retourne un manifeste webapp.",
+	"apihelp-webapp-manifest-summary": "Retourne un manifest webapp.",
+	"apierror-mobilefrontend-badidtitle": "Mauvaise combinaison de id de révision/titre",
+	"apierror-mobilefrontend-toomanysizeparams": "<var>thumbsize</var> est mutuellement exclusif de <var>thumbwidth</var> et <var>thumbheight</var>.",
+	"apiwarn-mobilefrontend-ignoringnoheadings": "<var>noheadings</var> n’a pas de sens sur la page principale, et est ignoré.",
+	"apiwarn-mobilefrontend-sectionsnotfound": "{{PLURAL:$2|Section $1 non trouvée|Sections $1 non trouvées}}."
+}

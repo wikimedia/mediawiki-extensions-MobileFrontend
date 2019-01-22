@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"YvesNevelsteen"
+		]
+	},
+	"apihelp-mobileview-param-thumbsize": "Maksimumaj dimensioj de miniaturoj.",
+	"apihelp-mobileview-param-thumbwidth": "Maksimuma larĝo de miniaturo.",
+	"apihelp-mobileview-param-thumbheight": "Maksimuma alto de miniaturo.",
+	"apihelp-mobileview-param-revision": "Peti specifan revizion.",
+	"apihelp-parse-param-noimages": "Malŝalti bildojn por porteblaj aparatoj.",
+	"apiwarn-mobilefrontend-sectionsnotfound": "{{PLURAL:$2|Sekcio|Sekcioj}} $1ne trovita."
+}

@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Iwan Novirion",
+			"Kenrick95"
+		]
+	},
+	"apihelp-mobileview-param-page": "Judul halaman untuk di proses.",
+	"apihelp-mobileview-param-redirect": "Kemanapun pengalihan harus diikuti.",
+	"apihelp-mobileview-param-noimages": "Balikkan HTML tanpa gambar.",
+	"apihelp-mobileview-param-thumbsize": "Dimensi maksimum miniatur.",
+	"apihelp-mobileview-param-thumbwidth": "Lebar maksimum miniatur.",
+	"apihelp-mobileview-param-thumbheight": "Tinggi maksimum miniatur.",
+	"apihelp-mobileview-param-revision": "Meminta revisi spesifik.",
+	"apihelp-parse-param-noimages": "Nonaktifkan gambar pada tampilan HP.",
+	"apihelp-parse-param-mainpage": "Terapkan tranformasi halaman utama seluler.",
+	"apihelp-webapp-manifest-description": "Balikkan manifes webapp."
+}

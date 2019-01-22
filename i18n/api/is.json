@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Maxí",
+			"Sveinn í Felli"
+		]
+	},
+	"apihelp-mobileview-description": "Skila gögnum sem þarf fyrir farsímaviðmótið.",
+	"apihelp-mobileview-summary": "Skila gögnum sem þarf fyrir farsímaviðmótið.",
+	"apihelp-mobileview-param-page": "Titill á síðunni sem á að vinna"
+}

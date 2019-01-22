@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"Arystanbek",
+			"Incelemeelemani",
+			"Vito Genovese"
+		]
+	},
+	"apihelp-mobileview-description": "Mobil görünümler için gerekli verileri döndürür.",
+	"apihelp-mobileview-param-page": "Sayfa başlığı işlemi.",
+	"apihelp-mobileview-param-redirect": "İster yönlendirmeler takip edilmelidir.",
+	"apihelp-mobileview-param-sections": "Boru ayrılmış metin dönmek için bölüm numaraları listesi. \"\" için geri dönmek için kullanılabilir. Biçiminde aralıkları \"\" anlamına bölümler 1,2,3,4. 1-4 İkinci Sayı \"1-\" sonuna kadar \"başvurular\" tüm bölümleri içeren başvurular iade edilmesi gerektiğini belirtmek için kullanılır.. aralıkları",
+	"apihelp-mobileview-param-prop": "Almak için:\n;metin:seçilmiş bölümler. HTML\n;bölümler:bu sayfada. tüm bölümleri hakkında Bilgi\n;normalizedtitle:sayfa Başlığı. Normalleştirilmiş\n;response-headers:ISO 8601 Sayfa en son ne zaman değişiklik için zaman damgası, örneğin \"2014-04-13T22:42:14Z\".\n;lastmodifiedby:kullanıcı hakkında Bilgi kim değiştirilmiş sayfa son.\n;revizyon:sayfa. mevcut revizyon KİMLİĞİ Geri ver\n;koruma:koruma düzeyi hakkında Bilgi.\n;geçerli kullanıcı bu sayfayı düzenlemek Olup olmadığını düzenlenebilir:. Bu oturum açmış kullanıcılar için anons bloke durum değil. tüm faktörleri içerir\n;languagecount:sayfa kullanılabilir diller. Sayı\n;ya da sayfanın başka dil çeşitleri mevcut olup olmadığını. hasvariants:\n;displaytitle:sayfa oluşturulabilir, başlık, {{DİSPLAYTİTLE}} ve böyle uygulanır.\n;pageprops:Sayfa özellikleri.",
+	"apihelp-mobileview-param-sectionprop": "Ne bölümler hakkında bilgi almak için.",
+	"apihelp-mobileview-param-pageprops": "Geri dönmek için sayfa özellikleri ne, bir boru ( \"\" ) | ayrılmış liste veya \"*\" tüm özellikler için.",
+	"apihelp-mobileview-param-variant": "Bu dil varyantı içerik dönüştürün.",
+	"apihelp-mobileview-param-noimages": "Görüntüler olmadan HTML döndürür.",
+	"apihelp-mobileview-param-noheadings": "Çıkış başlıklar dahil etmeyin.",
+	"apihelp-mobileview-param-notransform": "Mobil cihazlara özel sürümü içine HTML dönüştürmek yok.",
+	"apihelp-mobileview-param-onlyrequestedsections": "Dönüş yalnızca istenen bölümleri bile $1pervane=bölümlerde.",
+	"apihelp-mobileview-param-offset": "Tüm metin sonucu bir dize ve bu noktada alt dönüyor gibi.",
+	"apihelp-mobileview-param-maxlen": "Tüm metin sonucu bir dize ve bu uzunlukta sonucu sınırı gibi davran.",
+	"apihelp-mobileview-param-thumbsize": "Maksimum küçük resim boyutları.",
+	"apihelp-mobileview-param-thumbwidth": "Maksimum küçük resim genişliği.",
+	"apihelp-mobileview-param-thumbheight": "Maksimum küçük resim yüksekliği.",
+	"apihelp-mobileview-example-1": "Bölüm 0 hakkında bilgi almak [[Doom metal]]",
+	"apihelp-mobileview-example-2": "Bölüm 0 ve bölümleri içeren başvurular hakkında bilgi almak için [[Candlemass]]",
+	"apihelp-mobileview-example-3": "Ve sonraki bölümleri başvurular içeren bölüm 1 ile ilgili bilgi almak [[Candlemass]]",
+	"apihelp-parse-param-mobileformat": "Bir biçimde mobil cihazlar için uygun ayrıştırma çıkış dönüş.",
+	"apihelp-parse-param-noimages": "Mobil çıkışı devre dışı görüntüler.",
+	"apihelp-parse-param-mainpage": "Mobil anasayfa dönüştürmesi uygulanır."
+}

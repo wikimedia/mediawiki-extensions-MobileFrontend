@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"আফতাবুজ্জামান"
+		]
+	},
+	"apihelp-mobileview-description": "মোবাইলে দেখার জন্য প্রয়োজনীয় উপাত্ত দেয়।",
+	"apihelp-mobileview-summary": "মোবাইলে দেখার জন্য প্রয়োজনীয় উপাত্ত দেয়।",
+	"apihelp-mobileview-param-page": "প্রক্রিয়ার জন্য পাতার শিরোনাম।",
+	"apihelp-mobileview-param-noimages": "চিত্রছাড়া HTML ফেরত দেয়।",
+	"apihelp-mobileview-param-revision": "একটি নির্দিষ্ট সংশোধন অনুরোধ করে।",
+	"apihelp-parse-param-noimages": "মোবাইল আউটপুটে চিত্র নিষ্ক্রিয় করে।",
+	"apihelp-parse-param-mainpage": "মোবাইল প্রধান পাতা রূপান্তর প্রয়োগ করুন।",
+	"apiwarn-mobilefrontend-sectionsnotfound": "{{PLURAL:$2|অনুচ্ছেদ|অনুচ্ছেদগুলি}} $1 পাওয়া যায়নি।"
+}

@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Srdjan m"
+		]
+	},
+	"apihelp-mobileview-description": "Prikazuje podatke potrebe za mobilne preglede.",
+	"apihelp-mobileview-param-page": "Naziv stranice koju treba obraditi.",
+	"apihelp-mobileview-param-redirect": "Treba li slijediti preusmjerenja.",
+	"apihelp-mobileview-param-sectionprop": "Koje informacije o odlomcima treba preuzeti.",
+	"apihelp-mobileview-param-pageprops": "Koja svojstva strane treba dobiti, spisak odvojen uspravnom crtom (\"|\") za pojedina ili \"*\" za sva svojstva.",
+	"apihelp-mobileview-param-variant": "Pretvori sadržaj u ovu jezičnu varijantu.",
+	"apihelp-mobileview-param-noimages": "Prikaži HTML bez slika.",
+	"apihelp-mobileview-param-noheadings": "Ne prikazuj naslove na rezultatu.",
+	"apihelp-mobileview-param-notransform": "Ne pretvaraj HTML u mobilnu verziju."
+}

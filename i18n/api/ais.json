@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Benel",
+			"Bunukwiki"
+		]
+	},
+	"apihelp-mobileview-description": "tatiku ringwa’ rsrasun ciwsace maydihay a kalunasulitan.",
+	"apihelp-mobileview-param-page": "amisaungayay a satangahan nu kasabelih.",
+	"apihelp-mobileview-param-redirect": "kapah haw mahasa miliyaw patatuzu’.",
+	"apihelp-mobileview-param-variant": "lacul miliyaw tina kamu masazumaay.",
+	"apihelp-mobileview-param-noimages": "maminay tu caay yamalyilu zunga a HTML.",
+	"apihelp-mobileview-param-noheadings": "patahkal haw inayi’ yamalyilu satangahan.",
+	"apihelp-mobileview-param-notransform": "amana pasumad HTML tu zikecan-dinwa uzumaay baziyong.",
+	"apihelp-mobileview-param-thumbsize": "satabakiay sukep ditek nu zunga.",
+	"apihelp-mobileview-param-thumbwidth": "satabakiay sukep ahebal nu zunga.",
+	"apihelp-mobileview-param-thumbheight": "satabakiay sukep takalaw nu zunga.",
+	"apihelp-mobileview-example-1": "maala mahizaay [[Doom metal]] a saka 0 tusil a cesyun",
+	"apihelp-parse-param-mobileformat": "masitungusay a kese nu zazikecen-kikay patubeli mapulita-patahkalan.",
+	"apihelp-parse-param-noimages": "i ringwa’ rsrasun patahkal mapasatezep ku zunga.",
+	"apihelp-parse-param-mainpage": "micaedung ringwa’ rsrasun saayaway belih miliyaw."
+}

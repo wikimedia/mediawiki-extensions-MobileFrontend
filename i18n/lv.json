@@ -152,8 +152,6 @@
 	"tag-mobile_edit": "Labojums no mobilās versijas",
 	"tag-mobile_edit-description": "Labojums veikts no mobilās iekārtas (vietnes vai lietotnes)",
 	"tag-mobile_web_edit": "Labojums no mobilās ierīces",
-	"apihelp-mobileview-param-page": "Apstrādājamās lapas nosaukums.",
-	"apiwarn-mobilefrontend-sectionsnotfound": "{{PLURAL:$2|Sadaļas $1 nav atrastas|Sadaļa $1 nav atrasta|Sadaļas $1 nav atrastas}}.",
 	"mobile-frontend-loading-message": "Ielādē…",
 	"mobile-frontend-panel-ok": "Labi",
 	"mobile-frontend-panel-cancel": "Nē, paldies",

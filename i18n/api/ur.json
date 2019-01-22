@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Muhammad Shuaib",
+			"Saqib"
+		]
+	},
+	"apihelp-mobileview-description": "یہ صفحہ دستیاب نہیں ہے جب تک آپ ہمارے بیٹا موڈ میں نہیں آئیں گے. اپلوڈ کرنے کیلئے ترتیبات صفحہ ملاحظہ کریں.",
+	"apihelp-mobileview-param-page": "آگے بڑھنے کے لیے اس صفحے کا عنوان درج کریں۔",
+	"apihelp-mobileview-param-redirect": "اگر رجوع مکررات کی پیروی مطلوب ہو۔",
+	"apihelp-mobileview-param-sectionprop": "کونسی معلومات چاہیے ابھی",
+	"apihelp-mobileview-param-noheadings": "نتیجے میں سرخیاں شامل نہ کریں۔",
+	"apihelp-parse-param-noimages": "موبائل سائٹ پر تصویریں غیر فعال کریں۔",
+	"apiwarn-mobilefrontend-sectionsnotfound": "$1 {{PLURAL:$2|قطعہ نہیں ملا|قطعے نہیں ملے}}۔"
+}

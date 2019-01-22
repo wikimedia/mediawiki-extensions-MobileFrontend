@@ -203,6 +203,7 @@
 	"nearby": "Sider om emner i nærheden af dig",
 	"tag-mobile_edit": "Mobilredigering",
 	"tag-mobile_edit-description": "Redigering udført fra mobil (web eller app)",
+	"tag-advanced_mobile_edit": "Avanceret redigering fra mobil",
 	"tag-mobile_web_edit": "Mobilwebredigering",
 	"tag-mobile_web_edit-description": "Redigering fra det mobile website",
 	"mobile-frontend-loading-message": "Indlæser...",

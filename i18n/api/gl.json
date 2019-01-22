@@ -1,0 +1,41 @@
+{
+	"@metadata": {
+		"authors": [
+			"Banjo",
+			"Elisardojm",
+			"Fisterraeomar"
+		]
+	},
+	"apihelp-mobileview-description": "Devolve datos necesarios para as vistas nos móbiles.",
+	"apihelp-mobileview-summary": "Devolve datos necesarios para as vistas nos móbiles.",
+	"apihelp-mobileview-param-page": "Título da páxina a procesar.",
+	"apihelp-mobileview-param-redirect": "Se as redireccións deben ser seguidas.",
+	"apihelp-mobileview-param-sections": "Lista separada por barras verticais (|) de números de sección dos que devolver o texto. \"all\" (todos) pode usarse para devolvelos todos. Rangos en formato \"1-4\" indican que se devolva as seccións 1, 2, 3, 4. Rangos sen o segundo número, p. ex. \"1-\" indican que se devolva todo ata o final. \"references\" (referencias) pode usarse para indicar que todas as seccións que conteñan referencias teñen que devolverse.",
+	"apihelp-mobileview-param-prop": "Que información obter:\n;text:HTML das seccións seleccionadas.\n;sections:Información sobre todas as seccións na páxina.\n;normalizedtitle:Título normalizado da páxina.\n;lastmodified:Selo de tempo en formato ISO 8601 de cando a páxina foi modificada por última vez, p. ex. \"2014-04-13T22:42:14Z\".\n;revision:Devolve o identificador da revisión actual da páxina.\n;protection:Información sobre o nivel de protección.\n;editable:Indica se o usuario actual pode editar a páxina. Isto inclúe todos os factores para usuarios rexistrados pero non o estado bloqueado dos usuarios anónimos.\n;languagecount:Número de idiomas nos que está dispoñible a páxina.\n;hasvariants:Se a páxina está dispoñible noutras variantes de idioma ou non.\n;displaytitle:O título renderizado da páxina, con &#123;&#123;DISPLAYTITLE&#125;&#125; e a súa información aplicada.\n;pageprops:Propiedades da páxina.",
+	"apihelp-mobileview-param-prop-withimages": "Que información obter:\n;text:HTML das seccións seleccionadas.\n;sections:Información sobre todas as seccións na páxina.\n;normalizedtitle:Título normalizado da páxina.\n;lastmodified:Selo de tempo en formato ISO 8601 de cando a páxina foi modificada por última vez, p. ex. \"2014-04-13T22:42:14Z\".\n;revision:Devolve o identificador da revisión actual da páxina.\n;protection:Información sobre o nivel de protección.\n;editable:Indica se o usuario actual pode editar a páxina. Isto inclúe todos os factores para usuarios rexistrados pero non o estado bloqueado dos usuarios anónimos.\n;languagecount:Número de idiomas nos que está dispoñible a páxina.\n;hasvariants:Se a páxina está dispoñible noutras variantes de idioma ou non.\n;displaytitle:O título renderizado da páxina, con &#123;&#123;DISPLAYTITLE&#125;&#125; e a súa información aplicada.\n;pageprops:Propiedades da páxina.\n;image:Información sobre unha imaxe asociada con esta páxina.\n;thumb:Miniatura dunha imaxe asociada con esta páxina.",
+	"apihelp-mobileview-param-sectionprop": "Que información obter sobre as seccións.",
+	"apihelp-mobileview-param-pageprops": "Que propiedades de páxina devolver, unha lista separada por unha barra vertical (\"|\") ou \"*\" para todas as propiedades.",
+	"apihelp-mobileview-param-variant": "Converter o contido nesta variante do idioma.",
+	"apihelp-mobileview-param-noimages": "Retornar HTML sen imaxes",
+	"apihelp-mobileview-param-noheadings": "Non incluír cabeceiras na saída.",
+	"apihelp-mobileview-param-notransform": "Non transformar o HTML á versión específica móbil",
+	"apihelp-mobileview-param-onlyrequestedsections": "Só devolver as seccións solicitadas con $1prop=sections.",
+	"apihelp-mobileview-param-offset": "Simular que todo o texto resultado é unha cadea de caracteres, e devolver a subcadea que comeza neste punto.",
+	"apihelp-mobileview-param-maxlen": "Simular que todo o texto resultado é unha cadea de caracteres, e limitar o resultado a esta lonxitude.",
+	"apihelp-mobileview-param-thumbsize": "Dimensións máximas das miniaturas",
+	"apihelp-mobileview-param-thumbwidth": "Largura máxima da miniatura.",
+	"apihelp-mobileview-param-thumbheight": "Altura máxima da miniatura.",
+	"apihelp-mobileview-param-revision": "Solicitar unha revisión en particular.",
+	"apihelp-mobileview-example-1": "Obter información sobre a sección 0 de [[Doom metal]]",
+	"apihelp-mobileview-example-2": "Obter información sobre a sección 0 e as seccións contendo as referencias de [[Candlemass]]",
+	"apihelp-mobileview-example-3": "Obter información sobre as seccións 1 e posteriores, e das seccións que conteñen as referencias de [[Candlemass]]",
+	"apihelp-parse-param-mobileformat": "Devolver a análise de saída nun formato axeitado para dispositivos móbiles.",
+	"apihelp-parse-param-noimages": "Desactiva as imaxes na saída móbil.",
+	"apihelp-parse-param-mainpage": "Aplicar as transformacións móbiles á páxina principal.",
+	"apihelp-webapp-manifest-description": "Devolve un manifesto de aplicación web.",
+	"apihelp-webapp-manifest-summary": "Devolve un manifesto de aplicación web.",
+	"apierror-mobilefrontend-badidtitle": "Mala combinación de id de modificación/título.",
+	"apierror-mobilefrontend-toomanysizeparams": "<var>thumbsize</var> é mutuamente exclusivo con <var>thumbwidth</var> e <var>thumbheight</var>.",
+	"apiwarn-mobilefrontend-ignoringnoheadings": "<var>noheadings</var> non ten sentido na páxina principal, ignorado.",
+	"apiwarn-mobilefrontend-sectionsnotfound": "{{PLURAL:$2|Sección $1 non atopada|Seccións $1 non atopadas}}."
+}

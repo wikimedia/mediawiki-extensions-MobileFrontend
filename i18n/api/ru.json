@@ -1,0 +1,30 @@
+{
+	"@metadata": {
+		"authors": [
+			"Batumski brodyaga",
+			"Facenapalm",
+			"Kaganer",
+			"Kareyac",
+			"Nk88",
+			"Okras"
+		]
+	},
+	"apihelp-mobileview-description": "Возвращает данные, необходимые для мобильных представлений.",
+	"apihelp-mobileview-summary": "Возвращает данные, необходимые для мобильных представлений.",
+	"apihelp-mobileview-param-page": "Заголовок страницы для обработки.",
+	"apihelp-mobileview-param-sectionprop": "Какую информацию о разделах получать.",
+	"apihelp-mobileview-param-variant": "Преобразуйте контент в этот языковой вариант.",
+	"apihelp-mobileview-param-noimages": "Вернуть HTML без изображений.",
+	"apihelp-mobileview-param-thumbsize": "Максимальные размеры эскизов.",
+	"apihelp-mobileview-param-thumbwidth": "Максимальная ширина миниатюры",
+	"apihelp-mobileview-param-thumbheight": "Максимальная высота миниатюры",
+	"apihelp-mobileview-param-revision": "Запросить определенную версию.",
+	"apihelp-mobileview-example-1": "Получить информацию о раздел 0 статьи [[Doom metal]]",
+	"apihelp-parse-param-noimages": "Отключить изображения на мобильном сайте.",
+	"apihelp-parse-param-mainpage": "Применить мобильные изменения для главной страницы.",
+	"apihelp-webapp-manifest-description": "Возвращает манифест веб-приложения.",
+	"apihelp-webapp-manifest-summary": "Возвращает манифест веб-приложения.",
+	"apierror-mobilefrontend-toomanysizeparams": "<var>thumbsize</var> является взаимоисключающим с <var>thumbwidth</var> и <var>thumbheight</var>.",
+	"apiwarn-mobilefrontend-ignoringnoheadings": "<var>noheadings</var> не имеет смысла на Заглавной странице, игнорируется.",
+	"apiwarn-mobilefrontend-sectionsnotfound": "{{PLURAL:$2|раздел|разделы}} $1 не {{PLURAL:$2|найден|найдены}}."
+}

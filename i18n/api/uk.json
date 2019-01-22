@@ -1,0 +1,40 @@
+{
+	"@metadata": {
+		"authors": [
+			"Piramidion",
+			"Ата"
+		]
+	},
+	"apihelp-mobileview-description": "Виводить дані, необхідні для мобільного перегляду.",
+	"apihelp-mobileview-summary": "Виводить дані, необхідні для мобільних переглядів.",
+	"apihelp-mobileview-param-page": "Заголовок сторінки для обробки.",
+	"apihelp-mobileview-param-redirect": "Чи переходити за перенаправленнями.",
+	"apihelp-mobileview-param-sections": "Список номерів розділів, розділених вертикальною рискою, для яких виводити текст. «all» — для всіх. Інтервал у форматі «1-4» означає отримання розділів 1, 2, 3, 4. Інтервали без другого номера, напр. «1-», означають отримання до кінця. «references» — для виведення усіх розділів, де є примітки.",
+	"apihelp-mobileview-param-prop": "Яку інформацію отримувати:\n;text:HTML обраних розділів.\n;sections:Інформація про усі розділи сторінки.\n;normalizedtitle:Нормалізований заголовок сторінки.\n;lastmodified:Часова мітка у форматі ISO 8601 для останнього редагування сторінки, напр. «2014-04-13T22:42:14Z».\n;lastmodifiedby:Інформація про користувача, який останнім редагував сторінку.\n;revision:Виведення ID поточної версії сторінки.\n;protection:Інформація про рівень захисту.\n;editable:Чи може редагувати цю сторінку поточний користувач. Це включає усі фактори для залогінених користувачів, але не статус блокування анонімів.\n;languagecount:Кількість мов, якими доступна сторінка.\n;hasvariants:Чи сторінка доступна іншими мовами.\n;displaytitle:Виведена назва сторінки, з &#123;&#123;DISPLAYTITLE&#125;&#125; і так і застосовано.\n;pageprops:Властивості сторінки.",
+	"apihelp-mobileview-param-prop-withimages": "Яку інформацію отримувати:\n;text:HTML обраних розділів.\n;sections:Інформація про усі розділи сторінки.\n;normalizedtitle:Нормалізований заголовок сторінки.\n;lastmodified:Часова мітка у форматі ISO 8601 для останнього редагування сторінки, напр. «2014-04-13T22:42:14Z».\n;lastmodifiedby:Інформація про користувача, який останнім редагував сторінку.\n;revision:Виведення ID поточної версії сторінки.\n;protection:Інформація про рівень захисту.\n;editable:Чи може редагувати цю сторінку поточний користувач. Це включає усі фактори для залогінених користувачів, але не статус блокування анонімів.\n;languagecount:Кількість мов, якими доступна сторінка.\n;hasvariants:Чи сторінка доступна іншими мовами.\n;displaytitle:Виведена назва сторінки, з &#123;&#123;DISPLAYTITLE&#125;&#125; і так і застосовано.\n;pageprops:Властивості сторінки.\n;image:Інформація про зображення, асоційоване з цією сторінкою.\n;thumb:Мініатюра зображення, асоційованого з цією сторінкою.",
+	"apihelp-mobileview-param-sectionprop": "Яку інформацію про розділи отримувати.",
+	"apihelp-mobileview-param-pageprops": "Які властивості сторінки виводити, списком через пряму риску («|») чи «*» для усіх властивостей.",
+	"apihelp-mobileview-param-variant": "Конвертувати вміст у варіант цією мовою.",
+	"apihelp-mobileview-param-noimages": "Видати HTML без зображень.",
+	"apihelp-mobileview-param-noheadings": "Не включати заголовки у результат.",
+	"apihelp-mobileview-param-notransform": "Не перетворювати HTML на мобільно-орієнтовану версію.",
+	"apihelp-mobileview-param-onlyrequestedsections": "Видати лише запитані розділи, навіть при $1prop=sections.",
+	"apihelp-mobileview-param-offset": "Вдати, що весь текстовий результат є одним рядком, і видати підрядок, починаючи з цієї точки.",
+	"apihelp-mobileview-param-maxlen": "Вдати, що весь текстовий результат є одним рядком, і обмежити результат до цієї довжини.",
+	"apihelp-mobileview-param-thumbsize": "Максимальний розмір мініатюри.",
+	"apihelp-mobileview-param-thumbwidth": "Максимальна ширина мініатюри.",
+	"apihelp-mobileview-param-thumbheight": "Максимальна висота мініатюри.",
+	"apihelp-mobileview-param-revision": "Подати запит на конкретну версію сторінки.",
+	"apihelp-mobileview-example-1": "Отримати інформацію про розділ 0 статті [[Doom metal]]",
+	"apihelp-mobileview-example-2": "Отримати інформацію про розділ 0 і розділи з примітками статті [[Candlemass]]",
+	"apihelp-mobileview-example-3": "Отримати інформацію про розділ 1 і наступні та розділи з примітками статті [[Candlemass]]",
+	"apihelp-parse-param-mobileformat": "Видати проаналізований результат у форматі, що підходить для мобільних пристроїв.",
+	"apihelp-parse-param-noimages": "Вимкнути зображення у мобільному результаті.",
+	"apihelp-parse-param-mainpage": "Застосувати перетворення головної сторінки у мобільному вигляді.",
+	"apihelp-webapp-manifest-description": "Повертає маніфест webapp.",
+	"apihelp-webapp-manifest-summary": "Виводить маніфест webapp.",
+	"apierror-mobilefrontend-badidtitle": "Погана комбінація ідентифікатора/назви версії.",
+	"apierror-mobilefrontend-toomanysizeparams": "<var>thumbsize</var> є взаємовиключним із <var>thumbwidth</var> і <var>thumbheight</var>.",
+	"apiwarn-mobilefrontend-ignoringnoheadings": "<var>noheadings</var> не має сенсу на головній сторінці, проігноровано.",
+	"apiwarn-mobilefrontend-sectionsnotfound": "{{PLURAL:$2|Розділ|Розділи}} $1 не знайдено."
+}

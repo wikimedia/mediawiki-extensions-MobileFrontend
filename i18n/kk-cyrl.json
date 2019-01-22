@@ -163,9 +163,6 @@
 	"tag-mobile_edit-description": "Мобайлдан жасалған өңдеме (уеб не қосымша)",
 	"tag-mobile_web_edit": "Mobile web edit",
 	"tag-mobile_web_edit-description": "Мобайл уеб сайттан жасалған өңдеме",
-	"apihelp-mobileview-param-thumbsize": "Максимум нобай бағыты.",
-	"apihelp-mobileview-param-thumbwidth": "Максимум нобай ені.",
-	"apihelp-mobileview-param-thumbheight": "Максимум нобай биіктігі.",
 	"mobile-frontend-loading-message": "Жүктелуде...",
 	"mobile-frontend-panel-ok": "Ok",
 	"mobile-frontend-panel-cancel": "Жоқ, рахмет"

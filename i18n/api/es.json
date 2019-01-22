@@ -1,0 +1,42 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dgstranz",
+			"Fitoschido",
+			"Macofe",
+			"Ryo567"
+		]
+	},
+	"apihelp-mobileview-description": "Devuelve los datos necesarios para las vistas en móviles.",
+	"apihelp-mobileview-summary": "Devuelve datos necesarios para las vistas móviles.",
+	"apihelp-mobileview-param-page": "Título de la página que se procesará.",
+	"apihelp-mobileview-param-redirect": "Si deben seguirse las redirecciones.",
+	"apihelp-mobileview-param-sections": "Lista de números de sección, separados por plecas, para los cuales se devolverá texto. Utiliza «all» para que se devuelva texto para todos los números. Un intervalo como «1-4» significa «obtener las secciones 1, 2, 3 y 4». Un intervalo sin el segundo número, como «1-» indica que se recuperen todas las secciones hasta el final de la serie. Utiliza «references» para que se devuelvan todas las secciones que contengan referencias.",
+	"apihelp-mobileview-param-prop": "Qué información obtener:\n;text: HTML de las secciones seleccionadas.\n;sections: Información sobre todas las secciones de la página.\n;normalizedtitle: Título normalizado de la página.\n;lastmodified: Marca de tiempo ISO-8601 de cuando la página cambió por última vez, p. ej. \"2014-04-13T22:42:14Z\".\n;lastmodifiedby: Información sobre el usuario que cambió por última vez la página.\n;revision: Devuelve el identificador de la revisión actual de la página.\n;protection: Información sobre el nivel de protección.\n;editable: Indica si el usuario actual puede editar esta página. Esto tiene en cuenta todos los factores para los usuarios con sesión iniciada pero no el estado de bloqueo de los anónimos.\n;languagecount: Número de idiomas en los que está disponible la página.\n;hasvariants: Si la página está disponible en otras variantes del idioma.\n;displaytitle: El título de la página tal como se visualiza, una vez aplicados &#123;&#123;DISPLAYTITLE&#125;&#125; y similares.\n;pageprops: Propiedades de la página.",
+	"apihelp-mobileview-param-prop-withimages": "Qué información obtener:\n;text: HTML de las secciones seleccionadas.\n;sections: Información sobre todas las secciones de la página.\n;normalizedtitle: Título normalizado de la página.\n;lastmodified: Marca de tiempo ISO-8601 de cuando la página cambió por última vez, p. ej. \"2014-04-13T22:42:14Z\".\n;lastmodifiedby: Información sobre el usuario que cambió por última vez la página.\n;revision: Devuelve el identificador de la revisión actual de la página.\n;protection: Información sobre el nivel de protección.\n;editable: Indica si el usuario actual puede editar esta página. Esto tiene en cuenta todos los factores para los usuarios con sesión iniciada pero no el estado de bloqueo de los anónimos.\n;languagecount: Número de idiomas en los que está disponible la página.\n;hasvariants: Si la página está disponible en otras variantes del idioma.\n;displaytitle: El título de la página tal como se visualiza, una vez aplicados &#123;&#123;DISPLAYTITLE&#125;&#125; y similares.\n;pageprops: Propiedades de la página.\n;image: Información sobre una imagen asociada con esta página.\n;thumb: Miniatura de una imagen asociada con esta página.",
+	"apihelp-mobileview-param-sectionprop": "Qué información de secciones obtener.",
+	"apihelp-mobileview-param-pageprops": "Qué propiedades de página devolver, una lista separada por barras verticales (\"|\") o \"*\" para todas las propiedades.",
+	"apihelp-mobileview-param-variant": "Convertir el contenido a esta variante del idioma.",
+	"apihelp-mobileview-param-noimages": "Devolver HTML sin imágenes.",
+	"apihelp-mobileview-param-noheadings": "No incluir los encabezados en la salida.",
+	"apihelp-mobileview-param-notransform": "No transformar HTML a una versión específica para móviles.",
+	"apihelp-mobileview-param-onlyrequestedsections": "Devolver solo las secciones requeridas incluso con $1prop=sections.",
+	"apihelp-mobileview-param-offset": "Simular que todos los resultados textuales son una cadena y devolver la subcadena a partir de este punto.",
+	"apihelp-mobileview-param-maxlen": "Simular que todos los resultados textuales son una cadena y limitar los resultados a esta longitud.",
+	"apihelp-mobileview-param-thumbsize": "Tamaño máximo de miniatura",
+	"apihelp-mobileview-param-thumbwidth": "Anchura máxima de las miniaturas.",
+	"apihelp-mobileview-param-thumbheight": "Altura máxima de miniaturas.",
+	"apihelp-mobileview-param-revision": "Solicitar una revisión en particular.",
+	"apihelp-mobileview-example-1": "Obtener información acerca de la sección 0 de [[Doom metal]]",
+	"apihelp-mobileview-example-2": "Obtener información acerca de la sección 0 y secciones que contienen referencias a [[Candlemass]]",
+	"apihelp-mobileview-example-3": "Obtener información acerca de las secciones 1 y posteriores y de las secciones que contiene referencias a [[Candlemass]]",
+	"apihelp-parse-param-mobileformat": "Devuelve la salida del análisis en un formato apropiado para dispositivos móviles.",
+	"apihelp-parse-param-noimages": "Desactivar imágenes en la salida para móviles.",
+	"apihelp-parse-param-mainpage": "Aplicar las transformaciones de la página principal para móviles.",
+	"apihelp-webapp-manifest-description": "Devuelve un manifiesto de aplicación web.",
+	"apihelp-webapp-manifest-summary": "Devuelve un manifiesto de aplicación web.",
+	"apierror-mobilefrontend-badidtitle": "Mala combinación de identificador de revisión y título.",
+	"apierror-mobilefrontend-toomanysizeparams": "<var>thumbsize</var> es mutuamente excluyente con <var>thumbwidth</var> y <var>thumbheight</var>.",
+	"apiwarn-mobilefrontend-ignoringnoheadings": "<var>noheadings</var> no tiene sentido en la página principal; se ignora.",
+	"apiwarn-mobilefrontend-sectionsnotfound": "No se {{PLURAL:$2|encuentra la sección|encuentran las secciones}} $1."
+}

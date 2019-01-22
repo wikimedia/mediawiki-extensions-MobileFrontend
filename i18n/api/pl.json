@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chrumps"
+		]
+	},
+	"apihelp-mobileview-param-noimages": "Zwróć HTML bez obrazków.",
+	"apihelp-mobileview-param-notransform": "Nie zamieniaj HTML-u na wersję mobilną.",
+	"apihelp-mobileview-param-thumbsize": "Maksymalne rozmiary miniaturki.",
+	"apihelp-mobileview-param-thumbwidth": "Maksymalna szerokość miniatury.",
+	"apihelp-mobileview-param-thumbheight": "Maksymalna wysokość miniatury.",
+	"apihelp-parse-param-noimages": "Wyłącz wyświetlanie grafik w wersji mobilnej.",
+	"apiwarn-mobilefrontend-sectionsnotfound": "Nie znaleziono {{PLURAL:$2|sekcji}} $1."
+}

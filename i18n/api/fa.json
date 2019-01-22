@@ -1,0 +1,43 @@
+{
+	"@metadata": {
+		"authors": [
+			"Arian Ar",
+			"Ebraminio",
+			"Huji",
+			"Reza1615",
+			"Rtemis"
+		]
+	},
+	"apihelp-mobileview-description": "داده‌های مورد نیاز برای نماهای گوشی همراه را فعال می‌کند.",
+	"apihelp-mobileview-summary": "داده‌های مورد نیاز برای نماهای گوشی همراه را فعال می‌کند.",
+	"apihelp-mobileview-param-page": "عنوان صفحه برای پردازش.",
+	"apihelp-mobileview-param-redirect": "اگر نیاز به پی‌گیری تغییر مسیرها نیست.",
+	"apihelp-mobileview-param-sections": "Pipe-separated list of section numbers for which to return text. \"all\" can be used to return for all. Ranges in format \"1-4\" mean get sections 1,2,3,4. Ranges without second number, e.g. \"1-\" means get all until the end. \"references\" can be used to specify that all sections containing references should be returned.",
+	"apihelp-mobileview-param-prop": "Which information to get:\n;text:HTML of selected sections.\n;sections:Information about all sections on the page.\n;normalizedtitle:Normalized page title.\n;lastmodified:ISO 8601 timestamp for when the page was last modified, e.g. \"2014-04-13T22:42:14Z\".\n;lastmodifiedby:Information about the user who modified the page last.\n;revision:Return the current revision ID of the page.\n;protection:Information about protection level.\n;editable:Whether the current user can edit this page. This includes all factors for logged-in users but not blocked status for anons.\n;languagecount:Number of languages that the page is available in.\n;hasvariants:Whether or not the page is available in other language variants.\n;displaytitle:The rendered title of the page, with &#123;&#123;DISPLAYTITLE&#125;&#125; and such applied.\n;pageprops:Page properties.",
+	"apihelp-mobileview-param-prop-withimages": "\nWhich information to get:\n;text:HTML of selected sections.\n;sections:Information about all sections on page.\n;normalizedtitle:Normalized page title.\n;lastmodified:ISO 8601 timestamp for when the page was last modified, e.g. \"2014-04-13T22:42:14Z\".\n;lastmodifiedby:Information about the user who modified the page last.\n;revision:Return the current revision ID of the page.\n;protection:Information about protection level.\n;editable:Whether the current user can edit this page. This includes all factors for logged-in users but not blocked status for anons.\n;languagecount:Number of languages that the page is available in.\n;hasvariants:Whether or not the page is available in other language variants.\n;displaytitle:The rendered title of the page, with &#123;&#123;DISPLAYTITLE&#125;&#125; and such applied.\n;pageprops:Page properties.\n;image:Information about an image associated with this page.\n;thumb:Thumbnail of an image associated with this page.",
+	"apihelp-mobileview-param-sectionprop": "چه اطلاعاتی دربارهٔ عناوین بگیرد.",
+	"apihelp-mobileview-param-pageprops": "چه مشخصاتی از صفحه را برگردان، یک فهرست جداسازی شده با لوله (\"|\") یا \"*\" برای همهٔ مشخصات.",
+	"apihelp-mobileview-param-variant": "تبدیل محتوا به این نوع زبان.",
+	"apihelp-mobileview-param-noimages": "بازگردانی اچ‌تی‌ام‌ال بدون نگاره‌ها.",
+	"apihelp-mobileview-param-noheadings": "عناوین را در خروجی قرار نده.",
+	"apihelp-mobileview-param-notransform": "اچ‌تی‌ام‌ال را به نسخهٔ خاص همراه تبدیل نکن.",
+	"apihelp-mobileview-param-onlyrequestedsections": "فقط عناوین درخواست را حتی با $1prop=sections برگردان.",
+	"apihelp-mobileview-param-offset": "در نظر بگیر همهٔ متن پاسخ یک رشته است و زیررشته‌ای که از این شروع می‌شود را برگردان.",
+	"apihelp-mobileview-param-maxlen": "Pretend all text result is one string, and limit result to this length.",
+	"apihelp-mobileview-param-thumbsize": "حداکثر ابعاد تصویر بندانگشتی.",
+	"apihelp-mobileview-param-thumbwidth": "حداکثر عرض تصویر بندانگشتی",
+	"apihelp-mobileview-param-thumbheight": "حداکثر ارتفاع تصویر بندانگشتی",
+	"apihelp-mobileview-param-revision": "درخواست نسخه‌ای خاص.",
+	"apihelp-mobileview-example-1": "Get information about section 0 of [[Doom metal]]",
+	"apihelp-mobileview-example-2": "Get information about section 0 and sections containing references of [[Candlemass]]",
+	"apihelp-mobileview-example-3": "Get information about sections 1 and later and sections containing references of [[Candlemass]]",
+	"apihelp-parse-param-mobileformat": "Return parse output in a format suitable for mobile devices.",
+	"apihelp-parse-param-noimages": "غیرفعال کردن تصاویر بر روی خروجی تلفن همراه",
+	"apihelp-parse-param-mainpage": "اعمال تغییرات صفحهٔ اصلی گوشی همراه.",
+	"apihelp-webapp-manifest-description": "بازگشت بیانیهٔ اپلیکیشن وب",
+	"apihelp-webapp-manifest-summary": "بازگشت بیانیهٔ اپلیکیشن وب",
+	"apierror-mobilefrontend-badidtitle": "نسخهٔ بد ترکیب شناسه/عنوان.",
+	"apierror-mobilefrontend-toomanysizeparams": "<var>thumbsize</var> به صورت دوطرفه با <var>thumbwidth</var> و <var>thumbheight</var> مرتبط است.",
+	"apiwarn-mobilefrontend-ignoringnoheadings": "<var>noheadings</var> در صفحهٔ اصلی معنایی ندارد، رها شد.",
+	"apiwarn-mobilefrontend-sectionsnotfound": "$1 {{PLURAL:$2|زیربخش|زیربخش}} یافت نشد."
+}

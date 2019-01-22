@@ -17,6 +17,7 @@
 	"mobile-frontend-donate-image-title": "اپلوڈ",
 	"mobile-frontend-donate-image-title-username": "$1 دی اپلوڈ کردہ فائلاں",
 	"mobile-frontend-donate-image-title-you": "تواڈی اپلوڈ کردہ فائلاں",
+	"mobile-frontend-editor-placeholder-new-page": "\n{{GENDER:$1|تسی}} {{SITENAME}} تے نواں صفہ بنا رۓ ہو!",
 	"mobile-frontend-editor-save": "بچاؤ",
 	"mobile-frontend-editor-summary": "خلاصہ:",
 	"mobile-frontend-editor-wait": "محفوظ ہو ریا ہے، انتظار کرو۔",
