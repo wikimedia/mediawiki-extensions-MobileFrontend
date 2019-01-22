@@ -22,6 +22,30 @@
       "revId": "a40d2b587e21886bbaff3c1ec3b12aae2ea91456",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "66f4eda6_39036eda",
+        "filename": "includes/content-providers/MwApiContentProvider.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-01-22T19:48:49Z",
+      "side": 1,
+      "message": "Okay! The reason why I did this check is because `FormatJson::decode( \u0027\u0027, true );` will return a \"null\" and `array_key_exists( \u0027parse\u0027, null )` will throw an error here.\n\nI\u0027m thinking the lines above could be;\n```\nif ( $resp \u003d\u003d\u003d \u0027\u0027 ) {\n    return $resp;\n}\n```\n\nor do a check before the one on L#88 saying;\n```\nif ( $json !\u003d\u003d null ) {\n    if ( !is_bool( $json ) \u0026\u0026 array_key_exists( \u0027parse\u0027, $json ) ) {\n        ....\n    }\n} else {\n    return \u0027\u0027;\n}\n```\n\nOr I\u0027m missing anything?",
+      "parentUuid": "d4e79a8e_f084ae64",
+      "range": {
+        "startLine": 82,
+        "startChar": 0,
+        "endLine": 86,
+        "endChar": 3
+      },
+      "revId": "a40d2b587e21886bbaff3c1ec3b12aae2ea91456",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
