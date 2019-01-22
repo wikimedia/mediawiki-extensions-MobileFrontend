@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "29d42e18_4243ef1e",
+        "filename": "tests/node-qunit/mobile.special.watchlist.scripts/WatchList.test.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-22T18:00:29Z",
+      "side": 0,
+      "message": "Thanks for this change. I had to study the code for a while but I think this finally makes sense to me. At first, I was thinking that this executed something like:\n\n 1. The Watchlist is newed.\n 2. Two gateways, WatchListGateway and WatchstarGateway, are created.\n 3. View.initialize() -\u003e View._postInitalize() (may occur on doc ready) -\u003e View.render() -\u003e View.preRender() -\u003e WatchList.postRender() -\u003e WatchstarPageList.postRender() -\u003e getPages().\n\n...But WatchList doesn\u0027t call super.postRender() but rather super.super.postRender() :|",
+      "range": {
+        "startLine": 57,
+        "startChar": 4,
+        "endLine": 57,
+        "endChar": 77
+      },
+      "revId": "6c2976b0c5eaca9db8e760d3126b80befb60236d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
