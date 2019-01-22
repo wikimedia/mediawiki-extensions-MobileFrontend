@@ -70,6 +70,30 @@
       "revId": "a40d2b587e21886bbaff3c1ec3b12aae2ea91456",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b135b2f9_3336388c",
+        "filename": "includes/content-providers/MwApiContentProvider.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-01-22T20:02:38Z",
+      "side": 1,
+      "message": "Yes, I\u0027ll go for;\n\n```\nif ( $json !\u003d\u003d null \u0026\u0026 !is_bool( $json ) \u0026\u0026 array_key_exists( \u0027parse\u0027, $json ) ) {\n   ...\n   return $parse[\u0027text\u0027];\n } else {\n   return \u0027\u0027;\n }\n```\n\nSince PHP uses lazy/short-circuit evaluation mechanism, once `$json  !\u003d\u003d null` fails, no need to evaluate the others, I\u0027ll just return early. Will update this patch :)",
+      "parentUuid": "84201e93_e35c443e",
+      "range": {
+        "startLine": 82,
+        "startChar": 0,
+        "endLine": 86,
+        "endChar": 3
+      },
+      "revId": "a40d2b587e21886bbaff3c1ec3b12aae2ea91456",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
