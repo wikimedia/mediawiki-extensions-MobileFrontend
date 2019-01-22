@@ -1,0 +1,43 @@
+{
+	"@metadata": {
+		"authors": [
+			"André Costa",
+			"Bahodir Mansurov",
+			"Brad Jorsch",
+			"Jon Robson",
+			"Max Semenik"
+		]
+	},
+	"apihelp-mobileview-description": "Returns data needed for mobile views.",
+	"apihelp-mobileview-summary": "Returns data needed for mobile views.",
+	"apihelp-mobileview-param-page": "Title of page to process.",
+	"apihelp-mobileview-param-redirect": "Whether redirects should be followed.",
+	"apihelp-mobileview-param-sections": "Pipe-separated list of section numbers for which to return text. \"all\" can be used to return for all. Ranges in format \"1-4\" mean get sections 1,2,3,4. Ranges without second number, e.g. \"1-\" means get all until the end. \"references\" can be used to specify that all sections containing references should be returned.",
+	"apihelp-mobileview-param-prop": "Which information to get:\n;text:HTML of selected sections.\n;sections:Information about all sections on the page.\n;normalizedtitle:Normalized page title.\n;lastmodified:ISO 8601 timestamp for when the page was last modified, e.g. \"2014-04-13T22:42:14Z\".\n;lastmodifiedby:Information about the user who modified the page last.\n;revision:Return the current revision ID of the page.\n;protection:Information about protection level.\n;editable:Whether the current user can edit this page. This includes all factors for logged-in users but not blocked status for anons.\n;languagecount:Number of languages that the page is available in.\n;hasvariants:Whether or not the page is available in other language variants.\n;displaytitle:The rendered title of the page, with &#123;&#123;DISPLAYTITLE&#125;&#125; and such applied.\n;pageprops:Page properties.",
+	"apihelp-mobileview-param-prop-withimages": "Which information to get:\n;text:HTML of selected sections.\n;sections:Information about all sections on page.\n;normalizedtitle:Normalized page title.\n;lastmodified:ISO 8601 timestamp for when the page was last modified, e.g. \"2014-04-13T22:42:14Z\".\n;lastmodifiedby:Information about the user who modified the page last.\n;revision:Return the current revision ID of the page.\n;protection:Information about protection level.\n;editable:Whether the current user can edit this page. This includes all factors for logged-in users but not blocked status for anons.\n;languagecount:Number of languages that the page is available in.\n;hasvariants:Whether or not the page is available in other language variants.\n;displaytitle:The rendered title of the page, with &#123;&#123;DISPLAYTITLE&#125;&#125; and such applied.\n;pageprops:Page properties.\n;image:Information about an image associated with this page.\n;thumb:Thumbnail of an image associated with this page.",
+	"apihelp-mobileview-param-sectionprop": "What information about sections to get.",
+	"apihelp-mobileview-param-pageprops": "What page properties to return, a pipe (\"|\") separated list or \"*\" for all properties.",
+	"apihelp-mobileview-param-variant": "Convert content into this language variant.",
+	"apihelp-mobileview-param-noimages": "Return HTML without images.",
+	"apihelp-mobileview-param-noheadings": "Don't include headings in output.",
+	"apihelp-mobileview-param-notransform": "Don't transform HTML into mobile-specific version.",
+	"apihelp-mobileview-param-onlyrequestedsections": "Return only requested sections even with $1prop=sections.",
+	"apihelp-mobileview-param-offset": "Pretend all text result is one string, and return the substring starting at this point.",
+	"apihelp-mobileview-param-maxlen": "Pretend all text result is one string, and limit result to this length.",
+	"apihelp-mobileview-param-thumbsize": "Maximum thumbnail dimensions.",
+	"apihelp-mobileview-param-thumbwidth": "Maximum thumbnail width.",
+	"apihelp-mobileview-param-thumbheight": "Maximum thumbnail height.",
+	"apihelp-mobileview-param-revision": "Request a specific revision.",
+	"apihelp-mobileview-example-1": "Get information about section 0 of [[Doom metal]]",
+	"apihelp-mobileview-example-2": "Get information about section 0 and sections containing references of [[Candlemass]]",
+	"apihelp-mobileview-example-3": "Get information about sections 1 and later and sections containing references of [[Candlemass]]",
+	"apihelp-parse-param-mobileformat": "Return parse output in a format suitable for mobile devices.",
+	"apihelp-parse-param-noimages": "Disable images in mobile output.",
+	"apihelp-parse-param-mainpage": "Apply mobile main page transformations.",
+	"apihelp-webapp-manifest-description": "Returns a webapp manifest.",
+	"apihelp-webapp-manifest-summary": "Returns a webapp manifest.",
+	"apierror-mobilefrontend-badidtitle": "Bad revision id/title combination.",
+	"apierror-mobilefrontend-toomanysizeparams": "<var>thumbsize</var> is mutually exclusive with <var>thumbwidth</var> and <var>thumbheight</var>.",
+	"apiwarn-mobilefrontend-ignoringnoheadings": "<var>noheadings</var> makes no sense on the main page, ignoring.",
+	"apiwarn-mobilefrontend-sectionsnotfound": "{{PLURAL:$2|Section|Sections}} $1 not found."
+}
