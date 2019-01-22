@@ -94,6 +94,30 @@
       "revId": "a40d2b587e21886bbaff3c1ec3b12aae2ea91456",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1cca0c23_fe238691",
+        "filename": "includes/content-providers/MwApiContentProvider.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-22T20:34:55Z",
+      "side": 1,
+      "message": "This code is only run for developers so I wouldn\u0027t worry about performance overhead. This is specifically marked in the README as not to be used in production environment.",
+      "parentUuid": "b135b2f9_3336388c",
+      "range": {
+        "startLine": 82,
+        "startChar": 0,
+        "endLine": 86,
+        "endChar": 3
+      },
+      "revId": "a40d2b587e21886bbaff3c1ec3b12aae2ea91456",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
