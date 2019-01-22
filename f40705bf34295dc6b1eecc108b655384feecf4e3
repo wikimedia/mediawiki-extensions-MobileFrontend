@@ -22,6 +22,30 @@
       "revId": "f40705bf34295dc6b1eecc108b655384feecf4e3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4c1b134a_5c8f67be",
+        "filename": "resources/mobile.editor.overlay/EditorOverlay.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 525,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-22T20:40:56Z",
+      "side": 0,
+      "message": "I\u0027ve restored the previous line. VE continues to work.",
+      "parentUuid": "b7443a92_07beba40",
+      "range": {
+        "startLine": 525,
+        "startChar": 54,
+        "endLine": 525,
+        "endChar": 56
+      },
+      "revId": "f40705bf34295dc6b1eecc108b655384feecf4e3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
