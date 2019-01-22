@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "92aac698_ba3423fe",
+        "filename": "resources/mobile.editor.ve/ve.init.mw.MobileFrontendArticleTarget.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 305,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2019-01-22T23:54:26Z",
+      "side": 1,
+      "message": "This should probably keep using window.history.back() when closing the editor, rather than saving? The back/forward navigation is a little confusing to me, but it seems this is how it is supposed to work.",
+      "revId": "458b54dc7f78445387348c973acce16073f5bd9d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
