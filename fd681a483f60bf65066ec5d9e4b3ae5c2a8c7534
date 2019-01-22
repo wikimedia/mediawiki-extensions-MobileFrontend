@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c46e9ed0_31010a2e",
+        "filename": "src/mobile.startup/lazyImages/lazyImageLoader.js",
+        "patchSetId": 17
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-22T22:28:56Z",
+      "side": 1,
+      "message": "This is a breaking change and should follow the deprecation policy given its usage in Minerva.\n\nSpecifically this change breaks the download icon leading to the following JS error:\nVM429:140 Uncaught TypeError: t.map is not a function\n    at Object.e.exports.loadImages (\u003canonymous\u003e:140:347)\n    at onClick (\u003canonymous\u003e:182:726)\n    at r.\u003canonymous\u003e (\u003canonymous\u003e:182:890)\n    at HTMLDivElement.dispatch (load.php?debug\u003dfalse\u0026lang\u003den\u0026modules\u003djquery\u0026skin\u003dminerva\u0026version\u003d00rdyep:69)\n    at HTMLDivElement.elemData.handle (load.php?debug\u003dfalse\u0026lang\u003den\u0026modules\u003djquery\u0026skin\u003dminerva\u0026version\u003d00rdyep:65)",
+      "revId": "fd681a483f60bf65066ec5d9e4b3ae5c2a8c7534",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
