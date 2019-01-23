@@ -47,8 +47,8 @@
 		 * @instance
 		 */
 		templatePartials: util.extend( {}, EditorOverlayBase.prototype.templatePartials, {
-			editHeader: mw.template.get( 'mobile.editor.ve', 'toolbarVE.hogan' ),
-			content: mw.template.get( 'mobile.editor.ve', 'contentVE.hogan' )
+			editHeader: mw.template.get( 'mobile.editor.overlay', 'toolbarVE.hogan' ),
+			content: mw.template.get( 'mobile.editor.overlay', 'contentVE.hogan' )
 		} ),
 		/**
 		 * @memberof VisualEditorOverlay
@@ -141,7 +141,8 @@
 		 * @instance
 		 */
 		switchToSourceEditor: function () {
-			var self = this;
+			var self = this,
+				EditorOverlay = M.require( 'mobile.editor.overlay/EditorOverlay' );
 			this.log( {
 				action: 'abort',
 				type: 'switchnochange',
@@ -151,14 +152,9 @@
 			mw.storage.set( 'preferredEditor', 'SourceEditor' );
 			this.showSpinner();
 			this.$( '.surface' ).hide();
-			// Load the SourceEditor and replace the VisualEditor overlay with it
-			mw.loader.using( 'mobile.editor.overlay', function () {
-				var EditorOverlay = M.require( 'mobile.editor.overlay/EditorOverlay' );
-
-				self.hideSpinner();
-				self.applyHeaderOptions( self.options, false );
-				self.overlayManager.replaceCurrent( new EditorOverlay( self.options ) );
-			} );
+			self.hideSpinner();
+			self.applyHeaderOptions( self.options, false );
+			self.overlayManager.replaceCurrent( new EditorOverlay( self.options ) );
 		},
 		/**
 		 * @inheritdoc
@@ -185,6 +181,6 @@
 		}
 	} );
 
-	M.define( 'mobile.editor.ve/VisualEditorOverlay', VisualEditorOverlay );
+	M.define( 'mobile.editor.overlay/VisualEditorOverlay', VisualEditorOverlay );
 
 }( mw.mobileFrontend, window.ve ) );
