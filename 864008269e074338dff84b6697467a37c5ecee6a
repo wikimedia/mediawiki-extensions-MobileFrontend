@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee581672_2060542a",
+        "filename": "extension.json",
+        "patchSetId": 20
+      },
+      "lineNbr": 447,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-01-23T00:47:28Z",
+      "side": 1,
+      "message": "As an aside, is anything actually using this? I couldn\u0027t find anything via https://codesearch.wmflabs.org/search/?q\u003dmobile-frontend-page-edit-summary\u0026i\u003dnope\u0026files\u003d\u0026repos\u003d",
+      "range": {
+        "startLine": 447,
+        "startChar": 5,
+        "endLine": 447,
+        "endChar": 38
+      },
+      "revId": "864008269e074338dff84b6697467a37c5ecee6a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a750498_e623c393",
+        "filename": "resources/mobile.editor.overlay/EditorOverlay.js",
+        "patchSetId": 20
+      },
+      "lineNbr": 532,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-01-23T00:47:28Z",
+      "side": 1,
+      "message": "`npm run lint:modules` seems to work for me without this. Can we remove it and and the comment above this line?",
+      "range": {
+        "startLine": 532,
+        "startChar": 89,
+        "endLine": 532,
+        "endChar": 121
+      },
+      "revId": "864008269e074338dff84b6697467a37c5ecee6a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4c0f9233_60b15cf3",
+        "filename": "src/mobile.startup/rlModuleLoader.js",
+        "patchSetId": 20
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-01-23T00:47:28Z",
+      "side": 1,
+      "message": "I\u0027m not sure the \u0027of\u0027 is needed here since \u0027name\u0027 is just the name of the param and not technically part of the description",
+      "range": {
+        "startLine": 20,
+        "startChar": 34,
+        "endLine": 20,
+        "endChar": 36
+      },
+      "revId": "864008269e074338dff84b6697467a37c5ecee6a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
