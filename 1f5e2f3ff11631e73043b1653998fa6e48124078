@@ -22,6 +22,30 @@
       "revId": "1f5e2f3ff11631e73043b1653998fa6e48124078",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ca9c6471_5397ca3c",
+        "filename": "src/mobile.startup/rlModuleLoader.js",
+        "patchSetId": 22
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-23T06:44:23Z",
+      "side": 1,
+      "message": "This was my intention... \"@param {string} name of ResourceLoader module or modules load asynchronously\" if read aloud describes the parameter perfectly.\n\nThis makes me wonder..  Am I the only one who reads these as sentences when writing docs...? 🤔\n@param {string} name of the human you want to send a message to\n@param {number} times you want to send him the message\n@param {boolean} isAllCaps if the message should be sent in all caps\n\nIt always irks me when I see something ungrammatical like:\n@param {string} name name of the human you want to send a message to\nor \n@param {boolean} isAllCaps a flag to set text to all caps\n\nIf so, I can revert back to the old but I\u0027d want to put a \"-\" in between parameter name and description for readability.\n\ne.g.  @param {string} name - ResourceLoader module name to load asynchronously.",
+      "parentUuid": "ae2e0580_b62f9490",
+      "range": {
+        "startLine": 20,
+        "startChar": 34,
+        "endLine": 20,
+        "endChar": 37
+      },
+      "revId": "1f5e2f3ff11631e73043b1653998fa6e48124078",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
