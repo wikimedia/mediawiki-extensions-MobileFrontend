@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae2e0580_b62f9490",
+        "filename": "src/mobile.startup/rlModuleLoader.js",
+        "patchSetId": 22
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-01-23T06:28:39Z",
+      "side": 1,
+      "message": "@param \u003ctype\u003e \u003cname\u003e Description.\n\nThe interpretation of this is:\n\n Parameter:\n  name      | of ResourceLoader module ... \n  ...       |\n\nThe sentence previously started at \"ResourceLoader module\" not \"name\" :)",
+      "range": {
+        "startLine": 20,
+        "startChar": 34,
+        "endLine": 20,
+        "endChar": 37
+      },
+      "revId": "1f5e2f3ff11631e73043b1653998fa6e48124078",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
