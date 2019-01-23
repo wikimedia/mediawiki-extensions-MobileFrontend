@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bbbc53e9_ae12c392",
+        "filename": "extension.json",
+        "patchSetId": 9
+      },
+      "lineNbr": 313,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-01-23T06:38:12Z",
+      "side": 1,
+      "message": "Very exciting this commit :-) - Sorry if already planning to, but noticed this one mentioned in the task but not in this commit. Looks like it is currently loaded separately from the ones being merged, so might be non-trivial for merging.\n\nIf I understand correctly, the way it is delivered and used more closely aligns with \"mobile.init\", albeit only on minerva. Could use skinScripts perhaps, if it should remain Minerva-only for the moment.",
+      "range": {
+        "startLine": 313,
+        "startChar": 2,
+        "endLine": 313,
+        "endChar": 17
+      },
+      "revId": "924b22c54360f3a652074c2f044593115973a0a4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fe0d2e1e_d09fa921",
+        "filename": "extension.json",
+        "patchSetId": 9
+      },
+      "lineNbr": 430,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-01-23T06:38:12Z",
+      "side": 1,
+      "message": "This one might be harder to phase out, although not impossible. Let me know if you need RL-ideas :)",
+      "range": {
+        "startLine": 430,
+        "startChar": 3,
+        "endLine": 430,
+        "endChar": 23
+      },
+      "revId": "924b22c54360f3a652074c2f044593115973a0a4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
