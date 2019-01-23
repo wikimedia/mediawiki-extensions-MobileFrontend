@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "09575f2f_8593503f",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-23T19:51:48Z",
+      "side": 0,
+      "message": "Before it was easier to determine which modes were available using a constant. Now we have to construct an object just to perform the check. Is it possible for manager to hold all modes and associate an instance with an IFeature for us poor clients?",
+      "range": {
+        "startLine": 155,
+        "startChar": 28,
+        "endLine": 155,
+        "endChar": 50
+      },
+      "revId": "6106f014f3882d8f3ad5e502a5b5d0bf2d2819fe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
