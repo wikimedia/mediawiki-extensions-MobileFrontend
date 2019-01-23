@@ -57,6 +57,30 @@
       "revId": "c7e8500ebcb960664493c38dbefc098a2caabaf4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a964d481_0a8524b0",
+        "filename": "tests/node-qunit/mobile.startup/Drawer.test.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-23T19:18:43Z",
+      "side": 1,
+      "message": "I tried removing it and sure enough it still passes, so let\u0027s remove it.",
+      "parentUuid": "7a77805a_a725842b",
+      "range": {
+        "startLine": 75,
+        "startChar": 1,
+        "endLine": 75,
+        "endChar": 14
+      },
+      "revId": "c7e8500ebcb960664493c38dbefc098a2caabaf4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
