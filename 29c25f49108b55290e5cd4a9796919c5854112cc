@@ -22,6 +22,30 @@
       "revId": "29c25f49108b55290e5cd4a9796919c5854112cc",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b03f47cf_0bd902cf",
+        "filename": "resources/mobile.editor.overlay/EditorOverlay.js",
+        "patchSetId": 21
+      },
+      "lineNbr": 531,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-23T01:40:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dbdb13b7_6d9abbcb",
+      "range": {
+        "startLine": 530,
+        "startChar": 0,
+        "endLine": 531,
+        "endChar": 77
+      },
+      "revId": "29c25f49108b55290e5cd4a9796919c5854112cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
