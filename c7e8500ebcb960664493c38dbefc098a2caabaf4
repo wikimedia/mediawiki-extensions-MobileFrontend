@@ -16,6 +16,24 @@
       "revId": "c7e8500ebcb960664493c38dbefc098a2caabaf4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4476e8d2_0fedd0bc",
+        "filename": "src/mobile.startup/Panel.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-23T16:17:50Z",
+      "side": 1,
+      "message": "For now yes, but I can see this being useful (in general I think you should return a Deferred if your function is async to serve as an indication of its nature). If I add a comment and then we start using this for other purposes wouldn\u0027t that be a little confusing?",
+      "parentUuid": "f6fc2961_19d666f1",
+      "revId": "c7e8500ebcb960664493c38dbefc098a2caabaf4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
