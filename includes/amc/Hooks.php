@@ -34,7 +34,7 @@ final class Hooks {
 	 * RecentChange_save hook handler that tags mobile changes
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/RecentChange_save
 	 *
-	 * @param RecentChange $rc
+	 * @param \RecentChange $rc
 	 * @return bool
 	 */
 	public static function onRecentChangeSave( \RecentChange $rc ) {
