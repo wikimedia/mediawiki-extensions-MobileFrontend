@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "150b145a_9fa6f750",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-23T18:45:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0678bf77_91987ad2",
+      "range": {
+        "startLine": 10,
+        "startChar": 54,
+        "endLine": 10,
+        "endChar": 57
+      },
+      "revId": "bdc2ffb348680d8259e7a83d61327c565741807a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "eec9eae6_49d6a96f",
         "filename": "/COMMIT_MSG",
         "patchSetId": 3
@@ -118,6 +142,30 @@
     },
     {
       "key": {
+        "uuid": "8d0fc378_953f61bf",
+        "filename": "includes/features/FeaturesManager.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-23T18:45:42Z",
+      "side": 1,
+      "message": "Stephen: you\u0027re right, this shouldn\u0027t be initialized. \nD3r1ck01: UserModes implements IteratorAggregate, not ArrayAccess. We shouldn\u0027t treat that as an array. What we can do is to iterate over it.",
+      "parentUuid": "7d7a83f4_194c4a5b",
+      "range": {
+        "startLine": 30,
+        "startChar": 19,
+        "endLine": 30,
+        "endChar": 24
+      },
+      "revId": "bdc2ffb348680d8259e7a83d61327c565741807a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1ccdefae_385434b2",
         "filename": "includes/features/FeaturesManager.php",
         "patchSetId": 3
@@ -129,6 +177,30 @@
       "writtenOn": "2019-01-18T21:50:19Z",
       "side": 1,
       "message": "Should be removed.",
+      "range": {
+        "startLine": 32,
+        "startChar": 4,
+        "endLine": 32,
+        "endChar": 6
+      },
+      "revId": "bdc2ffb348680d8259e7a83d61327c565741807a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "baa05d2b_0620254e",
+        "filename": "includes/features/FeaturesManager.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-23T18:45:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1ccdefae_385434b2",
       "range": {
         "startLine": 32,
         "startChar": 4,
@@ -164,6 +236,30 @@
     },
     {
       "key": {
+        "uuid": "044dad98_d7387597",
+        "filename": "includes/features/IUserMode.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-23T18:45:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "636a058d_93e6b421",
+      "range": {
+        "startLine": 29,
+        "startChar": 20,
+        "endLine": 29,
+        "endChar": 22
+      },
+      "revId": "bdc2ffb348680d8259e7a83d61327c565741807a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "42b39cb2_306a746e",
         "filename": "includes/features/UserModes.php",
         "patchSetId": 3
@@ -175,6 +271,30 @@
       "writtenOn": "2019-01-18T18:28:42Z",
       "side": 1,
       "message": "Obviously doesn\u0027t make a bit of difference but \"isEnabled\" seems more natural than \"getEnabled\" at the expense of \"g\" no longer showing all getters.",
+      "range": {
+        "startLine": 34,
+        "startChar": 17,
+        "endLine": 34,
+        "endChar": 27
+      },
+      "revId": "bdc2ffb348680d8259e7a83d61327c565741807a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0004d117_1e77816f",
+        "filename": "includes/features/UserModes.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-23T18:45:42Z",
+      "side": 1,
+      "message": "removed as it is not used atm",
+      "parentUuid": "42b39cb2_306a746e",
       "range": {
         "startLine": 34,
         "startChar": 17,
