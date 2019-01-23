@@ -39,7 +39,7 @@
 		 */
 		templatePartials: util.extend( {}, Overlay.prototype.templatePartials, {
 			button: Button.prototype.template,
-			content: mw.template.get( 'mobile.editor.common', 'AbuseFilterOverlay.hogan' )
+			content: mw.template.get( 'mobile.editor.overlay', 'AbuseFilterOverlay.hogan' )
 		} ),
 		/**
 		 * @inheritdoc

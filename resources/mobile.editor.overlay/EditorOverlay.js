@@ -56,7 +56,7 @@
 		templatePartials: util.extend( {}, EditorOverlayBase.prototype.templatePartials, {
 			content: mw.template.get( 'mobile.editor.overlay', 'content.hogan' ),
 			messageBox: MessageBox.prototype.template,
-			anonWarning: mw.template.get( 'mobile.editor.common', 'EditorOverlayAnonWarning.hogan' )
+			anonWarning: mw.template.get( 'mobile.editor.overlay', 'EditorOverlayAnonWarning.hogan' )
 		} ),
 		/**
 		 * @memberof EditorOverlay

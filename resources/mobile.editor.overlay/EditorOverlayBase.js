@@ -145,16 +145,16 @@
 		 * @instance
 		 */
 		templatePartials: util.extend( {}, Overlay.prototype.templatePartials, {
-			editHeader: mw.template.get( 'mobile.editor.common', 'editHeader.hogan' ),
-			previewHeader: mw.template.get( 'mobile.editor.common', 'previewHeader.hogan' ),
-			saveHeader: mw.template.get( 'mobile.editor.common', 'saveHeader.hogan' )
+			editHeader: mw.template.get( 'mobile.editor.overlay', 'editHeader.hogan' ),
+			previewHeader: mw.template.get( 'mobile.editor.overlay', 'previewHeader.hogan' ),
+			saveHeader: mw.template.get( 'mobile.editor.overlay', 'saveHeader.hogan' )
 		} ),
 		/**
 		 * @inheritdoc
 		 * @memberof EditorOverlayBase
 		 * @instance
 		 */
-		template: mw.template.get( 'mobile.editor.common', 'EditorOverlayBase.hogan' ),
+		template: mw.template.get( 'mobile.editor.overlay', 'EditorOverlayBase.hogan' ),
 		/**
 		 * @memberof EditorOverlayBase
 		 * @instance

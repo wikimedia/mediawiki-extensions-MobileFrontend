@@ -64,7 +64,7 @@ mfExtend( CategoryAddOverlay, Overlay, {
 	 */
 	templatePartials: util.extend( {}, Overlay.prototype.templatePartials, {
 		header: mw.template.get( 'mobile.categories.overlays', 'CategoryAddOverlayHeader.hogan' ),
-		saveHeader: mw.template.get( 'mobile.editor.common', 'saveHeader.hogan' )
+		saveHeader: mw.template.get( 'mobile.editor.overlay', 'saveHeader.hogan' )
 	} ),
 
 	/**
