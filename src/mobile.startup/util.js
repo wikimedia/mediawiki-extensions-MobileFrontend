@@ -91,6 +91,7 @@ module.exports = {
 	 * @return {jQuery.Object}
 	 */
 	parseHTML: function ( html, ctx ) {
+		ctx = ctx || document;
 		return $( $.parseHTML( html, ctx ) );
 	},
 	/**

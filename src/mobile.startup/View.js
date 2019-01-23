@@ -1,4 +1,4 @@
-/* global $ */
+/* global $, document */
 var util = require( './util' ),
 	mfExtend = require( './mfExtend' ),
 	DEPRECATED_PROPERTIES = [ 'events' ],
@@ -378,8 +378,15 @@ mfExtend( View, {
 	 *
 	 * @memberof View
 	 * @instance
+	 * @param {string} html to turn into a jQuery object.
+	 * @return {jQuery.Object}
 	 */
-	parseHTML: util.parseHTML
+	parseHTML: function ( html ) {
+		// document is explicitly passed due to a bug we found in Safari 11.1.2 where failure
+		// to use document resulted in an element without access to the documentElement
+		// this should be redundant, but no problem in being explicit (T214451).
+		return util.parseHTML( html, document );
+	}
 } );
 
 /**
