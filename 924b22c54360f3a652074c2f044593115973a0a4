@@ -69,6 +69,30 @@
       "revId": "924b22c54360f3a652074c2f044593115973a0a4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d37ae3c6_dabab042",
+        "filename": "extension.json",
+        "patchSetId": 9
+      },
+      "lineNbr": 430,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-23T06:47:36Z",
+      "side": 1,
+      "message": "I\u0027d love to add the functionality of ResourceLoaderImageModule into ResourceLoaderFileModule and put all the definitions here inside the above module.\n\nThis is currently not possible but if done, we could get rid of a bunch of modules in MobileFrontend.\n\nAFAIC nothing would be lost if we did this.",
+      "parentUuid": "fe0d2e1e_d09fa921",
+      "range": {
+        "startLine": 430,
+        "startChar": 3,
+        "endLine": 430,
+        "endChar": 23
+      },
+      "revId": "924b22c54360f3a652074c2f044593115973a0a4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
