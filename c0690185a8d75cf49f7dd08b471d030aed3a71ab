@@ -48,6 +48,30 @@
     },
     {
       "key": {
+        "uuid": "36a7a021_fb3f9e4d",
+        "filename": "includes/ServiceWiring.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-24T10:47:09Z",
+      "side": 1,
+      "message": "It doesn\u0027t hurt us to expose this via Services, if any extensions wants to register it\u0027s own Mode -\u003e this is the service they need to retrieve and call `-\u003eregisterMode( new MyMode() );`",
+      "parentUuid": "79ad4636_b4ef5363",
+      "range": {
+        "startLine": 12,
+        "startChar": 2,
+        "endLine": 12,
+        "endChar": 26
+      },
+      "revId": "c0690185a8d75cf49f7dd08b471d030aed3a71ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "cb088177_d2f0a7ab",
         "filename": "includes/ServiceWiring.php",
         "patchSetId": 6
@@ -140,6 +164,30 @@
     },
     {
       "key": {
+        "uuid": "dd8365be_ff7551ea",
+        "filename": "includes/features/BetaUserMode.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-24T10:47:09Z",
+      "side": 1,
+      "message": "those classes are temporary classes, I\u0027ll refactor those properly during T212802, for now I need an \"adapter\" that will provide old beta/stable mode information in the new system. That\u0027s why it\u0027s marked as \n This class provides read-only state",
+      "parentUuid": "f85f486c_5d6701ad",
+      "range": {
+        "startLine": 44,
+        "startChar": 38,
+        "endLine": 44,
+        "endChar": 53
+      },
+      "revId": "c0690185a8d75cf49f7dd08b471d030aed3a71ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "cc2657a3_3ca11684",
         "filename": "includes/features/FeaturesManager.php",
         "patchSetId": 6
@@ -151,6 +199,30 @@
       "writtenOn": "2019-01-23T19:51:48Z",
       "side": 1,
       "message": "Should this be IFeature?",
+      "range": {
+        "startLine": 81,
+        "startChar": 11,
+        "endLine": 81,
+        "endChar": 17
+      },
+      "revId": "c0690185a8d75cf49f7dd08b471d030aed3a71ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ea60956_53b5a506",
+        "filename": "includes/features/FeaturesManager.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-24T10:47:09Z",
+      "side": 1,
+      "message": "nope, this retrieves IFeature object. You pass the feature identifier (identifier gets passed when you register a feature), this is used to retrieve single feature.",
+      "parentUuid": "cc2657a3_3ca11684",
       "range": {
         "startLine": 81,
         "startChar": 11,
@@ -186,6 +258,30 @@
     },
     {
       "key": {
+        "uuid": "9cee43ac_306bf8c4",
+        "filename": "includes/features/StableUserMode.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-24T10:47:09Z",
+      "side": 1,
+      "message": "those classes are temporary classes, I\u0027ll refactor those properly during T212802, for now I need an \"adapter\" that will provide old beta/stable mode information in the new system. That\u0027s why it\u0027s marked as \n\n This class provides read-only state",
+      "parentUuid": "bf3d2f8c_2dcbe705",
+      "range": {
+        "startLine": 44,
+        "startChar": 2,
+        "endLine": 44,
+        "endChar": 57
+      },
+      "revId": "c0690185a8d75cf49f7dd08b471d030aed3a71ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "49c05560_e0098ebf",
         "filename": "includes/features/UserModes.php",
         "patchSetId": 6
@@ -209,6 +305,30 @@
     },
     {
       "key": {
+        "uuid": "4f360bc3_ee0db0ec",
+        "filename": "includes/features/UserModes.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-24T10:47:09Z",
+      "side": 1,
+      "message": "I think (I\u0027m 99% sure), that null is silently casts to an empty array. But initializing this as empty array is a good practice, I\u0027ll do it.",
+      "parentUuid": "49c05560_e0098ebf",
+      "range": {
+        "startLine": 20,
+        "startChar": 9,
+        "endLine": 20,
+        "endChar": 16
+      },
+      "revId": "c0690185a8d75cf49f7dd08b471d030aed3a71ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "86fd2827_676c874f",
         "filename": "includes/features/UserModes.php",
         "patchSetId": 6
@@ -220,6 +340,30 @@
       "writtenOn": "2019-01-23T19:51:48Z",
       "side": 1,
       "message": "Isn\u0027t Traversable implied by ArrayIterator?",
+      "range": {
+        "startLine": 31,
+        "startChar": 12,
+        "endLine": 31,
+        "endChar": 37
+      },
+      "revId": "c0690185a8d75cf49f7dd08b471d030aed3a71ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceb0846d_b1aa9fcb",
+        "filename": "includes/features/UserModes.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-24T10:47:09Z",
+      "side": 1,
+      "message": "Good catch, that\u0027s correct. That was automatically added by PHPStorm and I didn\u0027t notice it. I\u0027ll fix it",
+      "parentUuid": "86fd2827_676c874f",
       "range": {
         "startLine": 31,
         "startChar": 12,

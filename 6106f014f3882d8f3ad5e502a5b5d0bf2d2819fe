@@ -22,6 +22,30 @@
       "revId": "6106f014f3882d8f3ad5e502a5b5d0bf2d2819fe",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "899ff7d2_4f146f97",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-01-24T10:47:09Z",
+      "side": 0,
+      "message": "It\u0027s temporary solution before I work on T212802. I wouldn\u0027t worry about it right now.\n\nAlso, it\u0027s done like that because we want to show BetaFeatures, that are not in Stable mode. The BetaUserMode will have to handle that logic instead of us doing that magic.",
+      "parentUuid": "09575f2f_8593503f",
+      "range": {
+        "startLine": 155,
+        "startChar": 28,
+        "endLine": 155,
+        "endChar": 50
+      },
+      "revId": "6106f014f3882d8f3ad5e502a5b5d0bf2d2819fe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
