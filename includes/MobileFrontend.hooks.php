@@ -1096,7 +1096,9 @@ class MobileFrontendHooks {
 			$desc = self::findTagline( $po, function ( $item ) {
 				return ExtMobileFrontend::getWikibaseDescription( $item );
 			} );
-			self::setTagline( $outputPage, $desc || '' );
+			if ( $desc ) {
+				self::setTagline( $outputPage, $desc );
+			}
 		}
 		return true;
 	}
