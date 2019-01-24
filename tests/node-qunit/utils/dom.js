@@ -14,6 +14,8 @@ module.exports = {
 			global.document = global.document || undefined;
 			sandbox.stub( global, 'window', new jsdom.JSDOM().window );
 			sandbox.stub( global, 'document', window.document );
+			global.Image = global.window.Image;
+			global.Event = global.window.Event;
 		}
 	}
 };
