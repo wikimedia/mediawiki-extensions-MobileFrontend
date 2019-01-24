@@ -31,6 +31,16 @@ function OverlayManager( router, appendToSelector ) {
 	this.appendToSelector = appendToSelector || 'body';
 }
 
+/**
+ * Attach an event to the overlays hide event
+ * @param {Overlay} overlay
+ */
+function attachHideEvent( overlay ) {
+	overlay.on( 'hide', function () {
+		overlay.emit( '_om_hide' );
+	} );
+}
+
 mfExtend( OverlayManager, {
 	/**
 	 * Don't try to hide the active overlay on a route change event triggered
@@ -108,16 +118,6 @@ mfExtend( OverlayManager, {
 	_processMatch: function ( match ) {
 		var factoryResult,
 			self = this;
-
-		/**
-		 * Attach an event to the overlays hide event
-		 * @param {Overlay} overlay
-		 */
-		function attachHideEvent( overlay ) {
-			overlay.on( 'hide', function () {
-				overlay.emit( '_om_hide' );
-			} );
-		}
 
 		if ( match ) {
 			if ( match.overlay ) {
@@ -304,6 +304,7 @@ mfExtend( OverlayManager, {
 		}
 		this._hideOverlay( this.stack[0].overlay );
 		this.stack[0].overlay = overlay;
+		attachHideEvent( overlay );
 		this._show( overlay );
 	}
 } );
