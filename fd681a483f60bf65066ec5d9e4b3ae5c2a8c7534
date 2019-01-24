@@ -16,6 +16,24 @@
       "revId": "fd681a483f60bf65066ec5d9e4b3ae5c2a8c7534",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "db3884c0_35ba9821",
+        "filename": "src/mobile.startup/lazyImages/lazyImageLoader.js",
+        "patchSetId": 17
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-24T21:05:07Z",
+      "side": 1,
+      "message": "I think this should be sorted in the latest PS.",
+      "parentUuid": "c46e9ed0_31010a2e",
+      "revId": "fd681a483f60bf65066ec5d9e4b3ae5c2a8c7534",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
