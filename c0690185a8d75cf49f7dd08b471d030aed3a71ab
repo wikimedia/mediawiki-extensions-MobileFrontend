@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "65f375a4_03e2428f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-24T23:54:34Z",
+      "side": 1,
+      "message": "I don\u0027t think so... or at least I\u0027m not sure how.\n\nEach config flag e.g. $wgMFExpandAllSectionsUserOption could be updated to include the amc flag pointing to false.\n\nIn JSDoc I\u0027d make a typedef for this kind of thing, but we don\u0027t have an equivalent in PHP right?\n\nWe could of course update each default to explicitly put amc false but that would require changes in mediawki-config as well for little gain.",
+      "parentUuid": "e1e39368_7e49cefa",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 3
+      },
+      "revId": "c0690185a8d75cf49f7dd08b471d030aed3a71ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "79ad4636_b4ef5363",
         "filename": "includes/ServiceWiring.php",
         "patchSetId": 6
@@ -193,6 +217,30 @@
       "side": 1,
       "message": "those classes are temporary classes, I\u0027ll refactor those properly during T212802, for now I need an \"adapter\" that will provide old beta/stable mode information in the new system. That\u0027s why it\u0027s marked as \n This class provides read-only state",
       "parentUuid": "f85f486c_5d6701ad",
+      "range": {
+        "startLine": 44,
+        "startChar": 38,
+        "endLine": 44,
+        "endChar": 53
+      },
+      "revId": "c0690185a8d75cf49f7dd08b471d030aed3a71ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b94a0000_145416b9",
+        "filename": "includes/features/BetaUserMode.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-24T23:54:34Z",
+      "side": 1,
+      "message": "Can we omit this in the mean time to avoid confusion?",
+      "parentUuid": "dd8365be_ff7551ea",
       "range": {
         "startLine": 44,
         "startChar": 38,
