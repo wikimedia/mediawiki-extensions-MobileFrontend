@@ -4,24 +4,19 @@
  * @group MobileFrontend
  * @coversDefaultClass MobileFrontendSkinHooks
  */
-class MobileFrontendSkinHooksTest extends MediaWikiTestCase {
+class MobileFrontendSkinHooksTest extends MediaWikiLangTestCase {
 	/**
-	 * @dataProvider getGetPluralLicenseInfo
+	 * @dataProvider providePluralLicenseInfoData
 	 * @covers ::getPluralLicenseInfo
 	 */
 	public function testGetPluralLicenseInfo( $isDisabledValue, $license, $expectedResult ) {
-		$msgObj = $this->getMockBuilder( 'Message' )
-			->disableOriginalConstructor()
-			->getMock();
-
+		$msgObj = $this->createMock( Message::class );
 		$msgObj->expects( $this->once() )
 			->method( 'isDisabled' )
 			->will( $this->returnValue( $isDisabledValue ) );
-
 		$msgObj->expects( $this->once() )
 			->method( 'inContentLanguage' )
 			->will( $this->returnValue( $msgObj ) );
-
 		$msgObj->expects( $this->any() )
 			->method( 'text' )
 			->will( $this->returnValue( 'and ' ) );
@@ -32,7 +27,17 @@ class MobileFrontendSkinHooksTest extends MediaWikiTestCase {
 		);
 	}
 
-	public function getGetPluralLicenseInfo() {
+	/**
+	 * @dataProvider providePluralLicenseInfoWithNullMessageObjectData
+	 * @covers ::getPluralLicenseInfo
+	 */
+	public function testGetPluralLicenseInfoWithNullMessageObject( $license, $expected ) {
+		$this->assertSame(
+			$expected, MobileFrontendSkinHooks::getPluralLicenseInfo( $license )
+		);
+	}
+
+	public function providePluralLicenseInfoData() {
 		return [
 			// message disabled, license message, result
 			[ false, 'test and test', 2 ],
@@ -41,6 +46,14 @@ class MobileFrontendSkinHooksTest extends MediaWikiTestCase {
 			[ true, 'test', 1 ],
 			[ false, null, 1 ],
 			[ true, null, 1 ]
+		];
+	}
+
+	public function providePluralLicenseInfoWithNullMessageObjectData() {
+		return [
+			// license message, expected results
+			[ 'test and test', 2 ],
+			[ 'test', 1 ]
 		];
 	}
 }
