@@ -69,9 +69,8 @@
 	 * @param {Page} page The page to edit.
 	 */
 	function setupEditor( page ) {
-		var uri, fragment, editorOverride, section,
-			isNewPage = page.options.id === 0,
-			leadSection = page.getLeadSectionElement();
+		var uri, fragment, editorOverride,
+			isNewPage = page.options.id === 0;
 
 		$allEditLinks.on( 'click', onEditLinkClick );
 		overlayManager.add( editorPath, function ( sectionId ) {
@@ -171,17 +170,11 @@
 			}
 		} );
 
-		// By default the editor opens section 0 (lead section). If lead section is empty, and
-		// there are sections on the page, open editor with section 1 instead.
-		// (Be careful not to do this when leadSection is null, as this means MobileFormatter
-		// has not been run and thus we could not identify the lead.)
-		section = 0;
-		if ( leadSection && !leadSection.text() && !isNewPage && page.getSections().length !== 0 ) {
-			section = 1;
-		}
 		$( '#ca-edit a' ).prop( 'href', function ( i, href ) {
 			var uri = new mw.Uri( href );
-			uri.query.section = section;
+			// By default the editor opens section 0 (lead section), rather than the whole article.
+			// This might be changed in the future (T210659).
+			uri.query.section = 0;
 			return uri.toString();
 		} );
 
