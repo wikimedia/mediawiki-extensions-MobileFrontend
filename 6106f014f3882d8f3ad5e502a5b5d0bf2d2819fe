@@ -46,6 +46,30 @@
       "revId": "6106f014f3882d8f3ad5e502a5b5d0bf2d2819fe",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2a1da006_56f4def3",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2019-01-24T12:47:39Z",
+      "side": 0,
+      "message": "Futher to @Niedzielski\u0027s feedback above, I would recommend the addition of an \"exclusive\" getter, e.g.\n\n    FeatureManager::getOnlyAvailableForMode\n\nWhich would return only those features that are available in the given mode.\n\nYour encapsulation is bleeding a little here. The client understands a little too much about user modes and their intersection – I\u0027ll grant that the client is somewhat specialised though.",
+      "parentUuid": "899ff7d2_4f146f97",
+      "range": {
+        "startLine": 155,
+        "startChar": 28,
+        "endLine": 155,
+        "endChar": 50
+      },
+      "revId": "6106f014f3882d8f3ad5e502a5b5d0bf2d2819fe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }

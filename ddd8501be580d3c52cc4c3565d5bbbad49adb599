@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dc8a9f4b_a4e8626b",
+        "filename": "includes/features/FeaturesManager.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2019-01-24T12:47:39Z",
+      "side": 1,
+      "message": "Friendly note that this exception is undocumented.",
+      "revId": "ddd8501be580d3c52cc4c3565d5bbbad49adb599",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

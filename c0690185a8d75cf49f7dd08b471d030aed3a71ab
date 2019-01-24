@@ -118,6 +118,23 @@
     },
     {
       "key": {
+        "uuid": "961ed473_f6aa4b99",
+        "filename": "includes/amc/UserMode.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2019-01-24T12:47:39Z",
+      "side": 1,
+      "message": "Is this assertion in the wrong place? You\u0027re relying on the ability to cast the value to a boolean on L65 above.",
+      "revId": "c0690185a8d75cf49f7dd08b471d030aed3a71ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7b942419_270a8f73",
         "filename": "includes/features/BetaUserMode.php",
         "patchSetId": 6
@@ -228,6 +245,52 @@
         "startChar": 11,
         "endLine": 81,
         "endChar": 17
+      },
+      "revId": "c0690185a8d75cf49f7dd08b471d030aed3a71ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "88a26f14_61162f8f",
+        "filename": "includes/features/FeaturesManager.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2019-01-24T12:47:39Z",
+      "side": 1,
+      "message": "Does it strike you as odd that this function never once gets or uses a User object representing the current user? Instead, it relies on the knowledge that all UserMode objects are constructed with the User object that represents the current user (although they could represent ANY user).\n\nSee my general comment for more thoughts on this.",
+      "range": {
+        "startLine": 98,
+        "startChar": 0,
+        "endLine": 106,
+        "endChar": 15
+      },
+      "revId": "c0690185a8d75cf49f7dd08b471d030aed3a71ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "904dd47a_d50ab5d4",
+        "filename": "includes/features/FeaturesManager.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2019-01-24T12:47:39Z",
+      "side": 1,
+      "message": "Should this function be removed?",
+      "range": {
+        "startLine": 109,
+        "startChar": 0,
+        "endLine": 120,
+        "endChar": 2
       },
       "revId": "c0690185a8d75cf49f7dd08b471d030aed3a71ab",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
