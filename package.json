@@ -69,11 +69,11 @@
     },
     {
       "path": "resources/dist/mobile.editor.ve.js",
-      "maxSize": "1.9KB"
+      "maxSize": "2.0KB"
     },
     {
       "path": "resources/dist/mobile.init.js",
-      "maxSize": "3.1KB"
+      "maxSize": "3.6KB"
     },
     {
       "path": "resources/dist/mobile.startup.js",

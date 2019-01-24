@@ -19,8 +19,12 @@
 		.surface {
 			overflow: hidden;
 		}
+	}
 
-		.surface.loading {
+	&.loading {
+		background-color: rgba( 255, 255, 255, 0.5 );
+
+		.overlay-content .surface {
 			height: 0;
 		}
 	}
@@ -56,4 +60,19 @@
 		border: 0;
 		height: 3em;
 	}
+}
+
+.overlay-header-container.toolbar-hidden {
+	transform: translateY( -100% );
+}
+
+.overlay-header-container.toolbar-shown {
+	transition: transform 250ms ease;
+	transform: translateY( 0 );
+	opacity: 1;
+}
+
+.overlay-header-container.toolbar-shown-done {
+	/* Turn off transforms when done to avoid Safari rendering bugs (T202935) */
+	transform: none;
 }

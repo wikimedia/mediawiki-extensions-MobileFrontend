@@ -1,6 +1,9 @@
 /* global $ */
 var M = require( '../mobile.startup/moduleLoaderSingleton' ),
+	util = require( '../mobile.startup/util' ),
 	router = mw.loader.require( 'mediawiki.router' ),
+	ProgressBarWidget = require( './ProgressBarWidget' ),
+	Overlay = require( '../mobile.startup/Overlay' ),
 	OverlayManager = require( '../mobile.startup/OverlayManager' ),
 	overlayManager = OverlayManager.getSingleton(),
 	loader = require( '../mobile.startup/rlModuleLoader' ),
@@ -66,6 +69,7 @@ function setupEditor( page, skin ) {
 	$allEditLinks.on( 'click', onEditLinkClick );
 	overlayManager.add( editorPath, function ( sectionId ) {
 		var
+			$loading, loadingOverlay, scrollbarWidth,
 			$content = $( '#mw-content-text' ),
 			preferredEditor = getPreferredEditor(),
 			editorOptions = {
@@ -82,9 +86,36 @@ function setupEditor( page, skin ) {
 				contentDir: $content.attr( 'dir' ),
 				sessionId: user.generateRandomSessionId()
 			},
-			loadingOverlay,
+			veAnimationDelayDeferred, abortableDataPromise,
 			visualEditorNamespaces = ( veConfig && veConfig.namespaces ) || [],
 			initMechanism = mw.util.getParamValue( 'redlink' ) ? 'new' : 'click';
+
+		function showLoadingVE() {
+			var progressBar = new ProgressBarWidget();
+			// The progress bar has to stay visible while we swap loadingOverlay for
+			// VisualEditorOverlay, so put it into another "overlay" on top of everything else.
+			// TODO: In the future where loadingOverlay is removed (T214641#4907694),
+			// it can be moved inside the VisualEditorOverlay.
+			$loading = $( '<div>' )
+				.addClass( 'overlay-loading-ve' )
+				.append( progressBar.$element );
+			$( document.body ).append( $loading ).addClass( 've-loading' );
+		}
+
+		function clearLoadingVE() {
+			abortableDataPromise.abort();
+			$loading.detach();
+			$( '#content' ).css( {
+				transform: '',
+				'padding-bottom': '',
+				'margin-bottom': ''
+			} );
+			$( '#mw-mf-page-center' ).css( {
+				'padding-right': '',
+				'box-sizing': ''
+			} );
+			$( document.body ).removeClass( 've-loading' );
+		}
 
 		/**
 		 * Log init event to edit schema.
@@ -155,14 +186,12 @@ function setupEditor( page, skin ) {
 			// Inform other interested code that we're loading the editor
 			mw.hook( 'mobileFrontend.editorOpening' ).fire();
 
-			// Display an overlay identical to loader.loadModule( ... )
-			loadingOverlay = loader.newLoadingOverlay();
-			loadingOverlay.appendTo( document.body );
-			loadingOverlay.show();
+			showLoadingVE();
+			veAnimationDelayDeferred = util.Deferred();
 
 			editorOptions.mode = 'visual';
 			editorOptions.dataPromise = mw.loader.using( 'ext.visualEditor.targetLoader' ).then( function () {
-				return mw.libs.ve.targetLoader.requestPageData(
+				abortableDataPromise = mw.libs.ve.targetLoader.requestPageData(
 					editorOptions.mode,
 					editorOptions.titleObj.getPrefixedDb(),
 					{
@@ -173,20 +202,88 @@ function setupEditor( page, skin ) {
 						// but the class hasn't loaded yet.
 						targetName: 'mobile'
 					} );
+				// Ensure the scroll animation finishes before we load the editor
+				return veAnimationDelayDeferred.then( function () {
+					return abortableDataPromise;
+				} );
 			} );
-			return mw.loader.using( 'ext.visualEditor.targetLoader' ).then( function () {
+
+			mw.loader.using( 'ext.visualEditor.targetLoader' ).then( function () {
 				mw.libs.ve.targetLoader.addPlugin( 'mobile.editor.ve' );
 				return mw.libs.ve.targetLoader.loadModules( editorOptions.mode );
 			} ).then( function () {
 				var VisualEditorOverlay = M.require( 'mobile.editor.overlay/VisualEditorOverlay' ),
-					EditorOverlay = M.require( 'mobile.editor.overlay/EditorOverlay' );
+					EditorOverlay = M.require( 'mobile.editor.overlay/EditorOverlay' ),
+					overlay;
 				editorOptions.EditorOverlay = EditorOverlay;
-				loadingOverlay.hide();
-				return new VisualEditorOverlay( editorOptions );
+				overlay = new VisualEditorOverlay( editorOptions );
+				overlay.on( 'editor-loaded', clearLoadingVE );
+				return overlay;
 			}, function () {
-				loadingOverlay.hide();
 				return loadSourceEditor();
+			} ).then( function ( overlay ) {
+				// Make sure the user did not close the overlay while we were loading
+				var overlayData = overlayManager.stack[0];
+				if ( !overlayData || overlayData.overlay !== loadingOverlay ) {
+					return;
+				}
+				loadingOverlay.off( 'hide', clearLoadingVE );
+				// Clear progress bar if loading is aborted after overlay is replaced
+				overlay.on( 'hide', clearLoadingVE );
+				overlayManager.replaceCurrent( overlay );
 			} );
+
+			scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+			// Like loadingOverlay(), but without the spinner
+			loadingOverlay = new Overlay( {
+				className: 'overlay overlay-loading',
+				noHeader: true
+			} );
+			// Clear progress bar if loading is aborted before overlay is replaced
+			loadingOverlay.on( 'hide', clearLoadingVE );
+			// Should this be a subclass?
+			loadingOverlay.show = function () {
+				var $page, $content, $sectionTop, fakeScroll;
+				Overlay.prototype.show.call( this );
+				$page = $( '#mw-mf-page-center' );
+				$content = $( '#content' );
+				if ( sectionId === '0' || sectionId === 'all' ) {
+					$sectionTop = $( '#bodyContent' );
+				} else {
+					$sectionTop = $( '[data-section="' + sectionId + '"]' )
+						.closest( 'h1, h2, h3, h4, h5, h6' );
+				}
+				// If there was a scrollbar that was hidden when the overlay was shown, add a margin
+				// with the same width. This is mostly so that developers testing this on desktop
+				// don't go crazy when the fake scroll fails to line up.
+				$page.css( {
+					'padding-right': '+=' + scrollbarWidth,
+					'box-sizing': 'border-box'
+				} );
+				// Pretend that we didn't just scroll the page to the top.
+				$page.prop( 'scrollTop', this.scrollTop );
+				// Then, pretend that we're scrolling to the position of the clicked heading.
+				fakeScroll = $sectionTop.prop( 'offsetTop' ) - this.scrollTop;
+				// Adjust for height of the toolbar.
+				fakeScroll -= 48;
+				if (
+					sectionId === '0' || sectionId === 'all' ||
+					mw.config.get( 'wgVisualEditorConfig' ).enableVisualSectionEditing === true
+				) {
+					// Adjust for surface padding. Only needed if we're at the beginning of the doc.
+					fakeScroll -= 16;
+				}
+				$content.css( {
+					// Use transform instead of scroll for smoother animation (via CSS transitions).
+					transform: 'translate( 0, ' + -fakeScroll + 'px )',
+					// If the clicked heading is near the end of the page, we might need to insert
+					// some extra space to allow us to scroll "beyond the end" of the page.
+					'padding-bottom': '+=' + fakeScroll,
+					'margin-bottom': '-=' + fakeScroll
+				} );
+				setTimeout( veAnimationDelayDeferred.resolve, 500 );
+			};
+			return loadingOverlay;
 		} else {
 			return loadSourceEditor();
 		}

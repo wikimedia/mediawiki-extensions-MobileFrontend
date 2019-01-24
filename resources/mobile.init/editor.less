@@ -1,0 +1,41 @@
+.overlay-loading-ve {
+	position: fixed;
+	top: 50%;
+	width: 100%;
+	z-index: 2;
+}
+
+// We want these transitions to only occur when entering the editor, but not when leaving it.
+// Leaving uses browser back navigation and we shouldn't "delay" it.
+.ve-loading {
+	// Intentionally slower than most UI animations to make the transition obvious to the user
+	// (and loading the editor is probably going to take >500ms anyway).
+	@timing: 400ms 100ms;
+
+	.content .section-heading .indicator {
+		transition: width @timing, min-width @timing, opacity @timing;
+		width: 0;
+		min-width: 0;
+		opacity: 0;
+
+		&:before {
+			// Prevent icon from scaling during the transition
+			width: 1.5em;
+		}
+	}
+
+	.mw-editsection {
+		transition: opacity @timing;
+		opacity: 0;
+	}
+
+	.page-actions-menu {
+		transition: border-bottom-color @timing;
+		border-bottom-color: transparent;
+	}
+
+	#content {
+		transition: padding-bottom @timing, margin-bottom @timing, transform @timing;
+		// Values set dynamically in JS code
+	}
+}

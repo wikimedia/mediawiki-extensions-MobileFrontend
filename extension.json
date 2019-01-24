@@ -212,6 +212,12 @@
 			"styles": [
 				"resources/mobile.init/mobile.less"
 			],
+			"skinStyles": {
+				"minerva": [
+					"resources/mobile.init/ProgressBarWidget.less",
+					"resources/mobile.init/editor.less"
+				]
+			},
 			"scripts": [
 				"resources/dist/mobile.init.js"
 			]

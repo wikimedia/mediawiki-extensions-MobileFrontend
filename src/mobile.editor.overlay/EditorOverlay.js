@@ -549,6 +549,7 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 		} ).then(
 			function () {
 				options.EditorOverlay = EditorOverlay;
+				options.switched = true;
 				self.hideSpinner();
 				// Unset classes from other editor
 				delete options.className;

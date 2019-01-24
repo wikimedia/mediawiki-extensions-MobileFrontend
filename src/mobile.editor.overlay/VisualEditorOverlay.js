@@ -103,12 +103,22 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 	show: function () {
 		EditorOverlayBase.prototype.show.apply( this, arguments );
 
+		// We don't use the default spinner. Instead, rely on the progressbar from init/editor.js.
+		if ( !this.options.switched ) {
+			this.hideSpinner();
+			this.$el.addClass( 'loading' );
+		}
+
 		this.target = ve.init.mw.targetFactory.create( 'article', this, {
 			$element: this.$el,
 			// || null so that scrolling is not triggered for the lead (0) section
 			// (which has no header to scroll to)
 			section: this.options.sectionId || null
 		} );
+		this.target.once( 'surfaceReady', function () {
+			this.emit( 'editor-loaded' );
+			this.$el.removeClass( 'loading' );
+		}.bind( this ) );
 		this.target.load( this.options.dataPromise );
 	},
 	/**

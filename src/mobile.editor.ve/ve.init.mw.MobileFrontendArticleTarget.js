@@ -138,7 +138,7 @@ MobileFrontendArticleTarget.prototype.setSurface = function ( surface ) {
 	Target.super.prototype.setSurface.apply( this, arguments );
 
 	if ( changed ) {
-		surface.$element.addClass( 'content loading' );
+		surface.$element.addClass( 'content' );
 		this.$overlaySurface.append( surface.$element );
 	}
 };
@@ -151,11 +151,16 @@ MobileFrontendArticleTarget.prototype.setSurface = function ( surface ) {
 MobileFrontendArticleTarget.prototype.surfaceReady = function () {
 	var surface = this.getSurface();
 
+	if ( this.teardownPromise ) {
+		// Loading was cancelled, the overlay is already closed at this point. Do nothing.
+		// Otherwise e.g. scrolling from #goToHeading would kick in and mess things up.
+		return;
+	}
+
 	// Parent method
 	MobileFrontendArticleTarget.super.prototype.surfaceReady.apply( this, arguments );
 
 	this.overlay.hideSpinner();
-	surface.$element.removeClass( 'loading' );
 
 	surface.getContext().connect( this, { resize: 'adjustContentPadding' } );
 	this.adjustContentPadding();
@@ -282,6 +287,49 @@ MobileFrontendArticleTarget.prototype.tryTeardown = function () {
 			// eslint-disable-next-line no-restricted-properties
 			window.history.back();
 		} );
+};
+
+MobileFrontendArticleTarget.prototype.load = function () {
+	var surface;
+
+	// Create dummy surface to show toolbar while loading
+	// Call ve.init.Target directly to avoid firing surfaceReady
+	surface = ve.init.Target.prototype.addSurface.call( this, new ve.dm.Document( [
+		{ type: 'paragraph' }, { type: '/paragraph' },
+		{ type: 'internalList' }, { type: '/internalList' }
+	] ) );
+	surface.setReadOnly( true );
+	// setSurface creates dummy toolbar
+	this.setSurface( surface );
+
+	return MobileFrontendArticleTarget.super.prototype.load.apply( this, arguments );
+};
+
+MobileFrontendArticleTarget.prototype.setupToolbar = function ( surface ) {
+	var $header = this.overlay.$el.find( '.overlay-header-container' );
+
+	// Parent method
+	MobileFrontendArticleTarget.super.prototype.setupToolbar.call( this, surface );
+
+	// Animate the toolbar sliding into place.
+	// Do not animate if we're replacing the wikitext editor toolbar.
+	if ( !this.overlay.options.switched ) {
+		$header.addClass( 'toolbar-hidden' );
+		setTimeout( function () {
+			$header.addClass( 'toolbar-shown' );
+			setTimeout( function () {
+				$header.addClass( 'toolbar-shown-done' );
+			}, 250 );
+		} );
+	}
+};
+
+MobileFrontendArticleTarget.prototype.attachToolbar = function () {
+	// Move the toolbar to the overlay header
+	// FIXME We override the parent method because it does this wrong
+	// (uses a global selector for the .toolbar)
+	this.overlay.$el.find( '.overlay-header > .toolbar' ).append( this.toolbar.$element );
+	this.toolbar.initialize();
 };
 
 module.exports = MobileFrontendArticleTarget;
