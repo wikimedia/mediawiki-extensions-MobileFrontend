@@ -962,9 +962,7 @@
 		],
 		"MFNoMobileCategory": false,
 		"MFNoMobilePages": [],
-		"MFSpecialPageTaglines": {
-			"MobileOptions": "mobile-frontend-settings-tagline"
-		},
+		"MFSpecialPageTaglines": {},
 		"MFNearbyRange": 10000,
 		"MFNearby": false,
 		"MFSearchAPIParams": {
