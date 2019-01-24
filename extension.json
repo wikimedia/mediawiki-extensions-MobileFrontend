@@ -181,6 +181,11 @@
 		},
 		"mobile.init": {
 			"dependencies": [
+				"mediawiki.api",
+				"mediawiki.jqueryMsg",
+				"mediawiki.router",
+				"mediawiki.storage",
+				"mediawiki.Uri",
 				"mediawiki.experiments",
 				"mediawiki.user",
 				"mediawiki.util",
@@ -192,6 +197,10 @@
 				"desktop"
 			],
 			"messages": [
+				"mobile-frontend-editor-disabled",
+				"mobile-frontend-editor-disabled-anon",
+				"mobile-frontend-editor-uploadenable",
+				"apierror-readonly",
 				"mobile-frontend-panel-betaoptin-msg",
 				"mobile-frontend-panel-ok",
 				"mobile-frontend-console-recruit",
@@ -311,29 +320,13 @@
 			]
 		},
 		"mobile.editor": {
+			"deprecated": true,
 			"targets": [
 				"mobile",
 				"desktop"
 			],
 			"dependencies": [
-				"mediawiki.api",
-				"mediawiki.jqueryMsg",
-				"mediawiki.router",
-				"mediawiki.storage",
-				"mediawiki.Uri",
-				"mediawiki.user",
-				"mediawiki.util",
-				"mobile.startup",
 				"mobile.init"
-			],
-			"messages": [
-				"mobile-frontend-editor-disabled",
-				"mobile-frontend-editor-disabled-anon",
-				"mobile-frontend-editor-uploadenable",
-				"apierror-readonly"
-			],
-			"scripts": [
-				"resources/mobile.editor/init.js"
 			]
 		},
 		"mobile.editor.overlay": {

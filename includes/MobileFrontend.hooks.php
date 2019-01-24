@@ -441,7 +441,6 @@ class MobileFrontendHooks {
 	public static function onResourceLoaderGetConfigVars( &$vars ) {
 		$context = MobileContext::singleton();
 		$config = $context->getMFConfig();
-
 		$pageProps = $config->get( 'MFQueryPropModules' );
 		$searchParams = $config->get( 'MFSearchAPIParams' );
 		// Avoid API warnings and allow integration with optional extensions.
@@ -837,13 +836,6 @@ class MobileFrontendHooks {
 			// We load MediaWiki:Mobile.css/js instead
 			// We load mobile.init so that lazy loading images works on all skins
 			$out->addModules( [ 'mobile.site', 'mobile.init' ] );
-			if ( !$title->isSpecialPage() && self::isPageContentModelEditable( $title ) ) {
-				// TODO: Mobile editor doesn't work well with other skins yet (it looks horribly broken
-				// without some styles that are only defined by Minerva).
-				if ( $skin->getSkinName() === 'minerva' ) {
-					$out->addModules( [ 'mobile.editor' ] );
-				}
-			}
 			if ( $title->isMainPage() && $config->get( 'MFMobileMainPageCss' ) ) {
 				$out->addModuleStyles( [ 'mobile.mainpage.css' ] );
 			}
@@ -1195,6 +1187,8 @@ class MobileFrontendHooks {
 		}
 		$title = $out->getTitle();
 
+		// mobile.init
+		$vars['wgMFIsPageContentModelEditable'] = self::isPageContentModelEditable( $title );
 		// Accesses getBetaGroupMember so does not belong in onResourceLoaderGetConfigVars
 		$vars['wgMFExpandAllSectionsUserOption'] =
 			$featureManager->isFeatureAvailableInContext( 'MFExpandAllSectionsUserOption', $context );
