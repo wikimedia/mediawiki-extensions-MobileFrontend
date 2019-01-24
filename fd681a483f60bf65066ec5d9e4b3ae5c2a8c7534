@@ -34,6 +34,24 @@
       "revId": "fd681a483f60bf65066ec5d9e4b3ae5c2a8c7534",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8aa39daa_d141e509",
+        "filename": "src/mobile.startup/lazyImages/lazyImageLoader.js",
+        "patchSetId": 17
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-24T23:58:12Z",
+      "side": 1,
+      "message": "Confirmed.",
+      "parentUuid": "db3884c0_35ba9821",
+      "revId": "fd681a483f60bf65066ec5d9e4b3ae5c2a8c7534",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }

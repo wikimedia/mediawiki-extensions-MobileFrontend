@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "abab966c_79a345dc",
+        "filename": "src/mobile.startup/lazyImages/lazyImageLoader.js",
+        "patchSetId": 20
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-24T23:58:12Z",
+      "side": 1,
+      "message": "We could have thrown a deprecation warning here for completeness to serve as a reminder to do this.",
+      "revId": "e3f57237e3ffdb73faed5400fc97be227caf9493",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
