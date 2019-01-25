@@ -16,6 +16,24 @@
       "revId": "3b0ac855732a714b5385e3a531709b30dace18aa",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2da95231_e8a4f13d",
+        "filename": "webpack.config.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 208,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-25T00:39:08Z",
+      "side": 1,
+      "message": "Yes, mostly due to the `namedModules: true` setting AFAIK: https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/extensions/MobileFrontend/+/master/webpack.config.js#102",
+      "parentUuid": "e6b9165d_3eb76773",
+      "revId": "3b0ac855732a714b5385e3a531709b30dace18aa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
