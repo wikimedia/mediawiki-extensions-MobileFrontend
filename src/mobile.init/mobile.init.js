@@ -9,6 +9,9 @@
  */
 var currentPage, skin, exports,
 	storage = mw.storage,
+	skinName = mw.config.get( 'skin' ),
+	isPageContentModelEditable = mw.config.get( 'wgMFIsPageContentModelEditable' ),
+	editor = require( './editor' ),
 	PageGateway = require( '../mobile.startup/PageGateway' ),
 	BetaOptinPanel = require( './BetaOptinPanel' ),
 	gateway = new PageGateway( new mw.Api() ),
@@ -24,9 +27,10 @@ var currentPage, skin, exports,
 	Skin = require( '../mobile.startup/Skin' ),
 	eventBus = require( '../mobile.startup/eventBusSingleton' ),
 	ReferencesMobileViewGateway = require( '../mobile.startup/references/ReferencesMobileViewGateway' ),
+	page = getCurrentPage(),
 	skinData = {
 		el: 'body',
-		page: getCurrentPage(),
+		page: page,
 		referencesGateway: ReferencesMobileViewGateway.getSingleton(),
 		eventBus: eventBus
 	};
@@ -187,12 +191,21 @@ if ( window.console && window.console.log && window.console.log.apply &&
 }
 /* eslint-enable no-console */
 
+// setup editor
+if ( !page.inNamespace( 'special' ) && isPageContentModelEditable ) {
+	// TODO: Mobile editor doesn't work well with other skins yet (it looks horribly broken
+	// without some styles that are only defined by Minerva).
+	if ( skinName === 'minerva' ) {
+		editor( page, skin );
+	}
+}
+
 exports = {
 	getCurrentPage: getCurrentPage
 };
 
 // Make getCurrentPage available to mobile.editor and Minerva modules
 mfUtil.extend( mw.mobileFrontend, exports );
-// expose to Minerva and mobile.editor
-mw.mobileFrontend.define( 'mobile.init/skin', skin );
+// expose to Minerva (skins.minerva.scripts)
+mw.mobileFrontend.define( 'mobile.init/skin', skin ); // resource-modules-disable-line
 module.exports = exports;
