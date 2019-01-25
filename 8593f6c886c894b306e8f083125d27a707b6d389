@@ -73,6 +73,30 @@
     },
     {
       "key": {
+        "uuid": "7eb0a13c_5dacd180",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-25T17:05:48Z",
+      "side": 1,
+      "message": "I think so.\nThis is also the plan for mInerva - if you look at all the ResourceLoader modules in there, they are also effectively entry points.\n\nmobile.startup being an npm package without side effects will be crucially for delivering https://phabricator.wikimedia.org/T171000",
+      "parentUuid": "58cf91b9_e28dee2a",
+      "range": {
+        "startLine": 7,
+        "startChar": 39,
+        "endLine": 7,
+        "endChar": 44
+      },
+      "revId": "8593f6c886c894b306e8f083125d27a707b6d389",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "26e4b459_8e3a728a",
         "filename": "extension.json",
         "patchSetId": 5
@@ -226,6 +250,30 @@
       "side": 1,
       "message": "I peeked into Page while reviewing this patch. Woo, that module scares me a little bit! Either is fine with me but I think the current .options.id approach is easier for me to feel confident about.",
       "parentUuid": "338e74f9_eb5cee56",
+      "range": {
+        "startLine": 295,
+        "startChar": 43,
+        "endLine": 295,
+        "endChar": 71
+      },
+      "revId": "8593f6c886c894b306e8f083125d27a707b6d389",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ad12fe08_2e011085",
+        "filename": "src/mobile.init/editor.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 295,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-25T17:05:48Z",
+      "side": 1,
+      "message": "tell me about it. Okay, I\u0027ve pulled this into a local variable for readability.",
+      "parentUuid": "fbf56a67_ba8e3312",
       "range": {
         "startLine": 295,
         "startChar": 43,
