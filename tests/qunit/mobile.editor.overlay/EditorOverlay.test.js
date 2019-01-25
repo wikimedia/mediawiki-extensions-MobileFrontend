@@ -1,21 +1,36 @@
 ( function ( M ) {
 	var EditorGateway = M.require( 'mobile.editor.api/EditorGateway' ),
+		sandbox, messageStub, getContentStub, previewResolve,
+		util = M.require( 'mobile.startup/util' ),
 		EditorOverlay = M.require( 'mobile.editor.overlay/EditorOverlay' ),
-		BlockMessage = M.require( 'mobile.editor.overlay/BlockMessage' );
+		BlockMessage = M.require( 'mobile.editor.overlay/BlockMessage' ),
+		testUrl = '/w/index.php?title=User:Test';
 
 	QUnit.module( 'MobileFrontend mobile.editor.overlay/EditorOverlay', {
 		beforeEach: function () {
+			sandbox = this.sandbox;
+			sandbox.stub( mw, 'msg' ).withArgs( 'mobile-frontend-editor-continue' ).returns( 'Continue' )
+				.withArgs( 'mobile-frontend-editor-save' ).returns( 'Save' );
+
 			// prevent event logging requests
-			this.sandbox.stub( EditorOverlay.prototype, 'log' ).returns( $.Deferred().resolve() );
-			this.messageStub = this.sandbox.stub( BlockMessage.prototype, 'initialize' );
-			this.sandbox.stub( BlockMessage.prototype, 'toggle' );
-			this.getContentStub = this.sandbox.stub( EditorGateway.prototype, 'getContent' );
+			sandbox.stub( EditorOverlay.prototype, 'log' ).returns( util.Deferred().resolve() );
+			messageStub = sandbox.stub( BlockMessage.prototype, 'initialize' );
+			sandbox.stub( BlockMessage.prototype, 'toggle' );
+			getContentStub = sandbox.stub( EditorGateway.prototype, 'getContent' );
 			// avoid waiting to load 'moment',
 			// using `expiry: 'infinity'` below ensures we don't need it
-			this.sandbox.stub( mw.loader, 'using' ).returns( { then: function ( callback ) {
+			sandbox.stub( mw.loader, 'using' ).returns( { then: function ( callback ) {
 				callback();
 			} } );
-			this.getContentStub.returns( $.Deferred().resolve( {
+			sandbox.stub( mw, 'confirmCloseWindow' ).returns( {
+				release: function () {}
+			} );
+			sandbox.stub( window, 'scrollTo' );
+			sandbox.stub( mw.util, 'getUrl' ).returns( '/w/index.php?title=User:Test' );
+			sandbox.stub( mw.config, 'get' ).withArgs( 'wgMFEditorOptions' ).returns( {
+				skipPreview: true
+			} ).withArgs( 'wgFormattedNamespaces' ).returns( { 2: 'User' } );
+			getContentStub.returns( util.Deferred().resolve( {
 				text: 'section 0',
 				user: {
 					id: 1,
@@ -24,28 +39,27 @@
 				block: null,
 				blockedByUser: null
 			} ) );
-			this.previewResolve = $.Deferred().resolve( { text: 'previewtest' } );
-			this.sandbox.stub( EditorGateway.prototype, 'getPreview' )
-				.returns( this.previewResolve );
+			previewResolve = util.Deferred().resolve( { text: 'previewtest' } );
+			sandbox.stub( EditorGateway.prototype, 'getPreview' )
+				.returns( previewResolve );
 		}
 	} );
 
 	QUnit.test( '#initialize, blocked user', function ( assert ) {
-		var messageStub = this.messageStub,
-			dBlockedContent = $.Deferred().resolve( {
-				text: 'section 0',
-				userinfo: {
-					options: {
-						gender: 'female'
-					}
-				},
-				blockinfo: {
-					blockedby: 'Test',
-					blockexpiry: 'infinity',
-					blockreason: 'Testreason'
+		var dBlockedContent = util.Deferred().resolve( {
+			text: 'section 0',
+			userinfo: {
+				options: {
+					gender: 'female'
 				}
-			} );
-		this.getContentStub.returns( dBlockedContent );
+			},
+			blockinfo: {
+				blockedby: 'Test',
+				blockexpiry: 'infinity',
+				blockreason: 'Testreason'
+			}
+		} );
+		getContentStub.returns( dBlockedContent );
 		// eslint-disable-next-line no-new
 		new EditorOverlay( {
 			title: 'test.css'
@@ -63,7 +77,7 @@
 					},
 					creator: {
 						name: 'Test',
-						url: mw.util.getUrl( 'User:Test' )
+						url: testUrl
 					},
 					expiry: null,
 					duration: null,
@@ -87,7 +101,7 @@
 		assert.strictEqual( editorOverlay.gateway.oldId, undefined );
 		assert.strictEqual( editorOverlay.gateway.sectionId, 0 );
 
-		return this.getContentStub().then( function () {
+		return getContentStub().then( function () {
 			assert.strictEqual( editorOverlay.$content.val(), 'section 0', 'load correct section' );
 		} );
 	} );
@@ -97,10 +111,12 @@
 			title: 'test.css'
 		} );
 
-		assert.strictEqual( editorOverlay.gateway.title, 'test.css' );
-		assert.strictEqual( editorOverlay.gateway.isNewPage, undefined );
-		assert.strictEqual( editorOverlay.gateway.oldId, undefined );
-		assert.strictEqual( editorOverlay.gateway.sectionId, undefined );
+		return getContentStub().then( function () {
+			assert.strictEqual( editorOverlay.gateway.title, 'test.css' );
+			assert.strictEqual( editorOverlay.gateway.isNewPage, undefined );
+			assert.strictEqual( editorOverlay.gateway.oldId, undefined );
+			assert.strictEqual( editorOverlay.gateway.sectionId, undefined );
+		} );
 	} );
 
 	QUnit.test( '#preview', function ( assert ) {
@@ -111,29 +127,19 @@
 
 		editorOverlay.onStageChanges();
 
-		return this.previewResolve.then( function () {
+		return previewResolve.then( function () {
 			assert.strictEqual( editorOverlay.$preview.text(), '\npreviewtest\n', 'preview loaded correctly' );
 		} );
 	} );
 
 	QUnit.test( '#without-preview', function ( assert ) {
-		var editorOverlay;
-
-		this.sandbox.stub( mw.config, 'get', function ( key ) {
-			if ( key === 'wgMFEditorOptions' ) {
-				return {
-					skipPreview: true
-				};
-			} else {
-				return mw.config.values[ key ];
-			}
-		} );
-
-		editorOverlay = new EditorOverlay( {
+		var editorOverlay = new EditorOverlay( {
 			title: 'test',
 			sectionId: 0
 		} );
-		assert.strictEqual( editorOverlay.$( '.continue' ).text(), 'Save', 'no preview loaded' );
+		return getContentStub().then( function () {
+			assert.strictEqual( editorOverlay.$( '.continue' ).text(), 'Save', 'no preview loaded' );
+		} );
 	} );
 
 	QUnit.test( '#initialize, as anonymous', function ( assert ) {
@@ -142,7 +148,13 @@
 			isAnon: true
 		} );
 
-		assert.ok( editorOverlay.$anonWarning.length > 0, 'Editorwarning (IP will be saved) visible.' );
-		assert.ok( editorOverlay.$( '.anonymous' ).length > 0, 'Continue login has a second class.' );
+		// EditorOverlay triggers a call to _loadContent so will always start an async request.
+		// Make this test async to ensure it finishes and doesn't cause side effects to other
+		// functions.
+		return getContentStub().then( function () {
+			assert.ok( editorOverlay.$anonWarning.length > 0, 'Editorwarning (IP will be saved) visible.' );
+			assert.ok( editorOverlay.$( '.anonymous' ).length > 0, 'Continue login has a second class.' );
+		} );
 	} );
+
 }( mw.mobileFrontend ) );
