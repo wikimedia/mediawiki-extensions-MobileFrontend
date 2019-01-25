@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e6b9165d_3eb76773",
+        "filename": "webpack.config.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 208,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-25T00:29:00Z",
+      "side": 1,
+      "message": "Interesting that this gets bumped by 0.2kb when all we\u0027re doing is moving some content into a new file. Is there a cost to every file we add?",
+      "revId": "3b0ac855732a714b5385e3a531709b30dace18aa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
