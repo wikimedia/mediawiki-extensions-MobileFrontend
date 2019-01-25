@@ -8,25 +8,27 @@
  */
 
 /* global ve */
+var MobileArticleTarget = ve.init.mw.MobileArticleTarget,
+	parseSaveError = require( '../mobile.editor.overlay/parseSaveError' ),
+	Target = ve.init.mw.Target;
 
 /**
  * MediaWiki mobile frontend article target.
  *
  * @class
- * @extends ve.init.mw.MobileArticleTarget
+ * @extends MobileArticleTarget
  *
  * @param {VisualEditorOverlay} overlay Mobile frontend overlay
  * @param {Object} [config] Configuration options
  */
-// eslint-disable-next-line max-len
-ve.init.mw.MobileFrontendArticleTarget = function VeInitMwMobileFrontendArticleTarget( overlay, config ) {
+function MobileFrontendArticleTarget( overlay, config ) {
 	this.overlay = overlay;
 	this.$overlay = overlay.$el;
 	this.$overlaySurface = overlay.$el.find( '.surface' );
 	this.useScrollContainer = ve.init.platform.constructor.static.isIos();
 
 	// Parent constructor
-	ve.init.mw.MobileFrontendArticleTarget.super.call( this, config );
+	MobileFrontendArticleTarget.super.call( this, config );
 
 	// Events
 	this.onWindowScrollDebounced = ve.debounce( this.onWindowScroll.bind( this ), 100 );
@@ -34,15 +36,15 @@ ve.init.mw.MobileFrontendArticleTarget = function VeInitMwMobileFrontendArticleT
 
 	// Initialization
 	this.$element.addClass( 've-init-mw-mobileFrontendArticleTarget' );
-};
+}
 
 /* Inheritance */
 
-OO.inheritClass( ve.init.mw.MobileFrontendArticleTarget, ve.init.mw.MobileArticleTarget );
+OO.inheritClass( MobileFrontendArticleTarget, MobileArticleTarget );
 
 /* Static Properties */
 
-ve.init.mw.MobileFrontendArticleTarget.static.parseSaveError = mw.mobileFrontend.require( 'mobile.editor.api/parseSaveError' );
+MobileFrontendArticleTarget.static.parseSaveError = parseSaveError;
 
 /* Methods */
 
@@ -51,9 +53,9 @@ ve.init.mw.MobileFrontendArticleTarget.static.parseSaveError = mw.mobileFrontend
  * @memberof MobileFrontendArticleTarget
  * @instance
  */
-ve.init.mw.MobileFrontendArticleTarget.prototype.destroy = function () {
+MobileFrontendArticleTarget.prototype.destroy = function () {
 	// Parent method
-	ve.init.mw.MobileFrontendArticleTarget.super.prototype.destroy.call( this );
+	MobileFrontendArticleTarget.super.prototype.destroy.call( this );
 
 	$( this.getElementWindow() ).off( 'scroll', this.onWindowScrollDebounced );
 	this.$overlay.css( 'padding-top', '' );
@@ -64,12 +66,12 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.destroy = function () {
  * @memberof MobileFrontendArticleTarget
  * @instance
  */
-ve.init.mw.MobileFrontendArticleTarget.prototype.getScrollContainer = function () {
+MobileFrontendArticleTarget.prototype.getScrollContainer = function () {
 	if ( this.useScrollContainer ) {
 		return this.overlay.$el.find( '.overlay-content' );
 	}
 	// Parent method
-	return ve.init.mw.MobileFrontendArticleTarget.super.prototype.getScrollContainer.call( this );
+	return MobileFrontendArticleTarget.super.prototype.getScrollContainer.call( this );
 };
 
 /*
@@ -77,7 +79,7 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.getScrollContainer = function (
  * @memberof MobileFrontendArticleTarget
  * @instance
  */
-ve.init.mw.MobileFrontendArticleTarget.prototype.isToolbarOverSurface = function () {
+MobileFrontendArticleTarget.prototype.isToolbarOverSurface = function () {
 	return true;
 };
 
@@ -86,7 +88,7 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.isToolbarOverSurface = function
  * @memberof MobileFrontendArticleTarget
  * @instance
  */
-ve.init.mw.MobileFrontendArticleTarget.prototype.onContainerScroll = function () {
+MobileFrontendArticleTarget.prototype.onContainerScroll = function () {
 	// MF provides the toolbar so there is no need to float the toolbar
 };
 
@@ -95,7 +97,7 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.onContainerScroll = function ()
  * @memberof MobileFrontendArticleTarget
  * @instance
  */
-ve.init.mw.MobileFrontendArticleTarget.prototype.onWindowScroll = function () {
+MobileFrontendArticleTarget.prototype.onWindowScroll = function () {
 	var $window, windowTop, contentTop,
 		surface = this.surface,
 		target = this;
@@ -121,7 +123,7 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.onWindowScroll = function () {
  * @memberof MobileFrontendArticleTarget
  * @instance
  */
-ve.init.mw.MobileFrontendArticleTarget.prototype.onSurfaceScroll = function () {
+MobileFrontendArticleTarget.prototype.onSurfaceScroll = function () {
 	var nativeSelection, range;
 
 	if ( ve.init.platform.constructor.static.isIos() ) {
@@ -142,7 +144,7 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.onSurfaceScroll = function () {
  * @memberof MobileFrontendArticleTarget
  * @instance
  */
-ve.init.mw.MobileFrontendArticleTarget.prototype.createSurface = function ( dmDoc, config ) {
+MobileFrontendArticleTarget.prototype.createSurface = function ( dmDoc, config ) {
 	var surface;
 	if ( this.overlay.isNewPage ) {
 		config = ve.extendObject( {
@@ -151,7 +153,7 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.createSurface = function ( dmDo
 	}
 
 	// Parent method
-	surface = ve.init.mw.MobileFrontendArticleTarget
+	surface = MobileFrontendArticleTarget
 		.super.prototype.createSurface.call( this, dmDoc, config );
 
 	surface.connect( this, { scroll: 'onSurfaceScroll' } );
@@ -162,11 +164,11 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.createSurface = function ( dmDo
 /**
  * @inheritdoc
  */
-ve.init.mw.MobileFrontendArticleTarget.prototype.setSurface = function ( surface ) {
+MobileFrontendArticleTarget.prototype.setSurface = function ( surface ) {
 	var changed = surface !== this.surface;
 
 	// Parent method
-	ve.init.mw.Target.super.prototype.setSurface.apply( this, arguments );
+	Target.super.prototype.setSurface.apply( this, arguments );
 
 	if ( changed ) {
 		surface.$element.addClass( 'content loading' );
@@ -179,11 +181,11 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.setSurface = function ( surface
  * @memberof MobileFrontendArticleTarget
  * @instance
  */
-ve.init.mw.MobileFrontendArticleTarget.prototype.surfaceReady = function () {
+MobileFrontendArticleTarget.prototype.surfaceReady = function () {
 	var surface = this.getSurface();
 
 	// Parent method
-	ve.init.mw.MobileFrontendArticleTarget.super.prototype.surfaceReady.apply( this, arguments );
+	MobileFrontendArticleTarget.super.prototype.surfaceReady.apply( this, arguments );
 
 	this.overlay.hideSpinner();
 	surface.$element.removeClass( 'loading' );
@@ -204,7 +206,7 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.surfaceReady = function () {
  * @memberof MobileFrontendArticleTarget
  * @instance
  */
-ve.init.mw.MobileFrontendArticleTarget.prototype.adjustContentPadding = function () {
+MobileFrontendArticleTarget.prototype.adjustContentPadding = function () {
 	var toolbarHeight = this.getToolbar().$element.outerHeight(),
 		surface = this.getSurface();
 	surface.setToolbarHeight( toolbarHeight );
@@ -217,9 +219,9 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.adjustContentPadding = function
  * @memberof MobileFrontendArticleTarget
  * @instance
  */
-ve.init.mw.MobileFrontendArticleTarget.prototype.loadFail = function ( key, text ) {
+MobileFrontendArticleTarget.prototype.loadFail = function ( key, text ) {
 	// Parent method
-	ve.init.mw.MobileFrontendArticleTarget.super.prototype.loadFail.apply( this, arguments );
+	MobileFrontendArticleTarget.super.prototype.loadFail.apply( this, arguments );
 
 	this.overlay.reportError( text );
 	this.overlay.hide();
@@ -230,7 +232,7 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.loadFail = function ( key, text
  * @memberof MobileFrontendArticleTarget
  * @instance
  */
-ve.init.mw.MobileFrontendArticleTarget.prototype.editSource = function () {
+MobileFrontendArticleTarget.prototype.editSource = function () {
 	var target = this;
 	// If changes have been made tell the user they have to save first
 	if ( !this.getSurface().getModel().hasBeenModified() ) {
@@ -249,9 +251,9 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.editSource = function () {
  * @memberof MobileFrontendArticleTarget
  * @instance
  */
-ve.init.mw.MobileFrontendArticleTarget.prototype.save = function () {
+MobileFrontendArticleTarget.prototype.save = function () {
 	// Parent method
-	ve.init.mw.MobileFrontendArticleTarget.super.prototype.save.apply( this, arguments );
+	MobileFrontendArticleTarget.super.prototype.save.apply( this, arguments );
 
 	this.overlay.log( {
 		action: 'saveAttempt'
@@ -263,9 +265,9 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.save = function () {
  * @memberof MobileFrontendArticleTarget
  * @instance
  */
-ve.init.mw.MobileFrontendArticleTarget.prototype.showSaveDialog = function () {
+MobileFrontendArticleTarget.prototype.showSaveDialog = function () {
 	// Parent method
-	ve.init.mw.MobileFrontendArticleTarget.super.prototype.showSaveDialog.apply( this, arguments );
+	MobileFrontendArticleTarget.super.prototype.showSaveDialog.apply( this, arguments );
 
 	this.overlay.log( {
 		action: 'saveIntent'
@@ -277,9 +279,9 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.showSaveDialog = function () {
  * @memberof MobileFrontendArticleTarget
  * @instance
  */
-ve.init.mw.MobileFrontendArticleTarget.prototype.saveComplete = function () {
+MobileFrontendArticleTarget.prototype.saveComplete = function () {
 	// Parent method
-	ve.init.mw.MobileFrontendArticleTarget.super.prototype.saveComplete.apply( this, arguments );
+	MobileFrontendArticleTarget.super.prototype.saveComplete.apply( this, arguments );
 
 	this.overlay.onSaveComplete();
 };
@@ -296,10 +298,10 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.saveComplete = function () {
  * @param {Object|null} response API response data
  */
 // eslint-disable-next-line max-len
-ve.init.mw.MobileFrontendArticleTarget.prototype.saveFail = function ( doc, saveData, wasRetry, jqXHR, status, response ) {
+MobileFrontendArticleTarget.prototype.saveFail = function ( doc, saveData, wasRetry, jqXHR, status, response ) {
 
 	// parent method
-	ve.init.mw.MobileFrontendArticleTarget.super.prototype.saveFail.apply( this, arguments );
+	MobileFrontendArticleTarget.super.prototype.saveFail.apply( this, arguments );
 
 	this.overlay.onSaveFailure( this.constructor.static.parseSaveError( response, status ) );
 };
@@ -309,24 +311,13 @@ ve.init.mw.MobileFrontendArticleTarget.prototype.saveFail = function ( doc, save
  * @memberof MobileFrontendArticleTarget
  * @instance
  */
-ve.init.mw.MobileFrontendArticleTarget.prototype.tryTeardown = function () {
+MobileFrontendArticleTarget.prototype.tryTeardown = function () {
 	// Parent method
-	ve.init.mw.MobileFrontendArticleTarget.super.prototype.tryTeardown.apply( this, arguments )
+	MobileFrontendArticleTarget.super.prototype.tryTeardown.apply( this, arguments )
 		.then( function () {
 			// eslint-disable-next-line no-restricted-properties
 			window.history.back();
 		} );
 };
 
-/* Registration */
-
-ve.init.mw.targetFactory.register( ve.init.mw.MobileFrontendArticleTarget );
-
-// Hook up activity-tracking from VE's system to mobilefrontend's system
-ve.trackSubscribe( 'activity.', function ( topic, data ) {
-	mw.track( 'mf.schemaVisualEditorFeatureUse', ve.extendObject( data, {
-		feature: topic.split( '.' )[ 1 ],
-		// eslint-disable-next-line camelcase
-		editing_session_id: ve.init.target.overlay.sessionId
-	} ) );
-} );
+module.exports = MobileFrontendArticleTarget;

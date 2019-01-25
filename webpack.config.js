@@ -14,6 +14,8 @@ const
 		hogan: 'mediawiki.template.hogan',
 		startup: 'mobile.startup',
 		categories: 'mobile.categories.overlays',
+		editor: 'mobile.editor.overlay',
+		editorVe: 'mobile.editor.ve',
 		languages: 'mobile.languages.structured',
 		mediaViewer: 'mobile.mediaViewer',
 		mobileInit: 'mobile.init',
@@ -71,6 +73,8 @@ module.exports = {
 		// loading, we won't be required to explicitly create this new chunk and
 		// this can be removed.
 		[ENTRIES.categories]: './src/mobile.categories.overlays/mobile.categories.overlays.js',
+		[ENTRIES.editor]: './src/mobile.editor.overlay/mobile.editor.overlay.js',
+		[ENTRIES.editorVe]: './src/mobile.editor.ve/mobile.editor.ve.js',
 		[ENTRIES.languages]: './src/mobile.languages.structured/mobile.languages.structured.js',
 		[ENTRIES.mediaViewer]: './src/mobile.mediaViewer/mobile.mediaViewer.js',
 		[ENTRIES.notifications]: './src/mobile.notifications.overlay/mobile.notifications.overlay.js',
@@ -147,6 +151,8 @@ module.exports = {
 					chunks: ( chunk ) => [
 						ENTRIES.startup,
 						ENTRIES.categories,
+						ENTRIES.editor,
+						ENTRIES.editorVe,
 						ENTRIES.languages,
 						ENTRIES.mediaViewer,
 						ENTRIES.notifications,
@@ -205,7 +211,7 @@ module.exports = {
 		// Note: entrypoint size implicitly includes the mobile.startup.runtime and mobile.common
 		// chunks.
 		maxAssetSize: 48.0 * 1024,
-		maxEntrypointSize: 62.9 * 1024,
+		maxEntrypointSize: 71.8 * 1024,
 
 		// The default filter excludes map files but we rename ours. Also, any modules prefixed with
 		// "tests." are excluded from performance checks as they are not shipped to end users.

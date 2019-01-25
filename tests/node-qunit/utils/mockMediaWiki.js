@@ -14,6 +14,8 @@ var
 
 function Api() {}
 Api.prototype.get = function () {};
+Api.prototype.post = function () {};
+Api.prototype.getToken = function () {};
 Api.prototype.postWithToken = function () {};
 
 module.exports = function newMockMediaWiki() {
@@ -24,6 +26,12 @@ module.exports = function newMockMediaWiki() {
 			get: function ( name, fallback ) {
 				return config[name] || fallback;
 			}
+		},
+		confirmCloseWindow: function () {},
+		hook: function () {
+			return {
+				fire: function () {}
+			};
 		},
 		html: {
 			escape: function ( str ) {
@@ -37,6 +45,9 @@ module.exports = function newMockMediaWiki() {
 					}
 				} );
 			}
+		},
+		jqueryMsg: {
+			parser: function () {}
 		},
 		language: {
 			convertNumber: function () {}
@@ -62,12 +73,16 @@ module.exports = function newMockMediaWiki() {
 			compile: function () {}
 		},
 		user: {
+			options: {
+				get: function () {}
+			},
 			isAnon: function () {},
 			generateRandomSessionId: function () { return Math.random().toString(); }
 		},
 		track: function () {},
 		util: { getUrl: function ( title ) { return title; } },
 		loader: {
+			load: function () {},
 			using: function () {},
 			require: function () {
 				return {};

@@ -156,7 +156,9 @@ function setupEditor( page, skin ) {
 			// Inform other interested code that we're loading the editor
 			mw.hook( 'mobileFrontend.editorOpening' ).fire();
 			return loader.loadModule( [ 'mobile.editor.ve' ] ).then( function () {
-				var VisualEditorOverlay = M.require( 'mobile.editor.overlay/VisualEditorOverlay' );
+				var VisualEditorOverlay = M.require( 'mobile.editor.overlay/VisualEditorOverlay' ),
+					EditorOverlay = M.require( 'mobile.editor.overlay/EditorOverlay' );
+				editorOptions.EditorOverlay = EditorOverlay;
 				return new VisualEditorOverlay( editorOptions );
 			}, loadSourceEditor );
 		} else {

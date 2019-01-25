@@ -349,14 +349,7 @@
 				"mediawiki.widgets.AbandonEditDialog"
 			],
 			"scripts": [
-				"resources/mobile.editor.overlay/EditorGateway.js",
-				"resources/mobile.editor.overlay/schemaEditAttemptStep.js",
-				"resources/mobile.editor.overlay/AbuseFilterOverlay.js",
-				"resources/mobile.editor.overlay/AbuseFilterPanel.js",
-				"resources/mobile.editor.overlay/EditorOverlayBase.js",
-				"resources/mobile.editor.overlay/BlockMessage.js",
-				"resources/mobile.editor.overlay/EditorOverlay.js",
-				"resources/mobile.editor.overlay/VisualEditorOverlay.js"
+				"resources/dist/mobile.editor.overlay.js"
 			],
 			"styles": [
 				"resources/mobile.editor.overlay/editor.less",

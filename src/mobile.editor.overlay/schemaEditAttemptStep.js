@@ -1,4 +1,4 @@
-( function () {
+module.exports = function () {
 	var trackdebug = !!mw.util.getParamValue( 'trackdebug' );
 
 	if ( mw.loader.getState( 'schema.EditAttemptStep' ) === null && !trackdebug ) {
@@ -7,7 +7,7 @@
 
 	mw.loader.using( [ 'ext.eventLogging.subscriber' ] ).then( function () {
 		var // Schema provided by ext.eventLogging.subscriber class
-			Schema = mw.eventLog.Schema, // resource-modules-disable-line
+			Schema = mw.eventLog.Schema,
 			user = mw.user,
 			sampleRate = mw.config.get( 'wgWMESchemaEditAttemptStepSamplingRate' ),
 			actionPrefixMap = {
@@ -113,7 +113,7 @@
 			delete data.message;
 			// eslint-disable-next-line camelcase
 			data.is_oversample =
-				!mw.eventLog.inSample( 1 / sampleRate ); // resource-modules-disable-line
+				!mw.eventLog.inSample( 1 / sampleRate );
 
 			if ( data.action === 'abort' && data.abort_type !== 'switchnochange' ) {
 				timing = {};
@@ -140,4 +140,4 @@
 		} );
 
 	} );
-}() );
+};

@@ -7,9 +7,19 @@ module.exports = {
 	 * @return {void}
 	 */
 	setUp: function ( sandbox, global ) {
+		var OO;
 		if ( headless ) {
+			OO = require( 'oojs' );
+			OO.ui = {
+				Element: {
+					static: {
+						getClosestScrollableContainer: function () {}
+					}
+				},
+				Tool: function () {}
+			};
 			global.OO = global.OO || undefined;
-			sandbox.stub( global, 'OO', require( 'oojs' ) );
+			sandbox.stub( global, 'OO', OO );
 		}
 	}
 };
