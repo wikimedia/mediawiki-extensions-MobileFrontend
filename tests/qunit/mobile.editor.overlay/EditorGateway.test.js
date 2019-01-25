@@ -1,7 +1,7 @@
 ( function ( M ) {
 	var EditorGateway = M.require( 'mobile.editor.api/EditorGateway' );
 
-	QUnit.module( 'MobileFrontend mobile.editor.api/EditorGateway', {
+	QUnit.module( 'MobileFrontend mobile.editor.overlay/EditorGateway', {
 		beforeEach: function () {
 			this.spy = this.sandbox.stub( mw.Api.prototype, 'get' ).returns( $.Deferred().resolve( {
 				query: {
