@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "054ee5dd_1535f2df",
+        "filename": "src/mobile.startup/Skin.js",
+        "patchSetId": 19
+      },
+      "lineNbr": 215,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-25T00:23:11Z",
+      "side": 1,
+      "message": "fixed.",
+      "parentUuid": "e300ecae_60c43372",
+      "range": {
+        "startLine": 215,
+        "startChar": 13,
+        "endLine": 215,
+        "endChar": 27
+      },
+      "revId": "0c3f4b13dbba4621d37842e002f0a3c4a4f14030",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f72675c1_bd00b86e",
         "filename": "src/mobile.startup/Skin.js",
         "patchSetId": 19
@@ -36,6 +60,24 @@
       "writtenOn": "2019-01-25T00:08:44Z",
       "side": 1,
       "message": "should this reject instead?",
+      "revId": "0c3f4b13dbba4621d37842e002f0a3c4a4f14030",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4745a089_d642378d",
+        "filename": "src/mobile.startup/Skin.js",
+        "patchSetId": 19
+      },
+      "lineNbr": 231,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-25T00:23:11Z",
+      "side": 1,
+      "message": "I don\u0027t think so but am unsure. This code, unfortunately, gives the caller no responsibilities for even verifying that the section type is correct. I believe the current implementation expects a no-op in these scenarios and should be refactored. As this patch series is quite lengthy and old, I am eager to avoid unnecessary changes in it but would welcome the change in a new ticket.",
+      "parentUuid": "f72675c1_bd00b86e",
       "revId": "0c3f4b13dbba4621d37842e002f0a3c4a4f14030",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
