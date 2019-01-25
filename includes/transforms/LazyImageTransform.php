@@ -19,7 +19,7 @@ class LazyImageTransform implements IMobileTransform {
 
 	/**
 	 * Whether to skip the loading of small images
-	 * @property $skipSmall
+	 * @var bool
 	 */
 	protected $skipSmall;
 

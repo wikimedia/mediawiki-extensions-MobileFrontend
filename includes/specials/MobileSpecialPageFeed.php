@@ -129,7 +129,6 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 	 * @param bool $isAnon Is the edit anonymous?
 	 * @param int|null $bytes Net number of bytes changed or null if not applicable
 	 * @param bool $isMinor Is the edit minor?
-	 * @return string HTML code
 	 *
 	 * @todo FIXME: use an array as an argument?
 	 */

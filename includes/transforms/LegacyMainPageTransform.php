@@ -23,7 +23,7 @@ class LegacyMainPageTransform implements IMobileTransform, MessageLocalizer {
 	 * Will scan for #mp-tfa and #mp-itn elements and wrap them with a heading.
 	 * Any elements with ids prefixed with `mf-` will be retained in the view any
 	 * other elements will be discarded.
-	 * @param DomElement $node to be transformed
+	 * @param DOMElement $node to be transformed
 	 */
 	public function apply( DOMElement $node ) {
 		$mainPage = $node->ownerDocument;

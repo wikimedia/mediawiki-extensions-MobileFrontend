@@ -26,7 +26,7 @@ class ApiMobileView extends ApiBase {
 	private $offset;
 	/** @var integer Saves value to specify the max length of a sections content */
 	private $maxlen;
-	/** @var resource|boolean Saves a File Object, or false if no file exist */
+	/** @var File|false Saves a File Object, or false if no file exist */
 	private $file;
 
 	/**
@@ -330,7 +330,7 @@ class ApiMobileView extends ApiBase {
 	 * Wrapper that returns a page image for a given title
 	 *
 	 * @param Title $title Page title
-	 * @return bool|resource
+	 * @return File|false
 	 */
 	protected function getPageImage( Title $title ) {
 		return PageImages::getPageImage( $title );
@@ -341,7 +341,7 @@ class ApiMobileView extends ApiBase {
 	 *
 	 * @param Title|string $title Page title
 	 * @param array $options Options for wfFindFile (see RepoGroup::findFile)
-	 * @return bool|resource
+	 * @return File|false
 	 */
 	protected function findFile( $title, $options = [] ) {
 		return wfFindFile( $title, $options );

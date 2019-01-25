@@ -53,9 +53,9 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 
 	/**
 	 * Works out if the infobox is wrapped
-	 * @param DomElement $node of infobox
+	 * @param DOMNode $node of infobox
 	 * @param string $wrapperClass (optional) regex for matching required classname for wrapper
-	 * @return DomElement representing an unwrapped infobox or an element that wraps the infobox
+	 * @return DOMNode|false representing an unwrapped infobox or an element that wraps the infobox
 	 */
 	public static function getInfoboxContainer( $node, $wrapperClass = '/^(mw-stack|collapsible)$/' ) {
 		$infobox = false;
@@ -73,9 +73,9 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 
 	/**
 	 * Iterate up the DOM tree until find a parent node which has the parent $parent
-	 * @param DomElement $node
-	 * @param DomElement $parent
-	 * @return DomElement representing a node which is either $node or an ancestor of $node which
+	 * @param DOMNode $node
+	 * @param DOMNode $parent
+	 * @return DOMNode representing a node which is either $node or an ancestor of $node which
 	 *  has a parent $parent. Note, it is assumed that $node will always be a descendent of $parent so
 	 *  if this is not true, you probably shouldn't be using this function and I, as the writer of this
 	 *  code cannot be held responsible for portals that open to another dimension or your laptop
@@ -93,7 +93,7 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	 * Extract the first infobox in document
 	 * @param DOMXPath $xPath XPath object to execute the query
 	 * @param DOMNode $body Where to search for an infobox
-	 * @return DOMElement|null The first infobox
+	 * @return DOMNode|null The first infobox
 	 */
 	private function identifyInfoboxElement( DOMXPath $xPath, DOMNode $body ) {
 		$xPathQueryInfoboxes = './/table[starts-with(@class,"infobox") or contains(@class," infobox")]';
@@ -286,8 +286,6 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	 * element is found - log the page title and revision
 	 *
 	 * @see https://phabricator.wikimedia.org/T149884
-	 * @param $leadSectionBody
-	 * @param DOMXPath $xPath
 	 */
 	private function logInfoboxesWrappedInContainers() {
 		\MediaWiki\Logger\LoggerFactory::getInstance( 'mobile' )->info(

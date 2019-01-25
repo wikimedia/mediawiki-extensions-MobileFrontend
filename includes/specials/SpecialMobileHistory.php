@@ -61,7 +61,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 
 	/**
 	 * Adds HTML to render a header at the top of the feed
-	 * @param Title|string $title The page to link to or a string to show
+	 * @param Title $title The page to link to
 	 */
 	protected function renderHeaderBar( Title $title ) {
 		$namespaceLabel = '';
