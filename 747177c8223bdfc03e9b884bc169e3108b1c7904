@@ -113,6 +113,24 @@
     },
     {
       "key": {
+        "uuid": "322b7275_ce955b40",
+        "filename": "src/mobile.startup/lazyImages/lazyImageLoader.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-25T03:42:29Z",
+      "side": 1,
+      "message": "FWIW, similar code exists in WikimediaEvents and OOUI:\n\nhttps://gerrit.wikimedia.org/g/mediawiki/extensions/WikimediaEvents/+/433221a5a6bdb131d75b73fe4d305a6da2f2febe/modules/all/ext.wikimediaEvents.searchSatisfaction.js#463\nhttps://gerrit.wikimedia.org/g/oojs/ui/+/6edecb36ef526f8b83e537b536f38dbe48a7316d/src/widgets/SelectFileWidget.js#298",
+      "parentUuid": "e3b99028_1dee8d13",
+      "revId": "747177c8223bdfc03e9b884bc169e3108b1c7904",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "141e8769_d09fcc18",
         "filename": "src/mobile.startup/lazyImages/lazyImageLoader.js",
         "patchSetId": 8
