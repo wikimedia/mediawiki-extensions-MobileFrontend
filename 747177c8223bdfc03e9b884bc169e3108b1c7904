@@ -65,6 +65,23 @@
     },
     {
       "key": {
+        "uuid": "141e8769_d09fcc18",
+        "filename": "src/mobile.startup/lazyImages/lazyImageLoader.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-25T00:50:03Z",
+      "side": 1,
+      "message": "Hmm. Not sure about this. Could we at the very least pass some information to the promise so we can identify where this happens?\n\nI can see this change being a little problematic if we ever want to tackle https://phabricator.wikimedia.org/T136693",
+      "revId": "747177c8223bdfc03e9b884bc169e3108b1c7904",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a9b1324b_93e64cac",
         "filename": "src/mobile.startup/lazyImages/lazyImageLoader.js",
         "patchSetId": 8
