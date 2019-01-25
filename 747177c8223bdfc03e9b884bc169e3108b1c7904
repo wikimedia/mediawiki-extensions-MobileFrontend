@@ -1,0 +1,84 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "262fd167_5899c3d2",
+        "filename": "src/mobile.startup/lazyImages/lazyImageLoader.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-25T00:40:39Z",
+      "side": 1,
+      "message": "Surely this should be parseInt ?",
+      "range": {
+        "startLine": 41,
+        "startChar": 32,
+        "endLine": 41,
+        "endChar": 51
+      },
+      "revId": "747177c8223bdfc03e9b884bc169e3108b1c7904",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "be574c3a_deb3e520",
+        "filename": "src/mobile.startup/lazyImages/lazyImageLoader.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-25T00:40:39Z",
+      "side": 1,
+      "message": "could also use className here if we wanted to.",
+      "range": {
+        "startLine": 43,
+        "startChar": 42,
+        "endLine": 43,
+        "endChar": 70
+      },
+      "revId": "747177c8223bdfc03e9b884bc169e3108b1c7904",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e3b99028_1dee8d13",
+        "filename": "src/mobile.startup/lazyImages/lazyImageLoader.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-25T00:40:39Z",
+      "side": 1,
+      "message": "I recall various problems when originally implementing this cross browser (previously I believe we were using addEventListener but shifted to jQuery). Specifically, if the image is in cache (img.complete).\n\nI want to test on a few different browsers and read up on the caveats with load events. Added Krinkle as I\u0027m sure he\u0027s bound to know.",
+      "revId": "747177c8223bdfc03e9b884bc169e3108b1c7904",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a9b1324b_93e64cac",
+        "filename": "src/mobile.startup/lazyImages/lazyImageLoader.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-25T00:40:39Z",
+      "side": 1,
+      "message": "Is there any reason why do we set some attributes here and some above?",
+      "revId": "747177c8223bdfc03e9b884bc169e3108b1c7904",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
