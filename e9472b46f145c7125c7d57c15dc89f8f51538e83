@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "62919f2e_2065e78b",
+        "filename": "src/mobile.startup/Skin.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-25T00:15:10Z",
+      "side": 1,
+      "message": "document.getElementById( \u0027content\u0027 ) unlike jQuery which returns an empty jQuery object can return null but  setupImageLoading does not accept null as an input.\n\nWhile content should always be available, it\u0027s defined in core so is subject to change. Should we guard against this?",
+      "revId": "e9472b46f145c7125c7d57c15dc89f8f51538e83",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5793ebcc_a4c014db",
+        "filename": "src/mobile.startup/Skin.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 221,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-25T00:15:10Z",
+      "side": 1,
+      "message": "Should this be rewritten to not use jQuery?",
+      "revId": "e9472b46f145c7125c7d57c15dc89f8f51538e83",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

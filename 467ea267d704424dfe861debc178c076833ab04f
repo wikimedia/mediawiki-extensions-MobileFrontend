@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2b93768d_e1ce3ed0",
+        "filename": "src/mobile.startup/Skin.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-25T00:15:10Z",
+      "side": 1,
+      "message": "Is docReady necessary? (i don\u0027t know the answer)",
+      "revId": "467ea267d704424dfe861debc178c076833ab04f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
