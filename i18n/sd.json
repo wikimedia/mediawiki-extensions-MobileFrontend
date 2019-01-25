@@ -154,7 +154,6 @@
 	"mobile-frontend-opt-in-explain": "{{SITENAME}} بيٽا هڪ آزمائشي طريقو آهي جنهن سان آزمائشي خصوصيتون استعمال ڪري سگھجن ٿيو ۽ ان ذريعي اسان کي اوهان جا قيمتي رايا ملي سگھن ٿا",
 	"mobile-frontend-overlay-close": "بند ڪريو",
 	"mobile-frontend-overlay-continue": "جاري رکو",
-	"mobile-frontend-page-edit-summary": "<span><strong>تَتُ سنواريو</strong> $1</span>",
 	"mobile-frontend-photo-upload-invalid-user": "واپرائيندڙ $1 داخل ٿيل ناهي.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> چاڙهيو|<span>$1</span> چاڙهيل}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "500+ چاڙهيل",

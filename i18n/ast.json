@@ -155,7 +155,6 @@
 	"mobile-frontend-opt-in-explain": "βeta de {{SITENAME}} ye un mou pa que pruebes estes carauterístiques esperimentales y apurrinos valoratibles comentarios",
 	"mobile-frontend-overlay-close": "Zarrar",
 	"mobile-frontend-overlay-continue": "Siguir",
-	"mobile-frontend-page-edit-summary": "<span><strong>Resume d'edición</strong> $1</span>",
 	"mobile-frontend-photo-upload-invalid-user": "L'usuariu «$1» nun ta rexistráu.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> xuba|<span>$1</span> xubes}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "+500 xubes",

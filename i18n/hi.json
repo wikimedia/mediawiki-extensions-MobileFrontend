@@ -136,7 +136,6 @@
 	"mobile-frontend-opt-in-explain": "बीटा में शामिल होने से आपको प्रयोगात्मक विशेषताएँ दिखाई जाएँगी, तथा प्रोग्राम में त्रुटियाँ और समस्याएँ आने का खतरा होगा।",
 	"mobile-frontend-overlay-close": "बंद करें",
 	"mobile-frontend-overlay-continue": "जारी रखें",
-	"mobile-frontend-page-edit-summary": "<span><strong>सम्पादन सारांश</strong> $1</span>",
 	"mobile-frontend-photo-upload-invalid-user": "सदस्य \"$1\" पंजीकृत नहीं है।",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> अपलोड|<span>$1</span> अपलोड}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "500+ अपलोड",

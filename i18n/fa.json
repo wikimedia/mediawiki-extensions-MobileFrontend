@@ -190,7 +190,6 @@
 	"mobile-frontend-opt-in-explain": "{{SITENAME}} آزمایشی راهی است برای بررسی ویژگی‌های جدید و ارائهٔ بازخورد به ما",
 	"mobile-frontend-overlay-close": "بستن",
 	"mobile-frontend-overlay-continue": "ادامه",
-	"mobile-frontend-page-edit-summary": "<span><strong>خلاصهٔ ویرایش</strong> $1</span>",
 	"mobile-frontend-photo-upload-invalid-user": "کاربر «$1» ثبت نشده‌است.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>$1</span> بارگذاری}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "۵۰۰+ بارگذاری",

@@ -138,7 +138,6 @@
 	"mobile-frontend-opt-in-explain": "Prin examinarea stadiului beta veți avea acces la cele mai noi caracteristici experimentale, care ar putea prezenta, însă, erori software.",
 	"mobile-frontend-overlay-close": "Închidere",
 	"mobile-frontend-overlay-continue": "Continuare",
-	"mobile-frontend-page-edit-summary": "<span><strong>Descrierea modificărilor</strong> $1</span>",
 	"mobile-frontend-photo-upload-invalid-user": "Utilizatorul „$1” nu este înregistrat.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> încărcare|<span>$1</span> încărcări|<span>$1</span> de încărcări}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "500+ încărcări",

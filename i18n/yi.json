@@ -107,7 +107,6 @@
 	"mobile-frontend-news-items": "אין די נײַעס",
 	"mobile-frontend-overlay-close": "פארמאכן",
 	"mobile-frontend-overlay-continue": "פֿארזעצן",
-	"mobile-frontend-page-edit-summary": "<span><strong>רעדאקטירן־רעזומע</strong> $1</span>",
 	"mobile-frontend-photo-upload-invalid-user": "באניצער \"$1\" איז נישט איינגעשריבן.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> אַרויפֿלאָד|<span>$1</span> אַרויפֿלאָדן}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "500+ אַרויפֿלאָדן",

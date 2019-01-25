@@ -141,7 +141,6 @@
 	"mobile-frontend-opt-in-explain": "Kanthi nganggo béta, panjenengan bakal éntuk aksès menyang fitur panjajal-jajal anyar dhéwé sing bokmanawa isih gampang rusak.",
 	"mobile-frontend-overlay-close": "Tutup",
 	"mobile-frontend-overlay-continue": "Banjuraké",
-	"mobile-frontend-page-edit-summary": "<span><strong>Ringkesané besutan</strong> $1</span>",
 	"mobile-frontend-photo-upload-invalid-user": "Panganggo \"$1\" ora kadhaftar.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> unggah|<span> $1 </span> unggah}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "500+ unggahan",

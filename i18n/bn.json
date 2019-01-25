@@ -163,7 +163,6 @@
 	"mobile-frontend-opt-in-explain": "{{SITENAME}} βeta হল এই পরীক্ষামূলক বৈশিষ্ট্যগুলি পরীক্ষা করে আমাদেরকে মূল্যবান প্রতিক্রিয়া প্রদান করার একটি উপায়",
 	"mobile-frontend-overlay-close": "বন্ধ",
 	"mobile-frontend-overlay-continue": "অব্যাহত",
-	"mobile-frontend-page-edit-summary": "<span><strong>সম্পাদনা সারংশ</strong> $1</span>",
 	"mobile-frontend-photo-upload-invalid-user": "ব্যবহারকারী \"$1\" নিবন্ধিত নয়।",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>১টি</span> আপলোড|<span>$1টি</span> আপলোড}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "৫০০+ আপলোড",

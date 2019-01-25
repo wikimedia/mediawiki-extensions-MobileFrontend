@@ -131,7 +131,6 @@
 	"mobile-frontend-opt-in-explain": "mikileh mitanam, a kapah kisu misaungay sabaluhay a mitanamay sasahicaan, uyzasa hakay matakhal zwanti sinayiay.",
 	"mobile-frontend-overlay-close": "edeben",
 	"mobile-frontend-overlay-continue": "palalid",
-	"mobile-frontend-page-edit-summary": "<span><strong> mikawaway-kalumyiti pecu’ nu lacul </strong> $1</span>",
 	"mobile-frontend-photo-upload-invalid-user": "misaungayay \"$1\" caay henay pangangan.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> patapabaw|<span>$1</span> patapabaw}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "mangasiw 500 patapabaw",

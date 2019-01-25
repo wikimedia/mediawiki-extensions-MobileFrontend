@@ -153,7 +153,6 @@
 	"mobile-frontend-opt-in-explain": "Dengan bergabung dengan beta, Anda akan mendapatkan akses ke fitur-fitur eksperimental terbaru, namun dapat menjumpai galat peranti lunak.",
 	"mobile-frontend-overlay-close": "Tutup",
 	"mobile-frontend-overlay-continue": "Lanjutkan",
-	"mobile-frontend-page-edit-summary": "<span><strong>Sunting ringkasan</strong> $1</span>",
 	"mobile-frontend-photo-upload-invalid-user": "Pengguna \"$1\" belum terdaftar.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>$1</span> unggahan}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "500+ unggahan",

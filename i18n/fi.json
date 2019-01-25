@@ -166,7 +166,6 @@
 	"mobile-frontend-opt-in-explain": "{{SITENAME}} βeeta on tapa kokeilla näitä kokeellisia ominaisuuksia ja antaa meille arvokasta palautetta.",
 	"mobile-frontend-overlay-close": "Sulje",
 	"mobile-frontend-overlay-continue": "Jatka",
-	"mobile-frontend-page-edit-summary": "<span><strong>Yhteenveto</strong> $1</span>",
 	"mobile-frontend-photo-upload-invalid-user": "Käyttäjää ”$1” ei ole rekisteröity.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> lataus|<span>$1</span> latausta}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "Yli 500 tallennettua tiedostoa",

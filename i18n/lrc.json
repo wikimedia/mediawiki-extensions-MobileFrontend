@@ -87,7 +87,6 @@
 	"mobile-frontend-news-items": "د حوال",
 	"mobile-frontend-overlay-close": "بسن",
 	"mobile-frontend-overlay-continue": "ادامه دئین",
-	"mobile-frontend-page-edit-summary": "<span><strong>چکسته ویرایشت</strong> $1</span>",
 	"mobile-frontend-photo-upload-invalid-user": "کاریار \"$1\" ثوت نام نکرده.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> سوار کرد|<span>$1</span> سوارکردیا}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "500+ سوارکردیا",

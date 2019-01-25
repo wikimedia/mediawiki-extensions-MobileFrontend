@@ -191,7 +191,6 @@
 	"mobile-frontend-opt-in-explain": "{{SITENAME}} βeta umożliwia ci przetestowanie eksperymentalnych funkcji i przekazanie nam wartościowego feedbacku",
 	"mobile-frontend-overlay-close": "Zamknij",
 	"mobile-frontend-overlay-continue": "Kontynuuj",
-	"mobile-frontend-page-edit-summary": "<span><strong>Opis zmian</strong> $1</span>",
 	"mobile-frontend-photo-upload-invalid-user": "Użytkownik „$1” nie jest zarejestrowany.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> przesłany plik|<span>$1</span> przesłane pliki|<span>$1</span> przesłanych plików}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "Ponad 500 przesłanych",

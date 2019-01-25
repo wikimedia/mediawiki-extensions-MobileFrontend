@@ -138,7 +138,6 @@
 	"mobile-frontend-opt-in-explain": "Ku miluan kana béta, anjeun bakal meunang aksés ka fitur ékspérimént panganyarna nu meureun kasanghareupan masalah pakakas lemes.",
 	"mobile-frontend-overlay-close": "Tutup",
 	"mobile-frontend-overlay-continue": "Tuluykeun",
-	"mobile-frontend-page-edit-summary": "<span><strong>Édit pedaran</strong> $1</span>",
 	"mobile-frontend-photo-upload-invalid-user": "Pamaké \"$1\" teu kadaptar.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> unjal|<span>$1</span> unjal}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "500+ unjalan",

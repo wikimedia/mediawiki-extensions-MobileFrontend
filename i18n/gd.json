@@ -130,7 +130,6 @@
 	"mobile-frontend-opt-in-explain": "Ma ghabhas tu pàirt ann am beta, gheibh thu inntrigeadh dha na feartan as ùire a tha fo dheuchainn agus dh'fhaoidte nach obraich a h-uile càil sa bhathar-bhog mar bu còir.",
 	"mobile-frontend-overlay-close": "Dùin",
 	"mobile-frontend-overlay-continue": "Air adhart",
-	"mobile-frontend-page-edit-summary": "<span><strong>Gearr-chunntas an deasachaidh</strong> $1</span>",
 	"mobile-frontend-photo-upload-invalid-user": "Chan eil an cleachdaiche \"$1\" air a chlàradh.",
 	"mobile-frontend-photo-upload-user-count": "<span>$1</span> {{PLURAL:$1|luchdadh|luchdadh|luchdaidhean|luchdadh}} suas",
 	"mobile-frontend-photo-upload-user-count-over-limit": "500+ luchdadh suas",

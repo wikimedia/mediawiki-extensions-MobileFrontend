@@ -151,7 +151,6 @@
 	"mobile-frontend-opt-in-explain": "{{SITENAME}} βeta er ein måte du kan prøva ut desse eksperimentelle funksjonane på og gje oss verdifull attendemelding.",
 	"mobile-frontend-overlay-close": "Lat att",
 	"mobile-frontend-overlay-continue": "Hald fram",
-	"mobile-frontend-page-edit-summary": "<span><strong>Endringssamandrag</strong> $1</span>",
 	"mobile-frontend-photo-upload-invalid-user": "Brukaren «$1» er ikkje registrert.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> opplasting|<span>$1</span> opplastingar}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "500+ opplastingar",

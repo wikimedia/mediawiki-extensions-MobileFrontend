@@ -140,7 +140,6 @@
 	"mobile-frontend-opt-in-explain": "ដោយ​ចូលរួម​កម្មវិធី​បេតា អ្នក​នឹងមាន​លទ្ធភាព​ប្រើ​មុខងា​រដែល​កំពុង​ស្ថិតនៅក្រោម​ការពិសោធន៍​នៅឡើយ ដែល​អាចធ្វើ​អោយ​អ្នកប្រឈមមុខ​នឹង​បញ្ហា​តូចតាច​មួយចំនួន។",
 	"mobile-frontend-overlay-close": "បិទ",
 	"mobile-frontend-overlay-continue": "បន្ត",
-	"mobile-frontend-page-edit-summary": "<span><strong>ចំណារពន្យល់របស់</strong> $1</span>",
 	"mobile-frontend-photo-upload-invalid-user": "អ្នកប្រើប្រាស់ \"$1\" មិនទាន់ចុះឈ្មោះទេ។",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|ឯកសារផ្ទុកឡើង<span>១</span>|ឯកសារផ្ទុកឡើងចំនួន<span>$1</span>}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "ឯកសារផ្ទុកឡើងជាង៥០០",

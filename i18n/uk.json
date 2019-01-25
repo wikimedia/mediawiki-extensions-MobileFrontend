@@ -181,7 +181,6 @@
 	"mobile-frontend-opt-in-explain": "{{SITENAME}} βета — це можливість спробувати експериментальні функції і залишити нам цінний відгук",
 	"mobile-frontend-overlay-close": "Закрити",
 	"mobile-frontend-overlay-continue": "Продовжити",
-	"mobile-frontend-page-edit-summary": "<span><strong>Опис редагування</strong> $1</span>",
 	"mobile-frontend-photo-upload-invalid-user": "Користувач «$1» не зареєстрований.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> вивантаження|<span>$1</span>  вивантаження|<span>$1</span>  вивантажень}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "500+ завантажень",

@@ -92,7 +92,6 @@
 	"mobile-frontend-opt-in-explain": "{{SITENAME}} βeta je način da isprobate eksperimentalne mogućnosti i date vredne povratne informacije",
 	"mobile-frontend-overlay-close": "Zatvori",
 	"mobile-frontend-overlay-continue": "Nastavi",
-	"mobile-frontend-page-edit-summary": "<span><strong>Opis izmene</strong> $1</span>",
 	"mobile-frontend-photo-upload-invalid-user": "Korisnik „$1“ nije registrovan.",
 	"mobile-frontend-photo-upload-user-count-over-limit": "500+ otpremanja",
 	"mobile-frontend-privacy-link-text": "Privatnost",

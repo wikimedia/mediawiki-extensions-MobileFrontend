@@ -98,7 +98,6 @@
 	"mobile-frontend-opt-in-explain": "Beim Ußprobeere metmaache löht Desch neu Saache känne liehre, ävver et künnt sind, dat De jät fengks, wat noch nit flupp.",
 	"mobile-frontend-overlay-close": "Zohmaache",
 	"mobile-frontend-overlay-continue": "Wiggermaache",
-	"mobile-frontend-page-edit-summary": "<span><strong>Zesammefaßong</strong> „$1“ </span>",
 	"mobile-frontend-photo-upload-invalid-user": "Dä Metmaacher „$1“ es nit aanjemälldt.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>Eine</span> Dattei|<span>$1</span> Datteije|kein Dattei}} huhjelahde.",
 	"mobile-frontend-photo-upload-user-count-over-limit": "Mih wi 500 Datteije huhjelahde",

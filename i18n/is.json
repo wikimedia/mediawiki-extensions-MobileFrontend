@@ -130,7 +130,6 @@
 	"mobile-frontend-opt-in-explain": "Með því að taka þátt í beta-prófunum {{SITENAME}}, munt þú fá aðgang að nýjustu tilraunaeiginleikunum, sem gætu þó verið gallaðir á einhvern hátt.",
 	"mobile-frontend-overlay-close": "Loka",
 	"mobile-frontend-overlay-continue": "Halda áfram",
-	"mobile-frontend-page-edit-summary": "<span><strong>Breytingarágrip</strong> $1</span>",
 	"mobile-frontend-photo-upload-invalid-user": "Notandinn „$1“ er ekki skráður.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> upphal|<span>$1</span> upphöl}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "500+ upphöl",

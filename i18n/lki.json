@@ -114,7 +114,6 @@
 	"mobile-frontend-news-items": "در خبرها",
 	"mobile-frontend-overlay-close": "ئآنیائن-بستِن",
 	"mobile-frontend-overlay-continue": "ادامه-دؤم گرتن",
-	"mobile-frontend-page-edit-summary": "<span><strong>خلاصهٔ دةسکاری</strong> $1</span>",
 	"mobile-frontend-photo-upload-invalid-user": "کاربر «$1» نؤم نؤیسی نؤیة.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>$1</span> بارگذاری}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "۵۰۰+ بارگذاری",

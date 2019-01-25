@@ -141,7 +141,6 @@
 	"mobile-frontend-opt-in-explain": "βeta on lahendus, mis võimaldab sul proovida neid katsefunktsioone ja anda meile väärtuslikku tagasisidet.",
 	"mobile-frontend-overlay-close": "Sule",
 	"mobile-frontend-overlay-continue": "Jätka",
-	"mobile-frontend-page-edit-summary": "<span><strong>Resümee</strong> $1</span>",
 	"mobile-frontend-photo-upload-invalid-user": "Kasutaja \"$1\" pole registreeritud.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>Üks</span> üleslaadimine|<span>$1</span> üleslaadimist}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "Üle 500 üleslaaditud faili",

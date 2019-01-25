@@ -166,7 +166,6 @@
 	"mobile-frontend-opt-in-explain": "{{SITENAME}} ベータテストは、これらの実験的な機能を試して貴重なフィードバックを提供する方法です",
 	"mobile-frontend-overlay-close": "閉じる",
 	"mobile-frontend-overlay-continue": "続行",
-	"mobile-frontend-page-edit-summary": "<span><strong>編集内容の要約</strong> $1</span>",
 	"mobile-frontend-photo-upload-invalid-user": "利用者アカウント「$1」は登録されていません。",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|アップロード <span>$1</span> 件}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "アップロード 500+ 件",

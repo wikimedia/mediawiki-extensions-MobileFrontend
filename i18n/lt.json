@@ -153,7 +153,6 @@
 	"mobile-frontend-opt-in-explain": "Naudodamiesi {{SITENAME}} βeta galėsite išbandyti šias, dar tik eksperimentines funkcijas, ir palikti mums naudingų atsiliepimų",
 	"mobile-frontend-overlay-close": "Uždaryti",
 	"mobile-frontend-overlay-continue": "Tęsti",
-	"mobile-frontend-page-edit-summary": "<span><strong>Keitimo komentaras</strong> $1</span>",
 	"mobile-frontend-photo-upload-invalid-user": "Naudotojas „$1“ nėra registruotas.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> įkėlimas|<span>$1</span> įkėlimai|<span>$1</span> įkėlimų}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "500+ įkėlimų",

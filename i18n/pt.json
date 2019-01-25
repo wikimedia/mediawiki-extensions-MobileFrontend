@@ -180,7 +180,6 @@
 	"mobile-frontend-opt-in-explain": "βeta de {{SITENAME}} é uma forma de testar estas funcionalidades experimentais e enviar-nos comentários valiosos",
 	"mobile-frontend-overlay-close": "Fechar",
 	"mobile-frontend-overlay-continue": "Continuar",
-	"mobile-frontend-page-edit-summary": "<span><strong>Resumo da edição</strong> $1</span>",
 	"mobile-frontend-photo-upload-invalid-user": "O utilizador \"$1\" não está registado.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> carregamento|<span>$1</span> carregamentos}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "mais de 500 envios",

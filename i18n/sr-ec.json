@@ -167,7 +167,6 @@
 	"mobile-frontend-opt-in-explain": "{{SITENAME}} βета је начин да испробате ове експерименталне функције и пружите нам вредне повратне информације",
 	"mobile-frontend-overlay-close": "Затвори",
 	"mobile-frontend-overlay-continue": "Настави",
-	"mobile-frontend-page-edit-summary": "<span><strong>Резиме измене</strong> $1</span>",
 	"mobile-frontend-photo-upload-invalid-user": "Корисник „$1“ није регистрован.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> датотека|Датотека:<span>$1</span>}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "500+ отпремања",

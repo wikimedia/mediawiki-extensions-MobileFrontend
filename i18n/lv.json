@@ -107,7 +107,6 @@
 	"mobile-frontend-news-items": "Ziņās",
 	"mobile-frontend-overlay-close": "Aizvērt",
 	"mobile-frontend-overlay-continue": "Turpināt",
-	"mobile-frontend-page-edit-summary": "<span><strong>Labojuma kopsavilkums</strong> $1</span>",
 	"mobile-frontend-photo-upload-invalid-user": "Dalībnieks \"$1\" nav reģistrēts.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>$1</span> augšupielādes|<span>$1</span> augšupielāde|<span>$1</span> augšupielādes}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "500+ augšupielādes",

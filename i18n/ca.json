@@ -158,7 +158,6 @@
 	"mobile-frontend-opt-in-explain": "Quan proveu la versió beta, tindreu accés a les darreres característiques experimentals que poden estar subjectes a defectes de programari.",
 	"mobile-frontend-overlay-close": "Tanca",
 	"mobile-frontend-overlay-continue": "Continua",
-	"mobile-frontend-page-edit-summary": "<span><strong>Resum d'edició</strong> $1</span>",
 	"mobile-frontend-photo-upload-invalid-user": "L'usuari «$1» no està registrat.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> càrrega|<span>$1</span> càrregues}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "500+ càrregues",

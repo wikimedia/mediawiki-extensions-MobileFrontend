@@ -198,7 +198,6 @@
 	"mobile-frontend-opt-in-explain": "{{SITENAME}}测试是您可以尝试这些实验功能，并向我们提供有价值的反馈的方式",
 	"mobile-frontend-overlay-close": "关闭",
 	"mobile-frontend-overlay-continue": "继续",
-	"mobile-frontend-page-edit-summary": "<span><strong>编辑摘要</strong> $1</span>",
 	"mobile-frontend-photo-upload-invalid-user": "用户“$1”尚未注册。",
 	"mobile-frontend-photo-upload-user-count": "<span>$1</span>个上传",
 	"mobile-frontend-photo-upload-user-count-over-limit": "超过500次上传",

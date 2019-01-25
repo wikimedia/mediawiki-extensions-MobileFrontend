@@ -171,7 +171,6 @@
 	"mobile-frontend-opt-in-explain": "{{SITENAME}} βeta är ett sätt för dig att prova dessa experimentella funktionerna och ge oss värdefull återkoppling.",
 	"mobile-frontend-overlay-close": "Stäng",
 	"mobile-frontend-overlay-continue": "Fortsätt",
-	"mobile-frontend-page-edit-summary": "<span><strong>Redigeringssammanfattning</strong> $1</span>",
 	"mobile-frontend-photo-upload-invalid-user": "Användare \"$1\" är inte registrerad.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> uppladdning|<span>$1</span> uppladdningar}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "500+ uppladdningar",
