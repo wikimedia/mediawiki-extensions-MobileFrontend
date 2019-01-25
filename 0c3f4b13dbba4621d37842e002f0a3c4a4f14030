@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e300ecae_60c43372",
+        "filename": "src/mobile.startup/Skin.js",
+        "patchSetId": 19
+      },
+      "lineNbr": 215,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-25T00:08:44Z",
+      "side": 1,
+      "message": "can also return void given the expanded if block.",
+      "range": {
+        "startLine": 215,
+        "startChar": 13,
+        "endLine": 215,
+        "endChar": 27
+      },
+      "revId": "0c3f4b13dbba4621d37842e002f0a3c4a4f14030",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f72675c1_bd00b86e",
+        "filename": "src/mobile.startup/Skin.js",
+        "patchSetId": 19
+      },
+      "lineNbr": 231,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-25T00:08:44Z",
+      "side": 1,
+      "message": "should this reject instead?",
+      "revId": "0c3f4b13dbba4621d37842e002f0a3c4a4f14030",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
