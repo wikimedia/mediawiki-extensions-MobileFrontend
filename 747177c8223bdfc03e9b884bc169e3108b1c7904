@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "8b367689_a7b4751f",
+        "filename": "src/mobile.startup/lazyImages/lazyImageLoader.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-25T01:06:26Z",
+      "side": 1,
+      "message": "You are correct. Only integers should pass through. Fixed.",
+      "parentUuid": "262fd167_5899c3d2",
+      "range": {
+        "startLine": 41,
+        "startChar": 32,
+        "endLine": 41,
+        "endChar": 51
+      },
+      "revId": "747177c8223bdfc03e9b884bc169e3108b1c7904",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "be574c3a_deb3e520",
         "filename": "src/mobile.startup/lazyImages/lazyImageLoader.js",
         "patchSetId": 8
@@ -36,6 +60,30 @@
       "writtenOn": "2019-01-25T00:40:39Z",
       "side": 1,
       "message": "could also use className here if we wanted to.",
+      "range": {
+        "startLine": 43,
+        "startChar": 42,
+        "endLine": 43,
+        "endChar": 70
+      },
+      "revId": "747177c8223bdfc03e9b884bc169e3108b1c7904",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e4e63318_06352e80",
+        "filename": "src/mobile.startup/lazyImages/lazyImageLoader.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-25T01:06:26Z",
+      "side": 1,
+      "message": "I don\u0027t think we use `data-className` on the PHP side. I can check but this was just copied over.",
+      "parentUuid": "be574c3a_deb3e520",
       "range": {
         "startLine": 43,
         "startChar": 42,
@@ -82,6 +130,24 @@
     },
     {
       "key": {
+        "uuid": "b3cb2217_9df1be7a",
+        "filename": "src/mobile.startup/lazyImages/lazyImageLoader.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-25T01:06:26Z",
+      "side": 1,
+      "message": "Done. Tests in next patch updated.",
+      "parentUuid": "141e8769_d09fcc18",
+      "revId": "747177c8223bdfc03e9b884bc169e3108b1c7904",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a9b1324b_93e64cac",
         "filename": "src/mobile.startup/lazyImages/lazyImageLoader.js",
         "patchSetId": 8
@@ -93,6 +159,24 @@
       "writtenOn": "2019-01-25T00:40:39Z",
       "side": 1,
       "message": "Is there any reason why do we set some attributes here and some above?",
+      "revId": "747177c8223bdfc03e9b884bc169e3108b1c7904",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "177d339e_dc9b85bc",
+        "filename": "src/mobile.startup/lazyImages/lazyImageLoader.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-25T01:06:26Z",
+      "side": 1,
+      "message": "These attributes actually trigger the download the event listeners are registered to receive. It makes sense to group them separately from the rest IMHO.",
+      "parentUuid": "a9b1324b_93e64cac",
       "revId": "747177c8223bdfc03e9b884bc169e3108b1c7904",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
