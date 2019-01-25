@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "245742ea_3fe9e806",
+        "filename": "src/mobile.startup/Skin.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-25T01:12:43Z",
+      "side": 1,
+      "message": "Makes sense. Thanks for the follow up.",
+      "parentUuid": "55977aab_72c6865d",
+      "revId": "e9472b46f145c7125c7d57c15dc89f8f51538e83",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5793ebcc_a4c014db",
         "filename": "src/mobile.startup/Skin.js",
         "patchSetId": 15
