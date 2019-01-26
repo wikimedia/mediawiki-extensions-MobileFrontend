@@ -113,7 +113,7 @@
 	"mobile-frontend-languages-404-desc": "मान्य शीर्षक भी देना चाहिए",
 	"mobile-frontend-languages-404-title": "भाषा त्रुटि",
 	"mobile-frontend-languages-header": "भाषाएँ",
-	"mobile-frontend-languages-header-page": "$1 - भाषाएँ",
+	"mobile-frontend-languages-header-page": "$1 - अन्य भाषाएँ",
 	"mobile-frontend-languages-nonexistent-title": "\"$1\" पृष्ठ अस्तित्व में नहीं है।",
 	"mobile-frontend-languages-text": "$1 $2 {{PLURAL:$2|भाषा|भाषाओं}} में उपलब्ध है",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "सुझावित भाषा",
