@@ -711,6 +711,7 @@ Text 2
 			]
 		];
 	}
+
 	/**
 	 * @dataProvider provideGetMobileViewPageProps
 	 * @covers ApiMobileView::getMobileViewPageProps

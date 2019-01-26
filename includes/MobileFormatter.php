@@ -90,6 +90,7 @@ class MobileFormatter extends HtmlFormatter {
 	public function disableScripts() {
 		$this->scriptsEnabled = false;
 	}
+
 	/**
 	 * Creates and returns a MobileFormatter
 	 *

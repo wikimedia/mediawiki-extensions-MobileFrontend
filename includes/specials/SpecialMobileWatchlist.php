@@ -20,12 +20,10 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	/** @var string $view Saves, how the watchlist is sorted: a-z or as a feed */
 	private $view;
 
-	/**
-	 * Construct function
-	 */
 	public function __construct() {
 		parent::__construct( 'Watchlist' );
 	}
+
 	/** @var string $filter Saves the actual used filter in feed view */
 	private $filter;
 	/** @var boolean $usePageImages Saves whether display images or not */

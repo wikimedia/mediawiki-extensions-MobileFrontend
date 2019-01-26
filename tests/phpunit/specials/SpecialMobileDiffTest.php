@@ -15,6 +15,7 @@ class SpecialMobileDiffTest extends MediaWikiLangTestCase {
 		}
 		MobileContext::resetInstanceForTesting();
 	}
+
 	/**
 	 * @dataProvider providerTestNames
 	 * @covers SpecialMobileDiff::executeWhenAvailable

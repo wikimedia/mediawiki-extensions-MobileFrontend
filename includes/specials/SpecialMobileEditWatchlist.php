@@ -7,9 +7,6 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 	/** @var string $offsetTitle The name of the title to begin listing the watchlist from */
 	protected $offsetTitle;
 
-	/**
-	 * Construct function
-	 */
 	public function __construct() {
 		$req = $this->getRequest();
 		$this->offsetTitle = $req->getVal( 'from', '' );

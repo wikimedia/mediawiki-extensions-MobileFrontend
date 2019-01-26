@@ -7,9 +7,6 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 	/** @var Title $title Saves the title object to get languages for */
 	private $title;
 
-	/**
-	 * Construct function
-	 */
 	public function __construct() {
 		parent::__construct( 'MobileLanguages' );
 	}
@@ -103,6 +100,7 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 		}
 		return true;
 	}
+
 	/**
 	 * Returns an array of language variants that the page is available in
 	 * @return array

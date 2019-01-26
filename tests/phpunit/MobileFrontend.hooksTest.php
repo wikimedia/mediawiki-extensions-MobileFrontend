@@ -94,6 +94,7 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 		$this->assertEquals( 0, count( $links ),
 			'test, no alternate or canonical link is added' );
 	}
+
 	/**
 	 * Test headers and alternate/canonical links to be set or not
 	 *

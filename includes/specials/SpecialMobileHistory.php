@@ -24,9 +24,6 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 	/** @var string a message key for the error message description that should be shown on a 404 */
 	protected $errorNotFoundDescriptionMsg = 'mobile-frontend-history-404-desc';
 
-	/**
-	 * Construct function
-	 */
 	public function __construct() {
 		parent::__construct( $this->specialPageName );
 	}

@@ -7,9 +7,6 @@ class SpecialNearby extends MobileSpecialPage {
 	/** @var boolean $hasDesktopVersion Does this special page has a desktop version? */
 	protected $hasDesktopVersion = true;
 
-	/**
-	 * Construct function
-	 */
 	public function __construct() {
 		parent::__construct( 'Nearby' );
 		$this->listed = true;

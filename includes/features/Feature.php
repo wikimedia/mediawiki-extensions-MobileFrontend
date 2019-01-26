@@ -63,6 +63,7 @@ class Feature implements IFeature {
 	public function getGroup() {
 		return $this->group;
 	}
+
 	/**
 	 * @inheritDoc
 	 */

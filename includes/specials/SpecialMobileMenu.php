@@ -7,9 +7,7 @@
  * @ingroup SpecialPage
  */
 class SpecialMobileMenu extends MobileSpecialPage {
-	/**
-	 * Construct function
-	 */
+
 	public function __construct() {
 		parent::__construct( 'MobileMenu' );
 		$supported = [ 'vector', 'minerva' ];

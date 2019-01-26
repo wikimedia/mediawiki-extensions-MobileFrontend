@@ -20,9 +20,6 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	 */
 	protected $mDiffEngine;
 
-	/**
-	 * Construct function
-	 */
 	public function __construct() {
 		parent::__construct( 'MobileDiff' );
 	}

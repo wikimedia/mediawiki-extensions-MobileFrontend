@@ -4,9 +4,7 @@
  * Provides a list of citations available for a page
  */
 class SpecialMobileCite extends MobileSpecialPage {
-	/**
-	 * Construct function
-	 */
+
 	public function __construct() {
 		parent::__construct( 'MobileCite' );
 	}

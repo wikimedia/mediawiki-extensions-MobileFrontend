@@ -6,9 +6,7 @@
 class SpecialUploads extends MobileSpecialPage {
 	/** @var boolean $hasDesktopVersion Whether the mobile special page has a desktop special page */
 	protected $hasDesktopVersion = true;
-	/**
-	 * Construct function
-	 */
+
 	public function __construct() {
 		parent::__construct( 'Uploads' );
 	}
@@ -56,6 +54,7 @@ class SpecialUploads extends MobileSpecialPage {
 			$output->addHTML( $html );
 		}
 	}
+
 	/**
 	 * Generates HTML for the uploads page for the passed user.
 	 *
