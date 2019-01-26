@@ -324,50 +324,21 @@ class MobileFrontendHooks {
 	public static function onResourceLoaderTestModules( array &$testModules,
 		ResourceLoader &$resourceLoader
 	) {
-		// FIXME: Global core variable don't use it.
-		global $wgResourceModules;
-		$testFiles = [];
-		$dependencies = [];
-		$localBasePath = dirname( __DIR__ );
-
-		// find test files for every RL module
-		foreach ( $wgResourceModules as $key => $module ) {
-			$hasTests = false;
-			if ( substr( $key, 0, 7 ) === 'mobile.' && isset( $module['scripts'] ) ) {
-				foreach ( $module['scripts'] as $script ) {
-					$testFile = 'tests/' . dirname( $script ) . '/' .
-						preg_replace( '/.js$/', '.test.js', basename( $script ) );
-					// For resources folder
-					$testFile = str_replace( 'tests/resources/', 'tests/qunit/', $testFile );
-					// if a test file exists for a given JS file, add it
-					if ( file_exists( $localBasePath . '/' . $testFile ) ) {
-						$testFiles[] = $testFile;
-						$hasTests = true;
-					}
-				}
-
-				// if test files exist for given module, create a corresponding test module
-				if ( $hasTests ) {
-					$dependencies[] = $key;
-				}
-			}
-		}
-
-		$testFiles[] = 'resources/dist/tests.mobilefrontend.js';
 		// Need to explicitly list any dependencies which have templates for
 		// compatibility with Special:JavaScript/qunit/plain mode
 		// When modules no longer have templates, these can safely be removed.
-		$dependencies[] = 'mobile.startup';
-		$dependencies[] = 'mobile.languages.structured';
-		$dependencies[] = 'mobile.mediaViewer';
-		$dependencies[] = 'mobile.special.nearby.scripts';
-		$dependencies[] = 'mobile.talk.overlays';
 		$testModule = [
-			'dependencies' => $dependencies,
-			'localBasePath' => $localBasePath,
+			'dependencies' => [
+				'mobile.startup',
+				'mobile.languages.structured',
+				'mobile.mediaViewer',
+				'mobile.special.nearby.scripts',
+				'mobile.talk.overlays',
+			],
+			'localBasePath' => dirname( __DIR__ ),
 			'remoteExtPath' => 'MobileFrontend',
 			'targets' => [ 'mobile', 'desktop' ],
-			'scripts' => $testFiles,
+			'scripts' => 'resources/dist/tests.mobilefrontend.js',
 		];
 
 		// Expose templates module

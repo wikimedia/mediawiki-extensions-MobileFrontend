@@ -18,11 +18,11 @@ module.exports = function ( grunt ) {
 		},
 		watch: {
 			lint: {
-				files: [ 'resources/**/*.js', 'tests/qunit/**/*.js' ],
+				files: [ 'resources/**/*.js', 'tests/node-qunit/**/*.js' ],
 				tasks: [ 'lint' ]
 			},
 			scripts: {
-				files: [ 'resources/**/*.js', 'tests/qunit/**/*.js' ],
+				files: [ 'resources/**/*.js', 'tests/node-qunit/**/*.js' ],
 				tasks: [ 'test' ]
 			},
 			configFiles: {
