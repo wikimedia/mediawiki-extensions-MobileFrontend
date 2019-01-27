@@ -10,7 +10,7 @@
     "lint:es5": "eslint --no-eslintrc --no-ignore resources",
     "lint:js": "eslint --cache --max-warnings 0 --report-unused-disable-directives .",
     "test:all": "npm run lint && npm run doc && dev-scripts/svg_check.sh",
-    "test": "npm run -s test:bundle && npm run -s test:all",
+    "test": "npm run -s test:bundle && npm run -s test:all && npm run coverage",
     "test:bundle": "bash ./dev-scripts/check_bundle.sh 'HEAD^'",
     "test:bundle-cached": "bash ./dev-scripts/check_bundle.sh --cached",
     "doc": "jsdoc -c jsdoc.json",
