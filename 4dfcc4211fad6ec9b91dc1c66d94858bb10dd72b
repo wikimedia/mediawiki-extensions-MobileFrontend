@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "c5748720_cfdb8029",
+        "filename": "tests/phpunit/MobileFrontend.skin.hooksTest.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-01-28T10:54:47Z",
+      "side": 1,
+      "message": ":)",
+      "parentUuid": "06dd8f0a_664647c1",
+      "range": {
+        "startLine": 67,
+        "startChar": 5,
+        "endLine": 67,
+        "endChar": 19
+      },
+      "revId": "4dfcc4211fad6ec9b91dc1c66d94858bb10dd72b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e6b08fc1_36dd856f",
         "filename": "tests/phpunit/MobileFrontend.skin.hooksTest.php",
         "patchSetId": 3
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "a5a0b4ce_9315ff3d",
+        "filename": "tests/phpunit/MobileFrontend.skin.hooksTest.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-01-28T10:54:47Z",
+      "side": 1,
+      "message": "Nice, I see the reasoning here. I think I\u0027ll do a follow-up or do you think it\u0027s a good idea to just add it to this patch?",
+      "parentUuid": "e6b08fc1_36dd856f",
+      "range": {
+        "startLine": 71,
+        "startChar": 18,
+        "endLine": 71,
+        "endChar": 48
+      },
+      "revId": "4dfcc4211fad6ec9b91dc1c66d94858bb10dd72b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c77b3eb7_2f021ba5",
         "filename": "tests/phpunit/MobileFrontend.skin.hooksTest.php",
         "patchSetId": 3
@@ -59,6 +107,30 @@
       "writtenOn": "2019-01-28T10:49:21Z",
       "side": 1,
       "message": "I added this to test if HTML characters in this message get escaped.",
+      "range": {
+        "startLine": 73,
+        "startChar": 37,
+        "endLine": 73,
+        "endChar": 38
+      },
+      "revId": "4dfcc4211fad6ec9b91dc1c66d94858bb10dd72b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "73f60550_5b948fbb",
+        "filename": "tests/phpunit/MobileFrontend.skin.hooksTest.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-01-28T10:54:47Z",
+      "side": 1,
+      "message": "Ack! Yes, you\u0027re right!",
+      "parentUuid": "c77b3eb7_2f021ba5",
       "range": {
         "startLine": 73,
         "startChar": 37,
