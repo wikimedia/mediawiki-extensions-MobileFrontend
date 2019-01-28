@@ -33,7 +33,8 @@
 			"Mahdy Saffar",
 			"Baloch Khan",
 			"Fatemi127",
-			"Amjad Khan"
+			"Amjad Khan",
+			"Amirsara"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "اینکه کاربر از میانای تلفن همراه استفاده می‌کند یا نه",
@@ -148,12 +149,12 @@
 	"mobile-frontend-languages-404-desc": "یک عنوان معتبر باید مشخص شود.",
 	"mobile-frontend-languages-404-title": "خطای زبان‌ها",
 	"mobile-frontend-languages-header": "زبان‌ها",
-	"mobile-frontend-languages-header-page": "$1 - زبان‌ها",
+	"mobile-frontend-languages-header-page": "$1 - زبان‌های دیگر",
 	"mobile-frontend-languages-nonexistent-title": "صفحهٔ \"$1\" وجود ندارد.",
 	"mobile-frontend-languages-text": "$1 در $2 {{PLURAL:$2|زبان|زبان‌}} در دسترس است .",
 	"mobile-frontend-languages-variant-header": "{{#language:{{CONTENTLANG}}}} انواع",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "زبان‌های پشتیبانی‌شده",
-	"mobile-frontend-languages-structured-overlay-all-languages-header": "همۀ زبان‌ها",
+	"mobile-frontend-languages-structured-overlay-all-languages-header": "زبان‌های دیگر",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "جستجوی یک زبان",
 	"mobile-frontend-last-modified-date": "آخرین ویرایش $1، در $2",
 	"mobile-frontend-last-modified-with-user-days": "آخرین ویرایش {{PLURAL:$3|$3 روز}} پیش توسط {{PLURAL:$5|[$6 $2]|0=یک کاربر ناشناس}} [$4 {{GENDER:$1|انجام شده‌است}}]",
