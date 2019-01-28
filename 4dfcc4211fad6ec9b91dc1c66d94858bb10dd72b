@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "06dd8f0a_664647c1",
+        "filename": "tests/phpunit/MobileFrontend.skin.hooksTest.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2019-01-28T10:49:21Z",
+      "side": 1,
+      "message": "I never used this before, but it seems to fit very well here.",
+      "range": {
+        "startLine": 67,
+        "startChar": 5,
+        "endLine": 67,
+        "endChar": 19
+      },
+      "revId": "4dfcc4211fad6ec9b91dc1c66d94858bb10dd72b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e6b08fc1_36dd856f",
+        "filename": "tests/phpunit/MobileFrontend.skin.hooksTest.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2019-01-28T10:49:21Z",
+      "side": 1,
+      "message": "There could be a third test case with a local title here (e.g. just the string \"Title\"). This will trigger a different code path.",
+      "range": {
+        "startLine": 71,
+        "startChar": 18,
+        "endLine": 71,
+        "endChar": 48
+      },
+      "revId": "4dfcc4211fad6ec9b91dc1c66d94858bb10dd72b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c77b3eb7_2f021ba5",
+        "filename": "tests/phpunit/MobileFrontend.skin.hooksTest.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2019-01-28T10:49:21Z",
+      "side": 1,
+      "message": "I added this to test if HTML characters in this message get escaped.",
+      "range": {
+        "startLine": 73,
+        "startChar": 37,
+        "endLine": 73,
+        "endChar": 38
+      },
+      "revId": "4dfcc4211fad6ec9b91dc1c66d94858bb10dd72b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
