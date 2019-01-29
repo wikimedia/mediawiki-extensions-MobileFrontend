@@ -2,9 +2,32 @@
 
 /**
  * @group MobileFrontend
- * @coversDefaultClass MobileFrontendSkinHooks
+ * @coversDefaultClass \MobileFrontendSkinHooks
  */
 class MobileFrontendSkinHooksTest extends MediaWikiLangTestCase {
+	/**
+	 * @covers ::interimTogglingSupport
+	 */
+	public function testInterimTogglingSupport() {
+		$js = MobileFrontendSkinHooks::interimTogglingSupport();
+
+		$this->assertContains(
+			'function mfTempOpenSection(',
+			$js,
+			'creates global function called from MobileFormatter::prepareHeading'
+		);
+		$this->assertContains(
+			'mf-section-',
+			$js,
+			'uses (partial) ID set in MobileFormatter::createSectionBodyElement'
+		);
+		$this->assertContains(
+			'open-block',
+			$js,
+			'contains class name to be toggled'
+		);
+	}
+
 	/**
 	 * @dataProvider providePluralLicenseInfoData
 	 * @covers ::getPluralLicenseInfo
