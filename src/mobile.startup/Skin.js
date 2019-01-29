@@ -1,12 +1,12 @@
 var
 	browser = require( './Browser' ).getSingleton(),
 	lazyImageLoader = require( './lazyImages/lazyImageLoader' ),
+	lazyImageTransformer = require( './lazyImages/lazyImageTransformer' ),
 	View = require( './View' ),
 	util = require( './util' ),
 	Page = require( './Page' ),
 	Deferred = util.Deferred,
 	icons = require( './icons' ),
-	viewport = mw.viewport,
 	spinner = icons.spinner(),
 	mfExtend = require( './mfExtend' );
 
@@ -72,10 +72,13 @@ function Skin( params ) {
 		mw.config.get( 'wgMFLazyLoadImages' )
 	) {
 		util.docReady( function () {
-			self.imageLoading = setupImageLoading(
-				self.eventBus, self.$.bind( self ), document.getElementById( 'content' )
+			var
+				container = document.getElementById( 'content' ),
+				images = lazyImageLoader.queryPlaceholders( container );
+			self.lazyImageTransformer = lazyImageTransformer.newLazyImageTransformer(
+				self.eventBus, self.$.bind( self ), util.getWindow().height() * 1.5, images
 			);
-			self.imageLoading.loadImages();
+			self.lazyImageTransformer.loadImages();
 		} );
 	}
 
@@ -119,8 +122,8 @@ mfExtend( Skin, View, {
 		}
 		util.parseHTML( '<div class="transparent-shield cloaked-element">' )
 			.appendTo( $el.find( '#mw-mf-page-center' ) );
-		if ( this.imageLoading ) {
-			this.imageLoading.loadImages();
+		if ( this.lazyImageTransformer ) {
+			this.lazyImageTransformer.loadImages();
 		}
 
 		/**
@@ -257,72 +260,6 @@ mfExtend( Skin, View, {
 		return licenseMsg;
 	}
 } );
-
-/**
- * Setup listeners to watch unloaded images and load them into the page
- * as and when they are needed.
- * @memberof Skin
- * @instance
- * @param {OO.EventEmitter} eventBus
- * @param {JQuery.find} find
- * @param {jQuery.Object} container The container that should be
- *  searched for image placeholders.
- * @return {{loadImages: function(): void}}.
- */
-function setupImageLoading( eventBus, find, container ) {
-	var offset = util.getWindow().height() * 1.5,
-		imagePlaceholders = lazyImageLoader.queryPlaceholders( container );
-
-	/**
-	 * Check whether an image should be loaded based on its proximity to the
-	 * viewport; and whether it is displayed to the user.
-	 * @param {jQuery.Object} $placeholder
-	 * @return {boolean}
-	 */
-	function shouldLoadImage( $placeholder ) {
-		return viewport.isElementCloseToViewport( $placeholder[0], offset ) &&
-			// If a placeholder is an inline element without a height attribute set
-			// it will record as hidden
-			// to circumvent this we also need to test the height (see T143768).
-			( $placeholder.is( ':visible' ) || $placeholder.height() === 0 );
-	}
-
-	/**
-	 * Load remaining images in viewport
-	 * @return {jQuery.Deferred}
-	 */
-	function loadImages() {
-		var placeholders = [];
-		// Filter unloaded images to only the images that still need to be loaded
-		imagePlaceholders = util.grep( imagePlaceholders, function ( placeholder ) {
-			var $placeholder = find( placeholder );
-			// Check length to ensure the image is still in the DOM.
-			if ( $placeholder.length && shouldLoadImage( $placeholder ) ) {
-				placeholders.push( placeholder );
-				return false;
-			}
-			return true;
-		} );
-
-		// When no images are left unbind all events
-		if ( !imagePlaceholders.length ) {
-			eventBus.off( 'scroll:throttled', loadImages );
-			eventBus.off( 'resize:throttled', loadImages );
-			eventBus.off( 'section-toggled', loadImages );
-		}
-
-		// load any remaining images.
-		return lazyImageLoader.loadImages( placeholders );
-	}
-
-	eventBus.on( 'scroll:throttled', loadImages );
-	eventBus.on( 'resize:throttled', loadImages );
-	eventBus.on( 'section-toggled', loadImages );
-
-	return {
-		loadImages: loadImages
-	};
-}
 
 Skin.getSectionId = getSectionId;
 
