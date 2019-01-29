@@ -92,7 +92,6 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 			section: this.options.sectionId || null
 		} );
 		this.target.load( this.options.dataPromise );
-		this.saved = false;
 	},
 	/**
 	 * @inheritdoc
@@ -152,7 +151,9 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 		self.applyHeaderOptions( self.options, false );
 		// Unset classes from other editor
 		delete self.options.className;
+		self.switching = true;
 		self.overlayManager.replaceCurrent( new EditorOverlay( self.options ) );
+		self.switching = false;
 	},
 	/**
 	 * @inheritdoc
@@ -160,7 +161,6 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 	 * @instance
 	 */
 	onSaveComplete: function () {
-		this.saved = true;
 		EditorOverlayBase.prototype.onSaveComplete.apply( this, arguments );
 		this.destroyTarget();
 	},
