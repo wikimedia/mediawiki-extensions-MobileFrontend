@@ -176,10 +176,10 @@ function initMobileOptions() {
 		amcToggle = $( '#enable-amc-toggle' ),
 		toggles = [];
 
-	if ( betaToggle ) {
+	if ( betaToggle.length ) {
 		toggles.push( betaToggle );
 	}
-	if ( amcToggle ) {
+	if ( amcToggle.length ) {
 		toggles.push( amcToggle );
 	}
 	infuseToggles( toggles, $form );
