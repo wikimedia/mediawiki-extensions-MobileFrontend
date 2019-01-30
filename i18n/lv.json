@@ -87,7 +87,7 @@
 	"mobile-frontend-languages-nonexistent-title": "Lapa \"$1\" nepastāv.",
 	"mobile-frontend-languages-variant-header": "{{#language:{{CONTENTLANG}}}} varianti",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Ieteiktās valodas",
-	"mobile-frontend-languages-structured-overlay-all-languages-header": "Visas valodas",
+	"mobile-frontend-languages-structured-overlay-all-languages-header": "Citas valodas",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Meklēt valodu",
 	"mobile-frontend-last-modified-date": "Pēdējoreiz labots $1, $2",
 	"mobile-frontend-main-menu": "Galvenā izvēlne",

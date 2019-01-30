@@ -27,6 +27,7 @@
 	"mobile-frontend-editor-editing-page": "<span><strong>सम्पादन</strong> $1</span>",
 	"mobile-frontend-editor-error": "सम्पादन सुरक्षित हुन सकेन",
 	"mobile-frontend-editor-error-preview": "त्रुटि, पूर्वावलोकन गर्दा अप्रत्याशित केहि भयो। कृपया बन्द गर्नुहोस् र फेरि प्रयास गर्नुहोस्।",
+	"mobile-frontend-editor-new-page-confirm": "नयाँ पृष्ठ सृजना गर्ने बारेमा, के निश्चित हुनुहुन्छ",
 	"mobile-frontend-editor-previewing-page": "<span><strong>पूर्वावलोकन</strong> $1</span>",
 	"mobile-frontend-editor-save": "संग्रह गर्ने",
 	"mobile-frontend-editor-success": "तपाईको सम्पादन सङ्ग्रह गरिएको छ",

@@ -43,7 +43,8 @@
 			"Liuxingy",
 			"Hanyanbo98",
 			"D41D8CD98F",
-			"A Chinese Wikipedian"
+			"A Chinese Wikipedian",
+			"水獭很懒"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "用户是否通过移动版界面编辑",
@@ -156,12 +157,12 @@
 	"mobile-frontend-languages-404-desc": "必须指定一个有效标题。",
 	"mobile-frontend-languages-404-title": "语言错误",
 	"mobile-frontend-languages-header": "语言",
-	"mobile-frontend-languages-header-page": "$1——语言",
+	"mobile-frontend-languages-header-page": "$1 - 其他语言",
 	"mobile-frontend-languages-nonexistent-title": "页面“$1”不存在。",
 	"mobile-frontend-languages-text": "$1已在$2种语言中提供。",
 	"mobile-frontend-languages-variant-header": "{{#language:{{CONTENTLANG}}}}变体",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "建议的语言",
-	"mobile-frontend-languages-structured-overlay-all-languages-header": "所有语言",
+	"mobile-frontend-languages-structured-overlay-all-languages-header": "其他语言",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "搜索一种语言",
 	"mobile-frontend-last-modified-date": "最后编辑于$1 $2",
 	"mobile-frontend-last-modified-with-user-days": "{{PLURAL:$5|[$6 $2]|0=匿名用户}}[$4 最后{{GENDER:$1|编辑}}于{{PLURAL:$3|$3天}}前]",
