@@ -1,10 +1,10 @@
+var context = require( '../context' );
+
 function subscribeMobileWebSearchSchema() {
 	mw.loader.using( [
 		'ext.eventLogging.subscriber'
 	] ).then( function () {
-		var M = mw.mobileFrontend,
-			context = M.require( 'mobile.startup/context' ),
-			// Schema provided by ext.eventLogging.subscriber class
+		var // Schema provided by ext.eventLogging.subscriber class
 			Schema = mw.eventLog.Schema, // resource-modules-disable-line
 			/**
 		 * MobileWebSearch schema
