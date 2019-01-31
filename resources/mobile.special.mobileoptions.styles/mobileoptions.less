@@ -29,7 +29,7 @@ form.mw-mf-settings {
 		font-weight: bold;
 	}
 
-	.option-description {
+	.option-description, .option-links {
 		font-weight: normal;
 		font-size: 0.8em;
 		padding-right: 8px;
@@ -49,6 +49,21 @@ form.mw-mf-settings {
 
 	.mobile-options-feedback {
 		margin-top: 10px !important;
+	}
+
+	#amc-field {
+		.hlist {
+			padding-top: 0.4em;
+
+			> li {
+				margin-right: 15px;
+			}
+		}
+
+		.option-links {
+			// margin should be same as margin applied to .oo-ui-fieldLayout-body
+			margin: 0 16px;
+		}
 	}
 
 	#beta-field {
@@ -85,6 +100,17 @@ form.mw-mf-settings {
 
 	.oo-ui-fieldLayout-body {
 		margin-bottom: 40px;
+
+		// make parent expand to include floats
+		&:before,
+		&:after {
+			content: '';
+			display: table;
+		}
+
+		&:after {
+			clear: both;
+		}
 	}
 
 	// Work around for T180652

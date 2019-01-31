@@ -70,7 +70,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 				'id' => 'enable-amc-toggle',
 				'value' => '1',
 			] );
-			return new OOUI\FieldLayout(
+			$layout = new OOUI\FieldLayout(
 				$amcToggle,
 				[
 					'label' => new OOUI\LabelWidget( [
@@ -88,6 +88,30 @@ class SpecialMobileOptions extends MobileSpecialPage {
 					'id' => 'amc-field',
 				]
 			);
+			// placing links inside a label reduces usability and accessibility so
+			// append links to $layout and outside of label instead
+			// https://www.w3.org/TR/html52/sec-forms.html#example-42c5e0c5
+			$layout->appendContent( new OOUI\HtmlSnippet(
+					Html::openElement( 'ul', [ 'class' => 'hlist option-links' ] ) .
+					Html::openElement( 'li' ) .
+					Html::rawElement(
+							'a',
+							// phpcs:ignore Generic.Files.LineLength.TooLong
+							[ 'href' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Reading/Web/Advanced_mobile_contributions' ],
+							$this->msg( 'mobile-frontend-mobile-option-amc-learn-more' )->parse()
+					) .
+					Html::closeElement( 'li' ) .
+					Html::openElement( 'li' ) .
+					Html::rawElement(
+							'a',
+							// phpcs:ignore Generic.Files.LineLength.TooLong
+							[ 'href' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Talk:Reading/Web/Advanced_mobile_contributions' ],
+							$this->msg( 'mobile-frontend-mobile-option-amc-send-feedback' )->parse()
+					) .
+					Html::closeElement( 'li' ) .
+					Html::closeElement( 'ul' )
+			) );
+			return $layout;
 	}
 	/**
 	 * Render the settings form (with actual set settings) and add it to the
