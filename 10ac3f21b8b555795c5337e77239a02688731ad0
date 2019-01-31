@@ -117,6 +117,30 @@
     },
     {
       "key": {
+        "uuid": "f137084f_9572fc51",
+        "filename": "tests/qunit/mobile.editor.overlay/EditorGateway.test.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 666,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-01-31T23:43:36Z",
+      "side": 1,
+      "message": "Previously this was testing mw.Api internals...\npostWithToken calls getToken and then post and has special handling for when the initial token is bad.\n\nThis would be a great test in core, but this is not core.\nI suspect when we have code coverage we will be able to demonstrate that removing this test has no effect on code coverage.",
+      "parentUuid": "cc537eac_c7c0d225",
+      "range": {
+        "startLine": 666,
+        "startChar": 8,
+        "endLine": 666,
+        "endChar": 23
+      },
+      "revId": "10ac3f21b8b555795c5337e77239a02688731ad0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b6f0507e_9f1e7df9",
         "filename": "tests/qunit/mobile.editor.overlay/EditorGateway.test.js",
         "patchSetId": 2
