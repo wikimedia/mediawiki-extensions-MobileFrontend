@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a799e2d_ae8b5865",
+        "filename": "tests/qunit/mobile.editor.overlay/EditorGateway.test.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 580,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-31T23:26:18Z",
+      "side": 0,
+      "message": "Why is this token assertion no longer necessary?",
+      "range": {
+        "startLine": 580,
+        "startChar": 4,
+        "endLine": 580,
+        "endChar": 24
+      },
+      "revId": "9fcf99cfa9ba9f670313159c81a1e720116f9980",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

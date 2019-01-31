@@ -1,0 +1,142 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f9713193_f13693b6",
+        "filename": "tests/qunit/mobile.editor.overlay/EditorGateway.test.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-31T23:26:18Z",
+      "side": 1,
+      "message": "Grouping these in objects like happy.response / happy.testContent / etc or response.happy / response.sad / etc may improve readability.\n\nA function that creates a complete group may be possible like:\n\n function newTestParams(response, testContent) {\n   return {\n     response: foo(response),\n     testContent: bar + testContent\n   }\n }\n\n newTestParams(\u0027unhappy response\u0027, \u0027unhappy response test content\u0027)",
+      "range": {
+        "startLine": 26,
+        "startChar": 3,
+        "endLine": 26,
+        "endChar": 16
+      },
+      "revId": "10ac3f21b8b555795c5337e77239a02688731ad0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ffb141e5_41202575",
+        "filename": "tests/qunit/mobile.editor.overlay/EditorGateway.test.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-31T23:26:18Z",
+      "side": 1,
+      "message": "\"Success\" may be less fanciful.",
+      "range": {
+        "startLine": 43,
+        "startChar": 6,
+        "endLine": 43,
+        "endChar": 11
+      },
+      "revId": "10ac3f21b8b555795c5337e77239a02688731ad0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "36c8d2c3_8ed4bb7d",
+        "filename": "tests/qunit/mobile.editor.overlay/EditorGateway.test.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-31T23:26:18Z",
+      "side": 1,
+      "message": "Why does this return a happy response?",
+      "range": {
+        "startLine": 74,
+        "startChar": 51,
+        "endLine": 74,
+        "endChar": 64
+      },
+      "revId": "10ac3f21b8b555795c5337e77239a02688731ad0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b8913c97_00af5b6a",
+        "filename": "tests/qunit/mobile.editor.overlay/EditorGateway.test.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 638,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-31T23:26:18Z",
+      "side": 1,
+      "message": "This could be a local variable as it is only used in this test.",
+      "range": {
+        "startLine": 638,
+        "startChar": 8,
+        "endLine": 638,
+        "endChar": 24
+      },
+      "revId": "10ac3f21b8b555795c5337e77239a02688731ad0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cc537eac_c7c0d225",
+        "filename": "tests/qunit/mobile.editor.overlay/EditorGateway.test.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 666,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-31T23:26:18Z",
+      "side": 1,
+      "message": "This doesn\u0027t seem to return a bad token initially any longer.",
+      "range": {
+        "startLine": 666,
+        "startChar": 8,
+        "endLine": 666,
+        "endChar": 23
+      },
+      "revId": "10ac3f21b8b555795c5337e77239a02688731ad0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b6f0507e_9f1e7df9",
+        "filename": "tests/qunit/mobile.editor.overlay/EditorGateway.test.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 674,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-01-31T23:26:18Z",
+      "side": 1,
+      "message": "I think this should now be once.",
+      "range": {
+        "startLine": 674,
+        "startChar": 94,
+        "endLine": 674,
+        "endChar": 99
+      },
+      "revId": "10ac3f21b8b555795c5337e77239a02688731ad0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
