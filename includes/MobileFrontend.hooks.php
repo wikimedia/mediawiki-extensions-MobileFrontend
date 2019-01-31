@@ -995,7 +995,8 @@ class MobileFrontendHooks {
 						'mobile.startup',
 					],
 					'scripts' => [
-						'resources/mobile.editor.ve/ve.init.mw.MobileFrontendArticleTarget.js'
+						'resources/mobile.editor.ve/ve.init.mw.MobileFrontendArticleTarget.js',
+						'resources/mobile.editor.ve/schemaVisualEditorFeatureUse.js',
 					],
 					'targets' => [
 						'mobile',
