@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Bonevarluri",
-			"Mogoeilor"
+			"Mogoeilor",
+			"Lorestani"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "رازینه پشت راسگری نه وارد كو",
@@ -70,9 +71,9 @@
 	"mobile-frontend-languages-404-desc": "یه گل داسون معتور باید تیار با.",
 	"mobile-frontend-languages-404-title": "خطا زون",
 	"mobile-frontend-languages-header": "زونيا",
-	"mobile-frontend-languages-header-page": "$1 - زونا",
+	"mobile-frontend-languages-header-page": "$1 - زڤونؽا",
 	"mobile-frontend-languages-nonexistent-title": "بلگه $1 وجود ناره.",
-	"mobile-frontend-languages-text": "$1 ها د $2 {{PLURAL:$2|زون|زونا}}.",
+	"mobile-frontend-languages-text": "$1 ها د $2 {{PLURAL:$2|زڤون|زڤونؽا}}.",
 	"mobile-frontend-languages-variant-header": "{{#زون:{{مینونه زون}}}} آلشتگریا",
 	"mobile-frontend-last-modified-date": "آخرین بار د $1 آلشتکار بیه، د $2",
 	"mobile-frontend-main-menu-page-title": "ناوگردی سیلجا",
