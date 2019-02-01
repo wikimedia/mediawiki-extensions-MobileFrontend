@@ -29,6 +29,29 @@ class MobileFrontendSkinHooksTest extends MediaWikiLangTestCase {
 	}
 
 	/**
+	 * @covers ::gradeCImageSupport
+	 */
+	public function testGradeCImageSupport() {
+		$js = MobileFrontendSkinHooks::gradeCImageSupport();
+
+		$this->assertContains(
+			'noscript',
+			$js,
+			'gain the widest possible browser support, scan for noscript tag'
+		);
+		$this->assertContains(
+			'lazy-image-placeholder',
+			$js,
+			'check if sibling has the lazy-image-placeholder class gotten from ns[i].nextSibling;'
+		);
+		$this->assertContains(
+			'parentNode.replaceChild( img, p );',
+			$js,
+			'make sure the replacement to image tag was properly done'
+		);
+	}
+
+	/**
 	 * @dataProvider providePluralLicenseInfoData
 	 * @covers ::getPluralLicenseInfo
 	 */
