@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "21c52b8b_888617b7",
+        "filename": "tests/phpunit/MobileFrontend.skin.hooksTest.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-02-01T08:58:27Z",
+      "side": 1,
+      "message": "Maybe the assertions below cover all the important bits but if there is something I left out, please help :)",
+      "range": {
+        "startLine": 34,
+        "startChar": 17,
+        "endLine": 34,
+        "endChar": 39
+      },
+      "revId": "42ec262560ed95b5eb542a32f54b3cac364c367f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
