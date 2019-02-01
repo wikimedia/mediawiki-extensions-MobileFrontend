@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4c804f7e_d02c4f28",
+        "filename": "src/mobile.editor.overlay/BlockMessage.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-01T01:23:48Z",
+      "side": 1,
+      "message": "I don\u0027t think we need this any longer.",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 13
+      },
+      "revId": "311a625926f7cdd8495cb8d2a3ff3e844e6e761b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
