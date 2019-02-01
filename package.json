@@ -100,11 +100,11 @@
     },
     {
       "path": "resources/dist/mobile.special.uploads.scripts.js",
-      "maxSize": "3.5KB"
+      "maxSize": "1.7KB"
     },
     {
       "path": "resources/dist/mobile.special.watchlist.scripts.js",
-      "maxSize": "1.4KB"
+      "maxSize": "1.3KB"
     },
     {
       "path": "resources/dist/mobile.talk.overlays.js",
