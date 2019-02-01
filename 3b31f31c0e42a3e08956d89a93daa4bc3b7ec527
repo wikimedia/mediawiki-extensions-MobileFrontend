@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f974de35_b7de59e9",
+        "filename": "src/mobile.startup/lazyImages/lazyImageLoader.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-01T00:04:10Z",
+      "side": 1,
+      "message": "why do we set these using `.alt` and `.className` but the one below with setattribute ?",
+      "revId": "3b31f31c0e42a3e08956d89a93daa4bc3b7ec527",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "929f589a_f06f3d5d",
+        "filename": "src/mobile.startup/lazyImages/lazyImageLoader.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-01T00:04:10Z",
+      "side": 1,
+      "message": "not seeing any relevant caveats here: https://developer.mozilla.org/en-US/docs/Web/API/Element/classList",
+      "revId": "3b31f31c0e42a3e08956d89a93daa4bc3b7ec527",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce7d9738_1ecfd790",
+        "filename": "src/mobile.startup/lazyImages/lazyImageLoader.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-01T00:04:10Z",
+      "side": 1,
+      "message": "same question as above",
+      "revId": "3b31f31c0e42a3e08956d89a93daa4bc3b7ec527",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
