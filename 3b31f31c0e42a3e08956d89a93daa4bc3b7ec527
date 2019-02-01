@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "32779076_5fb1c56a",
+        "filename": "src/mobile.startup/lazyImages/lazyImageLoader.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-01T01:30:56Z",
+      "side": 1,
+      "message": "I can use setAttribute here if that is preferred. AFAIK, setAttribute is necessary for to bulk set the style object.",
+      "parentUuid": "f974de35_b7de59e9",
+      "revId": "3b31f31c0e42a3e08956d89a93daa4bc3b7ec527",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "929f589a_f06f3d5d",
         "filename": "src/mobile.startup/lazyImages/lazyImageLoader.js",
         "patchSetId": 12
