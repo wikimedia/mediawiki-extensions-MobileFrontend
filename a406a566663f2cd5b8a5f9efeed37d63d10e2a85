@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ccc1392_17c5cfb8",
+        "filename": "resources/dist/mobile.editor.overlay.js.map.json",
+        "patchSetId": 6
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-01T01:11:07Z",
+      "side": 1,
+      "message": "Should this be B?",
+      "range": {
+        "startLine": 1,
+        "startChar": 7798,
+        "endLine": 1,
+        "endChar": 7799
+      },
+      "revId": "a406a566663f2cd5b8a5f9efeed37d63d10e2a85",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b93c303e_fa0fe987",
+        "filename": "resources/dist/mobile.editor.ve.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-01T01:11:07Z",
+      "side": 1,
+      "message": "It might be better for our users to strip this information. I believe this is kept intentionally via `/*!`.",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 3
+      },
+      "revId": "a406a566663f2cd5b8a5f9efeed37d63d10e2a85",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

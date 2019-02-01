@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "33ab44e1_5543480f",
+        "filename": "package.json",
+        "patchSetId": 7
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-01T01:11:07Z",
+      "side": 1,
+      "message": "Any idea why this doesn\u0027t decrease some?",
+      "range": {
+        "startLine": 51,
+        "startChar": 17,
+        "endLine": 51,
+        "endChar": 24
+      },
+      "revId": "a4aab6afacec6767402fbf2a75cea097aa43242a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
