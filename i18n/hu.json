@@ -254,6 +254,8 @@
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "Bevezető bekezdés",
 	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption": "Szakaszok kibontása alapértelmezetten",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Betűméret",
+	"mobile-frontend-mobile-option-amc-learn-more": "Tudj meg többet",
+	"mobile-frontend-mobile-option-amc-send-feedback": "Visszajelzés küldése",
 	"mobile-frontend-beta-only": "Csak a béta módban elérhető funkció",
 	"mobile-frontend-console-recruit": "Tudj meg többet, hogy miképp építjük mobil oldalunkat: https://www.mediawiki.org/wiki/Extension:MobileFrontend",
 	"prefs-mobile": "Mobil beállítások"

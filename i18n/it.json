@@ -255,5 +255,7 @@
 	"mobile-frontend-mobile-option-MFLazyLoadReferences-description": "Carica le note solo quando necessario",
 	"mobile-frontend-send-feedback": "Invia commento",
 	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption": "Espandi tutte le sezioni per impostazione predefinita",
-	"mobile-frontend-mobile-option-MFEnableFontChanger": "Dimensione carattere"
+	"mobile-frontend-mobile-option-MFEnableFontChanger": "Dimensione carattere",
+	"mobile-frontend-mobile-option-amc-learn-more": "Ulteriori informazioni",
+	"mobile-frontend-mobile-option-amc-send-feedback": "Invia commento"
 }

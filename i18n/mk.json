@@ -256,6 +256,8 @@
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Одредување големина на буквите при читање.",
 	"mobile-frontend-mobile-option-amc": "Напредни мобилни придонеси",
 	"mobile-frontend-mobile-option-amc-experiment-description": "Во текот на следниве неколку месеци ќе вклучуваме можности кои поддржуваат напредни уредници. Испробувањата продолжуваат и понатаму, па затоа би ја ценеле вашата соработка и поддршка.",
+	"mobile-frontend-mobile-option-amc-learn-more": "Дознајте повеќе",
+	"mobile-frontend-mobile-option-amc-send-feedback": "Испрати мислење",
 	"mobile-frontend-beta-only": "Можноста е достапна само во Бета-режим",
 	"mobile-frontend-console-recruit": "Дознајте повеќе за тоа како го градиме нашиот мобилен портал на https://www.mediawiki.org/wiki/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Оптимизирај и упрости ги службените страници од мобилен уред (препорачано)",

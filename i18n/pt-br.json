@@ -276,6 +276,8 @@
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Controle o tamanho da fonte da sua experiência de leitura.",
 	"mobile-frontend-mobile-option-amc": "Contribuições móveis avançadas",
 	"mobile-frontend-mobile-option-amc-experiment-description": "Nos próximos meses, estaremos ativando recursos que suportam editores avançados. Este é um experimento em andamento e adoraríamos sua colaboração e seu suporte.",
+	"mobile-frontend-mobile-option-amc-learn-more": "Saiba mais",
+	"mobile-frontend-mobile-option-amc-send-feedback": "Envie seu comentário",
 	"mobile-frontend-beta-only": "O recurso está disponível apenas no modo beta",
 	"mobile-frontend-console-recruit": "Saiba mais sobre como construímos o nosso site móvel @ https://www.mediawiki.org/wiki/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Otimizar e simplificar as páginas especiais quando estiver em dispositivos móveis (recomendado)",

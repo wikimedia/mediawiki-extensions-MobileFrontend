@@ -283,6 +283,8 @@
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "控制您閱讀體驗時的字型大小。",
 	"mobile-frontend-mobile-option-amc": "進階手機貢獻",
 	"mobile-frontend-mobile-option-amc-experiment-description": "在接下來的幾個月，我們會啟用支援進階編輯器的功能。這是一個會持續進行的試驗，並且感謝您的協作與支持。",
+	"mobile-frontend-mobile-option-amc-learn-more": "了解更多",
+	"mobile-frontend-mobile-option-amc-send-feedback": "送出回饋",
 	"mobile-frontend-beta-only": "僅在測試模式下可用的功能",
 	"mobile-frontend-console-recruit": "瞭解更多有關我們如何構造移動網站的詳情，請參見：https://www.mediawiki.org/wiki/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "在手機上最佳化且簡化特殊頁面（建議）",

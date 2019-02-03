@@ -260,6 +260,8 @@
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "আপনার পড়ার জন্য ফন্টের আকার নিয়ন্ত্রণ করুন।",
 	"mobile-frontend-mobile-option-amc": "উচ্চতর মোবাইল অবদান",
 	"mobile-frontend-mobile-option-amc-experiment-description": "আগামী কয়েক মাসে আমরা উন্নত সম্পাদক সমর্থনকারী বৈশিষ্ট্যগুলি সক্ষম করব। এটি একটি চলমান পরীক্ষা এবং আমরা আপনার সহযোগিতা এবং সমর্থন চাই।",
+	"mobile-frontend-mobile-option-amc-learn-more": "আরও জানুন",
+	"mobile-frontend-mobile-option-amc-send-feedback": "প্রতিক্রিয়া জানান",
 	"mobile-frontend-beta-only": "বৈশিষ্ট্য শুধুমাত্র বিটা মোডে উপলব্ধ",
 	"mobile-frontend-console-recruit": "কিভাবে আমরা আমাদের মোবাইল সাইট নির্মাণ করি সেই সম্পর্কে আরও জানুন @ https://www.mediawiki.org/wiki/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "মোবাইলে বিশেষ পৃষ্ঠাগুলি অনুকূল করে এবং সহজ করে (সুপারিশকৃত)",

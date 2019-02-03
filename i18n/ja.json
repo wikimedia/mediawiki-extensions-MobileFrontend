@@ -129,12 +129,12 @@
 	"mobile-frontend-languages-404-desc": "有効なページ名を指定してください。",
 	"mobile-frontend-languages-404-title": "言語エラー",
 	"mobile-frontend-languages-header": "言語",
-	"mobile-frontend-languages-header-page": "$1 - 言語",
+	"mobile-frontend-languages-header-page": "$1 - 他の言語",
 	"mobile-frontend-languages-nonexistent-title": "ページ「$1」は存在しません。",
-	"mobile-frontend-languages-text": "$1 は $2 {{PLURAL:$2|言語}}で提供されています。",
+	"mobile-frontend-languages-text": "$1 は他の $2 {{PLURAL:$2|言語}}で提供されています。",
 	"mobile-frontend-languages-variant-header": "{{#language:{{CONTENTLANG}}}}の言語変種",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "提案された言語",
-	"mobile-frontend-languages-structured-overlay-all-languages-header": "すべての言語",
+	"mobile-frontend-languages-structured-overlay-all-languages-header": "他の言語",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "言語の検索",
 	"mobile-frontend-last-modified-date": "最終更新: $1 $2",
 	"mobile-frontend-last-modified-with-user-days": "[$4 最終{{GENDER:$1|編集}}: {{PLURAL:$3|$3 日}}前]、{{PLURAL:$5|[$6 $2]|0=匿名利用者}}",
@@ -248,5 +248,6 @@
 	"mobile-frontend-mobile-option-MFLazyLoadReferences": "出典の遅延読み込み",
 	"mobile-frontend-mobile-option-MFLazyLoadReferences-description": "必要なときだけ出典を読み込む",
 	"mobile-frontend-send-feedback": "フィードバックを送信",
-	"mobile-frontend-mobile-option-MFEnableFontChanger": "フォントサイズ"
+	"mobile-frontend-mobile-option-MFEnableFontChanger": "フォントサイズ",
+	"mobile-frontend-mobile-option-amc-send-feedback": "フィードバックを送信"
 }

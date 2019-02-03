@@ -281,6 +281,8 @@
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "التحكم بحجم الخط لتجربتك في القراءة.",
 	"mobile-frontend-mobile-option-amc": "المساهمات المتقدمة للجوال",
 	"mobile-frontend-mobile-option-amc-experiment-description": "على مدار الأشهر القليلة المقبلة، سنعمل على تمكين الميزات التي تدعم المحررين المتقدمين، هذه تجربة مستمرة ونحن نحب تعاونك ودعمك.",
+	"mobile-frontend-mobile-option-amc-learn-more": "معرفة المزيد",
+	"mobile-frontend-mobile-option-amc-send-feedback": "إرسال تعليق",
 	"mobile-frontend-beta-only": "الخاصية متوفرة فقط في نمط البيتا",
 	"mobile-frontend-console-recruit": "مزيد من المعلومات حول كيفية إنشاء موقع للجوال @\nhttps://www.mediawiki.org/wiki/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "تحسين وتبسيط الصفحات الخاصة عند استخدام المحمول (موصى به)",

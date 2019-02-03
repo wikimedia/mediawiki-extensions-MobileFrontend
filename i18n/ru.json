@@ -298,6 +298,8 @@
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Управляйте размером шрифта для своего процесса чтения.",
 	"mobile-frontend-mobile-option-amc": "Расширенный мобильный вклад",
 	"mobile-frontend-mobile-option-amc-experiment-description": "В течение следующих нескольких месяцев мы будем включать опции для продвинутых редакторов. Испытания продолжаются и сейчас, поэтому мы ценим ваше сотрудничество и поддержку.",
+	"mobile-frontend-mobile-option-amc-learn-more": "Узнать больше",
+	"mobile-frontend-mobile-option-amc-send-feedback": "Отправить отзыв",
 	"mobile-frontend-beta-only": "Функция доступна только в рамках бета-тестирования.",
 	"mobile-frontend-console-recruit": "Узнать подробнее о том, как мы строим наш мобильный сайт @ https://www.mediawiki.org/wiki/Extension:MobileFrontend",
 	"prefs-mobile": "Мобильные настройки"

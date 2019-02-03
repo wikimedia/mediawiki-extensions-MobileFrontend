@@ -36,7 +36,8 @@
 			"UV",
 			"Nike",
 			"Arthur2e5",
-			"Matma Rex"
+			"Matma Rex",
+			"Matěj Suchánek"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "AbuseFilter extension rule variable that allows distinguishing edits based on if they have been made using the editor of MobileFrontend or not.",
@@ -266,7 +267,7 @@
 	"tag-mobile_edit": "Short change tag name for edits coming  from mobile (web or apps).\n\nSee also:\n* {{msg-mw|Tag-mobile edit-description}}",
 	"tag-mobile_edit-description": "Short change tag description. for edits coming from mobile (web or apps).\n\nSee also:\n* {{msg-mw|Tag-mobile edit}}",
 	"tag-advanced_mobile_edit": "short change tag name for advanced mobile edits\n\nSee also:\n* {{msg-mw|tag-advanced_mobile_edit-description}}",
-	"tag-advanced_mobile_edit-description": "Change tag description for edits coming from users with advanced mobile contributions mode enabled \n\nSee also:\n* {{msg-mw|tag-advanced_mobile_edit}",
+	"tag-advanced_mobile_edit-description": "Change tag description for edits coming from users with advanced mobile contributions mode enabled \n\nSee also:\n* {{msg-mw|tag-advanced_mobile_edit}}",
 	"tag-mobile_web_edit": "Short change tag name for edits coming directly from the mobile website.\n\nSee also:\n* {{msg-mw|Tag-mobile web edit-description}}",
 	"tag-mobile_web_edit-description": "Short change tag description. for edits coming directly from the mobile website.\n\nSee also:\n* {{msg-mw|Tag-mobile web edit}}",
 	"mobile-frontend-loading-message": "Hidden text existing for accessibility reasons for intermediate loaders.\n{{Identical|Loading}}",

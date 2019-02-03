@@ -107,5 +107,7 @@
 	"tag-mobile_web_edit-description": "Редакция, направена чрез мобилен уеб сайт",
 	"mobile-frontend-mobile-option-amc": "Разширени мобилни приноси",
 	"mobile-frontend-mobile-option-amc-experiment-description": "През следващите няколко месеца ще включим възможности, които поддържат разширени редактори. Изпробванията продължават, така че те ще оценят вашето сътрудничество и поддържка.",
+	"mobile-frontend-mobile-option-amc-learn-more": "Научете повече",
+	"mobile-frontend-mobile-option-amc-send-feedback": "Изпратете мнение",
 	"mobile-frontend-console-recruit": "Научете повече за това как изграждаме мобилния сайт @ https://www.mediawiki.org/wiki/Extension:MobileFrontend"
 }
