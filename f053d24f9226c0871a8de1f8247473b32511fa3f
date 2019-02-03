@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "a4c4ad85_aaba0c78",
+        "filename": ".babelrc",
+        "patchSetId": 7
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-02-03T22:50:33Z",
+      "side": 1,
+      "message": "I couldn\u0027t find in Webpack and Babel docs.. but, what are the default transform plugins? es6/2015? latest? \n\nWe may want to make the version/transforms used explicit if there\u0027s a default, so as to only expand it when intentionally so, with an understanding of its impact (e.g. what the code really becomes in production, and whether there\u0027s any caveats or inefficiencies to avoid).\n\nIn the docs I noticed the \"loose\" option, which seems like it might make the output more natural and smaller. What\u0027s your experience been with that? Is it any good?",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 1
+      },
+      "revId": "f053d24f9226c0871a8de1f8247473b32511fa3f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6eb1b830_e283dd6f",
         "filename": ".babelrc",
         "patchSetId": 7
