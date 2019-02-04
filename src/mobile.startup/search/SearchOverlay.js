@@ -138,7 +138,7 @@ mfExtend( SearchOverlay, Overlay, {
 	 * @return {boolean} False to cancel the native event
 	 */
 	onClickClear: function () {
-		this.$input.val( '' ).focus();
+		this.$input.val( '' ).trigger( 'focus' );
 		this.performSearch();
 		this.$clear.hide();
 		// In beta the clear button is on top of the search input.
@@ -199,7 +199,7 @@ mfExtend( SearchOverlay, Overlay, {
 	 * @instance
 	 */
 	hideKeyboardOnScroll: function () {
-		this.$input.blur();
+		this.$input.trigger( 'blur' );
 	},
 
 	/**
@@ -290,7 +290,7 @@ mfExtend( SearchOverlay, Overlay, {
 	 */
 	showKeyboard: function () {
 		var len = this.$input.val().length;
-		this.$input.focus();
+		this.$input.trigger( 'focus' );
 		// Cursor to the end of the input
 		if ( this.$input[0].setSelectionRange ) {
 			this.$input[0].setSelectionRange( len, len );

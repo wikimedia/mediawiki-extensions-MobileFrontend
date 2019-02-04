@@ -46,6 +46,8 @@ function Skin( params ) {
 				//       Special:JavaScriptTest.
 				images = ( container && lazyImageLoader.queryPlaceholders( container ) ) || [];
 			self.lazyImageTransformer = lazyImageTransformer.newLazyImageTransformer(
+				// eslint false positive: self.$ is not a jQuery collection
+				// eslint-disable-next-line jquery/no-bind
 				self.eventBus, self.$.bind( self ), util.getWindow().height() * 1.5, images
 			);
 			self.lazyImageTransformer.loadImages();
