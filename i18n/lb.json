@@ -100,7 +100,7 @@
 	"mobile-frontend-languages-header": "Sproochen",
 	"mobile-frontend-languages-header-page": "$1 – Aner Sproochen",
 	"mobile-frontend-languages-nonexistent-title": "D'Säit ''$1'' gëtt et net.",
-	"mobile-frontend-languages-text": "$1 ass {{PLURAL:$2|an enger Sprooch|a(n) $2 Sproochen}} disponibel.",
+	"mobile-frontend-languages-text": "$1 ass {{PLURAL:$2|an enger anerer Sprooch|a(n) $2 anere Sproochen}} disponibel.",
 	"mobile-frontend-languages-variant-header": "{{#language:{{CONTENTLANG}}}} Varianten",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Proposéiert Sproochen",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Aner Sproochen",
@@ -203,5 +203,7 @@
 	"mobile-frontend-send-feedback": "Feedback schécken",
 	"mobile-frontend-mobile-option-MFLazyLoadImages-description": "Biller nëmme luede wa se gebraucht ginn.",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "Aféierungsabschnitt",
+	"mobile-frontend-mobile-option-amc-learn-more": "Fir méi ze wëssen",
+	"mobile-frontend-mobile-option-amc-send-feedback": "Feedback schécken",
 	"prefs-mobile": "Mobil Astellungen"
 }

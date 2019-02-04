@@ -27,7 +27,8 @@
 			"Kaspo",
 			"S4b1nuz E.656",
 			"Sarah Bernabei",
-			"Sakretsu"
+			"Sakretsu",
+			"Manfredi26"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Se un utente sta modificando attraverso l'interfaccia per dispositivi mobili",
@@ -256,6 +257,6 @@
 	"mobile-frontend-send-feedback": "Invia commento",
 	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption": "Espandi tutte le sezioni per impostazione predefinita",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Dimensione carattere",
-	"mobile-frontend-mobile-option-amc-learn-more": "Ulteriori informazioni",
+	"mobile-frontend-mobile-option-amc-learn-more": "Per saperne di più",
 	"mobile-frontend-mobile-option-amc-send-feedback": "Invia commento"
 }

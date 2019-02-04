@@ -270,6 +270,8 @@
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "בקרת גודל הגופן בחוויית הקריאה שלך.",
 	"mobile-frontend-mobile-option-amc": "תרומות מתקדמות מהנייד",
 	"mobile-frontend-mobile-option-amc-experiment-description": "במהלך החודשים הקרובים אנחנו נפעיל יכולות שתומכות בעורכים מתקדמים. זהו ניסוי מתמשך, ונשמח לקבל מכם שיתוף פעולה ותמיכה.",
+	"mobile-frontend-mobile-option-amc-learn-more": "מידע נוסף",
+	"mobile-frontend-mobile-option-amc-send-feedback": "שליחת משוב",
 	"mobile-frontend-beta-only": "האפשרות זמינה רק במצב בטא.",
 	"mobile-frontend-console-recruit": "יש מידע נוסף על איך אנחנו בונים את האתר הנייד שלנו באתר https://www.mediawiki.org/wiki/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "מיטוב ופישוט של דפים מיוחדים בגלישה ניידת (מומלץ)",
