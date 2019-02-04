@@ -34,13 +34,13 @@ function loadImage( placeholder ) {
 	var
 		deferred = util.Deferred(),
 		// data-width and height are attributes and do not specify dimension.
-		width = placeholder.getAttribute( 'data-width' ) || '0',
-		height = placeholder.getAttribute( 'data-height' ) || '0',
+		width = placeholder.dataset.width || '0',
+		height = placeholder.dataset.height || '0',
 		image = new Image( parseInt( width, 10 ), parseInt( height, 10 ) );
 
-	image.className = placeholder.getAttribute( 'data-class' ) || '';
-	image.alt = placeholder.getAttribute( 'data-alt' ) || '';
-	image.setAttribute( 'style', placeholder.getAttribute( 'style' ) || '' );
+	image.className = placeholder.dataset.class || '';
+	image.alt = placeholder.dataset.alt || '';
+	image.style.cssText = placeholder.style.cssText || '';
 
 	// When the image has loaded
 	image.addEventListener( 'load', function () {
@@ -59,8 +59,8 @@ function loadImage( placeholder ) {
 	}, { once: true } );
 
 	// Trigger image download after binding the load handler
-	image.src = placeholder.getAttribute( 'data-src' ) || '';
-	image.srcset = placeholder.getAttribute( 'data-srcset' ) || '';
+	image.src = placeholder.dataset.src || '';
+	image.srcset = placeholder.dataset.srcset || '';
 
 	return {
 		promise: deferred,
