@@ -607,21 +607,23 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 	 * @instance
 	 */
 	onSaveFailure: function ( data ) {
-		var heading,
-			msg = this.saveFailureMessage( data );
+		var heading, msg;
 
 		if ( data.type === 'captcha' ) {
 			this.captchaId = data.details.id;
 			this.handleCaptcha( data.details );
 		} else if ( data.type === 'abusefilter' ) {
 			this._showAbuseFilter( data.details.type, data.details.message );
-		} else if ( data.type === 'readonly' ) {
-			heading = mw.msg( 'apierror-readonly' );
-		}
+		} else {
+			msg = this.saveFailureMessage( data );
+			if ( data.type === 'readonly' ) {
+				heading = mw.msg( 'apierror-readonly' );
+			}
 
-		if ( msg || heading ) {
-			this.reportError( msg, heading );
-			this.showHidden( '.save-header, .save-panel' );
+			if ( msg || heading ) {
+				this.reportError( msg, heading );
+				this.showHidden( '.save-header, .save-panel' );
+			}
 		}
 
 		EditorOverlayBase.prototype.onSaveFailure.apply( this, arguments );
