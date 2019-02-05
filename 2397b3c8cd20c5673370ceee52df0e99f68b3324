@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eb75aa8f_3320fe51",
+        "filename": "src/mobile.startup/Panel.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-05T22:15:10Z",
+      "side": 1,
+      "message": "Note, only parameter 1 is mandatory so why not just params.events?\n\nIf undefined, this will be ignored.\n\nFor Typescript VisualStudio compatibility you could update the function signature of extend to make clear the 2nd parameter is optional..",
+      "range": {
+        "startLine": 17,
+        "startChar": 59,
+        "endLine": 17,
+        "endChar": 83
+      },
+      "revId": "2397b3c8cd20c5673370ceee52df0e99f68b3324",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
