@@ -199,18 +199,19 @@ QUnit.test( '#getContent (no section)', function ( assert ) {
 		title: 'MediaWiki:Test.css'
 	} );
 
-	gateway.getContent();
-	assert.ok( spy.calledWith( {
-		action: 'query',
-		prop: [ 'revisions', 'info' ],
-		meta: 'userinfo',
-		rvprop: [ 'content', 'timestamp' ],
-		titles: 'MediaWiki:Test.css',
-		intestactions: 'edit',
-		intestactionsdetail: 'full',
-		uiprop: 'options',
-		formatversion: 2
-	} ), 'rvsection not passed to api request' );
+	return gateway.getContent().then( function () {
+		assert.ok( spy.calledWith( {
+			action: 'query',
+			prop: [ 'revisions', 'info' ],
+			meta: 'userinfo',
+			rvprop: [ 'content', 'timestamp' ],
+			titles: 'MediaWiki:Test.css',
+			intestactions: 'edit',
+			intestactionsdetail: 'full',
+			uiprop: 'options',
+			formatversion: 2
+		} ), 'rvsection not passed to api request' );
+	} );
 } );
 
 QUnit.test( '#getContent', function ( assert ) {
