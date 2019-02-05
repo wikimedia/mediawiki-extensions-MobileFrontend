@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "05d7df82_0a551a34",
+        "filename": "resources/mobile.editor.overlay/EditorOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 627,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-02-05T03:09:52Z",
+      "side": 1,
+      "message": "This if statement causes captcha input to disappear, even when it should be visible.\n\nCurrently, if captcha is invalid the flow looks like that:\n -  we show the captcha details, \n - the msg is set to default `Error, edit not saved.`. \n - because msg is set, we enter this if statement and call `showHidden`. \n - showHidden hides all `hideable` elements (including captcha), and show only the `Error, edit not saved.` message not allowing user to enter the captcha code.\n\nSimilar issue happens might happens (although not tested on my side what\u0027s causing this issue, I only verified the Captcha issue), when AbuseFilter rejects the update.\nI can confirm that, when I edit the article on english wiki and I get rejected by the AbuseFilter, the only error message I see is the default `Error, edit not saved.`",
+      "range": {
+        "startLine": 624,
+        "startChar": 3,
+        "endLine": 627,
+        "endChar": 4
+      },
+      "revId": "5d779bcddded5bdd9fc5e558ac711f76fce4d14f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
