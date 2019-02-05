@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "232bcfc7_0fea3ae2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-05T20:27:28Z",
+      "side": 1,
+      "message": "but position absolute is still set so I\u0027m a little confused :)",
+      "range": {
+        "startLine": 10,
+        "startChar": 13,
+        "endLine": 10,
+        "endChar": 44
+      },
+      "revId": "a8185fe269abe09bd6e7ee921cd0d6437eede057",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4c74108f_08d49a13",
         "filename": "/COMMIT_MSG",
         "patchSetId": 1
