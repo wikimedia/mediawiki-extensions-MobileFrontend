@@ -8,15 +8,14 @@ var
  * @class Panel
  * @extends View
  *
- * @param {Object} params Configuration options
+ * @param {Object} [params] Configuration options
  */
 function Panel( params ) {
-	var defaultParams = {
-			className: 'panel'
-		},
-		options = util.extend( {}, defaultParams, params );
-
-	View.call( this, options );
+	View.call( this, util.extend(
+		{ className: 'panel' },
+		params,
+		{ events: util.extend( { 'click .cancel': 'onCancel' }, ( params || {} ).events ) } )
+	);
 }
 
 mfExtend( Panel, View, {

@@ -8,13 +8,15 @@ var
  * A {@link View} that pops up from the bottom of the screen.
  * @class Drawer
  * @extends Panel
- * @param {Object} props
+ * @param {Object} [props]
  */
 function Drawer( props ) {
 	Panel.call( this,
-		util.extend( {
-			className: 'drawer position-fixed'
-		}, props )
+		util.extend(
+			{ className: 'drawer position-fixed' },
+			props,
+			{ events: util.extend( { click: 'stopPropagation' }, ( props || {} ).events ) }
+		)
 	);
 }
 
