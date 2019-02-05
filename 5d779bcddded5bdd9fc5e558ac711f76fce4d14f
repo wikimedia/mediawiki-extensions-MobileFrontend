@@ -22,6 +22,30 @@
       "revId": "5d779bcddded5bdd9fc5e558ac711f76fce4d14f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3bb17fda_29acc947",
+        "filename": "resources/mobile.editor.overlay/EditorOverlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 627,
+      "author": {
+        "id": 2915
+      },
+      "writtenOn": "2019-02-05T14:29:18Z",
+      "side": 1,
+      "message": "Thanks, I obviously missed the effect that always having the fallback message returned would have. I\u0027ve put up Ifb9957f60f4113af34a78392c5049735fef701c3 to restore the former flow here.",
+      "parentUuid": "05d7df82_0a551a34",
+      "range": {
+        "startLine": 624,
+        "startChar": 3,
+        "endLine": 627,
+        "endChar": 4
+      },
+      "revId": "5d779bcddded5bdd9fc5e558ac711f76fce4d14f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
