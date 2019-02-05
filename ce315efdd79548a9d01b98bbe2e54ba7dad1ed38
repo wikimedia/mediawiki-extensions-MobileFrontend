@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "78ceef77_f2d9c6d3",
+        "filename": "i18n/en.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-05T20:09:01Z",
+      "side": 0,
+      "message": "I believe this has something to do with onAbuseFilterGenerateUserVars. Have you checked?",
+      "revId": "ce315efdd79548a9d01b98bbe2e54ba7dad1ed38",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2a3092e6_5272dc21",
+        "filename": "i18n/en.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-05T20:09:01Z",
+      "side": 0,
+      "message": "I\u0027m surprised this one is unused. Might be worth doing some archaeology to be sure. I\u0027m sure I\u0027ve seen this error message somewhere. Maybe it\u0027s built via JavaScript? e.g. prefix + \u0027redirect-title\u0027",
+      "revId": "ce315efdd79548a9d01b98bbe2e54ba7dad1ed38",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
