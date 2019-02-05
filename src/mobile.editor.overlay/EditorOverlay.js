@@ -1,6 +1,7 @@
 var EditorOverlayBase = require( './EditorOverlayBase' ),
 	util = require( '../mobile.startup/util' ),
 	Section = require( '../mobile.startup/Section' ),
+	saveFailureMessage = require( './saveFailureMessage' ),
 	EditorGateway = require( './EditorGateway' ),
 	AbuseFilterPanel = require( './AbuseFilterPanel' ),
 	Button = require( '../mobile.startup/Button' ),
@@ -619,7 +620,7 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 		} else if ( data.type === 'abusefilter' ) {
 			this._showAbuseFilter( data.details.type, data.details.message );
 		} else {
-			msg = this.saveFailureMessage( data );
+			msg = saveFailureMessage( data );
 			if ( data.type === 'readonly' ) {
 				heading = mw.msg( 'apierror-readonly' );
 			}
