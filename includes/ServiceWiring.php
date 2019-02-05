@@ -33,8 +33,6 @@ return [
 			$config->get( 'MFLazyLoadImages' ) ) );
 		$manager->registerFeature( new Feature( 'MFShowFirstParagraphBeforeInfobox', 'mobile-frontend',
 			$config->get( 'MFShowFirstParagraphBeforeInfobox' ) ) );
-		$manager->registerFeature( new Feature( 'MFExpandAllSectionsUserOption', 'mobile-frontend',
-			$config->get( 'MFExpandAllSectionsUserOption' ) ) );
 		$manager->registerFeature( new Feature( 'MFEnableFontChanger', 'mobile-frontend',
 			$config->get( 'MFEnableFontChanger' ) ) );
 

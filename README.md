@@ -591,21 +591,6 @@ Set to `false` for "dictionary style", sections are not collapsed.
 * Type: `Boolean`
 * Default: `true`
 
-#### $wgMFExpandAllSectionsUserOption
-
-When enabled an option on Special:MobileOptions to expand all sections by default will
-be visible. This allows a user to specify a preference for toggling which will override
-the value of wgMFCollapseSectionsByDefault.
-
-* Type: `Array`
-* Default:
-```php
-  [
-    'beta' => true,
-    'base' => false,
-  ]
-```
-
 #### $wgMFPhotoUploadWiki
 
 The wiki id/dbname for where photos are uploaded, if photos are uploaded to

@@ -282,8 +282,6 @@
 	"mobile-frontend-mobile-option-MFLazyLoadImages": "Lazy load images feature name",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "Lead paragraph feature name",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox-description": "Lead paragraph feature description",
-	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption": "Expand all sections feature name",
-	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption-description": "Expand sections feature description",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Article font size feature name",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Font size feature description",
 	"mobile-frontend-mobile-option-amc": "Advanced Mobile Contributions header",

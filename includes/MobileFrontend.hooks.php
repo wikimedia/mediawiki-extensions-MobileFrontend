@@ -1161,8 +1161,6 @@ class MobileFrontendHooks {
 		// mobile.init
 		$vars['wgMFIsPageContentModelEditable'] = self::isPageContentModelEditable( $title );
 		// Accesses getBetaGroupMember so does not belong in onResourceLoaderGetConfigVars
-		$vars['wgMFExpandAllSectionsUserOption'] =
-			$featureManager->isFeatureAvailableInContext( 'MFExpandAllSectionsUserOption', $context );
 
 		$vars['wgMFEnableFontChanger'] =
 			$featureManager->isFeatureAvailableInContext( 'MFEnableFontChanger', $context );

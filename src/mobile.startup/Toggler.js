@@ -244,8 +244,7 @@ Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 		// Old default behavior if on cached output
 		collapseSectionsByDefault = true;
 	}
-	expandSections = !collapseSectionsByDefault ||
-	( mw.config.get( 'wgMFExpandAllSectionsUserOption' ) && mw.storage.get( 'expandSections' ) === 'true' );
+	expandSections = !collapseSectionsByDefault || mw.storage.get( 'expandSections' ) === 'true';
 
 	$container.children( tagName ).each( function ( i ) {
 		var isReferenceSection,

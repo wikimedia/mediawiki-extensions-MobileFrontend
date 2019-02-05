@@ -184,7 +184,7 @@ function initMobileOptions() {
 	}
 	infuseToggles( toggles, $form );
 
-	if ( mw.config.get( 'wgMFExpandAllSectionsUserOption' ) &&
+	if (
 		// Don't show this option on large screens since it's only honored for small screens.
 		// This logic should be kept in sync with Toggle._enable().
 		!browser.isWideScreen()
