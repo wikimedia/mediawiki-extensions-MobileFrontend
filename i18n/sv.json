@@ -266,6 +266,8 @@
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Kontrollera textstorleken för din läsupplevelse.",
 	"mobile-frontend-mobile-option-amc": "Avancerade mobilbidrag",
 	"mobile-frontend-mobile-option-amc-experiment-description": "Under de kommande månaderna kommer aktivera funktioner som har stöd för avancerade redigerare. Detta är ett pågående experiment och vi skulle uppskatta ditt samarbete och stöd.",
+	"mobile-frontend-mobile-option-amc-learn-more": "Läs mer",
+	"mobile-frontend-mobile-option-amc-send-feedback": "Skicka återkoppling",
 	"mobile-frontend-beta-only": "Funktionen är endast tillgänglig i betaläget",
 	"mobile-frontend-console-recruit": "Läs mer om hur vi bygger vår mobila webbplats på https://www.mediawiki.org/wiki/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Optimera och förenkla specialsidor för mobiler (rekommenderas)",
