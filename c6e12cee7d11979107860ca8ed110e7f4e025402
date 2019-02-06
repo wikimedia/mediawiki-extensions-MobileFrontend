@@ -16,6 +16,29 @@
       "revId": "c6e12cee7d11979107860ca8ed110e7f4e025402",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "707d25ed_7c9ea1ae",
+        "filename": "src/mobile.startup/lazyImages/lazyImageLoader.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-02-06T00:35:05Z",
+      "side": 1,
+      "message": "class is a reserved keyword in JS, are we sure that this is going to work in all browsers?",
+      "range": {
+        "startLine": 41,
+        "startChar": 39,
+        "endLine": 41,
+        "endChar": 44
+      },
+      "revId": "c6e12cee7d11979107860ca8ed110e7f4e025402",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
