@@ -24,6 +24,7 @@
     "@wikimedia/resource-modules": "3.1.0-0",
     "bundlesize": "0.17.0",
     "clean-webpack-plugin": "0.1.19",
+    "eslint": "5.13.0",
     "eslint-config-wikimedia": "0.10.1",
     "grunt": "1.0.3",
     "grunt-banana-checker": "0.6.0",

@@ -1,6 +1,8 @@
 {
-	"plugins": [ "jquery" ],
-	"extends": "plugin:jquery/deprecated-3.3",
+	"extends": "wikimedia/jquery",
+	"globals": {
+		"$": "off"
+	},
 	"rules": {
 		"no-restricted-properties": [2,
 			{
@@ -30,20 +32,6 @@
 		"computed-property-spacing": "off",
 		"no-use-before-define": "off",
 		"no-underscore-dangle": "off",
-		"jquery/no-animate": "error",
-		"jquery/no-animate-toggle": "error",
-		"jquery/no-each-util": "error",
-		"jquery/no-event-shorthand": "error",
-		"jquery/no-fade": "error",
-		"jquery/no-grep": "error",
-		"jquery/no-in-array": "error",
-		"jquery/no-is-array": "error",
-		"jquery/no-map-util": "error",
-		"jquery/no-noop": "error",
-		"jquery/no-parse-html-literal": "error",
-		"jquery/no-proxy": "error",
-		"jquery/no-slide": "error",
-		"jquery/no-trim": "error",
-		"jquery/no-type": "error"
+		"jquery/no-global-selector": "off"
 	}
 }
