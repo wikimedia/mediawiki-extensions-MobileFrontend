@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "548921b2_5b1ad966",
+        "filename": ".babelrc",
+        "patchSetId": 7
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-06T21:24:09Z",
+      "side": 1,
+      "message": "I don\u0027t believe that there are any defaults.\n\nI have not used loose but believe it is not recommended. It is said to lead to problems later on when you switch from transpiled ES6 to native ES6 which at some point we\u0027ll no doubt do.\n\nhttps://babeljs.io/blog/2017/09/12/planning-for-7.0\nhttps://old.babeljs.io/blog/2015/01/27/2to3",
+      "parentUuid": "23b3d32d_0d1c663c",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 1
+      },
+      "revId": "f053d24f9226c0871a8de1f8247473b32511fa3f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6eb1b830_e283dd6f",
         "filename": ".babelrc",
         "patchSetId": 7
@@ -84,6 +108,30 @@
       "side": 1,
       "message": "thanks @Krinkle, I\u0027ve updated the babelrc in PS11 to reflect this. As guessed, it didn\u0027t make the output different",
       "parentUuid": "6eb1b830_e283dd6f",
+      "range": {
+        "startLine": 7,
+        "startChar": 4,
+        "endLine": 7,
+        "endChar": 13
+      },
+      "revId": "f053d24f9226c0871a8de1f8247473b32511fa3f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3ba77f70_712f88b0",
+        "filename": ".babelrc",
+        "patchSetId": 7
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-06T21:24:09Z",
+      "side": 1,
+      "message": "I don\u0027t think babel/preset-env supports feature detection but yeh let\u0027s make sure those versions match resources/src/startup/startup.js at all times.",
+      "parentUuid": "ab0ac83a_a4f0f1b1",
       "range": {
         "startLine": 7,
         "startChar": 4,
