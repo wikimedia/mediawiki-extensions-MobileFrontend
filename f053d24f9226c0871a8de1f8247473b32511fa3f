@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "23b3d32d_0d1c663c",
+        "filename": ".babelrc",
+        "patchSetId": 7
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-02-06T01:41:18Z",
+      "side": 1,
+      "message": "Not sure, will do more research on this tomorrow....",
+      "parentUuid": "a4c4ad85_aaba0c78",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 1
+      },
+      "revId": "f053d24f9226c0871a8de1f8247473b32511fa3f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6eb1b830_e283dd6f",
         "filename": ".babelrc",
         "patchSetId": 7
@@ -36,6 +60,30 @@
       "writtenOn": "2019-02-03T22:34:57Z",
       "side": 1,
       "message": "The distinction is quite small, but I think this should be based on the interpretation of the feature test, not the browser support matrix.\n\nhttps://github.com/wikimedia/mediawiki/blob/ea7736c615b56270e888137af7b005e2157a0953/resources/src/startup/startup.js\n\nSpecifically, if a browser passes our feature test, we must not trigger a fatal error as that would not allow graceful recovery to Grade C.\n\nAs such, decisions based on using features and syntax, must be guarded by a feature test, or match as precisely as possible, the result of the default feature-test in core.\n\nNotable differences:\n\n safari: 5.0,\n ios: 6.0,\n firefox: 4.0,\n chrome: 13.0\n\nGiven ios 6.x as the likely lowest common denominator, this probably won\u0027t make any difference in the output, though, but will help ensure mistakes in the future.",
+      "range": {
+        "startLine": 7,
+        "startChar": 4,
+        "endLine": 7,
+        "endChar": 13
+      },
+      "revId": "f053d24f9226c0871a8de1f8247473b32511fa3f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ab0ac83a_a4f0f1b1",
+        "filename": ".babelrc",
+        "patchSetId": 7
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-02-06T01:41:18Z",
+      "side": 1,
+      "message": "thanks @Krinkle, I\u0027ve updated the babelrc in PS11 to reflect this. As guessed, it didn\u0027t make the output different",
+      "parentUuid": "6eb1b830_e283dd6f",
       "range": {
         "startLine": 7,
         "startChar": 4,
