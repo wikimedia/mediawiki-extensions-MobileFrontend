@@ -527,7 +527,7 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 			return mw.libs.ve.targetLoader.loadModules( 'visual' );
 		} ).then(
 			function () {
-				options.EditorOverlay = self;
+				options.EditorOverlay = EditorOverlay;
 				self.hideSpinner();
 				self.overlayManager.replaceCurrent( new VisualEditorOverlay( options ) );
 			},
