@@ -1,5 +1,6 @@
 var
 	mfExtend = require( '../mobile.startup/mfExtend' ),
+	util = require( '../mobile.startup/util' ),
 	View = require( '../mobile.startup/View' ),
 	ScrollEndEventEmitter = require( '../mobile.startup/ScrollEndEventEmitter' ),
 	CategoryGateway = require( './CategoryGateway' );
@@ -23,7 +24,13 @@ function CategoryTabs( options ) {
 	this.scrollEndEventEmitter.on( ScrollEndEventEmitter.EVENT_SCROLL_END,
 		this._loadCategories.bind( this ) );
 	this.gateway = new CategoryGateway( options.api );
-	View.call( this, options );
+	View.call(
+		this,
+		util.extend(
+			{ events: { 'click .catlink': 'onCatlinkClick' } },
+			options
+		)
+	);
 }
 
 mfExtend( CategoryTabs, View, {
@@ -51,13 +58,6 @@ mfExtend( CategoryTabs, View, {
 	 */
 	templatePartials: {
 		item: mw.template.get( 'mobile.categories.overlays', 'CategoryTab.hogan' )
-	},
-	/**
-	 * @memberof CategoryTabs
-	 * @instance
-	 */
-	events: {
-		'click .catlink': 'onCatlinkClick'
 	},
 	/**
 	 * @inheritdoc

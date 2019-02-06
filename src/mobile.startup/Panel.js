@@ -21,9 +21,6 @@ function Panel( params ) {
 mfExtend( Panel, View, {
 	// in milliseconds
 	minHideDelay: 10,
-	events: {
-		'click .cancel': 'onCancel'
-	},
 
 	/**
 	 * Cancel event handler

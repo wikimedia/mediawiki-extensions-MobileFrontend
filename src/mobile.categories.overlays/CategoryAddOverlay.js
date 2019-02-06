@@ -19,10 +19,18 @@ var
 function CategoryAddOverlay( options ) {
 	options.heading = mw.msg( 'mobile-frontend-categories-add-heading', options.title );
 	this.eventBus = options.eventBus;
-	Overlay.call( this,
-		util.extend( {
-			className: 'category-overlay overlay'
-		}, options )
+	Overlay.call(
+		this,
+		util.extend(
+			{
+				className: 'category-overlay overlay',
+				events: {
+					'click .save': 'onSaveClick',
+					'click .suggestion': 'onCategoryClick'
+				}
+			},
+			options
+		)
 	);
 }
 
@@ -41,15 +49,6 @@ mfExtend( CategoryAddOverlay, Overlay, {
 		headerButtonsListClassName: 'header-action',
 		waitMsg: mw.msg( 'mobile-frontend-categories-add-wait' ),
 		waitIcon: icons.spinner().toHtmlString()
-	} ),
-	/**
-	 * @inheritdoc
-	 * @memberof CategoryAddOverlay
-	 * @instance
-	 */
-	events: util.extend( {}, Overlay.prototype.events, {
-		'click .save': 'onSaveClick',
-		'click .suggestion': 'onCategoryClick'
 	} ),
 	/**
 	 * @inheritdoc

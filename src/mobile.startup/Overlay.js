@@ -26,24 +26,23 @@ function Overlay( props ) {
 	// Set to true when overlay has failed to load
 	this.hasLoadError = false;
 
-	// we must extend events with user provided custom events before extending
-	// props via util.extend and passing it to View.
-	// otherwise all props.events will override all the default events.
-	props.events = util.extend(
-		{
-			// FIXME: Remove .initial-header selector
-			'click .cancel, .confirm, .initial-header .back': 'onExitClick',
-			click: 'stopPropagation'
-		},
-		props.events,
-		// this is necessary to support EditorOverlay and other overlays which
-		// still set the property.
-		this.events
+	View.call(
+		this,
+		util.extend(
+			{ className: 'overlay' },
+			props,
+			{
+				events: util.extend(
+					{
+						// FIXME: Remove .initial-header selector
+						'click .cancel, .confirm, .initial-header .back': 'onExitClick',
+						click: 'stopPropagation'
+					},
+					props.events
+				)
+			}
+		)
 	);
-
-	View.call( this, util.extend( {
-		className: 'overlay'
-	}, props ) );
 }
 
 mfExtend( Overlay, View, {

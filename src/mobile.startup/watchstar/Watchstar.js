@@ -20,24 +20,23 @@ var View = require( '../View' ),
  * @param {Object} options Configuration options
  */
 function Watchstar( options ) {
-	View.call( this,
-		util.extend( {
-			className: icons.watchIcon().getClassName()
-		}, options )
+	View.call(
+		this,
+		util.extend(
+			{
+				className: icons.watchIcon().getClassName(),
+				events: {
+				// Disable clicks on original link
+					'click a': 'onLinksClick',
+					click: 'onStatusToggle'
+				}
+			},
+			options
+		)
 	);
 }
 
 mfExtend( Watchstar, View, {
-	/**
-	 * @inheritdoc
-	 * @memberof Watchstar
-	 * @instance
-	 */
-	events: {
-		// Disable clicks on original link
-		'click a': 'onLinksClick',
-		click: 'onStatusToggle'
-	},
 	/**
 	 * @memberof Watchstar
 	 * @instance

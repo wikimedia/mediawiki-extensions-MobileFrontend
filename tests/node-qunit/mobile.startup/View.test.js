@@ -5,6 +5,7 @@ var
 	jQuery = require( '../utils/jQuery' ),
 	dom = require( '../utils/dom' ),
 	mfExtend = require( '../../../src/mobile.startup/mfExtend' ),
+	util = require( '../../../src/mobile.startup/util' ),
 	oo = require( '../utils/oo' ),
 	sinon = require( 'sinon' ),
 	View;
@@ -94,20 +95,27 @@ QUnit.test( 'View#postRender', function ( assert ) {
 QUnit.test( 'View#delegateEvents', function ( assert ) {
 
 	var view;
-	function EventsView() {
-		View.apply( this, arguments );
+	function EventsView( props ) {
+		View.call(
+			this,
+			util.extend(
+				{
+					events: {
+						'click p span': function ( ev ) {
+							ev.preventDefault();
+							assert.ok( true, 'Span was clicked and handled' );
+						},
+						'click p': 'onParagraphClick',
+						click: 'onClick'
+					}
+				},
+				props
+			)
+		);
 	}
 
 	mfExtend( EventsView, View, {
 		template: Hogan.compile( '<p><span>test</span></p>' ),
-		events: {
-			'click p span': function ( ev ) {
-				ev.preventDefault();
-				assert.ok( true, 'Span was clicked and handled' );
-			},
-			'click p': 'onParagraphClick',
-			click: 'onClick'
-		},
 		onParagraphClick: function ( ev ) {
 			ev.preventDefault();
 			assert.ok( true, 'Paragraph was clicked and handled' );
@@ -170,14 +178,14 @@ QUnit.test( 'View#render (with isTemplateMode)', function ( assert ) {
 
 QUnit.test( 'View#render events (with isTemplateMode)', function ( assert ) {
 	var view;
-	function TemplateModeView() {
-		View.apply( this, arguments );
+	function TemplateModeView( props ) {
+		View.call(
+			this,
+			util.extend( { events: { 'click span': 'onClick' } }, props )
+		);
 	}
 
 	mfExtend( TemplateModeView, View, {
-		events: {
-			'click span': 'onClick'
-		},
 		onClick: function () {
 			this.$el.empty().text( 'hello world' );
 		},

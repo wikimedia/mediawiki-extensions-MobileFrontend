@@ -25,14 +25,18 @@ function LanguageOverlay( options ) {
 		langUtil.getFrequentlyUsedLanguages(),
 		options.deviceLanguage
 	);
-	Overlay.call( this,
-		util.extend( options, {
-			events: {
-				'click a': 'onLinkClick',
-				'input .search': 'onSearchInput'
-			},
-			className: 'overlay language-overlay'
-		} )
+	Overlay.call(
+		this,
+		util.extend(
+			options,
+			{
+				className: 'overlay language-overlay',
+				events: {
+					'click a': 'onLinkClick',
+					'input .search': 'onSearchInput'
+				}
+			}
+		)
 	);
 }
 

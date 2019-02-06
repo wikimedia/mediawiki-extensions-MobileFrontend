@@ -51,10 +51,23 @@ EditVeTool.prototype.onUpdateState = function () {
  */
 function EditorOverlayBase( params ) {
 	var self = this,
-		options = util.extend( {}, {
-			className: 'overlay editor-overlay',
-			isBorderBox: false
-		}, params );
+		options = util.extend(
+			{
+				className: 'overlay editor-overlay',
+				isBorderBox: false
+			},
+			params,
+			{
+				events: util.extend(
+					{
+						'click .back': 'onClickBack',
+						'click .continue': 'onClickContinue',
+						'click .submit': 'onClickSubmit'
+					},
+					params.events
+				)
+			}
+		);
 
 	if ( options.isNewPage ) {
 		options.placeholder = mw.msg( 'mobile-frontend-editor-placeholder-new-page', mwUser );
@@ -156,15 +169,6 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 * @instance
 	 */
 	template: mw.template.get( 'mobile.editor.overlay', 'EditorOverlayBase.hogan' ),
-	/**
-	 * @memberof EditorOverlayBase
-	 * @instance
-	 */
-	events: util.extend( {}, Overlay.prototype.events, {
-		'click .back': 'onClickBack',
-		'click .continue': 'onClickContinue',
-		'click .submit': 'onClickSubmit'
-	} ),
 	/**
 	 * Logs an event to http://meta.wikimedia.org/wiki/Schema:EditAttemptStep
 	 * @memberof EditorOverlayBase

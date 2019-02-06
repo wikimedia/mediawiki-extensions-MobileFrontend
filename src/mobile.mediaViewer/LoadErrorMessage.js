@@ -15,8 +15,11 @@ function LoadErrorMessage( options ) {
 	if ( !options.retryPath ) {
 		throw new Error( '\'retryPath\' must be set in options param. Received: ' + options.retryPath );
 	}
-
-	View.apply( this, arguments );
+	View.call(
+		this,
+		{ events: { 'click .load-fail-msg-link a': 'onRetry' } },
+		options
+	);
 }
 
 mfExtend( LoadErrorMessage, View, {
@@ -40,15 +43,6 @@ mfExtend( LoadErrorMessage, View, {
 		msgToUser: mw.msg( 'mobile-frontend-media-load-fail-message' ),
 		retryTxt: mw.msg( 'mobile-frontend-media-load-fail-retry' )
 	} ),
-
-	/**
-	 * @inheritdoc
-	 * @memberof LoadErrorMessage
-	 * @instance
-	 */
-	events: {
-		'click .load-fail-msg-link a': 'onRetry'
-	},
 
 	/**
 	 * @inheritdoc

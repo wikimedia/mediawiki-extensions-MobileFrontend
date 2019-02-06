@@ -13,10 +13,15 @@ var Drawer = require( './../Drawer' ),
  * @param {Object} props
  */
 function ReferencesDrawer( props ) {
-	Drawer.call( this,
-		util.extend( {
-			className: 'drawer position-fixed text references'
-		}, props )
+	Drawer.call(
+		this,
+		util.extend(
+			{
+				className: 'drawer position-fixed text references',
+				events: { 'click sup a': 'showNestedReference' }
+			},
+			props
+		)
 	);
 }
 
@@ -45,13 +50,6 @@ mfExtend( ReferencesDrawer, Drawer, {
 			isSmall: true
 		} ).getClassName()
 	} ),
-	/**
-	 * @memberof ReferencesDrawer
-	 * @instance
-	 */
-	events: {
-		'click sup a': 'showNestedReference'
-	},
 	/**
 	 * @inheritdoc
 	 * @memberof ReferencesDrawer

@@ -56,9 +56,6 @@ mfExtend( Drawer, Panel, {
 	 * @property {boolean}
 	 */
 	closeOnScroll: true,
-	events: util.extend( {}, Panel.prototype.events, {
-		click: 'stopPropagation'
-	} ),
 
 	/**
 	 * @inheritdoc
