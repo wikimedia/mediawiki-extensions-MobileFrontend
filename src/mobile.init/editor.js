@@ -44,13 +44,8 @@ function onEditLinkClick() {
 function getPreferredEditor() {
 	var preferredEditor = mw.storage.get( 'preferredEditor' );
 	if ( !preferredEditor ) {
-		// For now, we are going to ignore which editor is set as the default for the
-		// wiki and always default to the source editor. Once we decide to honor the
-		// default editor setting for the wiki, we'll want to use:
-		// visualEditorDefault = veConfig && veConfig.defaultUserOptions &&
-		//   veConfig.defaultUserOptions.enable;
-		// return visualEditorDefault ? 'VisualEditor' : 'SourceEditor';
-		return 'SourceEditor';
+		return mw.config.get( 'wgMFUsePreferredEditor' ) && mw.user.options.get( 'visualeditor-editor' ) === 'visualeditor' ?
+			'VisualEditor' : 'SourceEditor';
 	}
 	return preferredEditor;
 }

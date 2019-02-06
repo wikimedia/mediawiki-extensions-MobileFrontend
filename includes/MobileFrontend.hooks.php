@@ -446,6 +446,8 @@ class MobileFrontendHooks {
 			],
 			// EditorOverlayBase.js
 			'wgMFEditorOptions' => $config->get( 'MFEditorOptions' ),
+			// editor.js
+			'wgMFUsePreferredEditor' => $config->get( 'MFUsePreferredEditor' ),
 			// Skin.js
 			'wgMFLicense' => MobileFrontendSkinHooks::getLicense( 'editor' ),
 			// schemaMobileWebSearch.js

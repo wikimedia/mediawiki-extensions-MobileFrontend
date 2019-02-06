@@ -134,6 +134,13 @@ Options to control several functions of the mobile editor.  Possible values:
   ]
 ```
 
+#### $wgMFUsePreferredEditor
+
+Use the user's preferred editor (i.e. visual editor or source editor) on first load. Uses the `visualeditor-editor` user option.
+
+* Type: `Boolean`
+* Default: `false`
+
 #### $wgMFEnableMobilePreferences
 
 Enable mobile preferences in Special:Preferences (currently only accessible in desktop). Currently this allows users to disable many of mobile's special page optimisations.

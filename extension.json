@@ -911,6 +911,7 @@
 		"MFEditorOptions": {
 			"skipPreview": false
 		},
+		"MFUsePreferredEditor": false,
 		"MFExperiments": {
 			"betaoptin": {
 				"name": "betaoptin",
