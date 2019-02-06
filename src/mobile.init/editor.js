@@ -84,7 +84,7 @@ function setupEditor( page, skin ) {
 				contentDir: $content.attr( 'dir' ),
 				sessionId: user.generateRandomSessionId()
 			},
-			loadingOverlay = loader.newLoadingOverlay(),
+			loadingOverlay,
 			visualEditorNamespaces = ( veConfig && veConfig.namespaces ) || [],
 			initMechanism = mw.util.getParamValue( 'redlink' ) ? 'new' : 'click';
 
@@ -131,8 +131,6 @@ function setupEditor( page, skin ) {
 			editorOptions.sectionId = page.isWikiText() ? +sectionId : null;
 		}
 
-		loadingOverlay.appendTo( document.body );
-
 		// Check whether VisualEditor should be loaded
 		if ( isVisualEditorEnabled &&
 
@@ -160,6 +158,8 @@ function setupEditor( page, skin ) {
 			mw.hook( 'mobileFrontend.editorOpening' ).fire();
 
 			// Display an overlay identical to loader.loadModule( ... )
+			loadingOverlay = loader.newLoadingOverlay();
+			loadingOverlay.appendTo( document.body );
 			loadingOverlay.show();
 
 			editorOptions.mode = 'visual';
