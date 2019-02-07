@@ -1,0 +1,130 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a6ce3f5f_7af55777",
+        "filename": ".babelrc",
+        "patchSetId": 17
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-07T19:43:25Z",
+      "side": 1,
+      "message": "I\u0027ve tested before and after this config by replacing a `var` usage with `let` in tests and src. I confirm that `let` appears prior to Babel and disappears afterwards.",
+      "revId": "8c011a84a3efbfe0c61e589b5fa55a75356bf367",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2dda7be3_d33d3e75",
+        "filename": ".babelrc",
+        "patchSetId": 17
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-07T19:43:25Z",
+      "side": 1,
+      "message": "I propose these settings be moved to a separate browserslist file. Nothing to block this patch. I\u0027ll make a new patch to continue the discussion.",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 7
+      },
+      "revId": "8c011a84a3efbfe0c61e589b5fa55a75356bf367",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9bb80934_5f2efb91",
+        "filename": ".babelrc",
+        "patchSetId": 17
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-07T19:43:25Z",
+      "side": 1,
+      "message": "I don\u0027t think we actually need this specialization. I find no differences in build product output when removing it and the tests run fine.",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 33,
+        "endChar": 5
+      },
+      "revId": "8c011a84a3efbfe0c61e589b5fa55a75356bf367",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "08f14371_ca803dec",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 17
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-07T19:43:25Z",
+      "side": 1,
+      "message": "If we\u0027re planning to use imports like Popups, this makes perfect sense. If not, do we need this? I ask because I don\u0027t know what are our import plans are for MobileFrontend (but I personally hope we use them!).",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 54
+      },
+      "revId": "8c011a84a3efbfe0c61e589b5fa55a75356bf367",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "875b8375_7d06f0f7",
+        "filename": "tests/node-qunit/.eslintrc.json",
+        "patchSetId": 17
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-07T19:43:25Z",
+      "side": 1,
+      "message": "Is this necessary? We extend ../../.eslintrc.json which does the same thing.",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 5,
+        "endChar": 3
+      },
+      "revId": "8c011a84a3efbfe0c61e589b5fa55a75356bf367",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b97374af_806dec20",
+        "filename": "webpack.config.js",
+        "patchSetId": 17
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-07T19:43:25Z",
+      "side": 1,
+      "message": "Looks good to me. I checked out the docs too and all this makes sense looks tidy 👍",
+      "revId": "8c011a84a3efbfe0c61e589b5fa55a75356bf367",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
