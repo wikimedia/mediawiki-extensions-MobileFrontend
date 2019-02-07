@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cf9c422e_902d098d",
+        "filename": "extension.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 966,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-07T20:07:06Z",
+      "side": 0,
+      "message": "This seems to be the only usage. Can we remove this configuration too?\n\nhttps://codesearch.wmflabs.org/search/?q\u003dMFSpecialPageTaglines\u0026i\u003dnope\u0026files\u003d\u0026repos\u003d",
+      "range": {
+        "startLine": 966,
+        "startChar": 20,
+        "endLine": 966,
+        "endChar": 54
+      },
+      "revId": "2c6739dfde161bb83c25d65a8a4f62c231bb5c51",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
