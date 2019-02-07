@@ -56,7 +56,6 @@
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 metrum|$1 metra}}",
 	"mobile-frontend-nearby-error": "In paginis vicinis quaerendis error inexspectatus accidit.",
 	"mobile-frontend-nearby-error-guidance": "Conquirere locum tuum denuo conare",
-	"mobile-frontend-nearby-loading": "Commentationes prope stationem tuam quaeruntur",
 	"mobile-frontend-nearby-noresults": "Apparet nullas commentationes inveniri posse.",
 	"mobile-frontend-nearby-noresults-guidance": "Novam commentationem incipere aut locum commentationis statuere",
 	"mobile-frontend-nearby-requirements": "Ad paginam {{SITENAME}} spectandam JavaScript atque navigatrum capax locum destinandi necessaria sunt.",

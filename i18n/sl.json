@@ -71,7 +71,6 @@
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",
 	"mobile-frontend-nearby-error": "Možnost Bližnje {{GRAMMAR:rodilnik|{{SITENAME}}}} ima nekaj težav.",
 	"mobile-frontend-nearby-error-guidance": "Poskusite osvežiti svojo lokacijo.",
-	"mobile-frontend-nearby-loading": "Nalagam teme blizu vaše trenutne lokacije",
 	"mobile-frontend-nearby-noresults": "Tu je tiho ... Našli nismo nobene strani s podobnimi tematikami.",
 	"mobile-frontend-nearby-noresults-guidance": "Poskusite ustvariti novo stran ali dodati lokacijo h kateri od že obstoječih",
 	"mobile-frontend-nearby-requirements": "Oprostite! Vaš spletni brskalnik ne podpira možnosti Bližnje {{GRAMMAR:rodilnik|{{SITENAME}}}}.",

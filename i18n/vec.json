@@ -28,7 +28,6 @@
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 km}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",
 	"mobile-frontend-nearby-error": "Ghe xe sta un eror nó spetà mentre se jera drio sercar łe pàjine visine",
-	"mobile-frontend-nearby-loading": "Carga argomenti visini a ła to poxision atuałe",
 	"mobile-frontend-nearby-noresults": "Te si in mexo al gnente e nó semo boni catar nisun articoło. Parché no te ghi ne scrivi uno?",
 	"mobile-frontend-nearby-requirements": "Sta pàjina ła dimanda JavaScript e un browser có ła locałixasion ativà.",
 	"mobile-frontend-nearby-title": "Arente cuà",

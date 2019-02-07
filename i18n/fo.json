@@ -41,7 +41,6 @@
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",
 	"mobile-frontend-nearby-error": "{{SITENAME}} Nærindis hevur nakrar trupulleikar.",
 	"mobile-frontend-nearby-error-guidance": "Royn at dagføra tína staðseting.",
-	"mobile-frontend-nearby-loading": "Innlesur evni tætt við har tú ert nú",
 	"mobile-frontend-nearby-noresults": "Stilt her úti... Ongar síður vóru funnar nærindis.",
 	"mobile-frontend-nearby-requirements": "Tíverri stuðlar tín kagi ikki  {{SITENAME}} Nærindis.",
 	"mobile-frontend-nearby-requirements-guidance": "Royn ein annan internetkaga ella ger JavaScript virkið aftur, um tú hevur sligið tað frá.",

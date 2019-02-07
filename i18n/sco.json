@@ -13,7 +13,6 @@
 	"mobile-frontend-categories-nocat": "This page disna alang tae ony category, yet.",
 	"mobile-frontend-categories-add": "Add tae category",
 	"mobile-frontend-categories-search": "Rake categories",
-	"mobile-frontend-categories-nomatch": "No category foond for yer query. Ye should try anither ane.",
 	"mobile-frontend-categories-nodata": "Thare wis an error. Hae you addit some categories tae save?",
 	"mobile-frontend-categories-summary": "Addit tae categories",
 	"mobile-frontend-categories-add-heading": "<strong>Add<span> $1</span> tae new categories</strong>",

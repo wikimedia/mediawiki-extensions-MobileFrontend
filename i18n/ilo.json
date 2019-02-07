@@ -50,7 +50,6 @@
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",
 	"mobile-frontend-nearby-error": "Ti {{SITENAME}} Nearby ket agdama nga adda dagiti parikut.",
 	"mobile-frontend-nearby-error-guidance": "Padasem a pasadiwaen ti lokasionmo.",
-	"mobile-frontend-nearby-loading": "Agkarkarga kadagiti topiko iti asideg ti agdama a lokasionmo",
 	"mobile-frontend-nearby-noresults": "Naulimek ditoy... Awan dagiti ania man a panid a nabirukan nga agraman kadagiti topiko iti asideg.",
 	"mobile-frontend-nearby-noresults-guidance": "Padasem ti agpatuat ti baro a panid wenno agnayon ti lokasion iti maysa nga addan",
 	"mobile-frontend-nearby-requirements": "Pasensia! Ti pagbasabasam ti web ket saanna a suportaran ti {{SITENAME}} Nearby.",

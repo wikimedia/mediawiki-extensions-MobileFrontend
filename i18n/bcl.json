@@ -46,7 +46,6 @@
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 metro}}",
 	"mobile-frontend-nearby-error": "{{SITENAME}} na Haranihon igwa nin nagkapirang mga isyu.",
 	"mobile-frontend-nearby-error-guidance": "Magprubar na paghunsayon an saimong lokasyon.",
-	"mobile-frontend-nearby-loading": "Ikinakarga an mga tema harani sa saimong lokasyon ngunyan",
 	"mobile-frontend-nearby-noresults": "Matuninongon digde... Mayo nin arinman na mga artikulo an mananagboan sa haranihon.",
 	"mobile-frontend-nearby-noresults-guidance": "Maprubar na magmukna nin sarong baguhong artikulo o magdugang nin lokasyon sa yaon nang eksistido",
 	"mobile-frontend-nearby-requirements": "Sori! An saimong pangilyaw sa web dae tabi minasuporta sa {{SITENAME}} na Haranihon.",

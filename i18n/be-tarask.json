@@ -39,7 +39,6 @@
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 м}}",
 	"mobile-frontend-nearby-error": "{{SITENAME}} Побач спазнаў праблемы.",
 	"mobile-frontend-nearby-error-guidance": "Паспрабуйце абнавіць вашае месцазнаходжаньне.",
-	"mobile-frontend-nearby-loading": "Загрузка тэмаў побач з вамі",
 	"mobile-frontend-nearby-noresults": "Нешта ціха… Мы не знайшлі старонкі на тэмы побач з вамі.",
 	"mobile-frontend-nearby-noresults-guidance": "Паспрабуйце стварыць новую старонку або дадаць каардынаты да існай",
 	"mobile-frontend-nearby-requirements": "Даруйце! Ваш браўзэр не падтрымлівае функцыю {{SITENAME}} Побач.",
