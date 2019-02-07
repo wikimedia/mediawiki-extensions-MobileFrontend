@@ -25,8 +25,8 @@ var util = require( './util' ),
  *     @example
  *     <code>
  *       var ScrollEndEventEmitter =
- *         require( 'mobile.startup/ScrollEndEventEmitter' ),
- *         eventBus = require( 'mobile.startup/eventBusSingleton' );
+ *         require( './ScrollEndEventEmitter' ),
+ *         eventBus = require( './eventBusSingleton' );
  *       OO.mfExtend( PhotoList, View, {
  *         //...
  *         initialize: function ( options ) {
