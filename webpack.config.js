@@ -106,6 +106,8 @@ module.exports = {
 			use: {
 				loader: 'babel-loader',
 				options: {
+					// Beware of https://github.com/babel/babel-loader/issues/690. Changes to browsers require
+					// manual invalidation.
 					cacheDirectory: true
 				}
 			}
