@@ -100,6 +100,8 @@ form.mw-mf-settings {
 
 	.oo-ui-fieldLayout-body {
 		margin-bottom: 40px;
+		display: flex; // Work around for T180652
+		align-items: center;
 
 		// make parent expand to include floats
 		&:before,
@@ -113,17 +115,13 @@ form.mw-mf-settings {
 		}
 	}
 
-	// Work around for T180652
 	.oo-ui-fieldLayout-header {
-		width: 65% !important;
+		flex-grow: 1;
+		width: auto !important; // Work around for T180652
+		padding-right: 1.5em !important; // overriding OOUI style for T214195
 	}
 
 	.oo-ui-fieldLayout-field {
-		width: 30% !important;
-		text-align: right;
-
-		.oo-ui-widget {
-			text-align: left;
-		}
+		width: auto !important; // Work around for T180652
 	}
 }
