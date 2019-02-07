@@ -42,6 +42,30 @@
     },
     {
       "key": {
+        "uuid": "c6e20a3c_b8581c65",
+        "filename": ".babelrc",
+        "patchSetId": 17
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-07T19:48:47Z",
+      "side": 1,
+      "message": "https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/489002",
+      "parentUuid": "2dda7be3_d33d3e75",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 7
+      },
+      "revId": "8c011a84a3efbfe0c61e589b5fa55a75356bf367",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9bb80934_5f2efb91",
         "filename": ".babelrc",
         "patchSetId": 17
