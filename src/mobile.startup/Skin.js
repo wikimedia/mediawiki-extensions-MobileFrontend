@@ -81,13 +81,6 @@ mfExtend( Skin, View, {
 	 * @memberof Skin
 	 * @instance
 	 */
-	events: {},
-
-	/**
-	 * @inheritdoc
-	 * @memberof Skin
-	 * @instance
-	 */
 	postRender: function () {
 		var $el = this.$el;
 		if ( browser.supportsAnimations() ) {

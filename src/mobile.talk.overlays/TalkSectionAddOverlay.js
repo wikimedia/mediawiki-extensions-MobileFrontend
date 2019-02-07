@@ -24,7 +24,12 @@ function TalkSectionAddOverlay( options ) {
 	this.pageGateway = new PageGateway( options.api );
 	Overlay.call( this,
 		util.extend( options, {
-			className: 'talk-overlay overlay'
+			className: 'talk-overlay overlay',
+			events: {
+				'input .wikitext-editor, .summary': 'onTextInput',
+				'change .wikitext-editor, .summary': 'onTextInput',
+				'click .confirm-save': 'onSaveClick'
+			}
 		} )
 	);
 	this.title = options.title;
@@ -77,16 +82,6 @@ mfExtend( TalkSectionAddOverlay, Overlay, {
 	templatePartials: util.extend( {}, Overlay.prototype.templatePartials, {
 		contentHeader: mw.template.get( 'mobile.talk.overlays', 'SectionAddOverlay/contentHeader.hogan' ),
 		saveHeader: mw.template.get( 'mobile.editor.overlay', 'saveHeader.hogan' )
-	} ),
-	/**
-	 * @inheritdoc
-	 * @memberof TalkSectionAddOverlay
-	 * @instance
-	 */
-	events: util.extend( {}, Overlay.prototype.events, {
-		'input .wikitext-editor, .summary': 'onTextInput',
-		'change .wikitext-editor, .summary': 'onTextInput',
-		'click .confirm-save': 'onSaveClick'
 	} ),
 	/**
 	 * @inheritdoc

@@ -23,11 +23,23 @@ var
  * @fires SearchOverlay#search-result-click
  */
 function SearchOverlay( params ) {
-	var defaultParams = {
+	var options = util.extend(
+		{
 			isBorderBox: false,
-			className: 'overlay search-overlay'
+			className: 'overlay search-overlay',
+			events: {
+				'input input': 'onInputInput',
+				'click .clear': 'onClickClear',
+				'click .search-content': 'onClickSearchContent',
+				'click .overlay-content': 'onClickOverlayContent',
+				'click .overlay-content > div': 'onClickOverlayContentDiv',
+				'touchstart .results': 'hideKeyboardOnScroll',
+				'mousedown .results': 'hideKeyboardOnScroll',
+				'click .results a': 'onClickResult'
+			}
 		},
-		options = util.extend( {}, defaultParams, params );
+		params
+	);
 
 	Overlay.call( this, options );
 
@@ -101,21 +113,6 @@ mfExtend( SearchOverlay, Overlay, {
 			} ).options,
 			prompt: mw.msg( 'mobile-frontend-search-feedback-prompt' )
 		}
-	} ),
-	/**
-	 * @inheritdoc
-	 * @memberof SearchOverlay
-	 * @instance
-	 */
-	events: util.extend( {}, Overlay.prototype.events, {
-		'input input': 'onInputInput',
-		'click .clear': 'onClickClear',
-		'click .search-content': 'onClickSearchContent',
-		'click .overlay-content': 'onClickOverlayContent',
-		'click .overlay-content > div': 'onClickOverlayContentDiv',
-		'touchstart .results': 'hideKeyboardOnScroll',
-		'mousedown .results': 'hideKeyboardOnScroll',
-		'click .results a': 'onClickResult'
 	} ),
 
 	/**

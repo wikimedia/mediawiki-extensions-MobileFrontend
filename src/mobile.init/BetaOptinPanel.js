@@ -10,10 +10,15 @@ var Button = require( '../mobile.startup/Button' ),
  * @param {Object} props
  */
 function BetaOptinPanel( props ) {
-	Panel.call( this,
-		util.extend( {
-			className: 'panel panel-inline visible'
-		}, props )
+	Panel.call(
+		this,
+		util.extend(
+			{
+				className: 'panel panel-inline visible',
+				events: { 'click .optin': 'onOptin' }
+			},
+			props
+		)
 	);
 }
 
@@ -49,13 +54,6 @@ mfExtend( BetaOptinPanel, Panel, {
 				label: mw.msg( 'mobile-frontend-panel-cancel' )
 			} ).options
 		]
-	} ),
-	/**
-	 * @memberof BetaOptinPanel
-	 * @instance
-	 */
-	events: util.extend( {}, Panel.prototype.events, {
-		'click .optin': 'onOptin'
 	} ),
 	/**
 	 * Cancel event handler

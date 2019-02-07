@@ -45,7 +45,13 @@ function EditorOverlay( options ) {
 	// be explicit here. This may have been initialized from VE.
 	options.isVisualEditor = false;
 	options.previewingMsg = mw.msg( 'mobile-frontend-editor-previewing-page', options.title );
-	EditorOverlayBase.call( this, options );
+	EditorOverlayBase.call(
+		this,
+		util.extend(
+			{ events: { 'input .wikitext-editor': 'onInputWikitextEditor' } },
+			options
+		)
+	);
 }
 
 mfExtend( EditorOverlay, EditorOverlayBase, {
@@ -119,13 +125,6 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 			mw.config.get( 'wgTranslatePageTranslation' ) !== 'translation' &&
 			mw.config.get( 'wgPageContentModel' ) === 'wikitext';
 	},
-	/**
-	 * @memberof EditorOverlay
-	 * @instance
-	 */
-	events: util.extend( {}, EditorOverlayBase.prototype.events, {
-		'input .wikitext-editor': 'onInputWikitextEditor'
-	} ),
 	/**
 	 * Wikitext Editor input handler
 	 * @memberof EditorOverlay

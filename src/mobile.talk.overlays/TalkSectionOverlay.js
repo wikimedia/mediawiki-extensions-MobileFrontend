@@ -24,7 +24,11 @@ function TalkSectionOverlay( options ) {
 	this.pageGateway = new PageGateway( options.api );
 	Overlay.call( this,
 		util.extend( options, {
-			className: 'talk-overlay overlay'
+			className: 'talk-overlay overlay',
+			events: {
+				'focus textarea': 'onFocusTextarea',
+				'click .save-button': 'onSaveClick'
+			}
 		} )
 	);
 }
@@ -56,15 +60,6 @@ mfExtend( TalkSectionOverlay, Overlay, {
 		section: undefined,
 		reply: mw.msg( 'mobile-frontend-talk-reply' ),
 		info: mw.msg( 'mobile-frontend-talk-reply-info' )
-	} ),
-	/**
-	 * @inheritdoc
-	 * @memberof TalkSectionOverlay
-	 * @instance
-	 */
-	events: util.extend( {}, Overlay.prototype.events, {
-		'focus textarea': 'onFocusTextarea',
-		'click .save-button': 'onSaveClick'
 	} ),
 	/**
 	 * Fetches the talk topics of the page specified in options.title

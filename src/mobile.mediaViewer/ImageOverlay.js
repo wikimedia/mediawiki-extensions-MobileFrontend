@@ -31,10 +31,19 @@ function ImageOverlay( options ) {
 	this.router = options.router || router;
 	this.eventBus = options.eventBus;
 
-	Overlay.call( this,
-		util.extend( {
-			className: 'overlay media-viewer'
-		}, options )
+	Overlay.call(
+		this,
+		util.extend(
+			{
+				className: 'overlay media-viewer',
+				events: {
+					'click .image-wrapper': 'onToggleDetails',
+					// Click tracking for table of contents so we can see if people interact with it
+					'click .slider-button': 'onSlide'
+				}
+			},
+			options
+		)
 	);
 }
 
@@ -84,16 +93,6 @@ mfExtend( ImageOverlay, Overlay, {
 			rotation: -90,
 			name: 'arrow-invert'
 		} ).toHtmlString()
-	} ),
-	/**
-	 * @inheritdoc
-	 * @memberof ImageOverlay
-	 * @instance
-	 */
-	events: util.extend( {}, Overlay.prototype.events, {
-		'click .image-wrapper': 'onToggleDetails',
-		// Click tracking for table of contents so we can see if people interact with it
-		'click .slider-button': 'onSlide'
 	} ),
 	/**
 	 * Event handler for slide event

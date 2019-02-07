@@ -1,7 +1,6 @@
 /* global $, document */
 var util = require( './util' ),
 	mfExtend = require( './mfExtend' ),
-	DEPRECATED_PROPERTIES = [ 'events' ],
 	// Cached regex to split keys for `delegate`.
 	delegateEventSplitter = /^(\S+)\s*(.*)$/,
 	idCounter = 0;
@@ -96,13 +95,6 @@ function uniqueId( prefix ) {
  */
 
 function View() {
-	var self = this;
-	DEPRECATED_PROPERTIES.forEach( function ( property ) {
-		if ( self[ property ] !== undefined ) {
-			mw.log.deprecate( self, property, self[ property ],
-				'Setting `' + property + '` on the View is deprecated. Please use options.' );
-		}
-	} );
 	this.initialize.apply( this, arguments );
 }
 OO.mixinClass( View, OO.EventEmitter );
@@ -288,7 +280,7 @@ mfExtend( View, {
 	},
 
 	/**
-	 * Set callbacks, where `this.events` is a hash of
+	 * Set callbacks, where `this.options.events` is a hash of
 	 *
 	 * { 'event selector': 'callback' }
 	 *
@@ -308,9 +300,7 @@ mfExtend( View, {
 	 */
 	delegateEvents: function ( events ) {
 		var match, key, method;
-		// Take either the events parameter or the this.events to process. this.events is
-		// deprecated. See DEPRECATED_PROPERTIES.
-		events = events || this.options.events || this.events;
+		events = events || this.options.events;
 		if ( events ) {
 			// Remove current events before re-binding them
 			this.undelegateEvents();
