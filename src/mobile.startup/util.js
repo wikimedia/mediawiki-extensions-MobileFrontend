@@ -51,13 +51,7 @@ module.exports = {
 	 * @return {jQuery.Deferred}
 	 */
 	Deferred: function () {
-		var d = $.Deferred(),
-			warning = 'Use Promise compatible methods `then` and `catch` instead.';
-
-		/* eslint-disable no-restricted-properties */
-		mw.log.deprecate( d, 'fail', d.fail, warning );
-		/* eslint-enable no-restricted-properties */
-		return d;
+		return $.Deferred();
 	},
 	/**
 	 * Adds a class to the document

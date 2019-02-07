@@ -552,7 +552,7 @@ QUnit.test( '#save, read-only error', function ( assert ) {
 			sectionId: 1
 		} ),
 		resolveSpy = sandbox.spy(),
-		failSpy = sandbox.spy(),
+		rejectSpy = sandbox.spy(),
 		done = assert.async(),
 		expectedReturnValue = {
 			type: 'readonly',
@@ -566,8 +566,8 @@ QUnit.test( '#save, read-only error', function ( assert ) {
 	gateway.getContent().then( function () {
 		gateway.setContent( 'section 1' );
 		return gateway.save();
-	} ).then( resolveSpy, failSpy ).then( function () {
-		assert.strictEqual( failSpy.calledWith( expectedReturnValue ), true );
+	} ).then( resolveSpy, rejectSpy ).then( function () {
+		assert.strictEqual( rejectSpy.calledWith( expectedReturnValue ), true );
 		assert.strictEqual( resolveSpy.called, false, 'don\'t call resolve' );
 		done();
 	} );
