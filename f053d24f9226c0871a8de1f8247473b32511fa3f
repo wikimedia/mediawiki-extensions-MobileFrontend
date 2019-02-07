@@ -73,6 +73,30 @@
     },
     {
       "key": {
+        "uuid": "a0b49899_6aa9b243",
+        "filename": ".babelrc",
+        "patchSetId": 7
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-02-07T17:05:00Z",
+      "side": 1,
+      "message": "According to the babel stdout when setting the `debug: true` option in .babelrc and running `npm run build`, these are the transforms that are enabled with our targets (the transforms enabled are relative to what targets you set in .babelrc):\n```\ntransform-template-literals\ntransform-literals\ntransform-function-name\ntransform-arrow-functions\ntransform-block-scoped-functions\ntransform-classes\ntransform-object-super\ntransform-shorthand-properties\ntransform-duplicate-keys\ntransform-computed-properties\ntransform-for-of\ntransform-sticky-regex\ntransform-dotall-regex\ntransform-unicode-regex\ntransform-spread\ntransform-parameters\ntransform-destructuring\ntransform-block-scoping\ntransform-typeof-symbol\ntransform-new-target\ntransform-regenerator\ntransform-exponentiation-operator\ntransform-async-to-generator\nproposal-async-generator-functions\nproposal-object-rest-spread\nproposal-unicode-property-regex\nproposal-json-strings\nproposal-optional-catch-binding\ntransform-named-capturing-groups-regex\n\n```",
+      "parentUuid": "a4c4ad85_aaba0c78",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 1
+      },
+      "revId": "f053d24f9226c0871a8de1f8247473b32511fa3f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6eb1b830_e283dd6f",
         "filename": ".babelrc",
         "patchSetId": 7
