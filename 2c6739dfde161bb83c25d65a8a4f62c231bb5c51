@@ -22,6 +22,30 @@
       "revId": "2c6739dfde161bb83c25d65a8a4f62c231bb5c51",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a7724322_cc3af9c9",
+        "filename": "extension.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 966,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-07T20:27:24Z",
+      "side": 0,
+      "message": "Per acceptance criteria we need to keep this. The plan is to use this for other pages. Alex is on it!",
+      "parentUuid": "cf9c422e_902d098d",
+      "range": {
+        "startLine": 966,
+        "startChar": 20,
+        "endLine": 966,
+        "endChar": 54
+      },
+      "revId": "2c6739dfde161bb83c25d65a8a4f62c231bb5c51",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
