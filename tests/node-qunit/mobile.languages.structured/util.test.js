@@ -198,7 +198,7 @@ QUnit.module( 'MobileFrontend mobile.languages.structured/util.test.js', {
 
 QUnit.test( '#getFrequentlyUsedLanguages', function ( assert ) {
 
-	assert.deepEqual( util.getFrequentlyUsedLanguages(), this.frequentlyUsedLanguages,
+	assert.propEqual( util.getFrequentlyUsedLanguages(), this.frequentlyUsedLanguages,
 		'Frequently used languages is correct.' );
 } );
 
@@ -215,7 +215,7 @@ QUnit.test( '#getStructuredLanguages', function ( assert ) {
 		this.apiLanguages, false, this.frequentlyUsedLanguages, this.deviceLanguage
 	);
 
-	assert.deepEqual(
+	assert.propEqual(
 		result,
 		this.structuredLanguages,
 		'Structured languages are correct, including sort order.'

@@ -52,7 +52,7 @@ QUnit.test( 'it extends the parameters', function ( assert ) {
 			prop: [ 'corge', 'baz', 'description' ] // from wgMFQueryPropModules and Wikibase-specific
 		};
 
-	assert.deepEqual( params, expectedParams );
+	assert.propEqual( params, expectedParams );
 } );
 
 QUnit.test( 'it doesn\'t include Wikibase-specific parameters if the feature is disabled', function ( assert ) {
@@ -87,7 +87,7 @@ QUnit.test( 'it prioritizes MobileFrontend configuration', function ( assert ) {
 			prop: [ 'baz', 'description' ]
 		};
 
-	assert.deepEqual(
+	assert.propEqual(
 		params,
 		expectedParams,
 		'The value of "foo" is overridden by the configuration.'
@@ -113,5 +113,5 @@ QUnit.test( 'it is variadic', function ( assert ) {
 			prop: [ 'baz', 'description' ]
 		};
 
-	assert.deepEqual( params, expectedParams );
+	assert.propEqual( params, expectedParams );
 } );

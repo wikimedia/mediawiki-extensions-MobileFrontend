@@ -31,7 +31,7 @@ QUnit.test( 'escapeSelector()', function ( assert ) {
 } );
 
 QUnit.test( 'grep()', function ( assert ) {
-	assert.deepEqual(
+	assert.propEqual(
 		util.grep( [ 1, 2 ], function ( n ) {
 			return n > 1;
 		} ),

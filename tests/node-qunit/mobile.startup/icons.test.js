@@ -23,7 +23,7 @@ QUnit.module( 'MobileFrontend icons.js', {
 
 QUnit.test( '#cancel()', function ( assert ) {
 	icons.cancel();
-	assert.deepEqual( spy.getCall( 0 ).args[ 0 ], {
+	assert.propEqual( spy.getCall( 0 ).args[ 0 ], {
 		tagName: 'button',
 		name: icons.CANCEL_GLYPH,
 		additionalClassNames: 'cancel',
@@ -33,7 +33,7 @@ QUnit.test( '#cancel()', function ( assert ) {
 
 QUnit.test( '#cancel(variant)', function ( assert ) {
 	icons.cancel( 'gray' );
-	assert.deepEqual( spy.getCall( 0 ).args[ 0 ], {
+	assert.propEqual( spy.getCall( 0 ).args[ 0 ], {
 		tagName: 'button',
 		name: icons.CANCEL_GLYPH + '-gray',
 		additionalClassNames: 'cancel',
@@ -46,7 +46,7 @@ QUnit.test( '#spinner()', function ( assert ) {
 		foo: 'will be passed down',
 		additionalClassNames: 'will-be-ignored'
 	} );
-	assert.deepEqual( spy.getCall( 0 ).args[ 0 ], {
+	assert.propEqual( spy.getCall( 0 ).args[ 0 ], {
 		foo: 'will be passed down',
 		additionalClassNames: 'spinner loading',
 		name: 'spinner',

@@ -403,7 +403,7 @@ QUnit.test( '#save, request failure', function ( assert ) {
 	return gateway.getContent().then( function () {
 		gateway.setContent( 'section 1' );
 		assert.rejects( gateway.save(), function ( given ) {
-			assert.deepEqual( given, {
+			assert.propEqual( given, {
 				type: 'error',
 				details: 'http'
 			}, 'called with correct arguments' );
@@ -423,7 +423,7 @@ QUnit.test( '#save, API failure', function ( assert ) {
 	return gateway.getContent().then( function () {
 		gateway.setContent( 'section 1' );
 		assert.rejects( gateway.save(), function ( given ) {
-			assert.deepEqual( given, {
+			assert.propEqual( given, {
 				type: 'error',
 				details: 'error code'
 			}, 'called with correct arguments' );
@@ -443,7 +443,7 @@ QUnit.test( '#save, CAPTCHA response with image URL', function ( assert ) {
 	return gateway.getContent().then( function () {
 		gateway.setContent( 'section 1' );
 		assert.rejects( gateway.save(), function ( given ) {
-			assert.deepEqual( given, {
+			assert.propEqual( given, {
 				type: 'captcha',
 				details: captcha
 			}, 'called with correct arguments' );
@@ -464,7 +464,7 @@ QUnit.test( '#save, AbuseFilter warning', function ( assert ) {
 		gateway.setContent( 'section 1' );
 
 		assert.rejects( gateway.save(), function ( given ) {
-			assert.deepEqual( given, {
+			assert.propEqual( given, {
 				type: 'abusefilter',
 				details: {
 					type: 'warning',
@@ -488,7 +488,7 @@ QUnit.test( '#save, AbuseFilter disallow', function ( assert ) {
 		gateway.setContent( 'section 1' );
 
 		assert.rejects( gateway.save(), function ( given ) {
-			assert.deepEqual( given, {
+			assert.propEqual( given, {
 				type: 'abusefilter',
 				details: {
 					type: 'disallow',
@@ -512,7 +512,7 @@ QUnit.test( '#save, AbuseFilter other', function ( assert ) {
 		gateway.setContent( 'section 1' );
 
 		assert.rejects( gateway.save(), function ( given ) {
-			assert.deepEqual( given, {
+			assert.propEqual( given, {
 				type: 'abusefilter',
 				details: {
 					type: 'other',
@@ -536,7 +536,7 @@ QUnit.test( '#save, extension errors', function ( assert ) {
 		gateway.setContent( 'section 1' );
 
 		assert.rejects( gateway.save(), function ( given ) {
-			assert.deepEqual( given, {
+			assert.propEqual( given, {
 				type: 'error',
 				details: 'testerror'
 			}, 'called with correct arguments' );
@@ -585,7 +585,7 @@ QUnit.test( '#save, unknown errors', function ( assert ) {
 		gateway.setContent( 'section 1' );
 
 		assert.rejects( gateway.save(), function ( given ) {
-			assert.deepEqual( given, {
+			assert.propEqual( given, {
 				type: 'error',
 				details: 'unknown'
 			}, 'called with correct arguments' );

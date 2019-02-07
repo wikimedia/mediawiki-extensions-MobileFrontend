@@ -88,7 +88,7 @@ QUnit.test( 'getStatuses(nonempty)', function ( assert ) {
 			'An unwatched page': false,
 			'A watched page': true
 		};
-		assert.deepEqual( actual, expected, 'The correct result is returned.' );
+		assert.propEqual( actual, expected, 'The correct result is returned.' );
 		mockAPI.verify();
 	} );
 } );
@@ -109,7 +109,7 @@ QUnit.test( 'getStatuses(empty)', function ( assert ) {
 	subject = new WatchstarGateway( api );
 	return subject.getStatuses( [], [] ).then( function ( actual ) {
 		expected = {};
-		assert.deepEqual( actual, expected, 'An empty result is returned.' );
+		assert.propEqual( actual, expected, 'An empty result is returned.' );
 		mockAPI.verify();
 	} );
 } );
@@ -134,7 +134,7 @@ QUnit.test( 'getStatusesByID(nonempty)', function ( assert ) {
 			'An unwatched page': false,
 			'A watched page': true
 		};
-		assert.deepEqual( actual, expected, 'The correct result is returned.' );
+		assert.propEqual( actual, expected, 'The correct result is returned.' );
 		mockAPI.verify();
 	} );
 } );
@@ -155,7 +155,7 @@ QUnit.test( 'getStatusesByID(empty)', function ( assert ) {
 	subject = new WatchstarGateway( api );
 	return subject.getStatusesByID( [] ).then( function ( actual ) {
 		expected = {};
-		assert.deepEqual( actual, expected, 'An empty result is returned.' );
+		assert.propEqual( actual, expected, 'An empty result is returned.' );
 		mockAPI.verify();
 	} );
 } );
@@ -182,7 +182,7 @@ QUnit.test( 'getStatusesByTitle(nonempty)', function ( assert ) {
 			'An unwatched page': false,
 			'A watched page': true
 		};
-		assert.deepEqual( actual, expected, 'The correct result is returned.' );
+		assert.propEqual( actual, expected, 'The correct result is returned.' );
 		mockAPI.verify();
 	} );
 } );
@@ -203,7 +203,7 @@ QUnit.test( 'getStatusesByTitle(empty)', function ( assert ) {
 	subject = new WatchstarGateway( api );
 	return subject.getStatusesByTitle( [] ).then( function ( actual ) {
 		expected = {};
-		assert.deepEqual( actual, expected, 'An empty result is returned.' );
+		assert.propEqual( actual, expected, 'An empty result is returned.' );
 		mockAPI.verify();
 	} );
 } );
@@ -220,7 +220,7 @@ QUnit.test( '_unmarshalGetResponse(nonempty)', function ( assert ) {
 		'An unwatched page': false,
 		'A watched page': true
 	};
-	assert.deepEqual(
+	assert.propEqual(
 		actual,
 		expected,
 		'GET API:Info nonempty responses are unmarshalled correctly.'
@@ -236,7 +236,7 @@ QUnit.test( '_unmarshalGetResponse(empty)', function ( assert ) {
 	subject = new WatchstarGateway( new mw.Api() );
 	actual = subject._unmarshalGetResponse( {} );
 	expected = {};
-	assert.deepEqual(
+	assert.propEqual(
 		actual,
 		expected,
 		'GET API:Info empty responses are unmarshalled correctly.'

@@ -128,7 +128,7 @@ QUnit.test( '_distanceMessage()', function ( assert ) {
 	tests.forEach( function ( test, i ) {
 		self.nearbyGateway._distanceMessage( test[ 0 ] );
 
-		assert.deepEqual(
+		assert.propEqual(
 			mw.msg.getCall( i ).args,
 			[
 				test[ 1 ], test[ 2 ]

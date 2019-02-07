@@ -186,7 +186,7 @@ QUnit.test( 'loadWatchlist() doesn\'t throw an error when no pages are returned'
 		} ) );
 
 	return gateway.loadWatchlist().then( function ( pages ) {
-		assert.deepEqual( pages, [] );
+		assert.propEqual( pages, [] );
 	} );
 } );
 

@@ -47,7 +47,7 @@ QUnit.test( '#getPage', function ( assert ) {
 
 	pageGateway.invalidatePage( 'Test' );
 	return pageGateway.getPage( 'Test' ).then( function ( resp ) {
-		assert.deepEqual( resp, testData.getPage.output, 'return lead and sections test 2' );
+		assert.propEqual( resp, testData.getPage.output, 'return lead and sections test 2' );
 
 		return pageGateway.getPage( 'Test' );
 	} ).then( function () {
@@ -59,11 +59,11 @@ QUnit.test( '#getPageLanguages (response)', function ( assert ) {
 	sandbox.stub( this.api, 'get' ).returns( util.Deferred().resolve( testData.getPageLanguagesResponse.input ) );
 
 	return pageGateway.getPageLanguages( 'Test' ).then( function ( resp ) {
-		assert.deepEqual( resp.languages,
+		assert.propEqual( resp.languages,
 			testData.getPageLanguagesResponse.output.languages,
 			'return augmented language links' );
 
-		assert.deepEqual( resp.variants,
+		assert.propEqual( resp.variants,
 			testData.getPageLanguagesResponse.output.variants,
 			'return augmented language variant links' );
 	} );
@@ -84,7 +84,7 @@ QUnit.test( '#_getAPIResponseFromHTML', function ( assert ) {
 	var resp = pageGateway._getAPIResponseFromHTML(
 		util.parseHTML( page )
 	);
-	assert.deepEqual( testData.getAPIResponseFromHTML.input, resp );
+	assert.propEqual( testData.getAPIResponseFromHTML.input, resp );
 } );
 
 QUnit.test( '#getSectionsFromHTML malformed (h2 before h1)', function ( assert ) {
@@ -165,6 +165,6 @@ QUnit.test( '#getPage (move protected page)', function ( assert ) {
 
 	pageGateway.invalidatePage( 'Test' );
 	return pageGateway.getPage( 'Test' ).then( function ( resp ) {
-		assert.deepEqual( resp.protection, expected );
+		assert.propEqual( resp.protection, expected );
 	} );
 } );
