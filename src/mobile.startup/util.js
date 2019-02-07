@@ -56,8 +56,6 @@ module.exports = {
 
 		/* eslint-disable no-restricted-properties */
 		mw.log.deprecate( d, 'fail', d.fail, warning );
-		mw.log.deprecate( d, 'always', d.always, warning );
-		mw.log.deprecate( d, 'done', d.done, warning );
 		/* eslint-enable no-restricted-properties */
 		return d;
 	},
