@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "93ccb4fc_9797e173",
+        "filename": "extension.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 914,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-07T00:30:46Z",
+      "side": 1,
+      "message": "Can you document this in READMe.md",
+      "revId": "a9da5827adc3ad6f230f9802ea63728d3c5d9adc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
