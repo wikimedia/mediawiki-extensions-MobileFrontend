@@ -61,7 +61,7 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 			Html::openElement( 'li', [
 				'class' => 'page-summary',
 				'title' => $titleText,
-				'data-id' => $title->getArticleId()
+				'data-id' => $title->getArticleID()
 			] ) .
 			Html::openElement( 'a', [ 'href' => $title->getLocalUrl(), 'class' => $className ] );
 		$html .= $thumb;
