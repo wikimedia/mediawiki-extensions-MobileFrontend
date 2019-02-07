@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "72885f81_c40df403",
+        "filename": "src/mobile.startup/util.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-07T23:39:47Z",
+      "side": 0,
+      "message": "This is now dealt with in eslint",
+      "revId": "f1fa2a4b0fb34227a0e8e8650ee06a48896c114c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
