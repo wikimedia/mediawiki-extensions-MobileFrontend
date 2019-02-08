@@ -551,7 +551,7 @@ QUnit.test( '#save, read-only error', function ( assert ) {
 			title: 'test',
 			sectionId: 1
 		} ),
-		doneSpy = sandbox.spy(),
+		resolveSpy = sandbox.spy(),
 		failSpy = sandbox.spy(),
 		done = assert.async(),
 		expectedReturnValue = {
@@ -566,9 +566,9 @@ QUnit.test( '#save, read-only error', function ( assert ) {
 	gateway.getContent().then( function () {
 		gateway.setContent( 'section 1' );
 		return gateway.save();
-	} ).then( doneSpy, failSpy ).then( function () {
+	} ).then( resolveSpy, failSpy ).then( function () {
 		assert.strictEqual( failSpy.calledWith( expectedReturnValue ), true );
-		assert.strictEqual( doneSpy.called, false, 'don\'t call done' );
+		assert.strictEqual( resolveSpy.called, false, 'don\'t call resolve' );
 		done();
 	} );
 
@@ -630,15 +630,15 @@ QUnit.test( '#EditorGateway', function ( assert ) {
 			title: 'Test',
 			sectionId: 1
 		} ),
-		doneSpy = sandbox.spy();
+		resolveSpy = sandbox.spy();
 
 	return gateway.getPreview( { text: 'test content' } )
-		.then( doneSpy )
+		.then( resolveSpy )
 		.then( function () {
 			assert.ok( apiHappyTestContent.post.calledWithMatch( {
 				text: 'test content'
 			} ) );
-			assert.ok( doneSpy.calledWith( {
+			assert.ok( resolveSpy.calledWith( {
 				line: '',
 				text: '<h1>Heading 1</h1><h2>Heading 2</h2><p>test content</p>'
 			} ) );
