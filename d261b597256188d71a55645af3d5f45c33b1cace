@@ -16,6 +16,24 @@
       "revId": "d261b597256188d71a55645af3d5f45c33b1cace",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa4ce23e_3f59d71e",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-08T20:27:31Z",
+      "side": 1,
+      "message": "I would have to call module.exports.schemaMobileWebSearch.subscribeMobileWebSearchSchema() which felt a little long. Happy to do so if you\u0027re worried about ordering.",
+      "parentUuid": "c45ebb92_94d74c4d",
+      "revId": "d261b597256188d71a55645af3d5f45c33b1cace",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
