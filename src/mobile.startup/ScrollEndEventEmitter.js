@@ -24,10 +24,11 @@ var util = require( './util' ),
  * Example:
  *     @example
  *     <code>
- *       var ScrollEndEventEmitter =
- *         require( './ScrollEndEventEmitter' ),
+ *       var
+ *         mfExtend = require( './mfExtend' ),
+ *         ScrollEndEventEmitter = require( './ScrollEndEventEmitter' ),
  *         eventBus = require( './eventBusSingleton' );
- *       OO.mfExtend( PhotoList, View, {
+ *       mfExtend( PhotoList, View, {
  *         //...
  *         initialize: function ( options ) {
  *           this.gateway = new PhotoListGateway( {

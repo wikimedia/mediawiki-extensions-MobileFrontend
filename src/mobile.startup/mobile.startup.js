@@ -47,7 +47,6 @@ module.exports = {
 };
 
 mw.mobileFrontend = moduleLoader;
-OO.mfExtend = module.exports.mfExtend;
 
 // Setup a single export for new modules to fold all of the above lines into.
 // One export to rule them all!
