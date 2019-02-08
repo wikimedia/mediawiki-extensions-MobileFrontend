@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c45ebb92_94d74c4d",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-08T20:23:01Z",
+      "side": 1,
+      "message": "Why is this one special?",
+      "revId": "d261b597256188d71a55645af3d5f45c33b1cace",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
