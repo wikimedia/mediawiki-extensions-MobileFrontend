@@ -34,6 +34,24 @@
       "revId": "d261b597256188d71a55645af3d5f45c33b1cace",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1ab962d1_5f15e2dd",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-08T20:40:31Z",
+      "side": 1,
+      "message": "ah i see now. missed it at the bottom of the file since I though module.exports was the last line. makes sense.",
+      "parentUuid": "fa4ce23e_3f59d71e",
+      "revId": "d261b597256188d71a55645af3d5f45c33b1cace",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
