@@ -318,16 +318,6 @@
 				"resources/dist/mobile.startup.js"
 			]
 		},
-		"mobile.editor": {
-			"deprecated": true,
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"dependencies": [
-				"mobile.init"
-			]
-		},
 		"mobile.editor.overlay": {
 			"targets": [
 				"mobile",
