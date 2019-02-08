@@ -1,7 +1,8 @@
 <?php
 
-use MobileFrontend\Features\FeaturesManager;
 use MobileFrontend\Features\Feature;
+use MobileFrontend\Features\FeaturesManager;
+use MobileFrontend\Features\UserModes;
 
 /**
  * @group MobileFrontend
@@ -27,6 +28,63 @@ class FeaturesManagerTest extends MediaWikiTestCase {
 	}
 
 	/**
+	 * @covers ::setup
+	 */
+	public function testSetUpTwice() {
+		$called = 0;
+		$this->setTemporaryHook( 'MobileFrontendFeaturesRegistration', function () use ( &$called ){
+			$called++;
+		} );
+		$manager = new FeaturesManager( new UserModes() );
+		$manager->setup();
+		$manager->setup();
+		$this->assertEquals( 1, $called, 'MobileFrontendFeaturesRegistration was called only once' );
+	}
+
+	/**
+	 * @covers ::registerFeature
+	 * @expectedException \RuntimeException
+	 */
+	public function testCannotRegisterSameFeatureTwice() {
+		$featureA =
+			$this->makeFeature( 'featureA',
+				[ 'modeA' => true, 'modeB' => true, 'modeC' => false ] );
+
+		$userModes = new UserModes();
+
+		$manager = new FeaturesManager( $userModes );
+		$manager->registerFeature( $featureA );
+		$manager->registerFeature( $featureA );
+	}
+
+	/**
+	 * @covers ::getFeature
+	 */
+	public function testGetFeatureReturnsExactlySameObject() {
+		$featureA =
+			$this->makeFeature( 'featureA',
+				[ 'modeA' => true, 'modeB' => true, 'modeC' => false ] );
+
+		$userModes = new UserModes();
+
+		$manager = new FeaturesManager( $userModes );
+		$manager->registerFeature( $featureA );
+
+		$actual = $manager->getFeature( 'featureA' );
+		$this->assertEquals( $featureA, $actual );
+	}
+
+	/**
+	 * @covers ::getFeature
+	 * @expectedException \RuntimeException
+	 */
+	public function testGetFeatureThrowsExceptionWhenFeatureNotFound() {
+		$userModes = new UserModes();
+		$manager = new FeaturesManager( $userModes );
+		$manager->getFeature( 'featureA' );
+	}
+
+	/**
 	 * @covers ::registerFeature
 	 * @covers ::getAvailableForMode
 	 */
@@ -42,7 +100,7 @@ class FeaturesManagerTest extends MediaWikiTestCase {
 		$featureC = $this->makeFeature( 'featureC',
 			[ 'modeA' => false, 'modeB' => false, 'modeC' => false ] );
 
-		$userModes = new \MobileFrontend\Features\UserModes();
+		$userModes = new UserModes();
 		$userModes->registerMode( $modeAMock );
 		$userModes->registerMode( $modeBMock );
 		$userModes->registerMode( $modeCMock );
@@ -75,7 +133,7 @@ class FeaturesManagerTest extends MediaWikiTestCase {
 		$modeAMock = $this->getTestMode( 'modeA', false );
 		$featureA = $this->makeFeature( 'featureA', [ 'modeA' => true ] );
 
-		$userModes = new \MobileFrontend\Features\UserModes();
+		$userModes = new UserModes();
 		$userModes->registerMode( $modeAMock );
 		$manager = new FeaturesManager( $userModes );
 		$manager->registerFeature( $featureA );
@@ -93,7 +151,7 @@ class FeaturesManagerTest extends MediaWikiTestCase {
 
 		$featureA = $this->makeFeature( 'featureA', [ 'modeA' => true, 'modeB' => true ] );
 
-		$userModes = new \MobileFrontend\Features\UserModes();
+		$userModes = new UserModes();
 		$userModes->registerMode( $modeAMock );
 		$userModes->registerMode( $modeBMock );
 		$manager = new FeaturesManager( $userModes );
@@ -102,4 +160,19 @@ class FeaturesManagerTest extends MediaWikiTestCase {
 		$this->assertEquals( true, $manager->isFeatureAvailableForCurrentUser( 'featureA' ) );
 	}
 
+	/**
+	 * @covers ::getMode
+	 */
+	public function testGetModeUsesModesToRetrieveData() {
+		$modeMock = $this->getTestMode( 'testMode' );
+
+		$userModes = $this->getMock( \MobileFrontend\Features\UserModes::class, [ 'getMode' ],
+			[], '', false );
+		$userModes->expects( $this->once() )
+			->method( 'getMode' )
+			->with( 'testMode' )
+			->willReturn( $modeMock );
+		$manager = new FeaturesManager( $userModes );
+		$this->assertEquals( $modeMock, $manager->getMode( 'testMode' ) );
+	}
 }

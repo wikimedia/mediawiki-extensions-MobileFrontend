@@ -43,7 +43,7 @@ interface IFeature {
 	public function __toString();
 
 	/**
-	 * Check feature availability in given user mode ( Stable, beta, alpha etc )
+	 * Check feature availability in given user mode ( base, beta, alpha etc )
 	 * @param IUserMode $mode UserMode
 	 * @return bool
 	 */
