@@ -90,6 +90,30 @@
     },
     {
       "key": {
+        "uuid": "3a59dd88_fa82b9ba",
+        "filename": ".babelrc",
+        "patchSetId": 17
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-08T22:16:09Z",
+      "side": 1,
+      "message": "Sounds good.",
+      "parentUuid": "6c5a7ca5_3be29dac",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 7
+      },
+      "revId": "8c011a84a3efbfe0c61e589b5fa55a75356bf367",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9bb80934_5f2efb91",
         "filename": ".babelrc",
         "patchSetId": 17
@@ -184,6 +208,53 @@
     },
     {
       "key": {
+        "uuid": "37a9c383_b9b38ca1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 17
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-08T22:16:09Z",
+      "side": 1,
+      "message": "Makes sense. Thanks for the explanation.",
+      "parentUuid": "a4428f01_1ecaa63f",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 54
+      },
+      "revId": "8c011a84a3efbfe0c61e589b5fa55a75356bf367",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "df636554_22f6189b",
+        "filename": "package.json",
+        "patchSetId": 17
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-08T22:16:09Z",
+      "side": 1,
+      "message": "Sorry, I missed this earlier. Is this needed? I think NPM adds node_modules/.bin to the PATH.",
+      "range": {
+        "startLine": 8,
+        "startChar": 63,
+        "endLine": 8,
+        "endChar": 81
+      },
+      "revId": "8c011a84a3efbfe0c61e589b5fa55a75356bf367",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "379d68df_2adb21bf",
         "filename": "resources/dist/mobile.common.js",
         "patchSetId": 17
@@ -219,6 +290,30 @@
       "side": 1,
       "message": "No action needed (also not 100% sure what this is referring to... can you be more specific?)",
       "parentUuid": "379d68df_2adb21bf",
+      "range": {
+        "startLine": 1,
+        "startChar": 1316,
+        "endLine": 1,
+        "endChar": 1317
+      },
+      "revId": "8c011a84a3efbfe0c61e589b5fa55a75356bf367",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d01d0341_3d68bb56",
+        "filename": "resources/dist/mobile.common.js",
+        "patchSetId": 17
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-08T22:16:09Z",
+      "side": 1,
+      "message": "Gerrit shoved this comment towards the bottom but it looks like there\u0027s only a single character difference in this file (and the other bundles except test).",
+      "parentUuid": "5a23aa71_be44a44e",
       "range": {
         "startLine": 1,
         "startChar": 1316,
