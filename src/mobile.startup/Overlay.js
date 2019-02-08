@@ -6,7 +6,23 @@ var
 	icons = require( './icons' ),
 	util = require( './util' ),
 	browser = require( './Browser' ).getSingleton(),
-	mfExtend = require( './mfExtend' );
+	mfExtend = require( './mfExtend' ),
+	testPassiveOpts, supportsPassive, passiveOpts;
+
+// Detect browser support for the 'passive' event option.
+// https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#Safely_detecting_option_support
+try {
+	supportsPassive = false;
+	testPassiveOpts = Object.defineProperty( {}, 'passive', {
+		get: function () {
+			supportsPassive = true;
+			return true;
+		}
+	} );
+	window.addEventListener( 'testPassive', null, testPassiveOpts );
+	window.removeEventListener( 'testPassive', null, testPassiveOpts );
+	passiveOpts = supportsPassive ? { passive: false } : false;
+} catch ( e ) {}
 
 /**
  * Mobile modal window
@@ -154,10 +170,12 @@ mfExtend( Overlay, View, {
 	 * @instance
 	 */
 	setupEmulatedIosOverlayScrolling: function () {
-		var self = this;
+		var self = this,
+			$content = this.$( '.overlay-content' );
+
 		if ( this.isIos && this.hasFixedHeader ) {
-			this.$( '.overlay-content' ).on( 'touchstart', this.onTouchStart.bind( this ) )
-				.on( 'touchmove', this.onTouchMove.bind( this ) );
+			$content[0].addEventListener( 'touchstart', this.onTouchStart.bind( this ), passiveOpts );
+			$content[0].addEventListener( 'touchmove', this.onTouchMove.bind( this ), passiveOpts );
 			// wait for things to render before doing any calculations
 			setTimeout( function () {
 				var $window = util.getWindow();
@@ -186,7 +204,7 @@ mfExtend( Overlay, View, {
 	 * @param {Object} ev Event Object
 	 */
 	onTouchStart: function ( ev ) {
-		this.startY = ev.originalEvent.touches[0].pageY;
+		this.startY = ev.touches[0].pageY;
 	},
 	/**
 	 * Event handler for touch move, for IOS
@@ -196,11 +214,13 @@ mfExtend( Overlay, View, {
 	 */
 	onTouchMove: function ( ev ) {
 		var
-			y = ev.originalEvent.touches[0].pageY,
+			y = ev.touches[0].pageY,
 			contentOuterHeight = this.$overlayContent.outerHeight(),
 			contentLength = this.$overlayContent.prop( 'scrollHeight' ) - contentOuterHeight;
 
+		// Stop propagation so that this.iosTouchmoveHandler doesn't run
 		ev.stopPropagation();
+
 		// prevent scrolling and bouncing outside of .overlay-content
 		if (
 			( this.$overlayContent.scrollTop() === 0 && this.startY < y ) ||
@@ -243,13 +263,16 @@ mfExtend( Overlay, View, {
 
 		// prevent scrolling and bouncing outside of .overlay-content
 		if ( this.isIos && this.hasFixedHeader ) {
-			$window
-				.on( 'touchmove.ios', function ( ev ) {
-					ev.preventDefault();
-				} )
-				.on( 'resize.ios', function () {
-					self._resizeContent( $window.height() );
-				} );
+			this.iosTouchmoveHandler = function ( ev ) {
+				// Note that this event handler only runs if onTouchMove did not call
+				// stopPropagation() (only if the page was touched outside of our overlay).
+				ev.preventDefault();
+			};
+			this.iosResizeHandler = function () {
+				self._resizeContent( $window.height() );
+			};
+			$window[0].addEventListener( 'touchmove', this.iosTouchmoveHandler, passiveOpts );
+			$window.on( 'resize', this.iosResizeHandler );
 		}
 
 		this.$el.addClass( 'visible' );
@@ -275,7 +298,8 @@ mfExtend( Overlay, View, {
 		this.$el.detach();
 
 		if ( this.isIos ) {
-			$window.off( '.ios' );
+			$window[0].removeEventListener( 'touchmove', this.iosTouchmoveHandler, passiveOpts );
+			$window.off( 'resize', this.iosResizeHandler );
 		}
 
 		/**
