@@ -106,6 +106,7 @@ module.exports = {
 	util: util,
 	actionParams: actionParams,
 	View: View,
+	PageGateway: PageGateway,
 	Browser: Browser,
 	context: context,
 	cache: cache,
