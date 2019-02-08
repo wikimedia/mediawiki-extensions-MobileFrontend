@@ -66,6 +66,30 @@
     },
     {
       "key": {
+        "uuid": "6c5a7ca5_3be29dac",
+        "filename": ".babelrc",
+        "patchSetId": 17
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-08T22:10:03Z",
+      "side": 1,
+      "message": "LGTM. Are you happy with merging this change on the basis the following up is going to merge shortly after?",
+      "parentUuid": "c6e20a3c_b8581c65",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 18,
+        "endChar": 7
+      },
+      "revId": "8c011a84a3efbfe0c61e589b5fa55a75356bf367",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9bb80934_5f2efb91",
         "filename": ".babelrc",
         "patchSetId": 17
@@ -77,6 +101,30 @@
       "writtenOn": "2019-02-07T19:43:25Z",
       "side": 1,
       "message": "I don\u0027t think we actually need this specialization. I find no differences in build product output when removing it and the tests run fine.",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 33,
+        "endChar": 5
+      },
+      "revId": "8c011a84a3efbfe0c61e589b5fa55a75356bf367",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5e7b60eb_751835f2",
+        "filename": ".babelrc",
+        "patchSetId": 17
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-08T22:10:03Z",
+      "side": 1,
+      "message": "I\u0027ve removed. Nick can readd it in a follow up patch if it was indeed needed.",
+      "parentUuid": "9bb80934_5f2efb91",
       "range": {
         "startLine": 21,
         "startChar": 0,
@@ -112,6 +160,30 @@
     },
     {
       "key": {
+        "uuid": "a4428f01_1ecaa63f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 17
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-08T22:10:03Z",
+      "side": 1,
+      "message": "The plan is to use transpiling for templating which will need this.\n\nimports are likely to be adopted at some point in near future too pending team discussion so yes we will use them :)\n\nSo yes we need this. It may be a little premature but yes we need them :)",
+      "parentUuid": "08f14371_ca803dec",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 12,
+        "endChar": 54
+      },
+      "revId": "8c011a84a3efbfe0c61e589b5fa55a75356bf367",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "379d68df_2adb21bf",
         "filename": "resources/dist/mobile.common.js",
         "patchSetId": 17
@@ -123,6 +195,30 @@
       "writtenOn": "2019-02-07T19:53:09Z",
       "side": 1,
       "message": "I think this is the only change in all of the bundles (except the test bundle)!",
+      "range": {
+        "startLine": 1,
+        "startChar": 1316,
+        "endLine": 1,
+        "endChar": 1317
+      },
+      "revId": "8c011a84a3efbfe0c61e589b5fa55a75356bf367",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a23aa71_be44a44e",
+        "filename": "resources/dist/mobile.common.js",
+        "patchSetId": 17
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-08T22:10:03Z",
+      "side": 1,
+      "message": "No action needed (also not 100% sure what this is referring to... can you be more specific?)",
+      "parentUuid": "379d68df_2adb21bf",
       "range": {
         "startLine": 1,
         "startChar": 1316,
@@ -158,6 +254,30 @@
     },
     {
       "key": {
+        "uuid": "21937e2e_4eada70e",
+        "filename": "tests/node-qunit/.eslintrc.json",
+        "patchSetId": 17
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-08T22:10:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "875b8375_7d06f0f7",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 5,
+        "endChar": 3
+      },
+      "revId": "8c011a84a3efbfe0c61e589b5fa55a75356bf367",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b97374af_806dec20",
         "filename": "webpack.config.js",
         "patchSetId": 17
@@ -169,6 +289,24 @@
       "writtenOn": "2019-02-07T19:43:25Z",
       "side": 1,
       "message": "Looks good to me. I checked out the docs too and all this makes sense looks tidy 👍",
+      "revId": "8c011a84a3efbfe0c61e589b5fa55a75356bf367",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "433ced6f_2aa43d1c",
+        "filename": "webpack.config.js",
+        "patchSetId": 17
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-08T22:10:03Z",
+      "side": 1,
+      "message": "No action needed",
+      "parentUuid": "b97374af_806dec20",
       "revId": "8c011a84a3efbfe0c61e589b5fa55a75356bf367",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
