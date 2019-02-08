@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4984c786_b5f945f9",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-08T20:10:28Z",
+      "side": 1,
+      "message": "I\u0027m going squash this patch with the follow up, as this is creating a new entry point for loadingOverlay ( with the wrong name) e.g. reversing the deprecation.\n\nmw.mobileFrontend.deprecate( \u0027mobile.startup/LoadingOverlay\u0027, loadingOverlay, \u0027mobile.startup\u0027 ) essentially means don\u0027t use mobile.startup/LoadingOverlay to get me use mobile.startup instead while mw.mobileFrontend.define( \u0027mobile.startup/LoadingOverlay\u0027, loadingOverlay ); means use mobile.startup/LoadingOverlay to get me, so this is a little confusing.",
+      "revId": "761dd14e5ce4d2d5267558dcddc0871665d50496",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
