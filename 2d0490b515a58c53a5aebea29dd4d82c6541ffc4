@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "084eb77e_adab1f4a",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-08T20:46:27Z",
+      "side": 0,
+      "message": "Looks like Minerva only imports CtaDrawer.",
+      "revId": "2d0490b515a58c53a5aebea29dd4d82c6541ffc4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
