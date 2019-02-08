@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "517d5a8a_d1fa090a",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-08T02:20:10Z",
+      "side": 1,
+      "message": "I don\u0027t see any usages of all the above, can these definitions also be removed?",
+      "revId": "d5a06bbc45f86b8f44f4938ab00a3e1d456b1335",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5c3d7edc_5d5a0ecd",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-08T02:20:10Z",
+      "side": 1,
+      "message": "If I\u0027m not mistaken we should be removing all of these definitions and encouraging mw.mobileFrontend.require( \u0027mobile.startup\u0027 )\n\nWe shouldn\u0027t be adding another way to access these, right?\n\nStrike while the iron is hot and remove all these lines..?",
+      "revId": "d5a06bbc45f86b8f44f4938ab00a3e1d456b1335",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c1efd74a_997d91d3",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-08T02:20:10Z",
+      "side": 1,
+      "message": "I think this is all that\u0027s needed to define the public API right?",
+      "revId": "d5a06bbc45f86b8f44f4938ab00a3e1d456b1335",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
