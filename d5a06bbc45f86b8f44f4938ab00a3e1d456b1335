@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "bea9e938_81796e99",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-08T16:57:33Z",
+      "side": 1,
+      "message": "Removed in new patchset.",
+      "parentUuid": "517d5a8a_d1fa090a",
+      "revId": "d5a06bbc45f86b8f44f4938ab00a3e1d456b1335",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5c3d7edc_5d5a0ecd",
         "filename": "src/mobile.startup/mobile.startup.js",
         "patchSetId": 2
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "f6e0d9a4_89df9290",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-08T16:57:33Z",
+      "side": 1,
+      "message": "Thanks, I didn\u0027t realize we were heading this way but I\u0027m stoked. I\u0027ve made the changes in a new patchset since I was pretty aggressive with the removal. Feel free to merge it into this one if you prefer.",
+      "parentUuid": "5c3d7edc_5d5a0ecd",
+      "revId": "d5a06bbc45f86b8f44f4938ab00a3e1d456b1335",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c1efd74a_997d91d3",
         "filename": "src/mobile.startup/mobile.startup.js",
         "patchSetId": 2
@@ -47,6 +83,24 @@
       "writtenOn": "2019-02-08T02:20:10Z",
       "side": 1,
       "message": "I think this is all that\u0027s needed to define the public API right?",
+      "revId": "d5a06bbc45f86b8f44f4938ab00a3e1d456b1335",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "96b7ba3c_1ce5587c",
+        "filename": "src/mobile.startup/mobile.startup.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-08T16:57:33Z",
+      "side": 1,
+      "message": "Yes!",
+      "parentUuid": "c1efd74a_997d91d3",
       "revId": "d5a06bbc45f86b8f44f4938ab00a3e1d456b1335",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
