@@ -22,7 +22,6 @@ var
  */
 function Overlay( props ) {
 	this.isIos = browser.isIos();
-	this.useVirtualKeyboardHack = browser.isIos( 4 ) || browser.isIos( 5 );
 	// Set to true when overlay has failed to load
 	this.hasLoadError = false;
 
@@ -161,7 +160,8 @@ mfExtend( Overlay, View, {
 				.on( 'touchmove', this.onTouchMove.bind( this ) );
 			// wait for things to render before doing any calculations
 			setTimeout( function () {
-				self._fixIosHeader( self.$( 'textarea, input' ) );
+				var $window = util.getWindow();
+				self._resizeContent( $window.height() );
 			}, 0 );
 		}
 	},
@@ -301,54 +301,6 @@ mfExtend( Overlay, View, {
 			this.$( '.overlay-header-container' ).outerHeight() -
 			this.$( '.overlay-footer-container' ).outerHeight()
 		);
-	},
-
-	/**
-	 * Resize .overlay-content to occupy 100% of screen space when virtual
-	 * keyboard is shown/hidden on iOS.
-	 *
-	 * This function supplements the custom styles for Overlays on iOS.
-	 * On iOS we scroll the content inside of .overlay-content div instead
-	 * of scrolling the whole page to achieve a consistent sticky header
-	 * effect (position: fixed doesn't work on iOS when the virtual keyboard
-	 * is open).
-	 *
-	 * @memberof Overlay
-	 * @instance
-	 * @private
-	 * @param {jQuery.Object} $el for elements that may trigger virtual
-	 * keyboard (usually inputs, textareas, contenteditables).
-	 */
-	_fixIosHeader: function ( $el ) {
-		var self = this,
-			$window = util.getWindow();
-
-		if ( this.isIos ) {
-			this._resizeContent( $window.height() );
-			$el
-				.on( 'focus', function () {
-					setTimeout( function () {
-						var keyboardHeight = 0;
-
-						// detect virtual keyboard height
-						if ( self.useVirtualKeyboardHack ) {
-							// this method does not work in iOS 8.02
-							$window.scrollTop( 999 );
-							keyboardHeight = $window.scrollTop();
-							$window.scrollTop( 0 );
-						}
-
-						if ( $window.height() > keyboardHeight ) {
-							self._resizeContent( $window.height() - keyboardHeight );
-						}
-					}, 0 );
-				} )
-				.on( 'blur', function () {
-					self._resizeContent( $window.height() );
-					// restore the fixed header in view.
-					$window.scrollTop( 0 );
-				} );
-		}
 	},
 
 	/**
