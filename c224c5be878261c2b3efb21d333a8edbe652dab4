@@ -16,6 +16,24 @@
       "revId": "c224c5be878261c2b3efb21d333a8edbe652dab4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fb45a00e_f5160280",
+        "filename": "src/mobile.editor.ve/ve.init.mw.MobileFrontendArticleTarget.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2019-02-08T12:53:09Z",
+      "side": 1,
+      "message": "It works fine for me, before and after. I see no way in which surface could be null here.",
+      "parentUuid": "8b4998ea_3bbb4c15",
+      "revId": "c224c5be878261c2b3efb21d333a8edbe652dab4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
