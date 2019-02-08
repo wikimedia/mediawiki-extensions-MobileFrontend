@@ -196,7 +196,6 @@ EditorGateway.prototype = {
 				apiOptions.section = self.sectionId;
 			}
 
-			// eslint-disable-next-line no-restricted-properties
 			self.api.postWithToken( 'csrf', apiOptions ).then( function ( data ) {
 				if ( data && data.edit && data.edit.result === 'Success' ) {
 					self.hasChanged = false;
@@ -204,7 +203,7 @@ EditorGateway.prototype = {
 				} else {
 					result.reject( parseSaveError( data ) );
 				}
-			} ).fail( function ( code, data ) {
+			}, function ( code, data ) {
 				result.reject( parseSaveError( data, code || 'unknown' ) );
 			} );
 			return result;
