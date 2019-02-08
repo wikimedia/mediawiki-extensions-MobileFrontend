@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "84dd8f8b_d13a300b",
+        "filename": "tests/node-qunit/utils/ve.js",
+        "patchSetId": 18
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-08T22:19:08Z",
+      "side": 1,
+      "message": "Is this file needed?",
+      "revId": "6b32a10021a9973ee7b98ffb72b1aa7034152a74",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
