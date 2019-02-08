@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d490e176_d609365d",
+        "filename": "resources/mobile.startup/Overlay.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-08T02:15:42Z",
+      "side": 1,
+      "message": "(this will hopefully not be the case soon... we are looking to get rid of this class altogether)",
+      "revId": "bb3e8d8432f8a72d210a3f755add0de434fc39b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
