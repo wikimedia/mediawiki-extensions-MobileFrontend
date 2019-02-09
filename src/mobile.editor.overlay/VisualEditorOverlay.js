@@ -16,13 +16,11 @@ var EditorOverlayBase = require( './EditorOverlayBase' ),
  */
 function VisualEditorOverlay( options ) {
 	this.applyHeaderOptions( options, true );
-	// When switch, all options from the source mode editor are passed
-	// to VE, so ensure these settings override them.
 	EditorOverlayBase.call( this,
-		util.extend( {}, options, {
+		util.extend( {
 			isBorderBox: false,
 			className: 'overlay editor-overlay editor-overlay-ve'
-		} )
+		}, options )
 	);
 	this.EditorOverlay = options.EditorOverlay;
 	this.isNewPage = options.isNewPage;
@@ -159,6 +157,8 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 		this.$( '.surface' ).hide();
 		self.hideSpinner();
 		self.applyHeaderOptions( self.options, false );
+		// Unset classes from other editor
+		delete self.options.className;
 		self.overlayManager.replaceCurrent( new EditorOverlay( self.options ) );
 	},
 	/**
