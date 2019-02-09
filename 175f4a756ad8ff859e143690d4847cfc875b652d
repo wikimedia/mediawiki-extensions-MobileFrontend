@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1e767cba_f0c5dcfe",
+        "filename": "resources/mobile.editor.overlay/editor.ve.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2019-02-09T18:34:45Z",
+      "side": 1,
+      "message": "missing h6?",
+      "revId": "175f4a756ad8ff859e143690d4847cfc875b652d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "070aee6f_48754c13",
+        "filename": "resources/mobile.editor.overlay/editor.ve.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2019-02-09T18:34:45Z",
+      "side": 1,
+      "message": "This should probably be in skinStyles for Minerva, not for all skins. (You can technically use a different skin on mobile now :) )",
+      "revId": "175f4a756ad8ff859e143690d4847cfc875b652d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
