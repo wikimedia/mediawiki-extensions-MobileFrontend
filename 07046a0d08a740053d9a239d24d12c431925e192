@@ -39,6 +39,24 @@
       "revId": "07046a0d08a740053d9a239d24d12c431925e192",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0211c27e_93a42bca",
+        "filename": "src/mobile.init/editor.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 254,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2019-02-09T19:43:11Z",
+      "side": 1,
+      "message": "The 200 was supposed to be a very short delay, and the 300 was supposed to be slightly longer than the usual transitions. I was going to figure out the exact values from the prototype by Jess from T211595: https://iamjessklein.github.io/wiki-overlayse/prototype.html but I didn\u0027t do it yet (the 300 should probably be larger).\n\n(This makes me think: we should probably ensure than the real loading has the same minimal delay?)",
+      "parentUuid": "21f4bd96_ee1daa03",
+      "revId": "07046a0d08a740053d9a239d24d12c431925e192",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
