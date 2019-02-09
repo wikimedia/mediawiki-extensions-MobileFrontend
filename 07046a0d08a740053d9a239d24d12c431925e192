@@ -22,6 +22,23 @@
       "revId": "07046a0d08a740053d9a239d24d12c431925e192",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "21f4bd96_ee1daa03",
+        "filename": "src/mobile.init/editor.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 254,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2019-02-09T19:17:20Z",
+      "side": 1,
+      "message": "Is there a reason you are using 200/300ms here, instead of the standard 250ms for animations?",
+      "revId": "07046a0d08a740053d9a239d24d12c431925e192",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
