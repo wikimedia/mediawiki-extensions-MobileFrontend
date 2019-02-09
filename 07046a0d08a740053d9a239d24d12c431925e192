@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5d330b92_235b1cd2",
+        "filename": "src/mobile.editor.overlay/VisualEditorOverlay.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2019-02-09T18:52:46Z",
+      "side": 1,
+      "message": "no longer applicable",
+      "range": {
+        "startLine": 108,
+        "startChar": 0,
+        "endLine": 109,
+        "endChar": 39
+      },
+      "revId": "07046a0d08a740053d9a239d24d12c431925e192",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
