@@ -275,8 +275,6 @@
 	"mobile-frontend-mobile-option-MFLazyLoadImages": "Obrazy lazy load",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "Wprowadzający akapit",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox-description": "Tekst będzie zawsze wyświetlany ponad infoboksami, co poprawi wydajność i czytelność.",
-	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption": "Domyślnie rozwiń wszystkie sekcje",
-	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption-description": "Wyłącz zwijanie sekcji na skórce mobilnej.",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Rozmiar czcionki",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Zarządzaj rozmiarem czcionki podczas czytania.",
 	"mobile-frontend-beta-only": "Funkcjonalność dostępna tylko w trybie beta",

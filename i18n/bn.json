@@ -250,8 +250,6 @@
 	"mobile-frontend-mobile-option-MFLazyLoadImages": "ধীরে চিত্র লোড",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "সূচনা অনুচ্ছেদ",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox-description": "কর্মক্ষমতা বৃদ্ধি এবং পঠনযোগ্যতা উন্নত করে, পাঠ্য সর্বদা তথ্যছকে প্রদর্শন করবে।",
-	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption": "পূর্বনির্ধারিতভাবে সকল অনুচ্ছেদ প্রসারিত করুন",
-	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption-description": "মোবাইল ওয়েবে অনুচ্ছেদ গুটানো অক্ষম করুন",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "ফন্টের আকার",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "আপনার পড়ার জন্য ফন্টের আকার নিয়ন্ত্রণ করুন।",
 	"mobile-frontend-mobile-option-amc": "উচ্চতর মোবাইল অবদান",

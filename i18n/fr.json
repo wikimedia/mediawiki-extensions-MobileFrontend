@@ -289,8 +289,6 @@
 	"mobile-frontend-mobile-option-MFLazyLoadImages": "Images chargées paresseusement",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "Paragraphe directeur",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox-description": "Le texte sera toujours affiché au-dessus des zones d’information, améliorant la performance et la lisibilité.",
-	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption": "Développer par défaut toutes les sections",
-	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption-description": "Désactiver la réduction des sections sur le web mobile.",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Taille de la police",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Contrôler la taille de police de votre expérience de lecture.",
 	"mobile-frontend-mobile-option-amc": "Contributions avancées par mobile",

@@ -284,8 +284,6 @@
 	"mobile-frontend-mobile-option-MFLazyLoadImages": "缓慢加载图片",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "开头段落",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox-description": "文本将总是在信息框上方显示，以改进性能和阅读性。",
-	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption": "默认展开所有章节",
-	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption-description": "在移动网络中禁用章节折叠。",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "字体大小",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "控制您在阅读时的字体大小。",
 	"mobile-frontend-beta-only": "功能只在测试模式可用",

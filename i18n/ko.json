@@ -263,8 +263,6 @@
 	"mobile-frontend-send-feedback": "피드백 보내기",
 	"mobile-frontend-mobile-option-MFLazyLoadImages-description": "필요할 때에만 그림을 불러옵니다.",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox-description": "성능 및 가독성 개선을 위해 텍스트는 항상 위의 정보상자만 표시합니다.",
-	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption": "기본적으로 모든 문단 확장",
-	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption-description": "모바일 웹에서 문단 접기를 사용하지 않습니다.",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "글꼴 크기",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "읽기 경험의 글꼴 크기를 조정합니다.",
 	"mobile-frontend-mobile-option-amc": "고급 모바일 기여",

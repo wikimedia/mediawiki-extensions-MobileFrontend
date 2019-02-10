@@ -246,8 +246,6 @@
 	"mobile-frontend-mobile-option-MFLazyLoadImages": "Одложено вчитување на слики",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "Воведен пасус",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox-description": "Текстот секогаш ќе се прикажува над инфокутии, подобрувајќи ги работењето и читливоста.",
-	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption": "Расклопувај ги сите поднаслови по основно",
-	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption-description": "Оневозможи расклоп на поднаслови за мобилно читање.",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Големина на буквите",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Одредување големина на буквите при читање.",
 	"mobile-frontend-mobile-option-amc": "Напредни мобилни придонеси",

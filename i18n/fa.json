@@ -274,8 +274,6 @@
 	"mobile-frontend-mobile-option-MFLazyLoadImages": "بارگیری تصاویر با تاخیر",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "مقدمهٔ پاراگراف",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox-description": "متن همیشه بالای جعبهٔ اطلاعات نمایش داده می‌شود، بهبود بهره‌وری و خوانایی.",
-	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption": "بازبودن هر بخش به صورت پیش‌فرض",
-	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption-description": "غیرفعال‌کردن باز و بسته کردن زیربخش‌ها در حالت نمای موبایل.",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "اندازهٔ فونت",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "تنظیم اندازهٔ فونت متنی که می‌خوانید.",
 	"mobile-frontend-beta-only": "ویژگی‌ها فقط در نسخهٔ آزمایشی وجود دارند",

@@ -258,8 +258,6 @@
 	"mobile-frontend-mobile-option-MFLazyLoadImages": "Trì hoãn tải hình ảnh",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "Đoạn văn đầu tiên",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox-description": "Văn bản luôn hiển thị bên trên hộp thông tin để tối ưu hiệu suất và làm cho dễ đọc hơn.",
-	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption": "Mở rộng các phần theo mặc định",
-	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption-description": "Tắt chức năng tự động thu gọn các phần trong phiên bản trang di động.",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Kích thước chữ",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Điều chỉnh cỡ chữ khi đọc bài.",
 	"mobile-frontend-mobile-option-amc": "Đóng góp Di Động Nâng cao",

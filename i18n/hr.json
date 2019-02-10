@@ -233,8 +233,6 @@
 	"mobile-frontend-mobile-option-MFLazyLoadImages": "Sporo učitavanje slika",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "Uvodni odlomak",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox-description": "Tekst će se uvijek prikazivati iznad infookvira, poboljšavajući tako performance i čitljivost.",
-	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption": "Zadano proširi sve odlomke",
-	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption-description": "Onemogući proširivanje odlomaka na mobilnom prikazu.",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Veličina slova",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Kontrola veličine slova",
 	"mobile-frontend-mobile-option-amc": "Napredno doprinošenje s mobilnog uređaja",

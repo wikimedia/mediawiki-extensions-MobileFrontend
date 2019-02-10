@@ -288,8 +288,6 @@
 	"mobile-frontend-mobile-option-MFLazyLoadImages": "Загружать изображения по требованию.",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "Вводный абзац",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox-description": "Текст будет всегда показан над карточками, улучшая производительность и читабельность.",
-	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption": "Открывать все разделы по умолчанию",
-	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption-description": "Отключить сворачивание разделов в мобильной версии.",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Размер шрифта",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Управляйте размером шрифта для своего процесса чтения.",
 	"mobile-frontend-mobile-option-amc": "Расширенный мобильный вклад",

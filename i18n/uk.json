@@ -266,8 +266,6 @@
 	"mobile-frontend-mobile-option-MFLazyLoadImages": "Ліниве завантаження зображень",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "Вступний розділ",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox-description": "Текст завжди буде показано поверх шаблонів-карток, що дозволить покращити продуктивність і читабельність.",
-	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption": "Розгортати всі розділи за замовчуванням",
-	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption-description": "Вимкнути згортання розділів у мобільній версії.",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Розмір шрифту",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Контролюйте розмір шрифту для поліпшення свого читацького досвіду.",
 	"mobile-frontend-mobile-option-amc": "Розширений внесок з мобільного",

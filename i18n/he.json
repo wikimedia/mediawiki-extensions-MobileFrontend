@@ -260,8 +260,6 @@
 	"mobile-frontend-mobile-option-MFLazyLoadImages": "טעינה עצלה של תמונות",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "פסקת פתיחה",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox-description": "הטקסט תמיד יוצג מעל תיבות מידע, לשם שיפור ביצועים וקריאוּת.",
-	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption": "הרחבת כל הפסקאות",
-	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption-description": "כיבוי הסתרת פסקאות באתר הנייד.",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "גודל הגופן",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "בקרת גודל הגופן בחוויית הקריאה שלך.",
 	"mobile-frontend-mobile-option-amc": "תרומות מתקדמות מהנייד",

@@ -262,8 +262,6 @@
 	"mobile-frontend-mobile-option-MFLazyLoadImages": "Opožděné načítání obrázků",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "Hlavní odstavec",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox-description": "Text se vždy zobrazí nad infoboxy, což zlepšuje výkon a čitelnost.",
-	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption": "Rozbalit všechny původní sekce",
-	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption-description": "Zrušit sbalování sekcí na mobilním webu.",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Velikost písma",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Kontrolovat velikost písma",
 	"mobile-frontend-mobile-option-amc": "Pokročilé mobilní přispívání",

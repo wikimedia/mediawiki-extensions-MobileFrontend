@@ -261,8 +261,6 @@
 	"mobile-frontend-mobile-option-MFLazyLoadImages": "Lazy Load Images",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "Einleitung",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox-description": "Der Text wird immer über Infoboxen angezeigt, die Leistung und Lesbarkeit werden verbessert.",
-	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption": "Alle Abschnitte standardmäßig ausklappen",
-	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption-description": "Einklappen von Abschnitten im mobilen Web deaktivieren.",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Schriftgröße",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Steuere die Schriftgröße für dein Leseerlebnis.",
 	"mobile-frontend-mobile-option-amc": "Erweiterte mobile Beiträge",

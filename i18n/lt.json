@@ -230,8 +230,6 @@
 	"mobile-frontend-mobile-option-MFLazyLoadReferences": "Tingusis nuorodų užkrovimas",
 	"mobile-frontend-mobile-option-MFLazyLoadReferences-description": "Įkelti nuorodas tik tada, kada jų reikia",
 	"mobile-frontend-send-feedback": "Siųsti atsiliepimą",
-	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption": "Išskleisti visus skyrius pagal numatymą",
-	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption-description": "Išjungti skyrių išskleidimą mobiliojo įrenginio naršyklėje.",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Šrifto dydis",
 	"mobile-frontend-beta-only": "Funkcija galima tik beta versijoje",
 	"mobile-frontend-console-recruit": "Sužinokite daugiau apie tai, kaip buvo sukurtas mūsų puslapis mobiliesiems @ https://www.mediawiki.org/wiki/Extension:MobileFrontend"

@@ -31,7 +31,8 @@
 			"Mainframe98",
 			"Mar(c)",
 			"Effeietsanders",
-			"Elroy"
+			"Elroy",
+			"Optilete"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Of een gebruiker wel of niet via de mobiele interface bewerkt",
@@ -135,7 +136,7 @@
 	"mobile-frontend-languages-text": "$1 is beschikbaar in $2 {{PLURAL:$2|taal|talen}}.",
 	"mobile-frontend-languages-variant-header": "Varianten van {{#language:{{CONTENTLANG}}}}",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Taalsuggesties",
-	"mobile-frontend-languages-structured-overlay-all-languages-header": "Alle talen",
+	"mobile-frontend-languages-structured-overlay-all-languages-header": "Andere talen",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Zoeken naar een taal",
 	"mobile-frontend-last-modified-date": "Gewijzigd op $1 om $2",
 	"mobile-frontend-last-modified-with-user-days": "[$4 {{PLURAL:$3|Eén dag geleden|$3 dagen geleden|2=Eergisteren}} voor het laatst {{GENDER:$1|bewerkt}}] door {{PLURAL:$5|[$6 $2]|0=een anonieme gebruiker}}",
@@ -251,9 +252,8 @@
 	"mobile-frontend-mobile-option-MFLazyLoadImages-description": "Alleen afbeeldingen laden wanneer ze nodig zijn.",
 	"mobile-frontend-mobile-option-MFLazyLoadImages": "Afbeeldingen vertraagd laden",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "Introductieparagraaf",
-	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption": "Alle secties standaard uitklappen",
-	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption-description": "Het automatisch inklappen van secties op de mobiele website uitschakelen.",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Lettergrootte",
+	"mobile-frontend-mobile-option-amc-learn-more": "Meer lezen",
 	"mobile-frontend-beta-only": "Functie alleen beschikbaar in betamodus",
 	"mobile-frontend-console-recruit": "Leer meer over hoe we onze mobiele website bouwen op https://www.mediawiki.org/wiki/Extension:MobileFrontend",
 	"prefs-mobile": "Mobiele instellingen"

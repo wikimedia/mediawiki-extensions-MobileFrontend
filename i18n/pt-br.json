@@ -266,8 +266,6 @@
 	"mobile-frontend-mobile-option-MFLazyLoadImages": "Imagens carregadas de modo ocioso",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "Parágrafo principal",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox-description": "O texto sempre será mostrado acima das caixas informativas, melhorando o desempenho e a legibilidade.",
-	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption": "Expandir todas as seções por padrão",
-	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption-description": "Desativa a ocultação da seção no site para dispositivos móveis.",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Tamanho da fonte",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Controle o tamanho da fonte da sua experiência de leitura.",
 	"mobile-frontend-mobile-option-amc": "Contribuições móveis avançadas",

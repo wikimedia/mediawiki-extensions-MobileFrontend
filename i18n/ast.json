@@ -238,8 +238,6 @@
 	"mobile-frontend-mobile-option-MFLazyLoadImages": "Cargar les imaxes sólo si se pide",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "Párrafu d'entrada",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox-description": "El testu apaecerá siempre arriba de los infoboxes, ameyorando'l rindimientu y lleibilidá.",
-	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption": "Espander toles seiciones de mou predetermináu",
-	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption-description": "Desactivar el plegáu de les seiciones na web pa móviles.",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Tamañu de lletra",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Controla'l tamañu del testu pa la to esperiencia de llectura.",
 	"mobile-frontend-beta-only": "Carauterística disponible solo en mou beta",

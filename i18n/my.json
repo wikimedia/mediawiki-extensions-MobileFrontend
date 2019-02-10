@@ -195,7 +195,6 @@
 	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions-description": "ခေါင်းစဉ်အောက်တွင် ဖော်ပြချက်တိုဖြင့် စာမျက်နှာ၏အကြောင်းအရာကို လေ့လာရန်",
 	"mobile-frontend-send-feedback": "အကြံပြုချက် ပို့ရန်",
 	"mobile-frontend-mobile-option-MFLazyLoadImages-description": "လိုအပ်ချိန်မှသာ ရုပ်ပုံများကို ဝန်ဆွဲတင်ရန်။",
-	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption": "နဂိုအားဖြင့် အပိုင်းအားလုံးကို ချဲ့ကားရန်",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "စာလုံး အရွယ်အစား",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "သင့်စာဖတ်အတွေ့အကြုံ၏ စာသားအရွယ်အစားကို ထိန်းချုပ်ရန်။",
 	"mobile-frontend-console-recruit": "ကျွန်ုပ်တို့၏ မိုလ်ဘိုင်းဆိုဒ်ကို ဘယ်လိုတည်ဆောက်သလဲ ပိုမိုလေ့လာပါ  @ https://www.mediawiki.org/wiki/Extension:MobileFrontend",

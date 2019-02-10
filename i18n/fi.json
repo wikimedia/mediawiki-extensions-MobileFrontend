@@ -241,7 +241,6 @@
 	"mobile-frontend-notifications-filter-title": "Suodata ilmoituksia",
 	"mobile-frontend-send-feedback": "Lähetä palautetta",
 	"mobile-frontend-mobile-option-MFLazyLoadImages-description": "Lataa kuvat vain tarvittaessa.",
-	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption": "Laajenna kaikki osiot oletuksena",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Fonttikoko",
 	"mobile-frontend-console-recruit": "Lisätietoja siitä, miten rakensimme mobiilisivustomme @ https://www.mediawiki.org/wiki/Extension:MobileFrontend"
 }

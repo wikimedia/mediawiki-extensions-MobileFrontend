@@ -252,8 +252,6 @@
 	"mobile-frontend-mobile-option-MFLazyLoadImages": "Одложено учитавање слика",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "Уводни пасус",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox-description": "Текст ће се увек приказати изнад оквира са информацијама, побољшавајући перформансе и читљивост.",
-	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption": "Подраумевано проширавање свих одељака",
-	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption-description": "Онемогућавање скупљања одељака на мобилној верзији сајта.",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Величина фонта",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Контрола величине фонта за искуство читања.",
 	"mobile-frontend-mobile-option-amc": "Напредни мобилни доприноси",

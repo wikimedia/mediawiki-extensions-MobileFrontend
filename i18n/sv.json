@@ -256,8 +256,6 @@
 	"mobile-frontend-mobile-option-MFLazyLoadImages": "Läs in bilder långsamt",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "Inledande paragraf",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox-description": "Text kommer alltid att visas ovanför inforutor, vilket förbättrar prestanda och läsbarhet.",
-	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption": "Expandera alla avsnitt som standard",
-	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption-description": "Inaktivera att avsnitt stängs i mobil vy.",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Textstorlek",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Kontrollera textstorleken för din läsupplevelse.",
 	"mobile-frontend-mobile-option-amc": "Avancerade mobilbidrag",

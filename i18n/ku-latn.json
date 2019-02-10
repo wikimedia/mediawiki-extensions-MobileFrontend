@@ -5,7 +5,8 @@
 			"Ghybu",
 			"Gomada",
 			"Bikarhêner",
-			"Cûndûllah el-Kurdî"
+			"Cûndûllah el-Kurdî",
+			"Mirzali"
 		]
 	},
 	"mobile-frontend-categories-heading": "<strong>Kategorî</strong>",
@@ -93,5 +94,6 @@
 	"tag-mobile_web_edit": "Guherandina malpera mobîl",
 	"mobile-frontend-loading-message": "Tê barkirin...",
 	"mobile-frontend-panel-ok": "Baş e",
-	"mobile-frontend-panel-cancel": "Na spas"
+	"mobile-frontend-panel-cancel": "Na spas",
+	"mobile-frontend-mobile-option-amc-learn-more": "Zêdetir hîn bibe"
 }

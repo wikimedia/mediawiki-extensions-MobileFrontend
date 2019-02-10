@@ -271,8 +271,6 @@
 	"mobile-frontend-mobile-option-MFLazyLoadImages": "تحميل بطيء للصور",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "المقطع الرئيسي",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox-description": "النص سيعرض دوما فوق صناديق المعلومات، مما يحسن الأداة وقابلية القراءة.",
-	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption": "توسيع كل الأقسام افتراضيا",
-	"mobile-frontend-mobile-option-MFExpandAllSectionsUserOption-description": "تعطيل تصغير الأقسام على ويب المحمول.",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "حجم الخط",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "التحكم بحجم الخط لتجربتك في القراءة.",
 	"mobile-frontend-mobile-option-amc": "المساهمات المتقدمة للجوال",
