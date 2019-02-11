@@ -100,14 +100,15 @@ module.exports = function () {
 
 			timeStamp = timeStamp || this.timeStamp; // I8e82acc12 back-compat
 
+			data[actionPrefix + '_type'] = data.type;
+			data[actionPrefix + '_mechanism'] = data.mechanism;
 			if ( data.action !== 'init' ) {
 				duration = Math.round( computeDuration( data.action, data, timeStamp ) );
 				data[actionPrefix + '_timing'] = duration;
 			}
 
-			data[actionPrefix + '_type'] = data.type;
+			// Remove renamed properties
 			delete data.type;
-			data[actionPrefix + '_mechanism'] = data.mechanism;
 			delete data.mechanism;
 			data[actionPrefix + '_message'] = data.message;
 			delete data.message;
