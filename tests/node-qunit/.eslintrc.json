@@ -2,6 +2,7 @@
 	"extends": [
 		"wikimedia/server",
 		"wikimedia/qunit",
-		"../../.eslintrc.json"
+		"../../.eslintrc.json",
+		"../../src/.eslintrc.json"
 	]
 }
