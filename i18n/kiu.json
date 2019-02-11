@@ -1,4 +1,8 @@
 {
-	"@metadata": [],
-	"mobile-frontend-search-submit": "So"
+	"@metadata": {
+		"authors": [
+			"Mirzali"
+		]
+	},
+	"mobile-frontend-editor-cancel": "Bıtexelne"
 }

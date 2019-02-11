@@ -32,7 +32,8 @@
 			"Mar(c)",
 			"Effeietsanders",
 			"Elroy",
-			"Optilete"
+			"Optilete",
+			"Xbaked potatox"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Of een gebruiker wel of niet via de mobiele interface bewerkt",
@@ -133,7 +134,7 @@
 	"mobile-frontend-languages-header": "Talen",
 	"mobile-frontend-languages-header-page": "$1 - andere talen",
 	"mobile-frontend-languages-nonexistent-title": "De pagina \"$1\" bestaat niet.",
-	"mobile-frontend-languages-text": "$1 is beschikbaar in $2 {{PLURAL:$2|taal|talen}}.",
+	"mobile-frontend-languages-text": "$1 is beschikbaar in $2 andere {{PLURAL:$2|taal|talen}}.",
 	"mobile-frontend-languages-variant-header": "Varianten van {{#language:{{CONTENTLANG}}}}",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Taalsuggesties",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Andere talen",
