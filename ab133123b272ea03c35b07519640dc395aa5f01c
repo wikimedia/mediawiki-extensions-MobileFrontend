@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5c675eec_3192aa2a",
+        "filename": "package.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-11T19:15:18Z",
+      "side": 1,
+      "message": "Good eye.",
+      "revId": "ab133123b272ea03c35b07519640dc395aa5f01c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
