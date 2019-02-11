@@ -114,6 +114,9 @@
 	}
 
 	input, textarea {
+		// Without declaring a minimum font-size of 16px, iOS will autozoom in on textareas when clicked (T215619)
+		// https://blog.osmosys.asia/2017/01/05/prevent-ios-from-zooming-in-on-input-fields/
+		font-size: 16px;
 		padding: 0.5em;
 	}
 
