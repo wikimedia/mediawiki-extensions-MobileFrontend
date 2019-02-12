@@ -16,6 +16,24 @@
       "revId": "dc390f239108dd7f97da0c33a3fb2991369db724",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "395bac94_e526f8a5",
+        "filename": "src/mobile.startup/Overlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2019-02-12T02:42:18Z",
+      "side": 1,
+      "message": "I found a better link instead.",
+      "parentUuid": "1f53bc19_525de2e5",
+      "revId": "dc390f239108dd7f97da0c33a3fb2991369db724",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
