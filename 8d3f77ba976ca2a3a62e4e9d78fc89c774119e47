@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f571245b_f50bc5df",
+        "filename": "src/mobile.editor.overlay/EditorOverlayBase.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 432,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2019-02-12T22:09:02Z",
+      "side": 1,
+      "message": "Wrong `this`. Use `self`.",
+      "range": {
+        "startLine": 432,
+        "startChar": 6,
+        "endLine": 432,
+        "endChar": 10
+      },
+      "revId": "8d3f77ba976ca2a3a62e4e9d78fc89c774119e47",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6b3a25db_5d7e3a64",
+        "filename": "src/mobile.editor.overlay/EditorOverlayBase.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 443,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2019-02-12T22:09:02Z",
+      "side": 1,
+      "message": "Looks like this case is also triggered when saving changes (in both VE and WTE). Probably should not log an abort then.\n\nMaybe set some property near line 230 and check it here? (I didn\u0027t test that)",
+      "revId": "8d3f77ba976ca2a3a62e4e9d78fc89c774119e47",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
