@@ -34,6 +34,24 @@
       "revId": "5976635d793055bf31ddaf23c1d5744efe5adc89",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d66dc2de_ef6540dc",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-12T23:10:21Z",
+      "side": 1,
+      "message": "https://gerrit.wikimedia.org/r/469537 demonstrates that we can commit things without updating the dist file.\n\nWe only need to update the dist file if we\u0027re changing extension.json in some way or the PHP HTML is no longer compatible with the JS.",
+      "parentUuid": "b9f71c11_a695ba38",
+      "revId": "5976635d793055bf31ddaf23c1d5744efe5adc89",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
