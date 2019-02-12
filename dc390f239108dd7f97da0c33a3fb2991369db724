@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1f53bc19_525de2e5",
+        "filename": "src/mobile.startup/Overlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-12T00:08:33Z",
+      "side": 1,
+      "message": "I worry this is subject to change given its the web and its a repo where the README is subject to change. Could we copy paste some of the information there? This code would be very cryptic without an accessible explanation.",
+      "revId": "dc390f239108dd7f97da0c33a3fb2991369db724",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
