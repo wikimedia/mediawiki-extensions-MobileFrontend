@@ -1,0 +1,136 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d7c91994_f6fc93f4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-12T20:15:24Z",
+      "side": 1,
+      "message": "However, this patch still seems to ship the Hogan.js compiler to clients. I couldn\u0027t find any documentation for mustache-loader that says a compiled template no longer actually needs Hogan.js so I\u0027m unsure what could be ultimately achieved in this approach. Here\u0027s an example of the compiled output for the Icon.hogan template:\n\nvar H \u003d require(\"hogan.js\"); // !!!\nmodule.exports \u003d function() {\n    var T \u003d new H.Template({\n        code: function(c, p, i) {\n            var t \u003d this;\n            t.b(i \u003d i || \"\");\n            t.b(\"\u003c\");\n            t.b(t.v(t.f(\"tagName\", c, p, 0)));\n            t.b(\" class\u003d\\\"\");\n            t.b(t.v(t.f(\"base\", c, p, 0)));\n            t.b(\" \");\n            t.b(t.v(t.f(\"base\", c, p, 0)));\n            t.b(\"-\");\n            t.b(t.v(t.f(\"glyphPrefix\", c, p, 0)));\n            t.b(\"-\");\n            t.b(t.v(t.f(\"name\", c, p, 0)));\n            t.b(\" \");\n            t.b(t.v(t.f(\"modifier\", c, p, 0)));\n            t.b(\" \");\n            if (t.s(t.f(\"isSmall\", c, p, 1), c, p, 0, 88, 104, \"{{ }}\")) {\n                t.rs(c, p, function(c, p, t) {\n                    t.b(\"mw-ui-icon-small\");\n                });\n                c.pop();\n            }\n            t.b(\" \");\n            if (t.s(t.f(\"_rotationClass\", c, p, 1), c, p, 0, 136, 154, \"{{ }}\")) {\n                t.rs(c, p, function(c, p, t) {\n                    t.b(t.v(t.f(\"_rotationClass\", c, p, 0)));\n                });\n                c.pop();\n            }\n            t.b(\" \");\n            t.b(t.v(t.f(\"additionalClassNames\", c, p, 0)));\n            t.b(\"\\\"\");\n            t.b(\"\\n\" + i);\n            t.b(\"\t\");\n            if (t.s(t.f(\"id\", c, p, 1), c, p, 0, 208, 219, \"{{ }}\")) {\n                t.rs(c, p, function(c, p, t) {\n                    t.b(\"id\u003d\\\"\");\n                    t.b(t.v(t.f(\"id\", c, p, 0)));\n                    t.b(\"\\\"\");\n                });\n                c.pop();\n            }\n            t.b(\"\\n\" + i);\n            t.b(\"\t\");\n            if (t.s(t.f(\"href\", c, p, 1), c, p, 0, 237, 252, \"{{ }}\")) {\n                t.rs(c, p, function(c, p, t) {\n                    t.b(\"href\u003d\\\"\");\n                    t.b(t.v(t.f(\"href\", c, p, 0)));\n                    t.b(\"\\\"\");\n                });\n                c.pop();\n            }\n            t.b(\"\\n\" + i);\n            t.b(\"\t\");\n            if (t.s(t.f(\"title\", c, p, 1), c, p, 0, 273, 290, \"{{ }}\")) {\n                t.rs(c, p, function(c, p, t) {\n                    t.b(\"title\u003d\\\"\");\n                    t.b(t.v(t.f(\"title\", c, p, 0)));\n                    t.b(\"\\\"\");\n                });\n                c.pop();\n            }\n            t.b(\"\u003e\");\n            t.b(t.v(t.f(\"label\", c, p, 0)));\n            t.b(\"\u003c/\");\n            t.b(t.v(t.f(\"tagName\", c, p, 0)));\n            t.b(\"\u003e\");\n            t.b(\"\\n\");\n            return t.fl();\n        },\n        partials: {},\n        subs: {}\n    });\n    return T;\n}();\n\nWe don\u0027t get a few createElement() calls, just a Hogan.js intermediate. Pre-compilation probably reduces computation at the expense of bandwidth but rendering itself still appears to require Hogan.js itself. How would we ever get away from it?",
+      "range": {
+        "startLine": 21,
+        "startChar": 4,
+        "endLine": 21,
+        "endChar": 81
+      },
+      "revId": "c9eca160b0fcb350ada55b2147ba0ac9d07498da",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a506ea59_201f80c0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-12T20:15:24Z",
+      "side": 1,
+      "message": "The bundle sizes, especially mobile.common.js are more pessimistic:\n\n PASS  resources/dist/mobile.startup.runtime.js: 760B \u003c maxSize 819B (gzip) \n\n PASS  resources/dist/mediawiki.template.hogan.js: 3.47KB \u003c maxSize 3.5KB (gzip) \n\n FAIL  resources/dist/mobile.common.js: 17.57KB \u003e maxSize 12.8KB (gzip) \n\n FAIL  resources/dist/mobile.editor.overlay.js: 8.73KB \u003e maxSize 7.3KB (gzip) \n\n PASS  resources/dist/mobile.editor.ve.js: 1.75KB \u003c maxSize 1.8KB (gzip) \n\n FAIL  resources/dist/mobile.init.js: 3.17KB \u003e maxSize 3KB (gzip) \n\n FAIL  resources/dist/mobile.startup.js: 5.21KB \u003e maxSize 4.4KB (gzip) \n\n FAIL  resources/dist/mobile.languages.structured.js: 2.11KB \u003e maxSize 1.7KB (gzip) \n\n PASS  resources/dist/mobile.notifications.overlay.js: 1.38KB \u003c maxSize 1.4KB (gzip) \n\n FAIL  resources/dist/mobile.mediaViewer.js: 2.66KB \u003e maxSize 2.3KB (gzip) \n\n PASS  resources/dist/mobile.special.mobilediff.scripts.js: 744B \u003c maxSize 819B (gzip) \n\n PASS  resources/dist/mobile.special.mobileoptions.scripts.js: 958B \u003c maxSize 1KB (gzip) \n\n PASS  resources/dist/mobile.special.userlogin.scripts.js: 219B \u003c maxSize 307B (gzip) \n\n FAIL  resources/dist/mobile.special.uploads.scripts.js: 1.82KB \u003e maxSize 1.7KB (gzip) \n\n PASS  resources/dist/mobile.special.watchlist.scripts.js: 1.28KB \u003c maxSize 1.3KB (gzip) \n\n FAIL  resources/dist/mobile.talk.overlays.js: 3.26KB \u003e maxSize 2.6KB (gzip) \n\n FAIL  resources/dist/mobile.categories.overlays.js: 2.83KB \u003e maxSize 2.4KB (gzip)",
+      "range": {
+        "startLine": 23,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 13
+      },
+      "revId": "c9eca160b0fcb350ada55b2147ba0ac9d07498da",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e65d3710_03e843e1",
+        "filename": "package.json",
+        "patchSetId": 6
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-12T20:15:24Z",
+      "side": 1,
+      "message": "Please pin to patch!",
+      "range": {
+        "startLine": 43,
+        "startChar": 24,
+        "endLine": 43,
+        "endChar": 25
+      },
+      "revId": "c9eca160b0fcb350ada55b2147ba0ac9d07498da",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0696fca7_5cbc383b",
+        "filename": "webpack.config.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-12T20:15:24Z",
+      "side": 1,
+      "message": "This would be a helpful spot to describe the function performed here. For example, \"pre-compiles Hogan HTML templates to JavaScript. This allows the client to use templates without shipping Hogan.js.\"",
+      "range": {
+        "startLine": 116,
+        "startChar": 0,
+        "endLine": 116,
+        "endChar": 20
+      },
+      "revId": "c9eca160b0fcb350ada55b2147ba0ac9d07498da",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "feb3d586_b10e8d52",
+        "filename": "webpack.config.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-12T20:15:24Z",
+      "side": 1,
+      "message": "Why is minification disabled but \"tiny\" is enabled? Maybe something to do with Uglify handling minification and tiny affecting other related but distinct optimizations?",
+      "range": {
+        "startLine": 121,
+        "startChar": 5,
+        "endLine": 121,
+        "endChar": 19
+      },
+      "revId": "c9eca160b0fcb350ada55b2147ba0ac9d07498da",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "267307ff_21134fdf",
+        "filename": "webpack.config.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 196,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-12T20:15:24Z",
+      "side": 1,
+      "message": "It could be useful to separate the templates into their own chunk (or chunks). Something like:\n\n        templates: {\n          name: \u0027mobile.templates\u0027,\n          // Minimum num of chunks module must share before excising into common\n          // chunk\n          minChunks: 1,\n          test( module ) {\n            return /\\.hogan$/.test( module.resource );\n          },\n          // Do no reuse existing chunks when splitting (i.e. we do not want\n          // webpack excising startup modules into an async chunk)\n          // https://github.com/webpack/webpack.js.org/issues/2122#issuecomment-388609306\n          reuseExistingChunk: false,\n          // ignore webpack\u0027s default minSize option (and other splitChunks\n          // defaults) and always create chunks based on criteria specified for\n          // this cacheGroup\n          enforce: true,\n          chunks: \u0027all\u0027\n        }",
+      "revId": "c9eca160b0fcb350ada55b2147ba0ac9d07498da",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
