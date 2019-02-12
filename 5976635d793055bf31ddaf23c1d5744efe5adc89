@@ -16,6 +16,24 @@
       "revId": "5976635d793055bf31ddaf23c1d5744efe5adc89",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b9f71c11_a695ba38",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-12T23:01:40Z",
+      "side": 1,
+      "message": "Hm, I don\u0027t remember either.\n\nI am happy to keep committing all my things. Feel free to abandon this patch unless you or Growth / Editors want this.",
+      "parentUuid": "0ff8e735_7534748c",
+      "revId": "5976635d793055bf31ddaf23c1d5744efe5adc89",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
