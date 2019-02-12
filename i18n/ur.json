@@ -163,7 +163,7 @@
 	"mobile-frontend-opt-in-explain": "{{SITENAME}} بیٹا کی مدد سے آپ آزمائشی خصوصیات اور سہولتیں استعمال کر سکتے اور ان کے متعلق ہمیں اپنے نتائج و تاثرات سے آگاہ کر سکتے ہیں",
 	"mobile-frontend-overlay-close": "بند کریں",
 	"mobile-frontend-photo-upload-invalid-user": "صارف کھاتہ بنام \"$1\" مندرج نہیں ہے۔",
-	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> اپلوڈ|<span>$1</span> اپلوڈز}}",
+	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> اپلوڈ|<span>$1</span> اپلوڈیں}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "پانچ سو سے زائد فائلیں",
 	"mobile-frontend-privacy-link-text": "نجی نوعیت",
 	"mobile-frontend-references-citation": "حوالہ",

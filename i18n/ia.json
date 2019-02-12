@@ -65,7 +65,7 @@
 	"mobile-frontend-languages-404-title": "Error de linguas",
 	"mobile-frontend-languages-header": "Linguas",
 	"mobile-frontend-languages-nonexistent-title": "Le pagina \"$1\" non existe.",
-	"mobile-frontend-languages-text": "$1 es disponibile in $2 {{PLURAL:$2|lingua|linguas}}.",
+	"mobile-frontend-languages-text": "$1 es disponibile in $2 altere {{PLURAL:$2|lingua|linguas}}.",
 	"mobile-frontend-languages-variant-header": "Variantes de {{#language:{{CONTENTLANG}}}}",
 	"mobile-frontend-last-modified-date": "Ultime modification le $1 a $2",
 	"mobile-frontend-last-modified-with-user-days": "[$4 Ultime {{GENDER:$1|modification}} {{PLURAL:$3|$3 die|$3 dies}} retro] per {{PLURAL:$5|[$6 $2]|0=un usator anonyme}}",
