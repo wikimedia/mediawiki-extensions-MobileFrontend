@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "140f6c69_d16ad83d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-13T01:24:13Z",
+      "side": 1,
+      "message": "https://github.com/developit/vhtml transpiles to zero code - so I was hoping we\u0027d get something similar with Hogan but that doesn\u0027t seem to be the case.\n\nRight now I\u0027m not seeing much use for transpiling in this fashion.\n\nOur main issue right now seems to be having templates handled by RL but JS handled by webpack.\n\nInlining source code a la https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/490264/2/src/mobile.startup/TopicTitleList.js seems like the most attractive option to me for solving this problem.\n\nIt also means we can change the template language at a later date if necessary..",
+      "parentUuid": "d7c91994_f6fc93f4",
+      "range": {
+        "startLine": 21,
+        "startChar": 4,
+        "endLine": 21,
+        "endChar": 81
+      },
+      "revId": "c9eca160b0fcb350ada55b2147ba0ac9d07498da",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a506ea59_201f80c0",
         "filename": "/COMMIT_MSG",
         "patchSetId": 6
