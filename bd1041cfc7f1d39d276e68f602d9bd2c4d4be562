@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "63505289_a7b8b3fa",
+        "filename": "src/mobile.editor.overlay/EditorOverlayBase.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-13T23:18:17Z",
+      "side": 1,
+      "message": "Could this be done in the constructor instead?",
+      "revId": "bd1041cfc7f1d39d276e68f602d9bd2c4d4be562",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
