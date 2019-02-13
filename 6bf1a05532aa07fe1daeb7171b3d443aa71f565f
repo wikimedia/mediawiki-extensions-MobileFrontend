@@ -22,6 +22,30 @@
       "revId": "6bf1a05532aa07fe1daeb7171b3d443aa71f565f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6fe8c2c5_3d43fd6f",
+        "filename": "src/mobile.startup/PromisedView.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-13T20:33:52Z",
+      "side": 1,
+      "message": "Why would other View\u0027s want to replace themselves?",
+      "parentUuid": "3a9e9e92_8c09ab67",
+      "range": {
+        "startLine": 17,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 25
+      },
+      "revId": "6bf1a05532aa07fe1daeb7171b3d443aa71f565f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
