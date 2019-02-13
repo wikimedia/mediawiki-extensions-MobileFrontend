@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "78e9bcbf_3cf7cc42",
+        "filename": "includes/specials/SpecialMobileLanguages.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 181,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-13T23:41:24Z",
+      "side": 1,
+      "message": "This change doesn\u0027t look right to me and is causing the Jenkins error. Did you forget to commit some additional changes?",
+      "revId": "c5075cd1258d4a3b36bb3460dc85bf65a23ad2d7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "32711cc7_2e0856b9",
+        "filename": "resources/mobile.languages.structured/LanguageOverlay.less",
+        "patchSetId": 6
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-13T23:41:24Z",
+      "side": 1,
+      "message": "I think to address Alex\u0027s changes [1] it would be better to remove all the span styles here  and change the template itself\n\ne.g. the line \u003ch3 class\u003d\"list-header\"\u003e{{allLanguagesHeader}}\u003cspan\u003e{{allLanguagesCount}}\u003c/span\u003e\u003c/h3\u003e in\nresources/mobile.languages.structured/LanguageOverlay.hogan\ncould be rewritten as \n\u003ch3 class\u003d\"list-header\"\u003e{{allLanguagesHeader} ({{allLanguagesCount}})\u003c/h3\u003e\n[1] inhttps://phabricator.wikimedia.org/T191562#4117933",
+      "revId": "c5075cd1258d4a3b36bb3460dc85bf65a23ad2d7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
