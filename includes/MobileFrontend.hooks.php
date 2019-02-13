@@ -313,41 +313,6 @@ class MobileFrontendHooks {
 	}
 
 	/**
-	 * ResourceLoaderTestModules hook handler
-	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ResourceLoaderTestModules
-	 *
-	 * @param array &$testModules array of javascript testing modules,
-	 *                            keyed by framework (e.g. 'qunit').
-	 * @param ResourceLoader &$resourceLoader
-	 * @return bool
-	 */
-	public static function onResourceLoaderTestModules( array &$testModules,
-		ResourceLoader &$resourceLoader
-	) {
-		// Need to explicitly list any dependencies which have templates for
-		// compatibility with Special:JavaScript/qunit/plain mode
-		// When modules no longer have templates, these can safely be removed.
-		$testModule = [
-			'dependencies' => [
-				'mobile.startup',
-				'mobile.languages.structured',
-				'mobile.mediaViewer',
-				'mobile.special.nearby.scripts',
-				'mobile.talk.overlays',
-			],
-			'localBasePath' => dirname( __DIR__ ),
-			'remoteExtPath' => 'MobileFrontend',
-			'targets' => [ 'mobile', 'desktop' ],
-			'scripts' => 'resources/dist/tests.mobilefrontend.js',
-		];
-
-		// Expose templates module
-		$testModules['qunit']["tests.mobilefrontend"] = $testModule;
-
-		return true;
-	}
-
-	/**
 	 * GetCacheVaryCookies hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/GetCacheVaryCookies
 	 *

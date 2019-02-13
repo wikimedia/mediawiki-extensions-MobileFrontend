@@ -18,7 +18,7 @@
 	"license-name": "GPL-2.0-or-later",
 	"type": "other",
 	"requires": {
-		"MediaWiki": ">= 1.32.0"
+		"MediaWiki": ">= 1.33.0"
 	},
 	"ConfigRegistry": {
 		"mobilefrontend": "GlobalVarConfig::newInstance"
@@ -759,6 +759,18 @@
 		"localBasePath": "",
 		"remoteExtPath": "MobileFrontend"
 	},
+	"QUnitTestModule": {
+		"localBasePath": "",
+		"remoteExtPath": "MobileFrontend",
+		"scripts": "resources/dist/tests.mobilefrontend.js",
+		"dependencies": [
+			"mobile.startup",
+			"mobile.languages.structured",
+			"mobile.mediaViewer",
+			"mobile.special.nearby.scripts",
+			"mobile.talk.overlays"
+		]
+	},
 	"EventLoggingSchemas": {
 		"MobileWebMainMenuClickTracking": 18203509,
 		"MobileWebSearch": 12054448
@@ -797,9 +809,6 @@
 		],
 		"DiffViewHeader": [
 			"MobileFrontendHooks::onDiffViewHeader"
-		],
-		"ResourceLoaderTestModules": [
-			"MobileFrontendHooks::onResourceLoaderTestModules"
 		],
 		"GetCacheVaryCookies": [
 			"MobileFrontendHooks::onGetCacheVaryCookies"
