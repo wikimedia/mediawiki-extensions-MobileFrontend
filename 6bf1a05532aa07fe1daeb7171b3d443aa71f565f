@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3a9e9e92_8c09ab67",
+        "filename": "src/mobile.startup/PromisedView.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-02-13T19:23:16Z",
+      "side": 1,
+      "message": "Wondering if it would be wise to move this logic into view so we could just call view.replaceWith and not have to worry about manually setting the reference - View would be in charge of updating whatever references it needed to",
+      "range": {
+        "startLine": 17,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 25
+      },
+      "revId": "6bf1a05532aa07fe1daeb7171b3d443aa71f565f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
