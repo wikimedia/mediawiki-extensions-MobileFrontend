@@ -46,6 +46,30 @@
       "revId": "6bf1a05532aa07fe1daeb7171b3d443aa71f565f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e8f701f8_d905cb0f",
+        "filename": "src/mobile.startup/PromisedView.js",
+        "patchSetId": 16
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-02-13T22:44:00Z",
+      "side": 1,
+      "message": "Yeah maybe there isn\u0027t a use case for it outside of this :)",
+      "parentUuid": "6fe8c2c5_3d43fd6f",
+      "range": {
+        "startLine": 17,
+        "startChar": 0,
+        "endLine": 19,
+        "endChar": 25
+      },
+      "revId": "6bf1a05532aa07fe1daeb7171b3d443aa71f565f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
