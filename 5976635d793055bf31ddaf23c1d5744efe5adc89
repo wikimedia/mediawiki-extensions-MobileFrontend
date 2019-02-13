@@ -52,6 +52,24 @@
       "revId": "5976635d793055bf31ddaf23c1d5744efe5adc89",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7b72c9f3_f310ace9",
+        "filename": "dev-scripts/check_bundle.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-13T20:04:23Z",
+      "side": 1,
+      "message": "You have to remember to checkout resources/dist before committing. A dirty dist causes a failure which can surprise people.",
+      "parentUuid": "d66dc2de_ef6540dc",
+      "revId": "5976635d793055bf31ddaf23c1d5744efe5adc89",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
