@@ -46,6 +46,30 @@
       "revId": "eda1d22199078f4c306b9606e86846f1b3252ac1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "650fc295_c635174b",
+        "filename": "src/mobile.editor.overlay/BlockMessage.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 4911
+      },
+      "writtenOn": "2019-02-14T01:26:49Z",
+      "side": 1,
+      "message": "It also looks like that page can accept the target as the subpage like:\nhttps://en.wikipedia.org/wiki/Special:BlockList/Mallorymott_14",
+      "parentUuid": "975fb6f5_0e227cf9",
+      "range": {
+        "startLine": 38,
+        "startChar": 49,
+        "endLine": 38,
+        "endChar": 53
+      },
+      "revId": "eda1d22199078f4c306b9606e86846f1b3252ac1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
