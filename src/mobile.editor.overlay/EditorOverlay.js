@@ -439,7 +439,8 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 			},
 			expiry: null,
 			duration: null,
-			reason: ''
+			reason: '',
+			blockId: data.blockinfo.blockid
 		};
 
 		expiry = data.blockinfo.blockexpiry;

@@ -34,6 +34,12 @@ mfExtend( BlockMessage, Drawer, {
 			progressive: true,
 			additionalClassNames: 'cancel'
 		} ).options,
+		createDetailsAnchorHref: function () {
+			return mw.util.getUrl( 'Special:BlockList', { wpTarget: '#' + this.blockId } );
+		},
+		createDetailsAnchorLabel: function () {
+			return mw.msg( 'mobile-frontend-editor-blocked-drawer-help' );
+		},
 		createTitle: function () {
 			return this.partial ? mw.msg( 'mobile-frontend-editor-blocked-drawer-title-partial' ) : mw.msg( 'mobile-frontend-editor-blocked-drawer-title' );
 		},

@@ -25,10 +25,11 @@
         </div>
       {{/expiry}}
     </div>
-    {{#okButton}}
-      <div class="block-message-item block-message-buttons">
+    <div class="block-message-item block-message-buttons">
+      {{#okButton}}
         {{>button}}
-      </div>
-    {{/okButton}}
+      {{/okButton}}
+      <a href="{{ createDetailsAnchorHref }}">{{ createDetailsAnchorLabel }}</a>
+    </div>
   </div>
 </div>
