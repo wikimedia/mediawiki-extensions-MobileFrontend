@@ -33,6 +33,24 @@
       "revId": "bd1041cfc7f1d39d276e68f602d9bd2c4d4be562",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c23c93da_0050cfc3",
+        "filename": "src/mobile.editor.overlay/EditorOverlayBase.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 2915
+      },
+      "writtenOn": "2019-02-14T15:22:03Z",
+      "side": 1,
+      "message": "The reason I didn\u0027t do it there is that I wasn\u0027t certain of whether there were ways the same overlay might be reused after a save has happened.",
+      "parentUuid": "63505289_a7b8b3fa",
+      "revId": "bd1041cfc7f1d39d276e68f602d9bd2c4d4be562",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
