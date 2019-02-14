@@ -90,6 +90,27 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 			mw.config.get( 'wgPageContentModel' ) === 'wikitext';
 	},
 	/**
+	 * @inheritdoc
+	 * @memberof EditorOverlay
+	 * @instance
+	 */
+	isActiveWithKeyboard: function () {
+		return this.$( '.wikitext-editor' ).is( ':focus' );
+	},
+	/**
+	 * @inheritdoc
+	 * @memberof EditorOverlay
+	 * @instance
+	 */
+	forceRepaintCursor: function () {
+		var
+			focussed = document.activeElement,
+			selStart = focussed.selectionStart;
+		// Change the selection, then set it back
+		focussed.selectionStart = 0;
+		focussed.selectionStart = selStart;
+	},
+	/**
 	 * Wikitext Editor input handler
 	 * @memberof EditorOverlay
 	 * @instance

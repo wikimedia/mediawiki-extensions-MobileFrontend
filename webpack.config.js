@@ -224,7 +224,7 @@ module.exports = ( env, argv ) => ( {
 		// Note: entrypoint size implicitly includes the mobile.startup.runtime and mobile.common
 		// chunks.
 		maxAssetSize: 48.0 * 1024,
-		maxEntrypointSize: 75.7 * 1024,
+		maxEntrypointSize: 80 * 1024,
 		// The default filter excludes map files but we rename ours. Also, any modules prefixed with
 		// "tests." are excluded from performance checks as they are not shipped to end users.
 		assetFilter: ( filename ) => !filename.startsWith( 'tests.' ) &&

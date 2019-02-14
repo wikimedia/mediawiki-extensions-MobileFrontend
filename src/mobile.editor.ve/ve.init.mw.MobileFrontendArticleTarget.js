@@ -1,5 +1,3 @@
-/* global $ */
-
 /*!
  * VisualEditor MediaWiki Initialization MobileFrontendArticleTarget class.
  *
@@ -30,10 +28,6 @@ function MobileFrontendArticleTarget( overlay, config ) {
 	// Parent constructor
 	MobileFrontendArticleTarget.super.call( this, config );
 
-	// Events
-	this.onWindowScrollDebounced = ve.debounce( this.onWindowScroll.bind( this ), 100 );
-	$( this.getElementWindow() ).on( 'scroll', this.onWindowScrollDebounced );
-
 	// Initialization
 	this.$element.addClass( 've-init-mw-mobileFrontendArticleTarget' );
 }
@@ -57,7 +51,6 @@ MobileFrontendArticleTarget.prototype.destroy = function () {
 	// Parent method
 	MobileFrontendArticleTarget.super.prototype.destroy.call( this );
 
-	$( this.getElementWindow() ).off( 'scroll', this.onWindowScrollDebounced );
 	this.$overlay.css( 'padding-top', '' );
 };
 
@@ -93,39 +86,6 @@ MobileFrontendArticleTarget.prototype.onContainerScroll = function () {
 };
 
 /**
- * Handle window scroll events
- * @memberof MobileFrontendArticleTarget
- * @instance
- */
-MobileFrontendArticleTarget.prototype.onWindowScroll = function () {
-	var $window, windowTop, contentTop, surfaceView,
-		surface = this.surface,
-		target = this;
-
-	if ( !surface ) {
-		// Editor has not loaded yet
-		return;
-	}
-
-	// iOS applies a scroll offset to the window when opening the keyboard to move the cursor into
-	// view. On the editing surface, this is not necessary (we set large padding-bottom so that the
-	// keyboard covers nothing); apply this offset to the surface instead. But in other cases allow
-	// it to happen, otherwise the user can't scroll to see whatever is underneath the keyboard.
-	// (T210559, T215604, T212967)
-	surfaceView = surface.getView();
-	if ( this.useScrollContainer && surfaceView.isFocused() && !surfaceView.deactivated ) {
-		$window = $( target.getElementWindow() );
-		windowTop = $window.scrollTop();
-		contentTop = target.$scrollContainer.scrollTop();
-
-		$window.scrollTop( 0 );
-		surface.scrollTo( contentTop + windowTop );
-		// Make sure we didn't overshoot the cursor
-		surface.scrollCursorIntoView( target.getSurface() );
-	}
-};
-
-/**
  * Handle surface scroll events
  * @memberof MobileFrontendArticleTarget
  * @instance
@@ -134,9 +94,9 @@ MobileFrontendArticleTarget.prototype.onSurfaceScroll = function () {
 	var nativeSelection, range;
 
 	if ( ve.init.platform.constructor.static.isIos() ) {
-		// iOS has another bug (!) where if you change the scroll offset of a
-		// contentEditable with a cursor visible it disappears, so remove and
-		// reapply the selection in that case.
+		// iOS has a bug where if you change the scroll offset of a
+		// contentEditable or textarea with a cursor visible, it disappears.
+		// This function works around it by removing and reapplying the selection.
 		nativeSelection = this.getSurface().getView().nativeSelection;
 		if ( nativeSelection.rangeCount && document.activeElement.contentEditable === 'true' ) {
 			range = nativeSelection.getRangeAt( 0 );
