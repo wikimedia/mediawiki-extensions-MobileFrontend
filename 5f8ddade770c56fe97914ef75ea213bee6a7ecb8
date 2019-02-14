@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7f79fb16_631ded16",
+        "filename": "src/mobile.editor.overlay/EditorOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 6097
+      },
+      "writtenOn": "2019-02-14T22:22:17Z",
+      "side": 1,
+      "message": "This feels like the wrong approach, and would become unmanageable if other extensions want to add overlays as well.",
+      "revId": "5f8ddade770c56fe97914ef75ea213bee6a7ecb8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "50f44261_14e6e4c4",
+        "filename": "src/mobile.editor.overlay/EditorOverlayBase.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 391,
+      "author": {
+        "id": 6097
+      },
+      "writtenOn": "2019-02-14T22:22:17Z",
+      "side": 1,
+      "message": "Wasn\u0027t sure if EditorOverlayBase is the right place to add this; similar to above, doesn\u0027t seem scalable if many other extensions want to add overlays.\n\nMaybe all of the code below should be in a cta.mobile.js file in GrowthExperiments, and that should access the OverlayManager to handle replacing?",
+      "revId": "5f8ddade770c56fe97914ef75ea213bee6a7ecb8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6e550514_54928ee9",
+        "filename": "src/mobile.editor.overlay/EditorOverlayBase.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 417,
+      "author": {
+        "id": 6097
+      },
+      "writtenOn": "2019-02-14T22:22:17Z",
+      "side": 1,
+      "message": "replacing the current editor with the help panel overlay works, but passing in the current editor overlay (and then switching back that when the help panel is closed) does not",
+      "revId": "5f8ddade770c56fe97914ef75ea213bee6a7ecb8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "40e6a80a_43b4cf11",
+        "filename": "src/mobile.editor.overlay/HelpPanelOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 6097
+      },
+      "writtenOn": "2019-02-14T22:22:17Z",
+      "side": 1,
+      "message": "Wasn\u0027t sure about this, but otherwise this.$content is null.",
+      "revId": "5f8ddade770c56fe97914ef75ea213bee6a7ecb8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
