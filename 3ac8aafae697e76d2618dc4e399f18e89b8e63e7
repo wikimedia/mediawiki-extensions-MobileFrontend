@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "87e6a7af_ac55f4f8",
+        "filename": "src/mobile.languages.structured/languageFactory.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-14T17:49:49Z",
+      "side": 1,
+      "message": "This function could actually be run synchronously now..\nWe could get rid of the loadingOverlay used in Minerva altogether....\nHow would the code change to support that?",
+      "revId": "3ac8aafae697e76d2618dc4e399f18e89b8e63e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
