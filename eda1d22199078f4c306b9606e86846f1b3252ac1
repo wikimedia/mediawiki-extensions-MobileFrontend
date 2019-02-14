@@ -22,6 +22,30 @@
       "revId": "eda1d22199078f4c306b9606e86846f1b3252ac1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "975fb6f5_0e227cf9",
+        "filename": "src/mobile.editor.overlay/BlockMessage.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 4911
+      },
+      "writtenOn": "2019-02-14T01:21:36Z",
+      "side": 1,
+      "message": "I looked in the SpecialBlockList and it looks like wpId is no where in there. I think it would be best to either use wpTarget or to update SpecialBlockList to support specifying the id.",
+      "parentUuid": "2db77397_ea41a972",
+      "range": {
+        "startLine": 38,
+        "startChar": 49,
+        "endLine": 38,
+        "endChar": 53
+      },
+      "revId": "eda1d22199078f4c306b9606e86846f1b3252ac1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
