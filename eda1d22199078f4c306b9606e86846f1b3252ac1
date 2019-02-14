@@ -94,6 +94,30 @@
       "revId": "eda1d22199078f4c306b9606e86846f1b3252ac1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9627d20f_c7539f32",
+        "filename": "src/mobile.editor.overlay/BlockMessage.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 2849
+      },
+      "writtenOn": "2019-02-14T15:29:33Z",
+      "side": 1,
+      "message": "Thanks for spotting this - now depends on a patch in core.\n\nI prefer filtering by block ID, since the block target is not exposed to EditorOverlay. Another reason is that ID by definition can only get the exact block affecting this user (in theory - though not in practice yet - filtering by target could return multiple blocks).",
+      "parentUuid": "3035f036_3406e4ce",
+      "range": {
+        "startLine": 38,
+        "startChar": 49,
+        "endLine": 38,
+        "endChar": 53
+      },
+      "revId": "eda1d22199078f4c306b9606e86846f1b3252ac1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
