@@ -212,6 +212,30 @@
       "revId": "5534e1a42a741a5ea339d2af527a00fedeab4c3b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a136d3e3_0bc91002",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 625,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-02-15T02:30:59Z",
+      "side": 1,
+      "message": "Is there a core class that can be used instead to fetch this information? We generally avoid hardcoding direct queries in multiple places, especially when in another repository.",
+      "parentUuid": "db135913_fc5643cc",
+      "range": {
+        "startLine": 625,
+        "startChar": 15,
+        "endLine": 625,
+        "endChar": 27
+      },
+      "revId": "5534e1a42a741a5ea339d2af527a00fedeab4c3b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
