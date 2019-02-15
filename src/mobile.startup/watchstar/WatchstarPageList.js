@@ -73,7 +73,7 @@ mfExtend( WatchstarPageList, PageList, {
 	 * @return {void}
 	 */
 	queryUnitializedItems: function () {
-		return this.$( 'li:not(.with-watchstar)' );
+		return this.$el.find( 'li:not(.with-watchstar)' );
 	},
 
 	/**
@@ -106,7 +106,7 @@ mfExtend( WatchstarPageList, PageList, {
 			self = this,
 			pages = {};
 		$items.each( function ( _, item ) {
-			var $item = self.$( item );
+			var $item = self.$el.find( item );
 			pages[ $item.attr( 'title' ) ] = $item.data( 'id' );
 		} );
 		return pages;
@@ -128,7 +128,7 @@ mfExtend( WatchstarPageList, PageList, {
 		// Create watch stars for each entry in list
 		$items.each( function ( _, item ) {
 			var
-				$item = self.$( item ),
+				$item = self.$el.find( item ),
 				page = new Page( {
 					// FIXME: Set sections so we don't hit the api (hacky)
 					sections: [],

@@ -52,7 +52,7 @@ QUnit.test( 'Check comment box for logged in users', function ( assert ) {
 		section: 'Test'
 	} );
 
-	assert.ok( overlay.$( '.comment' ).length > 0, 'There is a visible comment box' );
+	assert.ok( overlay.$el.find( '.comment' ).length > 0, 'There is a visible comment box' );
 } );
 
 QUnit.test( 'Check error class on textarea', function ( assert ) {
@@ -121,5 +121,5 @@ QUnit.test( 'Check comment box for logged out users', function ( assert ) {
 		section: 'Test'
 	} );
 
-	assert.ok( overlay.$( '.comment' ).length > 0, 'There is a visible comment box' );
+	assert.ok( overlay.$el.find( '.comment' ).length > 0, 'There is a visible comment box' );
 } );

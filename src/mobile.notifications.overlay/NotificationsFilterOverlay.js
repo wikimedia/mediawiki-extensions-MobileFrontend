@@ -36,7 +36,7 @@ NotificationsFilterOverlay = function ( options ) {
 		self.hide();
 	} );
 
-	this.$( '.overlay-content' ).append(
+	this.$el.find( '.overlay-content' ).append(
 		this.parseHTML( '<div>' )
 			.addClass( 'notifications-filter-overlay-read-state' )
 			.append( options.$notifReadState ),

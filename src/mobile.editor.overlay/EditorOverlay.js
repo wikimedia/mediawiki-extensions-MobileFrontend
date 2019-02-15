@@ -132,8 +132,8 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 	 * @instance
 	 */
 	onInputWikitextEditor: function () {
-		this.gateway.setContent( this.$( '.wikitext-editor' ).val() );
-		this.$( '.continue, .submit' ).prop( 'disabled', false );
+		this.gateway.setContent( this.$el.find( '.wikitext-editor' ).val() );
+		this.$el.find( '.continue, .submit' ).prop( 'disabled', false );
 	},
 	/**
 	 * @inheritdoc
@@ -142,7 +142,7 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 	 */
 	onClickContinue: function ( ev ) {
 		// handle the click on "Edit without logging in"
-		if ( this.options.isAnon && this.$( ev.target ).hasClass( 'anonymous' ) ) {
+		if ( this.options.isAnon && this.$el.find( ev.target ).hasClass( 'anonymous' ) ) {
 			this._showEditorAfterWarning();
 			return false;
 		}
@@ -211,23 +211,23 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 
 		EditorOverlayBase.prototype.postRender.apply( this );
 
-		this.$preview = this.$( '.preview' );
-		this.$content = this.$( '.wikitext-editor' );
+		this.$preview = this.$el.find( '.preview' );
+		this.$content = this.$el.find( '.wikitext-editor' );
 		this.$content.addClass( 'mw-editfont-' + mw.user.options.get( 'editfont' ) );
 		if ( self.options.isAnon ) {
-			this.$anonWarning = this.$( '.anonwarning' );
+			this.$anonWarning = this.$el.find( '.anonwarning' );
 			this.$content.hide();
 			// the user has to click login, signup or edit without login,
 			// disable "Next" button on top right
-			this.$anonHiddenButtons = this.$( '.overlay-header .continue, .editor-switcher' ).hide();
+			this.$anonHiddenButtons = this.$el.find( '.overlay-header .continue, .editor-switcher' ).hide();
 			this.hideSpinner();
 		}
 		// make license links open in separate tabs
-		this.$( '.license a' ).attr( 'target', '_blank' );
+		this.$el.find( '.license a' ).attr( 'target', '_blank' );
 
 		this.abuseFilterPanel = new AbuseFilterPanel( {
 			overlayManager: this.overlayManager
-		} ).appendTo( this.$( '.panels' ) );
+		} ).appendTo( this.$el.find( '.panels' ) );
 
 		// If in readOnly mode, make textarea readonly
 		if ( this.readOnly ) {
@@ -319,7 +319,7 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 			new Section( {
 				el: self.$preview,
 				text: parsedText
-			} ).$( 'a' ).on( 'click', false );
+			} ).$el.find( 'a' ).on( 'click', false );
 
 			hideSpinnerAndShowPreview();
 		}, function () {
@@ -360,8 +360,8 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 				.getClosestScrollableContainer( this.$content[ 0 ] );
 			// The scroll container will be either within the view
 			// or the document element itself.
-			$scrollContainer = this.$( container ).length ?
-				this.$( container ) : util.getDocument();
+			$scrollContainer = this.$el.find( container ).length ?
+				this.$el.find( container ) : util.getDocument();
 			this.$scrollContainer = $scrollContainer;
 			this.$content.css( 'padding-bottom', this.$scrollContainer.height() * 0.6 );
 		} else {
@@ -557,7 +557,7 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 		this.abuseFilterPanel.show( type, message );
 		this.showHidden( '.save-header' );
 		// disable continue and save buttons, reenabled when user changes content
-		this.$( '.continue, .submit' ).prop( 'disabled', this.abuseFilterPanel.isDisallowed );
+		this.$el.find( '.continue, .submit' ).prop( 'disabled', this.abuseFilterPanel.isDisallowed );
 	},
 
 	/**
@@ -570,7 +570,7 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 	onSaveBegin: function () {
 		var self = this,
 			options = {
-				summary: this.$( '.summary' ).val()
+				summary: this.$el.find( '.summary' ).val()
 			};
 
 		if ( self.sectionLine !== '' ) {
@@ -582,7 +582,7 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 		}
 		if ( this.captchaId ) {
 			options.captchaId = this.captchaId;
-			options.captchaWord = this.$( '.captcha-word' ).val();
+			options.captchaWord = this.$el.find( '.captcha-word' ).val();
 		}
 
 		this.showHidden( '.saving-header' );

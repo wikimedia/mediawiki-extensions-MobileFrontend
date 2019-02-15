@@ -145,7 +145,7 @@ mfExtend( ReferencesDrawer, Drawer, {
 	 * @return {boolean} False to cancel the native event
 	 */
 	showNestedReference: function ( ev ) {
-		var $dest = this.$( ev.target );
+		var $dest = this.$el.find( ev.target );
 
 		this.showReference( $dest.attr( 'href' ), this.options.page, $dest.text() );
 		// Don't hide the already shown drawer via propagation

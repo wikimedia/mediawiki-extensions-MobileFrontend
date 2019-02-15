@@ -129,9 +129,9 @@ mfExtend( Page, View, {
 		if ( sectionIndex < 1 ) {
 			// negative indexes will search from the end, which is behaviour we do not want.
 			// return an empty set when this happens.
-			return this.$();
+			return this.$el.find();
 		} else {
-			return this.$( HEADING_SELECTOR )
+			return this.$el.find( HEADING_SELECTOR )
 				// Headings must strictly be a child element of a section element
 				// or the parser-output.
 				// Not an ancestor!
@@ -173,7 +173,7 @@ mfExtend( Page, View, {
 				$heading = this.findSectionHeadingByIndex( 1 );
 				return $heading.length ? withNestedChildren( $heading.prevAll( selector ) ) :
 					// this page is a stub so search entire page
-					this.$( selector );
+					this.$el.find( selector );
 			}
 		}
 
@@ -224,8 +224,8 @@ mfExtend( Page, View, {
 		 *   </div>
 		 * </div>
 		 */
-		if ( this.$( '.mf-section-0' ).length ) {
-			return this.$( '.mf-section-0' );
+		if ( this.$el.find( '.mf-section-0' ).length ) {
+			return this.$el.find( '.mf-section-0' );
 		}
 		// no lead section found
 		return null;
@@ -425,7 +425,7 @@ mfExtend( Page, View, {
 	 * @return {jQuery.Object}
 	 */
 	getRedLinks: function () {
-		return this.$( '.new' );
+		return this.$el.find( '.new' );
 	}
 } );
 

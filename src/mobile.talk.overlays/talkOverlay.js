@@ -30,7 +30,7 @@ function talkOverlay( options ) {
 		} ).options,
 		className: 'talk-overlay overlay'
 	} );
-	overlay.$( '.overlay-content' ).append( board.$el );
+	overlay.$el.find( '.overlay-content' ).append( board.$el );
 	return overlay;
 }
 

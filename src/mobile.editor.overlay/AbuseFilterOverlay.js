@@ -49,7 +49,7 @@ mfExtend( AbuseFilterOverlay, Overlay, {
 	postRender: function () {
 		Overlay.prototype.postRender.apply( this );
 		// make links open in separate tabs
-		this.$( 'a' ).attr( 'target', '_blank' );
+		this.$el.find( 'a' ).attr( 'target', '_blank' );
 	}
 } );
 

@@ -150,7 +150,7 @@ mfExtend( SearchOverlay, Overlay, {
 	 */
 	onClickSearchContent: function () {
 		var $el = util.getDocument().find( 'body' ),
-			$form = this.$( 'form' );
+			$form = this.$el.find( 'form' );
 
 		// Add fulltext input to force fulltext search
 		this.parseHTML( '<input>' )
@@ -176,7 +176,7 @@ mfExtend( SearchOverlay, Overlay, {
 	 * @instance
 	 */
 	onClickOverlayContent: function () {
-		this.$( '.cancel' ).trigger( 'click' );
+		this.$el.find( '.cancel' ).trigger( 'click' );
 	},
 
 	/**
@@ -207,7 +207,7 @@ mfExtend( SearchOverlay, Overlay, {
 	 * @param {jQuery.Event} ev
 	 */
 	onClickResult: function ( ev ) {
-		var $link = this.$( ev.currentTarget ),
+		var $link = this.$el.find( ev.currentTarget ),
 			$result = $link.closest( 'li' );
 		/**
 		 * Fired when the user clicks a search result
@@ -247,11 +247,11 @@ mfExtend( SearchOverlay, Overlay, {
 
 		Overlay.prototype.postRender.call( this );
 
-		this.$input = this.$( 'input' );
-		this.$clear = this.$( '.clear' );
-		this.$searchContent = this.$( '.search-content' ).hide();
-		this.$searchFeedback = this.$( '.search-feedback' ).hide();
-		this.$resultContainer = this.$( '.results-list-container' );
+		this.$input = this.$el.find( 'input' );
+		this.$clear = this.$el.find( '.clear' );
+		this.$searchContent = this.$el.find( '.search-content' ).hide();
+		this.$searchFeedback = this.$el.find( '.search-feedback' ).hide();
+		this.$resultContainer = this.$el.find( '.results-list-container' );
 
 		/**
 		 * Hide the spinner and abort timed spinner shows.
@@ -262,7 +262,7 @@ mfExtend( SearchOverlay, Overlay, {
 		}
 
 		// Show a spinner on top of search results
-		this.$spinner = this.$( '.spinner-container' );
+		this.$spinner = this.$el.find( '.spinner-container' );
 		this.on( 'search-start', function ( searchData ) {
 			if ( timer ) {
 				clearSearch();

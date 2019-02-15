@@ -59,7 +59,7 @@ NotificationsOverlay = function ( params ) {
 		title: mw.msg( 'echo-mark-all-as-read' )
 	} );
 	this.markAllReadButton.toggle( false );
-	this.$( '.overlay-header' )
+	this.$el.find( '.overlay-header' )
 		.append(
 			this.parseHTML( '<div>' )
 				.addClass( 'notifications-overlay-header-markAllRead' )
@@ -85,7 +85,7 @@ NotificationsOverlay = function ( params ) {
 	} );
 
 	// Initialize
-	this.$( '.overlay-content' ).append(
+	this.$el.find( '.overlay-content' ).append(
 		wrapperWidget.$element,
 		this.$overlay
 	);
@@ -191,7 +191,7 @@ mfExtend( NotificationsOverlay, Overlay, {
 		Overlay.prototype.postRender.apply( this );
 
 		if ( this.options.notifications || this.options.errorMessage ) {
-			this.$( '.loading' ).remove();
+			this.$el.find( '.loading' ).remove();
 		}
 	}
 } );

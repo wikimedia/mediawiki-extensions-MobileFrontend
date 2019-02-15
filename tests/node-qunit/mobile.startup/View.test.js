@@ -195,18 +195,18 @@ QUnit.test( 'View#render events (with isTemplateMode)', function ( assert ) {
 
 	view = new TemplateModeView();
 	// trigger event
-	view.$( 'span' ).trigger( 'click' );
+	view.$el.find( 'span' ).trigger( 'click' );
 	assert.strictEqual( view.$el.text(), 'hello world', 'event was called' );
-	assert.strictEqual( view.$( 'span' ).length, 0, 'span disappeared' );
+	assert.strictEqual( view.$el.find( 'span' ).length, 0, 'span disappeared' );
 
 	// do same again but call render twice
 	view = new TemplateModeView();
 	// force a re-render
 	view.render();
 	// trigger event to show events didn't get lost
-	view.$( 'span' ).trigger( 'click' );
+	view.$el.find( 'span' ).trigger( 'click' );
 	assert.strictEqual( view.$el.text(), 'hello world', 'event was called' );
-	assert.strictEqual( view.$( 'span' ).length, 0, 'span disappeared' );
+	assert.strictEqual( view.$el.find( 'span' ).length, 0, 'span disappeared' );
 } );
 
 QUnit.test( 'View with className option', function ( assert ) {

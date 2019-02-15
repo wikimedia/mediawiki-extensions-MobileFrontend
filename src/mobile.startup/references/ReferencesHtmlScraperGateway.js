@@ -41,7 +41,7 @@ mfExtend( ReferencesHtmlScraperGateway, ReferencesGateway, {
 	 */
 	getReference: function ( id, page ) {
 		// If an id is not found it's possible the id passed needs decoding (per T188547).
-		return this.getReferenceFromContainer( decodeURIComponent( id ), page.$( 'ol.references' ) );
+		return this.getReferenceFromContainer( decodeURIComponent( id ), page.$el.find( 'ol.references' ) );
 	}
 } );
 

@@ -146,7 +146,7 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 		// Save a user setting indicating that this user prefers using the SourceEditor
 		mw.storage.set( 'preferredEditor', 'SourceEditor' );
 		this.showSpinner();
-		this.$( '.surface' ).hide();
+		this.$el.find( '.surface' ).hide();
 		self.hideSpinner();
 		self.applyHeaderOptions( self.options, false );
 		// Unset classes from other editor

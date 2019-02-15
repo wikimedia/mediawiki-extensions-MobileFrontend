@@ -229,7 +229,7 @@ function setupEditor( page, skin ) {
  * @param {Page} currentPage
  */
 function hideSectionEditIcons( currentPage ) {
-	currentPage.$( '.mw-editsection' ).hide();
+	currentPage.$el.find( '.mw-editsection' ).hide();
 }
 
 /**

@@ -154,13 +154,13 @@ mfExtend( Overlay, View, {
 	 */
 	postRender: function () {
 
-		this.$overlayContent = this.$( '.overlay-content' );
-		this.$spinner = this.$( '.spinner' );
+		this.$overlayContent = this.$el.find( '.overlay-content' );
+		this.$spinner = this.$el.find( '.spinner' );
 		if ( this.isIos ) {
 			this.$el.addClass( 'overlay-ios' );
 		}
 		// Truncate any text inside in the overlay header.
-		this.$( '.overlay-header h2 span' ).addClass( 'truncated-text' );
+		this.$el.find( '.overlay-header h2 span' ).addClass( 'truncated-text' );
 		this.setupEmulatedIosOverlayScrolling();
 	},
 
@@ -171,7 +171,7 @@ mfExtend( Overlay, View, {
 	 */
 	setupEmulatedIosOverlayScrolling: function () {
 		var self = this,
-			$content = this.$( '.overlay-content' );
+			$content = this.$el.find( '.overlay-content' );
 
 		if ( this.isIos && this.hasFixedHeader ) {
 			$content[0].addEventListener( 'touchstart', this.onTouchStart.bind( this ), passiveOpts );
@@ -322,8 +322,8 @@ mfExtend( Overlay, View, {
 	_resizeContent: function ( windowHeight ) {
 		this.$overlayContent.height(
 			windowHeight -
-			this.$( '.overlay-header-container' ).outerHeight() -
-			this.$( '.overlay-footer-container' ).outerHeight()
+			this.$el.find( '.overlay-header-container' ).outerHeight() -
+			this.$el.find( '.overlay-footer-container' ).outerHeight()
 		);
 	},
 
@@ -338,8 +338,8 @@ mfExtend( Overlay, View, {
 	 * @param {string} className CSS selector to show
 	 */
 	showHidden: function ( className ) {
-		this.$( '.hideable' ).addClass( 'hidden' );
-		this.$( className ).removeClass( 'hidden' );
+		this.$el.find( '.hideable' ).addClass( 'hidden' );
+		this.$el.find( className ).removeClass( 'hidden' );
 	}
 } );
 

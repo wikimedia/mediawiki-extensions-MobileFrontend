@@ -276,6 +276,7 @@ mfExtend( View, {
 	 * @return {JQuery.Object} jQuery object containing results of the search.
 	 */
 	$: function ( query ) {
+		mw.log.warn( 'Use of View.$ is deprecated. Use View.$el.find instead.' );
 		return this.$el.find( query );
 	},
 

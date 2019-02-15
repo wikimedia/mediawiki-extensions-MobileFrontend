@@ -155,7 +155,7 @@ QUnit.test( '#without-preview', function ( assert ) {
 		sectionId: 0
 	} );
 	return getContentStub().then( function () {
-		assert.strictEqual( editorOverlay.$( '.continue' ).text(), 'Save', 'no preview loaded' );
+		assert.strictEqual( editorOverlay.$el.find( '.continue' ).text(), 'Save', 'no preview loaded' );
 	} );
 } );
 
@@ -169,6 +169,6 @@ QUnit.test( '#initialize, as anonymous', function ( assert ) {
 	// Make this test async to ensure it finishes and doesn't cause side effects to other functions.
 	return getContentStub().then( function () {
 		assert.ok( editorOverlay.$anonWarning.length > 0, 'Editorwarning (IP will be saved) visible.' );
-		assert.ok( editorOverlay.$( '.anonymous' ).length > 0, 'Continue login has a second class.' );
+		assert.ok( editorOverlay.$el.find( '.anonymous' ).length > 0, 'Continue login has a second class.' );
 	} );
 } );

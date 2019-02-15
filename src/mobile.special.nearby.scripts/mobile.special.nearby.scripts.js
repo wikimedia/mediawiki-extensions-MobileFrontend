@@ -75,7 +75,7 @@ function refresh( opt ) {
 			if ( isFragmentIdentifier( fragment ) ) {
 				// The hash is expected to be an identifier selector (unless the
 				// user entered rubbish).
-				el = nearby.$( '#' + fragment );
+				el = nearby.$el.find( '#' + fragment );
 				if ( el[0] && el[0].nodeType ) {
 					$( window ).scrollTop( el.offset().top );
 				}

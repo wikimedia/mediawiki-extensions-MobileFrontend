@@ -62,7 +62,7 @@ mfExtend( BetaOptinPanel, Panel, {
 	 * @param {jQuery.Event} ev
 	 */
 	onOptin: function ( ev ) {
-		this.$( ev.currentTarget ).closest( 'form' ).submit();
+		this.$el.find( ev.currentTarget ).closest( 'form' ).trigger( 'submit' );
 	}
 } );
 

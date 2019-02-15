@@ -36,7 +36,7 @@ mfExtend( TableOfContents, View, {
 		new Icon( {
 			name: 'toc',
 			additionalClassNames: 'toc-button'
-		} ).$el.prependTo( this.$( 'h2' ) );
+		} ).$el.prependTo( this.$el.find( 'h2' ) );
 	}
 } );
 

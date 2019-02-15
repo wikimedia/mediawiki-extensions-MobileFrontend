@@ -75,7 +75,7 @@ mfExtend( CategoryTabs, View, {
 	 * @return {void}
 	 */
 	hideSpinner: function () {
-		this.$( '.spinner' ).hide();
+		this.$el.find( '.spinner' ).hide();
 	},
 	/**
 	 * @memberof CategoryTabs
@@ -83,7 +83,7 @@ mfExtend( CategoryTabs, View, {
 	 * @return {void}
 	 */
 	showSpinner: function () {
-		this.$( '.spinner' ).show();
+		this.$el.find( '.spinner' ).show();
 	},
 	/**
 	 * Get a list of categories the page belongs to and re-renders the overlay content
@@ -94,8 +94,8 @@ mfExtend( CategoryTabs, View, {
 	 */
 	_loadCategories: function () {
 		var self = this,
-			$normalCatlist = this.$( '.normal-catlist' ),
-			$hiddenCatlist = this.$( '.hidden-catlist' ),
+			$normalCatlist = this.$el.find( '.normal-catlist' ),
+			$hiddenCatlist = this.$el.find( '.hidden-catlist' ),
 			apiResult;
 
 		this.scrollEndEventEmitter.setElement( this.$el );
@@ -132,12 +132,12 @@ mfExtend( CategoryTabs, View, {
 				} );
 
 				if ( $normalCatlist.length === 0 && $normalCatlist.length === 0 ) {
-					self.$( '.content-header' ).text( mw.msg( 'mobile-frontend-categories-nocat' ) );
+					self.$el.find( '.content-header' ).text( mw.msg( 'mobile-frontend-categories-nocat' ) );
 				} else if ( $normalCatlist.length === 0 && $normalCatlist.length > 0 ) {
 					this._changeView();
 				}
 			} else {
-				self.$( '.content-header' ).text( mw.msg( 'mobile-frontend-categories-nocat' ) );
+				self.$el.find( '.content-header' ).text( mw.msg( 'mobile-frontend-categories-nocat' ) );
 			}
 			self.hideSpinner();
 			self.scrollEndEventEmitter.enable();
@@ -153,7 +153,7 @@ mfExtend( CategoryTabs, View, {
 	onCatlinkClick: function ( ev ) {
 		ev.preventDefault();
 		// change view only, if the user clicked another view
-		if ( !this.$( ev.target ).parent().hasClass( 'selected' ) ) {
+		if ( !this.$el.find( ev.target ).parent().hasClass( 'selected' ) ) {
 			this._changeView();
 		}
 	},
@@ -164,8 +164,8 @@ mfExtend( CategoryTabs, View, {
 	 * @instance
 	 */
 	_changeView: function () {
-		this.$( '.category-header li' ).toggleClass( 'selected' );
-		this.$( '.topic-title-list' ).toggleClass( 'hidden' );
+		this.$el.find( '.category-header li' ).toggleClass( 'selected' );
+		this.$el.find( '.topic-title-list' ).toggleClass( 'hidden' );
 	}
 } );
 

@@ -69,8 +69,8 @@ mfExtend( PhotoList, View, {
 	 * @instance
 	 */
 	postRender: function () {
-		this.$end = this.$( '.end' );
-		this.$list = this.$( 'ul' );
+		this.$end = this.$el.find( '.end' );
+		this.$list = this.$el.find( 'ul' );
 
 		this._loadPhotos();
 	},
@@ -100,7 +100,7 @@ mfExtend( PhotoList, View, {
 	 * @instance
 	 */
 	hideEmptyMessage: function () {
-		this.$( '.empty' ).hide();
+		this.$el.find( '.empty' ).hide();
 	},
 	/**
 	 * Shows loading spinner

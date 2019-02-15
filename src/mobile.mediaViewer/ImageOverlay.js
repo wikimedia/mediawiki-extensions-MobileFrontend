@@ -101,7 +101,7 @@ mfExtend( ImageOverlay, Overlay, {
 	 * @param {jQuery.Event} ev
 	 */
 	onSlide: function ( ev ) {
-		var nextThumbnail = this.$( ev.target ).closest( '.slider-button' ).data( 'thumbnail' );
+		var nextThumbnail = this.$el.find( ev.target ).closest( '.slider-button' ).data( 'thumbnail' );
 		this.emit( ImageOverlay.EVENT_SLIDE, nextThumbnail );
 	},
 	/**
@@ -141,8 +141,8 @@ mfExtend( ImageOverlay, Overlay, {
 			nextThumb = thumbs[ offset === thumbs.length - 1 ? 0 : offset + 1 ];
 		}
 
-		this.$( '.prev' ).data( 'thumbnail', lastThumb );
-		this.$( '.next' ).data( 'thumbnail', nextThumb );
+		this.$el.find( '.prev' ).data( 'thumbnail', lastThumb );
+		this.$el.find( '.next' ).data( 'thumbnail', nextThumb );
 	},
 	/**
 	 * Disables the possibility to arrow through all images of the page.
@@ -151,7 +151,7 @@ mfExtend( ImageOverlay, Overlay, {
 	 * @private
 	 */
 	_disableArrowImages: function () {
-		this.$( '.prev, .next' ).remove();
+		this.$el.find( '.prev, .next' ).remove();
 	},
 
 	/**
@@ -195,13 +195,13 @@ mfExtend( ImageOverlay, Overlay, {
 
 			removeLoader();
 			// hide broken image if present
-			self.$( '.image img' ).hide();
+			self.$el.find( '.image img' ).hide();
 
 			// show error message if not visible already
-			if ( self.$( '.load-fail-msg' ).length === 0 ) {
+			if ( self.$el.find( '.load-fail-msg' ).length === 0 ) {
 				new LoadErrorMessage( { retryPath: self.router.getPath() } )
 					.on( 'retry', self._handleRetry.bind( self ) )
-					.prependTo( self.$( '.image' ) );
+					.prependTo( self.$el.find( '.image' ) );
 			}
 		}
 
@@ -220,7 +220,7 @@ mfExtend( ImageOverlay, Overlay, {
 			this._enableArrowImages( thumbs );
 		}
 
-		this.$details = this.$( '.details' );
+		this.$details = this.$el.find( '.details' );
 
 		Overlay.prototype.postRender.apply( this );
 
@@ -257,15 +257,15 @@ mfExtend( ImageOverlay, Overlay, {
 			// (https://stackoverflow.com/questions/12354865/image-onload-event-and-browser-cache#answer-12355031)
 			$img.on( 'load', addImageLoadClass ).on( 'error', showLoadFailMsg );
 			$img.attr( 'src', data.thumburl ).attr( 'alt', self.options.caption );
-			self.$( '.image' ).append( $img );
+			self.$el.find( '.image' ).append( $img );
 
 			self.$details.addClass( 'is-visible' );
 			self._positionImage();
-			self.$( '.details a' ).attr( 'href', url );
+			self.$el.find( '.details a' ).attr( 'href', url );
 			if ( data.extmetadata ) {
 				// Add license information
 				if ( data.extmetadata.LicenseShortName ) {
-					self.$( '.license a' )
+					self.$el.find( '.license a' )
 						.text( data.extmetadata.LicenseShortName.value )
 						.attr( 'href', url );
 				}
@@ -273,7 +273,7 @@ mfExtend( ImageOverlay, Overlay, {
 				if ( data.extmetadata.Artist ) {
 					// Strip any tags
 					author = data.extmetadata.Artist.value.replace( /<.*?>/g, '' );
-					self.$( '.license' ).prepend( author + ' &bull; ' );
+					self.$el.find( '.license' ).prepend( author + ' &bull; ' );
 				}
 			}
 			self.adjustDetails();
@@ -292,7 +292,7 @@ mfExtend( ImageOverlay, Overlay, {
 	 */
 	onToggleDetails: function () {
 		if ( !this.hasLoadError ) {
-			this.$( '.cancel, .slider-button' ).toggle();
+			this.$el.find( '.cancel, .slider-button' ).toggle();
 			this.$details.toggle();
 			this._positionImage();
 		}
@@ -337,7 +337,7 @@ mfExtend( ImageOverlay, Overlay, {
 		windowWidth = $window.width();
 		windowHeight = $window.height() - detailsHeight;
 		windowRatio = windowWidth / windowHeight;
-		$img = this.$( 'img' );
+		$img = this.$el.find( 'img' );
 
 		if ( this.imgRatio > windowRatio ) {
 			if ( windowWidth < this.thumbWidth ) {
@@ -354,7 +354,7 @@ mfExtend( ImageOverlay, Overlay, {
 				} );
 			}
 		}
-		this.$( '.image-wrapper' ).css( 'bottom', detailsHeight );
+		this.$el.find( '.image-wrapper' ).css( 'bottom', detailsHeight );
 	},
 
 	/**
@@ -364,8 +364,8 @@ mfExtend( ImageOverlay, Overlay, {
 	 */
 	adjustDetails: function () {
 		var windowHeight = util.getWindow().height();
-		if ( this.$( '.details' ).height() > windowHeight * 0.50 ) {
-			this.$( '.details' ).css( 'max-height', windowHeight * 0.50 );
+		if ( this.$el.find( '.details' ).height() > windowHeight * 0.50 ) {
+			this.$el.find( '.details' ).css( 'max-height', windowHeight * 0.50 );
 		}
 	}
 } );

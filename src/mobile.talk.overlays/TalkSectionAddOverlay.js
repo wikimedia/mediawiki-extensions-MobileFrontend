@@ -91,9 +91,9 @@ mfExtend( TalkSectionAddOverlay, Overlay, {
 	postRender: function () {
 		Overlay.prototype.postRender.call( this );
 		this.showHidden( '.initial-header' );
-		this.$confirm = this.$( 'button.confirm-save' );
-		this.$subject = this.$( '.summary' );
-		this.$ta = this.$( '.wikitext-editor' );
+		this.$confirm = this.$el.find( 'button.confirm-save' );
+		this.$subject = this.$el.find( '.summary' );
+		this.$ta = this.$el.find( '.wikitext-editor' );
 	},
 	/**
 	 * @inheritdoc
@@ -197,7 +197,7 @@ mfExtend( TalkSectionAddOverlay, Overlay, {
 		// any interruption (user questions e.g.)
 		this._saveHit = true;
 
-		this.$( '.content' ).empty().addClass( 'loading' );
+		this.$el.find( '.content' ).empty().addClass( 'loading' );
 		// FIXME: while saving: a spinner would be nice
 		// FIXME: This should be using a gateway e.g. TalkGateway, PageGateway or EditorGateway
 		return this.editorApi.postWithToken( 'csrf', {

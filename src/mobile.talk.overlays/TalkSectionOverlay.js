@@ -70,7 +70,7 @@ mfExtend( TalkSectionOverlay, Overlay, {
 	 */
 	postRender: function () {
 		Overlay.prototype.postRender.apply( this );
-		this.$saveButton = this.$( '.save-button' );
+		this.$saveButton = this.$el.find( '.save-button' );
 		if ( !this.options.section ) {
 			this.renderFromApi( this.options );
 		} else {
@@ -85,7 +85,7 @@ mfExtend( TalkSectionOverlay, Overlay, {
 	 * @private
 	 */
 	_enableComments: function () {
-		this.$commentBox = this.$( '.comment' );
+		this.$commentBox = this.$el.find( '.comment' );
 		if ( user.isAnon() ) {
 			this.$commentBox.remove();
 		} else {

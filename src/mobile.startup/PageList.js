@@ -49,9 +49,9 @@ mfExtend( PageList, View, {
 		var self = this;
 
 		setTimeout( function () {
-			self.$( '.list-thumb' ).each( function () {
-				var style = self.$( this ).data( 'style' );
-				self.$( this ).attr( 'style', style );
+			self.$el.find( '.list-thumb' ).each( function () {
+				var style = self.$el.find( this ).data( 'style' );
+				self.$el.find( this ).attr( 'style', style );
 			} );
 			// Delay an unnecessary load of images on mobile (slower?) connections
 			// In particular on search results which can be regenerated quickly.

@@ -46,9 +46,8 @@ function Skin( params ) {
 				//       Special:JavaScriptTest.
 				images = ( container && lazyImageLoader.queryPlaceholders( container ) ) || [];
 			self.lazyImageTransformer = lazyImageTransformer.newLazyImageTransformer(
-				// eslint false positive: self.$ is not a jQuery collection
-				// eslint-disable-next-line jquery/no-bind
-				self.eventBus, self.$.bind( self ), util.getWindow().height() * 1.5, images
+				self.eventBus, self.$el.find.bind( self.$el ),
+				util.getWindow().height() * 1.5, images
 			);
 			self.lazyImageTransformer.loadImages();
 		} );
@@ -99,7 +98,7 @@ mfExtend( Skin, View, {
 		 * Fired when the skin is clicked.
 		 * @event Skin#click
 		 */
-		this.$( '#mw-mf-page-center' ).on( 'click', this.emit.bind( this, 'click' ) );
+		this.$el.find( '#mw-mf-page-center' ).on( 'click', this.emit.bind( this, 'click' ) );
 	},
 
 	/**
@@ -115,12 +114,12 @@ mfExtend( Skin, View, {
 			licensePlural = mw.language.convertNumber( mfLicense.plural );
 
 		if ( mfLicense.link ) {
-			if ( this.$( '#footer-places-terms-use' ).length > 0 ) {
+			if ( this.$el.find( '#footer-places-terms-use' ).length > 0 ) {
 				licenseMsg = mw.msg(
 					'mobile-frontend-editor-licensing-with-terms',
 					mw.message(
 						'mobile-frontend-editor-terms-link',
-						this.$( '#footer-places-terms-use a' ).attr( 'href' )
+						this.$el.find( '#footer-places-terms-use a' ).attr( 'href' )
 					).parse(),
 					mfLicense.link,
 					licensePlural

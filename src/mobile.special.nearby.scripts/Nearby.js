@@ -168,11 +168,12 @@ mfExtend( Nearby, WatchstarPageList, {
 		var self = this;
 
 		if ( !this._isLoading ) {
-			this.$( '.page-list' ).removeClass( 'hidden' );
+			this.$el.find( '.page-list' ).removeClass( 'hidden' );
 		}
 		WatchstarPageList.prototype.postRender.apply( this );
 		this._postRenderLinks();
-		this.$( function () {
+		// FIXME: This should probably just be $( function () {} )
+		this.$el.find( function () {
 			// todo: use the local emitter when refresh() doesn't recreate the
 			//       OO.EventEmitter by calling the super's constructor.
 			self.eventBus.emit( NEARBY_EVENT_POST_RENDER );
@@ -189,9 +190,9 @@ mfExtend( Nearby, WatchstarPageList, {
 	 */
 	_postRenderLinks: function () {
 		var self = this;
-		this.$( 'a' ).each( function ( i ) {
+		this.$el.find( 'a' ).each( function ( i ) {
 			// FIXME: not unique if multiple Nearby objects on same page
-			self.$( this ).attr( 'id', 'nearby-page-list-item-' + i );
+			self.$el.find( this ).attr( 'id', 'nearby-page-list-item-' + i );
 		} ).on( 'click', this.onItemClick );
 	},
 	/**
@@ -208,7 +209,7 @@ mfExtend( Nearby, WatchstarPageList, {
 		var self = this,
 			_super = WatchstarPageList;
 
-		this.$( '.page-list' ).addClass( 'hidden' );
+		this.$el.find( '.page-list' ).addClass( 'hidden' );
 		// Run it once for loader etc
 		this._isLoading = true;
 		if ( ( options.latitude && options.longitude ) || options.pageTitle ) {

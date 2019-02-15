@@ -354,7 +354,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 		if ( this.config.skipPreview ) {
 			// skip the preview and save the changes
 			this.nextStep = 'onSaveBegin';
-			this.$( '.continue' ).text( this.defaults.saveMsg );
+			this.$el.find( '.continue' ).text( this.defaults.saveMsg );
 		} else {
 			// default: show the preview step
 			this.nextStep = 'onStageChanges';
@@ -467,7 +467,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 */
 	handleCaptcha: function ( details ) {
 		var self = this,
-			$input = this.$( '.captcha-word' );
+			$input = this.$el.find( '.captcha-word' );
 
 		if ( this.captchaShown ) {
 			$input.val( '' );
@@ -480,22 +480,22 @@ mfExtend( EditorOverlayBase, Overlay, {
 		// handle different mime types different
 		if ( details.mime.indexOf( 'image/' ) === 0 ) {
 			// image based CAPTCHA's like provided by FancyCaptcha, ReCaptcha or similar
-			this.$( '.captcha-panel#question' ).detach();
-			this.$( '.captcha-panel img' ).attr( 'src', details.url );
+			this.$el.find( '.captcha-panel#question' ).detach();
+			this.$el.find( '.captcha-panel img' ).attr( 'src', details.url );
 		} else {
 			// not image based CAPTCHA.
-			this.$( '.captcha-panel #image' ).detach();
+			this.$el.find( '.captcha-panel #image' ).detach();
 			if ( details.mime.indexOf( 'text/html' ) === 0 ) {
 				// handle mime type of HTML as HTML content (display as-is).
 				// QuestyCaptcha now have default MIME type "text/html": see T147606
-				this.$( '.captcha-panel #question' ).html( details.question );
+				this.$el.find( '.captcha-panel #question' ).html( details.question );
 			} else {
 				// handle mime types
 				// (other than image based ones and HTML based ones)
 				// as plain text by default.
 				// e.g. MathCaptcha (solve a math formula) or
 				// SimpleCaptcha (simple math formula)
-				this.$( '.captcha-panel #question' ).text( details.question );
+				this.$el.find( '.captcha-panel #question' ).text( details.question );
 			}
 		}
 

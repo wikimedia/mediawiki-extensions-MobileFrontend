@@ -76,8 +76,8 @@ mfExtend( CategoryAddOverlay, Overlay, {
 
 		Overlay.prototype.postRender.apply( this );
 
-		this.$suggestions = this.$( '.category-suggestions' );
-		this.$saveButton = this.$( '.save' );
+		this.$suggestions = this.$el.find( '.category-suggestions' );
+		this.$saveButton = this.$el.find( '.save' );
 		this.wgCategories = this.options.categories;
 		this.title = this.options.title;
 
@@ -88,7 +88,7 @@ mfExtend( CategoryAddOverlay, Overlay, {
 			categories: this.wgCategories,
 			saveButton: this.$saveButton
 		} );
-		this.$( '.category-add-input' ).append(
+		this.$el.find( '.category-add-input' ).append(
 			input.$element
 		);
 	},
@@ -100,8 +100,8 @@ mfExtend( CategoryAddOverlay, Overlay, {
 	 * @param {jQuery.Event} ev
 	 */
 	onCategoryClick: function ( ev ) {
-		this.$( ev.target ).closest( '.suggestion' ).detach();
-		if ( this.$( '.suggestion' ).length > 0 ) {
+		this.$el.find( ev.target ).closest( '.suggestion' ).detach();
+		if ( this.$el.find( '.suggestion' ).length > 0 ) {
 			this.$saveButton.prop( 'disabled', false );
 		} else {
 			this.$saveButton.prop( 'disabled', true );
@@ -122,8 +122,8 @@ mfExtend( CategoryAddOverlay, Overlay, {
 		this.showHidden( '.saving-header' );
 
 		// add wikitext to add to the page
-		this.$( '.suggestion' ).each( function () {
-			var data = self.$( this ).data( 'title' );
+		this.$el.find( '.suggestion' ).each( function () {
+			var data = self.$el.find( this ).data( 'title' );
 
 			if ( data ) {
 				// add the new categories in wikitext markup

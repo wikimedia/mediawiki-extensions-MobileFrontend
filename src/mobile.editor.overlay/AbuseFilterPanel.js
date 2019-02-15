@@ -64,7 +64,7 @@ mfExtend( AbuseFilterPanel, View, {
 			this.isDisallowed = true;
 		}
 
-		this.$( '.message p' ).text( msg );
+		this.$el.find( '.message p' ).text( msg );
 		this.$el.removeClass( 'hidden' );
 	},
 

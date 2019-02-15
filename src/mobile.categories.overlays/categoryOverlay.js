@@ -35,7 +35,7 @@ function categoryOverlay( options ) {
 			subheading: mw.msg( 'mobile-frontend-categories-subheading' )
 		}
 	);
-	overlay.$( '.overlay-content' ).append( widget.$el );
+	overlay.$el.find( '.overlay-content' ).append( widget.$el );
 	return overlay;
 }
 

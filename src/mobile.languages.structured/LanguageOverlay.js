@@ -86,9 +86,9 @@ mfExtend( LanguageOverlay, Overlay, {
 		Overlay.prototype.postRender.apply( this );
 
 		// cache
-		this.$siteLinksList = this.$( '.site-link-list' );
+		this.$siteLinksList = this.$el.find( '.site-link-list' );
 		this.$languageItems = this.$siteLinksList.find( 'a' );
-		this.$subheaders = this.$( 'h3' );
+		this.$subheaders = this.$el.find( 'h3' );
 	},
 	/**
 	 * Article link click event handler
@@ -97,7 +97,7 @@ mfExtend( LanguageOverlay, Overlay, {
 	 * @param {jQuery.Event} ev
 	 */
 	onLinkClick: function ( ev ) {
-		var $link = this.$( ev.currentTarget ),
+		var $link = this.$el.find( ev.currentTarget ),
 			lang = $link.attr( 'lang' ),
 			self = this,
 			$visibleLanguageLinks = this.$languageItems.filter( ':visible' );
@@ -106,7 +106,7 @@ mfExtend( LanguageOverlay, Overlay, {
 
 		// find the index of the clicked language in the list of visible results
 		$visibleLanguageLinks.each( function ( i, link ) {
-			if ( self.$( link ).hasClass( lang ) ) {
+			if ( self.$el.find( link ).hasClass( lang ) ) {
 				return false;
 			}
 		} );
@@ -118,7 +118,7 @@ mfExtend( LanguageOverlay, Overlay, {
 	 * @param {jQuery.Event} ev Event object.
 	 */
 	onSearchInput: function ( ev ) {
-		this.filterLanguages( this.$( ev.target ).val().toLowerCase() );
+		this.filterLanguages( this.$el.find( ev.target ).val().toLowerCase() );
 	},
 	/**
 	 * Filter the language list to only show languages that match the current search term.

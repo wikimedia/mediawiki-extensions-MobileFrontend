@@ -50,7 +50,7 @@ mfExtend( LoadErrorMessage, View, {
 	 * @instance
 	 */
 	postRender: function () {
-		this.$( '.load-fail-msg-link a' ).attr( 'href', '#' + this.options.retryPath );
+		this.$el.find( '.load-fail-msg-link a' ).attr( 'href', '#' + this.options.retryPath );
 	},
 
 	/**

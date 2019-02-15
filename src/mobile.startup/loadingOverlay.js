@@ -13,7 +13,7 @@ function loadingOverlay() {
 		className: 'overlay overlay-loading',
 		noHeader: true
 	} );
-	icons.spinner().$el.appendTo( overlay.$( '.overlay-content' ) );
+	icons.spinner().$el.appendTo( overlay.$el.find( '.overlay-content' ) );
 	return overlay;
 }
 

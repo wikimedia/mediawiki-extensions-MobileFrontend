@@ -34,11 +34,11 @@ QUnit.test( 'save()', function ( assert ) {
 		title: 'Talk:No exist'
 	} );
 	// set the content of the new discussion
-	overlay.$( 'input' ).val( 'Testtitle' );
-	overlay.$( 'textarea' ).val( 'Testcontent' );
+	overlay.$el.find( 'input' ).val( 'Testtitle' );
+	overlay.$el.find( 'textarea' ).val( 'Testcontent' );
 	// Check the values
-	assert.strictEqual( overlay.$( 'input' ).val(), 'Testtitle', 'Testtitle set' );
-	assert.strictEqual( overlay.$( 'textarea' ).val(), 'Testcontent', 'Testcontent set' );
+	assert.strictEqual( overlay.$el.find( 'input' ).val(), 'Testtitle', 'Testtitle set' );
+	assert.strictEqual( overlay.$el.find( 'textarea' ).val(), 'Testcontent', 'Testcontent set' );
 	// Test the save of the new dicsussion
 	return overlay.save().then( function ( status ) {
 		assert.strictEqual( status, 'ok', 'The new discussion was saved' );

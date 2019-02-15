@@ -39,8 +39,8 @@ mfExtend( TalkBoard, View, {
 	postRender: function ( options ) {
 		View.prototype.postRender.call( this, options );
 		this.$el.append( icons.spinner().$el );
-		this.$spinner = this.$( '.spinner' );
-		this.$board = this.$( '.board' );
+		this.$spinner = this.$el.find( '.spinner' );
+		this.$board = this.$el.find( '.board' );
 		if ( !this.options.headings ) {
 			this._loadContent( this.options );
 		}
@@ -81,7 +81,7 @@ mfExtend( TalkBoard, View, {
 		// show a spinner
 		this.showSpinner();
 		// clear actual content, if any
-		this.$( '.topic-title-list' ).empty();
+		this.$el.find( '.topic-title-list' ).empty();
 
 		this.pageGateway.getPage( options.title ).then( function ( pageData ) {
 			self._addContent( pageData, options );
