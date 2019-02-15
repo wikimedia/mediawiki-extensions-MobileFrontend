@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b5031aef_a1ed0581",
+        "filename": "src/mobile.special.nearby.scripts/Nearby.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2019-02-15T22:47:45Z",
+      "side": 1,
+      "message": "Assuming this was a typo it can be replaced with $( fn...\nand a no-undef eslint exception. Is the $(fn) even needed though?",
+      "revId": "6021c18263e91f8fa4f85156080f45d41f56a071",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
