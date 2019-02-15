@@ -16,6 +16,24 @@
       "revId": "6021c18263e91f8fa4f85156080f45d41f56a071",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e0a65ce_1bf62fd4",
+        "filename": "src/mobile.special.nearby.scripts/Nearby.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-15T22:57:49Z",
+      "side": 1,
+      "message": "let\u0027s remove this. i dont know why it uses this but refresh functionalitydoesnt seem to.be working and likely because of this",
+      "parentUuid": "b5031aef_a1ed0581",
+      "revId": "6021c18263e91f8fa4f85156080f45d41f56a071",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
