@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3a241655_62154faa",
+        "filename": "includes/specials/SpecialMobileLanguages.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-15T18:05:04Z",
+      "side": 1,
+      "message": "I don\u0027t think you want to remove this line.",
+      "revId": "51427974a1716cfea2a6ac43b38bb743e348c29a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9dff5d86_7e55aca4",
+        "filename": "includes/specials/SpecialMobileLanguages.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 229,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-15T18:05:04Z",
+      "side": 1,
+      "message": "Try removing this line! I think that might be all that\u0027s needed to fix this problem!",
+      "revId": "51427974a1716cfea2a6ac43b38bb743e348c29a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8515907f_1b9d92dc",
+        "filename": "resources/mobile.languages.structured/LanguageOverlay.hogan",
+        "patchSetId": 8
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-15T18:05:04Z",
+      "side": 1,
+      "message": "Can you use tabs instead of spaces here? so that it lines up with the line above {{#allLanguagesCount}} ?",
+      "revId": "51427974a1716cfea2a6ac43b38bb743e348c29a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dabfd573_b6369775",
+        "filename": "resources/mobile.languages.structured/LanguageOverlay.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-15T18:05:04Z",
+      "side": 1,
+      "message": "I think the 1em is needed still. When I use a mobile browser, 2em padding is too much.",
+      "revId": "51427974a1716cfea2a6ac43b38bb743e348c29a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
