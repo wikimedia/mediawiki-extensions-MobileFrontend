@@ -236,6 +236,30 @@
       "revId": "5534e1a42a741a5ea339d2af527a00fedeab4c3b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9a9a9242_3bde3530",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 625,
+      "author": {
+        "id": 5450
+      },
+      "writtenOn": "2019-02-15T09:30:17Z",
+      "side": 1,
+      "message": "Yes, this is also what Matěj pointed out at line 619. Curiously enough, there seems to be no such method. The closest method I could find is ChangeTags::getPrevTags, which however doesn\u0027t exactly fit this purpose, and is private anyway.\nI would deem such a method really useful, as I already have a couple of candidate patches where we\u0027d need it.",
+      "parentUuid": "a136d3e3_0bc91002",
+      "range": {
+        "startLine": 625,
+        "startChar": 15,
+        "endLine": 625,
+        "endChar": 27
+      },
+      "revId": "5534e1a42a741a5ea339d2af527a00fedeab4c3b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
