@@ -34,6 +34,121 @@
       "revId": "a1e4779d87be4890ff59cafe6efd428fbec2b4b9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0eff85e5_beeb976e",
+        "filename": "src/mobile.languages.structured/LanguageOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-15T18:25:39Z",
+      "side": 1,
+      "message": "There\u0027s totally a way to do this.\n\nI\u0027ve made a revision to the patch in my follow up.\n\nThis means 2 requests to the API are made, but this will be temporary, we can merge the Minerva patch quickly after this one, and that will return us to sanity so no end users will ever hit this problem.",
+      "parentUuid": "f44de537_e83e035c",
+      "revId": "a1e4779d87be4890ff59cafe6efd428fbec2b4b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bc0c57ca_4dbe45d2",
+        "filename": "src/mobile.languages.structured/mobile.languages.structured.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-15T18:25:39Z",
+      "side": 1,
+      "message": "I don\u0027t think this is correct. LanguageSearcher is internal to the languageFactory.\nWe actually want to make languageFactory available, right?",
+      "revId": "a1e4779d87be4890ff59cafe6efd428fbec2b4b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "959ed556_22fe2ab0",
+        "filename": "src/mobile.languages.structured/mobile.languages.structured.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-15T18:25:39Z",
+      "side": 1,
+      "message": "this is still needed no? it might be renamed though and a rename can safely happen now!",
+      "range": {
+        "startLine": 8,
+        "startChar": 23,
+        "endLine": 8,
+        "endChar": 43
+      },
+      "revId": "a1e4779d87be4890ff59cafe6efd428fbec2b4b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "82fe11ea_996132a4",
+        "filename": "src/mobile.languages.structured/mobile.languages.structured.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-15T18:25:39Z",
+      "side": 1,
+      "message": "LanguageOverlay should be replaced with languageFactory.\nSee my follow up.",
+      "revId": "a1e4779d87be4890ff59cafe6efd428fbec2b4b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6b0324d8_92ce4be7",
+        "filename": "src/mobile.startup/languageFactory.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-15T18:25:39Z",
+      "side": 1,
+      "message": "We haven\u0027t talked about using const just yet.. but a good topic to have :)\n\nAlso this doesn\u0027t need to use m.require - it can use a direct import. See my follow up.",
+      "revId": "a1e4779d87be4890ff59cafe6efd428fbec2b4b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f2bb53d_98f4c27f",
+        "filename": "src/mobile.startup/languageFactory.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-15T18:25:39Z",
+      "side": 1,
+      "message": "new keyword not necessary.",
+      "range": {
+        "startLine": 54,
+        "startChar": 17,
+        "endLine": 54,
+        "endChar": 20
+      },
+      "revId": "a1e4779d87be4890ff59cafe6efd428fbec2b4b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
