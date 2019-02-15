@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "afaea4b8_c5b43bc0",
+        "filename": "includes/specials/SpecialMobileLanguages.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 184,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-15T19:33:36Z",
+      "side": 1,
+      "message": "You\u0027ll need to restore the ; here!",
+      "revId": "be92884cfb10a65247fd64aa588b9c856b744f18",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
