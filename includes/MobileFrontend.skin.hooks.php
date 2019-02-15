@@ -149,11 +149,8 @@ JAVASCRIPT;
 			}
 			if ( $rightsPage ) {
 				$title = Title::newFromText( $rightsPage );
-				$link = MediaWikiServices::getInstance()->getLinkRenderer()->makeKnownLink(
-					$title,
-					new HtmlArmor( $rightsText ),
-					$attribs
-				);
+				$linkRenderer = MediaWikiServices::getInstance()->getLinkRenderer();
+				$link = $linkRenderer->makeKnownLink( $title, new HtmlArmor( $rightsText ), $attribs );
 			} elseif ( $rightsUrl ) {
 				$link = Linker::makeExternalLink( $rightsUrl, $rightsText, true, '', $attribs );
 			} else {
