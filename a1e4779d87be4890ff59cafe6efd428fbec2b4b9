@@ -16,6 +16,24 @@
       "revId": "a1e4779d87be4890ff59cafe6efd428fbec2b4b9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f44de537_e83e035c",
+        "filename": "src/mobile.languages.structured/LanguageOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-02-15T03:40:21Z",
+      "side": 1,
+      "message": "Yes, I\u0027m trying to not make a bidirectional dependency between this patch and the minerva one (Ie6dad4bd3c80e6cfcc1d7f9ad38941a323ba3cc6). Currently minerva is expecting back a LanguageOverlay class that it instantiates so I think I must keep LanguageOverlay around until that one gets merged or else Minerva will break? This and the LanguageSearcher class are a little bit different (e.g. this one assigns a className). Is there a better way to do this?",
+      "parentUuid": "d92ec572_3b7a8b2d",
+      "revId": "a1e4779d87be4890ff59cafe6efd428fbec2b4b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
