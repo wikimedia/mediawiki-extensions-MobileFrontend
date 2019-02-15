@@ -212,6 +212,8 @@ mfExtend( EditorOverlayBase, Overlay, {
 			title = this.options.title,
 			self = this;
 
+		this.saved = true;
+
 		// FIXME: use generic method for following 3 lines
 		this.pageGateway.invalidatePage( title );
 
@@ -387,6 +389,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 		this.showHidden( '.initial-header' );
 	},
 	show: function () {
+		this.saved = false;
 		Overlay.prototype.show.call( this );
 		// Inform other interested code that the editor has loaded
 		mw.hook( 'mobileFrontend.editorOpened' ).fire( this.editor );
@@ -397,20 +400,6 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 * @instance
 	 */
 	onClickBack: function () {},
-	/**
-	 * Exit handler
-	 * @memberof EditorOverlayBase
-	 * @instance
-	 */
-	onExitClick: function () {
-		Overlay.prototype.onExitClick.apply( this, arguments );
-		// log cancel attempt
-		this.log( {
-			action: 'abort',
-			mechanism: 'cancel',
-			type: this.hasChanged() ? 'abandon' : 'nochange'
-		} );
-	},
 	/**
 	 * Submit button click handler
 	 * @memberof EditorOverlayBase
@@ -442,16 +431,34 @@ mfExtend( EditorOverlayBase, Overlay, {
 			return windowManager.openWindow( 'abandonedit' )
 				.closed.then( function ( data ) {
 					if ( data && data.action === 'discard' ) {
+						// log abandonment
+						self.log( {
+							action: 'abort',
+							mechanism: 'cancel',
+							type: 'abandon'
+						} );
 						self.allowCloseWindow.release();
 						mw.hook( 'mobileFrontend.editorClosed' ).fire();
 						Overlay.prototype.hide.call( self );
 					}
 				} );
-		} else {
-			this.allowCloseWindow.release();
-			mw.hook( 'mobileFrontend.editorClosed' ).fire();
-			return Overlay.prototype.hide.call( self );
 		}
+		if ( !this.switching && !this.saved ) {
+			// log leaving without changes
+			this.log( {
+				action: 'abort',
+				mechanism: 'cancel',
+				// if this is VE, hasChanged will be false because the Surface has
+				// already been destroyed (which is good because it stops us
+				// double-showing the abandon changes dialog above)... but we can
+				// test whether there *were* changes for logging purposes by
+				// examining the target:
+				type: ( this.target && this.target.edited ) ? 'abandon' : 'nochange'
+			} );
+		}
+		this.allowCloseWindow.release();
+		mw.hook( 'mobileFrontend.editorClosed' ).fire();
+		return Overlay.prototype.hide.call( self );
 	},
 	/**
 	 * Check, if the user should be asked if they really want to leave the page.
