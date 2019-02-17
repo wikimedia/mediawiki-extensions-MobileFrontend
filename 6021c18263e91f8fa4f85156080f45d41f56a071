@@ -34,6 +34,24 @@
       "revId": "6021c18263e91f8fa4f85156080f45d41f56a071",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b019d91f_40f97d66",
+        "filename": "src/mobile.special.nearby.scripts/Nearby.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2019-02-17T11:25:25Z",
+      "side": 1,
+      "message": "It turns out that if you pass a non-string to $.find it assumes it is an element and so calls `$(arg)` before trying to iterate over the result. This means that this call accidentally ends up doing what you probably intended.",
+      "parentUuid": "6e0a65ce_1bf62fd4",
+      "revId": "6021c18263e91f8fa4f85156080f45d41f56a071",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
