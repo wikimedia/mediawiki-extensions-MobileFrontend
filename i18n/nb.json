@@ -15,7 +15,8 @@
 			"Tarjeimo",
 			"Jon Harald Søby",
 			"Jeblad",
-			"Pmt"
+			"Pmt",
+			"AnB"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Hvorvidt en bruker redigerer fra mobilgrensesnittet",
@@ -62,11 +63,12 @@
 	"mobile-frontend-editor-abusefilter-warning": "Advarsel: Er du sikker på at du vil lagre redigeringen? Det kan være et problem med den.",
 	"mobile-frontend-editor-anon": "Rediger uten å logge inn",
 	"mobile-frontend-editor-anonwarning": "<strong>Advarsel:</strong> Du er ikke innlogget. IP-adressen din vil bli offentlig synlig hvis du utfører redigeringer. Hvis du <strong>logger inn</strong> eller <strong>oppretter en konto</strong>, vil redigeringene dine i stedet bli kreditert brukernavnet ditt.",
-	"mobile-frontend-editor-blocked-drawer-title": "Din konto har blitt blokkert fra å redigere {{SITENAME}}",
-	"mobile-frontend-editor-blocked-drawer-title-partial": "Kontoen din er blokkert fra å redigere denne siden",
+	"mobile-frontend-editor-blocked-drawer-title": "Du har blitt blokkert fra å redigere {{SITENAME}}",
+	"mobile-frontend-editor-blocked-drawer-title-partial": "Du har blitt blokkert fra å redigere denne siden",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Begrunnelse for blokkeringen",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Blokkert}} av",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "Blokkeringen vil opphøre om",
+	"mobile-frontend-editor-blocked-drawer-help": "Detaljer",
 	"mobile-frontend-editor-generic-block-reason": "Ukjent årsak",
 	"mobile-frontend-editor-cancel": "Avbryt",
 	"mobile-frontend-editor-cancel-confirm": "Er du sikker på at du ønsker å avbryte redigeringen?",

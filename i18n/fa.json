@@ -87,6 +87,7 @@
 	"mobile-frontend-editor-blocked-drawer-reason-header": "علت بستن",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|بسته شده}} توسط",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "بستن در ... پایان می‌یابد",
+	"mobile-frontend-editor-blocked-drawer-help": "جزئیات",
 	"mobile-frontend-editor-generic-block-reason": "علت ناشناسخته",
 	"mobile-frontend-editor-cancel": "انصراف",
 	"mobile-frontend-editor-cancel-confirm": "واقعاً می‌خواهید ویرایش خود را رها کنید؟",

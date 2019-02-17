@@ -22,7 +22,7 @@
 	"mobile-frontend-diffview-title": "Зьмены",
 	"mobile-frontend-donate-image-title": "Загрузкі",
 	"mobile-frontend-donate-image-title-you": "Вашыя загрузкі",
-	"mobile-frontend-editor-blocked-drawer-title": "Вашаму рахунку была заблякаваная магчымасьць рэдагаваць {{GRAMMAR:вінавальны|{{SITENAME}}}}",
+	"mobile-frontend-editor-blocked-drawer-title": "Вам была заблякаваная магчымасьць рэдагаваць {{GRAMMAR:вінавальны|{{SITENAME}}}}",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Прычына блякаваньня",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "Кім {{GENDER:$1|заблякаваны|заблякаваная}}",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "Тэрмін сканчэньня блякаваньня",

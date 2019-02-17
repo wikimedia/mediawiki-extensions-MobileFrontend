@@ -8,7 +8,8 @@
 			"Mirzali",
 			"Kumkumuk",
 			"Gırd",
-			"1917 Ekim Devrimi"
+			"1917 Ekim Devrimi",
+			"Orbot707"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Kodê tesdiqi cı de",
@@ -32,6 +33,9 @@
 	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}}'i vıraşten rë marë desteg bë.</strong><br />Qandë vurnayışi cı kewë",
 	"mobile-frontend-edit-signup-action": "<strong>{{SITENAME}}'i vıraşten rë marë desteg bë.</strong><br />Qandë vurnayışi qeyd bë",
 	"mobile-frontend-editor-abusefilter-read-more": "Tayêna bıwane",
+	"mobile-frontend-editor-blocked-drawer-title": "Sıma vurnayışê {{SITENAME}} ra asteng biyê",
+	"mobile-frontend-editor-blocked-drawer-title-partial": "Sıma vurnayışê na pela ra asteng biyê",
+	"mobile-frontend-editor-blocked-drawer-help": "Detayi",
 	"mobile-frontend-editor-cancel": "Bıtexelne",
 	"mobile-frontend-editor-continue": "Bahdoyên",
 	"mobile-frontend-editor-editing": "Vurniyeno",
@@ -79,7 +83,7 @@
 	"mobile-frontend-talk-add-overlay-submit": "Werênayış cı ke",
 	"mobile-frontend-talk-overlay-header": "Vatış",
 	"mobile-frontend-talk-reply": "Cewab",
-	"mobile-frontend-terms-text": "Şertê gureynayışi (xebetnayışi)",
+	"mobile-frontend-terms-text": "Şertê gurenayışi",
 	"mobile-frontend-view": "Asayışo mobil",
 	"mobile-frontend-view-desktop": "Destser",
 	"mobile-frontend-watchlist-a-z": "Liste",
@@ -88,7 +92,7 @@
 	"mobile-frontend-watchlist-cta": "Şıma ena perre u pêro vırnayışê cı teqib kerê.",
 	"mobile-frontend-watchlist-cta-button-login": "Cıkewtış",
 	"mobile-frontend-watchlist-cta-button-signup": "Qeyd be",
-	"mobile-frontend-watchlist-feed": "Vırneya",
+	"mobile-frontend-watchlist-feed": "Vurniya",
 	"mobile-frontend-watchlist-filter-all": "Pêro",
 	"mobile-frontend-watchlist-filter-articles": "Peli",
 	"mobile-frontend-watchlist-filter-other": "Zewbi",
