@@ -4,5 +4,27 @@
 			"Lalotahes"
 		]
 	},
-	"mobile-frontend-copyright": "So: hayza’ ka pinatinela’, ’oka’ ma’ saeboeh kapapnabih ’anoka $1 kaktaniSowawan Siniwa’."
+	"mobile-frontend-changeslist-nocomment": " ’ oka’ bienji zhay yau",
+	"mobile-frontend-copyright": "So: hayza’ ka pinatinela’, ’oka’ ma’ saeboeh kapapnabih ’anoka $1 kaktaniSowawan Siniwa’.",
+	"mobile-frontend-diffview-editcount": "{{PLURAL:$1| ’okik miniSa’la’ pinbienji }}",
+	"mobile-frontend-editor-cancel": "kayni’",
+	"mobile-frontend-editor-terms-link": "[$1  kapakra:aman kamatawaw ]",
+	"mobile-frontend-editor-summary": "zhayaw:",
+	"mobile-frontend-featured-article": "kaysa’an的 ’ima nonak kapapnabih",
+	"mobile-frontend-last-modified-date": " ’ima maybi:il bienji ray $1 $2",
+	"mobile-frontend-main-menu-settings-heading": "paskayzaeh",
+	"mobile-frontend-media-load-fail-retry": " ’alaybasez tal’izaeh",
+	"mobile-frontend-nearby-title": " ’al’alihan",
+	"mobile-frontend-news-items": "hinapa: noka Sinbon",
+	"mobile-frontend-privacy-link-text": "Sina:il",
+	"mobile-frontend-talk-overlay-header": " kapaehrahrangan",
+	"mobile-frontend-terms-text": " kapakra:aman kamatawaw",
+	"mobile-frontend-view": "komita’ ray ka’ar’arSen laleke: banben",
+	"mobile-frontend-view-desktop": "tyennawpan",
+	"mobile-frontend-watchlist-cta-button-login": "kaS’aboe’",
+	"mobile-frontend-watchlist-filter-all": "saeboeh",
+	"mobile-frontend-watchlist-filter-talk": " kapaehrahrangan",
+	"mobile-frontend-watchlist-more": "akoy",
+	"tag-mobile_edit": "laleke: ka’ar’arSen banben bienji",
+	"tag-mobile_web_edit": "laleke: ka’ar’arSen banben ka wangye’ bienji"
 }
