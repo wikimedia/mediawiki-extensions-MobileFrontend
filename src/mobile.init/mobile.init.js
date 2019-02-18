@@ -196,7 +196,11 @@ if ( !page.inNamespace( 'special' ) && isPageContentModelEditable ) {
 	// TODO: Mobile editor doesn't work well with other skins yet (it looks horribly broken
 	// without some styles that are only defined by Minerva).
 	if ( skinName === 'minerva' ) {
-		editor( page, skin );
+		// TODO: This code should not even be loaded on desktop.
+		// Remove this check when that is fixed (T216537).
+		if ( context.getMode() !== null ) {
+			editor( page, skin );
+		}
 	}
 }
 
