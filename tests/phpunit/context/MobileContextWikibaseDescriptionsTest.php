@@ -54,11 +54,11 @@ class MobileContextWikibaseDescriptionsTest extends MediaWikiTestCase {
 
 	/**
 	 * @dataProvider invalidFeatureProvider
-	 * @expectedException DomainException
 	 *
 	 * @covers MobileContext::shouldShowWikibaseDescriptions
 	 */
 	public function testItThrowsAnExceptionIfFailureIsInvalid( $feature ) {
+		$this->expectException( DomainException::class );
 		$this->context->shouldShowWikibaseDescriptions( $feature );
 	}
 }
