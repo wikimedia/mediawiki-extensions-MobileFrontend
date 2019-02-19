@@ -72,6 +72,24 @@
     },
     {
       "key": {
+        "uuid": "8513fdbd_f223cc81",
+        "filename": "src/mobile.languages.structured/mobile.languages.structured.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-02-19T21:10:27Z",
+      "side": 1,
+      "message": "LanguageSearcher is internal to languageFactory but if you use `require(\u0027LanguageSearcher\u0027)`  inside languageFactory, webpack will excise LanguageSearcher into mobile.common. Therefore, I think we have to use the m.define here (and m.require in languageFactory) unfortunately",
+      "parentUuid": "bc0c57ca_4dbe45d2",
+      "revId": "a1e4779d87be4890ff59cafe6efd428fbec2b4b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "959ed556_22fe2ab0",
         "filename": "src/mobile.languages.structured/mobile.languages.structured.js",
         "patchSetId": 3
@@ -83,6 +101,30 @@
       "writtenOn": "2019-02-15T18:25:39Z",
       "side": 1,
       "message": "this is still needed no? it might be renamed though and a rename can safely happen now!",
+      "range": {
+        "startLine": 8,
+        "startChar": 23,
+        "endLine": 8,
+        "endChar": 43
+      },
+      "revId": "a1e4779d87be4890ff59cafe6efd428fbec2b4b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "552cbb3f_84856cfc",
+        "filename": "src/mobile.languages.structured/mobile.languages.structured.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-02-19T21:10:27Z",
+      "side": 1,
+      "message": "comment has since been removed",
+      "parentUuid": "959ed556_22fe2ab0",
       "range": {
         "startLine": 8,
         "startChar": 23,
@@ -112,6 +154,24 @@
     },
     {
       "key": {
+        "uuid": "b04e72dc_497cc14a",
+        "filename": "src/mobile.languages.structured/mobile.languages.structured.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-02-19T21:10:27Z",
+      "side": 1,
+      "message": "done in latest patch",
+      "parentUuid": "82fe11ea_996132a4",
+      "revId": "a1e4779d87be4890ff59cafe6efd428fbec2b4b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6b0324d8_92ce4be7",
         "filename": "src/mobile.startup/languageFactory.js",
         "patchSetId": 3
@@ -129,6 +189,24 @@
     },
     {
       "key": {
+        "uuid": "09250d00_06eeb5c5",
+        "filename": "src/mobile.startup/languageFactory.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-02-19T21:10:27Z",
+      "side": 1,
+      "message": "using require will cause webpack to excise LanguageSearcher into mobile.common so I think it is needed?\n\nShould I remove the usages of `const` in the meantime?",
+      "parentUuid": "6b0324d8_92ce4be7",
+      "revId": "a1e4779d87be4890ff59cafe6efd428fbec2b4b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7f2bb53d_98f4c27f",
         "filename": "src/mobile.startup/languageFactory.js",
         "patchSetId": 3
@@ -140,6 +218,30 @@
       "writtenOn": "2019-02-15T18:25:39Z",
       "side": 1,
       "message": "new keyword not necessary.",
+      "range": {
+        "startLine": 54,
+        "startChar": 17,
+        "endLine": 54,
+        "endChar": 20
+      },
+      "revId": "a1e4779d87be4890ff59cafe6efd428fbec2b4b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c99eea6b_9362b2eb",
+        "filename": "src/mobile.startup/languageFactory.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-02-19T21:10:27Z",
+      "side": 1,
+      "message": "as an aside, should PromisedView be capitalized? If so, then languageOverlay should probably be capitalized...not sure what convention we are following for factories",
+      "parentUuid": "7f2bb53d_98f4c27f",
       "range": {
         "startLine": 54,
         "startChar": 17,
