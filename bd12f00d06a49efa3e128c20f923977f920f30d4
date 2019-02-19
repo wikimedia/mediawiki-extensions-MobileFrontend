@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "6df43fe0_0a704896",
+        "filename": "src/mobile.init/mobile.init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-19T20:29:31Z",
+      "side": 1,
+      "message": "While this is a quick fix, it\u0027s not the right fix so it needs a comment pointing to the fact it can be removed when https://phabricator.wikimedia.org/T216537 is resolved.\n\nI\u0027d feel more comfortable merging this if https://gerrit.wikimedia.org/r/491568 was merged first to start the deprecation process.",
+      "revId": "bd12f00d06a49efa3e128c20f923977f920f30d4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "44e50ea1_9b8373a0",
         "filename": "src/mobile.init/mobile.init.js",
         "patchSetId": 1
