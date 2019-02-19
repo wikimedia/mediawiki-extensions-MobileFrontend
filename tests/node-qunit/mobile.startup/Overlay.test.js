@@ -58,7 +58,7 @@ QUnit.test( 'HTML overlay', function ( assert ) {
 	}
 
 	mfExtend( TestOverlay, Overlay, {
-		templatePartials: util.extend( Overlay.prototype.templatePartials, {
+		templatePartials: util.extend( {}, Overlay.prototype.templatePartials, {
 			content: Hogan.compile( '<div class="content">YO</div>' )
 		} )
 	} );
