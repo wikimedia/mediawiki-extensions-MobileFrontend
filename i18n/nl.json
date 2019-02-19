@@ -79,6 +79,7 @@
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Reden voor blokkade",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Geblokkeerd}} door",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "Blokkade verloopt over",
+	"mobile-frontend-editor-blocked-drawer-help": "Gegevens",
 	"mobile-frontend-editor-generic-block-reason": "Onbekende reden",
 	"mobile-frontend-editor-cancel": "Annuleren",
 	"mobile-frontend-editor-cancel-confirm": "Wilt u uw bewerking echt niet opslaan?",
@@ -255,6 +256,7 @@
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "Introductieparagraaf",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Lettergrootte",
 	"mobile-frontend-mobile-option-amc-learn-more": "Meer lezen",
+	"mobile-frontend-mobile-option-amc-send-feedback": "Terugkoppelen",
 	"mobile-frontend-beta-only": "Functie alleen beschikbaar in betamodus",
 	"mobile-frontend-console-recruit": "Leer meer over hoe we onze mobiele website bouwen op https://www.mediawiki.org/wiki/Extension:MobileFrontend",
 	"prefs-mobile": "Mobiele instellingen"
