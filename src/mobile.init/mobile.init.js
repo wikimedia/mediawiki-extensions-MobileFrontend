@@ -210,6 +210,8 @@ exports = {
 
 // Make getCurrentPage available to mobile.editor and Minerva modules
 mfUtil.extend( mw.mobileFrontend, exports );
-// expose to Minerva (skins.minerva.scripts)
-mw.mobileFrontend.define( 'mobile.init/skin', skin ); // resource-modules-disable-line
+mw.log.deprecate( mw.mobileFrontend, 'getCurrentPage', getCurrentPage );
+
+mw.mobileFrontend.deprecate( 'mobile.init/skin', skin,
+	'instance of mobile.startup/Skin. Minerva should have no dependencies on mobile.init' ); // resource-modules-disable-line
 module.exports = exports;
