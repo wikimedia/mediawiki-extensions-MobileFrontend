@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "44e50ea1_9b8373a0",
+        "filename": "src/mobile.init/mobile.init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 210,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-19T16:04:40Z",
+      "side": 1,
+      "message": "(and i\u0027m guessing this is the sole reason why..)",
+      "revId": "bd12f00d06a49efa3e128c20f923977f920f30d4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

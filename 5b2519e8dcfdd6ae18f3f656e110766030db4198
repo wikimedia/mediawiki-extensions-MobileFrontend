@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a954a18d_cfca9c17",
+        "filename": "src/mobile.init/mobile.init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 185,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-19T16:04:40Z",
+      "side": 0,
+      "message": "This code should not run on desktop. If it is.. we should work out why and fix that.",
+      "revId": "5b2519e8dcfdd6ae18f3f656e110766030db4198",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
