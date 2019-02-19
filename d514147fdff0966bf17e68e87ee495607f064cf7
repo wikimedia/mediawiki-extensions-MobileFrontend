@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9b1d9915_91f7f7fd",
+        "filename": "src/mobile.startup/AsyncContentOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-19T22:08:41Z",
+      "side": 1,
+      "message": "How about naming this asyncContentOverlay?\n\nWhat\u0027s the benefit of having this function rather than \no \u003d new Overlay();\no.$( \u0027.overlay-content\u0027 ).append( promiseView( promise) )\n\nMight this be a premature optimisation?",
+      "revId": "d514147fdff0966bf17e68e87ee495607f064cf7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5fa78073_6055acea",
+        "filename": "src/mobile.startup/AsyncContentOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-19T22:08:41Z",
+      "side": 1,
+      "message": "Why can\u0027t this behaviour be folded into the promiseView component?",
+      "revId": "d514147fdff0966bf17e68e87ee495607f064cf7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

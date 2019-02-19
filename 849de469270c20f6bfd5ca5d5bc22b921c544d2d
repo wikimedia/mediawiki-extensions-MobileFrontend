@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "080f2903_b6f61aa2",
+        "filename": "src/mobile.startup/AsyncContentOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-19T22:08:41Z",
+      "side": 1,
+      "message": "should we make this a utility function e.g. rename to asyncContentOverlay\n(I\u0027ve been wondering similar things for PromisedView)",
+      "revId": "849de469270c20f6bfd5ca5d5bc22b921c544d2d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da007cd6_61d6d6ab",
+        "filename": "src/mobile.startup/AsyncContentOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-19T22:08:41Z",
+      "side": 1,
+      "message": "where does this class get removed? Can it be avoided and contained in the spinner method ?",
+      "range": {
+        "startLine": 20,
+        "startChar": 44,
+        "endLine": 20,
+        "endChar": 68
+      },
+      "revId": "849de469270c20f6bfd5ca5d5bc22b921c544d2d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
