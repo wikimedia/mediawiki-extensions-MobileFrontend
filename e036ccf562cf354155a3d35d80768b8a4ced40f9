@@ -22,6 +22,30 @@
       "revId": "e036ccf562cf354155a3d35d80768b8a4ced40f9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6b1500c1_5d41f04a",
+        "filename": "src/mobile.startup/PromisedView.js",
+        "patchSetId": 17
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-02-19T18:42:01Z",
+      "side": 1,
+      "message": "does not* change the state of the promise",
+      "parentUuid": "c777d7a6_f7d4ab6d",
+      "range": {
+        "startLine": 10,
+        "startChar": 18,
+        "endLine": 10,
+        "endChar": 26
+      },
+      "revId": "e036ccf562cf354155a3d35d80768b8a4ced40f9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
