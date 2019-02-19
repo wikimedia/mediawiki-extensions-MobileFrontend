@@ -46,6 +46,30 @@
       "revId": "e036ccf562cf354155a3d35d80768b8a4ced40f9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0d9ae986_41c2c203",
+        "filename": "src/mobile.startup/PromisedView.js",
+        "patchSetId": 17
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-19T22:05:13Z",
+      "side": 1,
+      "message": "That makes sense to me..",
+      "parentUuid": "6b1500c1_5d41f04a",
+      "range": {
+        "startLine": 10,
+        "startChar": 18,
+        "endLine": 10,
+        "endChar": 26
+      },
+      "revId": "e036ccf562cf354155a3d35d80768b8a4ced40f9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
