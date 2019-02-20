@@ -70,6 +70,24 @@
       "revId": "484a74a13b2ec35d0135bfd6af4ebe9cef7e0a03",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a0d72421_b1945632",
+        "filename": "src/mobile.startup/toast.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2019-02-20T21:47:51Z",
+      "side": 1,
+      "message": "I didn\u0027t mean the method is deprecated. Passing a string as the second argument is deprecated.\n\nAs before, anyone trying to use a DOM option with this method would see it obviously fail.",
+      "parentUuid": "03180e23_81164fab",
+      "revId": "484a74a13b2ec35d0135bfd6af4ebe9cef7e0a03",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
