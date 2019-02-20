@@ -173,7 +173,7 @@ mfExtend( TalkSectionAddOverlay, Overlay, {
 					break;
 			}
 
-			toast.show( editMsg, 'error' );
+			toast.show( editMsg, { type: 'error' } );
 			self.showHidden( '.save-header, .save-panel' );
 		} );
 	},

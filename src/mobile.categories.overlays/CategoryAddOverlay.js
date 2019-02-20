@@ -134,7 +134,7 @@ mfExtend( CategoryAddOverlay, Overlay, {
 		// if there are no categories added, don't do anything (the user shouldn't see the save
 		// button)
 		if ( newCategories.length === 0 ) {
-			toast.show( mw.msg( 'mobile-frontend-categories-nodata' ), 'error' );
+			toast.show( mw.msg( 'mobile-frontend-categories-nodata' ), { type: 'error' } );
 		} else {
 			// save the new categories
 			this.gateway.save( this.title, newCategories ).then( function () {
@@ -146,7 +146,7 @@ mfExtend( CategoryAddOverlay, Overlay, {
 				self.showHidden( '.initial-header' );
 				self.$safeButton.prop( 'disabled', false );
 				// FIXME: Should be a better error message
-				toast.show( mw.msg( 'mobile-frontend-categories-nodata' ), 'toast error' );
+				toast.show( mw.msg( 'mobile-frontend-categories-nodata' ), { type: 'error' } );
 			} );
 		}
 	}

@@ -181,7 +181,7 @@ mfExtend( Watchstar, View, {
 		}, function () {
 			stopInterval();
 
-			toast.show( mw.msg( 'mobile-frontend-watchlist-error' ), 'error' );
+			toast.show( mw.msg( 'mobile-frontend-watchlist-error' ), { type: 'error' } );
 		} );
 	},
 

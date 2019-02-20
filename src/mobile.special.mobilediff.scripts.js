@@ -47,7 +47,7 @@ function init() {
 				toast.show( mw.msg( 'markedaspatrollednotify', title.toText() ) );
 			} else {
 				// This should never happen as errors should trigger fail
-				toast.show( mw.msg( 'markedaspatrollederrornotify' ), 'error' );
+				toast.show( mw.msg( 'markedaspatrollederrornotify' ), { type: 'error' } );
 			}
 		}, function ( error ) {
 			$spinner.remove();
@@ -56,9 +56,9 @@ function init() {
 			$patrolLinks.show();
 			if ( error === 'noautopatrol' ) {
 				// Can't patrol own
-				toast.show( mw.msg( 'markedaspatrollederror-noautopatrol' ), 'warn' );
+				toast.show( mw.msg( 'markedaspatrollederror-noautopatrol' ), { type: 'warn' } );
 			} else {
-				toast.show( mw.msg( 'markedaspatrollederrornotify' ), 'error' );
+				toast.show( mw.msg( 'markedaspatrollederrornotify' ), { type: 'error' } );
 			}
 		} );
 

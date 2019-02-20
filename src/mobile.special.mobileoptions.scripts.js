@@ -14,7 +14,7 @@ function notify( isPending ) {
 	if ( isPending ) {
 		toast.showOnPageReload( msg( 'mobile-frontend-settings-save' ) );
 	} else {
-		toast.show( msg( 'mobile-frontend-settings-save' ), {} );
+		toast.show( msg( 'mobile-frontend-settings-save' ) );
 	}
 }
 /**

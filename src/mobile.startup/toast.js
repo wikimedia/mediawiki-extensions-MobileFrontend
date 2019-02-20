@@ -59,9 +59,13 @@ Toast.prototype.hide = function () {
  * @memberof Toast
  * @instance
  * @param {string} content Content to be placed in element
- * @param {string} [className] class to add to element
+ * @param {Object|string} [options]
+ *  If a string (deprecated) CSS class to add to the element
+ *  If an object, more options for the notification see mw.notification.show.
+ *  For backwards compatibility reasons if a string is given it will be
+ *  treated as options.type
  */
-Toast.prototype.showOnPageReload = function ( content, className ) {
+Toast.prototype.showOnPageReload = function ( content, options ) {
 	if ( mw.storage.get( storageKey ) ) {
 		mw.log.warn(
 			'A pending toast message already exits. ' +
@@ -71,7 +75,7 @@ Toast.prototype.showOnPageReload = function ( content, className ) {
 	}
 	mw.storage.set( storageKey, JSON.stringify( {
 		content: content,
-		className: className
+		options: options
 	} ) );
 };
 
@@ -85,7 +89,7 @@ Toast.prototype._showPending = function () {
 	var data = mw.storage.get( storageKey );
 	if ( data ) {
 		data = JSON.parse( data );
-		this.show( data.content, data.className );
+		this.show( data.content, data.options );
 		mw.storage.remove( storageKey );
 	}
 };

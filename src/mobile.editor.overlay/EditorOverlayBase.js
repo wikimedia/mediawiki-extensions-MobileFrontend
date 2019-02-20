@@ -225,7 +225,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 		} else {
 			msg = mw.msg( 'mobile-frontend-editor-success' );
 		}
-		toast.showOnPageReload( msg, 'success' );
+		toast.showOnPageReload( msg, { type: 'success' } );
 
 		// Ensure we don't lose this event when logging
 		this.log( {
