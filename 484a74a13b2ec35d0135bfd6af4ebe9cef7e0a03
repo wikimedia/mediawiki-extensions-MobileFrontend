@@ -52,6 +52,24 @@
       "revId": "484a74a13b2ec35d0135bfd6af4ebe9cef7e0a03",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "03180e23_81164fab",
+        "filename": "src/mobile.startup/toast.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-20T21:31:30Z",
+      "side": 1,
+      "message": "\u003e If the method is deprecated we should get rid of it or it will break at some point. I\u0027ll have a look at the mw.notify options..\n\nI don\u0027t think showOnPageReload should be deprecated.\nit has a specific purpose which is deferring toasts till after a page reload and discussed here https://phabricator.wikimedia.org/T212542\nWe need to work out whether this needs to be in core.\n\n\u003e Looking at the docs all options are either bool, number or string, so this should be fine to serialize.\n\nTechnical aside, we don\u0027t need this functionality, so I\u0027m not sure why we need to support it as it opens up a risk in future of new arguments being passed to toast that we cannot handle.",
+      "parentUuid": "fa87ea46_37e3a2ff",
+      "revId": "484a74a13b2ec35d0135bfd6af4ebe9cef7e0a03",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
