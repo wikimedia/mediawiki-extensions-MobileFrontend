@@ -46,6 +46,30 @@
       "revId": "cba2c8cfc847b6d520d02082210c3a5f423f50b6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2f4a2e7b_e4c4aaae",
+        "filename": "package.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-20T21:35:56Z",
+      "side": 1,
+      "message": "Geez you are right... messy (I\u0027d thought it was running npm test)!\n\nDon\u0027t have any qualms about doing that in this patch or another but would be good to address all these issues satisfactory while we are here and thinking about it.\n\nI think precommit hook only needs to run composer (preferably if only php changes), linting and unit tests (node.js) + coverage.\n\nPersonally I think we could drop bundlesize checks, svg checks and doc checks and leave those to Jenkins.",
+      "parentUuid": "c443ca05_8ae2beaa",
+      "range": {
+        "startLine": 12,
+        "startChar": 36,
+        "endLine": 12,
+        "endChar": 78
+      },
+      "revId": "cba2c8cfc847b6d520d02082210c3a5f423f50b6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
