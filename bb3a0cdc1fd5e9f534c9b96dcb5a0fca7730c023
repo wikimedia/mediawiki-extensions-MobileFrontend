@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "14b9745d_82b495c8",
+        "filename": "src/mobile.editor.ve/ve.init.mw.MobileFrontendArticleTarget.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 286,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-20T20:13:29Z",
+      "side": 1,
+      "message": "Can we document this setTimeout (I\u0027m not 100% sure what it\u0027s compensating for... should/could this use a return value from onSaveComplete ?",
+      "revId": "bb3a0cdc1fd5e9f534c9b96dcb5a0fca7730c023",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
