@@ -22,6 +22,30 @@
       "revId": "9b701cfdf71d26cd010529faab1689a08099c269",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ad93fed1_db694951",
+        "filename": "src/mobile.init/mobile.init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 213,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-20T18:00:55Z",
+      "side": 1,
+      "message": "We\u0027d need a global event bus, which I thought we were moving away from. Here I use the local event bus to Skin to emit a global event for Minerva to subscribe to.\n\nmw.hook is the global event bus used by all Wikimedia extensions, so it felt like the right thing to do here.\n\nAre you suggesting creating a new global event bus? If so what are the advantages of doing that over using mw.hook?",
+      "parentUuid": "07665b17_85f300fc",
+      "range": {
+        "startLine": 213,
+        "startChar": 1,
+        "endLine": 213,
+        "endChar": 47
+      },
+      "revId": "9b701cfdf71d26cd010529faab1689a08099c269",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
