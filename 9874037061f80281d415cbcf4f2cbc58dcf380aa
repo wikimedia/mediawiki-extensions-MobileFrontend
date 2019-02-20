@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "cea43cc4_b1096428",
+        "filename": "src/mobile.startup/promisedView.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-20T21:06:14Z",
+      "side": 1,
+      "message": "Do we need a class?\nWouldn\u0027t/shouldn\u0027t any classes go on icons.spinner() ?\n\n(Also now while I think about it, we could make the view itself icons.spinner() if we wanted and drop the new View altogether..",
+      "parentUuid": "5e8a2457_19828991",
+      "range": {
+        "startLine": 15,
+        "startChar": 14,
+        "endLine": 15,
+        "endChar": 27
+      },
+      "revId": "9874037061f80281d415cbcf4f2cbc58dcf380aa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "03f9c65d_c7a11c0b",
         "filename": "src/mobile.startup/promisedView.js",
         "patchSetId": 1
