@@ -97,6 +97,30 @@
     },
     {
       "key": {
+        "uuid": "3eef23c9_d70b6f3d",
+        "filename": "src/mobile.startup/promisedView.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-20T21:28:16Z",
+      "side": 1,
+      "message": "why not promised-view then per Stephen\u0027s suggestion to aid discoverability?\nThis class is the class of the view itself thus not a __component.\n\nI\u0027m not sure a modifier is necessary here. The view by definition is always loading and at the end of its lifecycle disappears so has no concept itself of state. It\u0027s either loading or doing nothing.",
+      "parentUuid": "ceada5f0_6e69a2ea",
+      "range": {
+        "startLine": 15,
+        "startChar": 14,
+        "endLine": 15,
+        "endChar": 27
+      },
+      "revId": "9874037061f80281d415cbcf4f2cbc58dcf380aa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "03f9c65d_c7a11c0b",
         "filename": "src/mobile.startup/promisedView.js",
         "patchSetId": 1
