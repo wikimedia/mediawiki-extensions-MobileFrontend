@@ -121,6 +121,54 @@
     },
     {
       "key": {
+        "uuid": "42bc0bfe_3ae45b55",
+        "filename": "src/mobile.startup/promisedView.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-02-20T22:19:14Z",
+      "side": 1,
+      "message": "Agreed, updated in latest patch.",
+      "parentUuid": "3eef23c9_d70b6f3d",
+      "range": {
+        "startLine": 15,
+        "startChar": 14,
+        "endLine": 15,
+        "endChar": 27
+      },
+      "revId": "9874037061f80281d415cbcf4f2cbc58dcf380aa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ac2fd1c_e0f97b4c",
+        "filename": "src/mobile.startup/promisedView.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-02-20T22:19:14Z",
+      "side": 1,
+      "message": "Good point, latest patch uses \u0027promised-view\u0027. Modifier was removed per Jon\u0027s comments..",
+      "parentUuid": "5e8a2457_19828991",
+      "range": {
+        "startLine": 15,
+        "startChar": 14,
+        "endLine": 15,
+        "endChar": 27
+      },
+      "revId": "9874037061f80281d415cbcf4f2cbc58dcf380aa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "03f9c65d_c7a11c0b",
         "filename": "src/mobile.startup/promisedView.js",
         "patchSetId": 1
@@ -132,6 +180,30 @@
       "writtenOn": "2019-02-20T20:24:25Z",
       "side": 1,
       "message": "Probably out of scope for this patch but since we have a --loading state in our CSS now, do you think we will still need to add a spinner in HTML?",
+      "range": {
+        "startLine": 17,
+        "startChar": 18,
+        "endLine": 17,
+        "endChar": 37
+      },
+      "revId": "9874037061f80281d415cbcf4f2cbc58dcf380aa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "897f875a_d6a013ac",
+        "filename": "src/mobile.startup/promisedView.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-02-20T22:19:14Z",
+      "side": 1,
+      "message": "That\u0027s a great question and one I had myself, but it looks like the spinner also has accessibility? text that it includes with it. Maybe that could be replaced with aria attributes? Basically I\u0027m not sure, but will be thinking about this more",
+      "parentUuid": "03f9c65d_c7a11c0b",
       "range": {
         "startLine": 17,
         "startChar": 18,
