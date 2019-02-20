@@ -1,10 +1,10 @@
-var
+let
 	jQuery = require( '../utils/jQuery' ),
 	dom = require( '../utils/dom' ),
 	mediaWiki = require( '../utils/mw' ),
 	oo = require( '../utils/oo' ),
 	sinon = require( 'sinon' ),
-	LanguageOverlay,
+	LanguageSearcher,
 	sandbox,
 	apiLanguages = [
 		{
@@ -68,7 +68,7 @@ var
 		ko: 1
 	};
 
-QUnit.module( 'MobileFrontend LanguageOverlay.js', {
+QUnit.module( 'MobileFrontend LanguageSearcher.js', {
 	beforeEach: function () {
 		sandbox = sinon.sandbox.create();
 		dom.setUp( sandbox, global );
@@ -76,13 +76,12 @@ QUnit.module( 'MobileFrontend LanguageOverlay.js', {
 		oo.setUp( sandbox, global );
 		mediaWiki.setUp( sandbox, global );
 
-		LanguageOverlay = require( '../../../src/mobile.languages.structured/LanguageOverlay' );
+		LanguageSearcher = require( '../../../src/mobile.languages.structured/LanguageSearcher' );
 
 		sandbox.stub( mw.storage, 'get' ).withArgs( 'langMap' )
 			.returns( JSON.stringify( frequentlyUsedLanguages ) );
 
-		this.languageOverlay = new LanguageOverlay( {
-			currentLanguage: 'en',
+		this.languageSearcher = new LanguageSearcher( {
 			languages: apiLanguages,
 			variants: [],
 			deviceLanguage: deviceLanguage
@@ -96,50 +95,50 @@ QUnit.module( 'MobileFrontend LanguageOverlay.js', {
 
 QUnit.test( 'render output', function ( assert ) {
 	assert.strictEqual(
-		this.languageOverlay.$el.find( '.site-link-list.suggested-languages a' ).length,
+		this.languageSearcher.$el.find( '.site-link-list.suggested-languages a' ).length,
 		3,
 		'There are 3 suggested languages.'
 	);
 
 	assert.strictEqual(
-		this.languageOverlay.$el.find( '.site-link-list.all-languages a' ).length,
+		this.languageSearcher.$el.find( '.site-link-list.all-languages a' ).length,
 		7,
 		'Seven languages are non-suggested.'
 	);
 } );
 
 QUnit.test( 'filterLanguages()', function ( assert ) {
-	this.languageOverlay.filterLanguages( 'zh' );
+	this.languageSearcher.filterLanguages( 'zh' );
 	assert.strictEqual(
-		this.languageOverlay.$el.find( '.site-link-list a:not(.hidden)' ).length,
+		this.languageSearcher.$el.find( '.site-link-list a:not(.hidden)' ).length,
 		3,
 		'Three languages match "zh" and only those languages are visible.'
 	);
 
-	this.languageOverlay.filterLanguages( 'ol' );
+	this.languageSearcher.filterLanguages( 'ol' );
 	assert.ok(
-		this.languageOverlay.$el.find( '.site-link-list a:not(.hidden)' ).length === 1 &&
-		this.languageOverlay.$el.find( '.site-link-list a:not(.hidden)' ).hasClass( 'be-x-old' ),
+		this.languageSearcher.$el.find( '.site-link-list a:not(.hidden)' ).length === 1 &&
+		this.languageSearcher.$el.find( '.site-link-list a:not(.hidden)' ).hasClass( 'be-x-old' ),
 		'One language (be-x-old) matches "ol" and only that language is visible.'
 	);
 
-	this.languageOverlay.filterLanguages( 'chin' );
+	this.languageSearcher.filterLanguages( 'chin' );
 	assert.ok(
-		this.languageOverlay.$el.find( '.site-link-list a:not(.hidden)' ).length === 1 &&
-		this.languageOverlay.$el.find( '.site-link-list a:not(.hidden)' ).hasClass( 'zh-min-nan' ),
+		this.languageSearcher.$el.find( '.site-link-list a:not(.hidden)' ).length === 1 &&
+		this.languageSearcher.$el.find( '.site-link-list a:not(.hidden)' ).hasClass( 'zh-min-nan' ),
 		'One language (zh-min-nan) matches "Chin" (langname) and only that language is visible.'
 	);
 
-	this.languageOverlay.filterLanguages( '' );
+	this.languageSearcher.filterLanguages( '' );
 	assert.strictEqual(
-		this.languageOverlay.$el.find( '.site-link-list a:not(.hidden)' ).length,
+		this.languageSearcher.$el.find( '.site-link-list a:not(.hidden)' ).length,
 		10,
 		'The search filter has been cleared. All 10 languages (including variants) are visible.'
 	);
 
-	this.languageOverlay.filterLanguages( 'ўз' );
+	this.languageSearcher.filterLanguages( 'ўз' );
 	assert.strictEqual(
-		this.languageOverlay.$el.find( '.site-link-list a:not(.hidden)' ).length,
+		this.languageSearcher.$el.find( '.site-link-list a:not(.hidden)' ).length,
 		1,
 		'One language matches "ўз" and only that language is visible.'
 	);

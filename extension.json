@@ -298,7 +298,8 @@
 				"mobile-frontend-search-no-results",
 				"mobile-frontend-search-content-no-results",
 				"mobile-frontend-search-feedback-prompt",
-				"mobile-frontend-search-feedback-link-text"
+				"mobile-frontend-search-feedback-link-text",
+				"mobile-frontend-language-heading"
 			],
 			"styles": [
 				"resources/mobile.startup/spinner.less",
@@ -311,7 +312,8 @@
 				"resources/mobile.startup/watchstar/watchstar.less",
 				"resources/mobile.startup/Toggler.less",
 				"resources/mobile.startup/search/SearchOverlay.less",
-				"resources/mobile.startup/toc/TableOfContents.less"
+				"resources/mobile.startup/toc/TableOfContents.less",
+				"resources/mobile.startup/languageOverlay/languageOverlay.less"
 			],
 			"scripts": [
 				"resources/dist/mobile.common.js",
@@ -539,13 +541,12 @@
 				"resources/dist/mobile.languages.structured.js"
 			],
 			"styles": [
-				"resources/mobile.languages.structured/LanguageOverlay.less"
+				"resources/mobile.languages.structured/LanguageSearcher.less"
 			],
 			"templates": {
-				"LanguageOverlay.hogan": "resources/mobile.languages.structured/LanguageOverlay.hogan"
+				"LanguageSearcher.hogan": "resources/mobile.languages.structured/LanguageSearcher.hogan"
 			},
 			"messages": [
-				"mobile-frontend-language-heading",
 				"mobile-frontend-languages-structured-overlay-suggested-languages-header",
 				"mobile-frontend-languages-structured-overlay-all-languages-header",
 				"mobile-frontend-languages-structured-overlay-search-input-placeholder"
