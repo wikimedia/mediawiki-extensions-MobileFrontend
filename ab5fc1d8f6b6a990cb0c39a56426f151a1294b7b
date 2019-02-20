@@ -16,6 +16,24 @@
       "revId": "ab5fc1d8f6b6a990cb0c39a56426f151a1294b7b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "35421c37_5597f37d",
+        "filename": "src/mobile.startup/languageFactory.js",
+        "patchSetId": 17
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-02-20T23:53:04Z",
+      "side": 1,
+      "message": "Yeah, I wondered the same thing. I\u0027ve decided that I don\u0027t like languageFactory as it\u0027s not clear what is returned. I\u0027m leaning towards languageOverlay for conciseness and a happy medium between the two. Which do you prefer?",
+      "parentUuid": "564f911a_f1deb037",
+      "revId": "ab5fc1d8f6b6a990cb0c39a56426f151a1294b7b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
