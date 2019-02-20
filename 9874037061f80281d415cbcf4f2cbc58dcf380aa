@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9144380b_6906c216",
+        "filename": "resources/mobile.languages.structured/LanguageSearcher.hogan",
+        "patchSetId": 13
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-20T21:20:59Z",
+      "side": 0,
+      "message": "You might want to coonsider inlining the template \nlike this: \nhttps://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/485090/5/src/mobile.startup/Anchor.js\n\nif it helps?",
+      "revId": "9874037061f80281d415cbcf4f2cbc58dcf380aa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "79f73c87_9c00e61b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 13
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-20T21:20:59Z",
+      "side": 1,
+      "message": "was or will be?\n\nIt would help to point to the change id here.",
+      "range": {
+        "startLine": 39,
+        "startChar": 2,
+        "endLine": 40,
+        "endChar": 19
+      },
+      "revId": "d72cf30556360c58f1b9edd8817d355e4b5e167c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fe3675b9_c0729d62",
+        "filename": "resources/mobile.startup/Overlay.less",
+        "patchSetId": 13
+      },
+      "lineNbr": 371,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-20T21:20:59Z",
+      "side": 1,
+      "message": "Should this be specific to language-overlay or overlay?\n\nLong term, it would be nice if all overlays predictably had the class \"overlay\" and we didn\u0027t have to worry about specific types of overlay.\n\nOr maybe we could use BEM instead e.g. overlay--with-spinner ?\n\nAlso this should be above the media query.\nMedia query comes last in all our files.",
+      "revId": "d72cf30556360c58f1b9edd8817d355e4b5e167c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dcb1cbca_def4e6b5",
+        "filename": "resources/mobile.startup/Overlay.less",
+        "patchSetId": 13
+      },
+      "lineNbr": 381,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-20T21:20:59Z",
+      "side": 1,
+      "message": "Why not .language-overlay .spinner? (see also review on https://gerrit.wikimedia.org/r/491829)",
+      "revId": "d72cf30556360c58f1b9edd8817d355e4b5e167c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c361bede_b0f53611",
+        "filename": "src/mobile.languages.structured/LanguageSearcher.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-20T21:20:59Z",
+      "side": 1,
+      "message": "Given the majority of these are template properties should we separate them from className and events (with a line and comment) so that\u0027s clear?",
+      "revId": "d72cf30556360c58f1b9edd8817d355e4b5e167c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bcd63512_edc317e8",
+        "filename": "src/mobile.startup/languageFactory.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-20T21:20:59Z",
+      "side": 1,
+      "message": "Note, our goal to increase code coverage. Might this be a good time for an opportunistic refactor to make this a function that takes a navigator object?",
+      "revId": "d72cf30556360c58f1b9edd8817d355e4b5e167c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3532819d_4191e0a3",
+        "filename": "src/mobile.startup/languageFactory.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-20T21:20:59Z",
+      "side": 1,
+      "message": "Is the language-overlay class necessary or could this be removed?\nI only see 1 usage.",
+      "range": {
+        "startLine": 50,
+        "startChar": 3,
+        "endLine": 50,
+        "endChar": 40
+      },
+      "revId": "d72cf30556360c58f1b9edd8817d355e4b5e167c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "be5c6058_753760de",
+        "filename": "src/mobile.startup/languageFactory.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-20T21:20:59Z",
+      "side": 1,
+      "message": "In future maybe it would make sense to have a createOverlay helper that does this appending. (I can explore that in my talk overlay changes)",
+      "revId": "d72cf30556360c58f1b9edd8817d355e4b5e167c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
