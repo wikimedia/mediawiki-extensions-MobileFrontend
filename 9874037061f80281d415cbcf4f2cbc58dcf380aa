@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "ceada5f0_6e69a2ea",
+        "filename": "src/mobile.startup/promisedView.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-02-20T21:25:55Z",
+      "side": 1,
+      "message": "In LanguageOverlay\u0027s case, I needed to apply flexbox styles somewhere so the spinner could be horizontally and vertically centered. If you apply flexbox styles directly to the spinner element, the spinner overlaps with the text and messes it up. If I apply flexbox styles to the .overlay-content element then the client of PromisedView is responsible for removing the class right before ProimisedView replaces the view as PromisedView has no knowledge of .overlay-content (and probably shouldn\u0027t). Therefore, I found applying the flexbox styles to a parent element of the spinner because it doesn\u0027t mess up the styling of the spinner and PromisedView would just replace this element when done loading. Thus, it was the cleanest solution I\u0027ve found so far.",
+      "parentUuid": "cea43cc4_b1096428",
+      "range": {
+        "startLine": 15,
+        "startChar": 14,
+        "endLine": 15,
+        "endChar": 27
+      },
+      "revId": "9874037061f80281d415cbcf4f2cbc58dcf380aa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "03f9c65d_c7a11c0b",
         "filename": "src/mobile.startup/promisedView.js",
         "patchSetId": 1
