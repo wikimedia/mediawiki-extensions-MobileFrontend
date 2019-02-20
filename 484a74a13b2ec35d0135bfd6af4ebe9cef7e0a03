@@ -16,6 +16,24 @@
       "revId": "484a74a13b2ec35d0135bfd6af4ebe9cef7e0a03",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec7a853_6efe49ec",
+        "filename": "src/mobile.startup/toast.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2019-02-20T20:58:02Z",
+      "side": 1,
+      "message": "If the method is deprecated we should get rid of it or it will break at some point. I\u0027ll have a look at the mw.notify options..",
+      "parentUuid": "d4cf0834_cf3c025d",
+      "revId": "484a74a13b2ec35d0135bfd6af4ebe9cef7e0a03",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
