@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f00c5663_3b4385d3",
+        "filename": "tests/node-qunit/mobile.startup/promisedView.test.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-20T23:00:24Z",
+      "side": 1,
+      "message": "Not sure if this test adds anything. It confused me a little as it suggests the class is removed, but actually it\u0027s replaced. Doesn\u0027t the above line check that?",
+      "revId": "1233d7ccd592e129a609e57df60a363fe2390562",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
