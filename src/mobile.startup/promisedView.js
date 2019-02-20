@@ -11,7 +11,9 @@ var
  * @return {View}
  */
 function promisedView( promise ) {
-	var view = new View( {} );
+	var view = new View( {
+		className: 'promised-view'
+	} );
 	view.$el.append( icons.spinner().$el );
 	promise.then( function ( newView ) {
 		view.$el.replaceWith( newView.$el );

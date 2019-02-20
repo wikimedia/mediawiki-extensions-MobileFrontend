@@ -16,7 +16,10 @@ QUnit.module( 'MobileFrontend promisedView.js', {
 		mediaWiki.setUp( sandbox, global );
 		View = require( './../../../src/mobile.startup/View' );
 		promisedView = require( './../../../src/mobile.startup/promisedView' );
-		happyView = new View( {} );
+		happyView = new View( {
+			isBorderBox: false,
+			className: 'test'
+		} );
 		happyView.append( '😃' );
 		sandbox.stub( mw, 'msg' ).withArgs( 'mobile-frontend-loading-message' ).returns( '⌛' );
 	},
@@ -31,8 +34,10 @@ QUnit.test( '#constructor', function ( assert ) {
 		viewSuccess = promisedView( promise );
 
 	assert.strictEqual( viewSuccess.$el.text(), '⌛', 'the view is waiting to resolve' );
+	assert.ok( viewSuccess.$el.hasClass( 'promised-view' ), 'parent element has loading class when loading' );
 	promise.resolve( happyView );
 	return promise.then( function () {
+		assert.strictEqual( viewSuccess.$el.attr( 'class' ), 'test', 'fully replaces its parent element with happyView\'s parent element' );
 		assert.strictEqual( viewSuccess.$el.text(), '😃', 'the view resolved correctly' );
 	} );
 } );
