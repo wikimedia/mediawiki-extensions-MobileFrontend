@@ -1,0 +1,242 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e23d7d4b_e7090550",
+        "filename": "src/mobile.categories.overlays/CategoryTabs.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2019-02-20T22:25:55Z",
+      "side": 1,
+      "message": "TODO: Should probably use $()",
+      "revId": "ff62b2eb061bb81435fb285d33215d820f69fe54",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "55a78d8b_3b0c9061",
+        "filename": "src/mobile.editor.overlay/EditorOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2019-02-20T22:25:55Z",
+      "side": 1,
+      "message": "TODO: Should probably use $()",
+      "revId": "ff62b2eb061bb81435fb285d33215d820f69fe54",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9646eb37_9df27a05",
+        "filename": "src/mobile.init/BetaOptinPanel.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2019-02-20T22:25:55Z",
+      "side": 1,
+      "message": "TODO: Should probably use $()",
+      "revId": "ff62b2eb061bb81435fb285d33215d820f69fe54",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c95fde1e_63b93932",
+        "filename": "src/mobile.languages.structured/LanguageOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2019-02-20T22:25:55Z",
+      "side": 1,
+      "message": "TODO: Should probably use $()",
+      "revId": "ff62b2eb061bb81435fb285d33215d820f69fe54",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "608f204e_b5df1a4b",
+        "filename": "src/mobile.languages.structured/LanguageOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2019-02-20T22:25:55Z",
+      "side": 1,
+      "message": "TODO: Should probably use $()",
+      "revId": "ff62b2eb061bb81435fb285d33215d820f69fe54",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "659e89a1_97f47f8b",
+        "filename": "src/mobile.languages.structured/LanguageOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2019-02-20T22:25:55Z",
+      "side": 1,
+      "message": "TODO: Should probably use $()",
+      "revId": "ff62b2eb061bb81435fb285d33215d820f69fe54",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3fadd523_62b80433",
+        "filename": "src/mobile.mediaViewer/ImageOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2019-02-20T22:25:55Z",
+      "side": 1,
+      "message": "TODO: Should probably use $()",
+      "revId": "ff62b2eb061bb81435fb285d33215d820f69fe54",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5e9c005e_8ad49757",
+        "filename": "src/mobile.special.nearby.scripts/Nearby.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2019-02-20T22:25:55Z",
+      "side": 1,
+      "message": "TODO: Should probably use $()",
+      "revId": "ff62b2eb061bb81435fb285d33215d820f69fe54",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "136f9b0a_063ee2ef",
+        "filename": "src/mobile.startup/Page.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2019-02-20T22:25:55Z",
+      "side": 1,
+      "message": "TODO: Should probably use $()",
+      "revId": "ff62b2eb061bb81435fb285d33215d820f69fe54",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "168fa3f4_1a0acef3",
+        "filename": "src/mobile.startup/PageList.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2019-02-20T22:25:55Z",
+      "side": 1,
+      "message": "TODO: Should probably use $()",
+      "revId": "ff62b2eb061bb81435fb285d33215d820f69fe54",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0c72ea98_0a983a59",
+        "filename": "src/mobile.startup/references/ReferencesDrawer.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2019-02-20T22:25:55Z",
+      "side": 1,
+      "message": "TODO: Should probably use $()",
+      "revId": "ff62b2eb061bb81435fb285d33215d820f69fe54",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "168e5d93_d3336c2a",
+        "filename": "src/mobile.startup/search/SearchOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 210,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2019-02-20T22:25:55Z",
+      "side": 1,
+      "message": "TODO: Should probably use $()",
+      "revId": "ff62b2eb061bb81435fb285d33215d820f69fe54",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4a25ee33_872999b8",
+        "filename": "src/mobile.startup/watchstar/WatchstarPageList.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2019-02-20T22:25:55Z",
+      "side": 1,
+      "message": "TODO: Should probably use $()",
+      "revId": "ff62b2eb061bb81435fb285d33215d820f69fe54",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "83606d96_2b8583ac",
+        "filename": "src/mobile.startup/watchstar/WatchstarPageList.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2019-02-20T22:25:55Z",
+      "side": 1,
+      "message": "TODO: Should probably use $()",
+      "revId": "ff62b2eb061bb81435fb285d33215d820f69fe54",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
