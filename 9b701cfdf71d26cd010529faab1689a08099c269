@@ -46,6 +46,30 @@
       "revId": "9b701cfdf71d26cd010529faab1689a08099c269",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e26ac1b4_a7933607",
+        "filename": "src/mobile.init/mobile.init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 213,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-20T18:48:49Z",
+      "side": 1,
+      "message": "Isn\u0027t eventBus already a global singleton? It looks like Skin is actually passed eventBus in its constructor so I don\u0027t think that ferrying from one bus to another will be necessary if the consumer also uses eventBus. Maybe? I\u0027m not sure.\n\nI\u0027m not opposed to using mw.hook() but are we also committed to removing OO.EventEmitter usages? A piecewise change here may improve consistency with extensions but reduces consistency with the rest of MobileFrontend.\n\nI don\u0027t think this change is a big deal either way but wanted to understand it better.",
+      "parentUuid": "ad93fed1_db694951",
+      "range": {
+        "startLine": 213,
+        "startChar": 1,
+        "endLine": 213,
+        "endChar": 47
+      },
+      "revId": "9b701cfdf71d26cd010529faab1689a08099c269",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
