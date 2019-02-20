@@ -34,6 +34,24 @@
       "revId": "484a74a13b2ec35d0135bfd6af4ebe9cef7e0a03",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa87ea46_37e3a2ff",
+        "filename": "src/mobile.startup/toast.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2019-02-20T21:04:36Z",
+      "side": 1,
+      "message": "Looking at the docs all options are either bool, number or string, so this should be fine to serialize.\n\nThe only argument that can contain DOM nodes is \u0027content\u0027 (although the documentation here say it should be a string), which we are already serializing. DOM nodes serialize to  empty objects so it would be pretty obvious during testing that your code didn\u0027t work, which is I guess why it hasn\u0027t been a problem so far.",
+      "parentUuid": "6ec7a853_6efe49ec",
+      "revId": "484a74a13b2ec35d0135bfd6af4ebe9cef7e0a03",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
