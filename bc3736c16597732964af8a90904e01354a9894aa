@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c250717a_d9dcf6ab",
+        "filename": "tests/node-qunit/mobile.startup/promisedView.test.js",
+        "patchSetId": 19
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-02-20T00:29:49Z",
+      "side": 1,
+      "message": "should be lowercase",
+      "range": {
+        "startLine": 10,
+        "startChar": 30,
+        "endLine": 10,
+        "endChar": 31
+      },
+      "revId": "bc3736c16597732964af8a90904e01354a9894aa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
