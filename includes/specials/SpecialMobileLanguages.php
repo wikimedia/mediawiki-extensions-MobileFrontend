@@ -226,7 +226,6 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 				$this->msg( 'mobile-frontend-languages-nonexistent-title' )->params( $pagename )->text() );
 		}
 
-		$html = MobileUI::contentElement( $html );
 		$output->setPageTitle( $pageTitle );
 		$output->addHTML( $html );
 	}

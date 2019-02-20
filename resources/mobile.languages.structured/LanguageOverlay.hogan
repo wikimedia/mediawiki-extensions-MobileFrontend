@@ -22,7 +22,7 @@
 	{{/suggestedLanguagesCount}}
 
 	{{#allLanguagesCount}}
-	<h3 class="list-header">{{allLanguagesHeader}}<span>{{allLanguagesCount}}</span></h3>
+	<h3 class="list-header">{{allLanguagesHeader}} ({{allLanguagesCount}})</h3>
 	<ul class="site-link-list all-languages">
 		{{#allLanguages}}
 			<li>
