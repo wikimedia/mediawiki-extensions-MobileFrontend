@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "564f911a_f1deb037",
+        "filename": "src/mobile.startup/languageFactory.js",
+        "patchSetId": 17
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-20T23:49:25Z",
+      "side": 1,
+      "message": "languageFactory or languageOverlay or languageOverlayFactory ?\nAsking for a friend ;-)",
+      "revId": "ab5fc1d8f6b6a990cb0c39a56426f151a1294b7b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
