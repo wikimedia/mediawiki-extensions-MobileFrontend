@@ -88,6 +88,24 @@
       "revId": "484a74a13b2ec35d0135bfd6af4ebe9cef7e0a03",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "283df763_4f08cf93",
+        "filename": "src/mobile.startup/toast.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-20T21:54:08Z",
+      "side": 1,
+      "message": "Okay, but this seems to be adding unnecessary functionality. Why does the function signature need to change at all?\nWhy can\u0027t _showPending be updated to call :\n\n```\nthis.show( data.content, { className: data.className } );\n```\n?",
+      "parentUuid": "a0d72421_b1945632",
+      "revId": "484a74a13b2ec35d0135bfd6af4ebe9cef7e0a03",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
