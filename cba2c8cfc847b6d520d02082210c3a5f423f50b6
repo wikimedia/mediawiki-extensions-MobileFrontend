@@ -22,6 +22,30 @@
       "revId": "cba2c8cfc847b6d520d02082210c3a5f423f50b6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c443ca05_8ae2beaa",
+        "filename": "package.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-20T20:33:21Z",
+      "side": 1,
+      "message": "The old precommit script actually executed all this stuff indirectly:\n\n \"precommit\": \"composer test \u0026\u0026 npm run test:bundle-cached \u0026\u0026 npm run test:unit \u0026\u0026 npm run test:all\",\n\nVia test:all which was:\n\n \"test:all\": \"npm run lint \u0026\u0026 npm run doc \u0026\u0026 dev-scripts/svg_check.sh\",\n\nSo no changes there.\n\nEither way, I have no issue with moving doc and svg_check from test:all to test. Let me know if you want that in this patch or not.",
+      "parentUuid": "bce0ca70_11257163",
+      "range": {
+        "startLine": 12,
+        "startChar": 36,
+        "endLine": 12,
+        "endChar": 78
+      },
+      "revId": "cba2c8cfc847b6d520d02082210c3a5f423f50b6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
