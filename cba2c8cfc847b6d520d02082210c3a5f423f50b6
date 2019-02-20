@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bce0ca70_11257163",
+        "filename": "package.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-20T20:27:41Z",
+      "side": 1,
+      "message": "Unless I\u0027m mistaken this adds doc and svgchecking to the precommit hook.\n\nMy precommit hook is already incredibly slow and I wonder do we really need to run both doc and svg check inside the precommit hook?\n\nThey are most of the time unnecessary and I\u0027d rather defer those jobs to Jenkins.\n\nPreviously we didn\u0027t run these and that was great!\n\n(i\u0027d also like to suggest removing jsonlint:all and banana:MobileFrontend off the precommit path)\n\nI often find myself disabling these as I don\u0027t feel the slowness is  worth the gain.",
+      "range": {
+        "startLine": 12,
+        "startChar": 36,
+        "endLine": 12,
+        "endChar": 78
+      },
+      "revId": "cba2c8cfc847b6d520d02082210c3a5f423f50b6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
