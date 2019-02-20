@@ -33,6 +33,24 @@
       "revId": "d514147fdff0966bf17e68e87ee495607f064cf7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4649890b_28f6cbe6",
+        "filename": "src/mobile.startup/AsyncContentOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-02-20T00:33:24Z",
+      "side": 1,
+      "message": "Turns out it can!",
+      "parentUuid": "5fa78073_6055acea",
+      "revId": "d514147fdff0966bf17e68e87ee495607f064cf7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
