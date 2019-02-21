@@ -1,21 +1,16 @@
-var talkBoard = require( './talkBoard' ),
-	PageGateway = require( '../mobile.startup/PageGateway' ),
-	promisedView = require( '../mobile.startup/promisedView' ),
-	Anchor = require( '../mobile.startup/Anchor' ),
-	Overlay = require( '../mobile.startup/Overlay' );
+var m = require( '../moduleLoaderSingleton' ),
+	promisedView = require( '../promisedView' ),
+	Anchor = require( '../Anchor' ),
+	Overlay = require( '../Overlay' );
 
 /**
  * Produce an overlay for talk page
- * @uses Overlay
- * @param {Object} options
- * @param {Api} options.api
- * @param {string} options.title of the page to get talk topics for
+ * @param {string} title of the page to get talk topics for
+ * @param {PageGateway} gateway for interacting with API.
  * @return {Overlay}
  */
-function talkOverlay( options ) {
-	var title = options.title,
-		user = mw.user,
-		gateway = new PageGateway( options.api );
+function talkOverlay( title, gateway ) {
+	var user = mw.user;
 
 	return Overlay.make(
 		{
@@ -36,7 +31,10 @@ function talkOverlay( options ) {
 		},
 		promisedView(
 			gateway.getSections( title ).then( function ( sections ) {
-				return talkBoard( sections );
+				return mw.loader.using( 'mobile.talk.overlays' ).then( function () {
+					var talkBoard = m.require( 'mobile.talk.overlays/talkBoard' );
+					return talkBoard( sections );
+				} );
 			} )
 		)
 	);

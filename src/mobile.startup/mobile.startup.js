@@ -44,6 +44,9 @@ module.exports = {
 	lazyImages: {
 		lazyImageLoader: require( './lazyImages/lazyImageLoader' )
 	},
+	talk: {
+		overlay: require( './talk/overlay' )
+	},
 	languageOverlay: require( './languageOverlay/languageOverlay' )
 };
 

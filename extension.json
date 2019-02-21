@@ -261,6 +261,9 @@
 				"MessageBox.hogan": "resources/mobile.startup/MessageBox.hogan"
 			},
 			"messages": [
+				"mobile-frontend-talk-overlay-header",
+				"mobile-frontend-talk-add-overlay-submit",
+				"mobile-frontend-talk-fullpage",
 				"toc",
 				"mobile-frontend-references-citation-error",
 				"mobile-frontend-references-citation",
@@ -436,13 +439,10 @@
 				"Section/content.hogan": "resources/mobile.talk.overlays/talkSectionContent.hogan"
 			},
 			"messages": [
-				"mobile-frontend-talk-overlay-header",
-				"mobile-frontend-talk-fullpage",
 				"mobile-frontend-talk-explained",
 				"mobile-frontend-talk-explained-empty",
 				"mobile-frontend-talk-add-overlay-subject-placeholder",
 				"mobile-frontend-talk-add-overlay-content-placeholder",
-				"mobile-frontend-talk-add-overlay-submit",
 				"mobile-frontend-talk-reply-success",
 				"mobile-frontend-talk-reply",
 				"mobile-frontend-talk-reply-info",
