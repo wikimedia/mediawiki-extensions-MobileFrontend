@@ -70,6 +70,30 @@
       "revId": "cba2c8cfc847b6d520d02082210c3a5f423f50b6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "69cf6c90_376f614c",
+        "filename": "package.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-21T15:28:12Z",
+      "side": 1,
+      "message": "I\u0027ve made these changes in a follow-up patch since, while related, they felt distinct and might be controversial. I did not attempt to limit composer execution to commits touching PHP files but we can look into that. If you recall, we had a of bunch shell scripts to test whether SVG / PHP / etc files were touched and execute the appropriate tools. Do you want me to bring that back?",
+      "parentUuid": "2f4a2e7b_e4c4aaae",
+      "range": {
+        "startLine": 12,
+        "startChar": 36,
+        "endLine": 12,
+        "endChar": 78
+      },
+      "revId": "cba2c8cfc847b6d520d02082210c3a5f423f50b6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
