@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "897b2820_1ab2577d",
+        "filename": "resources/mobile.startup/languageOverlay/languageOverlay.less",
+        "patchSetId": 22
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-21T20:04:20Z",
+      "side": 1,
+      "message": "I think we can avoid this long term, but I don\u0027t think this needs to block these changes.\n\nI\u0027m guessing once all overlays are ported this will become the norm.",
+      "revId": "48b7a68f3ba8c91b69774aad6c42ca64663e04ff",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
