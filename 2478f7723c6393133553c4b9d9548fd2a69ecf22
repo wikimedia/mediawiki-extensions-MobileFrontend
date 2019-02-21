@@ -22,6 +22,30 @@
       "revId": "2478f7723c6393133553c4b9d9548fd2a69ecf22",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "58383237_5c0b1d5e",
+        "filename": "resources/dist/mobile.languages.structured.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-21T20:20:22Z",
+      "side": 1,
+      "message": "I was wondering this (and worried about 2 Hogan copies being shipped)\n\nI think a module has to be shared between a minimum of 2 chunks. We may want to thus do this in 2 places to make sure the code is split.",
+      "parentUuid": "19ab7878_bf341a45",
+      "range": {
+        "startLine": 1,
+        "startChar": 140,
+        "endLine": 1,
+        "endChar": 177
+      },
+      "revId": "2478f7723c6393133553c4b9d9548fd2a69ecf22",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
