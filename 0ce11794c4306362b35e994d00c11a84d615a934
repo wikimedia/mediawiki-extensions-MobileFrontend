@@ -22,6 +22,30 @@
       "revId": "0ce11794c4306362b35e994d00c11a84d615a934",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "73bb3189_ef508086",
+        "filename": "package.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-21T17:53:28Z",
+      "side": 1,
+      "message": "Where did the banana task go though that used to be run by `grunt test`? Who runs the JSON linter? Here are the tasks I see in the Gruntfile:\n\n  grunt.registerTask( \u0027lint\u0027, [ \u0027jsonlint\u0027, \u0027stylelint\u0027, \u0027banana\u0027 ] ); // \u003c--- Who runs jsonlint and banana?\n  grunt.registerTask( \u0027test\u0027, [ \u0027lint\u0027 ] );\n  grunt.registerTask( \u0027default\u0027, [ \u0027test\u0027 ] );",
+      "parentUuid": "b30e242f_4f850648",
+      "range": {
+        "startLine": 13,
+        "startChar": 39,
+        "endLine": 13,
+        "endChar": 54
+      },
+      "revId": "0ce11794c4306362b35e994d00c11a84d615a934",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
