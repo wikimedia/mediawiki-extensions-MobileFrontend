@@ -1,4 +1,5 @@
-var Overlay = require( '../mobile.startup/Overlay' ),
+const
+	View = require( '../mobile.startup/View' ),
 	util = require( '../mobile.startup/util' ),
 	langUtil = require( './util' ),
 	mfExtend = require( '../mobile.startup/mfExtend' );
@@ -6,85 +7,63 @@ var Overlay = require( '../mobile.startup/Overlay' ),
 /**
  * Overlay displaying a structured list of languages for a page
  *
- * @class LanguageOverlay
- * @extends Overlay
+ * @class LanguageSearcher
+ * @extends View
  *
- * @param {Object} options Configuration options
- * @param {Object[]} options.languages list of language objects as returned by the API
- * @param {Array|boolean} options.variants language variant objects
+ * @param {Object} props Configuration options
+ * @param {Object[]} props.languages list of language objects as returned by the API
+ * @param {Array|boolean} props.variants language variant objects
  *  or false if no variants exist
- * @param {string} [options.deviceLanguage] the device's primary language
+ * @param {string} [props.deviceLanguage] the device's primary language
  */
-function LanguageOverlay( options ) {
+function LanguageSearcher( props ) {
 	/**
 	 * @prop {StructuredLanguages} languages` JSDoc.
 	 */
-	this.languages = langUtil.getStructuredLanguages(
-		options.languages,
-		options.variants,
+	const languages = langUtil.getStructuredLanguages(
+		props.languages,
+		props.variants,
 		langUtil.getFrequentlyUsedLanguages(),
-		options.deviceLanguage
+		props.deviceLanguage
 	);
-	Overlay.call(
+
+	View.call(
 		this,
 		util.extend(
-			options,
 			{
-				className: 'overlay language-overlay',
+				className: 'language-searcher',
 				events: {
 					'click a': 'onLinkClick',
 					'input .search': 'onSearchInput'
-				}
-			}
+				},
+				// the rest are template properties
+				inputPlaceholder: mw.msg( 'mobile-frontend-languages-structured-overlay-search-input-placeholder' ),
+				// we can't rely on CSS only to uppercase the headings. See https://stackoverflow.com/questions/3777443/css-text-transform-not-working-properly-for-turkish-characters
+				allLanguagesHeader: mw.msg( 'mobile-frontend-languages-structured-overlay-all-languages-header' ).toLocaleUpperCase(),
+				suggestedLanguagesHeader: mw.msg( 'mobile-frontend-languages-structured-overlay-suggested-languages-header' ).toLocaleUpperCase(),
+				allLanguages: languages.all,
+				allLanguagesCount: languages.all.length,
+				suggestedLanguages: languages.suggested,
+				suggestedLanguagesCount: languages.suggested.length
+			},
+			props
 		)
 	);
 }
 
-mfExtend( LanguageOverlay, Overlay, {
-	/**
-	 * @memberof LanguageOverlay
-	 * @instance
-	 * @mixes Overlay#defaults
-	 * @property {Object} defaults Default options hash.
-	 * @property {Object[]} defaults.languages each object has keys as
-	 *  returned by the langlink API https://www.mediawiki.org/wiki/API:Langlinks
-	 */
-	defaults: util.extend( {}, Overlay.prototype.defaults, {
-		heading: mw.msg( 'mobile-frontend-language-heading' ),
-		inputPlaceholder: mw.msg( 'mobile-frontend-languages-structured-overlay-search-input-placeholder' ),
-		// we can't rely on CSS only to uppercase the headings. See https://stackoverflow.com/questions/3777443/css-text-transform-not-working-properly-for-turkish-characters
-		allLanguagesHeader: mw.msg( 'mobile-frontend-languages-structured-overlay-all-languages-header' ).toLocaleUpperCase(),
-		suggestedLanguagesHeader: mw.msg( 'mobile-frontend-languages-structured-overlay-suggested-languages-header' ).toLocaleUpperCase()
-	} ),
+mfExtend( LanguageSearcher, View, {
 	/**
 	 * @inheritdoc
 	 * @memberof LanguageOverlay
 	 * @instance
 	 */
-	templatePartials: util.extend( {}, Overlay.prototype.templatePartials, {
-		content: mw.template.get( 'mobile.languages.structured', 'LanguageOverlay.hogan' )
-	} ),
-	/**
-	 * @inheritdoc
-	 */
-	preRender: function () {
-		var languages = this.languages;
-		// Update options with template properties before we perform the render.
-		util.extend( this.options, {
-			allLanguages: languages.all,
-			allLanguagesCount: languages.all.length,
-			suggestedLanguages: languages.suggested,
-			suggestedLanguagesCount: languages.suggested.length
-		} );
-	},
+	template: mw.template.get( 'mobile.languages.structured', 'LanguageSearcher.hogan' ),
 	/**
 	 * @inheritdoc
 	 * @memberof LanguageOverlay
 	 * @instance
 	 */
 	postRender: function () {
-		Overlay.prototype.postRender.apply( this );
-
 		// cache
 		this.$siteLinksList = this.$el.find( '.site-link-list' );
 		this.$languageItems = this.$siteLinksList.find( 'a' );
@@ -97,7 +76,7 @@ mfExtend( LanguageOverlay, Overlay, {
 	 * @param {jQuery.Event} ev
 	 */
 	onLinkClick: function ( ev ) {
-		var $link = this.$el.find( ev.currentTarget ),
+		const $link = this.$el.find( ev.currentTarget ),
 			lang = $link.attr( 'lang' ),
 			self = this,
 			$visibleLanguageLinks = this.$languageItems.filter( ':visible' );
@@ -127,11 +106,11 @@ mfExtend( LanguageOverlay, Overlay, {
 	 * @param {string} val of search term (lowercase).
 	 */
 	filterLanguages: function ( val ) {
-		var filteredList = [];
+		const filteredList = [];
 
 		if ( val ) {
 			this.options.languages.forEach( function ( language ) {
-				var langname = language.langname;
+				const langname = language.langname;
 				// search by language code or language name
 				if ( language.autonym.toLowerCase().indexOf( val ) > -1 ||
 						( langname && langname.toLowerCase().indexOf( val ) > -1 ) ||
@@ -166,4 +145,4 @@ mfExtend( LanguageOverlay, Overlay, {
 	}
 } );
 
-module.exports = LanguageOverlay;
+module.exports = LanguageSearcher;

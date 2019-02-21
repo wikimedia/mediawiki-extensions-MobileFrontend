@@ -43,7 +43,8 @@ module.exports = {
 	},
 	lazyImages: {
 		lazyImageLoader: require( './lazyImages/lazyImageLoader' )
-	}
+	},
+	languageOverlay: require( './languageOverlay/languageOverlay' )
 };
 
 mw.mobileFrontend = moduleLoader;
