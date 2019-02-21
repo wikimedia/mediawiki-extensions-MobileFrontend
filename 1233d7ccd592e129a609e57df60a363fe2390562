@@ -34,6 +34,24 @@
       "revId": "1233d7ccd592e129a609e57df60a363fe2390562",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "448cdedd_9b1b67f1",
+        "filename": "tests/node-qunit/mobile.startup/promisedView.test.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-02-21T00:53:46Z",
+      "side": 1,
+      "message": "Tried to make the assertion a little clearer in latest patch",
+      "parentUuid": "82c83af1_43a7a5a4",
+      "revId": "1233d7ccd592e129a609e57df60a363fe2390562",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
