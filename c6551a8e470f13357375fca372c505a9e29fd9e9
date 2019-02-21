@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a92068f6_f4c634c7",
+        "filename": "resources/mobile.talk.overlays/talk.less",
+        "patchSetId": 19
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-21T22:31:38Z",
+      "side": 1,
+      "message": "If this were \".talk-overlay__add-section\" or \".talk-overlay__button--add-section, it would me avoid a momentary mind blank where I wonder, \"what does this add?\"",
+      "range": {
+        "startLine": 3,
+        "startChar": 15,
+        "endLine": 3,
+        "endChar": 18
+      },
+      "revId": "c6551a8e470f13357375fca372c505a9e29fd9e9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "29fa9b75_294d9ba7",
+        "filename": "resources/mobile.talk.overlays/talk.less",
+        "patchSetId": 19
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-21T22:31:38Z",
+      "side": 1,
+      "message": "Is `1px solid` more standard?",
+      "range": {
+        "startLine": 11,
+        "startChar": 10,
+        "endLine": 11,
+        "endChar": 19
+      },
+      "revId": "c6551a8e470f13357375fca372c505a9e29fd9e9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2825819e_15f8bcce",
+        "filename": "src/mobile.startup/Overlay.js",
+        "patchSetId": 19
+      },
+      "lineNbr": 364,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-21T22:31:38Z",
+      "side": 1,
+      "message": "Should this be `overlay.$el.find()`?",
+      "range": {
+        "startLine": 364,
+        "startChar": 9,
+        "endLine": 364,
+        "endChar": 10
+      },
+      "revId": "c6551a8e470f13357375fca372c505a9e29fd9e9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
