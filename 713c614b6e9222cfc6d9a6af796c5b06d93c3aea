@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "63c4f331_a62814d5",
+        "filename": "package.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-21T17:01:46Z",
+      "side": 1,
+      "message": "Is the intention to drop all linting for modules with stylelint and eslint ?\nI\u0027d say these are the most common Jenkins problems along with phpcs and bundlesize problems and it seems a little strange we\u0027d drop these but keep composer test so want to make sure that was the plan.",
+      "revId": "713c614b6e9222cfc6d9a6af796c5b06d93c3aea",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
