@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b30e242f_4f850648",
+        "filename": "package.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-21T17:49:53Z",
+      "side": 1,
+      "message": "npm test is run by Jenkins.\n\nnpm -s run lint runs both grunt i18n and npm -s run lint:frontend (which includes the entirety of grunt since npm lint:frontend runs grunt stylelint)",
+      "range": {
+        "startLine": 13,
+        "startChar": 39,
+        "endLine": 13,
+        "endChar": 54
+      },
+      "revId": "0ce11794c4306362b35e994d00c11a84d615a934",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
