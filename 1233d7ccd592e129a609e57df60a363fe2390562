@@ -16,6 +16,24 @@
       "revId": "1233d7ccd592e129a609e57df60a363fe2390562",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "82c83af1_43a7a5a4",
+        "filename": "tests/node-qunit/mobile.startup/promisedView.test.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-02-21T00:47:57Z",
+      "side": 1,
+      "message": "I think it\u0027s valuable to assert that the parent element is replaced. I don\u0027t think this is tested with the \u0027view resolved correctly assertion\u0027 as the children of the parent element could be replaced but not the parent itself.",
+      "parentUuid": "f00c5663_3b4385d3",
+      "revId": "1233d7ccd592e129a609e57df60a363fe2390562",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
