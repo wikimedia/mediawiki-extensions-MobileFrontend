@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "269f6740_1ea646a4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 13
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-02-21T18:58:28Z",
+      "side": 1,
+      "message": "The minerva lazy load logic will be removed in the minerva patch but the logic was copied into languageOverlay.js in this patch. Latest patch clarifies this in commit msg",
+      "parentUuid": "79f73c87_9c00e61b",
+      "range": {
+        "startLine": 39,
+        "startChar": 2,
+        "endLine": 40,
+        "endChar": 19
+      },
+      "revId": "d72cf30556360c58f1b9edd8817d355e4b5e167c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fe3675b9_c0729d62",
         "filename": "resources/mobile.startup/Overlay.less",
         "patchSetId": 13
@@ -36,6 +60,24 @@
       "writtenOn": "2019-02-20T21:20:59Z",
       "side": 1,
       "message": "Should this be specific to language-overlay or overlay?\n\nLong term, it would be nice if all overlays predictably had the class \"overlay\" and we didn\u0027t have to worry about specific types of overlay.\n\nOr maybe we could use BEM instead e.g. overlay--with-spinner ?\n\nAlso this should be above the media query.\nMedia query comes last in all our files.",
+      "revId": "d72cf30556360c58f1b9edd8817d355e4b5e167c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6f0643f9_98771487",
+        "filename": "resources/mobile.startup/Overlay.less",
+        "patchSetId": 13
+      },
+      "lineNbr": 371,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-02-21T18:58:28Z",
+      "side": 1,
+      "message": "Yeah  I agree some of these style like the position and min-height for .overlay-content and .promised-view (in latest patch) should probably applied to all overlays. However, I tried this and it messed up some of the overlays like the editor one so that\u0027s why I scoped the change to language-overlay. \n\nThe overlay--with-spinner could work, however then the client must know when PromisedView is about to the replace the view so that the class can be removed. I was trying to do something like that with my AsyncContentOverlay component. Let me know if you have any ideas around this\n\nIn latest patch, I moved all these style to languageOverlay.less (and added to extension.json).",
+      "parentUuid": "fe3675b9_c0729d62",
       "revId": "d72cf30556360c58f1b9edd8817d355e4b5e167c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -59,6 +101,24 @@
     },
     {
       "key": {
+        "uuid": "b96c67cf_efeafd51",
+        "filename": "resources/mobile.startup/Overlay.less",
+        "patchSetId": 13
+      },
+      "lineNbr": 381,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-02-21T18:58:28Z",
+      "side": 1,
+      "message": "explained in I5ea54d775bed6538c039632fe31a83f8c0df8bb5",
+      "parentUuid": "dcb1cbca_def4e6b5",
+      "revId": "d72cf30556360c58f1b9edd8817d355e4b5e167c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c361bede_b0f53611",
         "filename": "src/mobile.languages.structured/LanguageSearcher.js",
         "patchSetId": 13
@@ -70,6 +130,24 @@
       "writtenOn": "2019-02-20T21:20:59Z",
       "side": 1,
       "message": "Given the majority of these are template properties should we separate them from className and events (with a line and comment) so that\u0027s clear?",
+      "revId": "d72cf30556360c58f1b9edd8817d355e4b5e167c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f47fc840_10ebe5df",
+        "filename": "src/mobile.languages.structured/LanguageSearcher.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-02-21T18:58:28Z",
+      "side": 1,
+      "message": "done in latest patch",
+      "parentUuid": "c361bede_b0f53611",
       "revId": "d72cf30556360c58f1b9edd8817d355e4b5e167c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -93,6 +171,24 @@
     },
     {
       "key": {
+        "uuid": "2f239b16_47a7ea42",
+        "filename": "src/mobile.startup/languageFactory.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-02-21T18:58:28Z",
+      "side": 1,
+      "message": "moved this to a new file in latest patch and wrote tests for it.",
+      "parentUuid": "bcd63512_edc317e8",
+      "revId": "d72cf30556360c58f1b9edd8817d355e4b5e167c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3532819d_4191e0a3",
         "filename": "src/mobile.startup/languageFactory.js",
         "patchSetId": 13
@@ -104,6 +200,30 @@
       "writtenOn": "2019-02-20T21:20:59Z",
       "side": 1,
       "message": "Is the language-overlay class necessary or could this be removed?\nI only see 1 usage.",
+      "range": {
+        "startLine": 50,
+        "startChar": 3,
+        "endLine": 50,
+        "endChar": 40
+      },
+      "revId": "d72cf30556360c58f1b9edd8817d355e4b5e167c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "49fe76bb_c3f801f2",
+        "filename": "src/mobile.startup/languageFactory.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-02-21T18:58:28Z",
+      "side": 1,
+      "message": "I did this because I was trying to scope the styles to languageOverlay right now as applying them to overlay\u0027s in general messes with some of the existing overlays (see previous comment)",
+      "parentUuid": "3532819d_4191e0a3",
       "range": {
         "startLine": 50,
         "startChar": 3,

@@ -16,6 +16,24 @@
       "revId": "9874037061f80281d415cbcf4f2cbc58dcf380aa",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "40d57b0b_68bcddda",
+        "filename": "resources/mobile.languages.structured/LanguageSearcher.hogan",
+        "patchSetId": 13
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-02-21T18:58:28Z",
+      "side": 0,
+      "message": "Done in I0036f529a0f7555297b8bd66b9a15343c4c6012c",
+      "parentUuid": "9144380b_6906c216",
+      "revId": "9874037061f80281d415cbcf4f2cbc58dcf380aa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
