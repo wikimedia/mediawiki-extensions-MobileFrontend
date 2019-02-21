@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "380ca9bb_7d330d87",
+        "filename": "package.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-21T17:29:06Z",
+      "side": 1,
+      "message": "note this also runs banana and jsonlint and strangely not eslint.\nMy new patchset separates i18n from stylelint and runs the former only on npm test.",
+      "range": {
+        "startLine": 9,
+        "startChar": 13,
+        "endLine": 9,
+        "endChar": 23
+      },
+      "revId": "af385174e0dacacf04ed352ec4f902f478582eda",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
