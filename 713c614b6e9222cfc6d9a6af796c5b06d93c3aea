@@ -16,6 +16,24 @@
       "revId": "713c614b6e9222cfc6d9a6af796c5b06d93c3aea",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3f5ed133_349b3e94",
+        "filename": "package.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-21T17:23:14Z",
+      "side": 1,
+      "message": "My mistake. I misread your comment on the other patch, so no. I think I\u0027ve got it fixed now.",
+      "parentUuid": "63c4f331_a62814d5",
+      "revId": "713c614b6e9222cfc6d9a6af796c5b06d93c3aea",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
