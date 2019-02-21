@@ -42,7 +42,7 @@ module.exports = function ( grunt ) {
 			]
 		}
 	} );
-	grunt.registerTask( 'lint', [ 'jsonlint', 'stylelint', 'banana' ] );
-	grunt.registerTask( 'test', [ 'lint' ] );
+	grunt.registerTask( 'i18n', [ 'jsonlint', 'banana' ] );
+	grunt.registerTask( 'test', [ 'i18n', 'stylelint' ] );
 	grunt.registerTask( 'default', [ 'test' ] );
 };
