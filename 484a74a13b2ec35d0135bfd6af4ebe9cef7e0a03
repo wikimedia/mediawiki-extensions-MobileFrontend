@@ -106,6 +106,24 @@
       "revId": "484a74a13b2ec35d0135bfd6af4ebe9cef7e0a03",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "beed3650_383af3e7",
+        "filename": "src/mobile.startup/toast.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2019-02-21T11:47:08Z",
+      "side": 1,
+      "message": "Seems like no good reason for the two methods to have different signatures. As noted above the caller already has to check they don\u0027t pass DOM elements.",
+      "parentUuid": "",
+      "revId": "484a74a13b2ec35d0135bfd6af4ebe9cef7e0a03",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
