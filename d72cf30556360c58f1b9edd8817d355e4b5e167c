@@ -84,6 +84,24 @@
     },
     {
       "key": {
+        "uuid": "7cd94d1d_abb8217d",
+        "filename": "resources/mobile.startup/Overlay.less",
+        "patchSetId": 13
+      },
+      "lineNbr": 371,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-02-21T19:07:46Z",
+      "side": 1,
+      "message": "Actually I think the .promised-view styles could be moved to Overlay.less now without affecting anything given that is a new class",
+      "parentUuid": "6f0643f9_98771487",
+      "revId": "d72cf30556360c58f1b9edd8817d355e4b5e167c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "dcb1cbca_def4e6b5",
         "filename": "resources/mobile.startup/Overlay.less",
         "patchSetId": 13
