@@ -114,7 +114,7 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 			!$rev->userCan( Revision::DELETED_USER, $user ) ||
 			( $rev->isDeleted( Revision::DELETED_USER ) && !$unhide )
 		) {
-			$username = $this->msg( 'rev-deleted-user' )->plain();
+			$username = $this->msg( 'rev-deleted-user' )->escaped();
 		}
 		return $username;
 	}
