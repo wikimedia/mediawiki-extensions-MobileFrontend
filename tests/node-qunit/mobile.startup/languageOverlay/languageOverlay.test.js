@@ -56,11 +56,10 @@ QUnit.test( '#constructor', function ( assert ) {
 		},
 		overlay = languageOverlay( gateway );
 
-	assert.strictEqual( overlay.$( '.overlay-content > .promised-view' ).text(), '⌛', 'loading view rendered in .overlay-content' );
+	assert.strictEqual( overlay.$el.find( '.overlay-content > .promised-view' ).text(), '⌛', 'loading view rendered in .overlay-content' );
 
 	return languageOverlay.test.loadLanguageSearcher( gateway ).then( function () {
-		assert.strictEqual( overlay.$( '.overlay-content > .promised-view' ).length, 0, 'promisedView has fulfilled its promise' );
-		assert.strictEqual( overlay.$( '.overlay-content > .language-searcher' ).length, 1, 'loaded view rendered in .overlay-content' );
-
+		assert.strictEqual( overlay.$el.find( '.overlay-content > .promised-view' ).length, 0, 'promisedView has fulfilled its promise' );
+		assert.strictEqual( overlay.$el.find( '.overlay-content > .language-searcher' ).length, 1, 'loaded view rendered in .overlay-content' );
 	} );
 } );
