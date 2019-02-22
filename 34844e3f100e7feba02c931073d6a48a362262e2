@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "b0a18010_187d5931",
+        "filename": "src/mobile.startup/talk/overlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-22T22:40:15Z",
+      "side": 1,
+      "message": "Sounds good to me. Although I think it might make sense to do this further down the road as many of these are stored in Minerva and I don\u0027t think we should make things difficult for ourselves sharing them across 2 repos.",
+      "parentUuid": "ef473db4_ed096e05",
+      "range": {
+        "startLine": 20,
+        "startChar": 11,
+        "endLine": 20,
+        "endChar": 21
+      },
+      "revId": "34844e3f100e7feba02c931073d6a48a362262e2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e3dc798d_039c611a",
         "filename": "src/mobile.startup/talk/overlay.js",
         "patchSetId": 4
@@ -36,6 +60,30 @@
       "writtenOn": "2019-02-22T21:41:44Z",
       "side": 1,
       "message": "Maybe we should have done this for the initial PromiseView patch and maybe it\u0027s out of scope here but what pattern should we use for network failure / something bad happens? Do we have any UI cue to present to the user?",
+      "range": {
+        "startLine": 32,
+        "startChar": 2,
+        "endLine": 32,
+        "endChar": 14
+      },
+      "revId": "34844e3f100e7feba02c931073d6a48a362262e2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "80793e34_5521a2f2",
+        "filename": "src/mobile.startup/talk/overlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-22T22:40:15Z",
+      "side": 1,
+      "message": "My hope is we\u0027ll work this out as part of the ImageOverlay - as that does have an error state!",
+      "parentUuid": "e3dc798d_039c611a",
       "range": {
         "startLine": 32,
         "startChar": 2,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "0c45d33d_f866c19f",
+        "filename": "src/mobile.startup/talk/overlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-22T22:40:15Z",
+      "side": 1,
+      "message": "I didn\u0027t and we could do that.\nMind if I do that in a follow up as there are too many moving parts for me to keep on top of..",
+      "parentUuid": "e514d111_14ecc801",
+      "range": {
+        "startLine": 33,
+        "startChar": 3,
+        "endLine": 33,
+        "endChar": 31
+      },
+      "revId": "34844e3f100e7feba02c931073d6a48a362262e2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a69c2e2d_1310c598",
         "filename": "src/mobile.startup/talk/overlay.js",
         "patchSetId": 4
@@ -94,6 +166,30 @@
     },
     {
       "key": {
+        "uuid": "3c742de6_a3daabe5",
+        "filename": "src/mobile.startup/talk/overlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-22T22:40:15Z",
+      "side": 1,
+      "message": "We are already doing this with \u0027mobile.languages.structured\u0027\nbut agreed, we should probably talk about this.\n\nMy thinking is this in future could be substituted for an async import.",
+      "parentUuid": "a69c2e2d_1310c598",
+      "range": {
+        "startLine": 34,
+        "startChar": 29,
+        "endLine": 34,
+        "endChar": 40
+      },
+      "revId": "34844e3f100e7feba02c931073d6a48a362262e2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "34226a3b_3bc4df9e",
         "filename": "src/mobile.startup/talk/overlay.js",
         "patchSetId": 4
@@ -105,6 +201,30 @@
       "writtenOn": "2019-02-22T21:41:44Z",
       "side": 1,
       "message": "Do you think we should use the require function returned from in the promise from mw.loader.using()?\n\nhttps://doc.wikimedia.org/mediawiki-core/master/js/#!/api/mw.loader",
+      "range": {
+        "startLine": 35,
+        "startChar": 21,
+        "endLine": 35,
+        "endChar": 30
+      },
+      "revId": "34844e3f100e7feba02c931073d6a48a362262e2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "28662213_4a1523fb",
+        "filename": "src/mobile.startup/talk/overlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-22T22:40:15Z",
+      "side": 1,
+      "message": "That not really possible.\nIt\u0027s complicated... and nonstandard.\nWe can talk about this in a slack conversation next week.",
+      "parentUuid": "34226a3b_3bc4df9e",
       "range": {
         "startLine": 35,
         "startChar": 21,
