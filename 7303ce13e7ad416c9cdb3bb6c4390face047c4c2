@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "1c5bb603_49533247",
+        "filename": "resources/mobile.talk.overlays/talk.less",
+        "patchSetId": 20
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-22T18:12:53Z",
+      "side": 1,
+      "message": "My reason for doing this was I realised that this CSS file had lots of different components in it. It styles the TalkSectionOverlay etc...\n\nIf the styles in languageOverlay.less all relate to languageOverlay.less (and none of its children/styles inside Overlay) I think that\u0027s fine but if they are more generic you might want to rename it too!",
+      "parentUuid": "a0235b26_5cb57f0f",
+      "revId": "7303ce13e7ad416c9cdb3bb6c4390face047c4c2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "863b1dd2_dd6482c4",
         "filename": "src/mobile.startup/PageGateway.js",
         "patchSetId": 20
@@ -30,6 +48,30 @@
       "writtenOn": "2019-02-22T00:25:40Z",
       "side": 1,
       "message": "Should we make this jQuery.Promise and....",
+      "range": {
+        "startLine": 101,
+        "startChar": 20,
+        "endLine": 101,
+        "endChar": 28
+      },
+      "revId": "7303ce13e7ad416c9cdb3bb6c4390face047c4c2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "05c76a49_6503b8ac",
+        "filename": "src/mobile.startup/PageGateway.js",
+        "patchSetId": 20
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-22T18:12:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "863b1dd2_dd6482c4",
       "range": {
         "startLine": 101,
         "startChar": 20,
@@ -65,6 +107,30 @@
     },
     {
       "key": {
+        "uuid": "fc4a6a11_8179f44f",
+        "filename": "src/mobile.startup/PageGateway.js",
+        "patchSetId": 20
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-22T18:12:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e5c0d6fa_bad911f5",
+      "range": {
+        "startLine": 117,
+        "startChar": 9,
+        "endLine": 117,
+        "endChar": 16
+      },
+      "revId": "7303ce13e7ad416c9cdb3bb6c4390face047c4c2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f9e09687_363b3102",
         "filename": "src/mobile.startup/languageOverlay/languageOverlay.js",
         "patchSetId": 20
@@ -88,6 +154,30 @@
     },
     {
       "key": {
+        "uuid": "aa09bcb8_49008eda",
+        "filename": "src/mobile.startup/languageOverlay/languageOverlay.js",
+        "patchSetId": 20
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-22T18:12:53Z",
+      "side": 1,
+      "message": "yay!",
+      "parentUuid": "f9e09687_363b3102",
+      "range": {
+        "startLine": 34,
+        "startChar": 0,
+        "endLine": 39,
+        "endChar": 3
+      },
+      "revId": "7303ce13e7ad416c9cdb3bb6c4390face047c4c2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "96b6bc4b_50cf556c",
         "filename": "src/mobile.talk.overlays/talkOverlay.js",
         "patchSetId": 20
@@ -99,6 +189,30 @@
       "writtenOn": "2019-02-22T00:25:40Z",
       "side": 1,
       "message": "Note: with languageOverlay, I made minerva responsible for injecting the PageGateway instance and not mw.Api as I didn\u0027t understand (and still don\u0027t) the reason for injecting a dependency of a dependency rather than the dependency itself.",
+      "range": {
+        "startLine": 18,
+        "startChar": 12,
+        "endLine": 18,
+        "endChar": 42
+      },
+      "revId": "7303ce13e7ad416c9cdb3bb6c4390face047c4c2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eadad8f_12bf8101",
+        "filename": "src/mobile.talk.overlays/talkOverlay.js",
+        "patchSetId": 20
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-22T18:12:53Z",
+      "side": 1,
+      "message": "Yeh,you\u0027re right. I\u0027m gonna take care of this in https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/492211/\nto make backwards compatibility easier though if that\u0027s okay.",
+      "parentUuid": "96b6bc4b_50cf556c",
       "range": {
         "startLine": 18,
         "startChar": 12,
