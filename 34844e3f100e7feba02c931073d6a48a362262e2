@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ef473db4_ed096e05",
+        "filename": "src/mobile.startup/talk/overlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-22T21:41:44Z",
+      "side": 1,
+      "message": "Outside the scope of this patch but what do you think about defining a new file in mobile.startup, endpoints.js or something like that, that just contains constants of all the different endpoints we support?",
+      "range": {
+        "startLine": 20,
+        "startChar": 11,
+        "endLine": 20,
+        "endChar": 21
+      },
+      "revId": "34844e3f100e7feba02c931073d6a48a362262e2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e3dc798d_039c611a",
+        "filename": "src/mobile.startup/talk/overlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-22T21:41:44Z",
+      "side": 1,
+      "message": "Maybe we should have done this for the initial PromiseView patch and maybe it\u0027s out of scope here but what pattern should we use for network failure / something bad happens? Do we have any UI cue to present to the user?",
+      "range": {
+        "startLine": 32,
+        "startChar": 2,
+        "endLine": 32,
+        "endChar": 14
+      },
+      "revId": "34844e3f100e7feba02c931073d6a48a362262e2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e514d111_14ecc801",
+        "filename": "src/mobile.startup/talk/overlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-22T21:41:44Z",
+      "side": 1,
+      "message": "Did you consider using jQuery.when() to request the sections the mobile.talk.overlays module in parallel?",
+      "range": {
+        "startLine": 33,
+        "startChar": 3,
+        "endLine": 33,
+        "endChar": 31
+      },
+      "revId": "34844e3f100e7feba02c931073d6a48a362262e2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a69c2e2d_1310c598",
+        "filename": "src/mobile.startup/talk/overlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-22T21:41:44Z",
+      "side": 1,
+      "message": "It feels a little strange to have a talk overlay in the mobile.startup module. mobile.talk.overlays depends on mobile.startup and now mobile.startup dynamically depends on mobile.talk.overlays which I think creates a dependency loop.",
+      "range": {
+        "startLine": 34,
+        "startChar": 29,
+        "endLine": 34,
+        "endChar": 40
+      },
+      "revId": "34844e3f100e7feba02c931073d6a48a362262e2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "34226a3b_3bc4df9e",
+        "filename": "src/mobile.startup/talk/overlay.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-22T21:41:44Z",
+      "side": 1,
+      "message": "Do you think we should use the require function returned from in the promise from mw.loader.using()?\n\nhttps://doc.wikimedia.org/mediawiki-core/master/js/#!/api/mw.loader",
+      "range": {
+        "startLine": 35,
+        "startChar": 21,
+        "endLine": 35,
+        "endChar": 30
+      },
+      "revId": "34844e3f100e7feba02c931073d6a48a362262e2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
