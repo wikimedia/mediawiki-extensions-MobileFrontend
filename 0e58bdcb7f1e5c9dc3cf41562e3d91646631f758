@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "0350fb2a_821c4492",
+        "filename": "src/mobile.mediaViewer/ImageOverlay.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-22T17:26:05Z",
+      "side": 1,
+      "message": "Yeh that makes a lot of sense. Doesn\u0027t look like these should be overriden!",
+      "parentUuid": "0cb18235_32a05ba7",
+      "range": {
+        "startLine": 90,
+        "startChar": 2,
+        "endLine": 90,
+        "endChar": 17
+      },
+      "revId": "0e58bdcb7f1e5c9dc3cf41562e3d91646631f758",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "31ad9118_6b9945b7",
         "filename": "src/mobile.mediaViewer/ImageOverlay.js",
         "patchSetId": 11
@@ -36,6 +60,30 @@
       "writtenOn": "2019-02-22T16:09:18Z",
       "side": 1,
       "message": "Should this be this.hideSpinner()?",
+      "range": {
+        "startLine": 191,
+        "startChar": 3,
+        "endLine": 191,
+        "endChar": 19
+      },
+      "revId": "0e58bdcb7f1e5c9dc3cf41562e3d91646631f758",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0a0d815d_806469b6",
+        "filename": "src/mobile.mediaViewer/ImageOverlay.js",
+        "patchSetId": 11
+      },
+      "lineNbr": 191,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-22T17:26:05Z",
+      "side": 1,
+      "message": "That would work yes, but hideSpinner is a method of Overlay. Long term I think this can disappear when we turn this into a ImageCarousel (https://phabricator.wikimedia.org/T216198)\nbut in interest of working towards removing inheritance I removed the reference to the inherited method.",
+      "parentUuid": "31ad9118_6b9945b7",
       "range": {
         "startLine": 191,
         "startChar": 3,
