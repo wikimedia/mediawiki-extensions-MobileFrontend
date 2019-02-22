@@ -3,8 +3,5 @@
 		"../.eslintrc.json",
 		"wikimedia/client",
 		"../.eslintshared.json"
-	],
-	"globals": {
-		"require": false
-	}
+	]
 }

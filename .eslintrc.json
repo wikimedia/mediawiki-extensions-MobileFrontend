@@ -8,8 +8,7 @@
 		"browser": true
 	},
 	"globals": {
-		"OO": false,
-		"mw": false,
-		"Hogan": false
+		"OO": "readable",
+		"mw": "readable"
 	}
 }
