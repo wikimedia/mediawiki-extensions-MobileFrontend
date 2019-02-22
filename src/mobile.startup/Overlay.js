@@ -350,4 +350,19 @@ mfExtend( Overlay, View, {
  */
 Overlay.EVENT_EXIT = 'Overlay-exit';
 
+/**
+ * Factory method for an overlay with a single child
+ * @memberof Overlay
+ * @instance
+ * @protected
+ * @param {Object} options
+ * @param {View} view
+ * @return {Overlay}
+ */
+Overlay.make = function ( options, view ) {
+	var overlay = new Overlay( options );
+	overlay.$el.find( '.overlay-content' ).append( view.$el );
+	return overlay;
+};
+
 module.exports = Overlay;

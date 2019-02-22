@@ -2,6 +2,7 @@ var util,
 	sinon = require( 'sinon' ),
 	dom = require( '../utils/dom' ),
 	mediawiki = require( '../utils/mw' ),
+	oo = require( '../utils/oo' ),
 	jQuery = require( '../utils/jQuery' ),
 	examples = require( './../utils/PageInputs.html' ),
 	page = examples.page,
@@ -17,6 +18,7 @@ QUnit.module( 'MobileFrontend PageGateway', {
 		dom.setUp( sandbox, global );
 		jQuery.setUp( sandbox, global );
 		mediawiki.setUp( sandbox, global );
+		oo.setUp( sandbox, global );
 		util = require( '../../../src/mobile.startup/util' );
 		PageGateway = require( '../../../src/mobile.startup/PageGateway' );
 		this.api = new mw.Api();
@@ -26,6 +28,36 @@ QUnit.module( 'MobileFrontend PageGateway', {
 		jQuery.tearDown();
 		sandbox.restore();
 	}
+} );
+
+QUnit.test( '#getSections (has sections)', function ( assert ) {
+	var gateway = new PageGateway();
+	sandbox.stub( gateway, 'getPage' ).returns(
+		util.Deferred().resolve( {
+			sections: [ { line: '1' } ]
+		} )
+	);
+	return gateway.getSections( gateway, 'Title' ).then( function ( sections ) {
+		assert.strictEqual( sections.length, 1, '1 section is returned' );
+	} );
+} );
+
+QUnit.test( '#getSections (missing titles)', function ( assert ) {
+	var gateway = new PageGateway();
+	sandbox.stub( gateway, 'getPage' ).returns(
+		util.Deferred().reject( 'missingtitle' )
+	);
+	return gateway.getSections( gateway, 'Title' ).then( function ( sections ) {
+		assert.strictEqual( sections.length, 0, '0 sections are returned' );
+	} );
+} );
+
+QUnit.test( '#getSections (other failures)', function ( assert ) {
+	var gateway = new PageGateway();
+	sandbox.stub( gateway, 'getPage' ).returns(
+		util.Deferred().reject()
+	);
+	assert.throws( gateway.getSections( gateway, 'Title' ), 'an exception is thrown' );
 } );
 
 QUnit.test( '#getPage (h1s)', function ( assert ) {

@@ -427,10 +427,9 @@
 				"resources/dist/mobile.talk.overlays.js"
 			],
 			"styles": [
-				"resources/mobile.talk.overlays/TalkOverlay.less"
+				"resources/mobile.talk.overlays/talk.less"
 			],
 			"templates": {
-				"TalkBoard.hogan": "resources/mobile.talk.overlays/TalkBoard.hogan",
 				"SectionAddOverlay/contentHeader.hogan": "resources/mobile.talk.overlays/talkSectionAddContentHeader.hogan",
 				"SectionAddOverlay.hogan": "resources/mobile.talk.overlays/talkSectionAdd.hogan",
 				"Section/header.hogan": "resources/mobile.talk.overlays/talkSectionHeader.hogan",

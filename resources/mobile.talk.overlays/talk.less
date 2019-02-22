@@ -1,13 +1,18 @@
 @import '../../mobile.less/mobile.variables';
 
 .talk-overlay {
+	// src/mobile.talk.overlays/TalkSectionOverlay.js
+	// Could this be generalised? e.g. MessageBox
 	.error {
-		border: solid 1px @colorErrorText;
+		border: 1px solid @colorErrorText;
 	}
 
+	// resources/mobile.talk.overlays/talkSectionContent.hogan
 	.comment {
 		margin: 40px 0 10px 0;
 
+		// src/mobile.talk.overlays/TalkSectionAddOverlay.js
+		// FIXME: Could this be generalised with rules in src/mobile.editor.overlay/EditorOverlay.js ?
 		.wikitext-editor {
 			margin-top: 1em;
 			// Normally, wikitext editors don't have a border
@@ -15,23 +20,28 @@
 		}
 
 		// Restrict width of save button (otherwise 100%)
+		// src/mobile.talk.overlays/TalkSectionOverlay.js
 		button.mw-ui-block {
 			max-width: 10em;
 		}
 	}
 
+	// FIXME: Could this be a generic .overlay rule?
 	.overlay-content {
 		padding-bottom: 3.5em;
 	}
 
+	// FIXME: Could this be a generic .overlay rule?
 	a {
 		cursor: pointer;
 	}
 
+	// resources/mobile.talk.overlays/talkSectionAdd.hogan
 	.panel.save-panel {
 		padding: 1em;
 	}
 
+	// resources/mobile.talk.overlays/talkSectionAdd.hogan
 	.panel {
 		padding: 0;
 
@@ -43,15 +53,10 @@
 			border: 0;
 		}
 	}
-
-	.content-header {
-		.add {
-			margin-top: 1em;
-		}
-	}
 }
 
 @media all and ( min-width: @width-breakpoint-tablet ) {
+	// resources/mobile.talk.overlays/talkSectionContent.hogan
 	.content.talk-section {
 		margin: 0 auto 0 0;
 	}
