@@ -16,6 +16,24 @@
       "revId": "61750a4104ec1f0f4a69617c8ec97e836c371dc6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9642554d_0f8a9986",
+        "filename": "src/mobile.init/mobile.init.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 216,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-22T22:03:11Z",
+      "side": 1,
+      "message": "No you are very right :)\nFixed!",
+      "parentUuid": "4eee83c3_a7576c0b",
+      "revId": "61750a4104ec1f0f4a69617c8ec97e836c371dc6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
