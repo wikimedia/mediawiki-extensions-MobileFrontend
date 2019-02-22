@@ -21,6 +21,7 @@ QUnit.module( 'MobileFrontend: SearchGateway',
 
 			SearchGateway = require( '../../../../src/mobile.startup/search/SearchGateway' );
 
+			sandbox.stub( mw.util, 'getUrl' ).returns( 'Title' );
 			sandbox.stub( mw.config, 'get', function ( name ) {
 				switch ( name ) {
 					case 'wgMFDisplayWikibaseDescriptions': return { search: '' };

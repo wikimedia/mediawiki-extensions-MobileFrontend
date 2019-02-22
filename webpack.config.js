@@ -59,7 +59,7 @@ module.exports = {
 		// test.mediawiki.qunit.testrunner and test.sinonjs.
 		// The glob module is used to ensure that all tests inside the folder (minus stubs) are
 		// caught and run to ensure we don't forget to register new tests.
-		[ENTRIES.tests]: glob.sync( './tests/node-qunit/*/*.test.js' ),
+		[ENTRIES.tests]: glob.sync( './tests/node-qunit/**/*.test.js' ),
 
 		// mobile.startup.runtime: reserved entry for the Webpack bootloader
 		// optimization.runtimeChunk. Without a distinct runtime chunk, it's instead bundled into
