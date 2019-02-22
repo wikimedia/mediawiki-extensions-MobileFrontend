@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "33fa68cc_60bdf6b4",
+        "filename": "src/mobile.init/mobile.init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 215,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-22T21:59:23Z",
+      "side": 1,
+      "message": "If we do use mw.hook, I think there is only one subscriber to references-loaded, Minerva Neue. Maybe we can just update both the publisher and subscriber to use mw.hook instead of bridging buses.",
+      "range": {
+        "startLine": 215,
+        "startChar": 10,
+        "endLine": 215,
+        "endChar": 27
+      },
+      "revId": "8dcaefbc4bc083097a9ab4aea79761bd343e3253",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
