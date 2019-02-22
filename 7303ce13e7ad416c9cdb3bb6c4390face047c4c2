@@ -1,0 +1,113 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a0235b26_5cb57f0f",
+        "filename": "resources/mobile.talk.overlays/talk.less",
+        "patchSetId": 20
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-02-22T00:25:40Z",
+      "side": 1,
+      "message": "Note: I named my languageOverlay stylesheet languageOverlay.less . Should I change mine to language.less?",
+      "revId": "7303ce13e7ad416c9cdb3bb6c4390face047c4c2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "863b1dd2_dd6482c4",
+        "filename": "src/mobile.startup/PageGateway.js",
+        "patchSetId": 20
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-02-22T00:25:40Z",
+      "side": 1,
+      "message": "Should we make this jQuery.Promise and....",
+      "range": {
+        "startLine": 101,
+        "startChar": 20,
+        "endLine": 101,
+        "endChar": 28
+      },
+      "revId": "7303ce13e7ad416c9cdb3bb6c4390face047c4c2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e5c0d6fa_bad911f5",
+        "filename": "src/mobile.startup/PageGateway.js",
+        "patchSetId": 20
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-02-22T00:25:40Z",
+      "side": 1,
+      "message": "call promise.promise() on this? so that clients can\u0027t change the state of the promise?\n\nhttps://api.jquery.com/deferred.promise/",
+      "range": {
+        "startLine": 117,
+        "startChar": 9,
+        "endLine": 117,
+        "endChar": 16
+      },
+      "revId": "7303ce13e7ad416c9cdb3bb6c4390face047c4c2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f9e09687_363b3102",
+        "filename": "src/mobile.startup/languageOverlay/languageOverlay.js",
+        "patchSetId": 20
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-02-22T00:25:40Z",
+      "side": 1,
+      "message": "I agree it\u0027s cleaner :)",
+      "range": {
+        "startLine": 34,
+        "startChar": 0,
+        "endLine": 39,
+        "endChar": 3
+      },
+      "revId": "7303ce13e7ad416c9cdb3bb6c4390face047c4c2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "96b6bc4b_50cf556c",
+        "filename": "src/mobile.talk.overlays/talkOverlay.js",
+        "patchSetId": 20
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-02-22T00:25:40Z",
+      "side": 1,
+      "message": "Note: with languageOverlay, I made minerva responsible for injecting the PageGateway instance and not mw.Api as I didn\u0027t understand (and still don\u0027t) the reason for injecting a dependency of a dependency rather than the dependency itself.",
+      "range": {
+        "startLine": 18,
+        "startChar": 12,
+        "endLine": 18,
+        "endChar": 42
+      },
+      "revId": "7303ce13e7ad416c9cdb3bb6c4390face047c4c2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
