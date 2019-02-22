@@ -70,6 +70,30 @@
       "revId": "9b701cfdf71d26cd010529faab1689a08099c269",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "40c69dd5_0a0e78a5",
+        "filename": "src/mobile.init/mobile.init.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 213,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-22T19:33:29Z",
+      "side": 1,
+      "message": "I don\u0027t know the answer to this, so I\u0027ve spun this out, since I think the most important thing at this point is to make clear these methods are deprecated.\n\nWe can continue conversation on:\nhttps://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/492371 Provide a way for Minerva to respond to lazy reference loads  \n\nbut this patch should now hopefully be ready to merge!",
+      "parentUuid": "e26ac1b4_a7933607",
+      "range": {
+        "startLine": 213,
+        "startChar": 1,
+        "endLine": 213,
+        "endChar": 47
+      },
+      "revId": "9b701cfdf71d26cd010529faab1689a08099c269",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
