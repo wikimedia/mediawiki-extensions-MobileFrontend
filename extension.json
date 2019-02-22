@@ -217,6 +217,7 @@
 			]
 		},
 		"mobile.startup": {
+			"class": "MobileFrontend\\ResourceLoaderModules\\ResourceLoaderFileModuleWithMFConfig",
 			"targets": [
 				"mobile",
 				"desktop"
@@ -802,9 +803,6 @@
 		],
 		"GetCacheVaryCookies": [
 			"MobileFrontendHooks::onGetCacheVaryCookies"
-		],
-		"ResourceLoaderGetConfigVars": [
-			"MobileFrontendHooks::onResourceLoaderGetConfigVars"
 		],
 		"SpecialPage_initList": [
 			"MobileFrontendHooks::onSpecialPageInitList"

@@ -36,6 +36,17 @@ class SpecialMobileOptions extends MobileSpecialPage {
 	}
 
 	/**
+	 * Set the required config for the page.
+	 */
+	public function setJsConfigVars() {
+		$featureManager = \MediaWiki\MediaWikiServices::getInstance()
+			->getService( 'MobileFrontend.FeaturesManager' );
+		$output->addJsConfigVars( [
+			'wgMFEnableFontChanger' =>
+				$featureManager->isFeatureAvailableInContext( 'MFEnableFontChanger', $context ),
+		] );
+	}
+	/**
 	 * Render the special page
 	 * @param string|null $par Parameter submitted as subpage
 	 */
@@ -49,6 +60,8 @@ class SpecialMobileOptions extends MobileSpecialPage {
 		}
 
 		$this->setHeaders();
+		$this->setJsConfigVars();
+
 		$context->setForceMobileView( true );
 		$context->setContentTransformations( false );
 

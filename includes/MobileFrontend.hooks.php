@@ -362,19 +362,17 @@ class MobileFrontendHooks {
 	}
 
 	/**
-	 * ResourceLoaderGetConfigVars hook handler
+	 * Generate config for usage inside MobileFrontend
 	 * This should be used for variables which:
 	 *  - vary with the html
 	 *  - variables that should work cross skin including anonymous users
 	 *  - used for both, stable and beta mode (don't use
 	 *    MobileContext::isBetaGroupMember in this function - T127860)
 	 *
-	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ResourceLoaderGetConfigVars
-	 *
-	 * @param array &$vars Array of variables to be added into the output of the startup module.
 	 * @return bool
 	 */
-	public static function onResourceLoaderGetConfigVars( &$vars ) {
+	public static function getResourceLoaderMFConfigVars() {
+		$vars = [];
 		$context = MobileContext::singleton();
 		$config = $context->getMFConfig();
 		$pageProps = $config->get( 'MFQueryPropModules' );
@@ -428,8 +426,7 @@ class MobileFrontendHooks {
 			// BlockMessage.js
 			'wgEnableBlockNoticeStats' => $config->get( 'EnableBlockNoticeStats' ),
 		];
-
-		return true;
+		return $vars;
 	}
 
 	/**
@@ -1103,6 +1100,7 @@ class MobileFrontendHooks {
 	 * @return bool true in all cases
 	 */
 	public static function onMakeGlobalVariablesScript( array &$vars, OutputPage $out ) {
+		$title = $out->getTitle();
 		$featureManager = \MediaWiki\MediaWikiServices::getInstance()
 			->getService( 'MobileFrontend.FeaturesManager' );
 
@@ -1115,18 +1113,16 @@ class MobileFrontendHooks {
 				$featureManager->isFeatureAvailableInContext( 'MFLazyLoadImages', $context );
 			$vars['wgMFLazyLoadReferences'] =
 				$featureManager->isFeatureAvailableInContext( 'MFLazyLoadReferences', $context );
+
+			// mobile.init
+			$vars['wgMFIsPageContentModelEditable'] = self::isPageContentModelEditable( $title );
+			// Accesses getBetaGroupMember so does not belong in onResourceLoaderGetConfigVars
 		}
-		$title = $out->getTitle();
-
-		// mobile.init
-		$vars['wgMFIsPageContentModelEditable'] = self::isPageContentModelEditable( $title );
-		// Accesses getBetaGroupMember so does not belong in onResourceLoaderGetConfigVars
-
-		$vars['wgMFEnableFontChanger'] =
-			$featureManager->isFeatureAvailableInContext( 'MFEnableFontChanger', $context );
-
+		// Needed by mobile.startup, mobile.special.watchlist.scripts, mobile.special.nearby.scripts
+		// Needs to know if in beta mode or not and needs to load for Minerva desktop as well.
+		// Ideally this would be inside ResourceLoaderFileModuleWithMFConfig but
+		// sessions are not allowed there.
 		$vars += self::getWikibaseStaticConfigVars( $context );
-
 		return true;
 	}
 
