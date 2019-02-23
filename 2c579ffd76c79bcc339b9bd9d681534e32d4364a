@@ -1,0 +1,251 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a09c69e8_40ecfc49",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-23T02:07:53Z",
+      "side": 1,
+      "message": "+1, sounds good to me. I don\u0027t mind this information here but personally I find nothing more welcoming than a single monolithic readme. For me, beginner documentation is something where file splits should be rare, the almighty ctrl-f should reign, and the entry point prominent. As a newcomer, this makes me feel like I have all the information in one place, that I don\u0027t need to get overwhelmed hunting elsewhere, and if anywhere is up to date, this single source of truth will be it.\n\nIt\u0027s your experiment so put it where it makes most sense to you but I wanted to share my individual perspective.",
+      "range": {
+        "startLine": 9,
+        "startChar": 15,
+        "endLine": 9,
+        "endChar": 34
+      },
+      "revId": "2c579ffd76c79bcc339b9bd9d681534e32d4364a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6b8518e8_b4dd3b47",
+        "filename": "CONTRIBUTING.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-23T02:07:53Z",
+      "side": 1,
+      "message": "Extra dot",
+      "range": {
+        "startLine": 1,
+        "startChar": 53,
+        "endLine": 1,
+        "endChar": 54
+      },
+      "revId": "2c579ffd76c79bcc339b9bd9d681534e32d4364a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f5e3cae_fcb07592",
+        "filename": "CONTRIBUTING.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-23T02:07:53Z",
+      "side": 1,
+      "message": "I am terrible with punctuation but this doesn\u0027t make sense to me",
+      "range": {
+        "startLine": 3,
+        "startChar": 53,
+        "endLine": 3,
+        "endChar": 54
+      },
+      "revId": "2c579ffd76c79bcc339b9bd9d681534e32d4364a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "db7da5c8_5c2125fa",
+        "filename": "CONTRIBUTING.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-23T02:07:53Z",
+      "side": 1,
+      "message": "Given the other line lengths in this file, this line break seems inconsistent",
+      "range": {
+        "startLine": 15,
+        "startChar": 88,
+        "endLine": 16,
+        "endChar": 30
+      },
+      "revId": "2c579ffd76c79bcc339b9bd9d681534e32d4364a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c4092737_f5721b84",
+        "filename": "CONTRIBUTING.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-23T02:07:53Z",
+      "side": 1,
+      "message": "is",
+      "range": {
+        "startLine": 20,
+        "startChar": 50,
+        "endLine": 20,
+        "endChar": 52
+      },
+      "revId": "2c579ffd76c79bcc339b9bd9d681534e32d4364a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "659092ef_6d8f6466",
+        "filename": "CONTRIBUTING.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-23T02:07:53Z",
+      "side": 1,
+      "message": "I think this is supposed to be i.e.\n\nhttps://en.wikipedia.org/wiki/List_of_Latin_phrases_(I)#id_est",
+      "range": {
+        "startLine": 22,
+        "startChar": 58,
+        "endLine": 22,
+        "endChar": 61
+      },
+      "revId": "2c579ffd76c79bcc339b9bd9d681534e32d4364a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fdd608e5_3b7514da",
+        "filename": "CONTRIBUTING.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-23T02:07:53Z",
+      "side": 1,
+      "message": "Should this be \"Create a Gerrit account\"?",
+      "range": {
+        "startLine": 25,
+        "startChar": 2,
+        "endLine": 25,
+        "endChar": 9
+      },
+      "revId": "2c579ffd76c79bcc339b9bd9d681534e32d4364a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "957cc4af_692599bb",
+        "filename": "CONTRIBUTING.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-23T02:07:53Z",
+      "side": 1,
+      "message": "I personally think that this increases the barrier to entry and would recommend the more commonly used and documented plain git.",
+      "range": {
+        "startLine": 26,
+        "startChar": 6,
+        "endLine": 26,
+        "endChar": 18
+      },
+      "revId": "2c579ffd76c79bcc339b9bd9d681534e32d4364a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4d40412e_bd47f808",
+        "filename": "CONTRIBUTING.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-23T02:07:53Z",
+      "side": 1,
+      "message": "Consider adding an example output here.",
+      "revId": "2c579ffd76c79bcc339b9bd9d681534e32d4364a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a21723b5_f7857c71",
+        "filename": "CONTRIBUTING.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-23T02:07:53Z",
+      "side": 1,
+      "message": "Inconsistent casing",
+      "range": {
+        "startLine": 30,
+        "startChar": 12,
+        "endLine": 30,
+        "endChar": 13
+      },
+      "revId": "2c579ffd76c79bcc339b9bd9d681534e32d4364a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "57fd353e_f7097655",
+        "filename": "CONTRIBUTING.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-23T02:07:53Z",
+      "side": 1,
+      "message": "IRC is barrier to entry for those who have never used it before. I recommend linking to  https://webchat.freenode.net/?channels\u003dwikimedia-mobile which is a lot friendlier than starting from nothing.",
+      "range": {
+        "startLine": 32,
+        "startChar": 37,
+        "endLine": 32,
+        "endChar": 73
+      },
+      "revId": "2c579ffd76c79bcc339b9bd9d681534e32d4364a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
