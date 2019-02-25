@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bedb948f_220123cd",
+        "filename": "src/mobile.startup/watchstar/Watchstar.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-25T23:03:57Z",
+      "side": 1,
+      "message": "This is not a template.. watchIcon returns a Icon where template returns a function which returns a template with a require function. Consider using the postRender function instead to do\nthis.$el.append( icons.watchIcon().$el );\n\nAlso I think you can avoid the cache check here altogether - just always use the new watch icon.\n\nJS has a much shorter life span, and my understanding of this code is it replaces the HTML rendered watchstar inside resources/skins.minerva.watchstar/init.js",
+      "range": {
+        "startLine": 76,
+        "startChar": 121,
+        "endLine": 76,
+        "endChar": 135
+      },
+      "revId": "b05e7c6f4af53763053cde74290303143180a6c0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
