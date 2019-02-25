@@ -26,8 +26,6 @@ function Watchstar( options ) {
 			{
 				className: icons.watchIcon().getClassName(),
 				events: {
-				// Disable clicks on original link
-					'click a': 'onLinksClick',
 					click: 'onStatusToggle'
 				}
 			},
@@ -67,11 +65,6 @@ mfExtend( Watchstar, View, {
 		}
 	},
 	/**
-	 * @memberof Watchstar
-	 * @instance
-	 */
-	template: mw.template.compile( '<a role="button">{{tooltip}}</a>', 'hogan' ),
-	/**
 	 * @inheritdoc
 	 * @memberof Watchstar
 	 * @instance
@@ -102,9 +95,7 @@ mfExtend( Watchstar, View, {
 		var unwatchedClass = icons.watchIcon().getGlyphClassName(),
 			watchedClass = icons.watchedIcon().getGlyphClassName() + ' watched';
 
-		// add tooltip to the div, not the <a> inside
-		// because that <a> has zero width/height so cannot be hovered
-		this.$el.attr( 'title', this.options.tooltip );
+		this.$el.text( this.options.tooltip );
 
 		// Add watched class if necessary
 		if ( !mw.user.isAnon() && this._watched ) {
@@ -114,17 +105,6 @@ mfExtend( Watchstar, View, {
 		}
 		this.$el.removeClass( 'hidden' );
 	},
-
-	/**
-	 * Prevent default on incoming events
-	 * @memberof Watchstar
-	 * @instance
-	 * @param {jQuery.Event} ev
-	 */
-	onLinksClick: function ( ev ) {
-		ev.preventDefault();
-	},
-
 	/**
 	 * Triggered when a user anonymously clicks on the watchstar.
 	 * @memberof Watchstar
@@ -190,8 +170,10 @@ mfExtend( Watchstar, View, {
 	 * Make an API request if user is not anonymous.
 	 * @memberof Watchstar
 	 * @instance
+	 * @param {jQuery.Event} ev jQuery event object
 	 */
-	onStatusToggle: function () {
+	onStatusToggle: function ( ev ) {
+		ev.preventDefault();
 		if ( mw.user.isAnon() ) {
 			this.onStatusToggleAnon.apply( this, arguments );
 		} else {
