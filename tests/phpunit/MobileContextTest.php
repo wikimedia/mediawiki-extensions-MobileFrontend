@@ -388,8 +388,8 @@ class MobileContextTest extends MediaWikiTestCase {
 		return [
 			[
 				null,
-				[ 'mf-m' => 'a', 'zero' => '502-13' ],
-				'X-Analytics: mf-m=a;zero=502-13',
+				[ 'mf-m' => 'a', 'zot' => '123' ],
+				'X-Analytics: mf-m=a;zot=123',
 			],
 			// check key/val trimming
 			[
@@ -406,8 +406,8 @@ class MobileContextTest extends MediaWikiTestCase {
 			// check handling of existing header value
 			[
 				'existing=value; another=item',
-				[ 'mf-m' => 'a', 'zero' => '502-13' ],
-				'X-Analytics: existing=value;another=item;mf-m=a;zero=502-13',
+				[ 'mf-m' => 'a', 'zot' => '123' ],
+				'X-Analytics: existing=value;another=item;mf-m=a;zot=123',
 			],
 		];
 	}
