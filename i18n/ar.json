@@ -74,7 +74,7 @@
 	"mobile-frontend-editor-abusefilter-read-more": "اقرأ المزيد",
 	"mobile-frontend-editor-abusefilter-warning": "تحذير: هل أنت متأكد من أنك تريد حفظ هذا التعديل؟ قد تكون هناك مشكلة به.",
 	"mobile-frontend-editor-anon": "حرر بلا تسجيل الدخول",
-	"mobile-frontend-editor-anonwarning": "<strong>تحذير</strong>: لم تقم بتسجيل الدخول. سيكون عنوان الآيبي الخاص بك مرئيًا للعامة عند قيامك بأي تعديل. إذا <strong>سجلت دخولك</strong> أو <strong>أنشأت حسابًا</strong>، تعديلاتك ستنسب لاسم المستخدم الخاص بك، مع المزيد من الميزات الأخرى.",
+	"mobile-frontend-editor-anonwarning": "<strong>تحذير</strong>: أنت لست مسجل الدخول. سيكون عنوان الأيبي الخاص بك مرئيًا للعامة عند قيامك بأي تعديل. إذا <strong>سجلت دخولك</strong> أو <strong>أنشأت حسابًا</strong>، فتعديلاتك ستنسب لاسم المستخدم الخاص بك، مع المزيد من الميزات الأخرى.",
 	"mobile-frontend-editor-blocked-drawer-title": "مُنع حسابك من تحرير {{SITENAME}}",
 	"mobile-frontend-editor-blocked-drawer-title-partial": "مُنع حسابك من تعديل هذه الصفحة",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "سبب المنع",

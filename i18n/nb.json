@@ -258,6 +258,8 @@
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox-description": "Teksten vil alltid vises over infobokser; forbedrer ytelse og lesbarhet.",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Skriftstørrelse",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Kontroller skriftstørrelsen for leseopplevelsen din.",
+	"mobile-frontend-mobile-option-amc-learn-more": "Lær mer",
+	"mobile-frontend-mobile-option-amc-send-feedback": "Send tilbakemelding",
 	"mobile-frontend-beta-only": "Funksjon kun tilgjengelig i betamodus",
 	"mobile-frontend-console-recruit": "Lær mer om hvordan vi bygger den mobile nettsiden vår på https://www.mediawiki.org/wiki/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Optimer og forenkle spesialsider på mobil (anbefalt)",

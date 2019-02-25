@@ -25,7 +25,8 @@
 			"NickK",
 			"Максим Підліснюк",
 			"Piramidion",
-			"Movses"
+			"Movses",
+			"Vlad5250"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Чи користувач редагує через мобільний інтерфейс, чи ні",
@@ -72,11 +73,12 @@
 	"mobile-frontend-editor-abusefilter-warning": "Увага: Ви дійсно бажаєте зберегти це редагування? З ним може бути проблема.",
 	"mobile-frontend-editor-anon": "Редагувати без авторизації",
 	"mobile-frontend-editor-anonwarning": "<strong>Увага:</strong> Ви не авторизовані. Ваша IP-адреса буде публічно видима, якщо Ви зробите якісь редагування. Якщо Ви <strong>авторизуєтеся</strong> чи <strong>створите обліковий запис</strong>, Ваші редагування позначатимуться Вашим іменем користувача, а Ви отримаєте й інші переваги.",
-	"mobile-frontend-editor-blocked-drawer-title": "Вашому обліковому запису заблоковано доступ до редагування сайту {{SITENAME}}",
-	"mobile-frontend-editor-blocked-drawer-title-partial": "Вашому обліковому запису заблоковано можливість редагування цієї сторінки",
+	"mobile-frontend-editor-blocked-drawer-title": "Ви маєте заборону редагування {{SITENAME}}",
+	"mobile-frontend-editor-blocked-drawer-title-partial": "Вам заблоковано можливість редагування цієї сторінки",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Причина блокування",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Заблоковано}}",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "Блокування завершиться",
+	"mobile-frontend-editor-blocked-drawer-help": "Деталі",
 	"mobile-frontend-editor-generic-block-reason": "Причина невідома",
 	"mobile-frontend-editor-cancel": "Скасувати",
 	"mobile-frontend-editor-cancel-confirm": "Ви дійсно хочете відмовитися від вашого редагування?",
@@ -270,6 +272,8 @@
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Контролюйте розмір шрифту для поліпшення свого читацького досвіду.",
 	"mobile-frontend-mobile-option-amc": "Розширений внесок з мобільного",
 	"mobile-frontend-mobile-option-amc-experiment-description": "Протягом наступних кількох місяців ми будемо вмикати функції, які підтримують можливість розширеного редагування. Це — тривалий експеримент, а тому ми розраховуємо на Вашу співпрацю й підтримку.",
+	"mobile-frontend-mobile-option-amc-learn-more": "Дізнатися більше",
+	"mobile-frontend-mobile-option-amc-send-feedback": "Надіслати відгук",
 	"mobile-frontend-beta-only": "Функція доступна лише в бета-режимі",
 	"mobile-frontend-console-recruit": "Дізнайтесь більше як ми створюємо мобільний сайт на https://www.mediawiki.org/wiki/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Оптимізувати і спрощувати спеціальні сторінки, коли використовується мобільна версія (рекомендовано)",

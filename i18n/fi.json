@@ -68,6 +68,7 @@
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Eston syy",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Estänyt}}",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "Esto päättyy",
+	"mobile-frontend-editor-generic-block-reason": "Tuntematon syy",
 	"mobile-frontend-editor-cancel": "Peruuta",
 	"mobile-frontend-editor-cancel-confirm": "Haluatko todella hylätä tekemäsi muokkauksen?",
 	"mobile-frontend-editor-captcha-try-again": "Väärä koodi. Yritä uudelleen.",
@@ -242,5 +243,6 @@
 	"mobile-frontend-send-feedback": "Lähetä palautetta",
 	"mobile-frontend-mobile-option-MFLazyLoadImages-description": "Lataa kuvat vain tarvittaessa.",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Fonttikoko",
+	"mobile-frontend-mobile-option-amc-learn-more": "Lisätietoja",
 	"mobile-frontend-console-recruit": "Lisätietoja siitä, miten rakensimme mobiilisivustomme @ https://www.mediawiki.org/wiki/Extension:MobileFrontend"
 }
