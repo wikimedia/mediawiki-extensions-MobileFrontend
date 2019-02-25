@@ -130,8 +130,7 @@ class InlineDiffFormatter extends TableDiffFormatter {
 				$inline->addWords( $edit->closing, 'ins' );
 			}
 		}
-		$lines = $inline->getLines();
 
-		return $lines;
+		return $inline->getLines();
 	}
 }
