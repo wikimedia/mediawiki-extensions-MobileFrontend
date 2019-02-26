@@ -22,6 +22,30 @@
       "revId": "b05e7c6f4af53763053cde74290303143180a6c0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a24d166_4413ce2d",
+        "filename": "src/mobile.startup/watchstar/Watchstar.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2019-02-26T14:38:47Z",
+      "side": 1,
+      "message": "Good point.` icons.watchIcon()` wasn\u0027t actually doing anything, so I replaced it with undefined! \n\nThe reason this template was necessary was to provide a clickable \u003ca\u003e for the watchstar icon (which is a \u003cli\u003e). With the new markup, the icon is already an \u003ca\u003e, so we can reuse it and just modify its classes in the postRender.\n\nI\u0027m wary of removing the cache check though, even if it\u0027s for 24 hours, it would still break the watchstar (well, it would revert to the non-js version).",
+      "parentUuid": "bedb948f_220123cd",
+      "range": {
+        "startLine": 76,
+        "startChar": 121,
+        "endLine": 76,
+        "endChar": 135
+      },
+      "revId": "b05e7c6f4af53763053cde74290303143180a6c0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
