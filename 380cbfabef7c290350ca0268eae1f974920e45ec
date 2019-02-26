@@ -22,6 +22,30 @@
       "revId": "380cbfabef7c290350ca0268eae1f974920e45ec",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0384db22_80cbe253",
+        "filename": "src/mobile.startup/util.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-26T20:41:19Z",
+      "side": 1,
+      "message": "For TypeScript, I would prefer ReadonlyArray\u003cJQuery.Promise\u003cunknown\u003e\u003e when possible, JQuery.Promise\u003cunknown\u003e[] when not. I think that at least the latter is JSDoc compatible but Array.\u003cjQuery.Promise\u003e works for me too. Templatizing accurately appears to require tuples which doesn\u0027t seem practical in JSDoc syntax.\n\nhttps://github.com/Microsoft/TypeScript/blob/master/lib/lib.es2015.promise.d.ts#L41",
+      "parentUuid": "beede5fd_3e329b93",
+      "range": {
+        "startLine": 18,
+        "startChar": 27,
+        "endLine": 18,
+        "endChar": 28
+      },
+      "revId": "380cbfabef7c290350ca0268eae1f974920e45ec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
