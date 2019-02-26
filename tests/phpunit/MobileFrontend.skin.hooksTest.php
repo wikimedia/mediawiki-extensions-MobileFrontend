@@ -150,7 +150,6 @@ class MobileFrontendSkinHooksTest extends MediaWikiLangTestCase {
 	 */
 	public function provideGetLicenseData() {
 		$context = RequestContext::getMain();
-		$scriptPath = $context->getConfig()->get( 'ScriptPath' );
 
 		return [
 			[
@@ -198,12 +197,13 @@ class MobileFrontendSkinHooksTest extends MediaWikiLangTestCase {
 				[
 					'wgRightsText' => 'Creative Commons Attribution 2.5',
 					'wgRightsUrl' => 'https://creativecommons.org/licenses/by/2.5/',
-					'wgRightsPage' => 'Rights Page'
+					'wgRightsPage' => 'Rights Page',
+					'wgArticlePath' => '/wiki/Rights_Page'
 				],
 				[
 					'msg' => 'mobile-frontend-copyright',
 					// @codingStandardsIgnoreLine
-					'link' => '<a href="' . $scriptPath . '/index.php/Rights_Page" title="Rights Page">CC BY 2.5</a>',
+					'link' => '<a href="/wiki/Rights_Page" title="Rights Page">CC BY 2.5</a>',
 					'plural' => 1
 				]
 			]
