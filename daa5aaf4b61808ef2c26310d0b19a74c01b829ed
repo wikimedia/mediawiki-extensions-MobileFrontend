@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a3653a2b_3c8dcaa1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-26T22:16:42Z",
+      "side": 1,
+      "message": "According to Gerrit, this is backwards:\n\n rename from resources/mobile.startup/drawer.less\n rename to resources/mobile.startup/Drawer.less",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 15,
+        "endChar": 35
+      },
+      "revId": "daa5aaf4b61808ef2c26310d0b19a74c01b829ed",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a4dacd51_f48f4f39",
+        "filename": "resources/mobile.startup/promisedView.less",
+        "patchSetId": 5
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-26T22:16:42Z",
+      "side": 1,
+      "message": "Nice!",
+      "revId": "daa5aaf4b61808ef2c26310d0b19a74c01b829ed",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
