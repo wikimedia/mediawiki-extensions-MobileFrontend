@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a11c3c1d_5925ecaa",
+        "filename": "src/mobile.startup/util.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-26T19:24:22Z",
+      "side": 1,
+      "message": "Should this be Promise[]? I think we should strive for type compatibility with Promise.all().",
+      "range": {
+        "startLine": 18,
+        "startChar": 13,
+        "endLine": 18,
+        "endChar": 28
+      },
+      "revId": "cee0c109669b88d822cf4902f50abbe396110c6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
