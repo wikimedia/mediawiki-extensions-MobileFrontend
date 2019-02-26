@@ -305,18 +305,7 @@
 				"mobile-frontend-language-heading"
 			],
 			"styles": [
-				"resources/mobile.startup/spinner.less",
-				"resources/mobile.startup/icon.less",
-				"resources/mobile.startup/panel.less",
-				"resources/mobile.startup/Overlay.less",
-				"resources/mobile.startup/LoadingOverlay.less",
-				"resources/mobile.startup/drawer.less",
-				"resources/mobile.startup/references/ReferencesDrawer.less",
-				"resources/mobile.startup/watchstar/watchstar.less",
-				"resources/mobile.startup/Toggler.less",
-				"resources/mobile.startup/search/SearchOverlay.less",
-				"resources/mobile.startup/toc/TableOfContents.less",
-				"resources/mobile.startup/languageOverlay/languageOverlay.less"
+				"resources/mobile.startup/mobile.startup.less"
 			],
 			"scripts": [
 				"resources/dist/mobile.common.js",
