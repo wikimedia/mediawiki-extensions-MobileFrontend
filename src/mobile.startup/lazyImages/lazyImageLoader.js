@@ -19,9 +19,10 @@ function queryPlaceholders( root ) {
  */
 function loadImages( placeholders ) {
 	// jQuery.when() is variadic and does not accept an array. Simulate spread with apply.
-	return util.when.apply( util, placeholders.map( function ( placeholder ) {
-		return module.exports.loadImage( placeholder ).promise;
-	} )
+	return util.Promise.all(
+		placeholders.map( function ( placeholder ) {
+			return module.exports.loadImage( placeholder ).promise;
+		} )
 	);
 }
 

@@ -52,10 +52,10 @@ WatchstarGateway.prototype = {
 	 */
 	getStatuses: function ( ids, titles ) {
 		// Issue two requests and coalesce the results.
-		return util.when(
+		return util.Promise.all( [
 			this.getStatusesByID( ids ),
 			this.getStatusesByTitle( titles )
-		).then( function () { return util.extend.apply( util, arguments ); } );
+		] ).then( function () { return util.extend.apply( util, arguments ); } );
 	},
 
 	/**

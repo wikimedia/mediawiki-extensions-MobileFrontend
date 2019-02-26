@@ -7,6 +7,23 @@
  */
 module.exports = {
 	/**
+	 * Wrapper class for Promises
+	 * @memberof util
+	 * @instance
+	 */
+	Promise: {
+		/**
+		 * Wrapper class for the $.when that is compatible with Promise.all
+		 * @memberof util
+		 * @param {jQuery.Promise[]} promises
+		 * @instance
+		 * @return {jQuery.Promise}
+		 */
+		all: function ( promises ) {
+			return $.when.apply( $, promises );
+		}
+	},
+	/**
 	 * Escape a string for use as a css selector
 	 * @memberof util
 	 * @instance
@@ -34,15 +51,6 @@ module.exports = {
 	 */
 	docReady: function ( fn ) {
 		return $( fn );
-	},
-	/**
-	 * Wrapper class for the $.when
-	 * @memberof util
-	 * @instance
-	 * @return {jQuery.Deferred}
-	 */
-	when: function () {
-		return $.when.apply( $, arguments );
 	},
 	/**
 	 * Wrapper class for the Deferred method

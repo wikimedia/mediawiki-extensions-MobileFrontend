@@ -23,6 +23,29 @@ QUnit.module( 'MobileFrontend util.js', {
 	}
 } );
 
+QUnit.test( 'Promise.all() success', function ( assert ) {
+	var p = util.Deferred(),
+		p2 = util.Deferred();
+
+	p.resolve( 'a' );
+	p2.resolve( 'b' );
+	return util.Promise.all( [ p, p2 ] ).then( function ( result, result2 ) {
+		assert.strictEqual( result, 'a', 'All promises resolved (yay)' );
+		assert.strictEqual( result2, 'b', 'All promises resolved (yay)' );
+	} );
+} );
+
+QUnit.test( 'Promise.all() reject', function ( assert ) {
+	var p = util.Deferred(),
+		p2 = util.Deferred();
+
+	p.resolve( 'a' );
+	p2.reject( 'b' );
+	return util.Promise.all( [ p, p2 ] ).catch( function ( result ) {
+		assert.strictEqual( result, 'b', 'The promise rejects' );
+	} );
+} );
+
 QUnit.test( 'escapeSelector()', function ( assert ) {
 	assert.strictEqual(
 		util.escapeSelector( '#selector-starts-with-hash' ),
@@ -45,15 +68,6 @@ QUnit.test( 'docReady()', function ( assert ) {
 		docReady instanceof $,
 		true
 	);
-} );
-
-QUnit.test( 'when()', function ( assert ) {
-	return util.when( { resolved: true } ).then( function ( res ) {
-		assert.strictEqual(
-			res.resolved,
-			true
-		);
-	} );
 } );
 
 QUnit.test( 'Deferred() - resolve', function ( assert ) {

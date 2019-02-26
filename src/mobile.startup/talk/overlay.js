@@ -1,6 +1,7 @@
 var m = require( '../moduleLoaderSingleton' ),
 	promisedView = require( '../promisedView' ),
 	Anchor = require( '../Anchor' ),
+	util = require( '../util' ),
 	Overlay = require( '../Overlay' );
 
 /**
@@ -30,11 +31,12 @@ function talkOverlay( title, gateway ) {
 			className: 'talk-overlay overlay'
 		},
 		promisedView(
-			gateway.getSections( title ).then( function ( sections ) {
-				return mw.loader.using( 'mobile.talk.overlays' ).then( function () {
-					var talkBoard = m.require( 'mobile.talk.overlays/talkBoard' );
-					return talkBoard( sections );
-				} );
+			util.Promise.all( [
+				gateway.getSections( title ),
+				mw.loader.using( 'mobile.talk.overlays' )
+			] ).then( function ( sections ) {
+				var talkBoard = m.require( 'mobile.talk.overlays/talkBoard' );
+				return talkBoard( sections );
 			} )
 		)
 	);
