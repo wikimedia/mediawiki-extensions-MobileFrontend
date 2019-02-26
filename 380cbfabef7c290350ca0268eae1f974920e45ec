@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "beede5fd_3e329b93",
+        "filename": "src/mobile.startup/util.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-02-26T20:33:59Z",
+      "side": 1,
+      "message": "I don\u0027t know what format TypeScript uses, but does it have some form of \"array of\" syntax, like {jQuery.Promise[]} or {Array.\u003cjQuery.Promise\u003e}",
+      "range": {
+        "startLine": 18,
+        "startChar": 27,
+        "endLine": 18,
+        "endChar": 28
+      },
+      "revId": "380cbfabef7c290350ca0268eae1f974920e45ec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
