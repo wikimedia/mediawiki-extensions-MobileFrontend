@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9774a4fc_cfe48f8b",
+        "filename": "src/mobile.init/editor.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-26T22:52:52Z",
+      "side": 1,
+      "message": "This seems to be the only necessary change to me...",
+      "revId": "be109d311a92db539cabb2dec9a0e41d6b6795f9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "84abaf81_7e637ee3",
+        "filename": "src/mobile.startup/watchstar/Watchstar.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-26T22:52:52Z",
+      "side": 1,
+      "message": "I still don\u0027t understand this. If I remove this entire line, the watchstar works fine on cached HTML and new HTML...\n\nIn fact this code thanks to not using jQuery has no tie to HTML...",
+      "revId": "be109d311a92db539cabb2dec9a0e41d6b6795f9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
