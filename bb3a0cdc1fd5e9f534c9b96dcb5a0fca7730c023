@@ -16,6 +16,24 @@
       "revId": "bb3a0cdc1fd5e9f534c9b96dcb5a0fca7730c023",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "13100748_7b0cab13",
+        "filename": "src/mobile.editor.ve/ve.init.mw.MobileFrontendArticleTarget.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 286,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2019-02-26T20:55:58Z",
+      "side": 1,
+      "message": "I\u0027m not actually sure it\u0027s necessary given we do a reload on save. I can\u0027t remember why I had this in here, but it appeared to be necessary when I was testing.",
+      "parentUuid": "14b9745d_82b495c8",
+      "revId": "bb3a0cdc1fd5e9f534c9b96dcb5a0fca7730c023",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
