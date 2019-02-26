@@ -22,6 +22,30 @@
       "revId": "cee0c109669b88d822cf4902f50abbe396110c6f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba76c5cc_c6684c08",
+        "filename": "src/mobile.startup/util.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-26T20:20:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a11c3c1d_5925ecaa",
+      "range": {
+        "startLine": 18,
+        "startChar": 13,
+        "endLine": 18,
+        "endChar": 28
+      },
+      "revId": "cee0c109669b88d822cf4902f50abbe396110c6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
