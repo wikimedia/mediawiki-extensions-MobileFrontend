@@ -22,6 +22,30 @@
       "revId": "b48bf499799f101393a987ab7e039fdac4474c60",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8dc49bc2_34815a3e",
+        "filename": "src/mobile.startup/util.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-26T19:13:51Z",
+      "side": 1,
+      "message": "Done. I also got rid of the when since it\u0027s only used in one place..",
+      "parentUuid": "8458e8ba_09e5971f",
+      "range": {
+        "startLine": 10,
+        "startChar": 18,
+        "endLine": 10,
+        "endChar": 26
+      },
+      "revId": "b48bf499799f101393a987ab7e039fdac4474c60",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
