@@ -33,6 +33,24 @@
       "revId": "be109d311a92db539cabb2dec9a0e41d6b6795f9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f3090a08_cddc7b7b",
+        "filename": "src/mobile.startup/watchstar/Watchstar.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2019-02-27T07:19:36Z",
+      "side": 1,
+      "message": "This may be a consequence of how I\u0027m testing the cached version. I haven\u0027t been using the scripts provided in the repo, but I\u0027m guessing you have and there it makes no difference. I\u0027ll try that out in that case. \n\n\nFor the record though, what I\u0027ve been doing is using this chrome extension \nhttps://chrome.google.com/webstore/detail/requestly-redirect-url-mo/mdnleldcmiljblolnjhpnblkcekpdkpa?hl\u003den \nto redirect all requests to `load.php?` from production to localhost, ands testing if production still works. \n\n\n\u003e\u003e  If I remove this entire line, the watchstar works fine on cached HTML and new HTML...\n\nIf that\u0027s the case, then this line shouldn\u0027t be necessary for the current markup right?",
+      "parentUuid": "84abaf81_7e637ee3",
+      "revId": "be109d311a92db539cabb2dec9a0e41d6b6795f9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
