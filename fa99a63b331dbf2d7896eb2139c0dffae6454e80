@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "d289e2ff_3a31e625",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 374,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-27T18:20:54Z",
+      "side": 1,
+      "message": "will do. I want to move to the ResourceLoaderModule but to help explain what I was doing better for our estimation I left it here for the smaller dif.",
+      "parentUuid": "6ad6e00e_7b80df79",
+      "range": {
+        "startLine": 374,
+        "startChar": 1,
+        "endLine": 374,
+        "endChar": 7
+      },
+      "revId": "fa99a63b331dbf2d7896eb2139c0dffae6454e80",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "80450b69_0617dfc0",
         "filename": "includes/modules/ResourceLoaderFileModuleWithMFConfig.php",
         "patchSetId": 5
