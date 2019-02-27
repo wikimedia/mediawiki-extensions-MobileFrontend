@@ -1,11 +1,11 @@
 let
+	LanguageSearcher,
+	sandbox,
 	jQuery = require( '../utils/jQuery' ),
 	dom = require( '../utils/dom' ),
 	mediaWiki = require( '../utils/mw' ),
 	oo = require( '../utils/oo' ),
 	sinon = require( 'sinon' ),
-	LanguageSearcher,
-	sandbox,
 	apiLanguages = [
 		{
 			lang: 'ar',
@@ -61,12 +61,28 @@ let
 		}
 	],
 	deviceLanguage = 'en-us',
+	variants = [
+		{
+			lang: 'foo',
+			url: '/w/index.php?title=Barack_Obama&variant=foo',
+			autonym: 'Foo'
+		},
+		{
+			lang: 'foo-x-piglatin',
+			url: '/w/index.php?title=Barack_Obama&variant=foo-x-piglatin',
+			autonym: 'Igpay Atinlay'
+		}
+	],
 	frequentlyUsedLanguages = {
 		'zh-min-nan': 1,
 		zh: 2,
 		en: 10,
 		ko: 1
 	};
+
+function enterText( searcher, text ) {
+	searcher.$el.find( 'input[type=search]' ).val( text ).trigger( 'input' );
+}
 
 QUnit.module( 'MobileFrontend LanguageSearcher.js', {
 	beforeEach: function () {
@@ -83,7 +99,7 @@ QUnit.module( 'MobileFrontend LanguageSearcher.js', {
 
 		this.languageSearcher = new LanguageSearcher( {
 			languages: apiLanguages,
-			variants: [],
+			variants: variants,
 			deviceLanguage: deviceLanguage
 		} );
 	},
@@ -93,11 +109,11 @@ QUnit.module( 'MobileFrontend LanguageSearcher.js', {
 	}
 } );
 
-QUnit.test( 'render output', function ( assert ) {
+QUnit.test( 'renders output', function ( assert ) {
 	assert.strictEqual(
 		this.languageSearcher.$el.find( '.site-link-list.suggested-languages a' ).length,
-		3,
-		'There are 3 suggested languages.'
+		5,
+		'There are 5 suggested languages including variants.'
 	);
 
 	assert.strictEqual(
@@ -107,39 +123,102 @@ QUnit.test( 'render output', function ( assert ) {
 	);
 } );
 
-QUnit.test( 'filterLanguages()', function ( assert ) {
-	this.languageSearcher.filterLanguages( 'zh' );
+QUnit.test( 'saves the language count when link is clicked', function ( assert ) {
+	const stub = sandbox.stub( mw.storage, 'set' );
+
+	this.languageSearcher.$el.find( '[lang=foo-x-piglatin]' ).trigger( 'click' );
+
+	assert.strictEqual( stub.callCount, 1, 'mw.storage.set is called once' );
+	assert.deepEqual(
+		stub.getCall( 0 ).args,
+		[ 'langMap', '{"zh-min-nan":1,"zh":2,"en":10,"ko":1,"foo-x-piglatin":1}' ],
+		'mw.storage.set is called with correct args'
+	);
+} );
+
+QUnit.test( 'without variants, input event filters languages', function ( assert ) {
+	const languageSearcher = new LanguageSearcher( {
+		languages: apiLanguages,
+		variants: false,
+		deviceLanguage: deviceLanguage
+	} );
+
+	enterText( languageSearcher, '' );
+	assert.strictEqual(
+		languageSearcher.$el.find( '.site-link-list a:not(.hidden)' ).length,
+		10,
+		'The search filter has been cleared. All 10 languages (including variants) are visible.'
+	);
+
+	enterText( languageSearcher, 'abcdefghij' );
+	assert.strictEqual(
+		languageSearcher.$el.find( '.site-link-list a:not(.hidden)' ).length,
+		0,
+		'No languages match "abcdefghij"'
+	);
+
+	enterText( languageSearcher, 'chin' );
+	assert.ok(
+		languageSearcher.$el.find( '.site-link-list a:not(.hidden)' ).length === 1 &&
+		languageSearcher.$el.find( '.site-link-list a:not(.hidden)' ).hasClass( 'zh-min-nan' ),
+		'One language (zh-min-nan) matches "Chin" (langname) and only that language is visible.'
+	);
+} );
+
+QUnit.test( 'with variants, input event filters languages', function ( assert ) {
+	enterText( this.languageSearcher, '' );
+	assert.strictEqual(
+		this.languageSearcher.$el.find( '.site-link-list a:not(.hidden)' ).length,
+		12,
+		'The search filter has been cleared. All 12 languages (including variants) are visible.'
+	);
+
+	enterText( this.languageSearcher, 'abcdefghij' );
+	assert.strictEqual(
+		this.languageSearcher.$el.find( '.site-link-list a:not(.hidden)' ).length,
+		0,
+		'No languages match "abcdefghij"'
+	);
+
+	enterText( this.languageSearcher, 'zh' );
 	assert.strictEqual(
 		this.languageSearcher.$el.find( '.site-link-list a:not(.hidden)' ).length,
 		3,
 		'Three languages match "zh" and only those languages are visible.'
 	);
 
-	this.languageSearcher.filterLanguages( 'ol' );
+	enterText( this.languageSearcher, 'ol' );
 	assert.ok(
 		this.languageSearcher.$el.find( '.site-link-list a:not(.hidden)' ).length === 1 &&
 		this.languageSearcher.$el.find( '.site-link-list a:not(.hidden)' ).hasClass( 'be-x-old' ),
 		'One language (be-x-old) matches "ol" and only that language is visible.'
 	);
 
-	this.languageSearcher.filterLanguages( 'chin' );
+	enterText( this.languageSearcher, 'chin' );
 	assert.ok(
 		this.languageSearcher.$el.find( '.site-link-list a:not(.hidden)' ).length === 1 &&
 		this.languageSearcher.$el.find( '.site-link-list a:not(.hidden)' ).hasClass( 'zh-min-nan' ),
 		'One language (zh-min-nan) matches "Chin" (langname) and only that language is visible.'
 	);
 
-	this.languageSearcher.filterLanguages( '' );
-	assert.strictEqual(
-		this.languageSearcher.$el.find( '.site-link-list a:not(.hidden)' ).length,
-		10,
-		'The search filter has been cleared. All 10 languages (including variants) are visible.'
-	);
-
-	this.languageSearcher.filterLanguages( 'ўз' );
+	enterText( this.languageSearcher, 'ўз' );
 	assert.strictEqual(
 		this.languageSearcher.$el.find( '.site-link-list a:not(.hidden)' ).length,
 		1,
 		'One language matches "ўз" and only that language is visible.'
+	);
+
+	enterText( this.languageSearcher, 'foo' );
+	assert.strictEqual(
+		this.languageSearcher.$el.find( '.site-link-list a:not(.hidden)' ).length,
+		2,
+		'Two languages match "foo" and only those languages are visible.'
+	);
+
+	enterText( this.languageSearcher, 'igpay' );
+	assert.strictEqual(
+		this.languageSearcher.$el.find( '.site-link-list a:not(.hidden)' ).length,
+		1,
+		'One language matches "igpay" and only that language is visible.'
 	);
 } );

@@ -77,18 +77,9 @@ mfExtend( LanguageSearcher, View, {
 	 */
 	onLinkClick: function ( ev ) {
 		const $link = this.$el.find( ev.currentTarget ),
-			lang = $link.attr( 'lang' ),
-			self = this,
-			$visibleLanguageLinks = this.$languageItems.filter( ':visible' );
+			lang = $link.attr( 'lang' );
 
 		langUtil.saveLanguageUsageCount( lang, langUtil.getFrequentlyUsedLanguages() );
-
-		// find the index of the clicked language in the list of visible results
-		$visibleLanguageLinks.each( function ( i, link ) {
-			if ( self.$el.find( link ).hasClass( lang ) ) {
-				return false;
-			}
-		} );
 	},
 	/**
 	 * Search input handler
