@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "98ac5c37_e7a86334",
+        "filename": "resources/mobile.init/editor.less",
+        "patchSetId": 33
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-02-27T22:26:00Z",
+      "side": 1,
+      "message": "remember mobile.init can load on other skins e.g. Timeless which don\u0027t have this element. It would thus be better for this to go into Minerva or find a way to not include this rule.",
+      "revId": "cc682aff901d0969fc4882ac55b8ae4cb9bb6424",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
