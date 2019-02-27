@@ -333,9 +333,9 @@ class MobileContextTest extends MediaWikiTestCase {
 			'wgMFStopRedirectCookieHost' => null,
 			'wgServer' => 'http://en.wikipedia.org',
 		] );
-		$this->assertEquals( $context->getStopMobileRedirectCookieDomain(), '.wikipedia.org' );
+		$this->assertEquals( '.wikipedia.org', $context->getStopMobileRedirectCookieDomain() );
 		$this->setMwGlobals( 'wgMFStopRedirectCookieHost', 'foo.bar.baz' );
-		$this->assertEquals( $context->getStopMobileRedirectCookieDomain(), 'foo.bar.baz' );
+		$this->assertEquals( 'foo.bar.baz', $context->getStopMobileRedirectCookieDomain() );
 	}
 
 	/**
@@ -359,7 +359,7 @@ class MobileContextTest extends MediaWikiTestCase {
 		$trimmedKey = trim( $key );
 		$trimmedVal = trim( $val );
 		$this->assertTrue( isset( $logItems[$trimmedKey] ) );
-		$this->assertEquals( $logItems[$trimmedKey], $trimmedVal );
+		$this->assertEquals( $trimmedVal, $logItems[$trimmedKey] );
 	}
 
 	public function addAnalyticsLogItemProvider() {
@@ -381,7 +381,7 @@ class MobileContextTest extends MediaWikiTestCase {
 		if ( $existingHeader ) {
 			$context->getRequest()->response()->header( 'X-Analytics: ' . $existingHeader, true );
 		}
-		$this->assertEquals( $context->getXAnalyticsHeader(), $expectedHeader );
+		$this->assertEquals( $expectedHeader, $context->getXAnalyticsHeader() );
 	}
 
 	public function getXAnalyticsHeaderProvider() {
@@ -421,7 +421,7 @@ class MobileContextTest extends MediaWikiTestCase {
 		$context->addAnalyticsLogItemFromXanalytics( $analyticsItem );
 		$logItems = $context->getAnalyticsLogItems();
 		$this->assertTrue( isset( $logItems[$key] ) );
-		$this->assertEquals( $logItems[$key], $val );
+		$this->assertEquals( $val, $logItems[$key] );
 	}
 
 	public function addAnalyticsLogItemFromXAnalyticsProvider() {
@@ -440,7 +440,7 @@ class MobileContextTest extends MediaWikiTestCase {
 	 */
 	public function testGetMobileHostToken( $domainTemplate, $result ) {
 		$context = $this->makeContext();
-		$this->assertEquals( $context->getMobileHostToken( $domainTemplate ), $result );
+		$this->assertEquals( $result, $context->getMobileHostToken( $domainTemplate ) );
 	}
 
 	public function getMobileHostTokenProvider() {
