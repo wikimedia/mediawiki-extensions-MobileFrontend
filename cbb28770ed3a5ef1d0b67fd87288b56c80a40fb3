@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f484a998_4bb80d13",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 309,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-02-27T16:39:54Z",
+      "side": 1,
+      "message": "Me thinking loud: It would be valuable to add some information that this function returns the user setting (not the global one). Something like `isAmcEnabledByUser()` or sth like that. \n\nThat\u0027s also the main reason why we have two AMC classes, one for global state, second for user state, mostly because of naming clash.\n\nAlso, I think it\u0027s worth to make this function private/protected, to have one single source of truth.",
+      "range": {
+        "startLine": 309,
+        "startChar": 17,
+        "endLine": 309,
+        "endChar": 29
+      },
+      "revId": "cbb28770ed3a5ef1d0b67fd87288b56c80a40fb3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "209c21e3_299c3c07",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 992,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-02-27T16:39:54Z",
+      "side": 1,
+      "message": "I like this code, but it makes me wonder, isn\u0027t it bit better to keep analytics log items unprocessed?\n\nI mean, instead of storing already a comma-concatenated string, just store array of arrays, example:\n \n  [ \n    analyticsKey1 \u003d\u003e [ value1, value2, value3 ],\n    analyticsKey2 \u003d\u003e [...]\n  ]\n\nand then in `getXAnalyticsHeader()`, build the `X-Analytics: \u003ckey\u003e\u003d\u003cvalue\u003e,\u003cvalue\u003e` string. \nThere is no need to know how analytics headers are build when we store those. With that approach, we don\u0027t have to \"unwrap\" the analytics key, update it, and wrap it again.\n\nPHP7 provides a null-coalesce operator, it will be helpful here.\n\n\nAlso, I think we can make getAnalyticsLogItems() function private, as nothing uses that, better let\u0027s not expose that.",
+      "range": {
+        "startLine": 992,
+        "startChar": 1,
+        "endLine": 992,
+        "endChar": 52
+      },
+      "revId": "cbb28770ed3a5ef1d0b67fd87288b56c80a40fb3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
