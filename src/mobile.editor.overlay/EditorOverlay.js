@@ -315,6 +315,7 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 			var parsedText = result.text,
 				parsedSectionLine = result.line;
 
+			self.sectionId = result.id;
 			// On desktop edit summaries strip tags. Mimic this behavior on mobile devices
 			self.sectionLine = self.parseHTML( '<div>' ).html( parsedSectionLine ).text();
 			new Section( {

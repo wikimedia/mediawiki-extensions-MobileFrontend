@@ -171,6 +171,11 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 */
 	template: mw.template.get( 'mobile.editor.overlay', 'EditorOverlayBase.hogan' ),
 	/**
+	 * @memberof EditorOverlayBase
+	 * @instance
+	 */
+	sectionId: '',
+	/**
 	 * Logs an event to http://meta.wikimedia.org/wiki/Schema:EditAttemptStep
 	 * @memberof EditorOverlayBase
 	 * @instance
@@ -231,10 +236,10 @@ mfExtend( EditorOverlayBase, Overlay, {
 		this.log( {
 			action: 'saveSuccess'
 		} );
-		if ( self.sectionLine ) {
+		if ( self.sectionId ) {
 			// Ideally we'd want to do this via replaceState (see T189173)
 			// eslint-disable-next-line no-restricted-properties
-			window.location.hash = self.sectionLine;
+			window.location.hash = '#' + self.sectionId;
 		} else {
 			// Cancel the hash fragment
 			// otherwise clicking back after a save will take you back to the editor.

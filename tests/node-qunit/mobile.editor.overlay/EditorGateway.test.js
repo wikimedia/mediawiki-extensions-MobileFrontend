@@ -133,10 +133,12 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/EditorGateway', {
 				},
 				sections: {
 					0: {
-						line: 'Testsection'
+						line: 'Test section',
+						anchor: 'Test_section'
 					},
 					1: {
-						line: 'Testsection2'
+						line: 'Test section2',
+						anchor: 'Test_section2'
 					}
 				}
 			}
@@ -640,6 +642,7 @@ QUnit.test( '#EditorGateway', function ( assert ) {
 			} ) );
 			assert.ok( resolveSpy.calledWith( {
 				line: '',
+				id: '',
 				text: '<h1>Heading 1</h1><h2>Heading 2</h2><p>test content</p>'
 			} ) );
 		} );
@@ -670,7 +673,8 @@ QUnit.test( '#EditorGateway, check with sectionLine', function ( assert ) {
 	return gateway.getPreview( {
 		text: 'test content'
 	} ).then( function ( section ) {
-		assert.strictEqual( section.line, 'Testsection', 'Ok, section line returned' );
+		assert.strictEqual( section.line, 'Test section', 'Ok, section line returned' );
+		assert.strictEqual( section.id, 'Test_section', 'Ok, section ID returned' );
 	} );
 } );
 

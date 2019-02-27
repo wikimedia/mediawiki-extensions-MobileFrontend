@@ -286,7 +286,7 @@ MobileFrontendArticleTarget.prototype.saveComplete = function () {
 	// Parent method
 	MobileFrontendArticleTarget.super.prototype.saveComplete.apply( this, arguments );
 
-	this.overlay.sectionLine = '#' + fragment;
+	this.overlay.sectionId = fragment;
 	this.overlay.onSaveComplete();
 };
 

@@ -233,6 +233,7 @@ EditorGateway.prototype = {
 	getPreview: function ( options ) {
 		var result = util.Deferred(),
 			sectionLine = '',
+			sectionId = '',
 			request,
 			self = this;
 
@@ -256,13 +257,18 @@ EditorGateway.prototype = {
 				// section 0 haven't a section name so skip
 				if ( self.sectionId !== 0 &&
 					resp.parse.sections !== undefined &&
-					resp.parse.sections[0] !== undefined &&
-					resp.parse.sections[0].line !== undefined
+					resp.parse.sections[0] !== undefined
 				) {
-					sectionLine = resp.parse.sections[0].line;
+					if ( resp.parse.sections[0].anchor !== undefined ) {
+						sectionId = resp.parse.sections[0].anchor;
+					}
+					if ( resp.parse.sections[0].line !== undefined ) {
+						sectionLine = resp.parse.sections[0].line;
+					}
 				}
 				result.resolve( {
 					text: resp.parse.text['*'],
+					id: sectionId,
 					line: sectionLine
 				} );
 			} else {
