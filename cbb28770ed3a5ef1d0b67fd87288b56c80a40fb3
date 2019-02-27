@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "242f6691_ddd33632",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 309,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-27T20:43:34Z",
+      "side": 1,
+      "message": "Thanks, sounds good. I\u0027ve marked this private static and renamed to isAmcUser().",
+      "parentUuid": "f484a998_4bb80d13",
+      "range": {
+        "startLine": 309,
+        "startChar": 17,
+        "endLine": 309,
+        "endChar": 29
+      },
+      "revId": "cbb28770ed3a5ef1d0b67fd87288b56c80a40fb3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "209c21e3_299c3c07",
         "filename": "includes/MobileContext.php",
         "patchSetId": 2
@@ -36,6 +60,30 @@
       "writtenOn": "2019-02-27T16:39:54Z",
       "side": 1,
       "message": "I like this code, but it makes me wonder, isn\u0027t it bit better to keep analytics log items unprocessed?\n\nI mean, instead of storing already a comma-concatenated string, just store array of arrays, example:\n \n  [ \n    analyticsKey1 \u003d\u003e [ value1, value2, value3 ],\n    analyticsKey2 \u003d\u003e [...]\n  ]\n\nand then in `getXAnalyticsHeader()`, build the `X-Analytics: \u003ckey\u003e\u003d\u003cvalue\u003e,\u003cvalue\u003e` string. \nThere is no need to know how analytics headers are build when we store those. With that approach, we don\u0027t have to \"unwrap\" the analytics key, update it, and wrap it again.\n\nPHP7 provides a null-coalesce operator, it will be helpful here.\n\n\nAlso, I think we can make getAnalyticsLogItems() function private, as nothing uses that, better let\u0027s not expose that.",
+      "range": {
+        "startLine": 992,
+        "startChar": 1,
+        "endLine": 992,
+        "endChar": 52
+      },
+      "revId": "cbb28770ed3a5ef1d0b67fd87288b56c80a40fb3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3c860566_939a9163",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 992,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-02-27T20:43:34Z",
+      "side": 1,
+      "message": "Good thinking. I didn\u0027t have a clear picture of this variable until your analysis. I\u0027ve tried to make the model more ideal: 1) persist as an array of distinct strings as long as possible, 2) forbid duplicates. Let me know what you think in the new patch.\n\ngetAnalyticsLogItems() is used by the tests so I\u0027ve left it public.",
+      "parentUuid": "209c21e3_299c3c07",
       "range": {
         "startLine": 992,
         "startChar": 1,
