@@ -45,6 +45,23 @@ class ContentProviderFactory {
 		if ( $preserveLocalContent && $title && $title->exists() ) {
 			return self::getDefaultParser( $html );
 		}
+		$contentProviderApi = $config->get( 'MFContentProviderScriptPath' );
+		if ( $contentProviderApi ) {
+			// It's very possible this might break compatibility with other extensions
+			// so this should not be used outside development :). Please see README.md
+			$out->addJsConfigVars( [ 'wgScriptPath' => $contentProviderApi ] );
+			// This injects a global ajaxSend event which ensures origin=* is added to all ajax requests
+			// This helps with compatibility of VisualEditor!
+			// This is intentionally simplistic as all queries we care about
+			// are guaranteed to already have a query string
+			$out->addInlineScript(
+				'window.onload = function () {' .
+					'$( document ).ajaxSend(function( event, jqxhr, settings ) {' .
+						'settings.url += "&origin=*";' .
+					'});' .
+				'};'
+			);
+		}
 
 		switch ( $contentProviderClass ) {
 			case self::MCS_API:

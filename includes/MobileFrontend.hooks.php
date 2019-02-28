@@ -388,12 +388,6 @@ class MobileFrontendHooks {
 				'pilimit' => 50,
 			] );
 		}
-		$contentProviderApi = $config->get( 'MFContentProviderScriptPath' );
-		if ( $contentProviderApi ) {
-			// It's very possible this might break compatibility with other extensions
-			// so this should not be used outside development :). Please see README.md
-			$vars[ 'wgScriptPath' ] = $contentProviderApi;
-		}
 
 		// Get the licensing agreement that is displayed in the uploading interface.
 		$vars += [
