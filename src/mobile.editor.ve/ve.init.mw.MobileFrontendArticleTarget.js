@@ -98,15 +98,21 @@ MobileFrontendArticleTarget.prototype.onContainerScroll = function () {
  * @instance
  */
 MobileFrontendArticleTarget.prototype.onWindowScroll = function () {
-	var $window, windowTop, contentTop,
+	var $window, windowTop, contentTop, surfaceView,
 		surface = this.surface,
-		surfaceView = surface.getView(),
 		target = this;
+
+	if ( !surface ) {
+		// Editor has not loaded yet
+		return;
+	}
+
 	// iOS applies a scroll offset to the window when opening the keyboard to move the cursor into
 	// view. On the editing surface, this is not necessary (we set large padding-bottom so that the
 	// keyboard covers nothing); apply this offset to the surface instead. But in other cases allow
 	// it to happen, otherwise the user can't scroll to see whatever is underneath the keyboard.
 	// (T210559, T215604, T212967)
+	surfaceView = surface.getView();
 	if ( this.useScrollContainer && surfaceView.isFocused() && !surfaceView.deactivated ) {
 		$window = $( target.getElementWindow() );
 		windowTop = $window.scrollTop();
