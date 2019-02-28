@@ -16,6 +16,24 @@
       "revId": "cc682aff901d0969fc4882ac55b8ae4cb9bb6424",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e8b826c9_35329c7e",
+        "filename": "resources/mobile.init/editor.less",
+        "patchSetId": 33
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2019-02-28T00:45:58Z",
+      "side": 1,
+      "message": "The editor only loads on Minerva though, so that\u0027s not a problem.\n\nI can put this file into skinStyles instead if you think that will be less confusing?",
+      "parentUuid": "98ac5c37_e7a86334",
+      "revId": "cc682aff901d0969fc4882ac55b8ae4cb9bb6424",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
