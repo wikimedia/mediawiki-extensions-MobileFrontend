@@ -15,7 +15,8 @@
 			"Jenniesarina",
 			"Josve05a",
 			"Dammråtta",
-			"Rockyfelle"
+			"Rockyfelle",
+			"Sturban"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Huruvida eller inte en användare redigerar via mobila gränssnittet",
@@ -260,7 +261,7 @@
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Textstorlek",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Kontrollera textstorleken för din läsupplevelse.",
 	"mobile-frontend-mobile-option-amc": "Avancerade mobilbidrag",
-	"mobile-frontend-mobile-option-amc-experiment-description": "Under de kommande månaderna kommer aktivera funktioner som har stöd för avancerade redigerare. Detta är ett pågående experiment och vi skulle uppskatta ditt samarbete och stöd.",
+	"mobile-frontend-mobile-option-amc-experiment-description": "Vi utvecklar aktivt nya funktioner för avancerade redigerare. Genom att aktivera det här läget får du automatiskt nya funktioner när de släpps. All återkoppling eller samarbete uppskattas.",
 	"mobile-frontend-mobile-option-amc-learn-more": "Läs mer",
 	"mobile-frontend-mobile-option-amc-send-feedback": "Skicka återkoppling",
 	"mobile-frontend-beta-only": "Funktionen är endast tillgänglig i betaläget",

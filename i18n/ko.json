@@ -266,7 +266,7 @@
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox-description": "성능 및 가독성 개선을 위해 텍스트는 항상 위의 정보상자만 표시합니다.",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "글꼴 크기",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "읽기 경험의 글꼴 크기를 조정합니다.",
-	"mobile-frontend-mobile-option-amc": "고급 모바일 기여",
+	"mobile-frontend-mobile-option-amc": "고급 기여 모드",
 	"mobile-frontend-mobile-option-amc-learn-more": "더 알아보기",
 	"mobile-frontend-mobile-option-amc-send-feedback": "피드백 보내기",
 	"mobile-frontend-beta-only": "베타 모드에서만 사용 가능한 기능입니다",

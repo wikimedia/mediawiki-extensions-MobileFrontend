@@ -17,7 +17,8 @@
 			"Mads Haupt",
 			"Joedalton",
 			"Jorn Ari",
-			"Saederup92"
+			"Saederup92",
+			"Weblars"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Hvorvidt en bruger redigerer via mobil-grænsefladen",
@@ -101,6 +102,7 @@
 	"mobile-frontend-history-404-desc": "Du kan ikke se på historien for en side der ikke eksisterer. Den kan være slettet, eller du kan have fulgt et dårligt link.",
 	"mobile-frontend-history-404-title": "Ingen sådan side",
 	"mobile-frontend-history-no-results": "Ingen historie matcher det angivne filter.",
+	"mobile-frontend-joined-years": "{{GENDER:$1|Registrerede sig}} for {{PLURAL:$2|$2 år}} siden",
 	"mobile-frontend-language-heading": "<strong>Sprog</strong>",
 	"mobile-frontend-languages-404-desc": "Der skal angives en gyldig titel.",
 	"mobile-frontend-languages-404-title": "Sprogfejl",
@@ -173,7 +175,7 @@
 	"mobile-frontend-talk-topic-error-badtoken": "Der var en fejl på serveren. Din redigering kan ikke reddes. Prøv at genindlæse denne side.",
 	"mobile-frontend-terms-text": "Vilkår for anvendelse",
 	"mobile-frontend-view": "Mobilvisning",
-	"mobile-frontend-view-desktop": "Skrivebord",
+	"mobile-frontend-view-desktop": "Slå mobilvisning fra",
 	"mobile-frontend-watchlist-a-z": "Liste",
 	"mobile-frontend-watchlist-a-z-empty-howto": "Du overvåger i øjeblikket ikke nogen sider. Din overvågningsliste hjælper dig med at holde styr på de sider, du er interesseret i. Overvåg sider ved at trykke på stjerne-ikonet.",
 	"mobile-frontend-watchlist-a-z-empty-howto-alt": "Klik på stjerne ikonet",

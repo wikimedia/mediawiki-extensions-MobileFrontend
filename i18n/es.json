@@ -88,6 +88,7 @@
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Motivo del bloqueo",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Bloqueado|Bloqueada}} por",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "El bloqueo caducará el",
+	"mobile-frontend-editor-blocked-drawer-help": "Detalles",
 	"mobile-frontend-editor-generic-block-reason": "Motivo desconocido",
 	"mobile-frontend-editor-cancel": "Cancelar",
 	"mobile-frontend-editor-cancel-confirm": "¿Estás seguro de abandonar tu edición?",
