@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5c9168d1_7341773d",
+        "filename": "src/mobile.startup/lazyImages/lazyImageLoader.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-02-28T13:39:24Z",
+      "side": 1,
+      "message": "Most probably we can drop this comment.",
+      "range": {
+        "startLine": 21,
+        "startChar": 1,
+        "endLine": 21,
+        "endChar": 87
+      },
+      "revId": "3c3348b0104b5ef95e9aee6a1cd7e221ea919fd8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
