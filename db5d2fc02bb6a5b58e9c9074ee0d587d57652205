@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f159a515_2ae229e3",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 993,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-03-01T19:00:56Z",
+      "side": 1,
+      "message": "it would be nice to add some defensive programming here, sth like:\n\nAssert::asertParameterType( \u0027string\u0027, $key, \u0027key\u0027);\nAssert::asertParameterType( \u0027string\u0027, $val, \u0027val\u0027);",
+      "range": {
+        "startLine": 992,
+        "startChar": 2,
+        "endLine": 993,
+        "endChar": 22
+      },
+      "revId": "db5d2fc02bb6a5b58e9c9074ee0d587d57652205",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bad94202_b30ccdc6",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 994,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-03-01T19:00:56Z",
+      "side": 1,
+      "message": "it should be something like:\n\n  $items \u003d $this-\u003eanalyticsLogItems[$key] ?? [];\n  if ( !in_array( $val, $items ) ) {\n    $items[] \u003d $val;\n    $this-\u003eanalyticsLogItems[$key] \u003d $items;\n  }",
+      "range": {
+        "startLine": 994,
+        "startChar": 2,
+        "endLine": 994,
+        "endChar": 66
+      },
+      "revId": "db5d2fc02bb6a5b58e9c9074ee0d587d57652205",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "61b322ca_8779445a",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 1003,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-03-01T19:00:56Z",
+      "side": 1,
+      "message": "this doesn\u0027t only get items, but also postprocess those. \n\nI still think that this function can be private as it is not used anywhere. I know there are some unit tests for that, but I think this shouldn\u0027t be a part of MobileContext API. \n\nI know there are some unit tests for this function, but most probably those are there only to test addAnalyticsLogItem behavior.\n\nIt should be safe to:\n- make this function private\n- rename it to be a bit more descriptive (that it parses the array), sth like \"buildAnalyticsLogItems\"\n- remove the unit tests for getAnalyticsLogItems(), we should only test the public methods and IMHO the only two public methods should be: addAnalyticsLogItem() and getXAnalyticsHeader(). All tests done against getAnalyticsLogItems should be performed against getXAnalyticsHeader.",
+      "range": {
+        "startLine": 1003,
+        "startChar": 17,
+        "endLine": 1003,
+        "endChar": 37
+      },
+      "revId": "db5d2fc02bb6a5b58e9c9074ee0d587d57652205",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
