@@ -8,7 +8,7 @@
 		<p class="license">{{{licenseMsg}}}</p>
 	</div>
 	<div class="panel">
-		<input type="text" class="summary mw-ui-input" placeholder="{{topicTitlePlaceHolder}}">
+		<input type="text" class="mw-ui-input" placeholder="{{topicTitlePlaceHolder}}">
 	</div>
 	<div class="panel">
 		<textarea class="wikitext-editor mw-ui-input" cols="40" rows="10" placeholder="{{topicContentPlaceHolder}}"></textarea>

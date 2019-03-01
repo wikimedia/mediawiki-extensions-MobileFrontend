@@ -26,8 +26,8 @@ function TalkSectionAddOverlay( options ) {
 		util.extend( options, {
 			className: 'talk-overlay overlay',
 			events: {
-				'input .wikitext-editor, .summary': 'onTextInput',
-				'change .wikitext-editor, .summary': 'onTextInput',
+				'input .wikitext-editor, input': 'onTextInput',
+				'change .wikitext-editor, input': 'onTextInput',
 				'click .confirm-save': 'onSaveClick'
 			}
 		} )
@@ -92,7 +92,7 @@ mfExtend( TalkSectionAddOverlay, Overlay, {
 		Overlay.prototype.postRender.call( this );
 		this.showHidden( '.initial-header' );
 		this.$confirm = this.$el.find( 'button.confirm-save' );
-		this.$subject = this.$el.find( '.summary' );
+		this.$subject = this.$el.find( 'input' );
 		this.$ta = this.$el.find( '.wikitext-editor' );
 	},
 	/**
