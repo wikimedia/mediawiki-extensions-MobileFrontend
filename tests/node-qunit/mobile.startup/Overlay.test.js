@@ -134,6 +134,28 @@ QUnit.test( 'headerActions property', function ( assert ) {
 		'headerButtons and header actions can be mixed if necessary' );
 } );
 
+QUnit.test( 'onBeforeExit', function ( assert ) {
+	var spies = [],
+		overlays = [
+			new Overlay( {} ),
+			new Overlay( {
+				onBeforeExit: function () {}
+			} ),
+			new Overlay( {
+				onBeforeExit: function ( exit ) {
+					exit();
+				}
+			} )
+		];
+	overlays.forEach( function ( overlay ) {
+		spies.push( sandbox.spy( overlay, 'hide' ) );
+		overlay.onExitClick( new Event( 'click' ) );
+	} );
+	assert.strictEqual( spies[0].calledOnce, true, 'Overlay 1 hide method called' );
+	assert.strictEqual( spies[1].calledOnce, false, 'Overlay 2 does not call the exit function' );
+	assert.strictEqual( spies[2].calledOnce, true, 'Overlay 3 calls the exit function' );
+} );
+
 QUnit.test( 'Close overlay', function ( assert ) {
 	var overlay = new Overlay( {
 		heading: '<h2>Title</h2>',

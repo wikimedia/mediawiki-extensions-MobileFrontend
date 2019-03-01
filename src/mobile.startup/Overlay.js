@@ -42,6 +42,9 @@ try {
  * @param {View[]} props.headerActions children (usually buttons or icons)
  *   that should be placed in the header actions
  * @param {boolean} props.noHeader renders an overlay without a header
+ * @param {Function} props.onBeforeExit allows a consumer to prevent exits in certain
+ *  situations. This callback gets the following parameters:
+ *  - 1) the exit function which should be run after the consumer has made their changes.
  * @param {HeaderButtonDefinition[]} [props.headerButtons] define buttons to go in header
  */
 function Overlay( props ) {
@@ -214,12 +217,22 @@ mfExtend( Overlay, View, {
 	 * @param {Object} ev event object
 	 */
 	onExitClick: function ( ev ) {
+		const exit = function () {
+			// FIXME: This check will be removed once ImageOverlay
+			// is using onBeforeExit.
+			if ( this.hideOnExitClick ) {
+				this.hide();
+			}
+			this.emit( Overlay.EVENT_EXIT );
+		}.bind( this );
 		ev.preventDefault();
 		ev.stopPropagation();
-		if ( this.hideOnExitClick ) {
-			this.hide();
+		if ( this.options.onBeforeExit ) {
+			this.options.onBeforeExit( exit );
+		} else {
+			exit();
 		}
-		this.emit( Overlay.EVENT_EXIT );
+
 	},
 	/**
 	 * Event handler for touchstart, for IOS
