@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7aed3198_9e34b0d1",
+        "filename": "src/mobile.editor.overlay/VisualEditorOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2019-03-01T16:12:42Z",
+      "side": 1,
+      "message": "Wouldn\u0027t a focusable node match this, but also hide the keyboard?\n\nYou might need to check to see if the ve.ce.Selection.isNativeCursor?",
+      "revId": "0d8ad8f5856aeb1a3b51492437bca51eb45456bb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
