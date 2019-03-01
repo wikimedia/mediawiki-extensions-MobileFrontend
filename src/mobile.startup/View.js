@@ -463,6 +463,12 @@ mfExtend( View, {
 /**
  * @memberof View
  * @instance
+ * @property {jQuery.Object} $el
+ */
+
+/**
+ * @memberof View
+ * @instance
  * @func insertAfter
  * @param {string|Node|Node[]|JQuery} target
  * @return {this}
