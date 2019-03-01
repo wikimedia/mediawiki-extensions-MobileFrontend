@@ -24,7 +24,6 @@ function categoryOverlay( options ) {
 	overlay = new Overlay( {
 		className: 'category-overlay overlay',
 		heading: mw.msg( 'mobile-frontend-categories-heading' ),
-		headerButtonsListClassName: 'header-action',
 		headerButtons: headerButtons
 	} );
 	widget = new CategoryTabs(
