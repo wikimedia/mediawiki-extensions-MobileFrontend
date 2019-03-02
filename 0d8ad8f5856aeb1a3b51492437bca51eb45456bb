@@ -16,6 +16,24 @@
       "revId": "0d8ad8f5856aeb1a3b51492437bca51eb45456bb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cd8bf13d_c1b49a36",
+        "filename": "src/mobile.editor.overlay/VisualEditorOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2019-03-02T01:01:31Z",
+      "side": 1,
+      "message": "Maybe, I\u0027m not sure. but that should be harmless. What matters is that no dialog is open on top of the editing surface. Note that I\u0027m just moving this check here from the other file.",
+      "parentUuid": "7aed3198_9e34b0d1",
+      "revId": "0d8ad8f5856aeb1a3b51492437bca51eb45456bb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
