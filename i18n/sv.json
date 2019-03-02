@@ -260,7 +260,7 @@
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox-description": "Text kommer alltid att visas ovanför inforutor, vilket förbättrar prestanda och läsbarhet.",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Textstorlek",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Kontrollera textstorleken för din läsupplevelse.",
-	"mobile-frontend-mobile-option-amc": "Avancerade mobilbidrag",
+	"mobile-frontend-mobile-option-amc": "Läge för avancerade bidrag",
 	"mobile-frontend-mobile-option-amc-experiment-description": "Vi utvecklar aktivt nya funktioner för avancerade redigerare. Genom att aktivera det här läget får du automatiskt nya funktioner när de släpps. All återkoppling eller samarbete uppskattas.",
 	"mobile-frontend-mobile-option-amc-learn-more": "Läs mer",
 	"mobile-frontend-mobile-option-amc-send-feedback": "Skicka återkoppling",
