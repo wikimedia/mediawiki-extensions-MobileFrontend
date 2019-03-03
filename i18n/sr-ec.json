@@ -254,7 +254,7 @@
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox-description": "Текст ће се увек приказати изнад оквира са информацијама, побољшавајући перформансе и читљивост.",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Величина фонта",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Контрола величине фонта за искуство читања.",
-	"mobile-frontend-mobile-option-amc": "Напредни мод доприноса",
+	"mobile-frontend-mobile-option-amc": "Напредни режим доприноса",
 	"mobile-frontend-beta-only": "Функција је доступна само у бета режиму",
 	"mobile-frontend-console-recruit": "Сазнајте више о томе како изграђујемо сајт за мобилне уређаје @ https://www.mediawiki.org/wiki/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Оптимизуј и поједностави посебне странице на мобилном уређају (препоручује се)",
