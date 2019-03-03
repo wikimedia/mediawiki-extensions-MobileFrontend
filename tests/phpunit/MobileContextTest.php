@@ -14,7 +14,7 @@ class MobileContextTest extends MediaWikiTestCase {
 	 * @return ReflectionMethod
 	 */
 	protected static function getMethod( $name ) {
-		$class = new ReflectionClass( 'MobileContext' );
+		$class = new ReflectionClass( MobileContext::class );
 		$method = $class->getMethod( $name );
 		$method->setAccessible( true );
 

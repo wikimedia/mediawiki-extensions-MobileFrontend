@@ -132,7 +132,7 @@ class SpecialMobileLanguagesTest extends MediaWikiTestCase {
 			]
 		];
 		$sp = new SpecialMobileLanguages();
-		$class = new ReflectionClass( 'SpecialMobileLanguages' );
+		$class = new ReflectionClass( SpecialMobileLanguages::class );
 		$method = $class->getMethod( 'processLanguages' );
 		$method->setAccessible( true );
 		$this->assertEquals(
