@@ -22,6 +22,7 @@ var EditorOverlayBase = require( './EditorOverlayBase' ),
  * @param {Object} options Configuration options
  */
 function EditorOverlay( options ) {
+	this.isFirefox = /firefox/i.test( window.navigator.userAgent );
 	this.gateway = new EditorGateway( {
 		api: options.api,
 		title: options.title,
@@ -354,6 +355,12 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 	 */
 	_resizeEditor: function () {
 		var scrollTop, container, $scrollContainer;
+
+		// exiting early for firefox due to a bug that causes the page to scroll to top
+		// whenever a caret is inserted T214880
+		if ( this.isFirefox ) {
+			return;
+		}
 
 		if ( !this.$scrollContainer ) {
 			container = OO.ui.Element.static
