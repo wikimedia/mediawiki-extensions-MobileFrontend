@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a4f0c2aa_76d5a358",
+        "filename": "src/mobile.editor.overlay/EditorOverlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 357,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-04T16:41:29Z",
+      "side": 1,
+      "message": "how about calculating this once in the constructor. I think resizeEditor gets called every text character inputted?",
+      "revId": "b63d3bc1453b9bd853b256bdd38dea99b18366a7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
