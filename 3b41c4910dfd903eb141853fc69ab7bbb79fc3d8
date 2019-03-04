@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9b0f8ef8_5cb089ba",
+        "filename": "src/mobile.editor.overlay/schemaEditAttemptStep.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2019-03-04T22:00:14Z",
+      "side": 1,
+      "message": "This overwrites a long-lifetime variable (sampleRate) based on a short-lifetime per-call value (data.editor_interface). That bothers me, and I think it could cause issues like the oversampling surviving an editor switch when it shouldn\u0027t.\n\nIt also completely breaks the is_oversample logic on line 116, which will always return false (except the first time).",
+      "revId": "3b41c4910dfd903eb141853fc69ab7bbb79fc3d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "06901dfe_b88b85d9",
+        "filename": "src/mobile.editor.ve/schemaVisualEditorFeatureUse.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2019-03-04T22:00:14Z",
+      "side": 1,
+      "message": "You also shouldn\u0027t mess with the sampleRate variable here, and if you\u0027re going to do oversampling in this schema (note this is not the EditAttemptStep schema but a different one) you should add an is_oversample field to it as well.",
+      "revId": "3b41c4910dfd903eb141853fc69ab7bbb79fc3d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
