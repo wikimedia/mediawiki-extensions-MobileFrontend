@@ -34,6 +34,24 @@
       "revId": "cc682aff901d0969fc4882ac55b8ae4cb9bb6424",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1905739f_11c9de2d",
+        "filename": "resources/mobile.init/editor.less",
+        "patchSetId": 33
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-04T18:24:21Z",
+      "side": 1,
+      "message": "skinStyles would be better yes. I know it only runs on Minerva right now, but I\u0027d love us to not go backwards and make it harder to integrate in say Timeless later on.",
+      "parentUuid": "e8b826c9_35329c7e",
+      "revId": "cc682aff901d0969fc4882ac55b8ae4cb9bb6424",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
