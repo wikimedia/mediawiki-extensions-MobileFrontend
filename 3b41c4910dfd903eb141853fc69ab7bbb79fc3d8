@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "56808ee7_c7752634",
+        "filename": "src/mobile.editor.overlay/schemaEditAttemptStep.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 2915
+      },
+      "writtenOn": "2019-03-04T22:07:05Z",
+      "side": 1,
+      "message": "Fair point, I\u0027ll revise that.",
+      "parentUuid": "9b0f8ef8_5cb089ba",
+      "revId": "3b41c4910dfd903eb141853fc69ab7bbb79fc3d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "06901dfe_b88b85d9",
         "filename": "src/mobile.editor.ve/schemaVisualEditorFeatureUse.js",
         "patchSetId": 5
@@ -30,6 +48,24 @@
       "writtenOn": "2019-03-04T22:00:14Z",
       "side": 1,
       "message": "You also shouldn\u0027t mess with the sampleRate variable here, and if you\u0027re going to do oversampling in this schema (note this is not the EditAttemptStep schema but a different one) you should add an is_oversample field to it as well.",
+      "revId": "3b41c4910dfd903eb141853fc69ab7bbb79fc3d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7063a2b8_1f50de72",
+        "filename": "src/mobile.editor.ve/schemaVisualEditorFeatureUse.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 2915
+      },
+      "writtenOn": "2019-03-04T22:07:05Z",
+      "side": 1,
+      "message": "This one is already weirdly entwined with EditAttemptStep -- it relies on being joined to it via the session_id for data already.",
+      "parentUuid": "06901dfe_b88b85d9",
       "revId": "3b41c4910dfd903eb141853fc69ab7bbb79fc3d8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
