@@ -69,6 +69,24 @@
       "revId": "3b41c4910dfd903eb141853fc69ab7bbb79fc3d8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "727158d5_5196827b",
+        "filename": "src/mobile.editor.ve/schemaVisualEditorFeatureUse.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2019-03-04T22:38:31Z",
+      "side": 1,
+      "message": "Fair enough",
+      "parentUuid": "7063a2b8_1f50de72",
+      "revId": "3b41c4910dfd903eb141853fc69ab7bbb79fc3d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
