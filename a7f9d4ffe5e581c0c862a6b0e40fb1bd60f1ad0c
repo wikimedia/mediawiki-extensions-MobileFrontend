@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3a52695e_71149403",
+        "filename": "src/mobile.editor.overlay/EditorOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-04T22:31:09Z",
+      "side": 1,
+      "message": "Do we know that navigator.userAgent exists on all browsers supported? Maybe we should do something like `/firefox/i.test( navigator.userAgent )`?",
+      "range": {
+        "startLine": 25,
+        "startChar": 18,
+        "endLine": 25,
+        "endChar": 72
+      },
+      "revId": "a7f9d4ffe5e581c0c862a6b0e40fb1bd60f1ad0c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
