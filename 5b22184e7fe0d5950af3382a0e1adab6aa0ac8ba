@@ -25,6 +25,47 @@
     },
     {
       "key": {
+        "uuid": "186b4d7c_228a20a0",
+        "filename": "resources/mobile.startup/OverlayHeader.hogan",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-04T22:20:59Z",
+      "side": 1,
+      "message": "Anchor tag does not support, but button does (and I need for my pending change). If anchor sets disabled attribute it will be a noop.\n\nWe can add support in Overlay.prototype.preRender if you think this is confusing, or I can remove this and make the button disabled in the factory function after creating the overlay.\n\nIt felt cleaner to do it here on the template level. Ideally I\u0027d like to get rid of headerButtons altogether in favour of Button\u0027s which have disabled attribute, however I\u0027d need to make some larger changes to style them the same in this context!",
+      "parentUuid": "7bf06962_79b70746",
+      "range": {
+        "startLine": 12,
+        "startChar": 2,
+        "endLine": 12,
+        "endChar": 37
+      },
+      "revId": "5b22184e7fe0d5950af3382a0e1adab6aa0ac8ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b607408a_886c887c",
+        "filename": "src/mobile.startup/Overlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-04T22:20:59Z",
+      "side": 1,
+      "message": "Documented here.",
+      "revId": "5b22184e7fe0d5950af3382a0e1adab6aa0ac8ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "95544dc5_1fb7d42f",
         "filename": "src/mobile.startup/Overlay.js",
         "patchSetId": 2
@@ -36,6 +77,30 @@
       "writtenOn": "2019-03-04T18:18:25Z",
       "side": 1,
       "message": "Do we want to modify options? Would it be better to reference `props.headerButtons || props.headerActions.length` where needed directly instead? If not, would it be better to have the client set hasActions directly instead?",
+      "range": {
+        "startLine": 166,
+        "startChar": 2,
+        "endLine": 166,
+        "endChar": 25
+      },
+      "revId": "5b22184e7fe0d5950af3382a0e1adab6aa0ac8ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e656a247_94170db9",
+        "filename": "src/mobile.startup/Overlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-04T22:20:59Z",
+      "side": 1,
+      "message": "this.options is passed directly to the template (it\u0027s actually a list of template options) thus you have to update this.options.\n\nhttps://github.com/wikimedia/mediawiki-extensions-MobileFrontend/blob/master/src/mobile.startup/View.js#L255",
+      "parentUuid": "95544dc5_1fb7d42f",
       "range": {
         "startLine": 166,
         "startChar": 2,
