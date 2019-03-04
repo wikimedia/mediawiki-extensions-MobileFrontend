@@ -39,7 +39,11 @@ module.exports = function () {
 			if ( trackdebug ) {
 				log( topic, event );
 			} else {
-				schemaVisualEditorFeatureUse.log( event, mw.config.get( 'wgWMESchemaEditAttemptStepOversample' ) ? 1 : sampleRate );
+				schemaVisualEditorFeatureUse.log( event, (
+					mw.config.get( 'wgWMESchemaEditAttemptStepOversample' ) ||
+					mw.config.get( 'wgMFSchemaEditAttemptStepOversample' ) === 'visualeditor' ||
+					mw.config.get( 'wgMFSchemaEditAttemptStepOversample' ) === 'all'
+				) ? 1 : sampleRate );
 			}
 		} );
 

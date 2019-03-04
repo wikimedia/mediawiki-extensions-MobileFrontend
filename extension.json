@@ -1009,7 +1009,8 @@
 		"MFLogWrappedInfoboxes": true,
 		"MFSiteStylesRenderBlocking": false,
 		"MFWatchlistEditCountThreshold": 10,
-		"MFAdvancedMobileContributions": false
+		"MFAdvancedMobileContributions": false,
+		"MFSchemaEditAttemptStepOversample": false
 	},
 	"ServiceWiringFiles": [
 		"includes/ServiceWiring.php"

@@ -136,7 +136,12 @@ module.exports = function () {
 			if ( trackdebug ) {
 				log( topic + '.' + data.action, duration + 'ms', data );
 			} else {
-				schemaEditAttemptStep.log( data, mw.config.get( 'wgWMESchemaEditAttemptStepOversample' ) ? 1 : sampleRate );
+				schemaEditAttemptStep.log( data, (
+					mw.config.get( 'wgWMESchemaEditAttemptStepOversample' ) ||
+					mw.config.get( 'wgMFSchemaEditAttemptStepOversample' ) === 'all' ||
+					// wikitext / visualeditor
+					data.editor_interface === mw.config.get( 'wgMFSchemaEditAttemptStepOversample' )
+				) ? 1 : sampleRate );
 			}
 		} );
 
