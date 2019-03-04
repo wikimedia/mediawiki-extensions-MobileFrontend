@@ -110,6 +110,30 @@
       "revId": "5b22184e7fe0d5950af3382a0e1adab6aa0ac8ba",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "de52aac6_511b2932",
+        "filename": "src/mobile.startup/Overlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-04T22:22:01Z",
+      "side": 1,
+      "message": "Hogan doesn\u0027t support \u0026\u0026 tests, which is why this happens here (before template renders).\n\nhasActions is only used inside the template.",
+      "parentUuid": "e656a247_94170db9",
+      "range": {
+        "startLine": 166,
+        "startChar": 2,
+        "endLine": 166,
+        "endChar": 25
+      },
+      "revId": "5b22184e7fe0d5950af3382a0e1adab6aa0ac8ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
