@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e22ac9d_610ddcc1",
+        "filename": "resources/mobile.startup/panel.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2019-03-05T01:41:06Z",
+      "side": 1,
+      "message": "Why\u0027s there a .panel and a #bodyContent .panel? I thought latter was invented to limit .panel (only from my memories, not tracked down via git blame).",
+      "revId": "5f13913cb102eaa7821d5e45f0a7655b43d872f9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ef448cd2_0a46ba9b",
+        "filename": "resources/mobile.startup/panel.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2019-03-05T01:41:06Z",
+      "side": 1,
+      "message": "Why does input receive margin, doesn\u0027t seem necessary.",
+      "revId": "5f13913cb102eaa7821d5e45f0a7655b43d872f9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9e0efdbf_aa57ce70",
+        "filename": "resources/mobile.startup/panel.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2019-03-05T01:41:06Z",
+      "side": 1,
+      "message": "Order border, border-radius, padding",
+      "revId": "5f13913cb102eaa7821d5e45f0a7655b43d872f9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
