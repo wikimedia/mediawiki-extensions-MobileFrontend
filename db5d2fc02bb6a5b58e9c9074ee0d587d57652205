@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "10f64cb8_80cf311f",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 993,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-05T22:27:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f159a515_2ae229e3",
+      "range": {
+        "startLine": 992,
+        "startChar": 2,
+        "endLine": 993,
+        "endChar": 22
+      },
+      "revId": "db5d2fc02bb6a5b58e9c9074ee0d587d57652205",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "bad94202_b30ccdc6",
         "filename": "includes/MobileContext.php",
         "patchSetId": 3
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "ee00bcd6_cd22fd1e",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 994,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-05T22:27:41Z",
+      "side": 1,
+      "message": "Sorry, but how does this differ?",
+      "parentUuid": "bad94202_b30ccdc6",
+      "range": {
+        "startLine": 994,
+        "startChar": 2,
+        "endLine": 994,
+        "endChar": 66
+      },
+      "revId": "db5d2fc02bb6a5b58e9c9074ee0d587d57652205",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "61b322ca_8779445a",
         "filename": "includes/MobileContext.php",
         "patchSetId": 3
@@ -59,6 +107,30 @@
       "writtenOn": "2019-03-01T19:00:56Z",
       "side": 1,
       "message": "this doesn\u0027t only get items, but also postprocess those. \n\nI still think that this function can be private as it is not used anywhere. I know there are some unit tests for that, but I think this shouldn\u0027t be a part of MobileContext API. \n\nI know there are some unit tests for this function, but most probably those are there only to test addAnalyticsLogItem behavior.\n\nIt should be safe to:\n- make this function private\n- rename it to be a bit more descriptive (that it parses the array), sth like \"buildAnalyticsLogItems\"\n- remove the unit tests for getAnalyticsLogItems(), we should only test the public methods and IMHO the only two public methods should be: addAnalyticsLogItem() and getXAnalyticsHeader(). All tests done against getAnalyticsLogItems should be performed against getXAnalyticsHeader.",
+      "range": {
+        "startLine": 1003,
+        "startChar": 17,
+        "endLine": 1003,
+        "endChar": 37
+      },
+      "revId": "db5d2fc02bb6a5b58e9c9074ee0d587d57652205",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2984f5de_f150e02a",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 1003,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-05T22:27:41Z",
+      "side": 1,
+      "message": "Thanks!\n\nThe function is now private and I\u0027ve removed its tests.\n\nI\u0027ve named the function to queryAnalyticsLogItems() to reflect that some kind of processing is done AND the result is returned, not saved in some internal state. Let me know if that name works for you.",
+      "parentUuid": "61b322ca_8779445a",
       "range": {
         "startLine": 1003,
         "startChar": 17,
