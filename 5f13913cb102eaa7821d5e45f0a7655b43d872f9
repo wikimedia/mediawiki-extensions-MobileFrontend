@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "28a77d6e_e57a6063",
+        "filename": "resources/mobile.startup/panel.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-05T22:47:37Z",
+      "side": 1,
+      "message": "It\u0027s possible to add Panel\u0027s inside \n\n$(\u0027\u003cdiv class\u003d\"panel\"\u003ehello\u003c/div\u003e\u0027).prependTo( \u0027#bodyContent\u0027 );\n\nWe will be looking at this shortly in https://phabricator.wikimedia.org/T217298\nMaybe we can remove that CSS then.",
+      "parentUuid": "6e22ac9d_610ddcc1",
+      "revId": "5f13913cb102eaa7821d5e45f0a7655b43d872f9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ef448cd2_0a46ba9b",
         "filename": "resources/mobile.startup/panel.less",
         "patchSetId": 3
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "7cd7406f_880b217c",
+        "filename": "resources/mobile.startup/panel.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-05T22:47:37Z",
+      "side": 1,
+      "message": "It\u0027s conflicting with `overlay .summary`  in the talk overlay. I\u0027ll remove this and clean up that rule instead..",
+      "parentUuid": "ef448cd2_0a46ba9b",
+      "revId": "5f13913cb102eaa7821d5e45f0a7655b43d872f9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9e0efdbf_aa57ce70",
         "filename": "resources/mobile.startup/panel.less",
         "patchSetId": 3
@@ -47,6 +83,24 @@
       "writtenOn": "2019-03-05T01:41:06Z",
       "side": 1,
       "message": "Order border, border-radius, padding",
+      "revId": "5f13913cb102eaa7821d5e45f0a7655b43d872f9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a2cc03db_c880fcb1",
+        "filename": "resources/mobile.startup/panel.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-05T22:47:37Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9e0efdbf_aa57ce70",
       "revId": "5f13913cb102eaa7821d5e45f0a7655b43d872f9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
