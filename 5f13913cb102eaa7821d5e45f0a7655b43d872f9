@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "7eba6789_60232654",
+        "filename": "resources/mobile.startup/panel.less",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-05T22:53:07Z",
+      "side": 1,
+      "message": "It\u0027s possible to add Panel\u0027s inside #bodyContent as well as overlays.\n\n$(\u0027\u003cdiv class\u003d\"panel\"\u003ehello\u003c/div\u003e\u0027).prependTo( \u0027#bodyContent\u0027 );\n\nThey style differently.\n\nRight now the only thing that inserts itself in bodyContent is the BetaOptInPanel",
+      "parentUuid": "6e22ac9d_610ddcc1",
+      "revId": "5f13913cb102eaa7821d5e45f0a7655b43d872f9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ef448cd2_0a46ba9b",
         "filename": "resources/mobile.startup/panel.less",
         "patchSetId": 3
