@@ -96,6 +96,30 @@
     },
     {
       "key": {
+        "uuid": "fffb1b51_5f1fd495",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 994,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-03-06T14:22:03Z",
+      "side": 1,
+      "message": "sorry, I should be more explicit. Your code is correct, it is a bit difficult to read (at least to me).\n\nWhy?\nIf analyticsLogItems[$key] doesn\u0027t exist, PHP has to initialize array with single element. The `$this-\u003eanalyticsLogItems[$key] might be uninitialized. PHP allows to create arrays in this way, and most probably it will not return any warning or notice but IMHO it\u0027s bad. We should be explicit - first, initialize the variable, and then use it (add new values).\n\nI marked the if statement, as my first thought was that you want to initialize the `$this-\u003eanalyticsLogItems[$key]` key.",
+      "parentUuid": "ee00bcd6_cd22fd1e",
+      "range": {
+        "startLine": 994,
+        "startChar": 2,
+        "endLine": 994,
+        "endChar": 66
+      },
+      "revId": "db5d2fc02bb6a5b58e9c9074ee0d587d57652205",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "61b322ca_8779445a",
         "filename": "includes/MobileContext.php",
         "patchSetId": 3
