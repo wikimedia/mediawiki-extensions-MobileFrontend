@@ -4,8 +4,8 @@ var
 
 /**
  * It's a view that spins until the promise resolves!
- * The promise MUST resolve successfully
- * otherwise a spinner will show indefinitely.
+ * If the promise successfully resolves, the newView will be shown. if the
+ * promise rejects and rejects to a view, the errorView will be shown.
  *
  * @param {jQuery.Promise} promise
  * @return {View}
@@ -19,7 +19,18 @@ function promisedView( promise ) {
 		view.$el.replaceWith( newView.$el );
 		// update the internal reference.
 		view.$el = newView.$el;
+	}, function ( errorView ) {
+		if ( !errorView || !errorView.$el ) {
+			// return early to keep backwards compatibility with clients of
+			// promisedView that do not reject to an error view
+			return;
+		}
+
+		view.$el.replaceWith( errorView.$el );
+		// update the internal reference.
+		view.$el = errorView.$el;
 	} );
+
 	return view;
 }
 
