@@ -537,9 +537,8 @@ class MobileFrontendHooks {
 	public static function onRecentChangeSave( RecentChange $rc ) {
 		$context = MobileContext::singleton();
 		$userAgent = $context->getRequest()->getHeader( "User-agent" );
-		$logType = $rc->getAttribute( 'rc_log_type' );
-		// Only log edits and uploads
-		if ( $context->shouldDisplayMobileView() && ( $logType === 'upload' || is_null( $logType ) ) ) {
+
+		if ( $context->shouldDisplayMobileView() ) {
 			$rc->addTags( 'mobile edit' );
 			// Tag as mobile web edit specifically, if it isn't coming from the apps
 			if ( strpos( $userAgent, 'WikipediaApp/' ) !== 0 ) {
