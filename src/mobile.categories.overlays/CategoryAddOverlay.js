@@ -46,7 +46,6 @@ mfExtend( CategoryAddOverlay, Overlay, {
 	 * is being saved.
 	 */
 	defaults: util.extend( {}, Overlay.prototype.defaults, {
-		headerButtonsListClassName: 'header-action',
 		waitMsg: mw.msg( 'mobile-frontend-categories-add-wait' ),
 		waitIcon: icons.spinner().toHtmlString()
 	} ),

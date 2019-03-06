@@ -4,12 +4,13 @@
 <div class="overlay-title">
 	<h2>{{{heading}}}</h2>
 </div>
-{{#headerButtons}}
-<div class="{{headerButtonsListClassName}}">
+{{#hasActions}}
+<div class="header-action">
 	{{#headerButtons}}
 	{{^href}}<button{{/href}}
 	{{#href}}<a href="{{href}}"{{/href}}
+		{{#disabled}} disabled{{/disabled}}
 		class="{{className}}">{{msg}}{{^href}}</button>{{/href}}{{#href}}</a>{{/href}}
 	{{/headerButtons}}
 </div>
-{{/headerButtons}}
+{{/hasActions}}
