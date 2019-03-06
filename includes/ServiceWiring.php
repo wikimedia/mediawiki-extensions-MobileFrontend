@@ -48,5 +48,8 @@ return [
 			$services->getService( 'MobileFrontend.AMC.Manager' ),
 			MobileContext::singleton()->getUser()
 		);
+	},
+	'MobileFrontend.Context' => function ( MediaWikiServices $services ) {
+		return MobileContext::singleton();
 	}
 ];

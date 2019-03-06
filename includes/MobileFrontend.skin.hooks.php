@@ -179,7 +179,7 @@ JAVASCRIPT;
 	public static function prepareFooter( Skin $skin, QuickTemplate $tpl ) {
 		$title = $skin->getTitle();
 		$req = $skin->getRequest();
-		$ctx = MobileContext::singleton();
+		$ctx = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
 
 		// Certain pages might be blacklisted and not have a mobile equivalent.
 		if ( !$ctx->isBlacklistedPage() ) {
@@ -236,7 +236,7 @@ JAVASCRIPT;
 		if ( $url ) {
 			$url = wfAppendQuery( $url, 'mobileaction=toggle_view_desktop' );
 		} else {
-			$url = $title->getLocalUrl(
+			$url = $title->getLocalURL(
 				$req->appendQueryValue( 'mobileaction', 'toggle_view_desktop' )
 			);
 		}
@@ -244,7 +244,7 @@ JAVASCRIPT;
 
 		$desktop = $ctx->msg( 'mobile-frontend-view-desktop' )->text();
 		$desktopToggler = Html::element( 'a',
-			[ 'id' => "mw-mf-display-toggle", "href" => $desktopUrl ], $desktop );
+			[ 'id' => 'mw-mf-display-toggle', 'href' => $desktopUrl ], $desktop );
 
 		// Generate the licensing text displayed in the footer of each page.
 		// See Skin::getCopyright for desktop equivalent.
