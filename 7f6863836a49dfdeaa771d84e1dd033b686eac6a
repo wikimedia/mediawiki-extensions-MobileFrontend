@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2349b665_7a256337",
+        "filename": "src/mobile.startup/Overlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-06T22:20:44Z",
+      "side": 1,
+      "message": "I\u0027m finding this a little confusing, as the overlay doesn\u0027t even have a header!\nI\u0027m also noticing ImageOverlay is the only overlay that overrides this property.",
+      "revId": "7f6863836a49dfdeaa771d84e1dd033b686eac6a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5bb69630_e19476c6",
+        "filename": "src/mobile.startup/Overlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 200,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-06T22:20:44Z",
+      "side": 1,
+      "message": "What if we replaced this boolean check with one for this.$el.find( \u0027.overlay-header-container\u0027 ).length \u003e 0 ?",
+      "revId": "7f6863836a49dfdeaa771d84e1dd033b686eac6a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
