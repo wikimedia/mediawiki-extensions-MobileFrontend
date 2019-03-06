@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1e3462c2_f00e6b55",
+        "filename": "src/mobile.startup/Overlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-06T02:10:10Z",
+      "side": 1,
+      "message": "Is this already in master? https://gerrit.wikimedia.org/g/mediawiki/extensions/MobileFrontend/+/master/src/mobile.startup/Overlay.js#29",
+      "revId": "81a08c96cb72174d994da3759ed6aad1ad650594",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
