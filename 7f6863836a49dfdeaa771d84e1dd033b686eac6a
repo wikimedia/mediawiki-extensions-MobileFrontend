@@ -33,6 +33,24 @@
       "revId": "7f6863836a49dfdeaa771d84e1dd033b686eac6a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d8da600c_037486c8",
+        "filename": "src/mobile.startup/Overlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 200,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-06T23:13:51Z",
+      "side": 1,
+      "message": "That might work....actually I just noticed that it looks like there is a .position-fixed class as well. What if we check for the presence of a `.overlay-header-container.position-fixed` class? Is every other overlay using this class?",
+      "parentUuid": "5bb69630_e19476c6",
+      "revId": "7f6863836a49dfdeaa771d84e1dd033b686eac6a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
