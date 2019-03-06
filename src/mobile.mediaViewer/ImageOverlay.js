@@ -63,12 +63,6 @@ function ImageOverlay( options ) {
 
 mfExtend( ImageOverlay, Overlay, {
 	/**
-	 * allow pinch zooming
-	 * @memberof ImageOverlay
-	 * @instance
-	 */
-	hasFixedHeader: false,
-	/**
 	 * @memberof ImageOverlay
 	 * @instance
 	 */

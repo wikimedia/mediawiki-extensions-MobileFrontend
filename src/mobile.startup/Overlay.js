@@ -69,16 +69,10 @@ function Overlay( props ) {
 			}
 		)
 	);
+	this.hasHeader = this.$el.find( '.overlay-header-container' ).length > 0;
 }
 
 mfExtend( Overlay, View, {
-	/**
-	 * Identify whether the element contains position fixed elements
-	 * @memberof Overlay
-	 * @instance
-	 * @property {boolean}
-	 */
-	hasFixedHeader: true,
 	/**
 	 * Is overlay fullscreen
 	 * @memberof Overlay
@@ -200,7 +194,7 @@ mfExtend( Overlay, View, {
 		var self = this,
 			$content = this.$el.find( '.overlay-content' );
 
-		if ( this.isIos && this.hasFixedHeader ) {
+		if ( this.isIos && this.hasHeader ) {
 			$content[0].addEventListener( 'touchstart', this.onTouchStart.bind( this ), passiveOpts );
 			$content[0].addEventListener( 'touchmove', this.onTouchMove.bind( this ), passiveOpts );
 			// wait for things to render before doing any calculations
@@ -299,7 +293,7 @@ mfExtend( Overlay, View, {
 		}
 
 		// prevent scrolling and bouncing outside of .overlay-content
-		if ( this.isIos && this.hasFixedHeader ) {
+		if ( this.isIos && this.hasHeader ) {
 			this.iosTouchmoveHandler = function ( ev ) {
 				// Note that this event handler only runs if onTouchMove did not call
 				// stopPropagation() (only if the page was touched outside of our overlay).
