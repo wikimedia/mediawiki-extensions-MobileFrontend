@@ -51,6 +51,24 @@
       "revId": "7f6863836a49dfdeaa771d84e1dd033b686eac6a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "188c2914_9ec015b8",
+        "filename": "src/mobile.startup/Overlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 200,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-06T23:17:56Z",
+      "side": 1,
+      "message": "Looks like position-fixed is always present.\n\nLooking at what this code is actually doing, it\u0027s making sure the height of the overlay is this.$overlayContent.height(\n\t\t\twindowHeight -\n\t\t\tthis.$el.find( \u0027.overlay-header-container\u0027 ).outerHeight() -\n\t\t\tthis.$el.find( \u0027.overlay-footer-container\u0027 ).outerHeight()\n\t\t); at all times\n\nso actually if either this.$el.find( \u0027.overlay-footer-container\u0027 ) or this.$el.find( \u0027.overlay-header-container\u0027 ) is not present, it doesn\u0027t make sense...\n\nIt also works only on iOS so I\u0027d recommend not making this a property but deriving it from the overlay\u0027s contents.\n\nA property hasFixedHeader like so is not behaving how someone might expect it to ! At very least it\u0027s badly named!!\n\nI suspect this used to mean something different but over time has eroded into a meaningless property. I would thus be for removing it and keeping the overlay\u0027s parameters as simple as possible.",
+      "parentUuid": "d8da600c_037486c8",
+      "revId": "7f6863836a49dfdeaa771d84e1dd033b686eac6a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
