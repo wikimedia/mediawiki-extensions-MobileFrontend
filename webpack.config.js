@@ -3,7 +3,6 @@ const
 	CleanPlugin = require( 'clean-webpack-plugin' ),
 	glob = require( 'glob' ),
 	path = require( 'path' ),
-	isProduction = process.env.NODE_ENV === 'production',
 	// The output directory for all build artifacts. Only absolute paths are accepted by
 	// output.path.
 	distDir = path.resolve( __dirname, 'resources/dist' ),
@@ -29,7 +28,7 @@ const
 		watchlist: 'mobile.special.watchlist.scripts'
 	};
 
-module.exports = {
+module.exports = ( env, argv ) => ( {
 	// Apply the rule of silence: https://wikipedia.org/wiki/Unix_philosophy.
 	stats: {
 		all: false,
@@ -41,7 +40,7 @@ module.exports = {
 
 	// Fail on the first build error instead of tolerating it for prod builds. This seems to
 	// correspond to optimization.noEmitOnErrors.
-	bail: isProduction,
+	bail: argv.mode === 'production',
 
 	// Specify that all paths are relative the Webpack configuration directory not the current
 	// working directory.
@@ -115,7 +114,7 @@ module.exports = {
 	},
 	optimization: {
 		// Don't produce production output when a build error occurs.
-		noEmitOnErrors: isProduction,
+		noEmitOnErrors: argv.mode === 'production',
 
 		// Use filenames instead of unstable numerical identifiers for file references. This
 		// increases the gzipped bundle size some but makes the build products easier to debug and
@@ -217,7 +216,7 @@ module.exports = {
 
 	performance: {
 		// Size violations for prod builds fail; development builds are unchecked.
-		hints: isProduction ? 'error' : false,
+		hints: argv.mode === 'production' ? 'error' : false,
 
 		// Minified uncompressed size limits for chunks / assets and entrypoints. Keep these numbers
 		// up-to-date and rounded to the nearest 10th of a kilobyte so that code sizing costs are
@@ -231,4 +230,4 @@ module.exports = {
 		assetFilter: ( filename ) => !filename.startsWith( 'tests.' ) &&
 			!filename.endsWith( srcMapExt )
 	}
-};
+} );
