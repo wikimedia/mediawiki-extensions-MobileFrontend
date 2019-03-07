@@ -3,7 +3,7 @@
   "scripts": {
     "coverage": "nyc npm -s run test:unit",
     "start": "webpack -w --mode=development",
-    "build": "NODE_ENV=production webpack --mode=production",
+    "build": "webpack --mode=production",
     "precommit": "npm -s run test:bundle-cached && composer test && npm -s run lint:frontend && npm -s run coverage",
     "test:unit": "qunit --require @babel/register 'tests/node-qunit/**/*.test.js'",
     "lint": "grunt i18n && npm -s run lint:frontend",
