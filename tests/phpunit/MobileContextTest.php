@@ -352,20 +352,25 @@ class MobileContextTest extends MediaWikiTestCase {
 	 * @dataProvider addAnalyticsLogItemProvider
 	 * @covers MobileContext::getAnalyticsLogItems
 	 */
-	public function testAddAnalyticsLogItem( $key, $val ) {
+	public function testAddAnalyticsLogItem( $key, array $inputs, $expected ) {
 		$context = $this->makeContext();
+		foreach ( $inputs as $input => $val ) {
+			$context->addAnalyticsLogItem( $key, $val );
+		}
 		$context->addAnalyticsLogItem( $key, $val );
 		$logItems = $context->getAnalyticsLogItems();
 		$trimmedKey = trim( $key );
 		$trimmedVal = trim( $val );
 		$this->assertTrue( isset( $logItems[$trimmedKey] ) );
-		$this->assertEquals( $trimmedVal, $logItems[$trimmedKey] );
+		$this->assertEquals( $expected, $logItems[$trimmedKey] );
 	}
 
 	public function addAnalyticsLogItemProvider() {
 		return [
-			[ 'mf-m', 'a' ],
-			[ ' mf-m', 'b ' ],
+			[ 'mf-m', [ 'a' ], 'a' ],
+			[ ' mf-m', [ 'b ' ], 'b' ],
+			[ 'mf-m', [ 'a', 'b' ], 'a,b' ],
+			[ 'mf-m', [ 'a', 'b' ], 'a,b' ],
 		];
 	}
 
@@ -429,6 +434,7 @@ class MobileContextTest extends MediaWikiTestCase {
 			[ 'mf-m=a', 'mf-m', 'a' ],
 			// check key/val trimming
 			[ ' mf-m=a ', 'mf-m', 'a' ],
+			[ 'mf-m=a,b', 'mf-m', 'a,b' ],
 			// check urldecode
 			[ 'foo=bar+%24blat', 'foo', 'bar $blat' ],
 		];

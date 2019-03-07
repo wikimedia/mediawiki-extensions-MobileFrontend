@@ -15,6 +15,13 @@ class MobileContext extends ContextSource {
 	const USEFORMAT_COOKIE_NAME = 'mf_useformat';
 	const USER_MODE_PREFERENCE_NAME = 'mfMode';
 	const LOGGER_CHANNEL = 'mobile';
+
+	// Keep in sync with https://wikitech.wikimedia.org/wiki/X-Analytics.
+	const ANALYTICS_HEADER_KEY = 'mf-m';
+	const ANALYTICS_HEADER_DELIMITER = ',';
+	const ANALYTICS_HEADER_VALUE_BETA = 'b';
+	const ANALYTICS_HEADER_VALUE_AMC = 'amc';
+
 	/**
 	 * Saves the testing mode user has opted in: 'beta' or 'stable'
 	 * @var string $mobileMode
@@ -38,7 +45,7 @@ class MobileContext extends ContextSource {
 	protected $blacklistedPage;
 
 	/**
-	 * Key/value pairs of things to add to X-Analytics response header for anlytics
+	 * Key/value pairs of things to add to X-Analytics response header for analytics
 	 * @var array
 	 */
 	protected $analyticsLogItems = [];
@@ -293,6 +300,16 @@ class MobileContext extends ContextSource {
 	 */
 	public function isBetaGroupMember() {
 		return $this->getMobileMode() === self::MODE_BETA;
+	}
+
+	/**
+	 * Wether the current user is has advanced mobile contributions enabled.
+	 * @return bool
+	 */
+	private static function isAmcUser() {
+		$services = MediaWikiServices::getInstance();
+		$userMode = $services->getService( 'MobileFrontend.AMC.UserMode' );
+		return $userMode->isEnabled();
 	}
 
 	/**
@@ -966,14 +983,19 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
-	 * Add key/value pairs for analytics purposes to $this->analyticsLogItems
+	 * Add key/value pairs for analytics purposes to $this->analyticsLogItems. Pre-existing entries
+	 * are appended to as sets delimited by commas.
 	 * @param string $key for <key> in `X-Analytics: <key>=<value>`
 	 * @param string $val for <value> in `X-Analytics: <key>=<value>`
 	 */
 	public function addAnalyticsLogItem( $key, $val ) {
 		$key = trim( $key );
 		$val = trim( $val );
-		$this->analyticsLogItems[$key] = $val;
+		$items = $this->analyticsLogItems[$key] ?? [];
+		if ( !in_array( $val, $items ) ) {
+			$items[] = $val;
+			$this->analyticsLogItems[$key] = $items;
+		}
 	}
 
 	/**
@@ -981,7 +1003,12 @@ class MobileContext extends ContextSource {
 	 * @return array
 	 */
 	public function getAnalyticsLogItems() {
-		return $this->analyticsLogItems;
+		return array_map(
+			function ( $val ) {
+				return implode( self::ANALYTICS_HEADER_DELIMITER, $val );
+			},
+			$this->analyticsLogItems
+		);
 	}
 
 	/**
@@ -1020,7 +1047,7 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
-	 * Adds analytics log items if the user is in beta mode
+	 * Adds analytics log items depending on which modes are enabled for the user
 	 *
 	 * Invoked from MobileFrontendHooks::onRequestContextCreateSkin()
 	 *
@@ -1029,7 +1056,10 @@ class MobileContext extends ContextSource {
 	 */
 	public function logMobileMode() {
 		if ( $this->isBetaGroupMember() ) {
-			$this->addAnalyticsLogItem( 'mf-m', 'b' );
+			$this->addAnalyticsLogItem( self::ANALYTICS_HEADER_KEY, self::ANALYTICS_HEADER_VALUE_BETA );
+		}
+		if ( self::isAmcUser() ) {
+			$this->addAnalyticsLogItem( self::ANALYTICS_HEADER_KEY, self::ANALYTICS_HEADER_VALUE_AMC );
 		}
 	}
 
