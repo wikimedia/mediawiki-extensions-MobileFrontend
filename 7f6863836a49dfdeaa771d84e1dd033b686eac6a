@@ -87,6 +87,24 @@
       "revId": "7f6863836a49dfdeaa771d84e1dd033b686eac6a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1f5ba2f3_5531a0f9",
+        "filename": "src/mobile.startup/Overlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 200,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-07T16:40:40Z",
+      "side": 1,
+      "message": "sorry for delay on this. I\u0027m trying to focus on getting the image overlay patch up to 100% code coverage and then was planning to circle back around to this. If you\u0027d like, feel free to make the necessary change to this patch. I wouldn\u0027t mind at all and support getting rid of the hasFixedHeader option!",
+      "parentUuid": "188c2914_9ec015b8",
+      "revId": "7f6863836a49dfdeaa771d84e1dd033b686eac6a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
