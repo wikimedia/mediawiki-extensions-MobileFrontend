@@ -235,6 +235,30 @@
     },
     {
       "key": {
+        "uuid": "9d8e4991_ab5824d8",
+        "filename": "src/mobile.startup/imageOverlay/getImagesAndStartIndex.js",
+        "patchSetId": 28
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-07T19:43:08Z",
+      "side": 1,
+      "message": "I completely agree! Am planning to circle back to this",
+      "parentUuid": "c8a45577_ea15af85",
+      "range": {
+        "startLine": 10,
+        "startChar": 9,
+        "endLine": 10,
+        "endChar": 25
+      },
+      "revId": "21f1843e35ae516bf5a70e832c5e7bdf16f2f7ee",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5c6c38fb_f6239a68",
         "filename": "src/mobile.startup/imageOverlay/getImagesAndStartIndex.js",
         "patchSetId": 28
@@ -246,6 +270,30 @@
       "writtenOn": "2019-03-07T17:59:03Z",
       "side": 1,
       "message": "The index of the thumbnail relative to other thumbnails in the page?",
+      "range": {
+        "startLine": 23,
+        "startChar": 29,
+        "endLine": 23,
+        "endChar": 55
+      },
+      "revId": "21f1843e35ae516bf5a70e832c5e7bdf16f2f7ee",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fd6d4014_874d5766",
+        "filename": "src/mobile.startup/imageOverlay/getImagesAndStartIndex.js",
+        "patchSetId": 28
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-07T19:43:08Z",
+      "side": 1,
+      "message": "Yes. Minerva passes the page\u0027s thumbnails into ImageOverlay as well as the title of image from the url.. ImageOverlay then needs to find what thumbnail that title corresponds to and perform a request to get the url of the optimized image (accounting for device pixel ratio, etc). This could probably be simplified",
+      "parentUuid": "5c6c38fb_f6239a68",
       "range": {
         "startLine": 23,
         "startChar": 29,
