@@ -34,6 +34,24 @@
       "revId": "6d64c66842f5989978e452965bb7225ec239230a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "09d82086_4edf9dd8",
+        "filename": "src/mobile.startup/Page.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-07T22:10:11Z",
+      "side": 1,
+      "message": "Can we at least make a FIXME comment here so remind us to do this. We\u0027ll (reading web) be untangling this code hopefully next month if all goes to plan.",
+      "parentUuid": "ff63f171_26720844",
+      "revId": "6d64c66842f5989978e452965bb7225ec239230a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
