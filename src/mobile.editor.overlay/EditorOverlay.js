@@ -49,7 +49,7 @@ function EditorOverlay( options ) {
 	options.previewingMsg = mw.msg( 'mobile-frontend-editor-previewing-page', options.title );
 	EditorOverlayBase.call(
 		this,
-		util.extend(
+		util.extend( true,
 			{ events: { 'input .wikitext-editor': 'onInputWikitextEditor' } },
 			options
 		)
