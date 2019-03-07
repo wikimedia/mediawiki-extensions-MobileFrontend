@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "32aa374b_5c20fd12",
+        "filename": "resources/mobile.startup/Overlay.less",
+        "patchSetId": 28
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-07T17:59:03Z",
+      "side": 0,
+      "message": "😱 can\u0027t believe this was in Overlay.less!",
+      "revId": "f85c13bb562a849d7d38f16171079e28e6068483",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

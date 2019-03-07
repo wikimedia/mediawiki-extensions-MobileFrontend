@@ -1,0 +1,294 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c219580f_5f8c6f0b",
+        "filename": "resources/mobile.startup/imageOverlay/imageOverlay.less",
+        "patchSetId": 28
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-07T17:59:03Z",
+      "side": 1,
+      "message": "I wonder if we good generalise this e.g. overlay--preview \nThat way it\u0027s still an overlay but with modifications.",
+      "revId": "21f1843e35ae516bf5a70e832c5e7bdf16f2f7ee",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "974416cb_3188289a",
+        "filename": "src/mobile.mediaViewer/ImageCarousel.js",
+        "patchSetId": 28
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-07T17:59:03Z",
+      "side": 1,
+      "message": "needs doc block",
+      "revId": "21f1843e35ae516bf5a70e832c5e7bdf16f2f7ee",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "885f932b_0207faf9",
+        "filename": "src/mobile.mediaViewer/ImageCarousel.js",
+        "patchSetId": 28
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-07T17:59:03Z",
+      "side": 1,
+      "message": "Needs docs",
+      "revId": "21f1843e35ae516bf5a70e832c5e7bdf16f2f7ee",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a2ba4a18_d47f68da",
+        "filename": "src/mobile.mediaViewer/ImageCarousel.js",
+        "patchSetId": 28
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-07T17:59:03Z",
+      "side": 1,
+      "message": "Needs docs",
+      "revId": "21f1843e35ae516bf5a70e832c5e7bdf16f2f7ee",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9996faed_62468d45",
+        "filename": "src/mobile.mediaViewer/ImageCarousel.js",
+        "patchSetId": 28
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-07T17:59:03Z",
+      "side": 1,
+      "message": "Needs docs",
+      "revId": "21f1843e35ae516bf5a70e832c5e7bdf16f2f7ee",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1d0ed2b3_ab4566a6",
+        "filename": "src/mobile.mediaViewer/ImageCarousel.js",
+        "patchSetId": 28
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-07T17:59:03Z",
+      "side": 1,
+      "message": "Needs docs",
+      "revId": "21f1843e35ae516bf5a70e832c5e7bdf16f2f7ee",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "06c062ea_9e5667e9",
+        "filename": "src/mobile.mediaViewer/ImageCarousel.js",
+        "patchSetId": 28
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-07T17:59:03Z",
+      "side": 1,
+      "message": "Needs docs",
+      "revId": "21f1843e35ae516bf5a70e832c5e7bdf16f2f7ee",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9bbd98f1_b0a97cb3",
+        "filename": "src/mobile.mediaViewer/ImageCarousel.js",
+        "patchSetId": 28
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-07T17:59:03Z",
+      "side": 1,
+      "message": "Needs docs etc..",
+      "revId": "21f1843e35ae516bf5a70e832c5e7bdf16f2f7ee",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "77e76397_f71c7176",
+        "filename": "src/mobile.mediaViewer/ImageCarousel.js",
+        "patchSetId": 28
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-07T17:59:03Z",
+      "side": 1,
+      "message": "Needs docs",
+      "revId": "21f1843e35ae516bf5a70e832c5e7bdf16f2f7ee",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "476571eb_c2e099fa",
+        "filename": "src/mobile.mediaViewer/ImageCarousel.js",
+        "patchSetId": 28
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-07T17:59:03Z",
+      "side": 1,
+      "message": "a re-render should really call render as preRender and render\nI think the name is probably the problem here so maybe consider renaming this something less loaded e.g. refreshCurrentDisplay",
+      "revId": "21f1843e35ae516bf5a70e832c5e7bdf16f2f7ee",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "67bb84a6_a9ddcbf5",
+        "filename": "src/mobile.mediaViewer/ImageCarousel.js",
+        "patchSetId": 28
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-07T17:59:03Z",
+      "side": 1,
+      "message": "Needs docs",
+      "revId": "21f1843e35ae516bf5a70e832c5e7bdf16f2f7ee",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "209a94fa_d207f696",
+        "filename": "src/mobile.startup/imageOverlay/getImagesAndStartIndex.js",
+        "patchSetId": 28
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-07T17:59:03Z",
+      "side": 1,
+      "message": "What is an image object?\nCould a typedef be used to explain this better?",
+      "range": {
+        "startLine": 7,
+        "startChar": 73,
+        "endLine": 8,
+        "endChar": 9
+      },
+      "revId": "21f1843e35ae516bf5a70e832c5e7bdf16f2f7ee",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c8a45577_ea15af85",
+        "filename": "src/mobile.startup/imageOverlay/getImagesAndStartIndex.js",
+        "patchSetId": 28
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-07T17:59:03Z",
+      "side": 1,
+      "message": "Is there a better name for this that reflects what it does?",
+      "range": {
+        "startLine": 10,
+        "startChar": 9,
+        "endLine": 10,
+        "endChar": 25
+      },
+      "revId": "21f1843e35ae516bf5a70e832c5e7bdf16f2f7ee",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5c6c38fb_f6239a68",
+        "filename": "src/mobile.startup/imageOverlay/getImagesAndStartIndex.js",
+        "patchSetId": 28
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-07T17:59:03Z",
+      "side": 1,
+      "message": "The index of the thumbnail relative to other thumbnails in the page?",
+      "range": {
+        "startLine": 23,
+        "startChar": 29,
+        "endLine": 23,
+        "endChar": 55
+      },
+      "revId": "21f1843e35ae516bf5a70e832c5e7bdf16f2f7ee",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f2ca9753_6ba4623a",
+        "filename": "src/mobile.startup/imageOverlay/imageOverlay.js",
+        "patchSetId": 28
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-07T17:59:03Z",
+      "side": 1,
+      "message": "Given we have lots of FIXME\u0027s I wonder if we should add this in module.exports of mobile.startup and just have one FIXME there.",
+      "revId": "21f1843e35ae516bf5a70e832c5e7bdf16f2f7ee",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a2c29ff_3cfbab5e",
+        "filename": "src/mobile.startup/imageOverlay/imageOverlay.js",
+        "patchSetId": 28
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-07T17:59:03Z",
+      "side": 1,
+      "message": "I like! Maybe a pattern is evolving here!",
+      "revId": "21f1843e35ae516bf5a70e832c5e7bdf16f2f7ee",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
