@@ -55,6 +55,7 @@ function Overlay( props ) {
 	View.call(
 		this,
 		util.extend(
+			true,
 			{ className: 'overlay' },
 			props,
 			{

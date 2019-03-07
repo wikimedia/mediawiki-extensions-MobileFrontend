@@ -55,6 +55,7 @@ EditVeTool.prototype.onUpdateState = function () {
 function EditorOverlayBase( params ) {
 	var self = this,
 		options = util.extend(
+			true,
 			{
 				className: 'overlay editor-overlay',
 				isBorderBox: false

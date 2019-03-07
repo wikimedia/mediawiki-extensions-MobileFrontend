@@ -23,6 +23,7 @@ function Watchstar( options ) {
 	View.call(
 		this,
 		util.extend(
+			true,
 			{
 				className: icons.watchIcon().getClassName(),
 				events: {
