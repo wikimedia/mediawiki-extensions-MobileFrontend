@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "44f1f91f_c4313ea3",
+        "filename": "src/mobile.startup/Page.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-07T17:18:13Z",
+      "side": 1,
+      "message": "Why do we need to send both title and titleObj ? Could we deprecate one of these?\n\nSeems we can derive title from titleObj now?",
+      "revId": "6d64c66842f5989978e452965bb7225ec239230a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
