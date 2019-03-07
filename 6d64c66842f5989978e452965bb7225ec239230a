@@ -16,6 +16,24 @@
       "revId": "6d64c66842f5989978e452965bb7225ec239230a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ff63f171_26720844",
+        "filename": "src/mobile.startup/Page.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2019-03-07T22:08:34Z",
+      "side": 1,
+      "message": "Yeah - we can, but I didn\u0027t want to escalate this into a deprecating change.",
+      "parentUuid": "44f1f91f_c4313ea3",
+      "revId": "6d64c66842f5989978e452965bb7225ec239230a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
