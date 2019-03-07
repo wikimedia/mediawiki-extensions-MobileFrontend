@@ -24,7 +24,7 @@ var browser = require( './Browser' ).getSingleton(),
  * @param {OO.EventEmitter} options.eventBus Object used to emit section-toggled events.
  * @param {jQuery.Object} options.$container to apply toggling to
  * @param {string} options.prefix a prefix to use for the id.
- * @param {Page} [options.page] to allow storage of session for future visits
+ * @param {Page} options.page to allow storage of session for future visits
  * @param {Page} [options.isClosed]
  */
 function Toggler( options ) {
@@ -224,7 +224,7 @@ Toggler.prototype.reveal = function ( selector, $container ) {
  * @instance
  * @param {jQuery.Object} $container to apply toggling to
  * @param {string} prefix a prefix to use for the id.
- * @param {Page} [page] to allow storage of session for future visits
+ * @param {Page} page to allow storage of session for future visits
  * @param {Page} [isClosed] whether the element should begin closed
  * @private
  */
