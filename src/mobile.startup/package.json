@@ -1,0 +1,11 @@
+{
+  "name": "@wikimedia/mobile-components",
+  "version": "0.7.0",
+  "description": "Mobile components for Wikimedia sites",
+  "main": "mobile.startup.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
