@@ -587,6 +587,24 @@
     },
     {
       "key": {
+        "uuid": "5bf38e9e_ccf2baca",
+        "filename": "src/mobile.startup/imageOverlay/imageOverlay.js",
+        "patchSetId": 28
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-08T20:35:35Z",
+      "side": 1,
+      "message": "could we have minerva inject the router instead?",
+      "parentUuid": "5b4dbee1_08b610b4",
+      "revId": "21f1843e35ae516bf5a70e832c5e7bdf16f2f7ee",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a2c29ff_3cfbab5e",
         "filename": "src/mobile.startup/imageOverlay/imageOverlay.js",
         "patchSetId": 28
