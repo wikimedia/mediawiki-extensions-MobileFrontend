@@ -1,5 +1,6 @@
 var Overlay = require( '../mobile.startup/Overlay' ),
 	util = require( '../mobile.startup/util' ),
+	View = require( '../mobile.startup/View' ),
 	mfExtend = require( '../mobile.startup/mfExtend' ),
 	Anchor = require( '../mobile.startup/Anchor' ),
 	NotificationsOverlay;
@@ -15,7 +16,24 @@ var Overlay = require( '../mobile.startup/Overlay' ),
 NotificationsOverlay = function ( params ) {
 	var modelManager, unreadCounter, wrapperWidget,
 		self = this,
+		markAllReadButton = new OO.ui.ButtonWidget( {
+			icon: 'checkAll',
+			title: mw.msg( 'echo-mark-all-as-read' )
+		} ),
 		options = util.extend( {}, {
+			heading: '<strong>' + mw.message( 'notifications' ).escaped() + '</strong>',
+			footerAnchor: new Anchor( {
+				href: mw.util.getUrl( 'Special:Notifications' ),
+				progressive: true,
+				additionalClassNames: 'footer-link notifications-archive-link',
+				label: mw.msg( 'echo-overlay-link' )
+			} ).options,
+			headerActions: [
+				View.make(
+					{ class: 'notifications-overlay-header-markAllRead' },
+					[ markAllReadButton.$element ]
+				)
+			],
 			isBorderBox: false,
 			className: 'overlay notifications-overlay navigation-drawer'
 		}, params ),
@@ -54,19 +72,8 @@ NotificationsOverlay = function ( params ) {
 	} );
 
 	// Mark all read
-	this.markAllReadButton = new OO.ui.ButtonWidget( {
-		icon: 'checkAll',
-		title: mw.msg( 'echo-mark-all-as-read' )
-	} );
-	this.markAllReadButton.toggle( false );
-	this.$el.find( '.overlay-header' )
-		.append(
-			this.parseHTML( '<div>' )
-				.addClass( 'notifications-overlay-header-markAllRead' )
-				.append(
-					this.markAllReadButton.$element
-				)
-		);
+	this.markAllReadButton = markAllReadButton;
+	markAllReadButton.toggle( false );
 
 	// TODO: We should be using 'toast' (which uses mw.notify)
 	// when this bug is fixed: https://phabricator.wikimedia.org/T143837
@@ -100,22 +107,6 @@ NotificationsOverlay = function ( params ) {
 };
 
 mfExtend( NotificationsOverlay, Overlay, {
-	/**
-	 * @memberof NotificationsOverlay
-	 * @instance
-	 * @mixes Overlay#defaults
-	 * @property {Object} defaults Default options hash.
-	 * @property {string} defaults.heading Heading text.
-	 */
-	defaults: util.extend( {}, Overlay.prototype.defaults, {
-		heading: mw.msg( 'notifications' ),
-		footerAnchor: new Anchor( {
-			href: mw.util.getUrl( 'Special:Notifications' ),
-			progressive: true,
-			additionalClassNames: 'footer-link notifications-archive-link',
-			label: mw.msg( 'echo-overlay-link' )
-		} ).options
-	} ),
 	/**
 	 * Set done loading flag for notifications list
 	 * @memberof NotificationsOverlay
@@ -173,14 +164,6 @@ mfExtend( NotificationsOverlay, Overlay, {
 		);
 
 		this.checkShowMarkAllRead();
-	},
-	/**
-	 * @inheritdoc
-	 * @memberof NotificationsOverlay
-	 * @instance
-	 */
-	preRender: function () {
-		this.options.heading = '<strong>' + mw.message( 'notifications' ).escaped() + '</strong>';
 	},
 	/**
 	 * @inheritdoc
