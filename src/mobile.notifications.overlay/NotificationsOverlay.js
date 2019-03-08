@@ -59,8 +59,6 @@ NotificationsOverlay = function ( params ) {
 
 	mw.echo.config.maxPrioritizedActions = 1;
 
-	this.doneLoading = false;
-
 	unreadCounter = new mw.echo.dm.UnreadNotificationCounter( echoApi, 'all', maxNotificationCount );
 	modelManager = new mw.echo.dm.ModelManager( unreadCounter, { type: [ 'message', 'alert' ] } );
 	this.controller = new mw.echo.Controller(
@@ -91,9 +89,6 @@ NotificationsOverlay = function ( params ) {
 	unreadCounter.connect( this, {
 		countChange: 'onUnreadCountChange'
 	} );
-	modelManager.connect( this, {
-		update: 'checkShowMarkAllRead'
-	} );
 	this.markAllReadButton.connect( this, {
 		click: 'onMarkAllReadButtonClick'
 	} );
@@ -103,10 +98,13 @@ NotificationsOverlay = function ( params ) {
 		promisedView(
 			// Populate notifications
 			wrapperWidget.populate().then( function () {
-				self.setDoneLoading();
 				self.controller.updateSeenTime();
 				self.badge.markAsSeen();
 				self.checkShowMarkAllRead();
+				// Connect event here as we know that everything loaded correctly
+				modelManager.connect( self, {
+					update: 'checkShowMarkAllRead'
+				} );
 				return View.make( {}, [ wrapperWidget.$element, $moreOptions ] );
 			} )
 		).$el
@@ -115,30 +113,12 @@ NotificationsOverlay = function ( params ) {
 
 mfExtend( NotificationsOverlay, Overlay, {
 	/**
-	 * Set done loading flag for notifications list
-	 * @memberof NotificationsOverlay
-	 * @instance
-	 */
-	setDoneLoading: function () {
-		this.doneLoading = true;
-	},
-	/**
-	 * Check if notifications have finished loading
-	 * @memberof NotificationsOverlay
-	 * @instance
-	 * @return {boolean} Notifications list has finished loading
-	 */
-	isDoneLoading: function () {
-		return this.doneLoading;
-	},
-	/**
 	 * Toggle mark all read button
 	 * @memberof NotificationsOverlay
 	 * @instance
 	 */
 	checkShowMarkAllRead: function () {
 		this.markAllReadButton.toggle(
-			this.isDoneLoading() &&
 			this.controller.manager.hasLocalUnread()
 		);
 	},
