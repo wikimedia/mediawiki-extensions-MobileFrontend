@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ad253456_26ce14a1",
+        "filename": ".nycrc.json",
+        "patchSetId": 44
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-08T21:19:08Z",
+      "side": 1,
+      "message": "It would be nice to write tests rather than to drop the threshold for the tests you didn\u0027t write.. especially give the 15k errors (and growing) we are seeing hourly on Mobile. :)\n\nhttps://grafana.wikimedia.org/d/000000566/overview?panelId\u003d15\u0026fullscreen\u0026orgId\u003d1",
+      "revId": "9e2e80b969f510fb8562b46fc709397f0e03cc43",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
