@@ -942,6 +942,7 @@ class MobileFrontendHooks {
 					'dependencies' => [
 						'mediawiki.util',
 						'mobile.startup',
+						'oojs-ui',
 						'ext.echo.ui',
 						'oojs-ui.styles.icons-interactions',
 					],
@@ -957,7 +958,6 @@ class MobileFrontendHooks {
 						// defined in Echo
 						'echo-none',
 						'notifications',
-						'echo-overlay-link',
 						'echo-mark-all-as-read-confirmation',
 					],
 					'targets' => [ 'mobile', 'desktop' ],

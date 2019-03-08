@@ -36,6 +36,9 @@ module.exports = {
 	toc: {
 		TableOfContents: require( './toc/TableOfContents' )
 	},
+	notifications: {
+		overlay: require( './notifications/overlay' )
+	},
 	search: {
 		SearchOverlay: require( './search/SearchOverlay' ),
 		MobileWebSearchLogger: require( './search/MobileWebSearchLogger' ),
