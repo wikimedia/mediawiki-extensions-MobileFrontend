@@ -15,11 +15,16 @@ var Overlay = require( '../mobile.startup/Overlay' ),
  */
 NotificationsOverlay = function ( params ) {
 	var modelManager, unreadCounter, wrapperWidget,
+		confirmationWidget,
 		self = this,
 		markAllReadButton = new OO.ui.ButtonWidget( {
 			icon: 'checkAll',
 			title: mw.msg( 'echo-mark-all-as-read' )
 		} ),
+		// Create a container which will be revealed when "more options" (...)
+		// is clicked on a notification. Hidden by default.
+		$moreOptions = util.parseHTML( '<div>' )
+			.addClass( 'notifications-overlay-overlay position-fixed' ),
 		options = util.extend( {}, {
 			heading: '<strong>' + mw.message( 'notifications' ).escaped() + '</strong>',
 			footerAnchor: new Anchor( {
@@ -44,8 +49,6 @@ NotificationsOverlay = function ( params ) {
 
 	// Anchor tag that corresponds to a notifications badge
 	this.badge = options.badge;
-	this.$overlay = this.parseHTML( '<div>' )
-		.addClass( 'notifications-overlay-overlay position-fixed' );
 
 	// On error use the url as a fallback
 	if ( options.error ) {
@@ -68,7 +71,7 @@ NotificationsOverlay = function ( params ) {
 	);
 
 	wrapperWidget = new mw.echo.ui.NotificationsWrapper( this.controller, modelManager, {
-		$overlay: this.$overlay
+		$overlay: $moreOptions
 	} );
 
 	// Mark all read
@@ -77,8 +80,11 @@ NotificationsOverlay = function ( params ) {
 
 	// TODO: We should be using 'toast' (which uses mw.notify)
 	// when this bug is fixed: https://phabricator.wikimedia.org/T143837
-	this.confirmationWidget = new mw.echo.ui.ConfirmationPopupWidget();
-	this.$overlay.append( this.confirmationWidget.$element );
+	confirmationWidget = new mw.echo.ui.ConfirmationPopupWidget();
+	$moreOptions.append( confirmationWidget.$element );
+	// Expose for usage in onMarkAllReadButtonClick handler
+	// to be fixed in I56b4111518c8440dcb5d9cff2d4b54b263b8ab31
+	this.confirmationWidget = confirmationWidget;
 
 	// Events
 	unreadCounter.connect( this, {
@@ -94,7 +100,7 @@ NotificationsOverlay = function ( params ) {
 	// Initialize
 	this.$el.find( '.overlay-content' ).append(
 		wrapperWidget.$element,
-		this.$overlay
+		$moreOptions
 	);
 
 	// Populate notifications
