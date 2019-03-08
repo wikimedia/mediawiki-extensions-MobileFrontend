@@ -1,0 +1,157 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3c76eb06_7f459ea8",
+        "filename": "src/mobile.mediaViewer/ImageCarousel.js",
+        "patchSetId": 47
+      },
+      "lineNbr": 267,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-08T22:29:37Z",
+      "side": 1,
+      "message": "Is there a reason not to use events object?",
+      "revId": "1341e8ba2b235e79bce438f7dcc071443457bc21",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fac09050_8cf668a1",
+        "filename": "src/mobile.mediaViewer/ImageDetails.js",
+        "patchSetId": 47
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-08T22:29:37Z",
+      "side": 1,
+      "message": "Rather than decorate the View with this function could be make this a private function that takes this.$el and this.props ?\n\nIt is not used outside this class but is made publicly available so I worry it might get used by others.",
+      "revId": "1341e8ba2b235e79bce438f7dcc071443457bc21",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8da17030_02946410",
+        "filename": "src/mobile.mediaViewer/ImageDetails.js",
+        "patchSetId": 47
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-08T22:29:37Z",
+      "side": 1,
+      "message": "This seems strange to me.\nWould it not make sense for makeOverlayComponents to manage this class and leave this component super dumb?",
+      "revId": "1341e8ba2b235e79bce438f7dcc071443457bc21",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "549bb632_5915c703",
+        "filename": "src/mobile.mediaViewer/ImageDetails.js",
+        "patchSetId": 47
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-08T22:29:37Z",
+      "side": 1,
+      "message": "Does this need to be a smart component or are there other ways to do this change while keeping it dumb?",
+      "revId": "1341e8ba2b235e79bce438f7dcc071443457bc21",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ac912f6c_f919bf0c",
+        "filename": "src/mobile.mediaViewer/ImageDetails.js",
+        "patchSetId": 47
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-08T22:29:37Z",
+      "side": 1,
+      "message": "I\u0027m not sure about this pattern. wouldn\u0027t it be better to just create them and append?\n\nYou may also find View.make useful for reducing the code you need here:\nhttps://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/495140/7/src/mobile.startup/View.js\n\nOr maybe return the template?",
+      "revId": "1341e8ba2b235e79bce438f7dcc071443457bc21",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "60d25803_0d8c3385",
+        "filename": "src/mobile.mediaViewer/rerenderProps.js",
+        "patchSetId": 47
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-08T22:29:37Z",
+      "side": 1,
+      "message": "TBH I\u0027m struggling with my review of this code, as we are adding some state handling and I\u0027d rather avoid that if we can so that we keep components dumb.\n\nI\u0027m going to need some time to digest this!\n\nMy thinking is that even though we don\u0027t have super fast virtual DOM diffing, it might keep our code simpler if we re-render an entire component based on a changing state.\n\n\n/**\n * Swap views\n * @param {View} component\n * @param {View} newComponent\n * @return {View} new view\n */\nfunction swapComponent( component, newComponent ) {\n\tcomponent.$el.replaceWith( newComponent.$el );\n\treturn newComponent;\n}\n\nSo instead of calling imageCarousel.update and imageDetails.update we create a new instance and replace it.\n\nThis would keep our components dumb and logic free and would help us adopt React or redux later on IMO.",
+      "revId": "1341e8ba2b235e79bce438f7dcc071443457bc21",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "83f9aada_626f2920",
+        "filename": "src/mobile.startup/image/overlay.js",
+        "patchSetId": 47
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-08T22:29:37Z",
+      "side": 1,
+      "message": "Is this check necessary?\nWhy not always use mw.loader.using( \u0027mobile.mediaViewer\u0027 ). - it will resolve right away if the module is loaded.",
+      "revId": "1341e8ba2b235e79bce438f7dcc071443457bc21",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3914e3f1_3f5cd535",
+        "filename": "src/mobile.startup/image/overlay.js",
+        "patchSetId": 47
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-08T22:29:37Z",
+      "side": 1,
+      "message": "This is a code smell to me. It means we\u0027re not really using the Overlay class.\nSending noHeader and appending below to \toverlay.$el.find( \u0027.overlay-content\u0027 ) instead of overlay.$el visually looks the same but structurally is now more in line with an overlay.",
+      "revId": "1341e8ba2b235e79bce438f7dcc071443457bc21",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "81831589_3baafd4f",
+        "filename": "src/mobile.startup/image/overlay.js",
+        "patchSetId": 47
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-08T22:29:37Z",
+      "side": 1,
+      "message": "You can use Overlay.make( {}, View.make( {}, [\n\t\tloadOrMakeComponents( props, overlay ).$el,\n\t\ticons.cancel( \u0027gray\u0027 ).$el\n\n] );\n\n(also maybe making make accept a child would allow us to pass the components without the $el? waht do you think?\n\nhttps://gerrit.wikimedia.org/r/495140",
+      "revId": "1341e8ba2b235e79bce438f7dcc071443457bc21",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
