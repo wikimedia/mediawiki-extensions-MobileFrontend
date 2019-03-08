@@ -15,13 +15,27 @@ var Overlay = require( '../mobile.startup/Overlay' ),
  * @param {Object} params Configuration options
  */
 NotificationsOverlay = function ( params ) {
-	var modelManager, unreadCounter, wrapperWidget,
-		confirmationWidget,
-		self = this,
+	var wrapperWidget,
+		maxNotificationCount = mw.config.get( 'wgEchoMaxNotificationCount' ),
+		echoApi = new mw.echo.api.EchoApi(),
+		unreadCounter = new mw.echo.dm.UnreadNotificationCounter( echoApi, 'all', maxNotificationCount ),
 		markAllReadButton = new OO.ui.ButtonWidget( {
 			icon: 'checkAll',
 			title: mw.msg( 'echo-mark-all-as-read' )
 		} ),
+		modelManager = new mw.echo.dm.ModelManager( unreadCounter, { type: [ 'message', 'alert' ] } ),
+		controller = new mw.echo.Controller(
+			echoApi,
+			modelManager,
+			{
+				type: [ 'message', 'alert' ]
+			}
+		),
+		markAsReadHandler = function () {
+			markAllReadButton.toggle(
+				controller.manager.hasLocalUnread()
+			);
+		},
 		// Create a container which will be revealed when "more options" (...)
 		// is clicked on a notification. Hidden by default.
 		$moreOptions = util.parseHTML( '<div>' )
@@ -43,13 +57,16 @@ NotificationsOverlay = function ( params ) {
 			isBorderBox: false,
 			className: 'overlay notifications-overlay navigation-drawer'
 		}, params ),
-		maxNotificationCount = mw.config.get( 'wgEchoMaxNotificationCount' ),
-		echoApi = new mw.echo.api.EchoApi();
+		// Anchor tag that corresponds to a notifications badge
+		badge = options.badge,
+		onCountChange = function ( cappedCount ) {
+			badge.setCount( cappedCount );
+		},
+		onNotificationListRendered = function () {
+			badge.markAsSeen();
+		};
 
 	Overlay.call( this, options );
-
-	// Anchor tag that corresponds to a notifications badge
-	this.badge = options.badge;
 
 	// On error use the url as a fallback
 	if ( options.error ) {
@@ -59,38 +76,30 @@ NotificationsOverlay = function ( params ) {
 
 	mw.echo.config.maxPrioritizedActions = 1;
 
-	unreadCounter = new mw.echo.dm.UnreadNotificationCounter( echoApi, 'all', maxNotificationCount );
-	modelManager = new mw.echo.dm.ModelManager( unreadCounter, { type: [ 'message', 'alert' ] } );
-	this.controller = new mw.echo.Controller(
-		echoApi,
-		modelManager,
-		{
-			type: [ 'message', 'alert' ]
-		}
-	);
-
-	wrapperWidget = new mw.echo.ui.NotificationsWrapper( this.controller, modelManager, {
+	wrapperWidget = new mw.echo.ui.NotificationsWrapper( controller, modelManager, {
 		$overlay: $moreOptions
 	} );
 
 	// Mark all read
-	this.markAllReadButton = markAllReadButton;
 	markAllReadButton.toggle( false );
 
-	// TODO: We should be using 'toast' (which uses mw.notify)
-	// when this bug is fixed: https://phabricator.wikimedia.org/T143837
-	confirmationWidget = new mw.echo.ui.ConfirmationPopupWidget();
-	$moreOptions.append( confirmationWidget.$element );
-	// Expose for usage in onMarkAllReadButtonClick handler
-	// to be fixed in I56b4111518c8440dcb5d9cff2d4b54b263b8ab31
-	this.confirmationWidget = confirmationWidget;
-
 	// Events
-	unreadCounter.connect( this, {
-		countChange: 'onUnreadCountChange'
+	unreadCounter.on( 'countChange', function ( count ) {
+		onCountChange(
+			controller.manager.getUnreadCounter().getCappedNotificationCount( count )
+		);
+		markAsReadHandler();
 	} );
-	this.markAllReadButton.connect( this, {
-		click: 'onMarkAllReadButtonClick'
+	markAllReadButton.on( 'click', function () {
+		var numNotifications = controller.manager.getLocalUnread().length;
+
+		controller.markLocalNotificationsRead()
+			.then( function () {
+				mw.notify( mw.msg( 'echo-mark-all-as-read-confirmation', numNotifications ) );
+				markAllReadButton.toggle( false );
+			}, function () {
+				markAllReadButton.toggle( false );
+			} );
 	} );
 
 	// Initialize
@@ -98,60 +107,19 @@ NotificationsOverlay = function ( params ) {
 		promisedView(
 			// Populate notifications
 			wrapperWidget.populate().then( function () {
-				self.controller.updateSeenTime();
-				self.badge.markAsSeen();
-				self.checkShowMarkAllRead();
+				controller.updateSeenTime();
+				onNotificationListRendered();
+				markAsReadHandler();
 				// Connect event here as we know that everything loaded correctly
-				modelManager.connect( self, {
-					update: 'checkShowMarkAllRead'
-				} );
+				modelManager.on( 'update', markAsReadHandler );
 				return View.make( {}, [ wrapperWidget.$element, $moreOptions ] );
 			} )
 		).$el
 	);
 };
 
-mfExtend( NotificationsOverlay, Overlay, {
-	/**
-	 * Toggle mark all read button
-	 * @memberof NotificationsOverlay
-	 * @instance
-	 */
-	checkShowMarkAllRead: function () {
-		this.markAllReadButton.toggle(
-			this.controller.manager.hasLocalUnread()
-		);
-	},
-	/**
-	 * Respond to mark all read button click
-	 * @memberof NotificationsOverlay
-	 * @instance
-	 */
-	onMarkAllReadButtonClick: function () {
-		var overlay = this,
-			numNotifications = this.controller.manager.getLocalUnread().length;
-
-		this.controller.markLocalNotificationsRead()
-			.then( function () {
-				overlay.confirmationWidget.setLabel(
-					mw.msg( 'echo-mark-all-as-read-confirmation', numNotifications )
-				);
-				overlay.confirmationWidget.showAnimated();
-			} );
-	},
-	/**
-	 * Update the unread number on the notifications badge
-	 * @memberof NotificationsOverlay
-	 * @instance
-	 * @param {number} count Number of unread notifications
-	 */
-	onUnreadCountChange: function ( count ) {
-		this.badge.setCount(
-			this.controller.manager.getUnreadCounter().getCappedNotificationCount( count )
-		);
-
-		this.checkShowMarkAllRead();
-	}
-} );
+// The third parameter is essential. If not defined, per mfExtend,
+// prototype will not be copied across.
+mfExtend( NotificationsOverlay, Overlay, {} );
 
 module.exports = NotificationsOverlay;
