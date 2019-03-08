@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7f0546a8_8e83815e",
+        "filename": "src/mobile.startup/imageOverlay/imageOverlay.js",
+        "patchSetId": 37
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-08T16:11:14Z",
+      "side": 1,
+      "message": "I think makeComponents should be pulled in asynchronously.  It\u0027s quite a large function and this factory function should be as light as possible. I\u0027m seeing a 1kb spike in bundlesize.",
+      "revId": "ded78cdc17df20cd2b4840320d9a539986931d3d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
