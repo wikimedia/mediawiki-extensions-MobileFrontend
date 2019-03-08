@@ -73,6 +73,7 @@ function setupEditor( page, skin ) {
 				api: new mw.Api(),
 				licenseMsg: skin.getLicenseMsg(),
 				title: page.title,
+				titleObj: page.titleObj,
 				isAnon: user.isAnon(),
 				isNewPage: isNewPage,
 				editCount: editCount,
@@ -163,7 +164,7 @@ function setupEditor( page, skin ) {
 			editorOptions.dataPromise = mw.loader.using( 'ext.visualEditor.targetLoader' ).then( function () {
 				return mw.libs.ve.targetLoader.requestPageData(
 					editorOptions.mode,
-					editorOptions.title,
+					editorOptions.titleObj.getPrefixedDb(),
 					{
 						sessionStore: true,
 						section: editorOptions.sectionId || null,

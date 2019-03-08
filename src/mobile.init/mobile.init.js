@@ -98,13 +98,15 @@ function getCurrentPage() {
  */
 function loadCurrentPage() {
 	var permissions = mw.config.get( 'wgRestrictionEdit', [] ),
-		$content = $( '#content #bodyContent' );
+		$content = $( '#content #bodyContent' ),
+		title = mw.Title.newFromText( mw.config.get( 'wgRelevantPageName' ) );
 	if ( permissions.length === 0 ) {
 		permissions.push( '*' );
 	}
 	currentPage = new Page( {
 		el: $content,
-		title: mw.config.get( 'wgPageName' ).replace( /_/g, ' ' ),
+		title: title.getPrefixedText(),
+		titleObj: title,
 		protection: {
 			edit: permissions
 		},

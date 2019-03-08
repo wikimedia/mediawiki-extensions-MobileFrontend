@@ -22,7 +22,9 @@ function Page( options ) {
 
 	util.extend( this, {
 		options: options,
+		// FIXME: Deprecate title property as it can be derived from titleObj using getPrefixedText
 		title: options.title,
+		titleObj: options.titleObj,
 		displayTitle: options.displayTitle,
 		url: options.url || mw.util.getUrl( options.title ),
 		id: options.id,
