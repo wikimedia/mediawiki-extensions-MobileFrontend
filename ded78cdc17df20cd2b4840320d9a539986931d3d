@@ -16,6 +16,24 @@
       "revId": "ded78cdc17df20cd2b4840320d9a539986931d3d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f577588b_17367428",
+        "filename": "src/mobile.startup/imageOverlay/imageOverlay.js",
+        "patchSetId": 37
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-08T18:31:59Z",
+      "side": 1,
+      "message": "done. The remaining increase might be because I pulled ImageGateway into mobile.startup so that Minerva could inject it (as we have done with other components)",
+      "parentUuid": "7f0546a8_8e83815e",
+      "revId": "ded78cdc17df20cd2b4840320d9a539986931d3d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
