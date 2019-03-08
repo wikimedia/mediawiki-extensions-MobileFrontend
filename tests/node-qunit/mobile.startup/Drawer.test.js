@@ -156,10 +156,15 @@ QUnit.test( 'hidden on scroll once presented', function ( assert ) {
 } );
 
 QUnit.test( 'HTML is valid', function ( assert ) {
-	var subject = new Drawer();
-	assert.strictEqual(
-		subject.$el.get( 0 ).outerHTML, '<div class="drawer position-fixed view-border-box"></div>'
-	);
+	var subject = new Drawer(),
+		done = assert.async();
+
+	util.docReady( function () {
+		assert.strictEqual(
+			subject.$el.get( 0 ).outerHTML, '<div class="drawer position-fixed view-border-box"></div>'
+		);
+		done();
+	} );
 } );
 
 /**
