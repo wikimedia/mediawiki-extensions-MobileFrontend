@@ -139,6 +139,24 @@
     },
     {
       "key": {
+        "uuid": "b14c67d9_d8d899b9",
+        "filename": "src/mobile.startup/image/overlay.js",
+        "patchSetId": 47
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-09T00:00:39Z",
+      "side": 1,
+      "message": "this occurred whenever clicking the navigation buttons. I think the overlay closes, then appears with the nav buttons missing while the promise is waiting to resolve",
+      "parentUuid": "add61440_75a0cfeb",
+      "revId": "1341e8ba2b235e79bce438f7dcc071443457bc21",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3914e3f1_3f5cd535",
         "filename": "src/mobile.startup/image/overlay.js",
         "patchSetId": 47
