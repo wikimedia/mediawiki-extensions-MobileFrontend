@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f000f29f_bbb7f1e0",
+        "filename": "webpack.config.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 227,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-09T00:02:43Z",
+      "side": 1,
+      "message": "my change :)",
+      "revId": "62bffe64eca547a006fb4f8a99569c5ef8d94adc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
