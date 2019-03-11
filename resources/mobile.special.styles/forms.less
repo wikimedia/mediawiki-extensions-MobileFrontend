@@ -1,6 +1,11 @@
+// Forms and their elements.
+// Partly inspired by normalize.css and sanitize.css.
 @import '../../mobile.less/mobile.variables';
 
 fieldset {
+	// Reset `margin` and `border` (opinionated).
+	margin: 0;
+	border: 0;
 	font-size: 0.9em;
 
 	.htmlform-tip {
@@ -20,8 +25,34 @@ fieldset {
 
 legend {
 	color: @grayMedium;
+	// Remove `padding` for better positioning (normalized).
+	padding: 0;
 	font-size: 0.8em;
 	font-weight: bold;
+}
+
+button,
+input,
+select,
+textarea {
+	// Support Firefox, Safari: Remove margin (normalized).
+	margin: 0;
+	// Inherit styling in all browsers (opinionated).
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	// Vertical align all elements to `baseline`.
+	vertical-align: baseline;
+}
+
+button {
+	background-color: transparent;
+	border: 0;
+	cursor: pointer;
+}
+
+input {
+	line-height: normal;
 }
 
 // For old style forms
