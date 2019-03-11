@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7155a4f5_bfbdc252",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-03-11T17:50:02Z",
+      "side": 1,
+      "message": "https://gerrit.wikimedia.org/r/c/mediawiki/extensions/MobileFrontend/+/494825 is on the way, just needs a look from @Pmiazga and we can begin using it?",
+      "range": {
+        "startLine": 42,
+        "startChar": 13,
+        "endLine": 42,
+        "endChar": 40
+      },
+      "revId": "ed79aba21949ceba7785c7d31a4310d4c3be5be3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
