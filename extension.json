@@ -466,7 +466,8 @@
 				"mediawiki.router"
 			],
 			"styles": [
-				"resources/mobile.mediaViewer/mediaViewer.less"
+				"resources/mobile.mediaViewer/mediaViewer.less",
+				"resources/mobile.mediaViewer/carousel.less"
 			],
 			"scripts": [
 				"resources/dist/mobile.mediaViewer.js"
