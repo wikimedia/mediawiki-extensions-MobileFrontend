@@ -69,7 +69,6 @@ function Overlay( props ) {
 			}
 		)
 	);
-	this.hasHeader = this.$el.find( '.overlay-header-container' ).length > 0;
 }
 
 mfExtend( Overlay, View, {
@@ -169,7 +168,6 @@ mfExtend( Overlay, View, {
 	 * @instance
 	 */
 	postRender: function () {
-
 		this.$overlayContent = this.$el.find( '.overlay-content' );
 		this.$spinner = this.$el.find( '.spinner' );
 		if ( this.isIos ) {
@@ -182,6 +180,7 @@ mfExtend( Overlay, View, {
 				return component.$el;
 			} )
 		);
+		this.hasHeader = this.$el.find( '.overlay-header-container' ).length > 0;
 		this.setupEmulatedIosOverlayScrolling();
 	},
 
