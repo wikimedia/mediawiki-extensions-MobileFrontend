@@ -51,6 +51,7 @@
 	"mobile-frontend-editor-error-loading": "Kļūda, nevar ielādēt sadaļu.",
 	"mobile-frontend-editor-keep-editing": "Turpināt labot",
 	"mobile-frontend-editor-terms-link": "[$1 Lietošanas noteikumi]",
+	"mobile-frontend-editor-previewing-page": "<span>$1 <strong>priekšskatījums</strong></span>",
 	"mobile-frontend-editor-save": "Saglabāt",
 	"mobile-frontend-editor-success": "Izdevās! Labojumi tika saglabāti.",
 	"mobile-frontend-editor-summary-placeholder": "Piemērs: Labota pareizrakstības kļūda, pievienots saturs",
@@ -82,7 +83,7 @@
 	"mobile-frontend-languages-404-desc": "Jānorāda derīgs nosaukums.",
 	"mobile-frontend-languages-404-title": "Valodas kļūda",
 	"mobile-frontend-languages-header": "Valodas",
-	"mobile-frontend-languages-header-page": "$1 - valodas",
+	"mobile-frontend-languages-header-page": "$1 — citas valodas",
 	"mobile-frontend-languages-nonexistent-title": "Lapa \"$1\" nepastāv.",
 	"mobile-frontend-languages-variant-header": "{{#language:{{CONTENTLANG}}}} varianti",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Ieteiktās valodas",
@@ -158,5 +159,6 @@
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "Ievada rindkopa",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Fonta lielums",
 	"mobile-frontend-mobile-option-amc-learn-more": "Uzzināt vairāk",
+	"mobile-frontend-mobile-option-amc-send-feedback": "Sūtīt atsauksmes",
 	"mobile-frontend-beta-only": "Iespēja pieejama tikai bēta režīmā"
 }
