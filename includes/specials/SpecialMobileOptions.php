@@ -39,9 +39,10 @@ class SpecialMobileOptions extends MobileSpecialPage {
 	 * Set the required config for the page.
 	 */
 	public function setJsConfigVars() {
+		$context = MobileContext::singleton();
 		$featureManager = \MediaWiki\MediaWikiServices::getInstance()
 			->getService( 'MobileFrontend.FeaturesManager' );
-		$output->addJsConfigVars( [
+		$this->getOutput()->addJsConfigVars( [
 			'wgMFEnableFontChanger' =>
 				$featureManager->isFeatureAvailableInContext( 'MFEnableFontChanger', $context ),
 		] );
