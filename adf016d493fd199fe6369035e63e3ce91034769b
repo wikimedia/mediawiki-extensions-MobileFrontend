@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dd4d68ed_af8fc20e",
+        "filename": "resources/mobile.mediaViewer/carousel.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-12T22:50:12Z",
+      "side": 1,
+      "message": "What if we want to use the carousel component outside an overlay? Should/could the position absolutes belong somewhere else?",
+      "revId": "adf016d493fd199fe6369035e63e3ce91034769b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9e7719af_624da51f",
+        "filename": "resources/mobile.mediaViewer/carousel.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-12T22:50:12Z",
+      "side": 1,
+      "message": "This looks new and I\u0027m not sure it\u0027s desirable. Are these not useful to screenreaders?",
+      "revId": "adf016d493fd199fe6369035e63e3ce91034769b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7b119be0_4cb12806",
+        "filename": "resources/mobile.mediaViewer/carousel.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-12T22:50:12Z",
+      "side": 1,
+      "message": "From what I understand, this is a copy from .overlay but I don\u0027t see the corresponding CSS removed in overlay in any of your existing patches.\n\nI\u0027m wondering whether the nesting is necessary (could this be just .slider-button ?) and could we import this right away inside resources/mobile.mediaViewer/mediaViewer.less ?\n\nI\u0027m not a fan of leaving code unused if it can be avoided as it opens up the possibility of human error. Especially when it\u0027s CSS and not so easily discoverable right now!",
+      "revId": "adf016d493fd199fe6369035e63e3ce91034769b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
