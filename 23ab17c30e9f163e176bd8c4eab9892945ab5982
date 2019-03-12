@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9e56e437_fcd74bff",
+        "filename": "resources/mobile.mediaViewer/imageDetails.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-12T23:00:47Z",
+      "side": 1,
+      "message": "Echoing my comment in https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/495909/2 I\u0027d love if we could also in this patch remove the  styles in resources/mobile.mediaViewer/mediaViewer.less (replacing the details class with image-details inside resources/mobile.mediaViewer/ImageOverlay.hogan)",
+      "revId": "23ab17c30e9f163e176bd8c4eab9892945ab5982",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cc054328_ce05921f",
+        "filename": "resources/mobile.mediaViewer/imageDetails.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-12T23:00:47Z",
+      "side": 1,
+      "message": "What\u0027s stopping us doing that now? Is this FIXME still valid?",
+      "revId": "23ab17c30e9f163e176bd8c4eab9892945ab5982",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "58e8f7ea_d4cdf6e5",
+        "filename": "resources/mobile.mediaViewer/imageDetails.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-12T23:00:47Z",
+      "side": 1,
+      "message": "It looks like this gets added by ImageOverlay.\nThus does this require a FIXME? Ideally this would be owned by imageDetails component itself.",
+      "revId": "23ab17c30e9f163e176bd8c4eab9892945ab5982",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7538419d_a5a4ff1b",
+        "filename": "src/mobile.mediaViewer/imageDetails.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-12T23:00:47Z",
+      "side": 1,
+      "message": "could isVisible be passed in as a prop to add the class in future? (see comment in less file)",
+      "revId": "23ab17c30e9f163e176bd8c4eab9892945ab5982",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
