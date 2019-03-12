@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c8a7cebf_0aafc298",
+        "filename": "src/mobile.mediaViewer/promisedImage.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-12T22:56:32Z",
+      "side": 1,
+      "message": "Should this be passed in directly without props for consistency with the promisedView\n\nI\u0027m noticing that we only use props on View\u0027s (things that extend View) but don\u0027t seem to be following this pattern on our factory functions.",
+      "revId": "2199d4019c1ea8512976552baf5af7e1439f7612",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "323f734d_a7a6fb50",
+        "filename": "src/mobile.mediaViewer/promisedImage.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-12T22:56:32Z",
+      "side": 1,
+      "message": "What if this returned a promise rather than a View? Would that not separate the concerns of obtaining the image and rendering the image?\n\nIt feels like there might actually be 2 functions here (loading an image via a promise asynchronously and a usage of promisedView)",
+      "revId": "2199d4019c1ea8512976552baf5af7e1439f7612",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "51d59760_0cd08d98",
+        "filename": "src/mobile.mediaViewer/promisedImage.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-12T22:56:32Z",
+      "side": 1,
+      "message": "Why wouldn\u0027t the user of promisedImage do that as part of their promise resolution?\n\ne.g. promisedImage( promise().then(()\u003d\u003eonBeforeImageLoad) );",
+      "revId": "2199d4019c1ea8512976552baf5af7e1439f7612",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6792fbee_1ce56f15",
+        "filename": "src/mobile.mediaViewer/promisedImage.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-12T22:56:32Z",
+      "side": 1,
+      "message": "What if we resolved a promise here instead?",
+      "revId": "2199d4019c1ea8512976552baf5af7e1439f7612",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "db8cbbb1_c05831f1",
+        "filename": "src/mobile.mediaViewer/promisedImage.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-12T22:56:32Z",
+      "side": 1,
+      "message": "what if we rejected a promise here instead?",
+      "revId": "2199d4019c1ea8512976552baf5af7e1439f7612",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f93eb3d5_60b8c990",
+        "filename": "src/mobile.mediaViewer/promisedImage.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-12T22:56:32Z",
+      "side": 1,
+      "message": "You could also do attr( { src: data.src, alt: data.alt } ) here",
+      "revId": "2199d4019c1ea8512976552baf5af7e1439f7612",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
