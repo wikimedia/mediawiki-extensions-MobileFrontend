@@ -32,7 +32,7 @@ class McsContentProvider implements IContentProvider {
 	 */
 	protected function buildHtmlFromResponse( array $json ) {
 		$lead = $json['lead'];
-		$html = isset( $lead['sections'][0]['text'] ) ? $lead['sections'][0]['text'] : '';
+		$html = $lead['sections'][0]['text'] ?? '';
 
 		$remaining = $json['remaining'];
 
