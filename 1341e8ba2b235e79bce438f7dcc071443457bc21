@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "db96b8fb_0756ea6e",
+        "filename": "src/mobile.mediaViewer/ImageCarousel.js",
+        "patchSetId": 47
+      },
+      "lineNbr": 267,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-12T16:25:30Z",
+      "side": 1,
+      "message": "used in latest patch",
+      "parentUuid": "3c76eb06_7f459ea8",
+      "revId": "1341e8ba2b235e79bce438f7dcc071443457bc21",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fac09050_8cf668a1",
         "filename": "src/mobile.mediaViewer/ImageDetails.js",
         "patchSetId": 47
@@ -30,6 +48,24 @@
       "writtenOn": "2019-03-08T22:29:37Z",
       "side": 1,
       "message": "Rather than decorate the View with this function could be make this a private function that takes this.$el and this.props ?\n\nIt is not used outside this class but is made publicly available so I worry it might get used by others.",
+      "revId": "1341e8ba2b235e79bce438f7dcc071443457bc21",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6478d116_4ffa0a00",
+        "filename": "src/mobile.mediaViewer/ImageDetails.js",
+        "patchSetId": 47
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-12T16:25:30Z",
+      "side": 1,
+      "message": "removed/fixed in latest patch",
+      "parentUuid": "fac09050_8cf668a1",
       "revId": "1341e8ba2b235e79bce438f7dcc071443457bc21",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "e98aedc5_b6c45d49",
+        "filename": "src/mobile.mediaViewer/ImageDetails.js",
+        "patchSetId": 47
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-12T16:25:30Z",
+      "side": 1,
+      "message": "In latest patch, I replaced this with the ability to pass in additional css classes",
+      "parentUuid": "8da17030_02946410",
+      "revId": "1341e8ba2b235e79bce438f7dcc071443457bc21",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "549bb632_5915c703",
         "filename": "src/mobile.mediaViewer/ImageDetails.js",
         "patchSetId": 47
@@ -64,6 +118,24 @@
       "writtenOn": "2019-03-08T22:29:37Z",
       "side": 1,
       "message": "Does this need to be a smart component or are there other ways to do this change while keeping it dumb?",
+      "revId": "1341e8ba2b235e79bce438f7dcc071443457bc21",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "162ea59a_ce570a42",
+        "filename": "src/mobile.mediaViewer/ImageDetails.js",
+        "patchSetId": 47
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-12T16:25:30Z",
+      "side": 1,
+      "message": "make this dumb in I549add34101d58439b25265473a3a611c3324154",
+      "parentUuid": "549bb632_5915c703",
       "revId": "1341e8ba2b235e79bce438f7dcc071443457bc21",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "a4be5451_c2a4e918",
+        "filename": "src/mobile.mediaViewer/ImageDetails.js",
+        "patchSetId": 47
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-12T16:25:30Z",
+      "side": 1,
+      "message": "I think I\u0027ve improved this in I549add34101d58439b25265473a3a611c3324154 . Let me know if not",
+      "parentUuid": "ac912f6c_f919bf0c",
+      "revId": "1341e8ba2b235e79bce438f7dcc071443457bc21",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "60d25803_0d8c3385",
         "filename": "src/mobile.mediaViewer/rerenderProps.js",
         "patchSetId": 47
@@ -98,6 +188,24 @@
       "writtenOn": "2019-03-08T22:29:37Z",
       "side": 1,
       "message": "TBH I\u0027m struggling with my review of this code, as we are adding some state handling and I\u0027d rather avoid that if we can so that we keep components dumb.\n\nI\u0027m going to need some time to digest this!\n\nMy thinking is that even though we don\u0027t have super fast virtual DOM diffing, it might keep our code simpler if we re-render an entire component based on a changing state.\n\n\n/**\n * Swap views\n * @param {View} component\n * @param {View} newComponent\n * @return {View} new view\n */\nfunction swapComponent( component, newComponent ) {\n\tcomponent.$el.replaceWith( newComponent.$el );\n\treturn newComponent;\n}\n\nSo instead of calling imageCarousel.update and imageDetails.update we create a new instance and replace it.\n\nThis would keep our components dumb and logic free and would help us adopt React or redux later on IMO.",
+      "revId": "1341e8ba2b235e79bce438f7dcc071443457bc21",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d2a17948_a7254ffc",
+        "filename": "src/mobile.mediaViewer/rerenderProps.js",
+        "patchSetId": 47
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-12T16:25:30Z",
+      "side": 1,
+      "message": "I removed this in latest patches and added your suggested function in Ibd1cbc6bad2d7d3cf9fffb5e40001e107e7f3333 . Thanks for the suggestion! Now setState will be exclusively used to update the view of components.\n\nAt some point, we will need a stateful component that handles the toggling of the details bar, etc. In latest patches, I made carousel.js a presentational component and imageCarousel.js a stateful one that uses carousel.js.",
+      "parentUuid": "60d25803_0d8c3385",
       "revId": "1341e8ba2b235e79bce438f7dcc071443457bc21",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -174,6 +282,24 @@
     },
     {
       "key": {
+        "uuid": "b41d2668_9892de34",
+        "filename": "src/mobile.startup/image/overlay.js",
+        "patchSetId": 47
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-12T16:25:30Z",
+      "side": 1,
+      "message": "I made use of overlay-content in latest patch. I had to add some additional styles to image-overlay to make it look the same but I think i looks the same now.",
+      "parentUuid": "3914e3f1_3f5cd535",
+      "revId": "1341e8ba2b235e79bce438f7dcc071443457bc21",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "81831589_3baafd4f",
         "filename": "src/mobile.startup/image/overlay.js",
         "patchSetId": 47
@@ -185,6 +311,24 @@
       "writtenOn": "2019-03-08T22:29:37Z",
       "side": 1,
       "message": "You can use Overlay.make( {}, View.make( {}, [\n\t\tloadOrMakeComponents( props, overlay ).$el,\n\t\ticons.cancel( \u0027gray\u0027 ).$el\n\n] );\n\n(also maybe making make accept a child would allow us to pass the components without the $el? waht do you think?\n\nhttps://gerrit.wikimedia.org/r/495140",
+      "revId": "1341e8ba2b235e79bce438f7dcc071443457bc21",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "934cbd08_abd422ca",
+        "filename": "src/mobile.startup/image/overlay.js",
+        "patchSetId": 47
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-12T16:25:30Z",
+      "side": 1,
+      "message": "the problem is I need to pass the reference to the overlay into loadOrMakeComponents so I don\u0027t think I can use Overlay.make here. The View.make pattern could be useful other places though",
+      "parentUuid": "81831589_3baafd4f",
       "revId": "1341e8ba2b235e79bce438f7dcc071443457bc21",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
