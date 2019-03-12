@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "355073ca_b038d3e6",
+        "filename": "src/mobile.notifications.overlay/NotificationsOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-12T15:38:04Z",
+      "side": 1,
+      "message": "Is this used on line 152?\n\n overlay.confirmationWidget.setLabel(...)",
+      "range": {
+        "startLine": 83,
+        "startChar": 1,
+        "endLine": 83,
+        "endChar": 19
+      },
+      "revId": "ee3faea21e568a4b949e6820e0c25e7bc6ce7466",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
