@@ -243,8 +243,11 @@ function setupEditor( page, skin ) {
 			loadingOverlay.on( 'hide', clearLoadingVE );
 			// Should this be a subclass?
 			loadingOverlay.show = function () {
-				var $page, $content, $sectionTop, fakeScroll;
+				var $page, $content, $sectionTop, fakeScroll, enableVisualSectionEditing;
 				Overlay.prototype.show.call( this );
+				enableVisualSectionEditing = veConfig.enableVisualSectionEditing === true ||
+					// === ve.init.mw.MobileFrontendArticleTarget.static.trackingName
+					veConfig.enableVisualSectionEditing === 'mobile';
 				$page = $( '#mw-mf-page-center' );
 				$content = $( '#content' );
 				if ( sectionId === '0' || sectionId === 'all' ) {
@@ -266,10 +269,7 @@ function setupEditor( page, skin ) {
 				fakeScroll = $sectionTop.prop( 'offsetTop' ) - this.scrollTop;
 				// Adjust for height of the toolbar.
 				fakeScroll -= 48;
-				if (
-					sectionId === '0' || sectionId === 'all' ||
-					mw.config.get( 'wgVisualEditorConfig' ).enableVisualSectionEditing === true
-				) {
+				if ( sectionId === '0' || sectionId === 'all' || enableVisualSectionEditing ) {
 					// Adjust for surface padding. Only needed if we're at the beginning of the doc.
 					fakeScroll -= 16;
 				}
