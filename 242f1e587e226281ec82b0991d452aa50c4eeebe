@@ -16,6 +16,24 @@
       "revId": "242f1e587e226281ec82b0991d452aa50c4eeebe",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "abf2a3e6_d3a65af8",
+        "filename": "src/mobile.startup/Overlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 326,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2019-03-13T21:47:36Z",
+      "side": 1,
+      "message": "I agree that this function should not exist, and this functionality should be in OverlayManager. But currently it exists and is here, and I made an effort to keep my changes focussed instead of rewriting everything.\n\nI did this exactly because it seems that y\u0027all are in the process of rewriting everything I touch and I wanted to avoid major functional conflicts amd wasted work this time.\n\nI don\u0027t understand your comment about \u0027render\u0027. My changes do not touch the render function, and these events actually will not be lost if it is called twice or more, as they are attached to the global Window object.",
+      "parentUuid": "7f500f74_7a109939",
+      "revId": "242f1e587e226281ec82b0991d452aa50c4eeebe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
