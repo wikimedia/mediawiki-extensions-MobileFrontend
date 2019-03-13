@@ -516,4 +516,19 @@ mfExtend( View, {
 	};
 } );
 
+/**
+ * Generates a view with children
+ *
+ * @param {Object} options
+ * @param {jQuery.Element[]} children
+ * @return {View}
+ */
+View.make = function ( options, children ) {
+	var view = new View( options );
+	children.forEach( function ( $child ) {
+		view.append( $child );
+	} );
+	return view;
+};
+
 module.exports = View;

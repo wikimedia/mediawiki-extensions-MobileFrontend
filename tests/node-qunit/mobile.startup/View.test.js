@@ -242,3 +242,8 @@ QUnit.test( 'View with className option', function ( assert ) {
 		assert.strictEqual( test[0].$el.attr( 'class' ), test[1], test[2] );
 	} );
 } );
+
+QUnit.test( 'View.make()', function ( assert ) {
+	var view = View.make( { className: 'foo' }, [ util.parseHTML( '<div>' ).text( 'hello' ) ] );
+	assert.strictEqual( view.$el.find( '> div' ).text().trim(), 'hello', 'view created with element' );
+} );
