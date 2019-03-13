@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "1d865a2f_c4414fcb",
+        "filename": "src/mobile.mediaViewer/promisedImage.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-13T19:30:59Z",
+      "side": 1,
+      "message": "Sure but languageOverlay takes a single parameter - a page gateway instance and talkOverlay takes 2 parameters - title and gateway.\n\nThis feels more like those 2 things as it\u0027s not a component as such but a helper/factory function.",
+      "parentUuid": "0b6484a8_ce3171f6",
+      "revId": "2199d4019c1ea8512976552baf5af7e1439f7612",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "323f734d_a7a6fb50",
         "filename": "src/mobile.mediaViewer/promisedImage.js",
         "patchSetId": 2
@@ -66,6 +84,24 @@
       "side": 1,
       "message": "I\u0027m confused what purpose it would serve to return a promise ( given that the promise is passed in). This component was made to return a view so that imageCarousel wouldn\u0027t have to take on that responsibility of rendering the async image/loading and rendering the error view.  The spinner is only shown while the promise is resolving (that is from promisedView) but we show the image as it is loading.",
       "parentUuid": "323f734d_a7a6fb50",
+      "revId": "2199d4019c1ea8512976552baf5af7e1439f7612",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8f799836_4aab4352",
+        "filename": "src/mobile.mediaViewer/promisedImage.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-13T19:30:59Z",
+      "side": 1,
+      "message": "See my comment below.",
+      "parentUuid": "ca70f899_17f85674",
       "revId": "2199d4019c1ea8512976552baf5af7e1439f7612",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -136,6 +172,24 @@
       "side": 1,
       "message": "Can you elaborate more on why we would do that? Currently, after the promise resolves the spinner is replaced with the image load. promisedView does nothing with the actual image load but this component is helpful because we need the same error view shown if either the promise rejects or the actual image load fails",
       "parentUuid": "6792fbee_1ce56f15",
+      "revId": "2199d4019c1ea8512976552baf5af7e1439f7612",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1adbaf27_a5a505c8",
+        "filename": "src/mobile.mediaViewer/promisedImage.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-13T19:30:59Z",
+      "side": 1,
+      "message": "I guess my confusion lies in the asyncImageFn. It feels to me that it should be rejecting when an error occurs and resolving when the image is loading.\n\nI was imagining something like this:\n```\npromisedView( props.asyncImageFn().then(function ( props ) {\n  return View( { tagName: \u0027img\u0027, ... props } );\n}, function () {\n  return loadErrorView;\n} );\n```\n\nHere it feels like we are mixing view responsibilities with gateway responsibilities.",
+      "parentUuid": "c8c59716_f9f6ab22",
       "revId": "2199d4019c1ea8512976552baf5af7e1439f7612",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
