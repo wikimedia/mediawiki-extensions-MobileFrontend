@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "17832568_053c5cba",
+        "filename": "src/mobile.notifications.overlay/NotificationsOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-13T14:20:50Z",
+      "side": 1,
+      "message": "This change looks sane but when I run it locally and tap the notifications bar I get the following error:\n\n Query.Deferred exception: s.make is not a function TypeError: s.make is not a function\n\nIt doesn\u0027t happen on master. Can you repro?",
+      "revId": "b70b6442e0143e2ee9e8839b9016425f2d95fcf7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
