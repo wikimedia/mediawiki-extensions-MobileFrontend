@@ -16,6 +16,24 @@
       "revId": "b70b6442e0143e2ee9e8839b9016425f2d95fcf7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a570b27_c4bfc030",
+        "filename": "src/mobile.notifications.overlay/NotificationsOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-13T14:52:04Z",
+      "side": 1,
+      "message": "That\u0027s because I forgot it has one dependency:\nhttps://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/496175 Provide a View.make helper method",
+      "parentUuid": "17832568_053c5cba",
+      "revId": "b70b6442e0143e2ee9e8839b9016425f2d95fcf7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
