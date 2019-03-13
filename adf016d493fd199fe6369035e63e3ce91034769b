@@ -54,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "e6bb3590_baf0a5fa",
+        "filename": "resources/mobile.mediaViewer/carousel.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-13T00:52:51Z",
+      "side": 1,
+      "message": "I think if done, this should be done in a follow up with buy-in from Alex and Volker.",
+      "parentUuid": "067355f9_11d0c78f",
+      "revId": "adf016d493fd199fe6369035e63e3ce91034769b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7b119be0_4cb12806",
         "filename": "resources/mobile.mediaViewer/carousel.less",
         "patchSetId": 2
@@ -83,6 +101,24 @@
       "side": 1,
       "message": "this class should be removed in https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/493630/55/resources/mobile.startup/Overlay.less\n\n\"could we import this right away inside resources/mobile.mediaViewer/mediaViewer.less\"\n\n^^ not sure what you mean. Are you suggesting .slider-button should live inside mediaViewer.less? I remove the whole mediaViewer.less file in the same patch here:\n\nhttps://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/493630/55/resources/mobile.mediaViewer/mediaViewer.less",
       "parentUuid": "7b119be0_4cb12806",
+      "revId": "adf016d493fd199fe6369035e63e3ce91034769b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0cbf655b_e8a9f08d",
+        "filename": "resources/mobile.mediaViewer/carousel.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-13T00:52:51Z",
+      "side": 1,
+      "message": "The CSS selector .slider-button seems to be enough (if it\u0027s relying on specificity though that should be documented.\n\nPractically I\u0027m suggesting 2 things\n1) you make this rule just .slider-button NOT .carousel .slider-button\n2) Rather than wait until I549add34101d58439b25265473a3a611c3324154 you drop the rules in Overlay.less  as part of this patch and include these new rules straight away.",
+      "parentUuid": "d082803f_a6f6fcb5",
       "revId": "adf016d493fd199fe6369035e63e3ce91034769b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
