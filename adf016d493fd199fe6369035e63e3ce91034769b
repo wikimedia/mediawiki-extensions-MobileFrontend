@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "a548ca20_7ae7d1bc",
+        "filename": "resources/mobile.mediaViewer/carousel.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-13T17:56:46Z",
+      "side": 1,
+      "message": "So after looking at this again, I don\u0027t think the position absolute and related styles are needed at all so I  removed them. The overflow style is more for imageCarousel.less so I moved it there. And I removed the user-select.\n\nI think the height: 100% should be there as the carousel should always stretch to its container and the container should have a height (either a percentage like imageCarousel or a set height).",
+      "parentUuid": "dd4d68ed_af8fc20e",
+      "revId": "adf016d493fd199fe6369035e63e3ce91034769b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9e7719af_624da51f",
         "filename": "resources/mobile.mediaViewer/carousel.less",
         "patchSetId": 2
@@ -72,6 +90,24 @@
     },
     {
       "key": {
+        "uuid": "410615b6_cd2d7e0c",
+        "filename": "resources/mobile.mediaViewer/carousel.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-13T17:56:46Z",
+      "side": 1,
+      "message": "removed in latest patch",
+      "parentUuid": "e6bb3590_baf0a5fa",
+      "revId": "adf016d493fd199fe6369035e63e3ce91034769b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7b119be0_4cb12806",
         "filename": "resources/mobile.mediaViewer/carousel.less",
         "patchSetId": 2
@@ -119,6 +155,24 @@
       "side": 1,
       "message": "The CSS selector .slider-button seems to be enough (if it\u0027s relying on specificity though that should be documented.\n\nPractically I\u0027m suggesting 2 things\n1) you make this rule just .slider-button NOT .carousel .slider-button\n2) Rather than wait until I549add34101d58439b25265473a3a611c3324154 you drop the rules in Overlay.less  as part of this patch and include these new rules straight away.",
       "parentUuid": "d082803f_a6f6fcb5",
+      "revId": "adf016d493fd199fe6369035e63e3ce91034769b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "989f62f0_0453e64e",
+        "filename": "resources/mobile.mediaViewer/carousel.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-13T17:56:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0cbf655b_e8a9f08d",
       "revId": "adf016d493fd199fe6369035e63e3ce91034769b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
