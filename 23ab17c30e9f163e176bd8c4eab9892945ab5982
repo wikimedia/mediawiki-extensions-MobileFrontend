@@ -53,6 +53,23 @@
     },
     {
       "key": {
+        "uuid": "b7d749b5_37bbffad",
+        "filename": "src/mobile.mediaViewer/imageDetails.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-13T22:05:38Z",
+      "side": 1,
+      "message": "We should describe that is-visible class is needed to display it (and possibly not make this the default!!)",
+      "revId": "23ab17c30e9f163e176bd8c4eab9892945ab5982",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7538419d_a5a4ff1b",
         "filename": "src/mobile.mediaViewer/imageDetails.js",
         "patchSetId": 2
