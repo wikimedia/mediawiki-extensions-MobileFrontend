@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7f500f74_7a109939",
+        "filename": "src/mobile.startup/Overlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 326,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-13T21:18:43Z",
+      "side": 1,
+      "message": "I\u0027m currently working towards removing the show function altogether, so I\u0027d rather we didn\u0027t add this here as this makes my life a lot more complicated and it will likely break again.\n\nThe idea with View\u0027s is that they can be re-rendered by calling render again. These events will thus get lost if that ever happens. What is the problem with adding this inside postRender?\n\nAlso I can\u0027t help but notice that most of this code doesn\u0027t seem very Overlay specific. I\u0027m wondering if it could live in its own file and be applied to the overlay itself. Can we separate the concerns of rendering an overlay from making it scroll correctly (maybe applying these scroll hacks inside the overlayManager?",
+      "revId": "242f1e587e226281ec82b0991d452aa50c4eeebe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
