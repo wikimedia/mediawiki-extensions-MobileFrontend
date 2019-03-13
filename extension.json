@@ -886,6 +886,9 @@
 		],
 		"GetDifferenceEngine": [
 			"MobileFrontendHooks::onGetDifferenceEngine"
+		],
+		"ManualLogEntryBeforePublish": [
+			"MobileFrontend\\AMC\\Hooks::onManualLogEntryBeforePublish"
 		]
 	},
 	"config": {
