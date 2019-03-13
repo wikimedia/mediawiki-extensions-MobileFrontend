@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
+
 /**
  * Extends Api of MediaWiki with actions for mobile devices. For further information see
  * https://www.mediawiki.org/wiki/Extension:MobileFrontend#API
@@ -70,7 +72,8 @@ class ApiMobileView extends ApiBase {
 
 		// Don't strip srcset on renderings for mobileview api; the
 		// app below it will decide how to use them.
-		MobileContext::singleton()->setStripResponsiveImages( false );
+		MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' )
+			->setStripResponsiveImages( false );
 
 		// Enough '*' keys in JSON!!!
 		$isXml = $this->getMain()->isInternalMode()
@@ -562,7 +565,9 @@ class ApiMobileView extends ApiBase {
 	private function getData( Title $title, $noImages, $oldid = null ) {
 		global $wgMemc;
 
-		$mfConfig = MobileContext::singleton()->getMFConfig();
+		$container = MediaWikiServices::getInstance();
+		$mfConfig = $container->getService( 'MobileFrontend.Config' );
+
 		$mfMinCachedPageSize = $mfConfig->get( 'MFMinCachedPageSize' );
 		$mfSpecialCaseMainPage = $mfConfig->get( 'MFSpecialCaseMainPage' );
 

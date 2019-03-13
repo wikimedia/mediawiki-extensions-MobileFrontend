@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
+
 /**
  * Extends API action=parse with mobile goodies
  * See https://www.mediawiki.org/wiki/Extension:MobileFrontend#Extended_action.3Dparse
@@ -28,8 +30,9 @@ class ApiParseExtender {
 	 * @return bool
 	 */
 	public static function onAPIAfterExecute( ApiBase &$module ) {
-		$mfSpecialCaseMainPage = MobileContext::singleton()
-			->getMFConfig()->get( 'MFSpecialCaseMainPage' );
+		$config = MediaWikiServices::getInstance()
+			->getService( 'MobileFrontend.Config' );
+		$mfSpecialCaseMainPage = $config->get( 'MFSpecialCaseMainPage' );
 
 		if ( $module->getModuleName() == 'parse' ) {
 			$result = $module->getResult();
