@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0b6484a8_ce3171f6",
+        "filename": "src/mobile.mediaViewer/promisedImage.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-13T18:54:01Z",
+      "side": 1,
+      "message": "Can we talk about this more? In a super-happy-dev-time on Dec 10, we had a related discussion on props vs options and came to a conclusion:\n\n```\nMF: What should we call the options param that we often use in the constructor of our components?\n     * \"props\"? https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/476423/7/src/mobile.startup/Panel.js@15\n     * \"params\"? https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/476423/8/resources/mobile.editor.common/EditorOverlayBase.js\n     * \"options\"? https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/476423/8/src/mobile.startup/Page.js\n     * \"proptions\"? \"paraops\"?\n     \n    - For view related code, call it \u0027props\u0027. For non-views, call it \u0027options\u0027\n```\n\nI think if we are easing our way into React, it makes sense to me that all view related code is passed as a props object, but maybe others feel differently about that now",
+      "parentUuid": "c8a7cebf_0aafc298",
+      "revId": "2199d4019c1ea8512976552baf5af7e1439f7612",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "323f734d_a7a6fb50",
         "filename": "src/mobile.mediaViewer/promisedImage.js",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2019-03-12T22:56:32Z",
       "side": 1,
       "message": "What if this returned a promise rather than a View? Would that not separate the concerns of obtaining the image and rendering the image?\n\nIt feels like there might actually be 2 functions here (loading an image via a promise asynchronously and a usage of promisedView)",
+      "revId": "2199d4019c1ea8512976552baf5af7e1439f7612",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ca70f899_17f85674",
+        "filename": "src/mobile.mediaViewer/promisedImage.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-13T18:54:01Z",
+      "side": 1,
+      "message": "I\u0027m confused what purpose it would serve to return a promise ( given that the promise is passed in). This component was made to return a view so that imageCarousel wouldn\u0027t have to take on that responsibility of rendering the async image/loading and rendering the error view.  The spinner is only shown while the promise is resolving (that is from promisedView) but we show the image as it is loading.",
+      "parentUuid": "323f734d_a7a6fb50",
       "revId": "2199d4019c1ea8512976552baf5af7e1439f7612",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "cd6cf2f3_2b764a94",
+        "filename": "src/mobile.mediaViewer/promisedImage.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-13T18:54:01Z",
+      "side": 1,
+      "message": "I agree with this, this logic should probably be moved into imageCarousel.js. Will do.",
+      "parentUuid": "51d59760_0cd08d98",
+      "revId": "2199d4019c1ea8512976552baf5af7e1439f7612",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6792fbee_1ce56f15",
         "filename": "src/mobile.mediaViewer/promisedImage.js",
         "patchSetId": 2
@@ -64,6 +118,24 @@
       "writtenOn": "2019-03-12T22:56:32Z",
       "side": 1,
       "message": "What if we resolved a promise here instead?",
+      "revId": "2199d4019c1ea8512976552baf5af7e1439f7612",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c8c59716_f9f6ab22",
+        "filename": "src/mobile.mediaViewer/promisedImage.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-13T18:54:01Z",
+      "side": 1,
+      "message": "Can you elaborate more on why we would do that? Currently, after the promise resolves the spinner is replaced with the image load. promisedView does nothing with the actual image load but this component is helpful because we need the same error view shown if either the promise rejects or the actual image load fails",
+      "parentUuid": "6792fbee_1ce56f15",
       "revId": "2199d4019c1ea8512976552baf5af7e1439f7612",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
