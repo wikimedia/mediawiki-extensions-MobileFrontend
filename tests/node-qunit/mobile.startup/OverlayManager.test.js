@@ -1,4 +1,3 @@
-/* global $ */
 var
 	sinon = require( 'sinon' ),
 	dom = require( '../utils/dom' ),
@@ -33,7 +32,7 @@ QUnit.module( 'MobileFrontend mobile.startup/OverlayManager', {
 				this.emit( 'hide' );
 				return true;
 			};
-			fakeOverlay.$el = $( 'div' );
+			fakeOverlay.$el = util.parseHTML( '<div>' );
 			sandbox.spy( fakeOverlay, 'hide' );
 			util.extend( fakeOverlay, options );
 			return fakeOverlay;
@@ -43,7 +42,7 @@ QUnit.module( 'MobileFrontend mobile.startup/OverlayManager', {
 		fakeRouter.getPath = sandbox.stub().returns( '' );
 		fakeRouter.back = sandbox.spy();
 		sandbox.stub( mw.loader, 'require' ).withArgs( 'mediawiki.router' ).returns( fakeRouter );
-		overlayManager = new OverlayManager( fakeRouter, 'body' );
+		overlayManager = new OverlayManager( fakeRouter, document.body );
 	},
 	afterEach: function () {
 		jQuery.tearDown();
