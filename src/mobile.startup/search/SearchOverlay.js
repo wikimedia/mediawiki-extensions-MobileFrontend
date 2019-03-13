@@ -24,6 +24,7 @@ var
  */
 function SearchOverlay( params ) {
 	var options = util.extend(
+		true,
 		{
 			isBorderBox: false,
 			className: 'overlay search-overlay',

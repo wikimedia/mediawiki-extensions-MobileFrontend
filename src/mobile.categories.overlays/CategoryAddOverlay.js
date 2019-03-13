@@ -22,6 +22,7 @@ function CategoryAddOverlay( options ) {
 	Overlay.call(
 		this,
 		util.extend(
+			true,
 			{
 				className: 'category-overlay overlay',
 				events: {

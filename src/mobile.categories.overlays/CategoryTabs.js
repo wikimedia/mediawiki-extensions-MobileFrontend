@@ -27,6 +27,7 @@ function CategoryTabs( options ) {
 	View.call(
 		this,
 		util.extend(
+			true,
 			{ events: { 'click .catlink': 'onCatlinkClick' } },
 			options
 		)

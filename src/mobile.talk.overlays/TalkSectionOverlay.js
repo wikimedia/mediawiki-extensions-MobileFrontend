@@ -23,7 +23,7 @@ function TalkSectionOverlay( options ) {
 	this.editorApi = options.api;
 	this.pageGateway = new PageGateway( options.api );
 	Overlay.call( this,
-		util.extend( options, {
+		util.extend( true, options, {
 			className: 'talk-overlay overlay',
 			events: {
 				'focus textarea': 'onFocusTextarea',
