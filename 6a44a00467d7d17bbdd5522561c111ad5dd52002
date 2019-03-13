@@ -1,0 +1,107 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c86fbbc9_356fd504",
+        "filename": "resources/mobile.mediaViewer/carousel.less",
+        "patchSetId": 6
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-13T19:46:54Z",
+      "side": 1,
+      "message": "Looks like this rule is actually unnecessary and can be removed.\nSee my follow up in https://gerrit.wikimedia.org/r/496246",
+      "revId": "6a44a00467d7d17bbdd5522561c111ad5dd52002",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "20f4dad4_83c6261f",
+        "filename": "src/mobile.mediaViewer/carousel.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-13T19:46:54Z",
+      "side": 1,
+      "message": "Let\u0027s talk through these in a follow up patch. I want to help you make progress, but I do think the API here could be improved.",
+      "revId": "6a44a00467d7d17bbdd5522561c111ad5dd52002",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b78bcf3b_0f489d29",
+        "filename": "src/mobile.mediaViewer/carousel.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-13T19:46:54Z",
+      "side": 1,
+      "message": "It feels like this should be props.items[0] to me as it makes usage much easier (writing this as I try and create my own carousel component) and this wasn\u0027t intuitive to me especially given props.index\n\nie. this should render IMO\n```\nvar v \u003d mw.mobileFrontend.require(\u0027mobile.mediaViewer/carousel\u0027)({\n  items: [ new View( { el: $(\u0027\u003cdiv\u003e\u0027).text(\u0027hello world\u0027 ) } ) ]\n})\n```",
+      "range": {
+        "startLine": 86,
+        "startChar": 61,
+        "endLine": 86,
+        "endChar": 76
+      },
+      "revId": "6a44a00467d7d17bbdd5522561c111ad5dd52002",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a4c9f5df_b358ce29",
+        "filename": "src/mobile.mediaViewer/carousel.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-13T19:46:54Z",
+      "side": 1,
+      "message": "Should this be View[] ?",
+      "range": {
+        "startLine": 90,
+        "startChar": 11,
+        "endLine": 90,
+        "endChar": 13
+      },
+      "revId": "6a44a00467d7d17bbdd5522561c111ad5dd52002",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2b9a7cba_7c263a0a",
+        "filename": "src/mobile.mediaViewer/carousel.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-13T19:46:54Z",
+      "side": 1,
+      "message": "this doesn\u0027t seem true to me. I might want to create a carousel with 5 items but  start with the middle one.",
+      "range": {
+        "startLine": 92,
+        "startChar": 68,
+        "endLine": 93,
+        "endChar": 60
+      },
+      "revId": "6a44a00467d7d17bbdd5522561c111ad5dd52002",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
