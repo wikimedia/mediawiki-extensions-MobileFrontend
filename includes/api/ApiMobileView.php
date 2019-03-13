@@ -591,7 +591,7 @@ class ApiMobileView extends ApiBase {
 		$latest = $wikiPage->getLatest();
 		// Use page_touched so template updates invalidate cache
 		$touched = $wikiPage->getTouched();
-		$revId = $oldid ? $oldid : $title->getLatestRevID();
+		$revId = $oldid ?: $title->getLatestRevID();
 		if ( $this->file ) {
 			$key = $wgMemc->makeKey(
 				'mf',

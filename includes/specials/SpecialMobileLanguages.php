@@ -144,7 +144,7 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 				'href' => $langObject['url'],
 				'hreflang' => $langObject['lang'],
 				'lang' => $langObject['lang'],
-				'title' => isset( $langObject['*'] ) ? $langObject['*'] : $langObject['langname']
+				'title' => $langObject['*'] ?? $langObject['langname']
 			], $langObject['langname'] ) .
 			Html::closeElement( 'li' );
 
