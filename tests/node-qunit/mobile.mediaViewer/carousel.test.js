@@ -1,6 +1,8 @@
 let
 	sandbox,
 	makeCarousel,
+	View,
+	util = require( '../../../src/mobile.startup/util' ),
 	sinon = require( 'sinon' ),
 	dom = require( '../utils/dom' ),
 	mediaWiki = require( '../utils/mw' ),
@@ -15,12 +17,28 @@ QUnit.module( 'MobileFrontend carousel.js', {
 		oo.setUp( sandbox, global );
 		mediaWiki.setUp( sandbox, global );
 		makeCarousel = require( '../../../src/mobile.mediaViewer/carousel' );
-
+		View = require( '../../../src/mobile.startup/View' );
 	},
 	afterEach: function () {
 		jQuery.tearDown();
 		sandbox.restore();
 	}
+} );
+
+QUnit.test( 'renders view.$el if items[index] is a View', function ( assert ) {
+	const carousel = makeCarousel( {
+		items: [ new View( { el: util.parseHTML( '<div id="test"></div>' ) } ) ]
+	} );
+
+	assert.strictEqual( carousel.$el.find( '#test' ).length, 1, 'Renders $el of View' );
+} );
+
+QUnit.test( 'renders item if items[index] is NOT a View', function ( assert ) {
+	const carousel = makeCarousel( {
+		items: [ 'foo' ]
+	} );
+
+	assert.strictEqual( carousel.$el.text().trim(), 'foo', 'Renders item if not a View' );
 } );
 
 QUnit.test( 'renders inline styles on parent element', function ( assert ) {

@@ -76,21 +76,22 @@ const
 
 /**
  * A presentational component accepting an arbitrary array of items that a user
- * should be able to navigate through and a featured item that is currently on
- * display. When the user clicks one of the navigation arrows, the onSlide
- * callback will give you the next item as a param! This component does nothing
- * with the actual changing of items - that is left up to the client.
+ * should presumably be able to navigate through and the index of the item that
+ * is currently on display. When the user clicks one of the navigation arrows,
+ * the onSlide callback will give you the next item in the array as a param!
+ * This component does nothing with the actual changing of items - that is left
+ * up to the client.
  *
  * @param {Object} props
- * @param {View} props.featured A featured item that will be displayed between
- * the navigation buttons. This should probably be related to `items[index]`,
- * but can be any View that you want the carousel to currently display - images,
- * videos, emojis, spinners - you name it! The only thing this component will do
- * with it is display it!
- * @param {*} props.items An array of arbitrary items. Only used by the onSlide
- * event to determine the next featured item.
- * @param {number} props.index Index of the items that is featured. Only used
- * by the onSlide event to determine the next featured item.
+ * @param {Object[]} props.items An arbitrary array of items. items[index] will
+ * be displayed by the carousel.  If items[index] is a View (defined by an
+ * object with a $el property), carousel will display the value of its $el
+ * property. If not a View, carousel will display the item as is. The other
+ * members of the items array will only be used by handleNext and handlePrevious
+ * to determine which item to pass as a param to the onSlide callback.
+ * @param {number} [props.index] Index of the items array that is displayed.
+ * Defaults to 0. See props.items for how carousel uses index and the items
+ * array.
  * @param {boolean} [props.showNavigation] Toggles the visibility of the
  * navigation buttons
  * @param {Object} [props.style] Inline styles to render on the parent element.
@@ -102,12 +103,11 @@ const
  * navigation buttons are clicked. The callback receives two params in this
  * order:
  * 1: JQuery.Event
- * 2: item object of the next slide that should be rendered
+ * 2: The next item that should be rendered
  * @return {View}
  */
 function carousel( props ) {
 	props = util.extend( {
-		featured: '',
 		items: [],
 		index: 0,
 		showNavigation: true,
@@ -126,7 +126,7 @@ function carousel( props ) {
 	view.$el.css( props.style );
 
 	view.append(
-		props.featured.$el,
+		props.items[props.index].$el ? props.items[props.index].$el : props.items[props.index],
 		makeNavigation( props )
 	);
 
