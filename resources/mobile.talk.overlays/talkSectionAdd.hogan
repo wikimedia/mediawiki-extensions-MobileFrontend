@@ -4,13 +4,15 @@
 </div>
 
 <div class="overlay-content">
-	<div class="save-panel panel">
-		<p class="license">{{{licenseMsg}}}</p>
-	</div>
-	<div class="panel">
-		<input type="text" class="mw-ui-input" placeholder="{{topicTitlePlaceHolder}}">
-	</div>
-	<div class="panel">
-		<textarea class="wikitext-editor mw-ui-input" cols="40" rows="10" placeholder="{{topicContentPlaceHolder}}"></textarea>
+	<div class="add-topic-form">
+		<div class="save-panel panel">
+			<p class="license">{{{licenseMsg}}}</p>
+		</div>
+		<div class="panel">
+			<input type="text" class="mw-ui-input" placeholder="{{topicTitlePlaceHolder}}">
+		</div>
+		<div class="panel">
+			<textarea class="wikitext-editor mw-ui-input" cols="40" rows="10" placeholder="{{topicContentPlaceHolder}}"></textarea>
+		</div>
 	</div>
 </div>
