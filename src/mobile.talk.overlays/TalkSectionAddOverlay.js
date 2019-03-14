@@ -3,7 +3,7 @@ var
 	Overlay = require( '../mobile.startup/Overlay' ),
 	PageGateway = require( '../mobile.startup/PageGateway' ),
 	util = require( '../mobile.startup/util' ),
-	autosign = require( './autosign' ),
+	makeAddTopicForm = require( './makeAddTopicForm' ),
 	toast = require( '../mobile.startup/toast' ),
 	Icon = require( '../mobile.startup/Icon' );
 
@@ -26,8 +26,6 @@ function TalkSectionAddOverlay( options ) {
 		util.extend( options, {
 			className: 'talk-overlay overlay',
 			events: {
-				'input .wikitext-editor, input': 'onTextInput',
-				'change .wikitext-editor, input': 'onTextInput',
 				'click .confirm-save': 'onSaveClick'
 			}
 		} )
@@ -58,8 +56,6 @@ mfExtend( TalkSectionAddOverlay, Overlay, {
 	 */
 	defaults: util.extend( {}, Overlay.prototype.defaults, {
 		cancelMsg: mw.msg( 'mobile-frontend-editor-cancel' ),
-		topicTitlePlaceHolder: mw.msg( 'mobile-frontend-talk-add-overlay-subject-placeholder' ),
-		topicContentPlaceHolder: mw.msg( 'mobile-frontend-talk-add-overlay-content-placeholder' ),
 		editingMsg: mw.msg( 'mobile-frontend-talk-add-overlay-submit' ),
 		waitMsg: mw.msg( 'mobile-frontend-talk-topic-wait' ),
 		// icons.spinner can't be used, .loading has a fixed height, which breaks overlay-header
@@ -89,11 +85,20 @@ mfExtend( TalkSectionAddOverlay, Overlay, {
 	 * @instance
 	 */
 	postRender: function () {
+		let topicForm;
 		Overlay.prototype.postRender.call( this );
+		topicForm = makeAddTopicForm( {
+			subject: '',
+			body: '',
+			disabled: false,
+			licenseMsg: this.options.licenseMsg,
+			onTextInput: this.onTextInput.bind( this )
+		} );
 		this.showHidden( '.initial-header' );
 		this.$confirm = this.$el.find( 'button.confirm-save' );
-		this.$subject = this.$el.find( 'input' );
-		this.$ta = this.$el.find( '.wikitext-editor' );
+		this.$el.find( '.overlay-content' ).append( topicForm.$el );
+		this.$subject = topicForm.$el.find( 'input' );
+		this.$ta = topicForm.$el.find( '.wikitext-editor' );
 	},
 	/**
 	 * @inheritdoc
@@ -115,19 +120,22 @@ mfExtend( TalkSectionAddOverlay, Overlay, {
 	/**
 	 * Handles an input into a textarea and enables or disables the submit button
 	 * @memberof TalkSectionAddOverlay
+	 * @param {string} subject
+	 * @param {string} body
 	 * @instance
 	 */
-	onTextInput: function () {
-		var self = this;
+	onTextInput: function ( subject, body ) {
+		this.subject = subject;
+		this.body = body;
 
 		clearTimeout( this.timer );
 		this.timer = setTimeout( function () {
-			if ( !self.$ta.val().trim() || !self.$subject.val().trim() ) {
-				self.$confirm.prop( 'disabled', true );
+			if ( !body || !subject ) {
+				this.$confirm.prop( 'disabled', true );
 			} else {
-				self.$confirm.prop( 'disabled', false );
+				this.$confirm.prop( 'disabled', false );
 			}
-		}, 250 );
+		}.bind( this ), 250 );
 	},
 	/**
 	 * Handles a click on the save button
@@ -135,25 +143,24 @@ mfExtend( TalkSectionAddOverlay, Overlay, {
 	 * @instance
 	 */
 	onSaveClick: function () {
-		var self = this,
-			isOnTalkPage = self.title === self.currentPageTitle;
+		var isOnTalkPage = this.title === this.currentPageTitle;
 
 		this.showHidden( '.saving-header' );
 		this.save().then( function ( status ) {
 			if ( status === 'ok' ) {
 				if ( isOnTalkPage ) {
-					self.eventBus.emit( 'talk-added-wo-overlay' );
+					this.eventBus.emit( 'talk-added-wo-overlay' );
 				} else {
-					self.pageGateway.invalidatePage( self.title );
+					this.pageGateway.invalidatePage( this.title );
 					toast.show( mw.msg( 'mobile-frontend-talk-topic-feedback' ) );
-					self.eventBus.emit( 'talk-discussion-added' );
-					self.hide();
+					this.eventBus.emit( 'talk-discussion-added' );
+					this.hide();
 				}
 			}
-		}, function ( error ) {
+		}.bind( this ), function ( error ) {
 			var editMsg = mw.msg( 'mobile-frontend-talk-topic-error' );
 
-			self.$confirm.prop( 'disabled', false );
+			this.$confirm.prop( 'disabled', false );
 			switch ( error.details ) {
 				case 'protectedpage':
 					editMsg = mw.msg( 'mobile-frontend-talk-topic-error-protected' );
@@ -174,8 +181,8 @@ mfExtend( TalkSectionAddOverlay, Overlay, {
 			}
 
 			toast.show( editMsg, { type: 'error' } );
-			self.showHidden( '.save-header, .save-panel' );
-		} );
+			this.showHidden( '.save-header, .save-panel' );
+		}.bind( this ) );
 	},
 	/**
 	 * Save new talk section
@@ -185,10 +192,8 @@ mfExtend( TalkSectionAddOverlay, Overlay, {
 	 * or rejected with type error.
 	 */
 	save: function () {
-		var heading = this.$subject.val(),
-			self = this,
-			d = util.Deferred(),
-			text = this.$ta.val();
+		var heading = this.subject,
+			d = util.Deferred();
 
 		this.$ta.removeClass( 'error' );
 		this.$subject.removeClass( 'error' );
@@ -204,9 +209,9 @@ mfExtend( TalkSectionAddOverlay, Overlay, {
 			action: 'edit',
 			section: 'new',
 			sectiontitle: heading,
-			title: self.title,
+			title: this.title,
 			summary: mw.msg( 'newsectionsummary', heading ),
-			text: autosign( text )
+			text: this.body
 		} ).then( function () {
 			return 'ok';
 		}, function ( msg ) {
