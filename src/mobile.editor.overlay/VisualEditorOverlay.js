@@ -82,24 +82,6 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 	 * @memberof VisualEditorOverlay
 	 * @instance
 	 */
-	isActiveWithKeyboard: function () {
-		// Editor may not have loaded yet, in which case `this.target.surface` is undefined
-		var surfaceView = this.target.surface && this.target.surface.getView();
-		return surfaceView && surfaceView.isFocused() && !surfaceView.deactivated;
-	},
-	/**
-	 * @inheritdoc
-	 * @memberof VisualEditorOverlay
-	 * @instance
-	 */
-	forceRepaintCursor: function () {
-		this.target.onSurfaceScroll();
-	},
-	/**
-	 * @inheritdoc
-	 * @memberof VisualEditorOverlay
-	 * @instance
-	 */
 	show: function () {
 		EditorOverlayBase.prototype.show.apply( this, arguments );
 

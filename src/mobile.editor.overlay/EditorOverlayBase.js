@@ -1,4 +1,3 @@
-/* global $ */
 var Overlay = require( '../mobile.startup/Overlay' ),
 	util = require( '../mobile.startup/util' ),
 	PageGateway = require( '../mobile.startup/PageGateway' ),
@@ -7,7 +6,6 @@ var Overlay = require( '../mobile.startup/Overlay' ),
 	saveFailureMessage = require( './saveFailureMessage' ),
 	mfExtend = require( '../mobile.startup/mfExtend' ),
 	MessageBox = require( '../mobile.startup/MessageBox' ),
-	browser = require( '../mobile.startup/Browser' ).getSingleton(),
 	mwUser = mw.user;
 
 /**
@@ -373,71 +371,12 @@ mfExtend( EditorOverlayBase, Overlay, {
 
 		this.showHidden( '.initial-header' );
 	},
-	/**
-	 * Handle window scroll events on iOS
-	 * We prevent the window from being scrolled by the used (only overlay content is scrollable),
-	 * so these events may only occur when iOS touch keyboard is messing with the viewport.
-	 * @memberof EditorOverlayBase
-	 * @instance
-	 */
-	onWindowScroll: function () {
-		var $window, $content, windowTop, contentTop;
-		// iOS applies a scroll offset to the window when opening the keyboard to move the cursor
-		// into view. On the editing surface, this is not necessary (we set large padding-bottom so
-		// that the keyboard covers nothing); apply this offset to the surface instead. But in other
-		// cases allow it to happen, otherwise the user can't scroll to see whatever is underneath
-		// the keyboard. (T210559, T215604, T212967)
-		if ( browser.isIos() && this.isActiveWithKeyboard() ) {
-			$window = util.getWindow();
-			$content = this.$( '.overlay-content' );
-			windowTop = $window.scrollTop();
-			contentTop = $content.scrollTop();
-
-			// iOS likes to scroll by a very small amount, even when it's unnecessary, when tapping
-			// content near the top of the window. Applying those scrolls causes the cursor to end
-			// up underneath the toolbar. Scroll back up if this happens.
-			if ( windowTop <= 150 && this.startY <= 150 ) {
-				windowTop = 0;
-			}
-
-			$window.scrollTop( 0 );
-			$content.scrollTop( contentTop + windowTop );
-
-			this.forceRepaintCursor();
-		}
-	},
-	/**
-	 * Return whether the browser's touch keyboard is currently open and typing into this editor.
-	 * @memberof EditorOverlayBase
-	 * @instance
-	 * @return {boolean}
-	 */
-	isActiveWithKeyboard: function () {
-		throw new Error( '#isActiveWithKeyboard must be implemented in a subclass' );
-		// This statement is never reached, but without it, ESLint complains about the @return tag,
-		// and we can't disable that warning without disabling all validation of doc comments.
-		// eslint-disable-next-line no-unreachable
-		return false;
-	},
-	/**
-	 * iOS has a bug where if you change the scroll offset of a
-	 * contentEditable or textarea with a cursor visible, it disappears.
-	 * This function works around it by removing and reapplying the selection.
-	 * @memberof EditorOverlayBase
-	 * @instance
-	 */
-	forceRepaintCursor: function () {
-		throw new Error( '#forceRepaintCursor must be implemented in a subclass' );
-	},
 	show: function () {
 		this.saved = false;
 		Overlay.prototype.show.call( this );
 
 		// Inform other interested code that the editor has loaded
 		mw.hook( 'mobileFrontend.editorOpened' ).fire( this.editor );
-
-		this.onWindowScrollDebounced = $.debounce( 100, this.onWindowScroll.bind( this ) );
-		util.getWindow().on( 'scroll', this.onWindowScrollDebounced );
 	},
 	/**
 	 * Back button click handler
@@ -504,7 +443,6 @@ mfExtend( EditorOverlayBase, Overlay, {
 		}
 		this.allowCloseWindow.release();
 		mw.hook( 'mobileFrontend.editorClosed' ).fire();
-		util.getWindow().off( 'scroll', self.onWindowScrollDebounced );
 		return Overlay.prototype.hide.call( self );
 	},
 	/**
