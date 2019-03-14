@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8212ba78_cf7eb60e",
+        "filename": "src/mobile.startup/OverlayManager.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-14T15:35:05Z",
+      "side": 1,
+      "message": "Not new to this patch but the selector appears to be optional, defaulting to \u0027body\u0027.",
+      "range": {
+        "startLine": 16,
+        "startChar": 42,
+        "endLine": 16,
+        "endChar": 58
+      },
+      "revId": "4bc32d410f918cc5ac55a2dddcb4c08560158c5b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e05e835f_c3ee4f98",
+        "filename": "src/mobile.startup/OverlayManager.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-14T15:35:05Z",
+      "side": 1,
+      "message": "While support for passing jQuery and Element types exist, do we want to formally declare it? This may increase the difficulty of migrating away from jQuery in the future if clients actually use it.",
+      "range": {
+        "startLine": 16,
+        "startChar": 18,
+        "endLine": 16,
+        "endChar": 40
+      },
+      "revId": "4bc32d410f918cc5ac55a2dddcb4c08560158c5b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2a2edb0d_8f34f679",
+        "filename": "src/mobile.startup/OverlayManager.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 319,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-14T15:35:05Z",
+      "side": 1,
+      "message": "Do you think we should favor using this utility method? In this case especially, the plain DOM alternative isn\u0027t too verbose:\n\n const overlay \u003d document.createElement(\u0027div\u0027)\n overlay.classList.add(\u0027mw-overlays-container\u0027)\n document.body.appendChild(overlay)\n\nIdeally, we\u0027d use JSX and rendering to the DOM would happen elsewhere. In the meanwhile, which approach increases our tech debt less?\n\nI\u0027m personally a fan of plain DOM because I believe that any jQuery use breeds more jQuery usage both because of the jQuery API and continually building experience in jQuery and not in plain DOM.\n\nFavoring \"parseHTML()[0]\" may be a good compromise.",
+      "range": {
+        "startLine": 319,
+        "startChar": 19,
+        "endLine": 319,
+        "endChar": 74
+      },
+      "revId": "4bc32d410f918cc5ac55a2dddcb4c08560158c5b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
