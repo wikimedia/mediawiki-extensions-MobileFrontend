@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "5d1ea757_85e564a1",
+        "filename": "resources/mobile.mediaViewer/carousel.less",
+        "patchSetId": 6
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-14T16:40:48Z",
+      "side": 1,
+      "message": "merged",
+      "parentUuid": "c86fbbc9_356fd504",
+      "revId": "6a44a00467d7d17bbdd5522561c111ad5dd52002",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "20f4dad4_83c6261f",
         "filename": "src/mobile.mediaViewer/carousel.js",
         "patchSetId": 6
@@ -59,6 +77,30 @@
     },
     {
       "key": {
+        "uuid": "11de309a_19a5e7c8",
+        "filename": "src/mobile.mediaViewer/carousel.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-14T16:40:48Z",
+      "side": 1,
+      "message": "In I190efb31fa5c0c8308ec880fe2ed04a61ff2af83 I make the api display the item at items[index]",
+      "parentUuid": "b78bcf3b_0f489d29",
+      "range": {
+        "startLine": 86,
+        "startChar": 61,
+        "endLine": 86,
+        "endChar": 76
+      },
+      "revId": "6a44a00467d7d17bbdd5522561c111ad5dd52002",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a4c9f5df_b358ce29",
         "filename": "src/mobile.mediaViewer/carousel.js",
         "patchSetId": 6
@@ -82,6 +124,30 @@
     },
     {
       "key": {
+        "uuid": "11068c5a_2d8a1b34",
+        "filename": "src/mobile.mediaViewer/carousel.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-14T16:40:48Z",
+      "side": 1,
+      "message": "the problem is that image carousel doesn\u0027t pass it an array of views. It passes it an array of async functions except for the item at items[index] which is a View. Because of this, I think it needs to support mixed arrays.  I addressed this in I190efb31fa5c0c8308ec880fe2ed04a61ff2af83 by making the carousel recognize a View at items[index] and append its .$el",
+      "parentUuid": "a4c9f5df_b358ce29",
+      "range": {
+        "startLine": 90,
+        "startChar": 11,
+        "endLine": 90,
+        "endChar": 13
+      },
+      "revId": "6a44a00467d7d17bbdd5522561c111ad5dd52002",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2b9a7cba_7c263a0a",
         "filename": "src/mobile.mediaViewer/carousel.js",
         "patchSetId": 6
@@ -93,6 +159,30 @@
       "writtenOn": "2019-03-13T19:46:54Z",
       "side": 1,
       "message": "this doesn\u0027t seem true to me. I might want to create a carousel with 5 items but  start with the middle one.",
+      "range": {
+        "startLine": 92,
+        "startChar": 68,
+        "endLine": 93,
+        "endChar": 60
+      },
+      "revId": "6a44a00467d7d17bbdd5522561c111ad5dd52002",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "44034a41_431fbdc2",
+        "filename": "src/mobile.mediaViewer/carousel.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-14T16:40:48Z",
+      "side": 1,
+      "message": "I190efb31fa5c0c8308ec880fe2ed04a61ff2af83 will address this",
+      "parentUuid": "2b9a7cba_7c263a0a",
       "range": {
         "startLine": 92,
         "startChar": 68,
