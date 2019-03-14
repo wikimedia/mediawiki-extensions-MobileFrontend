@@ -74,6 +74,22 @@ function Overlay( props ) {
 
 mfExtend( Overlay, View, {
 	/**
+	 * When set iOS scrolling will be emulated.
+	 * @memberof Overlay
+	 * @instance
+	 * @private
+	 * @property {boolean}
+	 */
+	emulateScrolling: false,
+	/**
+	 * Check whether scrolling should be emulated
+	 * @instance
+	 * @return {boolean}
+	 */
+	shouldEmulateScrolling: function () {
+		return this.emulateScrolling && this.isIos && this.hasHeader;
+	},
+	/**
 	 * Is overlay fullscreen
 	 * @memberof Overlay
 	 * @instance
@@ -171,7 +187,7 @@ mfExtend( Overlay, View, {
 	postRender: function () {
 		this.$overlayContent = this.$el.find( '.overlay-content' );
 		this.$spinner = this.$el.find( '.spinner' );
-		if ( this.isIos ) {
+		if ( this.shouldEmulateScrolling() ) {
 			this.$el.addClass( 'overlay-ios' );
 		}
 		// Truncate any text inside in the overlay header.
@@ -194,7 +210,7 @@ mfExtend( Overlay, View, {
 		var self = this,
 			$content = this.$el.find( '.overlay-content' );
 
-		if ( this.isIos && this.hasHeader ) {
+		if ( this.shouldEmulateScrolling() ) {
 			$content[0].addEventListener( 'touchstart', this.onTouchStart.bind( this ), passiveOpts );
 			$content[0].addEventListener( 'touchmove', this.onTouchMove.bind( this ), passiveOpts );
 			// wait for things to render before doing any calculations
@@ -293,7 +309,7 @@ mfExtend( Overlay, View, {
 		}
 
 		// prevent scrolling and bouncing outside of .overlay-content
-		if ( this.isIos && this.hasHeader ) {
+		if ( this.shouldEmulateScrolling() ) {
 			this.iosTouchmoveHandler = function ( ev ) {
 				// Note that this event handler only runs if onTouchMove did not call
 				// stopPropagation() (only if the page was touched outside of our overlay).
@@ -328,7 +344,7 @@ mfExtend( Overlay, View, {
 
 		this.$el.detach();
 
-		if ( this.isIos ) {
+		if ( this.shouldEmulateScrolling() ) {
 			$window[0].removeEventListener( 'touchmove', this.iosTouchmoveHandler, passiveOpts );
 			$window.off( 'resize', this.iosResizeHandler );
 		}
