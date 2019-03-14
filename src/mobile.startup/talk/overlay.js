@@ -16,7 +16,6 @@ function talkOverlay( title, gateway ) {
 	return Overlay.make(
 		{
 			heading: '<strong>' + mw.msg( 'mobile-frontend-talk-overlay-header' ) + '</strong>',
-			headerButtonsListClassName: 'header-action',
 			headerButtons: [ user.isAnon() ? {} : {
 				href: '#/talk/new',
 				className: 'continue',
