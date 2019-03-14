@@ -106,8 +106,6 @@ function EditorOverlayBase( params ) {
 }
 
 mfExtend( EditorOverlayBase, Overlay, {
-	/** @inheritdoc */
-	emulateScrolling: true,
 	/**
 	 * @memberof EditorOverlayBase
 	 * @instance
