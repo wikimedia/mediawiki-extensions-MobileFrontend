@@ -7,7 +7,7 @@ var
 	oo = require( '../utils/oo' ),
 	util = require( '../../../src/mobile.startup/util' ),
 	Hogan = require( 'hogan.js' ),
-	Overlay,
+	Overlay, Scroverlay,
 	sandbox;
 
 QUnit.module( 'MobileFrontend: Overlay.js', {
@@ -19,6 +19,13 @@ QUnit.module( 'MobileFrontend: Overlay.js', {
 		oo.setUp( sandbox, global );
 		mediaWiki.setUp( sandbox, global );
 		Overlay = require( '../../../src/mobile.startup/Overlay' );
+		Scroverlay = function Scroverlay() {
+			Overlay.apply( this, arguments );
+		};
+
+		mfExtend( Scroverlay, Overlay, {
+			emulateScrolling: true
+		} );
 
 		// jsdom will throw "Not implemented" errors if we don't stub
 		// window.scrollTo
@@ -170,12 +177,12 @@ QUnit.test( 'Close overlay', function ( assert ) {
 
 QUnit.test( 'setupEmulatedIosOverlayScrolling', function ( assert ) {
 	var done = assert.async(),
-		defaultNotIoSOverlay = new Overlay( {} ),
-		defaultOverlay = new Overlay( {} ),
-		noHeaderOverlay = new Overlay( {
+		defaultNotIoSOverlay = new Scroverlay( {} ),
+		defaultOverlay = new Scroverlay( {} ),
+		noHeaderOverlay = new Scroverlay( {
 			noHeader: true
 		} ),
-		spyResizeContent = sandbox.spy( Overlay.prototype, '_resizeContent' ),
+		spyResizeContent = sandbox.spy( Scroverlay.prototype, '_resizeContent' ),
 		spyDefault = sandbox.spy( defaultOverlay.$el.find( '.overlay-content' )[0],
 			'addEventListener' ),
 		spyNotFixed = sandbox.spy( noHeaderOverlay.$el.find( '.overlay-content' )[0],
@@ -201,8 +208,8 @@ QUnit.test( 'setupEmulatedIosOverlayScrolling', function ( assert ) {
 } );
 
 QUnit.test( 'show', function ( assert ) {
-	var defaultOverlay = new Overlay( {} ),
-		noHeaderOverlay = new Overlay( {
+	var defaultOverlay = new Scroverlay( {} ),
+		noHeaderOverlay = new Scroverlay( {
 			noHeader: true
 		} ),
 		windowSpy = sandbox.spy( util.getWindow()[ 0 ],
