@@ -55,6 +55,7 @@ function EditorOverlayBase( params ) {
 		options = util.extend(
 			true,
 			{
+				onBeforeExit: this.onBeforeExit.bind( this ),
 				className: 'overlay editor-overlay',
 				isBorderBox: false
 			},
@@ -460,18 +461,17 @@ mfExtend( EditorOverlayBase, Overlay, {
 		this[this.nextStep]();
 	},
 	/**
-	 * @inheritdoc
 	 * @memberof EditorOverlayBase
 	 * @instance
-	 * @return {boolean|jQuery.Promise} Boolean, or promise resolving with a boolean
+	 * @param {Function} exit Callback to exit the overlay
 	 */
-	hide: function () {
+	onBeforeExit: function ( exit ) {
 		var windowManager,
 			self = this;
 		if ( this.hasChanged() && !this.switching ) {
 			windowManager = OO.ui.getWindowManager();
 			windowManager.addWindows( [ new mw.widgets.AbandonEditDialog() ] );
-			return windowManager.openWindow( 'abandonedit' )
+			windowManager.openWindow( 'abandonedit' )
 				.closed.then( function ( data ) {
 					if ( data && data.action === 'discard' ) {
 						// log abandonment
@@ -482,9 +482,10 @@ mfExtend( EditorOverlayBase, Overlay, {
 						} );
 						self.allowCloseWindow.release();
 						mw.hook( 'mobileFrontend.editorClosed' ).fire();
-						Overlay.prototype.hide.call( self );
+						exit();
 					}
 				} );
+			return;
 		}
 		if ( !this.switching && !this.saved ) {
 			// log leaving without changes
@@ -501,22 +502,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 		}
 		this.allowCloseWindow.release();
 		mw.hook( 'mobileFrontend.editorClosed' ).fire();
-		return Overlay.prototype.hide.call( self );
-	},
-	/**
-	 * Check, if the user should be asked if they really want to leave the page.
-	 * Returns false, if he hasn't made changes, otherwise true.
-	 * @memberof EditorOverlayBase
-	 * @instance
-	 * @param {boolean} [force] Whether this function should always return false
-	 * @return {boolean}
-	 */
-	shouldConfirmLeave: function ( force ) {
-		if ( force || !this.hasChanged() ) {
-			return false;
-		}
-		return true;
-
+		exit();
 	},
 	/**
 	 * Checks whether the state of the thing being edited as changed. Expects to be

@@ -239,8 +239,10 @@ mfExtend( Overlay, View, {
 	},
 	/**
 	 * Detach the overlay from the current view
+	 * Should not be overriden as soon to be deprecated.
 	 * @memberof Overlay
 	 * @instance
+	 * @final
 	 * @return {boolean} Whether the overlay was successfully hidden or not
 	 */
 	hide: function () {

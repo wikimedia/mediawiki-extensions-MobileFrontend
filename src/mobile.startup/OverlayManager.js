@@ -92,6 +92,7 @@ mfExtend( OverlayManager, {
 
 		function exit() {
 			result = true;
+			overlay.hide();
 		}
 		// remove the callback for updating state when overlay closed using
 		// overlay close button
@@ -100,7 +101,7 @@ mfExtend( OverlayManager, {
 		if ( overlay.options && overlay.options.onBeforeExit ) {
 			overlay.options.onBeforeExit( exit );
 		} else {
-			result = overlay.hide();
+			exit();
 		}
 
 		// if closing prevented, reattach the callback

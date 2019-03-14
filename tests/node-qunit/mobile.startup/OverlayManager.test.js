@@ -276,7 +276,8 @@ QUnit.test( 'prevent route change', function ( assert ) {
 		path: 'rob'
 	} );
 	fakeRouter.emit( 'route', ev );
-	assert.ok( ev.preventDefault.calledOnce, 'prevent route change' );
+	assert.strictEqual( ev.preventDefault.called, false,
+		'Previously extending hide could prevent closes, this behaviour changed in I2668b6e54a6d54e820d60e4b56028338908ad55f' );
 } );
 
 QUnit.test( 'stack increases and decreases at right times', function ( assert ) {

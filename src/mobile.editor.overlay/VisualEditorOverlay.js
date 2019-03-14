@@ -19,6 +19,7 @@ function VisualEditorOverlay( options ) {
 	this.applyHeaderOptions( options, true );
 	EditorOverlayBase.call( this,
 		util.extend( {
+			onBeforeExit: this.onBeforeExit.bind( this ),
 			isBorderBox: false,
 			className: 'overlay editor-overlay editor-overlay-ve'
 		}, options )
@@ -121,19 +122,14 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 	 * @memberof VisualEditorOverlay
 	 * @instance
 	 */
-	hide: function () {
-		var overlay = this,
-			retval = EditorOverlayBase.prototype.hide.apply( this, arguments );
-		if ( retval === true ) {
-			this.destroyTarget();
-		} else if ( retval && retval.then ) {
-			retval.then( function ( hide ) {
-				if ( hide ) {
-					overlay.destroyTarget();
-				}
-			} );
-		}
-		return retval;
+	onBeforeExit: function ( exit ) {
+		var overlay = this;
+		EditorOverlayBase.prototype.onBeforeExit.call( this, function () {
+			// If this function is called, the parent method has decided that we should exit
+			exit();
+			// VE-specific cleanup
+			overlay.destroyTarget();
+		} );
 	},
 	/**
 	 * @inheritdoc
