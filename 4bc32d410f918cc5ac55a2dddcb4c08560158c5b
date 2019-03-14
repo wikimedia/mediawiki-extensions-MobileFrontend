@@ -48,6 +48,30 @@
     },
     {
       "key": {
+        "uuid": "a6744f5e_74d822dd",
+        "filename": "src/mobile.startup/OverlayManager.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-14T16:07:50Z",
+      "side": 1,
+      "message": "I\u0027d like to. I think historically there was a reason it was optional though. Let me check if that\u0027s still the case.",
+      "parentUuid": "e05e835f_c3ee4f98",
+      "range": {
+        "startLine": 16,
+        "startChar": 18,
+        "endLine": 16,
+        "endChar": 40
+      },
+      "revId": "4bc32d410f918cc5ac55a2dddcb4c08560158c5b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2a2edb0d_8f34f679",
         "filename": "src/mobile.startup/OverlayManager.js",
         "patchSetId": 1
@@ -59,6 +83,30 @@
       "writtenOn": "2019-03-14T15:35:05Z",
       "side": 1,
       "message": "Do you think we should favor using this utility method? In this case especially, the plain DOM alternative isn\u0027t too verbose:\n\n const overlay \u003d document.createElement(\u0027div\u0027)\n overlay.classList.add(\u0027mw-overlays-container\u0027)\n document.body.appendChild(overlay)\n\nIdeally, we\u0027d use JSX and rendering to the DOM would happen elsewhere. In the meanwhile, which approach increases our tech debt less?\n\nI\u0027m personally a fan of plain DOM because I believe that any jQuery use breeds more jQuery usage both because of the jQuery API and continually building experience in jQuery and not in plain DOM.\n\nFavoring \"parseHTML()[0]\" may be a good compromise.",
+      "range": {
+        "startLine": 319,
+        "startChar": 19,
+        "endLine": 319,
+        "endChar": 74
+      },
+      "revId": "4bc32d410f918cc5ac55a2dddcb4c08560158c5b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2a764307_1e3e204d",
+        "filename": "src/mobile.startup/OverlayManager.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 319,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-14T16:07:50Z",
+      "side": 1,
+      "message": "I think this hinges on whether we want to support appendToSelector which is a selector. If we can drop it safely, I\u0027m fine with using plain DOM here",
+      "parentUuid": "2a2edb0d_8f34f679",
       "range": {
         "startLine": 319,
         "startChar": 19,
