@@ -36,6 +36,9 @@ QUnit.module( 'MobileFrontend NearbyGateway.js', {
 		api = {
 			ajax: function () {}
 		};
+
+		sandbox.stub( mw, 'msg' ).returns( '$1' );
+
 		this.nearbyGateway = new NearbyGateway( { api: api } );
 
 		// stub mw.language behavior so we don't have to bring in the real thing
@@ -122,8 +125,6 @@ QUnit.test( '_distanceMessage()', function ( assert ) {
 			[ 2.561, msgKm, '2.6' ],
 			[ 10.8334, msgKm, '10.9' ]
 		];
-
-	sandbox.spy( mw, 'msg' );
 
 	tests.forEach( function ( test, i ) {
 		self.nearbyGateway._distanceMessage( test[ 0 ] );
