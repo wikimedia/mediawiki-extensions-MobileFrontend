@@ -204,7 +204,7 @@ mfExtend( ImageOverlay, Overlay, {
 			this._enableArrowImages( thumbs );
 		}
 
-		this.$details = this.$el.find( '.details' );
+		this.$details = this.$el.find( '.image-details' );
 		this.$el.find( '.image' ).append( $spinner );
 
 		Overlay.prototype.postRender.apply( this );
@@ -247,7 +247,7 @@ mfExtend( ImageOverlay, Overlay, {
 
 			self.$details.addClass( 'is-visible' );
 			self._positionImage();
-			self.$el.find( '.details a' ).attr( 'href', url );
+			self.$el.find( '.image-details a' ).attr( 'href', url );
 			if ( data.extmetadata ) {
 				// Add license information
 				if ( data.extmetadata.LicenseShortName ) {
@@ -354,8 +354,8 @@ mfExtend( ImageOverlay, Overlay, {
 	 */
 	adjustDetails: function () {
 		var windowHeight = util.getWindow().height();
-		if ( this.$el.find( '.details' ).height() > windowHeight * 0.50 ) {
-			this.$el.find( '.details' ).css( 'max-height', windowHeight * 0.50 );
+		if ( this.$el.find( '.image-details' ).height() > windowHeight * 0.50 ) {
+			this.$el.find( '.image-details' ).css( 'max-height', windowHeight * 0.50 );
 		}
 	}
 } );

@@ -467,7 +467,8 @@
 			],
 			"styles": [
 				"resources/mobile.mediaViewer/mediaViewer.less",
-				"resources/mobile.mediaViewer/carousel.less"
+				"resources/mobile.mediaViewer/carousel.less",
+				"resources/mobile.mediaViewer/imageDetails.less"
 			],
 			"scripts": [
 				"resources/dist/mobile.mediaViewer.js"

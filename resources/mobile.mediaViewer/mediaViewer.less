@@ -74,29 +74,6 @@
 		z-index: @z-indexOverOverlay;
 	}
 
-	// FIXME: Merge with overlay-footer-container
-	.details {
-		display: none;
-		z-index: @z-indexOverOverlay;
-		bottom: 0;
-		height: auto;
-		position: fixed;
-		width: 100%;
-		padding: 8px 10px;
-		margin: 0;
-		background: #fff;
-		overflow-y: auto;
-		border-top: 1px solid @grayLight;
-
-		&.is-visible {
-			display: block;
-		}
-
-		.button {
-			float: right;
-		}
-	}
-
 	.load-fail-msg {
 		text-align: center;
 		color: #fff;
@@ -115,11 +92,5 @@
 		a {
 			color: @colorProgressive;
 		}
-	}
-}
-
-.animations .media-viewer {
-	.details {
-		.transition( opacity 0.5s );
 	}
 }
