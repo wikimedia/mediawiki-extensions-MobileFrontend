@@ -35,28 +35,9 @@ function memoize( method ) {
 function Browser( ua, $container ) {
 	this.userAgent = ua;
 	this.$el = $container;
-	this._fixIosLandscapeBug();
 }
 
 Browser.prototype = {
-	/**
-	 * When rotating to landscape stop page zooming on ios 4 and 5.
-	 * @memberof Browser
-	 * @instance
-	 * @private
-	 */
-	_fixIosLandscapeBug: function () {
-		var self = this,
-			viewport = this.$el.find( 'meta[name="viewport"]' )[0];
-
-		// see http://adactio.com/journal/4470/ (fixed in ios 6)
-		if ( viewport && ( this.isIos( 4 ) || this.isIos( 5 ) ) ) {
-			this.lockViewport();
-			document.addEventListener( 'gesturestart', function () {
-				self.lockViewport();
-			}, false );
-		}
-	},
 	/**
 	 * Returns whether the current browser is an ios device.
 	 * FIXME: jquery.client does not support iPad detection so we cannot use it.
@@ -87,17 +68,6 @@ Browser.prototype = {
 			return ios;
 		}
 	} ),
-	/**
-	 * Locks the viewport so that pinch zooming is disabled
-	 * @memberof Browser
-	 * @instance
-	 */
-	lockViewport: function () {
-		if ( this.$el ) {
-			this.$el.find( 'meta[name="viewport"]' )
-				.attr( 'content', 'initial-scale=1.0, maximum-scale=1.0, user-scalable=no' );
-		}
-	},
 	/**
 	 * Determine if a device has a widescreen.
 	 * @memberof Browser

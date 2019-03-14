@@ -15,8 +15,6 @@ QUnit.module( 'MobileFrontend Browser.js', {
 		dom.setUp( sandbox, global );
 		jQuery.setUp( sandbox, global );
 		mediawiki.setUp( sandbox, global );
-		// Use an empty html element to avoid calling methods in _fixIosLandscapeBug
-		tmpDOM = window.document.implementation.createHTMLDocument( 'Test' );
 		$html = $( tmpDOM );
 	},
 	afterEach: function () {
@@ -62,17 +60,6 @@ QUnit.test( 'Methods are cached', function ( assert ) {
 	assert.strictEqual( Object.keys( cache( ipad, 'isIos' ) ).length, 2, 'isIos on ipad cached as expected' );
 	assert.strictEqual( Object.keys( cache( android2, 'isIos' ) ).length, 1, 'isIos on android cached as expected' );
 	assert.strictEqual( Object.keys( cache( iphone, 'isIos' ) ).length, 2, 'isIos on iphone cached as expected' );
-} );
-
-QUnit.test( 'lockViewport()', function ( assert ) {
-	var browser = new Browser( 'Mozilla/5.0 (iPad; CPU OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko)', $html ),
-		viewportTag,
-		viewportTagVal;
-	browser.$el.find( 'head' ).append( '<meta name="viewport"/>' );
-	browser.lockViewport();
-	viewportTag = browser.$el.find( 'meta[name="viewport"]' );
-	viewportTagVal = viewportTag.attr( 'content' );
-	assert.strictEqual( viewportTagVal, 'initial-scale=1.0, maximum-scale=1.0, user-scalable=no' );
 } );
 
 QUnit.test( 'isWideScreen()', function ( assert ) {
