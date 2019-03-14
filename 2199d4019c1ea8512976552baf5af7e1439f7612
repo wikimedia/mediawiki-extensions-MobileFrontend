@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "c294107f_3535188d",
+        "filename": "src/mobile.mediaViewer/promisedImage.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-14T17:53:28Z",
+      "side": 1,
+      "message": "I did the destructuring in lastest patch as discussed. If I switch to individual params here, then it makes it inconsistent with my the other components. It\u0027s doable to change those as well but hopefully the destructing makes it more readable",
+      "parentUuid": "1d865a2f_c4414fcb",
+      "revId": "2199d4019c1ea8512976552baf5af7e1439f7612",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "323f734d_a7a6fb50",
         "filename": "src/mobile.mediaViewer/promisedImage.js",
         "patchSetId": 2
@@ -143,6 +161,24 @@
     },
     {
       "key": {
+        "uuid": "306d4ea8_c66d96a5",
+        "filename": "src/mobile.mediaViewer/promisedImage.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-14T17:53:28Z",
+      "side": 1,
+      "message": "Removed in latest patch in favor of making imageCarousel add a .then",
+      "parentUuid": "cd6cf2f3_2b764a94",
+      "revId": "2199d4019c1ea8512976552baf5af7e1439f7612",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6792fbee_1ce56f15",
         "filename": "src/mobile.mediaViewer/promisedImage.js",
         "patchSetId": 2
@@ -224,6 +260,24 @@
       "writtenOn": "2019-03-12T22:56:32Z",
       "side": 1,
       "message": "You could also do attr( { src: data.src, alt: data.alt } ) here",
+      "revId": "2199d4019c1ea8512976552baf5af7e1439f7612",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f14b44b0_ee836183",
+        "filename": "src/mobile.mediaViewer/promisedImage.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-14T17:53:28Z",
+      "side": 1,
+      "message": "In my tests I rely on the attr method being two params so I can stub the image states more easily. It\u0027s brittle, but I can\u0027t think of a better way to test the image states rn. \n\nAs an aside, I\u0027m thinking we should add a callback to promisedView when it has replaced the view it creates to make testing easier. promisedView tests rely on multiple .then calls so that it can test when promisedView is done with the replacement. What do you think?",
+      "parentUuid": "f93eb3d5_60b8c990",
       "revId": "2199d4019c1ea8512976552baf5af7e1439f7612",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
