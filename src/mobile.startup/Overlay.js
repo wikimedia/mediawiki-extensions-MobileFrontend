@@ -227,8 +227,6 @@ mfExtend( Overlay, View, {
 	 * Detach the overlay from the current view
 	 * @memberof Overlay
 	 * @instance
-	 * @param {boolean} [force] Whether the overlay should be closed regardless of
-	 * state (see PhotoUploadProgress)
 	 * @return {boolean} Whether the overlay was successfully hidden or not
 	 */
 	hide: function () {

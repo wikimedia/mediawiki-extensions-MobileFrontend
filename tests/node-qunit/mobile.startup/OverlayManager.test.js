@@ -1,3 +1,4 @@
+/* global $ */
 var
 	sinon = require( 'sinon' ),
 	dom = require( '../utils/dom' ),
@@ -5,9 +6,10 @@ var
 	oo = require( '../utils/oo' ),
 	util = require( '../../../src/mobile.startup/util' ),
 	mediaWiki = require( '../utils/mw' ),
-	OverlayManager,
+	OverlayManager, Overlay,
 	fakeRouter,
 	overlayManager,
+	routeEvent,
 	sandbox;
 
 QUnit.module( 'MobileFrontend mobile.startup/OverlayManager', {
@@ -23,6 +25,10 @@ QUnit.module( 'MobileFrontend mobile.startup/OverlayManager', {
 		sandbox.stub( global.window, 'scrollTo' );
 
 		OverlayManager = require( '../../../src/mobile.startup/OverlayManager' );
+		Overlay = require( '../../../src/mobile.startup/Overlay' );
+		routeEvent = function ( data ) {
+			return $.Event( 'route', data );
+		};
 
 		this.createFakeOverlay = function ( options ) {
 			var fakeOverlay = new OO.EventEmitter();
@@ -193,6 +199,39 @@ QUnit.test( 'go back (change route) if overlay hidden but not by route change', 
 	assert.strictEqual( fakeRouter.back.callCount, 1, 'route back' );
 } );
 
+QUnit.test( 'Browser back can be overidden', function ( assert ) {
+	var escapableOverlay = new Overlay( {} ),
+		$container = util.parseHTML( '<div>' ),
+		cannotGoBackOverlay = new Overlay( {
+			onBeforeExit: function () {}
+		} ),
+		manager = new OverlayManager( fakeRouter, $container[ 0 ] );
+
+	// define 2 routes
+	manager.add( /^proceed$/, function () {
+		return escapableOverlay;
+	} );
+	manager.add( /^youcannotpass$/, function () {
+		return cannotGoBackOverlay;
+	} );
+	fakeRouter.emit( 'route', routeEvent( { path: 'proceed' } ) );
+	assert.strictEqual( $container.find( escapableOverlay.$el ).length, 1,
+		'escapable overlay is displayed' );
+	fakeRouter.emit( 'route', routeEvent( { path: 'youcannotpass' } ) );
+	assert.strictEqual( $container.find( escapableOverlay.$el ).length, 0,
+		'escapable overlay is no longer displayed' );
+	assert.strictEqual( $container.find( cannotGoBackOverlay.$el ).length, 1,
+		'cannot go back overlay is now the overlay on display' );
+	// attempt to go back
+	fakeRouter.emit( 'route', routeEvent( { path: 'proceed' } ) );
+	assert.strictEqual( $container.find( cannotGoBackOverlay.$el ).length, 1,
+		'cannot go back overlay is still the overlay on display (cannot exit!)' );
+	assert.strictEqual( $container.find( escapableOverlay.$el ).length, 0,
+		'Escapeable overlay is not displayed' );
+	assert.strictEqual( manager.stack[0].overlay, cannotGoBackOverlay,
+		'Cannot go back overlay remains on the top of the stack' );
+} );
+
 QUnit.test( 'stacked overlays', function ( assert ) {
 	var
 		fakeOverlay = this.createFakeOverlay(),
@@ -211,7 +250,6 @@ QUnit.test( 'stacked overlays', function ( assert ) {
 		path: 'child'
 	} );
 	assert.strictEqual( parentFakeOverlay.hide.callCount, 1, 'hide parent' );
-	assert.ok( parentFakeOverlay.hide.calledWith( true ), 'hide parent forcefully (no confirmation)' );
 	assert.strictEqual( fakeOverlay.show.callCount, 1, 'show child' );
 	fakeRouter.emit( 'route', {
 		path: 'parent'

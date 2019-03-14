@@ -88,13 +88,20 @@ mfExtend( OverlayManager, {
 	 * @return {boolean} Whether the overlay has been hidden
 	 */
 	_hideOverlay: function ( overlay ) {
-		var result;
+		let result;
 
+		function exit() {
+			result = true;
+		}
 		// remove the callback for updating state when overlay closed using
 		// overlay close button
 		overlay.off( '_om_hide' );
 
-		result = overlay.hide( this.stack.length > 1 );
+		if ( overlay.options && overlay.options.onBeforeExit ) {
+			overlay.options.onBeforeExit( exit );
+		} else {
+			result = overlay.hide();
+		}
 
 		// if closing prevented, reattach the callback
 		if ( !result ) {
@@ -147,8 +154,7 @@ mfExtend( OverlayManager, {
 	 * @param {jQuery.Event} ev Event object.
 	 */
 	_checkRoute: function ( ev ) {
-		var
-			current = this.stack[0],
+		let current = this.stack[0],
 			match;
 
 		// When entering an overlay for the first time,
@@ -161,10 +167,6 @@ mfExtend( OverlayManager, {
 			this.scrollTop = window.pageYOffset;
 		}
 
-		match = Object.keys( this.entries ).reduce( function ( m, id ) {
-			return m || this._matchRoute( ev.path, this.entries[ id ] );
-		}.bind( this ), null );
-
 		// if there is an overlay in the stack and it's opened, try to close it
 		if (
 			current &&
@@ -174,7 +176,14 @@ mfExtend( OverlayManager, {
 		) {
 			// if hide prevented, prevent route change event
 			ev.preventDefault();
-		} else if ( !match ) {
+			return;
+		}
+
+		match = Object.keys( this.entries ).reduce( function ( m, id ) {
+			return m || this._matchRoute( ev.path, this.entries[ id ] );
+		}.bind( this ), null );
+
+		if ( !match ) {
 			// if hidden and no new matches, reset the stack
 			this.stack = [];
 			// restore the scroll position.
@@ -186,7 +195,8 @@ mfExtend( OverlayManager, {
 	},
 
 	/**
-	 * Check if a given path matches one of the entries.
+	 * Check if a given path matches one of the existing entries and
+	 * remove it from the stack.
 	 * @memberof OverlayManager
 	 * @instance
 	 * @private
