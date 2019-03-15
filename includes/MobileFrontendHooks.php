@@ -3,6 +3,7 @@
 use MediaWiki\Auth\AuthManager;
 use MediaWiki\Auth\AuthenticationRequest;
 use MediaWiki\ChangeTags\Taggable;
+use MediaWiki\MediaWikiServices;
 
 /**
  * Hook handlers for MobileFrontend extension
@@ -958,6 +959,19 @@ class MobileFrontendHooks {
 					],
 					'targets' => [ 'mobile', 'desktop' ],
 				],
+			] );
+		}
+
+		// If using MFContentProviderScriptPath, register contentProviderApi module to
+		// fix cors issues with visual editor
+		$config = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Config' );
+		$contentProviderApi = $config->get( 'MFContentProviderScriptPath' );
+		if ( $contentProviderApi ) {
+			$resourceLoader->register( [
+				'mobile.contentProviderApi' => $resourceBoilerplate + [
+					'targets' => [ 'mobile', 'desktop' ],
+					'scripts' => 'resources/mobile.contentProviderApi.js'
+				]
 			] );
 		}
 	}

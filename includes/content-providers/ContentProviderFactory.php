@@ -50,17 +50,9 @@ class ContentProviderFactory {
 			// It's very possible this might break compatibility with other extensions
 			// so this should not be used outside development :). Please see README.md
 			$out->addJsConfigVars( [ 'wgScriptPath' => $contentProviderApi ] );
-			// This injects a global ajaxSend event which ensures origin=* is added to all ajax requests
-			// This helps with compatibility of VisualEditor!
-			// This is intentionally simplistic as all queries we care about
-			// are guaranteed to already have a query string
-			$out->addInlineScript(
-				'window.onload = function () {' .
-					'$( document ).ajaxSend(function( event, jqxhr, settings ) {' .
-						'settings.url += "&origin=*";' .
-					'});' .
-				'};'
-			);
+			// add the content provider script for compatibility with visual
+			// editor
+			$out->addModules( 'mobile.contentProviderApi' );
 		}
 
 		switch ( $contentProviderClass ) {
