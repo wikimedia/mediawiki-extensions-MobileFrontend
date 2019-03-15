@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "91e60acf_1c21fb5d",
+        "filename": "src/mobile.startup/Overlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-15T18:36:12Z",
+      "side": 0,
+      "message": "looks like there is still a reference to this in Overlay.test.js",
+      "range": {
+        "startLine": 83,
+        "startChar": 1,
+        "endLine": 83,
+        "endChar": 25
+      },
+      "revId": "91b9cf60da838571635125389061474347984473",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2d20d4f5_7af352b4",
+        "filename": "src/mobile.startup/Overlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 222,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-15T18:36:12Z",
+      "side": 0,
+      "message": "there is an associated test for this in Overlay.test.js that needs to be removed",
+      "range": {
+        "startLine": 209,
+        "startChar": 0,
+        "endLine": 222,
+        "endChar": 3
+      },
+      "revId": "91b9cf60da838571635125389061474347984473",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a51b59f6_024e9709",
+        "filename": "src/mobile.startup/Overlay.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 369,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-15T18:36:12Z",
+      "side": 0,
+      "message": "referenced in Overlay.test.js",
+      "range": {
+        "startLine": 369,
+        "startChar": 1,
+        "endLine": 369,
+        "endChar": 16
+      },
+      "revId": "91b9cf60da838571635125389061474347984473",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
