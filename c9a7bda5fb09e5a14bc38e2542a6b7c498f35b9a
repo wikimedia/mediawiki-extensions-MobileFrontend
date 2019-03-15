@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dd0816a6_12ea2048",
+        "filename": "src/mobile.mediaViewer/promisedImage.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-15T23:24:47Z",
+      "side": 1,
+      "message": "I think this function makes a lot more sense inside  src/mobile.mediaViewer/imageCarousel.js\n\nOutside of that context it becomes very confusion.\nI\u0027d move it into that patch and file, expose it as imageCarousel.test \u003d {} to make clear it\u0027s only for private consumption.",
+      "revId": "c9a7bda5fb09e5a14bc38e2542a6b7c498f35b9a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
