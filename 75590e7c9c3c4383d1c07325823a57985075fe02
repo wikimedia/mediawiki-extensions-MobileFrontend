@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "878b16a3_d1a24d25",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 967,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-15T23:53:07Z",
+      "side": 1,
+      "message": "$config \u003d MediaWikiServices::getInstance()-\u003egetService( \u0027MobileFrontend.Config\u0027 ); might be better here as this comes with other baggage.",
+      "revId": "75590e7c9c3c4383d1c07325823a57985075fe02",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "234ad6c0_f58b116f",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 4
