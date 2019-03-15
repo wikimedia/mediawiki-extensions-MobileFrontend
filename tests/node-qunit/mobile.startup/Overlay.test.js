@@ -7,7 +7,7 @@ var
 	oo = require( '../utils/oo' ),
 	util = require( '../../../src/mobile.startup/util' ),
 	Hogan = require( 'hogan.js' ),
-	Overlay, Scroverlay,
+	Overlay,
 	sandbox;
 
 QUnit.module( 'MobileFrontend: Overlay.js', {
@@ -19,13 +19,6 @@ QUnit.module( 'MobileFrontend: Overlay.js', {
 		oo.setUp( sandbox, global );
 		mediaWiki.setUp( sandbox, global );
 		Overlay = require( '../../../src/mobile.startup/Overlay' );
-		Scroverlay = function Scroverlay() {
-			Overlay.apply( this, arguments );
-		};
-
-		mfExtend( Scroverlay, Overlay, {
-			emulateScrolling: true
-		} );
 
 		// jsdom will throw "Not implemented" errors if we don't stub
 		// window.scrollTo
@@ -173,58 +166,4 @@ QUnit.test( 'Close overlay', function ( assert ) {
 	overlay.hide();
 
 	assert.strictEqual( overlay.$el[ 0 ].parentNode, null, 'No longer in DOM' );
-} );
-
-QUnit.test( 'setupEmulatedIosOverlayScrolling', function ( assert ) {
-	var done = assert.async(),
-		defaultNotIoSOverlay = new Scroverlay( {} ),
-		defaultOverlay = new Scroverlay( {} ),
-		noHeaderOverlay = new Scroverlay( {
-			noHeader: true
-		} ),
-		spyResizeContent = sandbox.spy( Scroverlay.prototype, '_resizeContent' ),
-		spyDefault = sandbox.spy( defaultOverlay.$el.find( '.overlay-content' )[0],
-			'addEventListener' ),
-		spyNotFixed = sandbox.spy( noHeaderOverlay.$el.find( '.overlay-content' )[0],
-			'addEventListener' );
-
-	// setup emulated ios scrolling
-	defaultOverlay.isIos = true;
-	noHeaderOverlay.isIos = true;
-	defaultOverlay.setupEmulatedIosOverlayScrolling();
-	noHeaderOverlay.setupEmulatedIosOverlayScrolling();
-	defaultNotIoSOverlay.setupEmulatedIosOverlayScrolling();
-
-	// account for setTimeout in setupEmulatedIosOverlayScrolling
-	setTimeout( function () {
-		assert.strictEqual( spyDefault.calledTwice, true,
-			'Two events listened for' );
-		assert.strictEqual( spyNotFixed.notCalled, true,
-			'if no fixed header addEventListener is not called' );
-		assert.strictEqual( spyResizeContent.calledOnce, true,
-			'Resize content only run for defaultOverlay' );
-		done();
-	}, 500 );
-} );
-
-QUnit.test( 'show', function ( assert ) {
-	var defaultOverlay = new Scroverlay( {} ),
-		noHeaderOverlay = new Scroverlay( {
-			noHeader: true
-		} ),
-		windowSpy = sandbox.spy( util.getWindow()[ 0 ],
-			'addEventListener' );
-
-	// setup emulated ios scrolling
-	noHeaderOverlay.isIos = true;
-	defaultOverlay.show();
-	noHeaderOverlay.show();
-
-	// account for setTimeout in setupEmulatedIosOverlayScrolling
-	assert.strictEqual( windowSpy.called, false,
-		'no listener added to window on show for non-iOS overlays and no header iOS overlays' );
-	defaultOverlay.isIos = true;
-	defaultOverlay.show();
-	assert.strictEqual( windowSpy.called, true,
-		'listener added to window on show for iOS overlays with header' );
 } );

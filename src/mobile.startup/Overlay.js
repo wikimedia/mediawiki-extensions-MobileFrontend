@@ -6,23 +6,7 @@ var
 	icons = require( './icons' ),
 	util = require( './util' ),
 	browser = require( './Browser' ).getSingleton(),
-	mfExtend = require( './mfExtend' ),
-	testPassiveOpts, supportsPassive, passiveOpts;
-
-// Detect browser support for the 'passive' event option.
-// https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#Safely_detecting_option_support
-try {
-	supportsPassive = false;
-	testPassiveOpts = Object.defineProperty( {}, 'passive', {
-		get: function () {
-			supportsPassive = true;
-			return true;
-		}
-	} );
-	window.addEventListener( 'testPassive', null, testPassiveOpts );
-	window.removeEventListener( 'testPassive', null, testPassiveOpts );
-	passiveOpts = supportsPassive ? { passive: false } : false;
-} catch ( e ) {}
+	mfExtend = require( './mfExtend' );
 
 /**
  * Mobile modal window
@@ -73,22 +57,6 @@ function Overlay( props ) {
 }
 
 mfExtend( Overlay, View, {
-	/**
-	 * When set iOS scrolling will be emulated.
-	 * @memberof Overlay
-	 * @instance
-	 * @private
-	 * @property {boolean}
-	 */
-	emulateScrolling: false,
-	/**
-	 * Check whether scrolling should be emulated
-	 * @instance
-	 * @return {boolean}
-	 */
-	shouldEmulateScrolling: function () {
-		return this.emulateScrolling && this.isIos && this.hasHeader;
-	},
 	/**
 	 * Is overlay fullscreen
 	 * @memberof Overlay
@@ -187,7 +155,7 @@ mfExtend( Overlay, View, {
 	postRender: function () {
 		this.$overlayContent = this.$el.find( '.overlay-content' );
 		this.$spinner = this.$el.find( '.spinner' );
-		if ( this.shouldEmulateScrolling() ) {
+		if ( this.isIos ) {
 			this.$el.addClass( 'overlay-ios' );
 		}
 		// Truncate any text inside in the overlay header.
@@ -197,29 +165,8 @@ mfExtend( Overlay, View, {
 				return component.$el;
 			} )
 		);
-		this.hasHeader = this.$el.find( '.overlay-header-container' ).length > 0;
-		this.setupEmulatedIosOverlayScrolling();
 	},
 
-	/**
-	 * Setups an emulated scroll behaviour for overlays in ios.
-	 * @memberof Overlay
-	 * @instance
-	 */
-	setupEmulatedIosOverlayScrolling: function () {
-		var self = this,
-			$content = this.$el.find( '.overlay-content' );
-
-		if ( this.shouldEmulateScrolling() ) {
-			$content[0].addEventListener( 'touchstart', this.onTouchStart.bind( this ), passiveOpts );
-			$content[0].addEventListener( 'touchmove', this.onTouchMove.bind( this ), passiveOpts );
-			// wait for things to render before doing any calculations
-			setTimeout( function () {
-				var $window = util.getWindow();
-				self._resizeContent( $window.height() );
-			}, 0 );
-		}
-	},
 	/**
 	 * ClickBack event handler
 	 * @memberof Overlay
@@ -292,9 +239,7 @@ mfExtend( Overlay, View, {
 	 * @instance
 	 */
 	show: function () {
-		var self = this,
-			$html = util.getDocument(),
-			$window = util.getWindow();
+		var $html = util.getDocument();
 
 		this.scrollTop = window.pageYOffset;
 
@@ -308,20 +253,6 @@ mfExtend( Overlay, View, {
 			$html.find( '#mw-mf-page-center' ).one( 'click', this.hide.bind( this ) );
 		}
 
-		// prevent scrolling and bouncing outside of .overlay-content
-		if ( this.shouldEmulateScrolling() ) {
-			this.iosTouchmoveHandler = function ( ev ) {
-				// Note that this event handler only runs if onTouchMove did not call
-				// stopPropagation() (only if the page was touched outside of our overlay).
-				ev.preventDefault();
-			};
-			this.iosResizeHandler = function () {
-				self._resizeContent( $window.height() );
-			};
-			$window[0].addEventListener( 'touchmove', this.iosTouchmoveHandler, passiveOpts );
-			$window.on( 'resize', this.iosResizeHandler );
-		}
-
 		this.$el.addClass( 'visible' );
 	},
 	/**
@@ -333,8 +264,7 @@ mfExtend( Overlay, View, {
 	 * @return {boolean} Whether the overlay was successfully hidden or not
 	 */
 	hide: function () {
-		var $window = util.getWindow(),
-			$html = util.getDocument();
+		var $html = util.getDocument();
 
 		if ( this.fullScreen ) {
 			$html.removeClass( 'overlay-enabled' );
@@ -344,11 +274,6 @@ mfExtend( Overlay, View, {
 
 		this.$el.detach();
 
-		if ( this.shouldEmulateScrolling() ) {
-			$window[0].removeEventListener( 'touchmove', this.iosTouchmoveHandler, passiveOpts );
-			$window.off( 'resize', this.iosResizeHandler );
-		}
-
 		/**
 		 * Fired when the overlay is closed.
 		 * @event Overlay#hide
@@ -356,22 +281,6 @@ mfExtend( Overlay, View, {
 		this.emit( 'hide' );
 
 		return true;
-	},
-
-	/**
-	 * Fit the overlay content height to the window taking overlay header and footer heights
-	 * into consideration.
-	 * @memberof Overlay
-	 * @instance
-	 * @private
-	 * @param {number} windowHeight The height of the window
-	 */
-	_resizeContent: function ( windowHeight ) {
-		this.$overlayContent.height(
-			windowHeight -
-			this.$el.find( '.overlay-header-container' ).outerHeight() -
-			this.$el.find( '.overlay-footer-container' ).outerHeight()
-		);
 	},
 
 	/**

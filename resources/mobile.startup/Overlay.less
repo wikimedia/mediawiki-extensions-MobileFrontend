@@ -309,25 +309,6 @@
 	}
 }
 
-.overlay-ios {
-	.overlay-header-container {
-		position: absolute !important;
-		// see T156509
-		top: 1px;
-	}
-
-	.overlay-footer-container {
-		position: absolute !important;
-	}
-
-	.overlay-content {
-		// has to be scroll, not auto
-		overflow-y: scroll;
-		// smoother scrolling (with momentum) on iOS
-		-webkit-overflow-scrolling: touch;
-	}
-}
-
 @media all and ( min-width: @width-breakpoint-tablet ) {
 	.overlay {
 		.panel {

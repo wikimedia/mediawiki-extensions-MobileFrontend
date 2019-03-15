@@ -90,14 +90,6 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 			mw.config.get( 'wgPageContentModel' ) === 'wikitext';
 	},
 	/**
-	 * @inheritdoc
-	 * @memberof EditorOverlay
-	 * @instance
-	 */
-	isActiveWithKeyboard: function () {
-		return this.$( '.wikitext-editor' ).is( ':focus' );
-	},
-	/**
 	 * Wikitext Editor input handler
 	 * @memberof EditorOverlay
 	 * @instance
