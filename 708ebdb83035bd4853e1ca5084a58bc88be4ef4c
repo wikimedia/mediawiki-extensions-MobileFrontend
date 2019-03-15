@@ -16,6 +16,24 @@
       "revId": "708ebdb83035bd4853e1ca5084a58bc88be4ef4c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "38505e6a_163e459d",
+        "filename": "src/mobile.startup/Browser.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-15T17:57:15Z",
+      "side": 0,
+      "message": "That\u0027s what i\u0027m doing :) want to press +2 ? :)",
+      "parentUuid": "8a6579e3_9d335e51",
+      "revId": "708ebdb83035bd4853e1ca5084a58bc88be4ef4c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
