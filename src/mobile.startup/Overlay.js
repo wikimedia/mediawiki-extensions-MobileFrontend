@@ -192,38 +192,6 @@ mfExtend( Overlay, View, {
 
 	},
 	/**
-	 * Event handler for touchstart, for IOS
-	 * @memberof Overlay
-	 * @instance
-	 * @param {Object} ev Event Object
-	 */
-	onTouchStart: function ( ev ) {
-		this.startY = ev.touches[0].pageY;
-	},
-	/**
-	 * Event handler for touch move, for IOS
-	 * @memberof Overlay
-	 * @instance
-	 * @param {Object} ev Event Object
-	 */
-	onTouchMove: function ( ev ) {
-		var
-			y = ev.touches[0].pageY,
-			contentOuterHeight = this.$overlayContent.outerHeight(),
-			contentLength = this.$overlayContent.prop( 'scrollHeight' ) - contentOuterHeight;
-
-		// Stop propagation so that this.iosTouchmoveHandler doesn't run
-		ev.stopPropagation();
-
-		// prevent scrolling and bouncing outside of .overlay-content
-		if (
-			( this.$overlayContent.scrollTop() === 0 && this.startY < y ) ||
-			( this.$overlayContent.scrollTop() === contentLength && this.startY > y )
-		) {
-			ev.preventDefault();
-		}
-	},
-	/**
 	 * Stop clicks in the overlay from propagating to the page
 	 * (prevents non-fullscreen overlays from being closed when they're tapped)
 	 * @memberof Overlay
