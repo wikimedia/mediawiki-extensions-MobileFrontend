@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d32edd43_d2acd565",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 569,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-03-15T18:27:47Z",
+      "side": 1,
+      "message": "please use the `MobileFrontend.Config` service. It would be nice to drop the `getMFConfig` method.",
+      "range": {
+        "startLine": 568,
+        "startChar": 14,
+        "endLine": 569,
+        "endChar": 18
+      },
+      "revId": "07e0b371d4817c1f856f38e913e0d6d8da3633d2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d65915c5_34a06d84",
+        "filename": "includes/api/ApiParseExtender.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-03-15T18:27:47Z",
+      "side": 1,
+      "message": "can we use the \n\n  MediaWikiServices::getInstance()-\u003egetService(\u0027MobileFrontend.Config\u0027)\n\nalso here, please?",
+      "range": {
+        "startLine": 35,
+        "startChar": 27,
+        "endLine": 35,
+        "endChar": 65
+      },
+      "revId": "07e0b371d4817c1f856f38e913e0d6d8da3633d2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

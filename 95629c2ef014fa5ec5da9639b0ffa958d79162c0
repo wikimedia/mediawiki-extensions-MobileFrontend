@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7b91ab4b_6383ec72",
+        "filename": "includes/api/ApiParseExtender.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-03-15T18:27:47Z",
+      "side": 0,
+      "message": "I hate to say that, but please revert this change.\n\nYou\u0027re correct, objects are passed as references by default, and it this scenario it wouldn\u0027t matter as we do not overwrite the value, but the documentation says it\u0027s passing the reference and we should respect what documentation says, even when we don\u0027t use it.\n\nConsistency is the key. https://codesearch.wmflabs.org/search/?q\u003dAPIGetAllowedParams%5C(\u0026i\u003dnope\u0026files\u003d\u0026repos\u003d",
+      "range": {
+        "startLine": 11,
+        "startChar": 4,
+        "endLine": 11,
+        "endChar": 27
+      },
+      "revId": "95629c2ef014fa5ec5da9639b0ffa958d79162c0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
