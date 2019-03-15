@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f72bf0ed_cd5fc0fb",
+        "filename": "resources/mobile.mediaViewer/imageDetails.less",
+        "patchSetId": 7
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-15T23:15:58Z",
+      "side": 1,
+      "message": "choing my comment in https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/495909/2 I\u0027d love if we could also in this patch remove the  styles in resources/mobile.mediaViewer/mediaViewer.less (replacing the details class with image-details inside resources/mobile.mediaViewer/ImageOverlay.hogan)",
+      "revId": "03af20c8287c22d7281077da8dc8e18ff737f74a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d9a115e9_d08afaa2",
+        "filename": "resources/mobile.mediaViewer/imageDetails.less",
+        "patchSetId": 7
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-15T23:15:58Z",
+      "side": 1,
+      "message": "What\u0027s stopping us doing that now? Is this FIXME still valid?",
+      "revId": "03af20c8287c22d7281077da8dc8e18ff737f74a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ca3fb931_48846a74",
+        "filename": "src/mobile.mediaViewer/imageDetails.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-15T23:15:58Z",
+      "side": 1,
+      "message": "Name this $caption to remind us we have a jQuery object",
+      "revId": "03af20c8287c22d7281077da8dc8e18ff737f74a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee6ddaf9_8b2158a3",
+        "filename": "src/mobile.mediaViewer/imageDetails.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-15T23:15:58Z",
+      "side": 1,
+      "message": "Use View.make( {\n\t\t\tclassName: \u0027image-details \u0027 + props.additionalClassNames,\n\t\t\tisTemplateMode: true\n\t\t}, children ) to make this super readable!\n\nchildren \u003d [ button.$el, $caption,  $license )",
+      "revId": "03af20c8287c22d7281077da8dc8e18ff737f74a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
