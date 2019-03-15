@@ -1,0 +1,129 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cd300a39_a78a0768",
+        "filename": "resources/mobile.startup/image/overlay.less",
+        "patchSetId": 62
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-15T23:48:59Z",
+      "side": 1,
+      "message": "I think this should be shortened to .animations .image-details and be moved into https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/495911/6",
+      "revId": "208bc7c907f8de91aa6b67cb57f1d563ea03d052",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "47011461_f340510b",
+        "filename": "src/mobile.mediaViewer/LoadErrorMessage.js",
+        "patchSetId": 62
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-15T23:48:59Z",
+      "side": 1,
+      "message": "This file looks fine to me.. I don\u0027t see much bad about this class extending View (inheriting of View is fine).\n\n(see also comment in other file)",
+      "revId": "208bc7c907f8de91aa6b67cb57f1d563ea03d052",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "53ccd9b6_a95fd942",
+        "filename": "src/mobile.mediaViewer/loadErrorMessage.js",
+        "patchSetId": 62
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-15T23:48:59Z",
+      "side": 1,
+      "message": "Can you explain your rationale for changing LoadErrorMessage? To be honest, I find https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/493630/62/src/mobile.mediaViewer/LoadErrorMessage.js,unified much more readable (with the exception of the toHtmlString call)!",
+      "revId": "208bc7c907f8de91aa6b67cb57f1d563ea03d052",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2246b9e6_fa9244d6",
+        "filename": "src/mobile.mediaViewer/overlayComponents.js",
+        "patchSetId": 62
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-15T23:48:59Z",
+      "side": 1,
+      "message": "remind me post merge to question whether there\u0027s a less hacky way to do this now!",
+      "revId": "208bc7c907f8de91aa6b67cb57f1d563ea03d052",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "002ad1bb_4e45cd7e",
+        "filename": "src/mobile.mediaViewer/overlayComponents.js",
+        "patchSetId": 62
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-15T23:48:59Z",
+      "side": 1,
+      "message": "How about calling this overlayimageCarousel ?",
+      "range": {
+        "startLine": 85,
+        "startChar": 8,
+        "endLine": 85,
+        "endChar": 26
+      },
+      "revId": "208bc7c907f8de91aa6b67cb57f1d563ea03d052",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9b966dbf_01a5f7de",
+        "filename": "src/mobile.startup/image/overlay.js",
+        "patchSetId": 62
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-15T23:48:59Z",
+      "side": 1,
+      "message": "I don\u0027t think this is needed any more. Previously it was to avoid a flash, but we\u0027re not going to have this problem now we are using PromisedView.",
+      "revId": "208bc7c907f8de91aa6b67cb57f1d563ea03d052",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a14503c6_738b8fc1",
+        "filename": "src/mobile.startup/image/overlay.js",
+        "patchSetId": 62
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-15T23:48:59Z",
+      "side": 1,
+      "message": "Given the above comment, this reads much nicer if you just have the promised view here directly.\n\n(this function looks great and  I can\u0027t wait to have it ... it makes me cry tears of joy!)",
+      "revId": "208bc7c907f8de91aa6b67cb57f1d563ea03d052",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

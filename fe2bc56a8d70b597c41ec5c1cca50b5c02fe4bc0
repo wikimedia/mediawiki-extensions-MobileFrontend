@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3a6f1adb_d49965eb",
+        "filename": "src/mobile.mediaViewer/LoadErrorMessage.js",
+        "patchSetId": 62
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-15T23:48:59Z",
+      "side": 0,
+      "message": "This is the new only problem I see with this particular View",
+      "revId": "fe2bc56a8d70b597c41ec5c1cca50b5c02fe4bc0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "08b81006_a5ab112c",
+        "filename": "src/mobile.mediaViewer/LoadErrorMessage.js",
+        "patchSetId": 62
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-15T23:48:59Z",
+      "side": 0,
+      "message": "(and I guess this could be done via an option callback.)",
+      "revId": "fe2bc56a8d70b597c41ec5c1cca50b5c02fe4bc0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "92d6f413_50459bac",
+        "filename": "src/mobile.startup/image/ImageGateway.js",
+        "patchSetId": 62
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-15T23:48:59Z",
+      "side": 0,
+      "message": "What happened to the test associated with this? Is the idea to test it purely with getThumb? Could you explain your thinking behind this?",
+      "revId": "fe2bc56a8d70b597c41ec5c1cca50b5c02fe4bc0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
