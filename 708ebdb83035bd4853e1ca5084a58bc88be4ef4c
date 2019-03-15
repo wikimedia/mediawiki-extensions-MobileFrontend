@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8a6579e3_9d335e51",
+        "filename": "src/mobile.startup/Browser.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2019-03-15T17:55:46Z",
+      "side": 0,
+      "message": "OMG, this is also the absolute ultimate accessibility anti-pattern. Would be excellent to get rid of this…",
+      "revId": "708ebdb83035bd4853e1ca5084a58bc88be4ef4c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
