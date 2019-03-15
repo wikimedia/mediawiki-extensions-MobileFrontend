@@ -72,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "7d09758d_108a4e11",
+        "filename": "src/mobile.startup/OverlayManager.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-15T19:36:22Z",
+      "side": 1,
+      "message": "Okay looks like there are no longer any users of OverlayManager outside MobileFrontend, so I can break this safely.",
+      "parentUuid": "a6744f5e_74d822dd",
+      "range": {
+        "startLine": 16,
+        "startChar": 18,
+        "endLine": 16,
+        "endChar": 40
+      },
+      "revId": "4bc32d410f918cc5ac55a2dddcb4c08560158c5b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2a2edb0d_8f34f679",
         "filename": "src/mobile.startup/OverlayManager.js",
         "patchSetId": 1
