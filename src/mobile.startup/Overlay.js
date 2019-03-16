@@ -98,7 +98,8 @@ mfExtend( Overlay, View, {
 	 */
 	defaults: {
 		headerActions: [],
-		saveMsg: mw.msg( 'mobile-frontend-editor-save' ),
+		saveMsg: mw.config.get( 'wgEditSubmitButtonLabelPublish' ) ?
+			mw.msg( 'mobile-frontend-editor-publish' ) : mw.msg( 'mobile-frontend-editor-save' ),
 		cancelButton: icons.cancel().toHtmlString(),
 		backButton: new Icon( {
 			tagName: 'button',

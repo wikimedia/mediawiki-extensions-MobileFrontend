@@ -561,7 +561,7 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 	},
 
 	/**
-	 * Executed when the editor clicks the save button. Handles logging and submitting
+	 * Executed when the editor clicks the save/publish button. Handles logging and submitting
 	 * the save action to the editor API.
 	 * @inheritdoc
 	 * @memberof EditorOverlay

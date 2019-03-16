@@ -16,7 +16,9 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/EditorOverlay', {
 		mediaWiki.setUp( sandbox, global );
 		oo.setUp( sandbox, global );
 		sandbox.stub( mw, 'msg' ).withArgs( 'mobile-frontend-editor-continue' ).returns( 'Continue' )
-			.withArgs( 'mobile-frontend-editor-save' ).returns( 'Save' );
+			.withArgs( 'mobile-frontend-editor-save' ).returns( 'Save' )
+			.withArgs( 'mobile-frontend-editor-publish' ).returns( 'Publish' );
+
 		EditorGateway = require( '../../../src/mobile.editor.overlay/EditorGateway' );
 		EditorOverlay = require( '../../../src/mobile.editor.overlay/EditorOverlay' );
 		BlockMessage = require( '../../../src/mobile.editor.overlay/BlockMessage' );

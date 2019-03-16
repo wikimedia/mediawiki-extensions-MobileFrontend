@@ -54,7 +54,8 @@ mfExtend( TalkSectionOverlay, Overlay, {
 			block: true,
 			additionalClassNames: 'save-button',
 			progressive: true,
-			label: mw.msg( 'mobile-frontend-editor-save' )
+			label: mw.config.get( 'wgEditSubmitButtonLabelPublish' ) ?
+				mw.msg( 'mobile-frontend-editor-publish' ) : mw.msg( 'mobile-frontend-editor-save' )
 		} ).options,
 		title: undefined,
 		section: undefined,
