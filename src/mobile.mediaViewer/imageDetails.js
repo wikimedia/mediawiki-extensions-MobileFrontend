@@ -7,16 +7,14 @@ const
  * Image details bar
  *
  * @param {Object} props
- * @param {string} [props.additionalClassNames] additional CSS classes to add to
+ * @param {string} [props.additionalClassNames] Additional CSS classes to add to
  * the parent element
- * @param {string|boolean} [props.caption] False to not render a caption or a
- * string shown as the caption.
- * @param {string|boolean} [props.author] False to not render an author or a
- * string shown as the author.
- * @param {Object|boolean} [props.licenseLink] False to not render a licenseLink
- * or an object containing href and text properties
- * @param {Object|boolean} [props.detailsLink] False to not render a details button
- * or an object containing an href property
+ * @param {string} [props.caption] A string shown as the caption
+ * @param {string} [props.author] A string shown as the author
+ * @param {Object} [props.licenseLink] An object containing href and text
+ * properties shown as the license link
+ * @param {Object} [props.detailsLink] An object containing an href property
+ * shown as the details button link
  * @return {View}
  */
 function imageDetails( props ) {
@@ -61,7 +59,10 @@ function imageDetails( props ) {
 			.text( props.licenseLink.text )
 			.attr( 'href', props.licenseLink.href );
 	}
-	children.push( $license );
+
+	if ( props.author || props.licenseLink ) {
+		children.push( $license );
+	}
 
 	return View.make( {
 		className: 'image-details ' + props.additionalClassNames
