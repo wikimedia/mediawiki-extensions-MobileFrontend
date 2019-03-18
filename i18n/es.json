@@ -37,7 +37,8 @@
 			"Rubentl134",
 			"Dgstranz",
 			"Josecurioso",
-			"Carlosmg.dg"
+			"Carlosmg.dg",
+			"MarcoAurelio"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si un usuario está editando a través de la interfaz móvil",
@@ -84,7 +85,8 @@
 	"mobile-frontend-editor-abusefilter-warning": "Advertencia: ¿estás seguro que quieres guardar esta edición? Puede haber un problema con ella.",
 	"mobile-frontend-editor-anon": "Editar sin iniciar sesión",
 	"mobile-frontend-editor-anonwarning": "<strong>Advertencia</strong>: no has iniciado sesión. Tu dirección IP será visible públicamente si haces cualquier edición. Si <strong>inicias sesión</strong> o <strong>creas una cuenta</strong>, tus ediciones se atribuirán a tu nombre de usuario, junto con otros beneficios.",
-	"mobile-frontend-editor-blocked-drawer-title": "Han bloqueado tu cuenta para que no edites {{SITENAME}}",
+	"mobile-frontend-editor-blocked-drawer-title": "Has sido bloqueado en {{SITENAME}} y no puedes editar",
+	"mobile-frontend-editor-blocked-drawer-title-partial": "Estás bloqueado y no puedes editar esta página",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Motivo del bloqueo",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Bloqueado|Bloqueada}} por",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "El bloqueo caducará el",
@@ -95,6 +97,7 @@
 	"mobile-frontend-editor-captcha-try-again": "Código incorrecto, inténtalo de nuevo.",
 	"mobile-frontend-editor-continue": "Siguiente",
 	"mobile-frontend-editor-disabled": "Esta página está protegida para evitar el vandalismo.",
+	"mobile-frontend-editor-disabled-anon": "Necesitas iniciar sesión para editar esta página.",
 	"mobile-frontend-editor-editing": "Editando",
 	"mobile-frontend-editor-editing-page": "<span><strong>Edición</strong> de «$1»</span>",
 	"mobile-frontend-editor-error": "Error, edición no guardada.",
@@ -168,6 +171,8 @@
 	"mobile-frontend-main-menu-settings-heading": "Configuración",
 	"mobile-frontend-media-details": "Detalles",
 	"mobile-frontend-media-license-link": "Información de la licencia",
+	"mobile-frontend-media-load-fail-message": "Hubo un error mientras se cargaba esta imagen.",
+	"mobile-frontend-media-load-fail-retry": "Actualizar",
 	"mobile-frontend-missing-image": "Imagen",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 km}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",
@@ -277,6 +282,7 @@
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Tamaño del texto",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Controla el tamaño del texto en tu experiencia de lectura.",
 	"mobile-frontend-mobile-option-amc-learn-more": "Aprende más",
+	"mobile-frontend-mobile-option-amc-send-feedback": "Enviar comentarios",
 	"mobile-frontend-beta-only": "Prestación disponible solo en el modo beta",
 	"mobile-frontend-console-recruit": "Para saber más sobre cómo hemos creado nuestro sitio para móviles: https://www.mediawiki.org/wiki/Extension:MobileFrontend",
 	"prefs-mobile": "Preferencias móviles"
