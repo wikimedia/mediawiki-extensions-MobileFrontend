@@ -53,6 +53,24 @@
     },
     {
       "key": {
+        "uuid": "08477f21_1777658a",
+        "filename": "src/mobile.mediaViewer/imageCarousel.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-18T23:11:13Z",
+      "side": 1,
+      "message": "To promote reusability, I was trying to keep the API as generic as possible which is why I made imageCarousel just accept an array of async functions that fetch whatever data they need in order produce an object with the data that imageCarousel uses but maybe that\u0027s more confusion than it\u0027s worth and yagni. \n\nI can make imageCarousel accept an array of image filenames, but then image carousel would need to know how to talk to imageGateway and map the data that it gives back to the data that imageCarousel needs. So reusability goes out the window but perhaps ease of understanding is better.\n\nI\u0027m happy to do this; just wanted to explain my reasoning. What do you think?",
+      "parentUuid": "a4cc5a7a_657f295e",
+      "revId": "a6c28e4116295111c35b889e41da827f2271c7a7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fa0ebcaf_d7216fb7",
         "filename": "src/mobile.mediaViewer/imageCarousel.js",
         "patchSetId": 2
