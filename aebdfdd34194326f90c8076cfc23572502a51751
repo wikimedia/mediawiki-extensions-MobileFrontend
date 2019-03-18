@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "98dfccd5_42f72f84",
+        "filename": "src/mobile.mediaViewer/imageDetails.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-18T15:17:10Z",
+      "side": 1,
+      "message": "Wouldn\u0027t undefined work well too here?\nIn which case \n@param {string} [props.caption] reads fine",
+      "range": {
+        "startLine": 12,
+        "startChar": 42,
+        "endLine": 13,
+        "endChar": 31
+      },
+      "revId": "aebdfdd34194326f90c8076cfc23572502a51751",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
