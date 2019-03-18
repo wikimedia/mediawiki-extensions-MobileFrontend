@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "89c52e43_f3280188",
+        "filename": "resources/mobile.startup/panel.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-18T23:25:16Z",
+      "side": 1,
+      "message": "can you give an example of where this is used? The previous .panel.save-panel is empty when viewing talkSectionAddOverlay locally for me",
+      "range": {
+        "startLine": 4,
+        "startChar": 0,
+        "endLine": 6,
+        "endChar": 2
+      },
+      "revId": "aad6375de51da03b4e0b27109b1ca73de71b8c24",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
