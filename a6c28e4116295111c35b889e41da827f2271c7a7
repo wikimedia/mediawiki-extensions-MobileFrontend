@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d8c53098_24cb7a1d",
+        "filename": "src/mobile.mediaViewer/imageCarousel.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-18T15:21:52Z",
+      "side": 1,
+      "message": "I assume index refers to images, so can we point that out here?",
+      "revId": "a6c28e4116295111c35b889e41da827f2271c7a7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3556c7ec_c89fd15d",
+        "filename": "src/mobile.mediaViewer/imageCarousel.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-18T15:21:52Z",
+      "side": 1,
+      "message": "ImageObject makes me think of new Image() maybe WikiFileImage might be more Wiki centric?",
+      "revId": "a6c28e4116295111c35b889e41da827f2271c7a7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a4cc5a7a_657f295e",
+        "filename": "src/mobile.mediaViewer/imageCarousel.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-18T15:21:52Z",
+      "side": 1,
+      "message": "I\u0027m struggling to wrap my head around AsyncImageFn as a type (in particular as right now I have no way of making one myself).\n\nCould this input instead be an array of image filenames (string)....?\n\n...as that in turn means I can easily reason about in debugging what the index is....\nand I don\u0027t have to understand the internals of this function.\n\nI think I\u0027m possibly missing something about the implementation - is there a reason the component has to take AsyncImageFn, could it not insread make use of map to  turn string[] props.images into []AsyncImageFn ?",
+      "revId": "a6c28e4116295111c35b889e41da827f2271c7a7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa0ebcaf_d7216fb7",
+        "filename": "src/mobile.mediaViewer/imageCarousel.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 234,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-18T15:21:52Z",
+      "side": 1,
+      "message": "Use View.make to simplify this into 2 lines:\nreturn View.make( { className: \u0027image-carousel\u0027 },  [ carousel.$el, imageDetails.$el ] );",
+      "revId": "a6c28e4116295111c35b889e41da827f2271c7a7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
