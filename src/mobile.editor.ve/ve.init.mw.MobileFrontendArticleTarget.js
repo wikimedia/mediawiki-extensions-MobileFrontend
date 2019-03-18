@@ -23,7 +23,6 @@ function MobileFrontendArticleTarget( overlay, config ) {
 	this.overlay = overlay;
 	this.$overlay = overlay.$el;
 	this.$overlaySurface = overlay.$el.find( '.surface' );
-	this.useScrollContainer = ve.init.platform.constructor.static.isIos();
 
 	// Parent constructor
 	MobileFrontendArticleTarget.super.call( this, config );
@@ -52,19 +51,6 @@ MobileFrontendArticleTarget.prototype.destroy = function () {
 	MobileFrontendArticleTarget.super.prototype.destroy.call( this );
 
 	this.$overlay.css( 'padding-top', '' );
-};
-
-/*
- * FIXME: @inheritdoc once this file is in the right repo
- * @memberof MobileFrontendArticleTarget
- * @instance
- */
-MobileFrontendArticleTarget.prototype.getScrollContainer = function () {
-	if ( this.useScrollContainer ) {
-		return this.overlay.$el.find( '.overlay-content' );
-	}
-	// Parent method
-	return MobileFrontendArticleTarget.super.prototype.getScrollContainer.call( this );
 };
 
 /*
