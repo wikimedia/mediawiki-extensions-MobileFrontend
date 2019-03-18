@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a610ff9_e95ec8e6",
+        "filename": "includes/content-providers/ContentProviderFactory.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-03-18T23:56:28Z",
+      "side": 1,
+      "message": "$out can provide title, but we pass the title - we should have single source of truth, if we pass $out, then there is no need to pass the title, because then there is no clear information how to get title (use $title param, or $out-\u003egetTitle()).",
+      "range": {
+        "startLine": 69,
+        "startChar": 44,
+        "endLine": 69,
+        "endChar": 57
+      },
+      "revId": "d07e5a328a090a6e88b206f2f9ed3ff357bba7b3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bb8617aa_401d2fe4",
+        "filename": "includes/content-providers/McsContentProvider.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-03-18T23:56:28Z",
+      "side": 1,
+      "message": "OutputPage $out is required argument in factory, it will be always defined. There is no need to make it optional.\n\nThe $title has to be optional because it is possible to have a request that do not have $title object.\n\nAlso, as I mentioned before, there is no need to pass both $out and the $title object.",
+      "range": {
+        "startLine": 28,
+        "startChar": 61,
+        "endLine": 28,
+        "endChar": 83
+      },
+      "revId": "d07e5a328a090a6e88b206f2f9ed3ff357bba7b3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
