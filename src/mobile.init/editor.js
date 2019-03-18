@@ -103,7 +103,9 @@ function setupEditor( page, skin ) {
 		}
 
 		function clearLoadingVE() {
-			abortableDataPromise.abort();
+			if ( abortableDataPromise.abort ) {
+				abortableDataPromise.abort();
+			}
 			$loading.detach();
 			$( '#content' ).css( {
 				transform: '',
