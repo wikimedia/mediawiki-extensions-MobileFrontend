@@ -66,7 +66,7 @@ class ContentProviderFactory {
 		switch ( $contentProviderClass ) {
 			case self::MCS_API:
 				$baseUrl = $config->get( 'MFMcsContentProviderBaseUri' );
-				return new McsContentProvider( $baseUrl, $title );
+				return new McsContentProvider( $baseUrl, $out );
 			case self::MW_API:
 				$skinName = $out->getSkin()->getSkinName();
 				$rev = $out->getRequest()->getIntOrNull( 'oldid' );

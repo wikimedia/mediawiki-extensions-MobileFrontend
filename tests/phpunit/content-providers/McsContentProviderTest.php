@@ -17,7 +17,11 @@ class McsContentProviderTest extends MediaWikiTestCase {
 	 * @return McsContentProvider
 	 */
 	private function makeMcsContentProvider( $baseUrl, Title $title = null ) {
-		return new McsContentProvider( $baseUrl, $title );
+		$out = new OutputPage( new RequestContext() );
+		if ( $title ) {
+			$out->setTitle( $title );
+		}
+		return new McsContentProvider( $baseUrl, $out );
 	}
 
 	private function createTestTitle() {
