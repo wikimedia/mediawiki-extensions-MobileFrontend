@@ -175,6 +175,24 @@
       "revId": "e4066fc5505fa38b99fb7b14e2e04731b61f6632",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9cfd01a0_6e0e236b",
+        "filename": "src/mobile.notifications.overlay/notificationsOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-19T19:53:12Z",
+      "side": 1,
+      "message": "Sorry that got cut off :)\nThe benefit of this hopefully becomes apparent when I move this to mobile.startup. Right now oojs-ui is not on the critical path (not a dependency of mobile.startup), but preparingfor the move which puts this overlay into mobile.startup,  I want to ensure this is as light as possible.",
+      "parentUuid": "01bb423a_2cd3d0ef",
+      "revId": "e4066fc5505fa38b99fb7b14e2e04731b61f6632",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
