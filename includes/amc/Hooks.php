@@ -1,6 +1,8 @@
 <?php
 namespace MobileFrontend\AMC;
 
+use MediaWiki\ChangeTags\Taggable;
+
 /**
  * Hooks for Advanced Mobile Contributions
  *
@@ -8,6 +10,19 @@ namespace MobileFrontend\AMC;
  */
 final class Hooks {
 
+	/**
+	 * Helper method to tag objects like Logs or Recent changes
+	 * @param Taggable $taggable
+	 * @param \User $performer
+	 * @return bool
+	 */
+	private static function injectTagsIfPerformerUsesAMC( Taggable $taggable, \User $performer ) {
+		$userMode = UserMode::newForUser( $performer );
+		if ( $userMode->isEnabled() ) {
+			$taggable->addTags( [ Manager::AMC_EDIT_TAG ] );
+		}
+		return true;
+	}
 	/**
 	 * Register default preference value for AMC opt-in
 	 *
@@ -31,19 +46,28 @@ final class Hooks {
 	}
 
 	/**
-	 * RecentChange_save hook handler that tags mobile changes
+	 * ManualLogEntryBeforePublish hook handler that tags actions logged when user uses AMC mode
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ManualLogEntryBeforePublish
+	 *
+	 * @param \ManualLogEntry $logEntry
+	 */
+	public static function onManualLogEntryBeforePublish( \ManualLogEntry $logEntry ) {
+		self::injectTagsIfPerformerUsesAMC( $logEntry, $logEntry->getPerformer() );
+	}
+
+	/**
+	 * RecentChange_save hook handler that tags changes performed when user uses AMC mode
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/RecentChange_save
 	 *
 	 * @param \RecentChange $rc
-	 * @return bool
 	 */
 	public static function onRecentChangeSave( \RecentChange $rc ) {
-		// To be safe, we should use the User objected provided via RecentChange, not the
-		// currently logged-in user.
-		$userMode = UserMode::newForUser( $rc->getPerformer() );
-		if ( $userMode->isEnabled() ) {
-			$rc->addTags( Manager::AMC_EDIT_TAG );
+		try {
+			// To be safe, we should use the User objected provided via RecentChange, not the
+			// currently logged-in user.
+			self::injectTagsIfPerformerUsesAMC( $rc, $rc->getPerformer() );
+		} catch ( \MWException $exception ) {
+			// ignore when performer is not found
 		}
-		return true;
 	}
 }
