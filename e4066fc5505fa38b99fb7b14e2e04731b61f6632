@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "613afbb3_d46a6a8e",
+        "filename": "src/mobile.notifications.overlay/mobile.notifications.overlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-19T18:06:54Z",
+      "side": 1,
+      "message": "Oh, I just now caught this. What is the use case of this?",
+      "range": {
+        "startLine": 37,
+        "startChar": 0,
+        "endLine": 38,
+        "endChar": 20
+      },
+      "revId": "e4066fc5505fa38b99fb7b14e2e04731b61f6632",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8950c866_52888e9d",
         "filename": "src/mobile.notifications.overlay/notificationsOverlay.js",
         "patchSetId": 2
