@@ -2,6 +2,7 @@
 
 use MediaWiki\Auth\AuthManager;
 use MediaWiki\Auth\AuthenticationRequest;
+use MediaWiki\ChangeTags\Taggable;
 
 /**
  * Hook handlers for MobileFrontend extension
@@ -528,18 +529,20 @@ class MobileFrontendHooks {
 	 * RecentChange_save hook handler that tags mobile changes
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/RecentChange_save
 	 *
-	 * @param RecentChange $rc
+	 * ManualLogEntryBeforePublish hook handler that tags actions logged when user uses mobile mode
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ManualLogEntryBeforePublish
+
+	 * @param Taggable $taggable Object to tag
 	 * @return bool
 	 */
-	public static function onRecentChangeSave( RecentChange $rc ) {
+	public static function onTaggableObjectCreation( Taggable $taggable ) {
 		$context = MobileContext::singleton();
 		$userAgent = $context->getRequest()->getHeader( "User-agent" );
-
 		if ( $context->shouldDisplayMobileView() ) {
-			$rc->addTags( 'mobile edit' );
+			$taggable->addTags( [ 'mobile edit' ] );
 			// Tag as mobile web edit specifically, if it isn't coming from the apps
 			if ( strpos( $userAgent, 'WikipediaApp/' ) !== 0 ) {
-				$rc->addTags( 'mobile web edit' );
+				$taggable->addTags( [ 'mobile web edit' ] );
 			}
 		}
 		return true;
