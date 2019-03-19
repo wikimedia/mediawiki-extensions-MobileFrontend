@@ -85,7 +85,7 @@
 	"mobile-frontend-editor-abusefilter-warning": "Advertencia: ¿estás seguro que quieres guardar esta edición? Puede haber un problema con ella.",
 	"mobile-frontend-editor-anon": "Editar sin iniciar sesión",
 	"mobile-frontend-editor-anonwarning": "<strong>Advertencia</strong>: no has iniciado sesión. Tu dirección IP será visible públicamente si haces cualquier edición. Si <strong>inicias sesión</strong> o <strong>creas una cuenta</strong>, tus ediciones se atribuirán a tu nombre de usuario, junto con otros beneficios.",
-	"mobile-frontend-editor-blocked-drawer-title": "Has sido bloqueado en {{SITENAME}} y no puedes editar",
+	"mobile-frontend-editor-blocked-drawer-title": "Han bloqueado tu cuenta para que no edites {{SITENAME}}",
 	"mobile-frontend-editor-blocked-drawer-title-partial": "Estás bloqueado y no puedes editar esta página",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Motivo del bloqueo",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Bloqueado|Bloqueada}} por",
