@@ -823,7 +823,7 @@
 			"MobileFrontend\\AMC\\Hooks::onListDefinedTags"
 		],
 		"RecentChange_save": [
-			"MobileFrontendHooks::onRecentChangeSave",
+			"MobileFrontendHooks::onTaggableObjectCreation",
 			"MobileFrontend\\AMC\\Hooks::onRecentChangeSave"
 		],
 		"AbuseFilter-generateUserVars": [
@@ -888,7 +888,8 @@
 			"MobileFrontendHooks::onGetDifferenceEngine"
 		],
 		"ManualLogEntryBeforePublish": [
-			"MobileFrontend\\AMC\\Hooks::onManualLogEntryBeforePublish"
+			"MobileFrontend\\AMC\\Hooks::onManualLogEntryBeforePublish",
+			"MobileFrontendHooks::onTaggableObjectCreation"
 		]
 	},
 	"config": {
