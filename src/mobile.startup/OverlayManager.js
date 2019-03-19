@@ -1,4 +1,3 @@
-/* global $ */
 var
 	util = require( './util' ),
 	mfExtend = require( './mfExtend' ),
@@ -13,9 +12,9 @@ var
  *
  * @class OverlayManager
  * @param {Router} router
- * @param {string} appendToSelector
+ * @param {Element} container where overlays should be managed
  */
-function OverlayManager( router, appendToSelector ) {
+function OverlayManager( router, container ) {
 	router.on( 'route', this._checkRoute.bind( this ) );
 	this.router = router;
 	// use an object instead of an array for entries so that we don't
@@ -25,10 +24,7 @@ function OverlayManager( router, appendToSelector ) {
 	this.stack = [];
 	this.hideCurrent = true;
 	// Set the element that overlays will be appended to
-	if ( !appendToSelector ) {
-		mw.log.warn( 'appendToSelector will soon be a required parameter to OverlayManager' );
-	}
-	this.appendToSelector = appendToSelector || 'body';
+	this.container = container;
 }
 
 /**
@@ -64,7 +60,7 @@ mfExtend( OverlayManager, {
 	*/
 	_attachOverlay: function ( overlay ) {
 		if ( !overlay.$el.parents().length ) {
-			$( this.appendToSelector ).append( overlay.$el );
+			this.container.appendChild( overlay.$el[0] );
 		}
 	},
 	/**
@@ -316,7 +312,10 @@ mfExtend( OverlayManager, {
  */
 OverlayManager.getSingleton = function () {
 	if ( !overlayManager ) {
-		overlayManager = new OverlayManager( mw.loader.require( 'mediawiki.router' ), 'body' );
+		const container = document.createElement( 'div' );
+		container.className = 'mw-overlays-container';
+		document.body.appendChild( container );
+		overlayManager = new OverlayManager( mw.loader.require( 'mediawiki.router' ), container );
 	}
 	return overlayManager;
 };
