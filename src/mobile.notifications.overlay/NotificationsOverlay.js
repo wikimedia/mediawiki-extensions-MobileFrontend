@@ -1,6 +1,7 @@
 var Overlay = require( '../mobile.startup/Overlay' ),
 	util = require( '../mobile.startup/util' ),
 	View = require( '../mobile.startup/View' ),
+	promisedView = require( '../mobile.startup/promisedView' ),
 	mfExtend = require( '../mobile.startup/mfExtend' ),
 	Anchor = require( '../mobile.startup/Anchor' ),
 	NotificationsOverlay;
@@ -99,17 +100,17 @@ NotificationsOverlay = function ( params ) {
 
 	// Initialize
 	this.$el.find( '.overlay-content' ).append(
-		wrapperWidget.$element,
-		$moreOptions
+		promisedView(
+			// Populate notifications
+			wrapperWidget.populate().then( function () {
+				self.setDoneLoading();
+				self.controller.updateSeenTime();
+				self.badge.markAsSeen();
+				self.checkShowMarkAllRead();
+				return View.make( {}, [ wrapperWidget.$element, $moreOptions ] );
+			} )
+		).$el
 	);
-
-	// Populate notifications
-	wrapperWidget.populate().then( function () {
-		self.setDoneLoading();
-		self.controller.updateSeenTime();
-		self.badge.markAsSeen();
-		self.checkShowMarkAllRead();
-	} );
 };
 
 mfExtend( NotificationsOverlay, Overlay, {
@@ -170,18 +171,6 @@ mfExtend( NotificationsOverlay, Overlay, {
 		);
 
 		this.checkShowMarkAllRead();
-	},
-	/**
-	 * @inheritdoc
-	 * @memberof NotificationsOverlay
-	 * @instance
-	 */
-	postRender: function () {
-		Overlay.prototype.postRender.apply( this );
-
-		if ( this.options.notifications || this.options.errorMessage ) {
-			this.$el.find( '.loading' ).remove();
-		}
 	}
 } );
 
