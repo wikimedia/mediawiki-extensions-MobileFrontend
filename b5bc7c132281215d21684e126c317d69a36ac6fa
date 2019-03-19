@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4b9db92f_52ebfa2a",
+        "filename": "src/mobile.notifications.overlay/NotificationsOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-19T21:42:47Z",
+      "side": 1,
+      "message": "This is a big improvement but I think it is a little unfortunate that this API cannot return a Promise instead. We could hold the promise and dot off Promise.all() where needed. This would allow us to connect to the model manager early. I have no idea what connecting to a model manager does but maybe it has to do some work and either way it would be nice to group the similar Echo integration calls.",
+      "range": {
+        "startLine": 106,
+        "startChar": 14,
+        "endLine": 106,
+        "endChar": 34
+      },
+      "revId": "b5bc7c132281215d21684e126c317d69a36ac6fa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1f5a4c73_da164098",
+        "filename": "src/mobile.notifications.overlay/NotificationsOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-19T21:42:47Z",
+      "side": 1,
+      "message": "This function has no return value so this change seems like it shouldn\u0027t impact anyone.",
+      "range": {
+        "startLine": 120,
+        "startChar": 1,
+        "endLine": 120,
+        "endChar": 21
+      },
+      "revId": "b5bc7c132281215d21684e126c317d69a36ac6fa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
