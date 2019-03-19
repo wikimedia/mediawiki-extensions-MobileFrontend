@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "fcab41cd_445e09da",
+        "filename": "src/mobile.notifications.overlay/mobile.notifications.overlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-19T19:38:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "98d54369_21a355d8",
+      "range": {
+        "startLine": 31,
+        "startChar": 0,
+        "endLine": 34,
+        "endChar": 3
+      },
+      "revId": "e4066fc5505fa38b99fb7b14e2e04731b61f6632",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "613afbb3_d46a6a8e",
         "filename": "src/mobile.notifications.overlay/mobile.notifications.overlay.js",
         "patchSetId": 2
@@ -36,6 +60,30 @@
       "writtenOn": "2019-03-19T18:06:54Z",
       "side": 1,
       "message": "Oh, I just now caught this. What is the use case of this?",
+      "range": {
+        "startLine": 37,
+        "startChar": 0,
+        "endLine": 38,
+        "endChar": 20
+      },
+      "revId": "e4066fc5505fa38b99fb7b14e2e04731b61f6632",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "083c2962_6d678d0c",
+        "filename": "src/mobile.notifications.overlay/mobile.notifications.overlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-19T19:38:33Z",
+      "side": 1,
+      "message": "Interesting. The NotificationBadge seems to have set this, but looking more closely at the code, that code is dead and never used.\n\nhttps://gerrit.wikimedia.org/r/#/c/mediawiki/skins/MinervaNeue/+/497594",
+      "parentUuid": "613afbb3_d46a6a8e",
       "range": {
         "startLine": 37,
         "startChar": 0,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "6c9aacb7_5acd90e4",
+        "filename": "src/mobile.notifications.overlay/notificationsOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-19T19:38:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8950c866_52888e9d",
+      "range": {
+        "startLine": 58,
+        "startChar": 3,
+        "endLine": 58,
+        "endChar": 15
+      },
+      "revId": "e4066fc5505fa38b99fb7b14e2e04731b61f6632",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "47eb7c61_79784992",
         "filename": "src/mobile.notifications.overlay/notificationsOverlay.js",
         "patchSetId": 2
@@ -82,6 +154,24 @@
       "writtenOn": "2019-03-19T19:03:51Z",
       "side": 1,
       "message": "should \u0027oojs-ui\u0027 be listed as a dependency of the mobile.notifications.overlay module registered in MobileFrontend.hooks.php? I\u0027m wondering why we need to use mw.loader.using here?",
+      "revId": "e4066fc5505fa38b99fb7b14e2e04731b61f6632",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "01bb423a_2cd3d0ef",
+        "filename": "src/mobile.notifications.overlay/notificationsOverlay.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-19T19:38:33Z",
+      "side": 1,
+      "message": "The benefit of this hopefully becomes apparent",
+      "parentUuid": "47eb7c61_79784992",
       "revId": "e4066fc5505fa38b99fb7b14e2e04731b61f6632",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
