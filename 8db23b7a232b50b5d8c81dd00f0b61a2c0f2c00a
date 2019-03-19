@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a54dd1a_618fcc16",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 570,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-19T22:02:28Z",
+      "side": 1,
+      "message": "Don\u0027t know enough about this line. Piotr can you review?",
+      "revId": "8db23b7a232b50b5d8c81dd00f0b61a2c0f2c00a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
