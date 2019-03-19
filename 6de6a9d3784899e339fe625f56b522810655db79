@@ -1,0 +1,245 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c30a437d_ecb7d0ea",
+        "filename": "resources/mobile.mediaViewer/imageCarousel.less",
+        "patchSetId": 9
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-19T17:05:50Z",
+      "side": 1,
+      "message": "I think that adding a comment here that the initial state is \"loading\" would be very useful to tie back into into the image-loaded state. I was initially confused why we were setting blur to 0 above as I was reading top to bottom.",
+      "revId": "6de6a9d3784899e339fe625f56b522810655db79",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eb760216_2f1b9bd6",
+        "filename": "resources/mobile.mediaViewer/imageCarousel.less",
+        "patchSetId": 9
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-19T17:05:50Z",
+      "side": 1,
+      "message": "Can you add some comments around this for non-CSS experts like myself? I thought this meant the image would be positioned relative itself, not the parent, which seems like a mistake.",
+      "range": {
+        "startLine": 20,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 11
+      },
+      "revId": "6de6a9d3784899e339fe625f56b522810655db79",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "22e1f972_e4c5d28b",
+        "filename": "resources/mobile.mediaViewer/imageCarousel.less",
+        "patchSetId": 9
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-19T17:05:50Z",
+      "side": 1,
+      "message": "Is it possible to use .transition()?",
+      "range": {
+        "startLine": 42,
+        "startChar": 0,
+        "endLine": 44,
+        "endChar": 93
+      },
+      "revId": "6de6a9d3784899e339fe625f56b522810655db79",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "98e45b59_fee8e16c",
+        "filename": "resources/mobile.mediaViewer/imageCarousel.less",
+        "patchSetId": 9
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-19T17:05:50Z",
+      "side": 1,
+      "message": "That\u0027s wild. I would have thought this would only impact image border. What happens when the image fails to load though? Does the text stay hidden? I don\u0027t think we should hide (and ideally not blur) the text.",
+      "range": {
+        "startLine": 47,
+        "startChar": 0,
+        "endLine": 49,
+        "endChar": 21
+      },
+      "revId": "6de6a9d3784899e339fe625f56b522810655db79",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "999f5e86_9da34752",
+        "filename": "src/mobile.mediaViewer/imageCarousel.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-19T17:05:50Z",
+      "side": 1,
+      "message": "I think this component is complex and worth documenting carefully while it\u0027s being conceived. If this file had a state diagram, it would be easier to reason about and make future changes. I don\u0027t know if this is accurate or how advancing the image fits in but something like:\n\n                               +-loadImage()-+--------------+\n                               |             |              |\n                               v             |              |\n [Created] --loadImage()--\u003e [Loading] +-\u003e [Loaded] \u003c--\u003e [Details]\n                               ^      |\n                               |      +-\u003e [Error]\n                               |             |\n                               +-loadImage()-+\n\nI think this corresponds to these screens:\n\n\n\n   +----------+          +----------+          +----------+          +----------+\n   |          |          |          |          |          |          |          |\n   |          |    \u003d\u003e    |\u003c  |\u003e\u003c|  \u003e|    \u003d\u003e    |\u003c  o/-|  \u003e|   \u003c\u003d\u003e    |\u003c   xx   \u003e|\n   |          |          |          |          |          |          |          |\n   +----------+          +----------+          +----------+          +----------+\n Created: no visual   Loading: the image    Loaded: the image      Error: the image\n representation but   is blurred out and    is loaded and blur     failed to load.\n the element fills    it\u0027s possible to      is removed.            If this frame is\n the container. It    forward or reverse                           revisited, another\n is possible to       the carousel from             ^              load will be attempted.\n close from hereon.   hereon.                       |\n                                                    v\n                                               +----------+ \n                                               |          | \n                                               |\u003c  o/-|  \u003e|\n                                               +----------+\n                                               +----------+ \n                                            Details: image details\n                                            are toggle on. Tapping\n                                            the container goes\n                                            back to loaded.\n\n\nIf there are properties that are only available in certain states, please consider making some sweet typedefs. E.g.:\n\n\n @typedef {Object} LoadedState\n @prop {number} foo\n\n\n @typedef {Object} _DetailsState\n @prop {boolean} bar\n @typedef {LoadedState \u0026 _DetailsState} DetailsState\n\n\nsetState() could then be typed to accept the appropriate transition States.",
+      "revId": "6de6a9d3784899e339fe625f56b522810655db79",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0902dc82_7f54d09c",
+        "filename": "src/mobile.mediaViewer/imageCarousel.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-19T17:05:50Z",
+      "side": 1,
+      "message": "If these functions have parameters, please document them. I think you can use a typedef.",
+      "range": {
+        "startLine": 62,
+        "startChar": 12,
+        "endLine": 62,
+        "endChar": 20
+      },
+      "revId": "6de6a9d3784899e339fe625f56b522810655db79",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0df53c02_791bf56b",
+        "filename": "src/mobile.mediaViewer/imageCarousel.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-19T17:05:50Z",
+      "side": 1,
+      "message": "Would these numbers change on screen reorientation? If so, would this function execute again?",
+      "range": {
+        "startLine": 73,
+        "startChar": 0,
+        "endLine": 76,
+        "endChar": 10
+      },
+      "revId": "6de6a9d3784899e339fe625f56b522810655db79",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "91c71dd9_43f3516c",
+        "filename": "src/mobile.mediaViewer/imageCarousel.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-19T17:05:50Z",
+      "side": 1,
+      "message": "Is it intentional to change props itself? Maybe we should assign to an empty object to avoid mutating a client parameter.",
+      "range": {
+        "startLine": 106,
+        "startChar": 4,
+        "endLine": 106,
+        "endChar": 15
+      },
+      "revId": "6de6a9d3784899e339fe625f56b522810655db79",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1798496f_b3f5d795",
+        "filename": "src/mobile.mediaViewer/imageCarousel.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-19T17:05:50Z",
+      "side": 1,
+      "message": "I like that you\u0027ve typed this very explicitly. I don\u0027t feel strongly about this but I think that changing the name of the property to imageLoader would help avoid potential misconceptions that the images are already resolved.",
+      "range": {
+        "startLine": 152,
+        "startChar": 33,
+        "endLine": 152,
+        "endChar": 39
+      },
+      "revId": "6de6a9d3784899e339fe625f56b522810655db79",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1d19d199_b81d665e",
+        "filename": "src/mobile.mediaViewer/imageCarousel.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-19T17:05:50Z",
+      "side": 1,
+      "message": "Right now all these variables are grouped at the top of the function so they can be in scope for setState(). I\u0027m curious to hear your thoughts around moving setState out to a function that returns a setState() function such that these can be be operated on as outer function parameters from within the closure. Something like:\n\n function newSetState(makeCarousel, view, promisedImage, STUFF_AND_THINGS) {\n   return () \u003d\u003e {\n     ...\n     swapComponent( imageDetails, makeImageDetails( state ) );\n     ...\n   }\n }",
+      "range": {
+        "startLine": 162,
+        "startChar": 0,
+        "endLine": 174,
+        "endChar": 4
+      },
+      "revId": "6de6a9d3784899e339fe625f56b522810655db79",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e27db9bb_7d155f29",
+        "filename": "src/mobile.mediaViewer/imageCarousel.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-19T17:05:50Z",
+      "side": 1,
+      "message": "Is this what kind of kicks off all the state transitions from create to loading to loaded?",
+      "range": {
+        "startLine": 194,
+        "startChar": 2,
+        "endLine": 194,
+        "endChar": 72
+      },
+      "revId": "6de6a9d3784899e339fe625f56b522810655db79",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
