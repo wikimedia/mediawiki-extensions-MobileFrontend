@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "d1e2eb5e_7059eaed",
+        "filename": "src/mobile.notifications.overlay/NotificationsOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-20T00:05:33Z",
+      "side": 1,
+      "message": "I\u0027m not sure what to do about this. I can\u0027t find any examples of OOjs UI using an anonymous function. Given its anonymous function I don\u0027t think it matters since markAsReadHandler doesn\u0027t care about the context it is run in. \n\nI can\u0027t find any documentation around this. Maybe I can poke Moriel in the office tomorrow.",
+      "parentUuid": "ae985c18_6e6825ae",
+      "range": {
+        "startLine": 151,
+        "startChar": 26,
+        "endLine": 151,
+        "endChar": 38
+      },
+      "revId": "f326bd5cb760c4305dc952c8fee138d9f22928ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a8ad1be6_81b221c5",
         "filename": "src/mobile.notifications.overlay/NotificationsOverlay.js",
         "patchSetId": 5
@@ -36,6 +60,30 @@
       "writtenOn": "2019-03-19T22:17:34Z",
       "side": 1,
       "message": "I think this empty object can be omitted.",
+      "range": {
+        "startLine": 160,
+        "startChar": 39,
+        "endLine": 160,
+        "endChar": 43
+      },
+      "revId": "f326bd5cb760c4305dc952c8fee138d9f22928ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "56a56ceb_88c672fe",
+        "filename": "src/mobile.notifications.overlay/NotificationsOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-20T00:05:33Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a8ad1be6_81b221c5",
       "range": {
         "startLine": 160,
         "startChar": 39,
