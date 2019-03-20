@@ -423,7 +423,6 @@ mfExtend( EditorOverlayBase, Overlay, {
 						} );
 						self.allowCloseWindow.release();
 						mw.hook( 'mobileFrontend.editorClosed' ).fire();
-						util.getWindow().off( 'scroll', self.onWindowScrollDebounced );
 						Overlay.prototype.hide.call( self );
 					}
 				} );
