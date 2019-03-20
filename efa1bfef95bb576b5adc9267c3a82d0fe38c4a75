@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "38e08d5b_7e2beca0",
+        "filename": "src/mobile.notifications.overlay/list.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-20T20:58:00Z",
+      "side": 1,
+      "message": "rendered? or fired/called?",
+      "range": {
+        "startLine": 47,
+        "startChar": 59,
+        "endLine": 47,
+        "endChar": 67
+      },
+      "revId": "efa1bfef95bb576b5adc9267c3a82d0fe38c4a75",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "265c3e91_286bbd91",
+        "filename": "src/mobile.startup/notifications/overlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-20T20:58:00Z",
+      "side": 1,
+      "message": "rendered? or fired/called",
+      "range": {
+        "startLine": 11,
+        "startChar": 59,
+        "endLine": 11,
+        "endChar": 67
+      },
+      "revId": "efa1bfef95bb576b5adc9267c3a82d0fe38c4a75",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

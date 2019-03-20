@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b425165f_1713afb9",
+        "filename": "src/mobile.notifications.overlay/list.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-20T20:58:00Z",
+      "side": 1,
+      "message": "is this an integer or string. Can you please specify what type \"count\" is?",
+      "range": {
+        "startLine": 46,
+        "startChar": 85,
+        "endLine": 46,
+        "endChar": 90
+      },
+      "revId": "ad16571066f12668260e57cd5e0c94ad9aec94b1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
