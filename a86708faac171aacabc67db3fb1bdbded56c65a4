@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "44eb0d44_4047ac54",
+        "filename": "skinStyles/mobile.startup/vector.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2019-03-20T14:30:33Z",
+      "side": 1,
+      "message": "Can you add a comment to note that the purpose of this is to fade out the background?",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 29
+      },
+      "revId": "a86708faac171aacabc67db3fb1bdbded56c65a4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f8246d80_39c83789",
+        "filename": "skinStyles/mobile.startup/vector.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2019-03-20T14:30:33Z",
+      "side": 1,
+      "message": "I don\u0027t think this is necessary unless you want to restrict the width for very large monitors and set this to a pixel value.",
+      "range": {
+        "startLine": 20,
+        "startChar": 12,
+        "endLine": 20,
+        "endChar": 16
+      },
+      "revId": "a86708faac171aacabc67db3fb1bdbded56c65a4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7f02a1ae_45911755",
+        "filename": "skinStyles/mobile.startup/vector.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2019-03-20T14:30:33Z",
+      "side": 1,
+      "message": "@grayMediumLight",
+      "range": {
+        "startLine": 22,
+        "startChar": 19,
+        "endLine": 22,
+        "endChar": 26
+      },
+      "revId": "a86708faac171aacabc67db3fb1bdbded56c65a4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b4967557_8b07f6ef",
+        "filename": "skinStyles/mobile.startup/vector.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2019-03-20T14:30:33Z",
+      "side": 1,
+      "message": "@borderRadius",
+      "range": {
+        "startLine": 23,
+        "startChar": 16,
+        "endLine": 23,
+        "endChar": 19
+      },
+      "revId": "a86708faac171aacabc67db3fb1bdbded56c65a4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
