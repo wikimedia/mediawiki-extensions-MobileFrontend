@@ -313,27 +313,6 @@ mfExtend( SearchOverlay, Overlay, {
 	},
 
 	/**
-	 * Fade out if the browser supports animations
-	 * @inheritdoc
-	 * @memberof SearchOverlay
-	 * @instance
-	 */
-	hide: function () {
-		var self = this,
-			$html = util.getDocument();
-
-		if ( $html.hasClass( 'animations' ) ) {
-			self.$el.addClass( 'fade-out' );
-			setTimeout( function () {
-				Overlay.prototype.hide.apply( self, arguments );
-			}, 500 );
-		} else {
-			Overlay.prototype.hide.apply( self, arguments );
-		}
-		return true;
-	},
-
-	/**
 	 * Perform search and render results inside current view.
 	 * FIXME: Much of the logic for caching and pending queries inside this function should
 	 * actually live in SearchGateway, please move out.
