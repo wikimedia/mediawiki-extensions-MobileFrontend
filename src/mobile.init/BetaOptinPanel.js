@@ -1,33 +1,39 @@
 var Button = require( '../mobile.startup/Button' ),
 	util = require( '../mobile.startup/util' ),
 	mfExtend = require( '../mobile.startup/mfExtend' ),
-	Panel = require( '../mobile.startup/Panel' ),
+	View = require( '../mobile.startup/View' ),
 	user = mw.user;
 
 /**
  * @class BetaOptinPanel
- * @extends Panel
+ * @extends View
  * @param {Object} props
+ * @param {Function} [props.onCancel]
+ * @property {Function} [_onCancelCallback]
  */
 function BetaOptinPanel( props ) {
-	Panel.call(
+	View.call(
 		this,
 		util.extend(
 			{
 				className: 'panel panel-inline visible',
-				events: { 'click .optin': 'onOptin' }
+				events: {
+					'click .optin': '_onOptin',
+					'click .cancel': '_onCancel'
+				}
 			},
 			props
 		)
 	);
+	this._onCancelCallback = props.onCancel;
 }
 
-mfExtend( BetaOptinPanel, Panel, {
+mfExtend( BetaOptinPanel, View, {
 	/**
 	 * @memberof BetaOptinPanel
 	 * @instance
 	 */
-	templatePartials: util.extend( {}, Panel.prototype.templatePartials, {
+	templatePartials: util.extend( {}, View.prototype.templatePartials, {
 		button: Button.prototype.template
 	} ),
 	/**
@@ -39,7 +45,7 @@ mfExtend( BetaOptinPanel, Panel, {
 	 * @memberof BetaOptinPanel
 	 * @instance
 	 */
-	defaults: util.extend( {}, Panel.prototype.defaults, {
+	defaults: util.extend( {}, View.prototype.defaults, {
 		postUrl: undefined,
 		editToken: user.tokens.get( 'editToken' ),
 		text: mw.msg( 'mobile-frontend-panel-betaoptin-msg' ),
@@ -55,13 +61,28 @@ mfExtend( BetaOptinPanel, Panel, {
 			} ).options
 		]
 	} ),
+
+	/**
+	 * Cancel event handler
+	 * @memberof BetaOptinPanel
+	 * @instance
+	 * @param {Object} ev Event Object
+	 */
+	_onCancel: function ( ev ) {
+		ev.preventDefault();
+		this.$el.removeClass( 'visible' );
+		if ( this._onCancelCallback ) {
+			this._onCancelCallback();
+		}
+	},
+
 	/**
 	 * Cancel event handler
 	 * @memberof BetaOptinPanel
 	 * @instance
 	 * @param {jQuery.Event} ev
 	 */
-	onOptin: function ( ev ) {
+	_onOptin: function ( ev ) {
 		this.$el.find( ev.currentTarget ).closest( 'form' ).trigger( 'submit' );
 	}
 } );

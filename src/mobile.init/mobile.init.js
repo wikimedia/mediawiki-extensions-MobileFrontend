@@ -147,13 +147,13 @@ function displayBetaOptIn( experiment, page ) {
 			betaOptinPanel = new BetaOptinPanel( {
 				postUrl: util.getUrl( 'Special:MobileOptions', {
 					returnto: page.title
-				} )
+				} ),
+				onCancel: function () {
+					storage.set( 'mobile-betaoptin-token', '~' );
+				}
 			} );
 
-			betaOptinPanel
-				.on( 'hide', function () {
-					storage.set( 'mobile-betaoptin-token', '~' );
-				} ).appendTo( page.getLeadSectionElement() );
+			betaOptinPanel.appendTo( page.getLeadSectionElement() );
 		}
 
 		// let the interested parties e.g. QuickSurveys know whether the panel is shown
