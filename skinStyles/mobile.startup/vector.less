@@ -1,0 +1,55 @@
+@import 'mediawiki.ui/variables';
+
+.overlay-enabled .mw-overlays-container {
+	// Show an overlay for the entire page to avoid page interactions.
+	// To get the effect of a modal dialogue.
+	content: '';
+	display: block;
+	position: fixed; /* could also be absolute */
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 10;
+	background-color: rgba( 255, 255, 255, 0.5 );
+}
+
+.overlay {
+	position: absolute;
+	top: 20%;
+	left: 20%;
+	width: 60%;
+	height: auto;
+	max-width: 800px;
+	max-height: 500px;
+	border: 1px solid @colorGray10;
+	border-radius: @borderRadius;
+	box-shadow: 0 2px 2px 0 rgba( 0, 0, 0, 0.25 );
+	z-index: 11; // Greater than the background layer
+
+	.overlay-content {
+		padding: 1em;
+		outline: 1px solid @colorGray12;
+	}
+
+	.mw-ui-icon-mf-overlay-close {
+		border: 0;
+		background: none;
+	}
+
+	.overlay-header {
+		.overlay-title {
+			padding: 0 1em;
+			cursor: default;
+			text-align: center;
+
+			h2 {
+				border: 0;
+			}
+		}
+	}
+}
+
+.overlay-enabled .mw-overlays-container .overlay {
+	height: auto;
+}
