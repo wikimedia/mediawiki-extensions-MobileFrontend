@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "a6fbaebc_460de564",
+        "filename": "src/mobile.notifications.overlay/list.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-21T20:39:14Z",
+      "side": 1,
+      "message": "I\u0027ve rephrased this. Note the line break.",
+      "parentUuid": "9d3edaf1_be64cf7e",
+      "range": {
+        "startLine": 19,
+        "startChar": 50,
+        "endLine": 19,
+        "endChar": 63
+      },
+      "revId": "419e256a451b260e0ccc23a41ecc17badad7112d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fa8b9c9b_aa36e3ad",
         "filename": "src/mobile.startup/notifications/overlay.js",
         "patchSetId": 15
@@ -36,6 +60,30 @@
       "writtenOn": "2019-03-21T19:39:22Z",
       "side": 1,
       "message": "this still says rendered",
+      "range": {
+        "startLine": 12,
+        "startChar": 59,
+        "endLine": 12,
+        "endChar": 67
+      },
+      "revId": "419e256a451b260e0ccc23a41ecc17badad7112d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "295df5b4_2d86b0eb",
+        "filename": "src/mobile.startup/notifications/overlay.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-21T20:39:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fa8b9c9b_aa36e3ad",
       "range": {
         "startLine": 12,
         "startChar": 59,
