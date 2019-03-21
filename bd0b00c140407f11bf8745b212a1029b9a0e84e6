@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "62815b75_d8feca74",
+        "filename": "src/mobile.talk.overlays/AddTopicForm.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-03-21T19:47:35Z",
+      "side": 1,
+      "message": "can we rename $ta to something more \"readable\"? I have no idea what \"$ta\" stands for (textarea?).",
+      "range": {
+        "startLine": 82,
+        "startChar": 7,
+        "endLine": 82,
+        "endChar": 10
+      },
+      "revId": "bd0b00c140407f11bf8745b212a1029b9a0e84e6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "483751ba_affe4509",
+        "filename": "src/mobile.talk.overlays/TalkSectionAddOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-03-21T19:47:35Z",
+      "side": 1,
+      "message": "there is one only one use of this, and it can be easily avoided by using `this`.",
+      "range": {
+        "startLine": 198,
+        "startChar": 3,
+        "endLine": 198,
+        "endChar": 15
+      },
+      "revId": "bd0b00c140407f11bf8745b212a1029b9a0e84e6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1aa01580_89d3a467",
+        "filename": "src/mobile.talk.overlays/TalkSectionAddOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 215,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-03-21T19:47:35Z",
+      "side": 1,
+      "message": "looks like this is the only place where we use self. In this context `this` will also work properly",
+      "range": {
+        "startLine": 215,
+        "startChar": 10,
+        "endLine": 215,
+        "endChar": 21
+      },
+      "revId": "bd0b00c140407f11bf8745b212a1029b9a0e84e6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a3fdac65_9eb883cb",
+        "filename": "src/mobile.talk.overlays/TalkSectionAddOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 222,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-03-21T19:47:35Z",
+      "side": 1,
+      "message": "does it work this way? I think this line is just ignored as we do not return `d`.",
+      "range": {
+        "startLine": 222,
+        "startChar": 4,
+        "endLine": 222,
+        "endChar": 21
+      },
+      "revId": "bd0b00c140407f11bf8745b212a1029b9a0e84e6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
