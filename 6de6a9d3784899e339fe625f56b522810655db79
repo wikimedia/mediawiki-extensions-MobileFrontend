@@ -88,6 +88,30 @@
     },
     {
       "key": {
+        "uuid": "1c6e6a08_53e41de9",
+        "filename": "resources/mobile.mediaViewer/imageCarousel.less",
+        "patchSetId": 9
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-21T18:23:32Z",
+      "side": 1,
+      "message": "If the image fails to load, the image will replace itself with the loadErrorMessage.js component",
+      "parentUuid": "98e45b59_fee8e16c",
+      "range": {
+        "startLine": 47,
+        "startChar": 0,
+        "endLine": 49,
+        "endChar": 21
+      },
+      "revId": "6de6a9d3784899e339fe625f56b522810655db79",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "999f5e86_9da34752",
         "filename": "src/mobile.mediaViewer/imageCarousel.js",
         "patchSetId": 9
@@ -151,6 +175,30 @@
     },
     {
       "key": {
+        "uuid": "ca35090d_acf191f9",
+        "filename": "src/mobile.mediaViewer/imageCarousel.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-21T18:23:32Z",
+      "side": 1,
+      "message": "Yeah that\u0027s a great point. They could change and in that case, this function would not run again. *I think* in most cases unless the details bar is flooded with details, the bottom line difference would be pretty small. It would not handle the images with large image details very well. Will be fixing this in next patch",
+      "parentUuid": "0df53c02_791bf56b",
+      "range": {
+        "startLine": 73,
+        "startChar": 0,
+        "endLine": 76,
+        "endChar": 10
+      },
+      "revId": "6de6a9d3784899e339fe625f56b522810655db79",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "91c71dd9_43f3516c",
         "filename": "src/mobile.mediaViewer/imageCarousel.js",
         "patchSetId": 9
@@ -162,6 +210,30 @@
       "writtenOn": "2019-03-19T17:05:50Z",
       "side": 1,
       "message": "Is it intentional to change props itself? Maybe we should assign to an empty object to avoid mutating a client parameter.",
+      "range": {
+        "startLine": 106,
+        "startChar": 4,
+        "endLine": 106,
+        "endChar": 15
+      },
+      "revId": "6de6a9d3784899e339fe625f56b522810655db79",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5287a1fc_fdd7788b",
+        "filename": "src/mobile.mediaViewer/imageCarousel.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-21T18:23:32Z",
+      "side": 1,
+      "message": "this is only changing the new image details props on line 100 within this function. I think that\u0027s okay?",
+      "parentUuid": "91c71dd9_43f3516c",
       "range": {
         "startLine": 106,
         "startChar": 4,

@@ -71,6 +71,24 @@
     },
     {
       "key": {
+        "uuid": "b5f317aa_73ae3cb3",
+        "filename": "src/mobile.mediaViewer/imageCarousel.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-21T18:23:32Z",
+      "side": 1,
+      "message": "@Jdlrobson did you have a chance to check out my throwaway patch at  https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/497794/ ? \n\nI tried using just image names but I think the minimum we can pass in is image names and captions. I\u0027m not sure if this approach with AsyncImageFns is better or the Thumbnails one and am curious to hear your thoughts",
+      "parentUuid": "08477f21_1777658a",
+      "revId": "a6c28e4116295111c35b889e41da827f2271c7a7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fa0ebcaf_d7216fb7",
         "filename": "src/mobile.mediaViewer/imageCarousel.js",
         "patchSetId": 2
