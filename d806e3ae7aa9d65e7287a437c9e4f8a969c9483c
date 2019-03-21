@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "6d438f9a_374f601e",
+        "filename": "resources/mobile.init/BetaOptInPanel.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-21T21:09:48Z",
+      "side": 1,
+      "message": "Did you consider renaming the class to beta-opt-in-panel__content instead?",
+      "revId": "d806e3ae7aa9d65e7287a437c9e4f8a969c9483c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "391e9284_b1f71c8a",
         "filename": "src/mobile.init/BetaOptInPanel.js",
         "patchSetId": 2
