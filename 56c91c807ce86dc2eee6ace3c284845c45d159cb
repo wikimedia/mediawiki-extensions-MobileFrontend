@@ -34,6 +34,24 @@
       "revId": "56c91c807ce86dc2eee6ace3c284845c45d159cb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ce402b7_899c5620",
+        "filename": "resources/mobile.init/Panel.hogan",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-21T19:27:35Z",
+      "side": 1,
+      "message": "Can we make use of View.prototype.isTemplateMode then?\nOtherwise the BetaOptInPanel renders like this which I find unexpected and confusing..:\n```\n\u003cdiv class\u003d\"panel\"\u003e\n  \u003cform class\u003d\"beta-opt-in-panel message content\" action\u003d\"{{postUrl}}\" method\u003d\"POST\"\u003e\n   \u003c/form\u003e\n\u003c/div\u003e\n```",
+      "parentUuid": "e2890f18_83a18bd8",
+      "revId": "56c91c807ce86dc2eee6ace3c284845c45d159cb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
