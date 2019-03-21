@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7c428669_06e4b30c",
+        "filename": "src/mobile.init/BetaOptInPanel.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-21T18:33:36Z",
+      "side": 1,
+      "message": "Line above shows inlining. This shows button composition.",
+      "range": {
+        "startLine": 48,
+        "startChar": 6,
+        "endLine": 48,
+        "endChar": 12
+      },
+      "revId": "7210e1b65f7fc1a4c255fe1e5b4dc407077b0c80",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ad3417e6_6d90cac6",
+        "filename": "src/mobile.init/BetaOptInPanel.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-21T18:33:36Z",
+      "side": 1,
+      "message": "Button usages demo composition.",
+      "range": {
+        "startLine": 81,
+        "startChar": 6,
+        "endLine": 81,
+        "endChar": 12
+      },
+      "revId": "7210e1b65f7fc1a4c255fe1e5b4dc407077b0c80",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e6d0ee1e_786d8dd6",
+        "filename": "src/mobile.init/BetaOptInPanel.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-21T18:33:36Z",
+      "side": 1,
+      "message": "IRL, Button would be its own file. If you literally wanted to render only a Button, you\u0027d call this guy. Otherwise, only Button.html() and Bunton.bind() are for composition.",
+      "range": {
+        "startLine": 91,
+        "startChar": 0,
+        "endLine": 98,
+        "endChar": 2
+      },
+      "revId": "7210e1b65f7fc1a4c255fe1e5b4dc407077b0c80",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
