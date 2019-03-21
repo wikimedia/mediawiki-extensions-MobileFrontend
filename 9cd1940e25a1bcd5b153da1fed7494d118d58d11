@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d06362d1_57689294",
+        "filename": "src/mobile.startup/talk/addTopicOverlay.js",
+        "patchSetId": 35
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-03-21T23:08:24Z",
+      "side": 1,
+      "message": "looks like the timer is not used, there is no assignment, only window.clearTimeout( timer ) is called",
+      "range": {
+        "startLine": 37,
+        "startChar": 1,
+        "endLine": 37,
+        "endChar": 11
+      },
+      "revId": "9cd1940e25a1bcd5b153da1fed7494d118d58d11",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b18b24e4_ae5a749a",
+        "filename": "src/mobile.startup/talk/addTopicOverlay.js",
+        "patchSetId": 35
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-03-21T23:08:24Z",
+      "side": 1,
+      "message": "pending save is undefined, if we want to to a null object pattern here, maybe it\u0027s better to call it \"noPendingSave\" or sth like that, otherwise it looks like a bug.",
+      "range": {
+        "startLine": 68,
+        "startChar": 67,
+        "endLine": 68,
+        "endChar": 78
+      },
+      "revId": "9cd1940e25a1bcd5b153da1fed7494d118d58d11",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1b3afe1e_8815fdd1",
+        "filename": "src/mobile.startup/talk/addTopicOverlay.js",
+        "patchSetId": 35
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-03-21T23:08:24Z",
+      "side": 1,
+      "message": "overlay is defined but most probably null.",
+      "range": {
+        "startLine": 68,
+        "startChar": 43,
+        "endLine": 68,
+        "endChar": 50
+      },
+      "revId": "9cd1940e25a1bcd5b153da1fed7494d118d58d11",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a00a4cd6_92ef5ffe",
+        "filename": "src/mobile.talk.overlays/mobile.talk.overlays.js",
+        "patchSetId": 35
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-03-21T23:08:24Z",
+      "side": 1,
+      "message": "it\u0027s possible to submit the talk with empty body (because there is 250ms delay), and when that happens we end up with generic error. It would be nice to handle that error in a better way than just saying \"The topic can\u0027t be added due to an unknown error.\"",
+      "range": {
+        "startLine": 36,
+        "startChar": 3,
+        "endLine": 36,
+        "endChar": 58
+      },
+      "revId": "9cd1940e25a1bcd5b153da1fed7494d118d58d11",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
