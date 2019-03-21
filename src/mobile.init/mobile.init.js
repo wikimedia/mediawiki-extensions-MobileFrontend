@@ -13,7 +13,7 @@ var currentPage, skin, exports,
 	isPageContentModelEditable = mw.config.get( 'wgMFIsPageContentModelEditable' ),
 	editor = require( './editor' ),
 	PageGateway = require( '../mobile.startup/PageGateway' ),
-	BetaOptinPanel = require( './BetaOptinPanel' ),
+	BetaOptInPanel = require( './BetaOptInPanel' ),
 	gateway = new PageGateway( new mw.Api() ),
 	util = mw.util,
 	mfUtil = require( '../mobile.startup/util' ),
@@ -129,7 +129,7 @@ function loadCurrentPage() {
  * @param {Page} page
  */
 function displayBetaOptIn( experiment, page ) {
-	var betaOptinPanel, inStable, inSample,
+	var betaOptInPanel, inStable, inSample,
 		token = storage.get( 'mobile-betaoptin-token' );
 
 	// local storage is supported in this case, when ~ means it was dismissed
@@ -144,7 +144,7 @@ function displayBetaOptIn( experiment, page ) {
 		inStable = context.getMode() === 'stable';
 		inSample = experiments.getBucket( experiment, token ) === 'A';
 		if ( inStable && ( inSample || util.getParamValue( 'debug' ) ) ) {
-			betaOptinPanel = new BetaOptinPanel( {
+			betaOptInPanel = new BetaOptInPanel( {
 				postUrl: util.getUrl( 'Special:MobileOptions', {
 					returnto: page.title
 				} ),
@@ -153,12 +153,12 @@ function displayBetaOptIn( experiment, page ) {
 				}
 			} );
 
-			betaOptinPanel.appendTo( page.getLeadSectionElement() );
+			betaOptInPanel.appendTo( page.getLeadSectionElement() );
 		}
 
 		// let the interested parties e.g. QuickSurveys know whether the panel is shown
 		mw.track( 'mobile.betaoptin', {
-			isPanelShown: betaOptinPanel !== undefined
+			isPanelShown: betaOptInPanel !== undefined
 		} );
 	}
 }

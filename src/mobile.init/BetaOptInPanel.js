@@ -5,13 +5,13 @@ var Button = require( '../mobile.startup/Button' ),
 	user = mw.user;
 
 /**
- * @class BetaOptinPanel
+ * @class BetaOptInPanel
  * @extends View
  * @param {Object} props
  * @param {Function} [props.onCancel]
  * @property {Function} [_onCancelCallback]
  */
-function BetaOptinPanel( props ) {
+function BetaOptInPanel( props ) {
 	View.call(
 		this,
 		util.extend(
@@ -28,21 +28,21 @@ function BetaOptinPanel( props ) {
 	this._onCancelCallback = props.onCancel;
 }
 
-mfExtend( BetaOptinPanel, View, {
+mfExtend( BetaOptInPanel, View, {
 	/**
-	 * @memberof BetaOptinPanel
+	 * @memberof BetaOptInPanel
 	 * @instance
 	 */
 	templatePartials: util.extend( {}, View.prototype.templatePartials, {
 		button: Button.prototype.template
 	} ),
 	/**
-	 * @memberof BetaOptinPanel
+	 * @memberof BetaOptInPanel
 	 * @instance
 	 */
 	template: mw.template.get( 'mobile.init', 'Panel.hogan' ),
 	/**
-	 * @memberof BetaOptinPanel
+	 * @memberof BetaOptInPanel
 	 * @instance
 	 */
 	defaults: util.extend( {}, View.prototype.defaults, {
@@ -64,7 +64,7 @@ mfExtend( BetaOptinPanel, View, {
 
 	/**
 	 * Cancel event handler
-	 * @memberof BetaOptinPanel
+	 * @memberof BetaOptInPanel
 	 * @instance
 	 * @param {Object} ev Event Object
 	 */
@@ -78,7 +78,7 @@ mfExtend( BetaOptinPanel, View, {
 
 	/**
 	 * Cancel event handler
-	 * @memberof BetaOptinPanel
+	 * @memberof BetaOptInPanel
 	 * @instance
 	 * @param {jQuery.Event} ev
 	 */
@@ -87,4 +87,4 @@ mfExtend( BetaOptinPanel, View, {
 	}
 } );
 
-module.exports = BetaOptinPanel;
+module.exports = BetaOptInPanel;
