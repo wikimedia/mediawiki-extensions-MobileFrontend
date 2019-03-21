@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "645de443_8d4cf9c4",
+        "filename": "resources/mobile.init/Panel.hogan",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-21T19:14:23Z",
+      "side": 1,
+      "message": "I think this should be on defined in className on BetaOptInPanel",
+      "revId": "56c91c807ce86dc2eee6ace3c284845c45d159cb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
