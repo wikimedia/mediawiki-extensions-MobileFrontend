@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "34da7a2a_fb460e66",
+        "filename": "src/mobile.init/BetaOptInPanel.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-21T21:12:47Z",
+      "side": 1,
+      "message": "Did you consider using a template here.\n\nIt\u0027s my understanding that removing templatePartials is a good thing, as a templatePartial is basically a component in a disguise, but there\u0027s nothing wrong with templates in general IMO.\n\nThe danger of this is if text contains html (which is possible with messages) these could render as HTML. It must be escaped (Hogan was doing that for you but now you must do it)",
+      "revId": "9aca376770a6c3dfb57d52dcfcf6c9ee982ba4bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "28c2ada4_f83b5d1c",
+        "filename": "src/mobile.init/BetaOptInPanel.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-21T21:12:47Z",
+      "side": 1,
+      "message": "Note, if using jQuery you could do $form.append( [ new Button().$el, new Button().$el ] );\n\nThis might be more readable at the trade off of using jQuery.",
+      "revId": "9aca376770a6c3dfb57d52dcfcf6c9ee982ba4bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
