@@ -110,6 +110,40 @@
     },
     {
       "key": {
+        "uuid": "f5dfdc22_c45d98e6",
+        "filename": "src/mobile.startup/image/overlay.js",
+        "patchSetId": 62
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-21T15:20:35Z",
+      "side": 1,
+      "message": "My read of the component is that it has a header with a single close icon that is changed to gray.\ne.g.\n\n                        cancelButton: icons.cancel( \u0027gray\u0027 ).toHtmlString(),\n                        className: \u0027overlay media-viewer\u0027\n\nWe can add additional styling to the header to make it look as it is now.\n\n.overlay-header-container {\n  background: none;\n  border-bottom: 0;\n}\n\nI think not having a header and trying to spoof one is going to trip us up later.",
+      "revId": "208bc7c907f8de91aa6b67cb57f1d563ea03d052",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "65a066ab_2c26a8cc",
+        "filename": "src/mobile.startup/image/overlay.js",
+        "patchSetId": 62
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-21T15:20:35Z",
+      "side": 1,
+      "message": "I took  look at this and I think we can remove the onBeforeExit call altogether and make closing behave like a normal overlay.\n\nThe key would be using useReplaceState (which we didn\u0027t have available before)\n\nA slide function like this: \n\n+\t\tvar nextThumbnail \u003d this.$el.find( ev.target ).closest( \u0027.slider-button\u0027 ).data( \u0027thumbnail\u0027 ),\n+\t\t\ttitle \u003d nextThumbnail.options.filename;\n+\n+\t\tthis.router.navigateTo( null, {\n+\t\t\tpath: \u0027#/media/\u0027 + title,\n+\t\t\tuseReplaceState: true\n+\t\t} );\n// update state and render of the carousel component\n+\t\tthis.options.title \u003d nextThumbnail.options.filename;\n+\t\tthis.render();\n\nTry it out and let me know!\nThis would also be good as this behaviour could be passed in as a prop from here, making it clear how the ImageOverlay uses a router.",
+      "revId": "208bc7c907f8de91aa6b67cb57f1d563ea03d052",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a14503c6_738b8fc1",
         "filename": "src/mobile.startup/image/overlay.js",
         "patchSetId": 62
