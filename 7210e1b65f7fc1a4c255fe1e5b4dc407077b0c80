@@ -48,6 +48,29 @@
     },
     {
       "key": {
+        "uuid": "59838637_a7979314",
+        "filename": "src/mobile.init/BetaOptInPanel.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-21T18:37:09Z",
+      "side": 1,
+      "message": "This is just for psuedo-namespacing. We can still export a simple object at the bottom. We can also expose a do it all function if useful like:\n\n static new(props) {\n   const element \u003d render(html(props))\n   bind(element, props)\n   return element\n }",
+      "range": {
+        "startLine": 81,
+        "startChar": 0,
+        "endLine": 81,
+        "endChar": 5
+      },
+      "revId": "7210e1b65f7fc1a4c255fe1e5b4dc407077b0c80",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e6d0ee1e_786d8dd6",
         "filename": "src/mobile.init/BetaOptInPanel.js",
         "patchSetId": 1
