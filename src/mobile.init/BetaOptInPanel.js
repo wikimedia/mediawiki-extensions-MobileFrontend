@@ -16,7 +16,7 @@ function BetaOptInPanel( props ) {
 		this,
 		util.extend(
 			{
-				className: 'panel panel-inline visible',
+				isTemplateMode: true,
 				events: {
 					'click .optin': '_onOptin',
 					'click .cancel': '_onCancel'
