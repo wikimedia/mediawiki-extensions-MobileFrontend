@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9d3edaf1_be64cf7e",
+        "filename": "src/mobile.notifications.overlay/list.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-21T19:39:22Z",
+      "side": 1,
+      "message": "I think a word is omitted here",
+      "range": {
+        "startLine": 19,
+        "startChar": 50,
+        "endLine": 19,
+        "endChar": 63
+      },
+      "revId": "419e256a451b260e0ccc23a41ecc17badad7112d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa8b9c9b_aa36e3ad",
+        "filename": "src/mobile.startup/notifications/overlay.js",
+        "patchSetId": 15
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-21T19:39:22Z",
+      "side": 1,
+      "message": "this still says rendered",
+      "range": {
+        "startLine": 12,
+        "startChar": 59,
+        "endLine": 12,
+        "endChar": 67
+      },
+      "revId": "419e256a451b260e0ccc23a41ecc17badad7112d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
