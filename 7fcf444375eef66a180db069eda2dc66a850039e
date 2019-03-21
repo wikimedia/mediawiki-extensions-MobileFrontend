@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fca84a9f_0565d289",
+        "filename": "src/mobile.editor.ve/ve.init.mw.MobileFrontendArticleTarget.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2019-03-21T21:13:16Z",
+      "side": 0,
+      "message": "FIXME Method looks unused",
+      "revId": "7fcf444375eef66a180db069eda2dc66a850039e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c95f98e5_5c883343",
+        "filename": "src/mobile.editor.ve/ve.init.mw.MobileFrontendArticleTarget.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2019-03-21T21:13:16Z",
+      "side": 0,
+      "message": "I changed this to use this.overlay.options.placeholder instead.",
+      "revId": "7fcf444375eef66a180db069eda2dc66a850039e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "63dd00ad_169f6eee",
+        "filename": "src/mobile.editor.ve/ve.init.mw.MobileFrontendArticleTarget.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2019-03-21T21:13:16Z",
+      "side": 0,
+      "message": "FIXME This actually skips ve.init.mw.Target.prototype.setSurface. Why?",
+      "revId": "7fcf444375eef66a180db069eda2dc66a850039e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
