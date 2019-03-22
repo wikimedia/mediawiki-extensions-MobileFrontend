@@ -1,0 +1,34 @@
+@import '../../../mobile.less/mobile.variables.less';
+@import '../../../mobile.less/mobile.mixins';
+@import 'mediawiki.mixins.less';
+
+// .overlay.media-viewer specificity needed to override padding-top on .overlay
+.overlay.media-viewer {
+	background: #000;
+	padding-top: 0;
+
+	.overlay-content {
+		height: 100%;
+		width: 100%;
+		margin: 0;
+		max-width: none;
+	}
+
+	.header-container {
+		background: transparent;
+		border-bottom: 0;
+	}
+
+	.main {
+		height: 100%;
+		position: relative;
+		width: 100%;
+	}
+
+	.cancel {
+		position: absolute;
+		right: 0;
+		top: 10px;
+		z-index: @z-indexOverOverlay;
+	}
+}

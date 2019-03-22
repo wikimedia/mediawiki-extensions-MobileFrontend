@@ -1,10 +1,9 @@
-var Overlay = require( './../mobile.startup/Overlay' ),
-	util = require( './../mobile.startup/util' ),
-	mfExtend = require( './../mobile.startup/mfExtend' ),
-	Icon = require( './../mobile.startup/Icon' ),
-	icons = require( './../mobile.startup/icons' ),
-	Button = require( './../mobile.startup/Button' ),
-	cancelButton = icons.cancel( 'gray' ),
+var View = require( '../mobile.startup/View' ),
+	util = require( '../mobile.startup/util' ),
+	mfExtend = require( '../mobile.startup/mfExtend' ),
+	Icon = require( '../mobile.startup/Icon' ),
+	icons = require( '../mobile.startup/icons' ),
+	Button = require( '../mobile.startup/Button' ),
 	detailsButton = new Button( {
 		label: mw.msg( 'mobile-frontend-media-details' ),
 		additionalClassNames: 'button',
@@ -27,29 +26,23 @@ var Overlay = require( './../mobile.startup/Overlay' ),
 
 /**
  * Displays images in full screen overlay
- * @class ImageOverlay
- * @extends Overlay
- * @uses Icon
- * @uses ImageGateway
- * @uses LoadErrorMessage
- * @uses Router
- * @fires ImageOverlay#ImageOverlay-exit
- * @fires ImageOverlay#ImageOverlay-slide
+ * @class ImageCarousel
+ * @extends View
  * @param {Object} options Configuration options
  * @param {OO.EventEmitter} options.eventBus Object used to listen for resize:throttled events
  */
-function ImageOverlay( options ) {
+function ImageCarousel( options ) {
 	this.gateway = options.gateway || new ImageGateway( {
 		api: options.api
 	} );
 	this.router = options.router || router;
 	this.eventBus = options.eventBus;
 
-	Overlay.call(
+	View.call(
 		this,
 		util.extend(
 			{
-				className: 'overlay media-viewer',
+				className: 'image-carousel',
 				events: {
 					'click .image-wrapper': 'onToggleDetails',
 					// Click tracking for table of contents so we can see if people interact with it
@@ -61,20 +54,20 @@ function ImageOverlay( options ) {
 	);
 }
 
-mfExtend( ImageOverlay, Overlay, {
+mfExtend( ImageCarousel, View, {
 	/**
-	 * @memberof ImageOverlay
+	 * @memberof ImageCarousel
 	 * @instance
 	 */
 	hideOnExitClick: false,
 	/**
-	 * @memberof ImageOverlay
+	 * @memberof ImageCarousel
 	 * @instance
 	 */
-	template: mw.template.get( 'mobile.mediaViewer', 'Overlay.hogan' ),
+	template: mw.template.get( 'mobile.mediaViewer', 'ImageCarousel.hogan' ),
 
 	/**
-	 * @memberof ImageOverlay
+	 * @memberof ImageCarousel
 	 * @instance
 	 * @mixes Overlay#defaults
 	 * @property {Object} defaults Default options hash.
@@ -82,23 +75,34 @@ mfExtend( ImageOverlay, Overlay, {
 	 * @property {string} defaults.licenseLinkMsg Link to license information in media viewer.
 	 * @property {Thumbnail[]} defaults.thumbnails a list of thumbnails to browse
 	 */
-	defaults: util.extend( {}, Overlay.prototype.defaults, {
+	defaults: util.extend( {}, View.prototype.defaults, {
 		licenseLinkMsg: mw.msg( 'mobile-frontend-media-license-link' ),
 		thumbnails: []
 	} ),
 	/**
 	 * Event handler for slide event
-	 * @memberof ImageOverlay
+	 * @memberof ImageCarousel
 	 * @instance
 	 * @param {jQuery.Event} ev
 	 */
 	onSlide: function ( ev ) {
-		var nextThumbnail = this.$el.find( ev.target ).closest( '.slider-button' ).data( 'thumbnail' );
-		this.emit( ImageOverlay.EVENT_SLIDE, nextThumbnail );
+		var
+			newImageCarousel,
+			nextThumbnail = this.$el.find( ev.target ).closest( '.slider-button' ).data( 'thumbnail' ),
+			title = nextThumbnail.options.filename;
+
+		this.router.navigateTo( null, {
+			path: '#/media/' + title,
+			useReplaceState: true
+		} );
+		this.options.title = nextThumbnail.options.filename;
+		newImageCarousel = new ImageCarousel( this.options );
+		this.$el.replaceWith( newImageCarousel.$el );
+		this.$el = newImageCarousel.$el;
 	},
 	/**
 	 * @inheritdoc
-	 * @memberof ImageOverlay
+	 * @memberof ImageCarousel
 	 * @instance
 	 */
 	preRender: function () {
@@ -113,7 +117,7 @@ mfExtend( ImageOverlay, Overlay, {
 	/**
 	 * Setup the next and previous images to enable the user to arrow through
 	 * all images in the set of images given in thumbs.
-	 * @memberof ImageOverlay
+	 * @memberof ImageCarousel
 	 * @instance
 	 * @param {Array} thumbs A set of images, which are available
 	 * @private
@@ -138,7 +142,7 @@ mfExtend( ImageOverlay, Overlay, {
 	},
 	/**
 	 * Disables the possibility to arrow through all images of the page.
-	 * @memberof ImageOverlay
+	 * @memberof ImageCarousel
 	 * @instance
 	 * @private
 	 */
@@ -149,7 +153,7 @@ mfExtend( ImageOverlay, Overlay, {
 	/**
 	 * Handler for retry event which triggers when user tries to reload overlay
 	 * after a loading error.
-	 * @memberof ImageOverlay
+	 * @memberof ImageCarousel
 	 * @instance
 	 * @private
 	 */
@@ -160,11 +164,13 @@ mfExtend( ImageOverlay, Overlay, {
 
 	/**
 	 * @inheritdoc
-	 * @memberof ImageOverlay
+	 * @memberof ImageCarousel
 	 * @instance
 	 */
 	postRender: function () {
-		var $img,
+		var
+			$img,
+			$el = this.$el,
 			$spinner = icons.spinner().$el,
 			thumbs = this.options.thumbnails || [],
 			self = this;
@@ -179,13 +185,13 @@ mfExtend( ImageOverlay, Overlay, {
 
 			$spinner.hide();
 			// hide broken image if present
-			self.$el.find( '.image img' ).hide();
+			$el.find( '.image img' ).hide();
 
 			// show error message if not visible already
-			if ( self.$el.find( '.load-fail-msg' ).length === 0 ) {
+			if ( $el.find( '.load-fail-msg' ).length === 0 ) {
 				new LoadErrorMessage( { retryPath: self.router.getPath() } )
 					.on( 'retry', self._handleRetry.bind( self ) )
-					.prependTo( self.$el.find( '.image' ) );
+					.prependTo( $el.find( '.image' ) );
 			}
 		}
 
@@ -204,10 +210,9 @@ mfExtend( ImageOverlay, Overlay, {
 			this._enableArrowImages( thumbs );
 		}
 
-		this.$details = this.$el.find( '.image-details' );
-		this.$el.find( '.image' ).append( $spinner );
+		this.$details = $el.find( '.image-details' );
+		$el.find( '.image' ).append( $spinner );
 
-		Overlay.prototype.postRender.apply( this );
 		this.$details.prepend( detailsButton.$el );
 
 		this.gateway.getThumb( self.options.title ).then( function ( data ) {
@@ -243,15 +248,15 @@ mfExtend( ImageOverlay, Overlay, {
 			// (https://stackoverflow.com/questions/12354865/image-onload-event-and-browser-cache#answer-12355031)
 			$img.on( 'load', addImageLoadClass ).on( 'error', showLoadFailMsg );
 			$img.attr( 'src', data.thumburl ).attr( 'alt', self.options.caption );
-			self.$el.find( '.image' ).append( $img );
+			$el.find( '.image' ).append( $img );
 
 			self.$details.addClass( 'is-visible' );
 			self._positionImage();
-			self.$el.find( '.image-details a' ).attr( 'href', url );
+			$el.find( '.image-details a' ).attr( 'href', url );
 			if ( data.extmetadata ) {
 				// Add license information
 				if ( data.extmetadata.LicenseShortName ) {
-					self.$el.find( '.license a' )
+					$el.find( '.license a' )
 						.text( data.extmetadata.LicenseShortName.value )
 						.attr( 'href', url );
 				}
@@ -259,7 +264,7 @@ mfExtend( ImageOverlay, Overlay, {
 				if ( data.extmetadata.Artist ) {
 					// Strip any tags
 					author = data.extmetadata.Artist.value.replace( /<.*?>/g, '' );
-					self.$el.find( '.license' ).prepend( author + ' &bull; ' );
+					$el.find( '.license' ).prepend( author + ' &bull; ' );
 				}
 			}
 			self.adjustDetails();
@@ -269,11 +274,12 @@ mfExtend( ImageOverlay, Overlay, {
 		} );
 
 		this.eventBus.on( 'resize:throttled', this._positionImage.bind( this ) );
+		this._positionImage();
 	},
 
 	/**
 	 * Event handler that toggles the details bar.
-	 * @memberof ImageOverlay
+	 * @memberof ImageCarousel
 	 * @instance
 	 */
 	onToggleDetails: function () {
@@ -283,33 +289,11 @@ mfExtend( ImageOverlay, Overlay, {
 			this._positionImage();
 		}
 	},
-
-	/**
-	 * fixme: remove this redundant function.
-	 * @memberof ImageOverlay
-	 * @instance
-	 * @param {Event} ev
-	 */
-	onExitClick: function ( ev ) {
-		Overlay.prototype.onExitClick.apply( this, arguments );
-		this.emit( ImageOverlay.EVENT_EXIT, ev );
-	},
-
-	/**
-	 * @inheritdoc
-	 * @memberof ImageOverlay
-	 * @instance
-	 */
-	show: function () {
-		Overlay.prototype.show.apply( this, arguments );
-		this._positionImage();
-	},
-
 	/**
 	 * Fit the image into the window if its dimensions are bigger than the window dimensions.
 	 * Compare window width to height ratio to that of image width to height when setting
 	 * image width or height.
-	 * @memberof ImageOverlay
+	 * @memberof ImageCarousel
 	 * @instance
 	 * @private
 	 */
@@ -344,12 +328,11 @@ mfExtend( ImageOverlay, Overlay, {
 		this.$el.find( '.image-wrapper' ).css( 'bottom', detailsHeight );
 		this.$el.find( '.slider-button.prev' ).append( slideLeftButton.$el );
 		this.$el.find( '.slider-button.next' ).append( slideRightButton.$el );
-		cancelButton.$el.insertBefore( this.$details );
 	},
 
 	/**
 	 * Function to adjust the height of details section to not more than 50% of window height.
-	 * @memberof ImageOverlay
+	 * @memberof ImageCarousel
 	 * @instance
 	 */
 	adjustDetails: function () {
@@ -360,16 +343,4 @@ mfExtend( ImageOverlay, Overlay, {
 	}
 } );
 
-/**
- * fixme: remove this redundant constant.
- * @memberof ImageOverlay
- * @event
- */
-ImageOverlay.EVENT_EXIT = 'ImageOverlay-exit';
-/**
- * @memberof ImageOverlay
- * @event
- */
-ImageOverlay.EVENT_SLIDE = 'ImageOverlay-slide';
-
-module.exports = ImageOverlay;
+module.exports = ImageCarousel;
