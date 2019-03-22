@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "532502c3_34568ce1",
+        "filename": "resources/mobile.init/BetaOptInPanel.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-22T17:34:47Z",
+      "side": 1,
+      "message": "I think it\u0027s purely accidental that the rule in MinervaNeue/resources/skins.minerva.content.styles/tablet/common.less is applying here and shouldn\u0027t be applying to this component.\n\nRemoving the class changes no unexpected visual changes for me.",
+      "parentUuid": "a53ec83e_a386835d",
+      "revId": "d806e3ae7aa9d65e7287a437c9e4f8a969c9483c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "391e9284_b1f71c8a",
         "filename": "src/mobile.init/BetaOptInPanel.js",
         "patchSetId": 2
