@@ -22,6 +22,30 @@
       "revId": "9bcad21cbd9d659cb1b11c45f1caa7caa94c2c31",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c7982498_44929e55",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 15
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-22T15:59:51Z",
+      "side": 1,
+      "message": "Right now the implementation is very specific to the Minerva skin and this overlay is incredibly simple (it renders an overlay and moves a hidden element  in Special:Notifications article body \u0027.mw-echo-ui-crossWikiUnreadFilterWidget into the overlay content area.\n\nI decided doing this in the Minerva made this easier to comprehend while maintaining backwards compatibility.\n\nA read through https://gerrit.wikimedia.org/r/#/c/mediawiki/skins/MinervaNeue/+/497660/2/resources/skins.minerva.notifications/init.js first will probably help understand.\n\n\nThis code should probably end up in Echo anyway.",
+      "parentUuid": "53fb44ec_395c9726",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 45
+      },
+      "revId": "9bcad21cbd9d659cb1b11c45f1caa7caa94c2c31",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
