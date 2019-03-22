@@ -50,6 +50,24 @@
       "revId": "7fcf444375eef66a180db069eda2dc66a850039e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "08da50b4_f9ac396b",
+        "filename": "src/mobile.editor.ve/ve.init.mw.MobileFrontendArticleTarget.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2019-03-22T18:43:52Z",
+      "side": 0,
+      "message": "Given the comment I would assume it\u0027s just a mistake. Let\u0027s find out.",
+      "parentUuid": "63dd00ad_169f6eee",
+      "revId": "7fcf444375eef66a180db069eda2dc66a850039e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
