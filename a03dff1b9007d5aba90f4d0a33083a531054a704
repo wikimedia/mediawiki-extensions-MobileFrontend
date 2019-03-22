@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1d0ddd67_e20ef6d1",
+        "filename": "skinStyles/mobile.startup/vector.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-22T22:42:08Z",
+      "side": 1,
+      "message": "I don\u0027t think this should be nested? .overlay { seems enough here, no?\n\nmw.loader.using(\u0027mobile.startup\u0027).then(()\u003d\u003e{var Overlay \u003d mw.mobileFrontend.require(\u0027mobile.startup\u0027).Overlay; o \u003d new Overlay({}); o.appendTo(document.body)})\n\nShould render an overlay without the background faded.",
+      "revId": "a03dff1b9007d5aba90f4d0a33083a531054a704",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
