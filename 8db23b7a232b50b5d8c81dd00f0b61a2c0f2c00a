@@ -16,6 +16,52 @@
       "revId": "8db23b7a232b50b5d8c81dd00f0b61a2c0f2c00a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da6cc306_282bb005",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 570,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-03-22T00:41:08Z",
+      "side": 1,
+      "message": "TL;DR; please remove this line (and the one above, we don\u0027t need the `$context` here).\n\nI\u0027m not sure we need that line, It worked pretty well before. Our MobileContext class should work properly in this scenario  but I cannot say if it\u0027s gonna work in all possible (edge cases). Also, we want to remove MobileContext class, so it means that later we will have to remove also this class.\n\nI think, it\u0027s much safer, to not overwrite the context, and just allow ApiMobileView to use the default RequestContext. \nFor example, please look on line 104, it calls `RequestContext::getMain()-\u003esetTitle( $title );`. Then on line 127 this function is called, we shouldn\u0027t overwrite context, when some changes were applied to it (line 104 set the title object).",
+      "range": {
+        "startLine": 570,
+        "startChar": 2,
+        "endLine": 570,
+        "endChar": 32
+      },
+      "revId": "8db23b7a232b50b5d8c81dd00f0b61a2c0f2c00a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e3136b75_56dcb802",
+        "filename": "includes/api/ApiParseExtender.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-03-22T00:41:08Z",
+      "side": 1,
+      "message": "this line is not necessary, the `$mfSpecialCaseMainPage` is immediately overwritten in the next line.",
+      "range": {
+        "startLine": 33,
+        "startChar": 0,
+        "endLine": 34,
+        "endChar": 44
+      },
+      "revId": "8db23b7a232b50b5d8c81dd00f0b61a2c0f2c00a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
