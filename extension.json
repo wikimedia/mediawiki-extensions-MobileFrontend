@@ -469,16 +469,14 @@
 				"mediawiki.router"
 			],
 			"styles": [
-				"resources/mobile.mediaViewer/mediaViewer.less",
-				"resources/mobile.mediaViewer/carousel.less",
-				"resources/mobile.mediaViewer/imageDetails.less"
+				"resources/mobile.mediaViewer/ImageCarousel.less"
 			],
 			"scripts": [
 				"resources/dist/mobile.mediaViewer.js"
 			],
 			"templates": {
 				"LoadErrorMessage.hogan": "resources/mobile.mediaViewer/LoadErrorMessage.hogan",
-				"Overlay.hogan": "resources/mobile.mediaViewer/ImageOverlay.hogan"
+				"ImageCarousel.hogan": "resources/mobile.mediaViewer/ImageCarousel.hogan"
 			},
 			"messages": [
 				"mobile-frontend-media-details",

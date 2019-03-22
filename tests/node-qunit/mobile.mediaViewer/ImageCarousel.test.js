@@ -6,14 +6,14 @@ var sandbox, ImageOverlay,
 	oo = require( '../utils/oo' ),
 	sinon = require( 'sinon' );
 
-QUnit.module( 'MobileFrontend mobile.mediaViewer/ImageOverlay', {
+QUnit.module( 'MobileFrontend mobile.mediaViewer/ImageCarousel.js', {
 	beforeEach: function () {
 		sandbox = sinon.sandbox.create();
 		dom.setUp( sandbox, global );
 		jQuery.setUp( sandbox, global );
 		oo.setUp( sandbox, global );
 		mediaWiki.setUp( sandbox, global );
-		ImageOverlay = require( '../../../src/mobile.mediaViewer/ImageOverlay' );
+		ImageOverlay = require( '../../../src/mobile.mediaViewer/ImageCarousel' );
 
 		this.image = {
 			descriptionurl: 'https://commons.wikimedia.org/wiki/File:The_Montgomery,_San_Francisco.jpg',
@@ -123,14 +123,12 @@ QUnit.test( 'Toggling of details is disabled when overlay has load failure', fun
 	return imageGateway.getThumb().catch( function () {
 		assert.strictEqual( overlay.$el.find( '.image-details.is-visible' ).length, 0, 'Details bar is hidden' );
 		assert.notStrictEqual( overlay.$el.find( '.image-details' ), 'none', 'Slider buttons are shown' );
-		assert.notStrictEqual( overlay.$el.find( '.cancel' ), 'none', 'Cancel button is still shown' );
 		assert.notStrictEqual( overlay.$el.find( '.prev' ), 'none', 'Slider buttons are still shown' );
 
 		overlay.$el.find( '.image-wrapper' ).trigger( 'click' );
 
 		// Assert that toggle didn't occur (would add display: none)
 		assert.notStrictEqual( overlay.$el.find( '.image-details' ), 'none', 'Slider buttons are shown' );
-		assert.notStrictEqual( overlay.$el.find( '.cancel' ), 'none', 'Cancel button is still shown' );
 		assert.notStrictEqual( overlay.$el.find( '.prev' ), 'none', 'Slider buttons are still shown' );
 	} );
 } );
@@ -150,13 +148,11 @@ QUnit.test( 'Toggling of details is enabled when overlay loads successfully', fu
 	return this.imageGateway.getThumb().then( function () {
 		assert.strictEqual( overlay.$el.find( '.image-details.is-visible' ).length, 1, 'Details bar is shown' );
 		assert.notStrictEqual( overlay.$el.find( '.image-details' ).css( 'display' ), 'none', 'Ensure display none rule is not set' );
-		assert.notStrictEqual( overlay.$el.find( '.cancel' ).css( 'display' ), 'none', 'Cancel button is shown' );
 		assert.notStrictEqual( overlay.$el.find( '.prev' ).css( 'display' ), 'none', 'Slider buttons are shown' );
 
 		overlay.$el.find( '.image-wrapper' ).trigger( 'click' );
 
 		assert.strictEqual( overlay.$el.find( '.image-details' ).css( 'display' ), 'none', 'Details bar is hidden' );
-		assert.strictEqual( overlay.$el.find( '.cancel' ).css( 'display' ), 'none', 'Cancel button is hidden' );
 		assert.strictEqual( overlay.$el.find( '.slider-button' ).css( 'display' ), 'none', 'Slider buttons are hidden' );
 	} );
 } );
