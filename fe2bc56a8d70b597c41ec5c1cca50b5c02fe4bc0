@@ -50,6 +50,24 @@
       "revId": "fe2bc56a8d70b597c41ec5c1cca50b5c02fe4bc0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "889ef79b_29a90bfd",
+        "filename": "src/mobile.startup/image/ImageGateway.js",
+        "patchSetId": 62
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-22T23:21:30Z",
+      "side": 0,
+      "message": "I think I felt like only testing the inputs to the public function (getThumb) gave me more confidence that it continued to worked in the midsts of refactoring it, but I can\u0027t recall the exact reasons.",
+      "parentUuid": "92d6f413_50459bac",
+      "revId": "fe2bc56a8d70b597c41ec5c1cca50b5c02fe4bc0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }

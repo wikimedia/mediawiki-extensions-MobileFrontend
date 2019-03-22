@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "16ecd943_b6d9d412",
+        "filename": "resources/mobile.startup/image/overlay.less",
+        "patchSetId": 62
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-22T23:21:30Z",
+      "side": 1,
+      "message": "This whole thing was actually removed in the imageDetails patch as we didn\u0027t have an opacity property set on imageDetails",
+      "parentUuid": "cd300a39_a78a0768",
+      "revId": "208bc7c907f8de91aa6b67cb57f1d563ea03d052",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "47011461_f340510b",
         "filename": "src/mobile.mediaViewer/LoadErrorMessage.js",
         "patchSetId": 62
@@ -47,6 +65,24 @@
       "writtenOn": "2019-03-15T23:48:59Z",
       "side": 1,
       "message": "Can you explain your rationale for changing LoadErrorMessage? To be honest, I find https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/493630/62/src/mobile.mediaViewer/LoadErrorMessage.js,unified much more readable (with the exception of the toHtmlString call)!",
+      "revId": "208bc7c907f8de91aa6b67cb57f1d563ea03d052",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f9e04a3e_89c01d2b",
+        "filename": "src/mobile.mediaViewer/loadErrorMessage.js",
+        "patchSetId": 62
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-22T23:21:30Z",
+      "side": 1,
+      "message": "I was confused about our stance on hogan templates and for some reason thought it was preferable to build the elements with jQuery. Still not sure why I thought that.",
+      "parentUuid": "53ccd9b6_a95fd942",
       "revId": "208bc7c907f8de91aa6b67cb57f1d563ea03d052",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -104,6 +140,24 @@
       "writtenOn": "2019-03-15T23:48:59Z",
       "side": 1,
       "message": "I don\u0027t think this is needed any more. Previously it was to avoid a flash, but we\u0027re not going to have this problem now we are using PromisedView.",
+      "revId": "208bc7c907f8de91aa6b67cb57f1d563ea03d052",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e5cac69_a7110c91",
+        "filename": "src/mobile.startup/image/overlay.js",
+        "patchSetId": 62
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-22T23:21:30Z",
+      "side": 1,
+      "message": "It was added to avoid a slight flicker of the navigation controls when changing the slides. Not needed in I3abda41ccc4a3649d7def5125c0d8c72e3505da1 though",
+      "parentUuid": "9b966dbf_01a5f7de",
       "revId": "208bc7c907f8de91aa6b67cb57f1d563ea03d052",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
