@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4721c541_91ecb0d9",
+        "filename": "src/mobile.mediaViewer/makeImagesAndStartIndex.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-22T15:26:25Z",
+      "side": 1,
+      "message": "I must reveal my ignorance but the functions that are produced here don\u0027t seem so unique. Did you consider creating a \"requester\" that just needs a gateway and a Thumbnail to issue a given request? It feels strange to me that we would need to persist more than a Thumbnail[]. Maybe something like \n\n function request(gateway, thumbnail) {\n   return gateway.getThumb( thumbnail.getFileName() ).then( function ( data ) {\n     // ...\n   } )\n }\n\nI don\u0027t understand why the function needs to be passed around but maybe those closures could be isolated:\n\n {thumbnail, request: () \u003d\u003e request(gateway, this.thumbnail)}",
+      "range": {
+        "startLine": 15,
+        "startChar": 9,
+        "endLine": 15,
+        "endChar": 25
+      },
+      "revId": "fe2bc56a8d70b597c41ec5c1cca50b5c02fe4bc0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "be8b6f7e_1ef13e80",
+        "filename": "src/mobile.mediaViewer/makeImagesAndStartIndex.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-22T15:26:25Z",
+      "side": 1,
+      "message": "Not new to this patch but I think #Licensing should be used if this behavior is really wanted. I think it\u0027s a bad experience though so recommend dropping it.\n\nhttps://commons.wikimedia.org/wiki/File:President_Barack_Obama.jpg#mw-jump-to-license (broken)\nhttps://codesearch.wmflabs.org/search/?q\u003dmw-jump-to-license\u0026i\u003dnope\u0026files\u003d\u0026repos\u003d",
+      "range": {
+        "startLine": 19,
+        "startChar": 33,
+        "endLine": 19,
+        "endChar": 55
+      },
+      "revId": "fe2bc56a8d70b597c41ec5c1cca50b5c02fe4bc0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "980a9745_de0bb1ca",
+        "filename": "src/mobile.mediaViewer/makeImagesAndStartIndex.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-22T15:26:25Z",
+      "side": 1,
+      "message": "This seems more like a property that a static constant. Did you consider just \"filename\"?\n\nAlso, what do you think about return an object like {filename: string; request(): Deferred\u003cImageObject\u003e}? Although the effect is the same, I think adding properties to plain old objects reads easier than adding props to functions. What do you think?",
+      "range": {
+        "startLine": 43,
+        "startChar": 14,
+        "endLine": 43,
+        "endChar": 22
+      },
+      "revId": "fe2bc56a8d70b597c41ec5c1cca50b5c02fe4bc0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0cf05430_3e91775e",
+        "filename": "src/mobile.mediaViewer/makeImagesAndStartIndex.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-22T15:26:25Z",
+      "side": 1,
+      "message": "I think this can be const",
+      "range": {
+        "startLine": 62,
+        "startChar": 2,
+        "endLine": 62,
+        "endChar": 15
+      },
+      "revId": "fe2bc56a8d70b597c41ec5c1cca50b5c02fe4bc0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
