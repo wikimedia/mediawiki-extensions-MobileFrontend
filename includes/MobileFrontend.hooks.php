@@ -957,7 +957,6 @@ class MobileFrontendHooks {
 						'mobile-frontend-notifications-filter-title',
 						// defined in Echo
 						'echo-none',
-						'notifications',
 						'echo-mark-all-as-read-confirmation',
 					],
 					'targets' => [ 'mobile', 'desktop' ],

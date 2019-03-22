@@ -13,13 +13,12 @@ var Overlay = require( '../Overlay' ),
 /**
  * Make a notification overlay
  *
- * @param {mw.echo} echo class
  * @param {countChangeCallback} onCountChange receives one parameter - a capped (0-99 or 99+) count.
  * @param {Function} onNotificationListRendered a function that is called when the
  *   notifications list has fully rendered (taking no arguments)
  * @return {Overlay}
  */
-function notificationsOverlay( echo, onCountChange, onNotificationListRendered ) {
+function notificationsOverlay( onCountChange, onNotificationListRendered ) {
 	var markAllReadButton,
 		oouiPromise = mw.loader.using( 'mobile.notifications.overlay' ).then( function () {
 			markAllReadButton = new OO.ui.ButtonWidget( {
@@ -32,6 +31,8 @@ function notificationsOverlay( echo, onCountChange, onNotificationListRendered )
 			);
 		} ),
 		markAllReadButtonView = promisedView( oouiPromise );
+	// hide the button spinner as it is confusing to see in the top right corner
+	markAllReadButtonView.$el.hide();
 
 	return Overlay.make(
 		{
@@ -49,7 +50,8 @@ function notificationsOverlay( echo, onCountChange, onNotificationListRendered )
 		promisedView(
 			oouiPromise.then( function () {
 				var list = m.require( 'mobile.notifications.overlay' ).list;
-				return list( echo, markAllReadButton, onCountChange, onNotificationListRendered );
+				return list( mw.echo, markAllReadButton, onCountChange,
+					onNotificationListRendered );
 			} )
 		)
 	);

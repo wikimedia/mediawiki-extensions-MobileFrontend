@@ -9,7 +9,7 @@ var m = require( './../mobile.startup/moduleLoaderSingleton' ),
  * @return {Overlay}
  */
 function NotificationsOverlay( options ) {
-	return defaultOverlay( mw.echo, function ( cappedCount ) {
+	return defaultOverlay( function ( cappedCount ) {
 		options.badge.setCount( cappedCount );
 	}, function () {
 		options.badge.markAsSeen();
