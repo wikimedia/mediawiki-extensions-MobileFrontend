@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9e602d5e_d41278d6",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-22T14:37:42Z",
+      "side": 1,
+      "message": "Is there any reason to continue to expose the old way of accessing user modes? We should try to minimize the exposed API.",
+      "range": {
+        "startLine": 7,
+        "startChar": 9,
+        "endLine": 7,
+        "endChar": 42
+      },
+      "revId": "c8b1bffea5bb59777af3c9e7fd2fcaf2aa5537b0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "561545d3_7f6c0ee6",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-22T14:37:42Z",
+      "side": 1,
+      "message": "I think this example should use the interface.",
+      "range": {
+        "startLine": 34,
+        "startChar": 15,
+        "endLine": 34,
+        "endChar": 20
+      },
+      "revId": "c8b1bffea5bb59777af3c9e7fd2fcaf2aa5537b0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d8996d76_27569b4a",
+        "filename": "includes/features/UserModes.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-22T14:37:42Z",
+      "side": 1,
+      "message": "Should this be IUserMode?",
+      "range": {
+        "startLine": 33,
+        "startChar": 12,
+        "endLine": 33,
+        "endChar": 17
+      },
+      "revId": "c8b1bffea5bb59777af3c9e7fd2fcaf2aa5537b0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b6c82ff3_3f5426bf",
+        "filename": "tests/phpunit/features/FeaturesManagerTest.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-22T14:37:42Z",
+      "side": 1,
+      "message": "I think this should be testRedundantSetUp or testSetUpTwice.",
+      "range": {
+        "startLine": 32,
+        "startChar": 17,
+        "endLine": 32,
+        "endChar": 26
+      },
+      "revId": "c8b1bffea5bb59777af3c9e7fd2fcaf2aa5537b0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "908c2ad8_b2f0a8f4",
+        "filename": "tests/phpunit/features/FeaturesManagerTest.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-22T14:37:42Z",
+      "side": 1,
+      "message": "Any reason not to add a use at the top of the file instead?",
+      "range": {
+        "startLine": 52,
+        "startChar": 19,
+        "endLine": 52,
+        "endChar": 44
+      },
+      "revId": "c8b1bffea5bb59777af3c9e7fd2fcaf2aa5537b0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
