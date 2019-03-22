@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "174dcd8b_bd481e57",
+        "filename": "src/mobile.init/BetaOptInPanel.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-22T22:05:28Z",
+      "side": 1,
+      "message": "Maybe these would better as props so it looked more like HTML attributes?\n\n ${Button.html({ className: \u0027mw-ui-progressive optin\u0027, optInText })",
+      "range": {
+        "startLine": 49,
+        "startChar": 19,
+        "endLine": 49,
+        "endChar": 57
+      },
+      "revId": "354b4c6f9959831879cecf90ecf1892aa72bc373",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e81a0f4f_bf838f15",
+        "filename": "src/mobile.init/BetaOptInPanel.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-22T22:05:28Z",
+      "side": 1,
+      "message": "Common functionality between .bind and the \"smart\" component has to be isolated from class state so that it can be shared (.bind is static). Button which isn\u0027t smart looks cleaner.",
+      "range": {
+        "startLine": 94,
+        "startChar": 9,
+        "endLine": 94,
+        "endChar": 16
+      },
+      "revId": "354b4c6f9959831879cecf90ecf1892aa72bc373",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
