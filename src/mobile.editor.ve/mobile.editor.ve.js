@@ -1,10 +1,11 @@
 /* global ve */
-var MobileFrontendArticleTarget = require( './ve.init.mw.MobileFrontendArticleTarget' ),
-	schemaVisualEditorFeatureUse = require( './schemaVisualEditorFeatureUse' );
+var schemaVisualEditorFeatureUse = require( './schemaVisualEditorFeatureUse' );
 
-// register
-ve.init.mw.MobileFrontendArticleTarget = MobileFrontendArticleTarget;
-ve.init.mw.targetFactory.register( MobileFrontendArticleTarget );
+// FIXME Figure out a way to make this method public on some other class,
+// so that VisualEditor can call it without us overriding it like this
+ve.init.mw.MobileArticleTarget.static.parseSaveError =
+	require( '../mobile.editor.overlay/parseSaveError' );
+
 schemaVisualEditorFeatureUse();
 // Hook up activity-tracking from VE's system to mobilefrontend's system
 ve.trackSubscribe( 'activity.', function ( topic, data ) {

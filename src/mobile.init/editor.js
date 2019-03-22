@@ -200,7 +200,7 @@ function setupEditor( page, skin ) {
 						sessionStore: true,
 						section: editorOptions.sectionId || null,
 						oldId: editorOptions.oldId || undefined,
-						// Should be ve.init.mw.MobileFrontendArticleTarget.static.trackingName,
+						// Should be ve.init.mw.MobileArticleTarget.static.trackingName,
 						// but the class hasn't loaded yet.
 						targetName: 'mobile'
 					} );
@@ -248,7 +248,7 @@ function setupEditor( page, skin ) {
 				var $page, $content, $sectionTop, fakeScroll, enableVisualSectionEditing;
 				Overlay.prototype.show.call( this );
 				enableVisualSectionEditing = veConfig.enableVisualSectionEditing === true ||
-					// === ve.init.mw.MobileFrontendArticleTarget.static.trackingName
+					// === ve.init.mw.MobileArticleTarget.static.trackingName
 					veConfig.enableVisualSectionEditing === 'mobile';
 				$page = $( '#mw-mf-page-center' );
 				$content = $( '#content' );
