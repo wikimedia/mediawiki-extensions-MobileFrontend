@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "a53ec83e_a386835d",
+        "filename": "resources/mobile.init/BetaOptInPanel.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-22T16:59:02Z",
+      "side": 1,
+      "message": "I don\u0027t think I can do that without copying and pasting the styles from MinervaNeue/resources/skins.minerva.content.styles/tablet/common.less, right?",
+      "parentUuid": "6d438f9a_374f601e",
+      "revId": "d806e3ae7aa9d65e7287a437c9e4f8a969c9483c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "391e9284_b1f71c8a",
         "filename": "src/mobile.init/BetaOptInPanel.js",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2019-03-21T20:55:54Z",
       "side": 1,
       "message": "Doh. Looks like this can\u0027t be passed as a property and has to be defined on the class itself. Shall we change that?\n\nI\u0027m seeing:\n```\n\u003cdiv class\u003d\"view-border-box\"\u003e\u003cdiv class\u003d\"beta-opt-in-panel panel panel-inline visible\"\u003e\n\t\u003cform class\u003d\"message content\" action\u003d\"/w/index.php?title\u003dSpecial:MobileOptions\u0026amp;returnto\u003dQatar\" method\u003d\"POST\"\u003e\n\t\t\u003cp\u003eDo you want to try some new features? By joining the beta, you will get access to experimental features, at the risk of encountering bugs and issues.\u003c/p\u003e\n\t\t\u003cinput type\u003d\"hidden\" name\u003d\"enableBeta\" value\u003d\"true\"\u003e\n\t\t\u003cinput type\u003d\"hidden\" name\u003d\"token\" value\u003d\"+\\\"\u003e\n\u003ca class\u003d\"mw-ui-button mw-ui-progressive\n\t\t\n\t\t\n\t\t optin\n\t\"\u003eOkay\u003c/a\u003e\n\u003ca class\u003d\"mw-ui-button \n\t\t\n\t\t\n\t\t cancel\n\t\"\u003eNo thanks\u003c/a\u003e\n\t\u003c/form\u003e\n\u003c/div\u003e\n\u003c/div\u003e\n``",
+      "revId": "d806e3ae7aa9d65e7287a437c9e4f8a969c9483c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7e3ffa7f_23ab0bf6",
+        "filename": "src/mobile.init/BetaOptInPanel.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-22T16:59:02Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "391e9284_b1f71c8a",
       "revId": "d806e3ae7aa9d65e7287a437c9e4f8a969c9483c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
