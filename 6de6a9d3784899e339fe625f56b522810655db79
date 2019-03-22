@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4d4f12a5_90092ef9",
+        "filename": "resources/mobile.mediaViewer/imageCarousel.less",
+        "patchSetId": 9
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-22T23:10:45Z",
+      "side": 1,
+      "message": "Done in I549add34101d58439b25265473a3a611c3324154 but need to reassess if we should/want to use this now",
+      "parentUuid": "c30a437d_ecb7d0ea",
+      "revId": "6de6a9d3784899e339fe625f56b522810655db79",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eb760216_2f1b9bd6",
         "filename": "resources/mobile.mediaViewer/imageCarousel.less",
         "patchSetId": 9
@@ -42,6 +60,30 @@
     },
     {
       "key": {
+        "uuid": "0912eba5_c65cfcd2",
+        "filename": "resources/mobile.mediaViewer/imageCarousel.less",
+        "patchSetId": 9
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-22T23:10:45Z",
+      "side": 1,
+      "message": "Done in I549add34101d58439b25265473a3a611c3324154 but need to reassess if we should/want to use this now",
+      "parentUuid": "eb760216_2f1b9bd6",
+      "range": {
+        "startLine": 20,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 11
+      },
+      "revId": "6de6a9d3784899e339fe625f56b522810655db79",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "22e1f972_e4c5d28b",
         "filename": "resources/mobile.mediaViewer/imageCarousel.less",
         "patchSetId": 9
@@ -53,6 +95,30 @@
       "writtenOn": "2019-03-19T17:05:50Z",
       "side": 1,
       "message": "Is it possible to use .transition()?",
+      "range": {
+        "startLine": 42,
+        "startChar": 0,
+        "endLine": 44,
+        "endChar": 93
+      },
+      "revId": "6de6a9d3784899e339fe625f56b522810655db79",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9c9c1995_dad37850",
+        "filename": "resources/mobile.mediaViewer/imageCarousel.less",
+        "patchSetId": 9
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-22T23:10:45Z",
+      "side": 1,
+      "message": "I think the usage of the filter and the fact that that had its own vendor prefixes made this difficult to use .transition",
+      "parentUuid": "22e1f972_e4c5d28b",
       "range": {
         "startLine": 42,
         "startChar": 0,
@@ -129,6 +195,24 @@
     },
     {
       "key": {
+        "uuid": "ebc07dc5_b7bcecea",
+        "filename": "src/mobile.mediaViewer/imageCarousel.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-22T23:10:45Z",
+      "side": 1,
+      "message": "That\u0027s pretty close to how it works except that there are actually two \"loading\" states. One of them is when the ImageGateway promise is waiting to resolve and we show during the spinner during that time. The next is when the promise resolves: We show the blurry image as it is downloading and remove the blur when it is fully downloaded. If either of those two loading states fail, we show the loadErrorMessage.\n\nThe other difference is we actually show the image details as soon as the ImageGateway promise resolves - we don\u0027t wait on the image to be fully loaded to do that.\n\nI\u0027m also very impressed with your ascii art skills! I\u0027m not sure how I would go about doing that...did you use a program for that or was it all manual?",
+      "parentUuid": "999f5e86_9da34752",
+      "revId": "6de6a9d3784899e339fe625f56b522810655db79",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0902dc82_7f54d09c",
         "filename": "src/mobile.mediaViewer/imageCarousel.js",
         "patchSetId": 9
@@ -187,6 +271,30 @@
       "side": 1,
       "message": "Yeah that\u0027s a great point. They could change and in that case, this function would not run again. *I think* in most cases unless the details bar is flooded with details, the bottom line difference would be pretty small. It would not handle the images with large image details very well. Will be fixing this in next patch",
       "parentUuid": "0df53c02_791bf56b",
+      "range": {
+        "startLine": 73,
+        "startChar": 0,
+        "endLine": 76,
+        "endChar": 10
+      },
+      "revId": "6de6a9d3784899e339fe625f56b522810655db79",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7588720c_6f833dac",
+        "filename": "src/mobile.mediaViewer/imageCarousel.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-22T23:10:45Z",
+      "side": 1,
+      "message": "Never got to this, but thanks for pointing this out!",
+      "parentUuid": "ca35090d_acf191f9",
       "range": {
         "startLine": 73,
         "startChar": 0,
@@ -303,6 +411,30 @@
       "writtenOn": "2019-03-19T17:05:50Z",
       "side": 1,
       "message": "Is this what kind of kicks off all the state transitions from create to loading to loaded?",
+      "range": {
+        "startLine": 194,
+        "startChar": 2,
+        "endLine": 194,
+        "endChar": 72
+      },
+      "revId": "6de6a9d3784899e339fe625f56b522810655db79",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba9d3648_c4682758",
+        "filename": "src/mobile.mediaViewer/imageCarousel.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-22T23:10:45Z",
+      "side": 1,
+      "message": "yes it is!",
+      "parentUuid": "e27db9bb_7d155f29",
       "range": {
         "startLine": 194,
         "startChar": 2,
