@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ceb01e82_2ce6f01f",
+        "filename": "src/mobile.mediaViewer/ImageCarousel.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-22T02:04:17Z",
+      "side": 1,
+      "message": "We probably want to rename this now right?",
+      "range": {
+        "startLine": 67,
+        "startChar": 26,
+        "endLine": 67,
+        "endChar": 64
+      },
+      "revId": "12e6b47dea16501a42f1dcc95ea26bef5831bff3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3771bac7_45026a31",
+        "filename": "src/mobile.mediaViewer/imageDetails.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-22T02:04:17Z",
+      "side": 1,
+      "message": "Do we really want to delete this, or do we plan to restore it and use it in a follow up?\n\nThis patch removes all the inheritance woes (and immediate goal) we\u0027re trying to remove, which is great but I\u0027d like to either as part of this task or a follow up) I would really love to see the other ideas in your other  changes you made folded in here.\n\nIt would be a shame to lose this one, as I think it makes the image details panel and it\u0027s on/off visibility easier to reason with.\n\nEspecially given we have this line:\n```\n\nthis.$details \u003d this.$el.find( \u0027.image-details\u0027 );\n```\nwhich could be replaced with\n\n```\nthis.$details \u003d imageDetails().appendTo(this.$el.find( \u0027.main\u0027 ))\n```",
+      "revId": "12e6b47dea16501a42f1dcc95ea26bef5831bff3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
