@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "53fb44ec_395c9726",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 15
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-22T15:33:26Z",
+      "side": 1,
+      "message": "This seems noteworthy. Sorry if I missed this in the task but what\u0027s the reason for moving the overlay? Wouldn\u0027t most skins want NotificationOverlay functionality?",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 45
+      },
+      "revId": "9bcad21cbd9d659cb1b11c45f1caa7caa94c2c31",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
