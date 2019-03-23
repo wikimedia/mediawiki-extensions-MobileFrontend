@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Xuacu",
-			"Enolp"
+			"Enolp",
+			"Fitoschido"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si un usuariu ta editando o non pela interfaz pa móvil",
@@ -73,7 +74,7 @@
 	"mobile-frontend-editor-placeholder-new-page": "¡{{GENDER:$1|Ta a piques}} {{GENDER:$1|de crear}} una páxina nueva en {{SITENAME}}!",
 	"mobile-frontend-editor-previewing-page": "<span><strong>Previsualizando</strong> $1</span>",
 	"mobile-frontend-editor-save": "Guardar",
-	"mobile-frontend-editor-success": "¡Correuto! Guardóse la edición.",
+	"mobile-frontend-editor-success": "¡Correuto! Publicóse la edición.",
 	"mobile-frontend-editor-success-landmark-1": "Norabona, ¡yá ye editor de {{SITENAME}}!",
 	"mobile-frontend-editor-success-new-page": "¡Norabona por crear una páxina nueva!",
 	"mobile-frontend-editor-summary-placeholder": "Exemplu: Igua ortográfica, conteníu amestáu",
@@ -111,12 +112,12 @@
 	"mobile-frontend-languages-404-desc": "Tien de dase un títulu válidu.",
 	"mobile-frontend-languages-404-title": "Error de llingües",
 	"mobile-frontend-languages-header": "Llingües",
-	"mobile-frontend-languages-header-page": "$1 - Llingües",
+	"mobile-frontend-languages-header-page": "$1. Otres llingües",
 	"mobile-frontend-languages-nonexistent-title": "La páxina «$1» nun esiste.",
 	"mobile-frontend-languages-text": "$1 ta disponible'n $2 {{PLURAL:$2|llingua|llingües}}.",
 	"mobile-frontend-languages-variant-header": "Variantes {{#language:{{CONTENTLANG}}}}",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Idiomes suxeríos",
-	"mobile-frontend-languages-structured-overlay-all-languages-header": "Toles llingües",
+	"mobile-frontend-languages-structured-overlay-all-languages-header": "Otres llingües",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Buscar una llingua",
 	"mobile-frontend-last-modified-date": "Última edición el $1 a les $2",
 	"mobile-frontend-last-modified-with-user-days": "[$4 Última {{GENDER:$1|edición}} hai {{PLURAL:$3|$3 día|$3 díes}}] fecha por {{PLURAL:$5|[$6 $2]|0=un usuariu anónimu}}",

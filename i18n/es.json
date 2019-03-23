@@ -113,7 +113,7 @@
 	"mobile-frontend-editor-placeholder-new-page": "¡{{GENDER:$1|Estás creando}} una página nueva en {{SITENAME}}!",
 	"mobile-frontend-editor-previewing-page": "<span><strong>Previsualización</strong> de «$1»</span>",
 	"mobile-frontend-editor-save": "Guardar",
-	"mobile-frontend-editor-success": "Se ha guardado tu modificación.",
+	"mobile-frontend-editor-success": "Se ha publicado la modificación.",
 	"mobile-frontend-editor-success-landmark-1": "¡Felicidades, ahora eres un editor de {{SITENAME}}!",
 	"mobile-frontend-editor-success-new-page": "¡Felicidades, has creado una página nueva!",
 	"mobile-frontend-editor-summary-placeholder": "Ejemplos: «error ortográfico corregido», «añadí contenido»",
