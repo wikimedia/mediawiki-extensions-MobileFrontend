@@ -42,6 +42,30 @@
     },
     {
       "key": {
+        "uuid": "041aa69f_6e97ce1b",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 570,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-03-24T14:34:59Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "da6cc306_282bb005",
+      "range": {
+        "startLine": 570,
+        "startChar": 2,
+        "endLine": 570,
+        "endChar": 32
+      },
+      "revId": "8db23b7a232b50b5d8c81dd00f0b61a2c0f2c00a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e3136b75_56dcb802",
         "filename": "includes/api/ApiParseExtender.php",
         "patchSetId": 8
@@ -53,6 +77,30 @@
       "writtenOn": "2019-03-22T00:41:08Z",
       "side": 1,
       "message": "this line is not necessary, the `$mfSpecialCaseMainPage` is immediately overwritten in the next line.",
+      "range": {
+        "startLine": 33,
+        "startChar": 0,
+        "endLine": 34,
+        "endChar": 44
+      },
+      "revId": "8db23b7a232b50b5d8c81dd00f0b61a2c0f2c00a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c8bcbc58_23baa2d7",
+        "filename": "includes/api/ApiParseExtender.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-03-24T14:34:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e3136b75_56dcb802",
       "range": {
         "startLine": 33,
         "startChar": 0,
