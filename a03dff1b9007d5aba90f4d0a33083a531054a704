@@ -16,6 +16,24 @@
       "revId": "a03dff1b9007d5aba90f4d0a33083a531054a704",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7c132b7a_1ed47ecd",
+        "filename": "skinStyles/mobile.startup/vector.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 110
+      },
+      "writtenOn": "2019-03-25T19:08:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1d0ddd67_e20ef6d1",
+      "revId": "a03dff1b9007d5aba90f4d0a33083a531054a704",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
