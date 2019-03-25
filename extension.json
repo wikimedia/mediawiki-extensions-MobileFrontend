@@ -318,6 +318,9 @@
 			"styles": [
 				"resources/mobile.startup/mobile.startup.less"
 			],
+			"skinStyles": {
+				"vector": "skinStyles/mobile.startup/vector.less"
+			},
 			"scripts": [
 				"resources/dist/mobile.common.js",
 				"resources/dist/mobile.startup.js"
