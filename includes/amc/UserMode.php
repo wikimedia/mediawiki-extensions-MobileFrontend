@@ -78,7 +78,7 @@ class UserMode implements IUserMode {
 			$latestUser = $user->getInstanceForUpdate();
 			$latestUser->setOption( self::USER_OPTION_MODE_AMC, $toSet );
 			$latestUser->saveSettings();
-		} );
+		}, DeferredUpdates::PRESEND );
 	}
 
 	/**

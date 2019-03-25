@@ -285,7 +285,7 @@ class MobileContext extends ContextSource {
 				$latestUser = $user->getInstanceForUpdate();
 				$latestUser->setOption( self::USER_MODE_PREFERENCE_NAME, $mode );
 				$latestUser->saveSettings();
-			} );
+			}, DeferredUpdates::PRESEND );
 		}
 
 		$this->getRequest()->response()->setCookie( self::OPTIN_COOKIE_NAME, $mode, 0, [
