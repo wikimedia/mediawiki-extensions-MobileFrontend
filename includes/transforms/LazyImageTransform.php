@@ -118,7 +118,7 @@ class LazyImageTransform implements IMobileTransform {
 			&& $this->isDimensionSmallerThanThreshold( $dimensions['width'] )
 		) {
 			return true;
-		};
+		}
 		if ( array_key_exists( 'height', $dimensions )
 			&& $this->isDimensionSmallerThanThreshold( $dimensions['height'] )
 		) {
