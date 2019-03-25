@@ -5,7 +5,7 @@ var m = require( '../moduleLoaderSingleton' ),
 	Overlay = require( '../Overlay' );
 
 /**
- * Produce an overlay for talk page
+ * Produce an overlay for mediaViewer
  * @param {Object} options
  * @return {Overlay}
  */

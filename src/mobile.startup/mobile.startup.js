@@ -50,7 +50,10 @@ module.exports = {
 	talk: {
 		overlay: require( './talk/overlay' )
 	},
-	languageOverlay: require( './languageOverlay/languageOverlay' )
+	languageOverlay: require( './languageOverlay/languageOverlay' ),
+	mediaViewer: {
+		overlay: require( './mediaViewer/overlay' )
+	}
 };
 
 mw.mobileFrontend = moduleLoader;
