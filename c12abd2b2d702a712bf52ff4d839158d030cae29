@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e7c83729_280b9a1b",
+        "filename": "skinStyles/mobile.startup/vector.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-25T22:03:50Z",
+      "side": 1,
+      "message": "This  should probably be nested inside the overlay-enabled .mw-overlays-container selector above.",
+      "range": {
+        "startLine": 53,
+        "startChar": 2,
+        "endLine": 53,
+        "endChar": 29
+      },
+      "revId": "c12abd2b2d702a712bf52ff4d839158d030cae29",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
