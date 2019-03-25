@@ -6,7 +6,20 @@
 @z-indexOverlay: 1;
 @z-indexOverOverlay: 2;
 
-@fontFamily: 'Helvetica Neue', 'Helvetica', 'Nimbus Sans L', 'Arial', 'Liberation Sans', sans-serif;
+@fontFamilyBase: @fontFamilySans;
+/**
+ * System font stack for sans-serif fonts
+ *
+ * `-apple-system` – Support: Safari for macOS and iOS ('San Francisco')
+ * `BlinkMacSystemFont` – Chrome < 56 for macOS ('San Francisco')
+ * `Segoe UI` – Windows Vista & newer
+ * `Roboto` – Android
+ * `Lato` – Wikimedia Design choice
+ * `Helvetica, Arial, sans-serif` – (Generic) Web fallback
+ * Note that CSS Fonts Module Level 4's `system-ui` value has resulted in unresolved
+ * side-effects in certain OS/language combinations and is therefore not included as of now.
+ */
+@fontFamilySans: -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Lato', 'Helvetica', 'Arial', sans-serif;
 
 // OOUI specific icon variables
 @baseIconSize: 24px;
