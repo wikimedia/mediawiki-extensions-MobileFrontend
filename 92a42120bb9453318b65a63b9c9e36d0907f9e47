@@ -94,6 +94,30 @@
       "revId": "92a42120bb9453318b65a63b9c9e36d0907f9e47",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e993cd3a_131c7e32",
+        "filename": "src/mobile.mediaViewer/ImageCarousel.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 234,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-26T23:46:23Z",
+      "side": 1,
+      "message": "Hm, I wish that ImageGateway didn\u0027t have a cache. We removed the cache from SearchGateway. If we did that in ImageGateway, do you think that would simplify abortable promises?\n\nOne thing that might simplify abort stuff more is to send a status and image identifier (not sure if this is a URL, offset index, title, or something else) with the abort. That way you can keep data in the promise pipeline and don\u0027t need to maintain state outside of it. I think this in combination with the active slide should be enough to determine whether the abort affects the current slide or not. For instance, if failure status indicates an abort AND the promise was for the current slide, show the error message. Otherwise, don\u0027t.\n\nThat\u0027s probably an oversimplification so if I\u0027m missing a big complexity, other than MF itself, let me know.\n\nWhat concerns me about the current approach is that it adds state and asynchronous logic. Maybe that\u0027s necessary but maybe it isn\u0027t so I wanted to discuss it. The Promise API can make complex, asynchronous logic very easy to reason about, as easy as Deferred.then / catch / always, whereas this feels more custom fitted and I\u0027m not sure I\u0027d immediately know how to apply the pattern elsewhere.",
+      "parentUuid": "264205ac_55fb72ec",
+      "range": {
+        "startLine": 232,
+        "startChar": 0,
+        "endLine": 234,
+        "endChar": 3
+      },
+      "revId": "92a42120bb9453318b65a63b9c9e36d0907f9e47",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
