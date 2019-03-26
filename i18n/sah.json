@@ -47,6 +47,7 @@
 	"mobile-frontend-editor-summary": "Түмүк:",
 	"mobile-frontend-fontchanger-link": "Бичик кээмэйэ",
 	"mobile-frontend-featured-article": "Бүгүҥҥү талба",
+	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} бырайыагы Эн курдук дьон оҥороллор.</strong><br />Киир уонна суруй.",
 	"mobile-frontend-languages-404-title": "Тыл алҕаһа",
 	"mobile-frontend-languages-header": "Тыллар",
 	"mobile-frontend-languages-header-page": "Тыллар - $1",

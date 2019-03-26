@@ -34,7 +34,8 @@
 			"Baloch Khan",
 			"Fatemi127",
 			"Amjad Khan",
-			"Amirsara"
+			"Amirsara",
+			"FarsiNevis"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "اینکه کاربر از میانای تلفن همراه استفاده می‌کند یا نه",
@@ -88,7 +89,7 @@
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|بسته شده}} توسط",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "بستن در ... پایان می‌یابد",
 	"mobile-frontend-editor-blocked-drawer-help": "جزئیات",
-	"mobile-frontend-editor-generic-block-reason": "علت ناشناسخته",
+	"mobile-frontend-editor-generic-block-reason": "علت ناشناخته",
 	"mobile-frontend-editor-cancel": "انصراف",
 	"mobile-frontend-editor-cancel-confirm": "واقعاً می‌خواهید ویرایش خود را رها کنید؟",
 	"mobile-frontend-editor-captcha-try-again": "کد اشتباه، مجدداً تلاش کنید.",
