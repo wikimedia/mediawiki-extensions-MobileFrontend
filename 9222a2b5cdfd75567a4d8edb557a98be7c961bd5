@@ -22,6 +22,30 @@
       "revId": "9222a2b5cdfd75567a4d8edb557a98be7c961bd5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f8e2ca92_1ebf5d1d",
+        "filename": "mobile.less/mobile.variables.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2019-03-26T21:20:12Z",
+      "side": 1,
+      "message": "Design team hasn\u0027t seen it as a sensible alternative any more. We are having \u0027Lato\u0027 in as more evolved free font, which also has better internationalization and IPA phonetics support than Liberation Sans.",
+      "parentUuid": "80010304_f3d20cbd",
+      "range": {
+        "startLine": 18,
+        "startChar": 3,
+        "endLine": 18,
+        "endChar": 58
+      },
+      "revId": "9222a2b5cdfd75567a4d8edb557a98be7c961bd5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
