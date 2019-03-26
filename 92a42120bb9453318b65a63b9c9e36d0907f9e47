@@ -46,6 +46,30 @@
       "revId": "92a42120bb9453318b65a63b9c9e36d0907f9e47",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "24da65c5_99208923",
+        "filename": "src/mobile.mediaViewer/ImageCarousel.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 234,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-26T21:53:37Z",
+      "side": 1,
+      "message": "Yeah I was trying to do something like that before this patch in https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/499335/ where I modified ImageGateway to return an abortable promise and aborted the promise on each onSlide, but I bailed on that because I felt like this was simpler. \n\nOne of the problems I hit was that even if you modify ImageGateway to return an abortable promise, you would still need to do a check in the reject handler on line 305 to make sure the aborted reject does call the showLoadFailMsg function. I also wondered about if race conditions could occur  i.e. if the slide is advanced after the  gateway.getThumb promise resolves, but before the next .then function executes.\n\nIf you have any ideas around this, please let me know!",
+      "parentUuid": "0d0c511b_86102c44",
+      "range": {
+        "startLine": 232,
+        "startChar": 0,
+        "endLine": 234,
+        "endChar": 3
+      },
+      "revId": "92a42120bb9453318b65a63b9c9e36d0907f9e47",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
