@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "2a1c0296_10167ac8",
+        "filename": "src/mobile.init/BetaOptInPanel.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-26T18:14:32Z",
+      "side": 1,
+      "message": "This still uses a template just not a Mustache template. I think this approach is simpler. I\u0027m especially interested in an approach like Viewless demo[0] which is similar to Popups and uses (or will use) mw.html.escape(). Do you disagree?\n\nWe can still use the Hogan flavored template if you think it\u0027s worthwhile. It would fit in this patch easily enough but I don\u0027t think it helps our goals in the short or the long term.\n\nI\u0027m very interested to discuss short term component composition more and have added a bullet to the next super-happy-dev-time.\n\n[0] https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/498196/",
+      "parentUuid": "34da7a2a_fb460e66",
+      "revId": "9aca376770a6c3dfb57d52dcfcf6c9ee982ba4bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "28c2ada4_f83b5d1c",
         "filename": "src/mobile.init/BetaOptInPanel.js",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2019-03-21T21:12:47Z",
       "side": 1,
       "message": "Note, if using jQuery you could do $form.append( [ new Button().$el, new Button().$el ] );\n\nThis might be more readable at the trade off of using jQuery.",
+      "revId": "9aca376770a6c3dfb57d52dcfcf6c9ee982ba4bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2781ad3a_32b0fa05",
+        "filename": "src/mobile.init/BetaOptInPanel.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-26T18:14:32Z",
+      "side": 1,
+      "message": "Makes sense. My personal preference is to avoid jQuery unless it has great prevalence in a file. I\u0027d be happy to make the few refactors from jQuery to DOM in this file if that improves the reception.",
+      "parentUuid": "28c2ada4_f83b5d1c",
       "revId": "9aca376770a6c3dfb57d52dcfcf6c9ee982ba4bf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
