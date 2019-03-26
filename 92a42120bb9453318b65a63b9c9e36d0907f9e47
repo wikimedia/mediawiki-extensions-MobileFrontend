@@ -22,6 +22,30 @@
       "revId": "92a42120bb9453318b65a63b9c9e36d0907f9e47",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0d0c511b_86102c44",
+        "filename": "src/mobile.mediaViewer/ImageCarousel.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 234,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-26T21:05:01Z",
+      "side": 1,
+      "message": "In case that\u0027s possible, there\u0027s some XHR abort examples in Popups. If Image Elements are used, maybe rejection is just clearing the src attribute?\n\nhttps://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/extensions/Popups/+/master/src/gateway/rest.js#79",
+      "parentUuid": "64a68bfe_4b363290",
+      "range": {
+        "startLine": 232,
+        "startChar": 0,
+        "endLine": 234,
+        "endChar": 3
+      },
+      "revId": "92a42120bb9453318b65a63b9c9e36d0907f9e47",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
