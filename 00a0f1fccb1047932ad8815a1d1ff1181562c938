@@ -34,6 +34,24 @@
       "revId": "00a0f1fccb1047932ad8815a1d1ff1181562c938",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "778f5a8a_fd7085d8",
+        "filename": "tests/qunit/.eslintrc.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-27T22:08:57Z",
+      "side": 1,
+      "message": "Ah, makes sense. Do we need the jQuery rule below though?",
+      "parentUuid": "771978ef_7e07762a",
+      "revId": "00a0f1fccb1047932ad8815a1d1ff1181562c938",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
