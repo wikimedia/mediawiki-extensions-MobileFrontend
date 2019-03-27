@@ -54,14 +54,15 @@ class SpecialMobileDiffTest extends MediaWikiLangTestCase {
 	 * @covers SpecialMobileDiff::getMobileUrlFromDesktop
 	 */
 	public function testRedirectFromDesktopDiff( array $query, $expected ) {
+		$request = RequestContext::getMain()->getRequest();
 		foreach ( $query as $k => $v ) {
-			MobileContext::singleton()->getRequest()->setVal( $k, $v );
+			$request->setVal( $k, $v );
 			$this->unsetReqVals[] = $k;
 		}
 		if ( $expected ) {
 			$expected = Title::newFromText( $expected )->getLocalURL();
 		}
-		$redirectUrl = MockSpecialMobileDiff::getMobileUrlFromDesktop();
+		$redirectUrl = MockSpecialMobileDiff::getMobileUrlFromDesktop( $request );
 		$this->assertEquals( $expected, $redirectUrl );
 	}
 

@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
+
 /**
  * Basic mobile implementation of SpecialPage to use in specific mobile special pages
  */
@@ -18,6 +20,21 @@ class MobileSpecialPage extends SpecialPage {
 	protected $errorNotFoundTitleMsg = 'mobile-frontend-generic-404-title';
 	/** @var string a message key for the error message description that should be shown on a 404 */
 	protected $errorNotFoundDescriptionMsg = 'mobile-frontend-generic-404-desc';
+	/** @var MobileContext */
+	private $mobileContext;
+
+	/**
+	 * Wrapper to get a Mobile Context object via services
+	 * @return MobileContext
+	 */
+	protected function getMobileContext() {
+		if ( $this->mobileContext === null ) {
+			$this->mobileContext = MediaWikiServices::getInstance()->getService(
+				'MobileFrontend.Context'
+			);
+		}
+		return $this->mobileContext;
+	}
 
 	/**
 	 * Wrapper for MobileContext::getMFConfig
@@ -39,7 +56,7 @@ class MobileSpecialPage extends SpecialPage {
 	 * @param string|null $subPage parameter submitted as "subpage"
 	 */
 	public function execute( $subPage ) {
-		$ctx = MobileContext::singleton();
+		$ctx = $this->getMobileContext();
 		$this->config = $ctx->getMFConfig();
 		$out = $this->getOutput();
 		$out->setProperty( 'desktopUrl', $this->getDesktopUrl( $subPage ) );

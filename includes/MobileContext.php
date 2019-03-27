@@ -349,7 +349,7 @@ class MobileContext extends ContextSource {
 		if ( $request->getCheck( 'diff' ) &&
 			MobileFrontendHooks::shouldMobileFormatSpecialPages( $this->getUser() )
 		) {
-			$redirectUrl = SpecialMobileDiff::getMobileUrlFromDesktop();
+			$redirectUrl = SpecialMobileDiff::getMobileUrlFromDesktop( $request );
 		}
 
 		if ( $request->getVal( 'action' ) === 'history' &&

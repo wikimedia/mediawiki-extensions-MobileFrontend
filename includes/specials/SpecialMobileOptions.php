@@ -23,10 +23,16 @@ class SpecialMobileOptions extends MobileSpecialPage {
 	 */
 	private $amc;
 
+	/**
+	 * @var \MobileFrontend\Features\FeaturesManager
+	 */
+	private $featureManager;
+
 	public function __construct() {
 		parent::__construct( 'MobileOptions' );
 		$this->services = MediaWikiServices::getInstance();
 		$this->amc = $this->services->getService( 'MobileFrontend.AMC.Manager' );
+		$this->featureManager = $this->services->getService( 'MobileFrontend.FeaturesManager' );
 	}
 
 	/**
@@ -40,12 +46,10 @@ class SpecialMobileOptions extends MobileSpecialPage {
 	 * Set the required config for the page.
 	 */
 	public function setJsConfigVars() {
-		$context = MobileContext::singleton();
-		$featureManager = MediaWikiServices::getInstance()
-			->getService( 'MobileFrontend.FeaturesManager' );
 		$this->getOutput()->addJsConfigVars( [
-			'wgMFEnableFontChanger' =>
-				$featureManager->isFeatureAvailableInContext( 'MFEnableFontChanger', $context ),
+			'wgMFEnableFontChanger' => $this->featureManager->isFeatureAvailableForCurrentUser(
+				'MFEnableFontChanger'
+			),
 		] );
 	}
 	/**
@@ -54,7 +58,6 @@ class SpecialMobileOptions extends MobileSpecialPage {
 	 */
 	public function execute( $par = '' ) {
 		parent::execute( $par );
-		$context = MobileContext::singleton();
 
 		$this->returnToTitle = Title::newFromText( $this->getRequest()->getText( 'returnto' ) );
 		if ( !$this->returnToTitle ) {
@@ -64,8 +67,8 @@ class SpecialMobileOptions extends MobileSpecialPage {
 		$this->setHeaders();
 		$this->setJsConfigVars();
 
-		$context->setForceMobileView( true );
-		$context->setContentTransformations( false );
+		$this->getMobileContext()->setForceMobileView( true );
+		$this->getMobileContext()->setContentTransformations( false );
 
 		if ( $this->getRequest()->wasPosted() ) {
 			$this->submitSettingsForm();
@@ -133,7 +136,6 @@ class SpecialMobileOptions extends MobileSpecialPage {
 	 */
 	private function addSettingsForm() {
 		$out = $this->getOutput();
-		$context = MobileContext::singleton();
 		$user = $this->getUser();
 
 		$out->setPageTitle( $this->msg( 'mobile-frontend-main-menu-settings-heading' ) );
@@ -159,7 +161,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 			$fields[] = $this->buildAMCToggle();
 		}
 		// beta settings
-		$isInBeta = $context->isBetaGroupMember();
+		$isInBeta = $this->getMobileContext()->isBetaGroupMember();
 		if ( $this->getMFConfig()->get( 'MFEnableBeta' ) ) {
 			$input = new OOUI\CheckboxInputWidget( [
 				'name' => 'enableBeta',
@@ -264,14 +266,14 @@ class SpecialMobileOptions extends MobileSpecialPage {
 	 * Saves the settings submitted by the settings form
 	 */
 	private function submitSettingsForm() {
-		$context = MobileContext::singleton();
 		$request = $this->getRequest();
 		$user = $this->getUser();
+		$output = $this->getOutput();
 
 		if ( $user->isLoggedIn() && !$user->matchEditToken( $request->getVal( 'token' ) ) ) {
 			$errorText = __METHOD__ . '(): token mismatch';
 			wfDebugLog( 'mobile', $errorText );
-			$this->getOutput()->addHTML( '<div class="error">'
+			$output->addHTML( '<div class="error">'
 				. $this->msg( "mobile-frontend-save-error" )->parse()
 				. '</div>'
 			);
@@ -286,8 +288,10 @@ class SpecialMobileOptions extends MobileSpecialPage {
 			$userMode->setEnabled( $request->getBool( 'enableAMC' ) );
 		}
 
-		$context->setMobileMode( $group );
+		$this->getMobileContext()->setMobileMode( $group );
 		$url = $this->getPageTitle()->getFullURL( 'success' );
-		$context->getOutput()->redirect( MobileContext::singleton()->getMobileUrl( $url ) );
+		$output->redirect(
+			$this->getMobileContext()->getMobileUrl( $url )
+		);
 	}
 }
