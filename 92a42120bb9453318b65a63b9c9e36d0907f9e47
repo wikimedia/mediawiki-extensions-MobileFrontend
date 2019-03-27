@@ -118,6 +118,30 @@
       "revId": "92a42120bb9453318b65a63b9c9e36d0907f9e47",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "27825cf3_d001768d",
+        "filename": "src/mobile.mediaViewer/ImageCarousel.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 234,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-27T22:31:24Z",
+      "side": 1,
+      "message": "In latest patch, I  removed the ImageGateway caching as we aren\u0027t even using it right now.\n\nI also tried to do something like you described. Unfortunately, I think in addition to adding a guard statement in the reject handler, we also need to add a guard statement in the ImageCarousel\u0027s resolve callback (L246) due to the async nature of each additional .then callback. Without this, I think an edge case might arise where the cancel is called after the imageGateway promise has already resolved but before the additional .then callback has executed which would lead to the same problem this patch is trying to tackle. (discussed more in commit message)",
+      "parentUuid": "e993cd3a_131c7e32",
+      "range": {
+        "startLine": 232,
+        "startChar": 0,
+        "endLine": 234,
+        "endChar": 3
+      },
+      "revId": "92a42120bb9453318b65a63b9c9e36d0907f9e47",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
