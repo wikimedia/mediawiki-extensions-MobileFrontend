@@ -45,6 +45,30 @@
       "revId": "b7dac75bdd3fac2a8f7e0940717badadf9a2c175",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e0b4adab_09cf05e3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-27T17:47:06Z",
+      "side": 1,
+      "message": "This file (corrected path to resources/qunit/mobilefrontend.js) is never built and will likely never need changes.\n\nThe resources/dist/mobilefrontend.js built by webpack is already gitignored intentionally. If it\u0027s not, we risk adding it back into the codebase by accident and undoing this commit, which is why I have the module which switches between the two separate files (one that always is in the repo, one that isn\u0027t).",
+      "parentUuid": "96018b3d_e1bdc1b9",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 15
+      },
+      "revId": "b7dac75bdd3fac2a8f7e0940717badadf9a2c175",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
