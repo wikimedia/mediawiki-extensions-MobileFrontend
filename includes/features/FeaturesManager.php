@@ -6,7 +6,12 @@ use MobileContext;
 use Hooks;
 
 /**
- * A wrapper for all available mobile frontend features.
+ * A facade for UserModes and MobileFrontend Features system.
+ *
+ * FeaturesManager takes care about all available user modes and features
+ * It handles relations between mode and features (one to many relation)
+ * and allows an easy acecss to single mode/feature so there is no need
+ * to retrieve objects from the MediaWikiServices.
  *
  * @package MobileFrontend\Features
  */
@@ -104,6 +109,16 @@ class FeaturesManager {
 			}
 		}
 		return false;
+	}
+
+	/**
+	 * Retrieve the current mode
+	 *
+	 * @param string $modeIdentifier Mode identifier
+	 * @return IUserMode
+	 */
+	public function getMode( $modeIdentifier ) {
+		return $this->userModes->getMode( $modeIdentifier );
 	}
 
 	/**

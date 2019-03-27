@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\MediaWikiServices;
+use MobileFrontend\Features\IFeature;
 
 /**
  * Adds a special page with mobile specific preferences
@@ -187,10 +188,11 @@ class SpecialMobileOptions extends MobileSpecialPage {
 			);
 
 			$manager = $this->services->getService( 'MobileFrontend.FeaturesManager' );
-
+			// TODO The userMode should know how to retrieve features assigned to that mode,
+			// we shouldn't do any special logic like this in anywhere else in the code
 			$features = array_diff(
-				$manager->getAvailableForMode( new \MobileFrontend\Features\BetaUserMode( $context ) ),
-				$manager->getAvailableForMode( new \MobileFrontend\Features\StableUserMode( $context ) )
+				$manager->getAvailableForMode( $manager->getMode( IFeature::CONFIG_BETA ) ),
+				$manager->getAvailableForMode( $manager->getMode( IFeature::CONFIG_STABLE ) )
 			);
 
 			$classNames = [ 'mobile-options-beta-feature' ];
