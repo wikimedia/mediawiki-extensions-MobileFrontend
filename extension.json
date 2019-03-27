@@ -763,18 +763,6 @@
 		"localBasePath": "",
 		"remoteExtPath": "MobileFrontend"
 	},
-	"QUnitTestModule": {
-		"localBasePath": "",
-		"remoteExtPath": "MobileFrontend",
-		"scripts": "resources/dist/tests.mobilefrontend.js",
-		"dependencies": [
-			"mobile.startup",
-			"mobile.languages.structured",
-			"mobile.mediaViewer",
-			"mobile.special.nearby.scripts",
-			"mobile.talk.overlays"
-		]
-	},
 	"EventLoggingSchemas": {
 		"MobileWebMainMenuClickTracking": 18203509,
 		"MobileWebSearch": 12054448
@@ -861,6 +849,10 @@
 		],
 		"ResourceLoaderRegisterModules": [
 			"MobileFrontendHooks::onResourceLoaderRegisterModules"
+		],
+
+		"ResourceLoaderTestModules": [
+			"MobileFrontendHooks::onResourceLoaderTestModules"
 		],
 		"OutputPageParserOutput": [
 			"MobileFrontendHooks::onOutputPageParserOutput"
