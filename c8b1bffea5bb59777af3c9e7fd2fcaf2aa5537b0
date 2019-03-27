@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "b3d07ad4_496f2759",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-03-27T15:54:00Z",
+      "side": 1,
+      "message": "most probably I\u0027ll do that in follow up work (remove the old way of accessing things).",
+      "parentUuid": "9e602d5e_d41278d6",
+      "range": {
+        "startLine": 7,
+        "startChar": 9,
+        "endLine": 7,
+        "endChar": 42
+      },
+      "revId": "c8b1bffea5bb59777af3c9e7fd2fcaf2aa5537b0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "561545d3_7f6c0ee6",
         "filename": "/COMMIT_MSG",
         "patchSetId": 6
@@ -36,6 +60,30 @@
       "writtenOn": "2019-03-22T14:37:42Z",
       "side": 1,
       "message": "I think this example should use the interface.",
+      "range": {
+        "startLine": 34,
+        "startChar": 15,
+        "endLine": 34,
+        "endChar": 20
+      },
+      "revId": "c8b1bffea5bb59777af3c9e7fd2fcaf2aa5537b0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dfb5540c_0e869f8c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-03-27T15:54:00Z",
+      "side": 1,
+      "message": "what do you mean \"by interface\"? like by using a constant,\nsth like :\n  \n  AMCMode::NAME\n\n\nThe whole idea of it is that you don\u0027t have to know the full service name (a.k.a. MobileFrontend.AMC.UserMode), just use the well-known identifier (stable/beta/amc).\n\nIn a follow-up, I want to rename \"UserMode\" into \"SiteMode\" as this will allow us to add things that are not related to the user. \nI came with the idea of \"UserMode\" as the user can opt-in/opt-out from modes. But then we got an idea, that there can be some modes that are predefined, or that modes are bucketed per user (there is no way to opt-out).",
+      "parentUuid": "561545d3_7f6c0ee6",
       "range": {
         "startLine": 34,
         "startChar": 15,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "9529e9ed_0788da10",
+        "filename": "includes/features/UserModes.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-03-27T15:54:00Z",
+      "side": 1,
+      "message": "good catch",
+      "parentUuid": "d8996d76_27569b4a",
+      "range": {
+        "startLine": 33,
+        "startChar": 12,
+        "endLine": 33,
+        "endChar": 17
+      },
+      "revId": "c8b1bffea5bb59777af3c9e7fd2fcaf2aa5537b0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b6c82ff3_3f5426bf",
         "filename": "tests/phpunit/features/FeaturesManagerTest.php",
         "patchSetId": 6
@@ -94,6 +166,30 @@
     },
     {
       "key": {
+        "uuid": "b53f346d_cface2e4",
+        "filename": "tests/phpunit/features/FeaturesManagerTest.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-03-27T15:54:00Z",
+      "side": 1,
+      "message": "sounds good.",
+      "parentUuid": "b6c82ff3_3f5426bf",
+      "range": {
+        "startLine": 32,
+        "startChar": 17,
+        "endLine": 32,
+        "endChar": 26
+      },
+      "revId": "c8b1bffea5bb59777af3c9e7fd2fcaf2aa5537b0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "908c2ad8_b2f0a8f4",
         "filename": "tests/phpunit/features/FeaturesManagerTest.php",
         "patchSetId": 6
@@ -105,6 +201,30 @@
       "writtenOn": "2019-03-22T14:37:42Z",
       "side": 1,
       "message": "Any reason not to add a use at the top of the file instead?",
+      "range": {
+        "startLine": 52,
+        "startChar": 19,
+        "endLine": 52,
+        "endChar": 44
+      },
+      "revId": "c8b1bffea5bb59777af3c9e7fd2fcaf2aa5537b0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "49c586bf_ba6027b2",
+        "filename": "tests/phpunit/features/FeaturesManagerTest.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-03-27T15:54:00Z",
+      "side": 1,
+      "message": "nope, just my IDE decided to use full names as this file is in global namespace. I\u0027ll fix those.",
+      "parentUuid": "908c2ad8_b2f0a8f4",
       "range": {
         "startLine": 52,
         "startChar": 19,
