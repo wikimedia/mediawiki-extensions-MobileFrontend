@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "96018b3d_e1bdc1b9",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-27T17:34:07Z",
+      "side": 1,
+      "message": "This might need a change to .gitignore.",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 15
+      },
+      "revId": "b7dac75bdd3fac2a8f7e0940717badadf9a2c175",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3f14ea81_f00c0df8",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-27T17:34:07Z",
+      "side": 1,
+      "message": "Instead of resources/test.mobilefrontend.js, would it be better to move this to the final commit of resources/dist/test.mobilefrontend.js?",
+      "range": {
+        "startLine": 23,
+        "startChar": 16,
+        "endLine": 23,
+        "endChar": 63
+      },
+      "revId": "b7dac75bdd3fac2a8f7e0940717badadf9a2c175",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
