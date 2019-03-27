@@ -9,7 +9,8 @@
 			"Wintereu",
 			"Matrafox",
 			"Strainu",
-			"Kyouko"
+			"Kyouko",
+			"Fitoschido"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Dacă un utilizator modifică sau nu prin intermediul interfeței mobile",
@@ -105,7 +106,7 @@
 	"mobile-frontend-languages-text": "$1 este disponibilă {{PLURAL:$2|într-o singură limbă|în $2 limbi|în $2 de limbi}}.",
 	"mobile-frontend-languages-variant-header": "variante în {{#language:{{CONTENTLANG}}}}",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Limbi sugerate",
-	"mobile-frontend-languages-structured-overlay-all-languages-header": "Toate limbile",
+	"mobile-frontend-languages-structured-overlay-all-languages-header": "Alte limbi",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Căutare limbă",
 	"mobile-frontend-last-modified-date": "Ultima modificare pe $1, la $2",
 	"mobile-frontend-last-modified-with-user-days": "[$4 Ultima {{GENDER:$1|modificare}} efectuată acum {{PLURAL:$3|$3 zi|$3 zile|$3 de zile}}] de către {{PLURAL:$5|[$6 $2]|0=un utilizator anonim}}.",
