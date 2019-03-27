@@ -69,6 +69,30 @@
       "revId": "b7dac75bdd3fac2a8f7e0940717badadf9a2c175",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1e523043_1429fdca",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-27T18:55:16Z",
+      "side": 1,
+      "message": "\u003e The resources/dist/mobilefrontend.js built by webpack is already gitignored intentionally.\n\nAh, I see. Makes sense.\n\n\u003e If it\u0027s not, we risk adding it back into the codebase by accident and undoing this commit, which is why I have the module which switches between the two separate files (one that always is in the repo, one that isn\u0027t).\n\nOk, that makes sense. Does that weird diff precommit script need updating?",
+      "parentUuid": "e0b4adab_09cf05e3",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 23,
+        "endChar": 15
+      },
+      "revId": "b7dac75bdd3fac2a8f7e0940717badadf9a2c175",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
