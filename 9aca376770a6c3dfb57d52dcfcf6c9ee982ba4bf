@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "2fc66c19_b0102e87",
+        "filename": "src/mobile.init/BetaOptInPanel.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-27T00:56:34Z",
+      "side": 1,
+      "message": "\u003e  Viewless demo[0] which is similar to Popups and uses (or will use) mw.html.escape(). Do you disagree?\n\nI do disagree. As I recall we used templates in Popups because we decided it wasn\u0027t worth adding a template library to Popups for such a small use case and we were already string stitching. I don\u0027t think we should follow it\u0027s lead. MobileFrontend is a very different codebase with templating an important part.\n\nThe fact is, despite being unfashionable, we have a template library available - Hogan and it provides much more safety to us from mistakes.\n\nIn this patch, text is coming from a MediaWiki message (which is not being escaped!!!) and introducing a vector of attack as HTML is perfectly valid in mediawiki messages. I\u0027d rather we didn\u0027t encourage HTML creation like this for this reason.\n\nI think given we\u0027re using Hogan across the codebase we should stick with what we have until we have a decision over the long term solution for templates.\n\nI\u0027d actually like us to at least on the short term switch Hogan out for Mustache because it seems to be smaller these days, is better maintained and is already defined in core so will not require an RFC or security review. Our annual goal around making Minerva  independent on MobileFrontend seems to demand this.\n\nLong term, I\u0027d be really interested in something like JSX which is escaped by default (and discourages HTML inputs with its scarily named dangerouslyInsertHTML parameter).\n\nMy biggest concern with MobileFrontend right now is we roll our own code in a lot of places and do things consistently and I\u0027d rather not add more complexity to the templating portion.",
+      "parentUuid": "2a1c0296_10167ac8",
+      "revId": "9aca376770a6c3dfb57d52dcfcf6c9ee982ba4bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "28c2ada4_f83b5d1c",
         "filename": "src/mobile.init/BetaOptInPanel.js",
         "patchSetId": 3
@@ -66,6 +84,24 @@
       "side": 1,
       "message": "Makes sense. My personal preference is to avoid jQuery unless it has great prevalence in a file. I\u0027d be happy to make the few refactors from jQuery to DOM in this file if that improves the reception.",
       "parentUuid": "28c2ada4_f83b5d1c",
+      "revId": "9aca376770a6c3dfb57d52dcfcf6c9ee982ba4bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e32e232e_0d900dbc",
+        "filename": "src/mobile.init/BetaOptInPanel.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-27T00:56:34Z",
+      "side": 1,
+      "message": "I figured as much.",
+      "parentUuid": "2781ad3a_32b0fa05",
       "revId": "9aca376770a6c3dfb57d52dcfcf6c9ee982ba4bf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
