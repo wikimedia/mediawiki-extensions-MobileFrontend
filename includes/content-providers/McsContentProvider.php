@@ -5,6 +5,7 @@ namespace MobileFrontend\ContentProviders;
 use FormatJson;
 use MediaWiki\MediaWikiServices;
 use Title;
+use OutputPage;
 
 /**
  * Sources content from the Mobile-Content-Service
@@ -14,16 +15,19 @@ use Title;
 class McsContentProvider implements IContentProvider {
 	/** @var Title|null */
 	private $title;
+	/** @var OutputPage */
+	private $out;
 	/** @var string */
 	private $baseUrl;
 
 	/**
 	 * @param string $baseUrl for the MediaWiki API to be used minus query string e.g. /w/api.php
-	 * @param Title|null $title
+	 * @param OutputPage $out
 	 */
-	public function __construct( $baseUrl, Title $title = null ) {
+	public function __construct( $baseUrl, OutputPage $out ) {
 		$this->baseUrl = $baseUrl;
-		$this->title = $title;
+		$this->out = $out;
+		$this->title = $out->getTitle();
 	}
 
 	/**
@@ -73,6 +77,8 @@ class McsContentProvider implements IContentProvider {
 		if ( !$title ) {
 			return '';
 		}
+		// Parsoid renders HTML incompatible with PHP parser and needs its own styles
+		$this->out->addModuleStyles( 'mediawiki.skinning.content.parsoid' );
 
 		$url = $this->baseUrl . '/page/mobile-sections/';
 		$url .= urlencode( $title->getPrefixedDBKey() );
