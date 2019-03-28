@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4506c5ea_2ef22eef",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-28T17:17:19Z",
+      "side": 1,
+      "message": "This is huge as it removes a ResourceLoader dependency and is one of the blockers for us making Minerva independent of MobileFrontend.",
+      "revId": "b80fe7a6329ceaf7228ebd4170a10c5a6964be0d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a1aeefe5_fa0b888f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-28T17:17:19Z",
+      "side": 1,
+      "message": "The downside of this is we lose compatibility with View\u0027s lifecycle.",
+      "revId": "b80fe7a6329ceaf7228ebd4170a10c5a6964be0d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fc016736_5f83f967",
+        "filename": "src/mobile.init/BetaOptInPanel.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-28T17:17:19Z",
+      "side": 1,
+      "message": "The downside of doing this is if you ever need to render a component again, the HTML will be lost. The `template` property of a View is re-rendered every time you call View.prototype.render (which is meant to be a public interface) \n\nRight now component life cycle is this:\n* constructor (this function)\n* preRender\n* render (renders `this.template`)\n* postRender\n\nCalling render calls preRender and postRender but constructor can only be called once.\n\n(This reminds me I need to write an explanation of how our existing code works and how it differs from Backbone which it\u0027s based on to help with reasoning with it and understanding how we migrate it to something else)\n\nYou can do \nBetaOptinPanel.template \u003d mw.template.compile( `\n`);\nand the effect will be exactly the same.\n\nI like how the template is inlined and brought closer to the code itself and this is useful for us moving all our templates into JS and allowing us to ship versions in Minerva.",
+      "revId": "b80fe7a6329ceaf7228ebd4170a10c5a6964be0d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
