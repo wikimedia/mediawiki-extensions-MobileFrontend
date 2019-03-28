@@ -97,6 +97,30 @@
     },
     {
       "key": {
+        "uuid": "8544de36_9bfb95e0",
+        "filename": "src/mobile.mediaViewer/ImageCarousel.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 248,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-28T22:34:31Z",
+      "side": 1,
+      "message": "I should clarify the following line:\n\nWhat this means is that click callbacks \n// CANNOT execute until the microtask queue is empty and will NEVER execute\n// BETWEEN the execution of .then callbacks!\n\n^^ when I say .then callbacks I mean ones that don\u0027t return promises (like in the example). If the callbacks returned promises then things would be different!",
+      "parentUuid": "19580888_64ac9dd1",
+      "range": {
+        "startLine": 244,
+        "startChar": 0,
+        "endLine": 248,
+        "endChar": 4
+      },
+      "revId": "14934fdfb9f148624d7ce01527267d6904c56836",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "26876d6f_e48abfab",
         "filename": "src/mobile.mediaViewer/ImageGateway.js",
         "patchSetId": 12
