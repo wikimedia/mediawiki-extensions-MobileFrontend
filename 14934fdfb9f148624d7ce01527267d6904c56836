@@ -121,6 +121,30 @@
     },
     {
       "key": {
+        "uuid": "59cfabaf_6d23c9eb",
+        "filename": "src/mobile.mediaViewer/ImageCarousel.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 248,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-28T22:46:45Z",
+      "side": 1,
+      "message": "Also, regarding relying on the image filename instead: What if the array is 3 images and the user quickly cycles through all of the images landing at the exact same image? Maybe one of those requests could potentially fail while the other succeeds and you *might* end up with the image loading and then the load error rendering too. \n\n^^ I\u0027m actually not sure if that would even be possible, but I have questions about it and I\u0027m more certain with relying on the cancellation flag.",
+      "parentUuid": "8544de36_9bfb95e0",
+      "range": {
+        "startLine": 244,
+        "startChar": 0,
+        "endLine": 248,
+        "endChar": 4
+      },
+      "revId": "14934fdfb9f148624d7ce01527267d6904c56836",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "26876d6f_e48abfab",
         "filename": "src/mobile.mediaViewer/ImageGateway.js",
         "patchSetId": 12
