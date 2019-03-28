@@ -49,6 +49,53 @@
     },
     {
       "key": {
+        "uuid": "1688150b_0df064b8",
+        "filename": "src/mobile.mediaViewer/ImageCarousel.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 248,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-28T20:55:17Z",
+      "side": 1,
+      "message": "Thanks for bearing with me, I can reproduce this behavior. I think the issue is that xhr.abort() can be called after the AJAX request completes. This is effectively:\n\n var deferred \u003d $.Deferred();\n deferred.then(() \u003d\u003e console.log(\u0027then\u0027));\n deferred.catch(() \u003d\u003e console.log(\u0027catch\u0027));\n deferred.resolve();\n deferred.reject();\n // \u003d\u003e then\n // You can do whatever else you want here but the promise is resolved.\n\nOr:\n\n var xhr \u003d $.ajax(\u0027/\u0027);\n xhr.then(rsp \u003d\u003e console.log(\u0027then\u0027));\n xhr.catch(rsp \u003d\u003e console.log(\u0027catch\u0027, rsp.statusText));\n setTimeout(() \u003d\u003e xhr.abort(), 1000)\n // \u003d\u003e then\n\nDo you agree? In the simple examples, that seems like correct behavior to me.\n\nSo... Canceled suddenly makes sense to me :] In my opinion, I still think that checking index or title would be less error-prone than flipping the boolean but maybe that\u0027s not easy.",
+      "parentUuid": "d538471c_0925ee8a",
+      "range": {
+        "startLine": 244,
+        "startChar": 0,
+        "endLine": 248,
+        "endChar": 4
+      },
+      "revId": "14934fdfb9f148624d7ce01527267d6904c56836",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "26876d6f_e48abfab",
+        "filename": "src/mobile.mediaViewer/ImageGateway.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-28T20:55:17Z",
+      "side": 1,
+      "message": "Not new to this patch but maybe can be simplified to: \n\n Math.max( window.devicePixelRatio || 1, 1 ); // [1, ∞)\n\nOr\n\n window.devicePixelRatio \u003e 1 ? window.devicePixelRatio : 1",
+      "range": {
+        "startLine": 37,
+        "startChar": 24,
+        "endLine": 38,
+        "endChar": 30
+      },
+      "revId": "14934fdfb9f148624d7ce01527267d6904c56836",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "352ecff3_01170437",
         "filename": "src/mobile.mediaViewer/ImageGateway.js",
         "patchSetId": 12
