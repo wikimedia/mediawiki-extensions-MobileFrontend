@@ -107,6 +107,24 @@
     },
     {
       "key": {
+        "uuid": "5e4205a4_48c6b1f1",
+        "filename": "src/mobile.init/BetaOptInPanel.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-28T19:00:30Z",
+      "side": 1,
+      "message": "Thanks for your feedback and encouragement. I\u0027ll try out your suggestions and follow up here as soon as I can.",
+      "parentUuid": "ed542c0a_894590ce",
+      "revId": "b80fe7a6329ceaf7228ebd4170a10c5a6964be0d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "156d5409_b734de6b",
         "filename": "src/mobile.init/BetaOptInPanel.js",
         "patchSetId": 5
