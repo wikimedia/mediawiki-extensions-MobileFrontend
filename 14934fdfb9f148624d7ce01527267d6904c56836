@@ -73,6 +73,30 @@
     },
     {
       "key": {
+        "uuid": "19580888_64ac9dd1",
+        "filename": "src/mobile.mediaViewer/ImageCarousel.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 248,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-28T22:25:26Z",
+      "side": 1,
+      "message": "The fact that the cancellation can happen AFTER the ajax request completes is one big part of this but not the entire picture. \n\nThe other part is that the cancellation can happen AFTER the ajax request completes but BEFORE all of the .then callbacks have executed. That\u0027s what is happening when the promise is cancelled yet the .then resolve handler still executes instead of the reject handler. And this behavior differs between jQuery promises and native promises (at least chrome native promises) Sorry if my explanations are fuzzy, I just researched this stuff this week and am still learning. \n\nConsider the following:\n\n```\n// Note: This jQuery promise has already resolved. Each .then callback will be\n// added to a macrotask queue \n$.Deferred().resolve()\n  .then( () \u003d\u003e { console.log(\u0027in .then 1\u0027); } )\n  .then( () \u003d\u003e { console.log(\u0027in .then 2\u0027); } )\n  .then( () \u003d\u003e { console.log(\u0027in .then 3\u0027); } );\n\n// Imagine the setTimeout as a user clicking the carousel navigation button.\n// Both actions will ultimately add the callback to the SAME macrotask queue for the\n// event loop to go through. This means that click callbacks can execute BETWEEN\n// the execution of .then callbacks!\nsetTimeout( function () { \n  console.log(\"onSlide callback executing!\")\n}, 0 )\n\n// Executing the above will print (at least in chrome):\n// in .then 1\n// onSlide callback executing!\n// in .then 2\n// in .then 3\n\n\n// Native promises behave differently than jquery promises. Once a native\n// promise resolves, any additional .then callbacks will be added to the\n// microtask queue and will also execute because the microtask queue has higher\n// priority than the macrotask queue. What this means is that click callbacks \n// CANNOT execute until the microtask queue is empty and will NEVER execute\n// BETWEEN the execution of .then callbacks!\nPromise.resolve()\n  .then( () \u003d\u003e { console.log(\u0027in .then 1\u0027); } )\n  .then( () \u003d\u003e { console.log(\u0027in .then 2\u0027); } )\n  .then( () \u003d\u003e { console.log(\u0027in .then 3\u0027); } );\n\n// Imagine the setTimeout as a user clicking the carousel navigation button.\n// Both actions will ultimately add the callback to the macrotask queue for the\n// event loop to go through\nsetTimeout( function () { \n  console.log(\"onSlide callback executing!\")\n}, 0 )\n\n// Executing the above will print (at least in chrome):\n// in .then 1\n// in .then 2\n// in .then 3\n// onSlide callback executing!\n```",
+      "parentUuid": "1688150b_0df064b8",
+      "range": {
+        "startLine": 244,
+        "startChar": 0,
+        "endLine": 248,
+        "endChar": 4
+      },
+      "revId": "14934fdfb9f148624d7ce01527267d6904c56836",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "26876d6f_e48abfab",
         "filename": "src/mobile.mediaViewer/ImageGateway.js",
         "patchSetId": 12
@@ -107,6 +131,30 @@
       "writtenOn": "2019-03-28T17:20:44Z",
       "side": 1,
       "message": "Consider adding a JSDoc typedef for this response.",
+      "range": {
+        "startLine": 48,
+        "startChar": 13,
+        "endLine": 52,
+        "endChar": 3
+      },
+      "revId": "14934fdfb9f148624d7ce01527267d6904c56836",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d4c828d9_d02e9ef6",
+        "filename": "src/mobile.mediaViewer/ImageGateway.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-28T22:25:26Z",
+      "side": 1,
+      "message": "will do",
+      "parentUuid": "352ecff3_01170437",
       "range": {
         "startLine": 48,
         "startChar": 13,
