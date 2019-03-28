@@ -86,6 +86,41 @@
       "revId": "b80fe7a6329ceaf7228ebd4170a10c5a6964be0d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ed542c0a_894590ce",
+        "filename": "src/mobile.init/BetaOptInPanel.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-28T18:16:49Z",
+      "side": 1,
+      "message": "Point taken. If kept like this, we should document this behaviour in someway (as if someone does understand the View lifecycle this might come as a surprise.\n\nI am now wondering if this function needs to be a class and extend View at all. At this point does it need to use anything in it?\n\nMy read is you could replace this line with:\n\nthis.$el \u003d $( html() );\nand remove the mf\u0027in Extend call.\n\nWe could have a new type @ViewDumb which must have an $el property so that it\u0027s compatible with view usage elsewhere.\n\nThis seems like it could be a good pattern for creating dumb components which I think is your intention here.",
+      "parentUuid": "f8886d20_addef46e",
+      "revId": "b80fe7a6329ceaf7228ebd4170a10c5a6964be0d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "156d5409_b734de6b",
+        "filename": "src/mobile.init/BetaOptInPanel.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-28T18:16:49Z",
+      "side": 1,
+      "message": "Do we need this? Could we just pass props.onCancel to Button ?",
+      "revId": "b80fe7a6329ceaf7228ebd4170a10c5a6964be0d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
