@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2061e6da_8fb8166f",
+        "filename": "src/mobile.mediaViewer/ImageCarousel.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 248,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-28T17:20:44Z",
+      "side": 1,
+      "message": "If the request is \"canceled\" the promise is rejected, so I think this should never be true.",
+      "range": {
+        "startLine": 244,
+        "startChar": 0,
+        "endLine": 248,
+        "endChar": 4
+      },
+      "revId": "14934fdfb9f148624d7ce01527267d6904c56836",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "352ecff3_01170437",
+        "filename": "src/mobile.mediaViewer/ImageGateway.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-28T17:20:44Z",
+      "side": 1,
+      "message": "Consider adding a JSDoc typedef for this response.",
+      "range": {
+        "startLine": 48,
+        "startChar": 13,
+        "endLine": 52,
+        "endChar": 3
+      },
+      "revId": "14934fdfb9f148624d7ce01527267d6904c56836",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8967bf12_32505951",
+        "filename": "src/mobile.mediaViewer/ImageGateway.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-28T17:20:44Z",
+      "side": 1,
+      "message": "If abort and cancel are the same, we should use the same terminology. Although cancel sounds better to me, I think abort makes more sense given that it\u0027s the terminology used by XHRs. Similarly for the method name.\n\nhttps://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest\n\nYou might be able to replace this state entirely with textStatus. See XHR aborts in Popups and Core.\n\nhttps://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/extensions/Popups/+/master/src/actions.js#154\nhttps://doc.wikimedia.org/mediawiki-core/master/js/source/category.html#mw-Api (I think there are other examples in Core as well)",
+      "range": {
+        "startLine": 77,
+        "startChar": 12,
+        "endLine": 77,
+        "endChar": 22
+      },
+      "revId": "14934fdfb9f148624d7ce01527267d6904c56836",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
