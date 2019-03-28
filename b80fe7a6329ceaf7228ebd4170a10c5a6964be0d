@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "55b574af_b9e1199e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-28T17:48:28Z",
+      "side": 1,
+      "message": "I agree this adds distinction which is bad but I think it\u0027s a positive as well. The downside is that Views as a whole are harder to reason about. The upside is that BetaOptInPanel is _very_ easy to reason about (lifecycles are hard!). (Related comments in BetaOptInPanel.js.)",
+      "parentUuid": "a1aeefe5_fa0b888f",
+      "revId": "b80fe7a6329ceaf7228ebd4170a10c5a6964be0d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fc016736_5f83f967",
         "filename": "src/mobile.init/BetaOptInPanel.js",
         "patchSetId": 5
@@ -47,6 +65,24 @@
       "writtenOn": "2019-03-28T17:17:19Z",
       "side": 1,
       "message": "The downside of doing this is if you ever need to render a component again, the HTML will be lost. The `template` property of a View is re-rendered every time you call View.prototype.render (which is meant to be a public interface) \n\nRight now component life cycle is this:\n* constructor (this function)\n* preRender\n* render (renders `this.template`)\n* postRender\n\nCalling render calls preRender and postRender but constructor can only be called once.\n\n(This reminds me I need to write an explanation of how our existing code works and how it differs from Backbone which it\u0027s based on to help with reasoning with it and understanding how we migrate it to something else)\n\nYou can do \nBetaOptinPanel.template \u003d mw.template.compile( `\n`);\nand the effect will be exactly the same.\n\nI like how the template is inlined and brought closer to the code itself and this is useful for us moving all our templates into JS and allowing us to ship versions in Minerva.",
+      "revId": "b80fe7a6329ceaf7228ebd4170a10c5a6964be0d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f8886d20_addef46e",
+        "filename": "src/mobile.init/BetaOptInPanel.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-28T17:48:28Z",
+      "side": 1,
+      "message": "Thanks for your thoughts. Response below!\n\nIf we add:\n\n BetaOptinPanel.template \u003d mw.template.compile(\u0027...\u0027)\n\nWhere is it best to put it? If I put in file-scope, then importing the code has the side-effect of compiling the template. If I put it in the constructor, then I have to do a lazy check like\n\n if (!BetaOptinPanel.template) {\n   BetaOptinPanel.template \u003d mw.template.compile(\u0027...\u0027)\n }\n\nThis should work fine but is 1) extra boilerplate 2) hangs static properties off the BetaOptinPanel \"class\" which decrease readability 3) adds state which is the progenitor of many bugs.\n\nBring it back to render(), I don\u0027t think this form should ever be rendered more than once and, if it was and an optimization was needed, we could add this property. However, it\u0027s my hope that can actually omit View as a parent when it is unneeded, kind of like React functional components, and I think this class is a good candidate. I\u0027m happy to follow up with another patch showing what that looks like.\n\nThank you for the note on inlining templates too. Hm, the only counterpoint I can think of is that this is a downgrade if we want to render the same Mustache on server and client. However, it\u0027s very easy in Webpack to later import arbitrary files as strings if needed or even precompile them, I suppose, but Hogan will still be needed to render as you know!",
+      "parentUuid": "fc016736_5f83f967",
       "revId": "b80fe7a6329ceaf7228ebd4170a10c5a6964be0d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
