@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "d538471c_0925ee8a",
+        "filename": "src/mobile.mediaViewer/ImageCarousel.js",
+        "patchSetId": 12
+      },
+      "lineNbr": 248,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-03-28T17:38:24Z",
+      "side": 1,
+      "message": "I think it\u0027s needed and I\u0027ve actually been able to hit this conditional on this patch by rapidly advancing slides. It happens very rarely, but it can definitely happen. \n\nI think this is because JQuery Promises are a bit different than native Promises. JQuery promises schedule each promise callback as a macroTask instead of a microtask in the event loop. What this ultimately means is that click events can happen in between these macrotasks and a click event advancing to the next slide can occur before this callback is executed. I don\u0027t think that would happen if we used native promises but it happens with jquery promises.",
+      "parentUuid": "2061e6da_8fb8166f",
+      "range": {
+        "startLine": 244,
+        "startChar": 0,
+        "endLine": 248,
+        "endChar": 4
+      },
+      "revId": "14934fdfb9f148624d7ce01527267d6904c56836",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "352ecff3_01170437",
         "filename": "src/mobile.mediaViewer/ImageGateway.js",
         "patchSetId": 12
