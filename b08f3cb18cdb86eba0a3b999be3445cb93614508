@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3768d5d7_eeda86c6",
+        "filename": "tests/qunit/mobilefrontend.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-28T02:39:26Z",
+      "side": 1,
+      "message": "i think i saw thiemo do this the other day. very nice!",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 18
+      },
+      "revId": "b08f3cb18cdb86eba0a3b999be3445cb93614508",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
