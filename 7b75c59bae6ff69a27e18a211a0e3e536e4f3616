@@ -34,6 +34,40 @@
       "revId": "7b75c59bae6ff69a27e18a211a0e3e536e4f3616",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6fe7f650_a2fef0d2",
+        "filename": "src/mobile.init/components/BetaOptIn.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-29T16:07:03Z",
+      "side": 1,
+      "message": "I\u0027m aware of the desire to move away from jQuery, but I\u0027m struggling to understand the motives and the urgency.\n\nIn this case, what benefit this utility is giving us that util.parseHTML(html)[0] doesn\u0027t?\n\nPersonally I\u0027d much rather write the latter given\n* brevity\n* less likely to make mistakes (DOM quirks are a pain)\n* jQuery is essentially baked into MobileFrontend/mediawiki and not going away any time soon (years) \n* it keeps our DOM creation methods centralises in a util function\n\nDe-centralising this DOM creation concerns me.\n\nRight now, I\u0027m pretty optimistic about rewriting View\u0027s render method to use React/Vue.js right now as it\u0027s well defined and prevents View\u0027s from doing any DOM manipulation outside the View class (note the View.append function). Likewise, I can rewrite util.parse to return a React component rather than a jQuery Element if I wanted/needed to. However, this pattern would make that tricky and require multiple changes over multiple files.\n\nI honestly think we\u0027d all benefit from sitting down, deciding on what framework we\u0027re heading towards and writing out a migration path before  making decisions such as use native DOM methods. I realise my own migration path is mostly in my head (and based on some unmade decisions) and I should spend some time today, writing it down.",
+      "revId": "7b75c59bae6ff69a27e18a211a0e3e536e4f3616",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f6b5059e_562a042a",
+        "filename": "src/mobile.startup/components/ComponentUtil.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-29T16:07:03Z",
+      "side": 1,
+      "message": "children or childNodes?\n\nchildNodes has much better support off the top of my head and includes text nodes which seems important and should be noted if you don\u0027t plan to support that.\n\nFrom what I can see you are just using this to convert HTML to a DOMElement and get its firstChild, so a helper function (not class) along those lines would make more sense to me. Is this the intention?\n\nThis is essentially the existing util.parseHTML function (but less powerful).",
+      "revId": "7b75c59bae6ff69a27e18a211a0e3e536e4f3616",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
