@@ -125,6 +125,24 @@
     },
     {
       "key": {
+        "uuid": "804e720f_7baeadbe",
+        "filename": "src/mobile.init/BetaOptInPanel.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-29T00:39:03Z",
+      "side": 1,
+      "message": "Alright, I\u0027m back in the saddle again. I took your idea and ran with it:\n\n- Moved component from BetaOptIn*Panel* to BetaOptIn and it now lives under a components subdirectory. I hope that this, in combination with lots of JSDocs, is sufficient to clue clients in that it isn\u0027t an mfView.\n- I\u0027ve tried to steer clear of jQuery and used .element (an Element) instead of .$el (a JQuery). Let me know if this is a blocker for you.\n\nThe diff is now essentially useless but if you like what\u0027s cooking, I can make intermediate patches to ease us into it if that\u0027s more comfortable. If you don\u0027t like it, let\u0027s discuss and keep iterating until we can find some common ground. Just dropping View inheritance makes me pretty happy in itself.\n\nIf you would like tests, I\u0027m happy to write those too but would prefer to pass in mw as a dependency. There aren\u0027t any tests currently so I don\u0027t mind grabbing the implicit mw global as much.\n\nIf you *really* like this patch, I\u0027d like to discuss a similar change to Button even if that meant having a second Button component[0] for a period of time. If not, that\u0027s fine, but I think composition with any View subclass is currently somewhat limited and will limit us.\n\nThanks again for your earlier feedback and support.\n\n[0] https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/498196/2/src/mobile.startup/components/Button.js",
+      "parentUuid": "5e4205a4_48c6b1f1",
+      "revId": "b80fe7a6329ceaf7228ebd4170a10c5a6964be0d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "156d5409_b734de6b",
         "filename": "src/mobile.init/BetaOptInPanel.js",
         "patchSetId": 5
