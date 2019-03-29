@@ -54,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "797e3129_154b24ac",
+        "filename": "src/mobile.init/components/BetaOptIn.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-29T16:50:01Z",
+      "side": 1,
+      "message": "My primary drive is that I don\u0027t want the underlying language of our component fundamentals to be jQuery. If we build yet another foundation on jQuery, we will never get away from it. The elimination of jQuery dependencies must be deliberate for it to ever disappear. We just need to stop using it.\n\nI can use the existing utility method, but if I set that pattern I feel it\u0027s likely that another developer will copy this file for a later patch, gut it, and accidentally use jQuery in their new component.\n\nI can\u0027t think of any other benefits in this particular case except that rendering text nodes is supported.\n\nThe side-effect is that DOM creation is split across two utility functions instead of one. However, if it was problematic, we could make the jQuery flavored utility depend on the non-jQuery utility.\n\nI hope this and the subsequent demo patch can 1) improve components patterns usable today 2) ease migration towards a real component framework in the future. If it hinders either, let\u0027s discuss alternatives. I\u0027m trying very hard to decrease tech debt and if you foresee this somehow increases it, that\u0027s the last thing I want.\n\n+1 for more talking and planning.",
+      "parentUuid": "6fe7f650_a2fef0d2",
+      "revId": "7b75c59bae6ff69a27e18a211a0e3e536e4f3616",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f6b5059e_562a042a",
         "filename": "src/mobile.startup/components/ComponentUtil.js",
         "patchSetId": 6
