@@ -16,6 +16,24 @@
       "revId": "7b75c59bae6ff69a27e18a211a0e3e536e4f3616",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "21864773_e566d019",
+        "filename": "src/mobile.init/components/BetaOptIn.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-29T16:05:43Z",
+      "side": 1,
+      "message": "Revised. I\u0027ve added a new JSDoc interface, \"Component\", which BetaOptIn implements. Component seemed like a more appropriate name for the responsibilities of the parts we compose but let me know if you disagree.\n\nThe interface itself is pretty light right now, just .element. If we take apart Button, we can support more composition options that will probably appear in the interface like .renderToString() and .bind().\n\nTypeScript\u0027s JSDoc support for interfaces is lacking so in editor completion of the new interface is lousy. If you have ideas on how to improve type sharing across files in MobileFrontend, I\u0027m very interested. WRT more generally sharing types across files, I think we have more options if we\u0027re willing to use type-only declaration files (.d.ts) and I\u0027d be quite eager in making those contributions if they would be well received. Some past discussion here:\n\n https://gerrit.wikimedia.org/r/#/c/482251/4/src/mobile.languages.structured/util.js@14\n https://github.com/Microsoft/TypeScript/issues/14377\n https://github.com/Microsoft/TypeScript/issues/30156",
+      "parentUuid": "ef573aee_03f05a2d",
+      "revId": "7b75c59bae6ff69a27e18a211a0e3e536e4f3616",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
