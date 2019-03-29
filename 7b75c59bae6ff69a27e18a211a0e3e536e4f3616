@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ef573aee_03f05a2d",
+        "filename": "src/mobile.init/components/BetaOptIn.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-03-29T15:25:09Z",
+      "side": 1,
+      "message": "I think we need an interface e.g. BaseView  and this should be something that implements that (as would the existing View class). the reason I say is this is going to cause type problems when we use this in place of a View and the parameter passed is expected to be a View.\n\nFor example, this new View like thing is compatible with Overlay.make but Overlay.make\u0027s function signature will not accept it.",
+      "revId": "7b75c59bae6ff69a27e18a211a0e3e536e4f3616",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
