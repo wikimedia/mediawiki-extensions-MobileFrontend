@@ -206,6 +206,30 @@
     },
     {
       "key": {
+        "uuid": "6f33d69b_b118d2a3",
+        "filename": "src/mobile.init/BetaOptInPanel.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-30T21:05:29Z",
+      "side": 1,
+      "message": "I don\u0027t think it would be any harder but is this approach to components any easier to test?",
+      "parentUuid": "6dfefe9b_52826a1b",
+      "range": {
+        "startLine": 89,
+        "startChar": 1,
+        "endLine": 89,
+        "endChar": 8
+      },
+      "revId": "354b4c6f9959831879cecf90ecf1892aa72bc373",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e81a0f4f_bf838f15",
         "filename": "src/mobile.init/BetaOptInPanel.js",
         "patchSetId": 2
