@@ -92,7 +92,7 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 			\MediaWiki\Logger\LoggerFactory::getInstance( MobileContext::LOGGER_CHANNEL )->warning(
 				'`url` key is undefined in language object',
 				[
-					'uri' => RequestContext::getMain()->getRequest()->getFullRequestURL(),
+					'uri' => $this->getRequest()->getFullRequestURL(),
 					'langObject' => $langObject,
 				]
 			);
