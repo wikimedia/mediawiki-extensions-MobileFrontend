@@ -113,6 +113,29 @@
     },
     {
       "key": {
+        "uuid": "78e483b2_7f99f79b",
+        "filename": "src/mobile.init/BetaOptInPanel.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-03-30T05:44:56Z",
+      "side": 1,
+      "message": "This shows the most favorable example of a childless component. Container components will look less pretty, something like\n\n  ${FancyContainer.renderToString(\n    className: \u0027foo\u0027,\n    children: items.map(item \u003d\u003e FancyItem.renderToString)\n  )}\n\nOr maybe\n\n  ${FancyContainer.renderToString(\n    className: \u0027foo\u0027,\n    children: items,\n    childrenRenderToString: FancyItem.renderToString\n  )}\n\nBinding works similarly:\n\n  FancyContainer.bind(root.querySelector(\u0027.fancy-container.foo\u0027))\n  [...root.querySelectorAll(\u0027.fancy-item\u0027)].forEach(FancyItem.bind)\n\nOr maybe:\n\n  FancyContainer.bind(root.querySelector(\u0027.fancy-container.foo\u0027), FancyItem.bind)\n\nProbably worth exploring a little but basically the deeper or more complex this gets, the more we\u0027ll want a real framework. The same is true for the preexisting approach in master. There\u0027s some workarounds in use in master too like using a text-only label {{attribute}} for Button \"children\" instead of a template partial.",
+      "range": {
+        "startLine": 50,
+        "startChar": 7,
+        "endLine": 50,
+        "endChar": 18
+      },
+      "revId": "354b4c6f9959831879cecf90ecf1892aa72bc373",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fa4e5de4_6c8aa647",
         "filename": "src/mobile.init/BetaOptInPanel.js",
         "patchSetId": 2
