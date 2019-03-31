@@ -26,7 +26,8 @@
 			"Максим Підліснюк",
 			"Piramidion",
 			"Movses",
-			"Vlad5250"
+			"Vlad5250",
+			"Gzhegozh"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Чи користувач редагує через мобільний інтерфейс, чи ні",
@@ -220,7 +221,7 @@
 	"mobile-frontend-view": "Мобільний вигляд",
 	"mobile-frontend-view-desktop": "Стаціонарний",
 	"mobile-frontend-watchlist-a-z": "Список",
-	"mobile-frontend-watchlist-a-z-empty-howto": "Ви в даний час не спостерігаєте за жодною сторінкою. Список спостереження допомагає стежити за сторінками, які вас цікавлять. Перегляньте сторінки, натиснувши на значок зірочки.",
+	"mobile-frontend-watchlist-a-z-empty-howto": "Наразі ви не спостерігаєте за жодною сторінкою. Список спостереження допомагає стежити за сторінками, які вас цікавлять. Перегляньте сторінки, натиснувши на значок зірочки.",
 	"mobile-frontend-watchlist-a-z-empty-howto-alt": "Клацніть значок зірочки",
 	"mobile-frontend-watchlist-add": "Додано $1 у ваш список спостереження",
 	"mobile-frontend-watchlist-back-home": "Додому",
@@ -272,7 +273,7 @@
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Розмір шрифту",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Контролюйте розмір шрифту для поліпшення свого читацького досвіду.",
 	"mobile-frontend-mobile-option-amc": "Розширений внесок з мобільного",
-	"mobile-frontend-mobile-option-amc-experiment-description": "Протягом наступних кількох місяців ми будемо вмикати функції, які підтримують можливість розширеного редагування. Це — тривалий експеримент, а тому ми розраховуємо на Вашу співпрацю й підтримку.",
+	"mobile-frontend-mobile-option-amc-experiment-description": "Триває активна розробка нових функцій для розширених редакторів. Вмикаючи цей режим, Ви автоматично отримаєте кожну нову функцію, яку буде реалізовано. Ми розраховуємо на Ваші відгуки і співпрацю.",
 	"mobile-frontend-mobile-option-amc-learn-more": "Дізнатися більше",
 	"mobile-frontend-mobile-option-amc-send-feedback": "Надіслати відгук",
 	"mobile-frontend-beta-only": "Функція доступна лише в бета-режимі",

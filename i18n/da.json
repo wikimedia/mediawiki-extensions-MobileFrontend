@@ -79,7 +79,7 @@
 	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|Du er ved at oprette}} en ny side på {{SITENAME}}!",
 	"mobile-frontend-editor-previewing-page": "<span><strong>Forhåndsviser</strong> $1</span>",
 	"mobile-frontend-editor-save": "Gem",
-	"mobile-frontend-editor-success": "Succes! Din redigering blev gemt.",
+	"mobile-frontend-editor-success": "Succes! Din redigering blev udgivet.",
 	"mobile-frontend-editor-success-landmark-1": "Tillykke, du er nu en {{SITENAME}} redaktør!",
 	"mobile-frontend-editor-success-new-page": "Tillykke med at oprette en ny side!",
 	"mobile-frontend-editor-summary-placeholder": "Eksempel: Rettet slåfejl, tilføjet indhold",

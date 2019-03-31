@@ -21,6 +21,7 @@
 	"mobile-frontend-editor-editing-page": "<span><strong>Tahrirlash</strong> $1</span>",
 	"mobile-frontend-editor-licensing": "Oʻzgarishlarni saqlash orqali qoʻshgan hissangiz $1 {{PLURAL:$2|litsenziyasi|litsenziyalari}} boʻyicha joylashtirilishiga rozilik bildirasiz.",
 	"mobile-frontend-editor-previewing-page": "<span><strong>Koʻrib chiqish</strong> $1</span>",
+	"mobile-frontend-editor-publish": "Nashr qilish",
 	"mobile-frontend-editor-summary-placeholder": "Misol uchun: Xatoni toʻgʻriladim, matn qoʻshdim",
 	"mobile-frontend-editor-summary-request": "Sahifani yaxshilashga qanday yordam koʻrsatdingiz?",
 	"mobile-frontend-editor-viewing-source-page": "<strong>Manbasini koʻrish</strong><span> $1</span>",

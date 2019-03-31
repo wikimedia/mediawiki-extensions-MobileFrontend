@@ -116,7 +116,7 @@
 	"mobile-frontend-last-modified-with-user-hours": "[$4 {{GENDER:$1|Dibesut}} pungkasan {{PLURAL:$3|$3 jam}} kapungkur] déning {{PLURAL:$5|[$6 $2]|0=panganggo anonim}}",
 	"mobile-frontend-last-modified-with-user-just-now": "[$3 {{GENDER:$1|Dibesut}} pungkasan] mentas waé déning {{PLURAL:$4|[$5 $2]|0=panganggo anonim}}",
 	"mobile-frontend-last-modified-with-user-minutes": "[$4 {{GENDER:$1|Dibesut}} pungkasan {{PLURAL:$3|$3 menit}} kapungkur] déning {{PLURAL:$5|[$6 $2]|0=panganggo anonim}}",
-	"mobile-frontend-last-modified-with-user-months": "[$4 {{GENDER:$1|Dibesut}} pungkasan {{PLURAL:$3|$3 wulan}} kapungkur] déning {{PLURAL:$5|[$6 $2]|0=panganggo anonim}}",
+	"mobile-frontend-last-modified-with-user-months": "[$4 {{GENDER:$1|Dibesut}} pungkasan {{PLURAL:$3|$3 sasi}} kapungkur] déning {{PLURAL:$5|[$6 $2]|0=panganggo anonim}}",
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 {{GENDER:$1|Dibesut}} pungkasan {{PLURAL:$3|$3 sekon}} kapungkur] déning {{PLURAL:$5|[$6 $2]|0=panganggo anonim}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 {{GENDER:$1|Dibesut}} pungkasan {{PLURAL:$3|$3 taun}} kapungkur] déning {{PLURAL:$5|[$6 $2]|0=panganggo anonim}}",
 	"mobile-frontend-main-menu": "Menu Pokok",

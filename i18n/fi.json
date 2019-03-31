@@ -34,6 +34,7 @@
 	"mobile-frontend-categories-add": "Lisää luokkaan",
 	"mobile-frontend-categories-search": "Etsi luokkia",
 	"mobile-frontend-categories-summary": "Lisätty luokkiin",
+	"mobile-frontend-categories-notification": "Luokat on päivitetty.",
 	"mobile-frontend-categories-add-heading": "<strong>Lisää<span> $1</span> uusiin luokkiin</strong>",
 	"mobile-frontend-categories-add-wait": "Luokkia tallennetaan, odota.",
 	"mobile-frontend-categories-normal": "Sisältönsä perusteella",
@@ -68,6 +69,7 @@
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Eston syy",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Estänyt}}",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "Esto päättyy",
+	"mobile-frontend-editor-blocked-drawer-help": "Tiedot",
 	"mobile-frontend-editor-generic-block-reason": "Tuntematon syy",
 	"mobile-frontend-editor-cancel": "Peruuta",
 	"mobile-frontend-editor-cancel-confirm": "Haluatko todella hylätä tekemäsi muokkauksen?",
@@ -88,6 +90,7 @@
 	"mobile-frontend-editor-placeholder": "Tämä kohta on tyhjä. Ole ensimmäinen joka luo sisältöä tähän!",
 	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|Olet luomassa}} uutta sivua sivustolle {{SITENAME}}!",
 	"mobile-frontend-editor-previewing-page": "<span><strong>Esikatsellaan</strong> $1</span>",
+	"mobile-frontend-editor-publish": "Julkaise",
 	"mobile-frontend-editor-save": "Tallenna",
 	"mobile-frontend-editor-success": "Valmis! Muokkaus on tallennettu.",
 	"mobile-frontend-editor-success-landmark-1": "Onneksi olkoon! Olet nyt {{SITENAME}} sivuston muokkaaja!",
@@ -244,5 +247,7 @@
 	"mobile-frontend-mobile-option-MFLazyLoadImages-description": "Lataa kuvat vain tarvittaessa.",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Fonttikoko",
 	"mobile-frontend-mobile-option-amc-learn-more": "Lisätietoja",
-	"mobile-frontend-console-recruit": "Lisätietoja siitä, miten rakensimme mobiilisivustomme @ https://www.mediawiki.org/wiki/Extension:MobileFrontend"
+	"mobile-frontend-mobile-option-amc-send-feedback": "Lähetä palautetta",
+	"mobile-frontend-console-recruit": "Lisätietoja siitä, miten rakensimme mobiilisivustomme @ https://www.mediawiki.org/wiki/Extension:MobileFrontend",
+	"prefs-mobile": "Mobiiliasetukset"
 }
