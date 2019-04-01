@@ -370,7 +370,7 @@ class MobileFrontendHooks {
 	 *  - used for both, stable and beta mode (don't use
 	 *    MobileContext::isBetaGroupMember in this function - T127860)
 	 *
-	 * @return bool
+	 * @return array
 	 */
 	public static function getResourceLoaderMFConfigVars() {
 		$vars = [];
