@@ -34,6 +34,24 @@
       "revId": "123f58dd8c3dd85dbe660236c8b9b66b13dd55ff",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "123aa57a_604a2b11",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 1142,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-01T23:23:05Z",
+      "side": 1,
+      "message": "wgMFMode shouldn\u0027t change.. in fact a lot of extensions rely on it being undefined to tell whether MobileFrontend is installed and whether it\u0027s being used.\n\nIn Minerva we do mode: context.getMode() || \u0027desktop\u0027 to avoid this problem. \n\nOn second thoughts I think we should go with your original patchset and do this check in Minerva.\n\nThe downside of PS5 is that we add the config value to desktop where it\u0027s unused outside Minerva which is bad.",
+      "parentUuid": "da17dba9_015b1d87",
+      "revId": "123f58dd8c3dd85dbe660236c8b9b66b13dd55ff",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
