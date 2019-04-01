@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2cc9e46c_ea64aa59",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 1142,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-01T21:05:18Z",
+      "side": 1,
+      "message": "This needs to happen unconditionally. Not inside shouldDisplayMobileview as the main menu logging happens on Minerva desktop too (which is outside the mobile domain)",
+      "revId": "123f58dd8c3dd85dbe660236c8b9b66b13dd55ff",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
