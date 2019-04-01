@@ -16,6 +16,24 @@
       "revId": "123f58dd8c3dd85dbe660236c8b9b66b13dd55ff",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da17dba9_015b1d87",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 1142,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-04-01T21:27:44Z",
+      "side": 1,
+      "message": "that makes sense. should we eventually do that for wgMFMode as well ( I won\u0027t try to do that in this patch)",
+      "parentUuid": "2cc9e46c_ea64aa59",
+      "revId": "123f58dd8c3dd85dbe660236c8b9b66b13dd55ff",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
