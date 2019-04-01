@@ -4,6 +4,7 @@ use MediaWiki\Auth\AuthManager;
 use MediaWiki\Auth\AuthenticationRequest;
 use MediaWiki\ChangeTags\Taggable;
 use MediaWiki\MediaWikiServices;
+use MobileFrontend\ContentProviders\ContentProviderFactory;
 
 /**
  * Hook handlers for MobileFrontend extension
@@ -586,16 +587,19 @@ class MobileFrontendHooks {
 		$name = $special->getName();
 
 		if ( $isMobileView ) {
-			$special->getOutput()->addModuleStyles(
+			$out = $special->getOutput();
+			$out->addModuleStyles(
 				[ 'mobile.special.styles', 'mobile.messageBox.styles' ]
 			);
 			if ( $name === 'Userlogin' || $name === 'CreateAccount' ) {
-				$special->getOutput()->addModules( 'mobile.special.userlogin.scripts' );
+				$out->addModules( 'mobile.special.userlogin.scripts' );
 			}
 			if ( array_key_exists( $name, $taglines ) ) {
-				self::setTagline( $special->getOutput(),
-					wfMessage( $taglines[$name] ) );
+				self::setTagline( $out, wfMessage( $taglines[$name] ) );
 			}
+
+			// Set foreign script path on special pages e.g. Special:Nearby
+			ContentProviderFactory::addForeignScriptPath( $context->getConfig(), $out );
 		}
 	}
 

@@ -21,6 +21,25 @@ class ContentProviderFactory {
 	}
 
 	/**
+	 * Turn on foreign api script path for page
+	 * @param Config $config to allow config specific behaviour
+	 * @param OutputPage $out to allow the addition of modules and styles
+	 *  as required by the content
+	 */
+	public static function addForeignScriptPath( Config $config, OutputPage $out ) {
+		$contentProviderApi = $config->get( 'MFContentProviderScriptPath' );
+		if ( $contentProviderApi ) {
+			// It's very possible this might break compatibility with other extensions
+			// so this should not be used outside development :). Please see README.md
+			$out->addJsConfigVars( [ 'wgScriptPath' => $contentProviderApi ] );
+			// This injects a global ajaxSend event which ensures origin=* is added to all ajax requests
+			// This helps with compatibility of VisualEditor!
+			// This is intentionally simplistic as all queries we care about
+			// are guaranteed to already have a query string
+			$out->addModules( 'mobile.contentProviderApi' );
+		}
+	}
+	/**
 	 * @param Config $config to allow config specific behaviour
 	 * @param OutputPage $out to allow the addition of modules and styles
 	 *  as required by the content
@@ -42,18 +61,13 @@ class ContentProviderFactory {
 		}
 		$preserveLocalContent = $config->get( 'MFContentProviderTryLocalContentFirst' );
 		$title = $out->getTitle();
+		// On local content display the content provider script path so that edit works as expected
+		// at the cost of searching local content.
 		if ( $preserveLocalContent && $title && $title->exists() ) {
 			return self::getDefaultParser( $html );
 		}
-		$contentProviderApi = $config->get( 'MFContentProviderScriptPath' );
-		if ( $contentProviderApi ) {
-			// It's very possible this might break compatibility with other extensions
-			// so this should not be used outside development :). Please see README.md
-			$out->addJsConfigVars( [ 'wgScriptPath' => $contentProviderApi ] );
-			// add the content provider script for compatibility with visual
-			// editor
-			$out->addModules( 'mobile.contentProviderApi' );
-		}
+
+		self::addForeignScriptPath( $config, $out );
 
 		switch ( $contentProviderClass ) {
 			case self::MCS_API:
