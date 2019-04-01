@@ -65,8 +65,7 @@ mfExtend( Nearby, WatchstarPageList, {
 	 * @instance
 	 */
 	templatePartials: util.extend( {}, WatchstarPageList.prototype.templatePartials, {
-		pageList: WatchstarPageList.prototype.template,
-		messageBox: MessageBox.prototype.template
+		pageList: WatchstarPageList.prototype.template
 	} ),
 	/**
 	 * @memberof Nearby
@@ -165,13 +164,20 @@ mfExtend( Nearby, WatchstarPageList, {
 	 * @instance
 	 */
 	postRender: function () {
-		var self = this;
+		var self = this,
+			$messageBox;
 
 		if ( !this._isLoading ) {
 			this.$el.find( '.page-list' ).removeClass( 'hidden' );
 		}
 		WatchstarPageList.prototype.postRender.apply( this );
 		this._postRenderLinks();
+
+		if ( this.options.errorOptions ) {
+			$messageBox = new MessageBox( this.options.errorOptions );
+			$messageBox.appendTo( this.$el );
+		}
+
 		// FIXME: This should probably just be $( function () {} )
 		this.$el.find( function () {
 			// todo: use the local emitter when refresh() doesn't recreate the
