@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c534a915_6a34f4fc",
+        "filename": "resources/mobile.startup/Overlay.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2019-04-01T19:17:11Z",
+      "side": 1,
+      "message": "Move it underneath the `a, button` rule, and ignore for this moment that it might be in DOM hierarchy above.",
+      "revId": "d141be38b9f9225be258bb265e7719a89759df74",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
