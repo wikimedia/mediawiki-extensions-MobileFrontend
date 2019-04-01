@@ -989,7 +989,7 @@ class MobileFrontendHooks {
 					'targets' => [ 'mobile', 'desktop' ],
 				],
 			] );
-		};
+		}
 
 		return true;
 	}
