@@ -764,7 +764,6 @@
 		"remoteExtPath": "MobileFrontend"
 	},
 	"EventLoggingSchemas": {
-		"MobileWebMainMenuClickTracking": 18203509,
 		"MobileWebSearch": 12054448
 	},
 	"Hooks": {
