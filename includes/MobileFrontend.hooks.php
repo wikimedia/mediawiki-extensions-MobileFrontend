@@ -482,7 +482,6 @@ class MobileFrontendHooks {
 	 * Hook for SpecialPage_initList in SpecialPageFactory.
 	 *
 	 * @param array &$list list of special page classes
-	 * @return bool hook return value
 	 */
 	public static function onSpecialPageInitList( &$list ) {
 		$ctx = MobileContext::singleton();
@@ -508,7 +507,6 @@ class MobileFrontendHooks {
 		if ( $ctx->getMFConfig()->get( 'MFNearby' ) ) {
 			$list['Nearby'] = 'SpecialNearby';
 		}
-		return true;
 	}
 
 	/**
@@ -517,12 +515,10 @@ class MobileFrontendHooks {
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ChangeTagsListActive
 	 *
 	 * @param array &$tags The list of tags. Add your extension's tags to this array.
-	 * @return bool
 	 */
 	public static function onListDefinedTags( &$tags ) {
 		$tags[] = 'mobile edit';
 		$tags[] = 'mobile web edit';
-		return true;
 	}
 
 	/**
@@ -533,7 +529,6 @@ class MobileFrontendHooks {
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ManualLogEntryBeforePublish
 
 	 * @param Taggable $taggable Object to tag
-	 * @return bool
 	 */
 	public static function onTaggableObjectCreation( Taggable $taggable ) {
 		$context = MobileContext::singleton();
@@ -545,7 +540,6 @@ class MobileFrontendHooks {
 				$taggable->addTags( [ 'mobile web edit' ] );
 			}
 		}
-		return true;
 	}
 
 	/**
@@ -555,7 +549,6 @@ class MobileFrontendHooks {
 	 * @see hooks.txt in AbuseFilter extension
 	 * @param AbuseFilterVariableHolder $vars object to add vars to
 	 * @param User $user
-	 * @return bool
 	 */
 	public static function onAbuseFilterGenerateUserVars( $vars, $user ) {
 		$context = MobileContext::singleton();
@@ -565,8 +558,6 @@ class MobileFrontendHooks {
 		} else {
 			$vars->setVar( 'user_mobile', false );
 		}
-
-		return true;
 	}
 
 	/**
@@ -574,11 +565,9 @@ class MobileFrontendHooks {
 	 *  of valid vars
 	 *
 	 * @param array &$builder Array in AbuseFilter::getBuilderValues to add to.
-	 * @return bool
 	 */
 	public static function onAbuseFilterBuilder( &$builder ) {
 		$builder['vars']['user_mobile'] = 'user-mobile';
-		return true;
 	}
 
 	/**
@@ -591,7 +580,6 @@ class MobileFrontendHooks {
 	 *
 	 * @param SpecialPage $special
 	 * @param string $subpage subpage name
-	 * @return bool
 	 */
 	public static function onSpecialPageBeforeExecute( SpecialPage $special, $subpage ) {
 		$context = MobileContext::singleton();
@@ -611,8 +599,6 @@ class MobileFrontendHooks {
 					wfMessage( $taglines[$name] ) );
 			}
 		}
-
-		return true;
 	}
 
 	/**
@@ -624,12 +610,11 @@ class MobileFrontendHooks {
 	 *
 	 * @param User &$currentUser the user object that was created on login
 	 * @param string &$injected_html From 1.13, any HTML to inject after the login success message.
-	 * @return bool
 	 */
 	public static function onUserLoginComplete( &$currentUser, &$injected_html ) {
 		$context = MobileContext::singleton();
 		if ( !$context->shouldDisplayMobileView() ) {
-			return true;
+			return;
 		}
 
 		// If 'watch' is set from the login form, watch the requested article
@@ -641,7 +626,6 @@ class MobileFrontendHooks {
 				WatchAction::doWatch( $title, $currentUser );
 			}
 		}
-		return true;
 	}
 
 	/**
@@ -663,7 +647,6 @@ class MobileFrontendHooks {
 	 *
 	 * @param OutputPage &$out
 	 * @param Skin &$skin Skin object that will be used to generate the page, added in 1.13.
-	 * @return bool
 	 */
 	public static function onBeforePageDisplay( OutputPage &$out, Skin &$skin ) {
 		$context = MobileContext::singleton();
@@ -791,8 +774,6 @@ class MobileFrontendHooks {
 				] );
 			}
 		}
-
-		return true;
 	}
 
 	/**
@@ -824,8 +805,6 @@ class MobileFrontendHooks {
 	 *
 	 * @param User $user User whose preferences are being modified
 	 * @param array &$preferences Preferences description array, to be fed to an HTMLForm object
-	 *
-	 * @return bool
 	 */
 	public static function onGetPreferences( $user, &$preferences ) {
 		$ctx = MobileContext::singleton();
@@ -846,8 +825,6 @@ class MobileFrontendHooks {
 				'section' => self::MOBILE_PREFERENCES_SECTION
 			];
 		}
-
-		return true;
 	}
 
 	/**
@@ -866,8 +843,6 @@ class MobileFrontendHooks {
 	 * @see CentralAuthHooks::doCentralLoginRedirect in CentralAuth extension
 	 * @param CentralAuthUser $centralUser
 	 * @param array &$data Redirect data
-	 *
-	 * @return bool
 	 */
 	public static function onCentralAuthLoginRedirectData( $centralUser, &$data ) {
 		$context = MobileContext::singleton();
@@ -875,7 +850,6 @@ class MobileFrontendHooks {
 		if ( $context->shouldDisplayMobileView() ) {
 			$data['mobileServer'] = $context->getMobileUrl( $server );
 		}
-		return true;
 	}
 
 	/**
@@ -885,8 +859,6 @@ class MobileFrontendHooks {
 	 * @param CentralAuthUser $centralUser
 	 * @param string &$url to redirect to
 	 * @param array $info token information
-	 *
-	 * @return bool
 	 */
 	public static function onCentralAuthSilentLoginRedirect( $centralUser, &$url, $info ) {
 		if ( isset( $info['mobileServer'] ) ) {
@@ -895,7 +867,6 @@ class MobileFrontendHooks {
 			$urlParsed['host'] = $mobileUrlParsed['host'];
 			$url = wfAssembleUrl( $urlParsed );
 		}
-		return true;
 	}
 
 	/**
@@ -937,7 +908,6 @@ class MobileFrontendHooks {
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ResourceLoaderRegisterModules
 	 *
 	 * @param ResourceLoader &$resourceLoader
-	 * @return bool Always true
 	 */
 	public static function onResourceLoaderRegisterModules( ResourceLoader &$resourceLoader ) {
 		$resourceBoilerplate = [
@@ -990,8 +960,6 @@ class MobileFrontendHooks {
 				],
 			] );
 		}
-
-		return true;
 	}
 
 	/**
@@ -1027,7 +995,6 @@ class MobileFrontendHooks {
 	 *
 	 * @param OutputPage $outputPage the OutputPage object to which wikitext is added
 	 * @param ParserOutput $po
-	 * @return bool
 	 */
 	public static function onOutputPageParserOutput( $outputPage, ParserOutput $po ) {
 		$context = MobileContext::singleton();
@@ -1049,7 +1016,6 @@ class MobileFrontendHooks {
 				self::setTagline( $outputPage, $desc );
 			}
 		}
-		return true;
 	}
 
 	/**
@@ -1126,7 +1092,6 @@ class MobileFrontendHooks {
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/MakeGlobalVariablesScript
 	 * @param array &$vars Variables to be added into the output
 	 * @param OutputPage $out OutputPage instance calling the hook
-	 * @return bool true in all cases
 	 */
 	public static function onMakeGlobalVariablesScript( array &$vars, OutputPage $out ) {
 		$title = $out->getTitle();
@@ -1154,7 +1119,6 @@ class MobileFrontendHooks {
 		// Ideally this would be inside ResourceLoaderFileModuleWithMFConfig but
 		// sessions are not allowed there.
 		$vars += self::getWikibaseStaticConfigVars( $context );
-		return true;
 	}
 
 	/**
