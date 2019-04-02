@@ -1,4 +1,4 @@
-@chrome @en.m.wikipedia.beta.wmflabs.org @firefox @integration @test2.m.wikipedia.org @vagrant @login
+@chrome @en.m.wikipedia.beta.wmflabs.org @firefox @test2.m.wikipedia.org @vagrant @login
 Feature: Editor watchlist
 
   Background:

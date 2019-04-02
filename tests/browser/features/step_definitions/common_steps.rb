@@ -23,14 +23,8 @@ Given(/^I am on the "(.+)" page$/) do |article|
 end
 
 Given(/^I am using the mobile site$/) do
-  visit(MainPage) do |page|
-    page_uri = URI.parse(page.page_url_value)
-
-    domain = page_uri.host == 'localhost' ? nil : page_uri.host
-    browser.cookies.add 'mf_useformat', 'true', domain: domain
-
-    page.refresh
-  end
+  visit(MainPage)
+  on(Page).toggle_mobile_view
 end
 
 Given(/^my browser doesn't support JavaScript$/) do

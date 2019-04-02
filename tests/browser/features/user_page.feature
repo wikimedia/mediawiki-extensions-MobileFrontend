@@ -1,4 +1,4 @@
-@chrome @firefox @login @test2.m.wikipedia.org @vagrant @integration @login
+@chrome @firefox @test2.m.wikipedia.org @vagrant @login
 Feature:  User:<username>
 
   Background:
