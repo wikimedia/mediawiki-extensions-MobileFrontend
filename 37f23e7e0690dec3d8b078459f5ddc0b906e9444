@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "41ef9fb5_283a4fd6",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 784,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-04-02T00:41:52Z",
+      "side": 1,
+      "message": "This one was already using the \"new\" MW 1.22 (2015) format of not returning bool.",
+      "range": {
+        "startLine": 784,
+        "startChar": 1,
+        "endLine": 784,
+        "endChar": 26
+      },
+      "revId": "37f23e7e0690dec3d8b078459f5ddc0b906e9444",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a3026670_8c73d65d",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 796,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-04-02T00:41:52Z",
+      "side": 1,
+      "message": "(also)",
+      "range": {
+        "startLine": 796,
+        "startChar": 1,
+        "endLine": 796,
+        "endChar": 25
+      },
+      "revId": "37f23e7e0690dec3d8b078459f5ddc0b906e9444",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c3e85d79_97993702",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 837,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-04-02T00:41:52Z",
+      "side": 1,
+      "message": "(for separate commit) - Looks like the \"Gadgets::allowLegacy \" hook no longer exists. Can be removed.",
+      "range": {
+        "startLine": 831,
+        "startChar": 4,
+        "endLine": 837,
+        "endChar": 2
+      },
+      "revId": "37f23e7e0690dec3d8b078459f5ddc0b906e9444",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
