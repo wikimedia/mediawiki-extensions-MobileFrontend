@@ -89,12 +89,19 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 	public static function shouldUseSpecialHistory( Title $title, User $user ) {
 		$contentHandler = ContentHandler::getForTitle( $title );
 		$actionOverrides = $contentHandler->getActionOverrides();
+		$featureManager = \MediaWiki\MediaWikiServices::getInstance()
+			->getService( 'MobileFrontend.FeaturesManager' );
 
 		// if history is overwritten, assume, that SpecialMobileHistory can't handle them
 		if ( isset( $actionOverrides['history'] ) ) {
 			// and return false
 			return false;
 		}
+
+		if ( $featureManager->isFeatureAvailableForCurrentUser( 'MFUseDesktopSpecialHistoryPage' ) ) {
+			return false;
+		}
+
 		return MobileFrontendHooks::shouldMobileFormatSpecialPages( $user );
 	}
 
