@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d89bd52e_20e3e5ae",
+        "filename": "src/mobile.editor.overlay/EditorOverlayBase.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 412,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-03T18:24:55Z",
+      "side": 1,
+      "message": "I fixed the issue of abandon dialog when switching in https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/493756/\n\nWe don\u0027t support doing this in hide anymore.",
+      "revId": "e81218e23ec78db162a401ee7358af82fd04ad92",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
