@@ -16,6 +16,24 @@
       "revId": "18fc1b06af168c1d8b17be529a76dd0d2445a963",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b1c394fc_6ae0f3ae",
+        "filename": "tests/phpunit/api/ApiMobileViewTest.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-04-03T18:49:07Z",
+      "side": 0,
+      "message": "Yes, we can have a `MockApiMobileView.php` file. I can extract both classes below to a new file or maybe break both classes into 2 separate files? I think the later is better for the one file one class pattern right?",
+      "parentUuid": "74fe0d03_2d772d8d",
+      "revId": "18fc1b06af168c1d8b17be529a76dd0d2445a963",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
