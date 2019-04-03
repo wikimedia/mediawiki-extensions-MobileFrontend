@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "74fe0d03_2d772d8d",
+        "filename": "tests/phpunit/api/ApiMobileViewTest.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-03T18:42:13Z",
+      "side": 0,
+      "message": "Instead of moving would it be helpful to have a MockApiMobileView.php file?",
+      "revId": "18fc1b06af168c1d8b17be529a76dd0d2445a963",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
