@@ -2,9 +2,6 @@
 	"extends": "stylelint-config-wikimedia",
 	"rules": {
 		"declaration-no-important": null,
-		"property-blacklist": [
-			"background-size"
-		],
 		"selector-list-comma-newline-after": null,
 		"selector-max-id": null
 	}
