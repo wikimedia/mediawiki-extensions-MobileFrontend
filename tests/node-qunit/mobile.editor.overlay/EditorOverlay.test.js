@@ -50,7 +50,7 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/EditorOverlay', {
 			block: null,
 			blockedByUser: null
 		} ) );
-		previewResolve = util.Deferred().resolve( { text: 'previewtest' } );
+		previewResolve = util.Deferred().resolve( { text: '\npreviewtest' } );
 		sandbox.stub( EditorGateway.prototype, 'getPreview' )
 			.returns( previewResolve );
 	},
@@ -147,7 +147,7 @@ QUnit.test( '#preview', function ( assert ) {
 	editorOverlay.onStageChanges();
 
 	return previewResolve.then( function () {
-		assert.strictEqual( editorOverlay.$preview.text(), '\npreviewtest\n', 'preview loaded correctly' );
+		assert.strictEqual( editorOverlay.$preview.text(), '\n\npreviewtest', 'preview loaded correctly' );
 	} );
 } );
 

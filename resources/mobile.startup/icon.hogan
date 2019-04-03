@@ -1,4 +1,0 @@
-<{{tagName}} class="{{base}} {{base}}-{{glyphPrefix}}-{{name}} {{modifier}} {{#isSmall}}mw-ui-icon-small{{/isSmall}} {{#_rotationClass}}{{_rotationClass}}{{/_rotationClass}} {{additionalClassNames}}"
-	{{#id}}id="{{id}}"{{/id}}
-	{{#href}}href="{{href}}"{{/href}}
-	{{#title}}title="{{title}}"{{/title}}>{{label}}</{{tagName}}>

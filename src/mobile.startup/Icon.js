@@ -1,5 +1,6 @@
 var
 	mfExtend = require( './mfExtend' ),
+	util = require( './util' ),
 	View = require( './View' );
 
 /**
@@ -122,7 +123,12 @@ mfExtend( Icon, View, {
 	toHtmlString: function () {
 		return this.parseHTML( '<div>' ).append( this.$el ).html();
 	},
-	template: mw.template.get( 'mobile.startup', 'icon.hogan' )
+	template: util.template( `
+<{{tagName}} class="{{base}} {{base}}-{{glyphPrefix}}-{{name}} {{modifier}} {{#isSmall}}mw-ui-icon-small{{/isSmall}} {{#_rotationClass}}{{_rotationClass}}{{/_rotationClass}} {{additionalClassNames}}"
+{{#id}}id="{{id}}"{{/id}}
+{{#href}}href="{{href}}"{{/href}}
+{{#title}}title="{{title}}"{{/title}}>{{label}}</{{tagName}}>
+	` )
 } );
 
 module.exports = Icon;

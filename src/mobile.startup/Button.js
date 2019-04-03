@@ -1,5 +1,6 @@
 var
 	mfExtend = require( './mfExtend' ),
+	util = require( './util' ),
 	View = require( './View' );
 
 /**
@@ -52,7 +53,13 @@ mfExtend( Button, View, {
 	 * @memberof Button
 	 * @instance
 	 */
-	template: mw.template.get( 'mobile.startup', 'button.hogan' )
+	template: util.template( `<{{tagName}}
+{{#href}}href="{{href}}"{{/href}}
+class="mw-ui-button {{#progressive}}mw-ui-progressive{{/progressive}}
+	{{#block}}mw-ui-block{{/block}}
+	{{#quiet}}mw-ui-quiet{{/quiet}}
+	{{#destructive}}mw-ui-destructive{{/destructive}} {{additionalClassNames}}
+">{{label}}</{{tagName}}>` )
 } );
 
 module.exports = Button;

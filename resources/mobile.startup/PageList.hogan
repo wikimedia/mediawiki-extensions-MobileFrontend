@@ -1,5 +1,0 @@
-<ul class="page-list thumbs actionable">
-	{{#pages}}
-		{{>item}}
-	{{/pages}}
-</ul>

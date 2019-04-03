@@ -1,5 +1,6 @@
-var sectionTemplate = mw.template.get( 'mobile.startup', 'Section.hogan' ),
-	util = require( './util.js' ),
+var util = require( './util.js' ),
+	Section = require( './Section' ),
+	sectionTemplate = Section.prototype.template,
 	Page = require( './Page' ),
 	actionParams = require( './actionParams' ),
 	cache = {};

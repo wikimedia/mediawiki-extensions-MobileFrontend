@@ -132,8 +132,8 @@ mfExtend( View, {
 	 *     // {{>content}}
 	 *
 	 *     oo.mfExtend( SomeView, View, {
-	 *       template: M.template.get( 'some.hogan' ),
-	 *       templatePartials: { content: M.template.get( 'sub.hogan' ) }
+	 *       template: util.template( '<source-code>' ),
+	 *       templatePartials: { content: util.template( '<source-code>' ) }
 	 *     }
 	 *
 	 * @memberof View

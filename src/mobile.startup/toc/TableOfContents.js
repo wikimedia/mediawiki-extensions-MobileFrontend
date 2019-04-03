@@ -24,13 +24,32 @@ mfExtend( TableOfContents, View, {
 	 * @instance
 	 */
 	templatePartials: {
-		tocHeading: mw.template.get( 'mobile.startup', 'TableOfContentsHeading.hogan' )
+		tocHeading: util.template( `
+<li>
+	<a href="#{{anchor}}">{{{line}}}</a>
+	<ul>
+		{{#subsections}}
+		{{>tocHeading}}
+		{{/subsections}}
+	</ul>
+</li>
+		` )
 	},
 	/**
 	 * @memberof TableOfContents
 	 * @instance
 	 */
-	template: mw.template.get( 'mobile.startup', 'TableOfContents.hogan' ),
+	template: util.template( `
+<h2><span>{{contentsMsg}}</span></h2>
+<div>
+	<ul>
+	{{#sections}}
+	{{>tocHeading}}
+	{{/sections}}
+	</ul>
+</div>
+<div style="clear:both;"></div>
+	` ),
 	/** @inheritdoc */
 	postRender: function () {
 		new Icon( {

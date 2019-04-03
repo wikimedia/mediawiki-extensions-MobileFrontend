@@ -75,11 +75,41 @@ mfExtend( Overlay, View, {
 	hideOnExitClick: true,
 
 	templatePartials: {
-		header: mw.template.get( 'mobile.startup', 'header.hogan' ),
+		header: util.template( `
+<ul>
+	<li>{{{cancelButton}}}</li>
+</ul>
+<div class="overlay-title">
+	<h2>{{{heading}}}</h2>
+</div>
+{{#hasActions}}
+<div class="header-action">
+	{{#headerButtons}}
+	{{^href}}<button{{/href}}
+	{{#href}}<a href="{{href}}"{{/href}}
+		{{#disabled}} disabled{{/disabled}}
+		class="{{className}}">{{msg}}{{^href}}</button>{{/href}}{{#href}}</a>{{/href}}
+	{{/headerButtons}}
+</div>
+{{/hasActions}}
+		` ),
 		anchor: Anchor.prototype.template,
 		button: Button.prototype.template
 	},
-	template: mw.template.get( 'mobile.startup', 'Overlay.hogan' ),
+	template: util.template( `
+{{^noHeader}}
+<div class="overlay-header-container header-container{{#headerChrome}}
+	header-chrome{{/headerChrome}} position-fixed">
+	<div class="overlay-header header">
+		{{>header}}
+	</div>
+</div>
+{{/noHeader}}
+<div class="overlay-content">
+	{{>content}}
+</div>
+<div class="overlay-footer-container position-fixed">{{#footerAnchor}}{{>anchor}}{{/footerAnchor}}</div>
+	` ),
 	/**
 	 * @memberof Overlay
 	 * @instance

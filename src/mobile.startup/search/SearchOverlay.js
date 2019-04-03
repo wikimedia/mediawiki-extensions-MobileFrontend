@@ -57,8 +57,44 @@ mfExtend( SearchOverlay, Overlay, {
 	 * @instance
 	 */
 	templatePartials: util.extend( {}, Overlay.prototype.templatePartials, {
-		header: mw.template.get( 'mobile.startup', 'search/SearchHeader.hogan' ),
-		content: mw.template.get( 'mobile.startup', 'search/SearchContent.hogan' ),
+		header: util.template( `
+<div class="overlay-title">
+	<form method="get" action="{{action}}" class="search-box">
+		<input class="search" type="search" name="search" autocomplete="off" placeholder="{{placeholderMsg}}" aria-label="{{placeholderMsg}}" value="{{searchTerm}}">
+	</form>
+	{{! See: T136243. Do not put the clear button inside the form as hitting enter on the input element triggers a button click, rather than submitting the form. }}
+	{{#clearIcon}}{{>icon}}{{/clearIcon}}
+</div>
+<ul>
+	<li>{{{cancelButton}}}</li>
+</ul>
+		` ),
+		content: util.template( `
+<div class="search-content overlay-header">
+	<ul>
+		<li>{{#searchContentIcon}}{{>icon}}{{/searchContentIcon}}</li>
+	</ul>
+	<div class="caption">
+		<p class="with-results">{{#searchContentIcon}}{{label}}{{/searchContentIcon}}</p>
+		<p class="without-results">{{noResultsMsg}}</p>
+		<p class="without-results">{{{searchContentNoResultsMsg}}}</p>
+	</div>
+</div>
+<div class="spinner-container position-fixed">
+	{{{spinner}}}
+</div>
+<div class="results">
+	<div class="results-list-container"></div>
+	{{#feedback}}
+		<div class="search-feedback">
+			{{prompt}}
+			{{#feedback}}
+				{{>anchor}}
+			{{/feedback}}
+		</div>
+	{{/feedback}}
+</div>
+		` ),
 		icon: Icon.prototype.template
 	} ),
 	/**

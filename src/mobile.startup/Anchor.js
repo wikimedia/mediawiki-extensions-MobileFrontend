@@ -1,5 +1,6 @@
 var
 	View = require( './View' ),
+	util = require( './util' ),
 	mfExtend = require( './mfExtend' );
 
 /**
@@ -40,8 +41,14 @@ mfExtend( Anchor, View, {
 	 * @inheritdoc
 	 * @memberof Anchor
 	 * @instance
+	 * FIXME: Simplify this template and its whitespace
 	 */
-	template: mw.template.get( 'mobile.startup', 'anchor.hogan' )
+	template: util.template( `
+<a {{#href}}href="{{href}}"{{/href}} class="mw-ui-anchor
+	{{#progressive}} mw-ui-progressive{{/progressive}}
+	{{#destructive}} mw-ui-destructive{{/destructive}}
+	 {{additionalClassNames}}">{{label}}</a>
+	` )
 } );
 
 module.exports = Anchor;

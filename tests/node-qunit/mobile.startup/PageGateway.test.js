@@ -128,7 +128,7 @@ QUnit.test( '#getSectionsFromHTML malformed (h2 before h1)', function ( assert )
 			line: 'A1',
 			level: '2',
 			anchor: '1.0',
-			text: '<h3 id="">A2.1</h3>\n\n',
+			text: '<h3 id="">A2.1</h3>\n',
 			subsections: [ {
 				line: 'A2.1',
 				level: '3',
@@ -148,7 +148,7 @@ QUnit.test( '#getSectionsFromHTML malformed (h2 before h1)', function ( assert )
 			line: 'A2',
 			level: '1',
 			anchor: '',
-			text: '<h2 id="">A2.1</h2>\n\n',
+			text: '<h2 id="">A2.1</h2>\n',
 			subsections: [ {
 				line: 'A2.1',
 				level: '2',

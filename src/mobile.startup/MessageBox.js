@@ -1,5 +1,6 @@
 var
 	View = require( './View' ),
+	util = require( './util' ),
 	mfExtend = require( './mfExtend' );
 
 /**
@@ -31,7 +32,12 @@ mfExtend( MessageBox, View, {
 	 * @memberof MessageBox
 	 * @instance
 	 */
-	template: mw.template.get( 'mobile.startup', 'MessageBox.hogan' )
+	template: util.template( `
+<div class="{{className}}">
+	{{#heading}}<h2>{{heading}}</h2>{{/heading}}
+	{{{msg}}}
+</div>
+	` )
 } );
 
 module.exports = MessageBox;

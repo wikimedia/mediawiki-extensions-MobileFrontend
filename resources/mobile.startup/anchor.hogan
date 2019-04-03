@@ -1,6 +1,0 @@
-<a
-	{{#href}}href="{{href}}"{{/href}}
-	class="mw-ui-anchor
-		{{#progressive}}mw-ui-progressive{{/progressive}}
-		{{#destructive}}mw-ui-destructive{{/destructive}} {{additionalClassNames}}
-	">{{label}}</a>
