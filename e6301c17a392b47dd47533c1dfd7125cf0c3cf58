@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "05415748_d4244bfe",
+        "filename": "README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-03T22:28:21Z",
+      "side": 1,
+      "message": "My understanding is we only want to disable this in AMC right now.\n\nCan it be made like $wgMFLazyLoadImages and take an amc, base and beta field?",
+      "revId": "e6301c17a392b47dd47533c1dfd7125cf0c3cf58",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
