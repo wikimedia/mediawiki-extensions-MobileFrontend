@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ddc6aaf6_d702cc4d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 6
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-04-03T21:44:55Z",
+      "side": 1,
+      "message": "I appreciate that this is frustrating, but this seems unfair, given the infrastructure in question was deprecated a long time ago, and RelEng is already going above and beyond to accomodate it to this day, in addition to the new infra they\u0027ve built. This isn\u0027t at all a good use of our limited resources.\n\nGiven it works now, I think it best to move on.",
+      "range": {
+        "startLine": 13,
+        "startChar": 46,
+        "endLine": 15,
+        "endChar": 39
+      },
+      "revId": "45e6fc3532e63d7285e09c435d75c54fd6853719",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
