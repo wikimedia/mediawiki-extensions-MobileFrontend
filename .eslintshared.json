@@ -32,6 +32,6 @@
 		"computed-property-spacing": "off",
 		"no-use-before-define": "off",
 		"no-underscore-dangle": "off",
-		"jquery/no-global-selector": "off"
+		"no-jquery/no-global-selector": "off"
 	}
 }
