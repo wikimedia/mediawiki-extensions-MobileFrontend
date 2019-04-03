@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c7bd62d8_e972e3c9",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 1122,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-04-03T01:50:00Z",
+      "side": 1,
+      "message": "oops?",
+      "range": {
+        "startLine": 1122,
+        "startChar": 0,
+        "endLine": 1122,
+        "endChar": 1
+      },
+      "revId": "3188eda8c4a08cfeb67350783ff81fcac93f6868",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
