@@ -4,15 +4,11 @@
 	<rule ref="Generic.Files.LineLength">
 		<exclude-pattern>MobileFrontend\.alias\.php</exclude-pattern>
 	</rule>
-	<rule ref="MediaWiki.Files.ClassMatchesFilename.NotMatch">
-		<exclude-pattern>tests/phpunit/*</exclude-pattern>
-		<exclude-pattern>includes/MobileFrontend\.*\.php</exclude-pattern>
-	</rule>
 	<rule ref="Generic.Files.OneObjectStructurePerFile.MultipleFound">
 		<exclude-pattern>tests/phpunit/*</exclude-pattern>
 	</rule>
 	<rule ref="MediaWiki.Usage.DeprecatedGlobalVariables.Deprecated$wgContLang">
-		<exclude-pattern>includes/MobileFrontend\.body\.php</exclude-pattern>
+		<exclude-pattern>includes/ExtMobileFrontend\.php</exclude-pattern>
 		<exclude-pattern>includes/api/ApiMobileView\.php</exclude-pattern>
 		<exclude-pattern>includes/diff/InlineDifferenceEngine\.php</exclude-pattern>
 	</rule>

@@ -54,9 +54,9 @@
 		"MobileFrontend\\AMC\\": "includes/amc/"
 	},
 	"AutoloadClasses": {
-		"ExtMobileFrontend": "includes/MobileFrontend.body.php",
-		"MobileFrontendHooks": "includes/MobileFrontend.hooks.php",
-		"MobileFrontendSkinHooks": "includes/MobileFrontend.skin.hooks.php",
+		"ExtMobileFrontend": "includes/ExtMobileFrontend.php",
+		"MobileFrontendHooks": "includes/MobileFrontendHooks.php",
+		"MobileFrontendSkinHooks": "includes/MobileFrontendSkinHooks.php",
 		"MobileFrontend\\BaseDomainExtractorInterface": "includes/BaseDomainExtractorInterface.php",
 		"MobileFrontend\\WMFBaseDomainExtractor": "includes/WMFBaseDomainExtractor.php",
 		"MobileContext": "includes/MobileContext.php",

@@ -9,16 +9,6 @@ use FauxRequest;
 use MobileFrontend\Devices\DeviceProperties;
 use MobileFrontend\Devices\DeviceDetectorService;
 
-class StubDeviceDetector implements DeviceDetector {
-	public function __construct( $result ) {
-		$this->result = $result;
-	}
-
-	public function detectDeviceProperties( WebRequest $request, array $server ) {
-		return $this->result;
-	}
-}
-
 /**
  * @group MobileFrontend
  */
@@ -86,5 +76,15 @@ class DeviceDetectorServiceTest extends MediaWikiTestCase {
 		$properties = $detector->detectDeviceProperties( $this->request, [] );
 
 		$this->assertEquals( null, $properties );
+	}
+}
+
+class StubDeviceDetector implements DeviceDetector {
+	public function __construct( $result ) {
+		$this->result = $result;
+	}
+
+	public function detectDeviceProperties( WebRequest $request, array $server ) {
+		return $this->result;
 	}
 }
