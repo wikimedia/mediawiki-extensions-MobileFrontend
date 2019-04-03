@@ -76,8 +76,9 @@ Browser.prototype = {
 	 */
 	isWideScreen: memoize( function () {
 		var val = parseInt( mw.config.get( 'wgMFDeviceWidthTablet' ), 10 );
-		// Check portrait and landscape mode to be consistent
-		return window.innerWidth >= val || window.innerHeight >= val;
+		// Check viewport width to determine mobile vs tablet.
+		// Note: Mobile devices held in landscape mode might receive tablet treatment.
+		return window.innerWidth >= val;
 	} ),
 	/**
 	 * Checks browser support for CSS transforms, transitions
