@@ -46,6 +46,54 @@
       "revId": "22859c1248183e44d8bf9d26d48d13e164546597",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "45e3d734_a9f7f82f",
+        "filename": "extension.json",
+        "patchSetId": 9
+      },
+      "lineNbr": 898,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-04-04T17:33:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ef256523_9d87faa9",
+      "range": {
+        "startLine": 898,
+        "startChar": 5,
+        "endLine": 898,
+        "endChar": 9
+      },
+      "revId": "22859c1248183e44d8bf9d26d48d13e164546597",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "695594b8_4a32275f",
+        "filename": "extension.json",
+        "patchSetId": 9
+      },
+      "lineNbr": 898,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-04-04T17:33:11Z",
+      "side": 1,
+      "message": "Yes, it is! Done",
+      "parentUuid": "6b563d09_8841a5d1",
+      "range": {
+        "startLine": 898,
+        "startChar": 5,
+        "endLine": 898,
+        "endChar": 9
+      },
+      "revId": "22859c1248183e44d8bf9d26d48d13e164546597",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
