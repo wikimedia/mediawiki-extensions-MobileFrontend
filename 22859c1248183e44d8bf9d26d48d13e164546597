@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6b563d09_8841a5d1",
+        "filename": "extension.json",
+        "patchSetId": 9
+      },
+      "lineNbr": 898,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-04-04T16:04:02Z",
+      "side": 1,
+      "message": "I\u0027m just thinking loudly, isn\u0027t \"MFUseDesktopSpecialHistoryPage\" a bit better?",
+      "range": {
+        "startLine": 898,
+        "startChar": 5,
+        "endLine": 898,
+        "endChar": 9
+      },
+      "revId": "22859c1248183e44d8bf9d26d48d13e164546597",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
