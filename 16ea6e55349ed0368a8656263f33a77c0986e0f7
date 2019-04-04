@@ -22,6 +22,29 @@
       "revId": "16ea6e55349ed0368a8656263f33a77c0986e0f7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "36aac0a3_32f71bd2",
+        "filename": "includes/content-providers/ContentProviderFactory.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-04-04T20:39:57Z",
+      "side": 0,
+      "message": "To create an inline script like this, you\u0027d need to use ResourceLoader:: makeInlineScript() instead. Although both the old code and that method will have the caveat of running at a seemingly random point in time. Not particularly early or late. Which I guess is fine if all you need is for it to apply before a user initiates VisualEditor (except via veaction\u003dedit).",
+      "range": {
+        "startLine": 59,
+        "startChar": 6,
+        "endLine": 59,
+        "endChar": 19
+      },
+      "revId": "16ea6e55349ed0368a8656263f33a77c0986e0f7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
