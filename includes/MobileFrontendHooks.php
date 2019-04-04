@@ -809,7 +809,6 @@ class MobileFrontendHooks {
 	public static function onGetPreferences( $user, &$preferences ) {
 		$ctx = MobileContext::singleton();
 		$config = $ctx->getMFConfig();
-		$defaultSkin = $config->get( 'DefaultSkin' );
 		$definition = [
 			'type' => 'api',
 			'default' => '',
