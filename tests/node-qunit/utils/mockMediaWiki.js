@@ -68,9 +68,13 @@ module.exports = function newMockMediaWiki() {
 						path.join( rootPath, templatePath ),
 						'utf8'
 					);
+				// eslint-disable-next-line no-console
+				console.warn( 'Use of template.get is discouraged. Use template strings instead' );
 				return hogan.compile( templateString );
 			},
-			compile: function () {}
+			compile: function ( templateString, ext ) {
+				return hogan.compile( templateString.trim(), ext );
+			}
 		},
 		user: {
 			options: {

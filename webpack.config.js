@@ -223,7 +223,7 @@ module.exports = ( env, argv ) => ( {
 		// well understood. Related to bundlesize minified, gzipped compressed file size tests.
 		// Note: entrypoint size implicitly includes the mobile.startup.runtime and mobile.common
 		// chunks.
-		maxAssetSize: 49 * 1024,
+		maxAssetSize: 51 * 1024,
 		maxEntrypointSize: 80 * 1024,
 		// The default filter excludes map files but we rename ours. Also, any modules prefixed with
 		// "tests." are excluded from performance checks as they are not shipped to end users.

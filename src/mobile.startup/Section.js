@@ -1,4 +1,4 @@
-var
+var util = require( './util.js' ),
 	mfExtend = require( './mfExtend' ),
 	icons = require( './icons' ),
 	View = require( './View' );
@@ -26,7 +26,10 @@ function Section( options ) {
 }
 
 mfExtend( Section, View, {
-	template: mw.template.get( 'mobile.startup', 'Section.hogan' ),
+	template: util.template( `
+<h{{level}} id="{{anchor}}">{{{line}}}</h{{level}}>
+{{{text}}}
+	` ),
 	/**
 	 * @memberof Section
 	 * @instance

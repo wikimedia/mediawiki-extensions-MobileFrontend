@@ -163,5 +163,19 @@ module.exports = {
 		return src.on( event, function ( args ) {
 			return proxy.emit( event, args );
 		}, args );
+	},
+
+	/**
+	 * @typedef {Object} Template
+	 * @property {Function} render returning string of rendered HTML
+	 *
+	 * Centralised place for template rendering. Currently using Hogan, in future
+	 * this will use Mustache.
+	 *
+	 * @param {string} source code of template that is Hogan/Mustache compatible.
+	 * @return {Template}
+	 */
+	template: function ( source ) {
+		return mw.template.compile( source.trim(), 'hogan' );
 	}
 };

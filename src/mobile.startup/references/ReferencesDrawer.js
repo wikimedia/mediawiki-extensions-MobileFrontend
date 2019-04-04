@@ -62,7 +62,17 @@ mfExtend( ReferencesDrawer, Drawer, {
 	 * @memberof ReferencesDrawer
 	 * @instance
 	 */
-	template: mw.template.get( 'mobile.startup', 'ReferencesDrawer.hogan' ),
+	template: util.template( `
+<div class="cite">
+	{{{citation}}}
+	{{{cancelButton}}}
+</div>
+{{#error}}<div class="{{errorClassName}}">{{/error}}
+<sup>{{title}}</sup>
+{{#text}}{{{text}}}{{/text}}
+{{^text}}{{{spinner}}}{{/text}}
+{{#error}}</div>{{/error}}
+	` ),
 	/**
 	 * @inheritdoc
 	 * @memberof ReferencesDrawer

@@ -69,7 +69,7 @@ module.exports = {
 					line: '1',
 					anchor: '1',
 					id: 1,
-					text: '<p>Text of 1\n</p><h2 id="1.1"><i>1.1</i></h2>\n<p>Text of 1.1\n</p>\n',
+					text: '<p>Text of 1\n</p><h2 id="1.1"><i>1.1</i></h2>\n<p>Text of 1.1\n</p>',
 					subsections: [
 						{
 							level: '2',
@@ -86,7 +86,7 @@ module.exports = {
 					line: '2',
 					anchor: '2',
 					id: 3,
-					text: '<p>Text of 2\n</p><h2 id="2.1">2.1</h2>\n<p>Text of 2.1\n</p>\n',
+					text: '<p>Text of 2\n</p><h2 id="2.1">2.1</h2>\n<p>Text of 2.1\n</p>',
 					subsections: [
 						{
 							level: '2',
@@ -175,7 +175,7 @@ module.exports = {
 					line: 'Aaa section',
 					anchor: 'Aaa_section',
 					id: 1,
-					text: 'aaa content<h3 id="Subaaa_section">Subaaa section</h3>\nsubaaa content\n',
+					text: 'aaa content<h3 id="Subaaa_section">Subaaa section</h3>\nsubaaa content',
 					subsections: [
 						{
 							level: '3',

@@ -56,7 +56,15 @@ mfExtend( CtaDrawer, Drawer, {
 		 * @memberof CtaDrawer
 		 * @instance
 		 */
-	template: mw.template.get( 'mobile.startup', 'CtaDrawer.hogan' ),
+	template: util.template( `
+{{#collapseIcon}}{{>icon}}{{/collapseIcon}}
+<p>{{content}}</p>
+{{#progressiveButton}}{{>button}}{{/progressiveButton}}
+<div>
+	{{#actionAnchor}}{{>anchor}}{{/actionAnchor}}
+	{{#closeAnchor}}{{>anchor}}{{/closeAnchor}}
+</div>
+	` ),
 	/**
 		 * @inheritdoc
 		 * @memberof CtaDrawer
