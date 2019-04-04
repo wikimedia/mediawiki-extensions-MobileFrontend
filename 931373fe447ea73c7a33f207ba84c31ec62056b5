@@ -2,6 +2,52 @@
   "comments": [
     {
       "key": {
+        "uuid": "a4e6b0fc_0bb361b6",
+        "filename": "includes/specials/MobileSpecialPage.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-04-04T23:52:09Z",
+      "side": 1,
+      "message": "in this way it should be private, as getMobileContext() should be protected.\n\nWhy?, Lets think about this property. It\u0027s lazy initialized. By default it\u0027s null, but if someone calls getMobileContext() it becomes the MobileContext. Classes that extend the MobileSpecialPage don\u0027t have to know that this property is not usable unless someone calls getMobileContext(). IMHO, it\u0027s better to make it private, so the only way to get mobileContext is by using the service, or by calling `$this-\u003egetMobileContext()` which guarantees that $mobileContext exits.\n\nNow, the second thing, why getMobileContext() should be protected? The best way to reduce code complexity is always to reduce methods visibility. If it becomes private, then there is no way that someone decides to get context just by getting it from `$page-\u003egetMobileContext()`. The public classes API (MediaWikiServices and public methods), should provide only one way to get MobileContext.\n\nAnother approach, is to drop the `getMobileContext` function, and just implement a `__construct()` that will always set up both `$this-\u003emobileContext` and `$this-\u003econfig`. That IMHO is the way to go.",
+      "range": {
+        "startLine": 24,
+        "startChar": 11,
+        "endLine": 24,
+        "endChar": 25
+      },
+      "revId": "931373fe447ea73c7a33f207ba84c31ec62056b5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "05fdc075_db9f1dec",
+        "filename": "includes/specials/MobileSpecialPage.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-04-04T23:52:09Z",
+      "side": 1,
+      "message": "you can use the `$this-\u003egetMobileContext()`. But better would be to create a `__construct()`, initialize those vars there (both $ctx and $this-\u003econfig) and use it here.",
+      "range": {
+        "startLine": 59,
+        "startChar": 9,
+        "endLine": 59,
+        "endChar": 82
+      },
+      "revId": "931373fe447ea73c7a33f207ba84c31ec62056b5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c858768d_c49dd494",
         "filename": "includes/specials/SpecialMobileDiff.php",
         "patchSetId": 5
@@ -46,6 +92,53 @@
       "revId": "931373fe447ea73c7a33f207ba84c31ec62056b5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5c134052_ee56d9f4",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 388,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-04-04T23:52:09Z",
+      "side": 1,
+      "message": "+1 to what Jon said",
+      "parentUuid": "e614c720_ff1d641d",
+      "range": {
+        "startLine": 388,
+        "startChar": 2,
+        "endLine": 388,
+        "endChar": 33
+      },
+      "revId": "931373fe447ea73c7a33f207ba84c31ec62056b5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e0cf3371_30bdcdec",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-04-04T23:52:09Z",
+      "side": 1,
+      "message": "$container is not defined, you probably meant \n\n  $this-\u003eservices-\u003egetService( ... );\n\nwe already define the $this-\u003eamc in in __construct(), it\u0027s safe to get also the featuresManager there, you can do\n\n  public function __construct() {\n    parent::__construct( \u0027MobileOptions\u0027 );\n    $this-\u003eservices \u003d MediaWikiServices::getInstance();\n    $this-\u003eamc \u003d $this-\u003eservices-\u003egetService( \u0027MobileFrontend.AMC.Manager\u0027 );\n    $this-\u003efeaturesManager \u003d $this-\u003eservices-\u003eget( \u0027MobileFrontend.FeaturesManager\u0027  );\n  }\n\nand then just use $this-\u003efeaturesManager. \n\nP.S. don\u0027t forget to define the featuresManager property.",
+      "range": {
+        "startLine": 43,
+        "startChar": 20,
+        "endLine": 43,
+        "endChar": 30
+      },
+      "revId": "931373fe447ea73c7a33f207ba84c31ec62056b5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
