@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "94a8640f_fc224431",
+        "filename": "src/mobile.startup/Anchor.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-04-04T15:44:49Z",
+      "side": 1,
+      "message": "Out of scope for the current patch but some food for thought in future patches.\n\nI realize this is the preexisting implementation but wanted to mention that this might be clearer to assign to a className variable in JavaScript to minimize template logic. E.g., something like:\n\n  const className \u003d `mw-ui-anchor${progressive ? \u0027 mw-ui-progressive\u0027 : \u0027\u0027}${destructive ? \u0027 mw-ui-destructive\u0027 : \u0027\u0027}`\n\nThen the template looks something like:\n\n \u003ca {{#href}}href\u003d\"{{href}}\"{{/href}} class\u003d\"{{className}}\"\u003e\n   {{label}}\n \u003c/a\u003e",
+      "range": {
+        "startLine": 46,
+        "startChar": 44,
+        "endLine": 49,
+        "endChar": 28
+      },
+      "revId": "39829dce025a5d6a3a5de636f71534ed1aeebb6b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
