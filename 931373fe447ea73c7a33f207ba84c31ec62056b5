@@ -22,6 +22,30 @@
       "revId": "931373fe447ea73c7a33f207ba84c31ec62056b5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e614c720_ff1d641d",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 388,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-04T23:24:03Z",
+      "side": 1,
+      "message": "getMobileUrlFromDesktop should take a Request as a parameter\u003e There doesn\u0027t look like there is any need for context and everything that comes with it.",
+      "parentUuid": "c858768d_c49dd494",
+      "range": {
+        "startLine": 388,
+        "startChar": 2,
+        "endLine": 388,
+        "endChar": 33
+      },
+      "revId": "931373fe447ea73c7a33f207ba84c31ec62056b5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
