@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bef4f0f8_8f75bcdf",
+        "filename": "src/mobile.startup/Anchor.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2019-04-04T10:01:47Z",
+      "side": 1,
+      "message": "I know this is how the hogan template was formatted but just looking at this whitespace gives me anxiety :P it\u0027s fine even according to the spec https://www.w3.org/TR/html/syntax.html#start-tags \nand doesn\u0027t really matter since it just get converted into DOM (unlike the PHP mustache templates, which retain their whitespace).",
+      "range": {
+        "startLine": 46,
+        "startChar": 2,
+        "endLine": 47,
+        "endChar": 1
+      },
+      "revId": "8b8bf7dc594aa4be7839af2e8d552f57f90315da",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
