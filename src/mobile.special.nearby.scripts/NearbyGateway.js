@@ -82,7 +82,7 @@ NearbyGateway.prototype = {
 	 * @private
 	 * @param {Object} params Parameters to use for searching
 	 * @param {number} range Number of meters to perform a geosearch for
-	 * @param {string} exclude Name of a title to exclude from the list of results
+	 * @param {string} [exclude] Name of a title to exclude from the list of results
 	 * @return {jQuery.Deferred} Object taking list of pages as argument
 	 */
 	_search: function ( params, range, exclude ) {
@@ -142,7 +142,11 @@ NearbyGateway.prototype = {
 			pages.sort( function ( a, b ) {
 				return a.dist > b.dist ? 1 : -1;
 			} );
-			d.resolve( pages );
+			if ( pages.length === 0 ) {
+				d.reject( 'empty' );
+			} else {
+				d.resolve( pages );
+			}
 		}, function ( error ) {
 			d.reject( error );
 		} );

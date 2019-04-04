@@ -37,8 +37,10 @@ class SpecialNearby extends MobileSpecialPage {
 				. Html::element( 'div', [ 'class' => 'desc' ],
 					$this->msg( 'mobile-frontend-nearby-info-description' )->text() )
 				. Html::openElement( 'div', [ 'class' => 'jsonly' ] )
-					. Html::linkButton( $this->msg( 'mobile-frontend-nearby-info-show-button' )->text(),
-						[ 'id' => 'showArticles', 'class' => 'mw-ui-progressive' ] )
+					. Html::element( 'button',
+						[ 'id' => 'showArticles', 'disabled' => true, 'class' => 'mw-ui-button mw-ui-progressive' ],
+						$this->msg( 'mobile-frontend-nearby-info-show-button' )->text()
+					)
 				. Html::closeElement( 'div' )
 			. Html::closeElement( 'div' )
 
