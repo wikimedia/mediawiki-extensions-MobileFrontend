@@ -46,6 +46,30 @@
       "revId": "3e0dad97ad8142256c4d230bf67da49a80f9e163",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3c74b406_8779c40f",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-04-04T18:00:22Z",
+      "side": 1,
+      "message": "@Jdlrobson and @Pmiazga, thanks a lot. @Jon, I\u0027m not sure how to implement your own approach as the parent class you mentioned (MobileSpecialPage) that is being extended by other classes doesn\u0027t have a constructor method.\n\nI\u0027ve taken @Pmiazga\u0027s route, please me know if you have more brilliant ideas. Thanks!",
+      "parentUuid": "c1e1cc89_5c93638f",
+      "range": {
+        "startLine": 42,
+        "startChar": 2,
+        "endLine": 42,
+        "endChar": 48
+      },
+      "revId": "3e0dad97ad8142256c4d230bf67da49a80f9e163",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
