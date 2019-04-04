@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8301cc9d_6369c4c2",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 967,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-04T16:43:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "878b16a3_d1a24d25",
+      "revId": "75590e7c9c3c4383d1c07325823a57985075fe02",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "234ad6c0_f58b116f",
         "filename": "includes/MobileFrontend.hooks.php",
         "patchSetId": 4
@@ -30,6 +48,24 @@
       "writtenOn": "2019-03-15T23:51:49Z",
       "side": 1,
       "message": "Should this be resources/mobile.contentProviderApi.js ?\nI\u0027m a bit worried that this code permits es6 code but will not be transpiled.",
+      "revId": "75590e7c9c3c4383d1c07325823a57985075fe02",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "42240811_b880b952",
+        "filename": "includes/MobileFrontend.hooks.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 974,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-04T16:43:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "234ad6c0_f58b116f",
       "revId": "75590e7c9c3c4383d1c07325823a57985075fe02",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
