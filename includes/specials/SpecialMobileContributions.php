@@ -42,7 +42,7 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 		return Html::element( 'a',
 			[
 				'class' => MobileUI::iconClass( $glyph, 'before', 'mw-mf-user' ),
-				'href' => $title->getLocalUrl(),
+				'href' => $title->getLocalURL(),
 			],
 			$title->getText() );
 	}
@@ -146,7 +146,7 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 		$ts = new MWTimestamp( $ts );
 
 		if ( $rev->userCan( Revision::DELETED_TEXT, $user ) ) {
-			$diffLink = SpecialPage::getTitleFor( 'MobileDiff', $rev->getId() )->getLocalUrl();
+			$diffLink = SpecialPage::getTitleFor( 'MobileDiff', $rev->getId() )->getLocalURL();
 		} else {
 			$diffLink = false;
 		}

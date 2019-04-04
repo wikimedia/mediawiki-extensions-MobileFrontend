@@ -184,7 +184,7 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 			);
 			$html .= Html::openElement( 'p' );
 			$html .= Html::element( 'a',
-				[ 'href' => $this->title->getLocalUrl() ],
+				[ 'href' => $this->title->getLocalURL() ],
 				$this->msg( 'returnto', $titlename )->text()
 			);
 			$html .= Html::closeElement( 'p' );

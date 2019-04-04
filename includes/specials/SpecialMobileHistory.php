@@ -52,7 +52,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 	 */
 	protected function getHeaderBarLink( $title ) {
 		return Html::element( 'a',
-			[ 'href' => $title->getLocalUrl() ],
+			[ 'href' => $title->getLocalURL() ],
 			$title->getText() );
 	}
 
@@ -119,7 +119,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 				// make sure, the content of the page supports the default history page
 				if ( !self::shouldUseSpecialHistory( $this->title, $this->getUser() ) ) {
 					// and if not, redirect to the default history action
-					$out->redirect( $this->title->getLocalUrl( [ 'action' => 'history' ] ) );
+					$out->redirect( $this->title->getLocalURL( [ 'action' => 'history' ] ) );
 					return;
 				}
 
@@ -184,9 +184,9 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 
 		$canSeeText = $rev->userCan( Revision::DELETED_TEXT, $user );
 		if ( $canSeeText && $prev && $prev->userCan( Revision::DELETED_TEXT, $user ) ) {
-			$diffLink = SpecialPage::getTitleFor( 'MobileDiff', $rev->getId() )->getLocalUrl();
+			$diffLink = SpecialPage::getTitleFor( 'MobileDiff', $rev->getId() )->getLocalURL();
 		} elseif ( $canSeeText && $rev->getTitle() !== null ) {
-			$diffLink = $rev->getTitle()->getLocalUrl( [ 'oldid' => $rev->getId() ] );
+			$diffLink = $rev->getTitle()->getLocalURL( [ 'oldid' => $rev->getId() ] );
 		} else {
 			$diffLink = false;
 		}
@@ -214,7 +214,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 	protected function getMoreButton( $ts ) {
 		$attrs = [
 			'href' => $this->getContext()->getTitle()->
-				getLocalUrl(
+				getLocalURL(
 					[
 						'offset' => $ts,
 					]
