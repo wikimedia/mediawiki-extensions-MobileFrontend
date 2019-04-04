@@ -113,6 +113,30 @@
     },
     {
       "key": {
+        "uuid": "a267f214_8ccb7b3b",
+        "filename": "src/mobile.startup/talk/addTopicOverlay.js",
+        "patchSetId": 37
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-04T00:22:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "70158344_eb58c3f7",
+      "range": {
+        "startLine": 73,
+        "startChar": 2,
+        "endLine": 73,
+        "endChar": 21
+      },
+      "revId": "86e5c83d622ab3dbfc495803ff2ee274b92526f0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5db307c7_7441e15f",
         "filename": "src/mobile.talk.overlays/mobile.talk.overlays.js",
         "patchSetId": 37
@@ -130,6 +154,24 @@
     },
     {
       "key": {
+        "uuid": "b544452d_d404be58",
+        "filename": "src/mobile.talk.overlays/mobile.talk.overlays.js",
+        "patchSetId": 37
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-04T00:22:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5db307c7_7441e15f",
+      "revId": "86e5c83d622ab3dbfc495803ff2ee274b92526f0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "18257e02_832425e9",
         "filename": "src/mobile.talk.overlays/mobile.talk.overlays.js",
         "patchSetId": 37
@@ -141,6 +183,30 @@
       "writtenOn": "2019-03-22T16:22:30Z",
       "side": 1,
       "message": "What are your thoughts on asking clients to use overlayManager themselves? This wraps hidden access to singleton state.",
+      "range": {
+        "startLine": 63,
+        "startChar": 9,
+        "endLine": 63,
+        "endChar": 40
+      },
+      "revId": "86e5c83d622ab3dbfc495803ff2ee274b92526f0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "332e54d7_c292a5c1",
+        "filename": "src/mobile.talk.overlays/mobile.talk.overlays.js",
+        "patchSetId": 37
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-04T00:22:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "18257e02_832425e9",
       "range": {
         "startLine": 63,
         "startChar": 9,
@@ -176,6 +242,30 @@
     },
     {
       "key": {
+        "uuid": "6fc4a9d3_e9809614",
+        "filename": "src/mobile.talk.overlays/mobile.talk.overlays.js",
+        "patchSetId": 37
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-04T00:22:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dcd3dc6a_c0271678",
+      "range": {
+        "startLine": 77,
+        "startChar": 21,
+        "endLine": 77,
+        "endChar": 35
+      },
+      "revId": "86e5c83d622ab3dbfc495803ff2ee274b92526f0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7bf314e0_0ca00706",
         "filename": "src/mobile.talk.overlays/mobile.talk.overlays.js",
         "patchSetId": 37
@@ -187,6 +277,30 @@
       "writtenOn": "2019-03-22T16:22:30Z",
       "side": 1,
       "message": "Are function factories like this more useful than a fat arrow? In my opinion, changing this to _be_ saveCompleteHandler and using an arrow would be much easier to read:\n\n function saveCompleteHandler( isOnTalkPage ) {\n   if ( isOnTalkPage ) {\n     eventBusSingleton.emit( \u0027talk-added-wo-overlay\u0027 );\n   } else {\n     eventBusSingleton.emit( \u0027talk-discussion-added\u0027 );\n     mw.notify( mw.msg( \u0027mobile-frontend-talk-topic-feedback\u0027 ) );\n   }\n }\n\nArea where I actually need to use the closure:\n\n isOnTalkPage \u003d\u003e saveCompleteHandler(isOnTalkPage)\n\nOr if isOnTalkPage is provided and since no context is needed, just:\n\n saveCompleteHandler",
+      "range": {
+        "startLine": 138,
+        "startChar": 9,
+        "endLine": 138,
+        "endChar": 32
+      },
+      "revId": "86e5c83d622ab3dbfc495803ff2ee274b92526f0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ea451d4_9bda457d",
+        "filename": "src/mobile.talk.overlays/mobile.talk.overlays.js",
+        "patchSetId": 37
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-04T00:22:53Z",
+      "side": 1,
+      "message": "This function is marked as @deprecated. It will be removed shortly after https://gerrit.wikimedia.org/r/#/c/mediawiki/skins/MinervaNeue/+/493742/",
+      "parentUuid": "7bf314e0_0ca00706",
       "range": {
         "startLine": 138,
         "startChar": 9,
