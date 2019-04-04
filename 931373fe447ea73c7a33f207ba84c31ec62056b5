@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c858768d_c49dd494",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 388,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-04-04T19:12:41Z",
+      "side": 1,
+      "message": "We can\u0027t use $this-\u003e here because the method is static. And I\u0027ll not want to also introduce a static method in the MobileSpecialPage class. @Jon, @Piotr, any ideas?",
+      "range": {
+        "startLine": 388,
+        "startChar": 2,
+        "endLine": 388,
+        "endChar": 33
+      },
+      "revId": "931373fe447ea73c7a33f207ba84c31ec62056b5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
