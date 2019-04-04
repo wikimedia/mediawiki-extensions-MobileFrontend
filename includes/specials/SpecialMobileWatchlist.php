@@ -188,7 +188,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 			}
 			$linkAttrs = [
 				'data-filter' => $filter,
-				'href' => $this->getPageTitle()->getLocalUrl(
+				'href' => $this->getPageTitle()->getLocalURL(
 					[
 						'filter' => $filter,
 						'watchlistview' => self::VIEW_FEED,
@@ -330,7 +330,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		return Html::openElement( 'div', [ 'class' => 'info empty-page' ] ) .
 				$msg .
 				Html::element( 'a',
-					[ 'class' => 'button', 'href' => Title::newMainPage()->getLocalUrl() ],
+					[ 'class' => 'button', 'href' => Title::newMainPage()->getLocalURL() ],
 					wfMessage( 'mobile-frontend-watchlist-back-home' )->plain()
 				) .
 				Html::closeElement( 'div' );
@@ -366,10 +366,10 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 
 		if ( $revId ) {
 			$diffTitle = SpecialPage::getTitleFor( 'MobileDiff', $revId );
-			$diffLink = $diffTitle->getLocalUrl();
+			$diffLink = $diffTitle->getLocalURL();
 		} else {
 			// hack -- use full log entry display
-			$diffLink = Title::makeTitle( $row->rc_namespace, $row->rc_title )->getLocalUrl();
+			$diffLink = Title::makeTitle( $row->rc_namespace, $row->rc_title )->getLocalURL();
 		}
 
 		$this->renderFeedItemHtml( $ts, $diffLink, $username, $comment, $title, $isAnon, $bytes,

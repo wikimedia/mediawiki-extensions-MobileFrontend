@@ -243,7 +243,7 @@ class MobileFormatter extends HtmlFormatter {
 			$fragment = $node->getAttribute( 'href' );
 			$node->setAttribute(
 				'href',
-				SpecialPage::getTitleFor( 'MobileCite', $citePath )->getLocalUrl() . $fragment
+				SpecialPage::getTitleFor( 'MobileCite', $citePath )->getLocalURL() . $fragment
 			);
 		}
 	}
@@ -281,7 +281,7 @@ class MobileFormatter extends HtmlFormatter {
 				// Note: You can have multiple <references> tag on the same page, we render all of these in
 				// the special page together.
 				$placeholder->setAttribute( 'href',
-					SpecialPage::getTitleFor( 'MobileCite', $citePath )->getLocalUrl() );
+					SpecialPage::getTitleFor( 'MobileCite', $citePath )->getLocalURL() );
 				$parent->replaceChild( $placeholder, $list );
 			}
 		}

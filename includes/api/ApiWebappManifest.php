@@ -18,7 +18,7 @@ class ApiWebappManifest extends ApiBase {
 		$resultObj->addValue( null, 'display', 'browser' );
 		$resultObj->addValue( null, 'theme_color', $config->get( 'MFManifestThemeColor' ) );
 		$resultObj->addValue( null, 'background_color', $config->get( 'MFManifestBackgroundColor' ) );
-		$resultObj->addValue( null, 'start_url', Title::newMainPage()->getLocalUrl() );
+		$resultObj->addValue( null, 'start_url', Title::newMainPage()->getLocalURL() );
 
 		$icons = [];
 

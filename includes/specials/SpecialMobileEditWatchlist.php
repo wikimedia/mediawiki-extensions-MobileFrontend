@@ -63,7 +63,7 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 				'title' => $titleText,
 				'data-id' => $title->getArticleID()
 			] ) .
-			Html::openElement( 'a', [ 'href' => $title->getLocalUrl(), 'class' => $className ] );
+			Html::openElement( 'a', [ 'href' => $title->getLocalURL(), 'class' => $className ] );
 		$html .= $thumb;
 		$html .=
 			Html::element( 'h3', [], $titleText );
