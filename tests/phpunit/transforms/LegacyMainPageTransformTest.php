@@ -14,7 +14,7 @@ class LegacyMainPageTransformTest extends MediaWikiTestCase {
 
 	/**
 	 * @dataProvider provideTransform
-	 * @covers MobileFrontend\Transforms\LegacyMainPageTransform::apply
+	 * @covers \MobileFrontend\Transforms\LegacyMainPageTransform::apply
 	 *
 	 * @param string $html
 	 * @param string $expected

@@ -13,8 +13,8 @@ class MoveLeadParagraphTransformTest extends MediaWikiTestCase {
 	}
 
 	/**
-	 * @covers MobileFrontend\Transforms\MoveLeadParagraphTransform::getInfoboxContainer
-	 * @covers MobileFrontend\Transforms\MoveLeadParagraphTransform::matchElement
+	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::getInfoboxContainer
+	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::matchElement
 	 */
 	public function testGetInfoboxContainer() {
 		$doc = new DOMDocument();
@@ -73,14 +73,14 @@ class MoveLeadParagraphTransformTest extends MediaWikiTestCase {
 	 *
 	 * @param string $html
 	 * @param string $expected
-	 * @covers MobileFrontend\Transforms\MoveLeadParagraphTransform::apply
-	 * @covers MobileFrontend\Transforms\MoveLeadParagraphTransform::moveFirstParagraphBeforeInfobox
-	 * @covers MobileFrontend\Transforms\MoveLeadParagraphTransform::hasNoNonEmptyPrecedingParagraphs
-	 * @covers MobileFrontend\Transforms\MoveLeadParagraphTransform::identifyInfoboxElement
-	 * @covers MobileFrontend\Transforms\MoveLeadParagraphTransform::identifyLeadParagraph
-	 * @covers MobileFrontend\Transforms\MoveLeadParagraphTransform::isNotEmptyNode
-	 * @covers MobileFrontend\Transforms\MoveLeadParagraphTransform::isNonLeadParagraph
-	 * @covers MobileFrontend\Transforms\MoveLeadParagraphTransform::isPreviousSibling
+	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::apply
+	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::moveFirstParagraphBeforeInfobox
+	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::hasNoNonEmptyPrecedingParagraphs
+	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::identifyInfoboxElement
+	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::identifyLeadParagraph
+	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::isNotEmptyNode
+	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::isNonLeadParagraph
+	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::isPreviousSibling
 	 */
 	public function testTransform( $html, $expected,
 		$reason = 'Move lead paragraph unexpected result'

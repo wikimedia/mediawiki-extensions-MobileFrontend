@@ -19,7 +19,7 @@ class LazyImageTransformTest extends MediaWikiTestCase {
 	 * @param string $w value of width attribute (if any)
 	 * @param string $h value of height attribute (if any)
 	 * @param string $style value of style attribute (if any)
-	 * @covers MobileFrontend\Transforms\LazyImageTransform::getImageDimensions
+	 * @covers \MobileFrontend\Transforms\LazyImageTransform::getImageDimensions
 	 */
 	public function testGetImageDimensions( $expected, $w, $h, $style ) {
 		$mf = new LazyImageTransform();
@@ -83,7 +83,7 @@ class LazyImageTransformTest extends MediaWikiTestCase {
 
 	/**
 	 * @dataProvider provideIsDimensionSmallerThanThreshold
-	 * @covers MobileFrontend\Transforms\LazyImageTransform::isDimensionSmallerThanThreshold
+	 * @covers \MobileFrontend\Transforms\LazyImageTransform::isDimensionSmallerThanThreshold
 	 */
 	public function testIsDimensionSmallerThanThreshold( $dimension, $expected ) {
 		$mf = new LazyImageTransform();
@@ -111,10 +111,10 @@ class LazyImageTransformTest extends MediaWikiTestCase {
 
 	/**
 	 * @dataProvider provideTransform
-	 * @covers MobileFrontend\Transforms\LazyImageTransform::apply
-	 * @covers MobileFrontend\Transforms\LazyImageTransform::doRewriteImagesForLazyLoading
-	 * @covers MobileFrontend\Transforms\LazyImageTransform::getImageDimension
-	 * @covers MobileFrontend\Transforms\LazyImageTransform::getImageDimensions
+	 * @covers \MobileFrontend\Transforms\LazyImageTransform::apply
+	 * @covers \MobileFrontend\Transforms\LazyImageTransform::doRewriteImagesForLazyLoading
+	 * @covers \MobileFrontend\Transforms\LazyImageTransform::getImageDimension
+	 * @covers \MobileFrontend\Transforms\LazyImageTransform::getImageDimensions
 	 *
 	 * @param string $html
 	 * @param bool $skipSmallImages whether small images should be skipped

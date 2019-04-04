@@ -14,7 +14,7 @@ class AddMobileTocTransformTest extends MediaWikiTestCase {
 
 	/**
 	 * @dataProvider provideTransform
-	 * @covers MobileFrontend\Transforms\AddMobileTocTransform::apply
+	 * @covers \MobileFrontend\Transforms\AddMobileTocTransform::apply
 	 *
 	 * @param string $html
 	 * @param string $expected

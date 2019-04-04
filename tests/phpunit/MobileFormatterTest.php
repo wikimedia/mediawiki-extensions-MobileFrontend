@@ -781,7 +781,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 	/**
 	 * @see https://phabricator.wikimedia.org/T149884
 	 * @covers MobileFormatter::filterContent
-	 * @covers MobileFrontend\Transforms\MoveLeadParagraphTransform::logInfoboxesWrappedInContainers
+	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::logInfoboxesWrappedInContainers
 	 * @dataProvider provideLoggingOfInfoboxesBeingWrappedInContainersWhenNotWrapped
 	 */
 	public function testLoggingOfInfoboxesBeingWrappedInContainersWhenNotWrapped( $input ) {
