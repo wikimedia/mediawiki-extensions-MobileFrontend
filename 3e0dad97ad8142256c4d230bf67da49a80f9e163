@@ -22,6 +22,30 @@
       "revId": "3e0dad97ad8142256c4d230bf67da49a80f9e163",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c1e1cc89_5c93638f",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-04T16:05:47Z",
+      "side": 1,
+      "message": "Consider doing this once in the MobileSpecialPage base class.",
+      "parentUuid": "ed7e79a2_d013f6e7",
+      "range": {
+        "startLine": 42,
+        "startChar": 2,
+        "endLine": 42,
+        "endChar": 48
+      },
+      "revId": "3e0dad97ad8142256c4d230bf67da49a80f9e163",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
