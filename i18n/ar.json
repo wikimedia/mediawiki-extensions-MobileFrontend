@@ -95,7 +95,7 @@
 	"mobile-frontend-editor-error-loading": "خطأ، تعذر تحميل القسم.",
 	"mobile-frontend-editor-error-preview": "خطأ، حدث شيء غير متوقع أثناء تحميل المعاينة. أغلق الصفحة رجاءً واحفظ مجددا.",
 	"mobile-frontend-editor-keep-editing": "تابع التحرير",
-	"mobile-frontend-editor-licensing": "عندما تحفظ تعديلاتك أنت توافق ضمناً على طرح مساهمتك بموجب {{PLURAL:$2|رخصة|رخص}} $1.",
+	"mobile-frontend-editor-licensing": "عندما تحفظ تعديلاتك أنت توافق ضمنًا على طرح مساهمتك بموجب {{PLURAL:$2|رخصة|رخص}} $1.",
 	"mobile-frontend-editor-licensing-with-terms": "عندما تحفظ تعديلاتك أنت توافق على $1 وعلى طرح مساهمتك بموجب {{PLURAL:$3|رخصة|رخص}} $2.",
 	"mobile-frontend-editor-terms-link": "[$1 شروط الاستخدام]",
 	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|هل أنت متأكد من أنك تريد إنشاء|هل أنت متأكدة من أنك تريدي إنشاء}} صفحة جديدة على {{SITENAME}}؟",
