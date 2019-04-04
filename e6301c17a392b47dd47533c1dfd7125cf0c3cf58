@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "c71705e2_fbb1e29c",
+        "filename": "README.md",
+        "patchSetId": 5
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-04-04T15:52:04Z",
+      "side": 1,
+      "message": "Thank you for clarifying. Is latest patch better?",
+      "parentUuid": "05415748_d4244bfe",
+      "revId": "e6301c17a392b47dd47533c1dfd7125cf0c3cf58",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "50798222_735f1ca8",
         "filename": "extension.json",
         "patchSetId": 5
@@ -42,6 +60,30 @@
     },
     {
       "key": {
+        "uuid": "e7fdb100_65cba679",
+        "filename": "extension.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 898,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-04-04T15:52:04Z",
+      "side": 1,
+      "message": "Thank you. I think this is done in latest patch?",
+      "parentUuid": "50798222_735f1ca8",
+      "range": {
+        "startLine": 898,
+        "startChar": 2,
+        "endLine": 898,
+        "endChar": 39
+      },
+      "revId": "e6301c17a392b47dd47533c1dfd7125cf0c3cf58",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ba74983c_1f2985a0",
         "filename": "includes/specials/SpecialMobileHistory.php",
         "patchSetId": 5
@@ -53,6 +95,30 @@
       "writtenOn": "2019-04-04T00:22:24Z",
       "side": 1,
       "message": "this function returns bool, but the config can be set to anything. I know that I\u0027m bit crazy sometimes when it comes to strict typing, but in this case really, I think it\u0027s smart to type the output, so it always gets the boolean.\n\n  return (bool) $config-\u003eget( \u0027MFEnableMobileSpecialHistory\u0027 );",
+      "range": {
+        "startLine": 104,
+        "startChar": 8,
+        "endLine": 104,
+        "endChar": 56
+      },
+      "revId": "e6301c17a392b47dd47533c1dfd7125cf0c3cf58",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1510e547_847cb9fd",
+        "filename": "includes/specials/SpecialMobileHistory.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-04-04T15:52:04Z",
+      "side": 1,
+      "message": "Is this still needed if I use featureManager?",
+      "parentUuid": "ba74983c_1f2985a0",
       "range": {
         "startLine": 104,
         "startChar": 8,
