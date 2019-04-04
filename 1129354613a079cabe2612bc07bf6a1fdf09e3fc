@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e9657d8_3461c6fa",
+        "filename": "extension.json",
+        "patchSetId": 8
+      },
+      "lineNbr": 901,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-04T15:53:29Z",
+      "side": 1,
+      "message": "Can you default this to false for the time being? I don\u0027t think we\u0027re ready to ship to Spanish, Indonesian and Arabic (although we should check with Olga)",
+      "revId": "1129354613a079cabe2612bc07bf6a1fdf09e3fc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
