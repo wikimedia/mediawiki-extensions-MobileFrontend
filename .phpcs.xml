@@ -7,6 +7,12 @@
 	<rule ref="Generic.Files.OneObjectStructurePerFile.MultipleFound">
 		<exclude-pattern>tests/phpunit/*</exclude-pattern>
 	</rule>
+	<rule ref="MediaWiki.Commenting.FunctionComment.MissingDocumentationPublic">
+		<exclude-pattern>tests/phpunit/*</exclude-pattern>
+	</rule>
+	<rule ref="MediaWiki.Commenting.FunctionComment.MissingDocumentationProtected">
+		<exclude-pattern>tests/phpunit/*</exclude-pattern>
+	</rule>
 	<rule ref="MediaWiki.Usage.DeprecatedGlobalVariables.Deprecated$wgContLang">
 		<exclude-pattern>includes/ExtMobileFrontend\.php</exclude-pattern>
 		<exclude-pattern>includes/api/ApiMobileView\.php</exclude-pattern>
