@@ -689,7 +689,7 @@ class MobileFrontendHooks {
 
 			if ( !$context->shouldDisplayMobileView() ) {
 				// add alternate link to desktop sites - bug T91183
-				$desktopUrl = $title->getFullUrl();
+				$desktopUrl = $title->getFullURL();
 				$link = [
 					'rel' => 'alternate',
 					'media' => 'only screen and (max-width: ' . self::DEVICE_WIDTH_TABLET . ')',
@@ -700,7 +700,7 @@ class MobileFrontendHooks {
 				// instead of noindex - bug T91183.
 				$link = [
 					'rel' => 'canonical',
-					'href' => $title->getFullUrl(),
+					'href' => $title->getFullURL(),
 				];
 			}
 
