@@ -35,6 +35,8 @@ return [
 			$config->get( 'MFShowFirstParagraphBeforeInfobox' ) ) );
 		$manager->registerFeature( new Feature( 'MFEnableFontChanger', 'mobile-frontend',
 			$config->get( 'MFEnableFontChanger' ) ) );
+		$manager->registerFeature( new Feature( 'MFUseDesktopSpecialHistoryPage', 'mobile-frontend',
+			$config->get( 'MFUseDesktopSpecialHistoryPage' ) ) );
 
 		return $manager;
 	},

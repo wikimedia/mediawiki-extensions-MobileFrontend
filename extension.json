@@ -897,6 +897,11 @@
 			"beta": true
 		},
 		"MFEnableMobilePreferences": false,
+		"MFUseDesktopSpecialHistoryPage": {
+			"base": false,
+			"beta": false,
+			"amc": false
+		},
 		"MFContentProviderTryLocalContentFirst": true,
 		"MFContentProviderClass": "MobileFrontend\\ContentProviders\\DefaultContentProvider",
 		"MFMwApiContentProviderBaseUri": "https://en.wikipedia.org/w/api.php",
