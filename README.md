@@ -551,7 +551,7 @@ Path to the logo used in the login/signup form.  The standard height is `72px`
 Whether beta mode is enabled.
 
 * Type: `Boolean`
-* Default: `false`
+* Default: `true`
 
 #### $wgMFAdvancedMobileContributions
 
