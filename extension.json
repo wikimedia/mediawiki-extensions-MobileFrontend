@@ -985,7 +985,7 @@
 		"MFNoindexPages": true,
 		"MFStopRedirectCookieHost": null,
 		"MobileFrontendLogo": false,
-		"MFEnableBeta": false,
+		"MFEnableBeta": true,
 		"MFBetaFeedbackLink": false,
 		"MFDefaultSkinClass": "SkinMinerva",
 		"MFNamespacesWithoutCollapsibleSections": [
