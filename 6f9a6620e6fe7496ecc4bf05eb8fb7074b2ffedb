@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a6917c67_14a9ae28",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 235,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-08T21:27:53Z",
+      "side": 1,
+      "message": "I\u0027m getting \nNotice: Undefined variable: timestamp in /Users/jrobson/git/core/extensions/MobileFrontend/includes/specials/SpecialMobileDiff.php on line 235\n\nhere",
+      "revId": "6f9a6620e6fe7496ecc4bf05eb8fb7074b2ffedb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
