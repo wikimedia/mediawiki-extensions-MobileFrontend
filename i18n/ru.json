@@ -122,6 +122,7 @@
 	"mobile-frontend-editor-placeholder": "Этот раздел пуст. Будьте первым, кто заполнит его!",
 	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|Вы создаёте}} новую страницу на сайте {{SITENAME}}!",
 	"mobile-frontend-editor-previewing-page": "<span><strong>Предварительный просмотр</strong> $1</span>",
+	"mobile-frontend-editor-publish": "Опубликовать",
 	"mobile-frontend-editor-save": "Сохранить",
 	"mobile-frontend-editor-success": "Успешно! Ваша правка была сохранена.",
 	"mobile-frontend-editor-success-landmark-1": "Поздравляем, теперь вы — редактор сайта {{SITENAME}}!",

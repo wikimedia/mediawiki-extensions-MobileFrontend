@@ -45,7 +45,7 @@
 	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|Tu}} es sur le puncto de crear un nove pagina in {{SITENAME}}!",
 	"mobile-frontend-editor-previewing-page": "<span><strong>Previsualisation</strong> de<span> $1</span>",
 	"mobile-frontend-editor-save": "Salveguardar",
-	"mobile-frontend-editor-success": "Successo! Tu modification ha essite salveguardate.",
+	"mobile-frontend-editor-success": "Successo! Tu modification ha essite publicate.",
 	"mobile-frontend-editor-success-landmark-1": "Felicitationes, tu ora es redactor de {{SITENAME}}!",
 	"mobile-frontend-editor-success-new-page": "Felicitationes pro haber create un nove pagina!",
 	"mobile-frontend-editor-summary-placeholder": "Exemplos: \"error orthographic corrigite\", \"contento addite\"",

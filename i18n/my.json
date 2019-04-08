@@ -62,6 +62,7 @@
 	"mobile-frontend-editor-placeholder": "ဤအပိုင်းသည် ဗလာဖြစ်နေသည်။ ယင်းအား တိုးချဲ့ရန် ပထမဆုံးဖြစ်ပါစေ။",
 	"mobile-frontend-editor-placeholder-new-page": "သင်သည် {{SITENAME}} ပေါ်တွင် စာမျက်နှာသစ်တစ်ခု {{GENDER:$1|ဖန်တီးနေသည်}}",
 	"mobile-frontend-editor-previewing-page": "<span>$1 ကို <strong>အကြိုကြည့်နေသည်</strong></span>",
+	"mobile-frontend-editor-publish": "လွှင့်တင်ရန်",
 	"mobile-frontend-editor-save": "သိမ်းရန်",
 	"mobile-frontend-editor-success": "အောင်မြင်၏၊ သင့်တည်းဖြတ်မှုကို သိမ်းဆည်းလိုက်ပြီ။",
 	"mobile-frontend-editor-success-landmark-1": "ဂုဏ်ယူပါသည်၊ ယခုအခါ သင်သည် {{SITENAME}} တည်းဖြတ်သူတစ်ဦး ဖြစ်ပါပြီ။",
