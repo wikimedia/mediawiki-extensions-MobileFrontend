@@ -16,6 +16,23 @@
       "revId": "6f9a6620e6fe7496ecc4bf05eb8fb7074b2ffedb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "750922c7_f1085667",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 261,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-08T23:09:01Z",
+      "side": 1,
+      "message": "Phan seems to be blocking this - it reckons double escaping is happening. Using msg()-\u003etext()/escaped should be enough.\n\n21:24:45     \u003cerror line\u003d\"255\" severity\u003d\"warning\" message\u003d\"Calling method \\Html::element() in \\SpecialMobileDiff::getIntroHTML that outputs using tainted argument $[arg #3]. (Caused by: Builtin-\\Html::element) (Caused by: ./includes/specials/SpecialMobileDiff.php +40)\" source\u003d\"SecurityCheck-DoubleEscaped\"/\u003e\n21:24:45   \u003c/file\u003e",
+      "revId": "6f9a6620e6fe7496ecc4bf05eb8fb7074b2ffedb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
