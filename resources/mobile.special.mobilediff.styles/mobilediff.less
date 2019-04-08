@@ -42,14 +42,18 @@ footer {
 		color: @colorGray7;
 	}
 
-	// FIXME: Overly specific selector
-	#mw-mf-diff-info {
-		line-height: 1em;
-		padding-bottom: 1em;
+	.mw-mf-diff-info__link-latest,
+	.mw-mf-diff-info__link-revision {
+		font-size: inherit;
+		line-height: 1.6;
+		font-weight: normal;
 	}
 
-	// FIXME: Overly specific selector
-	#mw-mf-diff-comment {
+	.mw-mf-diff-info__link-latest {
+		font-weight: bold;
+	}
+
+	.mw-mf-diff-comment {
 		padding-bottom: 1em;
 		font-style: italic;
 	}

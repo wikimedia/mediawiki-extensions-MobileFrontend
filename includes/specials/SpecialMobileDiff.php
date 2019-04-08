@@ -201,7 +201,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 
 		return Html::rawElement(
 			'div',
-			[ 'id' => 'mw-mf-diff-comment' ],
+			[ 'class' => 'mw-mf-diff-comment' ],
 			$commentHtml
 		);
 	}
@@ -231,28 +231,27 @@ class SpecialMobileDiff extends MobileSpecialPage {
 			$bytesChanged = abs( $bytesChanged );
 		}
 		$ts = new MWTimestamp( $this->rev->getTimestamp() );
+		$user = $this->getUser();
+		$td = $this->getLanguage()->userTimeAndDate( $ts, $user );
+		$actionMessageKey = $this->targetTitle->quickUserCan( 'edit', $user )
+			? 'editlink' : 'viewsourcelink';
 
-		return Html::openElement( 'div', [ 'id' => 'mw-mf-diff-info', 'class' => 'page-summary' ] )
-			. Html::openElement( 'h2' )
-				. Html::element( 'a',
-					[
-						'href' => $this->targetTitle->getLocalURL( [
-							'oldid' => $this->revId,
-						] )
-					],
-					$this->targetTitle->getPrefixedText()
-				)
-			. Html::closeElement( 'h2' )
-			. $this->msg( 'mobile-frontend-diffview-comma' )->rawParams(
-				Html::element( 'span', [ 'class' => $sizeClass ],
-					$this->msg( $changeMsg )->numParams( $bytesChanged )->text()
-				),
-				Html::element(
-					'span', [ 'class' => 'mw-mf-diff-date meta' ],
-					$this->getLanguage()->getHumanTimestamp( $ts )
-				)
-			)->parse()
-		. Html::closeElement( 'div' );
+		$templateData = [
+			"articleUrl" => $this->targetTitle->getLocalUrl(),
+			"articleLinkLabel" => $this->targetTitle->getPrefixedText(),
+			"revisionUrl" => $this->targetTitle->getLocalURL( [ 'oldid' => $this->revId ] ),
+			"revisionLinkLabel" => $this->msg( 'revisionasof', $td )->escaped(),
+			"actionLinkUrl" => $this->targetTitle->getLocalUrl( [ 'action' => 'edit' ] ),
+			"actionLinkLabel" => $this->msg( $actionMessageKey )->text(),
+			"sizeClass" => $sizeClass,
+			"bytesChanged" => $this->msg( $changeMsg )->numParams( $bytesChanged )->text(),
+			"separator" => $this->msg( 'comma-separator' )->text(),
+			"bytesChangedTimeDate" => $this->getLanguage()->getHumanTimestamp( $ts ),
+		];
+
+		$templateParser = new TemplateParser( __DIR__ );
+
+		return $templateParser->processTemplate( 'SpecialMobileDiffInfo', $templateData );
 	}
 
 	/**
