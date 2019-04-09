@@ -208,9 +208,6 @@
 				"mobile-frontend-console-recruit",
 				"mobile-frontend-panel-cancel"
 			],
-			"templates": {
-				"Panel.hogan": "resources/mobile.init/Panel.hogan"
-			},
 			"styles": [
 				"resources/mobile.init/BetaOptInPanel.less",
 				"resources/mobile.init/mobile.less"

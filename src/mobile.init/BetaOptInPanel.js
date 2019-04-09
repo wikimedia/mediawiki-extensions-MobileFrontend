@@ -32,14 +32,15 @@ mfExtend( BetaOptInPanel, View, {
 	 * @memberof BetaOptInPanel
 	 * @instance
 	 */
-	templatePartials: util.extend( {}, View.prototype.templatePartials, {
-		button: Button.prototype.template
-	} ),
-	/**
-	 * @memberof BetaOptInPanel
-	 * @instance
-	 */
-	template: mw.template.get( 'mobile.init', 'Panel.hogan' ),
+	template: util.template( `
+<div class="beta-opt-in-panel panel panel-inline visible">
+	<form class="message content" action="{{postUrl}}" method="POST">
+		<p>{{text}}</p>
+		<input type="hidden" name="enableBeta" value="true">
+		<input type="hidden" name="token" value="{{editToken}}">
+	</form>
+</div>
+	` ),
 	/**
 	 * @memberof BetaOptInPanel
 	 * @instance
@@ -53,11 +54,11 @@ mfExtend( BetaOptInPanel, View, {
 				progressive: true,
 				additionalClassNames: 'optin',
 				label: mw.msg( 'mobile-frontend-panel-ok' )
-			} ).options,
+			} ),
 			new Button( {
 				additionalClassNames: 'cancel',
 				label: mw.msg( 'mobile-frontend-panel-cancel' )
-			} ).options
+			} )
 		]
 	} ),
 
@@ -69,6 +70,15 @@ mfExtend( BetaOptInPanel, View, {
 	 */
 	_onOptin: function ( ev ) {
 		this.$el.find( ev.currentTarget ).closest( 'form' ).trigger( 'submit' );
+	},
+
+	/** @inheritdoc */
+	postRender: function () {
+		this.$( '.message' ).append(
+			this.options.buttons.map( function ( button ) {
+				return button.$el;
+			} )
+		);
 	}
 } );
 
