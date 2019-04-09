@@ -8,8 +8,8 @@ var Button = require( '../mobile.startup/Button' ),
  * @class BetaOptInPanel
  * @extends View
  * @param {Object} props
+ * @param {string} props.postUrl url for form to post to
  * @param {Function} [props.onCancel]
- * @property {Function} [_onCancelCallback]
  */
 function BetaOptInPanel( props ) {
 	View.call(
@@ -19,13 +19,12 @@ function BetaOptInPanel( props ) {
 				isTemplateMode: true,
 				events: {
 					'click .optin': '_onOptin',
-					'click .cancel': '_onCancel'
+					'click .cancel': props.onCancel
 				}
 			},
 			props
 		)
 	);
-	this._onCancelCallback = props.onCancel;
 }
 
 mfExtend( BetaOptInPanel, View, {
@@ -61,20 +60,6 @@ mfExtend( BetaOptInPanel, View, {
 			} ).options
 		]
 	} ),
-
-	/**
-	 * Cancel event handler
-	 * @memberof BetaOptInPanel
-	 * @instance
-	 * @param {Object} ev Event Object
-	 */
-	_onCancel: function ( ev ) {
-		ev.preventDefault();
-		this.$el.removeClass( 'visible' );
-		if ( this._onCancelCallback ) {
-			this._onCancelCallback();
-		}
-	},
 
 	/**
 	 * Cancel event handler

@@ -148,8 +148,10 @@ function displayBetaOptIn( experiment, page ) {
 				postUrl: util.getUrl( 'Special:MobileOptions', {
 					returnto: page.title
 				} ),
-				onCancel: function () {
+				onCancel: function ( ev ) {
+					ev.preventDefault();
 					storage.set( 'mobile-betaoptin-token', '~' );
+					this.remove();
 				}
 			} );
 
