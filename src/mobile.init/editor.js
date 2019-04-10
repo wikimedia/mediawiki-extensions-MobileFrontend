@@ -9,9 +9,7 @@ var M = require( '../mobile.startup/moduleLoaderSingleton' ),
 	loader = require( '../mobile.startup/rlModuleLoader' ),
 	// #ca-edit, .mw-editsection are standard MediaWiki elements
 	// .edit-link comes from MobileFrontend user page creation CTA
-	// TODO: T213352 replace "#ca-edit a, a#ca-edit" with just "#ca-edit" when
-	// cache clears and new page actions menu is served.
-	$allEditLinks = $( '#ca-edit a, a#ca-edit, .mw-editsection a, .edit-link' ),
+	$allEditLinks = $( '#ca-edit, .mw-editsection a, .edit-link' ),
 	user = mw.user,
 	popup = require( '../mobile.startup/toast' ),
 	CtaDrawer = require( '../mobile.startup/CtaDrawer' ),
