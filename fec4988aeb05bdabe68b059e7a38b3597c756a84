@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4aa8740a_d84e47d9",
+        "filename": "src/mobile.init/mobile.init.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-10T20:52:01Z",
+      "side": 1,
+      "message": "I think dealing with the state (whether it\u0027s in the DOM or not is much better when done at this top level). It would also help if we decided to adopt Redux here",
+      "revId": "fec4988aeb05bdabe68b059e7a38b3597c756a84",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
