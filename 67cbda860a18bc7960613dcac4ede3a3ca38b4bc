@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8eeb99fc_a98edf47",
+        "filename": "src/mobile.categories.overlays/CategoryAddOverlay.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-10T19:59:00Z",
+      "side": 1,
+      "message": "I think this is fine for now. Long term, we should use composition, as there are various problems with this approach.\n\nSee https://gerrit.wikimedia.org/r/502597",
+      "revId": "67cbda860a18bc7960613dcac4ede3a3ca38b4bc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
