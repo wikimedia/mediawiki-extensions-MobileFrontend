@@ -2,9 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"ArmenBakkalian",
-			"Azniv Stepanian"
+			"Azniv Stepanian",
+			"Kareyac"
 		]
 	},
+	"mobile-frontend-editor-cancel": "Չեղարկել",
 	"tag-mobile_edit": "Առձեռն խմբագրում",
 	"tag-mobile_web_edit": "Խմբագրում կայքի առձեռն տարբերակէն"
 }
