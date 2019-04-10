@@ -54,15 +54,14 @@ class MobileFrontendHooks {
 	protected static function getDefaultMobileSkin( IContextSource $context,
 		MobileContext $mobileContext
 	) {
-		$skinName = $mobileContext->getMFConfig()->get( 'MFDefaultSkinClass' );
+		$config = $mobileContext->getMFConfig();
+		$skinName = $config->get( 'MFDefaultSkinClass' );
 
 		if ( class_exists( $skinName ) ) {
 			$skin = new $skinName( $context );
 		} else {
-			throw new \RuntimeException(
-				'wgMFDefaultSkinClass is not setup correctly. ' .
-				'It should point to the class name of a valid skin e.g. SkinMinerva, SkinVector'
-			);
+			$skin = SkinFactory::getDefaultInstance()
+				->makeSkin( Skin::normalizeKey( $config->get( 'FallbackSkin' ) ) );
 		}
 		return $skin;
 	}
