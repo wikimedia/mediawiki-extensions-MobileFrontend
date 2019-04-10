@@ -1,5 +1,6 @@
 var
 	Overlay = require( '../mobile.startup/Overlay' ),
+	EditorOverlayBase = require( '../mobile.editor.overlay/EditorOverlayBase' ),
 	mfExtend = require( '../mobile.startup/mfExtend' ),
 	util = require( '../mobile.startup/util' ),
 	CategoryGateway = require( './CategoryGateway' ),
@@ -63,7 +64,7 @@ mfExtend( CategoryAddOverlay, Overlay, {
 	 */
 	templatePartials: util.extend( {}, Overlay.prototype.templatePartials, {
 		header: mw.template.get( 'mobile.categories.overlays', 'CategoryAddOverlayHeader.hogan' ),
-		saveHeader: mw.template.get( 'mobile.editor.overlay', 'saveHeader.hogan' )
+		saveHeader: EditorOverlayBase.prototype.templatePartials.saveHeader
 	} ),
 
 	/**

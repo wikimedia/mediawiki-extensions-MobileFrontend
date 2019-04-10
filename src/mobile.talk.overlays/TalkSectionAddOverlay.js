@@ -1,5 +1,6 @@
 var
 	mfExtend = require( '../mobile.startup/mfExtend' ),
+	EditorOverlayBase = require( '../mobile.editor.overlay/EditorOverlayBase' ),
 	Overlay = require( '../mobile.startup/Overlay' ),
 	PageGateway = require( '../mobile.startup/PageGateway' ),
 	util = require( '../mobile.startup/util' ),
@@ -77,7 +78,7 @@ mfExtend( TalkSectionAddOverlay, Overlay, {
 	 */
 	templatePartials: util.extend( {}, Overlay.prototype.templatePartials, {
 		contentHeader: mw.template.get( 'mobile.talk.overlays', 'SectionAddOverlay/contentHeader.hogan' ),
-		saveHeader: mw.template.get( 'mobile.editor.overlay', 'saveHeader.hogan' )
+		saveHeader: EditorOverlayBase.prototype.templatePartials.saveHeader
 	} ),
 	/**
 	 * @inheritdoc

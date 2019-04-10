@@ -1,4 +1,0 @@
-<div class="content">
-	{{{message}}}
-	{{#confirmButton}}{{>button}}{{/confirmButton}}
-</div>

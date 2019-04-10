@@ -161,16 +161,86 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 * @instance
 	 */
 	templatePartials: util.extend( {}, Overlay.prototype.templatePartials, {
-		editHeader: mw.template.get( 'mobile.editor.overlay', 'editHeader.hogan' ),
-		previewHeader: mw.template.get( 'mobile.editor.overlay', 'previewHeader.hogan' ),
-		saveHeader: mw.template.get( 'mobile.editor.overlay', 'saveHeader.hogan' )
+		editHeader: util.template( `
+<div class="overlay-header header initial-header hideable hidden">
+	<ul>
+		<li>{{{cancelButton}}}</li>
+	</ul>
+	{{^hasToolbar}}
+	<div class="overlay-title">
+		<h2>{{{editingMsg}}}</h2>
+	</div>
+	{{/hasToolbar}}
+	{{#hasToolbar}}<div class="toolbar"></div>{{/hasToolbar}}
+	{{#editSwitcher}}
+		<div class="switcher-container">
+		</div>
+	{{/editSwitcher}}
+	{{^readOnly}}
+	<div class="header-action"><button class="continue" disabled>{{continueMsg}}</button></div>
+	{{/readOnly}}
+</div>
+		` ),
+		previewHeader: util.template( `
+<div class="overlay-header save-header hideable hidden">
+	<ul>
+		<li>{{{backButton}}}</li>
+	</ul>
+	<div class="overlay-title">
+		<h2>{{{previewingMsg}}}</h2>
+	</div>
+	<div class="header-action"><button class="submit">{{saveMsg}}</button></div>
+</div>
+		` ),
+		saveHeader: util.template( `
+<div class="overlay-header header saving-header hideable hidden">
+	<ul>
+		<li>{{{cancelButton}}}</li>
+	</ul>
+	<div class="overlay-title">
+		<h2>{{{waitMsg}}}</h2>
+	</div>
+	<ul>
+		<li>{{{waitIcon}}}</li>
+	</ul>
+</div>
+		` )
 	} ),
 	/**
 	 * @inheritdoc
 	 * @memberof EditorOverlayBase
 	 * @instance
 	 */
-	template: mw.template.get( 'mobile.editor.overlay', 'EditorOverlayBase.hogan' ),
+	template: util.template( `
+<div class="overlay-header-container header-container position-fixed">
+	{{>editHeader}}
+	{{>previewHeader}}
+	{{>saveHeader}}
+</div>
+
+<div class="overlay-content">
+	<div class="panels">
+		<div class="save-panel panel hideable hidden">
+			<div id="error-notice-container"></div>
+			<p class="summary-request">{{{summaryRequestMsg}}}</p>
+			<textarea rows="2" class="mw-ui-input summary" placeholder="{{summaryMsg}}"></textarea>
+			{{#licenseMsg}}<p class="license">{{{licenseMsg}}}</p>{{/licenseMsg}}
+		</div>
+		<div class="captcha-panel panel hideable hidden">
+			<div class="captcha-box">
+				<img id="image" src="">
+				<div id="question"></div>
+				<input class="captcha-word mw-ui-input" placeholder="{{captchaMsg}}" />
+			</div>
+		</div>
+	</div>
+	{{{spinner}}}
+	{{>content}}
+</div>
+<div class="overlay-footer-container position-fixed">
+	{{>footer}}
+</div>
+	` ),
 	/**
 	 * @memberof EditorOverlayBase
 	 * @instance

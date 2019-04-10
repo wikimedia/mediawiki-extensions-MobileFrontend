@@ -43,8 +43,15 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 	 * @instance
 	 */
 	templatePartials: util.extend( {}, EditorOverlayBase.prototype.templatePartials, {
-		editHeader: mw.template.get( 'mobile.editor.overlay', 'toolbarVE.hogan' ),
-		content: mw.template.get( 'mobile.editor.overlay', 'contentVE.hogan' )
+		editHeader: util.template( `
+<div class="overlay-header header initial-header hideable hidden">
+	<div class="toolbar"></div>
+</div>
+		` ),
+		content: util.template( `
+<div class="surface" lang="{{contentLang}}" dir="{{contentDir}}">
+</div>
+		` )
 	} ),
 	/**
 	 * @memberof VisualEditorOverlay

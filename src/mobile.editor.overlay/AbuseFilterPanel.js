@@ -39,7 +39,11 @@ mfExtend( AbuseFilterPanel, View, {
 	 * @memberof AbuseFilterPanel
 	 * @instance
 	 */
-	template: mw.template.get( 'mobile.editor.overlay', 'AbuseFilterPanel.hogan' ),
+	template: util.template( `
+<div class="message">
+	<p></p><a href="#/abusefilter" class="readmore">{{readMoreMsg}}</a>
+</div>
+	` ),
 	/**
 	 * Show the panel. Create a route to show AbuseFilterOverlay with message.
 	 * @memberof AbuseFilterPanel

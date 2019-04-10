@@ -39,7 +39,12 @@ mfExtend( AbuseFilterOverlay, Overlay, {
 	 */
 	templatePartials: util.extend( {}, Overlay.prototype.templatePartials, {
 		button: Button.prototype.template,
-		content: mw.template.get( 'mobile.editor.overlay', 'AbuseFilterOverlay.hogan' )
+		content: util.template( `
+<div class="content">
+	{{{message}}}
+	{{#confirmButton}}{{>button}}{{/confirmButton}}
+</div>
+		` )
 	} ),
 	/**
 	 * @inheritdoc
