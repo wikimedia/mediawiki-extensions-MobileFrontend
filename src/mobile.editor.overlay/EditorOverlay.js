@@ -59,7 +59,20 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 	 * @instance
 	 */
 	templatePartials: util.extend( {}, EditorOverlayBase.prototype.templatePartials, {
-		content: mw.template.get( 'mobile.editor.overlay', 'content.hogan' )
+		content: util.template( `
+<div lang="{{contentLang}}" dir="{{contentDir}}">
+	<textarea class="wikitext-editor" id="wikitext-editor" cols="40" rows="10" placeholder="{{placeholder}}"></textarea>
+	<div class="preview content"></div>
+	{{#isAnon}}
+	<div class="anonwarning content">
+		<div>
+			<!-- warning will go here -->
+			<div class="actions"></div>
+		</div>
+	</div>
+	{{/isAnon}}
+</div>
+		` )
 	} ),
 	/**
 	 * @memberof EditorOverlay

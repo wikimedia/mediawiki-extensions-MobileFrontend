@@ -339,18 +339,6 @@
 				"resources/mobile.editor.overlay/BlockMessage.less",
 				"resources/mobile.editor.overlay/editor.ve.less"
 			],
-			"templates": {
-				"AbuseFilterOverlay.hogan": "resources/mobile.editor.overlay/AbuseFilterOverlay.hogan",
-				"AbuseFilterPanel.hogan": "resources/mobile.editor.overlay/AbuseFilterPanel.hogan",
-				"editHeader.hogan": "resources/mobile.editor.overlay/editHeader.hogan",
-				"previewHeader.hogan": "resources/mobile.editor.overlay/previewHeader.hogan",
-				"saveHeader.hogan": "resources/mobile.editor.overlay/saveHeader.hogan",
-				"EditorOverlayBase.hogan": "resources/mobile.editor.overlay/EditorOverlayBase.hogan",
-				"contentVE.hogan": "resources/mobile.editor.overlay/contentVE.hogan",
-				"toolbarVE.hogan": "resources/mobile.editor.overlay/toolbarVE.hogan",
-				"BlockMessage.hogan": "resources/mobile.editor.overlay/BlockMessage.hogan",
-				"content.hogan": "resources/mobile.editor.overlay/content.hogan"
-			},
 			"messages": [
 				"mobile-frontend-editor-continue",
 				"mobile-frontend-editor-cancel",
