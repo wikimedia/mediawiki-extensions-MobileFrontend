@@ -90,6 +90,8 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 	 * @instance
 	 */
 	show: function () {
+		var overlay = this;
+
 		EditorOverlayBase.prototype.show.apply( this, arguments );
 
 		// We don't use the default spinner. Instead, rely on the progressbar from init/editor.js.
@@ -107,6 +109,9 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 		this.target.once( 'surfaceReady', function () {
 			this.emit( 'editor-loaded' );
 			this.$el.removeClass( 'loading' );
+			// log edit attempt
+			overlay.log( { action: 'ready' } );
+			overlay.log( { action: 'loaded' } );
 		}.bind( this ) );
 		this.target.load( this.options.dataPromise );
 	},

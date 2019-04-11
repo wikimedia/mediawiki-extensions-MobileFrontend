@@ -415,17 +415,6 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 * @instance
 	 */
 	postRender: function () {
-		// log edit attempt
-		// TODO: if VE/NWE become the default, or even loadable-by-URL, this
-		// logging needs to be moved into the individual overlays, because postRender
-		// for VE still wouldn't technically be 'ready'.
-		this.log( {
-			action: 'ready'
-		} );
-		this.log( {
-			action: 'loaded'
-		} );
-
 		// decide what happens, when the user clicks the continue button
 		if ( this.config.skipPreview ) {
 			// skip the preview and save the changes

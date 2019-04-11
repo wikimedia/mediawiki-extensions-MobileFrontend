@@ -143,6 +143,10 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 			options = this.options,
 			$anonWarning = this.$el.find( '.anonwarning' );
 
+		// log edit attempt
+		this.log( { action: 'ready' } );
+		this.log( { action: 'loaded' } );
+
 		if ( this.isVisualEditorEnabled() ) {
 			mw.loader.using( 'ext.visualEditor.switching' ).then( function () {
 				var switchToolbar,
