@@ -41,7 +41,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 	 */
 	public function setJsConfigVars() {
 		$context = MobileContext::singleton();
-		$featureManager = \MediaWiki\MediaWikiServices::getInstance()
+		$featureManager = MediaWikiServices::getInstance()
 			->getService( 'MobileFrontend.FeaturesManager' );
 		$this->getOutput()->addJsConfigVars( [
 			'wgMFEnableFontChanger' =>
@@ -202,7 +202,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 			} else {
 				$icon = 'lock';
 			}
-			/** @var \MobileFrontend\Features\IFeature $feature */
+			/** @var IFeature $feature */
 			foreach ( $features as $feature ) {
 				$fields[] = new OOUI\FieldLayout(
 					new OOUI\IconWidget( [
