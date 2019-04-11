@@ -48,6 +48,9 @@ function Page( options ) {
 	if ( this.thumbnail && this.thumbnail.width ) {
 		this.thumbnail.isLandscape = this.thumbnail.width > this.thumbnail.height;
 	}
+
+	// memoize headings as $el.find is a very expensive call
+	this.$headings = this.$el.find( HEADING_SELECTOR );
 }
 
 mfExtend( Page, View, {
@@ -133,7 +136,7 @@ mfExtend( Page, View, {
 			// return an empty set when this happens.
 			return this.$el.find();
 		} else {
-			return this.$el.find( HEADING_SELECTOR )
+			return this.$headings
 				// Headings must strictly be a child element of a section element
 				// or the parser-output.
 				// Not an ancestor!
