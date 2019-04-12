@@ -65,15 +65,6 @@ mfExtend( Overlay, View, {
 	 */
 	fullScreen: true,
 
-	/**
-	 * True if this.hide() should be invoked before firing the Overlay-exit
-	 * event
-	 * @memberof Overlay
-	 * @instance
-	 * @property {boolean}
-	 */
-	hideOnExitClick: true,
-
 	templatePartials: {
 		header: util.template( `
 <ul>
@@ -206,11 +197,7 @@ mfExtend( Overlay, View, {
 	 */
 	onExitClick: function ( ev ) {
 		const exit = function () {
-			// FIXME: This check will be removed once ImageOverlay
-			// is using onBeforeExit.
-			if ( this.hideOnExitClick ) {
-				this.hide();
-			}
+			this.hide();
 			this.emit( Overlay.EVENT_EXIT );
 		}.bind( this );
 		ev.preventDefault();
