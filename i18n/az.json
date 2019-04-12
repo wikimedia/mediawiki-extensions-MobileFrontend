@@ -20,6 +20,8 @@
 	"mobile-frontend-diffview-bytesremoved": "$1 bayt çıxarıldı",
 	"mobile-frontend-edit-login-action": "Redaktə üçün daxil ol",
 	"mobile-frontend-edit-signup-action": "Redaktə üçün qeydiyyatdan keç",
+	"mobile-frontend-editor-anon": "Daxil olmadan redaktə et",
+	"mobile-frontend-editor-anonwarning": "<strong>Diqqət</strong>: Siz sistemə daxil olmamısınız. Hər hansı dəyişiklik etsəniz, sizin IP-ünvanınız hər kəsə görünəcək. Əgər <strong>daxil olsanız</strong> və ya <strong>hesab yaratsanız</strong>, redaktələriniz sizin istifadəçi adınıza yazılacaq və başqa üstünlüklər də qazanacaqsınız.",
 	"mobile-frontend-editor-cancel": "Bağla",
 	"mobile-frontend-editor-editing": "Redaktə olunur",
 	"mobile-frontend-editor-editing-page": "<span>$1<strong> redaktə olunur</strong></span>",
