@@ -170,10 +170,19 @@
 		},
 		"mobile.startup.images": {
 			"class": "ResourceLoaderImageModule",
-			"selector": ".mw-ui-icon-mf-{name}:before",
+			"selectorWithoutVariant": ".mw-ui-icon-mf-{name}:before",
+			"selectorWithVariant": ".mw-ui-icon-mf-{name}-{variant}:before",
+			"variants": {
+				"invert": {
+					"color": "#fff"
+				}
+			},
 			"images": {
 				"toc": "resources/mobile.startup.images/toc-ltr.svg",
-				"citation": "resources/mobile.startup.images/cite.svg",
+				"citation": {
+					"file": "resources/mobile.startup.images/reference.svg",
+					"variants": [ "invert" ]
+				},
 				"error": "resources/mobile.startup.images/error.svg",
 				"watch": "resources/mobile.startup.images/watch.svg",
 				"watched": "resources/mobile.startup.images/watched.svg",

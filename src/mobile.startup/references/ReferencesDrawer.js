@@ -39,7 +39,7 @@ mfExtend( ReferencesDrawer, Drawer, {
 		cancelButton: icons.cancel( 'gray' ).toHtmlString(),
 		citation: new Icon( {
 			isSmall: true,
-			name: 'citation',
+			name: 'citation-invert',
 			additionalClassNames: 'text',
 			hasText: true,
 			label: mw.msg( 'mobile-frontend-references-citation' )
