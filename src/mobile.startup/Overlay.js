@@ -19,7 +19,6 @@ var
  * @extends View
  * @uses Icon
  * @uses Button
- * @fires Overlay#Overlay-exit
  * @fires Overlay#hide
  * @param {Object} props
  * @param {Object} props.events - custom events to be bound to the overlay.
@@ -198,7 +197,6 @@ mfExtend( Overlay, View, {
 	onExitClick: function ( ev ) {
 		const exit = function () {
 			this.hide();
-			this.emit( Overlay.EVENT_EXIT );
 		}.bind( this );
 		ev.preventDefault();
 		ev.stopPropagation();
@@ -282,13 +280,6 @@ mfExtend( Overlay, View, {
 		this.$el.find( className ).removeClass( 'hidden' );
 	}
 } );
-
-/*
- * Fires when close button is clicked. Not to be confused with hide event.
- * @memberof Overlay
- * @event Overlay#Overlay-exit
- */
-Overlay.EVENT_EXIT = 'Overlay-exit';
 
 /**
  * Factory method for an overlay with a single child
