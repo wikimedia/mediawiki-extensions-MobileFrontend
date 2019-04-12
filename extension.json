@@ -414,12 +414,6 @@
 			"styles": [
 				"resources/mobile.talk.overlays/talk.less"
 			],
-			"templates": {
-				"SectionAddOverlay/contentHeader.hogan": "resources/mobile.talk.overlays/talkSectionAddContentHeader.hogan",
-				"SectionAddOverlay.hogan": "resources/mobile.talk.overlays/talkSectionAdd.hogan",
-				"Section/header.hogan": "resources/mobile.talk.overlays/talkSectionHeader.hogan",
-				"Section/content.hogan": "resources/mobile.talk.overlays/talkSectionContent.hogan"
-			},
 			"messages": [
 				"mobile-frontend-talk-explained",
 				"mobile-frontend-talk-explained-empty",
@@ -458,10 +452,6 @@
 			"scripts": [
 				"resources/dist/mobile.mediaViewer.js"
 			],
-			"templates": {
-				"LoadErrorMessage.hogan": "resources/mobile.mediaViewer/LoadErrorMessage.hogan",
-				"ImageCarousel.hogan": "resources/mobile.mediaViewer/ImageCarousel.hogan"
-			},
 			"messages": [
 				"mobile-frontend-media-details",
 				"mobile-frontend-media-license-link",
@@ -488,12 +478,6 @@
 			"styles": [
 				"resources/mobile.categories.overlays/categories.less"
 			],
-			"templates": {
-				"CategoryTabs.hogan": "resources/mobile.categories.overlays/CategoryTabs.hogan",
-				"CategoryTab.hogan": "resources/mobile.categories.overlays/CategoryTab.hogan",
-				"CategoryAddOverlay.hogan": "resources/mobile.categories.overlays/CategoryAddOverlay.hogan",
-				"CategoryAddOverlayHeader.hogan": "resources/mobile.categories.overlays/CategoryAddOverlayHeader.hogan"
-			},
 			"messages": [
 				"mobile-frontend-categories-notification",
 				"mobile-frontend-categories-heading",
@@ -524,9 +508,6 @@
 			"styles": [
 				"resources/mobile.languages.structured/LanguageSearcher.less"
 			],
-			"templates": {
-				"LanguageSearcher.hogan": "resources/mobile.languages.structured/LanguageSearcher.hogan"
-			},
 			"messages": [
 				"mobile-frontend-languages-structured-overlay-suggested-languages-header",
 				"mobile-frontend-languages-structured-overlay-all-languages-header",
@@ -659,10 +640,7 @@
 			],
 			"scripts": [
 				"resources/dist/mobile.special.nearby.scripts.js"
-			],
-			"templates": {
-				"Nearby.hogan": "resources/mobile.special.nearby.scripts/nearby.hogan"
-			}
+			]
 		},
 		"mobile.special.history.styles": {
 			"targets": "mobile",
@@ -679,10 +657,6 @@
 				"mediawiki.user",
 				"mobile.startup"
 			],
-			"templates": {
-				"PhotoItem.hogan": "resources/mobile.special.uploads.scripts/PhotoItem.hogan",
-				"PhotoList.hogan": "resources/mobile.special.uploads.scripts/PhotoList.hogan"
-			},
 			"messages": [
 				"mobile-frontend-donate-image-nouploads"
 			],

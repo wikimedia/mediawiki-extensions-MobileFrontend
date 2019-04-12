@@ -51,14 +51,34 @@ mfExtend( CategoryTabs, View, {
 	 * @memberof CategoryTabs
 	 * @instance
 	 */
-	template: mw.template.get( 'mobile.categories.overlays', 'CategoryTabs.hogan' ),
+	template: util.template( `
+<div class="category-list">
+	<p class="content-header">
+		{{subheading}}
+	</p>
+	<ul class="category-header">
+		<li class="selected">
+			<a href="#" class="catlink">{{normalcatlink}}</a>
+		</li><li>
+			<a href="#" class="catlink">{{hiddencatlink}}</a>
+		</li>
+	</ul>
+	<ul class="topic-title-list normal-catlist"></ul>
+	<ul class="topic-title-list hidden hidden-catlist"></ul>
+</div>
+{{{spinner}}}
+	` ),
 	/**
 	 * @inheritdoc
 	 * @memberof CategoryTabs
 	 * @instance
 	 */
 	templatePartials: {
-		item: mw.template.get( 'mobile.categories.overlays', 'CategoryTab.hogan' )
+		item: util.template( `
+<li title="{{title}}">
+    <a href="{{url}}">{{title}}</a>
+</li>
+		` )
 	},
 	/**
 	 * @inheritdoc

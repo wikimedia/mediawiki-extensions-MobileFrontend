@@ -57,7 +57,47 @@ mfExtend( LanguageSearcher, View, {
 	 * @memberof LanguageSearcher
 	 * @instance
 	 */
-	template: mw.template.get( 'mobile.languages.structured', 'LanguageSearcher.hogan' ),
+	template: util.template( `
+<div class="panel">
+	<div class="panel-body search-box">
+		<input type="search" class="search" placeholder="{{inputPlaceholder}}">
+	</div>
+</div>
+
+<div class="overlay-content-body">
+	{{#suggestedLanguagesCount}}
+	<h3 class="list-header">{{suggestedLanguagesHeader}}</h3>
+	<ol class="site-link-list suggested-languages">
+		{{#suggestedLanguages}}
+			<li>
+				<a href="{{url}}" class="{{lang}}" hreflang="{{lang}}" lang="{{lang}}" dir="{{dir}}">
+					<span class="autonym">{{autonym}}</span>
+					{{#title}}
+						<span class="title">{{title}}</span>
+					{{/title}}
+				</a>
+			</li>
+		{{/suggestedLanguages}}
+	</ol>
+	{{/suggestedLanguagesCount}}
+
+	{{#allLanguagesCount}}
+	<h3 class="list-header">{{allLanguagesHeader}} ({{allLanguagesCount}})</h3>
+	<ul class="site-link-list all-languages">
+		{{#allLanguages}}
+			<li>
+				<a href="{{url}}" class="{{lang}}" hreflang="{{lang}}" lang="{{lang}}" dir="{{dir}}">
+					<span class="autonym">{{autonym}}</span>
+					{{#title}}
+						<span class="title">{{title}}</span>
+					{{/title}}
+				</a>
+			</li>
+		{{/allLanguages}}
+	</ul>
+	{{/allLanguagesCount}}
+</div>
+	` ),
 	/**
 	 * @inheritdoc
 	 * @memberof LanguageSearcher

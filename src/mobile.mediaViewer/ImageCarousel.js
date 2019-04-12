@@ -59,7 +59,21 @@ mfExtend( ImageCarousel, View, {
 	 * @memberof ImageCarousel
 	 * @instance
 	 */
-	template: mw.template.get( 'mobile.mediaViewer', 'ImageCarousel.hogan' ),
+	template: util.template( `
+<button class="prev slider-button"></button>
+<div class="main">
+	<div class="image-wrapper">
+		<div class="image"></div>
+	</div>
+	<!-- cancel button will go here -->
+	<div class="image-details">
+		<!-- details button will go here -->
+		<p class="truncated-text">{{caption}}</p>
+		<p class="license"><a href="#">{{licenseLinkMsg}}</a></p>
+	</div>
+</div>
+<button class="next slider-button"></button>
+	` ),
 
 	/**
 	 * @memberof ImageCarousel

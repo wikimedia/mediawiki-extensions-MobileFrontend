@@ -35,8 +35,33 @@ function TalkSectionOverlay( options ) {
 
 mfExtend( TalkSectionOverlay, Overlay, {
 	templatePartials: util.extend( {}, Overlay.prototype.templatePartials, {
-		header: mw.template.get( 'mobile.talk.overlays', 'Section/header.hogan' ),
-		content: mw.template.get( 'mobile.talk.overlays', 'Section/content.hogan' )
+		header: util.template( `
+<div class="overlay-header initial-header hideable">
+	<ul>
+		<li>{{{backButton}}}</li>
+	</ul>
+	<div class="overlay-title">
+		<h2><span>{{section.line}}</span></h2>
+	</div>
+</div>
+		` ),
+		content: util.template( `
+<div class="content talk-section">
+	{{{section.text}}}
+	{{{spinner}}}
+	<div class="comment">
+		<div class="list-header">{{reply}}</div>
+		<div class="comment-content">
+			<textarea class="wikitext-editor"></textarea>
+			<p class="license">
+				{{info}}
+				{{{licenseMsg}}}
+			</p>
+			{{#saveButton}}{{>button}}{{/saveButton}}
+		</div>
+	</div>
+</div>
+		` )
 	} ),
 	/**
 	 * @memberof TalkSectionOverlay

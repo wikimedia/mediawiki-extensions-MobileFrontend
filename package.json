@@ -89,7 +89,7 @@
     },
     {
       "path": "resources/dist/mobile.languages.structured.js",
-      "maxSize": "1.7KB"
+      "maxSize": "1.9KB"
     },
     {
       "path": "resources/dist/mobile.notifications.overlay.js",
@@ -113,7 +113,7 @@
     },
     {
       "path": "resources/dist/mobile.special.uploads.scripts.js",
-      "maxSize": "1.7KB"
+      "maxSize": "1.8KB"
     },
     {
       "path": "resources/dist/mobile.special.watchlist.scripts.js",
@@ -121,11 +121,11 @@
     },
     {
       "path": "resources/dist/mobile.talk.overlays.js",
-      "maxSize": "2.7KB"
+      "maxSize": "2.9KB"
     },
     {
       "path": "resources/dist/mobile.categories.overlays.js",
-      "maxSize": "2.4KB"
+      "maxSize": "2.7KB"
     }
   ]
 }

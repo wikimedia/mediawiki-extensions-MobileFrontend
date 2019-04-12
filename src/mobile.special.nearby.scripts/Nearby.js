@@ -71,7 +71,10 @@ mfExtend( Nearby, WatchstarPageList, {
 	 * @memberof Nearby
 	 * @instance
 	 */
-	template: mw.template.get( 'mobile.special.nearby.scripts', 'Nearby.hogan' ),
+	template: util.template( `
+{{{spinner}}}
+{{>pageList}}
+	` ),
 	/**
 	 * @memberof Nearby
 	 * @instance

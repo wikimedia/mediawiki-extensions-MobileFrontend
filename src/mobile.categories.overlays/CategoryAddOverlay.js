@@ -56,14 +56,34 @@ mfExtend( CategoryAddOverlay, Overlay, {
 	 * @memberof CategoryAddOverlay
 	 * @instance
 	 */
-	template: mw.template.get( 'mobile.categories.overlays', 'CategoryAddOverlay.hogan' ),
+	template: util.template( `
+<div class="overlay-header-container header-container position-fixed">
+	{{>header}}
+	{{>saveHeader}}
+</div>
+
+<div class="content-header panel add-panel">
+	<div class="category-add-input"></div>
+</div>
+<p class="overlay-content category-suggestions panel"></p>
+	` ),
 	/**
 	 * @inheritdoc
 	 * @memberof CategoryAddOverlay
 	 * @instance
 	 */
 	templatePartials: util.extend( {}, Overlay.prototype.templatePartials, {
-		header: mw.template.get( 'mobile.categories.overlays', 'CategoryAddOverlayHeader.hogan' ),
+		header: util.template( `
+<div class="overlay-header initial-header hideable">
+	<ul>
+		<li>{{{backButton}}}</li>
+	</ul>
+	<div class="overlay-title">
+		{{{heading}}}
+	</div>
+	<div class="header-action"><button class="save submit" disabled>{{saveMsg}}</button></div>
+</div>
+		` ),
 		saveHeader: EditorOverlayBase.prototype.templatePartials.saveHeader
 	} ),
 

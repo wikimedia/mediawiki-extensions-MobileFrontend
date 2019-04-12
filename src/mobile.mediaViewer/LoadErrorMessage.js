@@ -23,7 +23,15 @@ function LoadErrorMessage( options ) {
 }
 
 mfExtend( LoadErrorMessage, View, {
-	template: mw.template.get( 'mobile.mediaViewer', 'LoadErrorMessage.hogan' ),
+	template: util.template( `
+<div class="load-fail-msg">
+  {{{icon}}}
+  <div class="load-fail-msg-text">{{msgToUser}}</div>
+  <div class="load-fail-msg-link">
+    <a href="#">{{retryTxt}}</a>
+  </div>
+</div>
+	` ),
 	isTemplateMode: true,
 
 	/**

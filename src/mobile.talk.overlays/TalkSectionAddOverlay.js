@@ -70,14 +70,31 @@ mfExtend( TalkSectionAddOverlay, Overlay, {
 	 * @memberof TalkSectionAddOverlay
 	 * @instance
 	 */
-	template: mw.template.get( 'mobile.talk.overlays', 'SectionAddOverlay.hogan' ),
+	template: util.template( `
+<div class="overlay-header-container header-container position-fixed">
+	{{>contentHeader}}
+	{{>saveHeader}}
+</div>
+
+<div class="overlay-content"></div>
+	` ),
 	/**
 	 * @inheritdoc
 	 * @memberof TalkSectionAddOverlay
 	 * @instance
 	 */
 	templatePartials: util.extend( {}, Overlay.prototype.templatePartials, {
-		contentHeader: mw.template.get( 'mobile.talk.overlays', 'SectionAddOverlay/contentHeader.hogan' ),
+		contentHeader: util.template( `
+<div class="overlay-header initial-header save-header hideable">
+	<ul>
+		<li>{{{backButton}}}</li>
+	</ul>
+	<div class="overlay-title">
+		<h2>{{editingMsg}}</h2>
+	</div>
+	<div class="header-action"><button class="submit confirm-save" disabled>{{saveMsg}}</button></div>
+</div>
+		` ),
 		saveHeader: EditorOverlayBase.prototype.templatePartials.saveHeader
 	} ),
 	/**

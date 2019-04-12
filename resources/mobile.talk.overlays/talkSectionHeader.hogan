@@ -1,8 +1,0 @@
-<div class="overlay-header initial-header hideable">
-	<ul>
-		<li>{{{backButton}}}</li>
-	</ul>
-	<div class="overlay-title">
-		<h2><span>{{section.line}}</span></h2>
-	</div>
-</div>

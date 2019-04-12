@@ -3,7 +3,8 @@ var icons = require( '../mobile.startup/icons' ),
 	PhotoItem = require( './PhotoItem' ),
 	mfExtend = require( '../mobile.startup/mfExtend' ),
 	ScrollEndEventEmitter = require( '../mobile.startup/ScrollEndEventEmitter' ),
-	View = require( '../mobile.startup/View' );
+	View = require( '../mobile.startup/View' ),
+	util = require( '../mobile.startup/util' );
 
 /**
  * Creates a list of photo items
@@ -41,7 +42,12 @@ mfExtend( PhotoList, View, {
 	 * @memberof PhotoList
 	 * @instance
 	 */
-	template: mw.template.get( 'mobile.special.uploads.scripts', 'PhotoList.hogan' ),
+	template: util.template( `
+<ul class="image-list content"></ul>
+<div class="end">
+	{{{spinner}}}
+</div>
+	` ),
 	/**
 	 * @memberof PhotoList
 	 * @instance

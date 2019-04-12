@@ -1,4 +1,0 @@
-<a href="{{descriptionUrl}}" alt="{{description}}" class="image">
-	<img src="{{url}}" width="{{width}}">
-</a>
-<p class="thumbcaption">{{description}}</p>

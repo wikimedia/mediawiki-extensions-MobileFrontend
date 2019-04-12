@@ -1,9 +1,0 @@
-<div class="overlay-header initial-header save-header hideable">
-	<ul>
-		<li>{{{backButton}}}</li>
-	</ul>
-	<div class="overlay-title">
-		<h2>{{editingMsg}}</h2>
-	</div>
-	<div class="header-action"><button class="submit confirm-save" disabled>{{saveMsg}}</button></div>
-</div>

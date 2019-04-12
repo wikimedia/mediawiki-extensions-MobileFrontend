@@ -1,3 +1,0 @@
-<li title="{{title}}">
-    <a href="{{url}}">{{title}}</a>
-</li>
