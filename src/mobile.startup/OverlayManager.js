@@ -229,14 +229,6 @@ mfExtend( OverlayManager, {
 			// if previous stacked overlay's path matches, assume we're going back
 			// and reuse a previously opened overlay
 			if ( previous && previous.path === path ) {
-				if ( previous.overlay && previous.overlay.hasLoadError ) {
-					self.stack.shift();
-					// Loading of overlay failed so we want to replace it with a new
-					// overlay (which will try to load successfully)
-					self.stack[0] = getNext();
-					return self.stack[0];
-				}
-
 				self.stack.shift();
 				return previous;
 			} else {

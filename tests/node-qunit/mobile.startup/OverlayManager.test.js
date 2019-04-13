@@ -32,7 +32,6 @@ QUnit.module( 'MobileFrontend mobile.startup/OverlayManager', {
 
 		this.createFakeOverlay = function ( options ) {
 			var fakeOverlay = new OO.EventEmitter();
-			fakeOverlay.hasLoadError = false;
 			fakeOverlay.show = sandbox.spy();
 			fakeOverlay.hide = function () {
 				this.emit( 'hide' );
@@ -280,71 +279,46 @@ QUnit.test( 'prevent route change', function ( assert ) {
 	assert.ok( ev.preventDefault.calledOnce, 'prevent route change' );
 } );
 
-QUnit.test( 'reload failed overlay when navigating to it again from another overlay', function ( assert ) {
-	var
-		failedOverlay = this.createFakeOverlay(),
-		successfulOverlay = this.createFakeOverlay(),
-		factoryStub,
-		retryOverlayFn;
+QUnit.test( 'stack increases and decreases at right times', function ( assert ) {
+	var self = this;
 
-	failedOverlay.hasLoadError = true;
-	retryOverlayFn = sandbox.stub();
-	retryOverlayFn.onCall( 0 ).returns( failedOverlay );
-	retryOverlayFn.onCall( 1 ).returns( successfulOverlay );
-	factoryStub = function ( title ) {
-		if ( title === '0' ) {
-			return retryOverlayFn();
-		}
-
-		return successfulOverlay;
-	};
-
-	overlayManager.add( /^test\/(\d+)$/, factoryStub );
+	overlayManager.add( /^test\/(\d+)$/, function () {
+		return self.createFakeOverlay();
+	} );
 	fakeRouter.emit( 'route', {
 		path: 'test/0'
 	} );
 
 	assert.strictEqual( overlayManager.stack.length, 1, 'stack is correct size' );
-	assert.ok( overlayManager.stack[0].overlay.hasLoadError, 'first overlay has load error' );
 
 	fakeRouter.emit( 'route', {
 		path: 'test/1'
 	} );
 
 	assert.strictEqual( overlayManager.stack.length, 2, 'stack is correct size' );
-	assert.notOk( overlayManager.stack[0].overlay.hasLoadError, 'second overlay loads successfully' );
 
 	fakeRouter.emit( 'route', {
 		path: 'test/0'
 	} );
 
 	assert.strictEqual( overlayManager.stack.length, 1, 'stack decreases when going back to already visited overlay' );
-	assert.notOk( overlayManager.stack[0].overlay.hasLoadError, 'Failed attempt is not cached and new overlay is loaded' );
 } );
 
 QUnit.test( 'replace overlay when route event path is equal to current path', function ( assert ) {
-	var
-		failedOverlay = this.createFakeOverlay(),
-		successfulOverlay = this.createFakeOverlay(),
-		retryOverlayFn;
+	var self = this;
 
-	failedOverlay.hasLoadError = true;
-	retryOverlayFn = sandbox.stub();
-	retryOverlayFn.onCall( 0 ).returns( failedOverlay );
-	retryOverlayFn.onCall( 1 ).returns( successfulOverlay );
-
-	overlayManager.add( /^test\/(\d+)$/, retryOverlayFn );
+	overlayManager.add( /^test\/(\d+)$/, function () {
+		return self.createFakeOverlay();
+	} );
 	fakeRouter.emit( 'route', {
 		path: 'test/0'
 	} );
 
 	assert.strictEqual( overlayManager.stack.length, 1, 'stack is correct size' );
-	assert.ok( overlayManager.stack[0].overlay.hasLoadError, 'overlay has load error' );
 
 	fakeRouter.emit( 'route', {
 		path: 'test/0'
 	} );
 
 	assert.strictEqual( overlayManager.stack.length, 1, 'stack is correct size (did not increase upon reload)' );
-	assert.notOk( overlayManager.stack[0].overlay.hasLoadError, 'overlay retry loads successfully' );
 } );

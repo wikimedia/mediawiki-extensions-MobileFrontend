@@ -32,8 +32,6 @@ var
  */
 function Overlay( props ) {
 	this.isIos = browser.isIos();
-	// Set to true when overlay has failed to load
-	this.hasLoadError = false;
 
 	View.call(
 		this,
