@@ -110,7 +110,6 @@ class MobileFormatter extends HtmlFormatter {
 
 		$title = $context->getTitle();
 		$isMainPage = $title->isMainPage();
-		$isFilePage = $title->inNamespace( NS_FILE );
 		$html = self::wrapHTML( $provider->getHTML() );
 		$formatter = new MobileFormatter( $html, $title );
 		if ( $isMainPage ) {
