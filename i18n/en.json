@@ -184,7 +184,7 @@
 	"mobile-frontend-nearby-requirements-guidance": "Try a different browser or enable JavaScript if you've disabled it.",
 	"mobile-frontend-nearby-title": "Nearby",
 	"mobile-frontend-nearby-info-heading": "Places around you",
-	"mobile-frontend-nearby-info-description": "You can read about interesting Wikipedia articles about places around you",
+	"mobile-frontend-nearby-info-description": "You can read about interesting {{SITENAME}} articles about places around you",
 	"mobile-frontend-nearby-info-show-button": "Show nearby articles",
 
 	"mobile-frontend-news-items": "In the news",
