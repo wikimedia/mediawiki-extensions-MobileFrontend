@@ -579,7 +579,7 @@ class ApiMobileView extends ApiBase {
 				$title = $newTitle;
 				$textTitle = $title->getPrefixedText();
 				if ( $title->hasFragment() ) {
-					$textTitle .= $title->getFragmentForUrl();
+					$textTitle .= $title->getFragmentForURL();
 				}
 				$result->addValue( null, $this->getModuleName(),
 					[ 'redirected' => $textTitle ]
