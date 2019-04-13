@@ -81,7 +81,7 @@ class McsContentProvider implements IContentProvider {
 		$this->out->addModuleStyles( 'mediawiki.skinning.content.parsoid' );
 
 		$url = $this->baseUrl . '/page/mobile-sections/';
-		$url .= urlencode( $title->getPrefixedDBKey() );
+		$url .= urlencode( $title->getPrefixedDBkey() );
 
 		$resp = $this->fileGetContents( $url );
 		if ( $resp ) {
