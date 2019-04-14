@@ -19,7 +19,8 @@
 			"Omotecho",
 			"Yusuke1109",
 			"Kkairri",
-			"Suyama"
+			"Suyama",
+			"珍庵"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "利用者が携帯機器版インターフェイスで編集しているかどうか",
@@ -74,6 +75,7 @@
 	"mobile-frontend-editor-captcha-try-again": "コードが正しくありません。もう一度やり直してください。",
 	"mobile-frontend-editor-continue": "次へ",
 	"mobile-frontend-editor-disabled": "このページは荒らし防止のため保護されています。",
+	"mobile-frontend-editor-disabled-anon": "このページを編集するにはログインする必要があります。",
 	"mobile-frontend-editor-editing": "編集中",
 	"mobile-frontend-editor-editing-page": "<span>$1 を<strong>編集中</strong></span>",
 	"mobile-frontend-editor-error": "エラー: 編集内容を保存できません。",
