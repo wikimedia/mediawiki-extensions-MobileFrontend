@@ -59,11 +59,6 @@ mfExtend( ImageCarousel, View, {
 	 * @memberof ImageCarousel
 	 * @instance
 	 */
-	hideOnExitClick: false,
-	/**
-	 * @memberof ImageCarousel
-	 * @instance
-	 */
 	template: mw.template.get( 'mobile.mediaViewer', 'ImageCarousel.hogan' ),
 
 	/**
