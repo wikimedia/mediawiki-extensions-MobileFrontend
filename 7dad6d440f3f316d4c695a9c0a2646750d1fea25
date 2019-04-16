@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "17caab70_5b425872",
+        "filename": "src/mobile.editor.overlay/EditorOverlayBase.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 428,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2019-04-16T00:46:25Z",
+      "side": 1,
+      "message": "What is this line?",
+      "revId": "7dad6d440f3f316d4c695a9c0a2646750d1fea25",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "89f79bec_df07de08",
+        "filename": "src/mobile.editor.overlay/VisualEditorOverlay.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2019-04-16T00:46:25Z",
+      "side": 1,
+      "message": "Looks like destroyTarget() is no longer being called if the overlay exit was immediately successful?",
+      "revId": "7dad6d440f3f316d4c695a9c0a2646750d1fea25",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
