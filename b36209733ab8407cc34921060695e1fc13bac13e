@@ -1,0 +1,90 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "11b243b9_aaaf555c",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 235,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-04-16T15:36:58Z",
+      "side": 1,
+      "message": "$timestamp is undefined",
+      "range": {
+        "startLine": 235,
+        "startChar": 47,
+        "endLine": 235,
+        "endChar": 57
+      },
+      "revId": "b36209733ab8407cc34921060695e1fc13bac13e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e0cde35_ecd12401",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 245,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-04-16T15:36:58Z",
+      "side": 1,
+      "message": "I see some small inconsistency, this can be or `editlink` or `viewsourcelink` which has nothing with editing. But it\u0027s called `editLinkLabel`, could we rename it to something less confusing, something like: `actionLinkUrl` and `actionLinkLabel` ?",
+      "range": {
+        "startLine": 245,
+        "startChar": 4,
+        "endLine": 245,
+        "endChar": 17
+      },
+      "revId": "b36209733ab8407cc34921060695e1fc13bac13e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "04b5668b_8efd608e",
+        "filename": "includes/specials/SpecialMobileDiffInfo.mustache",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-04-16T15:36:58Z",
+      "side": 1,
+      "message": "I\u0027m not sure if the location is right, `includes/specials` folder has no templates in it, only PHP classes responsible for styles. We\u0027re going to embrace templates bit more, most probably it would be nice to keep all templates in one place so it\u0027s easier to locate.",
+      "revId": "b36209733ab8407cc34921060695e1fc13bac13e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d13b33aa_9b86b326",
+        "filename": "includes/specials/SpecialMobileDiffInfo.mustache",
+        "patchSetId": 8
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-04-16T15:36:58Z",
+      "side": 1,
+      "message": "previously it also had \"page-summary\" class. Are we sure that there are no styles missing? (just asking, didn\u0027t check)",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 29
+      },
+      "revId": "b36209733ab8407cc34921060695e1fc13bac13e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
