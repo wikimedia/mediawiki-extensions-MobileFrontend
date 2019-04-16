@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "837fb7ee_37063e8a",
+        "filename": "resources/mobile.startup.images/reference.svg",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-04-16T15:10:51Z",
+      "side": 1,
+      "message": "I think this just needs to be optimized. E.g.,\n\n npx svgo --config\u003d.svgo.yml resources/mobile.startup.images/reference.svg\n\nI see that titles are intentional[0] for accessibility. Do you happen to know if there are plans to translate these? While I love that we\u0027re accessible in English, I worry that adding support on the largest wiki may cool the pursuit of support elsewhere. Additionally, it may be confusing to use \"cite\" terminology in some places and \"reference\" elsewhere so hardcoding it into the SVG seems to have tradeoffs. Just curious and not a blocker.\n\n[0] https://www.mediawiki.org/wiki/Manual:Coding_conventions/SVG#Automated_optimisation_(SVGO)",
+      "revId": "41756fac76f81cea7d1d9afdef3a02bc18d8530a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
