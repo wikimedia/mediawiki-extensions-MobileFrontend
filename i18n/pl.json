@@ -281,7 +281,7 @@
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox-description": "Tekst będzie zawsze wyświetlany ponad infoboksami, co poprawi wydajność i czytelność.",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Rozmiar czcionki",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Zarządzaj rozmiarem czcionki podczas czytania.",
-	"mobile-frontend-mobile-option-amc": "Zaawansowany tryb wkładu",
+	"mobile-frontend-mobile-option-amc": "Tryb zaawansowanego wkładu",
 	"mobile-frontend-mobile-option-amc-experiment-description": "Aktualnie rozwijamy nowe funkcjonalności dla zaawansowanych edytorów. Włączając ten tryb automatycznie uzyskasz dostęp do nowych funkcji gdy zostaną wydane. Wszelkie opinie i współpraca są mile widziane.",
 	"mobile-frontend-mobile-option-amc-learn-more": "Dowiedz się więcej",
 	"mobile-frontend-mobile-option-amc-send-feedback": "Prześlij opinię",
