@@ -28,12 +28,16 @@ class MinervaPage extends Page {
 
 	/**
 	 * Ensure browser is opened on a MediaWiki page, and set a specified
-	 * cookie for that domain.
+	 * cookie for that domain. Refreshes the page after the cookie has been set.
 	 * @param {string} name - name of the cookie
 	 * @param {string} value - value of the cookie
 	 */
 	setCookie( name, value ) {
-		const currentPage = browser.getUrl();
+		const currentPage = browser.getUrl(),
+			// some cookies might require a valid expiry date.
+			// setting to 1 hour from now.
+			cookieExpiryTime = new Date().getTime() + ( 3600 * 1000 );
+
 		let cookie;
 		if ( !currentPage.includes( browser.options.baseUrl ) ) {
 			this.open();
@@ -44,15 +48,26 @@ class MinervaPage extends Page {
 		if ( !cookie || cookie.value !== value ) {
 			browser.setCookie( {
 				name: name,
-				value: value } );
+				value: value,
+				expiry: cookieExpiryTime
+			} );
+
+			browser.refresh();
 		}
 	}
 
 	/**
-	 * Set the mobile cookie
+	 * Set the mobile cookie to true
 	 */
 	setMobileMode() {
 		this.setCookie( 'mf_useformat', 'true' );
+	}
+
+	/**
+	 * Set the mobile cookie to false
+	 */
+	setDesktopMode() {
+		this.setCookie( 'mf_useformat', 'false' );
 	}
 
 	/**
