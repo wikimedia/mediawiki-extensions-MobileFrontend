@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d8175441_7899510d",
+        "filename": "src/mobile.editor.overlay/VisualEditorOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2019-04-17T18:43:31Z",
+      "side": 1,
+      "message": "This allows the browser to navigate back to the previous URL, which has confusing behavior… I\u0027m not even sure what should happen when the user does that. I think we should use something that calls history.replaceState() instead (maybe `router.navigateTo( …, { useReplaceState: true } )`? not sure if we need to call checkRoute() afterwards then?)",
+      "revId": "357ee409544b209c11d1af721367c631d0edb3d2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
