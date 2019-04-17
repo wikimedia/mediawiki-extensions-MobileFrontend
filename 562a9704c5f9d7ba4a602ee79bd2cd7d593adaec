@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "16a6adeb_6684cda1",
+        "filename": "tests/selenium/features/support/pages/article_page.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2019-04-17T17:20:19Z",
+      "side": 1,
+      "message": "Why not\n\n    #footer-places-mobileview a\n\n?",
+      "range": {
+        "startLine": 15,
+        "startChar": 45,
+        "endLine": 15,
+        "endChar": 58
+      },
+      "revId": "562a9704c5f9d7ba4a602ee79bd2cd7d593adaec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7165f593_42aca6cf",
+        "filename": "tests/selenium/features/support/pages/article_page.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2019-04-17T17:20:19Z",
+      "side": 1,
+      "message": "Why not\n\n    #mw-mf-display-toggle\n\nor\n\n    #footer-places-desktoptoggle a\n\n?",
+      "range": {
+        "startLine": 16,
+        "startChar": 46,
+        "endLine": 16,
+        "endChar": 55
+      },
+      "revId": "562a9704c5f9d7ba4a602ee79bd2cd7d593adaec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
