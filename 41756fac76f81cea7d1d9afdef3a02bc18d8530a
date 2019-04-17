@@ -34,6 +34,24 @@
       "revId": "41756fac76f81cea7d1d9afdef3a02bc18d8530a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "62ec9a0f_c12cbf22",
+        "filename": "resources/mobile.startup.images/reference.svg",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-04-17T20:26:26Z",
+      "side": 1,
+      "message": "Thanks for the reasoning! In response to a, you can see the difference here: https://gerrit.wikimedia.org/r/#/c/503422/1..3/resources/mobile.startup.images/reference.svg",
+      "parentUuid": "417ad3bc_f1db782a",
+      "revId": "41756fac76f81cea7d1d9afdef3a02bc18d8530a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
