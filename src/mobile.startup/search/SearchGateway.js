@@ -1,5 +1,5 @@
 var
-	Page = require( '../Page' ),
+	pageJSONParser = require( '../page/pageJSONParser' ),
 	util = require( '../util' ),
 	extendSearchParams = require( '../extendSearchParams' );
 
@@ -92,7 +92,7 @@ SearchGateway.prototype = {
 	 * @private
 	 */
 	_getPage: function ( query, pageInfo ) {
-		var page = Page.newFromJSON( pageInfo );
+		var page = pageJSONParser.parse( pageInfo );
 
 		// If displaytext is set in the generator result (eg. by Wikibase),
 		// use that as display title.

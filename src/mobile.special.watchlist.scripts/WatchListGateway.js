@@ -1,4 +1,5 @@
-var Page = require( '../mobile.startup/Page' ),
+var
+	pageJSONParser = require( '../mobile.startup/page/pageJSONParser' ),
 	util = require( '../mobile.startup/util' ),
 	extendSearchParams = require( '../mobile.startup/extendSearchParams' );
 
@@ -87,7 +88,7 @@ WatchListGateway.prototype = {
 		}
 
 		// Transform the items to a sensible format
-		return pages.map( Page.newFromJSON );
+		return pages.map( pageJSONParser.parse );
 	}
 
 };

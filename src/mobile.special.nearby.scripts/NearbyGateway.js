@@ -1,5 +1,5 @@
 var limit = 50,
-	Page = require( '../mobile.startup/Page' ),
+	pageJSONParser = require( '../mobile.startup/page/pageJSONParser' ),
 	ns = mw.config.get( 'wgContentNamespaces' ),
 	util = require( '../mobile.startup/util' ),
 	extendSearchParams = require( '../mobile.startup/extendSearchParams' );
@@ -118,7 +118,7 @@ NearbyGateway.prototype = {
 
 			pages = pages.map( function ( page, i ) {
 				var coords, p;
-				p = Page.newFromJSON( page );
+				p = pageJSONParser.parse( page );
 				p.anchor = 'item_' + i;
 
 				// protect against declined bug T49133
