@@ -16,6 +16,24 @@
       "revId": "41756fac76f81cea7d1d9afdef3a02bc18d8530a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "417ad3bc_f1db782a",
+        "filename": "resources/mobile.startup.images/reference.svg",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2019-04-17T17:51:58Z",
+      "side": 1,
+      "message": "a) What missing optimization are you referring to here? \nb) First things first, if the SVG is only used as background-image, the title never gets read out. They were added in OOUI to provide any alternative text at all in case they are used as inline SVGs.\nSecond, there\u0027s no way to currently make use of our translation infrastructure for the SVG titles. \nhttps://tools.wmflabs.org/svgtranslate/ was a different approach from CommunityTech. Anyways, we should continue this discussion in a separate task IMHO.\nc) The titles were chosen to reflect the OOUI icon itself and not its usage. As they could be used in different contexts.\n\nIt\u0027s up to the implementors to decide if title makes sense in their context. Given that it\u0027s just very few bytes, I\u0027d keep it for simpler maintenance (comparing to OOUI library state).",
+      "parentUuid": "837fb7ee_37063e8a",
+      "revId": "41756fac76f81cea7d1d9afdef3a02bc18d8530a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
