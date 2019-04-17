@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "2eba76c2_5b48acd3",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 235,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2019-04-17T21:29:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "11b243b9_aaaf555c",
+      "range": {
+        "startLine": 235,
+        "startChar": 47,
+        "endLine": 235,
+        "endChar": 57
+      },
+      "revId": "b36209733ab8407cc34921060695e1fc13bac13e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e0cde35_ecd12401",
         "filename": "includes/specials/SpecialMobileDiff.php",
         "patchSetId": 8
@@ -36,6 +60,30 @@
       "writtenOn": "2019-04-16T15:36:58Z",
       "side": 1,
       "message": "I see some small inconsistency, this can be or `editlink` or `viewsourcelink` which has nothing with editing. But it\u0027s called `editLinkLabel`, could we rename it to something less confusing, something like: `actionLinkUrl` and `actionLinkLabel` ?",
+      "range": {
+        "startLine": 245,
+        "startChar": 4,
+        "endLine": 245,
+        "endChar": 17
+      },
+      "revId": "b36209733ab8407cc34921060695e1fc13bac13e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d7426f8b_da23a503",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 245,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2019-04-17T21:29:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8e0cde35_ecd12401",
       "range": {
         "startLine": 245,
         "startChar": 4,
@@ -65,6 +113,24 @@
     },
     {
       "key": {
+        "uuid": "d336d858_bbcaf1ff",
+        "filename": "includes/specials/SpecialMobileDiffInfo.mustache",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2019-04-17T21:29:17Z",
+      "side": 1,
+      "message": "I agree that these are over the place. I think it would make sense to put them in a \"templates\" folder, but that sounds like a job for another patch.",
+      "parentUuid": "04b5668b_8efd608e",
+      "revId": "b36209733ab8407cc34921060695e1fc13bac13e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d13b33aa_9b86b326",
         "filename": "includes/specials/SpecialMobileDiffInfo.mustache",
         "patchSetId": 8
@@ -76,6 +142,30 @@
       "writtenOn": "2019-04-16T15:36:58Z",
       "side": 1,
       "message": "previously it also had \"page-summary\" class. Are we sure that there are no styles missing? (just asking, didn\u0027t check)",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 29
+      },
+      "revId": "b36209733ab8407cc34921060695e1fc13bac13e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c5471fa4_5ffae283",
+        "filename": "includes/specials/SpecialMobileDiffInfo.mustache",
+        "patchSetId": 8
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2019-04-17T21:29:17Z",
+      "side": 1,
+      "message": "Yeah, I removed that on purpose, it added too much extra styles that weren\u0027t needed,",
+      "parentUuid": "d13b33aa_9b86b326",
       "range": {
         "startLine": 1,
         "startChar": 0,
