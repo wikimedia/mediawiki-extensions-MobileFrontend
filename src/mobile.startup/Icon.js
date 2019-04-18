@@ -12,7 +12,7 @@ var
  */
 function Icon( options ) {
 	if ( options.hasText ) {
-		options.modifier = 'mw-ui-icon-before';
+		options.modifier = `mw-ui-icon-before ${options.modifier || ''}`;
 	}
 	if ( options.href ) {
 		options.tagName = 'a';
