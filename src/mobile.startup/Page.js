@@ -352,49 +352,48 @@ mfExtend( Page, View, {
 	 * `<a class="image"><img class="noviewer"></a>` is not a valid thumbnail
 	 * @memberof Page
 	 * @instance
+	 * @param {jQuery} [$container] Container to search, defaults to this.$el.
 	 * @return {Thumbnail[]}
 	 */
-	getThumbnails: function () {
+	getThumbnails: function ( $container ) {
 		var $thumbs,
-			$el = this.$el,
 			blacklistSelector = '.' + BLACKLISTED_THUMBNAIL_CLASS_SELECTORS.join( ',.' ),
 			thumbs = [];
 
-		if ( !this._thumbs ) {
-			$thumbs = $el.find( 'a.image, a.thumbimage' )
-				.not( blacklistSelector );
+		$container = $container || this.$el;
 
-			$thumbs.each( function () {
-				var $a = $el.find( this ),
-					$lazyImage = $a.find( '.lazy-image-placeholder' ),
-					// Parents need to be checked as well.
-					valid = $a.parents( blacklistSelector ).length === 0 &&
-						$a.find( blacklistSelector ).length === 0,
-					legacyMatch = $a.attr( 'href' ).match( /title=([^/&]+)/ ),
-					match = $a.attr( 'href' ).match( /[^/]+$/ );
+		$thumbs = $container.find( 'a.image, a.thumbimage' )
+			.not( blacklistSelector );
 
-				// filter out invalid lazy loaded images if so far image is valid
-				if ( $lazyImage.length && valid ) {
-					// if the regex matches it means the image has one of the classes
-					// thus we must invert the result
-					valid = !new RegExp( '\\b(' + BLACKLISTED_THUMBNAIL_CLASS_SELECTORS.join( '|' ) + ')\\b' )
-						.test( $lazyImage.data( 'class' ) );
-				}
+		$thumbs.each( function () {
+			var $a = $container.find( this ),
+				$lazyImage = $a.find( '.lazy-image-placeholder' ),
+				// Parents need to be checked as well.
+				valid = $a.parents( blacklistSelector ).length === 0 &&
+					$a.find( blacklistSelector ).length === 0,
+				legacyMatch = $a.attr( 'href' ).match( /title=([^/&]+)/ ),
+				match = $a.attr( 'href' ).match( /[^/]+$/ );
 
-				if ( valid && ( legacyMatch || match ) ) {
-					thumbs.push(
-						new Thumbnail( {
-							el: $a,
-							filename: decodeURIComponent(
-								legacyMatch ? legacyMatch[1] : match[0]
-							)
-						} )
-					);
-				}
-			} );
-			this._thumbs = thumbs;
-		}
-		return this._thumbs;
+			// filter out invalid lazy loaded images if so far image is valid
+			if ( $lazyImage.length && valid ) {
+				// if the regex matches it means the image has one of the classes
+				// thus we must invert the result
+				valid = !new RegExp( '\\b(' + BLACKLISTED_THUMBNAIL_CLASS_SELECTORS.join( '|' ) + ')\\b' )
+					.test( $lazyImage.data( 'class' ) );
+			}
+
+			if ( valid && ( legacyMatch || match ) ) {
+				thumbs.push(
+					new Thumbnail( {
+						el: $a,
+						filename: decodeURIComponent(
+							legacyMatch ? legacyMatch[1] : match[0]
+						)
+					} )
+				);
+			}
+		} );
+		return thumbs;
 	},
 
 	/**
