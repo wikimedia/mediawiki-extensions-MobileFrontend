@@ -74,7 +74,7 @@ mfExtend( BetaOptInPanel, View, {
 
 	/** @inheritdoc */
 	postRender: function () {
-		this.$( '.message' ).append(
+		this.$el.find( '.message' ).append(
 			this.options.buttons.map( function ( button ) {
 				return button.$el;
 			} )
