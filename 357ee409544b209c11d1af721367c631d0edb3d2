@@ -16,6 +16,24 @@
       "revId": "357ee409544b209c11d1af721367c631d0edb3d2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6fc2c374_48bf6f9f",
+        "filename": "src/mobile.editor.overlay/VisualEditorOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2019-04-21T21:00:52Z",
+      "side": 1,
+      "message": "Actually checkRoute is causing problems, loading a second editor...",
+      "parentUuid": "d8175441_7899510d",
+      "revId": "357ee409544b209c11d1af721367c631d0edb3d2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
