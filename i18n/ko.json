@@ -174,7 +174,7 @@
 	"mobile-frontend-nearby-requirements-guidance": "다른 브라우저나 자바스크립트가 비활성화되어 있으면 활성화하세요.",
 	"mobile-frontend-nearby-title": "근처",
 	"mobile-frontend-nearby-info-heading": "주변 장소",
-	"mobile-frontend-nearby-info-description": "주변 장소에 관한 관심있는 위키백과 문서들을 읽을 수 있습니다",
+	"mobile-frontend-nearby-info-description": "주변 장소에 관한 관심있는 {{SITENAME}} 문서들을 읽을 수 있습니다",
 	"mobile-frontend-nearby-info-show-button": "주변 문서 표시",
 	"mobile-frontend-news-items": "새로 들어온 소식",
 	"mobile-frontend-opt-in-explain": "{{SITENAME}} 베타 기능은 이 실험적인 기능들을 시도해보고 저희에게 소중한 의견을 제공할 수 있는 수단입니다",

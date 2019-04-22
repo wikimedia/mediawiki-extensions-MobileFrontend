@@ -177,7 +177,7 @@
 	"mobile-frontend-nearby-requirements-guidance": "جرّب متصفحا آخرًا أو مكّن جافاسكربت إذا كنت عطلتها.",
 	"mobile-frontend-nearby-title": "بالقرب من هنا",
 	"mobile-frontend-nearby-info-heading": "أماكن حولك",
-	"mobile-frontend-nearby-info-description": "يمكنك أن تطالع مقالات ويكيبيديا المثيرة للاهتمام والمتعلقة بأماكن حولك",
+	"mobile-frontend-nearby-info-description": "يمكنك أن تطالع مقالات {{SITENAME}} المثيرة للاهتمام والمتعلقة بأماكن حولك",
 	"mobile-frontend-nearby-info-show-button": "عرض المقالات القريبة",
 	"mobile-frontend-news-items": "في الأخبار",
 	"mobile-frontend-opt-in-explain": "{{SITENAME}} بيتا هي طريقة للوصول إلى أحدث الميزات التجريبية وإرسال تعليقات قيمة لنا.",

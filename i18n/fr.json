@@ -195,7 +195,7 @@
 	"mobile-frontend-nearby-requirements-guidance": "Essayez un autre navigateur ou activez JavaScript si vous l'avez désactivé.",
 	"mobile-frontend-nearby-title": "À proximité",
 	"mobile-frontend-nearby-info-heading": "Endroits de proximité",
-	"mobile-frontend-nearby-info-description": "Vous pouvez lire des articles intéressants concernant les lieux qui vous entourent",
+	"mobile-frontend-nearby-info-description": "Vous pouvez lire des articles intéressants de {{SITENAME}} concernant les lieux qui vous entourent",
 	"mobile-frontend-nearby-info-show-button": "Afficher des articles similaires",
 	"mobile-frontend-news-items": "Actualités",
 	"mobile-frontend-opt-in-explain": "La βeta de {{SITENAME}} est un moyen pour vous d’essayer ces fonctionnalités expérimentales et de nous fournir un retour appréciable",

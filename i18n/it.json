@@ -170,7 +170,7 @@
 	"mobile-frontend-nearby-requirements-guidance": "Prova ad usare un browser diverso o attiva JavaScript se lo hai disattivato.",
 	"mobile-frontend-nearby-title": "Nelle vicinanze",
 	"mobile-frontend-nearby-info-heading": "Luoghi vicino a te",
-	"mobile-frontend-nearby-info-description": "Puoi leggere interessanti voci di Wikipedia su luoghi nelle tue vicinanze",
+	"mobile-frontend-nearby-info-description": "Puoi leggere interessanti voci di {{SITENAME}} su luoghi nelle tue vicinanze",
 	"mobile-frontend-nearby-info-show-button": "Mostra voci nelle vicinanze",
 	"mobile-frontend-news-items": "Novità",
 	"mobile-frontend-opt-in-explain": "{{SITENAME}} βeta è un modo per provare queste funzionalità sperimentali e fornirci un tuo commento.",

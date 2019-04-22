@@ -156,7 +156,7 @@
 	"mobile-frontend-nearby-requirements-guidance": "একটি ভিন্ন ব্রাউজার ব্যবহার করে দেখুন বা জাভাস্ক্রিপ্ট নিষ্ক্রিয় করে থাকলে তা সক্রিয় করুন।",
 	"mobile-frontend-nearby-title": "কাছাকাছি",
 	"mobile-frontend-nearby-info-heading": "আপনার কাছাকাছি স্থানগুলি",
-	"mobile-frontend-nearby-info-description": "আপনি আপনার চারপাশের জায়গা সম্পর্কে আকর্ষণীয় উইকিপিডিয়ার নিবন্ধ সম্পর্কে পড়তে পারেন",
+	"mobile-frontend-nearby-info-description": "আপনি আপনার চারপাশের জায়গা সম্পর্কে আকর্ষণীয় {{SITENAME}} নিবন্ধ সম্পর্কে পড়তে পারেন",
 	"mobile-frontend-nearby-info-show-button": "কাছাকাছি নিবন্ধগুলি দেখান",
 	"mobile-frontend-news-items": "আপনি জানেন কি...",
 	"mobile-frontend-opt-in-explain": "{{SITENAME}} βeta হল এই পরীক্ষামূলক বৈশিষ্ট্যগুলি পরীক্ষা করে আমাদেরকে মূল্যবান প্রতিক্রিয়া প্রদান করার একটি উপায়",

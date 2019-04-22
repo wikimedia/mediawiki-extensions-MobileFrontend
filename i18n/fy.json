@@ -31,6 +31,9 @@
 	"mobile-frontend-view-desktop": "Buroblêd-werjefte",
 	"mobile-frontend-watchlist-more": "mear",
 	"tag-mobile_edit": "Mobile bewurking",
+	"tag-mobile_edit-description": "Bewurking dien op in mobyl (web as app)",
 	"tag-advanced_mobile_edit": "Avansearre mobile bewurking",
-	"tag-mobile_web_edit": "Bewurking mobile webstee"
+	"tag-advanced_mobile_edit-description": "Bewurkings dien troch in meidogger mei Advanced Mobile Contributions-modus",
+	"tag-mobile_web_edit": "Bewurking mobile webstee",
+	"tag-mobile_web_edit-description": "Bewurking dien op de mobile webstee"
 }

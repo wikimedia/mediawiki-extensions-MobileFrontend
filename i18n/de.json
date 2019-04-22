@@ -167,7 +167,7 @@
 	"mobile-frontend-nearby-requirements-guidance": "Versuche einen anderen Browser oder aktiviere JavaScript, falls deaktiviert.",
 	"mobile-frontend-nearby-title": "In der Nähe",
 	"mobile-frontend-nearby-info-heading": "Orte in deiner Umgebung",
-	"mobile-frontend-nearby-info-description": "Du kannst interessante Wikipedia-Artikel über Orte in deiner Umgebung lesen",
+	"mobile-frontend-nearby-info-description": "Du kannst interessante {{SITENAME}}-Artikel über Orte in deiner Umgebung lesen",
 	"mobile-frontend-nearby-info-show-button": "Artikel in der Nähe anzeigen",
 	"mobile-frontend-news-items": "In den Nachrichten",
 	"mobile-frontend-opt-in-explain": "{{SITENAME}} Beta ist ein Weg für dich, um diese experimentellen Funktionen auszutesten und uns mit wertvollen Rückmeldungen zu versorgen.",

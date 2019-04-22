@@ -168,7 +168,7 @@
 	"mobile-frontend-nearby-requirements-guidance": "Zkuste jiný prohlížeč nebo si zapněte JavaScript, pokud ho máte vypnutý.",
 	"mobile-frontend-nearby-title": "Poblíž",
 	"mobile-frontend-nearby-info-heading": "Místa kolem vás",
-	"mobile-frontend-nearby-info-description": "Můžete si přečíst o zajímavých článcích na Wikipedii o místech kolem vás",
+	"mobile-frontend-nearby-info-description": "Můžete si přečíst o zajímavých článcích na {{GRAMMAR:6sg|{{SITENAME}}}} o místech kolem vás",
 	"mobile-frontend-nearby-info-show-button": "Zobrazit blízké články",
 	"mobile-frontend-news-items": "Aktuality",
 	"mobile-frontend-opt-in-explain": "{{SITENAME}} Beta je způsob, kterým můžete vyzkoušet tyto funkce, na kterých teprve pracujeme, a poslat nám k nim zpětnou vazbu",

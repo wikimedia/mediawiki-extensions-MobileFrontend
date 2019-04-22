@@ -172,7 +172,7 @@
 	"mobile-frontend-nearby-requirements-guidance": "Tente um navegador diferente ou ative o JavaScript se você o tiver desabilitado.",
 	"mobile-frontend-nearby-title": "Redondezas",
 	"mobile-frontend-nearby-info-heading": "Lugares nas proximidades",
-	"mobile-frontend-nearby-info-description": "Pode ler artigos interessantes da Wikipédia sobre lugares à sua volta",
+	"mobile-frontend-nearby-info-description": "Pode ler artigos interessantes da {{SITENAME}} sobre lugares à sua volta",
 	"mobile-frontend-nearby-info-show-button": "Mostrar artigos das proximidades",
 	"mobile-frontend-news-items": "Eventos recentes",
 	"mobile-frontend-opt-in-explain": "βeta de {{SITENAME}} é uma maneira para você experimentar esses recursos experimentais e nos fornecer um importantes comentários",
