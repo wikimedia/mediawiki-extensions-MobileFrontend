@@ -34,6 +34,24 @@
       "revId": "357ee409544b209c11d1af721367c631d0edb3d2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3ed39b16_49ddfaf4",
+        "filename": "src/mobile.editor.overlay/VisualEditorOverlay.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-23T00:36:58Z",
+      "side": 1,
+      "message": "navigate is deprecated use navigateTo instead\nIf you set replaceTo like Bartosz suggests it will not cause check route which is probably useful in this situation where you are using overlay manager.\n\nThe browser navigation behaviour will continue to be buggy until https://gerrit.wikimedia.org/r/493756 is taken care of.",
+      "parentUuid": "6fc2c374_48bf6f9f",
+      "revId": "357ee409544b209c11d1af721367c631d0edb3d2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
