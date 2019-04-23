@@ -295,14 +295,6 @@ risk!
 * Type: `Boolean`
 * Default: `false`
 
-#### $wgMFTrackBlockNotices
-
-If set to true Block Notices will be tracked on display and a count will be stored
-for later analysis. No personal data will be collected.
-
-* Type: `Boolean`
-* Default: `false`
-
 #### $wgMFMobileHeader
 
 Requests containing header with this name will be considered as coming from
