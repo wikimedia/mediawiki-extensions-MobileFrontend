@@ -80,7 +80,7 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 	protected function getRevisionCommentHTML( $rev, $user, $unhide ) {
 		if ( $rev->userCan( Revision::DELETED_COMMENT, $user ) ) {
 			if ( $rev->isDeleted( Revision::DELETED_COMMENT ) && !$unhide ) {
-				$comment = $this->msg( 'rev-deleted-comment' )->plain();
+				$comment = $this->msg( 'rev-deleted-comment' )->escaped();
 			} else {
 				$comment = $rev->getComment( Revision::FOR_THIS_USER, $user );
 				// escape any HTML in summary and add CSS for any auto-generated comments
@@ -91,7 +91,7 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 			// allowed to view a particular field of this revision, /if/ it's marked as
 			// deleted. This will only get executed in event a comment has been deleted
 			// and user cannot view it.
-			$comment = $this->msg( 'rev-deleted-comment' )->plain();
+			$comment = $this->msg( 'rev-deleted-comment' )->escaped();
 		}
 		return $comment;
 	}
