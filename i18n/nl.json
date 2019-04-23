@@ -101,6 +101,7 @@
 	"mobile-frontend-editor-placeholder": "Deze paragraaf bevat geen tekst. U kunt de eerste zijn die hem schrijft!",
 	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|U}} maakt een nieuwe pagina aan op {{SITENAME}}!",
 	"mobile-frontend-editor-previewing-page": "<span><strong>Voorvertoning van</strong> $1</span>",
+	"mobile-frontend-editor-publish": "Publiceren",
 	"mobile-frontend-editor-save": "Opslaan",
 	"mobile-frontend-editor-success": "Uw bewerking is opgeslagen.",
 	"mobile-frontend-editor-success-landmark-1": "Gefeliciteerd, u bent nu een bewerker bij {{SITENAME}}!",
