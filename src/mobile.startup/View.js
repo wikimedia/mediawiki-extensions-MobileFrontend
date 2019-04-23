@@ -267,20 +267,6 @@ mfExtend( View, {
 	},
 
 	/**
-	 * Wraps this.$el.find, so that you can search for elements in the view's
-	 * ($el's) scope.
-	 *
-	 * @memberof View
-	 * @instance
-	 * @param {string} query A jQuery CSS selector.
-	 * @return {JQuery.Object} jQuery object containing results of the search.
-	 */
-	$: function ( query ) {
-		mw.log.warn( 'Use of View.$ is deprecated. Use View.$el.find instead.' );
-		return this.$el.find( query );
-	},
-
-	/**
 	 * Set callbacks, where `this.options.events` is a hash of
 	 *
 	 * { 'event selector': 'callback' }

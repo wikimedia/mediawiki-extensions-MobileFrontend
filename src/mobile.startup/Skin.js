@@ -27,10 +27,6 @@ function Skin( params ) {
 
 	this.page = options.page;
 	this.name = options.name;
-	if ( options.mainMenu ) {
-		this.mainMenu = options.mainMenu;
-		mw.log.warn( 'Skin: Use of mainMenu is deprecated.' );
-	}
 	this.eventBus = options.eventBus;
 	options.isBorderBox = false;
 	View.call( this, options );

@@ -32,7 +32,6 @@ mfExtend( Button, View, {
 	 * @property {string} defaults.tagName The name of the tag in which the button is wrapped.
 	 * @property {boolean} defaults.block is stacked button
 	 * @property {boolean} defaults.progressive is progressive action
-	 *   This option is deprecated. Please use `progressive`.
 	 * @property {boolean} defaults.quiet is quiet button
 	 * @property {boolean} defaults.destructive is destructive action
 	 * @property {string} defaults.additionalClassNames Additional class name(s).
