@@ -309,13 +309,13 @@ class ApiMobileView extends ApiBase {
 	 * @return Title
 	 */
 	protected function makeTitle( $name ) {
-		global $wgContLang;
+		$contLang = MediaWikiServices::getInstance()->getContentLanguage();
 		$title = Title::newFromText( $name );
 		if ( !$title ) {
 			$this->dieWithError( [ 'apierror-invalidtitle', wfEscapeWikiText( $name ) ] );
 		}
 		$unconvertedTitle = $title->getPrefixedText();
-		$wgContLang->findVariantLink( $name, $title );
+		$contLang->findVariantLink( $name, $title );
 		if ( $unconvertedTitle !== $title->getPrefixedText() ) {
 			$values = [ 'from' => $unconvertedTitle, 'to' => $title->getPrefixedText() ];
 			$this->getResult()->addValue( 'mobileview', 'converted', $values );

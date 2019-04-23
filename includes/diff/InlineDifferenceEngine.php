@@ -1,5 +1,6 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
 use Wikimedia\Assert\Assert;
 
 /**
@@ -176,7 +177,7 @@ class InlineDifferenceEngine extends DifferenceEngine {
 	 * @return string
 	 */
 	public function generateTextDiffBody( $otext, $ntext ) {
-		global $wgContLang;
+		$contLang = MediaWikiServices::getInstance()->getContentLanguage();
 
 		// First try wikidiff2
 		if ( function_exists( 'wikidiff2_inline_diff' ) ) {
@@ -187,11 +188,11 @@ class InlineDifferenceEngine extends DifferenceEngine {
 		}
 
 		// Else slow native PHP diff
-		$ota = explode( "\n", $wgContLang->segmentForDiff( $otext ) );
-		$nta = explode( "\n", $wgContLang->segmentForDiff( $ntext ) );
+		$ota = explode( "\n", $contLang->segmentForDiff( $otext ) );
+		$nta = explode( "\n", $contLang->segmentForDiff( $ntext ) );
 		$diffs = new Diff( $ota, $nta );
 		$formatter = new InlineDiffFormatter();
-		return $wgContLang->unsegmentForDiff( $formatter->format( $diffs ) );
+		return $contLang->unsegmentForDiff( $formatter->format( $diffs ) );
 	}
 
 	/**

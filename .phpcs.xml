@@ -13,11 +13,6 @@
 	<rule ref="MediaWiki.Commenting.FunctionComment.MissingDocumentationProtected">
 		<exclude-pattern>tests/phpunit/*</exclude-pattern>
 	</rule>
-	<rule ref="MediaWiki.Usage.DeprecatedGlobalVariables.Deprecated$wgContLang">
-		<exclude-pattern>includes/ExtMobileFrontend\.php</exclude-pattern>
-		<exclude-pattern>includes/api/ApiMobileView\.php</exclude-pattern>
-		<exclude-pattern>includes/diff/InlineDifferenceEngine\.php</exclude-pattern>
-	</rule>
 	<file>.</file>
 	<arg name="extensions" value="php,php5,inc"/>
 	<arg name="encoding" value="UTF-8"/>
