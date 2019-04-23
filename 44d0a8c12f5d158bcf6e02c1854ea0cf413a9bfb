@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "91c2a722_7a021341",
+        "filename": "tests/selenium/specs/user_page.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-23T04:26:57Z",
+      "side": 0,
+      "message": "This doesn\u0027t need to be \"my user page\". we could instead change this test to go to a user page we know will not exist (by creating and reserving a username on the beta cluster). Will look later today.",
+      "revId": "44d0a8c12f5d158bcf6e02c1854ea0cf413a9bfb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
