@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2524734b_4ff4125b",
+        "filename": "src/mobile.startup/page/PageJSONParser.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-23T14:26:57Z",
+      "side": 1,
+      "message": "One minor nitpick - would be great if this function matched the name of the file and was lowercased.\n\npageJSONParser.js\nexport function pageJSONParser\n\nI find it useful to distinguish between the constructors and the pure functions",
+      "revId": "0db9eb3c3b87b52059e7fc641ea9ec28712488fa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
