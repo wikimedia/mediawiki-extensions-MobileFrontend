@@ -51,7 +51,7 @@
     "stylelint-config-wikimedia": "0.5.0",
     "svgo": "1.1.1",
     "wdio-cucumber-framework": "1.1.1",
-    "wdio-mediawiki": "0.2.0",
+    "wdio-mediawiki": "0.3.0",
     "wdio-mocha-framework": "0.5.13",
     "wdio-spec-reporter": "0.1.4",
     "webdriverio": "4.13.1",
