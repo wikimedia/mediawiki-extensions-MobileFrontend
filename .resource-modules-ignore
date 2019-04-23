@@ -1,3 +1,5 @@
+resources/dist/mobile.categories.overlays.js
+resources/dist/mobile.special.mobilediff.scripts.js
 resources/dist/mobile.editor.overlay.js
 resources/dist/mobile.init.js
 resources/dist/mobile.startup.js
