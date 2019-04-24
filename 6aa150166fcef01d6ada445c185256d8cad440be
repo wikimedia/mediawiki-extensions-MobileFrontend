@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0d1f85b0_c37e471e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-24T10:42:55Z",
+      "side": 1,
+      "message": "While now it is the case that this function is seldom used, https://phabricator.wikimedia.org/T220751 indicates this kind of parsing and processing is expensive and problematic so I\u0027m not sure I agree that removing the caching is a good idea. What are the benefits of removing it as you see it?",
+      "revId": "6aa150166fcef01d6ada445c185256d8cad440be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
