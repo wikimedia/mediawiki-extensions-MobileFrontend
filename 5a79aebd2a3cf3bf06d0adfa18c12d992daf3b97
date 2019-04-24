@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c0d69700_9e664a0c",
+        "filename": "src/mobile.special.nearby.scripts/mobile.special.nearby.scripts.js",
+        "patchSetId": 13
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-24T15:08:16Z",
+      "side": 1,
+      "message": "When reviewing, note this route is buggy given the shared options. Visiting Nearby using currently location and then in same session navigate to /page/Spain - current location results are still shown.\n\nEventually this will all get untangled and I\u0027ll fix this, but it remains broken as it is on master..",
+      "revId": "5a79aebd2a3cf3bf06d0adfa18c12d992daf3b97",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
