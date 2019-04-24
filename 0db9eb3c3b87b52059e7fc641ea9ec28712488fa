@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "6a599440_22a9abcc",
+        "filename": "src/mobile.special.nearby.scripts/NearbyGateway.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-24T02:22:24Z",
+      "side": 1,
+      "message": "I found it confusing that you used export (in file referenced here) with require. I think we should be consistent in the import/export notation and use require+module.exports for the time being. \n\nI think it will be necessary to use the older module.exports notationto support teams who are not using webpack but are using headless unit tests.",
+      "revId": "0db9eb3c3b87b52059e7fc641ea9ec28712488fa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2524734b_4ff4125b",
         "filename": "src/mobile.startup/page/PageJSONParser.js",
         "patchSetId": 1
