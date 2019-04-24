@@ -1,0 +1,157 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8c3f7c6e_a1faa18d",
+        "filename": "resources/mobile.special.nearby.styles/specialNearby.less",
+        "patchSetId": 4
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-24T14:40:26Z",
+      "side": 1,
+      "message": "position: relative is necessary for the immediate spinner (promisedView is not part of the View with the nearby class.",
+      "revId": "61032a78168ea7dc65f05db3ca3b8cecbaf7984f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "09f65306_bd5456ae",
+        "filename": "src/mobile.special.nearby.scripts/Nearby.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-24T14:40:26Z",
+      "side": 1,
+      "message": "Removes a superfulous div",
+      "revId": "61032a78168ea7dc65f05db3ca3b8cecbaf7984f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4466a6dc_1ec95feb",
+        "filename": "src/mobile.special.nearby.scripts/Nearby.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-24T14:40:26Z",
+      "side": 1,
+      "message": "No more passing options around - just generate a nearbyErrorMessage using the type.",
+      "revId": "61032a78168ea7dc65f05db3ca3b8cecbaf7984f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9872ea64_b545561f",
+        "filename": "src/mobile.special.nearby.scripts/mobile.special.nearby.scripts.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-24T14:40:26Z",
+      "side": 1,
+      "message": "promisedView pattern trumps the loadingOverlay :)",
+      "revId": "61032a78168ea7dc65f05db3ca3b8cecbaf7984f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "69a64f83_2d85eee9",
+        "filename": "src/mobile.special.nearby.scripts/mobile.special.nearby.scripts.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-24T14:40:26Z",
+      "side": 1,
+      "message": "This was set on L97 before and I have no idea why",
+      "revId": "61032a78168ea7dc65f05db3ca3b8cecbaf7984f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8cb7a831_d3da636a",
+        "filename": "src/mobile.special.nearby.scripts/mobile.special.nearby.scripts.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-24T14:40:26Z",
+      "side": 1,
+      "message": "This replaces the loadingOverlay by showing the spinner instantly.",
+      "revId": "61032a78168ea7dc65f05db3ca3b8cecbaf7984f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c3d0e90e_430eed04",
+        "filename": "src/mobile.special.nearby.scripts/mobile.special.nearby.scripts.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-24T14:40:26Z",
+      "side": 1,
+      "message": "navigateTo is newer than navigate (deprecated)",
+      "revId": "61032a78168ea7dc65f05db3ca3b8cecbaf7984f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "76006ca0_2250feb7",
+        "filename": "src/mobile.special.nearby.scripts/mobile.special.nearby.scripts.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-24T14:40:26Z",
+      "side": 1,
+      "message": "In future we\u0027ll separate the MessageBox rendering from the PageList rendering.. but for now the 2 remain together.",
+      "revId": "61032a78168ea7dc65f05db3ca3b8cecbaf7984f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3e9f6a6a_22e0a40c",
+        "filename": "src/mobile.special.nearby.scripts/nearbyErrorMessage.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-24T14:40:26Z",
+      "side": 1,
+      "message": "I split this out as it was contained enough to live in its own file and be referenced by Nearby...",
+      "revId": "61032a78168ea7dc65f05db3ca3b8cecbaf7984f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

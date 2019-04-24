@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aee3057f_6ad30000",
+        "filename": "src/mobile.special.nearby.scripts/Nearby.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-24T14:40:26Z",
+      "side": 0,
+      "message": "mpved to another file.",
+      "revId": "ea477b33d81d799b475b0c5141d5f1f2585fab5b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "45d172fa_f64b51ed",
+        "filename": "src/mobile.special.nearby.scripts/mobile.special.nearby.scripts.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-24T14:40:26Z",
+      "side": 0,
+      "message": "This is moved to hideInitialScreen function.",
+      "revId": "ea477b33d81d799b475b0c5141d5f1f2585fab5b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
