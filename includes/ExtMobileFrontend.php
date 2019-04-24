@@ -1,5 +1,6 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
 use Wikibase\Client\WikibaseClient;
 use Wikibase\DataModel\Entity\EntityDocument;
 use Wikibase\DataModel\Entity\ItemId;
@@ -167,7 +168,7 @@ class ExtMobileFrontend {
 	 * @return string|null
 	 */
 	public static function getWikibaseDescription( $item ) {
-		global $wgContLang;
+		$contLang = MediaWikiServices::getInstance()->getContentLanguage();
 
 		$entity = self::getWikibaseEntity( $item );
 
@@ -175,7 +176,7 @@ class ExtMobileFrontend {
 			if ( !$entity ) {
 				return null;
 			} else {
-				return $entity->getFingerprint()->getDescription( $wgContLang->getCode() )->getText();
+				return $entity->getFingerprint()->getDescription( $contLang->getCode() )->getText();
 			}
 		} catch ( Exception $ex ) {
 			return null;
