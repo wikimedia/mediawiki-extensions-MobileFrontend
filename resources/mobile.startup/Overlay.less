@@ -194,6 +194,17 @@
 			}
 		}
 
+		.continue,
+		.submit {
+			background-color: @colorProgressive;
+			color: #fff;
+
+			&[ disabled ] {
+				background-color: @colorGray12;
+				opacity: 1;
+			}
+		}
+
 		// Some overlays e.g. NotificationOverlay use an OOUI icon as the header action.
 		.oo-ui-widget {
 			margin-right: @iconGutterWidth;
@@ -202,11 +213,6 @@
 
 	button {
 		cursor: pointer;
-	}
-
-	.continue {
-		background-color: @colorProgressive;
-		color: #fff;
 	}
 
 	.submit {
