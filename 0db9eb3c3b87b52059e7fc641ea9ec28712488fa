@@ -34,6 +34,24 @@
       "revId": "0db9eb3c3b87b52059e7fc641ea9ec28712488fa",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "84894e61_58b76175",
+        "filename": "src/mobile.startup/page/PageJSONParser.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-24T02:19:25Z",
+      "side": 1,
+      "message": "I got a little thrown by the use of export (did you mean to mix export and require/module.exports?)\n\nYou could do module.exports \u003d function parse or export default pageJSONParser\n\n\nThis is fine if we\u0027re expecting more methods to appear here:\n``` const pageJSONParser \u003d require(\u0027./pageJSONParser\u0027)\n pageJSONParser.parse(\u0027{}\u0027)\n```",
+      "parentUuid": "d985b792_50a6ca99",
+      "revId": "0db9eb3c3b87b52059e7fc641ea9ec28712488fa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
