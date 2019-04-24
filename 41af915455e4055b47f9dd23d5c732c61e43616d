@@ -16,6 +16,24 @@
       "revId": "41af915455e4055b47f9dd23d5c732c61e43616d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ace11882_20fad25b",
+        "filename": "src/mobile.special.nearby.scripts/mobile.special.nearby.scripts.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-24T14:12:17Z",
+      "side": 0,
+      "message": "I can open a task now or alternatively I can attempt to fix this now with added risk.",
+      "parentUuid": "a8fedc8e_558d48d8",
+      "revId": "41af915455e4055b47f9dd23d5c732c61e43616d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
