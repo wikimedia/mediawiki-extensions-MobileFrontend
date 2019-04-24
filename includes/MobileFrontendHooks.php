@@ -424,8 +424,6 @@ class MobileFrontendHooks {
 			// and signal to API requests that the origin parameter should be used.
 			// A boolean would also suffice here but let's keep things simple and pass verbatim
 			'wgMFContentProviderScriptPath' => $config->get( 'MFContentProviderScriptPath' ),
-			// BlockMessage.js
-			'wgEnableBlockNoticeStats' => $config->get( 'EnableBlockNoticeStats' ),
 		];
 		return $vars;
 	}

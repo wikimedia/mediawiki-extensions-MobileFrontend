@@ -60,20 +60,6 @@ mfExtend( BlockMessage, Drawer, {
 		icon: Icon.prototype.template
 	} ),
 	/**
-	 * @inheritdoc
-	 * @memberof BlockMessage
-	 * @instance
-	 */
-	onShowDrawer: function () {
-		var wiki = mw.config.get( 'wgDBname' );
-
-		Drawer.prototype.onShowDrawer.apply( this );
-
-		if ( mw.config.get( 'wgEnableBlockNoticeStats' ) ) {
-			mw.track( 'counter.MediaWiki.BlockNotices.' + wiki + '.MobileFrontend.shown', 1 );
-		}
-	},
-	/**
 	 * @memberof BlockMessage
 	 * @instance
 	 */
