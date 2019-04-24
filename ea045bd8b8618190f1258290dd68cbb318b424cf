@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c538b7a0_5250bb41",
+        "filename": "src/mobile.special.nearby.scripts/Nearby.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 159,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-24T11:44:00Z",
+      "side": 1,
+      "message": "A future change can move this code out of here altogether. As I dissect this component and reveal the promisedView pattern it becomes clear this component is a little redundant. The API request should be moved to src/mobile.special.nearby.scripts/mobile.special.nearby.scripts.js and use MessageBox and WatchstarPageList directly. I see this as an interim step in that direction.",
+      "revId": "ea045bd8b8618190f1258290dd68cbb318b424cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "69523d46_202ec462",
+        "filename": "src/mobile.special.nearby.scripts/mobile.special.nearby.scripts.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-24T11:44:00Z",
+      "side": 1,
+      "message": "The hashchange event is needed as previously back/forward had no effect. If this is a problem I can pull this out into its own separate patchset.",
+      "revId": "ea045bd8b8618190f1258290dd68cbb318b424cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a8fedc8e_558d48d8",
+        "filename": "src/mobile.special.nearby.scripts/mobile.special.nearby.scripts.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-24T11:44:00Z",
+      "side": 0,
+      "message": "This wasn\u0027t working at all so I decided to throw it out. It\u0027s dead code.\nWe can restore it later if necessary.",
+      "revId": "41af915455e4055b47f9dd23d5c732c61e43616d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
