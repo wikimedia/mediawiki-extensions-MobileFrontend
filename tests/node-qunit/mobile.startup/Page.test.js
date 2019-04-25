@@ -18,20 +18,6 @@ var
 
 QUnit.module( 'MobileFrontend Page', {
 	beforeEach: function () {
-		var ambox = function ( text ) {
-				return '<div class="ambox">' + text + '</div>';
-			},
-			sectionHeading = function ( text ) {
-				return '<h2 class="section-heading">' + text + '</h2>';
-			},
-			sectionSubHeading = function ( text, level ) {
-				var l = level || 'h3';
-				return '<' + l + '>' + text + '</' + l + '>';
-			},
-			sectionBody = function ( i, html ) {
-				return '<div class="mf-section-' + i + '">' + html + '</div>';
-			};
-
 		sandbox = sinon.sandbox.create();
 		dom.setUp( sandbox, global );
 		mw.setUp( sandbox, global );
@@ -43,84 +29,86 @@ QUnit.module( 'MobileFrontend Page', {
 
 		stubPage = new Page( {
 			el: util.parseHTML( PARSER_OUTPUT ).html(
-				'<p>lead</p>' + ambox( 'a0' )
+				'<p>lead</p><div class="ambox">a0</div>'
 			)
 		} );
 		mobileTocPage = new Page( {
-			el: util.parseHTML( PARSER_OUTPUT ).html(
-				sectionBody( 0, ambox( 'a0' ) + '<p>lead</p>' + MOBILE_TOC ) +
-				// section = 1
-				sectionHeading( '1' ) +
-				sectionBody( 1,
-					ambox( 'a1' ) +
-					// section = 2
-					sectionSubHeading( '1.1' ) +
-					ambox( 'a1.1' )
-				)
-			)
+			el: util.parseHTML( PARSER_OUTPUT ).html( `
+				<div class="mf-section-0">
+					<div class="ambox">a0</div>
+					<p>lead</p>
+					${MOBILE_TOC}
+				</div>
+				<h2 class="section-heading">1</h2>
+				<div class="mf-section-1">
+					<div class="ambox">a1</div>
+					<h3>1.1</h3>
+					<div class="ambox">a1.1</div>
+				</div>
+			` )
 		} );
 		desktopPage = new Page( {
-			el: util.parseHTML( PARSER_OUTPUT ).html(
-				'<p>lead</p>' +
-				ambox( 'a0' ) +
-				// section = 1
-				sectionSubHeading( '1', 'h2' ) +
-				ambox( 'a1' ) +
-				// section = 2
-				sectionSubHeading( '1.1' ) +
-				ambox( 'a1.1' )
-			)
+			el: util.parseHTML( PARSER_OUTPUT ).html( `
+				<p>lead</p>
+				<div class="ambox">a0</div>
+				<h2>1</h2>
+				<div class="ambox">a1</div>
+				<h3>1.1</h3>
+				<div class="ambox">a1.1</div>
+			` )
 		} );
 		sectionPage = new Page( {
-			el: util.parseHTML( PARSER_OUTPUT ).html(
-				sectionBody( 0, '<p>lead</p>' + ambox( 'a0' ) ) +
-				// section = 1
-				sectionHeading( '1' ) +
-				sectionBody( 1,
-					ambox( 'a1' ) +
-					// section = 2
-					sectionSubHeading( '1.1' ) +
-					ambox( 'a1.1' ) +
-					// section = 3
-					sectionSubHeading( '1.1.1', 'h4' ) +
-					ambox( 'a1.1.1' ) +
-					// section = 4
-					sectionSubHeading( '1.1.2', 'h4' ) +
-					ambox( 'a1.1.2' ) +
-					// section = 5
-					sectionSubHeading( '1.2' ) +
-					ambox( 'a1.1' )
-				) +
-				// section = 6
-				sectionHeading( '2' ) +
-				sectionBody( 6,
-					ambox( 'a2' )
-				) +
-				// section 7
-				sectionHeading( '3' ) +
-				sectionBody( 7, ambox( 'a3' ) ) +
-				// section 8
-				sectionHeading( 'Section with nested Ambox' ) +
-				sectionBody( 8,
-					ambox(
-						'<p>nested-ambox-parent,</p>' +
-						ambox( 'nested-ambox-1,' ) +
-						ambox( 'nested-ambox-2' )
-					) ) +
-				// section 9
-				sectionHeading( 'Sub-section with nested Ambox' ) +
-					sectionBody( 9,
-						ambox(
-							'<p>nested-ambox-parent,</p>' +
-							ambox( 'nested-ambox-1,' ) +
-							ambox( 'nested-ambox-2' )
-						) +
-						// section 10
-						sectionSubHeading( 'subsection heading' ) +
-						// section 11
-						sectionSubHeading( 'Another subsection heading' )
-					)
-			) // end .html()
+			el: util.parseHTML( PARSER_OUTPUT ).html( `
+				<div class="mf-section-0">
+					<p>lead</p>
+					<div class="ambox">a0</div>
+				</div>
+
+				<h2 class="section-heading">1</h2>
+				<div class="mf-section-1">
+					<div class="ambox">a1</div>
+
+					<h3>1.1</h3>
+					<div class="ambox">a1.1</div>
+
+					<h4>1.1.1</h4>
+					<div class="ambox">a1.1.1</div>
+
+					<h4>1.1.2</h4>
+					<div class="ambox">a1.1.2</div>
+
+					<h3>1.2</h3>
+					<div class="ambox">a1.1</div>
+				</div>
+
+				<h2 class="section-heading">2</h2>
+				<div class="mf-section-6"><div class="ambox">a2</div></div>
+
+				<h2 class="section-heading">3</h2>
+				<div class="mf-section-7"><div class="ambox">a3</div></div>
+
+				<h2 class="section-heading">Section with nested Ambox</h2>
+				<div class="mf-section-8">
+					<div class="ambox">
+						<p>nested-ambox-parent,</p>
+						<div class="ambox">nested-ambox-1,</div>
+						<div class="ambox">nested-ambox-2</div>
+					</div>
+				</div>
+
+				<h2 class="section-heading">Sub-section with nested Ambox</h2>
+				<div class="mf-section-9">
+					<div class="ambox">
+						<p>nested-ambox-parent,</p>
+						<div class="ambox">nested-ambox-1,</div>
+						<div class="ambox">nested-ambox-2</div>
+					</div>
+
+					<h3>subsection heading</h3>
+
+					<h3>Another subsection heading</h3>
+				</div>
+			` ) // end .html()
 		} ); // end new Page();
 	},
 	afterEach: function () {
@@ -191,14 +179,13 @@ QUnit.test( '#findInSectionLead', function ( assert ) {
 	} );
 
 	[
-		[ 8, '.ambox', 'nested-ambox-parent,nested-ambox-1,nested-ambox-2', 'Nested elements in section' ],
-		[ 9, '.ambox', 'nested-ambox-parent,nested-ambox-1,nested-ambox-2', 'Nested elements in subsection' ]
+		[ 8, '.ambox', /[\s]*nested-ambox-parent,[\s]*nested-ambox-1,\s*nested-ambox-2[\s]*/, 'Nested elements in section' ],
+		[ 9, '.ambox', /[\s]*nested-ambox-parent,[\s]*nested-ambox-1,[\s]*nested-ambox-2[\s]*/, 'Nested elements in subsection' ]
 	].forEach( function ( testcase ) {
 		var result = sectionPage.findChildInSectionLead( testcase[0], testcase[1] );
-		assert.strictEqual(
+		sinon.assert.match(
 			result.not( result.children() ).text(),
-			testcase[2],
-			'Mobile: Found correct text in test case:' + testcase[3]
+			testcase[2]
 		);
 	} );
 
