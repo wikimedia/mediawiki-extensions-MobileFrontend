@@ -10,7 +10,6 @@ const
 	srcMapExt = '.map.json',
 	ENTRIES = {
 		tests: 'tests.mobilefrontend',
-		hogan: 'mediawiki.template.hogan',
 		startup: 'mobile.startup',
 		categories: 'mobile.categories.overlays',
 		editor: 'mobile.editor.overlay',
@@ -65,7 +64,6 @@ module.exports = ( env, argv ) => ( {
 		// each entry which is inefficient. This chunk should only change when Webpack or this
 		// configuration changes.
 
-		[ENTRIES.hogan]: './src/mediawiki.template.hogan/mediawiki.template.hogan.js',
 		[ENTRIES.startup]: './src/mobile.startup/mobile.startup.js',
 		// Make some chunks which will be lazy loaded by resource loader.
 		// If we utilize webpack lazy loading instead of resource loader lazy
@@ -124,7 +122,7 @@ module.exports = ( env, argv ) => ( {
 		namedModules: true,
 
 		// Generate a single Webpack bootstrap chunk for ResourceLoader modules to share. This will
-		// be packaged inside the mediawiki.template.hogan module which should be a dependency for
+		// be packaged inside the mobile.startup module which should be a dependency for
 		// all modules. The inefficient  alternative is for each module to bundle its own runtime.
 		// The terms bootloader and runtime are used interchangeably.
 		runtimeChunk: { name: 'mobile.startup.runtime' },

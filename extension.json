@@ -158,20 +158,6 @@
 				"resources/mobile.userpage.styles/userpage.less"
 			]
 		},
-		"mediawiki.template.hogan": {
-			"deprecated": "use `mediawiki.template.mustache` instead.",
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"dependencies": [
-				"mediawiki.template.mustache"
-			],
-			"scripts": [
-				"resources/dist/mobile.startup.runtime.js",
-				"resources/dist/mediawiki.template.hogan.js"
-			]
-		},
 		"mobile.startup.images": {
 			"class": "ResourceLoaderImageModule",
 			"selectorWithoutVariant": ".mw-ui-icon-mf-{name}:before",
@@ -242,7 +228,7 @@
 				"desktop"
 			],
 			"dependencies": [
-				"mediawiki.template.hogan",
+				"mediawiki.template.mustache",
 				"mediawiki.ui.button",
 				"mediawiki.ui.icon",
 				"mediawiki.Title",
@@ -318,6 +304,7 @@
 				"vector": "skinStyles/mobile.startup/vector.less"
 			},
 			"scripts": [
+				"resources/dist/mobile.startup.runtime.js",
 				"resources/dist/mobile.common.js",
 				"resources/dist/mobile.startup.js"
 			]

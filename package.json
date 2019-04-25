@@ -63,10 +63,6 @@
       "maxSize": "0.8KB"
     },
     {
-      "path": "resources/dist/mediawiki.template.hogan.js",
-      "maxSize": "0.4KB"
-    },
-    {
       "path": "resources/dist/mobile.common.js",
       "maxSize": "16.0KB"
     },
