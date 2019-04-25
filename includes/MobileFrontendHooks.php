@@ -62,7 +62,7 @@ class MobileFrontendHooks {
 			$skin = new $skinName( $context );
 		} else {
 			$skin = SkinFactory::getDefaultInstance()
-				->makeSkin( Skin::normalizeKey( $config->get( 'FallbackSkin' ) ) );
+				->makeSkin( Skin::normalizeKey( $config->get( 'DefaultSkin' ) ) );
 		}
 		return $skin;
 	}

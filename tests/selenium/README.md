@@ -41,6 +41,19 @@ To run only test(s) which name contains string TEST-NAME, run this from mediawik
 
 Make sure Chromedriver is running when executing the above command.
 
+## Run tests against the beta cluster
+Command-line options can be specified that override the wdio.conf.js config file. This makes it easy to run tests against a different url without touching the config. If you're running MediaWiki on a different host/post or with a different user/password, this is how you supply those arguments:
+
+```
+MEDIAWIKI_PASSWORD=<password> MEDIAWIKI_USER="<username>"  MW_SERVER=<server> npm run selenium-test
+```
+To run tests as the Selenium user on the beta cluster, visit this page to get the "Selenium user" password and run the tests with these arguments.
+
+```
+MEDIAWIKI_PASSWORD=<password> MEDIAWIKI_USER="Selenium user"  MW_SERVER=https://en.wikipedia.beta.wmflabs.org npm run selenium-test
+```
+
+
 ## Step 2 - add boilerplate for missing steps
 Run the feature in cucumber
 ```
