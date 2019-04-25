@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1492da27_cfa5fa10",
+        "filename": "extension.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 159,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-25T04:08:57Z",
+      "side": 1,
+      "message": "We will remove this after https://gerrit.wikimedia.org/r/506338 has landed and leaving some time so caching doesn\u0027t become a problem. https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/506340/",
+      "revId": "df92f02af1f17373ea45dd96b66978e2dcaf1626",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3f14b2b9_ecade3eb",
+        "filename": "extension.json",
+        "patchSetId": 5
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-25T04:08:57Z",
+      "side": 1,
+      "message": "Minerva still uses mediawiki.template.hogan and will until the Hogan templates are renamed with the Mustache suffix. This is done in https://gerrit.wikimedia.org/r/506338",
+      "revId": "df92f02af1f17373ea45dd96b66978e2dcaf1626",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2849978f_892de575",
+        "filename": "src/mobile.startup/util.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 179,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-25T04:08:57Z",
+      "side": 1,
+      "message": "here we swap Hogan for Mustache. Seamless!",
+      "revId": "df92f02af1f17373ea45dd96b66978e2dcaf1626",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "79adac08_9181d580",
+        "filename": "tests/node-qunit/mobile.startup/View.test.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-25T04:08:57Z",
+      "side": 1,
+      "message": "All tests now use util.template - it makes it easier to change in future by not tying it to the template language.",
+      "revId": "df92f02af1f17373ea45dd96b66978e2dcaf1626",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "60df970b_21957e2e",
+        "filename": "tests/node-qunit/utils/mockMediaWiki.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-25T04:08:57Z",
+      "side": 1,
+      "message": "This mirrors how this code looks in core.\nHopefully in future, template partials will be less important and less used in MobileFrontend as we move towards adoption and we can cleanup this logic.",
+      "revId": "df92f02af1f17373ea45dd96b66978e2dcaf1626",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

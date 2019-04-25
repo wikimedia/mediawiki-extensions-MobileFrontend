@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fe35fa1f_b1a9aba9",
+        "filename": "tests/node-qunit/mobile.startup/CtaDrawer.test.html.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-25T04:08:57Z",
+      "side": 0,
+      "message": "Mustache handles this differently - and this seems like a good thing! No empty title attributes anymore!",
+      "revId": "4f716ddeb63cd81dfab314c543df36f9bdef252b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
