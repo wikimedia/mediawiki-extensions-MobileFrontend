@@ -2,6 +2,7 @@
 var EditorOverlayBase = require( './EditorOverlayBase' ),
 	EditorGateway = require( './EditorGateway' ),
 	mfExtend = require( '../mobile.startup/mfExtend' ),
+	router = mw.loader.require( 'mediawiki.router' ),
 	util = require( '../mobile.startup/util' );
 
 /**
@@ -156,8 +157,9 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 	 * Loads an {EditorOverlay} and replaces the existing {VisualEditorOverlay}
 	 * @memberof VisualEditorOverlay
 	 * @instance
+	 * @param {jQuery.Promise} [dataPromise] Optional promise for loading content
 	 */
-	switchToSourceEditor: function () {
+	switchToSourceEditor: function ( dataPromise ) {
 		var self = this,
 			EditorOverlay = this.EditorOverlay;
 		this.log( {
@@ -173,8 +175,17 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 		self.applyHeaderOptions( self.options, false );
 		// Unset classes from other editor
 		delete self.options.className;
+		if ( dataPromise ) {
+			// If switching with edits we can't stay in section editing, as a VE edit
+			// can always affect the whole document (e.g. references)
+			self.options.sectionId = null;
+			router.navigateTo( document.title, {
+				path: '#/editor/all',
+				useReplaceState: true
+			} );
+		}
 		self.switching = true;
-		self.overlayManager.replaceCurrent( new EditorOverlay( self.options ) );
+		self.overlayManager.replaceCurrent( new EditorOverlay( self.options, dataPromise ) );
 		self.switching = false;
 	},
 	/**

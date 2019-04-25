@@ -12,6 +12,7 @@ var util = require( '../mobile.startup/util' ),
  * @param {number} options.sectionId the id of the section to operate edits on.
  * @param {number} [options.oldId] revision to operate on. If absent defaults to latest.
  * @param {boolean} [options.isNewPage] whether the page being created is new
+ * @param {boolean} [options.fromModified] whether the page was loaded in a modified state
  */
 function EditorGateway( options ) {
 	this.api = options.api;
@@ -20,7 +21,8 @@ function EditorGateway( options ) {
 	this.oldId = options.oldId;
 	// return an empty section for new pages
 	this.content = options.isNewPage ? '' : undefined;
-	this.hasChanged = false;
+	this.fromModified = options.fromModified;
+	this.hasChanged = options.fromModified;
 }
 
 EditorGateway.prototype = {
@@ -131,7 +133,7 @@ EditorGateway.prototype = {
 	 * @param {string} content New section content.
 	 */
 	setContent: function ( content ) {
-		if ( this.originalContent !== content ) {
+		if ( this.originalContent !== content || this.fromModified ) {
 			this.hasChanged = true;
 		} else {
 			this.hasChanged = false;

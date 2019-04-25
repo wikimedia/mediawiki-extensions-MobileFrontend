@@ -20,17 +20,20 @@ var EditorOverlayBase = require( './EditorOverlayBase' ),
  * @extends EditorOverlayBase
  *
  * @param {Object} options Configuration options
+ * @param {jQuery.Promise} [dataPromise] Optional promise for loading content
  */
-function EditorOverlay( options ) {
+function EditorOverlay( options, dataPromise ) {
 	this.isFirefox = /firefox/i.test( window.navigator.userAgent );
 	this.gateway = new EditorGateway( {
 		api: options.api,
 		title: options.title,
 		sectionId: options.sectionId,
 		oldId: options.oldId,
-		isNewPage: options.isNewPage
+		isNewPage: options.isNewPage,
+		fromModified: !!dataPromise
 	} );
 	this.readOnly = !!options.oldId; // If old revision, readOnly mode
+	this.dataPromise = dataPromise;
 	if ( this.isVisualEditorEnabled() ) {
 		options.editSwitcher = true;
 	}
@@ -50,6 +53,9 @@ function EditorOverlay( options ) {
 			options
 		)
 	);
+	if ( this.gateway.fromModified ) {
+		this.$el.find( '.continue, .submit' ).prop( 'disabled', false );
+	}
 }
 
 mfExtend( EditorOverlay, EditorOverlayBase, {
@@ -490,7 +496,7 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 		this.showSpinner();
 		$el.addClass( 'overlay-loading' );
 
-		this.gateway.getContent()
+		( this.dataPromise || this.gateway.getContent() )
 			.then( function ( result ) {
 				var block, message,
 					content = result.text;

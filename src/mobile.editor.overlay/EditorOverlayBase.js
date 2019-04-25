@@ -468,7 +468,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 	hide: function () {
 		var windowManager,
 			self = this;
-		if ( this.hasChanged() ) {
+		if ( this.hasChanged() && !this.switching ) {
 			windowManager = OO.ui.getWindowManager();
 			windowManager.addWindows( [ new mw.widgets.AbandonEditDialog() ] );
 			return windowManager.openWindow( 'abandonedit' )
