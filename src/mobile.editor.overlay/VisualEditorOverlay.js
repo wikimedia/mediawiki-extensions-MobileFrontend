@@ -102,6 +102,13 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 			this.$el.addClass( 'loading' );
 		}
 
+		if ( this.options.isAnon ) {
+			this.$anonWarning = this.createAnonWarning( this.options );
+			this.$el.append( this.$anonWarning );
+			this.$el.find( '.overlay-content' ).hide();
+			this.$el.removeClass( 'loading' );
+		}
+
 		this.target = ve.init.mw.targetFactory.create( 'article', this, {
 			$element: this.$el,
 			// || null so that scrolling is not triggered for the lead (0) section
@@ -139,6 +146,15 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 	onClickBack: function () {
 		EditorOverlayBase.prototype.onClickBack.apply( this, arguments );
 		this.switchToEditor();
+	},
+	/**
+	 * @inheritdoc
+	 * @memberof VisualEditorOverlay
+	 * @instance
+	 */
+	onClickAnonymous: function () {
+		this.$anonWarning.hide();
+		this.$el.find( '.overlay-content' ).show();
 	},
 
 	/**

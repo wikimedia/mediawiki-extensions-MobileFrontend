@@ -1,7 +1,9 @@
+/* global $ */
 var Overlay = require( '../mobile.startup/Overlay' ),
 	util = require( '../mobile.startup/util' ),
 	PageGateway = require( '../mobile.startup/PageGateway' ),
 	Icon = require( '../mobile.startup/Icon' ),
+	Button = require( '../mobile.startup/Button' ),
 	toast = require( '../mobile.startup/toast' ),
 	saveFailureMessage = require( './saveFailureMessage' ),
 	mfExtend = require( '../mobile.startup/mfExtend' ),
@@ -65,7 +67,8 @@ function EditorOverlayBase( params ) {
 					{
 						'click .back': 'onClickBack',
 						'click .continue': 'onClickContinue',
-						'click .submit': 'onClickSubmit'
+						'click .submit': 'onClickSubmit',
+						'click .anonymous': 'onClickAnonymous'
 					},
 					params.events
 				)
@@ -461,6 +464,12 @@ mfExtend( EditorOverlayBase, Overlay, {
 		this[this.nextStep]();
 	},
 	/**
+	 * "Edit without logging in" button click handler
+	 * @memberof EditorOverlayBase
+	 * @instance
+	 */
+	onClickAnonymous: function () {},
+	/**
 	 * @memberof EditorOverlayBase
 	 * @instance
 	 * @param {Function} exit Callback to exit the overlay
@@ -503,6 +512,59 @@ mfExtend( EditorOverlayBase, Overlay, {
 		this.allowCloseWindow.release();
 		mw.hook( 'mobileFrontend.editorClosed' ).fire();
 		exit();
+	},
+	/**
+	 * Sets additional values used for anonymous editing warning.
+	 * @memberof EditorOverlayBase
+	 * @instance
+	 * @param {Object} options
+	 * @return {jQuery.Element}
+	 */
+	createAnonWarning: function ( options ) {
+		var $actions = $( '<div>' ).addClass( 'actions' ),
+			$anonWarning = $( '<div>' ).addClass( 'anonwarning content' ).append(
+				new MessageBox( {
+					className: 'warningbox anon-msg',
+					msg: mw.msg( 'mobile-frontend-editor-anonwarning' )
+				} ).$el,
+				$actions
+			),
+			params = util.extend( {
+			// use wgPageName as this includes the namespace if outside Main
+				returnto: options.returnTo || mw.config.get( 'wgPageName' ),
+				returntoquery: 'action=edit&section=' + options.sectionId,
+				warning: 'mobile-frontend-edit-login-action'
+			}, options.queryParams ),
+			signupParams = util.extend( {
+				type: 'signup',
+				warning: 'mobile-frontend-edit-signup-action'
+			}, options.signupQueryParams ),
+			anonymousEditorActions = [
+				new Button( {
+					label: mw.msg( 'mobile-frontend-editor-anon' ),
+					block: true,
+					additionalClassNames: 'anonymous progressive',
+					progressive: true
+				} ),
+				new Button( {
+					block: true,
+					href: mw.util.getUrl( 'Special:UserLogin', params ),
+					label: mw.msg( 'mobile-frontend-watchlist-cta-button-login' )
+				} ),
+				new Button( {
+					block: true,
+					href: mw.util.getUrl( 'Special:UserLogin', util.extend( params, signupParams ) ),
+					label: mw.msg( 'mobile-frontend-watchlist-cta-button-signup' )
+				} )
+			];
+
+		$actions.append(
+			anonymousEditorActions.map( function ( action ) {
+				return action.$el;
+			} )
+		);
+
+		return $anonWarning;
 	},
 	/**
 	 * Checks whether the state of the thing being edited as changed. Expects to be
