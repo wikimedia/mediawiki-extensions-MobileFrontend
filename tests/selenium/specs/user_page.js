@@ -10,8 +10,9 @@ const { iAmUsingTheMobileSite,
 	username = 'Selenium_user_' + Util.getTestString(),
 	password = Util.getTestString();
 
+// Flaky per T221860
 // @chrome @firefox @test2.m.wikipedia.org @vagrant @login
-describe( 'User:<username>', () => {
+describe.skip( 'User:<username>', () => {
 
 	before( () => {
 		browser.deleteCookie();
