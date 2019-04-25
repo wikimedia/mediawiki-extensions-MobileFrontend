@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0f3e0d17_cf488c71",
+        "filename": "src/mobile.editor.overlay/VisualEditorOverlay.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 183,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2019-04-25T18:53:10Z",
+      "side": 1,
+      "message": "This doesn\u0027t seem necessary – passing `useReplaceState: true` below seems to also prevent a second editor from loading on top. And disabling the router this way seems to break back/forward navigation (using \"Back\" no longer closes the editor).",
+      "range": {
+        "startLine": 182,
+        "startChar": 0,
+        "endLine": 183,
+        "endChar": 26
+      },
+      "revId": "f680a79f643112ded6ca6c3253a4eca3d23e6ae6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
