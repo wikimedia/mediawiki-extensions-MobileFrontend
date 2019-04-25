@@ -49,3 +49,9 @@ QUnit.test( 'getReference() checking encoded reference', function ( assert ) {
 			'If an encoded ID parameter is given it still resolves correctly.' );
 	} );
 } );
+
+QUnit.test( 'getReference() adds an extra class for external links', function ( assert ) {
+	return referencesGateway.getReference( '#cite_note-2', page ).then( function ( ref ) {
+		assert.strictEqual( ref.text.includes( referencesGateway.EXTERNAL_LINK_CLASS ), true );
+	} );
+} );

@@ -17,7 +17,7 @@ function ReferencesDrawer( props ) {
 		this,
 		util.extend(
 			{
-				className: 'drawer position-fixed text references',
+				className: 'drawer position-fixed text references-drawer',
 				events: { 'click sup a': 'showNestedReference' }
 			},
 			props
@@ -40,7 +40,7 @@ mfExtend( ReferencesDrawer, Drawer, {
 		citation: new Icon( {
 			isSmall: true,
 			name: 'citation-invert',
-			additionalClassNames: 'text',
+			additionalClassNames: 'references-drawer__title',
 			hasText: true,
 			label: mw.msg( 'mobile-frontend-references-citation' )
 		} ).toHtmlString(),
@@ -63,14 +63,20 @@ mfExtend( ReferencesDrawer, Drawer, {
 	 * @instance
 	 */
 	template: util.template( `
-<div class="cite">
+<div class="references-drawer__header">
 	{{{citation}}}
 	{{{cancelButton}}}
 </div>
-{{#error}}<div class="{{errorClassName}}">{{/error}}
+{{#error}}
+	<div class="{{errorClassName}}">
+{{/error}}
 <sup>{{title}}</sup>
-{{#text}}{{{text}}}{{/text}}
-{{^text}}{{{spinner}}}{{/text}}
+{{#text}}
+	{{{text}}}
+{{/text}}
+{{^text}}
+	{{{spinner}}}
+{{/text}}
 {{#error}}</div>{{/error}}
 	` ),
 	/**

@@ -70,6 +70,14 @@ referencesPage = `<div id="mfe-test-references">
 			<a href="#cite_ref-1">↑</a>
 		</span> <span class="reference-text">found</span>
 	</li>
+	<li id="cite_note-2">
+		<span class="mw-cite-backlink">
+			<a href="#cite_ref-1">^</a>
+		</span>
+		<span class="reference-text">
+			<a class="external text" href="">Hi there</a>
+		</span>
+	</li>
 </ol>
 </div>`;
 

@@ -8,22 +8,18 @@
 	overflow: hidden;
 }
 
-.drawer.references {
+.drawer.references-drawer {
 	background-color: @colorGray1;
 	color: @colorGray12;
 	max-height: 400px;  // or half of window height, whichever is smaller (see ReferencesDrawerBeta.js)
 	overflow-y: auto;
 	padding: @drawerPadding;
 
-	&.text {
-		font-size: 1em;
-	}
-
 	a {
-		color: @colorProgressive;
+		color: #69f;
 	}
 
-	.cite {
+	.references-drawer__header {
 		padding-bottom: 20px;
 
 		&:after {
@@ -31,32 +27,31 @@
 			display: table;
 			clear: both;
 		}
+	}
 
-		.text {
-			color: @colorGray7;
-			cursor: default;
-			letter-spacing: 0.2em;
-			float: left;
-			font-size: 0.75em;
-			padding-top: 0.25em;
-			text-transform: uppercase;
-		}
+	.references-drawer__title {
+		color: @colorGray7;
+		cursor: default;
+		letter-spacing: 0.2em;
+		font-size: 0.75em;
+		padding-top: 0.25em;
+		text-transform: uppercase;
+	}
 
-		.cancel {
-			@extraPadding: 1em;
-			cursor: pointer;
-			font-size: 0.8em;  // we want a smaller icon
-			// Compensate for the padding.
-			// Top and bottom margins are for the padding we're adding below.
-			// The right margin is for the 1em margin of icon:before
-			margin: -@extraPadding -@extraPadding -@extraPadding 0; /* stylelint-disable-line value-keyword-case */
-			// Make the tappable area bigger. No need to add left and right paddings because
-			// the icon:before already has 1em margin on both sides
-			padding: @extraPadding 0;
-			position: absolute;
-			right: @drawerPadding;
-			top: @drawerPadding;
-		}
+	.cancel {
+		@extraPadding: 1em;
+		cursor: pointer;
+		font-size: 0.8em;  // we want a smaller icon
+		// Compensate for the padding.
+		// Top and bottom margins are for the padding we're adding below.
+		// The right margin is for the 1em margin of icon:before
+		margin: -@extraPadding -@extraPadding -@extraPadding 0; /* stylelint-disable-line value-keyword-case */
+		// Make the tappable area bigger. No need to add left and right paddings because
+		// the icon:before already has 1em margin on both sides
+		padding: @extraPadding 0;
+		position: absolute;
+		right: @drawerPadding;
+		top: @drawerPadding;
 	}
 
 	.mw-cite-backlink {

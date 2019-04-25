@@ -16,6 +16,12 @@ function ReferencesHtmlScraperGateway() {
 mfExtend( ReferencesHtmlScraperGateway, ReferencesGateway, {
 	/**
 	 * @memberof ReferencesHtmlScraperGateway
+	 * @property EXTERNAL_LINK_CLASS a CSS class to place on external links
+	 * in addition to the default 'external' class.
+	 */
+	EXTERNAL_LINK_CLASS: 'external--reference',
+	/**
+	 * @memberof ReferencesHtmlScraperGateway
 	 * @instance
 	 * @param {string} id of a DOM element in the page with '#' prefix.
 	 *  can be encoded or decoded.
@@ -28,6 +34,7 @@ mfExtend( ReferencesHtmlScraperGateway, ReferencesGateway, {
 
 		$el = $container.find( '#' + util.escapeSelector( id.substr( 1 ) ) );
 		if ( $el.length ) {
+			$el.find( '.external' ).addClass( this.EXTERNAL_LINK_CLASS );
 			result.resolve( { text: $el.html() } );
 		} else {
 			result.reject( ReferencesGateway.ERROR_NOT_EXIST );
