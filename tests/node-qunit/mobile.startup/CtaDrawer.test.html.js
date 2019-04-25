@@ -4,7 +4,6 @@ module.exports = {
 		<div class=" drawer position-fixed view-border-box ">
 			<div
 				class=" mw-ui-icon mw-ui-icon-mf-arrow mw-ui-icon-element cancel "
-				title=""
 			> </div>
 			<p> </p>
 			<a href=" logIn " class=" mw-ui-button mw-ui-progressive ">
@@ -21,7 +20,6 @@ module.exports = {
 		<div class=" drawer position-fixed view-border-box ">
 			<div
 				class=" mw-ui-icon mw-ui-icon-mf-arrow mw-ui-icon-element cancel "
-				title=""
 			> </div>
 			<p> </p>
 			<a href=" customLogIn " class=" mw-ui-button mw-ui-progressive ">

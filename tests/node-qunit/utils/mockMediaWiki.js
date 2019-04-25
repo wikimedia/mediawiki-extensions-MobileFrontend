@@ -7,10 +7,7 @@ var
 		project: 4,
 		project_talk: 5
 	}, /* eslint-enable camelcase */
-	hogan = require( 'hogan.js' ),
-	path = require( 'path' ),
-	fs = require( 'fs' ),
-	resourceLoaderModules = require( '../../../extension.json' ).ResourceModules;
+	mustache = require( 'mustache' );
 
 function Api() {}
 Api.prototype.get = function () {};
@@ -62,21 +59,18 @@ module.exports = function newMockMediaWiki() {
 		msg: function ( id ) { return id; },
 		now: Date.now.bind( Date ),
 		template: {
-			// This template stub assumes templates will all be hogan files
-			// and locatable.
-			get: function ( rlModule, name ) {
-				var templatePath = resourceLoaderModules[ rlModule ].templates[ name ],
-					rootPath = path.resolve( __dirname, '../../../' ),
-					templateString = fs.readFileSync(
-						path.join( rootPath, templatePath ),
-						'utf8'
-					);
-				// eslint-disable-next-line no-console
-				console.warn( 'Use of template.get is discouraged. Use template strings instead' );
-				return hogan.compile( templateString );
-			},
-			compile: function ( templateString, ext ) {
-				return hogan.compile( templateString.trim(), ext );
+			compile: function ( templateString ) {
+				return {
+					getSource: () => templateString,
+					render: ( data, partials ) => {
+						const partialSource = {};
+						// Map MobileFrontend templates to partial strings
+						Object.keys( partials || {} ).forEach( ( key ) => {
+							partialSource[ key ] = partials[ key ].getSource();
+						} );
+						return mustache.render( templateString.trim(), data, partialSource );
+					}
+				};
 			}
 		},
 		user: {
