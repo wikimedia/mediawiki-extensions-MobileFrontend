@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c9164cc4_a3c60877",
+        "filename": "src/mobile.editor.overlay/VisualEditorOverlay.js",
+        "patchSetId": 18
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2019-04-25T20:13:36Z",
+      "side": 1,
+      "message": "I\u0027m honestly not sure if this is right. It\u0027s definitely hard to understand. I think we can solve this differently, let me amend…",
+      "range": {
+        "startLine": 130,
+        "startChar": 0,
+        "endLine": 131,
+        "endChar": 17
+      },
+      "revId": "ff7cd4079cdd2558cfb6bfc15872ae55cfe5e1cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
