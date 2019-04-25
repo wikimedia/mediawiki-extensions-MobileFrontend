@@ -47,7 +47,7 @@ mfExtend( BlockMessage, Drawer, {
 		creatorHeader: function () {
 			// The gender is the subject (the blockee) not the object (the blocker).
 			return mw.msg( 'mobile-frontend-editor-blocked-drawer-creator-header',
-				this.user.options.gender || 'unknown' );
+				mw.user.options.get( 'gender' ) );
 		},
 		expiryHeader: mw.msg( 'mobile-frontend-editor-blocked-drawer-expiry-header' )
 	} ),

@@ -26,10 +26,11 @@ function EditorGateway( options ) {
 }
 
 EditorGateway.prototype = {
+
 	/**
 	 * Get the block (if there is one) from the result.
 	 * @memberof EditorGateway
-	 * @param {Object} pageObj
+	 * @param {Object} pageObj Page object
 	 * @return {Object|null}
 	 */
 	getBlockInfo: function ( pageObj ) {
@@ -71,8 +72,7 @@ EditorGateway.prototype = {
 		function resolve() {
 			return util.Deferred().resolve( {
 				text: self.content || '',
-				blockinfo: self.blockinfo,
-				userinfo: self.userinfo
+				blockinfo: self.blockinfo
 			} );
 		}
 
@@ -81,13 +81,11 @@ EditorGateway.prototype = {
 		} else {
 			options = actionParams( {
 				prop: [ 'revisions', 'info' ],
-				meta: 'userinfo',
 				rvprop: [ 'content', 'timestamp' ],
 				titles: self.title,
 				// get block information for this user
 				intestactions: 'edit',
-				intestactionsdetail: 'full',
-				uiprop: 'options'
+				intestactionsdetail: 'full'
 			} );
 			// Load text of old revision if desired
 			if ( this.oldId ) {
@@ -113,8 +111,6 @@ EditorGateway.prototype = {
 					self.content = revision.content;
 					self.timestamp = revision.timestamp;
 				}
-
-				self.userinfo = resp.query.userinfo;
 
 				// save content a second time to be able to check for changes
 				self.originalContent = self.content;

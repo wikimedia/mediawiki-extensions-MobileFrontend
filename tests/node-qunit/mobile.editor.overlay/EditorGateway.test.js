@@ -42,10 +42,7 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/EditorGateway', {
 							}
 						]
 					}
-				],
-				userinfo: {
-					id: 0
-				}
+				]
 			}
 		} );
 		apiHappy = new mw.Api();
@@ -205,12 +202,10 @@ QUnit.test( '#getContent (no section)', function ( assert ) {
 		assert.ok( spy.calledWith( {
 			action: 'query',
 			prop: [ 'revisions', 'info' ],
-			meta: 'userinfo',
 			rvprop: [ 'content', 'timestamp' ],
 			titles: 'MediaWiki:Test.css',
 			intestactions: 'edit',
 			intestactionsdetail: 'full',
-			uiprop: 'options',
 			formatversion: 2
 		} ), 'rvsection not passed to api request' );
 	} );
