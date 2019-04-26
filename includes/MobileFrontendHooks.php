@@ -95,8 +95,7 @@ class MobileFrontendHooks {
 		// to retrieve the FeaturesManager
 		// Important: This must be run before RequestContextCreateSkinMobile which may make modifications
 		// to the skin based on enabled features.
-		\MediaWiki\MediaWikiServices::getInstance()
-			->getService( 'MobileFrontend.FeaturesManager' )
+		MediaWikiServices::getInstance()->getService( 'MobileFrontend.FeaturesManager' )
 			->setup();
 
 		// enable wgUseMediaWikiUIEverywhere
@@ -194,7 +193,7 @@ class MobileFrontendHooks {
 	 */
 	public static function onSkinAfterBottomScripts( Skin $skin, &$html ) {
 		$context = MobileContext::singleton();
-		$featureManager = \MediaWiki\MediaWikiServices::getInstance()
+		$featureManager = MediaWikiServices::getInstance()
 			->getService( 'MobileFrontend.FeaturesManager' );
 
 		// TODO: We may want to enable the following script on Desktop Minerva...
@@ -437,7 +436,7 @@ class MobileFrontendHooks {
 		$config = $context->getMFConfig();
 		$features = array_keys( $config->get( 'MFDisplayWikibaseDescriptions' ) );
 		$result = [ 'wgMFDisplayWikibaseDescriptions' => [] ];
-		$featureManager = \MediaWiki\MediaWikiServices::getInstance()
+		$featureManager = MediaWikiServices::getInstance()
 			->getService( 'MobileFrontend.FeaturesManager' );
 
 		$descriptionsEnabled = $featureManager->isFeatureAvailableInContext(
@@ -1012,7 +1011,7 @@ class MobileFrontendHooks {
 	 */
 	public static function onOutputPageParserOutput( $outputPage, ParserOutput $po ) {
 		$context = MobileContext::singleton();
-		$featureManager = \MediaWiki\MediaWikiServices::getInstance()
+		$featureManager = MediaWikiServices::getInstance()
 			->getService( 'MobileFrontend.FeaturesManager' );
 		$title = $outputPage->getTitle();
 		$descriptionsEnabled = !$title->isMainPage() &&
@@ -1109,7 +1108,7 @@ class MobileFrontendHooks {
 	 */
 	public static function onMakeGlobalVariablesScript( array &$vars, OutputPage $out ) {
 		$title = $out->getTitle();
-		$services = \MediaWiki\MediaWikiServices::getInstance();
+		$services = MediaWikiServices::getInstance();
 		$userMode = $services->getService( 'MobileFrontend.AMC.UserMode' );
 		$featureManager = $services->getService( 'MobileFrontend.FeaturesManager' );
 
