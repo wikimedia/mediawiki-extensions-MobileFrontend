@@ -9,6 +9,7 @@ Feature: Special:Contributions
     When I click the link in the header bar
     Then I should be on my user page
 
+  @todo-move-to-phpunit-test
   Scenario: Check components in diff summary
     Then I should see a list of page contributions
       And I should see a summary of the last contribution
