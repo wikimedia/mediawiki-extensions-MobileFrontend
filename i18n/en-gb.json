@@ -8,9 +8,11 @@
 			"Aursani",
 			"Macofe",
 			"Andibing",
-			"Anomie"
+			"Anomie",
+			"Mvolz"
 		]
 	},
+	"mobile-frontend-categories-hidden": "Organisational",
 	"mobile-frontend-copyright": "Content is available under $1 unless otherwise noted.",
 	"mobile-frontend-donate-image-anon": "Please log in to view the uploads page.",
 	"mobile-frontend-editor-licensing": "By saving changes, you agree to release your contribution under the $1 {{PLURAL:$2|licence|licences}}.",
