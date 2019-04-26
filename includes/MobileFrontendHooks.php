@@ -61,7 +61,7 @@ class MobileFrontendHooks {
 		if ( class_exists( $skinName ) ) {
 			$skin = new $skinName( $context );
 		} else {
-			$skin = SkinFactory::getDefaultInstance()
+			$skin = MediaWikiServices::getInstance()->getSkinFactory()
 				->makeSkin( Skin::normalizeKey( $config->get( 'DefaultSkin' ) ) );
 		}
 		return $skin;
