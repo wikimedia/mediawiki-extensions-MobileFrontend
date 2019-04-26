@@ -49,14 +49,14 @@ interface IFeature {
 	public function isAvailable( IUserMode $mode );
 	/**
 	 * The feature name defined as a translation tag
-	 * ex: mobile-frontend-mobile-option-MFLazyLoadReferences
+	 * ex: mobile-frontend-mobile-option-MFConfigFlag
 	 * @return string
 	 */
 	public function getNameKey();
 
 	/**
 	 * The feature name defined as a translation tag,
-	 * ex: mobile-frontend-mobile-option-MFLazyLoadReferences-description
+	 * ex: mobile-frontend-mobile-option-MFConfigFlag-description
 	 * @return string
 	 */
 	public function getDescriptionKey();

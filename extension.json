@@ -912,10 +912,6 @@
 			"beta": true
 		},
 		"MFLazyLoadSkipSmallImages": false,
-		"MFLazyLoadReferences": {
-			"base": false,
-			"beta": true
-		},
 		"MFMobileFormatterNamespaceBlacklist": [
 			10,
 			-1

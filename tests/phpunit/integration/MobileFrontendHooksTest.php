@@ -75,28 +75,6 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 	}
 
 	/**
-	 * Test no alternate/canonical link is set on Special:MobileCite
-	 *
-	 * @covers MobileFrontendHooks::onBeforePageDisplay
-	 */
-	public function testSpecialMobileCiteOnBeforePageDisplay() {
-		$this->setMwGlobals( [
-			'wgMFEnableManifest' => false,
-			'wgMobileUrlTemplate' => true,
-			'wgMFNoindexPages' => true
-		] );
-		$param = $this->getContextSetup( 'mobile', [], SpecialPage::getTitleFor( 'MobileCite' ) );
-		$out = $param['out'];
-		$skin = $param['sk'];
-
-		MobileFrontendHooks::onBeforePageDisplay( $out, $skin );
-
-		$links = $out->getLinkTags();
-		$this->assertEquals( 0, count( $links ),
-			'test, no alternate or canonical link is added' );
-	}
-
-	/**
 	 * Test headers and alternate/canonical links to be set or not
 	 *
 	 * @dataProvider onBeforePageDisplayDataProvider

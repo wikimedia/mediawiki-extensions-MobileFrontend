@@ -71,14 +71,14 @@ class MobileFormatterTest extends MediaWikiTestCase {
 	 * @param string $expected
 	 * @param callable|bool $callback
 	 * @param bool $removeDefaults
-	 * @param bool $lazyLoadReferences
+	 * @param bool $unused (previously was lazy loaded references)
 	 * @param bool $lazyLoadImages
 	 * @param bool $showFirstParagraphBeforeInfobox
 	 * @covers MobileFormatter::filterContent
 	 * @covers MobileFormatter::doRemoveImages
 	 */
 	public function testHtmlTransform( $input, $expected, $callback = false,
-		$removeDefaults = false, $lazyLoadReferences = false, $lazyLoadImages = false,
+		$removeDefaults = false, $unused = false, $lazyLoadImages = false,
 		$showFirstParagraphBeforeInfobox = false
 	) {
 		$t = Title::newFromText( 'Mobile' );
@@ -93,7 +93,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			$callback( $mf );
 		}
 		$mf->topHeadingTags = [ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' ];
-		$mf->filterContent( $removeDefaults, $lazyLoadReferences, $lazyLoadImages,
+		$mf->filterContent( $removeDefaults, null, $lazyLoadImages,
 			$showFirstParagraphBeforeInfobox );
 
 		$html = $mf->getText();
@@ -134,7 +134,6 @@ class MobileFormatterTest extends MediaWikiTestCase {
 		$mainPage = function ( MobileFormatter $f ) {
 			$f->setIsMainPage( true );
 		};
-		$citeUrl = SpecialPage::getTitleFor( 'MobileCite', '0' )->getLocalURL();
 		$originalImage = '<img alt="foo" src="foo.jpg" width="100" '
 			. 'height="100" srcset="foo-1.5x.jpg 1.5x, foo-2x.jpg 2x">';
 		$placeholder = '<span class="lazy-image-placeholder" '
@@ -147,17 +146,8 @@ class MobileFormatterTest extends MediaWikiTestCase {
 		$refText = '<p>They saved the world with one single unit test'
 			. '<sup class="reference"><a href="#cite-note-1">[1]</a></sup></p>';
 		$expectedReftext = '<p>They saved the world with one single unit test'
-			. '<sup class="reference"><a href="' . $citeUrl . '#cite-note-1">[1]</a></sup></p>';
+			. '<sup class="reference"><a href="#cite-note-1">[1]</a></sup></p>';
 		$refhtml = '<ol class="references"><li>link 1</li><li>link 2</li></ol>';
-		$refplaceholder = Html::element( 'a',
-			[
-				'class' => 'mf-lazy-references-placeholder',
-				'href' => $citeUrl,
-			],
-			wfMessage( 'mobile-frontend-references-list' )->text()
-		);
-		$refSectionHtml = $this->makeSectionHeading( 'h2', 'references' )
-			. $this->makeSectionHtml( 1, $refplaceholder, true );
 
 		return [
 			// Nested headings are not wrapped
@@ -220,38 +210,6 @@ class MobileFormatterTest extends MediaWikiTestCase {
 					. $this->makeSectionHtml( 2, $noscript . $placeholder ),
 				$enableSections,
 				false, false, true,
-			],
-
-			// # Lazy loading references
-			[
-				$refText
-					. '<h2>references</h2>' . $refhtml,
-				$this->makeSectionHtml( 0, $expectedReftext ) . $refSectionHtml,
-				$enableSections,
-				false, true, false
-			],
-
-			// T135923: Note the whitespace immediately inside the `sup` element.
-			[
-				'<p>T135923 <sup class="reference">    <a href="#cite-note-1">[1]</a></sup></p>'
-					. '<h2>references</h2>' . $refhtml,
-				$this->makeSectionHtml( 0, '<p>T135923 <sup class="reference">    '
-					. '<a href="' . $citeUrl
-					. '#cite-note-1">[1]</a></sup></p>'
-				)
-					. $refSectionHtml,
-				$enableSections,
-				false, true, false
-			],
-			// Empty reference class
-			[
-				'<p>T135923 <sup class="reference"></sup></p>'
-					. '<h2>references</h2>' . $refhtml,
-				$this->makeSectionHtml( 0,
-					'<p>T135923 <sup class="reference"></sup></p>'
-				) . $refSectionHtml,
-				$enableSections,
-				false, true, false
 			],
 
 			// # Removal of images

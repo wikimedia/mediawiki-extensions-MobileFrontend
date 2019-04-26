@@ -19,7 +19,6 @@ module.exports = {
 	ReferencesDrawer: require( './references/ReferencesDrawer' ),
 	ReferencesGateway: require( './references/ReferencesGateway' ),
 	ReferencesHtmlScraperGateway: require( './references/ReferencesHtmlScraperGateway' ),
-	ReferencesMobileViewGateway: require( './references/ReferencesMobileViewGateway' ),
 	icons: require( './icons' ),
 	Page: require( './Page' ),
 	currentPage: require( './currentPage' ),

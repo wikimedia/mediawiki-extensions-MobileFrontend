@@ -170,14 +170,15 @@ class MobileFormatter extends HtmlFormatter {
 	/**
 	 * Performs various transformations to the content to make it appropiate for mobile devices.
 	 * @param bool $removeDefaults Whether default settings at $wgMFRemovableClasses should be used
-	 * @param bool $removeReferences Whether to remove references from the output
+	 * @param bool $unused kept for backwards compatibility - previously used for
+	 *  lazy loaded references
 	 * @param bool $removeImages Whether to move images into noscript tags
 	 * @param bool $showFirstParagraphBeforeInfobox Whether the first paragraph from the lead
 	 *  section should be shown before all infoboxes that come earlier.
 	 * @return array
 	 */
 	public function filterContent(
-		$removeDefaults = true, $removeReferences = false, $removeImages = false,
+		$removeDefaults = true, $unused = false, $removeImages = false,
 		$showFirstParagraphBeforeInfobox = false
 	) {
 		$doc = $this->getDoc();
@@ -202,7 +203,6 @@ class MobileFormatter extends HtmlFormatter {
 		$removed = parent::filterContent();
 		$transformOptions = [
 			'images' => $removeImages,
-			'references' => $removeReferences,
 			self::SHOW_FIRST_PARAGRAPH_BEFORE_INFOBOX => $showFirstParagraphBeforeInfobox
 		];
 		// Sectionify the content and transform it if necessary per section
@@ -213,9 +213,6 @@ class MobileFormatter extends HtmlFormatter {
 		} else {
 			// Otherwise apply the per-section transformations to the document as a whole
 			$this->filterContentInSection( $doc, $doc, 0, $transformOptions );
-		}
-		if ( $transformOptions['references'] ) {
-			$this->doRewriteReferencesLinksForLazyLoading( $doc );
 		}
 		return $removed;
 	}
@@ -232,76 +229,6 @@ class MobileFormatter extends HtmlFormatter {
 	) {
 		if ( !$this->removeMedia && $options['images'] && $sectionNumber > 0 ) {
 			$this->lazyTransform->apply( $el );
-		}
-		if ( $options['references'] ) {
-			$this->doRewriteReferencesListsForLazyLoading( $el, $doc );
-		}
-	}
-
-	/**
-	 * Replaces any references links with a link to Special:MobileCite
-	 *
-	 * @param DOMDocument $doc Document to create and replace elements in
-	 */
-	private function doRewriteReferencesLinksForLazyLoading( DOMDocument $doc ) {
-		$citePath = "$this->revId";
-
-		$xPath = new DOMXPath( $doc );
-		$nodes = $xPath->query(
-			// sup.reference > a
-			'//sup[contains(concat(" ", normalize-space(./@class), " "), " reference ")]/a[1]' );
-
-		foreach ( $nodes as $node ) {
-			$fragment = $node->getAttribute( 'href' );
-			$node->setAttribute(
-				'href',
-				SpecialPage::getTitleFor( 'MobileCite', $citePath )->getLocalURL() . $fragment
-			);
-		}
-	}
-
-	/**
-	 * Replaces any references list with a link to Special:MobileCite
-	 *
-	 * @param DOMElement|DOMDocument $el Element or document to rewrite references in.
-	 * @param DOMDocument $doc Document to create elements in
-	 */
-	private function doRewriteReferencesListsForLazyLoading( $el, DOMDocument $doc ) {
-		$citePath = "$this->revId";
-		$isReferenceSection = false;
-
-		// Accessing by tag is cheaper than class
-		$nodes = $el->getElementsByTagName( 'ol' );
-		// PHP's DOM classes are recursive
-		// but since we are manipulating the DOMList we have to
-		// traverse it backwards
-		// see http://php.net/manual/en/class.domnodelist.php
-		for ( $i = $nodes->length - 1; $i >= 0; $i-- ) {
-			$list = $nodes->item( $i );
-
-			// Use class to decide it is a list of references
-			/** @phan-suppress-next-line PhanUndeclaredMethod DOMNode vs. DOMElement */
-			if ( strpos( $list->getAttribute( 'class' ), 'references' ) !== false ) {
-				// Only mark the section as a reference container if we're transforming a section, not the
-				// document.
-				$isReferenceSection = $el instanceof DOMElement;
-
-				$parent = $list->parentNode;
-				$placeholder = $doc->createElement( 'a',
-					wfMessage( 'mobile-frontend-references-list' ) );
-				$placeholder->setAttribute( 'class', 'mf-lazy-references-placeholder' );
-				// Note to render a reference we need to know only its reference
-				// Note: You can have multiple <references> tag on the same page, we render all of these in
-				// the special page together.
-				$placeholder->setAttribute( 'href',
-					SpecialPage::getTitleFor( 'MobileCite', $citePath )->getLocalURL() );
-				$parent->replaceChild( $placeholder, $list );
-			}
-		}
-
-		// Mark section as having references
-		if ( $isReferenceSection ) {
-			$el->setAttribute( 'data-is-reference-section', '1' );
 		}
 	}
 

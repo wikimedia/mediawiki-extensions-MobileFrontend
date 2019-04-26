@@ -2,10 +2,8 @@ var skin,
 	browser = require( './Browser' ).getSingleton(),
 	lazyImageLoader = require( './lazyImages/lazyImageLoader' ),
 	lazyImageTransformer = require( './lazyImages/lazyImageTransformer' ),
-	lazyReferencesLoader = require( './lazyReferencesLoader' ),
 	View = require( './View' ),
 	util = require( './util' ),
-	ReferencesMobileViewGateway = require( './references/ReferencesMobileViewGateway' ),
 	currentPage = require( './currentPage' ),
 	eventBus = require( './eventBusSingleton' ),
 	mfExtend = require( './mfExtend' );
@@ -32,7 +30,6 @@ function Skin( params ) {
 	this.eventBus = options.eventBus;
 	options.isBorderBox = false;
 	View.call( this, options );
-	this.referencesGateway = options.referencesGateway;
 
 	if (
 		mw.config.get( 'wgMFLazyLoadImages' )
@@ -50,14 +47,6 @@ function Skin( params ) {
 			self.lazyImageTransformer.loadImages();
 		} );
 	}
-
-	if ( mw.config.get( 'wgMFLazyLoadReferences' ) ) {
-		this.eventBus.on( 'section-toggled', function ( data ) {
-			lazyReferencesLoader.loadReferences(
-				data, self.referencesGateway, self.page
-			);
-		} );
-	}
 }
 
 mfExtend( Skin, View, {
@@ -67,7 +56,6 @@ mfExtend( Skin, View, {
 	 * @mixes View#defaults
 	 * @property {Object} defaults Default options hash.
 	 * @property {Page} defaults.page page the skin is currently rendering
-	 * @property {ReferencesGateway} defaults.referencesGateway instance of references gateway
 	 */
 	defaults: {
 		page: undefined
@@ -143,7 +131,6 @@ Skin.getSingleton = function () {
 		skin = new Skin( {
 			el: 'body',
 			page: currentPage(),
-			referencesGateway: ReferencesMobileViewGateway.getSingleton(),
 			eventBus
 		} );
 	}

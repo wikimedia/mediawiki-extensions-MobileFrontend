@@ -675,8 +675,6 @@ class MobileFrontendHooks {
 		// an canonical/alternate link is only useful, if the mobile and desktop URL are different
 		// and $wgMFNoindexPages needs to be true
 		if ( $mfMobileUrlTemplate && $mfNoIndexPages ) {
-			$link = false;
-
 			if ( !$context->shouldDisplayMobileView() ) {
 				// add alternate link to desktop sites - bug T91183
 				$desktopUrl = $title->getFullURL();
@@ -685,18 +683,14 @@ class MobileFrontendHooks {
 					'media' => 'only screen and (max-width: ' . self::DEVICE_WIDTH_TABLET . ')',
 					'href' => $context->getMobileUrl( $desktopUrl ),
 				];
-			} elseif ( !$title->isSpecial( 'MobileCite' ) ) {
-				// Add canonical link to mobile pages (except for Special:MobileCite),
-				// instead of noindex - bug T91183.
+			} else {
 				$link = [
 					'rel' => 'canonical',
 					'href' => $title->getFullURL(),
 				];
 			}
 
-			if ( $link !== false ) {
-				$out->addLink( $link );
-			}
+			$out->addLink( $link );
 		}
 
 		// set the vary header to User-Agent, if mobile frontend auto detects, if the mobile
@@ -1080,8 +1074,6 @@ class MobileFrontendHooks {
 			$vars['wgMFAmc'] = $userMode->isEnabled();
 			$vars['wgMFLazyLoadImages'] =
 				$featureManager->isFeatureAvailableInContext( 'MFLazyLoadImages', $context );
-			$vars['wgMFLazyLoadReferences'] =
-				$featureManager->isFeatureAvailableInContext( 'MFLazyLoadReferences', $context );
 		}
 		// Needed by mobile.startup, mobile.special.watchlist.scripts, mobile.special.nearby.scripts
 		// Needs to know if in beta mode or not and needs to load for Minerva desktop as well.

@@ -31,8 +31,6 @@ return [
 		// $services->getAllByPrefix('MobileFrontend.Feature')
 		$manager->registerFeature( new Feature( 'MFEnableWikidataDescriptions', 'mobile-frontend',
 			$config->get( 'MFEnableWikidataDescriptions' ) ) );
-		$manager->registerFeature( new Feature( 'MFLazyLoadReferences', 'mobile-frontend',
-			$config->get( 'MFLazyLoadReferences' ) ) );
 		$manager->registerFeature( new Feature( 'MFLazyLoadImages', 'mobile-frontend',
 			$config->get( 'MFLazyLoadImages' ) ) );
 		$manager->registerFeature( new Feature( 'MFShowFirstParagraphBeforeInfobox', 'mobile-frontend',
