@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "e1c6e3e2_c368e7c0",
+        "filename": "includes/specials/MobileSpecialPage.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-04-26T14:37:38Z",
+      "side": 1,
+      "message": "Ack, thank you very very much for the explanation.",
+      "parentUuid": "a4e6b0fc_0bb361b6",
+      "range": {
+        "startLine": 24,
+        "startChar": 11,
+        "endLine": 24,
+        "endChar": 25
+      },
+      "revId": "931373fe447ea73c7a33f207ba84c31ec62056b5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "05fdc075_db9f1dec",
         "filename": "includes/specials/MobileSpecialPage.php",
         "patchSetId": 5
@@ -36,6 +60,30 @@
       "writtenOn": "2019-04-04T23:52:09Z",
       "side": 1,
       "message": "you can use the `$this-\u003egetMobileContext()`. But better would be to create a `__construct()`, initialize those vars there (both $ctx and $this-\u003econfig) and use it here.",
+      "range": {
+        "startLine": 59,
+        "startChar": 9,
+        "endLine": 59,
+        "endChar": 82
+      },
+      "revId": "931373fe447ea73c7a33f207ba84c31ec62056b5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5320adc9_a5ff14ad",
+        "filename": "includes/specials/MobileSpecialPage.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-04-26T14:37:38Z",
+      "side": 1,
+      "message": "You\u0027re right about the constructor approach. I remember I used this and had issues. But I\u0027ll do it in a later patch, thanks!",
+      "parentUuid": "05fdc075_db9f1dec",
       "range": {
         "startLine": 59,
         "startChar": 9,
@@ -119,6 +167,30 @@
     },
     {
       "key": {
+        "uuid": "6e3d5ee6_d38b56b9",
+        "filename": "includes/specials/SpecialMobileDiff.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 388,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-04-26T14:37:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5c134052_ee56d9f4",
+      "range": {
+        "startLine": 388,
+        "startChar": 2,
+        "endLine": 388,
+        "endChar": 33
+      },
+      "revId": "931373fe447ea73c7a33f207ba84c31ec62056b5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e0cf3371_30bdcdec",
         "filename": "includes/specials/SpecialMobileOptions.php",
         "patchSetId": 5
@@ -130,6 +202,30 @@
       "writtenOn": "2019-04-04T23:52:09Z",
       "side": 1,
       "message": "$container is not defined, you probably meant \n\n  $this-\u003eservices-\u003egetService( ... );\n\nwe already define the $this-\u003eamc in in __construct(), it\u0027s safe to get also the featuresManager there, you can do\n\n  public function __construct() {\n    parent::__construct( \u0027MobileOptions\u0027 );\n    $this-\u003eservices \u003d MediaWikiServices::getInstance();\n    $this-\u003eamc \u003d $this-\u003eservices-\u003egetService( \u0027MobileFrontend.AMC.Manager\u0027 );\n    $this-\u003efeaturesManager \u003d $this-\u003eservices-\u003eget( \u0027MobileFrontend.FeaturesManager\u0027  );\n  }\n\nand then just use $this-\u003efeaturesManager. \n\nP.S. don\u0027t forget to define the featuresManager property.",
+      "range": {
+        "startLine": 43,
+        "startChar": 20,
+        "endLine": 43,
+        "endChar": 30
+      },
+      "revId": "931373fe447ea73c7a33f207ba84c31ec62056b5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b2926444_5ff6cbf5",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-04-26T14:37:38Z",
+      "side": 1,
+      "message": "Done, thank you!",
+      "parentUuid": "e0cf3371_30bdcdec",
       "range": {
         "startLine": 43,
         "startChar": 20,
