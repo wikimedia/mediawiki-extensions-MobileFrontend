@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "684f0931_573fa0ac",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 352,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-04-26T17:18:59Z",
+      "side": 1,
+      "message": "love it. Static methods shouldn\u0027t have any side effects and all dependencies should be passed to those. That\u0027s great change. Thank you.",
+      "range": {
+        "startLine": 352,
+        "startChar": 62,
+        "endLine": 352,
+        "endChar": 70
+      },
+      "revId": "1d631baeb382ae94f03ef39cd110334b4a3b05bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b0b01c0b_38d1c205",
+        "filename": "includes/specials/SpecialMobileOptions.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 292,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-04-26T17:18:59Z",
+      "side": 1,
+      "message": "it will be better to untagle this code, instead of using \n\n  $this-\u003egetMobileContext()-\u003egetOuput()\n\nlet\u0027s use \n\n  $this-\u003egetOutput()\n\nIt is the same object.\n\nAlso, please not that on line 275 we have \n\n  $this-\u003egetOutput()-\u003eaddHTML( \u0027\u003cdiv class\u003d\"error\"\u003e\u0027\n\n\nThe best way to simplify this code is to create $ouput variable in top of this function (same as we create $request) and then use $output.",
+      "range": {
+        "startLine": 292,
+        "startChar": 2,
+        "endLine": 292,
+        "endChar": 40
+      },
+      "revId": "1d631baeb382ae94f03ef39cd110334b4a3b05bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a0188d0_dcfde505",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 315,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-04-26T17:18:59Z",
+      "side": 1,
+      "message": "We\u0027re getting Context, to get config, just get the config \n\n  $config \u003d MediaWikiServices::getInstance()-\u003egetService( \u0027MobileFrontend.Config\u0027 );\n  $imgUrl \u003d $config-\u003eget....",
+      "range": {
+        "startLine": 315,
+        "startChar": 2,
+        "endLine": 315,
+        "endChar": 86
+      },
+      "revId": "1d631baeb382ae94f03ef39cd110334b4a3b05bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "419a5d84_eaee8835",
+        "filename": "tests/phpunit/specials/SpecialMobileDiffTest.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-04-26T17:18:59Z",
+      "side": 1,
+      "message": "we already use the Request variable (please see line 58).\nCreate a temporary vaiable before foreach (line 57), fetch the request from `RequestContext::getMain()`, and use that `$request` in both places (lines 58 and 65).",
+      "range": {
+        "startLine": 65,
+        "startChar": 3,
+        "endLine": 65,
+        "endChar": 42
+      },
+      "revId": "1d631baeb382ae94f03ef39cd110334b4a3b05bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
