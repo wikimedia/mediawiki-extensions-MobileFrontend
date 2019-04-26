@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7ef7b390_561a7785",
+        "filename": "src/mobile.startup/CtaDrawer.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-04-26T07:14:13Z",
+      "side": 0,
+      "message": "This line is taken care of in the parent Drawer (which had no template!).",
+      "revId": "46973ce5f5e08334c21eff1d75578a67d9b045d2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
