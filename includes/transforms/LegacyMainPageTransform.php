@@ -3,7 +3,7 @@
 namespace MobileFrontend\Transforms;
 
 use DOMElement;
-use DOMXpath;
+use DOMXPath;
 use Message;
 use MessageLocalizer;
 
