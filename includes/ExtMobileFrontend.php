@@ -27,8 +27,7 @@ class ExtMobileFrontend {
 		$provideTagline = $featureManager->isFeatureAvailableInContext(
 			'MFEnableWikidataDescriptions', $context
 		) && $context->shouldShowWikibaseDescriptions( 'tagline' );
-		$factory = new ContentProviderFactory();
-		$provider = $factory->getProvider( $config, $out, $text, $provideTagline );
+		$provider = ContentProviderFactory::getProvider( $config, $out, $text, $provideTagline );
 
 		// If we're not running the formatter we can exit earlier
 		if ( !$mobileFormatHtml ) {
