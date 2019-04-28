@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "c567f516_ff5e849a",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 485,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-04-28T17:01:10Z",
+      "side": 1,
+      "message": "@Thiemo, thanks. I missed that, thank you.",
+      "parentUuid": "08a8bb1f_5291daaa",
+      "range": {
+        "startLine": 485,
+        "startChar": 18,
+        "endLine": 485,
+        "endChar": 25
+      },
+      "revId": "d6683071a7e988a28b0dffe8217a0609754fd02e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7aadd2b5_ce300716",
         "filename": "includes/api/ApiMobileView.php",
         "patchSetId": 2
@@ -36,6 +60,30 @@
       "writtenOn": "2019-04-28T15:15:12Z",
       "side": 1,
       "message": "Here it is already.",
+      "range": {
+        "startLine": 646,
+        "startChar": 37,
+        "endLine": 646,
+        "endChar": 56
+      },
+      "revId": "d6683071a7e988a28b0dffe8217a0609754fd02e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "802a5c1d_9f358ce0",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 646,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-04-28T17:01:10Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "7aadd2b5_ce300716",
       "range": {
         "startLine": 646,
         "startChar": 37,
