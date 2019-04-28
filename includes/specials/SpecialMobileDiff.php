@@ -237,11 +237,11 @@ class SpecialMobileDiff extends MobileSpecialPage {
 			? 'editlink' : 'viewsourcelink';
 
 		$templateData = [
-			"articleUrl" => $this->targetTitle->getLocalUrl(),
+			"articleUrl" => $this->targetTitle->getLocalURL(),
 			"articleLinkLabel" => $this->targetTitle->getPrefixedText(),
 			"revisionUrl" => $this->targetTitle->getLocalURL( [ 'oldid' => $this->revId ] ),
 			"revisionLinkLabel" => $this->msg( 'revisionasof', $td )->escaped(),
-			"actionLinkUrl" => $this->targetTitle->getLocalUrl( [ 'action' => 'edit' ] ),
+			"actionLinkUrl" => $this->targetTitle->getLocalURL( [ 'action' => 'edit' ] ),
 			"actionLinkLabel" => $this->msg( $actionMessageKey )->text(),
 			"sizeClass" => $sizeClass,
 			"bytesChanged" => $this->msg( $changeMsg )->numParams( $bytesChanged )->text(),
