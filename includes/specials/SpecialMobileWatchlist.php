@@ -352,8 +352,9 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		$this->renderListHeaderWhereNeeded( $date );
 
 		$title = Title::makeTitle( $row->rc_namespace, $row->rc_title );
+		$store = MediaWikiServices::getInstance()->getCommentStore();
 		$comment = $this->formatComment(
-			CommentStore::getStore()->getComment( 'rc_comment', $row )->text, $title
+			$store->getComment( 'rc_comment', $row )->text, $title
 		);
 		$ts = new MWTimestamp( $row->rc_timestamp );
 		$username = $row->rc_user != 0
