@@ -104,7 +104,7 @@ QUnit.test( '#getPageLanguages (response)', function ( assert ) {
 QUnit.test( '#getPageLanguages (call)', function ( assert ) {
 	var spy = sandbox.stub( this.api, 'get' ).returns( util.Deferred().reject() );
 	// prevent rogue ajax request
-	// eslint-disable-next-line no-undef
+	/* global $ */
 	sandbox.stub( $, 'ajax' ).returns( util.Deferred().resolve() );
 	pageGateway.getPageLanguages( 'Title', 'fr' );
 	assert.ok(
