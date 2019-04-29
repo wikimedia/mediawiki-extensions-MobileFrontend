@@ -19,7 +19,7 @@ class SpecialMobileMenu extends MobileSpecialPage {
 
 	/**
 	 * Render the navigation menu
-	 * @param string $par never used
+	 * @param string|null $par never used
 	 */
 	public function executeWhenAvailable( $par = '' ) {
 		$this->setHeaders();

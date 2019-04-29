@@ -49,7 +49,7 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 
 	/**
 	 * Render the special page body
-	 * @param string $par The username
+	 * @param string|null $par The username
 	 */
 	public function executeWhenAvailable( $par = '' ) {
 		$this->offset = $this->getRequest()->getVal( 'offset', false );
@@ -168,7 +168,7 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 
 	/**
 	 * Get the URL to go to desktop site of this page
-	 * @param string $subPage URL of mobile diff page
+	 * @param string|null $subPage URL of mobile diff page
 	 * @return null
 	 */
 	public function getDesktopUrl( $subPage ) {

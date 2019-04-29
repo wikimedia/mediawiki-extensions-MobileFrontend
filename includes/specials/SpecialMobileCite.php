@@ -48,7 +48,7 @@ class SpecialMobileCite extends MobileSpecialPage {
 	/**
 	 * Render the page with a list of references for the given revision identifier
 	 *
-	 * @param string $param The revision number
+	 * @param string|null $param The revision number
 	 */
 	public function executeWhenAvailable( $param ) {
 		$this->setHeaders();

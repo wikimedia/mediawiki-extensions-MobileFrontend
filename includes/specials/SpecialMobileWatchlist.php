@@ -34,7 +34,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 
 	/**
 	 * Render the special page
-	 * @param string $par parameter submitted as subpage
+	 * @param string|null $par parameter submitted as subpage
 	 */
 	public function executeWhenAvailable( $par ) {
 		// Anons don't get a watchlist

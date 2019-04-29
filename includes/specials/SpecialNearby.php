@@ -14,7 +14,7 @@ class SpecialNearby extends MobileSpecialPage {
 
 	/**
 	 * Render Special Page Nearby
-	 * @param string $par Parameter submitted as subpage
+	 * @param string|null $par Parameter submitted as subpage
 	 */
 	public function executeWhenAvailable( $par = '' ) {
 		$this->setHeaders();

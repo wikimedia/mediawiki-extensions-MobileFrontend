@@ -85,7 +85,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	/**
 	 * Render the diff page
 	 * @return bool false when revision not exist
-	 * @param string $par Revision IDs separated by three points (e.g. 123...124)
+	 * @param string|null $par Revision IDs separated by three points (e.g. 123...124)
 	 */
 	public function executeWhenAvailable( $par ) {
 		$ctx = MobileContext::singleton();
@@ -430,7 +430,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 
 	/**
 	 * Get the URL for Desktop version of difference view
-	 * @param string $subPage URL of mobile diff page
+	 * @param string|null $subPage URL of mobile diff page
 	 * @return string Url to mobile diff page
 	 */
 	public function getDesktopUrl( $subPage ) {

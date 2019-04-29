@@ -13,7 +13,7 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 
 	/**
 	 * Render the special page content
-	 * @param string $par parameters submitted as subpage
+	 * @param string|null $par parameters submitted as subpage
 	 */
 	public function execute( $par ) {
 		$out = $this->getOutput();

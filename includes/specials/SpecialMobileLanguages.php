@@ -153,7 +153,7 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 
 	/**
 	 * Render the page with a list of languages the page is available in
-	 * @param string $pagename The name of the page
+	 * @param string|null $pagename The name of the page
 	 * @throws ErrorPageError
 	 */
 	public function executeWhenAvailable( $pagename ) {
