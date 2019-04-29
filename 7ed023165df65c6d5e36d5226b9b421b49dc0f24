@@ -22,6 +22,30 @@
       "revId": "7ed023165df65c6d5e36d5226b9b421b49dc0f24",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "482a6fee_17380a29",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 484,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-04-29T09:31:57Z",
+      "side": 1,
+      "message": "I went back and read the implementation of -\u003egetText() again and I realized $options is gotten by performing a union on itself. In this case, since there is already \u0027allowTOC\u0027 in -\u003egetText() $options array, which is set to `true` by default, sending this will be ignored as that is how PHP union works.\n\nIf the key exist, then the LHS value will be considered while the RHS will be ignored. So yes, indeed, this is useless.\n\nThanks @Thiemoe :), hope what I said above is right?",
+      "parentUuid": "e5c7c680_23eb998d",
+      "range": {
+        "startLine": 484,
+        "startChar": 2,
+        "endLine": 484,
+        "endChar": 52
+      },
+      "revId": "7ed023165df65c6d5e36d5226b9b421b49dc0f24",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
