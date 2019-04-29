@@ -107,7 +107,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 
 	/**
 	 * Render the special page
-	 * @param string $par parameter as subpage of specialpage
+	 * @param string|null $par parameter as subpage of specialpage
 	 */
 	public function executeWhenAvailable( $par = '' ) {
 		$out = $this->getOutput();
@@ -270,7 +270,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 
 	/**
 	 * Returns desktop URL for this special page
-	 * @param string $subPage Subpage passed in URL
+	 * @param string|null $subPage Subpage passed in URL
 	 * @return string
 	 */
 	public function getDesktopUrl( $subPage ) {

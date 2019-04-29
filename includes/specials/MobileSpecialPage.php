@@ -1,6 +1,5 @@
 <?php
 
-
 /**
  * Basic mobile implementation of SpecialPage to use in specific mobile special pages
  */
@@ -30,14 +29,14 @@ class MobileSpecialPage extends SpecialPage {
 
 	/**
 	 * Executes the page when available in the current $mode
-	 * @param string $subPage parameter as subpage of specialpage
+	 * @param string|null $subPage parameter as subpage of specialpage
 	 */
 	public function executeWhenAvailable( $subPage ) {
 	}
 
 	/**
 	 * Checks the availability of the special page in actual mode and display the page, if available
-	 * @param string $subPage parameter submitted as "subpage"
+	 * @param string|null $subPage parameter submitted as "subpage"
 	 */
 	public function execute( $subPage ) {
 		$ctx = MobileContext::singleton();
@@ -133,7 +132,7 @@ class MobileSpecialPage extends SpecialPage {
 
 	/**
 	 * When overridden in a descendant class, returns desktop URL for this special page
-	 * @param string $subPage Subpage passed in URL
+	 * @param string|null $subPage Subpage passed in URL
 	 * @return string|null Desktop URL for this special page or null if a standard one should be used
 	 */
 	public function getDesktopUrl( $subPage ) {
