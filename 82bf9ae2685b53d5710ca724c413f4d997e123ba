@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bc785fd1_854cf3bc",
+        "filename": "package.json",
+        "patchSetId": 6
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2019-04-29T20:21:56Z",
+      "side": 1,
+      "message": "Regardless of the usefulness of these limits… We could lower this one correspondingly, to show that we\u0027re just moving code around, not adding any.",
+      "revId": "82bf9ae2685b53d5710ca724c413f4d997e123ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
