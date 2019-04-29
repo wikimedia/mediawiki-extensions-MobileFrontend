@@ -16,6 +16,24 @@
       "revId": "82bf9ae2685b53d5710ca724c413f4d997e123ba",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b9491cfc_6877c74f",
+        "filename": "package.json",
+        "patchSetId": 6
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2019-04-29T21:21:30Z",
+      "side": 1,
+      "message": "I\u0027ll leave that to Reading to figure out. As you point out these don\u0027t adjust down automatically and making that the responsibility of the dev is not sustainable.",
+      "parentUuid": "bc785fd1_854cf3bc",
+      "revId": "82bf9ae2685b53d5710ca724c413f4d997e123ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
