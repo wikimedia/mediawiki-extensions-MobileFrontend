@@ -11,12 +11,11 @@ interface IFeature {
 
 	/**
 	 * Beta mode defined in config
-	 * @var string
 	 */
 	const CONFIG_BETA = 'beta';
+
 	/**
 	 * Stable mode defined in config
-	 * @var string
 	 */
 	const CONFIG_STABLE = 'base';
 

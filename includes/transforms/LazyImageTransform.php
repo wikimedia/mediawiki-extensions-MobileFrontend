@@ -6,14 +6,14 @@ use DOMElement;
 use DOMDocument;
 
 class LazyImageTransform implements IMobileTransform {
+
 	/**
 	 * Do not lazy load images smaller than this size (in pixels)
-	 * @var int
 	 */
 	const SMALL_IMAGE_DIMENSION_THRESHOLD_IN_PX = 50;
+
 	/**
 	 * Do not lazy load images smaller than this size (in relative to x-height of the current font)
-	 * @var int
 	 */
 	const SMALL_IMAGE_DIMENSION_THRESHOLD_IN_EX = 10;
 
