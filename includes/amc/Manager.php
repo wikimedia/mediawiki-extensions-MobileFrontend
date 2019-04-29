@@ -17,7 +17,6 @@ final class Manager {
 
 	/**
 	 * Mode identifier used in feature configs
-	 * @var string
 	 */
 	const AMC_MODE_IDENTIFIER = 'amc';
 

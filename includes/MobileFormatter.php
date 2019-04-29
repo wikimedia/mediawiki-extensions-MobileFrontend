@@ -63,7 +63,6 @@ class MobileFormatter extends HtmlFormatter {
 
 	/**
 	 * Name of the transformation option
-	 * @const string SHOW_FIRST_PARAGRAPH_BEFORE_INFOBOX
 	 */
 	const SHOW_FIRST_PARAGRAPH_BEFORE_INFOBOX = 'showFirstParagraphBeforeInfobox';
 
