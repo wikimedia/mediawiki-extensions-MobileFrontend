@@ -74,6 +74,7 @@
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> barkerdış|<span>$1</span> barkerdışi}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "500+ barkerdışi",
 	"mobile-frontend-privacy-link-text": "Nımıtış",
+	"mobile-frontend-references-citation": "Vate",
 	"mobile-frontend-save-settings": "Qeyd ke",
 	"mobile-frontend-search-content": "Şıma miyanê riperran ra bıgeyrê",
 	"mobile-frontend-search-no-results": "Be nê sernamey ra yew pele çıniya.",
