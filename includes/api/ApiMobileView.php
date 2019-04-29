@@ -480,12 +480,7 @@ class ApiMobileView extends ApiBase {
 		ParserOptions $parserOptions,
 		$oldid = null
 	) {
-		$parserOutput = $wikiPage->getParserOutput( $parserOptions, $oldid );
-		if ( $parserOutput && !defined( 'ParserOutput::SUPPORTS_STATELESS_TRANSFORMS' ) ) {
-			$parserOutput->setTOCEnabled( false );
-		}
-
-		return $parserOutput;
+		return $wikiPage->getParserOutput( $parserOptions, $oldid );
 	}
 
 	/**
