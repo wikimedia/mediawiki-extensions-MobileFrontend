@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e5c7c680_23eb998d",
+        "filename": "includes/api/ApiMobileView.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 484,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2019-04-29T08:41:45Z",
+      "side": 1,
+      "message": "The value this call returns is not used. What I meant was: this can be most probably be removed entirely, as it does not do anything any more in recent MediaWiki versions.",
+      "range": {
+        "startLine": 484,
+        "startChar": 2,
+        "endLine": 484,
+        "endChar": 52
+      },
+      "revId": "7ed023165df65c6d5e36d5226b9b421b49dc0f24",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
