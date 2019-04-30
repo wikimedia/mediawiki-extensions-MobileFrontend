@@ -4,11 +4,9 @@ var EditorOverlayBase = require( './EditorOverlayBase' ),
 	saveFailureMessage = require( './saveFailureMessage' ),
 	EditorGateway = require( './EditorGateway' ),
 	AbuseFilterPanel = require( './AbuseFilterPanel' ),
-	Button = require( '../mobile.startup/Button' ),
 	mfExtend = require( '../mobile.startup/mfExtend' ),
 	BlockMessage = require( './BlockMessage' ),
-	VisualEditorOverlay = require( './VisualEditorOverlay' ),
-	MessageBox = require( '../mobile.startup/MessageBox' );
+	VisualEditorOverlay = require( './VisualEditorOverlay' );
 
 /**
  * Overlay that shows an editor
@@ -66,17 +64,9 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 	 */
 	templatePartials: util.extend( {}, EditorOverlayBase.prototype.templatePartials, {
 		content: util.template( `
-<div lang="{{contentLang}}" dir="{{contentDir}}">
+<div lang="{{contentLang}}" dir="{{contentDir}}" class="editor-container">
 	<textarea class="wikitext-editor" id="wikitext-editor" cols="40" rows="10" placeholder="{{placeholder}}"></textarea>
 	<div class="preview content"></div>
-	{{#isAnon}}
-	<div class="anonwarning content">
-		<div>
-			<!-- warning will go here -->
-			<div class="actions"></div>
-		</div>
-	</div>
-	{{/isAnon}}
 </div>
 		` )
 	} ),
@@ -122,19 +112,6 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 	 * @memberof EditorOverlay
 	 * @instance
 	 */
-	onClickContinue: function ( ev ) {
-		// handle the click on "Edit without logging in"
-		if ( this.options.isAnon && this.$el.find( ev.target ).hasClass( 'anonymous' ) ) {
-			this._showEditorAfterWarning();
-			return false;
-		}
-		EditorOverlayBase.prototype.onClickContinue.apply( this, arguments );
-	},
-	/**
-	 * @inheritdoc
-	 * @memberof EditorOverlay
-	 * @instance
-	 */
 	onClickBack: function () {
 		EditorOverlayBase.prototype.onClickBack.apply( this, arguments );
 		this._hidePreview();
@@ -146,8 +123,7 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 	 */
 	postRender: function () {
 		var self = this,
-			options = this.options,
-			$anonWarning = this.$el.find( '.anonwarning' );
+			options = this.options;
 
 		// log edit attempt
 		this.log( { action: 'ready' } );
@@ -203,19 +179,8 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 		this.$content = this.$el.find( '.wikitext-editor' );
 		this.$content.addClass( 'mw-editfont-' + mw.user.options.get( 'editfont' ) );
 		if ( options.isAnon ) {
-			// add anonymous warning actions if present
-			if ( $anonWarning.length ) {
-				$anonWarning.find( ' > div' ).prepend(
-					new MessageBox( {
-						className: 'warningbox anon-msg',
-						msg: mw.msg( 'mobile-frontend-editor-anonwarning' )
-					} ).$el
-				);
-				if ( options.isAnon ) {
-					this._renderAnonWarning( $anonWarning, options );
-				}
-			}
-			this.$anonWarning = $anonWarning;
+			this.$anonWarning = this.createAnonWarning( options );
+			this.$el.find( '.editor-container' ).append( this.$anonWarning );
 			this.$content.hide();
 			// the user has to click login, signup or edit without login,
 			// disable "Next" button on top right
@@ -242,57 +207,12 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 	},
 
 	/**
-	 * Sets additional values used for anonymous editing warning.
-	 * @memberof EditorOverlay
-	 * @instance
-	 * @private
-	 * @param {jQuery.Element} $anonWarning
-	 * @param {Object} options
-	 */
-	_renderAnonWarning: function ( $anonWarning, options ) {
-		var params = util.extend( {
-			// use wgPageName as this includes the namespace if outside Main
-				returnto: options.returnTo || mw.config.get( 'wgPageName' ),
-				returntoquery: 'action=edit&section=' + options.sectionId,
-				warning: 'mobile-frontend-edit-login-action'
-			}, options.queryParams ),
-			signupParams = util.extend( {
-				type: 'signup',
-				warning: 'mobile-frontend-edit-signup-action'
-			}, options.signupQueryParams ),
-			anonymousEditorActions = [
-				new Button( {
-					label: mw.msg( 'mobile-frontend-editor-anon' ),
-					block: true,
-					additionalClassNames: 'continue anonymous',
-					progressive: true
-				} ),
-				new Button( {
-					block: true,
-					href: mw.util.getUrl( 'Special:UserLogin', params ),
-					label: mw.msg( 'mobile-frontend-watchlist-cta-button-login' )
-				} ),
-				new Button( {
-					block: true,
-					href: mw.util.getUrl( 'Special:UserLogin', util.extend( params, signupParams ) ),
-					label: mw.msg( 'mobile-frontend-watchlist-cta-button-signup' )
-				} )
-			];
-
-		$anonWarning.find( '.actions' ).append(
-			anonymousEditorActions.map( function ( action ) {
-				return action.$el;
-			} )
-		);
-	},
-
-	/**
 	 * Handles click on "Edit without login" in anonymous editing warning.
 	 * @memberof EditorOverlay
 	 * @instance
 	 * @private
 	 */
-	_showEditorAfterWarning: function () {
+	onClickAnonymous: function () {
 		this.showSpinner();
 		this.$anonWarning.hide();
 		// reenable "Next" button
