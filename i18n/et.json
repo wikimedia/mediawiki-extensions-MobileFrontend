@@ -149,7 +149,7 @@
 	"mobile-frontend-nearby-requirements-guidance": "Proovi teist brauserit või luba JavaScript, juhul kui oled selle keelanud.",
 	"mobile-frontend-nearby-title": "Lähikond",
 	"mobile-frontend-nearby-info-heading": "Kohad sinu ümbruses",
-	"mobile-frontend-nearby-info-description": "Saad lugeda huvitavaid Vikipeedia artikleid sinu ümbruses asuvatest kohtadest.",
+	"mobile-frontend-nearby-info-description": "Saad lugeda huvitavaid artikleid saidil {{SITENAME}} sinu ümbruses asuvatest kohtadest.",
 	"mobile-frontend-nearby-info-show-button": "Näita lähiartikleid",
 	"mobile-frontend-news-items": "Päevakajaline",
 	"mobile-frontend-opt-in-explain": "βeta on lahendus, mis võimaldab sul proovida neid katsefunktsioone ja anda meile väärtuslikku tagasisidet.",
