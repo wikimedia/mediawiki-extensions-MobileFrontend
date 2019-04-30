@@ -1,6 +1,7 @@
 /* global ve */
 var EditorOverlayBase = require( './EditorOverlayBase' ),
 	EditorGateway = require( './EditorGateway' ),
+	BlockMessage = require( './BlockMessage' ),
 	mfExtend = require( '../mobile.startup/mfExtend' ),
 	router = mw.loader.require( 'mediawiki.router' ),
 	util = require( '../mobile.startup/util' );
@@ -102,11 +103,15 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 			this.$el.addClass( 'loading' );
 		}
 
+		this.dataPromise = this.options.dataPromise;
+
 		if ( this.options.isAnon ) {
 			this.$anonWarning = this.createAnonWarning( this.options );
 			this.$el.append( this.$anonWarning );
 			this.$el.find( '.overlay-content' ).hide();
 			this.$el.removeClass( 'loading' );
+		} else {
+			this.checkForBlocks();
 		}
 
 		this.target = ve.init.mw.targetFactory.create( 'article', this, {
@@ -153,8 +158,33 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 	 * @instance
 	 */
 	onClickAnonymous: function () {
+		var self = this;
 		this.$anonWarning.hide();
-		this.$el.find( '.overlay-content' ).show();
+		this.checkForBlocks().then( function () {
+			self.$el.find( '.overlay-content' ).show();
+		} );
+	},
+
+	/**
+	 * Check if the user is blocked, and close the editor if they are
+	 *
+	 * @return {jQuery.Promise} Promise which resolves when the check is complete
+	 */
+	checkForBlocks: function () {
+		var self = this;
+		return this.dataPromise.then( function ( data ) {
+			if ( data.visualeditor && data.visualeditor.blockinfo ) {
+				// Lazy-load moment only if it's needed,
+				// it's somewhat large (it is already used on
+				// mobile by Echo's notifications panel, where it's also lazy-loaded)
+				mw.loader.using( 'moment' ).then( function () {
+					var block = self.parseBlockInfo( data.visualeditor.blockinfo ),
+						message = new BlockMessage( block );
+					message.toggle();
+					self.hide();
+				} );
+			}
+		} );
 	},
 
 	/**

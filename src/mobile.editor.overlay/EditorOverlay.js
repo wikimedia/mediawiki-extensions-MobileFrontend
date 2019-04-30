@@ -345,64 +345,6 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 	},
 
 	/**
-	 * @memberof EditorOverlay
-	 * @instance
-	 * @param {string} data
-	 * @return {string|false}
-	 */
-	_parseBlockInfo: function ( data ) {
-		var blockInfo, expiry, reason,
-			moment = window.moment;
-
-		// Workaround to parse a message parameter for mw.message, see T96885
-		function jqueryMsgParse( wikitext ) {
-			var parser, ast;
-			// eslint-disable-next-line new-cap
-			parser = new mw.jqueryMsg.parser();
-			try {
-				ast = parser.wikiTextToAst( wikitext );
-				return parser.emitter.emit( ast ).html();
-			} catch ( e ) {
-				// Ignore error as it's probably the parser error. Usually this is because we
-				// can't parse templates.
-				return false;
-			}
-		}
-
-		blockInfo = {
-			partial: data.blockinfo.blockpartial || false,
-			user: data.userinfo,
-			creator: {
-				name: data.blockinfo.blockedby,
-				// NS_USER === 2
-				url: mw.util.getUrl(
-					mw.config.get( 'wgFormattedNamespaces' )[2] + ':' +
-					data.blockinfo.blockedby
-				)
-			},
-			expiry: null,
-			duration: null,
-			reason: '',
-			blockId: data.blockinfo.blockid
-		};
-
-		expiry = data.blockinfo.blockexpiry;
-		if ( [ 'infinite', 'indefinite', 'infinity', 'never' ].indexOf( expiry ) === -1 ) {
-			blockInfo.expiry = moment( expiry ).format( 'LLL' );
-			blockInfo.duration = moment().to( expiry, true );
-		}
-
-		reason = data.blockinfo.blockreason;
-		if ( reason ) {
-			blockInfo.reason = jqueryMsgParse( reason ) || mw.html.escape( reason );
-		} else {
-			blockInfo.reason = mw.message( 'mobile-frontend-editor-generic-block-reason' ).escaped();
-		}
-
-		return blockInfo;
-	},
-
-	/**
 	 * Requests content from the API and reveals it in UI.
 	 * @memberof EditorOverlay
 	 * @instance
@@ -428,7 +370,7 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 					// it's somewhat large (it is already used on
 					// mobile by Echo's notifications panel, where it's also lazy-loaded)
 					mw.loader.using( 'moment' ).then( function () {
-						block = self._parseBlockInfo( result );
+						block = self.parseBlockInfo( result.blockinfo );
 						message = new BlockMessage( block );
 						message.toggle();
 						self.hide();

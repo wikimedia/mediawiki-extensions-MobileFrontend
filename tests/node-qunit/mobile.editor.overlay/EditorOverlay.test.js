@@ -38,15 +38,17 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/EditorOverlay', {
 		} );
 		sandbox.stub( window, 'scrollTo' );
 		sandbox.stub( mw.util, 'getUrl' ).returns( '/w/index.php?title=User:Test' );
-		sandbox.stub( mw.config, 'get' ).withArgs( 'wgMFEditorOptions' ).returns( {
-			skipPreview: true
-		} ).withArgs( 'wgFormattedNamespaces' ).returns( { 2: 'User' } );
+		sandbox.stub( mw.config, 'get' )
+			.withArgs( 'wgMFEditorOptions' ).returns( { skipPreview: true } )
+			.withArgs( 'wgFormattedNamespaces' ).returns( { 2: 'User' } )
+			.withArgs( 'wgNamespaceIds' ).returns( { user: 2 } );
+		sandbox.stub( mw.Title, 'makeTitle' ).returns( {
+			getUrl: function () {
+				return '/w/index.php?title=User:Test';
+			}
+		} );
 		getContentStub.returns( util.Deferred().resolve( {
 			text: 'section 0',
-			user: {
-				id: 1,
-				name: 'Foo'
-			},
 			block: null,
 			blockedByUser: null
 		} ) );
@@ -63,11 +65,6 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/EditorOverlay', {
 QUnit.test( '#initialize, blocked user', function ( assert ) {
 	var dBlockedContent = util.Deferred().resolve( {
 		text: 'section 0',
-		userinfo: {
-			options: {
-				gender: 'female'
-			}
-		},
 		blockinfo: {
 			blockedby: 'Test',
 			blockexpiry: 'infinity',
@@ -89,11 +86,6 @@ QUnit.test( '#initialize, blocked user', function ( assert ) {
 					click: 'stopPropagation'
 				},
 				partial: false,
-				user: {
-					options: {
-						gender: 'female'
-					}
-				},
 				creator: {
 					name: 'Test',
 					url: testUrl

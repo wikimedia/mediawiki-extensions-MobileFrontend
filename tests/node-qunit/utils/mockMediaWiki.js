@@ -22,6 +22,9 @@ module.exports = function newMockMediaWiki() {
 	var config = { wgNamespaceIds: namespaceIDs };
 	return {
 		Api: Api,
+		Title: {
+			makeTitle: function () {}
+		},
 		config: {
 			get: function ( name, fallback ) {
 				return config[name] || fallback;
