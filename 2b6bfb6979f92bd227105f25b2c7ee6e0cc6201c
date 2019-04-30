@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a89681d4_ea339a40",
+        "filename": "src/mobile.editor.overlay/EditorOverlayBase.js",
+        "patchSetId": 9
+      },
+      "lineNbr": 599,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2019-04-30T20:36:51Z",
+      "side": 1,
+      "message": "This should use mw.Title.makeTitle(), or remain unchanged. In newFromText(), a valid namespace prefix in the first parameter overrides the second parameter, which we don\u0027t want here. Note that makeTitle() takes the parameters in opposite order.\n\n(Technically this is not causing a bug because usernames are not allowed to have namespace prefixes, but it sets a bad example.)",
+      "revId": "2b6bfb6979f92bd227105f25b2c7ee6e0cc6201c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
