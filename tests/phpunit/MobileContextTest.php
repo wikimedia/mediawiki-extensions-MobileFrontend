@@ -360,7 +360,6 @@ class MobileContextTest extends MediaWikiTestCase {
 		$context->addAnalyticsLogItem( $key, $val );
 		$logItems = $context->getAnalyticsLogItems();
 		$trimmedKey = trim( $key );
-		$trimmedVal = trim( $val );
 		$this->assertTrue( isset( $logItems[$trimmedKey] ) );
 		$this->assertEquals( $expected, $logItems[$trimmedKey] );
 	}
