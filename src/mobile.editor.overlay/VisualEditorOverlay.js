@@ -103,17 +103,6 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 			this.$el.addClass( 'loading' );
 		}
 
-		this.dataPromise = this.options.dataPromise;
-
-		if ( this.options.isAnon ) {
-			this.$anonWarning = this.createAnonWarning( this.options );
-			this.$el.append( this.$anonWarning );
-			this.$el.find( '.overlay-content' ).hide();
-			this.$el.removeClass( 'loading' );
-		} else {
-			this.checkForBlocks();
-		}
-
 		this.target = ve.init.mw.targetFactory.create( 'article', this, {
 			$element: this.$el,
 			// || null so that scrolling is not triggered for the lead (0) section
@@ -127,7 +116,16 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 			overlay.log( { action: 'ready' } );
 			overlay.log( { action: 'loaded' } );
 		}.bind( this ) );
-		this.target.load( this.options.dataPromise );
+		this.dataPromise = this.target.load( this.options.dataPromise );
+
+		if ( this.options.isAnon ) {
+			this.$anonWarning = this.createAnonWarning( this.options );
+			this.$el.append( this.$anonWarning );
+			this.$el.find( '.overlay-content' ).hide();
+			this.$el.removeClass( 'loading' );
+		} else {
+			this.checkForBlocks();
+		}
 	},
 	/**
 	 * @inheritdoc
