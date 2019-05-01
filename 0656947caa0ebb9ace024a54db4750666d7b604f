@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "76069b6b_e6acf21e",
+        "filename": "resources/mobile.startup/references/ReferencesDrawer.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-05-01T22:15:54Z",
+      "side": 1,
+      "message": "My understanding is that we only want to capitalise the heading of the drawer.\n\nIf that\u0027s the case, why not just change the class we add in https://github.com/wikimedia/mediawiki-extensions-MobileFrontend/blob/master/src/mobile.startup/references/ReferencesDrawer.js#L43 and skip the over-complicated selector.\n\nIf we\u0027re also applying inside the reference drawer can you give me some examples to test on as I could be missing something!",
+      "revId": "0656947caa0ebb9ace024a54db4750666d7b604f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
