@@ -53,6 +53,24 @@
     },
     {
       "key": {
+        "uuid": "f51ccf4a_df9341e8",
+        "filename": "src/mediawiki.template.hogan/mediawiki.template.hogan.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-05-01T19:00:02Z",
+      "side": 1,
+      "message": "Done (test without the Minerva follow up patch to see this in action)",
+      "parentUuid": "0afd9207_d9b1cc5c",
+      "revId": "df92f02af1f17373ea45dd96b66978e2dcaf1626",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2849978f_892de575",
         "filename": "src/mobile.startup/util.js",
         "patchSetId": 5
