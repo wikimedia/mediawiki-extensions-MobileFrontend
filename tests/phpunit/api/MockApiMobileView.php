@@ -33,9 +33,6 @@ class MockApiMobileView extends ApiMobileView {
 		}
 		$po = MediaWikiServices::getInstance()->getParser()->getFreshParser()->parse(
 			$params['text'], $wikiPage->getTitle(), $parserOptions );
-		if ( !defined( 'ParserOutput::SUPPORTS_STATELESS_TRANSFORMS' ) ) {
-			$po->setTOCEnabled( false );
-		}
 		$po->setText( str_replace( [ "\r", "\n" ], '', $po->getText( [
 			'allowTOC' => false, 'unwrap' => true,
 		] ) ) );
