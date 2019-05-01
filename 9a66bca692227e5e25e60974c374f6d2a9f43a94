@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "01c6ab9a_0a5a8333",
+        "filename": "resources/mobile.startup/Overlay.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-05-01T21:41:06Z",
+      "side": 1,
+      "message": "On a general note, I\u0027m wondering if some/all of these styles should live in Minerva given we have the editor-textarea mixin... https://gerrit.wikimedia.org/r/#/c/mediawiki/skins/MinervaNeue/+/507209/3/skinStyles/mobile.startup/Overlay.less\n\nI\u0027m a bit worried that textarea rules span 2 repos. That seems like it might cause us problems later if these CSS rules are applied to Vector (as is the case in the translation tool).\n\nAny thoughts/opinions on that?",
+      "revId": "9a66bca692227e5e25e60974c374f6d2a9f43a94",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "01697f5a_a41560af",
         "filename": "resources/mobile.startup/Overlay.less",
         "patchSetId": 8
