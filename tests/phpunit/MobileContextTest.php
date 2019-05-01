@@ -418,11 +418,11 @@ class MobileContextTest extends MediaWikiTestCase {
 
 	/**
 	 * @dataProvider addAnalyticsLogItemFromXAnalyticsProvider
-	 * @covers MobileContext::addAnalyticsLogItemFromXanalytics
+	 * @covers MobileContext::addAnalyticsLogItemFromXAnalytics
 	 */
 	public function testAddAnalyticsLogItemFromXAnalytics( $analyticsItem, $key, $val ) {
 		$context = $this->makeContext();
-		$context->addAnalyticsLogItemFromXanalytics( $analyticsItem );
+		$context->addAnalyticsLogItemFromXAnalytics( $analyticsItem );
 		$logItems = $context->getAnalyticsLogItems();
 		$this->assertTrue( isset( $logItems[$key] ) );
 		$this->assertEquals( $val, $logItems[$key] );
