@@ -1,0 +1,101 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "01697f5a_a41560af",
+        "filename": "resources/mobile.startup/Overlay.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-05-01T21:35:38Z",
+      "side": 1,
+      "message": "is mw-ui-input necessary here?",
+      "range": {
+        "startLine": 128,
+        "startChar": 9,
+        "endLine": 128,
+        "endChar": 21
+      },
+      "revId": "9a66bca692227e5e25e60974c374f6d2a9f43a94",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5d600766_3a53332a",
+        "filename": "resources/mobile.startup/Overlay.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-05-01T21:35:38Z",
+      "side": 1,
+      "message": "While I like this, I wonder if it\u0027s a little confusion given mw-ui-input defined in core. Should we indicate it\u0027s part of mobilefrontend e.g\n\n.mw-ui-input--mf-stacked ?",
+      "range": {
+        "startLine": 132,
+        "startChar": 13,
+        "endLine": 132,
+        "endChar": 22
+      },
+      "revId": "9a66bca692227e5e25e60974c374f6d2a9f43a94",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9c1d5dae_4885b0dc",
+        "filename": "resources/mobile.startup/Overlay.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-05-01T21:35:38Z",
+      "side": 1,
+      "message": "The border of the focus state surrounds the entire text area which is a little strange to me. Have we checked with a designer whether the removal of the left borders is necessary?",
+      "revId": "9a66bca692227e5e25e60974c374f6d2a9f43a94",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2dd5b370_1552ae3f",
+        "filename": "src/mobile.talk.overlays/TalkSectionAddOverlay.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-05-01T21:35:38Z",
+      "side": 1,
+      "message": "are these selector changes necessary?",
+      "revId": "9a66bca692227e5e25e60974c374f6d2a9f43a94",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aed3df82_16dbc3ff",
+        "filename": "src/mobile.talk.overlays/TalkSectionOverlay.js",
+        "patchSetId": 8
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-05-01T21:35:38Z",
+      "side": 1,
+      "message": "I like that we\u0027ve got rid of the wikitext-editor class",
+      "revId": "9a66bca692227e5e25e60974c374f6d2a9f43a94",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
