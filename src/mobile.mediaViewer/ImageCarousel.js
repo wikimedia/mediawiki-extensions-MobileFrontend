@@ -37,6 +37,7 @@ function ImageCarousel( options ) {
 	} );
 	this.router = options.router || router;
 	this.eventBus = options.eventBus;
+	this.hasLoadError = false;
 
 	View.call(
 		this,
