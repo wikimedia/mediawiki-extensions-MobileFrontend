@@ -6,7 +6,6 @@ var
 	mediaWiki = require( '../utils/mw' ),
 	oo = require( '../utils/oo' ),
 	util = require( '../../../src/mobile.startup/util' ),
-	Hogan = require( 'hogan.js' ),
 	Overlay,
 	sandbox;
 
@@ -80,7 +79,7 @@ QUnit.test( 'HTML overlay', function ( assert ) {
 
 	mfExtend( TestOverlay, Overlay, {
 		templatePartials: util.extend( {}, Overlay.prototype.templatePartials, {
-			content: Hogan.compile( '<div class="content">YO</div>' )
+			content: util.template( '<div class="content">YO</div>' )
 		} )
 	} );
 	overlay = new TestOverlay( {

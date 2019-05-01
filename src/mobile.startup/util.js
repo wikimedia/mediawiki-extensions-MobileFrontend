@@ -176,6 +176,6 @@ module.exports = {
 	 * @return {Template}
 	 */
 	template: function ( source ) {
-		return mw.template.compile( source.trim(), 'hogan' );
+		return mw.template.compile( source.trim(), 'mustache' );
 	}
 };

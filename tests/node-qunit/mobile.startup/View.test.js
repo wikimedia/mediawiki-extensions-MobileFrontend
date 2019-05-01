@@ -1,6 +1,5 @@
 /* global $ */
 var
-	Hogan = require( 'hogan.js' ),
 	mw = require( '../utils/mw' ),
 	jQuery = require( '../utils/jQuery' ),
 	dom = require( '../utils/dom' ),
@@ -65,7 +64,7 @@ QUnit.test( 'View#preRender', function ( assert ) {
 	}
 
 	mfExtend( ChildView, View, {
-		template: Hogan.compile( '<p>{{text}}</p>' ),
+		template: util.template( '<p>{{text}}</p>' ),
 		preRender: function () {
 			this.options.text = 'hello';
 		}
@@ -115,7 +114,7 @@ QUnit.test( 'View#delegateEvents', function ( assert ) {
 	}
 
 	mfExtend( EventsView, View, {
-		template: Hogan.compile( '<p><span>test</span></p>' ),
+		template: util.template( '<p><span>test</span></p>' ),
 		onParagraphClick: function ( ev ) {
 			ev.preventDefault();
 			assert.ok( true, 'Paragraph was clicked and handled' );
@@ -147,7 +146,7 @@ QUnit.test( 'View#render (with isTemplateMode)', function ( assert ) {
 	}
 
 	mfExtend( TemplateModeView, View, {
-		template: Hogan.compile( '<p class="foo"><span>{{text}}</span></p>' ),
+		template: util.template( '<p class="foo"><span>{{text}}</span></p>' ),
 		isTemplateMode: true
 	} );
 
@@ -156,7 +155,7 @@ QUnit.test( 'View#render (with isTemplateMode)', function ( assert ) {
 	}
 
 	mfExtend( ContainerView, View, {
-		template: Hogan.compile( '<p class="foo"><span>test</span></p>' )
+		template: util.template( '<p class="foo"><span>test</span></p>' )
 	} );
 
 	view = new TemplateModeView();
@@ -189,7 +188,7 @@ QUnit.test( 'View#render events (with isTemplateMode)', function ( assert ) {
 		onClick: function () {
 			this.$el.empty().text( 'hello world' );
 		},
-		template: Hogan.compile( '<p class="foo"><span>test</span></p>' ),
+		template: util.template( '<p class="foo"><span>test</span></p>' ),
 		isTemplateMode: true
 	} );
 

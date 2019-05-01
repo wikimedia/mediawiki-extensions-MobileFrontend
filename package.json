@@ -38,11 +38,11 @@
     "grunt-jsonlint": "1.1.0",
     "grunt-notify": "0.4.5",
     "grunt-stylelint": "0.10.1",
-    "hogan.js": "2.0.0",
     "jquery": "3.3.1",
     "jsdoc": "3.5.5",
     "jsdom": "12.2.0",
     "mwbot": "1.0.10",
+    "mustache": "3.0.1",
     "nyc": "13.0.1",
     "oojs": "2.2.2",
     "pre-commit": "1.2.2",
@@ -65,7 +65,7 @@
     },
     {
       "path": "resources/dist/mediawiki.template.hogan.js",
-      "maxSize": "2.5KB"
+      "maxSize": "0.4KB"
     },
     {
       "path": "resources/dist/mobile.common.js",

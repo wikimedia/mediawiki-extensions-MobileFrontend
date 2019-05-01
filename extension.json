@@ -156,12 +156,13 @@
 			]
 		},
 		"mediawiki.template.hogan": {
+			"deprecated": "use `mediawiki.template.mustache` instead.",
 			"targets": [
 				"mobile",
 				"desktop"
 			],
 			"dependencies": [
-				"mediawiki.template"
+				"mediawiki.template.mustache"
 			],
 			"scripts": [
 				"resources/dist/mobile.startup.runtime.js",
