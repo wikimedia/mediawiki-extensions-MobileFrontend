@@ -140,17 +140,11 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 
 				switchToolbar.on( 'switchEditor', function ( mode ) {
 					if ( mode === 'visual' ) {
-						// If the user tries to switch to the VisualEditor,
-						// check if any changes have been made,
-						// and if so, tell the user they have to save first.
-						if ( !self.gateway.hasChanged ) {
-							// TODO: Be more selective in which options we pass between editors
-							self._switchToVisualEditor( self.options );
+						if ( self.gateway.hasChanged ) {
+							// Pass wikitext if there are changes.
+							self._switchToVisualEditor( self.options, self.gateway.content );
 						} else {
-							// TODO: Replace with an OOUI dialog
-							if ( window.confirm( mw.msg( 'mobile-frontend-editor-switch-confirm' ) ) ) {
-								self.onStageChanges();
-							}
+							self._switchToVisualEditor( self.options );
 						}
 					}
 				} );
@@ -395,8 +389,9 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 	 * @instance
 	 * @private
 	 * @param {Object} options Object passed to the constructor
+	 * @param {string} [wikitext] Wikitext to pass to VE
 	 */
-	_switchToVisualEditor: function ( options ) {
+	_switchToVisualEditor: function ( options, wikitext ) {
 		var self = this;
 		this.log( {
 			action: 'abort',
@@ -418,6 +413,17 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 				self.hideSpinner();
 				// Unset classes from other editor
 				delete options.className;
+				if ( wikitext ) {
+					options.dataPromise = mw.libs.ve.targetLoader.requestPageData( 'visual', mw.config.get( 'wgRelevantPageName' ), {
+						section: options.sectionId,
+						oldId: options.oldId || mw.config.get( 'wgRevisionId' ),
+						targetName: 'mobile',
+						modified: true,
+						wikitext: wikitext
+					} );
+				} else {
+					delete options.dataPromise;
+				}
 				self.switching = true;
 				self.overlayManager.replaceCurrent( new VisualEditorOverlay( options ) );
 				self.switching = false;
