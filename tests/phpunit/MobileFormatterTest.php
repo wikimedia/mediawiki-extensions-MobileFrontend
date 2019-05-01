@@ -114,7 +114,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 		$mainPage = function ( MobileFormatter $f ) {
 			$f->setIsMainPage( true );
 		};
-		$citeUrl = SpecialPage::getTitleFor( 'MobileCite', '0' )->getLocalUrl();
+		$citeUrl = SpecialPage::getTitleFor( 'MobileCite', '0' )->getLocalURL();
 		$originalImage = '<img alt="foo" src="foo.jpg" width="100" '
 			. 'height="100" srcset="foo-1.5x.jpg 1.5x, foo-2x.jpg 2x">';
 		$placeholder = '<span class="lazy-image-placeholder" '
