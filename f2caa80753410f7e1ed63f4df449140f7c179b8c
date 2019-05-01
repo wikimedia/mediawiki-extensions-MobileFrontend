@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "433ec2a4_4b1f4ce0",
+        "filename": "src/mobile.editor.overlay/EditorOverlay.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 172,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2019-05-01T19:05:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cc0581c6_25d26b5a",
+      "range": {
+        "startLine": 170,
+        "startChar": 0,
+        "endLine": 172,
+        "endChar": 58
+      },
+      "revId": "f2caa80753410f7e1ed63f4df449140f7c179b8c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "fe5e5fb9_7c5bb7e4",
         "filename": "src/mobile.editor.overlay/EditorOverlay.js",
         "patchSetId": 6
@@ -42,6 +66,24 @@
     },
     {
       "key": {
+        "uuid": "aaea95fa_7b6598c8",
+        "filename": "src/mobile.editor.overlay/EditorOverlay.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 556,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2019-05-01T19:05:28Z",
+      "side": 1,
+      "message": "Um, line 545?",
+      "parentUuid": "fe5e5fb9_7c5bb7e4",
+      "revId": "f2caa80753410f7e1ed63f4df449140f7c179b8c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "8f02fc05_c3dc469f",
         "filename": "src/mobile.editor.overlay/EditorOverlay.js",
         "patchSetId": 6
@@ -53,6 +95,24 @@
       "writtenOn": "2019-04-29T21:02:37Z",
       "side": 1,
       "message": "VisualEditorOverlay doesn\u0027t have a second parameter. This looks like an accidental change (abandoned approach?), everything is already passed though options.dataPromise.",
+      "revId": "f2caa80753410f7e1ed63f4df449140f7c179b8c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ebda424d_4fd8303c",
+        "filename": "src/mobile.editor.overlay/EditorOverlay.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 567,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2019-05-01T19:05:28Z",
+      "side": 1,
+      "message": "Yep, done.",
+      "parentUuid": "8f02fc05_c3dc469f",
       "revId": "f2caa80753410f7e1ed63f4df449140f7c179b8c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
