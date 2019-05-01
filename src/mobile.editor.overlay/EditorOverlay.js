@@ -51,9 +51,6 @@ function EditorOverlay( options, dataPromise ) {
 			options
 		)
 	);
-	if ( this.gateway.fromModified ) {
-		this.$el.find( '.continue, .submit' ).prop( 'disabled', false );
-	}
 }
 
 mfExtend( EditorOverlay, EditorOverlayBase, {
@@ -364,6 +361,10 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 					content = result.text;
 
 				self.setContent( content );
+				if ( self.gateway.fromModified ) {
+					// Trigger intial EditorGateway#setContent and update save button
+					self.onInputWikitextEditor();
+				}
 				// check if user is blocked
 				if ( result.blockinfo ) {
 					// Lazy-load moment only if it's needed,
