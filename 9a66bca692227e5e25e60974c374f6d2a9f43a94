@@ -65,6 +65,30 @@
     },
     {
       "key": {
+        "uuid": "a606b140_18145d25",
+        "filename": "resources/mobile.startup/Overlay.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2019-05-02T15:29:49Z",
+      "side": 1,
+      "message": "Wow, that seems like pain in the … maintenance-wise. Nobody will understand that selector name.\nWhat are --stacked and when are they used? Front-end only? How about .mf-input--stacked then?",
+      "parentUuid": "5d600766_3a53332a",
+      "range": {
+        "startLine": 132,
+        "startChar": 13,
+        "endLine": 132,
+        "endChar": 22
+      },
+      "revId": "9a66bca692227e5e25e60974c374f6d2a9f43a94",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9c1d5dae_4885b0dc",
         "filename": "resources/mobile.startup/Overlay.less",
         "patchSetId": 8
@@ -76,6 +100,40 @@
       "writtenOn": "2019-05-01T21:35:38Z",
       "side": 1,
       "message": "The border of the focus state surrounds the entire text area which is a little strange to me. Have we checked with a designer whether the removal of the left borders is necessary?",
+      "revId": "9a66bca692227e5e25e60974c374f6d2a9f43a94",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8012dd9b_0c7efe94",
+        "filename": "resources/mobile.startup/Overlay.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2019-05-02T15:29:49Z",
+      "side": 1,
+      "message": "newline after `,`. \n:hover always before :focus",
+      "revId": "9a66bca692227e5e25e60974c374f6d2a9f43a94",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7134a7a0_1caccef0",
+        "filename": "resources/mobile.startup/Overlay.less",
+        "patchSetId": 8
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2019-05-02T15:29:49Z",
+      "side": 1,
+      "message": "Comments start with uppercase and end with \u0027.\u0027",
       "revId": "9a66bca692227e5e25e60974c374f6d2a9f43a94",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
