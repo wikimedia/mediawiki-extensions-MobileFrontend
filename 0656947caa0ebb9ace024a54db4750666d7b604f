@@ -16,6 +16,24 @@
       "revId": "0656947caa0ebb9ace024a54db4750666d7b604f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4de6dcb6_25dec4bc",
+        "filename": "resources/mobile.startup/references/ReferencesDrawer.less",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2019-05-02T13:52:54Z",
+      "side": 1,
+      "message": "Yup, we\u0027re only applying this class to the heading of the drawer. You\u0027re right, changing the class and fixing these selectors is the better thing to do :)",
+      "parentUuid": "76069b6b_e6acf21e",
+      "revId": "0656947caa0ebb9ace024a54db4750666d7b604f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
