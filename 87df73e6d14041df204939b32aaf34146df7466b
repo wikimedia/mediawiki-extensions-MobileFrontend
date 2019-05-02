@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "95e42e48_161384e6",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-05-02T20:47:59Z",
+      "side": 1,
+      "message": "typo, should be ResultWrapper",
+      "range": {
+        "startLine": 74,
+        "startChar": 11,
+        "endLine": 74,
+        "endChar": 25
+      },
+      "revId": "87df73e6d14041df204939b32aaf34146df7466b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3bbb4973_fed2595d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-05-02T20:47:59Z",
+      "side": 1,
+      "message": "Please add type for ResultWrapper: \n\n  addWatchlistHTML( ResultWrapper $res, User ).\n\nThere is no need to pass $view and $filter, as those are taken from $this. Also, functions like `showRecentChangesHeader` check `$this-\u003efilter`. If you want to pass $filter, then everything called from this function should use passed $filter.",
+      "range": {
+        "startLine": 79,
+        "startChar": 35,
+        "endLine": 79,
+        "endChar": 39
+      },
+      "revId": "87df73e6d14041df204939b32aaf34146df7466b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "76580f5f_6e66dcac",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-05-02T20:47:59Z",
+      "side": 1,
+      "message": "this should be private",
+      "range": {
+        "startLine": 79,
+        "startChar": 1,
+        "endLine": 79,
+        "endChar": 7
+      },
+      "revId": "87df73e6d14041df204939b32aaf34146df7466b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c805e830_b611fa73",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-05-02T20:47:59Z",
+      "side": 1,
+      "message": "you pass $filter, but here you\u0027re still using $this-\u003efilter (which immho is correct).",
+      "range": {
+        "startLine": 81,
+        "startChar": 60,
+        "endLine": 81,
+        "endChar": 72
+      },
+      "revId": "87df73e6d14041df204939b32aaf34146df7466b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
