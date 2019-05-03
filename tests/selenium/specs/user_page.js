@@ -12,7 +12,7 @@ const { iAmUsingTheMobileSite,
 	password = Util.getTestString();
 
 // @chrome @firefox @test2.m.wikipedia.org @vagrant @login
-describe( 'User:<username>', () => {
+describe.skip( 'User:<username>', () => {
 
 	before( () => {
 		const login = () => {
