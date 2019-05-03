@@ -312,7 +312,8 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	public static function getEmptyListHtml( $feed, $lang ) {
 		$dir = $lang->isRTL() ? 'rtl' : 'ltr';
 
-		$imgUrl = MobileContext::singleton()->getConfig()->get( 'ExtensionAssetsPath' ) .
+		$config = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Config' );
+		$imgUrl = $config->get( 'ExtensionAssetsPath' ) .
 			"/MobileFrontend/images/emptywatchlist-page-actions-$dir.png";
 
 		if ( $feed ) {

@@ -88,7 +88,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	 * @param string|null $par Revision IDs separated by three points (e.g. 123...124)
 	 */
 	public function executeWhenAvailable( $par ) {
-		$ctx = MobileContext::singleton();
+		$ctx = $this->getMobileContext();
 		$this->setHeaders();
 		$output = $this->getOutput();
 
@@ -378,10 +378,10 @@ class SpecialMobileDiff extends MobileSpecialPage {
 
 	/**
 	 * Get the url for the mobile diff special page to use in Desktop footer
+	 * @param WebRequest $req
 	 * @return bool|string Return URL or false when revision id's not set
 	 */
-	public static function getMobileUrlFromDesktop() {
-		$req = MobileContext::singleton()->getRequest();
+	public static function getMobileUrlFromDesktop( WebRequest $req ) {
 		$rev2 = $req->getText( 'diff' );
 		$rev1 = $req->getText( 'oldid' );
 		// Actually, both do the same, WTF
