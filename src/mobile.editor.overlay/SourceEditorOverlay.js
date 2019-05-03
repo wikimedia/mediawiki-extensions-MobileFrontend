@@ -120,7 +120,8 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 	 */
 	postRender: function () {
 		var self = this,
-			options = this.options;
+			options = this.options,
+			showAnonWarning = options.isAnon && !options.switched;
 
 		// log edit attempt
 		this.log( { action: 'ready' } );
@@ -169,7 +170,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 		this.$preview = this.$el.find( '.preview' );
 		this.$content = this.$el.find( '.wikitext-editor' );
 		this.$content.addClass( 'mw-editfont-' + mw.user.options.get( 'editfont' ) );
-		if ( options.isAnon ) {
+		if ( showAnonWarning ) {
 			this.$anonWarning = this.createAnonWarning( options );
 			this.$el.find( '.editor-container' ).append( this.$anonWarning );
 			this.$content.hide();
@@ -192,7 +193,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 
 		this.$content.on( 'input', this._resizeEditor.bind( this ) );
 
-		if ( !self.options.isAnon ) {
+		if ( !showAnonWarning ) {
 			this._loadContent();
 		}
 	},
