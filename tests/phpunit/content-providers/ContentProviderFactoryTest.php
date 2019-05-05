@@ -66,12 +66,11 @@ class ContentProviderFactoryTest extends MediaWikiTestCase {
 	 * @covers ::getProvider
 	 */
 	public function testGetProviderWithNoMFContentProvider() {
-		$this->setExpectedException( RuntimeException::class );
-
 		$mockOutputPage = $this->mockOutputPage();
 		$this->setMwGlobals( 'wgMFContentProviderClass', '' );
 
-		$provider = ContentProviderFactory::getProvider(
+		$this->setExpectedException( RuntimeException::class );
+		ContentProviderFactory::getProvider(
 			GlobalVarConfig::newInstance(), $mockOutputPage, self::TEST_HTML
 		);
 	}
@@ -119,13 +118,12 @@ class ContentProviderFactoryTest extends MediaWikiTestCase {
 	 * @covers ::getProvider
 	 */
 	public function testGetProviderWithInvalidContentProvider() {
-		$this->setExpectedException( RuntimeException::class );
-
 		$mockOutputPage = $this->mockOutputPage();
 		$this->setMwGlobals( 'wgMFContentProviderClass', ContentProviderFactory::class );
 		$this->setMwGlobals( 'wgMFContentProviderTryLocalContentFirst', false );
 
-		$provider = ContentProviderFactory::getProvider(
+		$this->setExpectedException( RuntimeException::class );
+		ContentProviderFactory::getProvider(
 			GlobalVarConfig::newInstance(), $mockOutputPage, self::TEST_HTML
 		);
 	}
