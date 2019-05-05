@@ -10,7 +10,7 @@ class MobileContextTest extends MediaWikiTestCase {
 	 * PHP 5.3.2 introduces the ReflectionMethod::setAccessible() method to allow the invocation of
 	 * protected and private methods directly through the Reflection API
 	 *
-	 * @param $name string
+	 * @param string $name
 	 * @return ReflectionMethod
 	 */
 	protected static function getMethod( $name ) {
