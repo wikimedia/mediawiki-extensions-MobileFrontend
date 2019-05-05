@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7850a8c6_caa1002a",
+        "filename": "includes/MobileFrontendHooks.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 656,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-05-05T23:09:44Z",
+      "side": 1,
+      "message": "Here!",
+      "range": {
+        "startLine": 656,
+        "startChar": 13,
+        "endLine": 656,
+        "endChar": 40
+      },
+      "revId": "9b43d8248551a4c694e8bf48feb025b27eea9d56",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d08986b9_b944e78e",
+        "filename": "tests/phpunit/MobileFrontendHooksTest.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 185,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-05-05T23:09:44Z",
+      "side": 1,
+      "message": "And here!",
+      "range": {
+        "startLine": 185,
+        "startChar": 13,
+        "endLine": 185,
+        "endChar": 40
+      },
+      "revId": "9b43d8248551a4c694e8bf48feb025b27eea9d56",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
