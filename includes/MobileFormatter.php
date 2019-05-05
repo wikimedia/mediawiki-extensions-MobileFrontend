@@ -1,6 +1,7 @@
 <?php
 
 use HtmlFormatter\HtmlFormatter;
+use MediaWiki\MediaWikiServices;
 use MobileFrontend\ContentProviders\IContentProvider;
 use MobileFrontend\Transforms\MoveLeadParagraphTransform;
 use MobileFrontend\Transforms\AddMobileTocTransform;
@@ -75,7 +76,7 @@ class MobileFormatter extends HtmlFormatter {
 
 		$this->title = $title;
 		$this->revId = $title->getLatestRevID();
-		$config = MobileContext::singleton()->getMFConfig();
+		$config = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Config' );
 		$this->topHeadingTags = $config->get( 'MFMobileFormatterHeadings' );
 
 		$this->lazyTransform = new LazyImageTransform(
@@ -164,8 +165,9 @@ class MobileFormatter extends HtmlFormatter {
 		$removeDefaults = true, $removeReferences = false, $removeImages = false,
 		$showFirstParagraphBeforeInfobox = false
 	) {
-		$ctx = MobileContext::singleton();
-		$config = $ctx->getMFConfig();
+		$services = MediaWikiServices::getInstance();
+		$ctx = $services->getService( 'MobileFrontend.Context' );
+		$config = $services->getService( 'MobileFrontend.Config' );
 		$doc = $this->getDoc();
 
 		$isSpecialPage = $this->title->isSpecialPage();

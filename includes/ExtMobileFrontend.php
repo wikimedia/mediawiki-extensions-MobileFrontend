@@ -20,10 +20,10 @@ class ExtMobileFrontend {
 	 * @return string
 	 */
 	public static function domParse( OutputPage $out, $text = null, $mobileFormatHtml = true ) {
-		$featureManager = \MediaWiki\MediaWikiServices::getInstance()
-			->getService( 'MobileFrontend.FeaturesManager' );
-		$context = MobileContext::singleton();
-		$config = $context->getMFConfig();
+		$services = MediaWikiServices::getInstance();
+		$featureManager = $services->getService( 'MobileFrontend.FeaturesManager' );
+		$context = $services->getService( 'MobileFrontend.Context' );
+		$config = $services->getService( 'MobileFrontend.Config' );
 		$provideTagline = $featureManager->isFeatureAvailableInContext(
 			'MFEnableWikidataDescriptions', $context
 		) && $context->shouldShowWikibaseDescriptions( 'tagline' );
@@ -100,7 +100,7 @@ class ExtMobileFrontend {
 	 * @return string
 	 */
 	public static function getUserPageContent( IContextSource $output, User $pageUser, Title $title ) {
-		$context = MobileContext::singleton();
+		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
 		$pageUsername = $pageUser->getName();
 		// Is the current user viewing their own page?
 		$isCurrentUser = $output->getUser()->getName() === $pageUsername;

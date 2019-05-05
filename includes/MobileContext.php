@@ -113,6 +113,7 @@ class MobileContext extends ContextSource {
 
 	/**
 	 * Returns the actual MobileContext Instance or create a new if no exists
+	 * @deprecated use MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
 	 * @return MobileContext
 	 */
 	public static function singleton() {
@@ -139,6 +140,7 @@ class MobileContext extends ContextSource {
 
 	/**
 	 * Get MobileFrontend's config object.
+	 * @deprecated use MediaWikiServices::getInstance()->getService( 'MobileFrontend.Config' );
 	 * @return Config
 	 */
 	public function getMFConfig() {

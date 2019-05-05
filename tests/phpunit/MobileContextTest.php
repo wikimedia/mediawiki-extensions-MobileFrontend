@@ -575,7 +575,7 @@ class MobileContextTest extends MediaWikiTestCase {
 		$wgMFStripResponsiveImages,
 		$stripResponsiveImages = null
 	) {
-		$context = MobileContext::singleton();
+		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
 		$context->setForceMobileView( $forceMobileView );
 
 		$this->setMwGlobals(

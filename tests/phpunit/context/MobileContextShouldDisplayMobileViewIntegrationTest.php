@@ -2,6 +2,7 @@
 
 namespace Tests\MobileFrontend\Context;
 
+use MediaWiki\MediaWikiServices;
 use MediaWikiTestCase;
 use MobileContext;
 
@@ -24,7 +25,9 @@ class MobileContextShouldDisplayMobileViewIntegrationTest extends MediaWikiTestC
 		parent::setUp();
 
 		MobileContext::resetInstanceForTesting();
-		$this->context = MobileContext::singleton();
+		$this->context = MediaWikiServices::getInstance()->getService(
+			'MobileFrontend.Context'
+		);
 	}
 
 	/**

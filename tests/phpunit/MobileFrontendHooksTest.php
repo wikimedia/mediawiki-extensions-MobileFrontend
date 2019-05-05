@@ -1,10 +1,11 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
+
 /**
  * @group MobileFrontend
  */
 class MobileFrontendHooksTest extends MediaWikiTestCase {
-
 	protected function setUp() {
 		parent::setUp();
 
@@ -277,7 +278,9 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 		$shouldConfstrChange,
 		$stripResponsiveImages
 	) {
-		$context = MobileContext::singleton();
+		$context = MediaWikiServices::getInstance()->getService(
+			'MobileFrontend.Context'
+		);
 		$context->setStripResponsiveImages( $stripResponsiveImages );
 
 		$expectedConfstr = $confstr = '';
@@ -385,7 +388,8 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 			]
 		);
 
-		MobileContext::singleton()->setStripResponsiveImages( $stripResponsiveImages );
+		MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' )
+			->setStripResponsiveImages( $stripResponsiveImages );
 
 		// We're only asserting that the `srcset` attribute is unset.
 		$attribs = [ 'srcset' => 'bar' ];

@@ -3,7 +3,7 @@
 namespace MobileFrontend\Transforms;
 
 use DOMXPath;
-use MobileContext;
+use MediaWiki\MediaWikiServices;
 use DOMElement;
 use DOMDocument;
 use DOMNode;
@@ -181,7 +181,8 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 				$isInWrongPlace = $this->hasNoNonEmptyPrecedingParagraphs( $xPath,
 					self::findParentWithParent( $infobox, $leadSectionBody )
 				);
-				$loggingEnabled = MobileContext::singleton()->getMFConfig()->get( 'MFLogWrappedInfoboxes' );
+				$loggingEnabled = MediaWikiServices::getInstance()
+					->getService( 'MobileFrontend.Config' )->get( 'MFLogWrappedInfoboxes' );
 				/**
 				 * @see https://phabricator.wikimedia.org/T149884
 				 * @todo remove after research is done
