@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4afa9a99_d890b38a",
+        "filename": "tests/selenium/specs/user_page.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-05-06T23:37:57Z",
+      "side": 0,
+      "message": "This is async, which means its result is currently not waited for.\n\nNeeds to either use its promise result and Mocha\u0027s done() parameter with regular promise chaining within the method here, or to use async-await (requires Node 10), or as wdio 4\u0027s weird love for Fibers allows - by using browser.call().\n\nThis requirement applies to all async calls made by tests directly, with the exception of promise-returning methods on objects owned by Wdio, where it will do that automatically (such as browser.url, waitFor, element, click, etc.)",
+      "range": {
+        "startLine": 19,
+        "startChar": 2,
+        "endLine": 19,
+        "endChar": 42
+      },
+      "revId": "cec7d20f1ee6cb6f495a77cc217236e3af708e13",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
