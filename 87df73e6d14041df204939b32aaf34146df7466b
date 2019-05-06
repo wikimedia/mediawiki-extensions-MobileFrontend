@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "fc218053_0e3bdd60",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-05-06T20:50:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "95e42e48_161384e6",
+      "range": {
+        "startLine": 74,
+        "startChar": 11,
+        "endLine": 74,
+        "endChar": 25
+      },
+      "revId": "87df73e6d14041df204939b32aaf34146df7466b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3bbb4973_fed2595d",
         "filename": "includes/specials/SpecialMobileWatchlist.php",
         "patchSetId": 2
@@ -71,6 +95,30 @@
     },
     {
       "key": {
+        "uuid": "2a5c1144_b82cda00",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-05-06T20:50:53Z",
+      "side": 1,
+      "message": "So reason I didn\u0027t do all this was for the tests. Do I have to use ReflectionClass to expose private methods? I always have to look it up and it\u0027s not intuitive.",
+      "parentUuid": "76580f5f_6e66dcac",
+      "range": {
+        "startLine": 79,
+        "startChar": 1,
+        "endLine": 79,
+        "endChar": 7
+      },
+      "revId": "87df73e6d14041df204939b32aaf34146df7466b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c805e830_b611fa73",
         "filename": "includes/specials/SpecialMobileWatchlist.php",
         "patchSetId": 2
@@ -94,6 +142,30 @@
     },
     {
       "key": {
+        "uuid": "5c9690ae_386e8955",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-05-06T20:50:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c805e830_b611fa73",
+      "range": {
+        "startLine": 81,
+        "startChar": 60,
+        "endLine": 81,
+        "endChar": 72
+      },
+      "revId": "87df73e6d14041df204939b32aaf34146df7466b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "be7655e0_80199f9d",
         "filename": "includes/specials/SpecialMobileWatchlist.php",
         "patchSetId": 2
@@ -105,6 +177,30 @@
       "writtenOn": "2019-05-02T20:56:14Z",
       "side": 1,
       "message": "btw, \u003cul\u003e is closed here, but looks like it\u0027s not opened anywhere",
+      "range": {
+        "startLine": 306,
+        "startChar": 2,
+        "endLine": 306,
+        "endChar": 30
+      },
+      "revId": "87df73e6d14041df204939b32aaf34146df7466b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2abf371c_046a06c2",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 306,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-05-06T20:50:53Z",
+      "side": 1,
+      "message": "I\u0027ve added an inline comment to explain this but it is needed!",
+      "parentUuid": "be7655e0_80199f9d",
       "range": {
         "startLine": 306,
         "startChar": 2,
