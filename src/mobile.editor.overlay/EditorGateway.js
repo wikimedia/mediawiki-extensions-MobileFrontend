@@ -49,7 +49,7 @@ EditorGateway.prototype = {
 			} );
 
 			if ( blockedError && blockedError.data && blockedError.data.blockinfo ) {
-				// Preload library used by EditorOverlay
+				// Preload library used by EditorOverlayBase#parseBlockInfo
 				// to format block expiry datetime and duration
 				mw.loader.load( 'moment' );
 

@@ -177,7 +177,7 @@ mfExtend( TalkSectionOverlay, Overlay, {
 
 				enableSaveButton();
 			}, function ( data, response ) {
-				// FIXME: Code sharing with EditorOverlay?
+				// FIXME: Code sharing with SourceEditorOverlay?
 				var msg,
 					// When save failed with one of these error codes, the returned
 					// message in response.error.info will be forwarded to the user.

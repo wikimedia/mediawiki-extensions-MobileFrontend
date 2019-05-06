@@ -12,9 +12,9 @@ var EditorOverlayBase = require( './EditorOverlayBase' ),
  * @extends EditorOverlayBase
  *
  * @param {Object} options Configuration options
- * @param {EditorOverlay} options.EditorOverlay Class to use for standard
+ * @param {SourceEditorOverlay} options.SourceEditorOverlay Class to use for standard
  *  Wikitext editor. It must be passed in explicitly to avoid a cyclic
- *  dependency between VisualEdtiorOverlay and EditorOverlay
+ *  dependency between VisualEditorOverlay and SourceEditorOverlay
  */
 function VisualEditorOverlay( options ) {
 	this.applyHeaderOptions( options, true );
@@ -25,7 +25,7 @@ function VisualEditorOverlay( options ) {
 			className: 'overlay editor-overlay editor-overlay-ve'
 		}, options )
 	);
-	this.EditorOverlay = options.EditorOverlay;
+	this.SourceEditorOverlay = options.SourceEditorOverlay;
 	this.isNewPage = options.isNewPage;
 
 	// Gateway present for a few utility purposes; the VE articletarget
@@ -63,13 +63,13 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 	editor: 'visualeditor',
 	/**
 	 * Set options that apply specifically to VisualEditorOverlay but not
-	 * EditorOverlay so that an EditorOverlay instance can be created effortlessly.
+	 * SourceEditorOverlay so that an SourceEditorOverlay instance can be created effortlessly.
 	 * FIXME: Must be smarter way to do this.
 	 * @memberof VisualEditorOverlay
 	 * @instance
 	 * @param {Object} options Configuration options
 	 * @param {boolean} isVE whether the options are being generated for a VisualEditorOverlay
-	 *  or a EditorOverlay
+	 *  or a SourceEditorOverlay
 	 */
 	applyHeaderOptions: function ( options, isVE ) {
 		// Set things that are known to be true.
@@ -194,14 +194,14 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 		this.showHidden( '.initial-header' );
 	},
 	/**
-	 * Loads an {EditorOverlay} and replaces the existing {VisualEditorOverlay}
+	 * Loads an {SourceEditorOverlay} and replaces the existing {VisualEditorOverlay}
 	 * @memberof VisualEditorOverlay
 	 * @instance
 	 * @param {jQuery.Promise} [dataPromise] Optional promise for loading content
 	 */
 	switchToSourceEditor: function ( dataPromise ) {
 		var self = this,
-			EditorOverlay = this.EditorOverlay;
+			SourceEditorOverlay = this.SourceEditorOverlay;
 		this.log( {
 			action: 'abort',
 			type: 'switchnochange',
@@ -225,7 +225,7 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 			} );
 		}
 		self.switching = true;
-		self.overlayManager.replaceCurrent( new EditorOverlay( self.options, dataPromise ) );
+		self.overlayManager.replaceCurrent( new SourceEditorOverlay( self.options, dataPromise ) );
 		self.switching = false;
 	},
 	/**

@@ -1,6 +1,6 @@
 var sandbox, messageStub, getContentStub, previewResolve,
 	testUrl = '/w/index.php?title=User:Test',
-	EditorGateway, EditorOverlay, BlockMessage,
+	EditorGateway, SourceEditorOverlay, BlockMessage,
 	jQuery = require( '../utils/jQuery' ),
 	sinon = require( 'sinon' ),
 	util = require( '../../../src/mobile.startup/util' ),
@@ -8,7 +8,7 @@ var sandbox, messageStub, getContentStub, previewResolve,
 	dom = require( '../utils/dom' ),
 	mediaWiki = require( '../utils/mw' );
 
-QUnit.module( 'MobileFrontend mobile.editor.overlay/EditorOverlay', {
+QUnit.module( 'MobileFrontend mobile.editor.overlay/SourceEditorOverlay', {
 	beforeEach: function () {
 		sandbox = sinon.sandbox.create();
 		dom.setUp( sandbox, global );
@@ -20,11 +20,11 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/EditorOverlay', {
 			.withArgs( 'mobile-frontend-editor-publish' ).returns( 'Publish' );
 
 		EditorGateway = require( '../../../src/mobile.editor.overlay/EditorGateway' );
-		EditorOverlay = require( '../../../src/mobile.editor.overlay/EditorOverlay' );
+		SourceEditorOverlay = require( '../../../src/mobile.editor.overlay/SourceEditorOverlay' );
 		BlockMessage = require( '../../../src/mobile.editor.overlay/BlockMessage' );
 
 		// prevent event logging requests
-		sandbox.stub( EditorOverlay.prototype, 'log' ).returns( util.Deferred().resolve() );
+		sandbox.stub( SourceEditorOverlay.prototype, 'log' ).returns( util.Deferred().resolve() );
 		messageStub = sandbox.stub( BlockMessage.prototype, 'initialize' );
 		sandbox.stub( BlockMessage.prototype, 'toggle' );
 		getContentStub = sandbox.stub( EditorGateway.prototype, 'getContent' );
@@ -73,7 +73,7 @@ QUnit.test( '#initialize, blocked user', function ( assert ) {
 	} );
 	getContentStub.returns( dBlockedContent );
 	// eslint-disable-next-line no-new
-	new EditorOverlay( {
+	new SourceEditorOverlay( {
 		title: 'test.css'
 	} );
 
@@ -100,7 +100,7 @@ QUnit.test( '#initialize, blocked user', function ( assert ) {
 } );
 
 QUnit.test( '#initialize, with given page and section', function ( assert ) {
-	var editorOverlay = new EditorOverlay( {
+	var editorOverlay = new SourceEditorOverlay( {
 		title: 'test',
 		sectionId: 0
 	} );
@@ -118,7 +118,7 @@ QUnit.test( '#initialize, with given page and section', function ( assert ) {
 } );
 
 QUnit.test( '#initialize, without a section', function ( assert ) {
-	var editorOverlay = new EditorOverlay( {
+	var editorOverlay = new SourceEditorOverlay( {
 		title: 'test.css'
 	} );
 
@@ -131,7 +131,7 @@ QUnit.test( '#initialize, without a section', function ( assert ) {
 } );
 
 QUnit.test( '#preview', function ( assert ) {
-	var editorOverlay = new EditorOverlay( {
+	var editorOverlay = new SourceEditorOverlay( {
 		title: 'test',
 		sectionId: 0
 	} );
@@ -144,7 +144,7 @@ QUnit.test( '#preview', function ( assert ) {
 } );
 
 QUnit.test( '#without-preview', function ( assert ) {
-	var editorOverlay = new EditorOverlay( {
+	var editorOverlay = new SourceEditorOverlay( {
 		title: 'test',
 		sectionId: 0
 	} );
@@ -154,12 +154,12 @@ QUnit.test( '#without-preview', function ( assert ) {
 } );
 
 QUnit.test( '#initialize, as anonymous', function ( assert ) {
-	var editorOverlay = new EditorOverlay( {
+	var editorOverlay = new SourceEditorOverlay( {
 		title: 'Main_page',
 		isAnon: true
 	} );
 
-	// EditorOverlay triggers a call to _loadContent so will always start an async request.
+	// SourceEditorOverlay triggers a call to _loadContent so will always start an async request.
 	// Make this test async to ensure it finishes and doesn't cause side effects to other functions.
 	return getContentStub().then( function () {
 		assert.ok( editorOverlay.$anonWarning.length > 0, 'Editorwarning (IP will be saved) visible.' );

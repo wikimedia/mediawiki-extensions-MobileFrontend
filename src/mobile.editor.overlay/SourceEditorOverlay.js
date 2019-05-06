@@ -10,7 +10,7 @@ var EditorOverlayBase = require( './EditorOverlayBase' ),
 
 /**
  * Overlay that shows an editor
- * @class EditorOverlay
+ * @class SourceEditorOverlay
  * @uses Section
  * @uses AbuseFilterPanel
  * @uses EditorGateway
@@ -20,7 +20,7 @@ var EditorOverlayBase = require( './EditorOverlayBase' ),
  * @param {Object} options Configuration options
  * @param {jQuery.Promise} [dataPromise] Optional promise for loading content
  */
-function EditorOverlay( options, dataPromise ) {
+function SourceEditorOverlay( options, dataPromise ) {
 	this.isFirefox = /firefox/i.test( window.navigator.userAgent );
 	this.gateway = new EditorGateway( {
 		api: options.api,
@@ -53,10 +53,10 @@ function EditorOverlay( options, dataPromise ) {
 	);
 }
 
-mfExtend( EditorOverlay, EditorOverlayBase, {
+mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 	/**
 	 * @inheritdoc
-	 * @memberof EditorOverlay
+	 * @memberof SourceEditorOverlay
 	 * @instance
 	 */
 	templatePartials: util.extend( {}, EditorOverlayBase.prototype.templatePartials, {
@@ -68,19 +68,19 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 		` )
 	} ),
 	/**
-	 * @memberof EditorOverlay
+	 * @memberof SourceEditorOverlay
 	 * @instance
 	 */
 	editor: 'wikitext',
 	/**
-	 * @memberof EditorOverlay
+	 * @memberof SourceEditorOverlay
 	 * @instance
 	 */
 	sectionLine: '',
 
 	/**
 	 * Check whether VisualEditor is enabled or not.
-	 * @memberof EditorOverlay
+	 * @memberof SourceEditorOverlay
 	 * @instance
 	 * @return {boolean}
 	 */
@@ -97,7 +97,7 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 	},
 	/**
 	 * Wikitext Editor input handler
-	 * @memberof EditorOverlay
+	 * @memberof SourceEditorOverlay
 	 * @instance
 	 */
 	onInputWikitextEditor: function () {
@@ -106,7 +106,7 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 	},
 	/**
 	 * @inheritdoc
-	 * @memberof EditorOverlay
+	 * @memberof SourceEditorOverlay
 	 * @instance
 	 */
 	onClickBack: function () {
@@ -115,7 +115,7 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 	},
 	/**
 	 * @inheritdoc
-	 * @memberof EditorOverlay
+	 * @memberof SourceEditorOverlay
 	 * @instance
 	 */
 	postRender: function () {
@@ -199,7 +199,7 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 
 	/**
 	 * Handles click on "Edit without login" in anonymous editing warning.
-	 * @memberof EditorOverlay
+	 * @memberof SourceEditorOverlay
 	 * @instance
 	 * @private
 	 */
@@ -214,7 +214,7 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 	/**
 	 * Prepares the preview interface and reveals the save screen of the overlay
 	 * @inheritdoc
-	 * @memberof EditorOverlay
+	 * @memberof SourceEditorOverlay
 	 * @instance
 	 */
 	onStageChanges: function () {
@@ -260,7 +260,7 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 
 	/**
 	 * Hides the preview and reverts back to initial screen.
-	 * @memberof EditorOverlay
+	 * @memberof SourceEditorOverlay
 	 * @instance
 	 * @private
 	 */
@@ -276,7 +276,7 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 
 	/**
 	 * Resize the editor textarea, maintaining scroll position in iOS
-	 * @memberof EditorOverlay
+	 * @memberof SourceEditorOverlay
 	 * @instance
 	 */
 	_resizeEditor: function () {
@@ -314,7 +314,7 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 
 	/**
 	 * Set content to the user input field.
-	 * @memberof EditorOverlay
+	 * @memberof SourceEditorOverlay
 	 * @instance
 	 * @param {string} content The content to set.
 	 */
@@ -327,7 +327,7 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 
 	/**
 	 * Returns the content of the user input field.
-	 * @memberof EditorOverlay
+	 * @memberof SourceEditorOverlay
 	 * @instance
 	 * @return {string}
 	 */
@@ -337,7 +337,7 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 
 	/**
 	 * Requests content from the API and reveals it in UI.
-	 * @memberof EditorOverlay
+	 * @memberof SourceEditorOverlay
 	 * @instance
 	 * @private
 	 */
@@ -383,9 +383,9 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 	},
 
 	/**
-	 * Loads a {VisualEditorOverlay} and replaces the existing EditorOverlay with it
+	 * Loads a {VisualEditorOverlay} and replaces the existing SourceEditorOverlay with it
 	 * based on the current option values.
-	 * @memberof EditorOverlay
+	 * @memberof SourceEditorOverlay
 	 * @instance
 	 * @private
 	 * @param {Object} options Object passed to the constructor
@@ -408,7 +408,7 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 			return mw.libs.ve.targetLoader.loadModules( 'visual' );
 		} ).then(
 			function () {
-				options.EditorOverlay = EditorOverlay;
+				options.SourceEditorOverlay = SourceEditorOverlay;
 				options.switched = true;
 				self.hideSpinner();
 				// Unset classes from other editor
@@ -439,7 +439,7 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 
 	/**
 	 * Reveals an abuse filter panel inside the view.
-	 * @memberof EditorOverlay
+	 * @memberof SourceEditorOverlay
 	 * @instance
 	 * @private
 	 * @param {string} type The type of alert, e.g. 'warning' or 'disallow'
@@ -456,7 +456,7 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 	 * Executed when the editor clicks the save/publish button. Handles logging and submitting
 	 * the save action to the editor API.
 	 * @inheritdoc
-	 * @memberof EditorOverlay
+	 * @memberof SourceEditorOverlay
 	 * @instance
 	 */
 	onSaveBegin: function () {
@@ -500,7 +500,7 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 	 * Executed when page save fails. Handles error display and bookkeeping,
 	 * passes logging duties to the parent.
 	 * @inheritdoc
-	 * @memberof EditorOverlay
+	 * @memberof SourceEditorOverlay
 	 * @instance
 	 */
 	onSaveFailure: function ( data ) {
@@ -528,7 +528,7 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 
 	/**
 	 * Checks whether the existing content has changed.
-	 * @memberof EditorOverlay
+	 * @memberof SourceEditorOverlay
 	 * @instance
 	 * @return {boolean}
 	 */
@@ -537,4 +537,4 @@ mfExtend( EditorOverlay, EditorOverlayBase, {
 	}
 } );
 
-module.exports = EditorOverlay;
+module.exports = SourceEditorOverlay;

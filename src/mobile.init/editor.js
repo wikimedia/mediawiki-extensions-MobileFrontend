@@ -151,8 +151,8 @@ function setupEditor( page, skin ) {
 			mw.hook( 'mobileFrontend.editorOpening' ).fire();
 
 			return loader.loadModule( 'mobile.editor.overlay' ).then( function () {
-				var EditorOverlay = M.require( 'mobile.editor.overlay/EditorOverlay' );
-				return new EditorOverlay( editorOptions );
+				var SourceEditorOverlay = M.require( 'mobile.editor.overlay/SourceEditorOverlay' );
+				return new SourceEditorOverlay( editorOptions );
 			} );
 		}
 
@@ -213,9 +213,9 @@ function setupEditor( page, skin ) {
 				return mw.libs.ve.targetLoader.loadModules( editorOptions.mode );
 			} ).then( function () {
 				var VisualEditorOverlay = M.require( 'mobile.editor.overlay/VisualEditorOverlay' ),
-					EditorOverlay = M.require( 'mobile.editor.overlay/EditorOverlay' ),
+					SourceEditorOverlay = M.require( 'mobile.editor.overlay/SourceEditorOverlay' ),
 					overlay;
-				editorOptions.EditorOverlay = EditorOverlay;
+				editorOptions.SourceEditorOverlay = SourceEditorOverlay;
 				overlay = new VisualEditorOverlay( editorOptions );
 				overlay.on( 'editor-loaded', clearLoadingVE );
 				return overlay;
