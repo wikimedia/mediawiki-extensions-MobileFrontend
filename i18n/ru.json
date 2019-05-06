@@ -130,7 +130,6 @@
 	"mobile-frontend-editor-summary-placeholder": "Пример: Исправлена опечатка, добавлено содержимое",
 	"mobile-frontend-editor-summary-request": "Как именно вы улучшили страницу?",
 	"mobile-frontend-editor-summary": "Описание изменений:",
-	"mobile-frontend-editor-switch-confirm": "Вы должны сохранить свою правку перед переключением в другой режим редактирования.",
 	"mobile-frontend-editor-switch-editor": "Переключить редактор",
 	"mobile-frontend-editor-switch-visual-editor": "Переключить на Визуальный редактор",
 	"mobile-frontend-editor-uploadenable": "Пожалуйста, загрузите фотографию, чтобы включить редактирование.",

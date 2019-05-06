@@ -101,7 +101,6 @@
 	"mobile-frontend-editor-summary-placeholder": "Příklad: Opraven překlep, přidán obsah",
 	"mobile-frontend-editor-summary-request": "Jak jste stránku {{GENDER:|vylepšil|vylepšila|vylepšili}}?",
 	"mobile-frontend-editor-summary": "Shrnutí:",
-	"mobile-frontend-editor-switch-confirm": "Před přepnutím do jiného editačního režimu musíte svou editaci uložit.",
 	"mobile-frontend-editor-switch-editor": "Přepnout editor",
 	"mobile-frontend-editor-switch-visual-editor": "Přepnout na vizuální editaci",
 	"mobile-frontend-editor-uploadenable": "Abyste mohli stránku editovat, musíte nejprve načíst soubor.",

@@ -94,7 +94,6 @@
 	"mobile-frontend-editor-summary-placeholder": "Exemple: Errada corregida, contingut afegit",
 	"mobile-frontend-editor-summary-request": "Com heu millorat la pàgina?",
 	"mobile-frontend-editor-summary": "Resum:",
-	"mobile-frontend-editor-switch-confirm": "Heu de desar la vostra modificació abans de canviar a un altre mode d'edició.",
 	"mobile-frontend-editor-switch-editor": "Canvia d'editor",
 	"mobile-frontend-editor-switch-visual-editor": "Canvia a edició visual",
 	"mobile-frontend-editor-viewing-source-page": "<strong>Codi font de</strong><span> $1</span>",

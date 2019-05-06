@@ -102,7 +102,6 @@
 	"mobile-frontend-editor-summary-placeholder": "Örnek: Yazım hatası düzeltildi, içerik eklendi",
 	"mobile-frontend-editor-summary-request": "Sayfayı hangi yönden geliştirdiniz?",
 	"mobile-frontend-editor-summary": "Değişiklik özeti:",
-	"mobile-frontend-editor-switch-confirm": "Başka bir düzenleme biçimine geçmeden önce değişikliğinizi kaydetmeniz gerekir.",
 	"mobile-frontend-editor-switch-editor": "Düzenleyiciyi değiştir",
 	"mobile-frontend-editor-switch-visual-editor": "Görsel düzenleyiciye geç",
 	"mobile-frontend-editor-uploadenable": "Düzenlemeyi etkinleştirmek için lütfen önce bir fotoğraf yükleyin.",

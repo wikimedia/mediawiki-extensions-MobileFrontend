@@ -101,7 +101,6 @@
 	"mobile-frontend-editor-summary-placeholder": "Esimerkiksi: Korjattu kirjoitusvirhe, sisältöä lisätty",
 	"mobile-frontend-editor-summary-request": "Miten paransit sivua?",
 	"mobile-frontend-editor-summary": "Yhteenveto:",
-	"mobile-frontend-editor-switch-confirm": "Muokkaus täytyy tallentaa ennen kuin voidaan vaihtaa toiseen editoriin.",
 	"mobile-frontend-editor-switch-editor": "Vaihda editoria",
 	"mobile-frontend-editor-switch-visual-editor": "Vaihda visuaaliseen muokkaimeen",
 	"mobile-frontend-editor-uploadenable": "Tallenna ensin kuva ottaaksesi muokkaamisen käyttöön.",
