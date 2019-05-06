@@ -3,7 +3,6 @@ module.exports = function ( grunt ) {
 	var conf = grunt.file.readJSON( 'extension.json' );
 	grunt.loadNpmTasks( 'grunt-banana-checker' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
-	grunt.loadNpmTasks( 'grunt-jsonlint' );
 	grunt.loadNpmTasks( 'grunt-notify' );
 	grunt.loadNpmTasks( 'grunt-stylelint' );
 	grunt.initConfig( {
@@ -32,17 +31,9 @@ module.exports = function ( grunt ) {
 				}
 			}
 		},
-		banana: conf.MessagesDirs,
-		jsonlint: {
-			all: [
-				'*.json',
-				'**/*.json',
-				'!node_modules/**',
-				'!vendor/**'
-			]
-		}
+		banana: conf.MessagesDirs
 	} );
-	grunt.registerTask( 'i18n', [ 'jsonlint', 'banana' ] );
+	grunt.registerTask( 'i18n', [ 'banana' ] );
 	grunt.registerTask( 'test', [ 'i18n', 'stylelint' ] );
 	grunt.registerTask( 'default', [ 'test' ] );
 };
