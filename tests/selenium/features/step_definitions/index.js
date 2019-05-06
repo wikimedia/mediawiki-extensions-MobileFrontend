@@ -2,11 +2,11 @@ const { defineSupportCode } = require( 'cucumber' ),
 	{
 		pageExists,
 		iAmUsingTheMobileSite,
-		theTextOfTheFirstHeadingShouldBe,
+		theTextOfTheFirstHeadingShouldContain,
 		iAmLoggedIntoTheMobileWebsite,
 		iAmOnPage
 	} = require( './common_steps' ),
-	{ iVisitMyUserPage, iShouldBeOnMyUserPage,
+	{ iVisitMyUserPage, iShouldBeOnUserPage,
 		thereShouldBeALinkToCreateMyUserPage
 	} = require( './user_page_steps' ),
 	{
@@ -32,7 +32,7 @@ defineSupportCode( function ( { Then, When, Given } ) {
 	When( /^my browser doesn't support JavaScript$/, skip );
 	When( /^I toggle the mobile view$/, skip );
 	When( /^I toggle the desktop view$/, skip );
-	When( /^I should be on my user page$/, iShouldBeOnMyUserPage );
+	When( /^I should be on my user page$/, () => iShouldBeOnUserPage( browser.options.username ) );
 	When( /^I switch to the list view of the watchlist$/, skip );
 	When( /^I switch to the modified view of the watchlist$/, skip );
 	When( /^I click the Pages tab$/, skip );
@@ -54,7 +54,7 @@ defineSupportCode( function ( { Then, When, Given } ) {
 	Then( /^the last contribution summary should not show the title of the page edited$/, skip );
 	Then( /^the last contribution summary should show the edit summary$/, skip );
 	Then( /^the last contribution summary should show the time of the last edit$/, skip );
-	Then( /^the text of the first heading should be "(.+)"$/, theTextOfTheFirstHeadingShouldBe );
+	Then( /^the text of the first heading should be "(.+)"$/, theTextOfTheFirstHeadingShouldContain );
 	Then( /^the last contribution summary should show the username who made the last edit$/, skip );
 	Then( /^the last contribution summary should show the title of the page edited$/, skip );
 	Then( /^the last contribution summary should not show the username$/, skip );
