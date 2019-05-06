@@ -22,6 +22,30 @@
       "revId": "60dcc6738d64e45b493a7824a988da4697c8faab",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f8094464_401682dd",
+        "filename": "package.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-05-06T21:03:52Z",
+      "side": 1,
+      "message": "This doesn\u0027t seem to work for me as it\u0027s omitting the path\n\nDid you mean to add a \".\" at the end:\n./node_modules/eslint/bin/eslint.js --ext \u0027.json\u0027 .\n\n?",
+      "parentUuid": "2d33fef1_dbb4bb4e",
+      "range": {
+        "startLine": 9,
+        "startChar": 26,
+        "endLine": 9,
+        "endChar": 31
+      },
+      "revId": "60dcc6738d64e45b493a7824a988da4697c8faab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
