@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2d33fef1_dbb4bb4e",
+        "filename": "package.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-05-06T20:45:11Z",
+      "side": 1,
+      "message": "Hm.. This would appear to not lint JS, but that\u0027s done instead via lint:frontend\u003elint:js. Fine I suppose.",
+      "range": {
+        "startLine": 9,
+        "startChar": 26,
+        "endLine": 9,
+        "endChar": 31
+      },
+      "revId": "60dcc6738d64e45b493a7824a988da4697c8faab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
