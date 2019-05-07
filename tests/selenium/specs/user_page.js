@@ -12,28 +12,27 @@ const { iAmUsingTheMobileSite,
 	password = Util.getTestString();
 
 // @chrome @firefox @test2.m.wikipedia.org @vagrant @login
-describe.skip( 'User:<username>', () => {
+describe( 'User:<username>', () => {
 
 	before( () => {
 		const login = () => {
-			browser.call( function () {
-				RunJobs.run();
-				UserLoginPage.login( username, password );
-			} );
+			RunJobs.run();
+			UserLoginPage.login( username, password );
 		};
+
 		browser.deleteCookie();
 		browser.call( function () {
-			Api.createAccount( username, password )
-				.then( login )
+			return Api.createAccount( username, password )
 				// in case of token error try again
 				.catch( () => {
-					Api.createAccount( username, password )
+					return Api.createAccount( username, password )
 						.then( login )
 						.catch( () => {
 							assert.ok( false, 'Problem creating account for test (tried two times)' );
 						} );
 				} );
 		} );
+		login();
 	} );
 
 	it( 'Check user page is editable', () => {
