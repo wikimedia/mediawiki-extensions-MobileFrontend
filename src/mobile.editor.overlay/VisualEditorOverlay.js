@@ -93,7 +93,9 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 	 * @instance
 	 */
 	show: function () {
-		var overlay = this;
+		var overlay = this,
+			options = this.options,
+			showAnonWarning = options.isAnon && !options.switched;
 
 		EditorOverlayBase.prototype.show.apply( this, arguments );
 
@@ -118,7 +120,7 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 		}.bind( this ) );
 		this.dataPromise = this.target.load( this.options.dataPromise );
 
-		if ( this.options.isAnon ) {
+		if ( showAnonWarning ) {
 			this.$anonWarning = this.createAnonWarning( this.options );
 			this.$el.append( this.$anonWarning );
 			this.$el.find( '.overlay-content' ).hide();
@@ -213,6 +215,7 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 		this.$el.find( '.surface' ).hide();
 		self.hideSpinner();
 		self.applyHeaderOptions( self.options, false );
+		self.options.switched = true;
 		// Unset classes from other editor
 		delete self.options.className;
 		if ( dataPromise ) {
