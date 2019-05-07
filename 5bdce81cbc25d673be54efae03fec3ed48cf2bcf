@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b5b8f759_e0d56de1",
+        "filename": "includes/specials/SpecialNearby.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-05-07T22:50:44Z",
+      "side": 1,
+      "message": "this creates a button with type\u003d\"submit\" instead of type\u003d\"button\" - I\u0027m not entirely sure that is semantically correct given it is not inside a form but maybe? It might be better to make it a type\u003d\"button\" instead",
+      "range": {
+        "startLine": 40,
+        "startChar": 0,
+        "endLine": 42,
+        "endChar": 69
+      },
+      "revId": "5bdce81cbc25d673be54efae03fec3ed48cf2bcf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "41b95512_8197e3e0",
+        "filename": "src/mobile.special.nearby.scripts/mobile.special.nearby.scripts.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-05-07T22:50:44Z",
+      "side": 1,
+      "message": "should all of this be wrapped in a $( document ).ready()?",
+      "range": {
+        "startLine": 88,
+        "startChar": 0,
+        "endLine": 99,
+        "endChar": 25
+      },
+      "revId": "5bdce81cbc25d673be54efae03fec3ed48cf2bcf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
