@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "86dbaffe_f00d103b",
+        "filename": "tests/selenium/specs/user_page.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-05-07T16:06:22Z",
+      "side": 1,
+      "message": "Krinkle could you personally review  https://gerrit.wikimedia.org/r/#/c/mediawiki/extensions/MobileFrontend/+/508609 Revert \"Disable test blocking merges on GrowthExperiments repo\"  to make sure I\u0027ve understood your feedback correctly? Seems like I may have got some wires crossed.",
+      "revId": "0fab49cc928d9d9e551f12bec16dac5e00f09ecb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f14fd92c_94b3ab34",
         "filename": "tests/selenium/specs/user_page.js",
         "patchSetId": 6
@@ -13,6 +30,24 @@
       "writtenOn": "2019-05-06T23:39:27Z",
       "side": 1,
       "message": "ignored async call, must be awaited.",
+      "revId": "0fab49cc928d9d9e551f12bec16dac5e00f09ecb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ec03c75a_d868490b",
+        "filename": "tests/selenium/specs/user_page.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-05-07T16:06:22Z",
+      "side": 1,
+      "message": "According to documentation in core this is static so not async?\n\":Use the static `RunJobs.run()` method to ensure that any queued jobs are executed before\"",
+      "parentUuid": "f14fd92c_94b3ab34",
       "revId": "0fab49cc928d9d9e551f12bec16dac5e00f09ecb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -42,6 +77,30 @@
     },
     {
       "key": {
+        "uuid": "2ff35d51_17229019",
+        "filename": "tests/selenium/specs/user_page.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-05-07T16:06:22Z",
+      "side": 1,
+      "message": "Okay this seems weird. I thought this uses mwbot, but it doesn\u0027t. It\u0027s code is actually:\n\n```\n                this.open();\n                this.username.setValue( username );\n                this.password.setValue( password );\n                this.loginButton.click();\n\n```\nNot strictly async, but I guess for the purpose of webdriver, that doesn\u0027t need to be wrapped in browser.call?",
+      "parentUuid": "5cd65915_db56432a",
+      "range": {
+        "startLine": 21,
+        "startChar": 4,
+        "endLine": 21,
+        "endChar": 17
+      },
+      "revId": "0fab49cc928d9d9e551f12bec16dac5e00f09ecb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4950705c_12f838f6",
         "filename": "tests/selenium/specs/user_page.js",
         "patchSetId": 6
@@ -53,6 +112,30 @@
       "writtenOn": "2019-05-06T23:37:57Z",
       "side": 1,
       "message": "needs to be returned, otherwise it is ignored just the same.",
+      "range": {
+        "startLine": 26,
+        "startChar": 3,
+        "endLine": 26,
+        "endChar": 4
+      },
+      "revId": "0fab49cc928d9d9e551f12bec16dac5e00f09ecb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cced7b88_ac931445",
+        "filename": "tests/selenium/specs/user_page.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-05-07T16:06:22Z",
+      "side": 1,
+      "message": "okay so it sounds like the return is what\u0027s missing here?",
+      "parentUuid": "4950705c_12f838f6",
       "range": {
         "startLine": 26,
         "startChar": 3,
