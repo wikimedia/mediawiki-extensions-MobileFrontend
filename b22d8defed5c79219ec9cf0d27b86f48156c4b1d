@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0eba6d5e_4a1d55f8",
+        "filename": "tests/selenium/specs/user_page.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-05-07T18:35:24Z",
+      "side": 1,
+      "message": "I don\u0027t think this is supported. This is a regular wdio/browser call. I think what you\u0027re looking for is:\n\n\n browser.deleteCookie();\n browser.call( … api, with catch to retry … );\n RunJobs.run();\n UserLoginPage.login();",
+      "range": {
+        "startLine": 26,
+        "startChar": 11,
+        "endLine": 26,
+        "endChar": 16
+      },
+      "revId": "b22d8defed5c79219ec9cf0d27b86f48156c4b1d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ffcb29a3_d7ca574f",
+        "filename": "tests/selenium/specs/user_page.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-05-07T18:35:24Z",
+      "side": 1,
+      "message": "must be returned to catch(), ignored otherwise",
+      "range": {
+        "startLine": 29,
+        "startChar": 5,
+        "endLine": 29,
+        "endChar": 6
+      },
+      "revId": "b22d8defed5c79219ec9cf0d27b86f48156c4b1d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
