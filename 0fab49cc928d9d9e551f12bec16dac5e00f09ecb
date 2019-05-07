@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "85b800b3_2e7a6691",
+        "filename": "tests/selenium/specs/user_page.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-05-07T16:21:59Z",
+      "side": 1,
+      "message": "In general I\u0027m very confused because core does things like this\n\n```\nbrowser.call( function () {\n                        Api.edit(\n                                name,\n                                \u0027Vandalized: \u0027 + content,\n                                vandalUsername\n                        );\n                } );\n\n```\n - that should __return__ Api.edit surely?",
+      "parentUuid": "86dbaffe_f00d103b",
+      "revId": "0fab49cc928d9d9e551f12bec16dac5e00f09ecb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f14fd92c_94b3ab34",
         "filename": "tests/selenium/specs/user_page.js",
         "patchSetId": 6
