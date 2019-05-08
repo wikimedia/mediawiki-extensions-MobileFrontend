@@ -25,6 +25,29 @@
     },
     {
       "key": {
+        "uuid": "27f92830_4507fcca",
+        "filename": "src/mobile.special.nearby.scripts/mobile.special.nearby.scripts.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-05-08T18:49:56Z",
+      "side": 1,
+      "message": "should this be View because promisedView is used?",
+      "range": {
+        "startLine": 45,
+        "startChar": 12,
+        "endLine": 45,
+        "endChar": 29
+      },
+      "revId": "5bdce81cbc25d673be54efae03fec3ed48cf2bcf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "41b95512_8197e3e0",
         "filename": "src/mobile.special.nearby.scripts/mobile.special.nearby.scripts.js",
         "patchSetId": 10
