@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "0f99da9e_e8f566d7",
+        "filename": "includes/specials/SpecialNearby.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-05-08T18:59:30Z",
+      "side": 1,
+      "message": "This comes from core which has this helpful note:\n\n// According to standard the default type for \u003cbutton\u003e elements is \"submit\".\n\t\t// Depending on compatibility mode IE might use \"button\", instead.\n\t\t// We enforce the standard \"submit\".",
+      "parentUuid": "b5b8f759_e0d56de1",
+      "range": {
+        "startLine": 40,
+        "startChar": 0,
+        "endLine": 42,
+        "endChar": 69
+      },
+      "revId": "5bdce81cbc25d673be54efae03fec3ed48cf2bcf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "27f92830_4507fcca",
         "filename": "src/mobile.special.nearby.scripts/mobile.special.nearby.scripts.js",
         "patchSetId": 10
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "3c3bd43b_a8090ecc",
+        "filename": "src/mobile.special.nearby.scripts/mobile.special.nearby.scripts.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-05-08T18:59:30Z",
+      "side": 1,
+      "message": "Yes you are right",
+      "parentUuid": "27f92830_4507fcca",
+      "range": {
+        "startLine": 45,
+        "startChar": 12,
+        "endLine": 45,
+        "endChar": 29
+      },
+      "revId": "5bdce81cbc25d673be54efae03fec3ed48cf2bcf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "41b95512_8197e3e0",
         "filename": "src/mobile.special.nearby.scripts/mobile.special.nearby.scripts.js",
         "patchSetId": 10
@@ -59,6 +107,30 @@
       "writtenOn": "2019-05-07T22:50:44Z",
       "side": 1,
       "message": "should all of this be wrapped in a $( document ).ready()?",
+      "range": {
+        "startLine": 88,
+        "startChar": 0,
+        "endLine": 99,
+        "endChar": 25
+      },
+      "revId": "5bdce81cbc25d673be54efae03fec3ed48cf2bcf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d8e7603a_d3c737a1",
+        "filename": "src/mobile.special.nearby.scripts/mobile.special.nearby.scripts.js",
+        "patchSetId": 10
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-05-08T18:59:30Z",
+      "side": 1,
+      "message": "No need. Since jQuery is a dependency of this module and loaded at the bottom of the HTML page after the page is ready, it will be available, and thus it will be possible to locate the element, set its property and register clicks.",
+      "parentUuid": "41b95512_8197e3e0",
       "range": {
         "startLine": 88,
         "startChar": 0,
