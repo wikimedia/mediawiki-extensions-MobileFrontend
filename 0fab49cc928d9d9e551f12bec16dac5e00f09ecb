@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "b74c101b_c69c4e9a",
+        "filename": "tests/selenium/specs/user_page.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-05-08T20:54:41Z",
+      "side": 1,
+      "message": "I don\u0027t see where core doesn\u0027t return it, but yes any test that is working will be returning the Api.method() call to the browser.call() closure.\n\nfor example https://github.com/wikimedia/mediawiki/blob/25ee9366/tests/selenium/specs/page.js#L50",
+      "parentUuid": "85b800b3_2e7a6691",
+      "revId": "0fab49cc928d9d9e551f12bec16dac5e00f09ecb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f14fd92c_94b3ab34",
         "filename": "tests/selenium/specs/user_page.js",
         "patchSetId": 6
