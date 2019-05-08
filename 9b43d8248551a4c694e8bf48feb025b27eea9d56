@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "e524ee7d_564ac984",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 118,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-05-08T15:47:07Z",
+      "side": 1,
+      "message": "Other extensions use this method so removing it will break things, so yes, we can deprecate it instead.",
+      "parentUuid": "6ca720d0_e4e38e35",
+      "range": {
+        "startLine": 118,
+        "startChar": 24,
+        "endLine": 118,
+        "endChar": 33
+      },
+      "revId": "9b43d8248551a4c694e8bf48feb025b27eea9d56",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "be8f5626_57818a40",
         "filename": "includes/MobileContext.php",
         "patchSetId": 5
@@ -36,6 +60,30 @@
       "writtenOn": "2019-05-08T14:14:23Z",
       "side": 1,
       "message": "Even more relevant here, as this is already calling the exact same service registry that is used as a replacement across this patch. Please @deprecate or remove this, or just make it private in case it is still helpful to have this as a local convenience function.",
+      "range": {
+        "startLine": 144,
+        "startChar": 17,
+        "endLine": 144,
+        "endChar": 28
+      },
+      "revId": "9b43d8248551a4c694e8bf48feb025b27eea9d56",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b9ed1ec0_c429dc3c",
+        "filename": "includes/MobileContext.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-05-08T15:47:07Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "be8f5626_57818a40",
       "range": {
         "startLine": 144,
         "startChar": 17,
