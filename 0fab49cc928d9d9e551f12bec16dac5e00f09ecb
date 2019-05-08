@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "b2baebbb_71c4608c",
+        "filename": "tests/selenium/specs/user_page.js",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-05-08T21:07:39Z",
+      "side": 1,
+      "message": "https://gerrit.wikimedia.org/r/#/c/mediawiki/core/+/508938 Asynchronous methods should be returned to Browser.call",
+      "parentUuid": "b74c101b_c69c4e9a",
+      "revId": "0fab49cc928d9d9e551f12bec16dac5e00f09ecb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f14fd92c_94b3ab34",
         "filename": "tests/selenium/specs/user_page.js",
         "patchSetId": 6
