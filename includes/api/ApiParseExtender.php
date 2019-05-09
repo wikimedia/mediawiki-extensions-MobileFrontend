@@ -30,9 +30,11 @@ class ApiParseExtender {
 	 * @return bool
 	 */
 	public static function onAPIAfterExecute( ApiBase &$module ) {
-		$config = MediaWikiServices::getInstance()
-			->getService( 'MobileFrontend.Config' );
+		$services = MediaWikiServices::getInstance();
+		$config = $services->getService( 'MobileFrontend.Config' );
 		$mfSpecialCaseMainPage = $config->get( 'MFSpecialCaseMainPage' );
+
+		$context = $services->getService( 'MobileFrontend.Context' );
 
 		if ( $module->getModuleName() == 'parse' ) {
 			$result = $module->getResult();
@@ -41,7 +43,9 @@ class ApiParseExtender {
 			if ( isset( $data['parse']['text'] ) && $params['mobileformat'] ) {
 				$title = Title::newFromText( $data['parse']['title'] );
 				$text = $data['parse']['text'];
-				$mf = new MobileFormatter( MobileFormatter::wrapHTML( $text ), $title );
+				$mf = new MobileFormatter(
+					MobileFormatter::wrapHTML( $text ), $title, $config, $context
+				);
 				$mf->setRemoveMedia( $params['noimages'] );
 				$mf->setIsMainPage( $params['mainpage'] && $mfSpecialCaseMainPage );
 				$mf->enableExpandableSections( !$params['mainpage'] );

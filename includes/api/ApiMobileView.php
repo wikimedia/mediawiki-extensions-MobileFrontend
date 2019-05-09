@@ -562,11 +562,12 @@ class ApiMobileView extends ApiBase {
 	private function getData( Title $title, $noImages, $oldid = null ) {
 		global $wgMemc;
 
-		$container = MediaWikiServices::getInstance();
-		$mfConfig = $container->getService( 'MobileFrontend.Config' );
+		$services = MediaWikiServices::getInstance();
+		$config = $services->getService( 'MobileFrontend.Config' );
+		$context = $services->getService( 'MobileFrontend.Context' );
 
-		$mfMinCachedPageSize = $mfConfig->get( 'MFMinCachedPageSize' );
-		$mfSpecialCaseMainPage = $mfConfig->get( 'MFSpecialCaseMainPage' );
+		$mfMinCachedPageSize = $config->get( 'MFMinCachedPageSize' );
+		$mfSpecialCaseMainPage = $config->get( 'MFSpecialCaseMainPage' );
 
 		$result = $this->getResult();
 		$wikiPage = $this->makeWikiPage( $title );
@@ -645,7 +646,9 @@ class ApiMobileView extends ApiBase {
 		}
 
 		if ( !$this->noTransform ) {
-			$mf = new MobileFormatter( MobileFormatter::wrapHTML( $html ), $title );
+			$mf = new MobileFormatter(
+				MobileFormatter::wrapHTML( $html ), $title, $config, $context
+			);
 			$mf->setRemoveMedia( $noImages );
 			$mf->setIsMainPage( $this->mainPage && $mfSpecialCaseMainPage );
 			$mf->filterContent();

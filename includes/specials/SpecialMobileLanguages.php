@@ -47,7 +47,6 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 		// Silly strict php
 		$pages = array_values( $data );
 		$page = array_shift( $pages );
-		$context = $this->getMobileContext();
 
 		if ( isset( $page['langlinks'] ) ) {
 			// Set the name of each language based on the system list of language names
@@ -59,7 +58,7 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 					continue;
 				}
 				$langObject['langname'] = $languageMap[$langObject['lang']];
-				$langObject['url'] = $context->getMobileUrl( $langObject['url'] );
+				$langObject['url'] = $this->mobileContext->getMobileUrl( $langObject['url'] );
 				$languages[$index] = $langObject;
 			}
 			$compareLanguage = function ( $a, $b ) {

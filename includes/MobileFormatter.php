@@ -63,6 +63,16 @@ class MobileFormatter extends HtmlFormatter {
 	protected $mainPage = false;
 
 	/**
+	 * @var Config
+	 */
+	private $config;
+
+	/**
+	 * @var MobileContext
+	 */
+	private $context;
+
+	/**
 	 * Name of the transformation option
 	 */
 	const SHOW_FIRST_PARAGRAPH_BEFORE_INFOBOX = 'showFirstParagraphBeforeInfobox';
@@ -70,13 +80,18 @@ class MobileFormatter extends HtmlFormatter {
 	/**
 	 * @param string $html Text to process
 	 * @param Title $title Title to which $html belongs
+	 * @param Config $config
+	 * @param MobileContext $context
 	 */
-	public function __construct( $html, Title $title ) {
+	public function __construct(
+		$html, Title $title, Config $config, MobileContext $context
+	) {
 		parent::__construct( $html );
 
 		$this->title = $title;
 		$this->revId = $title->getLatestRevID();
-		$config = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Config' );
+		$this->config = $config;
+		$this->context = $context;
 		$this->topHeadingTags = $config->get( 'MFMobileFormatterHeadings' );
 
 		$this->lazyTransform = new LazyImageTransform(
@@ -102,16 +117,16 @@ class MobileFormatter extends HtmlFormatter {
 	 *
 	 * @return MobileFormatter
 	 */
-	public static function newFromContext( MobileContext $context,
-		IContentProvider $provider,
-		$enableSections = false
+	public static function newFromContext(
+		MobileContext $context, IContentProvider $provider, $enableSections = false
 	) {
-		$mfSpecialCaseMainPage = $context->getMFConfig()->get( 'MFSpecialCaseMainPage' );
+		$config = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Config' );
+		$mfSpecialCaseMainPage = $config->get( 'MFSpecialCaseMainPage' );
 
 		$title = $context->getTitle();
 		$isMainPage = $title->isMainPage();
 		$html = self::wrapHTML( $provider->getHTML() );
-		$formatter = new MobileFormatter( $html, $title );
+		$formatter = new MobileFormatter( $html, $title, $config, $context );
 		if ( $isMainPage ) {
 			$formatter->enableExpandableSections( !$mfSpecialCaseMainPage );
 		} else {
@@ -165,15 +180,12 @@ class MobileFormatter extends HtmlFormatter {
 		$removeDefaults = true, $removeReferences = false, $removeImages = false,
 		$showFirstParagraphBeforeInfobox = false
 	) {
-		$services = MediaWikiServices::getInstance();
-		$ctx = $services->getService( 'MobileFrontend.Context' );
-		$config = $services->getService( 'MobileFrontend.Config' );
 		$doc = $this->getDoc();
 
 		$isSpecialPage = $this->title->isSpecialPage();
-		$mfRemovableClasses = $config->get( 'MFRemovableClasses' );
+		$mfRemovableClasses = $this->config->get( 'MFRemovableClasses' );
 		$removableClasses = $mfRemovableClasses['base'];
-		if ( $ctx->isBetaGroupMember() ) {
+		if ( $this->context->isBetaGroupMember() ) {
 			$removableClasses = array_merge( $removableClasses, $mfRemovableClasses['beta'] );
 		}
 

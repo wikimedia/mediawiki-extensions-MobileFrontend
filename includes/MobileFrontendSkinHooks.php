@@ -179,14 +179,14 @@ JAVASCRIPT;
 	public static function prepareFooter( Skin $skin, QuickTemplate $tpl ) {
 		$title = $skin->getTitle();
 		$req = $skin->getRequest();
-		$ctx = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
+		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
 
 		// Certain pages might be blacklisted and not have a mobile equivalent.
-		if ( !$ctx->isBlacklistedPage() ) {
-			if ( $ctx->shouldDisplayMobileView() ) {
-				self::mobileFooter( $skin, $tpl, $ctx, $title, $req );
+		if ( !$context->isBlacklistedPage() ) {
+			if ( $context->shouldDisplayMobileView() ) {
+				self::mobileFooter( $skin, $tpl, $context, $title, $req );
 			} else {
-				self::desktopFooter( $skin, $tpl, $ctx, $title, $req );
+				self::desktopFooter( $skin, $tpl, $context, $title, $req );
 			}
 		}
 	}
@@ -195,11 +195,11 @@ JAVASCRIPT;
 	 * Appends a mobile view link to the desktop footer
 	 * @param Skin $skin
 	 * @param QuickTemplate $tpl
-	 * @param MobileContext $ctx
+	 * @param MobileContext $context
 	 * @param Title $title Page title
 	 * @param WebRequest $req
 	 */
-	public static function desktopFooter( Skin $skin, QuickTemplate $tpl, MobileContext $ctx,
+	public static function desktopFooter( Skin $skin, QuickTemplate $tpl, MobileContext $context,
 		Title $title, WebRequest $req
 	) {
 		$footerlinks = $tpl->data['footerlinks'];
@@ -209,11 +209,11 @@ JAVASCRIPT;
 		$args['mobileaction'] = 'toggle_view_mobile';
 
 		$mobileViewUrl = $title->getFullURL( $args );
-		$mobileViewUrl = $ctx->getMobileUrl( $mobileViewUrl );
+		$mobileViewUrl = $context->getMobileUrl( $mobileViewUrl );
 
 		$link = Html::element( 'a',
 			[ 'href' => $mobileViewUrl, 'class' => 'noprint stopMobileRedirectToggle' ],
-			$ctx->msg( 'mobile-frontend-view' )->text()
+			$context->msg( 'mobile-frontend-view' )->text()
 		);
 		$tpl->set( 'mobileview', $link );
 		$footerlinks['places'][] = 'mobileview';
@@ -224,12 +224,12 @@ JAVASCRIPT;
 	 * Prepares links used in the mobile footer
 	 * @param Skin $skin
 	 * @param QuickTemplate $tpl
-	 * @param MobileContext $ctx
+	 * @param MobileContext $context
 	 * @param Title $title Page title
 	 * @param WebRequest $req
 	 * @return QuickTemplate
 	 */
-	protected static function mobileFooter( Skin $skin, QuickTemplate $tpl, MobileContext $ctx,
+	protected static function mobileFooter( Skin $skin, QuickTemplate $tpl, MobileContext $context,
 		Title $title, WebRequest $req
 	) {
 		$url = $skin->getOutput()->getProperty( 'desktopUrl' );
@@ -240,9 +240,9 @@ JAVASCRIPT;
 				$req->appendQueryValue( 'mobileaction', 'toggle_view_desktop' )
 			);
 		}
-		$desktopUrl = $ctx->getDesktopUrl( wfExpandUrl( $url, PROTO_RELATIVE ) );
+		$desktopUrl = $context->getDesktopUrl( wfExpandUrl( $url, PROTO_RELATIVE ) );
 
-		$desktop = $ctx->msg( 'mobile-frontend-view-desktop' )->text();
+		$desktop = $context->msg( 'mobile-frontend-view-desktop' )->text();
 		$desktopToggler = Html::element( 'a',
 			[ 'id' => 'mw-mf-display-toggle', 'href' => $desktopUrl ], $desktop );
 
