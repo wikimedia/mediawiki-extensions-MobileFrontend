@@ -48,6 +48,54 @@
     },
     {
       "key": {
+        "uuid": "d8d59e34_a69aea27",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-05-09T17:29:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6362ea64_e4e99f25",
+      "range": {
+        "startLine": 79,
+        "startChar": 2,
+        "endLine": 79,
+        "endChar": 9
+      },
+      "revId": "7448f1d408385362a94ba2f4f454aebe323636f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f06fc746_8a5bfc4e",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-05-09T17:29:24Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "11e0519f_1ff67b97",
+      "range": {
+        "startLine": 79,
+        "startChar": 2,
+        "endLine": 79,
+        "endChar": 84
+      },
+      "revId": "7448f1d408385362a94ba2f4f454aebe323636f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a9910a5c_0b874332",
         "filename": "includes/MobileFormatter.php",
         "patchSetId": 6
@@ -59,6 +107,30 @@
       "writtenOn": "2019-05-09T16:42:26Z",
       "side": 1,
       "message": "if you decide to do follow-up, the $ctx is used only to check if given context `isBetaGroupMember()`, this means we could pass two things:\n\n  __construct( ..., $config, $isBetaGroupMember )\n\nin the constructor, assign those to local ($this-\u003econfig and $this-\u003eisBetaGroupMember) variables, and then we could get rid of MobileContext dependency here :).",
+      "range": {
+        "startLine": 169,
+        "startChar": 2,
+        "endLine": 169,
+        "endChar": 59
+      },
+      "revId": "7448f1d408385362a94ba2f4f454aebe323636f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e50a25fd_c506c4f3",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-05-09T17:29:24Z",
+      "side": 1,
+      "message": "Thanks for the suggestion @Pmiazga. I\u0027ll go with $this-\u003econfig for now then I\u0027ll understand and implement the $this-\u003eBetaGroupMember part later. I agree with passing config to the constructor, smart move. Thanks!",
+      "parentUuid": "a9910a5c_0b874332",
       "range": {
         "startLine": 169,
         "startChar": 2,
@@ -94,6 +166,30 @@
     },
     {
       "key": {
+        "uuid": "c680d4bb_776447f0",
+        "filename": "includes/MobileFrontendHooks.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 656,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-05-09T17:29:24Z",
+      "side": 1,
+      "message": "Actually, this was left intentionally, see PS5 for the comment and reason why it was left so. In fact, let me copy it over here :)\n\nCopied from PS5 comment\n\u003e Putting for first round of review. There are two usage of `MobileContext::singleton()` that when changed to the use of the MC service causes unit tests to fail. I\u0027m still to understand it before making the migration.",
+      "parentUuid": "66534fec_0b31e770",
+      "range": {
+        "startLine": 656,
+        "startChar": 12,
+        "endLine": 656,
+        "endChar": 40
+      },
+      "revId": "7448f1d408385362a94ba2f4f454aebe323636f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a6b99683_8844d223",
         "filename": "tests/phpunit/specials/SpecialMobileDiffTest.php",
         "patchSetId": 6
@@ -105,6 +201,30 @@
       "writtenOn": "2019-05-09T16:42:26Z",
       "side": 1,
       "message": "sometimes you call it $context, sometimes $ctx. Consistency is the key.",
+      "range": {
+        "startLine": 15,
+        "startChar": 2,
+        "endLine": 15,
+        "endChar": 6
+      },
+      "revId": "7448f1d408385362a94ba2f4f454aebe323636f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "818c6965_1af817b3",
+        "filename": "tests/phpunit/specials/SpecialMobileDiffTest.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-05-09T17:29:24Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "a6b99683_8844d223",
       "range": {
         "startLine": 15,
         "startChar": 2,
