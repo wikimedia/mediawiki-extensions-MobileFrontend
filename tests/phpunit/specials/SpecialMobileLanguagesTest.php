@@ -1,6 +1,7 @@
 <?php
 
 use Psr\Log\LoggerInterface;
+use MediaWiki\MediaWikiServices;
 
 /**
  * @group MobileFrontend
@@ -49,7 +50,7 @@ class SpecialMobileLanguagesTest extends MediaWikiTestCase {
 		];
 
 		// Transform URLs to mobile version, which is dependent on wgMobileUrlTemplate
-		$ctx = MobileContext::singleton();
+		$ctx = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
 		foreach ( $expected as $key => &$value ) {
 			$value['url'] = $ctx->getMobileUrl( $value['url'] );
 		}

@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
+
 /**
  * @group MobileFrontend
  */
@@ -10,8 +12,9 @@ class SpecialMobileDiffTest extends MediaWikiLangTestCase {
 	public function tearDown() {
 		parent::tearDown();
 
+		$ctx = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
 		foreach ( $this->unsetReqVals as $v ) {
-			MobileContext::singleton()->getRequest()->unsetVal( $v );
+			$ctx->getRequest()->unsetVal( $v );
 		}
 		MobileContext::resetInstanceForTesting();
 	}

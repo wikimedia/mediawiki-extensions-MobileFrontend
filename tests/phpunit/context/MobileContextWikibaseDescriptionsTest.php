@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
+
 /**
  * @group MobileFrontend
  */
@@ -21,7 +23,9 @@ class MobileContextWikibaseDescriptionsTest extends MediaWikiTestCase {
 			],
 		] );
 
-		$this->context = MobileContext::singleton();
+		$this->context = MediaWikiServices::getInstance()->getService(
+			'MobileFrontend.Context'
+		);
 	}
 
 	/**

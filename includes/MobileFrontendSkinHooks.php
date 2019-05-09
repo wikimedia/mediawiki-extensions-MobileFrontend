@@ -120,7 +120,7 @@ JAVASCRIPT;
 	 * @return array Associative array containing the license text and link
 	 */
 	public static function getLicense( $context, array $attribs = [] ) {
-		$config = MobileContext::singleton()->getConfig();
+		$config = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Config' );
 		$rightsPage = $config->get( 'RightsPage' );
 		$rightsUrl = $config->get( 'RightsUrl' );
 		$rightsText = $config->get( 'RightsText' );
