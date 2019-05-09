@@ -1,0 +1,119 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6362ea64_e4e99f25",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-05-09T16:42:26Z",
+      "side": 1,
+      "message": "this $config is used later in the code, maybe introduce\n\n  $this-\u003econfig \u003d ....\n\nand then re-use the $this-\u003econfig variable.",
+      "range": {
+        "startLine": 79,
+        "startChar": 2,
+        "endLine": 79,
+        "endChar": 9
+      },
+      "revId": "7448f1d408385362a94ba2f4f454aebe323636f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "11e0519f_1ff67b97",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-05-09T16:42:26Z",
+      "side": 1,
+      "message": "it would be a bit smarter to pass this as contructor param (pass all dependencies rule). We can leave it like that for now, but that\u0027s a good idea for a follow-up.",
+      "range": {
+        "startLine": 79,
+        "startChar": 2,
+        "endLine": 79,
+        "endChar": 84
+      },
+      "revId": "7448f1d408385362a94ba2f4f454aebe323636f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a9910a5c_0b874332",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-05-09T16:42:26Z",
+      "side": 1,
+      "message": "if you decide to do follow-up, the $ctx is used only to check if given context `isBetaGroupMember()`, this means we could pass two things:\n\n  __construct( ..., $config, $isBetaGroupMember )\n\nin the constructor, assign those to local ($this-\u003econfig and $this-\u003eisBetaGroupMember) variables, and then we could get rid of MobileContext dependency here :).",
+      "range": {
+        "startLine": 169,
+        "startChar": 2,
+        "endLine": 169,
+        "endChar": 59
+      },
+      "revId": "7448f1d408385362a94ba2f4f454aebe323636f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "66534fec_0b31e770",
+        "filename": "includes/MobileFrontendHooks.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 656,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-05-09T16:42:26Z",
+      "side": 1,
+      "message": "missed",
+      "range": {
+        "startLine": 656,
+        "startChar": 12,
+        "endLine": 656,
+        "endChar": 40
+      },
+      "revId": "7448f1d408385362a94ba2f4f454aebe323636f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a6b99683_8844d223",
+        "filename": "tests/phpunit/specials/SpecialMobileDiffTest.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-05-09T16:42:26Z",
+      "side": 1,
+      "message": "sometimes you call it $context, sometimes $ctx. Consistency is the key.",
+      "range": {
+        "startLine": 15,
+        "startChar": 2,
+        "endLine": 15,
+        "endChar": 6
+      },
+      "revId": "7448f1d408385362a94ba2f4f454aebe323636f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
