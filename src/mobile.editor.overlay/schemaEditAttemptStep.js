@@ -123,14 +123,23 @@ module.exports = function () {
 			}
 
 			// Switching between visual and source produces a chain of
-			// abort/ready events and no init event, so suppress them for
+			// abort/ready/loaded events and no init event, so suppress them for
 			// consistency with desktop VE's logging.
 			if ( data.abort_type === 'switchnochange' ) {
+				// The initial abort, flagged as a switch
 				return;
 			}
-			if ( timing.abort && data.action === 'ready' ) {
-				delete timing.abort;
-				return;
+			if ( timing.abort ) {
+				// An abort was previously logged
+				if ( data.action === 'ready' ) {
+					// Just discard the ready
+					return;
+				}
+				if ( data.action === 'loaded' ) {
+					// Switch has finished; remove the abort timing so we stop discarding events.
+					delete timing.abort;
+					return;
+				}
 			}
 
 			if ( trackdebug ) {
