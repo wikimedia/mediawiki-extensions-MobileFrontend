@@ -440,7 +440,7 @@ appropriately, to avoid people receiving cached versions of pages intended for
 someone else's devices.*
 
 * Type: `Boolean`
-* Default: `false`
+* Default: `true`
 
 #### $wgMFVaryOnUA
 
