@@ -45,6 +45,9 @@
 	"ExtensionMessagesFiles": {
 		"MobileFrontendAlias": "MobileFrontend.alias.php"
 	},
+	"RawHtmlMessages": [
+		"mobile-frontend-copyright"
+	],
 	"AutoloadNamespaces": {
 		"MobileFrontend\\ContentProviders\\": "includes/content-providers/",
 		"MobileFrontend\\Devices\\": "includes/devices/",
