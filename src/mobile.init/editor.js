@@ -2,7 +2,7 @@
 var M = require( '../mobile.startup/moduleLoaderSingleton' ),
 	util = require( '../mobile.startup/util' ),
 	router = mw.loader.require( 'mediawiki.router' ),
-	ProgressBarWidget = require( './ProgressBarWidget' ),
+	fakeToolbar = require( './fakeToolbar' ),
 	Overlay = require( '../mobile.startup/Overlay' ),
 	OverlayManager = require( '../mobile.startup/OverlayManager' ),
 	overlayManager = OverlayManager.getSingleton(),
@@ -67,7 +67,7 @@ function setupEditor( page, skin ) {
 	$allEditLinks.on( 'click', onEditLinkClick );
 	overlayManager.add( editorPath, function ( sectionId ) {
 		var
-			$loading, loadingOverlay, scrollbarWidth,
+			loadingOverlay, scrollbarWidth,
 			$content = $( '#mw-content-text' ),
 			preferredEditor = getPreferredEditor(),
 			editorOptions = {
@@ -88,23 +88,26 @@ function setupEditor( page, skin ) {
 			visualEditorNamespaces = ( veConfig && veConfig.namespaces ) || [],
 			initMechanism = mw.util.getParamValue( 'redlink' ) ? 'new' : 'click';
 
-		function showLoadingVE() {
-			var progressBar = new ProgressBarWidget();
-			// The progress bar has to stay visible while we swap loadingOverlay for
-			// VisualEditorOverlay, so put it into another "overlay" on top of everything else.
-			// TODO: In the future where loadingOverlay is removed (T214641#4907694),
-			// it can be moved inside the VisualEditorOverlay.
-			$loading = $( '<div>' )
-				.addClass( 'overlay-loading-ve' )
-				.append( progressBar.$element );
-			$( document.body ).append( $loading ).addClass( 've-loading' );
+		function showLoadingVE( $content ) {
+			var $fakeToolbar = fakeToolbar();
+			$content.append( $fakeToolbar );
+
+			// Animate the toolbar sliding into place.
+			$fakeToolbar.addClass( 'toolbar-hidden' );
+			setTimeout( function () {
+				$fakeToolbar.addClass( 'toolbar-shown' );
+				setTimeout( function () {
+					$fakeToolbar.addClass( 'toolbar-shown-done' );
+				}, 250 );
+			} );
+
+			$( document.body ).addClass( 've-loading' );
 		}
 
 		function clearLoadingVE() {
 			if ( abortableDataPromise.abort ) {
 				abortableDataPromise.abort();
 			}
-			$loading.detach();
 			$( '#content' ).css( {
 				transform: '',
 				'padding-bottom': '',
@@ -186,7 +189,6 @@ function setupEditor( page, skin ) {
 			// Inform other interested code that we're loading the editor
 			mw.hook( 'mobileFrontend.editorOpening' ).fire();
 
-			showLoadingVE();
 			veAnimationDelayDeferred = util.Deferred();
 
 			editorOptions.mode = 'visual';
@@ -212,6 +214,11 @@ function setupEditor( page, skin ) {
 				mw.libs.ve.targetLoader.addPlugin( 'mobile.editor.ve' );
 				return mw.libs.ve.targetLoader.loadModules( editorOptions.mode );
 			} ).then( function () {
+				// We need to wait for the data to load before showing the overlay,
+				// because the VE overlay has no loading indicator (progress bar / spinner).
+				// We can't show the normal toolbar if it wouldn't work.
+				return editorOptions.dataPromise;
+			} ).then( function () {
 				var VisualEditorOverlay = M.require( 'mobile.editor.overlay/VisualEditorOverlay' ),
 					SourceEditorOverlay = M.require( 'mobile.editor.overlay/SourceEditorOverlay' ),
 					overlay;
@@ -228,7 +235,7 @@ function setupEditor( page, skin ) {
 					return;
 				}
 				loadingOverlay.off( 'hide', clearLoadingVE );
-				// Clear progress bar if loading is aborted after overlay is replaced
+				// Clear loading interface if loading is aborted after overlay is replaced
 				overlay.on( 'hide', clearLoadingVE );
 				overlayManager.replaceCurrent( overlay );
 			} );
@@ -239,7 +246,8 @@ function setupEditor( page, skin ) {
 				className: 'overlay overlay-loading',
 				noHeader: true
 			} );
-			// Clear progress bar if loading is aborted before overlay is replaced
+			showLoadingVE( loadingOverlay.$el.find( '.overlay-content' ) );
+			// Clear loading interface if loading is aborted before overlay is replaced
 			loadingOverlay.on( 'hide', clearLoadingVE );
 			// Should this be a subclass?
 			loadingOverlay.show = function () {
