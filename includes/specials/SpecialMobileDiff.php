@@ -231,7 +231,6 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		}
 		$ts = new MWTimestamp( $this->rev->getTimestamp() );
 		$user = $this->getUser();
-		$td = $this->getLanguage()->userTimeAndDate( $ts, $user );
 		$actionMessageKey = $this->targetTitle->quickUserCan( 'edit', $user )
 			? 'editlink' : 'viewsourcelink';
 
@@ -239,7 +238,12 @@ class SpecialMobileDiff extends MobileSpecialPage {
 			"articleUrl" => $this->targetTitle->getLocalURL(),
 			"articleLinkLabel" => $this->targetTitle->getPrefixedText(),
 			"revisionUrl" => $this->targetTitle->getLocalURL( [ 'oldid' => $this->revId ] ),
-			"revisionLinkLabel" => $this->msg( 'revisionasof', $td )->escaped(),
+			"revisionLinkLabel" => $this->msg(
+				'revisionasof',
+				$this->getLanguage()->userTimeAndDate( $ts, $user ),
+				$this->getLanguage()->userDate( $ts, $user ),
+				$this->getLanguage()->userTime( $ts, $user )
+			)->text(),
 			"actionLinkUrl" => $this->targetTitle->getLocalURL( [ 'action' => 'edit' ] ),
 			"actionLinkLabel" => $this->msg( $actionMessageKey )->text(),
 			"sizeClass" => $sizeClass,
