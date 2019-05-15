@@ -258,6 +258,7 @@
 	"mobile-frontend-search-feedback-link-text": "의견을 주세요.",
 	"mobile-frontend-search-feedback-prompt": "원하던 내용을 찾지 못하셨나요?",
 	"mobile-frontend-notifications-filter-title": "필터 알림",
+	"mobile-frontend-mobile-option-MFLazyLoadReferences": "각주 지연 로드",
 	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions": "제목 설명",
 	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions-description": "제목 아래의 짧은 설명과 함께 문서의 주제를 파악합니다",
 	"mobile-frontend-mobile-option-MFLazyLoadReferences-description": "필요할 때에만 각주를 불러옵니다",

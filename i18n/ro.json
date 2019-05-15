@@ -10,7 +10,8 @@
 			"Matrafox",
 			"Strainu",
 			"Kyouko",
-			"Fitoschido"
+			"Fitoschido",
+			"Andrei Stroe"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Dacă un utilizator modifică sau nu prin intermediul interfeței mobile",
@@ -74,7 +75,7 @@
 	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|Sunteți pe cale să creați}} o pagină nouă la {{SITENAME}}!",
 	"mobile-frontend-editor-previewing-page": "<strong>Se previzualizează</strong><span> $1</span>",
 	"mobile-frontend-editor-save": "Salvare",
-	"mobile-frontend-editor-success": "Succes! Modificarea dumneavoastră a fost salvată.",
+	"mobile-frontend-editor-success": "Succes! Modificarea dumneavoastră a fost publicată.",
 	"mobile-frontend-editor-success-landmark-1": "Felicitări, acum sunteți editor la {{SITENAME}}!",
 	"mobile-frontend-editor-success-new-page": "Felicitări pentru crearea unei pagini noi!",
 	"mobile-frontend-editor-summary-placeholder": "Exemplu: Corectat erori ortografice, adăugat conținut",
@@ -82,13 +83,13 @@
 	"mobile-frontend-editor-summary": "Rezumat:",
 	"mobile-frontend-editor-switch-editor": "Schimbă editorul",
 	"mobile-frontend-editor-switch-visual-editor": "Comută la editarea vizuală",
-	"mobile-frontend-editor-uploadenable": "Încărcați mai întâi o fotografie pentru a putea modifica.",
+	"mobile-frontend-editor-uploadenable": "Încărcați mai întâi o fotografie pentru a activa modificarea.",
 	"mobile-frontend-editor-viewing-source-page": "<strong>Se vizualizează sursa pentru</strong><span> $1</span>",
 	"mobile-frontend-editor-wait": "Se salvează modificarea; vă rugăm să așteptați.",
-	"mobile-frontend-expand-sections-description": "Întotdeauna extinde toate secțiunile atunci când se navighează la o pagină nouă.",
+	"mobile-frontend-expand-sections-description": "Întotdeauna extinde implicit secțiunile tuturor paginilor.",
 	"mobile-frontend-expand-sections-status": "Extinde toate secțiunile",
 	"mobile-frontend-fontchanger-link": "Dimensiunea fontului",
-	"mobile-frontend-fontchanger-desc": "Crește sau scade mărimea textului pentru lizibilitate.",
+	"mobile-frontend-fontchanger-desc": "Ajustează mărimea textului pentru lizibilitate.",
 	"mobile-frontend-featured-article": "Conținutul recomandat al zilei",
 	"mobile-frontend-generic-404-desc": "Pagina pe care o căutați nu a fost găsită.",
 	"mobile-frontend-generic-404-title": "Eroare — Pagina nu a fost găsită",
@@ -100,7 +101,7 @@
 	"mobile-frontend-languages-404-desc": "Trebuie specificat un titlu valid.",
 	"mobile-frontend-languages-404-title": "Eroare de limbi",
 	"mobile-frontend-languages-header": "Limbi",
-	"mobile-frontend-languages-header-page": "$1 - Limbi",
+	"mobile-frontend-languages-header-page": "$1 - Alte limbi",
 	"mobile-frontend-languages-nonexistent-title": "Pagina „$1” nu există.",
 	"mobile-frontend-languages-text": "$1 este disponibilă {{PLURAL:$2|într-o singură limbă|în $2 limbi|în $2 de limbi}}.",
 	"mobile-frontend-languages-variant-header": "variante în {{#language:{{CONTENTLANG}}}}",
@@ -132,7 +133,7 @@
 	"mobile-frontend-nearby-requirements-guidance": "Încercați un alt navigator sau activați javascript în cazul în care l-ați dezactivat.",
 	"mobile-frontend-nearby-title": "În apropiere",
 	"mobile-frontend-news-items": "Știri",
-	"mobile-frontend-opt-in-explain": "Prin examinarea stadiului beta veți avea acces la cele mai noi caracteristici experimentale, care ar putea prezenta, însă, erori software.",
+	"mobile-frontend-opt-in-explain": "{{SITENAME}} βeta este o modalitate prin care puteți încerca aceste caracteristici experimentale și de a ne furniza feedbackul de care avem nevoie.",
 	"mobile-frontend-overlay-close": "Închidere",
 	"mobile-frontend-photo-upload-invalid-user": "Utilizatorul „$1” nu este înregistrat.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> încărcare|<span>$1</span> încărcări|<span>$1</span> de încărcări}}",
@@ -210,5 +211,5 @@
 	"mobile-frontend-search-feedback-link-text": "Oferiți-ne părerea dumneavoastră.",
 	"mobile-frontend-search-feedback-prompt": "Nu ați găsit ceea ce ați căutat?",
 	"mobile-frontend-notifications-filter-title": "Filtrează notificări",
-	"mobile-frontend-console-recruit": "\\o/ Salutare! Acesta este un software cu sursă deschisă și avem nevoie de voluntari pentru a-l construi, a-l face mai bun și pentru a repara orice eroare pe care ați putea-o descoperi în această consolă JavaScript!\n\nPuteți găsi lista cu semnalări @ https://phabricator.wikimedia.org/project/profile/67/"
+	"mobile-frontend-console-recruit": "Aflați mai multe despre cum construim site-ul nostru mobil @ https://www.mediawiki.org/wiki/Extension:MobileFrontend"
 }

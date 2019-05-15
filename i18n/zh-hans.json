@@ -46,7 +46,8 @@
 			"A Chinese Wikipedian",
 			"水獭很懒",
 			"Zazzzz",
-			"WQL"
+			"WQL",
+			"科劳"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "用户是否通过移动版界面编辑",
@@ -193,7 +194,7 @@
 	"mobile-frontend-nearby-requirements-guidance": "请尝试其他浏览器或启用JavaScript（如果您停用了它）。",
 	"mobile-frontend-nearby-title": "附近",
 	"mobile-frontend-nearby-info-heading": "您周围的地点",
-	"mobile-frontend-nearby-info-description": "您可以阅读有关您周围地点的感兴趣维基百科条目",
+	"mobile-frontend-nearby-info-description": "您可以在{{SITENAME}}上阅读有关您周围地点的感兴趣条目",
 	"mobile-frontend-nearby-info-show-button": "显示附近条目",
 	"mobile-frontend-news-items": "新闻动态",
 	"mobile-frontend-opt-in-explain": "{{SITENAME}}测试是您可以尝试这些实验功能，并向我们提供有价值的反馈的方式",
