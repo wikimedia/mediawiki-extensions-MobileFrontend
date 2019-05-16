@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d6b91023_12edb64c",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-05-16T15:43:27Z",
+      "side": 1,
+      "message": "I don\u0027t think this is necessary (see other comment)",
+      "revId": "6fa61a00f8cc60a767cbec78c6d95db2580ba258",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a7e3b562_aa5470c7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-05-16T15:43:27Z",
+      "side": 1,
+      "message": "Not necessarily a big deal. I\u0027d expect to recover this from removing mfExtend and usages of mfExtend (and definitely if this renders OOjs obsolete on the critical path)",
+      "revId": "6fa61a00f8cc60a767cbec78c6d95db2580ba258",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7c09a6b0_bc677849",
+        "filename": "src/mobile.init/BetaOptInPanel.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-05-16T15:43:27Z",
+      "side": 1,
+      "message": "ES6 class syntax is just syntactic sugar so use of prototype should not be necessary after rewriting this.\n\nTry out something like the following:\n\n\tget template() {\n\t\treturn util.template( `\n\t\t\u003cdiv class\u003d\"beta-opt-in-panel panel panel-inline visible\"\u003e\n\t\t\t\u003cform class\u003d\"message content\" action\u003d\"{{postUrl}}\" method\u003d\"POST\"\u003e\n\t\t\t\t\u003cp\u003e{{text}}\u003c/p\u003e\n\t\t\t\t\u003cinput type\u003d\"hidden\" name\u003d\"enableBeta\" value\u003d\"true\"\u003e\n\t\t\t\t\u003cinput type\u003d\"hidden\" name\u003d\"token\" value\u003d\"{{editToken}}\"\u003e\n\t\t\t\u003c/form\u003e\n\t\t\u003c/div\u003e\n\t\t` );\n\t}",
+      "revId": "6fa61a00f8cc60a767cbec78c6d95db2580ba258",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fdcefce2_c98e84d6",
+        "filename": "src/mobile.init/BetaOptInPanel.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-05-16T15:43:27Z",
+      "side": 1,
+      "message": "I\u0027m guessing we\u0027ll want to move towards something like\n\tget options() {\n\t\treturn util.extend( {}, View.prototype.defaults, {\n\t\t\tpostUrl: undefined,\n\t\t\teditToken: user.tokens.get( \u0027editToken\u0027 ),\n\t\t\ttext: mw.msg( \u0027mobile-frontend-panel-betaoptin-msg\u0027 ),\n\t\t\tbuttons: [\n\t\t\t\tnew Button( {\n\t\t\t\t\tprogressive: true,\n\t\t\t\t\tadditionalClassNames: \u0027optin\u0027,\n\t\t\t\t\tlabel: mw.msg( \u0027mobile-frontend-panel-ok\u0027 )\n\t\t\t\t} ),\n\t\t\t\tnew Button( {\n\t\t\t\t\tadditionalClassNames: \u0027cancel\u0027,\n\t\t\t\t\tlabel: mw.msg( \u0027mobile-frontend-panel-cancel\u0027 )\n\t\t\t\t} )\n\t\t\t]\n\t\t}, this._options );\n\t}",
+      "revId": "6fa61a00f8cc60a767cbec78c6d95db2580ba258",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
