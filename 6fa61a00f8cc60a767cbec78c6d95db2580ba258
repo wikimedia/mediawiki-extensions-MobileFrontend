@@ -89,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "4f41c213_0940fc9e",
+        "filename": "src/mobile.init/BetaOptInPanel.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-05-16T18:04:00Z",
+      "side": 1,
+      "message": "Okay, I looked at mediawiki.template.mustache and all .compile does is return an object so it\u0027s not as much of a performance hit as I thought it would be to call it multiple times. My latest patch uses the getters.",
+      "parentUuid": "c67e66d3_b4124967",
+      "revId": "6fa61a00f8cc60a767cbec78c6d95db2580ba258",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fdcefce2_c98e84d6",
         "filename": "src/mobile.init/BetaOptInPanel.js",
         "patchSetId": 3
