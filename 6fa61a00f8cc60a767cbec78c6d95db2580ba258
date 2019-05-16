@@ -53,6 +53,24 @@
     },
     {
       "key": {
+        "uuid": "91abd855_663d3263",
+        "filename": "src/mobile.init/BetaOptInPanel.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-05-16T16:07:16Z",
+      "side": 1,
+      "message": "I thought about using a getter here, but it changes the behavior a little bit from what we had before. \n\nAnytime .template is called, this function will execute and cause the template to compile (e.g. View.js is the parent of BetaOptinPanel and calls `this.template` twice prompting two compilations of the template instead of one (which was the original behavior and is the behavior of what I\u0027ve written).\n\nOf course we could always change the code of the clients like View if we are concerned about this. Do you think we should make it a getter? Another option is an instance variable but I didn\u0027t really think that was clean...",
+      "parentUuid": "7c09a6b0_bc677849",
+      "revId": "6fa61a00f8cc60a767cbec78c6d95db2580ba258",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fdcefce2_c98e84d6",
         "filename": "src/mobile.init/BetaOptInPanel.js",
         "patchSetId": 3
@@ -64,6 +82,24 @@
       "writtenOn": "2019-05-16T15:43:27Z",
       "side": 1,
       "message": "I\u0027m guessing we\u0027ll want to move towards something like\n\tget options() {\n\t\treturn util.extend( {}, View.prototype.defaults, {\n\t\t\tpostUrl: undefined,\n\t\t\teditToken: user.tokens.get( \u0027editToken\u0027 ),\n\t\t\ttext: mw.msg( \u0027mobile-frontend-panel-betaoptin-msg\u0027 ),\n\t\t\tbuttons: [\n\t\t\t\tnew Button( {\n\t\t\t\t\tprogressive: true,\n\t\t\t\t\tadditionalClassNames: \u0027optin\u0027,\n\t\t\t\t\tlabel: mw.msg( \u0027mobile-frontend-panel-ok\u0027 )\n\t\t\t\t} ),\n\t\t\t\tnew Button( {\n\t\t\t\t\tadditionalClassNames: \u0027cancel\u0027,\n\t\t\t\t\tlabel: mw.msg( \u0027mobile-frontend-panel-cancel\u0027 )\n\t\t\t\t} )\n\t\t\t]\n\t\t}, this._options );\n\t}",
+      "revId": "6fa61a00f8cc60a767cbec78c6d95db2580ba258",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d7ab0370_fcddbe96",
+        "filename": "src/mobile.init/BetaOptInPanel.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-05-16T16:07:16Z",
+      "side": 1,
+      "message": "see above reason for why I didn\u0027t do it this way (although I\u0027m open to it).",
+      "parentUuid": "fdcefce2_c98e84d6",
       "revId": "6fa61a00f8cc60a767cbec78c6d95db2580ba258",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
