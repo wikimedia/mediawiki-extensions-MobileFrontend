@@ -4,6 +4,7 @@ var
 	mediaWiki = require( '../utils/mw' ),
 	oo = require( '../utils/oo' ),
 	sinon = require( 'sinon' ),
+	mustache = require( '../utils/mustache' ),
 	WatchList,
 	Icon,
 	sandbox;
@@ -15,6 +16,7 @@ QUnit.module( 'MobileFrontend WatchList.js', {
 		jQuery.setUp( sandbox, global );
 		oo.setUp( sandbox, global );
 		mediaWiki.setUp( sandbox, global );
+		mustache.setUp( sandbox, global );
 
 		sandbox.stub( mw.user, 'isAnon' ).returns( false );
 

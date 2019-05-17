@@ -8,6 +8,7 @@ var
 	jQuery = require( '../../utils/jQuery' ),
 	sinon = require( 'sinon' ),
 	mediawiki = require( '../../utils/mw' ),
+	mustache = require( '../../utils/mustache' ),
 	oo = require( '../../utils/oo' ),
 	util = require( '../../../../src/mobile.startup/util' );
 
@@ -19,6 +20,7 @@ QUnit.module( 'MobileFrontend Watchstar.js', {
 		dom.setUp( sandbox, global );
 		jQuery.setUp( sandbox, global );
 		mediawiki.setUp( sandbox, global );
+		mustache.setUp( sandbox, global );
 		oo.setUp( sandbox, global );
 
 		// requires OO global

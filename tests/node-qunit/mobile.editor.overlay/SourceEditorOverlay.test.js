@@ -6,7 +6,8 @@ var sandbox, messageStub, getContentStub, previewResolve,
 	util = require( '../../../src/mobile.startup/util' ),
 	oo = require( '../utils/oo' ),
 	dom = require( '../utils/dom' ),
-	mediaWiki = require( '../utils/mw' );
+	mediaWiki = require( '../utils/mw' ),
+	mustache = require( '../utils/mustache' );
 
 QUnit.module( 'MobileFrontend mobile.editor.overlay/SourceEditorOverlay', {
 	beforeEach: function () {
@@ -14,6 +15,7 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/SourceEditorOverlay', {
 		dom.setUp( sandbox, global );
 		jQuery.setUp( sandbox, global );
 		mediaWiki.setUp( sandbox, global );
+		mustache.setUp( sandbox, global );
 		oo.setUp( sandbox, global );
 		sandbox.stub( mw, 'msg' ).withArgs( 'mobile-frontend-editor-continue' ).returns( 'Continue' )
 			.withArgs( 'mobile-frontend-editor-save' ).returns( 'Save' )

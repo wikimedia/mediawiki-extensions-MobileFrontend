@@ -3,6 +3,7 @@ var sandbox, icons, spy,
 	dom = require( '../utils/dom' ),
 	jQuery = require( '../utils/jQuery' ),
 	mediaWiki = require( '../utils/mw' ),
+	mustache = require( '../utils/mustache' ),
 	oo = require( '../utils/oo' );
 
 QUnit.module( 'MobileFrontend icons.js', {
@@ -12,6 +13,7 @@ QUnit.module( 'MobileFrontend icons.js', {
 		jQuery.setUp( sandbox, global );
 		oo.setUp( sandbox, global );
 		mediaWiki.setUp( sandbox, global );
+		mustache.setUp( sandbox, global );
 		icons = require( '../../../src/mobile.startup/icons' );
 		spy = sandbox.spy( icons, 'Icon' );
 	},

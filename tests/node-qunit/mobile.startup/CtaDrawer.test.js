@@ -7,6 +7,7 @@ var
 	Drawer,
 	jQuery = require( '../utils/jQuery' ),
 	mw = require( '../utils/mw' ),
+	mustache = require( '../utils/mustache' ),
 	oo = require( '../utils/oo' ),
 	sandbox,
 	sinon = require( 'sinon' ),
@@ -27,6 +28,7 @@ QUnit.module( 'MobileFrontend CtaDrawer.js', {
 
 		// Additional CtaDrawer global dependency.
 		mw.setUp( sandbox, global );
+		mustache.setUp( sandbox, global );
 
 		// Force consistent messaging between Special:JavaScriptTest and Node.js.
 		sandbox.stub( global.mw, 'msg', function ( id ) {

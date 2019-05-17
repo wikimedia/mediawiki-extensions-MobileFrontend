@@ -5,6 +5,7 @@ var sandbox, page, gateway, drawer,
 	dom = require( '../../utils/dom' ),
 	jQuery = require( '../../utils/jQuery' ),
 	mediaWiki = require( '../../utils/mw' ),
+	mustache = require( '../../utils/mustache' ),
 	util = require( '../../../../src/mobile.startup/util' ),
 	ReferencesGateway = require( '../../../../src/mobile.startup/references/ReferencesGateway' );
 
@@ -15,6 +16,7 @@ QUnit.module( 'MobileFrontend: ReferencesDrawer', {
 		jQuery.setUp( sandbox, global );
 		oo.setUp( sandbox, global );
 		mediaWiki.setUp( sandbox, global );
+		mustache.setUp( sandbox, global );
 		Page = require( '../../../../src/mobile.startup/Page' );
 		ReferenceDrawer = require( '../../../../src/mobile.startup/references/ReferencesDrawer' );
 		gateway = {

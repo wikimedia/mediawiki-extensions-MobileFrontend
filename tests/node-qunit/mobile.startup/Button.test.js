@@ -4,6 +4,7 @@ var
 	jQuery = require( '../utils/jQuery' ),
 	oo = require( '../utils/oo' ),
 	mediaWiki = require( '../utils/mw' ),
+	mustache = require( '../utils/mustache' ),
 	Button,
 	sandbox;
 
@@ -14,6 +15,7 @@ QUnit.module( 'MobileFrontend Button.js', {
 		jQuery.setUp( sandbox, global );
 		oo.setUp( sandbox, global );
 		mediaWiki.setUp( sandbox, global );
+		mustache.setUp( sandbox, global );
 		Button = require( '../../../src/mobile.startup/Button' );
 	},
 	afterEach: function () {

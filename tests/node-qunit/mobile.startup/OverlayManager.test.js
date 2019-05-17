@@ -6,6 +6,7 @@ var
 	oo = require( '../utils/oo' ),
 	util = require( '../../../src/mobile.startup/util' ),
 	mediaWiki = require( '../utils/mw' ),
+	mustache = require( '../utils/mustache' ),
 	OverlayManager, Overlay,
 	fakeRouter,
 	overlayManager,
@@ -19,6 +20,7 @@ QUnit.module( 'MobileFrontend mobile.startup/OverlayManager', {
 		oo.setUp( sandbox, global );
 		jQuery.setUp( sandbox, global );
 		mediaWiki.setUp( sandbox, global );
+		mustache.setUp( sandbox, global );
 
 		// jsdom will throw "Not implemented" errors if we don't stub
 		// window.scrollTo

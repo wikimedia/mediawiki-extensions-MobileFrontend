@@ -5,6 +5,7 @@ var promisedView, View,
 	dom = require( '../utils/dom' ),
 	oo = require( '../utils/oo' ),
 	mediaWiki = require( '../utils/mw' ),
+	mustache = require( '../utils/mustache' ),
 	sinon = require( 'sinon' );
 
 QUnit.module( 'MobileFrontend promisedView.js', {
@@ -14,6 +15,7 @@ QUnit.module( 'MobileFrontend promisedView.js', {
 		jQuery.setUp( sandbox, global );
 		oo.setUp( sandbox, global );
 		mediaWiki.setUp( sandbox, global );
+		mustache.setUp( sandbox, global );
 		View = require( './../../../src/mobile.startup/View' );
 		promisedView = require( './../../../src/mobile.startup/promisedView' );
 		happyView = new View( {

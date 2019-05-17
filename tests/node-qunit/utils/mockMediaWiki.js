@@ -6,8 +6,7 @@ var
 		user_talk: 3,
 		project: 4,
 		project_talk: 5
-	}, /* eslint-enable camelcase */
-	mustache = require( 'mustache' );
+	}; /* eslint-enable camelcase */
 
 function Api() {}
 Api.prototype.get = function () {};
@@ -58,21 +57,6 @@ module.exports = function newMockMediaWiki() {
 		},
 		msg: function ( id ) { return id; },
 		now: Date.now.bind( Date ),
-		template: {
-			compile: function ( templateString ) {
-				return {
-					getSource: () => templateString,
-					render: ( data, partials ) => {
-						const partialSource = {};
-						// Map MobileFrontend templates to partial strings
-						Object.keys( partials || {} ).forEach( ( key ) => {
-							partialSource[ key ] = partials[ key ].getSource();
-						} );
-						return mustache.render( templateString.trim(), data, partialSource );
-					}
-				};
-			}
-		},
 		user: {
 			options: {
 				get: function () {}

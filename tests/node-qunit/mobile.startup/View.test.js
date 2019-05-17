@@ -1,6 +1,7 @@
 /* global $ */
 var
 	mw = require( '../utils/mw' ),
+	mustache = require( '../utils/mustache' ),
 	jQuery = require( '../utils/jQuery' ),
 	dom = require( '../utils/dom' ),
 	mfExtend = require( '../../../src/mobile.startup/mfExtend' ),
@@ -17,6 +18,7 @@ QUnit.module( 'MobileFrontend mobile.startup/View', {
 		jQuery.setUp( sandbox, global );
 		oo.setUp( sandbox, global );
 		mw.setUp( sandbox, global );
+		mustache.setUp( sandbox, global );
 
 		View = require( '../../../src/mobile.startup/View' );
 	},

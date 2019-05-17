@@ -4,6 +4,7 @@ var
 	jQuery = require( '../../utils/jQuery' ),
 	sinon = require( 'sinon' ),
 	mediawiki = require( '../../utils/mw' ),
+	mustache = require( '../../utils/mustache' ),
 	oo = require( '../../utils/oo' ),
 	apiResp = {
 		query: {
@@ -31,6 +32,7 @@ QUnit.module( 'MobileFrontend mobile.startup/WatchstarPageList', {
 		dom.setUp( sandbox, global );
 		jQuery.setUp( sandbox, global );
 		mediawiki.setUp( sandbox, global );
+		mustache.setUp( sandbox, global );
 		oo.setUp( sandbox, global );
 
 		// loaded after globals

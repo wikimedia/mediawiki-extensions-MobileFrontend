@@ -3,6 +3,7 @@ var
 	jQuery = require( '../utils/jQuery' ),
 	dom = require( '../utils/dom' ),
 	mediaWiki = require( '../utils/mw' ),
+	mustache = require( '../utils/mustache' ),
 	oo = require( '../utils/oo' ),
 	lazyReferencesLoader,
 	sinon = require( 'sinon' ),
@@ -17,6 +18,7 @@ QUnit.module( 'MobileFrontend lazyReferencesLoader.js', {
 		jQuery.setUp( sandbox, global );
 		oo.setUp( sandbox, global );
 		mediaWiki.setUp( sandbox, global );
+		mustache.setUp( sandbox, global );
 
 		Page = require( '../../../src/mobile.startup/Page' );
 		lazyReferencesLoader = require( '../../../src/mobile.startup/lazyReferencesLoader' );

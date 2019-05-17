@@ -3,6 +3,7 @@ var talkOverlay, sandbox, Overlay, PageGateway,
 	util = require( './../../../../src/mobile.startup/util' ),
 	dom = require( '../../utils/dom' ),
 	mediaWiki = require( '../../utils/mw' ),
+	mustache = require( '../../utils/mustache' ),
 	oo = require( '../../utils/oo' ),
 	sinon = require( 'sinon' );
 
@@ -13,6 +14,7 @@ QUnit.module( 'MobileFrontend mobile.talk.overlays/talkOverlay', {
 		jQuery.setUp( sandbox, global );
 		oo.setUp( sandbox, global );
 		mediaWiki.setUp( sandbox, global );
+		mustache.setUp( sandbox, global );
 
 		sandbox.stub( mw, 'msg' ).returns( 'msg-key' );
 		talkOverlay = require( '../../../../src/mobile.startup/talk/overlay' );

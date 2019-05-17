@@ -9,6 +9,7 @@ let
 	dom = require( '../../utils/dom' ),
 	oo = require( '../../utils/oo' ),
 	mediaWiki = require( '../../utils/mw' ),
+	mustache = require( '../../utils/mustache' ),
 	sinon = require( 'sinon' );
 
 QUnit.module( 'MobileFrontend languageOverlay.js', {
@@ -18,6 +19,7 @@ QUnit.module( 'MobileFrontend languageOverlay.js', {
 		jQuery.setUp( sandbox, global );
 		oo.setUp( sandbox, global );
 		mediaWiki.setUp( sandbox, global );
+		mustache.setUp( sandbox, global );
 
 		LanguageSearcher = require( '../../../../src/mobile.languages.structured/LanguageSearcher' );
 		languageOverlay = require( '../../../../src/mobile.startup/languageOverlay/languageOverlay' );
