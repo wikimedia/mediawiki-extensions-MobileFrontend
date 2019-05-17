@@ -143,6 +143,24 @@
     },
     {
       "key": {
+        "uuid": "e3360748_6dcd30e9",
+        "filename": "src/mobile.init/BetaOptInPanel.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-05-17T17:54:18Z",
+      "side": 1,
+      "message": "If you also have set template(x) { this._template \u003d x } \n\nyou could move the util.template method into the constructor and set it there.",
+      "parentUuid": "7b930ae0_d5438da3",
+      "revId": "6fa61a00f8cc60a767cbec78c6d95db2580ba258",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fdcefce2_c98e84d6",
         "filename": "src/mobile.init/BetaOptInPanel.js",
         "patchSetId": 3
