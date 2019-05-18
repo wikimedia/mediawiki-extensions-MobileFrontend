@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2d55b262_7daa2417",
+        "filename": "src/mobile.startup/util.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 188,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-05-18T07:38:59Z",
+      "side": 1,
+      "message": "note in jquery no need to close the div here. You could also use document.createElement + innerHTML for this kind of thing.",
+      "revId": "3a4c50c132dc34921e737ef8372ab68255beff6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "29a6107d_d6ac442a",
+        "filename": "src/mobile.startup/util.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 190,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-05-18T07:38:59Z",
+      "side": 1,
+      "message": "You could wrap it in $ e.g. container.append( $( compiled.render ...  ) )\n\nLooking at Mustache.render( src, data, partials ) however it seems like we\u0027re undoing the code in there.\n\nThis DOM manipulation seems a bit extensive, so how about using Mustache.render( src, data, partials ) directly?",
+      "revId": "3a4c50c132dc34921e737ef8372ab68255beff6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
