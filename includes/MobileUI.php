@@ -65,7 +65,7 @@ class MobileUI {
 	 * @return string of html
 	 */
 	public static function contentElement( $html, $className = '' ) {
-		$templateParser = new TemplateParser( __DIR__ );
+		$templateParser = new TemplateParser( __DIR__ . '/templates' );
 		return $templateParser->processTemplate( 'ContentBox', [
 			'className' => $className,
 			'html' => $html,

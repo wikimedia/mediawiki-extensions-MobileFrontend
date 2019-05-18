@@ -129,8 +129,8 @@ class ExtMobileFrontend {
 		$data['editSection'] = 0;
 		$data['createPageLinkAdditionalClasses'] = $isCurrentUser ? 'mw-ui-button' : '';
 
-		$templateParser = new TemplateParser( __DIR__ );
-		return $templateParser->processTemplate( 'user_page_cta', $data );
+		$templateParser = new TemplateParser( __DIR__ . '/templates' );
+		return $templateParser->processTemplate( 'UserPageCta', $data );
 	}
 
 	/**
