@@ -133,6 +133,7 @@
 	"mobile-frontend-editor-uploadenable": "Veuillez d’abord téléverser une photo pour autoriser la modification.",
 	"mobile-frontend-editor-viewing-source-page": "<strong>Affichage de la source</strong> de<span> $1</span>",
 	"mobile-frontend-editor-wait": "Enregistrement de la modification, veuillez patienter.",
+	"mobile-frontend-editor-loading": "Chargement de l'éditeur...",
 	"mobile-frontend-expand-sections-description": "Toujours développer les sections de toutes les pages, par défaut.",
 	"mobile-frontend-expand-sections-status": "Développer toutes les sections",
 	"mobile-frontend-fontchanger-link": "Taille de police",

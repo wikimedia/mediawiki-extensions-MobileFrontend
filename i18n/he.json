@@ -104,6 +104,7 @@
 	"mobile-frontend-editor-uploadenable": "נא להעלות תמונה כדי להפעיל עריכה.",
 	"mobile-frontend-editor-viewing-source-page": "<strong>הצגת המקור</strong> של <span>$1</span>",
 	"mobile-frontend-editor-wait": "העריכה נשמרת, נא להמתין.",
+	"mobile-frontend-editor-loading": "טעינת העורך...",
 	"mobile-frontend-expand-sections-description": "תמיד להרחיב פסקאות של כל הדפים.",
 	"mobile-frontend-expand-sections-status": "להרחיב את כל הפסקאות",
 	"mobile-frontend-fontchanger-link": "גודל גופן",

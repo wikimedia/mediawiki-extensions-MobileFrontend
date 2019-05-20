@@ -115,6 +115,7 @@
 	"mobile-frontend-editor-uploadenable": "يُرجَى رفع صورة أولًا مرة لتمكين التحرير.",
 	"mobile-frontend-editor-viewing-source-page": "<strong>عرض مصدر</strong><span> $1</span>",
 	"mobile-frontend-editor-wait": "جار حفظ التعديل، انتظر رجاءً.",
+	"mobile-frontend-editor-loading": "جارٍ تحميل المحرر...",
 	"mobile-frontend-expand-sections-description": "قم بإظهار كل أقسام الصفحات افتراضيًا",
 	"mobile-frontend-expand-sections-status": "أظهر كل الأقسام",
 	"mobile-frontend-fontchanger-link": "حجم الخط",

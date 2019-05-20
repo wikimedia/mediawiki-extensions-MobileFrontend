@@ -1,13 +1,20 @@
 {
 	"@metadata": {
 		"authors": [
-			"YvesNevelsteen"
+			"YvesNevelsteen",
+			"Mirin"
 		]
 	},
+	"apihelp-mobileview-param-page": "Titolo de traktota paĝo.",
+	"apihelp-mobileview-param-redirect": "Ĉu sekvi alidirektadon.",
+	"apihelp-mobileview-param-sectionprop": "Akirota informo pri paragrafoj.",
+	"apihelp-mobileview-param-noimages": "Liveri HTML sen bildoj.",
+	"apihelp-mobileview-param-notransform": "Ne transformi HTML-on en poŝaparatan version.",
 	"apihelp-mobileview-param-thumbsize": "Maksimumaj dimensioj de miniaturoj.",
 	"apihelp-mobileview-param-thumbwidth": "Maksimuma larĝo de miniaturo.",
 	"apihelp-mobileview-param-thumbheight": "Maksimuma alto de miniaturo.",
 	"apihelp-mobileview-param-revision": "Peti specifan revizion.",
+	"apihelp-mobileview-example-1": "Liveri informon pri paragrafo n-ro 0 de la artikolo [[Doom metal]]",
 	"apihelp-parse-param-noimages": "Malŝalti bildojn por porteblaj aparatoj.",
 	"apiwarn-mobilefrontend-sectionsnotfound": "{{PLURAL:$2|Sekcio|Sekcioj}} $1ne trovita."
 }

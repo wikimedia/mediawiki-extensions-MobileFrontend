@@ -3,7 +3,8 @@
 		"authors": [
 			"Denö",
 			"Ilja.mos",
-			"Mashoi7"
+			"Mashoi7",
+			"Pyscowicz"
 		]
 	},
 	"mobile-frontend-categories-heading": "<strong>Kategouriet</strong>",
@@ -37,7 +38,7 @@
 	"mobile-frontend-history-404-title": "Ei nengostu sivuu",
 	"mobile-frontend-languages-404-title": "Kielien haireh",
 	"mobile-frontend-languages-header": "Kielet",
-	"mobile-frontend-languages-header-page": "$1 - Kielet",
+	"mobile-frontend-languages-header-page": "$1 - Toizet kielet",
 	"mobile-frontend-languages-nonexistent-title": "Sivuu \"$1\" ei ole.",
 	"mobile-frontend-last-modified-date": "Jälgimäzet muutokset $2, $1",
 	"mobile-frontend-last-modified-with-user-days": "[$4 Jälgimäzekse {{GENDER:$1|kohendanuh}} {{PLURAL:$3|$3 päivy|$3 päiviä}} tagaperin] {{PLURAL:$5|[$6 $2]|0=anoniimu käyttäi}}",
@@ -52,7 +53,7 @@
 	"mobile-frontend-privacy-link-text": "Luottamusperiuattehet",
 	"mobile-frontend-references-citation": "Citacii",
 	"mobile-frontend-save-settings": "Tallenda",
-	"mobile-frontend-settings-beta": "Beta",
+	"mobile-frontend-settings-beta": "{{SITENAME}} Beta",
 	"mobile-frontend-talk-fullpage": "Luve wikisivunnu",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Midä sinul on mieles?",
 	"mobile-frontend-talk-overlay-header": "Pagin",
