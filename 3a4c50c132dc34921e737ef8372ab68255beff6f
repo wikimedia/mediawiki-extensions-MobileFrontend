@@ -33,6 +33,24 @@
       "revId": "3a4c50c132dc34921e737ef8372ab68255beff6f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1832cc21_2da4063f",
+        "filename": "src/mobile.startup/util.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 190,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-05-20T21:50:53Z",
+      "side": 1,
+      "message": "Done in latest patch. I\u0027m not sure if you meant to use the global Mustache or the npm library one. I chose the former, fingers crossed",
+      "parentUuid": "29a6107d_d6ac442a",
+      "revId": "3a4c50c132dc34921e737ef8372ab68255beff6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
