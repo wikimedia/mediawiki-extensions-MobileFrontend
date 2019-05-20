@@ -16,6 +16,24 @@
       "revId": "82ab9f7c85fd13ec13d89496c7390577ced56534",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ada1c56d_42631b2d",
+        "filename": "includes/templates/user_page_cta.mustache",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-05-20T11:25:49Z",
+      "side": 1,
+      "message": "Yes, I\u0027ve checked around, including core and the consistency should be kept. I\u0027ve renamed it to `UserPageCta.mustache`, hope that is better now :)",
+      "parentUuid": "93890c8b_ce085f65",
+      "revId": "82ab9f7c85fd13ec13d89496c7390577ced56534",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
