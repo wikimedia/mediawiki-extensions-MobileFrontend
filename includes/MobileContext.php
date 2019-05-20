@@ -557,7 +557,7 @@ class MobileContext extends ContextSource {
 	/**
 	 * Return the base level domain or IP address
 	 *
-	 * @return string
+	 * @return string|null
 	 */
 	public function getCookieDomain() {
 		$helper = new WMFBaseDomainExtractor();

@@ -42,9 +42,6 @@ class WMFBaseDomainExtractor implements BaseDomainExtractorInterface {
 	];
 
 	/**
-	 * Try to extract the WMF base domain from $server
-	 * Returns $server if no WMF base domain is found.
-	 *
 	 * Although some browsers will accept cookies without the initial . in domain
 	 * RFC 2109 requires it to be included.
 	 *
@@ -52,8 +49,7 @@ class WMFBaseDomainExtractor implements BaseDomainExtractorInterface {
 	 * or protocol-relative e.g. //en.m.wikipedia.org'). NULL and empty strings
 	 * can also be taken but will return NULL or empty string respectively.
 	 *
-	 * @param string $server URL
-	 * @return string|null Hostname
+	 * @inheritDoc
 	 */
 	public function getCookieDomain( $server ) {
 		// Per http://php.net/manual/en/function.parse-url.php,
