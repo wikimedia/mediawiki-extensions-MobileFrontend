@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "93890c8b_ce085f65",
+        "filename": "includes/templates/user_page_cta.mustache",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-05-20T09:16:06Z",
+      "side": 1,
+      "message": "Shall we make this camel case in the process for consistency?",
+      "revId": "82ab9f7c85fd13ec13d89496c7390577ced56534",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
