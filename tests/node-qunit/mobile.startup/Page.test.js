@@ -2,6 +2,7 @@ var
 	dom = require( '../utils/dom' ),
 	jQuery = require( '../utils/jQuery' ),
 	mw = require( '../utils/mw' ),
+	mustache = require( '../utils/mustache' ),
 	oo = require( '../utils/oo' ),
 	// These both have heavy dependencies on jQuery so must be loaded later.
 	Page, util,
@@ -21,6 +22,7 @@ QUnit.module( 'MobileFrontend Page', {
 		sandbox = sinon.sandbox.create();
 		dom.setUp( sandbox, global );
 		mw.setUp( sandbox, global );
+		mustache.setUp( sandbox, global );
 		jQuery.setUp( sandbox, global );
 		oo.setUp( sandbox, global );
 

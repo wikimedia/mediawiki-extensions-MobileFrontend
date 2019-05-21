@@ -4,6 +4,7 @@ var
 	jQuery = require( '../utils/jQuery' ),
 	oo = require( '../utils/oo' ),
 	mediaWiki = require( '../utils/mw' ),
+	mustache = require( '../utils/mustache' ),
 	util = require( '../../../src/mobile.startup/util' ),
 	rlModuleLoader,
 	sandbox;
@@ -38,6 +39,7 @@ QUnit.module( 'MobileFrontend rlModuleLoader.js', {
 		jQuery.setUp( sandbox, global );
 		oo.setUp( sandbox, global );
 		mediaWiki.setUp( sandbox, global );
+		mustache.setUp( sandbox, global );
 		rlModuleLoader = require( '../../../src/mobile.startup/rlModuleLoader' );
 
 		// jsdom will throw "Not implemented" errors if we don't stub

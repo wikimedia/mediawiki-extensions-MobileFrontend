@@ -4,7 +4,8 @@ var sandbox, ImageOverlay,
 	dom = require( '../utils/dom' ),
 	mediaWiki = require( '../utils/mw' ),
 	oo = require( '../utils/oo' ),
-	sinon = require( 'sinon' );
+	sinon = require( 'sinon' ),
+	mustache = require( '../utils/mustache' );
 
 QUnit.module( 'MobileFrontend mobile.mediaViewer/ImageCarousel.js', {
 	beforeEach: function () {
@@ -13,6 +14,7 @@ QUnit.module( 'MobileFrontend mobile.mediaViewer/ImageCarousel.js', {
 		jQuery.setUp( sandbox, global );
 		oo.setUp( sandbox, global );
 		mediaWiki.setUp( sandbox, global );
+		mustache.setUp( sandbox, global );
 		ImageOverlay = require( '../../../src/mobile.mediaViewer/ImageCarousel' );
 
 		this.image = {

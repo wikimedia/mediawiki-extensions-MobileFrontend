@@ -2,6 +2,7 @@ var
 	sinon = require( 'sinon' ),
 	dom = require( '../utils/dom' ),
 	jQuery = require( '../utils/jQuery' ),
+	mustache = require( '../utils/mustache' ),
 	oo = require( '../utils/oo' ),
 	Section,
 	sandbox;
@@ -11,6 +12,7 @@ QUnit.module( 'MobileFrontend Section.js', {
 		sandbox = sinon.sandbox.create();
 		dom.setUp( sandbox, global );
 		jQuery.setUp( sandbox, global );
+		mustache.setUp( sandbox, global );
 		oo.setUp( sandbox, global );
 		Section = require( '../../../src/mobile.startup/Section' );
 	},

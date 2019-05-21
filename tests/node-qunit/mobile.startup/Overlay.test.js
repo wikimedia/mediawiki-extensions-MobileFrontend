@@ -4,6 +4,7 @@ var
 	mfExtend = require( '../../../src/mobile.startup/mfExtend' ),
 	dom = require( '../utils/dom' ),
 	mediaWiki = require( '../utils/mw' ),
+	mustache = require( '../utils/mustache' ),
 	oo = require( '../utils/oo' ),
 	util = require( '../../../src/mobile.startup/util' ),
 	Overlay,
@@ -17,6 +18,7 @@ QUnit.module( 'MobileFrontend: Overlay.js', {
 		jQuery.setUp( sandbox, global );
 		oo.setUp( sandbox, global );
 		mediaWiki.setUp( sandbox, global );
+		mustache.setUp( sandbox, global );
 		Overlay = require( '../../../src/mobile.startup/Overlay' );
 
 		// jsdom will throw "Not implemented" errors if we don't stub

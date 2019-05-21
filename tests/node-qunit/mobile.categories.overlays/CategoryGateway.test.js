@@ -5,6 +5,7 @@ var
 	jQuery = require( '../utils/jQuery' ),
 	dom = require( '../utils/dom' ),
 	mediaWiki = require( '../utils/mw' ),
+	mustache = require( '../utils/mustache' ),
 	oo = require( '../utils/oo' ),
 	sinon = require( 'sinon' );
 
@@ -15,6 +16,7 @@ QUnit.module( 'MobileFrontend CategoryGateway.js', {
 		jQuery.setUp( sandbox, global );
 		oo.setUp( sandbox, global );
 		mediaWiki.setUp( sandbox, global );
+		mustache.setUp( sandbox, global );
 
 		util = require( '../../../src/mobile.startup/util' );
 		CategoryGateway = require( '../../../src/mobile.categories.overlays/CategoryGateway' );

@@ -169,13 +169,47 @@ module.exports = {
 	 * @typedef {Object} Template
 	 * @property {Function} render returning string of rendered HTML
 	 *
-	 * Centralised place for template rendering. Currently using Hogan, in future
-	 * this will use Mustache.
+	 * Centralised place for template rendering.
 	 *
-	 * @param {string} source code of template that is Hogan/Mustache compatible.
+	 * T223927: We depend on the global Mustache brought in by the
+	 * mediawiki.template.mustache module but do not delegate to
+	 * mediawiki.template.mustache.js because its render method returns a JQuery
+	 * object, but our MobileFrontend code depends on .render returning a string.
+	 *
+	 * @param {string} source code of template that is Mustache compatible.
 	 * @return {Template}
 	 */
 	template: function ( source ) {
-		return mw.template.compile( source.trim(), 'mustache' );
+		return {
+			/**
+			 * @ignore
+			 * @return {string} The raw source code of the template
+			 */
+			getSource: function () {
+				return source;
+			},
+			/**
+			 * @ignore
+			 * @param {Object} data Data to render
+			 * @param {Object} partials Map partial names to Mustache template objects
+			 * @return {string} Rendered HTML
+			 */
+			render: function ( data, partials ) {
+				const partialSource = {};
+				// Map MobileFrontend templates to partial strings
+				Object.keys( partials || {} ).forEach( ( key ) => {
+					partialSource[ key ] = partials[ key ].getSource();
+				} );
+
+				// Use global Mustache which is loaded by mediawiki.template.mustache (a
+				// dependency of the mobile.startup module)
+				// eslint-disable-next-line no-undef
+				return Mustache.render(
+					source.trim(),
+					data,
+					partialSource
+				);
+			}
+		};
 	}
 };

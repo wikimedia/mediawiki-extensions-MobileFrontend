@@ -2,6 +2,7 @@ var util,
 	sinon = require( 'sinon' ),
 	dom = require( '../utils/dom' ),
 	mediawiki = require( '../utils/mw' ),
+	mustache = require( '../utils/mustache' ),
 	oo = require( '../utils/oo' ),
 	jQuery = require( '../utils/jQuery' ),
 	examples = require( './../utils/PageInputs.html' ),
@@ -18,6 +19,7 @@ QUnit.module( 'MobileFrontend PageGateway', {
 		dom.setUp( sandbox, global );
 		jQuery.setUp( sandbox, global );
 		mediawiki.setUp( sandbox, global );
+		mustache.setUp( sandbox, global );
 		oo.setUp( sandbox, global );
 		util = require( '../../../src/mobile.startup/util' );
 		PageGateway = require( '../../../src/mobile.startup/PageGateway' );

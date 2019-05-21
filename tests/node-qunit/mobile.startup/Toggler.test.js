@@ -6,6 +6,7 @@ var
 	jQuery = require( '../utils/jQuery' ),
 	oo = require( '../utils/oo' ),
 	mediawiki = require( '../utils/mw' ),
+	mustache = require( '../utils/mustache' ),
 	sandbox,
 	browser,
 	Toggler,
@@ -42,6 +43,7 @@ QUnit.module( 'MobileFrontend Toggler.js', {
 		jQuery.setUp( sandbox, global );
 		oo.setUp( sandbox, global );
 		mediawiki.setUp( sandbox, global );
+		mustache.setUp( sandbox, global );
 
 		browser = require( '../../../src/mobile.startup/Browser' ).getSingleton();
 		Toggler = require( '../../../src/mobile.startup/Toggler' );
