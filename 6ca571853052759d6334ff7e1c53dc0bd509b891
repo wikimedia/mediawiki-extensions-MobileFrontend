@@ -34,6 +34,24 @@
       "revId": "6ca571853052759d6334ff7e1c53dc0bd509b891",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "758281c2_331bb301",
+        "filename": "resources/mobile.startup/panel.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-05-22T22:15:58Z",
+      "side": 1,
+      "message": "at least I *think* thats the only place they are used. I haven\u0027t seen it used anywhere else",
+      "parentUuid": "4a5ac1fa_760d8968",
+      "revId": "6ca571853052759d6334ff7e1c53dc0bd509b891",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
