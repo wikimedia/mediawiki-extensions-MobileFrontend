@@ -110,6 +110,7 @@
 	"mobile-frontend-editor-uploadenable": "Carregue uma foto primeiro para habilitar a edição.",
 	"mobile-frontend-editor-viewing-source-page": "<strong>Vendo fonte de</strong><span> $1</span>",
 	"mobile-frontend-editor-wait": "Salvando edição, por favor aguarde.",
+	"mobile-frontend-editor-loading": "Carregando editor…",
 	"mobile-frontend-expand-sections-description": "Expandir sempre as seções de todas as páginas por omissão.",
 	"mobile-frontend-expand-sections-status": "Expande todas a seções",
 	"mobile-frontend-fontchanger-link": "Tamanho da fonte",

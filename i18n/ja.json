@@ -21,7 +21,8 @@
 			"Kkairri",
 			"Suyama",
 			"珍庵",
-			"Takot"
+			"Takot",
+			"Aefgh39622"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "利用者が携帯機器版インターフェイスで編集しているかどうか",
@@ -108,6 +109,7 @@
 	"mobile-frontend-editor-uploadenable": "編集をするにはまず写真をアップロードしてください。",
 	"mobile-frontend-editor-viewing-source-page": "<span>$1</span> の<strong>ソースを閲覧中</strong>",
 	"mobile-frontend-editor-wait": "編集内容を保存しています。お待ちください。",
+	"mobile-frontend-editor-loading": "エディタの読み込み中...",
 	"mobile-frontend-expand-sections-description": "どのページでも全ての節を展開する。",
 	"mobile-frontend-expand-sections-status": "すべての節を展開",
 	"mobile-frontend-fontchanger-link": "フォント サイズ",
@@ -249,8 +251,10 @@
 	"mobile-frontend-search-feedback-link-text": "フィードバックをください",
 	"mobile-frontend-search-feedback-prompt": "探していたものが見つかりませんでしたか？",
 	"mobile-frontend-mobile-option-MFLazyLoadReferences": "出典の遅延読み込み",
+	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions": "記事の説明",
 	"mobile-frontend-mobile-option-MFLazyLoadReferences-description": "必要なときだけ出典を読み込む",
 	"mobile-frontend-send-feedback": "フィードバックを送信",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "フォントサイズ",
+	"mobile-frontend-mobile-option-amc-learn-more": "詳細",
 	"mobile-frontend-mobile-option-amc-send-feedback": "フィードバックを送信"
 }

@@ -112,6 +112,7 @@
 	"mobile-frontend-editor-uploadenable": "편집을 활성화하기 위해 먼저 사진을 올려주십시오.",
 	"mobile-frontend-editor-viewing-source-page": "<span>$1 </span><strong>문서의 원본을 보는 중</strong>",
 	"mobile-frontend-editor-wait": "편집을 저장하고 있으니 기다려 주십시오.",
+	"mobile-frontend-editor-loading": "편집기를 불러오는 중...",
 	"mobile-frontend-expand-sections-description": "기본적으로 모든 문서의 문단을 항상 확장합니다.",
 	"mobile-frontend-expand-sections-status": "모든 문단 확장",
 	"mobile-frontend-fontchanger-link": "글자 크기",

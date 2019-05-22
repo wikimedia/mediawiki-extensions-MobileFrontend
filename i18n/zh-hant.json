@@ -117,6 +117,7 @@
 	"mobile-frontend-editor-uploadenable": "請先上傳一張照片來啟動編輯。",
 	"mobile-frontend-editor-viewing-source-page": "<strong>檢視</strong> <span>$1</span> <strong>的原始碼</strong>",
 	"mobile-frontend-editor-wait": "儲存編輯中，請稍候。",
+	"mobile-frontend-editor-loading": "載入編輯器…",
 	"mobile-frontend-expand-sections-description": "預設總是在所有頁面展開章節。",
 	"mobile-frontend-expand-sections-status": "展開所有章節",
 	"mobile-frontend-fontchanger-link": "字型大小",
