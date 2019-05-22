@@ -161,6 +161,24 @@
     },
     {
       "key": {
+        "uuid": "416075b4_a8b2e82a",
+        "filename": "src/mobile.init/BetaOptInPanel.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-05-22T21:40:01Z",
+      "side": 1,
+      "message": "turns out that trying to set any instance variable before calling super results in a reference error. \n\nI went back to the prototype way that I had before as I think its the most clear and performant out of all the options that have been considered thus far. I also don\u0027t think it\u0027s unheard of to do it this way (e.g. React\u0027s propTypes/defaultProps are similar)",
+      "parentUuid": "e3360748_6dcd30e9",
+      "revId": "6fa61a00f8cc60a767cbec78c6d95db2580ba258",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fdcefce2_c98e84d6",
         "filename": "src/mobile.init/BetaOptInPanel.js",
         "patchSetId": 3
