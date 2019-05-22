@@ -14,7 +14,7 @@ interface BaseDomainExtractorInterface {
 	 * Returns $server if no base domain is found.
 	 *
 	 * @param string $server URL
-	 * @return string Hostname
+	 * @return string|null Hostname
 	 */
 	public function getCookieDomain( $server );
 }
