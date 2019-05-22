@@ -64,7 +64,7 @@ CategoryLookupInputWidget.prototype.getLookupCacheDataFromResponse = function ( 
 	// add user input as a possible (actually not existing) category
 	response.results.unshift( {
 		title: title.toString(),
-		displayTitle: title.getNameText()
+		displayTitle: title.getMainText()
 	} );
 
 	return response;
