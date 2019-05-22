@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "78b92e03_99bc92b5",
+        "filename": "resources/mobile.startup/panel.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2019-05-22T20:56:55Z",
+      "side": 1,
+      "message": "Am I correct in assuming the talk overlay inputs are the only ones that don\u0027t receive a border?\n\nIf so then I think this selector is a bit generic for this use-case. If the talk overlay inputs are the only ones that don\u0027t have borders, then I think we should target them specifically. It looks like they have an `.add-topic-form` parent element we can use to select them instead.",
+      "revId": "6ca571853052759d6334ff7e1c53dc0bd509b891",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
