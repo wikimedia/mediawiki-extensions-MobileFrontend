@@ -16,6 +16,24 @@
       "revId": "6ca571853052759d6334ff7e1c53dc0bd509b891",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4a5ac1fa_760d8968",
+        "filename": "resources/mobile.startup/panel.less",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-05-22T22:14:21Z",
+      "side": 1,
+      "message": "yup lol. Thanks! I moved these styles to talk.less in latest patch",
+      "parentUuid": "78b92e03_99bc92b5",
+      "revId": "6ca571853052759d6334ff7e1c53dc0bd509b891",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
