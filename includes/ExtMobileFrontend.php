@@ -75,20 +75,40 @@ class ExtMobileFrontend {
 		// user know about it with pretty graphics and different texts depending
 		// on whether the user is the owner of the page or not.
 		if ( $title->inNamespace( NS_USER ) && !$title->isSubpage() && $isView ) {
-			$pageUserId = User::idFromName( $title->getText() );
+			$pageUser = self::buildPageUserObject( $title );
 
 			$out->addModuleStyles( [
 				'mediawiki.ui.icon',
 				'mobile.userpage.styles', 'mobile.userpage.icons'
 			] );
-			if ( $pageUserId && !$title->exists() ) {
-				$pageUser = User::newFromId( $pageUserId );
+
+			if ( $pageUser && !$title->exists() ) {
 				$contentHtml = self::getUserPageContent(
 					$out, $pageUser, $title );
 			}
 		}
 
 		return $contentHtml;
+	}
+
+	/**
+	 * Return new User object based on username or IP address.
+	 * @param Title $title
+	 * @return User|null
+	 */
+	private static function buildPageUserObject( Title $title ) {
+		$titleText = $title->getText();
+
+		if ( User::isIP( $titleText ) ) {
+			return User::newFromAnyId( null, $titleText, null );
+		}
+
+		$pageUserId = User::idFromName( $titleText );
+		if ( $pageUserId ) {
+			return User::newFromId( $pageUserId );
+		}
+
+		return null;
 	}
 
 	/**
