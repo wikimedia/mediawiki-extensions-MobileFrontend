@@ -1,7 +1,7 @@
 <?php
 
 use MediaWiki\MediaWikiServices;
-use Wikimedia\Rdbms\ResultWrapper;
+use Wikimedia\Rdbms\IResultWrapper;
 
 /**
  * Implements the Watchlist special page
@@ -209,7 +209,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 
 	/**
 	 * Get watchlist items for feed view
-	 * @return ResultWrapper
+	 * @return IResultWrapper
 	 *
 	 * @see getNSConditions()
 	 * @see doPageImages()
@@ -266,23 +266,23 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 
 	/**
 	 * Show results of doFeedQuery
-	 * @param ResultWrapper $res ResultWrapper returned from db
+	 * @param IResultWrapper $res ResultWrapper returned from db
 	 *
 	 * @see showResults()
 	 */
-	protected function showFeedResults( ResultWrapper $res ) {
+	protected function showFeedResults( IResultWrapper $res ) {
 		$this->showResults( $res, true );
 	}
 
 	/**
 	 * Render the Watchlist items.
 	 * When ?from not set, adds a link "more" to see the other watchlist items.
-	 * @param ResultWrapper $res ResultWrapper from db
+	 * @param IResultWrapper $res ResultWrapper from db
 	 * @param bool $feed Render as feed (true) or list (false) view?
 	 * @todo FIXME: use templates/PageList.html when server side templates
 	 * are available to keep consistent with nearby view
 	 */
-	protected function showResults( ResultWrapper $res, $feed ) {
+	protected function showResults( IResultWrapper $res, $feed ) {
 		$output = $this->getOutput();
 
 		if ( $feed ) {

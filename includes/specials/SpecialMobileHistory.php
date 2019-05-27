@@ -1,6 +1,6 @@
 <?php
 
-use Wikimedia\Rdbms\ResultWrapper;
+use Wikimedia\Rdbms\IResultWrapper;
 
 /**
  * Mobile formatted history of of a page
@@ -150,7 +150,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 	/**
 	 * Executes the database query and returns the result.
 	 * @see getQueryConditions()
-	 * @return ResultWrapper
+	 * @return IResultWrapper
 	 */
 	protected function doQuery() {
 		$dbr = wfGetDB( DB_REPLICA, self::DB_REVISIONS_TABLE );
@@ -237,9 +237,9 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 	 * Render the history list
 	 * @see showRow()
 	 * @see doQuery()
-	 * @param ResultWrapper $res The result of doQuery
+	 * @param IResultWrapper $res The result of doQuery
 	 */
-	protected function showHistory( ResultWrapper $res ) {
+	protected function showHistory( IResultWrapper $res ) {
 		$numRows = $res->numRows();
 		$rev1 = $rev2 = null;
 		$out = $this->getOutput();

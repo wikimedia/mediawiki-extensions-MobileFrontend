@@ -1,6 +1,6 @@
 <?php
 
-use Wikimedia\Rdbms\ResultWrapper;
+use Wikimedia\Rdbms\IResultWrapper;
 
 /**
  * A special page to show the contributions of a user
@@ -93,10 +93,10 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 
 	/**
 	 * Render the contributions of user to page
-	 * @param ResultWrapper $res Result of doQuery
+	 * @param IResultWrapper $res Result of doQuery
 	 * @param ContribsPager $pager
 	 */
-	protected function showContributions( ResultWrapper $res, ContribsPager $pager ) {
+	protected function showContributions( IResultWrapper $res, ContribsPager $pager ) {
 		$numRows = $res->numRows();
 		$rev = null;
 		$out = $this->getOutput();
