@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "10a00be2_e6f11fca",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2019-05-27T08:13:49Z",
+      "side": 1,
+      "message": "This code here made me wonder. As far as I can see, this class uses three elements from the provided $config object. The first one is stored in a class property here in this line. Another one is passed to the LazyImageTransform constructor below. The last one is the \"MFRemovableClasses\" property, used a single time in the code below. For this property alone the entire Config object was stored.\n\nI changed this in patch set 6 and introduced a dedicated class property.",
+      "range": {
+        "startLine": 86,
+        "startChar": 2,
+        "endLine": 86,
+        "endChar": 70
+      },
+      "revId": "a2e4c890891b59c708aa119845ceb527e137508e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8cd8e2e6_9be03b64",
+        "filename": "tests/phpunit/MobileFormatterTest.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2019-05-27T08:13:49Z",
+      "side": 1,
+      "message": "The issue with the test was that it was testing the actual configuration. This is not an issue this patch introduced. The code did the exact same before. But it looks like the goal of this patch is to get rid of some of this global access.\n\nI reworked the test in patch set 6 to use it\u0027s own minimal test configuration.",
+      "range": {
+        "startLine": 20,
+        "startChar": 18,
+        "endLine": 20,
+        "endChar": 32
+      },
+      "revId": "a2e4c890891b59c708aa119845ceb527e137508e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
