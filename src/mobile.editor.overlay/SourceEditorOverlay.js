@@ -41,8 +41,6 @@ function SourceEditorOverlay( options, dataPromise ) {
 	} else {
 		options.editingMsg = mw.msg( 'mobile-frontend-editor-editing-page', options.title );
 	}
-	// be explicit here. This may have been initialized from VE.
-	options.isVisualEditor = false;
 	options.previewingMsg = mw.msg( 'mobile-frontend-editor-previewing-page', options.title );
 	EditorOverlayBase.call(
 		this,
@@ -143,9 +141,9 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 					if ( mode === 'visual' ) {
 						if ( self.gateway.hasChanged ) {
 							// Pass wikitext if there are changes.
-							self._switchToVisualEditor( self.options, self.gateway.content );
+							self._switchToVisualEditor( self.gateway.content );
 						} else {
-							self._switchToVisualEditor( self.options );
+							self._switchToVisualEditor();
 						}
 					}
 				} );
@@ -389,10 +387,9 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 	 * @memberof SourceEditorOverlay
 	 * @instance
 	 * @private
-	 * @param {Object} options Object passed to the constructor
 	 * @param {string} [wikitext] Wikitext to pass to VE
 	 */
-	_switchToVisualEditor: function ( options, wikitext ) {
+	_switchToVisualEditor: function ( wikitext ) {
 		var self = this;
 		this.log( {
 			action: 'abort',
@@ -409,11 +406,9 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 			return mw.libs.ve.targetLoader.loadModules( 'visual' );
 		} ).then(
 			function () {
+				var options = self.getOptionsForSwitch();
 				options.SourceEditorOverlay = SourceEditorOverlay;
-				options.switched = true;
 				self.hideSpinner();
-				// Unset classes from other editor
-				delete options.className;
 				if ( wikitext ) {
 					options.dataPromise = mw.libs.ve.targetLoader.requestPageData( 'visual', mw.config.get( 'wgRelevantPageName' ), {
 						section: options.sectionId,

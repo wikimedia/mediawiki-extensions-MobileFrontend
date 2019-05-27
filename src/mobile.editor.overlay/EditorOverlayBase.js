@@ -624,6 +624,34 @@ mfExtend( EditorOverlayBase, Overlay, {
 	},
 
 	/**
+	 * Get an options object not containing any defaults or editor
+	 * specific options, so that it can be used to construct a
+	 * different editor for switching.
+	 *
+	 * @return {Object} Options
+	 */
+	getOptionsForSwitch: function () {
+		// Only preserve options that would be passed in editor.js#setupEditor
+		// and skip over defaults.
+		return {
+			switched: true,
+			overlayManager: this.options.overlayManager,
+			api: this.options.api,
+			licenseMsg: this.options.licenseMsg,
+			title: this.options.title,
+			titleObj: this.options.titleObj,
+			isAnon: this.options.isAnon,
+			isNewPage: this.options.isNewPage,
+			editCount: this.options.editCount,
+			oldId: this.options.oldId,
+			contentLang: this.options.contentLang,
+			contentDir: this.options.contentDir,
+			sessionId: this.options.sessionId,
+			sectionId: this.options.sectionId
+		};
+	},
+
+	/**
 	 * Checks whether the state of the thing being edited as changed. Expects to be
 	 * implemented by child class.
 	 * @memberof EditorOverlayBase

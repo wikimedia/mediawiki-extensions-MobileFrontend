@@ -17,9 +17,9 @@ var EditorOverlayBase = require( './EditorOverlayBase' ),
  *  dependency between VisualEditorOverlay and SourceEditorOverlay
  */
 function VisualEditorOverlay( options ) {
-	this.applyHeaderOptions( options, true );
 	EditorOverlayBase.call( this,
 		util.extend( {
+			hasToolbar: true,
 			onBeforeExit: this.onBeforeExit.bind( this ),
 			isBorderBox: false,
 			className: 'overlay editor-overlay editor-overlay-ve'
@@ -61,21 +61,6 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 	 * @instance
 	 */
 	editor: 'visualeditor',
-	/**
-	 * Set options that apply specifically to VisualEditorOverlay but not
-	 * SourceEditorOverlay so that an SourceEditorOverlay instance can be created effortlessly.
-	 * FIXME: Must be smarter way to do this.
-	 * @memberof VisualEditorOverlay
-	 * @instance
-	 * @param {Object} options Configuration options
-	 * @param {boolean} isVE whether the options are being generated for a VisualEditorOverlay
-	 *  or a SourceEditorOverlay
-	 */
-	applyHeaderOptions: function ( options, isVE ) {
-		// Set things that are known to be true.
-		options.hasToolbar = isVE;
-		options.isVisualEditor = isVE;
-	},
 	/**
 	 * Destroy the existing VisualEditor target.
 	 * @memberof VisualEditorOverlay
@@ -203,7 +188,8 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 	 */
 	switchToSourceEditor: function ( dataPromise ) {
 		var self = this,
-			SourceEditorOverlay = this.SourceEditorOverlay;
+			SourceEditorOverlay = this.SourceEditorOverlay,
+			options = this.getOptionsForSwitch();
 		this.log( {
 			action: 'abort',
 			type: 'switchnochange',
@@ -214,21 +200,17 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 		this.showSpinner();
 		this.$el.find( '.surface' ).hide();
 		self.hideSpinner();
-		self.applyHeaderOptions( self.options, false );
-		self.options.switched = true;
-		// Unset classes from other editor
-		delete self.options.className;
 		if ( dataPromise ) {
 			// If switching with edits we can't stay in section editing, as a VE edit
 			// can always affect the whole document (e.g. references)
-			self.options.sectionId = null;
+			options.sectionId = null;
 			router.navigateTo( document.title, {
 				path: '#/editor/all',
 				useReplaceState: true
 			} );
 		}
 		self.switching = true;
-		self.overlayManager.replaceCurrent( new SourceEditorOverlay( self.options, dataPromise ) );
+		self.overlayManager.replaceCurrent( new SourceEditorOverlay( options, dataPromise ) );
 		self.switching = false;
 	},
 	/**
