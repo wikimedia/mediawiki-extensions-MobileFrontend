@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7e45d707_0acfa0a9",
+        "filename": "includes/ExtMobileFrontend.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-05-28T18:50:05Z",
+      "side": 1,
+      "message": "what about `User:isIPRange()`? Do we care?",
+      "range": {
+        "startLine": 79,
+        "startChar": 17,
+        "endLine": 79,
+        "endChar": 27
+      },
+      "revId": "d14f7f43b2fa19bd6a084b944228d7e177a2a83d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f09cfbf0_dd6da153",
+        "filename": "includes/ExtMobileFrontend.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-05-28T18:50:05Z",
+      "side": 1,
+      "message": "BTW, isn\u0027t it better, first to create user object, and then use it?\n\nso something like:\n\n  private function buildPageUserObject( Title $title ) {\n     $isIP \u003d User::isIP( $title-\u003egetText() );\n     if ( $isIP ) {\n         return User::newFromAnyId(null, $title-\u003egetText(), null);\n     }\n     $isId \u003d .......\n     if ( $isId ) {\n         return ....\n     }\n     return null;\n  }\n\n\nand then here we could do sth like that:\n\n  $pageUser \u003d $this-\u003ebuildPageUserObject( $title );\n  $out-\u003eaddModuleStyles( [ ... ] );\n  if ( $user !\u003d\u003d null \u0026\u0026 !$title-\u003eexists() ) {\n      $contentHtml \u003d self::GetUserPageContent($out, $pageUser, $title );\n  }\n\n\nWhat this approach gives us:\n - smaller cyclomatic complexity (now we have if() { if() {} elseif {} }, with that we will haver only if() {}\n - userIP is not valid user name, users cannot create names with IPs. If user is an IP, there no need to call User::newFromId as that function is bit heavy\n - easier to test on how function behaves (you can unit test that helper function\n - maybe that function can be moved to core (or maybe there is something similar).",
+      "range": {
+        "startLine": 78,
+        "startChar": 0,
+        "endLine": 79,
+        "endChar": 77
+      },
+      "revId": "d14f7f43b2fa19bd6a084b944228d7e177a2a83d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d056a914_9d09aa9a",
+        "filename": "includes/ExtMobileFrontend.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-05-28T18:50:05Z",
+      "side": 1,
+      "message": "a microoptimization but still:\n\n $title-\u003eexists() calls `TitleExists` hook, which can be pretty heavy. There is no need to call that hook if it\u0027s not pageUserId nor pageUserIp. PHP will evaluate checks from left to right, please make sure that the heavy checks are done last (before first we checked pageUserId is not empty (easy check), then we checked $title-\u003eexists() - heavy check).",
+      "range": {
+        "startLine": 85,
+        "startChar": 8,
+        "endLine": 85,
+        "endChar": 25
+      },
+      "revId": "d14f7f43b2fa19bd6a084b944228d7e177a2a83d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
