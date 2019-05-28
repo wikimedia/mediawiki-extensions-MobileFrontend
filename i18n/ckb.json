@@ -56,7 +56,7 @@
 	"mobile-frontend-featured-article": "ناوەرۆکی ھەڵبژێردراوی ئەمڕۆ",
 	"mobile-frontend-generic-404-desc": "ئەو پەڕەیەی بەدوایدا دەگەڕێیت نەدۆزرایەوە.",
 	"mobile-frontend-generic-404-title": "ھەڵە - پەڕەکە نەدۆزرایەوە",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} لەلایەن کەسانی وەک تۆوە دروست بووە.</strong>\n\nبچۆ ژوورەوە بۆ بەردەوامبوون.",
+	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} لەلایەن کەسانی وەک تۆوە دروست بووە.</strong>\nبچۆ ژوورەوە بۆ بەردەوامبوون.",
 	"mobile-frontend-history-404-desc": "ناتوانیت سەیری مێژووی پەڕەیەک بکەیت کە بوونی نییە. لەوانەیە سڕدرابێتەوە یانیش دوای بەستەرێکی مردوو کەوتبیت.",
 	"mobile-frontend-history-404-title": "پەڕەیەکی وا نییە",
 	"mobile-frontend-language-heading": "<strong>زمانەکان</strong>",
@@ -87,5 +87,6 @@
 	"mobile-frontend-watchlist-filter-talk": "لێدوان",
 	"nearby": "ئەو پەڕانەی نزیکی تۆن",
 	"tag-mobile_edit": "بە مۆبایل دەستکاری کراوە",
-	"tag-mobile_web_edit": "بە وێبی مۆبایل دەستکاری کراوە"
+	"tag-mobile_web_edit": "بە وێبی مۆبایل دەستکاری کراوە",
+	"mobile-frontend-mobile-option-amc-learn-more": "زیاتر بزانە"
 }
