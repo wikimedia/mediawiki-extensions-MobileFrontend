@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "77f393cf_744ba01d",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 212,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-05-29T09:50:10Z",
+      "side": 1,
+      "message": "This looks nice, I like it, My only concern is that the $db-\u003eselect() returns ResultWrapper.\n\nIt would be nice to update return types from root (Database calls), and then update everything else from top to bottom.\n\nCurrently, DB consumers will mark the $db-\u003equery() return type as IResultWrapper, but DB still returns ResultWrappers.",
+      "range": {
+        "startLine": 212,
+        "startChar": 12,
+        "endLine": 212,
+        "endChar": 26
+      },
+      "revId": "994c1ee52f42caf12e1cf3d03304f9a45dc10c2c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
