@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "77840742_6a21640a",
+        "filename": "includes/ExtMobileFrontend.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-05-29T21:25:37Z",
+      "side": 1,
+      "message": "this function should be static - you\u0027re calling it from static context",
+      "range": {
+        "startLine": 99,
+        "startChar": 9,
+        "endLine": 99,
+        "endChar": 17
+      },
+      "revId": "0c08a8bf632c0e548115d39c4f3e32decca395c2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
