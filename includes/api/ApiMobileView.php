@@ -636,7 +636,6 @@ class ApiMobileView extends ApiBase {
 			$parserOutput = $this->getParserOutput( $wikiPage, $parserOptions, $oldid );
 			if ( $parserOutput === false ) {
 				$this->dieWithError( 'apierror-mobilefrontend-badidtitle', 'invalidparams' );
-				return;
 			}
 			$html = $parserOutput->getText( [ 'allowTOC' => false, 'unwrap' => true,
 				'deduplicateStyles' => false ] );
