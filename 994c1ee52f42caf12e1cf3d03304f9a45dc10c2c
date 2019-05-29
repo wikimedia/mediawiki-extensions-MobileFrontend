@@ -22,6 +22,30 @@
       "revId": "994c1ee52f42caf12e1cf3d03304f9a45dc10c2c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1d388fc2_c29d9301",
+        "filename": "includes/specials/SpecialMobileWatchlist.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 212,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2019-05-29T14:23:24Z",
+      "side": 1,
+      "message": "I don\u0027t know if this changed recently, but looking at master now, IDatabase::select() is documented as returning IResultWrapper, not ResultWrapper?\n\nIt does return by using the ResultWrapper implementation, but that fulfills the interface contract, so that should be fine?",
+      "parentUuid": "77f393cf_744ba01d",
+      "range": {
+        "startLine": 212,
+        "startChar": 12,
+        "endLine": 212,
+        "endChar": 26
+      },
+      "revId": "994c1ee52f42caf12e1cf3d03304f9a45dc10c2c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
