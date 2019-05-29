@@ -48,6 +48,54 @@
     },
     {
       "key": {
+        "uuid": "f5e91882_930d7e3d",
+        "filename": "includes/ExtMobileFrontend.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2019-05-29T12:57:56Z",
+      "side": 1,
+      "message": "Thanks! I cleaned this up and put in a separate function.",
+      "parentUuid": "f09cfbf0_dd6da153",
+      "range": {
+        "startLine": 78,
+        "startChar": 0,
+        "endLine": 79,
+        "endChar": 77
+      },
+      "revId": "d14f7f43b2fa19bd6a084b944228d7e177a2a83d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ac08276b_6f25819c",
+        "filename": "includes/ExtMobileFrontend.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2019-05-29T12:57:56Z",
+      "side": 1,
+      "message": "From what I can tell, there\u0027s only one usage of isIPRange()\nhttps://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/core/+/master/includes/specials/SpecialContributions.php#291\nand the comment says \"We don\u0027t want to suggest either of these are valid usernames\" so I wouldn\u0027t worry about this too much. Currently an IP range like 1.2.3.4/24 will be treated as a subpage, and I think that behaviour is acceptable.",
+      "parentUuid": "7e45d707_0acfa0a9",
+      "range": {
+        "startLine": 79,
+        "startChar": 17,
+        "endLine": 79,
+        "endChar": 27
+      },
+      "revId": "d14f7f43b2fa19bd6a084b944228d7e177a2a83d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d056a914_9d09aa9a",
         "filename": "includes/ExtMobileFrontend.php",
         "patchSetId": 3
@@ -59,6 +107,30 @@
       "writtenOn": "2019-05-28T18:50:05Z",
       "side": 1,
       "message": "a microoptimization but still:\n\n $title-\u003eexists() calls `TitleExists` hook, which can be pretty heavy. There is no need to call that hook if it\u0027s not pageUserId nor pageUserIp. PHP will evaluate checks from left to right, please make sure that the heavy checks are done last (before first we checked pageUserId is not empty (easy check), then we checked $title-\u003eexists() - heavy check).",
+      "range": {
+        "startLine": 85,
+        "startChar": 8,
+        "endLine": 85,
+        "endChar": 25
+      },
+      "revId": "d14f7f43b2fa19bd6a084b944228d7e177a2a83d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f87d68d5_01ef0d21",
+        "filename": "includes/ExtMobileFrontend.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2019-05-29T12:57:56Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d056a914_9d09aa9a",
       "range": {
         "startLine": 85,
         "startChar": 8,
