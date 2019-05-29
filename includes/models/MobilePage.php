@@ -13,7 +13,7 @@ class MobilePage {
 	const TINY_IMAGE_WIDTH = 80;
 
 	/**
-	 * @var Title: Title for page
+	 * @var Title Title for page
 	 */
 	private $title;
 	/**

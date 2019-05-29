@@ -13,7 +13,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 	protected $hasDesktopVersion = true;
 
 	/**
-	 * @var MediaWikiServices;
+	 * @var MediaWikiServices
 	 */
 	private $services;
 

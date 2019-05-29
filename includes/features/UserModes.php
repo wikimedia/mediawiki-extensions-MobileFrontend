@@ -14,7 +14,7 @@ use ArrayIterator;
 class UserModes implements IteratorAggregate {
 
 	/**
-	 * @var array<string: IUserMode>
+	 * @var array<string,IUserMode>
 	 */
 	private $modes = [];
 
