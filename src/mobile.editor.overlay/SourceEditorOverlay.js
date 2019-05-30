@@ -127,7 +127,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 
 		if ( this.isVisualEditorEnabled() ) {
 			mw.loader.using( 'ext.visualEditor.switching' ).then( function () {
-				var switchToolbar,
+				var switchToolbar, windowManager, switchWindow,
 					toolFactory = new OO.ui.ToolFactory(),
 					toolGroupFactory = new OO.ui.ToolGroupFactory();
 
@@ -138,12 +138,27 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 				} );
 
 				switchToolbar.on( 'switchEditor', function ( mode ) {
+					var
+						config = mw.config.get( 'wgVisualEditorConfig' ),
+						canSwitch = config.fullRestbaseUrl || config.allowLossySwitching;
 					if ( mode === 'visual' ) {
-						if ( self.gateway.hasChanged ) {
+						if ( !self.gateway.hasChanged ) {
+							self._switchToVisualEditor();
+						} else if ( canSwitch ) {
 							// Pass wikitext if there are changes.
 							self._switchToVisualEditor( self.gateway.content );
 						} else {
-							self._switchToVisualEditor();
+							windowManager = new OO.ui.WindowManager();
+							switchWindow = new mw.libs.ve.SwitchConfirmDialog();
+							windowManager.$element.appendTo( document.body );
+							windowManager.addWindows( [ switchWindow ] );
+							windowManager.openWindow( switchWindow, { mode: 'simple' } )
+								.closed.then( function ( data ) {
+									if ( data && data.action === 'discard' ) {
+										self._switchToVisualEditor();
+									}
+									windowManager.destroy();
+								} );
 						}
 					}
 				} );
