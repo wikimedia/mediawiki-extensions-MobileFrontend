@@ -36,9 +36,24 @@ class ExtMobileFrontend {
 
 		$title = $out->getTitle();
 		$ns = $title->getNamespace();
-
-		$isSpecialPage = $title->isSpecialPage();
 		$isView = $context->getRequest()->getText( 'action', 'view' ) == 'view';
+
+		// If the page is a user page which has not been created, then let the
+		// user know about it with pretty graphics and different texts depending
+		// on whether the user is the owner of the page or not.
+		if ( $ns === NS_USER && !$title->isSubpage() && $isView ) {
+			$pageUser = self::buildPageUserObject( $title );
+
+			$out->addModuleStyles( [
+				'mediawiki.ui.icon',
+				'mobile.userpage.styles', 'mobile.userpage.icons'
+			] );
+
+			if ( $pageUser && !$title->exists() ) {
+				return self::getUserPageContent(
+					$out, $pageUser, $title );
+			}
+		}
 
 		$enableSections = (
 			// Don't collapse sections e.g. on JS pages
@@ -57,38 +72,20 @@ class ExtMobileFrontend {
 
 		Hooks::run( 'MobileFrontendBeforeDOM', [ $context, $formatter ] );
 
-		$removeImages = $featureManager->isFeatureAvailableInContext( 'MFLazyLoadImages', $context );
-		$removeReferences =
-			$featureManager->isFeatureAvailableInContext( 'MFLazyLoadReferences', $context );
-		$showFirstParagraphBeforeInfobox = $ns === NS_MAIN &&
-			$featureManager->isFeatureAvailableInContext( 'MFShowFirstParagraphBeforeInfobox', $context );
-
 		if ( $context->getContentTransformations() ) {
+			$isSpecialPage = $title->isSpecialPage();
+			$removeImages = $featureManager->isFeatureAvailableInContext( 'MFLazyLoadImages', $context );
+			$removeReferences =
+				$featureManager->isFeatureAvailableInContext( 'MFLazyLoadReferences', $context );
+			$showFirstParagraphBeforeInfobox = $ns === NS_MAIN &&
+				$featureManager->isFeatureAvailableInContext( 'MFShowFirstParagraphBeforeInfobox', $context );
+
 			// Remove images if they're disabled from special pages, but don't transform otherwise
 			$formatter->filterContent( !$isSpecialPage,
 				$removeReferences, $removeImages, $showFirstParagraphBeforeInfobox );
 		}
 
-		$contentHtml = $formatter->getText();
-
-		// If the page is a user page which has not been created, then let the
-		// user know about it with pretty graphics and different texts depending
-		// on whether the user is the owner of the page or not.
-		if ( $title->inNamespace( NS_USER ) && !$title->isSubpage() && $isView ) {
-			$pageUser = self::buildPageUserObject( $title );
-
-			$out->addModuleStyles( [
-				'mediawiki.ui.icon',
-				'mobile.userpage.styles', 'mobile.userpage.icons'
-			] );
-
-			if ( $pageUser && !$title->exists() ) {
-				$contentHtml = self::getUserPageContent(
-					$out, $pageUser, $title );
-			}
-		}
-
-		return $contentHtml;
+		return $formatter->getText();
 	}
 
 	/**
