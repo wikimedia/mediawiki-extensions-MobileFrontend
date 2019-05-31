@@ -28,6 +28,11 @@ class MwApiContentProvider implements IContentProvider {
 	private $revId;
 
 	/**
+	 * @var bool
+	 */
+	private $provideTagline;
+
+	/**
 	 * @param string $baseUrl for the MediaWiki API to be used minus query string e.g. /w/api.php
 	 * @param OutputPage $out so that the ResourceLoader modules specific to the page can be added
 	 * @param string $skinName the skin name the content is being provided for
