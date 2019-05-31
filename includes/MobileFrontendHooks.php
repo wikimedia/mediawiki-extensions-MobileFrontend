@@ -1228,6 +1228,7 @@ class MobileFrontendHooks {
 			&& $context->getTitle()->isSpecial( 'MobileDiff' )
 		) {
 			if ( defined( 'MW_PHPUNIT_TEST' ) ) {
+				/** @phan-suppress-next-line PhanUndeclaredClassMethod Only for tests */
 				$differenceEngine = new MockInlineDifferenceEngine();
 			} else {
 				$differenceEngine = new InlineDifferenceEngine( $context, $old, $new, 0,

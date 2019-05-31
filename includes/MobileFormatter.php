@@ -268,6 +268,7 @@ class MobileFormatter extends HtmlFormatter {
 			$list = $nodes->item( $i );
 
 			// Use class to decide it is a list of references
+			/** @phan-suppress-next-line PhanUndeclaredMethod DOMNode vs. DOMElement */
 			if ( strpos( $list->getAttribute( 'class' ), 'references' ) !== false ) {
 				// Only mark the section as a reference container if we're transforming a section, not the
 				// document.
@@ -326,6 +327,7 @@ class MobileFormatter extends HtmlFormatter {
 		if ( $this->mainPage ) {
 			$transform = new LegacyMainPageTransform();
 			$doc = $this->getDoc();
+			/** @phan-suppress-next-line PhanTypeMismatchArgument DOMNode vs. DOMElement */
 			$transform->apply( $doc->getElementsByTagName( 'body' )->item( 0 ) );
 		}
 
@@ -384,6 +386,7 @@ class MobileFormatter extends HtmlFormatter {
 			if ( $node->nodeName === $firstHeadingName ) {
 				// The heading we are transforming is always 1 section ahead of the
 				// section we are currently processing
+				/** @phan-suppress-next-line PhanTypeMismatchArgument DOMNode vs. DOMElement */
 				$this->prepareHeading( $doc, $node, $sectionNumber + 1, $this->scriptsEnabled );
 				if ( $sectionBody->hasChildNodes() ) {
 					// Apply transformations to the section body

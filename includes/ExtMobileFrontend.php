@@ -4,6 +4,7 @@ use MediaWiki\MediaWikiServices;
 use Wikibase\Client\WikibaseClient;
 use Wikibase\DataModel\Entity\EntityDocument;
 use Wikibase\DataModel\Entity\ItemId;
+use Wikibase\DataModel\Term\FingerprintProvider;
 use MobileFrontend\ContentProviders\ContentProviderFactory;
 
 /**
@@ -192,7 +193,7 @@ class ExtMobileFrontend {
 		$entity = self::getWikibaseEntity( $item );
 
 		try {
-			if ( !$entity ) {
+			if ( !$entity || !$entity instanceof FingerprintProvider ) {
 				return null;
 			} else {
 				return $entity->getFingerprint()->getDescription( $contLang->getCode() )->getText();

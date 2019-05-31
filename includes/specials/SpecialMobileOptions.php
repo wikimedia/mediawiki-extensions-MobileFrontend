@@ -257,7 +257,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 		}
 
 		$form->appendContent(
-			$fields
+			...$fields
 		);
 		$out->addHTML( $form );
 	}

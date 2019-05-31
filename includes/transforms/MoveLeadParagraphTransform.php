@@ -62,7 +62,9 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 
 		// iterate to the top.
 		while ( $node->parentNode ) {
+			/** @phan-suppress-next-line PhanTypeMismatchArgument DOMNode vs. DOMElement */
 			if ( self::matchElement( $node, 'table', '/^infobox$/' ) ||
+				/** @phan-suppress-next-line PhanTypeMismatchArgument DOMNode vs. DOMElement */
 				self::matchElement( $node, false, $wrapperClass ) ) {
 				$infobox = $node;
 			}
@@ -168,6 +170,7 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 				$elementAfterParagraphQuery = $xPath->query( 'following-sibling::*[1]', $leadParagraph );
 				if ( $elementAfterParagraphQuery->length > 0 ) {
 					$elem = $elementAfterParagraphQuery->item( 0 );
+					/** @phan-suppress-next-line PhanUndeclaredProperty DOMNode vs. DOMElement */
 					if ( $elem->tagName === 'ol' || $elem->tagName === 'ul' ) {
 						$listElementAfterParagraph = $elem;
 					}
@@ -179,6 +182,7 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 				}
 			} elseif ( !$isTopLevelInfobox ) {
 				$isInWrongPlace = $this->hasNoNonEmptyPrecedingParagraphs( $xPath,
+					/** @phan-suppress-next-line PhanTypeMismatchArgument DOMNode vs. DOMElement */
 					self::findParentWithParent( $infobox, $leadSectionBody )
 				);
 				$loggingEnabled = MediaWikiServices::getInstance()
@@ -228,6 +232,7 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	 */
 	private function isNonLeadParagraph( $xPath, $node ) {
 		if ( $node->nodeType === XML_ELEMENT_NODE
+			/** @phan-suppress-next-line PhanUndeclaredProperty DOMNode vs. DOMElement */
 			 && $node->tagName === 'p'
 			 && $this->isNotEmptyNode( $node )
 		) {

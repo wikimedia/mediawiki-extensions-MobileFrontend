@@ -25,13 +25,13 @@ class MobilePage {
 	 */
 	private $revisionTimestamp;
 	/**
-	 * @var File Associated page image file (see PageImages extension)
+	 * @var File|false Associated page image file (see PageImages extension)
 	 */
 	private $file;
 
 	/**
 	 * @param Title $title Page title
-	 * @param File|bool $file Page image file
+	 * @param File|false $file Page image file
 	 */
 	public function __construct( Title $title, $file = false ) {
 		$this->title = $title;

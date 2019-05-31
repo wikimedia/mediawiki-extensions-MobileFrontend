@@ -85,6 +85,7 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 	 *
 	 * @param int $mode Whether the user is viewing, editing, or clearing their
 	 *  watchlist
+	 * @suppress PhanParamSignatureMismatch It is identical
 	 */
 	public function execute( $mode ) {
 		// Anons don't get a watchlist edit
