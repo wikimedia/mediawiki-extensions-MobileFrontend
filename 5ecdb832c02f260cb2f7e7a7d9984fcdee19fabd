@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5b96ef9b_3877caa1",
+        "filename": "resources/dist/mobile.categories.overlays.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-05-31T14:54:33Z",
+      "side": 0,
+      "message": "Thank you for submitting this patch!\n\nEverything under resources/dist is the minified build outputs and should not be edited by hand. The source inputs for this change live under src/. After you change them, execute `npm run build` on the command line to generate the updated resources/dist build outputs.",
+      "revId": "5ecdb832c02f260cb2f7e7a7d9984fcdee19fabd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
