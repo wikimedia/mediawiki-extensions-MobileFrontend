@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "073ddfd5_51648350",
+        "filename": "extension.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-05-31T14:49:44Z",
+      "side": 1,
+      "message": "These new dependencies would affect every pageview. Is this big?",
+      "range": {
+        "startLine": 193,
+        "startChar": 0,
+        "endLine": 194,
+        "endChar": 40
+      },
+      "revId": "7226697bca77b569d04e39ee762fb0692bf7bf61",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d994efaa_c12896c5",
+        "filename": "src/mobile.init/editor.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-05-31T14:49:44Z",
+      "side": 1,
+      "message": "What do you think about isolating this into a new file, FakeToolbar.js? I think that would help keep editor.js focused and clean. I ask because this file is already a little long, we\u0027ve spent a lot of time separating concerns in MobileFrontend elsewhere, and it looks like this function could be extracted. My same question applies to the LESS file too, which is even lengthier, and could live in FakeToolbar.less which would be nicely congruent to FakeToolbar.js.",
+      "range": {
+        "startLine": 91,
+        "startChar": 7,
+        "endLine": 91,
+        "endChar": 19
+      },
+      "revId": "7226697bca77b569d04e39ee762fb0692bf7bf61",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
