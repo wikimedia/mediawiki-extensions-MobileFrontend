@@ -140,12 +140,12 @@ mfExtend( CategoryTabs, View, {
 							if ( category.hidden ) {
 								$hiddenCatlist.append( self.templatePartials.item.render( {
 									url: title.getUrl(),
-									title: title.getNameText()
+									title: title.getMainText()
 								} ) );
 							} else {
 								$normalCatlist.append( self.templatePartials.item.render( {
 									url: title.getUrl(),
-									title: title.getNameText()
+									title: title.getMainText()
 								} ) );
 							}
 						} );
