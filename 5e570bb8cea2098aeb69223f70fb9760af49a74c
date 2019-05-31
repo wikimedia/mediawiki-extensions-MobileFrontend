@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e2511e4b_fa0e4da6",
+        "filename": "src/mobile.editor.overlay/EditorOverlayBase.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 618,
+      "author": {
+        "id": 4857
+      },
+      "writtenOn": "2019-05-31T20:04:03Z",
+      "side": 1,
+      "message": "This simply computes the difference in milliseconds, whereas the old code `moment().to()` output a nice string such as \"in 4 weeks\". Must this feature be kept?",
+      "revId": "5e570bb8cea2098aeb69223f70fb9760af49a74c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
