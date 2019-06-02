@@ -177,7 +177,7 @@
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",
 	"mobile-frontend-nearby-error": "„{{SITENAME}} –  pobliżu” ma pewne problemy.",
 	"mobile-frontend-nearby-error-guidance": "Spróbuj zaktualizować swoją lokalizację.",
-	"mobile-frontend-nearby-noresults": "Jesteś w szczerym polu... Nic nie znaleziono w pobliżu na ten temat.",
+	"mobile-frontend-nearby-noresults": "Jesteś w szczerym polu… Nie znaleziono nic w pobliżu na ten temat.",
 	"mobile-frontend-nearby-noresults-guidance": "Spróbuj utworzyć nową stronę albo uzupełnić współrzędne geograficzne na już istniejącej stronie",
 	"mobile-frontend-nearby-permission-denied": "Odmówiłeś {{GRAMMAR:C.lp|{{SITENAME}}}} dostępu do usług lokalizacyjnych. Aby to zmienić odwiedź ustawienia przeglądarki lub urządzenia",
 	"mobile-frontend-nearby-location-unavailable": "{{SITENAME}} nie może określić twojego położenia. Proszę spróbuj ponownie z lepszym sygnałem.",
