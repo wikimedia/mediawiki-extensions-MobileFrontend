@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "db54ffc8_f95dc5e5",
+        "filename": "includes/ExtMobileFrontend.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2019-06-03T12:51:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4c2d4641_0dc9dca5",
+      "range": {
+        "startLine": 79,
+        "startChar": 0,
+        "endLine": 79,
+        "endChar": 84
+      },
+      "revId": "968422cda27ea8feda5c5a7bb430f7a9d6a4abce",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a9568297_81e9ca42",
         "filename": "includes/ExtMobileFrontend.php",
         "patchSetId": 1
@@ -36,6 +60,30 @@
       "writtenOn": "2019-05-30T23:23:37Z",
       "side": 1,
       "message": "I think this should have 1 more indent as it had before this change",
+      "range": {
+        "startLine": 81,
+        "startChar": 0,
+        "endLine": 81,
+        "endChar": 97
+      },
+      "revId": "968422cda27ea8feda5c5a7bb430f7a9d6a4abce",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "81da599c_ed10a0fc",
+        "filename": "includes/ExtMobileFrontend.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 2950
+      },
+      "writtenOn": "2019-06-03T12:51:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a9568297_81e9ca42",
       "range": {
         "startLine": 81,
         "startChar": 0,
