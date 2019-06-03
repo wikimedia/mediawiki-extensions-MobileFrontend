@@ -17,7 +17,7 @@
     "lint:modules": "resource-modules ./"
   },
   "engines": {
-    "node": "6.11.0"
+    "node": "10.15.2"
   },
   "pre-commit": "precommit",
   "devDependencies": {
@@ -47,6 +47,11 @@
     "sinon": "1.17.3",
     "stylelint-config-wikimedia": "0.5.0",
     "svgo": "1.1.1",
+    "wdio-cucumber-framework": "1.1.1",
+    "wdio-mediawiki": "0.3.0",
+    "wdio-mocha-framework": "0.5.13",
+    "wdio-spec-reporter": "0.1.4",
+    "webdriverio": "4.13.1",
     "webpack": "4.21.0",
     "webpack-cli": "3.1.2"
   },
