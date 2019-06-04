@@ -53,7 +53,7 @@ EditVeTool.prototype.onUpdateState = function () {
  * @param {number|null} params.editCount of user
  */
 function EditorOverlayBase( params ) {
-	var self = this,
+	var
 		options = util.extend(
 			true,
 			{
@@ -91,18 +91,6 @@ function EditorOverlayBase( params ) {
 	this.config = mw.config.get( 'wgMFEditorOptions' );
 	this.sessionId = options.sessionId;
 	this.overlayManager = options.overlayManager;
-	this.allowCloseWindow = mw.confirmCloseWindow( {
-		// Returns true if content has changed
-		test: function () {
-			// Check if content has changed
-			return self.hasChanged();
-		},
-
-		// Message to show the user, if content has changed
-		message: mw.msg( 'mobile-frontend-editor-cancel-confirm' ),
-		// Event namespace
-		namespace: 'editwarning'
-	} );
 
 	Overlay.call( this, options );
 }
@@ -435,6 +423,20 @@ mfExtend( EditorOverlayBase, Overlay, {
 		this.showHidden( '.initial-header' );
 	},
 	show: function () {
+		var self = this;
+		this.allowCloseWindow = mw.confirmCloseWindow( {
+			// Returns true if content has changed
+			test: function () {
+				// Check if content has changed
+				return self.hasChanged();
+			},
+
+			// Message to show the user, if content has changed
+			message: mw.msg( 'mobile-frontend-editor-cancel-confirm' ),
+			// Event namespace
+			namespace: 'editwarning'
+		} );
+
 		this.saved = false;
 		Overlay.prototype.show.call( this );
 
