@@ -3,7 +3,6 @@
 namespace MobileFrontend\Features;
 
 /**
- * Class Feature
  * @package MobileFrontend\Features
  */
 class Feature implements IFeature {

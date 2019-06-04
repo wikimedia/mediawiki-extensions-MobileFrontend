@@ -1,4 +1,5 @@
 <?php
+
 namespace MobileFrontend\AMC;
 
 use \DeferredUpdates;
