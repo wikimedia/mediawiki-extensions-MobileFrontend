@@ -27,6 +27,7 @@ function VisualEditorOverlay( options ) {
 	);
 	this.SourceEditorOverlay = options.SourceEditorOverlay;
 	this.isNewPage = options.isNewPage;
+	this.fromModified = options.dataPromise && options.switched;
 
 	// Gateway present for a few utility purposes; the VE articletarget
 	// handles the actual API calls separately
@@ -228,12 +229,16 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 	 * @instance
 	 */
 	hasChanged: function () {
-		return this.target &&
-			this.target.getSurface() &&
-			this.target.getSurface().getModel().hasBeenModified() &&
+		if ( this.saved ) {
 			// If we just saved, there's not really any changes, and the
 			// target is going to be destroyed in one tick
-			!this.saved;
+			return false;
+		}
+		return this.fromModified || (
+			this.target &&
+			this.target.getSurface() &&
+			this.target.getSurface().getModel().hasBeenModified()
+		);
 	}
 } );
 
