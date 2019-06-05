@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "c067e095_6e371f5d",
+        "filename": "extension.json",
+        "patchSetId": 3
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2019-06-05T14:45:18Z",
+      "side": 1,
+      "message": "\u0027mediawiki.ui.icon\u0027 is already loaded by \u0027mobile.startup\u0027, I\u0027m only adding it here for quality.\n\n\u0027oojs-ui.styles.icons-interactions\u0027 is 4.4 KB after gzip. This is a bit silly, given that we only need the \u0027close\u0027 icon. But I\u0027ve spent two years trying to get the Performance team to approve my solution for loading individual icons, and it\u0027s still not merged. Please complain at T160690.",
+      "parentUuid": "073ddfd5_51648350",
+      "range": {
+        "startLine": 193,
+        "startChar": 0,
+        "endLine": 194,
+        "endChar": 40
+      },
+      "revId": "7226697bca77b569d04e39ee762fb0692bf7bf61",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d994efaa_c12896c5",
         "filename": "src/mobile.init/editor.js",
         "patchSetId": 3
@@ -36,6 +60,30 @@
       "writtenOn": "2019-05-31T14:49:44Z",
       "side": 1,
       "message": "What do you think about isolating this into a new file, FakeToolbar.js? I think that would help keep editor.js focused and clean. I ask because this file is already a little long, we\u0027ve spent a lot of time separating concerns in MobileFrontend elsewhere, and it looks like this function could be extracted. My same question applies to the LESS file too, which is even lengthier, and could live in FakeToolbar.less which would be nicely congruent to FakeToolbar.js.",
+      "range": {
+        "startLine": 91,
+        "startChar": 7,
+        "endLine": 91,
+        "endChar": 19
+      },
+      "revId": "7226697bca77b569d04e39ee762fb0692bf7bf61",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ca67687_d8744607",
+        "filename": "src/mobile.init/editor.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2019-06-05T14:45:18Z",
+      "side": 1,
+      "message": "Sure.",
+      "parentUuid": "d994efaa_c12896c5",
       "range": {
         "startLine": 91,
         "startChar": 7,
