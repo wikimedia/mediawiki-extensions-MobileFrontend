@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a12d2a89_6be1a8fc",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-06-06T18:15:24Z",
+      "side": 1,
+      "message": "we have a `MobileFormatter::newFromContext()`, and we pass `$context` there. Mabe instead of using `MediaWikiServices::getInstance()-\u003egetService()` we can just pass the `MobileContext` to the __construct?\n\nIn short, do the same what you did with Config. Then this won\u0027t have to call MediaWikiServices at all (only the named constructor `newFromContext` will use MediaWikiServices to fetch dependencies.",
+      "range": {
+        "startLine": 176,
+        "startChar": 2,
+        "endLine": 176,
+        "endChar": 63
+      },
+      "revId": "687122cea9aa5e45fb540d78e87617bd01ee0fb2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "52d374cd_781784ce",
+        "filename": "includes/specials/MobileSpecialPage.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-06-06T18:15:24Z",
+      "side": 1,
+      "message": "sorry, I just noticed that, so the `config` is not available untill we call execute()? that\u0027s a bad smell. Can we do sth with it? Like initialize it earlier?",
+      "range": {
+        "startLine": 59,
+        "startChar": 2,
+        "endLine": 60,
+        "endChar": 42
+      },
+      "revId": "687122cea9aa5e45fb540d78e87617bd01ee0fb2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "32bc9969_fc1ea32f",
+        "filename": "tests/phpunit/MobileFormatterTest.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2019-06-06T18:15:24Z",
+      "side": 1,
+      "message": "what I\u0027d also like to see, that we pass well defined config, so not what\u0027s defined in the system by default.\n\nInstead of passing the whole existing system config, we can decide what options in the config we want to pass. This will make the test more stable and explicit.\n\nAlso, it would be amazing to stuff by passing proper config, not by calling `setMwGlobals` (see lines 105, 762).",
+      "range": {
+        "startLine": 20,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 3
+      },
+      "revId": "687122cea9aa5e45fb540d78e87617bd01ee0fb2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
