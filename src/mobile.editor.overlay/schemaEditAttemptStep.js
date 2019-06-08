@@ -102,7 +102,7 @@ module.exports = function () {
 
 			// Schema's kind of a mess of special properties
 			if ( data.action === 'init' || data.action === 'abort' || data.action === 'saveFailure' ) {
-				data[ actionPrefix + '_type' ] = event.type;
+				data[ actionPrefix + '_type' ] = data.type;
 			}
 			if ( data.action === 'init' || data.action === 'abort' ) {
 				data[ actionPrefix + '_mechanism' ] = data.mechanism;
