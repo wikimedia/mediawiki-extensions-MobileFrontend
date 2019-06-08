@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1264f8a8_28bdfc91",
+        "filename": "src/mobile.editor.overlay/schemaEditAttemptStep.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2019-06-08T00:35:56Z",
+      "side": 1,
+      "message": "Now replaced by lines 104–106?",
+      "range": {
+        "startLine": 120,
+        "startChar": 2,
+        "endLine": 120,
+        "endChar": 42
+      },
+      "revId": "4bbdf6cc3f91c80f928b5be5232ad62ab322ce0d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "af5f02b3_dba27e01",
+        "filename": "src/mobile.editor.overlay/schemaEditAttemptStep.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2019-06-08T00:35:56Z",
+      "side": 1,
+      "message": "Now replaced by lines 107–109?",
+      "range": {
+        "startLine": 121,
+        "startChar": 3,
+        "endLine": 121,
+        "endChar": 53
+      },
+      "revId": "4bbdf6cc3f91c80f928b5be5232ad62ab322ce0d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "da3beff2_fa0b51e2",
+        "filename": "src/mobile.editor.overlay/schemaEditAttemptStep.js",
+        "patchSetId": 2
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2019-06-08T00:35:56Z",
+      "side": 1,
+      "message": "Now replaced by lines 110–115?",
+      "range": {
+        "startLine": 122,
+        "startChar": 3,
+        "endLine": 126,
+        "endChar": 0
+      },
+      "revId": "4bbdf6cc3f91c80f928b5be5232ad62ab322ce0d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
