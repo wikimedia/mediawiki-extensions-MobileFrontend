@@ -100,17 +100,27 @@ module.exports = function () {
 
 			timeStamp = timeStamp || this.timeStamp; // I8e82acc12 back-compat
 
-			data[actionPrefix + '_type'] = data.type;
-			data[actionPrefix + '_mechanism'] = data.mechanism;
+			// Schema's kind of a mess of special properties
+			if ( data.action === 'init' || data.action === 'abort' || data.action === 'saveFailure' ) {
+				data[ actionPrefix + '_type' ] = event.type;
+			}
+			if ( data.action === 'init' || data.action === 'abort' ) {
+				data[ actionPrefix + '_mechanism' ] = data.mechanism;
+			}
 			if ( data.action !== 'init' ) {
+				// Schema actually does have an init_timing field, but we don't want to
+				// store it because it's not meaningful.
 				duration = Math.round( computeDuration( data.action, data, timeStamp ) );
-				data[actionPrefix + '_timing'] = duration;
+				data[ actionPrefix + '_timing' ] = duration;
+			}
+			if ( data.action === 'saveFailure' ) {
+				data[ actionPrefix + '_message' ] = data.message;
 			}
 
 			// Remove renamed properties
 			delete data.type;
 			delete data.mechanism;
-			data[actionPrefix + '_message'] = data.message;
+			delete data.timing;
 			delete data.message;
 			// eslint-disable-next-line camelcase
 			data.is_oversample =
