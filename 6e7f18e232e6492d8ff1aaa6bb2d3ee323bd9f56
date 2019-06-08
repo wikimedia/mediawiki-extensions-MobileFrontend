@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8938f1ad_0fc9499d",
+        "filename": "src/mobile.editor.overlay/schemaEditAttemptStep.js",
+        "patchSetId": 4
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2019-06-08T21:13:20Z",
+      "side": 1,
+      "message": "There is no local \u0027event\u0027 variable here, causing an error: \"Cannot read property \u0027type\u0027 of undefined\".",
+      "range": {
+        "startLine": 105,
+        "startChar": 37,
+        "endLine": 105,
+        "endChar": 42
+      },
+      "revId": "6e7f18e232e6492d8ff1aaa6bb2d3ee323bd9f56",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
