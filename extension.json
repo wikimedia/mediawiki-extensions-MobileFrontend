@@ -190,6 +190,8 @@
 				"mediawiki.experiments",
 				"mediawiki.user",
 				"mediawiki.util",
+				"mediawiki.ui.icon",
+				"mobile.init.icons",
 				"mobile.startup",
 				"user.tokens"
 			],
@@ -198,6 +200,7 @@
 				"desktop"
 			],
 			"messages": [
+				"mobile-frontend-editor-loading",
 				"mobile-frontend-editor-disabled",
 				"mobile-frontend-editor-disabled-anon",
 				"mobile-frontend-editor-uploadenable",
@@ -213,13 +216,21 @@
 			],
 			"skinStyles": {
 				"minerva": [
-					"resources/mobile.init/ProgressBarWidget.less",
+					"resources/mobile.init/fakeToolbar.less",
 					"resources/mobile.init/editor.less"
 				]
 			},
 			"scripts": [
 				"resources/dist/mobile.init.js"
 			]
+		},
+		"mobile.init.icons": {
+			"class": "ResourceLoaderOOUIIconPackModule",
+			"targets": [
+				"mobile",
+				"desktop"
+			],
+			"icons": [ "close" ]
 		},
 		"mobile.startup": {
 			"class": "MobileFrontend\\ResourceLoaderModules\\ResourceLoaderFileModuleWithMFConfig",
