@@ -62,6 +62,7 @@
 	"mobile-frontend-editor-blocked-drawer-title-partial": "Számodra blokkolva van az oldal szerkesztésének lehetősége",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Blokkolás indoka",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Blokkolta}}",
+	"mobile-frontend-editor-blocked-drawer-expiry-header": "A blokk lejáratának ideje",
 	"mobile-frontend-editor-blocked-drawer-help": "Részletek",
 	"mobile-frontend-editor-generic-block-reason": "Ismeretlen ok",
 	"mobile-frontend-editor-cancel": "Mégse",
