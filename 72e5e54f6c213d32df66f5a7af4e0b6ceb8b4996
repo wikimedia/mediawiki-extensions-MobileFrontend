@@ -52,6 +52,23 @@
       "revId": "72e5e54f6c213d32df66f5a7af4e0b6ceb8b4996",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "82214ea4_31863f9e",
+        "filename": "src/mobile.init/editor.js",
+        "patchSetId": 3
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 658
+      },
+      "writtenOn": "2019-06-17T17:28:38Z",
+      "side": 1,
+      "message": "NB: MFUsePreferredEditor is currently false by default, and not enabled on any WMF wikis.",
+      "revId": "72e5e54f6c213d32df66f5a7af4e0b6ceb8b4996",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
