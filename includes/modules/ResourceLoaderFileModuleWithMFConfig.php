@@ -6,6 +6,7 @@ use ResourceLoaderFileModule;
 use ResourceLoaderContext;
 use Xml;
 use MobileFrontendHooks;
+use MobileFrontendEditorHooks;
 
 /**
  * ResourceLoaderFileModule subclass with JavaScript config necessary for MobileFrontend.
@@ -13,7 +14,8 @@ use MobileFrontendHooks;
 class ResourceLoaderFileModuleWithMFConfig extends ResourceLoaderFileModule {
 	/** @inheritDoc */
 	public function getScript( ResourceLoaderContext $context ) {
-		$config = MobileFrontendHooks::getResourceLoaderMFConfigVars();
+		$config = MobileFrontendHooks::getResourceLoaderMFConfigVars() +
+			MobileFrontendEditorHooks::getResourceLoaderMFConfigVars();
 		return Xml::encodeJsCall( 'mw.config.set', [ $config ] )
 			. parent::getScript( $context );
 	}

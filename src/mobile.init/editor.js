@@ -46,11 +46,19 @@ function onEditLinkClick() {
  */
 function getPreferredEditor() {
 	var preferredEditor = mw.storage.get( 'preferredEditor' );
-	if ( !preferredEditor ) {
-		return mw.config.get( 'wgMFUsePreferredEditor' ) && mw.user.options.get( 'visualeditor-editor' ) === 'visualeditor' ?
-			'VisualEditor' : 'SourceEditor';
+	if ( preferredEditor ) {
+		return preferredEditor;
 	}
-	return preferredEditor;
+	switch ( mw.config.get( 'wgMFDefaultEditor' ) ) {
+		case 'source':
+			return 'SourceEditor';
+		case 'visual':
+			return 'VisualEditor';
+		case 'preference':
+			return mw.user.options.get( 'visualeditor-editor' ) === 'visualeditor' ? 'VisualEditor' : 'SourceEditor';
+	}
+	// In the event of misconfiguration, fall back to source
+	return 'SourceEditor';
 }
 
 /**

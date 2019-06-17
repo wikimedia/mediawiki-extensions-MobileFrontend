@@ -59,6 +59,7 @@
 	"AutoloadClasses": {
 		"ExtMobileFrontend": "includes/ExtMobileFrontend.php",
 		"MobileFrontendHooks": "includes/MobileFrontendHooks.php",
+		"MobileFrontendEditorHooks": "includes/MobileFrontendEditorHooks.php",
 		"MobileFrontendSkinHooks": "includes/MobileFrontendSkinHooks.php",
 		"MobileFrontend\\BaseDomainExtractorInterface": "includes/BaseDomainExtractorInterface.php",
 		"MobileFrontend\\WMFBaseDomainExtractor": "includes/WMFBaseDomainExtractor.php",
@@ -785,6 +786,9 @@
 		"UserLoginComplete": [
 			"MobileFrontendHooks::onUserLoginComplete"
 		],
+		"UserLoggedIn": [
+			"MobileFrontendEditorHooks::onUserLoggedIn"
+		],
 		"BeforePageDisplay": [
 			"MobileFrontendHooks::onBeforePageDisplay"
 		],
@@ -801,7 +805,8 @@
 			"MobileFrontendHooks::onCentralAuthSilentLoginRedirect"
 		],
 		"ResourceLoaderRegisterModules": [
-			"MobileFrontendHooks::onResourceLoaderRegisterModules"
+			"MobileFrontendHooks::onResourceLoaderRegisterModules",
+			"MobileFrontendEditorHooks::onResourceLoaderRegisterModules"
 		],
 
 		"ResourceLoaderTestModules": [
@@ -826,7 +831,8 @@
 			"MobileFrontendHooks::onAfterBuildFeedLinks"
 		],
 		"MakeGlobalVariablesScript": [
-			"MobileFrontendHooks::onMakeGlobalVariablesScript"
+			"MobileFrontendHooks::onMakeGlobalVariablesScript",
+			"MobileFrontendEditorHooks::onMakeGlobalVariablesScript"
 		],
 		"TitleSquidURLs": [
 			"MobileFrontendHooks::onTitleSquidURLs"
@@ -865,7 +871,7 @@
 		"MFEditorOptions": {
 			"skipPreview": false
 		},
-		"MFUsePreferredEditor": false,
+		"MFDefaultEditor": "source",
 		"MFExperiments": {
 			"betaoptin": {
 				"name": "betaoptin",

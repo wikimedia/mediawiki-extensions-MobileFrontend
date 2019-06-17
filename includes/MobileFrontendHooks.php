@@ -403,16 +403,10 @@ class MobileFrontendHooks {
 				'tiny' => MobilePage::TINY_IMAGE_WIDTH,
 				'small' => MobilePage::SMALL_IMAGE_WIDTH,
 			],
-			// EditorOverlayBase.js
-			'wgMFEditorOptions' => $config->get( 'MFEditorOptions' ),
-			// editor.js
-			'wgMFUsePreferredEditor' => $config->get( 'MFUsePreferredEditor' ),
 			// Skin.js
 			'wgMFLicense' => MobileFrontendSkinHooks::getLicense( 'editor' ),
 			// schemaMobileWebSearch.js
 			'wgMFSchemaSearchSampleRate' => $config->get( 'MFSchemaSearchSampleRate' ),
-			// schemaEditAttemptStep.js
-			'wgMFSchemaEditAttemptStepOversample' => $config->get( 'MFSchemaEditAttemptStepOversample' ),
 			// mobile.init
 			'wgMFExperiments' => $config->get( 'MFExperiments' ),
 			'wgMFEnableJSConsoleRecruitment' => $config->get( 'MFEnableJSConsoleRecruitment' ),
@@ -630,19 +624,6 @@ class MobileFrontendHooks {
 				WatchAction::doWatch( $title, $currentUser );
 			}
 		}
-	}
-
-	/**
-	 * Checks whether the editor can handle the existing content handler type.
-	 *
-	 * @param Title $title
-	 * @return bool
-	 */
-	protected static function isPageContentModelEditable( Title $title ) {
-		$contentHandler = ContentHandler::getForTitle( $title );
-
-		return $contentHandler->supportsDirectEditing()
-			&& $contentHandler->supportsDirectApiEditing();
 	}
 
 	/**
@@ -906,8 +887,6 @@ class MobileFrontendHooks {
 	 *
 	 * Registers:
 	 *
-	 * * EventLogging schema modules, if the EventLogging extension is loaded;
-	 * * Modules for the Visual Editor overlay, if the VisualEditor extension is loaded; and
 	 * * Modules for the notifications overlay, if the Echo extension is loaded.
 	 *
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ResourceLoaderRegisterModules
@@ -919,23 +898,6 @@ class MobileFrontendHooks {
 			'localBasePath' => dirname( __DIR__ ),
 			'remoteExtPath' => 'MobileFrontend',
 		];
-
-		// add VisualEditor related modules only, if VisualEditor seems to be installed - T85007
-		if ( ExtensionRegistry::getInstance()->isLoaded( 'VisualEditor' ) ) {
-			$resourceLoader->register( [
-				'mobile.editor.ve' => $resourceBoilerplate + [
-					'dependencies' => [
-						'ext.visualEditor.mobileArticleTarget',
-						'mobile.editor.overlay',
-						'mobile.startup',
-					],
-					'scripts' => 'resources/dist/mobile.editor.ve.js',
-					'targets' => [
-						'mobile',
-					],
-				],
-			] );
-		}
 
 		// add Echo, if it's installed
 		if ( ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ) {
@@ -963,19 +925,6 @@ class MobileFrontendHooks {
 					],
 					'targets' => [ 'mobile', 'desktop' ],
 				],
-			] );
-		}
-
-		// If using MFContentProviderScriptPath, register contentProviderApi module to
-		// fix cors issues with visual editor
-		$config = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Config' );
-		$contentProviderApi = $config->get( 'MFContentProviderScriptPath' );
-		if ( $contentProviderApi ) {
-			$resourceLoader->register( [
-				'mobile.contentProviderApi' => $resourceBoilerplate + [
-					'targets' => [ 'mobile', 'desktop' ],
-					'scripts' => 'resources/mobile.contentProviderApi.js'
-				]
 			] );
 		}
 	}
@@ -1114,7 +1063,6 @@ class MobileFrontendHooks {
 	 * @param OutputPage $out OutputPage instance calling the hook
 	 */
 	public static function onMakeGlobalVariablesScript( array &$vars, OutputPage $out ) {
-		$title = $out->getTitle();
 		$services = MediaWikiServices::getInstance();
 		$userMode = $services->getService( 'MobileFrontend.AMC.UserMode' );
 		$featureManager = $services->getService( 'MobileFrontend.FeaturesManager' );
@@ -1129,10 +1077,6 @@ class MobileFrontendHooks {
 				$featureManager->isFeatureAvailableInContext( 'MFLazyLoadImages', $context );
 			$vars['wgMFLazyLoadReferences'] =
 				$featureManager->isFeatureAvailableInContext( 'MFLazyLoadReferences', $context );
-
-			// mobile.init
-			$vars['wgMFIsPageContentModelEditable'] = self::isPageContentModelEditable( $title );
-			// Accesses getBetaGroupMember so does not belong in onResourceLoaderGetConfigVars
 		}
 		// Needed by mobile.startup, mobile.special.watchlist.scripts, mobile.special.nearby.scripts
 		// Needs to know if in beta mode or not and needs to load for Minerva desktop as well.

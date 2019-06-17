@@ -38,6 +38,8 @@ module.exports = function () {
 					integration: 'page',
 					page_token: user.getPageviewToken(),
 					session_token: user.sessionId(),
+					anonymous_user_token: mw.config.get( 'wgMFSchemaEditAttemptStepAnonymousUserId' ),
+					bucket: mw.config.get( 'wgMFSchemaEditAttemptStepBucket' ),
 					version: 1
 				}
 			);
