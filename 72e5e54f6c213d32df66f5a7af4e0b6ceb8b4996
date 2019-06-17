@@ -34,6 +34,24 @@
       "revId": "72e5e54f6c213d32df66f5a7af4e0b6ceb8b4996",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a1ef9bec_60669421",
+        "filename": "includes/MobileFrontendHooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 1136,
+      "author": {
+        "id": 2915
+      },
+      "writtenOn": "2019-06-17T17:04:26Z",
+      "side": 1,
+      "message": "There\u0027s now a followup patch on this branch for refactoring out the editor-related functions into their own hooks file: https://gerrit.wikimedia.org/r/c/mediawiki/extensions/MobileFrontend/+/517453\n\n(Separated because I don\u0027t want to get bogged down on refactoring here, unless everyone thinks it\u0027s so uncontroversial that I should just squash them together.)",
+      "parentUuid": "166cf403_cc7ebb18",
+      "revId": "72e5e54f6c213d32df66f5a7af4e0b6ceb8b4996",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
