@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "94d1ea91_9361720d",
+        "filename": "includes/MobileFormatter.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-06-17T17:54:16Z",
+      "side": 1,
+      "message": "Done! Thanks!",
+      "parentUuid": "a12d2a89_6be1a8fc",
+      "range": {
+        "startLine": 176,
+        "startChar": 2,
+        "endLine": 176,
+        "endChar": 63
+      },
+      "revId": "687122cea9aa5e45fb540d78e87617bd01ee0fb2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "52d374cd_781784ce",
         "filename": "includes/specials/MobileSpecialPage.php",
         "patchSetId": 8
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "c18dbf8a_211fd453",
+        "filename": "includes/specials/MobileSpecialPage.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-06-17T17:54:16Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "52d374cd_781784ce",
+      "range": {
+        "startLine": 59,
+        "startChar": 2,
+        "endLine": 60,
+        "endChar": 42
+      },
+      "revId": "687122cea9aa5e45fb540d78e87617bd01ee0fb2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "32bc9969_fc1ea32f",
         "filename": "tests/phpunit/MobileFormatterTest.php",
         "patchSetId": 8
@@ -59,6 +107,30 @@
       "writtenOn": "2019-06-06T18:15:24Z",
       "side": 1,
       "message": "what I\u0027d also like to see, that we pass well defined config, so not what\u0027s defined in the system by default.\n\nInstead of passing the whole existing system config, we can decide what options in the config we want to pass. This will make the test more stable and explicit.\n\nAlso, it would be amazing to stuff by passing proper config, not by calling `setMwGlobals` (see lines 105, 762).",
+      "range": {
+        "startLine": 20,
+        "startChar": 0,
+        "endLine": 21,
+        "endChar": 3
+      },
+      "revId": "687122cea9aa5e45fb540d78e87617bd01ee0fb2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d4d29d43_4beb62d7",
+        "filename": "tests/phpunit/MobileFormatterTest.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 2842
+      },
+      "writtenOn": "2019-06-17T17:54:16Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "32bc9969_fc1ea32f",
       "range": {
         "startLine": 20,
         "startChar": 0,
