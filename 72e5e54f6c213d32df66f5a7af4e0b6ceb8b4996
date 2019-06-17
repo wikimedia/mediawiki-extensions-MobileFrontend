@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "be5c5feb_89491bd0",
+        "filename": "includes/MobileFrontendHooks.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 1136,
+      "author": {
+        "id": 2426
+      },
+      "writtenOn": "2019-06-17T13:45:42Z",
+      "side": 1,
+      "message": "Did you consider moving this logic to a new file? I ask because this file is already quite long and separating this A/B test code could set a nice precedent.",
+      "revId": "72e5e54f6c213d32df66f5a7af4e0b6ceb8b4996",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
+    }
+  ]
+}
