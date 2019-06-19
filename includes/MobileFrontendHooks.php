@@ -480,6 +480,7 @@ class MobileFrontendHooks {
 		$services = MediaWikiServices::getInstance();
 		$ctx = $services->getService( 'MobileFrontend.Context' );
 		$config = $services->getService( 'MobileFrontend.Config' );
+		$userMode = $services->getService( 'MobileFrontend.AMC.UserMode' );
 
 		// Perform substitutions of pages that are unsuitable for mobile
 		// FIXME: Upstream these changes to core.
@@ -490,13 +491,17 @@ class MobileFrontendHooks {
 			$list['Watchlist'] = 'SpecialMobileWatchlist';
 			$list['EditWatchlist'] = 'SpecialMobileEditWatchlist';
 
-			/* Special:MobileContributions redefines Special:History in
-			 * such a way that for Special:Contributions/Foo, Foo is a
-			 * username (in Special:History/Foo, Foo is a page name).
-			 * Redirect people here as this is essential
-			 * Special:Contributions without the bells and whistles.
-			 */
-			$list['Contributions'] = 'SpecialMobileContributions';
+			// Only override contributions page if AMC is disabled
+			if ( !$userMode->isEnabled() ) {
+				/* Special:MobileContributions redefines Special:History in
+				 * such a way that for Special:Contributions/Foo, Foo is a
+				 * username (in Special:History/Foo, Foo is a page name).
+				 * Redirect people here as this is essential
+				 * Special:Contributions without the bells and whistles.
+				 */
+				$list['Contributions'] = 'SpecialMobileContributions';
+			}
+
 		}
 		// add Special:Nearby only, if Nearby is activated
 		if ( $config->get( 'MFNearby' ) ) {
