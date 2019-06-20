@@ -266,7 +266,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 
 	/**
 	 * Show results of doFeedQuery
-	 * @param IResultWrapper $res ResultWrapper returned from db
+	 * @param IResultWrapper $res Result wrapper returned from db
 	 *
 	 * @see showResults()
 	 */
@@ -277,7 +277,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	/**
 	 * Render the Watchlist items.
 	 * When ?from not set, adds a link "more" to see the other watchlist items.
-	 * @param IResultWrapper $res ResultWrapper from db
+	 * @param IResultWrapper $res Result wrapper from db
 	 * @param bool $feed Render as feed (true) or list (false) view?
 	 * @todo FIXME: use templates/PageList.html when server side templates
 	 * are available to keep consistent with nearby view
