@@ -5,8 +5,8 @@ module.exports = function () {
 		return;
 	}
 
-	mw.loader.using( [ 'ext.eventLogging.subscriber' ] ).then( function () {
-		var // Schema provided by ext.eventLogging.subscriber class
+	mw.loader.using( [ 'ext.eventLogging' ] ).then( function () {
+		var // Schema class is provided by ext.eventLogging
 			Schema = mw.eventLog.Schema,
 			user = mw.user,
 			sampleRate = mw.config.get( 'wgWMESchemaEditAttemptStepSamplingRate' ),

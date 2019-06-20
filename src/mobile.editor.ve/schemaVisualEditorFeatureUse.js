@@ -9,8 +9,8 @@ module.exports = function () {
 	// does, so this file references its config for sampling rates and
 	// oversampling.
 
-	mw.loader.using( [ 'ext.eventLogging.subscriber' ] ).then( function () {
-		var // Schema provided by ext.eventLogging.subscriber class
+	mw.loader.using( [ 'ext.eventLogging' ] ).then( function () {
+		var // Schema class provided by ext.eventLogging
 			Schema = mw.eventLog.Schema, // resource-modules-disable-line
 			sampleRate = mw.config.get( 'wgWMESchemaEditAttemptStepSamplingRate' ),
 			/**
