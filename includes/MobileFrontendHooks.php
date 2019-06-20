@@ -481,18 +481,19 @@ class MobileFrontendHooks {
 		$ctx = $services->getService( 'MobileFrontend.Context' );
 		$config = $services->getService( 'MobileFrontend.Config' );
 		$userMode = $services->getService( 'MobileFrontend.AMC.UserMode' );
+		$user = $ctx->getUser();
 
 		// Perform substitutions of pages that are unsuitable for mobile
 		// FIXME: Upstream these changes to core.
 		if ( $ctx->shouldDisplayMobileView() &&
-			self::shouldMobileFormatSpecialPages( $ctx->getUser() )
+			self::shouldMobileFormatSpecialPages( $user )
 		) {
 			// Replace the standard watchlist view with our custom one
 			$list['Watchlist'] = 'SpecialMobileWatchlist';
 			$list['EditWatchlist'] = 'SpecialMobileEditWatchlist';
 
 			// Only override contributions page if AMC is disabled
-			if ( !$userMode->isEnabled() ) {
+			if ( $user->isSafeToLoad() && !$userMode->isEnabled() ) {
 				/* Special:MobileContributions redefines Special:History in
 				 * such a way that for Special:Contributions/Foo, Foo is a
 				 * username (in Special:History/Foo, Foo is a page name).
