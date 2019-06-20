@@ -155,7 +155,7 @@ module.exports = function () {
 			}
 
 			if ( trackdebug ) {
-				log( topic + '.' + data.action, duration + 'ms', data );
+				log( topic + '.' + data.action, duration + 'ms', data, schemaEditAttemptStep.defaults );
 			} else {
 				schemaEditAttemptStep.log( data, (
 					mw.config.get( 'wgWMESchemaEditAttemptStepOversample' ) ||
