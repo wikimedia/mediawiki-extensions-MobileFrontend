@@ -57,10 +57,13 @@ class MobileFrontendEditorHooks {
 					$vars['wgMFSchemaEditAttemptStepAnonymousUserId'] = $cookie;
 					$anonid = base_convert( substr( $cookie, 0, 8 ), 16, 10 );
 					$defaultEditor = $anonid % 2 === 0 ? 'source' : 'visual';
-				} else {
+					$vars['wgMFSchemaEditAttemptStepBucket'] = 'default-' . $defaultEditor;
+				} elseif ( $user->getEditCount() <= 100 ) {
 					$defaultEditor = $user->getId() % 2 === 0 ? 'source' : 'visual';
+					$vars['wgMFSchemaEditAttemptStepBucket'] = 'default-' . $defaultEditor;
+				} else {
+					$defaultEditor = 'source';
 				}
-				$vars['wgMFSchemaEditAttemptStepBucket'] = 'default-' . $defaultEditor;
 			}
 
 			// editor.js
