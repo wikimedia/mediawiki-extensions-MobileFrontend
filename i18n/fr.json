@@ -114,7 +114,7 @@
 	"mobile-frontend-editor-error-preview": "Erreur, quelque chose d’inattendu s’est produit lors du chargement de l’aperçu. Veuillez fermer et réessayer.",
 	"mobile-frontend-editor-keep-editing": "Rester en modification",
 	"mobile-frontend-editor-licensing": "En enregistrant des modifications, vous acceptez de livrer votre contribution sous {{PLURAL:$2|la license|les licenses}} $1.",
-	"mobile-frontend-editor-licensing-with-terms": "En enregistrant ces modifications, vous acceptez les $1 et acceptez de livrer votre contribution sous la {{PLURAL:$3|license|licenses}} $2 .",
+	"mobile-frontend-editor-licensing-with-terms": "En enregistrant ces modifications, vous acceptez les $1 et acceptez de livrer votre contribution sous {{PLURAL:$3|la licence|les licences}} $2 .",
 	"mobile-frontend-editor-terms-link": "[$1 Conditions d'Utilisation]",
 	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|Êtes-vous sûr de vouloir créer}} une nouvelle page sur {{SITENAME}} ?",
 	"mobile-frontend-editor-placeholder": "Cette section est vide. Soyez le premier  à la compléter !",
