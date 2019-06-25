@@ -1,7 +1,7 @@
 module.exports = function () {
 	var trackdebug = !!mw.util.getParamValue( 'trackdebug' );
 
-	if ( mw.loader.getState( 'schema.EditAttemptStep' ) === null && !trackdebug ) {
+	if ( !mw.config.exists( 'wgWMESchemaEditAttemptStepSamplingRate' ) ) {
 		return;
 	}
 
