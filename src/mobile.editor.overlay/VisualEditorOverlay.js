@@ -196,6 +196,11 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 			type: 'switchnochange',
 			mechanism: 'navigate'
 		} );
+		this.logFeatureUse( {
+			feature: 'editor-switch',
+			action: 'source-mobile'
+		} );
+
 		// Save a user setting indicating that this user prefers using the SourceEditor
 		mw.storage.set( 'preferredEditor', 'SourceEditor' );
 		this.showSpinner();

@@ -411,6 +411,10 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 			type: 'switchnochange',
 			mechanism: 'navigate'
 		} );
+		this.logFeatureUse( {
+			feature: 'editor-switch',
+			action: 'visual-mobile'
+		} );
 		// Save a user setting indicating that this user prefers using the VisualEditor
 		mw.storage.set( 'preferredEditor', 'VisualEditor' );
 		// Load the VisualEditor and replace the SourceEditor overlay with it

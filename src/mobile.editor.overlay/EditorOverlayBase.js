@@ -252,6 +252,18 @@ mfExtend( EditorOverlayBase, Overlay, {
 			editing_session_id: this.sessionId
 		} ) );
 	},
+	/**
+	 * Logs an event to http://meta.wikimedia.org/wiki/Schema:VisualEditorFeatureUse
+	 * @memberof EditorOverlayBase
+	 * @instance
+	 * @param {Object} data
+	 */
+	logFeatureUse: function ( data ) {
+		mw.track( 'mf.schemaVisualEditorFeatureUse', util.extend( data, {
+			// eslint-disable-next-line camelcase
+			editing_session_id: this.sessionId
+		} ) );
+	},
 
 	/**
 	 * If this is a new article, require confirmation before saving.
