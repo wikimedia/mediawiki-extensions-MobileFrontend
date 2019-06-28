@@ -285,16 +285,6 @@ mfExtend( Page, View, {
 	},
 
 	/**
-	 * Return page id
-	 * @memberof Page
-	 * @instance
-	 * @return {number}
-	 */
-	getId: function () {
-		return this.options.id;
-	},
-
-	/**
 	 * return namespace id
 	 * @memberof Page
 	 * @instance
