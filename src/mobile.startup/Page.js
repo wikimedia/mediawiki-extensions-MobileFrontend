@@ -313,18 +313,6 @@ mfExtend( Page, View, {
 	},
 
 	/**
-	 * Determines if current page is a talk page
-	 * @memberof Page
-	 * @instance
-	 * @return {boolean} Whether the page is a talk page or not
-	 */
-	isTalkPage: function () {
-		var ns = this.getNamespaceId();
-		// all talk pages are odd Numbers (except the case of special pages)
-		return ns > 0 && ns % 2 === 1;
-	},
-
-	/**
 	 * @inheritdoc
 	 * @memberof Page
 	 * @instance

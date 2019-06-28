@@ -292,25 +292,6 @@ QUnit.test( '#getNamespaceId', function ( assert ) {
 	} );
 } );
 
-QUnit.test( '#isTalkPage', function ( assert ) {
-	var testCases = [
-		[ 'Main Page', false ],
-		[ 'San Francisco', false ],
-		[ 'San Francisco: Talk:2', false ],
-		[ 'San Francisco: The Sequel', false ],
-		[ 'Talk:Foo', true ],
-		[ 'Project talk:Bar', true ],
-		[ 'User talk:Jon', true ],
-		[ 'Special:Nearby', false ]
-	];
-	testCases.forEach( function ( tc ) {
-		var p = new Page( {
-			title: tc[ 0 ]
-		} );
-		assert.strictEqual( p.isTalkPage(), tc[ 1 ], 'Check test is as expected' );
-	} );
-} );
-
 QUnit.test( '#isMissing', function ( assert ) {
 	var missing, notMissing;
 	missing = [
