@@ -47,7 +47,8 @@
 			"水獭很懒",
 			"Zazzzz",
 			"WQL",
-			"科劳"
+			"科劳",
+			"神樂坂秀吉"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "用户是否通过移动版界面编辑",
@@ -99,6 +100,7 @@
 	"mobile-frontend-editor-blocked-drawer-reason-header": "封禁的原因",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|封禁}}者：",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "封禁结束时间：",
+	"mobile-frontend-editor-blocked-drawer-help": "详情",
 	"mobile-frontend-editor-generic-block-reason": "未知原因",
 	"mobile-frontend-editor-cancel": "取消",
 	"mobile-frontend-editor-cancel-confirm": "您真的想要放弃您的编辑？",
@@ -133,6 +135,7 @@
 	"mobile-frontend-editor-uploadenable": "请先上传一张照片以开始编辑。",
 	"mobile-frontend-editor-viewing-source-page": "<strong>查看</strong><span>$1</span><strong>的源代码</strong>",
 	"mobile-frontend-editor-wait": "正在保存编辑，请稍候。",
+	"mobile-frontend-editor-loading": "编辑器加载中……",
 	"mobile-frontend-expand-sections-description": "默认总是展开所有页面的章节。",
 	"mobile-frontend-expand-sections-status": "展开所有部分",
 	"mobile-frontend-fontchanger-link": "字体大小",
@@ -270,6 +273,7 @@
 	"nearby": "您附近的切题页面",
 	"tag-mobile_edit": "移动版编辑",
 	"tag-mobile_edit-description": "来自移动版（网页或应用）的编辑",
+	"tag-advanced_mobile_edit": "高级移动端编辑",
 	"tag-mobile_web_edit": "移动网页编辑",
 	"tag-mobile_web_edit-description": "来自手机版网站的编辑",
 	"mobile-frontend-loading-message": "正在加载...",

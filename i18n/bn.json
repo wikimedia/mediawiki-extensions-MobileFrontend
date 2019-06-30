@@ -94,6 +94,7 @@
 	"mobile-frontend-editor-uploadenable": "সম্পাদনা সক্রিয় করতে প্রথমে একটি ছবি আপলোড করুন।",
 	"mobile-frontend-editor-viewing-source-page": "<span>$1 </span><strong>এর উৎস দেখছেন</strong>",
 	"mobile-frontend-editor-wait": "সম্পাদনা সংরক্ষণ হচ্ছে, অনুগ্রহ করে অপেক্ষা করুন।",
+	"mobile-frontend-editor-loading": "সম্পাদক লোড হচ্ছে…",
 	"mobile-frontend-expand-sections-description": "পূর্বনির্ধারিতভাবে সর্বদা পাতার সকল অনুচ্ছেদ প্রসারিত করুন।",
 	"mobile-frontend-expand-sections-status": "সব অনুচ্ছেদ বিস্তৃত করুন",
 	"mobile-frontend-fontchanger-link": "ফন্টের আকার",
