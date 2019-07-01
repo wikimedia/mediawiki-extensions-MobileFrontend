@@ -495,7 +495,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 		this.showHidden( '.saving-header' );
 
 		this.gateway.save( options )
-			.then( function () {
+			.then( function ( newRevId ) {
 				var title = self.options.title;
 				// Special case behaviour of main page
 				if ( mw.config.get( 'wgIsMainPage' ) ) {
@@ -505,7 +505,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 					return;
 				}
 
-				self.onSaveComplete();
+				self.onSaveComplete( newRevId );
 			}, function ( data ) {
 				self.onSaveFailure( data );
 			} );

@@ -197,7 +197,7 @@ EditorGateway.prototype = {
 			self.api.postWithToken( 'csrf', apiOptions ).then( function ( data ) {
 				if ( data && data.edit && data.edit.result === 'Success' ) {
 					self.hasChanged = false;
-					result.resolve();
+					result.resolve( data.edit.newrevid );
 				} else {
 					result.reject( parseSaveError( data ) );
 				}

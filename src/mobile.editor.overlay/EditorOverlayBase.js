@@ -286,8 +286,9 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 * messages.
 	 * @memberof EditorOverlayBase
 	 * @instance
+	 * @param {number} newRevId ID of the newly created revision
 	 */
-	onSaveComplete: function () {
+	onSaveComplete: function ( newRevId ) {
 		var msg,
 			$window = util.getWindow(),
 			title = this.options.title,
@@ -309,7 +310,9 @@ mfExtend( EditorOverlayBase, Overlay, {
 
 		// Ensure we don't lose this event when logging
 		this.log( {
-			action: 'saveSuccess'
+			action: 'saveSuccess',
+			// eslint-disable-next-line camelcase
+			revision_id: newRevId
 		} );
 		if ( self.sectionId ) {
 			// Ideally we'd want to do this via replaceState (see T189173)
