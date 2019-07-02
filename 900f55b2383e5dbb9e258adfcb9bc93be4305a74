@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c8dc8ff6_539c196a",
+        "filename": "src/mobile.editor.overlay/EditorOverlayBase.js",
+        "patchSetId": 7
+      },
+      "lineNbr": 627,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2019-07-02T19:37:28Z",
+      "side": 0,
+      "message": "Currently:\n\nBlock will expire in\na few seconds / 2 July 2019 12:35 PM\n\nAfter your patch:\nNo information.\n\nMy understanding is that toLocaleString won\u0027t work here as moment is generating messages such as \"a few seconds\". So really this becomes a question of how useful that is, and whether it\u0027s worth the bloat that comes with moment.js",
+      "revId": "900f55b2383e5dbb9e258adfcb9bc93be4305a74",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
