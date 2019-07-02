@@ -34,9 +34,6 @@ function Page( options ) {
 			options.isMissing : options.id === 0
 	} );
 
-	this.options.isBorderBox = false;
-	this.options.languageUrl = mw.util.getUrl( 'Special:MobileLanguages/' + this.title );
-
 	View.call( this, this.options );
 
 	// Fallback if no displayTitle provided
