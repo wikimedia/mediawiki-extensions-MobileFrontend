@@ -2,7 +2,6 @@
 
 namespace Tests\MobileFrontend\Devices;
 
-use MediaWikiTestCase;
 use FauxRequest;
 use HashConfig;
 use MobileFrontend\Devices\CustomHeaderDeviceDetector;
@@ -10,7 +9,7 @@ use MobileFrontend\Devices\CustomHeaderDeviceDetector;
 /**
  * @group MobileFrontend
  */
-class CustomHeaderDeviceDetectorTest extends MediaWikiTestCase {
+class CustomHeaderDeviceDetectorTest extends \MediaWikiUnitTestCase {
 
 	/**
 	 * @var \GlobalVarConfig

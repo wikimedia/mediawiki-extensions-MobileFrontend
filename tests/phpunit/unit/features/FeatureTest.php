@@ -7,7 +7,7 @@ use MobileFrontend\Features\Feature;
  * @coversDefaultClass \MobileFrontend\Features\Feature
  * @covers ::__construct()
  */
-class FeatureTest extends MediaWikiTestCase {
+class FeatureTest extends \MediaWikiUnitTestCase {
 	private $madeUpConfigVariable;
 
 	public function setUp() {

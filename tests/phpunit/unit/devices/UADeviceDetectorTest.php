@@ -2,14 +2,13 @@
 
 namespace Tests\MobileFrontend\Devices;
 
-use MediaWikiTestCase;
 use FauxRequest;
 use MobileFrontend\Devices\UADeviceDetector;
 
 /**
  * @group MobileFrontend
  */
-class UADeviceDetectorTest extends MediaWikiTestCase {
+class UADeviceDetectorTest extends \MediaWikiUnitTestCase {
 
 	/**
 	 * @var UADeviceDetector

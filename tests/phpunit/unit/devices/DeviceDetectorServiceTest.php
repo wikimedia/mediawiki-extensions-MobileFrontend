@@ -2,7 +2,6 @@
 
 namespace Tests\MobileFrontend\Devices;
 
-use MediaWikiTestCase;
 use MobileFrontend\Devices\DeviceDetector;
 use WebRequest;
 use FauxRequest;
@@ -12,7 +11,7 @@ use MobileFrontend\Devices\DeviceDetectorService;
 /**
  * @group MobileFrontend
  */
-class DeviceDetectorServiceTest extends MediaWikiTestCase {
+class DeviceDetectorServiceTest extends \MediaWikiUnitTestCase {
 	protected function setUp() {
 		parent::setUp();
 

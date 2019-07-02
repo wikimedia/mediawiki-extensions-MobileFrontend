@@ -2,14 +2,13 @@
 
 namespace Tests\MobileFrontend\Devices;
 
-use MediaWikiTestCase;
 use WebRequest;
 use MobileFrontend\Devices\AMFDeviceDetector;
 
 /**
  * @group MobileFrontend
  */
-class AMFDeviceDetectorTest extends MediaWikiTestCase {
+class AMFDeviceDetectorTest extends \MediaWikiUnitTestCase {
 
 	/**
 	 * @var WebRequest
