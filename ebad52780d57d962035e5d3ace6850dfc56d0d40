@@ -22,6 +22,30 @@
       "revId": "ebad52780d57d962035e5d3ace6850dfc56d0d40",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "796b1b31_fed2d74a",
+        "filename": "src/mobile.editor.overlay/schemaEditAttemptStep.js",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 2915
+      },
+      "writtenOn": "2019-07-03T22:28:24Z",
+      "side": 1,
+      "message": "I actually considered that. But then it would have been at inconsistent indentation levels, and I decided I was petty enough that this really bugged me.",
+      "parentUuid": "37a9c573_d9bb170b",
+      "range": {
+        "startLine": 44,
+        "startChar": 3,
+        "endLine": 44,
+        "endChar": 32
+      },
+      "revId": "ebad52780d57d962035e5d3ace6850dfc56d0d40",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": true
     }
   ]
 }
