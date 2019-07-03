@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "f41afd4e_06917d79",
+        "filename": "src/mobile.startup/Page.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-07-03T22:31:33Z",
+      "side": 1,
+      "message": "Nope, I did it out of habit and didn\u0027t notice. Thanks!",
+      "parentUuid": "0a4b2747_55256528",
+      "range": {
+        "startLine": 18,
+        "startChar": 21,
+        "endLine": 18,
+        "endChar": 23
+      },
+      "revId": "7c6bf9ee05355007ae2fe8818f54deba4553cba9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3ac3fb28_38de1c7b",
         "filename": "src/mobile.startup/Page.js",
         "patchSetId": 5
@@ -36,6 +60,30 @@
       "writtenOn": "2019-07-03T20:18:41Z",
       "side": 1,
       "message": "This class still holds all the View responsibilities but no longer seems to extend View so I think this JSDoc should be removed.",
+      "range": {
+        "startLine": 65,
+        "startChar": 2,
+        "endLine": 65,
+        "endChar": 16
+      },
+      "revId": "7c6bf9ee05355007ae2fe8818f54deba4553cba9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d1ea7d67_d9841cb6",
+        "filename": "src/mobile.startup/Page.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-07-03T22:31:33Z",
+      "side": 1,
+      "message": "I missed this. Thanks!",
+      "parentUuid": "3ac3fb28_38de1c7b",
       "range": {
         "startLine": 65,
         "startChar": 2,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "44a75bcf_d9f3b935",
+        "filename": "src/mobile.startup/Page.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-07-03T22:31:33Z",
+      "side": 1,
+      "message": "The old code made it look like a reference assignment, but I think it was copied by the call to `View.call( this, this.options );` which resets the `this.options` instance variable with a copy (merged with defaults) [1]. So I believe the original behavior is preserved\n\n[1] https://github.com/wikimedia/mediawiki-extensions-MobileFrontend/blob/master/src/mobile.startup/View.js#L170-L171",
+      "parentUuid": "3073f31f_7057a929",
+      "range": {
+        "startLine": 84,
+        "startChar": 11,
+        "endLine": 84,
+        "endChar": 41
+      },
+      "revId": "7c6bf9ee05355007ae2fe8818f54deba4553cba9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "cd6ec3cb_9c43f74c",
         "filename": "src/mobile.startup/Page.js",
         "patchSetId": 5
@@ -82,6 +154,30 @@
       "writtenOn": "2019-07-03T20:18:41Z",
       "side": 1,
       "message": "You might not need this any more? I think you can just hang these off the prototype yourself like:\n\n Page.prototype.getDisplayTitle \u003d function() {...}\n\nOr:\n\n class Page {\n   getDisplayTitle() {...}\n }\n\nFuture patch maybe?",
+      "range": {
+        "startLine": 106,
+        "startChar": 0,
+        "endLine": 106,
+        "endChar": 8
+      },
+      "revId": "7c6bf9ee05355007ae2fe8818f54deba4553cba9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b06997f0_e608cfea",
+        "filename": "src/mobile.startup/Page.js",
+        "patchSetId": 5
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 6176
+      },
+      "writtenOn": "2019-07-03T22:31:33Z",
+      "side": 1,
+      "message": "Yes, I will address this in a future patch if that\u0027s okay. I\u0027d like to keep this patch as small as possible to get rid the View inheritance",
+      "parentUuid": "cd6ec3cb_9c43f74c",
       "range": {
         "startLine": 106,
         "startChar": 0,
