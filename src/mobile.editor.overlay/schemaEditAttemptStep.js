@@ -38,12 +38,18 @@ module.exports = function () {
 					integration: 'page',
 					page_token: user.getPageviewToken(),
 					session_token: user.sessionId(),
-					anonymous_user_token: mw.config.get( 'wgMFSchemaEditAttemptStepAnonymousUserId' ),
-					bucket: mw.config.get( 'wgMFSchemaEditAttemptStepBucket' ),
 					version: 1
 				}
 			);
 			/* eslint-enable camelcase */
+
+		if ( mw.config.get( 'wgMFSchemaEditAttemptStepAnonymousUserId' ) ) {
+			// eslint-disable-next-line camelcase
+			schemaEditAttemptStep.defaults.anonymous_user_token = mw.config.get( 'wgMFSchemaEditAttemptStepAnonymousUserId' );
+		}
+		if ( mw.config.get( 'wgMFSchemaEditAttemptStepBucket' ) ) {
+			schemaEditAttemptStep.defaults.bucket = mw.config.get( 'wgMFSchemaEditAttemptStepBucket' );
+		}
 
 		function log() {
 			// mw.log is a no-op unless resource loader is in debug mode, so
