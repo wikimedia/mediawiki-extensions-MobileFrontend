@@ -4,78 +4,18 @@ var
 	util = require( './util' ),
 	Section = require( './Section' ),
 	Thumbnail = require( './Thumbnail' ),
-	View = require( './View' ),
 	HEADING_SELECTOR = mw.config.get( 'wgMFMobileFormatterHeadings', [ 'h1', 'h2', 'h3', 'h4', 'h5' ] ).join( ',' ),
 	BLACKLISTED_THUMBNAIL_CLASS_SELECTORS = [ 'noviewer', 'metadata' ];
 
 /**
- * Mobile page view object
+ * Merges the default Page options with the options the client sends
  *
- * @class Page
- * @uses Section
- * @extends View
- *
- * @param {Object} options Configuration options
+ * @param {Object} options
+ * @return {Object} An object containing the default options merged with the
+ * client passed options
  */
-function Page( options ) {
-
-	util.extend( this, {
-		options: options,
-		// FIXME: Deprecate title property as it can be derived from titleObj using getPrefixedText
-		title: options.title,
-		titleObj: options.titleObj,
-		displayTitle: options.displayTitle,
-		url: options.url || mw.util.getUrl( options.title ),
-		id: options.id,
-		wikidataDescription: options.wikidataDescription,
-		thumbnail: ( Object.prototype.hasOwnProperty.call( options, 'thumbnail' ) ) ?
-			options.thumbnail : false,
-		isMissing: ( options.isMissing !== undefined ) ?
-			options.isMissing : options.id === 0
-	} );
-
-	View.call( this, this.options );
-
-	// Fallback if no displayTitle provided
-	if ( !this.displayTitle ) {
-		this.displayTitle = this.getDisplayTitle();
-	}
-
-	if ( this.thumbnail && this.thumbnail.width ) {
-		this.thumbnail.isLandscape = this.thumbnail.width > this.thumbnail.height;
-	}
-
-	// memoize headings as $el.find is a very expensive call
-	this.$headings = this.$el.find( HEADING_SELECTOR );
-}
-
-mfExtend( Page, View, {
-	/**
-	 * @memberof Page
-	 * @instance
-	 * @mixes View#defaults
-	 * @property {Object} defaults Default options hash.
-	 * @property {number} defaults.id Page ID. The default value of 0 represents a
-	 * new or missing page. Be sure to override it to avoid side effects.
-	 * @property {string} defaults.title Title of the page. It includes prefix where needed and
-	 * is human readable, e.g. Talk:The man who lived.
-	 * @property {string} defaults.displayTitle HTML title of the page for display. Falls back
-	 * to defaults.title (escaped) if no value is provided. Must be safe HTML!
-	 * @property {number} defaults.namespaceNumber the number of the
-	 *  namespace the page belongs to
-	 * @property {Object} defaults.protection List of permissions as returned by API,
-	 * e.g. [{ edit: ['*'] }]
-	 * @property {Array} defaults.sections Array of {Section} objects.
-	 * @property {boolean} defaults.isMainPage Whether the page is the Main Page.
-	 * @property {boolean} defaults.isMissing Whether the page exists in the wiki.
-	 * @property {Object} defaults.thumbnail thumbnail definition corresponding to page image
-	 * @property {boolean} defaults.thumbnail.isLandscape whether the image is in
-	 *  landscape format
-	 * @property {number} defaults.thumbnail.width of image in pixels.
-	 * @property {number} defaults.thumbnail.height of image in pixels.
-	 * @property {string} defaults.thumbnail.source url for image
-	 */
-	defaults: {
+function mergeDefaultOptions( options ) {
+	return util.extend( {
 		id: 0,
 		title: '',
 		displayTitle: '',
@@ -93,7 +33,75 @@ mfExtend( Page, View, {
 			width: undefined,
 			height: undefined
 		}
-	},
+	}, options );
+}
+
+/**
+ * Mobile page view object
+ *
+ * @class Page
+ *
+ * @param {Object} options Configuration options
+ * @param {number} options.id Page ID. The default value of 0 represents a
+ * new or missing page. Be sure to override it to avoid side effects.
+ * @param {string} options.title Title of the page. It includes prefix where needed and
+ * is human readable, e.g. Talk:The man who lived.
+ * @param {string} options.displayTitle HTML title of the page for display. Falls back
+ * to defaults.title (escaped) if no value is provided. Must be safe HTML!
+ * @param {number} options.namespaceNumber the number of the
+ *  namespace the page belongs to
+ * @param {Object} options.protection List of permissions as returned by API,
+ * e.g. [{ edit: ['*'] }]
+ * @param {Array} options.sections Array of {Section} objects.
+ * @param {boolean} options.isMainPage Whether the page is the Main Page.
+ * @param {boolean} options.isMissing Whether the page exists in the wiki.
+ * @param {Object} options.thumbnail thumbnail definition corresponding to page image
+ * @param {boolean} options.thumbnail.isLandscape whether the image is in
+ *  landscape format
+ * @param {number} options.thumbnail.width of image in pixels.
+ * @param {number} options.thumbnail.height of image in pixels.
+ * @param {string} options.thumbnail.source url for image
+ */
+function Page( options ) {
+	util.extend( this, {
+		// eslint-disable-next-line no-undef
+		$el: options.el ? $( options.el ) : util.parseHTML( '<div>' ),
+		id: options.id,
+		// FIXME: Deprecate title property as it can be derived from titleObj using getPrefixedText
+		title: options.title,
+		titleObj: options.titleObj,
+		displayTitle: options.displayTitle,
+		url: options.url || mw.util.getUrl( options.title ),
+		wikidataDescription: options.wikidataDescription,
+		thumbnail: ( Object.prototype.hasOwnProperty.call( options, 'thumbnail' ) ) ?
+			options.thumbnail : false,
+		isMissing: ( options.isMissing !== undefined ) ?
+			options.isMissing : options.id === 0,
+		sections: [],
+		_sectionLookup: {},
+		options: mergeDefaultOptions( options )
+	} );
+
+	this.options.sections.forEach( function ( sectionData ) {
+		var section = new Section( sectionData );
+		this.sections.push( section );
+		this._sectionLookup[section.id] = section;
+	}.bind( this ) );
+
+	// Fallback if no displayTitle provided
+	if ( !this.displayTitle ) {
+		this.displayTitle = this.getDisplayTitle();
+	}
+
+	if ( this.thumbnail && this.thumbnail.width ) {
+		this.thumbnail.isLandscape = this.thumbnail.width > this.thumbnail.height;
+	}
+
+	// memoize headings as $el.find is a very expensive call
+	this.$headings = this.$el.find( HEADING_SELECTOR );
+}
+
+mfExtend( Page, {
 	/**
 	 * Retrieve the title that should be displayed to the user
 	 * @memberof Page
@@ -297,23 +305,6 @@ mfExtend( Page, View, {
 			nsId = 0;
 		}
 		return nsId;
-	},
-
-	/**
-	 * @inheritdoc
-	 * @memberof Page
-	 * @instance
-	 */
-	preRender: function () {
-		this.sections = [];
-		this._sectionLookup = {};
-		this.title = this.options.title;
-
-		this.options.sections.forEach( function ( sectionData ) {
-			var section = new Section( sectionData );
-			this.sections.push( section );
-			this._sectionLookup[section.id] = section;
-		}.bind( this ) );
 	},
 
 	/**
