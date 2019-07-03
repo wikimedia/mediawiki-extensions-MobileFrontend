@@ -96,7 +96,7 @@
 	"mobile-frontend-editor-abusefilter-warning": "警告：您确信要保存此次编辑么？这可能将产生一些问题。",
 	"mobile-frontend-editor-anon": "不登录编辑",
 	"mobile-frontend-editor-anonwarning": "<strong>警告</strong>：您没有登录。如果您进行任何编辑，您的IP地址会公开可见。如果您<strong>登录</strong>或<strong>创建账户</strong>，您的编辑会归于您的用户名之下，此外还有其他益处。",
-	"mobile-frontend-editor-blocked-drawer-title": "您的账户已封禁，不能编辑{{SITENAME}}",
+	"mobile-frontend-editor-blocked-drawer-title": "您已被封禁，不能编辑{{SITENAME}}",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "封禁的原因",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|封禁}}者：",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "封禁结束时间：",
