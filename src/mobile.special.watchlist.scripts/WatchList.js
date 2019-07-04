@@ -102,7 +102,7 @@ mfExtend( WatchList, WatchstarPageList, {
 	 */
 	appendPage: function ( page ) {
 		// wikidata descriptions should not show in this view.
-		var templateOptions = util.extend( {}, page.options, {
+		var templateOptions = util.extend( {}, page, {
 			wikidataDescription: undefined
 		} );
 		this.$el.append( this.templatePartials.item.render( templateOptions ) );

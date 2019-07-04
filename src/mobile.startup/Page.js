@@ -8,44 +8,17 @@ var
 	BLACKLISTED_THUMBNAIL_CLASS_SELECTORS = [ 'noviewer', 'metadata' ];
 
 /**
- * Merges the default Page options with the options the client sends
- *
- * @param {Object} options
- * @return {Object} An object containing the default options merged with the
- * client passed options
- */
-function mergeDefaultOptions( options ) {
-	return util.extend( {
-		id: 0,
-		title: '',
-		displayTitle: '',
-		namespaceNumber: 0,
-		protection: {
-			edit: [ '*' ]
-		},
-		sections: [],
-		isMissing: false,
-		isMainPage: false,
-		url: undefined,
-		thumbnail: {
-			isLandscape: undefined,
-			source: undefined,
-			width: undefined,
-			height: undefined
-		}
-	}, options );
-}
-
-/**
  * Mobile page view object
  *
  * @class Page
  *
  * @param {Object} options Configuration options
+ * @param {jQuery.Object} options.el Used for html parsing
  * @param {number} options.id Page ID. The default value of 0 represents a
  * new or missing page. Be sure to override it to avoid side effects.
  * @param {string} options.title Title of the page. It includes prefix where needed and
  * is human readable, e.g. Talk:The man who lived.
+ * @param {Object} options.titleObj
  * @param {string} options.displayTitle HTML title of the page for display. Falls back
  * to defaults.title (escaped) if no value is provided. Must be safe HTML!
  * @param {number} options.namespaceNumber the number of the
@@ -53,8 +26,14 @@ function mergeDefaultOptions( options ) {
  * @param {Object} options.protection List of permissions as returned by API,
  * e.g. [{ edit: ['*'] }]
  * @param {Array} options.sections Array of {Section} objects.
+ * @param {string} options.url
+ * @param {string} options.wikidataDescription
  * @param {boolean} options.isMainPage Whether the page is the Main Page.
  * @param {boolean} options.isMissing Whether the page exists in the wiki.
+ * @param {string} options.lastModified
+ * @param {string} options.anchor
+ * @param {number} options.revId  Revision ID. See `wgRevisionId`.
+ * @param {boolean} options.isWatched Whether the page is being watched
  * @param {Object} options.thumbnail thumbnail definition corresponding to page image
  * @param {boolean} options.thumbnail.isLandscape whether the image is in
  *  landscape format
@@ -66,32 +45,33 @@ function Page( options ) {
 	util.extend( this, {
 		// eslint-disable-next-line no-undef
 		$el: options.el ? $( options.el ) : util.parseHTML( '<div>' ),
-		id: options.id,
+		id: options.id || 0,
 		// FIXME: Deprecate title property as it can be derived from titleObj using getPrefixedText
-		title: options.title,
+		title: options.title || '',
 		titleObj: options.titleObj,
-		displayTitle: options.displayTitle,
+		displayTitle: options.displayTitle || HTML.escape( options.title || '' ),
+		namespaceNumber: options.namespaceNumber || 0,
+		protection: options.protection,
+		sections: [],
 		url: options.url || mw.util.getUrl( options.title ),
 		wikidataDescription: options.wikidataDescription,
-		thumbnail: ( Object.prototype.hasOwnProperty.call( options, 'thumbnail' ) ) ?
-			options.thumbnail : false,
+		_isMainPage: options.isMainPage || false,
 		isMissing: ( options.isMissing !== undefined ) ?
 			options.isMissing : options.id === 0,
-		sections: [],
-		_sectionLookup: {},
-		options: mergeDefaultOptions( options )
+		lastModified: options.lastModified,
+		anchor: options.anchor,
+		revId: options.revId,
+		_isWatched: options.isWatched,
+		thumbnail: ( Object.prototype.hasOwnProperty.call( options, 'thumbnail' ) ) ?
+			options.thumbnail : false,
+		_sectionLookup: {}
 	} );
 
-	this.options.sections.forEach( function ( sectionData ) {
+	( options.sections || [] ).forEach( function ( sectionData ) {
 		var section = new Section( sectionData );
 		this.sections.push( section );
 		this._sectionLookup[section.id] = section;
 	}.bind( this ) );
-
-	// Fallback if no displayTitle provided
-	if ( !this.displayTitle ) {
-		this.displayTitle = this.getDisplayTitle();
-	}
 
 	if ( this.thumbnail && this.thumbnail.width ) {
 		this.thumbnail.isLandscape = this.thumbnail.width > this.thumbnail.height;
@@ -109,7 +89,7 @@ mfExtend( Page, {
 	 * @return {string} HTML
 	 */
 	getDisplayTitle: function () {
-		return this.options.displayTitle || HTML.escape( this.options.title );
+		return this.displayTitle;
 	},
 	/**
 	 * Determine if current page is in a specified namespace
@@ -119,7 +99,7 @@ mfExtend( Page, {
 	 * @return {boolean}
 	 */
 	inNamespace: function ( namespace ) {
-		return this.options.namespaceNumber === mw.config.get( 'wgNamespaceIds' )[namespace];
+		return this.namespaceNumber === mw.config.get( 'wgNamespaceIds' )[namespace];
 	},
 
 	/**
@@ -257,7 +237,7 @@ mfExtend( Page, {
 	 * @return {boolean}
 	 */
 	isMainPage: function () {
-		return this.options.isMainPage;
+		return this._isMainPage;
 	},
 	/**
 	 * Checks whether the current page is watched
@@ -266,7 +246,7 @@ mfExtend( Page, {
 	 * @return {boolean}
 	 */
 	isWatched: function () {
-		return this.options.isWatched;
+		return this._isWatched;
 	},
 
 	/**
@@ -276,7 +256,7 @@ mfExtend( Page, {
 	 * @return {number}
 	 */
 	getRevisionId: function () {
-		return this.options.revId;
+		return this.revId;
 	},
 
 	/**
@@ -286,7 +266,7 @@ mfExtend( Page, {
 	 * @return {string}
 	 */
 	getTitle: function () {
-		return this.options.title;
+		return this.title;
 	},
 
 	/**
@@ -297,7 +277,7 @@ mfExtend( Page, {
 	 */
 	getNamespaceId: function () {
 		var nsId,
-			args = this.options.title.split( ':' );
+			args = this.title.split( ':' );
 
 		if ( args[1] ) {
 			nsId = mw.config.get( 'wgNamespaceIds' )[ args[0].toLowerCase().replace( ' ', '_' ) ] || 0;
