@@ -70,7 +70,7 @@ function getPreferredEditor() {
  */
 function setupEditor( page, skin ) {
 	var uri, fragment, editorOverride,
-		isNewPage = page.options.id === 0;
+		isNewPage = page.id === 0;
 
 	$allEditLinks.on( 'click', onEditLinkClick );
 	overlayManager.add( editorPath, function ( sectionId ) {
@@ -417,7 +417,7 @@ function showSorryToast( msg ) {
 }
 
 module.exports = function ( currentPage, skin ) {
-	var isMissing = currentPage.options.id === 0;
+	var isMissing = currentPage.id === 0;
 	if ( contentModel !== 'wikitext' ) {
 		// Only load the wikitext editor on wikitext. Otherwise we'll rely on the fallback behaviour
 		// (You can test this on MediaWiki:Common.css) ?action=edit url (T173800)
