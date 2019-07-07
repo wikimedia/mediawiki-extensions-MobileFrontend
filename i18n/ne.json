@@ -59,7 +59,7 @@
 	"mobile-frontend-generic-404-desc": "तपाईले खोज्नुभएको पृष्ठ भेटिएन।",
 	"mobile-frontend-generic-404-title": "त्रुटि - पृष्ठ फेला परेन",
 	"mobile-frontend-history-404-title": "कुनै पृष्ठ भेटिएन",
-	"mobile-frontend-joined-just-now": "भर्खरै {{GENDER:$1|Joined}} जोडिनुभयो",
+	"mobile-frontend-joined-just-now": "भर्खरै {{GENDER:$1|जोडिनुभयो}}",
 	"mobile-frontend-joined-seconds": "{{PLURAL:$2|$2 दिन|$2 सेकेण्ड}} अघि {{GENDER:$1|जोडिनुभयो}}",
 	"mobile-frontend-joined-minutes": "$2 मिनेट अघि {{GENDER:$1|जोडिनुभयो}}",
 	"mobile-frontend-joined-hours": "$2 घण्टा अघि {{GENDER:$1|जोडिनुभयो}}",
