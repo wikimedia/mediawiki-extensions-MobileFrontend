@@ -5,4 +5,4 @@ var m = require( './../mobile.startup/moduleLoaderSingleton' ),
 
 m.define( 'mobile.talk.overlays/talkBoard', talkBoard );
 m.define( 'mobile.talk.overlays/TalkSectionAddOverlay', TalkSectionAddOverlay );
-m.define( 'mobile.talk.overlays/TalkSectionOverlay', TalkSectionOverlay ); // resource-modules-disable-line
+m.define( 'mobile.talk.overlays/TalkSectionOverlay', TalkSectionOverlay );

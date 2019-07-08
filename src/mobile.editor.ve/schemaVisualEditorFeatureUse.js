@@ -11,7 +11,7 @@ module.exports = function () {
 
 	mw.loader.using( [ 'ext.eventLogging' ] ).then( function () {
 		var // Schema class provided by ext.eventLogging
-			Schema = mw.eventLog.Schema, // resource-modules-disable-line
+			Schema = mw.eventLog.Schema,
 			sampleRate = mw.config.get( 'wgWMESchemaEditAttemptStepSamplingRate' ),
 			/**
 			 * Feature use schema

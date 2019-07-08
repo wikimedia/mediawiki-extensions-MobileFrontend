@@ -5,7 +5,7 @@ function subscribeMobileWebSearchSchema() {
 		'ext.eventLogging'
 	] ).then( function () {
 		var // Schema class provided by ext.eventLogging
-			Schema = mw.eventLog.Schema, // resource-modules-disable-line
+			Schema = mw.eventLog.Schema,
 			/**
 			 * MobileWebSearch schema
 			 * https://meta.wikimedia.org/wiki/Schema:MobileWebSearch

@@ -217,5 +217,5 @@ mfUtil.extend( mw.mobileFrontend, exports );
 mw.log.deprecate( mw.mobileFrontend, 'getCurrentPage', getCurrentPage );
 
 mw.mobileFrontend.deprecate( 'mobile.init/skin', skin,
-	'instance of mobile.startup/Skin. Minerva should have no dependencies on mobile.init' ); // resource-modules-disable-line
+	'instance of mobile.startup/Skin. Minerva should have no dependencies on mobile.init' );
 module.exports = exports;

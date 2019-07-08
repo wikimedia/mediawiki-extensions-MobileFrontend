@@ -16,8 +16,7 @@
     "test": "npm -s run test:bundle && npm -s run lint && npm -s run doc && bash ./dev-scripts/svg_check.sh && npm -s run coverage",
     "test:bundle": "bash ./dev-scripts/check_bundle.sh HEAD~1",
     "test:bundle-cached": "bash ./dev-scripts/check_bundle.sh --cached",
-    "doc": "jsdoc -c jsdoc.json",
-    "lint:modules": "resource-modules ./"
+    "doc": "jsdoc -c jsdoc.json"
   },
   "engines": {
     "node": "10.15.2"
@@ -27,7 +26,6 @@
     "@babel/core": "7.2.2",
     "@babel/preset-env": "7.3.1",
     "@babel/register": "7.0.0",
-    "@wikimedia/resource-modules": "3.1.0-0",
     "babel-loader": "8.0.5",
     "bundlesize": "0.17.0",
     "clean-webpack-plugin": "0.1.19",
