@@ -86,8 +86,8 @@
 		"SpecialMobileCite": "includes/specials/SpecialMobileCite.php",
 		"MobileSpecialPage": "includes/specials/MobileSpecialPage.php",
 		"MobileSpecialPageFeed": "includes/specials/MobileSpecialPageFeed.php",
-		"MockApiMobileView": "tests/phpunit/api/MockApiMobileView.php",
-		"MockWikiPage": "tests/phpunit/api/MockWikiPage.php"
+		"MockApiMobileView": "tests/phpunit/integration/api/MockApiMobileView.php",
+		"MockWikiPage": "tests/phpunit/integration/api/MockWikiPage.php"
 	},
 	"ResourceModules": {
 		"mobile.pagelist.styles": {

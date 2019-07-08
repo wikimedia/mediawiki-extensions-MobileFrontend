@@ -7,7 +7,7 @@ use MobileFrontend\ContentProviders\DefaultContentProvider;
  * @coversDefaultClass \MobileFrontend\ContentProviders\DefaultContentProvider
  * @covers ::__construct
  */
-class DefaultContentProviderTest extends MediaWikiTestCase {
+class DefaultContentProviderTest extends \MediaWikiUnitTestCase {
 	/**
 	 * @covers ::getHTML
 	 * @dataProvider getHtmlDataProvider

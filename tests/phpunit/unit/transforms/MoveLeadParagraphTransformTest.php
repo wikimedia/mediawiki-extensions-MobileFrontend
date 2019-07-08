@@ -5,7 +5,7 @@ use MobileFrontend\Transforms\MoveLeadParagraphTransform;
 /**
  * @group MobileFrontend
  */
-class MoveLeadParagraphTransformTest extends MediaWikiTestCase {
+class MoveLeadParagraphTransformTest extends \MediaWikiUnitTestCase {
 	public static function wrap( $html ) {
 		return "<!DOCTYPE HTML>
 <html><body>$html</body></html>

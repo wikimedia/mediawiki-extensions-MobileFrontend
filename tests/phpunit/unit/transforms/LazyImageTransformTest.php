@@ -5,7 +5,7 @@ use MobileFrontend\Transforms\LazyImageTransform;
 /**
  * @group MobileFrontend
  */
-class LazyImageTransformTest extends MediaWikiTestCase {
+class LazyImageTransformTest extends \MediaWikiUnitTestCase {
 	public static function wrap( $html ) {
 		return "<!DOCTYPE HTML>
 <html><body>$html</body></html>
