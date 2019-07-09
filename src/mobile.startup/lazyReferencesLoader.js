@@ -1,7 +1,7 @@
 var
 	lazyImageLoader = require( './lazyImages/lazyImageLoader' ),
 	util = require( './util' ),
-	Page = require( './Page' ),
+	PageHTMLParser = require( './PageHTMLParser' ),
 	Deferred = util.Deferred,
 	icons = require( './icons' ),
 	spinner = icons.spinner();
@@ -107,7 +107,7 @@ function loadReferences( eventBus, data, gateway, page ) {
  */
 function getSectionId( $el ) {
 	var id,
-		hSelector = Page.HEADING_SELECTOR,
+		hSelector = PageHTMLParser.HEADING_SELECTOR,
 		$parent = $el.parent(),
 		// e.g. matches Subheading in
 		// <h2>H</h2><div><h3 id="subheading">Subh</h3><a class="element"></a></div>

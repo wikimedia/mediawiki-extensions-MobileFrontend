@@ -7,30 +7,28 @@
  * @class mw.mobileFrontend
  * @singleton
  */
-var currentPage, skin, exports,
+var skin, exports,
 	storage = mw.storage,
 	skinName = mw.config.get( 'skin' ),
 	isPageContentModelEditable = mw.config.get( 'wgMFIsPageContentModelEditable' ),
 	editor = require( './editor' ),
-	PageGateway = require( '../mobile.startup/PageGateway' ),
+	currentPage = require( '../mobile.startup/currentPage' )(),
+	currentPageHTMLParser = require( '../mobile.startup/currentPageHTMLParser' )(),
 	BetaOptInPanel = require( './BetaOptInPanel' ),
-	gateway = new PageGateway( new mw.Api() ),
 	util = mw.util,
 	mfUtil = require( '../mobile.startup/util' ),
 	$window = mfUtil.getWindow(),
 	$html = mfUtil.getDocument(),
 	user = mw.user,
 	context = require( '../mobile.startup/context' ),
-	Page = require( '../mobile.startup/Page' ),
 	experiments = mw.experiments,
 	activeExperiments = mw.config.get( 'wgMFExperiments' ) || {},
 	Skin = require( '../mobile.startup/Skin' ),
 	eventBus = require( '../mobile.startup/eventBusSingleton' ),
 	ReferencesMobileViewGateway = require( '../mobile.startup/references/ReferencesMobileViewGateway' ),
-	page = getCurrentPage(),
 	skinData = {
 		el: 'body',
-		page: page,
+		page: currentPage,
 		referencesGateway: ReferencesMobileViewGateway.getSingleton(),
 		eventBus: eventBus
 	};
@@ -79,56 +77,14 @@ $window
 	) );
 
 /**
- * Get current page view object
- * @return {Page}
- */
-function getCurrentPage() {
-	if ( currentPage ) {
-		return currentPage;
-	} else {
-		return loadCurrentPage();
-	}
-}
-
-/**
- * Constructs an incomplete Page object representing the currently loaded page.
- *
- * @private
- * @return {Page}
- */
-function loadCurrentPage() {
-	var permissions = mw.config.get( 'wgRestrictionEdit', [] ),
-		$content = $( '#content #bodyContent' ),
-		title = mw.Title.newFromText( mw.config.get( 'wgRelevantPageName' ) );
-	if ( permissions.length === 0 ) {
-		permissions.push( '*' );
-	}
-	currentPage = new Page( {
-		el: $content,
-		title: title.getPrefixedText(),
-		titleObj: title,
-		protection: {
-			edit: permissions
-		},
-		revId: mw.config.get( 'wgRevisionId' ),
-		isMainPage: mw.config.get( 'wgIsMainPage' ),
-		isWatched: $( '#ca-watch' ).hasClass( 'watched' ),
-		sections: gateway.getSectionsFromHTML( $content ),
-		isMissing: mw.config.get( 'wgArticleId' ) === 0,
-		id: mw.config.get( 'wgArticleId' ),
-		namespaceNumber: mw.config.get( 'wgNamespaceNumber' )
-	} );
-	return currentPage;
-}
-
-/**
  * Displays a prompt to ask the user to join the mobile beta mode.
  *
  * @private
  * @param {Object} experiment sampling data
  * @param {Page} page
+ * @param {PageHTMLParser} pageHTMLParser
  */
-function displayBetaOptIn( experiment, page ) {
+function displayBetaOptIn( experiment, page, pageHTMLParser ) {
 	var betaOptInPanel, inStable, inSample,
 		token = storage.get( 'mobile-betaoptin-token' );
 
@@ -155,7 +111,7 @@ function displayBetaOptIn( experiment, page ) {
 				}
 			} );
 
-			betaOptInPanel.appendTo( page.getLeadSectionElement() );
+			betaOptInPanel.appendTo( pageHTMLParser.getLeadSectionElement() );
 		}
 
 		// let the interested parties e.g. QuickSurveys know whether the panel is shown
@@ -183,7 +139,7 @@ $window.on( 'pageshow', function () {
 updateFontSize();
 
 if ( activeExperiments.betaoptin ) {
-	displayBetaOptIn( activeExperiments.betaoptin, getCurrentPage() );
+	displayBetaOptIn( activeExperiments.betaoptin, currentPage, currentPageHTMLParser );
 }
 
 // Recruit volunteers through the console
@@ -196,25 +152,25 @@ if ( window.console && window.console.log && window.console.log.apply &&
 /* eslint-enable no-console */
 
 // setup editor
-if ( !page.inNamespace( 'special' ) && isPageContentModelEditable ) {
+if ( !currentPage.inNamespace( 'special' ) && isPageContentModelEditable ) {
 	// TODO: Mobile editor doesn't work well with other skins yet (it looks horribly broken
 	// without some styles that are only defined by Minerva).
 	if ( skinName === 'minerva' ) {
 		// TODO: This code should not even be loaded on desktop.
 		// Remove this check when that is fixed (T216537).
 		if ( context.getMode() !== null ) {
-			editor( page, skin );
+			editor( currentPage, skin );
 		}
 	}
 }
 
 exports = {
-	getCurrentPage: getCurrentPage
+	getCurrentPage: () => currentPage
 };
 
 // Make getCurrentPage available to mobile.editor and Minerva modules
 mfUtil.extend( mw.mobileFrontend, exports );
-mw.log.deprecate( mw.mobileFrontend, 'getCurrentPage', getCurrentPage );
+mw.log.deprecate( mw.mobileFrontend, 'getCurrentPage', () => currentPage );
 
 mw.mobileFrontend.deprecate( 'mobile.init/skin', skin,
 	'instance of mobile.startup/Skin. Minerva should have no dependencies on mobile.init' );

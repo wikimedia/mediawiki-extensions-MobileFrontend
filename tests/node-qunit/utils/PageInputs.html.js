@@ -1,5 +1,5 @@
 /* eslint-env es6 */
-var page, page2, skinPage, referencesPage, lazyLoadedReferencesPage;
+var page, page2, skinPage, referencesPage;
 
 /**
  * Important..
@@ -81,17 +81,7 @@ referencesPage = `<div id="mfe-test-references">
 </ol>
 </div>`;
 
-lazyLoadedReferencesPage = `<div>
-<h2><span class="mw-headline" id="1.0">A1</span></h1>
-<div>text</div>
-<h2>references</h2>
-<div>
-	<a class="mf-lazy-references-placeholder">View citations</a>
-</div>
-</div>`;
-
 module.exports = {
-	lazyLoadedReferencesPage: lazyLoadedReferencesPage,
 	referencesPage: referencesPage,
 	skinPage: skinPage,
 	page: page,

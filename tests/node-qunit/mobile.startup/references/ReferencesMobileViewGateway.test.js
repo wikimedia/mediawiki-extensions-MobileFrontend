@@ -7,7 +7,6 @@ var referencesGatewayRejector, referencesGatewayEmpty, page, api, referencesGate
 	oo = require( '../../utils/oo' ),
 	jQuery = require( '../../utils/jQuery' ),
 	dom = require( '../../utils/dom' ),
-	lazyLoadedReferencesPage = require( '../../utils/PageInputs.html' ).lazyLoadedReferencesPage,
 	cache = require( '../../../../src/mobile.startup/cache' ),
 	MemoryCache = cache.MemoryCache;
 
@@ -22,7 +21,6 @@ QUnit.module( 'MobileFrontend ReferencesMobileViewGateway.test.js', {
 		Page = require( '../../../../src/mobile.startup/Page' );
 
 		page = new Page( {
-			el: util.parseHTML( lazyLoadedReferencesPage ),
 			title: 'Reftest'
 		} );
 

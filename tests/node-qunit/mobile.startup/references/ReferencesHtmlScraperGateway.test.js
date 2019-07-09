@@ -1,5 +1,5 @@
-var page, referencesGateway,
-	sandbox, Page, ReferencesHtmlScraperGateway,
+var pageHTMLParser, referencesGateway,
+	sandbox, PageHTMLParser, ReferencesHtmlScraperGateway,
 	sinon = require( 'sinon' ),
 	ReferencesGateway = require( './../../../../src/mobile.startup/references/ReferencesGateway' ),
 	referencesPage = require( '../../utils/PageInputs.html' ).referencesPage,
@@ -16,12 +16,11 @@ QUnit.module( 'MobileFrontend ReferencesHtmlScraperGateway.test.js', {
 		jQuery.setUp( sandbox, global );
 		oo.setUp( sandbox, global );
 		mediaWiki.setUp( sandbox, global );
-		Page = require( '../../../../src/mobile.startup/Page' );
+		PageHTMLParser = require( '../../../../src/mobile.startup/PageHTMLParser' );
 		ReferencesHtmlScraperGateway = require( './../../../../src/mobile.startup/references/ReferencesHtmlScraperGateway' );
-		page = new Page( {
-			el: util.parseHTML( '<div>' ).html( referencesPage ),
-			title: 'Reftest'
-		} );
+		pageHTMLParser = new PageHTMLParser(
+			util.parseHTML( '<div>' ).html( referencesPage )
+		);
 		referencesGateway = new ReferencesHtmlScraperGateway( new mw.Api() );
 	},
 	afterEach: function () {
@@ -31,27 +30,27 @@ QUnit.module( 'MobileFrontend ReferencesHtmlScraperGateway.test.js', {
 } );
 
 QUnit.test( 'getReference() checking good reference', function ( assert ) {
-	return referencesGateway.getReference( '#cite_note-1', page ).then( function ( ref ) {
+	return referencesGateway.getReference( '#cite_note-1', pageHTMLParser ).then( function ( ref ) {
 		assert.strictEqual( util.parseHTML( '<div>' ).html( ref.text ).find( '.reference-text' ).text(), 'hello' );
 	} );
 } );
 
 QUnit.test( 'getReference() checking bad reference', function ( assert ) {
-	return referencesGateway.getReference( '#cite_note-bad', page ).catch( function ( err ) {
+	return referencesGateway.getReference( '#cite_note-bad', pageHTMLParser ).catch( function ( err ) {
 		assert.strictEqual( err, ReferencesGateway.ERROR_NOT_EXIST, 'When bad id given false returned.' );
 	} );
 } );
 
 QUnit.test( 'getReference() checking encoded reference', function ( assert ) {
 	var id = '#cite_note-Obama_1995,_2004,_pp._9%E2%80%9310-11';
-	return referencesGateway.getReference( id, page ).then( function ( ref ) {
+	return referencesGateway.getReference( id, pageHTMLParser ).then( function ( ref ) {
 		assert.strictEqual( util.parseHTML( '<div>' ).html( ref.text ).find( '.reference-text' ).text(), 'found',
 			'If an encoded ID parameter is given it still resolves correctly.' );
 	} );
 } );
 
 QUnit.test( 'getReference() adds an extra class for external links', function ( assert ) {
-	return referencesGateway.getReference( '#cite_note-2', page ).then( function ( ref ) {
+	return referencesGateway.getReference( '#cite_note-2', pageHTMLParser ).then( function ( ref ) {
 		assert.strictEqual( ref.text.includes( referencesGateway.EXTERNAL_LINK_CLASS ), true );
 	} );
 } );

@@ -312,7 +312,7 @@ PageGateway.prototype = {
 	 * Answer: Possibly Page.js
 	 */
 	_getAPIResponseFromHTML: function ( $el ) {
-		// FIXME: use Page.HEADING_SELECTOR
+		// FIXME: use PageHTMLParser.HEADING_SELECTOR
 		var $headings = $el.find( 'h1,h2,h3,h4,h5,h6' ),
 			sections = [];
 
