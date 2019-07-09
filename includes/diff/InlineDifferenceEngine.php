@@ -214,7 +214,7 @@ class InlineDifferenceEngine extends DifferenceEngine {
 		$linkInfo = $this->getMarkPatrolledLinkInfo();
 		if ( $linkInfo ) {
 			$linkInfo = Html::linkButton(
-				$this->msg( 'markaspatrolleddiff' )->escaped(),
+				$this->msg( 'markaspatrolleddiff' )->text(),
 				[
 					'href' => $this->mNewPage->getLocalURL( [
 						'action' => 'markpatrolled',

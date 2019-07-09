@@ -153,7 +153,7 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 
 		// FIXME: Style differently user comment when this is the case
 		if ( !$rev->userCan( Revision::DELETED_USER, $user ) ) {
-			$username = $this->msg( 'rev-deleted-user' )->escaped();
+			$username = $this->msg( 'rev-deleted-user' )->text();
 		}
 
 		$bytes = null;

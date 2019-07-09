@@ -359,7 +359,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		);
 		$ts = new MWTimestamp( $row->rc_timestamp );
 		$username = $row->rc_user != 0
-			? htmlspecialchars( $row->rc_user_text )
+			? $row->rc_user_text
 			: IP::prettifyIP( $row->rc_user_text );
 		$revId = $row->rc_this_oldid;
 		$bytes = $row->rc_new_len - $row->rc_old_len;
