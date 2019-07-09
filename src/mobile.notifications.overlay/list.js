@@ -49,9 +49,6 @@ function notificationsList( echo, markAllReadButton, onCountChange, onNotificati
 		$overlay: $moreOptions
 	} );
 
-	// Mark all read
-	markAllReadButton.toggle( false );
-
 	// Events
 	unreadCounter.on( 'countChange', function ( count ) {
 		onCountChange(
