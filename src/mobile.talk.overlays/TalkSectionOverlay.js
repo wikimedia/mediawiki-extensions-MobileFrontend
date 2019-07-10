@@ -1,8 +1,11 @@
 var
 	user = mw.user,
+	icons = require( '../mobile.startup/icons' ),
+	spinner = icons.spinner().$el,
 	mfExtend = require( '../mobile.startup/mfExtend' ),
 	PageGateway = require( '../mobile.startup/PageGateway' ),
 	Overlay = require( '../mobile.startup/Overlay' ),
+	header = require( '../mobile.startup/headers' ).header,
 	util = require( '../mobile.startup/util' ),
 	popup = require( '../mobile.startup/toast' ),
 	autosign = require( './autosign' ),
@@ -35,20 +38,9 @@ function TalkSectionOverlay( options ) {
 
 mfExtend( TalkSectionOverlay, Overlay, {
 	templatePartials: util.extend( {}, Overlay.prototype.templatePartials, {
-		header: util.template( `
-<div class="overlay-header initial-header hideable">
-	<ul>
-		<li>{{{backButton}}}</li>
-	</ul>
-	<div class="overlay-title">
-		<h2><span>{{section.line}}</span></h2>
-	</div>
-</div>
-		` ),
 		content: util.template( `
 <div class="content talk-section">
 	{{{section.text}}}
-	{{{spinner}}}
 	<div class="comment">
 		<div class="list-header">{{reply}}</div>
 		<div class="comment-content">
@@ -79,14 +71,29 @@ mfExtend( TalkSectionOverlay, Overlay, {
 			block: true,
 			additionalClassNames: 'save-button',
 			progressive: true,
-			label: mw.config.get( 'wgEditSubmitButtonLabelPublish' ) ?
-				mw.msg( 'mobile-frontend-editor-publish' ) : mw.msg( 'mobile-frontend-editor-save' )
+			label: util.saveButtonMessage()
 		} ),
 		title: undefined,
 		section: undefined,
 		reply: mw.msg( 'mobile-frontend-talk-reply' ),
 		info: mw.msg( 'mobile-frontend-talk-reply-info' )
 	} ),
+	/**
+	 * Accounts for the fact sections are loaded asynchronously and sets the headers
+	 * for the overlay
+	 * @inheritdoc
+	 */
+	preRender: function () {
+		var options = this.options;
+		this.options.headers = [
+			header(
+				options.section ? options.section.line : '',
+				[],
+				icons.back(),
+				'initial-header'
+			)
+		];
+	},
 	/**
 	 * Fetches the talk topics of the page specified in options.title
 	 * if options.section is not defined.
@@ -96,6 +103,7 @@ mfExtend( TalkSectionOverlay, Overlay, {
 	 */
 	postRender: function () {
 		Overlay.prototype.postRender.apply( this );
+		this.$el.find( '.talk-section' ).prepend( spinner );
 		this.$saveButton = this.options.saveButton.$el;
 		this.$el.find( '.comment-content' ).append( this.$saveButton );
 		if ( !this.options.section ) {

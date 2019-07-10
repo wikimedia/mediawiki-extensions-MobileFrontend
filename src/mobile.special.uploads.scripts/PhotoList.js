@@ -1,6 +1,7 @@
 var icons = require( '../mobile.startup/icons' ),
 	PhotoListGateway = require( './PhotoListGateway' ),
 	PhotoItem = require( './PhotoItem' ),
+	spinner = icons.spinner().$el,
 	mfExtend = require( '../mobile.startup/mfExtend' ),
 	ScrollEndEventEmitter = require( '../mobile.startup/ScrollEndEventEmitter' ),
 	View = require( '../mobile.startup/View' ),
@@ -15,6 +16,7 @@ var icons = require( '../mobile.startup/icons' ),
  * @extends View
  *
  * @param {Object} options Configuration options
+ * @param {mw.Api} options.api instance of an api
  * @param {OO.EventEmitter} options.eventBus Object used to listen for scroll:throttled events
  * @param {string} options.url for overriding default URI for API queries
  */
@@ -44,21 +46,8 @@ mfExtend( PhotoList, View, {
 	 */
 	template: util.template( `
 <ul class="image-list content"></ul>
-<div class="end">
-	{{{spinner}}}
-</div>
+<div class="end"></div>
 	` ),
-	/**
-	 * @memberof PhotoList
-	 * @instance
-	 * @mixes View#defaults
-	 * @property {Object} defaults Default options hash.
-	 * @property {string} defaults.spinner HTML of the spinner icon.
-	 * @property {mw.Api} defaults.api instance of an api
-	 */
-	defaults: {
-		spinner: icons.spinner().toHtmlString()
-	},
 	/**
 	 * @inheritdoc
 	 * @memberof PhotoList
@@ -76,6 +65,7 @@ mfExtend( PhotoList, View, {
 	 */
 	postRender: function () {
 		this.$end = this.$el.find( '.end' );
+		this.$end.append( spinner );
 		this.$list = this.$el.find( 'ul' );
 
 		this._loadPhotos();

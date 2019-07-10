@@ -1,6 +1,7 @@
 var m = require( '../moduleLoaderSingleton' ),
 	promisedView = require( '../promisedView' ),
 	util = require( '../util' ),
+	header = require( '../headers' ).header,
 	icons = require( '../icons' ),
 	Overlay = require( '../Overlay' );
 
@@ -12,7 +13,9 @@ var m = require( '../moduleLoaderSingleton' ),
 function mediaViewerOverlay( options ) {
 	var overlay = Overlay.make(
 		{
-			cancelButton: icons.cancel( 'gray' ).toHtmlString(),
+			headers: [
+				header( '', [], icons.cancel( 'gray' ) )
+			],
 			className: 'overlay media-viewer'
 		},
 		promisedView(

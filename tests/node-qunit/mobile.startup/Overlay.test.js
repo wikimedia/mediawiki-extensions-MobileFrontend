@@ -99,40 +99,12 @@ QUnit.test( 'headerActions property', function ( assert ) {
 			headerActions: [
 				{ $el: util.parseHTML( '<div>' ) }
 			]
-		} ),
-		new Overlay( {
-			headerButtons: [
-				{
-					href: '#',
-					className: 'foo',
-					disabled: true,
-					msg: 'banana'
-				}
-			]
-		} ),
-		new Overlay( {
-			headerButtons: [
-				{
-					href: '#',
-					className: 'foo',
-					disabled: true,
-					msg: 'banana'
-				}
-			],
-			headerActions: [
-				{ $el: util.parseHTML( '<div>' ) },
-				{ $el: util.parseHTML( '<button>' ) }
-			]
 		} )
 	];
 	assert.strictEqual( overlays[0].$el.find( '.header-action' ).length, 0,
 		'Overlays do not have header actions by default' );
 	assert.strictEqual( overlays[1].$el.find( '.header-action > *' ).length, 1,
 		'headerActions will be inserted into the header-action container' );
-	assert.strictEqual( overlays[2].$el.find( '.header-action > *' ).length, 1,
-		'headerButtons will be constructed from headerButtons into header-action container' );
-	assert.strictEqual( overlays[3].$el.find( '.header-action > *' ).length, 3,
-		'headerButtons and header actions can be mixed if necessary' );
 } );
 
 QUnit.test( 'onBeforeExit', function ( assert ) {

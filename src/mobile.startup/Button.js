@@ -37,9 +37,11 @@ mfExtend( Button, View, {
 	 * @property {string} defaults.additionalClassNames Additional class name(s).
 	 * @property {string} defaults.href url
 	 * @property {string} defaults.label of button
+	 * @property {boolean} defaults.disabled should only be used with tagName button
 	 */
 	defaults: {
 		tagName: 'a',
+		disabled: false,
 		block: undefined,
 		progressive: undefined,
 		destructive: undefined,
@@ -52,7 +54,7 @@ mfExtend( Button, View, {
 	 * @memberof Button
 	 * @instance
 	 */
-	template: util.template( `<{{tagName}}
+	template: util.template( `<{{tagName}} {{#disabled}}disabled{{/disabled}}
 {{#href}}href="{{href}}"{{/href}}
 class="mw-ui-button {{#progressive}}mw-ui-progressive{{/progressive}}
 	{{#block}}mw-ui-block{{/block}}

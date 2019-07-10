@@ -2,8 +2,11 @@ var
 	mfExtend = require( '../mfExtend' ),
 	Overlay = require( '../Overlay' ),
 	util = require( '../util' ),
+	formHeader = require( '../headers' ).formHeader,
 	Anchor = require( '../Anchor' ),
 	Icon = require( '../Icon' ),
+	icons = require( '../icons' ),
+	spinner = icons.spinner().$el,
 	WatchstarPageList = require( '../watchstar/WatchstarPageList' ),
 	SEARCH_DELAY = 300,
 	SEARCH_SPINNER_DELAY = 2000,
@@ -17,6 +20,8 @@ var
  * @uses Icon
  *
  * @param {Object} params Configuration options
+ * @param {string} params.placeholderMsg Search input placeholder text.
+ * @param {string} [params.action] of form defaults to the value of wgScript
  * @fires SearchOverlay#search-show
  * @fires SearchOverlay#search-start
  * @fires SearchOverlay#search-results
@@ -28,6 +33,26 @@ function SearchOverlay( params ) {
 		{
 			isBorderBox: false,
 			className: 'overlay search-overlay',
+			headers: [
+				formHeader(
+					// Note: Do not put the clear button inside the form
+					// as hitting enter on the input element triggers a button click,
+					// rather than submitting the form (see T136243)
+					util.template( `<div class="overlay-title">
+<form method="get" action="{{action}}" class="search-box">
+	<input class="search" type="search" name="search" autocomplete="off" placeholder="{{placeholderMsg}}" aria-label="{{placeholderMsg}}" value="{{searchTerm}}">
+</form>
+</div>
+					` ).render( {
+						placeholderMsg: params.placeholderMsg,
+						action: params.action || mw.config.get( 'wgScript' )
+					} ),
+					[
+						icons.cancel()
+					],
+					false
+				)
+			],
 			events: {
 				'input input': 'onInputInput',
 				'click .clear': 'onClickClear',
@@ -57,18 +82,6 @@ mfExtend( SearchOverlay, Overlay, {
 	 * @instance
 	 */
 	templatePartials: util.extend( {}, Overlay.prototype.templatePartials, {
-		header: util.template( `
-<div class="overlay-title">
-	<form method="get" action="{{action}}" class="search-box">
-		<input class="search" type="search" name="search" autocomplete="off" placeholder="{{placeholderMsg}}" aria-label="{{placeholderMsg}}" value="{{searchTerm}}">
-	</form>
-	{{! See: T136243. Do not put the clear button inside the form as hitting enter on the input element triggers a button click, rather than submitting the form. }}
-	{{! clear icon goes here}}
-</div>
-<ul>
-	<li>{{{cancelButton}}}</li>
-</ul>
-		` ),
 		content: util.template( `
 <div class="search-content overlay-header">
 	<ul>
@@ -80,9 +93,7 @@ mfExtend( SearchOverlay, Overlay, {
 		<p class="without-results">{{{searchContentNoResultsMsg}}}</p>
 	</div>
 </div>
-<div class="spinner-container position-fixed">
-	{{{spinner}}}
-</div>
+<div class="spinner-container position-fixed"></div>
 <div class="results">
 	<div class="results-list-container"></div>
 	{{#feedback}}
@@ -106,7 +117,6 @@ mfExtend( SearchOverlay, Overlay, {
 	 *  search within content
 	 * @property {string} defaults.searchContentLabel inviting user to do full text search
 	 * @property {string} defaults.searchTerm Search text.
-	 * @property {string} defaults.placeholderMsg Search input placeholder text.
 	 * @property {string} defaults.clearMsg Tooltip for clear button that appears when you type
 	 * into search box.
 	 * @property {string} defaults.searchContentMsg Caption for a button performing full text
@@ -115,7 +125,6 @@ mfExtend( SearchOverlay, Overlay, {
 	 * for a given query.
 	 * @property {string} defaults.searchContentNoResultsMsg Used when no pages with matching
 	 * titles were found.
-	 * @property {string} defaults.action The value of wgScript
 	 * @property {Object} defaults.feedback options for the feedback link
 	 *  below the search results
 	 */
@@ -137,10 +146,8 @@ mfExtend( SearchOverlay, Overlay, {
 		} ),
 		searchContentLabel: mw.msg( 'mobile-frontend-search-content' ),
 		searchTerm: '',
-		placeholderMsg: '',
 		noResultsMsg: mw.msg( 'mobile-frontend-search-no-results' ),
 		searchContentNoResultsMsg: mw.message( 'mobile-frontend-search-content-no-results' ).parse(),
-		action: mw.config.get( 'wgScript' ),
 		feedback: !feedbackLink ? false : {
 			feedback: new Anchor( {
 				label: mw.msg( 'mobile-frontend-search-feedback-link-text' ),
@@ -301,6 +308,7 @@ mfExtend( SearchOverlay, Overlay, {
 
 		// Show a spinner on top of search results
 		this.$spinner = this.$el.find( '.spinner-container' );
+		this.$spinner.append( spinner );
 		this.on( 'search-start', function ( searchData ) {
 			if ( timer ) {
 				clearSearch();

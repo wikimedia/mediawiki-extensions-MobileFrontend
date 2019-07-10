@@ -1,11 +1,10 @@
 var
 	Overlay = require( '../mobile.startup/Overlay' ),
-	EditorOverlayBase = require( '../mobile.editor.overlay/EditorOverlayBase' ),
 	mfExtend = require( '../mobile.startup/mfExtend' ),
+	headers = require( '../mobile.startup/headers' ),
 	util = require( '../mobile.startup/util' ),
 	CategoryGateway = require( './CategoryGateway' ),
 	CategoryLookupInputWidget = require( './CategoryLookupInputWidget' ),
-	icons = require( '../mobile.startup/icons' ),
 	toast = require( '../mobile.startup/toast' ),
 	router = mw.loader.require( 'mediawiki.router' );
 
@@ -18,13 +17,19 @@ var
  * @param {OO.EventEmitter} options.eventBus Object used to emit category-added events
  */
 function CategoryAddOverlay( options ) {
-	options.heading = mw.msg( 'mobile-frontend-categories-add-heading', options.title );
 	this.eventBus = options.eventBus;
 	Overlay.call(
 		this,
 		util.extend(
 			true,
 			{
+				headers: [
+					headers.saveHeader(
+						mw.msg( 'mobile-frontend-categories-add-heading', options.title ),
+						'initial-header'
+					),
+					headers.savingHeader( mw.msg( 'mobile-frontend-categories-add-wait' ) )
+				],
 				className: 'category-overlay overlay',
 				events: {
 					'click .save': 'onSaveClick',
@@ -38,54 +43,17 @@ function CategoryAddOverlay( options ) {
 
 mfExtend( CategoryAddOverlay, Overlay, {
 	/**
-	 * @memberof CategoryAddOverlay
-	 * @instance
-	 * @mixes Overlay#defaults
-	 * @property {Object} defaults Default options hash.
-	 * @property {mw.Api} defaults.api to use to construct gateway
-	 * @property {string} defaults.waitMsg Text that displays while a page edit is being saved.
-	 * @property {string} defaults.waitIcon HTML of the icon that displays while a page edit
-	 * is being saved.
-	 */
-	defaults: util.extend( {}, Overlay.prototype.defaults, {
-		waitMsg: mw.msg( 'mobile-frontend-categories-add-wait' ),
-		waitIcon: icons.spinner().toHtmlString()
-	} ),
-	/**
 	 * @inheritdoc
 	 * @memberof CategoryAddOverlay
 	 * @instance
 	 */
 	template: util.template( `
-<div class="overlay-header-container header-container position-fixed">
-	{{>header}}
-	{{>saveHeader}}
-</div>
-
-<div class="content-header panel add-panel">
+<div class="overlay-header-container header-container position-fixed"></div>
+<div class="content-header panel add-panel overlay-content">
 	<div class="category-add-input"></div>
 </div>
 <p class="overlay-content category-suggestions panel"></p>
 	` ),
-	/**
-	 * @inheritdoc
-	 * @memberof CategoryAddOverlay
-	 * @instance
-	 */
-	templatePartials: util.extend( {}, Overlay.prototype.templatePartials, {
-		header: util.template( `
-<div class="overlay-header initial-header hideable">
-	<ul>
-		<li>{{{backButton}}}</li>
-	</ul>
-	<div class="overlay-title">
-		{{{heading}}}
-	</div>
-	<div class="header-action"><button class="save submit" disabled>{{saveMsg}}</button></div>
-</div>
-		` ),
-		saveHeader: EditorOverlayBase.prototype.templatePartials.saveHeader
-	} ),
 
 	/**
 	 * @inheritdoc

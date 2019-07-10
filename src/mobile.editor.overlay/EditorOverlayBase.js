@@ -1,8 +1,9 @@
 /* global $ */
 var Overlay = require( '../mobile.startup/Overlay' ),
 	util = require( '../mobile.startup/util' ),
+	headers = require( '../mobile.startup/headers' ),
 	PageGateway = require( '../mobile.startup/PageGateway' ),
-	Icon = require( '../mobile.startup/Icon' ),
+	icons = require( '../mobile.startup/icons' ),
 	Button = require( '../mobile.startup/Button' ),
 	toast = require( '../mobile.startup/toast' ),
 	saveFailureMessage = require( './saveFailureMessage' ),
@@ -51,6 +52,8 @@ EditVeTool.prototype.onUpdateState = function () {
  * @uses user
  * @param {Object} params Configuration options
  * @param {number|null} params.editCount of user
+ * @param {boolean} params.editSwitcher whether possible to switch mode in header
+ * @param {boolean} params.hasToolbar whether the editor has a toolbar
  */
 function EditorOverlayBase( params ) {
 	var
@@ -107,7 +110,6 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 *  disabled a header will be show instead.
 	 * @property {string} defaults.continueMsg Caption for the next button on edit form
 	 * which takes you to the screen that shows a preview and license information.
-	 * @property {string} defaults.cancelMsg Caption for cancel button on edit form.
 	 * @property {string} defaults.closeMsg Caption for a button that takes you back to editing
 	 * from edit preview screen.
 	 * @property {string} defaults.summaryRequestMsg Header above edit summary input field
@@ -115,9 +117,6 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 * @property {string} defaults.summaryMsg A placeholder with examples for the summary input
 	 * field asking user what they changed.
 	 * @property {string} defaults.placeholder Placeholder text for empty sections.
-	 * @property {string} defaults.waitMsg Text that displays while a page edit is being saved.
-	 * @property {string} defaults.waitIcon HTML of the icon that displays while a page edit
-	 * is being saved.
 	 * @property {string} defaults.captchaMsg Placeholder for captcha input field.
 	 * @property {string} defaults.captchaTryAgainMsg A message shown when user enters
 	 * wrong CAPTCHA and a new one is displayed.
@@ -129,18 +128,10 @@ mfExtend( EditorOverlayBase, Overlay, {
 	defaults: util.extend( {}, Overlay.prototype.defaults, {
 		hasToolbar: false,
 		continueMsg: mw.msg( 'mobile-frontend-editor-continue' ),
-		cancelMsg: mw.msg( 'mobile-frontend-editor-cancel' ),
 		closeMsg: mw.msg( 'mobile-frontend-editor-keep-editing' ),
 		summaryRequestMsg: mw.msg( 'mobile-frontend-editor-summary-request' ),
 		summaryMsg: mw.msg( 'mobile-frontend-editor-summary-placeholder' ),
 		placeholder: mw.msg( 'mobile-frontend-editor-placeholder' ),
-		waitMsg: mw.msg( 'mobile-frontend-editor-wait' ),
-		// icons.spinner can't be used,
-		// the spinner class changes to display:none in onStageChanges
-		waitIcon: new Icon( {
-			name: 'spinner',
-			additionalClassNames: 'savespinner loading'
-		} ).toHtmlString(),
 		captchaMsg: mw.msg( 'mobile-frontend-account-create-captcha-placeholder' ),
 		captchaTryAgainMsg: mw.msg( 'mobile-frontend-editor-captcha-try-again' ),
 		switchMsg: mw.msg( 'mobile-frontend-editor-switch-editor' ),
@@ -152,63 +143,8 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 * @memberof EditorOverlayBase
 	 * @instance
 	 */
-	templatePartials: util.extend( {}, Overlay.prototype.templatePartials, {
-		editHeader: util.template( `
-<div class="overlay-header header initial-header hideable hidden">
-	<ul>
-		<li>{{{cancelButton}}}</li>
-	</ul>
-	{{^hasToolbar}}
-	<div class="overlay-title">
-		<h2>{{{editingMsg}}}</h2>
-	</div>
-	{{/hasToolbar}}
-	{{#hasToolbar}}<div class="toolbar"></div>{{/hasToolbar}}
-	{{#editSwitcher}}
-		<div class="switcher-container">
-		</div>
-	{{/editSwitcher}}
-	{{^readOnly}}
-	<div class="header-action"><button class="continue" disabled>{{continueMsg}}</button></div>
-	{{/readOnly}}
-</div>
-		` ),
-		previewHeader: util.template( `
-<div class="overlay-header save-header hideable hidden">
-	<ul>
-		<li>{{{backButton}}}</li>
-	</ul>
-	<div class="overlay-title">
-		<h2>{{{previewingMsg}}}</h2>
-	</div>
-	<div class="header-action"><button class="submit">{{saveMsg}}</button></div>
-</div>
-		` ),
-		saveHeader: util.template( `
-<div class="overlay-header header saving-header hideable hidden">
-	<ul>
-		<li>{{{cancelButton}}}</li>
-	</ul>
-	<div class="overlay-title">
-		<h2>{{{waitMsg}}}</h2>
-	</div>
-	<ul>
-		<li>{{{waitIcon}}}</li>
-	</ul>
-</div>
-		` )
-	} ),
-	/**
-	 * @inheritdoc
-	 * @memberof EditorOverlayBase
-	 * @instance
-	 */
 	template: util.template( `
-<div class="overlay-header-container header-container position-fixed">
-	{{>editHeader}}
-	{{>previewHeader}}
-	{{>saveHeader}}
-</div>
+<div class="overlay-header-container header-container position-fixed"></div>
 
 <div class="overlay-content">
 	<div class="panels">
@@ -226,7 +162,6 @@ mfExtend( EditorOverlayBase, Overlay, {
 			</div>
 		</div>
 	</div>
-	{{{spinner}}}
 	{{>content}}
 </div>
 <div class="overlay-footer-container position-fixed">
@@ -418,6 +353,47 @@ mfExtend( EditorOverlayBase, Overlay, {
 	},
 	/**
 	 * @inheritdoc
+	 */
+	preRender: function () {
+		const options = this.options;
+
+		this.options.headers = [
+			headers.formHeader(
+				util.template( `
+{{^hasToolbar}}
+<div class="overlay-title">
+	<h2>{{{editingMsg}}}</h2>
+</div>
+{{/hasToolbar}}
+{{#hasToolbar}}<div class="toolbar"></div>{{/hasToolbar}}
+{{#editSwitcher}}
+	<div class="switcher-container">
+	</div>
+{{/editSwitcher}}
+				` ).render( {
+					hasToolbar: options.hasToolbar,
+					editSwitcher: options.editSwitcher,
+					editingMsg: options.editingMsg
+				} ),
+				options.readOnly ? [] : [
+					new Button( {
+						tagName: 'button',
+						additionalClassNames: 'continue',
+						disabled: true,
+						label: this.config.skipPreview ?
+							util.saveButtonMessage() :
+							options.continueMsg
+					} )
+				],
+				icons.cancel(),
+				'initial-header'
+			),
+			headers.saveHeader( options.previewingMsg, 'save-header hidden' ),
+			headers.savingHeader( mw.msg( 'mobile-frontend-editor-wait' ) )
+		];
+	},
+	/**
+	 * @inheritdoc
 	 * @memberof EditorOverlayBase
 	 * @instance
 	 */
@@ -426,13 +402,13 @@ mfExtend( EditorOverlayBase, Overlay, {
 		if ( this.config.skipPreview ) {
 			// skip the preview and save the changes
 			this.nextStep = 'onSaveBegin';
-			this.$el.find( '.continue' ).text( this.defaults.saveMsg );
 		} else {
 			// default: show the preview step
 			this.nextStep = 'onStageChanges';
 		}
 		this.$errorNoticeContainer = this.$el.find( '#error-notice-container' );
 
+		this.$el.find( '.overlay-content' ).append( icons.spinner.$el );
 		Overlay.prototype.postRender.apply( this );
 
 		this.showHidden( '.initial-header' );

@@ -6,7 +6,9 @@
 * @author Florian Schmidt <florian.schmidt.welzow@t-online.de>
 */
 var user = mw.user,
-	Icon = require( './mobile.startup/Icon' ),
+	$spinner = require( './mobile.startup/icons' ).spinner( {
+		additionalClassNames: 'savespinner loading'
+	} ).$el,
 	toast = require( './mobile.startup/toast' );
 
 /**
@@ -14,10 +16,6 @@ var user = mw.user,
  */
 function init() {
 	var $patrolLinks = $( '.patrollink a' ),
-		$spinner = ( new Icon( {
-			name: 'spinner',
-			additionalClassNames: 'savespinner loading'
-		} ) ).$el,
 		href, rcid, apiRequest;
 
 	$patrolLinks.on( 'click', function ( e ) {

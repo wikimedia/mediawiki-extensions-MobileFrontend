@@ -46,11 +46,11 @@ QUnit.test( '#cancel(variant)', function ( assert ) {
 QUnit.test( '#spinner()', function ( assert ) {
 	icons.spinner( {
 		foo: 'will be passed down',
-		additionalClassNames: 'will-be-ignored'
+		additionalClassNames: 'will-not-be-ignored'
 	} );
 	assert.propEqual( spy.getCall( 0 ).args[ 0 ], {
 		foo: 'will be passed down',
-		additionalClassNames: 'spinner loading',
+		additionalClassNames: 'will-not-be-ignored',
 		name: 'spinner',
 		label: mw.msg( 'mobile-frontend-loading-message' )
 	}, 'Options are passed down' );
