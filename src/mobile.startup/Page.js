@@ -1,6 +1,5 @@
 var
 	HTML = mw.html,
-	mfExtend = require( './mfExtend' ),
 	util = require( './util' ),
 	Section = require( './Section' ),
 	Thumbnail = require( './Thumbnail' ),
@@ -9,104 +8,99 @@ var
 
 /**
  * Mobile page view object
- *
- * @class Page
- *
- * @param {Object} options Configuration options
- * @param {jQuery.Object} options.el Used for html parsing
- * @param {number} options.id Page ID. The default value of 0 represents a
- * new or missing page. Be sure to override it to avoid side effects.
- * @param {string} options.title Title of the page. It includes prefix where needed and
- * is human readable, e.g. Talk:The man who lived.
- * @param {Object} options.titleObj
- * @param {string} options.displayTitle HTML title of the page for display. Falls back
- * to defaults.title (escaped) if no value is provided. Must be safe HTML!
- * @param {number} options.namespaceNumber the number of the
- *  namespace the page belongs to
- * @param {Object} options.protection List of permissions as returned by API,
- * e.g. [{ edit: ['*'] }]
- * @param {Array} options.sections Array of {Section} objects.
- * @param {string} options.url
- * @param {string} options.wikidataDescription
- * @param {boolean} options.isMainPage Whether the page is the Main Page.
- * @param {boolean} options.isMissing Whether the page exists in the wiki.
- * @param {string} options.lastModified
- * @param {string} options.anchor
- * @param {number} options.revId  Revision ID. See `wgRevisionId`.
- * @param {boolean} options.isWatched Whether the page is being watched
- * @param {Object} options.thumbnail thumbnail definition corresponding to page image
- * @param {boolean} options.thumbnail.isLandscape whether the image is in
- *  landscape format
- * @param {number} options.thumbnail.width of image in pixels.
- * @param {number} options.thumbnail.height of image in pixels.
- * @param {string} options.thumbnail.source url for image
  */
-function Page( options ) {
-	util.extend( this, {
-		// eslint-disable-next-line no-undef
-		$el: options.el ? $( options.el ) : util.parseHTML( '<div>' ),
-		id: options.id || 0,
-		// FIXME: Deprecate title property as it can be derived from titleObj using getPrefixedText
-		title: options.title || '',
-		titleObj: options.titleObj,
-		displayTitle: options.displayTitle || HTML.escape( options.title || '' ),
-		namespaceNumber: options.namespaceNumber || 0,
-		protection: options.protection,
-		sections: [],
-		url: options.url || mw.util.getUrl( options.title ),
-		wikidataDescription: options.wikidataDescription,
-		_isMainPage: options.isMainPage || false,
-		isMissing: ( options.isMissing !== undefined ) ?
-			options.isMissing : options.id === 0,
-		lastModified: options.lastModified,
-		anchor: options.anchor,
-		revId: options.revId,
-		_isWatched: options.isWatched,
-		thumbnail: ( Object.prototype.hasOwnProperty.call( options, 'thumbnail' ) ) ?
-			options.thumbnail : false,
-		_sectionLookup: {}
-	} );
+class Page {
+	/**
+	 * @param {Object} options Configuration options
+	 * @param {jQuery.Object} options.el Used for html parsing
+	 * @param {number} options.id Page ID. The default value of 0 represents a
+	 * new or missing page. Be sure to override it to avoid side effects.
+	 * @param {string} options.title Title of the page. It includes prefix where needed and
+	 * is human readable, e.g. Talk:The man who lived.
+	 * @param {Object} options.titleObj
+	 * @param {string} options.displayTitle HTML title of the page for display. Falls back
+	 * to defaults.title (escaped) if no value is provided. Must be safe HTML!
+	 * @param {number} options.namespaceNumber the number of the
+	 *  namespace the page belongs to
+	 * @param {Object} options.protection List of permissions as returned by API,
+	 * e.g. [{ edit: ['*'] }]
+	 * @param {Array} options.sections Array of {Section} objects.
+	 * @param {string} options.url
+	 * @param {string} options.wikidataDescription
+	 * @param {boolean} options.isMainPage Whether the page is the Main Page.
+	 * @param {boolean} options.isMissing Whether the page exists in the wiki.
+	 * @param {string} options.lastModified
+	 * @param {string} options.anchor
+	 * @param {number} options.revId  Revision ID. See `wgRevisionId`.
+	 * @param {boolean} options.isWatched Whether the page is being watched
+	 * @param {Object} options.thumbnail thumbnail definition corresponding to page image
+	 * @param {boolean} options.thumbnail.isLandscape whether the image is in
+	 *  landscape format
+	 * @param {number} options.thumbnail.width of image in pixels.
+	 * @param {number} options.thumbnail.height of image in pixels.
+	 * @param {string} options.thumbnail.source url for image
+	 */
+	constructor( options ) {
+		util.extend( this, {
+			// eslint-disable-next-line no-undef
+			$el: options.el ? $( options.el ) : util.parseHTML( '<div>' ),
+			id: options.id || 0,
+			// FIXME: Deprecate title property as it can be derived from titleObj
+			// using getPrefixedText
+			title: options.title || '',
+			titleObj: options.titleObj,
+			displayTitle: options.displayTitle || HTML.escape( options.title || '' ),
+			namespaceNumber: options.namespaceNumber || 0,
+			protection: options.protection,
+			sections: [],
+			url: options.url || mw.util.getUrl( options.title ),
+			wikidataDescription: options.wikidataDescription,
+			_isMainPage: options.isMainPage || false,
+			isMissing: ( options.isMissing !== undefined ) ?
+				options.isMissing : options.id === 0,
+			lastModified: options.lastModified,
+			anchor: options.anchor,
+			revId: options.revId,
+			_isWatched: options.isWatched,
+			thumbnail: ( Object.prototype.hasOwnProperty.call( options, 'thumbnail' ) ) ?
+				options.thumbnail : false,
+			_sectionLookup: {}
+		} );
 
-	( options.sections || [] ).forEach( function ( sectionData ) {
-		var section = new Section( sectionData );
-		this.sections.push( section );
-		this._sectionLookup[section.id] = section;
-	}.bind( this ) );
+		( options.sections || [] ).forEach( function ( sectionData ) {
+			var section = new Section( sectionData );
+			this.sections.push( section );
+			this._sectionLookup[section.id] = section;
+		}.bind( this ) );
 
-	if ( this.thumbnail && this.thumbnail.width ) {
-		this.thumbnail.isLandscape = this.thumbnail.width > this.thumbnail.height;
+		if ( this.thumbnail && this.thumbnail.width ) {
+			this.thumbnail.isLandscape = this.thumbnail.width > this.thumbnail.height;
+		}
+
+		// memoize headings as $el.find is a very expensive call
+		this.$headings = this.$el.find( HEADING_SELECTOR );
 	}
 
-	// memoize headings as $el.find is a very expensive call
-	this.$headings = this.$el.find( HEADING_SELECTOR );
-}
-
-mfExtend( Page, {
 	/**
 	 * Retrieve the title that should be displayed to the user
-	 * @memberof Page
-	 * @instance
 	 * @return {string} HTML
 	 */
-	getDisplayTitle: function () {
+	getDisplayTitle() {
 		return this.displayTitle;
-	},
+	}
 	/**
 	 * Determine if current page is in a specified namespace
-	 * @memberof Page
-	 * @instance
 	 * @param {string} namespace Name of namespace
 	 * @return {boolean}
 	 */
-	inNamespace: function ( namespace ) {
+	inNamespace( namespace ) {
 		return this.namespaceNumber === mw.config.get( 'wgNamespaceIds' )[namespace];
-	},
+	}
 
 	/**
 	 * Find the heading in the page.
 	 * This has the benefit of excluding any additional h2s and h3s that may
 	 * have been added programatically.
-	 * @method
 	 * @param {number} sectionIndex as defined by the PHP parser.
 	 *  It should correspond to the section id
 	 *  used in the edit link for the section.
@@ -114,7 +108,7 @@ mfExtend( Page, {
 	 * used in methods
 	 * @return {jQuery.Object}
 	 */
-	findSectionHeadingByIndex: function ( sectionIndex ) {
+	findSectionHeadingByIndex( sectionIndex ) {
 		if ( sectionIndex < 1 ) {
 			// negative indexes will search from the end, which is behaviour we do not want.
 			// return an empty set when this happens.
@@ -126,7 +120,7 @@ mfExtend( Page, {
 				// Not an ancestor!
 				.filter( '.mw-parser-output > *, [class^="mf-section-"] > *' ).eq( sectionIndex - 1 );
 		}
-	},
+	}
 	/**
 	 * Finds all child elements that match the selector in a given section or subsection.
 	 * Returns any direct child elements that match the selector,
@@ -137,7 +131,6 @@ mfExtend( Page, {
 	 *
 	 * This code should work on desktop (PHP parser HTML)
 	 * as well as mobile formatted HTML (PHP parser + MobileFormatter)
-	 * @method
 	 * @param {number} sectionIndex as defined by the PHP parser. It should correspond to
 	 *  the section id used in the edit link for the section.
 	 *  Note, confusingly, this is different from section "ID" which is
@@ -145,7 +138,7 @@ mfExtend( Page, {
 	 * @param {string} selector to match
 	 * @return {jQuery.Object}
 	 */
-	findChildInSectionLead: function ( sectionIndex, selector ) {
+	findChildInSectionLead( sectionIndex, selector ) {
 		var $heading, $nextHeading, $container, $lead,
 			headingSelector = HEADING_SELECTOR;
 
@@ -193,15 +186,13 @@ mfExtend( Page, {
 			$nextHeading = $heading.eq( 0 ).nextAll( headingSelector ).eq( 0 );
 			return $heading.nextUntil( $nextHeading, selector );
 		}
-	},
+	}
 
 	/**
 	 * Get the lead section of the page view.
-	 * @memberof Page
-	 * @instance
 	 * @return {jQuery.Object|null}
 	 */
-	getLeadSectionElement: function () {
+	getLeadSectionElement() {
 		/*
 		 * The page is formatted as follows:
 		 * <div id="bodyContent">
@@ -218,64 +209,52 @@ mfExtend( Page, {
 		}
 		// no lead section found
 		return null;
-	},
+	}
 
 	/**
 	 * Determines if content model is wikitext
-	 * @memberof Page
-	 * @instance
 	 * @return {boolean}
 	 */
-	isWikiText: function () {
+	isWikiText() {
 		return mw.config.get( 'wgPageContentModel' ) === 'wikitext';
-	},
+	}
 
 	/**
 	 * Checks whether the current page is the main page
-	 * @memberof Page
-	 * @instance
 	 * @return {boolean}
 	 */
-	isMainPage: function () {
+	isMainPage() {
 		return this._isMainPage;
-	},
+	}
 	/**
 	 * Checks whether the current page is watched
-	 * @memberof Page
-	 * @instance
 	 * @return {boolean}
 	 */
-	isWatched: function () {
+	isWatched() {
 		return this._isWatched;
-	},
+	}
 
 	/**
 	 * Return the latest revision id for this page
-	 * @memberof Page
-	 * @instance
 	 * @return {number}
 	 */
-	getRevisionId: function () {
+	getRevisionId() {
 		return this.revId;
-	},
+	}
 
 	/**
 	 * Return prefixed page title
-	 * @memberof Page
-	 * @instance
 	 * @return {string}
 	 */
-	getTitle: function () {
+	getTitle() {
 		return this.title;
-	},
+	}
 
 	/**
 	 * return namespace id
-	 * @memberof Page
-	 * @instance
 	 * @return {number} namespace Number
 	 */
-	getNamespaceId: function () {
+	getNamespaceId() {
 		var nsId,
 			args = this.title.split( ':' );
 
@@ -285,7 +264,7 @@ mfExtend( Page, {
 			nsId = 0;
 		}
 		return nsId;
-	},
+	}
 
 	/**
 	 * Return all the thumbnails in the article.
@@ -296,12 +275,10 @@ mfExtend( Page, {
 	 * e.g. `<div class="noviewer"><a class="image"><img></a></div>` is not a valid thumbnail
 	 * `<a class="image noviewer"><img></a>` is not a valid thumbnail
 	 * `<a class="image"><img class="noviewer"></a>` is not a valid thumbnail
-	 * @memberof Page
-	 * @instance
 	 * @param {jQuery} [$container] Container to search, defaults to this.$el.
 	 * @return {Thumbnail[]}
 	 */
-	getThumbnails: function ( $container ) {
+	getThumbnails( $container ) {
 		var $thumbs,
 			blacklistSelector = '.' + BLACKLISTED_THUMBNAIL_CLASS_SELECTORS.join( ',.' ),
 			thumbs = [];
@@ -340,43 +317,37 @@ mfExtend( Page, {
 			}
 		} );
 		return thumbs;
-	},
+	}
 
 	/**
 	 * FIXME: Change function signature to take the anchor of the heading
-	 * @memberof Page
-	 * @instance
 	 * @param {string} id of the section as defined by MobileFormatter.
 	 * Note, that currently, this is different from
 	 * the PHP parser in that it relates to top-level sections.
 	 * For example, mf-section-1 would relate to section 1. See FIXME.
 	 * @return {Section}
 	 */
-	getSection: function ( id ) {
+	getSection( id ) {
 		return this._sectionLookup[ id ];
-	},
+	}
 
 	/**
 	 * Obtain the list of high level (and grouped) sections.
 	 * Note that this list will not include subsections.
-	 * @memberof Page
-	 * @instance
 	 * @return {Array} of Section instances
 	 */
-	getSections: function () {
+	getSections() {
 		return this.sections;
-	},
+	}
 
 	/**
 	 * Returns a jQuery object representing all redlinks on the page.
-	 * @memberof Page
-	 * @instance
 	 * @return {jQuery.Object}
 	 */
-	getRedLinks: function () {
+	getRedLinks() {
 		return this.$el.find( '.new' );
 	}
-} );
+}
 
 /**
  * Selector for matching headings
