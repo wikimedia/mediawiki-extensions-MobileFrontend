@@ -7,7 +7,7 @@
  * @class mw.mobileFrontend
  * @singleton
  */
-var skin, exports,
+var skin,
 	storage = mw.storage,
 	skinName = mw.config.get( 'skin' ),
 	isPageContentModelEditable = mw.config.get( 'wgMFIsPageContentModelEditable' ),
@@ -164,14 +164,5 @@ if ( !currentPage.inNamespace( 'special' ) && isPageContentModelEditable ) {
 	}
 }
 
-exports = {
-	getCurrentPage: () => currentPage
-};
-
-// Make getCurrentPage available to mobile.editor and Minerva modules
-mfUtil.extend( mw.mobileFrontend, exports );
-mw.log.deprecate( mw.mobileFrontend, 'getCurrentPage', () => currentPage );
-
 mw.mobileFrontend.deprecate( 'mobile.init/skin', skin,
 	'instance of mobile.startup/Skin. Minerva should have no dependencies on mobile.init' );
-module.exports = exports;

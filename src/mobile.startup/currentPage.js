@@ -28,7 +28,6 @@ function loadCurrentPage() {
 	}
 
 	page = new Page( {
-		el: $content,
 		title: title.getPrefixedText(),
 		titleObj: title,
 		protection: {

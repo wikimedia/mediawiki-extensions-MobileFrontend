@@ -1,8 +1,7 @@
 var
 	HTML = mw.html,
 	util = require( './util' ),
-	Section = require( './Section' ),
-	PageHTMLParser = require( './PageHTMLParser' );
+	Section = require( './Section' );
 
 /**
  * Mobile page view object
@@ -38,13 +37,7 @@ class Page {
 	 * @param {string} options.thumbnail.source url for image
 	 */
 	constructor( options ) {
-		const $el = options.el || util.parseHTML( '<div>' );
-
 		util.extend( this, {
-			// The following pageHTMLParser/$el instance variables are only needed until
-			// Minerva is updated to use PageHTMLParser directly
-			pageHTMLParser: new PageHTMLParser( $el ),
-			$el: $el,
 			id: options.id || 0,
 			// FIXME: Deprecate title property as it can be derived from titleObj
 			// using getPrefixedText
@@ -170,41 +163,6 @@ class Page {
 	getSections() {
 		return this.sections;
 	}
-
-	/**
-	 * The following methods simply proxy to pageHTMLParser and are only needed
-	 * until Minerva is updated to use PageHTMLParser directly
-	 */
-
-	findSectionHeadingByIndex( sectionIndex ) {
-		mw.log.warn( 'Page.js findSectionHeadingByIndex is deprecated. Please use a PageHTMLParser instance instead.' );
-		return this.pageHTMLParser.findSectionHeadingByIndex( sectionIndex );
-	}
-
-	findChildInSectionLead( sectionIndex, selector ) {
-		mw.log.warn( 'Page.js findChildInSectionLead is deprecated. Please use a PageHTMLParser instance instead.' );
-		return this.pageHTMLParser.findChildInSectionLead( sectionIndex, selector );
-
-	}
-
-	getLeadSectionElement() {
-		mw.log.warn( 'Page.js findLeadSectionElement is deprecated. Please use a PageHTMLParser instance instead.' );
-		return this.pageHTMLParser.getLeadSectionElement();
-	}
-
-	getThumbnails( $el ) {
-		mw.log.warn( 'Page.js getThumbnails is deprecated. Please use a PageHTMLParser instance instead.' );
-		return this.pageHTMLParser.getThumbnails( $el );
-	}
-
-	getRedLinks() {
-		mw.log.warn( 'Page.js getRedLinks is deprecated. Please use a PageHTMLParser instance instead.' );
-		return this.pageHTMLParser.getRedLinks();
-	}
 }
-
-// This is only needed until minerva is updated to use
-// PageHTMLParser.HEADING_SELECTOR directly
-Page.HEADING_SELECTOR = PageHTMLParser.HEADING_SELECTOR;
 
 module.exports = Page;

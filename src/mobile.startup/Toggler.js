@@ -25,7 +25,7 @@ var browser = require( './Browser' ).getSingleton(),
  * @param {jQuery.Object} options.$container to apply toggling to
  * @param {string} options.prefix a prefix to use for the id.
  * @param {Page} options.page to allow storage of session for future visits
- * @param {Page} [options.isClosed]
+ * @param {boolean} [options.isClosed]
  */
 function Toggler( options ) {
 	this.eventBus = options.eventBus;
