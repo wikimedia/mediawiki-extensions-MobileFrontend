@@ -19,6 +19,7 @@ var EditorOverlayBase = require( './EditorOverlayBase' ),
 function VisualEditorOverlay( options ) {
 	EditorOverlayBase.call( this,
 		util.extend( {
+			editSwitcher: false,
 			hasToolbar: true,
 			onBeforeExit: this.onBeforeExit.bind( this ),
 			isBorderBox: false,

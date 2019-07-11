@@ -1,6 +1,5 @@
 var util = require( './util.js' ),
 	mfExtend = require( './mfExtend' ),
-	icons = require( './icons' ),
 	View = require( './View' );
 
 /**
@@ -36,12 +35,10 @@ mfExtend( Section, View, {
 	 * @mixes View#defaults
 	 * @property {Object} defaults Default options hash.
 	 * @property {string} defaults.text Section text.
-	 * @property {string} defaults.spinner HTML of the spinner icon.
 	 */
 	defaults: {
 		line: undefined,
-		text: '',
-		spinner: icons.spinner().toHtmlString()
+		text: ''
 	}
 } );
 

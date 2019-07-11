@@ -2,6 +2,7 @@ var m = require( '../moduleLoaderSingleton' ),
 	promisedView = require( '../promisedView' ),
 	Anchor = require( '../Anchor' ),
 	util = require( '../util' ),
+	header = require( '../headers' ).header,
 	Overlay = require( '../Overlay' );
 
 /**
@@ -15,12 +16,16 @@ function talkOverlay( title, gateway ) {
 
 	return Overlay.make(
 		{
-			heading: '<strong>' + mw.msg( 'mobile-frontend-talk-overlay-header' ) + '</strong>',
-			headerButtons: [ user.isAnon() ? {} : {
-				href: '#/talk/new',
-				className: 'continue',
-				msg: mw.msg( 'mobile-frontend-talk-add-overlay-submit' )
-			} ],
+			headers: [
+				header(
+					'<strong>' + mw.msg( 'mobile-frontend-talk-overlay-header' ) + '</strong>',
+					user.isAnon() ? [] : [ new Anchor( {
+						href: '#/talk/new',
+						additionalClassNames: 'continue',
+						label: mw.msg( 'mobile-frontend-talk-add-overlay-submit' )
+					} ) ]
+				)
+			],
 			footerAnchor: new Anchor( {
 				progressive: true,
 				href: mw.util.getUrl( title ),

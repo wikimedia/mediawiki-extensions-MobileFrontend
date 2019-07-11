@@ -1,5 +1,7 @@
 var
 	Overlay = require( '../mobile.startup/Overlay' ),
+	Anchor = require( '../mobile.startup/Anchor' ),
+	header = require( '../mobile.startup/headers' ).header,
 	CategoryTabs = require( './CategoryTabs' );
 
 /**
@@ -14,17 +16,21 @@ var
  * @return {Overlay}
  */
 function categoryOverlay( options ) {
-	var overlay, widget,
-		headerButtons = options.isAnon ? [] :
-			[ {
-				href: '#/categories/add',
-				className: 'add continue',
-				msg: mw.msg( 'mobile-frontend-categories-add' )
-			} ];
+	var overlay, widget;
 	overlay = new Overlay( {
 		className: 'category-overlay overlay',
-		heading: mw.msg( 'mobile-frontend-categories-heading' ),
-		headerButtons: headerButtons
+		headers: [
+			header(
+				mw.msg( 'mobile-frontend-categories-heading' ),
+				options.isAnon ? [] : [
+					new Anchor( {
+						href: '#/categories/add',
+						label: mw.msg( 'mobile-frontend-categories-add' ),
+						additionalClassNames: 'add continue'
+					} )
+				]
+			)
+		]
 	} );
 	widget = new CategoryTabs(
 		{

@@ -1,6 +1,6 @@
 var util = require( './../mobile.startup/util' ),
 	mfExtend = require( './../mobile.startup/mfExtend' ),
-	Icon = require( './../mobile.startup/Icon' ),
+	icons = require( './../mobile.startup/icons' ),
 	View = require( './../mobile.startup/View' );
 
 /**
@@ -25,7 +25,6 @@ function LoadErrorMessage( options ) {
 mfExtend( LoadErrorMessage, View, {
 	template: util.template( `
 <div class="load-fail-msg">
-  {{{icon}}}
   <div class="load-fail-msg-text">{{msgToUser}}</div>
   <div class="load-fail-msg-link">
     <a href="#">{{retryTxt}}</a>
@@ -44,10 +43,6 @@ mfExtend( LoadErrorMessage, View, {
 		* @instance
 		*/
 	defaults: util.extend( {}, LoadErrorMessage.prototype.defaults, {
-		icon: new Icon( {
-			name: 'alert-invert',
-			additionalClassNames: 'load-fail-msg-icon'
-		} ).toHtmlString(),
 		msgToUser: mw.msg( 'mobile-frontend-media-load-fail-message' ),
 		retryTxt: mw.msg( 'mobile-frontend-media-load-fail-retry' )
 	} ),
@@ -58,6 +53,7 @@ mfExtend( LoadErrorMessage, View, {
 	 * @instance
 	 */
 	postRender: function () {
+		this.$el.prepend( icons.error().$el );
 		this.$el.find( '.load-fail-msg-link a' ).attr( 'href', '#' + this.options.retryPath );
 	},
 

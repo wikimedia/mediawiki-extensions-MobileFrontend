@@ -45,6 +45,20 @@
 		background-color: transparent;
 	}
 
+	// The search overlay header is a little special so make some tweaks to the CSS
+	// while using the same HTML.
+	.header-cancel {
+		display: none;
+	}
+
+	.header-action {
+		width: auto;
+
+		button:before {
+			top: auto;
+		}
+	}
+
 	.overlay-title {
 		// because the clear icon is absolutely positioned
 		position: relative;

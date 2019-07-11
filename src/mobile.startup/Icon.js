@@ -115,9 +115,10 @@ mfExtend( Icon, View, {
 		return this.options.base + '-' + this.options.glyphPrefix + '-' + this.options.name;
 	},
 	/**
-	 * Return the HTML representation of this view
+	 * Return the HTML representation of this view. Deprecated for reasons given in T149909.
 	 * @memberof Icon
 	 * @instance
+	 * @deprecated
 	 * @return {string}
 	 */
 	toHtmlString: function () {
@@ -131,4 +132,5 @@ mfExtend( Icon, View, {
 	` )
 } );
 
+mw.log.deprecate( Icon.prototype, 'toHtmlString', Icon.prototype.toHtmlString );
 module.exports = Icon;

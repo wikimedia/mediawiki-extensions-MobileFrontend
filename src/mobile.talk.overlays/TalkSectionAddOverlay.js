@@ -1,12 +1,11 @@
 var
 	mfExtend = require( '../mobile.startup/mfExtend' ),
-	EditorOverlayBase = require( '../mobile.editor.overlay/EditorOverlayBase' ),
+	headers = require( '../mobile.startup/headers' ),
 	Overlay = require( '../mobile.startup/Overlay' ),
 	PageGateway = require( '../mobile.startup/PageGateway' ),
 	util = require( '../mobile.startup/util' ),
 	makeAddTopicForm = require( './makeAddTopicForm' ),
-	toast = require( '../mobile.startup/toast' ),
-	Icon = require( '../mobile.startup/Icon' );
+	toast = require( '../mobile.startup/toast' );
 
 /**
  * Overlay for adding a talk section
@@ -27,7 +26,7 @@ function TalkSectionAddOverlay( options ) {
 		util.extend( options, {
 			className: 'talk-overlay overlay',
 			events: {
-				'click .confirm-save': 'onSaveClick'
+				'click .save': 'onSaveClick'
 			}
 		} )
 	);
@@ -42,61 +41,16 @@ function TalkSectionAddOverlay( options ) {
 }
 
 mfExtend( TalkSectionAddOverlay, Overlay, {
-	/**
-	 * @memberof TalkSectionAddOverlay
-	 * @instance
-	 * @mixes Overlay#defaults
-	 * @property {Object} defaults Default options hash.
-	 * @property {string} defaults.cancelMsg Caption for cancel button on edit form.
-	 * @property {string} defaults.topicTitlePlaceHolder Placeholder text to prompt user to add
-	 * a talk page topic subject.
-	 * @property {string} defaults.topicContentPlaceHolder Placeholder text to prompt user
-	 *  to add content to talk page content.
-	 * @property {string} defaults.editingMsg Label for button which
-	 *  submits a new talk page topic.
-	 */
-	defaults: util.extend( {}, Overlay.prototype.defaults, {
-		cancelMsg: mw.msg( 'mobile-frontend-editor-cancel' ),
-		editingMsg: mw.msg( 'mobile-frontend-talk-add-overlay-submit' ),
-		waitMsg: mw.msg( 'mobile-frontend-talk-topic-wait' ),
-		// icons.spinner can't be used, .loading has a fixed height, which breaks overlay-header
-		waitIcon: new Icon( {
-			name: 'spinner',
-			additionalClassNames: 'savespinner loading'
-		} ).toHtmlString()
-	} ),
-	/**
-	 * @inheritdoc
-	 * @memberof TalkSectionAddOverlay
-	 * @instance
-	 */
-	template: util.template( `
-<div class="overlay-header-container header-container position-fixed">
-	{{>contentHeader}}
-	{{>saveHeader}}
-</div>
-
-<div class="overlay-content"></div>
-	` ),
-	/**
-	 * @inheritdoc
-	 * @memberof TalkSectionAddOverlay
-	 * @instance
-	 */
-	templatePartials: util.extend( {}, Overlay.prototype.templatePartials, {
-		contentHeader: util.template( `
-<div class="overlay-header initial-header save-header hideable">
-	<ul>
-		<li>{{{backButton}}}</li>
-	</ul>
-	<div class="overlay-title">
-		<h2>{{editingMsg}}</h2>
-	</div>
-	<div class="header-action"><button class="submit confirm-save" disabled>{{saveMsg}}</button></div>
-</div>
-		` ),
-		saveHeader: EditorOverlayBase.prototype.templatePartials.saveHeader
-	} ),
+	preRender: function () {
+		this.options.headers = [
+			// contentHeader
+			headers.saveHeader(
+				mw.msg( 'mobile-frontend-talk-add-overlay-submit' ),
+				'initial-header save-header'
+			),
+			headers.savingHeader( mw.msg( 'mobile-frontend-talk-topic-wait' ) )
+		];
+	},
 	/**
 	 * @inheritdoc
 	 * @memberof TalkSectionAddOverlay
@@ -113,7 +67,7 @@ mfExtend( TalkSectionAddOverlay, Overlay, {
 			onTextInput: this.onTextInput.bind( this )
 		} );
 		this.showHidden( '.initial-header' );
-		this.$confirm = this.$el.find( 'button.confirm-save' );
+		this.$confirm = this.$el.find( 'button.save' );
 		this.$el.find( '.overlay-content' ).append( topicForm.$el );
 		this.$subject = topicForm.$el.find( 'input' );
 		this.$ta = topicForm.$el.find( '.wikitext-editor' );

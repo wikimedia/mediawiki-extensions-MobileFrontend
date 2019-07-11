@@ -19,13 +19,30 @@ module.exports = {
 	// Exported to support testing and stubbing
 	Icon: Icon,
 	/**
+	 * Gets a back icon
+	 *
+	 * The icon should be used to inform the user that the front-end is
+	 * communicating with the back-end.
+	 * @memberof icons
+	 * @instance
+	 * @return {Icon}
+	 */
+	back: function () {
+		return new Icon( {
+			tagName: 'button',
+			name: 'back',
+			additionalClassNames: 'back',
+			label: mw.msg( 'mobile-frontend-overlay-close' )
+		} );
+	},
+	/**
 	 * Gets a cancel icon
 	 *
 	 * The icon should be used to inform the user that the front-end is
 	 * communicating with the back-end.
 	 * @memberof icons
 	 * @instance
-	 * @param {string} variant
+	 * @param {string} [variant] defaults to cancel
 	 * @return {Icon}
 	 */
 	cancel: function ( variant ) {
@@ -49,12 +66,25 @@ module.exports = {
 	 */
 	spinner: function ( options ) {
 		options = options || {};
+		options.additionalClassNames = options.additionalClassNames || 'spinner loading';
 
 		return new this.Icon( util.extend( options, {
 			name: 'spinner',
-			label: mw.msg( 'mobile-frontend-loading-message' ),
-			additionalClassNames: 'spinner loading'
+			label: mw.msg( 'mobile-frontend-loading-message' )
 		} ) );
+	},
+	/**
+	 * Gets a failure (error) icon
+	 *
+	 * @memberof icons
+	 * @instance
+	 * @return {Icon}
+	 */
+	error: function () {
+		return new Icon( {
+			name: 'alert-invert',
+			additionalClassNames: 'load-fail-msg-icon'
+		} );
 	},
 	/**
 	 * Gets a non-filled watch star icon.

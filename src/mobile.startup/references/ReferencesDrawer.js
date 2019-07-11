@@ -31,19 +31,9 @@ mfExtend( ReferencesDrawer, Drawer, {
 	 * @instance
 	 * @mixes Drawer#defaults
 	 * @property {Object} defaults Default options hash.
-	 * @property {string} defaults.cancelButton HTML of the button that closes the drawer.
 	 * @property {boolean} defaults.error whether an error message is being shown
 	 */
 	defaults: util.extend( {}, Drawer.prototype.defaults, {
-		spinner: icons.spinner().toHtmlString(),
-		cancelButton: icons.cancel( 'gray' ).toHtmlString(),
-		citation: new Icon( {
-			isSmall: true,
-			name: 'citation-invert',
-			additionalClassNames: 'references-drawer__title',
-			hasText: true,
-			label: mw.msg( 'mobile-frontend-references-citation' )
-		} ).toHtmlString(),
 		errorClassName: new Icon( {
 			name: 'error',
 			hasText: true,
@@ -63,19 +53,13 @@ mfExtend( ReferencesDrawer, Drawer, {
 	 * @instance
 	 */
 	template: util.template( `
-<div class="references-drawer__header">
-	{{{citation}}}
-	{{{cancelButton}}}
-</div>
+<div class="references-drawer__header"></div>
 {{#error}}
 	<div class="{{errorClassName}}">
 {{/error}}
 <sup>{{title}}</sup>
 {{#text}}
 	{{{text}}}
-{{/text}}
-{{^text}}
-	{{{spinner}}}
 {{/text}}
 {{#error}}</div>{{/error}}
 	` ),
@@ -94,6 +78,20 @@ mfExtend( ReferencesDrawer, Drawer, {
 		var windowHeight = util.getWindow().height();
 
 		Drawer.prototype.postRender.apply( this );
+		this.$el.find( '.references-drawer__header' ).append( [
+			new Icon( {
+				isSmall: true,
+				name: 'citation-invert',
+				additionalClassNames: 'references-drawer__title',
+				hasText: true,
+				label: mw.msg( 'mobile-frontend-references-citation' )
+			} ).$el,
+			icons.cancel( 'gray' ).$el
+		] );
+		// For lazy loading references - if no text append a spinner
+		if ( !this.options.text ) {
+			this.$el.append( icons.spinner().$el );
+		}
 
 		// make sure the drawer doesn't take up more than 50% of the viewport height
 		if ( windowHeight / 2 < 400 ) {

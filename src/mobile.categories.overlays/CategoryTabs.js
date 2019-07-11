@@ -2,6 +2,8 @@ var
 	mfExtend = require( '../mobile.startup/mfExtend' ),
 	util = require( '../mobile.startup/util' ),
 	View = require( '../mobile.startup/View' ),
+	icons = require( '../mobile.startup/icons' ),
+	spinner = icons.spinner().$el,
 	ScrollEndEventEmitter = require( '../mobile.startup/ScrollEndEventEmitter' ),
 	CategoryGateway = require( './CategoryGateway' );
 
@@ -66,7 +68,6 @@ mfExtend( CategoryTabs, View, {
 	<ul class="topic-title-list normal-catlist"></ul>
 	<ul class="topic-title-list hidden hidden-catlist"></ul>
 </div>
-{{{spinner}}}
 	` ),
 	/**
 	 * @inheritdoc
@@ -87,6 +88,7 @@ mfExtend( CategoryTabs, View, {
 	 */
 	postRender: function () {
 		View.prototype.postRender.apply( this );
+		this.$el.append( spinner );
 		this._loadCategories();
 	},
 
