@@ -290,14 +290,16 @@ mfExtend( SearchOverlay, Overlay, {
 
 		Overlay.prototype.postRender.call( this );
 
+		this.$el.find( '.overlay-title' ).append( options.clearIcon.$el );
+
 		this.$input = this.$el.find( 'input' );
 		this.$clear = this.$el.find( '.clear' );
 		this.$searchContent = this.$el.find( '.search-content' ).hide();
 		this.$searchFeedback = this.$el.find( '.search-feedback' ).hide();
 		this.$resultContainer = this.$el.find( '.results-list-container' );
 
-		this.$el.find( '.overlay-title' ).append( options.clearIcon.$el );
 		this.$searchContent.find( 'li' ).append( options.searchContentIcon.$el );
+
 		/**
 		 * Hide the spinner and abort timed spinner shows.
 		 */
