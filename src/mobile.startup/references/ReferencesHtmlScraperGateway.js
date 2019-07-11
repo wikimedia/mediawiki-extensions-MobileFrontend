@@ -45,10 +45,13 @@ mfExtend( ReferencesHtmlScraperGateway, ReferencesGateway, {
 	 * @inheritdoc
 	 * @memberof ReferencesHtmlScraperGateway
 	 * @instance
+	 * @param {string} id
+	 * @param {Page} page
+	 * @param {PageHTMLParser} pageHTMLParser
 	 */
-	getReference: function ( id, page ) {
+	getReference: function ( id, page, pageHTMLParser ) {
 		// If an id is not found it's possible the id passed needs decoding (per T188547).
-		return this.getReferenceFromContainer( decodeURIComponent( id ), page.$el.find( 'ol.references' ) );
+		return this.getReferenceFromContainer( decodeURIComponent( id ), pageHTMLParser.$el.find( 'ol.references' ) );
 	}
 } );
 

@@ -76,16 +76,16 @@ QUnit.test( 'Mobile mode - Toggle section', function ( assert ) {
 		$section = this.$section0,
 		$content = this.$container.find( '.collapsible-block' ).eq( 0 );
 
-	toggle.toggle( $section );
+	toggle.toggle( $section, this.page );
 
 	assert.strictEqual( $section.hasClass( 'open-block' ), true, 'open-block class present' );
 
-	toggle.toggle( $section );
+	toggle.toggle( $section, this.page );
 
 	assert.strictEqual( $content.hasClass( 'open-block' ), false, 'check content gets closed on a toggle' );
 	assert.strictEqual( $section.hasClass( 'open-block' ), false, 'check section is closed' );
 	// Perform second toggle
-	toggle.toggle( $section );
+	toggle.toggle( $section, this.page );
 	assert.strictEqual( $content.hasClass( 'open-block' ), true, 'check content reopened' );
 	assert.strictEqual( $section.hasClass( 'open-block' ), true, 'check section has reopened' );
 } );
@@ -99,7 +99,7 @@ QUnit.test( 'Mobile mode - Clicking a hash link to reveal an already open sectio
 			page: this.page
 		} );
 
-	toggle.toggle( this.$section0 );
+	toggle.toggle( this.$section0, this.page );
 
 	assert.strictEqual( this.$section0.hasClass( 'open-block' ), true, 'check section is open' );
 	toggle.reveal( 'First_Section', this.$container );
@@ -115,7 +115,7 @@ QUnit.test( 'Mobile mode - Reveal element', function ( assert ) {
 			page: this.page
 		} );
 
-	toggle.toggle( this.$section0 );
+	toggle.toggle( this.$section0, this.page );
 
 	toggle.reveal( 'First_Section' );
 	assert.strictEqual( this.$container.find( '.collapsible-block' ).eq( 0 ).hasClass( 'open-block' ), true, 'check content is visible' );
@@ -131,7 +131,7 @@ QUnit.test( 'Mobile mode - Clicking hash links', function ( assert ) {
 			page: this.page
 		} );
 
-	toggle.toggle( this.$section0 );
+	toggle.toggle( this.$section0, this.page );
 
 	this.$container.find( '[href="#First_Section"]' ).trigger( 'click' );
 	assert.strictEqual( this.$container.find( '.collapsible-block' ).eq( 0 ).hasClass( 'open-block' ), true, 'check content is visible' );
@@ -148,7 +148,7 @@ QUnit.test( 'Mobile mode - Tap event toggles section', function ( assert ) {
 		} ),
 		$content = this.$container.find( '.collapsible-block' ).eq( 1 );
 
-	toggle.toggle( this.$section0 );
+	toggle.toggle( this.$section0, this.page );
 
 	assert.strictEqual( $content.hasClass( 'open-block' ), false, 'check content is hidden at start' );
 
@@ -168,7 +168,7 @@ QUnit.test( 'Accessibility - Verify aria attributes', function ( assert ) {
 		$section = this.$container.find( '#section_1' ),
 		$content = this.$container.find( '.collapsible-block' ).eq( 1 );
 
-	toggle.toggle( this.$section0 );
+	toggle.toggle( this.$section0, this.page );
 
 	// Test the initial state produced by the init function
 	assert.strictEqual( $content.hasClass( 'open-block' ), false, 'check content is hidden at start' );
@@ -299,7 +299,7 @@ QUnit.test( 'Toggling a section stores its state.', function ( assert ) {
 		'no user setting about an expanded section exists already'
 	);
 
-	toggle.toggle( $section );
+	toggle.toggle( $section, this.page );
 	mwStorageSetCall = JSON.parse( mwStorageSetSpy.getCall( 0 ).args[1] );
 
 	assert.strictEqual( typeof mwStorageSetCall[ this.title ][ this.headline ],
@@ -307,7 +307,7 @@ QUnit.test( 'Toggling a section stores its state.', function ( assert ) {
 		'the just toggled section state has been saved'
 	);
 
-	toggle.toggle( $section );
+	toggle.toggle( $section, this.page );
 	mwStorageSetCall2 = JSON.parse( mwStorageSetSpy.getCall( 1 ).args[1] );
 
 	assert.strictEqual( mwStorageSetCall2[ this.title ][ this.headline ],
@@ -377,7 +377,7 @@ QUnit.test( 'Expanding already expanded section does not toggle it.', function (
 	mwStorageSetSpy = sandbox.spy( mw.storage, 'set' );
 
 	// manually toggle the second section
-	toggle.toggle( $section );
+	toggle.toggle( $section, this.page );
 
 	assert.strictEqual(
 		$section.hasClass( 'open-block' ),

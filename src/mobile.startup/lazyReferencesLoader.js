@@ -44,7 +44,7 @@ function loadReferences( eventBus, data, gateway, page ) {
 		$spinner = spinner.$el.prependTo( $content );
 
 		// First ensure we retrieve all of the possible lists
-		return gateway.getReferencesLists( data.page )
+		return gateway.getReferencesLists( page )
 			.then( function () {
 				var lastId;
 
@@ -64,7 +64,7 @@ function loadReferences( eventBus, data, gateway, page ) {
 					}
 
 					if ( id ) {
-						gateway.getReferencesList( data.page, id )
+						gateway.getReferencesList( page, id )
 							.then( function ( refListElements ) {
 								// Note if no section html is provided
 								// no substitution will happen
@@ -84,7 +84,7 @@ function loadReferences( eventBus, data, gateway, page ) {
 				 * Fired when references list is loaded into the HTML
 				 * @event references-loaded
 				 */
-				eventBus.emit( 'references-loaded', page );
+				eventBus.emit( 'references-loaded' );
 
 				loadImagesAndSetData();
 			}, function () {

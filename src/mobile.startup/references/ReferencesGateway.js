@@ -18,6 +18,7 @@ function ReferencesGateway( api ) {
  * @instance
  * @param {string} id CSS selector
  * @param {Page} page to find reference for
+ * @param {PageHTMLParser} pageHTMLParser
  * @return {jQuery.Promise} resolves with an Object representing reference
  *  with a `text` property
  *  The promise should be rejected with ReferenceGateway.ERROR_NOT_EXIST:

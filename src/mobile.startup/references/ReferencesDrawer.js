@@ -124,17 +124,19 @@ mfExtend( ReferencesDrawer, Drawer, {
 	 * @param {string} id of the reference to be retrieved
 	 * @param {Page} page to locate reference for
 	 * @param {string} refNumber the number it identifies as in the page
+	 * @param {PageHTMLParser} pageHTMLParser
 	 * @return {jQuery.Deferred}
 	 */
-	showReference: function ( id, page, refNumber ) {
+	showReference: function ( id, page, refNumber, pageHTMLParser ) {
 		var drawer = this,
 			gateway = this.options.gateway;
 
 		// Save the page in case we have to show a nested reference.
 		this.options.page = page;
+		this.options.pageHTMLParser = pageHTMLParser;
 		// If API is being used we want to show the drawer with the spinner while query runs
 		drawer.show();
-		return gateway.getReference( id, page ).then( function ( reference ) {
+		return gateway.getReference( id, page, pageHTMLParser ).then( function ( reference ) {
 			drawer.render( {
 				title: refNumber,
 				text: reference.text
@@ -161,7 +163,7 @@ mfExtend( ReferencesDrawer, Drawer, {
 	showNestedReference: function ( ev ) {
 		var $dest = this.$el.find( ev.target );
 
-		this.showReference( $dest.attr( 'href' ), this.options.page, $dest.text() );
+		this.showReference( $dest.attr( 'href' ), this.options.page, $dest.text(), this.options.pageHTMLParser );
 		// Don't hide the already shown drawer via propagation
 		// and stop default scroll behaviour.
 		return false;

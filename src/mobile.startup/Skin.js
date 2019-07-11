@@ -19,6 +19,7 @@ var
  * @fires Skin#changed
  * @param {Object} params Configuration options
  * @param {OO.EventEmitter} params.eventBus Object used to listen for
+ * @param {Page} params.page
  * scroll:throttled, resize:throttled, and section-toggled events
  */
 function Skin( params ) {

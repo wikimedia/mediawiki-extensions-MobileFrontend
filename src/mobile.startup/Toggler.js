@@ -132,11 +132,11 @@ function cleanObsoleteStoredSections( page ) {
  * @memberof Toggler
  * @instance
  * @param {jQuery.Object} $heading A heading belonging to a section
+ * @param {Page} page
  */
-Toggler.prototype.toggle = function ( $heading ) {
+Toggler.prototype.toggle = function ( $heading, page ) {
 	var indicator,
 		wasExpanded = $heading.is( '.open-block' ),
-		page = $heading.data( 'page' ),
 		$content = $heading.next();
 
 	$heading.toggleClass( 'open-block' );
@@ -160,7 +160,6 @@ Toggler.prototype.toggle = function ( $heading ) {
 	 */
 	this.eventBus.emit( 'section-toggled', {
 		expanded: wasExpanded,
-		page: page,
 		isReferenceSection: Boolean( $content.attr( 'data-is-reference-section' ) ),
 		$heading: $heading
 	} );
@@ -175,12 +174,13 @@ Toggler.prototype.toggle = function ( $heading ) {
  *
  * @param {Toggler} toggler instance.
  * @param {jQuery.Object} $heading
+ * @param {Page} page
  */
-function enableKeyboardActions( toggler, $heading ) {
+function enableKeyboardActions( toggler, $heading, page ) {
 	$heading.on( 'keypress', function ( ev ) {
 		if ( ev.which === 13 || ev.which === 32 ) {
 			// Only handle keypresses on the "Enter" or "Space" keys
-			toggler.toggle( $heading );
+			toggler.toggle( $heading, page );
 		}
 	} ).find( 'a' ).on( 'keypress mouseup', function ( ev ) {
 		ev.stopPropagation();
@@ -194,8 +194,9 @@ function enableKeyboardActions( toggler, $heading ) {
  * @instance
  * @param {string} selector A css selector that identifies a single element
  * @param {Object} $container jQuery element to search in
+ * @param {Page} page
  */
-Toggler.prototype.reveal = function ( selector, $container ) {
+Toggler.prototype.reveal = function ( selector, $container, page ) {
 	var $target, $heading;
 
 	// jQuery will throw for hashes containing certain characters which can break toggling
@@ -207,7 +208,7 @@ Toggler.prototype.reveal = function ( selector, $container ) {
 			$heading = $target.parents( '.collapsible-block' ).prev( '.collapsible-heading' );
 		}
 		if ( $heading.length && !$heading.hasClass( 'open-block' ) ) {
-			this.toggle( $heading );
+			this.toggle( $heading, page );
 		}
 		if ( $heading.length ) {
 			// scroll again after opening section (opening section makes the page longer)
@@ -225,7 +226,7 @@ Toggler.prototype.reveal = function ( selector, $container ) {
  * @param {jQuery.Object} $container to apply toggling to
  * @param {string} prefix a prefix to use for the id.
  * @param {Page} page to allow storage of session for future visits
- * @param {Page} [isClosed] whether the element should begin closed
+ * @param {boolean} [isClosed] whether the element should begin closed
  * @private
  */
 Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
@@ -259,7 +260,6 @@ Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 			$heading
 				.addClass( 'collapsible-heading ' )
 				.data( 'section-number', i )
-				.data( 'page', page )
 				.attr( {
 					tabindex: 0,
 					'aria-haspopup': 'true',
@@ -272,7 +272,7 @@ Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 					if ( !ev.target.href ) {
 						// prevent taps/clicks on edit button after toggling (bug 56209)
 						ev.preventDefault();
-						self.toggle( $heading );
+						self.toggle( $heading, page );
 					}
 				} );
 
@@ -297,7 +297,7 @@ Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 					'aria-expanded': 'false'
 				} );
 
-			enableKeyboardActions( self, $heading );
+			enableKeyboardActions( self, $heading, page );
 			if (
 				!isReferenceSection && (
 					!isClosed && browser.isWideScreen() || expandSections
@@ -307,7 +307,7 @@ Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 				// or if the expand sections setting is set.
 				// The wide screen logic for determining whether to collapse sections initially
 				// should be kept in sync with mobileoptions#initLocalStorageElements().
-				self.toggle( $heading );
+				self.toggle( $heading, page );
 			}
 		}
 	} );
@@ -323,7 +323,7 @@ Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 		if ( hash.indexOf( '#' ) === 0 ) {
 			// Non-latin characters in the hash will be provided percent-encoded, which
 			// jQuery would later fail to cope with.
-			self.reveal( decodeURIComponent( hash ), $container );
+			self.reveal( decodeURIComponent( hash ), $container, page );
 		}
 	}
 
@@ -339,7 +339,7 @@ Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 
 		if ( internalRedirectHash ) {
 			window.location.hash = internalRedirectHash;
-			self.reveal( internalRedirectHash, $container );
+			self.reveal( internalRedirectHash, $container, page );
 		}
 	}
 	/* eslint-enable no-restricted-properties */

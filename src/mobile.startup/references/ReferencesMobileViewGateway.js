@@ -93,6 +93,8 @@ mfExtend( ReferencesMobileViewGateway, ReferencesHtmlScraperGateway, {
 	 * @inheritdoc
 	 * @memberof ReferencesMobileViewGateway
 	 * @instance
+	 * @param {string} id
+	 * @param {Page} page
 	 */
 	getReference: function ( id, page ) {
 		var self = this;
