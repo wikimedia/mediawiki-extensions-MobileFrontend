@@ -114,7 +114,9 @@ class ApiMobileView extends ApiBase {
 
 		}
 		if ( isset( $prop['normalizedtitle'] ) && $title->getPrefixedText() != $params['page'] ) {
+			// @phan-suppress-next-line SecurityCheck-XSS
 			$resultObj->addValue( null, $moduleName,
+				// @phan-suppress-next-line SecurityCheck-XSS
 				[ 'normalizedtitle' => $title->getPageLanguage()->convert( $title->getPrefixedText() ) ]
 			);
 		}

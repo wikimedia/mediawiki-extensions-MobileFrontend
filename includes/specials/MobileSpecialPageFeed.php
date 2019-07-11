@@ -114,7 +114,7 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 			!$rev->userCan( Revision::DELETED_USER, $user ) ||
 			( $rev->isDeleted( Revision::DELETED_USER ) && !$unhide )
 		) {
-			$username = $this->msg( 'rev-deleted-user' )->escaped();
+			$username = $this->msg( 'rev-deleted-user' )->text();
 		}
 		return $username;
 	}
@@ -124,7 +124,7 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 	 * @param MWTimestamp $ts The time the edit occurred
 	 * @param string $diffLink url to the diff for the edit
 	 * @param string $username The username of the user that made the edit (absent if anonymous)
-	 * @param string $comment The edit summary
+	 * @param string $comment The edit summary, HTML escaped
 	 * @param Title|null $title The title of the page that was edited
 	 * @param bool $isAnon Is the edit anonymous?
 	 * @param int|null $bytes Net number of bytes changed or null if not applicable
@@ -161,7 +161,7 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 			$html .= Html::element( 'p', [ 'class' => $usernameClass ], $username );
 		}
 
-		$html .= Html::element(
+		$html .= Html::rawElement(
 			'p', [ 'class' => 'edit-summary component truncated-text multi-line two-line' ], $comment
 		);
 
