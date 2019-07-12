@@ -135,8 +135,8 @@ module.exports = {
 					sr: {
 						variantnames: {
 							sr: '\u040b\u0438\u0440./lat.',
-							'sr-ec': '\u040b\u0438\u0440\u0438\u043b\u0438\u0446\u0430',
-							'sr-el': 'Latinica'
+							'sr-cyrl': '\u040b\u0438\u0440\u0438\u043b\u0438\u0446\u0430',
+							'sr-latn': 'Latinica'
 						}
 					}
 				}
@@ -173,14 +173,14 @@ module.exports = {
 					url: '/sr/Test'
 				},
 				{
-					lang: 'sr-ec',
+					lang: 'sr-cyrl',
 					autonym: '\u040b\u0438\u0440\u0438\u043b\u0438\u0446\u0430',
-					url: '/sr-ec/Test'
+					url: '/sr-cyrl/Test'
 				},
 				{
-					lang: 'sr-el',
+					lang: 'sr-latn',
 					autonym: 'Latinica',
-					url: '/sr-el/Test'
+					url: '/sr-latn/Test'
 				}
 			]
 		}

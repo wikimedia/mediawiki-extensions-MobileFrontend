@@ -313,7 +313,7 @@ $specialPageAliases['sk'] = [
 ];
 
 /** Serbian (Cyrillic script) (српски (ћирилица)) */
-$specialPageAliases['sr-ec'] = [
+$specialPageAliases['sr-cyrl'] = [
 	'History' => [ 'Историја' ],
 	'MobileCite' => [ 'МобилнеРеференце', 'Мобилне_референце' ],
 	'MobileOptions' => [ 'МобилнаПодешавања', 'Мобилна_подешавања' ],
@@ -323,7 +323,7 @@ $specialPageAliases['sr-ec'] = [
 ];
 
 /** Serbian (Latin script) (srpski (latinica)) */
-$specialPageAliases['sr-el'] = [
+$specialPageAliases['sr-latn'] = [
 	'History' => [ 'Istorija' ],
 	'MobileCite' => [ 'MobilneReference', 'Mobilne_reference' ],
 	'MobileOptions' => [ 'MobilnaPodešavanja', 'Mobilna_podešavanja' ],
