@@ -12,7 +12,8 @@
 			"Դավիթ Սարոյան",
 			"Aram1985",
 			"Աշոտ1997",
-			"Kareyac"
+			"Kareyac",
+			"23artashes"
 		]
 	},
 	"mobile-frontend-categories-add": "Ավելացնել կատեգորիային",
@@ -71,7 +72,7 @@
 	"mobile-frontend-watchlist-filter-other": "Այլ",
 	"mobile-frontend-watchlist-filter-talk": "Քննարկում",
 	"mobile-frontend-watchlist-more": "Ավելին",
-	"nearby": "Էջեր մոտակա օբյեկտների մասին։",
+	"nearby": "Էջեր մոտակա օբյեկտների մասին",
 	"tag-mobile_edit": "Խմբագրում բջջային սարքով",
 	"tag-mobile_web_edit": "Խմբագրում կայքի բջջային տարբերակից"
 }
