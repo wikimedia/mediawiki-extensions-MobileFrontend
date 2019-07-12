@@ -94,9 +94,7 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 
 		this.target = ve.init.mw.targetFactory.create( 'article', this, {
 			$element: this.$el,
-			// || null so that scrolling is not triggered for the lead (0) section
-			// (which has no header to scroll to)
-			section: this.options.sectionId || null
+			section: this.options.sectionId
 		} );
 		this.target.once( 'surfaceReady', function () {
 			this.emit( 'editor-loaded' );
