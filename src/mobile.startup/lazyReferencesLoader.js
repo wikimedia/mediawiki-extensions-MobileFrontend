@@ -10,13 +10,12 @@ var
  * Load the references section content from API if it's not already loaded.
  *
  * All references tags content will be loaded per section.
- * @param {OO.EventEmitter} eventBus
  * @param {ToggledEvent} data Information about the section.
  * @param {ReferencesGateway} gateway
  * @param {Page} page
  * @return {jQuery.Promise|void} rejected when not a reference section.
  */
-function loadReferences( eventBus, data, gateway, page ) {
+function loadReferences( data, gateway, page ) {
 	var $content, $spinner;
 
 	// If the section was expanded before toggling, do not load anything as
@@ -80,11 +79,6 @@ function loadReferences( eventBus, data, gateway, page ) {
 				// Show the section now the references lists have been placed.
 				$spinner.remove();
 				$content.children().removeClass( 'hidden' );
-				/**
-				 * Fired when references list is loaded into the HTML
-				 * @event references-loaded
-				 */
-				eventBus.emit( 'references-loaded' );
 
 				loadImagesAndSetData();
 			}, function () {

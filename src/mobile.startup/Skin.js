@@ -15,8 +15,6 @@ var
  * @uses Browser
  * @uses Page
  * @fires Skin#click
- * @fires Skin#references-loaded
- * @fires Skin#changed
  * @param {Object} params Configuration options
  * @param {OO.EventEmitter} params.eventBus Object used to listen for
  * @param {Page} params.page
@@ -53,7 +51,7 @@ function Skin( params ) {
 	if ( mw.config.get( 'wgMFLazyLoadReferences' ) ) {
 		this.eventBus.on( 'section-toggled', function ( data ) {
 			lazyReferencesLoader.loadReferences(
-				self.eventBus, data, self.referencesGateway, self.page
+				data, self.referencesGateway, self.page
 			);
 		} );
 	}

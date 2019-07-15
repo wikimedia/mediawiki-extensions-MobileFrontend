@@ -32,11 +32,6 @@ QUnit.module( 'MobileFrontend lazyReferencesLoader.js', {
 QUnit.test( '#lazyReferencesLoader collapsed', function ( assert ) {
 	var
 		$content = util.parseHTML( '<div>' ).append( pages.skinPage ),
-		eventBus = {
-			on: function () {},
-			off: function () {},
-			emit: function () {}
-		},
 		gateway = {
 			getReferencesLists: function () {},
 			getReferencesList: function () {}
@@ -50,7 +45,7 @@ QUnit.test( '#lazyReferencesLoader collapsed', function ( assert ) {
 		.withArgs( page, 'Refs' ).returns( util.Deferred().resolve( util.parseHTML( '<p>' ).text( 'B' ) ) )
 		.withArgs( page, 'More_refs' ).returns( util.Deferred().resolve( util.parseHTML( '<p>' ).html( '<p>E</p><p>F</p>' ).children() ) );
 
-	return lazyReferencesLoader.loadReferences( eventBus, {
+	return lazyReferencesLoader.loadReferences( {
 		expanded: false,
 		page: page,
 		isReferenceSection: true,
@@ -65,11 +60,6 @@ QUnit.test( '#lazyReferencesLoader collapsed', function ( assert ) {
 QUnit.test( '#lazyReferencesLoader expanded', function ( assert ) {
 	var
 		$content = util.parseHTML( '<div>' ).append( pages.skinPage ),
-		eventBus = {
-			on: function () {},
-			off: function () {},
-			emit: function () {}
-		},
 		gateway = {
 			getReferencesLists: function () {},
 			getReferencesList: function () {}
@@ -77,7 +67,7 @@ QUnit.test( '#lazyReferencesLoader expanded', function ( assert ) {
 		page = new Page( { title: 'Foo' } ),
 		result;
 
-	result = lazyReferencesLoader.loadReferences( eventBus, {
+	result = lazyReferencesLoader.loadReferences( {
 		expanded: true,
 		page: page,
 		isReferenceSection: true,
