@@ -30,7 +30,7 @@ function makeHeader( heading, headerActions, headerCancel, additionalClassNames 
 	headerCancel = headerCancel || icons.cancel();
 	$el = util.parseHTML( html );
 	// Truncate any text inside in the overlay header.
-	$el.find( '.overlay-header h2 span' ).addClass( 'truncated-text' );
+	$el.find( 'h2 span' ).addClass( 'truncated-text' );
 	$el.find( '.header-cancel li' ).append(
 		headerCancel.$el
 	);
