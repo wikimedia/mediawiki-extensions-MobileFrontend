@@ -13,11 +13,6 @@
 	color: @colorGray2;
 }
 
-.successbox {
-	color: @colorSuccessText;
-	background: @colorSuccessBackground;
-}
-
 // Necessary for fallback editor preview.
 .previewnote p,
 .successbox,
@@ -27,6 +22,16 @@
 	padding-top: 1em;
 	padding-bottom: 1em;
 	margin: 0 0 1em;
+}
+
+.errorbox {
+	background-color: @backgroundColorError;
+	color: @colorTextEmphasized;
+}
+
+.successbox {
+	background-color: @backgroundColorSuccess;
+	color: @colorTextEmphasized;
 }
 
 .successbox,
@@ -43,13 +48,4 @@
 	a {
 		margin-bottom: 1em;
 	}
-}
-
-.errorbox {
-	/**
-	 * @wmui-color-red90 from wikimedia-ui-base.less
-	 * https://phabricator.wikimedia.org/source/wikimedia-ui-base/browse/master/wikimedia-ui-base.less
-	 */
-	background-color: #fee7e6;
-	color: @colorErrorText;
 }
