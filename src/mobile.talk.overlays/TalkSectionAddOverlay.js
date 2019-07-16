@@ -26,6 +26,7 @@ function TalkSectionAddOverlay( options ) {
 	Overlay.call( this,
 		util.extend( options, {
 			className: 'talk-overlay overlay',
+			onBeforeExit: this.onBeforeExit.bind( this ),
 			events: {
 				'click .save': 'onSaveClick'
 			}
@@ -79,16 +80,14 @@ mfExtend( TalkSectionAddOverlay, Overlay, {
 	 * @memberof TalkSectionAddOverlay
 	 * @instance
 	 */
-	hide: function () {
+	onBeforeExit: function ( exit ) {
 		var empty,
 			confirmMessage = mw.msg( 'mobile-frontend-editor-cancel-confirm' );
 
 		empty = ( !this.$subject.val() && !this.$ta.val() );
 		// TODO: Replace with an OOUI dialog
 		if ( this._saveHit || empty || window.confirm( confirmMessage ) ) {
-			return Overlay.prototype.hide.apply( this, arguments );
-		} else {
-			return false;
+			exit();
 		}
 	},
 	/**
