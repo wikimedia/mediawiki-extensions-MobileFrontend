@@ -342,10 +342,10 @@ function setupEditor( page, skin ) {
  * menu.
  * @method
  * @ignore
- * @param {Page} currentPage
+ * @param {PageHTMLParser} currentPageHTMLParser
  */
-function hideSectionEditIcons( currentPage ) {
-	currentPage.$el.find( '.mw-editsection' ).hide();
+function hideSectionEditIcons( currentPageHTMLParser ) {
+	currentPageHTMLParser.$el.find( '.mw-editsection' ).hide();
 }
 
 /**
@@ -376,9 +376,10 @@ function showLoginDrawer() {
  * @method
  * @ignore
  * @param {Page} currentPage
+ * @param {PageHTMLParser} currentPageHTMLParser
  * @param {Skin} skin
  */
-function init( currentPage, skin ) {
+function init( currentPage, currentPageHTMLParser, skin ) {
 	var isReadOnly, isEditable, editErrorMessage, editRestrictions;
 	// see: https://www.mediawiki.org/wiki/Manual:Interface/JavaScript#Page-specific
 	isReadOnly = mw.config.get( 'wgMinervaReadOnly' );
@@ -388,7 +389,7 @@ function init( currentPage, skin ) {
 		// Edit button updated in setupEditor.
 		setupEditor( currentPage, skin );
 	} else {
-		hideSectionEditIcons( currentPage );
+		hideSectionEditIcons( currentPageHTMLParser );
 		editRestrictions = mw.config.get( 'wgRestrictionEdit' );
 		if ( mw.user.isAnon() && Array.isArray( editRestrictions ) && editRestrictions.indexOf( '*' ) !== -1 ) {
 			showLoginDrawer();
@@ -416,7 +417,7 @@ function showSorryToast( msg ) {
 	router.checkRoute();
 }
 
-module.exports = function ( currentPage, skin ) {
+module.exports = function ( currentPage, currentPageHTMLParser, skin ) {
 	var isMissing = currentPage.id === 0;
 	if ( contentModel !== 'wikitext' ) {
 		// Only load the wikitext editor on wikitext. Otherwise we'll rely on the fallback behaviour
@@ -439,6 +440,6 @@ module.exports = function ( currentPage, skin ) {
 		showSorryToast( mw.msg( 'mobile-frontend-editor-uploadenable' ) );
 	} else {
 		// Edit button is currently hidden. A call to init() will update it as needed.
-		init( currentPage, skin );
+		init( currentPage, currentPageHTMLParser, skin );
 	}
 };

@@ -159,7 +159,7 @@ if ( !currentPage.inNamespace( 'special' ) && isPageContentModelEditable ) {
 		// TODO: This code should not even be loaded on desktop.
 		// Remove this check when that is fixed (T216537).
 		if ( context.getMode() !== null ) {
-			editor( currentPage, skin );
+			editor( currentPage, currentPageHTMLParser, skin );
 		}
 	}
 }
