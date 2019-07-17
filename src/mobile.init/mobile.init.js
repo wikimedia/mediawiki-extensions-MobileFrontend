@@ -24,16 +24,9 @@ var skin,
 	experiments = mw.experiments,
 	activeExperiments = mw.config.get( 'wgMFExperiments' ) || {},
 	Skin = require( '../mobile.startup/Skin' ),
-	eventBus = require( '../mobile.startup/eventBusSingleton' ),
-	ReferencesMobileViewGateway = require( '../mobile.startup/references/ReferencesMobileViewGateway' ),
-	skinData = {
-		el: 'body',
-		page: currentPage,
-		referencesGateway: ReferencesMobileViewGateway.getSingleton(),
-		eventBus: eventBus
-	};
+	eventBus = require( '../mobile.startup/eventBusSingleton' );
 
-skin = new Skin( skinData );
+skin = Skin.getSingleton();
 
 /**
  * Given 2 functions, it returns a function that will run both with it's

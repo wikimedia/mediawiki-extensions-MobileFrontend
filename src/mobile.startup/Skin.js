@@ -1,10 +1,13 @@
-var
+var skin,
 	browser = require( './Browser' ).getSingleton(),
 	lazyImageLoader = require( './lazyImages/lazyImageLoader' ),
 	lazyImageTransformer = require( './lazyImages/lazyImageTransformer' ),
 	lazyReferencesLoader = require( './lazyReferencesLoader' ),
 	View = require( './View' ),
 	util = require( './util' ),
+	ReferencesMobileViewGateway = require( './references/ReferencesMobileViewGateway' ),
+	currentPage = require( './currentPage' ),
+	eventBus = require( './eventBusSingleton' ),
 	mfExtend = require( './mfExtend' );
 
 /**
@@ -131,4 +134,19 @@ mfExtend( Skin, View, {
 	}
 } );
 
+/**
+ * Get a skin singleton
+ * @return {Skin}
+ */
+Skin.getSingleton = function () {
+	if ( !skin ) {
+		skin = new Skin( {
+			el: 'body',
+			page: currentPage(),
+			referencesGateway: ReferencesMobileViewGateway.getSingleton(),
+			eventBus
+		} );
+	}
+	return skin;
+};
 module.exports = Skin;
