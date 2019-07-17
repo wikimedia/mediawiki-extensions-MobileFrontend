@@ -52,16 +52,10 @@
 }
 
 // Darken the content to highlight the drawer.
-.has-drawer {
-	background-color: @colorGray1;
-
-	> *:not( .drawer ) {
-		opacity: 1;
-		.transition( opacity .25s linear );
-	}
-
-	&.drawer-visible > *:not( .drawer ) {
-		opacity: 0.6;
+.has-drawer.drawer-visible {
+	.transparent-shield {
+		visibility: visible;
+		opacity: 0.5;
 	}
 }
 
