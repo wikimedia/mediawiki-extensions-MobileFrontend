@@ -46,14 +46,14 @@ class BetaOptInPanel extends View {
 	_onOptin( ev ) {
 		this.$el.find( ev.currentTarget ).closest( 'form' ).trigger( 'submit' );
 	}
-}
 
-/**
- * @memberof BetaOptInPanel
- * @instance
- * @type {Object}
- */
-BetaOptInPanel.prototype.template = util.template( `
+	/**
+	 * @memberof BetaOptInPanel
+	 * @instance
+	 * @type {Object}
+	 */
+	get template() {
+		return util.template( `
 	<div class="beta-opt-in-panel panel panel-inline visible">
 		<form class="message content" action="{{postUrl}}" method="POST">
 			<p>{{text}}</p>
@@ -61,33 +61,37 @@ BetaOptInPanel.prototype.template = util.template( `
 			<input type="hidden" name="token" value="{{editToken}}">
 		</form>
 	</div>
-` );
-
-/**
- * @memberof BetaOptInPanel
- * @instance
- * @mixes View#defaults
- * @type {Object}
- */
-BetaOptInPanel.prototype.defaults = util.extend(
-	{},
-	View.prototype.defaults,
-	{
-		postUrl: undefined,
-		editToken: user.tokens.get( 'editToken' ),
-		text: mw.msg( 'mobile-frontend-panel-betaoptin-msg' ),
-		buttons: [
-			new Button( {
-				progressive: true,
-				additionalClassNames: 'optin',
-				label: mw.msg( 'mobile-frontend-panel-ok' )
-			} ),
-			new Button( {
-				additionalClassNames: 'cancel',
-				label: mw.msg( 'mobile-frontend-panel-cancel' )
-			} )
-		]
+	` );
 	}
-);
+
+	/**
+	 * @memberof BetaOptInPanel
+	 * @instance
+	 * @mixes View#defaults
+	 * @type {Object}
+	 */
+	get defaults() {
+		return util.extend(
+			{},
+			View.prototype.defaults,
+			{
+				postUrl: undefined,
+				editToken: user.tokens.get( 'editToken' ),
+				text: mw.msg( 'mobile-frontend-panel-betaoptin-msg' ),
+				buttons: [
+					new Button( {
+						progressive: true,
+						additionalClassNames: 'optin',
+						label: mw.msg( 'mobile-frontend-panel-ok' )
+					} ),
+					new Button( {
+						additionalClassNames: 'cancel',
+						label: mw.msg( 'mobile-frontend-panel-cancel' )
+					} )
+				]
+			}
+		);
+	}
+}
 
 module.exports = BetaOptInPanel;
