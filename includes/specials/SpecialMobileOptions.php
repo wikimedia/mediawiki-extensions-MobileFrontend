@@ -94,7 +94,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 						'input' => $amcToggle,
 						'label' => new OOUI\HtmlSnippet(
 							Html::openElement( 'div' ) .
-							Html::rawElement( 'strong', [],
+							Html::rawElement( 'strong', [ 'class' => 'indicator-circle' ],
 								$this->msg( 'mobile-frontend-mobile-option-amc' )->parse() ) .
 							Html::rawElement( 'div', [ 'class' => 'option-description' ],
 								$this->msg( 'mobile-frontend-mobile-option-amc-experiment-description' )->parse()
