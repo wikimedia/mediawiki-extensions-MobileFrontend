@@ -81,12 +81,8 @@ QUnit.test( '#initialize, blocked user', function ( assert ) {
 
 	return dBlockedContent.then( function () {
 		assert.ok(
-			messageStub.calledWith( {
+			messageStub.calledWithMatch( {
 				className: 'drawer position-fixed',
-				events: {
-					'click .cancel': 'onCancel',
-					click: 'stopPropagation'
-				},
 				partial: false,
 				creator: {
 					name: 'Test',
