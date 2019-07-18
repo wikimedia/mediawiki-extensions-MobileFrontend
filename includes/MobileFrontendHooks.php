@@ -357,8 +357,8 @@ class MobileFrontendHooks {
 	 * @param array &$forOptions The options used to generate the parser cache key
 	 */
 	public static function onPageRenderingHash( &$confstr, User $user, &$forOptions ) {
-		$ctx = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
-		if ( $ctx->shouldStripResponsiveImages() ) {
+		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
+		if ( $context->shouldStripResponsiveImages() ) {
 			$confstr .= '!responsiveimages=0';
 		}
 	}
@@ -477,14 +477,14 @@ class MobileFrontendHooks {
 	 */
 	public static function onSpecialPageInitList( &$list ) {
 		$services = MediaWikiServices::getInstance();
-		$ctx = $services->getService( 'MobileFrontend.Context' );
+		$context = $services->getService( 'MobileFrontend.Context' );
 		$config = $services->getService( 'MobileFrontend.Config' );
 		$userMode = $services->getService( 'MobileFrontend.AMC.UserMode' );
-		$user = $ctx->getUser();
+		$user = $context->getUser();
 
 		// Perform substitutions of pages that are unsuitable for mobile
 		// FIXME: Upstream these changes to core.
-		if ( $ctx->shouldDisplayMobileView() &&
+		if ( $context->shouldDisplayMobileView() &&
 			self::shouldMobileFormatSpecialPages( $user )
 		) {
 			// Replace the standard watchlist view with our custom one

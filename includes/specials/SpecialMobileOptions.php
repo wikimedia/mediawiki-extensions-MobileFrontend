@@ -67,8 +67,8 @@ class SpecialMobileOptions extends MobileSpecialPage {
 		$this->setHeaders();
 		$this->setJsConfigVars();
 
-		$this->getMobileContext()->setForceMobileView( true );
-		$this->getMobileContext()->setContentTransformations( false );
+		$this->mobileContext->setForceMobileView( true );
+		$this->mobileContext->setContentTransformations( false );
 
 		if ( $this->getRequest()->wasPosted() ) {
 			$this->submitSettingsForm();
@@ -161,8 +161,8 @@ class SpecialMobileOptions extends MobileSpecialPage {
 			$fields[] = $this->buildAMCToggle();
 		}
 		// beta settings
-		$isInBeta = $this->getMobileContext()->isBetaGroupMember();
-		if ( $this->getMFConfig()->get( 'MFEnableBeta' ) ) {
+		$isInBeta = $this->mobileContext->isBetaGroupMember();
+		if ( $this->config->get( 'MFEnableBeta' ) ) {
 			$input = new OOUI\CheckboxInputWidget( [
 				'name' => 'enableBeta',
 				'infusable' => true,
@@ -288,10 +288,10 @@ class SpecialMobileOptions extends MobileSpecialPage {
 			$userMode->setEnabled( $request->getBool( 'enableAMC' ) );
 		}
 
-		$this->getMobileContext()->setMobileMode( $group );
+		$this->mobileContext->setMobileMode( $group );
 		$url = $this->getPageTitle()->getFullURL( 'success' );
 		$output->redirect(
-			$this->getMobileContext()->getMobileUrl( $url )
+			$this->mobileContext->getMobileUrl( $url )
 		);
 	}
 }

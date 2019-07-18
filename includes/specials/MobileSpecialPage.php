@@ -21,27 +21,17 @@ class MobileSpecialPage extends SpecialPage {
 	/** @var string a message key for the error message description that should be shown on a 404 */
 	protected $errorNotFoundDescriptionMsg = 'mobile-frontend-generic-404-desc';
 	/** @var MobileContext */
-	private $mobileContext;
+	protected $mobileContext;
 
 	/**
-	 * Wrapper to get a Mobile Context object via services
-	 * @return MobileContext
+	 * @param string $page
 	 */
-	protected function getMobileContext() {
-		if ( $this->mobileContext === null ) {
-			$this->mobileContext = MediaWikiServices::getInstance()->getService(
-				'MobileFrontend.Context'
-			);
-		}
-		return $this->mobileContext;
-	}
+	public function __construct( $page ) {
+		parent::__construct( $page );
 
-	/**
-	 * Wrapper for MobileContext::getMFConfig
-	 * @return Config|null
-	 */
-	protected function getMFConfig() {
-		return $this->config;
+		$services = MediaWikiServices::getInstance();
+		$this->config = $services->getService( 'MobileFrontend.Config' );
+		$this->mobileContext = $services->getService( 'MobileFrontend.Context' );
 	}
 
 	/**
@@ -56,16 +46,15 @@ class MobileSpecialPage extends SpecialPage {
 	 * @param string|null $subPage parameter submitted as "subpage"
 	 */
 	public function execute( $subPage ) {
-		$ctx = $this->getMobileContext();
-		$this->config = $ctx->getMFConfig();
 		$out = $this->getOutput();
 		$out->setProperty( 'desktopUrl', $this->getDesktopUrl( $subPage ) );
-		if ( !$ctx->shouldDisplayMobileView() && !$this->hasDesktopVersion ) {
+		if ( !$this->mobileContext->shouldDisplayMobileView() &&
+			 !$this->hasDesktopVersion ) {
 			# We are not going to return any real content
 			$out->setStatusCode( 404 );
 			$this->renderUnavailableBanner( $this->msg( 'mobile-frontend-requires-mobile' ) );
 		} elseif ( $this->mode !== 'stable' ) {
-			if ( $this->mode === 'beta' && !$ctx->isBetaGroupMember() ) {
+			if ( $this->mode === 'beta' && !$this->mobileContext->isBetaGroupMember() ) {
 				$this->renderUnavailableBanner( $this->msg( 'mobile-frontend-requires-optin' )->parse() );
 			} else {
 				$this->executeWhenAvailable( $subPage );

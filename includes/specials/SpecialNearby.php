@@ -18,12 +18,11 @@ class SpecialNearby extends MobileSpecialPage {
 	 */
 	public function executeWhenAvailable( $par = '' ) {
 		$this->setHeaders();
-		$config = $this->getMFConfig();
 		$output = $this->getOutput();
 		$output->addBodyClasses( 'nearby-accept-pending' );
 		// set config
 		$output->addJsConfigVars( [
-			'wgMFNearbyRange' => $config->get( 'MFNearbyRange' ),
+			'wgMFNearbyRange' => $this->config->get( 'MFNearbyRange' ),
 		] );
 		$output->addModuleStyles( [ 'mobile.nearby.images' ] );
 		$output->setPageTitle( $this->msg( 'mobile-frontend-nearby-title' ) );

@@ -88,7 +88,6 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	 * @param string|null $par Revision IDs separated by three points (e.g. 123...124)
 	 */
 	public function executeWhenAvailable( $par ) {
-		$ctx = $this->getMobileContext();
 		$this->setHeaders();
 		$output = $this->getOutput();
 
@@ -121,14 +120,14 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		$output->addModules( 'mobile.special.mobilediff.scripts' );
 
 		// Allow other extensions to load more stuff here
-		Hooks::run( 'BeforeSpecialMobileDiffDisplay', [ &$output, $ctx, $revisions ] );
+		Hooks::run( 'BeforeSpecialMobileDiffDisplay', [ &$output, $this->mobileContext, $revisions ] );
 
 		$output->addHTML( '<div id="mw-mf-diffview" class="content-unstyled"><div id="mw-mf-diffarea">' );
 
 		$this->displayDiffPage();
 		$output->addHTML( '</div>' );
 
-		$this->showFooter( $ctx, $this->getRequest()->getBool( 'unhide' ) );
+		$this->showFooter( $this->getRequest()->getBool( 'unhide' ) );
 
 		$output->addHTML( '</div>' );
 
@@ -290,10 +289,9 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	/**
 	 * Render the footer including userinfos (Name, Role, Editcount)
 	 *
-	 * @param IContextSource $context
 	 * @param bool $unhide whether hidden content should be shown
 	 */
-	private function showFooter( IContextSource $context, $unhide ) {
+	private function showFooter( $unhide ) {
 		$output = $this->getOutput();
 
 		$output->addHTML(
@@ -330,7 +328,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 				) .
 				'</div>' .
 				'<div class="mw-mf-roles meta">' .
-					$this->listGroups( $user, $context ) .
+					$this->listGroups( $user, $this->mobileContext ) .
 				'</div>' .
 				'<div class="mw-mf-edit-count meta">' .
 					$this->msg(

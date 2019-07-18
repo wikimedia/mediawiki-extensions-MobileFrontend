@@ -10,6 +10,24 @@ class MobileFormatterTest extends MediaWikiTestCase {
 	const INFOBOX_CLASSNAME = 'infobox';
 
 	/**
+	 * @var Config
+	 */
+	private $mfConfig;
+
+	/**
+	 * @var MobileContext
+	 */
+	private $mfContext;
+
+	protected function setUp() {
+		parent::setUp();
+
+		$services = \MediaWiki\MediaWikiServices::getInstance();
+		$this->mfConfig = $services->getService( 'MobileFrontend.Config' );
+		$this->mfContext = $services->getService( 'MobileFrontend.Context' );
+	}
+
+	/**
 	 * Helper function that creates section headings from a heading and title
 	 *
 	 * @param string $heading
@@ -68,7 +86,9 @@ class MobileFormatterTest extends MediaWikiTestCase {
 		// "yay" to Windows!
 		$input = str_replace( "\r", '', $input );
 
-		$mf = new MobileFormatter( MobileFormatter::wrapHTML( $input ), $t );
+		$mf = new MobileFormatter(
+			MobileFormatter::wrapHTML( $input ), $t, $this->mfConfig, $this->mfContext
+		);
 		if ( $callback ) {
 			$callback( $mf );
 		}
@@ -638,7 +658,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 	 */
 	public function testHeadingTransform( array $topHeadingTags, $input, $expectedOutput ) {
 		$t = Title::newFromText( 'Mobile' );
-		$formatter = new MobileFormatter( $input, $t );
+		$formatter = new MobileFormatter( $input, $t, $this->mfConfig, $this->mfContext );
 
 		// If MobileFormatter#enableExpandableSections isn't called, then headings
 		// won't be transformed.
@@ -731,7 +751,9 @@ class MobileFormatterTest extends MediaWikiTestCase {
 	 */
 	public function testT137375() {
 		$input = '<p>Hello, world!</p><h2>Section heading</h2><ol class="references"></ol>';
-		$formatter = new MobileFormatter( $input, Title::newFromText( 'Special:Foo' ) );
+		$formatter = new MobileFormatter(
+			$input, Title::newFromText( 'Special:Foo' ), $this->mfConfig, $this->mfContext
+		);
 		$formatter->filterContent( false, true, false );
 		// Success is not crashing when the input is not a DOMElement.
 		$this->assertTrue( true );
@@ -748,8 +770,12 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			'wgMFLogWrappedInfoboxes' => true
 		] );
 		$title = 'T149884';
-		$formatter = new MobileFormatter( MobileFormatter::wrapHTML( $input ),
-			Title::newFromText( $title, NS_MAIN ) );
+		$formatter = new MobileFormatter(
+			MobileFormatter::wrapHTML( $input ),
+			Title::newFromText( $title, NS_MAIN ),
+			$this->mfConfig,
+			$this->mfContext
+		);
 		$formatter->enableExpandableSections();
 
 		$loggerMock = $this->getMock( \Psr\Log\LoggerInterface::class );
@@ -790,8 +816,12 @@ class MobileFormatterTest extends MediaWikiTestCase {
 		] );
 		$title = 'T149884';
 
-		$formatter = new MobileFormatter( MobileFormatter::wrapHTML( $input ),
-			Title::newFromText( $title ) );
+		$formatter = new MobileFormatter(
+			MobileFormatter::wrapHTML( $input ),
+			Title::newFromText( $title ),
+			$this->mfConfig,
+			$this->mfContext
+		);
 		$formatter->enableExpandableSections();
 
 		$loggerMock = $this->getMock( \Psr\Log\LoggerInterface::class );
@@ -829,8 +859,12 @@ class MobileFormatterTest extends MediaWikiTestCase {
 		$input = $this->buildInfoboxHTML( $this->buildInfoboxHTML( 'test' ) );
 		$title = 'T163805';
 
-		$formatter = new MobileFormatter( MobileFormatter::wrapHTML( $input ),
-			Title::newFromText( $title, NS_MAIN ) );
+		$formatter = new MobileFormatter(
+			MobileFormatter::wrapHTML( $input ),
+			Title::newFromText( $title, NS_MAIN ),
+			$this->mfConfig,
+			$this->mfContext
+		);
 		$formatter->enableExpandableSections();
 
 		$loggerMock = $this->getMock( \Psr\Log\LoggerInterface::class );

@@ -23,9 +23,8 @@ class SpecialUploads extends MobileSpecialPage {
 			// uploads by a particular user, i.e Special:Uploads/username, are shown even to anons
 			$this->setHeaders();
 			$output = $this->getOutput();
-			$config = $this->getMFConfig();
 			$output->addJsConfigVars( [
-				'wgMFPhotoUploadEndpoint' => $config->get( 'MFPhotoUploadEndpoint' )
+				'wgMFPhotoUploadEndpoint' => $this->config->get( 'MFPhotoUploadEndpoint' )
 			] );
 
 			if ( $par !== '' && $par !== null ) {
@@ -102,7 +101,7 @@ class SpecialUploads extends MobileSpecialPage {
 	private function getUserUploadCount( $username ) {
 		global $wgConf;
 
-		$mfPhotoUploadWiki = $this->getMFConfig()->get( 'MFPhotoUploadWiki' );
+		$mfPhotoUploadWiki = $this->config->get( 'MFPhotoUploadWiki' );
 		if ( !$mfPhotoUploadWiki ) {
 			$dbr = wfGetDB( DB_REPLICA );
 		} elseif (
