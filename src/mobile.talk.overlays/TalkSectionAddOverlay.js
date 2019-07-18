@@ -2,8 +2,10 @@ var
 	mfExtend = require( '../mobile.startup/mfExtend' ),
 	headers = require( '../mobile.startup/headers' ),
 	Overlay = require( '../mobile.startup/Overlay' ),
+	overlayManager = require( '../mobile.startup/OverlayManager' ).getSingleton(),
 	PageGateway = require( '../mobile.startup/PageGateway' ),
 	util = require( '../mobile.startup/util' ),
+	talkOverlay = require( '../mobile.startup/talk/overlay' ),
 	makeAddTopicForm = require( './makeAddTopicForm' ),
 	toast = require( '../mobile.startup/toast' );
 
@@ -17,6 +19,7 @@ var
  * @param {Object} options.title Title of the talk page being modified
  * @param {Object} options.currentPageTitle Title of the page before the overlay appears
  * @param {OO.EventEmitter} options.eventBus Object used to emit talk-added-wo-overlay
+ * @param {Function} [options.onSaveComplete] executed when a save has completed
  * and talk-discussion-added events
  */
 function TalkSectionAddOverlay( options ) {
@@ -30,6 +33,19 @@ function TalkSectionAddOverlay( options ) {
 			}
 		} )
 	);
+	this.onSaveComplete = options.onSaveComplete || function () {
+		mw.log.warn( 'TalkSectionAddOverlay now has a compulsory onSaveComplete function' );
+		this.pageGateway.invalidatePage( this.title );
+		overlayManager.replaceCurrent(
+			talkOverlay( options.title, this.pageGateway )
+		);
+		overlayManager.router.navigateTo( null, {
+			// This should be defined in Minerva.
+			path: '#/talk',
+			useReplaceState: true
+		} );
+		toast.show( mw.msg( 'mobile-frontend-talk-topic-feedback' ) );
+	}.bind( this );
 	this.title = options.title;
 	this.currentPageTitle = options.currentPageTitle;
 	this.eventBus = options.eventBus;
@@ -123,10 +139,7 @@ mfExtend( TalkSectionAddOverlay, Overlay, {
 				if ( isOnTalkPage ) {
 					this.eventBus.emit( 'talk-added-wo-overlay' );
 				} else {
-					this.pageGateway.invalidatePage( this.title );
-					toast.show( mw.msg( 'mobile-frontend-talk-topic-feedback' ) );
-					this.eventBus.emit( 'talk-discussion-added' );
-					this.hide();
+					this.onSaveComplete();
 				}
 			}
 		}.bind( this ), function ( error ) {
