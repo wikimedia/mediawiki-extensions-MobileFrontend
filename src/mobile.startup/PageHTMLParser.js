@@ -31,7 +31,8 @@ class PageHTMLParser {
 		if ( sectionIndex < 1 ) {
 			// negative indexes will search from the end, which is behaviour we do not want.
 			// return an empty set when this happens.
-			return this.$el.find();
+			// eslint-disable-next-line no-undef
+			return $( [] );
 		} else {
 			return this.$headings
 				// Headings must strictly be a child element of a section element
@@ -124,8 +125,10 @@ class PageHTMLParser {
 		 *   </div>
 		 * </div>
 		 */
-		if ( this.$el.find( '.mf-section-0' ).length ) {
-			return this.$el.find( '.mf-section-0' );
+		const leadSection = this.$el.find( '.mf-section-0' );
+
+		if ( leadSection.length ) {
+			return leadSection;
 		}
 		// no lead section found
 		return null;
