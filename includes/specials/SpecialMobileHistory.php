@@ -1,5 +1,6 @@
 <?php
 
+use MediaWiki\Storage\RevisionRecord;
 use Wikimedia\Rdbms\IResultWrapper;
 
 /**
@@ -189,8 +190,8 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 		$this->renderListHeaderWhereNeeded( $this->getLanguage()->userDate( $ts, $this->getUser() ) );
 		$ts = new MWTimestamp( $ts );
 
-		$canSeeText = $rev->userCan( Revision::DELETED_TEXT, $user );
-		if ( $canSeeText && $prev && $prev->userCan( Revision::DELETED_TEXT, $user ) ) {
+		$canSeeText = $rev->userCan( RevisionRecord::DELETED_TEXT, $user );
+		if ( $canSeeText && $prev && $prev->userCan( RevisionRecord::DELETED_TEXT, $user ) ) {
 			$diffLink = SpecialPage::getTitleFor( 'MobileDiff', $rev->getId() )->getLocalURL();
 		} elseif ( $canSeeText && $rev->getTitle() !== null ) {
 			$diffLink = $rev->getTitle()->getLocalURL( [ 'oldid' => $rev->getId() ] );
@@ -210,7 +211,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 		}
 		$isMinor = $rev->isMinor();
 		$this->renderFeedItemHtml( $ts, $diffLink, $username, $comment, $title,
-			$rev->getUser( Revision::FOR_THIS_USER, $user ) === 0, $bytes, $isMinor );
+			$rev->getUser( RevisionRecord::FOR_THIS_USER, $user ) === 0, $bytes, $isMinor );
 	}
 
 	/**

@@ -1,5 +1,6 @@
 <?php
 
+use MediaWiki\Storage\RevisionRecord;
 use Wikimedia\Rdbms\IResultWrapper;
 
 /**
@@ -145,14 +146,14 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 		$this->renderListHeaderWhereNeeded( $this->getLanguage()->userDate( $ts, $this->getUser() ) );
 		$ts = new MWTimestamp( $ts );
 
-		if ( $rev->userCan( Revision::DELETED_TEXT, $user ) ) {
+		if ( $rev->userCan( RevisionRecord::DELETED_TEXT, $user ) ) {
 			$diffLink = SpecialPage::getTitleFor( 'MobileDiff', $rev->getId() )->getLocalURL();
 		} else {
 			$diffLink = false;
 		}
 
 		// FIXME: Style differently user comment when this is the case
-		if ( !$rev->userCan( Revision::DELETED_USER, $user ) ) {
+		if ( !$rev->userCan( RevisionRecord::DELETED_USER, $user ) ) {
 			$username = $this->msg( 'rev-deleted-user' )->text();
 		}
 
