@@ -94,6 +94,7 @@ class MoveLeadParagraphTransformTest extends \MediaWikiUnitTestCase {
 
 	public function provideTransform() {
 		$infobox = '<table class="infobox">1</table>';
+		$coordinates = '<span id="coordinates"><span>0;0</span></span>';
 		$anotherInfobox = '<table class="infobox">2</table>';
 		$stackInfobox = "<div class=\"mw-stack\">$infobox</div>";
 		$emptyStack = '<div class="mw-stack">Empty</div>';
@@ -168,6 +169,26 @@ class MoveLeadParagraphTransformTest extends \MediaWikiUnitTestCase {
 				"$paragraph$multiStackInfobox",
 				'T170006: Multiple infoboxes will also be moved'
 			],
+			[
+				"$infobox<p>$coordinates</p><p>First paragraph</p>",
+				"<p>First paragraph</p>$infobox<p>$coordinates</p>",
+				"Paragraph with just coordinates in it is ignored"
+			],
+			[
+				"$infobox<p>First paragraph with $coordinates</p><p>Second paragraph</p>",
+				"<p>First paragraph with $coordinates</p>$infobox<p>Second paragraph</p>",
+				"Paragraph with coordinates in it is still the first paragraph"
+			],
+			[
+				"$infobox<p><span>foo</span>$coordinates</p><p>Second paragraph</p>",
+				"<p><span>foo</span>$coordinates</p>$infobox<p>Second paragraph</p>",
+				"Paragraph with non-empty nested child and coordinates in it is still the first paragraph"
+			],
+			[
+				"$infobox<p>Lead <span>$coordinates</span> para</p><p>Not lead</p>",
+				"<p>Lead <span>$coordinates</span> para</p>$infobox<p>Not lead</p>",
+				"Paragraph with nested coordinates is still the first paragraph"
+			]
 		];
 	}
 }

@@ -480,9 +480,11 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			[
 				// first paragraph (which has coordinates and is hidden on mobile),
 				// infobox, lead section
+				'<body>' .
 				'<p><span><span id="coordinates">Coordinates</span></span></p>' .
 				'<table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox</td></tr></table>' .
-				'<p>paragraph 2</p>',
+				'<p>paragraph 2</p>' .
+				'</body>',
 
 				$this->makeSectionHtml(
 					0,
