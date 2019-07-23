@@ -1,7 +1,6 @@
 const
 	mfExtend = require( '../mobile.startup/mfExtend' ),
 	View = require( '../mobile.startup/View' ),
-	Panel = require( '../mobile.startup/Panel' ),
 	util = require( '../mobile.startup/util' );
 
 /**
@@ -10,7 +9,7 @@ const
  * @return {Panel}
  */
 function makePanel( $child ) {
-	const panel = new Panel();
+	const panel = new View( { className: 'panel' } );
 	panel.$el.append( $child );
 	return panel;
 }

@@ -1,34 +1,105 @@
 var
 	mfExtend = require( './mfExtend' ),
-	Panel = require( './Panel' ),
+	View = require( './View' ),
 	util = require( './util' ),
 	Icon = require( './Icon' );
 
 /**
  * A {@link View} that pops up from the bottom of the screen.
  * @class Drawer
- * @extends Panel
+ * @extends View
  * @param {Object} [props]
  */
 function Drawer( props ) {
-	Panel.call( this,
+	View.call( this,
 		util.extend(
 			{ className: 'drawer position-fixed' },
 			props,
-			{ events: util.extend( { click: 'stopPropagation' }, ( props || {} ).events ) }
+			{ events: util.extend( {
+				'click .cancel': function ( ev ) {
+					ev.preventDefault();
+					this.hide();
+				}.bind( this ),
+				click: function ( ev ) {
+					ev.stopPropagation();
+				}
+			}, ( props || {} ).events ) }
 		)
 	);
 }
 
-mfExtend( Drawer, Panel, {
+mfExtend( Drawer, View, {
+	// in milliseconds
+	minHideDelay: 10,
+
+	/**
+	 * Shows panel after a slight delay
+	 * @memberof View
+	 * @instance
+	 * @method
+	 */
+	show: function () {
+		var self = this;
+
+		if ( !self.isVisible() ) {
+			// use setTimeout to allow the browser to redraw if render() was called
+			// just before show(); this is important for animations to work
+			// (0ms doesn't work on Firefox, 10ms is enough)
+			//
+			// FIXME: setTimeout should be reconsidered in T209129
+			setTimeout( function () {
+				self.$el.addClass( 'visible animated' );
+				self.emit( 'show' );
+			}, self.minHideDelay );
+		}
+	},
+
+	/**
+	 * Hides panel
+	 * @memberof View
+	 * @instance
+	 */
+	hide: function () {
+		var self = this;
+
+		// see comment in show()
+		setTimeout( function () {
+			self.$el.removeClass( 'visible' );
+			self.emit( 'hide' );
+		}, self.minHideDelay );
+	},
+
+	/**
+	 * Determines if panel is visible
+	 * @memberof View
+	 * @instance
+	 * @return {boolean} View is visible
+	 */
+	isVisible: function () {
+		return this.$el.hasClass( 'visible' );
+	},
+
+	/**
+	 * Shows or hides panel
+	 * @memberof View
+	 * @instance
+	 */
+	toggle: function () {
+		if ( this.isVisible() ) {
+			this.hide();
+		} else {
+			this.show();
+		}
+	},
+
 	/**
 	 * @memberof Drawer
 	 * @instance
-	 * @mixes Panel#defaults
+	 * @mixes View#defaults
 	 * @property {Object} defaults Default options hash.
 	 * @property {Icon} defaults.collapseIcon
 	 */
-	defaults: util.extend( {}, Panel.prototype.defaults, {
+	defaults: util.extend( {}, View.prototype.defaults, {
 		// Used by CtaDrawer, BlockMessage.
 		collapseIcon: new Icon( {
 			name: 'arrow',
@@ -67,17 +138,6 @@ mfExtend( Drawer, Panel, {
 		} );
 		this.on( 'show', this.onShowDrawer.bind( this ) );
 		this.on( 'hide', this.onHideDrawer.bind( this ) );
-	},
-	/**
-	 * Stop Propagation event handler
-	 * @memberof Drawer
-	 * @instance
-	 * @param {Object} ev event object
-	 * Allow the drawer itself to be clickable (e.g. for copying and pasting references
-	 * clicking links in reference)
-	 */
-	stopPropagation: function ( ev ) {
-		ev.stopPropagation();
 	},
 
 	/**
