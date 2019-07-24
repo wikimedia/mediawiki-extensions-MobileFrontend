@@ -54,13 +54,6 @@ function Overlay( props ) {
 }
 
 mfExtend( Overlay, View, {
-	/**
-	 * Is overlay fullscreen
-	 * @memberof Overlay
-	 * @instance
-	 * @property {boolean}
-	 */
-	fullScreen: true,
 	template: util.template( `
 {{^noHeader}}
 <div class="overlay-header-container header-container{{#headerChrome}}
@@ -173,11 +166,9 @@ mfExtend( Overlay, View, {
 
 		this.scrollTop = window.pageYOffset;
 
-		if ( this.fullScreen ) {
-			$html.addClass( 'overlay-enabled' );
-			// skip the URL bar if possible
-			window.scrollTo( 0, 1 );
-		}
+		$html.addClass( 'overlay-enabled' );
+		// skip the URL bar if possible
+		window.scrollTo( 0, 1 );
 
 		if ( this.closeOnContentTap ) {
 			$html.find( '#mw-mf-page-center' ).one( 'click', this.hide.bind( this ) );
@@ -194,13 +185,9 @@ mfExtend( Overlay, View, {
 	 * @return {boolean} Whether the overlay was successfully hidden or not
 	 */
 	hide: function () {
-		var $html = util.getDocument();
-
-		if ( this.fullScreen ) {
-			$html.removeClass( 'overlay-enabled' );
-			// return to last known scroll position
-			window.scrollTo( window.pageXOffset, this.scrollTop );
-		}
+		util.getDocument().removeClass( 'overlay-enabled' );
+		// return to last known scroll position
+		window.scrollTo( window.pageXOffset, this.scrollTop );
 
 		this.$el.detach();
 
