@@ -202,6 +202,7 @@ QUnit.test( 'go back (change route) if overlay hidden but not by route change', 
 
 QUnit.test( 'Browser back can be overidden', function ( assert ) {
 	var escapableOverlay = new Overlay( {} ),
+		done = assert.async(),
 		$container = util.parseHTML( '<div>' ),
 		cannotGoBackOverlay = new Overlay( {
 			onBeforeExit: function () {}
@@ -219,18 +220,26 @@ QUnit.test( 'Browser back can be overidden', function ( assert ) {
 	assert.strictEqual( $container.find( escapableOverlay.$el ).length, 1,
 		'escapable overlay is displayed' );
 	fakeRouter.emit( 'route', routeEvent( { path: 'youcannotpass' } ) );
-	assert.strictEqual( $container.find( escapableOverlay.$el ).length, 0,
-		'escapable overlay is no longer displayed' );
-	assert.strictEqual( $container.find( cannotGoBackOverlay.$el ).length, 1,
-		'cannot go back overlay is now the overlay on display' );
-	// attempt to go back
-	fakeRouter.emit( 'route', routeEvent( { path: 'proceed' } ) );
-	assert.strictEqual( $container.find( cannotGoBackOverlay.$el ).length, 1,
-		'cannot go back overlay is still the overlay on display (cannot exit!)' );
-	assert.strictEqual( $container.find( escapableOverlay.$el ).length, 0,
-		'Escapeable overlay is not displayed' );
-	assert.strictEqual( manager.stack[0].overlay, cannotGoBackOverlay,
-		'Cannot go back overlay remains on the top of the stack' );
+	// emitting route will trigger the display of an overlay associated with the path.
+	// showing is an asynchronous process controlled via setTimeout
+	// hence this is an asynchronous test.
+	setTimeout( () => {
+		assert.strictEqual( $container.find( escapableOverlay.$el ).length, 0,
+			'escapable overlay is no longer displayed' );
+		assert.strictEqual( $container.find( cannotGoBackOverlay.$el ).length, 1,
+			'cannot go back overlay is now the overlay on display' );
+		// attempt to go back
+		fakeRouter.emit( 'route', routeEvent( { path: 'proceed' } ) );
+		setTimeout( () => {
+			assert.strictEqual( $container.find( cannotGoBackOverlay.$el ).length, 1,
+				'cannot go back overlay is still the overlay on display (cannot exit!)' );
+			assert.strictEqual( $container.find( escapableOverlay.$el ).length, 0,
+				'Escapeable overlay is not displayed' );
+			assert.strictEqual( manager.stack[0].overlay, cannotGoBackOverlay,
+				'Cannot go back overlay remains on the top of the stack' );
+			done();
+		}, 0 );
+	}, 0 );
 } );
 
 QUnit.test( 'stacked overlays', function ( assert ) {

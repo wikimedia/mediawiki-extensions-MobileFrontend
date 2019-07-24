@@ -164,7 +164,12 @@ mfExtend( Overlay, View, {
 		// return to last known scroll position
 		window.scrollTo( window.pageXOffset, this.scrollTop );
 
-		this.$el.detach();
+		// Since the hash change event caused by emitting hide will be detected later
+		// and to avoid the article being shown during a transition from one overlay to
+		// another, we regretfully detach the element asynchronously.
+		setTimeout( function () {
+			this.$el.detach();
+		}.bind( this ), 0 );
 
 		/**
 		 * Fired when the overlay is closed.
