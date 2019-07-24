@@ -11,7 +11,8 @@
 			"Fisterraeomar",
 			"Banjo",
 			"Navhy",
-			"Fitoschido"
+			"Fitoschido",
+			"Maria zaos"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Se un usuario está ou non está editando a través da interface móbil",
@@ -23,6 +24,7 @@
 	"mobile-frontend-categories-search": "Procurar categorías",
 	"mobile-frontend-categories-nodata": "Houbo un erro. Engadíu algunha categoría para gardar?",
 	"mobile-frontend-categories-summary": "Engadido a categorías",
+	"mobile-frontend-categories-notification": "As categorías foron actualizadas",
 	"mobile-frontend-categories-add-heading": "<strong>Engadir<span> $1</span> a novas categorías</strong>",
 	"mobile-frontend-categories-add-wait": "Gardando categorías, espere por favor.",
 	"mobile-frontend-categories-normal": "Basado no contido",
@@ -150,6 +152,8 @@
 	"mobile-frontend-nearby-requirements-guidance": "Probe cun navegador diferente ou active o JavaScript se o ten desactivado.",
 	"mobile-frontend-nearby-title": "Preto",
 	"mobile-frontend-nearby-info-heading": "Lugares preto de ti",
+	"mobile-frontend-nearby-info-description": "Pode ler artigos interesantes da {{SITENAME}} sobre lugares preto de vostede.",
+	"mobile-frontend-nearby-info-show-button": "Mostrar artigos na contorna",
 	"mobile-frontend-news-items": "Actualidade",
 	"mobile-frontend-opt-in-explain": "Ao unirse ás probas beta, vostede terá acceso ás últimas funcionalidades experimentais que poden conter erros de software.",
 	"mobile-frontend-overlay-close": "Pechar",

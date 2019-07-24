@@ -91,6 +91,7 @@
 	"mobile-frontend-editor-uploadenable": "Et redigeerida, laadi esmalt pilt üles.",
 	"mobile-frontend-editor-viewing-source-page": "<span>Lehekülje $1<strong>lähteteksti vaatamine</strong></span>",
 	"mobile-frontend-editor-wait": "Muudatuse salvestamine, palun oota.",
+	"mobile-frontend-editor-loading": "Toimeti laadimine…",
 	"mobile-frontend-expand-sections-description": "Ava alaosad vaikimisi kõigil lehekülgedel.",
 	"mobile-frontend-expand-sections-status": "Ava kõik alaosad",
 	"mobile-frontend-fontchanger-link": "Kirjasuurus",
