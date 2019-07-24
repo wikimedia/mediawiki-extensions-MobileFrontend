@@ -85,7 +85,7 @@ QUnit.test( 'Check api request on save', function ( assert ) {
 			section: 'Test'
 		} );
 
-	overlay.$textarea.val( 'Testcomment' );
+	overlay.state.text = 'Testcomment';
 	overlay.onSaveClick();
 
 	return deferred.then( function () {

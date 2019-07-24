@@ -25,10 +25,16 @@ var
 function TalkSectionOverlay( options ) {
 	this.editorApi = options.api;
 	this.pageGateway = new PageGateway( options.api );
+	this.state = {
+		// current value of the textarea
+		text: ''
+	};
 	Overlay.call( this,
 		util.extend( true, options, {
 			className: 'talk-overlay overlay',
+			onBeforeExit: this.onBeforeExit.bind( this ),
 			events: {
+				'input textarea': 'onInputTextarea',
 				'focus textarea': 'onFocusTextarea',
 				'click .save-button': 'onSaveClick'
 			}
@@ -78,6 +84,28 @@ mfExtend( TalkSectionOverlay, Overlay, {
 		reply: mw.msg( 'mobile-frontend-talk-reply' ),
 		info: mw.msg( 'mobile-frontend-talk-reply-info' )
 	} ),
+	/**
+	 * A function to run before exiting the overlay
+	 * @memberof TalkSectionOverlay
+	 * @instance
+	 * @param {Event} ev
+	 */
+	onInputTextarea: function ( ev ) {
+		this.state.text = ev.target.value;
+	},
+	/**
+	 * A function to run before exiting the overlay
+	 * @memberof TalkSectionOverlay
+	 * @instance
+	 * @param {Function} exit
+	 */
+	onBeforeExit: function ( exit ) {
+		var confirmMessage = mw.msg( 'mobile-frontend-editor-cancel-confirm' );
+
+		if ( !this.state.text || window.confirm( confirmMessage ) ) {
+			exit();
+		}
+	},
 	/**
 	 * Accounts for the fact sections are loaded asynchronously and sets the headers
 	 * for the overlay
@@ -157,7 +185,7 @@ mfExtend( TalkSectionOverlay, Overlay, {
 	 * @instance
 	 */
 	onSaveClick: function () {
-		var val = this.$textarea.val(),
+		var val = this.state.text,
 			self = this;
 
 		function enableSaveButton() {
@@ -208,7 +236,6 @@ mfExtend( TalkSectionOverlay, Overlay, {
 
 				self.hideSpinner();
 				popup.show( msg, 'toast error' );
-
 				enableSaveButton();
 			} );
 		} else {
