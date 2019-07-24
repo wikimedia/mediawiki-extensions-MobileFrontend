@@ -55,6 +55,7 @@ mfExtend( BlockMessage, Drawer, {
 	 * @inheritdoc
 	 */
 	postRender: function () {
+		Drawer.prototype.postRender.apply( this, arguments );
 		this.$el.find( '.block-message-creator a' ).prepend(
 			this.options.userIcon.$el
 		);
