@@ -14,19 +14,25 @@ use MobileFrontendEditorHooks;
 class ResourceLoaderFileModuleWithMFConfig extends ResourceLoaderFileModule {
 	/** @inheritDoc */
 	public function getScript( ResourceLoaderContext $context ) {
-		$config = MobileFrontendHooks::getResourceLoaderMFConfigVars() +
-			MobileFrontendEditorHooks::getResourceLoaderMFConfigVars();
-		return Xml::encodeJsCall( 'mw.config.set', [ $config ] )
+		return Xml::encodeJsCall( 'mw.config.set', [ $this->getConfigData() ] )
 			. parent::getScript( $context );
 	}
 
-	/** @return bool */
-	public function enableModuleContentVersion() {
-		return true;
+	private function getConfigData() {
+		return MobileFrontendHooks::getResourceLoaderMFConfigVars() +
+			MobileFrontendEditorHooks::getResourceLoaderMFConfigVars();
+	}
+
+	/** @inheritDoc */
+	public function getDefinitionSummary( ResourceLoaderContext $context ) {
+		$summary = parent::getDefinitionSummary( $context );
+		$summary['configData'] = $this->getConfigData();
+		return $summary;
 	}
 
 	/** @return bool */
 	public function supportsURLLoading() {
 		return false;
 	}
+
 }
