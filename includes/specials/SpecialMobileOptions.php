@@ -43,6 +43,14 @@ class SpecialMobileOptions extends MobileSpecialPage {
 	}
 
 	/**
+	 * Check if user can opt into the AMC mode. This is available only for mobile users
+	 * @return bool
+	 */
+	private function isAMCSwitchAvailable() {
+		return $this->mobileContext->shouldDisplayMobileView() && $this->amc->isAvailable();
+	}
+
+	/**
 	 * Set the required config for the page.
 	 */
 	public function setJsConfigVars() {
@@ -157,7 +165,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 		] );
 		$form->addClasses( [ 'mw-mf-settings' ] );
 
-		if ( $this->amc->isAvailable() ) {
+		if ( $this->isAMCSwitchAvailable() ) {
 			$fields[] = $this->buildAMCToggle();
 		}
 		// beta settings
@@ -282,7 +290,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 		}
 
 		$group = $request->getBool( 'enableBeta' ) ? 'beta' : '';
-		if ( $this->amc->isAvailable() ) {
+		if ( $this->isAMCSwitchAvailable() ) {
 			/** @var \MobileFrontend\AMC\UserMode $userMode */
 			$userMode = $this->services->getService( 'MobileFrontend.AMC.UserMode' );
 			$userMode->setEnabled( $request->getBool( 'enableAMC' ) );
