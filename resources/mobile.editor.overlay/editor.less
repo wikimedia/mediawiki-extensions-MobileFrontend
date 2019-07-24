@@ -3,6 +3,19 @@
 
 .editor-overlay {
 	.box-sizing( border-box );
+	// Use 3em toolbar (not 3.35em) for consistency with VE
+	padding-top: 3em;
+
+	.header {
+		height: 3em;
+	}
+
+	.header-action {
+		> a,
+		> button {
+			height: 3em;
+		}
+	}
 
 	textarea {
 		padding: 0.5em;
@@ -65,23 +78,25 @@
 		}
 	}
 
+	// Adjust OOUI icon size for VE toolbar and WTE editor switcher mini-toolbar
+	.ve-init-mw-mobileArticleTarget-toolbar,
+	.editor-switcher {
+		.oo-ui-iconElement-icon {
+			background-size: 20px 20px;
+		}
+	}
+
 	.editor-switcher {
 		border-left: 1px solid @colorGray12;
 
 		.oo-ui-toolbar-bar,
 		.oo-ui-toolbar-popups {
-			font-size: unit( 0.8 * @targetIconSize / @baseIconSize, em );
 			border-collapse: separate;
 		}
 
 		.oo-ui-toolbar-bar {
 			border: 0;
 			box-shadow: none;
-		}
-
-		.oo-ui-popupToolGroup-handle {
-			display: block;
-			height: 3.14em;
 		}
 	}
 }
