@@ -1,6 +1,5 @@
 var
 	util = require( './util' ),
-	mfExtend = require( './mfExtend' ),
 	overlayManager = null;
 
 /**
@@ -37,7 +36,7 @@ function attachHideEvent( overlay ) {
 	} );
 }
 
-mfExtend( OverlayManager, {
+OverlayManager.prototype = {
 	/**
 	 * Don't try to hide the active overlay on a route change event triggered
 	 * by hiding another overlay.
@@ -306,7 +305,7 @@ mfExtend( OverlayManager, {
 		attachHideEvent( overlay );
 		this._show( overlay );
 	}
-} );
+};
 
 /**
  * Retrieve a singleton instance using 'mediawiki.router'.
