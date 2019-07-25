@@ -30,15 +30,22 @@ class UserMode implements IUserMode {
 	 * @var Manager
 	 */
 	private $amc;
+	/**
+	 * Is Mobile mode active for current session
+	 * @var bool
+	 */
+	private $usingMobileMode;
 
 	/**
 	 * @param Manager $amcManager
 	 * @param \User $user
+	 * @param bool $usingMobileMode
 	 * @throws \RuntimeException When AMC mode is not available
 	 */
-	public function __construct( Manager $amcManager, \User $user ) {
+	public function __construct( Manager $amcManager, \User $user, $usingMobileMode ) {
 		$this->amc = $amcManager;
 		$this->user = $user;
+		$this->usingMobileMode = $usingMobileMode;
 	}
 
 	/**
@@ -53,9 +60,11 @@ class UserMode implements IUserMode {
 	 * @return bool
 	 */
 	public function isEnabled() {
-		return $this->amc->isAvailable() &&
+		return $this->amc->isAvailable() && (
+			!$this->usingMobileMode ||
 			$this->user->getOption( self::USER_OPTION_MODE_AMC,
-				self::OPTION_DISABLED ) === self::OPTION_ENABLED;
+				self::OPTION_DISABLED ) === self::OPTION_ENABLED
+		);
 	}
 
 	/**
@@ -87,12 +96,14 @@ class UserMode implements IUserMode {
 	 * NamedConstructor used by hooks system
 	 *
 	 * @param \User $user
+	 * @param bool $usingMobileMode
 	 * @return UserMode
 	 */
-	public static function newForUser( \User $user ) {
+	public static function newForUser( \User $user, $usingMobileMode ) {
 		return new UserMode(
 			MediaWikiServices::getInstance()->getService( 'MobileFrontend.AMC.Manager' ),
-			$user
+			$user,
+			$usingMobileMode
 		);
 	}
 
