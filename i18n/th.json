@@ -235,8 +235,6 @@
 	"mobile-frontend-panel-betaoptin-msg": "คุณต้องการลองใช้คุณลักษณะใหม่ ๆ หรือไม่? เมื่อเข้าร่วมเป็นผู้ทดสอบเบต้า คุณจะสามารถเข้าถึงคุณลักษณะระยะทดสอบ โดยอาจมีความเสี่ยงในการพบข้อบกพร่องและปัญหาต่าง ๆ ได้",
 	"mobile-frontend-search-feedback-link-text": "ให้คำติชมของคุณแก่เรา",
 	"mobile-frontend-search-feedback-prompt": "ไม่พบสิ่งที่คุณกำลังมองหางั้นหรือ?",
-	"mobile-frontend-mobile-option-MFLazyLoadReferences": "โหลดรายการอ้างอิงเฉพาะเมื่อจำเป็น",
-	"mobile-frontend-mobile-option-MFLazyLoadReferences-description": "โหลดรายการอ้างอิงเฉพาะเมื่อจำเป็นเท่านั้น",
 	"mobile-frontend-send-feedback": "ส่งคำติชม",
 	"mobile-frontend-mobile-option-MFLazyLoadImages-description": "โหลดรูปภาพเฉพาะเมื่อจำเป็นเท่านั้น",
 	"mobile-frontend-mobile-option-MFLazyLoadImages": "โหลดรูปภาพเฉพาะเมื่อจำเป็น",

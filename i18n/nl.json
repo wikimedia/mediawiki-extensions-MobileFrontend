@@ -249,7 +249,6 @@
 	"mobile-frontend-search-feedback-prompt": "Kon u niet vinden wat uw zocht?",
 	"mobile-frontend-notifications-filter-title": "Meldingen filteren",
 	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions": "Titelbeschrijvingen",
-	"mobile-frontend-mobile-option-MFLazyLoadReferences-description": "Referenties alleen laden indien nodig",
 	"mobile-frontend-send-feedback": "Terugkoppeling verzenden",
 	"mobile-frontend-mobile-option-MFLazyLoadImages-description": "Alleen afbeeldingen laden wanneer ze nodig zijn.",
 	"mobile-frontend-mobile-option-MFLazyLoadImages": "Afbeeldingen vertraagd laden",

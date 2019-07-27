@@ -6,6 +6,7 @@
 			"Көпек"
 		]
 	},
+	"mobile-frontend-editor-summary-placeholder": "Чижек: Алдаг эттинген, ишти неметинген",
 	"mobile-frontend-featured-article": "Хүннүң шилиндек материалы",
 	"mobile-frontend-last-modified-date": "Сөөлгү эткен үези $1 -  $2",
 	"mobile-frontend-news-items": "Медээлерде",
@@ -14,5 +15,5 @@
 	"mobile-frontend-view": "Мобильдиг янзызы",
 	"mobile-frontend-view-desktop": "Стационарлыг",
 	"tag-mobile_edit": "Мобилдиг эдилге",
-	"tag-mobile_web_edit": "Сайттың мобилдиг янзызын дамчыштыр эдер"
+	"tag-mobile_web_edit": "мобилдиг янзызындан эдилге"
 }

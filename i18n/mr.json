@@ -136,7 +136,6 @@
 	"tag-mobile_web_edit-description": "मोबाईल संकेतस्थळाकडून संपादन झाले",
 	"mobile-frontend-loading-message": "भारण करीत आहे...",
 	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions-description": "पृष्ठाविषयीची माहिती त्याखालील थोडक्यात लिहिलेलं वर्णन वाचून जाणून घ्यावी",
-	"mobile-frontend-mobile-option-MFLazyLoadReferences-description": "जेव्हा गरज असेल तेव्हाच संदर्भ पुरवावा",
 	"mobile-frontend-mobile-option-MFLazyLoadImages-description": "जेव्हा गरज असेल तेव्हाच फोटो लोड करावेत",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "टंकाचा आकार"
 }

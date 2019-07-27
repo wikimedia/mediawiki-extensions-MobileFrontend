@@ -187,7 +187,6 @@
 	"mobile-frontend-search-feedback-prompt": "आप जो देखना चाहते थे, वह नहीं मिला?",
 	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions": "शीर्षक विवरण",
 	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions-description": "शीर्षक के नीचे एक संक्षिप्त विवरण के साथ पृष्ठ के विषय के बारे में जानें",
-	"mobile-frontend-mobile-option-MFLazyLoadReferences-description": "संदर्भ केवल तब लोड करें जब आवश्यक हो",
 	"mobile-frontend-send-feedback": "प्रतिक्रिया भेजें",
 	"mobile-frontend-mobile-option-MFLazyLoadImages-description": "छवियाँ केवल तब लोड करें जब आवश्यक हो।",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "फ़ॉन्ट का आकार",

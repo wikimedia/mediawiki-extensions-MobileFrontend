@@ -226,8 +226,6 @@
 	"mobile-frontend-search-feedback-link-text": "Pružite nam povratne informacije.",
 	"mobile-frontend-search-feedback-prompt": "Niste mogli pronaći to što ste tražili?",
 	"mobile-frontend-notifications-filter-title": "Filtriranje obavještenja",
-	"mobile-frontend-mobile-option-MFLazyLoadReferences": "Odgođeno učitavanje referenci",
 	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions": "Opisi naslova",
-	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions-description": "Saznajte više o temi stranice pomoću kratkog opisa ispod naslova",
-	"mobile-frontend-mobile-option-MFLazyLoadReferences-description": "Učitaj reference samo kad su potrebne"
+	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions-description": "Saznajte više o temi stranice pomoću kratkog opisa ispod naslova"
 }

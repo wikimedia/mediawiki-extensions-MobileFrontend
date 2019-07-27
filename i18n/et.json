@@ -229,9 +229,7 @@
 	"mobile-frontend-panel-ok": "Sobib",
 	"mobile-frontend-panel-cancel": "Ei, aitäh",
 	"mobile-frontend-notifications-filter-title": "Teavituste filtrimine",
-	"mobile-frontend-mobile-option-MFLazyLoadReferences": "Viivita viidete laadimisega",
 	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions": "Pealkirjade kirjeldused",
 	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions-description": "Näita pealkirja all lühikirjeldust, et teemast ülevaade saada.",
-	"mobile-frontend-mobile-option-MFLazyLoadReferences-description": "Laadi viited ainult vajadusel.",
 	"mobile-frontend-beta-only": "Funktsioon saadaval ainult beetarežiimis"
 }

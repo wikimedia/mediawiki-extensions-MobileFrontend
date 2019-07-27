@@ -226,8 +226,6 @@
 	"mobile-frontend-search-feedback-link-text": "Pateikite mums savo atsiliepimą.",
 	"mobile-frontend-search-feedback-prompt": "Nepavyko rasti, ko ieškojote?",
 	"mobile-frontend-notifications-filter-title": "Filtruoti pranešimus",
-	"mobile-frontend-mobile-option-MFLazyLoadReferences": "Tingusis nuorodų užkrovimas",
-	"mobile-frontend-mobile-option-MFLazyLoadReferences-description": "Įkelti nuorodas tik tada, kada jų reikia",
 	"mobile-frontend-send-feedback": "Siųsti atsiliepimą",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Šrifto dydis",
 	"mobile-frontend-beta-only": "Funkcija galima tik beta versijoje",

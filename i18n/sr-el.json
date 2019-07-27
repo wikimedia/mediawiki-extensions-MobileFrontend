@@ -137,7 +137,5 @@
 	"mobile-frontend-panel-ok": "U redu",
 	"mobile-frontend-panel-cancel": "Ne, hvala",
 	"mobile-frontend-search-feedback-link-text": "Dajte nam Vaše mišljenje.",
-	"mobile-frontend-mobile-option-MFLazyLoadReferences": "Odgođeno učitavanje referenci",
-	"mobile-frontend-mobile-option-MFLazyLoadReferences-description": "Učitaj reference samo po potrebi",
 	"mobile-frontend-beta-only": "Funkcija samo dostupna u beta modu"
 }
