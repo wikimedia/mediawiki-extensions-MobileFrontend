@@ -94,7 +94,7 @@ class FeaturesManager {
 	}
 
 	/**
-	 * Check if given feature is available for currently logged in user
+	 * Check if given feature is available for current user
 	 *
 	 * @param string $featureId Feature identifier
 	 * @return bool
