@@ -1102,12 +1102,12 @@ class MobileContext extends ContextSource {
 	 * feature has been enabled.
 	 *
 	 * @param string $feature which description to show?
+	 * @param Config $config
 	 * @return bool
 	 * @throws DomainException If `feature` isn't one that shows Wikidata descriptions. See the
 	 *  `wgMFDisplayWikibaseDescriptions` configuration variable for detail
 	 */
-	public function shouldShowWikibaseDescriptions( $feature ) {
-		$config = $this->getMFConfig();
+	public function shouldShowWikibaseDescriptions( $feature, Config $config ) {
 		$displayWikibaseDescriptions = $config->get( 'MFDisplayWikibaseDescriptions' );
 		if ( !isset( $displayWikibaseDescriptions[ $feature ] ) ) {
 			throw new DomainException(

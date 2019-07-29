@@ -48,14 +48,11 @@ class MobileFrontendHooks {
 	 * Obtain the default mobile skin
 	 *
 	 * @param IContextSource $context ContextSource interface
-	 * @param MobileContext $mobileContext
+	 * @param Config $config
 	 * @throws RuntimeException if MFDefaultSkinClass is incorrectly configured
 	 * @return Skin
 	 */
-	protected static function getDefaultMobileSkin( IContextSource $context,
-		MobileContext $mobileContext
-	) {
-		$config = $mobileContext->getMFConfig();
+	protected static function getDefaultMobileSkin( IContextSource $context, Config $config ) {
 		$skinName = $config->get( 'MFDefaultSkinClass' );
 
 		if ( class_exists( $skinName ) ) {
@@ -83,6 +80,7 @@ class MobileFrontendHooks {
 		$services = MediaWikiServices::getInstance();
 
 		$mobileContext = $services->getService( 'MobileFrontend.Context' );
+		$config = $services->getService( 'MobileFrontend.Config' );
 
 		$mobileContext->doToggling();
 		if ( !$mobileContext->shouldDisplayMobileView()
@@ -138,7 +136,7 @@ class MobileFrontendHooks {
 			}
 		}
 
-		$skin = self::getDefaultMobileSkin( $context, $mobileContext );
+		$skin = self::getDefaultMobileSkin( $context, $config );
 		Hooks::run( 'RequestContextCreateSkinMobile', [ $mobileContext, $skin ] );
 
 		return false;
@@ -424,10 +422,12 @@ class MobileFrontendHooks {
 
 	/**
 	 * @param MobileContext $context
+	 * @param Config $config
 	 * @return array
 	 */
-	private static function getWikibaseStaticConfigVars( MobileContext $context ) {
-		$config = $context->getMFConfig();
+	private static function getWikibaseStaticConfigVars(
+		MobileContext $context, Config $config
+	) {
 		$features = array_keys( $config->get( 'MFDisplayWikibaseDescriptions' ) );
 		$result = [ 'wgMFDisplayWikibaseDescriptions' => [] ];
 		$featureManager = MediaWikiServices::getInstance()
@@ -439,7 +439,7 @@ class MobileFrontendHooks {
 
 		foreach ( $features as $feature ) {
 			$result['wgMFDisplayWikibaseDescriptions'][$feature] = $descriptionsEnabled &&
-				$context->shouldShowWikibaseDescriptions( $feature );
+				$context->shouldShowWikibaseDescriptions( $feature, $config );
 		}
 
 		return $result;
@@ -968,13 +968,14 @@ class MobileFrontendHooks {
 	public static function onOutputPageParserOutput( $outputPage, ParserOutput $po ) {
 		$services = MediaWikiServices::getInstance();
 		$context = $services->getService( 'MobileFrontend.Context' );
+		$config = $services->getService( 'MobileFrontend.Config' );
 		$featureManager = $services->getService( 'MobileFrontend.FeaturesManager' );
 		$title = $outputPage->getTitle();
 		$descriptionsEnabled = !$title->isMainPage() &&
 			$title->getNamespace() === NS_MAIN &&
 			$featureManager->isFeatureAvailableForCurrentUser(
 				'MFEnableWikidataDescriptions'
-			) && $context->shouldShowWikibaseDescriptions( 'tagline' );
+			) && $context->shouldShowWikibaseDescriptions( 'tagline', $config );
 
 		// Only set the tagline if the feature has been enabled and the article is in the main namespace
 		if ( $context->shouldDisplayMobileView() && $descriptionsEnabled ) {
@@ -1068,9 +1069,10 @@ class MobileFrontendHooks {
 		$services = MediaWikiServices::getInstance();
 		$userMode = $services->getService( 'MobileFrontend.AMC.UserMode' );
 		$featureManager = $services->getService( 'MobileFrontend.FeaturesManager' );
+		$config = $services->getService( 'MobileFrontend.Config' );
 
 		// If the device is a mobile, Remove the category entry.
-		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
+		$context = $services->getService( 'MobileFrontend.Context' );
 		if ( $context->shouldDisplayMobileView() ) {
 			unset( $vars['wgCategories'] );
 			$vars['wgMFMode'] = $context->isBetaGroupMember() ? 'beta' : 'stable';
@@ -1082,7 +1084,7 @@ class MobileFrontendHooks {
 		// Needs to know if in beta mode or not and needs to load for Minerva desktop as well.
 		// Ideally this would be inside ResourceLoaderFileModuleWithMFConfig but
 		// sessions are not allowed there.
-		$vars += self::getWikibaseStaticConfigVars( $context );
+		$vars += self::getWikibaseStaticConfigVars( $context, $config );
 	}
 
 	/**
