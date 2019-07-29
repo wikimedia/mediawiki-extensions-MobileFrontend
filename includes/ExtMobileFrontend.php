@@ -75,7 +75,7 @@ class ExtMobileFrontend {
 
 		if ( $context->getContentTransformations() ) {
 			$isSpecialPage = $title->isSpecialPage();
-			$removeImages = $featureManager->isFeatureAvailableInContext( 'MFLazyLoadImages', $context );
+			$removeImages = $featureManager->isFeatureAvailableForCurrentUser( 'MFLazyLoadImages' );
 			$showFirstParagraphBeforeInfobox = $ns === NS_MAIN &&
 				$featureManager->isFeatureAvailableForCurrentUser( 'MFShowFirstParagraphBeforeInfobox' );
 

@@ -2,7 +2,6 @@
 
 namespace MobileFrontend\Features;
 
-use MobileContext;
 use Hooks;
 
 /**
@@ -119,18 +118,5 @@ class FeaturesManager {
 	 */
 	public function getMode( $modeIdentifier ) {
 		return $this->userModes->getMode( $modeIdentifier );
-	}
-
-	/**
-	 * Verify that feature $featureId is available to the current user.
-	 *
-	 * @param string $featureId Feature id to verify
-	 * @param MobileContext $context Mobile context to check
-	 * @deprecated Use FeaturesManager::isFeatureAvailableForCurrentUser() instead
-	 * @return bool
-	 */
-	public function isFeatureAvailableInContext( $featureId, MobileContext $context ) {
-		// ignore $context, user is retrieved from the current session
-		return $this->isFeatureAvailableForCurrentUser( $featureId );
 	}
 }
