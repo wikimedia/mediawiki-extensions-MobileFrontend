@@ -800,6 +800,7 @@ class MobileFrontendHooks {
 		];
 		$preferences[SpecialMobileWatchlist::FILTER_OPTION_NAME] = $definition;
 		$preferences[SpecialMobileWatchlist::VIEW_OPTION_NAME] = $definition;
+		$preferences[MobileContext::USER_MODE_PREFERENCE_NAME] = $definition;
 
 		if ( $config->get( 'MFEnableMobilePreferences' ) ) {
 			$preferences[ self::MOBILE_PREFERENCES_SPECIAL_PAGES ] = [

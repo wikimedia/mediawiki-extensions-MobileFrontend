@@ -793,7 +793,8 @@
 			"MobileFrontendHooks::onBeforePageDisplay"
 		],
 		"GetPreferences": [
-			"MobileFrontendHooks::onGetPreferences"
+			"MobileFrontendHooks::onGetPreferences",
+			"MobileFrontend\\AMC\\Hooks::onGetPreferences"
 		],
 		"Gadgets::allowLegacy": [
 			"MobileFrontendHooks::onAllowLegacyGadgets"
