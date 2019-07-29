@@ -25,8 +25,8 @@ class ExtMobileFrontend {
 		$featureManager = $services->getService( 'MobileFrontend.FeaturesManager' );
 		$context = $services->getService( 'MobileFrontend.Context' );
 		$config = $services->getService( 'MobileFrontend.Config' );
-		$provideTagline = $featureManager->isFeatureAvailableInContext(
-			'MFEnableWikidataDescriptions', $context
+		$provideTagline = $featureManager->isFeatureAvailableForCurrentUser(
+			'MFEnableWikidataDescriptions'
 		) && $context->shouldShowWikibaseDescriptions( 'tagline' );
 		$provider = ContentProviderFactory::getProvider( $config, $out, $text, $provideTagline );
 
@@ -77,7 +77,7 @@ class ExtMobileFrontend {
 			$isSpecialPage = $title->isSpecialPage();
 			$removeImages = $featureManager->isFeatureAvailableInContext( 'MFLazyLoadImages', $context );
 			$showFirstParagraphBeforeInfobox = $ns === NS_MAIN &&
-				$featureManager->isFeatureAvailableInContext( 'MFShowFirstParagraphBeforeInfobox', $context );
+				$featureManager->isFeatureAvailableForCurrentUser( 'MFShowFirstParagraphBeforeInfobox' );
 
 			// Remove images if they're disabled from special pages, but don't transform otherwise
 			$formatter->filterContent( !$isSpecialPage,
