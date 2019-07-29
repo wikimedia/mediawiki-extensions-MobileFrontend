@@ -62,7 +62,7 @@ mfExtend( BlockMessage, Drawer, {
 		this.$el.find( '.block-message-icon' ).append(
 			this.options.stopHandIcon.$el
 		);
-		this.$el.find( '.block-message-buttons' ).append(
+		this.$el.find( '.block-message-buttons' ).prepend(
 			this.options.okButton.$el
 		);
 	},
