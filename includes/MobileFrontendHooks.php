@@ -199,7 +199,7 @@ class MobileFrontendHooks {
 		// TODO: We may want to enable the following script on Desktop Minerva...
 		// ... when Minerva is widely used.
 		if ( $context->shouldDisplayMobileView() &&
-			$featureManager->isFeatureAvailableInContext( 'MFLazyLoadImages', $context )
+			$featureManager->isFeatureAvailableForCurrentUser( 'MFLazyLoadImages' )
 		) {
 			$html .= Html::inlineScript( ResourceLoader::filter( 'minify-js',
 				MobileFrontendSkinHooks::gradeCImageSupport()
@@ -433,9 +433,8 @@ class MobileFrontendHooks {
 		$featureManager = MediaWikiServices::getInstance()
 			->getService( 'MobileFrontend.FeaturesManager' );
 
-		$descriptionsEnabled = $featureManager->isFeatureAvailableInContext(
-			'MFEnableWikidataDescriptions',
-			$context
+		$descriptionsEnabled = $featureManager->isFeatureAvailableForCurrentUser(
+			'MFEnableWikidataDescriptions'
 		);
 
 		foreach ( $features as $feature ) {
@@ -970,8 +969,8 @@ class MobileFrontendHooks {
 		$title = $outputPage->getTitle();
 		$descriptionsEnabled = !$title->isMainPage() &&
 			$title->getNamespace() === NS_MAIN &&
-			$featureManager->isFeatureAvailableInContext(
-				'MFEnableWikidataDescriptions', $context
+			$featureManager->isFeatureAvailableForCurrentUser(
+				'MFEnableWikidataDescriptions'
 			) && $context->shouldShowWikibaseDescriptions( 'tagline' );
 
 		// Only set the tagline if the feature has been enabled and the article is in the main namespace
@@ -1074,7 +1073,7 @@ class MobileFrontendHooks {
 			$vars['wgMFMode'] = $context->isBetaGroupMember() ? 'beta' : 'stable';
 			$vars['wgMFAmc'] = $userMode->isEnabled();
 			$vars['wgMFLazyLoadImages'] =
-				$featureManager->isFeatureAvailableInContext( 'MFLazyLoadImages', $context );
+				$featureManager->isFeatureAvailableForCurrentUser( 'MFLazyLoadImages' );
 		}
 		// Needed by mobile.startup, mobile.special.watchlist.scripts, mobile.special.nearby.scripts
 		// Needs to know if in beta mode or not and needs to load for Minerva desktop as well.
