@@ -31,6 +31,7 @@ function SearchOverlay( params ) {
 	var options = util.extend(
 		true,
 		{
+			headerChrome: true,
 			isBorderBox: false,
 			className: 'overlay search-overlay',
 			headers: [
@@ -129,7 +130,6 @@ mfExtend( SearchOverlay, Overlay, {
 	 *  below the search results
 	 */
 	defaults: util.extend( {}, Overlay.prototype.defaults, {
-		headerChrome: true,
 		clearIcon: new Icon( {
 			tagName: 'button',
 			name: 'search-clear',

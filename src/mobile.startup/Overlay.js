@@ -15,6 +15,7 @@ var
  * @fires Overlay#hide
  * @param {Object} props
  * @param {Object} props.events - custom events to be bound to the overlay.
+ * @param {boolean} [props.headerChrome] Whether the header has chrome.
  * @param {View[]} [props.headerActions] children (usually buttons or icons)
  *   that should be placed in the header actions. Ignored when `headers` used.
  * @param {string} [props.heading] heading for the overlay header. Use `headers` where
@@ -37,14 +38,19 @@ function Overlay( props ) {
 		this,
 		util.extend(
 			true,
-			{ className: 'overlay' },
+			{
+				headerChrome: false,
+				className: 'overlay'
+			},
 			props,
 			{
 				events: util.extend(
 					{
 						// FIXME: Remove .initial-header selector
 						'click .cancel, .confirm, .initial-header .back': 'onExitClick',
-						click: 'stopPropagation'
+						click: ( ev ) => {
+							ev.stopPropagation();
+						}
 					},
 					props.events
 				)
@@ -65,23 +71,6 @@ mfExtend( Overlay, View, {
 </div>
 <div class="overlay-footer-container position-fixed"></div>
 	` ),
-	/**
-	 * @memberof Overlay
-	 * @instance
-	 * @mixes View#defaults
-	 * @property {Object} defaults Default options hash.
-	 * @property {boolean} defaults.headerChrome Whether the header has chrome.
-	 */
-	defaults: {
-		headerChrome: false
-	},
-	/**
-	 * Flag overlay to close on content tap
-	 * @memberof Overlay
-	 * @instance
-	 * @property {boolean}
-	 */
-	closeOnContentTap: false,
 
 	/**
 	 * Shows the spinner right to the input field.
@@ -147,16 +136,6 @@ mfExtend( Overlay, View, {
 
 	},
 	/**
-	 * Stop clicks in the overlay from propagating to the page
-	 * (prevents non-fullscreen overlays from being closed when they're tapped)
-	 * @memberof Overlay
-	 * @instance
-	 * @param {Object} ev Event Object
-	 */
-	stopPropagation: function ( ev ) {
-		ev.stopPropagation();
-	},
-	/**
 	 * Attach overlay to current view and show it.
 	 * @memberof Overlay
 	 * @instance
@@ -169,10 +148,6 @@ mfExtend( Overlay, View, {
 		$html.addClass( 'overlay-enabled' );
 		// skip the URL bar if possible
 		window.scrollTo( 0, 1 );
-
-		if ( this.closeOnContentTap ) {
-			$html.find( '#mw-mf-page-center' ).one( 'click', this.hide.bind( this ) );
-		}
 
 		this.$el.addClass( 'visible' );
 	},
