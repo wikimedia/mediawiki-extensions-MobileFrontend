@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\Revision\RevisionRecord;
+
 /**
  * This is an abstract class intended for use by special pages that consist primarily of
  * a list of pages, for example, Special:Watchlist or Special:History.
@@ -78,11 +80,11 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 	 * @return string plain test label
 	 */
 	protected function getRevisionCommentHTML( $rev, $user, $unhide ) {
-		if ( $rev->userCan( Revision::DELETED_COMMENT, $user ) ) {
-			if ( $rev->isDeleted( Revision::DELETED_COMMENT ) && !$unhide ) {
+		if ( $rev->userCan( RevisionRecord::DELETED_COMMENT, $user ) ) {
+			if ( $rev->isDeleted( RevisionRecord::DELETED_COMMENT ) && !$unhide ) {
 				$comment = $this->msg( 'rev-deleted-comment' )->escaped();
 			} else {
-				$comment = $rev->getComment( Revision::FOR_THIS_USER, $user );
+				$comment = $rev->getComment( RevisionRecord::FOR_THIS_USER, $user );
 				// escape any HTML in summary and add CSS for any auto-generated comments
 				$comment = $this->formatComment( $comment, $this->title );
 			}
@@ -104,15 +106,15 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 	 * @return string plain test label
 	 */
 	protected function getUsernameText( $rev, $user, $unhide ) {
-		$userId = $rev->getUser( Revision::FOR_THIS_USER, $user );
+		$userId = $rev->getUser( RevisionRecord::FOR_THIS_USER, $user );
 		if ( $userId === 0 ) {
-			$username = IP::prettifyIP( $rev->getUserText( Revision::RAW ) );
+			$username = IP::prettifyIP( $rev->getUserText( RevisionRecord::RAW ) );
 		} else {
-			$username = $rev->getUserText( Revision::FOR_THIS_USER, $user );
+			$username = $rev->getUserText( RevisionRecord::FOR_THIS_USER, $user );
 		}
 		if (
-			!$rev->userCan( Revision::DELETED_USER, $user ) ||
-			( $rev->isDeleted( Revision::DELETED_USER ) && !$unhide )
+			!$rev->userCan( RevisionRecord::DELETED_USER, $user ) ||
+			( $rev->isDeleted( RevisionRecord::DELETED_USER ) && !$unhide )
 		) {
 			$username = $this->msg( 'rev-deleted-user' )->text();
 		}

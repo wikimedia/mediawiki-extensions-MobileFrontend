@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Revision\RevisionRecord;
 use Wikimedia\Assert\Assert;
 
 /**
@@ -15,8 +16,8 @@ class InlineDifferenceEngine extends DifferenceEngine {
 	 * @return bool
 	 */
 	public function isDeletedDiff() {
-		return $this->mNewRev && $this->mNewRev->isDeleted( Revision::DELETED_TEXT ) ||
-			$this->mOldRev && $this->mOldRev->isDeleted( Revision::DELETED_TEXT );
+		return ( $this->mNewRev && $this->mNewRev->isDeleted( RevisionRecord::DELETED_TEXT ) ) ||
+			( $this->mOldRev && $this->mOldRev->isDeleted( RevisionRecord::DELETED_TEXT ) );
 	}
 
 	/**
@@ -28,7 +29,7 @@ class InlineDifferenceEngine extends DifferenceEngine {
 	 */
 	public function isSuppressedDiff() {
 		return $this->isDeletedDiff() &&
-			$this->mNewRev->isDeleted( Revision::DELETED_RESTRICTED );
+			$this->mNewRev->isDeleted( RevisionRecord::DELETED_RESTRICTED );
 	}
 
 	/**
@@ -40,9 +41,9 @@ class InlineDifferenceEngine extends DifferenceEngine {
 	 */
 	public function isUserAllowedToSee() {
 		$user = $this->getUser();
-		$allowed = $this->mNewRev->userCan( Revision::DELETED_TEXT, $user );
+		$allowed = $this->mNewRev->userCan( RevisionRecord::DELETED_TEXT, $user );
 		if ( $this->mOldRev &&
-			!$this->mOldRev->userCan( Revision::DELETED_TEXT, $user )
+			!$this->mOldRev->userCan( RevisionRecord::DELETED_TEXT, $user )
 		) {
 			$allowed = false;
 		}
@@ -67,7 +68,7 @@ class InlineDifferenceEngine extends DifferenceEngine {
 		$rev = Revision::newFromId( $this->getNewid() );
 
 		if ( !$prevId ) {
-			$audience = $unhide ? Revision::FOR_THIS_USER : Revision::FOR_PUBLIC;
+			$audience = $unhide ? RevisionRecord::FOR_THIS_USER : RevisionRecord::FOR_PUBLIC;
 			$diff = '<ins>'
 				. nl2br(
 					htmlspecialchars(

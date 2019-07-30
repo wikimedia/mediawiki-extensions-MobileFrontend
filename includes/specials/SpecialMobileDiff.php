@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\Storage\RevisionRecord;
+
 /**
  * Show the difference between two revisions of a page
  */
@@ -186,10 +188,10 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	 * @return string Build HTML for edit comment section
 	 */
 	private function getCommentHTML( $unhide = false ) {
-		$audience = $unhide ? Revision::FOR_THIS_USER : Revision::FOR_PUBLIC;
+		$audience = $unhide ? RevisionRecord::FOR_THIS_USER : RevisionRecord::FOR_PUBLIC;
 		$comment = $this->rev->getComment( $audience );
 
-		if ( $this->rev->isDeleted( Revision::DELETED_COMMENT ) && !$unhide ) {
+		if ( $this->rev->isDeleted( RevisionRecord::DELETED_COMMENT ) && !$unhide ) {
 			$commentHtml = $this->msg( 'rev-deleted-comment' )->escaped();
 		} elseif ( $comment !== '' && $comment !== null ) {
 			$commentHtml = Linker::formatComment( $comment, $this->targetTitle );
@@ -300,7 +302,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 			Html::openElement( 'div', [ 'class' => 'post-content' ] )
 		);
 
-		$audience = $unhide ? Revision::FOR_THIS_USER : Revision::FOR_PUBLIC;
+		$audience = $unhide ? RevisionRecord::FOR_THIS_USER : RevisionRecord::FOR_PUBLIC;
 		$userId = $this->rev->getUser( $audience );
 		$ipAddr = $this->rev->getUserText( $audience );
 
