@@ -1,5 +1,4 @@
 var
-	mfExtend = require( './mfExtend' ),
 	Drawer = require( './Drawer' ),
 	util = require( './util' ),
 	Button = require( './Button' ),
@@ -13,108 +12,48 @@ var
  * @prop {string} [returnTo]
  * @prop {QueryParams} [queryParams]
  * @prop {QueryParams} [signupQueryParams]
- * @prop {Object} [options.progressiveButton] template options for Button element for signing in
- * @prop {Object} [options.actionAnchor] template options for Anchor element for signing up
+ * @prop {Object} [progressiveButton] button options for Button element for signing in.
+ *  If omitted will create a login URL.
+ * @prop {Object} [actionAnchor] anchor options for Anchor element for signing up. If omitted
+ *   will create a sign up URL
+ * @prop {string} content text - what is the call to action?
  */
 
 /**
  * This creates the drawer at the bottom of the screen that appears when an anonymous
  * user tries to perform an action that requires being logged in. It presents the user
  * with options to log in or sign up for a new account.
- * @class CtaDrawer
- * @extends Drawer
  * @uses Button
  * @uses Icon
  * @uses Anchor
  * @param {Options} options
+ * @return {Drawer}
  */
-function CtaDrawer( options ) {
-	Drawer.call( this,
-		util.extend( {}, Drawer.prototype.defaults, {
-			progressiveButton: new Button( {
-				progressive: true,
-				label: mw.msg( 'mobile-frontend-watchlist-cta-button-login' )
-			} ).options,
-			actionAnchor: new Anchor( {
-				progressive: true,
-				label: mw.msg( 'mobile-frontend-watchlist-cta-button-signup' )
-			} ).options
+function CtaDrawer( options = {} ) {
+	var params = redirectParams( options.queryParams, options.returnTo );
+	return new Drawer(
+		util.extend( {
+			children: [
+				util.parseHTML( '<p>' ).text( options.content ),
+				new Button( util.extend( {
+					progressive: true,
+					href: mw.util.getUrl( 'Special:UserLogin', params ),
+					label: mw.msg( 'mobile-frontend-watchlist-cta-button-login' )
+				}, options.progressiveButton ) ).$el,
+				util.parseHTML( '<div>' ).addClass( 'cta-drawer__anchors' ).append(
+					// Update Minerva first to avoid needing to keep this closeAnchor
+					new Anchor( util.extend( {
+						href: mw.util.getUrl(
+							'Special:UserLogin', signUpParams( params, options.signupQueryParams )
+						),
+						progressive: true,
+						label: mw.msg( 'mobile-frontend-watchlist-cta-button-signup' )
+					}, options.actionAnchor ) ).$el
+				)
+			]
 		}, options )
 	);
 }
-
-mfExtend( CtaDrawer, Drawer, {
-	/**
-	 * @memberof CtaDrawer
-	 * @instance
-	 * @mixes Drawer#defaults
-	 * @property {Object} defaults Default options hash.
-	 * @property {Object} defaults.collapseIcon options for Icon for collapsing the drawer
-	 * @property {Object} defaults.progressiveButton options for Button element for signing in
-	 * @property {Object} defaults.actionAnchor options for Anchor element for signing up
-	 */
-	defaults: util.extend( {}, Drawer.prototype.defaults, {
-		progressiveButton: {
-			progressive: true,
-			label: mw.msg( 'mobile-frontend-watchlist-cta-button-login' )
-		},
-		actionAnchor: {
-			progressive: true,
-			label: mw.msg( 'mobile-frontend-watchlist-cta-button-signup' )
-		}
-	} ),
-	/**
-		 * @memberof CtaDrawer
-		 * @instance
-		 */
-	template: util.template( `
-<p>{{content}}</p>
-<div class="cta-drawer__anchors"></div>
-	` ),
-	/**
-		 * @inheritdoc
-		 * @memberof CtaDrawer
-		 * @instance
-		 */
-	preRender: function () {
-		var params = redirectParams( this.options.queryParams, this.options.returnTo );
-
-		// Give the button and the anchor a default target, if it isn't set already. Buttons are
-		// customized by Minerva's red link drawer, skins.minerva.scripts/init.js.
-		if ( !this.options.progressiveButton.href ) {
-			this.options.progressiveButton.href = mw.util.getUrl( 'Special:UserLogin', params );
-		}
-		if ( !this.options.actionAnchor.href ) {
-			this.options.actionAnchor.href = mw.util.getUrl(
-				'Special:UserLogin', signUpParams( params, this.options.signupQueryParams )
-			);
-		}
-	},
-	/**
-	 * @inheritdoc
-	 */
-	postRender: function () {
-		var options = this.options,
-			anchors = [];
-		if ( options.actionAnchor ) {
-			anchors.push( new Anchor( options.actionAnchor ) );
-		}
-		if ( options.closeAnchor ) {
-			anchors.push( new Anchor( options.closeAnchor ) );
-		}
-		Drawer.prototype.postRender.apply( this, arguments );
-		if ( options.progressiveButton ) {
-			( new Button( options.progressiveButton ) ).$el.insertBefore(
-				this.$el.find( '.cta-drawer__anchors' )
-			);
-		}
-		this.$el.find( '.cta-drawer__anchors' ).append(
-			anchors.map( function ( anchor ) {
-				return anchor.$el;
-			} )
-		);
-	}
-} );
 
 /**
  * Special:UserLogin post-request redirect query parameters.

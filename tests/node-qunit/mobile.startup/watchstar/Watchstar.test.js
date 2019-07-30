@@ -2,7 +2,7 @@
 var
 	// feature dependencies
 	// require OO or mw global
-	Watchstar, CtaDrawer, toast, Icon, watchIcon, user, Page, toastSpy,
+	Watchstar, Drawer, toast, Icon, watchIcon, user, Page, toastSpy,
 	// setup dependencies
 	dom = require( '../../utils/dom' ),
 	jQuery = require( '../../utils/jQuery' ),
@@ -25,7 +25,7 @@ QUnit.module( 'MobileFrontend Watchstar.js', {
 
 		// requires OO global
 		Watchstar = require( '../../../../src/mobile.startup/watchstar/Watchstar' );
-		CtaDrawer = require( '../../../../src/mobile.startup/CtaDrawer' );
+		Drawer = require( '../../../../src/mobile.startup/Drawer' );
 		Icon = require( '../../../../src/mobile.startup/Icon' );
 		user = mw.user;
 		Page = require( '../../../../src/mobile.startup/Page' );
@@ -48,7 +48,7 @@ QUnit.test( 'Anonymous user opens drawer', function ( assert ) {
 	var ctaDrawerSpy, $el;
 
 	sandbox.stub( user, 'isAnon' ).returns( true );
-	ctaDrawerSpy = sandbox.stub( CtaDrawer.prototype, 'show' );
+	ctaDrawerSpy = sandbox.stub( Drawer.prototype, 'show' );
 	$el = $( '<div>' );
 
 	// eslint-disable-next-line no-new
