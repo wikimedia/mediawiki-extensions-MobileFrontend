@@ -11,7 +11,7 @@
 .drawer.references-drawer {
 	background-color: @colorGray1;
 	color: @colorGray12;
-	max-height: 400px;  // or half of window height, whichever is smaller (see ReferencesDrawerBeta.js)
+	max-height: 50%; // on tablet this will become capped at 400px
 	overflow-y: auto;
 	padding: @drawerPadding;
 
@@ -64,5 +64,11 @@
 
 	.reference-text {
 		line-height: 1.4;
+	}
+}
+
+@media all and ( min-width: @width-breakpoint-tablet ) {
+	.drawer.references-drawer {
+		max-height: 400px;
 	}
 }
