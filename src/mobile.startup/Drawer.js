@@ -12,15 +12,19 @@ var
  * A {@link View} that pops up from the bottom of the screen.
  * @class Drawer
  * @extends View
+ * @final
  * @param {Object} [props]
  * @param {string} [props.className] Additional CSS classes to add
  * @param {JQuery.Element[]} [props.children] An array of elements to append to
  * @param {Function} [props.onBeforeHide] Callback called before hiding the drawer
+ * @param {boolean} [props.closeOnScroll] Whether the drawer should disappear on a scroll event
+ * the drawer.
  */
 function Drawer( props ) {
 	View.call( this,
 		util.extend(
 			{
+				closeOnScroll: true,
 				onBeforeHide: () => {}
 			},
 			props,
@@ -47,21 +51,34 @@ mfExtend( Drawer, View, {
 	 * @memberof View
 	 * @instance
 	 * @method
+	 * @return {JQuery.Promise}
 	 */
 	show: function () {
-		var self = this;
-
-		if ( !self.isVisible() ) {
+		const d = util.Deferred();
+		if ( !this.isVisible() ) {
 			// use setTimeout to allow the browser to redraw if render() was called
 			// just before show(); this is important for animations to work
 			// (0ms doesn't work on Firefox, 10ms is enough)
 			//
 			// FIXME: setTimeout should be reconsidered in T209129
 			setTimeout( function () {
-				self.$el.addClass( 'visible animated' );
-				self.emit( 'show' );
-			}, self.minHideDelay );
+				this.$el.addClass( 'visible animated' );
+				const closeOnScroll = this.options.closeOnScroll;
+				this.$el.parent().addClass( `drawer-visible${closeOnScroll ? '' : ' has-drawer--with-scroll-locked'}` );
+
+				setTimeout( function () {
+					var $window = util.getWindow();
+					$window.one( 'click.drawer', this.hide.bind( this ) );
+					if ( closeOnScroll ) {
+						$window.one( 'scroll.drawer', this.hide.bind( this ) );
+					}
+					d.resolve();
+				}.bind( this ), this.minHideDelay );
+			}.bind( this ), this.minHideDelay );
+		} else {
+			d.resolve();
 		}
+		return d.promise();
 	},
 
 	/**
@@ -70,13 +87,15 @@ mfExtend( Drawer, View, {
 	 * @instance
 	 */
 	hide: function () {
-		var self = this;
-
 		// see comment in show()
 		setTimeout( function () {
-			self.$el.removeClass( 'visible' );
-			self.emit( 'hide' );
-		}, self.minHideDelay );
+			this.$el.removeClass( 'visible' );
+			this.options.onBeforeHide();
+			this.$el.parent().removeClass( 'drawer-visible has-drawer--with-scroll-locked' );
+			// .one() registers one callback for scroll and click independently
+			// if one fired, get rid of the other one
+			util.getWindow().off( '.drawer' );
+		}.bind( this ), this.minHideDelay );
 	},
 
 	/**
@@ -109,13 +128,6 @@ mfExtend( Drawer, View, {
 	 * @property {string}
 	 */
 	appendToElement: 'body',
-	/**
-	 * Whether the drawer should disappear on a scroll event
-	 * @memberof Drawer
-	 * @instance
-	 * @property {boolean}
-	 */
-	closeOnScroll: true,
 
 	/**
 	 * @inheritdoc
@@ -123,7 +135,6 @@ mfExtend( Drawer, View, {
 	 * @instance
 	 */
 	postRender: function () {
-		var self = this;
 		// append the collapse icon at the top of the drawer
 		this.$el.prepend( collapseIcon.$el );
 
@@ -135,44 +146,9 @@ mfExtend( Drawer, View, {
 		// This module might be loaded at the top of the page e.g. Special:Uploads
 		// Thus ensure we wait for the DOM to be loaded
 		util.docReady( function () {
-			self.appendTo( self.appendToElement );
-			self.$el.parent().addClass( 'has-drawer' );
-		} );
-		this.on( 'show', this.onShowDrawer.bind( this ) );
-		this.on( 'hide', this.onHideDrawer.bind( this ) );
-	},
-
-	/**
-	 * ShowDrawer event handler
-	 * @memberof Drawer
-	 * @instance
-	 */
-	onShowDrawer: function () {
-		var self = this;
-
-		this.$el.parent().addClass( 'drawer-visible' );
-
-		setTimeout( function () {
-			var $window = util.getWindow();
-			$window.one( 'click.drawer', self.hide.bind( self ) );
-			if ( self.closeOnScroll ) {
-				$window.one( 'scroll.drawer', self.hide.bind( self ) );
-			}
-		}, self.minHideDelay );
-	},
-
-	/**
-	 * HideDrawer event handler
-	 * @memberof Drawer
-	 * @instance
-	 */
-	onHideDrawer: function () {
-		this.options.onBeforeHide();
-
-		this.$el.parent().removeClass( 'drawer-visible' );
-		// .one() registers one callback for scroll and click independently
-		// if one fired, get rid of the other one
-		util.getWindow().off( '.drawer' );
+			this.appendTo( this.appendToElement );
+			this.$el.parent().addClass( 'has-drawer' );
+		}.bind( this ) );
 	}
 } );
 

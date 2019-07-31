@@ -41,6 +41,7 @@ module.exports = {
 	notifications: {
 		overlay: require( './notifications/overlay' )
 	},
+	references: require( './references/references' ),
 	search: {
 		SearchOverlay: require( './search/SearchOverlay' ),
 		MobileWebSearchLogger: require( './search/MobileWebSearchLogger' ),

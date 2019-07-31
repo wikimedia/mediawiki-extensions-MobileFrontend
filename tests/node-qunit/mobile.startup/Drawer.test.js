@@ -1,9 +1,10 @@
-var
+var minHideDelay,
 	// Imports
 	dom = require( '../utils/dom' ),
 	Drawer,
 	jQuery = require( '../utils/jQuery' ),
 	mw = require( '../utils/mw' ),
+	mustache = require( '../utils/mustache' ),
 	oo = require( '../utils/oo' ),
 	sandbox,
 	sinon = require( 'sinon' ),
@@ -29,9 +30,11 @@ QUnit.module( 'MobileFrontend Drawer.js', {
 
 		// Additional Drawer global dependency.
 		mw.setUp( sandbox, global );
+		mustache.setUp( sandbox, global );
 
 		// Dynamically import Drawer to use fresh sandboxed dependencies.
 		Drawer = require( '../../../src/mobile.startup/Drawer' );
+		minHideDelay = Drawer.prototype.minHideDelay;
 
 		// Rewire the prototype, not the instance, since this property is used during construction.
 		sandbox.stub( Drawer.prototype, 'appendToElement', '#' + parentID );
@@ -92,27 +95,25 @@ QUnit.test( 'consumes clicks', function ( assert ) {
 QUnit.test( 'visible on show()', function ( assert ) {
 	var
 		done = assert.async(),
-		subject = new Drawer();
+		onShow = () => {
+			assertVisible();
+			assert.ok( true );
+			done();
+		},
+		subject = new Drawer( {} );
 
-	subject.on( 'show', function () {
-		assertVisible();
-		assert.ok( true );
-		done();
-	} );
-
-	subject.show();
+	subject.show().then( onShow );
 } );
 
 QUnit.test( 'hidden on hide()', function ( assert ) {
 	var
 		done = assert.async(),
-		subject = new Drawer();
-
-	subject.on( 'hide', function () {
-		assertHidden();
-		assert.ok( true );
-		done();
-	} );
+		onBeforeHide = () => {
+			assertHidden();
+			assert.ok( true );
+			done();
+		},
+		subject = new Drawer( { onBeforeHide } );
 
 	subject.hide();
 } );
@@ -120,39 +121,45 @@ QUnit.test( 'hidden on hide()', function ( assert ) {
 QUnit.test( 'hidden on click once presented', function ( assert ) {
 	var
 		done = assert.async(),
-		subject = new Drawer();
+		onBeforeHide = () => {
+			// onBeforeHide currently runs before class is removed.
+			setTimeout( () => {
+				assertHidden();
+				assert.ok( true );
+				done();
+			}, minHideDelay );
+		},
+		onShow = () => {
+			parent.click();
+		},
+		subject = new Drawer( {
+			onBeforeHide
+		} );
 
-	subject.on( 'hide', function () {
-		assertHidden();
-		assert.ok( true );
-		done();
-	} );
-
-	callOnPresented( subject, function () {
-		parent.click();
-	} );
-
-	subject.show();
+	subject.show().then( onShow );
 } );
 
 QUnit.test( 'hidden on scroll once presented', function ( assert ) {
 	var
 		done = assert.async(),
-		subject = new Drawer();
+		onBeforeHide = () => {
+			setTimeout( () => {
+				assertHidden();
+				assert.ok( true );
+				done();
+			}, minHideDelay );
+		},
+		onShow = () => {
+			setTimeout( () => {
+				var event = new window.Event( 'scroll', { bubbles: true } );
+				parent.dispatchEvent( event );
+			}, minHideDelay );
+		},
+		subject = new Drawer( {
+			onBeforeHide
+		} );
 
-	subject.on( 'hide', function () {
-		assertHidden();
-		assert.ok( true );
-		done();
-	} );
-
-	callOnPresented( subject, function () {
-		// https://github.com/jsdom/jsdom/issues/1422
-		var event = new window.Event( 'scroll', { bubbles: true } );
-		parent.dispatchEvent( event );
-	} );
-
-	subject.show();
+	subject.show().then( onShow );
 } );
 
 QUnit.test( 'HTML is valid', function ( assert ) {
@@ -162,19 +169,6 @@ QUnit.test( 'HTML is valid', function ( assert ) {
 		'<div class="drawer position-fixed view-border-box"><div class="mw-ui-icon mw-ui-icon-mf-arrow mw-ui-icon-element   cancel"></div></div>'
 	);
 } );
-
-/**
- * @param {Drawer} subject
- * @param {Function} callback
- * @return {void}
-*/
-function callOnPresented( subject, callback ) {
-	// Wait for appearance.
-	subject.on( 'show', function () {
-		// Wait for minimum presentation duration to expire.
-		setTimeout( callback, subject.minHideDelay );
-	} );
-}
 
 function assertVisible() {
 	sinon.assert.match( parent.className, /.*\bdrawer-visible\b.*/ );

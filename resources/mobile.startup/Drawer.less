@@ -51,6 +51,12 @@
 	}
 }
 
+// prevent body from scrolling
+// won't work on firefox for android because of this bug: https://bugzilla.mozilla.org/show_bug.cgi?id=886969
+.has-drawer--with-scroll-locked {
+	overflow: hidden;
+}
+
 // Darken the content to highlight the drawer.
 .has-drawer.drawer-visible {
 	.transparent-shield {
