@@ -1,9 +1,10 @@
-/* global ve */
+/* global ve, $ */
 var EditorOverlayBase = require( './EditorOverlayBase' ),
 	EditorGateway = require( './EditorGateway' ),
 	blockMessageDrawer = require( './blockMessageDrawer' ),
 	mfExtend = require( '../mobile.startup/mfExtend' ),
 	router = mw.loader.require( 'mediawiki.router' ),
+	identifyLeadParagraph = require( './identifyLeadParagraph' ),
 	util = require( '../mobile.startup/util' );
 
 /**
@@ -99,6 +100,7 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 		this.target.once( 'surfaceReady', function () {
 			this.emit( 'editor-loaded' );
 			this.$el.removeClass( 'loading' );
+			this.scrollToLeadParagraph();
 			// log edit attempt
 			overlay.log( { action: 'ready' } );
 			overlay.log( { action: 'loaded' } );
@@ -112,6 +114,33 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 			this.$el.removeClass( 'loading' );
 		} else {
 			this.checkForBlocks();
+		}
+	},
+	/**
+	 * Scroll so that the lead paragraph in edit mode shows at the same place on the screen
+	 * as the lead paragraph in read mode.
+	 *
+	 * Their normal position is different because of (most importantly) the lead paragraph
+	 * transformation to move it before the infobox, and also invisible templates and slugs
+	 * caused by the presence of hatnote templates (both only shown in edit mode).
+	 */
+	scrollToLeadParagraph: function () {
+		var editLead, readLead, offset,
+			currentPageHTMLParser = this.options.currentPageHTMLParser,
+			fakeScroll = this.options.fakeScroll,
+			$window = $( window ),
+			section = this.target.section,
+			surface = this.target.getSurface(),
+			mode = surface.getMode();
+
+		if ( ( section === null || section === 0 ) && mode === 'visual' ) {
+			editLead = identifyLeadParagraph( surface.getView().$attachedRootNode );
+			readLead = identifyLeadParagraph( currentPageHTMLParser.getLeadSectionElement() );
+
+			if ( editLead && readLead ) {
+				offset = $( editLead ).offset().top - ( $( readLead ).offset().top - fakeScroll );
+				$window.scrollTop( $window.scrollTop() + offset );
+			}
 		}
 	},
 	/**
