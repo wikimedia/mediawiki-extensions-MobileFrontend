@@ -204,22 +204,7 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	 * @return bool
 	 */
 	private function isNotEmptyNode( DOMNode $node ) {
-		$matches = null;
-		// try to match any non-whitespace character
-		$count = preg_match( '/\S/', $node->nodeValue, $matches );
-		if ( $count > 0 ) {
-			return true;
-		}
-		if ( $node->hasChildNodes() ) {
-			foreach ( $node->childNodes as $child ) {
-				// TODO: This can be resource heavy operation (due to recursion)
-				// Try to do it in single loop
-				if ( $this->isNotEmptyNode( $child ) ) {
-					return true;
-				}
-			}
-		}
-		return false;
+		return (bool)preg_match( '/\S/', $node->textContent );
 	}
 
 	/**
