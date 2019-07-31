@@ -75,8 +75,6 @@ mfExtend( ReferencesDrawer, Drawer, {
 	 * @instance
 	 */
 	postRender: function () {
-		var windowHeight = util.getWindow().height();
-
 		Drawer.prototype.postRender.apply( this );
 		this.$el.find( '.references-drawer__header' ).append( [
 			new Icon( {
@@ -91,11 +89,6 @@ mfExtend( ReferencesDrawer, Drawer, {
 		// For lazy loading references - if no text append a spinner
 		if ( !this.options.text ) {
 			this.$el.append( icons.spinner().$el );
-		}
-
-		// make sure the drawer doesn't take up more than 50% of the viewport height
-		if ( windowHeight / 2 < 400 ) {
-			this.$el.css( 'max-height', windowHeight / 2 );
 		}
 
 		this.on( 'show', this.onShow.bind( this ) );
