@@ -126,17 +126,12 @@ class MobileFrontendHooks {
 			'useskin',
 			$context->getUser()->getOption( 'mobileskin' )
 		);
-		if ( $userSkin ) {
-			// Normalize the key in case the user is passing gibberish or has old preferences
-			$normalizedSkin = Skin::normalizeKey( $userSkin );
-			// If the skin has been normalized and is different from user input, use it
-			if ( $normalizedSkin === $userSkin ) {
-				$skin = $normalizedSkin;
-				return false;
-			}
+		if ( $userSkin && Skin::normalizeKey( $userSkin ) === $userSkin ) {
+			$skin = MediaWikiServices::getInstance()->getSkinFactory()->makeSkin( $userSkin );
+		} else {
+			$skin = self::getDefaultMobileSkin( $context, $config );
 		}
 
-		$skin = self::getDefaultMobileSkin( $context, $config );
 		Hooks::run( 'RequestContextCreateSkinMobile', [ $mobileContext, $skin ] );
 
 		return false;
