@@ -12,6 +12,11 @@ class MobileContextWikibaseDescriptionsTest extends MediaWikiTestCase {
 	 */
 	protected $context;
 
+	/**
+	 * @var Config
+	 */
+	protected $config;
+
 	protected function setUp() {
 		parent::setUp();
 
@@ -23,16 +28,18 @@ class MobileContextWikibaseDescriptionsTest extends MediaWikiTestCase {
 			],
 		] );
 
-		$this->context = MediaWikiServices::getInstance()->getService(
-			'MobileFrontend.Context'
-		);
+		$services = MediaWikiServices::getInstance();
+		$this->context = $services->getService( 'MobileFrontend.Context' );
+		$this->config = $services->getService( 'MobileFrontend.Config' );
 	}
 
 	/**
 	 * @covers MobileContext::shouldShowWikibaseDescriptions
 	 */
 	public function testShowingDescriptionsIsDisabledByDefault() {
-		$this->assertTrue( $this->context->shouldShowWikibaseDescriptions( 'search' ) );
+		$this->assertTrue(
+			$this->context->shouldShowWikibaseDescriptions( 'search', $this->config )
+		);
 	}
 
 	/**
@@ -40,11 +47,11 @@ class MobileContextWikibaseDescriptionsTest extends MediaWikiTestCase {
 	 */
 	public function testShowingDescriptionsCanBeEnabled() {
 		$this->assertTrue(
-			$this->context->shouldShowWikibaseDescriptions( 'search' ),
+			$this->context->shouldShowWikibaseDescriptions( 'search', $this->config ),
 			'Showing descriptions is flagged by new variables.'
 		);
 		$this->assertFalse(
-			$this->context->shouldShowWikibaseDescriptions( 'tagline' ),
+			$this->context->shouldShowWikibaseDescriptions( 'tagline', $this->config ),
 			'Showing descriptions is flagged by tagline variable.'
 		);
 	}
@@ -63,6 +70,6 @@ class MobileContextWikibaseDescriptionsTest extends MediaWikiTestCase {
 	 */
 	public function testItThrowsAnExceptionIfFailureIsInvalid( $feature ) {
 		$this->expectException( DomainException::class );
-		$this->context->shouldShowWikibaseDescriptions( $feature );
+		$this->context->shouldShowWikibaseDescriptions( $feature, $this->config );
 	}
 }
