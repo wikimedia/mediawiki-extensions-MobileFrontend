@@ -118,8 +118,7 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	 * @return DOMElement|null The lead paragraph
 	 */
 	private function identifyLeadParagraph( DOMXPath $xPath, DOMNode $body ) {
-		$xPathQueryIgnoreEmptyP = './p[translate(normalize-space(), \' \', \'\') != \'\']';
-		$paragraphs = $xPath->query( $xPathQueryIgnoreEmptyP, $body );
+		$paragraphs = $xPath->query( './p', $body );
 
 		$index = 0;
 		while ( $index < $paragraphs->length ) {
