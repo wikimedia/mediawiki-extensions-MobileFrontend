@@ -33,6 +33,7 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 	 * @param string $comment The raw comment text
 	 * @param Title $title The title of the page that was edited
 	 * @fixme Duplication with SpecialMobileWatchlist
+	 * @suppress SecurityCheck-DoubleEscaped phan false positive
 	 *
 	 * @return string HTML code
 	 */
@@ -42,7 +43,7 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 		} else {
 			$comment = Linker::formatComment( $comment, $title );
 			// flatten back to text
-			$comment = Sanitizer::stripAllTags( $comment );
+			$comment = htmlspecialchars( Sanitizer::stripAllTags( $comment ) );
 		}
 		return $comment;
 	}
