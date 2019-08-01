@@ -30,7 +30,7 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 	 * @return string
 	 */
 	protected function getLineHtml( MobilePage $mp ) {
-		$thumb = $mp->getSmallThumbnailHtml();
+		$thumb = $mp->getSmallThumbnailHtml( true );
 		$title = $mp->getTitle();
 		if ( !$thumb ) {
 			$thumb = MobilePage::getPlaceHolderThumbnailHtml( 'list-thumb-none', 'list-thumb-x' );
