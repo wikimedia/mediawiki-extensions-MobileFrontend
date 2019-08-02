@@ -9,12 +9,18 @@ var
  * @class Drawer
  * @extends View
  * @param {Object} [props]
+ * @param {string} [props.className] Additional CSS classes to add
+ * @param {JQuery.Element[]} [props.children] An array of elements to append to
+ * @param {Function} [props.onBeforeHide] Callback called before hiding the drawer
  */
 function Drawer( props ) {
 	View.call( this,
 		util.extend(
-			{ className: 'drawer position-fixed' },
+			{
+				onBeforeHide: () => {}
+			},
 			props,
+			{ className: `drawer position-fixed ${props && props.className || ''}`.trim() },
 			{ events: util.extend( {
 				'click .cancel': function ( ev ) {
 					ev.preventDefault();
@@ -130,6 +136,12 @@ mfExtend( Drawer, View, {
 		var self = this;
 		// append the collapse icon at the top of the drawer
 		this.$el.prepend( this.options.collapseIcon.$el );
+
+		if ( this.options.children ) {
+			// append children
+			this.$el.append( this.options.children );
+		}
+
 		// This module might be loaded at the top of the page e.g. Special:Uploads
 		// Thus ensure we wait for the DOM to be loaded
 		util.docReady( function () {
@@ -165,6 +177,8 @@ mfExtend( Drawer, View, {
 	 * @instance
 	 */
 	onHideDrawer: function () {
+		this.options.onBeforeHide();
+
 		this.$el.parent().removeClass( 'drawer-visible' );
 		// .one() registers one callback for scroll and click independently
 		// if one fired, get rid of the other one
