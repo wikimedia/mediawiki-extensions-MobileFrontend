@@ -239,6 +239,8 @@ EditorGateway.prototype = {
 			action: 'parse',
 			// Enable section preview mode to avoid errors (bug 49218)
 			sectionpreview: true,
+			// Hide section edit links
+			disableeditsection: true,
 			// needed for pre-save transform to work (bug 53692)
 			pst: true,
 			// Output mobile HTML (bug 54243)
