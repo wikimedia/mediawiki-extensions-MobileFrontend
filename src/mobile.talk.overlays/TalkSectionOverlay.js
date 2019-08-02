@@ -23,6 +23,8 @@ var
  * @param {Object} options
  */
 function TalkSectionOverlay( options ) {
+	const onBeforeExit = this.onBeforeExit.bind( this );
+
 	this.editorApi = options.api;
 	this.pageGateway = new PageGateway( options.api );
 	this.state = {
@@ -32,8 +34,21 @@ function TalkSectionOverlay( options ) {
 	Overlay.call( this,
 		util.extend( true, options, {
 			className: 'talk-overlay overlay',
-			onBeforeExit: this.onBeforeExit.bind( this ),
+			onBeforeExit,
 			events: {
+				click: function ( ev ) {
+					// If a link has been clicked (that's not the save button)
+					// check that it's okay to exit
+					if ( ev.target.tagName === 'A' &&
+						ev.target.className.indexOf( 'save-button' ) === -1
+					) {
+						// If the user says okay, do nothing, continuing as if normal link
+						onBeforeExit( () => {}, function () {
+							// if the user says no, prevent the default behaviour
+							ev.preventDefault();
+						} );
+					}
+				},
 				'input textarea': 'onInputTextarea',
 				'focus textarea': 'onFocusTextarea',
 				'click .save-button': 'onSaveClick'
@@ -98,12 +113,15 @@ mfExtend( TalkSectionOverlay, Overlay, {
 	 * @memberof TalkSectionOverlay
 	 * @instance
 	 * @param {Function} exit
+	 * @param {Function} cancel
 	 */
-	onBeforeExit: function ( exit ) {
+	onBeforeExit: function ( exit, cancel ) {
 		var confirmMessage = mw.msg( 'mobile-frontend-editor-cancel-confirm' );
 
 		if ( !this.state.text || window.confirm( confirmMessage ) ) {
 			exit();
+		} else {
+			cancel();
 		}
 	},
 	/**
