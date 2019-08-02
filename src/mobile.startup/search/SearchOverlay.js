@@ -2,15 +2,13 @@ var
 	mfExtend = require( '../mfExtend' ),
 	Overlay = require( '../Overlay' ),
 	util = require( '../util' ),
-	formHeader = require( '../headers' ).formHeader,
-	Anchor = require( '../Anchor' ),
-	Icon = require( '../Icon' ),
 	icons = require( '../icons' ),
-	spinner = icons.spinner().$el,
+	formHeader = require( '../headers' ).formHeader,
+	Icon = require( '../Icon' ),
+	SearchResultsView = require( './SearchResultsView' ),
 	WatchstarPageList = require( '../watchstar/WatchstarPageList' ),
 	SEARCH_DELAY = 300,
-	SEARCH_SPINNER_DELAY = 2000,
-	feedbackLink = mw.config.get( 'wgCirrusSearchFeedbackLink' );
+	SEARCH_SPINNER_DELAY = 2000;
 
 /**
  * Overlay displaying search results
@@ -81,53 +79,15 @@ mfExtend( SearchOverlay, Overlay, {
 	/**
 	 * @memberof SearchOverlay
 	 * @instance
-	 */
-	templatePartials: util.extend( {}, Overlay.prototype.templatePartials, {
-		content: util.template( `
-<div class="search-content overlay-header">
-	<ul>
-		<li>{{! search content icon goes here }}</li>
-	</ul>
-	<div class="caption">
-		<p class="with-results">{{searchContentLabel}}</p>
-		<p class="without-results">{{noResultsMsg}}</p>
-		<p class="without-results">{{{searchContentNoResultsMsg}}}</p>
-	</div>
-</div>
-<div class="spinner-container position-fixed"></div>
-<div class="results">
-	<div class="results-list-container"></div>
-	{{#feedback}}
-		<div class="search-feedback">
-			{{prompt}}
-		</div>
-	{{/feedback}}
-</div>
-		` )
-	} ),
-	/**
-	 * @memberof SearchOverlay
-	 * @instance
 	 * @mixes Overlay#defaults
 	 * @property {Object} defaults Default options hash.
 	 * @property {SearchGateway} defaults.gatewayClass The class to use to setup an API gateway.
 	 *  FIXME: Should be removed when wikidata descriptions in stable (T101719)
 	 * @property {Router} defaults.router instance
 	 * @property {Icon} defaults.clearIcon options for the button that clears the search text.
-	 * @property {Icon} defaults.searchContentIcon options for the button that allows you to
-	 *  search within content
-	 * @property {string} defaults.searchContentLabel inviting user to do full text search
 	 * @property {string} defaults.searchTerm Search text.
 	 * @property {string} defaults.clearMsg Tooltip for clear button that appears when you type
 	 * into search box.
-	 * @property {string} defaults.searchContentMsg Caption for a button performing full text
-	 * search of a given search query.
-	 * @property {string} defaults.noResultsMsg Message informing user that no pages were found
-	 * for a given query.
-	 * @property {string} defaults.searchContentNoResultsMsg Used when no pages with matching
-	 * titles were found.
-	 * @property {Object} defaults.feedback options for the feedback link
-	 *  below the search results
 	 */
 	defaults: util.extend( {}, Overlay.prototype.defaults, {
 		clearIcon: new Icon( {
@@ -137,24 +97,7 @@ mfExtend( SearchOverlay, Overlay, {
 			label: mw.msg( 'mobile-frontend-clear-search' ),
 			additionalClassNames: 'clear'
 		} ),
-		searchContentIcon: new Icon( {
-			tagName: 'a',
-			// When this icon is clicked we want to reset the hash for subsequent views
-			href: '#',
-			name: 'search-content',
-			label: mw.msg( 'mobile-frontend-search-content' )
-		} ),
-		searchContentLabel: mw.msg( 'mobile-frontend-search-content' ),
-		searchTerm: '',
-		noResultsMsg: mw.msg( 'mobile-frontend-search-no-results' ),
-		searchContentNoResultsMsg: mw.message( 'mobile-frontend-search-content-no-results' ).parse(),
-		feedback: !feedbackLink ? false : {
-			feedback: new Anchor( {
-				label: mw.msg( 'mobile-frontend-search-feedback-link-text' ),
-				href: feedbackLink
-			} ),
-			prompt: mw.msg( 'mobile-frontend-search-feedback-prompt' )
-		}
+		searchTerm: ''
 	} ),
 
 	/**
@@ -286,22 +229,28 @@ mfExtend( SearchOverlay, Overlay, {
 	postRender: function () {
 		var self = this,
 			options = this.options,
+			searchResults = new SearchResultsView( {
+				searchContentLabel: mw.msg( 'mobile-frontend-search-content' ),
+				noResultsMsg: mw.msg( 'mobile-frontend-search-no-results' ),
+				searchContentNoResultsMsg: mw.message( 'mobile-frontend-search-content-no-results' ).parse()
+			} ),
 			timer;
 
+		this.$el.find( '.overlay-content' ).append( searchResults.$el );
 		Overlay.prototype.postRender.call( this );
 
 		this.$el.find( '.overlay-title' ).append( options.clearIcon.$el );
 
 		this.$input = this.$el.find( 'input' );
 		this.$clear = this.$el.find( '.clear' );
-		this.$searchContent = this.$el.find( '.search-content' ).hide();
-		this.$searchFeedback = this.$el.find( '.search-feedback' ).hide();
-		this.$resultContainer = this.$el.find( '.results-list-container' );
-
-		this.$searchContent.find( 'li' ).append( options.searchContentIcon.$el );
+		// FIXME: `this.$searchContent` should not be set. Isolate to SearchResultsView class.
+		this.$searchContent = searchResults.$el.hide();
+		// FIXME: `this.$resultContainer` should not be set. Isolate to SearchResultsView class.
+		this.$resultContainer = searchResults.$el.find( '.results-list-container' );
 
 		/**
 		 * Hide the spinner and abort timed spinner shows.
+		 * FIXME: Given this manipulates SearchResultsView this should be moved into that class
 		 */
 		function clearSearch() {
 			self.$spinner.hide();
@@ -309,8 +258,8 @@ mfExtend( SearchOverlay, Overlay, {
 		}
 
 		// Show a spinner on top of search results
-		this.$spinner = this.$el.find( '.spinner-container' );
-		this.$spinner.append( spinner );
+		// FIXME: Given this manipulates SearchResultsView this should be moved into that class
+		this.$spinner = searchResults.$el.find( '.spinner-container' );
 		this.on( 'search-start', function ( searchData ) {
 			if ( timer ) {
 				clearSearch();
@@ -324,9 +273,6 @@ mfExtend( SearchOverlay, Overlay, {
 		// Hide the clear button if the search input is empty
 		if ( self.$input.val() === '' ) {
 			this.$clear.hide();
-		}
-		if ( options.feedback && options.feedback.feedback ) {
-			this.$el.find( '.search-feedback' ).append( options.feedback.feedback.$el );
 		}
 	},
 
@@ -399,6 +345,8 @@ mfExtend( SearchOverlay, Overlay, {
 
 					xhr = self.gateway.search( query );
 					self._pendingQuery = xhr.then( function ( data ) {
+						// FIXME: Given this manipulates SearchResultsView
+						// this should be moved into that class
 						// check if we're getting the rights response in case of out of
 						// order responses (need to get the current value of the input)
 						if ( data && data.query === self.$input.val() ) {
@@ -446,10 +394,7 @@ mfExtend( SearchOverlay, Overlay, {
 	 * @private
 	 */
 	resetSearch: function () {
-		this.$spinner.hide();
-		this.$searchContent.hide();
-		this.$searchFeedback.hide();
-		this.$resultContainer.empty();
+		this.$el.find( '.overlay-content' ).children().hide();
 	}
 } );
 
