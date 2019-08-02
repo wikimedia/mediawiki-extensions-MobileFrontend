@@ -61,6 +61,7 @@ function shouldLoadImage( $placeholder, offset ) {
 		// If a placeholder is an inline element without a height attribute set
 		// it will record as hidden
 		// to circumvent this we also need to test the height (see T143768).
+		// eslint-disable-next-line no-jquery/no-sizzle
 		( $placeholder.is( ':visible' ) || $placeholder.height() === 0 );
 }
 

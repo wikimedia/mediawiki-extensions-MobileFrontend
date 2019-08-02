@@ -117,7 +117,7 @@ mfExtend( WatchList, WatchstarPageList, {
 	 * @return {string}
 	 */
 	getLastTitle: function ( $el ) {
-		return $el.find( 'li:last' ).attr( 'title' );
+		return $el.find( 'li' ).last().attr( 'title' );
 	}
 } );
 

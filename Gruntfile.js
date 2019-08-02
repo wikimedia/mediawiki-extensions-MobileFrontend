@@ -32,7 +32,9 @@ module.exports = function ( grunt ) {
 				}
 			}
 		},
-		banana: conf.MessagesDirs
+		banana: Object.assign( {
+			options: { requireLowerCase: false }
+		}, conf.MessagesDirs )
 	} );
 	grunt.registerTask( 'i18n', [ 'banana' ] );
 	grunt.registerTask( 'test', [ 'i18n', 'stylelint' ] );

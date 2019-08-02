@@ -38,12 +38,11 @@ class MinervaPage extends Page {
 			// setting to 1 hour from now.
 			cookieExpiryTime = new Date().getTime() + ( 3600 * 1000 );
 
-		let cookie;
 		if ( !currentPage.includes( browser.options.baseUrl ) ) {
 			this.open();
 		}
 
-		cookie = browser.getCookie( name );
+		const cookie = browser.getCookie( name );
 
 		if ( !cookie || cookie.value !== value ) {
 			browser.setCookie( {

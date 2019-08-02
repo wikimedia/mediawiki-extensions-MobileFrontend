@@ -313,6 +313,8 @@ mfExtend( ImageCarousel, View, {
 
 		this.adjustDetails();
 		// with a hidden details box we have a little bit more space, we just need to use it
+		// TODO: Get visibility from the model
+		// eslint-disable-next-line no-jquery/no-sizzle
 		detailsHeight = !this.$details.is( ':visible' ) ? 0 : this.$details.outerHeight();
 		windowWidth = $window.width();
 		windowHeight = $window.height() - detailsHeight;
