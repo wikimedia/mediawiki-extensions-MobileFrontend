@@ -72,6 +72,8 @@ mfExtend( Overlay, View, {
 <div class="overlay-footer-container position-fixed"></div>
 	` ),
 
+	hideTimeout: null,
+
 	/**
 	 * Shows the spinner right to the input field.
 	 * @memberof Overlay
@@ -150,6 +152,13 @@ mfExtend( Overlay, View, {
 		window.scrollTo( 0, 1 );
 
 		this.$el.addClass( 'visible' );
+
+		// If .hide() was called earlier, and it scheduled an asynchronous detach
+		// but it hasn't happened yet, cancel it
+		if ( this.hideTimeout !== null ) {
+			clearTimeout( this.hideTimeout );
+			this.hideTimeout = null;
+		}
 	},
 	/**
 	 * Detach the overlay from the current view
@@ -167,8 +176,9 @@ mfExtend( Overlay, View, {
 		// Since the hash change event caused by emitting hide will be detected later
 		// and to avoid the article being shown during a transition from one overlay to
 		// another, we regretfully detach the element asynchronously.
-		setTimeout( function () {
+		this.hideTimeout = setTimeout( function () {
 			this.$el.detach();
+			this.hideTimeout = null;
 		}.bind( this ), 0 );
 
 		/**
