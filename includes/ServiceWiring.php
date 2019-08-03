@@ -45,14 +45,12 @@ return [
 	'MobileFrontend.AMC.Manager' => function ( MediaWikiServices $services ) {
 		$config = $services->getService( 'MobileFrontend.Config' );
 		$context = $services->getService( 'MobileFrontend.Context' );
-		return new MobileFrontend\AMC\Manager( $config, $context );
+		return new MobileFrontend\AMC\Manager( $config, $context, $context->shouldDisplayMobileView() );
 	},
 	'MobileFrontend.AMC.UserMode' => function ( MediaWikiServices $services ) {
-		$context = $services->getService( 'MobileFrontend.Context' );
 		return new MobileFrontend\AMC\UserMode(
 			$services->getService( 'MobileFrontend.AMC.Manager' ),
-			$services->getService( 'MobileFrontend.Context' )->getUser(),
-			$context->shouldDisplayMobileView()
+			$services->getService( 'MobileFrontend.Context' )->getUser()
 		);
 	},
 	'MobileFrontend.Context' => function () {

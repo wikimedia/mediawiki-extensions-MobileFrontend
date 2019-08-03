@@ -40,12 +40,20 @@ final class Manager {
 	private $config;
 
 	/**
+	 * Is Mobile mode active for current session
+	 * @var bool
+	 */
+	private $usingMobileMode;
+
+	/**
 	 * @param Config $config Config object
 	 * @param IContextSource $context Request context
+	 * @param bool $usingMobileMode Flag whether user is browsing in the mobile version
 	 */
-	public function __construct( Config $config, IContextSource $context ) {
+	public function __construct( Config $config, IContextSource $context, $usingMobileMode ) {
 		$this->config = $config;
 		$this->context = $context;
+		$this->usingMobileMode = $usingMobileMode;
 	}
 
 	/**
@@ -54,7 +62,8 @@ final class Manager {
 	 * @throws \ConfigException
 	 */
 	public function isAvailable() {
-		return $this->config->get( self::AMC_MODE_CONFIG_NAME )
+		return $this->usingMobileMode
+			&& $this->config->get( self::AMC_MODE_CONFIG_NAME )
 			&& !$this->context->getUser()->isAnon();
 	}
 

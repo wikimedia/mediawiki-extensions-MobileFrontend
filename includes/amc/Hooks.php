@@ -3,7 +3,6 @@
 namespace MobileFrontend\AMC;
 
 use MediaWiki\ChangeTags\Taggable;
-use MediaWiki\MediaWikiServices;
 use User;
 
 /**
@@ -20,8 +19,7 @@ final class Hooks {
 	 * @return bool
 	 */
 	private static function injectTagsIfPerformerUsesAMC( Taggable $taggable, \User $performer ) {
-		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
-		$userMode = UserMode::newForUser( $performer, $context->shouldDisplayMobileView() );
+		$userMode = UserMode::newForUser( $performer );
 		if ( $userMode->isEnabled() ) {
 			$taggable->addTags( [ Manager::AMC_EDIT_TAG ] );
 		}
