@@ -243,6 +243,8 @@
 	"nearby": "Pagine su argomenti nelle tue vicinanze",
 	"tag-mobile_edit": "Modifica da mobile",
 	"tag-mobile_edit-description": "Modifica apportata da dispositivo mobile (web o applicazione)",
+	"tag-advanced_mobile_edit": "Modifica da mobile avanzata",
+	"tag-advanced_mobile_edit-description": "Modifica effettuata da un utente con la modalità avanzata di contribuzione da dispositivi mobili",
 	"tag-mobile_web_edit": "Modifica da web per mobile",
 	"tag-mobile_web_edit-description": "Modifica apportata dal sito web per dispositivi mobili",
 	"mobile-frontend-loading-message": "Caricamento…",
