@@ -53,6 +53,7 @@ class BetaOptInPanel extends View {
 	<div class="beta-opt-in-panel panel panel-inline visible">
 		<form class="message content" action="{{postUrl}}" method="POST">
 			<p>{{text}}</p>
+			<input type="hidden" name="updateSingleOption" value="enableBeta">
 			<input type="hidden" name="enableBeta" value="true">
 			<input type="hidden" name="token" value="{{editToken}}">
 		</form>

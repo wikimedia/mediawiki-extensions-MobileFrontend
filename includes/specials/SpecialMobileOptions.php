@@ -7,8 +7,6 @@ use MobileFrontend\Features\IFeature;
  * Adds a special page with mobile specific preferences
  */
 class SpecialMobileOptions extends MobileSpecialPage {
-	/** @var Title The title of page to return to after save */
-	private $returnToTitle;
 	/** @var boolean $hasDesktopVersion Whether this special page has a desktop version or not */
 	protected $hasDesktopVersion = true;
 
@@ -59,11 +57,6 @@ class SpecialMobileOptions extends MobileSpecialPage {
 	 */
 	public function execute( $par = '' ) {
 		parent::execute( $par );
-
-		$this->returnToTitle = Title::newFromText( $this->getRequest()->getText( 'returnto' ) );
-		if ( !$this->returnToTitle ) {
-			$this->returnToTitle = Title::newMainPage();
-		}
 
 		$this->setHeaders();
 		$this->setJsConfigVars();
@@ -265,6 +258,46 @@ class SpecialMobileOptions extends MobileSpecialPage {
 	}
 
 	/**
+	 * @param WebRequest $request
+	 * @return string url to redirect to
+	 */
+	private function getRedirectUrl( WebRequest $request ) {
+		$returnTo = $request->getText( 'returnto' );
+		if ( $returnTo !== '' ) {
+			$title = Title::newFromText( $returnTo );
+
+			if ( !is_null( $title ) ) {
+				return $title->getFullURL();
+			}
+		}
+
+		return $this->mobileContext->getMobileUrl(
+			$this->getPageTitle()->getFullURL( 'success' )
+		);
+	}
+
+	/**
+	 * @param WebRequest $request
+	 */
+	private function updateAmc( WebRequest $request ) {
+		if ( !$this->amc->isAvailable() ) {
+			return;
+		}
+
+		/** @var \MobileFrontend\AMC\UserMode $userMode */
+		$userMode = $this->services->getService( 'MobileFrontend.AMC.UserMode' );
+		$userMode->setEnabled( $request->getBool( 'enableAMC' ) );
+	}
+
+	/**
+	 * @param WebRequest $request
+	 */
+	private function updateBeta( WebRequest $request ) {
+		$group = $request->getBool( 'enableBeta' ) ? 'beta' : '';
+		$this->mobileContext->setMobileMode( $group );
+	}
+
+	/**
 	 * Saves the settings submitted by the settings form
 	 */
 	private function submitSettingsForm() {
@@ -283,17 +316,20 @@ class SpecialMobileOptions extends MobileSpecialPage {
 			return;
 		}
 
-		$group = $request->getBool( 'enableBeta' ) ? 'beta' : '';
-		if ( $this->amc->isAvailable() ) {
-			/** @var \MobileFrontend\AMC\UserMode $userMode */
-			$userMode = $this->services->getService( 'MobileFrontend.AMC.UserMode' );
-			$userMode->setEnabled( $request->getBool( 'enableAMC' ) );
+		// We must treat forms that only update a single field specially because if we
+		// don't, all the other options will be clobbered with default values
+		switch ( $request->getRawVal( 'updateSingleOption' ) ) {
+			case 'enableAMC':
+				$this->updateAmc( $request );
+				break;
+			case 'enableBeta':
+				$this->updateBeta( $request );
+				break;
+			default:
+				$this->updateAmc( $request );
+				$this->updateBeta( $request );
 		}
 
-		$this->mobileContext->setMobileMode( $group );
-		$url = $this->getPageTitle()->getFullURL( 'success' );
-		$output->redirect(
-			$this->mobileContext->getMobileUrl( $url )
-		);
+		$output->redirect( $this->getRedirectUrl( $request ) );
 	}
 }
