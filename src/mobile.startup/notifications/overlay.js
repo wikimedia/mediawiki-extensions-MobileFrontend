@@ -34,7 +34,7 @@ function notificationsOverlay( onCountChange, onNotificationListRendered ) {
 	// hide the button spinner as it is confusing to see in the top right corner
 	markAllReadButtonView.$el.hide();
 
-	return Overlay.make(
+	const overlay = Overlay.make(
 		{
 			heading: '<strong>' + mw.message( 'notifications' ).escaped() + '</strong>',
 			footerAnchor: new Anchor( {
@@ -45,7 +45,8 @@ function notificationsOverlay( onCountChange, onNotificationListRendered ) {
 			} ).options,
 			headerActions: [ markAllReadButtonView ],
 			isBorderBox: false,
-			className: 'overlay notifications-overlay navigation-drawer'
+			className: 'overlay notifications-overlay navigation-drawer',
+			onBeforeExit: ( exit ) => onBeforeExit( overlay, exit )
 		},
 		promisedView(
 			oouiPromise.then( function () {
@@ -55,6 +56,25 @@ function notificationsOverlay( onCountChange, onNotificationListRendered ) {
 			} )
 		)
 	);
+	return overlay;
 }
 
+/**
+ * @param {Overlay} overlay
+ * @param {Function} exit
+ * @return {void}
+ */
+function onBeforeExit( overlay, exit ) {
+	if ( 'transition' in overlay.$el[0].style ) {
+		// Manually detach the overlay from DOM once hide animation completes.
+		overlay.$el[0].addEventListener( 'transitionend', exit, { once: true } );
+
+		// Kick off animation.
+		overlay.$el[0].classList.remove( 'visible' );
+	} else {
+		exit();
+	}
+}
+
+notificationsOverlay.test = { onBeforeExit };
 module.exports = notificationsOverlay;

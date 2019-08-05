@@ -509,7 +509,7 @@ mfExtend( View, {
  * @param {jQuery.Element[]} children
  * @return {View}
  */
-View.make = function ( options, children ) {
+View.make = function ( options = {}, children = [] ) {
 	var view = new View( options );
 	children.forEach( function ( $child ) {
 		view.append( $child );
