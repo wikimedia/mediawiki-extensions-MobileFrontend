@@ -2,7 +2,11 @@ var
 	mfExtend = require( './mfExtend' ),
 	View = require( './View' ),
 	util = require( './util' ),
-	Icon = require( './Icon' );
+	Icon = require( './Icon' ),
+	collapseIcon = new Icon( {
+		name: 'arrow',
+		additionalClassNames: 'cancel'
+	} );
 
 /**
  * A {@link View} that pops up from the bottom of the screen.
@@ -99,20 +103,6 @@ mfExtend( Drawer, View, {
 	},
 
 	/**
-	 * @memberof Drawer
-	 * @instance
-	 * @mixes View#defaults
-	 * @property {Object} defaults Default options hash.
-	 * @property {Icon} defaults.collapseIcon
-	 */
-	defaults: util.extend( {}, View.prototype.defaults, {
-		// Used by CtaDrawer, BlockMessage.
-		collapseIcon: new Icon( {
-			name: 'arrow',
-			additionalClassNames: 'cancel'
-		} )
-	} ),
-	/**
 	 * Defines an element that the Drawer should automatically be appended to.
 	 * @memberof Drawer
 	 * @instance
@@ -135,7 +125,7 @@ mfExtend( Drawer, View, {
 	postRender: function () {
 		var self = this;
 		// append the collapse icon at the top of the drawer
-		this.$el.prepend( this.options.collapseIcon.$el );
+		this.$el.prepend( collapseIcon.$el );
 
 		if ( this.options.children ) {
 			// append children

@@ -345,7 +345,7 @@
 			],
 			"styles": [
 				"resources/mobile.editor.overlay/editor.less",
-				"resources/mobile.editor.overlay/BlockMessage.less",
+				"resources/mobile.editor.overlay/BlockMessageDetails.less",
 				"resources/mobile.editor.overlay/editor.ve.less"
 			],
 			"messages": [

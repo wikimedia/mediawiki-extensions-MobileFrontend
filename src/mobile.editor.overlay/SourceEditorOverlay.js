@@ -5,7 +5,7 @@ var EditorOverlayBase = require( './EditorOverlayBase' ),
 	EditorGateway = require( './EditorGateway' ),
 	AbuseFilterPanel = require( './AbuseFilterPanel' ),
 	mfExtend = require( '../mobile.startup/mfExtend' ),
-	BlockMessage = require( './BlockMessage' ),
+	blockMessageDrawer = require( './blockMessageDrawer' ),
 	VisualEditorOverlay = require( './VisualEditorOverlay' );
 
 /**
@@ -380,7 +380,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 					// mobile by Echo's notifications panel, where it's also lazy-loaded)
 					mw.loader.using( 'moment' ).then( function () {
 						block = self.parseBlockInfo( result.blockinfo );
-						message = new BlockMessage( block );
+						message = blockMessageDrawer( block );
 						message.toggle();
 						self.hide();
 						self.hideSpinner();

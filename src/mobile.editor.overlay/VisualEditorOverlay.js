@@ -1,7 +1,7 @@
 /* global ve */
 var EditorOverlayBase = require( './EditorOverlayBase' ),
 	EditorGateway = require( './EditorGateway' ),
-	BlockMessage = require( './BlockMessage' ),
+	blockMessageDrawer = require( './blockMessageDrawer' ),
 	mfExtend = require( '../mobile.startup/mfExtend' ),
 	router = mw.loader.require( 'mediawiki.router' ),
 	util = require( '../mobile.startup/util' );
@@ -164,7 +164,7 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 				// mobile by Echo's notifications panel, where it's also lazy-loaded)
 				mw.loader.using( 'moment' ).then( function () {
 					var block = self.parseBlockInfo( data.visualeditor.blockinfo ),
-						message = new BlockMessage( block );
+						message = blockMessageDrawer( block );
 					message.toggle();
 					self.hide();
 				} );
