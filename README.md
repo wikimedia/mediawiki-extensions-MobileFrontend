@@ -547,7 +547,7 @@ Whether beta mode is enabled.
 
 #### $wgMFAdvancedMobileContributions
 
-Whether Advanced Mobile Contributions mode is available for users.
+Whether Advanced mode is available for users.
 
 * Type: `Boolean`
 * Default: `false`
