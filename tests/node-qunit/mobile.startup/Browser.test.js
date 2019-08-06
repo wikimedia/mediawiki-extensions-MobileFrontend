@@ -64,7 +64,7 @@ QUnit.test( 'Methods are cached', function ( assert ) {
 
 QUnit.test( 'isWideScreen()', function ( assert ) {
 	var browser = new Browser( 'Mozilla/5.0 (iPad; CPU OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko)', $html );
-	sandbox.stub( mw.config, 'get', function () {
+	sandbox.stub( mw.config, 'get' ).callsFake( function () {
 		return '720px';
 	} );
 	assert.strictEqual( browser.isWideScreen(), true );
@@ -73,7 +73,7 @@ QUnit.test( 'isWideScreen()', function ( assert ) {
 QUnit.test( 'supportsAnimations() - true', function ( assert ) {
 	var
 		browser = new Browser( 'Mozilla/5.0 (iPad; CPU OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko)', $html ),
-		stub = sandbox.stub( document, 'createElement', function () {
+		stub = sandbox.stub( document, 'createElement' ).callsFake( function () {
 			return {
 				style: {
 					animationName: '',
@@ -97,7 +97,7 @@ QUnit.test( 'supportsAnimations() - true', function ( assert ) {
 QUnit.test( 'supportsAnimations() - false', function ( assert ) {
 	var
 		browser = new Browser( 'Mozilla/5.0 (iPad; CPU OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko)', $html ),
-		stub = sandbox.stub( document, 'createElement', function () {
+		stub = sandbox.stub( document, 'createElement' ).callsFake( function () {
 			return {
 				style: {}
 			};

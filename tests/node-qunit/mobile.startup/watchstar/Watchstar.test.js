@@ -35,7 +35,7 @@ QUnit.module( 'MobileFrontend Watchstar.js', {
 		// require after stubbing
 		toast = require( '../../../../src/mobile.startup/toast' );
 		// Avoid unnecessary mw.notify animations
-		sandbox.stub( mw, 'notify', function () {} );
+		sandbox.stub( mw, 'notify' ).callsFake( function () {} );
 		toastSpy = sandbox.spy( toast, 'show' );
 	},
 	afterEach: function () {
@@ -67,7 +67,7 @@ QUnit.test( 'Anonymous user opens drawer', function ( assert ) {
 QUnit.test( 'Logged in user watches article', function ( assert ) {
 	var w, $el, postWithTokenDeferred, apiSpy;
 	// setting user as logged in
-	sandbox.stub( user, 'isAnon', function () {
+	sandbox.stub( user, 'isAnon' ).callsFake( function () {
 		return false;
 	} );
 
@@ -97,7 +97,7 @@ QUnit.test( 'Logged in user unwatches article', function ( assert ) {
 	var w, $el, postWithTokenDeferred, apiSpy;
 
 	// setting user as logged in
-	sandbox.stub( user, 'isAnon', function () {
+	sandbox.stub( user, 'isAnon' ).callsFake( function () {
 		return false;
 	} );
 

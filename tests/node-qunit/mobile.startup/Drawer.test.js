@@ -19,8 +19,6 @@ var minHideDelay,
 
 QUnit.module( 'MobileFrontend Drawer.js', {
 	beforeEach: function () {
-		var parentID = 'drawerParent';
-
 		sandbox = sinon.sandbox.create();
 
 		// Set up required by all Views.
@@ -35,19 +33,10 @@ QUnit.module( 'MobileFrontend Drawer.js', {
 		// Dynamically import Drawer to use fresh sandboxed dependencies.
 		Drawer = require( '../../../src/mobile.startup/Drawer' );
 		minHideDelay = Drawer.prototype.minHideDelay;
-
-		// Rewire the prototype, not the instance, since this property is used during construction.
-		sandbox.stub( Drawer.prototype, 'appendToElement', '#' + parentID );
-
-		// Create a disposable host Element. See T209129.
-		parent = document.createElement( 'div' );
-		parent.id = parentID;
-		document.documentElement.appendChild( parent );
+		parent = document.body;
 	},
 
 	afterEach: function () {
-		// Discard host Element.
-		document.documentElement.removeChild( parent );
 		parent = undefined;
 
 		Drawer = undefined;

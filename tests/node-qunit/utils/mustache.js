@@ -8,8 +8,9 @@ module.exports = {
 	 */
 	setUp: function ( sandbox, global ) {
 		if ( headless ) {
-			global.Mustache = global.Mustache || undefined;
-			sandbox.stub( global, 'Mustache', require( 'mustache' ) );
+			const Mustache = require( 'mustache' );
+			global.Mustache = Mustache || undefined;
+			sandbox.stub( global, 'Mustache' ).callsFake( () => Mustache );
 		}
 	}
 };

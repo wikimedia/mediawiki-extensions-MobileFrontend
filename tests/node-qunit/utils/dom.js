@@ -10,12 +10,16 @@ module.exports = {
 	 */
 	setUp: function ( sandbox, global ) {
 		if ( headless ) {
-			global.window = global.window || undefined;
-			global.document = global.document || undefined;
-			sandbox.stub( global, 'window', new jsdom.JSDOM().window );
-			sandbox.stub( global, 'document', window.document );
+			const window = new jsdom.JSDOM().window,
+				document = window.document;
+
+			global.window = window || undefined;
+			global.document = document || undefined;
+			sandbox.stub( global, 'window' ).callsFake( () => window );
+			sandbox.stub( global, 'document' ).callsFake( () => document );
 			global.Image = global.window.Image;
 			global.Event = global.window.Event;
+			global.navigator = global.window.navigator;
 		}
 	}
 };

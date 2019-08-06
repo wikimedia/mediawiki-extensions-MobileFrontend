@@ -50,7 +50,7 @@
 		"oojs": "2.2.2",
 		"pre-commit": "1.2.2",
 		"qunit": "2.7.0",
-		"sinon": "1.17.3",
+		"sinon": "4.5.0",
 		"stylelint-config-wikimedia": "0.6.0",
 		"svgo": "1.1.1",
 		"wdio-cucumber-framework": "2.2.8",

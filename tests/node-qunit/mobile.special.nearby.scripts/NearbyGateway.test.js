@@ -42,11 +42,11 @@ QUnit.module( 'MobileFrontend NearbyGateway.js', {
 		this.nearbyGateway = new NearbyGateway( { api: api } );
 
 		// stub mw.language behavior so we don't have to bring in the real thing
-		sandbox.stub( mw.language, 'convertNumber', function ( arg ) {
+		sandbox.stub( mw.language, 'convertNumber' ).callsFake( function ( arg ) {
 			return arg === '1.20' ? '1.2' : String( arg );
 		} );
 
-		sandbox.stub( api, 'ajax', function () {
+		sandbox.stub( api, 'ajax' ).callsFake( function () {
 			return util.Deferred().resolve( {
 				query: {
 					pages: [

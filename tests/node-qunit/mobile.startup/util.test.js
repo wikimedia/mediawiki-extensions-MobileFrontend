@@ -1,4 +1,3 @@
-/* global $ */
 var util,
 	dom = require( '../utils/dom' ),
 	mw = require( '../utils/mw' ),
@@ -63,11 +62,12 @@ QUnit.test( 'grep()', function ( assert ) {
 } );
 
 QUnit.test( 'docReady()', function ( assert ) {
-	var docReady = util.docReady();
-	assert.strictEqual(
-		docReady instanceof $,
-		true
-	);
+	var done = assert.async();
+
+	util.docReady( () => {
+		assert.ok( 'docReady calls the callback eventually' );
+		done();
+	} );
 } );
 
 QUnit.test( 'Deferred() - resolve', function ( assert ) {

@@ -9,9 +9,10 @@ module.exports = {
 	 * @return {void}
 	 */
 	setUp: function ( sandbox, global ) {
+		const mw = newMockMediaWiki();
 		if ( headless ) {
-			global.mw = global.mw || undefined;
-			sandbox.stub( global, 'mw', newMockMediaWiki() );
+			global.mw = mw || undefined;
+			sandbox.stub( global, 'mw' ).callsFake( () => mw );
 		}
 	}
 };
