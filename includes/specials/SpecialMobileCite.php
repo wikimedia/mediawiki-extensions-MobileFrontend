@@ -4,7 +4,7 @@
  * Provides a list of citations available for a page
  * @deprecated
  */
-class SpecialMobileCite extends SpecialPage {
+class SpecialMobileCite extends RedirectSpecialPage {
 
 	public function __construct() {
 		parent::__construct( 'MobileCite' );
@@ -13,12 +13,11 @@ class SpecialMobileCite extends SpecialPage {
 	/**
 	 * Render the page with a list of references for the given revision identifier
 	 *
-	 * @param string|null $param The revision number
+	 * @param string|null $subpage
+	 * @return Title
 	 */
-	public function execute( $param ) {
-		$this->setHeaders();
-		$out = $this->getOutput();
+	public function getRedirect( $subpage ) {
 		// This page is deprecated so redirect to homepage.
-		$out->redirect( Title::newMainPage()->getFullURL() );
+		return Title::newMainPage();
 	}
 }
