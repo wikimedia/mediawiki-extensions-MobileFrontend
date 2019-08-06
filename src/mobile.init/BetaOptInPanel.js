@@ -4,7 +4,6 @@ var Button = require( '../mobile.startup/Button' ),
 	user = mw.user;
 
 /**
- * @class BetaOptInPanel
  * @extends View
  */
 class BetaOptInPanel extends View {
@@ -39,8 +38,6 @@ class BetaOptInPanel extends View {
 
 	/**
 	 * Cancel event handler
-	 * @memberof BetaOptInPanel
-	 * @instance
 	 * @param {jQuery.Event} ev
 	 */
 	_onOptin( ev ) {
@@ -48,8 +45,7 @@ class BetaOptInPanel extends View {
 	}
 
 	/**
-	 * @memberof BetaOptInPanel
-	 * @instance
+	 * @inheritdoc
 	 * @type {Object}
 	 */
 	get template() {
@@ -65,8 +61,7 @@ class BetaOptInPanel extends View {
 	}
 
 	/**
-	 * @memberof BetaOptInPanel
-	 * @instance
+	 * @inheritdoc
 	 * @mixes View#defaults
 	 * @type {Object}
 	 */
