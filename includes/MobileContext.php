@@ -362,11 +362,24 @@ class MobileContext extends ContextSource {
 			SpecialMobileHistory::shouldUseSpecialHistory( $title, $this->getUser() )
 		) {
 			$values = $this->getRequest()->getValues();
+			$curid = $request->getInt( 'curid' );
 			// avoid infinite redirect loops
 			unset( $values['action'] );
 			// Avoid multiple history parameters
 			unset( $values['title'] );
-			$redirectUrl = SpecialPage::getTitleFor( 'History', $this->getTitle() )->
+			// the curid when passed to a page ignores the title as it represents a page
+			// ID.
+			// e.g. URL ?title=Special:History/John_Finnie&curid=31775812 will not show
+			// Special:History but the page associated with id `31775812`
+			// For consistency it must be stripped and used
+			// More details on T214531
+			if ( $curid ) {
+				$title = Title::newFromID( $curid );
+				unset( $values['curid'] );
+			} else {
+				$title = $this->getTitle();
+			}
+			$redirectUrl = SpecialPage::getTitleFor( 'History', $title )->
 				getLocalURL( $values );
 		}
 
