@@ -639,6 +639,7 @@ class MobileFrontendHooks {
 		$mfAppPackageId = $config->get( 'MFAppPackageId' );
 		$mfAppScheme = $config->get( 'MFAppScheme' );
 		$mfNoIndexPages = $config->get( 'MFNoindexPages' );
+		$isCanonicalLinkHandledByCore = $config->get( 'EnableCanonicalServerLink' );
 		$mfMobileUrlTemplate = $context->getMobileUrlTemplate();
 
 		$title = $skin->getTitle();
@@ -669,6 +670,8 @@ class MobileFrontendHooks {
 		// an canonical/alternate link is only useful, if the mobile and desktop URL are different
 		// and $wgMFNoindexPages needs to be true
 		if ( $mfMobileUrlTemplate && $mfNoIndexPages ) {
+			$link = false;
+
 			if ( !$context->shouldDisplayMobileView() ) {
 				// add alternate link to desktop sites - bug T91183
 				$desktopUrl = $title->getFullURL();
@@ -677,14 +680,16 @@ class MobileFrontendHooks {
 					'media' => 'only screen and (max-width: ' . self::DEVICE_WIDTH_TABLET . ')',
 					'href' => $context->getMobileUrl( $desktopUrl ),
 				];
-			} else {
+			} elseif ( !$isCanonicalLinkHandledByCore ) {
 				$link = [
 					'rel' => 'canonical',
 					'href' => $title->getFullURL(),
 				];
 			}
 
-			$out->addLink( $link );
+			if ( $link ) {
+				$out->addLink( $link );
+			}
 		}
 
 		// set the vary header to User-Agent, if mobile frontend auto detects, if the mobile
