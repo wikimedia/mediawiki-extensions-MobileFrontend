@@ -25,6 +25,7 @@ final class Hooks {
 		}
 		return true;
 	}
+
 	/**
 	 * Register default preference value for AMC opt-in
 	 *

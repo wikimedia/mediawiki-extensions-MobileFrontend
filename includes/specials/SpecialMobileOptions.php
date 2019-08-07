@@ -52,6 +52,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 			),
 		] );
 	}
+
 	/**
 	 * Render the special page
 	 * @param string|null $par Parameter submitted as subpage
@@ -130,6 +131,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 			) );
 			return $layout;
 	}
+
 	/**
 	 * Render the settings form (with actual set settings) and add it to the
 	 * output as well as any supporting modules.

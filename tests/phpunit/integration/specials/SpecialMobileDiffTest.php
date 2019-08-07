@@ -95,9 +95,11 @@ class MockSpecialMobileDiff extends SpecialMobileDiff {
 	public static function getRevision( $id ) {
 		return MFMockRevision::newFromId( $id );
 	}
+
 	public function executeBadQuery() {
 		return false;
 	}
+
 	public function displayDiffPage() {
 		// showDiff can be stubed, but the differenceengine has to be created
 		$this->mDiffEngine = new MockInlineDifferenceEngine();

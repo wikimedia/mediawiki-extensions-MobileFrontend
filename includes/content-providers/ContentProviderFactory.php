@@ -39,6 +39,7 @@ class ContentProviderFactory {
 			$out->addModules( 'mobile.contentProviderApi' );
 		}
 	}
+
 	/**
 	 * @param Config $config to allow config specific behaviour
 	 * @param OutputPage $out to allow the addition of modules and styles

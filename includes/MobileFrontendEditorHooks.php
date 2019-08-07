@@ -24,6 +24,7 @@ class MobileFrontendEditorHooks {
 
 		];
 	}
+
 	/**
 	 * Handler for MakeGlobalVariablesScript hook.
 	 * For values that depend on the current page, user or request state.

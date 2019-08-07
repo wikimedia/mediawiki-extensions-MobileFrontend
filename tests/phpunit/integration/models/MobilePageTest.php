@@ -16,6 +16,7 @@ class MobilePageTest extends MediaWikiTestCase {
 
 	// Example timestamp in MediaWiki format
 	const TS_MW = '20181028200709';
+
 	/**
 	 * Creates an instance of `File`.
 	 * By default, let the picture height be less than it's width.

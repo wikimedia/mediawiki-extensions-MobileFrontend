@@ -47,6 +47,7 @@ interface IFeature {
 	 * @return bool
 	 */
 	public function isAvailable( IUserMode $mode );
+
 	/**
 	 * The feature name defined as a translation tag
 	 * ex: mobile-frontend-mobile-option-MFConfigFlag
