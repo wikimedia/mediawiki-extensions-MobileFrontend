@@ -291,7 +291,7 @@
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox-description": "Le texte sera toujours affiché au-dessus des zones d’information, améliorant la performance et la lisibilité.",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Taille de la police",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Contrôler la taille de police de votre expérience de lecture.",
-	"mobile-frontend-mobile-option-amc": "Mode contributions avancé",
+	"mobile-frontend-mobile-option-amc": "Mode avancé",
 	"mobile-frontend-mobile-option-amc-experiment-description": "Nous sommes en train de développer activement de nouvelles fonctionnalités pour les éditeurs avancés. En activant ce mode, vous obtiendrez automatiquement ces nouvelles fonctionnalités au fur et à mesure de leur livraison. Tout retour ou toute collaboration serait apprécié.",
 	"mobile-frontend-mobile-option-amc-learn-more": "En savoir plus",
 	"mobile-frontend-mobile-option-amc-send-feedback": "Envoyer un avis",

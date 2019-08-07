@@ -48,7 +48,8 @@
 			"Zazzzz",
 			"WQL",
 			"科劳",
-			"神樂坂秀吉"
+			"神樂坂秀吉",
+			"Viztor"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "用户是否通过移动版界面编辑",
@@ -294,7 +295,7 @@
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox-description": "文本将总是在信息框上方显示，以改进性能和阅读性。",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "字体大小",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "控制您在阅读时的字体大小。",
-	"mobile-frontend-mobile-option-amc": "高级贡献模式",
+	"mobile-frontend-mobile-option-amc": "高级模式",
 	"mobile-frontend-mobile-option-amc-experiment-description": "我们目前正积极开发高级编辑器的新功能。通过启用此模式，您将可以自动取得发布的新功能。对于任何的意见反馈与协作，我们不胜感激。",
 	"mobile-frontend-mobile-option-amc-learn-more": "了解更多",
 	"mobile-frontend-mobile-option-amc-send-feedback": "发送反馈",
