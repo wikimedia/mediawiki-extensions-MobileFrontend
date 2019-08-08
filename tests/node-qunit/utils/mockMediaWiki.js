@@ -65,6 +65,9 @@ module.exports = function newMockMediaWiki() {
 		},
 		now: Date.now.bind( Date ),
 		user: {
+			tokens: {
+				get: function () {}
+			},
 			options: {
 				get: function () {}
 			},

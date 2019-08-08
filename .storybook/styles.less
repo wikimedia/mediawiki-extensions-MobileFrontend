@@ -1,11 +1,23 @@
+
+@import '../mobile.less/mobile.variables.less';
+
 // resets
 html, body {
 	height: 100%;
 }
 
+body {
+	font-family: @fontFamilySans;
+}
+
+h2, h3, h4,
 p, ul,
 body {
 	margin: 0;
+}
+
+.content p {
+	margin: 0.5em 0 1em 0;
 }
 
 button {
@@ -18,11 +30,16 @@ button {
 	background: none;
 }
 
+ol,
 ul {
 	margin: 0;
 	padding: 0;
 	border: 0;
 	list-style: none;
+}
+
+a {
+	text-decoration: none;
 }
 
 /**
@@ -31,38 +48,96 @@ ul {
  * for icon access.
  * in future we may decide to do this using an svg-loader.
  */
+@loadUri: 'https://en.m.wikipedia.beta.wmflabs.org/w/load.php';
+
+.icon( @module, @name ) {
+	background-image: url( '@{loadUri}?modules=@{module}&image=@{name}&format=rasterized&skin=minerva' );
+}
+
+.icon-variant( @module, @name, @variant ) {
+	background-image: url( '@{loadUri}?modules=@{module}&image=@{name}&variant=@{variant}&format=rasterized&skin=minerva' );
+}
+
 .mw-ui-icon-mf-arrow:before {
-	background-image: url( https://en.m.wikipedia.beta.wmflabs.org/w/load.php?modules=mobile.startup.images.variants&image=arrow&format=rasterized&skin=minerva );
+	.icon('mobile.startup.images.variants', 'arrow' );
 }
 
 .mw-ui-icon-mf-arrow-invert:before {
-	background-image: url( https://en.m.wikipedia.beta.wmflabs.org/w/load.php?modules=mobile.startup.images.variants&variant=invert&image=arrow&format=rasterized&skin=minerva );
+	.icon-variant('mobile.startup.images.variants', 'arrow', 'invert' );
 }
 
 .mw-ui-icon-mf-arrow-gray:before {
-	background-image: url( https://en.m.wikipedia.beta.wmflabs.org/w/load.php?modules=mobile.startup.images.variants&variant=gray&image=arrow&format=rasterized&skin=minerva );
-}
-
-.mw-ui-icon-mf-overlay-close:before {
-	background-image: url( https://en.m.wikipedia.beta.wmflabs.org/w/load.php?modules=mobile.startup.images.variants&image=overlay-close&format=rasterized&skin=minerva );
+	.icon-variant('mobile.startup.images.variants', 'arrow', 'gray' );
 }
 
 .mw-ui-icon-mf-spinner:before {
-	background-image: url( https://en.m.wikipedia.beta.wmflabs.org/w/extensions/MobileFrontend/resources/mobile.startup/images/ajax-loader.gif );
+	.icon('mobile.legacy.icons', 'mw-ui-icon-mf-spinner:before' );
 }
 
 .mw-ui-icon-mf-error:before {
-	background-image: url( https://en.m.wikipedia.beta.wmflabs.org/w/load.php?modules=mobile.startup.images&image=error&format=rasterized&skin=minerva );
+	.icon('mobile.startup.images', 'error' );
 }
 
 .mw-ui-icon-mf-back:before {
-	background-image: url( https://en.m.wikipedia.beta.wmflabs.org/w/load.php?modules=mobile.startup.images.variants&image=back&format=rasterized&lang=en&skin=minerva );
+	.icon('mobile.startup.images.variants', 'back' );
+}
+
+.mw-ui-icon-mf-overlay-close:before {
+	.icon('mobile.startup.images.variants', 'overlay-close' );
 }
 
 .mw-ui-icon-mf-overlay-close-gray:before {
-	background-image: url( https://en.m.wikipedia.beta.wmflabs.org/w/load.php?modules=mobile.startup.images.variants&image=overlay-close&variant=gray&format=rasterized&skin=minerva );
+	.icon-variant('mobile.startup.images.variants', 'overlay-close', 'gray' );
 }
 
 .mw-ui-icon-mf-citation-invert:before {
-	background-image: url( https://en.m.wikipedia.beta.wmflabs.org/w/load.php?modules=mobile.startup.images&image=citation&variant=invert&format=rasterized&skin=minerva );
+	.icon('mobile.startup.images', 'citation' );
 }
+
+.mw-ui-icon-mf-search-content:before {
+	.icon('mobile.startup.images', 'search-content' );
+}
+
+.mw-ui-icon-mf-alert-invert:before {
+	.icon-variant('mobile.startup.images.variants', 'alert', 'invert' );
+}
+
+.mw-ui-icon-mf-amc-outreach:before {
+	.icon('mobile.startup.images', 'amc-outreach' );
+}
+
+.mw-ui-icon-mf-toc:before {
+	.icon('mobile.startup.images', 'toc' );
+}
+
+.mw-ui-icon-mf-profile:before {
+	.icon('mobile.editor.images', 'profile' );
+}
+
+.mw-ui-icon-mf-stop-hand:before {
+	.icon('mobile.editor.images', 'stop-hand' );
+}
+
+.list-thumb-none {
+	.icon('skins.minerva.content.styles.images', 'list-thumb-none' );
+}
+
+input.search,
+.mw-ui-icon-minerva-magnifying-glass:before {
+	.icon('skins.minerva.content.styles.images', 'input.search%2C.mw-ui-icon-minerva-magnifying-glass' );
+}
+
+.mw-ui-icon-mf-watch:before {
+	.icon('mobile.startup.images', 'watch');
+}
+
+.mw-ui-icon-mf-watched:before {
+	.icon('mobile.startup.images', 'watched');
+}
+
+.oo-ui-icon-check {
+	.icon-variant('oojs-ui.styles.icons-interactions', 'check', 'invert');
+}
+
+@import './mediawiki-skins-MinervaNeue/resources/skins.minerva.base.styles/ui.less';
+@import './mediawiki-skins-MinervaNeue/resources/skins.minerva.content.styles/tablet/common.less';

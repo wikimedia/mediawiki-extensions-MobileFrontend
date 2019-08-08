@@ -1,0 +1,131 @@
+@import 'mediawiki.ui/variables';
+
+/**
+ * System font stack for sans-serif fonts
+ *
+ * `-apple-system` ('San Francisco') – Support: Safari 9+ macOS and iOS, Firefox macOS
+ * `BlinkMacSystemFont` ('San Francisco') – Chrome 48+ macOS and iOS
+ * `Segoe UI` – Windows Vista & newer
+ * `Roboto` – Android 4.0
+ * `Lato` – Wikimedia Design choice, OFL licensed
+ * `Helvetica, Arial, sans-serif` – (Generic) Web fallback
+ * Note that CSS Fonts Module Level 4's `system-ui` value has resulted in unresolved
+ * side-effects in certain OS/language combinations and is therefore not included as of now.
+ */
+@fontFamilySans: -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Lato', 'Helvetica', 'Arial', sans-serif;
+@fontFamilyBase: @fontFamilySans;
+
+@font-size-browser: 16; // Assumed browser default of `16px`.
+@font-size-minerva-small: unit( 14 / @font-size-browser, em ); // Equals `14px` at `16px` browser default.
+@tocFontSize: @font-size-minerva-small;
+
+@indicatorFontSize: 0.4em;
+
+// colors
+@grayMediumLight: @colorGray10;
+@grayMediumDark: @colorGray5;
+@grayMedium: @colorGray7;
+@grayLight: @colorGray12;
+@grayLightest: @colorGray14;
+
+/*
+* FIXME: Use these variables directly from mediawiki-ui-base when available.
+*/
+@wmui-color-green30: #14866d;
+@wmui-color-red30: #b32424;
+@wmui-color-grey30: #a2a9b1;
+
+@skinContentBgColor: #fff;
+
+// Navigation Drawers
+@rightDrawerWidth: 60%;
+@primaryNavBackgroundColor: @colorGray14;
+@menuButtonIconSize: 3.5em;
+
+// Headings
+@fontSizeH1: 1.7em;
+@fontSizeH2: 1.5em;
+@fontSizeH3: 1.2em;
+
+// Content
+@contentPadding: 16px;
+@contentMargin: 16px;
+
+// Header
+@headerHeight: unit( 54 / @font-size-browser, em );
+@headerVerticalPadding: 0.15em;
+@headerMarginTop: -1px; // used to hide the header border top when a banner is not present
+@searchBoxWidth: 375/16em;
+@deviceWidthTabletEms: unit( @width-breakpoint-tablet / @font-size-browser, em );
+@brandingBoxWidth: @deviceWidthTabletEms - (3 * @menuButtonIconSize + @iconGutterWidth) - @searchBoxWidth;
+
+@titleSectionSpacingTop: 20px;
+
+// Page actions
+@taglineFontSize: 0.85em;
+@pageActionBorder: 1px;
+@pageActionToolbarHeight: 44px; // total height is 46px. 2px added by border on .page-actions-menu
+
+// colors
+@chromeColor: @grayLightest;
+@semiTransparent: rgba( 0, 0, 0, 0.8 );
+
+@linkColor: @colorProgressive;
+@redLinkColor: @colorError;
+@lastModifiedBarActiveBackgroundColor: #00af89;
+@toastNotificationColor: @colorGray2;
+
+// typography
+@fontFamilyHeading: 'Linux Libertine', 'Georgia', 'Times', serif;
+/**
+ * System font stack for monospace fonts, see T221043.
+ *
+ * `Menlo` – macOS 10.6+
+ * `Consolas` – Windows Vista & newer
+ * `Liberation Mono` – Fedora, Ubuntu, … OFL licensed
+ * `Courier New` – (Generic) web font fallback
+ */
+@fontFamilyMonospace: 'Menlo', 'Consolas', 'Liberation Mono', 'Courier New', monospace;
+@fontScalingFactor: 1;
+@contentLineHeight: 1.65;
+
+@headingMargin: 0.5em;
+
+// blockquote
+@blockquotePaddingRight: 25px;
+@blockquotePaddingLeft: 30px;
+
+// custom tablet styling
+@contentPaddingTablet: 3.35em;
+
+// note since content does not use view border box we have to include padding.
+@contentMaxWidthTablet: @width-breakpoint-desktop - ( 2 * @contentPaddingTablet );
+
+// Wiki specific variables
+@infoboxWidth: 320px;
+
+@lastModifiedBarBgColor: @chromeColor;
+@lastModifiedBarTextColor: @colorTextLight;
+
+@footerBorderColor: @grayLight;
+
+@notificationBackgroundRead: @colorGray14;
+@notificationColorRead: @colorGray5;
+@notificationBackgroundUnread: @colorDestructive;
+@notificationColorUnread: #fff;
+
+// z-index:
+@z-indexOccluded: -1;
+@z-indexBase: 0;
+@z-indexAboveContent: 1;
+@z-indexDrawer: 2;
+@z-indexOverlay: 3;
+@z-indexOverOverlay: 4;
+
+// Print specific
+@colorPrintSubtle: #999;
+@borderColorPrint: #999;
+
+// Animations
+@menu-animation-duration: 0.25s;
+@menu-animation-easing: ease-in-out;

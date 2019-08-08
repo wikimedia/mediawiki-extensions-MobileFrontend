@@ -14,7 +14,14 @@ module.exports = {
 				}
 			}
 		}, {
-						// in core some LESS imports don't specify filename
+			test: /\.css$/,
+			use: [ {
+				loader: 'style-loader'
+			}, {
+				loader: 'css-loader'
+			} ]
+		}, {
+			// in core some LESS imports don't specify filename
 			test: /\.less$/,
 			use: [ {
 				loader: 'style-loader'

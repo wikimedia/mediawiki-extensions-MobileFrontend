@@ -1,9 +1,9 @@
 import { storiesOf } from '@storybook/html';
 import Button from '../src/mobile.startup/Button';
-// Assumes core is accessible using standard directory structure
+import { action } from '@storybook/addon-actions';
+
 import '../.storybook/resolve-less-imports/mediawiki.ui/components/buttons.less';
 
-// Note quiet and block
 storiesOf( 'Button' )
 	.add( 'normal',
 		() => new Button( {
@@ -27,9 +27,7 @@ storiesOf( 'Button' )
 		() => new Button( {
 			destructive: true,
 			events: {
-				click: function () {
-					alert( 'DESTROY ALL!' );
-				}
+				click: action( 'click' )
 			},
 			label: 'destructive'
 		} ).$el[0]

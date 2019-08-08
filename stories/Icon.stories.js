@@ -1,36 +1,98 @@
 import { storiesOf } from '@storybook/html';
+import { action } from '@storybook/addon-actions';
 import Icon from '../src/mobile.startup/Icon';
 import '../.storybook/resolve-less-imports/mediawiki.ui/components/icons.less';
 import '../resources/mobile.startup/icon.less';
 
-// Note quiet and block
 storiesOf( 'Icon' )
-	.add( 'arrow',
-		() => new Icon( {
-			name: 'arrow',
-			label: 'I Arrow',
-			events: {
-				click: () => alert( 'do arrow thing!' )
-			}
-		} ).$el[0]
+	.add( 'arrows (small, normal)',
+		() => {
+			const container = document.createElement( 'div' );
+			[
+				new Icon( {
+					name: 'arrow',
+					isSmall: true,
+					label: 'Arrow small',
+					events: {
+						click: action( 'click' )
+					}
+				} ),
+				new Icon( {
+					name: 'arrow',
+					label: 'Arrow',
+					events: {
+						click: action( 'click' )
+					}
+				} )
+			].forEach( ( node ) => container.appendChild( node.$el[0] ) );
+			return container;
+		}
 	)
 	.add( 'arrow rotated 180 degrees',
-		() => new Icon( {
-			name: 'arrow',
-			rotation: 180,
-			label: 'I also Arrow',
-			events: {
-				click: () => alert( 'do arrow thing!' )
-			}
-		} ).$el[0]
+		() => {
+			const container = document.createElement( 'div' );
+			[
+				new Icon( {
+					name: 'arrow',
+					isSmall: true,
+					rotation: 180,
+					label: 'Arrow',
+					events: {
+						click: action( 'click' )
+					}
+				} ),
+				new Icon( {
+					name: 'arrow',
+					rotation: 180,
+					label: 'Arrow',
+					events: {
+						click: action( 'click' )
+					}
+				} ),
+				new Icon( {
+					name: 'arrow',
+					isSmall: true,
+					rotation: 180,
+					label: 'Arrow small',
+					hasText: true,
+					events: {
+						click: action( 'click' )
+					}
+				} ),
+				new Icon( {
+					name: 'arrow',
+					rotation: 180,
+					label: 'Arrow',
+					hasText: true,
+					events: {
+						click: action( 'click' )
+					}
+				} )
+			].forEach( ( node ) => container.appendChild( node.$el[0] ) );
+			return container;
+		}
 	)
 	.add( 'arrow with label',
-		() => new Icon( {
-			name: 'arrow',
-			label: 'I arrow',
-			hasText: true,
-			events: {
-				click: () => alert( 'do arrow thing!' )
-			}
-		} ).$el[0]
-	);
+		() => {
+			const container = document.createElement( 'div' );
+			[
+				new Icon( {
+					name: 'arrow',
+					isSmall: true,
+					label: 'Arrow small',
+					hasText: true,
+					events: {
+						click: action( 'click' )
+					}
+				} ),
+				new Icon( {
+					name: 'arrow',
+					label: 'Arrow',
+					hasText: true,
+					events: {
+						click: action( 'click' )
+					}
+				} )
+			].forEach( ( node ) => container.appendChild( node.$el[0] ) );
+			return container;
+		} );

@@ -1,0 +1,45 @@
+@import '../../minerva.less/minerva.variables.less';
+@import '../../minerva.less/minerva.mixins.less';
+
+.overlay {
+	padding-top: @headerHeight;
+
+	textarea {
+		.editor-textarea();
+	}
+
+	> ul, button {
+		width: @headerHeight;
+	}
+
+	.license {
+		.secondary-text();
+	}
+}
+
+.overlay-header .header-action {
+	> a,
+	> button {
+		height: @headerHeight;
+	}
+}
+
+.overlay-header .overlay-title {
+	padding: @headerVerticalPadding 0;
+
+	&:last-child {
+		// Reserve space to the right in case the search form in the header or
+		// overlay title in the overlay header is the last element. Use @iconGutterWidth
+		// because there is a hamburger or close/back icon next to this element and
+		// the space between them is exactly that.
+		padding-right: @iconGutterWidth;
+	}
+}
+
+@media all and ( min-width: @width-breakpoint-desktop ) {
+	.overlay-header {
+		// Make sure the close button and secondary button icon images are aligned
+		// with the content.
+		max-width: @contentMaxWidthTablet + ( 2 * @iconGutterWidth );
+	}
+}

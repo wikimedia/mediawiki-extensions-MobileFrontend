@@ -2,7 +2,6 @@ import { storiesOf } from '@storybook/html';
 import Anchor from '../src/mobile.startup/Anchor';
 import '../.storybook/resolve-less-imports/mediawiki.ui/components/anchors.less';
 
-// Note quiet and block
 storiesOf( 'Anchor' )
 	.add( 'normal',
 		() => new Anchor( {
