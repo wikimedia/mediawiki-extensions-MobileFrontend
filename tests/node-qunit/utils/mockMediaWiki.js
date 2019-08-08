@@ -56,6 +56,13 @@ module.exports = function newMockMediaWiki() {
 			warn: function () {}
 		},
 		msg: function ( id ) { return id; },
+		message: function ( id ) {
+			return {
+				parse: function () {
+					return id;
+				}
+			};
+		},
 		now: Date.now.bind( Date ),
 		user: {
 			options: {

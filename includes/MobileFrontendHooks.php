@@ -1074,9 +1074,12 @@ class MobileFrontendHooks {
 		// If the device is a mobile, Remove the category entry.
 		$context = $services->getService( 'MobileFrontend.Context' );
 		if ( $context->shouldDisplayMobileView() ) {
+			$outreach = $services->getService( 'MobileFrontend.AMC.Outreach' );
 			unset( $vars['wgCategories'] );
 			$vars['wgMFMode'] = $context->isBetaGroupMember() ? 'beta' : 'stable';
 			$vars['wgMFAmc'] = $userMode->isEnabled();
+			$vars['wgMFAmcOutreachActive'] = $outreach->isCampaignActive();
+			$vars['wgMFAmcOutreachUserEligible'] = $outreach->isUserEligible();
 			$vars['wgMFLazyLoadImages'] =
 				$featureManager->isFeatureAvailableForCurrentUser( 'MFLazyLoadImages' );
 		}

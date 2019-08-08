@@ -53,6 +53,15 @@ return [
 			$services->getService( 'MobileFrontend.Context' )->getUser()
 		);
 	},
+	'MobileFrontend.AMC.Outreach' => function ( MediaWikiServices $services ) {
+		$config = $services->getService( 'MobileFrontend.Config' );
+		return new MobileFrontend\AMC\Outreach(
+			$services->getService( 'MobileFrontend.AMC.UserMode' ),
+			$services->getService( 'MobileFrontend.AMC.Manager' ),
+			$services->getService( 'MobileFrontend.Context' )->getUser(),
+			$config
+		);
+	},
 	'MobileFrontend.Context' => function () {
 		return MobileContext::singleton();
 	}

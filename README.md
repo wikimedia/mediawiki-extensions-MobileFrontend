@@ -552,6 +552,20 @@ Whether Advanced mode is available for users.
 * Type: `Boolean`
 * Default: `false`
 
+#### $wgMFAmcOutreach
+
+Whether the AMC Outreach feature is available for users.
+
+* Type: `Boolean`
+* Default: `false`
+
+#### $wgMFAmcOutreachMinEditCount
+
+When Amc Outreach is enabled, this option sets the minimum number of edits a user must make before they are eligible to see the AMC Outreach feature.
+
+* Type: `Number`
+* Default: 100
+
 #### MFBetaFeedbackLink
 
 Link to feedback page for beta features. If false no feedback link will be shown.

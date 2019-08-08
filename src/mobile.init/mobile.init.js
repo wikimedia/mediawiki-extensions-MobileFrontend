@@ -24,7 +24,8 @@ var skin,
 	experiments = mw.experiments,
 	activeExperiments = mw.config.get( 'wgMFExperiments' ) || {},
 	Skin = require( '../mobile.startup/Skin' ),
-	eventBus = require( '../mobile.startup/eventBusSingleton' );
+	eventBus = require( '../mobile.startup/eventBusSingleton' ),
+	amcOutreach = require( '../mobile.startup/amcOutreach/amcOutreach' );
 
 skin = Skin.getSingleton();
 
@@ -134,6 +135,9 @@ updateFontSize();
 if ( activeExperiments.betaoptin ) {
 	displayBetaOptIn( activeExperiments.betaoptin, currentPage, currentPageHTMLParser );
 }
+
+const amcCampaign = amcOutreach.loadCampaign();
+amcCampaign.showIfEligible( amcOutreach.ACTIONS.onLoad );
 
 // Recruit volunteers through the console
 // (note console.log may not be a function so check via apply)

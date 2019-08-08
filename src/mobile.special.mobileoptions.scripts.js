@@ -2,6 +2,7 @@
 var storage = mw.storage,
 	browser = require( './mobile.startup/Browser' ).getSingleton(),
 	toast = require( './mobile.startup/toast' ),
+	amcOutreach = require( './mobile.startup/amcOutreach/amcOutreach' ),
 	EXPAND_SECTIONS_KEY = 'expandSections',
 	msg = mw.msg,
 	FONT_SIZE_KEY = 'userFontSize';
@@ -113,12 +114,14 @@ function addExpandAllSectionsToForm( $form ) {
  * Helper method to infuse checkbox elements with OO magic
  * Additionally it applies all known hacks to make it mobile friendly
  *
- * @param {jQuery.Object[]} toggleElements an array of toggle elements to infuse
+ * @param {Object[]} toggleObjects an array of toggle objects to infuse
  * @param {jQuery.Object} $form form to submit when there is interaction with toggle
  */
-function infuseToggles( toggleElements, $form ) {
-	toggleElements.forEach( function ( $toggleElement ) {
-		var toggleSwitch,
+function infuseToggles( toggleObjects, $form ) {
+	toggleObjects.forEach( function ( toggleObject ) {
+		var
+			$toggleElement = toggleObject.$el,
+			toggleSwitch,
 			enableToggle,
 			$checkbox;
 
@@ -146,6 +149,9 @@ function infuseToggles( toggleElements, $form ) {
 			toggleSwitch.setValue( enableToggle.isSelected() );
 		} );
 		toggleSwitch.on( 'change', function ( value ) {
+			// execute callback
+			toggleObject.onToggle( value );
+
 			// ugly hack, we're delaying submit form by 0.25s
 			// and we want to disable registering clicks
 			// we want to disable the toggleSwitch
@@ -177,10 +183,22 @@ function initMobileOptions() {
 		toggles = [];
 
 	if ( betaToggle.length ) {
-		toggles.push( betaToggle );
+		toggles.push( {
+			$el: betaToggle,
+			onToggle: function () {}
+		} );
 	}
 	if ( amcToggle.length ) {
-		toggles.push( amcToggle );
+		toggles.push( {
+			$el: amcToggle,
+			onToggle: function ( value ) {
+				if ( !value && amcOutreach.loadCampaign().isCampaignActive() ) {
+					// Make all amc outreach actions ineligible so the user doesn't have
+					// to see the outreach drawer again
+					amcOutreach.loadCampaign().makeAllActionsIneligible();
+				}
+			}
+		} );
 	}
 	infuseToggles( toggles, $form );
 

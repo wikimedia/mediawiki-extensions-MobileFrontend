@@ -178,7 +178,8 @@
 				"watch": "resources/mobile.startup.images/watch.svg",
 				"watched": "resources/mobile.startup.images/watched.svg",
 				"search-clear": "resources/mobile.startup.images/search/search-clear.svg",
-				"search-content": "resources/mobile.startup.images/search/search-content.svg"
+				"search-content": "resources/mobile.startup.images/search/search-content.svg",
+				"amc-outreach": "resources/mobile.amcOutreachDrawer/amc-outreach.svg"
 			}
 		},
 		"mobile.init": {
@@ -319,6 +320,29 @@
 				"resources/dist/mobile.startup.runtime.js",
 				"resources/dist/mobile.common.js",
 				"resources/dist/mobile.startup.js"
+			]
+		},
+		"mobile.amcOutreachDrawer": {
+			"targets": [
+				"mobile",
+				"desktop"
+			],
+			"dependencies": [
+				"mobile.startup"
+			],
+			"styles": [
+				"resources/mobile.amcOutreachDrawer/amcOutreachDrawer.less"
+			],
+			"scripts": [
+				"resources/dist/mobile.amcOutreachDrawer.js"
+			],
+			"messages": [
+				"mobile-frontend-amc-outreach-intro",
+				"mobile-frontend-amc-outreach-description",
+				"mobile-frontend-amc-outreach-enable",
+				"mobile-frontend-amc-outreach-no-thanks",
+				"mobile-frontend-amc-outreach-enabled-message",
+				"mobile-frontend-amc-outreach-dismissed-message"
 			]
 		},
 		"mobile.editor.overlay": {
@@ -978,6 +1002,8 @@
 		"MFSiteStylesRenderBlocking": false,
 		"MFWatchlistEditCountThreshold": 10,
 		"MFAdvancedMobileContributions": false,
+		"MFAmcOutreach": false,
+		"MFAmcOutreachMinEditCount": 100,
 		"MFSchemaEditAttemptStepOversample": false
 	},
 	"ServiceWiringFiles": [

@@ -11,6 +11,7 @@ const
 	ENTRIES = {
 		tests: 'tests.mobilefrontend',
 		startup: 'mobile.startup',
+		amcOutreachDrawer: 'mobile.amcOutreachDrawer',
 		categories: 'mobile.categories.overlays',
 		editor: 'mobile.editor.overlay',
 		editorVe: 'mobile.editor.ve',
@@ -69,6 +70,7 @@ module.exports = ( env, argv ) => ( {
 		// If we utilize webpack lazy loading instead of resource loader lazy
 		// loading, we won't be required to explicitly create this new chunk and
 		// this can be removed.
+		[ENTRIES.amcOutreachDrawer]: './src/mobile.amcOutreachDrawer/mobile.amcOutreachDrawer',
 		[ENTRIES.categories]: './src/mobile.categories.overlays/mobile.categories.overlays.js',
 		[ENTRIES.editor]: './src/mobile.editor.overlay/mobile.editor.overlay.js',
 		[ENTRIES.editorVe]: './src/mobile.editor.ve/mobile.editor.ve.js',
