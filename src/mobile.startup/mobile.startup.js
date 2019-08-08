@@ -16,7 +16,6 @@ module.exports = {
 	Browser: require( './Browser' ),
 	Button: require( './Button' ),
 	Icon: require( './Icon' ),
-	ReferencesDrawer: require( './references/ReferencesDrawer' ),
 	ReferencesGateway: require( './references/ReferencesGateway' ),
 	ReferencesHtmlScraperGateway: require( './references/ReferencesHtmlScraperGateway' ),
 	icons: require( './icons' ),
