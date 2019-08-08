@@ -278,35 +278,39 @@ function setupEditor( page, skin, currentPageHTMLParser ) {
 			// Clear loading interface if loading is aborted before overlay is replaced
 			loadingOverlay.on( 'hide', clearLoadingVE );
 
-			mw.loader.using( 'ext.visualEditor.targetLoader' ).then( function () {
-				mw.libs.ve.targetLoader.addPlugin( 'mobile.editor.ve' );
-				return mw.libs.ve.targetLoader.loadModules( editorOptions.mode );
-			} ).then( function () {
-				// We need to wait for the data to load before showing the overlay,
-				// because the VE overlay has no loading indicator (progress bar / spinner).
-				// We can't show the normal toolbar if it wouldn't work.
-				return editorOptions.dataPromise;
-			} ).then( function () {
-				var VisualEditorOverlay = M.require( 'mobile.editor.overlay/VisualEditorOverlay' ),
-					SourceEditorOverlay = M.require( 'mobile.editor.overlay/SourceEditorOverlay' ),
-					overlay;
-				editorOptions.SourceEditorOverlay = SourceEditorOverlay;
-				overlay = new VisualEditorOverlay( editorOptions );
-				overlay.on( 'editor-loaded', clearLoadingVE );
-				return overlay;
-			}, function () {
-				return loadSourceEditor();
-			} ).then( function ( overlay ) {
-				// Make sure the user did not close the overlay while we were loading
-				var overlayData = overlayManager.stack[0];
-				if ( !overlayData || overlayData.overlay !== loadingOverlay ) {
-					return;
-				}
-				loadingOverlay.off( 'hide', clearLoadingVE );
-				// Clear loading interface if loading is aborted after overlay is replaced
-				overlay.on( 'hide', clearLoadingVE );
-				overlayManager.replaceCurrent( overlay );
-			} );
+			mw.loader.using( 'ext.visualEditor.targetLoader' )
+				.then( function () {
+					mw.libs.ve.targetLoader.addPlugin( 'mobile.editor.ve' );
+					return mw.libs.ve.targetLoader.loadModules( editorOptions.mode );
+				} )
+				.then( function () {
+					// We need to wait for the data to load before showing the overlay,
+					// because the VE overlay has no loading indicator (progress bar / spinner).
+					// We can't show the normal toolbar if it wouldn't work.
+					return editorOptions.dataPromise;
+				} )
+				.then( function () {
+					var VisualEditorOverlay = M.require( 'mobile.editor.overlay/VisualEditorOverlay' ),
+						SourceEditorOverlay = M.require( 'mobile.editor.overlay/SourceEditorOverlay' ),
+						overlay;
+					editorOptions.SourceEditorOverlay = SourceEditorOverlay;
+					overlay = new VisualEditorOverlay( editorOptions );
+					overlay.on( 'editor-loaded', clearLoadingVE );
+					return overlay;
+				}, function () {
+					return loadSourceEditor();
+				} )
+				.then( function ( overlay ) {
+					// Make sure the user did not close the overlay while we were loading
+					var overlayData = overlayManager.stack[0];
+					if ( !overlayData || overlayData.overlay !== loadingOverlay ) {
+						return;
+					}
+					loadingOverlay.off( 'hide', clearLoadingVE );
+					// Clear loading interface if loading is aborted after overlay is replaced
+					overlay.on( 'hide', clearLoadingVE );
+					overlayManager.replaceCurrent( overlay );
+				} );
 
 			return loadingOverlay;
 		}
