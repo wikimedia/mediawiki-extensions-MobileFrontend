@@ -25,6 +25,25 @@
 		width: 100%;
 	}
 
+	.overlay-header-container {
+		box-shadow: 0 1px 1px rgba( 0, 0, 0, 0.1 );
+	}
+
+	.overlay-header {
+		// The border will only be visible on screens >1000px due to max-width set elsewhere.
+		outline: 1px solid #c8ccd1;
+
+		.oo-ui-toolbar-bar,
+		.oo-ui-toolbar-popups {
+			border-collapse: separate;
+		}
+
+		.oo-ui-toolbar-bar {
+			border: 0;
+			box-shadow: none;
+		}
+	}
+
 	.anonwarning {
 		margin-top: 16px;
 
@@ -54,6 +73,10 @@
 	.wikitext-editor {
 		.box-sizing( border-box );
 		font-size: inherit;
+
+		&:focus {
+			outline: 0;
+		}
 	}
 
 	.summary-request {
@@ -88,16 +111,6 @@
 
 	.editor-switcher {
 		border-left: 1px solid @colorGray12;
-
-		.oo-ui-toolbar-bar,
-		.oo-ui-toolbar-popups {
-			border-collapse: separate;
-		}
-
-		.oo-ui-toolbar-bar {
-			border: 0;
-			box-shadow: none;
-		}
 	}
 }
 
