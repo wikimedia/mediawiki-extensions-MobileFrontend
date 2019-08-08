@@ -272,7 +272,7 @@
 	"tag-mobile_edit": "Modification par mobile",
 	"tag-mobile_edit-description": "Modification effectuée depuis un mobile (web ou application)",
 	"tag-advanced_mobile_edit": "Edition avancée sur mobile",
-	"tag-advanced_mobile_edit-description": "Modification faite par l'utilisateur à l'aide du mode Advanced Mobile Contributions",
+	"tag-advanced_mobile_edit-description": "Modification faite par l’utilisateur en mode avancé",
 	"tag-mobile_web_edit": "Modification par le web mobile",
 	"tag-mobile_web_edit-description": "Modification effectuée depuis le site web mobile",
 	"mobile-frontend-loading-message": "Chargement…",
