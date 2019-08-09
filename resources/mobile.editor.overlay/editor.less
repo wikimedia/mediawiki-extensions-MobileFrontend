@@ -17,12 +17,13 @@
 		}
 	}
 
+	// Main editor and edit summary
 	textarea {
 		padding: 0.5em;
 	}
 
 	.overlay-content {
-		width: 100%;
+		max-width: none;
 	}
 
 	.overlay-header-container {
@@ -73,6 +74,8 @@
 	.wikitext-editor {
 		.box-sizing( border-box );
 		font-size: inherit;
+		padding: 0;
+		padding-top: 1em;
 
 		&:focus {
 			outline: 0;

@@ -59,9 +59,9 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 	 */
 	templatePartials: util.extend( {}, EditorOverlayBase.prototype.templatePartials, {
 		content: util.template( `
-<div lang="{{contentLang}}" dir="{{contentDir}}" class="editor-container">
+<div lang="{{contentLang}}" dir="{{contentDir}}" class="editor-container content">
 	<textarea class="wikitext-editor" id="wikitext-editor" cols="40" rows="10" placeholder="{{placeholder}}"></textarea>
-	<div class="preview content"></div>
+	<div class="preview"></div>
 </div>
 		` )
 	} ),
