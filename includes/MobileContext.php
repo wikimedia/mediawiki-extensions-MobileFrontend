@@ -110,6 +110,10 @@ class MobileContext extends ContextSource {
 	 * @var String Stores the actual mobile url template.
 	 */
 	private $mobileUrlTemplate = false;
+	/**
+	 * @var Config
+	 */
+	private $config;
 
 	/**
 	 * Returns the actual MobileContext Instance or create a new if no exists
@@ -131,22 +135,21 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
-	 * Set the IontextSource Object
-	 * @param IContextSource $context The IContextSource Object has to set
+	 * Set the IContextSource object
+	 * @param IContextSource $context The IContextSource object to set
 	 */
 	protected function __construct( IContextSource $context ) {
 		$this->setContext( $context );
+		$this->setConfig();
 	}
 
 	/**
-	 * Get MobileFrontend's config object.
-	 * @deprecated use MediaWikiServices::getInstance()->getService( 'MobileFrontend.Config' );
-	 * @return Config
+	 * Set the configuration
 	 */
-	public function getMFConfig() {
-		/** @var Config $config */
-		$config = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Config' );
-		return $config;
+	public function setConfig() {
+		$this->config = MediaWikiServices::getInstance()->getService(
+			'MobileFrontend.Config'
+		);
 	}
 
 	/**
@@ -171,12 +174,11 @@ class MobileContext extends ContextSource {
 
 		$this->isMobileDevice = false;
 
-		$config = $this->getMFConfig();
-		$properties = DeviceDetectorService::factory( $config )
+		$properties = DeviceDetectorService::factory( $this->config )
 			->detectDeviceProperties( $this->getRequest(), $_SERVER );
 
 		if ( $properties ) {
-			$showMobileViewToTablets = $config->get( 'MFShowMobileViewToTablets' );
+			$showMobileViewToTablets = $this->config->get( 'MFShowMobileViewToTablets' );
 
 			$this->isMobileDevice =
 				$properties->isMobileDevice()
@@ -231,7 +233,7 @@ class MobileContext extends ContextSource {
 	 * @return string
 	 */
 	private function getMobileMode() {
-		$enableBeta = $this->getMFConfig()->get( 'MFEnableBeta' );
+		$enableBeta = $this->config->get( 'MFEnableBeta' );
 
 		if ( !$enableBeta ) {
 			return '';
@@ -451,9 +453,8 @@ class MobileContext extends ContextSource {
 	 * @return bool
 	 */
 	private function isBlacklistedPageInternal() {
-		$config = $this->getMFConfig();
-		$noMobilePages = $config->get( 'MFNoMobilePages' );
-		$noMobileCategory = $config->get( 'MFNoMobileCategory' );
+		$noMobilePages = $this->config->get( 'MFNoMobilePages' );
+		$noMobileCategory = $this->config->get( 'MFNoMobileCategory' );
 
 		// Check for blacklisted category membership
 		$title = $this->getTitle();
@@ -574,7 +575,7 @@ class MobileContext extends ContextSource {
 	 */
 	public function getCookieDomain() {
 		$helper = new WMFBaseDomainExtractor();
-		return $helper->getCookieDomain( $this->getMFConfig()->get( 'Server' ) );
+		return $helper->getCookieDomain( $this->config->get( 'Server' ) );
 	}
 
 	/**
@@ -585,7 +586,7 @@ class MobileContext extends ContextSource {
 	 * @return string
 	 */
 	public function getStopMobileRedirectCookieDomain() {
-		$mfStopRedirectCookieHost = $this->getMFConfig()->get( 'MFStopRedirectCookieHost' );
+		$mfStopRedirectCookieHost = $this->config->get( 'MFStopRedirectCookieHost' );
 
 		if ( !$mfStopRedirectCookieHost ) {
 			self::$mfStopRedirectCookieHost = $this->getCookieDomain();
@@ -668,7 +669,7 @@ class MobileContext extends ContextSource {
 	 */
 	public function getUseFormatCookieDuration() {
 		$mobileFrontendFormatCookieExpiry =
-			$this->getMFConfig()->get( 'MobileFrontendFormatCookieExpiry' );
+			$this->config->get( 'MobileFrontendFormatCookieExpiry' );
 
 		$cookieExpiration = $this->getConfig()->get( 'CookieExpiration' );
 
@@ -697,7 +698,7 @@ class MobileContext extends ContextSource {
 	 */
 	public function getMobileUrlTemplate() {
 		if ( !$this->mobileUrlTemplate ) {
-			$this->mobileUrlTemplate = $this->getMFConfig()->get( 'MobileUrlTemplate' );
+			$this->mobileUrlTemplate = $this->config->get( 'MobileUrlTemplate' );
 		}
 		return $this->mobileUrlTemplate;
 	}
@@ -754,9 +755,8 @@ class MobileContext extends ContextSource {
 	 * @return bool
 	 */
 	public function usingMobileDomain() {
-		$config = $this->getMFConfig();
-		$mobileHeader = $config->get( 'MFMobileHeader' );
-		return ( $config->get( 'MobileUrlTemplate' )
+		$mobileHeader = $this->config->get( 'MFMobileHeader' );
+		return ( $this->config->get( 'MobileUrlTemplate' )
 			&& $mobileHeader
 			&& $this->getRequest()->getHeader( $mobileHeader ) !== false
 		);
@@ -993,7 +993,7 @@ class MobileContext extends ContextSource {
 	 */
 	public function isLocalUrl( $url ) {
 		$parsedTarget = wfParseUrl( $url );
-		$parsedServer = wfParseUrl( $this->getMFConfig()->get( 'Server' ) );
+		$parsedServer = wfParseUrl( $this->config->get( 'Server' ) );
 		return $parsedTarget['host'] === $parsedServer['host'];
 	}
 
@@ -1093,7 +1093,7 @@ class MobileContext extends ContextSource {
 	public function shouldStripResponsiveImages() {
 		if ( $this->stripResponsiveImagesOverride === null ) {
 			return $this->shouldDisplayMobileView()
-				&& $this->getMFConfig()->get( 'MFStripResponsiveImages' );
+				&& $this->config->get( 'MFStripResponsiveImages' );
 		} else {
 			return $this->stripResponsiveImagesOverride;
 		}

@@ -46,10 +46,12 @@ class MobileContextTest extends MediaWikiTestCase {
 		$request->setCookies( $cookies, '' );
 
 		$context = new DerivativeContext( RequestContext::getMain() );
+		$config = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Config' );
 		$context->setRequest( $request );
 		$context->setOutput( new OutputPage( $context ) );
 		$instance = unserialize( 'O:13:"MobileContext":0:{}' );
 		$instance->setContext( $context );
+		$instance->setConfig( $config );
 		return $instance;
 	}
 
