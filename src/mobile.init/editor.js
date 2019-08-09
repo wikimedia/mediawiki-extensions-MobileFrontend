@@ -285,7 +285,7 @@ function setupEditor( page, skin, currentPageHTMLParser ) {
 				// Pretend that we didn't just scroll the page to the top.
 				$page.prop( 'scrollTop', this.scrollTop );
 				// Then, pretend that we're scrolling to the position of the clicked heading.
-				fakeScroll = $sectionTop.prop( 'offsetTop' ) - this.scrollTop;
+				fakeScroll = $sectionTop[0].getBoundingClientRect().top;
 				// Adjust for height of the toolbar.
 				fakeScroll -= 48;
 				if ( sectionId === '0' || sectionId === 'all' || enableVisualSectionEditing ) {
