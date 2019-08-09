@@ -1,6 +1,7 @@
 /* global ve, $ */
 var EditorOverlayBase = require( './EditorOverlayBase' ),
 	EditorGateway = require( './EditorGateway' ),
+	fakeToolbar = require( '../mobile.init/fakeToolbar' ),
 	blockMessageDrawer = require( './blockMessageDrawer' ),
 	mfExtend = require( '../mobile.startup/mfExtend' ),
 	router = mw.loader.require( 'mediawiki.router' ),
@@ -98,19 +99,12 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 
 		EditorOverlayBase.prototype.show.apply( this, arguments );
 
-		// We don't use the default spinner. Instead, rely on the progressbar from init/editor.js.
-		if ( !this.options.switched ) {
-			this.hideSpinner();
-			this.$el.addClass( 'loading' );
-		}
-
 		this.target = ve.init.mw.targetFactory.create( 'article', this, {
 			$element: this.$el,
 			section: this.options.sectionId
 		} );
 		this.target.once( 'surfaceReady', function () {
 			this.emit( 'editor-loaded' );
-			this.$el.removeClass( 'loading' );
 			this.scrollToLeadParagraph();
 			// log edit attempt
 			this.log( { action: 'ready' } );
@@ -124,7 +118,6 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 			this.$anonWarning = this.createAnonWarning( this.options );
 			this.$el.append( this.$anonWarning );
 			this.$el.find( '.overlay-content' ).hide();
-			this.$el.removeClass( 'loading' );
 		} else {
 			this.checkForBlocks();
 		}
@@ -231,6 +224,7 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 	switchToSourceEditor: function ( dataPromise ) {
 		var self = this,
 			SourceEditorOverlay = this.SourceEditorOverlay,
+			newOverlay,
 			options = this.getOptionsForSwitch();
 		this.log( {
 			action: 'abort',
@@ -244,9 +238,12 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 
 		// Save a user setting indicating that this user prefers using the SourceEditor
 		mw.storage.set( 'preferredEditor', 'SourceEditor' );
-		this.showSpinner();
-		this.$el.find( '.surface' ).hide();
-		self.hideSpinner();
+
+		this.$el.addClass( 'switching' );
+		this.$el.find( '.overlay-header-container' ).hide();
+		this.$el.append( fakeToolbar() );
+		this.target.getSurface().setReadOnly( true );
+
 		if ( dataPromise ) {
 			// If switching with edits we can't stay in section editing, as a VE edit
 			// can always affect the whole document (e.g. references)
@@ -256,9 +253,12 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 				useReplaceState: true
 			} );
 		}
-		self.switching = true;
-		self.overlayManager.replaceCurrent( new SourceEditorOverlay( options, dataPromise ) );
-		self.switching = false;
+		newOverlay = new SourceEditorOverlay( options, dataPromise );
+		newOverlay.getLoadingPromise().then( function () {
+			self.switching = true;
+			self.overlayManager.replaceCurrent( newOverlay );
+			self.switching = false;
+		} );
 	},
 	/**
 	 * @inheritdoc

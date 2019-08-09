@@ -1,8 +1,10 @@
 var EditorOverlayBase = require( './EditorOverlayBase' ),
 	util = require( '../mobile.startup/util' ),
+	icons = require( '../mobile.startup/icons' ),
 	Section = require( '../mobile.startup/Section' ),
 	saveFailureMessage = require( './saveFailureMessage' ),
 	EditorGateway = require( './EditorGateway' ),
+	fakeToolbar = require( '../mobile.init/fakeToolbar' ),
 	AbuseFilterPanel = require( './AbuseFilterPanel' ),
 	mfExtend = require( '../mobile.startup/mfExtend' ),
 	blockMessageDrawer = require( './blockMessageDrawer' ),
@@ -190,6 +192,10 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 
 		EditorOverlayBase.prototype.postRender.apply( this );
 
+		// This spinner is still used when displaying save/preview panel
+		this.$el.find( '.overlay-content' ).append( icons.spinner().$el );
+		this.hideSpinner();
+
 		this.$preview = this.$el.find( '.preview' );
 		this.$content = this.$el.find( '.wikitext-editor' );
 		this.$content.addClass( 'mw-editfont-' + mw.user.options.get( 'editfont' ) );
@@ -200,7 +206,6 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 			// the user has to click login, signup or edit without login,
 			// disable "Next" button on top right
 			this.$anonHiddenButtons = this.$el.find( '.overlay-header .continue, .editor-switcher' ).hide();
-			this.hideSpinner();
 		}
 		// make license links open in separate tabs
 		this.$el.find( '.license a' ).attr( 'target', '_blank' );
@@ -228,7 +233,6 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 	 * @private
 	 */
 	onClickAnonymous: function () {
-		this.showSpinner();
 		this.$anonWarning.hide();
 		// reenable "Next" button
 		this.$anonHiddenButtons.show();
@@ -366,12 +370,9 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 	 * @private
 	 */
 	_loadContent: function () {
-		var self = this,
-			$el = this.$el;
+		var self = this;
 
 		this.$content.hide();
-		this.showSpinner();
-		$el.addClass( 'overlay-loading' );
 
 		this.getLoadingPromise()
 			.then( function ( result ) {
@@ -393,16 +394,10 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 						message = blockMessageDrawer( block );
 						message.toggle();
 						self.hide();
-						self.hideSpinner();
-						$el.removeClass( 'overlay-loading' );
 					} );
-				} else {
-					self.hideSpinner();
-					$el.removeClass( 'overlay-loading' );
 				}
 			}, function () {
 				self.reportError( mw.msg( 'mobile-frontend-editor-error-loading' ) );
-				$el.removeClass( 'overlay-loading' );
 			} );
 	},
 
@@ -425,19 +420,22 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 			feature: 'editor-switch',
 			action: 'visual-mobile'
 		} );
+
 		// Save a user setting indicating that this user prefers using the VisualEditor
 		mw.storage.set( 'preferredEditor', 'VisualEditor' );
-		// Load the VisualEditor and replace the SourceEditor overlay with it
-		this.showSpinner();
-		this.$content.hide();
+
+		this.$el.addClass( 'switching' );
+		this.$el.find( '.overlay-header-container' ).hide();
+		this.$el.append( fakeToolbar() );
+		this.$content.prop( 'readonly', true );
+
 		mw.loader.using( 'ext.visualEditor.targetLoader' ).then( function () {
 			mw.libs.ve.targetLoader.addPlugin( 'mobile.editor.ve' );
 			return mw.libs.ve.targetLoader.loadModules( 'visual' );
 		} ).then(
 			function () {
-				var options = self.getOptionsForSwitch();
+				var newOverlay, options = self.getOptionsForSwitch();
 				options.SourceEditorOverlay = SourceEditorOverlay;
-				self.hideSpinner();
 				if ( wikitext ) {
 					options.dataPromise = mw.libs.ve.targetLoader.requestPageData( 'visual', mw.config.get( 'wgRelevantPageName' ), {
 						section: options.sectionId,
@@ -449,13 +447,18 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 				} else {
 					delete options.dataPromise;
 				}
-				self.switching = true;
-				self.overlayManager.replaceCurrent( new VisualEditorOverlay( options ) );
-				self.switching = false;
+				newOverlay = new VisualEditorOverlay( options );
+				newOverlay.getLoadingPromise().then( function () {
+					self.switching = true;
+					self.overlayManager.replaceCurrent( newOverlay );
+					self.switching = false;
+				} );
 			},
 			function () {
-				self.hideSpinner();
-				self.$content.show();
+				self.$el.removeClass( 'switching' );
+				self.$el.find( '.overlay-header-container' ).show();
+				self.$el.find( '.ve-mobile-fakeToolbar-container' ).remove();
+				self.$content.prop( 'readonly', false );
 				// FIXME: We should show an error notification, but right now toast
 				// notifications are not dismissible when shown within the editor.
 			}

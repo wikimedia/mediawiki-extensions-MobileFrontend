@@ -7,11 +7,11 @@
 	"//": "Ignore files in vendor/, resources/, and elsewhere.",
 	"include": [ "src/**/*.js" ],
 
-	"//": "Set the coverage percentage by category thresholds.",
+	"//": "Set the coverage percentage by category thresholds. Round down to nearest 1%",
 	"statements": 51.0,
 	"branches": 47.0,
-	"functions": 50.2,
-	"lines": 53.7,
+	"functions": 50.0,
+	"lines": 53.0,
 
 	"//": "Fail if the coverage is below threshold.",
 	"check-coverage": true,

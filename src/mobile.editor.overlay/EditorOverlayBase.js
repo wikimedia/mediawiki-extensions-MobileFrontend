@@ -408,7 +408,6 @@ mfExtend( EditorOverlayBase, Overlay, {
 		}
 		this.$errorNoticeContainer = this.$el.find( '#error-notice-container' );
 
-		this.$el.find( '.overlay-content' ).append( icons.spinner().$el );
 		Overlay.prototype.postRender.apply( this );
 
 		this.showHidden( '.initial-header' );
