@@ -5,7 +5,6 @@ var M = require( '../mobile.startup/moduleLoaderSingleton' ),
 	editorLoadingOverlay = require( './editorLoadingOverlay' ),
 	OverlayManager = require( '../mobile.startup/OverlayManager' ),
 	overlayManager = OverlayManager.getSingleton(),
-	loader = require( '../mobile.startup/rlModuleLoader' ),
 	// #ca-edit, .mw-editsection are standard MediaWiki elements
 	// .edit-link comes from MobileFrontend user page creation CTA
 	$allEditLinks = $( '#ca-edit, .mw-editsection a, .edit-link' ),
@@ -92,21 +91,18 @@ function setupEditor( page, skin, currentPageHTMLParser ) {
 				contentDir: $content.attr( 'dir' ),
 				sessionId: user.generateRandomSessionId()
 			},
-			veAnimationDelayDeferred, abortableDataPromise,
+			animationDelayDeferred, abortableDataPromise, loadingOverlay, overlayPromise,
 			initMechanism = mw.util.getParamValue( 'redlink' ) ? 'new' : 'click';
 
 		if ( sectionId !== 'all' ) {
 			editorOptions.sectionId = page.isWikiText() ? +sectionId : null;
 		}
 
-		function showLoadingVE() {
+		function showLoading() {
 			var $page, $content, $sectionTop, fakeScroll, enableVisualSectionEditing;
 
 			$( document.body ).addClass( 've-loading' );
 
-			enableVisualSectionEditing = veConfig.enableVisualSectionEditing === true ||
-				// === ve.init.mw.MobileArticleTarget.static.trackingName
-				veConfig.enableVisualSectionEditing === 'mobile';
 			$page = $( '#mw-mf-page-center' );
 			$content = $( '#content' );
 			if ( sectionId === '0' || sectionId === 'all' ) {
@@ -128,9 +124,18 @@ function setupEditor( page, skin, currentPageHTMLParser ) {
 			fakeScroll = $sectionTop[0].getBoundingClientRect().top;
 			// Adjust for height of the toolbar.
 			fakeScroll -= 48;
-			if ( sectionId === '0' || sectionId === 'all' || enableVisualSectionEditing ) {
-				// Adjust for surface padding. Only needed if we're at the beginning of the doc.
-				fakeScroll -= 16;
+			if ( shouldLoadVisualEditor() ) {
+				enableVisualSectionEditing = veConfig.enableVisualSectionEditing === true ||
+					// === ve.init.mw.MobileArticleTarget.static.trackingName
+					veConfig.enableVisualSectionEditing === 'mobile';
+				if ( sectionId === '0' || sectionId === 'all' || enableVisualSectionEditing ) {
+					// Adjust for surface padding. Only needed if we're at the beginning of the doc.
+					fakeScroll -= 16;
+				}
+			} else {
+				if ( sectionId === '0' || sectionId === 'all' ) {
+					fakeScroll -= 16;
+				}
 			}
 			$content.css( {
 				// Use transform instead of scroll for smoother animation (via CSS transitions).
@@ -141,11 +146,11 @@ function setupEditor( page, skin, currentPageHTMLParser ) {
 				'margin-bottom': '-=' + fakeScroll
 			} );
 			editorOptions.fakeScroll = fakeScroll;
-			setTimeout( veAnimationDelayDeferred.resolve, 500 );
+			setTimeout( animationDelayDeferred.resolve, 500 );
 		}
 
-		function clearLoadingVE() {
-			if ( abortableDataPromise.abort ) {
+		function clearLoading() {
+			if ( abortableDataPromise && abortableDataPromise.abort ) {
 				abortableDataPromise.abort();
 			}
 
@@ -224,14 +229,14 @@ function setupEditor( page, skin, currentPageHTMLParser ) {
 		 * @private
 		 * @ignore
 		 * @method
-		 * @return {jQuery.Promise}
+		 * @return {jQuery.Promise} Promise resolved with the editor overlay
 		 */
 		function loadSourceEditor() {
 			logInit( 'wikitext' );
 			// Inform other interested code that we're loading the editor
 			mw.hook( 'mobileFrontend.editorOpening' ).fire();
 
-			return loader.loadModule( 'mobile.editor.overlay' ).then( function () {
+			return mw.loader.using( 'mobile.editor.overlay' ).then( function () {
 				var SourceEditorOverlay = M.require( 'mobile.editor.overlay/SourceEditorOverlay' );
 				return new SourceEditorOverlay( editorOptions );
 			} );
@@ -242,16 +247,12 @@ function setupEditor( page, skin, currentPageHTMLParser ) {
 		 * @private
 		 * @ignore
 		 * @method
-		 * @return {Overlay} The loading overlay
+		 * @return {jQuery.Promise} Promise resolved with the editor overlay
 		 */
 		function loadVisualEditorMaybe() {
-			var loadingOverlay;
-
 			logInit( 'visualeditor' );
 			// Inform other interested code that we're loading the editor
 			mw.hook( 'mobileFrontend.editorOpening' ).fire();
-
-			veAnimationDelayDeferred = util.Deferred();
 
 			editorOptions.mode = 'visual';
 			editorOptions.dataPromise = mw.loader.using( 'ext.visualEditor.targetLoader' ).then( function () {
@@ -269,25 +270,10 @@ function setupEditor( page, skin, currentPageHTMLParser ) {
 				return abortableDataPromise;
 			} );
 
-			loadingOverlay = editorLoadingOverlay();
-			// This has to run after the overlay has opened, which disables page scrolling
-			loadingOverlay.on( 'show', showLoadingVE );
-			// Clear loading interface after the loading overlay is hidden
-			// (either when loading is aborted, or when the editor overlay is shown instead)
-			loadingOverlay.on( 'hide', clearLoadingVE );
-
-			mw.loader.using( 'ext.visualEditor.targetLoader' )
+			return mw.loader.using( 'ext.visualEditor.targetLoader' )
 				.then( function () {
 					mw.libs.ve.targetLoader.addPlugin( 'mobile.editor.ve' );
 					return mw.libs.ve.targetLoader.loadModules( editorOptions.mode );
-				} )
-				.then( function () {
-					// Ensure the scroll animation finishes before we load the editor
-					return veAnimationDelayDeferred;
-				} )
-				.then( function () {
-					// Wait for the editor to be loaded before showing the editor overlay
-					return editorOptions.dataPromise;
 				} )
 				.then( function () {
 					var VisualEditorOverlay = M.require( 'mobile.editor.overlay/VisualEditorOverlay' ),
@@ -296,24 +282,37 @@ function setupEditor( page, skin, currentPageHTMLParser ) {
 					return new VisualEditorOverlay( editorOptions );
 				}, function () {
 					return loadSourceEditor();
-				} )
-				.then( function ( overlay ) {
-					// Make sure the user did not close the overlay while we were loading
-					var overlayData = overlayManager.stack[0];
-					if ( !overlayData || overlayData.overlay !== loadingOverlay ) {
-						return;
-					}
-					overlayManager.replaceCurrent( overlay );
 				} );
-
-			return loadingOverlay;
 		}
+
+		animationDelayDeferred = util.Deferred();
+
+		// showLoading() has to run after the overlay has opened, which disables page scrolling.
+		// clearLoading() has to run after the loading overlay is hidden in any way
+		// (either when loading is aborted, or when the editor overlay is shown instead).
+		loadingOverlay = editorLoadingOverlay( showLoading, clearLoading );
 
 		if ( shouldLoadVisualEditor() ) {
-			return loadVisualEditorMaybe();
+			overlayPromise = loadVisualEditorMaybe();
 		} else {
-			return loadSourceEditor();
+			overlayPromise = loadSourceEditor();
 		}
+
+		// Wait for the scroll animation to finish before we show the editor overlay
+		util.Promise.all( [ overlayPromise, animationDelayDeferred ] ).then( function ( overlay ) {
+			// Wait for the data to load before we show the editor overlay
+			overlay.getLoadingPromise().then( function () {
+				// Make sure the user did not close the loading overlay while we were waiting
+				var overlayData = overlayManager.stack[0];
+				if ( !overlayData || overlayData.overlay !== loadingOverlay ) {
+					return;
+				}
+				// Show the editor!
+				overlayManager.replaceCurrent( overlay );
+			} );
+		} );
+
+		return loadingOverlay;
 	} );
 
 	$( '#ca-edit a' ).prop( 'href', function ( i, href ) {
