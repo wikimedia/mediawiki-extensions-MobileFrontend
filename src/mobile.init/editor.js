@@ -266,16 +266,14 @@ function setupEditor( page, skin, currentPageHTMLParser ) {
 						// but the class hasn't loaded yet.
 						targetName: 'mobile'
 					} );
-				// Ensure the scroll animation finishes before we load the editor
-				return veAnimationDelayDeferred.then( function () {
-					return abortableDataPromise;
-				} );
+				return abortableDataPromise;
 			} );
 
 			loadingOverlay = editorLoadingOverlay();
 			// This has to run after the overlay has opened, which disables page scrolling
 			loadingOverlay.on( 'show', showLoadingVE );
-			// Clear loading interface if loading is aborted before overlay is replaced
+			// Clear loading interface after the loading overlay is hidden
+			// (either when loading is aborted, or when the editor overlay is shown instead)
 			loadingOverlay.on( 'hide', clearLoadingVE );
 
 			mw.loader.using( 'ext.visualEditor.targetLoader' )
@@ -284,19 +282,18 @@ function setupEditor( page, skin, currentPageHTMLParser ) {
 					return mw.libs.ve.targetLoader.loadModules( editorOptions.mode );
 				} )
 				.then( function () {
-					// We need to wait for the data to load before showing the overlay,
-					// because the VE overlay has no loading indicator (progress bar / spinner).
-					// We can't show the normal toolbar if it wouldn't work.
+					// Ensure the scroll animation finishes before we load the editor
+					return veAnimationDelayDeferred;
+				} )
+				.then( function () {
+					// Wait for the editor to be loaded before showing the editor overlay
 					return editorOptions.dataPromise;
 				} )
 				.then( function () {
 					var VisualEditorOverlay = M.require( 'mobile.editor.overlay/VisualEditorOverlay' ),
-						SourceEditorOverlay = M.require( 'mobile.editor.overlay/SourceEditorOverlay' ),
-						overlay;
+						SourceEditorOverlay = M.require( 'mobile.editor.overlay/SourceEditorOverlay' );
 					editorOptions.SourceEditorOverlay = SourceEditorOverlay;
-					overlay = new VisualEditorOverlay( editorOptions );
-					overlay.on( 'editor-loaded', clearLoadingVE );
-					return overlay;
+					return new VisualEditorOverlay( editorOptions );
 				}, function () {
 					return loadSourceEditor();
 				} )
@@ -306,9 +303,6 @@ function setupEditor( page, skin, currentPageHTMLParser ) {
 					if ( !overlayData || overlayData.overlay !== loadingOverlay ) {
 						return;
 					}
-					loadingOverlay.off( 'hide', clearLoadingVE );
-					// Clear loading interface if loading is aborted after overlay is replaced
-					overlay.on( 'hide', clearLoadingVE );
 					overlayManager.replaceCurrent( overlay );
 				} );
 
