@@ -67,8 +67,9 @@ function getPreferredEditor() {
  * @ignore
  * @param {Page} page The page to edit.
  * @param {Skin} skin
+ * @param {PageHTMLParser} currentPageHTMLParser
  */
-function setupEditor( page, skin ) {
+function setupEditor( page, skin, currentPageHTMLParser ) {
 	var uri, fragment, editorOverride,
 		isNewPage = page.id === 0;
 
@@ -80,6 +81,8 @@ function setupEditor( page, skin ) {
 			preferredEditor = getPreferredEditor(),
 			editorOptions = {
 				overlayManager: overlayManager,
+				currentPageHTMLParser: currentPageHTMLParser,
+				fakeScroll: 0,
 				api: new mw.Api(),
 				licenseMsg: skin.getLicenseMsg(),
 				title: page.title,
@@ -297,6 +300,7 @@ function setupEditor( page, skin ) {
 					'padding-bottom': '+=' + fakeScroll,
 					'margin-bottom': '-=' + fakeScroll
 				} );
+				editorOptions.fakeScroll = fakeScroll;
 				setTimeout( veAnimationDelayDeferred.resolve, 500 );
 			};
 			return loadingOverlay;
@@ -387,7 +391,7 @@ function init( currentPage, currentPageHTMLParser, skin ) {
 
 	if ( isEditable ) {
 		// Edit button updated in setupEditor.
-		setupEditor( currentPage, skin );
+		setupEditor( currentPage, skin, currentPageHTMLParser );
 	} else {
 		hideSectionEditIcons( currentPageHTMLParser );
 		editRestrictions = mw.config.get( 'wgRestrictionEdit' );

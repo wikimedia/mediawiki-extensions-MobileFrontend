@@ -113,8 +113,10 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	 * only.
 	 * example: `<p> <span> </span> </p>` is not a lead paragraph
 	 *
+	 * Keep in sync with mobile.init/identifyLeadParagraph.js.
+	 *
 	 * @param DOMXPath $xPath XPath object to execute the query
-	 * @param DOMNode $body Where to search for an paragraphs
+	 * @param DOMNode $body Where to search for paragraphs
 	 * @return DOMElement|null The lead paragraph
 	 */
 	private function identifyLeadParagraph( DOMXPath $xPath, DOMNode $body ) {
@@ -199,6 +201,9 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 
 	/**
 	 * Check if the node contains any non-whitespace characters
+	 *
+	 * Keep in sync with mobile.init/identifyLeadParagraph.js.
+	 *
 	 * @param DOMNode $node
 	 * @return bool
 	 */
@@ -209,6 +214,8 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	/**
 	 * Checks if paragraph contains anything other than meta-data only (example: coordinates)
 	 * and can be treated as a lead paragrah (a paragraph with article content)
+	 *
+	 * Keep in sync with mobile.init/identifyLeadParagraph.js.
 	 *
 	 * @param DOMXPath $xPath An XPath query
 	 * @param DOMNode $node DOM Node to verify

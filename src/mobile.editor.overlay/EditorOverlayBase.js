@@ -629,6 +629,8 @@ mfExtend( EditorOverlayBase, Overlay, {
 		return {
 			switched: true,
 			overlayManager: this.options.overlayManager,
+			currentPageHTMLParser: this.options.currentPageHTMLParser,
+			fakeScroll: this.options.fakeScroll,
 			api: this.options.api,
 			licenseMsg: this.options.licenseMsg,
 			title: this.options.title,
