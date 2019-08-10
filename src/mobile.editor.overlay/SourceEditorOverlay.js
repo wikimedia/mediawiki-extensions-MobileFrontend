@@ -7,7 +7,6 @@ var EditorOverlayBase = require( './EditorOverlayBase' ),
 	fakeToolbar = require( '../mobile.init/fakeToolbar' ),
 	AbuseFilterPanel = require( './AbuseFilterPanel' ),
 	mfExtend = require( '../mobile.startup/mfExtend' ),
-	blockMessageDrawer = require( './blockMessageDrawer' ),
 	VisualEditorOverlay = require( './VisualEditorOverlay' );
 
 /**
@@ -376,25 +375,13 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 
 		this.getLoadingPromise()
 			.then( function ( result ) {
-				var block, message,
-					content = result.text;
+				var content = result.text;
 
 				self.setContent( content );
+
 				if ( self.gateway.fromModified ) {
 					// Trigger intial EditorGateway#setContent and update save button
 					self.onInputWikitextEditor();
-				}
-				// check if user is blocked
-				if ( result.blockinfo ) {
-					// Lazy-load moment only if it's needed,
-					// it's somewhat large (it is already used on
-					// mobile by Echo's notifications panel, where it's also lazy-loaded)
-					mw.loader.using( 'moment' ).then( function () {
-						block = self.parseBlockInfo( result.blockinfo );
-						message = blockMessageDrawer( block );
-						message.toggle();
-						self.hide();
-					} );
 				}
 			}, function () {
 				self.reportError( mw.msg( 'mobile-frontend-editor-error-loading' ) );

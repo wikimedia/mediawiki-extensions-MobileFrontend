@@ -2,7 +2,6 @@
 var EditorOverlayBase = require( './EditorOverlayBase' ),
 	EditorGateway = require( './EditorGateway' ),
 	fakeToolbar = require( '../mobile.init/fakeToolbar' ),
-	blockMessageDrawer = require( './blockMessageDrawer' ),
 	mfExtend = require( '../mobile.startup/mfExtend' ),
 	router = mw.loader.require( 'mediawiki.router' ),
 	identifyLeadParagraph = require( './identifyLeadParagraph' ),
@@ -42,7 +41,7 @@ function VisualEditorOverlay( options ) {
 		isNewPage: options.isNewPage
 	} );
 
-	this.dataPromise = this.options.dataPromise || mw.libs.ve.targetLoader.requestPageData(
+	this.origDataPromise = this.options.dataPromise || mw.libs.ve.targetLoader.requestPageData(
 		'visual',
 		options.titleObj.getPrefixedDb(),
 		{
@@ -52,6 +51,9 @@ function VisualEditorOverlay( options ) {
 			targetName: ve.init.mw.MobileArticleTarget.static.trackingName
 		}
 	);
+	this.dataPromise = this.origDataPromise.then( function ( data ) {
+		return data && data.visualeditor;
+	} );
 }
 
 mfExtend( VisualEditorOverlay, EditorOverlayBase, {
@@ -112,14 +114,12 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 		}.bind( this ) );
 		// Ensure we do this after showing the overlay, otherwise some calculations
 		// involving the toolbar height give wrong results.
-		this.target.load( this.dataPromise );
+		this.target.load( this.origDataPromise );
 
 		if ( showAnonWarning ) {
 			this.$anonWarning = this.createAnonWarning( this.options );
 			this.$el.append( this.$anonWarning );
 			this.$el.find( '.overlay-content' ).hide();
-		} else {
-			this.checkForBlocks();
 		}
 	},
 	/**
@@ -180,33 +180,8 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 	onClickAnonymous: function () {
 		var self = this;
 		this.$anonWarning.hide();
-		this.checkForBlocks().then( function () {
-			self.$el.find( '.overlay-content' ).show();
-		} );
+		self.$el.find( '.overlay-content' ).show();
 	},
-
-	/**
-	 * Check if the user is blocked, and close the editor if they are
-	 *
-	 * @return {jQuery.Promise} Promise which resolves when the check is complete
-	 */
-	checkForBlocks: function () {
-		var self = this;
-		return this.getLoadingPromise().then( function ( data ) {
-			if ( data.visualeditor && data.visualeditor.blockinfo ) {
-				// Lazy-load moment only if it's needed,
-				// it's somewhat large (it is already used on
-				// mobile by Echo's notifications panel, where it's also lazy-loaded)
-				mw.loader.using( 'moment' ).then( function () {
-					var block = self.parseBlockInfo( data.visualeditor.blockinfo ),
-						message = blockMessageDrawer( block );
-					message.toggle();
-					self.hide();
-				} );
-			}
-		} );
-	},
-
 	/**
 	 * Reveal the editing interface.
 	 * @memberof VisualEditorOverlay
