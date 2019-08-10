@@ -243,7 +243,7 @@
 	"tag-mobile_edit": "עריכה ממכשיר נייד",
 	"tag-mobile_edit-description": "העריכה נעשתה ממכשיר נייד (דרך אתר או יישום)",
 	"tag-advanced_mobile_edit": "עריכה מתקדמת מהנייד",
-	"tag-advanced_mobile_edit-description": "עריכה שנעשתה במצב \"תרומות מתקדמות מהנייד\"",
+	"tag-advanced_mobile_edit-description": "עריכה שנעשתה על־ידי משתמש במצב מתקדם",
 	"tag-mobile_web_edit": "עריכה דרך האתר הנייד",
 	"tag-mobile_web_edit-description": "עריכה שנעשתה מהאתר הנייד",
 	"mobile-frontend-loading-message": "טעינה...",
