@@ -18,8 +18,6 @@ var M = require( '../mobile.startup/moduleLoaderSingleton' ),
 	isEditingSupported = router.isSupported() && !blacklisted,
 	veConfig = mw.config.get( 'wgVisualEditorConfig' ),
 	editCount = mw.config.get( 'wgUserEditCount' ),
-	// FIXME: Should we consider default site options and user prefs?
-	isVisualEditorEnabled = veConfig,
 	editorPath = /^\/editor\/(\d+|all)$/;
 
 /**
@@ -75,11 +73,9 @@ function setupEditor( page, skin, currentPageHTMLParser ) {
 	$allEditLinks.on( 'click', onEditLinkClick );
 	overlayManager.add( editorPath, function ( sectionId ) {
 		var
-			loadingOverlay,
 			scrollbarWidth = window.innerWidth - document.documentElement.clientWidth,
 			scrollTop = window.pageYOffset,
 			$content = $( '#mw-content-text' ),
-			preferredEditor = getPreferredEditor(),
 			editorOptions = {
 				overlayManager: overlayManager,
 				currentPageHTMLParser: currentPageHTMLParser,
@@ -97,8 +93,11 @@ function setupEditor( page, skin, currentPageHTMLParser ) {
 				sessionId: user.generateRandomSessionId()
 			},
 			veAnimationDelayDeferred, abortableDataPromise,
-			visualEditorNamespaces = ( veConfig && veConfig.namespaces ) || [],
 			initMechanism = mw.util.getParamValue( 'redlink' ) ? 'new' : 'click';
+
+		if ( sectionId !== 'all' ) {
+			editorOptions.sectionId = page.isWikiText() ? +sectionId : null;
+		}
 
 		function showLoadingVE() {
 			var $page, $content, $sectionTop, fakeScroll, enableVisualSectionEditing;
@@ -185,6 +184,42 @@ function setupEditor( page, skin, currentPageHTMLParser ) {
 		}
 
 		/**
+		 * Check whether VisualEditor should be loaded
+		 * @private
+		 * @ignore
+		 * @method
+		 * @return {bool}
+		 */
+		function shouldLoadVisualEditor() {
+			var
+				// FIXME: Should we consider default site options and user prefs?
+				isVisualEditorEnabled = !!veConfig,
+				preferredEditor = getPreferredEditor(),
+				visualEditorNamespaces = ( veConfig && veConfig.namespaces ) || [];
+
+			return isVisualEditorEnabled &&
+
+				// Only for pages with a wikitext content model
+				page.isWikiText() &&
+
+				// Only in enabled namespaces
+				visualEditorNamespaces.indexOf( mw.config.get( 'wgNamespaceNumber' ) ) !== -1 &&
+
+				// Not on pages which are outputs of the Page Translation feature
+				mw.config.get( 'wgTranslatePageTranslation' ) !== 'translation' &&
+
+				(
+					// If the user prefers the VisualEditor or the user has no preference and
+					// the VisualEditor is the default editor for this wiki
+					preferredEditor === 'VisualEditor' ||
+					// We've loaded it via the URL for this request
+					editorOverride === 'VisualEditor'
+				) &&
+
+				editorOverride !== 'SourceEditor';
+		}
+
+		/**
 		 * Load source editor
 		 * @private
 		 * @ignore
@@ -202,32 +237,16 @@ function setupEditor( page, skin, currentPageHTMLParser ) {
 			} );
 		}
 
-		if ( sectionId !== 'all' ) {
-			editorOptions.sectionId = page.isWikiText() ? +sectionId : null;
-		}
+		/**
+		 * Load visual editor. If it fails to load for any reason, load the source editor instead.
+		 * @private
+		 * @ignore
+		 * @method
+		 * @return {Overlay} The loading overlay
+		 */
+		function loadVisualEditorMaybe() {
+			var loadingOverlay;
 
-		// Check whether VisualEditor should be loaded
-		if ( isVisualEditorEnabled &&
-
-			// Only for pages with a wikitext content model
-			page.isWikiText() &&
-
-			// Only in enabled namespaces
-			visualEditorNamespaces.indexOf( mw.config.get( 'wgNamespaceNumber' ) ) !== -1 &&
-
-			// Not on pages which are outputs of the Page Translation feature
-			mw.config.get( 'wgTranslatePageTranslation' ) !== 'translation' &&
-
-			(
-				// If the user prefers the VisualEditor or the user has no preference and
-				// the VisualEditor is the default editor for this wiki
-				preferredEditor === 'VisualEditor' ||
-				// We've loaded it via the URL for this request
-				editorOverride === 'VisualEditor'
-			) &&
-
-			editorOverride !== 'SourceEditor'
-		) {
 			logInit( 'visualeditor' );
 			// Inform other interested code that we're loading the editor
 			mw.hook( 'mobileFrontend.editorOpening' ).fire();
@@ -290,6 +309,10 @@ function setupEditor( page, skin, currentPageHTMLParser ) {
 			} );
 
 			return loadingOverlay;
+		}
+
+		if ( shouldLoadVisualEditor() ) {
+			return loadVisualEditorMaybe();
 		} else {
 			return loadSourceEditor();
 		}
