@@ -104,6 +104,7 @@ references = {
 						pageHTMLParser,
 						gateway
 					);
+					drawer.$el.remove();
 				}
 			} );
 			drawer.show();
