@@ -2,8 +2,7 @@
 var M = require( '../mobile.startup/moduleLoaderSingleton' ),
 	util = require( '../mobile.startup/util' ),
 	router = mw.loader.require( 'mediawiki.router' ),
-	fakeToolbar = require( './fakeToolbar' ),
-	Overlay = require( '../mobile.startup/Overlay' ),
+	editorLoadingOverlay = require( './editorLoadingOverlay' ),
 	OverlayManager = require( '../mobile.startup/OverlayManager' ),
 	overlayManager = OverlayManager.getSingleton(),
 	loader = require( '../mobile.startup/rlModuleLoader' ),
@@ -76,7 +75,9 @@ function setupEditor( page, skin, currentPageHTMLParser ) {
 	$allEditLinks.on( 'click', onEditLinkClick );
 	overlayManager.add( editorPath, function ( sectionId ) {
 		var
-			loadingOverlay, scrollbarWidth,
+			loadingOverlay,
+			scrollbarWidth = window.innerWidth - document.documentElement.clientWidth,
+			scrollTop = window.pageYOffset,
 			$content = $( '#mw-content-text' ),
 			preferredEditor = getPreferredEditor(),
 			editorOptions = {
@@ -99,26 +100,56 @@ function setupEditor( page, skin, currentPageHTMLParser ) {
 			visualEditorNamespaces = ( veConfig && veConfig.namespaces ) || [],
 			initMechanism = mw.util.getParamValue( 'redlink' ) ? 'new' : 'click';
 
-		function showLoadingVE( $content ) {
-			var $fakeToolbar = fakeToolbar();
-			$content.append( $fakeToolbar );
-
-			// Animate the toolbar sliding into place.
-			$fakeToolbar.addClass( 'toolbar-hidden' );
-			setTimeout( function () {
-				$fakeToolbar.addClass( 'toolbar-shown' );
-				setTimeout( function () {
-					$fakeToolbar.addClass( 'toolbar-shown-done' );
-				}, 250 );
-			} );
+		function showLoadingVE() {
+			var $page, $content, $sectionTop, fakeScroll, enableVisualSectionEditing;
 
 			$( document.body ).addClass( 've-loading' );
+
+			enableVisualSectionEditing = veConfig.enableVisualSectionEditing === true ||
+				// === ve.init.mw.MobileArticleTarget.static.trackingName
+				veConfig.enableVisualSectionEditing === 'mobile';
+			$page = $( '#mw-mf-page-center' );
+			$content = $( '#content' );
+			if ( sectionId === '0' || sectionId === 'all' ) {
+				$sectionTop = $( '#bodyContent' );
+			} else {
+				$sectionTop = $( '[data-section="' + sectionId + '"]' )
+					.closest( 'h1, h2, h3, h4, h5, h6' );
+			}
+			// If there was a scrollbar that was hidden when the overlay was shown, add a margin
+			// with the same width. This is mostly so that developers testing this on desktop
+			// don't go crazy when the fake scroll fails to line up.
+			$page.css( {
+				'padding-right': '+=' + scrollbarWidth,
+				'box-sizing': 'border-box'
+			} );
+			// Pretend that we didn't just scroll the page to the top.
+			$page.prop( 'scrollTop', scrollTop );
+			// Then, pretend that we're scrolling to the position of the clicked heading.
+			fakeScroll = $sectionTop[0].getBoundingClientRect().top;
+			// Adjust for height of the toolbar.
+			fakeScroll -= 48;
+			if ( sectionId === '0' || sectionId === 'all' || enableVisualSectionEditing ) {
+				// Adjust for surface padding. Only needed if we're at the beginning of the doc.
+				fakeScroll -= 16;
+			}
+			$content.css( {
+				// Use transform instead of scroll for smoother animation (via CSS transitions).
+				transform: 'translate( 0, ' + -fakeScroll + 'px )',
+				// If the clicked heading is near the end of the page, we might need to insert
+				// some extra space to allow us to scroll "beyond the end" of the page.
+				'padding-bottom': '+=' + fakeScroll,
+				'margin-bottom': '-=' + fakeScroll
+			} );
+			editorOptions.fakeScroll = fakeScroll;
+			setTimeout( veAnimationDelayDeferred.resolve, 500 );
 		}
 
 		function clearLoadingVE() {
 			if ( abortableDataPromise.abort ) {
 				abortableDataPromise.abort();
 			}
+
 			$( '#content' ).css( {
 				transform: '',
 				'padding-bottom': '',
@@ -128,6 +159,7 @@ function setupEditor( page, skin, currentPageHTMLParser ) {
 				'padding-right': '',
 				'box-sizing': ''
 			} );
+
 			$( document.body ).removeClass( 've-loading' );
 		}
 
@@ -221,6 +253,12 @@ function setupEditor( page, skin, currentPageHTMLParser ) {
 				} );
 			} );
 
+			loadingOverlay = editorLoadingOverlay();
+			// This has to run after the overlay has opened, which disables page scrolling
+			loadingOverlay.on( 'show', showLoadingVE );
+			// Clear loading interface if loading is aborted before overlay is replaced
+			loadingOverlay.on( 'hide', clearLoadingVE );
+
 			mw.loader.using( 'ext.visualEditor.targetLoader' ).then( function () {
 				mw.libs.ve.targetLoader.addPlugin( 'mobile.editor.ve' );
 				return mw.libs.ve.targetLoader.loadModules( editorOptions.mode );
@@ -251,58 +289,6 @@ function setupEditor( page, skin, currentPageHTMLParser ) {
 				overlayManager.replaceCurrent( overlay );
 			} );
 
-			scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
-			// Like loadingOverlay(), but without the spinner
-			loadingOverlay = new Overlay( {
-				className: 'overlay overlay-loading',
-				noHeader: true
-			} );
-			showLoadingVE( loadingOverlay.$el.find( '.overlay-content' ) );
-			// Clear loading interface if loading is aborted before overlay is replaced
-			loadingOverlay.on( 'hide', clearLoadingVE );
-			// Should this be a subclass?
-			loadingOverlay.show = function () {
-				var $page, $content, $sectionTop, fakeScroll, enableVisualSectionEditing;
-				Overlay.prototype.show.call( this );
-				enableVisualSectionEditing = veConfig.enableVisualSectionEditing === true ||
-					// === ve.init.mw.MobileArticleTarget.static.trackingName
-					veConfig.enableVisualSectionEditing === 'mobile';
-				$page = $( '#mw-mf-page-center' );
-				$content = $( '#content' );
-				if ( sectionId === '0' || sectionId === 'all' ) {
-					$sectionTop = $( '#bodyContent' );
-				} else {
-					$sectionTop = $( '[data-section="' + sectionId + '"]' )
-						.closest( 'h1, h2, h3, h4, h5, h6' );
-				}
-				// If there was a scrollbar that was hidden when the overlay was shown, add a margin
-				// with the same width. This is mostly so that developers testing this on desktop
-				// don't go crazy when the fake scroll fails to line up.
-				$page.css( {
-					'padding-right': '+=' + scrollbarWidth,
-					'box-sizing': 'border-box'
-				} );
-				// Pretend that we didn't just scroll the page to the top.
-				$page.prop( 'scrollTop', this.scrollTop );
-				// Then, pretend that we're scrolling to the position of the clicked heading.
-				fakeScroll = $sectionTop[0].getBoundingClientRect().top;
-				// Adjust for height of the toolbar.
-				fakeScroll -= 48;
-				if ( sectionId === '0' || sectionId === 'all' || enableVisualSectionEditing ) {
-					// Adjust for surface padding. Only needed if we're at the beginning of the doc.
-					fakeScroll -= 16;
-				}
-				$content.css( {
-					// Use transform instead of scroll for smoother animation (via CSS transitions).
-					transform: 'translate( 0, ' + -fakeScroll + 'px )',
-					// If the clicked heading is near the end of the page, we might need to insert
-					// some extra space to allow us to scroll "beyond the end" of the page.
-					'padding-bottom': '+=' + fakeScroll,
-					'margin-bottom': '-=' + fakeScroll
-				} );
-				editorOptions.fakeScroll = fakeScroll;
-				setTimeout( veAnimationDelayDeferred.resolve, 500 );
-			};
 			return loadingOverlay;
 		} else {
 			return loadSourceEditor();
