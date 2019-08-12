@@ -77,6 +77,11 @@ class UserMode implements IUserMode {
 			}
 
 			$latestUser = $user->getInstanceForUpdate();
+			if ( $latestUser === null ) {
+				throw new \InvalidArgumentException(
+					"User not found, so can't enable AMC mode"
+				);
+			}
 			$latestUser->setOption( self::USER_OPTION_MODE_AMC, $toSet );
 			$latestUser->saveSettings();
 		}, DeferredUpdates::PRESEND );
