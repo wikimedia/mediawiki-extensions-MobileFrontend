@@ -2,9 +2,11 @@
 
 .animations {
 	.watch-this-article {
-		.transition-transform( 0.5s );
+		&:before {
+			.transition-transform( 0.5s );
+		}
 
-		&.watched {
+		&.watched:before {
 			.transform( rotate( 72deg ) );
 		}
 	}
