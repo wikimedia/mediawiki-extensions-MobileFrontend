@@ -136,8 +136,10 @@ if ( activeExperiments.betaoptin ) {
 	displayBetaOptIn( activeExperiments.betaoptin, currentPage, currentPageHTMLParser );
 }
 
-const amcCampaign = amcOutreach.loadCampaign();
-amcCampaign.showIfEligible( amcOutreach.ACTIONS.onLoad );
+mw.requestIdleCallback( function () {
+	const amcCampaign = amcOutreach.loadCampaign();
+	amcCampaign.showIfEligible( amcOutreach.ACTIONS.onLoad );
+} );
 
 // Recruit volunteers through the console
 // (note console.log may not be a function so check via apply)
