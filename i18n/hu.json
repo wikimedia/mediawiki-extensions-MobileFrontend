@@ -237,6 +237,7 @@
 	"tag-mobile_edit": "Mobil szerkesztés",
 	"tag-mobile_edit-description": "A szerkesztés mobilról készült (web vagy app)",
 	"tag-advanced_mobile_edit": "Haladó mobilszerkesztés",
+	"tag-advanced_mobile_edit-description": "Haladó móddal rendelkező felhasználó által készített szerkesztés",
 	"tag-mobile_web_edit": "Mobil web szerkesztés",
 	"tag-mobile_web_edit-description": "Mobil weboldalról szerkesztve",
 	"mobile-frontend-loading-message": "Betöltés…",
@@ -252,10 +253,15 @@
 	"mobile-frontend-mobile-option-MFLazyLoadImages-description": "Fényképek betöltése csak akkor, ha valóban szükség van rájuk.",
 	"mobile-frontend-mobile-option-MFLazyLoadImages": "Fényképek késleltetett betöltése",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "Bevezető bekezdés",
+	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox-description": "A szöveg mindig az infoboxok felett jelenik meg, ezzel növelve a teljesítményt és olvashatóságot.",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Betűméret",
+	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Az olvasási élményed betűméretének vezérlése.",
+	"mobile-frontend-mobile-option-amc": "Haladó mód",
+	"mobile-frontend-mobile-option-amc-experiment-description": "Aktívan fejlesztünk új funkciókat a haladó szerkesztőknek. Ezen mód bekapcsolásával automatikusan megkapod az új funkciókat, amint azokat kiadjuk. Minden visszajelzést és közreműködést köszönünk!",
 	"mobile-frontend-mobile-option-amc-learn-more": "Tudj meg többet",
 	"mobile-frontend-mobile-option-amc-send-feedback": "Visszajelzés küldése",
 	"mobile-frontend-beta-only": "Csak a béta módban elérhető funkció",
 	"mobile-frontend-console-recruit": "Tudj meg többet, hogy miképp építjük mobil oldalunkat: https://www.mediawiki.org/wiki/Extension:MobileFrontend",
+	"mobile-frontend-special-pages-pref": "A speciális lapok optimalizálása és egyszerűsítése mobilon (ajánlott)",
 	"prefs-mobile": "Mobil beállítások"
 }
