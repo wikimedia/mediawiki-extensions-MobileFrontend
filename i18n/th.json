@@ -6,7 +6,8 @@
 			"Octahedron80",
 			"Aefgh39622",
 			"Ans",
-			"B20180"
+			"B20180",
+			"กิ๊ฟ เลิกล่ะ สายแข็ง"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "เลือกว่าจะให้ผู้ใช้แก้ไขผ่านอินเทอร์เฟซสำหรับอุปกรณ์เคลื่อนที่หรือไม่",
@@ -241,5 +242,10 @@
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "ขนาดอักษร",
 	"mobile-frontend-mobile-option-amc": "การมีส่วนร่วมทางมือถือขั้นสูง",
 	"mobile-frontend-mobile-option-amc-learn-more": "เรียนรู้เพิ่มเติม",
-	"mobile-frontend-mobile-option-amc-send-feedback": "ส่งคำติชม"
+	"mobile-frontend-mobile-option-amc-send-feedback": "ส่งคำติชม",
+	"mobile-frontend-amc-outreach-intro": "Introducing Advanced Mode",
+	"mobile-frontend-amc-outreach-enable": "Enable advanced mode",
+	"mobile-frontend-amc-outreach-no-thanks": "No thanks",
+	"mobile-frontend-amc-outreach-enabled-message": "Advanced mode is now enabled. You can turn it off in your settings.",
+	"mobile-frontend-amc-outreach-dismissed-message": "You can enable Advanced mode at any time in your Settings."
 }

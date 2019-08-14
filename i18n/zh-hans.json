@@ -49,7 +49,8 @@
 			"WQL",
 			"科劳",
 			"神樂坂秀吉",
-			"Viztor"
+			"Viztor",
+			"Looong"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "用户是否通过移动版界面编辑",
@@ -276,7 +277,7 @@
 	"tag-mobile_edit": "移动版编辑",
 	"tag-mobile_edit-description": "来自移动版（网页或应用）的编辑",
 	"tag-advanced_mobile_edit": "高级移动端编辑",
-	"tag-advanced_mobile_edit-description": "由用户以高级移动端贡献模式做出的编辑",
+	"tag-advanced_mobile_edit-description": "用户在高级模式下进行的编辑",
 	"tag-mobile_web_edit": "移动网页编辑",
 	"tag-mobile_web_edit-description": "来自手机版网站的编辑",
 	"mobile-frontend-loading-message": "正在加载...",
@@ -299,6 +300,12 @@
 	"mobile-frontend-mobile-option-amc-experiment-description": "我们目前正积极开发高级编辑器的新功能。通过启用此模式，您将可以自动取得发布的新功能。对于任何的意见反馈与协作，我们不胜感激。",
 	"mobile-frontend-mobile-option-amc-learn-more": "了解更多",
 	"mobile-frontend-mobile-option-amc-send-feedback": "发送反馈",
+	"mobile-frontend-amc-outreach-intro": "介绍高级模式",
+	"mobile-frontend-amc-outreach-description": "高级模式可以使聊天页面，历史页面，最近更改和其他手机上的编辑工具更容易地被访问到。",
+	"mobile-frontend-amc-outreach-enable": "开启高级模式",
+	"mobile-frontend-amc-outreach-no-thanks": "不用了，谢谢",
+	"mobile-frontend-amc-outreach-enabled-message": "高级模式现在已经开启。 你可以在设置中关闭该功能。",
+	"mobile-frontend-amc-outreach-dismissed-message": "任何时候你都可以在设置中开启高级模式。",
 	"mobile-frontend-beta-only": "功能只在测试模式可用",
 	"mobile-frontend-console-recruit": "了解更多有关我们如何构造移动网站的详情，请参见：https://www.mediawiki.org/wiki/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "优化并简化移动端的特殊页面（推荐）",
