@@ -388,7 +388,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		if ( $comment !== '' ) {
 			$comment = Linker::formatComment( $comment, $title );
 			// flatten back to text
-			$comment = Sanitizer::stripAllTags( $comment );
+			$comment = htmlspecialchars( Sanitizer::stripAllTags( $comment ) );
 		}
 		return $comment;
 	}
