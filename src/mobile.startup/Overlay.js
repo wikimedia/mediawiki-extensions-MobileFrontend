@@ -30,6 +30,7 @@ var
  * @param {Function} props.onBeforeExit allows a consumer to prevent exits in certain
  *  situations. This callback gets the following parameters:
  *  - 1) the exit function which should be run after the consumer has made their changes.
+ *  - 2) the cancel function which should be run if the consumer explicitly changes their mind
  */
 function Overlay( props ) {
 	this.isIos = browser.isIos();
@@ -131,7 +132,7 @@ mfExtend( Overlay, View, {
 		ev.preventDefault();
 		ev.stopPropagation();
 		if ( this.options.onBeforeExit ) {
-			this.options.onBeforeExit( exit );
+			this.options.onBeforeExit( exit, function () {} );
 		} else {
 			exit();
 		}
