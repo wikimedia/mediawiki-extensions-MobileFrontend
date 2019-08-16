@@ -254,6 +254,7 @@
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Fonttikoko",
 	"mobile-frontend-mobile-option-amc-learn-more": "Lisätietoja",
 	"mobile-frontend-mobile-option-amc-send-feedback": "Lähetä palautetta",
+	"mobile-frontend-amc-outreach-no-thanks": "Ei kiitos",
 	"mobile-frontend-console-recruit": "Lisätietoja siitä, miten rakensimme mobiilisivustomme @ https://www.mediawiki.org/wiki/Extension:MobileFrontend",
 	"prefs-mobile": "Mobiiliasetukset"
 }
