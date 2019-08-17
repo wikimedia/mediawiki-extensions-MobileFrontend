@@ -228,6 +228,8 @@
 	"mobile-frontend-notifications-filter-title": "Filtruoti pranešimus",
 	"mobile-frontend-send-feedback": "Siųsti atsiliepimą",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Šrifto dydis",
+	"mobile-frontend-amc-outreach-description": "Išplėstinis režimas leidžia lengviau pasiekti Aptarimo puslapius, Istorijos puslapius, Naujausius pakeitimus ir kitus redagavimo įrankius mobiliesiems.",
+	"mobile-frontend-amc-outreach-no-thanks": "Ne, ačiū",
 	"mobile-frontend-beta-only": "Funkcija galima tik beta versijoje",
 	"mobile-frontend-console-recruit": "Sužinokite daugiau apie tai, kaip buvo sukurtas mūsų puslapis mobiliesiems @ https://www.mediawiki.org/wiki/Extension:MobileFrontend"
 }

@@ -17,7 +17,8 @@
 			"LaG roiL",
 			"קיפודנחש",
 			"Uziel302",
-			"Rotemliss"
+			"Rotemliss",
+			"Strayblues"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "האם משתמש עורך דרך הממשק למכשירים ניידים או לא",
@@ -271,7 +272,7 @@
 	"mobile-frontend-amc-outreach-enable": "הפעלת המצב המתקדם",
 	"mobile-frontend-amc-outreach-no-thanks": "לא, תודה",
 	"mobile-frontend-amc-outreach-enabled-message": "המצב המתקדם מופעל עכשיו. אפשר לכבות אותו בהגדרות שלכם.",
-	"mobile-frontend-amc-outreach-dismissed-message": "עכשיו אפשר להפעיל את המצב המתקדם בכל זמן בהגדרות שלך.",
+	"mobile-frontend-amc-outreach-dismissed-message": "עכשיו אפשר להפעיל את המצב המתקדם בכל עת בהגדרות שלך.",
 	"mobile-frontend-beta-only": "האפשרות זמינה רק במצב בטא.",
 	"mobile-frontend-console-recruit": "יש מידע נוסף על איך אנחנו בונים את האתר הנייד שלנו באתר https://www.mediawiki.org/wiki/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "מיטוב ופישוט של דפים מיוחדים בגלישה ניידת (מומלץ)",
