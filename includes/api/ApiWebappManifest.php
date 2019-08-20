@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
+
 /**
  * Return the webapp manifest for this wiki
  */
@@ -25,7 +27,8 @@ class ApiWebappManifest extends ApiBase {
 		$appleTouchIcon = $config->get( 'AppleTouchIcon' );
 		if ( $appleTouchIcon !== false ) {
 			$appleTouchIconUrl = wfExpandUrl( $appleTouchIcon, PROTO_CURRENT );
-			$request = MWHttpRequest::factory( $appleTouchIconUrl );
+			$request = MediaWikiServices::getInstance()->getHttpRequestFactory()
+				->create( $appleTouchIconUrl );
 			$request->execute();
 			$appleTouchIconContent = $request->getContent();
 			if ( !empty( $appleTouchIconContent ) ) {
