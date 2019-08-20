@@ -16,6 +16,14 @@
 			// Match section edit icon from read mode
 			// TODO: Move this to a Minerva-specific file
 			min-height: 24px;
+
+			// MinervaNeue applies display:table-cell to these spans, aiming for the
+			// edit-pencils but spilling onto this. It's easier to undo that here than
+			// target just that aspect more specifically. (T229744)
+			// TODO: Move this to a Minerva-specific file
+			> span {
+				display: inline;
+			}
 		}
 	}
 
