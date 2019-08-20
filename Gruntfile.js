@@ -11,6 +11,7 @@ module.exports = function ( grunt ) {
 				syntax: 'less'
 			},
 			all: [
+				'.storybook/**/*.less',
 				'mobile.less/**/*.less',
 				'resources/**/*.less'
 			]

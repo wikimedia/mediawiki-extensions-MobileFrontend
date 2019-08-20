@@ -13,10 +13,13 @@
 		"selenium-test-cucumber": "wdio tests/selenium/wdio.conf.cucumber.js",
 		"selenium-daily": "npm run selenium-test",
 		"selenium-test": "wdio tests/selenium/wdio.conf.js",
-		"test": "npm -s run test:bundle && npm -s run lint && npm -s run doc && bash ./dev-scripts/svg_check.sh && npm -s run coverage",
+		"test": "npm -s run test:bundle && npm -s run lint && npm -s run jsdoc && bash ./dev-scripts/svg_check.sh && npm -s run coverage",
 		"test:bundle": "bash ./dev-scripts/check_bundle.sh HEAD~1",
 		"test:bundle-cached": "bash ./dev-scripts/check_bundle.sh --cached",
-		"doc": "jsdoc -c jsdoc.json"
+		"jsdoc": "jsdoc -c jsdoc.json",
+		"doc": "npm run jsdoc && npm run build-storybook",
+		"storybook": "start-storybook",
+		"build-storybook": "build-storybook -o docs/ui"
 	},
 	"engines": {
 		"node": "10.15.2"
@@ -26,6 +29,7 @@
 		"@babel/core": "7.2.2",
 		"@babel/preset-env": "7.3.1",
 		"@babel/register": "7.0.0",
+		"@storybook/html": "5.1.10",
 		"babel-loader": "8.0.5",
 		"bundlesize": "0.18.0",
 		"clean-webpack-plugin": "0.1.19",
@@ -40,6 +44,8 @@
 		"jsdom": "12.2.0",
 		"mustache": "3.0.1",
 		"mwbot": "1.0.10",
+		"less": "^3.8.1",
+		"less-loader": "^4.1.0",
 		"nyc": "13.0.1",
 		"oojs": "2.2.2",
 		"pre-commit": "1.2.2",

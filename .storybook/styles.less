@@ -1,0 +1,68 @@
+// resets
+html, body {
+	height: 100%;
+}
+
+p, ul,
+body {
+	margin: 0;
+}
+
+button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: none;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	list-style: none;
+}
+
+/**
+ * since icons are defined in ResourceLoaderImage modules and we cannot guarantee a working
+ * mediawiki instance to access these, nor can we load them, use the remote beta cluster
+ * for icon access.
+ * in future we may decide to do this using an svg-loader.
+ */
+.mw-ui-icon-mf-arrow:before {
+	background-image: url( https://en.m.wikipedia.beta.wmflabs.org/w/load.php?modules=mobile.startup.images.variants&image=arrow&format=rasterized&skin=minerva );
+}
+
+.mw-ui-icon-mf-arrow-invert:before {
+	background-image: url( https://en.m.wikipedia.beta.wmflabs.org/w/load.php?modules=mobile.startup.images.variants&variant=invert&image=arrow&format=rasterized&skin=minerva );
+}
+
+.mw-ui-icon-mf-arrow-gray:before {
+	background-image: url( https://en.m.wikipedia.beta.wmflabs.org/w/load.php?modules=mobile.startup.images.variants&variant=gray&image=arrow&format=rasterized&skin=minerva );
+}
+
+.mw-ui-icon-mf-overlay-close:before {
+	background-image: url( https://en.m.wikipedia.beta.wmflabs.org/w/load.php?modules=mobile.startup.images.variants&image=overlay-close&format=rasterized&skin=minerva );
+}
+
+.mw-ui-icon-mf-spinner:before {
+	background-image: url( https://en.m.wikipedia.beta.wmflabs.org/w/extensions/MobileFrontend/resources/mobile.startup/images/ajax-loader.gif );
+}
+
+.mw-ui-icon-mf-error:before {
+	background-image: url( https://en.m.wikipedia.beta.wmflabs.org/w/load.php?modules=mobile.startup.images&image=error&format=rasterized&skin=minerva );
+}
+
+.mw-ui-icon-mf-back:before {
+	background-image: url( https://en.m.wikipedia.beta.wmflabs.org/w/load.php?modules=mobile.startup.images.variants&image=back&format=rasterized&lang=en&skin=minerva );
+}
+
+.mw-ui-icon-mf-overlay-close-gray:before {
+	background-image: url( https://en.m.wikipedia.beta.wmflabs.org/w/load.php?modules=mobile.startup.images.variants&image=overlay-close&variant=gray&format=rasterized&skin=minerva );
+}
+
+.mw-ui-icon-mf-citation-invert:before {
+	background-image: url( https://en.m.wikipedia.beta.wmflabs.org/w/load.php?modules=mobile.startup.images&image=citation&variant=invert&format=rasterized&skin=minerva );
+}
