@@ -39,13 +39,13 @@ function createPromoCampaign(
 	userEligible,
 	mwStorage
 ) {
-	const
-		// This object maps actions to localStorage keys
-		ACTIONS_TO_STORAGE_KEYS = Object.values( actions ).reduce( ( obj, action ) => {
-			obj[action] = `mobile-frontend-${campaignName}-ineligible-${action}`;
-
-			return obj;
-		}, {} );
+	// This object maps actions to localStorage keys
+	const ACTIONS_TO_STORAGE_KEYS = {};
+	var key, action;
+	for ( key in actions ) {
+		action = actions[key];
+		ACTIONS_TO_STORAGE_KEYS[action] = `mobile-frontend-${campaignName}-ineligible-${action}`;
+	}
 
 	/**
 	 * @return {boolean}
@@ -108,9 +108,11 @@ function createPromoCampaign(
 			mwStorage.set( ACTIONS_TO_STORAGE_KEYS[action], '~' );
 		},
 		makeAllActionsIneligible: function () {
-			Object.values( actions ).forEach( action => {
+			var key, action;
+			for ( key in actions ) {
+				action = actions[key];
 				this.makeActionIneligible( action );
-			} );
+			}
 		},
 		isCampaignActive: isCampaignActive
 	};
