@@ -229,10 +229,9 @@ EditorGateway.prototype = {
 	 * @return {jQuery.Deferred}
 	 */
 	getPreview: function ( options ) {
-		var result = util.Deferred(),
+		var
 			sectionLine = '',
 			sectionId = '',
-			request,
 			self = this;
 
 		util.extend( options, {
@@ -250,9 +249,9 @@ EditorGateway.prototype = {
 		} );
 
 		this.abortPreview();
+		this._pending = this.api.post( options );
 
-		request = this.api.post( options );
-		this._pending = request.then( function ( resp ) {
+		return this._pending.then( function ( resp ) {
 			if ( resp && resp.parse && resp.parse.text ) {
 				// section 0 haven't a section name so skip
 				if ( self.sectionId !== 0 &&
@@ -266,21 +265,17 @@ EditorGateway.prototype = {
 						sectionLine = resp.parse.sections[0].line;
 					}
 				}
-				result.resolve( {
+				return {
 					text: resp.parse.text['*'],
 					id: sectionId,
 					line: sectionLine
-				} );
+				};
 			} else {
-				result.reject();
+				return util.Deferred().reject();
 			}
-		}, function () {
-			result.reject();
 		} ).promise( {
-			abort: function () { request.abort(); }
+			abort: function () { self._pending.abort(); }
 		} );
-
-		return result;
 	}
 };
 
