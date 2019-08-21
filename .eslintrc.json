@@ -2,7 +2,7 @@
 	"root": true,
 	"extends": [
 		"wikimedia",
-		".eslintshared.json"
+		".eslintshared.js"
 	],
 	"env": {
 		"browser": true

@@ -32,6 +32,7 @@ module.exports = function ( grunt ) {
 				}
 			}
 		},
+		// eslint-disable-next-line no-restricted-properties
 		banana: Object.assign( {
 			options: { requireLowerCase: false }
 		}, conf.MessagesDirs )

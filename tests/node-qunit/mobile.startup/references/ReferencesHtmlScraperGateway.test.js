@@ -55,6 +55,6 @@ QUnit.test( 'getReference() checking encoded reference', function ( assert ) {
 
 QUnit.test( 'getReference() adds an extra class for external links', function ( assert ) {
 	return referencesGateway.getReference( '#cite_note-2', page, pageHTMLParser ).then( function ( ref ) {
-		assert.strictEqual( ref.text.includes( referencesGateway.EXTERNAL_LINK_CLASS ), true );
+		assert.notStrictEqual( ref.text.indexOf( referencesGateway.EXTERNAL_LINK_CLASS ), -1 );
 	} );
 } );
