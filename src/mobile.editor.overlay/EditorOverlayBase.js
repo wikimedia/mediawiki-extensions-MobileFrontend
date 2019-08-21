@@ -150,9 +150,9 @@ mfExtend( EditorOverlayBase, Overlay, {
 	<div class="panels">
 		<div class="save-panel panel hideable hidden">
 			<div id="error-notice-container"></div>
-			<p class="summary-request">{{{summaryRequestMsg}}}</p>
+			<h2 class="summary-request">{{{summaryRequestMsg}}}</h2>
 			<textarea rows="2" class="mw-ui-input summary" placeholder="{{summaryMsg}}"></textarea>
-			{{#licenseMsg}}<p class="license">{{{licenseMsg}}}</p>{{/licenseMsg}}
+			{{#licenseMsg}}<div class="license">{{{licenseMsg}}}</div>{{/licenseMsg}}
 		</div>
 		<div class="captcha-panel panel hideable hidden">
 			<div class="captcha-box">
