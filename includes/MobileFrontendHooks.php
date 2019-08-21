@@ -1030,6 +1030,11 @@ class MobileFrontendHooks {
 				unset( $attribs['srcset'] );
 			}
 		}
+
+		// Native image lazy loading is only being experimented on desktop for now
+		if ( $context->shouldDisplayMobileView() ) {
+			unset( $attribs['loading'] );
+		}
 	}
 
 	/**
