@@ -2,6 +2,11 @@ var
 	util = require( './util' ),
 	overlayManager = null;
 
+// We pass this to history.pushState/replaceState to indicate that we're controlling the page URL.
+// Then we look for this marker on page load so that if the page is refreshed, we don't generate an
+// extra history entry (see #getSingleton below and T201852).
+const MANAGED_STATE = 'MobileFrontend OverlayManager was here!';
+
 /**
  * Manages opening and closing overlays when the URL hash changes to one
  * of the registered values (see OverlayManager.add()).
@@ -71,6 +76,10 @@ OverlayManager.prototype = {
 	 * @param {Overlay} overlay to show
 	 */
 	_show: function ( overlay ) {
+		// Mark the state so that if the page is refreshed, we don't generate an extra history entry
+		// (see #getSingleton below and T201852).
+		// eslint-disable-next-line no-restricted-properties
+		window.history.replaceState( MANAGED_STATE, null, window.location.href );
 
 		// if hidden using overlay (not hardware) button, update the state
 		overlay.once( '_om_hide', this._onHideOverlay.bind( this ) );
@@ -318,9 +327,24 @@ OverlayManager.prototype = {
  */
 OverlayManager.getSingleton = function () {
 	if ( !overlayManager ) {
-		const container = document.createElement( 'div' );
+		const
+			container = document.createElement( 'div' ),
+			// eslint-disable-next-line no-restricted-properties
+			hash = window.location.hash,
+			// eslint-disable-next-line no-restricted-properties
+			state = window.history.state;
 		container.className = 'mw-overlays-container';
 		document.body.appendChild( container );
+		// If an overlay was loaded by directly navigating to an URL with a hash (e.g. linked from
+		// another page or browser bookmark), generate an extra history entry to allow closing the
+		// overlay without leaving the page (see T201852). Put our marker into the entry state so
+		// that we can detect it if the page is refreshed and do not generate another entry.
+		if ( hash && state !== MANAGED_STATE ) {
+			// eslint-disable-next-line no-restricted-properties
+			window.history.replaceState( null, null, '#' );
+			// eslint-disable-next-line no-restricted-properties
+			window.history.pushState( MANAGED_STATE, null, hash );
+		}
 		overlayManager = new OverlayManager( mw.loader.require( 'mediawiki.router' ), container );
 	}
 	return overlayManager;
