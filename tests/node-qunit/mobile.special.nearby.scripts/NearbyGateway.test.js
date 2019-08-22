@@ -22,7 +22,7 @@ QUnit.module( 'MobileFrontend NearbyGateway.js', {
 		// supporting wikibase descriptions in headless tests
 		sandbox.stub( mw.config, 'get' )
 			.withArgs( 'wgArticlePath' ).returns( '/w/' )
-			.withArgs( 'wgMFDisplayWikibaseDescriptions', {} )
+			.withArgs( 'wgMFDisplayWikibaseDescriptions' )
 			.returns( {
 				nearby: true
 			} )

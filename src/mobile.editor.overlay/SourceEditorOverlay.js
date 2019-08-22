@@ -19,10 +19,13 @@ var EditorOverlayBase = require( './EditorOverlayBase' ),
  * @extends EditorOverlayBase
  *
  * @param {Object} options Configuration options
+ * @param {Object} [options.visualEditorConfig] falls back to wgVisualEditorConfig if not defined
  * @param {jQuery.Promise} [dataPromise] Optional promise for loading content
  */
 function SourceEditorOverlay( options, dataPromise ) {
 	this.isFirefox = /firefox/i.test( window.navigator.userAgent );
+	this.visualEditorConfig = options.visualEditorConfig ||
+		mw.config.get( 'wgVisualEditorConfig' ) || {};
 	this.gateway = new EditorGateway( {
 		api: options.api,
 		title: options.title,
@@ -94,8 +97,8 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 	 * @return {boolean}
 	 */
 	isVisualEditorEnabled: function () {
-		var ns = mw.config.get( 'wgVisualEditorConfig' ) &&
-			mw.config.get( 'wgVisualEditorConfig' ).namespaces;
+		var config = this.visualEditorConfig,
+			ns = config.namespaces;
 
 		return ns &&
 			ns.indexOf(
@@ -129,6 +132,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 	 */
 	postRender: function () {
 		var self = this,
+			config = this.visualEditorConfig,
 			options = this.options,
 			showAnonWarning = options.isAnon && !options.switched;
 
@@ -150,7 +154,6 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 
 				switchToolbar.on( 'switchEditor', function ( mode ) {
 					var
-						config = mw.config.get( 'wgVisualEditorConfig' ),
 						canSwitch = config.fullRestbaseUrl || config.allowLossySwitching;
 					if ( mode === 'visual' ) {
 						if ( !self.gateway.hasChanged ) {

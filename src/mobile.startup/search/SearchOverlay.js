@@ -20,6 +20,7 @@ var
  * @param {Object} params Configuration options
  * @param {string} params.placeholderMsg Search input placeholder text.
  * @param {string} [params.action] of form defaults to the value of wgScript
+ * @param {SearchGateway} [params.gateway]
  * @fires SearchOverlay#search-show
  * @fires SearchOverlay#search-start
  * @fires SearchOverlay#search-results
@@ -70,7 +71,7 @@ function SearchOverlay( params ) {
 
 	this.api = options.api;
 	// eslint-disable-next-line new-cap
-	this.gateway = new options.gatewayClass( this.api );
+	this.gateway = options.gateway || new options.gatewayClass( this.api );
 
 	this.router = options.router;
 }

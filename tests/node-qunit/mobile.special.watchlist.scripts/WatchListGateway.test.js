@@ -104,7 +104,7 @@ QUnit.module( 'MobileFrontend WatchListGateway.js', {
 		// needed for extendSearchParams to not throw exception about feature not
 		// supporting wikibase descriptions in headless tests
 		sandbox.stub( mw.config, 'get' )
-			.withArgs( 'wgMFDisplayWikibaseDescriptions', {} )
+			.withArgs( 'wgMFDisplayWikibaseDescriptions' )
 			.returns( {
 				watchlist: true
 			} )

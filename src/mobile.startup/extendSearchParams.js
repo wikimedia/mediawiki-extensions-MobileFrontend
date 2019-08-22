@@ -25,7 +25,15 @@ var util = require( './util' ),
  * @return {Object}
  */
 function extendSearchParams( feature ) {
-	var displayWikibaseDescriptions = mw.config.get( 'wgMFDisplayWikibaseDescriptions', {} ),
+	var displayWikibaseDescriptions = mw.config.get( 'wgMFDisplayWikibaseDescriptions' ) || {
+			// Fail safe for when config is not available e.g. storybook
+			// These must be defined, as these are all the features that this can be used on.
+			// If not defined, all these features will see their API calls broken
+			search: true,
+			nearby: true,
+			watchlist: true,
+			tagline: false
+		},
 		scriptPath = mw.config.get( 'wgMFContentProviderScriptPath' ),
 		args,
 		result;

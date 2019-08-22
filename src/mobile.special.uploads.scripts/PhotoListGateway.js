@@ -46,7 +46,8 @@ PhotoListGateway.prototype = {
 	 * @return {number}
 	 */
 	getWidth: function () {
-		return mw.config.get( 'wgMFThumbnailSizes' ).small;
+		const config = mw.config.get( 'wgMFThumbnailSizes' ) || {};
+		return config.small;
 	},
 	/**
 	 * Extracts image data from api response
