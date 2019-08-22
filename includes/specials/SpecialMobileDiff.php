@@ -114,6 +114,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 
 		$output->addModuleStyles( [
 			'mobile.special.user.icons',
+			"mobile.legacy.icons",
 			'mobile.pagesummary.styles',
 			// @todo FIXME: Don't add these styles. This is only needed for the user
 			// icon to the left of the username

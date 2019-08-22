@@ -64,6 +64,7 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 				$out->addModuleStyles( [
 					'mobile.pagelist.styles',
 					'mobile.special.user.icons',
+					"mobile.legacy.icons",
 					'mobile.pagesummary.styles',
 				] );
 				$out->setHTMLTitle( $this->msg(

@@ -118,6 +118,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 		$out->setPageTitle( $this->msg( 'history' ) );
 		$out->addModuleStyles( [
 			'mobile.pagelist.styles',
+			"mobile.legacy.icons",
 			'mobile.pagesummary.styles',
 		] );
 		$this->offset = $this->getRequest()->getVal( 'offset', false );
