@@ -215,6 +215,7 @@
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox-description": "Tekst vil altid vises over infobokse, hvilket forbedrer ydeevne og læsbarhed.",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Skriftstørrelse",
 	"mobile-frontend-mobile-option-amc-learn-more": "Lær mere",
+	"mobile-frontend-amc-outreach-no-thanks": "Nej tak",
 	"mobile-frontend-beta-only": "Funktion er kun tilgængelig i betaversion",
 	"mobile-frontend-console-recruit": "\\o/ Hej! Dette er et program udviklet i åben kildekode og du kan være med til at bygge det bedre og rette fejl, som du måske ser i denne JavaScript-konsol!\n\nDu finder vores backlog på @ https://phabricator.wikimedia.org/project/profile/67/"
 }
