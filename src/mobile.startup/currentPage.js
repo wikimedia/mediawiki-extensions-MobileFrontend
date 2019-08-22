@@ -22,7 +22,9 @@ function loadCurrentPage() {
 	const permissions = mw.config.get( 'wgRestrictionEdit', [] ),
 		$content = $( '#content #bodyContent' ),
 		gateway = new PageGateway( new mw.Api() ),
-		title = mw.Title.newFromText( mw.config.get( 'wgRelevantPageName' ) );
+		relevantTitle = mw.Title.newFromText( mw.config.get( 'wgRelevantPageName' ) ),
+		title = mw.Title.newFromText( mw.config.get( 'wgPageName' ) );
+
 	if ( permissions.length === 0 ) {
 		permissions.push( '*' );
 	}
@@ -30,6 +32,7 @@ function loadCurrentPage() {
 	page = new Page( {
 		title: title.getPrefixedText(),
 		titleObj: title,
+		relevantTitle: relevantTitle.getPrefixedText(),
 		protection: {
 			edit: permissions
 		},

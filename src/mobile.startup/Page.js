@@ -27,6 +27,8 @@ class Page {
 	 * @param {boolean} options.isMissing Whether the page exists in the wiki.
 	 * @param {string} options.lastModified
 	 * @param {string} options.anchor
+	 * @param {string} [options.relevantTitle] associated with page.
+	 *  For example Special:WhatLinksHere/Foo would be associated with the page `Foo`.
 	 * @param {number} options.revId  Revision ID. See `wgRevisionId`.
 	 * @param {boolean} options.isWatched Whether the page is being watched
 	 * @param {Object} options.thumbnail thumbnail definition corresponding to page image
@@ -37,17 +39,19 @@ class Page {
 	 * @param {string} options.thumbnail.source url for image
 	 */
 	constructor( options ) {
+		const title = options.title || '';
 		util.extend( this, {
 			id: options.id || 0,
 			// FIXME: Deprecate title property as it can be derived from titleObj
 			// using getPrefixedText
-			title: options.title || '',
+			title,
+			relevantTitle: options.relevantTitle || title,
 			titleObj: options.titleObj,
-			displayTitle: options.displayTitle || HTML.escape( options.title || '' ),
+			displayTitle: options.displayTitle || HTML.escape( title ),
 			namespaceNumber: options.namespaceNumber || 0,
 			protection: options.protection,
 			sections: [],
-			url: options.url || mw.util.getUrl( options.title ),
+			url: options.url || mw.util.getUrl( title ),
 			wikidataDescription: options.wikidataDescription,
 			_isMainPage: options.isMainPage || false,
 			isMissing: ( options.isMissing !== undefined ) ?
