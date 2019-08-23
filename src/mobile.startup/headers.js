@@ -4,15 +4,21 @@ var util = require( './util' ),
 
 /**
  * Creates a header
- * @param {string} heading (HTML allowed)
+ * @param {string|View} headingOrView (HTML allowed)
  * @param {View[]} headerActions
  * @param {View} [headerCancel] defaults to cancel button
  * @param {string} [additionalClassNames] (should be escaped)
  * @return {Element}
  */
-function makeHeader( heading, headerActions, headerCancel, additionalClassNames ) {
+function makeHeader( headingOrView, headerActions, headerCancel, additionalClassNames ) {
 	let $el;
-	const html = util.template( `
+	const heading = typeof headingOrView === 'string' ? headingOrView : undefined,
+		templateData = {
+			hasActions: headerActions && headerActions.length,
+			isHidden: false,
+			heading
+		},
+		html = util.template( `
 <div class="overlay-header header ${additionalClassNames || ''} hideable">
 	<ul class="header-cancel">
 		<li></li>
@@ -22,11 +28,7 @@ function makeHeader( heading, headerActions, headerCancel, additionalClassNames 
 	<div class="header-action"></div>
 	{{/hasActions}}
 </div>
-		` ).render( {
-		hasActions: headerActions && headerActions.length,
-		isHidden: false,
-		heading: heading
-	} );
+		` ).render( templateData );
 	headerCancel = headerCancel || icons.cancel();
 	$el = util.parseHTML( html );
 	// Truncate any text inside in the overlay header.
@@ -34,6 +36,9 @@ function makeHeader( heading, headerActions, headerCancel, additionalClassNames 
 	$el.find( '.header-cancel li' ).append(
 		headerCancel.$el
 	);
+	if ( heading === undefined ) {
+		headingOrView.$el.insertAfter( $el.find( '.header-cancel' ) );
+	}
 	if ( headerActions && headerActions.length ) {
 		$el.find( '.header-action' ).append(
 			headerActions.map( function ( component ) {
@@ -59,14 +64,14 @@ function header( heading, headerActions, headerCancel, additionalClassNames ) {
 
 /**
  * Creates a header with a form
- * @param {string} formHTML of the header
+ * @param {string|View} formHTMLOrView of the header
  * @param {View[]} headerActions
  * @param {View} [headerCancel] defaults to cancel button
  * @param {string} [additionalClassNames] (should be escaped)
  * @return {Element}
  */
-function formHeader( formHTML, headerActions, headerCancel, additionalClassNames ) {
-	return makeHeader( formHTML, headerActions, headerCancel, additionalClassNames );
+function formHeader( formHTMLOrView, headerActions, headerCancel, additionalClassNames ) {
+	return makeHeader( formHTMLOrView, headerActions, headerCancel, additionalClassNames );
 }
 
 /**
