@@ -53,8 +53,7 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/SourceEditorOverlay', {
 		} );
 		getContentStub.returns( util.Deferred().resolve( {
 			text: 'section 0',
-			block: null,
-			blockedByUser: null
+			blockinfo: null
 		} ) );
 		previewResolve = util.Deferred().resolve( { text: '\npreviewtest' } );
 		sandbox.stub( EditorGateway.prototype, 'getPreview' )
