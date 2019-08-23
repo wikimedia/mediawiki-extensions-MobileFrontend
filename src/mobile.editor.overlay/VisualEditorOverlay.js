@@ -40,6 +40,17 @@ function VisualEditorOverlay( options ) {
 		oldId: options.oldId,
 		isNewPage: options.isNewPage
 	} );
+
+	this.dataPromise = this.options.dataPromise || mw.libs.ve.targetLoader.requestPageData(
+		'visual',
+		options.titleObj.getPrefixedDb(),
+		{
+			sessionStore: true,
+			section: options.sectionId || null,
+			oldId: options.oldId || undefined,
+			targetName: ve.init.mw.MobileArticleTarget.static.trackingName
+		}
+	);
 }
 
 mfExtend( VisualEditorOverlay, EditorOverlayBase, {
@@ -81,7 +92,7 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 	 * @instance
 	 */
 	show: function () {
-		var overlay = this,
+		var
 			options = this.options,
 			showAnonWarning = options.isAnon && !options.switched;
 
@@ -102,10 +113,12 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 			this.$el.removeClass( 'loading' );
 			this.scrollToLeadParagraph();
 			// log edit attempt
-			overlay.log( { action: 'ready' } );
-			overlay.log( { action: 'loaded' } );
+			this.log( { action: 'ready' } );
+			this.log( { action: 'loaded' } );
 		}.bind( this ) );
-		this.dataPromise = this.target.load( this.options.dataPromise );
+		// Ensure we do this after showing the overlay, otherwise some calculations
+		// involving the toolbar height give wrong results.
+		this.target.load( this.dataPromise );
 
 		if ( showAnonWarning ) {
 			this.$anonWarning = this.createAnonWarning( this.options );
@@ -186,7 +199,7 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 	 */
 	checkForBlocks: function () {
 		var self = this;
-		return this.dataPromise.then( function ( data ) {
+		return this.getLoadingPromise().then( function ( data ) {
 			if ( data.visualeditor && data.visualeditor.blockinfo ) {
 				// Lazy-load moment only if it's needed,
 				// it's somewhat large (it is already used on

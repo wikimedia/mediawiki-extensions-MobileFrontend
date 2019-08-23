@@ -31,7 +31,7 @@ function SourceEditorOverlay( options, dataPromise ) {
 		fromModified: !!dataPromise
 	} );
 	this.readOnly = !!options.oldId; // If old revision, readOnly mode
-	this.dataPromise = dataPromise;
+	this.dataPromise = dataPromise || this.gateway.getContent();
 	if ( this.isVisualEditorEnabled() ) {
 		options.editSwitcher = true;
 	}
@@ -76,6 +76,16 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 	 */
 	sectionLine: '',
 
+	/**
+	 * @inheritdoc
+	 * @memberof SourceEditorOverlay
+	 * @instance
+	 */
+	show: function () {
+		EditorOverlayBase.prototype.show.apply( this, arguments );
+		// Ensure we do this after showing the overlay, otherwise it doesn't work.
+		this._resizeEditor();
+	},
 	/**
 	 * Check whether VisualEditor is enabled or not.
 	 * @memberof SourceEditorOverlay
@@ -363,7 +373,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 		this.showSpinner();
 		$el.addClass( 'overlay-loading' );
 
-		( this.dataPromise || this.gateway.getContent() )
+		this.getLoadingPromise()
 			.then( function ( result ) {
 				var block, message,
 					content = result.text;

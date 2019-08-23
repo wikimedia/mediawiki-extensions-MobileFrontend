@@ -654,6 +654,15 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 */
 	hasChanged: function () {},
 	/**
+	 * Get a promise that is resolved when the editor data has loaded.
+	 * @memberof EditorOverlayBase
+	 * @instance
+	 * @return {jQuery.Promise}
+	 */
+	getLoadingPromise: function () {
+		return this.dataPromise;
+	},
+	/**
 	 * Handles a failed save due to a CAPTCHA provided by ConfirmEdit extension.
 	 * @memberof EditorOverlayBase
 	 * @instance
