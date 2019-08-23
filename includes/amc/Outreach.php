@@ -70,6 +70,8 @@ final class Outreach {
 	public function isUserEligible() {
 		return $this->isCampaignActive() &&
 			!$this->userMode->isEnabled() &&
-			$this->user->getEditCount() >= $this->config->get( self::MIN_EDIT_COUNT_CONFIG_NAME );
+			$this->user->getEditCount() >= $this->config->get( self::MIN_EDIT_COUNT_CONFIG_NAME ) &&
+			// T231057: Don't show drawer during browser tests
+			!$this->user->isBot();
 	}
 }
