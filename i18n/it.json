@@ -255,6 +255,8 @@
 	"mobile-frontend-search-feedback-prompt": "Non hai trovato cosa stavi cercando?",
 	"mobile-frontend-send-feedback": "Invia commento",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Dimensione carattere",
+	"mobile-frontend-mobile-option-amc": "Modalità avanzata",
+	"mobile-frontend-mobile-option-amc-experiment-description": "Stiamo sviluppando attivamente nuove funzionalità per i redattori avanzati. Attivando questa modalità otterrai automaticamente nuove funzionalità man mano che saranno pubblicate. Qualsiasi feedback o collaborazione è apprezzata.",
 	"mobile-frontend-mobile-option-amc-learn-more": "Per saperne di più",
 	"mobile-frontend-mobile-option-amc-send-feedback": "Invia commento"
 }
