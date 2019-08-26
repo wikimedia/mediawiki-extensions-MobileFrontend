@@ -3,7 +3,7 @@
 namespace MobileFrontend\AMC;
 
 use Config;
-use IContextSource;
+use MobileContext;
 
 /**
  * Advanced Mobile Contributions Manager
@@ -28,10 +28,11 @@ final class Manager {
 	const AMC_EDIT_TAG = 'advanced mobile edit';
 
 	/**
-	 * Request context, used to retrieve user information
-	 * @var IContextSource
+	 * MobileContext used to retrieve shouldDisplayMobileView and user information
+	 *
+	 * @var MobileContext
 	 */
-	private $context;
+	private $mobileContext;
 
 	/**
 	 * System config
@@ -40,20 +41,12 @@ final class Manager {
 	private $config;
 
 	/**
-	 * Is Mobile mode active for current session
-	 * @var bool
-	 */
-	private $usingMobileMode;
-
-	/**
 	 * @param Config $config Config object
-	 * @param IContextSource $context Request context
-	 * @param bool $usingMobileMode Flag whether user is browsing in the mobile version
+	 * @param MobileContext $mobileContext MobileFrontend context
 	 */
-	public function __construct( Config $config, IContextSource $context, $usingMobileMode ) {
+	public function __construct( Config $config, MobileContext $mobileContext ) {
 		$this->config = $config;
-		$this->context = $context;
-		$this->usingMobileMode = $usingMobileMode;
+		$this->mobileContext = $mobileContext;
 	}
 
 	/**
@@ -62,9 +55,9 @@ final class Manager {
 	 * @throws \ConfigException
 	 */
 	public function isAvailable() {
-		return $this->usingMobileMode
+		return $this->mobileContext->shouldDisplayMobileView()
 			&& $this->config->get( self::AMC_MODE_CONFIG_NAME )
-			&& !$this->context->getUser()->isAnon();
+			&& !$this->mobileContext->getUser()->isAnon();
 	}
 
 	/**
