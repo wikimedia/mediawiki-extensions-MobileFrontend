@@ -24,13 +24,18 @@ var M = require( '../mobile.startup/moduleLoaderSingleton' ),
  * behaviour and will not allow propagation
  * @method
  * @ignore
- * @return {boolean}
+ * @param {jQuery.Event} ev
  */
-function onEditLinkClick() {
+function onEditLinkClick( ev ) {
 	var section = ( new mw.Uri( this.href ) ).query.section || 'all';
 	router.navigate( '#/editor/' + section );
+	// DO NOT USE stopPropagation or you'll break click tracking in WikimediaEvents
+	// You DO NOT NEED to
 	// prevent folding section when clicking Edit by stopping propagation
-	return false;
+	// as this is a concern of the Toggler class and taken care of by inspecting
+	// !ev.target.href (see Toggler.js)
+	// avoid navigating to ?action=edit
+	ev.preventDefault();
 }
 
 /**
