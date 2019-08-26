@@ -28,7 +28,8 @@
 			"S4b1nuz E.656",
 			"Sarah Bernabei",
 			"Sakretsu",
-			"Manfredi26"
+			"Manfredi26",
+			"Ignazio Cannata"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Se un utente sta modificando attraverso l'interfaccia per dispositivi mobili",
@@ -256,7 +257,7 @@
 	"mobile-frontend-send-feedback": "Invia commento",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Dimensione carattere",
 	"mobile-frontend-mobile-option-amc": "Modalità avanzata",
-	"mobile-frontend-mobile-option-amc-experiment-description": "Stiamo sviluppando attivamente nuove funzionalità per i redattori avanzati. Attivando questa modalità otterrai automaticamente nuove funzionalità man mano che saranno pubblicate. Qualsiasi feedback o collaborazione è apprezzata.",
+	"mobile-frontend-mobile-option-amc-experiment-description": "Stiamo sviluppando attivamente nuove funzionalità per i redattori più esperti. Attivando questa modalità otterrai automaticamente nuove funzioni man mano che saranno rese disponibili. Qualsiasi feedback è apprezzato.",
 	"mobile-frontend-mobile-option-amc-learn-more": "Per saperne di più",
 	"mobile-frontend-mobile-option-amc-send-feedback": "Invia commento"
 }
