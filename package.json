@@ -68,7 +68,7 @@
 		},
 		{
 			"path": "resources/dist/mobile.common.js",
-			"maxSize": "13.9KB"
+			"maxSize": "13.8KB"
 		},
 		{
 			"path": "resources/dist/mobile.amcOutreachDrawer.js",
@@ -88,7 +88,7 @@
 		},
 		{
 			"path": "resources/dist/mobile.startup.js",
-			"maxSize": "6.8KB"
+			"maxSize": "7.0KB"
 		},
 		{
 			"path": "resources/dist/mobile.languages.structured.js",
