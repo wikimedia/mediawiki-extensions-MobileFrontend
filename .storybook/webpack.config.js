@@ -25,18 +25,7 @@ module.exports = {
 				options: {
 					paths: [
 						// allow relative urls
-						path.resolve( __dirname, 'resolve-less-imports' ),
-						/**
-						 * Less files are resolved to this path,
-						 * which contain less files that essentially
-						 * just reach into mediawiki core fo the
-						 * appropriate files.
-						 * This path is also specified in stories/index.stories.less
-						 * when importing '../../src/ui/index.less'.
-						 */
-						path.resolve(
-								__dirname, '../../../resources/src/mediawiki.less'
-						)
+						path.resolve( __dirname, 'resolve-less-imports' )
 					]
 				}
 			} ]

@@ -1,7 +1,6 @@
 import { storiesOf } from '@storybook/html';
 import Icon from '../src/mobile.startup/Icon';
-// Assumes core is accessible using standard directory structure
-import '../../../resources/src/mediawiki.ui/components/icons.less';
+import '../.storybook/resolve-less-imports/mediawiki.ui/components/icons.less';
 import '../resources/mobile.startup/icon.less';
 
 // Note quiet and block
