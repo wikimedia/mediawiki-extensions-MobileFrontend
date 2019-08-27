@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
+
 /**
  * The mobile version of the watchlist editing page.
  */
@@ -186,11 +188,12 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 		// create list of pages
 		$mobilePages = new MobileCollection();
 		$pageKeys = array_keys( $watchlist[$ns] );
+		$repoGroup = MediaWikiServices::getInstance()->getRepoGroup();
 		foreach ( $pageKeys as $dbkey ) {
 			if ( isset( $images[$ns][$dbkey] ) ) {
 				$page = new MobilePage(
 					Title::makeTitleSafe( $ns, $dbkey ),
-					wfFindFile( $images[$ns][$dbkey] )
+					$repoGroup->findFile( $images[$ns][$dbkey] )
 				);
 			} else {
 				$page = new MobilePage( Title::makeTitleSafe( $ns, $dbkey ) );

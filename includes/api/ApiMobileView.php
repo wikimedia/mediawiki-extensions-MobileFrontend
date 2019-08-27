@@ -349,7 +349,9 @@ class ApiMobileView extends ApiBase {
 	 * @return File|false
 	 */
 	protected function findFile( $title, $options = [] ) {
-		return wfFindFile( $title, $options );
+		$file = MediaWikiServices::getInstance()->getRepoGroup()
+			->findFile( $title, $options );
+		return $file;
 	}
 
 	/**
