@@ -15,6 +15,7 @@ function editorLoadingOverlay( afterShow, afterHide ) {
 		overlay = new Overlay( {
 			className: 'overlay overlay-loading',
 			noHeader: true,
+			isBorderBox: false,
 			onBeforeExit: function ( exit ) {
 				exit();
 				afterHide();
