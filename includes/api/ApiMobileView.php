@@ -969,6 +969,6 @@ class ApiMobileView extends ApiBase {
 	 * @return string
 	 */
 	public function getHelpUrls() {
-		return 'https://www.mediawiki.org/wiki/Extension:MobileFrontend#action.3Dmobileview';
+		return 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend#API';
 	}
 }
