@@ -39,6 +39,7 @@ QUnit.module( 'MobileFrontend promoCampaign.js', {
 } );
 
 QUnit.test( '#showIfEligible throws when invalid', function ( assert ) {
+	this.storage.get.withArgs( ACTIONS.onLoad ).returns( null );
 	const subject = promoCampaign(
 		this.onShow,
 		ACTIONS,
@@ -58,6 +59,7 @@ QUnit.test( '#showIfEligible throws when invalid', function ( assert ) {
 } );
 
 QUnit.test( '#showIfEligible when campaign off', function ( assert ) {
+	this.storage.get.withArgs( ACTIONS.onLoad ).returns( null );
 	const subject = promoCampaign(
 		this.onShow,
 		ACTIONS,
@@ -73,6 +75,7 @@ QUnit.test( '#showIfEligible when campaign off', function ( assert ) {
 } );
 
 QUnit.test( '#showIfEligible when user ineligible', function ( assert ) {
+	this.storage.get.withArgs( ACTIONS.onLoad ).returns( null );
 	const subject = promoCampaign(
 		this.onShow,
 		ACTIONS,
@@ -87,8 +90,24 @@ QUnit.test( '#showIfEligible when user ineligible', function ( assert ) {
 	assert.strictEqual( this.onShow.called, false, 'onShow is not called' );
 } );
 
+QUnit.test( '#showIfEligible when storage is not available', function ( assert ) {
+	this.storage.get.withArgs( ACTIONS.onLoad ).returns( false );
+	const subject = promoCampaign(
+		this.onShow,
+		ACTIONS,
+		CAMPAIGN_NAME,
+		false,
+		true,
+		this.storage
+	);
+
+	subject.showIfEligible( ACTIONS.onLoad );
+
+	assert.strictEqual( this.onShow.called, false, 'onShow is not called' );
+} );
+
 QUnit.test( '#showIfEligible when storage key is ineligible', function ( assert ) {
-	this.storage.get.returns( '~' );
+	this.storage.get.withArgs( ACTIONS.onLoad ).returns( '~' );
 	const subject = promoCampaign(
 		this.onShow,
 		ACTIONS,
@@ -119,22 +138,40 @@ QUnit.test( '#showIfEligible when eligible', function ( assert ) {
 	assert.strictEqual( this.onShow.called, true, 'onShow' );
 } );
 
-QUnit.test( '#makeActionIneligible', function ( assert ) {
+QUnit.test( '#makeActionIneligible when successful', function ( assert ) {
 	this.storage.get.withArgs( ON_LOAD_STORAGE_KEY ).returns( null );
+	this.storage.set.withArgs( ON_LOAD_STORAGE_KEY, '~' ).returns( true );
 
 	const subject = promoCampaign(
-		this.onShow,
-		ACTIONS,
-		CAMPAIGN_NAME,
-		true,
-		true,
-		this.storage
-	);
+			this.onShow,
+			ACTIONS,
+			CAMPAIGN_NAME,
+			true,
+			true,
+			this.storage
+		),
+		result = subject.makeActionIneligible( ACTIONS.onLoad );
 
-	subject.makeActionIneligible( ACTIONS.onLoad );
-
+	assert.strictEqual( result, true, 'returns result from mw storage' );
 	assert.strictEqual( this.storage.set.calledOnce, true, 'set called once' );
 	assert.strictEqual( this.storage.set.calledWith( ON_LOAD_STORAGE_KEY, '~' ), true, 'set called with correct value' );
+} );
+
+QUnit.test( '#makeActionIneligible when unsuccessful', function ( assert ) {
+	this.storage.get.withArgs( ON_LOAD_STORAGE_KEY ).returns( null );
+	this.storage.set.withArgs( ON_LOAD_STORAGE_KEY ).returns( false );
+
+	const subject = promoCampaign(
+			this.onShow,
+			ACTIONS,
+			CAMPAIGN_NAME,
+			true,
+			true,
+			this.storage
+		),
+		result = subject.makeActionIneligible( ACTIONS.onLoad );
+
+	assert.strictEqual( result, false, 'returns result from mw storage' );
 } );
 
 QUnit.test( '#makeActionIneligible when invalid action', function ( assert ) {

@@ -79,7 +79,7 @@ function createPromoCampaign(
 
 		return isCampaignActive() &&
 			userEligible &&
-			!mwStorage.get( ACTIONS_TO_STORAGE_KEYS[action] );
+			mwStorage.get( ACTIONS_TO_STORAGE_KEYS[action] ) === null;
 	}
 
 	return {
@@ -99,13 +99,14 @@ function createPromoCampaign(
 		/**
 		 * @param {string} action
 		 * @throws {Error} Throws an error if action is not valid.
+		 * @return {boolean} Whether the save operation was successful
 		 */
 		makeActionIneligible: function ( action ) {
 			validateAction( action );
 
 			// The value here actually doesn't matter. The only thing that matters is
 			// if this key exists in localStorage.
-			mwStorage.set( ACTIONS_TO_STORAGE_KEYS[action], '~' );
+			return mwStorage.set( ACTIONS_TO_STORAGE_KEYS[action], '~' );
 		},
 		makeAllActionsIneligible: function () {
 			var key, action;

@@ -26,7 +26,7 @@ QUnit.module( 'MobileFrontend amcOutreachDrawer.js', {
 		sandbox.stub( global.window.HTMLFormElement.prototype, 'submit' );
 
 		this.promoCampaign = {
-			makeActionIneligible: sinon.stub()
+			makeActionIneligible: sinon.stub().returns( true )
 		};
 		this.toast = {
 			showOnPageReload: sinon.stub(),
@@ -62,7 +62,7 @@ QUnit.test( 'returns a drawer', function ( assert ) {
 	assert.strictEqual( subject instanceof Drawer, true, 'it initializes the correct class' );
 } );
 
-QUnit.test( 'calls promoCampaign.makeActionIneligible, toast.show when hidden', function ( assert ) {
+QUnit.test( 'calls promoCampaign.makeActionIneligible, toast.show when dismissed', function ( assert ) {
 	const
 		done = assert.async(),
 		drawer = amcOutreachDrawer(
