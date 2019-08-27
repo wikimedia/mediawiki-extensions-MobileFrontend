@@ -272,6 +272,7 @@
 	"nearby": "Страницы на темы об объектах поблизости",
 	"tag-mobile_edit": "правка с мобильного устройства",
 	"tag-mobile_edit-description": "Правки с мобильного устройства (через сайт или приложение)",
+	"tag-advanced_mobile_edit-description": "Правка, сделанная участником в Расширенном режиме",
 	"tag-mobile_web_edit": "правка из мобильной версии",
 	"tag-mobile_web_edit-description": "Правка, сделанная через мобильную версию сайта",
 	"mobile-frontend-loading-message": "Загрузка…",
@@ -294,6 +295,8 @@
 	"mobile-frontend-mobile-option-amc-experiment-description": "Мы активно разрабатываем новые функции для продвинутых редакторов. При использовании расширенного режима вам будут подключены новые функции, как только они будут включены в релиз. Мы рассчитываем на ваши отзывы и сотрудничество.",
 	"mobile-frontend-mobile-option-amc-learn-more": "Узнать больше",
 	"mobile-frontend-mobile-option-amc-send-feedback": "Отправить отзыв",
+	"mobile-frontend-amc-outreach-enable": "Включить расширенный режим",
+	"mobile-frontend-amc-outreach-no-thanks": "Нет, спасибо",
 	"mobile-frontend-beta-only": "Функция доступна только в рамках бета-тестирования.",
 	"mobile-frontend-console-recruit": "Узнать подробнее о том, как мы строим наш мобильный сайт @ https://www.mediawiki.org/wiki/Extension:MobileFrontend",
 	"prefs-mobile": "Мобильные настройки"

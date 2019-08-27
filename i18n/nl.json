@@ -33,7 +33,8 @@
 			"Effeietsanders",
 			"Elroy",
 			"Optilete",
-			"Xbaked potatox"
+			"Xbaked potatox",
+			"RadioAzureus"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Of een gebruiker wel of niet via de mobiele interface bewerkt",
@@ -256,6 +257,9 @@
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Lettergrootte",
 	"mobile-frontend-mobile-option-amc-learn-more": "Meer lezen",
 	"mobile-frontend-mobile-option-amc-send-feedback": "Terugkoppelen",
+	"mobile-frontend-amc-outreach-intro": "Introductie tot geavanceerde modus",
+	"mobile-frontend-amc-outreach-enable": "Maak geavanceerde modus aan",
+	"mobile-frontend-amc-outreach-no-thanks": "Nee danke",
 	"mobile-frontend-beta-only": "Functie alleen beschikbaar in betamodus",
 	"mobile-frontend-console-recruit": "Leer meer over hoe we onze mobiele website bouwen op https://www.mediawiki.org/wiki/Extension:MobileFrontend",
 	"prefs-mobile": "Mobiele instellingen"
