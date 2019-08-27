@@ -75,10 +75,9 @@ QUnit.test( '#initialize, blocked user', function ( assert ) {
 		}
 	} );
 	getContentStub.returns( dBlockedContent );
-	// eslint-disable-next-line no-new
 	new SourceEditorOverlay( {
 		title: 'test.css'
-	} );
+	} ).getLoadingPromise();
 
 	return dBlockedContent.then( function () {
 		assert.ok(
@@ -110,7 +109,7 @@ QUnit.test( '#initialize, with given page and section', function ( assert ) {
 	assert.strictEqual( editorOverlay.gateway.oldId, undefined );
 	assert.strictEqual( editorOverlay.gateway.sectionId, 0 );
 
-	return getContentStub().then( function () {
+	return editorOverlay.getLoadingPromise().then( function () {
 		assert.strictEqual( editorOverlay.$content.val(), 'section 0', 'load correct section' );
 	} );
 } );

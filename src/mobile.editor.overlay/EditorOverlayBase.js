@@ -8,6 +8,7 @@ var Overlay = require( '../mobile.startup/Overlay' ),
 	toast = require( '../mobile.startup/toast' ),
 	saveFailureMessage = require( './saveFailureMessage' ),
 	mfExtend = require( '../mobile.startup/mfExtend' ),
+	blockMessageDrawer = require( './blockMessageDrawer' ),
 	MessageBox = require( '../mobile.startup/MessageBox' ),
 	mwUser = mw.user;
 
@@ -653,13 +654,27 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 */
 	hasChanged: function () {},
 	/**
-	 * Get a promise that is resolved when the editor data has loaded.
+	 * Get a promise that is resolved when the editor data has loaded,
+	 * or rejected when we're refusing to load the editor because the user is blocked.
 	 * @memberof EditorOverlayBase
 	 * @instance
 	 * @return {jQuery.Promise}
 	 */
 	getLoadingPromise: function () {
-		return this.dataPromise;
+		var self = this;
+		return this.dataPromise.then( function ( result ) {
+			// check if user is blocked
+			if ( result && result.blockinfo ) {
+				// Lazy-load moment only if it's needed, it's somewhat large (it is already used on
+				// mobile by Echo's notifications panel, where it's also lazy-loaded)
+				return mw.loader.using( 'moment' ).then( function () {
+					var block = self.parseBlockInfo( result.blockinfo ),
+						message = blockMessageDrawer( block );
+					return util.Deferred().reject( message );
+				} );
+			}
+			return result;
+		} );
 	},
 	/**
 	 * Handles a failed save due to a CAPTCHA provided by ConfirmEdit extension.

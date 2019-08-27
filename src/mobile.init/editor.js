@@ -314,6 +314,10 @@ function setupEditor( page, skin, currentPageHTMLParser ) {
 				}
 				// Show the editor!
 				overlayManager.replaceCurrent( overlay );
+			}, function ( errorDrawer ) {
+				// Could not load the editor, probably because the user is blocked.
+				overlayManager.router.back();
+				errorDrawer.show();
 			} );
 		} );
 
