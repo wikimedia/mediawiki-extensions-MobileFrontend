@@ -1,5 +1,6 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
 use MediaWiki\Storage\RevisionRecord;
 use Wikimedia\Rdbms\IResultWrapper;
 
@@ -65,7 +66,9 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 		$namespaceLabel = '';
 		$headerTitle = $this->getHeaderBarLink( $title );
 
-		if ( MWNamespace::isTalk( $title->getNamespace() ) ) {
+		$isTalkNS = MediaWikiServices::getInstance()->getNamespaceInfo()
+			->isTalk( $title->getNamespace() );
+		if ( $isTalkNS ) {
 			$namespaceLabel = Html::element( 'span',
 				[ 'class' => 'mw-mf-namespace' ],
 				$title->getNsText() . ': ' );
