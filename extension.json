@@ -191,6 +191,15 @@
 				"amc-outreach": "resources/mobile.amcOutreachDrawer/amc-outreach.svg"
 			}
 		},
+		"mobile.init.styles": {
+			"targets": [
+				"mobile",
+				"desktop"
+			],
+			"styles": [
+				"resources/mobile.init.styles.less"
+			]
+		},
 		"mobile.init": {
 			"dependencies": [
 				"mediawiki.api",

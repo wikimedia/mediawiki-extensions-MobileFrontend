@@ -1,0 +1,22 @@
+
+@import 'mediawiki.ui/variables.less';
+
+.client-js {
+	.collapsible-block {
+		display: none;
+
+		&.open-block {
+			display: block;
+		}
+	}
+}
+
+@media all and ( min-width: @width-breakpoint-tablet ) {
+	.client-js {
+		// Avoid flash of unstyled content for tablet users while JavaScript is loading
+		// onclick attribute is removed by the toggling code.
+		[ onclick ] + .collapsible-block {
+			display: block;
+		}
+	}
+}

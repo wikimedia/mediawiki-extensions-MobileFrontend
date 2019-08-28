@@ -225,7 +225,7 @@ module.exports = ( env, argv ) => ( {
 		// Note: entrypoint size implicitly includes the mobile.startup.runtime and mobile.common
 		// chunks.
 		maxAssetSize: 60.5 * 1024,
-		maxEntrypointSize: 83.1 * 1024,
+		maxEntrypointSize: 87.0 * 1024,
 		// The default filter excludes map files but we rename ours. Also, any modules prefixed with
 		// "tests." are excluded from performance checks as they are not shipped to end users.
 		// eslint-disable-next-line no-restricted-properties

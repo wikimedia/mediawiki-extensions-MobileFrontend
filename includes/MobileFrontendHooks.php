@@ -735,6 +735,7 @@ class MobileFrontendHooks {
 			// We load MediaWiki:Mobile.css/js instead
 			// We load mobile.init so that lazy loading images works on all skins
 			$out->addModules( [ 'mobile.site', 'mobile.init' ] );
+			$out->addModuleStyles( [ 'mobile.init.styles' ] );
 			if ( $title->isMainPage() && $config->get( 'MFMobileMainPageCss' ) ) {
 				$out->addModuleStyles( [ 'mobile.mainpage.css' ] );
 			}

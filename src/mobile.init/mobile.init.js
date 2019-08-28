@@ -9,6 +9,7 @@
  */
 var skin,
 	storage = mw.storage,
+	toggling = require( './toggling' ),
 	skinName = mw.config.get( 'skin' ),
 	isPageContentModelEditable = mw.config.get( 'wgMFIsPageContentModelEditable' ),
 	editor = require( './editor' ),
@@ -161,6 +162,14 @@ if ( !currentPage.inNamespace( 'special' ) && isPageContentModelEditable ) {
 			editor( currentPage, currentPageHTMLParser, skin );
 		}
 	}
+}
+
+// Don't run this twice on Minerva while we move the code over here
+if (
+	mw.loader.getState( 'skins.minerva.toggling' ) === 'registered' ||
+	mw.loader.getState( 'skins.minerva.toggling' ) === null
+) {
+	toggling();
 }
 
 mw.mobileFrontend.deprecate( 'mobile.init/skin', skin,

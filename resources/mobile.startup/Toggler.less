@@ -1,3 +1,17 @@
+.client-js {
+	.collapsible-heading {
+		cursor: pointer;
+
+		// FIXME: This should be removed as part of https://phabricator.wikimedia.org/T229440
+		.indicator {
+			float: left;
+			margin-top: 0.7em;
+			margin-left: -1em;
+			font-size: 0.4em;
+		}
+	}
+}
+
 @media print {
 	.collapsible-heading .indicator,
 	.collapsible-heading .edit-page {
