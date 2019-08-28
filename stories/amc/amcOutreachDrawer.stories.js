@@ -1,6 +1,5 @@
 import { storiesOf } from '@storybook/html';
 import amcOutreachDrawer from '../../src/mobile.amcOutreachDrawer/amcOutreachDrawer';
-import '../../resources/mobile.amcOutreachDrawer/amcOutreachDrawer.less';
 import { action } from '@storybook/addon-actions';
 
 storiesOf( 'amc' )

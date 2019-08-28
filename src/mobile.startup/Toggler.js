@@ -3,6 +3,7 @@ var browser = require( './Browser' ).getSingleton(),
 	escapeHash = util.escapeHash,
 	arrowOptions = {
 		name: 'expand',
+		isSmall: true,
 		additionalClassNames: 'indicator'
 	},
 	Icon = require( './Icon' );

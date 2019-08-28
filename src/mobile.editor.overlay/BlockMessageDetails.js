@@ -2,10 +2,6 @@
 var Button = require( '../mobile.startup/Button' ),
 	View = require( '../mobile.startup/View' ),
 	Icon = require( '../mobile.startup/Icon' ),
-	userIcon = new Icon( {
-		tagName: 'span',
-		name: 'profile'
-	} ),
 	okButton = new Button( {
 		label: mw.msg( 'ok' ),
 		tagName: 'button',
@@ -49,6 +45,13 @@ class BlockMessageDetails extends View {
 	 * @inheritdoc
 	 */
 	postRender() {
+		const userIcon = new Icon( {
+			tagName: 'span',
+			name: 'profile',
+			hasText: true,
+			label: this.options.creator.name
+		} );
+
 		this.$el.find( '.block-message-creator a' ).prepend(
 			userIcon.$el
 		);
@@ -76,7 +79,7 @@ class BlockMessageDetails extends View {
       {{/reason}}
       <div class="block-message-item block-message-creator">
         <h6>{{ creatorHeader }}</h6>
-        <div><strong><a href="{{ creator.url }}">{{ creator.name }}</a></strong></div>
+        <div><strong><a href="{{ creator.url }}"></a></strong></div>
       </div>
       {{#expiry}}
         <div class="block-message-item">

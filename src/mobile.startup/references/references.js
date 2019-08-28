@@ -62,7 +62,9 @@ function referenceDrawer( props ) {
 								hasText: true,
 								label: mw.msg( 'mobile-frontend-references-citation' )
 							} ).$el,
-							icons.cancel( 'gray' ).$el
+							icons.cancel( 'gray', {
+								isSmall: true
+							} ).$el
 						] ),
 					util.parseHTML( '<div>' ).addClass( containerClassName ).append(
 						util.parseHTML( '<sup>' ).text( props.title ),
