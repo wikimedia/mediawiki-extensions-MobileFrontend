@@ -31,14 +31,14 @@ QUnit.module( 'MobileFrontend CtaDrawer.js', {
 		mustache.setUp( sandbox, global );
 
 		// Force consistent messaging between Special:JavaScriptTest and Node.js.
-		sandbox.stub( global.mw, 'msg', function ( id ) {
+		sandbox.stub( global.mw, 'msg' ).callsFake( function ( id ) {
 			switch ( id ) {
 				case 'mobile-frontend-watchlist-cta-button-login': return 'Log in';
 				case 'mobile-frontend-watchlist-cta-button-signup': return 'Sign up';
 			}
 			return id;
 		} );
-		sandbox.stub( global.mw.util, 'getUrl', function ( pageName, params ) {
+		sandbox.stub( global.mw.util, 'getUrl' ).callsFake( function ( pageName, params ) {
 			return params.type ? 'signUp' : 'logIn';
 		} );
 
@@ -49,7 +49,7 @@ QUnit.module( 'MobileFrontend CtaDrawer.js', {
 		CtaDrawer = require( '../../../src/mobile.startup/CtaDrawer' );
 
 		// Rewire the prototype, not the instance, since this property is used during construction.
-		sandbox.stub( Drawer.prototype, 'appendToElement', '#' + parentID );
+		sandbox.stub( Drawer.prototype, 'appendToElement' ).callsFake( () => '#' + parentID );
 
 		// Create a disposable host Element. See T209129.
 		parent = document.createElement( 'div' );
@@ -75,7 +75,7 @@ QUnit.module( 'MobileFrontend CtaDrawer.js', {
 	QUnit.module( 'redirectParams()', function () {
 		QUnit.test( 'empty props, default URL', function ( assert ) {
 			var subject = CtaDrawer.prototype.test.redirectParams;
-			sandbox.stub( global.mw.config, 'get', function () {
+			sandbox.stub( global.mw.config, 'get' ).callsFake( function () {
 				return 'pageName';
 			} );
 			assert.propEqual( subject( {} ), { returnto: 'pageName' } );

@@ -34,7 +34,7 @@ QUnit.module( 'MobileFrontend languageOverlay.js', {
 		// languageOverlay uses a global navigator so we need to stub it for headless tests
 		if ( headless ) {
 			global.navigator = global.navigator || undefined;
-			sandbox.stub( global, 'navigator', {} );
+			sandbox.stub( global, 'navigator' ).callsFake( () => {} );
 		}
 
 		sandbox.stub( m, 'require' ).withArgs( 'mobile.languages.structured/LanguageSearcher' ).returns( LanguageSearcher );

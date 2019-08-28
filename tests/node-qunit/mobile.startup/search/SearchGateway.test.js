@@ -22,7 +22,7 @@ QUnit.module( 'MobileFrontend: SearchGateway',
 			SearchGateway = require( '../../../../src/mobile.startup/search/SearchGateway' );
 
 			sandbox.stub( mw.util, 'getUrl' ).returns( 'Title' );
-			sandbox.stub( mw.config, 'get', function ( name ) {
+			sandbox.stub( mw.config, 'get' ).callsFake( function ( name ) {
 				switch ( name ) {
 					case 'wgMFDisplayWikibaseDescriptions': return { search: '' };
 					case 'wgMFSearchGenerator': return { prefix: '' };
@@ -30,7 +30,7 @@ QUnit.module( 'MobileFrontend: SearchGateway',
 			} );
 
 			this.gateway = new SearchGateway( new mw.Api() );
-			sandbox.stub( this.gateway.api, 'get', function () {
+			sandbox.stub( this.gateway.api, 'get' ).callsFake( function () {
 				return util.Deferred().resolve( {
 					warnings: {
 						query: {

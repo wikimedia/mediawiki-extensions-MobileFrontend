@@ -18,8 +18,8 @@ module.exports = {
 				},
 				Tool: function () {}
 			};
-			global.OO = global.OO || undefined;
-			sandbox.stub( global, 'OO', OO );
+			global.OO = OO || undefined;
+			sandbox.stub( global, 'OO' ).callsFake( () => OO );
 		}
 	}
 };

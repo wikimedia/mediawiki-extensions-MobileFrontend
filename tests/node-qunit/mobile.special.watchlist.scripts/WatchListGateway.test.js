@@ -113,7 +113,7 @@ QUnit.module( 'MobileFrontend WatchListGateway.js', {
 			.returns( [ 'h1', 'h2', 'h3', 'h4', 'h5' ] );
 		// needed for browser tests. If not stubbed, pageJSONParser.parse() will call
 		// mw.util.getUrl which calls mw.config.get and expects back a value
-		sandbox.stub( mw.util, 'getUrl', function () {} );
+		sandbox.stub( mw.util, 'getUrl' ).callsFake( function () {} );
 
 		WatchListGateway = require( '../../../src/mobile.special.watchlist.scripts/WatchListGateway' );
 	},

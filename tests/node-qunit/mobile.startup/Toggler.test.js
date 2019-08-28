@@ -328,7 +328,7 @@ QUnit.test( 'Check for and remove obsolete stored sections.', function ( assert 
 	localStorageValue[ this.title ] = {};
 	localStorageValue[ this.title ][ this.headline ] = ( new Date( 1990, 1, 1 ) ).getTime();
 
-	sandbox.stub( mw.storage, 'get', function () {
+	sandbox.stub( mw.storage, 'get' ).callsFake( function () {
 		return JSON.stringify( localStorageValue );
 	} );
 
@@ -422,7 +422,7 @@ QUnit.test( 'MobileFrontend toggle.js - Expand stored sections.', function ( ass
 	// save a toggle state manually
 	expandedSections[ this.title ][ this.headline ] = ( new Date() ).getTime();
 
-	sandbox.stub( mw.storage, 'get', function () {
+	sandbox.stub( mw.storage, 'get' ).callsFake( function () {
 		return JSON.stringify( expandedSections );
 	} );
 	expandedSectionsFromToggle = Toggler._getExpandedSections( this.page );

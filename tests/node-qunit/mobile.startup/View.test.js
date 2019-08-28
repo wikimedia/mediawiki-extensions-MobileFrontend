@@ -32,7 +32,8 @@ QUnit.test( 'View', function ( assert ) {
 	var view = new View( {
 		el: 'body'
 	} );
-	assert.ok( view.$el instanceof $, 'assign jQuery object to $el' );
+	assert.strictEqual( view.$el[ 0 ].outerHTML, '<body class="view-border-box"></body>',
+		'Views use el and treat as CSS selector. view border box by default' );
 	assert.strictEqual( view.$el[ 0 ].tagName.toUpperCase(), 'BODY', 'assign proper jQuery object to $el' );
 } );
 

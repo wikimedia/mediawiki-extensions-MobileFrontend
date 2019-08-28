@@ -8,8 +8,9 @@ module.exports = {
 	 */
 	setUp: function ( sandbox, global ) {
 		if ( headless ) {
-			global.$ = global.$ || undefined;
-			sandbox.stub( global, '$', require( 'jquery' ) );
+			const $ = require( 'jquery' );
+			global.$ = $ || undefined;
+			sandbox.stub( global, '$' ).callsFake( $ );
 		}
 	},
 	tearDown: function () {
