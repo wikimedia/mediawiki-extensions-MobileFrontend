@@ -1,7 +1,6 @@
 import { storiesOf } from '@storybook/html';
 import Anchor from '../src/mobile.startup/Anchor';
-// Assumes core is accessible using standard directory structure
-import '../../../resources/src/mediawiki.ui/components/anchors.less';
+import '../.storybook/resolve-less-imports/mediawiki.ui/components/anchors.less';
 
 // Note quiet and block
 storiesOf( 'Anchor' )

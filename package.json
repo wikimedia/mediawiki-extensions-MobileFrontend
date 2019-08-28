@@ -18,7 +18,7 @@
 		"test:bundle-cached": "bash ./dev-scripts/check_bundle.sh --cached",
 		"jsdoc": "jsdoc -c jsdoc.json",
 		"doc": "npm run jsdoc && npm run build-storybook",
-		"storybook": "start-storybook",
+		"storybook": "./dev-scripts/storybook.sh && start-storybook",
 		"build-storybook": "build-storybook -o docs/ui"
 	},
 	"engines": {

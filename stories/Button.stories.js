@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/html';
 import Button from '../src/mobile.startup/Button';
 // Assumes core is accessible using standard directory structure
-import '../../../resources/src/mediawiki.ui/components/buttons.less';
+import '../.storybook/resolve-less-imports/mediawiki.ui/components/buttons.less';
 
 // Note quiet and block
 storiesOf( 'Button' )
