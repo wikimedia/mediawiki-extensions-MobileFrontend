@@ -34,9 +34,7 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/SourceEditorOverlay', {
 		getContentStub = sandbox.stub( EditorGateway.prototype, 'getContent' );
 		// avoid waiting to load 'moment',
 		// using `expiry: 'infinity'` below ensures we don't need it
-		sandbox.stub( mw.loader, 'using' ).returns( { then: function ( callback ) {
-			callback();
-		} } );
+		sandbox.stub( mw.loader, 'using' ).withArgs( 'moment' ).returns( util.Deferred().resolve() );
 		sandbox.stub( mw, 'confirmCloseWindow' ).returns( {
 			release: function () {}
 		} );
@@ -74,12 +72,12 @@ QUnit.test( '#initialize, blocked user', function ( assert ) {
 			blockreason: 'Testreason'
 		}
 	} );
-	getContentStub.returns( dBlockedContent );
+	const done = assert.async();
+
 	new SourceEditorOverlay( {
 		title: 'test.css'
-	} ).getLoadingPromise();
-
-	return dBlockedContent.then( function () {
+	}, dBlockedContent ).getLoadingPromise().then( () => {}, function () {
+		done();
 		assert.ok(
 			messageStub.calledWithMatch( {
 				partial: false,
