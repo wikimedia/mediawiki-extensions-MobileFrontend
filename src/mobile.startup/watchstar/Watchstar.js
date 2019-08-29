@@ -85,7 +85,7 @@ mfExtend( Watchstar, View, {
 	 * @instance
 	 */
 	preRender: function () {
-		this.options.tooltip = this._watched ? mw.msg( 'unwatchthispage' ) : mw.msg( 'watchthispage' );
+		this.options.tooltip = this._watched ? mw.msg( 'unwatch' ) : mw.msg( 'watch' );
 	},
 	/**
 	 * @inheritdoc
