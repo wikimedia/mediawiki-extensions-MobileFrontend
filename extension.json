@@ -150,6 +150,15 @@
 				"userpage": "resources/mobile.userpage.icons/userpage.svg"
 			}
 		},
+		"mobile.legacy.icons": {
+			"class": "ResourceLoaderImageModule",
+			"useDataURI": false,
+			"selector": ".{name}",
+			"images": {
+				"mw-ui-icon-mf-spinner:before": "resources/mobile.legacy.icons/ajax-loader.gif",
+				"list-thumb-none": "resources/mobile.legacy.icons/noimage.svg"
+			}
+		},
 		"mobile.userpage.styles": {
 			"targets": [
 				"mobile",
@@ -247,6 +256,7 @@
 				"mediawiki.Title",
 				"mobile.pagelist.styles",
 				"mobile.pagesummary.styles",
+				"mobile.legacy.icons",
 				"mediawiki.notify",
 				"mobile.startup.images",
 				"mobile.startup.images.variants",
