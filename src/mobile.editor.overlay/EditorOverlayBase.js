@@ -52,6 +52,7 @@ EditVeTool.prototype.onUpdateState = function () {
  * @uses Icon
  * @uses user
  * @param {Object} params Configuration options
+ * @params {Object} [params.editorOptions] falls back to wgMFEditorOptions if undefined
  * @param {number|null} params.editCount of user
  * @param {boolean} params.editSwitcher whether possible to switch mode in header
  * @param {boolean} params.hasToolbar whether the editor has a toolbar
@@ -92,7 +93,7 @@ function EditorOverlayBase( params ) {
 	this.isNewEditor = options.editCount === 0;
 	this.sectionId = options.sectionId;
 	// FIXME: Pass this in via options rather than accessing mw.config
-	this.config = mw.config.get( 'wgMFEditorOptions' );
+	this.config = params.editorOptions || mw.config.get( 'wgMFEditorOptions' );
 	this.sessionId = options.sessionId;
 	this.overlayManager = options.overlayManager;
 

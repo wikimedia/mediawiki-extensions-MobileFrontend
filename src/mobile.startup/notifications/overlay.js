@@ -50,8 +50,9 @@ function notificationsOverlay( onCountChange, onNotificationListRendered ) {
 		},
 		promisedView(
 			oouiPromise.then( function () {
-				var list = m.require( 'mobile.notifications.overlay' ).list;
-				return list( mw.echo, markAllReadButton, onCountChange,
+				const module = m.require( 'mobile.notifications.overlay' ),
+					list = module.list;
+				return list( module.echo(), markAllReadButton, onCountChange,
 					onNotificationListRendered );
 			} )
 		)
