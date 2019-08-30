@@ -40,12 +40,13 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 		$user = User::newFromName( $title->getText(), false );
 		$glyph = $user->isAnon() ? 'anonymous' : 'user';
 
-		return Html::element( 'a',
+		return Html::rawElement( 'a',
 			[
 				'class' => MobileUI::iconClass( $glyph, 'before', 'mw-mf-user' ),
 				'href' => $title->getLocalURL(),
 			],
-			$title->getText() );
+			Html::element( 'span', [], $title->getText() )
+		);
 	}
 
 	/**

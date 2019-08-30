@@ -161,7 +161,9 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 		}
 
 		if ( $username && $this->showUsername ) {
-			$html .= Html::element( 'p', [ 'class' => $usernameClass ], $username );
+			$html .= Html::rawElement( 'p', [ 'class' => $usernameClass ],
+				Html::element( 'span', [], $username )
+			);
 		}
 
 		$html .= Html::rawElement(
