@@ -4,7 +4,6 @@ use HtmlFormatter\HtmlFormatter;
 use MediaWiki\MediaWikiServices;
 use MobileFrontend\ContentProviders\IContentProvider;
 use MobileFrontend\Transforms\MoveLeadParagraphTransform;
-use MobileFrontend\Transforms\AddMobileTocTransform;
 use MobileFrontend\Transforms\NoTransform;
 use MobileFrontend\Transforms\LegacyMainPageTransform;
 use MobileFrontend\Transforms\LazyImageTransform;
@@ -289,7 +288,6 @@ class MobileFormatter extends HtmlFormatter {
 	 */
 	protected function makeSections( DOMDocument $doc, array $headings, array $transformOptions ) {
 		$noTransform = new NoTransform();
-		$tocTransform = $this->isTOCEnabled ? new AddMobileTocTransform() : $noTransform;
 		$leadTransform = $transformOptions[ self::SHOW_FIRST_PARAGRAPH_BEFORE_INFOBOX ] ?
 				new MoveLeadParagraphTransform( $this->title, $this->revId ) : $noTransform;
 
@@ -335,7 +333,6 @@ class MobileFormatter extends HtmlFormatter {
 				$container->insertBefore( $sectionBody, $node );
 
 				if ( $sectionNumber === 0 ) {
-					$tocTransform->apply( $sectionBody );
 					$leadTransform->apply( $sectionBody );
 				}
 				$sectionNumber += 1;

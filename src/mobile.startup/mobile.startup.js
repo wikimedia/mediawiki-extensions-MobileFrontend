@@ -1,5 +1,6 @@
 var
 	moduleLoader = require( './moduleLoaderSingleton' ),
+	util = require( './util' ),
 	schemaMobileWebSearch = require( './search/schemaMobileWebSearch' );
 
 // Expose the entry chunk through libraryTarget and library. This allows
@@ -10,7 +11,7 @@ module.exports = {
 	mfExtend: require( './mfExtend' ),
 	context: require( './context' ),
 	time: require( './time' ),
-	util: require( './util' ),
+	util,
 	View: require( './View' ),
 	PageGateway: require( './PageGateway' ),
 	Browser: require( './Browser' ),
@@ -35,7 +36,13 @@ module.exports = {
 	eventBusSingleton: require( './eventBusSingleton' ),
 	Toggler: require( './Toggler' ),
 	toc: {
-		TableOfContents: require( './toc/TableOfContents' )
+		// In case any old version of Minerva is cached.
+		TableOfContents: () => {
+			return {
+				// in the unlikely event old Minerva code got loaded with new MF.
+				$el: util.parseHTML( '<div>' )
+			};
+		}
 	},
 	notifications: {
 		overlay: require( './notifications/overlay' )

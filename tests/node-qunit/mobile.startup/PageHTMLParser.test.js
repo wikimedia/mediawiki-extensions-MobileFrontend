@@ -7,8 +7,7 @@ var
 	// These both have heavy dependencies on jQuery so must be loaded later.
 	PageHTMLParser, util,
 	sinon = require( 'sinon' ),
-	PARSER_OUTPUT = '<div class="mw-parser-output">',
-	MOBILE_TOC = '<div class="toc-mobile view-border-box"><h2></h2><div></div></div>';
+	PARSER_OUTPUT = '<div class="mw-parser-output">';
 /* eslint-disable one-var */
 /** @type {sinon.SinonSandbox} */ var sandbox;
 /** @type {typeof import('../../../src/mobile.startup/Page')} */ var stubPage;
@@ -39,7 +38,6 @@ QUnit.module( 'MobileFrontend PageHTMLParser.js', {
 				<div class="mf-section-0">
 					<div class="ambox">a0</div>
 					<p>lead</p>
-					${MOBILE_TOC}
 				</div>
 				<h2 class="section-heading">1</h2>
 				<div class="mf-section-1">
