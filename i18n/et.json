@@ -223,6 +223,8 @@
 	"nearby": "Läheduses paiknevate teemade leheküljed",
 	"tag-mobile_edit": "Mobiilimuudatus",
 	"tag-mobile_edit-description": "Mobiilisaidil tehtud muudatus (veebis või rakenduses)",
+	"tag-advanced_mobile_edit": "Täiustatud mobiilimuudatus",
+	"tag-advanced_mobile_edit-description": "Täiustatud režiimis tehtud muudatus",
 	"tag-mobile_web_edit": "Mobiiliveebi kaudu",
 	"tag-mobile_web_edit-description": "Mobiili veebisaidi kaudu tehtud muudatus",
 	"mobile-frontend-loading-message": "Laadimine…",
@@ -231,5 +233,9 @@
 	"mobile-frontend-notifications-filter-title": "Teavituste filtrimine",
 	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions": "Pealkirjade kirjeldused",
 	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions-description": "Näita pealkirja all lühikirjeldust, et teemast ülevaade saada.",
+	"mobile-frontend-mobile-option-amc": "Täiustatud režiim",
+	"mobile-frontend-mobile-option-amc-experiment-description": "Arendame aktiivselt uusi vahendeid edasijõudnud kasutajatele. Kui kasutad seda režiimi, siis lülitatakse uued vahendid sisse kohe, kui need on saadaval. Oleme tänulikud igasuguse tagasiside ja koostöö eest.",
+	"mobile-frontend-mobile-option-amc-learn-more": "Lisateave",
+	"mobile-frontend-mobile-option-amc-send-feedback": "Saada tagasisidet",
 	"mobile-frontend-beta-only": "Funktsioon saadaval ainult beetarežiimis"
 }
