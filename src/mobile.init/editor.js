@@ -266,7 +266,8 @@ function setupEditor( page, skin, currentPageHTMLParser ) {
 					editorOptions.titleObj.getPrefixedDb(),
 					{
 						sessionStore: true,
-						section: editorOptions.sectionId || null,
+						section: editorOptions.sectionId === undefined ?
+							null : editorOptions.sectionId,
 						oldId: editorOptions.oldId || undefined,
 						// Should be ve.init.mw.MobileArticleTarget.static.trackingName,
 						// but the class hasn't loaded yet.
