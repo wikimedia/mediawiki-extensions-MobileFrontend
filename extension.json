@@ -933,7 +933,6 @@
 		"MFRemovableClasses": {
 			"beta": [],
 			"base": [
-				".toc",
 				".navbox",
 				".nomobile"
 			]
