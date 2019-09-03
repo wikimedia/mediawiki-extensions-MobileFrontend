@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Pyscowicz"
+		]
+	},
+	"mobile-frontend-categories-add": "Lissää katekuurihaan",
+	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|mookkaus|mookkausta}}",
+	"mobile-frontend-editor-cancel": "Lopeta",
+	"mobile-frontend-editor-save": "Säästä",
+	"mobile-frontend-main-menu-settings-heading": "Inställninkit",
+	"mobile-frontend-media-details": "Detaljit",
+	"mobile-frontend-save-settings": "Säästä",
+	"mobile-frontend-watchlist-a-z": "Lista",
+	"mobile-frontend-watchlist-cta-button-login": "Lokkaa sisäle",
+	"mobile-frontend-watchlist-cta-button-signup": "Lokkaa ylös",
+	"tag-mobile_edit": "Mobiilimookkaus"
+}

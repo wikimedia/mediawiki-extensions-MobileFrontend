@@ -107,7 +107,7 @@
 	"mobile-frontend-featured-article": "Článok dňa",
 	"mobile-frontend-generic-404-desc": "Požadovanú stránku sa nepodarilo nájsť.",
 	"mobile-frontend-generic-404-title": "Chyba – Stránka nenájdená",
-	"mobile-frontend-generic-login-new": "<strong>{{GRAMMAR:4sg|{{SITENAME}}}} tvoria ľudia ako vy.</strong><br />Prihláste sa a prispievajte.",
+	"mobile-frontend-generic-login-new": "<strong>{{GRAMMAR:akuzatív|{{SITENAME}}}} tvoria ľudia ako ste vy.</strong><br />Prihláste sa a prispievajte.",
 	"mobile-frontend-history-404-desc": "Nedá sa zobraziť história stránky, ktorá neexistuje. Možno bola zmazaná, alebo ste klikli na chybný odkaz.",
 	"mobile-frontend-history-404-title": "Táto stránka neexistuje",
 	"mobile-frontend-history-no-results": "Zadanému filtru nezodpovedá žiadna história.",
