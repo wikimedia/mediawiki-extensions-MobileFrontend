@@ -8,14 +8,15 @@
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "ńy ma uopisu sprowjańo",
-	"mobile-frontend-copyright": "Tekst je udostympńany na licencyji $1, eli inakszyj ńy podano.",
+	"mobile-frontend-copyright": "Tekst udostympniany na licyncyji $1, jeźli niy było podano inakszyj.",
 	"mobile-frontend-featured-article": "Artikel na medal",
+	"mobile-frontend-generic-login-new": "<strong>{{GRAMMAR:B.lp|{{SITENAME}}}} tworzōm tacy ludzie jak ty.</strong><br />Wloguj sie, żeby jōm budować.",
 	"mobile-frontend-last-modified-date": "Ôstatnio edytowanŏ $1, ô $2",
 	"mobile-frontend-news-items": "Nowiny",
-	"mobile-frontend-privacy-link-text": "Politika prywatnůśći",
+	"mobile-frontend-privacy-link-text": "Polityka prywatności",
 	"mobile-frontend-terms-text": "Regle użytkowańo",
 	"mobile-frontend-view": "Wersyjŏ dlŏ mobilniŏkōw",
-	"mobile-frontend-view-desktop": "Klasyczno",
+	"mobile-frontend-view-desktop": "Na kōmputer",
 	"tag-mobile_edit": "Mobilnŏ edycyjŏ",
 	"tag-mobile_web_edit": "Edycyjŏ z mobilnego necu"
 }

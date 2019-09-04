@@ -33,7 +33,7 @@
 	"mobile-frontend-copyright": "مواد $1 ھيٺ موجود آھي نہ تہ ٻي صورت واضع ڪيل آهي.",
 	"mobile-frontend-desc": "موبائل فرنٽڊ",
 	"mobile-frontend-diffview-404-desc": "توھانجي گھربل مسودي لاءِ آئي-ڊي وجود نٿي رکي.",
-	"mobile-frontend-diffview-404-title": "خراب مسودو",
+	"mobile-frontend-diffview-404-title": "خراب ورجاءُ",
 	"mobile-frontend-diffview-anonymous": "گمنام واپرائيندڙ",
 	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|بائيٽ|بائيٽون}} واڌ",
 	"mobile-frontend-diffview-bytesnochange": "ماپ ۾ تبديلي ناھي",
@@ -259,7 +259,7 @@
 	"mobile-frontend-amc-outreach-no-thanks": "نہ مھرباني",
 	"mobile-frontend-amc-outreach-enabled-message": "ھاڻي متقدم موڊ قابلِڪار ڪيل آھي. توھان ان کي ترتيبن ۾ بند ڪري سگھو ٿا.",
 	"mobile-frontend-amc-outreach-dismissed-message": "توھان متقدم موڊ کي ڪنھن بہ وقت پنھنجي ترتيبن ۾ قابلِڪار ڪري سگھو ٿا.",
-	"mobile-frontend-beta-only": "خصوصيت صرف بيٽا موڊ ۾ موجود آھي.",
+	"mobile-frontend-beta-only": "خصوصيت رڳو آزمائشي موڊ ۾ موجود آھي",
 	"mobile-frontend-console-recruit": "وڌيڪ ڏسو اسان موبائل سائيٽ ڪيئن جوڙي آهي @\nhttps://www.mediawiki.org/wiki/Extension:MobileFrontend",
 	"prefs-mobile": "موبائل ترجيحون"
 }
