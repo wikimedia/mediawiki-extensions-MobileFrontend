@@ -1,18 +1,20 @@
+const icons = require( '../mobile.startup/icons' );
+
 /* global $ */
 module.exports = function fakeToolbar() {
 	var $fakeToolbar, $goBack, $loadingMessage;
 
-	$goBack = $( '<a>' )
-		.attr( 'tabindex', '0' )
-		.attr( 'role', 'button' )
-		.addClass( 'mw-ui-icon mw-ui-icon-close mw-ui-icon-element' )
-		// This class makes it a functional close button for the overlay
-		.addClass( 'cancel' )
-		.text( mw.msg( 'mobile-frontend-overlay-close' ) );
+	$goBack = icons.cancel( null, {
+		tagName: 'a'
+	} ).$el.attr( 'tabindex', '0' )
+		.attr( 'role', 'button' );
 
-	$loadingMessage = $( '<span>' )
-		.addClass( 'mw-ui-icon mw-ui-icon-mf-spinner mw-ui-icon-before' )
-		.text( mw.msg( 'mobile-frontend-editor-loading' ) );
+	$loadingMessage = icons.spinner( {
+		tagName: 'span',
+		hasText: true,
+		additionalClassNames: '',
+		label: mw.msg( 'mobile-frontend-editor-loading' )
+	} ).$el;
 
 	// Wrappers similar to .overlay-header-container, .overlay-header and .oo-ui-toolbar
 	$fakeToolbar = $( '<div>' )

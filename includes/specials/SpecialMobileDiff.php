@@ -217,18 +217,20 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		} else {
 			$bytesChanged = $this->rev->getSize();
 		}
+		$glyph = 'bytesChanged';
+		$bytesChanged = 0;
 		if ( $bytesChanged > 0 ) {
 			$changeMsg = 'mobile-frontend-diffview-bytesadded';
-			$sizeClass = MobileUI::iconClass( 'bytesadded', 'before',
+			$sizeClass = MobileUI::iconClass( $glyph . '-green', 'before',
 				'meta mw-mf-bytesadded mw-ui-icon-small' );
 		} elseif ( $bytesChanged === 0 ) {
 			$changeMsg = 'mobile-frontend-diffview-bytesnochange';
-			$sizeClass = MobileUI::iconClass( 'bytesneutral', 'before',
-				'meta mw-mf-bytesneutral mw-ui-icon-small' );
+			$sizeClass = MobileUI::iconClass( $glyph, 'before',
+				'meta mw-mf-bytesneutral mw-ui-icon-small mf-mw-ui-icon-rotate-clockwise' );
 		} else {
 			$changeMsg = 'mobile-frontend-diffview-bytesremoved';
-			$sizeClass = MobileUI::iconClass( 'bytesremoved', 'before',
-				'meta mw-mf-bytesremoved mw-ui-icon-small' );
+			$sizeClass = MobileUI::iconClass( $glyph . '-red', 'before',
+				'meta mw-mf-bytesremoved mw-ui-icon-small mf-mw-ui-icon-rotate-flip' );
 			$bytesChanged = abs( $bytesChanged );
 		}
 		$ts = new MWTimestamp( $this->rev->getTimestamp() );

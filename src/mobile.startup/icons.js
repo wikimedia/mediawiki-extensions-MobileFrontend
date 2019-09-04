@@ -1,5 +1,5 @@
 var
-	CANCEL_GLYPH = 'overlay-close',
+	CANCEL_GLYPH = 'close',
 	Icon = require( './Icon' ),
 	util = require( './util' );
 
@@ -30,7 +30,7 @@ module.exports = {
 	back: function () {
 		return new Icon( {
 			tagName: 'button',
-			name: 'back',
+			name: 'arrowPrevious-base20',
 			additionalClassNames: 'back',
 			label: mw.msg( 'mobile-frontend-overlay-close' )
 		} );
@@ -42,17 +42,18 @@ module.exports = {
 	 * communicating with the back-end.
 	 * @memberof icons
 	 * @instance
-	 * @param {string} [variant] defaults to cancel
+	 * @param {string} [variant] defaults to `base20`.
+	 * @param {Object} [props] to extend
 	 * @return {Icon}
 	 */
-	cancel: function ( variant ) {
-		var glyph = variant ? CANCEL_GLYPH + '-' + variant : CANCEL_GLYPH;
-		return new this.Icon( {
+	cancel: function ( variant, props ) {
+		var glyph = variant ? `${CANCEL_GLYPH}-${variant}` : `${CANCEL_GLYPH}-base20`;
+		return new this.Icon( util.extend( {
 			tagName: 'button',
 			name: glyph,
 			additionalClassNames: 'cancel',
 			label: mw.msg( 'mobile-frontend-overlay-close' )
-		} );
+		}, props || {} ) );
 	},
 	/**
 	 * Gets a spinner icon.
@@ -66,7 +67,9 @@ module.exports = {
 	 */
 	spinner: function ( options ) {
 		options = options || {};
-		options.additionalClassNames = options.additionalClassNames || 'spinner loading';
+		if ( options.additionalClassNames === undefined ) {
+			options.additionalClassNames = 'spinner loading';
+		}
 
 		return new this.Icon( util.extend( options, {
 			name: 'spinner',
