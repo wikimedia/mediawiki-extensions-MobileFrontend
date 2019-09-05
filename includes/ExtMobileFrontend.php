@@ -47,7 +47,7 @@ class ExtMobileFrontend {
 
 			$out->addModuleStyles( [
 				'mediawiki.ui.icon',
-				'mobile.userpage.styles', 'mobile.userpage.icons'
+				'mobile.userpage.styles', 'mobile.userpage.images'
 			] );
 
 			if ( $pageUser && !$title->exists() ) {
@@ -123,7 +123,7 @@ class ExtMobileFrontend {
 		$isCurrentUser = $output->getUser()->getName() === $pageUsername;
 
 		$data = [
-			'userIconClass' => MobileUI::iconClass( 'userpage', 'element', 'mw-ui-icon-large icon' ),
+			'userImageClass' => 'userpage-image-placeholder',
 		];
 		$data['ctaHeading'] = $isCurrentUser ?
 			$context->msg( 'mobile-frontend-user-page-no-owner-page-yet' )->text() :

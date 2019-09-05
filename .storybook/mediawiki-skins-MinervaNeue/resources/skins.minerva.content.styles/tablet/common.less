@@ -4,7 +4,6 @@ A file for css that optimises the Minerva skin on larger devices.
 
 @import '../../../minerva.less/minerva.variables.less';
 @import '../../../minerva.less/minerva.mixins.less';
-@paddingVertical: 1.4em;
 
 @media screen and ( min-width: @width-breakpoint-tablet ) {
 	.client-js {
@@ -25,25 +24,6 @@ A file for css that optimises the Minerva skin on larger devices.
 			.search {
 				width: @searchBoxWidth;
 			}
-		}
-	}
-
-	.toc-mobile {
-		// Reset the rule for mobile mode (but not for .client-nojs)
-		display: table;
-		visibility: visible;
-		position: relative;
-		font-size: 1.3em;
-		margin: 1em 0;
-		border: solid 1px transparent;
-
-		> h2 {
-			visibility: hidden;
-			font-family: @fontFamilyBase;
-			font-size: @tocFontSize;
-			font-weight: bold;
-			border-bottom: 0;
-			padding: @paddingVertical / 2 0;
 		}
 	}
 

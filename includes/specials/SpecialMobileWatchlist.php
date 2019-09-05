@@ -46,7 +46,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		$output->addModules( 'mobile.special.watchlist.scripts' );
 		$output->addModuleStyles( [
 			'mobile.pagelist.styles',
-			"mobile.legacy.icons",
+			"mobile.placeholder.images",
 			'mobile.pagesummary.styles',
 		] );
 		$req = $this->getRequest();

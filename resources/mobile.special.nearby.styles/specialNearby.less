@@ -1,5 +1,5 @@
 @import '../../mobile.less/mobile.variables.less';
-@hugeIconSize: 9.625em;
+@nearbyImageSize: 9.625em;
 
 .nearby-accept-pending .heading-holder {
 	// hide the page header when on landing page
@@ -33,16 +33,6 @@
 	padding: 50px 20px 0;
 	text-align: center;
 
-	.icon {
-		margin: 0 auto 20px;
-		min-width: @hugeIconSize;
-		min-height: @hugeIconSize;
-
-		&:before {
-			min-height: @hugeIconSize;
-		}
-	}
-
 	// be specific in order to override default padding
 	h3 {
 		font-size: 1em;
@@ -54,4 +44,12 @@
 		color: @colorGray7;
 		margin-bottom: 20px;
 	}
+}
+
+.mf-nearby-image-info {
+	margin: 0 auto 20px;
+	min-width: @nearbyImageSize;
+	min-height: @nearbyImageSize;
+	background-repeat: no-repeat;
+	background-position: center;
 }

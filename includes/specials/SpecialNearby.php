@@ -24,12 +24,12 @@ class SpecialNearby extends MobileSpecialPage {
 		$output->addJsConfigVars( [
 			'wgMFNearbyRange' => $this->config->get( 'MFNearbyRange' ),
 		] );
-		$output->addModuleStyles( [ 'mobile.nearby.images' ] );
+		$output->addModuleStyles( [ 'mobile.placeholder.images' ] );
 		$output->setPageTitle( $this->msg( 'mobile-frontend-nearby-title' ) );
 
 		$html = Html::openElement( 'div', [ 'id' => 'mf-nearby-info-holder' ] )
 				. Html::element( 'div', [
-					'class' => 'mw-ui-icon mw-ui-icon-element mw-ui-mf-nearby-image-info mw-ui-icon-large icon'
+					'class' => 'mf-nearby-image-info'
 				] )
 				. Html::element( 'h3', [],
 					$this->msg( 'mobile-frontend-nearby-info-heading' )->text() )

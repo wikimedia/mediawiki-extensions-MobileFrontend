@@ -222,7 +222,7 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 		$out->addModuleStyles(
 			[
 				'mobile.pagelist.styles',
-				"mobile.legacy.icons",
+				"mobile.placeholder.images",
 				'mobile.pagesummary.styles',
 				'mobile.special.pagefeed.styles'
 			]

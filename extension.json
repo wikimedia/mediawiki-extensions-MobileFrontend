@@ -143,20 +143,16 @@
 				"resources/mobile.messageBox.styles/messageBox.less"
 			]
 		},
-		"mobile.userpage.icons": {
-			"class": "ResourceLoaderImageModule",
-			"selector": ".mw-ui-icon-mf-{name}:before, mw-ui-icon-{name}:before",
-			"images": {
-				"userpage": "resources/mobile.userpage.icons/userpage.svg"
-			}
-		},
-		"mobile.legacy.icons": {
+		"mobile.placeholder.images": {
 			"class": "ResourceLoaderImageModule",
 			"useDataURI": false,
 			"selector": ".{name}",
 			"images": {
-				"mw-ui-icon-mf-spinner:before": "resources/mobile.legacy.icons/ajax-loader.gif",
-				"list-thumb-none": "resources/mobile.legacy.icons/noimage.svg"
+				"mw-ui-icon-mf-spinner:before": "resources/mobile.placeholder.images/ajax-loader.gif",
+				"list-thumb-none": "resources/mobile.placeholder.images/noimage.svg",
+				"userpage-image-placeholder": "resources/mobile.placeholder.images/userpage.svg",
+				"amc-outreach-image": "resources/mobile.amcOutreachDrawer/amc-outreach.svg",
+				"mf-nearby-image-info": "resources/mobile.placeholder.images/nearby-article-illustration.svg"
 			}
 		},
 		"mobile.userpage.styles": {
@@ -187,8 +183,7 @@
 				"watch": "resources/mobile.startup.images/watch.svg",
 				"watched": "resources/mobile.startup.images/watched.svg",
 				"search-clear": "resources/mobile.startup.images/search/search-clear.svg",
-				"search-content": "resources/mobile.startup.images/search/search-content.svg",
-				"amc-outreach": "resources/mobile.amcOutreachDrawer/amc-outreach.svg"
+				"search-content": "resources/mobile.startup.images/search/search-content.svg"
 			}
 		},
 		"mobile.init.styles": {
@@ -265,7 +260,7 @@
 				"mediawiki.Title",
 				"mobile.pagelist.styles",
 				"mobile.pagesummary.styles",
-				"mobile.legacy.icons",
+				"mobile.placeholder.images",
 				"mediawiki.notify",
 				"mobile.startup.images",
 				"mobile.startup.images.variants",
@@ -347,7 +342,8 @@
 				"desktop"
 			],
 			"dependencies": [
-				"mobile.startup"
+				"mobile.startup",
+				"mobile.placeholder.images"
 			],
 			"styles": [
 				"resources/mobile.amcOutreachDrawer/amcOutreachDrawer.less"
@@ -559,13 +555,6 @@
 				"mobile-frontend-languages-structured-overlay-search-input-placeholder"
 			]
 		},
-		"mobile.nearby.images": {
-			"class": "ResourceLoaderImageModule",
-			"selector": ".mw-ui-mf-nearby-image-{name}:before",
-			"images": {
-				"info": "resources/mobile.nearby.images/nearby-article-illustration.svg"
-			}
-		},
 		"mobile.mainpage.css": {
 			"class": "MobileFrontend\\ResourceLoaderModules\\MobileMainPageStyleModule"
 		},
@@ -667,7 +656,7 @@
 				"mobile.special.nearby.styles",
 				"mediawiki.language",
 				"mobile.startup",
-				"mobile.nearby.images",
+				"mobile.placeholder.images",
 				"mediawiki.router",
 				"mediawiki.Uri"
 			],

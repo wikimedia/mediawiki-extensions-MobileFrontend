@@ -1,7 +1,6 @@
 const
 	Drawer = require( '../mobile.startup/Drawer' ),
 	Anchor = require( '../mobile.startup/Anchor' ),
-	Icon = require( '../mobile.startup/Icon' ),
 	util = require( '../mobile.startup/util' ),
 	AmcEnableForm = require( './AmcEnableForm' ),
 	// These constants should be kept in sync with SpecialMobileOptions.php
@@ -31,11 +30,7 @@ function amcOutreachDrawer(
 		className: 'amc-outreach-drawer',
 		closeOnScroll: false,
 		children: [
-			new Icon( {
-				additionalClassNames: 'mw-ui-icon-large',
-				tagName: 'span',
-				name: 'amc-outreach'
-			} ).$el,
+			util.parseHTML( '<div>' ).addClass( 'amc-outreach-image' ),
 			util.parseHTML( '<p>' ).append(
 				util.parseHTML( '<strong>' ).text(
 					mwMessage( 'mobile-frontend-amc-outreach-intro' ).text()
