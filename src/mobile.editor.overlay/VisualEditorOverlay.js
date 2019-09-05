@@ -131,7 +131,7 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 	 * caused by the presence of hatnote templates (both only shown in edit mode).
 	 */
 	scrollToLeadParagraph: function () {
-		var editLead, readLead, offset,
+		var editLead, editLeadView, readLead, offset,
 			currentPageHTMLParser = this.options.currentPageHTMLParser,
 			fakeScroll = this.options.fakeScroll,
 			$window = $( window ),
@@ -146,6 +146,13 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 			if ( editLead && readLead ) {
 				offset = $( editLead ).offset().top - ( $( readLead ).offset().top - fakeScroll );
 				$window.scrollTop( $window.scrollTop() + offset );
+				// Set a model range to match
+				editLeadView = $( editLead ).data( 'view' );
+				if ( editLeadView ) {
+					surface.getModel().setLinearSelection(
+						new ve.Range( editLeadView.getModel().getRange().start )
+					);
+				}
 			}
 		}
 	},
