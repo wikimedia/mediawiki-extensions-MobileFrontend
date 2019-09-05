@@ -188,6 +188,7 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 		var self = this;
 		this.$anonWarning.hide();
 		self.$el.find( '.overlay-content' ).show();
+		this.scrollToLeadParagraph();
 	},
 	/**
 	 * Reveal the editing interface.
