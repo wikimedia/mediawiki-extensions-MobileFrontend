@@ -164,13 +164,7 @@ if ( !currentPage.inNamespace( 'special' ) && isPageContentModelEditable ) {
 	}
 }
 
-// Don't run this twice on Minerva while we move the code over here
-if (
-	mw.loader.getState( 'skins.minerva.toggling' ) === 'registered' ||
-	mw.loader.getState( 'skins.minerva.toggling' ) === null
-) {
-	toggling();
-}
+toggling();
 
 mw.mobileFrontend.deprecate( 'mobile.init/skin', skin,
 	'instance of mobile.startup/Skin. Minerva should have no dependencies on mobile.init' );
