@@ -18,6 +18,8 @@ var EditorOverlayBase = require( './EditorOverlayBase' ),
  *  dependency between VisualEditorOverlay and SourceEditorOverlay
  */
 function VisualEditorOverlay( options ) {
+	var surfaceReady = util.Deferred();
+
 	EditorOverlayBase.call( this,
 		util.extend( {
 			editSwitcher: false,
@@ -51,8 +53,20 @@ function VisualEditorOverlay( options ) {
 			targetName: ve.init.mw.MobileArticleTarget.static.trackingName
 		}
 	);
+
+	this.target = ve.init.mw.targetFactory.create( 'article', this, {
+		$element: this.$el,
+		section: this.options.sectionId
+	} );
+	this.target.once( 'surfaceReady', surfaceReady.resolve );
+	this.target.load( this.origDataPromise );
+
+	// Overlay is only shown after this is resolved. It must be resolved
+	// with the API response regardless of what we are waiting for.
 	this.dataPromise = this.origDataPromise.then( function ( data ) {
-		return data && data.visualeditor;
+		return surfaceReady.then( function () {
+			return data && data.visualeditor;
+		} );
 	} );
 }
 
@@ -101,26 +115,27 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 
 		EditorOverlayBase.prototype.show.apply( this, arguments );
 
-		this.target = ve.init.mw.targetFactory.create( 'article', this, {
-			$element: this.$el,
-			section: this.options.sectionId
-		} );
-		this.target.once( 'surfaceReady', function () {
-			this.emit( 'editor-loaded' );
-			this.scrollToLeadParagraph();
-			// log edit attempt
-			this.log( { action: 'ready' } );
-			this.log( { action: 'loaded' } );
-		}.bind( this ) );
-		// Ensure we do this after showing the overlay, otherwise some calculations
-		// involving the toolbar height give wrong results.
-		this.target.load( this.origDataPromise );
+		this.emit( 'editor-loaded' );
+		// log edit attempt
+		this.log( { action: 'ready' } );
+		this.log( { action: 'loaded' } );
 
-		if ( showAnonWarning ) {
+		if ( !showAnonWarning ) {
+			this.redoTargetInit();
+		} else {
 			this.$anonWarning = this.createAnonWarning( this.options );
 			this.$el.append( this.$anonWarning );
 			this.$el.find( '.overlay-content' ).hide();
 		}
+	},
+	/**
+	 * Re-do some initialization steps that might have happened while the overlay
+	 * was hidden, but only work correctly after it is shown.
+	 */
+	redoTargetInit: function () {
+		this.target.adjustContentPadding();
+		this.target.restoreEditSection();
+		this.scrollToLeadParagraph();
 	},
 	/**
 	 * Scroll so that the lead paragraph in edit mode shows at the same place on the screen
@@ -190,7 +205,7 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 		var self = this;
 		this.$anonWarning.hide();
 		self.$el.find( '.overlay-content' ).show();
-		this.scrollToLeadParagraph();
+		this.redoTargetInit();
 	},
 	/**
 	 * Reveal the editing interface.
