@@ -562,12 +562,15 @@
 			]
 		},
 		"mobile.special.user.icons": {
-			"class": "ResourceLoaderImageModule",
-			"selector": ".mw-ui-icon-mf-{name}:before",
-			"images": {
-				"user": "resources/mobile.special.user.icons/userNormal.svg",
-				"anonymous": "resources/mobile.special.user.icons/userAnonymous.svg"
-			}
+			"class": "ResourceLoaderOOUIIconPackModule",
+			"selectorWithoutVariant": ".mw-ui-icon-mf-{name}:before",
+			"selectorWithVariant": ".mw-ui-icon-mf-{name}-{variant}:before",
+			"defaultColor": "#54595d",
+			"targets": [
+				"mobile",
+				"desktop"
+			],
+			"icons": [ "userAnonymous", "userAvatar" ]
 		},
 		"mobile.special.watchlist.scripts": {
 			"targets": "mobile",
