@@ -95,7 +95,7 @@ module.exports = ( env, argv ) => ( {
 	resolve: {
 		alias: {
 			// This avoids leaking unnecessary code into the webpack test build
-			'./mockMediaWiki': path.resolve( __dirname, 'tests/node-qunit/utils/blank.json' )
+			'./mockMediaWiki': path.resolve( __dirname, 'tests/node-qunit/utils/blank.js' )
 		}
 	},
 	module: {
