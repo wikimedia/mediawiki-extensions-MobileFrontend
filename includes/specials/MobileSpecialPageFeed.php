@@ -143,9 +143,9 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 		$lang = $this->getLanguage();
 
 		if ( $isAnon ) {
-			$usernameClass = MobileUI::iconClass( 'anonymous', 'before', 'mw-mf-user mw-mf-anon' );
+			$usernameClass = MobileUI::iconClass( 'userAnonymous', 'before', 'mw-mf-user mw-mf-anon' );
 		} else {
-			$usernameClass = MobileUI::iconClass( 'user', 'before', 'mw-mf-user' );
+			$usernameClass = MobileUI::iconClass( 'userAvatar', 'before', 'mw-mf-user' );
 		}
 
 		$html = Html::openElement( 'li', [ 'class' => 'page-summary' ] );
