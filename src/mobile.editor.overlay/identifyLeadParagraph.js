@@ -4,7 +4,7 @@
  * Keep in sync with MoveLeadParagraphTransform::identifyLeadParagraph().
  *
  * @param {jQuery} $body Where to search for paragraphs
- * @return {Node} The lead paragraph
+ * @return {Node|null} The lead paragraph
  */
 module.exports = function identifyLeadParagraph( $body ) {
 	var $paragraphs, i, node;
