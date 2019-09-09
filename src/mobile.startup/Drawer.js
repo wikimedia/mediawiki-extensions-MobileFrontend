@@ -4,7 +4,7 @@ var
 	util = require( './util' ),
 	Icon = require( './Icon' ),
 	collapseIcon = new Icon( {
-		name: 'arrow',
+		name: 'expand',
 		additionalClassNames: 'cancel'
 	} );
 

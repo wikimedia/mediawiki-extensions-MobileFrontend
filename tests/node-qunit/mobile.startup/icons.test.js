@@ -27,7 +27,7 @@ QUnit.test( '#cancel()', function ( assert ) {
 	icons.cancel();
 	assert.propEqual( spy.getCall( 0 ).args[ 0 ], {
 		tagName: 'button',
-		name: icons.CANCEL_GLYPH,
+		name: icons.CANCEL_GLYPH + '-base20',
 		additionalClassNames: 'cancel',
 		label: mw.msg( 'mobile-frontend-overlay-close' )
 	}, 'Options are passed down' );

@@ -155,7 +155,7 @@ QUnit.test( 'HTML is valid', function ( assert ) {
 	var subject = new Drawer();
 	assert.strictEqual(
 		subject.$el.get( 0 ).outerHTML,
-		'<div class="drawer position-fixed view-border-box"><div class="mw-ui-icon mw-ui-icon-mf-arrow mw-ui-icon-element   cancel"></div></div>'
+		'<div class="drawer position-fixed view-border-box"><div class="mw-ui-icon mw-ui-icon-mf-expand mw-ui-icon-element   cancel"></div></div>'
 	);
 } );
 

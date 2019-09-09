@@ -108,32 +108,6 @@
 				"resources/mobile.pagesummary.styles/pagesummary.less"
 			]
 		},
-		"mobile.startup.images.variants": {
-			"selectorWithoutVariant": ".mw-ui-icon-mf-{name}:before",
-			"selectorWithVariant": ".mw-ui-icon-mf-{name}-{variant}:before",
-			"class": "ResourceLoaderImageModule",
-			"variants": {
-				"gray": {
-					"color": "#a2a9b1",
-					"global": true
-				},
-				"invert": {
-					"color": "#fff",
-					"global": true
-				}
-			},
-			"images": {
-				"alert": "resources/mobile.startup.images.variants/alert.svg",
-				"arrow": "resources/mobile.startup.images.variants/arrow.svg",
-				"back": {
-					"file": {
-						"ltr": "resources/mobile.startup.images.variants/back-ltr.svg",
-						"rtl": "resources/mobile.startup.images.variants/back-rtl.svg"
-					}
-				},
-				"overlay-close": "resources/mobile.startup.images.variants/close.svg"
-			}
-		},
 		"mobile.messageBox.styles": {
 			"targets": [
 				"mobile",
@@ -166,6 +140,7 @@
 		},
 		"mobile.startup.images": {
 			"class": "ResourceLoaderImageModule",
+			"defaultColor": "#54595d",
 			"selectorWithoutVariant": ".mw-ui-icon-mf-{name}:before",
 			"selectorWithVariant": ".mw-ui-icon-mf-{name}-{variant}:before",
 			"variants": {
@@ -174,7 +149,6 @@
 				}
 			},
 			"images": {
-				"toc": "resources/mobile.startup.images/toc-ltr.svg",
 				"citation": {
 					"file": "resources/mobile.startup.images/reference.svg",
 					"variants": [ "invert" ]
@@ -206,7 +180,7 @@
 				"mediawiki.user",
 				"mediawiki.util",
 				"mediawiki.ui.icon",
-				"mobile.init.icons",
+				"mobile.ooui.icons",
 				"mobile.startup",
 				"user.tokens"
 			],
@@ -239,13 +213,29 @@
 				"resources/dist/mobile.init.js"
 			]
 		},
-		"mobile.init.icons": {
+		"mobile.ooui.icons": {
 			"class": "ResourceLoaderOOUIIconPackModule",
+			"selectorWithoutVariant": ".mw-ui-icon-mf-{name}:before",
+			"selectorWithVariant": ".mw-ui-icon-mf-{name}-{variant}:before",
+			"variants": {
+				"base20": {
+					"color": "#54595d",
+					"global": true
+				},
+				"gray": {
+					"color": "#a2a9b1",
+					"global": true
+				},
+				"invert": {
+					"color": "#fff",
+					"global": true
+				}
+			},
 			"targets": [
 				"mobile",
 				"desktop"
 			],
-			"icons": [ "close" ]
+			"icons": [ "close", "arrowPrevious", "alert", "expand" ]
 		},
 		"mobile.startup": {
 			"class": "MobileFrontend\\ResourceLoaderModules\\ResourceLoaderFileModuleWithMFConfig",
@@ -263,7 +253,7 @@
 				"mobile.placeholder.images",
 				"mediawiki.notify",
 				"mobile.startup.images",
-				"mobile.startup.images.variants",
+				"mobile.ooui.icons",
 				"mediawiki.language",
 				"mediawiki.jqueryMsg",
 				"mediawiki.user",
@@ -715,11 +705,21 @@
 		},
 		"mobile.special.mobilediff.images": {
 			"class": "ResourceLoaderImageModule",
-			"selector": ".mw-ui-icon-mf-{name}:before",
+			"defaultColor": "#54595d",
+			"selectorWithoutVariant": ".mw-ui-icon-mf-{name}:before",
+			"selectorWithVariant": ".mw-ui-icon-mf-{name}-{variant}:before",
+			"variants": {
+				"green": {
+					"color": "#17ac87",
+					"global": true
+				},
+				"red": {
+					"color": "#d82c2d",
+					"global": true
+				}
+			},
 			"images": {
-				"bytesadded": "resources/mobile.special.mobilediff.images/bytes-added.svg",
-				"bytesneutral": "resources/mobile.special.mobilediff.images/bytes-neutral.svg",
-				"bytesremoved": "resources/mobile.special.mobilediff.images/bytes-removed.svg"
+				"bytesChanged": "resources/mobile.special.mobilediff.images/bytesChanged.svg"
 			}
 		},
 		"mobile.special.mobilediff.scripts": {
