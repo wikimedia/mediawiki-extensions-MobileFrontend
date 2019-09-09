@@ -13,8 +13,24 @@
 
 	"//": "Ignore files in vendor/, resources/, and elsewhere.",
 	"include": [ "src/**/*.js" ],
+
+	"//": "Exclude files that are entry points that wire things up and have side effects",
 	"exclude": [
-		"vendor/"
+		"vendor/",
+		"src/mobile.amcOutreachDrawer/mobile.amcOutreachDrawer.js",
+		"src/mobile.categories.overlays/mobile.categories.overlays.js",
+		"src/mobile.editor.overlay/mobile.editor.overlay.js",
+		"src/mobile.editor.ve/mobile.editor.ve.js",
+		"src/mobile.init/mobile.init.js",
+		"src/mobile.mediaViewer/mobile.mediaViewer.js",
+		"src/mobile.notifications.overlay/mobile.notifications.overlay.js",
+		"src/mobile.special.nearby.scripts/mobile.special.nearby.scripts.js",
+		"src/mobile.special.uploads.scripts/mobile.special.uploads.scripts.js",
+		"src/mobile.special.watchlist.scripts/mobile.special.watchlist.scripts.js",
+		"src/mobile.talk.overlays/mobile.talk.overlays.js",
+		"src/mobile.special.mobilediff.scripts.js",
+		"src/mobile.special.mobileoptions.scripts.js",
+		"src/mobile.special.userlogin.scripts.js"
 	],
 
 	"//": "Set the coverage percentage by category thresholds. Round down to nearest 1%",
