@@ -141,7 +141,9 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 
 		if ( ( section === null || section === 0 ) && mode === 'visual' ) {
 			editLead = identifyLeadParagraph( surface.getView().$attachedRootNode );
-			readLead = identifyLeadParagraph( currentPageHTMLParser.getLeadSectionElement() );
+			if ( currentPageHTMLParser.getLeadSectionElement() ) {
+				readLead = identifyLeadParagraph( currentPageHTMLParser.getLeadSectionElement() );
+			}
 
 			if ( editLead && readLead ) {
 				offset = $( editLead ).offset().top - ( $( readLead ).offset().top - fakeScroll );
