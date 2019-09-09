@@ -1,8 +1,6 @@
 @import '../../mobile.less/mobile.variables.less';
 @import 'mediawiki.ui/variables.less';
 
-// `.previewnote p` is necessary for fallback editor preview.
-.previewnote p,
 .errorbox,
 .warningbox,
 .successbox,
@@ -11,13 +9,24 @@
 	margin: 0 0 1em;
 	padding-top: 1em;
 	padding-bottom: 1em;
+
+	// Box contents.
+	h2 {
+		font: bold 100% @fontFamilyBase;
+		padding: 0;
+		margin: 0 0 0.5em 0;
+	}
+
+	// Used e.g. in SourceEditorOverlay.
+	a {
+		margin-bottom: 1em;
+	}
 }
 
 // `.warningbox, .mw-revision` are used for messages on login screen
 // (They're more informational than actual warnings.)
 // FIXME: standardise those two classes, `.mw-revision` should be removed;
 //  `.warningbox` replaced by standard `.messagebox`.
-.previewnote p,
 .warningbox,
 .mw-revision {
 	background-color: @colorGray14;
@@ -30,21 +39,4 @@
 
 .successbox {
 	background-color: @backgroundColorSuccess;
-}
-
-// Box contents.
-.errorbox,
-.warningbox,
-.successbox,
-.mw-revision {
-	h2 {
-		font: bold 100% @fontFamilyBase;
-		padding: 0;
-		margin: 0 0 0.5em 0;
-	}
-
-	// Used e.g. in SourceEditorOverlay.
-	a {
-		margin-bottom: 1em;
-	}
 }
