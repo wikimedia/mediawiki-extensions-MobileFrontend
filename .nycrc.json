@@ -3,9 +3,19 @@
 	"//": "caching works correctly.",
 	"cache": false,
 	"all": true,
+	"require": [
+		"@babel/register"
+	],
+	"reporter": [
+		"lcov", "text"
+	],
+	"report-dir": "docs",
 
 	"//": "Ignore files in vendor/, resources/, and elsewhere.",
 	"include": [ "src/**/*.js" ],
+	"exclude": [
+		"vendor/"
+	],
 
 	"//": "Set the coverage percentage by category thresholds. Round down to nearest 1%",
 	"statements": 51.0,
@@ -22,5 +32,6 @@
 	"//": "Unfortunately, the reported line numbers appear to be",
 	"//": "nondeterministic across runs when all is enabled and incorrect when",
 	"//": "disabled.",
-	"sourceMap": false
+	"sourceMap": false,
+	"instrument": false
 }

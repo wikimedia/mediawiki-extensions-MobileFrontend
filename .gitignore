@@ -6,6 +6,8 @@
 node_modules/
 tmp/
 /docs/js/
+/docs/lcov-report/
+/docs/lcov.info
 /docs/php/
 /docs/ui/
 dev-scripts/remotes
