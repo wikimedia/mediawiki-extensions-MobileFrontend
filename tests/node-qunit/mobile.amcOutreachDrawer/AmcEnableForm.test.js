@@ -41,8 +41,11 @@ QUnit.test( 'renders correctly', function ( assert ) {
 		buttonLabel: 'Submit'
 	} );
 
-	assert.strictEqual( subject.$el.find( 'input[name=f1name][value=f1value]' ).length, 1, 'Field 1 is rendered' );
-	assert.strictEqual( subject.$el.find( 'input[name=f2name][value=f2value]' ).length, 1, 'Field 2 is rendered' );
+	assert.strictEqual( subject.$el.is( 'form' ), true, 'Form is rendered' );
+	assert.strictEqual( subject.$el.attr( 'action' ), 'https://foo.com', 'Form action is passed in postUrl' );
+	assert.strictEqual( subject.$el.attr( 'method' ), 'POST', 'Form method is POST' );
+	assert.strictEqual( subject.$el.find( 'input[name=\'f1name\'][value=\'f1value\']' ).length, 1, 'Field 1 is rendered' );
+	assert.strictEqual( subject.$el.find( 'input[name=\'f2name\'][value=\'f2value\']' ).length, 1, 'Field 2 is rendered' );
 	assert.strictEqual( subject.$el.find( 'button' ).length, 1, 'Submit button is rendered' );
 	assert.strictEqual( subject.$el.find( 'button' ).text(), 'Submit', 'Submit button has label' );
 } );
