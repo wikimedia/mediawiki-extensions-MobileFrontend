@@ -2,7 +2,6 @@ const View = require( '../View' ),
 	Icon = require( '../Icon' ),
 	Anchor = require( '../Anchor' ),
 	icons = require( '../icons' ),
-	feedbackLink = mw.config.get( 'wgCirrusSearchFeedbackLink' ),
 	spinner = icons.spinner().$el,
 	util = require( '../util' );
 
@@ -25,7 +24,7 @@ class SearchResultsView extends View {
 	get template() {
 		return util.template( `
 <div class="search-results-view">
-	<div class="search-content overlay-header search-results-view">
+	<div class="search-content overlay-header">
 		<ul>
 			<li>{{! search content icon goes here }}</li>
 		</ul>
@@ -49,6 +48,7 @@ class SearchResultsView extends View {
 	}
 	/** @inheritdoc */
 	preRender() {
+		const feedbackLink = mw.config.get( 'wgCirrusSearchFeedbackLink' );
 		if ( feedbackLink ) {
 			this.options.feedback = {
 				prompt: mw.msg( 'mobile-frontend-search-feedback-prompt' ) };
@@ -56,6 +56,7 @@ class SearchResultsView extends View {
 	}
 	/** @inheritdoc */
 	postRender( options ) {
+		const feedbackLink = mw.config.get( 'wgCirrusSearchFeedbackLink' );
 		super.postRender( options );
 		this.$el.find( '.search-content li' ).append(
 			new Icon( {
