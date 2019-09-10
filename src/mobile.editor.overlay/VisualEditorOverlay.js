@@ -58,7 +58,14 @@ function VisualEditorOverlay( options ) {
 		$element: this.$el,
 		section: this.options.sectionId
 	} );
-	this.target.once( 'surfaceReady', surfaceReady.resolve );
+	this.target.once( 'surfaceReady', function () {
+		surfaceReady.resolve();
+
+		this.target.getSurface().getModel().getDocument().once( 'transact', function () {
+			this.log( { action: 'firstChange' } );
+		}.bind( this ) );
+	}.bind( this ) );
+
 	this.target.load( this.origDataPromise );
 
 	// Overlay is only shown after this is resolved. It must be resolved

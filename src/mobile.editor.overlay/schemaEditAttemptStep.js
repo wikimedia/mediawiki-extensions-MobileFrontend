@@ -11,6 +11,7 @@ module.exports = function () {
 			user = mw.user,
 			sampleRate = mw.config.get( 'wgWMESchemaEditAttemptStepSamplingRate' ),
 			actionPrefixMap = {
+				firstChange: 'first_change',
 				saveIntent: 'save_intent',
 				saveAttempt: 'save_attempt',
 				saveSuccess: 'save_success',
@@ -71,6 +72,8 @@ module.exports = function () {
 					return timeStamp - timing.init;
 				case 'loaded':
 					return timeStamp - timing.init;
+				case 'firstChange':
+					return timeStamp - timing.ready;
 				case 'saveIntent':
 					return timeStamp - timing.ready;
 				case 'saveAttempt':

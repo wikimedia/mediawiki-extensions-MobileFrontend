@@ -221,7 +221,11 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 			this.$content.prop( 'readonly', true );
 		}
 
-		this.$content.on( 'input', this._resizeEditor.bind( this ) );
+		this.$content
+			.on( 'input', this._resizeEditor.bind( this ) )
+			.one( 'input', function () {
+				self.log( { action: 'firstChange' } );
+			} );
 
 		if ( !showAnonWarning ) {
 			this._loadContent();
