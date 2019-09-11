@@ -284,7 +284,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 
 			hideSpinnerAndShowPreview();
 		}, function () {
-			self.$preview.addClass( 'error' ).text( mw.msg( 'mobile-frontend-editor-error-preview' ) );
+			self.$preview.addClass( 'errorbox' ).text( mw.msg( 'mobile-frontend-editor-error-preview' ) );
 
 			hideSpinnerAndShowPreview();
 		} );
@@ -301,7 +301,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 	_hidePreview: function () {
 		this.gateway.abortPreview();
 		this.hideSpinner();
-		this.$preview.removeClass( 'error' ).hide();
+		this.$preview.removeClass( 'errorbox' ).hide();
 		this.$content.show();
 		window.scrollTo( 0, this.scrollTop );
 		this.showHidden( '.initial-header' );
