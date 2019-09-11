@@ -1,7 +1,7 @@
 {
 	"private": true,
 	"scripts": {
-		"coverage": "nyc npm -s run test:unit",
+		"coverage": "cross-env NODE_ENV=test nyc npm -s run test:unit",
 		"start": "webpack -w --mode=development",
 		"build": "webpack --mode=production",
 		"precommit": "npm -s run test:bundle-cached && composer test && npm -s run lint:frontend && npm -s run coverage",
@@ -35,6 +35,7 @@
 		"babel-plugin-istanbul": "5.2.0",
 		"bundlesize": "0.18.0",
 		"clean-webpack-plugin": "0.1.19",
+		"cross-env": "5.2.1",
 		"eslint-config-wikimedia": "0.13.1",
 		"grunt": "1.0.4",
 		"grunt-banana-checker": "0.7.1",
