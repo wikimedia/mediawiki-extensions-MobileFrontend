@@ -7,7 +7,6 @@ curl https://raw.githubusercontent.com/wikimedia/mediawiki/master/resources/src/
 
 # mediawiki ui
 curl https://raw.githubusercontent.com/wikimedia/mediawiki/master/resources/src/mediawiki.ui/components/buttons.less -o .storybook/resolve-less-imports/mediawiki.ui/components/buttons.less
-curl https://raw.githubusercontent.com/wikimedia/mediawiki/master/resources/src/mediawiki.ui/components/icons.less -o .storybook/resolve-less-imports/mediawiki.ui/components/icons.less
 curl https://raw.githubusercontent.com/wikimedia/mediawiki/master/resources/src/mediawiki.ui/components/anchors.less -o .storybook/resolve-less-imports/mediawiki.ui/components/anchors.less
 curl https://raw.githubusercontent.com/wikimedia/mediawiki/master/resources/src/mediawiki.ui/components/inputs.less -o .storybook/resolve-less-imports/mediawiki.ui/components/inputs.less
 
@@ -19,6 +18,7 @@ curl https://raw.githubusercontent.com/wikimedia/mediawiki-skins-MinervaNeue/mas
 curl https://raw.githubusercontent.com/wikimedia/mediawiki-skins-MinervaNeue/master/skinStyles/mobile.startup/drawers.less -o .storybook/mediawiki-skins-MinervaNeue/skinStyles/mobile.startup/drawers.less
 curl https://raw.githubusercontent.com/wikimedia/mediawiki-skins-MinervaNeue/master/skinStyles/mobile.startup/Overlay.less -o .storybook/mediawiki-skins-MinervaNeue/skinStyles/mobile.startup/Overlay.less
 curl https://raw.githubusercontent.com/wikimedia/mediawiki-skins-MinervaNeue/master/skinStyles/mobile.startup/search/SearchOverlay.less -o .storybook/mediawiki-skins-MinervaNeue/skinStyles/mobile.startup/search/SearchOverlay.less
+curl https://raw.githubusercontent.com/wikimedia/mediawiki-skins-MinervaNeue/master/skinStyles/mediawiki.ui.icon/mediawiki.ui.icon.less -o .storybook/mediawiki-skins-MinervaNeue/skinStyles/mediawiki.ui.icon/mediawiki.ui.icon.less
 
 # Minerva UI
 curl https://raw.githubusercontent.com/wikimedia/mediawiki-skins-MinervaNeue/master/resources/skins.minerva.base.styles/ui.less -o .storybook/mediawiki-skins-MinervaNeue/resources/skins.minerva.base.styles/ui.less

@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/html';
 import { action } from '@storybook/addon-actions';
 import Icon from '../src/mobile.startup/Icon';
-import '../.storybook/resolve-less-imports/mediawiki.ui/components/icons.less';
+import '../.storybook/mediawiki-skins-MinervaNeue/skinStyles/mediawiki.ui.icon/mediawiki.ui.icon.less';
 import '../resources/mobile.startup/icon.less';
 
 storiesOf( 'Icon' )

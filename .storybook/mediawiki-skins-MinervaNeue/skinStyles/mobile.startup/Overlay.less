@@ -17,26 +17,24 @@
 	}
 }
 
-.overlay-header.header {
+.overlay-header {
 	height: @overlayHeaderHeight;
-}
 
-.overlay-header .header-action {
-	> a,
-	> button {
+	.mw-ui-anchor,
+	.mw-ui-button {
 		height: @overlayHeaderHeight;
 	}
-}
 
-.overlay-header .overlay-title {
-	padding: @headerVerticalPadding 0;
+	.overlay-title {
+		padding: @headerVerticalPadding 0;
 
-	&:last-child {
-		// Reserve space to the right in case the search form in the header or
-		// overlay title in the overlay header is the last element. Use @iconGutterWidth
-		// because there is a hamburger or close/back icon next to this element and
-		// the space between them is exactly that.
-		padding-right: @iconGutterWidth;
+		&:last-child {
+			// Reserve space to the right in case the search form in the header or
+			// overlay title in the overlay header is the last element. Use @iconGutterWidth
+			// because there is a hamburger or close/back icon next to this element and
+			// the space between them is exactly that.
+			padding-right: @iconGutterWidth;
+		}
 	}
 }
 

@@ -1,0 +1,138 @@
+/**
+ * Redefinition of the mw-ui-icon class from MediaWiki-core.
+ *
+ * This module attempts to maintain compatibility with the
+ * core mw-ui-icon module, while adding more mobile-friendly
+ * features like increased touch-area sizes and highlights.
+ *
+ * - mw-ui-icon = base class. 20px square with icon.
+ * - mw-ui-icon + mw-ui-icon-element = icon with padding & pseudo-states.
+ * - mw-ui-icon + mw-ui-icon-small = small icon with padding & pseudo-states.
+ * - mw-ui-icon + mw-ui-icon-flush-left = negative right-margin.
+ * - mw-ui-icon + mw-ui-icon-flush-right = negative left-margin.
+ * - mw-ui-icon + mw-ui-icon-before = *deprecated*, icon with text.
+ *   Labels should be placed in a separate element beside the icon.
+ *
+ */
+
+@import '../../minerva.less/minerva.variables.less';
+
+// Small icon - 16px square, with 9px padding (total 34px square).
+@icon-size-sm: unit( 16 / @font-size-browser, em );
+@icon-padding-sm: unit( 9 / @font-size-browser, em );
+
+// Medium icon - 16px square, with 9px padding (total 34px square).
+@icon-size-md: unit( 20 / @font-size-browser, em ); // 20px;
+@icon-padding-md: unit( 10 / @font-size-browser, em ); // 44px;
+
+/**
+ * Mixin for a pseudo-element with a background image.
+ */
+.mixin-background-square() {
+	// sizing
+	content: '';
+	display: block;
+	width: 100%;
+	height: 100%;
+
+	// background
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+
+/**
+ * A standalone 20px square with screen-reader text. Contains a :before element
+ * to house the icon as a background image. Total size is increased with padding via
+ * `box-sizing: content-box`. This separates control over size of icon vs the size of
+ * the touch-area.
+ */
+.mw-ui-icon {
+	// reset font-size so the "em" value is relative to the more
+	// predictable rem font size ...and no rems because we can't have nice things.
+	font-size: initial;
+
+	// sizing
+	position: relative;
+	display: inline-block;
+
+	// this is important for increasing the size via padding. Overrides `.view-border-box *`.
+	box-sizing: content-box !important;
+	width: @icon-size-md;
+	height: @icon-size-md;
+
+	// alignment
+	vertical-align: middle;
+	line-height: 0;
+	overflow: hidden;
+	white-space: nowrap;
+
+	// resetting styles for <button> elements
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	background-color: transparent;
+	border: 0;
+	margin: 0;
+	padding: 0;
+
+	&:before {
+		.mixin-background-square();
+	}
+}
+
+.mw-ui-icon-flush-left {
+	margin-left: -@icon-padding-md;
+}
+
+.mw-ui-icon-flush-right {
+	margin-right: -@icon-padding-md;
+}
+
+.mw-ui-icon-element {
+	padding: @icon-padding-md;
+	border-radius: @borderRadius;
+
+	// screen-reader text. Not using `text-indent: -999px` because
+	// the inner :before element is `display: block` so text-indent has no effect.
+	color: transparent;
+
+	&:focus, &:active, &:visited {
+		color: transparent;
+	}
+
+	&:hover {
+		background-color: rgba( 0, 0, 0, 0.03 );
+	}
+}
+
+.mw-ui-icon-small {
+	width: @icon-size-sm;
+	height: @icon-size-sm;
+	padding: @icon-padding-sm;
+	line-height: @icon-size-sm;
+}
+
+.mw-ui-icon-small.mw-ui-icon-flush-left {
+	margin-left: -@icon-padding-sm;
+}
+
+.mw-ui-icon-small.mw-ui-icon-flush-right {
+	margin-right: -@icon-padding-sm;
+}
+
+.mw-ui-icon-before {
+	width: auto;
+
+	&:before {
+		.mixin-background-square();
+		// sizing
+		display: inline-block;
+		width: auto;
+		min-width: @icon-size-md;
+		min-height: @icon-size-md;
+
+		// alignment. Margin is added to separate accompanying text.
+		margin-right: 1em;
+		vertical-align: middle;
+	}
+}

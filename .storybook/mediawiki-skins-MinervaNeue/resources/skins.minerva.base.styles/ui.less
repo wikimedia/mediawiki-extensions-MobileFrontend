@@ -189,11 +189,6 @@ input.search {
 		clear: left;
 	}
 
-	.edit-page {
-		display: block;
-		font-size: initial;
-	}
-
 	.collapsible-heading .edit-page {
 		visibility: hidden;
 	}
@@ -211,8 +206,11 @@ input.search {
 		margin-bottom: @headingMargin;
 
 		.indicator {
-			font-size: initial;
 			margin-left: -@iconGutterWidth;
+			// FIXME: Can be removed when https://gerrit.wikimedia.org/r/535835 is merged
+			font-size: initial;
+			// FIXME: Can be removed when https://gerrit.wikimedia.org/r/535835 is merged
+			vertical-align: initial;
 		}
 	}
 
