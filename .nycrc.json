@@ -16,6 +16,7 @@
 
 	"//": "Exclude files that are entry points that wire things up and have side effects",
 	"exclude": [
+		"docs/",
 		"vendor/",
 		"src/mobile.amcOutreachDrawer/mobile.amcOutreachDrawer.js",
 		"src/mobile.categories.overlays/mobile.categories.overlays.js",
