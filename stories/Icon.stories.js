@@ -10,7 +10,7 @@ storiesOf( 'Icon' )
 			const container = document.createElement( 'div' );
 			[
 				new Icon( {
-					name: 'arrow',
+					name: 'expand',
 					isSmall: true,
 					label: 'Arrow small',
 					events: {
@@ -18,7 +18,7 @@ storiesOf( 'Icon' )
 					}
 				} ),
 				new Icon( {
-					name: 'arrow',
+					name: 'expand',
 					label: 'Arrow',
 					events: {
 						click: action( 'click' )
@@ -33,7 +33,7 @@ storiesOf( 'Icon' )
 			const container = document.createElement( 'div' );
 			[
 				new Icon( {
-					name: 'arrow',
+					name: 'expand',
 					isSmall: true,
 					rotation: 180,
 					label: 'Arrow',
@@ -42,7 +42,7 @@ storiesOf( 'Icon' )
 					}
 				} ),
 				new Icon( {
-					name: 'arrow',
+					name: 'expand',
 					rotation: 180,
 					label: 'Arrow',
 					events: {
@@ -50,7 +50,7 @@ storiesOf( 'Icon' )
 					}
 				} ),
 				new Icon( {
-					name: 'arrow',
+					name: 'expand',
 					isSmall: true,
 					rotation: 180,
 					label: 'Arrow small',
@@ -60,7 +60,7 @@ storiesOf( 'Icon' )
 					}
 				} ),
 				new Icon( {
-					name: 'arrow',
+					name: 'expand',
 					rotation: 180,
 					label: 'Arrow',
 					hasText: true,
@@ -77,7 +77,7 @@ storiesOf( 'Icon' )
 			const container = document.createElement( 'div' );
 			[
 				new Icon( {
-					name: 'arrow',
+					name: 'expand',
 					isSmall: true,
 					label: 'Arrow small',
 					hasText: true,
@@ -86,7 +86,7 @@ storiesOf( 'Icon' )
 					}
 				} ),
 				new Icon( {
-					name: 'arrow',
+					name: 'expand',
 					label: 'Arrow',
 					hasText: true,
 					events: {

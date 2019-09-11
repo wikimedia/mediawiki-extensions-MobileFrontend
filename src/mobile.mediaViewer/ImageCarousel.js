@@ -11,11 +11,11 @@ var View = require( '../mobile.startup/View' ),
 	} ),
 	slideLeftButton = new Icon( {
 		rotation: 90,
-		name: 'arrow-invert'
+		name: 'expand-invert'
 	} ),
 	slideRightButton = new Icon( {
 		rotation: -90,
-		name: 'arrow-invert'
+		name: 'expand-invert'
 	} ),
 	LoadErrorMessage = require( './LoadErrorMessage' ),
 	ImageGateway = require( './ImageGateway' ),
