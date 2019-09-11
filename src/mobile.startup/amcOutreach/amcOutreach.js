@@ -2,7 +2,7 @@ const
 	m = require( '../moduleLoaderSingleton' ),
 	toast = require( '../toast' ),
 	promoCampaign = require( '../promoCampaign/promoCampaign' ),
-	currentPage = require( '../currentPage' )(),
+	currentPage = require( '../currentPage' ),
 	// MW constants should be kept in sync with onMakeGlobalVariableScript() from
 	// MobileFrontendHooks.php
 	MW_CONFIG_CAMPAIGN_ACTIVE_NAME = 'wgMFAmcOutreachActive',
@@ -32,7 +32,7 @@ module.exports = {
 						campaign,
 						mw.message,
 						mw.util,
-						currentPage,
+						currentPage(),
 						toast,
 						mw.user.tokens.get( 'editToken' )
 					);

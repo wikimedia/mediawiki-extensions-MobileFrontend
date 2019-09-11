@@ -1,10 +1,8 @@
 /* global $ */
 var M = require( '../mobile.startup/moduleLoaderSingleton' ),
 	util = require( '../mobile.startup/util' ),
-	router = mw.loader.require( 'mediawiki.router' ),
 	editorLoadingOverlay = require( './editorLoadingOverlay' ),
 	OverlayManager = require( '../mobile.startup/OverlayManager' ),
-	overlayManager = OverlayManager.getSingleton(),
 	// #ca-edit, .mw-editsection are standard MediaWiki elements
 	// .edit-link comes from MobileFrontend user page creation CTA
 	$allEditLinks = $( '#ca-edit, .mw-editsection a, .edit-link' ),
@@ -14,7 +12,6 @@ var M = require( '../mobile.startup/moduleLoaderSingleton' ),
 	// FIXME: Disable on IE < 10 for time being
 	blacklisted = /MSIE \d\./.test( navigator.userAgent ),
 	contentModel = mw.config.get( 'wgPageContentModel' ),
-	isEditingSupported = router.isSupported() && !blacklisted,
 	veConfig = mw.config.get( 'wgVisualEditorConfig' ),
 	editCount = mw.config.get( 'wgUserEditCount' ),
 	editorPath = /^\/editor\/(\d+|all)$/;
@@ -25,8 +22,9 @@ var M = require( '../mobile.startup/moduleLoaderSingleton' ),
  * @method
  * @ignore
  * @param {jQuery.Event} ev
+ * @param {Router} router
  */
-function onEditLinkClick( ev ) {
+function onEditLinkClick( ev, router ) {
 	var section = ( new mw.Uri( this.href ) ).query.section || 'all';
 	router.navigate( '#/editor/' + section );
 	// DO NOT USE stopPropagation or you'll break click tracking in WikimediaEvents
@@ -69,12 +67,16 @@ function getPreferredEditor() {
  * @param {Page} page The page to edit.
  * @param {Skin} skin
  * @param {PageHTMLParser} currentPageHTMLParser
+ * @param {Router} router
  */
-function setupEditor( page, skin, currentPageHTMLParser ) {
+function setupEditor( page, skin, currentPageHTMLParser, router ) {
 	var uri, fragment, editorOverride,
+		overlayManager = OverlayManager.getSingleton(),
 		isNewPage = page.id === 0;
 
-	$allEditLinks.on( 'click', onEditLinkClick );
+	$allEditLinks.on( 'click', function ( ev ) {
+		onEditLinkClick( ev, overlayManager.router );
+	} );
 	overlayManager.add( editorPath, function ( sectionId ) {
 		var
 			scrollbarWidth = window.innerWidth - document.documentElement.clientWidth,
@@ -372,8 +374,9 @@ function hideSectionEditIcons( currentPageHTMLParser ) {
  * Show a drawer with log in / sign up buttons.
  * @method
  * @ignore
+ * @param {Router} router
  */
-function showLoginDrawer() {
+function showLoginDrawer( router ) {
 	var drawer = new CtaDrawer( {
 		content: mw.msg( 'mobile-frontend-editor-disabled-anon' ),
 		signupQueryParams: {
@@ -398,8 +401,9 @@ function showLoginDrawer() {
  * @param {Page} currentPage
  * @param {PageHTMLParser} currentPageHTMLParser
  * @param {Skin} skin
+ * @param {Router} router
  */
-function init( currentPage, currentPageHTMLParser, skin ) {
+function init( currentPage, currentPageHTMLParser, skin, router ) {
 	var isReadOnly, isEditable, editErrorMessage, editRestrictions;
 	// see: https://www.mediawiki.org/wiki/Manual:Interface/JavaScript#Page-specific
 	isReadOnly = mw.config.get( 'wgMinervaReadOnly' );
@@ -407,12 +411,12 @@ function init( currentPage, currentPageHTMLParser, skin ) {
 
 	if ( isEditable ) {
 		// Edit button updated in setupEditor.
-		setupEditor( currentPage, skin, currentPageHTMLParser );
+		setupEditor( currentPage, skin, currentPageHTMLParser, router );
 	} else {
 		hideSectionEditIcons( currentPageHTMLParser );
 		editRestrictions = mw.config.get( 'wgRestrictionEdit' );
 		if ( mw.user.isAnon() && Array.isArray( editRestrictions ) && editRestrictions.indexOf( '*' ) !== -1 ) {
-			showLoginDrawer();
+			showLoginDrawer( router );
 		} else {
 			editErrorMessage = isReadOnly ? mw.msg( 'apierror-readonly' ) : mw.msg( 'mobile-frontend-editor-disabled' );
 			showSorryToast( editErrorMessage );
@@ -425,8 +429,9 @@ function init( currentPage, currentPageHTMLParser, skin ) {
  * @method
  * @ignore
  * @param {string} msg Message for sorry message
+ * @param {Router} router
  */
-function showSorryToast( msg ) {
+function showSorryToast( msg, router ) {
 	$allEditLinks.on( 'click', function ( ev ) {
 		popup.show( msg );
 		ev.preventDefault();
@@ -438,7 +443,10 @@ function showSorryToast( msg ) {
 }
 
 module.exports = function ( currentPage, currentPageHTMLParser, skin ) {
-	var isMissing = currentPage.id === 0;
+	var isMissing = currentPage.id === 0,
+		router = mw.loader.require( 'mediawiki.router' ),
+		isEditingSupported = router.isSupported() && !blacklisted;
+
 	if ( contentModel !== 'wikitext' ) {
 		// Only load the wikitext editor on wikitext. Otherwise we'll rely on the fallback behaviour
 		// (You can test this on MediaWiki:Common.css) ?action=edit url (T173800)
@@ -457,9 +465,9 @@ module.exports = function ( currentPage, currentPageHTMLParser, skin ) {
 
 	if ( currentPage.inNamespace( 'file' ) && isMissing ) {
 		// Is a new file page (enable upload image only) Bug 58311
-		showSorryToast( mw.msg( 'mobile-frontend-editor-uploadenable' ) );
+		showSorryToast( mw.msg( 'mobile-frontend-editor-uploadenable' ), router );
 	} else {
 		// Edit button is currently hidden. A call to init() will update it as needed.
-		init( currentPage, currentPageHTMLParser, skin );
+		init( currentPage, currentPageHTMLParser, skin, router );
 	}
 };
