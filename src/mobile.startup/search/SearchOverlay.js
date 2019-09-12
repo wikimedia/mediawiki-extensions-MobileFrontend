@@ -2,9 +2,7 @@ var
 	mfExtend = require( '../mfExtend' ),
 	Overlay = require( '../Overlay' ),
 	util = require( '../util' ),
-	icons = require( '../icons' ),
-	formHeader = require( '../headers' ).formHeader,
-	Icon = require( '../Icon' ),
+	searchHeader = require( './searchHeader' ),
 	SearchResultsView = require( './SearchResultsView' ),
 	WatchstarPageList = require( '../watchstar/WatchstarPageList' ),
 	SEARCH_DELAY = 300,
@@ -27,46 +25,32 @@ var
  * @fires SearchOverlay#search-result-click
  */
 function SearchOverlay( params ) {
-	var options = util.extend(
-		true,
-		{
+	var header = searchHeader(
+			params.placeholderMsg,
+			params.action || mw.config.get( 'wgScript' ),
+			function ( query ) {
+				this.performSearch( query );
+			}.bind( this )
+		),
+		options = util.extend( true, {
 			headerChrome: true,
 			isBorderBox: false,
 			className: 'overlay search-overlay',
-			headers: [
-				formHeader(
-					// Note: Do not put the clear button inside the form
-					// as hitting enter on the input element triggers a button click,
-					// rather than submitting the form (see T136243)
-					util.template( `<div class="overlay-title">
-<form method="get" action="{{action}}" class="search-box">
-	<input class="search" type="search" name="search" autocomplete="off" placeholder="{{placeholderMsg}}" aria-label="{{placeholderMsg}}" value="{{searchTerm}}">
-</form>
-</div>
-					` ).render( {
-						placeholderMsg: params.placeholderMsg,
-						action: params.action || mw.config.get( 'wgScript' )
-					} ),
-					[
-						icons.cancel()
-					],
-					false
-				)
-			],
+			headers: [ header ],
 			events: {
-				'input input': 'onInputInput',
-				'click .clear': 'onClickClear',
 				'click .search-content': 'onClickSearchContent',
 				'click .overlay-content': 'onClickOverlayContent',
-				'click .overlay-content > div': 'onClickOverlayContentDiv',
+				'click .overlay-content > div': function ( ev ) {
+					ev.stopPropagation();
+				},
 				'touchstart .results': 'hideKeyboardOnScroll',
 				'mousedown .results': 'hideKeyboardOnScroll',
 				'click .results a': 'onClickResult'
 			}
 		},
-		params
-	);
+		params );
 
+	this.header = header;
 	Overlay.call( this, options );
 
 	this.api = options.api;
@@ -77,57 +61,6 @@ function SearchOverlay( params ) {
 }
 
 mfExtend( SearchOverlay, Overlay, {
-	/**
-	 * @memberof SearchOverlay
-	 * @instance
-	 * @mixes Overlay#defaults
-	 * @property {Object} defaults Default options hash.
-	 * @property {SearchGateway} defaults.gatewayClass The class to use to setup an API gateway.
-	 *  FIXME: Should be removed when wikidata descriptions in stable (T101719)
-	 * @property {Router} defaults.router instance
-	 * @property {Icon} defaults.clearIcon options for the button that clears the search text.
-	 * @property {string} defaults.searchTerm Search text.
-	 * @property {string} defaults.clearMsg Tooltip for clear button that appears when you type
-	 * into search box.
-	 */
-	defaults: util.extend( {}, Overlay.prototype.defaults, {
-		clearIcon: new Icon( {
-			tagName: 'button',
-			name: 'search-clear',
-			isSmall: true,
-			label: mw.msg( 'mobile-frontend-clear-search' ),
-			additionalClassNames: 'clear'
-		} ),
-		searchTerm: ''
-	} ),
-
-	/**
-	 * Make sure search header is docked to the top of the screen when the
-	 * user begins typing so that there is adequate space for search results
-	 * above the keyboard. (This is only a potential issue when sitenotices
-	 * are displayed.)
-	 * @memberof SearchOverlay
-	 * @instance
-	 */
-	onInputInput: function () {
-		this.performSearch();
-		this.$clear.toggle( this.$input.val() !== '' );
-	},
-
-	/**
-	 * Initialize the button that clears the search field
-	 * @memberof SearchOverlay
-	 * @instance
-	 * @return {boolean} False to cancel the native event
-	 */
-	onClickClear: function () {
-		this.$input.val( '' ).trigger( 'focus' );
-		this.performSearch();
-		this.$clear.hide();
-		// In beta the clear button is on top of the search input.
-		// Stop propagation so that the input doesn't receive the click.
-		return false;
-	},
 
 	/**
 	 * Initialize 'search within pages' functionality
@@ -163,16 +96,6 @@ mfExtend( SearchOverlay, Overlay, {
 	 */
 	onClickOverlayContent: function () {
 		this.$el.find( '.cancel' ).trigger( 'click' );
-	},
-
-	/**
-	 * Stop propagation
-	 * @memberof SearchOverlay
-	 * @instance
-	 * @param {jQuery.Event} ev
-	 */
-	onClickOverlayContentDiv: function ( ev ) {
-		ev.stopPropagation();
 	},
 
 	/**
@@ -229,7 +152,6 @@ mfExtend( SearchOverlay, Overlay, {
 	 */
 	postRender: function () {
 		var self = this,
-			options = this.options,
 			searchResults = new SearchResultsView( {
 				searchContentLabel: mw.msg( 'mobile-frontend-search-content' ),
 				noResultsMsg: mw.msg( 'mobile-frontend-search-no-results' ),
@@ -240,10 +162,8 @@ mfExtend( SearchOverlay, Overlay, {
 		this.$el.find( '.overlay-content' ).append( searchResults.$el );
 		Overlay.prototype.postRender.call( this );
 
-		this.$el.find( '.overlay-title' ).append( options.clearIcon.$el );
-
-		this.$input = this.$el.find( 'input' );
-		this.$clear = this.$el.find( '.clear' );
+		// FIXME: `this.$input` should not be set. Isolate to searchHeader function
+		this.$input = this.$el.find( this.header ).find( 'input' );
 		// FIXME: `this.$searchContent` should not be set. Isolate to SearchResultsView class.
 		this.$searchContent = searchResults.$el.hide();
 		// FIXME: `this.$resultContainer` should not be set. Isolate to SearchResultsView class.
@@ -270,11 +190,6 @@ mfExtend( SearchOverlay, Overlay, {
 			}, SEARCH_SPINNER_DELAY - searchData.delay );
 		} );
 		this.on( 'search-results', clearSearch );
-
-		// Hide the clear button if the search input is empty
-		if ( self.$input.val() === '' ) {
-			this.$clear.hide();
-		}
 	},
 
 	/**
@@ -315,12 +230,12 @@ mfExtend( SearchOverlay, Overlay, {
 	 * actually live in SearchGateway, please move out.
 	 * @memberof SearchOverlay
 	 * @instance
+	 * @param {string} query
 	 */
-	performSearch: function () {
+	performSearch: function ( query ) {
 		var
 			self = this,
 			api = this.api,
-			query = this.$input.val(),
 			delay = this.gateway.isCached( query ) ? 0 : SEARCH_DELAY;
 
 		// it seems the input event can be fired when virtual keyboard is closed
