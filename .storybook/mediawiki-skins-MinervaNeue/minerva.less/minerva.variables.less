@@ -19,8 +19,6 @@
 @font-size-minerva-small: unit( 14 / @font-size-browser, em ); // Equals `14px` at `16px` browser default.
 @tocFontSize: @font-size-minerva-small;
 
-@indicatorFontSize: 0.4em;
-
 // colors
 @grayMediumLight: @colorGray10;
 @grayMediumDark: @colorGray5;
@@ -52,7 +50,8 @@
 @contentMargin: 16px;
 
 // Header
-@headerHeight: unit( 54 / @font-size-browser, em );
+@siteHeaderHeight: unit( 54 / @font-size-browser, em );
+@overlayHeaderHeight: unit( 48 / @font-size-browser, em );
 @headerVerticalPadding: 0.15em;
 @headerMarginTop: -1px; // used to hide the header border top when a banner is not present
 @searchBoxWidth: 375/16em;
@@ -64,7 +63,6 @@
 // Page actions
 @taglineFontSize: 0.85em;
 @pageActionBorder: 1px;
-@pageActionToolbarHeight: 44px; // total height is 46px. 2px added by border on .page-actions-menu
 
 // colors
 @chromeColor: @grayLightest;
