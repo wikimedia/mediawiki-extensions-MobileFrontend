@@ -2,14 +2,14 @@
 @import '../../minerva.less/minerva.mixins.less';
 
 .overlay {
-	padding-top: @headerHeight;
+	padding-top: @overlayHeaderHeight;
 
 	textarea {
 		.editor-textarea();
 	}
 
 	> ul, button {
-		width: @headerHeight;
+		width: @overlayHeaderHeight;
 	}
 
 	.license {
@@ -17,10 +17,14 @@
 	}
 }
 
+.overlay-header.header {
+	height: @overlayHeaderHeight;
+}
+
 .overlay-header .header-action {
 	> a,
 	> button {
-		height: @headerHeight;
+		height: @overlayHeaderHeight;
 	}
 }
 
