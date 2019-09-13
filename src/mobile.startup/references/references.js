@@ -58,7 +58,7 @@ function referenceDrawer( props ) {
 							new Icon( {
 								isSmall: true,
 								name: 'citation-invert',
-								additionalClassNames: 'references-drawer__title',
+								additionalClassNames: 'references-drawer__title mw-ui-icon-flush-left',
 								hasText: true,
 								label: mw.msg( 'mobile-frontend-references-citation' )
 							} ).$el,
