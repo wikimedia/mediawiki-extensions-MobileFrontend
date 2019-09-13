@@ -226,7 +226,8 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		} elseif ( $bytesChanged === 0 ) {
 			$changeMsg = 'mobile-frontend-diffview-bytesnochange';
 			$sizeClass = MobileUI::iconClass( $glyph, 'before',
-				'meta mw-mf-bytesneutral mw-ui-icon-small mf-mw-ui-icon-rotate-clockwise' );
+				'meta mw-mf-bytesneutral mw-ui-icon-flush-left mw-ui-icon-small '
+					. 'mf-mw-ui-icon-rotate-clockwise' );
 		} else {
 			$changeMsg = 'mobile-frontend-diffview-bytesremoved';
 			$sizeClass = MobileUI::iconClass( $glyph . '-red', 'before',
