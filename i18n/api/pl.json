@@ -1,14 +1,27 @@
 {
 	"@metadata": {
 		"authors": [
-			"Chrumps"
+			"Chrumps",
+			"Rail"
 		]
 	},
+	"apihelp-mobileview-description": "Zwraca dane potrzebne dla wyświetleń mobilnych.",
+	"apihelp-mobileview-summary": "Zwraca dane potrzebne dla wyświetleń mobilnych.",
+	"apihelp-mobileview-param-page": "Tytuły stron do przetworzenia.",
+	"apihelp-mobileview-param-redirect": "Określa, czy stosować przekierowania.",
+	"apihelp-mobileview-param-sectionprop": "Pobierane informacje o sekcji.",
 	"apihelp-mobileview-param-noimages": "Zwróć HTML bez obrazków.",
+	"apihelp-mobileview-param-noheadings": "Nie uwzględniaj nagłówków na wyjściu.",
 	"apihelp-mobileview-param-notransform": "Nie zamieniaj HTML-u na wersję mobilną.",
+	"apihelp-mobileview-param-onlyrequestedsections": "Zwracaj tylko żądane sekcje, nawet z $1$1prop=sections.",
 	"apihelp-mobileview-param-thumbsize": "Maksymalne rozmiary miniaturki.",
 	"apihelp-mobileview-param-thumbwidth": "Maksymalna szerokość miniatury.",
 	"apihelp-mobileview-param-thumbheight": "Maksymalna wysokość miniatury.",
+	"apihelp-mobileview-param-revision": "Żądaj konkretnej wersji.",
+	"apihelp-parse-param-mobileformat": "Zwróć wyjście parsera w formacie właściwym dla urządzeń mobilnych.",
 	"apihelp-parse-param-noimages": "Wyłącz wyświetlanie grafik w wersji mobilnej.",
+	"apihelp-webapp-manifest-description": "Zwraca manifest webapp.",
+	"apihelp-webapp-manifest-summary": "Zwraca manifest webapp.",
+	"apierror-mobilefrontend-badidtitle": "Zła kombinacja tytułu/identyfikatora wersji.",
 	"apiwarn-mobilefrontend-sectionsnotfound": "Nie znaleziono {{PLURAL:$2|sekcji}} $1."
 }

@@ -200,7 +200,7 @@
 	"mobile-frontend-news-items": "Actualités",
 	"mobile-frontend-opt-in-explain": "La βeta de {{SITENAME}} est un moyen pour vous d’essayer ces fonctionnalités expérimentales et de nous fournir un retour appréciable",
 	"mobile-frontend-overlay-close": "Fermer",
-	"mobile-frontend-photo-upload-invalid-user": "L’utilisateur « $1 » n’est pas enregistré.",
+	"mobile-frontend-photo-upload-invalid-user": "L’utilisateur « $1 » n’est pas enregistré.",
 	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> téléversement|<span>$1</span> téléversements}}",
 	"mobile-frontend-photo-upload-user-count-over-limit": "500+ téléversements",
 	"mobile-frontend-privacy-link-text": "Confidentialité",

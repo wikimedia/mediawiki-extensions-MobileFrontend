@@ -239,9 +239,11 @@
 	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions": "തലക്കെട്ട് വിവരണങ്ങൾ",
 	"mobile-frontend-send-feedback": "അഭിപ്രായം അറിയിക്കുക",
 	"mobile-frontend-mobile-option-MFLazyLoadImages-description": "ചിത്രങ്ങൾ ആവശ്യമുള്ളപ്പോൾ മാത്രം എടുക്കുക.",
+	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "പ്രധാന ഖണ്ഡിക",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "ഫോണ്ടിന്റെ വലിപ്പം",
 	"mobile-frontend-mobile-option-amc-learn-more": "കൂടുതൽ അറിയുക",
 	"mobile-frontend-mobile-option-amc-send-feedback": "അഭിപ്രായം അറിയിക്കുക",
+	"mobile-frontend-amc-outreach-no-thanks": "വേണ്ട, നന്ദി",
 	"mobile-frontend-console-recruit": "\\o/ ടും ടും ടും! ഇതൊരു ഓപ്പൺ സോഴ്സ് സോഫ്റ്റ്‌വേറാണ്, ഇത് നിർമ്മിക്കാൻ സന്നദ്ധസേവകരെ ആവശ്യമുണ്ട്, ഈ ജാവാസ്ക്രിപ്റ്റ് കൺസോളിൽ താങ്കൾ കാണാനിട വന്നേക്കാവുന്ന ബഗുകൾ ശരിയാക്കി ഇത് മെച്ചപ്പെടുത്തുക!\n\nബാക്ക്‌ലോഗ് ഇവിടെ കാണുക: https://phabricator.wikimedia.org/project/profile/67/",
 	"prefs-mobile": "മൊബൈൽ ഐച്ഛികങ്ങൾ"
 }

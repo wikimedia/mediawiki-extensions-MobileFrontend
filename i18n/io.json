@@ -12,6 +12,8 @@
 	"mobile-frontend-editor-loading": "Karganta redaktilo...",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Omna lingui",
 	"mobile-frontend-last-modified-date": "Laste redaktita ye $1, $2 kloki",
+	"mobile-frontend-nearby-noresults": "Ne existas pagini pri temi vicina a vu.",
+	"mobile-frontend-nearby-noresults-guidance": "Probez krear nova pagino, od inkluzar lokizo por specifika pagino",
 	"mobile-frontend-nearby-title": "Proxime",
 	"mobile-frontend-nearby-info-heading": "Loki vicina a vu",
 	"mobile-frontend-nearby-info-description": "Vu povas lektar interesanta artikli de {{SITENAME}} pri loki proxim vu",
