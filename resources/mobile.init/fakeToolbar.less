@@ -17,7 +17,6 @@
 
 .ve-mobile-fakeToolbar {
 	height: 3em;
-	line-height: 0;
 	display: block !important;
 	width: 100% !important;
 	box-sizing: content-box;
@@ -30,25 +29,24 @@
 	.mw-ui-icon-mf-spinner {
 		display: inline-block;
 		width: 3em;
-		min-width: 3em;
-		max-width: 3em;
 		height: 3em;
 
 		&:before {
 			background-size: 20px 20px;
-			height: 3em;
-			margin: 0;
 		}
 	}
 
 	.cancel {
+		padding: 0;
+		color: transparent;
+
 		&:hover {
 			background-color: #eaecf0;
 		}
 	}
 
 	.mw-ui-icon-mf-spinner {
-		line-height: 3.164em;
+		line-height: 3em;
 		vertical-align: top;
 		border-left: 1px solid #eaecf0;
 		cursor: auto;
