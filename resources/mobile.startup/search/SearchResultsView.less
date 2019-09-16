@@ -1,10 +1,14 @@
+@import '../../../mobile.less/mobile.variables.less';
+
 .search-results-view {
 	> div {
 		height: 100%;
 	}
+}
 
-	.search-content {
-		// sync with @thumbGap
+@media all and ( max-width: @width-breakpoint-tablet ) {
+	// Sync with `@thumbGap`.
+	.search-results-view .search-content {
 		padding-left: 15px;
 	}
 }
