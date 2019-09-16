@@ -118,6 +118,10 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 			} else {
 				$sectionTop = $( '[data-section="' + sectionId + '"]' )
 					.closest( 'h1, h2, h3, h4, h5, h6' );
+				// When loading on action=edit URLs, there is no page content
+				if ( !$sectionTop.length ) {
+					$sectionTop = $( '#bodyContent' );
+				}
 			}
 			// If there was a scrollbar that was hidden when the overlay was shown, add a margin
 			// with the same width. This is mostly so that developers testing this on desktop
