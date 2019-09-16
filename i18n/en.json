@@ -99,7 +99,7 @@
 	"mobile-frontend-editor-editing-page": "<span><strong>Editing</strong> $1</span>",
 	"mobile-frontend-editor-error": "Error, edit not saved.",
 	"mobile-frontend-editor-error-conflict": "Error, another user has edited this page.",
-	"mobile-frontend-editor-error-loading": "Error, can't load section.",
+	"mobile-frontend-editor-error-loading": "Error, can't load the editor.",
 	"mobile-frontend-editor-error-preview": "Error, something unexpected happened upon loading the preview. Please close and try again.",
 	"mobile-frontend-editor-keep-editing": "Keep editing",
 	"mobile-frontend-editor-licensing": "By saving changes, you agree to release your contribution under the $1 {{PLURAL:$2|license|licenses}}.",

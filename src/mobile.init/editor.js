@@ -318,10 +318,15 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 				}
 				// Show the editor!
 				overlayManager.replaceCurrent( overlay );
-			}, function ( errorDrawer ) {
-				// Could not load the editor, probably because the user is blocked.
+			}, function ( error ) {
+				// Could not load the editor.
 				overlayManager.router.back();
-				errorDrawer.show();
+				if ( error.show ) {
+					// Probably a blockMessageDrawer returned because the user is blocked.
+					error.show();
+				} else {
+					mw.notify( mw.msg( 'mobile-frontend-editor-error-loading' ) );
+				}
 			} );
 		} );
 

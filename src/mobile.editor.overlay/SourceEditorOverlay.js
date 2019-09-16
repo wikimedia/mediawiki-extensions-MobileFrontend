@@ -390,8 +390,6 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 					// Trigger intial EditorGateway#setContent and update save button
 					self.onInputWikitextEditor();
 				}
-			}, function () {
-				self.reportError( mw.msg( 'mobile-frontend-editor-error-loading' ) );
 			} );
 	},
 
