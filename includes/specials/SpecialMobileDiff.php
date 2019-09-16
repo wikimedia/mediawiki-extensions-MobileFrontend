@@ -218,7 +218,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 			$bytesChanged = $this->rev->getSize();
 		}
 		$glyph = 'bytesChanged';
-		$bytesChanged = 0;
+
 		if ( $bytesChanged > 0 ) {
 			$changeMsg = 'mobile-frontend-diffview-bytesadded';
 			$sizeClass = MobileUI::iconClass( $glyph . '-green', 'before',
