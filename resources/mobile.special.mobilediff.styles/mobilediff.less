@@ -33,13 +33,12 @@ footer {
 }
 
 #mw-mf-diffview {
-	.meta {
-		font-size: 0.7em;
-		text-transform: uppercase;
-	}
-
 	.mw-mf-diff-date {
 		color: @colorGray7;
+		height: 1em;
+		line-height: 1em;
+		vertical-align: middle;
+		display: inline-block;
 	}
 
 	.mw-mf-diff-info__link-latest,
@@ -85,6 +84,11 @@ footer {
 	.meta span {
 		// FIXME: Revisited when icons standardised (see I31e96ee6785eb5c634295051159c16445de1165c)
 		margin-left: -1em;
+	}
+
+	#mw-mf-userinfo .meta,
+	.mw-mf-diff-date span,
+	.meta span {
 		font-size: 0.7em;
 		text-transform: uppercase;
 	}
