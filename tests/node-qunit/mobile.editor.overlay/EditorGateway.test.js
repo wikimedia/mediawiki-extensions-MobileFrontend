@@ -4,6 +4,17 @@ var sandbox, EditorGateway, spy, postStub, apiReject, apiHappy, apiRvNoSection,
 	apiEmptySuccessResponse, apiNoSectionLine, apiRejectHttp,
 	util = require( '../../../src/mobile.startup/util' ),
 	happyResponse,
+	API_REQUEST_DATA = {
+		title: 'test',
+		action: 'edit',
+		errorformat: 'html',
+		errorlang: undefined,
+		errorsuselocal: 1,
+		formatversion: 2,
+		summary: 'summary',
+		captchaid: undefined,
+		captchaword: undefined
+	},
 	captcha = {
 		type: 'image',
 		mime: 'image/png',
@@ -295,17 +306,12 @@ QUnit.test( '#save, success', function ( assert ) {
 		} );
 	} ).then( function () {
 		assert.strictEqual( gateway.hasChanged, false, 'reset hasChanged' );
-		assert.ok( postStub.calledWith( 'csrf', {
-			action: 'edit',
-			title: 'test',
+		assert.strictEqual( postStub.calledWithMatch( 'csrf', util.extend( {}, API_REQUEST_DATA, {
 			section: 1,
 			text: 'section 1',
-			summary: 'summary',
-			captchaid: undefined,
-			captchaword: undefined,
 			basetimestamp: '2013-05-15T00:30:26Z',
 			starttimestamp: '2013-05-15T00:30:26Z'
-		} ), 'save first section' );
+		} ) ), true, 'save first section' );
 	} );
 } );
 
@@ -322,8 +328,7 @@ QUnit.test( '#save, new page', function ( assert ) {
 		summary: 'summary'
 	} ).then( function () {
 		assert.strictEqual( gateway.hasChanged, false, 'reset hasChanged' );
-		assert.ok( postStub.calledWith( 'csrf', {
-			action: 'edit',
+		assert.ok( postStub.calledWithMatch( 'csrf', util.extend( {}, API_REQUEST_DATA, {
 			title: 'Talk:test',
 			text: 'section 0',
 			summary: 'summary',
@@ -331,7 +336,7 @@ QUnit.test( '#save, new page', function ( assert ) {
 			captchaword: undefined,
 			basetimestamp: undefined,
 			starttimestamp: undefined
-		} ), 'save lead section' );
+		} ) ), 'save lead section' );
 	} );
 } );
 
@@ -346,16 +351,9 @@ QUnit.test( '#save, after #setPrependText', function ( assert ) {
 		summary: 'summary'
 	} ).then( function () {
 		assert.strictEqual( gateway.hasChanged, false, 'reset hasChanged' );
-		assert.ok( postStub.calledWith( 'csrf', {
-			action: 'edit',
-			title: 'test',
-			prependtext: 'abc',
-			summary: 'summary',
-			captchaid: undefined,
-			captchaword: undefined,
-			basetimestamp: undefined,
-			starttimestamp: undefined
-		} ), 'prepend text' );
+		assert.ok( postStub.calledWithMatch( 'csrf', util.extend( {}, API_REQUEST_DATA, {
+			prependtext: 'abc'
+		} ) ), 'prepend text' );
 	} );
 } );
 
@@ -376,17 +374,14 @@ QUnit.test( '#save, submit CAPTCHA', function ( assert ) {
 		} );
 	} ).then( function () {
 		assert.strictEqual( gateway.hasChanged, false, 'reset hasChanged' );
-		assert.ok( postStub.calledWith( 'csrf', {
-			action: 'edit',
-			title: 'test',
+		assert.ok( postStub.calledWithMatch( 'csrf', util.extend( {}, API_REQUEST_DATA, {
 			section: 1,
 			text: 'section 1',
-			summary: 'summary',
 			captchaid: 123,
 			captchaword: 'abc',
 			basetimestamp: '2013-05-15T00:30:26Z',
 			starttimestamp: '2013-05-15T00:30:26Z'
-		} ), 'save first section' );
+		} ) ), 'save first section' );
 	} );
 } );
 
@@ -400,10 +395,7 @@ QUnit.test( '#save, request failure', function ( assert ) {
 	return gateway.getContent().then( function () {
 		gateway.setContent( 'section 1' );
 		assert.rejects( gateway.save(), function ( given ) {
-			assert.propEqual( given, {
-				type: 'error',
-				details: 'http'
-			}, 'called with correct arguments' );
+			assert.propEqual( given, {}, 'called with correct arguments' );
 
 			return true;
 		}, 'call fail' );
@@ -421,8 +413,7 @@ QUnit.test( '#save, API failure', function ( assert ) {
 		gateway.setContent( 'section 1' );
 		assert.rejects( gateway.save(), function ( given ) {
 			assert.propEqual( given, {
-				type: 'error',
-				details: 'error code'
+				error: { code: 'error code' }
 			}, 'called with correct arguments' );
 
 			return true;
@@ -441,8 +432,15 @@ QUnit.test( '#save, CAPTCHA response with image URL', function ( assert ) {
 		gateway.setContent( 'section 1' );
 		assert.rejects( gateway.save(), function ( given ) {
 			assert.propEqual( given, {
-				type: 'captcha',
-				details: captcha
+				edit: {
+					result: 'Failure',
+					captcha: {
+						type: 'image',
+						mime: 'image/png',
+						id: '1852528679',
+						url: '/w/index.php?title=Especial:Captcha/image&wpCaptchaId=1852528679'
+					}
+				}
 			}, 'called with correct arguments' );
 
 			return true;
@@ -462,10 +460,11 @@ QUnit.test( '#save, AbuseFilter warning', function ( assert ) {
 
 		assert.rejects( gateway.save(), function ( given ) {
 			assert.propEqual( given, {
-				type: 'abusefilter',
-				details: {
-					type: 'warning',
-					message: 'horrible desktop-formatted message'
+				edit: {
+					code: 'abusefilter-warning-usuwanie-tekstu',
+					info: 'Hit AbuseFilter: Usuwanie dużej ilości tekstu',
+					warning: 'horrible desktop-formatted message',
+					result: 'Failure'
 				}
 			}, 'called with correct arguments' );
 
@@ -486,10 +485,11 @@ QUnit.test( '#save, AbuseFilter disallow', function ( assert ) {
 
 		assert.rejects( gateway.save(), function ( given ) {
 			assert.propEqual( given, {
-				type: 'abusefilter',
-				details: {
-					type: 'disallow',
-					message: 'horrible desktop-formatted message'
+				edit: {
+					code: 'abusefilter-disallow',
+					info: 'Scary filter',
+					warning: 'horrible desktop-formatted message',
+					result: 'Failure'
 				}
 			}, 'called with correct arguments' );
 
@@ -510,10 +510,11 @@ QUnit.test( '#save, AbuseFilter other', function ( assert ) {
 
 		assert.rejects( gateway.save(), function ( given ) {
 			assert.propEqual( given, {
-				type: 'abusefilter',
-				details: {
-					type: 'other',
-					message: 'horrible desktop-formatted message'
+				edit: {
+					code: 'abusefilter-something',
+					info: 'Scary filter',
+					warning: 'horrible desktop-formatted message',
+					result: 'Failure'
 				}
 			}, 'called with correct arguments' );
 
@@ -534,8 +535,10 @@ QUnit.test( '#save, extension errors', function ( assert ) {
 
 		assert.rejects( gateway.save(), function ( given ) {
 			assert.propEqual( given, {
-				type: 'error',
-				details: 'testerror'
+				edit: {
+					code: 'testerror',
+					result: 'Failure'
+				}
 			}, 'called with correct arguments' );
 
 			return true;
@@ -552,8 +555,7 @@ QUnit.test( '#save, read-only error', function ( assert ) {
 		rejectSpy = sandbox.spy(),
 		done = assert.async(),
 		expectedReturnValue = {
-			type: 'readonly',
-			details: {
+			error: {
 				code: 'readonly',
 				info: 'The wiki is currently in read-only mode.',
 				readonlyreason: 'This wiki is currently being upgraded to a newer software version.'
@@ -582,10 +584,7 @@ QUnit.test( '#save, unknown errors', function ( assert ) {
 		gateway.setContent( 'section 1' );
 
 		assert.rejects( gateway.save(), function ( given ) {
-			assert.propEqual( given, {
-				type: 'error',
-				details: 'unknown'
-			}, 'called with correct arguments' );
+			assert.propEqual( given, {}, 'called with correct arguments' );
 
 			return true;
 		}, 'call fail' );
@@ -607,17 +606,12 @@ QUnit.test( '#save, without changes', function ( assert ) {
 			summary: 'summary'
 		} );
 	} ).then( function () {
-		assert.ok( apiHappy.postWithToken.calledWith( 'csrf', {
-			action: 'edit',
-			title: 'test',
+		assert.ok( apiHappy.postWithToken.calledWithMatch( 'csrf', util.extend( {}, API_REQUEST_DATA, {
 			section: 1,
 			text: 'section',
-			summary: 'summary',
-			captchaid: undefined,
-			captchaword: undefined,
 			basetimestamp: '2013-05-15T00:30:26Z',
 			starttimestamp: '2013-05-15T00:30:26Z'
-		} ), 'save first section' );
+		} ) ), 'save first section' );
 	} );
 } );
 

@@ -1,5 +1,4 @@
 var util = require( '../mobile.startup/util' ),
-	parseSaveError = require( './parseSaveError' ),
 	actionParams = require( '../mobile.startup/actionParams' );
 
 /**
@@ -172,6 +171,10 @@ EditorGateway.prototype = {
 		function saveContent() {
 			var apiOptions = {
 				action: 'edit',
+				errorformat: 'html',
+				errorlang: mw.config.get( 'wgUserLanguage' ),
+				errorsuselocal: 1,
+				formatversion: 2,
 				title: self.title,
 				summary: options.summary,
 				captchaid: options.captchaId,
@@ -195,10 +198,10 @@ EditorGateway.prototype = {
 					self.hasChanged = false;
 					result.resolve( data.edit.newrevid );
 				} else {
-					result.reject( parseSaveError( data ) );
+					result.reject( data );
 				}
 			}, function ( code, data ) {
-				result.reject( parseSaveError( data, code || 'unknown' ) );
+				result.reject( data );
 			} );
 			return result;
 		}

@@ -5,7 +5,6 @@ var EditorOverlayBase = require( './EditorOverlayBase' ),
 	saveFailureMessage = require( './saveFailureMessage' ),
 	EditorGateway = require( './EditorGateway' ),
 	fakeToolbar = require( '../mobile.init/fakeToolbar' ),
-	AbuseFilterPanel = require( './AbuseFilterPanel' ),
 	mfExtend = require( '../mobile.startup/mfExtend' ),
 	VisualEditorOverlay = require( './VisualEditorOverlay' );
 
@@ -13,7 +12,6 @@ var EditorOverlayBase = require( './EditorOverlayBase' ),
  * Overlay that shows an editor
  * @class SourceEditorOverlay
  * @uses Section
- * @uses AbuseFilterPanel
  * @uses EditorGateway
  * @uses VisualEditorOverlay
  * @extends EditorOverlayBase
@@ -212,10 +210,6 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 		// make license links open in separate tabs
 		this.$el.find( '.license a' ).attr( 'target', '_blank' );
 
-		this.abuseFilterPanel = new AbuseFilterPanel( {
-			overlayManager: this.overlayManager
-		} ).appendTo( this.$el.find( '.panels' ) );
-
 		// If in readOnly mode, make textarea readonly
 		if ( this.readOnly ) {
 			this.$content.prop( 'readonly', true );
@@ -305,7 +299,6 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 		this.$content.show();
 		window.scrollTo( 0, this.scrollTop );
 		this.showHidden( '.initial-header' );
-		this.abuseFilterPanel.hide();
 	},
 
 	/**
@@ -458,21 +451,6 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 	},
 
 	/**
-	 * Reveals an abuse filter panel inside the view.
-	 * @memberof SourceEditorOverlay
-	 * @instance
-	 * @private
-	 * @param {string} type The type of alert, e.g. 'warning' or 'disallow'
-	 * @param {string} message Message to show in the AbuseFilter overlay
-	 */
-	_showAbuseFilter: function ( type, message ) {
-		this.abuseFilterPanel.show( type, message );
-		this.showHidden( '.save-header' );
-		// disable continue and save buttons, reenabled when user changes content
-		this.$el.find( '.continue, .submit' ).prop( 'disabled', this.abuseFilterPanel.isDisallowed );
-	},
-
-	/**
 	 * Executed when the editor clicks the save/publish button. Handles logging and submitting
 	 * the save action to the editor API.
 	 * @inheritdoc
@@ -524,22 +502,25 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 	 * @instance
 	 */
 	onSaveFailure: function ( data ) {
-		var heading, msg;
+		var msg, noRetry;
 
-		if ( data.type === 'captcha' ) {
-			this.captchaId = data.details.id;
-			this.handleCaptcha( data.details );
-		} else if ( data.type === 'abusefilter' ) {
-			this._showAbuseFilter( data.details.type, data.details.message );
+		if ( data.edit && data.edit.captcha ) {
+			this.captchaId = data.edit.captcha.id;
+			this.handleCaptcha( data.edit.captcha );
 		} else {
 			msg = saveFailureMessage( data );
-			if ( data.type === 'readonly' ) {
-				heading = mw.msg( 'apierror-readonly' );
-			}
+			this.reportError( msg );
+			this.showHidden( '.save-header, .save-panel' );
 
-			if ( msg || heading ) {
-				this.reportError( msg, heading );
-				this.showHidden( '.save-header, .save-panel' );
+			// Some errors may be temporary, but for others we know for sure that the save will
+			// never succeed, so don't confuse the user by giving them the option to retry.
+			noRetry = data.errors && data.errors.some( function ( error ) {
+				return error.code === 'abusefilter-disallowed';
+			} );
+
+			if ( noRetry ) {
+				// disable continue and save buttons, reenabled when user changes content
+				this.$el.find( '.continue, .submit' ).prop( 'disabled', true );
 			}
 		}
 
