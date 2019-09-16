@@ -475,15 +475,21 @@ class MobileFrontendHooks {
 		$config = $services->getService( 'MobileFrontend.Config' );
 		$userMode = $services->getService( 'MobileFrontend.AMC.UserMode' );
 		$user = $context->getUser();
+		$featureManager = $services->getService( 'MobileFrontend.FeaturesManager' );
 
 		// Perform substitutions of pages that are unsuitable for mobile
 		// FIXME: Upstream these changes to core.
 		if ( $context->shouldDisplayMobileView() &&
 			self::shouldMobileFormatSpecialPages( $user )
 		) {
-			// Replace the standard watchlist view with our custom one
-			$list['Watchlist'] = 'SpecialMobileWatchlist';
-			$list['EditWatchlist'] = 'SpecialMobileEditWatchlist';
+
+			if ( $user->isSafeToLoad() &&
+				!$featureManager->isFeatureAvailableForCurrentUser( 'MFUseDesktopSpecialWatchlistPage' )
+			) {
+				// Replace the standard watchlist view with our custom one
+				$list['Watchlist'] = 'SpecialMobileWatchlist';
+				$list['EditWatchlist'] = 'SpecialMobileEditWatchlist';
+			}
 
 			// Only override contributions page if AMC is disabled
 			if ( $user->isSafeToLoad() && !$userMode->isEnabled() ) {

@@ -39,6 +39,8 @@ return [
 			$config->get( 'MFEnableFontChanger' ) ) );
 		$manager->registerFeature( new Feature( 'MFUseDesktopSpecialHistoryPage', 'mobile-frontend',
 			$config->get( 'MFUseDesktopSpecialHistoryPage' ) ) );
+		$manager->registerFeature( new Feature( 'MFUseDesktopSpecialWatchlistPage', 'mobile-frontend',
+			$config->get( 'MFUseDesktopSpecialWatchlistPage' ) ) );
 
 		return $manager;
 	},
