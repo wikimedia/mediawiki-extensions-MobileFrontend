@@ -52,7 +52,7 @@ storiesOf( 'Overlay' )
 					noHeader: true
 				},
 				new View( {
-					el: $( '<div>' ).text( 'Overlay without header. Note there is a bug that leaves a padding-top on such overlays.' )
+					el: $( '<div>' ).text( 'Overlay without header.' )
 				} )
 			),
 			'overlay-enabled'
