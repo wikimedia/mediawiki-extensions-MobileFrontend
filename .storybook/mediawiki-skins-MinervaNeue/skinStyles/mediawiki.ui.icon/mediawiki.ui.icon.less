@@ -16,15 +16,6 @@
  */
 
 @import '../../minerva.less/minerva.variables.less';
-
-// Small icon - 16px square, with 9px padding (total 34px square).
-@icon-size-sm: unit( 16 / @font-size-browser, em );
-@icon-padding-sm: unit( 9 / @font-size-browser, em );
-
-// Medium icon - 16px square, with 9px padding (total 34px square).
-@icon-size-md: unit( 20 / @font-size-browser, em ); // 20px;
-@icon-padding-md: unit( 10 / @font-size-browser, em ); // 44px;
-
 /**
  * Mixin for a pseudo-element with a background image.
  */
@@ -65,7 +56,6 @@
 	vertical-align: middle;
 	line-height: 0;
 	overflow: hidden;
-	white-space: nowrap;
 
 	// resetting styles for <button> elements
 	-moz-appearance: none;
@@ -80,6 +70,11 @@
 	}
 }
 
+/**
+ * When aligning a series of similar icons (e.g. list items)
+ * prefer using a `:first-child` or `:last-child` selector.
+ * The flush-left/right classes are appropriate when that's unavailable.
+ */
 .mw-ui-icon-flush-left {
 	margin-left: -@icon-padding-md;
 }
@@ -94,6 +89,7 @@
 
 	// screen-reader text. Not using `text-indent: -999px` because
 	// the inner :before element is `display: block` so text-indent has no effect.
+	line-height: 999px;
 	color: transparent;
 
 	&:focus, &:active, &:visited {
@@ -122,6 +118,7 @@
 
 .mw-ui-icon-before {
 	width: auto;
+	max-width: 100%;
 
 	&:before {
 		.mixin-background-square();

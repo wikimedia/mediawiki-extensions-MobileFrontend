@@ -44,6 +44,7 @@ main {
 
 .header-container {
 	border-bottom: 1px solid @colorGray12;
+	padding: 0 @contentPadding;
 
 	&.header-chrome {
 		background-color: @chromeColor;
@@ -62,7 +63,7 @@ main {
 	a:visited {
 		color: @colorGray5;
 		// If browser supports
-		&:nth-child( 2 ) {
+		&:nth-child( 1 ) {
 			font-weight: bold;
 		}
 	}
@@ -80,7 +81,6 @@ main {
 	margin-top: @headerMarginTop;
 
 	> div {
-		width: @siteHeaderHeight;
 		position: relative;
 		vertical-align: middle;
 		display: table-cell;
@@ -204,14 +204,6 @@ input.search {
 	.section-heading {
 		border-bottom: 1px solid @colorGray14;
 		margin-bottom: @headingMargin;
-
-		.indicator {
-			margin-left: -@iconGutterWidth;
-			// FIXME: Can be removed when https://gerrit.wikimedia.org/r/535835 is merged
-			font-size: initial;
-			// FIXME: Can be removed when https://gerrit.wikimedia.org/r/535835 is merged
-			vertical-align: initial;
-		}
 	}
 
 	.mw-parser-output > h1,
