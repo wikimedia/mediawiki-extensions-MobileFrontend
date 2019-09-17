@@ -1,6 +1,6 @@
 var Drawer = require( '../mobile.startup/Drawer' ),
-	BlockMessageDetails = require( './BlockMessageDetails' ),
-	Icon = require( '../mobile.startup/Icon' );
+	BlockMessageDetails = require( './BlockMessageDetails' );
+
 /**
  * @typedef {Object} BlockMessageOptions
  * @property {number} blockId representing the block
@@ -23,10 +23,6 @@ module.exports = function blockMessageDrawer( props ) {
 	return new Drawer( {
 		className: 'drawer block-message',
 		children: [
-			( new Icon( {
-				name: 'stop-hand',
-				additionalClassNames: 'block-message-icon'
-			} ) ).$el,
 			( new BlockMessageDetails( props ) ).$el
 		]
 	} );

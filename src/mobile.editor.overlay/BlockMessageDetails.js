@@ -58,6 +58,12 @@ class BlockMessageDetails extends View {
 		this.$el.find( '.block-message-buttons' ).prepend(
 			okButton.$el
 		);
+		this.$el.find( '.block-message-icon' ).prepend(
+			( new Icon( {
+				name: 'stop-hand',
+				additionalClassNames: 'mw-ui-icon-flush-top'
+			} ) ).$el
+		);
 	}
 	/**
 	 * @inheritdoc
