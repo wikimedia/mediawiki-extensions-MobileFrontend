@@ -21,11 +21,12 @@ var M = require( '../mobile.startup/moduleLoaderSingleton' ),
  * behaviour and will not allow propagation
  * @method
  * @ignore
+ * @param {HTMLElement} elem
  * @param {jQuery.Event} ev
  * @param {Router} router
  */
-function onEditLinkClick( ev, router ) {
-	var section = ( new mw.Uri( this.href ) ).query.section || 'all';
+function onEditLinkClick( elem, ev, router ) {
+	var section = ( new mw.Uri( elem.href ) ).query.section || 'all';
 	router.navigate( '#/editor/' + section );
 	// DO NOT USE stopPropagation or you'll break click tracking in WikimediaEvents
 	// You DO NOT NEED to
@@ -75,7 +76,7 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 		isNewPage = page.id === 0;
 
 	$allEditLinks.on( 'click', function ( ev ) {
-		onEditLinkClick( ev, overlayManager.router );
+		onEditLinkClick( this, ev, overlayManager.router );
 	} );
 	overlayManager.add( editorPath, function ( sectionId ) {
 		var
