@@ -190,6 +190,7 @@
 			],
 			"messages": [
 				"mobile-frontend-editor-loading",
+				"mobile-frontend-editor-error-loading",
 				"mobile-frontend-editor-disabled",
 				"mobile-frontend-editor-disabled-anon",
 				"mobile-frontend-editor-uploadenable",
@@ -394,7 +395,6 @@
 				"mobile-frontend-editor-success-new-page",
 				"mobile-frontend-editor-error",
 				"mobile-frontend-editor-error-conflict",
-				"mobile-frontend-editor-error-loading",
 				"mobile-frontend-editor-error-preview",
 				"mobile-frontend-account-create-captcha-placeholder",
 				"mobile-frontend-editor-captcha-try-again",
