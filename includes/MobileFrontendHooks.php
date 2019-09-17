@@ -582,7 +582,11 @@ class MobileFrontendHooks {
 	 * @param string $subpage subpage name
 	 */
 	public static function onSpecialPageBeforeExecute( SpecialPage $special, $subpage ) {
-		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
+		$services = MediaWikiServices::getInstance();
+		$context = $services->getService( 'MobileFrontend.Context' );
+		/** @var ContentProviderFactory $contentProviderFactory */
+		$contentProviderFactory = $services->getService( 'MobileFrontend.ContentProviderFactory' );
+
 		$isMobileView = $context->shouldDisplayMobileView();
 		$taglines = $context->getConfig()->get( 'MFSpecialPageTaglines' );
 		$name = $special->getName();
@@ -600,7 +604,7 @@ class MobileFrontendHooks {
 			}
 
 			// Set foreign script path on special pages e.g. Special:Nearby
-			ContentProviderFactory::addForeignScriptPath( $context->getConfig(), $out );
+			$contentProviderFactory->addForeignScriptPath( $out );
 		}
 	}
 

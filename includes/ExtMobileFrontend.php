@@ -23,12 +23,14 @@ class ExtMobileFrontend {
 	public static function domParse( OutputPage $out, $text = null, $mobileFormatHtml = true ) {
 		$services = MediaWikiServices::getInstance();
 		$featureManager = $services->getService( 'MobileFrontend.FeaturesManager' );
+		/** @var ContentProviderFactory $contentProviderFactory */
+		$contentProviderFactory = $services->getService( 'MobileFrontend.ContentProviderFactory' );
 		$context = $services->getService( 'MobileFrontend.Context' );
 		$config = $services->getService( 'MobileFrontend.Config' );
 		$provideTagline = $featureManager->isFeatureAvailableForCurrentUser(
 			'MFEnableWikidataDescriptions'
 		) && $context->shouldShowWikibaseDescriptions( 'tagline', $config );
-		$provider = ContentProviderFactory::getProvider( $config, $out, $text, $provideTagline );
+		$provider = $contentProviderFactory->getProvider( $out, $text, $provideTagline );
 
 		// If we're not running the formatter we can exit earlier
 		if ( !$mobileFormatHtml ) {

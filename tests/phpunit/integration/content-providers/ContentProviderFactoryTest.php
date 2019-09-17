@@ -64,15 +64,15 @@ class ContentProviderFactoryTest extends MediaWikiTestCase {
 
 	/**
 	 * @covers ::getProvider
+	 * @expectedException \RuntimeException
 	 */
 	public function testGetProviderWithNoMFContentProvider() {
 		$mockOutputPage = $this->mockOutputPage();
-		$this->setMwGlobals( 'wgMFContentProviderClass', '' );
-
-		$this->setExpectedException( RuntimeException::class );
-		ContentProviderFactory::getProvider(
-			GlobalVarConfig::newInstance(), $mockOutputPage, self::TEST_HTML
-		);
+		$config = new HashConfig( [
+			'MFContentProviderClass' => ''
+		] );
+		$factory = new ContentProviderFactory( $config );
+		$factory->getProvider( $mockOutputPage, self::TEST_HTML );
 	}
 
 	/**
@@ -83,12 +83,12 @@ class ContentProviderFactoryTest extends MediaWikiTestCase {
 		$mockOutputPage = $this->mockOutputPage();
 		// Set config for the MFContentProviderClass and
 		// MFContentProviderTryLocalContentFirst is true
-		$this->setMwGlobals( [
-			'wgMFContentProviderClass' => DefaultContentProvider::class,
-			'wgMFContentProviderTryLocalContentFirst' => true
+		$config = new HashConfig( [
+			'MFContentProviderClass' => DefaultContentProvider::class,
+			'MFContentProviderTryLocalContentFirst' => true
 		] );
-		$provider = ContentProviderFactory::getProvider(
-			GlobalVarConfig::newInstance(), $mockOutputPage, self::TEST_HTML
+		$factory = new ContentProviderFactory( $config );
+		$provider = $factory->getProvider( $mockOutputPage, self::TEST_HTML
 		);
 		$actual = $provider->getHTML();
 
@@ -103,12 +103,14 @@ class ContentProviderFactoryTest extends MediaWikiTestCase {
 		$mockOutputPageNoTitle = $this->mockOutputPageWithNoTitle();
 		// Set config for the MFContentProviderClass and
 		// MFContentProviderTryLocalContentFirst is false
-		$this->setMwGlobals( 'wgMFContentProviderClass', DefaultContentProvider::class );
-		$this->setMwGlobals( 'wgMFContentProviderTryLocalContentFirst', false );
+		$config = new HashConfig( [
+			'MFContentProviderClass' => DefaultContentProvider::class,
+			'MFContentProviderTryLocalContentFirst' => false,
+			'MFContentProviderScriptPath' => false
+		] );
 
-		$provider = ContentProviderFactory::getProvider(
-			GlobalVarConfig::newInstance(), $mockOutputPageNoTitle, self::TEST_HTML
-		);
+		$factory = new ContentProviderFactory( $config );
+		$provider = $factory->getProvider( $mockOutputPageNoTitle, self::TEST_HTML );
 		$actual = $provider->getHTML();
 
 		$this->assertSame( self::TEST_HTML, $actual );
@@ -116,16 +118,17 @@ class ContentProviderFactoryTest extends MediaWikiTestCase {
 
 	/**
 	 * @covers ::getProvider
+	 * @expectedException \RuntimeException
 	 */
 	public function testGetProviderWithInvalidContentProvider() {
 		$mockOutputPage = $this->mockOutputPage();
-		$this->setMwGlobals( 'wgMFContentProviderClass', ContentProviderFactory::class );
-		$this->setMwGlobals( 'wgMFContentProviderTryLocalContentFirst', false );
-
-		$this->setExpectedException( RuntimeException::class );
-		ContentProviderFactory::getProvider(
-			GlobalVarConfig::newInstance(), $mockOutputPage, self::TEST_HTML
-		);
+		$config = new HashConfig( [
+			'MFContentProviderClass' => ContentProviderFactory::class,
+			'MFContentProviderTryLocalContentFirst' => false,
+			'MFContentProviderScriptPath' => false
+		] );
+		$factory = new ContentProviderFactory( $config );
+		$factory->getProvider( $mockOutputPage, self::TEST_HTML );
 	}
 
 	/**
@@ -138,13 +141,15 @@ class ContentProviderFactoryTest extends MediaWikiTestCase {
 	 */
 	public function testGetProvider( $contentProvider, $localContent, $expected ) {
 		$mockOutputPage = $this->mockOutputPage();
-		$this->setMwGlobals( [
-			'wgMFContentProviderClass' => $contentProvider,
-			'wgMFContentProviderTryLocalContentFirst' => $localContent
+		$config = new HashConfig( [
+			'MFContentProviderClass' => $contentProvider,
+			'MFContentProviderTryLocalContentFirst' => $localContent,
+			'MFContentProviderScriptPath' => false,
+			'MFMcsContentProviderBaseUri' => 'http://localhost/',
+			'MFMwApiContentProviderBaseUri' => 'http://localhost/'
 		] );
-		$provider = ContentProviderFactory::getProvider(
-			GlobalVarConfig::newInstance(), $mockOutputPage, self::TEST_HTML
-		);
+		$factory = new ContentProviderFactory( $config );
+		$provider = $factory->getProvider( $mockOutputPage, self::TEST_HTML );
 
 		$this->assertInstanceOf( $expected, $provider );
 	}
