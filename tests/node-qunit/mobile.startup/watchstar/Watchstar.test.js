@@ -30,7 +30,8 @@ QUnit.module( 'MobileFrontend Watchstar.js', {
 		user = mw.user;
 		Page = require( '../../../../src/mobile.startup/Page' );
 		watchIcon = new Icon( {
-			name: 'watched'
+			glyphPrefix: 'wikimedia',
+			name: 'unStar-progressive'
 		} );
 		// require after stubbing
 		toast = require( '../../../../src/mobile.startup/toast' );

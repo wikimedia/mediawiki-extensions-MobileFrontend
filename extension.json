@@ -154,8 +154,6 @@
 					"variants": [ "invert" ]
 				},
 				"error": "resources/mobile.startup.images/error.svg",
-				"watch": "resources/mobile.startup.images/watch.svg",
-				"watched": "resources/mobile.startup.images/watched.svg",
 				"search-clear": "resources/mobile.startup.images/search/search-clear.svg",
 				"search-content": "resources/mobile.startup.images/search/search-content.svg"
 			}

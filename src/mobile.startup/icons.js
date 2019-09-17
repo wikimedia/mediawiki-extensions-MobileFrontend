@@ -98,7 +98,8 @@ module.exports = {
 	 */
 	watchIcon: function () {
 		return new this.Icon( {
-			name: 'watch',
+			name: 'star-base20',
+			glyphPrefix: 'wikimedia',
 			additionalClassNames: 'watch-this-article'
 		} );
 	},
@@ -111,7 +112,8 @@ module.exports = {
 	 */
 	watchedIcon: function () {
 		return new this.Icon( {
-			name: 'watched',
+			name: 'unStar-progressive',
+			glyphPrefix: 'wikimedia',
 			additionalClassNames: 'watch-this-article watched'
 		} );
 	}

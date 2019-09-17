@@ -41,7 +41,8 @@ QUnit.module( 'MobileFrontend mobile.startup/WatchstarPageList', {
 		Icon = require( '../../../../src/mobile.startup/Icon' );
 
 		watchIconName = new Icon( {
-			name: 'watched'
+			glyphPrefix: 'wikimedia',
+			name: 'unStar-progressive'
 		} ).getGlyphClassName();
 		sandbox.stub( user, 'isAnon' ).returns( false );
 	},

@@ -50,7 +50,8 @@ QUnit.test( 'In watched mode', function ( assert ) {
 			]
 		} ),
 		watchIconName = new Icon( {
-			name: 'watched'
+			glyphPrefix: 'wikimedia',
+			name: 'unStar-progressive'
 		} ).getGlyphClassName();
 
 	// Avoid API requests due to scroll events (https://phabricator.wikimedia.org/T116258)
