@@ -2,13 +2,24 @@ const
 	m = require( '../moduleLoaderSingleton' ),
 	toast = require( '../toast' ),
 	promoCampaign = require( '../promoCampaign/promoCampaign' ),
-	currentPage = require( '../currentPage' ),
 	// MW constants should be kept in sync with onMakeGlobalVariableScript() from
 	// MobileFrontendHooks.php
 	MW_CONFIG_CAMPAIGN_ACTIVE_NAME = 'wgMFAmcOutreachActive',
 	MW_CONFIG_USER_ELIGIBLE_NAME = 'wgMFAmcOutreachUserEligible',
+	// This object contains arbitrary actions that are meant to only be shown one
+	// time at most. Each action is either 'eligible' or 'ineligible' at any given
+	// time.
+	//
+	// When a new action is desired, it should be added to this object.
+	//
+	// In other languages, this would be an enum. However, because JS doesn't
+	// support enums, the keys/value names are identical in an attempt to mimic
+	// some of their functionality. The names in this object are used by
+	// promoCampaign to mark when an action has become 'ineligible'.
 	ACTIONS = {
-		onLoad: 'onLoad'
+		onDesktopLink: 'onDesktopLink',
+		onHistoryLink: 'onHistoryLink',
+		onTalkLink: 'onTalkLink'
 	},
 	CAMPAIGN_NAME = 'amc-outreach';
 
@@ -25,16 +36,34 @@ module.exports = {
 		}
 
 		campaign = promoCampaign(
-			( action ) => {
+			/**
+			 * This callback is executed by promoCampaign's `showIfEligible` method.
+			 * promoCampaign will only execute it when an action is 'eligible'.
+			 *
+			 * @param {string} action Name of one of the actions in the ACTIONS
+			 * object. This is used by the drawer to notify promoCampaign when the
+			 * action has become 'ineligible' (e.g. after enabling or dismissing the
+			 * drawer).
+			 * @param {onBeforeHide} onBeforeHide Callback exected after user
+			 * dismisses drawer.
+			 * @param {string} returnToTitle Title of page to redirect to after user enables
+			 * AMC
+			 * @param {string} [returnToQuery] Optional query params to add to redirected
+			 * URL after user enables AMC. Can also include anchor (e.g.
+			 * `foo=bar#/Talk`
+			 */
+			( action, onBeforeHide, returnToTitle, returnToQuery ) => {
 				mw.loader.using( 'mobile.amcOutreachDrawer' ).then( () => {
 					const drawer = m.require( 'mobile.amcOutreachDrawer' ).amcOutreachDrawer(
 						action,
 						campaign,
 						mw.message,
 						mw.util,
-						currentPage(),
 						toast,
-						mw.user.tokens.get( 'csrfToken' )
+						mw.user.tokens.get( 'csrfToken' ),
+						onBeforeHide,
+						returnToTitle,
+						returnToQuery
 					);
 
 					drawer.show();

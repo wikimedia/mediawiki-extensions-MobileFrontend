@@ -63,7 +63,8 @@ module.exports = {
 	languageOverlay: require( './languageOverlay/languageOverlay' ),
 	mediaViewer: {
 		overlay: require( './mediaViewer/overlay' )
-	}
+	},
+	amcOutreach: require( './amcOutreach/amcOutreach' )
 };
 
 mw.mobileFrontend = moduleLoader;

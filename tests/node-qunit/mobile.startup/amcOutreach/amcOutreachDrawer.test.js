@@ -52,19 +52,19 @@ QUnit.test( 'returns a drawer', function ( assert ) {
 		{
 			getUrl: () => 'getUrl'
 		},
-		{
-			title: 'title'
-		},
 		this.toast,
-		'token'
+		'token',
+		() => {},
+		''
 	);
 
 	assert.strictEqual( subject instanceof Drawer, true, 'it initializes the correct class' );
 } );
 
-QUnit.test( 'calls promoCampaign.makeActionIneligible, toast.show when dismissed', function ( assert ) {
+QUnit.test( 'calls promoCampaign.makeActionIneligible and onBeforeHide callback when dismissed', function ( assert ) {
 	const
 		done = assert.async(),
+		onBeforeHide = sinon.stub(),
 		drawer = amcOutreachDrawer(
 			'onLoad',
 			this.promoCampaign,
@@ -77,15 +77,14 @@ QUnit.test( 'calls promoCampaign.makeActionIneligible, toast.show when dismissed
 			{
 				getUrl: () => 'getUrl'
 			},
-			{
-				title: 'title'
-			},
 			this.toast,
-			'token'
+			'token',
+			onBeforeHide,
+			''
 		);
 
 	assert.strictEqual( this.promoCampaign.makeActionIneligible.notCalled, true, 'not called before dismissal' );
-	assert.strictEqual( this.toast.show.notCalled, true, 'not called before dismissal' );
+	assert.strictEqual( onBeforeHide.notCalled, true, 'onBeforeHide not called before dismissal' );
 	drawer.$el.find( '.cancel' ).first().trigger( 'click' );
 
 	// unfortunately, since Drawer's hide method is async, we need this test to be
@@ -93,13 +92,14 @@ QUnit.test( 'calls promoCampaign.makeActionIneligible, toast.show when dismissed
 	setTimeout( () => {
 		assert.strictEqual( this.promoCampaign.makeActionIneligible.calledWith(
 			'onLoad' ), true, 'promoCampaign.makeActionIneligible after dismissal' );
-		assert.strictEqual( this.toast.show.called, true, 'toast called after dismissal' );
+		assert.strictEqual( onBeforeHide.called, true, 'onBeforeHide called after dismissal' );
 		done();
 	}, Drawer.prototype.minHideDelay );
 } );
 
 QUnit.test( 'calls promoCampaign.makeActionIneligible and toast.showOnPageReload when user enables', function ( assert ) {
 	const
+		onBeforeHide = sinon.stub(),
 		drawer = amcOutreachDrawer(
 			'onLoad',
 			this.promoCampaign,
@@ -112,11 +112,10 @@ QUnit.test( 'calls promoCampaign.makeActionIneligible and toast.showOnPageReload
 			{
 				getUrl: () => 'getUrl'
 			},
-			{
-				title: 'title'
-			},
 			this.toast,
-			'token'
+			'token',
+			onBeforeHide,
+			''
 		);
 
 	assert.strictEqual( this.promoCampaign.makeActionIneligible.notCalled, true,
@@ -130,4 +129,6 @@ QUnit.test( 'calls promoCampaign.makeActionIneligible and toast.showOnPageReload
 
 	assert.strictEqual( this.toast.showOnPageReload.called, true,
 		'toast.showOnPageReload called on form submission' );
+	assert.strictEqual( onBeforeHide.notCalled, true,
+		'onBeforeHide not called on form submission' );
 } );

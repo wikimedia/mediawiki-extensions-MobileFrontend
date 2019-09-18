@@ -16,13 +16,14 @@ storiesOf( 'amc' )
 				},
 				mw.message,
 				mw.util,
-				{},
 				// toast
 				{
 					showOnPageReload: action( 'showOnPageReload' ),
 					show: action( 'show' )
 				},
-				'blah'
+				'csrfToken',
+				action( 'onBeforeHide' ),
+				'title'
 			);
 			drawer.show();
 			return drawer.$el[0];

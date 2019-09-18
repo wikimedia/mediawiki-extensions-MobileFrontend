@@ -8,13 +8,24 @@ const
 	AMC_ENABLE_FIELD_VALUE = '1';
 
 /**
- * @param {string} action
+ * Callback intended to allow the client run extra logic (e.g. show a modal)
+ * after the drawer is dismissed.
+ * @callback onBeforeHide
+ */
+
+/**
+ * @param {string} action Used by the drawer to notify promoCampaign when the
+ * action has become 'ineligible' (e.g. after enabling or dismissing the drawer).
  * @param {PromoCampaign} promoCampaign
  * @param {mw.message} mwMessage Used for i18n
  * @param {mw.util} mwUtil Used to determine POST url for the enable form
- * @param {Page} currentPage Used to determine what page to redirect to after form submission
  * @param {Toast} toast Displays success message after user submits enable form
- * @param {string} editToken Used as a CSRF token
+ * @param {string} csrfToken
+ * @param {onBeforeHide} onBeforeHide
+ * @param {string} returnToTitle Title to redirect to after user enables
+ * AMC
+ * @param {string} [returnToQuery] Optional query params to add to redirected
+ * URL after user enables AMC
  * @return {Drawer} Returns the drawer that is shown
  */
 function amcOutreachDrawer(
@@ -22,9 +33,11 @@ function amcOutreachDrawer(
 	promoCampaign,
 	mwMessage,
 	mwUtil,
-	currentPage,
 	toast,
-	editToken
+	csrfToken,
+	onBeforeHide,
+	returnToTitle,
+	returnToQuery
 ) {
 	return new Drawer( {
 		className: 'amc-outreach-drawer',
@@ -41,7 +54,8 @@ function amcOutreachDrawer(
 			),
 			new AmcEnableForm( {
 				postUrl: mwUtil.getUrl( 'Special:MobileOptions', {
-					returnto: currentPage.title
+					returnto: returnToTitle,
+					returntoquery: returnToQuery || ''
 				} ),
 				fields: [
 					{
@@ -54,7 +68,7 @@ function amcOutreachDrawer(
 					},
 					{
 						name: 'token',
-						value: editToken
+						value: csrfToken
 					}
 				],
 				buttonLabel: mwMessage( 'mobile-frontend-amc-outreach-enable' ).text(),
@@ -74,7 +88,7 @@ function amcOutreachDrawer(
 		],
 		onBeforeHide: () => {
 			promoCampaign.makeActionIneligible( action );
-			toast.show( mwMessage( 'mobile-frontend-amc-outreach-dismissed-message' ).text() );
+			onBeforeHide();
 		}
 	} );
 }

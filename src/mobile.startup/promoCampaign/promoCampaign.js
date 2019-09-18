@@ -9,20 +9,25 @@
 /**
  * Creates a campaign that makes showing promo drawers, modals, etc that should
  * only be shown once (using localStorage) per action (when page loads, when
- * user clicks on a link, etc) easier. The campaign executes a given
- * callback (e.g. showing a drawer or modal) for a specific action only when it
- * is eligible. A campaign can contain multiple arbitrary actions. The client
- * is responsible for calling this when an action should be deemed ineligible
- * via the exported `makeActionIneligible` and `makeAllActionsIneligible`
- * methods.
+ * user clicks on a link, etc) easier. The campaign executes a given callback
+ * (e.g. showing a drawer or modal) for a specific action only when it is
+ * eligible. A campaign can have multiple arbitrary actions via the supplied
+ * `actions` object. An action is either 'eligible' or 'ineligible' at any given
+ * time. If `ineligible`, the `showIfEligible` will not execute the `onShow`
+ * callback.
  *
  * @param {Function} onShow A callback intended to show something related to the
  * campaign (drawer, modal, etc) when executed. The callback will only execute
  * after the client calls `showIfEligible` and only if the passed in action is
- * eligible
- * @param {Object} actions Object of arbitrary actions (onPageLoad,
- * onHistoryLinkClick). For each action, the key and value should be the same
- * (e.g. "onLoad":"onLoad").
+ * 'eligible'.
+ * @param {Object} actions Object of arbitrary actions that are intended to be
+ * either "eligible" or "ineligible" at any given time (onPageLoad,
+ * onHistoryLinkClick). The `onShow` callback will only be executed when an
+ * action is 'eligible'. For each action, the key and value should be the same
+ * (e.g. "onLoad":"onLoad") to mimic an enum. The client is responsible for
+ * notifying when each action becomes "ineligible" by calling the
+ * `makeActionIneligible` method. All actions can be marked as ineligible by
+ * calling the `makeAllActionsIneligible` method.
  * @param {string} campaignName Name of campaign. This is only used to form part
  * of the localStorage key for each action.
  * @param {boolean} campaignActive Is campaign active
@@ -86,15 +91,20 @@ function createPromoCampaign(
 		/**
 		 * @param {string} action Should be one of the values in the
 		 * actions param
+		 * @param {...*} [args] Args to pass to the onShow callback
 		 * @throws {Error} Throws an error if action is not valid.
+		 * @return {boolean} Returns `true` if drawer is eligible to be shown and
+		 * `false` if not eligible.
 		 */
-		showIfEligible: function ( action ) {
+		showIfEligible: function ( action, ...args ) {
 			if ( !isActionEligible( action ) ) {
 				// If not eligible, there is no sense in continuing.
-				return;
+				return false;
 			}
 
-			onShow( action );
+			onShow( action, ...args );
+
+			return true;
 		},
 		/**
 		 * @param {string} action
