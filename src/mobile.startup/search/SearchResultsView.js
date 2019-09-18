@@ -64,6 +64,7 @@ class SearchResultsView extends View {
 				// When this icon is clicked we want to reset the hash for subsequent views
 				href: '#',
 				name: 'search-content',
+				additionalClassNames: 'mw-ui-icon-flush-left',
 				label: mw.msg( 'mobile-frontend-search-content' )
 			} ).$el
 		);
