@@ -429,13 +429,15 @@ function init( currentPage, currentPageHTMLParser, skin, router ) {
 			showLoginDrawer( router );
 		} else {
 			editErrorMessage = isReadOnly ? mw.msg( 'apierror-readonly' ) : mw.msg( 'mobile-frontend-editor-disabled' );
-			showSorryToast( editErrorMessage );
+			showSorryToast( editErrorMessage, router );
 		}
 	}
 }
 
 /**
- * Show a toast message with sincere condolences.
+ * Wire up events that ensure we
+ * show a toast message with sincere condolences when user navigates to
+ * #/editor or clicks on an edit button
  * @method
  * @ignore
  * @param {string} msg Message for sorry message
