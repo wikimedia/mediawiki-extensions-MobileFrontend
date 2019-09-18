@@ -1,7 +1,7 @@
 const
-	Drawer = require( '../mobile.startup/Drawer' ),
-	Anchor = require( '../mobile.startup/Anchor' ),
-	util = require( '../mobile.startup/util' ),
+	Drawer = require( '../Drawer' ),
+	Anchor = require( '../Anchor' ),
+	util = require( '../util' ),
 	AmcEnableForm = require( './AmcEnableForm' ),
 	// These constants should be kept in sync with SpecialMobileOptions.php
 	AMC_ENABLE_FIELD_NAME = 'enableAMC',

@@ -1,7 +1,7 @@
 const
-	m = require( '../moduleLoaderSingleton' ),
 	toast = require( '../toast' ),
 	promoCampaign = require( '../promoCampaign/promoCampaign' ),
+	amcOutreachDrawer = require( './amcOutreachDrawer' ),
 	// MW constants should be kept in sync with onMakeGlobalVariableScript() from
 	// MobileFrontendHooks.php
 	MW_CONFIG_CAMPAIGN_ACTIVE_NAME = 'wgMFAmcOutreachActive',
@@ -53,21 +53,17 @@ module.exports = {
 			 * `foo=bar#/Talk`
 			 */
 			( action, onBeforeHide, returnToTitle, returnToQuery ) => {
-				mw.loader.using( 'mobile.amcOutreachDrawer' ).then( () => {
-					const drawer = m.require( 'mobile.amcOutreachDrawer' ).amcOutreachDrawer(
-						action,
-						campaign,
-						mw.message,
-						mw.util,
-						toast,
-						mw.user.tokens.get( 'csrfToken' ),
-						onBeforeHide,
-						returnToTitle,
-						returnToQuery
-					);
-
-					drawer.show();
-				} );
+				amcOutreachDrawer(
+					action,
+					campaign,
+					mw.message,
+					mw.util,
+					toast,
+					mw.user.tokens.get( 'csrfToken' ),
+					onBeforeHide,
+					returnToTitle,
+					returnToQuery
+				).show();
 			},
 			ACTIONS,
 			CAMPAIGN_NAME,

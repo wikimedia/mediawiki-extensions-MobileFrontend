@@ -18,7 +18,7 @@ QUnit.module( 'MobileFrontend amcOutreachDrawer.js', {
 		mediaWiki.setUp( sandbox, global );
 		mustache.setUp( sandbox, global );
 
-		amcOutreachDrawer = require( '../../../../src/mobile.amcOutreachDrawer/amcOutreachDrawer' );
+		amcOutreachDrawer = require( '../../../../src/mobile.startup/amcOutreach/amcOutreachDrawer' );
 		Drawer = require( '../../../../src/mobile.startup/Drawer' );
 
 		// jsdom will throw "Not implemented" errors if we don't stub

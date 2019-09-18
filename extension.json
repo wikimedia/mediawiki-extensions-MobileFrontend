@@ -125,7 +125,7 @@
 				"mw-ui-icon-mf-spinner:before": "resources/mobile.placeholder.images/ajax-loader.gif",
 				"list-thumb-none": "resources/mobile.placeholder.images/noimage.svg",
 				"userpage-image-placeholder": "resources/mobile.placeholder.images/userpage.svg",
-				"amc-outreach-image": "resources/mobile.amcOutreachDrawer/amc-outreach.svg",
+				"amc-outreach-image": "resources/mobile.startup/amcOutreach/amc-outreach.svg",
 				"mf-nearby-image-info": "resources/mobile.placeholder.images/nearby-article-illustration.svg"
 			}
 		},
@@ -311,10 +311,17 @@
 				"mobile-frontend-search-content-no-results",
 				"mobile-frontend-search-feedback-prompt",
 				"mobile-frontend-search-feedback-link-text",
-				"mobile-frontend-language-heading"
+				"mobile-frontend-language-heading",
+				"mobile-frontend-amc-outreach-intro",
+				"mobile-frontend-amc-outreach-description",
+				"mobile-frontend-amc-outreach-enable",
+				"mobile-frontend-amc-outreach-no-thanks",
+				"mobile-frontend-amc-outreach-enabled-message",
+				"mobile-frontend-amc-outreach-dismissed-message"
 			],
 			"styles": [
-				"resources/mobile.startup/mobile.startup.less"
+				"resources/mobile.startup/mobile.startup.less",
+				"resources/mobile.startup/amcOutreach/amcOutreachDrawer.less"
 			],
 			"skinStyles": {
 				"vector": "skinStyles/mobile.startup/vector.less"
@@ -323,30 +330,6 @@
 				"resources/dist/mobile.startup.runtime.js",
 				"resources/dist/mobile.common.js",
 				"resources/dist/mobile.startup.js"
-			]
-		},
-		"mobile.amcOutreachDrawer": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"dependencies": [
-				"mobile.startup",
-				"mobile.placeholder.images"
-			],
-			"styles": [
-				"resources/mobile.amcOutreachDrawer/amcOutreachDrawer.less"
-			],
-			"scripts": [
-				"resources/dist/mobile.amcOutreachDrawer.js"
-			],
-			"messages": [
-				"mobile-frontend-amc-outreach-intro",
-				"mobile-frontend-amc-outreach-description",
-				"mobile-frontend-amc-outreach-enable",
-				"mobile-frontend-amc-outreach-no-thanks",
-				"mobile-frontend-amc-outreach-enabled-message",
-				"mobile-frontend-amc-outreach-dismissed-message"
 			]
 		},
 		"mobile.editor.overlay": {

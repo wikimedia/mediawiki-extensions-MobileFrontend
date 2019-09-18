@@ -1,14 +1,14 @@
 let
 	AmcEnableForm,
 	sandbox,
-	jQuery = require( '../utils/jQuery' ),
-	dom = require( '../utils/dom' ),
-	oo = require( '../utils/oo' ),
-	mediaWiki = require( '../utils/mw' ),
-	mustache = require( '../utils/mustache' ),
+	jQuery = require( '../../utils/jQuery' ),
+	dom = require( '../../utils/dom' ),
+	oo = require( '../../utils/oo' ),
+	mediaWiki = require( '../../utils/mw' ),
+	mustache = require( '../../utils/mustache' ),
 	sinon = require( 'sinon' );
 
-QUnit.module( 'MobileFrontend mobile.amcOutreachDrawer/AmcEnableForm.js', {
+QUnit.module( 'MobileFrontend amcOutreach/AmcEnableForm.js', {
 	beforeEach: function () {
 		sandbox = sinon.sandbox.create();
 		dom.setUp( sandbox, global );
@@ -17,7 +17,7 @@ QUnit.module( 'MobileFrontend mobile.amcOutreachDrawer/AmcEnableForm.js', {
 		mediaWiki.setUp( sandbox, global );
 		mustache.setUp( sandbox, global );
 
-		AmcEnableForm = require( '../../../src/mobile.amcOutreachDrawer/AmcEnableForm' );
+		AmcEnableForm = require( '../../../../src/mobile.startup/amcOutreach/AmcEnableForm' );
 	},
 	afterEach: function () {
 		jQuery.tearDown();

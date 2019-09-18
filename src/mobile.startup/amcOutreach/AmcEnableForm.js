@@ -1,7 +1,7 @@
 const
-	Button = require( '../mobile.startup/Button' ),
-	util = require( '../mobile.startup/util' ),
-	View = require( '../mobile.startup/View' );
+	Button = require( '../Button' ),
+	util = require( '../util' ),
+	View = require( '../View' );
 
 /**
  * @typedef {Object} FormField
