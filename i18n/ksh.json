@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Geitost",
-			"Purodha"
+			"Purodha",
+			"Matma Rex"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ov ene Metmaacher övver de mobihle Schnettschtäll Änderonge aam Maache es udder nit.",
@@ -39,7 +40,7 @@
 	"mobile-frontend-editor-abusefilter-read-more": "Mih lässe",
 	"mobile-frontend-editor-abusefilter-warning": "Opjepaß: Wells De heh di Änderong verhaftesch afschpeijschere? Mer ha doh jät jefonge.",
 	"mobile-frontend-editor-anon": "Donn ändere, der ohne ennzelogge",
-	"mobile-frontend-editor-anonwarning": "'''Opjepaß:''' Weil De nit enjelogg bes, weed Ding <i lang=\"en\" xml:lang=\"en\">IP</i>-Adräß faßjehallde wääde, wann De Änderonge mähß. Wann De\n[$1 '''enlogge''' deihs] udder [$2 '''desch aanmällds'''], dann wääde Ding Änderonge met Dingem Nahme als Metmaacher opjevöhrt, nävve ander johde Saache.",
+	"mobile-frontend-editor-anonwarning": "<strong>Opjepaß:</strong> Weil De nit enjelogg bes, weed Ding <i lang=\"en\" xml:lang=\"en\">IP</i>-Adräß faßjehallde wääde, wann De Änderonge mähß. Wann De <strong>enlogge</strong> deihs udder <strong>desch aanmällds</strong>, dann wääde Ding Änderonge met Dingem Nahme als Metmaacher opjevöhrt, nävve ander johde Saache.",
 	"mobile-frontend-editor-cancel": "Ophüre",
 	"mobile-frontend-editor-cancel-confirm": "Wells De Ding Änderonge verhaftesch fottschmiiße?",
 	"mobile-frontend-editor-captcha-try-again": "Verkiehrt ennjejovve, versöhg et norr_ens.",

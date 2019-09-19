@@ -9,7 +9,8 @@
 			"Ex13",
 			"Ivi104",
 			"Bugoslav",
-			"Srdjan m"
+			"Srdjan m",
+			"Matma Rex"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Uređuje li suradnik preko mobilnoga sučelja?",
@@ -52,7 +53,7 @@
 	"mobile-frontend-editor-abusefilter-read-more": "Pročitajte više",
 	"mobile-frontend-editor-abusefilter-warning": "Upozorenje: možda postoji problem s ovim uređivanjem, želite li ga spremiti?",
 	"mobile-frontend-editor-anon": "Uređivanje bez prijave",
-	"mobile-frontend-editor-anonwarning": "'''Upozorenje''': niste prijavljeni. Vaša IP adresa će biti javno vidljiva u Vašim uređivanjima. Ako se '''prijavite''' ili '''stvorite suradnički račun''', Vaša uređivanja će biti pod suradničkim imenom, zajedno s ostalim pogodnostima.",
+	"mobile-frontend-editor-anonwarning": "<strong>Upozorenje</strong>: niste prijavljeni. Vaša IP adresa će biti javno vidljiva u Vašim uređivanjima. Ako se <strong>prijavite</strong> ili <strong>stvorite suradnički račun</strong>, Vaša uređivanja će biti pod suradničkim imenom, zajedno s ostalim pogodnostima.",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Blokirao|Blokirala}} Vas je",
 	"mobile-frontend-editor-cancel": "Odustani",
 	"mobile-frontend-editor-cancel-confirm": "Želite li zaista odbaciti svoje izmjene?",

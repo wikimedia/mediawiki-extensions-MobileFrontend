@@ -71,7 +71,7 @@
 	"mobile-frontend-editor-editing-page": "<span> <strong>$1</strong>سنواريندي</span>",
 	"mobile-frontend-editor-error": "چُڪَ، سنار محفوظ نہ سانڍجي.",
 	"mobile-frontend-editor-error-conflict": "چُڪَ، ھن صفحي کي ٻي واپرائيندڙ سنواريو آھي.",
-	"mobile-frontend-editor-error-loading": "چُڪَ، ڀاڱو نہ لھي سگھيو.",
+	"mobile-frontend-editor-error-loading": "چُڪَ، سنوارگاھ نہ لھي سگھي",
 	"mobile-frontend-editor-error-preview": "چُڪَ، پيش-نگاھ لاھڻ دوران ڪجھ غيرمتوقع ٿيو. مھرباني ڪري بند ڪري ٻيھر ڪوشش ڪريو.",
 	"mobile-frontend-editor-keep-editing": "سنواريندا رهو",
 	"mobile-frontend-editor-licensing": "تبديليون سانڍڻ سان، توھان پنھنجون ڀاڱيداريون $1 {{PLURAL:$2|اجازتنامي|اجازتنامن}} ھيٺ جاري ڪرڻ لاءِ راضي آھيو.",

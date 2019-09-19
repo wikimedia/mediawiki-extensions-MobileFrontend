@@ -37,7 +37,7 @@
 	"mobile-frontend-editor-editing-page": "<span><strong>Modification</strong> de<span> $1</span>",
 	"mobile-frontend-editor-error": "Error. Modification non salveguardate.",
 	"mobile-frontend-editor-error-conflict": "Error. Un altere usator ha modificate iste pagina.",
-	"mobile-frontend-editor-error-loading": "Error. Non pote cargar section.",
+	"mobile-frontend-editor-error-loading": "Error. Non pote cargar le editor.",
 	"mobile-frontend-editor-error-preview": "Error. Un problema ha occurrite durante le cargamento del previsualisation. Per favor claude lo e reproba.",
 	"mobile-frontend-editor-keep-editing": "Continuar a modificar",
 	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|Es tu secur de voler crear}} un nove pagina in {{SITENAME}}?",

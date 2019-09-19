@@ -110,7 +110,7 @@
 	"mobile-frontend-editor-editing-page": "<span><strong>Modification</strong> de<span> $1</span>",
 	"mobile-frontend-editor-error": "Erreur, la modification n'a pas été sauvegardée.",
 	"mobile-frontend-editor-error-conflict": "Erreur, un autre utilisateur a modifié cette page.",
-	"mobile-frontend-editor-error-loading": "Erreur, la section n'a pas pu être chargée.",
+	"mobile-frontend-editor-error-loading": "Erreur, l’éditeur n’a pas pu être chargé.",
 	"mobile-frontend-editor-error-preview": "Erreur, quelque chose d’inattendu s’est produit lors du chargement de l’aperçu. Veuillez fermer et réessayer.",
 	"mobile-frontend-editor-keep-editing": "Rester en modification",
 	"mobile-frontend-editor-licensing": "En enregistrant des modifications, vous acceptez de livrer votre contribution sous {{PLURAL:$2|la license|les licenses}} $1.",

@@ -82,7 +82,7 @@
 	"mobile-frontend-editor-editing-page": "<span><strong>עריכת</strong> $1</span>",
 	"mobile-frontend-editor-error": "שגיאה, העריכה לא נשמרה.",
 	"mobile-frontend-editor-error-conflict": "שגיאה, משתמש אחר ערך את הדף.",
-	"mobile-frontend-editor-error-loading": "שגיאה, לא ניתן לטעון את הפסקה.",
+	"mobile-frontend-editor-error-loading": "שגיאה, לא ניתן לטעון את העורך.",
 	"mobile-frontend-editor-error-preview": "שגיאה, קרה משהו בלתי־צפוי בעת ניסיון לטעון את התצוגה המקדימה. נא לסגור ולנסות שוב.",
 	"mobile-frontend-editor-keep-editing": "המשך עריכה",
 	"mobile-frontend-editor-licensing": "שמירת השינויים מהווה את הסכמתך לפרסום התרומה שלך לפי תנאי {{PLURAL:$2|רישיון|רישיונות}} $1.",

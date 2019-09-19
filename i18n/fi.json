@@ -83,7 +83,7 @@
 	"mobile-frontend-editor-editing-page": "<span><strong>Muokataan</strong> sivua $1</span>",
 	"mobile-frontend-editor-error": "Virhe. Muokkausta ei tallennettu.",
 	"mobile-frontend-editor-error-conflict": "Virhe. Toinen käyttäjä on muokannut tätä sivua.",
-	"mobile-frontend-editor-error-loading": "Virhe. Osiota ei voi ladata.",
+	"mobile-frontend-editor-error-loading": "Virhe. Muokkaimen lataus epäonnistui.",
 	"mobile-frontend-editor-error-preview": "Virhe. Jotain odottamatonta tapahtui ladattaessa esikatselua. Sulje ja yritä uudelleen.",
 	"mobile-frontend-editor-keep-editing": "Jatka muokkaamista",
 	"mobile-frontend-editor-licensing": "Tallentamalla muokkaukset hyväksyt julkaisemisen $1 {{PLURAL:$2|-lisenssillä|-lisensseillä}}.",

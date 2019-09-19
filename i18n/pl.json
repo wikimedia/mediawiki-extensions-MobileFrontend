@@ -101,7 +101,7 @@
 	"mobile-frontend-editor-editing-page": "<span><strong>Edycja</strong> $1</span>",
 	"mobile-frontend-editor-error": "Błąd, zmiany nie zostały zapisane.",
 	"mobile-frontend-editor-error-conflict": "Błąd, inny użytkownik w międzyczasie edytował tę stronę.",
-	"mobile-frontend-editor-error-loading": "Błąd, nie udało się załadować sekcji.",
+	"mobile-frontend-editor-error-loading": "Błąd, nie udało się załadować edytora.",
 	"mobile-frontend-editor-error-preview": "Błąd, coś niespodziewanego stało się podczas ładowania podglądu. Proszę zamknąć i spróbować ponownie.",
 	"mobile-frontend-editor-keep-editing": "Wróć do edytowania",
 	"mobile-frontend-editor-licensing": "Zapisując zmiany, zgadzasz się na udostępnianie Twojego wkładu na {{PLURAL:$2|licencji|licencjach}} $1.",

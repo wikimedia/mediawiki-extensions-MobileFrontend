@@ -93,7 +93,7 @@
 	"mobile-frontend-editor-editing-page": "<span><strong>تعديل</strong> $1</span>",
 	"mobile-frontend-editor-error": "خطأ، لم يحفظ التعديل.",
 	"mobile-frontend-editor-error-conflict": "خطأ، عدل مستخدم آخر هذه الصفحة.",
-	"mobile-frontend-editor-error-loading": "خطأ، تعذر تحميل القسم.",
+	"mobile-frontend-editor-error-loading": "خطأ، تعذر تحميل المحرر.",
 	"mobile-frontend-editor-error-preview": "خطأ، حدث شيء غير متوقع أثناء تحميل المعاينة. أغلق الصفحة رجاءً واحفظ مجددا.",
 	"mobile-frontend-editor-keep-editing": "تابع التحرير",
 	"mobile-frontend-editor-licensing": "عندما تحفظ تعديلاتك أنت توافق ضمنًا على طرح مساهمتك بموجب {{PLURAL:$2|رخصة|رخص}} $1.",
