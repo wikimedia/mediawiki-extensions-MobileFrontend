@@ -84,7 +84,9 @@ mfExtend( Skin, View, {
 		 * Fired when the skin is clicked.
 		 * @event Skin#click
 		 */
-		this.$el.find( '#mw-mf-page-center' ).on( 'click', this.emit.bind( this, 'click' ) );
+		this.$el.find( '#mw-mf-page-center' ).on( 'click', ( ev ) => {
+			this.emit( 'click', ev );
+		} );
 	},
 
 	/**
