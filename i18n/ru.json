@@ -114,7 +114,7 @@
 	"mobile-frontend-editor-editing-page": "<span><strong>Редактирование</strong> $1</span>",
 	"mobile-frontend-editor-error": "Ошибка — правка не была сохранена.",
 	"mobile-frontend-editor-error-conflict": "Ошибка: Другой пользователь отредактировал эту страницу.",
-	"mobile-frontend-editor-error-loading": "Ошибка: Не удаётся загрузить раздел.",
+	"mobile-frontend-editor-error-loading": "Ошибка: Не удаётся загрузить редактор.",
 	"mobile-frontend-editor-error-preview": "Ошибка — что-то неожиданное произошло после загрузки предпросмотра. Закройте и повторите попытку.",
 	"mobile-frontend-editor-keep-editing": "Продолжить редактирование",
 	"mobile-frontend-editor-licensing": "Сохраняя изменения, вы соглашаетесь разместить ваш вклад под {{PLURAL:$2|1=лицензией|лицензиями}} $1.",

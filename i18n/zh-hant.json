@@ -29,7 +29,8 @@
 			"Assoc",
 			"Hello903hello",
 			"Sanmosa",
-			"Sean"
+			"Sean",
+			"Winston Sung"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "使用者是否透過手機版編輯",
@@ -94,7 +95,7 @@
 	"mobile-frontend-editor-editing-page": "<span><strong>正在編輯</strong> $1</span>",
 	"mobile-frontend-editor-error": "錯誤，編輯尚未儲存。",
 	"mobile-frontend-editor-error-conflict": "錯誤，其他使用者已編輯此頁面。",
-	"mobile-frontend-editor-error-loading": "錯誤，無法讀取章節。",
+	"mobile-frontend-editor-error-loading": "錯誤，無法載入編輯器。",
 	"mobile-frontend-editor-error-preview": "錯誤，讀取預覽頁面時發生不明錯誤。請關閉後再試。",
 	"mobile-frontend-editor-keep-editing": "繼續編輯",
 	"mobile-frontend-editor-licensing": "儲存變更，代表您同意以 $1 {{PLURAL:$2|授權條款}}發佈您的貢獻。",

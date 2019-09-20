@@ -84,7 +84,7 @@
 	"mobile-frontend-editor-editing-page": "<span><strong>Editace stránky</strong> $1</span>",
 	"mobile-frontend-editor-error": "Chyba, editace nebyla uložena.",
 	"mobile-frontend-editor-error-conflict": "Chyba, jiný uživatel mezitím tuto stránku upravil.",
-	"mobile-frontend-editor-error-loading": "Chyba, nelze načíst sekci.",
+	"mobile-frontend-editor-error-loading": "Chyba, nelze načíst editor.",
 	"mobile-frontend-editor-error-preview": "Chyba, při načítání náhledu se stalo něco neočekávaného. Zavřete a zkuste to znovu.",
 	"mobile-frontend-editor-keep-editing": "Pokračovat v editaci",
 	"mobile-frontend-editor-licensing": "Uložením změn souhlasíte s uvolněním svého příspěvku za podmínek {{PLURAL:$2|licence|licencí}} $1.",

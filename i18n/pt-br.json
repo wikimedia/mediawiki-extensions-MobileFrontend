@@ -87,7 +87,7 @@
 	"mobile-frontend-editor-editing-page": "<span><strong>Editando</strong> $1</span>",
 	"mobile-frontend-editor-error": "Erro, edição não salva.",
 	"mobile-frontend-editor-error-conflict": "Erro, outro usuário editou esta página.",
-	"mobile-frontend-editor-error-loading": "Erro, não foi possível carregar seção.",
+	"mobile-frontend-editor-error-loading": "Erro, não foi possível carregar edição.",
 	"mobile-frontend-editor-error-preview": "Erro, algo inexperado aconteceu ao carregar pré-visualização. Por favor feche e tente novamente.",
 	"mobile-frontend-editor-keep-editing": "Continuar editando",
 	"mobile-frontend-editor-licensing": "Ao salvar as alterações, você concorda em divulgar sua contribuição sob {{PLURAL:$2|a licença|as licenças}} $1.",

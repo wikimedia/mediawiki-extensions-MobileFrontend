@@ -90,7 +90,7 @@
 	"mobile-frontend-editor-editing-page": "<strong>Modifica</strong><span> $1</span>",
 	"mobile-frontend-editor-error": "Errore, modifica non salvata.",
 	"mobile-frontend-editor-error-conflict": "Errore, un altro utente ha modificato questa pagina.",
-	"mobile-frontend-editor-error-loading": "Errore, impossibile caricare la sezione.",
+	"mobile-frontend-editor-error-loading": "Errore, impossibile caricare l'editor.",
 	"mobile-frontend-editor-error-preview": "Errore, qualcosa di inaspettato è accaduto durante il caricamento dell'anteprima. Per favore chiudi e prova di nuovo.",
 	"mobile-frontend-editor-keep-editing": "Continua a modificare",
 	"mobile-frontend-editor-licensing": "Salvando le modifiche, accetti di rilasciare il tuo testo in base {{PLURAL:$2|alla licenza|alle licenze}} $1.",
