@@ -34,7 +34,7 @@ module.exports = {
 						mw.util,
 						currentPage(),
 						toast,
-						mw.user.tokens.get( 'editToken' )
+						mw.user.tokens.get( 'csrfToken' )
 					);
 
 					drawer.show();

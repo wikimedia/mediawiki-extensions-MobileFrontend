@@ -72,7 +72,7 @@ class BetaOptInPanel extends View {
 			View.prototype.defaults,
 			{
 				postUrl: undefined,
-				editToken: user.tokens.get( 'editToken' ),
+				editToken: user.tokens.get( 'csrfToken' ),
 				text: mw.msg( 'mobile-frontend-panel-betaoptin-msg' ),
 				buttons: [
 					new Button( {
