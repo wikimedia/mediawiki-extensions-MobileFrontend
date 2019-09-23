@@ -86,7 +86,7 @@
 	"mobile-frontend-editor-editing-page": "<span>$1 を<strong>編集中</strong></span>",
 	"mobile-frontend-editor-error": "エラー: 編集内容を保存できません。",
 	"mobile-frontend-editor-error-conflict": "エラー: 別の利用者がこのページを編集しました。",
-	"mobile-frontend-editor-error-loading": "エラー: 節を読み込めません。",
+	"mobile-frontend-editor-error-loading": "エラー: エディタを読み込めません。",
 	"mobile-frontend-editor-error-preview": "プレビューを読み込む際に予期しないエラーが発生しました。閉じてもう一度お試しください。",
 	"mobile-frontend-editor-keep-editing": "編集を続行",
 	"mobile-frontend-editor-licensing": "変更内容を保存すると、自分の投稿内容を $1 {{PLURAL:$2|ライセンス}}のもとで公開することに同意したと見なされます。",

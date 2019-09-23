@@ -23,6 +23,7 @@
 	"mobile-frontend-categories-search": "Traži kategorije",
 	"mobile-frontend-categories-nodata": "Došlo je do greške. Jeste li dodali kategorije koje treba sačuvati?",
 	"mobile-frontend-categories-summary": "Dodane kategorije",
+	"mobile-frontend-categories-notification": "Kategorije su ažurirane.",
 	"mobile-frontend-categories-add-heading": "<strong>Dodaj stranicu<span> $1</span> u nove kategorije</strong>",
 	"mobile-frontend-categories-add-wait": "Čuvanje kategorija; molimo, sačekajte.",
 	"mobile-frontend-categories-normal": "Sadržinske",
@@ -217,6 +218,7 @@
 	"nearby": "Stranice o temama u Vašoj blizini",
 	"tag-mobile_edit": "mobilno uređivanje",
 	"tag-mobile_edit-description": "Izmjena načinjena s mobilnog uređaja (putem weba ili aplikacije)",
+	"tag-advanced_mobile_edit": "napredna mobilna izmjena",
 	"tag-mobile_web_edit": "mobilno veb-uređivanje",
 	"tag-mobile_web_edit-description": "Izmjena načinjena s mobilne verzije web-sajta",
 	"mobile-frontend-loading-message": "Učitavam…",
@@ -231,5 +233,8 @@
 	"mobile-frontend-mobile-option-amc": "Napredni režim",
 	"mobile-frontend-mobile-option-amc-experiment-description": "Aktivno radimo na novim mogućnostima za napredne korisnike. Uključivanjem ovog režima automatski će te dobiti sve nove mogućnosti čim izađu. Voljeli bismo čuti šta o njima mislite.",
 	"mobile-frontend-mobile-option-amc-learn-more": "Detaljnije",
-	"mobile-frontend-mobile-option-amc-send-feedback": "Komentiraj"
+	"mobile-frontend-mobile-option-amc-send-feedback": "Komentiraj",
+	"mobile-frontend-amc-outreach-intro": "Predstavljamo napredni režim",
+	"mobile-frontend-amc-outreach-enable": "Uključi napredni režim",
+	"mobile-frontend-amc-outreach-no-thanks": "Ne, hvala"
 }

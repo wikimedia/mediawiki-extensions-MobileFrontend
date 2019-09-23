@@ -39,7 +39,7 @@
 	"mobile-frontend-editor-disabled": "Stran je zaščitena zaradi preprečitve vandalizma.",
 	"mobile-frontend-editor-error": "Napaka, urejanje se ni shranilo.",
 	"mobile-frontend-editor-error-conflict": "Napaka, stran je urejal drug uporabnik.",
-	"mobile-frontend-editor-error-loading": "Napaka, ne morem naložiti razdelka.",
+	"mobile-frontend-editor-error-loading": "Napaka, ne morem naložiti urejevalnika.",
 	"mobile-frontend-editor-error-preview": "Napaka, ob nalaganju predogleda se je zgodilo nekaj nepričakovanega. Prosimo, zaprite stran in poskusite ponovno.",
 	"mobile-frontend-editor-keep-editing": "Nadaljnje urejanje",
 	"mobile-frontend-editor-placeholder": "Ta razdelek je prazen. Bodite prvi, ki ga bo razširil!",
