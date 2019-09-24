@@ -5,7 +5,8 @@
  */
 class MobileFormatterTest extends MediaWikiTestCase {
 	const TOC = '<div id="toc" class="toc-mobile"><h2>Contents</h2></div>';
-	const SECTION_INDICATOR = '<div class="mw-ui-icon mw-ui-icon-element indicator"></div>';
+	// phpcs:ignore Generic.Files.LineLength.TooLong
+	const SECTION_INDICATOR = '<div class="mw-ui-icon mw-ui-icon-element indicator mw-ui-icon-small mw-ui-icon-flush-left"></div>';
 	const HATNOTE_CLASSNAME = 'hatnote';
 	const INFOBOX_CLASSNAME = 'infobox';
 

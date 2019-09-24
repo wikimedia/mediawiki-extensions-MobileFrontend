@@ -377,7 +377,8 @@ class MobileFormatter extends HtmlFormatter {
 
 		// prepend indicator - this avoids a reflow by creating a placeholder for a toggling indicator
 		$indicator = $doc->createElement( 'div' );
-		$indicator->setAttribute( 'class', MobileUI::iconClass( '', 'element', 'indicator' ) );
+		$indicator->setAttribute( 'class', MobileUI::iconClass( '', 'element',
+			'indicator mw-ui-icon-small mw-ui-icon-flush-left' ) );
 		$heading->insertBefore( $indicator, $heading->firstChild );
 	}
 

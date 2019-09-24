@@ -4,7 +4,7 @@ var browser = require( './Browser' ).getSingleton(),
 	arrowOptions = {
 		name: 'expand',
 		isSmall: true,
-		additionalClassNames: 'indicator'
+		additionalClassNames: 'indicator mw-ui-icon-flush-left'
 	},
 	Icon = require( './Icon' );
 
