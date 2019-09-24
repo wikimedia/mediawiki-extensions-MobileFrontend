@@ -61,7 +61,7 @@
 	"mobile-frontend-editor-editing-page": "<span><strong>Ännere</strong> vu(n) $1</span>",
 	"mobile-frontend-editor-error": "Feeler, Ännerung net gespäichert.",
 	"mobile-frontend-editor-error-conflict": "Feeler, en anere Benotzer huet dës Säit geännert.",
-	"mobile-frontend-editor-error-loading": "Feeler, den Abschnitt kann net geluede ginn.",
+	"mobile-frontend-editor-error-loading": "Feeler, den Editeur kann net geluede ginn.",
 	"mobile-frontend-editor-keep-editing": "Virufuere mat Änneren",
 	"mobile-frontend-editor-licensing": "Duerch d'Späichere vun Ären Ännerunge sidd Dir mat der Publikatioun vun Ärem Beitrag ënner {{PLURAL:$2|der $1-Lizenz|der $1-Lizenzen}} d'accord.",
 	"mobile-frontend-editor-licensing-with-terms": "Duerch Späicher vun den Ännerunge sidd Dir mat de(n) $1 a mat der Publikatioun vun Ärem Beitrag ënner {{PLURAL:$3|der $2-Lizenz|der $2-Lizenzen}} d'accord.",

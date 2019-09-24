@@ -22,7 +22,8 @@
 			"Suyama",
 			"珍庵",
 			"Takot",
-			"Aefgh39622"
+			"Aefgh39622",
+			"Suchichi02"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "利用者が携帯機器版インターフェイスで編集しているかどうか",
@@ -72,7 +73,7 @@
 	"mobile-frontend-editor-blocked-drawer-title": "あなたのアカウントで {{SITENAME}} を編集することはブロックされています",
 	"mobile-frontend-editor-blocked-drawer-title-partial": "あなたはこのページの編集についてブロックされています。",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "ブロックの理由",
-	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|によってブロック}}されました:",
+	"mobile-frontend-editor-blocked-drawer-creator-header": "次の利用者{{GENDER:$1|によってブロック}}されました:",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "ブロックは次の期間まで継続されます:",
 	"mobile-frontend-editor-blocked-drawer-help": "詳細",
 	"mobile-frontend-editor-generic-block-reason": "不明な理由",
