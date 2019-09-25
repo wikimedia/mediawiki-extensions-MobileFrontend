@@ -37,15 +37,15 @@ function makeOnNestedReferenceClickHandler( onNestedReferenceClick ) {
  * @return {Drawer}
  */
 function referenceDrawer( props ) {
-	let containerClassName = props.error ? new Icon( {
+	const errorIcon = props.error ? new Icon( {
 		name: 'error',
-		hasText: true,
 		isSmall: true
-	} ).getClassName() : '';
+	} ).$el : null;
 	return new Drawer(
 		util.extend(
 			{
 				closeOnScroll: false,
+				showCollapseIcon: false,
 				className: 'drawer position-fixed text references-drawer',
 				events: {
 					'click sup': props.onNestedReferenceClick &&
@@ -58,20 +58,21 @@ function referenceDrawer( props ) {
 							new Icon( {
 								isSmall: true,
 								name: 'citation-invert',
-								additionalClassNames: 'references-drawer__title mw-ui-icon-flush-left',
-								hasText: true,
-								label: mw.msg( 'mobile-frontend-references-citation' )
+								modifier: ''
 							} ).$el,
+							util.parseHTML( '<span>' ).addClass( 'references-drawer__title' ).text( mw.msg( 'mobile-frontend-references-citation' ) ),
 							icons.cancel( 'gray', {
-								isSmall: true
+								isSmall: true,
+								modifier: 'mw-ui-icon-element mw-ui-icon-flush-right mw-ui-icon-flush-top'
 							} ).$el
 						] ),
-					util.parseHTML( '<div>' ).addClass( containerClassName ).append(
+					util.parseHTML( '<div>' ).append( [
+						errorIcon,
 						util.parseHTML( '<sup>' ).text( props.title ),
 						props.text ?
 							util.parseHTML( '<span>' ).html( props.text ) :
 							icons.spinner().$el
-					)
+					] )
 				]
 			},
 			props

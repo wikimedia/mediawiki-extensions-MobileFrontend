@@ -25,7 +25,8 @@ function Drawer( props ) {
 		util.extend(
 			{
 				closeOnScroll: true,
-				onBeforeHide: () => {}
+				onBeforeHide: () => {},
+				showCollapseIcon: true
 			},
 			props,
 			{ className: `drawer position-fixed ${props && props.className || ''}`.trim() },
@@ -135,8 +136,11 @@ mfExtend( Drawer, View, {
 	 * @instance
 	 */
 	postRender: function () {
-		// append the collapse icon at the top of the drawer
-		this.$el.prepend( collapseIcon.$el );
+
+		if ( this.options.showCollapseIcon ) {
+			// append the collapse icon at the top of the drawer
+			this.$el.prepend( collapseIcon.$el );
+		}
 
 		if ( this.options.children ) {
 			// append children

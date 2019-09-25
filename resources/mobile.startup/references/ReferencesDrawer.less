@@ -1,4 +1,5 @@
 @import '../../../mobile.less/mobile.variables.less';
+@import 'mediawiki.mixins';
 
 @drawerPadding: 20px;
 
@@ -18,13 +19,9 @@
 	}
 
 	.references-drawer__header {
-		padding-bottom: 20px;
-
-		&:after {
-			content: '';
-			display: table;
-			clear: both;
-		}
+		.flex-display();
+		align-items: center;
+		padding-bottom: @drawerPadding;
 	}
 
 	.references-drawer__title {
@@ -32,16 +29,9 @@
 		cursor: default;
 		letter-spacing: 0.2em;
 		font-size: 0.75em;
-		padding-top: 0.25em;
 		text-transform: uppercase;
-	}
-
-	.cancel {
-		@extraPadding: 1em;
-		cursor: pointer;
-		position: absolute;
-		right: 0.3em;
-		top: 0.3em;
+		margin-left: 1em;
+		flex-grow: 1;
 	}
 
 	.mw-cite-backlink {
