@@ -930,14 +930,18 @@
 		},
 		"MFEnableJSConsoleRecruitment": false,
 		"MFAlwaysUseContentProvider": false,
-		"MFMobileFormatterHeadings": [
-			"h1",
-			"h2",
-			"h3",
-			"h4",
-			"h5",
-			"h6"
-		],
+		"MFMobileFormatterOptions": {
+			"maxImages": 1000,
+			"maxHeadings": 4000,
+			"headings": [
+				"h1",
+				"h2",
+				"h3",
+				"h4",
+				"h5",
+				"h6"
+			]
+		},
 		"MFSpecialCaseMainPage": false,
 		"MFMobileHeader": "X-Subdomain",
 		"MFRemovableClasses": {
