@@ -401,9 +401,6 @@
 				"mobile-frontend-editor-switch-editor",
 				"mobile-frontend-editor-switch-visual-editor",
 				"mobile-frontend-editor-anonwarning",
-				"mobile-frontend-editor-abusefilter-warning",
-				"mobile-frontend-editor-abusefilter-disallow",
-				"mobile-frontend-editor-abusefilter-read-more",
 				"ok",
 				"mobile-frontend-editor-editing",
 				"mobile-frontend-editor-blocked-drawer-title",
@@ -414,8 +411,7 @@
 				"mobile-frontend-editor-blocked-drawer-help",
 				"mobile-frontend-editor-generic-block-reason",
 				"mobile-frontend-editor-viewing-source-page",
-				"mobile-frontend-editor-anon",
-				"apierror-readonly"
+				"mobile-frontend-editor-anon"
 			]
 		},
 		"mobile.editor.images": {

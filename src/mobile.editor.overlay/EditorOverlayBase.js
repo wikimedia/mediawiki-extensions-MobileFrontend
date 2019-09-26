@@ -278,10 +278,12 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 * should display error messages as appropriate.
 	 * @memberof EditorOverlayBase
 	 * @instance
-	 * @param {Object} data Details about the failure, from EditorGateway.parseSaveError
+	 * @param {Object} data API response
 	 */
 	onSaveFailure: function ( data ) {
-		var key = data && data.details && data.details.code,
+		var key = data && data.errors && data.errors[0] && data.errors[0].code,
+			// TODO: This looks incomplete and most of the error codes are wrong.
+			// Compare to ve.init.mw.ArticleTargetEvents.js in VisualEditor.
 			typeMap = {
 				editconflict: 'editConflict',
 				wasdeleted: 'editPageDeleted',
@@ -291,7 +293,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 				'titleblacklist-forbidden-edit': 'extensionTitleBlacklist'
 			};
 
-		if ( data.type === 'captcha' ) {
+		if ( data.edit && data.edit.captcha ) {
 			key = 'captcha';
 		}
 
@@ -305,14 +307,13 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 * Report load errors back to the user. Silently record the error using EventLogging.
 	 * @memberof EditorOverlayBase
 	 * @instance
-	 * @param {string} text Text of message to display to user
-	 * @param {string} heading heading text to display to user
+	 * @param {string} text Text (HTML) of message to display to user
 	 */
-	reportError: function ( text, heading ) {
+	reportError: function ( text ) {
 		var errorNotice = new MessageBox( {
 			className: 'errorbox',
 			msg: text,
-			heading: heading
+			heading: mw.msg( 'mobile-frontend-editor-error' )
 		} );
 		this.$errorNoticeContainer.html( errorNotice.$el );
 	},
@@ -327,6 +328,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 */
 	onStageChanges: function () {
 		this.showHidden( '.save-header, .save-panel' );
+		this.hideErrorNotice();
 		this.log( {
 			action: 'saveIntent'
 		} );
