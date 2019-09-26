@@ -75,6 +75,10 @@
  * prefer using a `:first-child` or `:last-child` selector.
  * The flush-left/right classes are appropriate when that's unavailable.
  */
+.mw-ui-icon-flush-top {
+	margin-top: -@icon-padding-md;
+}
+
 .mw-ui-icon-flush-left {
 	margin-left: -@icon-padding-md;
 }
@@ -104,8 +108,11 @@
 .mw-ui-icon-small {
 	width: @icon-size-sm;
 	height: @icon-size-sm;
-	padding: @icon-padding-sm;
 	line-height: @icon-size-sm;
+}
+
+.mw-ui-icon-small.mw-ui-icon-element {
+	padding: @icon-padding-sm;
 }
 
 .mw-ui-icon-small.mw-ui-icon-flush-left {
@@ -116,6 +123,12 @@
 	margin-right: -@icon-padding-sm;
 }
 
+.mw-ui-icon-small.mw-ui-icon-before:before {
+	min-width: @icon-size-sm;
+	min-height: @icon-size-sm;
+	margin-right: @icon-padding-sm;
+}
+
 .mw-ui-icon-before {
 	width: auto;
 	max-width: 100%;
@@ -124,12 +137,17 @@
 		.mixin-background-square();
 		// sizing
 		display: inline-block;
+		font-size: initial;
 		width: auto;
 		min-width: @icon-size-md;
 		min-height: @icon-size-md;
 
 		// alignment. Margin is added to separate accompanying text.
-		margin-right: 1em;
+		margin-right: @icon-padding-md;
+		vertical-align: middle;
+	}
+
+	span {
 		vertical-align: middle;
 	}
 }

@@ -9,13 +9,11 @@
 		top: @siteHeaderHeight;
 	}
 
-	.header {
-		height: @siteHeaderHeight;
-	}
+	@icon-height-halved: unit( ( @icon-touch-area-sm / 2 ) / @font-size-browser, em );
 
 	.clear {
 		position: absolute;
-		top: 0.5em;
+		top: ( @siteHeaderHeight / 2 ) - @icon-height-halved;
 		right: 0;
 	}
 }

@@ -63,5 +63,5 @@ export const fakeFailToSaveApi = makeFakeApi(
 export const blockedApi = makeFakeApi(
 	null,
 	null,
-	Promise.resolve( blockResponse )
+	() => Promise.resolve( blockResponse )
 );
