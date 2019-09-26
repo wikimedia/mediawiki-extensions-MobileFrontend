@@ -218,7 +218,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 			$bytesChanged = $this->rev->getSize();
 		}
 		$glyph = 'bytesChanged';
-		$bytesClassNames = 'meta mw-ui-icon-flush-left mw-ui-icon-small ';
+		$bytesClassNames = 'meta mw-ui-icon-small ';
 
 		if ( $bytesChanged > 0 ) {
 			$changeMsg = 'mobile-frontend-diffview-bytesadded';
