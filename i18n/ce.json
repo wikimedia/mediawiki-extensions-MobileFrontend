@@ -24,7 +24,6 @@
 	"mobile-frontend-donate-image-title-username": "Чуяьккхинарш: $1",
 	"mobile-frontend-edit-login-action": "<strong>ГӀодеша сайт дика ян {{SITENAME}}.</strong><br />Таян чугӀо.",
 	"mobile-frontend-edit-signup-action": "<strong>ГӀодеша сайт дика ян {{SITENAME}}.</strong><br />Тадарш дан дӀаяздар кхолла.",
-	"mobile-frontend-editor-abusefilter-read-more": "Еша ма-дарра",
 	"mobile-frontend-editor-anon": "Системин чу ца гӀош тае",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Блоктоьхна}}",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "Блоктохар чекхдолу",

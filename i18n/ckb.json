@@ -39,8 +39,6 @@
 	"mobile-frontend-donate-image-title-username": "بارکراوەکانی $1",
 	"mobile-frontend-donate-image-title-you": "بارکراوەکانی تۆ",
 	"mobile-frontend-edit-login-action": "<strong>یارمەتیی چاککردنی {{SITENAME}} بدە.</strong><br />بچۆ ژوورەوە تا دەستکاری بکەیت.",
-	"mobile-frontend-editor-abusefilter-read-more": "زیاتر بخوێنەوە",
-	"mobile-frontend-editor-abusefilter-warning": "ئاگاداری: دڵنیایت کە دەتەوێت ئەم دەستکارییە پاشەکەوت بکەیت؟ لەوانەیە ھەندێک کێشەی ھەبێت.",
 	"mobile-frontend-editor-anon": "دەستکاریکردن بەبێ چوونەژوورەوە",
 	"mobile-frontend-editor-blocked-drawer-title": "تۆ لە دەستکاریکردنی {{SITENAME}} بەربەست کراویت",
 	"mobile-frontend-editor-blocked-drawer-title-partial": "تۆ لە دەستکاریکردنی ئەم پەڕە بەربەست کراویت",

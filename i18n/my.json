@@ -39,7 +39,6 @@
 	"mobile-frontend-donate-image-title-you": "သင်မှ တင်ထားသည်များ",
 	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}}ကို တိုးတက်အောင် ကူညီပေးပါ။</strong><br />တည်းဖြတ်ရန်အတွက် ဝင်ရောက်ပါ။",
 	"mobile-frontend-edit-signup-action": "<strong>{{SITENAME}}ကို တိုးတက်အောင် ကူညီပေးပါ။<br />တည်းဖြတ်ရန်အတွက် မှတ်ပုံတင်ပါ။",
-	"mobile-frontend-editor-abusefilter-read-more": "ဆက်ဖတ်ပါ",
 	"mobile-frontend-editor-anon": "အကောင့်ထဲမဝင်ဘဲ တည်းဖြတ်ရန်",
 	"mobile-frontend-editor-blocked-drawer-title": "{{SITENAME}} တည်းဖြတ်ခြင်းမှ သင့်ကို ပိတ်ပင်ထားပါသည်",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "ပိတ်ပင်မှုအတွက် အကြောင်းရင်း",

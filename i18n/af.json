@@ -35,8 +35,6 @@
 	"mobile-frontend-donate-image-title-you": "Deur u opgelaai",
 	"mobile-frontend-edit-login-action": "<strong>Help om {{SITENAME}} te verbeter.</strong><br /> Meld aan om te wysig.",
 	"mobile-frontend-edit-signup-action": "<strong>Help om {{SITENAME}} te verbeter.</strong><br />Meld aan om te redigeer.",
-	"mobile-frontend-editor-abusefilter-disallow": "Hierdie wysiging kan nie gestoor word nie omdat 'n probleem bespeur is.",
-	"mobile-frontend-editor-abusefilter-read-more": "Lees meer",
 	"mobile-frontend-editor-anon": "Wysig sonder aanmelding",
 	"mobile-frontend-editor-anonwarning": "<strong>Waarskuwing</strong>: U is nie aangemeld nie. U IP-adres sal sigbaar wees indien u veranderinge maak. As u <strong>aanmeld</strong> of <strong>'n rekening skep</strong> verskyn u wysigings onder u gebruikersnaam, naas ander voordele.",
 	"mobile-frontend-editor-cancel": "Kanselleer",
