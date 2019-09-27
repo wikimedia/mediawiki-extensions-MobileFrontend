@@ -228,6 +228,7 @@ class MobileFrontendHooks {
 			$config->get( 'MFMobileFormatterNamespaceBlacklist' )
 		);
 		$displayMobileView = $context->shouldDisplayMobileView();
+
 		$alwaysUseProvider = $config->get( 'MFAlwaysUseContentProvider' );
 		if ( $namespaceAllowed && ( $displayMobileView || $alwaysUseProvider ) ) {
 			$text = ExtMobileFrontend::domParse( $out, $text, $displayMobileView );
@@ -384,7 +385,7 @@ class MobileFrontendHooks {
 		// Get the licensing agreement that is displayed in the uploading interface.
 		$vars += [
 			// Page.js
-			'wgMFMobileFormatterHeadings' => $config->get( 'MFMobileFormatterHeadings' ),
+			'wgMFMobileFormatterHeadings' => $config->get( 'MFMobileFormatterOptions' )['headings'],
 			// extendSearchParams
 			'wgMFSearchAPIParams' => $searchParams,
 			'wgMFQueryPropModules' => $pageProps,

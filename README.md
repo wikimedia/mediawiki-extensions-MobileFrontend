@@ -254,15 +254,18 @@ When enabled the ContentProvider will run on desktop views as well as mobile vie
 * Type: `boolean`
 * Default: `false`
 
-#### $wgMFMobileFormatterHeadings
+#### $wgMFMobileFormatterOptions
 
-This is a list of html tags, that could be recognized as the first heading of
+This provides options for the MobileFormatter.
+* headings: is a list of html tags, that could be recognized as the first heading of
 a page.  This is an interim solution to fix Bug T110436 and shouldn't be used,
 if you don't know, what you do. Moreover, this configuration variable will be
 removed in the near future (hopefully).
+* maxImages - if a page has more than this number of image tags then the formatter will not run
+* maxHeadings - if a page has more than this number of heading tags then the formatter will not run
 
-* Type: `Array`
-* Default: `['h1', 'h2', 'h3', 'h4', 'h5', 'h6']`
+* Type: `Object`
+* Default: `{ headings: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'], maxImages: 1000, maxHeadings: 4000 }`
 
 #### $wgMFSiteStylesRenderBlocking
 

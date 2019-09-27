@@ -91,7 +91,8 @@ class MobileFormatter extends HtmlFormatter {
 		$this->revId = $title->getLatestRevID();
 		$this->config = $config;
 		$this->context = $context;
-		$this->topHeadingTags = $config->get( 'MFMobileFormatterHeadings' );
+		$options = $config->get( 'MFMobileFormatterOptions' );
+		$this->topHeadingTags = $options['headings'];
 
 		$this->lazyTransform = new LazyImageTransform(
 			$config->get( 'MFLazyLoadSkipSmallImages' )
@@ -214,6 +215,19 @@ class MobileFormatter extends HtmlFormatter {
 			$this->filterContentInSection( $doc, $doc, 0, $transformOptions );
 		}
 		return $removed;
+	}
+
+	/**
+	 * Check whether the MobileFormatter can be applied to the text of a page.
+	 * @param string $text
+	 * @param array $options with 'maxHeadings' and 'maxImages' keys that limit the MobileFormatter
+	 *  to pages with less than or equal to that number of headings and images.
+	 * @return bool
+	 */
+	public static function canApply( $text, $options ) {
+		$headings = preg_match_all( '/<[hH][1-6]/', $text );
+		$imgs = preg_match_all( '/<img/', $text );
+		return $headings <= $options['maxHeadings'] && $imgs <= $options['maxImages'];
 	}
 
 	/**
