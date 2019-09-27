@@ -22,6 +22,13 @@ window.ve = {
 			targetFactory: {
 				create: () => {
 					return {
+						getSurface: () => {
+							return {
+								getMode: () => {}
+							};
+						},
+						restoreEditSection: () => {},
+						adjustContentPadding: () => {},
 						load: () => Promise.resolve( {} ),
 						once: () => {}
 					};

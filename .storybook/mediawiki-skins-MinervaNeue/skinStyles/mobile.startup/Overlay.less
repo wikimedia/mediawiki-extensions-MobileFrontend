@@ -2,8 +2,6 @@
 @import '../../minerva.less/minerva.mixins.less';
 
 .overlay {
-	padding-top: @overlayHeaderHeight;
-
 	textarea {
 		.editor-textarea();
 	}
@@ -24,9 +22,17 @@
 .overlay-header {
 	height: @overlayHeaderHeight;
 
+	.header-chrome & {
+		height: @siteHeaderHeight;
+	}
+
 	.mw-ui-anchor,
 	.mw-ui-button {
 		height: @overlayHeaderHeight;
+
+		.header-chrome & {
+			height: @siteHeaderHeight;
+		}
 	}
 
 	.overlay-title {
@@ -39,6 +45,14 @@
 			// the space between them is exactly that.
 			padding-right: @iconGutterWidth;
 		}
+	}
+}
+
+.overlay-header-container + .overlay-content {
+	padding-top: @overlayHeaderHeight;
+
+	.header-chrome& {
+		padding-top: @siteHeaderHeight;
 	}
 }
 

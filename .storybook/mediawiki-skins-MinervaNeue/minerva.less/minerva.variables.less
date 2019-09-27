@@ -38,13 +38,18 @@
 //
 // Icons
 //
-// Small icon - 16px square, with 9px padding (total 34px square).
-@icon-size-sm: unit( 16 / @font-size-browser, em );
-@icon-padding-sm: unit( 9 / @font-size-browser, em );
+@icon-touch-area-sm: 34;
+@icon-touch-area-md: 40;
 
-// Medium icon - 16px square, with 9px padding (total 34px square).
-@icon-size-md: unit( 20 / @font-size-browser, em ); // 20px;
-@icon-padding-md: unit( 10 / @font-size-browser, em ); // 44px;
+// Small icon
+@icon-glyph-size-sm: 16;
+@icon-size-sm: unit( @icon-glyph-size-sm / @font-size-browser, em );
+@icon-padding-sm: unit( ( @icon-touch-area-sm - @icon-glyph-size-sm ) / 2 / @font-size-browser, em );
+
+// Medium icon
+@icon-glyph-size-md: 20;
+@icon-size-md: unit( @icon-glyph-size-md / @font-size-browser, em );
+@icon-padding-md: unit( ( @icon-touch-area-md - @icon-glyph-size-md ) / 2 / @font-size-browser, em );
 
 // Navigation Drawers
 @rightDrawerWidth: 60%;

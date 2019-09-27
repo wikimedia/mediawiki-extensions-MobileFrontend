@@ -6,7 +6,13 @@ import './styles.less';
 import en from '../i18n/en.json';
 
 global.OO = OO;
-global.OO.ui = {};
+global.OO.ui = {
+  Element: {
+    static: {
+      getClosestScrollableContainer: () => {}
+    }
+  }
+};
 global.$ = jQuery;
 global.Mustache = mustache;
 global.mw = require( '../tests/node-qunit/utils/mockMediaWiki' )();
