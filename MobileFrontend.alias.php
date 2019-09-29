@@ -13,7 +13,6 @@ $specialPageAliases['en'] = [
 	'History' => [ 'History' ],
 	'MobileCite' => [ 'MobileCite' ],
 	'MobileOptions' => [ 'MobileOptions' ],
-	'Uploads' => [ 'Uploads' ],
 	'MobileDiff' => [ 'MobileDiff' ],
 	'MobileMenu' => [ 'MobileMenu' ],
 	'MobileLanguages' => [ 'MobileLanguages' ],

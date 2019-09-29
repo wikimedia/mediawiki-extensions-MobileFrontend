@@ -115,10 +115,6 @@
 			"maxSize": "0.3KB"
 		},
 		{
-			"path": "resources/dist/mobile.special.uploads.scripts.js",
-			"maxSize": "1.7KB"
-		},
-		{
 			"path": "resources/dist/mobile.special.watchlist.scripts.js",
 			"maxSize": "1.3KB"
 		},

@@ -29,8 +29,7 @@
 		"MobileDiff": "SpecialMobileDiff",
 		"MobileOptions": "SpecialMobileOptions",
 		"MobileMenu": "SpecialMobileMenu",
-		"MobileLanguages": "SpecialMobileLanguages",
-		"Uploads": "SpecialUploads"
+		"MobileLanguages": "SpecialMobileLanguages"
 	},
 	"APIModules": {
 		"mobileview": "ApiMobileView",
@@ -73,7 +72,6 @@
 		"ApiWebappManifest": "includes/api/ApiWebappManifest.php",
 		"InlineDiffFormatter": "includes/diff/InlineDiffFormatter.php",
 		"InlineDifferenceEngine": "includes/diff/InlineDifferenceEngine.php",
-		"SpecialUploads": "includes/specials/SpecialUploads.php",
 		"SpecialMobileHistory": "includes/specials/SpecialMobileHistory.php",
 		"SpecialMobileDiff": "includes/specials/SpecialMobileDiff.php",
 		"SpecialMobileOptions": "includes/specials/SpecialMobileOptions.php",
@@ -656,31 +654,6 @@
 			"targets": "mobile",
 			"styles": [
 				"resources/mobile.special.history.styles/default.less"
-			]
-		},
-		"mobile.special.uploads.scripts": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"dependencies": [
-				"mediawiki.user",
-				"mobile.startup"
-			],
-			"messages": [
-				"mobile-frontend-donate-image-nouploads"
-			],
-			"styles": [
-				"resources/mobile.special.uploads.scripts/gallery.less"
-			],
-			"scripts": [
-				"resources/dist/mobile.special.uploads.scripts.js"
-			]
-		},
-		"mobile.special.uploads.styles": {
-			"targets": "mobile",
-			"styles": [
-				"resources/mobile.special.uploads.styles/default.less"
 			]
 		},
 		"mobile.special.pagefeed.styles": {
