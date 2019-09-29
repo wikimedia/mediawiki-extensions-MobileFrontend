@@ -484,7 +484,7 @@ class MobileContext extends ContextSource {
 	 */
 	public function getMobileAction() {
 		if ( is_null( $this->mobileAction ) ) {
-			$this->mobileAction = $this->getRequest()->getText( 'mobileaction' );
+			$this->mobileAction = $this->getRequest()->getRawVal( 'mobileaction' );
 		}
 
 		return $this->mobileAction;
@@ -498,7 +498,7 @@ class MobileContext extends ContextSource {
 	 */
 	public function getUseFormat() {
 		if ( !isset( $this->useFormat ) ) {
-			$useFormat = $this->getRequest()->getText( 'useformat' );
+			$useFormat = $this->getRequest()->getRawVal( 'useformat' );
 			$this->setUseFormat( $useFormat );
 		}
 		return $this->useFormat;
