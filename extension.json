@@ -773,6 +773,9 @@
 		"RequestContextCreateSkin": [
 			"MobileFrontendHooks::onRequestContextCreateSkin"
 		],
+		"BeforeInitialize": [
+			"MobileFrontendHooks::onBeforeInitialize"
+		],
 		"MediaWikiPerformAction": [
 			"MobileFrontendHooks::onMediaWikiPerformAction"
 		],
