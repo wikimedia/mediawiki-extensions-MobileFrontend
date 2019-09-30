@@ -74,7 +74,7 @@ class DeviceDetectorServiceTest extends \MediaWikiUnitTestCase {
 
 		$properties = $detector->detectDeviceProperties( $this->request, [] );
 
-		$this->assertEquals( null, $properties );
+		$this->assertNull( $properties );
 	}
 }
 
