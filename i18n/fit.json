@@ -4,15 +4,31 @@
 			"Pyscowicz"
 		]
 	},
+	"mobile-frontend-categories-heading": "<strong>Katekuurit</strong>",
 	"mobile-frontend-categories-add": "Lissää katekuurihaan",
+	"mobile-frontend-categories-search": "Hae katakuureja",
+	"mobile-frontend-categories-summary": "Lisätty katekuureihin",
 	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|mookkaus|mookkausta}}",
+	"mobile-frontend-donate-image-title": "Ylöslattaukset",
 	"mobile-frontend-editor-cancel": "Lopeta",
+	"mobile-frontend-editor-continue": "Seuraava",
+	"mobile-frontend-editor-publish": "Julkase",
 	"mobile-frontend-editor-save": "Säästä",
+	"mobile-frontend-editor-summary": "Yhteenveto:",
+	"mobile-frontend-editor-loading": "Ladathaan mookkainta...",
+	"mobile-frontend-language-heading": "<strong>Kielet</strong>",
+	"mobile-frontend-languages-header": "Kielet",
 	"mobile-frontend-main-menu-settings-heading": "Inställninkit",
 	"mobile-frontend-media-details": "Detaljit",
+	"mobile-frontend-overlay-close": "Sulje",
+	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> ylöslattaus|<span>$1</span> ylöslattausta}}",
+	"mobile-frontend-photo-upload-user-count-over-limit": "500+ ylöslattausta",
 	"mobile-frontend-save-settings": "Säästä",
+	"mobile-frontend-settings-beta": "{{SITENAME}} Beeta",
+	"mobile-frontend-settings-save": "Inställninkit säästettiin.",
 	"mobile-frontend-watchlist-a-z": "Lista",
 	"mobile-frontend-watchlist-cta-button-login": "Lokkaa sisäle",
 	"mobile-frontend-watchlist-cta-button-signup": "Lokkaa ylös",
-	"tag-mobile_edit": "Mobiilimookkaus"
+	"tag-mobile_edit": "Mobiilimookkaus",
+	"mobile-frontend-loading-message": "Ladathaan..."
 }
