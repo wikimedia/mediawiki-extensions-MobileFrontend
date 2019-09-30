@@ -67,7 +67,7 @@ class SearchHeaderView extends View {
 		} );
 		this.clearIcon = clearIcon;
 		clearIcon.$el.hide();
-		this.$el.append( clearIcon.$el );
+		this.$el.find( 'form' ).append( clearIcon.$el );
 	}
 }
 
