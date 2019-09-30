@@ -138,6 +138,28 @@ class MobileFrontendHooks {
 	}
 
 	/**
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/BeforeInitialize
+	 *
+	 * @param mixed $title
+	 * @param mixed $unused
+	 * @param OutputPage $out
+	 * @return bool
+	 */
+	public static function onBeforeInitialize( $title, $unused, OutputPage $out ) {
+		// Set the mobile target. Note, this does not consider MobileContext::isBlacklistedPage(),
+		// because that is NOT SAFE to look at Title, Skin or User from this hook (the title may
+		// be invalid here, and is not yet rewritten, normalised, or replaced by other hooks).
+		// May only look at WebRequest.
+		$context = MobileContext::singleton();
+		if ( $context->shouldDisplayMobileView() ) {
+			$out->setTarget( 'mobile' );
+		}
+
+		// Always return true. Else, everything breaks, for everyone. No pressure :)
+		return true;
+	}
+
+	/**
 	 * MediaWikiPerformAction hook handler (enable mwui for all pages)
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/MediaWikiPerformAction
 	 *
@@ -154,7 +176,7 @@ class MobileFrontendHooks {
 	) {
 		self::enableMediaWikiUI();
 
-		// don't prevent performAction to do anything
+		// Always return true. Else, everything breaks, for everyone. No pressure :)
 		return true;
 	}
 
@@ -725,9 +747,10 @@ class MobileFrontendHooks {
 			// in mobile view: always add vary header
 			$out->addVaryHeader( 'Cookie' );
 
-			// set the mobile target
-			if ( !$context->isBlacklistedPage() ) {
-				$out->setTarget( 'mobile' );
+			// Target is generally set from onBeforeInitialize. But, it couldn't consider
+			// blacklisted pages yet. Last minute undo if needed.
+			if ( $context->isBlacklistedPage() ) {
+				$out->setTarget( null );
 			}
 
 			if ( $config->get( 'MFEnableManifest' ) ) {
