@@ -240,7 +240,6 @@ class MobileContextTest extends MediaWikiTestCase {
 	/**
 	 * A null title shouldn't result in a fatal exception - bug T142914
 	 * @covers MobileContext::shouldDisplayMobileView
-	 * @covers MobileContext::setUseFormat
 	 */
 	public function testRedirectMobileEnabledPages() {
 		$this->setMwGlobals( [
@@ -248,7 +247,7 @@ class MobileContextTest extends MediaWikiTestCase {
 		] );
 		$mobileContext = $this->makeContext();
 		$mobileContext->getRequest()->setVal( 'action', 'history' );
-		$mobileContext->setUseFormat( 'mobile' );
+		$mobileContext->getRequest()->setVal( 'useformat', 'mobile' );
 
 		$this->assertTrue( $mobileContext->shouldDisplayMobileView() );
 	}
@@ -273,26 +272,6 @@ class MobileContextTest extends MediaWikiTestCase {
 		return [
 			[ null ],
 			[ 'view_normal_site' ],
-		];
-	}
-
-	/**
-	 * @dataProvider getUseFormatProvider
-	 * @covers MobileContext::getUseFormat
-	 */
-	public function testGetUseFormat( $explicit, $requestParam, $expected ) {
-		$context = $this->makeContext();
-		$context->getRequest()->setVal( 'useformat', $requestParam );
-		$context->setUseFormat( $explicit );
-		$this->assertEquals( $expected, $context->getUseFormat() );
-	}
-
-	public function getUseFormatProvider() {
-		return [
-			[ 'mobile', null, 'mobile' ],
-			[ null, 'mobile', 'mobile' ],
-			[ null, null, '' ],
-			[ 'desktop', 'mobile', 'desktop' ],
 		];
 	}
 

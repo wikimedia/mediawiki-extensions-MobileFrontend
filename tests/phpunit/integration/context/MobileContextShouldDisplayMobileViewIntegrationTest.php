@@ -64,7 +64,7 @@ class MobileContextShouldDisplayMobileViewIntegrationTest extends MediaWikiTestC
 		}
 
 		if ( $format !== null ) {
-			$this->context->setUseFormat( $format );
+			$request->setVal( 'useformat', $format );
 		}
 
 		if ( $formatCookie !== null ) {

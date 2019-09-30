@@ -487,26 +487,15 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
-	 * Gets the value of the `useformat` query string parameter. This can be
-	 * overridden using the `MobileContext#setUseFormat`.
+	 * Gets the value of the `useformat` query string parameter.
 	 *
-	 * @return string
+	 * @return string Typically "desktop" or "mobile"
 	 */
-	public function getUseFormat() {
-		if ( !isset( $this->useFormat ) ) {
-			$useFormat = $this->getRequest()->getRawVal( 'useformat' );
-			$this->setUseFormat( $useFormat );
+	private function getUseFormat() {
+		if ( $this->useFormat === null ) {
+			$this->useFormat = $this->getRequest()->getRawVal( 'useformat' );
 		}
 		return $this->useFormat;
-	}
-
-	/**
-	 * Overrides the value of `MobileContext#getUseFormat`.
-	 *
-	 * @param string $useFormat new value
-	 */
-	public function setUseFormat( $useFormat ) {
-		$this->useFormat = $useFormat;
 	}
 
 	/**
@@ -918,7 +907,7 @@ class MobileContext extends ContextSource {
 	public function toggleView( $view ) {
 		$this->viewChange = $view;
 		if ( !strlen( trim( $this->getMobileUrlTemplate() ) ) ) {
-			$this->setUseFormat( $view );
+			$this->useFormat = $view;
 		}
 	}
 

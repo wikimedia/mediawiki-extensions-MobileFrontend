@@ -121,7 +121,7 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 
 		// check, if XAnalytics is set, if it should be
 		$resp = $param['context']->getRequest()->response();
-		$this->assertSame( $isXAnalytics, (bool)$resp->getHeader( 'X-Analytics' ),
+		$this->assertSame( $isXAnalytics, $resp->getHeader( 'X-Analytics' ),
 			'check, if XAnalytics is set, if it should be' );
 
 		// test with forced desktop view
@@ -147,7 +147,7 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 			'check, if the vary header is set in desktop mode' );
 		// there should never be an XAnalytics header in desktop mode
 		$resp = $param['context']->getRequest()->response();
-		$this->assertFalse( (bool)$resp->getHeader( 'X-Analytics' ),
+		$this->assertNull( $resp->getHeader( 'X-Analytics' ),
 			'there should never be an XAnalytics header in desktop mode' );
 	}
 
@@ -179,7 +179,7 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 		$skin->setContext( $mainContext );
 		$mainContext->setOutput( $out );
 		$context->setContext( $mainContext );
-		$context->setUseFormat( $mode );
+		$request->setVal( 'useformat', $mode );
 		foreach ( $mfXAnalyticsItems as $key => $val ) {
 			$context->addAnalyticsLogItem( $key, $val );
 		}
@@ -199,18 +199,18 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 			// wgMobileUrlTemplate, wgMFNoindexPages, wgMFEnableXAnalyticsLogging, wgMFAutodetectMobileView,
 			// wgMFVaryOnUA, XanalyticsItems, alternate & canonical link, XAnalytics, Vary header User-Agent
 			[ true, true, true, true, true,
-				[ 'mf-m' => 'a' ], 1, true, false, ],
+				[ 'mf-m' => 'a' ], 1, 'mf-m=a', false, ],
 			[ true, false, true, false, false,
-				[ 'mf-m' => 'a' ], 0, true, false, ],
+				[ 'mf-m' => 'a' ], 0, 'mf-m=a', false, ],
 			[ false, true, true, true, true,
-				[ 'mf-m' => 'a' ], 0, true, true, ],
+				[ 'mf-m' => 'a' ], 0, 'mf-m=a', true, ],
 			[ false, false, true, false, false,
-				[ 'mf-m' => 'a' ], 0, true, false, ],
-			[ true, true, false, true, true, [], 1, false, false, ],
-			[ true, false, false, false, false, [], 0, false, false, ],
-			[ false, true, false, true, true, [], 0, false, true, ],
-			[ false, false, false, false, false, [], 0, false, false, ],
-			[ false, false, false, false, true, [], 0, false, false, ],
+				[ 'mf-m' => 'a' ], 0, 'mf-m=a', false, ],
+			[ true, true, false, true, true, [], 1, null, false, ],
+			[ true, false, false, false, false, [], 0, null, false, ],
+			[ false, true, false, true, true, [], 0, null, true, ],
+			[ false, false, false, false, false, [], 0, null, false, ],
+			[ false, false, false, false, true, [], 0, null, false, ],
 		];
 	}
 
