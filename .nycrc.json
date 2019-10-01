@@ -24,7 +24,6 @@
 		"src/mobile.editor.ve/mobile.editor.ve.js",
 		"src/mobile.init/mobile.init.js",
 		"src/mobile.mediaViewer/mobile.mediaViewer.js",
-		"src/mobile.notifications.overlay/mobile.notifications.overlay.js",
 		"src/mobile.special.nearby.scripts/mobile.special.nearby.scripts.js",
 		"src/mobile.special.uploads.scripts/mobile.special.uploads.scripts.js",
 		"src/mobile.special.watchlist.scripts/mobile.special.watchlist.scripts.js",
