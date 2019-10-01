@@ -29,7 +29,7 @@ module.exports = {
 	loadingOverlay: require( './loadingOverlay' ),
 	CtaDrawer: require( './CtaDrawer' ),
 	toast: require( './toast' ),
-	Watchstar: require( './watchstar/Watchstar' ),
+	Watchstar: require( './watchstar/watchstar' ),
 	rlModuleLoader: require( './rlModuleLoader' ),
 	eventBusSingleton: require( './eventBusSingleton' ),
 	promisedView: require( './promisedView' ),

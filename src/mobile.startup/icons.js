@@ -94,27 +94,29 @@ module.exports = {
 	 *
 	 * @memberof icons
 	 * @instance
+	 * @param {Object} props
 	 * @return {Icon}
 	 */
-	watchIcon: function () {
-		return new this.Icon( {
+	watchIcon: function ( props ) {
+		return new this.Icon( util.extend( props, {
 			name: 'star-base20',
 			glyphPrefix: 'wikimedia',
 			additionalClassNames: 'watch-this-article'
-		} );
+		} ) );
 	},
 	/**
 	 * Gets a filled watch star icon.
 	 *
 	 * @memberof icons
 	 * @instance
+	 * @param {Object} props
 	 * @return {Icon}
 	 */
-	watchedIcon: function () {
-		return new this.Icon( {
+	watchedIcon: function ( props ) {
+		return new this.Icon( util.extend( props, {
 			name: 'unStar-progressive',
 			glyphPrefix: 'wikimedia',
 			additionalClassNames: 'watch-this-article watched'
-		} );
+		} ) );
 	}
 };

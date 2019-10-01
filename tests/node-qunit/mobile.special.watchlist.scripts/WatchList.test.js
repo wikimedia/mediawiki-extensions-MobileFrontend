@@ -18,7 +18,13 @@ QUnit.module( 'MobileFrontend WatchList.js', {
 		mediaWiki.setUp( sandbox, global );
 		mustache.setUp( sandbox, global );
 
+		sandbox.stub( global.mw.Title, 'newFromText' ).returns(
+			{ getUrl: function () {} }
+		);
 		sandbox.stub( mw.user, 'isAnon' ).returns( false );
+		sandbox.stub( mw.loader, 'require' ).withArgs( 'mediawiki.page.watch.ajax' ).returns( {
+			watchstar: () => {}
+		} );
 
 		WatchList = require( '../../../src/mobile.special.watchlist.scripts/WatchList' );
 		Icon = require( '../../../src/mobile.startup/Icon' );

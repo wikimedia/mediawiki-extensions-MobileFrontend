@@ -243,6 +243,7 @@
 				"desktop"
 			],
 			"dependencies": [
+				"mediawiki.page.watch.ajax",
 				"mediawiki.template.mustache",
 				"mediawiki.ui.button",
 				"mediawiki.ui.icon",

@@ -36,6 +36,12 @@ QUnit.module( 'MobileFrontend mobile.startup/WatchstarPageList', {
 		oo.setUp( sandbox, global );
 
 		// loaded after globals
+		sandbox.stub( global.mw.loader, 'require' ).withArgs( 'mediawiki.page.watch.ajax' ).returns( {
+			watchstar: () => {}
+		} );
+		sandbox.stub( global.mw.Title, 'newFromText' ).returns(
+			{ getUrl: function () {} }
+		);
 		WatchstarPageList = require( '../../../../src/mobile.startup/watchstar/WatchstarPageList' );
 		user = mw.user;
 		Icon = require( '../../../../src/mobile.startup/Icon' );
