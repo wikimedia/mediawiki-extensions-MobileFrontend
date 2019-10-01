@@ -65,7 +65,7 @@
 	"mobile-frontend-editor-editing-page": "<span>Lehekülje \"$1\" <strong>redigeerimine</strong></span>",
 	"mobile-frontend-editor-error": "Tõrge, muudatust ei salvestatud.",
 	"mobile-frontend-editor-error-conflict": "Tõrge, teine kasutaja redigeeris lehekülge.",
-	"mobile-frontend-editor-error-loading": "Tõrge, alaosa ei saa laadida.",
+	"mobile-frontend-editor-error-loading": "Tõrge, redaktorit ei saa laadida.",
 	"mobile-frontend-editor-error-preview": "Tõrge, eelvaate laadimisel juhtus midagi ootamatut. Palun sule ja proovi uuesti.",
 	"mobile-frontend-editor-keep-editing": "Jätka redigeerimist",
 	"mobile-frontend-editor-licensing": "Kui salvestad, nõustud oma kaastöö avaldamisega {{PLURAL:$2|litsentsi|litsentside}} $1 all.",

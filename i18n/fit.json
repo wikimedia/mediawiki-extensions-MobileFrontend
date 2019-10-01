@@ -12,7 +12,7 @@
 	"mobile-frontend-donate-image-title": "Ylöslattaukset",
 	"mobile-frontend-editor-cancel": "Lopeta",
 	"mobile-frontend-editor-continue": "Seuraava",
-	"mobile-frontend-editor-publish": "Julkase",
+	"mobile-frontend-editor-publish": "Anna ulos",
 	"mobile-frontend-editor-save": "Säästä",
 	"mobile-frontend-editor-summary": "Yhteenveto:",
 	"mobile-frontend-editor-loading": "Ladathaan mookkainta...",
@@ -30,5 +30,6 @@
 	"mobile-frontend-watchlist-cta-button-login": "Lokkaa sisäle",
 	"mobile-frontend-watchlist-cta-button-signup": "Lokkaa ylös",
 	"tag-mobile_edit": "Mobiilimookkaus",
+	"tag-mobile_web_edit": "mobiilisivusto-mookkaus",
 	"mobile-frontend-loading-message": "Ladathaan..."
 }
