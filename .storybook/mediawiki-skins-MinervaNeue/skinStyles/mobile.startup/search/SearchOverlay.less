@@ -9,12 +9,15 @@
 		top: @siteHeaderHeight;
 	}
 
-	@icon-height-halved: unit( ( @icon-touch-area-sm / 2 ) / @font-size-browser, em );
-
 	.clear {
 		position: absolute;
-		top: ( @siteHeaderHeight / 2 ) - @icon-height-halved;
+		top: 50%;
 		right: 0;
+		transform: translateY( -50% );
+	}
+
+	.search-box {
+		position: relative;
 	}
 }
 
