@@ -17,6 +17,9 @@ function Icon( options ) {
 	if ( options.href ) {
 		options.tagName = 'a';
 	}
+	if ( options.tagName === 'button' ) {
+		options.isTypeButton = true;
+	}
 	View.call( this, options );
 }
 
@@ -126,6 +129,7 @@ mfExtend( Icon, View, {
 	},
 	template: util.template(
 		'<{{tagName}} ' +
+			'{{#isTypeButton}}type="button"{{/isTypeButton}} ' +
 			'class="{{base}} ' +
 				'{{base}}-{{glyphPrefix}}-{{name}} ' +
 				'{{modifier}} ' +

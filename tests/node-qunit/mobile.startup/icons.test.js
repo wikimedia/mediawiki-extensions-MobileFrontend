@@ -29,7 +29,8 @@ QUnit.test( '#cancel()', function ( assert ) {
 		tagName: 'button',
 		name: icons.CANCEL_GLYPH + '-base20',
 		additionalClassNames: 'cancel',
-		label: mw.msg( 'mobile-frontend-overlay-close' )
+		label: mw.msg( 'mobile-frontend-overlay-close' ),
+		isTypeButton: true
 	}, 'Options are passed down' );
 } );
 
@@ -39,7 +40,8 @@ QUnit.test( '#cancel(variant)', function ( assert ) {
 		tagName: 'button',
 		name: icons.CANCEL_GLYPH + '-gray',
 		additionalClassNames: 'cancel',
-		label: mw.msg( 'mobile-frontend-overlay-close' )
+		label: mw.msg( 'mobile-frontend-overlay-close' ),
+		isTypeButton: true
 	}, 'Options are passed down' );
 } );
 

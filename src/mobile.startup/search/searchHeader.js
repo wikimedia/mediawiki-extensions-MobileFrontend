@@ -11,9 +11,6 @@ const formHeader = require( '../headers' ).formHeader,
  */
 function searchHeader( placeholderMsg, action, onInput ) {
 	return formHeader(
-		// Note: Do not put the clear button inside the form
-		// as hitting enter on the input element triggers a button click,
-		// rather than submitting the form (see T136243)
 		new SearchHeaderView( {
 			placeholderMsg,
 			action,
