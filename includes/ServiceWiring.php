@@ -6,6 +6,7 @@ use MobileFrontend\Features\BetaUserMode;
 use MobileFrontend\Features\Feature;
 use MobileFrontend\Features\FeaturesManager;
 use MobileFrontend\Features\StableUserMode;
+use MobileFrontend\Features\LoggedInUserMode;
 use MobileFrontend\Features\UserModes;
 
 return [
@@ -21,9 +22,11 @@ return [
 
 	'MobileFrontend.UserModes' => function ( MediaWikiServices $services ) {
 		$modes = new UserModes();
+		/** @var MobileContext $context */
 		$context = $services->getService( 'MobileFrontend.Context' );
 		$modes->registerMode( new StableUserMode( $context ) );
 		$modes->registerMode( new BetaUserMode( $context ) );
+		$modes->registerMode( new LoggedInUserMode( $context->getUser() ) );
 		$modes->registerMode( $services->getService( 'MobileFrontend.AMC.UserMode' ) );
 		return $modes;
 	},
