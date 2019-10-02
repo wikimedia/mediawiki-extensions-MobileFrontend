@@ -15,7 +15,8 @@
 			"Vodnokon4e",
 			"Termininja",
 			"V111P",
-			"Vlad5250"
+			"Vlad5250",
+			"Ted Masters"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Редактира ли потребителя от мобилен интерфейс",
@@ -48,7 +49,7 @@
 	"mobile-frontend-editor-save": "Съхраняване",
 	"mobile-frontend-editor-success-new-page": "Поздравления за създаването на нова страница!",
 	"mobile-frontend-editor-summary": "Резюме:",
-	"mobile-frontend-editor-uploadenable": "Моля, първо качете снимка, за активация на редактирането.",
+	"mobile-frontend-editor-uploadenable": "Моля, първо качете снимка за активация на редактирането.",
 	"mobile-frontend-featured-article": "Избран материал на деня",
 	"mobile-frontend-language-heading": "<strong>Езици</strong>",
 	"mobile-frontend-languages-header": "Езици",
