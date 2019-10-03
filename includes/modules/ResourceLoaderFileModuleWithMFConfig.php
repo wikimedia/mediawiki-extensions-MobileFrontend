@@ -26,7 +26,9 @@ class ResourceLoaderFileModuleWithMFConfig extends ResourceLoaderFileModule {
 	/** @inheritDoc */
 	public function getDefinitionSummary( ResourceLoaderContext $context ) {
 		$summary = parent::getDefinitionSummary( $context );
-		$summary['configData'] = $this->getConfigData();
+		$summary[] = [
+			'configData' => $this->getConfigData(),
+		];
 		return $summary;
 	}
 
