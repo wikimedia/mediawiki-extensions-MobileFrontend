@@ -11,10 +11,11 @@ class LegacyMainPageTransform implements IMobileTransform, MessageLocalizer {
 	/**
 	 * Returns interface message text
 	 * @param string $key Message key
+	 * @param mixed ...$params Any number of message parameters
 	 * @return Message
 	 */
-	public function msg( $key ) {
-		return wfMessage( $key );
+	public function msg( $key, ...$params ) {
+		return wfMessage( $key, ...$params );
 	}
 
 	/**
