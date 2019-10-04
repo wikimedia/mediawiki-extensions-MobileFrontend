@@ -1,9 +1,7 @@
-var context = require( '../context' );
+var context = require( '../../mobile.startup/context' );
 
-function subscribeMobileWebSearchSchema() {
-	mw.loader.using( [
-		'ext.eventLogging'
-	] ).then( function () {
+module.exports = function () {
+	( function () {
 		var // Schema class provided by ext.eventLogging
 			Schema = mw.eventLog.Schema,
 			/**
@@ -29,9 +27,5 @@ function subscribeMobileWebSearchSchema() {
 		mw.trackSubscribe( 'mf.schemaMobileWebSearch', function ( topic, data ) {
 			schemaMobileWebSearch.log( data );
 		} );
-	} );
-}
-
-module.exports = {
-	subscribeMobileWebSearchSchema: subscribeMobileWebSearchSchema
+	}() );
 };

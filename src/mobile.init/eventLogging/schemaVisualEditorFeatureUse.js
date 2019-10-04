@@ -9,7 +9,7 @@ module.exports = function () {
 	// does, so this file references its config for sampling rates and
 	// oversampling.
 
-	mw.loader.using( [ 'ext.eventLogging' ] ).then( function () {
+	( function () {
 		var // Schema class provided by ext.eventLogging
 			Schema = mw.eventLog.Schema,
 			sampleRate = mw.config.get( 'wgWMESchemaEditAttemptStepSamplingRate' ),
@@ -47,5 +47,5 @@ module.exports = function () {
 			}
 		} );
 
-	} );
+	}() );
 };

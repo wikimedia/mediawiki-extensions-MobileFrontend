@@ -1,7 +1,6 @@
 var
 	moduleLoader = require( './moduleLoaderSingleton' ),
-	util = require( './util' ),
-	schemaMobileWebSearch = require( './search/schemaMobileWebSearch' );
+	util = require( './util' );
 
 // Expose the entry chunk through libraryTarget and library. This allows
 // arbitrary file access via ResourceLoader like
@@ -72,5 +71,3 @@ mw.mobileFrontend = moduleLoader;
 // Setup a single export for new modules to fold all of the above lines into.
 // One export to rule them all!
 moduleLoader.define( 'mobile.startup', module.exports );
-
-schemaMobileWebSearch.subscribeMobileWebSearchSchema();
