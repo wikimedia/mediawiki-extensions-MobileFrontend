@@ -90,7 +90,7 @@ class MobileContextShouldDisplayMobileViewIntegrationTest extends MediaWikiTestC
 			);
 		}
 
-		$this->assertEquals( $expected, $this->context->shouldDisplayMobileView() );
+		$this->assertSame( $expected, $this->context->shouldDisplayMobileView() );
 	}
 
 	public function shouldDisplayMobileViewProvider() {

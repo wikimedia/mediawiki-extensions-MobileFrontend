@@ -142,7 +142,7 @@ class FeaturesManagerTest extends MediaWikiTestCase {
 		$manager = new FeaturesManager( $userModes );
 		$manager->registerFeature( $featureA );
 
-		$this->assertEquals( false, $manager->isFeatureAvailableForCurrentUser( 'featureA' ) );
+		$this->assertFalse( $manager->isFeatureAvailableForCurrentUser( 'featureA' ) );
 	}
 
 	/**
@@ -161,7 +161,7 @@ class FeaturesManagerTest extends MediaWikiTestCase {
 		$manager = new FeaturesManager( $userModes );
 		$manager->registerFeature( $featureA );
 
-		$this->assertEquals( true, $manager->isFeatureAvailableForCurrentUser( 'featureA' ) );
+		$this->assertTrue( $manager->isFeatureAvailableForCurrentUser( 'featureA' ) );
 	}
 
 	/**
