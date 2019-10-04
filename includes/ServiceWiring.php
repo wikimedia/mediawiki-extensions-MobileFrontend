@@ -49,6 +49,7 @@ return [
 		$manager->registerFeature( new Feature( 'MFUseDesktopSpecialWatchlistPage', 'mobile-frontend',
 			$config->get( 'MFUseDesktopSpecialWatchlistPage' ) ) );
 
+		$manager->useHookToRegisterExtensionOrSkinFeatures();
 		return $manager;
 	},
 	'MobileFrontend.AMC.Manager' => function ( MediaWikiServices $services ) {

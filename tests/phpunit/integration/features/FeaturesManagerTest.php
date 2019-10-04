@@ -28,17 +28,21 @@ class FeaturesManagerTest extends MediaWikiTestCase {
 	}
 
 	/**
-	 * @covers ::setup
+	 * Test that hook is used to allow extensions/skins to register features.
+	 * @covers ::useHookToRegisterExtensionOrSkinFeatures
 	 */
-	public function testSetUpTwice() {
-		$called = 0;
-		$this->setTemporaryHook( 'MobileFrontendFeaturesRegistration', function () use ( &$called ){
-			$called++;
-		} );
-		$manager = new FeaturesManager( new UserModes() );
-		$manager->setup();
-		$manager->setup();
-		$this->assertEquals( 1, $called, 'MobileFrontendFeaturesRegistration was called only once' );
+	public function testFeatureManagerUsesHooks() {
+		$called = false;
+		$userModes = new UserModes();
+		$manager = new FeaturesManager( $userModes );
+		$this->setTemporaryHook( 'MobileFrontendFeaturesRegistration',
+			function ( $actual ) use ( &$called, $manager ) {
+			$this->assertSame( $manager, $actual );
+			$called = true;
+		 } );
+		$manager->useHookToRegisterExtensionOrSkinFeatures();
+		$this->assertTrue( $called,
+			'The MobileFrontendFeaturesRegistration wasn\'t executed' );
 	}
 
 	/**

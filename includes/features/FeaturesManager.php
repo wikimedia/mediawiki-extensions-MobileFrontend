@@ -17,11 +17,6 @@ use Hooks;
 class FeaturesManager {
 
 	/**
-	 * @var bool
-	 */
-	private $initialized = false;
-
-	/**
 	 * A collection of available features
 	 *
 	 * @var array<IFeature>
@@ -41,18 +36,10 @@ class FeaturesManager {
 	}
 
 	/**
-	 * Setup the Features Manager and register all 3rd party features
-	 * The $initialized lock is required due to bug T165068
-	 * There is no other way to register feature other than on onRequestContextCreateSkin
-	 * hook, but this hook might be called more than once due to special pages transclusion.
-	 *
-	 * @see https://phabricator.wikimedia.org/T165068
+	 * Allow other extensions to register features
 	 */
-	public function setup() {
-		if ( !$this->initialized ) {
-			Hooks::run( 'MobileFrontendFeaturesRegistration', [ $this ] );
-			$this->initialized = true;
-		}
+	public function useHookToRegisterExtensionOrSkinFeatures() {
+		Hooks::run( 'MobileFrontendFeaturesRegistration', [ $this ] );
 	}
 
 	/**
