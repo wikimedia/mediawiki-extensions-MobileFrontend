@@ -86,7 +86,6 @@ exports.config = {
 		var filePath;
 		if ( !test.passed ) {
 			filePath = saveScreenshot( test.title );
-			// eslint-disable-next-line no-console
 			console.log( '\n\tScreenshot: ' + filePath + '\n' );
 		}
 	}

@@ -7,13 +7,12 @@
 		"mocha": true
 	},
 	"globals": {
-		"browser": false,
+		"browser": "readonly",
 		"$": "readonly",
-		"mw": false
+		"mw": "readonly"
 	},
 	"rules": {
 		"camelcase": "off",
-		"no-restricted-syntax": "off",
-		"prefer-template": "off"
+		"no-restricted-syntax": "off"
 	}
 }

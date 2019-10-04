@@ -45,8 +45,9 @@ QUnit.module( 'MobileFrontend imports', {
 // This test also has the useful side effect of making sure untested files
 // show up in coverage reports.
 QUnit.test( 'All our code is importable in headless Node.js', ( assert ) => {
-	let errors = [];
-	const includes = config.include.join( ',' ),
+	const
+		errors = [],
+		includes = config.include.join( ',' ),
 		ignore = config.exclude;
 	for ( const moduleFileName of glob.sync( includes, { ignore } ) ) {
 		const importPath = path.resolve( __dirname, '../../', moduleFileName );
@@ -57,5 +58,5 @@ QUnit.test( 'All our code is importable in headless Node.js', ( assert ) => {
 		}
 	}
 	assert.strictEqual( errors.length, 0,
-		`There were no errors when importing any of the modules:\n\n${ errors.join( '\n' ) }` );
+		`There were no errors when importing any of the modules:\n\n${errors.join( '\n' )}` );
 } );

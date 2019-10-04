@@ -1,6 +1,7 @@
 let
 	LanguageSearcher,
-	sandbox,
+	sandbox;
+const
 	jQuery = require( '../utils/jQuery' ),
 	dom = require( '../utils/dom' ),
 	mediaWiki = require( '../utils/mw' ),

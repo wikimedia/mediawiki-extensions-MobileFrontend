@@ -1,7 +1,8 @@
 let
 	languageOverlay,
 	LanguageSearcher,
-	sandbox,
+	sandbox;
+const
 	headless = typeof window !== 'object',
 	m = require( '../../../../src/mobile.startup/moduleLoaderSingleton' ),
 	util = require( '../../../../src/mobile.startup/util' ),

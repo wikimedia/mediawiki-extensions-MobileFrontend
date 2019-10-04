@@ -1,4 +1,4 @@
-/* global $, OO */
+/* global $ */
 var storage = mw.storage,
 	browser = require( './mobile.startup/Browser' ).getSingleton(),
 	toast = require( './mobile.startup/toast' ),

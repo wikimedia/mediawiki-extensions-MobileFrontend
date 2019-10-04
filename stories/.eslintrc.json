@@ -6,6 +6,6 @@
 		"one-var": "off"
 	},
 	"globals": {
-		"Promise": "on"
+		"Promise": "readonly"
 	}
 }

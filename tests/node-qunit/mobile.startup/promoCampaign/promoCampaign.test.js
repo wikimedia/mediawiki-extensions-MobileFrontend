@@ -1,14 +1,13 @@
 let
 	promoCampaign,
-	sandbox,
+	sandbox;
+const
 	jQuery = require( '../../utils/jQuery' ),
 	dom = require( '../../utils/dom' ),
 	oo = require( '../../utils/oo' ),
 	mediaWiki = require( '../../utils/mw' ),
 	mustache = require( '../../utils/mustache' ),
-	sinon = require( 'sinon' );
-
-const
+	sinon = require( 'sinon' ),
 	ACTIONS = {
 		onLoad: 'onLoad'
 	},

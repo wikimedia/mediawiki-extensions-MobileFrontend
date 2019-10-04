@@ -1,5 +1,6 @@
 let
-	sandbox,
+	sandbox;
+const
 	getDeviceLanguage = require( '../../../../src/mobile.startup/languageOverlay/getDeviceLanguage' ),
 	sinon = require( 'sinon' );
 

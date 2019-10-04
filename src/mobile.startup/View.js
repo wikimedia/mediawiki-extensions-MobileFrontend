@@ -1,4 +1,4 @@
-/* global $, document */
+/* global $ */
 var util = require( './util' ),
 	mfExtend = require( './mfExtend' ),
 	// Cached regex to split keys for `delegate`.

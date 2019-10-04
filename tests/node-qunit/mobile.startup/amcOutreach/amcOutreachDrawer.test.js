@@ -1,7 +1,8 @@
 let
 	amcOutreachDrawer,
 	Drawer,
-	sandbox,
+	sandbox;
+const
 	jQuery = require( '../../utils/jQuery' ),
 	dom = require( '../../utils/dom' ),
 	oo = require( '../../utils/oo' ),
