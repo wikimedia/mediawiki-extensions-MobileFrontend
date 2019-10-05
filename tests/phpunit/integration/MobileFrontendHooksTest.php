@@ -389,7 +389,7 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 	 * @return File
 	 */
 	private function factoryFile( $mimeType ) {
-		$file = $this->getMockBuilder( 'File' )
+		$file = $this->getMockBuilder( File::class )
 			->disableOriginalConstructor()
 			->getMock();
 

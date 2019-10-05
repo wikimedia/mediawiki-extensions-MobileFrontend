@@ -325,7 +325,7 @@ class MobilePageTest extends MediaWikiTestCase {
 	 * @dataProvider getSmallThumbnailHtmlWithNoThumbDataProvider
 	 */
 	public function testGetSmallThumbnailHtmlWithNoThumb( $useBackgroundImage, $expected ) {
-		$thumb = $this->getMockBuilder( 'File' )
+		$thumb = $this->getMockBuilder( File::class )
 			->disableOriginalConstructor()
 			->setMethods( [ 'transform' ] )
 			->getMock();

@@ -137,7 +137,7 @@ class ApiMobileViewTest extends MediaWikiTestCase {
 		}
 
 		$api = $this->getMobileViewApi( $input );
-		$api->mockFile = $this->getMock( 'MockFSFile',
+		$api->mockFile = $this->getMock( MockFSFile::class,
 			[ 'getWidth', 'getHeight', 'getTitle', 'getMimeType', 'transform' ],
 			[], '', false
 		);
@@ -157,7 +157,7 @@ class ApiMobileViewTest extends MediaWikiTestCase {
 	}
 
 	public function mockTransform( array $params ) {
-		$thumb = $this->getMock( 'MediaTransformOutput' );
+		$thumb = $this->getMock( MediaTransformOutput::class );
 		$thumb->method( 'getUrl' )->will( $this->returnValue( 'http://dummy' ) );
 		$thumb->method( 'getWidth' )->will( $this->returnValue( $params['width'] ) );
 		$thumb->method( 'getHeight' )->will( $this->returnValue( $params['height'] ) );
