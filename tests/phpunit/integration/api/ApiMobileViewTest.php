@@ -128,14 +128,6 @@ class ApiMobileViewTest extends MediaWikiTestCase {
 	 * @covers ApiMobileView::getResult
 	 */
 	public function testViewWithTransforms( array $input, array $expected ) {
-		if ( version_compare(
-			PHPUnit_Runner_Version::id(),
-			'4.0.0',
-			'<'
-		) ) {
-			$this->markTestSkipped( 'testViewWithTransforms requires PHPUnit 4.0.0 or greater.' );
-		}
-
 		$api = $this->getMobileViewApi( $input );
 		$api->mockFile = $this->getMock( MockFSFile::class,
 			[ 'getWidth', 'getHeight', 'getTitle', 'getMimeType', 'transform' ],
