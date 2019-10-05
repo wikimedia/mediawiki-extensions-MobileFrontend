@@ -242,7 +242,7 @@ class ApiMobileView extends ApiBase {
 				]
 			);
 		}
-		// https://bugzilla.wikimedia.org/show_bug.cgi?id=51586
+		// https://phabricator.wikimedia.org/T53586
 		// Inform ppl if the page is infested with LiquidThreads but that's the
 		// only thing we support about it.
 		if ( class_exists( \LqtDispatch::class ) && \LqtDispatch::isLqtPage( $title ) ) {
@@ -611,7 +611,7 @@ class ApiMobileView extends ApiBase {
 			$cacheExpiry = 3600;
 		} else {
 			if ( !$latest ) {
-				// https://bugzilla.wikimedia.org/show_bug.cgi?id=53378
+				// https://phabricator.wikimedia.org/T55378
 				// Title::exists() above doesn't seem to always catch recently deleted pages
 				$this->dieWithError( [ 'apierror-missingtitle' ] );
 			}

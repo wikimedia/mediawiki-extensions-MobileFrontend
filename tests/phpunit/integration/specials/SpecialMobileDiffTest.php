@@ -85,7 +85,7 @@ class SpecialMobileDiffTest extends MediaWikiLangTestCase {
 			[ [ 'diff' => 'prev', 'oldid' => 201 ], '' ],
 			// weird edge case comparing identical things
 			[ [ 'oldid' => 101, 'diff' => 101 ], 'Special:MobileDiff/101...101' ],
-			// https://bugzilla.wikimedia.org/63999
+			// https://phabricator.wikimedia.org/T65999
 			[ [ 'oldid' => 'prev', 'diff' => 5 ], 'Special:MobileDiff/5' ],
 		];
 	}

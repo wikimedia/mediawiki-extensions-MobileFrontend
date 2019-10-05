@@ -52,7 +52,7 @@ class ApiMobileViewTest extends MediaWikiTestCase {
 			[ [ 1, 2 ], [ 11 ], '1|1|2|1|11|2|1' ],
 			[ [ 1, 3, 4, 5 ], [], '1|3-5|4' ],
 			[ [ 10 ], [], '10-' ],
-			# https://bugzilla.wikimedia.org/show_bug.cgi?id=61868
+			# https://phabricator.wikimedia.org/T63868
 			[ [], [ '20-' ], '20-' ],
 		];
 	}

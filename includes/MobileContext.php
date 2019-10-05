@@ -412,7 +412,7 @@ class MobileContext extends ContextSource {
 		 * If a user is accessing the site from a mobile domain, then we should
 		 * always display the mobile version of the site (otherwise, the cache
 		 * may get polluted). See
-		 * https://bugzilla.wikimedia.org/show_bug.cgi?id=46473
+		 * https://phabricator.wikimedia.org/T48473
 		 */
 		if ( $this->usingMobileDomain() ) {
 			return true;
