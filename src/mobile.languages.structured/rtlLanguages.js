@@ -24,6 +24,7 @@ module.exports = [
 	'lrc',
 	'luz',
 	'mzn',
+	'nqo',
 	'pnb',
 	'ps',
 	'sd',
