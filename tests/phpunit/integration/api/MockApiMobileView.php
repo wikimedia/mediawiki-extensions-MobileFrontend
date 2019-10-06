@@ -1,9 +1,10 @@
 <?php
 
 use MediaWiki\MediaWikiServices;
+use PHPUnit\Framework\MockObject\MockObject;
 
 class MockApiMobileView extends ApiMobileView {
-	/** @var PHPUnit_Framework_MockObject_MockObject */
+	/** @var MockObject */
 	public $mockFile;
 
 	public function __construct( ApiMain $main, $action ) {
