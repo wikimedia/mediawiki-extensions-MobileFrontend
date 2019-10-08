@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 echo "Important: This should not be running in npm run doc. Please commit any changes you see in .storybook after running this script."
-curl https://raw.githubusercontent.com/wikimedia/mediawiki/master/resources/src/mediawiki.less/mediawiki.mixins.less -o .storybook/resolve-less-imports/mediawiki.mixins
+curl https://raw.githubusercontent.com/wikimedia/mediawiki/master/resources/src/mediawiki.less/mediawiki.mixins.less -o .storybook/resolve-less-imports/mediawiki.mixins.less
 curl https://raw.githubusercontent.com/wikimedia/mediawiki/master/resources/src/mediawiki.less/mediawiki.mixins.animation.less -o .storybook/resolve-less-imports/mediawiki.mixins.animation.less
 curl https://raw.githubusercontent.com/wikimedia/mediawiki/master/resources/src/mediawiki.less/mediawiki.ui/variables.less -o .storybook/resolve-less-imports/mediawiki.ui/variables.less
-curl https://raw.githubusercontent.com/wikimedia/mediawiki/master/resources/src/mediawiki.less/mediawiki.ui/mixins.buttons.less -o .storybook/resolve-less-imports/mediawiki.ui/mixins.buttons
+curl https://raw.githubusercontent.com/wikimedia/mediawiki/master/resources/src/mediawiki.less/mediawiki.ui/mixins.buttons.less -o .storybook/resolve-less-imports/mediawiki.ui/mixins.buttons.less
 
 # mediawiki ui
 curl https://raw.githubusercontent.com/wikimedia/mediawiki/master/resources/src/mediawiki.ui/components/buttons.less -o .storybook/resolve-less-imports/mediawiki.ui/components/buttons.less

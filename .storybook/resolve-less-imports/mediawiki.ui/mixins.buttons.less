@@ -1,7 +1,7 @@
 // Mediawiki.ui button mixins for MediaWiki (deprecated)
 //
 // Helper mixins used to create button styles. This file is importable
-// by all LESS files via `@import 'mediawiki.ui/mixins.buttons';`.
+// by all LESS files via `@import 'mediawiki.ui/mixins.buttons.less';`.
 
 /* stylelint-disable selector-class-pattern */
 
@@ -27,10 +27,6 @@
 	text-align: center;
 	// Disable weird iOS styling
 	-webkit-appearance: none;
-	// IE 6 & 7 hack
-	// https://stackoverflow.com/a/5838575/365238
-	*display: inline; /* stylelint-disable-line declaration-block-no-duplicate-properties */
-	zoom: 1;
 }
 
 // Mixin for button interaction states.

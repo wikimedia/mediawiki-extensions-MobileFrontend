@@ -53,6 +53,7 @@ main {
 	}
 }
 
+.navigation-drawer--loading,
 // if footer has last modified line hide it (T173545)
 #footer-info-lastmod {
 	display: none;
@@ -242,15 +243,6 @@ input.search {
 	a {
 		margin: 10px 2px 2px 0;
 	}
-}
-
-.transparent-shield {
-	position: absolute;
-	background: @semiTransparent;
-	z-index: @z-indexAboveContent;
-	// don't use display: none because it's not animatable
-	visibility: hidden;
-	.transition( opacity 0.25s ease-in-out );
 }
 
 // It may be better to express these in a single class
