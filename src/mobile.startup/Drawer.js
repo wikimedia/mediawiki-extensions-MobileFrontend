@@ -65,7 +65,7 @@ mfExtend( Drawer, View, {
 			setTimeout( function () {
 				this.$el.addClass( 'visible animated' );
 				const closeOnScroll = this.options.closeOnScroll;
-				this.$el.parent().addClass( `drawer-visible${closeOnScroll ? '' : ' has-drawer--with-scroll-locked'}` );
+				this.$el.parent().addClass( `navigation-enabled${closeOnScroll ? '' : ' has-drawer--with-scroll-locked'}` );
 
 				setTimeout( function () {
 					var $window = util.getWindow();
@@ -91,8 +91,8 @@ mfExtend( Drawer, View, {
 		// see comment in show()
 		setTimeout( function () {
 			this.$el.removeClass( 'visible' );
+			this.$el.parent().removeClass( 'navigation-enabled has-drawer--with-scroll-locked' );
 			this.options.onBeforeHide();
-			this.$el.parent().removeClass( 'drawer-visible has-drawer--with-scroll-locked' );
 			// .one() registers one callback for scroll and click independently
 			// if one fired, get rid of the other one
 			util.getWindow().off( '.drawer' );
@@ -151,7 +151,7 @@ mfExtend( Drawer, View, {
 		// Thus ensure we wait for the DOM to be loaded
 		util.docReady( function () {
 			this.appendTo( this.appendToElement );
-			this.$el.parent().addClass( 'has-drawer' );
+			this.$el.parent().addClass( 'navigation-enabled' );
 		}.bind( this ) );
 	}
 } );

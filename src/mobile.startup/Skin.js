@@ -74,8 +74,6 @@ mfExtend( Skin, View, {
 		if ( browser.supportsTouchEvents() ) {
 			$el.addClass( 'touch-events' );
 		}
-		util.parseHTML( '<div class="transparent-shield cloaked-element">' )
-			.appendTo( $el.find( '#mw-mf-page-center' ) );
 		if ( this.lazyImageTransformer ) {
 			this.lazyImageTransformer.loadImages();
 		}

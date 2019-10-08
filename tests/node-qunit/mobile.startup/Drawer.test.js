@@ -63,7 +63,7 @@ QUnit.test( 'adds class to parent when DOM is loaded', function ( assert ) {
 
 	new Drawer(); // eslint-disable-line no-new
 	util.docReady( function () {
-		assert.strictEqual( parent.className, 'has-drawer' );
+		assert.strictEqual( parent.className, 'navigation-enabled' );
 		done();
 	} );
 } );
@@ -160,9 +160,9 @@ QUnit.test( 'HTML is valid', function ( assert ) {
 } );
 
 function assertVisible() {
-	sinon.assert.match( parent.className, /.*\bdrawer-visible\b.*/ );
+	sinon.assert.match( parent.className, /.*\bnavigation-enabled\b.*/ );
 }
 
 function assertHidden() {
-	sinon.assert.match( parent.className, /^((?!\bdrawer-visible\b).)*$/ );
+	sinon.assert.match( parent.className, /^((?!\bnavigation-enabled\b).)*$/ );
 }
