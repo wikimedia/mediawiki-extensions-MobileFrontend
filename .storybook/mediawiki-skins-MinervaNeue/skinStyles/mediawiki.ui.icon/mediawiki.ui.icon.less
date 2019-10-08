@@ -19,16 +19,21 @@
 /**
  * Mixin for a pseudo-element with a background image.
  */
-.mixin-background-square() {
-	// sizing
+.mixin-background-square( @size ) {
+	// Sizing properties
 	content: '';
 	display: block;
 	width: 100%;
 	height: 100%;
+	// In case display: block is overridden and display gets set to `flex`
+	// because of inheritance T233521.
+	min-width: @size;
+	min-height: @size;
 
-	// background
+	// Background properties.
 	background-repeat: no-repeat;
-	background-size: contain;
+	// Using static value instead of `background-size: contain` because of T233521#5545513.
+	background-size: @size @size;
 	background-position: center;
 }
 
@@ -67,7 +72,7 @@
 	padding: 0;
 
 	&:before {
-		.mixin-background-square();
+		.mixin-background-square( @icon-size-md );
 	}
 }
 
@@ -111,6 +116,10 @@
 	height: @icon-size-sm;
 	flex-basis: @icon-size-sm;
 	line-height: @icon-size-sm;
+
+	&:before {
+		.mixin-background-square( @icon-size-sm );
+	}
 }
 
 .mw-ui-icon-small.mw-ui-icon-element {
@@ -136,7 +145,6 @@
 	max-width: 100%;
 
 	&:before {
-		.mixin-background-square();
 		// sizing
 		display: inline-block;
 		font-size: initial;
