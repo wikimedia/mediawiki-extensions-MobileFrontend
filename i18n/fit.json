@@ -12,6 +12,8 @@
 	"mobile-frontend-donate-image-title": "Ylöslattaukset",
 	"mobile-frontend-editor-cancel": "Lopeta",
 	"mobile-frontend-editor-continue": "Seuraava",
+	"mobile-frontend-editor-editing": "Mookathaan",
+	"mobile-frontend-editor-editing-page": "<span><strong>Mookathaan</strong> sivua $1</span>",
 	"mobile-frontend-editor-publish": "Anna ulos",
 	"mobile-frontend-editor-save": "Säästä",
 	"mobile-frontend-editor-summary": "Yhteenveto:",
@@ -26,11 +28,14 @@
 	"mobile-frontend-save-settings": "Säästä",
 	"mobile-frontend-settings-beta": "{{SITENAME}} Beeta",
 	"mobile-frontend-settings-save": "Inställninkit säästettiin.",
+	"mobile-frontend-view": "Mupiilinäkymä",
 	"mobile-frontend-watchlist-a-z": "Lista",
 	"mobile-frontend-watchlist-back-home": "Takashii alkusivule",
 	"mobile-frontend-watchlist-cta-button-login": "Lokkaa sisäle",
-	"mobile-frontend-watchlist-cta-button-signup": "Lokkaa ylös",
+	"mobile-frontend-watchlist-cta-button-signup": "Luo konttu",
 	"tag-mobile_edit": "Mobiilimookkaus",
+	"tag-advanced_mobile_edit": "Avanseerattu mupiilimookkaus",
 	"tag-mobile_web_edit": "mobiilisivusto-mookkaus",
-	"mobile-frontend-loading-message": "Ladathaan..."
+	"mobile-frontend-loading-message": "Ladathaan...",
+	"prefs-mobile": "Mupiili-inställninkit"
 }

@@ -8,7 +8,8 @@
 			"TomášPolonec",
 			"Wizzard",
 			"LacoR",
-			"Luky001"
+			"Luky001",
+			"Vlad5250"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Či používateľ edituje prostredníctvom mobilného rozhrania",
@@ -69,7 +70,7 @@
 	"mobile-frontend-editor-editing-page": "<span><strong>Editácia stránky</strong> $1</span>",
 	"mobile-frontend-editor-error": "Chyba, úprava nebola uložená.",
 	"mobile-frontend-editor-error-conflict": "Chyba, iný používateľ túto stránku medzičasom upravil.",
-	"mobile-frontend-editor-error-loading": "Chyba, nejde načítať sekciu.",
+	"mobile-frontend-editor-error-loading": "Chyba, nejde načítať editor.",
 	"mobile-frontend-editor-error-preview": "Chyba, pri načítavaní náhľadu sa stalo niečo neočakávané. Zavrite a skúste znovu.",
 	"mobile-frontend-editor-keep-editing": "Pokračovať v editácii",
 	"mobile-frontend-editor-licensing": "Uložením zmien súhlasíte s uvoľnením svojho príspevku za podmienok {{PLURAL:$2|licencie|licencií}} $1.",
