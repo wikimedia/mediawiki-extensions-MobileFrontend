@@ -10,6 +10,7 @@ $specialPageAliases = [];
 
 /** English (English) */
 $specialPageAliases['en'] = [
+	'Uploads' => [ 'Uploads' ],
 	'History' => [ 'History' ],
 	'MobileCite' => [ 'MobileCite' ],
 	'MobileOptions' => [ 'MobileOptions' ],

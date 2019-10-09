@@ -29,7 +29,8 @@
 		"MobileDiff": "SpecialMobileDiff",
 		"MobileOptions": "SpecialMobileOptions",
 		"MobileMenu": "SpecialMobileMenu",
-		"MobileLanguages": "SpecialMobileLanguages"
+		"MobileLanguages": "SpecialMobileLanguages",
+		"Uploads": "SpecialUploads"
 	},
 	"APIModules": {
 		"mobileview": "ApiMobileView",
@@ -72,6 +73,7 @@
 		"ApiWebappManifest": "includes/api/ApiWebappManifest.php",
 		"InlineDiffFormatter": "includes/diff/InlineDiffFormatter.php",
 		"InlineDifferenceEngine": "includes/diff/InlineDifferenceEngine.php",
+		"SpecialUploads": "includes/specials/SpecialUploads.php",
 		"SpecialMobileHistory": "includes/specials/SpecialMobileHistory.php",
 		"SpecialMobileDiff": "includes/specials/SpecialMobileDiff.php",
 		"SpecialMobileOptions": "includes/specials/SpecialMobileOptions.php",
