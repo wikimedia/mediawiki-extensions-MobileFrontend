@@ -22,7 +22,6 @@ const
 		mobileOptions: 'mobile.special.mobileoptions.scripts',
 		mobileDiff: 'mobile.special.mobilediff.scripts',
 		nearby: 'mobile.special.nearby.scripts',
-		uploads: 'mobile.special.uploads.scripts',
 		userLogin: 'mobile.special.userlogin.scripts',
 		watchlist: 'mobile.special.watchlist.scripts'
 	};
@@ -85,7 +84,6 @@ module.exports = ( env, argv ) => ( {
 		[ENTRIES.mobileOptions]: './src/mobile.special.mobileoptions.scripts.js',
 		[ENTRIES.nearby]: './src/mobile.special.nearby.scripts/mobile.special.nearby.scripts.js',
 		[ENTRIES.userLogin]: './src/mobile.special.userlogin.scripts.js',
-		[ENTRIES.uploads]: './src/mobile.special.uploads.scripts/mobile.special.uploads.scripts.js',
 		[ENTRIES.watchlist]: './src/mobile.special.watchlist.scripts/mobile.special.watchlist.scripts.js'
 	},
 
@@ -176,7 +174,6 @@ module.exports = ( env, argv ) => ( {
 						ENTRIES.mobileOptions,
 						ENTRIES.nearby,
 						ENTRIES.userLogin,
-						ENTRIES.uploads,
 						ENTRIES.watchlist
 					].includes( chunk.name )
 				}

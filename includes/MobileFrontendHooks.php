@@ -1077,8 +1077,6 @@ class MobileFrontendHooks {
 				'mobile-frontend-watchlist-signup-action',
 				// Watchlist and watchstar sign in CTA
 				'mobile-frontend-watchlist-purpose',
-				// Uploads link
-				'mobile-frontend-donate-image-anon',
 				// Edit button sign in CTA
 				'mobile-frontend-edit-login-action',
 				// Edit button sign-up CTA
