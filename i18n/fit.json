@@ -9,7 +9,6 @@
 	"mobile-frontend-categories-search": "Hae katakuureja",
 	"mobile-frontend-categories-summary": "Lisätty katekuureihin",
 	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|mookkaus|mookkausta}}",
-	"mobile-frontend-donate-image-title": "Ylöslattaukset",
 	"mobile-frontend-editor-cancel": "Lopeta",
 	"mobile-frontend-editor-continue": "Seuraava",
 	"mobile-frontend-editor-editing": "Mookathaan",
@@ -23,8 +22,6 @@
 	"mobile-frontend-main-menu-settings-heading": "Inställninkit",
 	"mobile-frontend-media-details": "Detaljit",
 	"mobile-frontend-overlay-close": "Sulje",
-	"mobile-frontend-photo-upload-user-count": "{{PLURAL:$1|<span>1</span> ylöslattaus|<span>$1</span> ylöslattausta}}",
-	"mobile-frontend-photo-upload-user-count-over-limit": "500+ ylöslattausta",
 	"mobile-frontend-save-settings": "Säästä",
 	"mobile-frontend-settings-beta": "{{SITENAME}} Beeta",
 	"mobile-frontend-settings-save": "Inställninkit säästettiin.",
@@ -33,9 +30,9 @@
 	"mobile-frontend-watchlist-back-home": "Takashii alkusivule",
 	"mobile-frontend-watchlist-cta-button-login": "Lokkaa sisäle",
 	"mobile-frontend-watchlist-cta-button-signup": "Luo konttu",
-	"tag-mobile_edit": "Mobiilimookkaus",
+	"tag-mobile_edit": "Mupiilimookkaus",
 	"tag-advanced_mobile_edit": "Avanseerattu mupiilimookkaus",
-	"tag-mobile_web_edit": "mobiilisivusto-mookkaus",
+	"tag-mobile_web_edit": "mupiilisivusto-mookkaus",
 	"mobile-frontend-loading-message": "Ladathaan...",
 	"prefs-mobile": "Mupiili-inställninkit"
 }

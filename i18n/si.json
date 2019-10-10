@@ -24,8 +24,6 @@
 	"mobile-frontend-diffview-anonymous": "නිර්නාමික පරිශීලක",
 	"mobile-frontend-diffview-editcount": "{{PLURAL:සංස්කරණ|සංස්කරණ}} <div>$1</div> ක්",
 	"mobile-frontend-diffview-title": "වෙනස්කම්",
-	"mobile-frontend-donate-image-anon": "උඩුගතකිරීම් පිටුව පෙන්වීම සදහා කරුණාකර ප්‍රවිෂ්ට වන්න.",
-	"mobile-frontend-donate-image-title": "පින්තූරයක් පරිත්‍යාග කරන්න",
 	"mobile-frontend-editor-anon": "නිර්නාමිකව සංස්කරණය කරන්න",
 	"mobile-frontend-editor-placeholder-new-page": "{{SITENAME}} හි නව පිටුවක් {{GENDER:$1|ඔබ නිර්මාණය කරමින්}} පවතී!",
 	"mobile-frontend-featured-article": "අද තෝරාගත් විශේෂාංගය",

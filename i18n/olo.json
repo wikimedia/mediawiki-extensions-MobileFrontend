@@ -48,7 +48,6 @@
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",
 	"mobile-frontend-news-items": "Uudizis",
 	"mobile-frontend-overlay-close": "Salbua",
-	"mobile-frontend-photo-upload-invalid-user": "Käyttäi \"$1\" ei ole registriiruinnuhes.",
 	"mobile-frontend-privacy-link-text": "Luottamusperiuattehet",
 	"mobile-frontend-references-citation": "Citacii",
 	"mobile-frontend-save-settings": "Tallenda",

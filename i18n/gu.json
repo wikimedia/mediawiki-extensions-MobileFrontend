@@ -24,8 +24,6 @@
 	"mobile-frontend-desc": "મોબાઈલ દેખાવ",
 	"mobile-frontend-diffview-404-title": "ખરાબ આવૃત્તિ",
 	"mobile-frontend-diffview-title": "ફેરફારો",
-	"mobile-frontend-donate-image-nouploads": "કોઇ અપલોડ નહી",
-	"mobile-frontend-donate-image-title": "અપલોડસ",
 	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}} ને સુધારવા મદદ કરો.</strong><br />ફેરફાર કરવા માટે પ્રવેશ કરો.",
 	"mobile-frontend-edit-signup-action": "<strong>{{SITENAME}}ને સુધારવા મદદ કરો.</strong><br /> ફેરફાર કરવા માટે પ્રવેશ કરો.",
 	"mobile-frontend-editor-anon": "લોગઈન થયા વિના ફેરફાર કરો",

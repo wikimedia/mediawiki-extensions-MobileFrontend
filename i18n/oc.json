@@ -17,7 +17,6 @@
 	"mobile-frontend-diffview-bytesremoved": "$1 {{PLURAL:$1|octet suprimit|octets suprimits}}",
 	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|cambiament|cambiaments}}",
 	"mobile-frontend-diffview-title": "Cambiaments",
-	"mobile-frontend-donate-image-title": "Telecargaments",
 	"mobile-frontend-expand-sections-status": "Desvolopar totas las seccions",
 	"mobile-frontend-featured-article": "Contengut recomandat del jorn",
 	"mobile-frontend-languages-header-page": "$1 - Lengas",

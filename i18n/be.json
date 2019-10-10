@@ -21,8 +21,6 @@
 	"mobile-frontend-diffview-bytesremoved": "$1 {{PLURAL:$1|байт|байты|байтаў}} выдалена",
 	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|праўка|праўкі|правак}}",
 	"mobile-frontend-diffview-title": "Змены",
-	"mobile-frontend-donate-image-nouploads": "Няма ўкладанняў.",
-	"mobile-frontend-donate-image-title": "Укладанні",
 	"mobile-frontend-editor-save": "Запісаць",
 	"mobile-frontend-editor-switch-editor": "Пераключыць рэдактар",
 	"mobile-frontend-featured-article": "Выбраны матэрыял дня",

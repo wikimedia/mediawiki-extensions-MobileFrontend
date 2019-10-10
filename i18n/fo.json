@@ -16,8 +16,6 @@
 	"mobile-frontend-diffview-bytesremoved": "$1 {{PLURAL:$1|byte tikið|bytes tikin}} burtur",
 	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|rætting|rættingar}}",
 	"mobile-frontend-diffview-title": "Broytingar",
-	"mobile-frontend-donate-image-anon": "Ein $1 verður kravd fyri at síggja útleggingarsíðuna.",
-	"mobile-frontend-donate-image-title": "Útleggingar",
 	"mobile-frontend-editor-cancel": "Angra",
 	"mobile-frontend-editor-cancel-confirm": "Ynskir tú veruliga at fara frá tínari redigering?",
 	"mobile-frontend-editor-continue": "Halt fram",
