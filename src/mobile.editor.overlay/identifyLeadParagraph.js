@@ -11,12 +11,16 @@ module.exports = function identifyLeadParagraph( $body ) {
 
 	// Keep in sync with MoveLeadParagraphTransform::isNotEmptyNode()
 	function isNotEmptyNode( node ) {
-		return /\S/.test( node.textContent );
+		// Ignore VE whitespace characters
+		return !/^[\s↵➞]*$/.test( node.textContent );
 	}
 
 	// Keep in sync with MoveLeadParagraphTransform::isNonLeadParagraph()
 	function isNonLeadParagraph( node ) {
 		var $coords;
+		node = node.cloneNode( true );
+		// Ignore non-content nodes
+		$( node ).find( '.ve-ce-branchNode-inlineSlug, .ve-ce-focusableNode-invisible' ).remove();
 		if ( isNotEmptyNode( node ) ) {
 			$coords = $( node ).find( 'span#coordinates' );
 			if ( !$coords.length ) {
