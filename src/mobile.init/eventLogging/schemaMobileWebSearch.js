@@ -1,5 +1,3 @@
-var context = require( '../../mobile.startup/context' );
-
 module.exports = function () {
 	( function () {
 		var // Schema class provided by ext.eventLogging
@@ -20,7 +18,7 @@ module.exports = function () {
 				 */
 				{
 					platform: 'mobileweb',
-					platformVersion: context.getMode()
+					platformVersion: mw.config.get( 'wgMFMode' )
 				}
 			);
 

@@ -8,7 +8,6 @@ var
 module.exports = {
 	moduleLoader: moduleLoader,
 	mfExtend: require( './mfExtend' ),
-	context: require( './context' ),
 	time: require( './time' ),
 	util,
 	View: require( './View' ),

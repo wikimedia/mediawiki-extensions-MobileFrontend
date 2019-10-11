@@ -21,7 +21,6 @@ var skin,
 	$window = mfUtil.getWindow(),
 	$html = mfUtil.getDocument(),
 	user = mw.user,
-	context = require( '../mobile.startup/context' ),
 	experiments = mw.experiments,
 	activeExperiments = mw.config.get( 'wgMFExperiments' ) || {},
 	Skin = require( '../mobile.startup/Skin' ),
@@ -94,7 +93,7 @@ function displayBetaOptIn( experiment, page, pageHTMLParser ) {
 			storage.set( 'mobile-betaoptin-token', token );
 		}
 
-		inStable = context.getMode() === 'stable';
+		inStable = mw.config.get( 'wgMFMode' ) === 'stable';
 		inSample = experiments.getBucket( experiment, token ) === 'A';
 		if ( inStable && ( inSample || util.getParamValue( 'debug' ) ) ) {
 			betaOptInPanel = new BetaOptInPanel( {
@@ -155,7 +154,7 @@ if ( !currentPage.inNamespace( 'special' ) && isPageContentModelEditable ) {
 	if ( skinName === 'minerva' ) {
 		// TODO: This code should not even be loaded on desktop.
 		// Remove this check when that is fixed (T216537).
-		if ( context.getMode() !== null ) {
+		if ( mw.config.get( 'wgMFMode' ) !== null ) {
 			editor( currentPage, currentPageHTMLParser, skin );
 		}
 	}
