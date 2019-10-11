@@ -9,7 +9,7 @@ class SpecialMobileDiffTest extends MediaWikiLangTestCase {
 	/** Keeps track of request variables that should be unset on teardown **/
 	private $unsetReqVals = [];
 
-	public function tearDown() {
+	public function tearDown() : void {
 		parent::tearDown();
 
 		$ctx = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );

@@ -21,7 +21,7 @@ class MobileContextTest extends MediaWikiTestCase {
 		return $method;
 	}
 
-	protected function tearDown() {
+	protected function tearDown() : void {
 		parent::tearDown();
 
 		MobileContext::resetInstanceForTesting();
