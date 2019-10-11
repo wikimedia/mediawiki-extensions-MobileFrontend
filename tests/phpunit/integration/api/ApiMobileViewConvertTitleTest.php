@@ -10,7 +10,7 @@ class ApiMobileViewConvertTitleTest extends ApiTestCase {
 	private $simplifiedTitle = '天闻角川';
 	private $traditionalTitle = '天聞角川';
 
-	protected function setUp() {
+	protected function setUp() : void {
 		parent::setUp();
 		$this->setUserLang( 'zh' );
 		$this->setContentLang( 'zh' );

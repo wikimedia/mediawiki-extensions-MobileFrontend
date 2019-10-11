@@ -10,7 +10,7 @@ use MobileFrontend\Features\Feature;
 class FeatureTest extends \MediaWikiUnitTestCase {
 	private $madeUpConfigVariable;
 
-	public function setUp() {
+	public function setUp() : void {
 		parent::setUp();
 		$this->madeUpConfigVariable = [
 			'beta' => true,
@@ -118,7 +118,7 @@ class FeatureTest extends \MediaWikiUnitTestCase {
 		$this->assertSame( $actual, $expected );
 	}
 
-	public function tearDown() {
+	public function tearDown() : void {
 		unset( $this->madeUpConfigVariable );
 		parent::tearDown();
 	}

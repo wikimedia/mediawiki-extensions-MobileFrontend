@@ -12,7 +12,7 @@ use MobileFrontend\Devices\DeviceDetectorService;
  * @group MobileFrontend
  */
 class DeviceDetectorServiceTest extends \MediaWikiUnitTestCase {
-	protected function setUp() {
+	protected function setUp() : void {
 		parent::setUp();
 
 		$this->request = new FauxRequest();

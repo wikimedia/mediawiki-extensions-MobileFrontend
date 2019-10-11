@@ -1,5 +1,11 @@
 <?xml version="1.0"?>
 <ruleset>
+	<rule ref="./vendor/mediawiki/mediawiki-codesniffer/MediaWiki">
+		<exclude name="MediaWiki.Commenting.PhpunitAnnotations.ForbiddenExpectedException" />
+		<exclude name="PSR12.Files.ImportStatement.LeadingSlash" />
+		<exclude name="PSR12.Properties.ConstantVisibility.NotFound" />
+	</rule>
+
 	<rule ref="./vendor/mediawiki/mediawiki-codesniffer/MediaWiki" />
 	<rule ref="Generic.Files.LineLength">
 		<exclude-pattern>MobileFrontend\.alias\.php</exclude-pattern>

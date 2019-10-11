@@ -4,7 +4,7 @@
  * @group MobileFrontend
  */
 class MobileSpecialPageTest extends MediaWikiTestCase {
-	public function setUp() {
+	public function setUp() : void {
 		parent::setUp();
 		$this->setMwGlobals( 'wgScript', '/wiki/index.php' );
 	}

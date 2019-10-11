@@ -17,7 +17,7 @@ class MobileContextWikibaseDescriptionsTest extends MediaWikiTestCase {
 	 */
 	protected $config;
 
-	protected function setUp() {
+	protected function setUp() : void {
 		parent::setUp();
 
 		// Set relevant configuration variables to their default values.
