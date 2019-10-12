@@ -262,7 +262,6 @@
 	"mobile-frontend-panel-betaoptin-msg": "Message in panel asking if user wants to opt in to beta.",
 	"mobile-frontend-search-feedback-link-text": "Text of anchor linking to a form for the user to give feedback on search results.",
 	"mobile-frontend-search-feedback-prompt": "Text shown in front of an anchor linking to a form for the user to give feedback on search results.",
-	"mobile-frontend-notifications-filter-title": "Title shown in the notifications filter page on click of the Filter button",
 	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions": "An identifier for the wikidata descriptions subproject/feature",
 	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions-description": "A description of the wikidata description subproject/feature",
 	"mobile-frontend-send-feedback": "Link label for sending feedback to the mobile web beta\n{{Identical|Send feedback}}",

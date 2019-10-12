@@ -266,7 +266,6 @@
 				"mobile.messageBox.styles"
 			],
 			"messages": [
-				"notifications",
 				"echo-mark-all-as-read",
 				"echo-overlay-link",
 				"mobile-frontend-talk-overlay-header",
@@ -802,7 +801,6 @@
 			"MobileFrontendHooks::onCentralAuthSilentLoginRedirect"
 		],
 		"ResourceLoaderRegisterModules": [
-			"MobileFrontendHooks::onResourceLoaderRegisterModules",
 			"MobileFrontendEditorHooks::onResourceLoaderRegisterModules"
 		],
 

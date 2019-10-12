@@ -913,53 +913,6 @@ class MobileFrontendHooks {
 	}
 
 	/**
-	 * ResourceLoaderRegisterModules hook handler.
-	 *
-	 * Registers:
-	 *
-	 * * Modules for the notifications overlay, if the Echo extension is loaded.
-	 *
-	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ResourceLoaderRegisterModules
-	 *
-	 * @param ResourceLoader &$resourceLoader
-	 */
-	public static function onResourceLoaderRegisterModules( ResourceLoader &$resourceLoader ) {
-		$resourceBoilerplate = [
-			'localBasePath' => dirname( __DIR__ ),
-			'remoteExtPath' => 'MobileFrontend',
-		];
-
-		// add Echo, if it's installed
-		if ( ExtensionRegistry::getInstance()->isLoaded( 'Echo' ) ) {
-			$resourceLoader->register( [
-				'mobile.notifications.overlay' => $resourceBoilerplate + [
-					'dependencies' => [
-						'mediawiki.util',
-						'mobile.startup',
-						'oojs-ui',
-						'ext.echo.ui',
-						'oojs-ui.styles.icons-interactions',
-					],
-					'scripts' => [
-						'resources/dist/mobile.notifications.overlay.js',
-					],
-					'styles' => [
-						'resources/mobile.notifications.overlay/NotificationsOverlay.less',
-						'resources/mobile.notifications.overlay/NotificationsFilterOverlay.less',
-					],
-					'messages' => [
-						'mobile-frontend-notifications-filter-title',
-						// defined in Echo
-						'echo-none',
-						'echo-mark-all-as-read-confirmation',
-					],
-					'targets' => [ 'mobile', 'desktop' ],
-				],
-			] );
-		}
-	}
-
-	/**
 	 * Sets a tagline for a given page that can be displayed by the skin.
 	 *
 	 * @param OutputPage $outputPage
