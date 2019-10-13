@@ -149,7 +149,7 @@ class ApiMobileViewTest extends MediaWikiTestCase {
 	}
 
 	public function mockTransform( array $params ) {
-		$thumb = $this->getMock( MediaTransformOutput::class );
+		$thumb = $this->createMock( MediaTransformOutput::class );
 		$thumb->method( 'getUrl' )->will( $this->returnValue( 'http://dummy' ) );
 		$thumb->method( 'getWidth' )->will( $this->returnValue( $params['width'] ) );
 		$thumb->method( 'getHeight' )->will( $this->returnValue( $params['height'] ) );

@@ -74,7 +74,7 @@ class MobilePageTest extends MediaWikiTestCase {
 		if ( $testUser ) {
 			$userId = $testUser->getUser()->getId();
 
-			$userIdentity = $this->getMock( \MediaWiki\User\UserIdentity::class );
+			$userIdentity = $this->createMock( \MediaWiki\User\UserIdentity::class );
 
 			$userIdentity->expects( $this->any() )
 				->method( 'getId' )

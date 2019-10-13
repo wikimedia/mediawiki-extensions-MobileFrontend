@@ -12,7 +12,7 @@ use MobileFrontend\Features\UserModes;
 class FeaturesManagerTest extends MediaWikiTestCase {
 
 	private function getTestMode( $modeName, $isEnabled = true ) {
-		$modeMock = $this->getMock( \MobileFrontend\Features\IUserMode::class );
+		$modeMock = $this->createMock( \MobileFrontend\Features\IUserMode::class );
 		$modeMock->expects( $this->any() )
 			->method( 'getModeIdentifier' )
 			->willReturn( $modeName );

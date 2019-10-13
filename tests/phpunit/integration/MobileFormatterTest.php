@@ -739,7 +739,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 		);
 		$formatter->enableExpandableSections();
 
-		$loggerMock = $this->getMock( \Psr\Log\LoggerInterface::class );
+		$loggerMock = $this->createMock( \Psr\Log\LoggerInterface::class );
 		$loggerMock->expects( $this->once() )
 			->method( 'info' )
 			->will( $this->returnCallback( function ( $message ) use ( $title ) {
@@ -785,7 +785,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 		);
 		$formatter->enableExpandableSections();
 
-		$loggerMock = $this->getMock( \Psr\Log\LoggerInterface::class );
+		$loggerMock = $this->createMock( \Psr\Log\LoggerInterface::class );
 		$loggerMock->expects( $this->never() )
 			->method( 'info' );
 
@@ -828,7 +828,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 		);
 		$formatter->enableExpandableSections();
 
-		$loggerMock = $this->getMock( \Psr\Log\LoggerInterface::class );
+		$loggerMock = $this->createMock( \Psr\Log\LoggerInterface::class );
 		$loggerMock->expects( $this->never() )
 			->method( 'info' );
 

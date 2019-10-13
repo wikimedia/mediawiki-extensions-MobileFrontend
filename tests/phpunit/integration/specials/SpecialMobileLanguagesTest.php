@@ -157,7 +157,7 @@ class SpecialMobileLanguagesTest extends MediaWikiTestCase {
 		];
 		$expected = [];
 
-		$loggerMock = $this->getMock( LoggerInterface::class );
+		$loggerMock = $this->createMock( LoggerInterface::class );
 		$loggerMock->expects( $this->once() )
 			->method( 'warning' )
 			->with( $this->isType( 'string' ), $this->equalTo(
@@ -168,7 +168,7 @@ class SpecialMobileLanguagesTest extends MediaWikiTestCase {
 		) );
 		$this->setLogger( MobileContext::LOGGER_CHANNEL, $loggerMock );
 
-		$requestMock = $this->getMock( FauxRequest::class );
+		$requestMock = $this->createMock( FauxRequest::class );
 		$requestMock->expects( $this->once() )
 			->method( 'getFullRequestURL' )
 			->willReturn( $testUri );

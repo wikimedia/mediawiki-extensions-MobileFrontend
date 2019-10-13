@@ -22,7 +22,7 @@ class FeatureTest extends \MediaWikiUnitTestCase {
 	 * @covers ::isAvailable
 	 */
 	public function testIsAvailableDefault() {
-		$modeMock = $this->getMock( \MobileFrontend\Features\IUserMode::class );
+		$modeMock = $this->createMock( \MobileFrontend\Features\IUserMode::class );
 		$modeMock->method( 'getModeIdentifier' )
 			->willReturn( 'default' );
 
@@ -38,11 +38,11 @@ class FeatureTest extends \MediaWikiUnitTestCase {
 	 * @covers ::isAvailable
 	 */
 	public function testIsAvailable() {
-		$betaMock = $this->getMock( \MobileFrontend\Features\IUserMode::class );
+		$betaMock = $this->createMock( \MobileFrontend\Features\IUserMode::class );
 		$betaMock->method( 'getModeIdentifier' )
 			->willReturn( 'beta' );
 
-		$stableMock = $this->getMock( \MobileFrontend\Features\IUserMode::class );
+		$stableMock = $this->createMock( \MobileFrontend\Features\IUserMode::class );
 		$stableMock->method( 'getModeIdentifier' )
 			->willReturn( 'base' );
 
