@@ -269,7 +269,7 @@
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Font size",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Control the font size of your reading experience.",
 	"mobile-frontend-mobile-option-amc": "Advanced mode",
-	"mobile-frontend-mobile-option-amc-experiment-description": "We are actively developing new features for advanced editors. By turning this mode on you will automatically get new features as they are released. Any feedback or collaboration would be appreciated.",
+	"mobile-frontend-mobile-option-amc-experiment-description": "Advanced mode provides easy access to talk pages, history pages, user tools, and other editing tools.",
 	"mobile-frontend-mobile-option-amc-learn-more": "Learn more",
 	"mobile-frontend-mobile-option-amc-send-feedback": "Send feedback",
 	"mobile-frontend-amc-outreach-intro": "Introducing Advanced Mode",
