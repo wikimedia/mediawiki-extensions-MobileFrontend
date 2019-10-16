@@ -64,7 +64,6 @@ class ContentProviderFactoryTest extends MediaWikiTestCase {
 
 	/**
 	 * @covers ::getProvider
-	 * @expectedException \RuntimeException
 	 */
 	public function testGetProviderWithNoMFContentProvider() {
 		$mockOutputPage = $this->mockOutputPage();
@@ -72,6 +71,7 @@ class ContentProviderFactoryTest extends MediaWikiTestCase {
 			'MFContentProviderClass' => ''
 		] );
 		$factory = new ContentProviderFactory( $config );
+		$this->expectException( RuntimeException::class );
 		$factory->getProvider( $mockOutputPage, self::TEST_HTML );
 	}
 
@@ -118,7 +118,6 @@ class ContentProviderFactoryTest extends MediaWikiTestCase {
 
 	/**
 	 * @covers ::getProvider
-	 * @expectedException \RuntimeException
 	 */
 	public function testGetProviderWithInvalidContentProvider() {
 		$mockOutputPage = $this->mockOutputPage();
@@ -128,6 +127,7 @@ class ContentProviderFactoryTest extends MediaWikiTestCase {
 			'MFContentProviderScriptPath' => false
 		] );
 		$factory = new ContentProviderFactory( $config );
+		$this->expectException( RuntimeException::class );
 		$factory->getProvider( $mockOutputPage, self::TEST_HTML );
 	}
 

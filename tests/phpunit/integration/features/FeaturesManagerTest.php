@@ -47,7 +47,6 @@ class FeaturesManagerTest extends MediaWikiTestCase {
 
 	/**
 	 * @covers ::registerFeature
-	 * @expectedException \RuntimeException
 	 */
 	public function testCannotRegisterSameFeatureTwice() {
 		$featureA =
@@ -58,6 +57,7 @@ class FeaturesManagerTest extends MediaWikiTestCase {
 
 		$manager = new FeaturesManager( $userModes );
 		$manager->registerFeature( $featureA );
+		$this->expectException( RuntimeException::class );
 		$manager->registerFeature( $featureA );
 	}
 
@@ -80,11 +80,11 @@ class FeaturesManagerTest extends MediaWikiTestCase {
 
 	/**
 	 * @covers ::getFeature
-	 * @expectedException \RuntimeException
 	 */
 	public function testGetFeatureThrowsExceptionWhenFeatureNotFound() {
 		$userModes = new UserModes();
 		$manager = new FeaturesManager( $userModes );
+		$this->expectException( RuntimeException::class );
 		$manager->getFeature( 'featureA' );
 	}
 
