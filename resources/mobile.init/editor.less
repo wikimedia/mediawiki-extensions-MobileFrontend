@@ -6,15 +6,10 @@
 	@timing: 400ms 100ms;
 
 	.content .section-heading .indicator {
-		transition: width @timing, min-width @timing, opacity @timing;
+		transition: width @timing, padding @timing, opacity @timing;
 		width: 0;
-		min-width: 0;
+		padding-left: 0;
 		opacity: 0;
-
-		&:before {
-			// Prevent icon from scaling during the transition
-			width: 1.5em;
-		}
 	}
 
 	.mw-editsection {
