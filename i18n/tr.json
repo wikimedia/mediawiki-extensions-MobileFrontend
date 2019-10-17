@@ -202,6 +202,7 @@
 	"nearby": "Yakınınızdaki sayfa başlıkları",
 	"tag-mobile_edit": "Mobil değişiklik",
 	"tag-mobile_edit-description": "Mobilden (web veya uygulama) yapılan düzenleme",
+	"tag-advanced_mobile_edit": "Gelişmiş mobil değişikliği",
 	"tag-mobile_web_edit": "Mobil web değişikliği",
 	"tag-mobile_web_edit-description": "Mobil web sitesinden yapılan düzenleme",
 	"mobile-frontend-loading-message": "Yükleniyor...",
