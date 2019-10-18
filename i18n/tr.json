@@ -29,7 +29,8 @@
 			"1917 Ekim Devrimi",
 			"Vito Genovese",
 			"Bulgu",
-			"Mirzali"
+			"Mirzali",
+			"Grkn gll"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ya da bir mobil kullanıcı arayüzü ile düzenleme olup olmadığı",
@@ -209,6 +210,7 @@
 	"mobile-frontend-panel-ok": "Tamam",
 	"mobile-frontend-panel-cancel": "Hayır, teşekkürler",
 	"mobile-frontend-panel-betaoptin-msg": "Bazı yeni özellikleri denemek ister misiniz? Beta'ya katılarak, hatalar ve sorunlarla karşılaşmayı göze alarak deneysel özelliklere erişim sağlayabilirsiniz.",
+	"mobile-frontend-mobile-option-amc-experiment-description": "Gelişmiş mod, tartışma sayfaları, geçmiş sayfalar, kullanıcı araçları ve diğer düzenleme araçlarına kolay erişim sağlar.",
 	"mobile-frontend-mobile-option-amc-learn-more": "Daha fazlasını öğrenin",
 	"mobile-frontend-mobile-option-amc-send-feedback": "Geri bildirim gönder",
 	"mobile-frontend-console-recruit": "\\o/ Hey! Bu açık kaynak kodlu bir yazılım ve bizim oluşturmak, daha iyi yapmak, JavaScript konsolunda görünebilecek olası hataları düzeltmek amacıyla yardımcı olacak gönüllülere ihtiyacımız var! \n\nBekleme listemizi şurada bulabilirsiniz @ https://phabricator.wikimedia.org/project/profile/67/",
