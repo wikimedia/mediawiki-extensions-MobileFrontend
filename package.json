@@ -31,7 +31,7 @@
 		"@babel/register": "7.0.0",
 		"@storybook/addon-actions": "5.1.11",
 		"@storybook/html": "5.1.10",
-		"@wikimedia/mw-node-qunit": "git+https://github.com/jdlrobson/mw-node-qunit.git#9e91fe5b691b4f4549bbc5b478759bea715ea757",
+		"@wikimedia/mw-node-qunit": "6.1.0",
 		"babel-loader": "8.0.5",
 		"babel-plugin-istanbul": "5.2.0",
 		"bundlesize": "0.18.0",
