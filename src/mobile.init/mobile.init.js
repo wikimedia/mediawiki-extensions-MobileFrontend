@@ -15,14 +15,9 @@ var skin,
 	editor = require( './editor' ),
 	currentPage = require( '../mobile.startup/currentPage' )(),
 	currentPageHTMLParser = require( '../mobile.startup/currentPageHTMLParser' )(),
-	BetaOptInPanel = require( './BetaOptInPanel' ),
-	util = mw.util,
 	mfUtil = require( '../mobile.startup/util' ),
 	$window = mfUtil.getWindow(),
 	$html = mfUtil.getDocument(),
-	user = mw.user,
-	experiments = mw.experiments,
-	activeExperiments = mw.config.get( 'wgMFExperiments' ) || {},
 	Skin = require( '../mobile.startup/Skin' ),
 	eventBus = require( '../mobile.startup/eventBusSingleton' ),
 	schemaMobileWebSearch = require( './eventLogging/schemaMobileWebSearch' ),
@@ -73,51 +68,6 @@ $window
 	) );
 
 /**
- * Displays a prompt to ask the user to join the mobile beta mode.
- *
- * @private
- * @param {Object} experiment sampling data
- * @param {Page} page
- * @param {PageHTMLParser} pageHTMLParser
- */
-function displayBetaOptIn( experiment, page, pageHTMLParser ) {
-	var betaOptInPanel, inStable, inSample,
-		token = storage.get( 'mobile-betaoptin-token' );
-
-	// local storage is supported in this case, when ~ means it was dismissed
-	if ( token !== false && token !== '~' &&
-		!page.isMainPage() && !page.inNamespace( 'special' )
-	) {
-		if ( !token ) {
-			token = user.generateRandomSessionId();
-			storage.set( 'mobile-betaoptin-token', token );
-		}
-
-		inStable = mw.config.get( 'wgMFMode' ) === 'stable';
-		inSample = experiments.getBucket( experiment, token ) === 'A';
-		if ( inStable && ( inSample || util.getParamValue( 'debug' ) ) ) {
-			betaOptInPanel = new BetaOptInPanel( {
-				postUrl: util.getUrl( 'Special:MobileOptions', {
-					returnto: page.title
-				} ),
-				onCancel: function ( ev ) {
-					ev.preventDefault();
-					storage.set( 'mobile-betaoptin-token', '~' );
-					this.remove();
-				}
-			} );
-
-			betaOptInPanel.appendTo( pageHTMLParser.getLeadSectionElement() );
-		}
-
-		// let the interested parties e.g. QuickSurveys know whether the panel is shown
-		mw.track( 'mobile.betaoptin', {
-			isPanelShown: betaOptInPanel !== undefined
-		} );
-	}
-}
-
-/**
  * Updates the font size based on the current value in storage
  */
 function updateFontSize() {
@@ -133,10 +83,6 @@ $window.on( 'pageshow', function () {
 	updateFontSize();
 } );
 updateFontSize();
-
-if ( activeExperiments.betaoptin ) {
-	displayBetaOptIn( activeExperiments.betaoptin, currentPage, currentPageHTMLParser );
-}
 
 // Recruit volunteers through the console
 // (note console.log may not be a function so check via apply)

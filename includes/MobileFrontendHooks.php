@@ -415,8 +415,6 @@ class MobileFrontendHooks {
 			'wgMFLicense' => MobileFrontendSkinHooks::getLicense( 'editor' ),
 			// schemaMobileWebSearch.js
 			'wgMFSchemaSearchSampleRate' => $config->get( 'MFSchemaSearchSampleRate' ),
-			// mobile.init
-			'wgMFExperiments' => $config->get( 'MFExperiments' ),
 			'wgMFEnableJSConsoleRecruitment' => $config->get( 'MFEnableJSConsoleRecruitment' ),
 			// Browser.js
 			'wgMFDeviceWidthTablet' => self::DEVICE_WIDTH_TABLET,
