@@ -170,8 +170,7 @@ class FeaturesManagerTest extends MediaWikiTestCase {
 	public function testGetModeUsesModesToRetrieveData() {
 		$modeMock = $this->getTestMode( 'testMode' );
 
-		$userModes = $this->getMock( \MobileFrontend\Features\UserModes::class, [ 'getMode' ],
-			[], '', false );
+		$userModes = $this->createMock( \MobileFrontend\Features\UserModes::class );
 		$userModes->expects( $this->once() )
 			->method( 'getMode' )
 			->with( 'testMode' )
