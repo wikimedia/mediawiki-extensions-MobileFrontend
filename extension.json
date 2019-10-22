@@ -1,6 +1,6 @@
 {
 	"name": "MobileFrontend",
-	"version": "2.1.0",
+	"version": "2.2.0",
 	"author": [
 		"Patrick Reilly",
 		"Max Semenik",
@@ -570,9 +570,6 @@
 			"styles": [
 				"resources/mobile.special.mobilecite.styles/mobilecite.less"
 			]
-		},
-		"mobile.special.mobilemenu.styles": {
-			"targets": "mobile"
 		},
 		"mobile.special.mobileoptions.styles": {
 			"targets": [ "mobile", "desktop" ],

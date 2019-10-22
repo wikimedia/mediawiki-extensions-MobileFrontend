@@ -159,7 +159,6 @@
 	"mobile-frontend-last-modified-with-user-seconds": "Text displayed on page to show how long ago the page was updated and who updated it. Parameters:\n* $1 - user's gender\n* $2 - username\n* $3 - number of seconds\n* $4 - link to page history\n* $5 - integer. When 0 the user is anonymous. When 1 the user is named\n* $6 - link to user's profile\n{{Related|Mobile-frontend-last-modified-with-user}}",
 	"mobile-frontend-last-modified-with-user-years": "Text displayed on page to show how long ago the page was updated and who updated it. Parameters:\n* $1 - user's gender\n* $2 - username\n* $3 - number of years\n* $4 - link to page history\n* $5 - integer. When 0 the user is anonymous. When 1 the user is named\n* $6 - link to user's profile\n{{Related|Mobile-frontend-last-modified-with-user}}",
 	"mobile-frontend-main-menu": "Message that is displayed as a tooltip for the main menu icon in the header",
-	"mobile-frontend-main-menu-page-title": "{{doc-special|MobileMenu|unlisted=1}}",
 	"mobile-frontend-main-menu-settings-heading": "{{doc-special|MobileOptions|unlisted=1}}\n{{Identical|Settings}}",
 	"mobile-frontend-media-details": "Caption for a button leading to the details of a media file (e.g. an image) in a preview.\n{{Identical|Detail}}",
 	"mobile-frontend-media-license-link": "Link to license information in media viewer.\n{{Identical|License information}}",
