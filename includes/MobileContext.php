@@ -29,11 +29,6 @@ class MobileContext extends ContextSource {
 	protected $mobileMode;
 
 	/**
-	 * Whether to show the first paragraph before the infobox in the lead section
-	 * @var boolean $showFirstParagraphBeforeInfobox
-	 */
-	protected $showFirstParagraphBeforeInfobox;
-	/**
 	 * Save explicitly requested format
 	 * @var string $useFormat
 	 */
