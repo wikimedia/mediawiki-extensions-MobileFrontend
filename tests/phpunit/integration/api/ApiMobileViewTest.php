@@ -129,10 +129,10 @@ class ApiMobileViewTest extends MediaWikiTestCase {
 	 */
 	public function testViewWithTransforms( array $input, array $expected ) {
 		$api = $this->getMobileViewApi( $input );
-		$api->mockFile = $this->getMock( MockFSFile::class,
-			[ 'getWidth', 'getHeight', 'getTitle', 'getMimeType', 'transform' ],
-			[], '', false
-		);
+		$api->mockFile = $this->getMockBuilder( MockFSFile::class )
+			->setMethods( [ 'getWidth', 'getHeight', 'getTitle', 'getMimeType', 'transform' ] )
+			->disableOriginalConstructor()
+			->getMock();
 		$api->mockFile->method( 'getWidth' )->will( $this->returnValue( 640 ) );
 		$api->mockFile->method( 'getHeight' )->will( $this->returnValue( 480 ) );
 		$api->mockFile->method( 'getTitle' )
