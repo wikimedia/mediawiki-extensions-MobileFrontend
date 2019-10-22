@@ -270,7 +270,7 @@
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Rozmiar czcionki",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Zarządzaj rozmiarem czcionki podczas czytania.",
 	"mobile-frontend-mobile-option-amc": "Tryb zaawansowany",
-	"mobile-frontend-mobile-option-amc-experiment-description": "Wciąż zajmujemy tworzeniem nowych funkcji dedykowanych doświadczonym edytorom. Włączenie tego trybu automatycznie je uruchomi, gdy będą już dostępne. Opinie i udział w projekcie są mile widziane.",
+	"mobile-frontend-mobile-option-amc-experiment-description": "Tryb zaawansowany wprowadza łatwy dostęp do stron dyskusji, historii i autorów, narzędzi użytkownika i innych narzędzi związanych z edytowaniem.",
 	"mobile-frontend-mobile-option-amc-learn-more": "Dowiedz się więcej",
 	"mobile-frontend-mobile-option-amc-send-feedback": "Prześlij opinię",
 	"mobile-frontend-amc-outreach-intro": "Przedstawiamy tryb zaawansowany",
