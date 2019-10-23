@@ -165,26 +165,6 @@ mobile preferences option.
   ]
 ```
 
-#### $wgMFExperiments
-
-A list of experiments active on the skin.
-
-* Type: `Array`
-* Default:
-```php
-  [
-    // Experiment to prompts users to opt into the beta experience of the skin.
-    'betaoptin' => [
-      'name' => 'betaoptin',
-      'enabled' => false,
-      'buckets' => [
-        'control' => 0.97,
-        'A' => 0.03,
-      ],
-    ],
-  ]
-```
-
 #### $wgMFEnableJSConsoleRecruitment
 
 Controls whether a message should be logged to the console to attempt to

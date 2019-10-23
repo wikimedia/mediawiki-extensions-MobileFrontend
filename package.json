@@ -84,7 +84,7 @@
 		},
 		{
 			"path": "resources/dist/mobile.init.js",
-			"maxSize": "5.4KB"
+			"maxSize": "4.2KB"
 		},
 		{
 			"path": "resources/dist/mobile.startup.js",

@@ -174,9 +174,6 @@
 				"mediawiki.router",
 				"mediawiki.storage",
 				"mediawiki.Uri",
-				"mediawiki.experiments",
-				"mediawiki.user",
-				"mediawiki.util",
 				"mediawiki.ui.icon",
 				"mobile.ooui.icons",
 				"mobile.startup",
@@ -193,13 +190,9 @@
 				"mobile-frontend-editor-disabled-anon",
 				"mobile-frontend-editor-uploadenable",
 				"apierror-readonly",
-				"mobile-frontend-panel-betaoptin-msg",
-				"mobile-frontend-panel-ok",
-				"mobile-frontend-console-recruit",
-				"mobile-frontend-panel-cancel"
+				"mobile-frontend-console-recruit"
 			],
 			"styles": [
-				"resources/mobile.init/BetaOptInPanel.less",
 				"resources/mobile.init/mobile.less"
 			],
 			"skinStyles": {
@@ -873,17 +866,6 @@
 			"skipPreview": false
 		},
 		"MFDefaultEditor": "source",
-		"MFExperiments": {
-			"betaoptin": {
-				"name": "betaoptin",
-				"enabled": false,
-				"buckets": {
-					"control": 0.97,
-					"A": 0.03
-				}
-			},
-			"_merge_strategy": "array_plus_2d"
-		},
 		"MFEnableJSConsoleRecruitment": false,
 		"MFAlwaysUseContentProvider": false,
 		"MFMobileFormatterOptions": {
