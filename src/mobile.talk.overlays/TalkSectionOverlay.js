@@ -13,6 +13,11 @@ var
 	Button = require( '../mobile.startup/Button' );
 
 /**
+ * Callback executed when a save has successfully completed.
+ * @callback onSaveComplete
+ */
+
+/**
  * Overlay for showing talk page section
  * @class TalkSectionOverlay
  * @extends Overlay
@@ -21,6 +26,7 @@ var
  * @uses Button
  * @uses Toast
  * @param {Object} options
+ * @param {onSaveComplete} [options.onSaveComplete]
  */
 function TalkSectionOverlay( options ) {
 	const onBeforeExit = this.onBeforeExit.bind( this );
@@ -224,6 +230,14 @@ mfExtend( TalkSectionOverlay, Overlay, {
 				appendtext: val,
 				redirect: true
 			} ).then( function () {
+				if ( self.options.onSaveComplete ) {
+					self.options.onSaveComplete();
+					return;
+				}
+				// All of this code will be removed in
+				// I75158ff363d56d55ae385687baf64f8b9d5ca8b0 but is needed for backwards
+				// compatibility until I243f1193bce0da9fa710fc3b5379f90b2d079680 is
+				// merged
 				popup.show( mw.msg( 'mobile-frontend-talk-reply-success' ) );
 				// invalidate the cache
 				self.pageGateway.invalidatePage( self.options.title );
