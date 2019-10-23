@@ -171,8 +171,6 @@
 	"tag-mobile_web_edit": "मोबाइल वेब सम्पादन",
 	"tag-mobile_web_edit-description": "यह सम्पादन मोबाइल जालस्थल से किया गया",
 	"mobile-frontend-loading-message": "लोड हो रहा है ...",
-	"mobile-frontend-panel-ok": "ठीक",
-	"mobile-frontend-panel-cancel": "नहीं धन्यवाद",
 	"mobile-frontend-search-feedback-prompt": "आप जो देखना चाहते थे, वह नहीं मिला?",
 	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions": "शीर्षक विवरण",
 	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions-description": "शीर्षक के नीचे एक संक्षिप्त विवरण के साथ पृष्ठ के विषय के बारे में जानें",

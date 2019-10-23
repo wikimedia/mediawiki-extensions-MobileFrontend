@@ -155,7 +155,5 @@
 	"tag-mobile_edit-description": "ویرایش انجام‌شده از گوشی همراه (وب یا برنامه)",
 	"tag-mobile_web_edit": "دۀسکاری وۀ مرورگر تلفن همراه",
 	"tag-mobile_web_edit-description": "ویرایش انجام‌شده از وبگاه موبایل",
-	"mobile-frontend-loading-message": "در حال بارگیری...",
-	"mobile-frontend-panel-ok": "باشد",
-	"mobile-frontend-panel-cancel": "نه، سپاسگزارم"
+	"mobile-frontend-loading-message": "در حال بارگیری..."
 }

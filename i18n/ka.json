@@ -147,8 +147,6 @@
 	"tag-mobile_edit-description": "მობილური ხელსაწყოდან რედაქტირება (საიტი ან აპლიკაცია)",
 	"tag-mobile_web_edit": "რედაქტირება საიტის მობილური ვერსიით",
 	"mobile-frontend-loading-message": "იტვირთება...",
-	"mobile-frontend-panel-ok": "კარგი",
-	"mobile-frontend-panel-cancel": "არა, გმადლობთ",
 	"mobile-frontend-search-feedback-link-text": "დაწერეთ შეფასება.",
 	"mobile-frontend-search-feedback-prompt": "ვერ იპოვეთ, რასაც ეძებდით?"
 }

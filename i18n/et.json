@@ -216,8 +216,6 @@
 	"tag-mobile_web_edit": "Mobiiliveebi kaudu",
 	"tag-mobile_web_edit-description": "Mobiili veebisaidi kaudu tehtud muudatus",
 	"mobile-frontend-loading-message": "Laadimine…",
-	"mobile-frontend-panel-ok": "Sobib",
-	"mobile-frontend-panel-cancel": "Ei, aitäh",
 	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions": "Pealkirjade kirjeldused",
 	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions-description": "Näita pealkirja all lühikirjeldust, et teemast ülevaade saada.",
 	"mobile-frontend-mobile-option-amc": "Täiustatud režiim",

@@ -146,8 +146,6 @@
 	"tag-mobile_edit-description": "Labojums veikts no mobilās iekārtas (vietnes vai lietotnes)",
 	"tag-mobile_web_edit": "Labojums no mobilās ierīces",
 	"mobile-frontend-loading-message": "Ielādē…",
-	"mobile-frontend-panel-ok": "Labi",
-	"mobile-frontend-panel-cancel": "Nē, paldies",
 	"mobile-frontend-search-feedback-link-text": "Sniedz mums atsauksmes.",
 	"mobile-frontend-search-feedback-prompt": "Nevarēji atrast meklēto?",
 	"mobile-frontend-send-feedback": "Sūtīt atsauksmes",

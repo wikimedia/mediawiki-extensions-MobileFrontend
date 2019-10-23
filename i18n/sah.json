@@ -108,7 +108,5 @@
 	"mobile-frontend-user-page-no-page-yet": "$1 тус сирэйэ суох эбит",
 	"mobile-frontend-user-page-describe-yourself": "Бэйэҥ тускунан атыттарга анаан $1 тус сирэйгэр суруйуоххун сөп",
 	"tag-mobile_edit": "Мобиилаттан уларытыы",
-	"tag-mobile_web_edit": "Мобиил барылын нөҥүө уларытыы",
-	"mobile-frontend-panel-ok": "Сөп",
-	"mobile-frontend-panel-cancel": "Суох, махтанабын"
+	"tag-mobile_web_edit": "Мобиил барылын нөҥүө уларытыы"
 }

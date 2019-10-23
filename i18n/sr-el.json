@@ -126,8 +126,6 @@
 	"tag-mobile_web_edit": "mobilno veb-uređivanje",
 	"tag-mobile_web_edit-description": "Izmena načinjena sa mobilne verzije sajta",
 	"mobile-frontend-loading-message": "Učitavam…",
-	"mobile-frontend-panel-ok": "U redu",
-	"mobile-frontend-panel-cancel": "Ne, hvala",
 	"mobile-frontend-search-feedback-link-text": "Dajte nam Vaše mišljenje.",
 	"mobile-frontend-beta-only": "Funkcija samo dostupna u beta modu"
 }

@@ -7,10 +7,10 @@
 			"Ерней"
 		]
 	},
-	"mobile-frontend-changeslist-nocomment": "Үзгәртүләр тасвирламасы юк",
+	"mobile-frontend-changeslist-nocomment": "төзәтмә аңлатмасы юк",
 	"mobile-frontend-copyright": "Мәгълүмат $1 буенча таратыла (әгәр башкасы күрсәтелмәсә).",
 	"mobile-frontend-desc": "Мобиль интерфейс",
-	"mobile-frontend-diffview-title": "Үзгәртүләр",
+	"mobile-frontend-diffview-title": "Үзгәрешләр",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Тыю сәбәбе",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Тыюлы}}",
 	"mobile-frontend-editor-keep-editing": "Үзгәртүне дәвам итү",
@@ -28,6 +28,5 @@
 	"mobile-frontend-view-desktop": "Санак",
 	"mobile-frontend-watchlist-cta-button-login": "Керү",
 	"tag-mobile_edit": "Мобиль җиһаз ярдәмендә үзгәртү",
-	"tag-mobile_web_edit": "Сайтның мобиль юрамасы аша үзгәртү",
-	"mobile-frontend-panel-ok": "Ярар"
+	"tag-mobile_web_edit": "Сайтның мобиль юрамасы аша үзгәртү"
 }

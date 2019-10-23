@@ -219,8 +219,6 @@
 	"tag-mobile_web_edit": "Suntingan web HP",
 	"tag-mobile_web_edit-description": "Suntingan dari peramban seluler",
 	"mobile-frontend-loading-message": "Memuat...",
-	"mobile-frontend-panel-ok": "Oke",
-	"mobile-frontend-panel-cancel": "Tidak, terima kasih",
 	"mobile-frontend-search-feedback-link-text": "Berikan kami umpan balik Anda.",
 	"mobile-frontend-search-feedback-prompt": "Tidak dapat menemukan apa yang Anda cari?",
 	"mobile-frontend-console-recruit": "Pelajari lebih lanjut bagaimana kami membangun situs seluler @ https://www.mediawiki.org/wiki/Extension:MobileFrontend",
