@@ -265,8 +265,11 @@ Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 			id = prefix + 'collapsible-block-' + i;
 		// Be sure there is a div wrapping the section content.
 		// Otherwise, collapsible sections for this page is not enabled.
-		if ( $heading.next().is( 'div' ) ) {
-			$content = $heading.next( 'div' );
+		// FIXME: Check `div` for backwards compatibility with cached HTML
+		// Remove check when Id032df3a420d577e42572ab128ca89a006b67ffe has been in
+		// production for 1mo.
+		if ( $heading.next().is( 'div, section' ) ) {
+			$content = $heading.next( 'div, section' );
 			isReferenceSection = Boolean( $content.attr( 'data-is-reference-section' ) );
 			$heading
 				.addClass( 'collapsible-heading ' )
