@@ -1,4 +1,10 @@
 {
-	"@metadata": [],
-	"mobile-frontend-featured-article": "L-Maqal dyal lyoma"
+	"@metadata": {
+		"authors": [
+			"SADIQUI"
+		]
+	},
+	"mobile-frontend-featured-article": "L-Maqal dyal lyoma",
+	"tag-mobile_edit": "تعديل من التيليفون",
+	"tag-mobile_web_edit": "تعديل ويب بالتيليفون"
 }

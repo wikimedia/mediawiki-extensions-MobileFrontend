@@ -66,7 +66,7 @@
 	"mobile-frontend-editor-editing-page": "<span>$1 <strong>szerkesztése</strong></span>",
 	"mobile-frontend-editor-error": "Hiba, a szerkesztés nincs elmentve.",
 	"mobile-frontend-editor-error-conflict": "Hiba, egy másik felhasználó szerkesztette ezt a lapot.",
-	"mobile-frontend-editor-error-loading": "Hiba, a szakasz betöltése sikertelen.",
+	"mobile-frontend-editor-error-loading": "Hiba, a szerkesztő betöltése sikertelen.",
 	"mobile-frontend-editor-error-preview": "Hiba, valami váratlan történt az előnézet betöltése közben. Zárd be és próbáld újra.",
 	"mobile-frontend-editor-keep-editing": "Szerkesztés folytatása",
 	"mobile-frontend-editor-licensing": "A szerkesztések elmentésével hozzájárulsz a szerkesztésed $1 {{PLURAL:$2|licenc|licencek}} alatti közzétételéhez.",
