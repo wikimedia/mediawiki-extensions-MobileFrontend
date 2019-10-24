@@ -16,6 +16,7 @@
  */
 
 @import '../../minerva.less/minerva.variables.less';
+@import 'mediawiki.mixins.less';
 /**
  * Mixin for a pseudo-element with a background image.
  */
@@ -96,6 +97,9 @@
 .mw-ui-icon-element {
 	padding: @icon-padding-md;
 	border-radius: @borderRadius;
+	// Use semi-colon if multiple arguments are needed!
+	// See https://stackoverflow.com/questions/11419741/less-css-mixins-with-variable-number-of-arguments
+	.transition( background-color @transition-duration-base; );
 
 	// screen-reader text. Not using `text-indent: -999px` because
 	// the inner :before element is `display: block` so text-indent has no effect.

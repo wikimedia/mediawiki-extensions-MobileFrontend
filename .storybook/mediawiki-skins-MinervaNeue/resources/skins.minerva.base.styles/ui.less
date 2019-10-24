@@ -165,7 +165,7 @@ main {
 	box-shadow: 0 1px 1px rgba( 0, 0, 0, 0.05 );
 	// Keyboard focus is taken care of below at `.search-box .search:focus`.
 	outline: 0;
-	.transition( ~'border-color 250ms, box-shadow 250ms' );
+	.transition( border-color @transition-duration-medium, box-shadow @transition-duration-medium; );
 }
 
 // Provide focus styles only in non-JS and overlay to prevent double transition.
