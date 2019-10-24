@@ -44,14 +44,6 @@ module.exports = function () {
 			);
 			/* eslint-enable camelcase */
 
-		if ( mw.config.get( 'wgMFSchemaEditAttemptStepAnonymousUserId' ) ) {
-			// eslint-disable-next-line camelcase
-			schemaEditAttemptStep.defaults.anonymous_user_token = mw.config.get( 'wgMFSchemaEditAttemptStepAnonymousUserId' );
-		}
-		if ( mw.config.get( 'wgMFSchemaEditAttemptStepBucket' ) ) {
-			schemaEditAttemptStep.defaults.bucket = mw.config.get( 'wgMFSchemaEditAttemptStepBucket' );
-		}
-
 		function log() {
 			// mw.log is a no-op unless resource loader is in debug mode, so
 			// this allows trackdebug to work independently (T211698)
@@ -108,6 +100,17 @@ module.exports = function () {
 		mw.trackSubscribe( 'mf.schemaEditAttemptStep', function ( topic, data, timeStamp ) {
 			var actionPrefix = actionPrefixMap[ data.action ] || data.action,
 				duration = 0;
+
+			// These are always the same for every event, but they can't be set in defaults,
+			// because the mw.config values are not present yet then, because they are set
+			// by JS code in editor.js. This is a little silly.
+			if ( mw.config.get( 'wgMFSchemaEditAttemptStepAnonymousUserId' ) ) {
+				// eslint-disable-next-line camelcase
+				data.anonymous_user_token = mw.config.get( 'wgMFSchemaEditAttemptStepAnonymousUserId' );
+			}
+			if ( mw.config.get( 'wgMFSchemaEditAttemptStepBucket' ) ) {
+				data.bucket = mw.config.get( 'wgMFSchemaEditAttemptStepBucket' );
+			}
 
 			timeStamp = timeStamp || this.timeStamp; // I8e82acc12 back-compat
 
