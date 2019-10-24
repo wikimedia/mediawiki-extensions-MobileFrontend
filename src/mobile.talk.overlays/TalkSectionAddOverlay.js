@@ -11,13 +11,13 @@ var
  * Overlay for adding a talk section
  * @class TalkSectionAddOverlay
  * @extends Overlay
- * @uses Toast
  *
  * @param {Object} options Configuration options
+ * @param {mw.Api} options.api
  * @param {Object} options.title Title of the talk page being modified
+ * @param {string} options.licenseMsg
  * @param {Object} options.currentPageTitle Title of the page before the overlay appears
- * @param {OO.EventEmitter} options.eventBus Object used to emit talk-added-wo-overlay
- * @param {Function} options.onSaveComplete executed when a save has completed
+ * @param {Function} [options.onSaveComplete] executed when a save has completed
  * and talk-discussion-added events
  */
 function TalkSectionAddOverlay( options ) {
@@ -35,7 +35,6 @@ function TalkSectionAddOverlay( options ) {
 	this.onSaveComplete = options.onSaveComplete;
 	this.title = options.title;
 	this.currentPageTitle = options.currentPageTitle;
-	this.eventBus = options.eventBus;
 	// Variable to indicate, if the overlay will be closed by the save function
 	// or by the user. If this is false and there is content in the input fields,
 	// the user will be asked, if he want to abandon his changes before we close
@@ -116,16 +115,10 @@ mfExtend( TalkSectionAddOverlay, Overlay, {
 	 * @instance
 	 */
 	onSaveClick: function () {
-		var isOnTalkPage = this.title === this.currentPageTitle;
-
 		this.showHidden( '.saving-header' );
 		this.save().then( function ( status ) {
-			if ( status === 'ok' ) {
-				if ( isOnTalkPage ) {
-					this.eventBus.emit( 'talk-added-wo-overlay' );
-				} else {
-					this.onSaveComplete();
-				}
+			if ( status === 'ok' && this.options.onSaveComplete ) {
+				this.onSaveComplete();
 			}
 		}.bind( this ), function ( error ) {
 			var editMsg = mw.msg( 'mobile-frontend-talk-topic-error' );
