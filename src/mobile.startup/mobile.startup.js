@@ -59,7 +59,8 @@ module.exports = {
 	mediaViewer: {
 		overlay: require( './mediaViewer/overlay' )
 	},
-	amcOutreach: require( './amcOutreach/amcOutreach' )
+	amcOutreach: require( './amcOutreach/amcOutreach' ),
+	Section: require( './Section' )
 };
 
 mw.mobileFrontend = moduleLoader;
