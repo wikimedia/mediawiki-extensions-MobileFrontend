@@ -2,10 +2,10 @@
 
 namespace MobileFrontend\AMC;
 
-use \DeferredUpdates;
+use DeferredUpdates;
 use MediaWiki\MediaWikiServices;
 use MobileFrontend\Features\IUserMode;
-use \RuntimeException;
+use RuntimeException;
 use Wikimedia\Assert\Assert;
 
 class UserMode implements IUserMode {
