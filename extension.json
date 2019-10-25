@@ -262,9 +262,7 @@
 			"messages": [
 				"echo-mark-all-as-read",
 				"echo-overlay-link",
-				"mobile-frontend-talk-overlay-header",
 				"mobile-frontend-talk-add-overlay-submit",
-				"mobile-frontend-talk-fullpage",
 				"toc",
 				"mobile-frontend-references-citation-error",
 				"mobile-frontend-references-citation",
@@ -416,14 +414,10 @@
 				"resources/mobile.talk.overlays/talk.less"
 			],
 			"messages": [
-				"mobile-frontend-talk-explained",
-				"mobile-frontend-talk-explained-empty",
 				"mobile-frontend-talk-add-overlay-subject-placeholder",
 				"mobile-frontend-talk-add-overlay-content-placeholder",
-				"mobile-frontend-talk-reply-success",
 				"mobile-frontend-talk-reply",
 				"mobile-frontend-talk-reply-info",
-				"mobile-frontend-talk-topic-feedback",
 				"mobile-frontend-talk-topic-error",
 				"mobile-frontend-talk-topic-error-protected",
 				"mobile-frontend-talk-topic-error-permission",
