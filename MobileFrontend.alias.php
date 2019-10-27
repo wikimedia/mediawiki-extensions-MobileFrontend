@@ -354,6 +354,18 @@ $specialPageAliases['scn'] = [
 	'MobileOptions' => [ 'OpzioniMobile' ],
 ];
 
+/** Slovak (slovenčina) */
+$specialPageAliases['sk'] = [
+	'History' => [ 'História', 'Historia' ],
+	'MobileCite' => [ 'Mobilná_citácia', 'MobilnáCitácia', 'Mobilna_citacia', 'MobilnaCitacia' ],
+	'MobileOptions' => [ 'Mobilné_nastavenia', 'MobilnéNastavenia', 'Mobilne_nastavenia', 'MobilneNastavenia' ],
+	'Uploads' => [ 'Nahrané_súbory', 'NahranéSúbory', 'Nahrane_subory', 'NahraneSubory' ],
+	'MobileDiff' => [ 'Mobilný_rozdiel', 'MobilnýRozdiel', 'Mobilny_rozdiel', 'MobilnyRozdiel' ],
+	'MobileMenu' => [ 'Mobilné_menu', 'MobilnéMenu', 'Mobilne_menu', 'MobilneMenu' ],
+	'MobileLanguages' => [ 'Mobilné_jazyky', 'MobilnéJazyky', 'Mobilne_jazyky', 'MobilneJazyky' ],
+	'Nearby' => [ 'V_okolí', 'VOkolí', 'V_okoli', 'VOkoli' ],
+];
+
 /** Serbian (Cyrillic script) (српски (ћирилица)‎) */
 $specialPageAliases['sr-ec'] = [
 	'History' => [ 'Историја' ],
