@@ -129,6 +129,45 @@ QUnit.test( '#add, with current path', function ( assert ) {
 	} );
 } );
 
+QUnit.test( '#add, with string literal (matching)', function ( assert ) {
+	var deferred = util.Deferred(),
+		fakeOverlay = this.createFakeOverlay();
+	deferred.show = sandbox.spy();
+
+	// eslint-disable-next-line no-useless-escape
+	overlayManager.add( '[.*+?^${}()|[\](foo)', function () {
+		return deferred;
+	} );
+	fakeRouter.emit( 'route', {
+		// eslint-disable-next-line no-useless-escape
+		path: '[.*+?^${}()|[\](foo)'
+	} );
+	deferred.resolve( fakeOverlay );
+
+	return deferred.then( function () {
+		assert.strictEqual( fakeOverlay.show.callCount, 1, 'show called for string that matches' );
+	} );
+} );
+
+QUnit.test( '#add, with string literal (not matching)', function ( assert ) {
+	var deferred = util.Deferred(),
+		fakeOverlay = this.createFakeOverlay();
+	deferred.show = sandbox.spy();
+
+	// eslint-disable-next-line no-useless-escape
+	overlayManager.add( '[.*+?^${}()|[\](foo)', function () {
+		return deferred;
+	} );
+	fakeRouter.emit( 'route', {
+		path: '(bar)'
+	} );
+	deferred.resolve( fakeOverlay );
+
+	return deferred.then( function () {
+		assert.strictEqual( fakeOverlay.show.callCount, 0, 'show not called for string that doesn\'t match' );
+	} );
+} );
+
 QUnit.test( '#replaceCurrent', function ( assert ) {
 	var fakeOverlay = this.createFakeOverlay(),
 		anotherFakeOverlay = this.createFakeOverlay();
