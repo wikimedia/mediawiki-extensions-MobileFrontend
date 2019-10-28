@@ -849,7 +849,7 @@
 		"MFUseDesktopSpecialWatchlistPage": {
 			"base": false,
 			"beta": false,
-			"amc": false
+			"amc": true
 		},
 		"MFContentProviderTryLocalContentFirst": true,
 		"MFContentProviderClass": "MobileFrontend\\ContentProviders\\DefaultContentProvider",
