@@ -31,6 +31,11 @@ class ApiMobileView extends ApiBase {
 	/** @var File|false Saves a File Object, or false if no file exist */
 	private $file;
 
+	/** @inheritDoc */
+	public function isDeprecated() {
+		return true;
+	}
+
 	/**
 	 * Run constructor of ApiBase
 	 * @param ApiMain $main Instance of class ApiMain
@@ -105,6 +110,8 @@ class ApiMobileView extends ApiBase {
 
 		$namespace = $title->getNamespace();
 		$this->addXAnalyticsItem( 'ns', (string)$namespace );
+
+		$this->addWarning( 'apiwarn-mobilefrontend-mobileviewdeprecated' );
 
 		// See whether the actual page (or if enabled, the redirect target) is the main page
 		$this->mainPage = $this->isMainPage( $title );

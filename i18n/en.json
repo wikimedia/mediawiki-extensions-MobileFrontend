@@ -37,6 +37,7 @@
 			"Yuvaraj Pandian"
 		]
 	},
+	"apiwarn-mobilefrontend-mobileviewdeprecated": "This API is deprecated. See T186627 for more details.",
 	"abusefilter-edit-builder-vars-user-mobile": "Whether or not a user is editing through the mobile interface",
 	"mobile-frontend-account-create-captcha-placeholder": "Enter confirmation code",
 	"mobile-frontend-categories-heading": "<strong>Categories</strong>",
