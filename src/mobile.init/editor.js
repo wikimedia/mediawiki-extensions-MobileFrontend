@@ -26,11 +26,13 @@ var M = require( '../mobile.startup/moduleLoaderSingleton' ),
  * @param {Router} router
  */
 function onEditLinkClick( elem, ev, router ) {
-	var section = ( new mw.Uri( elem.href ) ).query.section || 'all';
+	var section;
 	if ( $allEditLinks.length === 1 ) {
 		// If section edit links are not available, the only edit link
 		// should allow editing the whole page (T232170)
 		section = 'all';
+	} else {
+		section = mw.util.getParamValue( 'section', elem.href ) || 'all';
 	}
 	router.navigate( '#/editor/' + section );
 	// DO NOT USE stopPropagation or you'll break click tracking in WikimediaEvents
