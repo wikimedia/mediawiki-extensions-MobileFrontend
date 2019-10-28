@@ -50,11 +50,42 @@ function onEditLinkClick( elem, ev, router ) {
  * @return {string} Either 'VisualEditor' or 'SourceEditor'
  */
 function getPreferredEditor() {
-	var preferredEditor = mw.storage.get( 'preferredEditor' );
+	var defaultEditor, tokenData, anonid,
+		preferredEditor = mw.storage.get( 'preferredEditor' );
 	if ( preferredEditor ) {
 		return preferredEditor;
 	}
-	switch ( mw.config.get( 'wgMFDefaultEditor' ) ) {
+	defaultEditor = mw.config.get( 'wgMFDefaultEditor' );
+	// Handle the ABTest case
+	tokenData = mw.storage.getObject( 'MFDefaultEditorABToken' );
+	if ( tokenData && tokenData.expires < Date.now() ) {
+		// The storage never expires by itself. We should keep this for a while, even if we remove
+		// the rest of this code, to clean up after ourselves.
+		mw.storage.remove( 'MFDefaultEditorABToken' );
+		tokenData = null;
+	}
+	if ( defaultEditor === 'abtest' ) {
+		if ( mw.user.isAnon() ) {
+			if ( !tokenData ) {
+				tokenData = {
+					token: mw.user.generateRandomSessionId(),
+					// 90 days
+					expires: Date.now() + 90 * 24 * 60 * 60 * 1000
+				};
+				mw.storage.setObject( 'MFDefaultEditorABToken', tokenData );
+			}
+			mw.config.set( 'wgMFSchemaEditAttemptStepAnonymousUserId', tokenData.token );
+			anonid = parseInt( tokenData.token.slice( 0, 8 ), 16 );
+			defaultEditor = anonid % 2 === 0 ? 'source' : 'visual';
+			mw.config.set( 'wgMFSchemaEditAttemptStepBucket', 'default-' + defaultEditor );
+		} else if ( mw.config.get( 'wgUserEditCount' ) <= 100 ) {
+			defaultEditor = mw.user.getId() % 2 === 0 ? 'source' : 'visual';
+			mw.config.set( 'wgMFSchemaEditAttemptStepBucket', 'default-' + defaultEditor );
+		} else {
+			defaultEditor = 'source';
+		}
+	}
+	switch ( defaultEditor ) {
 		case 'source':
 			return 'SourceEditor';
 		case 'visual':
