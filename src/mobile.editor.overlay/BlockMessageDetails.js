@@ -84,8 +84,19 @@ class BlockMessageDetails extends View {
         </div>
       {{/reason}}
       <div class="block-message-item block-message-creator">
-        <h6>{{ creatorHeader }}</h6>
-        <div><strong><a href="{{ creator.url }}"></a></strong></div>
+        {{#creator.name}}
+          <h6>{{ creatorHeader }}</h6>
+          <div>
+            <strong>
+              {{#creator.url}}
+                <a href="{{ creator.url }}"></a>
+              {{/creator.url}}
+              {{^creator.url}}
+                {{ creator.name }}
+              {{/creator.url}}
+            </strong>
+          </div>
+        {{/creator.name}}
       </div>
       {{#expiry}}
         <div class="block-message-item">
