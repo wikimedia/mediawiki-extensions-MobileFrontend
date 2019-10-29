@@ -244,7 +244,7 @@
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Textstorlek",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Kontrollera textstorleken för din läsupplevelse.",
 	"mobile-frontend-mobile-option-amc": "Avancerat läge",
-	"mobile-frontend-mobile-option-amc-experiment-description": "Vi utvecklar aktivt nya funktioner för avancerade redigerare. Genom att aktivera det här läget får du automatiskt nya funktioner när de släpps. All återkoppling eller samarbete uppskattas.",
+	"mobile-frontend-mobile-option-amc-experiment-description": "Avancerat läge ger enkel åtkomst till diskussionssidor, historiksidor, användarverktyg och andra redigeringsverktyg.",
 	"mobile-frontend-mobile-option-amc-learn-more": "Läs mer",
 	"mobile-frontend-mobile-option-amc-send-feedback": "Skicka återkoppling",
 	"mobile-frontend-amc-outreach-intro": "Introducerar avancerat läge",
