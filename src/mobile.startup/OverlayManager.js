@@ -220,9 +220,20 @@ OverlayManager.prototype = {
 	_matchRoute: function ( path, entry ) {
 		var
 			next,
+			didMatch,
+			captures,
 			match = path.match( entry.route ),
 			previous = this.stack[1],
 			self = this;
+
+		if ( typeof entry.route === 'string' ) {
+			didMatch = entry.route === path;
+			captures = [];
+		} else {
+			match = path.match( entry.route );
+			didMatch = !!match;
+			captures = match ? match.slice( 1 ) : [];
+		}
 
 		/**
 		 * Returns object to add to stack
@@ -233,11 +244,11 @@ OverlayManager.prototype = {
 		function getNext() {
 			return {
 				path: path,
-				factoryResult: entry.factory.apply( self, match.slice( 1 ) )
+				factoryResult: entry.factory.apply( self, captures )
 			};
 		}
 
-		if ( match ) {
+		if ( didMatch ) {
 			// if previous stacked overlay's path matches, assume we're going back
 			// and reuse a previously opened overlay
 			if ( previous && previous.path === path ) {
@@ -280,7 +291,8 @@ OverlayManager.prototype = {
 	 *
 	 * @memberof OverlayManager
 	 * @instance
-	 * @param {RegExp} route route regular expression, optionally with parameters.
+	 * @param {RegExp|string} route route regular expression optionally with
+	 * parameters or a string literal.
 	 * @param {Function} factory a function returning an overlay or a $.Deferred
 	 * which resolves to an overlay.
 	 */
