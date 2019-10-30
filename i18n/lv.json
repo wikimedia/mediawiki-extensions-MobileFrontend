@@ -43,7 +43,7 @@
 	"mobile-frontend-editor-editing-page": "<span><strong>Labo</strong> $1</span>",
 	"mobile-frontend-editor-error": "Kļūda, labojumi nav saglabāti.",
 	"mobile-frontend-editor-error-conflict": "Kļūda, cits lietotājs ir labojis šo lapu.",
-	"mobile-frontend-editor-error-loading": "Kļūda, nevar ielādēt sadaļu.",
+	"mobile-frontend-editor-error-loading": "Kļūda, nevar ielādēt redaktoru.",
 	"mobile-frontend-editor-keep-editing": "Turpināt labot",
 	"mobile-frontend-editor-terms-link": "[$1 Lietošanas noteikumi]",
 	"mobile-frontend-editor-previewing-page": "<span>$1 <strong>priekšskatījums</strong></span>",
