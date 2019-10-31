@@ -24,7 +24,9 @@ class BlockMessageDetails extends View {
 	get defaults() {
 		return {
 			createDetailsAnchorHref: function () {
-				return this.blockId && mw.util.getUrl( 'Special:BlockList', { wpTarget: '#' + this.blockId } );
+				return function ( blockId, render ) {
+					return mw.util.getUrl( 'Special:BlockList', { wpTarget: '#' + render( blockId ) } );
+				};
 			},
 			createDetailsAnchorLabel: function () {
 				return mw.msg( 'mobile-frontend-editor-blocked-drawer-help' );
@@ -106,9 +108,11 @@ class BlockMessageDetails extends View {
       {{/expiry}}
     </div>
     <div class="block-message-item block-message-buttons">
-      {{#createDetailsAnchorHref}}
-        <a href="{{ createDetailsAnchorHref }}">{{ createDetailsAnchorLabel }}</a>
-      {{/createDetailsAnchorHref}}
+      {{#blockId}}
+        <a href="{{#createDetailsAnchorHref}}{{ blockId }}{{/createDetailsAnchorHref}}">
+          {{ createDetailsAnchorLabel }}
+        </a>
+      {{/blockId}}
     </div>
   </div>` );
 	}
