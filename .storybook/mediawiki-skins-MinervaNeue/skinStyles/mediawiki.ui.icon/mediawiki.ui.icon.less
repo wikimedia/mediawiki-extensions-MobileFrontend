@@ -165,3 +165,29 @@
 		vertical-align: middle;
 	}
 }
+
+@media all and ( min-width: @width-breakpoint-desktop ) {
+	.mw-ui-icon-with-label-desktop {
+		color: @icon-color;
+		width: auto;
+		line-height: inherit;
+		flex-basis: auto;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+
+		&:hover, &:focus, &:active, &:visited {
+			color: @icon-color;
+			text-decoration: none;
+		}
+
+		&:before {
+			// Hard-coded value to separate icon and proceeding text.
+			margin-right: @icon-padding-md;
+			width: auto;
+			display: inline-block;
+			// Seems to be more visually centered than `middle`.
+			vertical-align: text-bottom;
+		}
+	}
+}

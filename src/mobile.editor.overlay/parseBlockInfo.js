@@ -25,16 +25,23 @@ module.exports = function parseBlockInfo( blockinfo ) {
 		partial: blockinfo.blockpartial || false,
 		creator: {
 			name: blockinfo.blockedby,
-			url: mw.Title.makeTitle(
-				mw.config.get( 'wgNamespaceIds' ).user,
-				blockinfo.blockedby
-			).getUrl()
+			url: null
 		},
 		expiry: null,
 		duration: null,
 		reason: '',
 		blockId: blockinfo.blockid
 	};
+
+	// URL only useful if block creator is a local user
+	if ( blockinfo.blockedbyid === 0 ) {
+		blockInfo.creator.url = '';
+	} else {
+		blockInfo.creator.url = mw.Title.makeTitle(
+			mw.config.get( 'wgNamespaceIds' ).user,
+			blockInfo.creator.name
+		).getUrl();
+	}
 
 	expiry = blockinfo.blockexpiry;
 	if ( [ 'infinite', 'indefinite', 'infinity', 'never' ].indexOf( expiry ) === -1 ) {

@@ -55,6 +55,40 @@ storiesOf( 'Drawer' )
 			return wrap( drawer, 'drawer-container' );
 		}
 	)
+	.add( 'blockMessageDrawer (global admin)',
+		() => {
+			const drawer = blockMessageDrawer( {
+				blockId: 1,
+				partial: true,
+				blockedbyid: 0,
+				creator: {
+					name: 'Global>Admin'
+				},
+				reason: 'Constant vandalism',
+				duration: '10 days',
+				expiry: 'Sept 1st'
+			} );
+			drawer.show();
+			return wrap( drawer, 'drawer-container' );
+		}
+	)
+	.add( 'blockMessageDrawer (unknown user)',
+		() => {
+			const drawer = blockMessageDrawer( {
+				blockId: 1,
+				partial: true,
+				blockedbyid: 0,
+				creator: {
+					name: undefined
+				},
+				reason: 'Constant vandalism',
+				duration: '10 days',
+				expiry: 'Sept 1st'
+			} );
+			drawer.show();
+			return wrap( drawer, 'drawer-container' );
+		}
+	)
 	.add( 'blockMessageDrawer',
 		() => {
 			const drawer = blockMessageDrawer( {
