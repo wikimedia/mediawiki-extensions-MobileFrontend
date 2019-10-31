@@ -32,10 +32,11 @@
 	"mobile-frontend-watchlist-filter-articles": "Artikels",
 	"mobile-frontend-watchlist-filter-other": "Aanders",
 	"mobile-frontend-watchlist-filter-talk": "Overleg",
-	"mobile-frontend-watchlist-more": "meer",
+	"mobile-frontend-watchlist-more": "meyr",
 	"nearby": "Syden oaver underwarpen by ju in de büürte",
 	"tag-mobile_edit": "Bewarking via mobil",
 	"tag-mobile_edit-description": "Bewarking edaon (web of app)",
+	"tag-advanced_mobile_edit": "Vorderde mobile bewarking",
 	"tag-mobile_web_edit": "Bewarking via mobile websteade",
 	"tag-mobile_web_edit-description": "Bewarking edån via de mobile websteade"
 }
