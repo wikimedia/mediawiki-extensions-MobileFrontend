@@ -44,11 +44,11 @@ QUnit.test( 'Simple overlay', function ( assert ) {
 	var overlay = new Overlay( {
 			heading: '<h2>Overlay Title</h2>'
 		} ),
-		headingNode;
+		$headingNode;
 
-	headingNode = overlay.$el.find( 'h2:contains("Overlay Title")' );
+	$headingNode = overlay.$el.find( 'h2:contains("Overlay Title")' );
 
-	assert.strictEqual( headingNode.length, 1 );
+	assert.strictEqual( $headingNode.length, 1 );
 } );
 
 QUnit.test( '#make', function ( assert ) {

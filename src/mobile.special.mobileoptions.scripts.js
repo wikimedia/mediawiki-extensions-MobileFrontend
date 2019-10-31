@@ -178,19 +178,19 @@ function infuseToggles( toggleObjects, $form ) {
  */
 function initMobileOptions() {
 	var $form = $( '#mobile-options' ),
-		betaToggle = $( '#enable-beta-toggle' ),
-		amcToggle = $( '#enable-amc-toggle' ),
+		$betaToggle = $( '#enable-beta-toggle' ),
+		$amcToggle = $( '#enable-amc-toggle' ),
 		toggles = [];
 
-	if ( betaToggle.length ) {
+	if ( $betaToggle.length ) {
 		toggles.push( {
-			$el: betaToggle,
+			$el: $betaToggle,
 			onToggle: function () {}
 		} );
 	}
-	if ( amcToggle.length ) {
+	if ( $amcToggle.length ) {
 		toggles.push( {
-			$el: amcToggle,
+			$el: $amcToggle,
 			onToggle: function ( value ) {
 				if ( !value && amcOutreach.loadCampaign().isCampaignActive() ) {
 					// Make all amc outreach actions ineligible so the user doesn't have

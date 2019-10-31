@@ -125,10 +125,10 @@ class PageHTMLParser {
 		 *   </div>
 		 * </div>
 		 */
-		const leadSection = this.$el.find( '.mf-section-0' );
+		const $leadSection = this.$el.find( '.mf-section-0' );
 
-		if ( leadSection.length ) {
-			return leadSection;
+		if ( $leadSection.length ) {
+			return $leadSection;
 		}
 		// no lead section found
 		return null;

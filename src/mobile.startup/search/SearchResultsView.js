@@ -2,7 +2,7 @@ const View = require( '../View' ),
 	Icon = require( '../Icon' ),
 	Anchor = require( '../Anchor' ),
 	icons = require( '../icons' ),
-	spinner = icons.spinner().$el,
+	$spinner = icons.spinner().$el,
 	util = require( '../util' );
 
 /**
@@ -68,7 +68,7 @@ class SearchResultsView extends View {
 				label: mw.msg( 'mobile-frontend-search-content' )
 			} ).$el
 		);
-		this.$el.find( '.spinner-container' ).append( spinner );
+		this.$el.find( '.spinner-container' ).append( $spinner );
 		if ( feedbackLink ) {
 			this.$el.find( '.search-feedback' ).append(
 				new Anchor( {

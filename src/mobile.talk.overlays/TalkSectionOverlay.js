@@ -1,7 +1,7 @@
 var
 	user = mw.user,
 	icons = require( '../mobile.startup/icons' ),
-	spinner = icons.spinner().$el,
+	$spinner = icons.spinner().$el,
 	mfExtend = require( '../mobile.startup/mfExtend' ),
 	PageGateway = require( '../mobile.startup/PageGateway' ),
 	Overlay = require( '../mobile.startup/Overlay' ),
@@ -155,7 +155,7 @@ mfExtend( TalkSectionOverlay, Overlay, {
 	 */
 	postRender: function () {
 		Overlay.prototype.postRender.apply( this );
-		this.$el.find( '.talk-section' ).prepend( spinner );
+		this.$el.find( '.talk-section' ).prepend( $spinner );
 		this.$saveButton = this.options.saveButton.$el;
 		this.$el.find( '.comment-content' ).append( this.$saveButton );
 		if ( !this.options.section ) {

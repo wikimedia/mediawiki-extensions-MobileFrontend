@@ -3,7 +3,7 @@ var
 	util = require( '../mobile.startup/util' ),
 	View = require( '../mobile.startup/View' ),
 	icons = require( '../mobile.startup/icons' ),
-	spinner = icons.spinner().$el,
+	$spinner = icons.spinner().$el,
 	ScrollEndEventEmitter = require( '../mobile.startup/ScrollEndEventEmitter' ),
 	CategoryGateway = require( './CategoryGateway' );
 
@@ -88,7 +88,7 @@ mfExtend( CategoryTabs, View, {
 	 */
 	postRender: function () {
 		View.prototype.postRender.apply( this );
-		this.$el.append( spinner );
+		this.$el.append( $spinner );
 		this._loadCategories();
 	},
 
