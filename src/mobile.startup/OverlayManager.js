@@ -94,9 +94,10 @@ OverlayManager.prototype = {
 	 * @instance
 	 * @private
 	 * @param {Overlay} overlay to hide
+	 * @param {Function} onBeforeExitCancel to pass to onBeforeExit
 	 * @return {boolean} Whether the overlay has been hidden
 	 */
-	_hideOverlay: function ( overlay ) {
+	_hideOverlay: function ( overlay, onBeforeExitCancel ) {
 		let result;
 
 		function exit() {
@@ -108,7 +109,7 @@ OverlayManager.prototype = {
 		overlay.off( '_om_hide' );
 
 		if ( overlay.options && overlay.options.onBeforeExit ) {
-			overlay.options.onBeforeExit( exit );
+			overlay.options.onBeforeExit( exit, onBeforeExitCancel );
 		} else {
 			exit();
 		}
@@ -182,10 +183,11 @@ OverlayManager.prototype = {
 			current &&
 			current.overlay !== undefined &&
 			this.hideCurrent &&
-			!this._hideOverlay( current.overlay )
+			!this._hideOverlay( current.overlay, () => {
+				// if hide prevented, prevent route change event
+				ev.preventDefault();
+			} )
 		) {
-			// if hide prevented, prevent route change event
-			ev.preventDefault();
 			return;
 		}
 
