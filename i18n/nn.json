@@ -131,7 +131,7 @@
 	"mobile-frontend-missing-image": "Bilete",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 km}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",
-	"mobile-frontend-nearby-error": "{{SITENAME}} Nær her har vanskar.",
+	"mobile-frontend-nearby-error": "{{GRAMMAR:genitive|{{SITENAME}}}} «Nær her» har vanskar.",
 	"mobile-frontend-nearby-error-guidance": "Freist å oppdatera staden din.",
 	"mobile-frontend-nearby-noresults": "Det er stille her ute… Det vart ikkje funne nokon sider nær deg.",
 	"mobile-frontend-nearby-noresults-guidance": "Freist å oppretta ein ny artikkel eller legg til stad til ein som alt finst.",

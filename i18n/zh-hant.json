@@ -31,13 +31,14 @@
 			"Sanmosa",
 			"Sean",
 			"Winston Sung",
-			"Xiplus"
+			"Xiplus",
+			"Sunny00217"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "使用者是否透過手機版編輯",
 	"mobile-frontend-account-create-captcha-placeholder": "輸入確認碼",
 	"mobile-frontend-categories-heading": "<strong>分類</strong>",
-	"mobile-frontend-categories-subheading": "以頁面屬於以下分類：",
+	"mobile-frontend-categories-subheading": "此頁面屬於以下分類：",
 	"mobile-frontend-categories-nocat": "此頁面不屬於任何分類。",
 	"mobile-frontend-categories-add": "加入至分類",
 	"mobile-frontend-categories-search": "搜尋分類",
@@ -46,8 +47,8 @@
 	"mobile-frontend-categories-notification": "分類已更新。",
 	"mobile-frontend-categories-add-heading": "<strong>新增 <span>$1</span> 至新分類</strong>",
 	"mobile-frontend-categories-add-wait": "儲存分類中，請稍候。",
-	"mobile-frontend-categories-normal": "內容基於",
-	"mobile-frontend-categories-hidden": "組織",
+	"mobile-frontend-categories-normal": "一般分類",
+	"mobile-frontend-categories-hidden": "隱藏分類",
 	"mobile-frontend-changeslist-nocomment": "無編輯摘要",
 	"mobile-frontend-cite-error-title": "載入引用錯誤",
 	"mobile-frontend-cite-error": "由於一個損毀的修訂識別碼，在試圖載入引用時發生問題。",

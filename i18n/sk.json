@@ -108,7 +108,7 @@
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|Pridal|Pridala}} sa pred {{PLURAL:$2|minútou|$2 minútami}}",
 	"mobile-frontend-joined-hours": "{{GENDER:$1|Pridal|Pridala}} sa pred {{PLURAL:$2|hodinou|$2 hodinami}}",
 	"mobile-frontend-joined-days": "{{GENDER:$1|Pridal|Pridala}} sa {{PLURAL:$2|včera|pred $2 dňami}}",
-	"mobile-frontend-joined-months": "{{GENDER:$1|Pridal|Pridala}} se pred {{PLURAL:$2|mesiacom|$2 mesiacmi}}",
+	"mobile-frontend-joined-months": "{{GENDER:$1|Pridal|Pridala}} sa pred {{PLURAL:$2|mesiacom|$2 mesiacmi}}",
 	"mobile-frontend-joined-years": "{{GENDER:$1|Pridal|Pridala}} sa pred {{PLURAL:$2|rokom|$2 rokmi}}",
 	"mobile-frontend-language-heading": "<strong>Jazyky</strong>",
 	"mobile-frontend-languages-404-desc": "Musí byť zadaný platný názov.",

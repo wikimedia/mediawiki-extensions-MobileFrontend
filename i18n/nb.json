@@ -146,7 +146,7 @@
 	"mobile-frontend-missing-image": "Bilde",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 km}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",
-	"mobile-frontend-nearby-error": "{{SITENAME}} «I nærheten» har problemer.",
+	"mobile-frontend-nearby-error": "{{GRAMMAR:genitive|{{SITENAME}}}} «I nærheten» har problemer.",
 	"mobile-frontend-nearby-error-guidance": "Prøv å friske opp plasseringen din.",
 	"mobile-frontend-nearby-noresults": "Du befinner deg visst utenfor allfarvei… Det ble ikke funnet noen sider om temaer i nærheten.",
 	"mobile-frontend-nearby-noresults-guidance": "Prøv å opprette en ny side eller legg inn koordinater i en eksisterende.",
