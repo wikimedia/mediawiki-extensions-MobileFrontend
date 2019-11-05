@@ -134,13 +134,16 @@ QUnit.test( '#add, with string literal (matching)', function ( assert ) {
 		fakeOverlay = this.createFakeOverlay();
 	deferred.show = sandbox.spy();
 
+	// Note: In this test, we also test if OverlayManager will try to do regex
+	// operations (e.g. ''.match()) on a string literal (which would cause an
+	// error since this is an invalid regex (Unterminated character)
 	// eslint-disable-next-line no-useless-escape
-	overlayManager.add( '[.*+?^${}()|[\](foo)', function () {
+	overlayManager.add( '[.*+?^${}()|[\][(foo)', function () {
 		return deferred;
 	} );
 	fakeRouter.emit( 'route', {
 		// eslint-disable-next-line no-useless-escape
-		path: '[.*+?^${}()|[\](foo)'
+		path: '[.*+?^${}()|[\][(foo)'
 	} );
 	deferred.resolve( fakeOverlay );
 

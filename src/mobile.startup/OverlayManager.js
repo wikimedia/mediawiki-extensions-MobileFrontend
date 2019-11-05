@@ -224,7 +224,7 @@ OverlayManager.prototype = {
 			next,
 			didMatch,
 			captures,
-			match = path.match( entry.route ),
+			match,
 			previous = this.stack[1],
 			self = this;
 
@@ -234,7 +234,7 @@ OverlayManager.prototype = {
 		} else {
 			match = path.match( entry.route );
 			didMatch = !!match;
-			captures = match ? match.slice( 1 ) : [];
+			captures = didMatch ? match.slice( 1 ) : [];
 		}
 
 		/**
