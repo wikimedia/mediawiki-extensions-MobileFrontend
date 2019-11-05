@@ -278,7 +278,7 @@
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Размер шрифта",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Управляйте размером шрифта для своего процесса чтения.",
 	"mobile-frontend-mobile-option-amc": "Расширенный режим",
-	"mobile-frontend-mobile-option-amc-experiment-description": "Мы активно разрабатываем новые функции для продвинутых редакторов. При использовании расширенного режима вам будут подключены новые функции, как только они будут включены в релиз. Мы рассчитываем на ваши отзывы и сотрудничество.",
+	"mobile-frontend-mobile-option-amc-experiment-description": "Расширенный режим обеспечивает лёгкий доступ к страницам обсуждения, страницам истории, пользовательским инструментам и другим инструментам редактирования.",
 	"mobile-frontend-mobile-option-amc-learn-more": "Узнать больше",
 	"mobile-frontend-mobile-option-amc-send-feedback": "Отправить отзыв",
 	"mobile-frontend-amc-outreach-enable": "Включить расширенный режим",
