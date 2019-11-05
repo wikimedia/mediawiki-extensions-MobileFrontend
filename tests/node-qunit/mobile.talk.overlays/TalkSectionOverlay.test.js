@@ -22,11 +22,30 @@ QUnit.module( 'MobileFrontend TalkSectionOverlay.js - logged in', {
 
 		// don't create toasts in test environment
 		this.toastStub = sandbox.stub( mw, 'notify' );
+
+		sandbox.stub( mw.user, 'isAnon' ).returns( false );
+		this.renderFromApiSpy = sandbox.stub( TalkSectionOverlay.prototype, 'renderFromApi' );
 	},
 	afterEach: function () {
 		jQuery.tearDown();
 		sandbox.restore();
 	}
+} );
+
+QUnit.test( 'Load section from api only, if needed', function ( assert ) {
+	// eslint-disable-next-line no-new
+	new TalkSectionOverlay( {
+		api: {},
+		section: 'Testtext'
+	} );
+
+	assert.strictEqual( this.renderFromApiSpy.callCount, 0, 'Section requested from api, if no section given.' );
+
+	// eslint-disable-next-line no-new
+	new TalkSectionOverlay( {
+		api: {}
+	} );
+	assert.strictEqual( this.renderFromApiSpy.callCount, 1, 'No Api request, if section given' );
 } );
 
 QUnit.test( 'Check comment box for logged in users', function ( assert ) {

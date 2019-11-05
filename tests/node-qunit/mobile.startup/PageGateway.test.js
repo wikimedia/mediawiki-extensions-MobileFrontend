@@ -32,6 +32,63 @@ QUnit.module( 'MobileFrontend PageGateway', {
 	}
 } );
 
+QUnit.test( '#getSections (has sections)', function ( assert ) {
+	var gateway = new PageGateway();
+	sandbox.stub( gateway, 'getPage' ).returns(
+		util.Deferred().resolve( {
+			sections: [ { line: '1' } ]
+		} )
+	);
+	return gateway.getSections( gateway, 'Title' ).then( function ( sections ) {
+		assert.strictEqual( sections.length, 1, '1 section is returned' );
+	} );
+} );
+
+QUnit.test( '#getSections (missing titles)', function ( assert ) {
+	var gateway = new PageGateway();
+	sandbox.stub( gateway, 'getPage' ).returns(
+		util.Deferred().reject( 'missingtitle' )
+	);
+	return gateway.getSections( gateway, 'Title' ).then( function ( sections ) {
+		assert.strictEqual( sections.length, 0, '0 sections are returned' );
+	} );
+} );
+
+QUnit.test( '#getSections (other failures)', function ( assert ) {
+	var gateway = new PageGateway();
+	sandbox.stub( gateway, 'getPage' ).returns(
+		util.Deferred().reject()
+	);
+	assert.throws( gateway.getSections( gateway, 'Title' ), 'an exception is thrown' );
+} );
+
+QUnit.test( '#getPage (h1s)', function ( assert ) {
+
+	sandbox.stub( this.api, 'get' ).returns( util.Deferred().resolve( testData.getPageHeadings.input ) );
+	pageGateway.invalidatePage( 'Test' );
+
+	sandbox.stub( mw.util, 'getUrl' ).returns( 'Test:History' );
+
+	return pageGateway.getPage( 'Test' ).then( function ( resp ) {
+		assert.propEqual( resp, testData.getPageHeadings.output, 'return lead and sections test 1' );
+	} );
+} );
+
+QUnit.test( '#getPage', function ( assert ) {
+	var api = sandbox.stub( this.api, 'get' ).returns( util.Deferred().resolve( testData.getPage.input ) );
+
+	sandbox.stub( mw.util, 'getUrl' ).returns( 'Test:History' );
+
+	pageGateway.invalidatePage( 'Test' );
+	return pageGateway.getPage( 'Test' ).then( function ( resp ) {
+		assert.propEqual( resp, testData.getPage.output, 'return lead and sections test 2' );
+
+		return pageGateway.getPage( 'Test' );
+	} ).then( function () {
+		assert.strictEqual( api.callCount, 1, 'cache page' );
+	} );
+} );
+
 QUnit.test( '#getPageLanguages (response)', function ( assert ) {
 	sandbox.stub( this.api, 'get' ).returns( util.Deferred().resolve( testData.getPageLanguagesResponse.input ) );
 
@@ -103,4 +160,45 @@ QUnit.test( '#getSectionsFromHTML malformed (h2 before h1)', function ( assert )
 			} ]
 		}
 	] );
+} );
+
+QUnit.test( '#getPage (forwards api errors)', function ( assert ) {
+	sandbox.stub( this.api, 'get' ).returns( util.Deferred().reject( 'missingtitle' ) );
+	return pageGateway.getPage( 'Err' ).catch( function ( msg ) {
+		assert.strictEqual( msg, 'missingtitle' );
+	} );
+} );
+
+QUnit.test( '#getPage (move protected page)', function ( assert ) {
+	var expected = {
+		edit: [ '*' ],
+		move: [ 'sysop' ]
+	};
+	sandbox.stub( this.api, 'get' ).returns( util.Deferred().resolve( {
+		mobileview: {
+			id: -1,
+			displaytitle: 'Test',
+			revId: 42,
+			lastmodifiedby: {
+				name: 'bob',
+				gender: 'unknown'
+			},
+			protection: {
+				move: [ 'sysop' ]
+			},
+			lastmodified: '2013-10-28T18:49:56Z',
+			languagecount: 10,
+			sections: [
+				{
+					id: 0,
+					text: ''
+				}
+			]
+		}
+	} ) );
+
+	pageGateway.invalidatePage( 'Test' );
+	return pageGateway.getPage( 'Test' ).then( function ( resp ) {
+		assert.propEqual( resp.protection, expected );
+	} );
 } );

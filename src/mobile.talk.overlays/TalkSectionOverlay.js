@@ -3,11 +3,13 @@ var
 	icons = require( '../mobile.startup/icons' ),
 	$spinner = icons.spinner().$el,
 	mfExtend = require( '../mobile.startup/mfExtend' ),
+	PageGateway = require( '../mobile.startup/PageGateway' ),
 	Overlay = require( '../mobile.startup/Overlay' ),
 	header = require( '../mobile.startup/headers' ).header,
 	util = require( '../mobile.startup/util' ),
 	popup = require( '../mobile.startup/toast' ),
 	autosign = require( './autosign' ),
+	Page = require( '../mobile.startup/Page' ),
 	Button = require( '../mobile.startup/Button' );
 
 /**
@@ -19,18 +21,18 @@ var
  * Overlay for showing talk page section
  * @class TalkSectionOverlay
  * @extends Overlay
+ * @uses PageGateway
+ * @uses Page
+ * @uses Button
+ * @uses Toast
  * @param {Object} options
- * @param {number} options.id Section ID
- * @param {Section} options.section
- * @param {mw.Api} options.api
- * @param {string} options.title
- * @param {string} options.licenseMsg
  * @param {onSaveComplete} [options.onSaveComplete]
  */
 function TalkSectionOverlay( options ) {
 	const onBeforeExit = this.onBeforeExit.bind( this );
 
 	this.editorApi = options.api;
+	this.pageGateway = new PageGateway( options.api );
 	this.state = {
 		// current value of the textarea
 		text: ''
@@ -156,8 +158,12 @@ mfExtend( TalkSectionOverlay, Overlay, {
 		this.$el.find( '.talk-section' ).prepend( $spinner );
 		this.$saveButton = this.options.saveButton.$el;
 		this.$el.find( '.comment-content' ).append( this.$saveButton );
-		this.hideSpinner();
-		this._enableComments();
+		if ( !this.options.section ) {
+			this.renderFromApi( this.options );
+		} else {
+			this.hideSpinner();
+			this._enableComments();
+		}
 	},
 	/**
 	 * Enables comments on the current rendered talk topic
@@ -172,6 +178,22 @@ mfExtend( TalkSectionOverlay, Overlay, {
 		} else {
 			this.$textarea = this.$commentBox.find( 'textarea' );
 		}
+	},
+	/**
+	 * Loads the discussion from api and add it to the Overlay
+	 * @memberof TalkSectionOverlay
+	 * @instance
+	 * @param {Object} options Render options
+	 */
+	renderFromApi: function ( options ) {
+		var self = this;
+
+		this.pageGateway.getPage( options.title ).then( function ( pageData ) {
+			var page = new Page( pageData );
+			options.section = page.getSection( options.id );
+			self.render( options );
+			self.hideSpinner();
+		} );
 	},
 	/**
 	 * Handler for focus of textarea
@@ -210,7 +232,19 @@ mfExtend( TalkSectionOverlay, Overlay, {
 			} ).then( function () {
 				if ( self.options.onSaveComplete ) {
 					self.options.onSaveComplete();
+					return;
 				}
+				// All of this code will be removed in
+				// I75158ff363d56d55ae385687baf64f8b9d5ca8b0 but is needed for backwards
+				// compatibility until I243f1193bce0da9fa710fc3b5379f90b2d079680 is
+				// merged
+				popup.show( mw.msg( 'mobile-frontend-talk-reply-success' ) );
+				// invalidate the cache
+				self.pageGateway.invalidatePage( self.options.title );
+
+				self.renderFromApi( self.options );
+
+				enableSaveButton();
 			}, function ( data, response ) {
 				// FIXME: Code sharing with SourceEditorOverlay?
 				var msg,

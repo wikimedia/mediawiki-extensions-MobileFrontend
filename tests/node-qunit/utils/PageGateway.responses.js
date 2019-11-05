@@ -101,6 +101,112 @@ module.exports = {
 			]
 		}
 	},
+	getPage: {
+		input: {
+			mobileview: {
+				id: -1,
+				protection: {
+					edit: [ 'sysop' ]
+				},
+				lastmodifiedby: {
+					name: 'Melissa',
+					gender: 'female'
+				},
+				revId: 42,
+				displaytitle: 'Test',
+				lastmodified: '2013-10-28T18:49:56Z',
+				languagecount: 10,
+				sections: [
+					{
+						id: 0,
+						text: 'lead content'
+					},
+					{
+						level: '2',
+						line: 'Aaa section',
+						anchor: 'Aaa_section',
+						id: 1,
+						text: 'aaa content'
+					},
+					{
+						level: '3',
+						line: 'Subaaa section',
+						anchor: 'Subaaa_section',
+						id: 2,
+						text: 'subaaa content'
+					},
+					{
+						level: '2',
+						line: 'Bbb section',
+						anchor: 'Bbb_section',
+						id: 3,
+						text: 'bbb content'
+					},
+					{
+						level: '2',
+						line: 'References',
+						references: '',
+						anchor: 'References',
+						id: 4,
+						text: 'references'
+					}
+				]
+			}
+		},
+		output: {
+			historyUrl: 'Test:History',
+			lastModifiedUserName: 'Melissa',
+			lastModifiedUserGender: 'female',
+			lastModifiedTimestamp: 1382986196,
+			protection: {
+				edit: [ 'sysop' ]
+			},
+			title: 'Test',
+			displayTitle: 'Test',
+			id: -1,
+			isMainPage: false,
+			revId: 42,
+			languageCount: 10,
+			hasVariants: false,
+			lead: 'lead content',
+			sections: [
+				{
+					level: '2',
+					line: 'Aaa section',
+					anchor: 'Aaa_section',
+					id: 1,
+					text: 'aaa content<h3 id="Subaaa_section">Subaaa section</h3>\nsubaaa content',
+					subsections: [
+						{
+							level: '3',
+							line: 'Subaaa section',
+							anchor: 'Subaaa_section',
+							id: 2,
+							text: 'subaaa content',
+							subsections: []
+						}
+					]
+				},
+				{
+					level: '2',
+					line: 'Bbb section',
+					anchor: 'Bbb_section',
+					id: 3,
+					text: 'bbb content',
+					subsections: []
+				},
+				{
+					level: '2',
+					line: 'References',
+					references: '',
+					anchor: 'References',
+					id: 4,
+					text: 'references',
+					subsections: []
+				}
+			]
+		}
+	},
 	getPageLanguagesResponse: {
 		input: {
 			query: {
