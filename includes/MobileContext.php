@@ -192,14 +192,6 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
-	 * Whether mobile view should always be enforced
-	 * @return bool is mobile view enforced?
-	 */
-	public function getForceMobileView() {
-		return $this->forceMobileView;
-	}
-
-	/**
 	 * Whether content should be transformed to better suit mobile devices
 	 * @param bool $value should content be transformed?
 	 */
