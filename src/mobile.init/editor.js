@@ -424,20 +424,25 @@ function hideSectionEditIcons( currentPageHTMLParser ) {
  * @ignore
  * @param {Router} router
  */
-function showLoginDrawer( router ) {
-	var drawer = new CtaDrawer( {
-		content: mw.msg( 'mobile-frontend-editor-disabled-anon' ),
-		signupQueryParams: {
-			warning: 'mobile-frontend-watchlist-signup-action'
+function bindEditLinksLoginDrawer( router ) {
+	var drawer;
+	function showLoginDrawer() {
+		if ( !drawer ) {
+			drawer = new CtaDrawer( {
+				content: mw.msg( 'mobile-frontend-editor-disabled-anon' ),
+				signupQueryParams: {
+					warning: 'mobile-frontend-watchlist-signup-action'
+				}
+			} );
 		}
-	} );
-	$allEditLinks.on( 'click', function ( ev ) {
 		drawer.show();
+	}
+	$allEditLinks.on( 'click', function ( ev ) {
+		showLoginDrawer();
 		ev.preventDefault();
-		return drawer;
 	} );
 	router.route( editorPath, function () {
-		drawer.show();
+		showLoginDrawer();
 	} );
 	router.checkRoute();
 }
@@ -464,10 +469,10 @@ function init( currentPage, currentPageHTMLParser, skin, router ) {
 		hideSectionEditIcons( currentPageHTMLParser );
 		editRestrictions = mw.config.get( 'wgRestrictionEdit' );
 		if ( mw.user.isAnon() && Array.isArray( editRestrictions ) && editRestrictions.indexOf( '*' ) !== -1 ) {
-			showLoginDrawer( router );
+			bindEditLinksLoginDrawer( router );
 		} else {
 			editErrorMessage = isReadOnly ? mw.msg( 'apierror-readonly' ) : mw.msg( 'mobile-frontend-editor-disabled' );
-			showSorryToast( editErrorMessage, router );
+			bindEditLinksSorryToast( editErrorMessage, router );
 		}
 	}
 }
@@ -481,7 +486,7 @@ function init( currentPage, currentPageHTMLParser, skin, router ) {
  * @param {string} msg Message for sorry message
  * @param {Router} router
  */
-function showSorryToast( msg, router ) {
+function bindEditLinksSorryToast( msg, router ) {
 	$allEditLinks.on( 'click', function ( ev ) {
 		popup.show( msg );
 		ev.preventDefault();
@@ -515,7 +520,7 @@ module.exports = function ( currentPage, currentPageHTMLParser, skin ) {
 
 	if ( currentPage.inNamespace( 'file' ) && isMissing ) {
 		// Is a new file page (enable upload image only) Bug 58311
-		showSorryToast( mw.msg( 'mobile-frontend-editor-uploadenable' ), router );
+		bindEditLinksSorryToast( mw.msg( 'mobile-frontend-editor-uploadenable' ), router );
 	} else {
 		// Edit button is currently hidden. A call to init() will update it as needed.
 		init( currentPage, currentPageHTMLParser, skin, router );
