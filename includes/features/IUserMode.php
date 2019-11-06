@@ -22,10 +22,4 @@ interface IUserMode {
 	 */
 	public function isEnabled();
 
-	/**
-	 * Enables/Disabled current user mode
-	 * @param bool $isEnabled a new feature state
-	 */
-	public function setEnabled( $isEnabled );
-
 }

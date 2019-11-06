@@ -5,10 +5,11 @@ namespace MobileFrontend\AMC;
 use DeferredUpdates;
 use MediaWiki\MediaWikiServices;
 use MobileFrontend\Features\IUserMode;
+use MobileFrontend\Features\IUserSelectableMode;
 use RuntimeException;
 use Wikimedia\Assert\Assert;
 
-class UserMode implements IUserMode {
+class UserMode implements IUserMode, IUserSelectableMode {
 
 	const USER_OPTION_MODE_AMC = 'mf_amc_optin';
 
