@@ -46,15 +46,31 @@ OverlayManager.prototype = {
 	/**
 	 * Don't try to hide the active overlay on a route change event triggered
 	 * by hiding another overlay.
-	 * Called when hiding an overlay.
+	 * Called when something other than OverlayManager calls Overlay.hide
+	 * on an overlay that it itself managed by the OverlayManager.
+	 * MUST be called when the stack is not empty.
 	 * @memberof OverlayManager
 	 * @instance
 	 * @private
 	 */
-	_onHideOverlay: function () {
+	_onHideOverlayOutsideOverlayManager: function () {
+		const currentRoute = this.stack[0].route,
+			routeIsString = typeof currentRoute === 'string',
+			currentPath = this.router.getPath(),
+			// Since routes can be strings or regexes, it's important to do an equality
+			// check BEFORE a match check.
+			routeIsSame = ( routeIsString && currentPath === currentRoute ) ||
+				currentPath.match( currentRoute );
+
 		this.hideCurrent = false;
 
-		this.router.back();
+		// If the path hasn't changed then the user didn't close the overlay by
+		// calling history.back() or triggering a route change. We must go back
+		// to get out of the overlay. See T237677.
+		if ( routeIsSame ) {
+			// does the route need to change?
+			this.router.back();
+		}
 	},
 
 	/** Attach overlay to DOM
@@ -81,8 +97,11 @@ OverlayManager.prototype = {
 		// eslint-disable-next-line no-restricted-properties
 		window.history.replaceState( MANAGED_STATE, null, window.location.href );
 
-		// if hidden using overlay (not hardware) button, update the state
-		overlay.once( '_om_hide', this._onHideOverlay.bind( this ) );
+		// the _om_hide event is added to an overlay that is displayed.
+		// It will fire if an Overlay emits a hide event (See attachHideEvent)
+		// in the case where a route change has not occurred (this event is disabled
+		// inside _hideOverlay which is called inside _checkRoute)
+		overlay.once( '_om_hide', this._onHideOverlayOutsideOverlayManager.bind( this ) );
 
 		this._attachOverlay( overlay );
 		overlay.show();
@@ -116,7 +135,7 @@ OverlayManager.prototype = {
 
 		// if closing prevented, reattach the callback
 		if ( !result ) {
-			overlay.once( '_om_hide', this._onHideOverlay.bind( this ) );
+			overlay.once( '_om_hide', this._onHideOverlayOutsideOverlayManager.bind( this ) );
 		}
 
 		return result;
@@ -246,6 +265,9 @@ OverlayManager.prototype = {
 		function getNext() {
 			return {
 				path: path,
+				// Important for managing states of things such as the image overlay which change
+				// overlay routing parameters during usage.
+				route: entry.route,
 				factoryResult: entry.factory.apply( self, captures )
 			};
 		}
@@ -342,9 +364,10 @@ OverlayManager.prototype = {
 OverlayManager.getSingleton = function () {
 	if ( !overlayManager ) {
 		const
+			router = mw.loader.require( 'mediawiki.router' ),
 			container = document.createElement( 'div' ),
-			// eslint-disable-next-line no-restricted-properties
-			hash = window.location.hash,
+			// Note getPath returns hash minus the '#' character:
+			hash = router.getPath(),
 			// eslint-disable-next-line no-restricted-properties
 			state = window.history.state;
 		container.className = 'mw-overlays-container';
@@ -357,11 +380,17 @@ OverlayManager.getSingleton = function () {
 			// eslint-disable-next-line no-restricted-properties
 			window.history.replaceState( null, null, '#' );
 			// eslint-disable-next-line no-restricted-properties
-			window.history.pushState( MANAGED_STATE, null, hash );
+			window.history.pushState( MANAGED_STATE, null, `#${hash}` );
 		}
-		overlayManager = new OverlayManager( mw.loader.require( 'mediawiki.router' ), container );
+		overlayManager = new OverlayManager( router, container );
 	}
 	return overlayManager;
 };
 
+OverlayManager.test = {
+	MANAGED_STATE,
+	__clearCache: () => {
+		overlayManager = null;
+	}
+};
 module.exports = OverlayManager;
