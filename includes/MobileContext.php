@@ -700,6 +700,7 @@ class MobileContext extends ContextSource {
 		if ( $this->shouldDisplayMobileView() ) {
 			$subdomainTokenReplacement = null;
 			if ( Hooks::run( 'GetMobileUrl', [ &$subdomainTokenReplacement, $this ] ) ) {
+				// @phan-suppress-next-line PhanRedundantCondition May set by hook
 				if ( !empty( $subdomainTokenReplacement ) ) {
 					$mobileUrlHostTemplate = $this->parseMobileUrlTemplate( 'host' );
 					$mobileToken = $this->getMobileHostToken( $mobileUrlHostTemplate );
