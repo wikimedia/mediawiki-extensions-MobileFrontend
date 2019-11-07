@@ -10,6 +10,8 @@
 	"apihelp-mobileview-param-redirect": "Ce le redirezionaminde onna essere seguite.",
 	"apihelp-mobileview-param-sections": "Elenghe de numere de sezione separate da pipe (|) pe le quale a turnà 'u teste. \"all\" pò essere ausate pe turnà tutte cose. Le indervalle jdnr'à 'u formate \"1-4\" se referiscene a le seziune 1,2,3,4. Le indervalle senze seconde numere, pe esembie \"1-\" signifeche pigghiù tutte 'nzigne quanne spicce. \"references\" ponne essere ausate pe specificà ca onna essere turnate tutte le seziune ca tènene refereminde.",
 	"apihelp-mobileview-param-sectionprop": "Ce 'mbormazione sus a le seziune da pigghià.",
+	"apihelp-mobileview-param-pageprops": "Ce probbietà d'a pàgene a turn,', 'n'elenghe separate da 'u pipe (\"|\") pe tutte le probbietà.",
+	"apihelp-mobileview-param-variant": "Converte 'u condenute jndr'à sta variande d'a lènghe.",
 	"apihelp-mobileview-param-noimages": "Tuèrne HTML senze immaggine.",
 	"apihelp-mobileview-param-noheadings": "No 'ngludere le 'ndestaziune jndr'à 'u resultate.",
 	"apihelp-mobileview-param-notransform": "No trasformà l'HTML jndr'à versione pe mobbile.",
@@ -21,5 +23,6 @@
 	"apihelp-mobileview-example-2": "Pigghie le 'mbormaziune sus 'a sezione 0 e le seziune ca tènene refereminde de [[Candlemass]]",
 	"apihelp-mobileview-example-3": "Pigghie le 'mbormaziune sus 'a sezione 1 e le seziune ca tènene refereminde de [[Candlemass]]",
 	"apihelp-webapp-manifest-description": "Torne 'nu manifeste d'a webapp.",
-	"apihelp-webapp-manifest-summary": "Torne 'nu manifeste d'a webapp."
+	"apihelp-webapp-manifest-summary": "Torne 'nu manifeste d'a webapp.",
+	"apierror-mobilefrontend-badidtitle": "Combinazione ID revisione/titole non valide."
 }
