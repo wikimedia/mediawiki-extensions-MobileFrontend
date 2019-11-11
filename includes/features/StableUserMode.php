@@ -36,16 +36,6 @@ class StableUserMode implements IUserMode {
 	}
 
 	/**
-	 * DO NOT USE
-	 * @param bool $isEnabled the new state of the service. Param is ignored
-	 * @throws \BadMethodCallException
-	 */
-	public function setEnabled( $isEnabled ) {
-		// TODO: See
-		throw new \BadMethodCallException( 'NOT_IMPLEMENTED' );
-	}
-
-	/**
 	 * @inheritDoc
 	 */
 	public function getModeIdentifier() {
