@@ -218,6 +218,8 @@
 	"mobile-frontend-user-page-desired-action": "Denne siden bør opprettes og redigeres av $1",
 	"mobile-frontend-user-page-create-owner-page-link-label": "Opprett din egen",
 	"mobile-frontend-user-page-create-user-page-link-label": "Opprett siden $1",
+	"mobile.css": "/* CSS plassert her vil gjelde alle brukere av mobilsiden */",
+	"mobile.js": "/* JavaScript her vil lastes for alle brukere av mobilsiden */",
 	"nearby": "Sider om temaer nær deg",
 	"tag-mobile_edit": "Mobilredigering",
 	"tag-mobile_edit-description": "Redigeringer gjort fra mobil (web eller app)",

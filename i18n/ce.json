@@ -114,9 +114,9 @@
 	"mobile-frontend-watchlist-more": "кхин дӀа",
 	"mobile-frontend-user-page-describe-yourself-editors": "тадархой",
 	"nearby": "Уллера объектех лаьцна агӀонаш",
-	"tag-mobile_edit": "Мобиль-ца. дина нисдар",
-	"tag-mobile_edit-description": "Сайтан мобилан версица дина нисдарш",
-	"tag-mobile_web_edit": "Сайтан мобилан версица дина нисдарш",
-	"tag-mobile_web_edit-description": "Сайтан мобилан версица дина нисдарш",
+	"tag-mobile_edit": "Телефонаца дина нисдар",
+	"tag-mobile_edit-description": "Сайтан телефонан версица дина нисдарш",
+	"tag-mobile_web_edit": "Сайтан телефонан версица дина нисдарш",
+	"tag-mobile_web_edit-description": "Сайтан телефонан версица дина нисдарш",
 	"mobile-frontend-loading-message": "Чуйолуш..."
 }
