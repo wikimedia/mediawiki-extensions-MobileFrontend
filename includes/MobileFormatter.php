@@ -45,12 +45,6 @@ class MobileFormatter extends HtmlFormatter {
 	protected $title;
 
 	/**
-	 * Whether the table of contents is needed on this page
-	 * @var boolean $isTOCEnabled
-	 */
-	protected $isTOCEnabled = false;
-
-	/**
 	 * Are sections expandable?
 	 * @var boolean $expandableSections
 	 */
@@ -134,18 +128,8 @@ class MobileFormatter extends HtmlFormatter {
 		}
 
 		$formatter->setIsMainPage( $isMainPage && $mfSpecialCaseMainPage );
-		$formatter->enableTOCPlaceholder( strpos( $html, 'toclevel' ) !== false );
 
 		return $formatter;
-	}
-
-	/**
-	 * Mark whether a placeholder table of contents should be included at the end of the lead
-	 * section
-	 * @param bool $flag should TOC be included?
-	 */
-	public function enableTOCPlaceholder( $flag = true ) {
-		$this->isTOCEnabled = $flag;
 	}
 
 	/**
