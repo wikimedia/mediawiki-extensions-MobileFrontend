@@ -135,7 +135,9 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 				oldId: mw.util.getParamValue( 'oldid' ),
 				contentLang: $content.attr( 'lang' ),
 				contentDir: $content.attr( 'dir' ),
-				sessionId: user.generateRandomSessionId()
+				sessionId: mw.config.get( 'wgWMESchemaEditAttemptStepSessionId' ) ||
+					mw.Uri().query.editingStatsId ||
+					user.generateRandomSessionId()
 			},
 			animationDelayDeferred, abortableDataPromise, loadingOverlay, overlayPromise,
 			initMechanism = mw.util.getParamValue( 'redlink' ) ? 'new' : 'click';
