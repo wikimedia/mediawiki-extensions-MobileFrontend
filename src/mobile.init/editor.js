@@ -111,7 +111,8 @@ function getPreferredEditor() {
 function setupEditor( page, skin, currentPageHTMLParser, router ) {
 	var uri, fragment, editorOverride,
 		overlayManager = OverlayManager.getSingleton(),
-		isNewPage = page.id === 0;
+		isNewPage = page.id === 0,
+		firstInitDone = false;
 
 	$allEditLinks.on( 'click', function ( ev ) {
 		onEditLinkClick( this, ev, overlayManager.router );
@@ -229,6 +230,9 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 		 * @method
 		 */
 		function logInit( editor ) {
+			if ( firstInitDone ) {
+				editorOptions.sessionId = user.generateRandomSessionId();
+			}
 			mw.track( 'mf.schemaEditAttemptStep', {
 				action: 'init',
 				type: 'section',
@@ -238,6 +242,7 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 				editing_session_id: editorOptions.sessionId
 				/* eslint-enable camelcase */
 			} );
+			firstInitDone = true;
 		}
 
 		/**
