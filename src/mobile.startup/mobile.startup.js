@@ -27,6 +27,7 @@ module.exports = {
 	OverlayManager: require( './OverlayManager' ),
 	Overlay: require( './Overlay' ),
 	loadingOverlay: require( './loadingOverlay' ),
+	Drawer: require( './Drawer' ),
 	CtaDrawer: require( './CtaDrawer' ),
 	toast: require( './toast' ),
 	Watchstar: require( './watchstar/watchstar' ),
