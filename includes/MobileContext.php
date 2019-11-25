@@ -514,7 +514,7 @@ class MobileContext extends ContextSource {
 			[
 				'domain' => $this->getStopMobileRedirectCookieDomain(),
 				'prefix' => '',
-				'secure' => false,
+				'secure' => true,
 			]
 		);
 	}
