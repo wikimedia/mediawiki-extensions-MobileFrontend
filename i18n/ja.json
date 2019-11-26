@@ -23,13 +23,14 @@
 			"珍庵",
 			"Takot",
 			"Aefgh39622",
-			"Suchichi02"
+			"Suchichi02",
+			"Marine-Blue"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "利用者が携帯機器版インターフェイスで編集しているかどうか",
 	"mobile-frontend-account-create-captcha-placeholder": "確認コードを入力",
 	"mobile-frontend-categories-heading": "<strong>カテゴリ</strong>",
-	"mobile-frontend-categories-subheading": "そのページは次のカテゴリに所属します:",
+	"mobile-frontend-categories-subheading": "ページは次のカテゴリに所属しています:",
 	"mobile-frontend-categories-nocat": "このページはどのカテゴリにも属していません。",
 	"mobile-frontend-categories-add": "カテゴリに追加",
 	"mobile-frontend-categories-search": "カテゴリを検索",
