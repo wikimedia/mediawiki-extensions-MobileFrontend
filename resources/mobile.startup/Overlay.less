@@ -4,13 +4,16 @@
 /* stylelint-disable no-descending-specificity */
 
 .overlay-enabled {
+	// stylelint-disable-next-line selector-max-id
 	#mw-mf-page-center {
 		overflow: hidden;
 		// FIXME: override old overlay styles, remove when old overlays gone
 		display: block;
 	}
 
-	.overlay, #mw-mf-page-center {
+	// stylelint-disable-next-line selector-max-id
+	.overlay,
+	#mw-mf-page-center {
 		// use height instead of bottom 0 so that overlay expands when there's
 		// more content, don't use min-height because of
 		// http://stackoverflow.com/questions/3808512/the-inherited-height-of-a-child-div-from-a-parent-with-a-min-height-attribute
