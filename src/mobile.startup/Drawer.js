@@ -16,8 +16,11 @@ var
  * @param {Object} [props]
  * @param {string} [props.className] Additional CSS classes to add
  * @param {JQuery.Element[]} [props.children] An array of elements to append to
+ * @param {Function} [props.onShow] Callback called before showing the drawer.
+ *  It receives a promise given the show process is asynchronous.
  * @param {Function} [props.onBeforeHide] Callback called before hiding the drawer
- * @param {boolean} [props.closeOnScroll] Whether the drawer should disappear on a scroll event
+ * @param {boolean} [props.closeOnScroll] (deprecated)
+ *  Whether the drawer should disappear on a scroll event
  * the drawer.
  */
 function Drawer( props ) {
@@ -65,12 +68,18 @@ mfExtend( Drawer, View, {
 			setTimeout( function () {
 				this.$el.addClass( 'visible animated' );
 				const closeOnScroll = this.options.closeOnScroll;
-				this.$el.parent().addClass( `navigation-enabled${closeOnScroll ? '' : ' has-drawer--with-scroll-locked'}` );
+				if ( this.options.onShow ) {
+					this.options.onShow( d );
+				} else {
+					mw.log.warn( 'Please pass the onShow method to the Drawer' );
+					this.$el.parent().addClass( `navigation-enabled${closeOnScroll ? '' : ' has-drawer--with-scroll-locked'}` );
+				}
 
 				setTimeout( function () {
 					var $window = util.getWindow();
-					$window.one( 'click.drawer', this.hide.bind( this ) );
-					if ( closeOnScroll ) {
+					if ( closeOnScroll && !this.options.onShow ) {
+						mw.log.warn( 'Please use the onShow method for scroll/close behaviour of Drawer' );
+						$window.one( 'click.drawer', this.hide.bind( this ) );
 						$window.one( 'scroll.drawer', this.hide.bind( this ) );
 					}
 					d.resolve();
@@ -91,8 +100,11 @@ mfExtend( Drawer, View, {
 		// see comment in show()
 		setTimeout( function () {
 			this.$el.removeClass( 'visible' );
-			this.$el.parent().removeClass( 'navigation-enabled has-drawer--with-scroll-locked' );
-			this.options.onBeforeHide();
+			if ( !this.options.onShow ) {
+				mw.log.warn( 'Please pass an onShow property to Drawer. This is now required.' );
+				this.$el.parent().removeClass( 'navigation-enabled has-drawer--with-scroll-locked' );
+			}
+			this.options.onBeforeHide( this );
 			// .one() registers one callback for scroll and click independently
 			// if one fired, get rid of the other one
 			util.getWindow().off( '.drawer' );
@@ -147,12 +159,17 @@ mfExtend( Drawer, View, {
 			this.$el.append( this.options.children );
 		}
 
-		// This module might be loaded at the top of the page e.g. Special:Uploads
-		// Thus ensure we wait for the DOM to be loaded
-		util.docReady( function () {
-			this.appendTo( this.appendToElement );
-			this.$el.parent().addClass( 'navigation-enabled' );
-		}.bind( this ) );
+		// Deprecated behaviour - if onShow callback is present, the creator of the drawer
+		// must managed addition to DOM/CSS classes
+		if ( !this.options.onShow ) {
+			mw.log.warn( 'Caller of Drawer should use onShow prop and append Drawer itself.' );
+			// This module might be loaded at the top of the page e.g. Special:Uploads
+			// Thus ensure we wait for the DOM to be loaded
+			util.docReady( function () {
+				this.appendTo( this.appendToElement );
+				this.$el.parent().addClass( 'navigation-enabled' );
+			}.bind( this ) );
+		}
 	}
 } );
 

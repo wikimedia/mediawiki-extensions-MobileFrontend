@@ -18,7 +18,8 @@ storiesOf( 'Drawer' )
 			const drawer = new Drawer( {
 				children: [
 					$( '<div>' ).text( 'Text of drawer' )
-				]
+				],
+				onShow: action( 'onShow' )
 			} );
 			drawer.show();
 			return wrap( drawer, 'drawer-container' );
@@ -27,7 +28,8 @@ storiesOf( 'Drawer' )
 	.add( 'CtaDrawer',
 		() => {
 			const drawer = CtaDrawer( {
-				content: 'This is the call to action. Will you take it?'
+				content: 'This is the call to action. Will you take it?',
+				onShow: action( 'onShow' )
 			} );
 			drawer.show();
 			return wrap( drawer, 'drawer-container' );
@@ -38,6 +40,7 @@ storiesOf( 'Drawer' )
 			const drawer = references.referenceDrawer( {
 				title: '[1]',
 				onNestedReferenceClick: action( 'onNestedReferenceClick' ),
+				onShow: action( 'onShow' ),
 				text: '<a href="#">Wikipedia</a> is a reference <sup><a href="#/ref">[1]</a></sup>.'
 			} );
 			drawer.show();
@@ -48,6 +51,7 @@ storiesOf( 'Drawer' )
 		() => {
 			const drawer = references.referenceDrawer( {
 				title: '[1]',
+				onShow: action( 'onShow' ),
 				text: '<span>error occurred</span>',
 				error: true
 			} );

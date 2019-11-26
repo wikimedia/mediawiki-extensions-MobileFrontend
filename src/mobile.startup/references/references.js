@@ -92,11 +92,12 @@ references = {
 	 * @param {string} refNumber the number it identifies as in the page
 	 * @param {PageHTMLParser} pageHTMLParser
 	 * @param {Gateway} gateway
+	 * @param {Object} props for referenceDrawer
 	 * @return {jQuery.Deferred}
 	 */
-	showReference: function ( id, page, refNumber, pageHTMLParser, gateway ) {
+	showReference: function ( id, page, refNumber, pageHTMLParser, gateway, props ) {
 		return gateway.getReference( id, page, pageHTMLParser ).then( function ( reference ) {
-			const drawer = referenceDrawer( {
+			const drawer = referenceDrawer( util.extend( {
 				title: refNumber,
 				text: reference.text,
 				onNestedReferenceClick: function ( href, text ) {
@@ -109,8 +110,9 @@ references = {
 					);
 					drawer.$el.remove();
 				}
-			} );
+			}, props ) );
 			drawer.show();
+			return drawer;
 		}, function ( err ) {
 			// If non-existent reference nothing to do.
 			if ( err === ReferencesGateway.ERROR_NOT_EXIST ) {
