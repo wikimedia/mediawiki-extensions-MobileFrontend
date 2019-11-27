@@ -77,9 +77,12 @@ mfExtend( Drawer, View, {
 
 				setTimeout( function () {
 					var $window = util.getWindow();
-					if ( closeOnScroll && !this.options.onShow ) {
+					if ( !this.options.onShow ) {
 						mw.log.warn( 'Please use the onShow method for scroll/close behaviour of Drawer' );
 						$window.one( 'click.drawer', this.hide.bind( this ) );
+					}
+
+					if ( closeOnScroll && !this.options.onShow ) {
 						$window.one( 'scroll.drawer', this.hide.bind( this ) );
 					}
 					d.resolve();
