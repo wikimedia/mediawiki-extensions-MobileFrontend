@@ -119,7 +119,6 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 	} );
 	overlayManager.add( editorPath, function ( sectionId ) {
 		var
-			scrollbarWidth = window.innerWidth - document.documentElement.clientWidth,
 			scrollTop = window.pageYOffset,
 			$content = $( '#mw-content-text' ),
 			editorOptions = {
@@ -164,13 +163,6 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 					$sectionTop = $( '#bodyContent' );
 				}
 			}
-			// If there was a scrollbar that was hidden when the overlay was shown, add a margin
-			// with the same width. This is mostly so that developers testing this on desktop
-			// don't go crazy when the fake scroll fails to line up.
-			$page.css( {
-				'padding-right': '+=' + scrollbarWidth,
-				'box-sizing': 'border-box'
-			} );
 			// Pretend that we didn't just scroll the page to the top.
 			$page.prop( 'scrollTop', scrollTop );
 			// Then, pretend that we're scrolling to the position of the clicked heading.
@@ -211,10 +203,6 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 				transform: '',
 				'padding-bottom': '',
 				'margin-bottom': ''
-			} );
-			$( '#mw-mf-page-center' ).css( {
-				'padding-right': '',
-				'box-sizing': ''
 			} );
 
 			$( document.body ).removeClass( 've-loading' );
