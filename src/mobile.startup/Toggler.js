@@ -137,6 +137,7 @@ function cleanObsoleteStoredSections( page ) {
  */
 Toggler.prototype.toggle = function ( $heading, page ) {
 	var indicator,
+		self = this,
 		wasExpanded = $heading.is( '.open-block' ),
 		$content = $heading.next();
 
@@ -154,15 +155,24 @@ Toggler.prototype.toggle = function ( $heading, page ) {
 			'aria-expanded': !wasExpanded
 		} );
 
-	/**
-	 * Global event emitted after a section has been toggled
-	 * @event section-toggled
-	 * @type {ToggledEvent}
-	 */
-	this.eventBus.emit( 'section-toggled', {
-		expanded: wasExpanded,
-		isReferenceSection: Boolean( $content.attr( 'data-is-reference-section' ) ),
-		$heading: $heading
+	/* T239418 We consider this event as a low-priority one and emit it asynchronously.
+	This ensures that any logic associated with section toggling is async and not contributing
+	directly to a slow click/press event handler.
+
+	Currently costly reflow-inducing viewport size computation is being done for lazy-loaded
+	images by the main listener to this event. */
+	mw.requestIdleCallback( function () {
+		/**
+		 * Global event emitted after a section has been toggled
+		 * @event section-toggled
+		 * @type {ToggledEvent}
+		 */
+
+		self.eventBus.emit( 'section-toggled', {
+			expanded: wasExpanded,
+			isReferenceSection: Boolean( $content.attr( 'data-is-reference-section' ) ),
+			$heading: $heading
+		} );
 	} );
 
 	if ( !browser.isWideScreen() ) {
