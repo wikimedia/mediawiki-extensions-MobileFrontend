@@ -5,5 +5,6 @@
 		]
 	},
 	"apihelp-mobileview-param-page": "Apstrādājamās lapas nosaukums.",
+	"apihelp-mobileview-param-noimages": "Atgriež HTML bez attēliem.",
 	"apiwarn-mobilefrontend-sectionsnotfound": "{{PLURAL:$2|Sadaļas $1 nav atrastas|Sadaļa $1 nav atrasta|Sadaļas $1 nav atrastas}}."
 }
