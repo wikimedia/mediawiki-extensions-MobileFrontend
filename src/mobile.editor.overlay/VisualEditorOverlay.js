@@ -169,7 +169,7 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 
 			if ( editLead && readLead ) {
 				offset = $( editLead ).offset().top - ( $( readLead ).offset().top - fakeScroll );
-				$window.scrollTop( $window.scrollTop() + offset );
+				$window.scrollTop( offset );
 				// Set a model range to match
 				editLeadView = $( editLead ).data( 'view' );
 				if ( editLeadView ) {
