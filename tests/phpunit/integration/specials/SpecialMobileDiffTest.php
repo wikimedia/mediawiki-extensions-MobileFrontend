@@ -96,7 +96,7 @@ class MockSpecialMobileDiff extends SpecialMobileDiff {
 		return MFMockRevision::newFromId( $id );
 	}
 
-	public function executeBadQuery() {
+	public function showRevisionNotFound() {
 		return false;
 	}
 

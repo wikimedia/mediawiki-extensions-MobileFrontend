@@ -36,11 +36,14 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	}
 
 	/**
-	 * Generate a 404 Error message, that revisions can not be found
+	 * Show a nice error message when revision cannot be found
 	 */
-	public function executeBadQuery() {
-		wfHttpError( 404, $this->msg( 'mobile-frontend-diffview-404-title' )->text(),
-			$this->msg( 'mobile-frontend-diffview-404-desc' )->text() );
+	public function showRevisionNotFound() {
+		$this->getOutput()->addHTML(
+			MobileUI::contentElement(
+				Html::errorBox( $this->msg( 'mobile-frontend-diffview-404-desc' )->text() )
+			)
+		);
 	}
 
 	/**
@@ -98,7 +101,9 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		list( $prev, $rev ) = $revisions;
 
 		if ( $rev === null ) {
-			$this->executeBadQuery();
+			$this->showRevisionNotFound();
+			$output->setPageTitle( $this->msg(
+			'mobile-frontend-diffview-404-title' ) );
 			return false;
 		}
 		$this->revId = $rev->getId();
