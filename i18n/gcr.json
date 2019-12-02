@@ -4,7 +4,13 @@
 			"LeGuyanaisPure"
 		]
 	},
+	"mobile-frontend-joined-minutes": "{{GENDER:$1|Roujwenn}} i gangnen {{PLURAL:$2|$2 minout}}",
+	"mobile-frontend-joined-hours": "{{GENDER:$1|Roujwenn}} i gangnen {{PLURAL:$2|$2 lò}}",
+	"mobile-frontend-joined-days": "{{GENDER:$1|Roujwenn}} i gangnen {{PLURAL:$2|$2 jou}}",
+	"mobile-frontend-joined-months": "{{GENDER:$1|Roujwenn}} i gangnen {{PLURAL:$2|$2 mwè}}",
+	"mobile-frontend-joined-years": "{{GENDER:$1|Roujwenn}} i gangnen {{PLURAL:$2|$2 lannen}}",
 	"mobile-frontend-languages-header": "Lanng",
+	"mobile-frontend-return-to-page": "Viré bò paj-a",
 	"mobile-frontend-view": "Vèrsyon mobil",
 	"tag-mobile_edit": "Modifikasyon pa mobil",
 	"tag-mobile_web_edit": "Modifikasyon pa web mobil"

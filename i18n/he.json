@@ -171,7 +171,7 @@
 	"mobile-frontend-requires-optin": "הדף הזה זמין רק למי שבחר להירשם לתכנית הבטא שלנו. נא לבקר [[Special:MobileOptions|בדף ההגדרות]] כדי להירשם.",
 	"mobile-frontend-requires-title": "הדף אינו זמין",
 	"mobile-frontend-return-to-page": "חזרה לדף",
-	"mobile-frontend-save-error": "שגיאה בשמירת העדפות. יש לוודא שהעוגיות מופעלות.",
+	"mobile-frontend-save-error": "שגיאה בשמירת הגדרות. יש לוודא שהעוגיות מופעלות.",
 	"mobile-frontend-save-settings": "שמירה",
 	"mobile-frontend-search-content": "לחפש בדפים",
 	"mobile-frontend-search-content-no-results": "יש <b>{{int:mobile-frontend-search-content}}</b> כדי לראות אם הביטוי הזה מופיע במקום כלשהו.",
