@@ -544,8 +544,7 @@ Text 2
 		$pageprops = [];
 		$addDescriptionToResult->invokeArgs( $api, [ $resultObj, $pageprops, 'mobileview' ] );
 		$mobileview = $resultObj->getResultData( 'mobileview' );
-		$this->assertEmpty( $mobileview[ 'description' ] );
-		$this->assertEmpty( $mobileview[ 'descriptionsource' ] );
+		$this->assertNull( $mobileview );
 	}
 
 	/**

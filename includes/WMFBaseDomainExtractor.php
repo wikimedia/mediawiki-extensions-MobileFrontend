@@ -55,10 +55,10 @@ class WMFBaseDomainExtractor implements BaseDomainExtractorInterface {
 		// Per http://php.net/manual/en/function.parse-url.php,
 		// If the requested component doesn't exist within the given
 		// URL, NULL will be returned. So wfParseUrl() will return
-		// NULL as it calls parse_url() if a valid server URL is not
+		// false as it calls parse_url() if a valid server URL is not
 		// given except it's an empty string.
 		$parsedUrl = wfParseUrl( $server );
-		$host = $parsedUrl['host'];
+		$host = $parsedUrl !== false ? $parsedUrl['host'] : null;
 
 		$wikiHost = $this->matchBaseHostname( $host, $this->wmfWikiHosts );
 		if ( $wikiHost !== false ) {
