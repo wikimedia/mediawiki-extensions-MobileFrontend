@@ -52,7 +52,7 @@
 	"mobile-frontend-contributions-404-title": "Nome utente errato",
 	"mobile-frontend-copyright": "Il contenuto è disponibile in base alla licenza $1, se non diversamente specificato.",
 	"mobile-frontend-desc": "Interfaccia mobile",
-	"mobile-frontend-diffview-404-desc": "L'id per la versione richiesta non esiste",
+	"mobile-frontend-diffview-404-desc": "L'ID per la versione richiesta non esiste.<br/>Solitamente è causato se si utilizza un collegamento ad una diff obsoleto poiché la pagina è stata cancellata o un collegamento ad una diff che contiene caratteri non validi.",
 	"mobile-frontend-diffview-404-title": "Errore versione",
 	"mobile-frontend-diffview-anonymous": "Utente anonimo",
 	"mobile-frontend-diffview-bytesadded": "$1 byte {{PLURAL:$1|aggiunto|aggiunti}}",

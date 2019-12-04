@@ -72,7 +72,7 @@
 	"mobile-frontend-contributions-404-title": "Mauvais nom d'utilisateur fourni",
 	"mobile-frontend-copyright": "Le contenu est disponible sous licence $1 sauf mention contraire.",
 	"mobile-frontend-desc": "Affichage mobile",
-	"mobile-frontend-diffview-404-desc": "L'id de la révision que vous avez demandé n’existe pas.",
+	"mobile-frontend-diffview-404-desc": "L’ID de la révision que vous avez demandé n’existe pas.<br/> En général, cela arrive lorsqu’on suit un lien diff obsolète vers une page qui a été supprimée ou un lien diff contenant des caractères non valides.",
 	"mobile-frontend-diffview-404-title": "Mauvaise révision",
 	"mobile-frontend-diffview-anonymous": "Utilisateur anonyme",
 	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|octet ajouté|octets ajoutés}}",

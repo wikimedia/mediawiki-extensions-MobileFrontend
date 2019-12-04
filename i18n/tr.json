@@ -30,7 +30,8 @@
 			"Vito Genovese",
 			"Bulgu",
 			"Mirzali",
-			"Grkn gll"
+			"Grkn gll",
+			"BaRaN6161 TURK"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ya da bir mobil kullanıcı arayüzü ile düzenleme olup olmadığı",
@@ -50,7 +51,7 @@
 	"mobile-frontend-clear-search": "Temizle",
 	"mobile-frontend-copyright": "Aksi belirtilmedikçe içerik $1 lisansı altındadır.",
 	"mobile-frontend-desc": "Mobil Arayüz",
-	"mobile-frontend-diffview-404-desc": "Talep ettiğiniz revizyon kimliği yok.",
+	"mobile-frontend-diffview-404-desc": "İstediğiniz revizyonun kimliği mevcut değil.<br />Bu genellikle, silinmiş bir sayfaya güncel olmayan bir diff linkini veya geçersiz karakterler içeren bir diff linkini takip etmekten kaynaklanır.",
 	"mobile-frontend-diffview-404-title": "Kötü revizyon",
 	"mobile-frontend-diffview-anonymous": "Anonim kullanıcı",
 	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|bayt|bayt}} eklendi",

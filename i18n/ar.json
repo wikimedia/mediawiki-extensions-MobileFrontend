@@ -54,7 +54,7 @@
 	"mobile-frontend-contributions-404-title": "اسم مستخدم سيء معطى",
 	"mobile-frontend-copyright": "المحتوى متاح وفق $1 إن لم يرد خلاف ذلك.",
 	"mobile-frontend-desc": "واجهة المحمول",
-	"mobile-frontend-diffview-404-desc": "معرف النسخة الذي طلبته غير موجود",
+	"mobile-frontend-diffview-404-desc": "The ID for the revision you requested does not exist.<br/>This is usually caused by following an outdated diff link to a page that has been deleted or a diff link containing invalid characters.\nمعرف المراجعة التي طلبتها غير موجودة.<br/>يحدث هذا عادةً باتباع رابط فرق قديم إلى صفحة تم حذفها أو رابط فرق يحتوي على أحرف غير صالحة.",
 	"mobile-frontend-diffview-404-title": "نسخة خاطئة",
 	"mobile-frontend-diffview-anonymous": "مستخدم مجهول",
 	"mobile-frontend-diffview-bytesadded": "تم إضافة {{PLURAL:$1|بايت|$1 بايت}}",

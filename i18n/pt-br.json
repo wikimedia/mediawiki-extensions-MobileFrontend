@@ -48,7 +48,7 @@
 	"mobile-frontend-contributions-404-title": "Nome de usuário dado inválido",
 	"mobile-frontend-copyright": "Conteúdo disponível sob $1, salvo indicação em contrário.",
 	"mobile-frontend-desc": "Interface para dispositivos móveis",
-	"mobile-frontend-diffview-404-desc": "O id da revisão solicitada não existe.",
+	"mobile-frontend-diffview-404-desc": "O ID da revisão que você solicitou não existe.<br/>Geralmente, isso é causado pelo seguimento de um link diff desatualizado para uma página que foi excluída ou de um link diff que contém caracteres inválidos.",
 	"mobile-frontend-diffview-404-title": "Problema com a revisão",
 	"mobile-frontend-diffview-anonymous": "Usuário anônimo",
 	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|byte|bytes}} adicionados",

@@ -44,7 +44,7 @@
 	"mobile-frontend-contributions-404-title": "ניתן שם משתמש שגוי",
 	"mobile-frontend-copyright": "התוכן זמין לפי תנאי $1 אלא אם כן נאמר אחרת.",
 	"mobile-frontend-desc": "תצוגה עבור מכשירים ניידים",
-	"mobile-frontend-diffview-404-desc": "מספר הגרסה שביקשת אינו קיים",
+	"mobile-frontend-diffview-404-desc": "מספר הגרסה שביקשת אינו קיים.<br/>זה בדרך־כלל נגרם על־ידי לחיצה על קישור השוואה מיושן לדף שנמחק או קישור השוואה שמכיל תווים בלתי־תקינים.",
 	"mobile-frontend-diffview-404-title": "גרסה בלתי־תקינה",
 	"mobile-frontend-diffview-anonymous": "משתמש אלמוני",
 	"mobile-frontend-diffview-bytesadded": "{{PLURAL:$1|נוסף בית אחד|נוספו $1 בתים}}",
