@@ -97,6 +97,7 @@
 	"mobile-frontend-missing-image": "Attēls",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 km}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",
+	"mobile-frontend-nearby-error-guidance": "Mēģini atjaunināt savu atrašanās vietu.",
 	"mobile-frontend-nearby-noresults": "Visapkārt tik kluss... Tuvumā netika atrasta neviena lapa.",
 	"mobile-frontend-nearby-noresults-guidance": "Pamēģiniet izveidot jaunu lapu vai pievienojiet atrašanās vietu jau esošai",
 	"mobile-frontend-nearby-title": "Tuvumā",
