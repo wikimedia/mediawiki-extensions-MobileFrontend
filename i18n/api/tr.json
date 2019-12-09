@@ -3,14 +3,17 @@
 		"authors": [
 			"Arystanbek",
 			"Incelemeelemani",
-			"Vito Genovese"
+			"Vito Genovese",
+			"BaRaN6161 TURK"
 		]
 	},
 	"apihelp-mobileview-description": "Mobil görünümler için gerekli verileri döndürür.",
+	"apihelp-mobileview-summary": "Mobil görünümler için gerekli verileri döndürür.",
 	"apihelp-mobileview-param-page": "Sayfa başlığı işlemi.",
 	"apihelp-mobileview-param-redirect": "İster yönlendirmeler takip edilmelidir.",
 	"apihelp-mobileview-param-sections": "Boru ayrılmış metin dönmek için bölüm numaraları listesi. \"\" için geri dönmek için kullanılabilir. Biçiminde aralıkları \"\" anlamına bölümler 1,2,3,4. 1-4 İkinci Sayı \"1-\" sonuna kadar \"başvurular\" tüm bölümleri içeren başvurular iade edilmesi gerektiğini belirtmek için kullanılır.. aralıkları",
 	"apihelp-mobileview-param-prop": "Almak için:\n;metin:seçilmiş bölümler. HTML\n;bölümler:bu sayfada. tüm bölümleri hakkında Bilgi\n;normalizedtitle:sayfa Başlığı. Normalleştirilmiş\n;response-headers:ISO 8601 Sayfa en son ne zaman değişiklik için zaman damgası, örneğin \"2014-04-13T22:42:14Z\".\n;lastmodifiedby:kullanıcı hakkında Bilgi kim değiştirilmiş sayfa son.\n;revizyon:sayfa. mevcut revizyon KİMLİĞİ Geri ver\n;koruma:koruma düzeyi hakkında Bilgi.\n;geçerli kullanıcı bu sayfayı düzenlemek Olup olmadığını düzenlenebilir:. Bu oturum açmış kullanıcılar için anons bloke durum değil. tüm faktörleri içerir\n;languagecount:sayfa kullanılabilir diller. Sayı\n;ya da sayfanın başka dil çeşitleri mevcut olup olmadığını. hasvariants:\n;displaytitle:sayfa oluşturulabilir, başlık, {{DİSPLAYTİTLE}} ve böyle uygulanır.\n;pageprops:Sayfa özellikleri.",
+	"apihelp-mobileview-param-prop-withimages": "Hangi bilgileri almak için:\n;text:Seçilen bölümlerin HTML'si.\n;sections:Sayfadaki tüm bölümler hakkında bilgi.\n;normalizedtitle:Normalleştirilmiş sayfa başlığı.\n;en son değiştirilmiş: sayfanın en son değiştirildiği zamana ait ISO 8601 zaman damgası, ör. \"2014-04-13T22:42:14z\".\n;lastmodifiedby:Sayfayı en son değiştiren kullanıcı hakkında bilgi.\n;revision:Sayfanın geçerli revizyon kimliğini döndür.\n;protection:Koruma seviyesi hakkında bilgi.\n;editable:Geçerli kullanıcının bu sayfayı düzenleyip düzenleyemeyeceği. Bu, oturum açmış kullanıcılar için tüm faktörleri içerir, ancak anonilerin durumunu engellemez.\n;languagecount:Sayfanın bulunduğu dillerin sayısı.\n;hasvariants:Sayfanın diğer dil türevlerinde mevcut olup olmadığı.\n;displaytitle:Sayfanın &#123;&#123;DISPLAYTITLE&#125;&#125; ile gösterilen başlığı ve uygulanmış.\n;pageprops:Sayfa özellikleri\n;image:Bu sayfa ile ilişkilendirilmiş bir resim hakkında bilgi.\n;thumb:Bu sayfa ile ilişkilendirilmiş bir resmin minik resmi.",
 	"apihelp-mobileview-param-sectionprop": "Ne bölümler hakkında bilgi almak için.",
 	"apihelp-mobileview-param-pageprops": "Geri dönmek için sayfa özellikleri ne, bir boru ( \"\" ) | ayrılmış liste veya \"*\" tüm özellikler için.",
 	"apihelp-mobileview-param-variant": "Bu dil varyantı içerik dönüştürün.",
@@ -23,10 +26,17 @@
 	"apihelp-mobileview-param-thumbsize": "Maksimum küçük resim boyutları.",
 	"apihelp-mobileview-param-thumbwidth": "Maksimum küçük resim genişliği.",
 	"apihelp-mobileview-param-thumbheight": "Maksimum küçük resim yüksekliği.",
+	"apihelp-mobileview-param-revision": "Belirli bir revizyon isteyin.",
 	"apihelp-mobileview-example-1": "Bölüm 0 hakkında bilgi almak [[Doom metal]]",
 	"apihelp-mobileview-example-2": "Bölüm 0 ve bölümleri içeren başvurular hakkında bilgi almak için [[Candlemass]]",
 	"apihelp-mobileview-example-3": "Ve sonraki bölümleri başvurular içeren bölüm 1 ile ilgili bilgi almak [[Candlemass]]",
 	"apihelp-parse-param-mobileformat": "Bir biçimde mobil cihazlar için uygun ayrıştırma çıkış dönüş.",
 	"apihelp-parse-param-noimages": "Mobil çıkışı devre dışı görüntüler.",
-	"apihelp-parse-param-mainpage": "Mobil anasayfa dönüştürmesi uygulanır."
+	"apihelp-parse-param-mainpage": "Mobil anasayfa dönüştürmesi uygulanır.",
+	"apihelp-webapp-manifest-description": "Bir webapp bildirimi döndürür.",
+	"apihelp-webapp-manifest-summary": "Bir webapp bildirimi döndürür.",
+	"apierror-mobilefrontend-badidtitle": "Hatalı revizyon kimliği/başlık kombinasyonu.",
+	"apierror-mobilefrontend-toomanysizeparams": "\n<var>thumbsize</var> ile tamamen özel <var>thumbwidth</var> ve <var>thumbheight</var>.",
+	"apiwarn-mobilefrontend-ignoringnoheadings": "<var>noheadings</var> görmezden ana sayfadaki hiçbir anlamı yoktur.",
+	"apiwarn-mobilefrontend-sectionsnotfound": "{{PLURAL:$2|Bölüm|Bölüm}} $1 bulunamadı."
 }

@@ -42,7 +42,7 @@
 	"mobile-frontend-contributions-404-title": "Felaktigt användarnamn angavs",
 	"mobile-frontend-copyright": "Innehållet är tillgängligt under $1 om ingenting annat anges.",
 	"mobile-frontend-desc": "Mobilt gränssnitt",
-	"mobile-frontend-diffview-404-desc": "ID för den version du begärde finns inte.",
+	"mobile-frontend-diffview-404-desc": "ID för versionen du begärde finns inte.<br/>Detta orsakas oftast av en utdaterad difflänk till en sida som har raderats eller en difflänk som innehåller ogiltiga tecken.",
 	"mobile-frontend-diffview-404-title": "Dålig version",
 	"mobile-frontend-diffview-anonymous": "Anonym användare",
 	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|byte}} lades till",
