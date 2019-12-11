@@ -70,5 +70,6 @@
 	"apierror-mobilefrontend-badidtitle": "{{doc-apierror}}",
 	"apierror-mobilefrontend-toomanysizeparams": "{{doc-apierror}}",
 	"apiwarn-mobilefrontend-ignoringnoheadings": "{{doc-apierror}}",
+	"apiwarn-mobilefrontend-mobileviewdeprecated": "Deprecation warning for API. Only shown to developers.",
 	"apiwarn-mobilefrontend-sectionsnotfound": "{{doc-apierror}}\n\nParameters:\n* $1 - List of sections that weren't found.\n* $2 - Number of sections that weren't found."
 }

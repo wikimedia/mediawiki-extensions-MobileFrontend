@@ -40,7 +40,6 @@
 			"Matěj Suchánek"
 		]
 	},
-	"apiwarn-mobilefrontend-mobileviewdeprecated": "Deprecation warning for API. Only shown to developers.",
 	"abusefilter-edit-builder-vars-user-mobile": "AbuseFilter extension rule variable that allows distinguishing edits based on if they have been made using the editor of MobileFrontend or not.",
 	"mobile-frontend-account-create-captcha-placeholder": "Placeholder for captcha input field",
 	"mobile-frontend-categories-heading": "Title of the list of categories this page is categorized in.\n{{Identical|Category}}",
