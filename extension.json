@@ -917,7 +917,7 @@
 		"MFNoindexPages": true,
 		"MFStopRedirectCookieHost": null,
 		"MobileFrontendLogo": false,
-		"MFEnableBeta": true,
+		"MFEnableBeta": false,
 		"MFBetaFeedbackLink": false,
 		"MFDefaultSkinClass": "SkinMinerva",
 		"MFNamespacesWithoutCollapsibleSections": [
@@ -952,7 +952,7 @@
 		"MFLogWrappedInfoboxes": true,
 		"MFSiteStylesRenderBlocking": false,
 		"MFWatchlistEditCountThreshold": 10,
-		"MFAdvancedMobileContributions": false,
+		"MFAdvancedMobileContributions": true,
 		"MFAmcOutreach": false,
 		"MFAmcOutreachMinEditCount": 100,
 		"MFSchemaEditAttemptStepOversample": false
