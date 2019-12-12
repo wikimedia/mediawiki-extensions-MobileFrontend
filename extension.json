@@ -71,8 +71,6 @@
 		"MobileContext": "includes/MobileContext.php",
 		"MobileFormatter": "includes/MobileFormatter.php",
 		"MobileUI": "includes/MobileUI.php",
-		"InlineDiffFormatter": "includes/diff/InlineDiffFormatter.php",
-		"InlineDifferenceEngine": "includes/diff/InlineDifferenceEngine.php",
 		"SpecialUploads": "includes/specials/SpecialUploads.php",
 		"SpecialMobileHistory": "includes/specials/SpecialMobileHistory.php",
 		"SpecialMobileDiff": "includes/specials/SpecialMobileDiff.php",
