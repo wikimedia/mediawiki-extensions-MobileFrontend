@@ -16,11 +16,6 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	private $prevRev;
 	/** @var Title Saves the title of the actual revision */
 	private $targetTitle;
-	/**
-	 * @var InlineDifferenceEngine|DifferenceEngine $mDiffEngine
-	 * DifferenceEngine for this Diff-page
-	 */
-	protected $mDiffEngine;
 
 	public function __construct() {
 		parent::__construct( 'MobileDiff' );
@@ -156,11 +151,21 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	 */
 	protected function displayDiffPage() {
 		$unhide = $this->getRequest()->getBool( 'unhide' );
+		$context = $this->getContext();
 		$contentHandler = $this->rev->getContentHandler();
-		$this->mDiffEngine = $contentHandler->createDifferenceEngine( $this->getContext(),
-		$this->getPrevId(), $this->revId, 0, false, $unhide );
+		$engine = $contentHandler->createDifferenceEngine( $this->getContext(),
+			$this->getPrevId(), $this->revId, 0, false, $unhide );
+
 		$this->showHeader( $unhide );
-		$this->mDiffEngine->showDiffPage();
+		if ( function_exists( 'wikidiff2_do_diff' ) ) {
+			$engine->setSlotDiffOptions( [ 'diff-type' => 'inline' ] );
+			$engine->showDiffPage( true );
+		} elseif ( get_class( $engine ) === DifferenceEngine::class ) {
+			wfDeprecated( 'Please install wikidiff2 to retain inline diff functionality.', '1.35.0' );
+			$engine = new InlineDifferenceEngine( $context, $this->getPrevId(), $this->revId, 0,
+				false, $unhide );
+			$engine->showDiffPage( false );
+		}
 	}
 
 	/**

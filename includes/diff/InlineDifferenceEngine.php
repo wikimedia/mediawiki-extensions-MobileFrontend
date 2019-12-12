@@ -7,6 +7,7 @@ use Wikimedia\Assert\Assert;
 /**
  * Extends the basic DifferenceEngine from core to enable inline difference view
  * using only one column instead of two column diff system.
+ * @deprecated 1.35.0
  */
 class InlineDifferenceEngine extends DifferenceEngine {
 	/**

@@ -1,6 +1,6 @@
 {
 	"name": "MobileFrontend",
-	"version": "2.1.0",
+	"version": "2.2.0",
 	"author": [
 		"Patrick Reilly",
 		"Max Semenik",
@@ -820,9 +820,6 @@
 		"UserGetDefaultOptions": [
 			"MobileFrontendHooks::onUserGetDefaultOptions",
 			"MobileFrontend\\AMC\\Hooks::onUserGetDefaultOptions"
-		],
-		"GetDifferenceEngine": [
-			"MobileFrontendHooks::onGetDifferenceEngine"
 		],
 		"ManualLogEntryBeforePublish": [
 			"MobileFrontend\\AMC\\Hooks::onManualLogEntryBeforePublish",
