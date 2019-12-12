@@ -5,7 +5,8 @@
 			"Maroen1990",
 			"Meno25",
 			"Mido",
-			"علاء"
+			"علاء",
+			"ديفيد"
 		]
 	},
 	"apihelp-mobileview-description": "يعطي البيانات الضرورية لعرض نسخة المحمول.",
@@ -39,5 +40,6 @@
 	"apierror-mobilefrontend-badidtitle": "توافق رقم/عنوان مراجعة سيء.",
 	"apierror-mobilefrontend-toomanysizeparams": "<var>thumbsize</var> يتنافى مع <var>thumbwidth</var> و <var>thumbheight</var>.",
 	"apiwarn-mobilefrontend-ignoringnoheadings": "<var>noheadings</var> ليس لها معنى على الصفحة الرئيسية، جارٍ تجاهلها.",
+	"apiwarn-mobilefrontend-mobileviewdeprecated": "تم إهمال واجهة برمجة التطبيقات هذه، انظر T186627 لمزيد من التفاصيل.",
 	"apiwarn-mobilefrontend-sectionsnotfound": "{{PLURAL:$2|قسم|أقسام}} $1 لم يتم العثور عليها."
 }

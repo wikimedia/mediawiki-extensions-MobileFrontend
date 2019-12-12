@@ -35,5 +35,6 @@
 	"apierror-mobilefrontend-badidtitle": "Mala combinación d'id de revisión/títulu.",
 	"apierror-mobilefrontend-toomanysizeparams": "<var>thumbsize</var> ye mutuamente esclusivu con <var>thumbwidth</var> y <var>thumbheight</var>.",
 	"apiwarn-mobilefrontend-ignoringnoheadings": "<var>noheadings</var> nun tien xaciu na páxina principal, inórase.",
+	"apiwarn-mobilefrontend-mobileviewdeprecated": "Esta API ta anticuada. Mira T186627 pa más detalles.",
 	"apiwarn-mobilefrontend-sectionsnotfound": "Nun s'{{PLURAL:$2|alcuentra la seición|alcuentren les seiciones}} $1."
 }

@@ -37,5 +37,6 @@
 	"apierror-mobilefrontend-badidtitle": "錯誤的修訂 ID/標題組合。",
 	"apierror-mobilefrontend-toomanysizeparams": "<var>thumbsize</var> 與 <var>thumbwidth</var> 跟 <var>thumbheight</var> 互斥。",
 	"apiwarn-mobilefrontend-ignoringnoheadings": "<var>noheadings</var> 在首頁上沒有意義，忽略。",
+	"apiwarn-mobilefrontend-mobileviewdeprecated": "此 API 已棄用。請查看 T186627 來獲得更多詳情。",
 	"apiwarn-mobilefrontend-sectionsnotfound": "找不到{{PLURAL:$2|章節|章節}} $1。"
 }

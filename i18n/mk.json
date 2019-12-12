@@ -28,7 +28,7 @@
 	"mobile-frontend-contributions-404-title": "Укажано е неважечко корисничко име",
 	"mobile-frontend-copyright": "Содржината е достапна под $1 освен ако не е поинаку наведено.",
 	"mobile-frontend-desc": "Мобилен посредник",
-	"mobile-frontend-diffview-404-desc": "Побараната назнаката на преработката не постои",
+	"mobile-frontend-diffview-404-desc": "Не постои преработка со таква назнака.<br/>Ова обично се должи на застарена врска со разлики на страница која е избришана или со неважечки знаци во врската.",
 	"mobile-frontend-diffview-404-title": "Неисправна преработка",
 	"mobile-frontend-diffview-anonymous": "Анонимен корисник",
 	"mobile-frontend-diffview-bytesadded": "{{PLURAL:$1|Додаден $1 бајт|Додадени $1 бајти}}",

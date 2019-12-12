@@ -41,5 +41,6 @@
 	"apierror-mobilefrontend-badidtitle": "Mauvaise combinaison de id de révision/titre",
 	"apierror-mobilefrontend-toomanysizeparams": "<var>thumbsize</var> est mutuellement exclusif de <var>thumbwidth</var> et <var>thumbheight</var>.",
 	"apiwarn-mobilefrontend-ignoringnoheadings": "<var>noheadings</var> n’a pas de sens sur la page principale, et est ignoré.",
+	"apiwarn-mobilefrontend-mobileviewdeprecated": "Cette API est dépréciée. Voir T186627 pour plus de détails.",
 	"apiwarn-mobilefrontend-sectionsnotfound": "{{PLURAL:$2|Section $1 non trouvée|Sections $1 non trouvées}}."
 }

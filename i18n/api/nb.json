@@ -36,5 +36,6 @@
 	"apierror-mobilefrontend-badidtitle": "Ugyldig revisjons- og tittelkombinasjon",
 	"apierror-mobilefrontend-toomanysizeparams": "<var>thumbsize</var> er gjensidig utelukkende med <var>thumbwidth</var> og <var>thumbheight</var>.",
 	"apiwarn-mobilefrontend-ignoringnoheadings": "<var>noheadings</var> gir ingen mening på hovedsiden, ignorerer.",
+	"apiwarn-mobilefrontend-mobileviewdeprecated": "Dette API-et er foreldet. Se T186627 for flere detaljer.",
 	"apiwarn-mobilefrontend-sectionsnotfound": "{{PLURAL:$2|Seksjonen|Seksjonene}} $1 ble ikke funnet."
 }

@@ -35,5 +35,6 @@
 	"apierror-mobilefrontend-badidtitle": "Неважечка комбинација назнака/наслов за преработката.",
 	"apierror-mobilefrontend-toomanysizeparams": "<var>thumbsize</var> е взаемно исклучиво со <var>thumbwidth</var> и <var>thumbheight</var>.",
 	"apiwarn-mobilefrontend-ignoringnoheadings": "<var>noheadings</var> е бесмислено на главната страница. Затоа, го занемарувам.",
+	"apiwarn-mobilefrontend-mobileviewdeprecated": "Прилогов е застарен. Погл. T186627 за повеќе подробности.",
 	"apiwarn-mobilefrontend-sectionsnotfound": "Не најдов $1 {{PLURAL:$2|поднаслов|поднаслови}}."
 }

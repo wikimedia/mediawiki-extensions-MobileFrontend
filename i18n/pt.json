@@ -51,7 +51,7 @@
 	"mobile-frontend-contributions-404-title": "Foi fornecido um nome de utilizador incorreto",
 	"mobile-frontend-copyright": "Conteúdo disponibilizado nos termos da $1, salvo indicação em contrário.",
 	"mobile-frontend-desc": "Interface para dispositivos móveis",
-	"mobile-frontend-diffview-404-desc": "Não existe um identificador para a revisão que pediu.",
+	"mobile-frontend-diffview-404-desc": "O identificador da revisão que pediu não existe.<br/>Normalmente, isto é causado por ter seguido uma hiperligação para uma lista de diferenças desatualizada de uma página que foi eliminada, ou uma hiperligação para uma lista de diferenças que contém caracteres inválidos.",
 	"mobile-frontend-diffview-404-title": "Erro de revisão",
 	"mobile-frontend-diffview-anonymous": "Utilizador anónimo",
 	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|byte adicionado|bytes adicionados}}",
