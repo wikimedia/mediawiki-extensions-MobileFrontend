@@ -121,7 +121,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 			"mobile.placeholder.images",
 			'mobile.pagesummary.styles',
 		] );
-		$this->offset = $this->getRequest()->getVal( 'offset', false );
+		$this->offset = $this->getRequest()->getVal( 'offset' );
 
 		if ( $par ) {
 			// enter article history view

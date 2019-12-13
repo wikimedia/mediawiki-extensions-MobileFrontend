@@ -54,7 +54,7 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 	 * @param string|null $par The username
 	 */
 	public function executeWhenAvailable( $par = '' ) {
-		$this->offset = $this->getRequest()->getVal( 'offset', false );
+		$this->offset = $this->getRequest()->getVal( 'offset', '' );
 		if ( $par ) {
 			// enter article history view
 			$this->user = User::newFromName( $par, false );
