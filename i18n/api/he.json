@@ -36,5 +36,6 @@
 	"apierror-mobilefrontend-badidtitle": "שילוב גרוע של מזהה גרסה וכותרת.",
 	"apierror-mobilefrontend-toomanysizeparams": "פרמטר <var>thumbsize</var> מונע את האפשרות להשתמש בפרמטרים <var>thumbwidth</var> ו־<var>thumbheight</var>.",
 	"apiwarn-mobilefrontend-ignoringnoheadings": "בדף הראשי אין משמעות ל־<var>noheadings</var>, נתעלם ממנו.",
+	"apiwarn-mobilefrontend-mobileviewdeprecated": "ה־API הזה מיושן. ר' T186627 לפרטים נוספים.",
 	"apiwarn-mobilefrontend-sectionsnotfound": "{{PLURAL:$2|הפִסקה $1 לא נמצאה|הפִסקאות $1 לא נמצאו}}."
 }

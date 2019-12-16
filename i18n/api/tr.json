@@ -38,5 +38,6 @@
 	"apierror-mobilefrontend-badidtitle": "Hatalı revizyon kimliği/başlık kombinasyonu.",
 	"apierror-mobilefrontend-toomanysizeparams": "\n<var>thumbsize</var> ile tamamen özel <var>thumbwidth</var> ve <var>thumbheight</var>.",
 	"apiwarn-mobilefrontend-ignoringnoheadings": "<var>noheadings</var> görmezden ana sayfadaki hiçbir anlamı yoktur.",
+	"apiwarn-mobilefrontend-mobileviewdeprecated": "Bu API kullanımdan kaldırıldı. Daha fazla bilgi için T186627'ye bakınız.",
 	"apiwarn-mobilefrontend-sectionsnotfound": "{{PLURAL:$2|Bölüm|Bölüm}} $1 bulunamadı."
 }

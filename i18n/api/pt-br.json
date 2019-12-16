@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Felipe L. Ewald"
+			"Felipe L. Ewald",
+			"Eduardo Addad de Oliveira"
 		]
 	},
 	"apihelp-mobileview-description": "Retorna os dados necessários para visualizações de dispositivos móveis.",
@@ -35,5 +36,6 @@
 	"apierror-mobilefrontend-badidtitle": "Combinação de ID/título de revisão incorreta.",
 	"apierror-mobilefrontend-toomanysizeparams": "<var>thumbsize</var>  é mutuamente exclusivo com <var>thumbwidth</var> e <var>thumbheight</var>.",
 	"apiwarn-mobilefrontend-ignoringnoheadings": "<var>noheadings</var> não faz sentido na página principal, ignorando.",
+	"apiwarn-mobilefrontend-mobileviewdeprecated": "Esta API está obsoleta.  Veja T186627 para mais detalhes.",
 	"apiwarn-mobilefrontend-sectionsnotfound": "{{PLURAL:$2|Seção $1 não encontrada|Seções $1 não encontradas}}."
 }

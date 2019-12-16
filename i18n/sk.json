@@ -226,7 +226,7 @@
 	"mobile-frontend-send-feedback": "Poslať spätnú väzbu",
 	"mobile-frontend-mobile-option-MFLazyLoadImages-description": "Načítať obrázky len vtedy, keď je to nevyhnutné.",
 	"mobile-frontend-mobile-option-MFLazyLoadImages": "Oneskorené načítanie obrázkov",
-	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "Hlavný odstavec",
+	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "Úvodný odsek",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox-description": "Text sa vždy zobrazí nad infoboxami, čo zlepšuje výkon a čitateľnosť.",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Veľkosť písma",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Kontrolovať veľkosť písma",
