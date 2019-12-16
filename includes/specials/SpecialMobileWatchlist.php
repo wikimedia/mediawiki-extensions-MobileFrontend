@@ -29,9 +29,6 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	/** @var boolean $usePageImages Saves whether display images or not */
 	private $usePageImages;
 
-	/** @var Title $fromPageTitle Saves the Title object of the page list starts from */
-	private $fromPageTitle;
-
 	/**
 	 * Render the special page
 	 * @param string|null $par parameter submitted as subpage
@@ -58,7 +55,6 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		$this->view = $req->getVal( 'watchlistview', $defaultView );
 
 		$this->filter = $req->getVal( 'filter', $user->getOption( self::FILTER_OPTION_NAME, 'all' ) );
-		$this->fromPageTitle = Title::newFromText( $req->getVal( 'from', false ) );
 
 		$output->setPageTitle( $this->msg( 'watchlist' ) );
 
