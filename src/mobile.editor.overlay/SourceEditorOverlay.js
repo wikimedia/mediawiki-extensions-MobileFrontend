@@ -221,6 +221,28 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 				self.log( { action: 'firstChange' } );
 			} );
 
+		if ( this.isFirefox ) {
+			this.$content.on( 'mousedown', function () {
+				// Support: Firefox Mobile
+				// Firefox scrolls back to the top of the page *every time*
+				// you tap on the textarea. This makes things slightly
+				// more usable by restoring your scroll offset every time
+				// the page scrolls for the next 1000ms.
+				// The page will still flicker every time the user touches
+				// to place the cursor, but this is better than completely
+				// losing your scroll offset. (T214880)
+				var docEl = document.documentElement,
+					scrollTop = docEl.scrollTop;
+				function blockScroll() {
+					docEl.scrollTop = scrollTop;
+				}
+				window.addEventListener( 'scroll', blockScroll );
+				setTimeout( function () {
+					window.removeEventListener( 'scroll', blockScroll );
+				}, 1000 );
+			} );
+		}
+
 		if ( !showAnonWarning ) {
 			this._loadContent();
 		}
@@ -308,12 +330,6 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 	 */
 	_resizeEditor: function () {
 		var scrollTop, container, $scrollContainer;
-
-		// exiting early for firefox due to a bug that causes the page to scroll to top
-		// whenever a caret is inserted T214880
-		if ( this.isFirefox ) {
-			return;
-		}
 
 		if ( !this.$scrollContainer ) {
 			container = OO.ui.Element.static
