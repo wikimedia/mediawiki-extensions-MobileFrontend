@@ -119,7 +119,7 @@ QUnit.module( 'MobileFrontend CtaDrawer.js', {
 				html = new RegExp( require( './CtaDrawer.test.html' ).defaultURLs
 					.replace( /\n/g, ' ' ).replace( /\s+/g, '\\s*' ) );
 
-			sinon.assert.match( subject.$el.get( 0 ).outerHTML.replace( /\n/g, ' ' ), html );
+			sinon.assert.match( subject.$el.find( '.drawer' ).get( 0 ).outerHTML.replace( /\n/g, ' ' ), html );
 			assert.ok( true );
 		} );
 
@@ -140,7 +140,7 @@ QUnit.module( 'MobileFrontend CtaDrawer.js', {
 				html = new RegExp( require( './CtaDrawer.test.html' )
 					.overrideURLs.replace( /\n/g, ' ' ).replace( /\s+/g, '\\s*' ) );
 
-			sinon.assert.match( subject.$el.get( 0 ).outerHTML.replace( /\n/g, ' ' ), html );
+			sinon.assert.match( subject.$el.find( '.drawer' ).get( 0 ).outerHTML.replace( /\n/g, ' ' ), html );
 			assert.ok( true );
 		} );
 	} );
