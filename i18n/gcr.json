@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"LeGuyanaisPure"
+			"LeGuyanaisPure",
+			"Léon973"
 		]
 	},
+	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} fèt pa moun kou ou.</strong><br />Konnègté oukò pou kontribiyé.",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|Roujwenn}} i gangnen {{PLURAL:$2|$2 minout}}",
 	"mobile-frontend-joined-hours": "{{GENDER:$1|Roujwenn}} i gangnen {{PLURAL:$2|$2 lò}}",
 	"mobile-frontend-joined-days": "{{GENDER:$1|Roujwenn}} i gangnen {{PLURAL:$2|$2 jou}}",

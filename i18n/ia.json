@@ -13,7 +13,7 @@
 	"mobile-frontend-contributions-404-title": "Nomine de usator non valide",
 	"mobile-frontend-copyright": "Le contento es disponibile sub $1 salvo indication contrari.",
 	"mobile-frontend-desc": "Interfacie pro apparatos mobile",
-	"mobile-frontend-diffview-404-desc": "Le numero de version que tu ha requestate non existe.",
+	"mobile-frontend-diffview-404-desc": "Le numero de version que tu ha requestate non existe.<br/>In general, isto eveni quando on seque un ligamine diff obsolete verso un pagina que ha essite delite o un ligamine diff que contine characteres non valide.",
 	"mobile-frontend-diffview-404-title": "Mal ID de version",
 	"mobile-frontend-diffview-anonymous": "Usator anonyme",
 	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|byte|bytes}} addite",
