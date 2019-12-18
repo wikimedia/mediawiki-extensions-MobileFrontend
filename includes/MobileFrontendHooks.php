@@ -233,6 +233,13 @@ class MobileFrontendHooks {
 		$context = $services->getService( 'MobileFrontend.Context' );
 		$title = $context->getTitle();
 		$config = $services->getService( 'MobileFrontend.Config' );
+		$displayMobileView = $context->shouldDisplayMobileView();
+
+		// T204691
+		$theme = $config->get( 'MFManifestThemeColor' );
+		if ( $theme && $displayMobileView ) {
+			$out->addMeta( 'theme-color', $theme );
+		}
 
 		if ( !$title ) {
 			return true;
@@ -242,7 +249,6 @@ class MobileFrontendHooks {
 		$namespaceAllowed = !$title->inNamespaces(
 			$config->get( 'MFMobileFormatterNamespaceBlacklist' )
 		);
-		$displayMobileView = $context->shouldDisplayMobileView();
 
 		$alwaysUseProvider = $config->get( 'MFAlwaysUseContentProvider' );
 		if ( $namespaceAllowed && ( $displayMobileView || $alwaysUseProvider ) ) {
