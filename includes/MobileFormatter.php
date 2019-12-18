@@ -399,7 +399,7 @@ class MobileFormatter extends HtmlFormatter {
 
 		// FIXME: The class `/mf\-section\-[0-9]+/` is kept for caching reasons
 		// but given class is unique usage is discouraged. [T126825]
-		$sectionBody = $doc->createElement( 'div' );
+		$sectionBody = $doc->createElement( 'section' );
 		$sectionBody->setAttribute( 'class', $sectionClass );
 		$sectionBody->setAttribute( 'id', 'mf-section-' . $sectionNumber );
 		return $sectionBody;

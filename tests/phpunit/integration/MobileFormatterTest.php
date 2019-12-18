@@ -61,8 +61,8 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			$className .= ' ' . MobileFormatter::STYLE_COLLAPSIBLE_SECTION_CLASS;
 		}
 
-		return "<div class=\"$className\" id=\"mf-section-$sectionNumber\""
-			. "$attrs>$contentHtml</div>";
+		return "<section class=\"$className\" id=\"mf-section-$sectionNumber\""
+			. "$attrs>$contentHtml</section>";
 	}
 
 	/**
