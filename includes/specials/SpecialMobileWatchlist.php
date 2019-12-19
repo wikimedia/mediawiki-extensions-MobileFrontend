@@ -59,24 +59,34 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		$output->setPageTitle( $this->msg( 'watchlist' ) );
 
 		if ( $this->view === self::VIEW_FEED ) {
-			$output->addHTML( self::getWatchlistHeader( $user, $this->view, $this->filter ) );
-			$output->addHTML(
-				Html::openElement( 'div', [ 'class' => 'content-unstyled' ] )
-			);
-			$this->showRecentChangesHeader();
 			$res = $this->doFeedQuery();
-
-			if ( $res->numRows() ) {
-				$this->showFeedResults( $res );
-			} else {
-				$this->showEmptyList( true );
-			}
-			$output->addHTML(
-				Html::closeElement( 'div' )
-			);
+			$this->addWatchlistHTML( $res, $user );
 		} else {
 			$output->redirect( SpecialPage::getTitleFor( 'EditWatchlist' )->getLocalURL() );
 		}
+	}
+
+	/**
+	 * Builds the watchlist HTML inside the associated OutputPage
+	 * @param IResultWrapper $res
+	 * @param User $user
+	 */
+	public function addWatchlistHTML( IResultWrapper $res, User $user ) {
+		$output = $this->getOutput();
+		$output->addHTML( self::getWatchlistHeader( $user, $this->view, $this->filter ) );
+		$output->addHTML(
+			Html::openElement( 'div', [ 'class' => 'content-unstyled' ] )
+		);
+		$this->showRecentChangesHeader();
+
+		if ( $res->numRows() ) {
+			$this->showFeedResults( $res );
+		} else {
+			$this->showEmptyList( true );
+		}
+		$output->addHTML(
+			Html::closeElement( 'div' )
+		);
 	}
 
 	/**
@@ -287,7 +297,8 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 				$this->showFeedResultRow( $row );
 			}
 		}
-
+		// Close .side-list element opened in renderListHeaderWhereNeeded
+		// inside showFeedResultRow function
 		$output->addHTML( '</ul>' );
 	}
 

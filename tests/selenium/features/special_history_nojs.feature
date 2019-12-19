@@ -8,6 +8,6 @@ Feature: Basic history page for legacy devices
       And I am on the "Selenium diff test" page
     When I click on the history link in the last modified bar
 
-  @smoke @integration
+  @smoke @integration @todo-move-to-phpunit-test
   Scenario: Check more button exists
     Then I should see a more button
