@@ -45,6 +45,23 @@
 	"ExtensionMessagesFiles": {
 		"MobileFrontendAlias": "MobileFrontend.alias.php"
 	},
+	"RawHtmlMessages": [
+		"mobile-frontend-categories-add-heading",
+		"mobile-frontend-categories-add-wait",
+		"mobile-frontend-categories-heading",
+		"mobile-frontend-changeslist-nocomment",
+		"mobile-frontend-contributions-404-desc",
+		"mobile-frontend-copyright",
+		"mobile-frontend-editor-anonwarning",
+		"mobile-frontend-editor-editing-page",
+		"mobile-frontend-editor-licensing-with-terms",
+		"mobile-frontend-editor-previewing-page",
+		"mobile-frontend-editor-summary",
+		"mobile-frontend-editor-summary-request",
+		"mobile-frontend-editor-wait",
+		"mobile-frontend-talk-add-overlay-submit",
+		"mobile-frontend-talk-topic-wait"
+	],
 	"AutoloadNamespaces": {
 		"MobileFrontend\\ContentProviders\\": "includes/content-providers/",
 		"MobileFrontend\\Devices\\": "includes/devices/",
