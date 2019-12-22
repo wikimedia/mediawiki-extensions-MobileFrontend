@@ -63,7 +63,7 @@
 	"mobile-frontend-contributions-404-title": "Wybrano złą nazwę użytkownika",
 	"mobile-frontend-copyright": "Treść udostępniana na licencji $1, jeśli nie podano inaczej.",
 	"mobile-frontend-desc": "Mobilny interfejs użytkownika",
-	"mobile-frontend-diffview-404-desc": "ID wersji które zostało podane nie istnieje.",
+	"mobile-frontend-diffview-404-desc": "ID wersji które zostało podane nie istnieje.<br/>Przyczyną zazwyczaj jest użycie starego linku do różnicy w stronie, która została usunięta lub linku do różnicy zawierającego nieprawidłowe znaki.",
 	"mobile-frontend-diffview-404-title": "Zła wersja",
 	"mobile-frontend-diffview-anonymous": "Anonimowy użytkownik",
 	"mobile-frontend-diffview-bytesadded": "{{PLURAL:$1|Dodany $1 bajt|Dodane $1 bajty|Dodane $1 bajtów}}",

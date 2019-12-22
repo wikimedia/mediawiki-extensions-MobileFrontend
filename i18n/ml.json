@@ -64,7 +64,7 @@
 	"mobile-frontend-editor-editing-page": "<span>$1 <strong>തിരുത്തുന്നു</strong></span>",
 	"mobile-frontend-editor-error": "പിഴവ്, തിരുത്ത് സേവ് ചെയ്യപ്പെട്ടില്ല.",
 	"mobile-frontend-editor-error-conflict": "പിഴവ്, മറ്റൊരു ഉപയോക്താവ് ഈ താൾ തിരുത്തിയിരിക്കുന്നു.",
-	"mobile-frontend-editor-error-loading": "പിഴവ്, ഉപഭാഗം എടുക്കാനാവുന്നില്ല.",
+	"mobile-frontend-editor-error-loading": "പിഴവ്, തിരുത്തൽ ഉപകരണം എടുക്കാനാവുന്നില്ല.",
 	"mobile-frontend-editor-error-preview": "പിഴവ്, പ്രിവ്യൂ എടുക്കുന്നതിനിടെ എന്തോ അപ്രതീക്ഷിതമായത് സംഭവിച്ചു. ദയവായി അടച്ച് വീണ്ടും ശ്രമിക്കുക.",
 	"mobile-frontend-editor-keep-editing": "തിരുത്തൽ തുടരുക",
 	"mobile-frontend-editor-licensing": "മാറ്റങ്ങൾ സേവ് ചെയ്യുമ്പോൾ, താങ്കളുടെ സംഭാവനകൾ $1 {{PLURAL:$2|അനുമതി|അനുമതികൾ}} പ്രകാരം പ്രസിദ്ധപ്പെടുത്താമെന്ന് താങ്കൾ സമ്മതിക്കുന്നുണ്ട്.",
@@ -223,6 +223,6 @@
 	"mobile-frontend-mobile-option-amc-learn-more": "കൂടുതൽ അറിയുക",
 	"mobile-frontend-mobile-option-amc-send-feedback": "അഭിപ്രായം അറിയിക്കുക",
 	"mobile-frontend-amc-outreach-no-thanks": "വേണ്ട, നന്ദി",
-	"mobile-frontend-console-recruit": "\\o/ ടും ടും ടും! ഇതൊരു ഓപ്പൺ സോഴ്സ് സോഫ്റ്റ്‌വേറാണ്, ഇത് നിർമ്മിക്കാൻ സന്നദ്ധസേവകരെ ആവശ്യമുണ്ട്, ഈ ജാവാസ്ക്രിപ്റ്റ് കൺസോളിൽ താങ്കൾ കാണാനിട വന്നേക്കാവുന്ന ബഗുകൾ ശരിയാക്കി ഇത് മെച്ചപ്പെടുത്തുക!\n\nബാക്ക്‌ലോഗ് ഇവിടെ കാണുക: https://phabricator.wikimedia.org/project/profile/67/",
+	"mobile-frontend-console-recruit": "നമ്മളെങ്ങനെയാണ് മൊഹൈൽ സൈറ്റ് നിർമ്മിക്കുന്നതെന്നറിയാൻ \n: https://www.mediawiki.org/wiki/Extension:MobileFrontend",
 	"prefs-mobile": "മൊബൈൽ ഐച്ഛികങ്ങൾ"
 }
