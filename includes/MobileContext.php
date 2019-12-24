@@ -69,7 +69,7 @@ class MobileContext extends ContextSource {
 	protected $mobileAction;
 
 	/**
-	 * Save whether mobile view is explicity requested
+	 * Save whether mobile view is explicitly requested
 	 * @var boolean $forceMobileView
 	 */
 	private $forceMobileView = false;
@@ -286,7 +286,7 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
-	 * Wether user is Beta group member
+	 * Whether user is Beta group member
 	 * @return bool
 	 */
 	public function isBetaGroupMember() {
@@ -294,7 +294,7 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
-	 * Wether the current user is has advanced mobile contributions enabled.
+	 * Whether the current user is has advanced mobile contributions enabled.
 	 * @return bool
 	 */
 	private static function isAmcUser() {
