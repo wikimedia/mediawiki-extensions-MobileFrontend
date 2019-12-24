@@ -12,8 +12,10 @@
 	"mobile-frontend-joined-months": "{{GENDER:$1|Roujwenn}} i gangnen {{PLURAL:$2|$2 mwè}}",
 	"mobile-frontend-joined-years": "{{GENDER:$1|Roujwenn}} i gangnen {{PLURAL:$2|$2 lannen}}",
 	"mobile-frontend-languages-header": "Lanng",
+	"mobile-frontend-privacy-link-text": "Konfidansyalité",
 	"mobile-frontend-return-to-page": "Viré bò paj-a",
 	"mobile-frontend-view": "Vèrsyon mobil",
+	"mobile-frontend-view-desktop": "Dézagtivé vèrsyon mobil-a",
 	"tag-mobile_edit": "Modifikasyon pa mobil",
 	"tag-mobile_web_edit": "Modifikasyon pa web mobil"
 }
