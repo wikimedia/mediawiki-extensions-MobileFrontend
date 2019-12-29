@@ -239,6 +239,11 @@
 	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions": "記事の説明",
 	"mobile-frontend-send-feedback": "フィードバックを送信",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "フォントサイズ",
+	"mobile-frontend-mobile-option-amc-experiment-description": "最新版は、会話・ノートページ、履歴、利用者ツール、その他の編集ツールへの簡便なアクセスを提供します。",
 	"mobile-frontend-mobile-option-amc-learn-more": "詳細",
-	"mobile-frontend-mobile-option-amc-send-feedback": "フィードバックを送信"
+	"mobile-frontend-mobile-option-amc-send-feedback": "フィードバックを送信",
+	"mobile-frontend-amc-outreach-intro": "最新版の導入",
+	"mobile-frontend-amc-outreach-description": "最新版では、会話・ノートページ、履歴ページ、最新の更新、その他編集ツールが携帯端末から利用しやすくなります。",
+	"mobile-frontend-amc-outreach-enable": "最新版を有効にする",
+	"mobile-frontend-amc-outreach-no-thanks": "いいえ、結構です"
 }

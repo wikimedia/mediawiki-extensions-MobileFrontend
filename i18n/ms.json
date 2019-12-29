@@ -7,7 +7,8 @@
 			"Aviator",
 			"SNN95",
 			"Kurniasan",
-			"Jeluang Terluang"
+			"Jeluang Terluang",
+			"CyberTroopers"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Masukkan kod pengesahan",
@@ -24,7 +25,7 @@
 	"mobile-frontend-clear-search": "Padamkan",
 	"mobile-frontend-copyright": "Kandungan disediakan dengan $1 kecuali jika dinyatakan sebaliknya.",
 	"mobile-frontend-desc": "Mobile Frontend",
-	"mobile-frontend-diffview-404-desc": "ID untuk semakan yang anda pohon tidak wujud.",
+	"mobile-frontend-diffview-404-desc": "ID untuk semakan yang anda minta tidak wujud.<br/> Ini biasanya disebabkan oleh pautan diff yang sudah lapuk ke halaman yang telah dipadamkan atau pautan diff yang mengandungi aksara tidak sah.",
 	"mobile-frontend-diffview-404-title": "Semakan tak elok",
 	"mobile-frontend-diffview-anonymous": "Pengguna awanama",
 	"mobile-frontend-diffview-bytesadded": "$1 bait ditambah",

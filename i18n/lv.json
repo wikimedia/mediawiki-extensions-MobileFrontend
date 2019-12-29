@@ -71,6 +71,7 @@
 	"mobile-frontend-fontchanger-option-large": "Liels",
 	"mobile-frontend-fontchanger-option-xlarge": "Ļoti liels",
 	"mobile-frontend-featured-article": "Šodienas izceltais saturs",
+	"mobile-frontend-generic-404-desc": "Tevis meklētā lapa nav atrodama.",
 	"mobile-frontend-generic-404-title": "Kļūda - Lapa nav atrasta",
 	"mobile-frontend-history-404-title": "Nav šādas lapas",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|Pievienojies|Pievienojusies}} nupat",
@@ -169,5 +170,6 @@
 	"mobile-frontend-mobile-option-amc-learn-more": "Uzzināt vairāk",
 	"mobile-frontend-mobile-option-amc-send-feedback": "Sūtīt atsauksmes",
 	"mobile-frontend-amc-outreach-no-thanks": "Nē, paldies",
-	"mobile-frontend-beta-only": "Iespēja pieejama tikai bēta režīmā"
+	"mobile-frontend-beta-only": "Iespēja pieejama tikai bēta režīmā",
+	"prefs-mobile": "Mobilās versijas izvēles"
 }
