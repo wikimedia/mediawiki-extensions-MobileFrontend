@@ -99,7 +99,9 @@
 		"SpecialMobileLanguages": "includes/specials/SpecialMobileLanguages.php",
 		"SpecialMobileCite": "includes/specials/SpecialMobileCite.php",
 		"MobileSpecialPage": "includes/specials/MobileSpecialPage.php",
-		"MobileSpecialPageFeed": "includes/specials/MobileSpecialPageFeed.php",
+		"MobileSpecialPageFeed": "includes/specials/MobileSpecialPageFeed.php"
+	},
+	"TestAutoloadClasses": {
 		"MockApiMobileView": "tests/phpunit/integration/api/MockApiMobileView.php",
 		"MockWikiPage": "tests/phpunit/integration/api/MockWikiPage.php"
 	},
