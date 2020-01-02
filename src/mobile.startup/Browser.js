@@ -81,29 +81,6 @@ Browser.prototype = {
 		return window.innerWidth >= val;
 	} ),
 	/**
-	 * Checks browser support for CSS transforms, transitions
-	 * and CSS animation.
-	 * Currently assumes support for the latter 2 in the case of the
-	 * former.
-	 * See http://stackoverflow.com/a/12621264/365238
-	 * @memberof Browser
-	 * @instance
-	 * @return {boolean}
-	 */
-	supportsAnimations: memoize( function () {
-		var elemStyle = document.createElement( 'foo' ).style;
-		function supportsProperty( property ) {
-			// We only test "webkit-", because that's the only prefix needed for the relevant
-			// properties (in supportsAnimations) and supported browsers. If usage is expanded,
-			// other prefixes may need to be checked as well.
-			return property in elemStyle ||
-				( 'webkit' + property[ 0 ].toUpperCase() + property.slice( 1 ) ) in elemStyle;
-		}
-		return supportsProperty( 'animationName' ) &&
-			supportsProperty( 'transform' ) &&
-			supportsProperty( 'transition' );
-	} ),
-	/**
 	 * Whether touchstart and other touch events are supported by the current browser.
 	 * @memberof Browser
 	 * @instance

@@ -132,6 +132,15 @@
 	&.no-results .search-feedback {
 		border-top: 0;
 	}
+
+	&.visible {
+		.animation( fadeIn 0.5s );
+	}
+
+	// see T156509
+	&.overlay-ios {
+		.animation( none );
+	}
 }
 
 @-webkit-keyframes fadeIn {
@@ -171,18 +180,5 @@
 
 	to {
 		opacity: 0;
-	}
-}
-
-.animations {
-	.overlay.search-overlay {
-		&.visible {
-			.animation( fadeIn 0.5s );
-		}
-
-		// see T156509
-		&.overlay-ios {
-			.animation( none );
-		}
 	}
 }

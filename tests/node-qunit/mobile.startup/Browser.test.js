@@ -70,50 +70,6 @@ QUnit.test( 'isWideScreen()', function ( assert ) {
 	assert.strictEqual( browser.isWideScreen(), true );
 } );
 
-QUnit.test( 'supportsAnimations() - true', function ( assert ) {
-	var
-		browser = new Browser( 'Mozilla/5.0 (iPad; CPU OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko)', $html ),
-		stub = sandbox.stub( document, 'createElement' ).callsFake( function () {
-			return {
-				style: {
-					animationName: '',
-					transform: '',
-					transition: ''
-				}
-			};
-		} ),
-		result;
-
-	// Browser QUnit depends on a non-stubbed version of document.createElement
-	// when showing the test result in the browser so we need to save the returned
-	// value in an intermediate variable and manually restore the stub here before
-	// calling assert.strictEqual
-	result = browser.supportsAnimations();
-	stub.restore();
-
-	assert.strictEqual( result, true );
-} );
-
-QUnit.test( 'supportsAnimations() - false', function ( assert ) {
-	var
-		browser = new Browser( 'Mozilla/5.0 (iPad; CPU OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko)', $html ),
-		stub = sandbox.stub( document, 'createElement' ).callsFake( function () {
-			return {
-				style: {}
-			};
-		} ),
-		result;
-
-	// Browser QUnit depends on a non-stubbed version of document.createElement
-	// when showing the test result in the browser so we need to save the returned
-	// value in an intermediate variable and manually restore the stub here before
-	// calling assert.strictEqual
-	result = browser.supportsAnimations();
-	stub.restore();
-
-	assert.strictEqual( result, false );
-} );
-
 QUnit.test( 'supportsTouchEvents()', function ( assert ) {
 	var browser = new Browser( 'Mozilla/5.0 (iPad; CPU OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko)', $html );
 	window.ontouchstart = window.ontouchstart || undefined;

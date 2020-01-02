@@ -68,9 +68,7 @@ mfExtend( Skin, View, {
 	 */
 	postRender: function () {
 		var $el = this.$el;
-		if ( browser.supportsAnimations() ) {
-			$el.addClass( 'animations' );
-		}
+
 		if ( browser.supportsTouchEvents() ) {
 			$el.addClass( 'touch-events' );
 		}
