@@ -82,7 +82,7 @@
 	"mobile-frontend-editor-switch-visual-editor": "Prebaci me na vizualno uređivanje",
 	"mobile-frontend-editor-uploadenable": "Da biste omogućili uređivanje, najprije postavite sliku.",
 	"mobile-frontend-editor-viewing-source-page": "<strong>Pregled izvornog koda stranice</strong><span> $1</span>",
-	"mobile-frontend-editor-wait": "Čuvanje izmjene; molimo, sačekajte.",
+	"mobile-frontend-editor-wait": "Čuvam izmjenu, sačekajte.",
 	"mobile-frontend-expand-sections-description": "Uvijek raširi odlomke svih stranica.",
 	"mobile-frontend-expand-sections-status": "Raširi sve odlomke",
 	"mobile-frontend-fontchanger-link": "Veličina fonta",

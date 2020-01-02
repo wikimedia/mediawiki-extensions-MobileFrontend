@@ -231,6 +231,7 @@
 	"nearby": "トピック上にある、あなた付近のページ",
 	"tag-mobile_edit": "モバイル編集",
 	"tag-mobile_edit-description": "モバイルから行われた編集（ウェブまたはアプリ）",
+	"tag-advanced_mobile_edit": "高度なモバイル編集",
 	"tag-mobile_web_edit": "モバイルウェブ編集",
 	"tag-mobile_web_edit-description": "携帯機器版ウェブサイトから行われた編集",
 	"mobile-frontend-loading-message": "読み込み中…",

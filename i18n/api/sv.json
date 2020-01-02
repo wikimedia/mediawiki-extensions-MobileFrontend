@@ -37,5 +37,6 @@
 	"apierror-mobilefrontend-badidtitle": "Dålig kombination av sidversions-ID/titel.",
 	"apierror-mobilefrontend-toomanysizeparams": "<var>thumbsize</var> är ömsesidigt uteslutande med <var>thumbwidth</var> och <var>thumbheight</var>.",
 	"apiwarn-mobilefrontend-ignoringnoheadings": "<var>noheadings</var> är meningslös på huvudsidan, ignoreras.",
+	"apiwarn-mobilefrontend-mobileviewdeprecated": "Detta API är föråldrat. Se T186627 för mer information.",
 	"apiwarn-mobilefrontend-sectionsnotfound": "{{PLURAL:$2|Avsnittet|Avsnitten}} $1 hittades inte."
 }
