@@ -897,6 +897,9 @@
 			"base": true,
 			"beta": true
 		},
+		"MFNamespacesWithLeadParagraphs": [
+			0
+		],
 		"MFLazyLoadImages": {
 			"base": true,
 			"beta": true
