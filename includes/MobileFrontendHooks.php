@@ -330,6 +330,46 @@ class MobileFrontendHooks {
 	}
 
 	/**
+	 * ResourceLoaderSiteStylesModulePages hook handler
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ResourceLoaderSiteStylesModulePages
+	 *
+	 * @param string $skin
+	 * @param array &$pages to sort modules from.
+	 */
+	public static function onResourceLoaderSiteStylesModulePages( $skin, &$pages ) {
+		$ctx = MobileContext::singleton();
+		if ( $ctx->shouldDisplayMobileView() ) {
+			$services = MediaWikiServices::getInstance();
+			$config = $services->getService( 'MobileFrontend.Config' );
+			unset( $pages[ 'MediaWiki:Common.css' ] );
+			unset( $pages[ 'MediaWiki:Print.css' ] );
+			if ( $config->get( 'MFSiteStylesRenderBlocking' ) ) {
+				$pages[' MediaWiki:Mobile.css' ] = [ 'type' => 'style' ];
+			}
+		}
+	}
+
+	/**
+	 * ResourceLoaderSiteModulePages hook handler
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ResourceLoaderSiteModulePages
+	 *
+	 * @param string $skin
+	 * @param array &$pages to sort modules from.
+	 */
+	public static function onResourceLoaderSiteModulePages( $skin, &$pages ) {
+		$ctx = MobileContext::singleton();
+		$services = MediaWikiServices::getInstance();
+		$config = $services->getService( 'MobileFrontend.Config' );
+		if ( $ctx->shouldDisplayMobileView() ) {
+			unset( $pages[ 'MediaWiki:Common.js' ] );
+			$pages[ 'MediaWiki:Mobile.js' ] = [ 'type' => 'script' ];
+			if ( !$config->get( 'MFSiteStylesRenderBlocking' ) ) {
+				$pages[' MediaWiki:Mobile.css' ] = [ 'type' => 'style' ];
+			}
+		}
+	}
+
+	/**
 	 * GetCacheVaryCookies hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/GetCacheVaryCookies
 	 *
@@ -743,13 +783,10 @@ class MobileFrontendHooks {
 			// In mobile mode, MediaWiki:Common.css/MediaWiki:Common.js is not loaded.
 			// We load MediaWiki:Mobile.css/js instead
 			// We load mobile.init so that lazy loading images works on all skins
-			$out->addModules( [ 'mobile.site', 'mobile.init' ] );
+			$out->addModules( [ 'mobile.init' ] );
 			$out->addModuleStyles( [ 'mobile.init.styles' ] );
 			if ( $title->isMainPage() && $config->get( 'MFMobileMainPageCss' ) ) {
 				$out->addModuleStyles( [ 'mobile.mainpage.css' ] );
-			}
-			if ( $config->get( 'MFSiteStylesRenderBlocking' ) ) {
-				$out->addModuleStyles( [ 'mobile.site.styles' ] );
 			}
 
 			// Allow modifications in mobile only mode
