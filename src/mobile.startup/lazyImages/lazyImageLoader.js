@@ -53,7 +53,7 @@ function loadImage( placeholder ) {
 		deferred.resolve( 'load' );
 	}, { once: true } );
 	image.addEventListener( 'error', function () {
-		// Never reject. Quietly resolve so that jQuery.when() awaits for all Deferreds to complete.
+		// Never reject. Quietly resolve so that Promise.all() awaits for all Deferreds to complete.
 		// Reevaluate using Deferred.reject in T136693.
 		deferred.resolve( 'error' );
 	}, { once: true } );
