@@ -698,3 +698,16 @@ usually are diagrams that compress well and benefit from the higher resolution.
     "image/svg+xml",
   ]
 ```
+
+#### $wgMFNamespacesWithLeadParagraphs
+
+A list of namespace codes that have lead paragraphs. Lead paragraphs will be
+shown before infoboxes if `$wgMFShowFirstParagraphBeforeInfobox` is enabled.
+
+* Type: `Array`
+* Default:
+```php
+  [
+    0
+  ]
+```

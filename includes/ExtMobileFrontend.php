@@ -86,7 +86,8 @@ class ExtMobileFrontend {
 		if ( $context->getContentTransformations() ) {
 			$isSpecialPage = $title->isSpecialPage();
 			$removeImages = $featureManager->isFeatureAvailableForCurrentUser( 'MFLazyLoadImages' );
-			$showFirstParagraphBeforeInfobox = $ns === NS_MAIN &&
+			$leadParagraphEnabled = in_array( $ns, $config->get( 'MFNamespacesWithLeadParagraphs' ) );
+			$showFirstParagraphBeforeInfobox = $leadParagraphEnabled &&
 				$featureManager->isFeatureAvailableForCurrentUser( 'MFShowFirstParagraphBeforeInfobox' );
 
 			// Remove images if they're disabled from special pages, but don't transform otherwise
