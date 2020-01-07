@@ -4,18 +4,7 @@ module.exports = function ( grunt ) {
 	grunt.loadNpmTasks( 'grunt-banana-checker' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
 	grunt.loadNpmTasks( 'grunt-notify' );
-	grunt.loadNpmTasks( 'grunt-stylelint' );
 	grunt.initConfig( {
-		stylelint: {
-			options: {
-				syntax: 'less'
-			},
-			all: [
-				'.storybook/styles.less',
-				'mobile.less/**/*.less',
-				'resources/**/*.less'
-			]
-		},
 		watch: {
 			lint: {
 				files: [ 'resources/**/*.js', 'tests/node-qunit/**/*.js' ],
@@ -38,6 +27,6 @@ module.exports = function ( grunt ) {
 		}, conf.MessagesDirs )
 	} );
 	grunt.registerTask( 'i18n', [ 'banana' ] );
-	grunt.registerTask( 'test', [ 'i18n', 'stylelint' ] );
+	grunt.registerTask( 'test', [ 'i18n' ] );
 	grunt.registerTask( 'default', [ 'test' ] );
 };
