@@ -69,7 +69,7 @@ mfExtend( Drawer, View, {
 			//
 			// FIXME: setTimeout should be reconsidered in T209129
 			setTimeout( function () {
-				this.$el.find( '.drawer' ).addClass( 'visible animated' );
+				this.$el.find( '.drawer' ).addClass( 'visible' );
 				if ( this.options.onShow ) {
 					this.options.onShow( d );
 				}
