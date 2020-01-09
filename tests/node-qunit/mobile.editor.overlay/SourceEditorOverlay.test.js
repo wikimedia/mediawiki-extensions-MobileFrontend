@@ -1,7 +1,7 @@
 var sandbox, messageStub, getContentStub, previewResolve,
 	testUrl = '/w/index.php?title=User:Test',
 	BlockMessageDetails,
-	EditorGateway, SourceEditorOverlay, Drawer,
+	EditorGateway, SourceEditorOverlay,
 	jQuery = require( '../utils/jQuery' ),
 	sinon = require( 'sinon' ),
 	util = require( '../../../src/mobile.startup/util' ),
@@ -24,13 +24,11 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/SourceEditorOverlay', {
 
 		EditorGateway = require( '../../../src/mobile.editor.overlay/EditorGateway' );
 		SourceEditorOverlay = require( '../../../src/mobile.editor.overlay/SourceEditorOverlay' );
-		Drawer = require( '../../../src/mobile.startup/Drawer' );
 		BlockMessageDetails = require( '../../../src/mobile.editor.overlay/BlockMessageDetails' );
 
 		// prevent event logging requests
 		sandbox.stub( SourceEditorOverlay.prototype, 'log' ).returns( util.Deferred().resolve() );
 		messageStub = sandbox.stub( BlockMessageDetails.prototype, 'initialize' );
-		sandbox.stub( Drawer.prototype, 'toggle' );
 		getContentStub = sandbox.stub( EditorGateway.prototype, 'getContent' );
 		// avoid waiting to load 'moment',
 		// using `expiry: 'infinity'` below ensures we don't need it

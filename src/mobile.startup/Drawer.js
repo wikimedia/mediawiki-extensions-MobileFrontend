@@ -2,18 +2,14 @@ var
 	mfExtend = require( './mfExtend' ),
 	View = require( './View' ),
 	util = require( './util' ),
-	Icon = require( './Icon' ),
-	collapseIcon = new Icon( {
-		name: 'expand',
-		additionalClassNames: 'cancel'
-	} );
+	Icon = require( './Icon' );
 
 /**
  * A {@link View} that pops up from the bottom of the screen.
  * @class Drawer
  * @extends View
  * @final
- * @param {Object} [props]
+ * @param {Object} props
  * @param {string} [props.className] Additional CSS classes to add
  * @param {JQuery.Element[]} [props.children] An array of elements to append to
  * @param {Function} [props.onShow] Callback called before showing the drawer.
@@ -22,6 +18,10 @@ var
  */
 function Drawer( props ) {
 	this.drawerClassName = props.className || '';
+	this.collapseIcon = new Icon( {
+		name: 'expand',
+		additionalClassNames: 'cancel'
+	} );
 	View.call( this,
 		util.extend(
 			{
@@ -44,7 +44,7 @@ function Drawer( props ) {
 				click: function ( ev ) {
 					ev.stopPropagation();
 				}
-			}, ( props || {} ).events ) }
+			}, props.events ) }
 		)
 	);
 }
@@ -94,6 +94,7 @@ mfExtend( Drawer, View, {
 		this.$el.find( '.drawer' ).removeClass( 'visible' );
 		// see comment in show()
 		setTimeout( function () {
+			this.$el.find( '.drawer' ).removeClass( 'visible' );
 			this.options.onBeforeHide( this );
 		}.bind( this ), this.minHideDelay );
 	},
@@ -105,20 +106,7 @@ mfExtend( Drawer, View, {
 	 * @return {boolean} View is visible
 	 */
 	isVisible: function () {
-		return this.$el.hasClass( 'visible' );
-	},
-
-	/**
-	 * Shows or hides panel
-	 * @memberof View
-	 * @instance
-	 */
-	toggle: function () {
-		if ( this.isVisible() ) {
-			this.hide();
-		} else {
-			this.show();
-		}
+		return this.$el.find( '.drawer' ).hasClass( 'visible' );
 	},
 
 	/**
@@ -143,7 +131,7 @@ mfExtend( Drawer, View, {
 
 		if ( props.showCollapseIcon ) {
 			// append the collapse icon at the top of the drawer
-			$drawer.prepend( collapseIcon.$el );
+			$drawer.prepend( this.collapseIcon.$el );
 		}
 
 		if ( props.children ) {

@@ -48,7 +48,27 @@ QUnit.test( 'visible on show()', function ( assert ) {
 		},
 		subject = new Drawer( {} );
 
-	subject.show().then( onShow );
+	subject.show().then( onShow ).then( () => {
+		// show again and it's still visible./
+		subject.show().then( onShow );
+	} );
+} );
+
+QUnit.test( 'accepts onShow and events', function ( assert ) {
+	var
+		done = assert.async(),
+		onShow = () => {
+			assert.ok( true );
+			done();
+		},
+		subject = new Drawer( {
+			events: {
+				'click .button': () => {}
+			},
+			onShow
+		} );
+
+	subject.show();
 } );
 
 QUnit.test( 'hidden on hide()', function ( assert ) {
@@ -62,6 +82,20 @@ QUnit.test( 'hidden on hide()', function ( assert ) {
 		subject = new Drawer( { onBeforeHide } );
 
 	subject.hide();
+} );
+
+QUnit.test( 'hidden on mask click', function ( assert ) {
+	var
+		done = assert.async(),
+		onBeforeHide = () => {
+			assertHidden( subject );
+			assert.ok( true );
+			done();
+		},
+		subject = new Drawer( { onBeforeHide } );
+
+	subject.show();
+	subject.$el.find( '.drawer-container__mask' )[0].dispatchEvent( new window.Event( 'click', { bubbles: true } ) );
 } );
 
 QUnit.test( 'HTML is valid', function ( assert ) {
