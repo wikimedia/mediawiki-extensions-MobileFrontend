@@ -98,10 +98,6 @@
 			"maxSize": "2.5KB"
 		},
 		{
-			"path": "resources/dist/mobile.special.mobilediff.scripts.js",
-			"maxSize": "0.8KB"
-		},
-		{
 			"path": "resources/dist/mobile.special.mobileoptions.scripts.js",
 			"maxSize": "1.02KB"
 		},

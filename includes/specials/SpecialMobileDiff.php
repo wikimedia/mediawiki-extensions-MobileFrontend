@@ -120,7 +120,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 			// icon to the left of the username
 			'mobile.special.pagefeed.styles'
 		] );
-		$output->addModules( 'mobile.special.mobilediff.scripts' );
+		$output->addModules( 'mobile.special.mobilediff.images' );
 
 		// Allow other extensions to load more stuff here
 		Hooks::run( 'BeforeSpecialMobileDiffDisplay', [ &$output, $this->mobileContext, $revisions ] );
@@ -160,6 +160,9 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		if ( function_exists( 'wikidiff2_do_diff' ) ) {
 			$engine->setSlotDiffOptions( [ 'diff-type' => 'inline' ] );
 			$engine->showDiffPage( true );
+			$this->getOutput()->addHTML(
+				$engine->markPatrolledLink()
+			);
 		} elseif ( get_class( $engine ) === DifferenceEngine::class ) {
 			wfDeprecated( 'Please install wikidiff2 to retain inline diff functionality.', '1.35.0' );
 			$engine = new InlineDifferenceEngine( $context, $this->getPrevId(), $this->revId, 0,

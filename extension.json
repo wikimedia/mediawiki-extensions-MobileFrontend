@@ -686,23 +686,6 @@
 				"bytesChanged": "resources/mobile.special.mobilediff.images/bytesChanged.svg"
 			}
 		},
-		"mobile.special.mobilediff.scripts": {
-			"targets": "mobile",
-			"dependencies": [
-				"mobile.special.mobilediff.images",
-				"mobile.startup",
-				"mediawiki.util",
-				"mediawiki.Title"
-			],
-			"messages": [
-				"markedaspatrollednotify",
-				"markedaspatrollederrornotify",
-				"markedaspatrollederror-noautopatrol"
-			],
-			"scripts": [
-				"resources/dist/mobile.special.mobilediff.scripts.js"
-			]
-		},
 		"mobile.special.mobilediff.styles": {
 			"targets": "mobile",
 			"styles": [

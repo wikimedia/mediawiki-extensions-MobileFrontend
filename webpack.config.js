@@ -19,7 +19,6 @@ const
 		mobileInit: 'mobile.init',
 		talk: 'mobile.talk.overlays',
 		mobileOptions: 'mobile.special.mobileoptions.scripts',
-		mobileDiff: 'mobile.special.mobilediff.scripts',
 		nearby: 'mobile.special.nearby.scripts',
 		userLogin: 'mobile.special.userlogin.scripts',
 		watchlist: 'mobile.special.watchlist.scripts'
@@ -78,7 +77,6 @@ module.exports = ( env, argv ) => ( {
 		// all mobile skins,
 		[ENTRIES.mobileInit]: './src/mobile.init/mobile.init.js',
 		// T212823 Make a chunk for each mobile special page
-		[ENTRIES.mobileDiff]: './src/mobile.special.mobilediff.scripts.js',
 		[ENTRIES.mobileOptions]: './src/mobile.special.mobileoptions.scripts.js',
 		[ENTRIES.nearby]: './src/mobile.special.nearby.scripts/mobile.special.nearby.scripts.js',
 		[ENTRIES.userLogin]: './src/mobile.special.userlogin.scripts.js',
