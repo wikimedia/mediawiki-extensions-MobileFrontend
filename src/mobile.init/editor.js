@@ -358,6 +358,7 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 			}, function ( error ) {
 				// Could not load the editor.
 				overlayManager.router.back();
+				document.body.appendChild( error.$el[ 0 ] );
 				if ( error.show ) {
 					// Probably a blockMessageDrawer returned because the user is blocked.
 					error.show();

@@ -93,9 +93,12 @@ references = {
 	 * @param {PageHTMLParser} pageHTMLParser
 	 * @param {Gateway} gateway
 	 * @param {Object} props for referenceDrawer
+	 * @param {Function} onShowNestedReference function call when a nested reference is triggered.
 	 * @return {jQuery.Deferred}
 	 */
-	showReference: function ( id, page, refNumber, pageHTMLParser, gateway, props ) {
+	showReference: function ( id, page, refNumber, pageHTMLParser, gateway, props,
+		onShowNestedReference
+	) {
 		return gateway.getReference( id, page, pageHTMLParser ).then( function ( reference ) {
 			const drawer = referenceDrawer( util.extend( {
 				title: refNumber,
@@ -107,11 +110,18 @@ references = {
 						text,
 						pageHTMLParser,
 						gateway
-					);
-					drawer.$el.remove();
+					).then( ( nestedDrawer ) => {
+						if ( props.onShowNestedReference ) {
+							onShowNestedReference( drawer, nestedDrawer );
+						} else {
+							mw.log.warn( 'Please provide onShowNestedReferences parameter.' );
+							document.body.appendChild( nestedDrawer.$el[ 0 ] );
+							drawer.hide();
+							nestedDrawer.show();
+						}
+					} );
 				}
 			}, props ) );
-			drawer.show();
 			return drawer;
 		}, function ( err ) {
 			// If non-existent reference nothing to do.
@@ -119,12 +129,11 @@ references = {
 				return;
 			}
 
-			const drawer = referenceDrawer( {
+			return referenceDrawer( {
 				error: true,
 				title: refNumber,
 				text: mw.msg( 'mobile-frontend-references-citation-error' )
 			} );
-			drawer.show();
 		} );
 	}
 };

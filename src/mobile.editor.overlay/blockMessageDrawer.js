@@ -22,6 +22,9 @@ var Drawer = require( '../mobile.startup/Drawer' ),
 module.exports = function blockMessageDrawer( props ) {
 	return new Drawer( {
 		className: 'drawer block-message',
+		onBeforeHide: function ( drawer ) {
+			drawer.$el.remove();
+		},
 		children: [
 			( new BlockMessageDetails( props ) ).$el
 		]

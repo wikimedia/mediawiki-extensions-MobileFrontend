@@ -19,11 +19,9 @@ var
  * @param {Function} [props.onShow] Callback called before showing the drawer.
  *  It receives a promise given the show process is asynchronous.
  * @param {Function} [props.onBeforeHide] Callback called before hiding the drawer
- * @param {boolean} [props.closeOnScroll] (deprecated)
- *  Whether the drawer should disappear on a scroll event
- * the drawer.
  */
 function Drawer( props ) {
+	this.drawerClassName = props.className || '';
 	View.call( this,
 		util.extend(
 			{
@@ -32,8 +30,13 @@ function Drawer( props ) {
 				showCollapseIcon: true
 			},
 			props,
-			{ className: `drawer position-fixed ${props && props.className || ''}`.trim() },
+			{
+				className: 'drawer-container'
+			},
 			{ events: util.extend( {
+				'click .drawer-container__mask': function () {
+					this.hide();
+				}.bind( this ),
 				'click .cancel': function ( ev ) {
 					ev.preventDefault();
 					this.hide();
@@ -48,7 +51,7 @@ function Drawer( props ) {
 
 mfExtend( Drawer, View, {
 	// in milliseconds
-	minHideDelay: 10,
+	minHideDelay: 100,
 
 	/**
 	 * Shows panel after a slight delay
@@ -66,27 +69,13 @@ mfExtend( Drawer, View, {
 			//
 			// FIXME: setTimeout should be reconsidered in T209129
 			setTimeout( function () {
-				this.$el.addClass( 'visible animated' );
-				const closeOnScroll = this.options.closeOnScroll;
+				this.$el.find( '.drawer' ).addClass( 'visible animated' );
 				if ( this.options.onShow ) {
 					this.options.onShow( d );
-				} else {
-					mw.log.warn( 'Please pass the onShow method to the Drawer' );
-					this.$el.parent().addClass( `navigation-enabled${closeOnScroll ? '' : ' has-drawer--with-scroll-locked'}` );
 				}
-
 				setTimeout( function () {
-					var $window = util.getWindow();
-					if ( !this.options.onShow ) {
-						mw.log.warn( 'Please use the onShow method for scroll/close behaviour of Drawer' );
-						$window.one( 'click.drawer', this.hide.bind( this ) );
-					}
-
-					if ( closeOnScroll && !this.options.onShow ) {
-						$window.one( 'scroll.drawer', this.hide.bind( this ) );
-					}
 					d.resolve();
-				}.bind( this ), this.minHideDelay );
+				}, this.minHideDelay );
 			}.bind( this ), this.minHideDelay );
 		} else {
 			d.resolve();
@@ -100,17 +89,12 @@ mfExtend( Drawer, View, {
 	 * @instance
 	 */
 	hide: function () {
+		this.$el.find( '.drawer-container__mask' )
+			.removeClass( 'drawer-container__mask--visible' );
+		this.$el.find( '.drawer' ).removeClass( 'visible' );
 		// see comment in show()
 		setTimeout( function () {
-			this.$el.removeClass( 'visible' );
-			if ( !this.options.onShow ) {
-				mw.log.warn( 'Please pass an onShow property to Drawer. This is now required.' );
-				this.$el.parent().removeClass( 'navigation-enabled has-drawer--with-scroll-locked' );
-			}
 			this.options.onBeforeHide( this );
-			// .one() registers one callback for scroll and click independently
-			// if one fired, get rid of the other one
-			util.getWindow().off( '.drawer' );
 		}.bind( this ), this.minHideDelay );
 	},
 
@@ -151,28 +135,23 @@ mfExtend( Drawer, View, {
 	 * @instance
 	 */
 	postRender: function () {
+		const props = this.options,
+			$mask = util.parseHTML( '<div>' )
+				.addClass( 'drawer-container__mask drawer-container__mask--visible' ),
+			$drawer = util.parseHTML( '<div>' )
+				.addClass( `drawer drawer-container__drawer position-fixed ${this.drawerClassName}`.trim() );
 
-		if ( this.options.showCollapseIcon ) {
+		if ( props.showCollapseIcon ) {
 			// append the collapse icon at the top of the drawer
-			this.$el.prepend( collapseIcon.$el );
+			$drawer.prepend( collapseIcon.$el );
 		}
 
-		if ( this.options.children ) {
+		if ( props.children ) {
 			// append children
-			this.$el.append( this.options.children );
+			$drawer.append( props.children );
 		}
-
-		// Deprecated behaviour - if onShow callback is present, the creator of the drawer
-		// must managed addition to DOM/CSS classes
-		if ( !this.options.onShow ) {
-			mw.log.warn( 'Caller of Drawer should use onShow prop and append Drawer itself.' );
-			// This module might be loaded at the top of the page e.g. Special:Uploads
-			// Thus ensure we wait for the DOM to be loaded
-			util.docReady( function () {
-				this.appendTo( this.appendToElement );
-				this.$el.parent().addClass( 'navigation-enabled' );
-			}.bind( this ) );
-		}
+		this.$el.append( $mask );
+		this.$el.append( $drawer );
 	}
 } );
 
