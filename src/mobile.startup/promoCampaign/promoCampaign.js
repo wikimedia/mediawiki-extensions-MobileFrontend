@@ -93,18 +93,16 @@ function createPromoCampaign(
 		 * actions param
 		 * @param {...*} [args] Args to pass to the onShow callback
 		 * @throws {Error} Throws an error if action is not valid.
-		 * @return {boolean} Returns `true` if drawer is eligible to be shown and
-		 * `false` if not eligible.
+		 * @return {Drawer|null} Returns Drawer if drawer is eligible to be shown and
+		 * null if not.
 		 */
 		showIfEligible: function ( action, ...args ) {
 			if ( !isActionEligible( action ) ) {
 				// If not eligible, there is no sense in continuing.
-				return false;
+				return null;
 			}
 
-			onShow( action, ...args );
-
-			return true;
+			return onShow( action, ...args );
 		},
 		/**
 		 * @param {string} action

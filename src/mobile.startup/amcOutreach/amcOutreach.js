@@ -1,6 +1,6 @@
 const
 	toast = require( '../toast' ),
-	promoCampaign = require( '../promoCampaign/promoCampaign' ),
+	createPromoCampaign = require( '../promoCampaign/promoCampaign' ),
 	amcOutreachDrawer = require( './amcOutreachDrawer' ),
 	// MW constants should be kept in sync with onMakeGlobalVariableScript() from
 	// MobileFrontendHooks.php
@@ -35,7 +35,7 @@ module.exports = {
 			return campaign;
 		}
 
-		campaign = promoCampaign(
+		campaign = createPromoCampaign(
 			/**
 			 * This callback is executed by promoCampaign's `showIfEligible` method.
 			 * promoCampaign will only execute it when an action is 'eligible'.
@@ -51,9 +51,10 @@ module.exports = {
 			 * @param {string} [returnToQuery] Optional query params to add to redirected
 			 * URL after user enables AMC. Can also include anchor (e.g.
 			 * `foo=bar#/Talk`
+			 * @return {Drawer|null}
 			 */
 			( action, onBeforeHide, returnToTitle, returnToQuery ) => {
-				amcOutreachDrawer(
+				return amcOutreachDrawer(
 					action,
 					campaign,
 					mw.message,
@@ -63,7 +64,7 @@ module.exports = {
 					onBeforeHide,
 					returnToTitle,
 					returnToQuery
-				).show();
+				);
 			},
 			ACTIONS,
 			CAMPAIGN_NAME,
