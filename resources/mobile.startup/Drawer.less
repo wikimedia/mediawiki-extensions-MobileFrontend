@@ -62,7 +62,6 @@
 
 .drawer-container__mask {
 	position: fixed;
-	top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
@@ -71,6 +70,10 @@
 	opacity: 0;
 
 	&--visible {
+		// Cover the entire screen only when the screen is visible.
+		// Drawers are hidden asychronously and we don't want to intercept clicks to article elements
+		// during that time.
+		top: 0;
 		opacity: 0.2;
 	}
 }

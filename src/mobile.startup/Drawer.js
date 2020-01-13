@@ -62,6 +62,8 @@ mfExtend( Drawer, View, {
 	 */
 	show: function () {
 		const d = util.Deferred();
+		this.$el.find( '.drawer-container__mask' )
+			.addClass( 'drawer-container__mask--visible' );
 		if ( !this.isVisible() ) {
 			// use setTimeout to allow the browser to redraw if render() was called
 			// just before show(); this is important for animations to work
@@ -125,7 +127,7 @@ mfExtend( Drawer, View, {
 	postRender: function () {
 		const props = this.options,
 			$mask = util.parseHTML( '<div>' )
-				.addClass( 'drawer-container__mask drawer-container__mask--visible' ),
+				.addClass( 'drawer-container__mask' ),
 			$drawer = util.parseHTML( '<div>' )
 				.addClass( `drawer drawer-container__drawer position-fixed ${this.drawerClassName}`.trim() );
 
