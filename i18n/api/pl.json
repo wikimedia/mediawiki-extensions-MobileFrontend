@@ -23,5 +23,6 @@
 	"apihelp-webapp-manifest-description": "Zwraca manifest webapp.",
 	"apihelp-webapp-manifest-summary": "Zwraca manifest webapp.",
 	"apierror-mobilefrontend-badidtitle": "Zła kombinacja tytułu/identyfikatora wersji.",
+	"apiwarn-mobilefrontend-mobileviewdeprecated": "To API jest przestarzałe. Zobacz T186627 aby dowiedzieć się więcej.",
 	"apiwarn-mobilefrontend-sectionsnotfound": "Nie znaleziono {{PLURAL:$2|sekcji}} $1."
 }

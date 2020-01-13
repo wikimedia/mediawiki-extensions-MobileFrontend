@@ -38,7 +38,8 @@
 			"Dgstranz",
 			"Josecurioso",
 			"Carlosmg.dg",
-			"MarcoAurelio"
+			"MarcoAurelio",
+			"DannyS712"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si un usuario está editando a través de la interfaz móvil",
@@ -93,7 +94,7 @@
 	"mobile-frontend-editor-editing-page": "<span><strong>Edición</strong> de «$1»</span>",
 	"mobile-frontend-editor-error": "Error, edición no guardada.",
 	"mobile-frontend-editor-error-conflict": "Error, otro usuario ha editado esta página.",
-	"mobile-frontend-editor-error-loading": "Error, no se puede cargar la sección.",
+	"mobile-frontend-editor-error-loading": "Error, no se puede cargar el editor.",
 	"mobile-frontend-editor-error-preview": "Error: ha sucedido algo inesperado al cargar la vista previa. Cierra y vuelve a intentarlo.",
 	"mobile-frontend-editor-keep-editing": "Seguir editando",
 	"mobile-frontend-editor-licensing": "Al guardar los cambios, aceptas liberar tu contribución bajo {{PLURAL:$2|la licencia|las licencias}} $1",
@@ -177,7 +178,7 @@
 	"mobile-frontend-nearby-requirements-guidance": "Prueba con otro navegador o activa JavaScript si está desactivado.",
 	"mobile-frontend-nearby-title": "Cercanos",
 	"mobile-frontend-nearby-info-heading": "Lugares a tu alrededor",
-	"mobile-frontend-nearby-info-description": "Puedes leer artículos interesantes de Wikipedia sobre sitios cercanos a ti",
+	"mobile-frontend-nearby-info-description": "Puedes leer artículos interesantes de {{SITENAME}} sobre sitios cercanos a ti",
 	"mobile-frontend-nearby-info-show-button": "Mostrar artículos cercanos",
 	"mobile-frontend-news-items": "Actualidad",
 	"mobile-frontend-opt-in-explain": "Con {{SITENAME}} beta puedes poner a prueba funcionalidades experimentales y brindarnos valiosas observaciones",
