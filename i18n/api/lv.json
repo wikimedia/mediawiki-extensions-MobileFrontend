@@ -4,8 +4,15 @@
 			"Papuass"
 		]
 	},
+	"apihelp-mobileview-description": "Atgriež mobilajiem skatiem nepieciešamos datus.",
+	"apihelp-mobileview-summary": "Atgriež mobilajiem skatiem nepieciešamos datus.",
 	"apihelp-mobileview-param-page": "Apstrādājamās lapas nosaukums.",
+	"apihelp-mobileview-param-redirect": "Vai būtu jāseko pāradresācijām.",
+	"apihelp-mobileview-param-sectionprop": "Kādu informāciju par sadaļām iegūt.",
+	"apihelp-mobileview-param-variant": "Pārveidot saturu šajā valodas variantā.",
 	"apihelp-mobileview-param-noimages": "Atgriež HTML bez attēliem.",
 	"apihelp-mobileview-param-notransform": "Nepārveidot HTML mobilajām iekārtām paredzētā versijā.",
+	"apihelp-parse-param-mainpage": "Pielietot mobilās sākumlapas pārveidojumus.",
+	"apiwarn-mobilefrontend-mobileviewdeprecated": "Šis API ir novecojis. Papildu informācijai skatīt T186627.",
 	"apiwarn-mobilefrontend-sectionsnotfound": "{{PLURAL:$2|Sadaļas $1 nav atrastas|Sadaļa $1 nav atrasta|Sadaļas $1 nav atrastas}}."
 }

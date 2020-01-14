@@ -152,7 +152,9 @@
 	"mobile-frontend-watchlist-a-z-empty-howto-alt": "Klikšķini uz zvaigznes ikonas",
 	"mobile-frontend-watchlist-add": "$1 pievienots jūsu uzraugāmajam sarakstam",
 	"mobile-frontend-watchlist-back-home": "Atpakaļ uz sākumu",
+	"mobile-frontend-watchlist-cta": "Sekot šai lapai un visām izmaiņām tajā.",
 	"mobile-frontend-watchlist-cta-button-login": "Pieslēgties",
+	"mobile-frontend-watchlist-cta-button-signup": "Reģistrēties",
 	"mobile-frontend-watchlist-feed": "Izmaiņas",
 	"mobile-frontend-watchlist-feed-empty": "Nav lapu ar nesenām izmaiņām.",
 	"mobile-frontend-watchlist-filter-all": "Visi",
@@ -184,5 +186,7 @@
 	"mobile-frontend-mobile-option-amc-send-feedback": "Sūtīt atsauksmes",
 	"mobile-frontend-amc-outreach-no-thanks": "Nē, paldies",
 	"mobile-frontend-beta-only": "Iespēja pieejama tikai bēta režīmā",
+	"mobile-frontend-console-recruit": "Uzzini vairāk par to, kā mēs veidojam savu mobilo vietni https://www.mediawiki.org/wiki/Extension:MobileFrontend",
+	"mobile-frontend-special-pages-pref": "Optimizēt un vienkāršot īpašas lapas mobilajā versijā (ieteicams)",
 	"prefs-mobile": "Mobilās versijas izvēles"
 }
