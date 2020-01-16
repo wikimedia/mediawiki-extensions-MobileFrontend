@@ -299,7 +299,7 @@ OverlayManager.prototype = {
 	 * Add an overlay that should be shown for a specific fragment identifier.
 	 *
 	 * The following code will display an overlay whenever a user visits a URL that
-	 * end with '#/hi/name'. The value of `name` will be passed to the overlay.
+	 * ends with '#/hi/name'. The value of `name` will be passed to the overlay.
 	 *
 	 *     @example
 	 *     overlayManager.add( /\/hi\/(.*)/, function ( name ) {
@@ -315,8 +315,30 @@ OverlayManager.prototype = {
 	 *
 	 * @memberof OverlayManager
 	 * @instance
-	 * @param {RegExp|string} route route regular expression optionally with
-	 * parameters or a string literal.
+	 * @param {RegExp|string} route definition that can be a regular
+	 * expression (optionally with parameters) or a string literal.
+	 *
+	 * T238364: Routes should only contain characters allowed by RFC3986 to ensure
+	 * compatibility across browsers. Encode the route with `encodeURIComponent()`
+	 * prior to registering it with OverlayManager if necessary (should probably
+	 * be done with all routes containing user generated characters) to avoid
+	 * inconsistencies with how different browsers encode illegal URI characters:
+	 *
+	 * ```
+	 *   var encodedRoute = encodeURIComponent('ugc < " ` >');
+	 *
+	 *   overlayManager.add(
+	 *     encodedRoute,
+	 *     function () { return new Overlay(); }
+	 *   );
+	 *
+	 *   window.location.hash = '#' + encodedRoute;
+	 * ```
+	 * The above example shows how to register a string literal route with illegal
+	 * URI characters. Routes registered as a regex will likely NOT have to
+	 * perform any encoding (unless they explicitly contain illegal URI
+	 * characters) as their user generated content portion will likely just be a
+	 * capturing group (e.g. `/\/hi\/(.*)/`).
 	 * @param {Function} factory a function returning an overlay or a $.Deferred
 	 * which resolves to an overlay.
 	 */
