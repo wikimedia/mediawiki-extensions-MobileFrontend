@@ -4,11 +4,17 @@ import '../../node_modules/oojs-ui/dist/oojs-ui-widgets.js';
 import '../../node_modules/oojs-ui/dist/oojs-ui-core-wikimediaui.css';
 import CategoryAddOverlay from '../../src/mobile.categories.overlays/CategoryAddOverlay';
 import CategoryTabs from '../../src/mobile.categories.overlays/CategoryTabs';
-import categoryOverlay from '../../src/mobile.categories.overlays/categoryOverlay';
+import categoryOverlay from '../../src/mobile.startup/categoryOverlay';
 import '../../resources/mobile.categories.overlays/categories.less';
 import { categoriesResponse } from './data';
 import util from '../../src/mobile.startup/util';
 import { fakeEventBus } from '../utils';
+import m from '../../src/mobile.startup/moduleLoaderSingleton';
+
+m.define( 'mobile.categories.overlays', {
+	CategoryTabs,
+	CategoryAddOverlay
+} );
 
 storiesOf( 'categories' )
 	.add( 'CategoryTabs',

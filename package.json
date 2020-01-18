@@ -86,7 +86,7 @@
 		},
 		{
 			"path": "resources/dist/mobile.startup.js",
-			"maxSize": "4.9KB"
+			"maxSize": "5.0KB"
 		},
 		{
 			"path": "resources/dist/mobile.languages.structured.js",
@@ -114,7 +114,7 @@
 		},
 		{
 			"path": "resources/dist/mobile.categories.overlays.js",
-			"maxSize": "2.6KB"
+			"maxSize": "2.4KB"
 		}
 	]
 }

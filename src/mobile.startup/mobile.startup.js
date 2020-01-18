@@ -31,6 +31,7 @@ module.exports = {
 	CtaDrawer: require( './CtaDrawer' ),
 	toast: require( './toast' ),
 	Watchstar: require( './watchstar/watchstar' ),
+	categoryOverlay: require( './categoryOverlay' ),
 	rlModuleLoader: require( './rlModuleLoader' ),
 	eventBusSingleton: require( './eventBusSingleton' ),
 	promisedView: require( './promisedView' ),
@@ -62,6 +63,7 @@ module.exports = {
 };
 
 mw.mobileFrontend = moduleLoader;
+mw.log.deprecate( mw.mobileFrontend, 'rlModuleLoader', mw.mobileFrontend.rlModuleLoader );
 
 // Setup a single export for new modules to fold all of the above lines into.
 // One export to rule them all!
