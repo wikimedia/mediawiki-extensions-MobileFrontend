@@ -563,7 +563,7 @@ class ApiMobileView extends ApiBase {
 	/**
 	 * Get data of requested article.
 	 * @param Title $title
-	 * @param boolean $noImages
+	 * @param bool $noImages
 	 * @param null|int $oldid Revision ID to get the text from, passing null or 0 will
 	 *   get the current revision (default value)
 	 * @suppress SecurityCheck-XSS (T203490)

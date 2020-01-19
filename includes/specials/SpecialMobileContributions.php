@@ -14,14 +14,14 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 	 *		allow the parameter to be used for usernames)
 	 */
 	protected $specialPageName = 'Contributions';
-	/**  @var User $user Saves the userobject*/
+	/** @var User $user Saves the userobject */
 	protected $user;
 	/**
 	 * @var MWTimestamp $lastDate A timestamp used for
 	 *		MobileSpecialPageFeed::renderListHeaderWhereNeeded
 	 */
 	protected $lastDate;
-	/**  @var bool $showUsername Whether to show the username in results or not */
+	/** @var bool $showUsername Whether to show the username in results or not */
 	protected $showUsername = false;
 	/** @var array Lengths of previous revisions */
 	protected $prevLengths = [];

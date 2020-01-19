@@ -2,11 +2,11 @@
 
 namespace MobileFrontend\ResourceLoaderModules;
 
-use ResourceLoaderFileModule;
-use ResourceLoaderContext;
-use Xml;
-use MobileFrontendHooks;
 use MobileFrontendEditorHooks;
+use MobileFrontendHooks;
+use ResourceLoaderContext;
+use ResourceLoaderFileModule;
+use Xml;
 
 /**
  * ResourceLoaderFileModule subclass with JavaScript config necessary for MobileFrontend.

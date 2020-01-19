@@ -140,7 +140,7 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 	 * Identify the next page to be shown
 	 *
 	 * @param array $pages
-	 * @return string|boolean representing title of next page to show or
+	 * @return string|bool representing title of next page to show or
 	 *  false if there isn't another page to show.
 	 */
 	private function getNextPage( $pages ) {

@@ -2,8 +2,8 @@
 
 namespace MobileFrontend\Transforms;
 
-use DOMElement;
 use DOMDocument;
+use DOMElement;
 
 class LazyImageTransform implements IMobileTransform {
 

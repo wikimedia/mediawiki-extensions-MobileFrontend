@@ -2,9 +2,9 @@
 
 namespace Tests\MobileFrontend\Devices;
 
-use MediaWikiTestCase;
 use FauxRequest;
 use GlobalVarConfig;
+use MediaWikiTestCase;
 use MobileFrontend\Devices\DeviceDetectorService;
 
 /**

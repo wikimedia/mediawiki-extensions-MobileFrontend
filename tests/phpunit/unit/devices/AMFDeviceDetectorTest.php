@@ -2,8 +2,8 @@
 
 namespace Tests\MobileFrontend\Devices;
 
-use WebRequest;
 use MobileFrontend\Devices\AMFDeviceDetector;
+use WebRequest;
 
 /**
  * @group MobileFrontend

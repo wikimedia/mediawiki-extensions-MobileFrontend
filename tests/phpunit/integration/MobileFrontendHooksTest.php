@@ -144,7 +144,7 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 			'check, if the vary header is set in desktop mode' );
 		// there should never be an XAnalytics header in desktop mode
 		$resp = $param['context']->getRequest()->response();
-		$this->assertEquals( false, (bool)$resp->getHeader( 'X-Analytics' ),
+		$this->assertFalse( (bool)$resp->getHeader( 'X-Analytics' ),
 			'there should never be an XAnalytics header in desktop mode' );
 	}
 
@@ -168,7 +168,7 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 		$out = new OutputPage( $context );
 		// create a new, empty SkinTemplate
 		$skin = new SkinTemplate();
-		if ( is_null( $title ) ) {
+		if ( $title === null ) {
 			// create a new Title (main page)
 			$title = Title::newMainPage();
 		}

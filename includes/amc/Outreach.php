@@ -2,8 +2,8 @@
 
 namespace MobileFrontend\AMC;
 
-use User;
 use Config;
+use User;
 
 final class Outreach {
 	/**

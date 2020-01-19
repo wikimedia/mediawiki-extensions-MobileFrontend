@@ -1,10 +1,10 @@
 <?php
 
 /**
-* @group Database
-* @group MobileFrontend
-* @group medium
-*/
+ * @group Database
+ * @group MobileFrontend
+ * @group medium
+ */
 class ApiMobileViewConvertTitleTest extends ApiTestCase {
 
 	private $simplifiedTitle = '天闻角川';

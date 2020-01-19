@@ -138,8 +138,8 @@ class MobilePage {
 	/**
 	 * Get the thumbnail container for getMediumThumbnailHtml() and getSmallThumbnailHtml().
 	 *
-	 * @param integer $size the width of the thumbnail
-	 * @param boolean $useBackgroundImage Whether the thumbnail should have a background image
+	 * @param int $size the width of the thumbnail
+	 * @param bool $useBackgroundImage Whether the thumbnail should have a background image
 	 * @return string
 	 */
 	private function getPageImageHtml( $size, $useBackgroundImage = false ) {

@@ -1,7 +1,7 @@
 <?php
 
-use Psr\Log\LoggerInterface;
 use MediaWiki\MediaWikiServices;
+use Psr\Log\LoggerInterface;
 
 /**
  * @group MobileFrontend

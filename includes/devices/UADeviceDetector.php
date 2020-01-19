@@ -49,7 +49,7 @@ class UADeviceDetector implements DeviceDetector {
 	 *
 	 * @author Patrick Reilly
 	 *
-	 * @param $userAgent
+	 * @param string $userAgent
 	 * @return bool
 	 */
 	private function detectMobileDevice( $userAgent ) {
@@ -123,7 +123,7 @@ class UADeviceDetector implements DeviceDetector {
 	 *
 	 * @author Patrick Reilly
 	 *
-	 * @param $userAgent
+	 * @param string $userAgent
 	 * @return bool
 	 */
 	private function detectTabletDevice( $userAgent ) {

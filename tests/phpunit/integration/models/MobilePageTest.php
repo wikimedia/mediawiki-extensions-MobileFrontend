@@ -1,7 +1,7 @@
 <?php
 
-use MediaWiki\Revision\RevisionStore;
 use MediaWiki\Revision\RevisionRecord;
+use MediaWiki\Revision\RevisionStore;
 
 /**
  * @group MobileFrontend
@@ -192,7 +192,7 @@ class MobilePageTest extends MediaWikiTestCase {
 		$this->setService( 'RevisionStore', $revMock );
 		$actual = $mobilePage->getLatestEdit();
 
-		$this->assertInternalType( 'array', $actual );
+		$this->assertIsArray( $actual );
 		$this->assertArrayHasKey( 'timestamp', $actual );
 		$this->assertArrayHasKey( 'name', $actual );
 		$this->assertArrayHasKey( 'gender', $actual );
@@ -212,7 +212,7 @@ class MobilePageTest extends MediaWikiTestCase {
 		$this->setService( 'RevisionStore', $revMock );
 		$actual = $mobilePage->getLatestEdit();
 
-		$this->assertInternalType( 'array', $actual );
+		$this->assertIsArray( $actual );
 		$this->assertArrayHasKey( 'timestamp', $actual );
 		$this->assertArrayHasKey( 'name', $actual );
 		$this->assertArrayHasKey( 'gender', $actual );

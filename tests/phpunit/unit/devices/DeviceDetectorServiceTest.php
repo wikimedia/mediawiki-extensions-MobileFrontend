@@ -2,11 +2,11 @@
 
 namespace Tests\MobileFrontend\Devices;
 
-use MobileFrontend\Devices\DeviceDetector;
-use WebRequest;
 use FauxRequest;
-use MobileFrontend\Devices\DeviceProperties;
+use MobileFrontend\Devices\DeviceDetector;
 use MobileFrontend\Devices\DeviceDetectorService;
+use MobileFrontend\Devices\DeviceProperties;
+use WebRequest;
 
 /**
  * @group MobileFrontend

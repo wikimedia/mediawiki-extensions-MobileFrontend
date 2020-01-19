@@ -266,7 +266,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 		if ( $returnTo !== '' ) {
 			$title = Title::newFromText( $returnTo );
 
-			if ( !is_null( $title ) ) {
+			if ( $title !== null ) {
 				return $title->getFullURL( $request->getText( 'returntoquery' ) );
 			}
 		}

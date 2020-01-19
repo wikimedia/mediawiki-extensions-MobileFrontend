@@ -1,7 +1,7 @@
 <?php
 
-use MobileFrontend\ContentProviders\McsContentProvider;
 use MediaWiki\Http\HttpRequestFactory;
+use MobileFrontend\ContentProviders\McsContentProvider;
 
 /**
  * @group MobileFrontend

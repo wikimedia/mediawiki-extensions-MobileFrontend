@@ -259,7 +259,7 @@ class MobileContextTest extends MediaWikiTestCase {
 	 */
 	public function testGetMobileAction( $mobileaction = null ) {
 		$context = $this->makeContext();
-		if ( is_null( $mobileaction ) ) {
+		if ( $mobileaction === null ) {
 			$assert = '';
 		} else {
 			$context->getRequest()->setVal( 'mobileaction', $mobileaction );

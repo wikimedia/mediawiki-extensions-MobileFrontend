@@ -1,11 +1,11 @@
 <?php
 
 use MediaWiki\MediaWikiServices;
+use MobileFrontend\ContentProviders\ContentProviderFactory;
 use Wikibase\Client\WikibaseClient;
 use Wikibase\DataModel\Entity\EntityDocument;
 use Wikibase\DataModel\Entity\ItemId;
 use Wikibase\DataModel\Term\FingerprintProvider;
-use MobileFrontend\ContentProviders\ContentProviderFactory;
 
 /**
  * Implements additional functions to use in MobileFrontend

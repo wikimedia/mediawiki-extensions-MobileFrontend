@@ -2,8 +2,8 @@
 
 namespace MobileFrontend\ResourceLoaderModules;
 
-use ResourceLoaderWikiModule;
 use ResourceLoaderContext;
+use ResourceLoaderWikiModule;
 
 /**
  * Main pages tend to be radically different from other pages and we don't want to load

@@ -385,7 +385,6 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	 * @param IContextSource $context
 	 * @return string comma separated list of user groups
 	 */
-
 	private function listGroups( User $user, IContextSource $context ) {
 		// Get groups to which the user belongs
 		$userGroups = $user->getGroups();

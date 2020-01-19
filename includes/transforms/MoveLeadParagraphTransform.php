@@ -2,11 +2,11 @@
 
 namespace MobileFrontend\Transforms;
 
+use DOMDocument;
+use DOMElement;
+use DOMNode;
 use DOMXPath;
 use MediaWiki\MediaWikiServices;
-use DOMElement;
-use DOMDocument;
-use DOMNode;
 
 class MoveLeadParagraphTransform implements IMobileTransform {
 	/**
@@ -40,7 +40,7 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	/**
 	 * Helper function to verify that passed $node matched nodename and has set required classname
 	 * @param DOMElement $node Node to verify
-	 * @param string|boolean $requiredNodeName Required tag name, has to be lowercase
+	 * @param string|bool $requiredNodeName Required tag name, has to be lowercase
 	 *   if false it is ignored and requiredClass is used.
 	 * @param string $requiredClass Regular expression with required class name
 	 * @return bool

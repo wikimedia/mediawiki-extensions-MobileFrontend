@@ -4,8 +4,8 @@ namespace MobileFrontend\ContentProviders;
 
 use FormatJson;
 use MediaWiki\MediaWikiServices;
-use Title;
 use OutputPage;
+use Title;
 
 /**
  * Sources content from the Mobile-Content-Service

@@ -1,7 +1,7 @@
 <?php
 
-use MediaWiki\Auth\AuthManager;
 use MediaWiki\Auth\AuthenticationRequest;
+use MediaWiki\Auth\AuthManager;
 use MediaWiki\ChangeTags\Taggable;
 use MediaWiki\MediaWikiServices;
 use MobileFrontend\ContentProviders\ContentProviderFactory;
@@ -547,7 +547,7 @@ class MobileFrontendHooks {
 	 *
 	 * ManualLogEntryBeforePublish hook handler that tags actions logged when user uses mobile mode
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ManualLogEntryBeforePublish
-
+	 *
 	 * @param Taggable $taggable Object to tag
 	 */
 	public static function onTaggableObjectCreation( Taggable $taggable ) {
@@ -646,10 +646,10 @@ class MobileFrontendHooks {
 
 		// If 'watch' is set from the login form, watch the requested article
 		$watch = $context->getRequest()->getVal( 'watch' );
-		if ( !is_null( $watch ) ) {
+		if ( $watch !== null ) {
 			$title = Title::newFromText( $watch );
 			// protect against watching special pages (these cannot be watched!)
-			if ( !is_null( $title ) && !$title->isSpecialPage() ) {
+			if ( $title !== null && !$title->isSpecialPage() ) {
 				WatchAction::doWatch( $title, $currentUser );
 			}
 		}

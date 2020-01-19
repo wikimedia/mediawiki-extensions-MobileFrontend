@@ -2,8 +2,8 @@
 
 namespace MobileFrontend\ResourceLoaderModules;
 
-use ResourceLoaderWikiModule;
 use ResourceLoaderContext;
+use ResourceLoaderWikiModule;
 
 /**
  * Alternate of ResourceLoaderSiteStylesModule for mobile web.

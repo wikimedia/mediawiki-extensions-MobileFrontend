@@ -5,8 +5,8 @@ use MobileFrontend\ContentProviders\ContentProviderFactory;
 use MobileFrontend\Features\BetaUserMode;
 use MobileFrontend\Features\Feature;
 use MobileFrontend\Features\FeaturesManager;
-use MobileFrontend\Features\StableUserMode;
 use MobileFrontend\Features\LoggedInUserMode;
+use MobileFrontend\Features\StableUserMode;
 use MobileFrontend\Features\UserModes;
 
 return [

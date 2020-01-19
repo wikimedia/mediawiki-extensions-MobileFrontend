@@ -2,9 +2,9 @@
 
 namespace MobileFrontend\ContentProviders;
 
-use OutputPage;
 use FormatJson;
 use MediaWiki\MediaWikiServices;
+use OutputPage;
 
 class MwApiContentProvider implements IContentProvider {
 	/**

@@ -225,7 +225,7 @@ class MobileContext extends ContextSource {
 		if ( !$enableBeta ) {
 			return '';
 		}
-		if ( is_null( $this->mobileMode ) ) {
+		if ( $this->mobileMode === null ) {
 			$mobileAction = $this->getMobileAction();
 			if ( $mobileAction === self::MODE_BETA || $mobileAction === self::MODE_STABLE ) {
 				$this->mobileMode = $mobileAction;
@@ -316,7 +316,7 @@ class MobileContext extends ContextSource {
 	 * @return bool
 	 */
 	public function shouldDisplayMobileView() {
-		if ( !is_null( $this->mobileView ) ) {
+		if ( $this->mobileView !== null ) {
 			return $this->mobileView;
 		}
 		// check if we need to toggle between mobile/desktop view
@@ -428,7 +428,7 @@ class MobileContext extends ContextSource {
 	 * @return bool
 	 */
 	public function isBlacklistedPage() {
-		if ( is_null( $this->blacklistedPage ) ) {
+		if ( $this->blacklistedPage === null ) {
 			$this->blacklistedPage = $this->isBlacklistedPageInternal();
 		}
 
@@ -470,7 +470,7 @@ class MobileContext extends ContextSource {
 	 * @return string
 	 */
 	public function getMobileAction() {
-		if ( is_null( $this->mobileAction ) ) {
+		if ( $this->mobileAction === null ) {
 			$this->mobileAction = $this->getRequest()->getRawVal( 'mobileaction' );
 		}
 
@@ -505,7 +505,7 @@ class MobileContext extends ContextSource {
 	 * @param int|null $expiry Expire time of cookie
 	 */
 	public function setStopMobileRedirectCookie( $expiry = null ) {
-		if ( is_null( $expiry ) ) {
+		if ( $expiry === null ) {
 			$expiry = $this->getUseFormatCookieExpiry();
 		}
 
@@ -523,7 +523,7 @@ class MobileContext extends ContextSource {
 	 * Remove cookie and continue automatic redirect to mobile page
 	 */
 	public function unsetStopMobileRedirectCookie() {
-		if ( is_null( $this->getStopMobileRedirectCookie() ) ) {
+		if ( $this->getStopMobileRedirectCookie() === null ) {
 			return;
 		}
 		$expire = $this->getUseFormatCookieExpiry( time(), -3600 );
@@ -595,7 +595,7 @@ class MobileContext extends ContextSource {
 	 * @param null $expiry Expiration of cookie
 	 */
 	public function setUseFormatCookie( $cookieFormat = 'true', $expiry = null ) {
-		if ( is_null( $expiry ) ) {
+		if ( $expiry === null ) {
 			$expiry = $this->getUseFormatCookieExpiry();
 		}
 		$this->getRequest()->response()->setCookie(
@@ -614,7 +614,7 @@ class MobileContext extends ContextSource {
 	 * Remove cookie based saved useformat value
 	 */
 	public function unsetUseFormatCookie() {
-		if ( is_null( $this->getUseFormatCookie() ) ) {
+		if ( $this->getUseFormatCookie() === null ) {
 			return;
 		}
 

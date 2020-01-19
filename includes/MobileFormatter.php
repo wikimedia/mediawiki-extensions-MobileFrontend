@@ -3,10 +3,10 @@
 use HtmlFormatter\HtmlFormatter;
 use MediaWiki\MediaWikiServices;
 use MobileFrontend\ContentProviders\IContentProvider;
+use MobileFrontend\Transforms\LazyImageTransform;
+use MobileFrontend\Transforms\LegacyMainPageTransform;
 use MobileFrontend\Transforms\MoveLeadParagraphTransform;
 use MobileFrontend\Transforms\NoTransform;
-use MobileFrontend\Transforms\LegacyMainPageTransform;
-use MobileFrontend\Transforms\LazyImageTransform;
 
 /**
  * Converts HTML into a mobile-friendly version
@@ -30,7 +30,8 @@ class MobileFormatter extends HtmlFormatter {
 	private $revId;
 
 	/** @var array $topHeadingTags Array of strings with possible tags,
-		can be recognized as top headings. */
+	 * can be recognized as top headings.
+	 */
 	public $topHeadingTags = [];
 
 	/**
@@ -361,7 +362,7 @@ class MobileFormatter extends HtmlFormatter {
 	 *
 	 * @param DOMDocument $doc
 	 * @param DOMElement $heading
-	 * @param integer $sectionNumber
+	 * @param int $sectionNumber
 	 * @param bool $isCollapsible
 	 */
 	private function prepareHeading(
