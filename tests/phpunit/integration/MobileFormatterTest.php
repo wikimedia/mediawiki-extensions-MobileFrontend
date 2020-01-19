@@ -744,9 +744,9 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			->method( 'info' )
 			->will( $this->returnCallback( function ( $message ) use ( $title ) {
 				// Debug message contains Page title
-				$this->assertContains( $title, $message );
+				$this->assertStringContainsString( $title, $message );
 				// and contains revision id which is 0 by default
-				$this->assertContains( '0', $message );
+				$this->assertStringContainsString( '0', $message );
 			} ) );
 
 		$this->setLogger( 'mobile', $loggerMock );

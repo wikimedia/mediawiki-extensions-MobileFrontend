@@ -11,17 +11,17 @@ class MobileFrontendSkinHooksTest extends MediaWikiLangTestCase {
 	public function testInterimTogglingSupport() {
 		$js = MobileFrontendSkinHooks::interimTogglingSupport();
 
-		$this->assertContains(
+		$this->assertStringContainsString(
 			'function mfTempOpenSection(',
 			$js,
 			'creates global function called from MobileFormatter::prepareHeading'
 		);
-		$this->assertContains(
+		$this->assertStringContainsString(
 			'mf-section-',
 			$js,
 			'uses (partial) ID set in MobileFormatter::createSectionBodyElement'
 		);
-		$this->assertContains(
+		$this->assertStringContainsString(
 			'open-block',
 			$js,
 			'contains class name to be toggled'
@@ -34,17 +34,17 @@ class MobileFrontendSkinHooksTest extends MediaWikiLangTestCase {
 	public function testGradeCImageSupport() {
 		$js = MobileFrontendSkinHooks::gradeCImageSupport();
 
-		$this->assertContains(
+		$this->assertStringContainsString(
 			'noscript',
 			$js,
 			'gain the widest possible browser support, scan for noscript tag'
 		);
-		$this->assertContains(
+		$this->assertStringContainsString(
 			'lazy-image-placeholder',
 			$js,
 			'check if sibling has the lazy-image-placeholder class gotten from ns[i].nextSibling;'
 		);
-		$this->assertContains(
+		$this->assertStringContainsString(
 			'parentNode.replaceChild( img, p );',
 			$js,
 			'make sure the replacement to image tag was properly done'

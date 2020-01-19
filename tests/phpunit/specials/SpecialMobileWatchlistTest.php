@@ -20,7 +20,7 @@ class SpecialMobileWatchlistTest extends MediaWikiTestCase {
 		$wl = new SpecialMobileWatchlist();
 		$wl->setContext( $context );
 		$wl->addWatchlistHTML( $results, new User(), SpecialMobileWatchlist::VIEW_FEED, 'all' );
-		$this->assertContains(
+		$this->assertStringContainsString(
 			$expected,
 			$wl->getOutput()->getHTML(),
 			$msg
