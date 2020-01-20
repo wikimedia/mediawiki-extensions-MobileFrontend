@@ -31,7 +31,8 @@
 			"Bulgu",
 			"Mirzali",
 			"Grkn gll",
-			"BaRaN6161 TURK"
+			"BaRaN6161 TURK",
+			"SwornToTranslate29"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ya da bir mobil kullanıcı arayüzü ile düzenleme olup olmadığı",
@@ -257,7 +258,7 @@
 	"mobile-frontend-mobile-option-amc-learn-more": "Daha fazlasını öğrenin",
 	"mobile-frontend-mobile-option-amc-send-feedback": "Geri bildirim gönder",
 	"mobile-frontend-amc-outreach-intro": "Gelişmiş Mod ile Tanıtım",
-	"mobile-frontend-amc-outreach-description": "Gelişmiş mod, Tartışma sayfalarına, Geçmiş sayfalarına, Son değişikliklere ve mobil cihazdaki diğer düzenleyici araçlarına erişmeyi kolaylaştırır.",
+	"mobile-frontend-amc-outreach-description": "Gelişmiş mod; Tarih, İzleme ve Son değişiklikler sayfalarının ve mobil uygulamadaki diğer editör araçlarının geniş işlevselliğini sunar.",
 	"mobile-frontend-amc-outreach-enable": "Gelişmiş modu etkinleştir",
 	"mobile-frontend-amc-outreach-no-thanks": "Hayır teşekkürler",
 	"mobile-frontend-amc-outreach-enabled-message": "Gelişmiş mod etkinleştirildi. Ayarlarınızdan kapatabilirsiniz.",
