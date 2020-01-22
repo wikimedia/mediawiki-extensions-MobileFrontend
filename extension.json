@@ -575,9 +575,6 @@
 				"resources/mobile.special.mobilecite.styles/mobilecite.less"
 			]
 		},
-		"mobile.special.mobilemenu.styles": {
-			"targets": "mobile"
-		},
 		"mobile.special.mobileoptions.styles": {
 			"targets": [ "mobile", "desktop" ],
 			"styles": [

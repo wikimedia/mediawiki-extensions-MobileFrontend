@@ -156,7 +156,6 @@
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 Last {{GENDER:$1|edited}} {{PLURAL:$3|$3 second|$3 seconds}} ago] by {{PLURAL:$5|[$6 $2]|0=an anonymous user}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 Last {{GENDER:$1|edited}} {{PLURAL:$3|$3 year|$3 years}} ago] by {{PLURAL:$5|[$6 $2]|0=an anonymous user}}",
 	"mobile-frontend-main-menu": "Main Menu",
-	"mobile-frontend-main-menu-page-title": "Site navigation",
 	"mobile-frontend-main-menu-settings-heading": "Settings",
 	"mobile-frontend-media-details": "Details",
 	"mobile-frontend-media-license-link": "License information",
