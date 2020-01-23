@@ -88,7 +88,6 @@
 	"mobile-frontend-last-modified-with-user-seconds": "آخرین ویرایش {{PLURAL:$3|$3 ثانیه}} پیش توسط {{PLURAL:$5|[$6 $2]|0=یک کاربر نشناس}} [$4 {{GENDER:$1|انجام شده‌است}}]",
 	"mobile-frontend-last-modified-with-user-years": "آخرین ویرایش {{PLURAL:$3|$3 سال}} پیش توسط {{PLURAL:$5|[$6 $2]|0=یک کاربر نشناس}} [$4 {{GENDER:$1|انجام شده‌است}}]",
 	"mobile-frontend-main-menu": "سەر منو(منواصلی)",
-	"mobile-frontend-main-menu-page-title": "هدایت‌کننده وب‌گاه",
 	"mobile-frontend-main-menu-settings-heading": "تنظیمۀل",
 	"mobile-frontend-media-details": "جزئیات",
 	"mobile-frontend-media-license-link": "اطلاعات مجوز",

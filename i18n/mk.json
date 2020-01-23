@@ -124,7 +124,6 @@
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 Последното уредување е {{GENDER:$1|направено}} пред {{PLURAL:$3|една секунда|$3 секунди}}] од {{PLURAL:$5|[$6 $2]|0=анонимен корисник}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 Последното уредување е {{GENDER:$1|направено}} пред {{PLURAL:$3|една година|$3 години}}] од {{PLURAL:$5|[$6 $2]|0=анонимен корисник}}",
 	"mobile-frontend-main-menu": "Главно мени",
-	"mobile-frontend-main-menu-page-title": "Прегледник",
 	"mobile-frontend-main-menu-settings-heading": "Поставки",
 	"mobile-frontend-media-details": "Подробно",
 	"mobile-frontend-media-license-link": "Информации за лиценца",

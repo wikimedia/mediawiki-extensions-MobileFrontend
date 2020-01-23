@@ -137,7 +137,6 @@
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 Senast {{GENDER:$1|redigerad}} för {{PLURAL:$3|$3 sekund|$3 sekunder}} sedan] av {{PLURAL:$5|[$6 $2]|0=en anonym användare}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 Senast {{GENDER:$1|redigerad}} för {{PLURAL:$3|$3 år}} sedan] av {{PLURAL:$5|[$6 $2]|0=en anonym användare}}",
 	"mobile-frontend-main-menu": "Huvudmeny",
-	"mobile-frontend-main-menu-page-title": "Navigering",
 	"mobile-frontend-main-menu-settings-heading": "Inställningar",
 	"mobile-frontend-media-details": "Detaljer",
 	"mobile-frontend-media-license-link": "Licensinformation",

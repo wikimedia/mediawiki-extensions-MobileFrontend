@@ -69,7 +69,6 @@
 	"mobile-frontend-last-modified-with-user-months": "[$4 {{GENDER:$1|modificà}} l'ùltima vira {{PLURAL:$3|$3 mèis}} fa] da {{PLURAL:$5|[$6 $2]|0=n'utent anònim}}",
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 {{GENDER:$1|modificà}} l'ùltima vira {{PLURAL:$3|$3 second}} fa] da {{PLURAL:$5|[$6 $2]|0=n'utent anònim}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 {{GENDER:$1|modificà}} l'ùltima vira {{PLURAL:$3|$3 ann|$3agn}} fa] da {{PLURAL:$5|[$6 $2]|0=n'utent anònim}}",
-	"mobile-frontend-main-menu-page-title": "Navigassion dël sit",
 	"mobile-frontend-main-menu-settings-heading": "Paràmeter",
 	"mobile-frontend-media-details": "Detaj",
 	"mobile-frontend-media-license-link": "Anformassion an sla licensa",

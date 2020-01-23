@@ -148,7 +148,6 @@
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 Остання {{GENDER:$1|зміна зроблена}} {{PLURAL:$3|$3 секунду|$3 секунди|$3 секунд}} тому] {{PLURAL:$5|[$6 $2]|0=анонімним користувачем}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 Остання {{GENDER:$1|зміна зроблена|зміна зроблена}} {{PLURAL:$3|$3 рік|$3 роки|$3 років}} тому] {{PLURAL:$5|[$6 $2]|0=анонімним користувачем}}",
 	"mobile-frontend-main-menu": "Головне меню",
-	"mobile-frontend-main-menu-page-title": "Навігація по сайту",
 	"mobile-frontend-main-menu-settings-heading": "Налаштування",
 	"mobile-frontend-media-details": "Деталі",
 	"mobile-frontend-media-license-link": "Відомості про ліцензію",

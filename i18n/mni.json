@@ -40,7 +40,6 @@
 	"mobile-frontend-last-modified-with-user-seconds": "{{PLURAL:$5|[$6 $2]|0=ꯁꯛꯈꯪꯗꯕ ꯃꯤꯑꯣꯏ}} ꯅꯥ\n[$4 ꯑꯔꯣꯏꯕ {{GENDER:$1|ꯁꯦꯝꯒꯠꯈꯤꯕ}} {{PLURAL:$3|ꯁꯦꯀꯦꯟ $3}} ꯐꯥꯔꯦ]",
 	"mobile-frontend-last-modified-with-user-years": "{{PLURAL:$5|[$6 $2]|0=ꯁꯛꯈꯪꯗꯕ ꯃꯤꯑꯣꯏ}} ꯅꯥ\n[$4 ꯑꯔꯣꯏꯕ {{GENDER:$1|ꯁꯦꯝꯒꯠꯈꯤꯕ}} {{PLURAL:$3| ꯆꯥꯍꯤ $3}} ꯐꯥꯔꯦ]",
 	"mobile-frontend-main-menu": "ꯃꯔꯨꯑꯣꯏꯕ ꯌꯦꯡꯐꯝ",
-	"mobile-frontend-main-menu-page-title": "ꯆꯠꯈꯤꯅꯕ ꯃꯐꯝ",
 	"mobile-frontend-main-menu-settings-heading": "ꯁꯦꯝꯐꯝ",
 	"mobile-frontend-media-details": "ꯑꯀꯨꯞꯄ ꯋꯥꯔꯝ",
 	"mobile-frontend-media-license-link": "ꯑꯌꯥꯕꯒꯤ ꯀꯨꯞꯊꯕ ꯋꯥꯔꯣꯟ",

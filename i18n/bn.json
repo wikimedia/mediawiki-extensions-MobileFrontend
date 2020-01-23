@@ -128,7 +128,6 @@
 	"mobile-frontend-last-modified-with-user-seconds": "{{PLURAL:$5|[$6 $2]|0=অনিবন্ধিত ব্যবহারকারী}} দ্বারা [$4 {{PLURAL:$3|$3 সেকেন্ড}} আগে সর্বশেষ {{GENDER:$1|সম্পাদিত}}]",
 	"mobile-frontend-last-modified-with-user-years": "{{PLURAL:$5|[$6 $2]|0=অনিবন্ধিত ব্যবহারকারী}} দ্বারা [$4 {{PLURAL:$3|$3 বছর}} আগে সর্বশেষ {{GENDER:$1|সম্পাদিত}}]",
 	"mobile-frontend-main-menu": "প্রধান মেনু",
-	"mobile-frontend-main-menu-page-title": "সাইট পরিভ্রমণ",
 	"mobile-frontend-main-menu-settings-heading": "সেটিং",
 	"mobile-frontend-media-details": "বিস্তারিত",
 	"mobile-frontend-media-license-link": "লাইসেন্স তথ্য",

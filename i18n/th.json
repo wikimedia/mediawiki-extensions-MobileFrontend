@@ -124,7 +124,6 @@
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 {{GENDER:$1|แก้ไข}}ล่าสุดเมื่อ{{PLURAL:$3|$3 วินาที}}ก่อน]โดย {{PLURAL:$5|[$6 $2]|0=ผู้ใช้นิรนาม}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 {{GENDER:$1|แก้ไข}}ล่าสุดเมื่อ{{PLURAL:$3|$3 ปี}}ก่อน]โดย {{PLURAL:$5|[$6 $2]|0=ผู้ใช้นิรนาม}}",
 	"mobile-frontend-main-menu": "เมนูหลัก",
-	"mobile-frontend-main-menu-page-title": "ป้ายบอกทางไซต์",
 	"mobile-frontend-main-menu-settings-heading": "การตั้งค่า",
 	"mobile-frontend-media-details": "รายละเอียด",
 	"mobile-frontend-media-license-link": "ข้อมูลสัญญาอนุญาต",

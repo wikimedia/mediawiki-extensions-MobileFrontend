@@ -116,7 +116,6 @@
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 sidst {{GENDER:$1|redigeret}} for {{PLURAL:$3|$3 sekund|$3 sekunder}} siden] af {{PLURAL:$5|[$6 $2]|0=en anonym bruger}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 sidst {{GENDER:$1|redigeret}} for {{PLURAL:$3|$3 år}} siden] af {{PLURAL:$5|[$6 $2]|0=en anonym bruger}}",
 	"mobile-frontend-main-menu": "Hovedmenu",
-	"mobile-frontend-main-menu-page-title": "Navigering",
 	"mobile-frontend-main-menu-settings-heading": "Indstillinger",
 	"mobile-frontend-media-details": "Detaljer",
 	"mobile-frontend-media-license-link": "Licensoplysninger",

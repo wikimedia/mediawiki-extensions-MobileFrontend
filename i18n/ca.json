@@ -127,7 +127,6 @@
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 Darrera {{GENDER:$1|modificació}} fa {{PLURAL:$3|$3 segon|$3 segons}}] per {{PLURAL:$5|[$6 $2]|0=un usuari anònim}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 Darrera {{GENDER:$1|modificació}} fa {{PLURAL:$3|$3 any|$3 anys}}] per {{PLURAL:$5|[$6 $2]|0=un usuari anònim}}",
 	"mobile-frontend-main-menu": "Menú principal",
-	"mobile-frontend-main-menu-page-title": "Navegació del lloc",
 	"mobile-frontend-main-menu-settings-heading": "Configuració",
 	"mobile-frontend-media-details": "Detalls",
 	"mobile-frontend-media-license-link": "Informació sobre la llicència",

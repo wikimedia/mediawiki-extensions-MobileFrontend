@@ -79,7 +79,6 @@
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 Laas {{GENDER:$1|gewysig}}] deur {{PLURAL:$5|[$6 $2]|0='n anonieme gebruiker}} {{PLURAL:$3|$3 sekonde|$3 sekondes}} gelede",
 	"mobile-frontend-last-modified-with-user-years": "[$4 Laas {{GENDER:$1|gewysig}}] deur {{PLURAL:$5|[$6 $2]|0='n anonieme gebruiker}}   {{PLURAL:$3|$3 jaar}} gelede",
 	"mobile-frontend-main-menu": "Hoofkieslys",
-	"mobile-frontend-main-menu-page-title": "Werfnavigasie",
 	"mobile-frontend-main-menu-settings-heading": "Instellings",
 	"mobile-frontend-media-details": "Detail",
 	"mobile-frontend-media-license-link": "Lisensie-inligting",

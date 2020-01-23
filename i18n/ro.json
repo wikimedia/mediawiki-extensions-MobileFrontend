@@ -108,7 +108,6 @@
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 Ultima {{GENDER:$1|modificare}} efectuată acum {{PLURAL:$3|$3 secundă|$3 secunde|$3 de secunde}}] de către {{PLURAL:$5|[$6 $2]|0=un utilizator anonim}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 Ultima {{GENDER:$1|modificare}} efectuată acum {{PLURAL:$3|$3 an|$3 ani|$3 de ani}}] de către {{PLURAL:$5|[$6 $2]|0=un utilizator anonim}}.",
 	"mobile-frontend-main-menu": "Meniu principal",
-	"mobile-frontend-main-menu-page-title": "Navigare în site",
 	"mobile-frontend-main-menu-settings-heading": "Setări",
 	"mobile-frontend-media-details": "Detalii",
 	"mobile-frontend-media-license-link": "Informații despre licențiere",

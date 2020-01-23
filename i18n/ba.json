@@ -117,7 +117,6 @@
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 Һуңғы {{GENDER:$1|төҙәтеү}}ҙе {{PLURAL:$3|$3 секунд элек|$3 элек|1=кисә}}] {{PLURAL:$5|[$6 $2]|0=аноним ҡатнашыусы}} яһаны",
 	"mobile-frontend-last-modified-with-user-years": "[$4 Һуңғы {{GENDER:$1|төҙәтеү}}ҙе {{PLURAL:$3|$3 йыл|$3 йыл элек|1=кисә}}] {{PLURAL:$5|ҡатнашыусы[$6 $2]|0=аноним ҡатнашыусы}} яһаны",
 	"mobile-frontend-main-menu": "Баш меню",
-	"mobile-frontend-main-menu-page-title": "Сайттың төп йүнәлештәре",
 	"mobile-frontend-main-menu-settings-heading": "Шарттар",
 	"mobile-frontend-media-details": "Ентеклерәк",
 	"mobile-frontend-media-license-link": "Лицензия тураһында мәғлүмәт",

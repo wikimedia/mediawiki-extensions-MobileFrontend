@@ -68,7 +68,6 @@
 	"mobile-frontend-last-modified-with-user-months": "[$4 Ultime {{GENDER:$1|modification}} {{PLURAL:$3|$3 mense|$3 menses}} retro] per {{PLURAL:$5|[$6 $2]|0=un usator anonyme}}",
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 Ultime {{GENDER:$1|modification}} {{PLURAL:$3|$3 secunda|$3 secundas}} retro] per {{PLURAL:$5|[$6 $2]|0=un usator anonyme}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 Ultime {{GENDER:$1|modification}} {{PLURAL:$3|$3 anno|$3 annos}} retro] per {{PLURAL:$5|[$6 $2]|0=un usator anonyme}}",
-	"mobile-frontend-main-menu-page-title": "Navigation in sito",
 	"mobile-frontend-main-menu-settings-heading": "Configuration",
 	"mobile-frontend-media-details": "Detalios",
 	"mobile-frontend-media-license-link": "Information de licentia",

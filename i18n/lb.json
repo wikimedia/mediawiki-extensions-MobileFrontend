@@ -105,7 +105,6 @@
 	"mobile-frontend-last-modified-with-user-minutes": "[$4 Fir d'lescht {{GENDER:$1|geännert}}  {{PLURAL:$3|virun enger Minutt|viru(n) $3 Minutten}}] {{PLURAL:$5|vum [$6 $2]|0=vun engem anonyme Benotzer}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 Fir d'lescht {{GENDER:$1|geännert}} {{PLURAL:$3|virun engem Joer|viru(n) $3 Joer}}]  {{PLURAL:$5|[vum $6 $2]|0=vun engem anonyme Benotzer}}",
 	"mobile-frontend-main-menu": "Haaptmenü",
-	"mobile-frontend-main-menu-page-title": "Navigatioun um Site",
 	"mobile-frontend-main-menu-settings-heading": "Astellungen",
 	"mobile-frontend-media-details": "Detailer",
 	"mobile-frontend-media-license-link": "Lizenzinformatioun",

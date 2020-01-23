@@ -61,7 +61,6 @@
 	"mobile-frontend-last-modified-with-user-months": "[$4 Golygwyd {{GENDER:$1|ddiwethaf}} {{PLURAL:$3||$3 mis|deufis|$3 mis}} yn ôl] gan {{PLURAL:$5|ddefnyddiwr dienw|[$6 $2]}}",
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 Golygwyd {{GENDER:$1|ddiwethaf}} {{PLURAL:$3||$3 eiliad}} yn ôl] gan {{PLURAL:$5|ddefnyddiwr dienw|[$6 $2]}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 Golygwyd {{GENDER:$1|ddiwethaf}} {{PLURAL:$3||blwyddyn|$3 flynedd|$3 mlynedd|$3 mlynedd|$3 blynedd}} yn ôl] gan {{PLURAL:$5|ddefnyddiwr dienw|[$6 $2]}}",
-	"mobile-frontend-main-menu-page-title": "Fforio'r wefan",
 	"mobile-frontend-main-menu-settings-heading": "Gosodiadau",
 	"mobile-frontend-media-details": "Manylion",
 	"mobile-frontend-media-license-link": "Manylion y drwydded",

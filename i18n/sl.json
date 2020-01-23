@@ -90,7 +90,6 @@
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 Zadnjič {{GENDER:$1|spremenil|spremenila}} {{PLURAL:$5|[$6 $2]|0=anonimen uporabnik}} pred {{PLURAL:$3|$3 sekundo|$3 sekundama|$3 sekundami}}].",
 	"mobile-frontend-last-modified-with-user-years": "[$4 Zadnjič {{GENDER:$1|spremenil|spremenila}} {{PLURAL:$5|[$6 $2]|0=anonimen uporabnik}} pred {{PLURAL:$3|$3 letom|$3 letoma|$3 leti}}].",
 	"mobile-frontend-main-menu": "Glavni meni",
-	"mobile-frontend-main-menu-page-title": "Navigacija v spletišču",
 	"mobile-frontend-main-menu-settings-heading": "Nastavitve",
 	"mobile-frontend-media-details": "Podrobnosti",
 	"mobile-frontend-media-license-link": "Informacije o dovoljenju",

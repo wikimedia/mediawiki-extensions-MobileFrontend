@@ -122,7 +122,6 @@
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 Sist {{GENDER:$1|endra}} {{PLURAL:$3|eitt sekund|$3 sekund}} sidan] av {{PLURAL:$5|[$6 $2]|0=ein anonym brukar}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 Sist {{GENDER:$1|endra}} {{PLURAL:$3|eitt år|$3 år}} sidan] av {{PLURAL:$5|[$6 $2]|0=ein anonym brukar}}",
 	"mobile-frontend-main-menu": "Hovudmeny",
-	"mobile-frontend-main-menu-page-title": "Nettstadnavigering",
 	"mobile-frontend-main-menu-settings-heading": "Innstillingar",
 	"mobile-frontend-media-details": "Detaljar",
 	"mobile-frontend-media-license-link": "Lisensinformasjon",

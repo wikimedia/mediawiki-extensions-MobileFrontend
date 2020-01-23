@@ -131,7 +131,6 @@
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 Terakhir {{GENDER:$1|disunting}} {{PLURAL:$3|$3 detik}} yang lalu] oleh {{PLURAL:$5|[$6 $2]|0=seorang pengguna anonim}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 Terakhir {{GENDER:$1|disunting}} {{PLURAL:$3|$3 tahun}} yang lalu] oleh {{PLURAL:$5|[$6 $2]|0=seorang pengguna anonim}}",
 	"mobile-frontend-main-menu": "Menu utama",
-	"mobile-frontend-main-menu-page-title": "Navigasi situs",
 	"mobile-frontend-main-menu-settings-heading": "Pengaturan",
 	"mobile-frontend-media-details": "Rincian",
 	"mobile-frontend-media-license-link": "Informasi lisensi",

@@ -132,7 +132,6 @@
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 آخری {{GENDER:$1|ترمیم}} {{PLURAL:$3|$3 ثانیہ|$3 ثانیے}} قبل] بدست {{PLURAL:$5|[$6 $2]|0=گمنام صارف}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 آخری {{GENDER:$1|ترمیم}} {{PLURAL:$3|$3 برس|$3 سال}} قبل] {{PLURAL:$5|[$6 $2]|0=کسی گمنام صارف}} نے کی",
 	"mobile-frontend-main-menu": "اصل مینیو",
-	"mobile-frontend-main-menu-page-title": "سائٹ کا جائزہ",
 	"mobile-frontend-main-menu-settings-heading": "ترتیبات",
 	"mobile-frontend-media-details": "تفصیلات",
 	"mobile-frontend-media-license-link": "اجازت نامہ کی معلومات",

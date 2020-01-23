@@ -141,7 +141,6 @@
 	"mobile-frontend-last-modified-with-user-seconds": "Stránku [$4 naposledy {{GENDER:$1|upravil|upravila}}] {{PLURAL:$5|[$6 $2]|0=anonymní uživatel}} před $3 {{PLURAL:$3|sekundou|sekundami}}",
 	"mobile-frontend-last-modified-with-user-years": "Stránku [$4 naposledy {{GENDER:$1|upravil|upravila}}] {{PLURAL:$5|[$6 $2]|0=anonymní uživatel}} před $3 {{PLURAL:$3|rokem|lety}}",
 	"mobile-frontend-main-menu": "Hlavní menu",
-	"mobile-frontend-main-menu-page-title": "Navigace po webu",
 	"mobile-frontend-main-menu-settings-heading": "Nastavení",
 	"mobile-frontend-media-details": "Podrobnosti",
 	"mobile-frontend-media-license-link": "Informace o licenci",

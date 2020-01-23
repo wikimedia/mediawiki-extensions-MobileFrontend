@@ -119,7 +119,6 @@
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 Paskutinį kartą {{GENDER:$1|redagavo}} prieš {{PLURAL:$3|$3 sekundę|$3 sekundes|$3 sekundžių}}] {{PLURAL:$5|[$6 $2]|0=anoniminis naudotojas}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 Paskutinį kartą {{GENDER:$1|redagavo}} prieš {{PLURAL:$3|metus|$3 metus|$3 metų}}] {{PLURAL:$5|[$6 $2]|0=anoniminis naudotojas}}",
 	"mobile-frontend-main-menu": "Pagrindinis meniu",
-	"mobile-frontend-main-menu-page-title": "Puslapio navigacija",
 	"mobile-frontend-main-menu-settings-heading": "Nustatymai",
 	"mobile-frontend-media-details": "Informacija",
 	"mobile-frontend-media-license-link": "Licencijos informacija",

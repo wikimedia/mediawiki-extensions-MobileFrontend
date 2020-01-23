@@ -128,7 +128,6 @@
 	"mobile-frontend-last-modified-with-user-seconds": "{{PLURAL:$5|[$6 $2]|0=ڪنھن گمنام واپرائيندڙ}} پاران [$4 آخري ڀيرو {{PLURAL:$3|$3 سيڪنڊ|$3 سيڪنڊَ}} اڳ {{GENDER:$1|سنواريل}}]",
 	"mobile-frontend-last-modified-with-user-years": "{{PLURAL:$5|[$6 $2]|0=ڪنھن گمنام واپرائيندڙ}} پاران [$4 آخري ڀيرو {{PLURAL:$3|$3 سال|$3 سالَ}} اڳ {{GENDER:$1|سنواريل}}]",
 	"mobile-frontend-main-menu": "مُک مينيو",
-	"mobile-frontend-main-menu-page-title": "سائيٽ نيويگيشن",
 	"mobile-frontend-main-menu-settings-heading": "ترتيبون",
 	"mobile-frontend-media-details": "تفصيل",
 	"mobile-frontend-media-license-link": "اجازتنامو معلومات",

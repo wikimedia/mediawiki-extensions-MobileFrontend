@@ -125,7 +125,6 @@
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 {{GENDER:$1|Dibesut}} pungkasan {{PLURAL:$3|$3 sekon}} kapungkur] déning {{PLURAL:$5|[$6 $2]|0=panganggo anonim}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 {{GENDER:$1|Dibesut}} pungkasan {{PLURAL:$3|$3 taun}} kapungkur] déning {{PLURAL:$5|[$6 $2]|0=panganggo anonim}}",
 	"mobile-frontend-main-menu": "Menu Pokok",
-	"mobile-frontend-main-menu-page-title": "Navigasi situs",
 	"mobile-frontend-main-menu-settings-heading": "Setèlan",
 	"mobile-frontend-media-details": "Rerincèn",
 	"mobile-frontend-media-license-link": "Katerangan lisènsi",

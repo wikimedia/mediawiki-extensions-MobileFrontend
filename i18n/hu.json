@@ -132,7 +132,6 @@
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 Utoljára {{GENDER:$1|módosította}}] {{PLURAL:$5|[$6 $2]|0=egy anonim szerkesztő}} $3 másodperce",
 	"mobile-frontend-last-modified-with-user-years": "[$4 Utoljára {{GENDER:$1|módosította}}] {{PLURAL:$5|[$6 $2]|0=egy anonim szerkesztő}} $3 éve",
 	"mobile-frontend-main-menu": "Főmenü",
-	"mobile-frontend-main-menu-page-title": "Oldal navigáció",
 	"mobile-frontend-main-menu-settings-heading": "Beállítások",
 	"mobile-frontend-media-details": "Részletek",
 	"mobile-frontend-media-license-link": "Licencinformációk",

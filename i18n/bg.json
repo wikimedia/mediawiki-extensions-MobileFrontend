@@ -63,7 +63,6 @@
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 Последно {{GENDER:$1|променена}} преди {{PLURAL:$3|$3 секунда|$3 секунди}}] от {{PLURAL:$5|[$6 $2]|0=анонимен потребител}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 Последно {{GENDER:$1|променена}} преди {{PLURAL:$3|$3 година|$3 години}}] от {{PLURAL:$5|[$6 $2]|0=анонимен потребител}}",
 	"mobile-frontend-main-menu": "Основно меню",
-	"mobile-frontend-main-menu-page-title": "Навигация на сайта",
 	"mobile-frontend-main-menu-settings-heading": "Настройки",
 	"mobile-frontend-missing-image": "Изображение",
 	"mobile-frontend-nearby-error": "{{SITENAME}} Наблизо има някои затруднения.",

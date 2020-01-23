@@ -146,7 +146,6 @@
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 Última {{GENDER:$1|modificação}} há {{PLURAL:$3|$3 segundo|$3 segundos}}] por {{PLURAL:$5|[$6 $2]|0=um utilizador anónimo}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 Última {{GENDER:$1|modificação}} há {{PLURAL:$3|$3 ano|$3 anos}}] por {{PLURAL:$5|[$6 $2]|0=um utilizador anónimo}}",
 	"mobile-frontend-main-menu": "Menu principal",
-	"mobile-frontend-main-menu-page-title": "Navegação",
 	"mobile-frontend-main-menu-settings-heading": "Configurações",
 	"mobile-frontend-media-details": "Detalhes",
 	"mobile-frontend-media-license-link": "Informação sobre a licença",

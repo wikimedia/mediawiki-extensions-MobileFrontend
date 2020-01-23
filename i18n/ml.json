@@ -130,7 +130,6 @@
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 അവസാനം {{GENDER:$1|തിരുത്തിയത്}} {{PLURAL:$3|ഒരു സെക്കൻഡ്|$3 സെക്കൻഡ്}} മുമ്പ്] {{PLURAL:$5|[$6 $2]|0=ഒരു അജ്ഞാത ഉപയോക്താവ്}} ആണ്",
 	"mobile-frontend-last-modified-with-user-years": "[$4 അവസാനം {{GENDER:$1|തിരുത്തിയത്}} {{PLURAL:$3|ഒരു വർഷം|$3 വർഷം}} മുമ്പ്] {{PLURAL:$5|[$6 $2]|0=ഒരു അജ്ഞാത ഉപയോക്താവ്}} ആണ്",
 	"mobile-frontend-main-menu": "പ്രധാന മെനു",
-	"mobile-frontend-main-menu-page-title": "സൈറ്റിലൂടെ ഗമിക്കൽ",
 	"mobile-frontend-main-menu-settings-heading": "സജ്ജീകരണങ്ങൾ",
 	"mobile-frontend-media-details": "വിശദാംശങ്ങൾ",
 	"mobile-frontend-media-license-link": "അനുമതി വിവരങ്ങൾ",

@@ -133,7 +133,6 @@
 	"mobile-frontend-last-modified-with-user-seconds": "Ову страницу је [$4 последњи пут {{GENDER:$1|уредио|уредила}}] {{PLURAL:$5|{{GENDER:$1|корисник|корисница}} [$6 $2]|0=анонимни корисник}} пре {{PLURAL:$3|$3 секунде|$3 секунде|$3 секунди}}",
 	"mobile-frontend-last-modified-with-user-years": "Ову страницу је [$4 последњи пут {{GENDER:$1|уредио|уредила}}] {{PLURAL:$5|{{GENDER:$1|корисник|корисница}} [$6 $2]|0=анонимни корисник}} пре {{PLURAL:$3|$3 године|$3 године|$3 година}}",
 	"mobile-frontend-main-menu": "Главни мени",
-	"mobile-frontend-main-menu-page-title": "Навигација по сајту",
 	"mobile-frontend-main-menu-settings-heading": "Подешавања",
 	"mobile-frontend-media-details": "Детаљи",
 	"mobile-frontend-media-license-link": "Информације о лиценци",

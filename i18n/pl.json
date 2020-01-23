@@ -158,7 +158,6 @@
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 Ostatnio  {{GENDER:$1|zmodyfikowano}} {{PLURAL:$3|sekundę|$3 sekundy|$3 sekund}} temu] przez {{PLURAL:$5|[$6 {{GENDER:$1|użytkownika|użytkowniczkę}} $2]|0=anonimowego użytkownika}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 Ostatnio  {{GENDER:$1|zmodyfikowano}} {{PLURAL:$3|rok|$3 lata|$3 lat}} temu] przez {{PLURAL:$5|[$6 {{GENDER:$1|użytkownika|użytkowniczkę}} $2]|0=anonimowego użytkownika}}",
 	"mobile-frontend-main-menu": "Menu główne",
-	"mobile-frontend-main-menu-page-title": "Nawigacja",
 	"mobile-frontend-main-menu-settings-heading": "Ustawienia",
 	"mobile-frontend-media-details": "Szczegóły",
 	"mobile-frontend-media-license-link": "Informacje o licencji",

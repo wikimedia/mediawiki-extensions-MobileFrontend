@@ -154,7 +154,6 @@
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 最後一次{{GENDER:$1|編輯}}於 {{PLURAL:$3|$3 秒}}前]由 {{PLURAL:$5|[$6 $2]|0=一位匿名使用者}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 最後一次{{GENDER:$1|編輯}}於 {{PLURAL:$3|$3 年}}前]由 {{PLURAL:$5|[$6 $2]|0=一位匿名使用者}}",
 	"mobile-frontend-main-menu": "主選單",
-	"mobile-frontend-main-menu-page-title": "網站導覽",
 	"mobile-frontend-main-menu-settings-heading": "設定",
 	"mobile-frontend-media-details": "詳細資料",
 	"mobile-frontend-media-license-link": "授權條款資訊",

@@ -119,7 +119,6 @@
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 {{GENDER:$1|បានកែប្រែ}}ចុងក្រោយ {{PLURAL:$3|$3 វិនាទី|$3 វិនាទី}}មុន] ដោយ {{PLURAL:$5|[$6 $2]|0=អ្នកប្រើប្រាស់អនាមិក}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 {{GENDER:$1|បានកែប្រែ}}ចុងក្រោយ {{PLURAL:$3|$3 ឆ្នាំ|$3 ឆ្នាំ}}មុន] ដោយ {{PLURAL:$5|[$6 $2]|0=អ្នកប្រើប្រាស់អនាមិក}}",
 	"mobile-frontend-main-menu": "បញ្ជីដើម",
-	"mobile-frontend-main-menu-page-title": "ការ​រុករក​ក្នុងវិបសាយ",
 	"mobile-frontend-main-menu-settings-heading": "ការកំណត់​",
 	"mobile-frontend-media-details": "ព័ត៌មាន​លម្អិត​",
 	"mobile-frontend-media-license-link": "ព័ត៌មានពីអាជ្ញាប័ណ្ណ",

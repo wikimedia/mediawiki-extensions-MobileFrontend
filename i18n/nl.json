@@ -141,7 +141,6 @@
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 {{PLURAL:$3|Eén seconde|$3 seconden}} geleden voor het laatst {{GENDER:$1|bewerkt}}] door {{PLURAL:$5|[$6 $2]|0=een anonieme gebruiker}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 {{PLURAL:$3|Vorig jaar|$3 jaar geleden}} voor het laatst {{GENDER:$1|bewerkt}}] door {{PLURAL:$5|[$6 $2]|0=een anonieme gebruiker}}",
 	"mobile-frontend-main-menu": "Hoofdmenu",
-	"mobile-frontend-main-menu-page-title": "Sitenavigatie",
 	"mobile-frontend-main-menu-settings-heading": "Instellingen",
 	"mobile-frontend-media-details": "Details",
 	"mobile-frontend-media-license-link": "Licentiegegevens",

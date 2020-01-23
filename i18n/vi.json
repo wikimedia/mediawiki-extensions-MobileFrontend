@@ -133,7 +133,6 @@
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 {{GENDER:$1}}Sửa đổi lần cuối cùng cách đây $3 giây] bởi {{PLURAL:$5|[$6 $2]|0=một người dùng vô danh}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 {{GENDER:$1}}Sửa đổi lần cuối cùng cách đây $3 năm] bởi {{PLURAL:$5|[$6 $2]|0=một người dùng vô danh}}",
 	"mobile-frontend-main-menu": "Trình đơn chính",
-	"mobile-frontend-main-menu-page-title": "Điều hướng các trang",
 	"mobile-frontend-main-menu-settings-heading": "Tùy chọn",
 	"mobile-frontend-media-details": "Chi tiết",
 	"mobile-frontend-media-license-link": "Thông tin giấy phép",

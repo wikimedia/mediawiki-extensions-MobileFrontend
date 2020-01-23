@@ -171,7 +171,6 @@
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 Последняя правка сделана {{PLURAL:$3|$3 секунду|$3 секунды|$3 секунд|1=секунду}} назад] {{PLURAL:$5|{{GENDER:$1|участником|участницей}} [$6 $2]|0=анонимным участником}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 Последняя правка сделана {{PLURAL:$3|$3 год|$3 года|$3 лет|1=год}} назад] {{PLURAL:$5|{{GENDER:$1|участником|участницей}} [$6 $2]|0=анонимным участником}}",
 	"mobile-frontend-main-menu": "Главное меню",
-	"mobile-frontend-main-menu-page-title": "Навигация по сайту",
 	"mobile-frontend-main-menu-settings-heading": "Настройки",
 	"mobile-frontend-media-details": "Подробности",
 	"mobile-frontend-media-license-link": "Информация о лицензии",

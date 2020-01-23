@@ -108,7 +108,6 @@
 	"mobile-frontend-last-modified-with-user-seconds": "{{PLURAL:$5|[$6 $2]|0=အမည်မသိ အသုံးပြုသူ}}မှ လွန်ခဲ့သော {{PLURAL:$3|$3 စက္ကန့်|$3 စက္ကန့်}} အကြာက [$4 နောက်ဆုံး {{GENDER:$1|တည်းဖြတ်ခဲ့သည်}}]",
 	"mobile-frontend-last-modified-with-user-years": "{{PLURAL:$5|[$6 $2]|0=အမည်မသိ အသုံးပြုသူ}}မှ လွန်ခဲ့သော {{PLURAL:$3|$3 နှစ်|$3 နှစ်}} အကြာက [$4 နောက်ဆုံး {{GENDER:$1|တည်းဖြတ်ခဲ့သည်}}]",
 	"mobile-frontend-main-menu": "ပင်မ မီနူး",
-	"mobile-frontend-main-menu-page-title": "ဆိုဒ်လမ်းညွန်",
 	"mobile-frontend-main-menu-settings-heading": "အပြင်အဆင်များ",
 	"mobile-frontend-media-details": "အသေးစိတ်",
 	"mobile-frontend-media-license-link": "လိုင်စင် အချက်အလက်",

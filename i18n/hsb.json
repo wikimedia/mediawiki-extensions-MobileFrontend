@@ -123,7 +123,6 @@
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 Posledni raz {{GENDER:$1|wobdźěłane}} před {{PLURAL:$3|sekundu|$3 sekundomaj|$3 sekundami}}] wot {{PLURAL:$5|[$6 $2]|0=anonymneho wužiwarja}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 Posledni raz {{GENDER:$1|wobdźěłane}} před {{PLURAL:$3|lětom|lětomaj|$3 lětami}}] wot {{PLURAL:$5|[$6 $2]|0=anonymneho wužiwarja}}",
 	"mobile-frontend-main-menu": "Hłowny meni",
-	"mobile-frontend-main-menu-page-title": "Nawigacija na webstronje",
 	"mobile-frontend-main-menu-settings-heading": "Nastajenja",
 	"mobile-frontend-media-details": "Podrobnosće",
 	"mobile-frontend-media-license-link": "Licencne informacije",

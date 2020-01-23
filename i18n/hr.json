@@ -124,7 +124,6 @@
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 Zadnji je put {{GENDER:$1|uređivao|uređivala|uređivala/uređivao}} {{PLURAL:$5|{{GENDER:$1|suradnik|suradnica|suradnica/suradnik}} [$6 $2]|0=anonimna suradnica / anonomni suradnik}} prije {{PLURAL:$3|$3 sekundu|$3 sekunde|$3 sekunda}}].",
 	"mobile-frontend-last-modified-with-user-years": "[$4 Zadnji je put {{GENDER:$1|uređivao|uređivala|uređivala/uređivao}} {{PLURAL:$5|{{GENDER:$1|suradnik|suradnica|suradnica/suradnik}} [$6 $2]|0=anonimna suradnica / anonomni suradnik}} prije {{PLURAL:$3|$3 godinu|$3 godine|$3 godina}}].",
 	"mobile-frontend-main-menu": "Glavni izbornik",
-	"mobile-frontend-main-menu-page-title": "Navigacija",
 	"mobile-frontend-main-menu-settings-heading": "Postavke",
 	"mobile-frontend-media-details": "Pojedinosti",
 	"mobile-frontend-media-license-link": "Informacije o licenciji",

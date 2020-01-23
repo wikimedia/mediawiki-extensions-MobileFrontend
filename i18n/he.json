@@ -139,7 +139,6 @@
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 {{GENDER:$1|נערך}} לאחרונה לפני {{PLURAL:$3|שנייה אחת|$3 שניות}}] על־ידי {{PLURAL:$5|[$6 $2]|0=אלמוני}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 {{GENDER:$1|נערך}} לאחרונה לפני {{PLURAL:$3|שנה|שנתיים|$3 שנה|$3 שנים}}] על־ידי {{PLURAL:$5|[$6 $2]|0=אלמוני}}",
 	"mobile-frontend-main-menu": "תפריט ראשי",
-	"mobile-frontend-main-menu-page-title": "ניווט באתר",
 	"mobile-frontend-main-menu-settings-heading": "הגדרות",
 	"mobile-frontend-media-details": "פרטים",
 	"mobile-frontend-media-license-link": "מידע על הרישיון",

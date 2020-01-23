@@ -153,7 +153,6 @@
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 Son {{GENDER:$1|değişiklik}} {{PLURAL:$3|$3 saniye|$3 saniye}} önce] {{PLURAL:$5|[$6 $2]|0=bir anonim kullanıcı}} tarafından yapıldı",
 	"mobile-frontend-last-modified-with-user-years": "[$4 Son {{GENDER:$1|değişiklik}} {{PLURAL:$3|$3 yıl|$3 yıl}} önce] {{PLURAL:$5|[$6 $2]|0=bir anonim kullanıcı}} tarafından yapıldı",
 	"mobile-frontend-main-menu": "Ana Menü",
-	"mobile-frontend-main-menu-page-title": "Site dolaşımı",
 	"mobile-frontend-main-menu-settings-heading": "Ayarlar",
 	"mobile-frontend-media-details": "Ayrıntılar",
 	"mobile-frontend-media-license-link": "Lisans bilgisi",

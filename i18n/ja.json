@@ -146,7 +146,6 @@
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 最終{{GENDER:$1|編集}}: {{PLURAL:$3|$3 秒}}前]、{{PLURAL:$5|[$6 $2]|0=匿名利用者}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 最終{{GENDER:$1|編集}}: {{PLURAL:$3|$3 年}}前]、{{PLURAL:$5|[$6 $2]|0=匿名利用者}}",
 	"mobile-frontend-main-menu": "メインメニュー",
-	"mobile-frontend-main-menu-page-title": "サイトナビゲーション",
 	"mobile-frontend-main-menu-settings-heading": "設定",
 	"mobile-frontend-media-details": "詳細",
 	"mobile-frontend-media-license-link": "ライセンス情報",

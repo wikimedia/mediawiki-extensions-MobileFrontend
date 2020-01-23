@@ -93,7 +93,6 @@
 	"mobile-frontend-last-modified-with-user-minutes": "[$4 Τελευταία επεξεργασία {{PLURAL:$3|$3 λεπτό|$3 λεπτά}} πριν] από {{PLURAL:$5|{{GENDER:$1|τον\nτην}} [$6 $2]|0=ανώνυμο χρήστη}}",
 	"mobile-frontend-last-modified-with-user-months": "[$4 Τελευταία επεξεργασία {{PLURAL:$3|$3 μήνα|$3 μήνες}} πριν] από {{PLURAL:$5|{{GENDER:$1|τον\nτην}} [$6 $2]|0=ανώνυμο χρήστη}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 Τελευταία επεξεργασία {{PLURAL:$3|$3 χρόνο|$3 χρόνια}} πριν] από {{PLURAL:$5|{{GENDER:$1|τον\nτην}} [$6 $2]|0=ανώνυμο χρήστη}}",
-	"mobile-frontend-main-menu-page-title": "Πλοήγηση ιστότοπου",
 	"mobile-frontend-main-menu-settings-heading": "Ρυθμίσεις",
 	"mobile-frontend-media-load-fail-retry": "Ανανέωση",
 	"mobile-frontend-missing-image": "Εικόνα",

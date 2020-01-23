@@ -125,7 +125,6 @@
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 Viimati {{GENDER:$1|redigeeritud}} {{PLURAL:$3|ühe|$3}} sekundi eest] ({{PLURAL:$5|[$6 $2]|0=anonüümne kasutaja}})",
 	"mobile-frontend-last-modified-with-user-years": "[$4 Viimati {{GENDER:$1|redigeeritud}} {{PLURAL:$3|ühe|$3}} aasta eest] ({{PLURAL:$5|[$6 $2]|0=anonüümne kasutaja}})",
 	"mobile-frontend-main-menu": "Peamenüü",
-	"mobile-frontend-main-menu-page-title": "Navigeerimine võrgukohas",
 	"mobile-frontend-main-menu-settings-heading": "Eelistused",
 	"mobile-frontend-media-details": "Üksikasjad",
 	"mobile-frontend-media-license-link": "Litsentsiteave",

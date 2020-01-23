@@ -89,7 +89,6 @@
 	"mobile-frontend-last-modified-with-user-seconds": "{{PLURAL:$5|[$6 $2]|0=анонимді қатысушы}} [{{PLURAL:$3|$3 секунд|$3 секунд}} бұрын   $4 соңғы рет {{GENDER:$1|өңдеді}}]",
 	"mobile-frontend-last-modified-with-user-years": "{{PLURAL:$5|[$6 $2]|0=анонимді қатысушы}} [{{PLURAL:$3|$3 жыл|$3 жыл}} бұрын $4 соңғы рет {{GENDER:$1|өңдеді}}]",
 	"mobile-frontend-main-menu": "Негізгі мәзір",
-	"mobile-frontend-main-menu-page-title": "Сайт навигациясы",
 	"mobile-frontend-main-menu-settings-heading": "Баптаулар",
 	"mobile-frontend-media-details": "Бөлшектер",
 	"mobile-frontend-media-license-link": "Лицензиялық ақпараты",

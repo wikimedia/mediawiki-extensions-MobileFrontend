@@ -48,7 +48,6 @@
 	"mobile-frontend-last-modified-with-user-months": "[$4 Tuleetst {{GENDER:$1|bewerket}} föör {{PLURAL:$3|ään muun|$3 muuner}}] faan {{PLURAL:$5|[$6 $2]|0=en ünbekäänden brüker}}",
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 Tuleetst {{GENDER:$1|bewerket}} föör {{PLURAL:$3|ian sekund|$3 sekunden}}] faan {{PLURAL:$5|[$6 $2]|0=en ünbekäänden brüker}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 Tuleetst {{GENDER:$1|bewerket}} föör {{PLURAL:$3|ian juar|$3 juaren}}] faan {{PLURAL:$5|[$6 $2]|0=en ünbekäänden brüker}}",
-	"mobile-frontend-main-menu-page-title": "Sidjen nawigatjuun",
 	"mobile-frontend-main-menu-settings-heading": "Iinstelangen",
 	"mobile-frontend-media-details": "Enkelthaiden",
 	"mobile-frontend-media-license-link": "Muar auer't lisens",

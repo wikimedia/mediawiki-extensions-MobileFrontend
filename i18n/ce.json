@@ -73,7 +73,6 @@
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 ТӀеххьара {{GENDER:$1|нисдар}} дина {{PLURAL:$3|$3 секунд}} хьалха] {{PLURAL:$5|декъашхочо [$6 $2]|0=анонимо}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 ТӀеххьара {{GENDER:$1|нисдар}} дина {{PLURAL:$3|$3 шо}} хьалха] {{PLURAL:$5|декъашхочо [$6 $2]|0=анонимо}}",
 	"mobile-frontend-main-menu": "Коьрта меню",
-	"mobile-frontend-main-menu-page-title": "Сайт чухула навигаци",
 	"mobile-frontend-main-menu-settings-heading": "Параметраш",
 	"mobile-frontend-media-details": "Мадарра",
 	"mobile-frontend-media-license-link": "Лицензех лаьцна хаам",

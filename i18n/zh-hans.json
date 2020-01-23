@@ -176,7 +176,6 @@
 	"mobile-frontend-last-modified-with-user-seconds": "{{PLURAL:$5|[$6 $2]|0=匿名用户}}[$4 最后{{GENDER:$1|编辑}}于{{PLURAL:$3|$3秒}}前]",
 	"mobile-frontend-last-modified-with-user-years": "{{PLURAL:$5|[$6 $2]|0=匿名用户}}[$4 最后{{GENDER:$1|编辑}}于{{PLURAL:$3|$3年}}前]",
 	"mobile-frontend-main-menu": "主菜单",
-	"mobile-frontend-main-menu-page-title": "网站导航",
 	"mobile-frontend-main-menu-settings-heading": "设置",
 	"mobile-frontend-media-details": "详情",
 	"mobile-frontend-media-license-link": "许可协议信息",
