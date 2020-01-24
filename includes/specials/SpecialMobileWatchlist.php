@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\MediaWikiServices;
+use Wikimedia\IPUtils;
 use Wikimedia\Rdbms\IResultWrapper;
 
 /**
@@ -368,7 +369,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		$ts = new MWTimestamp( $row->rc_timestamp );
 		$username = $row->rc_user != 0
 			? $row->rc_user_text
-			: IP::prettifyIP( $row->rc_user_text );
+			: IPUtils::prettifyIP( $row->rc_user_text );
 		$revId = $row->rc_this_oldid;
 		$bytes = $row->rc_new_len - $row->rc_old_len;
 		$isAnon = $row->rc_user == 0;

@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\Revision\RevisionRecord;
+use Wikimedia\IPUtils;
 
 /**
  * This is an abstract class intended for use by special pages that consist primarily of
@@ -109,7 +110,7 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 	protected function getUsernameText( $rev, $user, $unhide ) {
 		$userId = $rev->getUser( RevisionRecord::FOR_THIS_USER, $user );
 		if ( $userId === 0 ) {
-			$username = IP::prettifyIP( $rev->getUserText( RevisionRecord::RAW ) );
+			$username = IPUtils::prettifyIP( $rev->getUserText( RevisionRecord::RAW ) );
 		} else {
 			$username = $rev->getUserText( RevisionRecord::FOR_THIS_USER, $user );
 		}

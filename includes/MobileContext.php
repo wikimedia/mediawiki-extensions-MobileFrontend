@@ -3,6 +3,7 @@
 use MediaWiki\MediaWikiServices;
 use MobileFrontend\Devices\DeviceDetectorService;
 use MobileFrontend\WMFBaseDomainExtractor;
+use Wikimedia\IPUtils;
 
 /**
  * Provide various request-dependant methods to use in mobile context
@@ -768,7 +769,7 @@ class MobileContext extends ContextSource {
 	 * @param array &$parsedUrl Result of parseUrl() or wfParseUrl()
 	 */
 	protected function updateMobileUrlHost( array &$parsedUrl ) {
-		if ( IP::isIPAddress( $parsedUrl['host'] ) ) {
+		if ( IPUtils::isIPAddress( $parsedUrl['host'] ) ) {
 			// Do not update host when IP is used
 			return;
 		}
