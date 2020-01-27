@@ -64,6 +64,9 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 		while ( $node->parentNode ) {
 			/** @phan-suppress-next-line PhanTypeMismatchArgument DOMNode vs. DOMElement */
 			if ( self::matchElement( $node, 'table', '/^infobox$/' ) ||
+				// infobox's can be divs
+				/** @phan-suppress-next-line PhanTypeMismatchArgument DOMNode vs. DOMElement */
+				self::matchElement( $node, 'div', '/^infobox$/' ) ||
 				/** @phan-suppress-next-line PhanTypeMismatchArgument DOMNode vs. DOMElement */
 				self::matchElement( $node, false, $wrapperClass ) ) {
 				$infobox = $node;
@@ -98,7 +101,7 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	 * @return DOMNode|null The first infobox
 	 */
 	private function identifyInfoboxElement( DOMXPath $xPath, DOMNode $body ) {
-		$xPathQueryInfoboxes = './/table[starts-with(@class,"infobox") or contains(@class," infobox")]';
+		$xPathQueryInfoboxes = './/*[starts-with(@class,"infobox") or contains(@class," infobox")]';
 		$infoboxes = $xPath->query( $xPathQueryInfoboxes, $body );
 
 		if ( $infoboxes->length > 0 ) {

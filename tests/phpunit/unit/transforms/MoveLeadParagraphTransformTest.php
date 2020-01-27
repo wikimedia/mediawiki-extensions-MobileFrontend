@@ -93,6 +93,7 @@ class MoveLeadParagraphTransformTest extends \MediaWikiUnitTestCase {
 	}
 
 	public function provideTransform() {
+		$divinfobox = '<div class="infobox infobox_v3">infobox</div>';
 		$infobox = '<table class="infobox">1</table>';
 		$coordinates = '<span id="coordinates"><span>0;0</span></span>';
 		$anotherInfobox = '<table class="infobox">2</table>';
@@ -111,6 +112,11 @@ class MoveLeadParagraphTransformTest extends \MediaWikiUnitTestCase {
 			. '<table class="mf-test-infobox"></table></table>';
 
 		return [
+			[
+				"$divinfobox<p>one</p>",
+				"<p>one</p>$divinfobox",
+				'infoboxes can be divs',
+			],
 			[
 				"$collapsibleNotInfobox<p>one</p>",
 				"$collapsibleNotInfobox<p>one</p>",
