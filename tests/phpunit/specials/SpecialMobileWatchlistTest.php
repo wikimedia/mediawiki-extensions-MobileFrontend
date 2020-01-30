@@ -34,7 +34,7 @@ class SpecialMobileWatchlistTest extends MediaWikiTestCase {
 			'rc_title' => 'Watchers',
 			'rc_minor' => '0',
 			'rc_bot' => '0',
-			'rc_new' => '0',
+			'rc_source' => RecentChange::SRC_NEW,
 			'rc_cur_id' => '2832',
 			'rc_deleted' => 0,
 			'rc_comment_text' => 'A comment',
