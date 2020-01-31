@@ -525,9 +525,6 @@
 				"mobile-frontend-languages-structured-overlay-search-input-placeholder"
 			]
 		},
-		"mobile.mainpage.css": {
-			"class": "MobileFrontend\\ResourceLoaderModules\\MobileMainPageStyleModule"
-		},
 		"mobile.site": {
 			"dependencies": [ "site" ],
 			"targets": "mobile",
@@ -841,7 +838,6 @@
 			"name": "prefixsearch",
 			"prefix": "ps"
 		},
-		"MFMobileMainPageCss": false,
 		"MFMinCachedPageSize": 65536,
 		"MFAutodetectMobileView": true,
 		"MFVaryOnUA": false,

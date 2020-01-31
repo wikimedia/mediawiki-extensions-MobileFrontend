@@ -177,14 +177,6 @@ This should not be used in production, it is strictly for development purposes.
 * Type: `string`
 * Default: ''
 
-#### $wgMFMobileMainPageCss
-
-Allow editors to edit MediaWiki:MobileMainPage.css to serve render blocking css to the main
-page.
-
-* Type: `boolean`
-* Default: false
-
 #### $wgMFMwApiContentProviderBaseUri
 
 URL to be used by the MwApiMobileFormatter class. Points to a MediaWiki
