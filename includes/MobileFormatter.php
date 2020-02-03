@@ -18,6 +18,12 @@ class MobileFormatter extends HtmlFormatter {
 	const STYLE_COLLAPSIBLE_SECTION_CLASS = 'collapsible-block';
 
 	/**
+	 * Should legacy transforms be applied?
+	 * @var boolean $legacyTransformsDisabled
+	 */
+	private $legacyTransformsDisabled = false;
+
+	/**
 	 * Whether scripts can be added in the output.
 	 * @var bool
 	 */
@@ -128,6 +134,12 @@ class MobileFormatter extends HtmlFormatter {
 			$formatter->enableExpandableSections( $enableSections );
 		}
 
+		$request = $context->getRequest();
+		$formatter->disableLegacyTransforms(
+			// avoid caching problems
+			$request->getBool( 'debug' )
+			&& $request->getBool( 'mfnolegacytransform' )
+		);
 		$formatter->setIsMainPage( $isMainPage && $mfSpecialCaseMainPage );
 
 		return $formatter;
@@ -203,6 +215,14 @@ class MobileFormatter extends HtmlFormatter {
 	}
 
 	/**
+	 * Disable any legacy transforms
+	 * @param bool $disable whether legacy transforms should be disabled.
+	 */
+	public function disableLegacyTransforms( bool $disable ) : void {
+		$this->legacyTransformsDisabled = $disable;
+	}
+
+	/**
 	 * Check whether the MobileFormatter can be applied to the text of a page.
 	 * @param string $text
 	 * @param array $options with 'maxHeadings' and 'maxImages' keys that limit the MobileFormatter
@@ -261,7 +281,7 @@ class MobileFormatter extends HtmlFormatter {
 	 * @return string Processed HTML
 	 */
 	public function getText( $element = null ) {
-		if ( $this->mainPage ) {
+		if ( $this->mainPage && !$this->legacyTransformsDisabled ) {
 			$transform = new LegacyMainPageTransform();
 			$doc = $this->getDoc();
 			/** @phan-suppress-next-line PhanTypeMismatchArgument DOMNode vs. DOMElement */
