@@ -276,6 +276,9 @@
 				"mobile.messageBox.styles"
 			],
 			"messages": [
+				"mobile-frontend-categories-heading",
+				"mobile-frontend-categories-add",
+				"mobile-frontend-categories-subheading",
 				"echo-mark-all-as-read",
 				"echo-overlay-link",
 				"mobile-frontend-talk-add-overlay-submit",
@@ -491,10 +494,7 @@
 			],
 			"messages": [
 				"mobile-frontend-categories-notification",
-				"mobile-frontend-categories-heading",
-				"mobile-frontend-categories-subheading",
 				"mobile-frontend-categories-nocat",
-				"mobile-frontend-categories-add",
 				"mobile-frontend-categories-search",
 				"mobile-frontend-categories-nodata",
 				"mobile-frontend-categories-summary",

@@ -1,8 +1,9 @@
 var
-	Overlay = require( '../mobile.startup/Overlay' ),
-	Anchor = require( '../mobile.startup/Anchor' ),
-	header = require( '../mobile.startup/headers' ).header,
-	CategoryTabs = require( './CategoryTabs' );
+	Overlay = require( './Overlay' ),
+	promisedView = require( './promisedView' ),
+	Anchor = require( './Anchor' ),
+	m = require( './moduleLoaderSingleton' ),
+	header = require( './headers' ).header;
 
 /**
  * Gets an overlay for displaying categories
@@ -32,13 +33,21 @@ function categoryOverlay( options ) {
 			)
 		]
 	} );
-	widget = new CategoryTabs(
-		{
-			eventBus: options.eventBus,
-			api: options.api,
-			title: options.title,
-			subheading: mw.msg( 'mobile-frontend-categories-subheading' )
-		}
+
+	widget = promisedView(
+		mw.loader.using( 'mobile.categories.overlays' ).then( function () {
+			var categories = m.require( 'mobile.categories.overlays' ),
+				CategoryTabs = categories.CategoryTabs;
+
+			return new CategoryTabs(
+				{
+					eventBus: options.eventBus,
+					api: options.api,
+					title: options.title,
+					subheading: mw.msg( 'mobile-frontend-categories-subheading' )
+				}
+			);
+		} )
 	);
 	overlay.$el.find( '.overlay-content' ).append( widget.$el );
 	return overlay;
