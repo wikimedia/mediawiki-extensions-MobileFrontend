@@ -9,7 +9,8 @@ class MobileFrontendSkinHooksTest extends MediaWikiLangTestCase {
 	 * @covers ::interimTogglingSupport
 	 */
 	public function testInterimTogglingSupport() {
-		$js = MobileFrontendSkinHooks::interimTogglingSupport();
+		$nonce = RequestContext::getMain()->getOutput()->getCSP()->getNonce();
+		$js = MobileFrontendSkinHooks::interimTogglingSupport( $nonce );
 
 		$this->assertStringContainsString(
 			'function mfTempOpenSection(',

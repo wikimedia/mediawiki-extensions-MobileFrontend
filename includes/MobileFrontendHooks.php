@@ -211,7 +211,7 @@ class MobileFrontendHooks {
 		) {
 			$html .= Html::inlineScript( ResourceLoader::filter( 'minify-js',
 				MobileFrontendSkinHooks::gradeCImageSupport()
-			) );
+			), $skin->getOutput()->getCSP()->getNonce() );
 		}
 		return true;
 	}
@@ -254,7 +254,8 @@ class MobileFrontendHooks {
 		if ( $namespaceAllowed && ( $displayMobileView || $alwaysUseProvider ) ) {
 			$text = ExtMobileFrontend::domParse( $out, $text, $displayMobileView );
 			if ( !$title->isMainPage() ) {
-				$text = MobileFrontendSkinHooks::interimTogglingSupport() . $text;
+				$nonce = $out->getCSP()->getNonce();
+				$text = MobileFrontendSkinHooks::interimTogglingSupport( $nonce ) . $text;
 			}
 		}
 		return true;
