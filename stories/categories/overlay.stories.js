@@ -22,7 +22,6 @@ storiesOf( 'categories' )
 			return new CategoryTabs( {
 				title: 'Foo',
 				eventBus: fakeEventBus,
-				subheading: 'Look at these categories',
 				api: {
 					get: () => Promise.resolve( categoriesResponse )
 				}

@@ -16,7 +16,6 @@ var
  *
  * @param {Object} options Configuration options
  * @param {string} options.title of page to obtain categories for
- * @param {string} options.subheading for explaining the list of categories.
  * @param {mw.Api} options.api for use with CategoryGateway
  * @param {OO.EventEmitter} options.eventBus Object used to listen for category-added
  * and scroll:throttled events
@@ -30,7 +29,12 @@ function CategoryTabs( options ) {
 		this,
 		util.extend(
 			true,
-			{ events: { 'click .catlink': 'onCatlinkClick' } },
+			{
+				events: { 'click .catlink': 'onCatlinkClick' },
+				normalcatlink: mw.msg( 'mobile-frontend-categories-normal' ),
+				hiddencatlink: mw.msg( 'mobile-frontend-categories-hidden' ),
+				subheading: mw.msg( 'mobile-frontend-categories-subheading' )
+			},
 			options
 		)
 	);
@@ -38,16 +42,6 @@ function CategoryTabs( options ) {
 
 mfExtend( CategoryTabs, View, {
 	isTemplateMode: true,
-	/**
-	 * @memberof CategoryTabs
-	 * @instance
-	 * @mixes View#defaults
-	 * @property {Object} defaults Default options hash.
-	 */
-	defaults: {
-		normalcatlink: mw.msg( 'mobile-frontend-categories-normal' ),
-		hiddencatlink: mw.msg( 'mobile-frontend-categories-hidden' )
-	},
 	/**
 	 * @inheritdoc
 	 * @memberof CategoryTabs

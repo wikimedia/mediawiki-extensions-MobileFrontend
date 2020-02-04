@@ -11,7 +11,6 @@ var
  * @param {Object} options Configuration options
  * @param {string} options.title of page to obtain categories for
  * @param {mw.Api} options.api for usage in CategoryTabs
- * @param {string} options.subheading for usage in CategoryTabs
  * @param {OO.EventEmitter} options.eventBus Object used to listen for category-added
  * and scroll:throttled events
  * @return {Overlay}
@@ -43,8 +42,7 @@ function categoryOverlay( options ) {
 				{
 					eventBus: options.eventBus,
 					api: options.api,
-					title: options.title,
-					subheading: mw.msg( 'mobile-frontend-categories-subheading' )
+					title: options.title
 				}
 			);
 		} )
