@@ -71,7 +71,7 @@ function referenceDrawer( props ) {
 						errorIcon,
 						util.parseHTML( '<sup>' ).text( props.title ),
 						props.text ?
-							util.parseHTML( '<span>' ).html( props.text ) :
+							util.parseHTML( '<span>' ).html( ' ' + props.text ) :
 							icons.spinner().$el
 					] )
 				]
