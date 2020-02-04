@@ -6,13 +6,13 @@ use MediaWiki\Storage\RevisionRecord;
  * Show the difference between two revisions of a page
  */
 class SpecialMobileDiff extends MobileSpecialPage {
-	/** @var boolean $hasDesktopVersion Does this special page has a desktop version? */
+	/** @var bool Does this special page has a desktop version? */
 	protected $hasDesktopVersion = true;
-	/** @var integer $revId Saves the actual revision ID */
+	/** @var int Saves the revision ID of the actual revision in $rev */
 	private $revId;
-	/** @var Revision $rev Saves the revision Object of actual revision */
+	/** @var Revision */
 	private $rev;
-	/** @var Revision $prevRev Saves the previous revision */
+	/** @var Revision */
 	private $prevRev;
 	/** @var Title Saves the title of the actual revision */
 	private $targetTitle;

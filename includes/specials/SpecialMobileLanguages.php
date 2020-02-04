@@ -6,7 +6,7 @@ use MediaWiki\MediaWikiServices;
  * Provides a list of languages available for a page
  */
 class SpecialMobileLanguages extends MobileSpecialPage {
-	/** @var Title $title Saves the title object to get languages for */
+	/** @var Title Saves the title object to get languages for */
 	private $title;
 
 	public function __construct() {

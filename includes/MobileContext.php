@@ -25,18 +25,19 @@ class MobileContext extends ContextSource {
 
 	/**
 	 * Saves the testing mode user has opted in: 'beta' or 'stable'
-	 * @var string $mobileMode
+	 * @var string
 	 */
 	protected $mobileMode;
 
 	/**
 	 * Save explicitly requested format
-	 * @var string $useFormat
+	 * @var string
 	 */
 	protected $useFormat;
+
 	/**
 	 * Save whether current page is blacklisted from displaying in mobile view
-	 * @var boolean $blacklistedPage
+	 * @var bool
 	 */
 	protected $blacklistedPage;
 
@@ -54,58 +55,65 @@ class MobileContext extends ContextSource {
 	 *
 	 * @see MobileContext#isMobileDevice
 	 *
-	 * @var bool|null $isMobileDevice
+	 * @var bool|null
 	 */
 	private $isMobileDevice = null;
 
 	/**
-	 * @var string $action MediaWiki 'action'
+	 * @var string MediaWiki 'action'
 	 */
 	protected $action;
 
 	/**
 	 * Saves requested Mobile action
-	 * @var string $mobileAction
+	 * @var string
 	 */
 	protected $mobileAction;
 
 	/**
 	 * Save whether mobile view is explicitly requested
-	 * @var boolean $forceMobileView
+	 * @var bool
 	 */
 	private $forceMobileView = false;
+
 	/**
 	 * Save whether content should be transformed to better suit mobile devices
-	 * @var boolean $contentTransformations
+	 * @var bool
 	 */
 	private $contentTransformations = true;
+
 	/**
 	 * Save whether or not we should display the mobile view
-	 * @var boolean $mobileView
+	 * @var bool
 	 */
 	private $mobileView = null;
+
 	/**
 	 * Have we already checked for desktop/mobile view toggling?
-	 * @var boolean $toggleViewChecked
+	 * @var bool
 	 */
 	private $toggleViewChecked = false;
+
 	/**
-	 * Save an instance of this class
-	 * @var MobileContext $instance
+	 * @var self
 	 */
 	private static $instance = null;
+
 	/**
 	 * @var string What to switch the view to
 	 */
 	private $viewChange = '';
+
 	/**
 	 * @var String Domain to use for the stopMobileRedirect cookie
 	 */
 	public static $mfStopRedirectCookieHost = null;
+
 	/**
 	 * @var String Stores the actual mobile url template.
 	 */
 	private $mobileUrlTemplate = false;
+
 	/**
 	 * @var Config
 	 */
@@ -114,11 +122,11 @@ class MobileContext extends ContextSource {
 	/**
 	 * Returns the actual MobileContext Instance or create a new if no exists
 	 * @deprecated use MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
-	 * @return MobileContext
+	 * @return self
 	 */
 	public static function singleton() {
 		if ( !self::$instance ) {
-			self::$instance = new MobileContext( RequestContext::getMain() );
+			self::$instance = new self( RequestContext::getMain() );
 		}
 		return self::$instance;
 	}

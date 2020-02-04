@@ -9,19 +9,19 @@ use Wikimedia\Rdbms\IResultWrapper;
  */
 class SpecialMobileContributions extends SpecialMobileHistory {
 	/**
-	 * @var string $specialPageName The Name of the special page
+	 * @var string The Name of the special page
 	 *		(Note we do not redirect to Special:History/$par to
 	 *		allow the parameter to be used for usernames)
 	 */
 	protected $specialPageName = 'Contributions';
-	/** @var User $user Saves the userobject */
+	/** @var User */
 	protected $user;
 	/**
-	 * @var MWTimestamp $lastDate A timestamp used for
+	 * @var MWTimestamp A timestamp used for
 	 *		MobileSpecialPageFeed::renderListHeaderWhereNeeded
 	 */
 	protected $lastDate;
-	/** @var bool $showUsername Whether to show the username in results or not */
+	/** @var bool Whether to show the username in results or not */
 	protected $showUsername = false;
 	/** @var array Lengths of previous revisions */
 	protected $prevLengths = [];

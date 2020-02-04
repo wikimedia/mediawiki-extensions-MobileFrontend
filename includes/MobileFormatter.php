@@ -19,40 +19,40 @@ class MobileFormatter extends HtmlFormatter {
 
 	/**
 	 * Whether scripts can be added in the output.
-	 * @var boolean $scriptsEnabled
+	 * @var bool
 	 */
 	private $scriptsEnabled = true;
 
 	/**
 	 * The current revision id of the Title being worked on
-	 * @var integer $revId
+	 * @var int
 	 */
 	private $revId;
 
-	/** @var array $topHeadingTags Array of strings with possible tags,
+	/**
+	 * @var string[] Array of strings with possible tags,
 	 * can be recognized as top headings.
 	 */
 	public $topHeadingTags = [];
 
 	/**
-	 * @var LazyImageTransform $lazyTransform
+	 * @var LazyImageTransform
 	 */
 	protected $lazyTransform;
 
 	/**
-	 * Saves a Title Object
-	 * @var Title $title
+	 * @var Title
 	 */
 	protected $title;
 
 	/**
 	 * Are sections expandable?
-	 * @var boolean $expandableSections
+	 * @var bool
 	 */
 	protected $expandableSections = false;
 	/**
 	 * Whether actual page is the main page and should be special cased
-	 * @var boolean $mainPage
+	 * @var bool
 	 */
 	protected $mainPage = false;
 
@@ -110,7 +110,7 @@ class MobileFormatter extends HtmlFormatter {
 	 * @param bool $enableSections (optional)
 	 *  whether to wrap the content of sections
 	 *
-	 * @return MobileFormatter
+	 * @return self
 	 */
 	public static function newFromContext(
 		MobileContext $context, IContentProvider $provider, $enableSections = false
@@ -121,7 +121,7 @@ class MobileFormatter extends HtmlFormatter {
 		$title = $context->getTitle();
 		$isMainPage = $title->isMainPage();
 		$html = self::wrapHTML( $provider->getHTML() );
-		$formatter = new MobileFormatter( $html, $title, $config, $context );
+		$formatter = new self( $html, $title, $config, $context );
 		if ( $isMainPage ) {
 			$formatter->enableExpandableSections( !$mfSpecialCaseMainPage );
 		} else {

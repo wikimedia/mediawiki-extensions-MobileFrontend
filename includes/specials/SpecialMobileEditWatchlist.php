@@ -6,7 +6,7 @@ use MediaWiki\MediaWikiServices;
  * The mobile version of the watchlist editing page.
  */
 class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
-	/** @var string $offsetTitle The name of the title to begin listing the watchlist from */
+	/** @var string The name of the title to begin listing the watchlist from */
 	protected $offsetTitle;
 
 	public function __construct() {

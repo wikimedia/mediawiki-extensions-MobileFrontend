@@ -18,16 +18,16 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	const VIEW_LIST = 'a-z';
 	const VIEW_FEED = 'feed';
 
-	/** @var string $view Saves, how the watchlist is sorted: a-z or as a feed */
+	/** @var string Saves, how the watchlist is sorted: a-z or as a feed */
 	private $view;
 
 	public function __construct() {
 		parent::__construct( 'Watchlist' );
 	}
 
-	/** @var string $filter Saves the actual used filter in feed view */
+	/** @var string Saves the actual used filter in feed view */
 	private $filter;
-	/** @var boolean $usePageImages Saves whether display images or not */
+	/** @var bool Saves whether display images or not */
 	private $usePageImages;
 
 	/**

@@ -119,7 +119,7 @@ class MobilePage {
 	/**
 	 * Check whether a page has a thumbnail associated with it
 	 *
-	 * @return Boolean whether the page has an image associated with it
+	 * @return bool whether the page has an image associated with it
 	 */
 	public function hasThumbnail() {
 		return $this->file ? true : false;

@@ -8,17 +8,17 @@ use Wikimedia\Rdbms\IResultWrapper;
  * Mobile formatted history of of a page
  */
 class SpecialMobileHistory extends MobileSpecialPageFeed {
-	/** @var boolean $hasDesktopVersion Whether the mobile special page has a desktop special page */
+	/** @var bool Whether the mobile special page has a desktop special page */
 	protected $hasDesktopVersion = true;
 	const LIMIT = 50;
 	const DB_REVISIONS_TABLE = 'revision';
-	/** @var string|null $offset timestamp to offset results from */
+	/** @var string|null Timestamp to offset results from */
 	protected $offset;
 
-	/** @var string $specialPageName name of the special page */
+	/** @var string */
 	protected $specialPageName = 'History';
 
-	/** @var Title|null $title Null if no title passed */
+	/** @var Title|null Null if no title passed */
 	protected $title;
 
 	/** @var string a message key for the error message heading that should be shown on a 404 */
