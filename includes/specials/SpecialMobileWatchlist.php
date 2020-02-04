@@ -12,7 +12,6 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	// WatchListGateway.
 	const LIMIT = 50;
 
-	const THUMB_SIZE = MobilePage::SMALL_IMAGE_WIDTH;
 	const VIEW_OPTION_NAME = 'mfWatchlistView';
 	const FILTER_OPTION_NAME = 'mfWatchlistFilter';
 	const VIEW_LIST = 'a-z';
@@ -258,7 +257,8 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 			'LIMIT' => self::LIMIT
 		];
 
-		$rollbacker = $user->isAllowed( 'rollback' );
+		$rollbacker = MediaWikiServices::getInstance()->getPermissionManager()
+			->userHasRight( $user, 'rollback' );
 		if ( $rollbacker ) {
 			$tables[] = 'page';
 			$join_conds['page'] = [ 'LEFT JOIN', 'rc_cur_id=page_id' ];
