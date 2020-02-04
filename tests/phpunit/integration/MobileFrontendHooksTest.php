@@ -22,7 +22,7 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 		$fallback = function () {
 			$this->fail( 'Fallback shouldn\'t be called' );
 		};
-		$this->assertEquals( MobileFrontendHooks::findTagline( $po, $fallback ), false );
+		$this->assertFalse( MobileFrontendHooks::findTagline( $po, $fallback ) );
 	}
 
 	/**
@@ -37,7 +37,7 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 		$fallback = function () {
 			$this->fail( 'Fallback shouldn\'t be called' );
 		};
-		$this->assertEquals( MobileFrontendHooks::findTagline( $poWithDesc, $fallback ), 'desc' );
+		$this->assertSame( 'desc', MobileFrontendHooks::findTagline( $poWithDesc, $fallback ) );
 	}
 
 	/**
@@ -47,14 +47,16 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 	 */
 	public function testFindTaglineWhenOnlyItemIsPresent() {
 		$fallback = function ( $item ) {
-			$this->assertEquals( 'W2', $item );
+			$this->assertSame( 'W2', $item );
 			return 'Hello Wikidata';
 		};
 
 		$poWithItem = new ParserOutput();
 		$poWithItem->setProperty( 'wikibase_item', 'W2' );
-		$this->assertEquals( MobileFrontendHooks::findTagline( $poWithItem, $fallback ),
-			'Hello Wikidata' );
+		$this->assertSame(
+			'Hello Wikidata',
+			MobileFrontendHooks::findTagline( $poWithItem, $fallback )
+		);
 	}
 
 	/**
@@ -70,8 +72,10 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 		$poWithBoth = new ParserOutput();
 		$poWithBoth->setProperty( 'wikibase-shortdesc', 'Hello world' );
 		$poWithBoth->setProperty( 'wikibase_item', 'W2' );
-		$this->assertEquals( MobileFrontendHooks::findTagline( $poWithBoth, $fallback ),
-			'Hello world' );
+		$this->assertSame(
+			'Hello world',
+			MobileFrontendHooks::findTagline( $poWithBoth, $fallback )
+		);
 	}
 
 	/**
@@ -104,21 +108,21 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 
 		// test, if alternate or canonical link is added, but not both
 		$links = $out->getLinkTags();
-		$this->assertEquals( $isAlternateCanonical, count( $links ),
+		$this->assertCount( $isAlternateCanonical, $links,
 			'test, if alternate or canonical link is added, but not both' );
 		// if there should be an alternate or canonical link, check, if it's the correct one
 		if ( $isAlternateCanonical ) {
 			// should be canonical link, not alternate in mobile view
-			$this->assertEquals( 'canonical', $links[0]['rel'],
+			$this->assertSame( 'canonical', $links[0]['rel'],
 				'should be canonical link, not alternate in mobile view' );
 		}
 		$varyHeader = $out->getVaryHeader();
-		$this->assertEquals( $mfVaryHeaderSet, strpos( $varyHeader, 'User-Agent' ) !== false,
+		$this->assertSame( $mfVaryHeaderSet, strpos( $varyHeader, 'User-Agent' ) !== false,
 			'check the status of the User-Agent vary header when wgMFVaryOnUA is enabled' );
 
 		// check, if XAnalytics is set, if it should be
 		$resp = $param['context']->getRequest()->response();
-		$this->assertEquals( $isXAnalytics, (bool)$resp->getHeader( 'X-Analytics' ),
+		$this->assertSame( $isXAnalytics, (bool)$resp->getHeader( 'X-Analytics' ),
 			'check, if XAnalytics is set, if it should be' );
 
 		// test with forced desktop view
@@ -130,17 +134,17 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 		MobileFrontendHooks::onBeforePageDisplay( $out, $skin );
 		// test, if alternate or canonical link is added, but not both
 		$links = $out->getLinkTags();
-		$this->assertEquals( $isAlternateCanonical, count( $links ),
+		$this->assertCount( $isAlternateCanonical, $links,
 			'test, if alternate or canonical link is added, but not both' );
 		// if there should be an alternate or canonical link, check, if it's the correct one
 		if ( $isAlternateCanonical ) {
 			// should be alternate link, not canonical in desktop view
-			$this->assertEquals( 'alternate', $links[0]['rel'],
+			$this->assertSame( 'alternate', $links[0]['rel'],
 				'should be alternate link, not canonical in desktop view' );
 		}
 		$varyHeader = $out->getVaryHeader();
 		// check, if the vary header is set in desktop mode
-		$this->assertEquals( $mfVaryHeaderSet, strpos( $varyHeader, 'User-Agent' ) !== false,
+		$this->assertSame( $mfVaryHeaderSet, strpos( $varyHeader, 'User-Agent' ) !== false,
 			'check, if the vary header is set in desktop mode' );
 		// there should never be an XAnalytics header in desktop mode
 		$resp = $param['context']->getRequest()->response();
@@ -272,7 +276,7 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 
 		MobileFrontendHooks::onPageRenderingHash( $confstr, $user, $forOptions );
 
-		$this->assertEquals( $expectedConfstr, $confstr );
+		$this->assertSame( $expectedConfstr, $confstr );
 	}
 
 	public static function provideShouldMobileFormatSpecialPages() {
@@ -332,7 +336,7 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 		$this->setMwGlobals( [
 			'wgMFEnableMobilePreferences' => $enabled,
 		] );
-		$this->assertEquals( $expected,
+		$this->assertSame( $expected,
 			MobileFrontendHooks::shouldMobileFormatSpecialPages( $user ) );
 	}
 
@@ -380,7 +384,7 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 			$linkAttribs
 		);
 
-		$this->assertEquals( $expected, array_key_exists( 'srcset', $attribs ) );
+		$this->assertSame( $expected, array_key_exists( 'srcset', $attribs ) );
 	}
 
 	/**
