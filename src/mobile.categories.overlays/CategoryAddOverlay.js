@@ -14,10 +14,8 @@ var
  * @extends Overlay
  * @uses CategoryGateway
  * @param {Object} options Configuration options
- * @param {OO.EventEmitter} options.eventBus Object used to emit category-added events
  */
 function CategoryAddOverlay( options ) {
-	this.eventBus = options.eventBus;
 	Overlay.call(
 		this,
 		util.extend(
@@ -49,10 +47,15 @@ mfExtend( CategoryAddOverlay, Overlay, {
 	 */
 	template: util.template( `
 <div class="overlay-header-container header-container position-fixed"></div>
-<div class="content-header panel add-panel overlay-content">
-	<div class="category-add-input"></div>
+<div class="overlay-content">
+	<!-- Should be broken out into separate component -->
+	<div class="category-editor">
+		<div class="content-header panel add-panel">
+			<div class="category-add-input"></div>
+		</div>
+		<p class="overlay-content category-suggestions panel"></p>
+	</div>
 </div>
-<p class="overlay-content category-suggestions panel"></p>
 	` ),
 
 	/**
