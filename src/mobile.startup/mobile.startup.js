@@ -10,6 +10,7 @@ module.exports = {
 	mfExtend: require( './mfExtend' ),
 	time: require( './time' ),
 	util,
+	headers: require( './headers' ),
 	View: require( './View' ),
 	PageGateway: require( './PageGateway' ),
 	Browser: require( './Browser' ),
