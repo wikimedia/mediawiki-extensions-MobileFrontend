@@ -34,7 +34,8 @@
 			"Elroy",
 			"Optilete",
 			"Xbaked potatox",
-			"RadioAzureus"
+			"RadioAzureus",
+			"Bdijkstra"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Of een gebruiker wel of niet via de mobiele interface bewerkt",
@@ -161,7 +162,7 @@
 	"mobile-frontend-nearby-info-description": "U kunt interessante Wikipedia-artikelen over plaatsen bij u in de buurt lezen",
 	"mobile-frontend-nearby-info-show-button": "Toon pagina's in de buurt",
 	"mobile-frontend-news-items": "In het nieuws",
-	"mobile-frontend-opt-in-explain": "Door mee te doen aan de beta krijgt u toegang tot de laatste experimentele functies, met het risico op fouten en problemen.",
+	"mobile-frontend-opt-in-explain": "{{SITENAME}} bèta is een manier voor u om de laatste experimentele functies uit te proberen en om ons waardevolle feedback te geven",
 	"mobile-frontend-overlay-close": "Sluiten",
 	"mobile-frontend-privacy-link-text": "Privacy",
 	"mobile-frontend-references-citation": "Referentie",
@@ -239,7 +240,7 @@
 	"mobile-frontend-amc-outreach-intro": "Introductie geavanceerde modus",
 	"mobile-frontend-amc-outreach-enable": "Geavanceerde modus inschakelen",
 	"mobile-frontend-amc-outreach-no-thanks": "Nee, bedankt",
-	"mobile-frontend-beta-only": "Functie alleen beschikbaar in betamodus",
+	"mobile-frontend-beta-only": "Functie alleen beschikbaar in bètamodus",
 	"mobile-frontend-console-recruit": "Leer meer over hoe we onze mobiele website bouwen op https://www.mediawiki.org/wiki/Extension:MobileFrontend",
 	"prefs-mobile": "Mobiele instellingen"
 }
