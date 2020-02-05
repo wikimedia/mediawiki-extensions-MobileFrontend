@@ -117,25 +117,6 @@ QUnit.test( '#show', function ( assert ) {
 	assert.strictEqual( showSpy.callCount, 1, 'OverlayManager.show called on route change' );
 } );
 
-QUnit.test( '#add, with $.Deferred factory', function ( assert ) {
-	var deferred = util.Deferred(),
-		fakeOverlay = this.createFakeOverlay();
-	deferred.show = sandbox.spy();
-
-	overlayManager.add( /^foo$/, function () {
-		return deferred;
-	} );
-	fakeRouter.emit( 'route', {
-		path: 'foo'
-	} );
-	deferred.resolve( fakeOverlay );
-
-	return deferred.then( function () {
-		assert.notOk( deferred.show.called, 'don\'t call show on Deferred' );
-		assert.strictEqual( fakeOverlay.show.callCount, 1, 'show registered overlay' );
-	} );
-} );
-
 QUnit.test( '#add, with current path', function ( assert ) {
 	var
 		fakeOverlay = this.createFakeOverlay(),
@@ -166,7 +147,7 @@ QUnit.test( '#add, with string literal (matching)', function ( assert ) {
 	// error since this is an invalid regex (Unterminated character)
 	// eslint-disable-next-line no-useless-escape
 	overlayManager.add( '[.*+?^${}()|[\][(foo)', function () {
-		return deferred;
+		return fakeOverlay;
 	} );
 	fakeRouter.emit( 'route', {
 		// eslint-disable-next-line no-useless-escape

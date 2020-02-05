@@ -157,21 +157,11 @@ OverlayManager.prototype = {
 				// if the match is an overlay that was previously opened, reuse it
 				self._show( match.overlay );
 			} else {
-				// else create an overlay using the factory function result (either
-				// a promise or an overlay)
+				// else create an overlay using the factory function result
 				factoryResult = match.factoryResult;
-				// http://stackoverflow.com/a/13075985/365238
-				if ( typeof factoryResult.promise === 'function' ) {
-					factoryResult.then( function ( overlay ) {
-						match.overlay = overlay;
-						attachHideEvent( overlay );
-						self._show( overlay );
-					} );
-				} else {
-					match.overlay = factoryResult;
-					attachHideEvent( match.overlay );
-					self._show( factoryResult );
-				}
+				match.overlay = factoryResult;
+				attachHideEvent( match.overlay );
+				self._show( factoryResult );
 			}
 		}
 	},
@@ -339,8 +329,7 @@ OverlayManager.prototype = {
 	 * perform any encoding (unless they explicitly contain illegal URI
 	 * characters) as their user generated content portion will likely just be a
 	 * capturing group (e.g. `/\/hi\/(.*)/`).
-	 * @param {Function} factory a function returning an overlay or a $.Deferred
-	 * which resolves to an overlay.
+	 * @param {Function} factory a function returning an overlay
 	 */
 	add: function ( route, factory ) {
 		var self = this,
