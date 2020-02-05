@@ -97,8 +97,9 @@ module.exports = function () {
 			return -1;
 		}
 
-		mw.trackSubscribe( 'mf.schemaEditAttemptStep', function ( topic, data, timeStamp ) {
+		mw.trackSubscribe( 'mf.schemaEditAttemptStep', function ( topic, data ) {
 			var actionPrefix = actionPrefixMap[ data.action ] || data.action,
+				timeStamp = this.timeStamp,
 				duration = 0;
 
 			// These are always the same for every event, but they can't be set in defaults,
@@ -116,8 +117,6 @@ module.exports = function () {
 					data.bucket = mw.config.get( 'wgMFSchemaEditAttemptStepBucket' );
 				}
 			}
-
-			timeStamp = timeStamp || this.timeStamp; // I8e82acc12 back-compat
 
 			// Schema's kind of a mess of special properties
 			if ( data.action === 'init' || data.action === 'abort' || data.action === 'saveFailure' ) {
