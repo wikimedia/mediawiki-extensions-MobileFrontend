@@ -99,7 +99,7 @@ module.exports = function () {
 
 		mw.trackSubscribe( 'mf.schemaEditAttemptStep', function ( topic, data ) {
 			var actionPrefix = actionPrefixMap[ data.action ] || data.action,
-				timeStamp = this.timeStamp,
+				timeStamp = mw.now(),
 				duration = 0;
 
 			// These are always the same for every event, but they can't be set in defaults,
