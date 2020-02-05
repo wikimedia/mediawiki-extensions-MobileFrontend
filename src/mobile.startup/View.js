@@ -118,7 +118,7 @@ mfExtend( View, {
 	 * @memberof View
 	 * @instance
 	 * @property {Mixed}
-	 * Specifies the template used in render(). Object|string|HoganTemplate
+	 * Specifies the template used in render(). Object|string
 	 */
 	template: undefined,
 
