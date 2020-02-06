@@ -1,1 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><title>clear-field</title><path fill="#a2a9b1" fill-rule="evenodd" d="M9 0C4.05 0 0 4.05 0 9s4.05 9 9 9 9-4.05 9-9-4.05-9-9-9zm4.5 12.375L12.375 13.5 9 10.125 5.625 13.5 4.5 12.375 7.875 9 4.5 5.625 5.625 4.5 9 7.875 12.375 4.5 13.5 5.625 10.125 9l3.375 3.375z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+	<title>
+		clear-field
+	</title>
+	<path fill="#a2a9b1" fill-rule="evenodd" d="M9 0C4.05 0 0 4.05 0 9s4.05 9 9 9 9-4.05 9-9-4.05-9-9-9zm4.5 12.375L12.375 13.5 9 10.125 5.625 13.5 4.5 12.375 7.875 9 4.5 5.625 5.625 4.5 9 7.875 12.375 4.5 13.5 5.625 10.125 9l3.375 3.375z"/>
+</svg>
