@@ -66,7 +66,8 @@ function referenceDrawer( props ) {
 								modifier: 'mw-ui-icon-element mw-ui-icon-flush-right'
 							} ).$el
 						] ),
-					util.parseHTML( '<div>' ).append( [
+					// Add .mw-parser-output so that TemplateStyles styles apply (T244510)
+					util.parseHTML( '<div>' ).addClass( 'mw-parser-output' ).append( [
 						errorIcon,
 						util.parseHTML( '<sup>' ).text( props.title ),
 						props.text ?
