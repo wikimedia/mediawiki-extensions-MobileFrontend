@@ -93,10 +93,10 @@ class UserMode implements IUserMode, IUserSelectableMode {
 	 * NamedConstructor used by hooks system
 	 *
 	 * @param \User $user
-	 * @return UserMode
+	 * @return self
 	 */
 	public static function newForUser( \User $user ) {
-		return new UserMode(
+		return new self(
 			MediaWikiServices::getInstance()->getService( 'MobileFrontend.AMC.Manager' ),
 			$user
 		);

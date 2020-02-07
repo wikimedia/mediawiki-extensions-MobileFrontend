@@ -6,13 +6,13 @@ use MediaWiki\MediaWikiServices;
  * Basic mobile implementation of SpecialPage to use in specific mobile special pages
  */
 class MobileSpecialPage extends SpecialPage {
-	/** @var boolean $hasDesktopVersion If true, the page will also be available on desktop */
+	/** @var bool If true, the page will also be available on desktop */
 	protected $hasDesktopVersion = false;
-	/** @var string $mode Saves the actual mode used by user (stable|beta) */
+	/** @var string Saves the actual mode used by user (stable|beta) */
 	protected $mode = 'stable';
-	/** @var boolean $listed Whether this special page should appear on Special:SpecialPages */
+	/** @var bool Whether this special page should appear on Special:SpecialPages */
 	protected $listed = false;
-	/** @var boolean Whether the special page's content should be wrapped in div.content */
+	/** @var bool Whether the special page's content should be wrapped in div.content */
 	protected $unstyledContent = true;
 	/** @var Config MobileFrontend's config object */
 	protected $config = null;

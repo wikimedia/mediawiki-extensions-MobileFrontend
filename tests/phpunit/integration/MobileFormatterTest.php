@@ -33,7 +33,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 	 *
 	 * @param string $heading
 	 * @param string $innerHtml of the heading element
-	 * @param integer $sectionNumber heading corresponds to
+	 * @param int $sectionNumber heading corresponds to
 	 * @return string
 	 */
 	private function makeSectionHeading( $heading, $innerHtml, $sectionNumber = 1 ) {
@@ -48,7 +48,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 	 *
 	 * @param string $sectionNumber
 	 * @param string $contentHtml
-	 * @param boolean $isReferenceSection whether the section contains references
+	 * @param bool $isReferenceSection whether the section contains references
 	 * @return string
 	 */
 	private function makeSectionHtml( $sectionNumber, $contentHtml = '',

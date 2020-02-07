@@ -8,7 +8,7 @@ use Wikimedia\IPUtils;
  * a list of pages, for example, Special:Watchlist or Special:History.
  */
 abstract class MobileSpecialPageFeed extends MobileSpecialPage {
-	/** @var boolean $showUsername Whether to show the username in results or not */
+	/** @var bool Whether to show the username in results or not */
 	protected $showUsername = true;
 	protected $lastDate;
 	/** @var Title|null */

@@ -7,7 +7,7 @@ use MobileFrontend\Features\IFeature;
  * Adds a special page with mobile specific preferences
  */
 class SpecialMobileOptions extends MobileSpecialPage {
-	/** @var boolean $hasDesktopVersion Whether this special page has a desktop version or not */
+	/** @var bool Whether this special page has a desktop version or not */
 	protected $hasDesktopVersion = true;
 
 	/**

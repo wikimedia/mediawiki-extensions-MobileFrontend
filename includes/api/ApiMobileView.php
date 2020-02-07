@@ -12,21 +12,21 @@ class ApiMobileView extends ApiBase {
 	 */
 	const CACHE_VERSION = 9;
 
-	/** @var boolean Saves whether redirects has to be followed or not */
+	/** @var bool Saves whether redirects has to be followed or not */
 	private $followRedirects;
-	/** @var boolean Saves whether sections have the header name or not */
+	/** @var bool Saves whether sections have the header name or not */
 	private $noHeadings;
-	/** @var boolean Saves whether the requested page is the main page */
+	/** @var bool Saves whether the requested page is the main page */
 	private $mainPage;
-	/** @var boolean Saves whether the output is formatted or not */
+	/** @var bool Saves whether the output is formatted or not */
 	private $noTransform;
-	/** @var boolean Saves whether page images should be added or not */
+	/** @var bool Saves whether page images should be added or not */
 	protected $usePageImages;
 	/** @var string Saves in which language the content should be output */
 	private $variant;
-	/** @var integer Saves at which character the section content start at */
+	/** @var int Saves at which character the section content start at */
 	private $offset;
-	/** @var integer Saves value to specify the max length of a sections content */
+	/** @var int Saves value to specify the max length of a sections content */
 	private $maxlen;
 	/** @var File|false Saves a File Object, or false if no file exist */
 	private $file;
@@ -37,7 +37,6 @@ class ApiMobileView extends ApiBase {
 	}
 
 	/**
-	 * Run constructor of ApiBase
 	 * @param ApiMain $main Instance of class ApiMain
 	 * @param string $action Name of this module
 	 */
