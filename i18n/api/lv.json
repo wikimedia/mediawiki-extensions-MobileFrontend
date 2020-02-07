@@ -12,7 +12,10 @@
 	"apihelp-mobileview-param-variant": "Pārveidot saturu šajā valodas variantā.",
 	"apihelp-mobileview-param-noimages": "Atgriež HTML bez attēliem.",
 	"apihelp-mobileview-param-notransform": "Nepārveidot HTML mobilajām iekārtām paredzētā versijā.",
+	"apihelp-mobileview-param-revision": "Pieprasīt konkrētu versiju.",
 	"apihelp-parse-param-mainpage": "Pielietot mobilās sākumlapas pārveidojumus.",
+	"apierror-mobilefrontend-badidtitle": "Nederīga versijas ID/nosaukuma kombinācija.",
+	"apierror-mobilefrontend-toomanysizeparams": "<var>thumbsize</var> ir savstarpēji izslēdzoši ar <var>thumbwidth</var> un <var>thumbheight</var>.",
 	"apiwarn-mobilefrontend-mobileviewdeprecated": "Šis API ir novecojis. Papildu informācijai skatīt T186627.",
 	"apiwarn-mobilefrontend-sectionsnotfound": "{{PLURAL:$2|Sadaļas $1 nav atrastas|Sadaļa $1 nav atrasta|Sadaļas $1 nav atrastas}}."
 }

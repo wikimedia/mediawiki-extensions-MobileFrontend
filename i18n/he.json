@@ -18,7 +18,8 @@
 			"קיפודנחש",
 			"Uziel302",
 			"Rotemliss",
-			"Strayblues"
+			"Strayblues",
+			"דגש חזק"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "האם משתמש עורך דרך הממשק למכשירים ניידים או לא",
@@ -50,7 +51,7 @@
 	"mobile-frontend-diffview-bytesadded": "{{PLURAL:$1|נוסף בית אחד|נוספו $1 בתים}}",
 	"mobile-frontend-diffview-bytesnochange": "אין שינוי בגודל",
 	"mobile-frontend-diffview-bytesremoved": "{{PLURAL:$1|הוסר בית אחד|הוסרו $1 בתים}}",
-	"mobile-frontend-diffview-editcount": "{{PLURAL:$1|עריכה אחד|<div>$1</div> עריכות}}",
+	"mobile-frontend-diffview-editcount": "{{PLURAL:$1|עריכה אחת|<div>$1</div> עריכות}}",
 	"mobile-frontend-diffview-title": "שינויים",
 	"mobile-frontend-edit-login-action": "<strong>עזרו לשפר את אתר {{SITENAME}}.</strong><br />יש להיכנס כדי לערוך.",
 	"mobile-frontend-edit-signup-action": "<strong>עזרו לשפר את אתר {{SITENAME}}.</strong><br />יש להירשם כדי לערוך.",
