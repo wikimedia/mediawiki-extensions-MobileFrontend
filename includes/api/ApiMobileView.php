@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\MediaWikiServices;
+use Wikimedia\ParamValidator\ParamValidator;
 
 /**
  * Extends Api of MediaWiki with actions for mobile devices. For further information see
@@ -881,11 +882,11 @@ class ApiMobileView extends ApiBase {
 			],
 			'redirect' => [
 				ApiBase::PARAM_TYPE => [ 'yes', 'no' ],
-				ApiBase::PARAM_DFLT => 'yes',
+				ParamValidator::PARAM_DEFAULT => 'yes',
 			],
 			'sections' => null,
 			'prop' => [
-				ApiBase::PARAM_DFLT => 'text|sections|normalizedtitle',
+				ParamValidator::PARAM_DEFAULT => 'text|sections|normalizedtitle',
 				ApiBase::PARAM_ISMULTI => true,
 				ApiBase::PARAM_TYPE => [
 					'id',
@@ -917,15 +918,15 @@ class ApiMobileView extends ApiBase {
 					'anchor',
 				],
 				ApiBase::PARAM_ISMULTI => true,
-				ApiBase::PARAM_DFLT => 'toclevel|line',
+				ParamValidator::PARAM_DEFAULT => 'toclevel|line',
 			],
 			'pageprops' => [
 				ApiBase::PARAM_TYPE => 'string',
-				ApiBase::PARAM_DFLT => 'notoc|noeditsection|wikibase_item'
+				ParamValidator::PARAM_DEFAULT => 'notoc|noeditsection|wikibase_item'
 			],
 			'variant' => [
 				ApiBase::PARAM_TYPE => 'string',
-				ApiBase::PARAM_DFLT => '',
+				ParamValidator::PARAM_DEFAULT => '',
 			],
 			'noimages' => false,
 			'noheadings' => false,
@@ -934,17 +935,17 @@ class ApiMobileView extends ApiBase {
 			'offset' => [
 				ApiBase::PARAM_TYPE => 'integer',
 				ApiBase::PARAM_MIN => 0,
-				ApiBase::PARAM_DFLT => 0,
+				ParamValidator::PARAM_DEFAULT => 0,
 			],
 			'maxlen' => [
 				ApiBase::PARAM_TYPE => 'integer',
 				ApiBase::PARAM_MIN => 0,
-				ApiBase::PARAM_DFLT => 0,
+				ParamValidator::PARAM_DEFAULT => 0,
 			],
 			'revision' => [
 				ApiBase::PARAM_TYPE => 'integer',
 				ApiBase::PARAM_MIN => 0,
-				ApiBase::PARAM_DFLT => 0,
+				ParamValidator::PARAM_DEFAULT => 0,
 			],
 		];
 		if ( $this->usePageImages ) {
