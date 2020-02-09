@@ -12,7 +12,8 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 	public function __construct() {
 		$req = $this->getRequest();
 		$this->offsetTitle = $req->getVal( 'from', '' );
-		parent::__construct();
+		$watchStoreItem = MediaWikiServices::getInstance()->getWatchedItemStore();
+		parent::__construct( $watchStoreItem );
 	}
 
 	/**
