@@ -72,13 +72,13 @@ class ApiMobileView extends ApiBase {
 	 * @todo Write some unit tests for API results
 	 */
 	public function execute() {
+		$services = MediaWikiServices::getInstance();
 		// Logged-in users' parser options depend on preferences
 		$this->getMain()->setCacheMode( 'anon-public-user-private' );
 
 		// Don't strip srcset on renderings for mobileview api; the
 		// app below it will decide how to use them.
-		MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' )
-			->setStripResponsiveImages( false );
+		$services->getService( 'MobileFrontend.Context' )->setStripResponsiveImages( false );
 
 		// Enough '*' keys in JSON!!!
 		$isXml = $this->getMain()->isInternalMode()
@@ -238,7 +238,9 @@ class ApiMobileView extends ApiBase {
 				$req->setIP( '127.0.0.1' );
 				$user = User::newFromSession( $req );
 			}
-			$editable = $title->quickUserCan( 'edit', $user );
+			$editable = $services->getPermissionManager()->quickUserCan(
+				'edit', $user, $title
+			);
 			if ( $isXml ) {
 				$editable = intval( $editable );
 			}

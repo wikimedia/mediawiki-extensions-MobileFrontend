@@ -1,5 +1,6 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
 use MediaWiki\Storage\RevisionRecord;
 
 /**
@@ -249,8 +250,8 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		}
 		$ts = new MWTimestamp( $this->rev->getTimestamp() );
 		$user = $this->getUser();
-		$actionMessageKey = $this->targetTitle->quickUserCan( 'edit', $user )
-			? 'editlink' : 'viewsourcelink';
+		$actionMessageKey = MediaWikiServices::getInstance()->getPermissionManager()
+			->quickUserCan( 'edit', $user, $this->targetTitle ) ? 'editlink' : 'viewsourcelink';
 
 		$templateData = [
 			"articleUrl" => $this->targetTitle->getLocalURL(),
