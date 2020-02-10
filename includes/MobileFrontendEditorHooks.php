@@ -102,8 +102,9 @@ class MobileFrontendEditorHooks {
 	 * @param Title $title
 	 * @return bool
 	 */
-	protected static function isPageContentModelEditable( Title $title ) {
-		$contentHandler = ContentHandler::getForTitle( $title );
+	protected static function isPageContentModelEditable( Title $title ) : bool {
+		$contentHandler = MediaWikiServices::getInstance()->getContentHandlerFactory()
+			->getContentHandler( $title->getContentModel() );
 
 		return $contentHandler->supportsDirectEditing()
 			&& $contentHandler->supportsDirectApiEditing();
