@@ -35,7 +35,7 @@
 	"mobile-frontend-contributions-404-title": "Zadané nesprávne používateľské meno",
 	"mobile-frontend-copyright": "Obsah je dostupný pod $1, pokiaľ nie je uvedené inak.",
 	"mobile-frontend-desc": "Mobilné rozhranie",
-	"mobile-frontend-diffview-404-desc": "Požadované ID revízie neexistuje",
+	"mobile-frontend-diffview-404-desc": "Požadované ID revízie neexistuje<br />Toto je zvyčajne spôsobené otvorením starého odkazu na revíziu zmazanej stránky alebo tým, že odkaz obsahoval neplatné znaky.",
 	"mobile-frontend-diffview-404-title": "Chybná revízia",
 	"mobile-frontend-diffview-anonymous": "Anonymný používateľ",
 	"mobile-frontend-diffview-bytesadded": "{{PLURAL:$1|Pridaný $1 bajt|Pridané $1 bajty|Pridaných $1 bajtov}}",
