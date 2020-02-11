@@ -81,8 +81,10 @@ footer {
 		margin-left: 0.5em;
 	}
 
-	ins,
-	del {
+	.mw-diff-inline-added ins,
+	.mw-diff-inline-changed ins,
+	.mw-diff-inline-deleted del,
+	.mw-diff-inline-changed del {
 		color: #000;
 		word-break: break-all;
 		text-decoration: none;
@@ -92,11 +94,13 @@ footer {
 		margin-right: 2px;
 	}
 
-	ins {
+	.mw-diff-inline-added ins,
+	.mw-diff-inline-changed ins {
 		background-color: #75c877;
 	}
 
-	del {
+	.mw-diff-inline-deleted del,
+	.mw-diff-inline-changed del {
 		background-color: #e07076;
 		text-decoration: none;
 	}
