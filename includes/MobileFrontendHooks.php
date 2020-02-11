@@ -667,36 +667,11 @@ class MobileFrontendHooks {
 		$context = MobileContext::singleton();
 		$config = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Config' );
 		$mfEnableXAnalyticsLogging = $config->get( 'MFEnableXAnalyticsLogging' );
-		$mfAppPackageId = $config->get( 'MFAppPackageId' );
-		$mfAppScheme = $config->get( 'MFAppScheme' );
 		$mfNoIndexPages = $config->get( 'MFNoindexPages' );
 		$isCanonicalLinkHandledByCore = $config->get( 'EnableCanonicalServerLink' );
 		$mfMobileUrlTemplate = $context->getMobileUrlTemplate();
 
 		$title = $skin->getTitle();
-		$request = $context->getRequest();
-
-		// Add deep link to a mobile app specified by $wgMFAppScheme
-		if ( ( $mfAppPackageId !== false ) && ( $title->isContentPage() )
-			&& ( $request->getRawQueryString() === '' )
-		) {
-			$fullUrl = $title->getFullURL();
-			$mobileUrl = $context->getMobileUrl( $fullUrl );
-			$path = preg_replace( "/^([a-z]+:)?(\/)*/", '', $mobileUrl, 1 );
-
-			$scheme = 'http';
-			if ( $mfAppScheme !== false ) {
-				$scheme = $mfAppScheme;
-			} else {
-				$protocol = $request->getProtocol();
-				if ( $protocol != '' ) {
-					$scheme = $protocol;
-				}
-			}
-
-			$hreflink = 'android-app://' . $mfAppPackageId . '/' . $scheme . '/' . $path;
-			$out->addLink( [ 'rel' => 'alternate', 'href' => $hreflink ] );
-		}
 
 		// an canonical/alternate link is only useful, if the mobile and desktop URL are different
 		// and $wgMFNoindexPages needs to be true

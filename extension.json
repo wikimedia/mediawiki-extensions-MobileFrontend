@@ -780,8 +780,6 @@
 		"MFContentProviderScriptPath": "",
 		"MFMcsContentProviderBaseUri": "https://en.wikipedia.org/api/rest_v1",
 		"MFEnableXAnalyticsLogging": false,
-		"MFAppPackageId": false,
-		"MFAppScheme": "http",
 		"MFEditorOptions": {
 			"skipPreview": false
 		},
