@@ -275,6 +275,9 @@ Use is discouraged as it leads to unnecessary technical debt and on the long
 term the goal is to deprecate usage of this config variable. Use at your own
 risk!
 
+If this feature is enabled you can disable it temporarily by appending
+?debug=1&mfnolegacytransform=1 to the main page URI.
+
 * Type: `Boolean`
 * Default: `false`
 
