@@ -1,11 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Stavanger7"
+			"Stavanger7",
+			"OIS"
 		]
 	},
 	"mobile-frontend-privacy-link-text": "Privatie",
 	"mobile-frontend-terms-text": "Conditiones de usage",
 	"mobile-frontend-view": "Aspecte mobil",
-	"tag-mobile_edit": "Modification per mobil"
+	"tag-mobile_edit": "Modification per mobil",
+	"tag-mobile_web_edit": "Redaction per mobil-web"
 }
