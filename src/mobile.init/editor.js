@@ -355,13 +355,15 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 				}
 				// Show the editor!
 				overlayManager.replaceCurrent( overlay );
-			}, function ( error ) {
+			}, function ( error, apiResponse ) {
 				// Could not load the editor.
 				overlayManager.router.back();
 				if ( error.show ) {
 					// Probably a blockMessageDrawer returned because the user is blocked.
 					document.body.appendChild( error.$el[ 0 ] );
 					error.show();
+				} else if ( apiResponse ) {
+					mw.notify( editorOptions.api.getErrorMessage( apiResponse ) );
 				} else {
 					mw.notify( mw.msg( 'mobile-frontend-editor-error-loading' ) );
 				}
