@@ -100,23 +100,6 @@ See: https://www.mediawiki.org/wiki/Analytics/Kraken/Data_Formats/X-Analytics
 * Type: `Boolean`
 * Default: `false`
 
-#### $wgMFAppPackageId
-
-ID of the App to deep link to replacing the browser. Set `false` to have no
-such link.
-
-See: <https://developers.google.com/app-indexing/webmasters/details>
-
-* Type: `Boolean|String`
-* Default: `false`
-
-#### $wgMFAppScheme
-
-Scheme to use for the deep link.
-
-* Type: `String`
-* Default: `'http'`
-
 #### $wgMFEditorOptions
 
 Options to control several functions of the mobile editor.  Possible values:
