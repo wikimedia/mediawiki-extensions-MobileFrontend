@@ -572,15 +572,6 @@ class ApiMobileView extends ApiBase {
 	 * @return array
 	 */
 	private function getData( Title $title, $noImages, $oldid = null ) {
-		global $wgMemc;
-
-		$services = MediaWikiServices::getInstance();
-		$config = $services->getService( 'MobileFrontend.Config' );
-		$context = $services->getService( 'MobileFrontend.Context' );
-
-		$mfMinCachedPageSize = $config->get( 'MFMinCachedPageSize' );
-		$mfSpecialCaseMainPage = $config->get( 'MFSpecialCaseMainPage' );
-
 		$result = $this->getResult();
 		$wikiPage = $this->makeWikiPage( $title );
 		if ( $this->followRedirects && $wikiPage->isRedirect() ) {
@@ -607,18 +598,20 @@ class ApiMobileView extends ApiBase {
 		// Use page_touched so template updates invalidate cache
 		$touched = $wikiPage->getTouched();
 		$revId = $oldid ?: $title->getLatestRevID();
+
+		$services = MediaWikiServices::getInstance();
+		$cache = $services->getMainWANObjectCache();
+
 		if ( $this->file ) {
-			$key = $wgMemc->makeKey(
-				'mf',
-				'mobileview',
-				self::CACHE_VERSION,
-				$noImages,
+			$parserOptions = null;
+			$key = $cache->makeKey(
+				'mf-mobileview',
+				(int)$noImages,
 				$touched,
-				$this->noTransform,
+				(int)$this->noTransform,
 				$this->file->getSha1(),
 				$this->variant
 			);
-			$cacheExpiry = 3600;
 		} else {
 			if ( !$latest ) {
 				// https://phabricator.wikimedia.org/T55378
@@ -626,100 +619,121 @@ class ApiMobileView extends ApiBase {
 				$this->dieWithError( [ 'apierror-missingtitle' ] );
 			}
 			$parserOptions = $this->makeParserOptions( $wikiPage );
-			$parserCache = \MediaWiki\MediaWikiServices::getInstance()->getParserCache();
-			$parserCacheKey = $parserCache->getKey( $wikiPage, $parserOptions );
-			$key = $wgMemc->makeKey(
-				'mf',
-				'mobileview',
-				self::CACHE_VERSION,
-				$noImages,
+			$key = $cache->makeKey(
+				'mf-mobileview',
+				(int)$noImages,
 				$touched,
 				$revId,
-				$this->noTransform,
-				$parserCacheKey
+				(int)$this->noTransform,
+				$services->getParserCache()->getKey( $wikiPage, $parserOptions )
 			);
 		}
-		$data = $wgMemc->get( $key );
-		if ( $data ) {
-			wfIncrStats( 'mobile.view.cache-hit' );
-			return $data;
-		}
-		wfIncrStats( 'mobile.view.cache-miss' );
-		if ( $this->file ) {
-			$html = $this->getFilePage( $title );
-		} else {
-			$parserOutput = $this->getParserOutput( $wikiPage, $parserOptions, $oldid );
-			if ( $parserOutput === false ) {
-				$this->dieWithError( 'apierror-mobilefrontend-badidtitle', 'invalidparams' );
-			}
-			$html = $parserOutput->getText( [ 'allowTOC' => false, 'unwrap' => true,
-				'deduplicateStyles' => false ] );
-			$cacheExpiry = $parserOutput->getCacheExpiry();
-		}
 
-		if ( !$this->noTransform ) {
-			$mf = new MobileFormatter(
-				MobileFormatter::wrapHTML( $html ), $title, $config, $context
-			);
-			$mf->setRemoveMedia( $noImages );
-			$mf->setIsMainPage( $this->mainPage && $mfSpecialCaseMainPage );
-			$mf->filterContent();
-			$html = $mf->getText();
-		}
+		$miss = false;
+		$data = $cache->getWithSetCallback(
+			$key,
+			$cache::TTL_HOUR,
+			function ( $oldValue, &$ttl ) use (
+				$title, $revId, $noImages, $wikiPage, $parserOptions, $latest, &$miss
+			) {
+				$miss = true;
 
-		if ( $this->mainPage || $this->file ) {
-			$data = [
-				'sections' => [],
-				'text' => [ $html ],
-				'refsections' => [],
-			];
-		} else {
-			$data = $this->parseSectionsData( $html, $title, $parserOutput, $latest );
-			if ( $this->usePageImages ) {
-				$image = $this->getPageImage( $title );
-				if ( $image ) {
-					$data['image'] = $image->getTitle()->getText();
+				$services = MediaWikiServices::getInstance();
+				$config = $services->getService( 'MobileFrontend.Config' );
+				$context = $services->getService( 'MobileFrontend.Context' );
+
+				$mfMinCachedPageSize = $config->get( 'MFMinCachedPageSize' );
+				$mfSpecialCaseMainPage = $config->get( 'MFSpecialCaseMainPage' );
+
+				if ( $this->file ) {
+					$parserOutput = null;
+					$html = $this->getFilePage( $title );
+				} else {
+					$parserOutput = $this->getParserOutput( $wikiPage, $parserOptions, $revId );
+					if ( $parserOutput === false ) {
+						$this->dieWithError( 'apierror-mobilefrontend-badidtitle', 'invalidparams' );
+					}
+					$html = $parserOutput->getText( [ 'allowTOC' => false, 'unwrap' => true,
+						'deduplicateStyles' => false ] );
 				}
-			}
-		}
 
-		$data['lastmodified'] = wfTimestamp( TS_ISO_8601, $wikiPage->getTimestamp() );
+				if ( !$this->noTransform ) {
+					$mf = new MobileFormatter(
+						MobileFormatter::wrapHTML( $html ), $title, $config, $context
+					);
+					$mf->setRemoveMedia( $noImages );
+					$mf->setIsMainPage( $this->mainPage && $mfSpecialCaseMainPage );
+					$mf->filterContent();
+					$html = $mf->getText();
+				}
 
-		// Page id
-		$data['id'] = $wikiPage->getId();
-		$user = User::newFromId( $wikiPage->getUser() );
-		if ( !$user->isAnon() ) {
-			$data['lastmodifiedby'] = [
-				'name' => $wikiPage->getUserText(),
-				'gender' => $user->getOption( 'gender' ),
-			];
+				if ( $this->mainPage || $this->file ) {
+					$data = [
+						'sections' => [],
+						'text' => [ $html ],
+						'refsections' => [],
+					];
+				} else {
+					$data = $this->parseSectionsData( $html, $title, $parserOutput, $latest );
+					if ( $this->usePageImages ) {
+						$image = $this->getPageImage( $title );
+						if ( $image ) {
+							$data['image'] = $image->getTitle()->getText();
+						}
+					}
+				}
+
+				$data['lastmodified'] = wfTimestamp( TS_ISO_8601, $wikiPage->getTimestamp() );
+
+				// Page id
+				$data['id'] = $wikiPage->getId();
+				$user = User::newFromId( $wikiPage->getUser() );
+				if ( !$user->isAnon() ) {
+					$data['lastmodifiedby'] = [
+						'name' => $wikiPage->getUserText(),
+						'gender' => $user->getOption( 'gender' ),
+					];
+				} else {
+					$data['lastmodifiedby'] = null;
+				}
+				$data['revision'] = $revId;
+
+				if ( isset( $parserOutput ) ) {
+					$languages = $parserOutput->getLanguageLinks();
+					$data['languagecount'] = count( $languages );
+					$data['displaytitle'] = $parserOutput->getDisplayTitle();
+					// @fixme: Does no work for some extension properties that get added in LinksUpdate
+					$data['pageprops'] = $parserOutput->getProperties();
+				} else {
+					$data['languagecount'] = 0;
+					$data['displaytitle'] = htmlspecialchars( $title->getPrefixedText() );
+					$data['pageprops'] = [];
+				}
+
+				$data['contentmodel'] = $title->getContentModel();
+
+				if ( $title->getPageLanguage()->hasVariants() ) {
+					$data['hasvariants'] = true;
+				}
+
+				if ( strlen( $html ) < $mfMinCachedPageSize ) {
+					// Don't store small pages to decrease cache size requirements
+					// @TODO: maybe consider regeneration time?
+					$ttl = WANObjectCache::TTL_UNCACHEABLE;
+				} elseif ( $parserOutput ) {
+					// Store for the same time as original parser output
+					$ttl = $parserOutput->getCacheExpiry();
+				}
+
+				return $data;
+			},
+			[ 'version' => self::CACHE_VERSION ]
+		);
+
+		if ( $miss ) {
+			wfIncrStats( 'mobile.view.cache-miss' );
 		} else {
-			$data['lastmodifiedby'] = null;
-		}
-		$data['revision'] = $revId;
-
-		if ( isset( $parserOutput ) ) {
-			$languages = $parserOutput->getLanguageLinks();
-			$data['languagecount'] = count( $languages );
-			$data['displaytitle'] = $parserOutput->getDisplayTitle();
-			// @fixme: Does no work for some extension properties that get added in LinksUpdate
-			$data['pageprops'] = $parserOutput->getProperties();
-		} else {
-			$data['languagecount'] = 0;
-			$data['displaytitle'] = htmlspecialchars( $title->getPrefixedText() );
-			$data['pageprops'] = [];
-		}
-
-		$data['contentmodel'] = $title->getContentModel();
-
-		if ( $title->getPageLanguage()->hasVariants() ) {
-			$data['hasvariants'] = true;
-		}
-
-		// Don't store small pages to decrease cache size requirements
-		if ( strlen( $html ) >= $mfMinCachedPageSize ) {
-			// store for the same time as original parser output
-			$wgMemc->set( $key, $data, $cacheExpiry );
+			wfIncrStats( 'mobile.view.cache-hit' );
 		}
 
 		return $data;
