@@ -91,10 +91,12 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 	 * @return bool True, if SpecialMobileHistory can be used, false otherwise
 	 */
 	public static function shouldUseSpecialHistory( Title $title, User $user ) {
-		$contentHandler = ContentHandler::getForTitle( $title );
+		$services = MediaWikiServices::getInstance();
+		$contentHandler = $services->getContentHandlerFactory()->getContentHandler(
+			$title->getContentModel()
+		);
 		$actionOverrides = $contentHandler->getActionOverrides();
-		$featureManager = \MediaWiki\MediaWikiServices::getInstance()
-			->getService( 'MobileFrontend.FeaturesManager' );
+		$featureManager = $services->getService( 'MobileFrontend.FeaturesManager' );
 
 		// if history is overwritten, assume, that SpecialMobileHistory can't handle them
 		if ( isset( $actionOverrides['history'] ) ) {
