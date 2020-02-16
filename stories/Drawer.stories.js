@@ -69,7 +69,7 @@ storiesOf( 'Drawer' )
 				},
 				reason: 'Constant vandalism',
 				duration: '10 days',
-				expiry: 'Sept 1st'
+				expiry: '(1st September 2019)'
 			} );
 			drawer.show();
 			return wrap( drawer, 'drawer-container' );
@@ -86,7 +86,7 @@ storiesOf( 'Drawer' )
 				},
 				reason: 'Constant vandalism',
 				duration: '10 days',
-				expiry: 'Sept 1st'
+				expiry: '(1st September 2019)'
 			} );
 			drawer.show();
 			return wrap( drawer, 'drawer-container' );
@@ -103,7 +103,7 @@ storiesOf( 'Drawer' )
 				},
 				reason: 'Constant vandalism',
 				duration: '10 days',
-				expiry: 'Sept 1st'
+				expiry: '(1st September 2019)'
 			} );
 			drawer.show();
 			return wrap( drawer, 'drawer-container' );

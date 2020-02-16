@@ -413,7 +413,8 @@
 				"mobile-frontend-editor-blocked-drawer-help",
 				"mobile-frontend-editor-generic-block-reason",
 				"mobile-frontend-editor-viewing-source-page",
-				"mobile-frontend-editor-anon"
+				"mobile-frontend-editor-anon",
+				"parentheses"
 			]
 		},
 		"mobile.editor.images": {

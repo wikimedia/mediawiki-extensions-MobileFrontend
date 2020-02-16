@@ -9,8 +9,9 @@ var Drawer = require( '../mobile.startup/Drawer' ),
  * @property {string} creator.name of the blocker
  * @property {string} creator.url associated with the block
  * @property {string} reason for block
- * @property {string} [duration] of block
- * @property {string} [expiry] of block
+ * @property {string} [duration] of block e.g. "1 week"
+ * @property {string} [expiry] of block, wrapped in parentheses
+ *  e.g. "(1st September 2019)"
  */
 
 /**

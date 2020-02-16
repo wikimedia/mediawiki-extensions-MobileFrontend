@@ -103,7 +103,7 @@ class BlockMessageDetails extends View {
       {{#expiry}}
         <div class="block-message-item">
           <h6>{{ expiryHeader }}</h6>
-          <div><strong>{{#duration}}{{ duration }} / {{/duration}}{{ expiry }}</strong></div>
+          <div><strong>{{#duration}}{{ duration }}{{/duration}} {{ expiry }}</strong></div>
         </div>
       {{/expiry}}
     </div>
