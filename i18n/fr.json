@@ -47,7 +47,8 @@
 			"The RedBurn",
 			"Od1n",
 			"Fourmer",
-			"Pols12"
+			"Pols12",
+			"Eneelk"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si un utilisateur est ou non en cours de modification via l’interface mobile",
@@ -274,7 +275,7 @@
 	"mobile-frontend-mobile-option-amc-learn-more": "En savoir plus",
 	"mobile-frontend-mobile-option-amc-send-feedback": "Envoyer un avis",
 	"mobile-frontend-amc-outreach-intro": "Introduction au mode avancé",
-	"mobile-frontend-amc-outreach-description": "Le mode avancé fournit des fonctionnalités étendues pour les pages d’historique, les pages de suivi, les page des modifications récentes, et d’autres outils de modification sur mobile.",
+	"mobile-frontend-amc-outreach-description": "Le mode avancé fournit des fonctionnalités étendues pour les pages d’historique, les pages de suivi, les pages des modifications récentes, et d’autres outils de modification sur mobile.",
 	"mobile-frontend-amc-outreach-enable": "Activer le mode avancé",
 	"mobile-frontend-amc-outreach-no-thanks": "Non merci",
 	"mobile-frontend-amc-outreach-enabled-message": "Le mode avancé est maintenant activé. Vous pouvez le désactiver dans vos préférences.",

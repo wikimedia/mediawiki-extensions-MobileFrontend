@@ -101,6 +101,7 @@
 	"mobile-frontend-main-menu-settings-heading": "सेटिङहरू",
 	"mobile-frontend-media-details": "विवरणहरू",
 	"mobile-frontend-media-license-link": "आज्ञापत्रको जानकारी",
+	"mobile-frontend-media-load-fail-retry": "ताजा गर्नुहोस्",
 	"mobile-frontend-missing-image": "चित्र",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 कि.मी.}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 मी.}}",
