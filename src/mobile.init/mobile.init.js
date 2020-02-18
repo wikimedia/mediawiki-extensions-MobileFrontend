@@ -108,9 +108,6 @@ if ( !currentPage.inNamespace( 'special' ) && isPageContentModelEditable ) {
 
 toggling();
 
-mw.mobileFrontend.deprecate( 'mobile.init/skin', skin,
-	'instance of mobile.startup/Skin. Minerva should have no dependencies on mobile.init' );
-
 // Set up recording for the events we track. The module 'ext.eventLogging'
 // should already be loaded (this doesn't trigger a new HTTP request), but we
 // don't specify a hard dependency because EventLogging may not be installed.
