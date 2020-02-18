@@ -54,7 +54,7 @@
 	"mobile-frontend-editor-licensing": "तपाईको परिवर्तनहरू सङ्ग्रह गर्नाले, तपाई $1 {{PLURAL:$2|इजाजतपत्र|licenses}} अन्तर्गतको योगदान जारी गर्न सहमत हुनुहुन्छ।",
 	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|}} {{SITENAME}}मा नयाँ पृष्ठ सृजना गर्ने बारेमा, के निश्चित हुनुहुन्छ",
 	"mobile-frontend-editor-placeholder": "यो खण्ड खाली छ। यसलाई विस्तार गर्ने पहिलो व्यक्ति बन्नुहोस्।",
-	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1तपाई}} {{SITENAME}}मा नयाँ पृष्ठ बनाउँदै हुनुहुन्छ।",
+	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|तपाई}} {{SITENAME}}मा नयाँ पृष्ठ बनाउँदै हुनुहुन्छ।",
 	"mobile-frontend-editor-previewing-page": "<span><strong>पूर्वावलोकन</strong> $1</span>",
 	"mobile-frontend-editor-publish": "प्रकाशन गर्नुहोस्",
 	"mobile-frontend-editor-save": "सङ्ग्रह गर्ने",
