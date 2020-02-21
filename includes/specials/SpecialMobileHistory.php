@@ -168,7 +168,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 
 		$options['LIMIT'] = self::LIMIT + 1;
 
-		$revQuery = Revision::getQueryInfo();
+		$revQuery = MediaWikiServices::getInstance()->getRevisionStore()->getQueryInfo();
 
 		$res = $dbr->select(
 			$revQuery['tables'], $revQuery['fields'], $conds, __METHOD__, $options, $revQuery['joins']
