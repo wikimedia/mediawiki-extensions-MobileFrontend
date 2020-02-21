@@ -4,21 +4,15 @@ var
 	dom = require( '../utils/dom' ),
 	Anchor,
 	Button,
-	Drawer,
 	jQuery = require( '../utils/jQuery' ),
 	mw = require( '../utils/mw' ),
 	mustache = require( '../utils/mustache' ),
 	oo = require( '../utils/oo' ),
 	sandbox,
-	sinon = require( 'sinon' ),
-
-	// Variables
-	parent;
+	sinon = require( 'sinon' );
 
 QUnit.module( 'MobileFrontend CtaDrawer.js', {
 	beforeEach: function () {
-		var parentID = 'ctaDrawerParent';
-
 		sandbox = sinon.sandbox.create();
 
 		// Set up required by all Views.
@@ -45,25 +39,11 @@ QUnit.module( 'MobileFrontend CtaDrawer.js', {
 		// Dynamically import Views to use fresh sandboxed dependencies.
 		Anchor = require( '../../../src/mobile.startup/Anchor' );
 		Button = require( '../../../src/mobile.startup/Button' );
-		Drawer = require( '../../../src/mobile.startup/Drawer' );
 		CtaDrawer = require( '../../../src/mobile.startup/CtaDrawer' );
-
-		// Rewire the prototype, not the instance, since this property is used during construction.
-		sandbox.stub( Drawer.prototype, 'appendToElement' ).callsFake( () => '#' + parentID );
-
-		// Create a disposable host Element. See T209129.
-		parent = document.createElement( 'div' );
-		parent.id = parentID;
-		document.documentElement.appendChild( parent );
 	},
 
 	afterEach: function () {
-		// Discard host Element.
-		document.documentElement.removeChild( parent );
-		parent = undefined;
-
 		CtaDrawer = undefined;
-		Drawer = undefined;
 		Button = undefined;
 		Anchor = undefined;
 

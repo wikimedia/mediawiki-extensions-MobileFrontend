@@ -41,7 +41,6 @@ function amcOutreachDrawer(
 ) {
 	return new Drawer( {
 		className: 'amc-outreach-drawer',
-		closeOnScroll: false,
 		children: [
 			util.parseHTML( '<div>' ).addClass( 'amc-outreach-image' ),
 			util.parseHTML( '<p>' ).append(

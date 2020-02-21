@@ -11,7 +11,6 @@ import '../resources/mobile.startup/Drawer.less';
 import '../resources/mobile.startup/references/ReferencesDrawer.less';
 import '../.storybook/mediawiki-skins-MinervaNeue/skinStyles/mobile.startup/drawers.less';
 
-Drawer.prototype.appendToElement = '.drawer-container';
 storiesOf( 'Drawer' )
 	.add( 'default',
 		() => {

@@ -25,7 +25,6 @@ function Drawer( props ) {
 	View.call( this,
 		util.extend(
 			{
-				closeOnScroll: true,
 				onBeforeHide: () => {},
 				showCollapseIcon: true
 			},
@@ -64,7 +63,7 @@ mfExtend( Drawer, View, {
 		const d = util.Deferred();
 		this.$el.find( '.drawer-container__mask' )
 			.addClass( 'drawer-container__mask--visible' );
-		if ( !this.isVisible() ) {
+		if ( !this.$el.find( '.drawer' ).hasClass( 'visible' ) ) {
 			// use setTimeout to allow the browser to redraw if render() was called
 			// just before show(); this is important for animations to work
 			// (0ms doesn't work on Firefox, 10ms is enough)
@@ -100,24 +99,6 @@ mfExtend( Drawer, View, {
 			this.options.onBeforeHide( this );
 		}.bind( this ), this.minHideDelay );
 	},
-
-	/**
-	 * Determines if panel is visible
-	 * @memberof View
-	 * @instance
-	 * @return {boolean} View is visible
-	 */
-	isVisible: function () {
-		return this.$el.find( '.drawer' ).hasClass( 'visible' );
-	},
-
-	/**
-	 * Defines an element that the Drawer should automatically be appended to.
-	 * @memberof Drawer
-	 * @instance
-	 * @property {string}
-	 */
-	appendToElement: 'body',
 
 	/**
 	 * @inheritdoc

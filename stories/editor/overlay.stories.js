@@ -2,7 +2,6 @@ import { storiesOf } from '@storybook/html';
 import '../../node_modules/oojs-ui/dist/oojs-ui-core.js';
 import '../../node_modules/oojs-ui/dist/oojs-ui-toolbars.js';
 import '../../.storybook/resolve-less-imports/mediawiki.ui/components/inputs.less';
-import Drawer from '../../src/mobile.startup/Drawer';
 import { wrap } from '../utils';
 import SourceEditorOverlay from '../../src/mobile.editor.overlay/SourceEditorOverlay';
 import VisualEditorOverlay from '../../src/mobile.editor.overlay/VisualEditorOverlay';
@@ -13,8 +12,6 @@ import { fakeApi, fakeFailToSaveApi, blockedApi,
 	abuseFilterDisallowedApi, abuseFilterSpamApi,
 	editConflictApi, readOnlyApi, triggerCaptchaApi,
 	abuseFilterWarningApi } from './utils';
-
-Drawer.prototype.appendToElement = '.drawer-container';
 
 window.ve = {
 	init: {

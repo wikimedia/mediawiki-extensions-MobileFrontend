@@ -44,7 +44,6 @@ function referenceDrawer( props ) {
 	return new Drawer(
 		util.extend(
 			{
-				closeOnScroll: false,
 				showCollapseIcon: false,
 				className: 'drawer position-fixed text references-drawer',
 				events: {
