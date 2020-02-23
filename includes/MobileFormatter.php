@@ -165,7 +165,7 @@ class MobileFormatter extends HtmlFormatter {
 	}
 
 	/**
-	 * Performs various transformations to the content to make it appropiate for mobile devices.
+	 * Performs various transformations to the content to make it appropriate for mobile devices.
 	 * @param bool $removeDefaults Whether default settings at $wgMFRemovableClasses should be used
 	 * @param bool $unused kept for backwards compatibility - previously used for
 	 *  lazy loaded references
