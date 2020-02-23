@@ -13,7 +13,7 @@ class ApiMobileViewConvertTitleTest extends ApiTestCase {
 	protected function setUp() : void {
 		parent::setUp();
 		$this->setUserLang( 'zh' );
-		$this->setContentLang( 'zh' );
+		$this->setMwGlobals( 'wgLanguageCode', 'zh' );
 		$this->editPage( $this->simplifiedTitle, 'foo',  'test page' );
 	}
 
