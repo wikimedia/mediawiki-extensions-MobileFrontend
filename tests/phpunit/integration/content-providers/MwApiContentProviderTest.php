@@ -77,7 +77,7 @@ class MwApiContentProviderTest extends MediaWikiTestCase {
 	private function mockOutputPage( Title $title ) {
 		$mockOutputPage = $this->getMockBuilder( OutputPage::class )
 			->disableOriginalConstructor()
-			->setMethods( [ 'getTitle', 'getPrefixedDBkey' ] )
+			->onlyMethods( [ 'getTitle', 'getPrefixedDBkey' ] )
 			->getMock();
 		$mockOutputPage->method( 'getTitle' )
 			->willReturn( $title );
@@ -111,7 +111,7 @@ class MwApiContentProviderTest extends MediaWikiTestCase {
 	public function testGetHtmlWithNoTitle() {
 		$mockOutputPage = $this->getMockBuilder( OutputPage::class )
 			->disableOriginalConstructor()
-			->setMethods( [ 'getTitle' ] )
+			->onlyMethods( [ 'getTitle' ] )
 			->getMock();
 		$mockOutputPage->method( 'getTitle' )
 			->willReturn( null );
@@ -177,7 +177,7 @@ class MwApiContentProviderTest extends MediaWikiTestCase {
 		// methods of the output page mock.
 		$mockOutputPage = $this->getMockBuilder( OutputPage::class )
 			->disableOriginalConstructor()
-			->setMethods( [
+			->onlyMethods( [
 					'getTitle',
 					'getPrefixedDBkey',
 					'addModules',

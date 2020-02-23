@@ -32,7 +32,7 @@ class ContentProviderFactoryTest extends MediaWikiTestCase {
 		// Mock OutputPage class
 		$mockOutputPage = $this->getMockBuilder( OutputPage::class )
 			->disableOriginalConstructor()
-			->setMethods( [ 'getTitle', 'getRequest', 'getSkin' ] )
+			->onlyMethods( [ 'getTitle', 'getRequest', 'getSkin' ] )
 			->getMock();
 
 		$mockOutputPage->method( 'getTitle' )

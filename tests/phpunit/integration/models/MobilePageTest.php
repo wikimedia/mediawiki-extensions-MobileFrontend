@@ -26,7 +26,7 @@ class MobilePageTest extends MediaWikiTestCase {
 	private function mockFileFactory( $height ) {
 		$file = $this->getMockBuilder( 'File' )
 			->disableOriginalConstructor()
-			->setMethods( [ 'getUrl', 'getHeight', 'getWidth', 'transform' ] )
+			->onlyMethods( [ 'getUrl', 'getHeight', 'getWidth', 'transform' ] )
 			->getMock();
 
 		$file->method( 'getUrl' )
@@ -89,7 +89,7 @@ class MobilePageTest extends MediaWikiTestCase {
 		// mock when getRevisionByTitle() method is called.
 		$revisionStoreMock = $this->getMockBuilder( RevisionStore::class )
 			->disableOriginalConstructor()
-			->setMethods( [ 'getRevisionByTitle' ] )
+			->onlyMethods( [ 'getRevisionByTitle' ] )
 			->getMock();
 
 		$revisionStoreMock->expects( $this->once() )
@@ -107,7 +107,7 @@ class MobilePageTest extends MediaWikiTestCase {
 	private function mockRevisionStoreWithTitleReturnNullRevision( $title ) {
 		$mock = $this->getMockBuilder( RevisionStore::class )
 			->disableOriginalConstructor()
-			->setMethods( [ 'getRevisionByTitle' ] )
+			->onlyMethods( [ 'getRevisionByTitle' ] )
 			->getMock();
 
 		$mock->expects( $this->once() )
@@ -327,7 +327,7 @@ class MobilePageTest extends MediaWikiTestCase {
 	public function testGetSmallThumbnailHtmlWithNoThumb( $useBackgroundImage, $expected ) {
 		$thumb = $this->getMockBuilder( File::class )
 			->disableOriginalConstructor()
-			->setMethods( [ 'transform' ] )
+			->onlyMethods( [ 'transform' ] )
 			->getMock();
 
 		$thumb->method( 'transform' )
