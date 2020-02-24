@@ -35,7 +35,9 @@ mfExtend( ReferencesHtmlScraperGateway, ReferencesGateway, {
 		$el = $container.find( '#' + util.escapeSelector( id.substr( 1 ) ) );
 		if ( $el.length ) {
 			$el.find( '.external' ).addClass( this.EXTERNAL_LINK_CLASS );
-			result.resolve( { text: $el.html() } );
+			result.resolve( {
+				text: $el.find( '.mw-reference-text, .reference-text' ).first().html()
+			} );
 		} else {
 			result.reject( ReferencesGateway.ERROR_NOT_EXIST );
 		}
