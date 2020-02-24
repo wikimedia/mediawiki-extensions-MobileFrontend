@@ -1,24 +1,25 @@
-# Configuration file for Doxygen
-
 PROJECT_NAME           = MobileFrontend
-PROJECT_BRIEF          = Mobile optimised frontend for MediaWiki
+PROJECT_BRIEF          = "Mobile optimised frontend for MediaWiki"
 
 OUTPUT_DIRECTORY       = docs
 HTML_OUTPUT            = php
 
+# Interpret the first line of a comment as a brief description?
 JAVADOC_AUTOBRIEF      = YES
 QT_AUTOBRIEF           = YES
 
 WARN_NO_PARAMDOC       = YES
 
-INPUT                  = README.md ./
-EXCLUDE_PATTERNS       = */vendor/*
-EXCLUDE_PATTERNS      += */docs/*
-EXCLUDE_PATTERNS      += */node_modules/*
+INPUT                  = .
+EXCLUDE_PATTERNS       = doc docs vendor node_modules tests
 FILE_PATTERNS          = *.php
+
+# Search through subdirectories for input files?
 RECURSIVE              = YES
-# Requires doxygen 1.8.3+
-USE_MDFILE_AS_MAINPAGE = README.md
+
+# NOTE: USE_MDFILE_AS_MAINPAGE requires that the specified file is included as an input file.
+USE_MDFILE_AS_MAINPAGE = ./README.md
+INPUT                 += ./README.md
 
 HTML_DYNAMIC_SECTIONS  = YES
 GENERATE_TREEVIEW      = YES
@@ -28,9 +29,8 @@ GENERATE_LATEX         = NO
 
 HAVE_DOT               = YES
 DOT_FONTNAME           = Helvetica
-DOT_FONTSIZE           = 10
+DOT_FONTSIZE           = 12
 TEMPLATE_RELATIONS     = YES
-CALL_GRAPH             = NO
-CALLER_GRAPH           = NO
+
 # Makes dot run faster. Requires graphviz >1.8.10
 DOT_MULTI_TARGETS      = YES
