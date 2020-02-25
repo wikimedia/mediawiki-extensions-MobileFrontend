@@ -18,6 +18,9 @@ class ResourceLoaderFileModuleWithMFConfig extends ResourceLoaderFileModule {
 			. parent::getScript( $context );
 	}
 
+	/**
+	 * @return array
+	 */
 	private function getConfigData() {
 		return MobileFrontendHooks::getResourceLoaderMFConfigVars() +
 			MobileFrontendEditorHooks::getResourceLoaderMFConfigVars();
