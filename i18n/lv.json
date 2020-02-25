@@ -7,6 +7,7 @@
 			"Silraks"
 		]
 	},
+	"abusefilter-edit-builder-vars-user-mobile": "Vai dalībnieks labo, izmantojot mobilo saskarni",
 	"mobile-frontend-account-create-captcha-placeholder": "Ievadiet apstiprinājuma kodu",
 	"mobile-frontend-categories-heading": "<strong>Kategorijas</strong>",
 	"mobile-frontend-categories-subheading": "Šī lapa pieder šādām kategorijām:",
@@ -22,8 +23,10 @@
 	"mobile-frontend-categories-hidden": "Organizatoriskās kategorijas",
 	"mobile-frontend-changeslist-nocomment": "nav labojuma kopsavilkuma",
 	"mobile-frontend-cite-error-title": "Kļūda, ielādējot atsauces",
+	"mobile-frontend-cite-error": "Mēģinot ielādēt atsauces notika problēma nederīga versijas identifikatora dēļ.",
 	"mobile-frontend-cite-none-available": "Šai lapa nav pieejama neviena atsauce.",
 	"mobile-frontend-clear-search": "Notīrīt",
+	"mobile-frontend-contributions-404-desc": "Nevar apskatīt devumu nenorādot dalībnieku vai norādot neesošu dalībnieku.",
 	"mobile-frontend-contributions-404-title": "Norādīts nederīgs lietotājvārds",
 	"mobile-frontend-copyright": "Saturs ir pieejams saskaņā ar $1, ja vien nav norādīts citādi.",
 	"mobile-frontend-diffview-404-title": "Nederīga versija",
