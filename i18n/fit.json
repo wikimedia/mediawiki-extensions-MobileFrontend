@@ -59,6 +59,7 @@
 	"mobile-frontend-watchlist-filter-other": "Muut",
 	"mobile-frontend-watchlist-filter-talk": "Keskustelu",
 	"mobile-frontend-watchlist-more": "lissää",
+	"mobile-frontend-watchlist-error": "Tätä sivua tarkkailtaessa tapahtui virhe. Yritä uuesti.",
 	"mobile-frontend-user-page-describe-yourself-editors": "mookkaajille",
 	"mobile-frontend-user-page-create-owner-page-link-label": "Luo omasi",
 	"tag-mobile_edit": "Mupiilimookkaus",
