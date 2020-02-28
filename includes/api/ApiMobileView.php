@@ -550,7 +550,6 @@ class ApiMobileView extends ApiBase {
 		$data['text'] = [];
 		$data['refsections'] = [];
 		foreach ( $chunks as $chunk ) {
-			// @phan-suppress-next-line PhanTypePossiblyInvalidDimOffset
 			if ( count( $data['text'] ) ) {
 				$chunk = "<h$chunk";
 			}
@@ -824,7 +823,6 @@ class ApiMobileView extends ApiBase {
 					? $this->getScaledDimen( $file->getHeight(), $file->getWidth(), $resize['height'] )
 					: $file->getWidth();
 			}
-			// @phan-suppress-next-line PhanImpossibleCondition
 			if ( !$resize ) {
 				// Default
 				$resize['width'] = $resize['height'] = 50;

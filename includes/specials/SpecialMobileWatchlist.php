@@ -262,9 +262,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		if ( $rollbacker ) {
 			$tables[] = 'page';
 			$join_conds['page'] = [ 'LEFT JOIN', 'rc_cur_id=page_id' ];
-			if ( $rollbacker ) {
-				$fields[] = 'page_latest';
-			}
+			$fields[] = 'page_latest';
 		}
 
 		ChangeTags::modifyDisplayQuery( $tables, $fields, $conds, $join_conds, $query_options, '' );
