@@ -29,7 +29,7 @@
 	"mobile-frontend-editor-save": "Захаваць",
 	"mobile-frontend-editor-uploadenable": "Калі ласка, спачатку загрузіце фота, каб мець магчымасьць рэдагаваць.",
 	"mobile-frontend-featured-article": "Сёньняшні абраны матэрыял",
-	"mobile-frontend-last-modified-date": "Апошняя праўка ў $2 $1",
+	"mobile-frontend-last-modified-date": "Апошняе рэдагаваньне ў $2 $1",
 	"mobile-frontend-main-menu-settings-heading": "Налады",
 	"mobile-frontend-missing-image": "Выява",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 км}}",
