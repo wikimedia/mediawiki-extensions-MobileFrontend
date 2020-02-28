@@ -524,8 +524,10 @@ class MobileFrontendHooks {
 			}
 
 		}
-		// add Special:Nearby only, if Nearby is activated
-		if ( $config->get( 'MFNearby' ) ) {
+		// Add Special:Nearby only, if Nearby is activated and Extension:NearbyPages is not (T66316)!
+		if ( !ExtensionRegistry::getInstance()->isLoaded( 'NearbyPages' ) &&
+			$config->get( 'MFNearby' )
+		) {
 			$list['Nearby'] = 'SpecialNearby';
 		}
 	}
