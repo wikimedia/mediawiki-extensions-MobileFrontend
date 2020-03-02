@@ -6,6 +6,7 @@ var Overlay = require( '../mobile.startup/Overlay' ),
 	PageGateway = require( '../mobile.startup/PageGateway' ),
 	icons = require( '../mobile.startup/icons' ),
 	Button = require( '../mobile.startup/Button' ),
+	Icon = require( '../mobile.startup/Icon' ),
 	toast = require( '../mobile.startup/toast' ),
 	saveFailureMessage = require( './saveFailureMessage' ),
 	mfExtend = require( '../mobile.startup/mfExtend' ),
@@ -378,11 +379,12 @@ mfExtend( EditorOverlayBase, Overlay, {
 					editingMsg: options.editingMsg
 				} ),
 				options.readOnly ? [] : [
-					new Button( {
+					new Icon( {
 						tagName: 'button',
+						name: 'arrowNext-invert',
 						additionalClassNames: 'continue',
 						disabled: true,
-						label: options.continueMsg
+						title: options.continueMsg
 					} )
 				],
 				icons.cancel(),

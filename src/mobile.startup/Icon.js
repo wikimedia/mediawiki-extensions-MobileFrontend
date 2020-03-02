@@ -86,6 +86,7 @@ mfExtend( Icon, View, {
 	 * @property {boolean} defaults.rotation will rotate the icon by a certain number
 	 *  of degrees.
 	 *  Must be ±90, 0 or ±180 or will throw exception.
+	 * @property {boolean} defaults.disabled should only be used with tagName button
 	 */
 	defaults: {
 		rotation: 0,
@@ -93,6 +94,7 @@ mfExtend( Icon, View, {
 		href: undefined,
 		glyphPrefix: 'mf',
 		tagName: 'div',
+		disabled: false,
 		isSmall: false,
 		base: 'mw-ui-icon',
 		name: '',
@@ -118,7 +120,7 @@ mfExtend( Icon, View, {
 		return this.options.base + '-' + this.options.glyphPrefix + '-' + this.options.name;
 	},
 	template: util.template(
-		'<{{tagName}} ' +
+		'<{{tagName}} {{#disabled}}disabled{{/disabled}} ' +
 			'{{#isTypeButton}}type="button"{{/isTypeButton}} ' +
 			'class="{{base}} ' +
 				'{{base}}-{{glyphPrefix}}-{{name}} ' +

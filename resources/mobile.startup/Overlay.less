@@ -171,9 +171,12 @@
 			background-color: @colorProgressive;
 			color: #fff;
 			width: auto;
-			padding: 0 1.2em;
 			display: table-cell;
 			vertical-align: middle;
+
+			&:not( .mw-ui-icon-element ) {
+				padding: 0 1.2em;
+			}
 
 			&[ disabled ] {
 				background-color: @colorGray12;
