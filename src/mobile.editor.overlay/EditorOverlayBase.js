@@ -53,7 +53,6 @@ EditVeTool.prototype.onUpdateState = function () {
  * @uses Icon
  * @uses user
  * @param {Object} params Configuration options
- * @params {Object} [params.editorOptions] falls back to wgMFEditorOptions if undefined
  * @param {number|null} params.editCount of user
  * @param {boolean} params.editSwitcher whether possible to switch mode in header
  * @param {boolean} params.hasToolbar whether the editor has a toolbar
@@ -93,8 +92,6 @@ function EditorOverlayBase( params ) {
 	this.isNewPage = options.isNewPage;
 	this.isNewEditor = options.editCount === 0;
 	this.sectionId = options.sectionId;
-	// FIXME: Pass this in via options rather than accessing mw.config
-	this.config = params.editorOptions || mw.config.get( 'wgMFEditorOptions' );
 	this.sessionId = options.sessionId;
 	this.overlayManager = options.overlayManager;
 
@@ -385,9 +382,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 						tagName: 'button',
 						additionalClassNames: 'continue',
 						disabled: true,
-						label: this.config.skipPreview ?
-							util.saveButtonMessage() :
-							options.continueMsg
+						label: options.continueMsg
 					} )
 				],
 				icons.cancel(),
@@ -403,14 +398,6 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 * @instance
 	 */
 	postRender: function () {
-		// decide what happens, when the user clicks the continue button
-		if ( this.config.skipPreview ) {
-			// skip the preview and save the changes
-			this.nextStep = 'onSaveBegin';
-		} else {
-			// default: show the preview step
-			this.nextStep = 'onStageChanges';
-		}
 		this.$errorNoticeContainer = this.$el.find( '#error-notice-container' );
 
 		Overlay.prototype.postRender.apply( this );
@@ -458,7 +445,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 * @instance
 	 */
 	onClickContinue: function () {
-		this[this.nextStep]();
+		this.onStageChanges();
 	},
 	/**
 	 * "Edit without logging in" button click handler

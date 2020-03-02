@@ -17,8 +17,6 @@ class MobileFrontendEditorHooks {
 		$config = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Config' );
 
 		return [
-			// EditorOverlayBase.js
-			'wgMFEditorOptions' => $config->get( 'MFEditorOptions' ),
 			// schemaEditAttemptStep.js
 			'wgMFSchemaEditAttemptStepOversample' => $config->get( 'MFSchemaEditAttemptStepOversample' ),
 			// MFDefaultEditor should be `source`, `visual`, `preference`, or `abtest`.

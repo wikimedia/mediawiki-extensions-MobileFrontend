@@ -780,9 +780,6 @@
 		"MFContentProviderScriptPath": "",
 		"MFMcsContentProviderBaseUri": "https://en.wikipedia.org/api/rest_v1",
 		"MFEnableXAnalyticsLogging": false,
-		"MFEditorOptions": {
-			"skipPreview": false
-		},
 		"MFDefaultEditor": "source",
 		"MFEnableJSConsoleRecruitment": false,
 		"MFAlwaysUseContentProvider": false,
