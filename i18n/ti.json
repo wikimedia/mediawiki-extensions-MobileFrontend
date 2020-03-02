@@ -1,0 +1,30 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joanmp17"
+		]
+	},
+	"mobile-frontend-editor-cancel": "ኣትርፍ",
+	"mobile-frontend-editor-continue": "ቀጻሊ",
+	"mobile-frontend-editor-save": "ኣቐምጥ",
+	"mobile-frontend-editor-summary": "መጠቓለሊ፥",
+	"mobile-frontend-languages-header": "ቋንቋታት",
+	"mobile-frontend-languages-structured-overlay-all-languages-header": "ካልኦት ቋንቋታት",
+	"mobile-frontend-main-menu-settings-heading": "ኣቀማምጣታት",
+	"mobile-frontend-media-details": "ዝርዝሪት",
+	"mobile-frontend-media-load-fail-retry": "ኣሐድስ",
+	"mobile-frontend-missing-image": "ምስሊ",
+	"mobile-frontend-overlay-close": "ዕጸው",
+	"mobile-frontend-privacy-link-text": "ስትረት",
+	"mobile-frontend-save-settings": "ኣቐምጥ",
+	"mobile-frontend-terms-text": "ናይ ኣጠቓቕማ ኩነታት",
+	"mobile-frontend-watchlist-cta-button-login": "ብመንነት እተው",
+	"mobile-frontend-watchlist-filter-all": "ምሉእ",
+	"mobile-frontend-watchlist-filter-articles": "ገጻት",
+	"mobile-frontend-watchlist-filter-other": "ካልእ",
+	"mobile-frontend-watchlist-filter-talk": "ምይይጥ",
+	"mobile-frontend-watchlist-more": "ተወሳኺ",
+	"mobile-frontend-loading-message": "ጽዕነት...",
+	"mobile-frontend-mobile-option-amc-learn-more": "ተወሳኺ ፍለጥ",
+	"mobile-frontend-amc-outreach-no-thanks": "ኣይፋል፣ የቐንየለይ"
+}

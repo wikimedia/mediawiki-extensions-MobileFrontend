@@ -36,5 +36,6 @@
 	"apierror-mobilefrontend-badidtitle": "Погана комбінація ідентифікатора/назви версії.",
 	"apierror-mobilefrontend-toomanysizeparams": "<var>thumbsize</var> є взаємовиключним із <var>thumbwidth</var> і <var>thumbheight</var>.",
 	"apiwarn-mobilefrontend-ignoringnoheadings": "<var>noheadings</var> не має сенсу на головній сторінці, проігноровано.",
+	"apiwarn-mobilefrontend-mobileviewdeprecated": "Ця API застаріла. Див. T186627, щоб дізнатись більше.",
 	"apiwarn-mobilefrontend-sectionsnotfound": "{{PLURAL:$2|Розділ|Розділи}} $1 не знайдено."
 }
