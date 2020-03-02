@@ -381,7 +381,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 				options.readOnly ? [] : [
 					new Icon( {
 						tagName: 'button',
-						name: 'arrowNext-invert',
+						name: 'next-invert',
 						additionalClassNames: 'continue',
 						disabled: true,
 						title: options.continueMsg

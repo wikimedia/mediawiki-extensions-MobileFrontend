@@ -30,7 +30,7 @@ module.exports = {
 	back: function () {
 		return new Icon( {
 			tagName: 'button',
-			name: 'arrowPrevious-base20',
+			name: 'previous-base20',
 			additionalClassNames: 'back',
 			label: mw.msg( 'mobile-frontend-overlay-close' )
 		} );
