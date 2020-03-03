@@ -39,7 +39,6 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/SourceEditorOverlay', {
 		sandbox.stub( window, 'scrollTo' );
 		sandbox.stub( mw.util, 'getUrl' ).returns( '/w/index.php?title=User:Test' );
 		sandbox.stub( mw.config, 'get' )
-			.withArgs( 'wgMFEditorOptions' ).returns( { skipPreview: true } )
 			.withArgs( 'wgFormattedNamespaces' ).returns( { 2: 'User' } )
 			.withArgs( 'wgNamespaceIds' ).returns( { user: 2 } );
 		sandbox.stub( mw.Title, 'makeTitle' ).returns( {
@@ -133,16 +132,6 @@ QUnit.test( '#preview', function ( assert ) {
 
 	return previewResolve.then( function () {
 		assert.strictEqual( editorOverlay.$preview.text(), '\n\npreviewtest', 'preview loaded correctly' );
-	} );
-} );
-
-QUnit.test( '#without-preview', function ( assert ) {
-	var editorOverlay = new SourceEditorOverlay( {
-		title: 'test',
-		sectionId: 0
-	} );
-	return getContentStub().then( function () {
-		assert.strictEqual( editorOverlay.$el.find( '.continue' ).text(), 'Save', 'no preview loaded' );
 	} );
 } );
 

@@ -100,23 +100,6 @@ See: https://www.mediawiki.org/wiki/Analytics/Kraken/Data_Formats/X-Analytics
 * Type: `Boolean`
 * Default: `false`
 
-#### $wgMFEditorOptions
-
-Options to control several functions of the mobile editor.  Possible values:
-
-* `skipPreview`: Should the mobile edit workflow contain an edit preview
-  (before save) to give the user the possibility to review the new text
-  resulting of his changes or not.
-
-
-* Type: `Array`
-* Default:
-```php
-  [
-    'skipPreview' => false,
-  ]
-```
-
 #### $wgMFUsePreferredEditor
 
 Use the user's preferred editor (i.e. visual editor or source editor) on first load. Uses the `visualeditor-editor` user option.
