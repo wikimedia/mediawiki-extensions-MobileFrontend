@@ -399,6 +399,11 @@ $specialPageAliases['sv'] = [
 	'Nearby' => [ 'Nära' ],
 ];
 
+/** Turkish (Türkçe) */
+$specialPageAliases['tr'] = [
+	'Nearby' => [ 'Yakınımdakiler' ],
+];
+
 /** Ukrainian (українська) */
 $specialPageAliases['uk'] = [
 	'History' => [ 'Історія' ],
