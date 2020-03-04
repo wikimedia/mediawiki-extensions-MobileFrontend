@@ -235,6 +235,7 @@
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "Introductieparagraaf",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Lettergrootte",
 	"mobile-frontend-mobile-option-amc": "Geavanceerde modus",
+	"mobile-frontend-mobile-option-amc-experiment-description": "De geavanceerde modus vergemakkelijkt de toegang tot overlegpagina's, bewerkingsgeschiedenissen, gebruikershulpmiddelen en andere bewerkingshulpmiddelen.",
 	"mobile-frontend-mobile-option-amc-learn-more": "Meer lezen",
 	"mobile-frontend-mobile-option-amc-send-feedback": "Terugkoppelen",
 	"mobile-frontend-amc-outreach-intro": "Introductie geavanceerde modus",
