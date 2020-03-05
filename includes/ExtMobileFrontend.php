@@ -12,6 +12,30 @@ use Wikibase\DataModel\Term\FingerprintProvider;
  */
 class ExtMobileFrontend {
 	/**
+	 * Provide alternative HTML for a user page which has not been created.
+	 * Let the user know about it with pretty graphics and different texts depending
+	 * on whether the user is the owner of the page or not.
+	 * @param OutputPage $out
+	 * @param Title $title
+	 * @return string that is empty if the transform does not apply.
+	 */
+	public static function blankUserPageHTML( OutputPage $out, Title $title ) {
+		$pageUser = self::buildPageUserObject( $title );
+
+		$out->addModuleStyles( [
+			'mediawiki.ui.icon',
+			'mobile.userpage.styles', 'mobile.userpage.images'
+		] );
+
+		if ( $pageUser && !$title->exists() ) {
+			return self::getUserPageContent(
+				$out, $pageUser, $title );
+		} else {
+			return '';
+		}
+	}
+
+	/**
 	 * Transforms content to be mobile friendly version.
 	 * Filters out various elements and runs the MobileFormatter.
 	 * @param OutputPage $out
@@ -40,23 +64,6 @@ class ExtMobileFrontend {
 		$title = $out->getTitle();
 		$ns = $title->getNamespace();
 		$isView = $context->getRequest()->getText( 'action', 'view' ) == 'view';
-
-		// If the page is a user page which has not been created, then let the
-		// user know about it with pretty graphics and different texts depending
-		// on whether the user is the owner of the page or not.
-		if ( $ns === NS_USER && !$title->isSubpage() && $isView ) {
-			$pageUser = self::buildPageUserObject( $title );
-
-			$out->addModuleStyles( [
-				'mediawiki.ui.icon',
-				'mobile.userpage.styles', 'mobile.userpage.images'
-			] );
-
-			if ( $pageUser && !$title->exists() ) {
-				return self::getUserPageContent(
-					$out, $pageUser, $title );
-			}
-		}
 
 		$enableSections = (
 			// Don't collapse sections e.g. on JS pages
@@ -127,7 +134,9 @@ class ExtMobileFrontend {
 	 * @param Title $title
 	 * @return string
 	 */
-	public static function getUserPageContent( IContextSource $output, User $pageUser, Title $title ) {
+	protected static function getUserPageContent( IContextSource $output,
+		User $pageUser, Title $title
+	) {
 		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
 		$pageUsername = $pageUser->getName();
 		// Is the current user viewing their own page?
