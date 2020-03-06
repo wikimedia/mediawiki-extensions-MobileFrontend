@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Abshirdheere"
+			"Abshirdheere",
+			"Abdullahi"
 		]
 	},
-	"mobile-frontend-view": "Nuqul mobil"
+	"mobile-frontend-view": "Nuqul mobil",
+	"tag-mobile_edit": "Tafatirka mobilada",
+	"tag-mobile_web_edit": "tafaatirka shabakada ee moobiilada"
 }
