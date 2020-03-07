@@ -1,5 +1,6 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
 use MediaWiki\Storage\RevisionRecord;
 use Wikimedia\Rdbms\IResultWrapper;
 
@@ -114,7 +115,9 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 				}
 			}
 		}
-		$this->prevLengths = Revision::getParentLengths( wfGetDB( DB_REPLICA ), $prevRevs );
+		$this->prevLengths = MediaWikiServices::getInstance()
+			->getRevisionStore()
+			->getRevisionSizes( $prevRevs );
 		if ( $numRows > 0 ) {
 			$count = 0;
 			foreach ( $revs as $rev ) {
