@@ -14,6 +14,6 @@ class SpecialUploads extends RedirectSpecialPage {
 	 * @inheritDoc
 	 */
 	public function getRedirect( $subpage ) {
-		return $this->getTitleFor( 'Listfiles', $subpage );
+		return self::getTitleFor( 'Listfiles', $subpage );
 	}
 }
