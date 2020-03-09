@@ -88,7 +88,6 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 		$mfEnableXAnalyticsLogging, $mfAutoDetectMobileView, $mfVaryOnUA, $mfXAnalyticsItems,
 		$isAlternateCanonical, $isXAnalytics, $mfVaryHeaderSet
 	) {
-		// set globals
 		$this->setMwGlobals( [
 			'wgMFEnableManifest' => false,
 			'wgMobileUrlTemplate' => $mobileUrlTemplate,
@@ -166,37 +165,25 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 		MobileContext::resetInstanceForTesting();
 		$context = MobileContext::singleton();
 
-		// create a DerivativeContext to use in MobileContext later
 		$mainContext = new DerivativeContext( RequestContext::getMain() );
-		// create a new, empty OutputPage
 		$out = new OutputPage( $context );
-		// create a new, empty SkinTemplate
 		$skin = new SkinTemplate();
 		if ( $title === null ) {
-			// create a new Title (main page)
 			$title = Title::newMainPage();
 		}
 		// create a FauxRequest to use instead of a WebRequest object (FauxRequest forces
 		// the creation of a FauxResponse, which allows to investigate sent header values)
 		$request = new FauxRequest();
-		// set the new request object to the context
 		$mainContext->setRequest( $request );
-		// set the main page title to the context
 		$mainContext->setTitle( $title );
-		// set the context to the SkinTemplate
 		$skin->setContext( $mainContext );
-		// set the OutputPage to the context
 		$mainContext->setOutput( $out );
-		// set the DerivativeContext as a base to MobileContext
 		$context->setContext( $mainContext );
-		// set the mode to MobileContext
 		$context->setUseFormat( $mode );
-		// if there are any XAnalytics items, add them
 		foreach ( $mfXAnalyticsItems as $key => $val ) {
 			$context->addAnalyticsLogItem( $key, $val );
 		}
 
-		// return the stuff
 		return [
 			'out' => $out,
 			'sk' => $skin,
