@@ -32,7 +32,8 @@
 			"Mirzali",
 			"Grkn gll",
 			"BaRaN6161 TURK",
-			"SwornToTranslate29"
+			"SwornToTranslate29",
+			"ToprakM"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ya da bir mobil kullanıcı arayüzü ile düzenleme olup olmadığı",
@@ -169,7 +170,7 @@
 	"mobile-frontend-nearby-location-unavailable": "{{SITENAME}} konumunuzu belirleyemiyor. Lütfen daha iyi bir sinyalle tekrar deneyin.",
 	"mobile-frontend-nearby-requirements": "Üzgünüz! Veb tarayıcınız {{SITENAME}} yakınındakileri desteklemiyor.",
 	"mobile-frontend-nearby-requirements-guidance": "Farklı bir tarayıcı deneyin veya JavaScript devredışı bırakılmışsa etkinleştirin.",
-	"mobile-frontend-nearby-title": "Yakınındakiler",
+	"mobile-frontend-nearby-title": "Yakınımdakiler",
 	"mobile-frontend-nearby-info-heading": "Çevrenizdeki yerler",
 	"mobile-frontend-nearby-info-description": "Çevrenizdeki yerler hakkında ilginç {{SITENAME}} makaleler hakkında bilgi edinebilirsiniz",
 	"mobile-frontend-nearby-info-show-button": "Yakındaki makaleleri göster",

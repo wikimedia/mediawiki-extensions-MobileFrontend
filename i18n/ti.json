@@ -4,6 +4,8 @@
 			"Joanmp17"
 		]
 	},
+	"mobile-frontend-clear-search": "ኣጽርይ",
+	"mobile-frontend-editor-blocked-drawer-help": "ዝርዝሪት",
 	"mobile-frontend-editor-cancel": "ኣትርፍ",
 	"mobile-frontend-editor-continue": "ቀጻሊ",
 	"mobile-frontend-editor-editing": "ምዕራይ",
@@ -19,6 +21,8 @@
 	"mobile-frontend-privacy-link-text": "ስትረት",
 	"mobile-frontend-save-settings": "ኣቐምጥ",
 	"mobile-frontend-terms-text": "ናይ ኣጠቓቕማ ኩነታት",
+	"mobile-frontend-view": "ናይ ሞባይል ትርኢት",
+	"mobile-frontend-watchlist-a-z": "ዝርዝር",
 	"mobile-frontend-watchlist-cta-button-login": "ብመንነት እተው",
 	"mobile-frontend-watchlist-filter-all": "ምሉእ",
 	"mobile-frontend-watchlist-filter-articles": "ገጻት",

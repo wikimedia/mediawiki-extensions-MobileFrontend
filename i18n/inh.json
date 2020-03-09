@@ -18,6 +18,7 @@
 	"mobile-frontend-editor-licensing": "Даь дола хувцамаш дIаяздарца шоаш раьза долга хьахайт оаш шоай къахьагам укх {{PLURAL:$2|1=лицензеца|лицензешца}} $1 кепатохарá.",
 	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|Шо}} {{SITENAME}} чу керда оагӀув кхолла доахк!",
 	"mobile-frontend-editor-publish": "Кéпатóха",
+	"mobile-frontend-editor-success": "Толамца! Хьа тоадар кепатехад.",
 	"mobile-frontend-editor-summary-request": "МалагIа хувцам а баь тоаяьй оаш оагIув?",
 	"mobile-frontend-featured-article": "Укх денга хержа материал",
 	"mobile-frontend-generic-login-new": "<strong>Проект {{SITENAME}} дегIайоалаеш я шо санна болча наха.</strong><br />Чудовла, дáкъа лоацаргдолаш.",
