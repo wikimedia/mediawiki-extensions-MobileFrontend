@@ -7,6 +7,7 @@ plugins:
   - removeTitle: false
   - removeViewBox: false
   - removeXMLProcInst: false
+  - sortAttrs: true
 
 # Configure the indent (default 4 spaces) used by `--pretty` here:
 #
