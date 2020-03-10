@@ -196,8 +196,16 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 		$this->renderListHeaderWhereNeeded( $this->getLanguage()->userDate( $ts, $this->getUser() ) );
 		$ts = new MWTimestamp( $ts );
 
-		$canSeeText = $rev->userCan( RevisionRecord::DELETED_TEXT, $user );
-		if ( $canSeeText && $prev && $prev->userCan( RevisionRecord::DELETED_TEXT, $user ) ) {
+		$canSeeText = RevisionRecord::userCanBitfield(
+			$rev->getVisibility(),
+			RevisionRecord::DELETED_TEXT,
+			$user
+		);
+		if ( $canSeeText && $prev && RevisionRecord::userCanBitfield(
+			$prev->getVisibility(),
+			RevisionRecord::DELETED_TEXT,
+			$user
+		) ) {
 			$diffLink = SpecialPage::getTitleFor( 'MobileDiff', $rev->getId() )->getLocalURL();
 		} elseif ( $canSeeText && $rev->getTitle() !== null ) {
 			$diffLink = $rev->getTitle()->getLocalURL( [ 'oldid' => $rev->getId() ] );

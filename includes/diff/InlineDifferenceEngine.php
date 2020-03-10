@@ -42,11 +42,19 @@ class InlineDifferenceEngine extends DifferenceEngine {
 	 */
 	public function isUserAllowedToSee() {
 		$user = $this->getUser();
-		$allowed = $this->mNewRev->userCan( RevisionRecord::DELETED_TEXT, $user );
-		if ( $this->mOldRev &&
-			!$this->mOldRev->userCan( RevisionRecord::DELETED_TEXT, $user )
-		) {
-			$allowed = false;
+		$allowed = RevisionRecord::userCanBitfield(
+			$this->mNewRev->getVisibility(),
+			RevisionRecord::DELETED_TEXT,
+			$user
+		);
+		if ( $this->mOldRev ) {
+			if ( !RevisionRecord::userCanBitfield(
+				$this->mOldRev->getVisibility(),
+				RevisionRecord::DELETED_TEXT,
+				$user
+			) ) {
+				$allowed = false;
+			}
 		}
 		return $allowed;
 	}

@@ -82,7 +82,11 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 	 * @return string plain test label
 	 */
 	protected function getRevisionCommentHTML( $rev, $user, $unhide ) {
-		if ( $rev->userCan( RevisionRecord::DELETED_COMMENT, $user ) ) {
+		if ( RevisionRecord::userCanBitfield(
+			$rev->getVisibility(),
+			RevisionRecord::DELETED_COMMENT,
+			$user
+		) ) {
 			if ( $rev->isDeleted( RevisionRecord::DELETED_COMMENT ) && !$unhide ) {
 				$comment = $this->msg( 'rev-deleted-comment' )->escaped();
 			} else {
@@ -115,7 +119,11 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 			$username = $rev->getUserText( RevisionRecord::FOR_THIS_USER, $user );
 		}
 		if (
-			!$rev->userCan( RevisionRecord::DELETED_USER, $user ) ||
+			!RevisionRecord::userCanBitfield(
+				$rev->getVisibility(),
+				RevisionRecord::DELETED_USER,
+				$user
+			) ||
 			( $rev->isDeleted( RevisionRecord::DELETED_USER ) && !$unhide )
 		) {
 			$username = $this->msg( 'rev-deleted-user' )->text();
