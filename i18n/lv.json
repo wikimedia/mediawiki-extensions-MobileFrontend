@@ -29,6 +29,7 @@
 	"mobile-frontend-contributions-404-desc": "Nevar apskatīt devumu nenorādot dalībnieku vai norādot neesošu dalībnieku.",
 	"mobile-frontend-contributions-404-title": "Norādīts nederīgs lietotājvārds",
 	"mobile-frontend-copyright": "Saturs ir pieejams saskaņā ar $1, ja vien nav norādīts citādi.",
+	"mobile-frontend-desc": "Mobilais skats",
 	"mobile-frontend-diffview-404-title": "Nederīga versija",
 	"mobile-frontend-diffview-anonymous": "Anonīms lietotājs",
 	"mobile-frontend-diffview-bytesadded": "{{PLURAL:$1|Pievienoti $1 baitu|Pievienots $1 baits|Pievienoti $1 baiti}}",

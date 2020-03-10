@@ -18,7 +18,7 @@
 	"mobile-frontend-categories-nodata": "Bewarjen mislearre. Hawwe jo wol kategoryen taheakke?",
 	"mobile-frontend-categories-summary": "Taheakke oan kategoryen",
 	"mobile-frontend-categories-notification": "De kategoryen binne bywurke.",
-	"mobile-frontend-categories-add-heading": "<span><strong>Taheakjen fan</strong> $1, oan nije kategoryen</span>",
+	"mobile-frontend-categories-add-heading": "<span><strong>Taheakjen fan</strong> $1 <strong>oan nije kategoryen</strong></span>",
 	"mobile-frontend-categories-add-wait": "Kategoryen bewarjen, efkes wachtsje.",
 	"mobile-frontend-categories-normal": "Ynhâldlik",
 	"mobile-frontend-categories-hidden": "Organisatoarysk",
