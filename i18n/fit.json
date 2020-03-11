@@ -4,7 +4,10 @@
 			"Pyscowicz"
 		]
 	},
+	"mobile-frontend-account-create-captcha-placeholder": "Kirjota varmistuskooti",
 	"mobile-frontend-categories-heading": "<strong>Katekuurit</strong>",
+	"mobile-frontend-categories-subheading": "Sivu kuuluu seuraaviin katekuureihin:",
+	"mobile-frontend-categories-nocat": "Tämä sivu ei kuulu mihinkään katekuuriin vielä.",
 	"mobile-frontend-categories-add": "Lissää katekuurihaan",
 	"mobile-frontend-categories-search": "Hae katakuureja",
 	"mobile-frontend-categories-summary": "Lisätty katekuureihin",
@@ -36,6 +39,10 @@
 	"mobile-frontend-editor-uploadenable": "Ylöslattaa ensin kuva ottaaksesi mookkaamisen käyttöön.",
 	"mobile-frontend-editor-wait": "Tallennethaan mookkausta. Oota.",
 	"mobile-frontend-editor-loading": "Ladathaan mookkainta...",
+	"mobile-frontend-generic-404-title": "Virhe - sivua ei löydy",
+	"mobile-frontend-generic-login-new": "<strong>{{GRAMMAR:partitive|{{SITENAME}}}} rakentavat sinun kaltaisesi ihmiset.</strong><br />Aloita artikkelin mookkaaminen lokkaamalla sisäle.",
+	"mobile-frontend-history-404-desc": "Histuuriaa ei voida näythää sivulta jota ei ole olemassa. Sivu voi olla otettu poies tai käyttämäsi länkki oon virheellinen.",
+	"mobile-frontend-history-no-results": "Annettuun filtteriin ei löydy histuuriaa.",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|Liittyi}} {{PLURAL:$2|$2 sekunti|$2 sekuntia}} sitten",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|Liittyi}} {{PLURAL:$2|$2 minuutti|$2 minuuttia}} sitten",
 	"mobile-frontend-joined-hours": "{{GENDER:$1|Liittyi}} {{PLURAL:$2|$2 tiima|$2 tiimaa}} sitten",
@@ -44,6 +51,13 @@
 	"mobile-frontend-joined-years": "{{GENDER:$1|Liittyi}} {{PLURAL:$2|$2 vuosi|$2 vuotta}} sitten",
 	"mobile-frontend-language-heading": "<strong>Kielet</strong>",
 	"mobile-frontend-languages-header": "Kielet",
+	"mobile-frontend-last-modified-with-user-days": "[$4 Viimeksi {{GENDER:$1|mookannut}} {{PLURAL:$3|$3 päivä|$3 päivää}} sitten] {{PLURAL:$5|[$6 $2]|0=anonyymi käyttäjä}}",
+	"mobile-frontend-last-modified-with-user-hours": "[$4 Viimeksi {{GENDER:$1|mookannut}} {{PLURAL:$3|$3 tiima|$3 tiimaa}} sitten] {{PLURAL:$5|[$6 $2]|0=anonyymi käyttäjä}}",
+	"mobile-frontend-last-modified-with-user-just-now": "[$3 Viimeksi {{GENDER:$1|mookannut}}] juuri äsken {{PLURAL:$4|[$5 $2]|0=anonyymi käyttäjä}}",
+	"mobile-frontend-last-modified-with-user-minutes": "[$4 Viimeksi {{GENDER:$1|mookannut}} {{PLURAL:$3|$3 minuutti|$3 minuuttia}} sitten] {{PLURAL:$5|[$6 $2]|0=anonyymi käyttäjä}}",
+	"mobile-frontend-last-modified-with-user-months": "[$4 Viimeksi {{GENDER:$1|mookannut}} {{PLURAL:$3|$3 kuukausi|$3 kuukautta}} sitten] {{PLURAL:$5|[$6 $2]|0=anonyymi käyttäjä}}",
+	"mobile-frontend-last-modified-with-user-seconds": "[$4 Viimeksi {{GENDER:$1|mookannut}} {{PLURAL:$3|$3 sekunti|$3 sekuntia}} sitten] {{PLURAL:$5|[$6 $2]|0=anonyymi käyttäjä}}",
+	"mobile-frontend-last-modified-with-user-years": "Viimeksi {{GENDER:$1|mookannut}} {{PLURAL:$5|[$6 $2]|0=anonyymi käyttäjä}} [$4 {{PLURAL:$3|$3 vuosi|$3 vuotta}} sitten]",
 	"mobile-frontend-main-menu-settings-heading": "Inställninkit",
 	"mobile-frontend-media-details": "Tieot",
 	"mobile-frontend-overlay-close": "Sulje",
@@ -73,5 +87,6 @@
 	"tag-mobile_web_edit": "mupiilisivusto-mookkaus",
 	"tag-mobile_web_edit-description": "Mookkaus, joka oon tehty mupiiliverkkosivulta",
 	"mobile-frontend-loading-message": "Ladathaan...",
+	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions": "Otsikon kuvvaukset",
 	"prefs-mobile": "Mupiili-inställninkit"
 }
