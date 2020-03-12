@@ -19,6 +19,7 @@
 	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|Шо}} {{SITENAME}} чу керда оагӀув кхолла доахк!",
 	"mobile-frontend-editor-publish": "Кéпатóха",
 	"mobile-frontend-editor-success": "Толамца! Хьа тоадар кепатехад.",
+	"mobile-frontend-editor-success-new-page": "Геттара дика да, керда оагӀув хьакхеллар Ӏа!",
 	"mobile-frontend-editor-summary-request": "МалагIа хувцам а баь тоаяьй оаш оагIув?",
 	"mobile-frontend-featured-article": "Укх денга хержа материал",
 	"mobile-frontend-generic-login-new": "<strong>Проект {{SITENAME}} дегIайоалаеш я шо санна болча наха.</strong><br />Чудовла, дáкъа лоацаргдолаш.",
@@ -31,6 +32,12 @@
 	"mobile-frontend-last-modified-with-user-months": "[$4 ТIехьара хувцам баьб {{PLURAL:$3|$3 бутт}} хьалха] {{PLURAL:$5|{{GENDER:$1|доакъашхочо}} [$6 $2]|0=къайла хиннача доакъашхочо}}",
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 ТIехьара хувцам баьб {{PLURAL:$3|$3 секунд}} хьалха] {{PLURAL:$5|{{GENDER:$1|доакъашхочо|доакъашхочо}} [$6 $2]|0=къайла волча доакъашхочо}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 ТIехьара хувцам баьб {{PLURAL:$3|$3 шу}} хьалха] {{PLURAL:$5|{{GENDER:$1|доакъашхочо|доакъашхочо}} [$6 $2]|0=къайла волча доакъашхочо}}",
+	"mobile-frontend-nearby-noresults": "Цхьаккха хIама яц укхаза-м... Цхьаь цаӀ оагӀув яц йисте йолча моттигах лаьца.",
+	"mobile-frontend-nearby-noresults-guidance": "Керда оагӀув хьакхолла хьажал е тхьовре хьаяь йолаш йолча оагӀонна моттиг тӀатоха.",
+	"mobile-frontend-nearby-title": "Гаьна доаццаш",
+	"mobile-frontend-nearby-info-heading": "Юхе йола моттигаш",
+	"mobile-frontend-nearby-info-description": "Хьона йисте йолча моттигах лаьца Википеде чу деша йиш я хьа.",
+	"mobile-frontend-nearby-info-show-button": "Хьагойта юхе йола статьяш",
 	"mobile-frontend-news-items": "Керда хоамаш",
 	"mobile-frontend-privacy-link-text": "КъайлагIара",
 	"mobile-frontend-settings-tagline": "Iодешара оттамаш",
@@ -42,5 +49,6 @@
 	"mobile-frontend-watchlist-more": "дIахо",
 	"tag-mobile_edit": "Мобильникаца даь нийсдар",
 	"tag-mobile_edit-description": "Мобильникаца даь нийсдараш (сайтага е приложенега гIолла)",
-	"tag-mobile_web_edit": "Мобильни эршаца баь хувцам"
+	"tag-mobile_web_edit": "Мобильни эршаца баь хувцам",
+	"mobile-frontend-amc-outreach-no-thanks": "А, баркал"
 }
