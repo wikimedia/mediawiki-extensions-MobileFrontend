@@ -529,10 +529,14 @@
 			"class": "MobileFrontend\\ResourceLoaderModules\\MobileMainPageStyleModule"
 		},
 		"mobile.site": {
-			"class": "MobileFrontend\\ResourceLoaderModules\\MobileSiteModule"
+			"dependencies": [ "site" ],
+			"targets": "mobile",
+			"deprecated": "Please do not add this module to the page."
 		},
 		"mobile.site.styles": {
-			"class": "MobileFrontend\\ResourceLoaderModules\\MobileSiteStylesModule"
+			"dependencies": [ "site.styles" ],
+			"targets": "mobile",
+			"deprecated": "Please do not add this module to the page."
 		},
 		"mobile.special.styles": {
 			"targets": "mobile",
@@ -706,6 +710,8 @@
 		"BeforeInitialize": "MobileFrontendHooks::onBeforeInitialize",
 		"MediaWikiPerformAction": "MobileFrontendHooks::onMediaWikiPerformAction",
 		"OutputPageBeforeHTML": "MobileFrontendHooks::onOutputPageBeforeHTML",
+		"ResourceLoaderSiteStylesModulePages": "MobileFrontendHooks::onResourceLoaderSiteStylesModulePages",
+		"ResourceLoaderSiteModulePages": "MobileFrontendHooks::onResourceLoaderSiteModulePages",
 		"SkinAfterBottomScripts": "MobileFrontendHooks::onSkinAfterBottomScripts",
 		"SkinTemplateOutputPageBeforeExec": "MobileFrontendHooks::onSkinTemplateOutputPageBeforeExec",
 		"BeforePageRedirect": "MobileFrontendHooks::onBeforePageRedirect",
