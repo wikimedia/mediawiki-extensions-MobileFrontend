@@ -121,7 +121,10 @@ class MobileContext extends ContextSource {
 	 */
 	public static function singleton() {
 		if ( !self::$instance ) {
-			self::$instance = new self( RequestContext::getMain() );
+			self::$instance = new self(
+				RequestContext::getMain(),
+				MediaWikiServices::getInstance()->getService( 'MobileFrontend.Config' )
+			);
 		}
 		return self::$instance;
 	}
@@ -134,21 +137,12 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
-	 * Set the IContextSource object
-	 * @param IContextSource $context The IContextSource object to set
+	 * @param IContextSource $context
+	 * @param Config $config
 	 */
-	protected function __construct( IContextSource $context ) {
+	protected function __construct( IContextSource $context, Config $config ) {
 		$this->setContext( $context );
-		$this->setConfig();
-	}
-
-	/**
-	 * Set the configuration
-	 */
-	public function setConfig() {
-		$this->config = MediaWikiServices::getInstance()->getService(
-			'MobileFrontend.Config'
-		);
+		$this->config = $config;
 	}
 
 	/**

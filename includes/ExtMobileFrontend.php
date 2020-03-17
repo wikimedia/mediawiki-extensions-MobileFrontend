@@ -49,6 +49,7 @@ class ExtMobileFrontend {
 		$featureManager = $services->getService( 'MobileFrontend.FeaturesManager' );
 		/** @var ContentProviderFactory $contentProviderFactory */
 		$contentProviderFactory = $services->getService( 'MobileFrontend.ContentProviderFactory' );
+		/** @var MobileContext $context */
 		$context = $services->getService( 'MobileFrontend.Context' );
 		$config = $services->getService( 'MobileFrontend.Config' );
 		$provideTagline = $featureManager->isFeatureAvailableForCurrentUser(

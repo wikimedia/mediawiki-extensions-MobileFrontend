@@ -38,7 +38,7 @@ class ApiMobileView extends ApiBase {
 	}
 
 	/**
-	 * @param ApiMain $main Instance of class ApiMain
+	 * @param ApiMain $main
 	 * @param string $action Name of this module
 	 */
 	public function __construct( $main, $action ) {
