@@ -155,6 +155,7 @@
 	"mobile-frontend-save-error": "Greška prilikom spremanja postavki. Molimo omogućite kolačiće.",
 	"mobile-frontend-save-settings": "Spremi",
 	"mobile-frontend-search-content": "Pretraga unutar stranica",
+	"mobile-frontend-search-content-no-results": "Upotrijebite mogućnost <b>{{int:mobile-frontend-search-content}}</b> za provjeru da li se ovaj izraz pojavljuje drugdje.",
 	"mobile-frontend-search-no-results": "Ne postoji stranica s ovim naslovom.",
 	"mobile-frontend-settings-tagline": "Postavke čitanja",
 	"mobile-frontend-settings-beta": "βeta projekta {{SITENAME}}",
