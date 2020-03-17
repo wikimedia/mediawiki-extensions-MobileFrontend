@@ -25,25 +25,25 @@ class MobileContext extends ContextSource {
 
 	/**
 	 * Saves the testing mode user has opted in: 'beta' or 'stable'
-	 * @var string
+	 * @var string|null
 	 */
-	protected $mobileMode;
+	protected $mobileMode = null;
 
 	/**
 	 * Save explicitly requested format
-	 * @var string
+	 * @var string|null
 	 */
-	protected $useFormat;
+	protected $useFormat = null;
 
 	/**
 	 * Save whether current page is blacklisted from displaying in mobile view
-	 * @var bool
+	 * @var bool|null
 	 */
-	protected $blacklistedPage;
+	protected $blacklistedPage = null;
 
 	/**
 	 * Key/value pairs of things to add to X-Analytics response header for analytics
-	 * @var array
+	 * @var array[]
 	 */
 	protected $analyticsLogItems = [];
 
@@ -60,15 +60,10 @@ class MobileContext extends ContextSource {
 	private $isMobileDevice = null;
 
 	/**
-	 * @var string MediaWiki 'action'
-	 */
-	protected $action;
-
-	/**
 	 * Saves requested Mobile action
-	 * @var string
+	 * @var string|null
 	 */
-	protected $mobileAction;
+	protected $mobileAction = null;
 
 	/**
 	 * Save whether mobile view is explicitly requested
@@ -84,7 +79,7 @@ class MobileContext extends ContextSource {
 
 	/**
 	 * Save whether or not we should display the mobile view
-	 * @var bool
+	 * @var bool|null
 	 */
 	private $mobileView = null;
 
@@ -95,24 +90,24 @@ class MobileContext extends ContextSource {
 	private $toggleViewChecked = false;
 
 	/**
-	 * @var self
+	 * @var self|null
 	 */
 	private static $instance = null;
 
 	/**
-	 * @var string What to switch the view to
+	 * @var string|null What to switch the view to
 	 */
-	private $viewChange = '';
+	private $viewChange = null;
 
 	/**
-	 * @var String Domain to use for the stopMobileRedirect cookie
+	 * @var string|null Domain to use for the stopMobileRedirect cookie
 	 */
 	public static $mfStopRedirectCookieHost = null;
 
 	/**
-	 * @var String Stores the actual mobile url template.
+	 * @var string|null Stores the actual mobile url template.
 	 */
-	private $mobileUrlTemplate = false;
+	private $mobileUrlTemplate = null;
 
 	/**
 	 * @var Config
@@ -568,14 +563,13 @@ class MobileContext extends ContextSource {
 	 *
 	 * Will use $wgMFStopRedirectCookieHost if it's set, otherwise will use
 	 * result of getCookieDomain()
-	 * @return string
+	 * @return string|null
 	 */
 	public function getStopMobileRedirectCookieDomain() {
 		$mfStopRedirectCookieHost = $this->config->get( 'MFStopRedirectCookieHost' );
 
 		if ( !$mfStopRedirectCookieHost ) {
 			self::$mfStopRedirectCookieHost = $this->getCookieDomain();
-
 		} else {
 			self::$mfStopRedirectCookieHost = $mfStopRedirectCookieHost;
 		}
@@ -682,7 +676,7 @@ class MobileContext extends ContextSource {
 	 * @return string
 	 */
 	public function getMobileUrlTemplate() {
-		if ( !$this->mobileUrlTemplate ) {
+		if ( $this->mobileUrlTemplate === null ) {
 			$this->mobileUrlTemplate = $this->config->get( 'MobileUrlTemplate' );
 		}
 		return $this->mobileUrlTemplate;

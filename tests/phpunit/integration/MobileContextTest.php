@@ -240,6 +240,8 @@ class MobileContextTest extends MediaWikiTestCase {
 	/**
 	 * A null title shouldn't result in a fatal exception - bug T142914
 	 * @covers MobileContext::shouldDisplayMobileView
+	 * @covers MobileContext::shouldDisplayMobileViewInternal
+	 * @covers MobileContext::getUseFormat
 	 */
 	public function testRedirectMobileEnabledPages() {
 		$this->setMwGlobals( [
