@@ -10,12 +10,6 @@ use MobileFrontend\Devices\CustomHeaderDeviceDetector;
  * @group MobileFrontend
  */
 class CustomHeaderDeviceDetectorTest extends \MediaWikiUnitTestCase {
-
-	/**
-	 * @var \GlobalVarConfig
-	 */
-	private $config;
-
 	/**
 	 * @var \MobileFrontend\Devices\UADeviceDetector
 	 */
