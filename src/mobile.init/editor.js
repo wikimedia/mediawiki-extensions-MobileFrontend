@@ -14,7 +14,7 @@ var M = require( '../mobile.startup/moduleLoaderSingleton' ),
 	contentModel = mw.config.get( 'wgPageContentModel' ),
 	veConfig = mw.config.get( 'wgVisualEditorConfig' ),
 	editCount = mw.config.get( 'wgUserEditCount' ),
-	editorPath = /^\/editor\/(\d+|all)$/;
+	editorPath = /^\/editor\/(\d+|T-\d+|all)$/;
 
 /**
  * Event handler for edit link clicks. Will prevent default link
@@ -33,6 +33,10 @@ function onEditLinkClick( elem, ev, router ) {
 		section = 'all';
 	} else {
 		section = mw.util.getParamValue( 'section', elem.href ) || 'all';
+	}
+	// Don't do anything for section edit links for different pages (transcluded)
+	if ( mw.config.get( 'wgPageName' ) !== mw.util.getParamValue( 'title', elem.href ) ) {
+		return;
 	}
 	router.navigate( '#/editor/' + section );
 	// DO NOT USE stopPropagation or you'll break click tracking in WikimediaEvents
@@ -143,7 +147,7 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 			initMechanism = mw.util.getParamValue( 'redlink' ) ? 'new' : 'click';
 
 		if ( sectionId !== 'all' ) {
-			editorOptions.sectionId = page.isWikiText() ? +sectionId : null;
+			editorOptions.sectionId = page.isWikiText() ? sectionId : undefined;
 		}
 
 		function showLoading() {
