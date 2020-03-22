@@ -78,8 +78,8 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 	 * @param Revision $rev
 	 * @param User $user viewing the revision
 	 * @param bool $unhide whether the user wants to see hidden comments
-	 *   if the user doesn't have prmission comment will display as rev-deleted-comment
-	 * @return string plain test label
+	 *   if the user doesn't have permission, comment will display as rev-deleted-comment
+	 * @return string plain text label
 	 */
 	protected function getRevisionCommentHTML( $rev, $user, $unhide ) {
 		if ( RevisionRecord::userCanBitfield(
