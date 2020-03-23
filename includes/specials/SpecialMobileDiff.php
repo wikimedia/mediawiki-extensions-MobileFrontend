@@ -204,7 +204,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	 */
 	private function getCommentHTML( $unhide = false ) {
 		$audience = $unhide ? RevisionRecord::FOR_THIS_USER : RevisionRecord::FOR_PUBLIC;
-		$comment = $this->rev->getComment( $audience );
+		$comment = $this->rev->getComment( $audience, $this->getUser() );
 
 		if ( $this->rev->isDeleted( RevisionRecord::DELETED_COMMENT ) && !$unhide ) {
 			$commentHtml = $this->msg( 'rev-deleted-comment' )->escaped();
@@ -321,8 +321,8 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		);
 
 		$audience = $unhide ? RevisionRecord::FOR_THIS_USER : RevisionRecord::FOR_PUBLIC;
-		$userId = $this->rev->getUser( $audience );
-		$ipAddr = $this->rev->getUserText( $audience );
+		$userId = $this->rev->getUser( $audience, $this->getUser() );
+		$ipAddr = $this->rev->getUserText( $audience, $this->getUser() );
 
 		// Note $userId will be 0 and $ipAddr an empty string if the current audience cannot see it.
 		if ( $userId ) {
