@@ -233,11 +233,10 @@ class MobileFrontendHooks {
 		$context = $services->getService( 'MobileFrontend.Context' );
 		$title = $context->getTitle();
 		$config = $services->getService( 'MobileFrontend.Config' );
-		$displayMobileView =
-			$title
-			// T245160
-			&& $title->getLatestRevID() > 0
-			&& $context->shouldDisplayMobileView();
+
+		$displayMobileView = $context->shouldDisplayMobileView();
+		// T245160
+		$runMobileFormatter = $displayMobileView && $title && $title->getLatestRevID() > 0;
 		// T204691
 		$theme = $config->get( 'MFManifestThemeColor' );
 		if ( $theme && $displayMobileView ) {
@@ -249,8 +248,9 @@ class MobileFrontendHooks {
 		}
 
 		// if the page is a userpage
+		// @todo: Upstream to core (T248347).
 		$isView = Action::getActionName( $out ) === 'view';
-		if ( $title->inNamespaces( NS_USER ) && !$title->isSubpage() && $isView ) {
+		if ( $displayMobileView && $title->inNamespaces( NS_USER ) && !$title->isSubpage() && $isView ) {
 			$userpagetext = ExtMobileFrontend::blankUserPageHTML( $out, $title );
 			if ( $userpagetext ) {
 				$text = $userpagetext;
@@ -264,8 +264,8 @@ class MobileFrontendHooks {
 		);
 
 		$alwaysUseProvider = $config->get( 'MFAlwaysUseContentProvider' );
-		if ( $namespaceAllowed && ( $displayMobileView || $alwaysUseProvider ) ) {
-			$text = ExtMobileFrontend::domParse( $out, $text, $displayMobileView );
+		if ( $namespaceAllowed && ( $runMobileFormatter || $alwaysUseProvider ) ) {
+			$text = ExtMobileFrontend::domParse( $out, $text, $runMobileFormatter );
 			$nonce = $out->getCSP()->getNonce();
 			$text = MobileFrontendSkinHooks::interimTogglingSupport( $nonce ) . $text;
 		}
