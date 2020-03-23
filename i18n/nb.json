@@ -69,7 +69,7 @@
 	"mobile-frontend-editor-disabled-anon": "Du må logge inn for å redigere denne siden.",
 	"mobile-frontend-editor-editing": "Redigerer",
 	"mobile-frontend-editor-editing-page": "<span><strong>Redigerer</strong> $1</span>",
-	"mobile-frontend-editor-error": "Feil, endringen ble ikke lageet.",
+	"mobile-frontend-editor-error": "Feil, endringen ble ikke lagret.",
 	"mobile-frontend-editor-error-conflict": "Feil, en annen bruker har redigert denne siden.",
 	"mobile-frontend-editor-error-loading": "Feil, kunne ikke laste redigeringsverktøyet.",
 	"mobile-frontend-editor-error-preview": "Feil, det skjedde noe uventet ved forsøket på å laste inn forhåndsvisningen. Vennligst lukk og prøv igjen.",
