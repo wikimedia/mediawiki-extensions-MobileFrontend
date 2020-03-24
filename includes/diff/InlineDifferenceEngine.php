@@ -218,7 +218,7 @@ class InlineDifferenceEngine extends DifferenceEngine {
 	/**
 	 * Create a getter function for the patrol link in Mobile Diff.
 	 * FIXME: This shouldn't be needed, but markPatrolledLink is protected in DifferenceEngine
-	 * @return String
+	 * @return string
 	 */
 	public function getPatrolledLink() {
 		$linkInfo = $this->getMarkPatrolledLinkInfo();
