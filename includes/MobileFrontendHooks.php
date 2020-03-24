@@ -266,10 +266,8 @@ class MobileFrontendHooks {
 		$alwaysUseProvider = $config->get( 'MFAlwaysUseContentProvider' );
 		if ( $namespaceAllowed && ( $displayMobileView || $alwaysUseProvider ) ) {
 			$text = ExtMobileFrontend::domParse( $out, $text, $displayMobileView );
-			if ( !$title->isMainPage() ) {
-				$nonce = $out->getCSP()->getNonce();
-				$text = MobileFrontendSkinHooks::interimTogglingSupport( $nonce ) . $text;
-			}
+			$nonce = $out->getCSP()->getNonce();
+			$text = MobileFrontendSkinHooks::interimTogglingSupport( $nonce ) . $text;
 		}
 		return true;
 	}
