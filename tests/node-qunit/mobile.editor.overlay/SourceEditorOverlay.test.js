@@ -94,7 +94,7 @@ QUnit.test( '#initialize, blocked user', function ( assert ) {
 QUnit.test( '#initialize, with given page and section', function ( assert ) {
 	var editorOverlay = new SourceEditorOverlay( {
 		title: 'test',
-		sectionId: 0
+		sectionId: '0'
 	} );
 
 	// The gateway is initialized with the correct properties,
@@ -102,7 +102,7 @@ QUnit.test( '#initialize, with given page and section', function ( assert ) {
 	assert.strictEqual( editorOverlay.gateway.title, 'test' );
 	assert.strictEqual( editorOverlay.gateway.isNewPage, undefined );
 	assert.strictEqual( editorOverlay.gateway.oldId, undefined );
-	assert.strictEqual( editorOverlay.gateway.sectionId, 0 );
+	assert.strictEqual( editorOverlay.gateway.sectionId, '0' );
 
 	return editorOverlay.getLoadingPromise().then( function () {
 		assert.strictEqual( editorOverlay.$content.val(), 'section 0', 'load correct section' );
@@ -125,7 +125,7 @@ QUnit.test( '#initialize, without a section', function ( assert ) {
 QUnit.test( '#preview', function ( assert ) {
 	var editorOverlay = new SourceEditorOverlay( {
 		title: 'test',
-		sectionId: 0
+		sectionId: '0'
 	} );
 
 	editorOverlay.onStageChanges();

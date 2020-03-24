@@ -8,7 +8,7 @@ var util = require( '../mobile.startup/util' ),
  * @param {Object} options Configuration options
  * @param {mw.Api} options.api an Api to use.
  * @param {string} options.title the title to edit
- * @param {number} options.sectionId the id of the section to operate edits on.
+ * @param {string|null} options.sectionId the id of the section to operate edits on.
  * @param {number} [options.oldId] revision to operate on. If absent defaults to latest.
  * @param {boolean} [options.isNewPage] whether the page being created is new
  * @param {boolean} [options.fromModified] whether the page was loaded in a modified state
@@ -87,7 +87,7 @@ EditorGateway.prototype = {
 				options.rvstartid = this.oldId;
 			}
 			// See Bug 50136 - passing rvsection will fail with non wikitext
-			if ( util.isNumeric( this.sectionId ) ) {
+			if ( this.sectionId !== undefined ) {
 				options.rvsection = this.sectionId;
 			}
 			return this.api.get( options ).then( function ( resp ) {
@@ -189,7 +189,7 @@ EditorGateway.prototype = {
 				apiOptions.prependtext = self.prependtext;
 			}
 
-			if ( util.isNumeric( self.sectionId ) ) {
+			if ( self.sectionId !== undefined ) {
 				apiOptions.section = self.sectionId;
 			}
 
@@ -253,7 +253,7 @@ EditorGateway.prototype = {
 		return this._pending.then( function ( resp ) {
 			if ( resp && resp.parse && resp.parse.text ) {
 				// section 0 haven't a section name so skip
-				if ( self.sectionId !== 0 &&
+				if ( self.sectionId !== '0' &&
 					resp.parse.sections !== undefined &&
 					resp.parse.sections[0] !== undefined
 				) {
