@@ -1153,7 +1153,8 @@ class MobileFrontendHooks {
 		/** @var MobileContext $context */
 		$context = $services->getService( 'MobileFrontend.Context' );
 		$config = $services->getService( 'MobileFrontend.Config' );
-		$mfLogo = $config->get( 'MobileFrontendLogo' );
+		$logos = ResourceLoaderSkinModule::getAvailableLogos( $config );
+		$mfLogo = $logos['icon'] ?? false;
 
 		// do nothing in desktop mode
 		if (

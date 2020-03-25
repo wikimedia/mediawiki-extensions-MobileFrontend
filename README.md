@@ -482,14 +482,6 @@ include the preceding `.` (e.g. yes: `.wikipedia.org`, **no**: `wikipedia.org`)
 * Type: `String|null`
 * Default: `null`
 
-#### $wgMobileFrontendLogo
-
-Path to the logo used in the login/signup form.  The standard height is `72px`
-
-* Type: `Boolean`
-* Default: `false`
-
-
 #### $wgMFEnableBeta
 
 Whether beta mode is enabled.

@@ -850,7 +850,6 @@
 		"MobileFrontendFormatCookieExpiry": null,
 		"MFNoindexPages": true,
 		"MFStopRedirectCookieHost": null,
-		"MobileFrontendLogo": false,
 		"MFEnableBeta": false,
 		"MFBetaFeedbackLink": false,
 		"MFDefaultSkinClass": "SkinMinerva",
