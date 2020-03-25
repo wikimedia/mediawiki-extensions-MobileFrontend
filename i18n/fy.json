@@ -116,7 +116,7 @@
 	"mobile-frontend-languages-variant-header": "Farianten fan {{#language:{{CONTENTLANG}}}}",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Taalsuggestjes",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Oare talen",
-	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Taal fine",
+	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Taal sykje",
 	"mobile-frontend-last-modified-date": "Lêst bewurke op $1 om $2",
 	"mobile-frontend-last-modified-with-user-days": "[$4 Lêst {{GENDER:$1|bewurke}} {{PLURAL:$3|$3 dei|$3 dagen}} lyn] troch {{PLURAL:$5|[$6 $2]|0=in anonime meidogger}}",
 	"mobile-frontend-last-modified-with-user-hours": "[$4 Lêst {{GENDER:$1|bewurke}} {{PLURAL:$3|$3 oere|$3 oeren}} lyn] troch {{PLURAL:$5|[$6 $2]|0=in anonime meidogger}}",

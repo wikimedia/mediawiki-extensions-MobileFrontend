@@ -16,7 +16,8 @@
 			"Josve05a",
 			"Dammråtta",
 			"Rockyfelle",
-			"Sturban"
+			"Sturban",
+			"Paracel63"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Huruvida eller inte en användare redigerar via mobila gränssnittet",
@@ -199,7 +200,7 @@
 	"mobile-frontend-watchlist-cta-button-login": "Logga in",
 	"mobile-frontend-watchlist-cta-button-signup": "Skapa ett konto",
 	"mobile-frontend-watchlist-feed": "Ändrade",
-	"mobile-frontend-watchlist-feed-empty": "Det finns inga sidor med nyliga ändringar",
+	"mobile-frontend-watchlist-feed-empty": "Det finns inga sidor med de senaste ändringarna",
 	"mobile-frontend-watchlist-filter-all": "Alla",
 	"mobile-frontend-watchlist-filter-articles": "Sidor",
 	"mobile-frontend-watchlist-filter-other": "Andra",
