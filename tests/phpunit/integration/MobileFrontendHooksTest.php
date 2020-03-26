@@ -247,9 +247,8 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 		$shouldConfstrChange,
 		$stripResponsiveImages
 	) {
-		$context = MediaWikiServices::getInstance()->getService(
-			'MobileFrontend.Context'
-		);
+		/** @var MobileContext $context */
+		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
 		$context->setStripResponsiveImages( $stripResponsiveImages );
 
 		$expectedConfstr = $confstr = '';

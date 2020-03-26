@@ -45,13 +45,14 @@ class MobileContextTest extends MediaWikiTestCase {
 		$request->setRequestURL( $url );
 		$request->setCookies( $cookies, '' );
 
-		$context = new DerivativeContext( RequestContext::getMain() );
-		$config = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Config' );
+		MobileContext::resetInstanceForTesting();
+		/** @var MobileContext $context */
+		$instance = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
+
+		/** @var MutableContext $context */
+		$context = $instance->getContext();
 		$context->setRequest( $request );
-		$context->setOutput( new OutputPage( $context ) );
-		$instance = unserialize( 'O:13:"MobileContext":0:{}' );
-		$instance->setContext( $context );
-		$instance->setConfig( $config );
+
 		return $instance;
 	}
 
@@ -558,6 +559,7 @@ class MobileContextTest extends MediaWikiTestCase {
 		$wgMFStripResponsiveImages,
 		$stripResponsiveImages = null
 	) {
+		/** @var MobileContext $context */
 		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
 		$context->setForceMobileView( $forceMobileView );
 

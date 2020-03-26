@@ -79,6 +79,7 @@ class MobileFrontendHooks {
 		global $wgULSPosition;
 		$services = MediaWikiServices::getInstance();
 
+		/** @var MobileContext $mobileContext */
 		$mobileContext = $services->getService( 'MobileFrontend.Context' );
 		$config = $services->getService( 'MobileFrontend.Config' );
 
@@ -201,6 +202,7 @@ class MobileFrontendHooks {
 	 */
 	public static function onSkinAfterBottomScripts( Skin $skin, &$html ) {
 		$services = MediaWikiServices::getInstance();
+		/** @var MobileContext $context */
 		$context = $services->getService( 'MobileFrontend.Context' );
 		$featureManager = $services->getService( 'MobileFrontend.FeaturesManager' );
 
@@ -230,6 +232,7 @@ class MobileFrontendHooks {
 	 */
 	public static function onOutputPageBeforeHTML( &$out, &$text ) {
 		$services = MediaWikiServices::getInstance();
+		/** @var MobileContext $context */
 		$context = $services->getService( 'MobileFrontend.Context' );
 		$title = $context->getTitle();
 		$config = $services->getService( 'MobileFrontend.Config' );
@@ -549,6 +552,7 @@ class MobileFrontendHooks {
 	 */
 	public static function onSpecialPageInitList( &$list ) {
 		$services = MediaWikiServices::getInstance();
+		/** @var MobileContext $context */
 		$context = $services->getService( 'MobileFrontend.Context' );
 		$config = $services->getService( 'MobileFrontend.Config' );
 		$userMode = $services->getService( 'MobileFrontend.AMC.UserMode' );
@@ -663,6 +667,7 @@ class MobileFrontendHooks {
 	 */
 	public static function onSpecialPageBeforeExecute( SpecialPage $special, $subpage ) {
 		$services = MediaWikiServices::getInstance();
+		/** @var MobileContext $context */
 		$context = $services->getService( 'MobileFrontend.Context' );
 		/** @var ContentProviderFactory $contentProviderFactory */
 		$contentProviderFactory = $services->getService( 'MobileFrontend.ContentProviderFactory' );
@@ -830,6 +835,7 @@ class MobileFrontendHooks {
 	 */
 	public static function onAfterBuildFeedLinks( array &$tags ) {
 		$services = MediaWikiServices::getInstance();
+		/** @var MobileContext $context */
 		$context = $services->getService( 'MobileFrontend.Context' );
 		$config = $services->getService( 'MobileFrontend.Config' );
 		if ( $context->shouldDisplayMobileView() && !$config->get( 'MFRSSFeedLink' ) ) {
@@ -984,6 +990,7 @@ class MobileFrontendHooks {
 	 */
 	public static function onOutputPageParserOutput( $outputPage, ParserOutput $po ) {
 		$services = MediaWikiServices::getInstance();
+		/** @var MobileContext $context */
 		$context = $services->getService( 'MobileFrontend.Context' );
 		$config = $services->getService( 'MobileFrontend.Config' );
 		$featureManager = $services->getService( 'MobileFrontend.FeaturesManager' );
@@ -1032,6 +1039,7 @@ class MobileFrontendHooks {
 	 */
 	public static function onThumbnailBeforeProduceHTML( $thumbnail, &$attribs, &$linkAttribs ) {
 		$services = MediaWikiServices::getInstance();
+		/** @var MobileContext $context */
 		$context = $services->getService( 'MobileFrontend.Context' );
 		$config = $services->getService( 'MobileFrontend.Config' );
 		if ( $context->shouldStripResponsiveImages() ) {
@@ -1092,6 +1100,7 @@ class MobileFrontendHooks {
 		$config = $services->getService( 'MobileFrontend.Config' );
 
 		// If the device is a mobile, Remove the category entry.
+		/** @var MobileContext $context */
 		$context = $services->getService( 'MobileFrontend.Context' );
 		if ( $context->shouldDisplayMobileView() ) {
 			$outreach = $services->getService( 'MobileFrontend.AMC.Outreach' );
@@ -1141,6 +1150,7 @@ class MobileFrontendHooks {
 		array $requests, array $fieldInfo, array &$formDescriptor, $action
 	) {
 		$services = MediaWikiServices::getInstance();
+		/** @var MobileContext $context */
 		$context = $services->getService( 'MobileFrontend.Context' );
 		$config = $services->getService( 'MobileFrontend.Config' );
 		$mfLogo = $config->get( 'MobileFrontendLogo' );
