@@ -192,8 +192,7 @@
 				"mediawiki.Uri",
 				"mediawiki.ui.icon",
 				"mobile.ooui.icons",
-				"mobile.startup",
-				"user.tokens"
+				"mobile.startup"
 			],
 			"targets": [
 				"mobile",
@@ -268,6 +267,7 @@
 				"mediawiki.user",
 				"mediawiki.storage",
 				"oojs",
+				"user.options",
 				"mediawiki.util",
 				"mediawiki.api",
 				"mediawiki.viewport",
