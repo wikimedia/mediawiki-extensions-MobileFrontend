@@ -11,7 +11,8 @@
 			"Albertas",
 			"Zygimantus",
 			"Homo",
-			"Manvydasz"
+			"Manvydasz",
+			"Tomasdd"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ar naudotojas redaguoja naudodamas mobilųjį įskiepį",
@@ -103,12 +104,12 @@
 	"mobile-frontend-languages-404-desc": "Turi būti nurodytas egzistuojančio puslapio pavadinimas.",
 	"mobile-frontend-languages-404-title": "Kalbų klaida",
 	"mobile-frontend-languages-header": "Kalbos",
-	"mobile-frontend-languages-header-page": "$1 - Kalbos",
+	"mobile-frontend-languages-header-page": "$1 - Kitos kalbos",
 	"mobile-frontend-languages-nonexistent-title": "Puslapis \"$1\" neegzistuoja.",
 	"mobile-frontend-languages-text": "$1 yra prieinamas $2 {{PLURAL:$2|kalba|kalbomis|kalbų}}.",
 	"mobile-frontend-languages-variant-header": "{{#language:{{CONTENTLANG}}}} variantai",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Siūlomos kalbos",
-	"mobile-frontend-languages-structured-overlay-all-languages-header": "Visos kalbos",
+	"mobile-frontend-languages-structured-overlay-all-languages-header": "Kitos kalbos",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Ieškoti kalbos",
 	"mobile-frontend-last-modified-date": "Paskutinį kartą keista $1 $2",
 	"mobile-frontend-last-modified-with-user-days": "[$4 Paskutinį kartą {{GENDER:$1|redagavo}} prieš {{PLURAL:$3|$3 dieną|$3 dienas|$3 dienų}}] {{PLURAL:$5|[$6 $2]|0=anoniminis naudotojas}}",
