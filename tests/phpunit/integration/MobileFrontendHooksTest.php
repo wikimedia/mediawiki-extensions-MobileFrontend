@@ -314,14 +314,15 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 		$enabled,
 		$userpref = false
 	) {
-		$user = $isAnon ? new User() : $this->getMutableTestUser()->getUser();
-		if ( !$isAnon && $userpref ) {
-			$user->setOption( MobileFrontendHooks::MOBILE_PREFERENCES_SPECIAL_PAGES, true );
-		}
 		// set globals
 		$this->setMwGlobals( [
 			'wgMFEnableMobilePreferences' => $enabled,
 		] );
+
+		$user = $isAnon ? new User() : $this->getMutableTestUser()->getUser();
+		if ( !$isAnon && $userpref ) {
+			$user->setOption( MobileFrontendHooks::MOBILE_PREFERENCES_SPECIAL_PAGES, true );
+		}
 		$this->assertSame( $expected,
 			MobileFrontendHooks::shouldMobileFormatSpecialPages( $user ) );
 	}
