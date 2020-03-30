@@ -9,7 +9,8 @@
 			"Wizzard",
 			"LacoR",
 			"Luky001",
-			"Vlad5250"
+			"Vlad5250",
+			"KuboF"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Či používateľ edituje prostredníctvom mobilného rozhrania",
@@ -207,7 +208,7 @@
 	"mobile-frontend-user-page-no-page-yet": "$1 nemá používateľskú stránku",
 	"mobile-frontend-user-page-describe-yourself": "Na svojej používateľskej stránke sa môžete ostatným $1 predstaviť",
 	"mobile-frontend-user-page-describe-yourself-editors": "redaktorom",
-	"mobile-frontend-user-page-desired-action": "Túto stránku by mal vytvoriť a editovať $1",
+	"mobile-frontend-user-page-desired-action": "Túto stránku by mal vytvoriť a upravovať $1",
 	"mobile-frontend-user-page-create-owner-page-link-label": "Vytvorte si vlastnú",
 	"mobile-frontend-user-page-create-user-page-link-label": "Vytvorte stránku s názvom $1",
 	"nearby": "Stránky o blízkych lokalitách",

@@ -37,7 +37,7 @@
 	"mobile-frontend-categories-search": "カテゴリを検索",
 	"mobile-frontend-categories-nodata": "エラーが発生しました。保存するカテゴリを追加しているか確認してください。",
 	"mobile-frontend-categories-summary": "カテゴリを追加",
-	"mobile-frontend-categories-notification": "カテゴリーが更新されました。",
+	"mobile-frontend-categories-notification": "カテゴリが更新されました。",
 	"mobile-frontend-categories-add-heading": "<strong>新しいカテゴリへの<span> $1</span> の追加</strong>",
 	"mobile-frontend-categories-add-wait": "カテゴリを保存しています。お待ち下さい。",
 	"mobile-frontend-categories-normal": "カテゴリ",

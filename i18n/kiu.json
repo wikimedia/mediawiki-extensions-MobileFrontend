@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mirzali"
+			"Mirzali",
+			"Orbot707"
 		]
 	},
 	"mobile-frontend-editor-blocked-drawer-title": "Tı vurnayışê {{SITENAME}} ra men biya",
@@ -9,5 +10,7 @@
 	"mobile-frontend-editor-blocked-drawer-help": "Detayi",
 	"mobile-frontend-editor-cancel": "Bıtexelne",
 	"mobile-frontend-main-menu-settings-heading": "Eyari",
-	"mobile-frontend-watchlist-filter-articles": "Peli"
+	"mobile-frontend-watchlist-filter-articles": "Peli",
+	"tag-mobile_edit": "Vurnayışo mobil",
+	"tag-mobile_web_edit": "Vırnayışê mobil webi."
 }
