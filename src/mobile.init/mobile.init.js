@@ -32,14 +32,12 @@ skin = Skin.getSingleton();
  * @private
  * @param {Function} fn1
  * @param {Function} fn2
- * @return {Function} which returns the results of [fn1, fn2]
+ * @return {Function} which returns void
  */
 function apply2( fn1, fn2 ) {
 	return function () {
-		return [
-			fn1.apply( this, arguments ),
-			fn2.apply( this, arguments )
-		];
+		fn1.apply( this, arguments );
+		fn2.apply( this, arguments );
 	};
 }
 
