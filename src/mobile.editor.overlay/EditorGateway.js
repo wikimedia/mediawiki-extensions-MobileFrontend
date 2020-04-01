@@ -87,7 +87,7 @@ EditorGateway.prototype = {
 				options.rvstartid = this.oldId;
 			}
 			// See Bug 50136 - passing rvsection will fail with non wikitext
-			if ( this.sectionId !== undefined ) {
+			if ( this.sectionId ) {
 				options.rvsection = this.sectionId;
 			}
 			return this.api.get( options ).then( function ( resp ) {
@@ -189,7 +189,7 @@ EditorGateway.prototype = {
 				apiOptions.prependtext = self.prependtext;
 			}
 
-			if ( self.sectionId !== undefined ) {
+			if ( self.sectionId ) {
 				apiOptions.section = self.sectionId;
 			}
 
