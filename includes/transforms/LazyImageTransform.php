@@ -139,16 +139,19 @@ class LazyImageTransform implements IMobileTransform {
 		foreach ( $el->getElementsByTagName( 'img' ) as $img ) {
 			$parent = $img->parentNode;
 			$dimensions = $this->getImageDimensions( $img );
-
-			$dimensionsStyle = ( isset( $dimensions['width'] ) ? "width: {$dimensions['width']};" : '' ) .
-				( isset( $dimensions['height'] ) ? "height: {$dimensions['height']};" : '' );
+			$hasCompleteDimensions = isset( $dimensions['width'] ) && isset( $dimensions['height'] );
 
 			if ( $lazyLoadSkipSmallImages
 				&& $this->skipLazyLoadingForSmallDimensions( $dimensions )
 			) {
 				continue;
 			}
+			// T133085 - don't transform if we have no idea about dimensions of image
+			if ( !$hasCompleteDimensions ) {
+				continue;
+			}
 
+			$dimensionsStyle = "width: {$dimensions['width']};height: {$dimensions['height']};";
 			// HTML only clients
 			$noscript = $doc->createElement( 'noscript' );
 

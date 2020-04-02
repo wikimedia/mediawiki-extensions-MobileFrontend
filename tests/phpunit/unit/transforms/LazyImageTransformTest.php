@@ -140,7 +140,14 @@ class LazyImageTransformTest extends \MediaWikiUnitTestCase {
 		$imgSmall = '<img src="kitty.jpg" width="5" height="5">';
 		$placeholderSmall = '<span class="lazy-image-placeholder" style="width: 5px;height: 5px;" '
 			. 'data-src="kitty.jpg" data-width="5" data-height="5">&nbsp;</span>';
+		$imgNoAttribs = '<img src="foo.jpg">';
 		return [
+			[
+				$imgNoAttribs,
+				false,
+				$imgNoAttribs,
+				'No change if no dimensions found on image (T133085)'
+			],
 			[
 				"$img",
 				false,
