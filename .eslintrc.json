@@ -6,9 +6,5 @@
 	],
 	"env": {
 		"browser": true
-	},
-	"globals": {
-		"OO": "readonly",
-		"mw": "readonly"
 	}
 }

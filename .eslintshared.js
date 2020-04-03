@@ -7,9 +7,13 @@
 /* eslint-disable quote-props, quotes, one-var */
 const merge = require( './node_modules/eslint-config-wikimedia/language/merge.js' );
 const rules = {
-	"extends": "wikimedia/jquery",
+	"extends": [
+		"wikimedia/jquery",
+		"wikimedia/mediawiki"
+	],
 	"globals": {
-		"$": "off"
+		"$": "off",
+		"OO": "readonly"
 	},
 	"rules": {
 		"no-restricted-properties": [2,
@@ -38,6 +42,8 @@ const rules = {
 		],
 		"object-property-newline": "error",
 		"computed-property-spacing": "off",
+		// Not using ResourceLoader modules
+		"mediawiki/valid-package-file-require": "off",
 		"no-use-before-define": "off",
 		"no-underscore-dangle": "off",
 		"no-jquery/no-class-state": "off",
