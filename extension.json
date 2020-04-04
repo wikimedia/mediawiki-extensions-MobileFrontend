@@ -365,6 +365,7 @@
 			],
 			"dependencies": [
 				"mobile.editor.images",
+				"mobile.user.icons",
 				"oojs-ui.styles.icons-editing-core",
 				"mediawiki.util",
 				"mediawiki.notification",
@@ -424,11 +425,16 @@
 			]
 		},
 		"mobile.editor.images": {
-			"class": "ResourceLoaderImageModule",
-			"selector": ".mw-ui-icon-mf-{name}:before",
-			"images": {
-				"profile": "resources/mobile.editor.images/profile.svg",
-				"stop-hand": "resources/mobile.editor.images/stop-hand.svg"
+			"class": "ResourceLoaderOOUIIconPackModule",
+			"selectorWithVariant": ".mw-ui-icon-mf-{name}-{variant}:before",
+			"icons": [
+				"stopHand"
+			],
+			"variants": {
+				"destructive": {
+					"color": "#d33",
+					"global": true
+				}
 			}
 		},
 		"mobile.talk.overlays": {

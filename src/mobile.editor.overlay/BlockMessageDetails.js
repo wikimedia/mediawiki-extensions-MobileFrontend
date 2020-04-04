@@ -49,7 +49,7 @@ class BlockMessageDetails extends View {
 	postRender() {
 		const userIcon = new Icon( {
 			tagName: 'span',
-			name: 'profile',
+			name: 'userAvatar',
 			hasText: true,
 			label: this.options.creator.name
 		} );
@@ -62,7 +62,7 @@ class BlockMessageDetails extends View {
 		);
 		this.$el.find( '.block-message-icon' ).prepend(
 			( new Icon( {
-				name: 'stop-hand',
+				name: 'stopHand-destructive',
 				additionalClassNames: 'mw-ui-icon-flush-top'
 			} ) ).$el
 		);
