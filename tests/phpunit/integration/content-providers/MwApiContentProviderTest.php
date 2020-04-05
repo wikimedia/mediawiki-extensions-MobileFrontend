@@ -77,12 +77,10 @@ class MwApiContentProviderTest extends MediaWikiTestCase {
 	private function mockOutputPage( Title $title ) {
 		$mockOutputPage = $this->getMockBuilder( OutputPage::class )
 			->disableOriginalConstructor()
-			->onlyMethods( [ 'getTitle', 'getPrefixedDBkey' ] )
+			->onlyMethods( [ 'getTitle' ] )
 			->getMock();
 		$mockOutputPage->method( 'getTitle' )
 			->willReturn( $title );
-		$mockOutputPage->method( 'getPrefixedDBkey' )
-			->willReturn( $title->getPrefixedDBkey() );
 
 		return $mockOutputPage;
 	}
@@ -179,7 +177,6 @@ class MwApiContentProviderTest extends MediaWikiTestCase {
 			->disableOriginalConstructor()
 			->onlyMethods( [
 					'getTitle',
-					'getPrefixedDBkey',
 					'addModules',
 					'addModuleStyles',
 					'addJsConfigVars'
@@ -188,8 +185,6 @@ class MwApiContentProviderTest extends MediaWikiTestCase {
 		$title = Title::newFromText( 'Test Title' );
 		$mockOutputPage->method( 'getTitle' )
 			->willReturn( $title );
-		$mockOutputPage->method( 'getPrefixedDBkey' )
-			->willReturn( $title->getPrefixedDBkey() );
 		$mockOutputPage->expects( $this->atLeastOnce() )
 			->method( 'addModules' )
 			->with( [ "site", "test", "test1" ] );
