@@ -25,10 +25,12 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	/**
 	 * Get the revision object from ID
 	 * @param int $id ID of the wanted revision
-	 * @return Revision
+	 * @return RevisionRecord|null
 	 */
-	public static function getRevision( $id ) {
-		return Revision::newFromId( $id );
+	private static function getRevisionRecord( $id ) {
+		return MediaWikiServices::getInstance()
+			->getRevisionLookup()
+			->getRevisionById( $id );
 	}
 
 	/**
@@ -50,36 +52,42 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	 *   a bad parameter is passed
 	 */
 	public function getRevisionsToCompare( $revids ) {
-		$prev = null;
-		$rev = null;
+		$prevRecord = null;
+		$revRecord = null;
 
 		// check 2 parameters are passed and are numbers
 		if ( count( $revids ) === 2 && $revids[0] && $revids[1] ) {
 			$id = (int)$revids[1];
 			$prevId = (int)$revids[0];
 			if ( $id && $prevId ) {
-				$rev = static::getRevision( $id );
+				$revRecord = static::getRevisionRecord( $id );
 				// deal with identical ids
 				if ( $id === $prevId ) {
-					$rev = null;
-				} elseif ( $rev ) {
-					$prev = static::getRevision( $prevId );
-					if ( !$prev ) {
-						$rev = null;
+					$revRecord = null;
+				} elseif ( $revRecord ) {
+					$prevRecord = static::getRevisionRecord( $prevId );
+					if ( !$prevRecord ) {
+						$revRecord = null;
 					}
 				} else {
-					$rev = null;
+					$revRecord = null;
 				}
 			}
 		} elseif ( count( $revids ) === 1 ) {
 			$id = (int)$revids[0];
 			if ( $id ) {
-				$rev = static::getRevision( $id );
-				if ( $rev ) {
-					$prev = $rev->getPrevious();
+				$revRecord = static::getRevisionRecord( $id );
+				if ( $revRecord ) {
+					$prevRecord = MediaWikiServices::getInstance()
+						->getRevisionLookup()
+						->getPreviousRevision( $revRecord );
 				}
 			}
 		}
+
+		// TODO convert this to returning RevisionRecords
+		$prev = $prevRecord ? new Revision( $prevRecord ) : null;
+		$rev = $revRecord ? new Revision( $revRecord ) : null;
 		return [ $prev, $rev ];
 	}
 
@@ -420,20 +428,21 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		}
 
 		if ( $rev1 ) {
-			$rev = static::getRevision( $rev1 );
-			if ( $rev ) {
+			$revRecord = static::getRevisionRecord( $rev1 );
+			if ( $revRecord ) {
+				$revLookup = MediaWikiServices::getInstance()->getRevisionLookup();
 				// the diff parameter could be the string prev or next - deal with these cases
 				if ( $rev2 === 'prev' ) {
-					$prev = $rev->getPrevious();
+					$prevRecord = $revLookup->getPreviousRevision( $revRecord );
 					// yes this is confusing - this is how it works arrgghh
 					$rev2 = $rev1;
-					$rev1 = $prev ? $prev->getId() : '';
+					$rev1 = $prevRecord ? $prevRecord->getId() : '';
 				} elseif ( $rev2 === 'next' ) {
-					$next = $rev->getNext();
-					$rev2 = $next ? $next->getId() : '';
+					$nextRecord = $revLookup->getNextRevision( $revRecord );
+					$rev2 = $nextRecord ? $nextRecord->getId() : '';
 				} else {
-					$rev2 = static::getRevision( $rev2 );
-					$rev2 = $rev2 ? $rev2->getId() : '';
+					$rev2Record = static::getRevisionRecord( $rev2 );
+					$rev2 = $rev2Record ? $rev2Record->getId() : '';
 				}
 			} else {
 				$rev2 = '';
