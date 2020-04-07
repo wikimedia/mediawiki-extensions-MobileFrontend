@@ -1,17 +1,17 @@
 {
 	"@metadata": {
 		"authors": [
+			"Andrei Stroe",
+			"Danutz",
 			"Firilacroco",
+			"Fitoschido",
+			"ImGelu",
+			"Kyouko",
+			"Matrafox",
 			"MaxSem",
 			"Minisarm",
-			"Danutz",
-			"ImGelu",
-			"Wintereu",
-			"Matrafox",
 			"Strainu",
-			"Kyouko",
-			"Fitoschido",
-			"Andrei Stroe"
+			"Wintereu"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Dacă un utilizator modifică sau nu prin intermediul interfeței mobile",

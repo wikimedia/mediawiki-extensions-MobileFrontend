@@ -2,10 +2,10 @@
 	"@metadata": {
 		"authors": [
 			"Candalua",
-			"Frigotoni",
-			"GatoSelvadego",
 			"Conky77",
-			"Fierodelveneto"
+			"Fierodelveneto",
+			"Frigotoni",
+			"GatoSelvadego"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Inserir el testo de sicuresa",

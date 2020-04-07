@@ -1,22 +1,22 @@
 {
 	"@metadata": {
 		"authors": [
+			"AnB",
 			"Danmichaelo",
 			"Event",
 			"Haakon K",
+			"Jeblad",
+			"Jon Harald Søby",
 			"Jsoby",
+			"Kingu",
 			"Kjetil r",
+			"Laaknor",
 			"Lokal Profil",
 			"Nghtwlkr",
 			"Njardarlogar",
 			"Nsaa",
-			"Laaknor",
-			"Kingu",
-			"Tarjeimo",
-			"Jon Harald Søby",
-			"Jeblad",
 			"Pmt",
-			"AnB"
+			"Tarjeimo"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Hvorvidt en bruker redigerer fra mobilgrensesnittet",

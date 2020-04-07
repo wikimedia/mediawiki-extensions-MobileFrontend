@@ -1,18 +1,18 @@
 {
 	"@metadata": {
 		"authors": [
+			"BadDog",
 			"CERminator",
 			"DzWiki",
 			"Edinwiki",
-			"KWiki",
-			"Palapa",
-			"Semso98",
 			"Emir Mujadzic",
-			"Srdjan m",
+			"KWiki",
 			"MaGa",
 			"Obsuser",
-			"BadDog",
-			"Semina x"
+			"Palapa",
+			"Semina x",
+			"Semso98",
+			"Srdjan m"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Uređuje li korisnik putem mobilnog interfejsa",
