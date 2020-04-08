@@ -2,6 +2,7 @@
 
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\RevisionRecord;
+use MediaWiki\Revision\SlotRecord;
 use Wikimedia\Assert\Assert;
 
 /**
@@ -74,14 +75,17 @@ class InlineDifferenceEngine extends DifferenceEngine {
 		$unhide = (bool)$this->getRequest()->getVal( 'unhide' );
 		$diff = $this->getDiffBody();
 
-		$rev = Revision::newFromId( $this->getNewid() );
-
 		if ( !$prevId ) {
 			$audience = $unhide ? RevisionRecord::FOR_THIS_USER : RevisionRecord::FOR_PUBLIC;
+			$revRecord = MediaWikiServices::getInstance()
+				->getRevisionLookup()
+				->getRevisionById( $this->getNewId() );
+			$content = $revRecord->getContent( SlotRecord::MAIN, $audience, $this->getUser() );
+
 			$diff = '<ins>'
 				. nl2br(
 					htmlspecialchars(
-						ContentHandler::getContentText( $rev->getContent( $audience ) )
+						ContentHandler::getContentText( $content )
 					)
 				)
 				. '</ins>';
