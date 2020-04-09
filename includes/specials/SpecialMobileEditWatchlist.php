@@ -212,7 +212,7 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 			$qs = [ 'from' => $from ];
 			$html .= Html::element( 'a',
 				[
-					'class' => MobileUI::anchorClass( 'progressive', 'more' ),
+					'class' => MobileUI::anchorClass( 'progressive', 'mw-mf-watchlist-more' ),
 					'href' => SpecialPage::getTitleFor( 'EditWatchlist' )->getLocalURL( $qs ),
 				],
 				$this->msg( 'mobile-frontend-watchlist-more' )->text() );
@@ -235,11 +235,12 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 	 * @return string html representation of collection in watchlist view
 	 */
 	protected function getViewHtml( MobileCollection $collection ) {
-		$html = '<ul class="watchlist content-unstyled page-list thumbs page-summary-list">';
+		$html = Html::openElement( 'ul', [ 'class' => 'content-unstyled page-list thumbs'
+			. ' page-summary-list mw-mf-watchlist-page-list' ] );
 		foreach ( $collection as $mobilePage ) {
 			$html .= $this->getLineHtml( $mobilePage );
 		}
-		$html .= '</ul>';
+		$html .= Html::closeElement( 'ul' );
 		return $html;
 	}
 }
