@@ -855,8 +855,6 @@
 			-2
 		],
 		"MFCollapseSectionsByDefault": true,
-		"MFPhotoUploadWiki": null,
-		"MFPhotoUploadEndpoint": "",
 		"MFUseWikibase": false,
 		"MFEnableWikidataDescriptions": {
 			"base": false,

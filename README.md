@@ -550,22 +550,6 @@ Set to `false` for "dictionary style", sections are not collapsed.
 * Type: `Boolean`
 * Default: `true`
 
-#### $wgMFPhotoUploadWiki
-
-The wiki id/dbname for where photos are uploaded, if photos are uploaded to
-a wiki other than the local wiki (eg commonswiki).
-
-* Type: `String|null`
-* Default: `null`
-
-#### $wgMFPhotoUploadEndpoint
-
-An api to which any photos should be uploaded.
-e.g. `$wgMFPhotoUploadEndpoint = 'https://commons.wikimedia.org/w/api.php';`
-
-* Type: `String`
-* Default: Defaults to the current wiki
-
 #### $wgMFUseWikibase
 
 If set to true, the use Wikibase is enabled and associated features is enabled.
