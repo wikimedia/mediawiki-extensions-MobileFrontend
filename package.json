@@ -70,7 +70,7 @@
 		},
 		{
 			"path": "resources/dist/mobile.common.js",
-			"maxSize": "14.5KB"
+			"maxSize": "14.2KB"
 		},
 		{
 			"path": "resources/dist/mobile.editor.overlay.js",
@@ -82,7 +82,7 @@
 		},
 		{
 			"path": "resources/dist/mobile.init.js",
-			"maxSize": "4.5KB"
+			"maxSize": "4.6KB"
 		},
 		{
 			"path": "resources/dist/mobile.startup.js",

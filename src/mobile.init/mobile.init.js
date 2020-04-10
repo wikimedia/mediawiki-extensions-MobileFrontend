@@ -10,6 +10,7 @@
 var skin,
 	storage = mw.storage,
 	toggling = require( './toggling' ),
+	lazyLoadedImages = require( './lazyLoadedImages' ),
 	skinName = mw.config.get( 'skin' ),
 	isPageContentModelEditable = mw.config.get( 'wgMFIsPageContentModelEditable' ),
 	editor = require( './editor' ),
@@ -110,6 +111,7 @@ if ( !currentPage.inNamespace( 'special' ) && isPageContentModelEditable ) {
 }
 
 toggling();
+lazyLoadedImages();
 
 // Set up recording for the events we track. The module 'ext.eventLogging'
 // should already be loaded (this doesn't trigger a new HTTP request), but we
