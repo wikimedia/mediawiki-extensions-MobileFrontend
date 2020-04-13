@@ -1,11 +1,6 @@
 {
+	"root": true,
 	"extends": [
 		"../src/.eslintrc.json"
-	],
-	"rules": {
-		"one-var": "off"
-	},
-	"globals": {
-		"Promise": "readonly"
-	}
+	]
 }

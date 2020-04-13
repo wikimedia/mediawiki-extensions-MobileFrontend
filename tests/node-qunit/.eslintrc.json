@@ -1,8 +1,8 @@
 {
+	"root": true,
 	"extends": [
 		"wikimedia/server",
 		"wikimedia/qunit",
-		"../../.eslintrc.json",
 		"../../src/.eslintrc.json"
 	]
 }

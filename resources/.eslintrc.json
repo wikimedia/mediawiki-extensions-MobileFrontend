@@ -1,6 +1,6 @@
 {
+	"root": true,
 	"extends": [
-		"../.eslintrc.json",
 		"wikimedia/client",
 		"../.eslintshared.js"
 	]
