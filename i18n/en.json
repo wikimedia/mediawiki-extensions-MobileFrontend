@@ -269,7 +269,7 @@
 	"mobile-frontend-amc-outreach-enabled-message": "Advanced mode is now enabled. You can turn it off in your settings.",
 	"mobile-frontend-amc-outreach-dismissed-message": "You can enable Advanced mode at any time in your Settings.",
 	"mobile-frontend-beta-only": "Feature only available in beta mode",
-	"mobile-frontend-console-recruit": "Learn more about how we build our mobile site @ https://www.mediawiki.org/wiki/Extension:MobileFrontend",
+	"mobile-frontend-console-recruit": "Learn more about how we build our mobile site @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Optimize and simplify special pages when on mobile (recommended)",
 	"prefs-mobile": "Mobile preferences"
 }
