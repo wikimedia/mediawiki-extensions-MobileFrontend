@@ -13,16 +13,9 @@
 		]
 	},
 	"mobile-frontend-categories-hidden": "Organisational",
-	"mobile-frontend-copyright": "Content is available under $1 unless otherwise noted.",
 	"mobile-frontend-editor-licensing": "By saving changes, you agree to release your contribution under the $1 {{PLURAL:$2|licence|licences}}.",
 	"mobile-frontend-editor-licensing-with-terms": "By saving changes, you agree to the $1 and agree to release your contribution under the $2 {{PLURAL:$3|licence|licences}}.",
 	"mobile-frontend-last-modified-date": "Last modified on $1, at $2",
 	"mobile-frontend-media-license-link": "Licence information",
-	"mobile-frontend-privacy-link-text": "Privacy",
-	"mobile-frontend-terms-text": "Terms of Use",
-	"mobile-frontend-view": "Mobile view",
-	"mobile-frontend-view-desktop": "Desktop",
-	"tag-mobile_edit": "Mobile edit",
-	"tag-mobile_web_edit": "Mobile web edit",
 	"mobile-frontend-console-recruit": "Maybe you can help! This is open source software and we need volunteers to help us build it, make it better and fix any bugs that you might be seeing in this JavaScript console!\n\nYou can find our backlog @ https://phabricator.wikimedia.org/project/profile/67/"
 }
