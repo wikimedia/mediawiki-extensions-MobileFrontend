@@ -121,7 +121,7 @@
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|Iscritto|Iscritta|Iscritto/a}} proprio adesso",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|Iscritto|Iscritta|Iscritto/a}} {{PLURAL:$2|$2 secondo|$2 secondi}} fa",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|Iscritto|Iscritta|Iscritto/a}} {{PLURAL:$2|$2 minuto|$2 minuti}} fa",
-	"mobile-frontend-joined-hours": "{{GENDER:$1|Iscritto|Iscritta|Iscritto/a}} {{PLURAL:$2|$2 ora|$2 ore}} ago",
+	"mobile-frontend-joined-hours": "{{GENDER:$1|Iscritto|Iscritta|Iscritto/a}} {{PLURAL:$2|$2 ora|$2 ore}} fa",
 	"mobile-frontend-joined-days": "{{GENDER:$1|Iscritto|Iscritta|Iscritto/a}} {{PLURAL:$2|$2 giorno|$2 giorni}} fa",
 	"mobile-frontend-joined-months": "{{GENDER:$1|Iscritto|Iscritta|Iscritto/a}} {{PLURAL:$2|$2 mese|$2 mesi}} fa",
 	"mobile-frontend-joined-years": "{{GENDER:$1|Iscritto|Iscritta|Iscritto/a}} {{PLURAL:$2|$2 anno|$2 anni}} fa",
