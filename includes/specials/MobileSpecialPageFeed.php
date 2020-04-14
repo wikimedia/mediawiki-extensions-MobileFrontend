@@ -106,17 +106,18 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 
 	/**
 	 * Generates username text based on user's rights and preference
-	 * @param Revision $rev
+	 * @param RevisionRecord $rev
 	 * @param User $user viewing the revision
 	 * @param bool $unhide whether the user wants to see hidden usernames
 	 * @return string plain test label
 	 */
 	protected function getUsernameText( $rev, $user, $unhide ) {
-		$userId = $rev->getUser( RevisionRecord::FOR_THIS_USER, $user );
-		if ( $userId === 0 ) {
-			$username = IPUtils::prettifyIP( $rev->getUserText( RevisionRecord::RAW ) );
+		$revUser = $rev->getUser( RevisionRecord::FOR_THIS_USER, $user );
+		if ( $revUser && $revUser->isRegistered() ) {
+			$username = $revUser->getName();
 		} else {
-			$username = $rev->getUserText( RevisionRecord::FOR_THIS_USER, $user );
+			$revUser = $rev->getUser( RevisionRecord::RAW );
+			$username = IPUtils::prettifyIP( $revUser->getName() );
 		}
 		if (
 			!RevisionRecord::userCanBitfield(
