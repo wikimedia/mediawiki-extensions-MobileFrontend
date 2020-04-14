@@ -5,6 +5,7 @@
 		]
 	},
 	"mobile-frontend-clear-search": "ኣጽርይ",
+	"mobile-frontend-diffview-title": "ለውጥታት",
 	"mobile-frontend-editor-blocked-drawer-help": "ዝርዝሪት",
 	"mobile-frontend-editor-cancel": "ኣትርፍ",
 	"mobile-frontend-editor-continue": "ቀጻሊ",
@@ -29,7 +30,7 @@
 	"mobile-frontend-watchlist-filter-other": "ካልእ",
 	"mobile-frontend-watchlist-filter-talk": "ምይይጥ",
 	"mobile-frontend-watchlist-more": "ተወሳኺ",
-	"mobile-frontend-loading-message": "ጽዕነት...",
+	"mobile-frontend-loading-message": "ይጽዕን ኣሎ...",
 	"mobile-frontend-mobile-option-amc-learn-more": "ተወሳኺ ፍለጥ",
 	"mobile-frontend-amc-outreach-no-thanks": "ኣይፋል፣ የቐንየለይ"
 }

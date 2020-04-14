@@ -251,7 +251,7 @@
 	"mobile-frontend-amc-outreach-enabled-message": "Der erweiterte Modus ist nun aktiviert. Du kannst in deinen Einstellungen abschalten.",
 	"mobile-frontend-amc-outreach-dismissed-message": "Du kannst den erweiterten Modus jederzeit in deinen Einstellungen aktivieren.",
 	"mobile-frontend-beta-only": "Die Funktion ist nur im Betamodus verfügbar",
-	"mobile-frontend-console-recruit": "Erfahre mehr darüber, wie wir unsere mobile Website erstellen unter https://www.mediawiki.org/wiki/Extension:MobileFrontend",
+	"mobile-frontend-console-recruit": "Erfahre mehr darüber, wie wir unsere mobile Website erstellen unter https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Spezialseiten auf Mobilgeräten optimieren und vereinfachen (empfohlen)",
 	"prefs-mobile": "Mobileinstellungen"
 }
