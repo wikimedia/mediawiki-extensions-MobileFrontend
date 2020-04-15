@@ -264,7 +264,7 @@
 	"mobile-frontend-amc-outreach-enabled-message": "Gelişmiş mod etkinleştirildi. Ayarlarınızdan kapatabilirsiniz.",
 	"mobile-frontend-amc-outreach-dismissed-message": "Gelişmiş modu istediğiniz zaman Ayarlarınızdan etkinleştirebilirsiniz.",
 	"mobile-frontend-beta-only": "Özellik yalnızca beta modunda kullanılabilir",
-	"mobile-frontend-console-recruit": "Mobil sitemizi nasıl oluşturduğumuz hakkında daha fazla bilgi edinin @ https://www.mediawiki.org/wiki/Extension:MobileFrontend",
+	"mobile-frontend-console-recruit": "Mobil sitemizi nasıl oluşturduğumuz hakkında daha fazla bilgi edinin @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Mobil cihazdayken özel sayfaları optimize etme ve basitleştir (önerilir)",
 	"prefs-mobile": "Mobil tercihler"
 }

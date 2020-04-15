@@ -266,7 +266,7 @@
 	"mobile-frontend-amc-outreach-enabled-message": "進階模式現已啟用，若要停用您可以在您的設定裡關閉。",
 	"mobile-frontend-amc-outreach-dismissed-message": "您可以在任何時刻在您的設定裡啟用進階模式。",
 	"mobile-frontend-beta-only": "僅在測試模式下可用的功能",
-	"mobile-frontend-console-recruit": "瞭解更多有關我們如何構造移動網站的詳情，請參見：https://www.mediawiki.org/wiki/Extension:MobileFrontend",
+	"mobile-frontend-console-recruit": "瞭解更多有關我們如何構造移動網站的詳情，請參見：https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "在手機上最佳化且簡化特殊頁面（建議）",
 	"prefs-mobile": "手機版偏好設定"
 }

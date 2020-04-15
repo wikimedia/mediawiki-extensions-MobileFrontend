@@ -78,5 +78,6 @@
 	"mobile-frontend-watchlist-more": "muioc'h",
 	"nearby": "Pajennoù tost deoc'h",
 	"tag-mobile_edit": "Kemmañ gant an hezoug",
-	"tag-mobile_web_edit": "Kemmañ dre ar web hezoug"
+	"tag-mobile_web_edit": "Kemmañ dre ar web hezoug",
+	"mobile-frontend-console-recruit": "Gouzout hiroc'h war ar mod m'eo bet savet hol lec'hienn hezoug @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend"
 }

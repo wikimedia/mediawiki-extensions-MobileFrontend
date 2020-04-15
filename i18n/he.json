@@ -252,7 +252,7 @@
 	"mobile-frontend-amc-outreach-enabled-message": "המצב המתקדם מופעל עכשיו. אפשר לכבות אותו בהגדרות שלכם.",
 	"mobile-frontend-amc-outreach-dismissed-message": "עכשיו אפשר להפעיל את המצב המתקדם בכל עת בהגדרות שלך.",
 	"mobile-frontend-beta-only": "האפשרות זמינה רק במצב בטא.",
-	"mobile-frontend-console-recruit": "יש מידע נוסף על איך אנחנו בונים את האתר הנייד שלנו באתר https://www.mediawiki.org/wiki/Extension:MobileFrontend",
+	"mobile-frontend-console-recruit": "יש מידע נוסף על איך אנחנו בונים את האתר הנייד שלנו באתר https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "מיטוב ופישוט של דפים מיוחדים בגלישה ניידת (מומלץ)",
 	"prefs-mobile": "העדפות ניידות"
 }
