@@ -254,12 +254,13 @@ class MobileContext extends ContextSource {
 		if ( $mode !== self::MODE_BETA ) {
 			$mode = '';
 		}
+		$stats = MediaWikiServices::getInstance()->getStatsdDataFactory();
 		// Update statistics
 		if ( $mode === self::MODE_BETA ) {
-			wfIncrStats( 'mobile.opt_in_cookie_set' );
+			$stats->updateCount( 'mobile.opt_in_cookie_set', 1 );
 		}
 		if ( !$mode ) {
-			wfIncrStats( 'mobile.opt_in_cookie_unset' );
+			$stats->updateCount( 'mobile.opt_in_cookie_unset', 1 );
 		}
 		$this->mobileMode = $mode;
 
@@ -593,7 +594,8 @@ class MobileContext extends ContextSource {
 				'httpOnly' => false,
 			]
 		);
-		wfIncrStats( 'mobile.useformat_' . $cookieFormat . '_cookie_set' );
+		$stats = MediaWikiServices::getInstance()->getStatsdDataFactory();
+		$stats->updateCount( 'mobile.useformat_' . $cookieFormat . '_cookie_set', 1 );
 	}
 
 	/**

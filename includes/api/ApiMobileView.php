@@ -729,10 +729,11 @@ class ApiMobileView extends ApiBase {
 			[ 'version' => self::CACHE_VERSION ]
 		);
 
+		$stats = $services->getStatsdDataFactory();
 		if ( $miss ) {
-			wfIncrStats( 'mobile.view.cache-miss' );
+			$stats->updateCount( 'mobile.view.cache-miss', 1 );
 		} else {
-			wfIncrStats( 'mobile.view.cache-hit' );
+			$stats->updateCount( 'mobile.view.cache-hit', 1 );
 		}
 
 		return $data;
