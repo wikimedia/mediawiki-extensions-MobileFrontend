@@ -144,7 +144,7 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 	protected function showContributionsRow( Revision $rev ) {
 		$unhide = (bool)$this->getRequest()->getVal( 'unhide' );
 		$user = $this->getUser();
-		$username = $this->getUsernameText( $rev, $user, $unhide );
+		$username = $this->getUsernameText( $rev->getRevisionRecord(), $user, $unhide );
 		$comment = $this->getRevisionCommentHTML( $rev, $user, $unhide );
 
 		$ts = $rev->getTimestamp();

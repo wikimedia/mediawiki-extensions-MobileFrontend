@@ -189,7 +189,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 	protected function showRow( Revision $rev, $prev ) {
 		$unhide = $this->getRequest()->getBool( 'unhide' );
 		$user = $this->getUser();
-		$username = $this->getUsernameText( $rev, $user, $unhide );
+		$username = $this->getUsernameText( $rev->getRevisionRecord(), $user, $unhide );
 		$comment = $this->getRevisionCommentHTML( $rev, $user, $unhide );
 
 		$ts = $rev->getTimestamp();
