@@ -1,7 +1,8 @@
 <?php
 
 use MediaWiki\MediaWikiServices;
-use MediaWiki\Storage\RevisionRecord;
+use MediaWiki\Revision\RevisionRecord;
+use MediaWiki\Revision\SlotRecord;
 
 /**
  * Show the difference between two revisions of a page
@@ -11,9 +12,9 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	protected $hasDesktopVersion = true;
 	/** @var int Saves the revision ID of the actual revision in $rev */
 	private $revId;
-	/** @var Revision */
+	/** @var RevisionRecord */
 	private $rev;
-	/** @var Revision */
+	/** @var RevisionRecord */
 	private $prevRev;
 	/** @var Title Saves the title of the actual revision */
 	private $targetTitle;
@@ -48,10 +49,10 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	 * Takes 2 ids/keywords and validates them returning respective revisions
 	 *
 	 * @param int[] $revids Array of revision ids currently limited to 2 elements
-	 * @return Revision[]|null[] Array of previous and next revision. The next revision is null if
-	 *   a bad parameter is passed
+	 * @return RevisionRecord[]|null[] Array of previous and next revision. The next revision is
+	 *   null if a bad parameter is passed
 	 */
-	public function getRevisionsToCompare( $revids ) {
+	private function getRevisionsToCompare( $revids ) {
 		$prevRecord = null;
 		$revRecord = null;
 
@@ -85,10 +86,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 			}
 		}
 
-		// TODO convert this to returning RevisionRecords
-		$prev = $prevRecord ? new Revision( $prevRecord ) : null;
-		$rev = $revRecord ? new Revision( $revRecord ) : null;
-		return [ $prev, $rev ];
+		return [ $prevRecord, $revRecord ];
 	}
 
 	/**
@@ -106,19 +104,22 @@ class SpecialMobileDiff extends MobileSpecialPage {
 
 		if ( $rev === null ) {
 			$this->showRevisionNotFound();
-			$output->setPageTitle( $this->msg(
-			'mobile-frontend-diffview-404-title' ) );
+			$output->setPageTitle(
+				$this->msg( 'mobile-frontend-diffview-404-title' )
+			);
 			return false;
 		}
 		$this->revId = $rev->getId();
 		$this->rev = $rev;
 		$this->prevRev = $prev;
-		$this->targetTitle = $this->rev->getTitle();
-		$this->getSkin()->setRelevantTitle( $this->targetTitle );
+
+		$title = Title::newFromLinkTarget( $rev->getPageAsLinkTarget() );
+		$this->targetTitle = $title;
+		$this->getSkin()->setRelevantTitle( $title );
 
 		$output->setPageTitle( $this->msg(
 			'mobile-frontend-diffview-title',
-			$this->targetTitle->getPrefixedText()
+			$title->getPrefixedText()
 		) );
 
 		$output->addModuleStyles( [
@@ -132,6 +133,8 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		$output->addModules( 'mobile.special.mobilediff.images' );
 
 		// Allow other extensions to load more stuff here
+		// Now provides RevisionRecord objects, breaking change,
+		// Thanks extension must be updated first
 		Hooks::run( 'BeforeSpecialMobileDiffDisplay', [ &$output, $this->mobileContext, $revisions ] );
 
 		$output->addHTML( '<div id="mw-mf-diffview" class="content-unstyled"><div id="mw-mf-diffarea">' );
@@ -161,7 +164,11 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	protected function displayDiffPage() {
 		$unhide = $this->getRequest()->getBool( 'unhide' );
 		$context = $this->getContext();
-		$contentHandler = $this->rev->getContentHandler();
+		$contentHandler = MediaWikiServices::getInstance()
+			->getContentHandlerFactory()
+			->getContentHandler(
+				$this->rev->getSlot( SlotRecord::MAIN, RevisionRecord::RAW )->getModel()
+			);
 		$engine = $contentHandler->createDifferenceEngine( $this->getContext(),
 			$this->getPrevId(), $this->revId, 0, false, $unhide );
 
@@ -212,7 +219,8 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	 */
 	private function getCommentHTML( $unhide = false ) {
 		$audience = $unhide ? RevisionRecord::FOR_THIS_USER : RevisionRecord::FOR_PUBLIC;
-		$comment = $this->rev->getComment( $audience, $this->getUser() );
+		$commentObject = $this->rev->getComment( $audience, $this->getUser() );
+		$comment = $commentObject ? $commentObject->text : null;
 
 		if ( $this->rev->isDeleted( RevisionRecord::DELETED_COMMENT ) && !$unhide ) {
 			$commentHtml = $this->msg( 'rev-deleted-comment' )->escaped();
@@ -289,8 +297,9 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	 * @return string built HTML for Revision navigation links
 	 */
 	private function getRevisionNavigationLinksHTML() {
-		$prev = $this->rev->getPrevious();
-		$next = $this->rev->getNext();
+		$revLookup = MediaWikiServices::getInstance()->getRevisionLookup();
+		$prev = $revLookup->getPreviousRevision( $this->rev );
+		$next = $revLookup->getNextRevision( $this->rev );
 		$history = '';
 
 		if ( $prev || $next ) {
@@ -329,12 +338,13 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		);
 
 		$audience = $unhide ? RevisionRecord::FOR_THIS_USER : RevisionRecord::FOR_PUBLIC;
-		$userId = $this->rev->getUser( $audience, $this->getUser() );
-		$ipAddr = $this->rev->getUserText( $audience, $this->getUser() );
+		$user = $this->rev->getUser( $audience, $this->getUser() );
+		$userId = $user ? $user->getId() : 0;
+		$ipAddr = $user ? $user->getName() : '';
 
 		// Note $userId will be 0 and $ipAddr an empty string if the current audience cannot see it.
 		if ( $userId ) {
-			$user = User::newFromId( $userId );
+			$user = User::newFromIdentity( $user );
 			$edits = $user->getEditCount();
 			$attrs = [
 				'class' => MobileUI::iconClass( 'userAvatar-base20', 'before', 'mw-mf-user' ),
