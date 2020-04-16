@@ -122,7 +122,7 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 			$count = 0;
 			foreach ( $revs as $rev ) {
 				if ( $count++ < self::LIMIT ) {
-					$this->showContributionsRow( $rev );
+					$this->showContributionsRow( $rev->getRevisionRecord() );
 				}
 			}
 			$out->addHTML( '</ul>' );
@@ -139,12 +139,12 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 
 	/**
 	 * Render the contribution of the pagerevision (time, bytes added/deleted, pagename comment)
-	 * @param Revision $rev Revision to show contribution for
+	 * @param RevisionRecord $rev Revision to show contribution for
 	 */
-	protected function showContributionsRow( Revision $rev ) {
+	private function showContributionsRow( RevisionRecord $rev ) {
 		$unhide = (bool)$this->getRequest()->getVal( 'unhide' );
 		$user = $this->getUser();
-		$username = $this->getUsernameText( $rev->getRevisionRecord(), $user, $unhide );
+		$username = $this->getUsernameText( $rev, $user, $unhide );
 		$comment = $this->getRevisionCommentHTML( $rev, $user, $unhide );
 
 		$ts = $rev->getTimestamp();
@@ -176,8 +176,9 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 			$bytes = $rev->getSize() - $this->prevLengths[$rev->getParentId()];
 		}
 		$isMinor = $rev->isMinor();
+		$title = Title::newFromLinkTarget( $rev->getPageAsLinkTarget() );
 		$this->renderFeedItemHtml( $ts, $diffLink, $username, $comment,
-			$rev->getTitle(), $user->isAnon(), $bytes, $isMinor
+			$title, $user->isAnon(), $bytes, $isMinor
 		);
 	}
 
