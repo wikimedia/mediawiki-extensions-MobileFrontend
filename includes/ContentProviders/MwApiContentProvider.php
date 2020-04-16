@@ -91,7 +91,10 @@ class MwApiContentProvider implements IContentProvider {
 			$parse = $json['parse'];
 
 			$out->addModules( $parse['modules'] );
-			$out->addModuleStyles( $parse['modulestyles'] );
+			$styles = array_filter( $parse[ 'modulestyles' ], function ( $module ) {
+				return strpos( $module, 'skins.' ) === false;
+			} );
+			$out->addModuleStyles( $styles );
 			$parserProps = $parse['properties'];
 			if ( $this->provideTagline && isset( $parserProps['wikibase-shortdesc'] ) ) {
 				// special handling for wikidata descriptions (T212216)
