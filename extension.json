@@ -545,7 +545,6 @@
 			"class": "ResourceLoaderOOUIIconPackModule",
 			"selectorWithoutVariant": ".mw-ui-icon-mf-{name}:before",
 			"selectorWithVariant": ".mw-ui-icon-mf-{name}-{variant}:before",
-			"defaultColor": "#72777d",
 			"targets": [
 				"mobile",
 				"desktop"
@@ -556,7 +555,10 @@
 					"global": true
 				}
 			},
-			"icons": [ "userAnonymous", "userAvatar" ]
+			"icons": [
+				"userAnonymous",
+				"userAvatar"
+			]
 		},
 		"mobile.special.watchlist.scripts": {
 			"targets": "mobile",
