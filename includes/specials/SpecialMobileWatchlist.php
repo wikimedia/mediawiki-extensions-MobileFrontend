@@ -146,7 +146,8 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 
 		$linkRenderer = MediaWikiServices::getInstance()->getLinkRenderer();
 		$html =
-		Html::openElement( 'ul', [ 'class' => 'button-bar mw-ui-button-group' ] ) .
+		Html::openElement( 'ul',
+			[ 'class' => 'mw-mf-watchlist-button-bar mw-ui-button-group' ] ) .
 			Html::openElement( 'li', $attrsList ) .
 			$linkRenderer->makeLink( $sp,
 				wfMessage( 'mobile-frontend-watchlist-a-z' )->text(),
