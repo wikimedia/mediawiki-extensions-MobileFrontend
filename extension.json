@@ -63,6 +63,7 @@
 		"mobile-frontend-talk-topic-wait"
 	],
 	"AutoloadNamespaces": {
+		"MobileFrontend\\": "includes/",
 		"MobileFrontend\\ContentProviders\\": "includes/content-providers/",
 		"MobileFrontend\\Devices\\": "includes/devices/",
 		"MobileFrontend\\Transforms\\": "includes/transforms/",
@@ -75,8 +76,6 @@
 		"MobileFrontendHooks": "includes/MobileFrontendHooks.php",
 		"MobileFrontendEditorHooks": "includes/MobileFrontendEditorHooks.php",
 		"MobileFrontendSkinHooks": "includes/MobileFrontendSkinHooks.php",
-		"MobileFrontend\\BaseDomainExtractorInterface": "includes/BaseDomainExtractorInterface.php",
-		"MobileFrontend\\WMFBaseDomainExtractor": "includes/WMFBaseDomainExtractor.php",
 		"MobileContext": "includes/MobileContext.php",
 		"MobileFormatter": "includes/MobileFormatter.php",
 		"MobileCollection": "includes/models/MobileCollection.php",
