@@ -183,13 +183,13 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 	 * changed bytes
 	 * name of editor
 	 * comment of edit
-	 * @param Revision $rev Revision id of the row wants to show
-	 * @param Revision|null $prev Revision id of previous Revision to display the difference
+	 * @param RevisionRecord $rev Revision of the row to show
+	 * @param ?RevisionRecord $prev Revision of previous Revision to display the difference
 	 */
-	protected function showRow( Revision $rev, $prev ) {
+	private function showRow( RevisionRecord $rev, ?RevisionRecord $prev ) {
 		$unhide = $this->getRequest()->getBool( 'unhide' );
 		$user = $this->getUser();
-		$username = $this->getUsernameText( $rev->getRevisionRecord(), $user, $unhide );
+		$username = $this->getUsernameText( $rev, $user, $unhide );
 		$comment = $this->getRevisionCommentHTML( $rev, $user, $unhide );
 
 		$ts = $rev->getTimestamp();
@@ -207,8 +207,9 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 			$user
 		) ) {
 			$diffLink = SpecialPage::getTitleFor( 'MobileDiff', $rev->getId() )->getLocalURL();
-		} elseif ( $canSeeText && $rev->getTitle() !== null ) {
-			$diffLink = $rev->getTitle()->getLocalURL( [ 'oldid' => $rev->getId() ] );
+		} elseif ( $canSeeText ) {
+			$diffLink = Title::newFromLinkTarget( $rev->getPageAsLinkTarget() )
+				->getLocalURL( [ 'oldid' => $rev->getId() ] );
 		} else {
 			$diffLink = false;
 		}
@@ -217,15 +218,23 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 		if ( $this->title ) {
 			$title = null;
 		} else {
-			$title = $rev->getTitle();
+			$title = Title::newFromLinkTarget( $rev->getPageAsLinkTarget() );
 		}
 		$bytes = $rev->getSize();
 		if ( $prev ) {
 			$bytes -= $prev->getSize();
 		}
 		$isMinor = $rev->isMinor();
+
+		$revUser = $rev->getUser( RevisionRecord::FOR_THIS_USER, $user );
+		if ( $revUser ) {
+			$revIsAnon = !( $revUser->isRegistered() );
+		} else {
+			// Default to anonymous if unknown
+			$revIsAnon = true;
+		}
 		$this->renderFeedItemHtml( $ts, $diffLink, $username, $comment, $title,
-			$rev->getUser( RevisionRecord::FOR_THIS_USER, $user ) === 0, $bytes, $isMinor );
+			$revIsAnon, $bytes, $isMinor );
 	}
 
 	/**
@@ -258,9 +267,10 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 		$numRows = $res->numRows();
 		$rev1 = $rev2 = null;
 		$out = $this->getOutput();
+		$revFactory = MediaWikiServices::getInstance()->getRevisionFactory();
 		if ( $numRows > 0 ) {
 			foreach ( $res as $row ) {
-				$rev1 = new Revision( $row );
+				$rev1 = $revFactory->newRevisionFromRow( $row );
 				if ( $rev2 ) {
 					$this->showRow( $rev2, $rev1 );
 				}
