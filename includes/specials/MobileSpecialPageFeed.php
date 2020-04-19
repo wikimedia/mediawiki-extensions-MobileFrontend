@@ -22,7 +22,7 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 		$out = $this->getOutput();
 		$out->addModuleStyles( [
 			'mobile.special.pagefeed.styles',
-			'mobile.special.user.icons'
+			'mobile.user.icons'
 		] );
 		$this->setHeaders();
 		$out->setProperty( 'unstyledContent', true );

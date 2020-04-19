@@ -243,6 +243,25 @@
 			],
 			"icons": [ "close", "previous", "next", "alert", "expand" ]
 		},
+		"mobile.user.icons": {
+			"class": "ResourceLoaderOOUIIconPackModule",
+			"selectorWithoutVariant": ".mw-ui-icon-mf-{name}:before",
+			"selectorWithVariant": ".mw-ui-icon-mf-{name}-{variant}:before",
+			"targets": [
+				"mobile",
+				"desktop"
+			],
+			"variants": {
+				"base20": {
+					"color": "#54595d",
+					"global": true
+				}
+			},
+			"icons": [
+				"userAnonymous",
+				"userAvatar"
+			]
+		},
 		"mobile.startup": {
 			"class": "MobileFrontend\\ResourceLoaderModules\\ResourceLoaderFileModuleWithMFConfig",
 			"targets": [
@@ -538,25 +557,6 @@
 			"styles": [
 				"resources/mobile.special.styles/common.less",
 				"resources/mobile.special.styles/forms.less"
-			]
-		},
-		"mobile.special.user.icons": {
-			"class": "ResourceLoaderOOUIIconPackModule",
-			"selectorWithoutVariant": ".mw-ui-icon-mf-{name}:before",
-			"selectorWithVariant": ".mw-ui-icon-mf-{name}-{variant}:before",
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"variants": {
-				"base20": {
-					"color": "#54595d",
-					"global": true
-				}
-			},
-			"icons": [
-				"userAnonymous",
-				"userAvatar"
 			]
 		},
 		"mobile.special.watchlist.scripts": {

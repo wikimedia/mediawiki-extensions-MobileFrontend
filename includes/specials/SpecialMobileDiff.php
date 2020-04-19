@@ -123,12 +123,12 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		) );
 
 		$output->addModuleStyles( [
-			'mobile.special.user.icons',
 			"mobile.placeholder.images",
 			'mobile.pagesummary.styles',
-			// @todo FIXME: Don't add these styles. This is only needed for the user
+			// @todo FIXME: Don't add 'pagefeed' styles. This is only needed for the user
 			// icon to the left of the username
-			'mobile.special.pagefeed.styles'
+			'mobile.special.pagefeed.styles',
+			'mobile.user.icons'
 		] );
 		$output->addModules( 'mobile.special.mobilediff.images' );
 
