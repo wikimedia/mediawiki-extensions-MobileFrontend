@@ -18,8 +18,10 @@ class InlineDifferenceEngine extends DifferenceEngine {
 	 * @return bool
 	 */
 	public function isDeletedDiff() {
-		return ( $this->mNewRev && $this->mNewRev->isDeleted( RevisionRecord::DELETED_TEXT ) ) ||
-			( $this->mOldRev && $this->mOldRev->isDeleted( RevisionRecord::DELETED_TEXT ) );
+		$newRev = $this->getNewRevision();
+		$oldRev = $this->getOldRevision();
+		return ( $newRev && $newRev->isDeleted( RevisionRecord::DELETED_TEXT ) ) ||
+			( $oldRev && $oldRev->isDeleted( RevisionRecord::DELETED_TEXT ) );
 	}
 
 	/**
@@ -31,7 +33,7 @@ class InlineDifferenceEngine extends DifferenceEngine {
 	 */
 	public function isSuppressedDiff() {
 		return $this->isDeletedDiff() &&
-			$this->mNewRev->isDeleted( RevisionRecord::DELETED_RESTRICTED );
+			$this->getNewRevision()->isDeleted( RevisionRecord::DELETED_RESTRICTED );
 	}
 
 	/**
@@ -44,13 +46,13 @@ class InlineDifferenceEngine extends DifferenceEngine {
 	public function isUserAllowedToSee() {
 		$user = $this->getUser();
 		$allowed = RevisionRecord::userCanBitfield(
-			$this->mNewRev->getVisibility(),
+			$this->getNewRevision()->getVisibility(),
 			RevisionRecord::DELETED_TEXT,
 			$user
 		);
-		if ( $this->mOldRev ) {
+		if ( $this->getOldRevision() ) {
 			if ( !RevisionRecord::userCanBitfield(
-				$this->mOldRev->getVisibility(),
+				$this->getOldRevision()->getVisibility(),
 				RevisionRecord::DELETED_TEXT,
 				$user
 			) ) {
@@ -153,8 +155,9 @@ class InlineDifferenceEngine extends DifferenceEngine {
 			// current one and set the title object (which we can get from the new revision).
 			// Bug: T122984
 			$context = new DerivativeContext( $this->getContext() );
-			$revision = $this->mNewRev;
-			$context->setTitle( $revision->getTitle() );
+			$context->setTitle(
+				Title::newFromLinkTarget( $this->getNewRevision()->getPageAsLinkTarget() )
+			);
 
 			if ( !$allowed ) {
 				$msg = $context->msg(
