@@ -17,9 +17,9 @@ class MobilePage {
 	 */
 	private $title;
 	/**
-	 * @var Revision|bool
+	 * @var RevisionRecord|bool|null
 	 */
-	private $rev;
+	private $rev = false;
 	/**
 	 * @var string|bool
 	 */
@@ -39,10 +39,10 @@ class MobilePage {
 	}
 
 	/**
-	 * @return RevisionRecord|bool
+	 * @return RevisionRecord|null
 	 */
 	private function getRevision() {
-		if ( $this->rev === null ) {
+		if ( $this->rev === false ) {
 			$this->rev = MediaWikiServices::getInstance()->getRevisionStore()
 				->getRevisionByTitle( $this->title );
 		}
