@@ -1,5 +1,6 @@
 <?php
 
+use MediaWiki\Extensions\XAnalytics\XAnalytics;
 use MediaWiki\MediaWikiServices;
 use Wikimedia\ParamValidator\ParamValidator;
 
@@ -304,13 +305,13 @@ class ApiMobileView extends ApiBase {
 	/**
 	 * Small wrapper around XAnalytics extension
 	 *
-	 * @see \XAnalytics::addItem
+	 * @see MediaWiki\Extensions\XAnalytics\XAnalytics::addItem
 	 * @param string $name
 	 * @param string $value
 	 */
 	private function addXAnalyticsItem( $name, $value ) {
-		if ( is_callable( [ \XAnalytics::class, 'addItem' ] ) ) {
-			\XAnalytics::addItem( $name, $value );
+		if ( ExtensionRegistry::getInstance()->isLoaded( 'XAnalytics' ) ) {
+			XAnalytics::addItem( $name, $value );
 		}
 	}
 
