@@ -236,7 +236,7 @@
 	"mobile-frontend-amc-outreach-enabled-message": "Напредниот режим е вклучен. Можете да го исклучите во нагодувањата.",
 	"mobile-frontend-amc-outreach-dismissed-message": "Можете да го вклучите напредниот режим во секое време од вашите нагодувања.",
 	"mobile-frontend-beta-only": "Можноста е достапна само во Бета-режим",
-	"mobile-frontend-console-recruit": "Дознајте повеќе за тоа како го градиме нашиот мобилен портал на https://www.mediawiki.org/wiki/Extension:MobileFrontend",
+	"mobile-frontend-console-recruit": "Дознајте повеќе за тоа како го градиме нашиот мобилен портал на https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Оптимизирај и упрости ги службените страници од мобилен уред (препорачано)",
 	"prefs-mobile": "Мобилни нагодувања"
 }

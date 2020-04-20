@@ -222,7 +222,7 @@
 	"mobile-frontend-amc-outreach-enabled-message": "Uzlabotais režīms ir iespējots. Tu vari to atspējot savos iestatījumos.",
 	"mobile-frontend-amc-outreach-dismissed-message": "Tu vari jebkurā laikā iespējot uzlaboto režīmu savos iestatījumos.",
 	"mobile-frontend-beta-only": "Iespēja pieejama tikai bēta režīmā",
-	"mobile-frontend-console-recruit": "Uzzini vairāk par to, kā mēs veidojam savu mobilo vietni https://www.mediawiki.org/wiki/Extension:MobileFrontend",
+	"mobile-frontend-console-recruit": "Uzzini vairāk par to, kā mēs veidojam savu mobilo vietni https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Optimizēt un vienkāršot īpašas lapas mobilajā versijā (ieteicams)",
 	"prefs-mobile": "Mobilās versijas izvēles"
 }
