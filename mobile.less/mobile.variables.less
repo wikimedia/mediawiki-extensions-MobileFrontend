@@ -1,10 +1,18 @@
 /* GOAL: Upstream all these variables to core */
 @import 'mediawiki.ui/variables';
 
-// z-index definitions (see bug 64707)
-@z-indexBase: 0;
-@z-indexOverlay: 1;
-@z-indexOverOverlay: 2;
+// Taken from WikimediaUI Base
+// == Colors ==
+// WikimediaUI (`wmui`) color palette
+// See https://design.wikimedia.org/style-guide/visual-style_colors.html
+// Don't use those variables directly, instead define your vars
+// referring to them as applied further below.
+
+@wmui-color-red50: #d33; // = HSB 360°, 77%, 87%
+@wmui-color-green30:  #14866d; // = HSB 167°, 85%, 53%
+
+@color-destructive: @wmui-color-red50;
+@color-success: @wmui-color-green30;
 
 /**
  * System font stack for sans-serif fonts
@@ -34,6 +42,11 @@
 
 // information messages, e.g. empty watchlist message
 @infoColor: @colorGray7;
+
+// z-index definitions (see bug 64707)
+@z-indexBase: 0;
+@z-indexOverlay: 1;
+@z-indexOverOverlay: 2;
 
 // FIXME: To be moved to includes/Config in a follow up patch.
 @wgMFDeviceWidthDesktop: 62.5em; // 1000px / 16 px;
