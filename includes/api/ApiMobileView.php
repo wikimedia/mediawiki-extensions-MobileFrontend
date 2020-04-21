@@ -2,6 +2,7 @@
 
 use MediaWiki\Extensions\XAnalytics\XAnalytics;
 use MediaWiki\MediaWikiServices;
+use PageImages\PageImages;
 use Wikimedia\ParamValidator\ParamValidator;
 
 /**
