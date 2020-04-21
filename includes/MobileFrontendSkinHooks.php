@@ -218,6 +218,7 @@ JAVASCRIPT;
 			$context->msg( 'mobile-frontend-view' )->text()
 		);
 		$tpl->set( 'mobileview', $link );
+		// @phan-suppress-next-line PhanTypeMismatchDimAssignment
 		$footerlinks['places'][] = 'mobileview';
 		$tpl->set( 'footerlinks', $footerlinks );
 	}

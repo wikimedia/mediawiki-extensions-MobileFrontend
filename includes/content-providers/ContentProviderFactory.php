@@ -26,7 +26,6 @@ class ContentProviderFactory {
 	/**
 	 * @param string $html Already generated HTML
 	 * @return IContentProvider
-	 * @suppress SecurityCheck-XSS OutputPage::getHtml is a hack, but safe html
 	 */
 	protected static function getDefaultParser( $html ) {
 		return new DefaultContentProvider( $html );
@@ -60,7 +59,6 @@ class ContentProviderFactory {
 	 *  should be provided for if the provider supports it.
 	 * @throws RuntimeException Thrown when specified ContentProvider doesn't exist
 	 * @return IContentProvider
-	 * @suppress SecurityCheck-XSS OutputPage::getHtml is a hack, but safe html
 	 */
 	public function getProvider( OutputPage $out, $html, $provideTagline = false
 	) {

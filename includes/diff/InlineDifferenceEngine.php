@@ -109,6 +109,7 @@ class InlineDifferenceEngine extends DifferenceEngine {
 			'</div>'
 		);
 
+		// @phan-suppress-next-line SecurityCheck-XSS getPatrolledLink's output is safe
 		$output->addHTML( Html::rawElement(
 			'div',
 			[

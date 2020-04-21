@@ -72,7 +72,9 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 			Html::element( 'h3', [], $titleText );
 
 		if ( $lastModified ) {
+			// @phan-suppress-next-line SecurityCheck-DoubleEscaped This currently works 🤷🏽‍♂️
 			$html .= Html::openElement( 'div', [ 'class' => 'info' ] ) .
+				// @phan-suppress-next-line SecurityCheck-DoubleEscaped This currently works 🤷🏽‍♂️
 				Html::element( 'span', array_merge( $dataAttrs, [ 'class' => 'modified-enhancement' ] ),
 					$lastModified ) .
 				Html::closeElement( 'div' );
