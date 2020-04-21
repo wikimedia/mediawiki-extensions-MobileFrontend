@@ -12,6 +12,7 @@
 		"commonjs": true
 	},
 	"rules": {
+		"mediawiki/class-doc": "off",
 		"no-console": "error"
 	}
 }
