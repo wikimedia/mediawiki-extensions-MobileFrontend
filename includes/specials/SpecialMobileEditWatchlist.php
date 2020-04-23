@@ -46,7 +46,7 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 				'mobile-frontend-last-modified-date',
 				$this->getLanguage()->userDate( $timestamp, $user ),
 				$this->getLanguage()->userTime( $timestamp, $user )
-			)->parse();
+			)->text();
 			$edit = $mp->getLatestEdit();
 			$dataAttrs = [
 				'data-timestamp' => $edit['timestamp'],
@@ -72,9 +72,7 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 			Html::element( 'h3', [], $titleText );
 
 		if ( $lastModified ) {
-			// @phan-suppress-next-line SecurityCheck-DoubleEscaped This currently works 🤷🏽‍♂️
 			$html .= Html::openElement( 'div', [ 'class' => 'info' ] ) .
-				// @phan-suppress-next-line SecurityCheck-DoubleEscaped This currently works 🤷🏽‍♂️
 				Html::element( 'span', array_merge( $dataAttrs, [ 'class' => 'modified-enhancement' ] ),
 					$lastModified ) .
 				Html::closeElement( 'div' );
