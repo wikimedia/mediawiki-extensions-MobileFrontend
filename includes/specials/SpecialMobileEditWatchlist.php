@@ -179,17 +179,16 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 
 		// Begin rendering of watchlist.
 		$watchlist = [ $ns => $allPages ];
-		Hooks::run( 'SpecialMobileEditWatchlist::images', [
-				$this->getContext(),
-				&$watchlist,
-				&$images
-			]
+		$services = MediaWikiServices::getInstance();
+		$services->getHookContainer()->run(
+			'SpecialMobileEditWatchlist::images',
+			[ $this->getContext(), &$watchlist, &$images ]
 		);
 
 		// create list of pages
 		$mobilePages = new MobileCollection();
 		$pageKeys = array_keys( $watchlist[$ns] );
-		$repoGroup = MediaWikiServices::getInstance()->getRepoGroup();
+		$repoGroup = $services->getRepoGroup();
 		foreach ( $pageKeys as $dbkey ) {
 			if ( isset( $images[$ns][$dbkey] ) ) {
 				$page = new MobilePage(

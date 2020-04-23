@@ -135,7 +135,11 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		// Allow other extensions to load more stuff here
 		// Now provides RevisionRecord objects, breaking change,
 		// Thanks extension must be updated first
-		Hooks::run( 'BeforeSpecialMobileDiffDisplay', [ &$output, $this->mobileContext, $revisions ] );
+		$hookContainer = MediaWikiServices::getInstance()->getHookContainer();
+		$hookContainer->run(
+			'BeforeSpecialMobileDiffDisplay',
+			[ &$output, $this->mobileContext, $revisions ]
+		);
 
 		$output->addHTML( '<div id="mw-mf-diffview" class="content-unstyled"><div id="mw-mf-diffarea">' );
 
