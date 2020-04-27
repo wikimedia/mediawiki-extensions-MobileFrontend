@@ -64,7 +64,7 @@
 	"mobile-frontend-desc": "ظاهر تلفن همراه",
 	"mobile-frontend-diffview-404-desc": "شناسه نسخه درخواستی شما وجود ندارد.",
 	"mobile-frontend-diffview-404-title": "نسخهٔ بد",
-	"mobile-frontend-diffview-anonymous": "کاربر گمنام",
+	"mobile-frontend-diffview-anonymous": "کاربر ناشناس",
 	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|بایت}} اضافه‌شده",
 	"mobile-frontend-diffview-bytesnochange": "هیچ تغییری در اندازه به وجود نیامده‌ است.",
 	"mobile-frontend-diffview-bytesremoved": "$1 {{PLURAL:$1|بایت|بایت}} حذف‌شده",
