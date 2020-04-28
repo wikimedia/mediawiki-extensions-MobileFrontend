@@ -75,13 +75,13 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 
 	/**
 	 * Generates revision text based on user's rights and preference
-	 * @param RevisionRecord|Revision $rev
+	 * @param RevisionRecord $rev
 	 * @param User $user viewing the revision
 	 * @param bool $unhide whether the user wants to see hidden comments
 	 *   if the user doesn't have permission, comment will display as rev-deleted-comment
 	 * @return string plain text label
 	 */
-	protected function getRevisionCommentHTML( $rev, $user, $unhide ) {
+	protected function getRevisionCommentHTML( RevisionRecord $rev, $user, $unhide ) {
 		if ( RevisionRecord::userCanBitfield(
 			$rev->getVisibility(),
 			RevisionRecord::DELETED_COMMENT,
@@ -90,16 +90,11 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 			if ( $rev->isDeleted( RevisionRecord::DELETED_COMMENT ) && !$unhide ) {
 				$comment = $this->msg( 'rev-deleted-comment' )->escaped();
 			} else {
-				$comment = $rev->getComment( RevisionRecord::FOR_THIS_USER, $user );
-
-				if ( $comment && $comment instanceof CommentStoreComment ) {
-					// RevisionRecord::getComment returns CommentStoreComment or
-					// null, Revision::getComment returns string or null
-					$comment = $comment->text;
-				}
+				$commentObj = $rev->getComment( RevisionRecord::FOR_THIS_USER, $user );
+				$commentText = $commentObj ? $commentObj->text : '';
 
 				// escape any HTML in summary and add CSS for any auto-generated comments
-				$comment = $this->formatComment( $comment, $this->title );
+				$comment = $this->formatComment( $commentText, $this->title );
 			}
 		} else {
 			// Confusingly "Revision::userCan" Determines if the current user is
