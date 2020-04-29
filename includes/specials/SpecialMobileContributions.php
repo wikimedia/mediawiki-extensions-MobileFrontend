@@ -102,27 +102,28 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 	 */
 	protected function showContributions( IResultWrapper $res, ContribsPager $pager ) {
 		$numRows = $res->numRows();
-		$rev = null;
 		$out = $this->getOutput();
-		$revs = [];
-		$prevRevs = [];
+
+		$revisionRecord = null;
+		$revisionRecords = [];
+		$previousRecords = [];
 		foreach ( $res as $row ) {
-			$rev = $pager->tryToCreateValidRevision( $row );
-			if ( $rev ) {
-				$revs[] = $rev;
-				if ( $res->key() <= self::LIMIT + 1 && $rev->getParentId() ) {
-					$prevRevs[] = $rev->getParentId();
+			$revisionRecord = $pager->tryCreatingRevisionRecord( $row );
+			if ( $revisionRecord ) {
+				$revisionRecords[] = $revisionRecord;
+				if ( $res->key() <= self::LIMIT + 1 && $revisionRecord->getParentId() ) {
+					$previousRecords[] = $revisionRecord->getParentId();
 				}
 			}
 		}
 		$this->prevLengths = MediaWikiServices::getInstance()
 			->getRevisionStore()
-			->getRevisionSizes( $prevRevs );
+			->getRevisionSizes( $previousRecords );
 		if ( $numRows > 0 ) {
 			$count = 0;
-			foreach ( $revs as $rev ) {
+			foreach ( $revisionRecords as $revRecord ) {
 				if ( $count++ < self::LIMIT ) {
-					$this->showContributionsRow( $rev->getRevisionRecord() );
+					$this->showContributionsRow( $revRecord );
 				}
 			}
 			$out->addHTML( '</ul>' );
