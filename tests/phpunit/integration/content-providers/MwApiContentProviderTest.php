@@ -162,7 +162,8 @@ class MwApiContentProviderTest extends MediaWikiTestCase {
 	public function testGetHtmlWithCorrectResponse() {
 		$rawResponse = '{"parse": {"title": "MobileFrontend", "pageid": 2, "revid": 123, ' .
 			'"text": "Some text", "langlinks": [{"lang": "test", "title": "MF"}], "modules": ["site", ' .
-			'"test", "test1"], "modulescripts": [], "modulestyles": ["test", "test1", "test2"], ' .
+			'"test", "test1"], "modulescripts": [], ' .
+			'"modulestyles": ["test", "test1", "test2", "skins.random"], ' .
 			'"properties": {"noexternallanglinks": "test", "noeditsection": "", "notoc": "", ' .
 			'"wikibase_item": "QXXX", "wikibase-shortdesc": "No desc"}}}';
 
