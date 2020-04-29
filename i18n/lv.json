@@ -183,6 +183,8 @@
 	"mobile-frontend-watchlist-filter-other": "Citi",
 	"mobile-frontend-watchlist-filter-talk": "Diskusijas",
 	"mobile-frontend-watchlist-more": "vairāk",
+	"mobile-frontend-watchlist-please-wait": "Lūdzu, uzgaidi, uzraudzīšanas darbība notiek ilgāk nekā gaidīts.",
+	"mobile-frontend-watchlist-error": "Notika kļūda, sākot uzraudzīt lapu. Lūdzu, mēģini vēlreiz.",
 	"mobile-frontend-watchlist-purpose": "<strong>Uzraugāmo lapu saraksts palīdz atzīmēt lapas un sekot to izmaiņām.</strong><br />Pieslēdzies, lai to apskatītu.",
 	"mobile-frontend-watchlist-removed": "$1 tika izņemts no jūsu uzraugāmo lapu saraksta",
 	"mobile-frontend-user-page-no-owner-page-yet": "Tev vēl nav dalībnieka lapas",
