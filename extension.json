@@ -666,23 +666,22 @@
 			]
 		},
 		"mobile.special.mobilediff.images": {
-			"class": "ResourceLoaderImageModule",
-			"defaultColor": "#54595d",
+			"class": "ResourceLoaderOOUIIconPackModule",
 			"selectorWithoutVariant": ".mw-ui-icon-mf-{name}:before",
 			"selectorWithVariant": ".mw-ui-icon-mf-{name}-{variant}:before",
 			"variants": {
-				"green": {
-					"color": "#17ac87",
+				"constructive": {
+					"color": "#14866d",
 					"global": true
 				},
-				"red": {
-					"color": "#d82c2d",
+				"destructive": {
+					"color": "#d33",
 					"global": true
 				}
 			},
-			"images": {
-				"bytesChanged": "resources/mobile.special.mobilediff.images/bytesChanged.svg"
-			}
+			"icons": [
+				"upTriangle"
+			]
 		},
 		"mobile.special.mobilediff.styles": {
 			"targets": "mobile",
