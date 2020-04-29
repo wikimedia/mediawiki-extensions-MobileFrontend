@@ -39,11 +39,11 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 	protected function getHeaderBarLink( $title ) {
 		// Convert user page URL to User object.
 		$user = User::newFromName( $title->getText(), false );
-		$glyph = $user->isAnon() ? 'userAnonymous' : 'userAvatar';
+		$icon = $user->isAnon() ? 'userAnonymous' : 'userAvatar';
 
 		return Html::rawElement( 'a',
 			[
-				'class' => MobileUI::iconClass( $glyph, 'before', 'mw-mf-user' ),
+				'class' => MobileUI::iconClass( $icon, 'before', 'mw-mf-user' ),
 				'href' => $title->getLocalURL(),
 			],
 			Html::element( 'span', [], $title->getText() )
