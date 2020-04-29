@@ -6,6 +6,7 @@ use Wikibase\Client\WikibaseClient;
 use Wikibase\DataModel\Entity\EntityDocument;
 use Wikibase\DataModel\Entity\ItemId;
 use Wikibase\DataModel\Term\FingerprintProvider;
+use Wikimedia\IPUtils;
 
 /**
  * Implements additional functions to use in MobileFrontend
@@ -115,7 +116,8 @@ class ExtMobileFrontend {
 	private static function buildPageUserObject( Title $title ) {
 		$titleText = $title->getText();
 
-		if ( User::isIP( $titleText ) ) {
+		$usernameUtils = MediaWikiServices::getInstance()->getUserNameUtils();
+		if ( $usernameUtils->isIP( $titleText ) || IPUtils::isIPv6( $titleText ) ) {
 			return User::newFromAnyId( null, $titleText, null );
 		}
 

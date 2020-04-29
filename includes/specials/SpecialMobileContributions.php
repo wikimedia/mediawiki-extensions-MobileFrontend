@@ -2,6 +2,7 @@
 
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Storage\RevisionRecord;
+use Wikimedia\IPUtils;
 use Wikimedia\Rdbms\IResultWrapper;
 
 /**
@@ -59,7 +60,10 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 		if ( $par ) {
 			// enter article history view
 			$this->user = User::newFromName( $par, false );
-			if ( $this->user && ( $this->user->idForName() || User::isIP( $par ) ) ) {
+
+			$usernameUtils = MediaWikiServices::getInstance()->getUserNameUtils();
+			$userIsIP = ( $usernameUtils->isIP( $par ) || IPUtils::isIPv6( $par ) );
+			if ( $this->user && ( $this->user->idForName() || $userIsIP ) ) {
 				// set page title as on desktop site - bug 66656
 				$username = $this->user->getName();
 				$out = $this->getOutput();
@@ -74,7 +78,7 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 					$this->msg( 'contributions-title', $username )->plain()
 				)->inContentLanguage() );
 
-				if ( User::isIP( $par ) ) {
+				if ( $userIsIP ) {
 					$this->renderHeaderBar( Title::newFromText( 'User:' . $par ) );
 				} else {
 					$this->renderHeaderBar( $this->user->getUserPage() );
