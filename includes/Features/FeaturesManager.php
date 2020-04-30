@@ -2,7 +2,7 @@
 
 namespace MobileFrontend\Features;
 
-use Hooks;
+use MediaWiki\MediaWikiServices;
 
 /**
  * A facade for UserModes and MobileFrontend Features system.
@@ -39,7 +39,8 @@ class FeaturesManager {
 	 * Allow other extensions to register features
 	 */
 	public function useHookToRegisterExtensionOrSkinFeatures() {
-		Hooks::run( 'MobileFrontendFeaturesRegistration', [ $this ] );
+		$hookContainer = MediaWikiServices::getInstance()->getHookContainer();
+		$hookContainer->run( 'MobileFrontendFeaturesRegistration', [ $this ] );
 	}
 
 	/**

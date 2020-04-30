@@ -90,7 +90,8 @@ class ExtMobileFrontend {
 
 		$formatter = MobileFormatter::newFromContext( $context, $provider, $enableSections );
 
-		Hooks::run( 'MobileFrontendBeforeDOM', [ $context, $formatter ] );
+		$hookContainer = $services->getHookContainer();
+		$hookContainer->run( 'MobileFrontendBeforeDOM', [ $context, $formatter ] );
 
 		if ( $context->getContentTransformations() ) {
 			$isSpecialPage = $title->isSpecialPage();

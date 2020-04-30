@@ -121,12 +121,13 @@ class MobileFrontendHooks {
 			$context->getUser()->getOption( 'mobileskin' )
 		);
 		if ( $userSkin && Skin::normalizeKey( $userSkin ) === $userSkin ) {
-			$skin = MediaWikiServices::getInstance()->getSkinFactory()->makeSkin( $userSkin );
+			$skin = $services->getSkinFactory()->makeSkin( $userSkin );
 		} else {
 			$skin = self::getDefaultMobileSkin( $context, $config );
 		}
 
-		Hooks::run( 'RequestContextCreateSkinMobile', [ $mobileContext, $skin ] );
+		$hookContainer = $services->getHookContainer();
+		$hookContainer->run( 'RequestContextCreateSkinMobile', [ $mobileContext, $skin ] );
 
 		return false;
 	}
@@ -733,7 +734,8 @@ class MobileFrontendHooks {
 	 */
 	public static function onBeforePageDisplay( OutputPage &$out, Skin &$skin ) {
 		$context = MobileContext::singleton();
-		$config = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Config' );
+		$services = MediaWikiServices::getInstance();
+		$config = $services->getService( 'MobileFrontend.Config' );
 		$mfEnableXAnalyticsLogging = $config->get( 'MFEnableXAnalyticsLogging' );
 		$mfNoIndexPages = $config->get( 'MFNoindexPages' );
 		$isCanonicalLinkHandledByCore = $config->get( 'EnableCanonicalServerLink' );
@@ -813,7 +815,8 @@ class MobileFrontendHooks {
 			$out->addModuleStyles( [ 'mobile.init.styles' ] );
 
 			// Allow modifications in mobile only mode
-			Hooks::run( 'BeforePageDisplayMobile', [ &$out, &$skin ] );
+			$hookContainer = $services->getHookContainer();
+			$hookContainer->run( 'BeforePageDisplayMobile', [ &$out, &$skin ] );
 
 			// Warning box styles are needed when reviewing old revisions
 			// and inside the fallback editor styles to action=edit page

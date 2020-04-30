@@ -110,7 +110,8 @@ class MobileSpecialPage extends SpecialPage {
 		if ( $rl->isModuleRegistered( $specialScriptModuleName ) ) {
 			$out->addModules( $specialScriptModuleName );
 		}
-		Hooks::run( 'MobileSpecialPageStyles', [ $id, $out ] );
+		$hookContainer = MediaWikiServices::getInstance()->getHookContainer();
+		$hookContainer->run( 'MobileSpecialPageStyles', [ $id, $out ] );
 	}
 
 	/**

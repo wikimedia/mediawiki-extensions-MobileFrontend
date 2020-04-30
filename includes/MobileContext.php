@@ -323,7 +323,8 @@ class MobileContext extends ContextSource {
 		$this->mobileView = $this->shouldDisplayMobileViewInternal();
 		if ( $this->mobileView ) {
 			$this->redirectMobileEnabledPages();
-			Hooks::run( 'EnterMobileMode', [ $this ] );
+			$hookContainer = MediaWikiServices::getInstance()->getHookContainer();
+			$hookContainer->run( 'EnterMobileMode', [ $this ] );
 		}
 		return $this->mobileView;
 	}
@@ -687,7 +688,8 @@ class MobileContext extends ContextSource {
 	public function getMobileUrl( $url, $forceHttps = false ) {
 		if ( $this->shouldDisplayMobileView() ) {
 			$subdomainTokenReplacement = null;
-			if ( Hooks::run( 'GetMobileUrl', [ &$subdomainTokenReplacement, $this ] ) ) {
+			$hookContainer = MediaWikiServices::getInstance()->getHookContainer();
+			if ( $hookContainer->run( 'GetMobileUrl', [ &$subdomainTokenReplacement, $this ] ) ) {
 				// @phan-suppress-next-line PhanRedundantCondition May set by hook
 				if ( !empty( $subdomainTokenReplacement ) ) {
 					$mobileUrlHostTemplate = $this->parseMobileUrlTemplate( 'host' );

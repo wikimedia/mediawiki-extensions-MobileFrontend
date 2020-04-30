@@ -122,7 +122,8 @@ JAVASCRIPT;
 	 * @return array Associative array containing the license text and link
 	 */
 	public static function getLicense( $context, array $attribs = [] ) {
-		$config = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Config' );
+		$services = MediaWikiServices::getInstance();
+		$config = $services->getService( 'MobileFrontend.Config' );
 		$rightsPage = $config->get( 'RightsPage' );
 		$rightsUrl = $config->get( 'RightsUrl' );
 		$rightsText = $config->get( 'RightsText' );
@@ -151,7 +152,7 @@ JAVASCRIPT;
 			}
 			if ( $rightsPage ) {
 				$title = Title::newFromText( $rightsPage );
-				$linkRenderer = MediaWikiServices::getInstance()->getLinkRenderer();
+				$linkRenderer = $services->getLinkRenderer();
 				$link = $linkRenderer->makeKnownLink( $title, new HtmlArmor( $rightsText ), $attribs );
 			} elseif ( $rightsUrl ) {
 				$link = Linker::makeExternalLink( $rightsUrl, $rightsText, true, '', $attribs );
@@ -164,7 +165,8 @@ JAVASCRIPT;
 
 		// Allow other extensions (for example, WikimediaMessages) to override
 		$msg = 'mobile-frontend-copyright';
-		Hooks::run( 'MobileLicenseLink', [ &$link, $context, $attribs, &$msg ] );
+		$hookContainer = $services->getHookContainer();
+		$hookContainer->run( 'MobileLicenseLink', [ &$link, $context, $attribs, &$msg ] );
 
 		return [
 			'msg' => $msg,
@@ -259,7 +261,8 @@ JAVASCRIPT;
 		}
 
 		// Enable extensions to add links to footer in Mobile view, too - bug 66350
-		Hooks::run( 'MobileSiteOutputPageBeforeExec', [ &$skin, &$tpl ] );
+		$hookContainer = MediaWikiServices::getInstance()->getHookContainer();
+		$hookContainer->run( 'MobileSiteOutputPageBeforeExec', [ &$skin, &$tpl ] );
 
 		$tpl->set( 'desktop-toggle', $desktopToggler );
 		$tpl->set( 'mobile-license', $licenseText );
