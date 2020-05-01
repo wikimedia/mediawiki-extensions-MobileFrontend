@@ -10,8 +10,5 @@
 	"env": {
 		"browser": true,
 		"commonjs": true
-	},
-	"rules": {
-		"mediawiki/class-doc": "off"
 	}
 }

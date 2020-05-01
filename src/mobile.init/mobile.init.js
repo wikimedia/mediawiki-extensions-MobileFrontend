@@ -72,6 +72,11 @@ function updateFontSize() {
 	// FIXME: Ideally 'regular' would come from a shared constant
 	// (currently not possible without using webpack)
 	var userFontSize = storage.get( 'userFontSize', 'regular' );
+	// The following classes are used here:
+	// * mf-font-size-small
+	// * mf-font-size-regular
+	// * mf-font-size-large
+	// * mf-font-size-x-large
 	$html.addClass( 'mf-font-size-' + userFontSize );
 }
 

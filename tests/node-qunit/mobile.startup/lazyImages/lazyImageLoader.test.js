@@ -30,6 +30,7 @@ QUnit.module( 'MobileFrontend lazyImageLoader.js', {
 			root = document.createElement( 'div' ),
 			placeholder = document.createElement( 'div' ),
 			actual;
+		// eslint-disable-next-line mediawiki/class-doc
 		placeholder.className = lazyImageLoader.test.placeholderClass;
 		root.appendChild( placeholder );
 
@@ -50,6 +51,7 @@ QUnit.module( 'MobileFrontend lazyImageLoader.js', {
 			placeholder = document.createElement( 'div' ),
 			result;
 		// Placeholder className is not copied (class), style (not data-style) is.
+		// eslint-disable-next-line mediawiki/class-doc
 		placeholder.className = lazyImageLoader.test.placeholderClass;
 		placeholder.style.width = '3px';
 		Object.keys( attrs ).forEach( function ( name ) {

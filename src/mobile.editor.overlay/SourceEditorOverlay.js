@@ -198,6 +198,10 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 
 		this.$preview = this.$el.find( '.preview' );
 		this.$content = this.$el.find( '.wikitext-editor' );
+		// The following classes can be used here:
+		// * mw-editfont-monospace
+		// * mw-editfont-sans-serif
+		// * mw-editfont-serif
 		this.$content.addClass( 'mw-editfont-' + mw.user.options.get( 'editfont' ) );
 		if ( showAnonWarning ) {
 			this.$anonWarning = this.createAnonWarning( options );

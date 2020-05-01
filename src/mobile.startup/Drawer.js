@@ -109,6 +109,7 @@ mfExtend( Drawer, View, {
 		const props = this.options,
 			$mask = util.parseHTML( '<div>' )
 				.addClass( 'drawer-container__mask' ),
+			// eslint-disable-next-line mediawiki/class-doc
 			$drawer = util.parseHTML( '<div>' )
 				.addClass( `drawer drawer-container__drawer position-fixed ${this.drawerClassName}`.trim() );
 

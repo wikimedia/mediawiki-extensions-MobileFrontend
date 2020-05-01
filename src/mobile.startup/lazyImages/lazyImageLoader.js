@@ -38,6 +38,7 @@ function loadImage( placeholder ) {
 		height = placeholder.dataset.height || '0',
 		image = new Image( parseInt( width, 10 ), parseInt( height, 10 ) );
 
+	// eslint-disable-next-line mediawiki/class-doc
 	image.className = placeholder.dataset.class || '';
 	image.alt = placeholder.dataset.alt || '';
 	image.style.cssText = placeholder.style.cssText || '';

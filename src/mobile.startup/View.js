@@ -206,14 +206,11 @@ mfExtend( View, {
 	 * @param {Object} props
 	 */
 	_postInitialize: function ( props ) {
-		var
-			BORDER_BOX_CLASS = 'view-border-box',
-			className = props.className;
-
-		this.$el.addClass( className );
+		// eslint-disable-next-line mediawiki/class-doc
+		this.$el.addClass( props.className );
 		// border-box will be added provided this flag is not set
 		if ( props.isBorderBox !== false ) {
-			this.$el.addClass( BORDER_BOX_CLASS );
+			this.$el.addClass( 'view-border-box' );
 		}
 
 		this.render( {} );
