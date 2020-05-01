@@ -50,7 +50,7 @@ class SearchHeaderView extends View {
 	postRender() {
 		const clearIcon = new Icon( {
 			tagName: 'button',
-			name: 'search-clear',
+			name: 'clear',
 			isSmall: true,
 			label: mw.msg( 'mobile-frontend-clear-search' ),
 			additionalClassNames: 'clear',

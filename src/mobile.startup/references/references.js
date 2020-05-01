@@ -56,7 +56,7 @@ function referenceDrawer( props ) {
 						.append( [
 							new Icon( {
 								isSmall: true,
-								name: 'citation-invert',
+								name: 'reference',
 								modifier: ''
 							} ).$el,
 							util.parseHTML( '<span>' ).addClass( 'references-drawer__title' ).text( mw.msg( 'mobile-frontend-references-citation' ) ),

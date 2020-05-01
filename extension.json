@@ -148,24 +148,16 @@
 			]
 		},
 		"mobile.startup.images": {
-			"class": "ResourceLoaderImageModule",
+			"class": "ResourceLoaderOOUIIconPackModule",
 			"defaultColor": "#54595d",
 			"selectorWithoutVariant": ".mw-ui-icon-mf-{name}:before",
 			"selectorWithVariant": ".mw-ui-icon-mf-{name}-{variant}:before",
-			"variants": {
-				"invert": {
-					"color": "#fff"
-				}
-			},
-			"images": {
-				"citation": {
-					"file": "resources/mobile.startup.images/reference.svg",
-					"variants": [ "invert" ]
-				},
-				"error": "resources/mobile.startup.images/error.svg",
-				"search-clear": "resources/mobile.startup.images/search/search-clear.svg",
-				"search-content": "resources/mobile.startup.images/search/search-content.svg"
-			}
+			"icons": [
+				"articlesSearch",
+				"clear",
+				"error",
+				"reference"
+			]
 		},
 		"mobile.init.styles": {
 			"targets": [

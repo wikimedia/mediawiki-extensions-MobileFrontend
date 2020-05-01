@@ -63,7 +63,7 @@ class SearchResultsView extends View {
 				tagName: 'a',
 				// When this icon is clicked we want to reset the hash for subsequent views
 				href: '#',
-				name: 'search-content',
+				name: 'articlesSearch',
 				additionalClassNames: 'mw-ui-icon-flush-left',
 				label: mw.msg( 'mobile-frontend-search-content' )
 			} ).$el
