@@ -12,7 +12,6 @@
 		"commonjs": true
 	},
 	"rules": {
-		"mediawiki/class-doc": "off",
-		"no-console": "error"
+		"mediawiki/class-doc": "off"
 	}
 }
