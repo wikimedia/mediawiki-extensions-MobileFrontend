@@ -27,7 +27,6 @@
 		"History": "SpecialMobileHistory",
 		"MobileDiff": "SpecialMobileDiff",
 		"MobileOptions": "SpecialMobileOptions",
-		"MobileMenu": "SpecialMobileMenu",
 		"MobileLanguages": "SpecialMobileLanguages",
 		"Uploads": "SpecialUploads"
 	},
@@ -83,7 +82,6 @@
 		"SpecialMobileHistory": "includes/specials/SpecialMobileHistory.php",
 		"SpecialMobileDiff": "includes/specials/SpecialMobileDiff.php",
 		"SpecialMobileOptions": "includes/specials/SpecialMobileOptions.php",
-		"SpecialMobileMenu": "includes/specials/SpecialMobileMenu.php",
 		"SpecialMobileWatchlist": "includes/specials/SpecialMobileWatchlist.php",
 		"SpecialMobileEditWatchlist": "includes/specials/SpecialMobileEditWatchlist.php",
 		"SpecialMobileContributions": "includes/specials/SpecialMobileContributions.php",
