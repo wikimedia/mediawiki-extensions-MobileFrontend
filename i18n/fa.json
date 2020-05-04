@@ -230,7 +230,7 @@
 	"mobile-frontend-watchlist-error": "مشکلی با دیدن این صفحه وجود داشت. لطفاً دوباره سعی کنید.",
 	"mobile-frontend-watchlist-purpose": "<strong>فهرست مشاهده به شما برای نشانه‌گذاری صفحات کمک می‌کند و پیگیری تغییرات آنها را نگه می‌دارد.</strong><br />برای دیدن به سامانه وارد شوید.",
 	"mobile-frontend-watchlist-removed": "حذف  $1  از فهرست پیگیری‌های شما",
-	"mobile-frontend-watchlist-signup-action": "<strong>فهرست پی‌گیری به شما برای نشانه‌گذاری صفحات و ردیابی تغییرات آن‌ها کمک می‌کند.</strong><br /> برای دیدن به سامانه وارد شوید.",
+	"mobile-frontend-watchlist-signup-action": "<strong>فهرست پی‌گیری‌های به شما برای نشانه‌گذاری صفحات و ردیابی تغییرات آن‌ها کمک می‌کند.</strong><br /> برای دیدن به سامانه وارد شوید.",
 	"mobile-frontend-user-page-no-owner-page-yet": "شما هنوز صفحهٔ کاربری خود را نساخته‌اید",
 	"mobile-frontend-user-page-no-page-yet": "صفحهٔ کاربری برای $1 وجود ندارد",
 	"mobile-frontend-user-page-describe-yourself": "شما می‌توانید در صفحه کاربریتان, خود را به دیگر $1 معرفی کنید.",

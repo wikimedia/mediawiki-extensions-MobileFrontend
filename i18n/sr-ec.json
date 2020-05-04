@@ -243,7 +243,7 @@
 	"mobile-frontend-amc-outreach-enabled-message": "Напредни мод је сада омогућен. Можете га онемогућити у Вашим подешавањима.",
 	"mobile-frontend-amc-outreach-dismissed-message": "Можете омогућити напредни мод у било које време у Вашим подешавањима.",
 	"mobile-frontend-beta-only": "Функција је доступна само у бета режиму",
-	"mobile-frontend-console-recruit": "Сазнајте више о томе како изграђујемо сајт за мобилне уређаје @ https://www.mediawiki.org/wiki/Extension:MobileFrontend",
+	"mobile-frontend-console-recruit": "Сазнајте више о томе како изграђујемо сајт за мобилне уређаје @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Оптимизуј и поједностави посебне странице на мобилном уређају (препоручује се)",
 	"prefs-mobile": "Подешавања за мобилне уређаје"
 }
