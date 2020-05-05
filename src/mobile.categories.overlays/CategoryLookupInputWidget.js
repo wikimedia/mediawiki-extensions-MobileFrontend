@@ -28,7 +28,7 @@ OO.mixinClass( CategoryLookupInputWidget, OO.ui.mixin.LookupElement );
  * @instance
  * @param {Object} data Data of the clicked element
  */
-CategoryLookupInputWidget.prototype.onLookupMenuItemChoose = function ( data ) {
+CategoryLookupInputWidget.prototype.onLookupMenuChoose = function ( data ) {
 	var button = new OO.ui.ButtonWidget( {
 		icon: 'check',
 		label: data.label,
