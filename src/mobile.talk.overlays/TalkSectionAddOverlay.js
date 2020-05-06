@@ -4,8 +4,7 @@ var
 	Overlay = require( '../mobile.startup/Overlay' ),
 	PageGateway = require( '../mobile.startup/PageGateway' ),
 	util = require( '../mobile.startup/util' ),
-	makeAddTopicForm = require( './makeAddTopicForm' ),
-	toast = require( '../mobile.startup/toast' );
+	makeAddTopicForm = require( './makeAddTopicForm' );
 
 /**
  * Overlay for adding a talk section
@@ -143,7 +142,7 @@ mfExtend( TalkSectionAddOverlay, Overlay, {
 					break;
 			}
 
-			toast.show( editMsg, { type: 'error' } );
+			mw.notify( editMsg, { type: 'error' } );
 			this.showHidden( '.save-header, .save-panel' );
 		}.bind( this ) );
 	},

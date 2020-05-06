@@ -6,7 +6,6 @@ var
 	Overlay = require( '../mobile.startup/Overlay' ),
 	header = require( '../mobile.startup/headers' ).header,
 	util = require( '../mobile.startup/util' ),
-	popup = require( '../mobile.startup/toast' ),
 	autosign = require( './autosign' ),
 	Button = require( '../mobile.startup/Button' );
 
@@ -233,7 +232,7 @@ mfExtend( TalkSectionOverlay, Overlay, {
 				}
 
 				self.hideSpinner();
-				popup.show( msg, 'toast error' );
+				mw.notify( msg, { type: 'error' } );
 				enableSaveButton();
 			} );
 		} else {

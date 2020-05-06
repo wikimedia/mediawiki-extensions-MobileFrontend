@@ -5,7 +5,6 @@ var
 	util = require( '../mobile.startup/util' ),
 	CategoryGateway = require( './CategoryGateway' ),
 	CategoryLookupInputWidget = require( './CategoryLookupInputWidget' ),
-	toast = require( '../mobile.startup/toast' ),
 	router = mw.loader.require( 'mediawiki.router' );
 
 /**
@@ -126,7 +125,7 @@ mfExtend( CategoryAddOverlay, Overlay, {
 		// if there are no categories added, don't do anything (the user shouldn't see the save
 		// button)
 		if ( newCategories.length === 0 ) {
-			toast.show( mw.msg( 'mobile-frontend-categories-nodata' ), { type: 'error' } );
+			mw.notify( mw.msg( 'mobile-frontend-categories-nodata' ), { type: 'error' } );
 		} else {
 			// save the new categories
 			this.gateway.save( this.title, newCategories ).then( function () {
@@ -138,7 +137,7 @@ mfExtend( CategoryAddOverlay, Overlay, {
 				self.showHidden( '.initial-header' );
 				self.$safeButton.prop( 'disabled', false );
 				// FIXME: Should be a better error message
-				toast.show( mw.msg( 'mobile-frontend-categories-nodata' ), { type: 'error' } );
+				mw.notify( mw.msg( 'mobile-frontend-categories-nodata' ), { type: 'error' } );
 			} );
 		}
 	}

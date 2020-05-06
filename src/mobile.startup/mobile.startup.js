@@ -30,7 +30,9 @@ module.exports = {
 	loadingOverlay: require( './loadingOverlay' ),
 	Drawer: require( './Drawer' ),
 	CtaDrawer: require( './CtaDrawer' ),
-	toast: require( './toast' ),
+	showOnPageReload: require( './showOnPageReload' ),
+	// For Minerva compatibility (access deprecated)
+	toast: require( './showOnPageReload' ),
 	Watchstar: require( './watchstar/watchstar' ),
 	categoryOverlay: require( './categoryOverlay' ),
 	eventBusSingleton: require( './eventBusSingleton' ),

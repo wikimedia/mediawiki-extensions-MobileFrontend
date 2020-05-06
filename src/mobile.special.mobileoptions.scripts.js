@@ -1,7 +1,7 @@
 /* global $ */
 var storage = mw.storage,
 	browser = require( './mobile.startup/Browser' ).getSingleton(),
-	toast = require( './mobile.startup/toast' ),
+	toast = require( './mobile.startup/showOnPageReload' ),
 	amcOutreach = require( './mobile.startup/amcOutreach/amcOutreach' ),
 	EXPAND_SECTIONS_KEY = 'expandSections',
 	msg = mw.msg,
@@ -15,7 +15,7 @@ function notify( isPending ) {
 	if ( isPending ) {
 		toast.showOnPageReload( msg( 'mobile-frontend-settings-save' ) );
 	} else {
-		toast.show( msg( 'mobile-frontend-settings-save' ) );
+		mw.notify( msg( 'mobile-frontend-settings-save' ) );
 	}
 }
 /**

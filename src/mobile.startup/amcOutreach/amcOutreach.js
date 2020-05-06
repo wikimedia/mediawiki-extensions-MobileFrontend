@@ -1,5 +1,5 @@
 const
-	toast = require( '../toast' ),
+	toast = require( '../showOnPageReload' ),
 	createPromoCampaign = require( '../promoCampaign/promoCampaign' ),
 	amcOutreachDrawer = require( './amcOutreachDrawer' ),
 	// MW constants should be kept in sync with onMakeGlobalVariableScript() from

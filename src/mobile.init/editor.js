@@ -7,7 +7,7 @@ var M = require( '../mobile.startup/moduleLoaderSingleton' ),
 	// .edit-link comes from MobileFrontend user page creation CTA
 	$allEditLinks = $( '#ca-edit, .mw-editsection a, .edit-link' ),
 	user = mw.user,
-	popup = require( '../mobile.startup/toast' ),
+	popup = require( '../mobile.startup/showOnPageReload' ),
 	CtaDrawer = require( '../mobile.startup/CtaDrawer' ),
 	// FIXME: Disable on IE < 10 for time being
 	blacklisted = /MSIE \d\./.test( navigator.userAgent ),
