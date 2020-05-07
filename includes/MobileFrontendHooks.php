@@ -181,13 +181,40 @@ class MobileFrontendHooks {
 	 *
 	 * Adds a link to view the current page in 'mobile view' to the desktop footer.
 	 *
-	 * @param Skin &$skin
-	 * @param QuickTemplate &$tpl
+	 * @param Skin $skin
+	 * @param QuickTemplate $tpl
 	 * @return bool
 	 */
-	public static function onSkinTemplateOutputPageBeforeExec( Skin &$skin, QuickTemplate &$tpl ) {
+	public static function onSkinTemplateOutputPageBeforeExec( Skin $skin, QuickTemplate $tpl ) {
+		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
+
+		// for backwards compatability.
 		MobileFrontendSkinHooks::prepareFooter( $skin, $tpl );
+		$tpl->set( 'mobileview', MobileFrontendSkinHooks::getMobileViewLink( $skin, $context ) );
 		return true;
+	}
+
+	/**
+	 * Update the footer
+	 * @param Skin $skin
+	 * @param string $key the current key for the current group (row) of footer links.
+	 *   e.g. `info` or `places`.
+	 * @param array &$footerLinks an empty array that can be populated with new links.
+	 *   keys should be strings and will be used for generating the ID of the footer item
+	 *   and value should be an HTML string.
+	 */
+	public static function onSkinAddFooterLinks( Skin $skin, string $key, array &$footerLinks ) {
+		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
+
+		if ( $key === 'places' && !$context->isBlacklistedPage() ) {
+			if ( $context->shouldDisplayMobileView() ) {
+				$footerLinks['desktop-toggle'] = MobileFrontendSkinHooks::getDesktopViewLink( $skin, $context );
+			} else {
+				// If desktop site append a mobile view link
+				$footerLinks['mobileview'] =
+					MobileFrontendSkinHooks::getMobileViewLink( $skin, $context );
+			}
+		}
 	}
 
 	/**
