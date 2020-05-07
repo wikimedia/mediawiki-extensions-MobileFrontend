@@ -320,13 +320,12 @@ class ApiMobileView extends ApiBase {
 	 * @return Title
 	 */
 	protected function makeTitle( $name ) {
-		$contLang = MediaWikiServices::getInstance()->getContentLanguage();
 		$title = Title::newFromText( $name );
 		if ( !$title ) {
 			$this->dieWithError( [ 'apierror-invalidtitle', wfEscapeWikiText( $name ) ] );
 		}
 		$unconvertedTitle = $title->getPrefixedText();
-		$contLang->findVariantLink( $name, $title );
+		$this->getLanguageConverter()->findVariantLink( $name, $title );
 		if ( $unconvertedTitle !== $title->getPrefixedText() ) {
 			$values = [ 'from' => $unconvertedTitle, 'to' => $title->getPrefixedText() ];
 			$this->getResult()->addValue( 'mobileview', 'converted', $values );
@@ -994,5 +993,16 @@ class ApiMobileView extends ApiBase {
 	 */
 	public function getHelpUrls() {
 		return 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend#API';
+	}
+
+	/**
+	 * @since 1.35
+	 * @return ILanguageConverter
+	 */
+	private function getLanguageConverter() : ILanguageConverter {
+		$services = MediaWikiServices::getInstance();
+		return $services
+			->getLanguageConverterFactory()
+			->getLanguageConverter( $services->getContentLanguage() );
 	}
 }
