@@ -686,6 +686,20 @@
 		"localBasePath": "",
 		"remoteExtPath": "MobileFrontend"
 	},
+	"QunitTestMobile": {
+		"localBasePath": "",
+		"remoteExtPath": "MobileFrontend",
+		"scripts": [
+			"resources/dist/tests.mobilefrontend.js"
+		],
+		"dependencies": [
+			"mobile.startup",
+			"mobile.languages.structured",
+			"mobile.mediaViewer",
+			"mobile.special.nearby.scripts",
+			"mobile.talk.overlays"
+		]
+	},
 	"EventLoggingSchemas": {
 		"MobileWebSearch": 12054448
 	},
@@ -731,7 +745,6 @@
 		"CentralAuthLoginRedirectData": "MobileFrontendHooks::onCentralAuthLoginRedirectData",
 		"CentralAuthSilentLoginRedirect": "MobileFrontendHooks::onCentralAuthSilentLoginRedirect",
 		"ResourceLoaderRegisterModules": "MobileFrontendEditorHooks::onResourceLoaderRegisterModules",
-		"ResourceLoaderTestModules": "MobileFrontendHooks::onResourceLoaderTestModules",
 		"OutputPageParserOutput": "MobileFrontendHooks::onOutputPageParserOutput",
 		"HTMLFileCache::useFileCache": "MobileFrontendHooks::onHTMLFileCacheUseFileCache",
 		"LoginFormValidErrorMessages": "MobileFrontendHooks::onLoginFormValidErrorMessages",
