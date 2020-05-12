@@ -21,6 +21,7 @@
 	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|contributo|contributi}}",
 	"mobile-frontend-diffview-title": "Canbiamenti",
 	"mobile-frontend-featured-article": "Vetrina",
+	"mobile-frontend-languages-text": "$1 ła se połe catar in {{PLURAL:$2|on altra łéngua|altre $2 łéngue}}.",
 	"mobile-frontend-last-modified-date": "Ultimo canbiamento el $1, a le $2",
 	"mobile-frontend-main-menu-settings-heading": "Inpostasion del sito par celulari",
 	"mobile-frontend-missing-image": "Imaxene",

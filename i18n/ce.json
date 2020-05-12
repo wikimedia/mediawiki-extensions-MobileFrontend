@@ -37,7 +37,7 @@
 	"mobile-frontend-editor-licensing": "Хийцам Ӏалашбина, хьо реза хуьллу хьайн къинхьегам $1 {{PLURAL:$2|license|licenses}} лицензица арахеца.",
 	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|Хьона бакъалла лаьий}} {{SITENAME}} сайтан чохь керла агӀо кхолла?",
 	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|Ахьа}} {{SITENAME}} сайтан чохь керла агӀо кхуллуш ю!",
-	"mobile-frontend-editor-previewing-page": "<span><strong>Хьалха хьажар</strong> $1</span>",
+	"mobile-frontend-editor-previewing-page": "<span><strong>Хьалххе хьажар</strong> $1</span>",
 	"mobile-frontend-editor-save": "Ӏалашдан",
 	"mobile-frontend-editor-success": "Кхиаме! Хьан нисдар Ӏалашдина.",
 	"mobile-frontend-editor-success-landmark-1": "Декъалдо, хӀинца хьо — {{SITENAME}} сайтан декъашхо ву/ю!",
