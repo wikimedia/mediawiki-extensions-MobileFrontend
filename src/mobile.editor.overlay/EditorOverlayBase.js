@@ -242,7 +242,17 @@ mfExtend( EditorOverlayBase, Overlay, {
 		} else {
 			msg = mw.msg( 'mobile-frontend-editor-success' );
 		}
-		toast.showOnPageReload( msg, { type: 'success' } );
+		/**
+		 * Fired after an edit was successfully saved, like postEdit in MediaWiki core.
+		 *
+		 * @event postEditMobile
+		 * @member mw.hook
+		 */
+		mw.hook( 'postEditMobile' ).fire();
+
+		if ( !mw.config.get( 'wgPostEditConfirmationDisabled' ) ) {
+			toast.showOnPageReload( msg, { type: 'success' } );
+		}
 
 		// Ensure we don't lose this event when logging
 		this.log( {
