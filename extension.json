@@ -227,7 +227,13 @@
 				"mobile",
 				"desktop"
 			],
-			"icons": [ "close", "previous", "next", "alert", "expand" ]
+			"icons": [
+				"close",
+				"previous",
+				"next",
+				"alert",
+				"expand"
+			]
 		},
 		"mobile.user.icons": {
 			"class": "ResourceLoaderOOUIIconPackModule",
@@ -535,12 +541,16 @@
 			]
 		},
 		"mobile.site": {
-			"dependencies": [ "site" ],
+			"dependencies": [
+				"site"
+			],
 			"targets": "mobile",
 			"deprecated": "Please do not add this module to the page."
 		},
 		"mobile.site.styles": {
-			"dependencies": [ "site.styles" ],
+			"dependencies": [
+				"site.styles"
+			],
 			"targets": "mobile",
 			"deprecated": "Please do not add this module to the page."
 		},
@@ -569,13 +579,19 @@
 			]
 		},
 		"mobile.special.mobileoptions.styles": {
-			"targets": [ "mobile", "desktop" ],
+			"targets": [
+				"mobile",
+				"desktop"
+			],
 			"styles": [
 				"resources/mobile.special.mobileoptions.styles/mobileoptions.less"
 			]
 		},
 		"mobile.special.mobileoptions.scripts": {
-			"targets": [ "mobile", "desktop" ],
+			"targets": [
+				"mobile",
+				"desktop"
+			],
 			"dependencies": [
 				"mobile.startup"
 			],
@@ -686,8 +702,12 @@
 		"localBasePath": "",
 		"remoteExtPath": "MobileFrontend"
 	},
-	"EventLoggingSchemas": {
-		"MobileWebSearch": 12054448
+	"attributes": {
+		"EventLogging": {
+			"Schemas": {
+				"MobileWebSearch": 12054448
+			}
+		}
 	},
 	"Hooks": {
 		"APIGetAllowedParams": "ApiParseExtender::onAPIGetAllowedParams",
@@ -754,129 +774,249 @@
 	},
 	"config": {
 		"MFEnableFontChanger": {
-			"base": true,
-			"beta": true
+			"value": {
+				"base": true,
+				"beta": true
+			}
 		},
-		"MFEnableMobilePreferences": false,
+		"MFEnableMobilePreferences": {
+			"value": false
+		},
 		"MFUseDesktopSpecialHistoryPage": {
-			"base": false,
-			"beta": false,
-			"amc": false
+			"value": {
+				"base": false,
+				"beta": false,
+				"amc": false
+			}
 		},
 		"MFUseDesktopSpecialWatchlistPage": {
-			"base": false,
-			"beta": false,
-			"amc": true
+			"value": {
+				"base": false,
+				"beta": false,
+				"amc": true
+			}
 		},
-		"MFContentProviderTryLocalContentFirst": true,
-		"MFContentProviderClass": "MobileFrontend\\ContentProviders\\DefaultContentProvider",
-		"MFMwApiContentProviderBaseUri": "https://en.wikipedia.org/w/api.php",
-		"MFContentProviderScriptPath": "",
-		"MFMcsContentProviderBaseUri": "https://en.wikipedia.org/api/rest_v1",
-		"MFEnableXAnalyticsLogging": false,
-		"MFDefaultEditor": "source",
-		"MFEnableJSConsoleRecruitment": false,
-		"MFAlwaysUseContentProvider": false,
+		"MFContentProviderTryLocalContentFirst": {
+			"value": true
+		},
+		"MFContentProviderClass": {
+			"value": "MobileFrontend\\ContentProviders\\DefaultContentProvider"
+		},
+		"MFMwApiContentProviderBaseUri": {
+			"value": "https://en.wikipedia.org/w/api.php"
+		},
+		"MFContentProviderScriptPath": {
+			"value": ""
+		},
+		"MFMcsContentProviderBaseUri": {
+			"value": "https://en.wikipedia.org/api/rest_v1"
+		},
+		"MFEnableXAnalyticsLogging": {
+			"value": false
+		},
+		"MFDefaultEditor": {
+			"value": "source"
+		},
+		"MFEnableJSConsoleRecruitment": {
+			"value": false
+		},
+		"MFAlwaysUseContentProvider": {
+			"value": false
+		},
 		"MFMobileFormatterOptions": {
-			"maxImages": 1000,
-			"maxHeadings": 4000,
-			"headings": [
-				"h1",
-				"h2",
-				"h3",
-				"h4",
-				"h5",
-				"h6"
-			]
+			"value": {
+				"maxImages": 1000,
+				"maxHeadings": 4000,
+				"headings": [
+					"h1",
+					"h2",
+					"h3",
+					"h4",
+					"h5",
+					"h6"
+				]
+			}
 		},
-		"MFSpecialCaseMainPage": false,
-		"MFMobileHeader": "X-Subdomain",
+		"MFSpecialCaseMainPage": {
+			"value": false
+		},
+		"MFMobileHeader": {
+			"value": "X-Subdomain"
+		},
 		"MFRemovableClasses": {
-			"beta": [],
-			"base": [
-				".navbox",
-				".nomobile"
-			]
+			"value": {
+				"beta": [],
+				"base": [
+					".navbox",
+					".nomobile"
+				]
+			}
 		},
 		"MFShowFirstParagraphBeforeInfobox": {
-			"base": true,
-			"beta": true
+			"value": {
+				"base": true,
+				"beta": true
+			}
 		},
-		"MFNamespacesWithLeadParagraphs": [
-			0
-		],
+		"MFNamespacesWithLeadParagraphs": {
+			"value": [
+				0
+			]
+		},
 		"MFLazyLoadImages": {
-			"base": true,
-			"beta": true
+			"value": {
+				"base": true,
+				"beta": true
+			}
 		},
-		"MFLazyLoadSkipSmallImages": false,
-		"MFMobileFormatterNamespaceBlacklist": [
-			10,
-			-1
-		],
-		"MFNoMobileCategory": false,
-		"MFNoMobilePages": [],
-		"MFSpecialPageTaglines": {},
-		"MFNearbyRange": 10000,
-		"MFNearby": false,
+		"MFLazyLoadSkipSmallImages": {
+			"value": false
+		},
+		"MFMobileFormatterNamespaceBlacklist": {
+			"value": [
+				10,
+				-1
+			]
+		},
+		"MFNoMobileCategory": {
+			"value": false
+		},
+		"MFNoMobilePages": {
+			"value": []
+		},
+		"MFSpecialPageTaglines": {
+			"value": []
+		},
+		"MFNearbyRange": {
+			"value": 10000
+		},
+		"MFNearby": {
+			"value": false
+		},
 		"MFSearchAPIParams": {
-			"ppprop": "displaytitle"
+			"value": {
+				"ppprop": "displaytitle"
+			}
 		},
-		"MFQueryPropModules": [
-			"pageprops"
-		],
+		"MFQueryPropModules": {
+			"value": [
+				"pageprops"
+			]
+		},
 		"MFSearchGenerator": {
-			"name": "prefixsearch",
-			"prefix": "ps"
+			"value": {
+				"name": "prefixsearch",
+				"prefix": "ps"
+			}
 		},
-		"MFMinCachedPageSize": 65536,
-		"MFAutodetectMobileView": true,
-		"MFVaryOnUA": false,
-		"MFShowMobileViewToTablets": true,
-		"MobileUrlTemplate": "",
-		"MobileFrontendFormatCookieExpiry": null,
-		"MFNoindexPages": true,
-		"MFStopRedirectCookieHost": null,
-		"MFEnableBeta": false,
-		"MFBetaFeedbackLink": false,
-		"MFDefaultSkinClass": "SkinMinerva",
-		"MFNamespacesWithoutCollapsibleSections": [
-			6,
-			14,
-			-1,
-			-2
-		],
-		"MFCollapseSectionsByDefault": true,
-		"MFUseWikibase": false,
+		"MFMinCachedPageSize": {
+			"value": 65536
+		},
+		"MFAutodetectMobileView": {
+			"value": true
+		},
+		"MFVaryOnUA": {
+			"value": false
+		},
+		"MFShowMobileViewToTablets": {
+			"value": true
+		},
+		"MobileUrlTemplate": {
+			"value": ""
+		},
+		"MobileFrontendFormatCookieExpiry": {
+			"value": null
+		},
+		"MFNoindexPages": {
+			"value": true
+		},
+		"MFStopRedirectCookieHost": {
+			"value": null
+		},
+		"MFEnableBeta": {
+			"value": false
+		},
+		"MFBetaFeedbackLink": {
+			"value": false
+		},
+		"MFDefaultSkinClass": {
+			"value": "SkinMinerva"
+		},
+		"MFNamespacesWithoutCollapsibleSections": {
+			"value": [
+				6,
+				14,
+				-1,
+				-2
+			]
+		},
+		"MFCollapseSectionsByDefault": {
+			"value": true
+		},
+		"MFUseWikibase": {
+			"value": false
+		},
 		"MFEnableWikidataDescriptions": {
-			"base": false,
-			"beta": true
+			"value": {
+				"base": false,
+				"beta": true
+			}
 		},
 		"MFDisplayWikibaseDescriptions": {
-			"search": false,
-			"nearby": false,
-			"watchlist": false,
-			"tagline": false
+			"value": {
+				"search": false,
+				"nearby": false,
+				"watchlist": false,
+				"tagline": false
+			}
 		},
-		"MFRSSFeedLink": false,
-		"MFSchemaSearchSampleRate": 0.001,
-		"MFStripResponsiveImages": true,
-		"MFResponsiveImageWhitelist": [
-			"image/svg+xml"
-		],
-		"MFEnableManifest": true,
-		"MFManifestThemeColor": "#eaecf0",
-		"MFManifestBackgroundColor": "#fff",
-		"MFLogWrappedInfoboxes": true,
-		"MFSiteStylesRenderBlocking": false,
-		"MFWatchlistEditCountThreshold": 10,
-		"MFAdvancedMobileContributions": true,
-		"MFAmcOutreach": false,
-		"MFAmcOutreachMinEditCount": 100,
-		"MFSchemaEditAttemptStepOversample": false
+		"MFRSSFeedLink": {
+			"value": false
+		},
+		"MFSchemaSearchSampleRate": {
+			"value": 0.001
+		},
+		"MFStripResponsiveImages": {
+			"value": true
+		},
+		"MFResponsiveImageWhitelist": {
+			"value": [
+				"image/svg+xml"
+			]
+		},
+		"MFEnableManifest": {
+			"value": true
+		},
+		"MFManifestThemeColor": {
+			"value": "#eaecf0"
+		},
+		"MFManifestBackgroundColor": {
+			"value": "#fff"
+		},
+		"MFLogWrappedInfoboxes": {
+			"value": true
+		},
+		"MFSiteStylesRenderBlocking": {
+			"value": false
+		},
+		"MFWatchlistEditCountThreshold": {
+			"value": 10
+		},
+		"MFAdvancedMobileContributions": {
+			"value": true
+		},
+		"MFAmcOutreach": {
+			"value": false
+		},
+		"MFAmcOutreachMinEditCount": {
+			"value": 100
+		},
+		"MFSchemaEditAttemptStepOversample": {
+			"value": false
+		}
 	},
 	"ServiceWiringFiles": [
 		"includes/ServiceWiring.php"
 	],
-	"manifest_version": 1
+	"manifest_version": 2
 }
