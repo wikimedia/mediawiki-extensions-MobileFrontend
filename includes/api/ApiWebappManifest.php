@@ -11,11 +11,13 @@ class ApiWebappManifest extends ApiBase {
 	 * Execute the requested Api actions.
 	 */
 	public function execute() {
+		$services = MediaWikiServices::getInstance();
+
 		$config = $this->getConfig();
 		$resultObj = $this->getResult();
 		$resultObj->addValue( null, 'name', $config->get( 'Sitename' ) );
 		$resultObj->addValue( null, 'orientation', 'portrait' );
-		$resultObj->addValue( null, 'dir', $config->get( 'ContLang' )->getDir() );
+		$resultObj->addValue( null, 'dir', $services->getContentLanguage()->getDir() );
 		$resultObj->addValue( null, 'lang', $config->get( 'LanguageCode' ) );
 		$resultObj->addValue( null, 'display', 'browser' );
 		$resultObj->addValue( null, 'theme_color', $config->get( 'MFManifestThemeColor' ) );
@@ -27,8 +29,7 @@ class ApiWebappManifest extends ApiBase {
 		$appleTouchIcon = $config->get( 'AppleTouchIcon' );
 		if ( $appleTouchIcon !== false ) {
 			$appleTouchIconUrl = wfExpandUrl( $appleTouchIcon, PROTO_CURRENT );
-			$request = MediaWikiServices::getInstance()->getHttpRequestFactory()
-				->create( $appleTouchIconUrl );
+			$request = $services->getHttpRequestFactory()->create( $appleTouchIconUrl );
 			$request->execute();
 			$appleTouchIconContent = $request->getContent();
 			if ( !empty( $appleTouchIconContent ) ) {
