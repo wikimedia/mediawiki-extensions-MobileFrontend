@@ -176,24 +176,6 @@ JAVASCRIPT;
 	}
 
 	/**
-	 * Prepares the footer for the skins serving the desktop and mobile sites.
-	 * @param Skin $skin
-	 * @param QuickTemplate $tpl
-	 */
-	public static function prepareFooter( Skin $skin, QuickTemplate $tpl ) {
-		$title = $skin->getTitle();
-		$req = $skin->getRequest();
-		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
-
-		// Certain pages might be blacklisted and not have a mobile equivalent.
-		if ( !$context->isBlacklistedPage() ) {
-			if ( $context->shouldDisplayMobileView() ) {
-				self::mobileFooter( $skin, $tpl, $context, $title, $req );
-			}
-		}
-	}
-
-	/**
 	 * @param Skin $skin
 	 * @param MobileContext $context
 	 * @return string representing the desktop link.
@@ -250,43 +232,5 @@ JAVASCRIPT;
 		} else {
 			return '';
 		}
-	}
-
-	/**
-	 * Prepares links used in the mobile footer
-	 * @param Skin $skin
-	 * @param QuickTemplate $tpl
-	 * @param MobileContext $context
-	 * @param Title $title Page title
-	 * @param WebRequest $req
-	 * @return QuickTemplate
-	 */
-	protected static function mobileFooter( Skin $skin, QuickTemplate $tpl, MobileContext $context,
-		Title $title, WebRequest $req
-	) {
-		// Enable extensions to add links to footer in Mobile view, too - bug 66350
-		// This is deprecated in 1.35, as there are no known usages of this
-		// and if there are they should use
-		// the new GetFooterLinks hook in Id258b1ec2ae7008fc4d586d0647a5131ec889fe6.
-		$hookContainer = MediaWikiServices::getInstance()->getHookContainer();
-		$hookContainer->run( 'MobileSiteOutputPageBeforeExec', [ &$skin, &$tpl ], [
-			'deprecatedVersion' => '1.35'
-		] );
-
-		$tpl->set( 'desktop-toggle', self::getDesktopViewLink( $skin, $context ) );
-		$tpl->set( 'mobile-license', self::getLicenseText( $skin ) );
-		$tpl->set( 'privacy', $skin->footerLink( 'mobile-frontend-privacy-link-text', 'privacypage' ) );
-		$tpl->set( 'terms-use', self::getTermsLink( $skin ) );
-
-		$places = [
-			'terms-use',
-			'privacy',
-			'desktop-toggle'
-		];
-		$footerlinks = [
-			'places' => $places,
-		];
-		$tpl->set( 'footerlinks', $footerlinks );
-		return $tpl;
 	}
 }

@@ -716,7 +716,6 @@
 		"ResourceLoaderSiteModulePages": "MobileFrontendHooks::onResourceLoaderSiteModulePages",
 		"SkinAfterBottomScripts": "MobileFrontendHooks::onSkinAfterBottomScripts",
 		"SkinAddFooterLinks": "MobileFrontendHooks::onSkinAddFooterLinks",
-		"SkinTemplateOutputPageBeforeExec": "MobileFrontendHooks::onSkinTemplateOutputPageBeforeExec",
 		"BeforePageRedirect": "MobileFrontendHooks::onBeforePageRedirect",
 		"DiffViewHeader": "MobileFrontendHooks::onDiffViewHeader",
 		"GetCacheVaryCookies": "MobileFrontendHooks::onGetCacheVaryCookies",

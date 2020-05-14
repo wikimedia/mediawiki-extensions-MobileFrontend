@@ -11,6 +11,39 @@
 	}
 }
 
+// START FOOTER RULES
+// Historically, MobileFrontend has modified the mobile footer
+// to limit the amount of items in it.
+// This was previously done in the now deprecated SkinTemplateOutputPageBeforeExec
+// We can remove these rules as soon as we've talked this through with a
+// designer and product manager.
+
+// Rule is overly specific to counter .hlist style
+ul.footer-info li,
+ul.footer-places li {
+	display: none;
+}
+
+/* stylelint-disable-next-line selector-max-id */
+#footer-places-terms-use {
+	float: left;
+}
+// Historically we've limited places on mobile
+// to terms-use, desktop toggle and privacy links
+
+/* stylelint-disable-next-line selector-max-id */
+#footer-places-terms-use,
+#footer-places-desktop-toggle,
+#footer-places-privacy {
+	display: inline-block;
+}
+
+/* stylelint-disable-next-line selector-max-id */
+#footer-places-desktop-toggle:after {
+	content: '' !important;
+}
+// END FOOTER RULES
+
 @media all and ( min-width: @width-breakpoint-tablet ) {
 	.client-js {
 		// Avoid flash of unstyled content for tablet users while JavaScript is loading

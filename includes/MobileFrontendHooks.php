@@ -176,25 +176,6 @@ class MobileFrontendHooks {
 	}
 
 	/**
-	 * SkinTemplateOutputPageBeforeExec hook handler
-	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/SkinTemplateOutputPageBeforeExec
-	 *
-	 * Adds a link to view the current page in 'mobile view' to the desktop footer.
-	 *
-	 * @param Skin $skin
-	 * @param QuickTemplate $tpl
-	 * @return bool
-	 */
-	public static function onSkinTemplateOutputPageBeforeExec( Skin $skin, QuickTemplate $tpl ) {
-		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
-
-		// for backwards compatability.
-		MobileFrontendSkinHooks::prepareFooter( $skin, $tpl );
-		$tpl->set( 'mobileview', MobileFrontendSkinHooks::getMobileViewLink( $skin, $context ) );
-		return true;
-	}
-
-	/**
 	 * Update the footer
 	 * @param Skin $skin
 	 * @param string $key the current key for the current group (row) of footer links.
@@ -208,6 +189,7 @@ class MobileFrontendHooks {
 
 		if ( $key === 'places' && !$context->isBlacklistedPage() ) {
 			if ( $context->shouldDisplayMobileView() ) {
+				$footerLinks['terms-use'] = MobileFrontendSkinHooks::getTermsLink( $skin );
 				$footerLinks['desktop-toggle'] = MobileFrontendSkinHooks::getDesktopViewLink( $skin, $context );
 			} else {
 				// If desktop site append a mobile view link
