@@ -189,40 +189,67 @@ JAVASCRIPT;
 		if ( !$context->isBlacklistedPage() ) {
 			if ( $context->shouldDisplayMobileView() ) {
 				self::mobileFooter( $skin, $tpl, $context, $title, $req );
-			} else {
-				self::desktopFooter( $skin, $tpl, $context, $title, $req );
 			}
 		}
 	}
 
 	/**
-	 * Appends a mobile view link to the desktop footer
 	 * @param Skin $skin
-	 * @param QuickTemplate $tpl
 	 * @param MobileContext $context
-	 * @param Title $title Page title
-	 * @param WebRequest $req
+	 * @return string representing the desktop link.
 	 */
-	public static function desktopFooter( Skin $skin, QuickTemplate $tpl, MobileContext $context,
-		Title $title, WebRequest $req
-	) {
-		$footerlinks = $tpl->data['footerlinks'];
+	public static function getDesktopViewLink( Skin $skin, MobileContext $context ) {
+		$url = $skin->getOutput()->getProperty( 'desktopUrl' );
+		$req = $skin->getRequest();
+		if ( $url ) {
+			$url = wfAppendQuery( $url, 'mobileaction=toggle_view_desktop' );
+		} else {
+			$title = $skin->getTitle();
+			$url = $title->getLocalURL(
+				$req->appendQueryValue( 'mobileaction', 'toggle_view_desktop' )
+			);
+		}
+		$desktopUrl = $context->getDesktopUrl( wfExpandUrl( $url, PROTO_RELATIVE ) );
+
+		$desktop = $context->msg( 'mobile-frontend-view-desktop' )->text();
+		return Html::element( 'a',
+			[ 'id' => 'mw-mf-display-toggle', 'href' => $desktopUrl ], $desktop );
+	}
+
+	/**
+	 * @param Skin $skin
+	 * @param MobileContext $context
+	 * @return string representing the mobile link.
+	 */
+	public static function getMobileViewLink( Skin $skin, MobileContext $context ) {
+		$req = $skin->getRequest();
 		$args = $req->getQueryValues();
 		// avoid title being set twice
 		unset( $args['title'], $args['useformat'] );
 		$args['mobileaction'] = 'toggle_view_mobile';
-
+		$title = $skin->getTitle();
 		$mobileViewUrl = $title->getFullURL( $args );
 		$mobileViewUrl = $context->getMobileUrl( $mobileViewUrl );
 
-		$link = Html::element( 'a',
+		return Html::element( 'a',
 			[ 'href' => $mobileViewUrl, 'class' => 'noprint stopMobileRedirectToggle' ],
 			$context->msg( 'mobile-frontend-view' )->text()
 		);
-		$tpl->set( 'mobileview', $link );
-		// @phan-suppress-next-line PhanTypeMismatchDimAssignment
-		$footerlinks['places'][] = 'mobileview';
-		$tpl->set( 'footerlinks', $footerlinks );
+	}
+
+	/**
+	 * Generate the licensing text displayed in the footer of each page.
+	 * See Skin::getCopyright for desktop equivalent.
+	 * @param Skin $skin
+	 * @return string
+	 */
+	public static function getLicenseText( $skin ) {
+		$license = self::getLicense( 'footer' );
+		if ( isset( $license['link'] ) && $license['link'] ) {
+			return $skin->msg( $license['msg'] )->rawParams( $license['link'] )->text();
+		} else {
+			return '';
+		}
 	}
 
 	/**
@@ -237,35 +264,17 @@ JAVASCRIPT;
 	protected static function mobileFooter( Skin $skin, QuickTemplate $tpl, MobileContext $context,
 		Title $title, WebRequest $req
 	) {
-		$url = $skin->getOutput()->getProperty( 'desktopUrl' );
-		if ( $url ) {
-			$url = wfAppendQuery( $url, 'mobileaction=toggle_view_desktop' );
-		} else {
-			$url = $title->getLocalURL(
-				$req->appendQueryValue( 'mobileaction', 'toggle_view_desktop' )
-			);
-		}
-		$desktopUrl = $context->getDesktopUrl( wfExpandUrl( $url, PROTO_RELATIVE ) );
-
-		$desktop = $context->msg( 'mobile-frontend-view-desktop' )->text();
-		$desktopToggler = Html::element( 'a',
-			[ 'id' => 'mw-mf-display-toggle', 'href' => $desktopUrl ], $desktop );
-
-		// Generate the licensing text displayed in the footer of each page.
-		// See Skin::getCopyright for desktop equivalent.
-		$license = self::getLicense( 'footer' );
-		if ( isset( $license['link'] ) && $license['link'] ) {
-			$licenseText = $skin->msg( $license['msg'] )->rawParams( $license['link'] )->text();
-		} else {
-			$licenseText = '';
-		}
-
 		// Enable extensions to add links to footer in Mobile view, too - bug 66350
+		// This is deprecated in 1.35, as there are no known usages of this
+		// and if there are they should use
+		// the new GetFooterLinks hook in Id258b1ec2ae7008fc4d586d0647a5131ec889fe6.
 		$hookContainer = MediaWikiServices::getInstance()->getHookContainer();
-		$hookContainer->run( 'MobileSiteOutputPageBeforeExec', [ &$skin, &$tpl ] );
+		$hookContainer->run( 'MobileSiteOutputPageBeforeExec', [ &$skin, &$tpl ], [
+			'deprecatedVersion' => '1.35'
+		] );
 
-		$tpl->set( 'desktop-toggle', $desktopToggler );
-		$tpl->set( 'mobile-license', $licenseText );
+		$tpl->set( 'desktop-toggle', self::getDesktopViewLink( $skin, $context ) );
+		$tpl->set( 'mobile-license', self::getLicenseText( $skin ) );
 		$tpl->set( 'privacy', $skin->footerLink( 'mobile-frontend-privacy-link-text', 'privacypage' ) );
 		$tpl->set( 'terms-use', self::getTermsLink( $skin ) );
 
