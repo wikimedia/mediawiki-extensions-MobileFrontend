@@ -240,7 +240,7 @@
 	"tag-mobile_edit": "手機版編輯",
 	"tag-mobile_edit-description": "使用手機版所作的編輯（網頁或 App）",
 	"tag-advanced_mobile_edit": "進階手機編輯",
-	"tag-advanced_mobile_edit-description": "由使用者以進階模式所做出的編輯",
+	"tag-advanced_mobile_edit-description": "使用者在進階模式下做出的編輯",
 	"tag-mobile_web_edit": "手機版網頁編輯",
 	"tag-mobile_web_edit-description": "手機版網頁所作的編輯",
 	"mobile-frontend-loading-message": "讀取中…",
