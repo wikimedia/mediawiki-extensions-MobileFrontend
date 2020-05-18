@@ -102,7 +102,7 @@
 	"mobile-frontend-featured-article": "Данашњи изабрани садржај",
 	"mobile-frontend-generic-404-desc": "Страница коју сте тражили није пронађена.",
 	"mobile-frontend-generic-404-title": "Грешка — страница није пронађена",
-	"mobile-frontend-generic-login-new": "<strong>{{GRAMMAR:акузатив|{{SITENAME}}}} стварају људи попут вас.</strong><br />Пријавите се да бисте доприносили.",
+	"mobile-frontend-generic-login-new": "<strong>Пројекат {{SITENAME}} стварају људи попут вас.</strong><br />Пријавите се да бисте доприносили.",
 	"mobile-frontend-history-404-desc": "Није могуће видети историју странице која не постоји. Можда је избрисана или сте пратили лошу везу.",
 	"mobile-frontend-history-404-title": "Нема такве странице",
 	"mobile-frontend-history-no-results": "Нема историје подударања која одговара пруженом филтеру.",
