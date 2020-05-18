@@ -14,15 +14,15 @@ var
 		<h2>
 		<span id="First_Section">First Section</span>
 		</h2>
-		<div>
+		<section>
 			<p>Text</p>
-		</div>
+		</section>
 		<h2 id="section_1">
 			<a href="#foo">Dummy Link</a>
 		</h2>
-		<div></div>
+		<section></section>
 		<h2>References</h2>
-		<div data-is-reference-section="1">
+		<section data-is-reference-section="1">
 			<ol class="references">
 				<li id="cite_note-1">
 					<span class="mw-cite-backlink">
@@ -30,7 +30,7 @@ var
 					</span> <span class="reference-text">hello</span>
 				</li>
 			</ol>
-		</div>
+		</section>
 `;
 
 /**
@@ -52,7 +52,7 @@ QUnit.module( 'MobileFrontend Toggler.js', {
 		sandbox.stub( browser, 'isWideScreen' ).returns( false );
 
 		this.page = { title: 'Toggle test' };
-		this.$container = $( '<div>' ).html( sectionTemplate );
+		this.$container = $( '<section>' ).html( sectionTemplate );
 		this.$section0 = this.$container.find( 'h2' ).eq( 0 );
 		this.title = this.page.title;
 		this.headline = this.$section0.find( 'span' ).attr( 'id' );
