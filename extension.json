@@ -25,7 +25,6 @@
 	},
 	"SpecialPages": {
 		"History": "SpecialMobileHistory",
-		"MobileCite": "SpecialMobileCite",
 		"MobileDiff": "SpecialMobileDiff",
 		"MobileOptions": "SpecialMobileOptions",
 		"MobileMenu": "SpecialMobileMenu",
@@ -90,7 +89,6 @@
 		"SpecialMobileContributions": "includes/specials/SpecialMobileContributions.php",
 		"SpecialNearby": "includes/specials/SpecialNearby.php",
 		"SpecialMobileLanguages": "includes/specials/SpecialMobileLanguages.php",
-		"SpecialMobileCite": "includes/specials/SpecialMobileCite.php",
 		"MobileSpecialPage": "includes/specials/MobileSpecialPage.php",
 		"MobileSpecialPageFeed": "includes/specials/MobileSpecialPageFeed.php"
 	},
@@ -570,12 +568,6 @@
 			],
 			"scripts": [
 				"resources/dist/mobile.special.watchlist.scripts.js"
-			]
-		},
-		"mobile.special.mobilecite.styles": {
-			"targets": "mobile",
-			"styles": [
-				"resources/mobile.special.mobilecite.styles/mobilecite.less"
 			]
 		},
 		"mobile.special.mobileoptions.styles": {
