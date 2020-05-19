@@ -139,6 +139,7 @@ Toggler.prototype.toggle = function ( $heading, page ) {
 	var indicator,
 		self = this,
 		wasExpanded = $heading.is( '.open-block' ),
+		$headingLabel = $heading.find( '.mw-headline' ),
 		$content = $heading.next();
 
 	$heading.toggleClass( 'open-block' );
@@ -148,12 +149,9 @@ Toggler.prototype.toggle = function ( $heading, page ) {
 	indicator = new Icon( arrowOptions ).prependTo( $heading );
 	$heading.data( 'indicator', indicator );
 
-	$content
-		.toggleClass( 'open-block' )
-		.attr( {
-			'aria-pressed': !wasExpanded,
-			'aria-expanded': !wasExpanded
-		} );
+	$headingLabel.attr( 'aria-expanded', !wasExpanded );
+
+	$content.toggleClass( 'open-block' );
 
 	/* T239418 We consider this event as a low-priority one and emit it asynchronously.
 	This ensures that any logic associated with section toggling is async and not contributing
@@ -261,6 +259,7 @@ Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 	$container.children( tagName ).each( function ( i ) {
 		var isReferenceSection,
 			$heading = $container.find( this ),
+			$headingLabel = $heading.find( '.mw-headline' ),
 			$indicator = $heading.find( '.indicator' ),
 			id = prefix + 'collapsible-block-' + i;
 		// Be sure there is a `section` wrapping the section content.
@@ -271,11 +270,6 @@ Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 			$heading
 				.addClass( 'collapsible-heading ' )
 				.data( 'section-number', i )
-				.attr( {
-					tabindex: 0,
-					'aria-haspopup': 'true',
-					'aria-controls': id
-				} )
 				.on( 'click', function ( ev ) {
 					// don't toggle, if the click target was a link
 					// (a link in a section heading)
@@ -286,9 +280,17 @@ Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 						self.toggle( $heading, page );
 					}
 				} );
+			$headingLabel
+				.attr( {
+					tabindex: 0,
+					'role': 'button',
+					'aria-controls': id,
+					'aria-expanded': 'false'
+				} );
 
 			arrowOptions.rotation = expandSections ? 180 : 0;
 			indicator = new Icon( arrowOptions );
+
 			if ( $indicator.length ) {
 				// replace the existing indicator
 				$indicator.replaceWith( indicator.$el );
@@ -302,10 +304,8 @@ Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 				.attr( {
 					// We need to give each content block a unique id as that's
 					// the only way we can tell screen readers what element we're
-					// referring to (aria-controls)
-					id: id,
-					'aria-pressed': 'false',
-					'aria-expanded': 'false'
+					// referring to via `aria-controls`.
+					id: id
 				} );
 
 			enableKeyboardActions( self, $heading, page );
