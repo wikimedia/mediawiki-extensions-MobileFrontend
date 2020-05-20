@@ -70,7 +70,7 @@
 	"mobile-frontend-edit-login-action": "<strong>協助改進 {{SITENAME}}。</strong><br />登入以編輯。",
 	"mobile-frontend-edit-signup-action": "<strong>協助改進 {{SITENAME}}。</strong><br />註冊以編輯。",
 	"mobile-frontend-editor-anon": "不登入編輯",
-	"mobile-frontend-editor-anonwarning": "<strong>警告</strong>：您尚未登入。若您進行任何編輯，您的 IP 位址將會被公開。若您<strong>登入</strong>或<strong>建立帳號</strong>，您的編輯將會以您的使用者名稱標示及擁有其他好處。",
+	"mobile-frontend-editor-anonwarning": "<strong>警告</strong>：您尚未登入。若您進行任何編輯，您的 IP 位址將會被公開。若您<strong>登入</strong>或<strong>建立帳號</strong>，您的編輯將會以您的使用者名稱標示，並能擁有另外的益處。",
 	"mobile-frontend-editor-blocked-drawer-title": "您已被封鎖，因此不能編輯 {{SITENAME}}",
 	"mobile-frontend-editor-blocked-drawer-title-partial": "您已被禁止編輯此頁面",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "封鎖的理由",
