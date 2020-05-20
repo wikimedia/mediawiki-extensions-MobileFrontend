@@ -88,7 +88,7 @@ class ExtMobileFrontend {
 			return $html;
 		}
 
-		$formatter = MobileFormatter::newFromContext( $context, $provider, $enableSections );
+		$formatter = MobileFormatter::newFromContext( $context, $provider, $enableSections, $config );
 
 		$hookContainer = $services->getHookContainer();
 		$hookContainer->run( 'MobileFrontendBeforeDOM', [ $context, $formatter ] );
