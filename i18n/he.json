@@ -56,7 +56,7 @@
 	"mobile-frontend-edit-login-action": "<strong>עזרו לשפר את אתר {{SITENAME}}.</strong><br />יש להיכנס כדי לערוך.",
 	"mobile-frontend-edit-signup-action": "<strong>עזרו לשפר את אתר {{SITENAME}}.</strong><br />יש להירשם כדי לערוך.",
 	"mobile-frontend-editor-anon": "לערוך ללא כניסה לחשבון",
-	"mobile-frontend-editor-anonwarning": "<strong>אזהרה</strong>: לא נכנסת לחשבון. כתובת ה־IP שלך תוצג לציבור אם תעשה עריכות כלשהן. <strong>כניסה</strong> או <strong>יצירת חשבון</strong> יאפשרו ייחוס של העריכות שלך לשם המשתמש שלך ויתרונות נוספים.",
+	"mobile-frontend-editor-anonwarning": "<strong>אזהרה:</strong> לא נכנסת לחשבון. כתובת ה־IP שלך תוצג לציבור אם תעשה עריכות כלשהן. <strong>כניסה</strong> או <strong>יצירת חשבון</strong> יאפשרו ייחוס של העריכות שלך לשם המשתמש שלך ויתרונות נוספים.",
 	"mobile-frontend-editor-blocked-drawer-title": "נחסמת מעריכת {{SITENAME}}",
 	"mobile-frontend-editor-blocked-drawer-title-partial": "נחסמת מעריכת הדף הזה",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "הסיבה לחסימה",

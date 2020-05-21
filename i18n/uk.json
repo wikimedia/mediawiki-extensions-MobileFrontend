@@ -64,7 +64,7 @@
 	"mobile-frontend-edit-login-action": "<strong>Допоможіть покращити {{GRAMMAR:Accusative|{{SITENAME}}}}.</strong><br />Увійдіть, щоб редагувати.",
 	"mobile-frontend-edit-signup-action": "<strong>Допоможіть покращити {{GRAMMAR:Accusative|{{SITENAME}}}}.</strong><br />Зареєструйтеся для редагування.",
 	"mobile-frontend-editor-anon": "Редагувати без авторизації",
-	"mobile-frontend-editor-anonwarning": "<strong>Увага:</strong> Ви не авторизовані. Ваша IP-адреса буде публічно видима, якщо Ви зробите якісь редагування. Якщо Ви <strong>авторизуєтеся</strong> чи <strong>створите обліковий запис</strong>, Ваші редагування позначатимуться Вашим іменем користувача, а Ви отримаєте й інші переваги.",
+	"mobile-frontend-editor-anonwarning": "<strong>Увага:</strong> ви не авторизовані. Ваша IP-адреса буде публічно видима, якщо ви зробите якісь редагування. Якщо ви <strong>авторизуєтеся</strong> чи <strong>створите обліковий запис</strong>, ваші редагування позначатимуться вашим іменем користувача і ви отримаєте інші переваги.",
 	"mobile-frontend-editor-blocked-drawer-title": "Ви маєте заборону редагування {{SITENAME}}",
 	"mobile-frontend-editor-blocked-drawer-title-partial": "Вам заблоковано можливість редагування цієї сторінки",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Причина блокування",

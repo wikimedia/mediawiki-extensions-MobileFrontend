@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"AlimOmar",
 			"HushBeg",
 			"Sahran",
 			"Tel'et",
@@ -11,6 +12,7 @@
 	"mobile-frontend-clear-search": "تازىلا",
 	"mobile-frontend-diffview-anonymous": "ئاتسىز ئىشلەتكۈچى",
 	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|قېتىم|قېتىم}} تەھرىرلەنگەن",
+	"mobile-frontend-editor-anonwarning": "<strong>ئەسكەرتىش:</strong> سىز تىزىملاپ كىرمىدىڭىز. IP ئادرېسىڭىزنى تەھرىرلىسىڭىز ئاشكارا كۆرۈنىدۇ. ئەگەردە<strong>تىزىملاپ كىرسىڭىز</strong> ياكى <strong> ھېسابات قۇرسىڭىز</strong>، تەھرىرلىگىڭىز باشقا پايدىلار بىلەن بىللە ئىشلەتكۈچى ئىسمىڭىزغا باغلىنىدۇ.",
 	"mobile-frontend-fontchanger-option-small": "كىچىك",
 	"mobile-frontend-fontchanger-option-medium": "نورمال",
 	"mobile-frontend-featured-article": "بۈگۈنكى ئالاھىدە ماقالە",

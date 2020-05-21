@@ -70,7 +70,7 @@
 	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}}'yi geliştirmemize yardımcı olun.</strong><br />Düzenlemek için giriş yapın.",
 	"mobile-frontend-edit-signup-action": "<strong>{{SITENAME}}'yi geliştirmemize yardımcı olun.</strong><br />Düzenlemek için kayıt olun.",
 	"mobile-frontend-editor-anon": "Oturum açmadan düzenle",
-	"mobile-frontend-editor-anonwarning": "<strong>Uyarı</strong>: Giriş yapmadınız. Yapacağınız düzenlemeler IP adresiniz ile kaydedilecek ve IP adresiniz herkese görünür olacaktır. Eğer <strong>giriş yapar</strong> veya <strong>hesap oluşturursanız</strong>, yapacağınız değişiklikler kullanıcı adınız ile kayıt olur ve bu değişiklikler adınıza ithaf edilir.",
+	"mobile-frontend-editor-anonwarning": "<strong>Uyarı:</strong> Giriş yapmadınız. Yapacağınız düzenlemeler IP adresiniz ile kaydedilecek ve IP adresiniz herkese görünür olacaktır. Eğer <strong>giriş yapar</strong> veya <strong>hesap oluşturursanız</strong>, yapacağınız değişiklikler kullanıcı adınız ile kayıt olur ve bu değişiklikler adınıza ithaf edilir.",
 	"mobile-frontend-editor-blocked-drawer-title": "{{SITENAME}} düzenlemesi engellenmiştir",
 	"mobile-frontend-editor-blocked-drawer-title-partial": "Bu sayfayı düzenlemeniz engellendi",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Engelleme sebebi",

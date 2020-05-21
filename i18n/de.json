@@ -178,7 +178,7 @@
 	"mobile-frontend-settings-tagline": "Leseeinstellungen",
 	"mobile-frontend-settings-beta": "{{SITENAME}} Beta",
 	"mobile-frontend-settings-save": "Die Einstellungen wurden gespeichert.",
-	"mobile-frontend-talk-add-overlay-content-placeholder": "Wo drückt der Schuh?",
+	"mobile-frontend-talk-add-overlay-content-placeholder": "Was ist dein Anliegen?",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Betreff",
 	"mobile-frontend-talk-add-overlay-submit": "Diskussion hinzufügen",
 	"mobile-frontend-talk-reply": "Antwort",
