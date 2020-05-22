@@ -250,7 +250,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 						'offset' => $ts,
 					]
 				),
-			'class' => 'more',
+			'class' => 'mw-mf-watchlist-more',
 		];
 		return Html::element(
 			'a', $attrs, $this->msg( 'pager-older-n' )->numParams( self::LIMIT )->text()
