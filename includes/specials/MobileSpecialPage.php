@@ -52,7 +52,7 @@ class MobileSpecialPage extends SpecialPage {
 			 !$this->hasDesktopVersion ) {
 			# We are not going to return any real content
 			$out->setStatusCode( 404 );
-			$this->renderUnavailableBanner( $this->msg( 'mobile-frontend-requires-mobile' ) );
+			$this->renderUnavailableBanner( $this->msg( 'mobile-frontend-requires-mobile' )->parse() );
 		} elseif ( $this->mode !== 'stable' ) {
 			if ( $this->mode === 'beta' && !$this->mobileContext->isBetaGroupMember() ) {
 				$this->renderUnavailableBanner( $this->msg( 'mobile-frontend-requires-optin' )->parse() );

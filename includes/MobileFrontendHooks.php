@@ -707,7 +707,7 @@ class MobileFrontendHooks {
 				$out->addModules( 'mobile.special.userlogin.scripts' );
 			}
 			if ( array_key_exists( $name, $taglines ) ) {
-				self::setTagline( $out, wfMessage( $taglines[$name] ) );
+				self::setTagline( $out, $out->msg( $taglines[$name] )->parse() );
 			}
 
 			// Set foreign script path on special pages e.g. Special:Nearby
