@@ -1,5 +1,6 @@
-var sandbox, page, gateway, pageParser,
-	references, Drawer, Page, PageHTMLParser,
+let sandbox, page, gateway, pageParser,
+	references, Drawer, Page, PageHTMLParser;
+const
 	sinon = require( 'sinon' ),
 	oo = require( '../../utils/oo' ),
 	dom = require( '../../utils/dom' ),
@@ -34,7 +35,7 @@ QUnit.module( 'MobileFrontend: references', {
 } );
 
 QUnit.test( 'Bad reference not shown', function ( assert ) {
-	var promise = util.Deferred().reject( ReferencesGateway.ERROR_NOT_EXIST ).promise(),
+	const promise = util.Deferred().reject( ReferencesGateway.ERROR_NOT_EXIST ).promise(),
 		showSpy = sandbox.spy( Drawer.prototype, 'show' );
 
 	sandbox.stub( gateway, 'getReference' ).returns( promise );
@@ -46,7 +47,7 @@ QUnit.test( 'Bad reference not shown', function ( assert ) {
 } );
 
 QUnit.test( 'Good reference causes render', function ( assert ) {
-	var promise = util.Deferred().resolve( {
+	const promise = util.Deferred().resolve( {
 			text: 'I am a reference'
 		} ).promise(),
 		renderSpy = sandbox.spy( Drawer.prototype, 'render' ),
@@ -62,7 +63,7 @@ QUnit.test( 'Good reference causes render', function ( assert ) {
 } );
 
 QUnit.test( 'Reference failure renders error in drawer', function ( assert ) {
-	var promise = util.Deferred().reject( ReferencesGateway.ERROR_OTHER ).promise(),
+	const promise = util.Deferred().reject( ReferencesGateway.ERROR_OTHER ).promise(),
 		renderSpy = sandbox.spy( Drawer.prototype, 'render' ),
 		done = assert.async();
 

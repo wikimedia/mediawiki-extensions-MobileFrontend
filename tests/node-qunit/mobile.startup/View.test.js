@@ -1,5 +1,5 @@
 /* global $ */
-var
+const
 	mw = require( '../utils/mw' ),
 	mustache = require( '../utils/mustache' ),
 	jQuery = require( '../utils/jQuery' ),
@@ -7,9 +7,10 @@ var
 	mfExtend = require( '../../../src/mobile.startup/mfExtend' ),
 	util = require( '../../../src/mobile.startup/util' ),
 	oo = require( '../utils/oo' ),
-	sinon = require( 'sinon' ),
+	sinon = require( 'sinon' );
+let
 	View;
-/** @type {sinon.SinonSandbox} */ var sandbox; // eslint-disable-line one-var
+/** @type {sinon.SinonSandbox} */ let sandbox;
 
 QUnit.module( 'MobileFrontend mobile.startup/View', {
 	beforeEach: function () {
@@ -29,7 +30,7 @@ QUnit.module( 'MobileFrontend mobile.startup/View', {
 } );
 
 QUnit.test( 'View', function ( assert ) {
-	var view = new View( {
+	const view = new View( {
 		el: 'body'
 	} );
 	assert.strictEqual( view.$el[ 0 ].outerHTML, '<body class="view-border-box"></body>',
@@ -38,7 +39,7 @@ QUnit.test( 'View', function ( assert ) {
 } );
 
 QUnit.test( 'View, jQuery proxy functions', function ( assert ) {
-	var view = new View( {
+	const view = new View( {
 		el: 'body'
 	} );
 	[
@@ -53,7 +54,7 @@ QUnit.test( 'View, jQuery proxy functions', function ( assert ) {
 		'remove',
 		'detach'
 	].forEach( function ( prop ) {
-		var stub = sandbox.stub( view.$el, prop );
+		const stub = sandbox.stub( view.$el, prop );
 		view[ prop ]( 'test', 1 );
 		assert.ok( stub.calledWith( 'test', 1 ) );
 		stub.restore();
@@ -61,7 +62,6 @@ QUnit.test( 'View, jQuery proxy functions', function ( assert ) {
 } );
 
 QUnit.test( 'View#preRender', function ( assert ) {
-	var view;
 	function ChildView() {
 		View.apply( this, arguments );
 	}
@@ -73,12 +73,12 @@ QUnit.test( 'View#preRender', function ( assert ) {
 		}
 	} );
 
-	view = new ChildView();
+	const view = new ChildView();
 	assert.strictEqual( view.$el.html(), '<p>hello</p>', 'manipulate template data' );
 } );
 
 QUnit.test( 'View#postRender', function ( assert ) {
-	var spy = sandbox.spy();
+	const spy = sandbox.spy();
 	function ChildView() {
 		View.apply( this, arguments );
 	}
@@ -96,7 +96,6 @@ QUnit.test( 'View#postRender', function ( assert ) {
 
 QUnit.test( 'View#delegateEvents', function ( assert ) {
 
-	var view;
 	function EventsView( props ) {
 		View.call(
 			this,
@@ -128,7 +127,7 @@ QUnit.test( 'View#delegateEvents', function ( assert ) {
 		}
 	} );
 
-	view = new EventsView();
+	const view = new EventsView();
 	view.appendTo( 'body' );
 	// Check if events are set and handlers called
 	view.$el.find( 'span' ).trigger( 'click' );
@@ -142,8 +141,7 @@ QUnit.test( 'View#delegateEvents', function ( assert ) {
 } );
 
 QUnit.test( 'View#render (with isTemplateMode)', function ( assert ) {
-	var view, view2, textFirstRun,
-		$parent = $( '<div>' );
+	const $parent = $( '<div>' );
 	function TemplateModeView() {
 		View.apply( this, arguments );
 	}
@@ -161,9 +159,9 @@ QUnit.test( 'View#render (with isTemplateMode)', function ( assert ) {
 		template: util.template( '<p class="foo"><span>test</span></p>' )
 	} );
 
-	view = new TemplateModeView();
-	textFirstRun = view.$el.text();
-	view2 = new ContainerView();
+	const view = new TemplateModeView();
+	const textFirstRun = view.$el.text();
+	const view2 = new ContainerView();
 	view.render();
 	view2.render();
 	// attach to the DOM
@@ -179,7 +177,6 @@ QUnit.test( 'View#render (with isTemplateMode)', function ( assert ) {
 } );
 
 QUnit.test( 'View#render events (with isTemplateMode)', function ( assert ) {
-	var view;
 	function TemplateModeView( props ) {
 		View.call(
 			this,
@@ -195,20 +192,20 @@ QUnit.test( 'View#render events (with isTemplateMode)', function ( assert ) {
 		isTemplateMode: true
 	} );
 
-	view = new TemplateModeView();
+	const view = new TemplateModeView();
 	// trigger event
 	view.$el.find( 'span' ).trigger( 'click' );
 	assert.strictEqual( view.$el.text(), 'hello world', 'event was called' );
 	assert.strictEqual( view.$el.find( 'span' ).length, 0, 'span disappeared' );
 
 	// do same again but call render twice
-	view = new TemplateModeView();
+	const view2 = new TemplateModeView();
 	// force a re-render
-	view.render();
+	view2.render();
 	// trigger event to show events didn't get lost
-	view.$el.find( 'span' ).trigger( 'click' );
-	assert.strictEqual( view.$el.text(), 'hello world', 'event was called' );
-	assert.strictEqual( view.$el.find( 'span' ).length, 0, 'span disappeared' );
+	view2.$el.find( 'span' ).trigger( 'click' );
+	assert.strictEqual( view2.$el.text(), 'hello world', 'event was called' );
+	assert.strictEqual( view2.$el.find( 'span' ).length, 0, 'span disappeared' );
 } );
 
 QUnit.test( 'View with className option', function ( assert ) {
@@ -246,6 +243,6 @@ QUnit.test( 'View with className option', function ( assert ) {
 } );
 
 QUnit.test( 'View.make()', function ( assert ) {
-	var view = View.make( { className: 'foo' }, [ util.parseHTML( '<div>' ).text( 'hello' ) ] );
+	const view = View.make( { className: 'foo' }, [ util.parseHTML( '<div>' ).text( 'hello' ) ] );
 	assert.strictEqual( view.$el.find( '> div' ).text().trim(), 'hello', 'view created with element' );
 } );

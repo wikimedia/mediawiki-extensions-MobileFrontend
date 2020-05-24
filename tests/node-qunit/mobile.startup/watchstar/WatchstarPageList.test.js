@@ -1,4 +1,4 @@
-var
+const
 	util = require( '../../../../src/mobile.startup/util' ),
 	dom = require( '../../utils/dom' ),
 	jQuery = require( '../../utils/jQuery' ),
@@ -18,7 +18,8 @@ var
 				watched: false
 			} ]
 		}
-	},
+	};
+let
 	user,
 	Icon,
 	WatchstarPageList,
@@ -59,7 +60,7 @@ QUnit.module( 'MobileFrontend mobile.startup/WatchstarPageList', {
 } );
 
 QUnit.test( 'Watchlist status check if no ids', function ( assert ) {
-	var
+	const
 		done = assert.async(),
 		mwApi = new mw.Api(),
 		apiSpy = sandbox.stub( mwApi, 'get' ).returns( util.Deferred().resolve( apiResp ) ),
@@ -88,7 +89,7 @@ QUnit.test( 'Watchlist status check if no ids', function ( assert ) {
 } );
 
 QUnit.test( 'Checks watchlist status once', function ( assert ) {
-	var
+	const
 		done = assert.async(),
 		mwApi = new mw.Api(),
 		apiSpy = sandbox.stub( mwApi, 'get' ).returns( util.Deferred().resolve( apiResp ) ),

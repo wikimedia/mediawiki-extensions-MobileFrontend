@@ -1,10 +1,11 @@
-var
+const
 	sinon = require( 'sinon' ),
 	dom = require( '../utils/dom' ),
 	jQuery = require( '../utils/jQuery' ),
 	oo = require( '../utils/oo' ),
 	mediaWiki = require( '../utils/mw' ),
-	mustache = require( '../utils/mustache' ),
+	mustache = require( '../utils/mustache' );
+let
 	editorLoadingOverlay, OverlayManager,
 	sandbox, fakeRouter, overlayManager;
 
@@ -39,7 +40,7 @@ QUnit.module( 'MobileFrontend editorLoadingOverlay.js', {
 } );
 
 QUnit.test( 'editorLoadingOverlay calls the callbacks', function ( assert ) {
-	var
+	const
 		afterShow = sandbox.spy(),
 		afterHide = sandbox.spy(),
 		overlay = editorLoadingOverlay( afterShow, afterHide );

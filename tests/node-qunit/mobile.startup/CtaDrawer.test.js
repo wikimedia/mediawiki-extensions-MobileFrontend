@@ -1,15 +1,16 @@
-var
+const
 	// Imports
-	CtaDrawer,
 	dom = require( '../utils/dom' ),
-	Anchor,
-	Button,
 	jQuery = require( '../utils/jQuery' ),
 	mw = require( '../utils/mw' ),
 	mustache = require( '../utils/mustache' ),
 	oo = require( '../utils/oo' ),
-	sandbox,
 	sinon = require( 'sinon' );
+let
+	CtaDrawer,
+	Anchor,
+	Button,
+	sandbox;
 
 QUnit.module( 'MobileFrontend CtaDrawer.js', {
 	beforeEach: function () {
@@ -54,7 +55,7 @@ QUnit.module( 'MobileFrontend CtaDrawer.js', {
 }, function () {
 	QUnit.module( 'redirectParams()', function () {
 		QUnit.test( 'empty props, default URL', function ( assert ) {
-			var subject = CtaDrawer.prototype.test.redirectParams;
+			const subject = CtaDrawer.prototype.test.redirectParams;
 			sandbox.stub( global.mw.config, 'get' ).callsFake( function () {
 				return 'pageName';
 			} );
@@ -62,12 +63,12 @@ QUnit.module( 'MobileFrontend CtaDrawer.js', {
 		} );
 
 		QUnit.test( 'empty props, nondefault URL', function ( assert ) {
-			var subject = CtaDrawer.prototype.test.redirectParams;
+			const subject = CtaDrawer.prototype.test.redirectParams;
 			assert.propEqual( subject( {}, 'url' ), { returnto: 'url' } );
 		} );
 
 		QUnit.test( 'nonempty props', function ( assert ) {
-			var subject = CtaDrawer.prototype.test.redirectParams;
+			const subject = CtaDrawer.prototype.test.redirectParams;
 			assert.propEqual( subject( { key: 'val' }, 'url' ), {
 				key: 'val',
 				returnto: 'url'
@@ -77,12 +78,12 @@ QUnit.module( 'MobileFrontend CtaDrawer.js', {
 
 	QUnit.module( 'signUpParams()', function () {
 		QUnit.test( 'empty props', function ( assert ) {
-			var subject = CtaDrawer.prototype.test.signUpParams;
+			const subject = CtaDrawer.prototype.test.signUpParams;
 			assert.propEqual( subject( {} ), { type: 'signup' } );
 		} );
 
 		QUnit.test( 'nonempty props', function ( assert ) {
-			var subject = CtaDrawer.prototype.test.signUpParams;
+			const subject = CtaDrawer.prototype.test.signUpParams;
 			assert.propEqual( subject( { key: 'val' } ), {
 				key: 'val',
 				type: 'signup'
@@ -92,7 +93,7 @@ QUnit.module( 'MobileFrontend CtaDrawer.js', {
 
 	QUnit.module( 'HTML', function () {
 		QUnit.test( 'defaults', function ( assert ) {
-			var
+			const
 				subject = new CtaDrawer(),
 				// Import the expected HTML as a string and replace spaces with a \s*. This allows
 				// the HTML some flexibility in how it's rendered.
@@ -104,7 +105,7 @@ QUnit.module( 'MobileFrontend CtaDrawer.js', {
 		} );
 
 		QUnit.test( 'overrides', function ( assert ) {
-			var
+			const
 				subject = new CtaDrawer( {
 					progressiveButton: new Button( {
 						progressive: true,

@@ -1,12 +1,13 @@
-var // Imports
+const // Imports
 	dom = require( '../utils/dom' ),
-	Drawer,
 	jQuery = require( '../utils/jQuery' ),
 	mw = require( '../utils/mw' ),
 	mustache = require( '../utils/mustache' ),
 	oo = require( '../utils/oo' ),
-	sandbox,
 	sinon = require( 'sinon' );
+let
+	Drawer,
+	sandbox;
 
 // util.docReady() usage appears to be necessary over
 // `document.addEventListener('DOMContentLoaded', ...)` as the latter fires before the subject's
@@ -55,7 +56,7 @@ QUnit.test( 'visible on show()', function ( assert ) {
 } );
 
 QUnit.test( 'accepts onShow and events', function ( assert ) {
-	var
+	const
 		done = assert.async(),
 		onShow = () => {
 			assert.ok( true );
@@ -99,7 +100,7 @@ QUnit.test( 'hidden on mask click', function ( assert ) {
 } );
 
 QUnit.test( 'HTML is valid', function ( assert ) {
-	var subject = new Drawer( {} );
+	const subject = new Drawer( {} );
 	assert.strictEqual(
 		subject.$el.find( '.drawer' ).get( 0 ).outerHTML,
 		'<div class="drawer drawer-container__drawer position-fixed"><div class="mw-ui-icon mw-ui-icon-mf-expand mw-ui-icon-element   cancel"></div></div>'

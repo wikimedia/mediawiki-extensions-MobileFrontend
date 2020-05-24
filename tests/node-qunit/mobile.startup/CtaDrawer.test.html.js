@@ -1,4 +1,3 @@
-/* eslint-env es6 */
 module.exports = {
 	defaultURLs: `
 		<div class=" drawer drawer-container__drawer position-fixed">
