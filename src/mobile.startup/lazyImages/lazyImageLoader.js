@@ -70,6 +70,7 @@ function loadImage( placeholder ) {
 }
 
 module.exports = {
+	placeholderClass,
 	queryPlaceholders: queryPlaceholders,
 	loadImages: loadImages,
 	loadImage: loadImage,

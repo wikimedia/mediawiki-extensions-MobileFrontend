@@ -162,6 +162,7 @@
 	"mobile-frontend-media-load-fail-message": "There was an error while loading this image.",
 	"mobile-frontend-media-load-fail-retry": "Refresh",
 	"mobile-frontend-missing-image": "Image",
+	"mobile-frontend-tap-to-display-image": "Tap to display image.",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 km}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",
 	"mobile-frontend-nearby-error": "{{SITENAME}} Nearby is having some issues.",

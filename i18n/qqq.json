@@ -166,6 +166,7 @@
 	"mobile-frontend-media-load-fail-message": "Message shown when media loading fails",
 	"mobile-frontend-media-load-fail-retry": "Link to reload page that's shown when media loading fails\n{{Identical|Refresh}}",
 	"mobile-frontend-missing-image": "When the mobile site removes images it replaces them with a link to the image and the alt text of the image. If no alt text is provided this string is shown to inform the user it is an image.\n{{Identical|Image}}",
+	"mobile-frontend-tap-to-display-image": "Alert the user that they need to click the image to display it",
 	"mobile-frontend-nearby-distance": "States distance to current location. Parameters:\n* $1 - distance (in kilometers)\nSee also:\n* {{msg-mw|Mobile-frontend-nearby-distance-meters}}",
 	"mobile-frontend-nearby-distance-meters": "States distance to current location for numbers less than 1km.\n\nParameters:\n* $1 - distance (in meters)\nSee also:\n* {{msg-mw|Mobile-frontend-nearby-distance}}",
 	"mobile-frontend-nearby-error": "Text of generic error message when querying geodata API.",

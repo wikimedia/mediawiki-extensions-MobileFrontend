@@ -1,7 +1,5 @@
 var skin,
 	browser = require( './Browser' ).getSingleton(),
-	lazyImageLoader = require( './lazyImages/lazyImageLoader' ),
-	lazyImageTransformer = require( './lazyImages/lazyImageTransformer' ),
 	View = require( './View' ),
 	util = require( './util' ),
 	currentPage = require( './currentPage' ),
@@ -22,31 +20,13 @@ var skin,
  * scroll:throttled, resize:throttled, and section-toggled events
  */
 function Skin( params ) {
-	var self = this,
-		options = util.extend( {}, params );
+	var options = util.extend( {}, params );
 
 	this.page = options.page;
 	this.name = options.name;
 	this.eventBus = options.eventBus;
 	options.isBorderBox = false;
 	View.call( this, options );
-
-	if (
-		mw.config.get( 'wgMFLazyLoadImages' )
-	) {
-		util.docReady( function () {
-			var
-				container = document.getElementById( 'content' ),
-				// todo: remove when tests are only headless. There is no #content in
-				//       Special:JavaScriptTest.
-				images = ( container && lazyImageLoader.queryPlaceholders( container ) ) || [];
-			self.lazyImageTransformer = lazyImageTransformer.newLazyImageTransformer(
-				self.eventBus, self.$el.find.bind( self.$el ),
-				util.getWindow().height() * 1.5, images
-			);
-			self.lazyImageTransformer.loadImages();
-		} );
-	}
 }
 
 mfExtend( Skin, View, {
@@ -71,9 +51,6 @@ mfExtend( Skin, View, {
 
 		if ( browser.supportsTouchEvents() ) {
 			$el.addClass( 'touch-events' );
-		}
-		if ( this.lazyImageTransformer ) {
-			this.lazyImageTransformer.loadImages();
 		}
 
 		/**
