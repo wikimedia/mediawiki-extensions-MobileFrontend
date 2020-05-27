@@ -1,7 +1,8 @@
-var sandbox, messageStub, getContentStub, previewResolve,
-	testUrl = '/w/index.php?title=User:Test',
+let sandbox, messageStub, getContentStub, previewResolve,
 	BlockMessageDetails,
-	EditorGateway, SourceEditorOverlay,
+	EditorGateway, SourceEditorOverlay;
+const
+	testUrl = '/w/index.php?title=User:Test',
 	jQuery = require( '../utils/jQuery' ),
 	sinon = require( 'sinon' ),
 	util = require( '../../../src/mobile.startup/util' ),
@@ -61,15 +62,15 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/SourceEditorOverlay', {
 } );
 
 QUnit.test( '#initialize, blocked user', function ( assert ) {
-	var dBlockedContent = util.Deferred().resolve( {
-		text: 'section 0',
-		blockinfo: {
-			blockedby: 'Test',
-			blockexpiry: 'infinity',
-			blockreason: 'Testreason'
-		}
-	} );
-	const done = assert.async();
+	const dBlockedContent = util.Deferred().resolve( {
+			text: 'section 0',
+			blockinfo: {
+				blockedby: 'Test',
+				blockexpiry: 'infinity',
+				blockreason: 'Testreason'
+			}
+		} ),
+		done = assert.async();
 
 	new SourceEditorOverlay( {
 		title: 'test.css'
@@ -92,7 +93,7 @@ QUnit.test( '#initialize, blocked user', function ( assert ) {
 } );
 
 QUnit.test( '#initialize, with given page and section', function ( assert ) {
-	var editorOverlay = new SourceEditorOverlay( {
+	const editorOverlay = new SourceEditorOverlay( {
 		title: 'test',
 		sectionId: '0'
 	} );
@@ -110,7 +111,7 @@ QUnit.test( '#initialize, with given page and section', function ( assert ) {
 } );
 
 QUnit.test( '#initialize, without a section', function ( assert ) {
-	var editorOverlay = new SourceEditorOverlay( {
+	const editorOverlay = new SourceEditorOverlay( {
 		title: 'test.css'
 	} );
 
@@ -123,7 +124,7 @@ QUnit.test( '#initialize, without a section', function ( assert ) {
 } );
 
 QUnit.test( '#preview', function ( assert ) {
-	var editorOverlay = new SourceEditorOverlay( {
+	const editorOverlay = new SourceEditorOverlay( {
 		title: 'test',
 		sectionId: '0'
 	} );
@@ -136,7 +137,7 @@ QUnit.test( '#preview', function ( assert ) {
 } );
 
 QUnit.test( '#initialize, as anonymous', function ( assert ) {
-	var editorOverlay = new SourceEditorOverlay( {
+	const editorOverlay = new SourceEditorOverlay( {
 		title: 'Main_page',
 		isAnon: true
 	} );

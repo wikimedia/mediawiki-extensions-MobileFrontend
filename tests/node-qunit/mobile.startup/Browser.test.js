@@ -1,16 +1,17 @@
 /* global $ */
-var
+const
 	Browser = require( '../../../src/mobile.startup/Browser' ),
 	dom = require( '../utils/dom' ),
 	jQuery = require( '../utils/jQuery' ),
 	sinon = require( 'sinon' ),
-	mediawiki = require( '../utils/mw' ),
+	mediawiki = require( '../utils/mw' );
+let
 	$html;
-/** @type {sinon.SinonSandbox} */ var sandbox; // eslint-disable-line one-var
+/** @type {sinon.SinonSandbox} */ let sandbox;
 
 QUnit.module( 'MobileFrontend Browser.js', {
 	beforeEach: function () {
-		var tmpDOM;
+		let tmpDOM;
 		sandbox = sinon.sandbox.create();
 		dom.setUp( sandbox, global );
 		jQuery.setUp( sandbox, global );
@@ -24,7 +25,7 @@ QUnit.module( 'MobileFrontend Browser.js', {
 } );
 
 QUnit.test( 'isIos()', function ( assert ) {
-	var browser = new Browser( 'Mozilla/5.0 (iPad; CPU OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko)', $html ),
+	const browser = new Browser( 'Mozilla/5.0 (iPad; CPU OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko)', $html ),
 		browser4 = new Browser( 'Mozilla/5.0 (iPad; CPU OS 4_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko)', $html ),
 		browser5 = new Browser( 'Mozilla/5.0 (iPad; CPU OS 5_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko)', $html ),
 		browser2 = new Browser( 'Mozilla/5.0 (iPhone; CPU iPhone OS 8_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/8.0 Mobile/11A465 Safari/9537.53', $html );
@@ -40,7 +41,7 @@ QUnit.test( 'isIos()', function ( assert ) {
 } );
 
 QUnit.test( 'Methods are cached', function ( assert ) {
-	var ipad = new Browser( 'Mozilla/5.0 (iPad; CPU OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko)', $html ),
+	const ipad = new Browser( 'Mozilla/5.0 (iPad; CPU OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko)', $html ),
 		iphone = new Browser( 'Mozilla/5.0 (iPhone; CPU iPhone OS 8_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/8.0 Mobile/11A465 Safari/9537.53', $html ),
 		android2 = new Browser( 'Android 2', $html );
 
@@ -63,7 +64,7 @@ QUnit.test( 'Methods are cached', function ( assert ) {
 } );
 
 QUnit.test( 'isWideScreen()', function ( assert ) {
-	var browser = new Browser( 'Mozilla/5.0 (iPad; CPU OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko)', $html );
+	const browser = new Browser( 'Mozilla/5.0 (iPad; CPU OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko)', $html );
 	sandbox.stub( mw.config, 'get' ).callsFake( function () {
 		return '720px';
 	} );
@@ -71,13 +72,13 @@ QUnit.test( 'isWideScreen()', function ( assert ) {
 } );
 
 QUnit.test( 'supportsTouchEvents()', function ( assert ) {
-	var browser = new Browser( 'Mozilla/5.0 (iPad; CPU OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko)', $html );
+	const browser = new Browser( 'Mozilla/5.0 (iPad; CPU OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko)', $html );
 	window.ontouchstart = window.ontouchstart || undefined;
 	assert.strictEqual( browser.supportsTouchEvents(), true );
 } );
 
 QUnit.test( 'supportsGeoLocation()', function ( assert ) {
-	var browser = new Browser( 'Mozilla/5.0 (iPad; CPU OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko)', $html );
+	const browser = new Browser( 'Mozilla/5.0 (iPad; CPU OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko)', $html );
 	window.navigator.geolocation = window.navigator.geolocation || undefined;
 	assert.strictEqual( browser.supportsGeoLocation(), true );
 } );

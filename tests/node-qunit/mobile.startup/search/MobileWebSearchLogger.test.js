@@ -1,8 +1,8 @@
-var
+const
 	sinon = require( 'sinon' ),
 	mediawiki = require( '../../utils/mw' ),
 	MobileWebSearchLogger = require( '../../../../src/mobile.startup/search/MobileWebSearchLogger' );
-/** @type {sinon.SinonSandbox} */ var sandbox; // eslint-disable-line one-var
+/** @type {sinon.SinonSandbox} */ let sandbox;
 
 QUnit.module( 'MobileFrontend: MobileWebSearchLogger', {
 	beforeEach: function () {
@@ -19,7 +19,7 @@ QUnit.module( 'MobileFrontend: MobileWebSearchLogger', {
 } );
 
 QUnit.test( 'it should log when the search is shown', function ( assert ) {
-	var self = this;
+	const self = this;
 
 	// The user opens the search overlay.
 	this.logger.onSearchShow();
@@ -34,8 +34,6 @@ QUnit.test( 'it should log when the search is shown', function ( assert ) {
 } );
 
 QUnit.test( 'it should log when the search API request completes', function ( assert ) {
-	var data;
-
 	// The user opens the search overlay, searches for a term, and is shown
 	// results.
 	this.logger.onSearchShow();
@@ -44,7 +42,7 @@ QUnit.test( 'it should log when the search API request completes', function ( as
 		results: [ 'result1', 'result2' ]
 	} );
 
-	data = mw.track.getCall( 1 ).args[1];
+	const data = mw.track.getCall( 1 ).args[1];
 
 	assert.strictEqual( data.action, 'impression-results' );
 	assert.strictEqual( data.resultSetType, 'prefix' );
@@ -68,8 +66,6 @@ QUnit.test( 'it should refresh the user session token when the search is shown a
 } );
 
 QUnit.test( 'it should log when the user clicks a result', function ( assert ) {
-	var data;
-
 	// The user opens the search overlay, searches for a term, is shown
 	// results, and clicks a result.
 	this.logger.onSearchShow();
@@ -83,14 +79,14 @@ QUnit.test( 'it should log when the user clicks a result', function ( assert ) {
 		resultIndex: 0
 	} );
 
-	data = mw.track.getCall( 2 ).args[1];
+	const data = mw.track.getCall( 2 ).args[1];
 
 	assert.strictEqual( data.action, 'click-result' );
 	assert.strictEqual( data.clickIndex, 1 );
 } );
 
 QUnit.test( 'it should refresh the search session token when the search API request completes again', function ( assert ) {
-	var event = {
+	const event = {
 		results: []
 	};
 

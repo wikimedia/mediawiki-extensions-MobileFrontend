@@ -1,6 +1,7 @@
-var
+let
 	TalkSectionOverlay,
-	sandbox,
+	sandbox;
+const
 	util = require( '../../../src/mobile.startup/util' ),
 	jQuery = require( '../utils/jQuery' ),
 	dom = require( '../utils/dom' ),
@@ -30,7 +31,7 @@ QUnit.module( 'MobileFrontend TalkSectionOverlay.js - logged in', {
 } );
 
 QUnit.test( 'Check comment box for logged in users', function ( assert ) {
-	var overlay = new TalkSectionOverlay( {
+	const overlay = new TalkSectionOverlay( {
 		api: {},
 		section: 'Test'
 	} );
@@ -39,9 +40,7 @@ QUnit.test( 'Check comment box for logged in users', function ( assert ) {
 } );
 
 QUnit.test( 'Check error class on textarea', function ( assert ) {
-	var overlay;
-
-	overlay = new TalkSectionOverlay( {
+	const overlay = new TalkSectionOverlay( {
 		api: {},
 		section: 'Test'
 	} );
@@ -54,7 +53,7 @@ QUnit.test( 'Check error class on textarea', function ( assert ) {
 } );
 
 QUnit.test( 'Check api request on save', function ( assert ) {
-	var
+	const
 		deferred = util.Deferred().resolve(),
 		spy = sandbox.stub().returns( deferred ),
 		overlay = new TalkSectionOverlay( {
@@ -100,7 +99,7 @@ QUnit.module( 'MobileFrontend TalkSectionOverlay.js - anonymous (logged out)', {
 } );
 
 QUnit.test( 'Check comment box for logged out users', function ( assert ) {
-	var overlay = new TalkSectionOverlay( {
+	const overlay = new TalkSectionOverlay( {
 		api: {},
 		section: 'Test'
 	} );

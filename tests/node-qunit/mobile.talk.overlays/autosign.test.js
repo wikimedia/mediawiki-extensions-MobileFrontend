@@ -1,4 +1,4 @@
-var autosign = require( '../../../src/mobile.talk.overlays/autosign' );
+const autosign = require( '../../../src/mobile.talk.overlays/autosign' );
 
 QUnit.module( 'MobileFrontend autosign.js' );
 

@@ -1,8 +1,9 @@
 /* global $ */
-var
+const
 	jQuery = require( '../utils/jQuery' ),
 	dom = require( '../utils/dom' ),
-	sinon = require( 'sinon' ),
+	sinon = require( 'sinon' );
+let
 	sandbox,
 	identifyLeadParagraph;
 
@@ -21,7 +22,7 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/identifyLeadParagraph', {
 
 // Keep in sync with MoveLeadParagraphTransformTest::provideTransform()
 function provideCases() {
-	var
+	const
 		infobox = '<table class="infobox">1</table>',
 		coordinates = '<span id="coordinates"><span>0;0</span></span>',
 		anotherInfobox = '<table class="infobox">2</table>',
@@ -122,13 +123,12 @@ function provideCases() {
 }
 
 QUnit.test( 'identifyLeadParagraph', function ( assert ) {
-	var i, html, expectedSel, message, $dom, expectedNode,
-		cases = provideCases();
+	const cases = provideCases();
 
-	for ( i = 0; i < cases.length; i++ ) {
-		[ html, expectedSel, message ] = cases[i];
-		$dom = $( '<section>' ).html( html );
-		expectedNode = expectedSel ? $dom.find( expectedSel )[0] : null;
+	for ( let i = 0; i < cases.length; i++ ) {
+		const [ html, expectedSel, message ] = cases[i];
+		const $dom = $( '<section>' ).html( html );
+		const expectedNode = expectedSel ? $dom.find( expectedSel )[0] : null;
 
 		assert.strictEqual(
 			expectedNode,

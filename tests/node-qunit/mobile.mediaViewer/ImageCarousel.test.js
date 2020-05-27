@@ -1,4 +1,5 @@
-var sandbox, ImageOverlay,
+let sandbox, ImageOverlay;
+const
 	util = require( '../../../src/mobile.startup/util' ),
 	jQuery = require( '../utils/jQuery' ),
 	dom = require( '../utils/dom' ),
@@ -64,7 +65,7 @@ QUnit.module( 'MobileFrontend mobile.mediaViewer/ImageCarousel.js', {
 } );
 
 QUnit.test( 'Shows details bar and image with successful api response', function ( assert ) {
-	var overlay = new ImageOverlay( {
+	const overlay = new ImageOverlay( {
 		gateway: this.imageGateway,
 		title: decodeURIComponent( this.image.url ),
 		caption: 'The Montgomery in 2012.',
@@ -82,13 +83,13 @@ QUnit.test( 'Shows details bar and image with successful api response', function
 } );
 
 QUnit.test( 'Shows error message with failed api response', function ( assert ) {
-	var overlay, imageGateway = {
+	const imageGateway = {
 		getThumb: function () {
 			return util.Deferred().reject( 'Load Error' );
 		}
 	};
 
-	overlay = new ImageOverlay( {
+	const overlay = new ImageOverlay( {
 		gateway: imageGateway,
 		title: decodeURIComponent( this.image.url ),
 		caption: 'The Montgomery in 2012.',
@@ -105,13 +106,13 @@ QUnit.test( 'Shows error message with failed api response', function ( assert ) 
 } );
 
 QUnit.test( 'Toggling of details is disabled when overlay has load failure', function ( assert ) {
-	var overlay, imageGateway = {
+	const imageGateway = {
 		getThumb: function () {
 			return util.Deferred().reject( 'Load Error' );
 		}
 	};
 
-	overlay = new ImageOverlay( {
+	const overlay = new ImageOverlay( {
 		gateway: imageGateway,
 		title: decodeURIComponent( this.image.url ),
 		caption: 'The Montgomery in 2012.',
@@ -136,7 +137,7 @@ QUnit.test( 'Toggling of details is disabled when overlay has load failure', fun
 } );
 
 QUnit.test( 'Toggling of details is enabled when overlay loads successfully', function ( assert ) {
-	var overlay = new ImageOverlay( {
+	const overlay = new ImageOverlay( {
 		gateway: this.imageGateway,
 		title: decodeURIComponent( this.image.url ),
 		caption: 'The Montgomery in 2012.',

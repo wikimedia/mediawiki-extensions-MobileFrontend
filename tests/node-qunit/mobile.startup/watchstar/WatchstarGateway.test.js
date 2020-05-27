@@ -1,4 +1,4 @@
-var
+const
 	WatchstarGateway = require( '../../../../src/mobile.startup/watchstar/WatchstarGateway' ),
 	// setup dependencies
 	dom = require( '../../utils/dom' ),
@@ -37,7 +37,8 @@ var
 				watched: true
 			} ]
 		}
-	},
+	};
+let
 	sandbox;
 
 QUnit.module( 'MobileFrontend: WatchstarGateway.js', {
@@ -54,14 +55,8 @@ QUnit.module( 'MobileFrontend: WatchstarGateway.js', {
 } );
 
 QUnit.test( 'getStatuses(nonempty)', function ( assert ) {
-	var
-		subject,
-		expected,
-		api,
-		mockAPI;
-
-	api = { get: function () {} };
-	mockAPI = sandbox.mock( api );
+	const api = { get: function () {} };
+	const mockAPI = sandbox.mock( api );
 
 	mockAPI
 		.expects( 'get' )
@@ -80,11 +75,11 @@ QUnit.test( 'getStatuses(nonempty)', function ( assert ) {
 			query: { pages: [ GET_RESPONSE.query.pages[1] ] }
 		} ) );
 
-	subject = new WatchstarGateway( api );
+	const subject = new WatchstarGateway( api );
 	return subject.getStatuses(
 		[ '123' ], [ 'A watched page' ]
 	).then( function ( actual ) {
-		expected = {
+		const expected = {
 			'An unwatched page': false,
 			'A watched page': true
 		};
@@ -94,43 +89,31 @@ QUnit.test( 'getStatuses(nonempty)', function ( assert ) {
 } );
 
 QUnit.test( 'getStatuses(empty)', function ( assert ) {
-	var
-		subject,
-		expected,
-		api,
-		mockAPI;
-
-	api = { get: function () {} };
-	mockAPI = sandbox.mock( api )
+	const api = { get: function () {} };
+	const mockAPI = sandbox.mock( api )
 		.expects( 'get' )
 		// No HTTP requests are issued.
 		.never();
 
-	subject = new WatchstarGateway( api );
+	const subject = new WatchstarGateway( api );
 	return subject.getStatuses( [], [] ).then( function ( actual ) {
-		expected = {};
+		const expected = {};
 		assert.propEqual( actual, expected, 'An empty result is returned.' );
 		mockAPI.verify();
 	} );
 } );
 
 QUnit.test( 'getStatusesByID(nonempty)', function ( assert ) {
-	var
-		subject,
-		expected,
-		api,
-		mockAPI;
-
-	api = { get: function () {} };
-	mockAPI = sandbox.mock( api )
+	const api = { get: function () {} };
+	const mockAPI = sandbox.mock( api )
 		.expects( 'get' )
 		.once()
 		// One HTTP request is issued.
 		.returns( util.Deferred().resolve( GET_RESPONSE ) );
 
-	subject = new WatchstarGateway( api );
+	const subject = new WatchstarGateway( api );
 	return subject.getStatusesByID( [ '123', 456 ] ).then( function ( actual ) {
-		expected = {
+		const expected = {
 			'An unwatched page': false,
 			'A watched page': true
 		};
@@ -140,45 +123,33 @@ QUnit.test( 'getStatusesByID(nonempty)', function ( assert ) {
 } );
 
 QUnit.test( 'getStatusesByID(empty)', function ( assert ) {
-	var
-		subject,
-		expected,
-		api,
-		mockAPI;
-
-	api = { get: function () {} };
-	mockAPI = sandbox.mock( api )
+	const api = { get: function () {} };
+	const mockAPI = sandbox.mock( api )
 		.expects( 'get' )
 		// No HTTP requests are issued.
 		.never();
 
-	subject = new WatchstarGateway( api );
+	const subject = new WatchstarGateway( api );
 	return subject.getStatusesByID( [] ).then( function ( actual ) {
-		expected = {};
+		const expected = {};
 		assert.propEqual( actual, expected, 'An empty result is returned.' );
 		mockAPI.verify();
 	} );
 } );
 
 QUnit.test( 'getStatusesByTitle(nonempty)', function ( assert ) {
-	var
-		subject,
-		expected,
-		api,
-		mockAPI;
-
-	api = { get: function () {} };
-	mockAPI = sandbox.mock( api )
+	const api = { get: function () {} };
+	const mockAPI = sandbox.mock( api )
 		.expects( 'get' )
 		.once()
 		// One HTTP request is issued.
 		.returns( util.Deferred().resolve( GET_RESPONSE ) );
 
-	subject = new WatchstarGateway( api );
+	const subject = new WatchstarGateway( api );
 	return subject.getStatusesByTitle( [
 		'An unwatched page', 'An unwatched page'
 	] ).then( function ( actual ) {
-		expected = {
+		const expected = {
 			'An unwatched page': false,
 			'A watched page': true
 		};
@@ -188,35 +159,24 @@ QUnit.test( 'getStatusesByTitle(nonempty)', function ( assert ) {
 } );
 
 QUnit.test( 'getStatusesByTitle(empty)', function ( assert ) {
-	var
-		subject,
-		expected,
-		api,
-		mockAPI;
-
-	api = { get: function () {} };
-	mockAPI = sandbox.mock( api )
+	const api = { get: function () {} };
+	const mockAPI = sandbox.mock( api )
 		.expects( 'get' )
 		// No HTTP requests are issued.
 		.never();
 
-	subject = new WatchstarGateway( api );
+	const subject = new WatchstarGateway( api );
 	return subject.getStatusesByTitle( [] ).then( function ( actual ) {
-		expected = {};
+		const expected = {};
 		assert.propEqual( actual, expected, 'An empty result is returned.' );
 		mockAPI.verify();
 	} );
 } );
 
 QUnit.test( '_unmarshalGetResponse(nonempty)', function ( assert ) {
-	var
-		subject,
-		actual,
-		expected;
-
-	subject = new WatchstarGateway( new mw.Api() );
-	actual = subject._unmarshalGetResponse( GET_RESPONSE );
-	expected = {
+	const subject = new WatchstarGateway( new mw.Api() );
+	const actual = subject._unmarshalGetResponse( GET_RESPONSE );
+	const expected = {
 		'An unwatched page': false,
 		'A watched page': true
 	};
@@ -228,14 +188,9 @@ QUnit.test( '_unmarshalGetResponse(nonempty)', function ( assert ) {
 } );
 
 QUnit.test( '_unmarshalGetResponse(empty)', function ( assert ) {
-	var
-		subject,
-		actual,
-		expected;
-
-	subject = new WatchstarGateway( new mw.Api() );
-	actual = subject._unmarshalGetResponse( {} );
-	expected = {};
+	const subject = new WatchstarGateway( new mw.Api() );
+	const actual = subject._unmarshalGetResponse( {} );
+	const expected = {};
 	assert.propEqual(
 		actual,
 		expected,

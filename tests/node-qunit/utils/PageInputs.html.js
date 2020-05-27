@@ -1,7 +1,5 @@
 /* eslint-env es6 */
-var page, page2, referencesPage;
-
-page = `<div>
+const page = `<div>
 	<h1><span class="mw-headline" id="1.0">A1</span></h1>
 	<h2><span class="mw-headline">A2.1</span></h2>
 	<h2><span class="mw-headline">A2.2</span></h2>
@@ -10,7 +8,7 @@ page = `<div>
 	<h1>Not to be shown in the TOC<span class="placeholder"></span></h1>
 </div>`;
 
-page2 = `<div>
+const page2 = `<div>
 <h2><span class="mw-headline" id="1.0">A1</span></h2>
 <h3><span class="mw-headline">A2.1</span></h3>
 <h2><span class="mw-headline">A2.2</span></h2>
@@ -18,7 +16,7 @@ page2 = `<div>
 <h2><span class="mw-headline">A2.1</span></h2>
 </div>`;
 
-referencesPage = `<div id="mfe-test-references">
+const referencesPage = `<div id="mfe-test-references">
 <sup id="cite_ref-1" class="reference">
 	<a href="#cite_note-1">[1]</a>
 </sup>

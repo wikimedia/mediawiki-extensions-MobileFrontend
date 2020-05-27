@@ -1,8 +1,9 @@
-var
+const
 	jQuery = require( '../utils/jQuery' ),
 	dom = require( '../utils/dom' ),
 	mediaWiki = require( '../utils/mw' ),
-	sinon = require( 'sinon' ),
+	sinon = require( 'sinon' );
+let
 	util,
 	sandbox;
 
@@ -211,7 +212,7 @@ QUnit.test( '#saveLanguageUsageCount', function ( assert ) {
 } );
 
 QUnit.test( '#getStructuredLanguages', function ( assert ) {
-	var result = util.getStructuredLanguages(
+	const result = util.getStructuredLanguages(
 		this.apiLanguages, false, this.frequentlyUsedLanguages, this.deviceLanguage
 	);
 
@@ -223,7 +224,7 @@ QUnit.test( '#getStructuredLanguages', function ( assert ) {
 } );
 
 QUnit.test( '#getStructuredLanguages device language', function ( assert ) {
-	var result =
+	const result =
 		util.getStructuredLanguages( this.apiLanguages, false, {}, 'es-lx' ).suggested[0].lang;
 
 	// device language is a variant and only the parent language is available
@@ -235,10 +236,9 @@ QUnit.test( '#getStructuredLanguages device language', function ( assert ) {
 } );
 
 QUnit.test( '#getStructuredLanguages variants', function ( assert ) {
-	var suggestedLanguages,
-		variantsMap = {};
+	const variantsMap = {};
 
-	suggestedLanguages = util.getStructuredLanguages(
+	const suggestedLanguages = util.getStructuredLanguages(
 		this.apiLanguages, this.apiVariants, {}, this.deviceLanguage
 	).suggested;
 	this.apiVariants.forEach( function ( variant ) {

@@ -1,4 +1,4 @@
-var util,
+const
 	sinon = require( 'sinon' ),
 	dom = require( '../utils/dom' ),
 	mediawiki = require( '../utils/mw' ),
@@ -8,7 +8,9 @@ var util,
 	examples = require( './../utils/PageInputs.html' ),
 	page = examples.page,
 	page2 = examples.page2,
-	testData = require( '../utils/PageGateway.responses' ),
+	testData = require( '../utils/PageGateway.responses' );
+let
+	util,
 	PageGateway,
 	pageGateway,
 	sandbox;
@@ -47,7 +49,7 @@ QUnit.test( '#getPageLanguages (response)', function ( assert ) {
 } );
 
 QUnit.test( '#getPageLanguages (call)', function ( assert ) {
-	var spy = sandbox.stub( this.api, 'get' ).returns( util.Deferred().reject() );
+	const spy = sandbox.stub( this.api, 'get' ).returns( util.Deferred().reject() );
 	// prevent rogue ajax request
 	/* global $ */
 	sandbox.stub( $, 'ajax' ).returns( util.Deferred().resolve() );
@@ -58,14 +60,14 @@ QUnit.test( '#getPageLanguages (call)', function ( assert ) {
 } );
 
 QUnit.test( '#_getAPIResponseFromHTML', function ( assert ) {
-	var resp = pageGateway._getAPIResponseFromHTML(
+	const resp = pageGateway._getAPIResponseFromHTML(
 		util.parseHTML( page )
 	);
 	assert.propEqual( testData.getAPIResponseFromHTML.input, resp );
 } );
 
 QUnit.test( '#getSectionsFromHTML malformed (h2 before h1)', function ( assert ) {
-	var resp = pageGateway.getSectionsFromHTML(
+	const resp = pageGateway.getSectionsFromHTML(
 		util.parseHTML( page2 )
 	);
 	assert.propEqual( resp, [

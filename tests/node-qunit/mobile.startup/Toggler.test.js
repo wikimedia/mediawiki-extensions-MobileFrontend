@@ -1,15 +1,11 @@
-/* eslint-env es6 */
 /* global $ */
-var
+const
 	sinon = require( 'sinon' ),
 	dom = require( '../utils/dom' ),
 	jQuery = require( '../utils/jQuery' ),
 	oo = require( '../utils/oo' ),
 	mediawiki = require( '../utils/mw' ),
 	mustache = require( '../utils/mustache' ),
-	sandbox,
-	browser,
-	Toggler,
 	sectionTemplate = `
 		<h2>
 			<span class="mw-headline" id="First_Section">First Section</span>
@@ -32,6 +28,10 @@ var
 			</ol>
 		</section>
 `;
+let
+	sandbox,
+	browser,
+	Toggler;
 
 /**
  * Mobile toggling
@@ -66,7 +66,7 @@ QUnit.module( 'MobileFrontend Toggler.js', {
 } );
 
 QUnit.test( 'Mobile mode - Toggle section', function ( assert ) {
-	var
+	const
 		toggle = new Toggler( {
 			eventBus: new OO.EventEmitter(),
 			$container: this.$container,
@@ -91,7 +91,7 @@ QUnit.test( 'Mobile mode - Toggle section', function ( assert ) {
 } );
 
 QUnit.test( 'Mobile mode - Clicking a hash link to reveal an already open section', function ( assert ) {
-	var
+	const
 		toggle = new Toggler( {
 			eventBus: new OO.EventEmitter(),
 			$container: this.$container,
@@ -107,7 +107,7 @@ QUnit.test( 'Mobile mode - Clicking a hash link to reveal an already open sectio
 } );
 
 QUnit.test( 'Mobile mode - Reveal element', function ( assert ) {
-	var
+	const
 		toggle = new Toggler( {
 			eventBus: new OO.EventEmitter(),
 			$container: this.$container,
@@ -123,7 +123,7 @@ QUnit.test( 'Mobile mode - Reveal element', function ( assert ) {
 } );
 
 QUnit.test( 'Mobile mode - Clicking hash links', function ( assert ) {
-	var
+	const
 		toggle = new Toggler( {
 			eventBus: new OO.EventEmitter(),
 			$container: this.$container,
@@ -139,7 +139,7 @@ QUnit.test( 'Mobile mode - Clicking hash links', function ( assert ) {
 } );
 
 QUnit.test( 'Mobile mode - Tap event toggles section', function ( assert ) {
-	var
+	const
 		toggle = new Toggler( {
 			eventBus: new OO.EventEmitter(),
 			$container: this.$container,
@@ -158,7 +158,7 @@ QUnit.test( 'Mobile mode - Tap event toggles section', function ( assert ) {
 } );
 
 QUnit.test( 'Accessibility - Verify ARIA attributes', function ( assert ) {
-	var
+	const
 		toggle = new Toggler( {
 			eventBus: new OO.EventEmitter(),
 			$container: this.$container,
@@ -228,8 +228,7 @@ QUnit.test( 'Tablet mode - Open by default 2', function ( assert ) {
  * Accessibility
  */
 QUnit.test( 'Accessibility - Pressing space/ enter toggles a heading', function ( assert ) {
-	var $section = this.$container.find( '#section_1' ),
-		$content,
+	const $section = this.$container.find( '#section_1' ),
 		ev = $.Event( 'keypress' );
 
 	browser.isWideScreen.returns( false );
@@ -243,7 +242,7 @@ QUnit.test( 'Accessibility - Pressing space/ enter toggles a heading', function 
 		page: this.page
 	} );
 
-	$content = this.$container.find( '.collapsible-block' ).eq( 1 );
+	const $content = this.$container.find( '.collapsible-block' ).eq( 1 );
 
 	assert.strictEqual( $content.hasClass( 'open-block' ), false, 'check content is hidden at start' );
 
@@ -260,7 +259,7 @@ QUnit.test( 'Accessibility - Pressing space/ enter toggles a heading', function 
 
 QUnit.test( 'Clicking a link within a heading isn\'t triggering a toggle', function ( assert ) {
 
-	var $section = $( '#section_1' ),
+	const $section = $( '#section_1' ),
 		$content = $( '.collapsible-block' ).eq( 1 );
 
 	/* eslint-disable-next-line no-new */
@@ -279,7 +278,7 @@ QUnit.test( 'Clicking a link within a heading isn\'t triggering a toggle', funct
 
 QUnit.test( 'Toggling a section stores its state.', function ( assert ) {
 
-	var
+	const
 		toggle = new Toggler( {
 			eventBus: new OO.EventEmitter(),
 			$container: this.$container,
@@ -288,9 +287,7 @@ QUnit.test( 'Toggling a section stores its state.', function ( assert ) {
 		} ),
 		$section = this.$container.find( 'h2' ),
 		expandedSections = Toggler._getExpandedSections( this.page ),
-		mwStorageSetSpy = sandbox.spy( mw.storage, 'set' ),
-		mwStorageSetCall,
-		mwStorageSetCall2;
+		mwStorageSetSpy = sandbox.spy( mw.storage, 'set' );
 
 	assert.strictEqual( $.isEmptyObject( expandedSections[ this.title ] ),
 		true,
@@ -298,7 +295,7 @@ QUnit.test( 'Toggling a section stores its state.', function ( assert ) {
 	);
 
 	toggle.toggle( $section, this.page );
-	mwStorageSetCall = JSON.parse( mwStorageSetSpy.getCall( 0 ).args[1] );
+	const mwStorageSetCall = JSON.parse( mwStorageSetSpy.getCall( 0 ).args[1] );
 
 	assert.strictEqual( typeof mwStorageSetCall[ this.title ][ this.headline ],
 		'number',
@@ -306,7 +303,7 @@ QUnit.test( 'Toggling a section stores its state.', function ( assert ) {
 	);
 
 	toggle.toggle( $section, this.page );
-	mwStorageSetCall2 = JSON.parse( mwStorageSetSpy.getCall( 1 ).args[1] );
+	const mwStorageSetCall2 = JSON.parse( mwStorageSetSpy.getCall( 1 ).args[1] );
 
 	assert.strictEqual( mwStorageSetCall2[ this.title ][ this.headline ],
 		undefined,
@@ -316,13 +313,7 @@ QUnit.test( 'Toggling a section stores its state.', function ( assert ) {
 } );
 
 QUnit.test( 'Check for and remove obsolete stored sections.', function ( assert ) {
-	var
-		expandedSections,
-		mwStorageSetSpy,
-		localStorageValue,
-		localStorageRemovalValue;
-
-	localStorageValue = {};
+	const localStorageValue = {};
 	localStorageValue[ this.title ] = {};
 	localStorageValue[ this.title ][ this.headline ] = ( new Date( 1990, 1, 1 ) ).getTime();
 
@@ -330,16 +321,16 @@ QUnit.test( 'Check for and remove obsolete stored sections.', function ( assert 
 		return JSON.stringify( localStorageValue );
 	} );
 
-	expandedSections = Toggler._getExpandedSections( this.page );
+	const expandedSections = Toggler._getExpandedSections( this.page );
 	assert.strictEqual( typeof expandedSections[ this.title ][ this.headline ],
 		'number',
 		'manually created section state has been saved correctly'
 	);
 
-	mwStorageSetSpy = sandbox.spy( mw.storage, 'set' );
+	const mwStorageSetSpy = sandbox.spy( mw.storage, 'set' );
 
 	Toggler._cleanObsoleteStoredSections( this.page );
-	localStorageRemovalValue = JSON.stringify( [ 'expandedSections', '{"Toggle test":{}}' ] );
+	const localStorageRemovalValue = JSON.stringify( [ 'expandedSections', '{"Toggle test":{}}' ] );
 	assert.strictEqual(
 		JSON.stringify( mwStorageSetSpy.getCall( 0 ).args ),
 		localStorageRemovalValue,
@@ -349,7 +340,7 @@ QUnit.test( 'Check for and remove obsolete stored sections.', function ( assert 
 } );
 
 QUnit.test( 'Expanding already expanded section does not toggle it.', function ( assert ) {
-	var
+	const
 		toggle = new Toggler( {
 			eventBus: new OO.EventEmitter(),
 			$container: this.$container,
@@ -357,9 +348,7 @@ QUnit.test( 'Expanding already expanded section does not toggle it.', function (
 			page: this.page
 		} ),
 		$section = this.$container.find( 'h2' ),
-		expandedSections = Toggler._getExpandedSections( this.page ),
-		mwStorageSetSpy,
-		mwStorageSetCall;
+		expandedSections = Toggler._getExpandedSections( this.page );
 
 	assert.strictEqual( $.isEmptyObject( expandedSections[ this.title ] ),
 		true,
@@ -372,7 +361,7 @@ QUnit.test( 'Expanding already expanded section does not toggle it.', function (
 		'section does not have open-block class'
 	);
 
-	mwStorageSetSpy = sandbox.spy( mw.storage, 'set' );
+	const mwStorageSetSpy = sandbox.spy( mw.storage, 'set' );
 
 	// manually toggle the second section
 	toggle.toggle( $section, this.page );
@@ -383,8 +372,8 @@ QUnit.test( 'Expanding already expanded section does not toggle it.', function (
 		'revealed section has open-block class'
 	);
 
-	expandedSections = Toggler._getExpandedSections( this.page );
-	mwStorageSetCall = JSON.parse( mwStorageSetSpy.getCall( 0 ).args[1] );
+	Toggler._getExpandedSections( this.page );
+	const mwStorageSetCall = JSON.parse( mwStorageSetSpy.getCall( 0 ).args[1] );
 
 	assert.strictEqual( typeof mwStorageSetCall[this.title][ this.headline ],
 		'number',
@@ -402,10 +391,9 @@ QUnit.test( 'Expanding already expanded section does not toggle it.', function (
 
 QUnit.test( 'MobileFrontend toggle.js - Expand stored sections.', function ( assert ) {
 
-	var
+	const
 		$section = this.$container.find( 'h2' ).eq( 0 ),
-		expandedSections = Toggler._getExpandedSections( this.page ),
-		expandedSectionsFromToggle;
+		expandedSections = Toggler._getExpandedSections( this.page );
 
 	// Restore expanded sections only works on headings that are also section headings
 	this.$container.find( 'h2' ).addClass( 'section-heading' );
@@ -423,7 +411,7 @@ QUnit.test( 'MobileFrontend toggle.js - Expand stored sections.', function ( ass
 	sandbox.stub( mw.storage, 'get' ).callsFake( function () {
 		return JSON.stringify( expandedSections );
 	} );
-	expandedSectionsFromToggle = Toggler._getExpandedSections( this.page );
+	const expandedSectionsFromToggle = Toggler._getExpandedSections( this.page );
 	assert.strictEqual( typeof expandedSectionsFromToggle[ this.title ][ this.headline ],
 		'number',
 		'manually created section state has been saved correctly'
@@ -437,8 +425,8 @@ QUnit.test( 'MobileFrontend toggle.js - Expand stored sections.', function ( ass
 		page: this.page
 	} );
 
-	expandedSections = Toggler._getExpandedSections( this.page );
-	assert.strictEqual( typeof expandedSections[ this.title ][ this.headline ],
+	const expandedSections2 = Toggler._getExpandedSections( this.page );
+	assert.strictEqual( typeof expandedSections2[ this.title ][ this.headline ],
 		'number',
 		'manually created section state is still active after toggle.init()'
 	);

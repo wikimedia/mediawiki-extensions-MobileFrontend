@@ -1,10 +1,11 @@
-var
+const
 	jQuery = require( '../utils/jQuery' ),
 	dom = require( '../utils/dom' ),
 	mediaWiki = require( '../utils/mw' ),
 	oo = require( '../utils/oo' ),
 	sinon = require( 'sinon' ),
-	mustache = require( '../utils/mustache' ),
+	mustache = require( '../utils/mustache' );
+let
 	WatchList,
 	Icon,
 	sandbox;
@@ -36,7 +37,7 @@ QUnit.module( 'MobileFrontend WatchList.js', {
 } );
 
 QUnit.test( 'In watched mode', function ( assert ) {
-	var
+	const
 		stub = {
 			get: sandbox.stub()
 		},

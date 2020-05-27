@@ -1,20 +1,20 @@
-var
+const
 	dom = require( '../utils/dom' ),
 	jQuery = require( '../utils/jQuery' ),
 	mw = require( '../utils/mw' ),
 	mustache = require( '../utils/mustache' ),
 	oo = require( '../utils/oo' ),
 	// These both have heavy dependencies on jQuery so must be loaded later.
-	PageHTMLParser, util,
 	sinon = require( 'sinon' ),
 	PARSER_OUTPUT = '<div class="mw-parser-output">';
-/* eslint-disable one-var */
-/** @type {sinon.SinonSandbox} */ var sandbox;
-/** @type {typeof import('../../../src/mobile.startup/Page')} */ var stubPage;
-/** @type {typeof import('../../../src/mobile.startup/Page')} */ var mobileTocPage;
-/** @type {typeof import('../../../src/mobile.startup/Page')} */ var desktopPage;
-/** @type {typeof import('../../../src/mobile.startup/Page')} */ var sectionPage;
-/* eslint-enable one-var */
+let
+	PageHTMLParser, util;
+
+/** @type {sinon.SinonSandbox} */ let sandbox;
+/** @type {typeof import('../../../src/mobile.startup/Page')} */ let stubPage;
+/** @type {typeof import('../../../src/mobile.startup/Page')} */ let mobileTocPage;
+/** @type {typeof import('../../../src/mobile.startup/Page')} */ let desktopPage;
+/** @type {typeof import('../../../src/mobile.startup/Page')} */ let sectionPage;
 
 QUnit.module( 'MobileFrontend PageHTMLParser.js', {
 	beforeEach: function () {
@@ -126,7 +126,7 @@ QUnit.test( '#findInSectionLead', function ( assert ) {
 		[ 3, '', 'h4', 'selector does not match', '.foo' ],
 		[ 111, '', 'Non-existent section' ]
 	].forEach( function ( params, i ) {
-		var
+		const
 			section = params[0],
 			expect = params[1],
 			test = params[2],
@@ -182,7 +182,7 @@ QUnit.test( '#findInSectionLead', function ( assert ) {
 		[ 8, '.ambox', /[\s]*nested-ambox-parent,[\s]*nested-ambox-1,\s*nested-ambox-2[\s]*/, 'Nested elements in section' ],
 		[ 9, '.ambox', /[\s]*nested-ambox-parent,[\s]*nested-ambox-1,[\s]*nested-ambox-2[\s]*/, 'Nested elements in subsection' ]
 	].forEach( function ( testcase ) {
-		var result = sectionPage.findChildInSectionLead( testcase[0], testcase[1] );
+		const result = sectionPage.findChildInSectionLead( testcase[0], testcase[1] );
 		sinon.assert.match(
 			result.not( result.children() ).text(),
 			testcase[2]
@@ -192,35 +192,33 @@ QUnit.test( '#findInSectionLead', function ( assert ) {
 } );
 
 QUnit.test( '#getThumbnails', function ( assert ) {
-	var p, textPage, pLegacyUrls, thumbs, pNoViewer, pMetadata, pLazyImages, metadataTable,
-		pLazyImagesTypo, pMetadataNested;
-
-	p = new PageHTMLParser(
+	let thumbs;
+	const p = new PageHTMLParser(
 		util.parseHTML( '<div><a href="/wiki/File:Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg" class="image view-border-box"><img alt="Cyanolimnas cerverai by Allan Brooks cropped.jpg" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg/300px-Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg" width="300" height="303" data-file-width="454" data-file-height="459"></a></div>' )
 	);
-	textPage = new PageHTMLParser(
+	const textPage = new PageHTMLParser(
 		util.parseHTML( '<div></div>' )
 	);
-	pLegacyUrls = new PageHTMLParser(
+	const pLegacyUrls = new PageHTMLParser(
 		util.parseHTML( '<div><a href="/wikpa/index.php?title=File:Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg" class="image view-border-box"><img alt="Cyanolimnas cerverai by Allan Brooks cropped.jpg" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg/300px-Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg" width="300" height="303" data-file-width="454" data-file-height="459"></a></div>' )
 	);
 	thumbs = p.getThumbnails();
-	pNoViewer = new PageHTMLParser(
+	const pNoViewer = new PageHTMLParser(
 		util.parseHTML( '<div><a href="/wikpa/index.php?title=File:Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg" class="image view-border-box noviewer"><img alt="Cyanolimnas cerverai by Allan Brooks cropped.jpg" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg/300px-Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg" width="300" height="303" data-file-width="454" data-file-height="459"></a></div>' )
 	);
-	pMetadata = new PageHTMLParser(
+	const pMetadata = new PageHTMLParser(
 		util.parseHTML( '<div><a href="/wikpa/index.php?title=File:Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg" class="image view-border-box"><img alt="Cyanolimnas cerverai by Allan Brooks cropped.jpg" class="metadata" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg/300px-Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg" width="300" height="303" data-file-width="454" data-file-height="459"></a></div>' )
 	);
-	pMetadataNested = new PageHTMLParser(
+	const pMetadataNested = new PageHTMLParser(
 		util.parseHTML( '<div class="noviewer"><a href="/wikpa/index.php?title=File:Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg" class="image view-border-box"><img alt="Cyanolimnas cerverai by Allan Brooks cropped.jpg" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg/300px-Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg" width="300" height="303" data-file-width="454" data-file-height="459"></a></div>' )
 	);
-	pLazyImages = new PageHTMLParser(
+	const pLazyImages = new PageHTMLParser(
 		util.parseHTML( '<div><a href="/wiki/File:Design_portal_logo.jpg" class="image"><span class="lazy-image-placeholder" style="width: 28px;height: 28px;" data-src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Design_portal_logo.jpg/28px-Design_portal_logo.jpg" data-alt="icon" data-width="28" data-height="28" data-class="noviewer">&nbsp;</span></a></div>' )
 	);
-	pLazyImagesTypo = new PageHTMLParser(
+	const pLazyImagesTypo = new PageHTMLParser(
 		util.parseHTML( '<div><a href="/wiki/File:Design_portal_logo.jpg" class="image"><span class="lazy-image-placeholder" style="width: 28px;height: 28px;" data-src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Design_portal_logo.jpg/28px-Design_portal_logo.jpg" data-alt="icon" data-width="28" data-height="28" data-class="wot noviewerz bar">&nbsp;</span></a></div>' )
 	);
-	metadataTable = new PageHTMLParser(
+	const metadataTable = new PageHTMLParser(
 		util.parseHTML( '<div><table class="plainlinks metadata ambox ambox-content ambox-Unreferenced" role="presentation"><tr><td class="mbox-image"><div style="width:52px"><a href="/wiki/File:Question_book-new.svg" class="image"><span class="lazy-image-placeholder" style="width: 50px;height: 39px;" data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" data-alt="" data-width="50" data-height="39" data-srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x"> </span></a></div></td></tr></table>' )
 	);
 

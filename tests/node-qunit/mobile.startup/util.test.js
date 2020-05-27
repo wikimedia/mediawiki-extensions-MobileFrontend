@@ -1,11 +1,12 @@
-var util,
+let util;
+const
 	dom = require( '../utils/dom' ),
 	mw = require( '../utils/mw' ),
 	jQuery = require( '../utils/jQuery' ),
 	oo = require( '../utils/oo' ),
 	sinon = require( 'sinon' );
 
-/** @type {sinon.SinonSandbox} */ var sandbox; // eslint-disable-line one-var
+/** @type {sinon.SinonSandbox} */ let sandbox;
 
 QUnit.module( 'MobileFrontend util.js', {
 	beforeEach: function () {
@@ -23,7 +24,7 @@ QUnit.module( 'MobileFrontend util.js', {
 } );
 
 QUnit.test( 'Promise.all() success', function ( assert ) {
-	var p = util.Deferred(),
+	const p = util.Deferred(),
 		p2 = util.Deferred();
 
 	p.resolve( 'a' );
@@ -35,7 +36,7 @@ QUnit.test( 'Promise.all() success', function ( assert ) {
 } );
 
 QUnit.test( 'Promise.all() reject', function ( assert ) {
-	var p = util.Deferred(),
+	const p = util.Deferred(),
 		p2 = util.Deferred();
 
 	p.resolve( 'a' );
@@ -62,7 +63,7 @@ QUnit.test( 'grep()', function ( assert ) {
 } );
 
 QUnit.test( 'docReady()', function ( assert ) {
-	var done = assert.async();
+	const done = assert.async();
 
 	util.docReady( () => {
 		assert.ok( 'docReady calls the callback eventually' );
@@ -71,7 +72,7 @@ QUnit.test( 'docReady()', function ( assert ) {
 } );
 
 QUnit.test( 'Deferred() - resolve', function ( assert ) {
-	var deferred = new util.Deferred(),
+	const deferred = new util.Deferred(),
 		response = 'response';
 	deferred.resolve( response );
 	return deferred.then( function ( res ) {
@@ -80,7 +81,7 @@ QUnit.test( 'Deferred() - resolve', function ( assert ) {
 } );
 
 QUnit.test( 'Deferred() - reject', function ( assert ) {
-	var deferred = new util.Deferred(),
+	const deferred = new util.Deferred(),
 		response = 'response';
 	deferred.reject( response );
 	return deferred.catch( function ( error ) {
@@ -96,7 +97,7 @@ QUnit.test( 'getWindow()', function ( assert ) {
 } );
 
 QUnit.test( 'parseHTML()', function ( assert ) {
-	var htmlFragment = util.parseHTML( '<p>element content</p>', document );
+	const htmlFragment = util.parseHTML( '<p>element content</p>', document );
 	assert.strictEqual( typeof htmlFragment === 'object', true );
 	assert.strictEqual( htmlFragment[ 0 ].innerHTML, 'element content' );
 } );
@@ -109,7 +110,7 @@ QUnit.test( 'isNumeric()', function ( assert ) {
 } );
 
 QUnit.test( 'extend()', function ( assert ) {
-	var a = { a: 'apple' },
+	const a = { a: 'apple' },
 		b = { b: 'banana' };
 	util.extend( a, b );
 	assert.strictEqual( JSON.stringify( a ), '{"a":"apple","b":"banana"}' );
@@ -120,7 +121,7 @@ QUnit.test( 'escapeHash()', function ( assert ) {
 } );
 
 QUnit.test( 'isModifiedEvent() - true', function ( assert ) {
-	var testEl = document.createElement( 'div' );
+	const testEl = document.createElement( 'div' );
 
 	testEl.addEventListener( 'click', function ( ev ) {
 		assert.strictEqual( util.isModifiedEvent( ev ), true );
@@ -130,7 +131,7 @@ QUnit.test( 'isModifiedEvent() - true', function ( assert ) {
 } );
 
 QUnit.test( 'isModifiedEvent() - false', function ( assert ) {
-	var testEl = document.createElement( 'div' );
+	const testEl = document.createElement( 'div' );
 
 	testEl.addEventListener( 'click', function ( ev ) {
 		assert.strictEqual( util.isModifiedEvent( ev ), false );
@@ -140,7 +141,7 @@ QUnit.test( 'isModifiedEvent() - false', function ( assert ) {
 } );
 
 QUnit.test( 'repeatEvent', function ( assert ) {
-	var proxy = new OO.EventEmitter(),
+	const proxy = new OO.EventEmitter(),
 		src = new OO.EventEmitter(),
 		srcEventData = 'test data';
 

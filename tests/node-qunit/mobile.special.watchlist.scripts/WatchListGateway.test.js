@@ -1,6 +1,7 @@
-var
+let
 	WatchListGateway,
-	sandbox,
+	sandbox;
+const
 	jQuery = require( '../utils/jQuery' ),
 	dom = require( '../utils/dom' ),
 	mediaWiki = require( '../utils/mw' ),
@@ -124,13 +125,13 @@ QUnit.module( 'MobileFrontend WatchListGateway.js', {
 } );
 
 QUnit.test( 'loadWatchlist() loads results from the first page', function ( assert ) {
-	var gateway = new WatchListGateway( new mw.Api() );
+	const gateway = new WatchListGateway( new mw.Api() );
 
 	sandbox.stub( mw.Api.prototype, 'get' )
 		.returns( util.Deferred().resolve( response ) );
 
 	return gateway.loadWatchlist().then( function ( pages ) {
-		var params = mw.Api.prototype.get.firstCall.args[0];
+		const params = mw.Api.prototype.get.firstCall.args[0];
 
 		assert.strictEqual( params.continue, '', 'It should set the continue parameter' );
 
@@ -140,7 +141,7 @@ QUnit.test( 'loadWatchlist() loads results from the first page', function ( asse
 } );
 
 QUnit.test( 'loadWatchlist() loads results from the second page from last item of first', function ( assert ) {
-	var lastTitle = 'Albert Einstein',
+	const lastTitle = 'Albert Einstein',
 		gateway = new WatchListGateway( new mw.Api(), lastTitle ),
 		response1 = util.extend( {}, response, {
 			continue: {
@@ -148,15 +149,14 @@ QUnit.test( 'loadWatchlist() loads results from the second page from last item o
 					gwrcontinue: '0|Albert Einstein'
 				}
 			}
-		} ),
-		stub;
+		} );
 
 	// First time we call the API for the second page
-	stub = sandbox.stub( mw.Api.prototype, 'get' )
+	const stub = sandbox.stub( mw.Api.prototype, 'get' )
 		.returns( util.Deferred().resolve( response1 ) );
 
 	return gateway.loadWatchlist().then( function ( pages ) {
-		var params = mw.Api.prototype.get.firstCall.args[0];
+		const params = mw.Api.prototype.get.firstCall.args[0];
 
 		assert.strictEqual( params.continue, 'gwrcontinue||', 'It should set the continue parameter' );
 		assert.strictEqual( params.gwrcontinue, '0|Albert_Einstein', 'It should set the watchlistraw-specific continue parameter' );
@@ -178,7 +178,7 @@ QUnit.test( 'loadWatchlist() loads results from the second page from last item o
 } );
 
 QUnit.test( 'loadWatchlist() doesn\'t throw an error when no pages are returned', function ( assert ) {
-	var gateway = new WatchListGateway( new mw.Api() );
+	const gateway = new WatchListGateway( new mw.Api() );
 
 	sandbox.stub( mw.Api.prototype, 'get' )
 		.returns( util.Deferred().resolve( {
@@ -191,7 +191,7 @@ QUnit.test( 'loadWatchlist() doesn\'t throw an error when no pages are returned'
 } );
 
 QUnit.test( 'loadWatchlist() marks pages as new if necessary', function ( assert ) {
-	var gateway = new WatchListGateway( new mw.Api() );
+	const gateway = new WatchListGateway( new mw.Api() );
 
 	sandbox.stub( mw.Api.prototype, 'get' )
 		.returns( util.Deferred().resolve( response ) );

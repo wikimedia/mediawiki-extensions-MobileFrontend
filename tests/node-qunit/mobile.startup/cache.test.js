@@ -1,4 +1,4 @@
-var cache = require( '../../../src/mobile.startup/cache' ),
+const cache = require( '../../../src/mobile.startup/cache' ),
 	MemoryCache = cache.MemoryCache,
 	memoryCache = new MemoryCache();
 

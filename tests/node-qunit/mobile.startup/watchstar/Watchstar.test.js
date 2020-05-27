@@ -1,7 +1,8 @@
-var
+let
 	// feature dependencies
 	// require OO or mw global
-	watchstar, watchstarSpy,
+	watchstar, watchstarSpy;
+const
 	// setup dependencies
 	dom = require( '../../utils/dom' ),
 	jQuery = require( '../../utils/jQuery' ),
@@ -10,7 +11,7 @@ var
 	mustache = require( '../../utils/mustache' ),
 	oo = require( '../../utils/oo' );
 
-/** @type {sinon.SinonSandbox} */ var sandbox; // eslint-disable-line one-var
+/** @type {sinon.SinonSandbox} */ let sandbox;
 
 QUnit.module( 'MobileFrontend Watchstar.js', {
 	beforeEach: function () {
