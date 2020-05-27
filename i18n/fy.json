@@ -42,7 +42,7 @@
 	"mobile-frontend-edit-login-action": "<strong>Help {{GRAMMAR:lidw|{{SITENAME}}}} foarút.</strong><br />Meld jo oan om te bewurkjen.",
 	"mobile-frontend-edit-signup-action": "<strong>Help {{GRAMMAR:lidw|{{SITENAME}}}} foarút.</strong><br />Skriuw jo yn om te bewurkjen.",
 	"mobile-frontend-editor-anon": "Bewurkje sûnder oanmelden",
-	"mobile-frontend-editor-anonwarning": "<strong>Warskôging</strong>: Jo binne net oanmeld. By it fêstlizzen wurdt jo IP-adres opnaam yn 'e sideskiednis. At jo jo <strong>oanmelde</strong> of <strong>in akkount oanmeitsje</strong> ferskine jo bewurkings ûnder jo meidochnamme, njonken oare foardielen.",
+	"mobile-frontend-editor-anonwarning": "<strong>Warskôging:</strong> Jo binne net oanmeld. By it fêstlizzen wurdt jo IP-adres opnaam yn 'e sideskiednis. At jo jo <strong>oanmelde</strong> of <strong>in akkount oanmeitsje</strong> ferskine jo bewurkings ûnder jo meidochnamme, njonken oare foardielen.",
 	"mobile-frontend-editor-blocked-drawer-title": "Jo binne útsletten {{GRAMMAR:lidw|{{SITENAME}}}} te bewurkjen",
 	"mobile-frontend-editor-blocked-drawer-title-partial": "Jo binne útsletten dizze side te bewurkjen",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Reden fan 'e útsluting",
@@ -206,6 +206,8 @@
 	"mobile-frontend-user-page-desired-action": "Dizze side soe oanmakke en skreaun wurde moatte troch $1",
 	"mobile-frontend-user-page-create-owner-page-link-label": "Jowes oanmeitsje",
 	"mobile-frontend-user-page-create-user-page-link-label": "De side $1 oanmeitsje",
+	"mobile.css": "/* Al it CSS hjirre sil foar brûkers fan it mobile webstee laden wurde */",
+	"mobile.js": "/* Al it JavaScript hjirre sil foar brûkers fan it mobile webstee laden wurde */",
 	"nearby": "Siden oer dingen ticht by jo",
 	"tag-mobile_edit": "Mobile bewurking",
 	"tag-mobile_edit-description": "Bewurking dien fia mobile webstee as app",
@@ -236,7 +238,7 @@
 	"mobile-frontend-amc-outreach-enabled-message": "Avansearre modus is no ynskeakele. Jo kinne it útsette yn jo ynstellings.",
 	"mobile-frontend-amc-outreach-dismissed-message": "Jo kinne Avansearre modus altyd ynskeakelje yn jo Ynstellings.",
 	"mobile-frontend-beta-only": "Funksje allinne beskikber yn bêtamodus",
-	"mobile-frontend-console-recruit": "Mear witte oer hoe't wy ús mobile webstee bouwe: https://www.mediawiki.org/wiki/Extension:MobileFrontend",
+	"mobile-frontend-console-recruit": "Mear witte oer hoe't wy ús mobile webstee bouwe: https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Bysûndere siden op mobyl optimaal en ienfâldich meitsje (oanbefelle)",
 	"prefs-mobile": "Mobile foarkarren"
 }

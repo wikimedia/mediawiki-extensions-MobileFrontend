@@ -160,6 +160,7 @@
 	"mobile-frontend-media-load-fail-message": "載入此圖片時發生錯誤",
 	"mobile-frontend-media-load-fail-retry": "重新整理",
 	"mobile-frontend-missing-image": "圖片",
+	"mobile-frontend-tap-to-display-image": "輕觸來顯示圖片。",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 公里}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 公尺}}",
 	"mobile-frontend-nearby-error": "{{SITENAME}} 附近功能 有一些問題。",

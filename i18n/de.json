@@ -145,6 +145,7 @@
 	"mobile-frontend-media-load-fail-message": "Beim Laden dieses Bildes gab es einen Fehler.",
 	"mobile-frontend-media-load-fail-retry": "Aktualisieren",
 	"mobile-frontend-missing-image": "Bild",
+	"mobile-frontend-tap-to-display-image": "Tippe um das Bild anzuzeigen.",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|Ein|$1}} Kilometer",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|Ein|$1}} Meter",
 	"mobile-frontend-nearby-error": "„In der Nähe“ von {{SITENAME}} hat einige Probleme.",
