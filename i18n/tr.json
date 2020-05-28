@@ -144,7 +144,7 @@
 	"mobile-frontend-languages-variant-header": "{{#language:{{CONTENTLANG}}}} varyasyonları",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Desteklenen diller",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Diğer diller",
-	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Bu dilde ara",
+	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Bir dil arayın",
 	"mobile-frontend-last-modified-date": "Son düzenleme $1, $2 tarihinde yapıldı",
 	"mobile-frontend-last-modified-with-user-days": "[$4 Son {{GENDER:$1|değişiklik}} {{PLURAL:$3|$3 gün|$3 gün}} önce] {{PLURAL:$5|[$6 $2]|0=bir anonim kullanıcı}} tarafından yapıldı",
 	"mobile-frontend-last-modified-with-user-hours": "[$4 Son {{GENDER:$1|değişiklik}} {{PLURAL:$3|$3 saat|$3 saat}} önce] {{PLURAL:$5|[$6 $2]|0=bir anonim kullanıcı}} tarafından yapıldı",

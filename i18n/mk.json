@@ -130,6 +130,7 @@
 	"mobile-frontend-media-load-fail-message": "Се јави грешка при вчитувањето на сликава.",
 	"mobile-frontend-media-load-fail-retry": "Превчитај",
 	"mobile-frontend-missing-image": "Слика",
+	"mobile-frontend-tap-to-display-image": "Допрете за да се прикаже сликата.",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 км}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 м}}",
 	"mobile-frontend-nearby-error": "„Во близина“ на {{SITENAME}} се соочува со проблеми.",

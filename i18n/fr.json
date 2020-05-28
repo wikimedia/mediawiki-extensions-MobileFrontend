@@ -175,6 +175,7 @@
 	"mobile-frontend-media-load-fail-message": "Il y a eu une erreur en chargeant cette image.",
 	"mobile-frontend-media-load-fail-retry": "Actualiser",
 	"mobile-frontend-missing-image": "Image",
+	"mobile-frontend-tap-to-display-image": "Toucher pour afficher l'image.",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 km}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",
 	"mobile-frontend-nearby-error": "{{SITENAME}} à proximité éprouve quelques problèmes.",

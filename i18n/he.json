@@ -146,6 +146,7 @@
 	"mobile-frontend-media-load-fail-message": "אירעה שגיאה בעת טעינת התמונה הזאת.",
 	"mobile-frontend-media-load-fail-retry": "רענון",
 	"mobile-frontend-missing-image": "תמונה",
+	"mobile-frontend-tap-to-display-image": "יש ללחוץ כדי להציג את התמונה.",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|קילומטר אחד|$1 קילומטרים}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|מטר אחד|$1 מטרים}}",
 	"mobile-frontend-nearby-error": "לפעולת \"בסביבה\" של אתר {{SITENAME}} יש בעיות בהפעלה.",
