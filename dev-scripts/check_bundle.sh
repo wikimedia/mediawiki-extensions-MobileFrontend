@@ -21,7 +21,7 @@ Try running `npm run build` again or removing the node_modules folder and runnin
 eof
 			exit 1;
 	}
-	bundlesize
+	PATH="$(npm bin):$(npm bin -g):$PATH" bundlesize
 	echo 'Your changes look good!'
 	exit 0;
 }
