@@ -160,6 +160,7 @@
 	"mobile-frontend-media-load-fail-message": "Bu resim yüklenirken bir hata oluştu.",
 	"mobile-frontend-media-load-fail-retry": "Yenile",
 	"mobile-frontend-missing-image": "Resim",
+	"mobile-frontend-tap-to-display-image": "Resmi görüntülemek için dokunun.",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 km}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",
 	"mobile-frontend-nearby-error": "{{SITENAME}} Yakılarınızdaki bazı sorunlar yaşıyor.",
