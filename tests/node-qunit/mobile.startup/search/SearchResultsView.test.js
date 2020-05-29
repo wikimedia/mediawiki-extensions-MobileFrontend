@@ -16,6 +16,9 @@ QUnit.module( 'MobileFrontend mobile.startup/SearchResultsView.js', {
 		oo.setUp( sandbox, global );
 		mediaWiki.setUp( sandbox, global );
 		mustache.setUp( sandbox, global );
+		sandbox.stub( global.mw, 'msg' )
+			.withArgs( 'mobile-frontend-search-feedback-prompt' )
+			.returns( 'mobile-frontend-search-feedback-prompt' );
 		sandbox.stub( global.mw.config, 'get' )
 			.withArgs( 'wgCirrusSearchFeedbackLink' ).returns( FEEDBACK_LINK );
 

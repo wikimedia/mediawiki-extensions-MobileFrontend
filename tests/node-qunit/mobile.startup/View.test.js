@@ -30,12 +30,13 @@ QUnit.module( 'MobileFrontend mobile.startup/View', {
 } );
 
 QUnit.test( 'View', function ( assert ) {
-	const view = new View( {
-		el: 'body'
-	} );
-	assert.strictEqual( view.$el[ 0 ].outerHTML, '<body class="view-border-box"></body>',
+	const el = document.createElement( 'div' ),
+		view = new View( {
+			el
+		} );
+	assert.strictEqual( view.$el[ 0 ].outerHTML, '<div class="view-border-box"></div>',
 		'Views use el and treat as CSS selector. view border box by default' );
-	assert.strictEqual( view.$el[ 0 ].tagName.toUpperCase(), 'BODY', 'assign proper jQuery object to $el' );
+	assert.strictEqual( view.$el[ 0 ].tagName.toUpperCase(), 'DIV', 'assign proper jQuery object to $el' );
 } );
 
 QUnit.test( 'View, jQuery proxy functions', function ( assert ) {

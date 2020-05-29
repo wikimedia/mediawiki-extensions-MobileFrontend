@@ -85,7 +85,7 @@ module.exports = ( env, argv ) => ( {
 
 	// tests.mobilefrontend has additional dependencies but they're provided externally. This code
 	// can be removed if tests.mobilefrontend is removed.
-	externals: [ 'jquery', 'jsdom', 'oojs', 'sinon', 'qunit', 'fs', 'path' ],
+	externals: [ 'jquery', 'jsdom', 'oojs', 'qunit', 'fs', 'path' ],
 	resolve: {
 		alias: {
 			// This avoids leaking unnecessary code into the webpack test build
