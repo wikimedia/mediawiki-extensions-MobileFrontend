@@ -150,6 +150,7 @@
 	"mobile-frontend-media-load-fail-message": "Houve um erro ao carregar esta imagem.",
 	"mobile-frontend-media-load-fail-retry": "Atualizar",
 	"mobile-frontend-missing-image": "Imagem",
+	"mobile-frontend-tap-to-display-image": "Toque para exibir a imagem.",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 km}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",
 	"mobile-frontend-nearby-error": "{{SITENAME}} Redondezas está tendo algum problema.",

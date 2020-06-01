@@ -165,6 +165,7 @@
 	"mobile-frontend-media-load-fail-message": "Wystąpił błąd podczas ładowania tego obrazu.",
 	"mobile-frontend-media-load-fail-retry": "Odśwież",
 	"mobile-frontend-missing-image": "Grafika",
+	"mobile-frontend-tap-to-display-image": "Stuknij aby wyświetlić obraz.",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 km}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",
 	"mobile-frontend-nearby-error": "„{{SITENAME}} –  pobliżu” ma pewne problemy.",
