@@ -23,7 +23,6 @@ function OverlayManager( router, container ) {
 	this.router = router;
 	// use an object instead of an array for entries so that we don't
 	// duplicate entries that already exist
-	// eslint-disable-next-line no-restricted-properties
 	this.entries = {};
 	// stack of all the open overlays, stack[0] is the latest one
 	this.stack = [];
@@ -78,7 +77,7 @@ OverlayManager.prototype = {
 	 * @instance
 	 * @private
 	 * @param {Overlay} overlay to attach
-	*/
+	 */
 	_attachOverlay: function ( overlay ) {
 		if ( !overlay.$el.parents().length ) {
 			this.container.appendChild( overlay.$el[0] );
@@ -174,8 +173,7 @@ OverlayManager.prototype = {
 	 * @param {jQuery.Event} ev Event object.
 	 */
 	_checkRoute: function ( ev ) {
-		let current = this.stack[0],
-			match;
+		const current = this.stack[0];
 
 		// When entering an overlay for the first time,
 		// the manager should remember the user's scroll position
@@ -200,9 +198,7 @@ OverlayManager.prototype = {
 			return;
 		}
 
-		// eslint-disable-next-line no-restricted-properties
-		match = Object.keys( this.entries ).reduce( function ( m, id ) {
-			// eslint-disable-next-line no-restricted-properties
+		const match = Object.keys( this.entries ).reduce( function ( m, id ) {
 			return m || this._matchRoute( ev.path, this.entries[ id ] );
 		}.bind( this ), null );
 
@@ -338,7 +334,6 @@ OverlayManager.prototype = {
 				factory: factory
 			};
 
-		// eslint-disable-next-line no-restricted-properties
 		this.entries[route] = entry;
 		// Check if overlay should be shown for the current path.
 		// The DOM must fully load before we can show the overlay because Overlay relies on it.

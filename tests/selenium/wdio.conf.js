@@ -1,6 +1,9 @@
 /**
  * See also: http://webdriver.io/guide/testrunner/configurationfile.html
  */
+
+'use strict';
+
 const fs = require( 'fs' ),
 	saveScreenshot = require( 'wdio-mediawiki' ).saveScreenshot;
 

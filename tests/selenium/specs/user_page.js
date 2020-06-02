@@ -1,3 +1,5 @@
+'use strict';
+
 const { iAmUsingTheMobileSite,
 		iAmOnPage } = require( '../features/step_definitions/common_steps' ),
 	Api = require( 'wdio-mediawiki/Api' ),

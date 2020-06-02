@@ -1,3 +1,5 @@
+'use strict';
+
 const assert = require( 'assert' );
 const { iAmOnPage, theTextOfTheFirstHeadingShouldContain } = require( './common_steps' );
 const UserPage = require( '../support/pages/user_page' );

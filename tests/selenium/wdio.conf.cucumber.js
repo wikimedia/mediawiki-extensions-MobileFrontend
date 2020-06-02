@@ -1,3 +1,5 @@
+'use strict';
+
 const { config } = require( './wdio.conf' );
 
 config.specs = [ __dirname + '/features/*.feature' ];

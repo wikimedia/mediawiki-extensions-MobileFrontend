@@ -1,3 +1,5 @@
+'use strict';
+
 const assert = require( 'assert' ),
 	Api = require( 'wdio-mediawiki/Api' ),
 	{ ArticlePage, UserLoginPage, api } = require( '../support/world.js' );

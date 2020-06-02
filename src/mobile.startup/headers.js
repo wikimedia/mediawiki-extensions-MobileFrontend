@@ -11,7 +11,6 @@ var util = require( './util' ),
  * @return {Element}
  */
 function makeHeader( headingOrView, headerActions, headerCancel, additionalClassNames ) {
-	let $el;
 	const heading = typeof headingOrView === 'string' ? headingOrView : undefined,
 		templateData = {
 			hasActions: headerActions && headerActions.length,
@@ -30,7 +29,7 @@ function makeHeader( headingOrView, headerActions, headerCancel, additionalClass
 </div>
 		` ).render( templateData );
 	headerCancel = headerCancel || icons.cancel();
-	$el = util.parseHTML( html );
+	const $el = util.parseHTML( html );
 	// Truncate any text inside in the overlay header.
 	$el.find( 'h2 span' ).addClass( 'truncated-text' );
 	$el.find( '.header-cancel li' ).append(

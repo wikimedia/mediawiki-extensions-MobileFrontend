@@ -40,7 +40,7 @@ QUnit.module( 'MobileFrontend Drawer.js', {
 } );
 
 QUnit.test( 'visible on show()', function ( assert ) {
-	var
+	const
 		done = assert.async(),
 		onShow = () => {
 			assertVisible( subject );
@@ -73,7 +73,7 @@ QUnit.test( 'accepts onShow and events', function ( assert ) {
 } );
 
 QUnit.test( 'hidden on hide()', function ( assert ) {
-	var
+	const
 		done = assert.async(),
 		onBeforeHide = () => {
 			assertHidden( subject );
@@ -86,7 +86,7 @@ QUnit.test( 'hidden on hide()', function ( assert ) {
 } );
 
 QUnit.test( 'hidden on mask click', function ( assert ) {
-	var
+	const
 		done = assert.async(),
 		onBeforeHide = () => {
 			assertHidden( subject );

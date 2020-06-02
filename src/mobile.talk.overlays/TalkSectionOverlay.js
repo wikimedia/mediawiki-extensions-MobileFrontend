@@ -121,6 +121,7 @@ mfExtend( TalkSectionOverlay, Overlay, {
 	onBeforeExit: function ( exit, cancel ) {
 		var confirmMessage = mw.msg( 'mobile-frontend-editor-cancel-confirm' );
 
+		// eslint-disable-next-line no-alert
 		if ( !this.state.text || window.confirm( confirmMessage ) ) {
 			exit();
 		} else {

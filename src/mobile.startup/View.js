@@ -233,7 +233,6 @@ mfExtend( View, {
 	 */
 	postRender: function () {},
 
-	// eslint-disable-next-line valid-jsdoc
 	/**
 	 * Fill this.$el with template rendered using data if template is set.
 	 *

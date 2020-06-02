@@ -1,7 +1,5 @@
 var
-	util = require( './util' ),
 	storageKey = 'mobileFrontend/toast';
-
 
 /**
  * Show the previously saved toast data and delete it from storage
@@ -9,18 +7,16 @@ var
  * @instance
  * @private
  */
-function showPending () {
+function showPending() {
 	var data = mw.storage.get( storageKey );
 	if ( data ) {
 		data = JSON.parse( data );
 		mw.notify( data.content, data.options );
 		mw.storage.remove( storageKey );
 	}
-};
+}
 
 mw.requestIdleCallback( showPending );
-
-
 
 /**
  * Save the toast data in storage so that we can show it on page reload.
@@ -37,7 +33,7 @@ mw.requestIdleCallback( showPending );
  *  For backwards compatibility reasons if a string is given it will be
  *  treated as options.type
  */
-function showOnPageReload ( content, options ) {
+function showOnPageReload( content, options ) {
 	if ( mw.storage.get( storageKey ) ) {
 		mw.log.warn(
 			'A pending toast message already exits. ' +
@@ -49,6 +45,6 @@ function showOnPageReload ( content, options ) {
 		content: content,
 		options: options
 	} ) );
-};
+}
 
 module.exports = { showOnPageReload: showOnPageReload };
