@@ -6,6 +6,7 @@ var util = require( './util' ),
 
 /**
  * Extends the default params for an action query with otherParams
+ *
  * @param {Object} otherParams
  * @return {Object}
  */

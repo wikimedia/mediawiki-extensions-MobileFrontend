@@ -6,6 +6,7 @@ var
 
 /**
  * A {@link View} that pops up from the bottom of the screen.
+ *
  * @class Drawer
  * @extends View
  * @final
@@ -54,6 +55,7 @@ mfExtend( Drawer, View, {
 
 	/**
 	 * Shows panel after a slight delay
+	 *
 	 * @memberof View
 	 * @instance
 	 * @method
@@ -86,6 +88,7 @@ mfExtend( Drawer, View, {
 
 	/**
 	 * Hides panel
+	 *
 	 * @memberof View
 	 * @instance
 	 */

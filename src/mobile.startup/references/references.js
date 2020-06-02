@@ -7,6 +7,7 @@ var references,
 
 /**
  * Create a callback for clicking references
+ *
  * @param {Function} onNestedReferenceClick
  * @return {Function}
  */
@@ -27,6 +28,7 @@ function makeOnNestedReferenceClickHandler( onNestedReferenceClick ) {
 
 /**
  * Drawer for references
+ *
  * @uses Icon
  * @param {Object} props
  * @param {boolean} [props.error] whether an error has occurred
@@ -87,6 +89,7 @@ references = {
 	referenceDrawer,
 	/**
 	 * Fetch and render nested reference upon click
+	 *
 	 * @param {string} id of the reference to be retrieved
 	 * @param {Page} page to locate reference for
 	 * @param {string} refNumber the number it identifies as in the page

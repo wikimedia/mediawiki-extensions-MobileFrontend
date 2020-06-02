@@ -7,6 +7,7 @@ var m = require( '../moduleLoaderSingleton' ),
 
 /**
  * Produce an overlay for mediaViewer
+ *
  * @param {Object} options
  * @return {Overlay}
  */

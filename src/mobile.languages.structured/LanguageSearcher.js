@@ -111,6 +111,7 @@ mfExtend( LanguageSearcher, View, {
 	},
 	/**
 	 * Article link click event handler
+	 *
 	 * @memberof LanguageSearcher
 	 * @instance
 	 * @param {jQuery.Event} ev
@@ -123,6 +124,7 @@ mfExtend( LanguageSearcher, View, {
 	},
 	/**
 	 * Search input handler
+	 *
 	 * @memberof LanguageSearcher
 	 * @instance
 	 * @param {jQuery.Event} ev Event object.
@@ -132,6 +134,7 @@ mfExtend( LanguageSearcher, View, {
 	},
 	/**
 	 * Filter the language list to only show languages that match the current search term.
+	 *
 	 * @memberof LanguageSearcher
 	 * @instance
 	 * @param {string} val of search term (lowercase).

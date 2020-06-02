@@ -4,6 +4,7 @@
 // (see https://bugzilla.wikimedia.org/show_bug.cgi?id=44264)
 /**
  * mobileFrontend namespace
+ *
  * @class mw.mobileFrontend
  * @singleton
  */
@@ -30,6 +31,7 @@ skin = Skin.getSingleton();
 /**
  * Given 2 functions, it returns a function that will run both with it's
  * context and parameters and return the results combined
+ *
  * @private
  * @param {Function} fn1
  * @param {Function} fn2
@@ -46,6 +48,7 @@ function apply2( fn1, fn2 ) {
  * The `window`'s resize event debounced at 100 ms.
  * The `resize:throttled` event is the `window`'s
  * resize event throttled to 200 ms.
+ *
  * @event resize
  */
 
@@ -53,6 +56,7 @@ function apply2( fn1, fn2 ) {
  * The `window`'s scroll event debounced at 100 ms.
  * The `scroll:throttled` event is the `window`'s
  * scroll event throttled to 200 ms.
+ *
  * @event scroll
  */
 

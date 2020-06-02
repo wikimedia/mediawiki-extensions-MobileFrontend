@@ -1,5 +1,6 @@
 /**
  * Build a save failure message from the API response
+ *
  * @param {Object} data API response
  * @return {string} message HTML text describing the failure for display to the user
  */

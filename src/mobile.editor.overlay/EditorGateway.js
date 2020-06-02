@@ -3,6 +3,7 @@ var util = require( '../mobile.startup/util' ),
 
 /**
  * API that helps save and retrieve page content
+ *
  * @class EditorGateway
  *
  * @param {Object} options Configuration options
@@ -28,6 +29,7 @@ EditorGateway.prototype = {
 
 	/**
 	 * Get the block (if there is one) from the result.
+	 *
 	 * @memberof EditorGateway
 	 * @param {Object} pageObj Page object
 	 * @return {Object|null}
@@ -56,6 +58,7 @@ EditorGateway.prototype = {
 	},
 	/**
 	 * Get the content of a page.
+	 *
 	 * @memberof EditorGateway
 	 * @instance
 	 * @return {jQuery.Promise}
@@ -119,6 +122,7 @@ EditorGateway.prototype = {
 	/**
 	 * Mark content as modified and set changes to be submitted when #save
 	 * is invoked.
+	 *
 	 * @memberof EditorGateway
 	 * @instance
 	 * @param {string} content New section content.
@@ -135,6 +139,7 @@ EditorGateway.prototype = {
 	/**
 	 * Mark content as modified and set text that should be prepended to given
 	 * section when #save is invoked.
+	 *
 	 * @memberof EditorGateway
 	 * @instance
 	 * @param {string} text Text to be prepended.
@@ -146,6 +151,7 @@ EditorGateway.prototype = {
 
 	/**
 	 * Save the new content of the section, previously set using #setContent.
+	 *
 	 * @memberof EditorGateway
 	 * @instance
 	 * @param {Object} options Configuration options
@@ -166,6 +172,7 @@ EditorGateway.prototype = {
 
 		/**
 		 * Save content. Make an API request.
+		 *
 		 * @return {jQuery.Deferred}
 		 */
 		function saveContent() {
@@ -211,6 +218,7 @@ EditorGateway.prototype = {
 
 	/**
 	 * Abort any pending previews.
+	 *
 	 * @memberof EditorGateway
 	 * @instance
 	 */
@@ -222,6 +230,7 @@ EditorGateway.prototype = {
 
 	/**
 	 * Get page preview from the API and abort any existing previews.
+	 *
 	 * @memberof EditorGateway
 	 * @instance
 	 * @param {Object} options API query parameters

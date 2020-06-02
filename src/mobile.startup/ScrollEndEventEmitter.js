@@ -71,6 +71,7 @@ OO.mixinClass( ScrollEndEventEmitter, OO.EventEmitter );
 
 /**
  * Fired when scroll bottom has been reached.
+ *
  * @event ScrollEndEventEmitter#ScrollEndEventEmitter-scrollEnd
  */
 ScrollEndEventEmitter.EVENT_SCROLL_END = 'ScrollEndEventEmitter-scrollEnd';
@@ -78,6 +79,7 @@ ScrollEndEventEmitter.EVENT_SCROLL_END = 'ScrollEndEventEmitter-scrollEnd';
 mfExtend( ScrollEndEventEmitter, {
 	/**
 	 * Listen to scroll on window and notify this._onScroll
+	 *
 	 * @memberof ScrollEndEventEmitter
 	 * @instance
 	 * @private
@@ -90,6 +92,7 @@ mfExtend( ScrollEndEventEmitter, {
 	},
 	/**
 	 * Unbind scroll handler
+	 *
 	 * @memberof ScrollEndEventEmitter
 	 * @instance
 	 * @private
@@ -102,6 +105,7 @@ mfExtend( ScrollEndEventEmitter, {
 	},
 	/**
 	 * Scroll handler. Triggers load event when near the end of the container.
+	 *
 	 * @memberof ScrollEndEventEmitter
 	 * @instance
 	 * @private
@@ -116,6 +120,7 @@ mfExtend( ScrollEndEventEmitter, {
 	},
 	/**
 	 * Is the scroll position near the end of the container element?
+	 *
 	 * @memberof ScrollEndEventEmitter
 	 * @instance
 	 * @private
@@ -129,6 +134,7 @@ mfExtend( ScrollEndEventEmitter, {
 	},
 	/**
 	 * Enable the ScrollEndEventEmitter so that it triggers events.
+	 *
 	 * @memberof ScrollEndEventEmitter
 	 * @instance
 	 */
@@ -138,6 +144,7 @@ mfExtend( ScrollEndEventEmitter, {
 	},
 	/**
 	 * Disable the ScrollEndEventEmitter so that it doesn't trigger events.
+	 *
 	 * @memberof ScrollEndEventEmitter
 	 * @instance
 	 */
@@ -147,6 +154,7 @@ mfExtend( ScrollEndEventEmitter, {
 	},
 	/**
 	 * Set the element to compare to scroll position to
+	 *
 	 * @memberof ScrollEndEventEmitter
 	 * @instance
 	 * @param {jQuery.Object} $el jQuery element where we want to listen for

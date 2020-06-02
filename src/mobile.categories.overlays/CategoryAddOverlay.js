@@ -9,6 +9,7 @@ var
 
 /**
  * Displays the list of categories for a page
+ *
  * @class CategoryAddOverlay
  * @extends Overlay
  * @uses CategoryGateway
@@ -86,6 +87,7 @@ mfExtend( CategoryAddOverlay, Overlay, {
 
 	/**
 	 * Handle a click on an added category
+	 *
 	 * @memberof CategoryAddOverlay
 	 * @instance
 	 * @param {jQuery.Event} ev
@@ -102,6 +104,7 @@ mfExtend( CategoryAddOverlay, Overlay, {
 	/**
 	 * Handle the click on the save button. Builds a string of new categories
 	 * and add it to the article.
+	 *
 	 * @memberof CategoryAddOverlay
 	 * @instance
 	 */

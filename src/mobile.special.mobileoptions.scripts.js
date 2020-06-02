@@ -9,6 +9,7 @@ var storage = mw.storage,
 
 /**
  * Notifies the user that settings were asynchronously saved.
+ *
  * @param {boolean} [isPending] if set toast will show after page has been reloaded.
  */
 function notify( isPending ) {
@@ -20,6 +21,7 @@ function notify( isPending ) {
 }
 /**
  * Creates a label for use with a form input
+ *
  * @param {string} heading
  * @param {string} description
  * @return {OO.ui.LabelWidget}
@@ -40,6 +42,7 @@ function createLabel( heading, description ) {
 
 /**
  * Adds a font changer field to the form
+ *
  * @param {jQuery.Object} $form
  */
 function addFontChangerToForm( $form ) {
@@ -84,6 +87,7 @@ function addFontChangerToForm( $form ) {
 
 /**
  * Adds an expand all sections field to the form
+ *
  * @param {jQuery.Object} $form
  */
 function addExpandAllSectionsToForm( $form ) {

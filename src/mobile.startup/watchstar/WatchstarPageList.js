@@ -12,6 +12,7 @@ var PageList = require( '../PageList' ),
 
 /**
  * List of items page view
+ *
  * @class WatchstarPageList
  * @uses Page
  * @uses WatchstarGateway

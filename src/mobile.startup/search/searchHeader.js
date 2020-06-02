@@ -4,6 +4,7 @@ const formHeader = require( '../headers' ).formHeader,
 
 /**
  * Generate a search header
+ *
  * @param {string} placeholderMsg
  * @param {string} action
  * @param {Function} onInput

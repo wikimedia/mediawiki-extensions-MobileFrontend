@@ -20,6 +20,7 @@ class PageHTMLParser {
 	 * Find the heading in the page.
 	 * This has the benefit of excluding any additional h2s and h3s that may
 	 * have been added programatically.
+	 *
 	 * @param {number} sectionIndex as defined by the PHP parser.
 	 *  It should correspond to the section id
 	 *  used in the edit link for the section.
@@ -52,6 +53,7 @@ class PageHTMLParser {
 	 *
 	 * This code should work on desktop (PHP parser HTML)
 	 * as well as mobile formatted HTML (PHP parser + MobileFormatter)
+	 *
 	 * @param {number} sectionIndex as defined by the PHP parser. It should correspond to
 	 *  the section id used in the edit link for the section.
 	 *  Note, confusingly, this is different from section "ID" which is
@@ -111,6 +113,7 @@ class PageHTMLParser {
 
 	/**
 	 * Get the lead section of the page view.
+	 *
 	 * @return {jQuery.Object|null}
 	 */
 	getLeadSectionElement() {
@@ -143,6 +146,7 @@ class PageHTMLParser {
 	 * e.g. `<div class="noviewer"><a class="image"><img></a></div>` is not a valid thumbnail
 	 * `<a class="image noviewer"><img></a>` is not a valid thumbnail
 	 * `<a class="image"><img class="noviewer"></a>` is not a valid thumbnail
+	 *
 	 * @param {jQuery} [$el] Container to search, defaults to this.$el.
 	 * @return {Thumbnail[]}
 	 */
@@ -189,6 +193,7 @@ class PageHTMLParser {
 
 	/**
 	 * Returns a jQuery object representing all redlinks on the page.
+	 *
 	 * @return {jQuery.Object}
 	 */
 	getRedLinks() {

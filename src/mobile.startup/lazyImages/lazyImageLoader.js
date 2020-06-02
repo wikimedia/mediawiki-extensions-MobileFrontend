@@ -14,6 +14,7 @@ function queryPlaceholders( root ) {
 
 /**
  * Load an image on demand
+ *
  * @param {HTMLElement[]} placeholders a list of images that have not been loaded.
  * @return {JQuery.Deferred}
  */
@@ -27,6 +28,7 @@ function loadImages( placeholders ) {
 
 /**
  * Load an image on demand
+ *
  * @param {HTMLElement} placeholder
  * @return {{promise: JQuery.Deferred<'load'|'error'>, image: HTMLImageElement}}
  */

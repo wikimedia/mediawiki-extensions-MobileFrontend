@@ -4,11 +4,13 @@ var LocationProvider,
 
 /**
  * API for retrieving location from user device
+ *
  * @class LocationProvider
  */
 LocationProvider = {
 	/**
 	 * Detect if browser supports geolocation
+	 *
 	 * @memberof LocationProvider
 	 * @instance
 	 * @return {boolean}
@@ -21,6 +23,7 @@ LocationProvider = {
 	 * Obtain users current location and return a deferred object with the
 	 * longitude and latitude values
 	 * Resolve return object with 'incompatible' if browser doesn't support geo location
+	 *
 	 * @memberof LocationProvider
 	 * @instance
 	 * @return {jQuery.Deferred}

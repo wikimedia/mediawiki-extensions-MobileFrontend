@@ -3,6 +3,7 @@ var
 
 /**
  * Show the previously saved toast data and delete it from storage
+ *
  * @memberof Toast
  * @instance
  * @private
@@ -24,6 +25,7 @@ mw.requestIdleCallback( showPending );
  * If yes, output a warning message and discard this message.
  * This is to ensure that the page needs to be reloaded before adding
  * a new message for showing later.
+ *
  * @memberof Toast
  * @instance
  * @param {string} content Content to be placed in element

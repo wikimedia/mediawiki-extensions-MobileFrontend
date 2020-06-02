@@ -5,6 +5,7 @@ var util = require( './../mobile.startup/util' ),
 
 /**
  * Shows the user a load failure message
+ *
  * @class LoadErrorMessage
  * @extends View
  * @fires LoadErrorMessage#retry
@@ -59,6 +60,7 @@ mfExtend( LoadErrorMessage, View, {
 
 	/**
 	 * Event handler for retry event
+	 *
 	 * @param {jQuery.Event} ev
 	 * @return {boolean} Returns false to prevent default behavior for links and
 	 * stop the event from propagating
@@ -68,6 +70,7 @@ mfExtend( LoadErrorMessage, View, {
 	onRetry: function () {
 		/**
 		 * Triggered when retry button is clicked.
+		 *
 		 * @event LoadErrorMessage#retry
 		 */
 		this.emit( 'retry' );

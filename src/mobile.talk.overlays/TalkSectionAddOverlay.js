@@ -8,6 +8,7 @@ var
 
 /**
  * Overlay for adding a talk section
+ *
  * @class TalkSectionAddOverlay
  * @extends Overlay
  *
@@ -90,6 +91,7 @@ mfExtend( TalkSectionAddOverlay, Overlay, {
 	},
 	/**
 	 * Handles an input into a textarea and enables or disables the submit button
+	 *
 	 * @memberof TalkSectionAddOverlay
 	 * @param {string} subject
 	 * @param {string} body
@@ -110,6 +112,7 @@ mfExtend( TalkSectionAddOverlay, Overlay, {
 	},
 	/**
 	 * Handles a click on the save button
+	 *
 	 * @memberof TalkSectionAddOverlay
 	 * @instance
 	 */
@@ -148,6 +151,7 @@ mfExtend( TalkSectionAddOverlay, Overlay, {
 	},
 	/**
 	 * Save new talk section
+	 *
 	 * @memberof TalkSectionAddOverlay
 	 * @instance
 	 * @return {jQuery.Deferred} Object that either will be resolved with ok parameter

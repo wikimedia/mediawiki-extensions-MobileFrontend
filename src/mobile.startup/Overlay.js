@@ -8,6 +8,7 @@ var
 
 /**
  * Mobile modal window
+ *
  * @class Overlay
  * @extends View
  * @uses Icon
@@ -77,6 +78,7 @@ mfExtend( Overlay, View, {
 
 	/**
 	 * Shows the spinner right to the input field.
+	 *
 	 * @memberof Overlay
 	 * @instance
 	 * @method
@@ -87,6 +89,7 @@ mfExtend( Overlay, View, {
 
 	/**
 	 * Hide the spinner near to the input field.
+	 *
 	 * @memberof Overlay
 	 * @instance
 	 * @method
@@ -120,6 +123,7 @@ mfExtend( Overlay, View, {
 
 	/**
 	 * ClickBack event handler
+	 *
 	 * @memberof Overlay
 	 * @instance
 	 * @param {Object} ev event object
@@ -139,6 +143,7 @@ mfExtend( Overlay, View, {
 	},
 	/**
 	 * Attach overlay to current view and show it.
+	 *
 	 * @memberof Overlay
 	 * @instance
 	 */
@@ -163,6 +168,7 @@ mfExtend( Overlay, View, {
 	/**
 	 * Detach the overlay from the current view
 	 * Should not be overriden as soon to be deprecated.
+	 *
 	 * @memberof Overlay
 	 * @instance
 	 * @final
@@ -183,6 +189,7 @@ mfExtend( Overlay, View, {
 
 		/**
 		 * Fired when the overlay is closed.
+		 *
 		 * @event Overlay#hide
 		 */
 		this.emit( 'hide' );
@@ -195,6 +202,7 @@ mfExtend( Overlay, View, {
 	 * Also hide .hideable elements
 	 * Can't use jQuery's hide() and show() because show() sets display: block.
 	 * And we want display: table for headers.
+	 *
 	 * @memberof Overlay
 	 * @instance
 	 * @protected
@@ -208,6 +216,7 @@ mfExtend( Overlay, View, {
 
 /**
  * Factory method for an overlay with a single child
+ *
  * @memberof Overlay
  * @instance
  * @protected

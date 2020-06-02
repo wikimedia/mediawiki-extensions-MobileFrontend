@@ -9,6 +9,7 @@ var EditorOverlayBase = require( './EditorOverlayBase' ),
 
 /**
  * Overlay for VisualEditor view
+ *
  * @class VisualEditorOverlay
  * @extends EditorOverlayBase
  *
@@ -101,6 +102,7 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 	editor: 'visualeditor',
 	/**
 	 * Destroy the existing VisualEditor target.
+	 *
 	 * @memberof VisualEditorOverlay
 	 * @instance
 	 */
@@ -216,6 +218,7 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 	},
 	/**
 	 * Reveal the editing interface.
+	 *
 	 * @memberof VisualEditorOverlay
 	 * @instance
 	 */
@@ -224,6 +227,7 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 	},
 	/**
 	 * Loads an {SourceEditorOverlay} and replaces the existing {VisualEditorOverlay}
+	 *
 	 * @memberof VisualEditorOverlay
 	 * @instance
 	 * @param {jQuery.Promise} [dataPromise] Optional promise for loading content

@@ -23,6 +23,7 @@ module.exports = {
 	 *
 	 * The icon should be used to inform the user that the front-end is
 	 * communicating with the back-end.
+	 *
 	 * @memberof icons
 	 * @instance
 	 * @return {Icon}
@@ -40,6 +41,7 @@ module.exports = {
 	 *
 	 * The icon should be used to inform the user that the front-end is
 	 * communicating with the back-end.
+	 *
 	 * @memberof icons
 	 * @instance
 	 * @param {string} [variant] defaults to `base20`.
@@ -60,6 +62,7 @@ module.exports = {
 	 *
 	 * The icon should be used to inform the user that the front-end is
 	 * communicating with the back-end.
+	 *
 	 * @memberof icons
 	 * @instance
 	 * @param {Object} [options] See `Icon` for more details

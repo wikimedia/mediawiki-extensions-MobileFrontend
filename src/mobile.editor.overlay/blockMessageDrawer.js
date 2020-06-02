@@ -16,6 +16,7 @@ var Drawer = require( '../mobile.startup/Drawer' ),
 /**
  * This creates the drawer at the bottom of the screen that appears when a
  * blocked user tries to edit.
+ *
  * @param {BlockMessageOptions} props
  * @return {Drawer}
  */
