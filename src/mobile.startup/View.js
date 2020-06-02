@@ -374,7 +374,7 @@ mfExtend( View, {
  * @memberof View
  * @instance
  * @func append
- * @param {...(string|Node|Node[]|JQuery)} contents
+ * @param {...(string|Node|Node[]|jQuery)} contents
  * @return {this}
  */
 
@@ -382,7 +382,7 @@ mfExtend( View, {
  * @memberof View
  * @instance
  * @func append
- * @param {function(number, string): string|Node|Node[]|JQuery} contents
+ * @param {function(number, string): string|Node|Node[]|jQuery} contents
  * @return {this}
  */
 
@@ -390,7 +390,7 @@ mfExtend( View, {
  * @memberof View
  * @instance
  * @func prepend
- * @param {...(string|Node|Node[]|JQuery)} contents
+ * @param {...(string|Node|Node[]|jQuery)} contents
  * @return {this}
  */
 
@@ -398,7 +398,7 @@ mfExtend( View, {
  * @memberof View
  * @instance
  * @func prepend
- * @param {function(number, string): string|Node|Node[]|JQuery} contents
+ * @param {function(number, string): string|Node|Node[]|jQuery} contents
  * @return {this}
  */
 
@@ -406,7 +406,7 @@ mfExtend( View, {
  * @memberof View
  * @instance
  * @func appendTo
- * @param {string|Node|Node[]|JQuery} target
+ * @param {string|Node|Node[]|jQuery} target
  * @return {this}
  */
 
@@ -414,7 +414,7 @@ mfExtend( View, {
  * @memberof View
  * @instance
  * @func prependTo
- * @param {string|Node|Node[]|JQuery} target
+ * @param {string|Node|Node[]|jQuery} target
  * @return {this}
  */
 
@@ -422,7 +422,7 @@ mfExtend( View, {
  * @memberof View
  * @instance
  * @func after
- * @param {...(string|Node|Node[]|JQuery)} contents
+ * @param {...(string|Node|Node[]|jQuery)} contents
  * @return {this}
  */
 
@@ -430,7 +430,7 @@ mfExtend( View, {
  * @memberof View
  * @instance
  * @func after
- * @param {function(number, string): string|Node|Node[]|JQuery} contents
+ * @param {function(number, string): string|Node|Node[]|jQuery} contents
  * @return {this}
  */
 
@@ -438,7 +438,7 @@ mfExtend( View, {
  * @memberof View
  * @instance
  * @func before
- * @param {...(string|Node|Node[]|JQuery)} contents
+ * @param {...(string|Node|Node[]|jQuery)} contents
  * @return {this}
  */
 
@@ -446,7 +446,7 @@ mfExtend( View, {
  * @memberof View
  * @instance
  * @func before
- * @param {function(number, string): string|Node|Node[]|JQuery} contents
+ * @param {function(number, string): string|Node|Node[]|jQuery} contents
  * @return {this}
  */
 
@@ -460,7 +460,7 @@ mfExtend( View, {
  * @memberof View
  * @instance
  * @func insertAfter
- * @param {string|Node|Node[]|JQuery} target
+ * @param {string|Node|Node[]|jQuery} target
  * @return {this}
  */
 
@@ -468,7 +468,7 @@ mfExtend( View, {
  * @memberof View
  * @instance
  * @func insertBefore
- * @param {string|Node|Node[]|JQuery} target
+ * @param {string|Node|Node[]|jQuery} target
  * @return {this}
  */
 

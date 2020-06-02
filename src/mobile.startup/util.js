@@ -196,7 +196,7 @@ module.exports = {
 	 *
 	 * T223927: We depend on the global Mustache brought in by the
 	 * mediawiki.template.mustache module but do not delegate to
-	 * mediawiki.template.mustache.js because its render method returns a JQuery
+	 * mediawiki.template.mustache.js because its render method returns a jQuery
 	 * object, but our MobileFrontend code depends on .render returning a string.
 	 *
 	 * @param {string} source code of template that is Mustache compatible.

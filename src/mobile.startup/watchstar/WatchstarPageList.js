@@ -69,7 +69,7 @@ mfExtend( WatchstarPageList, PageList, {
 	},
 
 	/**
-	 * @param {JQuery.Element} $items
+	 * @param {jQuery.Element} $items
 	 * @param {WatchStatusMap} statuses
 	 * @return {void}
 	 */
@@ -84,7 +84,7 @@ mfExtend( WatchstarPageList, PageList, {
 	 * @instance
 	 * @param {PageID[]} ids
 	 * @param {PageTitle[]} titles
-	 * @return {JQuery.Deferred<WatchStatusMap>}
+	 * @return {jQuery.Deferred<WatchStatusMap>}
 	 */
 	getPages: function ( ids, titles ) {
 		// Rendering Watchstars for anonymous users is not useful. Short-circuit
@@ -97,7 +97,7 @@ mfExtend( WatchstarPageList, PageList, {
 	},
 
 	/**
-	 * @param {JQuery.Element} $items
+	 * @param {jQuery.Element} $items
 	 * @return {PageTitleToPageIDMap}
 	 * @memberof WatchstarPageList
 	 * @instance
@@ -114,7 +114,7 @@ mfExtend( WatchstarPageList, PageList, {
 	},
 
 	/**
-	 * @param {JQuery.Element} $items
+	 * @param {jQuery.Element} $items
 	 * @param {WatchStatusMap} statuses
 	 * @return {void}
 	 */
@@ -144,7 +144,7 @@ mfExtend( WatchstarPageList, PageList, {
 	},
 
 	/**
-	 * @param {JQuery.Object} $item
+	 * @param {jQuery.Object} $item
 	 * @param {Page} page
 	 * @param {WatchStatus} watched
 	 */

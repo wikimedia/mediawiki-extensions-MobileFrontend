@@ -14,7 +14,7 @@ var browser = require( './Browser' ).getSingleton(),
  * @prop {boolean} expanded True if section is opened, false if closed.
  * @prop {Page} page
  * @prop {boolean} isReferenceSection
- * @prop {JQuery.Object} $heading
+ * @prop {jQuery.Object} $heading
  */
 
 /**
