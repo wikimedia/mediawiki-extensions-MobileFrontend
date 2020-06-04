@@ -289,7 +289,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 			// Edge case.
 			// I suspect this is here because revisions may exist but may have been hidden.
 			$out->addHTML(
-				Html::warningBox( $this->msg( 'mobile-frontend-history-no-results' ) ) );
+				Html::warningBox( $this->msg( 'mobile-frontend-history-no-results' )->parse() ) );
 		}
 	}
 

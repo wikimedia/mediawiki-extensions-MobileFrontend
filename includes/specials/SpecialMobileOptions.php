@@ -139,7 +139,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 		if ( $this->getRequest()->getCheck( 'success' ) ) {
 			$out->wrapWikiMsg(
 				MobileUI::contentElement(
-					Html::successBox( $this->msg( 'savedprefs' ) )
+					Html::successBox( $this->msg( 'savedprefs' )->parse() )
 				)
 			);
 		}
