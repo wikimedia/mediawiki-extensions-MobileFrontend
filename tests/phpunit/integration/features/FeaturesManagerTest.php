@@ -37,9 +37,10 @@ class FeaturesManagerTest extends MediaWikiTestCase {
 		$manager = new FeaturesManager( $userModes );
 		$this->setTemporaryHook( 'MobileFrontendFeaturesRegistration',
 			function ( $actual ) use ( &$called, $manager ) {
-			$this->assertSame( $manager, $actual );
-			$called = true;
-		 } );
+				$this->assertSame( $manager, $actual );
+				$called = true;
+			}
+		);
 		$manager->useHookToRegisterExtensionOrSkinFeatures();
 		$this->assertTrue( $called,
 			'The MobileFrontendFeaturesRegistration wasn\'t executed' );
