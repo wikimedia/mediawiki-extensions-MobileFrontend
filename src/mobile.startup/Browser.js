@@ -5,12 +5,14 @@ var
 /**
  * Memoize a class method. Caches the result of the method based on the
  * arguments. Instances do not share a cache.
+ *
  * @param {Function} method Method to be memoized
  * @return {Function}
  */
 function memoize( method ) {
 	/**
 	 * Memoized version of the method
+	 *
 	 * @return {Function}
 	 */
 	var memoized = function () {
@@ -28,6 +30,7 @@ function memoize( method ) {
 
 /**
  * Representation of user's current browser
+ *
  * @class Browser
  * @param {string} ua the user agent of the current browser
  * @param {jQuery.Object} $container an element to associate with the Browser object
@@ -41,6 +44,7 @@ Browser.prototype = {
 	/**
 	 * Returns whether the current browser is an ios device.
 	 * FIXME: jquery.client does not support iPad detection so we cannot use it.
+	 *
 	 * @memberof Browser
 	 * @instance
 	 * @param {number} [version] integer describing a specific version you want to test against.
@@ -70,6 +74,7 @@ Browser.prototype = {
 	} ),
 	/**
 	 * Determine if a device has a widescreen.
+	 *
 	 * @memberof Browser
 	 * @instance
 	 * @return {boolean}
@@ -82,6 +87,7 @@ Browser.prototype = {
 	} ),
 	/**
 	 * Whether touchstart and other touch events are supported by the current browser.
+	 *
 	 * @memberof Browser
 	 * @instance
 	 * @return {boolean}
@@ -91,6 +97,7 @@ Browser.prototype = {
 	} ),
 	/**
 	 * Detect if browser supports geolocation
+	 *
 	 * @memberof Browser
 	 * @instance
 	 * @return {boolean}

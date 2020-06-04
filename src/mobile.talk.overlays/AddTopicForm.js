@@ -5,6 +5,7 @@ const
 
 /**
  * Create a panel with a child
+ *
  * @param {jQuery.Object} $child
  * @return {Panel}
  */
@@ -16,6 +17,7 @@ function makePanel( $child ) {
 
 /**
  * Form for adding a talk section
+ *
  * @class AddTopicForm
  * @extends View
  *
@@ -83,6 +85,7 @@ mfExtend( AddTopicForm, View, {
 	},
 	/**
 	 * Handles an input into a textarea and enables or disables the submit button
+	 *
 	 * @memberof AddTopicForm
 	 * @instance
 	 */

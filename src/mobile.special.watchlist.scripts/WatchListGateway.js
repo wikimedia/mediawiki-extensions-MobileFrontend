@@ -32,6 +32,7 @@ function WatchListGateway( api, lastTitle ) {
 WatchListGateway.prototype = {
 	/**
 	 * Load the list of items on the watchlist
+	 *
 	 * @return {jQuery.Deferred}
 	 */
 	loadWatchlist: function () {
@@ -62,6 +63,7 @@ WatchListGateway.prototype = {
 
 	/**
 	 * Parse api response data into pagelist item format
+	 *
 	 * @param {Object[]} data
 	 * @return {Page[]}
 	 */

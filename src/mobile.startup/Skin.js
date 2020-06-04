@@ -55,6 +55,7 @@ mfExtend( Skin, View, {
 
 		/**
 		 * Fired when the skin is clicked.
+		 *
 		 * @event Skin#click
 		 */
 		this.$el.find( '#mw-mf-page-center' ).on( 'click', ( ev ) => {
@@ -65,6 +66,7 @@ mfExtend( Skin, View, {
 	/**
 	 * Returns the appropriate license message including links/name to
 	 * terms of use (if any) and license page
+	 *
 	 * @memberof Skin
 	 * @instance
 	 * @return {string}
@@ -99,6 +101,7 @@ mfExtend( Skin, View, {
 
 /**
  * Get a skin singleton
+ *
  * @return {Skin}
  */
 Skin.getSingleton = function () {

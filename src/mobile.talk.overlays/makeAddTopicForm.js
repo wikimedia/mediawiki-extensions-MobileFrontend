@@ -4,6 +4,7 @@ const AddTopicForm = require( './AddTopicForm' ),
 /**
  * Backwards compatible method for obtaining a TalkOverlay
  * used by Minerva until it updates itself.
+ *
  * @param {Object} options Configuration options
  * @param {string} options.licenseMsg license text (HTML strings accepted)
  * @param {Function} [options.onTextInput] callback for when text changes

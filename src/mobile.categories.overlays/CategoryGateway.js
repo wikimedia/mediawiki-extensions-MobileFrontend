@@ -6,6 +6,7 @@ var
 
 /**
  * Api for CategoryOverlay
+ *
  * @class CategoryGateway
  * @extends SearchGateway
  */
@@ -31,6 +32,7 @@ prototype = {
 	searchNamespace: 14,
 	/**
 	 * Saves the categories passed to this function to the page
+	 *
 	 * @memberof CategoryGateway
 	 * @instance
 	 * @param {string} title Title of the current page (to add the categories to)
@@ -47,6 +49,7 @@ prototype = {
 	},
 	/**
 	 * Returns the categories the title belongs to.
+	 *
 	 * @memberof CategoryGateway
 	 * @instance
 	 * @param {string} title Title of the current page (to add the categories to)

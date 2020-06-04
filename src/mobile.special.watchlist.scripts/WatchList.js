@@ -9,6 +9,7 @@ var
 /**
  * An extension of the WatchstarPageList which preloads pages as all being
  * watched.
+ *
  * @extends WatchstarPageList
  * @class WatchList
  * @uses ScrollEndEventEmitter
@@ -51,6 +52,7 @@ mfExtend( WatchList, WatchstarPageList, {
 	},
 	/**
 	 * Also sets a watch uploads funnel.
+	 *
 	 * @inheritdoc
 	 * @memberof WatchList
 	 * @instance
@@ -82,6 +84,7 @@ mfExtend( WatchList, WatchstarPageList, {
 	/**
 	 * Loads pages from the api and triggers render.
 	 * Infinite scroll is re-enabled in postRender.
+	 *
 	 * @memberof WatchList
 	 * @instance
 	 */
@@ -96,6 +99,7 @@ mfExtend( WatchList, WatchstarPageList, {
 
 	/**
 	 * Appends a list item
+	 *
 	 * @memberof WatchList
 	 * @instance
 	 * @param {Page} page
@@ -111,6 +115,7 @@ mfExtend( WatchList, WatchstarPageList, {
 	/**
 	 * Get the last title from the rendered HTML.
 	 * Used for initializing the API
+	 *
 	 * @memberof WatchList
 	 * @instance
 	 * @param {jQuery.Object} $el Dom element of the list

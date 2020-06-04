@@ -19,6 +19,7 @@ ModuleLoader.prototype = {
 	 * Require (import) a module previously defined using define().
 	 * Searches core module registry using mw.loader.require before consulting
 	 * its own local registry. This method is deprecated, please do not use.
+	 *
 	 * @memberof ModuleLoader
 	 * @instance
 	 * @param {string} id Required module id.
@@ -52,6 +53,7 @@ ModuleLoader.prototype = {
 
 	/**
 	 * Define a module which can be later required (imported) using require().
+	 *
 	 * @memberof ModuleLoader
 	 * @instance
 	 * @param {string} id Defined module id.
@@ -80,6 +82,7 @@ ModuleLoader.prototype = {
 
 	/**
 	 * Deprecate a module and give an replacement (if there is any).
+	 *
 	 * @memberof ModuleLoader
 	 * @instance
 	 * @param {string} id Defined module id, which is deprecated.

@@ -16,6 +16,7 @@ var Overlay = require( '../mobile.startup/Overlay' ),
 
 /**
  * 'Edit' button
+ *
  * @param {OO.ui.ToolGroup} toolGroup
  * @param {Object} config
  */
@@ -32,6 +33,7 @@ EditVeTool.static.group = 'editorSwitcher';
 EditVeTool.static.title = mw.msg( 'mobile-frontend-editor-switch-visual-editor' );
 /**
  * click handler
+ *
  * @memberof EditVeTool
  * @instance
  */
@@ -40,6 +42,7 @@ EditVeTool.prototype.onSelect = function () {
 };
 /**
  * Toolbar update state handler.
+ *
  * @memberof EditVeTool
  * @instance
  */
@@ -49,6 +52,7 @@ EditVeTool.prototype.onUpdateState = function () {
 
 /**
  * Base class for SourceEditorOverlay and VisualEditorOverlay
+ *
  * @class EditorOverlayBase
  * @extends Overlay
  * @uses Icon
@@ -176,6 +180,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 	sectionId: '',
 	/**
 	 * Logs an event to http://meta.wikimedia.org/wiki/Schema:EditAttemptStep
+	 *
 	 * @memberof EditorOverlayBase
 	 * @instance
 	 * @param {Object} data
@@ -190,6 +195,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 	},
 	/**
 	 * Logs an event to http://meta.wikimedia.org/wiki/Schema:VisualEditorFeatureUse
+	 *
 	 * @memberof EditorOverlayBase
 	 * @instance
 	 * @param {Object} data
@@ -203,6 +209,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 
 	/**
 	 * If this is a new article, require confirmation before saving.
+	 *
 	 * @memberof EditorOverlayBase
 	 * @instance
 	 * @return {boolean} The user confirmed saving
@@ -221,6 +228,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 	/**
 	 * Executed when page save is complete. Handles reloading the page, showing toast
 	 * messages.
+	 *
 	 * @memberof EditorOverlayBase
 	 * @instance
 	 * @param {number} newRevId ID of the newly created revision
@@ -285,6 +293,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 	/**
 	 * Executed when page save fails. Handles logging the error. Subclasses
 	 * should display error messages as appropriate.
+	 *
 	 * @memberof EditorOverlayBase
 	 * @instance
 	 * @param {Object} data API response
@@ -314,6 +323,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 	},
 	/**
 	 * Report load errors back to the user. Silently record the error using EventLogging.
+	 *
 	 * @memberof EditorOverlayBase
 	 * @instance
 	 * @param {string} text Text (HTML) of message to display to user
@@ -332,6 +342,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 	/**
 	 * Prepares the penultimate screen before saving.
 	 * Expects to be overridden by child class.
+	 *
 	 * @memberof EditorOverlayBase
 	 * @instance
 	 */
@@ -350,6 +361,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 	/**
 	 * Executed when the editor clicks the save button. Expects to be overridden by child
 	 * class. Checks if the save needs to be confirmed.
+	 *
 	 * @memberof EditorOverlayBase
 	 * @instance
 	 */
@@ -440,12 +452,14 @@ mfExtend( EditorOverlayBase, Overlay, {
 	},
 	/**
 	 * Back button click handler
+	 *
 	 * @memberof EditorOverlayBase
 	 * @instance
 	 */
 	onClickBack: function () {},
 	/**
 	 * Submit button click handler
+	 *
 	 * @memberof EditorOverlayBase
 	 * @instance
 	 */
@@ -454,6 +468,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 	},
 	/**
 	 * Continue button click handler
+	 *
 	 * @memberof EditorOverlayBase
 	 * @instance
 	 */
@@ -462,6 +477,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 	},
 	/**
 	 * "Edit without logging in" button click handler
+	 *
 	 * @memberof EditorOverlayBase
 	 * @instance
 	 */
@@ -512,6 +528,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 	},
 	/**
 	 * Sets additional values used for anonymous editing warning.
+	 *
 	 * @memberof EditorOverlayBase
 	 * @instance
 	 * @param {Object} options
@@ -597,6 +614,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 	/**
 	 * Checks whether the state of the thing being edited as changed. Expects to be
 	 * implemented by child class.
+	 *
 	 * @memberof EditorOverlayBase
 	 * @instance
 	 */
@@ -604,6 +622,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 	/**
 	 * Get a promise that is resolved when the editor data has loaded,
 	 * or rejected when we're refusing to load the editor because the user is blocked.
+	 *
 	 * @memberof EditorOverlayBase
 	 * @instance
 	 * @return {jQuery.Promise}
@@ -625,6 +644,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 	},
 	/**
 	 * Handles a failed save due to a CAPTCHA provided by ConfirmEdit extension.
+	 *
 	 * @memberof EditorOverlayBase
 	 * @instance
 	 * @param {Object} details Details returned from the api.

@@ -6,6 +6,7 @@ var limit = 50,
 
 /**
  * API for retrieving nearby pages
+ *
  * @class NearbyGateway
  * @param {Object} options Configuration options
  * @param {mw.Api} options.api
@@ -18,6 +19,7 @@ NearbyGateway.prototype = {
 	/**
 	 * Returns a human readable string stating the distance in meters or kilometers
 	 * depending on size.
+	 *
 	 * @memberof NearbyGateway
 	 * @instance
 	 * @private
@@ -48,6 +50,7 @@ NearbyGateway.prototype = {
 	},
 	/**
 	 * Returns a list of pages around a given point
+	 *
 	 * @memberof NearbyGateway
 	 * @instance
 	 * @param {Object} coords In form { latitude: 0, longitude: 2 }
@@ -63,6 +66,7 @@ NearbyGateway.prototype = {
 
 	/**
 	 * Gets the pages around a page. It excludes itself from the search
+	 *
 	 * @memberof NearbyGateway
 	 * @instance
 	 * @param {string} page Page title like "W_San_Francisco"
@@ -77,6 +81,7 @@ NearbyGateway.prototype = {
 
 	/**
 	 * Searches for pages nearby
+	 *
 	 * @memberof NearbyGateway
 	 * @instance
 	 * @private

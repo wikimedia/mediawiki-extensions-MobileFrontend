@@ -11,11 +11,13 @@ var
 
 /**
  * Callback executed when a save has successfully completed.
+ *
  * @callback onSaveComplete
  */
 
 /**
  * Overlay for showing talk page section
+ *
  * @class TalkSectionOverlay
  * @extends Overlay
  * @param {Object} options
@@ -104,6 +106,7 @@ mfExtend( TalkSectionOverlay, Overlay, {
 	} ),
 	/**
 	 * A function to run before exiting the overlay
+	 *
 	 * @memberof TalkSectionOverlay
 	 * @instance
 	 * @param {Event} ev
@@ -113,6 +116,7 @@ mfExtend( TalkSectionOverlay, Overlay, {
 	},
 	/**
 	 * A function to run before exiting the overlay
+	 *
 	 * @memberof TalkSectionOverlay
 	 * @instance
 	 * @param {Function} exit
@@ -131,6 +135,7 @@ mfExtend( TalkSectionOverlay, Overlay, {
 	/**
 	 * Accounts for the fact sections are loaded asynchronously and sets the headers
 	 * for the overlay
+	 *
 	 * @inheritdoc
 	 */
 	preRender: function () {
@@ -147,6 +152,7 @@ mfExtend( TalkSectionOverlay, Overlay, {
 	/**
 	 * Fetches the talk topics of the page specified in options.title
 	 * if options.section is not defined.
+	 *
 	 * @inheritdoc
 	 * @memberof TalkSectionOverlay
 	 * @instance
@@ -161,6 +167,7 @@ mfExtend( TalkSectionOverlay, Overlay, {
 	},
 	/**
 	 * Enables comments on the current rendered talk topic
+	 *
 	 * @memberof TalkSectionOverlay
 	 * @instance
 	 * @private
@@ -175,6 +182,7 @@ mfExtend( TalkSectionOverlay, Overlay, {
 	},
 	/**
 	 * Handler for focus of textarea
+	 *
 	 * @memberof TalkSectionOverlay
 	 * @instance
 	 */
@@ -183,6 +191,7 @@ mfExtend( TalkSectionOverlay, Overlay, {
 	},
 	/**
 	 * Handle a click on the save button
+	 *
 	 * @memberof TalkSectionOverlay
 	 * @instance
 	 */

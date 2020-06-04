@@ -16,7 +16,6 @@
 	"rules": {
 		"no-var": "off",
 		"jsdoc/check-tag-names": "off",
-		"jsdoc/newline-after-description": "off",
 		"jsdoc/no-undefined-types": "off",
 		"jsdoc/valid-types": "off"
 	}

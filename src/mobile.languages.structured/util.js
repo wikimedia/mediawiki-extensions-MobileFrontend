@@ -30,6 +30,7 @@ var
  * is not available in that language, then return the general language
  * if article is available in it. For example, if the device language is
  * 'en-gb', and the article is only available in 'en', then return 'en'.
+ *
  * @param {Object[]} languages list of language objects as returned by the API
  * @param {string|undefined} deviceLanguage the device's primary language
  * @return {string|undefined} Return undefined if the article is not available in
@@ -75,6 +76,7 @@ module.exports = {
 	/**
 	 * Determine whether a language is LTR or RTL
 	 * This works around T74153 and T189036
+	 *
 	 * @memberof util
 	 * @instance
 	 * @param {Object} language with 'lang' key.
@@ -96,6 +98,7 @@ module.exports = {
 	 * All languages are the languages that are not suggested.
 	 * Languages in this list are ordered in the lexicographical order of
 	 * their language names.
+	 *
 	 * @memberof util
 	 * @instance
 	 * @param {Object[]} languages list of language objects as returned by the API
@@ -199,6 +202,7 @@ module.exports = {
 
 	/**
 	 * Return a map of frequently used languages on the current device.
+	 *
 	 * @memberof util
 	 * @instance
 	 * @return {Object}
@@ -211,6 +215,7 @@ module.exports = {
 
 	/**
 	 * Save the frequently used languages to the user's device
+	 *
 	 * @memberof util
 	 * @instance
 	 * @param {Object} languageMap
@@ -222,6 +227,7 @@ module.exports = {
 	/**
 	 * Increment the current language usage by one and save it to the device.
 	 * Cap the result at 100.
+	 *
 	 * @memberof util
 	 * @instance
 	 * @param {string} languageCode

@@ -10,6 +10,7 @@ var EditorOverlayBase = require( './EditorOverlayBase' ),
 
 /**
  * Overlay that shows an editor
+ *
  * @class SourceEditorOverlay
  * @uses Section
  * @uses EditorGateway
@@ -90,6 +91,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 	},
 	/**
 	 * Check whether VisualEditor is enabled or not.
+	 *
 	 * @memberof SourceEditorOverlay
 	 * @instance
 	 * @return {boolean}
@@ -107,6 +109,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 	},
 	/**
 	 * Wikitext Editor input handler
+	 *
 	 * @memberof SourceEditorOverlay
 	 * @instance
 	 */
@@ -254,6 +257,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 
 	/**
 	 * Handles click on "Edit without login" in anonymous editing warning.
+	 *
 	 * @memberof SourceEditorOverlay
 	 * @instance
 	 * @private
@@ -267,6 +271,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 
 	/**
 	 * Prepares the preview interface and reveals the save screen of the overlay
+	 *
 	 * @inheritdoc
 	 * @memberof SourceEditorOverlay
 	 * @instance
@@ -314,6 +319,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 
 	/**
 	 * Hides the preview and reverts back to initial screen.
+	 *
 	 * @memberof SourceEditorOverlay
 	 * @instance
 	 * @private
@@ -329,6 +335,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 
 	/**
 	 * Resize the editor textarea, maintaining scroll position in iOS
+	 *
 	 * @memberof SourceEditorOverlay
 	 * @instance
 	 */
@@ -361,6 +368,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 
 	/**
 	 * Set content to the user input field.
+	 *
 	 * @memberof SourceEditorOverlay
 	 * @instance
 	 * @param {string} content The content to set.
@@ -374,6 +382,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 
 	/**
 	 * Returns the content of the user input field.
+	 *
 	 * @memberof SourceEditorOverlay
 	 * @instance
 	 * @return {string}
@@ -384,6 +393,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 
 	/**
 	 * Requests content from the API and reveals it in UI.
+	 *
 	 * @memberof SourceEditorOverlay
 	 * @instance
 	 * @private
@@ -409,6 +419,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 	/**
 	 * Loads a {VisualEditorOverlay} and replaces the existing SourceEditorOverlay with it
 	 * based on the current option values.
+	 *
 	 * @memberof SourceEditorOverlay
 	 * @instance
 	 * @private
@@ -473,6 +484,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 	/**
 	 * Executed when the editor clicks the save/publish button. Handles logging and submitting
 	 * the save action to the editor API.
+	 *
 	 * @inheritdoc
 	 * @memberof SourceEditorOverlay
 	 * @instance
@@ -517,6 +529,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 	/**
 	 * Executed when page save fails. Handles error display and bookkeeping,
 	 * passes logging duties to the parent.
+	 *
 	 * @inheritdoc
 	 * @memberof SourceEditorOverlay
 	 * @instance
@@ -549,6 +562,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 
 	/**
 	 * Checks whether the existing content has changed.
+	 *
 	 * @memberof SourceEditorOverlay
 	 * @instance
 	 * @return {boolean}

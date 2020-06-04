@@ -4,6 +4,7 @@ var util = require( './util.js' ),
 
 /**
  * Builds a section of a page
+ *
  * @class Section
  * @extends View
  *

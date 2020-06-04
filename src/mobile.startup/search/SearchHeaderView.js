@@ -8,6 +8,7 @@ const util = require( '../util' ),
 class SearchHeaderView extends View {
 	/**
 	 * constructor
+	 *
 	 * @inheritdoc
 	 * @param {Object} props
 	 * @param {Function} props.onInput executed every time input changes

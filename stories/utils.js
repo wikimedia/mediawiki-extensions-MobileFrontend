@@ -4,6 +4,7 @@ import { action } from '@storybook/addon-actions';
  * Make sure components are styled correctly.
  * This should not be necessary. A story using this indicates that
  * a component has problematic CSS.
+ *
  * @param {View} view
  * @param {string} [className]
  * @param {string} [id] of container
@@ -29,6 +30,7 @@ function wrap( view, className, id, style ) {
 
 /**
  * Show a warning to communicate something about a component to the reader.
+ *
  * @param {string} text
  * @return {Element}
  */

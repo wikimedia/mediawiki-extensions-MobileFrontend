@@ -10,6 +10,7 @@ const
 /**
  * Callback intended to allow the client run extra logic (e.g. show a modal)
  * after the drawer is dismissed.
+ *
  * @callback onBeforeHide
  */
 

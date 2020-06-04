@@ -17,6 +17,7 @@ function SearchGateway( api ) {
 SearchGateway.prototype = {
 	/**
 	 * The namespace to search in.
+	 *
 	 * @memberof SearchGateway
 	 * @instance
 	 * @type {number}
@@ -25,6 +26,7 @@ SearchGateway.prototype = {
 
 	/**
 	 * Get the data used to do the search query api call.
+	 *
 	 * @memberof SearchGateway
 	 * @instance
 	 * @param {string} query to search for
@@ -52,6 +54,7 @@ SearchGateway.prototype = {
 
 	/**
 	 * Escapes regular expression wildcards (metacharacters) by adding a \\ prefix
+	 *
 	 * @memberof SearchGateway
 	 * @instance
 	 * @param {string} str a string
@@ -68,6 +71,7 @@ SearchGateway.prototype = {
 	/**
 	 * Takes a label potentially beginning with term
 	 * and highlights term if it is present with strong
+	 *
 	 * @memberof SearchGateway
 	 * @instance
 	 * @param {string} label a piece of text
@@ -84,6 +88,7 @@ SearchGateway.prototype = {
 
 	/**
 	 * Return data used for creating {Page} objects
+	 *
 	 * @memberof SearchGateway
 	 * @instance
 	 * @param {string} query to search for
@@ -110,6 +115,7 @@ SearchGateway.prototype = {
 
 	/**
 	 * Process the data returned by the api call.
+	 *
 	 * @memberof SearchGateway
 	 * @instance
 	 * @param {string} query to search for
@@ -138,6 +144,7 @@ SearchGateway.prototype = {
 
 	/**
 	 * Perform a search for the given query.
+	 *
 	 * @memberof SearchGateway
 	 * @instance
 	 * @param {string} query to search for
@@ -173,6 +180,7 @@ SearchGateway.prototype = {
 
 	/**
 	 * Check if the search has already been performed in given session.
+	 *
 	 * @memberof SearchGateway
 	 * @instance
 	 * @param {string} query

@@ -8,6 +8,7 @@ var util = require( './util.js' ),
  * Add child to listOfSections if the level of child is the same as the last
  * child of listOfSections, otherwise add it to the children of the last
  * section of listOfSections. If listOfSections is empty, just add child to it.
+ *
  * @private
  * @param {Array} listOfSections - Array of section ids
  * @param {Object} child - Section to be added to listOfSections
@@ -31,6 +32,7 @@ function assignToParent( listOfSections, child ) {
 
 /**
  * Order sections hierarchically
+ *
  * @private
  * @param {Array} sections Array of section objects created from response HTML
  * @return {Array} Ordered array of sections
@@ -85,6 +87,7 @@ function transformSections( sections ) {
 
 /**
  * API for providing Page data
+ *
  * @class PageGateway
  * @param {mw.Api} api
  */
@@ -95,6 +98,7 @@ function PageGateway( api ) {
 PageGateway.prototype = {
 	/**
 	 * Invalidate the internal cache for a given page
+	 *
 	 * @memberof PageGateway
 	 * @instance
 	 * @param {string} title the title of the page who's cache you want to invalidate
@@ -105,6 +109,7 @@ PageGateway.prototype = {
 
 	/**
 	 * Gets language variant list for a page; helper function for getPageLanguages()
+	 *
 	 * @memberof PageGateway
 	 * @instance
 	 * @private
@@ -146,6 +151,7 @@ PageGateway.prototype = {
 
 	/**
 	 * Retrieve available languages for a given title
+	 *
 	 * @memberof PageGateway
 	 * @instance
 	 * @param {string} title the title of the page languages should be retrieved for
@@ -182,6 +188,7 @@ PageGateway.prototype = {
 
 	/**
 	 * Extract sections from headings in $el
+	 *
 	 * @memberof PageGateway
 	 * @instance
 	 * @private
@@ -213,6 +220,7 @@ PageGateway.prototype = {
 
 	/**
 	 * Order sections hierarchically
+	 *
 	 * @memberof PageGateway
 	 * @instance
 	 * @param {jQuery.Object} $el object from which sections are extracted

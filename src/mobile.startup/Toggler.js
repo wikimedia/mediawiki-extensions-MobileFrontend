@@ -81,6 +81,7 @@ function storeSectionToggleState( $heading, page ) {
 
 /**
  * Expand sections that were previously expanded before leaving this page.
+ *
  * @param {Toggler} toggler
  * @param {jQuery.Object} $container
  * @param {Page} page
@@ -106,6 +107,7 @@ function expandStoredSections( toggler, $container, page ) {
 /**
  * Clean obsolete (saved more than a day ago) expanded sections from
  * localStorage.
+ *
  * @param {Page} page
  */
 function cleanObsoleteStoredSections( page ) {
@@ -162,6 +164,7 @@ Toggler.prototype.toggle = function ( $heading, page ) {
 	mw.requestIdleCallback( function () {
 		/**
 		 * Global event emitted after a section has been toggled
+		 *
 		 * @event section-toggled
 		 * @type {ToggledEvent}
 		 */

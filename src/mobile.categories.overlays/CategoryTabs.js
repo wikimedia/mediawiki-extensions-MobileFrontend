@@ -10,6 +10,7 @@ var
 /**
  * Displays the list of categories for a page in two tabs
  * TODO: Break this into Tab and CategoryList components for better reuse.
+ *
  * @class CategoryTabs
  * @extends View
  * @uses CategoryGateway
@@ -106,6 +107,7 @@ mfExtend( CategoryTabs, View, {
 	 * Get a list of categories the page belongs to and re-renders the overlay content
 	 * FIXME: CategoryTabs should be dumb and solely focus on rendering. This should
 	 * be refactored out at the earliest opportunity.
+	 *
 	 * @memberof CategoryTabs
 	 * @instance
 	 */
@@ -165,6 +167,7 @@ mfExtend( CategoryTabs, View, {
 
 	/**
 	 * Handles a click on one of the tabs to change the viewable categories
+	 *
 	 * @memberof CategoryTabs
 	 * @instance
 	 * @param {jQuery.Event} ev The Event object triggered this handler
@@ -179,6 +182,7 @@ mfExtend( CategoryTabs, View, {
 
 	/**
 	 * Changes the view from hidden categories to content-based categories and vice-versa
+	 *
 	 * @memberof CategoryTabs
 	 * @instance
 	 */

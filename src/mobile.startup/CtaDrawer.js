@@ -23,6 +23,7 @@ var
  * This creates the drawer at the bottom of the screen that appears when an anonymous
  * user tries to perform an action that requires being logged in. It presents the user
  * with options to log in or sign up for a new account.
+ *
  * @uses Button
  * @uses Icon
  * @uses Anchor
@@ -57,6 +58,7 @@ function CtaDrawer( options = {} ) {
 
 /**
  * Special:UserLogin post-request redirect query parameters.
+ *
  * @param {QueryParams} params
  * @param {string} [redirectURL]
  * @return {QueryParams}
@@ -70,6 +72,7 @@ function redirectParams( params, redirectURL ) {
 
 /**
  * Special:UserLogin account creation query parameters.
+ *
  * @param {...QueryParams} params
  * @return {QueryParams}
  */

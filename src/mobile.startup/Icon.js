@@ -5,6 +5,7 @@ var
 
 /**
  * A wrapper for creating an icon.
+ *
  * @class Icon
  * @extends View
  *
@@ -35,6 +36,7 @@ mfExtend( Icon, View, {
 	/**
 	 * Internal method that sets the correct rotation class for the icon
 	 * based on the value of rotation
+	 *
 	 * @memberof Icon
 	 * @instance
 	 * @private
@@ -103,6 +105,7 @@ mfExtend( Icon, View, {
 	},
 	/**
 	 * Return the full class name that is required for the icon to render
+	 *
 	 * @memberof Icon
 	 * @instance
 	 * @return {string}
@@ -112,6 +115,7 @@ mfExtend( Icon, View, {
 	},
 	/**
 	 * Return the class that relates to the icon glyph
+	 *
 	 * @memberof Icon
 	 * @instance
 	 * @return {string}

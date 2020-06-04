@@ -78,6 +78,7 @@ class Page {
 
 	/**
 	 * Retrieve the title that should be displayed to the user
+	 *
 	 * @return {string} HTML
 	 */
 	getDisplayTitle() {
@@ -85,6 +86,7 @@ class Page {
 	}
 	/**
 	 * Determine if current page is in a specified namespace
+	 *
 	 * @param {string} namespace Name of namespace
 	 * @return {boolean}
 	 */
@@ -94,6 +96,7 @@ class Page {
 
 	/**
 	 * Determines if content model is wikitext
+	 *
 	 * @return {boolean}
 	 */
 	isWikiText() {
@@ -102,6 +105,7 @@ class Page {
 
 	/**
 	 * Checks whether the current page is the main page
+	 *
 	 * @return {boolean}
 	 */
 	isMainPage() {
@@ -109,6 +113,7 @@ class Page {
 	}
 	/**
 	 * Checks whether the current page is watched
+	 *
 	 * @return {boolean}
 	 */
 	isWatched() {
@@ -117,6 +122,7 @@ class Page {
 
 	/**
 	 * Return the latest revision id for this page
+	 *
 	 * @return {number}
 	 */
 	getRevisionId() {
@@ -125,6 +131,7 @@ class Page {
 
 	/**
 	 * Return prefixed page title
+	 *
 	 * @return {string}
 	 */
 	getTitle() {
@@ -133,6 +140,7 @@ class Page {
 
 	/**
 	 * return namespace id
+	 *
 	 * @return {number} namespace Number
 	 */
 	getNamespaceId() {
@@ -149,6 +157,7 @@ class Page {
 
 	/**
 	 * FIXME: Change function signature to take the anchor of the heading
+	 *
 	 * @param {string} id of the section as defined by MobileFormatter.
 	 * Note, that currently, this is different from
 	 * the PHP parser in that it relates to top-level sections.
@@ -162,6 +171,7 @@ class Page {
 	/**
 	 * Obtain the list of high level (and grouped) sections.
 	 * Note that this list will not include subsections.
+	 *
 	 * @return {Array} of Section instances
 	 */
 	getSections() {

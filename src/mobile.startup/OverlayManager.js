@@ -33,6 +33,7 @@ function OverlayManager( router, container ) {
 
 /**
  * Attach an event to the overlays hide event
+ *
  * @param {Overlay} overlay
  */
 function attachHideEvent( overlay ) {
@@ -48,6 +49,7 @@ OverlayManager.prototype = {
 	 * Called when something other than OverlayManager calls Overlay.hide
 	 * on an overlay that it itself managed by the OverlayManager.
 	 * MUST be called when the stack is not empty.
+	 *
 	 * @memberof OverlayManager
 	 * @instance
 	 * @private
@@ -73,6 +75,7 @@ OverlayManager.prototype = {
 	},
 
 	/** Attach overlay to DOM
+	 *
 	 * @memberof OverlayManager
 	 * @instance
 	 * @private
@@ -85,6 +88,7 @@ OverlayManager.prototype = {
 	},
 	/**
 	 * Show the overlay and bind the '_om_hide' event to _onHideOverlay.
+	 *
 	 * @memberof OverlayManager
 	 * @instance
 	 * @private
@@ -108,6 +112,7 @@ OverlayManager.prototype = {
 
 	/**
 	 * Hide overlay
+	 *
 	 * @memberof OverlayManager
 	 * @instance
 	 * @private
@@ -142,6 +147,7 @@ OverlayManager.prototype = {
 
 	/**
 	 * Show match's overlay if match is not null.
+	 *
 	 * @memberof OverlayManager
 	 * @instance
 	 * @private
@@ -167,6 +173,7 @@ OverlayManager.prototype = {
 
 	/**
 	 * A callback for Router's `route` event.
+	 *
 	 * @memberof OverlayManager
 	 * @instance
 	 * @private
@@ -216,6 +223,7 @@ OverlayManager.prototype = {
 	/**
 	 * Check if a given path matches one of the existing entries and
 	 * remove it from the stack.
+	 *
 	 * @memberof OverlayManager
 	 * @instance
 	 * @private
@@ -244,6 +252,7 @@ OverlayManager.prototype = {
 
 		/**
 		 * Returns object to add to stack
+		 *
 		 * @method
 		 * @ignore
 		 * @return {Object}
@@ -364,6 +373,7 @@ OverlayManager.prototype = {
 
 /**
  * Retrieve a singleton instance using 'mediawiki.router'.
+ *
  * @memberof OverlayManager
  * @return {OverlayManager}
  */

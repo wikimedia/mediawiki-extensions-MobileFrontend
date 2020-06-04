@@ -19,6 +19,7 @@ var M = require( '../mobile.startup/moduleLoaderSingleton' ),
 /**
  * Event handler for edit link clicks. Will prevent default link
  * behaviour and will not allow propagation
+ *
  * @method
  * @ignore
  * @param {HTMLElement} elem
@@ -51,6 +52,7 @@ function onEditLinkClick( elem, ev, router ) {
 /**
  * Retrieve the user's preferred editor setting. If none is set, return the default
  * editor for this wiki.
+ *
  * @method
  * @ignore
  * @return {string} Either 'VisualEditor' or 'SourceEditor'
@@ -105,6 +107,7 @@ function getPreferredEditor() {
 
 /**
  * Initialize the edit button so that it launches the editor interface when clicked.
+ *
  * @method
  * @ignore
  * @param {Page} page The page to edit.
@@ -216,6 +219,7 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 		 * Log init event to edit schema.
 		 * Need to log this from outside the Overlay object because that module
 		 * won't have loaded yet.
+		 *
 		 * @private
 		 * @ignore
 		 * @param {string} editor name e.g. wikitext or visualeditor
@@ -239,6 +243,7 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 
 		/**
 		 * Check whether VisualEditor should be loaded
+		 *
 		 * @private
 		 * @ignore
 		 * @method
@@ -275,6 +280,7 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 
 		/**
 		 * Load source editor
+		 *
 		 * @private
 		 * @ignore
 		 * @method
@@ -293,6 +299,7 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 
 		/**
 		 * Load visual editor. If it fails to load for any reason, load the source editor instead.
+		 *
 		 * @private
 		 * @ignore
 		 * @method
@@ -412,6 +419,7 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 /**
  * Hide any section id icons in the page. This will not hide the edit icon in the page action
  * menu.
+ *
  * @method
  * @ignore
  * @param {PageHTMLParser} currentPageHTMLParser
@@ -422,6 +430,7 @@ function hideSectionEditIcons( currentPageHTMLParser ) {
 
 /**
  * Show a drawer with log in / sign up buttons.
+ *
  * @method
  * @ignore
  * @param {Router} router
@@ -451,6 +460,7 @@ function bindEditLinksLoginDrawer( router ) {
 
 /**
  * Setup the editor if the user can edit the page otherwise show a sorry toast.
+ *
  * @method
  * @ignore
  * @param {Page} currentPage
@@ -483,6 +493,7 @@ function init( currentPage, currentPageHTMLParser, skin, router ) {
  * Wire up events that ensure we
  * show a toast message with sincere condolences when user navigates to
  * #/editor or clicks on an edit button
+ *
  * @method
  * @ignore
  * @param {string} msg Message for sorry message

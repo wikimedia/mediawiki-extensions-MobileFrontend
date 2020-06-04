@@ -5,6 +5,7 @@ var util = require( './util.js' ),
 
 /**
  * List of items page view
+ *
  * @class PageList
  * @extends View
  */
@@ -42,6 +43,7 @@ mfExtend( PageList, View, {
 	},
 	/**
 	 * Render page images for the existing page list. Assumes no page images have been loaded.
+	 *
 	 * @memberof PageList
 	 * @instance
 	 */

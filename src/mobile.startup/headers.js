@@ -4,6 +4,7 @@ var util = require( './util' ),
 
 /**
  * Creates a header
+ *
  * @param {string|View} headingOrView (HTML allowed)
  * @param {View[]} headerActions
  * @param {View} [headerCancel] defaults to cancel button
@@ -50,6 +51,7 @@ function makeHeader( headingOrView, headerActions, headerCancel, additionalClass
 
 /**
  * Creates a header with a h2 heading
+ *
  * @param {string} heading (HTML allowed)
  * @param {View[]} headerActions
  * @param {View} [headerCancel] defaults to cancel button
@@ -63,6 +65,7 @@ function header( heading, headerActions, headerCancel, additionalClassNames ) {
 
 /**
  * Creates a header with a form
+ *
  * @param {string|View} formHTMLOrView of the header
  * @param {View[]} headerActions
  * @param {View} [headerCancel] defaults to cancel button
@@ -75,6 +78,7 @@ function formHeader( formHTMLOrView, headerActions, headerCancel, additionalClas
 
 /**
  * Creates a header with a form
+ *
  * @param {string} heading of the header
  * @param {string} additionalClassNames of the header
  * @return {Element}
@@ -96,6 +100,7 @@ function saveHeader( heading, additionalClassNames ) {
 }
 /**
  * Creates a header with a form
+ *
  * @param {string} heading of the header
  * @param {string} additionalClassNames of the header
  * @return {Element}
