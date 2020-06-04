@@ -26,7 +26,7 @@ var
  *  headers created via the header util function. It is expected that only one of these
  *  should be visible. If undefined, headerActions and heading is used.
  * @param {Object} [props.footerAnchor] options for an optional Anchor
-	 *  that can appear in the footer
+ *  that can appear in the footer
  * @param {Function} props.onBeforeExit allows a consumer to prevent exits in certain
  *  situations. This callback gets the following parameters:
  *  - 1) the exit function which should be run after the consumer has made their changes.
@@ -101,7 +101,6 @@ mfExtend( Overlay, View, {
 	 * @instance
 	 */
 	postRender: function () {
-		let headers;
 		const footerAnchor = this.options.footerAnchor;
 		this.$overlayContent = this.$el.find( '.overlay-content' );
 		if ( this.isIos ) {
@@ -110,7 +109,7 @@ mfExtend( Overlay, View, {
 		if ( footerAnchor ) {
 			this.$el.find( '.overlay-footer-container' ).append( new Anchor( footerAnchor ).$el );
 		}
-		headers = this.options.headers || [
+		const headers = this.options.headers || [
 			header(
 				this.options.heading,
 				this.options.headerActions

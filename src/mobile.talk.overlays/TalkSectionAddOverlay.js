@@ -58,9 +58,8 @@ mfExtend( TalkSectionAddOverlay, Overlay, {
 	 * @instance
 	 */
 	postRender: function () {
-		let topicForm;
 		Overlay.prototype.postRender.call( this );
-		topicForm = makeAddTopicForm( {
+		const topicForm = makeAddTopicForm( {
 			subject: '',
 			body: '',
 			disabled: false,
@@ -84,6 +83,7 @@ mfExtend( TalkSectionAddOverlay, Overlay, {
 
 		empty = ( !this.$subject.val() && !this.$ta.val() );
 		// TODO: Replace with an OOUI dialog
+		// eslint-disable-next-line no-alert
 		if ( this._saveHit || empty || window.confirm( confirmMessage ) ) {
 			exit();
 		}

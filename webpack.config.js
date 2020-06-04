@@ -1,4 +1,5 @@
-/* eslint-env node, es6 */
+'use strict';
+
 const
 	CleanPlugin = require( 'clean-webpack-plugin' ),
 	glob = require( 'glob' ),

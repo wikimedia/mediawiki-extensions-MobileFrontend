@@ -150,6 +150,8 @@ mfExtend( CategoryTabs, View, {
 
 				if ( $normalCatlist.length === 0 && $normalCatlist.length === 0 ) {
 					self.$el.find( '.content-header' ).text( mw.msg( 'mobile-frontend-categories-nocat' ) );
+				// FIXME: This condition is always false
+				// eslint-disable-next-line no-dupe-else-if
 				} else if ( $normalCatlist.length === 0 && $normalCatlist.length > 0 ) {
 					this._changeView();
 				}

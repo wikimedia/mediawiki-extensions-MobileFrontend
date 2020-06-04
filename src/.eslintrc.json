@@ -1,6 +1,8 @@
 {
 	"root": true,
 	"extends": [
+		"wikimedia/client",
+		"wikimedia/language/es6",
 		"../.eslintshared.js"
 	],
 	"parserOptions": {
@@ -10,5 +12,12 @@
 	"env": {
 		"browser": true,
 		"commonjs": true
+	},
+	"rules": {
+		"no-var": "off",
+		"jsdoc/check-tag-names": "off",
+		"jsdoc/newline-after-description": "off",
+		"jsdoc/no-undefined-types": "off",
+		"jsdoc/valid-types": "off"
 	}
 }

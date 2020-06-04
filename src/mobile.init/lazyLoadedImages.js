@@ -10,7 +10,7 @@ function init() {
 		return;
 	}
 
-	let imagePlaceholders = lazyImageLoader.queryPlaceholders( document.getElementById( 'mw-content-text' ) );
+	const imagePlaceholders = lazyImageLoader.queryPlaceholders( document.getElementById( 'mw-content-text' ) );
 
 	if ( 'IntersectionObserver' in window ) {
 		const observer = new IntersectionObserver(

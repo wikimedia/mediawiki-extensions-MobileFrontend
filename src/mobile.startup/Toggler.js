@@ -47,9 +47,9 @@ function getExpandedSections( page ) {
 }
 
 /**
-* @param {Object} expandedSections
-* Save expandedSections to localStorage
-*/
+ * @param {Object} expandedSections
+ * Save expandedSections to localStorage
+ */
 function saveExpandedSections( expandedSections ) {
 	mw.storage.set(
 		'expandedSections', JSON.stringify( expandedSections )
@@ -283,7 +283,7 @@ Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 			$headingLabel
 				.attr( {
 					tabindex: 0,
-					'role': 'button',
+					role: 'button',
 					'aria-controls': id,
 					'aria-expanded': 'false'
 				} );

@@ -44,7 +44,7 @@ storiesOf( 'Button' )
 			new Button( {
 				label: '3'
 			} ).$el[0]
-		].forEach( node => container.appendChild( node ) );
+		].forEach( ( node ) => container.appendChild( node ) );
 		return container;
 	}
 	)
@@ -64,7 +64,7 @@ storiesOf( 'Button' )
 					block: true,
 					label: '3'
 				} ).$el[0]
-			].forEach( node => container.appendChild( node ) );
+			].forEach( ( node ) => container.appendChild( node ) );
 			return container;
 		}
 	);

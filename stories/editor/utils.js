@@ -1,4 +1,3 @@
-/* eslint-disable valid-jsdoc */
 import util from '../../src/mobile.startup/util';
 import { previewResponse, revisionResponse,
 	abuseFilterWarning, abuseFilterDisallowed, spamBlacklist, editConflict, readOnly, captcha,

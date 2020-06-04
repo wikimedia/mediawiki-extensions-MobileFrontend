@@ -210,6 +210,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 	confirmSave: function () {
 		if ( this.isNewPage &&
 			// TODO: Replace with an OOUI dialog
+			// eslint-disable-next-line no-alert
 			!window.confirm( mw.msg( 'mobile-frontend-editor-new-page-confirm', mwUser ) )
 		) {
 			return false;
