@@ -8,7 +8,7 @@ const formHeader = require( '../headers' ).formHeader,
  * @param {string} placeholderMsg
  * @param {string} action
  * @param {Function} onInput
- * @return {JQuery.Element}
+ * @return {jQuery.Element}
  */
 function searchHeader( placeholderMsg, action, onInput ) {
 	return formHeader(

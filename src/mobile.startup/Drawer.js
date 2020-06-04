@@ -12,7 +12,7 @@ var
  * @final
  * @param {Object} props
  * @param {string} [props.className] Additional CSS classes to add
- * @param {JQuery.Element[]} [props.children] An array of elements to append to
+ * @param {jQuery.Element[]} [props.children] An array of elements to append to
  * @param {Function} [props.onShow] Callback called before showing the drawer.
  *  It receives a promise given the show process is asynchronous.
  * @param {Function} [props.onBeforeHide] Callback called before hiding the drawer
@@ -59,7 +59,7 @@ mfExtend( Drawer, View, {
 	 * @memberof View
 	 * @instance
 	 * @method
-	 * @return {JQuery.Promise}
+	 * @return {jQuery.Promise}
 	 */
 	show: function () {
 		const d = util.Deferred();
