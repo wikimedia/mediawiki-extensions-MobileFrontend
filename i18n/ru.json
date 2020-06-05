@@ -178,6 +178,7 @@
 	"mobile-frontend-media-load-fail-message": "Произошла ошибка при визуализации изображения.",
 	"mobile-frontend-media-load-fail-retry": "Обновить",
 	"mobile-frontend-missing-image": "Изображение",
+	"mobile-frontend-tap-to-display-image": "Нажмите, чтобы показать изображение.",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 км}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 м}}",
 	"mobile-frontend-nearby-error": "У {{SITENAME}} возникли некоторые проблемы.",
@@ -275,9 +276,12 @@
 	"mobile-frontend-mobile-option-amc-experiment-description": "Расширенный режим обеспечивает лёгкий доступ к страницам обсуждения, страницам истории, пользовательским инструментам и другим инструментам редактирования.",
 	"mobile-frontend-mobile-option-amc-learn-more": "Узнать больше",
 	"mobile-frontend-mobile-option-amc-send-feedback": "Отправить отзыв",
+	"mobile-frontend-amc-outreach-intro": "Представляем Расширенный режим",
 	"mobile-frontend-amc-outreach-enable": "Включить расширенный режим",
 	"mobile-frontend-amc-outreach-no-thanks": "Нет, спасибо",
+	"mobile-frontend-amc-outreach-enabled-message": "Расширенный режим теперь включен. Вы можете отключить его в настройках.",
+	"mobile-frontend-amc-outreach-dismissed-message": "Вы можете включить Расширенный режим в любое время у себя в настройках.",
 	"mobile-frontend-beta-only": "Функция доступна только в рамках бета-тестирования.",
-	"mobile-frontend-console-recruit": "Узнать подробнее о том, как мы строим наш мобильный сайт @ https://www.mediawiki.org/wiki/Extension:MobileFrontend",
+	"mobile-frontend-console-recruit": "Узнать подробнее о том, как мы строим наш мобильный сайт @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"prefs-mobile": "Мобильные настройки"
 }

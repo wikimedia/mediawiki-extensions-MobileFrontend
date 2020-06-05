@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"1AnuraagPandey",
+			"1PandeyAnurag",
 			"Ajeetsinghawadhi",
 			"NehalDaveND"
 		]
@@ -16,6 +17,7 @@
 	"mobile-frontend-editor-success-new-page": "एक नँवा पन्ना बनावै कय लिए बधाई हय!",
 	"mobile-frontend-editor-summary": "सारांश:",
 	"mobile-frontend-featured-article": "आज कय निर्वाचित लेख",
+	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} कय आप जइसन लोग  ही बनाये हँय।</strong><br />योगदान करय खातिर लॉगिन करा जाय",
 	"mobile-frontend-last-modified-date": "अन्तिम दाँइ एकर बदलाव $1 कय $2 बजे भवा रहा",
 	"mobile-frontend-nearby-title": "सबसे नगीच",
 	"mobile-frontend-news-items": "समाचार में",

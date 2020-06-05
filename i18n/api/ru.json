@@ -26,5 +26,6 @@
 	"apihelp-webapp-manifest-summary": "Возвращает манифест веб-приложения.",
 	"apierror-mobilefrontend-toomanysizeparams": "<var>thumbsize</var> является взаимоисключающим с <var>thumbwidth</var> и <var>thumbheight</var>.",
 	"apiwarn-mobilefrontend-ignoringnoheadings": "<var>noheadings</var> не имеет смысла на Заглавной странице, игнорируется.",
+	"apiwarn-mobilefrontend-mobileviewdeprecated": "Этот API устарел. См. T186627 для более подробной информации.",
 	"apiwarn-mobilefrontend-sectionsnotfound": "{{PLURAL:$2|раздел|разделы}} $1 не {{PLURAL:$2|найден|найдены}}."
 }
