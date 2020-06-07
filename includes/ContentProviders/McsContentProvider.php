@@ -59,7 +59,7 @@ class McsContentProvider implements IContentProvider {
 	 */
 	protected function fileGetContents( $url ) {
 		$response = MediaWikiServices::getInstance()->getHttpRequestFactory()
-			->create( $url );
+			->create( $url, [], __METHOD__ );
 
 		$status = $response->execute();
 		if ( !$status->isOK() ) {
