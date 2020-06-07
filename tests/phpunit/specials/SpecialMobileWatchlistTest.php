@@ -6,10 +6,6 @@ use Wikimedia\Rdbms\FakeResultWrapper;
  * @group MobileFrontend
  */
 class SpecialMobileWatchlistTest extends MediaWikiTestCase {
-	public function tearDown() : void {
-		parent::tearDown();
-	}
-
 	/**
 	 * @dataProvider provideAddWatchlistHTML
 	 * @covers SpecialMobileWatchlist::addWatchlistHTML
