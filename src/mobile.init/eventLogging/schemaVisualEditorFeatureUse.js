@@ -12,15 +12,24 @@ module.exports = function () {
 	( function () {
 		var // Schema class provided by ext.eventLogging
 			Schema = mw.eventLog.Schema,
+			user = mw.user,
 			sampleRate = mw.config.get( 'wgWMESchemaEditAttemptStepSamplingRate' ),
 			/**
 			 * Feature use schema
 			 * https://meta.wikimedia.org/wiki/Schema:VisualEditorFeatureUse
 			 */
+			/* eslint-disable camelcase */
 			schemaVisualEditorFeatureUse = new Schema(
 				'VisualEditorFeatureUse',
-				sampleRate
+				sampleRate,
+				{
+					user_id: user.getId(),
+					user_editcount: mw.config.get( 'wgUserEditCount', 0 ),
+					platform: 'phone',
+					integration: 'page'
+				}
 			);
+			/* eslint-enable camelcase */
 
 		function log() {
 			// mw.log is a no-op unless resource loader is in debug mode, so

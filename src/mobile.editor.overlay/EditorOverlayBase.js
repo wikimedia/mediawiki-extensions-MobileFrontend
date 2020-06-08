@@ -203,6 +203,8 @@ mfExtend( EditorOverlayBase, Overlay, {
 	logFeatureUse: function ( data ) {
 		mw.track( 'mf.schemaVisualEditorFeatureUse', util.extend( data, {
 			// eslint-disable-next-line camelcase
+			editor_interface: this.editor,
+			// eslint-disable-next-line camelcase
 			editing_session_id: this.sessionId
 		} ) );
 	},
