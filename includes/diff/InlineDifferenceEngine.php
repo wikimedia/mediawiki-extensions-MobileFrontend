@@ -199,6 +199,7 @@ class InlineDifferenceEngine extends DifferenceEngine {
 
 		// First try wikidiff2
 		if ( function_exists( 'wikidiff2_inline_diff' ) ) {
+			// @phan-suppress-next-line PhanUndeclaredFunction
 			$text = wikidiff2_inline_diff( $otext, $ntext, 2 );
 			$text .= $this->debug( 'wikidiff2-inline' );
 
