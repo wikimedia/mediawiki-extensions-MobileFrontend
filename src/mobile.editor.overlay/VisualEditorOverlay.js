@@ -163,7 +163,7 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 			surface = this.target.getSurface(),
 			mode = surface.getMode();
 
-		if ( ( section === null || section === 0 ) && mode === 'visual' ) {
+		if ( ( section === null || section === '0' ) && mode === 'visual' ) {
 			editLead = identifyLeadParagraph( surface.getView().$attachedRootNode );
 			if ( currentPageHTMLParser.getLeadSectionElement() ) {
 				readLead = identifyLeadParagraph( currentPageHTMLParser.getLeadSectionElement() );

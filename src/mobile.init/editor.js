@@ -388,7 +388,7 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 		var uri = new mw.Uri( href );
 		// By default the editor opens section 0 (lead section), rather than the whole article.
 		// This might be changed in the future (T210659).
-		uri.query.section = 0;
+		uri.query.section = '0';
 		return uri.toString();
 	} );
 
