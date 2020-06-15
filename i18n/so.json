@@ -5,7 +5,9 @@
 			"Abshirdheere"
 		]
 	},
+	"mobile-frontend-requires-mobile": "Boggaan lagama heli karo shaashada. Fadlan guji linkiga muuqaalka moobiilka ee qaybta hoose ee bogga.",
 	"mobile-frontend-view": "Nuqul mobil",
+	"mobile-frontend-view-desktop": "shaashada",
 	"tag-mobile_edit": "wax badalka mobilada",
 	"tag-mobile_web_edit": "Wax badalka webka  ee moobiilada"
 }
