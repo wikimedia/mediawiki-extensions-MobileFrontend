@@ -7,7 +7,6 @@ var M = require( '../mobile.startup/moduleLoaderSingleton' ),
 	// .edit-link comes from MobileFrontend user page creation CTA
 	$allEditLinks = $( '#ca-edit, .mw-editsection a, .edit-link' ),
 	user = mw.user,
-	popup = require( '../mobile.startup/showOnPageReload' ),
 	CtaDrawer = require( '../mobile.startup/CtaDrawer' ),
 	// FIXME: Disable on IE < 10 for time being
 	blacklisted = /MSIE \d\./.test( navigator.userAgent ),
@@ -501,11 +500,11 @@ function init( currentPage, currentPageHTMLParser, skin, router ) {
  */
 function bindEditLinksSorryToast( msg, router ) {
 	$allEditLinks.on( 'click', function ( ev ) {
-		popup.show( msg );
+		mw.notify( msg );
 		ev.preventDefault();
 	} );
 	router.route( editorPath, function () {
-		popup.show( msg );
+		mw.notify( msg );
 	} );
 	router.checkRoute();
 }
