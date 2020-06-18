@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Irus"
+			"Irus",
+			"Nkankane"
 		]
 	},
-	"mobile-frontend-view": "Mobile buka"
+	"mobile-frontend-view": "Mobile buka",
+	"tag-mobile_edit": "Ukuhlela okwenziwa kumakhalekhukhwini"
 }

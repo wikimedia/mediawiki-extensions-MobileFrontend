@@ -15,6 +15,7 @@
 	"apihelp-mobileview-param-sectionprop": "Какую информацию о разделах получать.",
 	"apihelp-mobileview-param-variant": "Преобразуйте контент в этот языковой вариант.",
 	"apihelp-mobileview-param-noimages": "Вернуть HTML без изображений.",
+	"apihelp-mobileview-param-notransform": "Не превращать HTML в версию для мобильных устройств.",
 	"apihelp-mobileview-param-thumbsize": "Максимальные размеры эскизов.",
 	"apihelp-mobileview-param-thumbwidth": "Максимальная ширина миниатюры",
 	"apihelp-mobileview-param-thumbheight": "Максимальная высота миниатюры",
