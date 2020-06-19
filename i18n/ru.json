@@ -277,11 +277,13 @@
 	"mobile-frontend-mobile-option-amc-learn-more": "Узнать больше",
 	"mobile-frontend-mobile-option-amc-send-feedback": "Отправить отзыв",
 	"mobile-frontend-amc-outreach-intro": "Представляем Расширенный режим",
+	"mobile-frontend-amc-outreach-description": "Расширенный режим предоставляет расширенные функциональные возможности страниц истории, списка наблюдения, последних изменений и других инструментов редактирования на мобильном устройстве.",
 	"mobile-frontend-amc-outreach-enable": "Включить расширенный режим",
 	"mobile-frontend-amc-outreach-no-thanks": "Нет, спасибо",
 	"mobile-frontend-amc-outreach-enabled-message": "Расширенный режим теперь включен. Вы можете отключить его в настройках.",
 	"mobile-frontend-amc-outreach-dismissed-message": "Вы можете включить Расширенный режим в любое время у себя в настройках.",
 	"mobile-frontend-beta-only": "Функция доступна только в рамках бета-тестирования.",
 	"mobile-frontend-console-recruit": "Узнать подробнее о том, как мы строим наш мобильный сайт @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
+	"mobile-frontend-special-pages-pref": "Оптимизировать и упростить служебные страницы на мобильных устройствах (рекомендуется)",
 	"prefs-mobile": "Мобильные настройки"
 }
