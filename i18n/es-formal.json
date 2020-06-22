@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
+			"Ajp529",
 			"Baffo",
-			"Ajp529"
+			"KATRINE1993"
 		]
 	},
-	"mobile-frontend-talk-fullpage": "Leer como página wiki"
+	"tag-mobile_edit": "Edición desde móvil",
+	"tag-mobile_web_edit": "Edición vía web móvil"
 }

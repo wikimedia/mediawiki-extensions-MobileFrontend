@@ -154,6 +154,7 @@
 	"mobile-frontend-media-load-fail-message": "Виникла помилка при завантаженні цього зображення.",
 	"mobile-frontend-media-load-fail-retry": "Оновити",
 	"mobile-frontend-missing-image": "Зображення",
+	"mobile-frontend-tap-to-display-image": "Натисніть, щоб показати зображення.",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 км}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 м}}",
 	"mobile-frontend-nearby-error": "«{{SITENAME}} Поблизу» має певні проблеми.",

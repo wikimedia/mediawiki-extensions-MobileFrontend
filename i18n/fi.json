@@ -138,7 +138,7 @@
 	"mobile-frontend-last-modified-with-user-minutes": "[$4 Viimeksi {{GENDER:$1|muokannut}} {{PLURAL:$3|$3 minuutti|$3 minuuttia}} sitten] {{PLURAL:$5|[$6 $2]|0=anonyymi käyttäjä}}",
 	"mobile-frontend-last-modified-with-user-months": "[$4 Viimeksi {{GENDER:$1|muokannut}} {{PLURAL:$3|$3 kuukausi|$3 kuukautta}} sitten] {{PLURAL:$5|[$6 $2]|0=anonyymi käyttäjä}}",
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 Viimeksi {{GENDER:$1|muokannut}} {{PLURAL:$3|$3 sekunti|$3 sekuntia}} sitten] {{PLURAL:$5|[$6 $2]|0=anonyymi käyttäjä}}",
-	"mobile-frontend-last-modified-with-user-years": "Viimeksi {{GENDER:$1|muokkannut}} {{PLURAL:$5|[$6 $2]|0=anonyymi käyttäjä}} [$4 {{PLURAL:$3|$3 vuosi|$3 vuotta}} sitten]",
+	"mobile-frontend-last-modified-with-user-years": "Viimeksi {{GENDER:$1|muokannut}} {{PLURAL:$5|[$6 $2]|0=anonyymi käyttäjä}} [$4 {{PLURAL:$3|$3 vuosi|$3 vuotta}} sitten]",
 	"mobile-frontend-main-menu": "Päävalikko",
 	"mobile-frontend-main-menu-settings-heading": "Asetukset",
 	"mobile-frontend-media-details": "Tiedot",
