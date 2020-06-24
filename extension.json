@@ -717,7 +717,7 @@
 		"SkinAfterBottomScripts": "MobileFrontendHooks::onSkinAfterBottomScripts",
 		"SkinAddFooterLinks": "MobileFrontendHooks::onSkinAddFooterLinks",
 		"BeforePageRedirect": "MobileFrontendHooks::onBeforePageRedirect",
-		"DiffViewHeader": "MobileFrontendHooks::onDiffViewHeader",
+		"DifferenceEngineViewHeader": "MobileFrontendHooks::onDifferenceEngineViewHeader",
 		"GetCacheVaryCookies": "MobileFrontendHooks::onGetCacheVaryCookies",
 		"SpecialPage_initList": "MobileFrontendHooks::onSpecialPageInitList",
 		"ListDefinedTags": [

@@ -316,24 +316,19 @@ class MobileFrontendHooks {
 	}
 
 	/**
-	 * DiffViewHeader hook handler
-	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/DiffViewHeader
-	 *
-	 * TODO replace this hook handler with one not using Revision objects
+	 * DifferenceEngineViewHeader hook handler
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/DifferenceEngineViewHeader
 	 *
 	 * Redirect Diff page to mobile version if appropriate
 	 *
 	 * @param DifferenceEngine $diff DifferenceEngine object that's calling
-	 * @param ?Revision $oldRev Revision object of the "old" revision (may be null/invalid)
-	 * @param Revision $newRev Revision object of the "new" revision
 	 * @return bool
 	 */
-	public static function onDiffViewHeader( $diff, $oldRev, $newRev ) {
+	public static function onDifferenceEngineViewHeader( $diff ) {
 		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
 
-		$oldRevRecord = $oldRev ? $oldRev->getRevisionRecord() : null;
-		$newRevRecord = $newRev->getRevisionRecord();
-		// no using $oldRev or $newRev below here
+		$oldRevRecord = $diff->getOldRevision();
+		$newRevRecord = $diff->getNewRevision();
 
 		// Only do redirects to MobileDiff if user is in mobile view and it's not a special page
 		if ( $context->shouldDisplayMobileView() &&
