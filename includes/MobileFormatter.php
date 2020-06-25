@@ -1,7 +1,6 @@
 <?php
 
 use HtmlFormatter\HtmlFormatter;
-use MediaWiki\MediaWikiServices;
 use MobileFrontend\ContentProviders\IContentProvider;
 use MobileFrontend\Transforms\LazyImageTransform;
 use MobileFrontend\Transforms\LegacyMainPageTransform;
@@ -113,15 +112,17 @@ class MobileFormatter extends HtmlFormatter {
 	 * @param MobileContext $context in which the page is being rendered. Needed to access page title
 	 *  and MobileFrontend configuration.
 	 * @param IContentProvider $provider
-	 * @param bool $enableSections (optional)
-	 *  whether to wrap the content of sections
+	 * @param bool $enableSections whether to wrap the content of sections
+	 * @param Config $config
 	 *
 	 * @return self
 	 */
 	public static function newFromContext(
-		MobileContext $context, IContentProvider $provider, $enableSections = false
+		MobileContext $context,
+		IContentProvider $provider,
+		$enableSections,
+		Config $config
 	) {
-		$config = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Config' );
 		$mfSpecialCaseMainPage = $config->get( 'MFSpecialCaseMainPage' );
 
 		$title = $context->getTitle();
