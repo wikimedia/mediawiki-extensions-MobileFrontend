@@ -3,7 +3,8 @@
 		"authors": [
 			"Crazymadlover",
 			"Gts-tg",
-			"JoostBotman"
+			"JoostBotman",
+			"PastelKos"
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "οὐ σύνοψις μεταγραφῶν",
@@ -15,6 +16,6 @@
 	"mobile-frontend-terms-text": "Λόγοι χρήσεως",
 	"mobile-frontend-view": "Προβολή κινητού",
 	"mobile-frontend-view-desktop": "Έπιτραπέζιον",
-	"tag-mobile_edit": "Μεταγράφειν κινητού",
-	"tag-mobile_web_edit": "Μεταγράφειν δια διαδικτυακού κινητού"
+	"tag-mobile_edit": "Μεταγράφὴ κινητοῦ",
+	"tag-mobile_web_edit": "Μεταγραφὴ διαδικτυακοῦ κινητοῦ"
 }
