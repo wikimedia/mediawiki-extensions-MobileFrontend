@@ -19,7 +19,7 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Унесите кôд за потврду",
 	"mobile-frontend-categories-heading": "<strong>Категорије</strong>",
 	"mobile-frontend-categories-subheading": "Страница припада следећим категоријама:",
-	"mobile-frontend-categories-nocat": "Ова страница још увек не припада ниједној категорији.",
+	"mobile-frontend-categories-nocat": "Страница још не припада ниједној категорији.",
 	"mobile-frontend-categories-add": "Додај категорију",
 	"mobile-frontend-categories-search": "Претражите категорије",
 	"mobile-frontend-categories-nodata": "Дошло је до грешке. Јесте ли додали категорије за чување?",
