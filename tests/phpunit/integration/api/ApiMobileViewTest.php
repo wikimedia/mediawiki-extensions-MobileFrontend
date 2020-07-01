@@ -7,7 +7,7 @@ use MediaWiki\MediaWikiServices;
  */
 class ApiMobileViewTest extends MediaWikiTestCase {
 
-	public function setUp() : void {
+	protected function setUp() : void {
 		parent::setUp();
 
 		$this->setMwGlobals( 'wgAPIModules', [ 'mobileview' => MockApiMobileView::class ] );

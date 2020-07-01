@@ -15,10 +15,11 @@ class MockApiMobileView extends ApiMobileView {
 
 	protected function makeTitle( $name ) {
 		$t = Title::newFromText( $name );
-		$row = new stdClass();
-		$row->page_id = 1;
-		$row->page_title = $t->getDBkey();
-		$row->page_namespace = $t->getNamespace();
+		$row = (object)[
+			'page_id' => 1,
+			'page_title' => $t->getDBkey(),
+			'page_namespace' => $t->getNamespace(),
+		];
 
 		return Title::newFromRow( $row );
 	}
