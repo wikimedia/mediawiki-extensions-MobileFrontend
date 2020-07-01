@@ -116,10 +116,10 @@ class MobileFrontendHooks {
 
 		// Allow overriding of skin by useskin e.g. useskin=vector&useformat=mobile or by
 		// setting the mobileskin preferences (api only currently)
-		$userSkin = $context->getRequest()->getVal(
-			'useskin',
-			$context->getUser()->getOption( 'mobileskin' )
+		$userOption = $services->getUserOptionsLookup()->getOption(
+			$context->getUser(), 'mobileskin'
 		);
+		$userSkin = $context->getRequest()->getVal( 'useskin', $userOption );
 		if ( $userSkin && Skin::normalizeKey( $userSkin ) === $userSkin ) {
 			$skin = $services->getSkinFactory()->makeSkin( $userSkin );
 		} else {
@@ -546,20 +546,27 @@ class MobileFrontendHooks {
 	 *   mobile friendly equivalents
 	 */
 	public static function shouldMobileFormatSpecialPages( $user ) {
-		$config = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Config' );
+		$services = MediaWikiServices::getInstance();
+		$config = $services->getService( 'MobileFrontend.Config' );
 		$enabled = $config->get( 'MFEnableMobilePreferences' );
 
 		if ( !$enabled ) {
 			return true;
-		} elseif ( !$user->isSafeToLoad() ) {
+		}
+		if ( !$user->isSafeToLoad() ) {
 			// if not isSafeToLoad
 			// assume an anonymous session
 			// (see I2a6ef640d328106c88331da7c53785486e16a353)
 			return true;
-		} else {
-			return $user->getOption( self::MOBILE_PREFERENCES_SPECIAL_PAGES,
-				self::ENABLE_SPECIAL_PAGE_OPTIMISATIONS ) === self::ENABLE_SPECIAL_PAGE_OPTIMISATIONS;
 		}
+
+		$userOption = $services->getUserOptionsLookup()->getOption(
+			$user,
+			self::MOBILE_PREFERENCES_SPECIAL_PAGES,
+			self::ENABLE_SPECIAL_PAGE_OPTIMISATIONS
+		);
+
+		return $userOption === self::ENABLE_SPECIAL_PAGE_OPTIMISATIONS;
 	}
 
 	/**
