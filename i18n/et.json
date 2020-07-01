@@ -131,6 +131,7 @@
 	"mobile-frontend-media-load-fail-message": "Selle pildi laadimisel esines tõrge.",
 	"mobile-frontend-media-load-fail-retry": "Laadi uuesti",
 	"mobile-frontend-missing-image": "Pilt",
+	"mobile-frontend-tap-to-display-image": "Puuduta pildi kuvamiseks.",
 	"mobile-frontend-nearby-error": "{{GRAMMAR:genitive|{{SITENAME}}}} lähikonna funktsioonil on parasjagu probleeme.",
 	"mobile-frontend-nearby-error-guidance": "Proovi oma asukohta värskendada.",
 	"mobile-frontend-nearby-noresults": "Valitseb tühjus... Läheduses paiknevate nähtuste kohta ei leidu ühtegi lehekülge.",
@@ -216,5 +217,11 @@
 	"mobile-frontend-mobile-option-amc-experiment-description": "Täiustatud režiim võimaldab lihtsat juurdepääsu arutelu- ja ajaloolehekülgedele, kasutaja tööriistadele ning muudele redigeerimisvahenditele.",
 	"mobile-frontend-mobile-option-amc-learn-more": "Lisateave",
 	"mobile-frontend-mobile-option-amc-send-feedback": "Saada tagasisidet",
+	"mobile-frontend-amc-outreach-intro": "Tutvustame täiustatud režiimi",
+	"mobile-frontend-amc-outreach-description": "Täiustatud režiimis on ajaloo-, jälgimis- ja viimaste muudatuste loendi ning teiste toimetamistööriistade kasutamisel mobiilis rohkem võimalusi.",
+	"mobile-frontend-amc-outreach-enable": "Luba täiustatud režiim",
+	"mobile-frontend-amc-outreach-no-thanks": "Ei, aiäth",
+	"mobile-frontend-amc-outreach-enabled-message": "Täiustatud režiim on nüüd lubatud. Saad selle välja lülitada enda eelistustes.",
+	"mobile-frontend-amc-outreach-dismissed-message": "Saad lubada täiustatud režiimi igal ajal enda eelistustes.",
 	"mobile-frontend-beta-only": "Funktsioon saadaval ainult beetarežiimis"
 }
