@@ -87,9 +87,10 @@ class MobilePage {
 			$edit['timestamp'] = wfTimestamp( TS_UNIX, $rev->getTimestamp() );
 			$userIdentity = $rev->getUser();
 			if ( $userIdentity ) {
+				$userOptionsLookup = MediaWikiServices::getInstance()->getUserOptionsLookup();
 				$revUser = User::newFromIdentity( $userIdentity );
 				$edit['name'] = $revUser->getName();
-				$edit['gender'] = $revUser->getOption( 'gender' );
+				$edit['gender'] = $userOptionsLookup->getOption( $revUser, 'gender' );
 			}
 		}
 		return $edit;

@@ -4,6 +4,7 @@ namespace MobileFrontend\AMC;
 
 use DeferredUpdates;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\User\UserOptionsLookup;
 use MobileFrontend\Features\IUserMode;
 use MobileFrontend\Features\IUserSelectableMode;
 use RuntimeException;
@@ -33,13 +34,24 @@ class UserMode implements IUserMode, IUserSelectableMode {
 	private $amc;
 
 	/**
+	 * @var UserOptionsLookup
+	 */
+	private $userOptionsLookup;
+
+	/**
 	 * @param Manager $amcManager
 	 * @param \User $user
+	 * @param UserOptionsLookup $userOptionsLookup
 	 * @throws \RuntimeException When AMC mode is not available
 	 */
-	public function __construct( Manager $amcManager, \User $user ) {
+	public function __construct(
+		Manager $amcManager,
+		\User $user,
+		UserOptionsLookup $userOptionsLookup
+	) {
 		$this->amc = $amcManager;
 		$this->user = $user;
+		$this->userOptionsLookup = $userOptionsLookup;
 	}
 
 	/**
@@ -54,9 +66,13 @@ class UserMode implements IUserMode, IUserSelectableMode {
 	 * @return bool
 	 */
 	public function isEnabled() {
+		$userOption = $this->userOptionsLookup->getOption(
+			$this->user,
+			self::USER_OPTION_MODE_AMC,
+			self::OPTION_DISABLED
+		);
 		return $this->amc->isAvailable() &&
-			$this->user->getOption( self::USER_OPTION_MODE_AMC,
-				self::OPTION_DISABLED ) === self::OPTION_ENABLED;
+			 $userOption === self::OPTION_ENABLED;
 	}
 
 	/**
@@ -96,9 +112,11 @@ class UserMode implements IUserMode, IUserSelectableMode {
 	 * @return self
 	 */
 	public static function newForUser( \User $user ) {
+		$services = MediaWikiServices::getInstance();
 		return new self(
-			MediaWikiServices::getInstance()->getService( 'MobileFrontend.AMC.Manager' ),
-			$user
+			$services->getService( 'MobileFrontend.AMC.Manager' ),
+			$user,
+			$services->getUserOptionsLookup()
 		);
 	}
 

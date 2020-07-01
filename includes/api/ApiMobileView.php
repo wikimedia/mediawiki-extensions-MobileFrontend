@@ -686,9 +686,10 @@ class ApiMobileView extends ApiBase {
 				$data['id'] = $wikiPage->getId();
 				$user = User::newFromId( $wikiPage->getUser() );
 				if ( !$user->isAnon() ) {
+					$userOptionsLookup = $services->getUserOptionsLookup();
 					$data['lastmodifiedby'] = [
 						'name' => $wikiPage->getUserText(),
-						'gender' => $user->getOption( 'gender' ),
+						'gender' => $userOptionsLookup->getOption( $user, 'gender' ),
 					];
 				} else {
 					$data['lastmodifiedby'] = null;
