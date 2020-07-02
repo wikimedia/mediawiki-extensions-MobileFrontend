@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\MediaWikiServices;
+use MediaWiki\User\UserOptionsLookup;
 
 /**
  * Basic mobile implementation of SpecialPage to use in specific mobile special pages
@@ -22,6 +23,8 @@ class MobileSpecialPage extends SpecialPage {
 	protected $errorNotFoundDescriptionMsg = 'mobile-frontend-generic-404-desc';
 	/** @var MobileContext */
 	protected $mobileContext;
+	/** @var UserOptionsLookup */
+	protected $userOptionsLookup;
 
 	/**
 	 * @param string $page
@@ -32,6 +35,7 @@ class MobileSpecialPage extends SpecialPage {
 		$services = MediaWikiServices::getInstance();
 		$this->config = $services->getService( 'MobileFrontend.Config' );
 		$this->mobileContext = $services->getService( 'MobileFrontend.Context' );
+		$this->userOptionsLookup = $services->getUserOptionsLookup();
 	}
 
 	/**
@@ -144,5 +148,13 @@ class MobileSpecialPage extends SpecialPage {
 	 */
 	public function getDesktopUrl( $subPage ) {
 		return null;
+	}
+
+	/**
+	 * Get a user options lookup object.
+	 * @return UserOptionsLookup
+	 */
+	public function getUserOptionsLookup() : UserOptionsLookup {
+		return $this->userOptionsLookup;
 	}
 }

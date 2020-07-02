@@ -354,7 +354,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 				'class' => MobileUI::iconClass( 'userAvatar-base20', 'before', 'mw-mf-user' ),
 				'data-revision-id' => $this->revId,
 				'data-user-name' => $user->getName(),
-				'data-user-gender' => $user->getOption( 'gender' ),
+				'data-user-gender' => $this->getUserOptionsLookup()->getOption( $user, 'gender' ),
 			];
 			// Note we do not use LinkRenderer here as this will render
 			// a broken link if the user page does not exist
