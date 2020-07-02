@@ -34,6 +34,7 @@ function makeOnNestedReferenceClickHandler( onNestedReferenceClick ) {
  * @param {boolean} [props.error] whether an error has occurred
  * @param {string} props.title of reference e.g [1]
  * @param {string} props.text is the HTML of the reference
+ * @param {string} [props.parentText] is the HTML of the parent reference if there is one
  * @param {Function} [props.onNestedReferenceClick] callback for when a reference
  *  inside the reference is clicked.
  * @return {Drawer}
@@ -70,6 +71,9 @@ function referenceDrawer( props ) {
 					// Add .mw-parser-output so that TemplateStyles styles apply (T244510)
 					util.parseHTML( '<div>' ).addClass( 'mw-parser-output' ).append( [
 						errorIcon,
+						props.parentText ?
+							util.parseHTML( '<div>' ).html( props.parentText ) :
+							'',
 						util.parseHTML( '<sup>' ).text( props.title ),
 						props.text ?
 							util.parseHTML( '<span>' ).html( ' ' + props.text ) :
@@ -106,6 +110,7 @@ references = {
 			const drawer = referenceDrawer( util.extend( {
 				title: refNumber,
 				text: reference.text,
+				parentText: reference.parentText,
 				onNestedReferenceClick: function ( href, text ) {
 					references.showReference(
 						href,
