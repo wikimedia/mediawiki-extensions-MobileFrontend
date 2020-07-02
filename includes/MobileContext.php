@@ -254,7 +254,8 @@ class MobileContext extends ContextSource {
 		if ( $mode !== self::MODE_BETA ) {
 			$mode = '';
 		}
-		$stats = MediaWikiServices::getInstance()->getStatsdDataFactory();
+		$services = MediaWikiServices::getInstance();
+		$stats = $services->getStatsdDataFactory();
 		// Update statistics
 		if ( $mode === self::MODE_BETA ) {
 			$stats->updateCount( 'mobile.opt_in_cookie_set', 1 );
@@ -266,14 +267,24 @@ class MobileContext extends ContextSource {
 
 		$user = $this->getUser();
 		if ( $user->getId() ) {
-			$user->setOption( self::USER_MODE_PREFERENCE_NAME, $mode );
-			DeferredUpdates::addCallableUpdate( function () use ( $user, $mode ) {
+			$userOptionsManager = $services->getUserOptionsManager();
+			$userOptionsManager->setOption(
+				$user,
+				self::USER_MODE_PREFERENCE_NAME,
+				$mode
+			);
+			DeferredUpdates::addCallableUpdate( function () use ( $user, $mode, $userOptionsManager ) {
 				if ( wfReadOnly() ) {
 					return;
 				}
 
 				$latestUser = $user->getInstanceForUpdate();
-				$latestUser->setOption( self::USER_MODE_PREFERENCE_NAME, $mode );
+
+				$userOptionsManager->setOption(
+					$latestUser,
+					self::USER_MODE_PREFERENCE_NAME,
+					$mode
+				);
 				$latestUser->saveSettings();
 			}, DeferredUpdates::PRESEND );
 		}
