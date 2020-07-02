@@ -64,7 +64,8 @@ return [
 		return new MobileFrontend\AMC\UserMode(
 			$services->getService( 'MobileFrontend.AMC.Manager' ),
 			$services->getService( 'MobileFrontend.Context' )->getUser(),
-			$services->getUserOptionsLookup()
+			$services->getUserOptionsLookup(),
+			$services->getUserOptionsManager()
 		);
 	},
 	'MobileFrontend.AMC.Outreach' => function ( MediaWikiServices $services ) {

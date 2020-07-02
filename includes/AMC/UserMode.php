@@ -5,6 +5,7 @@ namespace MobileFrontend\AMC;
 use DeferredUpdates;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\User\UserOptionsLookup;
+use MediaWiki\User\UserOptionsManager;
 use MobileFrontend\Features\IUserMode;
 use MobileFrontend\Features\IUserSelectableMode;
 use RuntimeException;
@@ -39,19 +40,27 @@ class UserMode implements IUserMode, IUserSelectableMode {
 	private $userOptionsLookup;
 
 	/**
+	 * @var UserOptionsManager
+	 */
+	private $userOptionsManager;
+
+	/**
 	 * @param Manager $amcManager
 	 * @param \User $user
 	 * @param UserOptionsLookup $userOptionsLookup
+	 * @param UserOptionsManager $userOptionsManager
 	 * @throws \RuntimeException When AMC mode is not available
 	 */
 	public function __construct(
 		Manager $amcManager,
 		\User $user,
-		UserOptionsLookup $userOptionsLookup
+		UserOptionsLookup $userOptionsLookup,
+		UserOptionsManager $userOptionsManager
 	) {
 		$this->amc = $amcManager;
 		$this->user = $user;
 		$this->userOptionsLookup = $userOptionsLookup;
+		$this->userOptionsManager = $userOptionsManager;
 	}
 
 	/**
@@ -86,9 +95,14 @@ class UserMode implements IUserMode, IUserSelectableMode {
 		}
 		Assert::parameterType( 'boolean', $isEnabled, 'isEnabled' );
 		$user = $this->user;
+		$userOptionsManager = $this->userOptionsManager;
 
-		$user->setOption( self::USER_OPTION_MODE_AMC, $toSet );
-		DeferredUpdates::addCallableUpdate( function () use ( $user, $toSet ) {
+		$userOptionsManager->setOption(
+			$user,
+			self::USER_OPTION_MODE_AMC,
+			$toSet
+		);
+		DeferredUpdates::addCallableUpdate( function () use ( $user, $toSet, $userOptionsManager ) {
 			if ( wfReadOnly() ) {
 				return;
 			}
@@ -99,7 +113,11 @@ class UserMode implements IUserMode, IUserSelectableMode {
 					"User not found, so can't enable AMC mode"
 				);
 			}
-			$latestUser->setOption( self::USER_OPTION_MODE_AMC, $toSet );
+			$userOptionsManager->setOption(
+				$latestUser,
+				self::USER_OPTION_MODE_AMC,
+				$toSet
+			);
 			$latestUser->saveSettings();
 		}, DeferredUpdates::PRESEND );
 	}
@@ -116,7 +134,8 @@ class UserMode implements IUserMode, IUserSelectableMode {
 		return new self(
 			$services->getService( 'MobileFrontend.AMC.Manager' ),
 			$user,
-			$services->getUserOptionsLookup()
+			$services->getUserOptionsLookup(),
+			$services->getUserOptionsManager()
 		);
 	}
 
