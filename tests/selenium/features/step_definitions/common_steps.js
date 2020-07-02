@@ -11,7 +11,7 @@ const waitForPropagation = ( timeMs ) => {
 };
 
 const theTextOfTheFirstHeadingShouldContain = ( title ) => {
-	ArticlePage.first_heading_element.waitForVisible();
+	ArticlePage.first_heading_element.waitForDisplayed();
 	assert.strictEqual(
 		ArticlePage.first_heading_element.getText().indexOf( title ) > -1,
 		true

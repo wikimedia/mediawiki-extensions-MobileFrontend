@@ -15,7 +15,7 @@ const iShouldBeOnUserPage = ( username ) => {
 };
 
 const thereShouldBeALinkToCreateMyUserPage = () => {
-	assert.strictEqual( UserPage.user_link_element.isVisible(), true );
+	assert.strictEqual( UserPage.user_link_element.isDisplayed(), true );
 };
 
 module.exports = { iVisitMyUserPage, iShouldBeOnUserPage,
