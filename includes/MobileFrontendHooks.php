@@ -651,20 +651,24 @@ class MobileFrontendHooks {
 	}
 
 	/**
-	 * AbuseFilter-GenerateUserVars hook handler that adds a user_mobile variable.
+	 * AbuseFilter-generateUserVars hook handler that adds a user_mobile variable.
 	 * Altering the variables generated for a specific user
 	 *
 	 * @see hooks.txt in AbuseFilter extension
 	 * @param AbuseFilterVariableHolder $vars object to add vars to
 	 * @param User $user
+	 * @param RecentChange|null $rc If the variables should be generated for an RC entry, this
+	 *  is the entry. Null if it's for the current action being filtered.
 	 */
-	public static function onAbuseFilterGenerateUserVars( $vars, $user ) {
-		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
-
-		if ( $context->shouldDisplayMobileView() ) {
-			$vars->setVar( 'user_mobile', true );
+	public static function onAbuseFilterGenerateUserVars( $vars, $user, RecentChange $rc = null ) {
+		if ( !$rc ) {
+			$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
+			$vars->setVar( 'user_mobile', $context->shouldDisplayMobileView() );
 		} else {
-			$vars->setVar( 'user_mobile', false );
+			$dbr = wfGetDB( DB_REPLICA );
+			$tags = ChangeTags::getTags( $dbr, $rc->getAttribute( 'rc_id' ) );
+			$val = (bool)array_intersect( $tags, [ 'mobile edit', 'mobile web edit' ] );
+			$vars->setVar( 'user_mobile', $val );
 		}
 	}
 
