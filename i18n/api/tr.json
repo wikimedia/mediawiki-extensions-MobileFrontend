@@ -30,7 +30,7 @@
 	"apihelp-mobileview-example-1": "Bölüm 0 hakkında bilgi almak [[Doom metal]]",
 	"apihelp-mobileview-example-2": "Bölüm 0 ve bölümleri içeren başvurular hakkında bilgi almak için [[Candlemass]]",
 	"apihelp-mobileview-example-3": "Ve sonraki bölümleri başvurular içeren bölüm 1 ile ilgili bilgi almak [[Candlemass]]",
-	"apihelp-parse-param-mobileformat": "Bir biçimde mobil cihazlar için uygun ayrıştırma çıkış dönüş.",
+	"apihelp-parse-param-mobileformat": "Ayrıştırma çıkışını mobil aygıtlar için uygun bir biçimde döndürün.",
 	"apihelp-parse-param-noimages": "Mobil çıkışı devre dışı görüntüler.",
 	"apihelp-parse-param-mainpage": "Mobil anasayfa dönüştürmesi uygulanır.",
 	"apihelp-webapp-manifest-description": "Bir webapp bildirimi döndürür.",
