@@ -132,6 +132,7 @@
 	"mobile-frontend-media-load-fail-message": "Der gong wat mis mei it laden fan dit ôfbyld.",
 	"mobile-frontend-media-load-fail-retry": "Werlade",
 	"mobile-frontend-missing-image": "Ofbyld",
+	"mobile-frontend-tap-to-display-image": "Tikje om ôfbyld te sjen.",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 km}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",
 	"mobile-frontend-nearby-error": "{{SITENAME}} Tichteby ûnderfynt problemen.",
