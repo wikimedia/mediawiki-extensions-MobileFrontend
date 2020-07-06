@@ -40,7 +40,7 @@
 	"mobile-frontend-categories-summary": "カテゴリに追加されました",
 	"mobile-frontend-categories-notification": "カテゴリが更新されました。",
 	"mobile-frontend-categories-add-heading": "<strong>新しいカテゴリへの<span> $1</span> の追加</strong>",
-	"mobile-frontend-categories-add-wait": "カテゴリを保存しています。お待ち下さい。",
+	"mobile-frontend-categories-add-wait": "カテゴリを保存しています。お待ちください。",
 	"mobile-frontend-categories-normal": "カテゴリ",
 	"mobile-frontend-categories-hidden": "隠しカテゴリ",
 	"mobile-frontend-changeslist-nocomment": "編集の要約なし",
