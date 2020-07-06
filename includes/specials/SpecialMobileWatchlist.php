@@ -54,7 +54,12 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 			self::VIEW_FEED : self::VIEW_LIST;
 		$this->view = $req->getVal( 'watchlistview', $defaultView );
 
-		$this->filter = $req->getVal( 'filter', $user->getOption( self::FILTER_OPTION_NAME, 'all' ) );
+		$userOption = $this->getUserOptionsLookup()->getOption(
+			$user,
+			self::FILTER_OPTION_NAME,
+			'all'
+		);
+		$this->filter = $req->getVal( 'filter', $userOption );
 
 		$output->setPageTitle( $this->msg( 'watchlist' ) );
 
@@ -128,10 +133,12 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	 * @return string Parsed HTML
 	 */
 	public static function getWatchlistHeader( User $user, $view = self::VIEW_LIST, $filter = null ) {
+		$services = MediaWikiServices::getInstance();
 		$sp = SpecialPage::getTitleFor( 'Watchlist' );
 		$attrsList = $attrsFeed = [];
 		if ( $filter === null ) {
-			$filter = $user->getOption( self::FILTER_OPTION_NAME, 'all' );
+			$userOptionsLookup = $services->getUserOptionsLookup();
+			$filter = $userOptionsLookup->getOption( $user, self::FILTER_OPTION_NAME, 'all' );
 		}
 
 		if ( $view === self::VIEW_FEED ) {
@@ -144,7 +151,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 			$attrsList[ 'class' ] = MobileUI::buttonClass( 'progressive', 'is-on' );
 		}
 
-		$linkRenderer = MediaWikiServices::getInstance()->getLinkRenderer();
+		$linkRenderer = $services->getLinkRenderer();
 		$html =
 		Html::openElement( 'ul',
 			[ 'class' => 'mw-mf-watchlist-button-bar mw-ui-button-group' ] ) .
@@ -244,7 +251,8 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 			'rc_type!=' . $dbr->addQuotes( RC_EXTERNAL ),
 		];
 		// Filter out category membership changes if configured
-		if ( $user->getBoolOption( 'hidecategorization' ) ) {
+		$userOption = $this->userOptionsLookup->getBoolOption( $user, 'hidecategorization' );
+		if ( $userOption ) {
 			$innerConds[] = 'rc_type!=' . $dbr->addQuotes( RC_CATEGORIZE );
 		}
 		$join_conds = [
