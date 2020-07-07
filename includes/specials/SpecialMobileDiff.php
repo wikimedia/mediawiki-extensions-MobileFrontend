@@ -411,7 +411,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	 */
 	private function listGroups( User $user, IContextSource $context ) {
 		// Get groups to which the user belongs
-		$userGroups = $user->getGroups();
+		$userGroups = $this->getUserGroupManager()->getUserGroups( $user );
 		$userMembers = [];
 		foreach ( $userGroups as $group ) {
 			$userMembers[] = UserGroupMembership::getLink( $group, $context, 'html' );

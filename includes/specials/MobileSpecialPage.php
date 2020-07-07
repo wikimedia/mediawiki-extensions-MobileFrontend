@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\MediaWikiServices;
+use MediaWiki\User\UserGroupManager;
 use MediaWiki\User\UserOptionsLookup;
 
 /**
@@ -25,6 +26,8 @@ class MobileSpecialPage extends SpecialPage {
 	protected $mobileContext;
 	/** @var UserOptionsLookup */
 	protected $userOptionsLookup;
+	/** @var UserGroupManager */
+	protected $userGroupManager;
 
 	/**
 	 * @param string $page
@@ -36,6 +39,7 @@ class MobileSpecialPage extends SpecialPage {
 		$this->config = $services->getService( 'MobileFrontend.Config' );
 		$this->mobileContext = $services->getService( 'MobileFrontend.Context' );
 		$this->userOptionsLookup = $services->getUserOptionsLookup();
+		$this->userGroupManager = $services->getUserGroupManager();
 	}
 
 	/**
@@ -156,5 +160,13 @@ class MobileSpecialPage extends SpecialPage {
 	 */
 	public function getUserOptionsLookup() : UserOptionsLookup {
 		return $this->userOptionsLookup;
+	}
+
+	/**
+	 * Get a user group manager object.
+	 * @return UserGroupManager
+	 */
+	protected function getUserGroupManager() : UserGroupManager {
+		return $this->userGroupManager;
 	}
 }
