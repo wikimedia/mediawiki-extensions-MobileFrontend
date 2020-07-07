@@ -57,7 +57,8 @@ function VisualEditorOverlay( options ) {
 
 	this.target = ve.init.mw.targetFactory.create( 'article', this, {
 		$element: this.$el,
-		section: this.options.sectionId
+		// string or null, but not undefined
+		section: this.options.sectionId || null
 	} );
 	this.target.once( 'surfaceReady', function () {
 		surfaceReady.resolve();
