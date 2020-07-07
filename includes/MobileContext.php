@@ -232,7 +232,8 @@ class MobileContext extends ContextSource {
 				if ( $user->isAnon() ) {
 					$this->loadMobileModeCookie();
 				} else {
-					$mode = $user->getOption( self::USER_MODE_PREFERENCE_NAME );
+					$userOptionManager = MediaWikiServices::getInstance()->getUserOptionsManager();
+					$mode = $userOptionManager->getOption( $user, self::USER_MODE_PREFERENCE_NAME );
 					$this->mobileMode = $mode;
 					// Edge case where preferences are corrupt or the user opted
 					// in before change.
