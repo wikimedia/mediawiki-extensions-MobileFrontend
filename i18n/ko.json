@@ -20,6 +20,7 @@
 			"Kwj2772",
 			"Leehoy",
 			"LiteHell",
+			"MemphisA5",
 			"Nuevo Paso",
 			"Priviet",
 			"Revi",
@@ -256,7 +257,7 @@
 	"mobile-frontend-amc-outreach-no-thanks": "괜찮습니다",
 	"mobile-frontend-amc-outreach-dismissed-message": "내 설정에서 언제든지 고급 모드를 활성화할 수 있습니다.",
 	"mobile-frontend-beta-only": "베타 모드에서만 사용 가능한 기능입니다",
-	"mobile-frontend-console-recruit": "저희가 모바일 사이트를 어떻게 만들어나가는지 더 알아보세요 @ https://www.mediawiki.org/wiki/Extension:MobileFrontend",
+	"mobile-frontend-console-recruit": "저희가 모바일 사이트를 어떻게 만들어나가는지 더 알아보세요 @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "모바일일 때 특수 문서를 최적화하고 단순화 (권장)",
 	"prefs-mobile": "모바일 환경 설정"
 }
