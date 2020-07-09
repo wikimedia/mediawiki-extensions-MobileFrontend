@@ -158,7 +158,7 @@ class MobileSpecialPage extends SpecialPage {
 	 * Get a user options lookup object.
 	 * @return UserOptionsLookup
 	 */
-	public function getUserOptionsLookup() : UserOptionsLookup {
+	protected function getUserOptionsLookup() : UserOptionsLookup {
 		return $this->userOptionsLookup;
 	}
 
