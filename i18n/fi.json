@@ -56,7 +56,7 @@
 	"mobile-frontend-edit-login-action": "<strong>Auta parantamaan {{GRAMMAR:partitive|{{SITENAME}}}}.</strong><br />Kirjaudu sisään muokataksesi.",
 	"mobile-frontend-edit-signup-action": "<strong>Auta parantamaan {{GRAMMAR:partitive|{{SITENAME}}}}.</strong><br />Luo tunnus muokataksesi.",
 	"mobile-frontend-editor-anon": "Muokkaa kirjautumatta sisään",
-	"mobile-frontend-editor-anonwarning": "<strong>Varoitus:</strong> Et ole kirjautunut sisään. IP-osoitteesi tulee näkymään julkisesti, jos teet muokkauksia. Mikäli <strong>kirjaudut sisään</strong> tai <strong>luot tunnuksen</strong>, muokkauksesi yhdistetään käyttäjänimeesi ja saat paremman käyttökokemuksen.",
+	"mobile-frontend-editor-anonwarning": "<strong>Varoitus</strong>: Et ole kirjautunut sisään. IP-osoitteesi tulee näkymään julkisesti, jos teet muokkauksia. Mikäli <strong>kirjaudut sisään</strong> tai <strong>luot tunnuksen</strong>, muokkauksesi yhdistetään käyttäjänimeesi ja saat paremman käyttökokemuksen.",
 	"mobile-frontend-editor-blocked-drawer-title": "Sinut on estetty muokkaamasta {{GRAMMAR:partitive|{{SITENAME}}}}",
 	"mobile-frontend-editor-blocked-drawer-title-partial": "Sinut on estetty muokkaamasta tätä sivua",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Eston syy",
@@ -146,7 +146,6 @@
 	"mobile-frontend-media-load-fail-message": "Virhe kuvan lataamisessa.",
 	"mobile-frontend-media-load-fail-retry": "Päivitä",
 	"mobile-frontend-missing-image": "Kuva",
-	"mobile-frontend-tap-to-display-image": "Napauta näyttääksesi kuvan.",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 km}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",
 	"mobile-frontend-nearby-error": "{{GRAMMAR:genitive|{{SITENAME}}}} Lähistöllä-toiminnossa on ongelmia.",
@@ -242,6 +241,6 @@
 	"mobile-frontend-amc-outreach-no-thanks": "Ei kiitos",
 	"mobile-frontend-amc-outreach-enabled-message": "Laajennettu tila on nyt käytössä. Voit kytkeä sen pois asetuksista.",
 	"mobile-frontend-amc-outreach-dismissed-message": "Voit kytkeä laajennetun tilan käyttöön koska tahansa asetuksista.",
-	"mobile-frontend-console-recruit": "Lisätietoja siitä, miten rakensimme mobiilisivustomme @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
+	"mobile-frontend-console-recruit": "Lisätietoja siitä, miten rakensimme mobiilisivustomme @ https://www.mediawiki.org/wiki/Extension:MobileFrontend",
 	"prefs-mobile": "Mobiiliasetukset"
 }
