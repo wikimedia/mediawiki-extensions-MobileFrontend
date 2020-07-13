@@ -110,7 +110,7 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 	 */
 	private function getLanguageVariants() {
 		$pageLang = $this->title->getPageLanguage();
-		$variants = $pageLang->getVariants();
+		$variants = $this->getLanguageConverter()->getVariants();
 		if ( count( $variants ) > 1 ) {
 			$pageLangCode = $pageLang->getCode();
 			$output = [];
@@ -129,10 +129,10 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 				}
 			}
 			return $output;
-		} else {
-			// No variants
-			return [];
 		}
+
+		// No variants
+		return [];
 	}
 
 	/**
