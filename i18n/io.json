@@ -16,6 +16,7 @@
 	"mobile-frontend-languages-header-page": "$1 - Altra lingui",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Omna lingui",
 	"mobile-frontend-last-modified-date": "Laste redaktita ye $1, $2 kloki",
+	"mobile-frontend-last-modified-with-user-minutes": "[La lasta $4 {{GENDER:$1|redaktita}} {{PLURAL:$3|$3 minuto|$3 minuti}} ante nun] da {{PLURAL:$5|[$6 $2]|0=an anonymous user}}",
 	"mobile-frontend-nearby-noresults": "Ne existas pagini pri temi vicina a vu.",
 	"mobile-frontend-nearby-noresults-guidance": "Probez krear nova pagino, od inkluzar lokizo por specifika pagino",
 	"mobile-frontend-nearby-title": "Proxime",
