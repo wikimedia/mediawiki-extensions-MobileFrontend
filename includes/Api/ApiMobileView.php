@@ -660,7 +660,6 @@ class ApiMobileView extends ApiBase {
 				$context = $services->getService( 'MobileFrontend.Context' );
 
 				$mfMinCachedPageSize = $config->get( 'MFMinCachedPageSize' );
-				$mfSpecialCaseMainPage = $config->get( 'MFSpecialCaseMainPage' );
 
 				if ( $this->file ) {
 					$parserOutput = null;
@@ -679,7 +678,6 @@ class ApiMobileView extends ApiBase {
 						MobileFormatter::wrapHTML( $html ), $title, $config, $context
 					);
 					$mf->setRemoveMedia( $noImages );
-					$mf->setIsMainPage( $this->mainPage && $mfSpecialCaseMainPage );
 					$mf->filterContent();
 					$html = $mf->getText();
 				}

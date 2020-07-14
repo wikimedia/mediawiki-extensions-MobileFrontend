@@ -38,7 +38,6 @@ class ApiParseExtender {
 	public static function onAPIAfterExecute( ApiBase &$module ) {
 		$services = MediaWikiServices::getInstance();
 		$config = $services->getService( 'MobileFrontend.Config' );
-		$mfSpecialCaseMainPage = $config->get( 'MFSpecialCaseMainPage' );
 
 		$context = $services->getService( 'MobileFrontend.Context' );
 
@@ -53,8 +52,7 @@ class ApiParseExtender {
 					MobileFormatter::wrapHTML( $text ), $title, $config, $context
 				);
 				$mf->setRemoveMedia( $params['noimages'] );
-				$mf->setIsMainPage( $params['mainpage'] && $mfSpecialCaseMainPage );
-				$mf->enableExpandableSections( !$params['mainpage'] );
+				$mf->enableExpandableSections( true );
 				$mf->disableScripts();
 				// HACK: need a nice way to request a TOC-free HTML in the first place
 				$mf->remove( [ '.toc', '.mw-headline-anchor' ] );

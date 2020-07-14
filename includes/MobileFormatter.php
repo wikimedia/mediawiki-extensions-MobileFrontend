@@ -3,7 +3,6 @@
 use HtmlFormatter\HtmlFormatter;
 use MobileFrontend\ContentProviders\IContentProvider;
 use MobileFrontend\Transforms\LazyImageTransform;
-use MobileFrontend\Transforms\LegacyMainPageTransform;
 use MobileFrontend\Transforms\MoveLeadParagraphTransform;
 use MobileFrontend\Transforms\NoTransform;
 
@@ -55,11 +54,6 @@ class MobileFormatter extends HtmlFormatter {
 	 * @var bool
 	 */
 	protected $expandableSections = false;
-	/**
-	 * Whether actual page is the main page and should be special cased
-	 * @var bool
-	 */
-	protected $mainPage = false;
 
 	/**
 	 * @var Config
@@ -123,17 +117,10 @@ class MobileFormatter extends HtmlFormatter {
 		$enableSections,
 		Config $config
 	) {
-		$mfSpecialCaseMainPage = $config->get( 'MFSpecialCaseMainPage' );
-
 		$title = $context->getTitle();
-		$isMainPage = $title->isMainPage();
 		$html = self::wrapHTML( $provider->getHTML() );
 		$formatter = new self( $html, $title, $config, $context );
-		if ( $isMainPage ) {
-			$formatter->enableExpandableSections( !$mfSpecialCaseMainPage );
-		} else {
-			$formatter->enableExpandableSections( $enableSections );
-		}
+		$formatter->enableExpandableSections( $enableSections );
 
 		$request = $context->getRequest();
 		$formatter->disableLegacyTransforms(
@@ -141,7 +128,6 @@ class MobileFormatter extends HtmlFormatter {
 			$request->getBool( 'debug' )
 			&& $request->getBool( 'mfnolegacytransform' )
 		);
-		$formatter->setIsMainPage( $isMainPage && $mfSpecialCaseMainPage );
 
 		return $formatter;
 	}
@@ -153,16 +139,6 @@ class MobileFormatter extends HtmlFormatter {
 	 */
 	public function enableExpandableSections( $flag = true ) {
 		$this->expandableSections = $flag;
-	}
-
-	/**
-	 * Change mainPage (is this the main page) to $value (standard: true)
-	 * This enables special casing for the main page.
-	 * @deprecated
-	 * @param bool $value
-	 */
-	public function setIsMainPage( $value = true ) {
-		$this->mainPage = $value;
 	}
 
 	/**
@@ -204,7 +180,7 @@ class MobileFormatter extends HtmlFormatter {
 			self::SHOW_FIRST_PARAGRAPH_BEFORE_INFOBOX => $showFirstParagraphBeforeInfobox
 		];
 		// Sectionify the content and transform it if necessary per section
-		if ( !$this->mainPage && $this->expandableSections ) {
+		if ( $this->expandableSections ) {
 			list( $headings, $subheadings ) = $this->getHeadings( $doc );
 			$this->makeHeadingsEditable( $subheadings );
 			$this->makeSections( $doc, $headings, $transformOptions );
@@ -272,24 +248,6 @@ class MobileFormatter extends HtmlFormatter {
 			$replacement->setAttribute( 'class', 'mw-mf-image-replacement' );
 			$element->parentNode->replaceChild( $replacement, $element );
 		}
-	}
-
-	/**
-	 * Performs final transformations to mobile format and returns resulting HTML
-	 *
-	 * @param DOMElement|string|null $element ID of element to get HTML from or
-	 *   false to get it from the whole tree
-	 * @return string Processed HTML
-	 */
-	public function getText( $element = null ) {
-		if ( $this->mainPage && !$this->legacyTransformsDisabled ) {
-			$transform = new LegacyMainPageTransform();
-			$doc = $this->getDoc();
-			/** @phan-suppress-next-line PhanTypeMismatchArgument DOMNode vs. DOMElement */
-			$transform->apply( $doc->getElementsByTagName( 'body' )->item( 0 ) );
-		}
-
-		return parent::getText( $element );
 	}
 
 	/**

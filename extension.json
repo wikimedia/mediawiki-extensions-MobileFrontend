@@ -824,9 +824,6 @@
 				]
 			}
 		},
-		"MFSpecialCaseMainPage": {
-			"value": false
-		},
 		"MFMobileHeader": {
 			"value": "X-Subdomain"
 		},
