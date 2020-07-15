@@ -168,8 +168,9 @@
 		.continue,
 		.submit,
 		.progressive {
-			background-color: @colorProgressive;
-			color: #fff;
+			// FIXME: Use WikimediaUI `@background-color*` variable when available.
+			background-color: @color-primary;
+			color: @color-base--inverted;
 			width: auto;
 			display: table-cell;
 			vertical-align: middle;
@@ -195,8 +196,9 @@
 	}
 
 	.submit {
-		background-color: @colorProgressive;
-		color: #fff;
+		// FIXME: Use WikimediaUI `@background-color*` variable when available.
+		background-color: @color-primary;
+		color: @color-base--inverted;
 	}
 
 	h2 {
@@ -234,7 +236,7 @@
 .overlay-header-container,
 .overlay-footer-container {
 	width: 100%;
-	background: #fff;
+	background: @background-color-base;
 	// prevent .page-list or VE surface overlaping the header when scrolling
 	z-index: @z-indexOverOverlay;
 
@@ -254,7 +256,7 @@
 }
 
 .overlay-footer-container {
-	background-color: #fff;
+	background-color: @background-color-base;
 	bottom: 0;
 	border-top: 1px solid @grayLight;
 
