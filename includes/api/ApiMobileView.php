@@ -710,7 +710,8 @@ class ApiMobileView extends ApiBase {
 
 				$data['contentmodel'] = $title->getContentModel();
 
-				if ( $title->getPageLanguage()->hasVariants() ) {
+				$langHasVariants = $this->getLanguageConverter()->hasVariants();
+				if ( $langHasVariants ) {
 					$data['hasvariants'] = true;
 				}
 
