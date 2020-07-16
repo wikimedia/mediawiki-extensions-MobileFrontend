@@ -37,8 +37,9 @@ class MoveLeadParagraphTransformTest extends \MediaWikiUnitTestCase {
 		$bodyNode->appendChild( $infobox );
 		$bodyNode->appendChild( $section );
 
-		$this->assertFalse(
+		$this->assertEquals(
 			MoveLeadParagraphTransform::getInfoboxContainer( $pNode ),
+			null,
 			'The paragraph is not inside a .infobox or .mw-stack element'
 		);
 		$this->assertEquals(
@@ -50,8 +51,9 @@ class MoveLeadParagraphTransformTest extends \MediaWikiUnitTestCase {
 			MoveLeadParagraphTransform::getInfoboxContainer( $stack ),
 			$stack
 		);
-		$this->assertFalse(
+		$this->assertEquals(
 			MoveLeadParagraphTransform::getInfoboxContainer( $stack, '/infobox-container/' ),
+			null,
 			'Only .infobox-container elements can now wrap infoboxes so the stack does not resolve'
 		);
 		$this->assertEquals(
