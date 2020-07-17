@@ -52,31 +52,6 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	}
 
 	/**
-	 * Works out if the infobox is wrapped
-	 * @param DOMElement $node of infobox
-	 * @param string $wrapperClass (optional) regex for matching required classname for wrapper
-	 * @return DOMElement|null representing an unwrapped infobox or an element that wraps the infobox
-	 */
-	public static function getInfoboxContainer(
-		DOMElement $node, string $wrapperClass = '/^(mw-stack|collapsible)$/'
-	) : ?DOMElement {
-		$infobox = null;
-
-		// iterate to the top.
-		while ( $node->parentNode ) {
-			if ( self::matchElement( $node, 'table', '/^infobox$/' ) ||
-				// infobox's can be divs
-				self::matchElement( $node, 'div', '/^infobox$/' ) ||
-				self::matchElement( $node, false, $wrapperClass )
-			) {
-				$infobox = $node;
-			}
-			$node = $node->parentNode;
-		}
-		return $infobox;
-	}
-
-	/**
 	 * Iterate up the DOM tree until find a parent node which has the parent $parent
 	 * @param DOMNode $node
 	 * @param DOMNode $parent
@@ -101,11 +76,25 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	 * @return DOMElement|null The first infobox
 	 */
 	private function identifyInfoboxElement( DOMXPath $xPath, DOMElement $body ) : ?DOMElement {
-		$xPathQueryInfoboxes = './/*[starts-with(@class,"infobox") or contains(@class," infobox")]';
-		$infobox = $xPath->query( $xPathQueryInfoboxes, $body )->item( 0 );
+		$paths = [
+			// Infoboxes: *.infobox
+			'.//*[contains(concat(" ",normalize-space(@class)," ")," infobox ")]',
+		];
+		$query = '(' . implode( '|', $paths ) . ')';
+		$infobox = $xPath->query( $query, $body )->item( 0 );
 
 		if ( $infobox instanceof DOMElement ) {
-			return self::getInfoboxContainer( $infobox );
+			// Check if the infobox is inside a container
+			$node = $infobox;
+			$wrapperClass = '/^(mw-stack|collapsible)$/';
+			// Traverse up
+			while ( $node->parentNode ) {
+				if ( self::matchElement( $node, false, $wrapperClass ) ) {
+					$infobox = $node;
+				}
+				$node = $node->parentNode;
+			}
+			return $infobox;
 		}
 		return null;
 	}

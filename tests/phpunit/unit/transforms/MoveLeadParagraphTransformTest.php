@@ -1,6 +1,7 @@
 <?php
 
 use MobileFrontend\Transforms\MoveLeadParagraphTransform;
+use Wikimedia\TestingAccessWrapper;
 
 /**
  * @group MobileFrontend
@@ -13,17 +14,21 @@ class MoveLeadParagraphTransformTest extends \MediaWikiUnitTestCase {
 	}
 
 	/**
-	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::getInfoboxContainer
+	 * @dataProvider provideIdentifyInfoboxElement
+	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::identifyInfoboxElement
 	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::matchElement
 	 */
-	public function testGetInfoboxContainer() {
+	public function testIdentifyInfoboxElement( string $html, ?string $expected, string $msg ) {
 		$doc = new DOMDocument();
+		$doc->loadHTML( self::wrap( $html ) );
+		$xPath = new DOMXPath( $doc );
+		$bodyNode = $doc->getElementsByTagName( 'body' )->item( 0 );
+
 		$wrappedInfobox = $doc->createElement( 'table' );
 		$wrappedInfobox->setAttribute( 'class', 'infobox' );
 		$stack = $doc->createElement( 'div' );
 		$stack->setAttribute( 'class', 'mw-stack' );
 		$stack->appendChild( $wrappedInfobox );
-		$bodyNode = $doc->createElement( 'body' );
 		$pNode = $doc->createElement( 'p' );
 		$infobox = $doc->createElement( 'table' );
 		$infobox->setAttribute( 'class', 'infobox' );
@@ -32,40 +37,42 @@ class MoveLeadParagraphTransformTest extends \MediaWikiUnitTestCase {
 		$section = $doc->createElement( 'div' );
 		$section->appendChild( $anotherInfobox );
 
-		$bodyNode->appendChild( $stack );
-		$bodyNode->appendChild( $pNode );
-		$bodyNode->appendChild( $infobox );
-		$bodyNode->appendChild( $section );
+		$transform = TestingAccessWrapper::newFromObject(
+			new MoveLeadParagraphTransform( 'DummyTitle', 1 )
+		);
+
+		$infobox = $transform->identifyInfoboxElement( $xPath, $bodyNode );
 
 		$this->assertEquals(
-			MoveLeadParagraphTransform::getInfoboxContainer( $pNode ),
-			null,
-			'The paragraph is not inside a .infobox or .mw-stack element'
+			$infobox ? $infobox->getNodePath() : null,
+			$expected,
+			$msg
 		);
-		$this->assertEquals(
-			MoveLeadParagraphTransform::getInfoboxContainer( $wrappedInfobox ),
-			$stack,
-			'If an infobox is wrapped by a known wrapper element, the wrapper element is returned'
-		);
-		$this->assertEquals(
-			MoveLeadParagraphTransform::getInfoboxContainer( $stack ),
-			$stack
-		);
-		$this->assertEquals(
-			MoveLeadParagraphTransform::getInfoboxContainer( $stack, '/infobox-container/' ),
-			null,
-			'Only .infobox-container elements can now wrap infoboxes so the stack does not resolve'
-		);
-		$this->assertEquals(
-			MoveLeadParagraphTransform::getInfoboxContainer( $infobox ),
-			$infobox
-		);
-		$this->assertEquals(
-			MoveLeadParagraphTransform::getInfoboxContainer( $anotherInfobox ),
-			$anotherInfobox,
-			'Even though the infobox is wrapped, the wrapper element is not a valid container,' .
-				' thus the infobox itself is considered the infobox'
-		);
+	}
+
+	public function provideIdentifyInfoboxElement() : array {
+		return [
+			[
+				'html' => '<p></p>',
+				'expected' => null,
+				'msg' => 'Paragraph only'
+			],
+			[
+				'html' => '<p></p><div class="infobox"></div>',
+				'expected' => '/html/body/div',
+				'msg' => 'Simple infobox'
+			],
+			[
+				'html' => '<p></p><div class="mw-stack"><table class="infobox"></table></div>',
+				'expected' => '/html/body/div',
+				'msg' => 'Infobox wrapped in an known container'
+			],
+			[
+				'html' => '<p></p><div><table class="infobox"></table></div>',
+				'expected' => '/html/body/div/table',
+				'msg' => 'Infobox wrapped in an unknown container'
+			],
+		];
 	}
 
 	/**
