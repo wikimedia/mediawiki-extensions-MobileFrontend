@@ -20,7 +20,7 @@ class MoveLeadParagraphTransformTest extends \MediaWikiUnitTestCase {
 	 */
 	public function testIdentifyInfoboxElement( string $html, ?string $expected, string $msg ) {
 		$doc = new DOMDocument();
-		$doc->loadHTML( self::wrap( $html ) );
+		$doc->loadHTML( self::wrap( $html ), LIBXML_NOERROR );
 		$xPath = new DOMXPath( $doc );
 		$bodyNode = $doc->getElementsByTagName( 'body' )->item( 0 );
 
@@ -71,6 +71,16 @@ class MoveLeadParagraphTransformTest extends \MediaWikiUnitTestCase {
 				'html' => '<p></p><div><table class="infobox"></table></div>',
 				'expected' => '/html/body/div/table',
 				'msg' => 'Infobox wrapped in an unknown container'
+			],
+			[
+				'html' => '<p></p><div class="thumb tright"></div>',
+				'expected' => '/html/body/div',
+				'msg' => 'Thumbnail'
+			],
+			[
+				'html' => '<p></p><figure></figure>',
+				'expected' => '/html/body/figure',
+				'msg' => 'Thumbnail (Parsoid)'
 			],
 		];
 	}

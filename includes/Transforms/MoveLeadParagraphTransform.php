@@ -79,6 +79,9 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 		$paths = [
 			// Infoboxes: *.infobox
 			'.//*[contains(concat(" ",normalize-space(@class)," ")," infobox ")]',
+			// Thumbnail images: .thumb, figure (Parsoid)
+			'.//*[contains(concat(" ",normalize-space(@class)," ")," thumb ")]',
+			'.//figure',
 		];
 		$query = '(' . implode( '|', $paths ) . ')';
 		$infobox = $xPath->query( $query, $body )->item( 0 );
