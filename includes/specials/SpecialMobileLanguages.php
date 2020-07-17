@@ -110,11 +110,12 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 	 */
 	private function getLanguageVariants() {
 		$pageLang = $this->title->getPageLanguage();
-		$variants = $this->getLanguageConverter()->getVariants();
-		if ( count( $variants ) > 1 ) {
+		$langConverter = $this->getLanguageConverter();
+		if ( $langConverter->hasVariants() ) {
 			$pageLangCode = $pageLang->getCode();
 			$output = [];
 			// Loops over each variant
+			$variants = $langConverter->getVariants();
 			foreach ( $variants as $code ) {
 				// Gets variant name from language code
 				$varname = $pageLang->getVariantname( $code );
