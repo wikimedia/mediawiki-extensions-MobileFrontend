@@ -98,7 +98,7 @@
 	"mobile-frontend-editor-placeholder": "Bu bölüm boş. Geliştiren ilk siz olun!",
 	"mobile-frontend-editor-placeholder-new-page": "{{SITENAME}} sitesinde yeni bir sayfa {{GENDER:$1|oluşturuyorsunuz}}!",
 	"mobile-frontend-editor-previewing-page": "<span>$1 <strong>Ön izleniyor</strong></span>",
-	"mobile-frontend-editor-publish": "Yayınla",
+	"mobile-frontend-editor-publish": "Yayımla",
 	"mobile-frontend-editor-save": "Kaydet",
 	"mobile-frontend-editor-success": "Başarı! Düzenlemeniz yayınlandı.",
 	"mobile-frontend-editor-success-landmark-1": "Tebrikler, {{SITENAME}} editörü oldunuz!",
