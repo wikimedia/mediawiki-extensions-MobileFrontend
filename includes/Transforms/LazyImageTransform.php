@@ -151,14 +151,28 @@ class LazyImageTransform implements IMobileTransform {
 				continue;
 			}
 
-			$dimensionsStyle = "width: {$dimensions['width']};height: {$dimensions['height']};";
 			// HTML only clients
 			$noscript = $doc->createElement( 'noscript' );
 
 			// To be loaded image placeholder
 			$imgPlaceholder = $doc->createElement( 'span' );
 			$imgPlaceholder->setAttribute( 'class', 'lazy-image-placeholder' );
-			$imgPlaceholder->setAttribute( 'style', $dimensionsStyle );
+
+			$styles = $this->parseStyleString(
+				$img->hasAttribute( 'style' ) ? $img->getAttribute( 'style' ) : ''
+			);
+
+			$allowedStyles = $this->filterAllowedStyles(
+				$styles,
+				[
+					// T207929
+					'vertical-align'
+				]
+			);
+			$allowedStyles['width'] = $dimensions['width'];
+			$allowedStyles['height'] = $dimensions['height'];
+
+			$imgPlaceholder->setAttribute( 'style', $this->formStyleString( $allowedStyles ) );
 			foreach ( [ 'src', 'alt', 'width', 'height', 'srcset', 'class' ] as $attr ) {
 				if ( $img->hasAttribute( $attr ) ) {
 					$imgPlaceholder->setAttribute( "data-$attr", $img->getAttribute( $attr ) );
@@ -178,5 +192,66 @@ class LazyImageTransform implements IMobileTransform {
 			// Insert the HTML only markup before the placeholder
 			$parent->insertBefore( $noscript, $imgPlaceholder );
 		}
+	}
+
+	/**
+	 * Parse html `styles` string into kev-value array
+	 *
+	 * @param string $styleAttr Element or document to rewrite images in.
+	 *
+	 * @return array
+	 */
+	private function parseStyleString( string $styleAttr ): array {
+		if ( empty( $styleAttr ) ) {
+			return [];
+		}
+		$styleStrings = explode( ';', $styleAttr );
+		$result = [];
+		foreach ( $styleStrings as $styleString ) {
+			$styleWithValue = explode( ':', $styleString );
+			$style = trim( $styleWithValue[0] );
+			if ( !empty( $style ) ) {
+				$result[ $style ] = trim( $styleWithValue[1] ?? '' );
+			}
+		}
+		return $result;
+	}
+
+	/**
+	 * Forms style's string from kev-value array
+	 *
+	 * @param array $styles
+	 *
+	 * @return string
+	 */
+	private function formStyleString( array $styles ): string {
+		$styleString = '';
+		foreach ( $styles as $style => $value ) {
+			if ( empty( $value ) ) {
+				$styleString .= $style . ';';
+
+			} else {
+				$styleString .= $style . ': ' . $value . ';';
+			}
+		}
+		return $styleString;
+	}
+
+	/**
+	 * Filters styles key-value array by list of allowed styles
+	 *
+	 * @param array $styles key-value array of html styles
+	 * @param string[] $allowedStyles list of allowed styles
+	 *
+	 * @return array
+	 */
+	private function filterAllowedStyles( array $styles, array $allowedStyles ): array {
+		return array_filter(
+			$styles,
+			function ( $key ) use ( $allowedStyles ) {
+				return in_array( $key, $allowedStyles );
+			},
+			ARRAY_FILTER_USE_KEY
+		);
 	}
 }
