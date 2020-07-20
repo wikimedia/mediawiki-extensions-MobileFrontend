@@ -123,8 +123,9 @@ class ApiMobileView extends ApiBase {
 
 		}
 		if ( isset( $prop['normalizedtitle'] ) && $title->getPrefixedText() != $params['page'] ) {
+			$langConverter = $this->getLanguageConverter();
 			$resultObj->addValue( null, $moduleName,
-				[ 'normalizedtitle' => $title->getPageLanguage()->convert( $title->getPrefixedText() ) ]
+				[ 'normalizedtitle' => $langConverter->convert( $title->getPrefixedText() ) ]
 			);
 		}
 
@@ -533,10 +534,9 @@ class ApiMobileView extends ApiBase {
 	) {
 		$data = [];
 		$data['sections'] = $parserOutput->getSections();
-		$sectionCount = count( $data['sections'] );
-		for ( $i = 0; $i < $sectionCount; $i++ ) {
-			$data['sections'][$i]['line'] =
-				$title->getPageLanguage()->convert( $data['sections'][$i]['line'] );
+		$langConverter = $this->getLanguageConverter();
+		foreach ( $data['sections'] as $sectionKey => $sectionValue ) {
+			$data['sections'][$sectionKey]['line'] = $langConverter->convert( $sectionValue['line'] );
 		}
 		$chunks = preg_split( '/<h(?=[1-6]\b)/i', $html );
 		if ( count( $chunks ) != count( $data['sections'] ) + 1 ) {
