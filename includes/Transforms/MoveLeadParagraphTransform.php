@@ -53,22 +53,22 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 
 	/**
 	 * Works out if the infobox is wrapped
-	 * @param DOMNode $node of infobox
+	 * @param DOMElement $node of infobox
 	 * @param string $wrapperClass (optional) regex for matching required classname for wrapper
-	 * @return DOMNode|false representing an unwrapped infobox or an element that wraps the infobox
+	 * @return DOMElement|null representing an unwrapped infobox or an element that wraps the infobox
 	 */
-	public static function getInfoboxContainer( $node, $wrapperClass = '/^(mw-stack|collapsible)$/' ) {
-		$infobox = false;
+	public static function getInfoboxContainer(
+		DOMElement $node, string $wrapperClass = '/^(mw-stack|collapsible)$/'
+	) : ?DOMElement {
+		$infobox = null;
 
 		// iterate to the top.
 		while ( $node->parentNode ) {
-			/** @phan-suppress-next-line PhanTypeMismatchArgument DOMNode vs. DOMElement */
 			if ( self::matchElement( $node, 'table', '/^infobox$/' ) ||
 				// infobox's can be divs
-				/** @phan-suppress-next-line PhanTypeMismatchArgument DOMNode vs. DOMElement */
 				self::matchElement( $node, 'div', '/^infobox$/' ) ||
-				/** @phan-suppress-next-line PhanTypeMismatchArgument DOMNode vs. DOMElement */
-				self::matchElement( $node, false, $wrapperClass ) ) {
+				self::matchElement( $node, false, $wrapperClass )
+			) {
 				$infobox = $node;
 			}
 			$node = $node->parentNode;
@@ -97,15 +97,15 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	/**
 	 * Extract the first infobox in document
 	 * @param DOMXPath $xPath XPath object to execute the query
-	 * @param DOMNode $body Where to search for an infobox
-	 * @return DOMNode|null The first infobox
+	 * @param DOMElement $body Where to search for an infobox
+	 * @return DOMElement|null The first infobox
 	 */
-	private function identifyInfoboxElement( DOMXPath $xPath, DOMNode $body ) {
+	private function identifyInfoboxElement( DOMXPath $xPath, DOMElement $body ) : ?DOMElement {
 		$xPathQueryInfoboxes = './/*[starts-with(@class,"infobox") or contains(@class," infobox")]';
-		$infoboxes = $xPath->query( $xPathQueryInfoboxes, $body );
+		$infobox = $xPath->query( $xPathQueryInfoboxes, $body )->item( 0 );
 
-		if ( $infoboxes->length > 0 ) {
-			return self::getInfoboxContainer( $infoboxes->item( 0 ) );
+		if ( $infobox instanceof DOMElement ) {
+			return self::getInfoboxContainer( $infobox );
 		}
 		return null;
 	}
@@ -119,10 +119,10 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	 * Keep in sync with mobile.init/identifyLeadParagraph.js.
 	 *
 	 * @param DOMXPath $xPath XPath object to execute the query
-	 * @param DOMNode $body Where to search for paragraphs
+	 * @param DOMElement $body Where to search for paragraphs
 	 * @return DOMElement|null The lead paragraph
 	 */
-	private function identifyLeadParagraph( DOMXPath $xPath, DOMNode $body ) {
+	private function identifyLeadParagraph( DOMXPath $xPath, DOMElement $body ) : ?DOMElement {
 		$paragraphs = $xPath->query( './p', $body );
 
 		$index = 0;
@@ -157,7 +157,7 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	 * @param DOMElement $leadSectionBody
 	 * @param DOMDocument $doc Document to which the section belongs
 	 */
-	private function moveFirstParagraphBeforeInfobox( $leadSectionBody, $doc ) {
+	private function moveFirstParagraphBeforeInfobox( DOMElement $leadSectionBody, DOMDocument $doc ) {
 		$xPath = new DOMXPath( $doc );
 		$infobox = $this->identifyInfoboxElement( $xPath, $leadSectionBody );
 
