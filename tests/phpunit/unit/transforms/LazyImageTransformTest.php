@@ -115,6 +115,9 @@ class LazyImageTransformTest extends \MediaWikiUnitTestCase {
 	 * @covers \MobileFrontend\Transforms\LazyImageTransform::doRewriteImagesForLazyLoading
 	 * @covers \MobileFrontend\Transforms\LazyImageTransform::getImageDimension
 	 * @covers \MobileFrontend\Transforms\LazyImageTransform::getImageDimensions
+	 * @covers \MobileFrontend\Transforms\LazyImageTransform::formStyleString
+	 * @covers \MobileFrontend\Transforms\LazyImageTransform::filterAllowedStyles
+	 * @covers \MobileFrontend\Transforms\LazyImageTransform::parseStyleString
 	 *
 	 * @param string $html
 	 * @param bool $skipSmallImages whether small images should be skipped
@@ -132,10 +135,13 @@ class LazyImageTransformTest extends \MediaWikiUnitTestCase {
 		$img = '<img src="kitty.jpg" width="500" height="400">';
 		$placeholder = '<span class="lazy-image-placeholder" style="width: 500px;height: 400px;" '
 			. 'data-src="kitty.jpg" data-width="500" data-height="400">&nbsp;</span>';
-		$imgStyle = '<img src="bigPicture.jpg" style="vertical-align: -3.505ex; '
+		$imgStyle = '<img src="bigPicture.jpg" style="vertical-align: top; '
 			. 'width: 84.412ex; height:70.343ex; background:none;">';
+
+		$imgStyleBad = '<img src="bigPicture.jpg" style=" width: 84.412ex ; '
+			. ' vertical-align  :  top ;  height:70.343ex; background:   none;   ">';
 		$placeholderStyle = '<span class="lazy-image-placeholder" '
-			. 'style="width: 84.412ex;height: 70.343ex;" '
+			. 'style="vertical-align: top;width: 84.412ex;height: 70.343ex;" '
 			. 'data-src="bigPicture.jpg">&nbsp;</span>';
 		$imgSmall = '<img src="kitty.jpg" width="5" height="5">';
 		$placeholderSmall = '<span class="lazy-image-placeholder" style="width: 5px;height: 5px;" '
@@ -177,6 +183,12 @@ class LazyImageTransformTest extends \MediaWikiUnitTestCase {
 				false,
 				"<noscript>$imgSmall</noscript>$placeholderSmall",
 				"Small images are not skipped when flag is passed"
+			],
+			[
+				"$imgStyleBad",
+				false,
+				"<noscript>$imgStyleBad</noscript>$placeholderStyle",
+				"Badly Formet style should be processed also"
 			]
 		];
 	}
