@@ -249,7 +249,7 @@
 	"mobile-frontend-amc-outreach-enabled-message": "Avansert modus er nå slått på. Du kan slå den av i innstillingene dine.",
 	"mobile-frontend-amc-outreach-dismissed-message": "Du kan slå på avansert modus når som helst i innstillingene dine.",
 	"mobile-frontend-beta-only": "Funksjon kun tilgjengelig i betamodus",
-	"mobile-frontend-console-recruit": "Lær mer om hvordan vi bygger den mobile nettsiden vår på https://www.mediawiki.org/wiki/Extension:MobileFrontend",
+	"mobile-frontend-console-recruit": "Lær mer om hvordan vi bygger den mobile nettsiden vår på https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Optimer og forenkle spesialsider på mobil (anbefalt)",
 	"prefs-mobile": "Mobilinnstillinger"
 }

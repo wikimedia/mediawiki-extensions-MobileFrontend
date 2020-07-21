@@ -105,7 +105,7 @@
 	"mobile-frontend-joined-hours": "เพิ่ง{{GENDER:$1|เข้าร่วม}}เมื่อ{{PLURAL:$2|$2 ชั่วโมง}}ก่อน",
 	"mobile-frontend-joined-days": "เพิ่ง{{GENDER:$1|เข้าร่วม}}เมื่อ{{PLURAL:$2|$2 วัน}}ก่อน",
 	"mobile-frontend-joined-months": "เพิ่ง{{GENDER:$1|เข้าร่วม}}เมื่อ{{PLURAL:$2|$2 เดือน}}ก่อน",
-	"mobile-frontend-joined-years": "เพิ่ง{{GENDER:$1|เข้าร่วม}}เมื่อ{{PLURAL:$2|$2 ปี}}ก่อน",
+	"mobile-frontend-joined-years": "{{GENDER:$1|เข้าร่วม}}เมื่อ {{PLURAL:$2|$2 ปี}}ก่อน",
 	"mobile-frontend-language-heading": "<strong>ภาษา</strong>",
 	"mobile-frontend-languages-404-desc": "ต้องระบุชื่อหน้าให้ถูกต้อง",
 	"mobile-frontend-languages-404-title": "ข้อผิดพลาดภาษา",
