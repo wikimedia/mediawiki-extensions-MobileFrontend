@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
+			"Anass Sedrati",
 			"SADIQUI"
 		]
 	},
-	"mobile-frontend-featured-article": "L-Maqal dyal lyoma",
+	"mobile-frontend-featured-article": "لمقال لمختار د ليوما",
 	"tag-mobile_edit": "تعديل من التيليفون",
 	"tag-mobile_web_edit": "تعديل ويب بالتيليفون"
 }
