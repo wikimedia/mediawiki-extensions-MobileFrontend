@@ -143,6 +143,7 @@
 	"mobile-frontend-media-load-fail-message": "En feil oppsto under lasting av dette bildet.",
 	"mobile-frontend-media-load-fail-retry": "Oppdater",
 	"mobile-frontend-missing-image": "Bilde",
+	"mobile-frontend-tap-to-display-image": "Trykk for å vise bilde.",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 km}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",
 	"mobile-frontend-nearby-error": "{{GRAMMAR:genitive|{{SITENAME}}}} «I nærheten» har problemer.",
