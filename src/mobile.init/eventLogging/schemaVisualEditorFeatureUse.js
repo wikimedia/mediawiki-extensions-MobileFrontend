@@ -42,7 +42,9 @@ module.exports = function () {
 			var event = {
 				feature: data.feature,
 				action: data.action,
-				editingSessionId: data.editing_session_id
+				editingSessionId: data.editing_session_id,
+				// eslint-disable-next-line camelcase
+				editor_interface: data.editor_interface
 			};
 
 			if ( trackdebug ) {
