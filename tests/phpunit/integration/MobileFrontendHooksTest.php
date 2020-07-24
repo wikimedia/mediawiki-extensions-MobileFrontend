@@ -227,7 +227,8 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 		] );
 		$title = Title::newFromText( 'PurgeTest' );
 
-		$urls = $title->getCdnUrls();
+		$htmlCacheUpdater = MediaWikiServices::getInstance()->getHtmlCacheUpdater();
+		$urls = $htmlCacheUpdater->getUrls( $title );
 
 		$expected = [
 			'http://en.wikipedia.org/wiki/PurgeTest',
@@ -321,10 +322,17 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 
 		$user = $isAnon ? new User() : $this->getMutableTestUser()->getUser();
 		if ( !$isAnon && $userpref ) {
-			$user->setOption( MobileFrontendHooks::MOBILE_PREFERENCES_SPECIAL_PAGES, true );
+			$userOptionsManager = MediaWikiServices::getInstance()->getUserOptionsManager();
+			$userOptionsManager->setOption(
+				$user,
+				MobileFrontendHooks::MOBILE_PREFERENCES_SPECIAL_PAGES,
+				true
+			);
 		}
-		$this->assertSame( $expected,
-			MobileFrontendHooks::shouldMobileFormatSpecialPages( $user ) );
+		$this->assertSame(
+			$expected,
+			MobileFrontendHooks::shouldMobileFormatSpecialPages( $user )
+		);
 	}
 
 	public static function provideOnPageRenderingHash() {
