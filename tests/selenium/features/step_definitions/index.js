@@ -1,6 +1,6 @@
 'use strict';
 
-const { defineSupportCode } = require( 'cucumber' ), // eslint-disable-line node/no-missing-require
+const { defineSupportCode } = require( 'cucumber' ),
 	{
 		pageExists,
 		iAmUsingTheMobileSite,

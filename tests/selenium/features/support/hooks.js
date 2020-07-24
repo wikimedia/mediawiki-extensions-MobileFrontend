@@ -9,7 +9,7 @@
 
 'use strict';
 
-const { After, Before } = require( 'cucumber' ); // eslint-disable-line node/no-missing-require
+const { After, Before } = require( 'cucumber' );
 
 Before( function () {
 	// This hook will be executed before ALL scenarios
