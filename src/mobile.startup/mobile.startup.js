@@ -13,6 +13,7 @@ module.exports = {
 	headers: require( './headers' ),
 	View: require( './View' ),
 	PageGateway: require( './PageGateway' ),
+	LanguageInfo: require( './LanguageInfo' ),
 	Browser: require( './Browser' ),
 	Button: require( './Button' ),
 	Icon: require( './Icon' ),
@@ -57,6 +58,7 @@ module.exports = {
 		lazyImageLoader: require( './lazyImages/lazyImageLoader' )
 	},
 	languageOverlay: require( './languageOverlay/languageOverlay' ),
+	languageInfoOverlay: require( './languageOverlay/languageInfoOverlay' ),
 	mediaViewer: {
 		overlay: require( './mediaViewer/overlay' )
 	},

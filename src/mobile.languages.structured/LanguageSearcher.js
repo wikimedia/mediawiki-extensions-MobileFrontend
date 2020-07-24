@@ -120,6 +120,7 @@ mfExtend( LanguageSearcher, View, {
 		const $link = this.$el.find( ev.currentTarget ),
 			lang = $link.attr( 'lang' );
 
+		mw.hook( 'mobileFrontend.languageSearcher.linkClick' ).fire( lang );
 		langUtil.saveLanguageUsageCount( lang, langUtil.getFrequentlyUsedLanguages() );
 	},
 	/**
