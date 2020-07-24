@@ -617,7 +617,7 @@ class MobileContext extends ContextSource {
 			$expiry,
 			[
 				'prefix' => '',
-				'httpOnly' => false,
+				'httpOnly' => true,
 			]
 		);
 		wfIncrStats( 'mobile.useformat_' . $cookieFormat . '_cookie_set' );
