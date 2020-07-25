@@ -173,7 +173,7 @@ class LazyImageTransform implements IMobileTransform {
 			$allowedStyles['height'] = $dimensions['height'];
 
 			$imgPlaceholder->setAttribute( 'style', $this->formStyleString( $allowedStyles ) );
-			foreach ( [ 'src', 'alt', 'width', 'height', 'srcset', 'class' ] as $attr ) {
+			foreach ( [ 'src', 'alt', 'width', 'height', 'srcset', 'class', 'usemap' ] as $attr ) {
 				if ( $img->hasAttribute( $attr ) ) {
 					$imgPlaceholder->setAttribute( "data-$attr", $img->getAttribute( $attr ) );
 				}

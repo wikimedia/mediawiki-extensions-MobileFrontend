@@ -46,7 +46,8 @@ QUnit.module( 'MobileFrontend lazyImageLoader.js', {
 				class: 'class',
 				alt: 'alt',
 				src: '/src',
-				srcset: '/srcset'
+				srcset: '/srcset',
+				usemap: '#map'
 			},
 			placeholder = document.createElement( 'div' );
 		// Placeholder className is not copied (class), style (not data-style) is.
