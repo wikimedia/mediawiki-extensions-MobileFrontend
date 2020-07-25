@@ -4,6 +4,7 @@ namespace MobileFrontend\Transforms;
 
 use DOMDocument;
 use DOMElement;
+use MobileFrontend\Transforms\Utils\HtmlStyleUtils;
 
 class LazyImageTransform implements IMobileTransform {
 
@@ -158,21 +159,18 @@ class LazyImageTransform implements IMobileTransform {
 			$imgPlaceholder = $doc->createElement( 'span' );
 			$imgPlaceholder->setAttribute( 'class', 'lazy-image-placeholder' );
 
-			$styles = $this->parseStyleString(
-				$img->hasAttribute( 'style' ) ? $img->getAttribute( 'style' ) : ''
-			);
-
-			$allowedStyles = $this->filterAllowedStyles(
-				$styles,
+			$this->copyStyles(
+				$img,
+				$imgPlaceholder,
 				[
 					// T207929
 					'vertical-align'
+				],
+				[
+					'width' => $dimensions['width'],
+					'height' => $dimensions['height'],
 				]
 			);
-			$allowedStyles['width'] = $dimensions['width'];
-			$allowedStyles['height'] = $dimensions['height'];
-
-			$imgPlaceholder->setAttribute( 'style', $this->formStyleString( $allowedStyles ) );
 			foreach ( [ 'src', 'alt', 'width', 'height', 'srcset', 'class', 'usemap' ] as $attr ) {
 				if ( $img->hasAttribute( $attr ) ) {
 					$imgPlaceholder->setAttribute( "data-$attr", $img->getAttribute( $attr ) );
@@ -195,63 +193,22 @@ class LazyImageTransform implements IMobileTransform {
 	}
 
 	/**
-	 * Parse html `styles` string into kev-value array
+	 * Copy allowed styles from one HTMLElement to another, filtering them and
+	 * unconditionally adding several in front of list
 	 *
-	 * @param string $styleAttr Element or document to rewrite images in.
+	 * @param DOMElement|DOMDocument $from html element styles to be copied from
+	 * @param DOMElement|DOMDocument $to html element styles to be copied to
+	 * @param string[] $enabled list of enabled styles to be copied
+	 * @param array $additional key-value array of styles to be added/overriden unconditionally
+	 *   at the beginning of string
 	 *
-	 * @return array
 	 */
-	private function parseStyleString( string $styleAttr ): array {
-		if ( empty( $styleAttr ) ) {
-			return [];
-		}
-		$styleStrings = explode( ';', $styleAttr );
-		$result = [];
-		foreach ( $styleStrings as $styleString ) {
-			$styleWithValue = explode( ':', $styleString );
-			$style = trim( $styleWithValue[0] );
-			if ( !empty( $style ) ) {
-				$result[ $style ] = trim( $styleWithValue[1] ?? '' );
-			}
-		}
-		return $result;
-	}
-
-	/**
-	 * Forms style's string from kev-value array
-	 *
-	 * @param array $styles
-	 *
-	 * @return string
-	 */
-	private function formStyleString( array $styles ): string {
-		$styleString = '';
-		foreach ( $styles as $style => $value ) {
-			if ( empty( $value ) ) {
-				$styleString .= $style . ';';
-
-			} else {
-				$styleString .= $style . ': ' . $value . ';';
-			}
-		}
-		return $styleString;
-	}
-
-	/**
-	 * Filters styles key-value array by list of allowed styles
-	 *
-	 * @param array $styles key-value array of html styles
-	 * @param string[] $allowedStyles list of allowed styles
-	 *
-	 * @return array
-	 */
-	private function filterAllowedStyles( array $styles, array $allowedStyles ): array {
-		return array_filter(
-			$styles,
-			function ( $key ) use ( $allowedStyles ) {
-				return in_array( $key, $allowedStyles );
-			},
-			ARRAY_FILTER_USE_KEY
+	private function copyStyles( $from, $to, array $enabled, array $additional ) {
+		$styles = HtmlStyleUtils::parseStyleString(
+			$from->hasAttribute( 'style' ) ? $from->getAttribute( 'style' ) : ''
 		);
+
+		$filteredStyles = HtmlStyleUtils::filterAllowedStyles( $styles, $enabled, $additional );
+		$to->setAttribute( 'style', HtmlStyleUtils::formStyleString( $filteredStyles ) );
 	}
 }
