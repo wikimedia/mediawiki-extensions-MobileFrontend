@@ -48,7 +48,7 @@ module.exports = function () {
 			};
 
 			if ( trackdebug ) {
-				log( topic, event );
+				log( topic, event, schemaVisualEditorFeatureUse.defaults );
 			} else {
 				schemaVisualEditorFeatureUse.log( event, (
 					mw.config.get( 'wgWMESchemaEditAttemptStepOversample' ) ||
