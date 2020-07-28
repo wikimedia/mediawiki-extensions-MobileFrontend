@@ -13,14 +13,13 @@ var references,
  */
 function makeOnNestedReferenceClickHandler( onNestedReferenceClick ) {
 	return ( ev ) => {
-		const target = ev.target;
-		if ( target.tagName === 'A' ) {
+		const target = ev.currentTarget.querySelector( 'a' );
+		if ( target ) {
 			onNestedReferenceClick(
 				target.getAttribute( 'href' ),
 				target.textContent
 			);
 			// Don't hide the already shown drawer via propagation
-			// and stop default scroll behaviour.
 			return false;
 		}
 	};
@@ -50,6 +49,10 @@ function referenceDrawer( props ) {
 				showCollapseIcon: false,
 				className: 'drawer position-fixed text references-drawer',
 				events: {
+					'click sup a': function ( ev ) {
+						// Stop default scroll to hash fragment behaviour.
+						ev.preventDefault();
+					},
 					'click sup': props.onNestedReferenceClick &&
 						makeOnNestedReferenceClickHandler( props.onNestedReferenceClick )
 				},
