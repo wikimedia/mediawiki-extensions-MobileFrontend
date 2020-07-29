@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Asenoner"
+			"Asenoner",
+			"Fierodelveneto"
 		]
 	},
+	"mobile-frontend-view": "Verscion mobile",
 	"tag-mobile_edit": "Mudazion per mobile",
 	"tag-mobile_web_edit": "Mudazion dal web per mobile"
 }
