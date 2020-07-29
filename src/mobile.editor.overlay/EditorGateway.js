@@ -261,8 +261,8 @@ EditorGateway.prototype = {
 
 		return this._pending.then( function ( resp ) {
 			if ( resp && resp.parse && resp.parse.text ) {
-				// section 0 haven't a section name so skip
-				if ( self.sectionId !== '0' &&
+				// When editing section 0 or the whole page, there is no section name, so skip
+				if ( self.sectionId && self.sectionId !== '0' &&
 					resp.parse.sections !== undefined &&
 					resp.parse.sections[0] !== undefined
 				) {
