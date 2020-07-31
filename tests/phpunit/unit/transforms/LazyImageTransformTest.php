@@ -115,9 +115,7 @@ class LazyImageTransformTest extends \MediaWikiUnitTestCase {
 	 * @covers \MobileFrontend\Transforms\LazyImageTransform::doRewriteImagesForLazyLoading
 	 * @covers \MobileFrontend\Transforms\LazyImageTransform::getImageDimension
 	 * @covers \MobileFrontend\Transforms\LazyImageTransform::getImageDimensions
-	 * @covers \MobileFrontend\Transforms\LazyImageTransform::formStyleString
-	 * @covers \MobileFrontend\Transforms\LazyImageTransform::filterAllowedStyles
-	 * @covers \MobileFrontend\Transforms\LazyImageTransform::parseStyleString
+	 * @covers \MobileFrontend\Transforms\LazyImageTransform::copyStyles
 	 *
 	 * @param string $html
 	 * @param bool $skipSmallImages whether small images should be skipped
@@ -140,8 +138,10 @@ class LazyImageTransformTest extends \MediaWikiUnitTestCase {
 
 		$imgStyleBad = '<img src="bigPicture.jpg" style=" width: 84.412ex ; '
 			. ' vertical-align  :  top ;  height:70.343ex; background:   none;   ">';
+
+		// `width` and `height` should be added in front of string
 		$placeholderStyle = '<span class="lazy-image-placeholder" '
-			. 'style="vertical-align: top;width: 84.412ex;height: 70.343ex;" '
+			. 'style="width: 84.412ex;height: 70.343ex;vertical-align: top;" '
 			. 'data-src="bigPicture.jpg">&nbsp;</span>';
 		$imgSmall = '<img src="kitty.jpg" width="5" height="5">';
 		$placeholderSmall = '<span class="lazy-image-placeholder" style="width: 5px;height: 5px;" '
