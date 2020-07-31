@@ -14,6 +14,10 @@
 	<rule ref="Generic.Files.OneObjectStructurePerFile.MultipleFound">
 		<exclude-pattern>tests/phpunit/*</exclude-pattern>
 	</rule>
+	<rule ref="MediaWiki.Commenting.FunctionComment.DefaultNullTypeParam">
+		<exclude-pattern>includes/*</exclude-pattern>
+		<exclude-pattern>tests/*</exclude-pattern>
+	</rule>
 	<file>.</file>
 	<arg name="extensions" value="php,php5,inc"/>
 	<arg name="encoding" value="UTF-8"/>
