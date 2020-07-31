@@ -116,6 +116,7 @@ class LazyImageTransformTest extends \MediaWikiUnitTestCase {
 	 * @covers \MobileFrontend\Transforms\LazyImageTransform::getImageDimension
 	 * @covers \MobileFrontend\Transforms\LazyImageTransform::getImageDimensions
 	 * @covers \MobileFrontend\Transforms\LazyImageTransform::copyStyles
+	 * @covers \MobileFrontend\Transforms\LazyImageTransform::copyClasses
 	 *
 	 * @param string $html
 	 * @param bool $skipSmallImages whether small images should be skipped
@@ -147,6 +148,16 @@ class LazyImageTransformTest extends \MediaWikiUnitTestCase {
 		$placeholderSmall = '<span class="lazy-image-placeholder" style="width: 5px;height: 5px;" '
 			. 'data-src="kitty.jpg" data-width="5" data-height="5">&nbsp;</span>';
 		$imgNoAttribs = '<img src="foo.jpg">';
+
+		$imgWithThumbborder = '<img src="bigPicture.jpg" style="vertical-align: top; '
+			. 'width: 84.412ex; height:70.343ex; background:none;" '
+			. 'class="class thumbborder">';
+
+		$placeholderWithThumbborder = '<span class="lazy-image-placeholder thumbborder" '
+			. 'style="width: 84.412ex;height: 70.343ex;vertical-align: top;" '
+			. 'data-src="bigPicture.jpg" '
+			. 'data-class="class thumbborder">&nbsp;</span>';
+
 		return [
 			[
 				$imgNoAttribs,
@@ -170,7 +181,7 @@ class LazyImageTransformTest extends \MediaWikiUnitTestCase {
 				"$imgStyle",
 				false,
 				"<noscript>$imgStyle</noscript>$placeholderStyle",
-				"Dimension styles are copied to sthe placeholder"
+				"Dimension styles are copied to the placeholder"
 			],
 			[
 				"$imgSmall",
@@ -188,7 +199,13 @@ class LazyImageTransformTest extends \MediaWikiUnitTestCase {
 				"$imgStyleBad",
 				false,
 				"<noscript>$imgStyleBad</noscript>$placeholderStyle",
-				"Badly Formet style should be processed also"
+				"Malformed style should be processed also"
+			],
+			[
+				"$imgWithThumbborder",
+				false,
+				"<noscript>$imgWithThumbborder</noscript>$placeholderWithThumbborder",
+				"Thumbborder class should be copied to placeholder"
 			]
 		];
 	}

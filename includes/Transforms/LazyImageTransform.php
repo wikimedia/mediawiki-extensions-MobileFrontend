@@ -4,6 +4,8 @@ namespace MobileFrontend\Transforms;
 
 use DOMDocument;
 use DOMElement;
+
+use MobileFrontend\Transforms\Utils\HtmlClassUtils;
 use MobileFrontend\Transforms\Utils\HtmlStyleUtils;
 
 class LazyImageTransform implements IMobileTransform {
@@ -157,7 +159,17 @@ class LazyImageTransform implements IMobileTransform {
 
 			// To be loaded image placeholder
 			$imgPlaceholder = $doc->createElement( 'span' );
-			$imgPlaceholder->setAttribute( 'class', 'lazy-image-placeholder' );
+			$this->copyClasses(
+				$img,
+				$imgPlaceholder,
+				[
+					// T199351
+					'thumbborder'
+				],
+				[
+					'lazy-image-placeholder',
+				]
+			);
 
 			$this->copyStyles(
 				$img,
@@ -210,5 +222,22 @@ class LazyImageTransform implements IMobileTransform {
 
 		$filteredStyles = HtmlStyleUtils::filterAllowedStyles( $styles, $enabled, $additional );
 		$to->setAttribute( 'style', HtmlStyleUtils::formStyleString( $filteredStyles ) );
+	}
+
+	/**
+	 * Copy allowed classes from one HTMLElement to another
+	 * @param DOMElement|DOMDocument $from html element classes to be copied from
+	 * @param DOMElement|DOMDocument $to html element classes to be copied to
+	 * @param string[] $enabled array of enabled classes to be copied
+	 * @param string[] $additional array of classes to be added/overriden unconditionally
+	 *   to the beginning
+	 */
+	private function copyClasses( $from, $to, array $enabled, array $additional ) {
+		$styles = HtmlClassUtils::parseClassString(
+			$from->hasAttribute( 'class' ) ? $from->getAttribute( 'class' ) : ''
+		);
+
+		$filteredClasses = HtmlClassUtils::filterAllowedClasses( $styles, $enabled, $additional );
+		$to->setAttribute( 'class', HtmlClassUtils::formClassString( $filteredClasses ) );
 	}
 }
