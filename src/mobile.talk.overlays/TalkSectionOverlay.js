@@ -7,7 +7,8 @@ var
 	header = require( '../mobile.startup/headers' ).header,
 	util = require( '../mobile.startup/util' ),
 	autosign = require( './autosign' ),
-	Button = require( '../mobile.startup/Button' );
+	Button = require( '../mobile.startup/Button' ),
+	lazyImageLoader = require( '../mobile.startup/lazyImages/lazyImageLoader' );
 
 /**
  * Callback executed when a save has successfully completed.
@@ -158,6 +159,9 @@ mfExtend( TalkSectionOverlay, Overlay, {
 	 * @instance
 	 */
 	postRender: function () {
+		lazyImageLoader.loadImages(
+			lazyImageLoader.queryPlaceholders( this.$el[0] )
+		);
 		Overlay.prototype.postRender.apply( this );
 		this.$el.find( '.talk-section' ).prepend( $spinner );
 		this.$saveButton = this.options.saveButton.$el;
