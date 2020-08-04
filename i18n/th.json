@@ -122,7 +122,7 @@
 	"mobile-frontend-last-modified-with-user-hours": "[$4 {{GENDER:$1|แก้ไข}}ล่าสุดเมื่อ {{PLURAL:$3|$3 ชั่วโมง}}ก่อน]โดย {{PLURAL:$5|[$6 $2]|0=ผู้ใช้นิรนาม}}",
 	"mobile-frontend-last-modified-with-user-just-now": "[$3 {{GENDER:$1|แก้ไข}}ล่าสุด]เมื่อสักครู่โดย {{PLURAL:$4|[$5 $2]|0=ผู้ใช้นิรนาม}}",
 	"mobile-frontend-last-modified-with-user-minutes": "[$4 {{GENDER:$1|แก้ไข}}ล่าสุดเมื่อ {{PLURAL:$3|$3 นาที}}ก่อน]โดย {{PLURAL:$5|[$6 $2]|0=ผู้ใช้นิรนาม}}",
-	"mobile-frontend-last-modified-with-user-months": "[$4 {{GENDER:$1|แก้ไข}}ล่าสุดเมื่อ {{PLURAL:$3|$3 เดือน}}ก่อน]โดย {{PLURAL:$5|[$6 $2]|0=ผู้ใช้นิรนาม}}",
+	"mobile-frontend-last-modified-with-user-months": "[$4 {{GENDER:$1|แก้ไข}}ล่าสุดเมื่อ {{PLURAL:$3|$3 เดือน}}ก่อน] โดย {{PLURAL:$5|[$6 $2]|0=ผู้ใช้นิรนาม}}",
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 {{GENDER:$1|แก้ไข}}ล่าสุดเมื่อ {{PLURAL:$3|$3 วินาที}}ก่อน]โดย {{PLURAL:$5|[$6 $2]|0=ผู้ใช้นิรนาม}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 {{GENDER:$1|แก้ไข}}ล่าสุดเมื่อ {{PLURAL:$3|$3 ปี}}ก่อน]โดย {{PLURAL:$5|[$6 $2]|0=ผู้ใช้นิรนาม}}",
 	"mobile-frontend-main-menu": "เมนูหลัก",
