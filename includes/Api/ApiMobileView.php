@@ -1,9 +1,31 @@
 <?php
 
+namespace MobileFrontend\Api;
+
+use ApiBase;
+use ApiMain;
+use ApiResult;
+use DerivativeContext;
+use ExtensionRegistry;
+use ExtMobileFrontend;
+use FauxRequest;
+use File;
+use ILanguageConverter;
+use ImagePage;
 use MediaWiki\Extensions\XAnalytics\XAnalytics;
 use MediaWiki\MediaWikiServices;
+use Message;
+use MobileFormatter;
+use OutputPage;
 use PageImages\PageImages;
+use ParserOptions;
+use ParserOutput;
+use RequestContext;
+use Title;
+use User;
+use WANObjectCache;
 use Wikimedia\ParamValidator\ParamValidator;
+use WikiPage;
 
 /**
  * Extends Api of MediaWiki with actions for mobile devices. For further information see

@@ -1,6 +1,12 @@
 <?php
 
+namespace MobileFrontend\Api;
+
+use ApiBase;
+use ApiResult;
 use MediaWiki\MediaWikiServices;
+use MobileFormatter;
+use Title;
 
 /**
  * Extends API action=parse with mobile goodies

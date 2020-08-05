@@ -18,7 +18,7 @@ class ApiMobileViewConvertTitleTest extends ApiTestCase {
 	}
 
 	/**
-	 * @covers ApiMobileView::execute
+	 * @covers \MobileFrontend\Api\ApiMobileView::execute
 	 */
 	public function testRequestConverted() {
 		$result = $this->doApiRequest( [
@@ -37,7 +37,7 @@ class ApiMobileViewConvertTitleTest extends ApiTestCase {
 	}
 
 	/**
-	 * @covers ApiMobileView::execute
+	 * @covers \MobileFrontend\Api\ApiMobileView::execute
 	 */
 	public function testRequestNotConverted() {
 		$result = $this->doApiRequest( [
