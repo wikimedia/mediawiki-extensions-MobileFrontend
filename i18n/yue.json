@@ -6,6 +6,7 @@
 			"LNDDYL",
 			"Moon0319",
 			"Obonggi",
+			"Roy17",
 			"Waihorace",
 			"Yueman"
 		]
@@ -40,7 +41,7 @@
 	"mobile-frontend-editor-switch-visual-editor": "轉去即見編輯",
 	"mobile-frontend-editor-wait": "儲存嘅修求，請等一陣。",
 	"mobile-frontend-editor-loading": "撈緊編輯器…",
-	"mobile-frontend-expand-sections-status": "開嗮冚唪唥嘅小節",
+	"mobile-frontend-expand-sections-status": "攤開全部小節",
 	"mobile-frontend-fontchanger-link": "字體大細",
 	"mobile-frontend-fontchanger-desc": "調整字嘅大細令到方便啲睇。",
 	"mobile-frontend-fontchanger-option-small": "細",
@@ -92,7 +93,7 @@
 	"mobile-frontend-watchlist-cta-button-login": "簽到",
 	"mobile-frontend-watchlist-cta-button-signup": "開戶口",
 	"mobile-frontend-watchlist-feed": "改過",
-	"mobile-frontend-watchlist-filter-all": "冚唪唥",
+	"mobile-frontend-watchlist-filter-all": "全部",
 	"mobile-frontend-watchlist-filter-articles": "版",
 	"mobile-frontend-watchlist-filter-other": "第啲",
 	"mobile-frontend-watchlist-filter-talk": "傾偈",
