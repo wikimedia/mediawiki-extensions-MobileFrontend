@@ -5,6 +5,7 @@ use MediaWiki\Auth\AuthManager;
 use MediaWiki\ChangeTags\Taggable;
 use MediaWiki\MediaWikiServices;
 use MobileFrontend\ContentProviders\ContentProviderFactory;
+use MobileFrontend\Models\MobilePage;
 
 /**
  * Hook handlers for MobileFrontend extension

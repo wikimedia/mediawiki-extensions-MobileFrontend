@@ -2,10 +2,11 @@
 
 use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Revision\RevisionStore;
+use MobileFrontend\Models\MobilePage;
 
 /**
  * @group MobileFrontend
- * @coversDefaultClass MobilePage
+ * @coversDefaultClass \MobileFrontend\Models\MobilePage
  * @covers ::__construct()
  */
 class MobilePageTest extends MediaWikiTestCase {

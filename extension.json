@@ -70,8 +70,6 @@
 		"MobileFrontendSkinHooks": "includes/MobileFrontendSkinHooks.php",
 		"MobileContext": "includes/MobileContext.php",
 		"MobileFormatter": "includes/MobileFormatter.php",
-		"MobileCollection": "includes/models/MobileCollection.php",
-		"MobilePage": "includes/models/MobilePage.php",
 		"MobileUI": "includes/MobileUI.php",
 		"ApiMobileView": "includes/api/ApiMobileView.php",
 		"ApiParseExtender": "includes/api/ApiParseExtender.php",

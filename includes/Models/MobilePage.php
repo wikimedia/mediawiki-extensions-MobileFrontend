@@ -1,7 +1,13 @@
 <?php
 
+namespace MobileFrontend\Models;
+
+use File;
+use Html;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\RevisionRecord;
+use Title;
+use User;
 
 /**
  * Retrieves information specific to a mobile page

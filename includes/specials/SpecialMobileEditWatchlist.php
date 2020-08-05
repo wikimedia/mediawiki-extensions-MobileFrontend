@@ -1,6 +1,8 @@
 <?php
 
 use MediaWiki\MediaWikiServices;
+use MobileFrontend\Models\MobileCollection;
+use MobileFrontend\Models\MobilePage;
 
 /**
  * The mobile version of the watchlist editing page.
