@@ -956,33 +956,6 @@ class MobileFrontendHooks {
 	}
 
 	/**
-	 * ResourceLoaderTestModules hook handler
-	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ResourceLoaderTestModules
-	 *
-	 * @param array &$testModules
-	 * @param ResourceLoader $resourceLoader
-	 */
-	public static function onResourceLoaderTestModules( array &$testModules,
-		ResourceLoader $resourceLoader
-	) {
-		$dist = 'resources/dist/tests.mobilefrontend.js';
-		$testModules['qunit']['tests.mobilefrontend'] = [
-			'dependencies' => [
-				'mobile.startup',
-				'mobile.languages.structured',
-				'mobile.mediaViewer',
-				'mobile.special.nearby.scripts',
-				'mobile.talk.overlays'
-			],
-			'scripts' => file_exists( dirname( __DIR__ ) . '/' . $dist ) ?
-				$dist : 'tests/qunit/mobilefrontend.js',
-			'localBasePath' => dirname( __DIR__ ),
-			'remoteExtensionPath' => 'MobileFrontend',
-			'targets' => [ 'mobile', 'desktop' ],
-		];
-	}
-
-	/**
 	 * Sets a tagline for a given page that can be displayed by the skin.
 	 *
 	 * @param OutputPage $outputPage

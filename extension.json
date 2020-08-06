@@ -741,7 +741,6 @@
 		"CentralAuthLoginRedirectData": "MobileFrontendHooks::onCentralAuthLoginRedirectData",
 		"CentralAuthSilentLoginRedirect": "MobileFrontendHooks::onCentralAuthSilentLoginRedirect",
 		"ResourceLoaderRegisterModules": "MobileFrontendEditorHooks::onResourceLoaderRegisterModules",
-		"ResourceLoaderTestModules": "MobileFrontendHooks::onResourceLoaderTestModules",
 		"OutputPageParserOutput": "MobileFrontendHooks::onOutputPageParserOutput",
 		"HTMLFileCache::useFileCache": "MobileFrontendHooks::onHTMLFileCacheUseFileCache",
 		"LoginFormValidErrorMessages": "MobileFrontendHooks::onLoginFormValidErrorMessages",
