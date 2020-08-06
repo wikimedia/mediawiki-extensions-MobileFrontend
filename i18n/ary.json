@@ -2,10 +2,15 @@
 	"@metadata": {
 		"authors": [
 			"Anass Sedrati",
+			"Reda Benkhadra",
 			"SADIQUI"
 		]
 	},
 	"mobile-frontend-featured-article": "لمقال لمختار د ليوما",
+	"mobile-frontend-language-heading": "<strong>لوغات</strong>",
+	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "قلّب على لوغة",
+	"mobile-frontend-last-modified-with-user-days": "[$4 أخر تبديل لهاد صفحة {{GENDER:$1|دارو|دارتو}}]  {{PLURAL:$5|[$6 $2]|0=مستخدم مجهول}} هادي {{PLURAL:$3|نهار|يوماين|$3 إيام|$3 يوم}}",
+	"mobile-frontend-nearby-title": "قريب من هنا",
 	"tag-mobile_edit": "تعديل من التيليفون",
 	"tag-mobile_web_edit": "تعديل ويب بالتيليفون"
 }
