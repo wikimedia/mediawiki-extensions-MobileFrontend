@@ -2,9 +2,16 @@
 	"@metadata": {
 		"authors": [
 			"Chulsu463",
+			"Moon0319",
 			"Obonggi"
 		]
 	},
+	"mobile-frontend-languages-header-page": "$1 - ᠇ᠨᡩᡝᡵᡝ ᡨᠠᠠᠯ",
+	"mobile-frontend-languages-structured-overlay-all-languages-header": "᠇ᠨᡩᡝᡵᡝ ᡨᠠᠠᠯ",
+	"mobile-frontend-main-menu-settings-heading": "ᡳᠨᠰᡨᡝᠯᠯᡝᠨ",
+	"mobile-frontend-nearby-title": "ᡳᠨ ᡩᡝ ᠪᡠᡠᡵᡨ",
+	"mobile-frontend-nearby-info-show-button": "ᡨᠣᠨᡝᠨ ᡳᠨ ᡩᡝ ᠪᡠᡠᡵᡨ ᠰᡠ ᡶᡳᠶᡝᠯᡝᠨ",
+	"mobile-frontend-watchlist-cta-button-login": "ᡩᠣᠰᡳᡵᡝ",
 	"tag-mobile_edit": "axxafun banjibusi",
 	"tag-mobile_web_edit": "axxafun asu banjibusi"
 }
