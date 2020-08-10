@@ -3,6 +3,7 @@
 		"authors": [
 			"AlnashPiyash2",
 			"Kaganer",
+			"Kotwys",
 			"Wadorgurt"
 		]
 	},
@@ -15,7 +16,7 @@
 	"mobile-frontend-featured-article": "Нуналлэн быръем пуштросэз",
 	"mobile-frontend-language-heading": "<strong>Кылъёс</strong>",
 	"mobile-frontend-languages-header": "Кылъёс",
-	"mobile-frontend-languages-header-page": "$1 — Кылъёс",
+	"mobile-frontend-languages-header-page": "$1 — Мукет кылъёс",
 	"mobile-frontend-last-modified-date": "Талэсь азьло воштӥськиз $1, $2",
 	"mobile-frontend-last-modified-with-user-days": "[$4 Берпуметӥ {{GENDER:$1|тупатон}} лэсьтэмын {{PLURAL:$3|$3 нуналлы талэсь азьло|1=толон}}] {{PLURAL:$5|викиавторен [$6 $2]|0=тодмотэм викиавторен}}",
 	"mobile-frontend-news-items": "Иворъёс",
