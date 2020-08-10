@@ -31,8 +31,8 @@
 		"Uploads": "SpecialUploads"
 	},
 	"APIModules": {
-		"mobileview": "ApiMobileView",
-		"webapp-manifest": "ApiWebappManifest"
+		"mobileview": "MobileFrontend\\Api\\ApiMobileView",
+		"webapp-manifest": "MobileFrontend\\Api\\ApiWebappManifest"
 	},
 	"MessagesDirs": {
 		"MobileFrontend": [
@@ -71,9 +71,6 @@
 		"MobileContext": "includes/MobileContext.php",
 		"MobileFormatter": "includes/MobileFormatter.php",
 		"MobileUI": "includes/MobileUI.php",
-		"ApiMobileView": "includes/api/ApiMobileView.php",
-		"ApiParseExtender": "includes/api/ApiParseExtender.php",
-		"ApiWebappManifest": "includes/api/ApiWebappManifest.php",
 		"InlineDiffFormatter": "includes/diff/InlineDiffFormatter.php",
 		"InlineDifferenceEngine": "includes/diff/InlineDifferenceEngine.php",
 		"SpecialUploads": "includes/specials/SpecialUploads.php",
@@ -703,8 +700,8 @@
 		}
 	},
 	"Hooks": {
-		"APIGetAllowedParams": "ApiParseExtender::onAPIGetAllowedParams",
-		"APIAfterExecute": "ApiParseExtender::onAPIAfterExecute",
+		"APIGetAllowedParams": "MobileFrontend\\Api\\ApiParseExtender::onAPIGetAllowedParams",
+		"APIAfterExecute": "MobileFrontend\\Api\\ApiParseExtender::onAPIAfterExecute",
 		"APIQuerySiteInfoGeneralInfo": "MobileFrontendHooks::onAPIQuerySiteInfoGeneralInfo",
 		"AuthChangeFormFields": "MobileFrontendHooks::onAuthChangeFormFields",
 		"RequestContextCreateSkin": "MobileFrontendHooks::onRequestContextCreateSkin",

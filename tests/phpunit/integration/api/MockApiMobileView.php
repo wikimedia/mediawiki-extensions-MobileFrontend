@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\MediaWikiServices;
+use MobileFrontend\Api\ApiMobileView;
 use PHPUnit\Framework\MockObject\MockObject;
 
 class MockApiMobileView extends ApiMobileView {

@@ -9,8 +9,8 @@ class ApiParseExtenderTest extends MediaWikiTestCase {
 
 	/**
 	 * @dataProvider getData
-	 * @covers ApiParseExtender::onAPIGetAllowedParams
-	 * @covers ApiParseExtender::onAPIAfterExecute
+	 * @covers \MobileFrontend\Api\ApiParseExtender::onAPIGetAllowedParams
+	 * @covers \MobileFrontend\Api\ApiParseExtender::onAPIAfterExecute
 	 */
 	public function testApi( array $params, $expected ) {
 		$this->setMwGlobals( 'wgMFRemovableClasses',

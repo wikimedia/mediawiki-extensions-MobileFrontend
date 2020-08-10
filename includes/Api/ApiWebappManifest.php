@@ -1,6 +1,11 @@
 <?php
 
+namespace MobileFrontend\Api;
+
+use ApiBase;
+use ApiFormatJson;
 use MediaWiki\MediaWikiServices;
+use Title;
 
 /**
  * Return the webapp manifest for this wiki
