@@ -718,15 +718,15 @@
 		"SpecialPage_initList": "MobileFrontendHooks::onSpecialPageInitList",
 		"ListDefinedTags": [
 			"MobileFrontendHooks::onListDefinedTags",
-			"MobileFrontend\\AMC\\Hooks::onListDefinedTags"
+			"MobileFrontend\\Amc\\Hooks::onListDefinedTags"
 		],
 		"ChangeTagsListActive": [
 			"MobileFrontendHooks::onListDefinedTags",
-			"MobileFrontend\\AMC\\Hooks::onListDefinedTags"
+			"MobileFrontend\\Amc\\Hooks::onListDefinedTags"
 		],
 		"RecentChange_save": [
 			"MobileFrontendHooks::onTaggableObjectCreation",
-			"MobileFrontend\\AMC\\Hooks::onRecentChangeSave"
+			"MobileFrontend\\Amc\\Hooks::onRecentChangeSave"
 		],
 		"AbuseFilter-generateUserVars": "MobileFrontendHooks::onAbuseFilterGenerateUserVars",
 		"AbuseFilter-builder": "MobileFrontendHooks::onAbuseFilterBuilder",
@@ -735,7 +735,7 @@
 		"BeforePageDisplay": "MobileFrontendHooks::onBeforePageDisplay",
 		"GetPreferences": [
 			"MobileFrontendHooks::onGetPreferences",
-			"MobileFrontend\\AMC\\Hooks::onGetPreferences"
+			"MobileFrontend\\Amc\\Hooks::onGetPreferences"
 		],
 		"Gadgets::allowLegacy": "MobileFrontendHooks::onAllowLegacyGadgets",
 		"CentralAuthLoginRedirectData": "MobileFrontendHooks::onCentralAuthLoginRedirectData",
@@ -755,10 +755,10 @@
 		"TitleSquidURLs": "MobileFrontendHooks::onTitleSquidURLs",
 		"UserGetDefaultOptions": [
 			"MobileFrontendHooks::onUserGetDefaultOptions",
-			"MobileFrontend\\AMC\\Hooks::onUserGetDefaultOptions"
+			"MobileFrontend\\Amc\\Hooks::onUserGetDefaultOptions"
 		],
 		"ManualLogEntryBeforePublish": [
-			"MobileFrontend\\AMC\\Hooks::onManualLogEntryBeforePublish",
+			"MobileFrontend\\Amc\\Hooks::onManualLogEntryBeforePublish",
 			"MobileFrontendHooks::onTaggableObjectCreation"
 		]
 	},

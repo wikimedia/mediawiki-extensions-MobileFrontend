@@ -17,7 +17,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 
 	/**
 	 * Advanced Mobile Contributions mode
-	 * @var \MobileFrontend\AMC\Manager
+	 * @var \MobileFrontend\Amc\Manager
 	 */
 	private $amc;
 
@@ -72,7 +72,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 	}
 
 	private function buildAMCToggle() {
-		/** @var \MobileFrontend\AMC\UserMode $userMode */
+		/** @var \MobileFrontend\Amc\UserMode $userMode */
 			$userMode = $this->services->getService( 'MobileFrontend.AMC.UserMode' );
 			$amcToggle = new OOUI\CheckboxInputWidget( [
 				'name' => 'enableAMC',

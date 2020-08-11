@@ -1,6 +1,6 @@
 <?php
 
-namespace MobileFrontend\AMC;
+namespace MobileFrontend\Amc;
 
 use MediaWiki\ChangeTags\Taggable;
 use User;
@@ -8,7 +8,7 @@ use User;
 /**
  * Hooks for Advanced Mobile Contributions
  *
- * @package MobileFrontend\AMC
+ * @package MobileFrontend\Amc
  */
 final class Hooks {
 
