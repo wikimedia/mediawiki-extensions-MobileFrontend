@@ -838,6 +838,7 @@
 				"beta": [],
 				"base": [
 					".navbox",
+					".vertical-navbox",
 					".nomobile"
 				]
 			}
