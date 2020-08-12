@@ -12,7 +12,7 @@ use MobileFrontend\Models\MobilePage;
  *
  * Hook handler method names should be in the form of:
  *	on<HookName>()
- * For intance, the hook handler for the 'RequestContextCreateSkin' would be called:
+ * For instance, the hook handler for the 'RequestContextCreateSkin' would be called:
  *	onRequestContextCreateSkin()
  *
  * If your hook changes the behaviour of the Minerva skin, you are in the wrong place.
