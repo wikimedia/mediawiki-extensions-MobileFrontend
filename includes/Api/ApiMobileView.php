@@ -562,8 +562,6 @@ class ApiMobileView extends ApiBase {
 		}
 		$chunks = preg_split( '/<h(?=[1-6]\b)/i', $html );
 		if ( count( $chunks ) != count( $data['sections'] ) + 1 ) {
-			wfDebugLog( 'mobile', __METHOD__ . "(): mismatching number of " .
-				"sections from parser and split on page {$title->getPrefixedText()}, oldid=$revId" );
 			// We can't be sure about anything here, return all page HTML as one big section
 			$chunks = [ $html ];
 			$data['sections'] = [];
