@@ -14,6 +14,8 @@ const
  * @param {Object[]} props.languages list of language objects as returned by the API
  * @param {Array|boolean} props.variants language variant objects
  *  or false if no variants exist
+ * @param {boolean} props.showSuggestedLanguages If the suggested languages
+ *  section should be rendered.
  * @param {string} [props.deviceLanguage] the device's primary language
  */
 function LanguageSearcher( props ) {
@@ -24,6 +26,7 @@ function LanguageSearcher( props ) {
 		props.languages,
 		props.variants,
 		langUtil.getFrequentlyUsedLanguages(),
+		props.showSuggestedLanguages,
 		props.deviceLanguage
 	);
 

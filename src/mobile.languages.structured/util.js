@@ -104,11 +104,16 @@ module.exports = {
 	 * @param {Object[]} languages list of language objects as returned by the API
 	 * @param {Array|boolean} variants language variant objects or false if no variants exist
 	 * @param {Object} frequentlyUsedLanguages list of the frequently used languages
+	 * @param {boolean} showSuggestedLanguages
 	 * @param {string} [deviceLanguage] the device's primary language
 	 * @return {StructuredLanguages}
 	 */
 	getStructuredLanguages: function (
-		languages, variants, frequentlyUsedLanguages, deviceLanguage
+		languages,
+		variants,
+		frequentlyUsedLanguages,
+		showSuggestedLanguages,
+		deviceLanguage
 	) {
 		var hasOwn = Object.prototype.hasOwnProperty,
 			maxFrequency = 0,
@@ -146,20 +151,24 @@ module.exports = {
 		}
 
 		// Separate languages into suggested and all languages.
-		languages.map( addLangDir ).forEach( function ( language ) {
-			if ( hasOwn.call( frequentlyUsedLanguages, language.lang ) ) {
-				language.frequency = frequentlyUsedLanguages[ language.lang ];
-				suggestedLanguages.push( language );
-			} else {
-				allLanguages.push( language );
-			}
-		} );
+		if ( showSuggestedLanguages ) {
+			languages.map( addLangDir ).forEach( function ( language ) {
+				if ( hasOwn.call( frequentlyUsedLanguages, language.lang ) ) {
+					language.frequency = frequentlyUsedLanguages[language.lang];
+					suggestedLanguages.push( language );
+				} else {
+					allLanguages.push( language );
+				}
+			} );
+		} else {
+			allLanguages = languages.map( addLangDir );
+		}
 
 		// Add variants to the suggested languages list and assign the lowest
 		// frequency because the variant hasn't been clicked on yet.
 		// Note that the variants data doesn't contain the article title, thus
 		// we cannot show it for the variants.
-		if ( variants ) {
+		if ( variants && showSuggestedLanguages ) {
 			variants.map( addLangDir ).forEach( function ( variant ) {
 				if ( hasOwn.call( frequentlyUsedLanguages, variant.lang ) ) {
 					variant.frequency = frequentlyUsedLanguages[variant.lang];
