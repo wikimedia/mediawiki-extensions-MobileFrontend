@@ -89,7 +89,7 @@
 		},
 		{
 			"path": "resources/dist/mobile.startup.js",
-			"maxSize": "5.4KB"
+			"maxSize": "5.42KB"
 		},
 		{
 			"path": "resources/dist/mobile.languages.structured.js",

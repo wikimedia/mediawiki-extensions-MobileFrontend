@@ -19,6 +19,7 @@ function loadLanguageSearcher( pageGateway ) {
 		return new LanguageSearcher( {
 			languages: data.languages,
 			variants: data.variants,
+			showSuggestedLanguages: true,
 			deviceLanguage: getDeviceLanguage( navigator )
 		} );
 
