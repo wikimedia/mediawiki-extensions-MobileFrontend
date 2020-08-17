@@ -177,7 +177,7 @@
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Тема",
 	"mobile-frontend-talk-add-overlay-submit": "Додај тему",
 	"mobile-frontend-talk-reply": "Одговори",
-	"mobile-frontend-talk-reply-info": "Имајте у виду да ће ваш одговор аутоматски бити потписан.",
+	"mobile-frontend-talk-reply-info": "Имајте на уму да ће ваш одговор аутоматски бити потписан.",
 	"mobile-frontend-talk-topic-error": "Није могуће додати тему због непознате грешке.",
 	"mobile-frontend-talk-topic-error-protected": "Ова страница за разговор је заштићена. Немате дозволу да додајете теме на њу.",
 	"mobile-frontend-talk-topic-error-permission": "Није могуће додати тему. Немате право да уређујете странице.",
