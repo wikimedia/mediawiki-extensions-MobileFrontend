@@ -1,6 +1,6 @@
 <?php
 
-namespace MobileFrontend\AMC;
+namespace MobileFrontend\Amc;
 
 use Config;
 use MobileContext;
@@ -8,7 +8,7 @@ use MobileContext;
 /**
  * Advanced Mobile Contributions Manager
  *
- * @package MobileFrontend\AMC
+ * @package MobileFrontend\Amc
  */
 final class Manager {
 	/**

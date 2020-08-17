@@ -1,6 +1,6 @@
 <?php
 
-namespace MobileFrontend\AMC;
+namespace MobileFrontend\Amc;
 
 use DeferredUpdates;
 use MediaWiki\MediaWikiServices;
