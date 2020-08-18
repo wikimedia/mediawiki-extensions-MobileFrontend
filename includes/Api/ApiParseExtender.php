@@ -16,26 +16,23 @@ class ApiParseExtender {
 	/**
 	 * APIGetAllowedParams hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/APIGetAllowedParams
-	 * @param ApiBase &$module
+	 * @param ApiBase $module
 	 * @param array|bool &$params Array of parameters
-	 * @return bool
 	 */
-	public static function onAPIGetAllowedParams( ApiBase &$module, &$params ) {
+	public static function onAPIGetAllowedParams( ApiBase $module, &$params ) {
 		if ( $module->getModuleName() == 'parse' ) {
 			$params['mobileformat'] = false;
 			$params['noimages'] = false;
 			$params['mainpage'] = false;
 		}
-		return true;
 	}
 
 	/**
 	 * APIAfterExecute hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/APIAfterExecute
-	 * @param ApiBase &$module
-	 * @return bool
+	 * @param ApiBase $module
 	 */
-	public static function onAPIAfterExecute( ApiBase &$module ) {
+	public static function onAPIAfterExecute( ApiBase $module ) {
 		$services = MediaWikiServices::getInstance();
 		$config = $services->getService( 'MobileFrontend.Config' );
 		$mfSpecialCaseMainPage = $config->get( 'MFSpecialCaseMainPage' );
@@ -63,6 +60,5 @@ class ApiParseExtender {
 					ApiResult::OVERRIDE | ApiResult::NO_SIZE_CHECK );
 			}
 		}
-		return true;
 	}
 }
