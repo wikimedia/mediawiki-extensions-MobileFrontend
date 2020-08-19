@@ -141,11 +141,6 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			. ' '
 			. '</span>';
 		$noscript = '<noscript><img alt="foo" src="foo.jpg" width="100" height="100"></noscript>';
-		$refText = '<p>They saved the world with one single unit test'
-			. '<sup class="reference"><a href="#cite-note-1">[1]</a></sup></p>';
-		$expectedReftext = '<p>They saved the world with one single unit test'
-			. '<sup class="reference"><a href="#cite-note-1">[1]</a></sup></p>';
-		$refhtml = '<ol class="references"><li>link 1</li><li>link 2</li></ol>';
 
 		return [
 			// Nested headings are not wrapped
