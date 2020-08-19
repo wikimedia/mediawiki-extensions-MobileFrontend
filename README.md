@@ -223,22 +223,6 @@ Defines the sampling rate for the Search schema.
 * Type: `Number`
 * Default: `0.001`
 
-#### $wgMFSpecialCaseMainPage
-
-If set to true, main page HTML will receive special massaging.
-
-See <https://m.mediawiki.org/wiki/Mobile_Gateway/Mobile_homepage_formatting>
-
-Use is discouraged as it leads to unnecessary technical debt and on the long
-term the goal is to deprecate usage of this config variable. Use at your own
-risk!
-
-If this feature is enabled you can disable it temporarily by appending
-?debug=1&mfnolegacytransform=1 to the main page URI.
-
-* Type: `Boolean`
-* Default: `false`
-
 #### $wgMFMobileHeader
 
 Requests containing header with this name will be considered as coming from

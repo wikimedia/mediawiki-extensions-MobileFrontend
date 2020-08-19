@@ -132,9 +132,6 @@ class MobileFormatterTest extends MediaWikiTestCase {
 		$removeImages = function ( MobileFormatter $f ) {
 			$f->setRemoveMedia();
 		};
-		$mainPage = function ( MobileFormatter $f ) {
-			$f->setIsMainPage( true );
-		};
 		$originalImage = '<img alt="foo" src="foo.jpg" width="100" '
 			. 'height="100" srcset="foo-1.5x.jpg 1.5x, foo-2x.jpg 2x">';
 		$placeholder = '<span class="lazy-image-placeholder" '
@@ -169,7 +166,8 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			[
 				'<div>a</div><h2>Today</h2>' . $originalImage . '<h2>Tomorrow</h2>Test.',
 				'<div>a</div><h2>Today</h2>' . $originalImage . '<h2>Tomorrow</h2>Test.',
-				$mainPage,
+				// use default formatter
+				false,
 				false, false, true,
 			],
 			// Lead section images not impacted
