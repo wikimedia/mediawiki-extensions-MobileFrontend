@@ -5,6 +5,7 @@ use MobileFrontend\ContentProviders\IContentProvider;
 use MobileFrontend\Transforms\LazyImageTransform;
 use MobileFrontend\Transforms\MoveLeadParagraphTransform;
 use MobileFrontend\Transforms\NoTransform;
+use MobileFrontend\Transforms\RemoveImagesTransform;
 
 /**
  * Converts HTML into a mobile-friendly version
@@ -170,7 +171,9 @@ class MobileFormatter extends HtmlFormatter {
 		}
 
 		if ( $this->removeMedia ) {
-			$this->doRemoveImages();
+			$removeImagesTransform = new RemoveImagesTransform();
+			/** @phan-suppress-next-line PhanTypeMismatchArgument DOMNode vs. DOMElement */
+			$removeImagesTransform->apply( $doc->getElementsByTagName( 'body' )->item( 0 ) );
 		}
 
 		// Apply all removals before continuing with transforms (see T185040 for example)
@@ -224,29 +227,6 @@ class MobileFormatter extends HtmlFormatter {
 	) {
 		if ( !$this->removeMedia && $options['images'] && $sectionNumber > 0 ) {
 			$this->lazyTransform->apply( $el );
-		}
-	}
-
-	/**
-	 * Replaces images with [annotations from alt]
-	 */
-	private function doRemoveImages() {
-		$doc = $this->getDoc();
-		$domElemsToReplace = [];
-		foreach ( $doc->getElementsByTagName( 'img' ) as $element ) {
-			$domElemsToReplace[] = $element;
-		}
-		/** @var DOMElement $element */
-		foreach ( $domElemsToReplace as $element ) {
-			$alt = $element->getAttribute( 'alt' );
-			if ( $alt === '' ) {
-				$alt = '[' . wfMessage( 'mobile-frontend-missing-image' )->inContentLanguage()->text() . ']';
-			} else {
-				$alt = '[' . $alt . ']';
-			}
-			$replacement = $doc->createElement( 'span', htmlspecialchars( $alt ) );
-			$replacement->setAttribute( 'class', 'mw-mf-image-replacement' );
-			$element->parentNode->replaceChild( $replacement, $element );
 		}
 	}
 
