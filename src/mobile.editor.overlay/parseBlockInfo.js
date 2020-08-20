@@ -23,6 +23,8 @@ module.exports = function parseBlockInfo( blockinfo ) {
 
 	blockInfo = {
 		partial: blockinfo.blockpartial || false,
+		noCreateAccount: blockinfo.blocknocreate || false,
+		anonOnly: blockinfo.blockanononly === undefined ? true : blockinfo.blockanononly,
 		creator: {
 			name: blockinfo.blockedby,
 			url: null
