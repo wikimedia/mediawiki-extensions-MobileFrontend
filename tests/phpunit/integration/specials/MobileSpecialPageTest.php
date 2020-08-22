@@ -10,13 +10,13 @@ class MobileSpecialPageTest extends MediaWikiTestCase {
 	}
 
 	/**
-	 * @dataProvider provideGetDesktopUrl
-	 * @covers SpecialMobileHistory::getDesktopUrl
-	 * @covers SpecialMobileDiff::getDesktopUrl
 	 * @param string $class
 	 * @param string $subPage
 	 * @param array $params
 	 * @param string|null $expected
+	 * @covers SpecialMobileHistory::getDesktopUrl
+	 * @covers SpecialMobileDiff::getDesktopUrl
+	 * @dataProvider provideGetDesktopUrl
 	 */
 	public function testGetDesktopUrl( $class, $subPage, array $params, $expected ) {
 		$context = new RequestContext();

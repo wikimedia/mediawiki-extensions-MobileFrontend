@@ -81,8 +81,8 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 	/**
 	 * Test headers and alternate/canonical links to be set or not
 	 *
-	 * @dataProvider onBeforePageDisplayDataProvider
 	 * @covers MobileFrontendHooks::onBeforePageDisplay
+	 * @dataProvider onBeforePageDisplayDataProvider
 	 */
 	public function testOnBeforePageDisplay( $mobileUrlTemplate, $mfNoindexPages,
 		$mfEnableXAnalyticsLogging, $mfAutoDetectMobileView, $mfVaryOnUA, $mfXAnalyticsItems,
@@ -241,8 +241,8 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 	}
 
 	/**
-	 * @dataProvider provideOnPageRenderingHash
 	 * @covers MobileFrontendHooks::onPageRenderingHash
+	 * @dataProvider provideOnPageRenderingHash
 	 */
 	public function testOnPageRenderingHash(
 		$shouldConfstrChange,
@@ -306,8 +306,8 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 	}
 
 	/**
-	 * @dataProvider provideShouldMobileFormatSpecialPages
 	 * @covers MobileFrontendHooks::shouldMobileFormatSpecialPages
+	 * @dataProvider provideShouldMobileFormatSpecialPages
 	 */
 	public function testShouldMobileFormatSpecialPages(
 		$expected,
@@ -343,8 +343,8 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 	}
 
 	/**
-	 * @dataProvider provideDoThumbnailBeforeProduceHTML
 	 * @covers MobileFrontendHooks::onPageRenderingHash
+	 * @dataProvider provideDoThumbnailBeforeProduceHTML
 	 */
 	public function testDoThumbnailBeforeProduceHTML(
 		$expected,

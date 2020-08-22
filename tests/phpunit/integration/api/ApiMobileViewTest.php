@@ -15,8 +15,8 @@ class ApiMobileViewTest extends MediaWikiTestCase {
 	}
 
 	/**
-	 * @dataProvider provideGetRequestedSectionIds
 	 * @covers \MobileFrontend\Api\ApiMobileView::getRequestedSectionIds
+	 * @dataProvider provideGetRequestedSectionIds
 	 */
 	public function testGetRequestedSectionIds( $expectedSections, $expectedMissing, $str ) {
 		$data = [
@@ -88,7 +88,6 @@ class ApiMobileViewTest extends MediaWikiTestCase {
 	}
 
 	/**
-	 * @dataProvider provideView
 	 * @covers \MobileFrontend\Api\ApiMobileView::execute
 	 * @covers \MobileFrontend\Api\ApiMobileView::makeTitle
 	 * @covers \MobileFrontend\Api\ApiMobileView::getPageImage
@@ -104,6 +103,7 @@ class ApiMobileViewTest extends MediaWikiTestCase {
 	 * @covers \MobileFrontend\Api\ApiMobileView::addProtection
 	 * @covers \MobileFrontend\Api\ApiMobileView::getAllowedParams
 	 * @covers \MobileFrontend\Api\ApiMobileView::getResult
+	 * @dataProvider provideView
 	 */
 	public function testView( array $input, array $expected ) {
 		$api = $this->getMobileViewApi( $input );
@@ -111,7 +111,6 @@ class ApiMobileViewTest extends MediaWikiTestCase {
 	}
 
 	/**
-	 * @dataProvider provideViewWithTransforms
 	 * @covers \MobileFrontend\Api\ApiMobileView::execute
 	 * @covers \MobileFrontend\Api\ApiMobileView::makeTitle
 	 * @covers \MobileFrontend\Api\ApiMobileView::getPageImage
@@ -127,6 +126,7 @@ class ApiMobileViewTest extends MediaWikiTestCase {
 	 * @covers \MobileFrontend\Api\ApiMobileView::addProtection
 	 * @covers \MobileFrontend\Api\ApiMobileView::getAllowedParams
 	 * @covers \MobileFrontend\Api\ApiMobileView::getResult
+	 * @dataProvider provideViewWithTransforms
 	 */
 	public function testViewWithTransforms( array $input, array $expected ) {
 		$api = $this->getMobileViewApi( $input );
@@ -626,8 +626,8 @@ Text 2
 	}
 
 	/**
-	 * @dataProvider provideGetMobileViewPageProps
 	 * @covers \MobileFrontend\Api\ApiMobileView::getMobileViewPageProps
+	 * @dataProvider provideGetMobileViewPageProps
 	 */
 	public function testGetMobileViewPageProps( $requested, $available, $returned ) {
 		$context = new RequestContext();

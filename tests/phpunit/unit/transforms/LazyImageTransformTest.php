@@ -13,13 +13,12 @@ class LazyImageTransformTest extends \MediaWikiUnitTestCase {
 	}
 
 	/**
-	 * @dataProvider provideGetImageDimensions
-	 *
 	 * @param array $expected what we expect the dimensions to be.
 	 * @param string $w value of width attribute (if any)
 	 * @param string $h value of height attribute (if any)
 	 * @param string $style value of style attribute (if any)
 	 * @covers \MobileFrontend\Transforms\LazyImageTransform::getImageDimensions
+	 * @dataProvider provideGetImageDimensions
 	 */
 	public function testGetImageDimensions( $expected, $w, $h, $style ) {
 		$mf = new LazyImageTransform();
@@ -82,8 +81,8 @@ class LazyImageTransformTest extends \MediaWikiUnitTestCase {
 	}
 
 	/**
-	 * @dataProvider provideIsDimensionSmallerThanThreshold
 	 * @covers \MobileFrontend\Transforms\LazyImageTransform::isDimensionSmallerThanThreshold
+	 * @dataProvider provideIsDimensionSmallerThanThreshold
 	 */
 	public function testIsDimensionSmallerThanThreshold( $dimension, $expected ) {
 		$mf = new LazyImageTransform();
@@ -110,17 +109,16 @@ class LazyImageTransformTest extends \MediaWikiUnitTestCase {
 	}
 
 	/**
-	 * @dataProvider provideTransform
+	 * @param string $html
+	 * @param bool $skipSmallImages whether small images should be skipped
+	 * @param string $expected
 	 * @covers \MobileFrontend\Transforms\LazyImageTransform::apply
 	 * @covers \MobileFrontend\Transforms\LazyImageTransform::doRewriteImagesForLazyLoading
 	 * @covers \MobileFrontend\Transforms\LazyImageTransform::getImageDimension
 	 * @covers \MobileFrontend\Transforms\LazyImageTransform::getImageDimensions
 	 * @covers \MobileFrontend\Transforms\LazyImageTransform::copyStyles
 	 * @covers \MobileFrontend\Transforms\LazyImageTransform::copyClasses
-	 *
-	 * @param string $html
-	 * @param bool $skipSmallImages whether small images should be skipped
-	 * @param string $expected
+	 * @dataProvider provideTransform
 	 */
 	public function testTransform( $html, $skipSmallImages, $expected, $explanation ) {
 		$transform = new LazyImageTransform( $skipSmallImages );

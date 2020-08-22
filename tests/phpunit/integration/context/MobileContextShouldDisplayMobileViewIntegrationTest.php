@@ -38,8 +38,8 @@ class MobileContextShouldDisplayMobileViewIntegrationTest extends MediaWikiTestC
 	}
 
 	/**
-	 * @dataProvider shouldDisplayMobileViewProvider
 	 * @covers MobileContext::shouldDisplayMobileView
+	 * @dataProvider shouldDisplayMobileViewProvider
 	 */
 	public function testShouldDisplayMobileView(
 		$expected,

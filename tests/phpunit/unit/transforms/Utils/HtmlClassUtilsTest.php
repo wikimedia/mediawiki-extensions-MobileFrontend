@@ -9,9 +9,8 @@ use MobileFrontend\Transforms\Utils\HtmlClassUtils;
 class HtmlClassUtilsTest extends \MediaWikiUnitTestCase {
 
 	/**
-	 * @dataProvider parseClassStringProvider
-	 *
 	 * @covers ::parseClassString
+	 * @dataProvider parseClassStringProvider
 	 */
 	public function testParseClassString( $classes, $expected ) {
 		$this->assertEquals( [],  HtmlClassUtils::parseClassString( '    ' ) );
@@ -58,9 +57,8 @@ class HtmlClassUtilsTest extends \MediaWikiUnitTestCase {
 	}
 
 	/**
-	 * @dataProvider formClassStringProvider
-	 *
 	 * @covers ::formClassString
+	 * @dataProvider formClassStringProvider
 	 */
 	public function testFormClassString( array $classes, string $expected ) {
 		$this->assertEquals( $expected,  HtmlClassUtils::formClassString( $classes ) );
@@ -90,25 +88,24 @@ class HtmlClassUtilsTest extends \MediaWikiUnitTestCase {
 		];
 	}
 
-	 /**
-	  * @dataProvider filterAllowedClassesProvider
-	  *
-	  * @covers ::filterAllowedClasses
-	  */
+	/**
+	 * @covers ::filterAllowedClasses
+	 * @dataProvider filterAllowedClassesProvider
+	 */
 	public function testFilterAllowedClasses(
-		 array $classes,
-		 array $allowedClasses,
-		 array $additional,
-		 array $expected
- ) {
+		array $classes,
+		array $allowedClasses,
+		array $additional,
+		array $expected
+	) {
 		$this->assertEquals(
 			$expected,
 			HtmlClassUtils::filterAllowedClasses(
 				$classes,
 				$allowedClasses,
 				$additional
- )
- );
+			)
+		);
 	}
 
 	public function filterAllowedClassesProvider() {

@@ -6,11 +6,11 @@
  */
 class WMFBaseDomainExtractorTest extends \PHPUnit\Framework\TestCase {
 	/**
-	 * @dataProvider getBaseDomainProvider
 	 * @covers ::getCookieDomain
 	 * @covers ::matchBaseHostname
 	 * @covers ::extractSubdomain
 	 * @covers ::endsWith
+	 * @dataProvider getBaseDomainProvider
 	 */
 	public function testGetBaseDomain( $server, $baseDomain ) {
 		$extractor = new \MobileFrontend\WMFBaseDomainExtractor();

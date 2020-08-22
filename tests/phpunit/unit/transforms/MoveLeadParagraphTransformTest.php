@@ -14,9 +14,9 @@ class MoveLeadParagraphTransformTest extends \MediaWikiUnitTestCase {
 	}
 
 	/**
-	 * @dataProvider provideIdentifyInfoboxElement
 	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::identifyInfoboxElement
 	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::matchElement
+	 * @dataProvider provideIdentifyInfoboxElement
 	 */
 	public function testIdentifyInfoboxElement( string $html, ?string $expected, string $msg ) {
 		$doc = new DOMDocument();
@@ -86,8 +86,6 @@ class MoveLeadParagraphTransformTest extends \MediaWikiUnitTestCase {
 	}
 
 	/**
-	 * @dataProvider provideTransform
-	 *
 	 * @param string $html
 	 * @param string $expected
 	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::apply
@@ -98,8 +96,11 @@ class MoveLeadParagraphTransformTest extends \MediaWikiUnitTestCase {
 	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::isNotEmptyNode
 	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::isNonLeadParagraph
 	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::isPreviousSibling
+	 * @dataProvider provideTransform
 	 */
-	public function testTransform( $html, $expected,
+	public function testTransform(
+		$html,
+		$expected,
 		$reason = 'Move lead paragraph unexpected result'
 	) {
 		$transform = new MoveLeadParagraphTransform( 'A', 1 );

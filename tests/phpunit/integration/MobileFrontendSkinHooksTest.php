@@ -53,8 +53,8 @@ class MobileFrontendSkinHooksTest extends MediaWikiLangTestCase {
 	}
 
 	/**
-	 * @dataProvider providePluralLicenseInfoData
 	 * @covers ::getPluralLicenseInfo
+	 * @dataProvider providePluralLicenseInfoData
 	 */
 	public function testGetPluralLicenseInfo( $isDisabledValue, $license, $expectedResult ) {
 		$msgObj = $this->createMock( Message::class );
@@ -75,8 +75,8 @@ class MobileFrontendSkinHooksTest extends MediaWikiLangTestCase {
 	}
 
 	/**
-	 * @dataProvider providePluralLicenseInfoWithNullMessageObjectData
 	 * @covers ::getPluralLicenseInfo
+	 * @dataProvider providePluralLicenseInfoWithNullMessageObjectData
 	 */
 	public function testGetPluralLicenseInfoWithNullMessageObject( $license, $expected ) {
 		$this->assertSame(
@@ -105,8 +105,8 @@ class MobileFrontendSkinHooksTest extends MediaWikiLangTestCase {
 	}
 
 	/**
-	 * @dataProvider provideGetTermsLinkData
 	 * @covers ::getTermsLink
+	 * @dataProvider provideGetTermsLinkData
 	 */
 	public function testGetTermsLink( $isDisabled, $expected ) {
 		$messageMock = $this->createMock( Message::class );

@@ -66,8 +66,6 @@ class MobileFormatterTest extends MediaWikiTestCase {
 	}
 
 	/**
-	 * @dataProvider provideHtmlTransform
-	 *
 	 * @param string $input
 	 * @param string $expected
 	 * @param callable|bool $callback
@@ -76,6 +74,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 	 * @param bool $lazyLoadImages
 	 * @param bool $showFirstParagraphBeforeInfobox
 	 * @covers MobileFormatter::filterContent
+	 * @dataProvider provideHtmlTransform
 	 */
 	public function testHtmlTransform( $input, $expected, $callback = false,
 		$removeDefaults = false, $unused = false, $lazyLoadImages = false,
@@ -604,10 +603,10 @@ class MobileFormatterTest extends MediaWikiTestCase {
 	}
 
 	/**
-	 * @dataProvider provideHeadingTransform
 	 * @covers MobileFormatter::makeSections
 	 * @covers MobileFormatter::enableExpandableSections
 	 * @covers MobileFormatter::filterContent
+	 * @dataProvider provideHeadingTransform
 	 */
 	public function testHeadingTransform( array $topHeadingTags, $input, $expectedOutput ) {
 		$t = Title::newFromText( 'Mobile' );
@@ -714,9 +713,9 @@ class MobileFormatterTest extends MediaWikiTestCase {
 
 	/**
 	 * @see https://phabricator.wikimedia.org/T149884
-	 * @dataProvider provideLoggingOfInfoboxesBeingWrappedInContainersWhenWrapped
-	 * @covers MobileFormatter::filterContent
 	 * @param string $input
+	 * @covers MobileFormatter::filterContent
+	 * @dataProvider provideLoggingOfInfoboxesBeingWrappedInContainersWhenWrapped
 	 */
 	public function testLoggingOfInfoboxesBeingWrappedInContainersWhenWrapped( $input ) {
 		$this->setMwGlobals( [

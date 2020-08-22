@@ -28,9 +28,9 @@ class AMFDeviceDetectorTest extends \MediaWikiUnitTestCase {
 	}
 
 	/**
-	 * @dataProvider provideIsMobileDevice
 	 * @covers \MobileFrontend\Devices\AMFDeviceDetector::detectDeviceProperties
 	 * @covers \MobileFrontend\Devices\DeviceProperties::isMobileDevice
+	 * @dataProvider provideIsMobileDevice
 	 */
 	public function testIsMobileDevice( $server, $expectedIsMobileDevice ) {
 		$isMobileDevice =
@@ -54,9 +54,9 @@ class AMFDeviceDetectorTest extends \MediaWikiUnitTestCase {
 	}
 
 	/**
-	 * @dataProvider provideIsTabletDevice
 	 * @covers \MobileFrontend\Devices\AMFDeviceDetector::detectDeviceProperties
 	 * @covers \MobileFrontend\Devices\DeviceProperties::isTabletDevice
+	 * @dataProvider provideIsTabletDevice
 	 */
 	public function testIsTabletDevice( $server, $expectedIsTabletDevice ) {
 		$isTabletDevice =

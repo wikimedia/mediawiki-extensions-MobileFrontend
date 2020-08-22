@@ -9,9 +9,8 @@ use MobileFrontend\Transforms\Utils\HtmlStyleUtils;
 class HtmlStyleUtilsTest extends \MediaWikiUnitTestCase {
 
 	/**
-	 * @dataProvider parseStyleStringProvider
-	 *
 	 * @covers ::parseStyleString
+	 * @dataProvider parseStyleStringProvider
 	 */
 	public function testParseStyleString( string $style, array $expected ) {
 		$this->assertEquals( $expected,  HtmlStyleUtils::parseStyleString( $style ) );
@@ -50,9 +49,8 @@ class HtmlStyleUtilsTest extends \MediaWikiUnitTestCase {
 	}
 
 	/**
-	 * @dataProvider formStyleStringProvider
-	 *
 	 * @covers ::formStyleString
+	 * @dataProvider formStyleStringProvider
 	 */
 	public function testFormStyleString( array $styles, string $expected ) {
 		$this->assertEquals( $expected, HtmlStyleUtils::formStyleString( $styles ) );
@@ -75,16 +73,15 @@ class HtmlStyleUtilsTest extends \MediaWikiUnitTestCase {
 	}
 
 	/**
-	 * @dataProvider filterAllowedStylesProvider
-	 *
 	 * @covers ::filterAllowedStyles
+	 * @dataProvider filterAllowedStylesProvider
 	 */
 	public function testFilterAllowedStyles(
 		array $styles,
 		array $allowedStyles,
 		array $additional,
 		array $expected
- ) {
+	) {
 		$this->assertEquals(
 			$expected,
 			HtmlStyleUtils::filterAllowedStyles(
@@ -92,7 +89,7 @@ class HtmlStyleUtilsTest extends \MediaWikiUnitTestCase {
 				$allowedStyles,
 				$additional
 			)
- );
+		);
 	}
 
 	public function filterAllowedStylesProvider() {
