@@ -23,7 +23,7 @@
 	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|bayt}} lê hatin zêdekirin",
 	"mobile-frontend-diffview-bytesremoved": "$1 {{PLURAL:$1|bayt}} hatine jêbirin",
 	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|guherandin}}",
-	"mobile-frontend-diffview-title": "Guherandin",
+	"mobile-frontend-diffview-title": "Guhertin",
 	"mobile-frontend-editor-anon": "Bê têketinê biguherîne",
 	"mobile-frontend-editor-blocked-drawer-title": "Tu ji guherandina {{SITENAME}} hatî astengkirin",
 	"mobile-frontend-editor-blocked-drawer-title-partial": "Hûn ji guherandina vê rûpelê hatin astengkirin",

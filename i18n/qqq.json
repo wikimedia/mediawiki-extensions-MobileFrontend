@@ -54,7 +54,7 @@
 	"mobile-frontend-categories-add-heading": "A heading saying for what page categories can be added. All text should be wrapped in a STRONG tag except the page title itself. Note that STRONG text pushes the buttons off-screen when it's too long (vertical mobile display), but the SPAN part is shortened in that case with an ellipsis (...) before the buttons.\n\nParameters:\n* $1 - page title",
 	"mobile-frontend-categories-add-wait": "Text that displays while categories are saved.\nSee also {{msg-mw|mobile-frontend-editor-wait}}",
 	"mobile-frontend-categories-normal": "Link message to switch to non-hidden categories.\nSee also {{msg-mw|mobile-frontend-categories-hidden}}",
-	"mobile-frontend-categories-hidden": "Link message to switch to hidden categories.\nSee also {{msg-mw|mobile-frontend-categories-normal}}\n{{Identical|Organizational}}",
+	"mobile-frontend-categories-hidden": "Link message to switch to hidden categories. As in \"organizational [categories]\".\n\nSee also {{msg-mw|mobile-frontend-categories-normal}}\n{{Identical|Organizational}}",
 	"mobile-frontend-changeslist-nocomment": "Text to mark an empty edit summary in mobile watchlist/history/recentchanges overview.",
 	"mobile-frontend-cite-error-title": "Title for Special:MobileCite error page.",
 	"mobile-frontend-cite-error": "Error message shown to user when citations fail to load which should only happen if a bad revision identifier is given.",
