@@ -76,7 +76,6 @@ class MobileFormatterTest extends MediaWikiTestCase {
 	 * @param bool $lazyLoadImages
 	 * @param bool $showFirstParagraphBeforeInfobox
 	 * @covers MobileFormatter::filterContent
-	 * @covers MobileFormatter::doRemoveImages
 	 */
 	public function testHtmlTransform( $input, $expected, $callback = false,
 		$removeDefaults = false, $unused = false, $lazyLoadImages = false,
