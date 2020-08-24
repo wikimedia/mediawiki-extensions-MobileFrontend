@@ -413,7 +413,9 @@
 				"mobile-frontend-editor-generic-block-reason",
 				"mobile-frontend-editor-viewing-source-page",
 				"mobile-frontend-editor-anon",
-				"parentheses"
+				"parentheses",
+				"login",
+				"randompage"
 			]
 		},
 		"mobile.editor.images": {
