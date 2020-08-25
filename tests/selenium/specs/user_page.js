@@ -18,7 +18,6 @@ describe( 'User:<username>', () => {
 
 	before( () => {
 		const login = () => {
-			RunJobs.run();
 			UserLoginPage.login( username, password );
 		};
 
@@ -36,6 +35,7 @@ describe( 'User:<username>', () => {
 				} );
 		} );
 		login();
+		RunJobs.run();
 	} );
 
 	it( 'Check user page is editable', () => {
