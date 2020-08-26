@@ -17,12 +17,6 @@ class MobileFormatter extends HtmlFormatter {
 	const STYLE_COLLAPSIBLE_SECTION_CLASS = 'collapsible-block';
 
 	/**
-	 * Should legacy transforms be applied?
-	 * @var boolean $legacyTransformsDisabled
-	 */
-	private $legacyTransformsDisabled = false;
-
-	/**
 	 * Whether scripts can be added in the output.
 	 * @var bool
 	 */
@@ -123,13 +117,6 @@ class MobileFormatter extends HtmlFormatter {
 		$formatter = new self( $html, $title, $config, $context );
 		$formatter->enableExpandableSections( $enableSections );
 
-		$request = $context->getRequest();
-		$formatter->disableLegacyTransforms(
-			// avoid caching problems
-			$request->getBool( 'debug' )
-			&& $request->getBool( 'mfnolegacytransform' )
-		);
-
 		return $formatter;
 	}
 
@@ -192,14 +179,6 @@ class MobileFormatter extends HtmlFormatter {
 			$this->filterContentInSection( $doc, $doc, 0, $transformOptions );
 		}
 		return $removed;
-	}
-
-	/**
-	 * Disable any legacy transforms
-	 * @param bool $disable whether legacy transforms should be disabled.
-	 */
-	public function disableLegacyTransforms( bool $disable ) : void {
-		$this->legacyTransformsDisabled = $disable;
 	}
 
 	/**
