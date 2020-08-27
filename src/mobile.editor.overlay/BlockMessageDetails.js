@@ -2,12 +2,6 @@
 var Button = require( '../mobile.startup/Button' ),
 	View = require( '../mobile.startup/View' ),
 	Icon = require( '../mobile.startup/Icon' ),
-	okButton = new Button( {
-		label: mw.msg( 'ok' ),
-		tagName: 'button',
-		progressive: true,
-		additionalClassNames: 'cancel'
-	} ),
 	util = require( '../mobile.startup/util' );
 
 /**
@@ -66,6 +60,32 @@ class BlockMessageDetails extends View {
 		};
 	}
 	/**
+	 * Configure the call to action depending on the type of block.
+	 *
+	 * @return {Object} Configuration options
+	 */
+	getButtonConfig() {
+		const config = {
+			progressive: true
+		};
+		if ( mw.user.isAnon() && this.options.anonOnly ) {
+			// The user can avoid the block by logging in
+			config.label = mw.msg( 'login' );
+			config.href = new mw.Title( 'Special:UserLogin' ).getUrl();
+		} else if ( this.options.partial ) {
+			// The user can avoid the block by editing a different page
+			config.label = mw.msg( 'randompage' );
+			config.href = new mw.Title( 'Special:Random' ).getUrl();
+			config.quiet = true;
+		} else {
+			// The user cannot avoid the block
+			config.tagName = 'button';
+			config.label = mw.msg( 'ok' );
+			config.additionalClassNames = 'cancel';
+		}
+		return config;
+	}
+	/**
 	 * @inheritdoc
 	 */
 	postRender() {
@@ -75,12 +95,11 @@ class BlockMessageDetails extends View {
 			hasText: true,
 			label: this.options.creator.name
 		} );
-
 		this.$el.find( '.block-message-creator a' ).prepend(
 			userIcon.$el
 		);
 		this.$el.find( '.block-message-buttons' ).prepend(
-			okButton.$el
+			new Button( this.getButtonConfig() ).$el
 		);
 		this.$el.find( '.block-message-icon' ).prepend(
 			( new Icon( {
