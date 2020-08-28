@@ -396,8 +396,10 @@
 				"mobile-frontend-editor-switch-editor",
 				"mobile-frontend-editor-switch-visual-editor",
 				"mobile-frontend-editor-anonwarning",
-				"ok",
 				"mobile-frontend-editor-editing",
+				"mobile-frontend-editor-blocked-drawer-action-login",
+				"mobile-frontend-editor-blocked-drawer-action-ok",
+				"mobile-frontend-editor-blocked-drawer-action-randompage",
 				"mobile-frontend-editor-blocked-drawer-title",
 				"mobile-frontend-editor-blocked-drawer-title-partial",
 				"mobile-frontend-editor-blocked-drawer-title-ip",
@@ -413,9 +415,7 @@
 				"mobile-frontend-editor-generic-block-reason",
 				"mobile-frontend-editor-viewing-source-page",
 				"mobile-frontend-editor-anon",
-				"parentheses",
-				"login",
-				"randompage"
+				"parentheses"
 			]
 		},
 		"mobile.editor.images": {
