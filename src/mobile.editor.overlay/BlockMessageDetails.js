@@ -70,17 +70,17 @@ class BlockMessageDetails extends View {
 		};
 		if ( mw.user.isAnon() && this.options.anonOnly ) {
 			// The user can avoid the block by logging in
-			config.label = mw.msg( 'login' );
+			config.label = mw.msg( 'mobile-frontend-editor-blocked-drawer-action-login' );
 			config.href = new mw.Title( 'Special:UserLogin' ).getUrl();
 		} else if ( this.options.partial ) {
 			// The user can avoid the block by editing a different page
-			config.label = mw.msg( 'randompage' );
+			config.label = mw.msg( 'mobile-frontend-editor-blocked-drawer-action-randompage' );
 			config.href = new mw.Title( 'Special:Random' ).getUrl();
 			config.quiet = true;
 		} else {
 			// The user cannot avoid the block
 			config.tagName = 'button';
-			config.label = mw.msg( 'ok' );
+			config.label = mw.msg( 'mobile-frontend-editor-blocked-drawer-action-ok' );
 			config.additionalClassNames = 'cancel';
 		}
 		return config;
