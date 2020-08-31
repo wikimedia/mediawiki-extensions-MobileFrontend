@@ -603,7 +603,6 @@ class MobileFormatterTest extends MediaWikiTestCase {
 	}
 
 	/**
-	 * @covers MobileFormatter::makeSections
 	 * @covers MobileFormatter::enableExpandableSections
 	 * @covers MobileFormatter::filterContent
 	 * @dataProvider provideHeadingTransform
