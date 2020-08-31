@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Albertoleoncio",
 			"Athena in Wonderland",
 			"Cainamarques",
 			"Diniscoelho",
@@ -65,6 +66,8 @@
 	"mobile-frontend-editor-anonwarning": "<strong>Aviso:</strong> Não iniciou sessão. O seu endereço IP será registado no histórico de edições desta página. Se <strong>iniciar sessão</strong> ou <strong>criar uma conta</strong>, as suas edições serão registadas com o seu nome de utilizador, podendo ainda usufruir de outros benefícios.",
 	"mobile-frontend-editor-blocked-drawer-title": "Você foi bloqueado para edição na wiki {{SITENAME}}",
 	"mobile-frontend-editor-blocked-drawer-title-partial": "Foi-lhe bloqueada a capacidade de editar esta página",
+	"mobile-frontend-editor-blocked-drawer-title-ip": "Seu endereço IP foi bloqueado de editar {{SITENAME}}.",
+	"mobile-frontend-editor-blocked-drawer-title-ip-login-createaccount-partial": "Seu endereço IP foi bloqueado de editar essa página. Tente entrar ou criar uma conta, ou tente editar outra página.",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Motivo do bloqueio",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Bloqueado|Bloqueada}} por",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "O bloqueio expira em",

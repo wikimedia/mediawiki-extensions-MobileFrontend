@@ -35,6 +35,7 @@
 			"Rmashhadi",
 			"Rtemis",
 			"Sahim",
+			"Sunfyre",
 			"ZxxZxxZ",
 			"پسر یاس"
 		]
@@ -77,6 +78,7 @@
 	"mobile-frontend-editor-anonwarning": "<strong>هشدار</strong>: شما وارد نشده‌اید. اگر هر تغییری ایجاد کنید، نشانی آی‌پی شما برای عموم قابل مشاهده خواهد بود. اگر <strong>وارد شوید</strong> یا <strong>یک حساب بسازید</strong>، ویرایش‌هایتان با نام کاربری‌تان ثبت خواهد شد و قابلیت‌های دیگری نیز به همراه خواهد داشت.",
 	"mobile-frontend-editor-blocked-drawer-title": "حساب شما برای ویرایش در {{SITENAME}} بسته شده‌است",
 	"mobile-frontend-editor-blocked-drawer-title-partial": "دسترسی ویرایشی حساب کاربر برای ویرایش این صفحه بسته شده‌است.",
+	"mobile-frontend-editor-blocked-drawer-title-ip": "نشانی آی‌پی شما برای ویرایش در {{SITENAME}} بسته شده‌است",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "علت بستن",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|بسته شده}} توسط",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "بستن در ... پایان می‌یابد",
