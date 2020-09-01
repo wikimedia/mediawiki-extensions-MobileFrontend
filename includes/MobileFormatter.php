@@ -4,6 +4,7 @@ use HtmlFormatter\HtmlFormatter;
 use MobileFrontend\ContentProviders\IContentProvider;
 use MobileFrontend\Transforms\MakeSectionsTransform;
 use MobileFrontend\Transforms\RemoveImagesTransform;
+use MobileFrontend\Transforms\SubHeadingTransform;
 
 /**
  * Converts HTML into a mobile-friendly version
@@ -146,7 +147,6 @@ class MobileFormatter extends HtmlFormatter {
 		if ( !$isSpecialPage && $removeDefaults ) {
 			$this->remove( $removableClasses );
 		}
-
 		$body = $doc->getElementsByTagName( 'body' )->item( 0 );
 		if ( $this->removeMedia ) {
 			$removeImagesTransform = new RemoveImagesTransform();
@@ -158,8 +158,9 @@ class MobileFormatter extends HtmlFormatter {
 		$removed = parent::filterContent();
 		// Sectionify the content and transform it if necessary per section
 		if ( $this->expandableSections ) {
-			list( $_, $subheadings ) = $this->getHeadings( $doc );
-			$this->makeHeadingsEditable( $subheadings );
+			$subHeadingTransform = new SubHeadingTransform( $this->topHeadingTags );
+			/** @phan-suppress-next-line PhanTypeMismatchArgument DOMNode vs. DOMElement */
+			$subHeadingTransform->apply( $body );
 			$makeSectionsTransform = new MakeSectionsTransform(
 				$this->topHeadingTags,
 				$showFirstParagraphBeforeInfobox,
@@ -186,58 +187,5 @@ class MobileFormatter extends HtmlFormatter {
 		$headings = preg_match_all( '/<[hH][1-6]/', $text );
 		$imgs = preg_match_all( '/<img/', $text );
 		return $headings <= $options['maxHeadings'] && $imgs <= $options['maxImages'];
-	}
-
-	/**
-	 * Marks the headings as editable by adding the <code>in-block</code>
-	 * class to each of them, if it hasn't already been added.
-	 *
-	 * FIXME: <code>in-block</code> isn't semantic in that it isn't
-	 * obviously connected to being editable.
-	 *
-	 * @param DOMElement[] $headings Heading elements
-	 */
-	protected function makeHeadingsEditable( array $headings ) {
-		foreach ( $headings as $heading ) {
-			$class = $heading->getAttribute( 'class' );
-			if ( strpos( $class, 'in-block' ) === false ) {
-				$heading->setAttribute(
-					'class',
-					ltrim( $class . ' in-block' )
-				);
-			}
-		}
-	}
-
-	/**
-	 * Gets all headings in the document in rank order.
-	 *
-	 * Note well that the rank order is defined by the
-	 * <code>MobileFormatter#topHeadingTags</code> property.
-	 *
-	 * @param DOMDocument $doc
-	 * @return array A two-element array where the first is the highest
-	 *  rank headings and the second is all other headings
-	 */
-	private function getHeadings( DOMDocument $doc ) {
-		$headings = $subheadings = [];
-
-		foreach ( $this->topHeadingTags as $tagName ) {
-			$allTags = $doc->getElementsByTagName( $tagName );
-			$elements = [];
-			foreach ( $allTags as $el ) {
-				if ( $el->parentNode->getAttribute( 'class' ) !== 'toctitle' ) {
-					$elements[] = $el;
-				}
-			}
-
-			if ( !$headings ) {
-				$headings = $elements;
-			} else {
-				$subheadings = array_merge( $subheadings, $elements );
-			}
-		}
-
-		return [ $headings, $subheadings ];
 	}
 }
