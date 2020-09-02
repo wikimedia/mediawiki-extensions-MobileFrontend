@@ -77,7 +77,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 	 * @dataProvider provideHtmlTransform
 	 */
 	public function testHtmlTransform( $input, $expected, $callback = false,
-		$removeDefaults = false, $unused = false, $lazyLoadImages = false,
+		$lazyLoadImages = false,
 		$showFirstParagraphBeforeInfobox = false
 	) {
 		$t = Title::newFromText( 'Mobile' );
@@ -92,7 +92,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			$callback( $mf );
 		}
 		$mf->topHeadingTags = [ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' ];
-		$mf->filterContent( $removeDefaults, null, $lazyLoadImages,
+		$mf->filterContent( $lazyLoadImages,
 			$showFirstParagraphBeforeInfobox );
 
 		$html = $mf->getText();
@@ -118,7 +118,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			. $this->makeSectionHeading( 'h2', 'heading 1' )
 			. $this->makeSectionHtml( 1, $smallPic ),
 			$enableSections,
-			false, false, true
+			false
 		);
 	}
 
@@ -152,7 +152,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 					. $this->makeSectionHeading( 'h2', 'test' )
 					. $this->makeSectionHtml( 1, '<p>more text</p>' ),
 				$enableSections,
-				false, false, false
+				false
 			],
 			// # Lazy loading images
 			// Main page not impacted
@@ -161,7 +161,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 				'<div>a</div><h2>Today</h2>' . $originalImage . '<h2>Tomorrow</h2>Test.',
 				// use default formatter
 				false,
-				false, false, true,
+				true,
 			],
 			// Lead section images not impacted
 			[
@@ -173,7 +173,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 					. $this->makeSectionHeading( 'h2', 'heading 2', 2 )
 					. $this->makeSectionHtml( 2, 'abc' ),
 				$enableSections,
-				false, false, true,
+				true,
 			],
 			// Test lazy loading of images outside the lead section
 			[
@@ -187,7 +187,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 					. $this->makeSectionHeading( 'h2', 'heading 2', 2 )
 					. $this->makeSectionHtml( 2, 'abc' ),
 				$enableSections,
-				false, false, true,
+				true,
 			],
 			// https://phabricator.wikimedia.org/T130025, last section filtered
 			[
@@ -201,7 +201,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 					. $this->makeSectionHeading( 'h2', 'heading 2', 2 )
 					. $this->makeSectionHtml( 2, $noscript . $placeholder ),
 				$enableSections,
-				false, false, true,
+				true,
 			],
 
 			// # Removal of images
@@ -301,7 +301,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 					'<p>paragraph 3</p>'
 				),
 
-				$enableSections, false, false, false, true,
+				$enableSections, false, true,
 			],
 			[
 				// hat-note, lead section, no infobox, another section
@@ -323,7 +323,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 					'<p>paragraph 3</p>'
 				),
 
-				$enableSections, false, false, false, true,
+				$enableSections, false, true,
 			],
 			[
 				// hat-note, lead section, infobox, another section
@@ -347,7 +347,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 					'<p>paragraph 3</p>'
 				),
 
-				$enableSections, false, false, false, true,
+				$enableSections, false, true,
 			],
 			[
 				// first paragraph is already before the lead section
@@ -369,7 +369,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 					'<p>paragraph 3</p>'
 				),
 
-				$enableSections, false, false, false, true,
+				$enableSections, false, true,
 			],
 			[
 				// infobox, but no paragraphs in the lead section
@@ -387,7 +387,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 					'<p>paragraph 1</p>'
 				),
 
-				$enableSections, false, false, false, true,
+				$enableSections, false, true,
 			],
 			[
 				// no lead section, infobox after the first section
@@ -403,7 +403,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 					'<table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox</td></tr></table>'
 				),
 
-				$enableSections, false, false, false, true,
+				$enableSections, false, true,
 			],
 			[
 				// two infoboxes, lead section, another section
@@ -425,7 +425,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 					'<p>paragraph 1</p>'
 				),
 
-				$enableSections, false, false, false, true,
+				$enableSections, false, true,
 			],
 			[
 				// first paragraph (which has coordinates and is hidden on mobile),
@@ -443,7 +443,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 					'<table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox</td></tr></table>'
 				),
 
-				$enableSections, false, false, false, true,
+				$enableSections, false, true,
 			],
 			[
 				// hatnote, infobox, thumbnail, lead section, another section
@@ -469,7 +469,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 					'<p>paragraph 3</p>'
 				),
 
-				$enableSections, false, false, false, true,
+				$enableSections, false, true,
 			],
 
 			[
@@ -492,7 +492,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 					'<p>paragraph 3</p>'
 				),
 
-				$enableSections, false, false, false, true,
+				$enableSections, false, true,
 			],
 
 			[
@@ -515,7 +515,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 					'<p>paragraph 3</p>'
 				),
 
-				$enableSections, false, false, false, true,
+				$enableSections, false, true,
 			],
 			[
 				// infobox, a paragraph, list element
@@ -529,7 +529,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 					'<p>paragraph</p><ol><li>item 1</li><li>item 2</li></ol>' .
 					'<table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox</td></tr></table>'
 				),
-				$enableSections, false, false, false, true,
+				$enableSections, false, true,
 			],
 			[
 				// 2 hat-notes, ambox, 2 infoboxes, 2 paragraphs, another section
@@ -560,7 +560,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 					'<p>paragraph 3</p>'
 				),
 
-				$enableSections, false, false, false, true,
+				$enableSections, false, true,
 			],
 
 			[
@@ -578,7 +578,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 					'<tr><td><p>SURPRISE PARAGRAPH</p></td></tr></table>'
 				),
 
-				$enableSections, false, false, false, true,
+				$enableSections, false, true,
 			],
 
 			[
@@ -597,7 +597,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 					'<p>paragraph 1</p>'
 				),
 
-				$enableSections, false, false, false, true,
+				$enableSections,  false, true,
 			],
 		];
 	}
@@ -705,7 +705,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 		$formatter = new MobileFormatter(
 			$input, Title::newFromText( 'Special:Foo' ), $this->mfConfig, $this->mfContext
 		);
-		$formatter->filterContent( false, true, false );
+		$formatter->filterContent( false );
 		// Success is not crashing when the input is not a DOMElement.
 		$this->assertTrue( true );
 	}
@@ -740,7 +740,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			} ) );
 
 		$this->setLogger( 'mobile', $loggerMock );
-		$formatter->filterContent( false, false, false, true );
+		$formatter->filterContent( false, true );
 	}
 
 	public function provideLoggingOfInfoboxesBeingWrappedInContainersWhenWrapped() {
@@ -780,7 +780,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			->method( 'info' );
 
 		$this->setLogger( 'mobile', $loggerMock );
-		$formatter->filterContent( false, false, false, true );
+		$formatter->filterContent( false, true );
 	}
 
 	public function provideLoggingOfInfoboxesBeingWrappedInContainersWhenNotWrapped() {
@@ -823,7 +823,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			->method( 'info' );
 
 		$this->setLogger( 'mobile', $loggerMock );
-		$formatter->filterContent( false, false, false, true );
+		$formatter->filterContent( false, true );
 	}
 
 	/**

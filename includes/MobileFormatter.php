@@ -122,21 +122,18 @@ class MobileFormatter extends HtmlFormatter {
 
 	/**
 	 * Performs various transformations to the content to make it appropriate for mobile devices.
-	 * @param bool $removeDefaults Whether default settings at $wgMFRemovableClasses should be used
-	 * @param bool $unused kept for backwards compatibility - previously used for
-	 *  lazy loaded references
+	 *
 	 * @param bool $removeImages Whether to move images into noscript tags
 	 * @param bool $showFirstParagraphBeforeInfobox Whether the first paragraph from the lead
 	 *  section should be shown before all infoboxes that come earlier.
 	 * @return array
 	 */
 	public function filterContent(
-		$removeDefaults = true, $unused = false, $removeImages = false,
+		$removeImages = false,
 		$showFirstParagraphBeforeInfobox = false
 	) {
 		$doc = $this->getDoc();
 
-		$isSpecialPage = $this->title->isSpecialPage();
 		$mfRemovableClasses = $this->config->get( 'MFRemovableClasses' );
 		$removableClasses = $mfRemovableClasses['base'];
 		if ( $this->context->isBetaGroupMember() ) {
@@ -144,7 +141,7 @@ class MobileFormatter extends HtmlFormatter {
 		}
 
 		// Don't remove elements in special pages
-		if ( !$isSpecialPage && $removeDefaults ) {
+		if ( !$this->title->isSpecialPage() ) {
 			$this->remove( $removableClasses );
 		}
 		$body = $doc->getElementsByTagName( 'body' )->item( 0 );
