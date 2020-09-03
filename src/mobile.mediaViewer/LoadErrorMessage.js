@@ -11,11 +11,9 @@ var util = require( './../mobile.startup/util' ),
  * @fires LoadErrorMessage#retry
  *
  * @param {Object} options Configuration options
+ * @param {string} options.retryPath path of URL to try again
  */
 function LoadErrorMessage( options ) {
-	if ( !options.retryPath ) {
-		throw new Error( '\'retryPath\' must be set in options param. Received: ' + options.retryPath );
-	}
 	View.call(
 		this,
 		{ events: { 'click .load-fail-msg-link a': 'onRetry' } },
