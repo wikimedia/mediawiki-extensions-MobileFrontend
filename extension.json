@@ -404,10 +404,12 @@
 				"mobile-frontend-editor-blocked-drawer-title-partial",
 				"mobile-frontend-editor-blocked-drawer-title-ip",
 				"mobile-frontend-editor-blocked-drawer-title-ip-partial",
-				"mobile-frontend-editor-blocked-drawer-title-ip-login",
-				"mobile-frontend-editor-blocked-drawer-title-ip-login-partial",
-				"mobile-frontend-editor-blocked-drawer-title-ip-login-createaccount",
-				"mobile-frontend-editor-blocked-drawer-title-ip-login-createaccount-partial",
+				"mobile-frontend-editor-blocked-drawer-body-partial",
+				"mobile-frontend-editor-blocked-drawer-body-login",
+				"mobile-frontend-editor-blocked-drawer-body-login-partial",
+				"mobile-frontend-editor-blocked-drawer-body-login-createaccount",
+				"mobile-frontend-editor-blocked-drawer-body-login-createaccount-partial",
+				"mobile-frontend-editor-blocked-drawer-body-link",
 				"mobile-frontend-editor-blocked-drawer-reason-header",
 				"mobile-frontend-editor-blocked-drawer-creator-header",
 				"mobile-frontend-editor-blocked-drawer-expiry-header",
@@ -422,7 +424,7 @@
 			"class": "ResourceLoaderOOUIIconPackModule",
 			"selectorWithVariant": ".mw-ui-icon-mf-{name}-{variant}:before",
 			"icons": [
-				"stopHand"
+				"block"
 			],
 			"variants": {
 				"destructive": {

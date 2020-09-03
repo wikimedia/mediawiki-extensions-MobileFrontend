@@ -27,29 +27,45 @@ class BlockMessageDetails extends View {
 			},
 			createTitle: function () {
 				var msgKey = 'mobile-frontend-editor-blocked-drawer-title';
-
 				if ( mw.user.isAnon() ) {
-					if ( !this.anonOnly ) {
-						msgKey += '-ip';
-					} else if ( this.noCreateAccount ) {
-						msgKey += '-ip-login';
-					} else {
-						msgKey += '-ip-login-createaccount';
-					}
+					msgKey += '-ip';
 				}
-				msgKey = this.partial ? msgKey + '-partial' : msgKey;
-
+				if ( this.partial ) {
+					msgKey += '-partial';
+				}
 				// The following messages can be passed here:
 				// * mobile-frontend-editor-blocked-drawer-title
 				// * mobile-frontend-editor-blocked-drawer-title-partial
 				// * mobile-frontend-editor-blocked-drawer-title-ip
 				// * mobile-frontend-editor-blocked-drawer-title-ip-partial
-				// * mobile-frontend-editor-blocked-drawer-title-ip-login
-				// * mobile-frontend-editor-blocked-drawer-title-ip-login-partial
-				// * mobile-frontend-editor-blocked-drawer-title-ip-login-createaccount
-				// * mobile-frontend-editor-blocked-drawer-title-ip-login-createaccount-partial
 				return mw.msg( msgKey );
 			},
+			createBody: function () {
+				var msgKey = '';
+				if ( mw.user.isAnon() && this.anonOnly ) {
+					msgKey = 'mobile-frontend-editor-blocked-drawer-body';
+					if ( this.noCreateAccount ) {
+						msgKey += '-login';
+					} else {
+						msgKey += '-login-createaccount';
+					}
+					if ( this.partial ) {
+						msgKey += '-partial';
+					}
+				} else {
+					if ( this.partial ) {
+						msgKey = 'mobile-frontend-editor-blocked-drawer-body-partial';
+					}
+				}
+				// The following messages can be passed here:
+				// * mobile-frontend-editor-blocked-drawer-body-partial
+				// * mobile-frontend-editor-blocked-drawer-body-login
+				// * mobile-frontend-editor-blocked-drawer-body-login-partial
+				// * mobile-frontend-editor-blocked-drawer-body-login-createaccount
+				// * mobile-frontend-editor-blocked-drawer-body-login-createaccount-partial
+				return msgKey ? mw.msg( msgKey ) : msgKey;
+			},
+			seeMoreLink: mw.msg( 'mobile-frontend-editor-blocked-drawer-body-link' ),
 			reasonHeader: mw.msg( 'mobile-frontend-editor-blocked-drawer-reason-header' ),
 			creatorHeader: function () {
 				// The gender is the subject (the blockee) not the object (the blocker).
@@ -89,21 +105,12 @@ class BlockMessageDetails extends View {
 	 * @inheritdoc
 	 */
 	postRender() {
-		const userIcon = new Icon( {
-			tagName: 'span',
-			name: 'userAvatar',
-			hasText: true,
-			label: this.options.creator.name
-		} );
-		this.$el.find( '.block-message-creator a' ).prepend(
-			userIcon.$el
-		);
 		this.$el.find( '.block-message-buttons' ).prepend(
 			new Button( this.getButtonConfig() ).$el
 		);
 		this.$el.find( '.block-message-icon' ).prepend(
 			( new Icon( {
-				name: 'stopHand-destructive',
+				name: 'block-destructive',
 				additionalClassNames: 'mw-ui-icon-flush-top'
 			} ) ).$el
 		);
@@ -113,49 +120,58 @@ class BlockMessageDetails extends View {
 	 */
 	get template() {
 		return util.template( `
-<div class="block-message">
+<div class="block-message block-message-container">
   <div class="block-message-icon"></div>
   <div class="block-message-info">
     <div class="block-message-item block-message-title">
       <h5>{{ createTitle }}</h5>
     </div>
     <div class="block-message-data">
-      {{#reason}}
-        <div class="block-message-item">
-          <h6>{{ reasonHeader }}</h6>
-          <div><strong>{{{ reason }}}</strong></div>
-        </div>
-      {{/reason}}
+      <div class="block-message-item">
+        <p>
+          {{ createBody }}
+          <a class ="block-message-see-more" href="#">{{ seeMoreLink }}</a>
+        </p>
+      </div>
       <div class="block-message-item block-message-creator">
         {{#creator.name}}
-          <h6>{{ creatorHeader }}</h6>
-          <div>
+          <p>
+            {{ creatorHeader }}
             <strong>
               {{#creator.url}}
-                <a href="{{ creator.url }}"></a>
+                <a href="{{ creator.url }}">{{ creator.name }}</a>
               {{/creator.url}}
               {{^creator.url}}
                 {{ creator.name }}
               {{/creator.url}}
             </strong>
-          </div>
+          </p>
         {{/creator.name}}
       </div>
-      {{#expiry}}
-        <div class="block-message-item">
-          <h6>{{ expiryHeader }}</h6>
-          <div><strong>{{#duration}}{{ duration }}{{/duration}} {{ expiry }}</strong></div>
-        </div>
-      {{/expiry}}
-    </div>
-    <div class="block-message-item block-message-buttons">
+      <div class="block-message-item">
+        <p>
+          {{ expiryHeader }}
+          <strong>{{#duration}}{{ duration }}{{/duration}}</strong>
+        </p>
+      </div>
       {{#blockId}}
-        <a href="{{#createDetailsAnchorHref}}{{ blockId }}{{/createDetailsAnchorHref}}">
-          {{ createDetailsAnchorLabel }}
-        </a>
+        <div class="block-message-item">
+          <a href="{{#createDetailsAnchorHref}}{{ blockId }}{{/createDetailsAnchorHref}}">
+            {{ createDetailsAnchorLabel }}
+          </a>
+        </div>
       {{/blockId}}
     </div>
-  </div>` );
+  </div>
+  {{#reason}}
+    <div class="block-message-item block-message-reason">
+      <h5>{{ reasonHeader }}</h5>
+      <div><p>{{{ reason }}}</p></div>
+    </div>
+  {{/reason}}
+  <div class="block-message-buttons">
+  </div>
+</div>` );
 	}
 }
 

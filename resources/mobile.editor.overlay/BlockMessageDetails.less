@@ -33,6 +33,15 @@
 }
 
 .block-message-buttons {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	padding: 1em;
+	text-align: right;
+	background-color: @colorGray15;
+	box-shadow: 0 -4px 5px -4px @colorGray15;
+
 	a.mw-ui-button,
 	button.cancel {
 		margin: 0 0.5em 0 0;
@@ -50,6 +59,19 @@
 	}
 }
 
+.block-message-reason {
+	clear: both;
+	padding: 1em;
+	text-align: left;
+	background-color: @colorGray14;
+	margin-bottom: 3em;
+}
+
 .block-message-title {
 	color: @color-destructive;
+}
+
+.drawer {
+	padding-left: 0;
+	padding-right: 0;
 }
