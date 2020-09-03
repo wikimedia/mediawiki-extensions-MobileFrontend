@@ -384,11 +384,16 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 	} );
 
 	$( '#ca-edit a' ).prop( 'href', function ( i, href ) {
-		var uri = new mw.Uri( href );
-		// By default the editor opens section 0 (lead section), rather than the whole article.
-		// This might be changed in the future (T210659).
-		uri.query.section = '0';
-		return uri.toString();
+		try {
+			var uri = new mw.Uri( href );
+			// By default the editor opens section 0 (lead section), rather than the whole article.
+			// This might be changed in the future (T210659).
+			uri.query.section = '0';
+			return uri.toString();
+		} catch ( e ) {
+			// T106244 - the href couldn't be parsed likely due to invalid UTF-8
+			return href;
+		}
 	} );
 
 	if ( !router.getPath() && ( mw.util.getParamValue( 'veaction' ) || mw.util.getParamValue( 'action' ) === 'edit' ) ) {
