@@ -55,6 +55,9 @@ OverlayManager.prototype = {
 	 * @private
 	 */
 	_onHideOverlayOutsideOverlayManager: function () {
+		if ( !this.stack.length ) {
+			return;
+		}
 		const currentRoute = this.stack[0].route,
 			routeIsString = typeof currentRoute === 'string',
 			currentPath = this.router.getPath(),
