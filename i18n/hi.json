@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Abijeet Patro",
 			"Adithyavr",
 			"Anamdas",
 			"Angpradesh",
@@ -55,6 +56,7 @@
 	"mobile-frontend-edit-signup-action": "<strong>{{SITENAME}} को अच्छा करने में सहायता करें</strong><br />लिखने हेतु खाता खोलें।",
 	"mobile-frontend-editor-anon": "बिना प्रवेश के संपादित करें",
 	"mobile-frontend-editor-anonwarning": "<strong>सावधान</strong>: आपने सत्रारंभ नहीं किया है। यदि आप सम्पादन करते हैं तो इस पृष्ठ के संपादन इतिहास में आपका आइ॰पी पता अंकित किया जाएगा। यदि आप <strong>लॉगिन</strong> करते हैं अथवा <strong>खाता बनाते हैं</strong> तो अन्य सुविधाओं के साथ-साथ आपके संपादनों का श्रेय आपके सदस्यनाम पर दिया जाएगा।",
+	"mobile-frontend-editor-blocked-drawer-action-ok": "ठीक है",
 	"mobile-frontend-editor-cancel": "रद्द करें",
 	"mobile-frontend-editor-cancel-confirm": "क्या आप सच में अपने संपादन का परित्याग करना चाहते हैं?",
 	"mobile-frontend-editor-captcha-try-again": "गलत कोड, पुन: प्रयास करें।",
