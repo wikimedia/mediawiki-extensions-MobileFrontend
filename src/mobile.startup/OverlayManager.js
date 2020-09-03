@@ -164,9 +164,14 @@ OverlayManager.prototype = {
 			} else {
 				// else create an overlay using the factory function result
 				factoryResult = match.factoryResult;
-				match.overlay = factoryResult;
-				attachHideEvent( match.overlay );
-				self._show( factoryResult );
+				// We were getting errors relating to no factoryResult.
+				// This should never happen.
+				// If it does an error should not be thrown.
+				if ( factoryResult ) {
+					match.overlay = factoryResult;
+					attachHideEvent( match.overlay );
+					self._show( factoryResult );
+				}
 			}
 		}
 	},
