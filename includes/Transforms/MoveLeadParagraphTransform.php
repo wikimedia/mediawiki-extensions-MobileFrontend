@@ -72,10 +72,10 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	/**
 	 * Extract the first infobox in document
 	 * @param DOMXPath $xPath XPath object to execute the query
-	 * @param DOMElement $body Where to search for an infobox
+	 * @param DOMElement $section Where to search for an infobox
 	 * @return DOMElement|null The first infobox
 	 */
-	private function identifyInfoboxElement( DOMXPath $xPath, DOMElement $body ) : ?DOMElement {
+	private function identifyInfoboxElement( DOMXPath $xPath, DOMElement $section ) : ?DOMElement {
 		$paths = [
 			// Infoboxes: *.infobox
 			'.//*[contains(concat(" ",normalize-space(@class)," ")," infobox ")]',
@@ -84,7 +84,7 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 			'.//figure',
 		];
 		$query = '(' . implode( '|', $paths ) . ')';
-		$infobox = $xPath->query( $query, $body )->item( 0 );
+		$infobox = $xPath->query( $query, $section )->item( 0 );
 
 		if ( $infobox instanceof DOMElement ) {
 			// Check if the infobox is inside a container
@@ -111,11 +111,11 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	 * Keep in sync with mobile.init/identifyLeadParagraph.js.
 	 *
 	 * @param DOMXPath $xPath XPath object to execute the query
-	 * @param DOMElement $body Where to search for paragraphs
+	 * @param DOMElement $section Where to search for paragraphs
 	 * @return DOMElement|null The lead paragraph
 	 */
-	private function identifyLeadParagraph( DOMXPath $xPath, DOMElement $body ) : ?DOMElement {
-		$paragraphs = $xPath->query( './p', $body );
+	private function identifyLeadParagraph( DOMXPath $xPath, DOMElement $section ) : ?DOMElement {
+		$paragraphs = $xPath->query( './p', $section );
 
 		$index = 0;
 		while ( $index < $paragraphs->length ) {
@@ -146,16 +146,16 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	 * Note that the first paragraph is not moved before hatnotes, or mbox or other
 	 * elements that are not infoboxes.
 	 *
-	 * @param DOMElement $leadSectionBody
+	 * @param DOMElement $leadSection
 	 * @param DOMDocument $doc Document to which the section belongs
 	 */
-	private function moveFirstParagraphBeforeInfobox( DOMElement $leadSectionBody, DOMDocument $doc ) {
+	private function moveFirstParagraphBeforeInfobox( DOMElement $leadSection, DOMDocument $doc ) {
 		$xPath = new DOMXPath( $doc );
-		$infobox = $this->identifyInfoboxElement( $xPath, $leadSectionBody );
+		$infobox = $this->identifyInfoboxElement( $xPath, $leadSection );
 
 		if ( $infobox ) {
-			$leadParagraph = $this->identifyLeadParagraph( $xPath, $leadSectionBody );
-			$isTopLevelInfobox = $infobox->parentNode->isSameNode( $leadSectionBody );
+			$leadParagraph = $this->identifyLeadParagraph( $xPath, $leadSection );
+			$isTopLevelInfobox = $infobox->parentNode->isSameNode( $leadSection );
 
 			if ( $leadParagraph && $isTopLevelInfobox &&
 				$this->isPreviousSibling( $infobox, $leadParagraph )
@@ -172,14 +172,14 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 					}
 				}
 
-				$leadSectionBody->insertBefore( $leadParagraph, $where );
+				$leadSection->insertBefore( $leadParagraph, $where );
 				if ( $listElementAfterParagraph !== null ) {
-					$leadSectionBody->insertBefore( $listElementAfterParagraph, $where );
+					$leadSection->insertBefore( $listElementAfterParagraph, $where );
 				}
 			} elseif ( !$isTopLevelInfobox ) {
 				$isInWrongPlace = $this->hasNoNonEmptyPrecedingParagraphs( $xPath,
 					/** @phan-suppress-next-line PhanTypeMismatchArgument DOMNode vs. DOMElement */
-					self::findParentWithParent( $infobox, $leadSectionBody )
+					self::findParentWithParent( $infobox, $leadSection )
 				);
 				$loggingEnabled = MediaWikiServices::getInstance()
 					->getService( 'MobileFrontend.Config' )->get( 'MFLogWrappedInfoboxes' );
