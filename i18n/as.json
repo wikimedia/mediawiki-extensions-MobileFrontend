@@ -5,6 +5,7 @@
 			"Dibya Dutta",
 			"Gitartha.bordoloi",
 			"IKHazarika",
+			"Mohsin Ali",
 			"Nilamdyuti"
 		]
 	},
@@ -18,6 +19,8 @@
 	"mobile-frontend-diffview-bytesremoved": "$1 {{PLURAL:$1|বাইট}} বিলোপ কৰা হ’ল",
 	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|সম্পাদনা|টা সম্পাদনা}}",
 	"mobile-frontend-diffview-title": "$1ৰ বিভিন্ন সংশোধনসমূহৰ মাজৰ পাৰ্থক্য",
+	"mobile-frontend-editor-blocked-drawer-action-ok": "বাৰু",
+	"mobile-frontend-editor-blocked-drawer-action-randompage": "মোক অন্য এখন পৃষ্ঠালৈ লৈ যাওক",
 	"mobile-frontend-featured-article": "আজিৰ নিৰ্বাচিত সমল",
 	"mobile-frontend-last-modified-date": "$1 তাৰিখে $2 সময়ত শেষ পৰিৱৰ্তন কৰা হৈছিল",
 	"mobile-frontend-main-menu-settings-heading": "ম’বাইল ছাইট ছেটিং",

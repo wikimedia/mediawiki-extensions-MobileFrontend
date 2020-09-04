@@ -230,8 +230,6 @@
 	"mobile-frontend-user-page-desired-action": "הדף הזה אמור להיות מיוצר ונערך על $1",
 	"mobile-frontend-user-page-create-owner-page-link-label": "ליצור אחד משלך",
 	"mobile-frontend-user-page-create-user-page-link-label": "יצירת דף בשם $1",
-	"mobile.css": "/* הסגנונות הנכתבים כאן ישפיעו על הגולשים באתר למכשירים ניידים בלבד */",
-	"mobile.js": "/* כל הסקריפטים הנכתבים כאן ייטענו עבור הגולשים באתר למכשירים ניידים בלבד */",
 	"nearby": "דפים על נושאים שנמצאים לידך",
 	"tag-mobile_edit": "עריכה ממכשיר נייד",
 	"tag-mobile_edit-description": "העריכה נעשתה ממכשיר נייד (דרך אתר או יישום)",

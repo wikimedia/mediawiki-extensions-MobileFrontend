@@ -4,6 +4,7 @@
 			"Aneeskaka",
 			"Aursani",
 			"BukhariSaeed",
+			"Kaleem Bhatti",
 			"Mehtab ahmed",
 			"Sindhu",
 			"Tweety"
@@ -45,6 +46,7 @@
 	"mobile-frontend-edit-signup-action": "<strong>{{SITENAME}} کي بھتر ڪرڻ ۾ مدد ڪريو.</strong><br /> سنوارڻ لاءِ کاتو کوليو.",
 	"mobile-frontend-editor-anon": "داخل ٿيڻ بغير سنواريو",
 	"mobile-frontend-editor-anonwarning": "<strong>چِتاءُ</strong>: توهان داخل ٿيل نہ آهيو. جيڪڏهن اوهان سنوار ڪئي، تہ اوهانجو آءِپي پتو عوامي طور ظاهر ٿيندو. جيڪڏهن توهان <strong>داخل ٿيو</strong> يا <strong>کاتو کوليو</strong>، تہ ٻين فائدن سان گڏ توهان جو سنوارون توهان جي واپرائيندڙ-نانءَ سان منسوب ڪيون وينديون.",
+	"mobile-frontend-editor-blocked-drawer-action-ok": "ٺيڪ",
 	"mobile-frontend-editor-blocked-drawer-title": "توھان تي {{SITENAME}} کي سنوارڻ تي بندش وڌي وئي آھي",
 	"mobile-frontend-editor-blocked-drawer-title-partial": "توھان کي ھن صفحي کي سنوارڻ تي بندش وڌي وئي آھي",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "بندش جو سبب",
