@@ -97,6 +97,17 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 				}
 				$node = $node->parentNode;
 			}
+			// For images, include any containers.
+			// We don't need to check if the parent is an infobox, because it
+			// would've matched first in the XPath query.
+			if (
+				$infobox->nodeName === 'figure' ||
+				strpos( $infobox->getAttribute( 'class' ), 'thumb' ) !== false
+			) {
+				while ( $infobox->parentNode !== $section ) {
+					$infobox = $infobox->parentNode;
+				}
+			}
 			return $infobox;
 		}
 		return null;
