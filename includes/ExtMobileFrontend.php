@@ -125,7 +125,7 @@ class ExtMobileFrontend {
 		}
 
 		if ( $showFirstParagraphBeforeInfobox ) {
-			$transforms[] = new MoveLeadParagraphTransform( $title, $title->getLatestRevID() );
+			$transforms[] = new MoveLeadParagraphTransform();
 		}
 
 		$formatter->applyTransforms( $transforms );
