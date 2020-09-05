@@ -38,16 +38,16 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	}
 
 	/**
-	 * Helper function to verify that passed $node matched nodename and has set required classname
+	 * Helper function to verify that passed $node matched tagName and has set required classname
 	 * @param DOMElement $node Node to verify
-	 * @param string|bool $requiredNodeName Required tag name, has to be lowercase
+	 * @param string|bool $requiredTagName Required tag name, has to be lowercase
 	 *   if false it is ignored and requiredClass is used.
 	 * @param string $requiredClass Regular expression with required class name
 	 * @return bool
 	 */
-	private static function matchElement( DOMElement $node, $requiredNodeName, $requiredClass ) {
+	private static function matchElement( DOMElement $node, $requiredTagName, $requiredClass ) {
 		$classes = explode( ' ', $node->getAttribute( 'class' ) );
-		return ( $requiredNodeName === false || strtolower( $node->nodeName ) === $requiredNodeName )
+		return ( $requiredTagName === false || strtolower( $node->tagName ) === $requiredTagName )
 			&& !empty( preg_grep( $requiredClass, $classes ) );
 	}
 
