@@ -233,10 +233,18 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 			 && $node->tagName === 'p'
 			 && $this->isNotEmptyNode( $node )
 		) {
+			// Clone the node so we can modifiy it
+			$node = $node->cloneNode( true );
+
 			// we found a non-empty p element but it might be a coordinates wrapper
 			$coords = $xPath->query( './/span[@id="coordinates"]', $node );
-			if ( $coords->length === 0 ) {
+			$templateStyles = $xPath->query( './/style', $node );
+			if ( $coords->length === 0 && $templateStyles->length === 0 ) {
 				return false;
+			}
+			// Remove any template style tags
+			foreach ( $templateStyles as $style ) {
+				$style->parentNode->removeChild( $style );
 			}
 			// getting textContent is a heavy operation, cache it as we might need it later
 			$nodeContent = trim( $node->textContent );
