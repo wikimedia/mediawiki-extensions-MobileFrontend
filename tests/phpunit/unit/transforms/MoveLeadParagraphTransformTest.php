@@ -44,8 +44,8 @@ class MoveLeadParagraphTransformTest extends \MediaWikiUnitTestCase {
 		$infobox = $transform->identifyInfoboxElement( $xPath, $bodyNode );
 
 		$this->assertEquals(
-			$infobox ? $infobox->getNodePath() : null,
 			$expected,
+			$infobox ? $infobox->getNodePath() : null,
 			$msg
 		);
 	}
@@ -107,7 +107,7 @@ class MoveLeadParagraphTransformTest extends \MediaWikiUnitTestCase {
 		$doc = new DOMDocument();
 		$doc->loadHTML( self::wrap( $html ) );
 		$transform->apply( $doc->getElementsByTagName( 'body' )->item( 0 ) );
-		$this->assertEquals( $doc->saveHTML(), self::wrap( $expected ), $reason );
+		$this->assertEquals( self::wrap( $expected ), $doc->saveHTML(), $reason );
 	}
 
 	public function provideTransform() {
