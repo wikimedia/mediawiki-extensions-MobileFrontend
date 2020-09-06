@@ -1,10 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
+			"Maammee",
 			"Tumsaa"
 		]
 	},
 	"mobile-frontend-editor-summary": "Guduunfaa:",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Afaan hundumaa",
-	"mobile-frontend-main-menu": "Baafata Guddaa"
+	"mobile-frontend-main-menu": "Baafata Guddaa",
+	"tag-mobile_edit": "Gulaalli mobaayilaa",
+	"tag-mobile_web_edit": "Gulaalli marsariiti mobaayilaa"
 }

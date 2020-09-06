@@ -60,7 +60,7 @@
 	"mobile-frontend-editor-error-conflict": "Kļūda, cits lietotājs ir labojis šo lapu.",
 	"mobile-frontend-editor-error-loading": "Kļūda, nevar ielādēt redaktoru.",
 	"mobile-frontend-editor-error-preview": "Kļūda, ielādējot priekšskatījumu, notika kas negaidīts. Lūdzu, aizver un mēģini vēlreiz.",
-	"mobile-frontend-editor-keep-editing": "Turpināt labot",
+	"mobile-frontend-editor-keep-editing": "Turpināt labošanu",
 	"mobile-frontend-editor-licensing": "Saglabājot izmaiņas, tu piekrīti publicēt savu devumu saskaņā ar $1 {{PLURAL:$2|licencēm|licenci|licencēm}}.",
 	"mobile-frontend-editor-licensing-with-terms": "Saglabājot izmaiņas, tu piekrīti $1 un piekrīti publicēt savu devumu saskaņā ar $2 {{PLURAL:$3|licencēm|licenci|licencēm}}.",
 	"mobile-frontend-editor-terms-link": "[$1 Lietošanas noteikumi]",
