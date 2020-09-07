@@ -51,9 +51,6 @@ function transformSections( sections ) {
 	// if the first section level is not equal to collapseLevel, this first
 	// section will not have a parent and will be appended to the result.
 	sections.forEach( function ( section ) {
-		if ( section.line !== undefined ) {
-			section.line = section.line.replace( /<\/?a\b[^>]*>/g, '' );
-		}
 		section.subsections = [];
 
 		if (
