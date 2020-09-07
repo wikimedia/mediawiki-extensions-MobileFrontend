@@ -126,24 +126,12 @@ class MobileFormatter extends HtmlFormatter {
 	 * @param bool $removeImages Whether to move images into noscript tags
 	 * @param bool $showFirstParagraphBeforeInfobox Whether the first paragraph from the lead
 	 *  section should be shown before all infoboxes that come earlier.
-	 * @return array
 	 */
-	public function filterContent(
+	public function applyTransforms(
 		$removeImages = false,
 		$showFirstParagraphBeforeInfobox = false
 	) {
 		$doc = $this->getDoc();
-
-		$mfRemovableClasses = $this->config->get( 'MFRemovableClasses' );
-		$removableClasses = $mfRemovableClasses['base'];
-		if ( $this->context->isBetaGroupMember() ) {
-			$removableClasses = array_merge( $removableClasses, $mfRemovableClasses['beta'] );
-		}
-
-		// Don't remove elements in special pages
-		if ( !$this->title->isSpecialPage() ) {
-			$this->remove( $removableClasses );
-		}
 		$body = $doc->getElementsByTagName( 'body' )->item( 0 );
 		if ( $this->removeMedia ) {
 			$removeImagesTransform = new RemoveImagesTransform();
@@ -152,7 +140,7 @@ class MobileFormatter extends HtmlFormatter {
 		}
 
 		// Apply all removals before continuing with transforms (see T185040 for example)
-		$removed = parent::filterContent();
+		$this->filterContent();
 		// Sectionify the content and transform it if necessary per section
 		if ( $this->expandableSections ) {
 			$subHeadingTransform = new SubHeadingTransform( $this->topHeadingTags );
@@ -170,7 +158,29 @@ class MobileFormatter extends HtmlFormatter {
 			/** @phan-suppress-next-line PhanTypeMismatchArgument DOMNode vs. DOMElement */
 			$makeSectionsTransform->apply( $body );
 		}
-		return $removed;
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	protected function parseItemsToRemove() {
+		$removals = parent::parseItemsToRemove();
+
+		if ( !$this->title->isSpecialPage() ) {
+			$mfRemovableClasses = $this->config->get( 'MFRemovableClasses' );
+			$removableClasses = $mfRemovableClasses['base'];
+			if ( $this->context->isBetaGroupMember() ) {
+				$removableClasses = array_merge( $removableClasses, $mfRemovableClasses['beta'] );
+			}
+
+			foreach ( $removableClasses as $itemToRemove ) {
+				if ( $this->parseSelector( $itemToRemove, $type, $rawName ) ) {
+					$removals[$type][] = $rawName;
+				}
+			}
+		}
+
+		return $removals;
 	}
 
 	/**
