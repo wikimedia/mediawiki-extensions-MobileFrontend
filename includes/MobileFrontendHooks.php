@@ -47,20 +47,45 @@ class MobileFrontendHooks {
 	/**
 	 * Obtain the default mobile skin
 	 *
-	 * @param IContextSource $context ContextSource interface
 	 * @param Config $config
-	 * @throws RuntimeException if MFDefaultSkinClass is incorrectly configured
+	 * @throws RuntimeException if default mobile skin is incorrectly configured
 	 * @return Skin
 	 */
-	protected static function getDefaultMobileSkin( IContextSource $context, Config $config ) {
-		$skinName = $config->get( 'MFDefaultSkinClass' );
+	protected static function getDefaultMobileSkin( Config $config ) {
+		$skinClass = $config->has( 'MFDefaultSkinClass' )
+			? $config->get( 'MFDefaultSkinClass' )
+			: null;
 
-		if ( class_exists( $skinName ) ) {
-			$skin = new $skinName( $context );
+		$skinName = $config->get( 'DefaultMobileSkin' );
+		$knownSkinKeys = [
+			'SkinVector' => 'vector',
+			'SkinMinerva' => 'minerva',
+			'SkinTimeless' => 'timeless',
+			'SkinMonoBook' => 'monobook',
+		];
+
+		if ( class_exists( $skinClass ) ) {
+			// For a best attempt at backward compatibility check the array of known skins
+			$defaultSkin = $knownSkinKeys[$skinClass] ?? null;
+			$message = 'Use of $wgMFDefaultSkinClass has been deprecated, ' .
+				'please use $wgDefaultMobileSkin and provide the skin name. ';
+			if ( $defaultSkin ) {
+				$message .= 'You can replace it  with $wgDefaultMobileSkin = ' .
+					"'$defaultSkin';";
+			} else {
+				$defaultSkin = 'minerva';
+			}
+			// Now warn so the user fixes this.
+			wfWarn( $message );
+		} elseif ( $skinName ) {
+			$defaultSkin = $skinName;
 		} else {
-			$skin = MediaWikiServices::getInstance()->getSkinFactory()
-				->makeSkin( Skin::normalizeKey( $config->get( 'DefaultSkin' ) ) );
+			$defaultSkin = $config->get( 'DefaultSkin' );
 		}
+
+		$factory = MediaWikiServices::getInstance()->getSkinFactory();
+		$skin = $factory->makeSkin( Skin::normalizeKey( $defaultSkin ) );
+
 		return $skin;
 	}
 
@@ -123,7 +148,7 @@ class MobileFrontendHooks {
 		if ( $userSkin && Skin::normalizeKey( $userSkin ) === $userSkin ) {
 			$skin = $services->getSkinFactory()->makeSkin( $userSkin );
 		} else {
-			$skin = self::getDefaultMobileSkin( $context, $config );
+			$skin = self::getDefaultMobileSkin( $config );
 		}
 
 		$hookContainer = $services->getHookContainer();

@@ -509,12 +509,12 @@ Link to feedback page for beta features. If false no feedback link will be shown
 * Type: `String|false`
 * Default: `false`
 
-#### $wgMFDefaultSkinClass
+#### $wgDefaultMobileSkin
 
 The default skin for MobileFrontend.
 
 * Type: `String`
-* Default: `'SkinMinerva'`
+* Default: `'minerva'`
 
 #### $wgMFNamespacesWithoutCollapsibleSections
 
