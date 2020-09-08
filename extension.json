@@ -934,8 +934,8 @@
 		"MFBetaFeedbackLink": {
 			"value": false
 		},
-		"MFDefaultSkinClass": {
-			"value": "SkinMinerva"
+		"DefaultMobileSkin": {
+			"value": "minerva"
 		},
 		"MFNamespacesWithoutCollapsibleSections": {
 			"value": [
