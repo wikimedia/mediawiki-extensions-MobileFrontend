@@ -167,13 +167,18 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	 */
 	protected function displayDiffPage() {
 		$unhide = $this->getRequest()->getBool( 'unhide' );
-		$context = $this->getContext();
 		$contentHandler = MediaWikiServices::getInstance()
 			->getContentHandlerFactory()
 			->getContentHandler(
 				$this->rev->getSlot( SlotRecord::MAIN, RevisionRecord::RAW )->getModel()
 			);
-		$engine = $contentHandler->createDifferenceEngine( $this->getContext(),
+
+		// T245172
+		// There should be a better way to tell the DifferenceEngine which Title to use.
+		$correctTitleContext = new DerivativeContext( $this->getContext() );
+		$correctTitleContext->setTitle( $this->targetTitle );
+
+		$engine = $contentHandler->createDifferenceEngine( $correctTitleContext,
 			$this->getPrevId(), $this->revId, 0, false, $unhide );
 
 		$this->showHeader( $unhide );

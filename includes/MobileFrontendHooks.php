@@ -333,7 +333,7 @@ class MobileFrontendHooks {
 
 		// Only do redirects to MobileDiff if user is in mobile view and it's not a special page
 		if ( $context->shouldDisplayMobileView() &&
-			!$diff->getContext()->getTitle()->isSpecialPage() &&
+			!$context->getTitle()->isSpecialPage() &&
 			self::shouldMobileFormatSpecialPages( $context->getUser() )
 		) {
 			$output = $context->getOutput();
