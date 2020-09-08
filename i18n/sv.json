@@ -59,6 +59,7 @@
 	"mobile-frontend-editor-anonwarning": "<strong>Varning:</strong> Du är inte inloggad. Din IP-adress kommer synas offentligt om du gör redigeringar. Om du <strong>loggar in</strong> eller <strong>skapar ett konto</strong>, kommer dina redigeringar att tillskrivas ditt användarnamn, tillsammans med andra fördelar.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Logga in",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "OK",
+	"mobile-frontend-editor-blocked-drawer-action-randompage": "Ta mig till en annan sida",
 	"mobile-frontend-editor-blocked-drawer-title": "Du har blockerats från att redigera {{SITENAME}}.",
 	"mobile-frontend-editor-blocked-drawer-title-partial": "Du har blockerats från att redigera den här sidan. Försök redigera en annan sida.",
 	"mobile-frontend-editor-blocked-drawer-title-ip": "Din IP-adress har blockerats från att redigera på {{SITENAME}}.",
