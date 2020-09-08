@@ -1,4 +1,5 @@
-var Drawer = require( '../mobile.startup/Drawer' ),
+var
+	Drawer = require( '../mobile.startup/Drawer' ),
 	BlockMessageDetails = require( './BlockMessageDetails' );
 
 /**
@@ -22,13 +23,35 @@ var Drawer = require( '../mobile.startup/Drawer' ),
  * @return {Drawer}
  */
 module.exports = function blockMessageDrawer( props ) {
-	return new Drawer( {
+	const blockDrawer = new Drawer( {
 		className: 'drawer block-message',
 		onBeforeHide: function ( drawer ) {
 			drawer.$el.remove();
+		},
+		onShow: function () {
+			const $drawer = blockDrawer.$el.find( '.drawer.block-message' ),
+				drawerTop = $drawer.offset().top - 100,
+				creatorTop = blockDrawer.$el.find( '.block-message-creator' ).offset().top - 100,
+				buttonsTop = blockDrawer.$el.find( '.block-message-buttons' ).offset().top - 100,
+				$seeMore = blockDrawer.$el.find( '.block-message-see-more' );
+			$drawer.css( 'top', drawerTop + ( buttonsTop - creatorTop ) );
+			$seeMore.on(
+				'click',
+				function () {
+					const $container = blockDrawer.$el.find( '.block-message-container' );
+					$drawer.css( 'top', '' );
+					if ( $drawer.offset().top < 0 ) {
+						$drawer.css( 'top', 0 );
+						$container.css( 'overflow-y', 'auto' );
+						$container.css( 'height', buttonsTop - $container.offset().top );
+					}
+					$seeMore.hide();
+				}
+			);
 		},
 		children: [
 			( new BlockMessageDetails( props ) ).$el
 		]
 	} );
+	return blockDrawer;
 };
