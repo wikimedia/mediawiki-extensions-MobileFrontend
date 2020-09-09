@@ -51,6 +51,8 @@
 	"mobile-frontend-edit-signup-action": "<strong>Помозите у побољшавању {{GRAMMAR:датив|{{SITENAME}}}}.</strong><br />Региструјте се да бисте уређивали.",
 	"mobile-frontend-editor-anon": "Уреди без пријаве",
 	"mobile-frontend-editor-anonwarning": "<strong>Упозорење:</strong> Нисте пријављени. Ваша IP адреса биће јавно видљива ако уредите или направите неку страницу. <strong>Пријавите се</strong> или <strong>отворите налог</strong>. Тиме ће ваши доприноси бити приписивани корисничком имену које одаберете и стећи ћете многе погодности.",
+	"mobile-frontend-editor-blocked-drawer-action-login": "Пријави ме",
+	"mobile-frontend-editor-blocked-drawer-action-ok": "У реду",
 	"mobile-frontend-editor-blocked-drawer-title": "Блокирано Вам је уређивање пројекта {{SITENAME}}.",
 	"mobile-frontend-editor-blocked-drawer-title-partial": "Блокирано вам је уређивање ове странице. Покушајте да уређујете неку другу.",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Разлог блокаде",

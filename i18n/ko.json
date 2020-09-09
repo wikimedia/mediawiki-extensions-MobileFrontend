@@ -74,7 +74,6 @@
 	"mobile-frontend-editor-blocked-drawer-title": "{{SITENAME}}에서의 편집이 차단되었습니다",
 	"mobile-frontend-editor-blocked-drawer-title-partial": "당신은 이 문서의 편집에서 차단되어 있습니다. 다른 문서를 편집해 보십시오.",
 	"mobile-frontend-editor-blocked-drawer-title-ip-partial": "당신의 IP 주소가 이 문서의 편집에서 차단되어 있습니다. 다른 문서를 편집해 보십시오.",
-	"mobile-frontend-editor-blocked-drawer-title-ip-login-partial": "당신의 IP 주소가 이 문서의 편집에서 차단되어 있습니다. 계정이 있으시면 로그인해 보시고, 그렇지 않으면 다른 문서를 편집해 보십시오.",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "차단 이유:",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|차단자}}:",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "차단 기한:",

@@ -81,7 +81,6 @@
 	"mobile-frontend-editor-blocked-drawer-action-ok": "Aceptar",
 	"mobile-frontend-editor-blocked-drawer-title": "Te han bloqueado para impedir que edites {{SITENAME}}.",
 	"mobile-frontend-editor-blocked-drawer-title-partial": "Estás bloqueado y no puedes editar esta página",
-	"mobile-frontend-editor-blocked-drawer-title-ip-login": "Tu dirección IP se encuentra bloqueada en {{SITENAME}}. Prueba a iniciar sesión si tienes una cuenta de usuario.",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Motivo del bloqueo",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Bloqueado|Bloqueada}} por",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "El bloqueo caducará el",

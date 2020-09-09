@@ -67,7 +67,6 @@
 	"mobile-frontend-editor-blocked-drawer-title": "Você foi bloqueado para edição na wiki {{SITENAME}}",
 	"mobile-frontend-editor-blocked-drawer-title-partial": "Foi-lhe bloqueada a capacidade de editar esta página",
 	"mobile-frontend-editor-blocked-drawer-title-ip": "O seu endereço IP foi bloqueado para impedir a edição da wiki {{SITENAME}}.",
-	"mobile-frontend-editor-blocked-drawer-title-ip-login-createaccount-partial": "O seu endereço IP foi bloqueado para impedir a edição desta página. Tente entrar ou criar uma conta, ou tente editar outra página.",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Motivo do bloqueio",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Bloqueado|Bloqueada}} por",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "O bloqueio expira em",
