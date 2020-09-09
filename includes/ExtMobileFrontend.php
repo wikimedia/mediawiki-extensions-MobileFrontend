@@ -100,7 +100,7 @@ class ExtMobileFrontend {
 				$featureManager->isFeatureAvailableForCurrentUser( 'MFShowFirstParagraphBeforeInfobox' );
 
 			// Remove images if they're disabled from special pages, but don't transform otherwise
-			$formatter->filterContent( $removeImages, $showFirstParagraphBeforeInfobox );
+			$formatter->applyTransforms( $removeImages, $showFirstParagraphBeforeInfobox );
 		}
 
 		return $formatter->getText();

@@ -53,7 +53,7 @@ class ApiParseExtender {
 				$mf->disableScripts();
 				// HACK: need a nice way to request a TOC-free HTML in the first place
 				$mf->remove( [ '.toc', '.mw-headline-anchor' ] );
-				$mf->filterContent();
+				$mf->applyTransforms();
 				$result->addValue( [ 'parse' ], 'text', $mf->getText(),
 					ApiResult::OVERRIDE | ApiResult::NO_SIZE_CHECK );
 			}

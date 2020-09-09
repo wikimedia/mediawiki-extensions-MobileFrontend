@@ -73,7 +73,8 @@ class MobileFormatterTest extends MediaWikiTestCase {
 	 * @param bool $unused (previously was lazy loaded references)
 	 * @param bool $lazyLoadImages
 	 * @param bool $showFirstParagraphBeforeInfobox
-	 * @covers MobileFormatter::filterContent
+	 * @covers MobileFormatter::applyTransforms
+	 * @covers MobileFormatter::parseItemsToRemove
 	 * @dataProvider provideHtmlTransform
 	 */
 	public function testHtmlTransform( $input, $expected, $callback = false,
@@ -92,7 +93,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			$callback( $mf );
 		}
 		$mf->topHeadingTags = [ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' ];
-		$mf->filterContent( $lazyLoadImages,
+		$mf->applyTransforms( $lazyLoadImages,
 			$showFirstParagraphBeforeInfobox );
 
 		$html = $mf->getText();
@@ -101,7 +102,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 
 	/**
 	 * @covers MobileFormatter::enableExpandableSections
-	 * @covers MobileFormatter::filterContent
+	 * @covers MobileFormatter::applyTransforms
 	 */
 	public function testHtmlTransformWhenSkippingLazyLoadingSmallImages() {
 		$smallPic = '<img src="smallPicture.jpg" style="width: 4.4ex; height:3.34ex;">';
@@ -604,7 +605,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 
 	/**
 	 * @covers MobileFormatter::enableExpandableSections
-	 * @covers MobileFormatter::filterContent
+	 * @covers MobileFormatter::applyTransforms
 	 * @dataProvider provideHeadingTransform
 	 */
 	public function testHeadingTransform( array $topHeadingTags, $input, $expectedOutput ) {
@@ -616,7 +617,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 		$formatter->enableExpandableSections( true );
 
 		$formatter->topHeadingTags = $topHeadingTags;
-		$formatter->filterContent();
+		$formatter->applyTransforms();
 
 		$this->assertEquals( $expectedOutput, $formatter->getText() );
 	}
@@ -698,14 +699,15 @@ class MobileFormatterTest extends MediaWikiTestCase {
 
 	/**
 	 * @see https://phabricator.wikimedia.org/T137375
-	 * @covers MobileFormatter::filterContent
+	 * @covers MobileFormatter::applyTransforms
+	 * @covers MobileFormatter::parseItemsToRemove
 	 */
 	public function testT137375() {
 		$input = '<p>Hello, world!</p><h2>Section heading</h2><ol class="references"></ol>';
 		$formatter = new MobileFormatter(
 			$input, Title::newFromText( 'Special:Foo' ), $this->mfConfig, $this->mfContext
 		);
-		$formatter->filterContent( false );
+		$formatter->applyTransforms( false );
 		// Success is not crashing when the input is not a DOMElement.
 		$this->assertTrue( true );
 	}
@@ -713,7 +715,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 	/**
 	 * @see https://phabricator.wikimedia.org/T149884
 	 * @param string $input
-	 * @covers MobileFormatter::filterContent
+	 * @covers MobileFormatter::applyTransforms
 	 * @dataProvider provideLoggingOfInfoboxesBeingWrappedInContainersWhenWrapped
 	 */
 	public function testLoggingOfInfoboxesBeingWrappedInContainersWhenWrapped( $input ) {
@@ -740,7 +742,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			} ) );
 
 		$this->setLogger( 'mobile', $loggerMock );
-		$formatter->filterContent( false, true );
+		$formatter->applyTransforms( false, true );
 	}
 
 	public function provideLoggingOfInfoboxesBeingWrappedInContainersWhenWrapped() {
@@ -757,7 +759,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 
 	/**
 	 * @see https://phabricator.wikimedia.org/T149884
-	 * @covers MobileFormatter::filterContent
+	 * @covers MobileFormatter::applyTransforms
 	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::logInfoboxesWrappedInContainers
 	 * @dataProvider provideLoggingOfInfoboxesBeingWrappedInContainersWhenNotWrapped
 	 */
@@ -780,7 +782,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			->method( 'info' );
 
 		$this->setLogger( 'mobile', $loggerMock );
-		$formatter->filterContent( false, true );
+		$formatter->applyTransforms( false, true );
 	}
 
 	public function provideLoggingOfInfoboxesBeingWrappedInContainersWhenNotWrapped() {
@@ -799,7 +801,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 
 	/**
 	 * @see https://phabricator.wikimedia.org/T163805
-	 * @covers MobileFormatter::filterContent
+	 * @covers MobileFormatter::applyTransforms
 	 */
 	public function testLoggingOfInfoboxesSkipsInfoBoxInsideInfobox() {
 		$this->setMwGlobals( [
@@ -823,7 +825,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			->method( 'info' );
 
 		$this->setLogger( 'mobile', $loggerMock );
-		$formatter->filterContent( false, true );
+		$formatter->applyTransforms( false, true );
 	}
 
 	/**
