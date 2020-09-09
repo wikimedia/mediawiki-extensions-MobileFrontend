@@ -166,12 +166,14 @@ class BlockMessageDetails extends View {
           </p>
         {{/creator.name}}
       </div>
-      <div class="block-message-item">
-        <p>
-          {{ expiryHeader }}
-          <strong>{{#duration}}{{ duration }}{{/duration}}</strong>
-        </p>
-      </div>
+      {{#duration}}
+        <div class="block-message-item">
+          <p>
+            {{ expiryHeader }}
+            <strong>{{ duration }}</strong>
+          </p>
+        </div>
+      {{/duration}}
       {{#blockId}}
         <div class="block-message-item">
           <a href="{{#createDetailsAnchorHref}}{{ blockId }}{{/createDetailsAnchorHref}}">
