@@ -1,3 +1,5 @@
+var util = require( '../mobile.startup/util' );
+
 /**
  * @param {string} blockinfo
  * @return {Object}
@@ -61,8 +63,19 @@ module.exports = function parseBlockInfo( blockinfo ) {
 	reason = blockinfo.blockreason;
 	if ( reason ) {
 		blockInfo.reason = jqueryMsgParse( reason ) || mw.html.escape( reason );
+		blockInfo.parsedReason = ( new mw.Api() ).get( {
+			action: 'parse',
+			formatversion: 2,
+			text: reason,
+			contentmodel: 'wikitext'
+		} ).then( function ( result ) {
+			return result.parse.text;
+		} ).catch( function () {
+			return jqueryMsgParse( reason ) || mw.html.escape( reason );
+		} );
 	} else {
 		blockInfo.reason = mw.message( 'mobile-frontend-editor-generic-block-reason' ).escaped();
+		blockInfo.parsedReason = util.Deferred().resolve( blockInfo.reason ).promise();
 	}
 
 	return blockInfo;
