@@ -7,6 +7,7 @@
 			"Nasir8891",
 			"Tauhid16",
 			"Titodutta",
+			"ZI Jony",
 			"Zaheen",
 			"আফতাবুজ্জামান"
 		]
@@ -50,9 +51,9 @@
 	"mobile-frontend-editor-blocked-drawer-action-ok": "ঠিক আছে",
 	"mobile-frontend-editor-blocked-drawer-action-randompage": "আমাকে অন্য একটি পৃষ্ঠায় নিয়ে চলুন",
 	"mobile-frontend-editor-blocked-drawer-title": "আপনাকে {{SITENAME}}-এ সম্পাদনা করা থেকে বাধা প্রদান করা হয়েছে।",
-	"mobile-frontend-editor-blocked-drawer-title-partial": "আপনাকে এই পাতাটি সম্পাদনা করা থেকে বাধা প্রদান করা হয়েছে। অন্য পাতা সম্পাদনা করার চেষ্টা করুন।",
+	"mobile-frontend-editor-blocked-drawer-title-partial": "আপনাকে এই পাতাটি সম্পাদনা করা থেকে বাধা প্রদান করা হয়েছে।",
 	"mobile-frontend-editor-blocked-drawer-title-ip": "আপনার আইপি ঠিকানাটিকে {{SITENAME}}-এ সম্পাদনা করা থেকে বাধা প্রদান করা হয়েছে।",
-	"mobile-frontend-editor-blocked-drawer-title-ip-partial": "আপনার আইপি ঠিকানাটিকে এই পাতাটি সম্পাদনা করা থেকে বাধা প্রদান করা হয়েছে। অন্য পাতা সম্পাদনা করার চেষ্টা করুন।",
+	"mobile-frontend-editor-blocked-drawer-title-ip-partial": "আপনার আইপি ঠিকানাটিকে এই পাতাটি সম্পাদনা করা থেকে বাধা প্রদান করা হয়েছে।",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "বাধা প্রদানের কারণ",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|বাধা}} প্রদান করেছেন",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "বাধা শেষ হবে",

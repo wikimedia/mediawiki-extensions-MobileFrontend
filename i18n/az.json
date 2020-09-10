@@ -7,10 +7,14 @@
 			"PPerviz",
 			"Toghrul Rahimli",
 			"Vugar 1981",
-			"Wertuose"
+			"Wertuose",
+			"Şeyx Şamil"
 		]
 	},
+	"mobile-frontend-account-create-captcha-placeholder": "Təsdiq kodu daxil et",
 	"mobile-frontend-categories-heading": "<strong>Kateqoriyalar</strong>",
+	"mobile-frontend-categories-add": "Kateqoriya əlavə et",
+	"mobile-frontend-categories-search": "Kateqoriyaları axtar",
 	"mobile-frontend-categories-normal": "Məzmun əsaslı",
 	"mobile-frontend-categories-hidden": "Gizli",
 	"mobile-frontend-changeslist-nocomment": "Nəzərə çarpan dəyişiklik yoxdur.",
@@ -32,6 +36,7 @@
 	"mobile-frontend-editor-placeholder": "Bu bölmə boşdur. Onu ilk genişləndirən siz olun!",
 	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|Siz}} yeni {{SITENAME}} səhifəsi yaradırsınız!",
 	"mobile-frontend-editor-previewing-page": "<span><strong>Sınaq göstərişi:</strong> $1</span>",
+	"mobile-frontend-editor-publish": "Yayımla",
 	"mobile-frontend-editor-save": "Yadda saxla",
 	"mobile-frontend-editor-success": "Dəyişikliyiniz uğurla yayımlandı!",
 	"mobile-frontend-editor-summary-placeholder": "Nümunə: Yazı xətası düzəldildi, məzmun əlavə olundu",
@@ -56,6 +61,7 @@
 	"mobile-frontend-languages-header": "Dillər",
 	"mobile-frontend-languages-header-page": "$1 - Dillər",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Təklif edilən dillər",
+	"mobile-frontend-languages-structured-overlay-all-languages-header": "Digər dillər",
 	"mobile-frontend-last-modified-date": "Sonuncu redaktə $1, $2 tarixində edilib",
 	"mobile-frontend-last-modified-with-user-days": "[$4 Sonuncu {{GENDER:$1|redaktə}} {{PLURAL:$3|$3 gün|$3 gün}} əvvəl] {{PLURAL:$5|[$6 $2]|0=anonim istifadəçi}} tərəfindən edilib",
 	"mobile-frontend-last-modified-with-user-hours": "[$4 Sonuncu {{GENDER:$1|redaktə}} {{PLURAL:$3|$3 saat|$3 saat}} əvvəl] {{PLURAL:$5|[$6 $2]|0=anonim istifadəçi}} tərəfindən edilib",

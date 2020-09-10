@@ -3,9 +3,14 @@
 		"authors": [
 			"Anass Sedrati",
 			"Reda Benkhadra",
-			"SADIQUI"
+			"SADIQUI",
+			"Tifratin"
 		]
 	},
+	"mobile-frontend-editor-blocked-drawer-body-partial": "حاول تبدّل شي صفحة خرا",
+	"mobile-frontend-editor-blocked-drawer-body-link": "شوف كتر",
+	"mobile-frontend-editor-blocked-drawer-reason-header": "علاش:",
+	"mobile-frontend-editor-blocked-drawer-help": "ورًي التفاصيل",
 	"mobile-frontend-featured-article": "لمقال لمختار د ليوما",
 	"mobile-frontend-language-heading": "<strong>لوغات</strong>",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "قلّب على لوغة",
