@@ -115,6 +115,8 @@ class MoveLeadParagraphTransformTest extends \MediaWikiUnitTestCase {
 		$hatnote = '<div role="note" class="hatnote navigation-not-searchable">hatnote.</div>';
 		$infobox = '<table class="infobox">1</table>';
 		$coordinates = '<span id="coordinates"><span>0;0</span></span>';
+		$templateStyles = '<style data-mw-deduplicate="TemplateStyles:r123">CSS</style>';
+		$wrappedTemplateStyles = "<p>$templateStyles</p>";
 		$wrappedCoordsWithTrailingWhitespace = '<p><span><span id="coordinates">not empty</span>'
 		  . '</span>    </p>';
 		$anotherInfobox = '<table class="infobox">2</table>';
@@ -138,6 +140,11 @@ class MoveLeadParagraphTransformTest extends \MediaWikiUnitTestCase {
 				"$hatnote$hatnote$emptypelt $wrappedCoordsWithTrailingWhitespace$infobox<p>one</p>",
 				"$hatnote$hatnote$emptypelt $wrappedCoordsWithTrailingWhitespace<p>one</p>$infobox",
 				'coordinates can be wrapped (T242447)'
+			],
+			[
+				"$wrappedTemplateStyles$infobox<p>one</p>",
+				"$wrappedTemplateStyles<p>one</p>$infobox",
+				'template styles'
 			],
 			[
 				"$divinfobox<p>one</p>",
