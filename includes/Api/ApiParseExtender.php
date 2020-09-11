@@ -22,7 +22,6 @@ class ApiParseExtender {
 	public static function onAPIGetAllowedParams( ApiBase $module, &$params ) {
 		if ( $module->getModuleName() == 'parse' ) {
 			$params['mobileformat'] = false;
-			$params['noimages'] = false;
 			$params['mainpage'] = false;
 		}
 	}
@@ -48,7 +47,6 @@ class ApiParseExtender {
 				$mf = new MobileFormatter(
 					MobileFormatter::wrapHTML( $text ), $title, $config, $context
 				);
-				$mf->setRemoveMedia( $params['noimages'] );
 				$mf->enableExpandableSections( true );
 				$mf->disableScripts();
 				// HACK: need a nice way to request a TOC-free HTML in the first place

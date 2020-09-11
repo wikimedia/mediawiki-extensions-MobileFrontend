@@ -3,7 +3,6 @@
 use HtmlFormatter\HtmlFormatter;
 use MobileFrontend\ContentProviders\IContentProvider;
 use MobileFrontend\Transforms\MakeSectionsTransform;
-use MobileFrontend\Transforms\RemoveImagesTransform;
 use MobileFrontend\Transforms\SubHeadingTransform;
 
 /**
@@ -133,12 +132,6 @@ class MobileFormatter extends HtmlFormatter {
 	) {
 		$doc = $this->getDoc();
 		$body = $doc->getElementsByTagName( 'body' )->item( 0 );
-		if ( $this->removeMedia ) {
-			$removeImagesTransform = new RemoveImagesTransform();
-			/** @phan-suppress-next-line PhanTypeMismatchArgument DOMNode vs. DOMElement */
-			$removeImagesTransform->apply( $body );
-		}
-
 		// Apply all removals before continuing with transforms (see T185040 for example)
 		$this->filterContent();
 		// Sectionify the content and transform it if necessary per section
@@ -152,7 +145,7 @@ class MobileFormatter extends HtmlFormatter {
 				$this->title,
 				$this->revId,
 				$this->scriptsEnabled,
-				!$this->removeMedia && $removeImages,
+				$removeImages,
 				$this->config->get( 'MFLazyLoadSkipSmallImages' )
 			);
 			/** @phan-suppress-next-line PhanTypeMismatchArgument DOMNode vs. DOMElement */
