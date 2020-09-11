@@ -128,9 +128,6 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			$mf->enableExpandableSections();
 		};
 		$longLine = "\n" . str_repeat( 'A', 5000 );
-		$removeImages = function ( MobileFormatter $f ) {
-			$f->setRemoveMedia();
-		};
 		$originalImage = '<img alt="foo" src="foo.jpg" width="100" '
 			. 'height="100" srcset="foo-1.5x.jpg 1.5x, foo-2x.jpg 2x">';
 		$placeholder = '<span class="lazy-image-placeholder" '
@@ -203,39 +200,6 @@ class MobileFormatterTest extends MediaWikiTestCase {
 					. $this->makeSectionHtml( 2, $noscript . $placeholder ),
 				$enableSections,
 				true,
-			],
-
-			// # Removal of images
-			[
-				'<img src="/foo/bar.jpg" alt="Blah"/>',
-				'<span class="mw-mf-image-replacement">[Blah]</span>',
-				$removeImages,
-			],
-			[
-				'<img alt="picture of kitty" src="kitty.jpg">',
-				'<span class="mw-mf-image-replacement">' .
-				'[picture of kitty]</span>',
-				$removeImages,
-			],
-			[
-				'<img src="kitty.jpg">',
-				'<span class="mw-mf-image-replacement">[' .
-					wfMessage( 'mobile-frontend-missing-image' ) . ']</span>',
-				$removeImages,
-			],
-			[
-				'<img alt src="kitty.jpg">',
-				'<span class="mw-mf-image-replacement">[' .
-					wfMessage( 'mobile-frontend-missing-image' ) . ']</span>',
-				$removeImages,
-			],
-			[
-				'<img alt src="kitty.jpg">look at the cute kitty!' .
-					'<img alt="picture of angry dog" src="dog.jpg">',
-				'<span class="mw-mf-image-replacement">[' .
-					wfMessage( 'mobile-frontend-missing-image' ) . ']</span>look at the cute kitty!' .
-					'<span class="mw-mf-image-replacement">[picture of angry dog]</span>',
-				$removeImages,
 			],
 
 			// # Section wrapping

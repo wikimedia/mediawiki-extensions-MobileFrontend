@@ -156,7 +156,7 @@ class ApiMobileView extends ApiBase {
 				'ns' => $namespace,
 			] );
 		}
-		$data = $this->getData( $title, $params['noimages'], $params['revision'] );
+		$data = $this->getData( $title, $params['revision'] );
 		$plainData = [ 'lastmodified', 'lastmodifiedby', 'revision',
 			'languagecount', 'hasvariants', 'displaytitle', 'id', 'contentmodel' ];
 		foreach ( $plainData as $name ) {
@@ -583,12 +583,11 @@ class ApiMobileView extends ApiBase {
 	/**
 	 * Get data of requested article.
 	 * @param Title $title
-	 * @param bool $noImages
 	 * @param null|int $oldid Revision ID to get the text from, passing null or 0 will
 	 *   get the current revision (default value)
 	 * @return array
 	 */
-	private function getData( Title $title, $noImages, $oldid = null ) {
+	private function getData( Title $title, $oldid = null ) {
 		$result = $this->getResult();
 		$wikiPage = $this->makeWikiPage( $title );
 		if ( $this->followRedirects && $wikiPage->isRedirect() ) {
@@ -623,7 +622,6 @@ class ApiMobileView extends ApiBase {
 			$parserOptions = null;
 			$key = $cache->makeKey(
 				'mf-mobileview',
-				(int)$noImages,
 				$touched,
 				(int)$this->noTransform,
 				$this->file->getSha1(),
@@ -638,7 +636,6 @@ class ApiMobileView extends ApiBase {
 			$parserOptions = $this->makeParserOptions( $wikiPage );
 			$key = $cache->makeKey(
 				'mf-mobileview',
-				(int)$noImages,
 				$touched,
 				$revId,
 				(int)$this->noTransform,
@@ -651,7 +648,7 @@ class ApiMobileView extends ApiBase {
 			$key,
 			$cache::TTL_HOUR,
 			function ( $oldValue, &$ttl ) use (
-				$title, $revId, $noImages, $wikiPage, $parserOptions, $latest, &$miss
+				$title, $revId, $wikiPage, $parserOptions, $latest, &$miss
 			) {
 				$miss = true;
 
@@ -677,7 +674,6 @@ class ApiMobileView extends ApiBase {
 					$mf = new MobileFormatter(
 						MobileFormatter::wrapHTML( $html ), $title, $config, $context
 					);
-					$mf->setRemoveMedia( $noImages );
 					$mf->applyTransforms();
 					$html = $mf->getText();
 				}
@@ -960,7 +956,6 @@ class ApiMobileView extends ApiBase {
 				ApiBase::PARAM_TYPE => 'string',
 				ParamValidator::PARAM_DEFAULT => '',
 			],
-			'noimages' => false,
 			'noheadings' => false,
 			'notransform' => false,
 			'onlyrequestedsections' => false,
