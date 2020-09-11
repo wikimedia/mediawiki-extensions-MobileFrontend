@@ -510,6 +510,7 @@ class MobileFrontendHooks {
 			// and signal to API requests that the origin parameter should be used.
 			// A boolean would also suffice here but let's keep things simple and pass verbatim
 			'wgMFContentProviderScriptPath' => $config->get( 'MFContentProviderScriptPath' ),
+			'wgMFTrackBlockNotices' => $config->get( 'MFTrackBlockNotices' ),
 		];
 		return $vars;
 	}

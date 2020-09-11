@@ -81,9 +81,12 @@ class BlockMessageDetails extends View {
 	 * @return {Object} Configuration options
 	 */
 	getButtonConfig() {
+		var cta = true;
 		const config = {
-			progressive: true
-		};
+				progressive: true
+			},
+			wiki = mw.config.get( 'wgDBname' );
+
 		if ( mw.user.isAnon() && this.options.anonOnly ) {
 			// The user can avoid the block by logging in
 			config.label = mw.msg( 'mobile-frontend-editor-blocked-drawer-action-login' );
@@ -98,7 +101,18 @@ class BlockMessageDetails extends View {
 			config.tagName = 'button';
 			config.label = mw.msg( 'mobile-frontend-editor-blocked-drawer-action-ok' );
 			config.additionalClassNames = 'cancel';
+			cta = false;
 		}
+
+		if ( cta && mw.config.get( 'wgMFTrackBlockNotices' ) ) {
+			mw.track( 'counter.MediaWiki.BlockNotices.' + wiki + '.MobileFrontend.ctaShown', 1 );
+			config.events = {
+				click: function () {
+					mw.track( 'counter.MediaWiki.BlockNotices.' + wiki + '.MobileFrontend.ctaClicked', 1 );
+				}
+			};
+		}
+
 		return config;
 	}
 	/**

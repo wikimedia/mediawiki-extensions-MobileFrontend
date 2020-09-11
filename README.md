@@ -223,6 +223,16 @@ Defines the sampling rate for the Search schema.
 * Type: `Number`
 * Default: `0.001`
 
+
+#### $wgMFTrackBlockNotices
+
+If set to true, block notices will be tracked on display, along with some limited
+user interactions. Counts will be stored for later analysis. No personal data will
+be collected.
+
+* Type: `Boolean`
+* Default: `false`
+
 #### $wgMFMobileHeader
 
 Requests containing header with this name will be considered as coming from

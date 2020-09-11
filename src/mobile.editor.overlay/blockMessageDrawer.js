@@ -33,7 +33,9 @@ module.exports = function blockMessageDrawer( props ) {
 				drawerTop = $drawer.offset().top - 100,
 				creatorTop = blockDrawer.$el.find( '.block-message-creator' ).offset().top - 100,
 				buttonsTop = blockDrawer.$el.find( '.block-message-buttons' ).offset().top - 100,
-				$seeMore = blockDrawer.$el.find( '.block-message-see-more' );
+				$seeMore = blockDrawer.$el.find( '.block-message-see-more' ),
+				wiki = mw.config.get( 'wgDBname' );
+
 			$drawer.css( 'top', drawerTop + ( buttonsTop - creatorTop ) );
 			$seeMore.on(
 				'click',
@@ -43,8 +45,16 @@ module.exports = function blockMessageDrawer( props ) {
 					$container.css( 'overflow-y', 'auto' );
 					$container.css( 'height', buttonsTop - $container.offset().top );
 					$seeMore.hide();
+
+					if ( mw.config.get( 'wgMFTrackBlockNotices' ) ) {
+						mw.track( 'counter.MediaWiki.BlockNotices.' + wiki + '.MobileFrontend.reasonShown', 1 );
+					}
 				}
 			);
+
+			if ( mw.config.get( 'wgMFTrackBlockNotices' ) ) {
+				mw.track( 'counter.MediaWiki.BlockNotices.' + wiki + '.MobileFrontend.shown', 1 );
+			}
 		},
 		children: [
 			( new BlockMessageDetails( props ) ).$el
