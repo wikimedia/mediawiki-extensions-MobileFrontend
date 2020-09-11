@@ -130,16 +130,16 @@ class MobileFormatter extends HtmlFormatter {
 		$removeImages = false,
 		$showFirstParagraphBeforeInfobox = false
 	) {
-		$doc = $this->getDoc();
-		$body = $doc->getElementsByTagName( 'body' )->item( 0 );
+		$transforms = [];
+
 		// Apply all removals before continuing with transforms (see T185040 for example)
 		$this->filterContent();
+
 		// Sectionify the content and transform it if necessary per section
 		if ( $this->expandableSections ) {
-			$subHeadingTransform = new SubHeadingTransform( $this->topHeadingTags );
-			/** @phan-suppress-next-line PhanTypeMismatchArgument DOMNode vs. DOMElement */
-			$subHeadingTransform->apply( $body );
-			$makeSectionsTransform = new MakeSectionsTransform(
+			$transforms[] = new SubHeadingTransform( $this->topHeadingTags );
+
+			$transforms[] = new MakeSectionsTransform(
 				$this->topHeadingTags,
 				$showFirstParagraphBeforeInfobox,
 				$this->title,
@@ -148,8 +148,14 @@ class MobileFormatter extends HtmlFormatter {
 				$removeImages,
 				$this->config->get( 'MFLazyLoadSkipSmallImages' )
 			);
+		}
+
+		$doc = $this->getDoc();
+		$body = $doc->getElementsByTagName( 'body' )->item( 0 );
+
+		foreach ( $transforms as $transform ) {
 			/** @phan-suppress-next-line PhanTypeMismatchArgument DOMNode vs. DOMElement */
-			$makeSectionsTransform->apply( $body );
+			$transform->apply( $body );
 		}
 	}
 
