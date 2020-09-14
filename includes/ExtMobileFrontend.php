@@ -88,19 +88,26 @@ class ExtMobileFrontend {
 			return $html;
 		}
 
-		$formatter = MobileFormatter::newFromContext( $context, $provider, $enableSections, $config );
+		$formatter = MobileFormatter::newFromContext( $context, $provider, $config );
 
 		$hookContainer = $services->getHookContainer();
 		$hookContainer->run( 'MobileFrontendBeforeDOM', [ $context, $formatter ] );
 
 		if ( $context->getContentTransformations() ) {
-			$removeImages = $featureManager->isFeatureAvailableForCurrentUser( 'MFLazyLoadImages' );
+			$shouldLazyTransformImages = $featureManager->isFeatureAvailableForCurrentUser( 'MFLazyLoadImages' );
 			$leadParagraphEnabled = in_array( $ns, $config->get( 'MFNamespacesWithLeadParagraphs' ) );
 			$showFirstParagraphBeforeInfobox = $leadParagraphEnabled &&
 				$featureManager->isFeatureAvailableForCurrentUser( 'MFShowFirstParagraphBeforeInfobox' );
 
+			if ( $enableSections ) {
+				$formatter->enableExpandableSections(
+					false,
+					$shouldLazyTransformImages,
+					$showFirstParagraphBeforeInfobox
+ );
+			}
 			// Remove images if they're disabled from special pages, but don't transform otherwise
-			$formatter->applyTransforms( $removeImages, $showFirstParagraphBeforeInfobox );
+			$formatter->applyTransforms();
 		}
 
 		return $formatter->getText();

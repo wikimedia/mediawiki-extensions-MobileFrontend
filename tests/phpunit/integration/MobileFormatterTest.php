@@ -77,10 +77,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 	 * @covers MobileFormatter::parseItemsToRemove
 	 * @dataProvider provideHtmlTransform
 	 */
-	public function testHtmlTransform( $input, $expected, $callback = false,
-		$lazyLoadImages = false,
-		$showFirstParagraphBeforeInfobox = false
-	) {
+	public function testHtmlTransform( $input, $expected, $callback = false ) {
 		$t = Title::newFromText( 'Mobile' );
 
 		// "yay" to Windows!
@@ -92,9 +89,8 @@ class MobileFormatterTest extends MediaWikiTestCase {
 		if ( $callback ) {
 			$callback( $mf );
 		}
-		$mf->topHeadingTags = [ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' ];
-		$mf->applyTransforms( $lazyLoadImages,
-			$showFirstParagraphBeforeInfobox );
+
+		$mf->applyTransforms();
 
 		$html = $mf->getText();
 		$this->assertEquals( str_replace( "\n", '', $expected ), str_replace( "\n", '', $html ) );
@@ -107,7 +103,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 	public function testHtmlTransformWhenSkippingLazyLoadingSmallImages() {
 		$smallPic = '<img src="smallPicture.jpg" style="width: 4.4ex; height:3.34ex;">';
 		$enableSections = function ( MobileFormatter $mf ) {
-			$mf->enableExpandableSections();
+			$mf->enableExpandableSections( true, false, false );
 		};
 		$this->setMwGlobals( [
 			'wgMFLazyLoadSkipSmallImages' => true
@@ -125,7 +121,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 
 	public function provideHtmlTransform() {
 		$enableSections = function ( MobileFormatter $mf ) {
-			$mf->enableExpandableSections();
+			$mf->enableExpandableSections( true, true, true );
 		};
 		$longLine = "\n" . str_repeat( 'A', 5000 );
 		$originalImage = '<img alt="foo" src="foo.jpg" width="100" '
@@ -578,9 +574,12 @@ class MobileFormatterTest extends MediaWikiTestCase {
 
 		// If MobileFormatter#enableExpandableSections isn't called, then headings
 		// won't be transformed.
-		$formatter->enableExpandableSections( true );
 
-		$formatter->topHeadingTags = $topHeadingTags;
+		$this->setMwGlobals( [
+			'wgMFMobileFormatterOptions' => [ 'headings' => $topHeadingTags ]
+		] );
+		$formatter->enableExpandableSections( true, false, false );
+
 		$formatter->applyTransforms();
 
 		$this->assertEquals( $expectedOutput, $formatter->getText() );
@@ -671,7 +670,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 		$formatter = new MobileFormatter(
 			$input, Title::newFromText( 'Special:Foo' ), $this->mfConfig, $this->mfContext
 		);
-		$formatter->applyTransforms( false );
+		$formatter->applyTransforms();
 		// Success is not crashing when the input is not a DOMElement.
 		$this->assertTrue( true );
 	}
@@ -693,7 +692,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			$this->mfConfig,
 			$this->mfContext
 		);
-		$formatter->enableExpandableSections();
+		$formatter->enableExpandableSections( false, false, true );
 
 		$loggerMock = $this->createMock( \Psr\Log\LoggerInterface::class );
 		$loggerMock->expects( $this->once() )
@@ -706,7 +705,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			} ) );
 
 		$this->setLogger( 'mobile', $loggerMock );
-		$formatter->applyTransforms( false, true );
+		$formatter->applyTransforms();
 	}
 
 	public function provideLoggingOfInfoboxesBeingWrappedInContainersWhenWrapped() {
@@ -739,14 +738,14 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			$this->mfConfig,
 			$this->mfContext
 		);
-		$formatter->enableExpandableSections();
+		$formatter->enableExpandableSections( false, false, true );
 
 		$loggerMock = $this->createMock( \Psr\Log\LoggerInterface::class );
 		$loggerMock->expects( $this->never() )
 			->method( 'info' );
 
 		$this->setLogger( 'mobile', $loggerMock );
-		$formatter->applyTransforms( false, true );
+		$formatter->applyTransforms();
 	}
 
 	public function provideLoggingOfInfoboxesBeingWrappedInContainersWhenNotWrapped() {
@@ -782,14 +781,14 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			$this->mfConfig,
 			$this->mfContext
 		);
-		$formatter->enableExpandableSections();
+		$formatter->enableExpandableSections( true, false, true );
 
 		$loggerMock = $this->createMock( \Psr\Log\LoggerInterface::class );
 		$loggerMock->expects( $this->never() )
 			->method( 'info' );
 
 		$this->setLogger( 'mobile', $loggerMock );
-		$formatter->applyTransforms( false, true );
+		$formatter->applyTransforms();
 	}
 
 	/**
