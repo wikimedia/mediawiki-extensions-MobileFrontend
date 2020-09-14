@@ -372,7 +372,10 @@ OverlayManager.prototype = {
 		if ( this.stack.length === 0 ) {
 			throw new Error( 'Trying to replace OverlayManager\'s current overlay, but stack is empty' );
 		}
-		this._hideOverlay( this.stack[0].overlay );
+		const stackOverlay = this.stack[0].overlay;
+		if ( stackOverlay ) {
+			this._hideOverlay( stackOverlay );
+		}
 		this.stack[0].overlay = overlay;
 		attachHideEvent( overlay );
 		this._show( overlay );
