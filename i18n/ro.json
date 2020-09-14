@@ -10,6 +10,7 @@
 			"Matrafox",
 			"MaxSem",
 			"Minisarm",
+			"NGC 54",
 			"Strainu",
 			"Wintereu"
 		]
@@ -46,6 +47,7 @@
 	"mobile-frontend-edit-signup-action": "<strong>Ajutați-ne să îmbunătățim {{SITENAME}}.</strong><br />Înregistrați-vă pentru a putea modifica.",
 	"mobile-frontend-editor-anon": "Modificare fără autentificare",
 	"mobile-frontend-editor-anonwarning": "<strong>Atenție:</strong> Nu v-ați autentificat. Adresa dumneavoastră IP va fi vizibilă în mod public dacă efectuați modificări. Dacă vă <strong>autentificați</strong> sau vă <strong>creați un cont</strong>, modificările dumneavoastră vor fi asociate numelui de utilizator, pe lângă alte beneficii.",
+	"mobile-frontend-editor-blocked-drawer-body-link": "Vezi mai mult",
 	"mobile-frontend-editor-cancel": "Revocare",
 	"mobile-frontend-editor-cancel-confirm": "Doriți, într-adevăr, să vă abandonați modificarea?",
 	"mobile-frontend-editor-captcha-try-again": "Cod eronat; reîncercați.",

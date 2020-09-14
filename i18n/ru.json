@@ -96,7 +96,7 @@
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Причина блокировки",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Заблокирован|Заблокирована}}",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "Блокировка истечёт",
-	"mobile-frontend-editor-blocked-drawer-help": "Подробности",
+	"mobile-frontend-editor-blocked-drawer-help": "См. подробности",
 	"mobile-frontend-editor-generic-block-reason": "Неизвестная причина",
 	"mobile-frontend-editor-cancel": "Отмена",
 	"mobile-frontend-editor-cancel-confirm": "Вы действительно хотите отказаться от ваши изменений?",
