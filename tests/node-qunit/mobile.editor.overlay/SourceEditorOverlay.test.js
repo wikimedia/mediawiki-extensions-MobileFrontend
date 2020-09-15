@@ -72,6 +72,14 @@ QUnit.test( '#initialize, blocked user', function ( assert ) {
 		} ),
 		done = assert.async();
 
+	sandbox.stub( mw.Api.prototype, 'get' ).returns(
+		util.Deferred().resolve( {
+			parse: {
+				text: 'Testreason'
+			}
+		} )
+	);
+
 	new SourceEditorOverlay( {
 		title: 'test.css'
 	}, dBlockedContent ).getLoadingPromise().then( () => {}, function () {

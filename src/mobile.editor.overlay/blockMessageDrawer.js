@@ -39,12 +39,9 @@ module.exports = function blockMessageDrawer( props ) {
 				'click',
 				function () {
 					const $container = blockDrawer.$el.find( '.block-message-container' );
-					$drawer.css( 'top', '' );
-					if ( $drawer.offset().top < 0 ) {
-						$drawer.css( 'top', 0 );
-						$container.css( 'overflow-y', 'auto' );
-						$container.css( 'height', buttonsTop - $container.offset().top );
-					}
+					$drawer.css( 'top', 0 );
+					$container.css( 'overflow-y', 'auto' );
+					$container.css( 'height', buttonsTop - $container.offset().top );
 					$seeMore.hide();
 				}
 			);

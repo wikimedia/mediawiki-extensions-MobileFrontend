@@ -105,6 +105,7 @@ class BlockMessageDetails extends View {
 	 * @inheritdoc
 	 */
 	postRender() {
+		const drawer = this;
 		this.$el.find( '.block-message-buttons' ).prepend(
 			new Button( this.getButtonConfig() ).$el
 		);
@@ -114,6 +115,9 @@ class BlockMessageDetails extends View {
 				additionalClassNames: 'mw-ui-icon-flush-top'
 			} ) ).$el
 		);
+		this.options.parsedReason.then( function ( htmlReason ) {
+			drawer.$el.find( '.block-message-reason div' ).html( htmlReason );
+		} );
 	}
 	/**
 	 * @inheritdoc
