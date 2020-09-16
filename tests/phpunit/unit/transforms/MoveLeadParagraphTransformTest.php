@@ -117,6 +117,7 @@ class MoveLeadParagraphTransformTest extends \MediaWikiUnitTestCase {
 		$coordinates = '<span id="coordinates"><span>0;0</span></span>';
 		$templateStyles = '<style data-mw-deduplicate="TemplateStyles:r123">CSS</style>';
 		$wrappedTemplateStyles = "<p>$templateStyles</p>";
+		$wrappedTemplateStylesAndContent = "<p>Content $templateStyles</p>";
 		$wrappedCoordsWithTrailingWhitespace = '<p><span><span id="coordinates">not empty</span>'
 		  . '</span>    </p>';
 		$anotherInfobox = '<table class="infobox">2</table>';
@@ -145,6 +146,11 @@ class MoveLeadParagraphTransformTest extends \MediaWikiUnitTestCase {
 				"$wrappedTemplateStyles$infobox<p>one</p>",
 				"$wrappedTemplateStyles<p>one</p>$infobox",
 				'template styles'
+			],
+			[
+				"$wrappedTemplateStylesAndContent$infobox<p>one</p>",
+				"$wrappedTemplateStylesAndContent<p>one</p>$infobox",
+				'template styles next to content'
 			],
 			[
 				"$divinfobox<p>one</p>",
