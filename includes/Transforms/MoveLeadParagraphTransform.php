@@ -249,7 +249,7 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 			// getting textContent is a heavy operation, cache it as we might need it later
 			$nodeContent = trim( $node->textContent );
 
-			if ( $nodeContent ) {
+			if ( $nodeContent && $coords->length ) {
 				// assume valid HTML and only one #coordinates element
 				// this may not behave correctly if garbage in.
 				$coordEl = $coords->item( 0 );
