@@ -21,7 +21,6 @@ class MakeSectionsTransformTest extends \MediaWikiUnitTestCase {
 	 * @covers ::apply
 	 * @covers ::makeSections
 	 * @covers ::createSectionBodyElement
-	 * @covers ::filterContentInSection
 	 * @covers ::getTopHeadings
 	 * @covers ::prepareHeading
 	 * @covers ::__construct
@@ -37,20 +36,13 @@ class MakeSectionsTransformTest extends \MediaWikiUnitTestCase {
 	 */
 	public function testTransform(
 		string $html,
-		bool $showFirstParagraphBeforeInfobox,
 		bool $scriptsEnabled,
-		bool $shouldLazyTransformImages,
 		string $expected,
 		string $reason
 	) {
 		$transform = new MakeSectionsTransform(
 			[ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' ],
-			$showFirstParagraphBeforeInfobox,
-			Title::makeTitle( 'A', NS_MAIN ),
-			1,
-			$scriptsEnabled,
-			$shouldLazyTransformImages,
-			false
+			$scriptsEnabled
 		);
 		libxml_use_internal_errors( true );
 		$doc = new DOMDocument();
@@ -73,43 +65,12 @@ class MakeSectionsTransformTest extends \MediaWikiUnitTestCase {
 		yield [
 			'',
 			true,
-			true,
-			true,
 			$this->makeSectionHtml( 0, '', false, false ),
 			'First section should be added if no content provided'
 		];
 
 		yield [
-			"$hatnote$hatnote$emptypelt $wrappedCoordsWithTrailingWhitespace$infobox<p>one</p>",
-			true,
-			true,
-			true,
-			$this->makeSectionHtml(
-				0,
-				"$hatnote$hatnote$emptypelt $wrappedCoordsWithTrailingWhitespace<p>one</p>$infobox",
-				false,
-				false
-			),
-			'Infobox should be placed after fist section'
-		];
-		yield [
-			"$hatnote$hatnote$emptypelt $wrappedCoordsWithTrailingWhitespace$infobox<p>one</p>",
-			false,
-			true,
-			true,
-			$this->makeSectionHtml(
-				0,
-				"$hatnote$hatnote$emptypelt $wrappedCoordsWithTrailingWhitespace$infobox<p>one</p>",
-				false,
-				false
-			),
-			'Infobox shouldn`t be changed'
-		];
-
-		yield [
 			'<div>Body</div><h2>SHeading</h2><div>SBody</div>',
-			true,
-			true,
 			true,
 			$this->makeSectionHtml( 0, '<div>Body</div>', false, false )
 			. $this->makeSectionHeading( 'h2', 'SHeading', 1 )
@@ -119,45 +80,11 @@ class MakeSectionsTransformTest extends \MediaWikiUnitTestCase {
 
 		yield [
 			'<div>Body</div><h2>SHeading</h2><div>SBody</div>',
-			true,
 			false,
-			true,
 			$this->makeSectionHtml( 0, '<div>Body</div>', false, false )
 			. $this->makeSectionHeading( 'h2', 'SHeading', false )
 			. $this->makeSectionHtml( 1, '<div>SBody</div>', false, false ),
 			'No script shouldn`t use collapsible blocks '
-		];
-
-		// Test section:
-		// Test lazy load images functionality
-		$originalImage = '<img alt="foo" src="foo.jpg" width="100" '
-			. 'height="100" srcset="foo-1.5x.jpg 1.5x, foo-2x.jpg 2x">';
-		$placeholder = '<span class="lazy-image-placeholder" '
-			. 'style="width: 100px;height: 100px;" '
-			. 'data-src="foo.jpg" data-alt="foo" data-width="100" data-height="100" '
-			. 'data-srcset="foo-1.5x.jpg 1.5x, foo-2x.jpg 2x">'
-			. '&nbsp;'
-			. '</span>';
-		$noscript = '<noscript><img alt="foo" src="foo.jpg" width="100" height="100"></noscript>';
-		yield [
-			'<div>Body</div><h2>SHeading</h2><div>' . $originalImage . '</div>',
-			true,
-			true,
-			true,
-			$this->makeSectionHtml( 0, '<div>Body</div>', false, false )
-			. $this->makeSectionHeading( 'h2', 'SHeading', 1 )
-			. $this->makeSectionHtml( 1, '<div>' . $noscript . $placeholder . '</div>', false, true ),
-			'Image should be replaced in second section'
-		];
-		yield [
-			'<div>Body</div><h2>SHeading</h2><div>' . $originalImage . '</div>',
-			true,
-			true,
-			false,
-			$this->makeSectionHtml( 0, '<div>Body</div>', false, false )
-			. $this->makeSectionHeading( 'h2', 'SHeading', 1 )
-			. $this->makeSectionHtml( 1, '<div>' . $originalImage . '</div>', false, true ),
-			'Image should be replaced in second section'
 		];
 	}
 

@@ -36,10 +36,18 @@ class LazyImageTransform implements IMobileTransform {
 	/**
 	 * Insert a table of content placeholder into the element
 	 * which will be progressively enhanced via JS
+	 *
 	 * @param DOMElement $node to be transformed
 	 */
 	public function apply( DOMElement $node ) {
-		$this->doRewriteImagesForLazyLoading( $node, $node->ownerDocument );
+		$sections = $node->getElementsByTagName( 'section' );
+		$sectionNumber = 0;
+		foreach ( $sections as $sectionNumber => $section ) {
+			if ( $sectionNumber > 0 ) {
+				$this->doRewriteImagesForLazyLoading( $section, $section->ownerDocument );
+			}
+			$sectionNumber++;
+		}
 	}
 
 	/**

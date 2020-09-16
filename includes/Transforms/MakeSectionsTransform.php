@@ -7,7 +7,6 @@ use DOMElement;
 use DOMXPath;
 use Exception;
 use MobileUI;
-use Title;
 
 /**
  * Implements IMobileTransform, that splits the body of the document into
@@ -39,57 +38,17 @@ class MakeSectionsTransform implements IMobileTransform {
 	 */
 	private $topHeadingTags;
 
-	private $lazyTransform;
-	private $leadTransform;
-
 	/**
-	 * FIXME: MakeSectionsTransform should not make use of MoveLeadParagraphTransform or
-	 *  LazyImageTransform. This should be cleaned up at earliest convenience.
 	 *
 	 * @param array $topHeadingTags list of tags could ne cosidered as sections
-	 * @param bool $showFirstParagraphBeforeInfobox wheather first paragraph should be moved
-	 *   before infobox
-	 * @param Title $title page's title
-	 * @param int $revId page's revision Id
 	 * @param bool $scriptsEnabled wheather scripts are enabled
-	 * @param bool $shouldLazyTransformImages wheather lazy loading images enabled
-	 * @param bool $skipSmallImages generic config, 'MFLazyLoadSkipSmallImages' is the only key used
 	 */
 	public function __construct(
 		array $topHeadingTags,
-		bool $showFirstParagraphBeforeInfobox,
-		Title $title,
-		int $revId,
-		bool $scriptsEnabled,
-		bool $shouldLazyTransformImages,
-		bool $skipSmallImages
+		bool $scriptsEnabled
 	) {
 		$this->topHeadingTags = $topHeadingTags;
 		$this->scriptsEnabled = $scriptsEnabled;
-		if ( $shouldLazyTransformImages ) {
-			$this->lazyTransform = new LazyImageTransform( $skipSmallImages );
-		} else {
-			$this->lazyTransform = NoTransform::getInstance();
-		}
-
-		if ( $showFirstParagraphBeforeInfobox ) {
-			$this->leadTransform = new MoveLeadParagraphTransform( $title, $revId );
-		} else {
-			$this->leadTransform = NoTransform::getInstance();
-		}
-	}
-
-	/**
-	 * Apply filtering per element (section) in a document.
-	 * @param DOMElement $el
-	 * @param int $sectionNumber Which section is it on the document
-	 */
-	private function filterContentInSection(
-		$el, $sectionNumber
-	) {
-		if ( $sectionNumber > 0 ) {
-			$this->lazyTransform->apply( $el );
-		}
 	}
 
 	/**
@@ -135,16 +94,9 @@ class MakeSectionsTransform implements IMobileTransform {
 				// section we are currently processing
 				/** @phan-suppress-next-line PhanTypeMismatchArgument DOMNode vs. DOMElement */
 				$this->prepareHeading( $body->ownerDocument, $node, $sectionNumber + 1, $this->scriptsEnabled );
-				if ( $sectionBody->hasChildNodes() ) {
-					// Apply transformations to the section body
-					$this->filterContentInSection( $sectionBody, $sectionNumber );
-				}
 				// Insert the previous section body and reset it for the new section
 				$container->insertBefore( $sectionBody, $node );
 
-				if ( $sectionNumber === 0 ) {
-					$this->leadTransform->apply( $sectionBody );
-				}
 				$sectionNumber += 1;
 				$sectionBody = $this->createSectionBodyElement(
 					$body->ownerDocument,
@@ -159,15 +111,6 @@ class MakeSectionsTransform implements IMobileTransform {
 			$sectionBody->appendChild( $node );
 		}
 
-		// If the document had the lead section only:
-		if ( $sectionNumber === 0 ) {
-			$this->leadTransform->apply( $sectionBody );
-		}
-
-		if ( $sectionBody->hasChildNodes() ) {
-			// Apply transformations to the last section body
-			$this->filterContentInSection( $sectionBody, $sectionNumber );
-		}
 		// Append the last section body.
 		$container->appendChild( $sectionBody );
 	}

@@ -13,6 +13,10 @@ class MoveLeadParagraphTransformTest extends \MediaWikiUnitTestCase {
 ";
 	}
 
+	public static function wrapSection( $html ) {
+		return "<section>$html</section>";
+	}
+
 	/**
 	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::identifyInfoboxElement
 	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::matchElement
@@ -96,6 +100,38 @@ class MoveLeadParagraphTransformTest extends \MediaWikiUnitTestCase {
 	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::isNotEmptyNode
 	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::isNonLeadParagraph
 	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::isPreviousSibling
+	 */
+	public function testApplySectionSecondSectionShouldBeIgnored() {
+		$infobox = '<table class="infobox">1</table>';
+		$paragraph = '<p><b>First paragraph</b> <span> with info that links to a '
+			. PHP_EOL . ' <a href="">Page</a></span> and some more content</p>';
+
+		$transform = new MoveLeadParagraphTransform( 'A', 1 );
+		libxml_use_internal_errors( true );
+		$doc = new DOMDocument();
+		$doc->loadHTML( self::wrap(
+			self::wrapSection( 'First' ) . self::wrapSection( $infobox . $paragraph )
+		) );
+		$transform->apply( $doc->getElementsByTagName( 'body' )->item( 0 ) );
+		$this->assertEquals(
+			self::wrap( self::wrapSection( 'First' ) . self::wrapSection( $infobox . $paragraph ) ),
+			$doc->saveHTML(),
+			"The second section should be ignored"
+		);
+		libxml_clear_errors();
+	}
+
+	/**
+	 * @param string $html
+	 * @param string $expected
+	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::apply
+	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::moveFirstParagraphBeforeInfobox
+	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::hasNoNonEmptyPrecedingParagraphs
+	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::identifyInfoboxElement
+	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::identifyLeadParagraph
+	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::isNotEmptyNode
+	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::isNonLeadParagraph
+	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::isPreviousSibling
 	 * @dataProvider provideTransform
 	 */
 	public function testTransform(
@@ -104,10 +140,15 @@ class MoveLeadParagraphTransformTest extends \MediaWikiUnitTestCase {
 		$reason = 'Move lead paragraph unexpected result'
 	) {
 		$transform = new MoveLeadParagraphTransform( 'A', 1 );
+		libxml_use_internal_errors( true );
 		$doc = new DOMDocument();
-		$doc->loadHTML( self::wrap( $html ) );
+		$doc->loadHTML( self::wrap( self::wrapSection( $html ) ) );
 		$transform->apply( $doc->getElementsByTagName( 'body' )->item( 0 ) );
-		$this->assertEquals( self::wrap( $expected ), $doc->saveHTML(), $reason );
+		$this->assertEquals(
+			self::wrap( self::wrapSection( $expected ) ),
+			$doc->saveHTML(), $reason
+		);
+		libxml_clear_errors();
 	}
 
 	public function provideTransform() {

@@ -3,7 +3,9 @@
 use HtmlFormatter\HtmlFormatter;
 use MobileFrontend\ContentProviders\IContentProvider;
 use MobileFrontend\Transforms\IMobileTransform;
+use MobileFrontend\Transforms\LazyImageTransform;
 use MobileFrontend\Transforms\MakeSectionsTransform;
+use MobileFrontend\Transforms\MoveLeadParagraphTransform;
 use MobileFrontend\Transforms\SubHeadingTransform;
 
 /**
@@ -101,13 +103,21 @@ class MobileFormatter extends HtmlFormatter {
 
 		$this->transforms[] = new MakeSectionsTransform(
 			$topHeadingTags,
-			$showFirstParagraphBeforeInfobox,
-			$this->title,
-			$this->title->getLatestRevID(),
-			$scriptsEnabled,
-			$shouldLazyTransformImages,
-			$this->config->get( 'MFLazyLoadSkipSmallImages' )
+			$scriptsEnabled
 		);
+
+		if ( $shouldLazyTransformImages ) {
+			$this->transforms[] = new LazyImageTransform(
+				$this->config->get( 'MFLazyLoadSkipSmallImages' )
+			);
+		}
+
+		if ( $showFirstParagraphBeforeInfobox ) {
+			$this->transforms[] = new MoveLeadParagraphTransform(
+				$this->title,
+				$this->title->getLatestRevID()
+			);
+		}
 	}
 
 	/**

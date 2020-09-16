@@ -12,6 +12,10 @@ class LazyImageTransformTest extends \MediaWikiUnitTestCase {
 ";
 	}
 
+	public static function wrapSection( $html ) {
+		return "<section>$html</section>";
+	}
+
 	/**
 	 * @param array $expected what we expect the dimensions to be.
 	 * @param string $w value of width attribute (if any)
@@ -109,9 +113,61 @@ class LazyImageTransformTest extends \MediaWikiUnitTestCase {
 	}
 
 	/**
+	 * @covers \MobileFrontend\Transforms\LazyImageTransform::apply
+	 * @covers \MobileFrontend\Transforms\LazyImageTransform::doRewriteImagesForLazyLoading
+	 * @covers \MobileFrontend\Transforms\LazyImageTransform::getImageDimension
+	 * @covers \MobileFrontend\Transforms\LazyImageTransform::getImageDimensions
+	 * @covers \MobileFrontend\Transforms\LazyImageTransform::copyStyles
+	 * @covers \MobileFrontend\Transforms\LazyImageTransform::copyClasses
+	 */
+	public function testTransformFirstSection() {
+		$img = '<img src="kitty.jpg" width="500" height="400">';
+
+		$transform = new LazyImageTransform( false );
+		libxml_use_internal_errors( true );
+		$doc = new DOMDocument();
+
+		$doc->loadHTML( self::wrap( self::wrapSection( $img ) ) );
+		$transform->apply( $doc->getElementsByTagName( 'body' )->item( 0 ) );
+		$this->assertEquals(
+			$doc->saveHTML(),
+			self::wrap( self::wrapSection( $img ) ),
+			"First section should be ignored"
+		);
+		libxml_clear_errors();
+	}
+
+	/**
+	 * @covers \MobileFrontend\Transforms\LazyImageTransform::apply
+	 * @covers \MobileFrontend\Transforms\LazyImageTransform::doRewriteImagesForLazyLoading
+	 * @covers \MobileFrontend\Transforms\LazyImageTransform::getImageDimension
+	 * @covers \MobileFrontend\Transforms\LazyImageTransform::getImageDimensions
+	 * @covers \MobileFrontend\Transforms\LazyImageTransform::copyStyles
+	 * @covers \MobileFrontend\Transforms\LazyImageTransform::copyClasses
+	 */
+	public function testTransformUnwrappedSection() {
+		$img = '<img src="kitty.jpg" width="500" height="400">';
+
+		$transform = new LazyImageTransform( false );
+		libxml_use_internal_errors( true );
+		$doc = new DOMDocument();
+
+		$doc->loadHTML( self::wrap( $img ) );
+		$transform->apply( $doc->getElementsByTagName( 'body' )->item( 0 ) );
+		$this->assertEquals(
+			$doc->saveHTML(),
+			self::wrap( $img ),
+			"Unwrapped to <section> image should be ignored"
+		);
+		libxml_clear_errors();
+	}
+
+	/**
 	 * @param string $html
 	 * @param bool $skipSmallImages whether small images should be skipped
 	 * @param string $expected
+	 * @param string $explanation
+	 *
 	 * @covers \MobileFrontend\Transforms\LazyImageTransform::apply
 	 * @covers \MobileFrontend\Transforms\LazyImageTransform::doRewriteImagesForLazyLoading
 	 * @covers \MobileFrontend\Transforms\LazyImageTransform::getImageDimension
@@ -120,12 +176,23 @@ class LazyImageTransformTest extends \MediaWikiUnitTestCase {
 	 * @covers \MobileFrontend\Transforms\LazyImageTransform::copyClasses
 	 * @dataProvider provideTransform
 	 */
-	public function testTransform( $html, $skipSmallImages, $expected, $explanation ) {
+	public function testTransform(
+		string $html,
+		bool $skipSmallImages,
+		string $expected,
+		string $explanation
+	) {
 		$transform = new LazyImageTransform( $skipSmallImages );
 		$doc = new DOMDocument();
-		$doc->loadHTML( self::wrap( $html ) );
+		libxml_use_internal_errors( true );
+		$doc->loadHTML( self::wrap( self::wrapSection( 'First' ) . self::wrapSection( $html ) ) );
 		$transform->apply( $doc->getElementsByTagName( 'body' )->item( 0 ) );
-		$this->assertEquals( $doc->saveHTML(), self::wrap( $expected ), $explanation );
+		$this->assertEquals(
+			$doc->saveHTML(),
+			self::wrap( self::wrapSection( 'First' ) . self::wrapSection( $expected ) ),
+			$explanation
+		);
+		libxml_clear_errors();
 	}
 
 	public function provideTransform() {
