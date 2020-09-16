@@ -71,7 +71,7 @@
 	"mobile-frontend-editor-blocked-drawer-action-login": "로그인",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "확인",
 	"mobile-frontend-editor-blocked-drawer-action-randompage": "다른 페이지로 이동",
-	"mobile-frontend-editor-blocked-drawer-title": "{{SITENAME}}에서의 편집이 차단되었습니다",
+	"mobile-frontend-editor-blocked-drawer-title": "{{SITENAME}}에서의 편집이 차단되었습니다.",
 	"mobile-frontend-editor-blocked-drawer-title-partial": "당신은 이 문서의 편집에서 차단되어 있습니다.",
 	"mobile-frontend-editor-blocked-drawer-title-ip-partial": "당신의 IP 주소가 이 문서의 편집에서 차단되어 있습니다.",
 	"mobile-frontend-editor-blocked-drawer-body-partial": "다른 문서 편집 시도",

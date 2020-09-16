@@ -16,6 +16,7 @@
 	"mobile-frontend-languages-header": "ቋንቋታት",
 	"mobile-frontend-languages-header-page": "$1 - ካልኦት ቋንቋታት",
 	"mobile-frontend-languages-text": "$1 ኣብ $2 {{PLURAL:$2|ቋንቋ|ቋንቋታት}} ዝርከብ እዩ።",
+	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "ዝምከሩ ቋንቋታት",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "ካልኦት ቋንቋታት",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "ቋንቋ ድለይ",
 	"mobile-frontend-main-menu-settings-heading": "ኣቀማምጣታት",
