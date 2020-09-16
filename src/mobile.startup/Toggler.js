@@ -68,7 +68,7 @@ function storeSectionToggleState( $heading, page ) {
 		isSectionOpen = $heading.hasClass( 'open-block' ),
 		expandedSections = getExpandedSections( page );
 
-	if ( headline ) {
+	if ( headline && expandedSections[page.title] ) {
 		if ( isSectionOpen ) {
 			expandedSections[page.title][headline] = ( new Date() ).getTime();
 		} else {
