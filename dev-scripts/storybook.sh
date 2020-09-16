@@ -3,10 +3,20 @@ set -eu
 
 mkdir -p .storybook/resolve-less-imports
 mkdir -p .storybook/resolve-less-imports/mediawiki.ui
+
+# MediaWiki skin LESS variables, defaults in core
+curl -sSL "https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/core/+/master/resources/src/mediawiki.less/mediawiki.skin.defaults.less?format=TEXT" | base64 --decode > .storybook/resolve-less-imports/mediawiki.skin.defaults.less
+curl -sSL "https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/core/+/master/resources/src/mediawiki.less/mediawiki.skin.variables.less?format=TEXT" | base64 --decode > .storybook/resolve-less-imports/mediawiki.skin.variables.less
+
+# MediaWiki LESS mixins
 curl https://raw.githubusercontent.com/wikimedia/mediawiki/master/resources/src/mediawiki.less/mediawiki.mixins.less -o .storybook/resolve-less-imports/mediawiki.mixins.less
 curl https://raw.githubusercontent.com/wikimedia/mediawiki/master/resources/src/mediawiki.less/mediawiki.mixins.animation.less -o .storybook/resolve-less-imports/mediawiki.mixins.animation.less
-curl https://raw.githubusercontent.com/wikimedia/mediawiki/master/resources/src/mediawiki.less/mediawiki.ui/variables.less -o .storybook/resolve-less-imports/mediawiki.ui/variables.less
+
+# mediawiki.ui LESS mixins
 curl https://raw.githubusercontent.com/wikimedia/mediawiki/master/resources/src/mediawiki.less/mediawiki.ui/mixins.buttons.less -o .storybook/resolve-less-imports/mediawiki.ui/mixins.buttons.less
+
+# mediawiki.ui variables
+curl https://raw.githubusercontent.com/wikimedia/mediawiki/master/resources/src/mediawiki.less/mediawiki.ui/variables.less -o .storybook/resolve-less-imports/mediawiki.ui/variables.less
 
 # mediawiki ui
 mkdir -p .storybook/resolve-less-imports/mediawiki.ui/components
