@@ -147,8 +147,7 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	 *   - the lead section contains at least one infobox;
 	 *   - the paragraph doesn't already appear before the first infobox
 	 *     if any in the DOM;
-	 *   - the paragraph contains text content, e.g. no <p></p>;
-	 *   - the paragraph doesn't contain coordinates, i.e. span#coordinates.
+	 *   - the paragraph contains visible text content
 	 *   - article belongs to the MAIN namespace
 	 *
 	 * Additionally if paragraph immediate sibling is a list (ol or ul element), the list
@@ -218,8 +217,8 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	}
 
 	/**
-	 * Checks if paragraph contains anything other than meta-data only (example: coordinates)
-	 * and can be treated as a lead paragrah (a paragraph with article content)
+	 * Checks if paragraph contains visible content and so
+	 * could be considered the lead paragraph of the aricle.
 	 *
 	 * Keep in sync with mobile.init/identifyLeadParagraph.js.
 	 *
@@ -228,34 +227,26 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	 * @return bool
 	 */
 	private function isNonLeadParagraph( $xPath, $node ) {
-		if ( $node->nodeType === XML_ELEMENT_NODE
+		if (
+			$node->nodeType === XML_ELEMENT_NODE &&
 			/** @phan-suppress-next-line PhanUndeclaredProperty DOMNode vs. DOMElement */
-			 && $node->tagName === 'p'
-			 && $this->isNotEmptyNode( $node )
+			$node->tagName === 'p' &&
+			$this->isNotEmptyNode( $node )
 		) {
 			// Clone the node so we can modifiy it
 			$node = $node->cloneNode( true );
 
-			// we found a non-empty p element but it might be a coordinates wrapper
-			$coords = $xPath->query( './/span[@id="coordinates"]', $node );
-			$templateStyles = $xPath->query( './/style', $node );
-			if ( $coords->length === 0 && $templateStyles->length === 0 ) {
-				return false;
-			}
-			// Remove any template style tags
+			// Remove any TemplateStyle tags, or coordinate wrappers...
+			$templateStyles = $xPath->query( '(.//style|.//span[@id="coordinates"])', $node );
 			foreach ( $templateStyles as $style ) {
 				$style->parentNode->removeChild( $style );
 			}
-			// getting textContent is a heavy operation, cache it as we might need it later
-			$nodeContent = trim( $node->textContent );
-
-			if ( $nodeContent && $coords->length ) {
-				// assume valid HTML and only one #coordinates element
-				// this may not behave correctly if garbage in.
-				$coordEl = $coords->item( 0 );
-				// Is there content of this node in addition to the coordinates ?
-				return $nodeContent === trim( $coordEl->textContent );
+			// ...and check again for emptiness
+			if ( !$this->isNotEmptyNode( $node ) ) {
+				return true;
 			}
+
+			return false;
 		}
 		return true;
 	}

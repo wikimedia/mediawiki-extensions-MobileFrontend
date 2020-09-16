@@ -145,12 +145,17 @@ class MoveLeadParagraphTransformTest extends \MediaWikiUnitTestCase {
 			[
 				"$wrappedTemplateStyles$infobox<p>one</p>",
 				"$wrappedTemplateStyles<p>one</p>$infobox",
-				'template styles'
+				'wrapped template styles'
 			],
 			[
-				"$wrappedTemplateStylesAndContent$infobox<p>one</p>",
-				"$wrappedTemplateStylesAndContent<p>one</p>$infobox",
-				'template styles next to content'
+				"$infobox$wrappedTemplateStylesAndContent",
+				"$wrappedTemplateStylesAndContent$infobox",
+				'lead paragraph has template styles'
+			],
+			[
+				"$infobox<p>One $templateStyles$coordinates</p>",
+				"<p>One $templateStyles$coordinates</p>$infobox",
+				'lead paragraph has template styles and coordinates'
 			],
 			[
 				"$divinfobox<p>one</p>",
