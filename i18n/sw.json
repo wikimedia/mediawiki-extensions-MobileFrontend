@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Edwingudfriend",
 			"Kwisha",
 			"Lloffiwr",
 			"Muddyb Blast Producer",
@@ -10,6 +11,9 @@
 	},
 	"mobile-frontend-clear-search": "Futa",
 	"mobile-frontend-copyright": "Nakala inapatikana chini ya <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a>; masuala ya ziada yanaweza kukubalika. Tazama <a href='https://foundation.wikimedia.org/wiki/Terms_of_Use'>Masharti ya Utumiaji</a> kwa maelezo zaidi. {{SITENAME}} ni nembo iliosajiliwa na <a href='https://wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, asasi isiyokuwa ya kifaida.",
+	"mobile-frontend-editor-blocked-drawer-title-partial": "Umezuiwa kuhariri ukurasa huu.",
+	"mobile-frontend-editor-blocked-drawer-body-partial": "Jaribu kuhariri ukurasa mwingine.",
+	"mobile-frontend-editor-blocked-drawer-body-login-createaccount-partial": "Jaribu kuingia au kuunda akaunti, au jaribu kuhariri ukurasa mwingine.",
 	"mobile-frontend-featured-article": "Makala Bora ya Leo",
 	"mobile-frontend-main-menu-settings-heading": "Mpangilio wa wavuti wa simu ya rununu",
 	"mobile-frontend-media-load-fail-message": "Kulikua na tatizo wakati wa kupakia picha hii",
