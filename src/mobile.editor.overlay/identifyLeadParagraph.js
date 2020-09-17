@@ -17,18 +17,11 @@ module.exports = function identifyLeadParagraph( $body ) {
 
 	// Keep in sync with MoveLeadParagraphTransform::isNonLeadParagraph()
 	function isNonLeadParagraph( node ) {
-		var $coords;
 		node = node.cloneNode( true );
-		// Ignore non-content nodes
-		$( node ).find( '.ve-ce-branchNode-inlineSlug, .ve-ce-focusableNode-invisible' ).remove();
+		// Ignore non-content nodes, TemplateStyles and coordinates
+		$( node ).find( '.ve-ce-branchNode-inlineSlug, .ve-ce-focusableNode-invisible, style, span#coordinates' ).remove();
 		if ( isNotEmptyNode( node ) ) {
-			$coords = $( node ).find( 'span#coordinates' );
-			if ( !$coords.length ) {
-				return false;
-			}
-			if ( node.textContent ) {
-				return node.textContent === $coords[ 0 ].textContent;
-			}
+			return false;
 		}
 		return true;
 	}
