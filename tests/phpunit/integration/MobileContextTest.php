@@ -68,16 +68,17 @@ class MobileContextTest extends MediaWikiTestCase {
 		$invokes = 0;
 		$context = $this->makeContext();
 		$asserter = $this;
-		$this->setMwGlobals( 'wgHooks',
-			[ 'GetMobileUrl' => [ function ( &$string, $hookCtx ) use (
+		$this->setTemporaryHook(
+			'GetMobileUrl',
+			function ( &$string, $hookCtx ) use (
 					$asserter,
 					&$invokes,
 					$context
 				) {
 					$asserter->assertEquals( $context, $hookCtx );
 					$invokes++;
-			} ]
-		] );
+			}
+		);
 		$context->getRequest()->setHeader( 'X-Subdomain', 'M' );
 		$this->assertEquals(
 			'http://en.m.wikipedia.org/wiki/Article',
