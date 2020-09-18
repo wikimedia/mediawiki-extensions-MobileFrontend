@@ -104,7 +104,7 @@ class ExtMobileFrontend {
 					false,
 					$shouldLazyTransformImages,
 					$showFirstParagraphBeforeInfobox
- );
+				);
 			}
 			// Remove images if they're disabled from special pages, but don't transform otherwise
 			$formatter->applyTransforms();

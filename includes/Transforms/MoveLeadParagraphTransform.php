@@ -30,11 +30,16 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 
 	/**
 	 * Rearranges content so that text in the lead paragraph is prioritised to appear
-	 * before the infobox
+	 * before the infobox. Lead
+	 *
 	 * @param DOMElement $node to be transformed
 	 */
 	public function apply( DOMElement $node ) {
-		$this->moveFirstParagraphBeforeInfobox( $node, $node->ownerDocument );
+		$section = $node->getElementsByTagName( 'section' )->item( 0 );
+		if ( $section ) {
+			/** @phan-suppress-next-line PhanTypeMismatchArgument DOMNode vs. DOMElement */
+			$this->moveFirstParagraphBeforeInfobox( $section, $section->ownerDocument );
+		}
 	}
 
 	/**
