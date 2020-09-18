@@ -98,7 +98,16 @@ function getPreferredEditor() {
 		case 'visual':
 			return 'VisualEditor';
 		case 'preference':
-			return mw.user.options.get( 'visualeditor-editor' ) === 'visualeditor' ? 'VisualEditor' : 'SourceEditor';
+			// First check if the user has actually used the desktop editor.
+			// This is done hackily by checking if they have the preference
+			// set to suppress the welcome dialog or user education popups. (T261423)
+			if ( mw.user.options.get( 'visualeditor-hidebetawelcome' ) || mw.user.options.get( 'visualeditor-hideusered' ) ) {
+				return mw.user.options.get( 'visualeditor-editor' ) === 'visualeditor' ? 'VisualEditor' : 'SourceEditor';
+			} else {
+				// We don't know what their preference is.
+				// For now, continue to give them the source editor.
+				return 'SourceEditor';
+			}
 	}
 	// In the event of misconfiguration, fall back to source
 	return 'SourceEditor';
