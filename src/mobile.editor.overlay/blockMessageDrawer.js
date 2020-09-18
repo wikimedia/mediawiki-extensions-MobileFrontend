@@ -1,4 +1,4 @@
-var
+const
 	Drawer = require( '../mobile.startup/Drawer' ),
 	BlockMessageDetails = require( './BlockMessageDetails' );
 

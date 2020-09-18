@@ -1,5 +1,5 @@
 'use strict';
-var Button = require( '../mobile.startup/Button' ),
+const Button = require( '../mobile.startup/Button' ),
 	View = require( '../mobile.startup/View' ),
 	Icon = require( '../mobile.startup/Icon' ),
 	util = require( '../mobile.startup/util' );
@@ -26,7 +26,7 @@ class BlockMessageDetails extends View {
 				return mw.msg( 'mobile-frontend-editor-blocked-drawer-help' );
 			},
 			createTitle: function () {
-				var msgKey = 'mobile-frontend-editor-blocked-drawer-title';
+				let msgKey = 'mobile-frontend-editor-blocked-drawer-title';
 				if ( mw.user.isAnon() ) {
 					msgKey += '-ip';
 				}
@@ -41,7 +41,7 @@ class BlockMessageDetails extends View {
 				return mw.msg( msgKey );
 			},
 			createBody: function () {
-				var msgKey = '';
+				let msgKey = '';
 				if ( mw.user.isAnon() && this.anonOnly ) {
 					msgKey = 'mobile-frontend-editor-blocked-drawer-body';
 					if ( this.noCreateAccount ) {
@@ -81,7 +81,7 @@ class BlockMessageDetails extends View {
 	 * @return {Object} Configuration options
 	 */
 	getButtonConfig() {
-		var cta = true;
+		let cta = true;
 		const config = {
 				progressive: true
 			},
