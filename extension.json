@@ -812,7 +812,7 @@
 			"value": false
 		},
 		"MFDefaultEditor": {
-			"value": "source"
+			"value": "preference"
 		},
 		"MFEnableJSConsoleRecruitment": {
 			"value": false

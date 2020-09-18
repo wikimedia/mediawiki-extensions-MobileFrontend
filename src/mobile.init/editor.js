@@ -89,7 +89,7 @@ function getPreferredEditor() {
 			defaultEditor = mw.user.getId() % 2 === 0 ? 'source' : 'visual';
 			mw.config.set( 'wgMFSchemaEditAttemptStepBucket', 'default-' + defaultEditor );
 		} else {
-			defaultEditor = 'source';
+			defaultEditor = 'preference';
 		}
 	}
 	switch ( defaultEditor ) {
