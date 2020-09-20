@@ -9,13 +9,13 @@ final class Outreach {
 	/**
 	 * Config name used to enable/disable the AMC Outreach feature
 	 */
-	const CONFIG_NAME = 'MFAmcOutreach';
+	private const CONFIG_NAME = 'MFAmcOutreach';
 
 	/**
 	 * Config name used to set the minimum number of edits a user must make before
 	 * they will be eligible for AMC Outreach
 	 */
-	const MIN_EDIT_COUNT_CONFIG_NAME = 'MFAmcOutreachMinEditCount';
+	private const MIN_EDIT_COUNT_CONFIG_NAME = 'MFAmcOutreachMinEditCount';
 
 	/**
 	 * @var UserMode

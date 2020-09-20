@@ -15,7 +15,7 @@ class MobileFormatter extends HtmlFormatter {
 	/**
 	 * Class name for collapsible section wrappers
 	 */
-	const STYLE_COLLAPSIBLE_SECTION_CLASS = 'collapsible-block';
+	public const STYLE_COLLAPSIBLE_SECTION_CLASS = 'collapsible-block';
 
 	/**
 	 * @var Title

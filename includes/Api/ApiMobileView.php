@@ -35,7 +35,7 @@ class ApiMobileView extends ApiBase {
 	/**
 	 * Increment this when changing the format of cached data
 	 */
-	const CACHE_VERSION = 9;
+	private const CACHE_VERSION = 9;
 
 	/** @var bool Saves whether redirects has to be followed or not */
 	private $followRedirects;
