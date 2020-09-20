@@ -72,12 +72,6 @@ class MobileContext extends ContextSource {
 	private $forceMobileView = false;
 
 	/**
-	 * Save whether content should be transformed to better suit mobile devices
-	 * @var bool
-	 */
-	private $contentTransformations = true;
-
-	/**
 	 * Save whether or not we should display the mobile view
 	 * @var bool|null
 	 */
@@ -187,22 +181,6 @@ class MobileContext extends ContextSource {
 	 */
 	public function setForceMobileView( $value ) {
 		$this->forceMobileView = $value;
-	}
-
-	/**
-	 * Whether content should be transformed to better suit mobile devices
-	 * @param bool $value should content be transformed?
-	 */
-	public function setContentTransformations( $value ) {
-		$this->contentTransformations = $value;
-	}
-
-	/**
-	 * Whether content should be transformed to better suit mobile devices
-	 * @return bool is content being transformed?
-	 */
-	public function getContentTransformations() {
-		return $this->contentTransformations;
 	}
 
 	/**
