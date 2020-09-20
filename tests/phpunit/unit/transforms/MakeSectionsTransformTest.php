@@ -8,7 +8,7 @@ use MobileFrontend\Transforms\MakeSectionsTransform;
  * @group MobileFrontend
  */
 class MakeSectionsTransformTest extends \MediaWikiUnitTestCase {
-	const SECTION_INDICATOR = '<div class="mw-ui-icon mw-ui-icon-element indicator '
+	private const SECTION_INDICATOR = '<div class="mw-ui-icon mw-ui-icon-element indicator '
 		. 'mw-ui-icon-small mw-ui-icon-flush-left"></div>';
 
 	public static function wrap( $html ) {

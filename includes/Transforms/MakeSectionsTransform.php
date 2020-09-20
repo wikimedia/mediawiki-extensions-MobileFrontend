@@ -24,7 +24,7 @@ class MakeSectionsTransform implements IMobileTransform {
 	/**
 	 * Class name for collapsible section wrappers
 	 */
-	const STYLE_COLLAPSIBLE_SECTION_CLASS = 'collapsible-block';
+	public const STYLE_COLLAPSIBLE_SECTION_CLASS = 'collapsible-block';
 
 	/**
 	 * Whether scripts can be added in the output.
