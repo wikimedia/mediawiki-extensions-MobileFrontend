@@ -10,12 +10,12 @@ use Wikimedia\Rdbms\IResultWrapper;
 class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	// Performance-safe value with PageImages. Try to keep in sync with
 	// WatchListGateway.
-	const LIMIT = 50;
+	public const LIMIT = 50;
 
-	const VIEW_OPTION_NAME = 'mfWatchlistView';
-	const FILTER_OPTION_NAME = 'mfWatchlistFilter';
-	const VIEW_LIST = 'a-z';
-	const VIEW_FEED = 'feed';
+	public const VIEW_OPTION_NAME = 'mfWatchlistView';
+	public const FILTER_OPTION_NAME = 'mfWatchlistFilter';
+	public const VIEW_LIST = 'a-z';
+	public const VIEW_FEED = 'feed';
 
 	/** @var string Saves, how the watchlist is sorted: a-z or as a feed */
 	private $view;

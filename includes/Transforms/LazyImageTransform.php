@@ -13,12 +13,12 @@ class LazyImageTransform implements IMobileTransform {
 	/**
 	 * Do not lazy load images smaller than this size (in pixels)
 	 */
-	const SMALL_IMAGE_DIMENSION_THRESHOLD_IN_PX = 50;
+	private const SMALL_IMAGE_DIMENSION_THRESHOLD_IN_PX = 50;
 
 	/**
 	 * Do not lazy load images smaller than this size (in relative to x-height of the current font)
 	 */
-	const SMALL_IMAGE_DIMENSION_THRESHOLD_IN_EX = 10;
+	private const SMALL_IMAGE_DIMENSION_THRESHOLD_IN_EX = 10;
 
 	/**
 	 * Whether to skip the loading of small images

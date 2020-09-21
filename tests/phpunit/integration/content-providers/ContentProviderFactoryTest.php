@@ -11,7 +11,7 @@ use MobileFrontend\ContentProviders\MwApiContentProvider;
  */
 class ContentProviderFactoryTest extends MediaWikiTestCase {
 	// Test HTML
-	const TEST_HTML = '<a>Anchor</a>';
+	private const TEST_HTML = '<a>Anchor</a>';
 
 	/**
 	 * Mock OutputPage class

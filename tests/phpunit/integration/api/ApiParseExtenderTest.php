@@ -5,7 +5,7 @@
  */
 class ApiParseExtenderTest extends MediaWikiTestCase {
 	// phpcs:ignore Generic.Files.LineLength.TooLong
-	const SECTION_INDICATOR = '<div class="mw-ui-icon mw-ui-icon-element indicator mw-ui-icon-small mw-ui-icon-flush-left"></div>';
+	private const SECTION_INDICATOR = '<div class="mw-ui-icon mw-ui-icon-element indicator mw-ui-icon-small mw-ui-icon-flush-left"></div>';
 
 	/**
 	 * @dataProvider getData
