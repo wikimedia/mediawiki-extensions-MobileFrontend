@@ -89,26 +89,23 @@ class ExtMobileFrontend {
 		}
 
 		$formatter = MobileFormatter::newFromContext( $context, $provider, $config );
-
 		$hookContainer = $services->getHookContainer();
 		$hookContainer->run( 'MobileFrontendBeforeDOM', [ $context, $formatter ] );
 
-		if ( $context->getContentTransformations() ) {
-			$shouldLazyTransformImages = $featureManager->isFeatureAvailableForCurrentUser( 'MFLazyLoadImages' );
-			$leadParagraphEnabled = in_array( $ns, $config->get( 'MFNamespacesWithLeadParagraphs' ) );
-			$showFirstParagraphBeforeInfobox = $leadParagraphEnabled &&
-				$featureManager->isFeatureAvailableForCurrentUser( 'MFShowFirstParagraphBeforeInfobox' );
+		$shouldLazyTransformImages = $featureManager->isFeatureAvailableForCurrentUser( 'MFLazyLoadImages' );
+		$leadParagraphEnabled = in_array( $ns, $config->get( 'MFNamespacesWithLeadParagraphs' ) );
+		$showFirstParagraphBeforeInfobox = $leadParagraphEnabled &&
+			$featureManager->isFeatureAvailableForCurrentUser( 'MFShowFirstParagraphBeforeInfobox' );
 
-			if ( $enableSections ) {
-				$formatter->enableExpandableSections(
-					false,
-					$shouldLazyTransformImages,
-					$showFirstParagraphBeforeInfobox
-				);
-			}
-			// Remove images if they're disabled from special pages, but don't transform otherwise
-			$formatter->applyTransforms();
+		if ( $enableSections ) {
+			$formatter->enableExpandableSections(
+				false,
+				$shouldLazyTransformImages,
+				$showFirstParagraphBeforeInfobox
+			);
 		}
+		// Remove images if they're disabled from special pages, but don't transform otherwise
+		$formatter->applyTransforms();
 
 		return $formatter->getText();
 	}

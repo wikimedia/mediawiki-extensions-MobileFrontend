@@ -62,7 +62,6 @@ class SpecialMobileOptions extends MobileSpecialPage {
 		$this->setJsConfigVars();
 
 		$this->mobileContext->setForceMobileView( true );
-		$this->mobileContext->setContentTransformations( false );
 
 		if ( $this->getRequest()->wasPosted() ) {
 			$this->submitSettingsForm();
