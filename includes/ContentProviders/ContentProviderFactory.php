@@ -7,9 +7,9 @@ use OutputPage;
 use RuntimeException;
 
 class ContentProviderFactory {
-	const MW_API = MwApiContentProvider::class;
-	const PHP_PARSER = DefaultContentProvider::class;
-	const MCS_API = McsContentProvider::class;
+	private const MW_API = MwApiContentProvider::class;
+	private const PHP_PARSER = DefaultContentProvider::class;
+	private const MCS_API = McsContentProvider::class;
 
 	/**
 	 * @var Config

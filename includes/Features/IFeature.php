@@ -12,12 +12,12 @@ interface IFeature {
 	/**
 	 * Beta mode defined in config
 	 */
-	const CONFIG_BETA = 'beta';
+	public const CONFIG_BETA = 'beta';
 
 	/**
 	 * Stable mode defined in config
 	 */
-	const CONFIG_STABLE = 'base';
+	public const CONFIG_STABLE = 'base';
 
 	/**
 	 * Get the feature id

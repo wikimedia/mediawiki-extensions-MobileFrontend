@@ -9,19 +9,19 @@ use Wikimedia\IPUtils;
  * Provide various request-dependant methods to use in mobile context
  */
 class MobileContext extends ContextSource {
-	const MODE_BETA = 'beta';
-	const MODE_STABLE = 'stable';
-	const OPTIN_COOKIE_NAME = 'optin';
-	const STOP_MOBILE_REDIRECT_COOKIE_NAME = 'stopMobileRedirect';
-	const USEFORMAT_COOKIE_NAME = 'mf_useformat';
-	const USER_MODE_PREFERENCE_NAME = 'mfMode';
-	const LOGGER_CHANNEL = 'mobile';
+	public const MODE_BETA = 'beta';
+	public const MODE_STABLE = 'stable';
+	public const OPTIN_COOKIE_NAME = 'optin';
+	public const STOP_MOBILE_REDIRECT_COOKIE_NAME = 'stopMobileRedirect';
+	public const USEFORMAT_COOKIE_NAME = 'mf_useformat';
+	public const USER_MODE_PREFERENCE_NAME = 'mfMode';
+	public const LOGGER_CHANNEL = 'mobile';
 
 	// Keep in sync with https://wikitech.wikimedia.org/wiki/X-Analytics.
-	const ANALYTICS_HEADER_KEY = 'mf-m';
-	const ANALYTICS_HEADER_DELIMITER = ',';
-	const ANALYTICS_HEADER_VALUE_BETA = 'b';
-	const ANALYTICS_HEADER_VALUE_AMC = 'amc';
+	private const ANALYTICS_HEADER_KEY = 'mf-m';
+	private const ANALYTICS_HEADER_DELIMITER = ',';
+	private const ANALYTICS_HEADER_VALUE_BETA = 'b';
+	private const ANALYTICS_HEADER_VALUE_AMC = 'amc';
 
 	/**
 	 * Saves the testing mode user has opted in: 'beta' or 'stable'

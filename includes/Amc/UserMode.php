@@ -13,17 +13,17 @@ use Wikimedia\Assert\Assert;
 
 class UserMode implements IUserMode, IUserSelectableMode {
 
-	const USER_OPTION_MODE_AMC = 'mf_amc_optin';
+	public const USER_OPTION_MODE_AMC = 'mf_amc_optin';
 
 	/**
 	 * Value in the user options when AMC is enabled
 	 */
-	const OPTION_ENABLED = '1';
+	public const OPTION_ENABLED = '1';
 
 	/**
 	 * Value in the user options when AMC is disabled (default state)
 	 */
-	const OPTION_DISABLED = '0';
+	public const OPTION_DISABLED = '0';
 
 	/**
 	 * @var \User

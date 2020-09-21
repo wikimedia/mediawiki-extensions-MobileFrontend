@@ -7,7 +7,7 @@ namespace MobileFrontend\Features;
  */
 class Feature implements IFeature {
 
-	const DEFAULT_ENABLED_MODE = false;
+	private const DEFAULT_ENABLED_MODE = false;
 	/**
 	 * @var string
 	 */

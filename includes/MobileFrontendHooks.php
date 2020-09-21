@@ -19,12 +19,12 @@ use MobileFrontend\Models\MobilePage;
  * Any changes relating to Minerva should go into Minerva.hooks.php
  */
 class MobileFrontendHooks {
-	const MOBILE_PREFERENCES_SECTION = 'rendering/mobile';
-	const MOBILE_PREFERENCES_SPECIAL_PAGES = 'mobile-specialpages';
-	const ENABLE_SPECIAL_PAGE_OPTIMISATIONS = '1';
+	private const MOBILE_PREFERENCES_SECTION = 'rendering/mobile';
+	public const MOBILE_PREFERENCES_SPECIAL_PAGES = 'mobile-specialpages';
+	private const ENABLE_SPECIAL_PAGE_OPTIMISATIONS = '1';
 	// This should always be kept in sync with @width-breakpoint-tablet
 	// in resources/src/mediawiki.less/mediawiki.ui/variables.less
-	const DEVICE_WIDTH_TABLET = '720px';
+	private const DEVICE_WIDTH_TABLET = '720px';
 
 	/**
 	 * Enables the global booleans $wgHTMLFormAllowTableFormat and $wgUseMediaWikiUIEverywhere
