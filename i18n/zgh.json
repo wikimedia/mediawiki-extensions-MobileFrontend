@@ -3,6 +3,7 @@
 		"authors": [
 			"Amara-Amaziɣ",
 			"Aslmad mohamed belarhzali",
+			"Brahim-essaidi",
 			"Hakim1bal",
 			"YesIn",
 			"ⵕⴰⵊⵉ"
@@ -10,6 +11,8 @@
 	},
 	"mobile-frontend-editor-blocked-drawer-action-ok": "ⵡⴰⵅⵅⴰ",
 	"mobile-frontend-editor-blocked-drawer-body-link": "ⵥⵕ ⵓⴳⴳⴰⵔ",
+	"mobile-frontend-editor-blocked-drawer-reason-header": "ⵜⴰⵎⵏⵜⵉⵍⵜ",
+	"mobile-frontend-editor-blocked-drawer-help": "ⵥⵕ ⵉⴼⵔⵓⵔⵉⵜⵏ",
 	"mobile-frontend-fontchanger-option-small": "ⴰⵎⵥⵥⴰⵏ",
 	"mobile-frontend-last-modified-date": "ⴰⵙⵏⴼⵍ ⴰⵎⴳⴳⴰⵔⵓ ⴳ $1, ⴳ $2",
 	"mobile-frontend-news-items": "ⴷⴳ ⵉⵏⵖⵎⵉⵙⵏ",
