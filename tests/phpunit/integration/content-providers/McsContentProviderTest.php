@@ -9,7 +9,7 @@ use MobileFrontend\ContentProviders\McsContentProvider;
  * @covers ::__construct
  */
 class McsContentProviderTest extends MediaWikiTestCase {
-	const BASE_URL = '/w/api.php';
+	private const BASE_URL = '/w/api.php';
 
 	/**
 	 * @param string $baseUrl

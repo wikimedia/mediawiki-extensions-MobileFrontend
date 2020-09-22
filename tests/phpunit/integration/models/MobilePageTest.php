@@ -13,10 +13,10 @@ class MobilePageTest extends MediaWikiTestCase {
 	// Timestamp from MW format to Unix format
 	// TS_MW is '20181028200709' and to Unix gives
 	// '1540757229' using the wfTimestamp() function.
-	const TS_MW_TO_TS_UNIX = '1540757229';
+	private const TS_MW_TO_TS_UNIX = '1540757229';
 
 	// Example timestamp in MediaWiki format
-	const TS_MW = '20181028200709';
+	private const TS_MW = '20181028200709';
 
 	/**
 	 * Creates an instance of `File`.
