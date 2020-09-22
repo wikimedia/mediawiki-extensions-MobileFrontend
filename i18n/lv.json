@@ -129,6 +129,7 @@
 	"mobile-frontend-media-load-fail-message": "Ielādējot šo attēlu atgadījās kļūda.",
 	"mobile-frontend-media-load-fail-retry": "Atjaunināt",
 	"mobile-frontend-missing-image": "Attēls",
+	"mobile-frontend-tap-to-display-image": "Piespied, lai parādītu attēlu.",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 km}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",
 	"mobile-frontend-nearby-error-guidance": "Mēģini atjaunināt savu atrašanās vietu.",

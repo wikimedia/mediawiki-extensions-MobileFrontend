@@ -77,7 +77,7 @@
 	"mobile-frontend-edit-signup-action": "Message shown above the signup form when it is reached from a link in the editor.",
 	"mobile-frontend-editor-anon": "Title for link to edit a page without logging in.",
 	"mobile-frontend-editor-anonwarning": "Warning message, when user want to edit without logging in.",
-	"mobile-frontend-editor-blocked-drawer-action-login": "Label for a button in the mobile block message drawer.",
+	"mobile-frontend-editor-blocked-drawer-action-login": "Label for a button in the mobile block message drawer.\n{{identical|Log in}}",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "Label for a button in the mobile block message drawer.",
 	"mobile-frontend-editor-blocked-drawer-action-randompage": "Label for a button in the mobile block message drawer. The button links to [[Special:RandomPage]].",
 	"mobile-frontend-editor-blocked-drawer-title": "Title for the drawer that appears when a user with a blocked account attempts to edit.\n\nSee also:\n* {{msg-mw|Mobile-frontend-editor-blocked-drawer-title-partial}}\n* {{msg-mw|Mobile-frontend-editor-blocked-drawer-title-ip}}\n* {{msg-mw|Mobile-frontend-editor-blocked-drawer-title-ip-partial}}",
