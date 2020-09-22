@@ -9,9 +9,9 @@ use MobileFrontend\ContentProviders\MwApiContentProvider;
  * @covers ::__construct
  */
 class MwApiContentProviderTest extends MediaWikiTestCase {
-	const BASE_URL = '/w/api.php';
-	const SKIN_NAME = 'testSkin';
-	const REV_ID = 1;
+	private const BASE_URL = '/w/api.php';
+	private const SKIN_NAME = 'testSkin';
+	private const REV_ID = 1;
 
 	/**
 	 * Create an object of the MwApiContentProvider class
