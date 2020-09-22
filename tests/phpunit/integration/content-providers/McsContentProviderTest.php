@@ -20,6 +20,9 @@ class McsContentProviderTest extends MediaWikiTestCase {
 		$out = new OutputPage( new RequestContext() );
 		if ( $title ) {
 			$out->setTitle( $title );
+		} else {
+			// make sure RequestContext doesn't pick up a title from the global
+			$this->setMwGlobals( 'wgTitle', null );
 		}
 		return new McsContentProvider( $baseUrl, $out );
 	}
