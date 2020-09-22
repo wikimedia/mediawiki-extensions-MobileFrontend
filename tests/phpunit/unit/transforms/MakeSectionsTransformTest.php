@@ -56,11 +56,6 @@ class MakeSectionsTransformTest extends \MediaWikiUnitTestCase {
 	public function provideTransform() {
 		// Test section:
 		// Test common based functionality
-		$hatnote = '<div role="note" class="hatnote navigation-not-searchable">hatnote.</div>';
-		$infobox = '<table class="infobox">1</table>';
-		$wrappedCoordsWithTrailingWhitespace = '<p><span><span id="coordinates">not empty</span>'
-		  . '</span>    </p>';
-		$emptypelt = '<p class="mw-empty-elt"></p>';
 
 		yield [
 			'',
