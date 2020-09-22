@@ -49,7 +49,7 @@ class MakeSectionsTransformTest extends \MediaWikiUnitTestCase {
 		$wrapped = self::wrap( $html );
 		$doc->loadHTML( $wrapped );
 		$transform->apply( $doc->getElementsByTagName( 'body' )->item( 0 ) );
-		$this->assertEquals( $doc->saveHTML(), self::wrap( $expected ), $reason );
+		$this->assertEquals( self::wrap( $expected ), $doc->saveHTML(), $reason );
 		libxml_clear_errors();
 	}
 
