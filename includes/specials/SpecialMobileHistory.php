@@ -10,7 +10,7 @@ use Wikimedia\Rdbms\IResultWrapper;
 class SpecialMobileHistory extends MobileSpecialPageFeed {
 	/** @var bool Whether the mobile special page has a desktop special page */
 	protected $hasDesktopVersion = true;
-	private const LIMIT = 50;
+	protected const LIMIT = 50;
 	private const DB_REVISIONS_TABLE = 'revision';
 	/** @var string|null Timestamp to offset results from */
 	protected $offset;
