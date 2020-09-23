@@ -30,7 +30,7 @@ class SubHeadingTransformTest extends \MediaWikiUnitTestCase {
 		$doc = new DOMDocument();
 		$doc->loadHTML( self::wrap( $html ) );
 		$transform->apply( $doc->getElementsByTagName( 'body' )->item( 0 ) );
-		$this->assertEquals( $doc->saveHTML(), self::wrap( $expected ), $explanation );
+		$this->assertEquals( self::wrap( $expected ), $doc->saveHTML(), $explanation );
 	}
 
 	public function provideTransform() {

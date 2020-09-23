@@ -130,8 +130,8 @@ class LazyImageTransformTest extends \MediaWikiUnitTestCase {
 		$doc->loadHTML( self::wrap( self::wrapSection( $img ) ) );
 		$transform->apply( $doc->getElementsByTagName( 'body' )->item( 0 ) );
 		$this->assertEquals(
-			$doc->saveHTML(),
 			self::wrap( self::wrapSection( $img ) ),
+			$doc->saveHTML(),
 			"First section should be ignored"
 		);
 		libxml_clear_errors();
@@ -155,8 +155,8 @@ class LazyImageTransformTest extends \MediaWikiUnitTestCase {
 		$doc->loadHTML( self::wrap( $img ) );
 		$transform->apply( $doc->getElementsByTagName( 'body' )->item( 0 ) );
 		$this->assertEquals(
-			$doc->saveHTML(),
 			self::wrap( $img ),
+			$doc->saveHTML(),
 			"Unwrapped to <section> image should be ignored"
 		);
 		libxml_clear_errors();
@@ -188,8 +188,8 @@ class LazyImageTransformTest extends \MediaWikiUnitTestCase {
 		$doc->loadHTML( self::wrap( self::wrapSection( 'First' ) . self::wrapSection( $html ) ) );
 		$transform->apply( $doc->getElementsByTagName( 'body' )->item( 0 ) );
 		$this->assertEquals(
-			$doc->saveHTML(),
 			self::wrap( self::wrapSection( 'First' ) . self::wrapSection( $expected ) ),
+			$doc->saveHTML(),
 			$explanation
 		);
 		libxml_clear_errors();
