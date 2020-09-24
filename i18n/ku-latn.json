@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Balyozxane",
 			"Bikarhêner",
 			"Cûndûllah el-Kurdî",
 			"George Animal",
@@ -26,8 +27,8 @@
 	"mobile-frontend-diffview-title": "Guhertin",
 	"mobile-frontend-editor-anon": "Bê têketinê biguherîne",
 	"mobile-frontend-editor-blocked-drawer-title": "Tu ji guherandina {{SITENAME}} hatî astengkirin",
-	"mobile-frontend-editor-blocked-drawer-title-partial": "Hûn ji guherandina vê rûpelê hatin astengkirin",
-	"mobile-frontend-editor-blocked-drawer-help": "Detay",
+	"mobile-frontend-editor-blocked-drawer-title-partial": "Tu ji guherandina vê rûpelê hatiyî astengkirin.",
+	"mobile-frontend-editor-blocked-drawer-help": "Hûragahiyan bibîne",
 	"mobile-frontend-editor-cancel": "Betal bike",
 	"mobile-frontend-editor-continue": "Pêşve",
 	"mobile-frontend-editor-editing": "Tê guherandin",
@@ -87,8 +88,10 @@
 	"mobile-frontend-watchlist-filter-talk": "Gotûbêj",
 	"mobile-frontend-watchlist-more": "bêhtir",
 	"tag-mobile_edit": "Guhertina mobîl",
+	"tag-mobile_edit-description": "Guhertinên bi telefonekê çêkirî (malper an sepan)",
 	"tag-advanced_mobile_edit": "Guhertina pêşketî ya mobîl",
 	"tag-mobile_web_edit": "Guhertina malpera mobîl",
+	"tag-mobile_web_edit-description": "Guhertinên bi malpera mobîlê çêkirî",
 	"mobile-frontend-loading-message": "Tê barkirin...",
 	"mobile-frontend-mobile-option-amc-learn-more": "Zêdetir hîn bibe"
 }
