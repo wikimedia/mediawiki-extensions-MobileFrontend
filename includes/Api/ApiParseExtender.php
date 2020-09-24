@@ -6,6 +6,8 @@ use ApiBase;
 use ApiResult;
 use MediaWiki\MediaWikiServices;
 use MobileFormatter;
+use MobileFrontend\Transforms\MakeSectionsTransform;
+use MobileFrontend\Transforms\SubHeadingTransform;
 use Title;
 
 /**
@@ -44,13 +46,25 @@ class ApiParseExtender {
 			if ( isset( $data['parse']['text'] ) && $params['mobileformat'] ) {
 				$title = Title::newFromText( $data['parse']['title'] );
 				$text = $data['parse']['text'];
+
 				$mf = new MobileFormatter(
 					MobileFormatter::wrapHTML( $text ), $title, $config, $context
-				);
-				$mf->enableExpandableSections( false, false, false );
+ );
 				// HACK: need a nice way to request a TOC-free HTML in the first place
 				$mf->remove( [ '.toc', '.mw-headline-anchor' ] );
-				$mf->applyTransforms();
+
+				$transforms = [];
+				$options = $config->get( 'MFMobileFormatterOptions' );
+				$topHeadingTags = $options['headings'];
+
+				$transforms[] = new SubHeadingTransform( $topHeadingTags );
+
+				$transforms[] = new MakeSectionsTransform(
+					$topHeadingTags,
+					false
+				);
+
+				$mf->applyTransforms( $transforms );
 				$result->addValue( [ 'parse' ], 'text', $mf->getText(),
 					ApiResult::OVERRIDE | ApiResult::NO_SIZE_CHECK );
 			}

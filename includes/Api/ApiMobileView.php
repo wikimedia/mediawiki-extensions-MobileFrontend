@@ -674,7 +674,7 @@ class ApiMobileView extends ApiBase {
 					$mf = new MobileFormatter(
 						MobileFormatter::wrapHTML( $html ), $title, $config, $context
 					);
-					$mf->applyTransforms();
+					$mf->applyTransforms( [] );
 					$html = $mf->getText();
 				}
 
