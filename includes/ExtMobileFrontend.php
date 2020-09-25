@@ -99,7 +99,7 @@ class ExtMobileFrontend {
 
 		if ( $enableSections ) {
 			$formatter->enableExpandableSections(
-				false,
+				true,
 				$shouldLazyTransformImages,
 				$showFirstParagraphBeforeInfobox
 			);
