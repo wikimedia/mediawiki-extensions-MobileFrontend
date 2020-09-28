@@ -44,7 +44,7 @@
 		"bundlesize": "0.18.0",
 		"clean-webpack-plugin": "0.1.19",
 		"cross-env": "5.2.1",
-		"eslint-config-wikimedia": "0.16.0",
+		"eslint-config-wikimedia": "0.17.0",
 		"grunt-banana-checker": "0.9.0",
 		"jquery": "3.5.1",
 		"jsdoc": "3.6.3",

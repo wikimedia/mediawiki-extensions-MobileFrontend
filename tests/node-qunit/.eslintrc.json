@@ -4,5 +4,8 @@
 		"wikimedia/qunit",
 		"wikimedia/server",
 		"../../src/.eslintrc.json"
-	]
+	],
+	"rules": {
+		"no-shadow": "off"
+	}
 }

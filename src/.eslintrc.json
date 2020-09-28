@@ -15,8 +15,11 @@
 	},
 	"rules": {
 		"no-var": "off",
+		"no-shadow": "off",
 		"jsdoc/check-tag-names": "off",
 		"jsdoc/no-undefined-types": "off",
+		"jsdoc/require-returns": "off",
+		"jsdoc/require-property-type": "off",
 		"jsdoc/valid-types": "off"
 	}
 }
