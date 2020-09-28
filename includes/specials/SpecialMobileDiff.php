@@ -173,10 +173,16 @@ class SpecialMobileDiff extends MobileSpecialPage {
 				$this->rev->getSlot( SlotRecord::MAIN, RevisionRecord::RAW )->getModel()
 			);
 
-		// T245172
+		// Set the title of the page, used for content model checks (T245172)
 		// There should be a better way to tell the DifferenceEngine which Title to use.
 		$correctTitleContext = new DerivativeContext( $this->getContext() );
 		$correctTitleContext->setTitle( $this->targetTitle );
+		// By setting the title, we lose the revision ID passed as subpage parameter,
+		// so pretend that it was set as URL parameter, so that links work (T263937)
+		$correctTitleContext->setRequest( new DerivativeRequest(
+			$this->getRequest(),
+			$this->getRequest()->getValues() + [ 'diff' => $this->revId ]
+		) );
 
 		$engine = $contentHandler->createDifferenceEngine( $correctTitleContext,
 			$this->getPrevId(), $this->revId, 0, false, $unhide );
