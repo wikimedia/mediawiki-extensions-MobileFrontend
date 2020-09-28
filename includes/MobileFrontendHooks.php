@@ -364,6 +364,14 @@ class MobileFrontendHooks {
 			$output = $context->getOutput();
 			$newRevId = $newRevRecord->getId();
 
+			// Pass other query parameters, e.g. 'unhide' (T263937)
+			$otherParams = $diff->getContext()->getRequest()->getValues();
+			unset( $otherParams['diff'] );
+			unset( $otherParams['oldid'] );
+			unset( $otherParams['title'] );
+
+			$redirectUrl = SpecialPage::getTitleFor( 'MobileDiff', $newRevId )->getFullURL( $otherParams );
+
 			// The MobileDiff page currently only supports showing a single revision, so
 			// only redirect to MobileDiff if we are sure this isn't a multi-revision diff.
 			if ( $oldRevRecord ) {
@@ -375,11 +383,11 @@ class MobileFrontendHooks {
 					$prevRevId = $prevRevRecord->getId();
 					$oldRevId = $oldRevRecord->getId();
 					if ( $prevRevId === $oldRevId ) {
-						$output->redirect( SpecialPage::getTitleFor( 'MobileDiff', $newRevId )->getFullURL() );
+						$output->redirect( $redirectUrl );
 					}
 				}
 			} else {
-				$output->redirect( SpecialPage::getTitleFor( 'MobileDiff', $newRevId )->getFullURL() );
+				$output->redirect( $redirectUrl );
 			}
 		}
 
