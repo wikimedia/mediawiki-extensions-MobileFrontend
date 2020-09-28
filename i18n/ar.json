@@ -70,7 +70,7 @@
 	"mobile-frontend-editor-anonwarning": "<strong>تحذير</strong>: أنت لست مسجل الدخول. سيكون عنوان الأيبي الخاص بك علنيًّا عند قيامك بأي تعديل. إن <strong>سجلت دخولك</strong> أو <strong>أنشأت حسابًا</strong>، فتعديلاتك ستنسب لاسم المستخدم الخاص بك، مع المزيد من الميزات الأخرى.",
 	"mobile-frontend-editor-blocked-drawer-title": "مُنع حسابك من تحرير {{SITENAME}}",
 	"mobile-frontend-editor-blocked-drawer-title-partial": "مُنع حسابك من تعديل هذه الصفحة",
-	"mobile-frontend-editor-blocked-drawer-reason-header": "سبب المنع",
+	"mobile-frontend-editor-blocked-drawer-reason-header": "السبب",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|تم المنع}} بواسطة",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "ستنتهي صلاحية المنع في",
 	"mobile-frontend-editor-blocked-drawer-help": "التفاصيل",

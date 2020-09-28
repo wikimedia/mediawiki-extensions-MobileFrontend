@@ -7,6 +7,7 @@
 			"Nasir8891",
 			"Tauhid16",
 			"Titodutta",
+			"YahyA",
 			"ZI Jony",
 			"Zaheen",
 			"আফতাবুজ্জামান"
@@ -57,7 +58,7 @@
 	"mobile-frontend-editor-blocked-drawer-reason-header": "বাধা প্রদানের কারণ",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|বাধা}} প্রদান করেছেন",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "বাধা শেষ হবে",
-	"mobile-frontend-editor-blocked-drawer-help": "বিস্তারিত",
+	"mobile-frontend-editor-blocked-drawer-help": "বিস্তারিত দেখুন",
 	"mobile-frontend-editor-generic-block-reason": "অজানা কারণ",
 	"mobile-frontend-editor-cancel": "বাতিল",
 	"mobile-frontend-editor-cancel-confirm": "আপনি কি সত্যিই আপনার সম্পাদনা পরিত্যাগ করতে চান?",
