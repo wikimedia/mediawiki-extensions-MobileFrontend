@@ -100,9 +100,6 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onRequestContextCreateSkin( $context, &$skin ) {
-		// FIXME: This shouldn't be a global, it should be possible for other extensions
-		// to set this via a static variable or set function in ULS
-		global $wgULSPosition;
 		$services = MediaWikiServices::getInstance();
 
 		/** @var MobileContext $mobileContext */
@@ -118,9 +115,6 @@ class MobileFrontendHooks {
 
 		// enable wgUseMediaWikiUIEverywhere
 		self::enableMediaWikiUI();
-
-		// FIXME: Remove hack around Universal Language selector bug 57091
-		$wgULSPosition = 'none';
 
 		// Handle any X-Analytics header values in the request by adding them
 		// as log items. X-Analytics header values are serialized key=value
