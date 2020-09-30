@@ -6,6 +6,8 @@ use MediaWiki\ChangeTags\Taggable;
 use MediaWiki\MediaWikiServices;
 use MobileFrontend\ContentProviders\ContentProviderFactory;
 use MobileFrontend\Models\MobilePage;
+use MobileFrontend\Transforms\LazyImageTransform;
+use MobileFrontend\Transforms\MakeSectionsTransform;
 
 /**
  * Hook handlers for MobileFrontend extension
@@ -242,7 +244,7 @@ class MobileFrontendHooks {
 			$featureManager->isFeatureAvailableForCurrentUser( 'MFLazyLoadImages' )
 		) {
 			$html .= Html::inlineScript( ResourceLoader::filter( 'minify-js',
-				MobileFrontendSkinHooks::gradeCImageSupport()
+				LazyImageTransform::gradeCImageSupport()
 			), $skin->getOutput()->getCSP()->getNonce() );
 		}
 		return true;
@@ -304,7 +306,7 @@ class MobileFrontendHooks {
 		if ( $namespaceAllowed && $runMobileFormatter ) {
 			$text = ExtMobileFrontend::domParse( $out, $text, $runMobileFormatter );
 			$nonce = $out->getCSP()->getNonce();
-			$text = MobileFrontendSkinHooks::interimTogglingSupport( $nonce ) . $text;
+			$text = MakeSectionsTransform::interimTogglingSupport( $nonce ) . $text;
 		}
 		return true;
 	}

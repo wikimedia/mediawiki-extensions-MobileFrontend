@@ -7,7 +7,7 @@ use MobileFrontend\Transforms\MakeSectionsTransform;
  *
  * @group MobileFrontend
  */
-class MakeSectionsTransformTest extends \MediaWikiUnitTestCase {
+class MakeSectionsTransformTest extends MediaWikiTestCase {
 	private const SECTION_INDICATOR = '<div class="mw-ui-icon mw-ui-icon-element indicator '
 		. 'mw-ui-icon-small mw-ui-icon-flush-left"></div>';
 
@@ -123,5 +123,29 @@ class MakeSectionsTransformTest extends \MediaWikiUnitTestCase {
 
 		return "<section class=\"$className\" id=\"mf-section-$sectionNumber\""
 			. "$attrs>$contentHtml</section>";
+	}
+
+	/**
+	 * @covers ::interimTogglingSupport
+	 */
+	public function testInterimTogglingSupport() {
+		$nonce = RequestContext::getMain()->getOutput()->getCSP()->getNonce();
+		$js = MakeSectionsTransform::interimTogglingSupport( $nonce );
+
+		$this->assertStringContainsString(
+			'function mfTempOpenSection(',
+			$js,
+			'creates global function called from MobileFormatter::prepareHeading'
+		);
+		$this->assertStringContainsString(
+			'mf-section-',
+			$js,
+			'uses (partial) ID set in MobileFormatter::createSectionBodyElement'
+		);
+		$this->assertStringContainsString(
+			'open-block',
+			$js,
+			'contains class name to be toggled'
+		);
 	}
 }

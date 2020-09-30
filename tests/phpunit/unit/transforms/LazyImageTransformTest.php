@@ -274,4 +274,28 @@ class LazyImageTransformTest extends \MediaWikiUnitTestCase {
 			]
 		];
 	}
+
+	/**
+	 * @covers \MobileFrontend\Transforms\LazyImageTransform::gradeCImageSupport
+	 */
+	public function testGradeCImageSupport() {
+		$js = LazyImageTransform::gradeCImageSupport();
+
+		$this->assertStringContainsString(
+			'noscript',
+			$js,
+			'gain the widest possible browser support, scan for noscript tag'
+		);
+		$this->assertStringContainsString(
+			'lazy-image-placeholder',
+			$js,
+			'check if sibling has the lazy-image-placeholder class gotten from ns[i].nextSibling;'
+		);
+		$this->assertStringContainsString(
+			'parentNode.replaceChild( img, p );',
+			$js,
+			'make sure the replacement to image tag was properly done'
+		);
+	}
+
 }

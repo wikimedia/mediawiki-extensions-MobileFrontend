@@ -6,53 +6,6 @@
  */
 class MobileFrontendSkinHooksTest extends MediaWikiLangTestCase {
 	/**
-	 * @covers ::interimTogglingSupport
-	 */
-	public function testInterimTogglingSupport() {
-		$nonce = RequestContext::getMain()->getOutput()->getCSP()->getNonce();
-		$js = MobileFrontendSkinHooks::interimTogglingSupport( $nonce );
-
-		$this->assertStringContainsString(
-			'function mfTempOpenSection(',
-			$js,
-			'creates global function called from MobileFormatter::prepareHeading'
-		);
-		$this->assertStringContainsString(
-			'mf-section-',
-			$js,
-			'uses (partial) ID set in MobileFormatter::createSectionBodyElement'
-		);
-		$this->assertStringContainsString(
-			'open-block',
-			$js,
-			'contains class name to be toggled'
-		);
-	}
-
-	/**
-	 * @covers ::gradeCImageSupport
-	 */
-	public function testGradeCImageSupport() {
-		$js = MobileFrontendSkinHooks::gradeCImageSupport();
-
-		$this->assertStringContainsString(
-			'noscript',
-			$js,
-			'gain the widest possible browser support, scan for noscript tag'
-		);
-		$this->assertStringContainsString(
-			'lazy-image-placeholder',
-			$js,
-			'check if sibling has the lazy-image-placeholder class gotten from ns[i].nextSibling;'
-		);
-		$this->assertStringContainsString(
-			'parentNode.replaceChild( img, p );',
-			$js,
-			'make sure the replacement to image tag was properly done'
-		);
-	}
-
-	/**
 	 * @covers ::getPluralLicenseInfo
 	 * @dataProvider providePluralLicenseInfoData
 	 */

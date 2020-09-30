@@ -6,7 +6,9 @@ use DOMDocument;
 use DOMElement;
 use DOMXPath;
 use Exception;
+use Html;
 use MobileUI;
+use ResourceLoader;
 
 /**
  * Implements IMobileTransform, that splits the body of the document into
@@ -191,6 +193,30 @@ class MakeSectionsTransform implements IMobileTransform {
 		}
 
 		return $headings;
+	}
+
+	/**
+	 * Make it possible to open sections while JavaScript is still loading.
+	 *
+	 * @param string|null $nonce CSP nonce or null if feature is disabled
+	 * @return string The JavaScript code to add event handlers to the skin
+	 */
+	public static function interimTogglingSupport( $nonce ) {
+		$js = <<<JAVASCRIPT
+function mfTempOpenSection( id ) {
+	var block = document.getElementById( "mf-section-" + id );
+	block.className += " open-block";
+	// The previous sibling to the content block is guaranteed to be the
+	// associated heading due to mobileformatter. We need to add the same
+	// class to flip the collapse arrow icon.
+	// <h[1-6]>heading</h[1-6]><div id="mf-section-[1-9]+"></div>
+	block.previousSibling.className += " open-block";
+}
+JAVASCRIPT;
+		return Html::inlineScript(
+			ResourceLoader::filter( 'minify-js', $js ),
+			$nonce
+		);
 	}
 
 	/**
