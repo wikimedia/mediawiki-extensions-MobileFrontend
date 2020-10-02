@@ -2,6 +2,10 @@
 
 use MediaWiki\MediaWikiServices;
 use MobileFrontend\ContentProviders\ContentProviderFactory;
+use MobileFrontend\Transforms\LazyImageTransform;
+use MobileFrontend\Transforms\MakeSectionsTransform;
+use MobileFrontend\Transforms\MoveLeadParagraphTransform;
+use MobileFrontend\Transforms\SubHeadingTransform;
 use Wikibase\Client\WikibaseClient;
 use Wikibase\DataModel\Entity\EntityDocument;
 use Wikibase\DataModel\Entity\ItemId;
@@ -88,7 +92,13 @@ class ExtMobileFrontend {
 			return $html;
 		}
 
-		$formatter = MobileFormatter::newFromContext( $context, $provider, $config );
+		$formatter = new MobileFormatter(
+			MobileFormatter::wrapHtml( $html ),
+			$title,
+			$config,
+			$context
+		);
+
 		$hookContainer = $services->getHookContainer();
 		$hookContainer->run( 'MobileFrontendBeforeDOM', [ $context, $formatter ] );
 
@@ -97,15 +107,28 @@ class ExtMobileFrontend {
 		$showFirstParagraphBeforeInfobox = $leadParagraphEnabled &&
 			$featureManager->isFeatureAvailableForCurrentUser( 'MFShowFirstParagraphBeforeInfobox' );
 
+		$transforms = [];
 		if ( $enableSections ) {
-			$formatter->enableExpandableSections(
-				true,
-				$shouldLazyTransformImages,
-				$showFirstParagraphBeforeInfobox
+			$options = $config->get( 'MFMobileFormatterOptions' );
+			$topHeadingTags = $options['headings'];
+
+			$transforms[] = new SubHeadingTransform( $topHeadingTags );
+
+			$transforms[] = new MakeSectionsTransform(
+				$topHeadingTags,
+				true
 			);
 		}
-		// Remove images if they're disabled from special pages, but don't transform otherwise
-		$formatter->applyTransforms();
+
+		if ( $shouldLazyTransformImages ) {
+			$transforms[] = new LazyImageTransform( $config->get( 'MFLazyLoadSkipSmallImages' ) );
+		}
+
+		if ( $showFirstParagraphBeforeInfobox ) {
+			$transforms[] = new MoveLeadParagraphTransform( $title, $title->getLatestRevID() );
+		}
+
+		$formatter->applyTransforms( $transforms );
 
 		return $formatter->getText();
 	}

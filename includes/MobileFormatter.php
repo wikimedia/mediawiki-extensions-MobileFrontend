@@ -1,12 +1,7 @@
 <?php
 
 use HtmlFormatter\HtmlFormatter;
-use MobileFrontend\ContentProviders\IContentProvider;
 use MobileFrontend\Transforms\IMobileTransform;
-use MobileFrontend\Transforms\LazyImageTransform;
-use MobileFrontend\Transforms\MakeSectionsTransform;
-use MobileFrontend\Transforms\MoveLeadParagraphTransform;
-use MobileFrontend\Transforms\SubHeadingTransform;
 
 /**
  * Converts HTML into a mobile-friendly version
@@ -33,11 +28,6 @@ class MobileFormatter extends HtmlFormatter {
 	private $context;
 
 	/**
-	 * @var array<IMobileTransform>
-	 */
-	private $transforms = [];
-
-	/**
 	 * @param string $html Text to process
 	 * @param Title $title Title to which $html belongs
 	 * @param Config $config
@@ -54,83 +44,18 @@ class MobileFormatter extends HtmlFormatter {
 	}
 
 	/**
-	 * Creates and returns a MobileFormatter
-	 *
-	 * @param MobileContext $context in which the page is being rendered. Needed to access page title
-	 *  and MobileFrontend configuration.
-	 * @param IContentProvider $provider
-	 * @param Config $config
-	 *
-	 * @return self
-	 */
-	public static function newFromContext(
-		MobileContext $context,
-		IContentProvider $provider,
-		Config $config
-	) {
-		$title = $context->getTitle();
-		$html = self::wrapHTML( $provider->getHTML() );
-		$formatter = new self( $html, $title, $config, $context );
-		return $formatter;
-	}
-
-	/**
-	 * Enables support of page for expandable sections
-	 * NOTE: this function isn't idempotent and second call might lead to unexpected
-	 * results.
-	 *
-	 * @todo refactor it in a way to pass array of transforms in contructor, to make
-	 *   class immutable
-	 *
-	 * @todo kill with fire when there will be minimum of pre-1.1 app users remaining
-	 *
-	 * @param bool $scriptsEnabled should scripts in sections be enabled?
-	 * @param bool $shouldLazyTransformImages whether to enable lazyTransformImages feature
-	 * @param bool $showFirstParagraphBeforeInfobox Whether the first paragraph from the lead
-	 *  section should be shown before all infoboxes that come earlier.
-	 */
-	public function enableExpandableSections(
-		bool $scriptsEnabled,
-		bool $shouldLazyTransformImages,
-		bool $showFirstParagraphBeforeInfobox
-	) {
-		// Sectionify the content and transform it if necessary per section
-
-		$options = $this->config->get( 'MFMobileFormatterOptions' );
-		$topHeadingTags = $options['headings'];
-
-		$this->transforms[] = new SubHeadingTransform( $topHeadingTags );
-
-		$this->transforms[] = new MakeSectionsTransform(
-			$topHeadingTags,
-			$scriptsEnabled
-		);
-
-		if ( $shouldLazyTransformImages ) {
-			$this->transforms[] = new LazyImageTransform(
-				$this->config->get( 'MFLazyLoadSkipSmallImages' )
-			);
-		}
-
-		if ( $showFirstParagraphBeforeInfobox ) {
-			$this->transforms[] = new MoveLeadParagraphTransform(
-				$this->title,
-				$this->title->getLatestRevID()
-			);
-		}
-	}
-
-	/**
 	 * Performs various transformations to the content to make it appropriate for mobile devices.
+	 * @param array<IMobileTransform> $transforms lit of transforms to be sequentually applied
+	 *   to html DOM
 	 */
-	public function applyTransforms() {
+	public function applyTransforms( array $transforms ) {
 		// Apply all removals before continuing with transforms (see T185040 for example)
 		$this->filterContent();
 
 		$doc = $this->getDoc();
 		$body = $doc->getElementsByTagName( 'body' )->item( 0 );
 
-		foreach ( $this->transforms as $transform ) {
+		foreach ( $transforms as $transform ) {
 			/** @phan-suppress-next-line PhanTypeMismatchArgument DOMNode vs. DOMElement */
 			$transform->apply( $body );
 		}
