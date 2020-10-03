@@ -56,47 +56,55 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 	 * @param string|null $par The username
 	 */
 	public function executeWhenAvailable( $par = '' ) {
-		$this->offset = $this->getRequest()->getVal( 'offset', '' );
-		if ( $par ) {
-			// enter article history view
-			$this->user = User::newFromName( $par, false );
+		$request = $this->getRequest();
+		$target = $request->getVal( 'target', '' );
+		$this->offset = $request->getVal( 'offset', '' );
 
-			$usernameUtils = MediaWikiServices::getInstance()->getUserNameUtils();
-			$userIsIP = ( $usernameUtils->isIP( $par ) || IPUtils::isIPv6( $par ) );
-			if ( $this->user && ( $this->user->idForName() || $userIsIP ) ) {
-				// set page title as on desktop site - bug 66656
-				$username = $this->user->getName();
-				$out = $this->getOutput();
-				$out->addModuleStyles( [
-					'mobile.pagelist.styles',
-					"mobile.placeholder.images",
-					'mobile.pagesummary.styles',
-					'mobile.user.icons'
-				] );
-				$out->setHTMLTitle( $this->msg(
-					'pagetitle',
-					$this->msg( 'contributions-title', $username )->plain()
-				)->inContentLanguage() );
-
-				if ( $userIsIP ) {
-					$this->renderHeaderBar( Title::newFromText( 'User:' . $par ) );
-				} else {
-					$this->renderHeaderBar( $this->user->getUserPage() );
-				}
-				$pager = new ContribsPager( $this->getContext(), ContribsPager::processDateFilter( [
-					'target' => $this->user->getName(),
-					// All option setting is baked into SpecialContribution::execute
-					// Until that method gets refactored we will ignore all options
-					// See https://phabricator.wikimedia.org/T199429
-				] ) );
-				$res = $pager->reallyDoQuery( $this->offset, self::LIMIT, false );
-				$out->addHTML( Html::openElement( 'div', [ 'class' => 'content-unstyled' ] ) );
-				$this->showContributions( $res, $pager );
-				$out->addHTML( Html::closeElement( 'div' ) );
-				return;
-			}
+		if ( $par || $target ) {
+			$this->user = $par
+				? User::newFromName( $par, false )
+				: User::newFromName( $target, false );
 		}
-		$this->showPageNotFound();
+
+		if ( !$this->user ) {
+			$this->showPageNotFound();
+			return;
+		}
+
+		$usernameUtils = MediaWikiServices::getInstance()->getUserNameUtils();
+		$userIsIP = ( $usernameUtils->isIP( $this->user ) || IPUtils::isIPv6( $this->user ) );
+		if ( $this->user && $this->user->idForName() || $userIsIP ) {
+			// set page title as on desktop site - bug 66656
+			$username = $this->user->getName();
+			$out = $this->getOutput();
+			$out->addModuleStyles( [
+				'mobile.pagelist.styles',
+				"mobile.placeholder.images",
+				'mobile.pagesummary.styles',
+				'mobile.user.icons'
+			] );
+			$out->setHTMLTitle( $this->msg(
+				'pagetitle',
+				$this->msg( 'contributions-title', $username )->plain()
+			)->inContentLanguage() );
+
+			if ( $userIsIP ) {
+				$this->renderHeaderBar( Title::makeTitle( NS_USER, $username ) );
+			} else {
+				$this->renderHeaderBar( $this->user->getUserPage() );
+			}
+			$pager = new ContribsPager( $this->getContext(), ContribsPager::processDateFilter( [
+				'target' => $username,
+				// All option setting is baked into SpecialContribution::execute
+				// Until that method gets refactored we will ignore all options
+				// See https://phabricator.wikimedia.org/T199429
+			] ) );
+			$res = $pager->reallyDoQuery( $this->offset, self::LIMIT, false );
+			$out->addHTML( Html::openElement( 'div', [ 'class' => 'content-unstyled' ] ) );
+			$this->showContributions( $res, $pager );
+			$out->addHTML( Html::closeElement( 'div' ) );
+			return;
+		}
 	}
 
 	/**
