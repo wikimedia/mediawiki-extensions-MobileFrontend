@@ -484,6 +484,9 @@ class MobileContext extends ContextSource {
 	 * @param int|null $expiry Expire time of cookie
 	 */
 	public function setStopMobileRedirectCookie( $expiry = null ) {
+		$stopMobileRedirectCookieSecureValue =
+			$this->config->get( 'MFStopMobileRedirectCookieSecureValue' );
+
 		if ( $expiry === null ) {
 			$expiry = $this->getUseFormatCookieExpiry();
 		}
@@ -493,7 +496,7 @@ class MobileContext extends ContextSource {
 			[
 				'domain' => $this->getStopMobileRedirectCookieDomain(),
 				'prefix' => '',
-				'secure' => true,
+				'secure' => (bool)$stopMobileRedirectCookieSecureValue,
 			]
 		);
 	}
