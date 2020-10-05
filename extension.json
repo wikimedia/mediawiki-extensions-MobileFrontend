@@ -1008,6 +1008,9 @@
 		},
 		"MFSchemaEditAttemptStepOversample": {
 			"value": false
+		},
+		"MFStopMobileRedirectCookieSecureValue": {
+			"value": true
 		}
 	},
 	"ServiceWiringFiles": [
