@@ -20,7 +20,7 @@ class MobileFrontendEditorHooks {
 			// schemaEditAttemptStep.js
 			'wgMFSchemaEditAttemptStepOversample' => $config->get( 'MFSchemaEditAttemptStepOversample' ),
 			// MFDefaultEditor should be `source`, `visual`, `preference`, or `abtest`.
-			// `preference` means to fall back on the desktop `visualeditor-editor` setting.
+			// `preference` means to fall back on the desktop `visualeditor-editor` setting (if VE has been used)
 			// `abtest` means to split between source and visual 50/50
 			// editor.js
 			'wgMFDefaultEditor' => $config->get( 'MFDefaultEditor' ),
