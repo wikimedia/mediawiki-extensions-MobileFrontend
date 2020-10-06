@@ -1011,6 +1011,9 @@
 		},
 		"MFTrackBlockNotices": {
 			"value": false
+		},
+		"MFStopMobileRedirectCookieSecureValue": {
+			"value": true
 		}
 	},
 	"ServiceWiringFiles": [

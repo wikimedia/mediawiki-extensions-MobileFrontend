@@ -642,3 +642,14 @@ shown before infoboxes if `$wgMFShowFirstParagraphBeforeInfobox` is enabled.
     0
   ]
 ```
+
+#### $wgMFStopMobileRedirectCookieSecureValue
+
+The default value of the 'secure' cookie parameter that controls
+MobileFrontend's mobile redirect behavior.  This variable defaults to true to
+encourage the use of TLS on any servers hosting MediaWiki and to avoid the
+disclosure of minor user privacy issues regarding a user's mobile browsing
+preferences.
+
+* Type: `Boolean`
+* Default: `true`
