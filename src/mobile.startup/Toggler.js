@@ -334,10 +334,16 @@ Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 	 */
 	function checkHash() {
 		var hash = window.location.hash;
+		var decodedHash;
 		if ( hash.indexOf( '#' ) === 0 ) {
 			// Non-latin characters in the hash will be provided percent-encoded, which
 			// jQuery would later fail to cope with.
-			self.reveal( decodeURIComponent( hash ), $container, page );
+			try {
+				decodedHash = decodeURIComponent( hash );
+				self.reveal( decodedHash, $container, page );
+			} catch ( e ) {
+				// sometimes decoding will fail e.g. T262599, T264914. If that happens ignore.
+			}
 		}
 	}
 
