@@ -37,7 +37,7 @@
 	"mobile-frontend-editor-summary": "સારાંશ :",
 	"mobile-frontend-editor-switch-editor": "સંપાદક સ્વિચ કરો",
 	"mobile-frontend-editor-uploadenable": "સંપાદન સક્રિય કરવા માટે પ્રથમ એક ફોટો અપલોડ કરો.",
-	"mobile-frontend-editor-viewing-source-page": "<strong>સ્રોત જુવો</strong><span> $1</span>",
+	"mobile-frontend-editor-viewing-source-page": "<span> $1</span>નો <strong>સ્રોત જોઇ રહ્યા છો</strong>",
 	"mobile-frontend-editor-wait": "ફેરફાર સેવ થાય છે, કૃપા કરીને રાહ જુઓ.",
 	"mobile-frontend-expand-sections-description": "નવા પાનાની શોધખોળ કરતા શમય હંમેશા તમામ વિભાગો વિસ્તૃત કરો.",
 	"mobile-frontend-expand-sections-status": "બધા વિભાગો વિસ્તૃત કરો",
