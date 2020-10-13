@@ -634,12 +634,17 @@ class ApiMobileView extends ApiBase {
 				$this->dieWithError( [ 'apierror-missingtitle' ] );
 			}
 			$parserOptions = $this->makeParserOptions( $wikiPage );
+			$parserCacheMetadata = $services->getParserCache()->getMetadata( $wikiPage );
 			$key = $cache->makeKey(
 				'mf-mobileview',
+				$wikiPage->getId(),
 				$touched,
 				$revId,
 				(int)$this->noTransform,
-				$services->getParserCache()->getKey( $wikiPage, $parserOptions )
+				$parserOptions->optionsHash(
+					$parserCacheMetadata ? $parserCacheMetadata->getUsedOptions() :
+						ParserOptions::allCacheVaryingOptions()
+				)
 			);
 		}
 
