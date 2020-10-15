@@ -364,7 +364,10 @@ class MobileFrontendHooks {
 			$otherParams = $diff->getContext()->getRequest()->getValues();
 			unset( $otherParams['diff'] );
 			unset( $otherParams['oldid'] );
+			// We pass diff/oldid through the page title, so we must unset any parameters
+			// that override the title (but don't override diff/oldid)
 			unset( $otherParams['title'] );
+			unset( $otherParams['curid'] );
 
 			$redirectUrl = SpecialPage::getTitleFor( 'MobileDiff', $newRevId )->getFullURL( $otherParams );
 
