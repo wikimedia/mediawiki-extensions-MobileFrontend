@@ -13,6 +13,7 @@
 	"mobile-frontend-editor-publish": "ኣሕቲሙ",
 	"mobile-frontend-editor-save": "ኣቐምጥ",
 	"mobile-frontend-editor-summary": "መጠቓለሊ፦",
+	"mobile-frontend-fontchanger-link": "መጠን ቅርጺ ፊደል",
 	"mobile-frontend-languages-header": "ቋንቋታት",
 	"mobile-frontend-languages-header-page": "$1 - ካልኦት ቋንቋታት",
 	"mobile-frontend-languages-text": "$1 ኣብ $2 {{PLURAL:$2|ቋንቋ|ቋንቋታት}} ዝርከብ እዩ።",
@@ -30,12 +31,14 @@
 	"mobile-frontend-view": "ናይ ሞባይል ትርኢት",
 	"mobile-frontend-watchlist-a-z": "ዝርዝር",
 	"mobile-frontend-watchlist-cta-button-login": "ብመንነት እተው",
+	"mobile-frontend-watchlist-cta-button-signup": "ተመዝገብ",
 	"mobile-frontend-watchlist-filter-all": "ምሉእ",
 	"mobile-frontend-watchlist-filter-articles": "ገጻት",
 	"mobile-frontend-watchlist-filter-other": "ካልእ",
 	"mobile-frontend-watchlist-filter-talk": "ምይይጥ",
 	"mobile-frontend-watchlist-more": "ተወሳኺ",
 	"mobile-frontend-loading-message": "ይጽዕን ኣሎ...",
+	"mobile-frontend-mobile-option-MFEnableFontChanger": "መጠን ቅርጺ ፊደል",
 	"mobile-frontend-mobile-option-amc-learn-more": "ተወሳኺ ፍለጥ",
 	"mobile-frontend-amc-outreach-no-thanks": "ኣይፋል፣ የቐንየለይ"
 }
