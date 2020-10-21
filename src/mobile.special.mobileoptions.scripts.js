@@ -209,7 +209,10 @@ function initMobileOptions() {
 	if (
 		// Don't show this option on large screens since it's only honored for small screens.
 		// This logic should be kept in sync with Toggle._enable().
-		!browser.isWideScreen()
+		!browser.isWideScreen() &&
+		// don't add the option if the sections are set by default as the setting doesn't
+		// work in the opposite direction! (more background on T239195)
+		mw.config.get( 'wgMFCollapseSectionsByDefault' )
 	) {
 		addExpandAllSectionsToForm( $form );
 	}
