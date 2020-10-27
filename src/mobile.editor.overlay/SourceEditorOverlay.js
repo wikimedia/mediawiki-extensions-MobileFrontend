@@ -6,6 +6,7 @@ var EditorOverlayBase = require( './EditorOverlayBase' ),
 	EditorGateway = require( './EditorGateway' ),
 	fakeToolbar = require( '../mobile.init/fakeToolbar' ),
 	mfExtend = require( '../mobile.startup/mfExtend' ),
+	setPreferredEditor = require( './setPreferredEditor' ),
 	VisualEditorOverlay = require( './VisualEditorOverlay' );
 
 /**
@@ -438,7 +439,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 		} );
 
 		// Save a user setting indicating that this user prefers using the VisualEditor
-		mw.storage.set( 'preferredEditor', 'VisualEditor' );
+		setPreferredEditor( 'VisualEditor' );
 
 		this.$el.addClass( 'switching' );
 		this.$el.find( '.overlay-header-container' ).hide();
