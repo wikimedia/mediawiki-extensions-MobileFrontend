@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"ArenaL5",
 			"Banjo",
 			"Beninho",
 			"Breogan2008",
@@ -50,10 +51,10 @@
 	"mobile-frontend-edit-signup-action": "Rexístrese para editar.",
 	"mobile-frontend-editor-anon": "Editar sen iniciar sesión",
 	"mobile-frontend-editor-anonwarning": "<strong>Aviso</strong>: non accedeu ao sistema. O seu enderezo IP será visible publicamente se fai calquera edición. Se <strong>accede ao sistema</strong> ou <strong>crea unha conta</strong>, as súas edicións atribuiranse ao seu nome de usuario, xunto con outros beneficios.",
-	"mobile-frontend-editor-blocked-drawer-reason-header": "Motivo para o bloqueo",
+	"mobile-frontend-editor-blocked-drawer-reason-header": "Motivo",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:1$|Bloqueado|Bloqueada}} por",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "O bloqueo caducará o",
-	"mobile-frontend-editor-blocked-drawer-help": "Detalles",
+	"mobile-frontend-editor-blocked-drawer-help": "Máis detalles",
 	"mobile-frontend-editor-generic-block-reason": "Razón descoñecida",
 	"mobile-frontend-editor-cancel": "Cancelar",
 	"mobile-frontend-editor-cancel-confirm": "Está seguro de querer deixar a edición?",
