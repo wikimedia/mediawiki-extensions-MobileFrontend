@@ -222,7 +222,7 @@
 	"mobile-frontend-talk-topic-error-permission": "No se puede añadir el tema. No tienes permiso para editar las páginas.",
 	"mobile-frontend-talk-topic-error-spam": "Se rechazó el tema porque contenía un fragmento de material publicitario no deseado.",
 	"mobile-frontend-talk-topic-error-badtoken": "Ocurrió un error en el servidor. No se puede guardar tu edición. Prueba a recargar la página.",
-	"mobile-frontend-talk-topic-wait": "Guardando tu tema nuevo. Aguarda.",
+	"mobile-frontend-talk-topic-wait": "Guardando tu tema nuevo. Espera.",
 	"mobile-frontend-terms-text": "Términos de uso",
 	"mobile-frontend-view": "Versión para móviles",
 	"mobile-frontend-view-desktop": "Escritorio",
