@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Kandar",
+			"RXerself",
 			"Uchup19",
 			"WikiKaruhun"
 		]
@@ -61,7 +62,7 @@
 	"mobile-frontend-editor-success": "Ngahasil! Éditan anjeun geus disimpen.",
 	"mobile-frontend-editor-success-landmark-1": "Wilujeng, ayeuna anjeun jadi éditor {{SITENAME}}!",
 	"mobile-frontend-editor-success-new-page": "Wilujeng dina panyieunan kaca anyar!",
-	"mobile-frontend-editor-summary-placeholder": "Conto: Menerkeun kesalahan ngetik, panambahan eusi",
+	"mobile-frontend-editor-summary-placeholder": "Conto: Menerkeun kasalahan ngetik, panambahan eusi",
 	"mobile-frontend-editor-summary-request": "Kumaha cara anjeun dina ngaropéa ieu kaca?",
 	"mobile-frontend-editor-summary": "Tingkesan:",
 	"mobile-frontend-editor-switch-editor": "Pindah ka édit sumber",
