@@ -907,12 +907,12 @@ class MobileFrontendHooks {
 	/**
 	 * Register default preferences for MobileFrontend
 	 *
-	 * @param array &$wgDefaultUserOptions Reference to default options array
+	 * @param array &$defaultUserOptions Reference to default options array
 	 */
-	public static function onUserGetDefaultOptions( &$wgDefaultUserOptions ) {
+	public static function onUserGetDefaultOptions( &$defaultUserOptions ) {
 		$config = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Config' );
 		if ( $config->get( 'MFEnableMobilePreferences' ) ) {
-			$wgDefaultUserOptions += [
+			$defaultUserOptions += [
 				self::MOBILE_PREFERENCES_SPECIAL_PAGES => self::ENABLE_SPECIAL_PAGE_OPTIMISATIONS,
 			];
 		}

@@ -356,7 +356,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 
 	/**
 	 * Render a result row in feed view
-	 * @param object $row a row of db result
+	 * @param \stdClass $row a row of db result
 	 */
 	protected function showFeedResultRow( $row ) {
 		if ( $row->rc_deleted ) {

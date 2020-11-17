@@ -1052,6 +1052,7 @@ class MobileContext extends ContextSource {
 	/**
 	 * Process-local override for MFStripResponsiveImages, used by
 	 * the mobileview API request.
+	 * @var bool|null
 	 */
 	private $stripResponsiveImagesOverride = null;
 

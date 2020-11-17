@@ -10,10 +10,11 @@ use DOMElement;
  */
 class SubHeadingTransform implements IMobileTransform {
 
+	/** @var string[] */
 	private $topHeadingTags;
 
 	/**
-	 * @param String[] $topHeadingTags list of heading tags ordered by weight
+	 * @param string[] $topHeadingTags list of heading tags ordered by weight
 	 */
 	public function __construct( array $topHeadingTags ) {
 		$this->topHeadingTags = $topHeadingTags;
