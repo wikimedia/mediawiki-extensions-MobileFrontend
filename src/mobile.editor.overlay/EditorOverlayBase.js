@@ -504,7 +504,10 @@ mfExtend( EditorOverlayBase, Overlay, {
 							mechanism: 'cancel',
 							type: 'abandon'
 						} );
-						self.allowCloseWindow.release();
+						// May not be set if overlay has not been previously shown
+						if ( self.allowCloseWindow ) {
+							self.allowCloseWindow.release();
+						}
 						mw.hook( 'mobileFrontend.editorClosed' ).fire();
 						exit();
 					}
@@ -524,7 +527,10 @@ mfExtend( EditorOverlayBase, Overlay, {
 				type: ( this.target && this.target.edited ) ? 'abandon' : 'nochange'
 			} );
 		}
-		this.allowCloseWindow.release();
+		// If undefined .show may not have been called
+		if ( this.allowCloseWindow ) {
+			this.allowCloseWindow.release();
+		}
 		mw.hook( 'mobileFrontend.editorClosed' ).fire();
 		exit();
 	},

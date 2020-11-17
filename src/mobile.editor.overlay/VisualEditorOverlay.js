@@ -144,9 +144,12 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 	 * was hidden, but only work correctly after it is shown.
 	 */
 	redoTargetInit: function () {
-		this.target.adjustContentPadding();
-		this.target.restoreEditSection();
-		this.scrollToLeadParagraph();
+		// Note this.target will not be set if an error occurred and/or destroyTarget was called.
+		if ( this.target ) {
+			this.target.adjustContentPadding();
+			this.target.restoreEditSection();
+			this.scrollToLeadParagraph();
+		}
 	},
 	/**
 	 * Scroll so that the lead paragraph in edit mode shows at the same place on the screen
