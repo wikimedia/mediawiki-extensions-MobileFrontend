@@ -58,7 +58,7 @@ function onEditLinkClick( elem, ev, router ) {
  */
 function getPreferredEditor() {
 	var defaultEditor, tokenData, anonid,
-		preferredEditor = mw.storage.get( 'preferredEditor' );
+		preferredEditor = mw.user.options.get( 'mobile-editor' ) || mw.storage.get( 'preferredEditor' );
 	if ( preferredEditor ) {
 		return preferredEditor;
 	}

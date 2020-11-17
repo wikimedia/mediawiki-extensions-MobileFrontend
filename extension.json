@@ -812,6 +812,7 @@
 			"value": false
 		},
 		"MFDefaultEditor": {
+			"description": "Default editor when there is no user preference set (mobile-editor). One of 'source', 'visual', or 'preference' (inherit desktop editor preference).",
 			"value": "preference"
 		},
 		"MFEnableJSConsoleRecruitment": {
@@ -1015,6 +1016,9 @@
 		"MFStopMobileRedirectCookieSecureValue": {
 			"value": true
 		}
+	},
+	"DefaultUserOptions": {
+		"mobile-editor": ""
 	},
 	"ServiceWiringFiles": [
 		"includes/ServiceWiring.php"

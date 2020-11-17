@@ -23,6 +23,7 @@ use MobileFrontend\Transforms\MakeSectionsTransform;
 class MobileFrontendHooks {
 	private const MOBILE_PREFERENCES_SECTION = 'rendering/mobile';
 	public const MOBILE_PREFERENCES_SPECIAL_PAGES = 'mobile-specialpages';
+	public const MOBILE_PREFERENCES_EDITOR = 'mobile-editor';
 	private const ENABLE_SPECIAL_PAGE_OPTIMISATIONS = '1';
 	// This should always be kept in sync with @width-breakpoint-tablet
 	// in resources/src/mediawiki.less/mediawiki.ui/variables.less
@@ -934,6 +935,7 @@ class MobileFrontendHooks {
 		$preferences[SpecialMobileWatchlist::FILTER_OPTION_NAME] = $definition;
 		$preferences[SpecialMobileWatchlist::VIEW_OPTION_NAME] = $definition;
 		$preferences[MobileContext::USER_MODE_PREFERENCE_NAME] = $definition;
+		$preferences[self::MOBILE_PREFERENCES_EDITOR] = $definition;
 
 		if ( $config->get( 'MFEnableMobilePreferences' ) ) {
 			$preferences[ self::MOBILE_PREFERENCES_SPECIAL_PAGES ] = [

@@ -5,6 +5,7 @@ var EditorOverlayBase = require( './EditorOverlayBase' ),
 	mfExtend = require( '../mobile.startup/mfExtend' ),
 	router = mw.loader.require( 'mediawiki.router' ),
 	identifyLeadParagraph = require( './identifyLeadParagraph' ),
+	setPreferredEditor = require( './setPreferredEditor' ),
 	util = require( '../mobile.startup/util' );
 
 /**
@@ -253,7 +254,7 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 		} );
 
 		// Save a user setting indicating that this user prefers using the SourceEditor
-		mw.storage.set( 'preferredEditor', 'SourceEditor' );
+		setPreferredEditor( 'SourceEditor' );
 
 		this.$el.addClass( 'switching' );
 		this.$el.find( '.overlay-header-container' ).hide();
