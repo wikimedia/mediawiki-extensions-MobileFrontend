@@ -557,7 +557,7 @@ class MobileContextTest extends MediaWikiTestCase {
 	public function testShouldStripResponsiveImages(
 		$expected,
 		$forceMobileView,
-		$wgMFStripResponsiveImages,
+		$mFStripResponsiveImages,
 		$stripResponsiveImages = null
 	) {
 		/** @var MobileContext $context */
@@ -566,7 +566,7 @@ class MobileContextTest extends MediaWikiTestCase {
 
 		$this->setMwGlobals(
 			'wgMFStripResponsiveImages',
-			$wgMFStripResponsiveImages
+			$mFStripResponsiveImages
 		);
 
 		$context->setStripResponsiveImages( $stripResponsiveImages );

@@ -6,6 +6,7 @@ use DOMElement;
 
 class NoTransform implements IMobileTransform {
 
+	/** @var self */
 	private static $instance;
 
 	/**
