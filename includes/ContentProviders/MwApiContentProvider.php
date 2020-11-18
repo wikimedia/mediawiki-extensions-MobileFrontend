@@ -115,7 +115,7 @@ class MwApiContentProvider implements IContentProvider {
 			if ( array_key_exists( 'langlinks', $parse ) ) {
 				$langlinks = [];
 				foreach ( $parse['langlinks'] as $lang ) {
-					$langlinks[] = ':' . $lang['lang'] . ':' . $lang['title'];
+					$langlinks[] = $lang['lang'] . ':' . $lang['title'];
 				}
 				$out->setLanguageLinks( $langlinks );
 			}
