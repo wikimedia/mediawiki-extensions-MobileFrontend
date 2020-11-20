@@ -276,7 +276,6 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 
 		ChangeTags::modifyDisplayQuery( $tables, $fields, $conds, $join_conds, $query_options, '' );
 
-		// @phan-suppress-next-line SecurityCheck-SQLInjection getQueryInfo's $tables & $fields are safe
 		return $dbr->select( $tables, $fields, $conds, __METHOD__, $query_options, $join_conds );
 	}
 
