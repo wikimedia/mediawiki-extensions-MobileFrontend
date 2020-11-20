@@ -7,6 +7,22 @@
 			"Youssoufkadialy"
 		]
 	},
+	"abusefilter-edit-builder-vars-user-mobile": "ߣߌ߫ ߟߊ߬ߓߊ߰ߙߊ߬ߟߊ ߞߊ߬ ߥߟߴߊ߬ ߡߊ߫ ߡߊ߬ߦߟߍ߬ߡߊ߲߬ߠߌ߲ ߞߍ߫ ߜߋߟߋ߲ߜߋߟߋ߲ ߢߐ߲߯ߕߍߞߣߍ ߘߐ߫",
+	"mobile-frontend-account-create-captcha-placeholder": "ߟߊ߬ߛߙߋ߬ߦߊ߬ߟߌ߬ ߘߏߝߙߍߕߍ ߟߊߘߏ߲߬",
+	"mobile-frontend-categories-heading": "<strong>ߦߌߟߡߊ ߟߎ߬</strong>",
+	"mobile-frontend-categories-subheading": "ߞߐߜߍ ߦߋ߫ ߦߌߟߡߊ ߢߌ߲߬ ߠߎ߫ ߟߋ߬ ߕߊ߫ ߘߌ߫:",
+	"mobile-frontend-categories-nocat": "ߞߐߜߍ ߣߌ߲߬ ߕߍ߫ ߦߌߟߡߊ߫ ߛߌ߫ ߕߊ߫ ߘߌ߫ ߡߎߣߎ߲߬.",
+	"mobile-frontend-categories-add": "ߊ߬ ߓߌ߬ߟߊ߬ ߦߌߟߡߊ ߘߐ߫",
+	"mobile-frontend-categories-search": "ߦߌߟߡߊ ߟߎ߬ ߢߌߣߌ߲߫",
+	"mobile-frontend-categories-nodata": "ߝߎ߬ߕߎ߲߬ߕߌ ߘߏ߫ ߕߎ߲߬ ߦߴߊ߬ ߘߐ߫. ߊ߬ ߝߴߌ ߞߊ߬ ߦߌߟߡߊ ߘߏ߫ ߟߎ߫ ߝߙߊ߬ ߞߵߊ߬ ߟߊߞߎ߲߬ߘߎ߬؟",
+	"mobile-frontend-categories-summary": "ߊ߬ ߓߘߊ߫ ߓߌ߬ߟߊ߬ ߦߌߟߡߊ ߟߎ߬ ߘߐ߫",
+	"mobile-frontend-categories-notification": "ߦߌߟߡߊ. ߓߘߊ߫ ߟߏ߲ߘߐߦߊ߫",
+	"mobile-frontend-categories-add-heading": "<strong>$1<span>ߝߙߊ߬</span>ߦߌߟߡߊ߫ ߞߎߘߊ ߟߎ߬ ߘߐ߫</strong>",
+	"mobile-frontend-categories-add-wait": "ߦߌߟߡߊ ߟߊߞߎ߲߬ߘߎ ߦߴߌ ߘߐ߫߸ ߡߊ߬ߞߐ߬ߣߐ߲߬ߠߌ߲ ߞߍ߫ ߖߊ߰ߣߌ߲߫.",
+	"mobile-frontend-categories-normal": "ߞߣߐߘߐ߫  ߝߊ߲",
+	"mobile-frontend-categories-hidden": "ߛߌ߲߬ߝߏ߲߬ߧߊ߬ߟߌ",
+	"mobile-frontend-changeslist-nocomment": "ߡߊ߬ߦߟߍ߬ߡߊ߲߬ߠߌ߲ ߟߊ߬ߘߛߏ߬ߟߌ߬ ߕߴߦߋ߲߬",
+	"mobile-frontend-cite-error-title": "ߝߎ߬ߕߎ߲߬ߕߌ߸ ߞߊ߬ ߞߏߝߐߟߌ ߟߊߢߎ߲ ߕߴߌ ߘߐ߫",
 	"mobile-frontend-view": "ߦߌ߬ߘߊ߬ߟߌ߫ ߛߋ߲߬ߘߐ߬ߡߊ",
 	"tag-mobile_edit": "ߜߋߟߋ߲ߜߋߟߋ߲߫ ߠߊ߫ ߡߊߦߟߍߡߊ߲ߠߌ߲",
 	"tag-mobile_web_edit": "ߜߋߟߋ߲ߜߋߟߋ߲ ߓߟߐߟߐ߫ ߡߊߦߟߍߡߊ߲ߠߌ߲"
