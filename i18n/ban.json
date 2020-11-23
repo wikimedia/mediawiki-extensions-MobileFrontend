@@ -30,7 +30,7 @@
 	"mobile-frontend-diffview-404-desc": "ID antuk répisi sané ida tunas nénten wénten.<br />Ketah ipun mawinan olih pranala diff sané sampun kuna ring kaca sané sampun kaapus utawi pranala diff sané kawéntenang aksara nénten patut.",
 	"mobile-frontend-diffview-404-title": "Répisi hala",
 	"mobile-frontend-diffview-anonymous": "Sang anganggé anonim",
-	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|bita|bita}} katambahin",
+	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|bita}} katambahin",
 	"mobile-frontend-diffview-bytesnochange": "Nénten wénten pauahan ageng",
 	"mobile-frontend-diffview-bytesremoved": "$1 {{PLURAL:$1|bita}} kaapus",
 	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|uahan}}",
