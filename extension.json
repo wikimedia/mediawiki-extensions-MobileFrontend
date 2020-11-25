@@ -18,7 +18,7 @@
 	"license-name": "GPL-2.0-or-later",
 	"type": "other",
 	"requires": {
-		"MediaWiki": ">= 1.35.0"
+		"MediaWiki": ">= 1.36.0"
 	},
 	"ConfigRegistry": {
 		"mobilefrontend": "GlobalVarConfig::newInstance"
@@ -27,7 +27,13 @@
 		"History": "SpecialMobileHistory",
 		"MobileDiff": "SpecialMobileDiff",
 		"MobileOptions": "SpecialMobileOptions",
-		"MobileLanguages": "SpecialMobileLanguages",
+		"MobileLanguages": {
+			"class": "SpecialMobileLanguages",
+			"services": [
+				"LanguageConverterFactory",
+				"LanguageNameUtils"
+			]
+		},
 		"Uploads": "SpecialUploads"
 	},
 	"APIModules": {
