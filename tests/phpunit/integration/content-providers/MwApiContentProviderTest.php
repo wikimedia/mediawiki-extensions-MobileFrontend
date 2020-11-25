@@ -206,7 +206,7 @@ class MwApiContentProviderTest extends MediaWikiTestCase {
 		$this->assertSame( 'Some text', $actual );
 
 		// Also, this should be in sync with the $rawResponse above (langlinks)
-		$this->assertContains( ':test:MF', $mockOutputPage->getLanguageLinks() );
+		$this->assertContains( 'test:MF', $mockOutputPage->getLanguageLinks() );
 		$this->assertSame( 'No desc', $mockOutputPage->getProperty( 'wgMFDescription' ) );
 	}
 }
