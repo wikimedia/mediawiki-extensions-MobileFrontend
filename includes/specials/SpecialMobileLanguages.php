@@ -1,6 +1,7 @@
 <?php
 
-use MediaWiki\MediaWikiServices;
+use MediaWiki\Languages\LanguageConverterFactory;
+use MediaWiki\Languages\LanguageNameUtils;
 
 /**
  * Provides a list of languages available for a page
@@ -9,8 +10,23 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 	/** @var Title Saves the title object to get languages for */
 	private $title;
 
-	public function __construct() {
+	/** @var ILanguageConverter */
+	private $languageConverter;
+
+	/** @var LanguageNameUtils */
+	private $languageNameUtils;
+
+	/**
+	 * @param LanguageConverterFactory $languageConverterFactory
+	 * @param LanguageNameUtils $languageNameUtils
+	 */
+	public function __construct(
+		LanguageConverterFactory $languageConverterFactory,
+		LanguageNameUtils $languageNameUtils
+	) {
 		parent::__construct( 'MobileLanguages' );
+		$this->languageConverter = $languageConverterFactory->getLanguageConverter( $this->getContentLanguage() );
+		$this->languageNameUtils = $languageNameUtils;
 	}
 
 	/**
@@ -52,8 +68,7 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 
 		if ( isset( $page['langlinks'] ) ) {
 			// Set the name of each language based on the system list of language names
-			$languageMap = MediaWikiServices::getInstance()->getLanguageNameUtils()
-				->getLanguageNames();
+			$languageMap = $this->languageNameUtils->getLanguageNames();
 			$languages = $page['langlinks'];
 			foreach ( $page['langlinks'] as $index => $langObject ) {
 				if ( !$this->isLanguageObjectValid( $languageMap, $langObject ) ) {
@@ -110,12 +125,11 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 	 */
 	private function getLanguageVariants() {
 		$pageLang = $this->title->getPageLanguage();
-		$langConverter = $this->getLanguageConverter();
-		if ( $langConverter->hasVariants() ) {
+		if ( $this->languageConverter->hasVariants() ) {
 			$pageLangCode = $pageLang->getCode();
 			$output = [];
 			// Loops over each variant
-			$variants = $langConverter->getVariants();
+			$variants = $this->languageConverter->getVariants();
 			foreach ( $variants as $code ) {
 				// Gets variant name from language code
 				$varname = $pageLang->getVariantname( $code );

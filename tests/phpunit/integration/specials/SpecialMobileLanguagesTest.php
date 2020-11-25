@@ -132,7 +132,11 @@ class SpecialMobileLanguagesTest extends MediaWikiTestCase {
 				'langlinks' => $langlinks
 			]
 		];
-		$sp = new SpecialMobileLanguages();
+		$services = MediaWikiServices::getInstance();
+		$sp = new SpecialMobileLanguages(
+			$services->getLanguageConverterFactory(),
+			$services->getLanguageNameUtils()
+		);
 		$class = new ReflectionClass( SpecialMobileLanguages::class );
 		$method = $class->getMethod( 'processLanguages' );
 		$method->setAccessible( true );
