@@ -1,12 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
-			"Irus"
+			"Irus",
+			"ObaTango"
 		]
 	},
 	"mobile-frontend-copyright": "E kontenido ta disponé bou di $1, a menos ku ta unique ta alkontrario.",
 	"mobile-frontend-featured-article": "Kontenido estado di awe",
 	"mobile-frontend-terms-text": "Kontenido ta Uza",
 	"mobile-frontend-view": "Bista móvil",
-	"mobile-frontend-view-desktop": "Ofisina"
+	"mobile-frontend-view-desktop": "Ofisina",
+	"tag-mobile_edit": "redakshon móbil",
+	"tag-mobile_web_edit": "Redakshon di wèpsait móbil"
 }
