@@ -132,7 +132,7 @@
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",
 	"mobile-frontend-nearby-error": "{{GRAMMAR:genitive|{{SITENAME}}}} «Nær her» har vanskar.",
 	"mobile-frontend-nearby-error-guidance": "Freist å oppdatera staden din.",
-	"mobile-frontend-nearby-noresults": "Det er stille her ute… Det vart ikkje funne nokon sider nær deg.",
+	"mobile-frontend-nearby-noresults": "Det er stille her ute… Det vart ikkje funne nokon sider for emne nær deg.",
 	"mobile-frontend-nearby-noresults-guidance": "Freist å oppretta ein ny artikkel eller legg til stad til ein som alt finst.",
 	"mobile-frontend-nearby-requirements": "Diverre stør ikkje nettlesaren {{SITENAME}}-funksjonen «Nær her».",
 	"mobile-frontend-nearby-requirements-guidance": "Freist ein annan nettlesar eller slå på JavaScript om du har slege det av.",

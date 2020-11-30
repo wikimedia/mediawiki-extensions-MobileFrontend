@@ -27,6 +27,7 @@
 			"Whym",
 			"Yusuke1109",
 			"そらたこ",
+			"つぶあん派",
 			"珍庵",
 			"組曲師"
 		]
@@ -70,7 +71,7 @@
 	"mobile-frontend-editor-blocked-drawer-title-partial": "あなたはこのページの編集についてブロックされています。",
 	"mobile-frontend-editor-blocked-drawer-title-ip": "あなたのIPアドレスから {{SITENAME}} を編集することはブロックされています。",
 	"mobile-frontend-editor-blocked-drawer-title-ip-partial": "お使いのIPアドレスはこのページの編集をブロックされています。",
-	"mobile-frontend-editor-blocked-drawer-reason-header": "ブロックの理由",
+	"mobile-frontend-editor-blocked-drawer-reason-header": "理由",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "次の利用者{{GENDER:$1|によってブロック}}されました:",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "ブロックは次の期間まで継続されます:",
 	"mobile-frontend-editor-blocked-drawer-help": "詳細",
