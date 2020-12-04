@@ -67,12 +67,18 @@ mfExtend( ReferencesHtmlScraperGateway, ReferencesGateway, {
 	 * @memberof ReferencesHtmlScraperGateway
 	 * @instance
 	 * @param {string} id
-	 * @param {Page} page
+	 * @param {Page} page (unused)
 	 * @param {PageHTMLParser} pageHTMLParser
 	 */
 	getReference: function ( id, page, pageHTMLParser ) {
+		try {
+			id = decodeURIComponent( id );
+		} catch ( e ) {
+			// try id passed in - may already be decoded (T268059)
+			// if it's not found it will throw an error later down the chain.
+		}
 		// If an id is not found it's possible the id passed needs decoding (per T188547).
-		return this.getReferenceFromContainer( decodeURIComponent( id ), pageHTMLParser.$el.find( 'ol.references' ) );
+		return this.getReferenceFromContainer( id, pageHTMLParser.$el.find( 'ol.references' ) );
 	}
 } );
 
