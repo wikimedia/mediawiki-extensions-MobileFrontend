@@ -303,17 +303,14 @@ OverlayManager.prototype = {
 	 *
 	 * The following code will display an overlay whenever a user visits a URL that
 	 * ends with '#/hi/name'. The value of `name` will be passed to the overlay.
+	 * Note the factory must return an Overlay.
+	 * If the overlay needs to load code asynchronously that should be done inside
+	 * the overlay.
 	 *
 	 *     @example
 	 *     overlayManager.add( /\/hi\/(.*)/, function ( name ) {
-	 *       var factoryResult = $.Deferred();
-	 *
-	 *       mw.using( 'mobile.HiOverlay', function () {
 	 *         var HiOverlay = M.require( 'HiOverlay' );
-	 *         factoryResult.resolve( new HiOverlay( { name: name } ) );
-	 *       } );
-	 *
-	 *       return factoryResult;
+	 *         return new HiOverlay( { name: name } ) );
 	 *     } );
 	 *
 	 * @memberof OverlayManager
