@@ -1004,7 +1004,7 @@ class MobileFrontendHooks {
 	 * Finds the wikidata tagline associated with the page
 	 *
 	 * @param ParserOutput $po
-	 * @param Callable $fallbackWikibaseDescriptionFunc A fallback to provide Wikibase description.
+	 * @param callable $fallbackWikibaseDescriptionFunc A fallback to provide Wikibase description.
 	 * Function takes wikibase_item as a first and only argument
 	 * @return string
 	 */
