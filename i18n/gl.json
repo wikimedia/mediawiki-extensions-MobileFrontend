@@ -50,7 +50,7 @@
 	"mobile-frontend-edit-login-action": "<strong>Axude a mellorar {{SITENAME}}.</strong><br />Acceda ao sistema para editar.",
 	"mobile-frontend-edit-signup-action": "Rexístrese para editar.",
 	"mobile-frontend-editor-anon": "Editar sen iniciar sesión",
-	"mobile-frontend-editor-anonwarning": "<strong>Aviso</strong>: non accedeu ao sistema. O seu enderezo IP será visible publicamente se fai calquera edición. Se <strong>accede ao sistema</strong> ou <strong>crea unha conta</strong>, as súas edicións atribuiranse ao seu nome de usuario, xunto con outros beneficios.",
+	"mobile-frontend-editor-anonwarning": "<strong>Aviso:</strong> non accedeu ao sistema. O seu enderezo IP será visible publicamente se fai calquera edición. Se <strong>accede ao sistema</strong> ou <strong>crea unha conta</strong>, as súas edicións atribuiranse ao seu nome de usuario, xunto con outros beneficios.",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Motivo",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:1$|Bloqueado|Bloqueada}} por",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "O bloqueo caducará o",
@@ -150,7 +150,7 @@
 	"mobile-frontend-nearby-info-description": "Pode ler artigos interesantes da {{SITENAME}} sobre lugares preto de vostede.",
 	"mobile-frontend-nearby-info-show-button": "Mostrar artigos na contorna",
 	"mobile-frontend-news-items": "Actualidade",
-	"mobile-frontend-opt-in-explain": "Ao unirse ás probas beta, vostede terá acceso ás últimas funcionalidades experimentais que poden conter erros de software.",
+	"mobile-frontend-opt-in-explain": "{{SITENAME}} βeta é unha forma de probar estas funcionalidades experimentais e dáresnos información útil sobre elas",
 	"mobile-frontend-overlay-close": "Pechar",
 	"mobile-frontend-privacy-link-text": "Protección de datos",
 	"mobile-frontend-references-citation": "Cita",
@@ -232,6 +232,6 @@
 	"mobile-frontend-amc-outreach-enable": "Activar modo avanzado",
 	"mobile-frontend-amc-outreach-no-thanks": "Non, grazas",
 	"mobile-frontend-beta-only": "A funcionalidade só atópase dispoñíbel no modo beta",
-	"mobile-frontend-console-recruit": "Saiba máis sobre a forma en como construímos o noso sitio móbil @ https://www.mediawiki.org/wiki/Extension:MobileFrontend",
+	"mobile-frontend-console-recruit": "Saiba máis sobre a forma en como construímos o noso sitio móbil @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"prefs-mobile": "Preferencias móbiles"
 }
