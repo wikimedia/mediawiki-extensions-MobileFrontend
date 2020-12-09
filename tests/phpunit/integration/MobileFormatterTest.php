@@ -43,7 +43,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 	 */
 	private function makeSectionHeading( $heading, $innerHtml, $sectionNumber = 1 ) {
 		return "<$heading class=\"section-heading\""
-			. " onclick=\"javascript:mfTempOpenSection($sectionNumber)\">"
+			. " onclick=\"mfTempOpenSection($sectionNumber)\">"
 			. self::SECTION_INDICATOR
 			. "$innerHtml</$heading>";
 	}

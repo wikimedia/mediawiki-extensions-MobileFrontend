@@ -93,7 +93,7 @@ class MakeSectionsTransformTest extends MediaWikiTestCase {
 	 */
 	private function makeSectionHeading( $heading, $innerHtml, $sectionNumber = 1 ) {
 		return "<$heading class=\"section-heading\""
-			. ( $sectionNumber === false ? '' : " onclick=\"javascript:mfTempOpenSection($sectionNumber)\"" )
+			. ( $sectionNumber === false ? '' : " onclick=\"mfTempOpenSection($sectionNumber)\"" )
 			. ">"
 			. self::SECTION_INDICATOR
 			. "$innerHtml</$heading>";

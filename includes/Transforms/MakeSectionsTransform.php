@@ -131,7 +131,7 @@ class MakeSectionsTransform implements IMobileTransform {
 		$className = $heading->hasAttribute( 'class' ) ? $heading->getAttribute( 'class' ) . ' ' : '';
 		$heading->setAttribute( 'class', $className . 'section-heading' );
 		if ( $isCollapsible ) {
-			$heading->setAttribute( 'onclick', 'javascript:mfTempOpenSection(' . $sectionNumber . ')' );
+			$heading->setAttribute( 'onclick', 'mfTempOpenSection(' . $sectionNumber . ')' );
 		}
 
 		// prepend indicator - this avoids a reflow by creating a placeholder for a toggling indicator
