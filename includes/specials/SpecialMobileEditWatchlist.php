@@ -88,7 +88,7 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 	/**
 	 * The main entry point for the page.
 	 *
-	 * @param int $mode Whether the user is viewing, editing, or clearing their
+	 * @param string|null $mode Whether the user is viewing, editing, or clearing their
 	 *  watchlist
 	 */
 	public function execute( $mode ) {

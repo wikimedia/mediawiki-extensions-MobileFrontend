@@ -767,6 +767,7 @@ class MobileContext extends ContextSource {
 		foreach ( $templateHostParts as $key => $templateHostPart ) {
 			if ( strstr( $templateHostPart, '%h' ) ) {
 				$parsedHostPartKey = substr( $templateHostPart, 2 );
+				// @phan-suppress-next-line PhanImpossibleTypeComparisonInLoop
 				if ( !array_key_exists( $parsedHostPartKey, $parsedHostParts ) ) {
 					// invalid pattern for this host, ignore
 					return;

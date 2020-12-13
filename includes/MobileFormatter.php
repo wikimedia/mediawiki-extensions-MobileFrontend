@@ -56,7 +56,6 @@ class MobileFormatter extends HtmlFormatter {
 		$body = $doc->getElementsByTagName( 'body' )->item( 0 );
 
 		foreach ( $transforms as $transform ) {
-			/** @phan-suppress-next-line PhanTypeMismatchArgument DOMNode vs. DOMElement */
 			$transform->apply( $body );
 		}
 	}
