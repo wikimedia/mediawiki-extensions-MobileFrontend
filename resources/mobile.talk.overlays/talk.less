@@ -38,7 +38,9 @@
 
 		input:only-child,
 		textarea:only-child {
-			border: 0;
+			&:not( :focus ) {
+				border-color: transparent;
+			}
 		}
 	}
 }
