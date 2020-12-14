@@ -39,17 +39,19 @@ QUnit.test( 'Check comment box for logged in users', function ( assert ) {
 	assert.ok( overlay.$el.find( '.comment' ).length > 0, 'There is a visible comment box' );
 } );
 
-QUnit.test( 'Check error class on textarea', function ( assert ) {
+QUnit.test( 'Check disabled property on textarea', function ( assert ) {
 	const overlay = new TalkSectionOverlay( {
 		api: {},
 		section: 'Test'
 	} );
 
-	// add error class
-	overlay.onSaveClick();
-	assert.ok( overlay.$textarea.hasClass( 'error' ), 'Error class added when try to submit empty comment box.' );
-	overlay.onFocusTextarea();
-	assert.strictEqual( overlay.$textarea.hasClass( 'error' ), false, 'Error class removed after comment box get focus.' );
+	assert.strictEqual( overlay.$saveButton.prop( 'disabled' ), true, '`disabled` at start.' );
+	overlay.onInputTextarea( {
+		target: {
+			value: 'Test'
+		}
+	} );
+	assert.strictEqual( overlay.$saveButton.prop( 'disabled' ), false, '`disabled` removed after comment box gets input value.' );
 } );
 
 QUnit.test( 'Check api request on save', function ( assert ) {
