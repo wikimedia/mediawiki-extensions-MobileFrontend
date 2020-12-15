@@ -45,7 +45,7 @@ function TalkSectionOverlay( options ) {
 				click: function ( ev ) {
 					// If a link has been clicked (that's not the save button)
 					// check that it's okay to exit
-					if ( ev.target.tagName === 'A' &&
+					if ( ev.target.tagName === 'BUTTON' &&
 						ev.target.className.indexOf( 'save-button' ) === -1
 					) {
 						// If the user says okay, do nothing, continuing as if normal link
@@ -56,7 +56,6 @@ function TalkSectionOverlay( options ) {
 					}
 				},
 				'input textarea': 'onInputTextarea',
-				'focus textarea': 'onFocusTextarea',
 				'click .save-button': 'onSaveClick'
 			}
 		} )
@@ -96,6 +95,8 @@ mfExtend( TalkSectionOverlay, Overlay, {
 	defaults: util.extend( {}, Overlay.prototype.defaults, {
 		saveButton: new Button( {
 			block: true,
+			tagName: 'button',
+			disabled: true,
 			additionalClassNames: 'save-button',
 			progressive: true,
 			label: util.saveButtonMessage()
@@ -113,7 +114,13 @@ mfExtend( TalkSectionOverlay, Overlay, {
 	 * @param {Event} ev
 	 */
 	onInputTextarea: function ( ev ) {
-		this.state.text = ev.target.value;
+		var value = ev.target.value;
+		this.state.text = value;
+		if ( value ) {
+			this.$saveButton.prop( 'disabled', false );
+		} else {
+			this.$saveButton.prop( 'disabled', true );
+		}
 	},
 	/**
 	 * A function to run before exiting the overlay
@@ -185,15 +192,6 @@ mfExtend( TalkSectionOverlay, Overlay, {
 		}
 	},
 	/**
-	 * Handler for focus of textarea
-	 *
-	 * @memberof TalkSectionOverlay
-	 * @instance
-	 */
-	onFocusTextarea: function () {
-		this.$textarea.removeClass( 'error' );
-	},
-	/**
 	 * Handle a click on the save button
 	 *
 	 * @memberof TalkSectionOverlay
@@ -249,8 +247,6 @@ mfExtend( TalkSectionOverlay, Overlay, {
 				mw.notify( msg, { type: 'error' } );
 				enableSaveButton();
 			} );
-		} else {
-			this.$textarea.addClass( 'error' );
 		}
 	}
 } );
