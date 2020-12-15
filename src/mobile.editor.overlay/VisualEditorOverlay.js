@@ -126,7 +126,6 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 
 		EditorOverlayBase.prototype.show.apply( this, arguments );
 
-		this.emit( 'editor-loaded' );
 		// log edit attempt
 		this.log( { action: 'ready' } );
 		this.log( { action: 'loaded' } );
@@ -138,6 +137,8 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 			this.$el.append( this.$anonWarning );
 			this.$el.find( '.overlay-content' ).hide();
 		}
+
+		this.emit( 'editor-loaded' );
 	},
 	/**
 	 * Re-do some initialization steps that might have happened while the overlay
