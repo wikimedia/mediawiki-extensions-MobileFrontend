@@ -7,7 +7,8 @@
 			"MyraMidnight",
 			"Snævar",
 			"Sveinki",
-			"Sveinn í Felli"
+			"Sveinn í Felli",
+			"Þjarkur"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Hvort sem notandi breytir síðu með farsímaviðmótinu eða ekki",
@@ -164,7 +165,7 @@
 	"mobile-frontend-watchlist-signup-action": "<strong>Stofnaðu aðgang til að byrja á svona núna.</strong> Skráðu þig inn til að búa hann til núna.",
 	"mobile-frontend-user-page-describe-yourself-editors": "ritlar",
 	"nearby": "Síður um efni nálægt þér",
-	"tag-mobile_edit": "Farsíma breyting",
+	"tag-mobile_edit": "Farsímabreyting",
 	"tag-mobile_edit-description": "Breyting gerð frá farsíma (af vefsvæði eða appi)",
 	"tag-mobile_web_edit": "Breyting frá farsímavef",
 	"tag-mobile_web_edit-description": "Breyting gerð frá farsímavefri",

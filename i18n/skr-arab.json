@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Kaleem Bhatti",
 			"Saraiki"
 		]
 	},
@@ -9,6 +10,9 @@
 	"mobile-frontend-diffview-title": "تبدیلیاں",
 	"mobile-frontend-editor-blocked-drawer-action-login": "لاگ ان تھیوو",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "ٹھیک ہے",
+	"mobile-frontend-editor-blocked-drawer-body-link": "ٻئے ݙیکھو",
+	"mobile-frontend-editor-blocked-drawer-reason-header": "سبب",
+	"mobile-frontend-editor-blocked-drawer-help": "تفصیل ݙیکھو",
 	"mobile-frontend-editor-cancel": "منسوخ",
 	"mobile-frontend-editor-captcha-try-again": "غلط کوڈ، دوبارہ کوشش کرو۔",
 	"mobile-frontend-editor-continue": "اڳلا",
