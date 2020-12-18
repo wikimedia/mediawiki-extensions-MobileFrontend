@@ -232,7 +232,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 			'type' => 'submit',
 		] );
 
-		if ( $user->isLoggedIn() ) {
+		if ( $user->isRegistered() ) {
 			$fields[] = new OOUI\HiddenInputWidget( [ 'name' => 'token',
 				'value' => $user->getEditToken() ] );
 		}
