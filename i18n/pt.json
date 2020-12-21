@@ -63,7 +63,7 @@
 	"mobile-frontend-edit-login-action": "<strong>Ajude a melhorar a wiki {{SITENAME}}.</strong><br />Autentique-se para editar.",
 	"mobile-frontend-edit-signup-action": "<strong>Ajude a melhorar a wiki {{SITENAME}}.</strong><br />Registe-se para editar.",
 	"mobile-frontend-editor-anon": "Editar sem iniciar sessão",
-	"mobile-frontend-editor-anonwarning": "<strong>Aviso:</strong> Não iniciou sessão. O seu endereço IP será registado no histórico de edições desta página. Se <strong>iniciar sessão</strong> ou <strong>criar uma conta</strong>, as suas edições serão registadas com o seu nome de utilizador, podendo ainda usufruir de outros benefícios.",
+	"mobile-frontend-editor-anonwarning": "<strong>Aviso:</strong> não iniciou uma sessão. O seu endereço IP poderá ser visto publicamente se realizar alguma edição. Se <strong>iniciar uma sessão</strong> ou <strong>criar uma conta</strong>, as suas edições serão registadas com o seu nome de utilizador, podendo ainda usufruir de outros benefícios.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Entrar",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "OK",
 	"mobile-frontend-editor-blocked-drawer-action-randompage": "Levar-me para outra página",

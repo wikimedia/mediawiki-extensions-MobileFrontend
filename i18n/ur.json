@@ -50,6 +50,7 @@
 	"mobile-frontend-edit-signup-action": "<strong>{{SITENAME}} کی ترقی میں معاونت فرمائیں۔</strong><br />ترمیم کرنے کے لیے کھاتہ بنائیں۔",
 	"mobile-frontend-editor-anon": "ترمیم بدون داخل نوشتگی",
 	"mobile-frontend-editor-anonwarning": "<strong>انتباہ</strong>: آپ لاگ ان نہیں ہیں۔ چناں چہ اگر آپ کوئی ترمیم کرتے ہیں تو آپ کا آئی پی پتہ عوامی طور پر نظر آئے گا۔\nتاہم اگر آپ<strong>لاگ ان</strong> یا <strong>کھاتہ بنا لیتے ہیں</strong> تو دیگر فوائد کے ساتھ ساتھ آپ کی ترامیم آپ کے صارف نام سے منسوب ہوگی۔",
+	"mobile-frontend-editor-blocked-drawer-action-login": "داخل ہوں",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "ٹھیک ہے",
 	"mobile-frontend-editor-blocked-drawer-title": "آپ کو {{SITENAME}} میں ترمیم کرنے سے روک دیا گیا ہے",
 	"mobile-frontend-editor-blocked-drawer-title-partial": "آپ کو اس صفحے میں ترمیم کرنے سے روک دیا گیا ہے",
