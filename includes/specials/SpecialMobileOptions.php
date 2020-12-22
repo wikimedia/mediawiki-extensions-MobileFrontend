@@ -305,7 +305,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 		$user = $this->getUser();
 		$output = $this->getOutput();
 
-		if ( $user->isLoggedIn() && !$user->matchEditToken( $request->getVal( 'token' ) ) ) {
+		if ( $user->isRegistered() && !$user->matchEditToken( $request->getVal( 'token' ) ) ) {
 			$errorText = __METHOD__ . '(): token mismatch';
 			wfDebugLog( 'mobile', $errorText );
 			$output->addHTML( '<div class="errorbox">'
