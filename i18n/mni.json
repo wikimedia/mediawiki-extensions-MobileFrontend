@@ -13,7 +13,7 @@
 	"mobile-frontend-diffview-anonymous": "ꯃꯁꯛ ꯎꯠꯇꯕ ꯁꯤꯖꯤꯟꯅꯔꯤꯕ",
 	"mobile-frontend-diffview-bytesadded": "{{PLURAL:$1|ꯕꯥꯏꯠ ꯱|ꯕꯥꯏꯠ $1}} ꯍꯥꯞꯆꯤꯟꯂꯦ",
 	"mobile-frontend-diffview-bytesnochange": "ꯑꯍꯣꯡꯕ ꯂꯩꯇꯦ ꯆꯥꯎꯕꯒꯤ ꯆꯥꯡ",
-	"mobile-frontend-diffview-bytesremoved": "$1 {{PLURAL:$1|ꯕꯥꯏꯠ|ꯕꯥꯏꯠ ꯈꯔꯥ}} ꯂꯧꯊꯣꯛꯂꯦ",
+	"mobile-frontend-diffview-bytesremoved": "{{PLURAL:$1|ꯕꯥꯏꯠ ꯱|ꯕꯥꯏꯠ}} $1 ꯂꯧꯊꯣꯛꯂꯦ",
 	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|ꯁꯦꯝꯒꯠ ꯁꯥꯒꯠꯄ|ꯁꯦꯝꯒꯠ ꯁꯥꯒꯠꯄꯁꯤꯡ}}",
 	"mobile-frontend-diffview-title": "ꯑꯍꯣꯡꯕꯁꯤꯡ",
 	"mobile-frontend-editor-blocked-drawer-action-login": "ꯃꯅꯨꯡ ꯆꯪ-ꯁꯤꯟꯕ",
