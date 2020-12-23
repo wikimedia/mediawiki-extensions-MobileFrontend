@@ -300,7 +300,10 @@ class MobileFrontendHooks {
 		);
 
 		$alwaysUseProvider = $config->get( 'MFAlwaysUseContentProvider' );
-		if ( $alwaysUseProvider ) {
+		$ignoreLocal = !( $config->get( 'MFContentProviderTryLocalContentFirst' ) &&
+			$title->exists() );
+
+		if ( $alwaysUseProvider && $ignoreLocal ) {
 			// bypass
 			$runMobileFormatter = true;
 		}
