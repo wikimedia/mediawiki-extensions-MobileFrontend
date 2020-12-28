@@ -1,28 +1,29 @@
 {
 	"@metadata": {
 		"authors": [
+			"Amire80",
 			"Kambai Akau"
 		]
 	},
 	"mobile-frontend-clear-search": "Kak",
-	"mobile-frontend-diffview-title": "A̠ka̠shai",
-	"mobile-frontend-editor-anon": "Jhyuk di̠ mi̠n nwuai mami",
+	"mobile-frontend-diffview-title": "A̱ka̱shai",
+	"mobile-frontend-editor-anon": "Jhyuk di̱ mi̱n nwuai mami",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Nwuo mami",
-	"mobile-frontend-editor-blocked-drawer-action-randompage": "Kyiak nung nat peji a̠ghyang",
+	"mobile-frontend-editor-blocked-drawer-action-randompage": "Kyiak nung nat peji a̱ghyang",
 	"mobile-frontend-editor-blocked-drawer-body-partial": "Kwan jhyuk peji ghyang.",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Jat",
-	"mobile-frontend-editor-generic-block-reason": "A̠kang jat",
+	"mobile-frontend-editor-generic-block-reason": "A̱kang jat",
 	"mobile-frontend-editor-cancel": "Lyang",
-	"mobile-frontend-editor-editing": "Á̠ shyia̠ di̠ jhyuk",
+	"mobile-frontend-editor-editing": "Á̱ shyia̱ di̱ jhyuk",
 	"mobile-frontend-editor-publish": "Shei",
 	"mobile-frontend-editor-save": "Sak",
-	"mobile-frontend-fontchanger-option-small": "A̠da̠dei",
-	"mobile-frontend-fontchanger-option-large": "A̠mgbii",
-	"mobile-frontend-fontchanger-option-xlarge": "A̠gba̠da̠ndang",
+	"mobile-frontend-fontchanger-option-small": "A̱da̱dei",
+	"mobile-frontend-fontchanger-option-large": "A̱mgbii",
+	"mobile-frontend-fontchanger-option-xlarge": "A̱gba̱da̱ndang",
 	"mobile-frontend-language-heading": "<strong>Lilyem</strong>",
 	"mobile-frontend-languages-404-title": "Ghyuap lilyem",
 	"mobile-frontend-languages-header": "Lilyem",
-	"mobile-frontend-view": "Nwuan jet a̠bwoi",
-	"tag-mobile_edit": "Jhyuk di̠ jet a̠bwoi",
-	"tag-mobile_web_edit": "Jhyuk a̠ma̠ntei di̠ jet a̠bwok"
+	"mobile-frontend-view": "Nwuan jet a̱bwoi",
+	"tag-mobile_edit": "Jhyuk di̱ jet a̱bwoi",
+	"tag-mobile_web_edit": "Jhyuk a̱ma̱ntei di̱ jet a̱bwok"
 }
