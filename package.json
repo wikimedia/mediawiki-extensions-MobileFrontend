@@ -1,23 +1,23 @@
 {
-  "private": true,
-  "scripts": {
-    "test": "grunt test && npm run doc && dev-scripts/svg_check.sh",
-    "doc": "jsduck",
-    "lint:modules": "resource-modules ./"
-  },
-  "devDependencies": {
-    "eslint-config-wikimedia": "0.5.0",
-    "grunt": "1.0.1",
-    "grunt-banana-checker": "0.6.0",
-    "grunt-contrib-watch": "1.0.0",
-    "grunt-eslint": "20.1.0",
-    "grunt-jsonlint": "1.1.0",
-    "grunt-notify": "0.4.5",
-    "grunt-stylelint": "0.9.0",
-    "jsdoc": "3.4.2",
-    "resource-modules": "1.0.18",
-    "stylelint": "8.2.0",
-    "stylelint-config-wikimedia": "0.4.2",
-    "svgo": "1.0.4"
-  }
+	"private": true,
+	"scripts": {
+		"test": "grunt test && npm run doc && dev-scripts/svg_check.sh",
+		"doc": "jsduck",
+		"lint:modules": "resource-modules ./"
+	},
+	"devDependencies": {
+		"eslint-config-wikimedia": "0.5.0",
+		"grunt": "1.3.0",
+		"grunt-banana-checker": "0.6.0",
+		"grunt-contrib-watch": "1.1.0",
+		"grunt-eslint": "20.1.0",
+		"grunt-jsonlint": "1.1.0",
+		"grunt-notify": "0.4.5",
+		"grunt-stylelint": "0.9.0",
+		"jsdoc": "3.4.2",
+		"resource-modules": "1.0.18",
+		"stylelint": "8.2.0",
+		"stylelint-config-wikimedia": "0.4.2",
+		"svgo": "1.3.2"
+	}
 }
