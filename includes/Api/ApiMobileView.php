@@ -524,7 +524,8 @@ class ApiMobileView extends ApiBase {
 	 * @return WikiPage
 	 */
 	protected function makeWikiPage( Title $title ) {
-		return WikiPage::factory( $title );
+		return MediaWikiServices::getInstance()->getWikiPageFactory()
+			->newFromTitle( $title );
 	}
 
 	/**
