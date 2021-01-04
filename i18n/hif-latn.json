@@ -7,14 +7,8 @@
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "koi badle ke summary nai hai",
-	"mobile-frontend-copyright": "Content is available under $1 unless otherwise noted.",
 	"mobile-frontend-featured-article": "Aaj ke featured article",
 	"mobile-frontend-last-modified-date": "$1 ke $2 baje, ii panna ke badlaa gais rahaa",
 	"mobile-frontend-news-items": "News me",
-	"mobile-frontend-privacy-link-text": "Gupt",
-	"mobile-frontend-terms-text": "Terms of Use",
-	"mobile-frontend-view": "Mobile view",
-	"mobile-frontend-view-desktop": "Desktop",
-	"tag-mobile_edit": "Mobile edit",
-	"tag-mobile_web_edit": "Mobile web edit"
+	"mobile-frontend-privacy-link-text": "Gupt"
 }

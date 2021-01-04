@@ -167,7 +167,11 @@
 	"mobile-frontend-save-settings": "Raksa",
 	"mobile-frontend-search-content": "Rereh sajeroning kaca",
 	"mobile-frontend-search-no-results": "Nénten wentén kaca antuk murda puniki.",
+	"mobile-frontend-settings-save": "Pangaturan kasimpen",
+	"mobile-frontend-talk-add-overlay-content-placeholder": "Napi sané wénten ring keneh Ida?",
 	"mobile-frontend-talk-add-overlay-submit": "Tambahin pabligbagan",
+	"mobile-frontend-view": "Cingakan sélulér",
 	"tag-mobile_edit": "Uahan HP",
-	"tag-mobile_web_edit": "Uahan wéb HP"
+	"tag-mobile_web_edit": "Uahan wéb HP",
+	"mobile-frontend-amc-outreach-no-thanks": "Nénten, suksma"
 }

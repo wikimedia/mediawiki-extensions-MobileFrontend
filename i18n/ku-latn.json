@@ -53,7 +53,7 @@
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Zimanên pêşniyarkirî",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Zimanên din",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Li zimanekî bigere",
-	"mobile-frontend-last-modified-with-user-days": "[$4 Cara dawî berî {{PLURAL:$3|rojekê|$3 rojan}}] ji aliyê {{PLURAL:$5|[$6 $2]= bikarhenereke/î anonîm}} ve {{GENDER:$1|hatiye guhartin}}",
+	"mobile-frontend-last-modified-with-user-days": "[$4 Cara dawî berî {{PLURAL:$3|rojekê|$3 rojan}}] ji aliyê {{PLURAL:$5|[$6 $2]|0=bikarhenereke/î anonîm}} ve {{GENDER:$1|hatiye guhartin}}",
 	"mobile-frontend-last-modified-with-user-hours": "[$4 Cara dawî berî {{PLURAL:$3|saetekê|$3 saetan}}] ji aliyê {{PLURAL:$5|[$6 $2]= bikarhenereke/î anonîm}} ve {{GENDER:$1|hatiye guhartin}}",
 	"mobile-frontend-last-modified-with-user-minutes": "[$4 Cara dawî berî {{PLURAL:$3|xulekekê|$3 xulekan}}] ji aliyê {{PLURAL:$5|[$6 $2]= bikarhenereke/î anonîm}} ve {{GENDER:$1|hatiye guhartin}}",
 	"mobile-frontend-last-modified-with-user-months": "[$4 Cara dawî berî {{PLURAL:$3|mehekê|$3 mehan}}] ji aliyê {{PLURAL:$5|[$6 $2]= bikarhenereke/î anonîm}} ve {{GENDER:$1|hatiye guhartin}}",
