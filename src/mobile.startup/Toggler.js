@@ -41,7 +41,7 @@ function Toggler( options ) {
  * @return {Object} representing open sections
  */
 function getExpandedSections( page ) {
-	var expandedSections = JSON.parse( mw.storage.get( 'expandedSections' ) || '{}' );
+	var expandedSections = JSON.parse( mw.storage.session.get( 'expandedSections' ) || '{}' );
 	expandedSections[page.title] = expandedSections[page.title] || {};
 	return expandedSections;
 }
@@ -51,7 +51,13 @@ function getExpandedSections( page ) {
  * Save expandedSections to localStorage
  */
 function saveExpandedSections( expandedSections ) {
-	mw.storage.set(
+	if ( mw.storage.get( 'expandedSections' ) ) {
+		mw.storage.session.set(
+			'expandedSections', JSON.stringify( mw.storage.get( 'expandedSections' ) )
+		);
+		mw.storage.set( 'expandedSections', null );
+	}
+	mw.storage.session.set(
 		'expandedSections', JSON.stringify( expandedSections )
 	);
 }
@@ -257,7 +263,7 @@ Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 		// Old default behavior if on cached output
 		collapseSectionsByDefault = true;
 	}
-	expandSections = !collapseSectionsByDefault || mw.storage.get( 'expandSections' ) === 'true';
+	expandSections = !collapseSectionsByDefault || mw.storage.session.get( 'expandSections' ) === 'true';
 
 	$container.children( tagName ).each( function ( i ) {
 		var isReferenceSection,
