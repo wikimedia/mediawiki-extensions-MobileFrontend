@@ -119,7 +119,7 @@
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Lilyem ghyáng",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Zop a̱lyem",
 	"mobile-frontend-last-modified-date": "Jhyuk ngaan ma̱ $1, mi̱ $2",
-	"mobile-frontend-last-modified-with-user-days": "[{{GENDER:$1|Á̱}} jhyuk $4 di̱ ngaan {{PLURAL:$3|mam $3 ku|mmam $3 na̱}} swak a̱ni] gba̱mgbam mbwak {{PLURAL:$5|[$6 $2]|0=a̱tyuta̱m a̱sanga̱lyoot}}",
+	"mobile-frontend-last-modified-with-user-days": "[$4 {{GENDER:$1|Á̱}} jhyuk di̱ ngaan {{PLURAL:$3|mam $3 ku|mmam $3 na̱}} swak a̱ni] gba̱mgbam mbwak {{PLURAL:$5|[$6 $2]|0=a̱tyuta̱m a̱sanga̱lyoot}}",
 	"mobile-frontend-last-modified-with-user-hours": "[Á̱ {{GENDER:$1|jhyuk}} $4 di̱ ngaan {{PLURAL:$3|awa $3 a̱|áwa $3 na̱}} swak a̱ni] gba̱mgbam mbwak {{PLURAL:$5|[$6 $2]|0=a̱tyuta̱m a̱sanga̱lyoot}}",
 	"mobile-frontend-last-modified-with-user-just-now": "[Á̱ sii {{GENDER:$1|jhyuk}}] $3 ma̱ninika gba̱mgbam mbwak {{PLURAL:$4|[$5 $2]|0=a̱tyuta̱m a̱sanga̱lyoot}}",
 	"mobile-frontend-last-modified-with-user-minutes": "[Á̱ {{GENDER:$1|jhyuk}} $4 di̱ ngaan {{PLURAL:$3|miti $3 ku|mmiti $3 na̱}} swak a̱ni] gba̱mgbam mbwak {{PLURAL:$5|[$6 $2]|0=a̱tyuta̱m a̱sanga̱lyoot}}",
