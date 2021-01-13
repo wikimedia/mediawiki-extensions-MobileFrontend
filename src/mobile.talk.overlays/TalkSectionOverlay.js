@@ -65,7 +65,7 @@ function TalkSectionOverlay( options ) {
 mfExtend( TalkSectionOverlay, Overlay, {
 	templatePartials: util.extend( {}, Overlay.prototype.templatePartials, {
 		content: util.template( `
-<div class="content talk-section">
+<div class="content talk-section mw-parser-output">
 	{{{section.text}}}
 	<div class="comment">
 		<div class="list-header">{{reply}}</div>
