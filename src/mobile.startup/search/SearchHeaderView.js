@@ -68,6 +68,7 @@ class SearchHeaderView extends View {
 		} );
 		this.clearIcon = clearIcon;
 		clearIcon.$el.hide();
+		clearIcon.$el.attr( 'aria-hidden', 'true' );
 		this.$el.find( 'form' ).append( clearIcon.$el );
 	}
 }
