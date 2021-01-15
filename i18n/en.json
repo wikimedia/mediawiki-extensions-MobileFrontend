@@ -95,7 +95,7 @@
 	"mobile-frontend-editor-cancel-confirm": "Do you really want to abandon your edit?",
 	"mobile-frontend-editor-captcha-try-again": "Wrong code, try again.",
 	"mobile-frontend-editor-continue": "Next",
-	"mobile-frontend-editor-disabled": "This page is protected to prevent vandalism.",
+	"mobile-frontend-editor-disabled": "This page is protected to prevent vandalism. [$1 View source]",
 	"mobile-frontend-editor-disabled-anon": "You need to log in to edit this page.",
 	"mobile-frontend-editor-editing": "Editing",
 	"mobile-frontend-editor-editing-page": "<span><strong>Editing</strong> $1</span>",

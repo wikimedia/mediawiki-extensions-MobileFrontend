@@ -496,7 +496,8 @@ function init( currentPage, currentPageHTMLParser, skin, router ) {
 		if ( mw.user.isAnon() && Array.isArray( editRestrictions ) && editRestrictions.indexOf( '*' ) !== -1 ) {
 			bindEditLinksLoginDrawer( router );
 		} else {
-			editErrorMessage = isReadOnly ? mw.msg( 'apierror-readonly' ) : mw.msg( 'mobile-frontend-editor-disabled' );
+			var $link = $( '<a>' ).attr( 'href', '/wiki/' + mw.config.get( 'wgPageName' ) + '?action=edit' );
+			editErrorMessage = isReadOnly ? mw.msg( 'apierror-readonly' ) : mw.message( 'mobile-frontend-editor-disabled', $link ).parseDom();
 			bindEditLinksSorryToast( editErrorMessage, router );
 		}
 	}
