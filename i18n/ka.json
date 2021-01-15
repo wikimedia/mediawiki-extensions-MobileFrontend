@@ -50,6 +50,7 @@
 	"mobile-frontend-editor-terms-link": "[$1 გამოყენების პირობები]",
 	"mobile-frontend-editor-placeholder": "ეს სექცია ცარიელია. შექმენი ის!",
 	"mobile-frontend-editor-previewing-page": "<span><strong>წინასწარ გადახედვა</strong> $1</span>",
+	"mobile-frontend-editor-publish": "გამოქვეყნება",
 	"mobile-frontend-editor-save": "შენახვა",
 	"mobile-frontend-editor-success": "თქვენი რედაქტირება წარმატებით განხორციელდა.",
 	"mobile-frontend-editor-success-landmark-1": "გილოცავ, შენ ახლა უკვე {{SITENAME}} რედაქტორი ხარ!",
