@@ -82,7 +82,7 @@ class MwApiContentProvider implements IContentProvider {
 			$url .= '&page=' . rawurlencode( $title->getPrefixedDBkey() );
 		}
 		// The skin must exist on the target wiki and not be hidden for this to work.
-		if ( array_search( $this->skinName, [ 'vector', 'minerva', 'monobook', 'timeless', 'modern' ] ) ) {
+		if ( in_array( $this->skinName, [ 'vector', 'minerva', 'monobook', 'timeless', 'modern' ] ) ) {
 			$url .= '&useskin=' . $this->skinName;
 		} else {
 			$url .= '&useskin=apioutput';
