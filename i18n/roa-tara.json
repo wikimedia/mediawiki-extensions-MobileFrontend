@@ -4,10 +4,14 @@
 			"Joetaras"
 		]
 	},
+	"abusefilter-edit-builder-vars-user-mobile": "Ce 'n'utende ste cange ausanne l'inderfacce pe despositive mobbile",
 	"mobile-frontend-account-create-captcha-placeholder": "Mitte 'u codece de securezze",
 	"mobile-frontend-categories-heading": "<strong>Categorije</strong>",
+	"mobile-frontend-categories-subheading": "'A pàgene appartene a ste categorije:",
+	"mobile-frontend-categories-nocat": "Sta pàgene non g'appartene angore a nisciuna categorije.",
 	"mobile-frontend-categories-add": "Aggiunge 'na categorije",
 	"mobile-frontend-categories-search": "Cirche le categorije",
+	"mobile-frontend-categories-summary": "Aggiunde a le categorije",
 	"mobile-frontend-categories-notification": "Categorije onne state aggiornate.",
 	"mobile-frontend-categories-add-wait": "Stoche a reggistre le categorije, aspitte 'nu picche.",
 	"mobile-frontend-categories-normal": "Basate sus a 'u condenute",
