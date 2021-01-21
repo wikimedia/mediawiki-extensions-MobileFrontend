@@ -55,7 +55,10 @@ function saveExpandedSections( expandedSections ) {
 		mw.storage.session.set(
 			'expandedSections', JSON.stringify( mw.storage.get( 'expandedSections' ) )
 		);
-		mw.storage.set( 'expandedSections', null );
+		// Clean up any old storage.
+		// The following line can be removed 1 week after
+		// Ib7c0a45fcf8645a900288a26d172781612fa1606 is deployed
+		mw.storage.remove( 'expandedSections' );
 	}
 	mw.storage.session.set(
 		'expandedSections', JSON.stringify( expandedSections )
