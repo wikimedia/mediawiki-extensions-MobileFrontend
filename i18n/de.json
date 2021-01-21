@@ -79,7 +79,7 @@
 	"mobile-frontend-editor-cancel-confirm": "Willst du wirklich deine Bearbeitung verwerfen?",
 	"mobile-frontend-editor-captcha-try-again": "Falscher Code. Versuche es erneut.",
 	"mobile-frontend-editor-continue": "Nächste",
-	"mobile-frontend-editor-disabled": "Diese Seite ist geschützt, um Vandalismus vorzubeugen.",
+	"mobile-frontend-editor-disabled": "Diese Seite ist geschützt, um Vandalismus vorzubeugen. [$1 Siehe Quelle]",
 	"mobile-frontend-editor-disabled-anon": "Du musst dich anmelden, um diese Seite zu bearbeiten.",
 	"mobile-frontend-editor-editing": "Bearbeiten",
 	"mobile-frontend-editor-editing-page": "<span><strong>Bearbeiten</strong> von $1</span>",
