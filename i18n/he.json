@@ -79,7 +79,7 @@
 	"mobile-frontend-editor-cancel-confirm": "האם באמת לנטוש את העריכה שלך?",
 	"mobile-frontend-editor-captcha-try-again": "קוד שגוי, נא לנסות שוב.",
 	"mobile-frontend-editor-continue": "הבא",
-	"mobile-frontend-editor-disabled": "הדף הזה מוגן כדי למנוע השחתה.",
+	"mobile-frontend-editor-disabled": "הדף הזה מוגן כדי למנוע השחתה. [$1 הצגת מקור]",
 	"mobile-frontend-editor-disabled-anon": "יש להיכנס לחשבון כדי לערוך את הדף הזה.",
 	"mobile-frontend-editor-editing": "עריכה",
 	"mobile-frontend-editor-editing-page": "<span><strong>עריכת</strong> $1</span>",

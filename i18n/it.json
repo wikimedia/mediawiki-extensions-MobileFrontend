@@ -80,7 +80,7 @@
 	"mobile-frontend-editor-cancel-confirm": "Vuoi davvero abbandonare la tua modifica?",
 	"mobile-frontend-editor-captcha-try-again": "Codice errato, riprova.",
 	"mobile-frontend-editor-continue": "Successivo",
-	"mobile-frontend-editor-disabled": "Questa pagina è protetta per evitare vandalismi.",
+	"mobile-frontend-editor-disabled": "Questa pagina è protetta per evitare vandalismi. [$1 Vedi sorgente]",
 	"mobile-frontend-editor-disabled-anon": "Devi accedere per modificare questa pagina.",
 	"mobile-frontend-editor-editing": "Modifica",
 	"mobile-frontend-editor-editing-page": "<strong>Modifica</strong><span> $1</span>",

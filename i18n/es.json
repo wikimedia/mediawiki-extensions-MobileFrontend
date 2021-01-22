@@ -40,7 +40,8 @@
 			"Themasterriot",
 			"Tusca",
 			"VegaDark",
-			"Vivaelcelta"
+			"Vivaelcelta",
+			"WikiiiTranslator"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si un usuario está editando a través de la interfaz móvil",
@@ -100,7 +101,7 @@
 	"mobile-frontend-editor-cancel-confirm": "¿Estás seguro de abandonar tu edición?",
 	"mobile-frontend-editor-captcha-try-again": "Código incorrecto, inténtalo de nuevo.",
 	"mobile-frontend-editor-continue": "Siguiente",
-	"mobile-frontend-editor-disabled": "Esta página está protegida para evitar el vandalismo.",
+	"mobile-frontend-editor-disabled": "Esta página esta protegida para evitar vandalismo.",
 	"mobile-frontend-editor-disabled-anon": "Necesitas iniciar sesión para editar esta página.",
 	"mobile-frontend-editor-editing": "Editando",
 	"mobile-frontend-editor-editing-page": "<span><strong>Edición</strong> de «$1»</span>",

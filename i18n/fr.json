@@ -108,7 +108,7 @@
 	"mobile-frontend-editor-cancel-confirm": "Voulez-vous vraiment abandonner votre modification ?",
 	"mobile-frontend-editor-captcha-try-again": "Mauvais code, essayez de nouveau.",
 	"mobile-frontend-editor-continue": "Suivant",
-	"mobile-frontend-editor-disabled": "Cette page est protégée pour empêcher le vandalisme.",
+	"mobile-frontend-editor-disabled": "Cette page est protégée pour empêcher le vandalisme. [$1 Afficher la source]",
 	"mobile-frontend-editor-disabled-anon": "Vous devez vous connecter pour modifier cette page.",
 	"mobile-frontend-editor-editing": "Modification",
 	"mobile-frontend-editor-editing-page": "<span><strong>Modification</strong> de<span> $1</span>",

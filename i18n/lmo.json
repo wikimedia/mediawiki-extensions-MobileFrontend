@@ -61,7 +61,7 @@
 	"mobile-frontend-editor-cancel-confirm": "Te voeuret bandonà la toa modifega de vera?",
 	"mobile-frontend-editor-captcha-try-again": "Codes sbagliad, prova anmò.",
 	"mobile-frontend-editor-continue": "Inanz",
-	"mobile-frontend-editor-disabled": "Questa pagina chì l'è protesgiuda per prevegnì el vandalismo.",
+	"mobile-frontend-editor-disabled": "Questa pagina chì l'è protesgiuda per prevegnì el vandalismo. [$1 Vedi sorgent]",
 	"mobile-frontend-editor-disabled-anon": "Te gh'hee de andà dent come utent registrad per modifegà questa pagina chì.",
 	"mobile-frontend-editor-editing": "Modifega",
 	"mobile-frontend-editor-editing-page": "<strong>Modifega</strong><span> $1</span>",
