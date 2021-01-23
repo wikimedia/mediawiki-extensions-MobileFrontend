@@ -74,10 +74,6 @@ class MobileFormatterTest extends MediaWikiTestCase {
 	 * @param string $input
 	 * @param string $expected
 	 * @param callable|bool $callback
-	 * @param bool $removeDefaults
-	 * @param bool $unused (previously was lazy loaded references)
-	 * @param bool $lazyLoadImages
-	 * @param bool $showFirstParagraphBeforeInfobox
 	 * @covers MobileFormatter::applyTransforms
 	 * @covers MobileFormatter::parseItemsToRemove
 	 * @dataProvider provideHtmlTransform

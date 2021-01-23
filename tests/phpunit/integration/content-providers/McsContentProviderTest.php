@@ -32,6 +32,8 @@ class McsContentProviderTest extends MediaWikiTestCase {
 	}
 
 	/**
+	 * @param string $url
+	 * @param string $rawResponse
 	 * @return HttpRequestFactory
 	 */
 	private function mockHTTPFactory( $url, $rawResponse ) {

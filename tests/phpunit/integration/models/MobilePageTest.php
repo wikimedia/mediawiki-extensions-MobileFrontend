@@ -22,6 +22,7 @@ class MobilePageTest extends MediaWikiTestCase {
 	 * Creates an instance of `File`.
 	 * By default, let the picture height be less than it's width.
 	 *
+	 * @param int $height
 	 * @return File
 	 */
 	private function mockFileFactory( $height ) {
@@ -53,7 +54,7 @@ class MobilePageTest extends MediaWikiTestCase {
 	/**
 	 * Mock the RevisionStore class
 	 * @param Title $title
-	 * @param TestUser $testUser
+	 * @param TestUser|null $testUser
 	 * @return RevisionStore
 	 */
 	private function mockRevisionStore( Title $title, TestUser $testUser = null ) {
@@ -103,6 +104,7 @@ class MobilePageTest extends MediaWikiTestCase {
 
 	/**
 	 * Mock RevisionStore class with title that returns null
+	 * @param Title $title
 	 * @return RevisionStore
 	 */
 	private function mockRevisionStoreWithTitleReturnNullRevision( $title ) {

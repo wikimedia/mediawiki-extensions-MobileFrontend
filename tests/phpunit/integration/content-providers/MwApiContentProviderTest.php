@@ -53,6 +53,7 @@ class MwApiContentProviderTest extends MediaWikiTestCase {
 
 	/**
 	 * Mock bad HTTP factory so ->isOK() returns false
+	 * @param string $rawResponse
 	 * @return HttpRequestFactory
 	 */
 	private function mockBadHTTPFactory( $rawResponse ) {
