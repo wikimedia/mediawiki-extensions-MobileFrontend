@@ -3,9 +3,9 @@
 		"authors": [
 			"Ajp529",
 			"Baffo",
+			"Fitoschido",
 			"KATRINE1993"
 		]
 	},
-	"tag-mobile_edit": "Edición desde móvil",
-	"tag-mobile_web_edit": "Edición vía web móvil"
+	"mobile-frontend-nearby-location-unavailable": "{{SITENAME}} no puede determinar su ubicación. Inténtelo otra vez cuando haya una mejor señal."
 }

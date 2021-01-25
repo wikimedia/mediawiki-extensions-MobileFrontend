@@ -62,7 +62,7 @@
 	"mobile-frontend-editor-cancel-confirm": "क्या आप सच में अपने संपादन का परित्याग करना चाहते हैं?",
 	"mobile-frontend-editor-captcha-try-again": "गलत कोड, पुन: प्रयास करें।",
 	"mobile-frontend-editor-continue": "अगला",
-	"mobile-frontend-editor-disabled": "इस पृष्ठ को बर्बरता स रोकने के लिए सुरक्षित किया गया है",
+	"mobile-frontend-editor-disabled": "इस पृष्ठ को बर्बरता स रोकने के लिए सुरक्षित किया गया है। [$1 स्रोत देखें]",
 	"mobile-frontend-editor-editing": "सम्पादन जारी",
 	"mobile-frontend-editor-editing-page": "<span><strong>संपादित:</strong> $1</span>",
 	"mobile-frontend-editor-error": "त्रुटि, सम्पादन सहेजा नहीं ।",

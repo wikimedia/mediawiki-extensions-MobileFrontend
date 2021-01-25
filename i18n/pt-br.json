@@ -84,7 +84,7 @@
 	"mobile-frontend-editor-cancel-confirm": "Você realmente deseja abandonar sua edição?",
 	"mobile-frontend-editor-captcha-try-again": "Código errado, tente denovo.",
 	"mobile-frontend-editor-continue": "Próximo",
-	"mobile-frontend-editor-disabled": "Esta página está protegida para prevenir vandalismos.",
+	"mobile-frontend-editor-disabled": "Esta página é protegida para prevenir vandalismo. [$1 Ver fonte]",
 	"mobile-frontend-editor-disabled-anon": "Você precisa entrar para editar esta página.",
 	"mobile-frontend-editor-editing": "Editando",
 	"mobile-frontend-editor-editing-page": "<span><strong>Editando</strong> $1</span>",

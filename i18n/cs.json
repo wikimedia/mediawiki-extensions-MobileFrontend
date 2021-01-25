@@ -69,7 +69,7 @@
 	"mobile-frontend-editor-cancel-confirm": "Určitě chcete zahodit své úpravy?",
 	"mobile-frontend-editor-captcha-try-again": "Nesprávný kód, zkuste to znovu.",
 	"mobile-frontend-editor-continue": "Další",
-	"mobile-frontend-editor-disabled": "Tato stránka je zamčena, aby se předešlo vandalismu.",
+	"mobile-frontend-editor-disabled": "Tato stránka je zamčena, aby se předešlo vandalismu. [$1 Zobrazit zdroj]",
 	"mobile-frontend-editor-disabled-anon": "Pro editaci této stránke se musíte přihlásit.",
 	"mobile-frontend-editor-editing": "Editace",
 	"mobile-frontend-editor-editing-page": "<span><strong>Editace stránky</strong> $1</span>",

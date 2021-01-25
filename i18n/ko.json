@@ -89,7 +89,7 @@
 	"mobile-frontend-editor-cancel-confirm": "편집을 포기하겠습니까?",
 	"mobile-frontend-editor-captcha-try-again": "코드가 잘못되었습니다, 다시 시도하세요.",
 	"mobile-frontend-editor-continue": "다음",
-	"mobile-frontend-editor-disabled": "이 문서는 훼손을 막기 위해 보호되어 있습니다.",
+	"mobile-frontend-editor-disabled": "이 문서는 훼손을 막기 위해 보호되어 있습니다. [$1 원본 보기]",
 	"mobile-frontend-editor-disabled-anon": "이 문서를 편집하려면 로그인해야 합니다.",
 	"mobile-frontend-editor-editing": "편집 중",
 	"mobile-frontend-editor-editing-page": "<span>$1 <strong>편집 중</strong></span>",

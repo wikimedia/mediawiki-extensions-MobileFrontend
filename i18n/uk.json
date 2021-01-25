@@ -88,7 +88,7 @@
 	"mobile-frontend-editor-cancel-confirm": "Ви дійсно хочете відмовитися від вашого редагування?",
 	"mobile-frontend-editor-captcha-try-again": "Неправильний код, повторіть спробу.",
 	"mobile-frontend-editor-continue": "Далі",
-	"mobile-frontend-editor-disabled": "Цю сторінку захищено, щоб запобігти вандалізму.",
+	"mobile-frontend-editor-disabled": "Цю сторінку захищено, щоб запобігти вандалізму. [$1 Переглянути код]",
 	"mobile-frontend-editor-disabled-anon": "Вам треба увійти в систему, щоб редагувати цю сторінку.",
 	"mobile-frontend-editor-editing": "Редагування",
 	"mobile-frontend-editor-editing-page": "<span><strong>Редагування</strong> $1</span>",

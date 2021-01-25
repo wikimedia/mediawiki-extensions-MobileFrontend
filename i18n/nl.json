@@ -79,7 +79,7 @@
 	"mobile-frontend-editor-cancel-confirm": "Wilt u uw bewerking echt niet opslaan?",
 	"mobile-frontend-editor-captcha-try-again": "Verkeerde code, probeer het opnieuw.",
 	"mobile-frontend-editor-continue": "Volgende",
-	"mobile-frontend-editor-disabled": "Deze pagina is beveiligd om vandalisme te voorkomen.",
+	"mobile-frontend-editor-disabled": "Deze pagina is beveiligd om vandalisme te voorkomen. [$1 Brontekst bekijken]",
 	"mobile-frontend-editor-disabled-anon": "U moet zich aanmelden om deze pagina te kunnen bewerken.",
 	"mobile-frontend-editor-editing": "Bewerken",
 	"mobile-frontend-editor-editing-page": "<span>$1 </span><strong>bewerken</strong>",
