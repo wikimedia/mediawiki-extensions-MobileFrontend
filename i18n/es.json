@@ -243,7 +243,7 @@
 	"mobile-frontend-watchlist-filter-talk": "Discusión",
 	"mobile-frontend-watchlist-more": "más",
 	"mobile-frontend-watchlist-please-wait": "Por favor espera, la acción está tomando más tiempo de lo esperado.",
-	"mobile-frontend-watchlist-error": "Ocurrió un problema al añadir esta página a la lista de seguimiento. Por favor, inténtalo de nuevo.",
+	"mobile-frontend-watchlist-error": "Ocurrió un problema al añadir esta página a la lista de seguimiento. Inténtalo de nuevo.",
 	"mobile-frontend-watchlist-purpose": "<strong>Una lista de seguimiento te ayuda a marcar páginas y seguir al tanto de sus cambios.</strong>Inicia sesión para verla.",
 	"mobile-frontend-watchlist-removed": "Se ha eliminado $1 de tu lista de seguimiento",
 	"mobile-frontend-watchlist-signup-action": "<strong>Una lista de seguimiento te ayuda a marcar páginas y seguir el rastro de sus cambios.</strong><br />Regístrate para comenzar una ahora.",
