@@ -7,7 +7,9 @@
  */
 class ApiMobileViewConvertTitleTest extends ApiTestCase {
 
+	/** @var string */
 	private $simplifiedTitle = '天闻角川';
+	/** @var string */
 	private $traditionalTitle = '天聞角川';
 
 	protected function setUp() : void {

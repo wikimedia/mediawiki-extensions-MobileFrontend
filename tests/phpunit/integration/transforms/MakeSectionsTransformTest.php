@@ -28,9 +28,7 @@ class MakeSectionsTransformTest extends MediaWikiTestCase {
 	 * @dataProvider provideTransform
 	 *
 	 * @param string $html
-	 * @param bool $showFirstParagraphBeforeInfobox
 	 * @param bool $scriptsEnabled
-	 * @param bool $shouldLazyTransformImages
 	 * @param string $expected
 	 * @param string $reason this is being asserted
 	 */

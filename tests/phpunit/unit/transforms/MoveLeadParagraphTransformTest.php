@@ -90,8 +90,6 @@ class MoveLeadParagraphTransformTest extends \MediaWikiUnitTestCase {
 	}
 
 	/**
-	 * @param string $html
-	 * @param string $expected
 	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::apply
 	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::moveFirstParagraphBeforeInfobox
 	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::hasNoNonEmptyPrecedingParagraphs
@@ -124,6 +122,7 @@ class MoveLeadParagraphTransformTest extends \MediaWikiUnitTestCase {
 	/**
 	 * @param string $html
 	 * @param string $expected
+	 * @param string $reason
 	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::apply
 	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::moveFirstParagraphBeforeInfobox
 	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::hasNoNonEmptyPrecedingParagraphs

@@ -157,7 +157,7 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 	 *
 	 * @param string $mode The mode for the test cases (desktop, mobile)
 	 * @param array $mfXAnalyticsItems
-	 * @param Title $title
+	 * @param Title|null $title
 	 * @return array Array of objects, including MobileContext (context),
 	 * SkinTemplate (sk) and OutputPage (out)
 	 */
@@ -385,6 +385,7 @@ class MobileFrontendHooksTest extends MediaWikiTestCase {
 	/**
 	 * Creates an instance of `File` which has the given MIME type.
 	 *
+	 * @param string $mimeType
 	 * @return File
 	 */
 	private function factoryFile( $mimeType ) {
