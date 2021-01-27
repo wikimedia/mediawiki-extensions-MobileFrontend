@@ -22,6 +22,7 @@
 	"apihelp-mobileview-example-1": "Pigghie le 'mbormaziune sus 'a sezione 0 de [[Doom metal]]",
 	"apihelp-mobileview-example-2": "Pigghie le 'mbormaziune sus 'a sezione 0 e le seziune ca tènene refereminde de [[Candlemass]]",
 	"apihelp-mobileview-example-3": "Pigghie le 'mbormaziune sus 'a sezione 1 e le seziune ca tènene refereminde de [[Candlemass]]",
+	"apihelp-parse-param-noimages": "Disabbilite le immaggine jndr'à 'u resultate mobbile.",
 	"apihelp-webapp-manifest-description": "Torne 'nu manifeste d'a webapp.",
 	"apihelp-webapp-manifest-summary": "Torne 'nu manifeste d'a webapp.",
 	"apierror-mobilefrontend-badidtitle": "Combinazione ID revisione/titole non valide."

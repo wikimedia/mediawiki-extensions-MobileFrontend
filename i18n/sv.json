@@ -79,7 +79,7 @@
 	"mobile-frontend-editor-cancel-confirm": "Är du säker på att du vill avbryta din redigering?",
 	"mobile-frontend-editor-captcha-try-again": "Fel kod, försök igen.",
 	"mobile-frontend-editor-continue": "Nästa",
-	"mobile-frontend-editor-disabled": "Denna sida är skyddad för att förhindra vandalism.",
+	"mobile-frontend-editor-disabled": "Denna sida är skyddad för att förhindra vandalism. [$1 Visa källa]",
 	"mobile-frontend-editor-disabled-anon": "Du måste logga in för att redigera denna sida.",
 	"mobile-frontend-editor-editing": "Redigerar",
 	"mobile-frontend-editor-editing-page": "<span><strong>Redigerar</strong> $1</span>",

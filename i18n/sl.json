@@ -25,7 +25,7 @@
 	"mobile-frontend-diffview-404-title": "Neveljavna redakcija",
 	"mobile-frontend-diffview-anonymous": "Brezimni uporabnik",
 	"mobile-frontend-diffview-bytesadded": "{{PLURAL:$1|dodan|dodana|dodani|dodanih}} $1 {{PLURAL:$1|zlog|zloga|zlogi|zlogov}}",
-	"mobile-frontend-diffview-bytesnochange": "Brez spremembe v velikosti",
+	"mobile-frontend-diffview-bytesnochange": "Brez spremembe velikosti",
 	"mobile-frontend-diffview-bytesremoved": "{{PLURAL:$1|odstranjen|odstranjena|odstranjeni|odstranjenih}} $1 {{PLURAL:$1|zlog|zloga|zlogi|zlogov}}",
 	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|urejanje|urejanji|urejanja|urejanj}}",
 	"mobile-frontend-diffview-title": "Spremembe",
