@@ -30,6 +30,7 @@
 			"JLeow00",
 			"Kuailong",
 			"LNDDYL",
+			"Lakejason0",
 			"Li3939108",
 			"Liangent",
 			"Linforest",
@@ -303,7 +304,7 @@
 	"mobile-frontend-amc-outreach-enabled-message": "高级模式现在已经开启。 你可以在设置中关闭该功能。",
 	"mobile-frontend-amc-outreach-dismissed-message": "任何时候你都可以在设置中开启高级模式。",
 	"mobile-frontend-beta-only": "功能只在测试模式可用",
-	"mobile-frontend-console-recruit": "了解更多有关我们如何构造移动网站的详情，请参见：https://www.mediawiki.org/wiki/Extension:MobileFrontend",
+	"mobile-frontend-console-recruit": "了解更多有关我们如何构造移动网站的详情，请参见：https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "优化并简化移动端的特殊页面（推荐）",
 	"prefs-mobile": "移动参数设置"
 }
