@@ -8,7 +8,6 @@ var Overlay = require( '../mobile.startup/Overlay' ),
 	Button = require( '../mobile.startup/Button' ),
 	Icon = require( '../mobile.startup/Icon' ),
 	toast = require( '../mobile.startup/showOnPageReload' ),
-	saveFailureMessage = require( './saveFailureMessage' ),
 	mfExtend = require( '../mobile.startup/mfExtend' ),
 	blockMessageDrawer = require( './blockMessageDrawer' ),
 	MessageBox = require( '../mobile.startup/MessageBox' ),
@@ -301,26 +300,30 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 * @param {Object} data API response
 	 */
 	onSaveFailure: function ( data ) {
-		var key = data && data.errors && data.errors[0] && data.errors[0].code,
-			// TODO: This looks incomplete and most of the error codes are wrong.
+		var code = data && data.errors && data.errors[0] && data.errors[0].code,
 			// Compare to ve.init.mw.ArticleTargetEvents.js in VisualEditor.
 			typeMap = {
-				editconflict: 'editConflict',
-				wasdeleted: 'editPageDeleted',
+				badtoken: 'userBadToken',
+				assertanonfailed: 'userNewUser',
+				assertuserfailed: 'userNewUser',
+				assertnameduserfailed: 'userNewUser',
 				'abusefilter-disallowed': 'extensionAbuseFilter',
+				'abusefilter-warning': 'extensionAbuseFilter',
 				captcha: 'extensionCaptcha',
-				spamprotectiontext: 'extensionSpamBlacklist',
-				'titleblacklist-forbidden-edit': 'extensionTitleBlacklist'
+				spamblacklist: 'extensionSpamBlacklist',
+				'titleblacklist-forbidden': 'extensionTitleBlacklist',
+				pagedeleted: 'editPageDeleted',
+				editconflict: 'editConflict'
 			};
 
 		if ( data.edit && data.edit.captcha ) {
-			key = 'captcha';
+			code = 'captcha';
 		}
 
 		this.log( {
 			action: 'saveFailure',
-			message: saveFailureMessage( data ),
-			type: typeMap[key] || 'responseUnknown'
+			message: code,
+			type: typeMap[code] || 'responseUnknown'
 		} );
 	},
 	/**
