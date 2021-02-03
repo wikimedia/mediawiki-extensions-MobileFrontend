@@ -161,7 +161,6 @@ class MobileFrontendHooks {
 	 * @param mixed $title
 	 * @param mixed $unused
 	 * @param OutputPage $out
-	 * @return bool
 	 */
 	public static function onBeforeInitialize( $title, $unused, OutputPage $out ) {
 		// Set the mobile target. Note, this does not consider MobileContext::isBlacklistedPage(),
@@ -172,9 +171,6 @@ class MobileFrontendHooks {
 		if ( $context->shouldDisplayMobileView() ) {
 			$out->setTarget( 'mobile' );
 		}
-
-		// Always return true. Else, everything breaks, for everyone. No pressure :)
-		return true;
 	}
 
 	/**
@@ -187,15 +183,11 @@ class MobileFrontendHooks {
 	 * @param User $user User performing action
 	 * @param RequestContext $request
 	 * @param MediaWiki $wiki
-	 * @return bool
 	 */
 	public static function onMediaWikiPerformAction( $output, $article, $title,
 		$user, $request, $wiki
 	) {
 		self::enableMediaWikiUI();
-
-		// Always return true. Else, everything breaks, for everyone. No pressure :)
-		return true;
 	}
 
 	/**
@@ -231,7 +223,6 @@ class MobileFrontendHooks {
 	 * @param Skin $skin
 	 * @param string &$html bottomScripts text. Append to $text to add additional
 	 *                      text/scripts after the stock bottom scripts.
-	 * @return bool
 	 */
 	public static function onSkinAfterBottomScripts( Skin $skin, &$html ) {
 		$services = MediaWikiServices::getInstance();
@@ -248,7 +239,6 @@ class MobileFrontendHooks {
 				LazyImageTransform::gradeCImageSupport()
 			), $skin->getOutput()->getCSP()->getNonce() );
 		}
-		return true;
 	}
 
 	/**
@@ -261,7 +251,6 @@ class MobileFrontendHooks {
 	 *
 	 * @param OutputPage $out the OutputPage object to which wikitext is added
 	 * @param string &$text the HTML to be wrapped inside the #mw-content-text element
-	 * @return bool
 	 */
 	public static function onOutputPageBeforeHTML( $out, &$text ) {
 		$services = MediaWikiServices::getInstance();
@@ -280,7 +269,7 @@ class MobileFrontendHooks {
 		}
 
 		if ( !$title ) {
-			return true;
+			return;
 		}
 
 		// if the page is a userpage
@@ -312,7 +301,6 @@ class MobileFrontendHooks {
 			$nonce = $out->getCSP()->getNonce();
 			$text = MakeSectionsTransform::interimTogglingSupport( $nonce ) . $text;
 		}
-		return true;
 	}
 
 	/**
@@ -323,13 +311,12 @@ class MobileFrontendHooks {
 	 * @param OutputPage $out
 	 * @param string &$redirect URL string, modifiable
 	 * @param string &$code HTTP code (eg '301' or '302'), modifiable
-	 * @return bool
 	 */
 	public static function onBeforePageRedirect( $out, &$redirect, &$code ) {
 		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
 		$shouldDisplayMobileView = $context->shouldDisplayMobileView();
 		if ( !$shouldDisplayMobileView ) {
-			return true;
+			return;
 		}
 
 		// Bug 43123: force mobile URLs only for local redirects
@@ -337,8 +324,6 @@ class MobileFrontendHooks {
 			$out->addVaryHeader( 'X-Subdomain' );
 			$redirect = $context->getMobileUrl( $redirect );
 		}
-
-		return true;
 	}
 
 	/**
@@ -348,7 +333,6 @@ class MobileFrontendHooks {
 	 * Redirect Diff page to mobile version if appropriate
 	 *
 	 * @param DifferenceEngine $diff DifferenceEngine object that's calling
-	 * @return bool
 	 */
 	public static function onDifferenceEngineViewHeader( $diff ) {
 		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
@@ -393,8 +377,6 @@ class MobileFrontendHooks {
 				$output->redirect( $redirectUrl );
 			}
 		}
-
-		return true;
 	}
 
 	/**
@@ -450,7 +432,6 @@ class MobileFrontendHooks {
 	 * @param OutputPage $out
 	 * @param array &$cookies array of cookies name, add a value to it
 	 *                        if you want to add a cookie that have to vary cache options
-	 * @return bool
 	 */
 	public static function onGetCacheVaryCookies( $out, &$cookies ) {
 		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
@@ -468,7 +449,6 @@ class MobileFrontendHooks {
 		// Redirect people who want so from HTTP to HTTPS. Ideally, should be
 		// only for HTTP but we don't vary on protocol.
 		$cookies[] = 'forceHTTPS';
-		return true;
 	}
 
 	/**
