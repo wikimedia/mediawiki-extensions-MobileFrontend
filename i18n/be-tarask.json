@@ -55,7 +55,7 @@
 	"mobile-frontend-editor-cancel-confirm": "Вы напраўду хочаце адмовіцца ад сваіх зьмяненьняў?",
 	"mobile-frontend-editor-captcha-try-again": "Няслушны код, паспрабуйце зноўку.",
 	"mobile-frontend-editor-continue": "Далей",
-	"mobile-frontend-editor-disabled": "Гэтая старонка абароненая, каб пазьбегнуць вандалізму.",
+	"mobile-frontend-editor-disabled": "Гэтая старонка абароненая, каб пазьбегнуць вандалізму. [$1 Паглядзець код]",
 	"mobile-frontend-editor-disabled-anon": "Каб рэдагаваць гэтую старонку, вам трэба ўвайсьці",
 	"mobile-frontend-editor-editing": "Рэдагаваньне",
 	"mobile-frontend-editor-editing-page": "<span><strong>Рэдагаваньне</strong> $1</span>",
