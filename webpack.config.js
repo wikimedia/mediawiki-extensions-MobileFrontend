@@ -116,7 +116,7 @@ module.exports = ( env, argv ) => ( {
 		// appear deterministic. I.e., code changes will only alter the bundle they're packed in
 		// instead of shifting the identifiers in other bundles.
 		// https://webpack.js.org/guides/caching/#deterministic-hashes (namedModules replaces NamedModulesPlugin.)
-		namedModules: true,
+		moduleIds: 'named',
 
 		// Generate a single Webpack bootstrap chunk for ResourceLoader modules to share. This will
 		// be packaged inside the mobile.startup module which should be a dependency for

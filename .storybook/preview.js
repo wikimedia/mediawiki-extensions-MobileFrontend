@@ -1,10 +1,9 @@
-import { configure } from '@storybook/html';
 import OO from 'oojs';
 import jQuery from 'jquery';
 import mustache from 'mustache';
 import './styles.less';
 import en from '../i18n/en.json';
-import mockMediaWiki from '../node_modules/@wikimedia/mw-node-qunit/src/mockMediaWiki.js';
+import mockMediaWiki from '@wikimedia/mw-node-qunit/src/mockMediaWiki';
 
 global.OO = OO;
 global.OO.ui = {
@@ -69,11 +68,3 @@ global.mw.message = function ( key ) {
 };
 
 global.mw.loader.using = () => Promise.resolve();
-
-// automatically import all files ending in *.stories.js
-const req = require.context('../stories', true, /\.stories\.js$/);
-function loadStories() {
-  req.keys().forEach(filename => req(filename));
-}
-
-configure(loadStories, module);

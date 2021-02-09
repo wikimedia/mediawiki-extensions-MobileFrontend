@@ -1,4 +1,3 @@
-import { storiesOf } from '@storybook/html';
 import '../../node_modules/oojs-ui/dist/oojs-ui-core.js';
 import '../../node_modules/oojs-ui/dist/oojs-ui-widgets.js';
 import '../../node_modules/oojs-ui/dist/oojs-ui-core-wikimediaui.css';
@@ -16,44 +15,55 @@ m.define( 'mobile.categories.overlays', {
 	CategoryAddOverlay
 } );
 
-storiesOf( 'categories' )
-	.add( 'CategoryTabs',
-		() => {
-			return new CategoryTabs( {
-				title: 'Foo',
-				eventBus: fakeEventBus,
-				api: {
-					get: () => Promise.resolve( categoriesResponse )
-				}
-			} ).$el[0];
-		}
-	)
-	.add( 'categoryOverlay',
-		() => {
-			const o = categoryOverlay( {
-				title: 'Foo',
-				eventBus: fakeEventBus,
-				api: {
-					get: () => Promise.resolve( categoriesResponse )
-				}
-			} );
+export default {
+	title: 'categories'
+};
 
-			o.show();
-			return o.$el[0];
+export const _CategoryTabs = () => {
+	return new CategoryTabs( {
+		title: 'Foo',
+		eventBus: fakeEventBus,
+		api: {
+			get: () => Promise.resolve( categoriesResponse )
 		}
-	)
-	.add( 'CategoryAddOverlay',
-		() => {
-			const o = new CategoryAddOverlay( {
-				title: '`Title of page`',
-				eventBus: fakeEventBus,
-				api: {
-					get: () => util.Deferred().resolve( categoriesResponse )
-				}
-			} );
-			// provided by mw.config. Needed for search to work.
-			o.gateway.generator = { prefix: '/' };
-			o.show();
-			return o.$el[0];
+	} ).$el[0];
+};
+
+_CategoryTabs.story = {
+	name: 'CategoryTabs'
+};
+
+export const CategoryOverlay = () => {
+	const o = categoryOverlay( {
+		title: 'Foo',
+		eventBus: fakeEventBus,
+		api: {
+			get: () => Promise.resolve( categoriesResponse )
 		}
-	);
+	} );
+
+	o.show();
+	return o.$el[0];
+};
+
+CategoryOverlay.story = {
+	name: 'categoryOverlay'
+};
+
+export const _CategoryAddOverlay = () => {
+	const o = new CategoryAddOverlay( {
+		title: '`Title of page`',
+		eventBus: fakeEventBus,
+		api: {
+			get: () => util.Deferred().resolve( categoriesResponse )
+		}
+	} );
+	// provided by mw.config. Needed for search to work.
+	o.gateway.generator = { prefix: '/' };
+	o.show();
+	return o.$el[0];
+};
+
+_CategoryAddOverlay.story = {
+	name: 'CategoryAddOverlay'
+};

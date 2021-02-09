@@ -1,4 +1,3 @@
-import { storiesOf } from '@storybook/html';
 import languageOverlay from '../../src/mobile.startup/languageOverlay/languageOverlay';
 import LanguageSearcher from '../../src/mobile.languages.structured/LanguageSearcher';
 import m from '../../src/mobile.startup/moduleLoaderSingleton';
@@ -10,13 +9,18 @@ import '../../resources/mobile.pagesummary.styles/pagesummary.less';
 
 m.define( 'mobile.languages.structured/LanguageSearcher', LanguageSearcher );
 
-storiesOf( 'languages' )
-	.add( 'overlay',
-		() => {
-			const o = languageOverlay( {
-				getPageLanguages: () => Promise.resolve( languageApiResponse )
-			} );
-			o.show();
-			return o.$el[0];
-		}
-	);
+export default {
+	title: 'languages'
+};
+
+export const Overlay = () => {
+	const o = languageOverlay( {
+		getPageLanguages: () => Promise.resolve( languageApiResponse )
+	} );
+	o.show();
+	return o.$el[0];
+};
+
+Overlay.story = {
+	name: 'overlay'
+};
