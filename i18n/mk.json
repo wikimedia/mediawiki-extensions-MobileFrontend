@@ -63,7 +63,7 @@
 	"mobile-frontend-editor-cancel-confirm": "Навистина сакате да го напуштите уредувањето?",
 	"mobile-frontend-editor-captcha-try-again": "Погрешен код. Обидете се повторно.",
 	"mobile-frontend-editor-continue": "Следно",
-	"mobile-frontend-editor-disabled": "Страницава е заштитена за да се спречи вандализам.",
+	"mobile-frontend-editor-disabled": "Страницава е заштитена за да се спречи вандализам. [$1 Погл. извор]",
 	"mobile-frontend-editor-disabled-anon": "Ќе треба да се најавите за да ја уредиувате страницава.",
 	"mobile-frontend-editor-editing": "Уредување",
 	"mobile-frontend-editor-editing-page": "<span><strong>Уредување</strong> на $1</span>",

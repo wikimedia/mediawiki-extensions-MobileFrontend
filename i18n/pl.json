@@ -98,7 +98,7 @@
 	"mobile-frontend-editor-cancel-confirm": "Na pewno chcesz porzucić edycję?",
 	"mobile-frontend-editor-captcha-try-again": "Nieprawidłowy kod, spróbuj ponownie.",
 	"mobile-frontend-editor-continue": "Dalej",
-	"mobile-frontend-editor-disabled": "Ta strona jest zabezpieczona, aby zapobiec wandalizmom.",
+	"mobile-frontend-editor-disabled": "Ta strona jest zabezpieczona, aby zapobiec wandalizmom [$1 Zobacz źródło]",
 	"mobile-frontend-editor-disabled-anon": "Musisz się zalogować, aby edytować tę stronę.",
 	"mobile-frontend-editor-editing": "Edycja",
 	"mobile-frontend-editor-editing-page": "<span><strong>Edycja</strong> $1</span>",
