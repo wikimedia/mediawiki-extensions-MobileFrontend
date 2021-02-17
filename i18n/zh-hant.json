@@ -93,7 +93,7 @@
 	"mobile-frontend-editor-cancel-confirm": "你確定要放棄你的編輯？",
 	"mobile-frontend-editor-captcha-try-again": "驗證碼錯誤，請重試。",
 	"mobile-frontend-editor-continue": "下一步",
-	"mobile-frontend-editor-disabled": "此頁面已被保護以防止惡意破壞。",
+	"mobile-frontend-editor-disabled": "此頁面已被保護以防止惡意破壞。[$1 查看原始碼]",
 	"mobile-frontend-editor-disabled-anon": "您需要登入才能編輯此頁面。",
 	"mobile-frontend-editor-editing": "正在編輯",
 	"mobile-frontend-editor-editing-page": "<span><strong>正在編輯</strong> $1</span>",
