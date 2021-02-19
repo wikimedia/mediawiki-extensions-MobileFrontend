@@ -3,6 +3,7 @@
 namespace MobileFrontend\Amc;
 
 use MediaWiki\ChangeTags\Taggable;
+use MediaWiki\MediaWikiServices;
 use User;
 
 /**
@@ -67,7 +68,9 @@ final class Hooks {
 	 * @param \ManualLogEntry $logEntry
 	 */
 	public static function onManualLogEntryBeforePublish( \ManualLogEntry $logEntry ) {
-		self::injectTagsIfPerformerUsesAMC( $logEntry, $logEntry->getPerformer() );
+		$performer = MediaWikiServices::getInstance()->getUserFactory()->
+			newFromUserIdentity( $logEntry->getPerformerIdentity() );
+		self::injectTagsIfPerformerUsesAMC( $logEntry, $performer );
 	}
 
 	/**
