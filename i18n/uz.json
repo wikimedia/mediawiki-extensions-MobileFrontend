@@ -31,7 +31,7 @@
 	"mobile-frontend-diffview-anonymous": "Anonim foydalanuvchi",
 	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|bayt}} qoʻshildi",
 	"mobile-frontend-diffview-comma": "$1, $2",
-	"mobile-frontend-diffview-editcount": "<div>$1</div>ta [[{{PLURAL:$1|tahrir}}",
+	"mobile-frontend-diffview-editcount": "<div>$1</div>ta {{PLURAL:$1|tahrir}}",
 	"mobile-frontend-diffview-title": "Oʻzgarishlar",
 	"mobile-frontend-edit-signup-action": "Tahrirlash uchun roʻyxatdan oʻting.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Kirish",

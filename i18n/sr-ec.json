@@ -128,7 +128,7 @@
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Предложени језици",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Други језици",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Претражите језик",
-	"mobile-frontend-last-modified-date": "Датум и време последње измене странице: $1 у $2",
+	"mobile-frontend-last-modified-date": "Најкасније уређено на датум $1, у $2",
 	"mobile-frontend-last-modified-with-user-days": "Ову страницу је [$4 последњи пут {{GENDER:$1|уредио|уредила}}] {{PLURAL:$5|{{GENDER:$1|корисник|корисница}} [$6 $2]|0=анонимни корисник}} пре {{PLURAL:$3|$3 дана}}.",
 	"mobile-frontend-last-modified-with-user-hours": "Ову страницу је [$4 последњи пут {{GENDER:$1|уредио|уредила}}] {{PLURAL:$5|{{GENDER:$1|корисник|корисница}} [$6 $2]|0=анонимни корисник}} пре {{PLURAL:$3|$3 сата|$3 сата|$3 сати}}.",
 	"mobile-frontend-last-modified-with-user-just-now": "Ову страницу је [$3 последњи пут {{GENDER:$1|уредио|уредила}}] {{PLURAL:$4|{{GENDER:$1|корисник|корисница}} [$5 $2]|0=анонимни корисник}} управо сада",
