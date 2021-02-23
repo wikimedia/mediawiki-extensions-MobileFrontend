@@ -34,6 +34,7 @@
 	"mobile-frontend-diffview-editcount": "<div>$1</div>ta {{PLURAL:$1|tahrir}}",
 	"mobile-frontend-diffview-title": "Oʻzgarishlar",
 	"mobile-frontend-edit-signup-action": "Tahrirlash uchun roʻyxatdan oʻting.",
+	"mobile-frontend-editor-anon": "Kirmasdan turib tahrirlash",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Kirish",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "Mayli",
 	"mobile-frontend-editor-blocked-drawer-title": "Siz bloklanganligingiz sababli {{SITENAME}}ni tahrirlay olmaysiz.",
