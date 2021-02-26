@@ -10,7 +10,6 @@ use Title;
 /**
  * Sources content from the Mobile-Content-Service
  * This requires allow_url_fopen to be set.
- * @since
  */
 class McsContentProvider implements IContentProvider {
 	/** @var Title|null */
