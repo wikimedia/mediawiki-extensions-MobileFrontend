@@ -55,7 +55,7 @@
 	"mobile-frontend-editor-cancel-confirm": "Kas soovid tõesti oma muudatusest loobuda?",
 	"mobile-frontend-editor-captcha-try-again": "Vale kood, proovi uuesti.",
 	"mobile-frontend-editor-continue": "Jätka",
-	"mobile-frontend-editor-disabled": "See lehekülg on kaitstud, et ennetada vandalismi.",
+	"mobile-frontend-editor-disabled": "See lehekülg on kaitstud, et ennetada vandalismi. [$1 Vaata lähteteksti]",
 	"mobile-frontend-editor-disabled-anon": "Pead sisse logima, et seda lehekülge redigeerida.",
 	"mobile-frontend-editor-editing": "Redigeerimine",
 	"mobile-frontend-editor-editing-page": "<span>Lehekülje \"$1\" <strong>redigeerimine</strong></span>",

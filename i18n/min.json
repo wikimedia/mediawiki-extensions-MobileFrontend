@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"David Wadie Fisher-Freberg",
 			"Iwan Novirion",
 			"Muhraz",
 			"Naval Scene"
@@ -66,7 +67,7 @@
 	"tag-mobile_edit": "Suntiang seluler",
 	"tag-mobile_edit-description": "Suntiangan dibuek dari seluler (web atau app)",
 	"tag-advanced_mobile_edit": "Suntiang seluler lanjutan",
-	"tag-mobile_web_edit": "Suntiangan web HP",
+	"tag-mobile_web_edit": "Suntiangan web seluler",
 	"mobile-frontend-loading-message": "Mamuek...",
 	"prefs-mobile": "Pangaturan seluler"
 }
