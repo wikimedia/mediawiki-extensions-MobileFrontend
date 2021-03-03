@@ -268,9 +268,9 @@ viewport.
 ```php
   [
     // These will enable lazy loading images in beta mode
-    'beta' => false,
+    'beta' => true,
     // These will enable lazy loading images in all modes
-    'base' => false,
+    'base' => true,
   ]
 ```
 
