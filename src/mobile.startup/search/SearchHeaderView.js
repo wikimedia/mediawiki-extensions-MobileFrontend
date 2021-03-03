@@ -43,7 +43,7 @@ class SearchHeaderView extends View {
 	get template() {
 		return util.template( `<div class="overlay-title search-header-view">
 		<form method="get" action="{{action}}" class="search-box">
-		<input class="search" type="search" name="search" autocomplete="off" placeholder="{{placeholderMsg}}" aria-label="{{placeholderMsg}}" value="{{searchTerm}}">
+		<input class="search mw-ui-background-icon-search" type="search" name="search" autocomplete="off" placeholder="{{placeholderMsg}}" aria-label="{{placeholderMsg}}" value="{{searchTerm}}">
 		</form>
 </div>` );
 	}
