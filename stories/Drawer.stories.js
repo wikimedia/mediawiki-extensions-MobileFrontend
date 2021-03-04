@@ -68,6 +68,7 @@ storiesOf( 'Drawer' )
 					name: 'Global>Admin'
 				},
 				reason: 'Constant vandalism',
+				parsedReason: Promise.resolve( '<p>Constant vandalism</p>' ),
 				duration: '10 days',
 				expiry: '(1st September 2019)'
 			} );
@@ -85,6 +86,7 @@ storiesOf( 'Drawer' )
 					name: undefined
 				},
 				reason: 'Constant vandalism',
+				parsedReason: Promise.resolve( '<p>Constant vandalism</p>' ),
 				duration: '10 days',
 				expiry: '(1st September 2019)'
 			} );
@@ -102,6 +104,7 @@ storiesOf( 'Drawer' )
 					url: 'https://jdlrobson.com'
 				},
 				reason: 'Constant vandalism',
+				parsedReason: Promise.resolve( '<p>Constant vandalism</p>' ),
 				duration: '10 days',
 				expiry: '(1st September 2019)'
 			} );
