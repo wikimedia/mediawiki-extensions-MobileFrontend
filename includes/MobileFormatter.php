@@ -41,6 +41,13 @@ class MobileFormatter extends HtmlFormatter {
 		$this->title = $title;
 		$this->context = $context;
 		$this->config = $config;
+
+		// Avoid upstream breaking change.
+		// TODO: Stop stripping comments
+		if ( method_exists( $this, 'setRemoveComments' ) ) {
+			// @phan-suppress-next-line PhanUndeclaredMethod
+			$this->setRemoveComments( true );
+		}
 	}
 
 	/**
