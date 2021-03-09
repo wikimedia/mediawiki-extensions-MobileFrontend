@@ -319,7 +319,10 @@ class SpecialMobileOptions extends MobileSpecialPage {
 			$this->userMode->setEnabled( $enableAMC );
 		}
 
-		DeferredUpdates::addCallableUpdate( function () use ( $updateSingleOption, $mobileMode, $enableAMC ) {
+		DeferredUpdates::addCallableUpdate( function () use (
+			$updateSingleOption,
+			$mobileMode,
+			$enableAMC ) {
 			if ( wfReadOnly() ) {
 				return;
 			}
@@ -345,7 +348,6 @@ class SpecialMobileOptions extends MobileSpecialPage {
 					$enableAMC ? UserMode::OPTION_ENABLED : UserMode::OPTION_DISABLED
 				);
 			}
-
 			$latestUser->saveSettings();
 		}, DeferredUpdates::PRESEND );
 

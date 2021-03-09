@@ -3,6 +3,7 @@
 namespace MobileFrontend\Amc;
 
 use MediaWiki\MediaWikiServices;
+use MediaWiki\User\UserIdentity;
 use MediaWiki\User\UserOptionsLookup;
 use MediaWiki\User\UserOptionsManager;
 use MobileFrontend\Features\IUserMode;
@@ -24,9 +25,10 @@ class UserMode implements IUserMode, IUserSelectableMode {
 	public const OPTION_DISABLED = '0';
 
 	/**
-	 * @var \User
+	 * @var UserIdentity
 	 */
-	private $user;
+	private $userIdentity;
+
 	/**
 	 * @var Manager
 	 */
@@ -44,19 +46,19 @@ class UserMode implements IUserMode, IUserSelectableMode {
 
 	/**
 	 * @param Manager $amcManager
-	 * @param \User $user
+	 * @param UserIdentity $userIdentity
 	 * @param UserOptionsLookup $userOptionsLookup
 	 * @param UserOptionsManager $userOptionsManager
 	 * @throws \RuntimeException When AMC mode is not available
 	 */
 	public function __construct(
 		Manager $amcManager,
-		\User $user,
+		UserIdentity $userIdentity,
 		UserOptionsLookup $userOptionsLookup,
 		UserOptionsManager $userOptionsManager
 	) {
 		$this->amc = $amcManager;
-		$this->user = $user;
+		$this->userIdentity = $userIdentity;
 		$this->userOptionsLookup = $userOptionsLookup;
 		$this->userOptionsManager = $userOptionsManager;
 	}
@@ -74,7 +76,7 @@ class UserMode implements IUserMode, IUserSelectableMode {
 	 */
 	public function isEnabled() {
 		$userOption = $this->userOptionsLookup->getOption(
-			$this->user,
+			$this->userIdentity,
 			self::USER_OPTION_MODE_AMC,
 			self::OPTION_DISABLED
 		);
@@ -88,7 +90,6 @@ class UserMode implements IUserMode, IUserSelectableMode {
 	 * WARNING: Does not persist the updated user preference to the database.
 	 * The caller must handle this by calling User::saveSettings() after all
 	 * preference updates associated with this web request are made.
-	 *
 	 * @param bool $isEnabled
 	 * @throws RuntimeException when mode is disabled
 	 */
@@ -97,7 +98,7 @@ class UserMode implements IUserMode, IUserSelectableMode {
 			throw new RuntimeException( 'AMC Mode is not available' );
 		}
 		$this->userOptionsManager->setOption(
-			$this->user,
+			$this->userIdentity,
 			self::USER_OPTION_MODE_AMC,
 			$isEnabled ? self::OPTION_ENABLED : self::OPTION_DISABLED
 		);
@@ -107,14 +108,14 @@ class UserMode implements IUserMode, IUserSelectableMode {
 	 * Create UserMode for given user
 	 * NamedConstructor used by hooks system
 	 *
-	 * @param \User $user
+	 * @param UserIdentity $userIdentity
 	 * @return self
 	 */
-	public static function newForUser( \User $user ) {
+	public static function newForUser( UserIdentity $userIdentity ) {
 		$services = MediaWikiServices::getInstance();
 		return new self(
 			$services->getService( 'MobileFrontend.AMC.Manager' ),
-			$user,
+			$userIdentity,
 			$services->getUserOptionsLookup(),
 			$services->getUserOptionsManager()
 		);
