@@ -187,7 +187,7 @@
 	"mobile-frontend-nearby-noresults": "Todo tranquilo aquí... No se encontraron páginas con temas cercanos.",
 	"mobile-frontend-nearby-noresults-guidance": "Prueba a crear una página nueva o añadir una ubicación a una ya existente.",
 	"mobile-frontend-nearby-permission-denied": "Has negado a {{SITENAME}} el acceso a los servicios de ubicación. Para cambiar esto, ve a la configuración del navegador o del dispositivo",
-	"mobile-frontend-nearby-location-unavailable": "{{SITENAME}} no puede determinar tu ubicación. Por favor, inténtalo otra vez cuando haya una mejor señal.",
+	"mobile-frontend-nearby-location-unavailable": "{{SITENAME}} no puede determinar tu ubicación. Inténtalo otra vez cuando haya una mejor señal.",
 	"mobile-frontend-nearby-requirements": "¡Lo sentimos! Tu navegador web no admite {{SITENAME}} Cercanos.",
 	"mobile-frontend-nearby-requirements-guidance": "Prueba con otro navegador o activa JavaScript si está desactivado.",
 	"mobile-frontend-nearby-title": "Cercanos",
