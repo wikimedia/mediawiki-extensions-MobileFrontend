@@ -2,12 +2,14 @@
 
 namespace MobileFrontend\Amc;
 
+use DeferredUpdates;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\User\UserOptionsLookup;
 use MediaWiki\User\UserOptionsManager;
 use MobileFrontend\Features\IUserMode;
 use MobileFrontend\Features\IUserSelectableMode;
 use RuntimeException;
+use Wikimedia\Assert\Assert;
 
 class UserMode implements IUserMode, IUserSelectableMode {
 
@@ -83,24 +85,41 @@ class UserMode implements IUserMode, IUserSelectableMode {
 	}
 
 	/**
-	 * Set Advanced Mobile Contributions mode to enabled or disabled.
-	 *
-	 * WARNING: Does not persist the updated user preference to the database.
-	 * The caller must handle this by calling User::saveSettings() after all
-	 * preference updates associated with this web request are made.
-	 *
 	 * @param bool $isEnabled
 	 * @throws RuntimeException when mode is disabled
 	 */
-	public function setEnabled( bool $isEnabled ) {
+	public function setEnabled( $isEnabled ) {
+		$toSet = $isEnabled ? self::OPTION_ENABLED : self::OPTION_DISABLED;
 		if ( !$this->amc->isAvailable() ) {
 			throw new RuntimeException( 'AMC Mode is not available' );
 		}
-		$this->userOptionsManager->setOption(
-			$this->user,
+		Assert::parameterType( 'boolean', $isEnabled, 'isEnabled' );
+		$user = $this->user;
+		$userOptionsManager = $this->userOptionsManager;
+
+		$userOptionsManager->setOption(
+			$user,
 			self::USER_OPTION_MODE_AMC,
-			$isEnabled ? self::OPTION_ENABLED : self::OPTION_DISABLED
+			$toSet
 		);
+		DeferredUpdates::addCallableUpdate( function () use ( $user, $toSet, $userOptionsManager ) {
+			if ( wfReadOnly() ) {
+				return;
+			}
+
+			$latestUser = $user->getInstanceForUpdate();
+			if ( $latestUser === null ) {
+				throw new \InvalidArgumentException(
+					"User not found, so can't enable AMC mode"
+				);
+			}
+			$userOptionsManager->setOption(
+				$latestUser,
+				self::USER_OPTION_MODE_AMC,
+				$toSet
+			);
+			$latestUser->saveSettings();
+		}, DeferredUpdates::PRESEND );
 	}
 
 	/**
