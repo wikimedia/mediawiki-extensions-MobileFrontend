@@ -227,6 +227,11 @@ class MobileContext extends ContextSource {
 
 	/**
 	 * Sets testing group membership, both cookie and this class variables
+	 *
+	 * WARNING: Does not persist the updated user preference to the database.
+	 * The caller must handle this by calling User::saveSettings() after all
+	 * preference updates associated with this web request are made.
+	 *
 	 * @param string $mode Mode to set
 	 */
 	public function setMobileMode( $mode ) {
@@ -252,20 +257,6 @@ class MobileContext extends ContextSource {
 				self::USER_MODE_PREFERENCE_NAME,
 				$mode
 			);
-			DeferredUpdates::addCallableUpdate( function () use ( $user, $mode, $userOptionsManager ) {
-				if ( wfReadOnly() ) {
-					return;
-				}
-
-				$latestUser = $user->getInstanceForUpdate();
-
-				$userOptionsManager->setOption(
-					$latestUser,
-					self::USER_MODE_PREFERENCE_NAME,
-					$mode
-				);
-				$latestUser->saveSettings();
-			}, DeferredUpdates::PRESEND );
 		}
 
 		$this->getRequest()->response()->setCookie( self::OPTIN_COOKIE_NAME, $mode, 0, [
