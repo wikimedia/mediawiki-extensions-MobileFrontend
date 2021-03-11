@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Andrei Stroe",
+			"Andreyyshore",
 			"Danutz",
 			"Firilacroco",
 			"Fitoschido",
@@ -214,7 +215,7 @@
 	"mobile-frontend-watchlist-more": "mai multe",
 	"mobile-frontend-watchlist-please-wait": "Vă rugăm să așteptați; acțiunea de a urmări durează mai mult decât se aștepta.",
 	"mobile-frontend-watchlist-error": "A apărut o problemă la urmărirea acestei pagini. Încercați din nou.",
-	"mobile-frontend-watchlist-purpose": "<strong>O listă cu pagini urmărite vă ajută să însemnați pagini și să urmăriți modificările efectuate asupra acestora.</strong><br /> Autentificaţi-vă pentru a o consulta.",
+	"mobile-frontend-watchlist-purpose": "<strong>O listă cu pagini urmărite vă ajută să însemnați pagini și să urmăriți modificările efectuate asupra acestora.</strong><br /> Autentificați-vă pentru a o consulta.",
 	"mobile-frontend-watchlist-removed": "$1 a fost eliminată din lista dumneavoastră de pagini urmărite",
 	"mobile-frontend-watchlist-signup-action": "<strong>O listă cu pagini urmărite vă ajută să însemnați pagini și să urmăriți modificările efectuate asupra acestora.</strong>Înregistrați-vă pentru a începe una nouă.",
 	"mobile-frontend-user-page-no-owner-page-yet": "Nu aveți o pagină de utilizator încă",
