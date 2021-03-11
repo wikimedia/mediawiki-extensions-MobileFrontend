@@ -32,6 +32,8 @@ class ApiParseExtenderTest extends MediaWikiTestCase {
 		] );
 		$this->assertFalse( isset( $data['errors'] ) );
 		$text = preg_replace( "/[\r\n]/", '', trim( $data['parse']['text']['*'] ) );
+		// Remove parser report comment as it is non-deterministic
+		$text = preg_replace( '/<!--.*?-->/s', '', $text );
 		$expected = preg_replace( "/[\r\n]/", '', trim( $expected ) );
 		$this->assertEquals( $expected, $text );
 	}
