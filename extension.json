@@ -995,6 +995,9 @@
 		"MFManifestBackgroundColor": {
 			"value": "#fff"
 		},
+		"MFLogWrappedInfoboxes": {
+			"value": true
+		},
 		"MFSiteStylesRenderBlocking": {
 			"value": false
 		},

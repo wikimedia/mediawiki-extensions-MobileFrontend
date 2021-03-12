@@ -393,8 +393,8 @@ class MobileFormatterTest extends MediaWikiTestCase {
 
 				$this->makeSectionHtml(
 					0,
-					'<p>paragraph 2</p>' .
 					'<p><span><span id="coordinates">Coordinates</span></span></p>' .
+					'<p>paragraph 2</p>' .
 					'<table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox</td></tr></table>'
 				),
 
@@ -537,15 +537,19 @@ class MobileFormatterTest extends MediaWikiTestCase {
 			],
 
 			[
-				// Infobox is inside one or more containers, i.e. not an
-				// immediate child of the section container element
+				// T149389: If the infobox is inside one or more containers, i.e. not an
+				// immediate child of the section container element, then
+				// MobileFormatter#moveFirstParagraphBeforeInfobox will trigger a "Not
+				// Found Error" warning.
+				// Do not touch infoboxes that are not immediate children of the lead section
+				// unless... (see next test T170006)
 				'<div><table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox</td></tr></table></div>' .
 				'<p>paragraph 1</p>',
 
 				$this->makeSectionHtml(
 					0,
-					'<p>paragraph 1</p>' .
-					'<div><table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox</td></tr></table></div>'
+					'<div><table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox</td></tr></table></div>' .
+					'<p>paragraph 1</p>'
 				),
 
 				$enableSections,  false, true,
@@ -576,7 +580,10 @@ class MobileFormatterTest extends MediaWikiTestCase {
 		}
 
 		if ( $showFirstParagraphBeforeInfobox ) {
-			$transforms[] = new MoveLeadParagraphTransform();
+			$transforms[] = new MoveLeadParagraphTransform(
+				$title,
+				$title->getLatestRevID()
+			);
 		}
 		return $transforms;
 	}
@@ -684,6 +691,127 @@ class MobileFormatterTest extends MediaWikiTestCase {
 		$formatter->applyTransforms( [] );
 		// Success is not crashing when the input is not a DOMElement.
 		$this->assertTrue( true );
+	}
+
+	/**
+	 * @see https://phabricator.wikimedia.org/T149884
+	 * @param string $input
+	 * @covers MobileFormatter::applyTransforms
+	 * @dataProvider provideLoggingOfInfoboxesBeingWrappedInContainersWhenWrapped
+	 */
+	public function testLoggingOfInfoboxesBeingWrappedInContainersWhenWrapped( $input ) {
+		$this->setMwGlobals( [
+			'wgMFLogWrappedInfoboxes' => true
+		] );
+		$title = 'T149884';
+		$t = Title::newFromText( $title, NS_MAIN );
+		$formatter = new MobileFormatter(
+			MobileFormatter::wrapHTML( $input ),
+			$t,
+			$this->mfConfig,
+			$this->mfContext
+		);
+
+		$loggerMock = $this->createMock( \Psr\Log\LoggerInterface::class );
+		$loggerMock->expects( $this->once() )
+			->method( 'info' )
+			->will( $this->returnCallback( function ( $message ) use ( $title ) {
+				// Debug message contains Page title
+				$this->assertStringContainsString( $title, $message );
+				// and contains revision id which is 0 by default
+				$this->assertStringContainsString( '0', $message );
+			} ) );
+
+		$this->setLogger( 'mobile', $loggerMock );
+		$formatter->applyTransforms(
+			$this->buildTransforms( [], false, $t, false, false, true )
+		);
+	}
+
+	public function provideLoggingOfInfoboxesBeingWrappedInContainersWhenWrapped() {
+		$box = $this->buildInfoboxHTML( 'infobox' );
+		return [
+			// wrapped once
+			[ "<div>$box</div>" ],
+			// wrapped twice
+			[ "<div><p>$box</p></div>" ],
+			// wrapped multiple times
+			[ "<div><div><p><span><div><p>Test</p>$box</div></span></p></div></div>" ]
+		];
+	}
+
+	/**
+	 * @see https://phabricator.wikimedia.org/T149884
+	 * @covers MobileFormatter::applyTransforms
+	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::logInfoboxesWrappedInContainers
+	 * @dataProvider provideLoggingOfInfoboxesBeingWrappedInContainersWhenNotWrapped
+	 */
+	public function testLoggingOfInfoboxesBeingWrappedInContainersWhenNotWrapped( $input ) {
+		$this->setMwGlobals( [
+			'wgMFLogWrappedInfoboxes' => true
+		] );
+		$title = 'T149884';
+
+		$t = Title::newFromText( $title );
+		$formatter = new MobileFormatter(
+			MobileFormatter::wrapHTML( $input ),
+			$t,
+			$this->mfConfig,
+			$this->mfContext
+		);
+
+		$loggerMock = $this->createMock( \Psr\Log\LoggerInterface::class );
+		$loggerMock->expects( $this->never() )
+			->method( 'info' );
+
+		$this->setLogger( 'mobile', $loggerMock );
+		$formatter->applyTransforms(
+			$this->buildTransforms( [], false, $t, false, false, true )
+		);
+	}
+
+	public function provideLoggingOfInfoboxesBeingWrappedInContainersWhenNotWrapped() {
+		$box = $this->buildInfoboxHTML( 'infobox' );
+		return [
+			// no wrapping
+			[ $box ],
+			// Although the box is wrapped, it comes over the first paragraph so isn't a problem (T196767)
+			[ "<p>First para</p><div>$box</div>" ],
+			// Although the box is wrapped, it comes over the first paragraph so isn't a problem (T196767)
+			[ "<p>First para</p><div><div><div>$box</div></div></div>" ],
+			// if wrapped inside mw-stack no logging occurs
+			[ "<div class=\"mw-stack\">$box</div>" ],
+		];
+	}
+
+	/**
+	 * @see https://phabricator.wikimedia.org/T163805
+	 * @covers MobileFormatter::applyTransforms
+	 */
+	public function testLoggingOfInfoboxesSkipsInfoBoxInsideInfobox() {
+		$this->setMwGlobals( [
+			'wgMFLogWrappedInfoboxes' => true
+		] );
+
+		// wrapped inside different infobox
+		$input = $this->buildInfoboxHTML( $this->buildInfoboxHTML( 'test' ) );
+		$title = 'T163805';
+		$t = Title::newFromText( $title, NS_MAIN );
+		$formatter = new MobileFormatter(
+			MobileFormatter::wrapHTML( $input ),
+			Title::newFromText( $title, NS_MAIN ),
+			$this->mfConfig,
+			$this->mfContext
+		);
+
+		$loggerMock = $this->createMock( \Psr\Log\LoggerInterface::class );
+		$loggerMock->expects( $this->never() )
+			->method( 'info' );
+
+		$this->setLogger( 'mobile', $loggerMock );
+		$formatter->applyTransforms(
+			$this->buildTransforms( [], false, $t, true, false, true )
+		);
 	}
 
 	/**
