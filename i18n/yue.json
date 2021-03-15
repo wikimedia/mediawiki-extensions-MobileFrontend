@@ -7,6 +7,7 @@
 			"Moon0319",
 			"Obonggi",
 			"Roy17",
+			"SCP-2000",
 			"Waihorace",
 			"Yueman"
 		]
@@ -39,7 +40,7 @@
 	"mobile-frontend-editor-summary-request": "你點樣改善咗篇文？",
 	"mobile-frontend-editor-summary": "摘要：",
 	"mobile-frontend-editor-switch-visual-editor": "轉去即見編輯",
-	"mobile-frontend-editor-wait": "儲存嘅修求，請等一陣。",
+	"mobile-frontend-editor-wait": "儲存緊修改，請等一陣。",
 	"mobile-frontend-editor-loading": "撈緊編輯器…",
 	"mobile-frontend-expand-sections-status": "攤開全部小節",
 	"mobile-frontend-fontchanger-link": "字體大細",

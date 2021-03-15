@@ -80,6 +80,7 @@
 	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|octet ajouté|octets ajoutés}}",
 	"mobile-frontend-diffview-bytesnochange": "Aucun changement de taille",
 	"mobile-frontend-diffview-bytesremoved": "$1 {{PLURAL:$1|octet supprimé|octets supprimés}}",
+	"mobile-frontend-diffview-comma": "$1, $2",
 	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|modification|modifications}}",
 	"mobile-frontend-diffview-title": "Modifications",
 	"mobile-frontend-edit-login-action": "<strong>Aider à améliorer {{SITENAME}}.</strong><br />Se connecter pour modifier.",
