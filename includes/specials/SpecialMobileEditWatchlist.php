@@ -202,7 +202,7 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 			$mobilePages->add( $page );
 		}
 
-		if ( count( $mobilePages ) === 0 ) {
+		if ( $mobilePages->isEmpty() ) {
 			$html = SpecialMobileWatchlist::getEmptyListHtml( false, $this->getLanguage() );
 		} else {
 			$html = $this->getViewHtml( $mobilePages );
