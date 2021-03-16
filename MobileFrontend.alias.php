@@ -312,6 +312,18 @@ $specialPageAliases['nan'] = [
 	'Uploads' => [ 'Kā--ê_tóng-àn' ],
 ];
 
+/** Norwegian Bokmål (norsk bokmål) */
+$specialPageAliases['nb'] = [
+	'Uploads' => [ 'Opplastinger' ],
+	'History' => [ 'Historikk' ],
+	'MobileCite' => [ 'Mobilsitering' ],
+	'MobileOptions' => [ 'Mobilinnstillinger' ],
+	'MobileDiff' => [ 'Mobildiff' ],
+	'MobileMenu' => [ 'Mobilmeny' ],
+	'MobileLanguages' => [ 'Mobilspråk' ],
+	'Nearby' => [ 'I_nærheten' ],
+];
+
 /** Dutch (Nederlands) */
 $specialPageAliases['nl'] = [
 	'History' => [ 'Geschiedenis' ],
@@ -324,8 +336,11 @@ $specialPageAliases['nl'] = [
 
 /** Norwegian Nynorsk (norsk nynorsk) */
 $specialPageAliases['nn'] = [
-	'MobileOptions' => [ 'Mobilval' ],
 	'Uploads' => [ 'Opplastingar' ],
+	'MobileOptions' => [ 'Mobilval' ],
+	'MobileDiff' => [ 'Mobildiff' ],
+	'MobileMenu' => [ 'Mobilmeny' ],
+	'MobileLanguages' => [ 'Mobilspråk' ],
 	'Nearby' => [ 'Nær_her' ],
 ];
 
