@@ -1,18 +1,18 @@
 # Public modern browser support matrix at https://www.mediawiki.org/wiki/Compatibility#Mobile
-# See also Modern browsers (Grade A) in ResourceLoader startup module MediaWiki core resources/src/startup/startup.js
+# See also Modern browsers (Grade A) in ResourceLoader startup module MediaWiki core 'resources/src/startup/startup.js'
 
 # https//en.wikipedia.org/wiki/Google_Chrome_version_history
-chrome 13
+chrome 31
+
+# https//en.wikipedia.org/wiki/Firefox_version_history
+firefox 27
 
 ie 11
 
-# https//en.wikipedia.org/wiki/Firefox_version_history
-firefox 4.0
+safari 9.1
 
-safari 5.0
+opera 18
 
-opera 15
+ios 9.0
 
-ios 6.0
-
-android 4.1
+android 4.3
