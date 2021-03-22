@@ -14,6 +14,6 @@ interface IUserSelectableMode {
 	 * Enables/Disabled current user mode
 	 * @param bool $isEnabled a new feature state
 	 */
-	public function setEnabled( $isEnabled );
+	public function setEnabled( bool $isEnabled );
 
 }
