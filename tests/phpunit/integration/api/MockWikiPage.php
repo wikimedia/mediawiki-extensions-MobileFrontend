@@ -1,7 +1,7 @@
 <?php
 
 class MockWikiPage extends WikiPage {
-	public function getLatest() {
+	public function getLatest( $wikiId = self::LOCAL ) {
 		return 123;
 	}
 
