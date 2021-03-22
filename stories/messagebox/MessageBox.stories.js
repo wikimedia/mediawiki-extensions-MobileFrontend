@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/html';
 
 import MessageBox from '../../src/mobile.startup/MessageBox';
-import '../../resources/mobile.messageBox.styles/messageBox.less';
+import '../../.storybook/mediawiki.skinning/messageBoxes.less';
 
 storiesOf( 'messagebox' )
 	.add( 'MessageBox (error)', () => {

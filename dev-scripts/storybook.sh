@@ -25,6 +25,10 @@ curl -sSL "https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/core/+/maste
 curl -sSL "https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/core/+/master/resources/src/mediawiki.ui/components/anchors.less?format=TEXT" | base64 --decode > .storybook/resolve-less-imports/mediawiki.ui/components/anchors.less
 curl -sSL "https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/core/+/master/resources/src/mediawiki.ui/components/inputs.less?format=TEXT" | base64 --decode > .storybook/resolve-less-imports/mediawiki.ui/components/inputs.less
 
+# mediawiki skinning modules
+mkdir -p .storybook/mediawiki.skinning
+curl -sSL "https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/core/+/master/resources/src/mediawiki.skinning/messageBoxes.less?format=TEXT" | base64 --decode > .storybook/mediawiki.skinning/messageBoxes.less
+
 # Minerva LESS
 mkdir -p .storybook/mediawiki-skins-MinervaNeue
 mkdir -p .storybook/mediawiki-skins-MinervaNeue/minerva.less

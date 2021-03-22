@@ -4,6 +4,7 @@
 .*.swp
 .idea/
 /.storybook/mediawiki-skins-MinervaNeue/
+/.storybook/mediawiki.skinning
 /.storybook/resolve-less-imports/
 node_modules/
 tmp/
