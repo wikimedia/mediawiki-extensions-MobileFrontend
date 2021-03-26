@@ -95,8 +95,6 @@
 	"mobile-frontend-media-load-fail-retry": "ꯇꯦꯛꯈꯠꯍꯟꯕꯥ",
 	"mobile-frontend-missing-image": "ꯃꯃꯤ",
 	"mobile-frontend-tap-to-display-image": "ꯃꯤꯔꯦꯜ ꯑꯗꯨ ꯎꯠꯅꯕ ꯅꯝꯃꯨ ꯫",
-	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 km}}",
-	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",
 	"mobile-frontend-nearby-error": "{{SITENAME}} ꯑꯅꯛꯄ ꯑꯁꯤ ꯋꯥꯍꯧ ꯈꯔꯥ ꯂꯩꯔꯦ ꯫",
 	"mobile-frontend-nearby-error-guidance": "ꯅꯪꯒꯤ ꯂꯩꯐꯝ ꯁꯤ ꯇꯦꯛꯈꯠꯍꯟꯂꯨ ꯫",
 	"mobile-frontend-nearby-title": "ꯑꯅꯛꯄꯗ",
