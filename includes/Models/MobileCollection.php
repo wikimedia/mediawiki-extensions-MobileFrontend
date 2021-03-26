@@ -5,11 +5,12 @@ namespace MobileFrontend\Models;
 use ArrayIterator;
 use Countable;
 use IteratorAggregate;
+use MediaWiki\Emptiable;
 
 /**
  * A collection of pages, which are represented by the MobilePage class.
  */
-class MobileCollection implements IteratorAggregate, Countable {
+class MobileCollection implements IteratorAggregate, Countable, Emptiable {
 
 	/**
 	 * The internal collection of pages.
@@ -24,6 +25,14 @@ class MobileCollection implements IteratorAggregate, Countable {
 	 */
 	public function count() {
 		return count( $this->pages );
+	}
+
+	/**
+	 * Return size of the collection
+	 * @return bool
+	 */
+	public function isEmpty() {
+		return empty( $this->pages );
 	}
 
 	/**
