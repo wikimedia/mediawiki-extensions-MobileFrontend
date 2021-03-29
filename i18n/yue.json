@@ -59,7 +59,7 @@
 	"mobile-frontend-languages-header-page": "$1 - 第啲話",
 	"mobile-frontend-languages-nonexistent-title": "版面$1唔存在。",
 	"mobile-frontend-languages-text": "$1 可以用 $2 種話。",
-	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "建議嘅話",
+	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "建議嘅語言",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "第啲話",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "搵一種話",
 	"mobile-frontend-last-modified-date": "最近編輯時間係$1 $2",
