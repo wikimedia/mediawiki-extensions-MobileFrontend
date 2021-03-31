@@ -210,8 +210,7 @@ class ExtMobileFrontend {
 		}
 
 		try {
-			$entityLookup = WikibaseClient::getDefaultInstance()
-				->getStore()
+			$entityLookup = WikibaseClient::getStore()
 				->getEntityLookup();
 			$entity = $entityLookup->getEntity( new ItemId( $item ) );
 			if ( !$entity ) {
