@@ -8,14 +8,16 @@ const formHeader = require( '../headers' ).formHeader,
  * @param {string} placeholderMsg
  * @param {string} action
  * @param {Function} onInput
+ * @param {string} defaultSearchPage
  * @return {jQuery.Element}
  */
-function searchHeader( placeholderMsg, action, onInput ) {
+function searchHeader( placeholderMsg, action, onInput, defaultSearchPage ) {
 	return formHeader(
 		new SearchHeaderView( {
 			placeholderMsg,
 			action,
-			onInput
+			onInput,
+			defaultSearchPage
 		} ),
 		[
 			icons.cancel()

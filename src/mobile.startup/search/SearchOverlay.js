@@ -19,6 +19,7 @@ var
  * @param {Object} params Configuration options
  * @param {string} params.placeholderMsg Search input placeholder text.
  * @param {string} [params.action] of form defaults to the value of wgScript
+ * @param {string} [params.defaultSearchPage] The default search page e.g. Special:Search
  * @param {SearchGateway} [params.gateway]
  * @fires SearchOverlay#search-show
  * @fires SearchOverlay#search-start
@@ -31,7 +32,8 @@ function SearchOverlay( params ) {
 			params.action || mw.config.get( 'wgScript' ),
 			function ( query ) {
 				this.performSearch( query );
-			}.bind( this )
+			}.bind( this ),
+			params.defaultSearchPage || ''
 		),
 		options = util.extend( true, {
 			headerChrome: true,
