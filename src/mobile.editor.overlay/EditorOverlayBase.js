@@ -491,14 +491,16 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 * @memberof EditorOverlayBase
 	 * @instance
 	 * @param {Function} exit Callback to exit the overlay
+	 * @param {Function} cancel Callback to cancel exiting the overlay
 	 */
-	onBeforeExit: function ( exit ) {
-		var windowManager,
-			self = this;
+	onBeforeExit: function ( exit, cancel ) {
+		var self = this;
 		if ( this.hasChanged() && !this.switching ) {
-			windowManager = OO.ui.getWindowManager();
-			windowManager.addWindows( [ new mw.widgets.AbandonEditDialog() ] );
-			windowManager.openWindow( 'abandonedit' )
+			if ( !this.windowManager ) {
+				this.windowManager = OO.ui.getWindowManager();
+				this.windowManager.addWindows( [ new mw.widgets.AbandonEditDialog() ] );
+			}
+			this.windowManager.openWindow( 'abandonedit' )
 				.closed.then( function ( data ) {
 					if ( data && data.action === 'discard' ) {
 						// log abandonment
@@ -515,6 +517,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 						exit();
 					}
 				} );
+			cancel();
 			return;
 		}
 		if ( !this.switching && !this.saved ) {
