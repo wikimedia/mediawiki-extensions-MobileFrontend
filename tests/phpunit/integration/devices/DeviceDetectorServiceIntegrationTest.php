@@ -26,9 +26,8 @@ class DeviceDetectorServiceIntegrationTest extends MediaWikiTestCase {
 			'User-Agent',
 
 			// A Macbook Air running Google Chrome (53.0.2785.116).
-			// @codingStandardsIgnoreStart
+			// phpcs:ignore Generic.Files.LineLength
 			'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36'
-			// @codingStandardsIgnoreEnd
 		);
 
 		$this->server = [];
@@ -46,9 +45,8 @@ class DeviceDetectorServiceIntegrationTest extends MediaWikiTestCase {
 			'User-Agent',
 
 			// An iPhone running iOS 8.0.
-			// @codingStandardsIgnoreStart
+			// phpcs:ignore Generic.Files.LineLength
 			'Mozilla/6.0 (iPhone; CPU iPhone OS 8_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/8.0 Mobile/10A5376e Safari/8536.25'
-			// @codingStandardsIgnoreEnd
 		);
 	}
 
@@ -87,10 +85,8 @@ class DeviceDetectorServiceIntegrationTest extends MediaWikiTestCase {
 	 * @covers \MobileFrontend\Devices\DeviceProperties::isTabletDevice
 	 */
 	public function testItShouldPrioritizeTheCustomRequestHeader() {
-		// @codingStandardsIgnoreStart
 		// The custom header //should// either be M or ZERO, per
 		// <https://github.com/wikimedia/operations-puppet/blob/2a2714c28eab25eed469375dc5322ea6a6ef85df/modules/varnish/templates/text-frontend.inc.vcl.erb#L74-L78>.
-		// @codingStandardsIgnoreEnd
 
 		$this->request->setHeader( 'X-Subdomain', 'M' );
 

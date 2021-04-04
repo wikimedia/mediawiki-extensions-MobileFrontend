@@ -141,7 +141,7 @@ class MobileFrontendSkinHooksTest extends MediaWikiLangTestCase {
 				],
 				[
 					'msg' => 'mobile-frontend-copyright',
-					// @codingStandardsIgnoreLine
+					// phpcs:ignore Generic.Files.LineLength
 					'link' => '<a class="external" rel="nofollow" href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>',
 					'plural' => 1
 				]
@@ -156,7 +156,6 @@ class MobileFrontendSkinHooksTest extends MediaWikiLangTestCase {
 				],
 				[
 					'msg' => 'mobile-frontend-copyright',
-					// @codingStandardsIgnoreLine
 					'link' => '<a href="/wiki/Rights_Page" title="Rights Page">CC BY 2.5</a>',
 					'plural' => 1
 				]

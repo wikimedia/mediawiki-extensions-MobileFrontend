@@ -44,7 +44,7 @@ class UADeviceDetectorTest extends \MediaWikiUnitTestCase {
 	}
 
 	public static function provideMobileUserAgents() {
-		// @codingStandardsIgnoreStart
+		// phpcs:disable Generic.Files.LineLength
 		return self::provideUserAgents( [
 			// Android
 			'Mozilla/5.0 (Linux; U; Android 2.3.3; zh-tw; HTC_Pyramid Build/GRI40) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1',
@@ -90,11 +90,11 @@ class UADeviceDetectorTest extends \MediaWikiUnitTestCase {
 			// WML
 			'KDDI-KC31 UP.Browser/6.2.0.5 (GUI) MMP/2.0',
 		] );
-		// @codingStandardsIgnoreEnd
+		// phpcs:enable
 	}
 
 	public static function provideDesktopUserAgents() {
-		// @codingStandardsIgnoreStart
+		// phpcs:disable Generic.Files.LineLength
 		return self::provideUserAgents( [
 			'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.0.7) Gecko/20060928 (Debian|Debian-1.8.0.7-1) Epiphany/2.14',
 			'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.0)',
@@ -114,11 +114,11 @@ class UADeviceDetectorTest extends \MediaWikiUnitTestCase {
 			'Wget/1.9',
 			'Mozilla/5.0 (compatible; YandexBot/3.0)',
 		] );
-		// @codingStandardsIgnoreEnd
+		// phpcs:enable
 	}
 
 	public static function provideTabletUserAgents() {
-		// @codingStandardsIgnoreStart
+		// phpcs:disable Generic.Files.LineLength
 		return self::provideUserAgents( [
 			// iPad
 			'Mozilla/5.0 (iPad; CPU OS 7_0_2 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11A501 Safari/9537.53',
@@ -137,7 +137,7 @@ class UADeviceDetectorTest extends \MediaWikiUnitTestCase {
 			// (Silk operating in "mobile" mode will only be detected as a mobile device.)
 			'Mozilla/5.0 (Linux; U; en-us; KFTT Build/IML74K) AppleWebKit/535.19 (KHTML, like Gecko) Silk/3.4 Safari/535.19 Silk-Accelerated=true',
 		] );
-		// @codingStandardsIgnoreEnd
+		// phpcs:enable
 	}
 
 	private function detectDeviceProperties( $userAgent ) {
@@ -175,9 +175,8 @@ class UADeviceDetectorTest extends \MediaWikiUnitTestCase {
 	 */
 	public function testItDoesntClassifySamsungSmartTVsAsMobileDevices() {
 		$properties = $this->detectDeviceProperties(
-			// @codingStandardsIgnoreStart
+			// phpcs:ignore Generic.Files.LineLength
 			'Mozilla/5.0 (SMART-TV; Linux; Tizen 2.3) AppleWebkit/538.1 (KHTML, like Gecko) SamsungBrowser/1.0 TV Safari/538.1'
-			// @codingStandardsIgnoreEnd
 		);
 
 		$this->assertFalse( $properties->isMobileDevice() );
@@ -185,9 +184,8 @@ class UADeviceDetectorTest extends \MediaWikiUnitTestCase {
 		// ---
 
 		$properties = $this->detectDeviceProperties(
-			// @codingStandardsIgnoreStart
+			// phpcs:ignore Generic.Files.LineLength
 			'Mozilla/5.0 (Linux; Android 4.2.2; nl-nl; SAMSUNG GT-I9505 Build/JDQ39) AppleWebKit/535.19 (KHTML, like Gecko) Version/1.0 Chrome/18.0.1025.308 Mobile Safari/535.19'
-			// @codingStandardsIgnoreEnd
 		);
 
 		$this->assertTrue( $properties->isMobileDevice() );
