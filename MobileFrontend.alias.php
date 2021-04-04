@@ -351,7 +351,13 @@ $specialPageAliases['pa'] = [
 
 /** Polish (polski) */
 $specialPageAliases['pl'] = [
+	'Uploads' => [ 'Przesłane' ],
 	'History' => [ 'Historia' ],
+	'MobileCite' => [ 'Cytowanie_mobilne' ],
+	'MobileOptions' => [ 'Ustawienia_mobile' ],
+	'MobileDiff' => [ 'Różnica_mobilna' ],
+	'MobileMenu' => [ 'Menu_mobilne' ],
+	'MobileLanguages' => [ 'Języki_mobilne' ],
 	'Nearby' => [ 'W_pobliżu' ],
 ];
 
