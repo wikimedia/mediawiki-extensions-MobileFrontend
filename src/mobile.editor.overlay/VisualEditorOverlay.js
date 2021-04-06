@@ -197,14 +197,14 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 	 * @memberof VisualEditorOverlay
 	 * @instance
 	 */
-	onBeforeExit: function ( exit ) {
+	onBeforeExit: function ( exit, cancel ) {
 		var overlay = this;
 		EditorOverlayBase.prototype.onBeforeExit.call( this, function () {
 			// If this function is called, the parent method has decided that we should exit
 			exit();
 			// VE-specific cleanup
 			overlay.destroyTarget();
-		} );
+		}, cancel );
 	},
 	/**
 	 * @inheritdoc
