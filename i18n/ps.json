@@ -16,7 +16,7 @@
 	"mobile-frontend-clear-search": "سپينول",
 	"mobile-frontend-copyright": "دا مېنځپانگه د $1 سره سم ستاسې لاسرسي کې ده، خو چې مخالف يې وييل شوی وي.",
 	"mobile-frontend-diffview-anonymous": "ورکنومی کارن",
-	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|بايټ ورگډ شو|بايټونه ورگډ شول}}",
+	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|تورى ورگډ شو|تورى ورگډ شول}}",
 	"mobile-frontend-diffview-bytesnochange": "په اندازه کې يي هیڅ بدلون نه دي رامېنځ ته شوي.",
 	"mobile-frontend-diffview-bytesremoved": "$1 {{PLURAL:$1|ټکي|ټکی}} لري شوه",
 	"mobile-frontend-diffview-comma": "$1، $2",

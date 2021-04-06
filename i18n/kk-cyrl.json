@@ -6,6 +6,7 @@
 			"Eldar zh96",
 			"GaiJin",
 			"Kaztrans",
+			"Wertuose",
 			"Wikibilim"
 		]
 	},
@@ -85,7 +86,7 @@
 	"mobile-frontend-last-modified-with-user-hours": "{{PLURAL:$5|[$6 $2]|0=анонимді қатысушы}} [{{PLURAL:$3|$3 сағат|$3 сағат}} бұрын $4 соңғы рет {{GENDER:$1|өңдеді}}]",
 	"mobile-frontend-last-modified-with-user-just-now": "Қазір ғана {{PLURAL:$4|[$5 $2]|0=анонимді қатысушы}} [$3 соңғы рет {{GENDER:$1|өңдеді}}]",
 	"mobile-frontend-last-modified-with-user-minutes": "{{PLURAL:$5|[$6 $2]|0=анонимді қатысушы}} [{{PLURAL:$3|$3 минут|$3 минут}} бұрын $4 соңғы рет {{GENDER:$1|өңдеді}}]",
-	"mobile-frontend-last-modified-with-user-months": "{{PLURAL:$5|[$6 $2]|0=анонимді қатысушы}} [{{PLURAL:$3|$3 ай|$3 ай}} бұрын $4 соңғы рет {{GENDER:$1|өңдеді}}]",
+	"mobile-frontend-last-modified-with-user-months": "[$4 Соңғы рет {{PLURAL:$3|$3 ай}} бұрын {{PLURAL:$5|[$6 $2]|0=анонимді қатысушы}}  {{GENDER:$1|өңдеді}}]",
 	"mobile-frontend-last-modified-with-user-seconds": "{{PLURAL:$5|[$6 $2]|0=анонимді қатысушы}} [{{PLURAL:$3|$3 секунд|$3 секунд}} бұрын   $4 соңғы рет {{GENDER:$1|өңдеді}}]",
 	"mobile-frontend-last-modified-with-user-years": "{{PLURAL:$5|[$6 $2]|0=анонимді қатысушы}} [{{PLURAL:$3|$3 жыл|$3 жыл}} бұрын $4 соңғы рет {{GENDER:$1|өңдеді}}]",
 	"mobile-frontend-main-menu": "Негізгі мәзір",
