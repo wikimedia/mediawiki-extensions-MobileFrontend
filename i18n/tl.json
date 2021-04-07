@@ -3,6 +3,7 @@
 		"authors": [
 			"AnakngAraw",
 			"Emem.calist",
+			"GinawaSaHapon",
 			"Jojit fb",
 			"Leeheonjin",
 			"Sky Harbor"
@@ -26,8 +27,8 @@
 	"mobile-frontend-save-settings": "Itala ang mga kagustuhan",
 	"mobile-frontend-settings-beta": "Beta",
 	"mobile-frontend-terms-text": "Pagtatakda sa Paggamit",
-	"mobile-frontend-view": "Bersiyong pantelepono",
+	"mobile-frontend-view": "Bersyong pang-mobile",
 	"mobile-frontend-view-desktop": "Desktop",
-	"tag-mobile_edit": "Pagbabagong ginawa sa pamamagitan ng mobile",
-	"tag-mobile_web_edit": "Pagbabagong ginawa sa pamamagitan ng mobile web"
+	"tag-mobile_edit": "In-edit sa mobile",
+	"tag-mobile_web_edit": "In-edit sa web gamit mobile"
 }
