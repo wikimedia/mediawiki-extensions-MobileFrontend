@@ -26,7 +26,7 @@ class MobilePageTest extends MediaWikiTestCase {
 	 * @return File
 	 */
 	private function mockFileFactory( $height ) {
-		$file = $this->getMockBuilder( 'File' )
+		$file = $this->getMockBuilder( File::class )
 			->disableOriginalConstructor()
 			->onlyMethods( [ 'getUrl', 'getHeight', 'getWidth', 'transform' ] )
 			->getMock();
