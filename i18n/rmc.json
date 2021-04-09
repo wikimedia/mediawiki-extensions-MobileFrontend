@@ -4,5 +4,7 @@
 			"Adehertogh"
 		]
 	},
-	"mobile-frontend-view": "Mobilni verzija"
+	"mobile-frontend-view": "Mobilni verzija",
+	"tag-mobile_edit": "Pikeriben andalo mobilos",
+	"tag-mobile_web_edit": "Pikeriben andralo mobiliskero webos"
 }
