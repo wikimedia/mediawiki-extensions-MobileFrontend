@@ -4,7 +4,18 @@
 			"Adehertogh"
 		]
 	},
+	"mobile-frontend-language-heading": "<strong>Čhiba</strong>",
+	"mobile-frontend-languages-header": "Čhiba",
+	"mobile-frontend-languages-header-page": "$1 - Aver čhiba",
+	"mobile-frontend-languages-structured-overlay-all-languages-header": "Aver čhiba",
+	"mobile-frontend-main-menu": "Šerutne menu",
+	"mobile-frontend-missing-image": "Kipocis",
+	"mobile-frontend-nearby-title": "Pašes",
 	"mobile-frontend-view": "Mobilni verzija",
+	"mobile-frontend-watchlist-a-z": "Zoznamos",
+	"mobile-frontend-watchlist-filter-other": "Aver",
+	"mobile-frontend-watchlist-filter-talk": "Vakeriben",
+	"mobile-frontend-watchlist-more": "buter",
 	"tag-mobile_edit": "Pikeriben andalo mobilos",
 	"tag-mobile_web_edit": "Pikeriben andralo mobiliskero webos"
 }

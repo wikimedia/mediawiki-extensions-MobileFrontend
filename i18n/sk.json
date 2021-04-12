@@ -10,7 +10,8 @@
 			"Teslaton",
 			"TomášPolonec",
 			"Vlad5250",
-			"Wizzard"
+			"Wizzard",
+			"Yardom78"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Či používateľ edituje prostredníctvom mobilného rozhrania",
@@ -34,7 +35,7 @@
 	"mobile-frontend-clear-search": "Vyčistiť",
 	"mobile-frontend-contributions-404-desc": "Príspevky bez používateľa alebo s neexistujúcim používateľom sa nedajú hľadať.",
 	"mobile-frontend-contributions-404-title": "Zadané nesprávne používateľské meno",
-	"mobile-frontend-copyright": "Obsah je dostupný pod $1, pokiaľ nie je uvedené inak.",
+	"mobile-frontend-copyright": "Obsah je dostupný pod licenciou $1, pokiaľ nie je uvedené inak.",
 	"mobile-frontend-desc": "Mobilné rozhranie",
 	"mobile-frontend-diffview-404-desc": "Požadované ID revízie neexistuje<br />Toto je zvyčajne spôsobené otvorením starého odkazu na revíziu zmazanej stránky alebo tým, že odkaz obsahoval neplatné znaky.",
 	"mobile-frontend-diffview-404-title": "Chybná revízia",
