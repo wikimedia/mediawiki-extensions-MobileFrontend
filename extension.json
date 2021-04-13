@@ -112,15 +112,6 @@
 				"resources/mobile.pagesummary.styles/pagesummary.less"
 			]
 		},
-		"mobile.messageBox.styles": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"styles": [
-				"resources/mobile.messageBox.styles/messageBox.less"
-			]
-		},
 		"mobile.placeholder.images": {
 			"class": "ResourceLoaderImageModule",
 			"useDataURI": false,
@@ -280,8 +271,7 @@
 				"mediawiki.api",
 				"mediawiki.viewport",
 				"mediawiki.router",
-				"jquery.throttle-debounce",
-				"mobile.messageBox.styles"
+				"jquery.throttle-debounce"
 			],
 			"messages": [
 				"mobile-frontend-categories-heading",

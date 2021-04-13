@@ -1,6 +1,6 @@
 import nearbyErrorMessage from '../../src/mobile.special.nearby.scripts/nearbyErrorMessage.js';
 import '../../resources/mobile.special.nearby.styles/specialNearby.less';
-import '../../resources/mobile.messageBox.styles/messageBox.less';
+import '../../.storybook/mediawiki.skinning/messageBoxes.less';
 
 export default {
 	title: 'messagebox'

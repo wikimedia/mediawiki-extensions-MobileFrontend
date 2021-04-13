@@ -725,7 +725,7 @@ class MobileFrontendHooks {
 		if ( $isMobileView ) {
 			$out = $special->getOutput();
 			$out->addModuleStyles(
-				[ 'mobile.special.styles', 'mobile.messageBox.styles' ]
+				[ 'mobile.special.styles' ]
 			);
 			if ( $name === 'Userlogin' || $name === 'CreateAccount' ) {
 				$out->addModules( 'mobile.special.userlogin.scripts' );
@@ -858,18 +858,6 @@ class MobileFrontendHooks {
 			// Allow modifications in mobile only mode
 			$hookContainer = $services->getHookContainer();
 			$hookContainer->run( 'BeforePageDisplayMobile', [ &$out, &$skin ] );
-
-			// Warning box styles are needed when reviewing old revisions
-			// and inside the fallback editor styles to action=edit page
-			$requestAction = $out->getRequest()->getVal( 'action' );
-			if (
-				$out->getRequest()->getText( 'oldid' ) ||
-				$requestAction === 'edit' || $requestAction === 'submit'
-			) {
-				$out->addModuleStyles( [
-					'mobile.messageBox.styles'
-				] );
-			}
 		}
 	}
 
