@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Adehertogh"
+			"Adehertogh",
+			"Martina Horňáková"
 		]
 	},
 	"mobile-frontend-language-heading": "<strong>Čhiba</strong>",
@@ -11,7 +12,7 @@
 	"mobile-frontend-main-menu": "Šerutne menu",
 	"mobile-frontend-missing-image": "Kipocis",
 	"mobile-frontend-nearby-title": "Pašes",
-	"mobile-frontend-view": "Mobilni verzija",
+	"mobile-frontend-view": "Mobilno verzija",
 	"mobile-frontend-watchlist-a-z": "Zoznamos",
 	"mobile-frontend-watchlist-filter-other": "Aver",
 	"mobile-frontend-watchlist-filter-talk": "Vakeriben",
