@@ -3,7 +3,7 @@ found=0
 
 for svgfile in `find resources -type f -name "*.svg"`; do
   outfile="$svgfile.tmp"
-  node_modules/.bin/svgo --config .svgo.yml -i $svgfile -o $outfile -q
+  node_modules/.bin/svgo --config .svgo.config.js -i $svgfile -o $outfile -q
   if [ $(wc -c $svgfile | awk '{print $1}') -gt $(wc -c $outfile | awk '{print $1}') ]; then
     echo "File $svgfile is not compressed"
     found=$((found + 1))
