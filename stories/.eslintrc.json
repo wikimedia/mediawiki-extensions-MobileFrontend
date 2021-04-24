@@ -7,6 +7,7 @@
 		"$": "readonly"
 	},
 	"rules": {
-		"no-alert": "off"
+		"no-alert": "off",
+		"compat/compat": "off"
 	}
 }

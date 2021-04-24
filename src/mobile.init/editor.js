@@ -9,6 +9,7 @@ var M = require( '../mobile.startup/moduleLoaderSingleton' ),
 	user = mw.user,
 	CtaDrawer = require( '../mobile.startup/CtaDrawer' ),
 	// FIXME: Disable on IE < 10 for time being
+	// eslint-disable-next-line compat/compat
 	blacklisted = /MSIE \d\./.test( navigator.userAgent ),
 	contentModel = mw.config.get( 'wgPageContentModel' ),
 	veConfig = mw.config.get( 'wgVisualEditorConfig' ),
