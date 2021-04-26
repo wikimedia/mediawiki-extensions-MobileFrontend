@@ -10,5 +10,6 @@
 	"apihelp-mobileview-param-page": "Titlul paginii de procesat.",
 	"apihelp-mobileview-param-redirect": "Dacă ar trebui sau nu să fie urmate redirecționările.",
 	"apihelp-mobileview-param-noimages": "Returnează HTML fără imagini.",
-	"apihelp-mobileview-param-thumbsize": "Dimensiunile maxime pentru miniaturi."
+	"apihelp-mobileview-param-thumbsize": "Dimensiunile maxime pentru miniaturi.",
+	"apiwarn-mobilefrontend-sectionsnotfound": "{{PLURAL:$2|Secțiunea|Secțiunile}} $1 {{PLURAL:$2|nu a fost găsită|nu au fost găsite}}."
 }
