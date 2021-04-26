@@ -9,16 +9,19 @@
 			"Otogi",
 			"SHOTHA",
 			"Tokoko",
-			"გიორგიმელა"
+			"გიორგიმელა",
+			"Გიო ოქრო"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "შეიყვანეთ დადასტურების კოდი",
 	"mobile-frontend-categories-heading": "<strong>კატეგორიები</strong>",
+	"mobile-frontend-categories-subheading": "ეს გვერდი შედის შემდეგ კატეგორიებში:",
 	"mobile-frontend-categories-nocat": "ეს გვერდი ჯერ-ჯერობით არცერთ კატეგორიას არ ეკუთვნის",
 	"mobile-frontend-categories-add": "კატეგორიაში ჩამატება",
 	"mobile-frontend-categories-search": "კატეგორიების ძიება",
 	"mobile-frontend-categories-summary": "დამატებული კატეგორიებში",
 	"mobile-frontend-categories-add-wait": "კატეგორიები ინახება, გთხოვთ, მოიცადოთ.",
+	"mobile-frontend-categories-normal": "შინაარსზე დაფუძნებული",
 	"mobile-frontend-categories-hidden": "საორგანიზაციო",
 	"mobile-frontend-changeslist-nocomment": "არ არის რედაქტირების რეზიუმე",
 	"mobile-frontend-clear-search": "გასუფთავება",
@@ -49,6 +52,7 @@
 	"mobile-frontend-editor-keep-editing": "განაგრძე რედაქტირება",
 	"mobile-frontend-editor-terms-link": "[$1 გამოყენების პირობები]",
 	"mobile-frontend-editor-placeholder": "ეს სექცია ცარიელია. შექმენი ის!",
+	"mobile-frontend-editor-placeholder-new-page": "თქვენ ქმნით ახალ გვერდს {{SITENAME}}-ში!",
 	"mobile-frontend-editor-previewing-page": "<span><strong>წინასწარ გადახედვა</strong> $1</span>",
 	"mobile-frontend-editor-publish": "გამოქვეყნება",
 	"mobile-frontend-editor-save": "შენახვა",

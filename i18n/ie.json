@@ -2,12 +2,17 @@
 	"@metadata": {
 		"authors": [
 			"OIS",
+			"Renan",
 			"Stavanger7"
 		]
 	},
 	"mobile-frontend-privacy-link-text": "Privatie",
 	"mobile-frontend-terms-text": "Conditiones de usage",
 	"mobile-frontend-view": "Aspecte mobil",
-	"tag-mobile_edit": "Modification per mobil",
-	"tag-mobile_web_edit": "Redaction per mobil-web"
+	"tag-mobile_edit": "Redaction per invention mobil",
+	"tag-mobile_edit-description": "Redaction fat de invention mobil (web o aplication)",
+	"tag-advanced_mobile_edit": "Redaction mobil avansat",
+	"tag-advanced_mobile_edit-description": "Redaction fat per usator che mode Avansat",
+	"tag-mobile_web_edit": "Redaction per version mobil del site",
+	"tag-mobile_web_edit-description": "Redaction fat del version mobil del site"
 }
