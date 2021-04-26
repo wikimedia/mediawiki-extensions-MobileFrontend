@@ -1,5 +1,4 @@
 const Page = require( '../Page' );
-const time = require( '../time' );
 const util = require( '../util' );
 
 /**
@@ -36,10 +35,7 @@ function parse( resp ) {
 	// page may or may not exist.
 	if ( resp.revisions && resp.revisions[0] ) {
 		revision = resp.revisions[0];
-		resp.lastModified = time.getLastModifiedMessage(
-			new Date( revision.timestamp ).getTime() / 1000,
-			revision.user
-		);
+		resp.lastModified = new Date( revision.timestamp );
 	}
 
 	return new Page(

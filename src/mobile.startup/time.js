@@ -68,13 +68,12 @@ function isNow( delta ) {
  * @instance
  * @param {number} ts timestamp
  * @param {string} username of the last user to modify the page
- * @param {string} [gender] of the last user to modify the page
- * @param {string} [historyUrl] url to the history page for the message, if omitted
- *  returns plain text string rather than html
+ * @param {string} gender of the last user to modify the page
+ * @param {string} historyUrl url to the history page for the message
  * @return {string}
  */
 function getLastModifiedMessage( ts, username, gender, historyUrl ) {
-	var delta, html,
+	var delta,
 		historyPageAnchor, userPageAnchor,
 		keys = {
 			seconds: 'mobile-frontend-last-modified-with-user-seconds',
@@ -108,12 +107,8 @@ function getLastModifiedMessage( ts, username, gender, historyUrl ) {
 		// rather than construct it from a wikilink
 		username ? userPageAnchor : ''
 	);
-	html = mw.message.apply( this, args ).parse();
-	if ( historyUrl ) {
-		return html;
-	} else {
-		return util.parseHTML( '<div>' ).html( html ).text();
-	}
+
+	return mw.message.apply( this, args ).parse();
 }
 
 /**

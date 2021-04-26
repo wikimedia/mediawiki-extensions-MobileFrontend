@@ -25,7 +25,7 @@ class Page {
 	 * @param {string} options.wikidataDescription
 	 * @param {boolean} options.isMainPage Whether the page is the Main Page.
 	 * @param {boolean} options.isMissing Whether the page exists in the wiki.
-	 * @param {string} options.lastModified
+	 * @param {Date} [options.lastModified]
 	 * @param {string} options.anchor
 	 * @param {string} [options.relevantTitle] associated with page.
 	 *  For example Special:WhatLinksHere/Foo would be associated with the page `Foo`.
