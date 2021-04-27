@@ -39,7 +39,7 @@ class MobileFrontendHooks {
 
 		$mobileContext = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
 
-		if ( $mobileContext->shouldDisplayMobileView() && !$mobileContext->isBlacklistedPage() ) {
+		if ( $mobileContext->shouldDisplayMobileView() ) {
 			// Force non-table based layouts (see bug 63428)
 			$wgHTMLFormAllowTableFormat = false;
 			// Turn on MediaWiki UI styles so special pages with form are styled.
@@ -110,9 +110,7 @@ class MobileFrontendHooks {
 		$config = $services->getService( 'MobileFrontend.Config' );
 
 		$mobileContext->doToggling();
-		if ( !$mobileContext->shouldDisplayMobileView()
-			|| $mobileContext->isBlacklistedPage()
-		) {
+		if ( !$mobileContext->shouldDisplayMobileView() ) {
 			return true;
 		}
 
@@ -163,8 +161,8 @@ class MobileFrontendHooks {
 	 * @param OutputPage $out
 	 */
 	public static function onBeforeInitialize( $title, $unused, OutputPage $out ) {
-		// Set the mobile target. Note, this does not consider MobileContext::isBlacklistedPage(),
-		// because that is NOT SAFE to look at Title, Skin or User from this hook (the title may
+		// Set the mobile target.
+		// Note that it is NOT SAFE to look at Title, Skin or User from this hook (the title may
 		// be invalid here, and is not yet rewritten, normalised, or replaced by other hooks).
 		// May only look at WebRequest.
 		$context = MobileContext::singleton();
@@ -202,7 +200,7 @@ class MobileFrontendHooks {
 	public static function onSkinAddFooterLinks( Skin $skin, string $key, array &$footerLinks ) {
 		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
 
-		if ( $key === 'places' && !$context->isBlacklistedPage() ) {
+		if ( $key === 'places' ) {
 			if ( $context->shouldDisplayMobileView() ) {
 				$footerLinks['terms-use'] = MobileFrontendSkinHooks::getTermsLink( $skin );
 				$footerLinks['desktop-toggle'] = MobileFrontendSkinHooks::getDesktopViewLink( $skin, $context );
@@ -830,12 +828,6 @@ class MobileFrontendHooks {
 
 			// in mobile view: always add vary header
 			$out->addVaryHeader( 'Cookie' );
-
-			// Target is generally set from onBeforeInitialize. But, it couldn't consider
-			// blacklisted pages yet. Last minute undo if needed.
-			if ( $context->isBlacklistedPage() ) {
-				$out->setTarget( null );
-			}
 
 			if ( $config->get( 'MFEnableManifest' ) ) {
 				$out->addLink(

@@ -405,26 +405,6 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
-	 * Checks whether current page is blacklisted from displaying mobile view
-	 * @return bool
-	 */
-	public function isBlacklistedPage() {
-		if ( $this->blacklistedPage === null ) {
-			$this->blacklistedPage = $this->isBlacklistedPageInternal();
-		}
-
-		return $this->blacklistedPage;
-	}
-
-	/**
-	 * Value for isBlacklistedPage()
-	 * @return bool
-	 */
-	private function isBlacklistedPageInternal() {
-		return false;
-	}
-
-	/**
 	 * Get requested mobile action
 	 * @return string
 	 */
