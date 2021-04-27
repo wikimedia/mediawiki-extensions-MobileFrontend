@@ -290,13 +290,6 @@ MFRemovableClasses will not apply for any blacklisted pages.
   ]
 ```
 
-#### $wgMFNoMobilePages
-
-Prefixed names of pages that will never display mobile view.
-
-* Type: `Array`
-* Default: `[]`
-
 #### $wgMFNearbyRange
 
 The range in meters that should be searched to find nearby pages on

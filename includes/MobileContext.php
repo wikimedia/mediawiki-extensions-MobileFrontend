@@ -421,14 +421,6 @@ class MobileContext extends ContextSource {
 	 * @return bool
 	 */
 	private function isBlacklistedPageInternal() {
-		$noMobilePages = $this->config->get( 'MFNoMobilePages' );
-
-		// Check for blacklisted category membership
-		$title = $this->getTitle();
-		// ...and individual page blacklisting
-		if ( $noMobilePages && $title && in_array( $title->getPrefixedText(), $noMobilePages ) ) {
-			return true;
-		}
 		return false;
 	}
 
