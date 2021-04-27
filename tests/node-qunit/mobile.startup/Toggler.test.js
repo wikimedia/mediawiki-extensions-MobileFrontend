@@ -64,7 +64,7 @@ QUnit.module( 'MobileFrontend Toggler.js', {
 		};
 	},
 	afterEach: function () {
-		mw.storage.session.remove( 'expandSections' );
+		mw.storage.remove( 'expandSections' );
 		mw.storage.session.remove( 'expandedSections' );
 		mw.storage.session = this._session;
 		jQuery.tearDown();
