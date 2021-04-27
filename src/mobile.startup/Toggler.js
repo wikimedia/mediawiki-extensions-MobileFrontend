@@ -266,7 +266,8 @@ Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 		// Old default behavior if on cached output
 		collapseSectionsByDefault = true;
 	}
-	expandSections = !collapseSectionsByDefault || mw.storage.session.get( 'expandSections' ) === 'true';
+	// NB: 'expandSections' uses localStorage, unlike 'expandedSections' which uses sessionStorage
+	expandSections = !collapseSectionsByDefault || mw.storage.get( 'expandSections' ) === 'true';
 
 	$container.children( tagName ).each( function ( i ) {
 		var isReferenceSection,
