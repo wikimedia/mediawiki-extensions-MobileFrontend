@@ -750,7 +750,8 @@ class MobileFrontendHooks {
 	 * @param string &$injected_html From 1.13, any HTML to inject after the login success message.
 	 */
 	public static function onUserLoginComplete( &$currentUser, &$injected_html ) {
-		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
+		$services = MediaWikiServices::getInstance();
+		$context = $services->getService( 'MobileFrontend.Context' );
 		if ( !$context->shouldDisplayMobileView() ) {
 			return;
 		}
@@ -766,7 +767,7 @@ class MobileFrontendHooks {
 			$title = Title::newFromText( $returnto );
 			// protect against watching special pages (these cannot be watched!)
 			if ( $title !== null && !$title->isSpecialPage() ) {
-				WatchAction::doWatch( $title, $currentUser );
+				$services->getWatchlistManager()->addWatch( $currentUser, $title );
 			}
 		}
 	}
