@@ -98,7 +98,7 @@ QUnit.test( 'getWindow()', function ( assert ) {
 
 QUnit.test( 'parseHTML()', function ( assert ) {
 	const htmlFragment = util.parseHTML( '<p>element content</p>', document );
-	assert.strictEqual( typeof htmlFragment === 'object', true );
+	assert.strictEqual( typeof htmlFragment, 'object' );
 	assert.strictEqual( htmlFragment[ 0 ].innerHTML, 'element content' );
 } );
 

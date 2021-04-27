@@ -23,6 +23,7 @@ var EditorOverlayBase = require( './EditorOverlayBase' ),
  * @param {jQuery.Promise} [dataPromise] Optional promise for loading content
  */
 function SourceEditorOverlay( options, dataPromise ) {
+	// eslint-disable-next-line compat/compat
 	this.isFirefox = /firefox/i.test( window.navigator.userAgent );
 	this.visualEditorConfig = options.visualEditorConfig ||
 		mw.config.get( 'wgVisualEditorConfig' ) || {};

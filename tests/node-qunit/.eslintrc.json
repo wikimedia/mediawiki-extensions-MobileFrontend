@@ -6,6 +6,7 @@
 		"../../src/.eslintrc.json"
 	],
 	"rules": {
-		"no-shadow": "off"
+		"no-shadow": "off",
+		"compat/compat": "off"
 	}
 }

@@ -59,7 +59,7 @@ QUnit.test( 'returns a drawer', function ( assert ) {
 		''
 	);
 
-	assert.strictEqual( subject instanceof Drawer, true, 'it initializes the correct class' );
+	assert.ok( subject instanceof Drawer, 'it initializes the correct class' );
 } );
 
 QUnit.test( 'calls promoCampaign.makeActionIneligible and onBeforeHide callback when dismissed', function ( assert ) {
