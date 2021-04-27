@@ -29,6 +29,7 @@
 			"Yusuke1109",
 			"そらたこ",
 			"つぶあん派",
+			"ネイ",
 			"珍庵",
 			"組曲師"
 		]
@@ -86,7 +87,7 @@
 	"mobile-frontend-editor-cancel-confirm": "編集内容を本当に破棄しますか?",
 	"mobile-frontend-editor-captcha-try-again": "コードが正しくありません。もう一度やり直してください。",
 	"mobile-frontend-editor-continue": "次へ",
-	"mobile-frontend-editor-disabled": "このページは荒らし防止のため保護されています。",
+	"mobile-frontend-editor-disabled": "このページは荒らし防止のため保護されています。[$1 ソースを表示]",
 	"mobile-frontend-editor-disabled-anon": "このページを編集するにはログインする必要があります。",
 	"mobile-frontend-editor-editing": "編集中",
 	"mobile-frontend-editor-editing-page": "<span>$1 を<strong>編集中</strong></span>",
