@@ -422,23 +422,9 @@ class MobileContext extends ContextSource {
 	 */
 	private function isBlacklistedPageInternal() {
 		$noMobilePages = $this->config->get( 'MFNoMobilePages' );
-		$noMobileCategory = $this->config->get( 'MFNoMobileCategory' );
 
 		// Check for blacklisted category membership
 		$title = $this->getTitle();
-		if ( $noMobileCategory && $title ) {
-			$id = $title->getArticleID();
-			if ( $id ) {
-				$dbr = wfGetDB( DB_REPLICA );
-				if ( $dbr->selectField( 'categorylinks',
-					'cl_from',
-					[ 'cl_from' => $id, 'cl_to' => $noMobileCategory ],
-					__METHOD__
-				) ) {
-					return true;
-				}
-			}
-		}
 		// ...and individual page blacklisting
 		if ( $noMobilePages && $title && in_array( $title->getPrefixedText(), $noMobilePages ) ) {
 			return true;

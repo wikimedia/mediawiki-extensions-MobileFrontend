@@ -290,13 +290,6 @@ MFRemovableClasses will not apply for any blacklisted pages.
   ]
 ```
 
-#### $wgMFNoMobileCategory
-
-DB key of the category which members will never display mobile view.
-
-* Type: `Boolean`
-* Default: `false`
-
 #### $wgMFNoMobilePages
 
 Prefixed names of pages that will never display mobile view.
