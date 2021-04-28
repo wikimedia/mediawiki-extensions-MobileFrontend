@@ -20,19 +20,22 @@ class ExtMobileFrontend {
 	 * Provide alternative HTML for a user page which has not been created.
 	 * Let the user know about it with pretty graphics and different texts depending
 	 * on whether the user is the owner of the page or not.
+	 * @internal Only for use inside MobileFrontend.
 	 * @param OutputPage $out
 	 * @param Title $title
 	 * @return string that is empty if the transform does not apply.
 	 */
 	public static function blankUserPageHTML( OutputPage $out, Title $title ) {
 		$pageUser = self::buildPageUserObject( $title );
+		$isHidden = $pageUser && $pageUser->isHidden();
+		$canViewHidden = !$isHidden || $out->getAuthority()->isAllowed( 'hideuser' );
 
 		$out->addModuleStyles( [
 			'mediawiki.ui.icon',
 			'mobile.userpage.styles', 'mobile.userpage.images'
 		] );
 
-		if ( $pageUser && !$title->exists() ) {
+		if ( $pageUser && !$title->exists() && $canViewHidden ) {
 			return self::getUserPageContent(
 				$out, $pageUser, $title );
 		} else {
