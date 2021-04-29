@@ -36,12 +36,6 @@ class MobileContext extends ContextSource {
 	protected $useFormat = null;
 
 	/**
-	 * Save whether current page is blacklisted from displaying in mobile view
-	 * @var bool|null
-	 */
-	protected $blacklistedPage = null;
-
-	/**
 	 * Key/value pairs of things to add to X-Analytics response header for analytics
 	 * @var array[]
 	 */
