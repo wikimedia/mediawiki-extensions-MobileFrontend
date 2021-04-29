@@ -5,6 +5,8 @@
 'use strict';
 
 const fs = require( 'fs' ),
+	path = require( 'path' ),
+	logPath = process.env.LOG_DIR || path.join( __dirname, '/log' ),
 	saveScreenshot = require( 'wdio-mediawiki' ).saveScreenshot;
 
 exports.config = {
@@ -58,13 +60,24 @@ exports.config = {
 
 	// Setting this enables automatic screenshots for when a browser command fails
 	// It is also used by afterTest for capturig failed assertions.
-	screenshotPath: process.env.LOG_DIR || __dirname + '/log',
+	screenshotPath: logPath,
 
 	// Default timeout for each waitFor* command.
 	waitforTimeout: 10 * 1000,
 
-	// See also: http://webdriver.io/guide/testrunner/reporters.html
-	reporters: [ 'spec' ],
+	// See:
+	// https://webdriver.io/docs/dot-reporter
+	// https://webdriver.io/docs/junit-reporter
+	reporters: [
+		'spec',
+		[ 'junit', {
+			outputDir: logPath,
+			outputFileFormat: function () {
+				const makeFilenameDate = new Date().toISOString().replace( /[:.]/g, '-' );
+				return `WDIO.xunit-${makeFilenameDate}.xml`;
+			}
+		} ]
+	],
 
 	// See also: http://mochajs.org
 	mochaOpts: {
