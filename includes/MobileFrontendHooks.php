@@ -281,10 +281,10 @@ class MobileFrontendHooks {
 			}
 		}
 
+		$options = $config->get( 'MFMobileFormatterOptions' );
+		$excludeNamespaces = $options['excludeNamespaces'] ?? [];
 		// Perform a few extra changes if we are in mobile mode
-		$namespaceAllowed = !$title->inNamespaces(
-			$config->get( 'MFMobileFormatterNamespaceBlacklist' )
-		);
+		$namespaceAllowed = !$title->inNamespaces( $excludeNamespaces );
 
 		$alwaysUseProvider = $config->get( 'MFAlwaysUseContentProvider' );
 		$ignoreLocal = !( $config->get( 'MFContentProviderTryLocalContentFirst' ) &&

@@ -201,6 +201,7 @@ if you don't know, what you do. Moreover, this configuration variable will be
 removed in the near future (hopefully).
 * maxImages - if a page has more than this number of image tags then the formatter will not run
 * maxHeadings - if a page has more than this number of heading tags then the formatter will not run
+* excludeNamespaces - disable the MobileFormatter for these namespaces. Article HTML for mobile will be the same as desktop.
 
 * Type: `Object`
 * Default: `{ headings: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'], maxImages: 1000, maxHeadings: 4000 }`
@@ -271,22 +272,6 @@ viewport.
     'beta' => true,
     // These will enable lazy loading images in all modes
     'base' => true,
-  ]
-```
-
-#### $wgMFMobileFormatterNamespaceBlacklist
-
-Array of namespaces that blacklists certain namespaces from applying mobile
-transformations to page content. This will disable lazy loading images and
-references; special casing and section formatting on the given page.
-MFRemovableClasses will not apply for any blacklisted pages.
-
-* Type: `Array`
-* Default:
-```php
-  [
-    NS_TEMPLATE,
-    NS_SPECIAL
   ]
 ```
 

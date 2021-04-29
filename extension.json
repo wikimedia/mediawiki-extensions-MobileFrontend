@@ -819,6 +819,10 @@
 		},
 		"MFMobileFormatterOptions": {
 			"value": {
+				"excludeNamespaces": [
+					10,
+					-1
+				],
 				"maxImages": 1000,
 				"maxHeadings": 4000,
 				"headings": [
@@ -863,12 +867,6 @@
 		},
 		"MFLazyLoadSkipSmallImages": {
 			"value": false
-		},
-		"MFMobileFormatterNamespaceBlacklist": {
-			"value": [
-				10,
-				-1
-			]
 		},
 		"MFSpecialPageTaglines": {
 			"value": []
