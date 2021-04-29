@@ -754,9 +754,14 @@ class MobileFrontendHooks {
 		}
 
 		// If 'watch' is set from the login form, watch the requested article
-		$watch = $context->getRequest()->getVal( 'watch' );
-		if ( $watch !== null ) {
-			$title = Title::newFromText( $watch );
+		$campaign = $context->getRequest()->getVal( 'campaign' );
+		$returnto = $context->getRequest()->getVal( 'returnto' );
+		$returntoquery = $context->getRequest()->getVal( 'returntoquery' );
+
+		// The user came from one of the drawers that prompted them to login.
+		// We must watch the article per their original intent.
+		if ( $campaign === 'mobile_watchPageActionCta' || $returntoquery === 'article_action=watch' ) {
+			$title = Title::newFromText( $returnto );
 			// protect against watching special pages (these cannot be watched!)
 			if ( $title !== null && !$title->isSpecialPage() ) {
 				WatchAction::doWatch( $title, $currentUser );
