@@ -1,7 +1,7 @@
 const
 	Thumbnail = require( './Thumbnail' ),
 	HEADING_SELECTOR = mw.config.get( 'wgMFMobileFormatterHeadings', [ 'h1', 'h2', 'h3', 'h4', 'h5' ] ).join( ',' ),
-	BLACKLISTED_THUMBNAIL_CLASS_SELECTORS = [ 'noviewer', 'metadata' ];
+	EXCLUDE_THUMBNAIL_CLASS_SELECTORS = [ 'noviewer', 'metadata' ];
 
 class PageHTMLParser {
 	/**
@@ -140,7 +140,7 @@ class PageHTMLParser {
 	/**
 	 * Return all the thumbnails in the article.
 	 * Images which have a class or link container (.image|.thumbimage)
-	 * that matches one of the items of the constant BLACKLISTED_THUMBNAIL_CLASS_SELECTORS
+	 * that matches one of the items of the constant EXCLUDE_THUMBNAIL_CLASS_SELECTORS
 	 * will be excluded.
 	 * A thumbnail nested inside one of these classes will still be returned.
 	 * e.g. `<div class="noviewer"><a class="image"><img></a></div>` is not a valid thumbnail
@@ -152,20 +152,20 @@ class PageHTMLParser {
 	 */
 	getThumbnails( $el ) {
 		var $thumbs,
-			blacklistSelector = '.' + BLACKLISTED_THUMBNAIL_CLASS_SELECTORS.join( ',.' ),
+			notSelector = '.' + EXCLUDE_THUMBNAIL_CLASS_SELECTORS.join( ',.' ),
 			thumbs = [];
 
 		$el = $el || this.$el;
 
 		$thumbs = $el.find( 'a.image, a.thumbimage' )
-			.not( blacklistSelector );
+			.not( notSelector );
 
 		$thumbs.each( function () {
 			var $a = $el.find( this ),
 				$lazyImage = $a.find( '.lazy-image-placeholder' ),
 				// Parents need to be checked as well.
-				valid = $a.parents( blacklistSelector ).length === 0 &&
-					$a.find( blacklistSelector ).length === 0,
+				valid = $a.parents( notSelector ).length === 0 &&
+					$a.find( notSelector ).length === 0,
 				href = $a.attr( 'href' ),
 				legacyMatch = href && href.match( /title=([^/&]+)/ ),
 				match = href && href.match( /[^/]+$/ );
@@ -174,7 +174,7 @@ class PageHTMLParser {
 			if ( $lazyImage.length && valid ) {
 				// if the regex matches it means the image has one of the classes
 				// thus we must invert the result
-				valid = !new RegExp( '\\b(' + BLACKLISTED_THUMBNAIL_CLASS_SELECTORS.join( '|' ) + ')\\b' )
+				valid = !new RegExp( '\\b(' + EXCLUDE_THUMBNAIL_CLASS_SELECTORS.join( '|' ) + ')\\b' )
 					.test( $lazyImage.data( 'class' ) );
 			}
 

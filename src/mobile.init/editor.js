@@ -8,9 +8,6 @@ var M = require( '../mobile.startup/moduleLoaderSingleton' ),
 	$allEditLinks = $( '#ca-edit, .mw-editsection a, .edit-link' ),
 	user = mw.user,
 	CtaDrawer = require( '../mobile.startup/CtaDrawer' ),
-	// FIXME: Disable on IE < 10 for time being
-	// eslint-disable-next-line compat/compat
-	blacklisted = /MSIE \d\./.test( navigator.userAgent ),
 	contentModel = mw.config.get( 'wgPageContentModel' ),
 	veConfig = mw.config.get( 'wgVisualEditorConfig' ),
 	editCount = mw.config.get( 'wgUserEditCount' ),
@@ -528,7 +525,7 @@ function bindEditLinksSorryToast( msg, router ) {
 module.exports = function ( currentPage, currentPageHTMLParser, skin ) {
 	var isMissing = currentPage.id === 0,
 		router = mw.loader.require( 'mediawiki.router' ),
-		isEditingSupported = router.isSupported() && !blacklisted;
+		isEditingSupported = router.isSupported();
 
 	if ( contentModel !== 'wikitext' ) {
 		// Only load the wikitext editor on wikitext. Otherwise we'll rely on the fallback behaviour
@@ -542,7 +539,7 @@ module.exports = function ( currentPage, currentPageHTMLParser, skin ) {
 	}
 
 	if ( !isEditingSupported ) {
-		// Browser doesn't support mobile editor (or is blacklisted), use the fallback editor.
+		// Browser doesn't support mobile editor use the fallback editor.
 		return;
 	}
 
