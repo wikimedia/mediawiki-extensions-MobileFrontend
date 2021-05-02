@@ -398,7 +398,7 @@ class MobileFrontendHooks {
 			// If we loaded this there is absolutely no point in MediaWiki:Mobile.css! (T248415)
 			unset( $pages[ "MediaWiki:$ucaseSkin.css" ] );
 			if ( $config->get( 'MFSiteStylesRenderBlocking' ) ) {
-				$pages[' MediaWiki:Mobile.css' ] = [ 'type' => 'style' ];
+				$pages[ 'MediaWiki:Mobile.css' ] = [ 'type' => 'style' ];
 			}
 		}
 	}
@@ -418,7 +418,7 @@ class MobileFrontendHooks {
 			unset( $pages[ 'MediaWiki:Common.js' ] );
 			$pages[ 'MediaWiki:Mobile.js' ] = [ 'type' => 'script' ];
 			if ( !$config->get( 'MFSiteStylesRenderBlocking' ) ) {
-				$pages[' MediaWiki:Mobile.css' ] = [ 'type' => 'style' ];
+				$pages[ 'MediaWiki:Mobile.css' ] = [ 'type' => 'style' ];
 			}
 		}
 	}
