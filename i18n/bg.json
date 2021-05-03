@@ -36,7 +36,7 @@
 	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|редакция|редакции}}",
 	"mobile-frontend-diffview-title": "Промени",
 	"mobile-frontend-editor-blocked-drawer-title": "Имате забрана за редактиране на {{SITENAME}}.",
-	"mobile-frontend-editor-blocked-drawer-title-partial": "Редактирането на страницата Ви е забранено с блок.",
+	"mobile-frontend-editor-blocked-drawer-title-partial": "Редактирането на страницата Ви е забранено посредством блокиране.",
 	"mobile-frontend-editor-blocked-drawer-help": "Подробно",
 	"mobile-frontend-editor-cancel": "Отказ",
 	"mobile-frontend-editor-continue": "Следваща",

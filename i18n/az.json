@@ -31,7 +31,7 @@
 	"mobile-frontend-editor-blocked-drawer-action-login": "Daxil ol",
 	"mobile-frontend-editor-cancel": "İmtina",
 	"mobile-frontend-editor-continue": "Növbəti",
-	"mobile-frontend-editor-disabled": "Bu səhifə vandalizmin qarşısını almaq məqsədilə mühafizə olunur.",
+	"mobile-frontend-editor-disabled": "Bu səhifə vandalizmin qarşısını almaq məqsədilə mühafizə olunur. [$1 Bax]",
 	"mobile-frontend-editor-editing": "Redaktə olunur",
 	"mobile-frontend-editor-editing-page": "<span><strong>Redaktə:</strong> $1</span>",
 	"mobile-frontend-editor-keep-editing": "Redaktəni davam etdir",
