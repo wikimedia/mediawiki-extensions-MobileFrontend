@@ -209,7 +209,7 @@ removed in the near future (hopefully).
 
 If set to true, styles inside MediaWiki:Mobile.css will become render blocking.
 
-This is intended for situations where the [TemplateStyles extension](https://m.mediawiki.org/wiki/Mobile_Gateway/TemplateStyles)
+This is intended for situations where the [TemplateStyles extension](https://www.mediawiki.org/wiki/Extension:TemplateStyles)
 cannot be used. When enabled, this may increase the time it takes for the mobile
 site to render, depending on how large MediaWiki:Mobile.css is for your wiki.
 
