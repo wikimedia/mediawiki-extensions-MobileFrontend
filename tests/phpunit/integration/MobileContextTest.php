@@ -70,7 +70,7 @@ class MobileContextTest extends MediaWikiTestCase {
 		$asserter = $this;
 		$this->setTemporaryHook(
 			'GetMobileUrl',
-			function ( &$string, $hookCtx ) use (
+			static function ( &$string, $hookCtx ) use (
 					$asserter,
 					&$invokes,
 					$context

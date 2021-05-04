@@ -1008,7 +1008,7 @@ class MobileFrontendHooks {
 
 		// Only set the tagline if the feature has been enabled and the article is in the main namespace
 		if ( $context->shouldDisplayMobileView() && $descriptionsEnabled ) {
-			$desc = self::findTagline( $po, function ( $item ) {
+			$desc = self::findTagline( $po, static function ( $item ) {
 				return ExtMobileFrontend::getWikibaseDescription( $item );
 			} );
 			if ( $desc ) {

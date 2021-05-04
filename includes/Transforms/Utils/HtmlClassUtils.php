@@ -32,7 +32,7 @@ class HtmlClassUtils {
 	public static function formClassString( array $classes ): string {
 		$enabled = array_filter(
 			$classes,
-			function ( $enabled ) {
+			static function ( $enabled ) {
 				return $enabled;
 			}
 		);

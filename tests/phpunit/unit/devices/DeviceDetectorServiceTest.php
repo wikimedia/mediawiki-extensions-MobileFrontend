@@ -26,7 +26,7 @@ class DeviceDetectorServiceTest extends \MediaWikiUnitTestCase {
 	 * @return CompositeDeviceDetector
 	 */
 	private function createDetector( array $results ) {
-		$childFactory = function ( $result ) {
+		$childFactory = static function ( $result ) {
 			return new StubDeviceDetector( $result );
 		};
 

@@ -79,7 +79,7 @@ class SpecialMobileLanguages extends MobileSpecialPage {
 				$langObject['url'] = $this->mobileContext->getMobileUrl( $langObject['url'] );
 				$languages[$index] = $langObject;
 			}
-			$compareLanguage = function ( $a, $b ) {
+			$compareLanguage = static function ( $a, $b ) {
 				return strcasecmp( $a['langname'], $b['langname'] );
 			};
 			usort( $languages, $compareLanguage );

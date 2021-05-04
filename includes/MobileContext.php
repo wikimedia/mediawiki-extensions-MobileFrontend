@@ -934,7 +934,7 @@ class MobileContext extends ContextSource {
 	 */
 	public function getAnalyticsLogItems() {
 		return array_map(
-			function ( $val ) {
+			static function ( $val ) {
 				return implode( self::ANALYTICS_HEADER_DELIMITER, $val );
 			},
 			$this->analyticsLogItems

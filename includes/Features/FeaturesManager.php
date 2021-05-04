@@ -63,7 +63,7 @@ class FeaturesManager {
 	 * @return array<IFeature>
 	 */
 	public function getAvailableForMode( IUserMode $mode ) {
-		return array_filter( $this->features, function ( IFeature $feature ) use ( $mode ) {
+		return array_filter( $this->features, static function ( IFeature $feature ) use ( $mode ) {
 			return $feature->isAvailable( $mode );
 		} );
 	}

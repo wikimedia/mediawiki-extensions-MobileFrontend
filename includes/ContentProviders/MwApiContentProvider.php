@@ -96,7 +96,7 @@ class MwApiContentProvider implements IContentProvider {
 			$parse = $json['parse'];
 
 			$out->addModules( $parse['modules'] );
-			$styles = array_filter( $parse[ 'modulestyles' ], function ( $module ) {
+			$styles = array_filter( $parse[ 'modulestyles' ], static function ( $module ) {
 				return strpos( $module, 'skins.' ) === false;
 			} );
 			$out->addModuleStyles( $styles );
