@@ -310,7 +310,13 @@ mfExtend( EditorOverlayBase, Overlay, {
 				'abusefilter-disallowed': 'extensionAbuseFilter',
 				'abusefilter-warning': 'extensionAbuseFilter',
 				captcha: 'extensionCaptcha',
+				// FIXME: This language is non-inclusive and we would love to change it,
+				// but this relates to an error code provided by software.
+				// This is blocked on T254649
 				spamblacklist: 'extensionSpamBlacklist',
+				// FIXME: This language is non-inclusive and we would love to change it,
+				// but this relates to an error code provided by software.
+				// Removal of this line is blocked on T254650.
 				'titleblacklist-forbidden': 'extensionTitleBlacklist',
 				pagedeleted: 'editPageDeleted',
 				editconflict: 'editConflict'

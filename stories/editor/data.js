@@ -47,12 +47,14 @@ export const abuseFilterDisallowed = {
 	docref: 'See http://localhost:3080/w/api.php for API usage. Subscribe to the mediawiki-api-announce mailing list at &lt;https://lists.wikimedia.org/mailman/listinfo/mediawiki-api-announce&gt; for notice of API deprecations and breaking changes.'
 };
 
-export const spamBlacklist = {
+export const spam = {
 	errors: [
 		{
+			// FIXME: Removal of this line is blocked on T254649.
 			code: 'spamblacklist',
-			html: 'The text you wanted to save was blocked by the spam filter. <b>Woohoo!</b> This is probably caused by a link to a blacklisted external site.\nThe following text is what triggered our spam filter: example.com/test',
+			html: 'The text you wanted to save was blocked by the spam filter. <b>Woohoo!</b> This is probably caused by a link to a forbidden external site.\nThe following text is what triggered our spam filter: example.com/test',
 			data: {
+				// FIXME: Removal of this line is blocked on T254649.
 				spamblacklist: {
 					matches: [
 						'example.com/test'
