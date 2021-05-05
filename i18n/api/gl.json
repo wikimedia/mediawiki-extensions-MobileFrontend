@@ -37,5 +37,6 @@
 	"apierror-mobilefrontend-badidtitle": "Mala combinación de id de modificación/título.",
 	"apierror-mobilefrontend-toomanysizeparams": "<var>thumbsize</var> é mutuamente exclusivo con <var>thumbwidth</var> e <var>thumbheight</var>.",
 	"apiwarn-mobilefrontend-ignoringnoheadings": "<var>noheadings</var> non ten sentido na páxina principal, ignorado.",
+	"apiwarn-mobilefrontend-mobileviewdeprecated": "Esta API está desbotada. Vexa T186627 para máis información.",
 	"apiwarn-mobilefrontend-sectionsnotfound": "{{PLURAL:$2|Sección $1 non atopada|Seccións $1 non atopadas}}."
 }
