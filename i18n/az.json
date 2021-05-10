@@ -79,6 +79,7 @@
 	"mobile-frontend-last-modified-with-user-years": "[$4 Sonuncu {{GENDER:$1|redaktə}} {{PLURAL:$3|$3 il|$3 il}} əvvəl] {{PLURAL:$5|[$6 $2]|0=anonim istifadəçi}} tərəfindən edilib",
 	"mobile-frontend-main-menu": "Ana səhifə",
 	"mobile-frontend-main-menu-settings-heading": "Nizamlamalar",
+	"mobile-frontend-media-details": "Detallar",
 	"mobile-frontend-missing-image": "Şəkil",
 	"mobile-frontend-nearby-title": "Yaxınlıqdakılar",
 	"mobile-frontend-nearby-info-heading": "Sizə yaxın yerlər",
