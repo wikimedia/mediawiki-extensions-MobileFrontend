@@ -7,7 +7,6 @@ use Html;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\RevisionRecord;
 use Title;
-use User;
 
 /**
  * Retrieves information specific to a mobile page
@@ -94,9 +93,8 @@ class MobilePage {
 			$userIdentity = $rev->getUser();
 			if ( $userIdentity ) {
 				$userOptionsLookup = MediaWikiServices::getInstance()->getUserOptionsLookup();
-				$revUser = User::newFromIdentity( $userIdentity );
-				$edit['name'] = $revUser->getName();
-				$edit['gender'] = $userOptionsLookup->getOption( $revUser, 'gender' );
+				$edit['name'] = $userIdentity->getName();
+				$edit['gender'] = $userOptionsLookup->getOption( $userIdentity, 'gender' );
 			}
 		}
 		return $edit;
