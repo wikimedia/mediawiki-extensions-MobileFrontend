@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Narazeni",
 			"Silovan"
 		]
 	},
@@ -15,5 +16,5 @@
 	"mobile-frontend-view": "მობილური ვერსია",
 	"mobile-frontend-view-desktop": "დესკტოპი",
 	"tag-mobile_edit": "რედაქტირაფა მობილურით",
-	"tag-mobile_web_edit": "რედაქტირაფა საიტიშ მობილური ვერსიათ"
+	"tag-mobile_web_edit": "რედაქტირაფა ვებ-ხასჷლაშ მობილური ვერსიათ"
 }
