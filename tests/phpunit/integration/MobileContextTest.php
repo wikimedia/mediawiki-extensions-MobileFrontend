@@ -67,15 +67,13 @@ class MobileContextTest extends MediaWikiTestCase {
 		] );
 		$invokes = 0;
 		$context = $this->makeContext();
-		$asserter = $this;
 		$this->setTemporaryHook(
 			'GetMobileUrl',
-			static function ( &$string, $hookCtx ) use (
-					$asserter,
+			function ( &$string, $hookCtx ) use (
 					&$invokes,
 					$context
 				) {
-					$asserter->assertEquals( $context, $hookCtx );
+					$this->assertEquals( $context, $hookCtx );
 					$invokes++;
 			}
 		);
