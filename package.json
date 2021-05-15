@@ -49,7 +49,7 @@
 		"eslint-config-wikimedia": "0.20.0",
 		"grunt-banana-checker": "0.9.0",
 		"jquery": "3.5.1",
-		"jsdoc": "3.6.3",
+		"jsdoc": "3.6.7",
 		"jsdom": "12.2.0",
 		"less": "3.8.1",
 		"less-loader": "5.0.0",
