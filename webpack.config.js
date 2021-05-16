@@ -2,7 +2,6 @@
 
 const
 	CleanPlugin = require( 'clean-webpack-plugin' ),
-	glob = require( 'glob' ),
 	path = require( 'path' ),
 	// The output directory for all build artifacts. Only absolute paths are accepted by
 	// output.path.
@@ -10,7 +9,6 @@ const
 	// The extension used for source map files.
 	srcMapExt = '.map.json',
 	ENTRIES = {
-		tests: 'tests.mobilefrontend',
 		startup: 'mobile.startup',
 		categories: 'mobile.categories.overlays',
 		editor: 'mobile.editor.overlay',
@@ -48,17 +46,6 @@ module.exports = ( env, argv ) => ( {
 	// named simply "index.js" but the redundancy of "[name].js" improves presentation and search-
 	// ability in some tools. Entry names are tightly coupled to output.filename and extension.json.
 	entry: {
-		// Note that the tests.mobilefrontend module only exists inside Special:JavaScriptTest test
-		// runs. It provides scaffolding (template mocks) and does not appear inside the
-		// ResourceLoader startup module, so does not use the `mobile.` prefix that other modules
-		// do. This is consistent with other test related artifacts. E.g.,
-		// test.mediawiki.qunit.testrunner and test.sinonjs.
-		// The glob module is used to ensure that all tests inside the folder (minus stubs) are
-		// caught and run to ensure we don't forget to register new tests.
-		[ENTRIES.tests]: glob.sync( './tests/node-qunit/**/*.test.js', {
-			ignore: './tests/node-qunit/importable.test.js'
-		} ),
-
 		// mobile.startup.runtime: reserved entry for the Webpack bootloader
 		// optimization.runtimeChunk. Without a distinct runtime chunk, it's instead bundled into
 		// each entry which is inefficient. This chunk should only change when Webpack or this
@@ -84,9 +71,6 @@ module.exports = ( env, argv ) => ( {
 		[ENTRIES.watchlist]: './src/mobile.special.watchlist.scripts/mobile.special.watchlist.scripts.js'
 	},
 
-	// tests.mobilefrontend has additional dependencies but they're provided externally. This code
-	// can be removed if tests.mobilefrontend is removed.
-	externals: [ 'jquery', 'jsdom', 'oojs', 'qunit', 'fs', 'path' ],
 	resolve: {
 		alias: {
 			// This avoids leaking unnecessary code into the webpack test build
@@ -217,13 +201,10 @@ module.exports = ( env, argv ) => ( {
 		// well understood. Related to bundlesize minified, gzipped compressed file size tests.
 		// Note: entrypoint size implicitly includes the mobile.startup.runtime and mobile.common
 		// chunks.
-		maxAssetSize: 60.5 * 1024,
-		maxEntrypointSize: 89.9 * 1024,
-		// The default filter excludes map files but we rename ours. Also, any modules prefixed with
-		// "tests." are excluded from performance checks as they are not shipped to end users.
+		maxAssetSize: 48.1 * 1024,
+		maxEntrypointSize: 83.3 * 1024,
+		// The default filter excludes map files but we rename ours.
 		// eslint-disable-next-line no-restricted-properties
-		assetFilter: ( filename ) => !filename.startsWith( 'tests.' ) &&
-			// eslint-disable-next-line no-restricted-properties
-			!filename.endsWith( srcMapExt )
+		assetFilter: ( filename ) => !filename.endsWith( srcMapExt )
 	}
 } );
