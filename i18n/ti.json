@@ -5,6 +5,7 @@
 		]
 	},
 	"mobile-frontend-clear-search": "ኣጽርይ",
+	"mobile-frontend-diffview-comma": "$1፣ $2",
 	"mobile-frontend-diffview-title": "ለውጥታት",
 	"mobile-frontend-editor-blocked-drawer-help": "ዝርዝራት ርኣይ",
 	"mobile-frontend-editor-cancel": "ኣትርፍ",
@@ -27,7 +28,7 @@
 	"mobile-frontend-overlay-close": "ዕጸው",
 	"mobile-frontend-privacy-link-text": "ስትረት",
 	"mobile-frontend-save-settings": "ኣቐምጥ",
-	"mobile-frontend-terms-text": "ናይ ኣጠቓቕማ ኩነታት",
+	"mobile-frontend-terms-text": "ውዕላት ኣጠቓቕማ",
 	"mobile-frontend-view": "ትርኢት ሞባይል",
 	"mobile-frontend-watchlist-a-z": "ዝርዝር",
 	"mobile-frontend-watchlist-cta-button-login": "ብመንነት እተው",
