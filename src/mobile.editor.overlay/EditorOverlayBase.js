@@ -236,7 +236,6 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 */
 	onSaveComplete: function ( newRevId ) {
 		var msg,
-			$window = util.getWindow(),
 			title = this.options.title,
 			self = this;
 
@@ -282,8 +281,6 @@ mfExtend( EditorOverlayBase, Overlay, {
 			// eslint-disable-next-line no-restricted-properties
 			window.location.hash = '#';
 		}
-
-		$window.off( 'beforeunload.mfeditorwarning' );
 
 		// Note the "#" may be in the URL.
 		// If so, using window.location alone will not reload the page
