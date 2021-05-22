@@ -1,45 +1,24 @@
 # Selenium tests
 
-Please see tests/selenium/README.md file in mediawiki/core repository, usually at mediawiki/vagrant/mediawiki folder.
+For more information see https://www.mediawiki.org/wiki/Selenium
 
 ## Setup
 
-Set up MediaWiki-Vagrant:
+See https://www.mediawiki.org/wiki/MediaWiki-Docker/Extension/MobileFrontend
 
-    cd mediawiki/vagrant
-    vagrant up
-    vagrant roles enable minerva
-    vagrant provision
-    cd mediawiki
-    npm install
+## Run all specs
 
-## Start Chromedriver and run all tests
+    npm run selenium-test
 
-Run both mediawiki/core and extension tests from mediawiki/core repository (usually at mediawiki/vagrant/mediawiki folder):
+## Run specific tests
 
-    npm run selenium
+Filter by file name:
 
-## Start Chromedriver
+    npm run selenium-test -- --spec tests/selenium/specs/[FILE-NAME]
 
-To run only some tests, you first have to start Chromedriver in one terminal tab (or window):
+Filter by file name and test name:
 
-    chromedriver --url-base=wd/hub --port=4444
-
-## Run test(s) from one file
-
-Then, in another terminal tab (or window) run this from mediawiki/core repository (usually at mediawiki/vagrant/mediawiki folder):
-
-    npm run selenium-test -- --spec tests/selenium/specs/FILE-NAME.js
-
-`wdio` is a dependency of mediawiki/core that you have installed with `npm install`.
-
-## Run specific test(s)
-
-To run only test(s) which name contains string TEST-NAME, run this from mediawiki/core repository (usually at mediawiki/vagrant/mediawiki folder):
-
-    ./node_modules/.bin/wdio tests/selenium/wdio.conf.js --spec extensions/EXTENSION-NAME/tests/selenium/specs/FILE-NAME.js --mochaOpts.grep TEST-NAME
-
-Make sure Chromedriver is running when executing the above command.
+    npm run selenium-test -- --spec tests/selenium/specs/[FILE-NAME] --mochaOpts.grep [TEST-NAME]
 
 ## Run tests against the beta cluster
 Command-line options can be specified that override the wdio.conf.js config file. This makes it easy to run tests against a different url without touching the config. If you're running MediaWiki on a different host/post or with a different user/password, this is how you supply those arguments:
