@@ -42,5 +42,6 @@
 	"tag-mobile_edit-description": "Redakturo sendita de smartfono (sive uzante retpagino, sive ''app'')",
 	"tag-advanced_mobile_edit": "Avancata redakto per posh-telefonilo",
 	"tag-mobile_web_edit": "Redaktita per informatikoprogramo \"app\"",
-	"tag-mobile_web_edit-description": "Redakturo kreita de mobila retopagino"
+	"tag-mobile_web_edit-description": "Redakturo kreita de mobila retopagino",
+	"mobile-frontend-loading-message": "Karganta..."
 }
