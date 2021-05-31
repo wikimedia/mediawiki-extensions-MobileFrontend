@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Altostratus",
+			"Anont",
 			"BaRaN6161 TURK",
 			"Bluemersen",
 			"Clockoon",
@@ -73,6 +74,7 @@
 	"mobile-frontend-editor-blocked-drawer-action-randompage": "다른 페이지로 이동",
 	"mobile-frontend-editor-blocked-drawer-title": "{{SITENAME}}에서의 편집이 차단되었습니다.",
 	"mobile-frontend-editor-blocked-drawer-title-partial": "당신은 이 문서의 편집에서 차단되어 있습니다.",
+	"mobile-frontend-editor-blocked-drawer-title-ip": "접속하신 IP 주소는 {{SITENAME}}에서의 편집이 차단되었습니다.",
 	"mobile-frontend-editor-blocked-drawer-title-ip-partial": "당신의 IP 주소가 이 문서의 편집에서 차단되어 있습니다.",
 	"mobile-frontend-editor-blocked-drawer-body-partial": "다른 문서 편집 시도",
 	"mobile-frontend-editor-blocked-drawer-body-login": "계정이 있으면 로그인해 보십시오.",
@@ -258,6 +260,7 @@
 	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions-description": "제목 아래의 짧은 설명과 함께 문서의 주제를 파악합니다",
 	"mobile-frontend-send-feedback": "피드백 보내기",
 	"mobile-frontend-mobile-option-MFLazyLoadImages-description": "필요할 때에만 그림을 불러옵니다.",
+	"mobile-frontend-mobile-option-MFLazyLoadImages": "이미지에 lazy load 기술 적용",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox-description": "성능 및 가독성 개선을 위해 텍스트는 항상 위의 정보상자만 표시합니다.",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "글꼴 크기",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "읽기 경험의 글꼴 크기를 조정합니다.",
