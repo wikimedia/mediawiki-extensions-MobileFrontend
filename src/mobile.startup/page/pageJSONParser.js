@@ -14,7 +14,7 @@ function parse( resp ) {
 		pageprops = resp.pageprops || {
 			displaytitle: mw.html.escape( resp.title )
 		},
-		terms = resp.terms;
+		terms = resp.terms || resp.entityterms;
 
 	if ( pageprops || terms ) {
 		// The label is either the display title or the label pageprop
