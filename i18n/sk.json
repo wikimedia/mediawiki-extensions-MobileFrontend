@@ -175,7 +175,7 @@
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Predmet",
 	"mobile-frontend-talk-add-overlay-submit": "Pridať diskusiu",
 	"mobile-frontend-talk-reply": "Odpovedať",
-	"mobile-frontend-talk-reply-info": "Uvedomte si, že vaše reakcie budú automaticky podpísané vaším používateľským menom.",
+	"mobile-frontend-talk-reply-info": "Prosím berte na vedomie, že vaše reakcie budú automaticky podpísané vaším používateľským menom.",
 	"mobile-frontend-talk-topic-error": "Kvôli neznámej chybe sa nepodarilo pridať novú tému.",
 	"mobile-frontend-talk-topic-error-protected": "Táto diskusná stránka je zamknutá, nemáte oprávnenie do nej pridávať témy.",
 	"mobile-frontend-talk-topic-error-permission": "Téma sa nedá pridať. Nemáte oprávnenie editovať stránky.",
