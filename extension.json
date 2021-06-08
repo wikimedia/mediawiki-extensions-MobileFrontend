@@ -695,13 +695,6 @@
 		"localBasePath": "",
 		"remoteExtPath": "MobileFrontend"
 	},
-	"attributes": {
-		"EventLogging": {
-			"Schemas": {
-				"MobileWebSearch": 12054448
-			}
-		}
-	},
 	"Hooks": {
 		"APIGetAllowedParams": "MobileFrontend\\Api\\ApiParseExtender::onAPIGetAllowedParams",
 		"APIAfterExecute": "MobileFrontend\\Api\\ApiParseExtender::onAPIAfterExecute",
@@ -955,9 +948,6 @@
 		},
 		"MFRSSFeedLink": {
 			"value": false
-		},
-		"MFSchemaSearchSampleRate": {
-			"value": 0.001
 		},
 		"MFStripResponsiveImages": {
 			"value": true

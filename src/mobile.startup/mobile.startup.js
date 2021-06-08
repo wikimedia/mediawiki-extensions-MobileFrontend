@@ -51,7 +51,6 @@ module.exports = {
 	references: require( './references/references' ),
 	search: {
 		SearchOverlay: require( './search/SearchOverlay' ),
-		MobileWebSearchLogger: require( './search/MobileWebSearchLogger' ),
 		SearchGateway: require( './search/SearchGateway' )
 	},
 	lazyImages: {

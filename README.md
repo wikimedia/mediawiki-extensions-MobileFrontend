@@ -217,14 +217,6 @@ site to render, depending on how large MediaWiki:Mobile.css is for your wiki.
 * Type: `Boolean`
 * Default: `false`
 
-#### $wgMFSchemaSearchSampleRate
-
-Defines the sampling rate for the Search schema.
-
-* Type: `Number`
-* Default: `0.001`
-
-
 #### $wgMFTrackBlockNotices
 
 If set to true, block notices will be tracked on display, along with some limited
