@@ -48,16 +48,6 @@ module.exports = {
 		return $.escapeSelector( selector );
 	},
 	/**
-	 * Wrapper class for the $.grep
-	 *
-	 * @memberof util
-	 * @instance
-	 * @return {jQuery.Deferred}
-	 */
-	grep: function () {
-		return $.grep.apply( $, arguments );
-	},
-	/**
 	 * Run method when document is ready.
 	 *
 	 * @memberof util
@@ -115,16 +105,6 @@ module.exports = {
 		return $( $.parseHTML( html, ctx ) );
 	},
 	/**
-	 * wrapper for jQuery util function to check if something is numeric
-	 *
-	 * @memberof util
-	 * @instance
-	 * @return {boolean}
-	 */
-	isNumeric: function () {
-		return $.isNumeric.apply( $, arguments );
-	},
-	/**
 	 * Wrapper for jQuery.extend method. In future this can be bound to Object.assign
 	 * when support allows.
 	 *
@@ -151,41 +131,6 @@ module.exports = {
 	 */
 	escapeHash: function ( hash ) {
 		return hash.replace( /(:|\.)/g, '\\$1' );
-	},
-
-	/**
-	 * Heuristic for determining whether an Event should be handled by
-	 * MobileFrontend or allowed to bubble to the browser.
-	 *
-	 * @memberof util
-	 * @instance
-	 * @param {Event} ev
-	 * @return {boolean} True if event is modified with control, alt, meta, or
-	 *                   shift keys and should probably be handled by the
-	 *                   browser.
-	 *
-	 * todo: move this function to a ClickUtil file once bundling and code
-	 * splitting is supported.
-	 */
-	isModifiedEvent: function ( ev ) {
-		return ev.altKey || ev.ctrlKey || ev.metaKey || ev.shiftKey;
-	},
-
-	/**
-	 * Pipe event emitted by source through proxy. Subscribers to proxy will receive the event as
-	 * though proxy was the originator.
-	 *
-	 * @param {OO.EventEmitter} src
-	 * @param {OO.EventEmitter} proxy
-	 * @param {string} event Event type to listen for.
-	 * @param {any[]} [args] Arguments to pass to
-	 *  subscribers, will be prepended to emitted arguments.
-	 * @return {OO.EventEmitter} The source.
-	 */
-	repeatEvent: function ( src, proxy, event, args ) {
-		return src.on( event, function ( args ) {
-			return proxy.emit( event, args );
-		}, args );
 	},
 
 	/**

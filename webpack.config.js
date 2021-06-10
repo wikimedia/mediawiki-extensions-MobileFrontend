@@ -10,7 +10,6 @@ const
 	srcMapExt = '.map.json',
 	ENTRIES = {
 		startup: 'mobile.startup',
-		categories: 'mobile.categories.overlays',
 		editor: 'mobile.editor.overlay',
 		editorVe: 'mobile.editor.ve',
 		languages: 'mobile.languages.structured',
@@ -56,7 +55,6 @@ module.exports = ( env, argv ) => ( {
 		// If we utilize webpack lazy loading instead of resource loader lazy
 		// loading, we won't be required to explicitly create this new chunk and
 		// this can be removed.
-		[ENTRIES.categories]: './src/mobile.categories.overlays/mobile.categories.overlays.js',
 		[ENTRIES.editor]: './src/mobile.editor.overlay/mobile.editor.overlay.js',
 		[ENTRIES.editorVe]: './src/mobile.editor.ve/mobile.editor.ve.js',
 		[ENTRIES.languages]: './src/mobile.languages.structured/mobile.languages.structured.js',

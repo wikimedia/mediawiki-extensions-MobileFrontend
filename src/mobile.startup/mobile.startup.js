@@ -35,7 +35,6 @@ module.exports = {
 	// For Minerva compatibility (access deprecated)
 	toast: require( './showOnPageReload' ),
 	Watchstar: require( './watchstar/watchstar' ),
-	categoryOverlay: require( './categoryOverlay' ),
 	eventBusSingleton: require( './eventBusSingleton' ),
 	promisedView: require( './promisedView' ),
 	Toggler: require( './Toggler' ),

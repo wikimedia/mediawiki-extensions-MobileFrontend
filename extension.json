@@ -273,8 +273,6 @@
 				"jquery.throttle-debounce"
 			],
 			"messages": [
-				"mobile-frontend-categories-heading",
-				"mobile-frontend-categories-add",
 				"echo-mark-all-as-read",
 				"echo-overlay-link",
 				"mobile-frontend-talk-add-overlay-submit",
@@ -484,38 +482,6 @@
 				"mobile-frontend-media-license-link",
 				"mobile-frontend-media-load-fail-message",
 				"mobile-frontend-media-load-fail-retry"
-			]
-		},
-		"mobile.categories.overlays": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"dependencies": [
-				"mediawiki.Title",
-				"mediawiki.router",
-				"mobile.startup",
-				"mobile.editor.overlay",
-				"oojs-ui.styles.icons-interactions",
-				"oojs-ui"
-			],
-			"scripts": [
-				"resources/dist/mobile.categories.overlays.js"
-			],
-			"styles": [
-				"resources/mobile.categories.overlays/categories.less"
-			],
-			"messages": [
-				"mobile-frontend-categories-subheading",
-				"mobile-frontend-categories-notification",
-				"mobile-frontend-categories-nocat",
-				"mobile-frontend-categories-search",
-				"mobile-frontend-categories-nodata",
-				"mobile-frontend-categories-summary",
-				"mobile-frontend-categories-add-heading",
-				"mobile-frontend-categories-add-wait",
-				"mobile-frontend-categories-normal",
-				"mobile-frontend-categories-hidden"
 			]
 		},
 		"mobile.languages.structured": {

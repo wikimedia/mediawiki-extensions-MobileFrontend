@@ -19,7 +19,6 @@
 		"docs/",
 		"vendor/",
 		"src/mobile.amcOutreachDrawer/mobile.amcOutreachDrawer.js",
-		"src/mobile.categories.overlays/mobile.categories.overlays.js",
 		"src/mobile.editor.overlay/mobile.editor.overlay.js",
 		"src/mobile.editor.ve/mobile.editor.ve.js",
 		"src/mobile.init/mobile.init.js",
@@ -34,10 +33,10 @@
 	],
 
 	"//": "Set the coverage percentage by category thresholds. Round down to nearest 1%",
-	"statements": 51.0,
-	"branches": 47.0,
-	"functions": 50.0,
-	"lines": 53.0,
+	"statements": 64,
+	"branches": 49,
+	"functions": 61,
+	"lines": 64,
 
 	"//": "Fail if the coverage is below threshold.",
 	"check-coverage": true,

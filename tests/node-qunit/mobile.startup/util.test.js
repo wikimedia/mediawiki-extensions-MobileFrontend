@@ -53,15 +53,6 @@ QUnit.test( 'escapeSelector()', function ( assert ) {
 	);
 } );
 
-QUnit.test( 'grep()', function ( assert ) {
-	assert.propEqual(
-		util.grep( [ 1, 2 ], function ( n ) {
-			return n > 1;
-		} ),
-		[ 2 ]
-	);
-} );
-
 QUnit.test( 'docReady()', function ( assert ) {
 	const done = assert.async();
 
@@ -102,13 +93,6 @@ QUnit.test( 'parseHTML()', function ( assert ) {
 	assert.strictEqual( htmlFragment[ 0 ].innerHTML, 'element content' );
 } );
 
-QUnit.test( 'isNumeric()', function ( assert ) {
-	assert.strictEqual( util.isNumeric( 123 ), true );
-	assert.strictEqual( util.isNumeric( '123' ), true );
-	assert.strictEqual( util.isNumeric( 'The string 123 is true? I don\'t like it.' ), false );
-	assert.strictEqual( util.isNumeric( NaN ), false );
-} );
-
 QUnit.test( 'extend()', function ( assert ) {
 	const a = { a: 'apple' },
 		b = { b: 'banana' };
@@ -118,40 +102,4 @@ QUnit.test( 'extend()', function ( assert ) {
 
 QUnit.test( 'escapeHash()', function ( assert ) {
 	assert.strictEqual( util.escapeHash( '#escape:...hash' ), '#escape\\:\\.\\.\\.hash' );
-} );
-
-QUnit.test( 'isModifiedEvent() - true', function ( assert ) {
-	const testEl = document.createElement( 'div' );
-
-	testEl.addEventListener( 'click', function ( ev ) {
-		assert.strictEqual( util.isModifiedEvent( ev ), true );
-	} );
-
-	testEl.dispatchEvent( new window.MouseEvent( 'click', { ctrlKey: true } ) );
-} );
-
-QUnit.test( 'isModifiedEvent() - false', function ( assert ) {
-	const testEl = document.createElement( 'div' );
-
-	testEl.addEventListener( 'click', function ( ev ) {
-		assert.strictEqual( util.isModifiedEvent( ev ), false );
-	} );
-
-	testEl.dispatchEvent( new window.MouseEvent( 'click' ) );
-} );
-
-QUnit.test( 'repeatEvent', function ( assert ) {
-	const proxy = new OO.EventEmitter(),
-		src = new OO.EventEmitter(),
-		srcEventData = 'test data';
-
-	util.repeatEvent( src, proxy, 'test' );
-
-	proxy.on( 'test', function ( data ) {
-		assert.strictEqual(
-			data,
-			srcEventData,
-			'proxy responds to source events correctly' );
-	} );
-	src.emit( 'test', srcEventData );
 } );
