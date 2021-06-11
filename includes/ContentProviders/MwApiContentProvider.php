@@ -83,9 +83,11 @@ class MwApiContentProvider implements IContentProvider {
 		}
 		// The skin must exist on the target wiki and not be hidden for this to work.
 		if ( in_array( $this->skinName, [ 'vector', 'minerva', 'monobook', 'timeless', 'modern' ] ) ) {
-			$url .= '&useskin=' . $this->skinName;
+			// `useskin` - informs MobileFrontend and various other things of context to run in
+			// `skin` - informs API of what content to generate.
+			$url .= '&useskin=' . $this->skinName . '&skin=' . $this->skinName;
 		} else {
-			$url .= '&useskin=apioutput';
+			$url .= '&skin=apioutput';
 		}
 
 		$resp = $this->fileGetContents( $url );
