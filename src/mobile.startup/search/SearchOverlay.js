@@ -21,10 +21,6 @@ var
  * @param {string} [params.action] of form defaults to the value of wgScript
  * @param {string} [params.defaultSearchPage] The default search page e.g. Special:Search
  * @param {SearchGateway} [params.gateway]
- * @fires SearchOverlay#search-show
- * @fires SearchOverlay#search-start
- * @fires SearchOverlay#search-results
- * @fires SearchOverlay#search-result-click
  */
 function SearchOverlay( params ) {
 	var header = searchHeader(
@@ -122,12 +118,10 @@ mfExtend( SearchOverlay, Overlay, {
 	 * @param {jQuery.Event} ev
 	 */
 	onClickResult: function ( ev ) {
-		var $link = this.$el.find( ev.currentTarget ),
-			$result = $link.closest( 'li' );
+		var $link = this.$el.find( ev.currentTarget );
 		/**
 		 * Fired when the user clicks a search result
 		 *
-		 * @event SearchOverlay#search-result-click
 		 * @type {Object}
 		 * @property {jQuery.Object} result The jQuery-wrapped DOM element that
 		 *  the user clicked
@@ -135,12 +129,6 @@ mfExtend( SearchOverlay, Overlay, {
 		 *  result in the set of results
 		 * @property {jQuery.Event} originalEvent The original event
 		 */
-		this.emit( 'search-result-click', {
-			result: $result,
-			resultIndex: this.$results.index( $result ),
-			originalEvent: ev
-		} );
-
 		// FIXME: ugly hack that removes search from browser history
 		// when navigating to search results
 		ev.preventDefault();
@@ -225,12 +213,6 @@ mfExtend( SearchOverlay, Overlay, {
 		Overlay.prototype.show.apply( this, arguments );
 
 		this.showKeyboard();
-		/**
-		 * Fired after the search overlay is shown
-		 *
-		 * @event SearchOverlay#search-show
-		 */
-		this.emit( 'search-show' );
 	},
 
 	/**
@@ -259,17 +241,6 @@ mfExtend( SearchOverlay, Overlay, {
 			if ( query.length ) {
 				this.timer = setTimeout( function () {
 					var xhr;
-					/**
-					 * Fired immediately before the search API request is sent
-					 *
-					 * @event SearchOverlay#search-start
-					 * @property {Object} data related to the current search
-					 */
-					self.emit( 'search-start', {
-						query: query,
-						delay: delay
-					} );
-
 					xhr = self.gateway.search( query );
 					self._pendingQuery = xhr.then( function ( data ) {
 						// FIXME: Given this manipulates SearchResultsView
@@ -294,18 +265,6 @@ mfExtend( SearchOverlay, Overlay, {
 							} );
 
 							self.$results = self.$resultContainer.find( 'li' );
-
-							/**
-							 * Fired when search API returns results
-							 *
-							 * @event SearchOverlay#search-results
-							 * @type {Object}
-							 * @property {Object[]} results The results returned by the search
-							 *  API
-							 */
-							self.emit( 'search-results', {
-								results: data.results
-							} );
 						}
 					} ).promise( { abort: function () { xhr.abort(); } } );
 				}, delay );
