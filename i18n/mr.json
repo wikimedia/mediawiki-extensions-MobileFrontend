@@ -18,17 +18,6 @@
 			"संतोष दहिवळ"
 		]
 	},
-	"mobile-frontend-categories-heading": "<strong>वर्ग</strong>",
-	"mobile-frontend-categories-subheading": "हे पान पुढील वर्गाशी संलग्न आहे",
-	"mobile-frontend-categories-nocat": "हे पान आत्तापर्यंत कोणत्याही वर्गाशी संलग्न नाही.",
-	"mobile-frontend-categories-add": "वर्ग जोडा",
-	"mobile-frontend-categories-search": "वर्ग निवडा",
-	"mobile-frontend-categories-nodata": "त्रूटी उद्भवली. तुम्ही जतन करण्यासाठी वर्ग जोडला होता काय ?",
-	"mobile-frontend-categories-summary": "वर्गात जोडले",
-	"mobile-frontend-categories-add-heading": "<strong><span> $1</span> पानाला नवीन वर्गाशी संलग्न करा</strong>",
-	"mobile-frontend-categories-add-wait": "वर्ग जतन होत आहे, प्रतिक्षा करा.",
-	"mobile-frontend-categories-normal": "मजकूर संलग्न",
-	"mobile-frontend-categories-hidden": "संरचनात्मक",
 	"mobile-frontend-changeslist-nocomment": "बदलांचा आढावा नाही",
 	"mobile-frontend-clear-search": "हटवा",
 	"mobile-frontend-copyright": "इतर काही नोंद केली नसल्यास,येथील मजकूर $1च्या अंतर्गत उपलब्ध आहे.",

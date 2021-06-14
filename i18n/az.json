@@ -14,11 +14,6 @@
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Təsdiq kodu daxil et",
-	"mobile-frontend-categories-heading": "<strong>Kateqoriyalar</strong>",
-	"mobile-frontend-categories-add": "Kateqoriya əlavə et",
-	"mobile-frontend-categories-search": "Kateqoriyaları axtar",
-	"mobile-frontend-categories-normal": "Məzmun əsaslı",
-	"mobile-frontend-categories-hidden": "Gizli",
 	"mobile-frontend-changeslist-nocomment": "Nəzərə çarpan dəyişiklik yoxdur.",
 	"mobile-frontend-clear-search": "Təmizlə",
 	"mobile-frontend-copyright": "Əksi qeyd olunmayıbsa, bu məzmun $1 çərçivəsində yayımlanır.",
