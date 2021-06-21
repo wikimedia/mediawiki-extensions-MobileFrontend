@@ -7,9 +7,8 @@ use MobileFrontend\Transforms\MakeSectionsTransform;
 use MobileFrontend\Transforms\MoveLeadParagraphTransform;
 use MobileFrontend\Transforms\SubHeadingTransform;
 use Wikibase\Client\WikibaseClient;
-use Wikibase\DataModel\Entity\EntityDocument;
 use Wikibase\DataModel\Entity\ItemId;
-use Wikibase\DataModel\Term\FingerprintProvider;
+use Wikibase\DataModel\Services\Lookup\TermLookupException;
 use Wikimedia\IPUtils;
 
 /**
@@ -202,49 +201,27 @@ class ExtMobileFrontend {
 	}
 
 	/**
-	 * Returns the Wikibase entity associated with a page or null if none exists.
-	 *
-	 * @param string $item Wikibase id of the page
-	 * @return EntityDocument|null
-	 */
-	public static function getWikibaseEntity( $item ) {
-		if ( !ExtensionRegistry::getInstance()->isLoaded( 'WikibaseClient' ) ) {
-			return null;
-		}
-
-		try {
-			$entityLookup = WikibaseClient::getStore()
-				->getEntityLookup();
-			$entity = $entityLookup->getEntity( new ItemId( $item ) );
-			if ( !$entity ) {
-				return null;
-			} else {
-				return $entity;
-			}
-		} catch ( Exception $ex ) {
-			// Do nothing, exception mostly due to description being unavailable in needed language
-			return null;
-		}
-	}
-
-	/**
 	 * Returns a short description of a page from Wikidata
 	 *
 	 * @param string $item Wikibase id of the page
 	 * @return string|null
 	 */
 	public static function getWikibaseDescription( $item ) {
-		$contLang = MediaWikiServices::getInstance()->getContentLanguage();
+		if ( !ExtensionRegistry::getInstance()->isLoaded( 'WikibaseClient' ) ) {
+			return null;
+		}
 
-		$entity = self::getWikibaseEntity( $item );
+		$contLang = MediaWikiServices::getInstance()->getContentLanguage();
+		$termLookup = WikibaseClient::getTermLookup();
+		try {
+			$itemId = new ItemId( $item );
+		} catch ( InvalidArgumentException $exception ) {
+			return null;
+		}
 
 		try {
-			if ( !$entity || !$entity instanceof FingerprintProvider ) {
-				return null;
-			} else {
-				return $entity->getFingerprint()->getDescription( $contLang->getCode() )->getText();
-			}
-		} catch ( Exception $ex ) {
+			return $termLookup->getDescription( $itemId, $contLang->getCode() );
+		} catch ( TermLookupException $exception ) {
 			return null;
 		}
 	}
