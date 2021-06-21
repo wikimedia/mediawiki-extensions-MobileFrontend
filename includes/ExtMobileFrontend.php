@@ -208,7 +208,7 @@ class ExtMobileFrontend {
 	 * @return EntityDocument|null
 	 */
 	public static function getWikibaseEntity( $item ) {
-		if ( !class_exists( WikibaseClient::class ) ) {
+		if ( !ExtensionRegistry::getInstance()->isLoaded( 'WikibaseClient' ) ) {
 			return null;
 		}
 
