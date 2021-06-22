@@ -48,7 +48,8 @@ curl -sSL "https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/skins/Minerv
 # Minerva UI
 mkdir -p .storybook/mediawiki-skins-MinervaNeue/resources
 mkdir -p .storybook/mediawiki-skins-MinervaNeue/resources/skins.minerva.base.styles
-mkdir -p .storybook/mediawiki-skins-MinervaNeue/resources/skins.minerva.content.styles
-mkdir -p .storybook/mediawiki-skins-MinervaNeue/resources/skins.minerva.content.styles/tablet
+mkdir -p .storybook/mediawiki-skins-MinervaNeue/resources/skins.minerva.base.styles/content
+mkdir -p .storybook/mediawiki-skins-MinervaNeue/resources/skins.minerva.base.styles/content/tablet
+
 curl -sSL "https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/skins/MinervaNeue/+/master/resources/skins.minerva.base.styles/ui.less?format=TEXT" | base64 --decode > .storybook/mediawiki-skins-MinervaNeue/resources/skins.minerva.base.styles/ui.less
-curl -sSL "https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/skins/MinervaNeue/+/master/resources/skins.minerva.content.styles/tablet/common.less?format=TEXT" | base64 --decode > .storybook/mediawiki-skins-MinervaNeue/resources/skins.minerva.content.styles/tablet/common.less
+curl -sSL "https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/skins/MinervaNeue/+/master/resources/skins.minerva.base.styles/content/tablet/common.less?format=TEXT" | base64 --decode > .storybook/mediawiki-skins-MinervaNeue/resources/skins.minerva.base.styles/content/tablet/common.less
