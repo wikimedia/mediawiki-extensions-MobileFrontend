@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Ajeje Brazorf",
 			"Aushulz",
 			"Gmelfi",
 			"Pippinu",
@@ -11,6 +12,7 @@
 	"mobile-frontend-clear-search": "Scancella",
 	"mobile-frontend-copyright": "Stu cuntinutu è dispunìbbili sutta â $1 quannu nun veni spicificatu diversamenti.",
 	"mobile-frontend-desc": "Ntirfaccia mòbbili",
+	"mobile-frontend-diffview-title": "Canciamenti",
 	"mobile-frontend-featured-article": "Lu cuntinutu n vitrina d'oi",
 	"mobile-frontend-last-modified-date": "ÎUrtimu canciu lu $1 ê $2",
 	"mobile-frontend-news-items": "Attualitati",
