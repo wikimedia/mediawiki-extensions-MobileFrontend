@@ -24,7 +24,7 @@ class ApiWebappManifest extends ApiBase {
 		$resultObj->addValue( null, 'orientation', 'portrait' );
 		$resultObj->addValue( null, 'dir', $services->getContentLanguage()->getDir() );
 		$resultObj->addValue( null, 'lang', $config->get( 'LanguageCode' ) );
-		$resultObj->addValue( null, 'display', 'browser' );
+		$resultObj->addValue( null, 'display', 'minimal-ui' );
 		$resultObj->addValue( null, 'theme_color', $config->get( 'MFManifestThemeColor' ) );
 		$resultObj->addValue( null, 'background_color', $config->get( 'MFManifestBackgroundColor' ) );
 		$resultObj->addValue( null, 'start_url', Title::newMainPage()->getLocalURL() );
