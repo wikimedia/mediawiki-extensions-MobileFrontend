@@ -53,9 +53,14 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 	 * @return string HTML representing the link in the header bar
 	 */
 	protected function getHeaderBarLink( $title ) {
-		return Html::element( 'a',
-			[ 'href' => $title->getLocalURL() ],
-			$title->getText() );
+		return Html::element(
+			'a',
+			[
+				'href' => $title->getLocalURL(),
+				'class' => 'pre-content mw-mf-history-wrap-link',
+			],
+			$title->getText()
+		);
 	}
 
 	/**
