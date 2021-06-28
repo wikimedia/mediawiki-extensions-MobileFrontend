@@ -75,8 +75,8 @@ class ExtMobileFrontend {
 
 		$enableSections = (
 			// Don't collapse sections e.g. on JS pages
-			$out->canUseWikiPage()
-			&& $out->getWikiPage()->getContentModel() == CONTENT_MODEL_WIKITEXT
+			$title->canExist()
+			&& $title->getContentModel() == CONTENT_MODEL_WIKITEXT
 			// And not in certain namespaces
 			&& array_search(
 				$ns,
