@@ -17,6 +17,7 @@
 			"QuimGil",
 			"Ssola",
 			"Toniher",
+			"Vfc",
 			"Vriullop"
 		]
 	},
@@ -192,9 +193,9 @@
 	"mobile.css": "/* Tots els CSS d'aquí seran carregats pels usuaris de la versió mòbil */",
 	"mobile.js": "/* Qualsevol codi JavaScript afegit aquí es carregarà per als usuaris de la versió mòbil /",
 	"nearby": "Pàgines de temes a prop teu",
-	"tag-mobile_edit": "des de mòbil",
+	"tag-mobile_edit": "Edita des de mòbil",
 	"tag-mobile_edit-description": "Modificació feta des de mòbil (web o app)",
-	"tag-mobile_web_edit": "via web per a mòbils",
+	"tag-mobile_web_edit": "Edició web per a mòbils",
 	"tag-mobile_web_edit-description": "Modificació feta des de lloc web per a mòbils",
 	"mobile-frontend-loading-message": "S’està carregant…",
 	"mobile-frontend-search-feedback-link-text": "Doneu-nos la vostra opinió.",
