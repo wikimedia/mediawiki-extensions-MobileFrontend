@@ -2,13 +2,17 @@
 	"@metadata": {
 		"authors": [
 			"Menachem.Moreira",
-			"Universal Life"
+			"Universal Life",
+			"WikiiiTranslator"
 		]
 	},
 	"mobile-frontend-diffview-title": "Trocamientos",
 	"mobile-frontend-language-heading": "<strong>Lenguas</strong>",
 	"mobile-frontend-languages-header": "Lenguas",
+	"mobile-frontend-view": "Versión para selulares",
 	"mobile-frontend-watchlist-filter-all": "Todos",
 	"mobile-frontend-watchlist-filter-articles": "Pajinas",
-	"mobile-frontend-watchlist-more": "mas"
+	"mobile-frontend-watchlist-more": "mas",
+	"tag-mobile_edit": "Edisión desde móvil",
+	"tag-mobile_web_edit": "Edisión desde móvil en web"
 }
