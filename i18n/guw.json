@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Misteld"
+			"Misteld",
+			"Samatics"
 		]
 	},
 	"mobile-frontend-view": "Alokan pinpon",
 	"tag-mobile_edit": "Jlado alokan tọn",
-	"tag-mobile_web_edit": "Jlado intanẹti alokan tọn"
+	"tag-mobile_web_edit": "Jlado Intẹnẹt alokan tọn"
 }
