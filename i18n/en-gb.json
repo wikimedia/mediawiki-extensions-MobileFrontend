@@ -10,6 +10,7 @@
 			"Jagwar",
 			"Macofe",
 			"Mvolz",
+			"Robin Owain",
 			"Shirayuki"
 		]
 	},
@@ -17,5 +18,8 @@
 	"mobile-frontend-editor-licensing-with-terms": "By saving changes, you agree to the $1 and agree to release your contribution under the $2 {{PLURAL:$3|licence|licences}}.",
 	"mobile-frontend-last-modified-date": "Last modified on $1, at $2",
 	"mobile-frontend-media-license-link": "Licence information",
+	"mobile-frontend-view": "Golwg teclyn symudol",
+	"tag-mobile_edit": "Golygu ar declyn symudol",
+	"tag-mobile_web_edit": "Golygiad gwe symudol",
 	"mobile-frontend-console-recruit": "Learn more about how we build our mobile site @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend"
 }

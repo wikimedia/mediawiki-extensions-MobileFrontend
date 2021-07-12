@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Iflaq"
+		]
+	},
+	"mobile-frontend-editor-blocked-drawer-action-ok": "ٹھیک چھُ",
+	"mobile-frontend-editor-cancel": "مَنسوٗخ کَرُن",
+	"mobile-frontend-editor-success-new-page": "نٔو صَفہٕ تَخلیٖق کرنس پیٹھ مُبارَک!",
+	"mobile-frontend-editor-summary-placeholder": "مِثال:درست، نو مواد",
+	"mobile-frontend-editor-summary": "خُلاسہٕ:",
+	"mobile-frontend-languages-header": "زَبانٕ",
+	"mobile-frontend-languages-header-page": "$1 - باقیَ زَبانٕ",
+	"mobile-frontend-missing-image": "شکل",
+	"mobile-frontend-talk-reply": "جواب",
+	"tag-mobile_edit": "موبائیل اؠڑیٹ",
+	"tag-mobile_web_edit": "موبائیل وؠب اؠڑیٹ",
+	"mobile-frontend-loading-message": "لوڑ چھُ گژھن..."
+}
