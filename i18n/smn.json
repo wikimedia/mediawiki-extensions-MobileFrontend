@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Seipinne",
 			"Trondtr",
 			"Yupik"
 		]
@@ -16,6 +17,7 @@
 	"mobile-frontend-main-menu-settings-heading": "Asâttâsah",
 	"mobile-frontend-news-items": "Uđđâsijn",
 	"mobile-frontend-terms-text": "Kevttimiävtuh",
+	"mobile-frontend-view": "moobiiluáinus",
 	"tag-mobile_edit": "Moobiilhammim",
 	"tag-mobile_web_edit": "moobiilsiijđoi hammim"
 }
