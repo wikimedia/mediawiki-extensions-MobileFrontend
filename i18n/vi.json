@@ -64,7 +64,7 @@
 	"mobile-frontend-editor-cancel-confirm": "Bạn có thực sự muốn từ bỏ sửa đổi của bạn?",
 	"mobile-frontend-editor-captcha-try-again": "Mã sai, hãy thử lại.",
 	"mobile-frontend-editor-continue": "Tiếp",
-	"mobile-frontend-editor-disabled": "Trang này bị khóa để ngừa phá hoại. [$1 Xe mã nguồn]",
+	"mobile-frontend-editor-disabled": "Trang này bị khóa để ngừa phá hoại. [$1 Xem mã nguồn]",
 	"mobile-frontend-editor-disabled-anon": "Bạn cần phải đăng nhập để sửa trang này.",
 	"mobile-frontend-editor-editing": "Sửa đổi",
 	"mobile-frontend-editor-editing-page": "<span><strong>Sửa đổi</strong> $1</span>",
