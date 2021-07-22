@@ -39,7 +39,9 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 	 */
 	protected function getHeaderBarLink( $title ) {
 		// Convert user page URL to User object.
-		$user = User::newFromName( $title->getText(), false );
+		$user = $this->userFactory->newFromName( $title->getText() );
+		// Doing this as UserFactory can return null.
+		$user = $user ?: false;
 		$icon = $user->isAnon() ? 'userAnonymous' : 'userAvatar';
 
 		return Html::rawElement( 'a',
@@ -62,8 +64,8 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 
 		if ( $par || $target ) {
 			$this->user = $par
-				? User::newFromName( $par, false )
-				: User::newFromName( $target, false );
+				? $this->getUserFactory()->newFromName( $par )
+				: $this->getUserFactory()->newFromName( $target );
 		}
 
 		if ( !$this->user ) {
@@ -73,7 +75,7 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 
 		$usernameUtils = MediaWikiServices::getInstance()->getUserNameUtils();
 		$userIsIP = ( $usernameUtils->isIP( $this->user ) || IPUtils::isIPv6( $this->user ) );
-		if ( $this->user && $this->user->idForName() || $userIsIP ) {
+		if ( ( $this->user && $this->user->idForName() ) || $userIsIP ) {
 			// set page title as on desktop site - bug 66656
 			$username = $this->user->getName();
 			$out = $this->getOutput();

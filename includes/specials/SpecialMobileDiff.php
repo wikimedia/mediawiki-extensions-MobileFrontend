@@ -352,7 +352,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 
 		// Note $userId will be 0 and $ipAddr an empty string if the current audience cannot see it.
 		if ( $userId ) {
-			$user = User::newFromIdentity( $user );
+			$user = $this->getUserFactory()->newFromUserIdentity( $user );
 			$edits = $user->getEditCount();
 			$attrs = [
 				'class' => MobileUI::iconClass( 'userAvatar-base20', 'before', 'mw-mf-user' ),
