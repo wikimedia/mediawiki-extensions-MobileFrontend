@@ -13,6 +13,7 @@
 	"mobile-frontend-editor-editing": "Redaktanta",
 	"mobile-frontend-editor-editing-page": "<span><strong>Redaktanta</strong> $1</span>",
 	"mobile-frontend-editor-previewing-page": "<span><strong>Previdado di </strong> $1</span>",
+	"mobile-frontend-editor-switch-visual-editor": "Swichar a visuala redaktado",
 	"mobile-frontend-editor-viewing-source-page": "<strong>Vidanta fonto di</strong><span> $1</span>",
 	"mobile-frontend-editor-loading": "Karganta redaktilo...",
 	"mobile-frontend-language-heading": "<strong>Lingui</strong>",
