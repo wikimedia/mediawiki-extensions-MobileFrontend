@@ -1,6 +1,6 @@
 import { action } from '@storybook/addon-actions';
 import Icon from '../src/mobile.startup/Icon';
-import '../.storybook/mediawiki-skins-MinervaNeue/skinStyles/mediawiki.ui.icon/mediawiki.ui.icon.less';
+import '../.storybook/icons.less';
 import '../resources/mobile.startup/icon.less';
 
 export default {
