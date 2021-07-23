@@ -24,7 +24,7 @@
 		"build-storybook": "./dev-scripts/storybook.sh && build-storybook -o docs/ui"
 	},
 	"engines": {
-		"node": "10.15.2"
+		"node": "12.21.0"
 	},
 	"pre-commit": "precommit",
 	"devDependencies": {
