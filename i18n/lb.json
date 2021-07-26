@@ -111,7 +111,7 @@
 	"mobile-frontend-nearby-error": "{{SITENAME}} 'Nearby' huet e puer Problemer.",
 	"mobile-frontend-nearby-error-guidance": "Probéiert d'Plaz wou Dir sidd z'aktualiséieren.",
 	"mobile-frontend-nearby-noresults": "Et ass roueg hei... Et goufe keng Säite mat Themen aus der Géigend fonnt.",
-	"mobile-frontend-nearby-noresults-guidance": "Probéiert eng nei Säit ze schreiwen oder d'Plaz bei eng Säit déi et gëtt dobäizesetzen",
+	"mobile-frontend-nearby-noresults-guidance": "Probéiert fir eng nei Säit ze schreiwen oder d'Plaz, bei eng Säit déi et gëtt, derbäizesetzen",
 	"mobile-frontend-nearby-location-unavailable": "{{SITENAME}} Kann net erausfanne wou Dir sidd. Probéiert et wgl. nach eng Kéier mat engem bessere Signal.",
 	"mobile-frontend-nearby-requirements": "Leider ënnerstëtzt Ären Internetbrowser {{SITENAME}} Nearby net.",
 	"mobile-frontend-nearby-requirements-guidance": "Probéiert en anere Browser oder aktivéiert Javascript wann Dir deen ausgeschalt hutt.",
