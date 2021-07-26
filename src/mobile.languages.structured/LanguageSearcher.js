@@ -44,6 +44,8 @@ function LanguageSearcher( props ) {
 				// we can't rely on CSS only to uppercase the headings. See https://stackoverflow.com/questions/3777443/css-text-transform-not-working-properly-for-turkish-characters
 				allLanguagesHeader: mw.msg( 'mobile-frontend-languages-structured-overlay-all-languages-header' ).toLocaleUpperCase(),
 				suggestedLanguagesHeader: mw.msg( 'mobile-frontend-languages-structured-overlay-suggested-languages-header' ).toLocaleUpperCase(),
+				noResultsFoundHeader: mw.msg( 'mobile-frontend-languages-structured-overlay-no-results' ),
+				noResultsFoundMessage: mw.msg( 'mobile-frontend-languages-structured-overlay-no-results-body' ),
 				allLanguages: languages.all,
 				allLanguagesCount: languages.all.length,
 				suggestedLanguages: languages.suggested,
@@ -99,6 +101,10 @@ mfExtend( LanguageSearcher, View, {
 		{{/allLanguages}}
 	</ul>
 	{{/allLanguagesCount}}
+	<section class="empty-results hidden">
+		<h4 class="empty-results-header">{{noResultsFoundHeader}}</h4>
+		<p class="empty-results-body">{{noResultsFoundMessage}}</p>
+	</section>
 </div>
 	` ),
 	/**
@@ -111,6 +117,7 @@ mfExtend( LanguageSearcher, View, {
 		this.$siteLinksList = this.$el.find( '.site-link-list' );
 		this.$languageItems = this.$siteLinksList.find( 'a' );
 		this.$subheaders = this.$el.find( 'h3' );
+		this.$emptyResultsSection = this.$el.find( '.empty-results' );
 	},
 	/**
 	 * Article link click event handler
@@ -141,18 +148,18 @@ mfExtend( LanguageSearcher, View, {
 	 *
 	 * @memberof LanguageSearcher
 	 * @instance
-	 * @param {string} val of search term (lowercase).
+	 * @param {string} searchQuery of search term (lowercase).
 	 */
-	filterLanguages: function ( val ) {
+	filterLanguages: function ( searchQuery ) {
 		const filteredList = [];
 
-		if ( val ) {
+		if ( searchQuery ) {
 			this.options.languages.forEach( function ( language ) {
 				const langname = language.langname;
 				// search by language code or language name
-				if ( language.autonym.toLowerCase().indexOf( val ) > -1 ||
-						( langname && langname.toLowerCase().indexOf( val ) > -1 ) ||
-						language.lang.toLowerCase().indexOf( val ) > -1
+				if ( language.autonym.toLowerCase().indexOf( searchQuery ) > -1 ||
+						( langname && langname.toLowerCase().indexOf( searchQuery ) > -1 ) ||
+						language.lang.toLowerCase().indexOf( searchQuery ) > -1
 				) {
 					filteredList.push( language.lang );
 				}
@@ -161,8 +168,8 @@ mfExtend( LanguageSearcher, View, {
 			if ( this.options.variants ) {
 				this.options.variants.forEach( function ( variant ) {
 					// search by variant code or variant name
-					if ( variant.autonym.toLowerCase().indexOf( val ) > -1 ||
-						variant.lang.toLowerCase().indexOf( val ) > -1
+					if ( variant.autonym.toLowerCase().indexOf( searchQuery ) > -1 ||
+						variant.lang.toLowerCase().indexOf( searchQuery ) > -1
 					) {
 						filteredList.push( variant.lang );
 					}
@@ -172,6 +179,13 @@ mfExtend( LanguageSearcher, View, {
 			this.$languageItems.addClass( 'hidden' );
 			if ( filteredList.length ) {
 				this.$siteLinksList.find( '.' + filteredList.join( ',.' ) ).removeClass( 'hidden' );
+				this.$emptyResultsSection.addClass( 'hidden' );
+			} else {
+				this.$emptyResultsSection.removeClass( 'hidden' );
+				// Fire with the search query and the DOM element corresponding to no-results
+				// message so that it can be customized in hook handler
+				mw.hook( 'mobileFrontend.languageSearcher.noresults' )
+					.fire( searchQuery, this.$emptyResultsSection.get( 0 ) );
 			}
 			this.$siteLinksList.addClass( 'filtered' );
 			this.$subheaders.addClass( 'hidden' );
@@ -179,6 +193,7 @@ mfExtend( LanguageSearcher, View, {
 			this.$languageItems.removeClass( 'hidden' );
 			this.$siteLinksList.removeClass( 'filtered' );
 			this.$subheaders.removeClass( 'hidden' );
+			this.$emptyResultsSection.addClass( 'hidden' );
 		}
 	}
 } );
