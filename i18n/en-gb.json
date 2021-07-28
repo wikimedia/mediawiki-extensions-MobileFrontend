@@ -4,6 +4,7 @@
 			"Andibing",
 			"Anomie",
 			"Aursani",
+			"Berrely",
 			"Bjh21",
 			"Captaindogfish",
 			"Chase me ladies, I'm the Cavalry",
@@ -18,5 +19,6 @@
 	"mobile-frontend-editor-licensing-with-terms": "By saving changes, you agree to the $1 and agree to release your contribution under the $2 {{PLURAL:$3|licence|licences}}.",
 	"mobile-frontend-last-modified-date": "Last modified on $1, at $2",
 	"mobile-frontend-media-license-link": "Licence information",
+	"mobile-frontend-view": "Mobile view",
 	"mobile-frontend-console-recruit": "Learn more about how we build our mobile site @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend"
 }
