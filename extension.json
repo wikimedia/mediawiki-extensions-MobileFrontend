@@ -502,7 +502,9 @@
 			"messages": [
 				"mobile-frontend-languages-structured-overlay-suggested-languages-header",
 				"mobile-frontend-languages-structured-overlay-all-languages-header",
-				"mobile-frontend-languages-structured-overlay-search-input-placeholder"
+				"mobile-frontend-languages-structured-overlay-search-input-placeholder",
+				"mobile-frontend-languages-structured-overlay-no-results",
+				"mobile-frontend-languages-structured-overlay-no-results-body"
 			]
 		},
 		"mobile.site": {
