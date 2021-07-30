@@ -11,7 +11,6 @@
 }
 
 .ve-mobile-fakeToolbar-header {
-	display: table !important;
 	height: 3em;
 }
 
@@ -30,6 +29,8 @@
 		display: inline-block;
 		width: 3em;
 		height: 3em;
+		// Needs !important to override content-box set in .mw-ui-icon styles
+		box-sizing: border-box !important;
 
 		&:before {
 			background-size: 20px 20px;
