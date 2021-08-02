@@ -1,7 +1,7 @@
 <?php
 
 use MediaWiki\MediaWikiServices;
-use MobileFrontend\ContentProviders\ContentProviderFactory;
+use MobileFrontend\ContentProviders\IContentProvider;
 use MobileFrontend\Transforms\LazyImageTransform;
 use MobileFrontend\Transforms\MakeSectionsTransform;
 use MobileFrontend\Transforms\MoveLeadParagraphTransform;
@@ -43,31 +43,45 @@ class ExtMobileFrontend {
 	}
 
 	/**
-	 * Transforms content to be mobile friendly version.
-	 * Filters out various elements and runs the MobileFormatter.
+	 * Obtains content using the given content provider and routes it to the mobile formatter
+	 * if required.
+	 *
+	 * @param IContentProvider $provider
 	 * @param OutputPage $out
-	 * @param string|null $text override out html
 	 * @param bool $mobileFormatHtml whether content should be run through the MobileFormatter
 	 *
 	 * @return string
 	 */
-	public static function domParse( OutputPage $out, $text = null, $mobileFormatHtml = true ) {
-		$services = MediaWikiServices::getInstance();
-		$featureManager = $services->getService( 'MobileFrontend.FeaturesManager' );
-		/** @var ContentProviderFactory $contentProviderFactory */
-		$contentProviderFactory = $services->getService( 'MobileFrontend.ContentProviderFactory' );
-		/** @var MobileContext $context */
-		$context = $services->getService( 'MobileFrontend.Context' );
-		$config = $services->getService( 'MobileFrontend.Config' );
-		$provideTagline = $featureManager->isFeatureAvailableForCurrentUser(
-			'MFEnableWikidataDescriptions'
-		) && $context->shouldShowWikibaseDescriptions( 'tagline', $config );
-		$provider = $contentProviderFactory->getProvider( $out, $text, $provideTagline );
+	public static function domParseWithContentProvider(
+		IContentProvider $provider,
+		OutputPage $out,
+		$mobileFormatHtml = true
+	) {
+		$html = $provider->getHTML();
 
 		// If we're not running the formatter we can exit earlier
 		if ( !$mobileFormatHtml ) {
-			return $provider->getHTML();
+			return $html;
+		} else {
+			return self::domParseMobile( $out, $html );
 		}
+	}
+
+	/**
+	 * Transforms content to be mobile friendly version.
+	 * Filters out various elements and runs the MobileFormatter.
+	 *
+	 * @param OutputPage $out
+	 * @param string $html to render.
+	 *
+	 * @return string
+	 */
+	public static function domParseMobile( OutputPage $out, $html = '' ) {
+		$services = MediaWikiServices::getInstance();
+		$featureManager = $services->getService( 'MobileFrontend.FeaturesManager' );
+		/** @var MobileContext $context */
+		$context = $services->getService( 'MobileFrontend.Context' );
+		$config = $services->getService( 'MobileFrontend.Config' );
 
 		$title = $out->getTitle();
 		$ns = $title->getNamespace();
@@ -86,7 +100,6 @@ class ExtMobileFrontend {
 			&& $isView
 		);
 
-		$html = $provider->getHTML();
 		// https://phabricator.wikimedia.org/T232690
 		if ( !MobileFormatter::canApply( $html, $config->get( 'MFMobileFormatterOptions' ) ) ) {
 			// In future we might want to prepend a message feeding

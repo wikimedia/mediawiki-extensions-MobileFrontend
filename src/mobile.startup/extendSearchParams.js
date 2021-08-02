@@ -34,7 +34,7 @@ function extendSearchParams( feature ) {
 			watchlist: true,
 			tagline: false
 		},
-		scriptPath = mw.config.get( 'wgMFContentProviderScriptPath' ),
+		scriptPath = mw.config.get( 'wgMFScriptPath' ),
 		args,
 		result;
 

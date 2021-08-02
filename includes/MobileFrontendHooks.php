@@ -4,7 +4,7 @@ use MediaWiki\Auth\AuthenticationRequest;
 use MediaWiki\Auth\AuthManager;
 use MediaWiki\ChangeTags\Taggable;
 use MediaWiki\MediaWikiServices;
-use MobileFrontend\ContentProviders\ContentProviderFactory;
+use MobileFrontend\ContentProviders\DefaultContentProvider;
 use MobileFrontend\Models\MobilePage;
 use MobileFrontend\Transforms\LazyImageTransform;
 use MobileFrontend\Transforms\MakeSectionsTransform;
@@ -258,8 +258,6 @@ class MobileFrontendHooks {
 		$config = $services->getService( 'MobileFrontend.Config' );
 
 		$displayMobileView = $context->shouldDisplayMobileView();
-		// T245160
-		$runMobileFormatter = $displayMobileView && $title && $title->getLatestRevID() > 0;
 		// T204691
 		$theme = $config->get( 'MFManifestThemeColor' );
 		if ( $theme && $displayMobileView ) {
@@ -286,16 +284,29 @@ class MobileFrontendHooks {
 		// Perform a few extra changes if we are in mobile mode
 		$namespaceAllowed = !$title->inNamespaces( $excludeNamespaces );
 
-		$alwaysUseProvider = $config->get( 'MFAlwaysUseContentProvider' );
-		$ignoreLocal = !( $config->get( 'MFContentProviderTryLocalContentFirst' ) &&
-			$title->exists() );
+		$provider = new DefaultContentProvider( $text );
+		$originalProviderClass = DefaultContentProvider::class;
+		$services->getHookContainer()->run( 'MobileFrontendContentProvider', [
+			&$provider, $out
+		] );
 
-		if ( $alwaysUseProvider && $ignoreLocal ) {
-			// bypass
-			$runMobileFormatter = true;
+		// T245160 - don't run the mobile formatter on old revisions.
+		// Note if not the default content provider we ignore this requirement.
+		if ( get_class( $provider ) === $originalProviderClass ) {
+			// This line is important to avoid the default content provider running unnecessarily
+			// on desktop views.
+			$useContentProvider = $displayMobileView;
+			$runMobileFormatter = $displayMobileView && $title->getLatestRevID() > 0;
+		} else {
+			// When a custom content provider is enabled, always use it.
+			$useContentProvider = true;
+			$runMobileFormatter = $displayMobileView;
 		}
-		if ( $namespaceAllowed && $runMobileFormatter ) {
-			$text = ExtMobileFrontend::domParse( $out, $text, $runMobileFormatter );
+
+		if ( $namespaceAllowed && $useContentProvider ) {
+			$text = ExtMobileFrontend::domParseWithContentProvider(
+				$provider, $out, $runMobileFormatter
+			);
 			$nonce = $out->getCSP()->getNonce();
 			$text = MakeSectionsTransform::interimTogglingSupport( $nonce ) . $text;
 		}
@@ -518,10 +529,6 @@ class MobileFrontendHooks {
 			// toggle.js
 			'wgMFCollapseSectionsByDefault' => $config->get( 'MFCollapseSectionsByDefault' ),
 			// extendSearchParams.js
-			// The purpose of this is to report to the client that we are using a custom path
-			// and signal to API requests that the origin parameter should be used.
-			// A boolean would also suffice here but let's keep things simple and pass verbatim
-			'wgMFContentProviderScriptPath' => $config->get( 'MFContentProviderScriptPath' ),
 			'wgMFTrackBlockNotices' => $config->get( 'MFTrackBlockNotices' ),
 		];
 		return $vars;
@@ -714,8 +721,6 @@ class MobileFrontendHooks {
 		$services = MediaWikiServices::getInstance();
 		/** @var MobileContext $context */
 		$context = $services->getService( 'MobileFrontend.Context' );
-		/** @var ContentProviderFactory $contentProviderFactory */
-		$contentProviderFactory = $services->getService( 'MobileFrontend.ContentProviderFactory' );
 
 		$isMobileView = $context->shouldDisplayMobileView();
 		$taglines = $context->getConfig()->get( 'MFSpecialPageTaglines' );
@@ -732,9 +737,6 @@ class MobileFrontendHooks {
 			if ( array_key_exists( $name, $taglines ) ) {
 				self::setTagline( $out, $out->msg( $taglines[$name] )->parse() );
 			}
-
-			// Set foreign script path on special pages e.g. Special:Nearby
-			$contentProviderFactory->addForeignScriptPath( $out );
 		}
 	}
 
