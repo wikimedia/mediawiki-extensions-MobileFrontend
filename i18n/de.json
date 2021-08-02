@@ -130,6 +130,8 @@
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Vorgeschlagene Sprachen",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Andere Sprachen",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Nach einer Sprache suchen",
+	"mobile-frontend-languages-structured-overlay-no-results": "Sprache nicht verfügbar.",
+	"mobile-frontend-languages-structured-overlay-no-results-body": "Die gesuchte Sprache ist nicht verfügbar.",
 	"mobile-frontend-last-modified-date": "Zuletzt bearbeitet am $1 um $2",
 	"mobile-frontend-last-modified-with-user-days": "[$4 Zuletzt {{GENDER:$1|bearbeitet}} vor {{PLURAL:$3|einem Tag|$3 Tagen}}] von {{PLURAL:$5|[$6 $2]|0=einem anonymen Benutzer}}",
 	"mobile-frontend-last-modified-with-user-hours": "[$4 Zuletzt {{GENDER:$1|bearbeitet}} vor {{PLURAL:$3|einer Stunde|$3 Stunden}}] von {{PLURAL:$5|[$6 $2]|0=einem anonymen Benutzer}}",

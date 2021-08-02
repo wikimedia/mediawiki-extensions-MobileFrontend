@@ -131,6 +131,8 @@
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "שפות מוצעות",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "שפות אחרות",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "חיפוש שפה",
+	"mobile-frontend-languages-structured-overlay-no-results": "השפה אינה זמינה",
+	"mobile-frontend-languages-structured-overlay-no-results-body": "השפה שחיפשת אינה זמינה.",
 	"mobile-frontend-last-modified-date": "נערך לאחרונה ב־$1 ב־$2",
 	"mobile-frontend-last-modified-with-user-days": "[$4 {{GENDER:$1|נערך}} לאחרונה לפני {{PLURAL:$3|יום אחד|יומיים|$3 ימים}}] על־ידי {{PLURAL:$5|[$6 $2]|0=אלמוני}}",
 	"mobile-frontend-last-modified-with-user-hours": "[$4 {{GENDER:$1|נערך}} לאחרונה לפני {{PLURAL:$3|שעה אחת|שעתיים|$3 שעות}}] על־ידי {{PLURAL:$5|[$6 $2]|0=אלמוני}}",
