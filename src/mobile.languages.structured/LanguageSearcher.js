@@ -65,7 +65,7 @@ mfExtend( LanguageSearcher, View, {
 	template: util.template( `
 <div class="panel">
 	<div class="panel-body search-box">
-		<input type="search" class="search" placeholder="{{inputPlaceholder}}">
+		<input type="search" class="search mw-ui-background-icon-search" placeholder="{{inputPlaceholder}}">
 	</div>
 </div>
 
