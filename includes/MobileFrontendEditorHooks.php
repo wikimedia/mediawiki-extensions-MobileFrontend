@@ -79,19 +79,6 @@ class MobileFrontendEditorHooks {
 				],
 			] );
 		}
-
-		// If using MFContentProviderScriptPath, register contentProviderApi module to
-		// fix cors issues with visual editor
-		$config = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Config' );
-		$contentProviderApi = $config->get( 'MFContentProviderScriptPath' );
-		if ( $contentProviderApi ) {
-			$resourceLoader->register( [
-				'mobile.contentProviderApi' => $resourceBoilerplate + [
-					'targets' => [ 'mobile', 'desktop' ],
-					'scripts' => 'resources/mobile.contentProviderApi.js'
-				]
-			] );
-		}
 	}
 
 	/**

@@ -1,6 +1,6 @@
 {
 	"name": "MobileFrontend",
-	"version": "2.3.0",
+	"version": "2.4.0",
 	"author": [
 		"Patrick Reilly",
 		"Max Semenik",
@@ -756,20 +756,9 @@
 				"amc": true
 			}
 		},
-		"MFContentProviderTryLocalContentFirst": {
-			"value": true
-		},
-		"MFContentProviderClass": {
-			"value": "MobileFrontend\\ContentProviders\\DefaultContentProvider"
-		},
-		"MFMwApiContentProviderBaseUri": {
-			"value": "https://en.wikipedia.org/w/api.php"
-		},
-		"MFContentProviderScriptPath": {
+		"wgMFScriptPath": {
+			"description": "Reroute search queries to a different host",
 			"value": ""
-		},
-		"MFMcsContentProviderBaseUri": {
-			"value": "https://en.wikipedia.org/api/rest_v1"
 		},
 		"MFEnableXAnalyticsLogging": {
 			"value": false
@@ -779,9 +768,6 @@
 			"value": "preference"
 		},
 		"MFEnableJSConsoleRecruitment": {
-			"value": false
-		},
-		"MFAlwaysUseContentProvider": {
 			"value": false
 		},
 		"MFMobileFormatterOptions": {

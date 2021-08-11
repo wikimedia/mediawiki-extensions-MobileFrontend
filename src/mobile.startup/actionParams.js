@@ -11,7 +11,7 @@ var util = require( './util' ),
  * @return {Object}
  */
 function actionParams( otherParams ) {
-	var scriptPath = mw.config.get( 'wgMFContentProviderScriptPath' );
+	var scriptPath = mw.config.get( 'wgMFScriptPath' );
 	return util.extend( {}, defaultParams, {
 		origin: scriptPath ? '*' : undefined
 	}, otherParams );
