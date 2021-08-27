@@ -1,14 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
-			"Iflaq"
+			"Iflaq",
+			"Rishabhbhat"
 		]
 	},
 	"mobile-frontend-editor-blocked-drawer-action-login": "دٲخِل گژھن",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "ٹھیک چھُ",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "وَضاحَت",
 	"mobile-frontend-editor-cancel": "مَنسوٗخ کَرُن",
-	"mobile-frontend-editor-publish": "شائع کٕرو",
+	"mobile-frontend-editor-publish": "شایع کٔرِو",
 	"mobile-frontend-editor-success": "مُبارَک! تُہند اؠڑیٹ آو شائع کرنہ.",
 	"mobile-frontend-editor-success-new-page": "نٔو صَفہٕ تَخلیٖق کرنس پیٹھ مُبارَک!",
 	"mobile-frontend-editor-summary-placeholder": "مِثال:درست، نو مواد",
