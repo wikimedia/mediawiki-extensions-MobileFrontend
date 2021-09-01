@@ -5,7 +5,7 @@ const assert = require( 'assert' );
 
 describe( 'Switch between views:', () => {
 
-	it( 'desktop to mobile', () => {
+	it.skip( 'desktop to mobile', () => {
 		ArticlePage.open( 'Main_Page' );
 		ArticlePage.switch_to_mobile_element.click();
 		ArticlePage.switch_to_desktop_element.waitForExist( 10000 );
