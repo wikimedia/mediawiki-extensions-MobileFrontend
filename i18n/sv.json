@@ -131,6 +131,8 @@
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Föreslagna språk",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Andra språk",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Sök efter ett språk",
+	"mobile-frontend-languages-structured-overlay-no-results": "Språket är inte tillgängligt",
+	"mobile-frontend-languages-structured-overlay-no-results-body": "Språket du letar efter är inte tillgängligt.",
 	"mobile-frontend-last-modified-date": "Senast redigerad den $1, kl $2",
 	"mobile-frontend-last-modified-with-user-days": "[$4 Senast {{GENDER:$1|redigerad}} för {{PLURAL:$3|$3 dag|$3 dagar}} sedan] av {{PLURAL:$5|[$6 $2]|0=en anonym användare}}",
 	"mobile-frontend-last-modified-with-user-hours": "[$4 Senast {{GENDER:$1|redigerad}} för {{PLURAL:$3|$3 timme|$3 timmar}} sedan] av {{PLURAL:$5|[$6 $2]|0=en anonym användare}}",
