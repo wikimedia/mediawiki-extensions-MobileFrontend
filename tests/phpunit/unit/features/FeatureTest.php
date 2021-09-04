@@ -11,7 +11,7 @@ class FeatureTest extends \MediaWikiUnitTestCase {
 	/** @var array */
 	private $madeUpConfigVariable;
 
-	protected function setUp() : void {
+	protected function setUp(): void {
 		parent::setUp();
 		$this->madeUpConfigVariable = [
 			'beta' => true,
@@ -119,7 +119,7 @@ class FeatureTest extends \MediaWikiUnitTestCase {
 		$this->assertSame( $expected, $actual );
 	}
 
-	protected function tearDown() : void {
+	protected function tearDown(): void {
 		unset( $this->madeUpConfigVariable );
 		parent::tearDown();
 	}

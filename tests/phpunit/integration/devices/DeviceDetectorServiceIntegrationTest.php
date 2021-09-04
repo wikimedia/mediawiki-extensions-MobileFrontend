@@ -16,7 +16,7 @@ use MobileFrontend\Devices\DeviceDetectorService;
  * @group integration
  */
 class DeviceDetectorServiceIntegrationTest extends MediaWikiTestCase {
-	protected function setUp() : void {
+	protected function setUp(): void {
 		parent::setUp();
 
 		$this->setMwGlobals( 'wgMFAutodetectMobileView', true );

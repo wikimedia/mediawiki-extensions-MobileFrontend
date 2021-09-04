@@ -158,7 +158,7 @@ class MobileSpecialPage extends SpecialPage {
 	 * Get a user options lookup object.
 	 * @return UserOptionsLookup
 	 */
-	protected function getUserOptionsLookup() : UserOptionsLookup {
+	protected function getUserOptionsLookup(): UserOptionsLookup {
 		return $this->userOptionsLookup;
 	}
 
@@ -166,7 +166,7 @@ class MobileSpecialPage extends SpecialPage {
 	 * Get a user group manager object.
 	 * @return UserGroupManager
 	 */
-	protected function getUserGroupManager() : UserGroupManager {
+	protected function getUserGroupManager(): UserGroupManager {
 		return $this->userGroupManager;
 	}
 }

@@ -1020,7 +1020,7 @@ class ApiMobileView extends ApiBase {
 	 * @since 1.35
 	 * @return ILanguageConverter
 	 */
-	private function getLanguageConverter() : ILanguageConverter {
+	private function getLanguageConverter(): ILanguageConverter {
 		$services = MediaWikiServices::getInstance();
 		return $services
 			->getLanguageConverterFactory()

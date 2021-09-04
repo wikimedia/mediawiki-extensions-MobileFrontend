@@ -12,7 +12,7 @@ class ApiMobileViewConvertTitleTest extends ApiTestCase {
 	/** @var string */
 	private $traditionalTitle = '天聞角川';
 
-	protected function setUp() : void {
+	protected function setUp(): void {
 		parent::setUp();
 		$this->setUserLang( 'zh' );
 		$this->setMwGlobals( 'wgLanguageCode', 'zh' );

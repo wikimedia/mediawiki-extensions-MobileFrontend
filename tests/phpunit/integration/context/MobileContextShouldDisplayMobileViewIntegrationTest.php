@@ -21,7 +21,7 @@ class MobileContextShouldDisplayMobileViewIntegrationTest extends MediaWikiTestC
 	 */
 	private $context;
 
-	protected function setUp() : void {
+	protected function setUp(): void {
 		parent::setUp();
 
 		MobileContext::resetInstanceForTesting();

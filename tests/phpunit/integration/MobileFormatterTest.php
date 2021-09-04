@@ -25,7 +25,7 @@ class MobileFormatterTest extends MediaWikiTestCase {
 	 */
 	private $mfContext;
 
-	protected function setUp() : void {
+	protected function setUp(): void {
 		parent::setUp();
 
 		$services = \MediaWiki\MediaWikiServices::getInstance();

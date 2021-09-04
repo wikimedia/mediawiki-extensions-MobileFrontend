@@ -80,7 +80,7 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	 * @param DOMElement $section Where to search for an infobox
 	 * @return DOMElement|null The first infobox
 	 */
-	private function identifyInfoboxElement( DOMXPath $xPath, DOMElement $section ) : ?DOMElement {
+	private function identifyInfoboxElement( DOMXPath $xPath, DOMElement $section ): ?DOMElement {
 		$paths = [
 			// Infoboxes: *.infobox
 			'.//*[contains(concat(" ",normalize-space(@class)," ")," infobox ")]',
@@ -130,7 +130,7 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	 * @param DOMElement $section Where to search for paragraphs
 	 * @return DOMElement|null The lead paragraph
 	 */
-	private function identifyLeadParagraph( DOMXPath $xPath, DOMElement $section ) : ?DOMElement {
+	private function identifyLeadParagraph( DOMXPath $xPath, DOMElement $section ): ?DOMElement {
 		$paragraphs = $xPath->query( './p', $section );
 
 		$index = 0;

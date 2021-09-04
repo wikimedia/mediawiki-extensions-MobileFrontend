@@ -20,7 +20,7 @@ class AMFDeviceDetectorTest extends \MediaWikiUnitTestCase {
 	 */
 	private $detector;
 
-	protected function setUp() : void {
+	protected function setUp(): void {
 		parent::setUp();
 
 		$this->request = new WebRequest();

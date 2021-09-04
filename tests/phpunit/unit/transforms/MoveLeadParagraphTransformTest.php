@@ -54,7 +54,7 @@ class MoveLeadParagraphTransformTest extends \MediaWikiUnitTestCase {
 		);
 	}
 
-	public function provideIdentifyInfoboxElement() : array {
+	public function provideIdentifyInfoboxElement(): array {
 		return [
 			[
 				'html' => '<p></p>',

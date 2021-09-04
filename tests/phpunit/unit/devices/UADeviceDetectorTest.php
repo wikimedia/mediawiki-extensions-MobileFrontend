@@ -20,7 +20,7 @@ class UADeviceDetectorTest extends \MediaWikiUnitTestCase {
 	 */
 	private $request;
 
-	protected function setUp() : void {
+	protected function setUp(): void {
 		parent::setUp();
 
 		$this->detector = new UADeviceDetector();

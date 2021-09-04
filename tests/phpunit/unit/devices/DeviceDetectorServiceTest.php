@@ -12,7 +12,7 @@ use WebRequest;
  * @group MobileFrontend
  */
 class DeviceDetectorServiceTest extends \MediaWikiUnitTestCase {
-	protected function setUp() : void {
+	protected function setUp(): void {
 		parent::setUp();
 
 		$this->request = new FauxRequest();
