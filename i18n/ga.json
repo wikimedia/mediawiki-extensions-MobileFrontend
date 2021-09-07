@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"MinecraftAustralia",
 			"Smirkybec",
 			"Tem",
 			"පසිඳු කාවින්ද"
@@ -42,6 +43,8 @@
 	"mobile-frontend-watchlist-filter-talk": "Plé",
 	"mobile-frontend-watchlist-more": "tuilleadh",
 	"mobile-frontend-user-page-describe-yourself-editors": "eagarthóirí",
+	"tag-mobile_edit": "Eagar soghluaiste",
+	"tag-mobile_web_edit": "Eagarthóireacht gréasáin soghluaiste",
 	"mobile-frontend-loading-message": "Ag lódáil...",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Clómhéid",
 	"mobile-frontend-mobile-option-amc-learn-more": "Foghlaim tuilleadh"
