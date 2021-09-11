@@ -37,7 +37,7 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	public function apply( DOMElement $node ) {
 		$section = $node->getElementsByTagName( 'section' )->item( 0 );
 		if ( $section ) {
-			/** @phan-suppress-next-line PhanTypeMismatchArgument DOMNode vs. DOMElement */
+			/** @phan-suppress-next-line PhanTypeMismatchArgumentSuperType DOMNode vs. DOMElement */
 			$this->moveFirstParagraphBeforeInfobox( $section, $section->ownerDocument );
 		}
 	}
@@ -137,6 +137,7 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 		while ( $index < $paragraphs->length ) {
 			$node = $paragraphs->item( $index );
 			if ( $node && !$this->isNonLeadParagraph( $xPath, $node ) ) {
+				/** @phan-suppress-next-line PhanTypeMismatchReturn DOMNode vs. DOMElement */
 				return $node;
 			}
 
@@ -193,7 +194,7 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 				}
 			} elseif ( !$isTopLevelInfobox ) {
 				$isInWrongPlace = $this->hasNoNonEmptyPrecedingParagraphs( $xPath,
-					/** @phan-suppress-next-line PhanTypeMismatchArgument DOMNode vs. DOMElement */
+					/** @phan-suppress-next-line PhanTypeMismatchArgumentSuperType DOMNode vs. DOMElement */
 					self::findParentWithParent( $infobox, $leadSection )
 				);
 				$loggingEnabled = MediaWikiServices::getInstance()

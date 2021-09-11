@@ -35,7 +35,6 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 	 * @param string $comment The raw comment text
 	 * @param Title $title The title of the page that was edited
 	 * @fixme Duplication with SpecialMobileWatchlist
-	 * @suppress SecurityCheck-DoubleEscaped phan false positive
 	 *
 	 * @return string HTML code
 	 */
