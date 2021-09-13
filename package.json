@@ -61,7 +61,7 @@
 		"oojs-ui": "0.39.0",
 		"pre-commit": "1.2.2",
 		"sinon": "4.5.0",
-		"stylelint-config-wikimedia": "0.10.3",
+		"stylelint-config-wikimedia": "0.11.1",
 		"svgo": "2.3.0",
 		"wdio-mediawiki": "1.1.1",
 		"webdriverio": "6.3.4",

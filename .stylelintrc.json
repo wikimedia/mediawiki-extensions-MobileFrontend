@@ -2,6 +2,7 @@
 	"extends": "stylelint-config-wikimedia",
 	"rules": {
 		"declaration-no-important": null,
-		"selector-list-comma-newline-after": null
+		"selector-list-comma-newline-after": null,
+		"declaration-property-unit-disallowed-list": null
 	}
 }
