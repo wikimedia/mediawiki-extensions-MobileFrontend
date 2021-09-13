@@ -232,7 +232,8 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 *
 	 * @memberof EditorOverlayBase
 	 * @instance
-	 * @param {number} newRevId ID of the newly created revision
+	 * @param {number|null} newRevId ID of the newly created revision, or null if it was a null
+	 *  edit.
 	 */
 	onSaveComplete: function ( newRevId ) {
 		var msg,
@@ -251,13 +252,17 @@ mfExtend( EditorOverlayBase, Overlay, {
 		} else {
 			msg = mw.msg( 'mobile-frontend-editor-success' );
 		}
+
 		/**
 		 * Fired after an edit was successfully saved, like postEdit in MediaWiki core.
 		 *
 		 * @event postEditMobile
 		 * @member mw.hook
+		 * @param {Object} data
+		 * @param {number|null} data.newRevId (since MW 1.37) ID of the newly created revision,
+		 *  or null if it was a null edit.
 		 */
-		mw.hook( 'postEditMobile' ).fire();
+		mw.hook( 'postEditMobile' ).fire( { newRevId: newRevId } );
 
 		if ( !mw.config.get( 'wgPostEditConfirmationDisabled' ) ) {
 			toast.showOnPageReload( msg, { type: 'success' } );
