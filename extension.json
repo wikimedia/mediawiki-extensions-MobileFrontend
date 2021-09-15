@@ -25,7 +25,10 @@
 	},
 	"SpecialPages": {
 		"History": "SpecialMobileHistory",
-		"MobileDiff": "SpecialMobileDiff",
+		"MobileDiff": {
+			"class": "SpecialMobileDiff",
+			"services": [ "RevisionLookup" ]
+		},
 		"MobileOptions": "SpecialMobileOptions",
 		"MobileLanguages": {
 			"class": "SpecialMobileLanguages",
