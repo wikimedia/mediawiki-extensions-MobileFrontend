@@ -38,7 +38,7 @@ describe( 'User:<username>', () => {
 		RunJobs.run();
 	} );
 
-	it( 'Check user page is editable', () => {
+	it.skip( 'Check user page is editable', () => {
 		iAmUsingTheMobileSite();
 		iAmOnPage( `User:${username}` );
 		iShouldBeOnUserPage( username );
