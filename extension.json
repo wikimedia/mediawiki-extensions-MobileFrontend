@@ -24,10 +24,16 @@
 		"mobilefrontend": "GlobalVarConfig::newInstance"
 	},
 	"SpecialPages": {
-		"History": "SpecialMobileHistory",
 		"MobileDiff": {
 			"class": "SpecialMobileDiff",
 			"services": [ "RevisionLookup" ]
+		},
+		"History": {
+			"class": "SpecialMobileHistory",
+			"services": [
+				"NamespaceInfo",
+				"RevisionFactory"
+			]
 		},
 		"MobileOptions": "SpecialMobileOptions",
 		"MobileLanguages": {

@@ -1,11 +1,12 @@
 <?php
 
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Storage\RevisionFactory;
 use MediaWiki\Storage\RevisionRecord;
 use Wikimedia\Rdbms\IResultWrapper;
 
 /**
- * Mobile formatted history of of a page
+ * Mobile formatted history of a page
  */
 class SpecialMobileHistory extends MobileSpecialPageFeed {
 	/** @var bool Whether the mobile special page has a desktop special page */
@@ -26,8 +27,23 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 	/** @var string a message key for the error message description that should be shown on a 404 */
 	protected $errorNotFoundDescriptionMsg = 'mobile-frontend-history-404-desc';
 
-	public function __construct() {
+	/** @var NamespaceInfo */
+	private $namespaceInfo;
+
+	/** @var RevisionFactory */
+	private $revisionFactory;
+
+	/**
+	 * @param NamespaceInfo $namespaceInfo
+	 * @param RevisionFactory $revisionFactory
+	 */
+	public function __construct(
+		NamespaceInfo $namespaceInfo, RevisionFactory $revisionFactory
+	) {
 		parent::__construct( $this->specialPageName );
+
+		$this->namespaceInfo = $namespaceInfo;
+		$this->revisionFactory = $revisionFactory;
 	}
 
 	/**
@@ -71,8 +87,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 		$namespaceLabel = '';
 		$headerTitle = $this->getHeaderBarLink( $title );
 
-		$isTalkNS = MediaWikiServices::getInstance()->getNamespaceInfo()
-			->isTalk( $title->getNamespace() );
+		$isTalkNS = $this->namespaceInfo->isTalk( $title->getNamespace() );
 		if ( $isTalkNS ) {
 			$namespaceLabel = Html::element( 'span',
 				[ 'class' => 'mw-mf-namespace' ],
@@ -173,7 +188,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 
 		$options['LIMIT'] = self::LIMIT + 1;
 
-		$revQuery = MediaWikiServices::getInstance()->getRevisionStore()->getQueryInfo();
+		$revQuery = $this->revisionFactory->getQueryInfo();
 
 		$res = $dbr->select(
 			$revQuery['tables'], $revQuery['fields'], $conds, __METHOD__, $options, $revQuery['joins']
@@ -272,10 +287,9 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 		$numRows = $res->numRows();
 		$rev1 = $rev2 = null;
 		$out = $this->getOutput();
-		$revFactory = MediaWikiServices::getInstance()->getRevisionFactory();
 		if ( $numRows > 0 ) {
 			foreach ( $res as $row ) {
-				$rev1 = $revFactory->newRevisionFromRow( $row );
+				$rev1 = $this->revisionFactory->newRevisionFromRow( $row );
 				if ( $rev2 ) {
 					$this->showRow( $rev2, $rev1 );
 				}
