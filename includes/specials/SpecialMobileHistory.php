@@ -40,10 +40,9 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 	public function __construct(
 		NamespaceInfo $namespaceInfo, RevisionFactory $revisionFactory
 	) {
-		parent::__construct( $this->specialPageName );
-
 		$this->namespaceInfo = $namespaceInfo;
 		$this->revisionFactory = $revisionFactory;
+		parent::__construct( $this->specialPageName );
 	}
 
 	/**

@@ -40,8 +40,8 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 	protected function getHeaderBarLink( $title ) {
 		// Convert user page URL to User object.
 		$user = $this->userFactory->newFromName( $title->getText() );
-		// Doing this as UserFactory can return null.
-		$user = $user ?: false;
+		// Doing this as UserFactory can return null or false.
+		$user = $user ?: $this->userFactory->newAnonymous( $title->getText() );
 		$icon = $user->isAnon() ? 'userAnonymous' : 'userAvatar';
 
 		return Html::rawElement( 'a',
@@ -62,10 +62,16 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 		$target = $request->getVal( 'target', '' );
 		$this->offset = $request->getVal( 'offset', '' );
 
-		if ( $par || $target ) {
-			$this->user = $par
-				? $this->getUserFactory()->newFromName( $par )
-				: $this->getUserFactory()->newFromName( $target );
+		if ( $par ) {
+			$target = $par;
+		}
+		if ( $target ) {
+			$this->user = $this->getUserFactory()->newFromName( $target );
+
+			// It could be an IP, so return a user based on the IP.
+			if ( !$this->user ) {
+				$this->user = $this->getUserFactory()->newAnonymous( $target );
+			}
 		}
 
 		if ( !$this->user ) {
