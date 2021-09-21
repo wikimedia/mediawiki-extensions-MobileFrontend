@@ -69,7 +69,7 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 			$this->user = $this->getUserFactory()->newFromName( $target );
 
 			// It could be an IP, so return a user based on the IP.
-			if ( !$this->user ) {
+			if ( !$this->user && IPUtils::isValid( $target ) ) {
 				$this->user = $this->getUserFactory()->newAnonymous( $target );
 			}
 		}
