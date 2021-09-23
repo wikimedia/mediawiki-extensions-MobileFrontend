@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Nertiks"
+			"Nertiks",
+			"Nērtiks Jōrgesuns"
 		]
 	},
-	"mobile-frontend-view": "Mōbila wersiōni"
+	"mobile-frontend-view": "Mōbila wersiōni",
+	"tag-mobile_edit": "Mōbila redigisnā",
+	"tag-mobile_web_edit": "Mōbila pāusas redigisnā"
 }
