@@ -16,7 +16,7 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 	 *		allow the parameter to be used for usernames)
 	 */
 	protected $specialPageName = 'Contributions';
-	/** @var User */
+	/** @var User|null */
 	protected $user;
 	/**
 	 * @var MWTimestamp A timestamp used for
@@ -206,7 +206,7 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 	/**
 	 * Get the URL to go to desktop site of this page
 	 * @param string|null $subPage URL of mobile diff page
-	 * @return null
+	 * @return string|null
 	 */
 	public function getDesktopUrl( $subPage ) {
 		return null;

@@ -516,7 +516,7 @@ class MobileContext extends ContextSource {
 	 * version of pages.
 	 *
 	 * @param string $cookieFormat should user see mobile version of pages?
-	 * @param null $expiry Expiration of cookie
+	 * @param int|null $expiry Expiration of cookie
 	 */
 	public function setUseFormatCookie( $cookieFormat = 'true', $expiry = null ) {
 		if ( $expiry === null ) {

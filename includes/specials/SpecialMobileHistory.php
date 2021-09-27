@@ -258,7 +258,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 
 	/**
 	 * Get a button to show more entries of history
-	 * @param int $ts The offset to start the history list from
+	 * @param string|null $ts The offset to start the history list from
 	 * @return string
 	 */
 	protected function getMoreButton( $ts ) {
