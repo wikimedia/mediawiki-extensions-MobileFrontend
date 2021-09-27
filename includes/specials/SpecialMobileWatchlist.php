@@ -333,9 +333,9 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 			"/MobileFrontend/images/emptywatchlist-page-actions-$dir.png";
 
 		if ( $feed ) {
-			$msg = Html::element( 'p', null, wfMessage( 'mobile-frontend-watchlist-feed-empty' )->plain() );
+			$msg = Html::element( 'p', [], wfMessage( 'mobile-frontend-watchlist-feed-empty' )->plain() );
 		} else {
-			$msg = Html::element( 'p', null,
+			$msg = Html::element( 'p', [],
 				wfMessage( 'mobile-frontend-watchlist-a-z-empty-howto' )->plain()
 			);
 			$msg .=	Html::element( 'img', [
