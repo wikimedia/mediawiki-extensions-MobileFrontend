@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Abuluntu",
 			"AnB",
 			"Danmichaelo",
 			"Event",
@@ -128,6 +129,8 @@
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Foreslåtte språk",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Andre språk",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Søk etter språk",
+	"mobile-frontend-languages-structured-overlay-no-results": "Språket er ikke tilgjengelig",
+	"mobile-frontend-languages-structured-overlay-no-results-body": "Språket du leter etter er ikke tilgjengelig.",
 	"mobile-frontend-last-modified-date": "Sist redigert $1 kl. $2",
 	"mobile-frontend-last-modified-with-user-days": "[$4 Sist {{GENDER:$1|redigert}} for {{PLURAL:$3|$3 dag|$3 dager}} siden] av {{PLURAL:$5|[$6 $2]|0=en anonym bruker}}",
 	"mobile-frontend-last-modified-with-user-hours": "[$4 Sist {{GENDER:$1|redigert}} for {{PLURAL:$3|$3 time|$3 timer}} siden] av {{PLURAL:$5|[$6 $2]|0=en anonym bruker}}",

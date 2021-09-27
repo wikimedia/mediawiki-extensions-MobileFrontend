@@ -127,7 +127,7 @@
 	"mobile-frontend-joined-minutes": "{{PLURAL:$2|$2 دقیقه|$2 دقیقه}} پیش {{GENDER:$1|عضو شد}}",
 	"mobile-frontend-joined-hours": "{{PLURAL:$2|$2 ساعت|$2 ساعت}} پیش {{GENDER:$1|عضو شد}}",
 	"mobile-frontend-joined-days": "{{PLURAL:$2|$2 روز|$2 روز}} پیش {{GENDER:$1|عضو شد}}",
-	"mobile-frontend-joined-months": "{{PLURAL:$2|$2 ما|$2 ماه}} پیش {{GENDER:$1|عضو شد}}",
+	"mobile-frontend-joined-months": "{{PLURAL:$2|$2 ماه}} پیش {{GENDER:$1|عضو شد}}",
 	"mobile-frontend-joined-years": "{{PLURAL:$2|$2 سال|$2 سال}} پیش {{GENDER:$1|عضو شد}}",
 	"mobile-frontend-language-heading": "<strong>زبان‌ها</strong>",
 	"mobile-frontend-languages-404-desc": "یک عنوان معتبر باید مشخص شود.",
