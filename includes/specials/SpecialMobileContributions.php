@@ -178,7 +178,7 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 			RevisionRecord::DELETED_TEXT,
 			$user
 		) ) {
-			$diffLink = SpecialPage::getTitleFor( 'MobileDiff', $rev->getId() )->getLocalURL();
+			$diffLink = SpecialPage::getTitleFor( 'MobileDiff', (string)$rev->getId() )->getLocalURL();
 		} else {
 			$diffLink = false;
 		}

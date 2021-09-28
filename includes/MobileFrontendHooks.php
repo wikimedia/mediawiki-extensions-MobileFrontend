@@ -366,7 +366,7 @@ class MobileFrontendHooks {
 			unset( $otherParams['title'] );
 			unset( $otherParams['curid'] );
 
-			$redirectUrl = SpecialPage::getTitleFor( 'MobileDiff', $newRevId )->getFullURL( $otherParams );
+			$redirectUrl = SpecialPage::getTitleFor( 'MobileDiff', (string)$newRevId )->getFullURL( $otherParams );
 
 			// The MobileDiff page currently only supports showing a single revision, so
 			// only redirect to MobileDiff if we are sure this isn't a multi-revision diff.

@@ -715,6 +715,7 @@ class MobileContext extends ContextSource {
 					// invalid pattern for this host, ignore
 					return;
 				}
+				// @phan-suppress-next-line PhanTypeMismatchDimFetch
 				$targetHostParts[$key] = $parsedHostParts[$parsedHostPartKey];
 			} elseif ( isset( $parsedHostParts[$key] )
 				&& $templateHostPart == $parsedHostParts[$key] ) {

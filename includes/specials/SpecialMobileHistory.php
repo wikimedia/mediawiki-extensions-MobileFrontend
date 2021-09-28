@@ -225,7 +225,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 			RevisionRecord::DELETED_TEXT,
 			$user
 		) ) {
-			$diffLink = SpecialPage::getTitleFor( 'MobileDiff', $rev->getId() )->getLocalURL();
+			$diffLink = SpecialPage::getTitleFor( 'MobileDiff', (string)$rev->getId() )->getLocalURL();
 		} elseif ( $canSeeText ) {
 			$diffLink = Title::newFromLinkTarget( $rev->getPageAsLinkTarget() )
 				->getLocalURL( [ 'oldid' => $rev->getId() ] );
