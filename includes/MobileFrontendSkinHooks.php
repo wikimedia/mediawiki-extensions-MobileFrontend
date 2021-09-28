@@ -25,31 +25,6 @@ class MobileFrontendSkinHooks {
 	}
 
 	/**
-	 * Check, if the given license message string holds multiple license messages.
-	 *
-	 * FIXME: This hack shouldn't be needed anymore after fixing T111833
-	 *
-	 * @param string $license License or licenses message
-	 * @param Message|null $msgObj delimiter (optional)
-	 * @return int Returns 2, if there are multiple licenses, 1 otherwise.
-	 */
-	public static function getPluralLicenseInfo( $license, $msgObj = null ) {
-		// for plural support we need the info, if there is one or more licenses used in the license text
-		// this check if very simple and works on the base, that more than one license will
-		// use "and" as a connective
-		// 1 - no plural
-		// 2 - plural
-		if ( $msgObj !== null ) {
-			$delimiterMsg = $msgObj;
-		} else {
-			$delimiterMsg = wfMessage( 'and' );
-		}
-		$delimiterMsg = $delimiterMsg->inContentLanguage();
-		// check, if "and" isn't disabled and exists in site language
-		return $delimiterMsg->isDisabled() || strpos( $license, $delimiterMsg->text() ) === false ? 1 : 2;
-	}
-
-	/**
 	 * Returns HTML of license link or empty string
 	 * For example:
 	 *   "<a title="Wikipedia:Copyright" href="/index.php/Wikipedia:Copyright">CC BY</a>"
@@ -103,13 +78,17 @@ class MobileFrontendSkinHooks {
 
 		// Allow other extensions (for example, WikimediaMessages) to override
 		$msg = 'mobile-frontend-copyright';
+		// The number of licenses listed in $link, for plural support.
+		// TODO: MediaWiki should allow defining multiple licenses (T111833),
+		// currently this is only overridable using the hook.
+		$plural = 1;
 		$hookContainer = $services->getHookContainer();
-		$hookContainer->run( 'MobileLicenseLink', [ &$link, $context, $attribs, &$msg ] );
+		$hookContainer->run( 'MobileLicenseLink', [ &$link, $context, $attribs, &$msg, &$plural ] );
 
 		return [
 			'msg' => $msg,
 			'link' => $link,
-			'plural' => self::getPluralLicenseInfo( $link )
+			'plural' => $plural,
 		];
 	}
 
