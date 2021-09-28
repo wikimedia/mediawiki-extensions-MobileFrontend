@@ -383,7 +383,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		$isMinor = $row->rc_minor != 0;
 
 		if ( $revId ) {
-			$diffTitle = SpecialPage::getTitleFor( 'MobileDiff', $revId );
+			$diffTitle = SpecialPage::getTitleFor( 'MobileDiff', (string)$revId );
 			$diffLink = $diffTitle->getLocalURL();
 		} else {
 			// hack -- use full log entry display

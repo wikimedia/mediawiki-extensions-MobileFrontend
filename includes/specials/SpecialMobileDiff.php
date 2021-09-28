@@ -95,6 +95,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		$output = $this->getOutput();
 
 		// @FIXME add full support for git-style notation (eg ...123, 123...)
+		// @phan-suppress-next-line PhanTypeMismatchArgument
 		$revisions = $this->getRevisionsToCompare( explode( '...', $par, 2 ) );
 		list( $prev, $rev ) = $revisions;
 
@@ -310,14 +311,14 @@ class SpecialMobileDiff extends MobileSpecialPage {
 			if ( $prev ) {
 				$history .= Html::openElement( 'li', [ 'class' => 'revision-history-prev' ] )
 					. Html::element( 'a', [
-						'href' => SpecialPage::getTitleFor( 'MobileDiff', $prev->getId() )
+						'href' => SpecialPage::getTitleFor( 'MobileDiff', (string)$prev->getId() )
 							->getLocalURL()
 					], $this->msg( 'previousdiff' )->text() ) . Html::closeElement( 'li' );
 			}
 			if ( $next ) {
 				$history .= Html::openElement( 'li', [ 'class' => 'revision-history-next' ] )
 					. Html::element( 'a', [
-						'href' => SpecialPage::getTitleFor( 'MobileDiff', $next->getId() )
+						'href' => SpecialPage::getTitleFor( 'MobileDiff', (string)$next->getId() )
 							->getLocalURL()
 					], $this->msg( 'nextdiff' )->text() ) . Html::closeElement( 'li' );
 			}
@@ -443,7 +444,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 
 		if ( $rev1 ) {
 			$revLookup = MediaWikiServices::getInstance()->getRevisionLookup();
-			$revRecord = $revLookup->getRevisionById( $rev1 );
+			$revRecord = $revLookup->getRevisionById( (int)$rev1 );
 			if ( $revRecord ) {
 				// the diff parameter could be the string prev or next - deal with these cases
 				if ( $rev2 === 'prev' ) {
@@ -455,7 +456,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 					$nextRecord = $revLookup->getNextRevision( $revRecord );
 					$rev2 = $nextRecord ? $nextRecord->getId() : '';
 				} else {
-					$rev2Record = $revLookup->getRevisionById( $rev2 );
+					$rev2Record = $revLookup->getRevisionById( (int)$rev2 );
 					$rev2 = $rev2Record ? $rev2Record->getId() : '';
 				}
 			} else {
