@@ -131,6 +131,7 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 		) {
 			$username = $this->msg( 'rev-deleted-user' )->text();
 		}
+		// @phan-suppress-next-line PhanTypeMismatchReturnNullable Null is documented on IPUtils::prettifyIP
 		return $username;
 	}
 
