@@ -348,6 +348,7 @@ class ApiMobileView extends ApiBase {
 			$this->dieWithError( [ 'apierror-invalidtitle', wfEscapeWikiText( $name ) ] );
 		}
 		$unconvertedTitle = $title->getPrefixedText();
+		// @phan-suppress-next-line PhanTypeMismatchArgumentNullable T240141 False positive
 		$this->getLanguageConverter()->findVariantLink( $name, $title );
 		if ( $unconvertedTitle !== $title->getPrefixedText() ) {
 			$values = [ 'from' => $unconvertedTitle, 'to' => $title->getPrefixedText() ];
@@ -668,6 +669,7 @@ class ApiMobileView extends ApiBase {
 					$parserOutput = null;
 					$html = $this->getFilePage( $title );
 				} else {
+					// @phan-suppress-next-line PhanTypeMismatchArgumentNullable
 					$parserOutput = $this->getParserOutput( $wikiPage, $parserOptions, $revId );
 					if ( $parserOutput === false ) {
 						$this->dieWithError( 'apierror-mobilefrontend-badidtitle', 'invalidparams' );
@@ -691,6 +693,7 @@ class ApiMobileView extends ApiBase {
 						'refsections' => [],
 					];
 				} else {
+					// @phan-suppress-next-line PhanTypeMismatchArgumentNullable
 					$data = $this->parseSectionsData( $html, $title, $parserOutput, $latest );
 					if ( $this->usePageImages ) {
 						$image = $this->getPageImage( $title );
