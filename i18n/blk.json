@@ -5,6 +5,8 @@
 		]
 	},
 	"mobile-frontend-editor-editing": "ခြပ်ချော်ꩻမုꩻ",
+	"mobile-frontend-media-load-fail-retry": "ထိုမ်ႏစဲစ်ချာယင်း",
+	"mobile-frontend-nearby-requirements": "သꩻဟဝ်တဝ်းသွူ၊ နာꩻဗရောင်သာနဝ်ꩻ စွဲးကမ်းဖေႏတဝ်း {{SITENAME}} ထျꩻသွူ။",
 	"mobile-frontend-view": "မိုဘုဲင်ဖိုန်း",
 	"prefs-mobile": "မိုဗုဲင်းဖိုန်း လွိုက်ရွေꩻခရာႏဖုံႏ"
 }
