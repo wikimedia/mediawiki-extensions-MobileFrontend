@@ -35,7 +35,10 @@ QUnit.test( 'renders correctly', function ( assert ) {
 
 	} );
 
-	assert.strictEqual( overlay.$el.find( '.overlay-header' ).length, 1, 'It contains an overlay title' );
+	assert.strictEqual(
+		overlay.$el.find( '.search-content .mw-ui-icon' ).length, 1,
+		'It contains a place where the search within content icon can be added.'
+	);
 	assert.strictEqual( overlay.$el.find( '.results' ).length, 1, 'It contains results' );
 	assert.strictEqual(
 		overlay.$el.find( '.search-feedback' ).text().trim()

@@ -24,10 +24,7 @@ class SearchResultsView extends View {
 	get template() {
 		return util.template( `
 <div class="search-results-view">
-	<div class="search-content overlay-header">
-		<ul>
-			<li>{{! search content icon goes here }}</li>
-		</ul>
+	<div class="search-content">
 		<div class="caption">
 			<p class="with-results">{{searchContentLabel}}</p>
 			<p class="without-results">{{noResultsMsg}}</p>
@@ -58,7 +55,7 @@ class SearchResultsView extends View {
 	postRender( options ) {
 		const feedbackLink = mw.config.get( 'wgCirrusSearchFeedbackLink' );
 		super.postRender( options );
-		this.$el.find( '.search-content li' ).append(
+		this.$el.find( '.search-content' ).prepend(
 			new Icon( {
 				tagName: 'a',
 				// When this icon is clicked we want to reset the hash for subsequent views
