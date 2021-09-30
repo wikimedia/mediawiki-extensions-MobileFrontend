@@ -9,7 +9,7 @@
 
 'use strict';
 
-const { After, Before } = require( 'cucumber' );
+const { After, Before } = require( '@cucumber/cucumber' );
 
 Before( function () {
 	// This hook will be executed before ALL scenarios
