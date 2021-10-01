@@ -3,6 +3,7 @@
 		"authors": [
 			"Asoxor",
 			"Calak",
+			"Halbast",
 			"Lost Whispers",
 			"Muhammed taha",
 			"Sarchia",
@@ -181,6 +182,6 @@
 	"mobile-frontend-amc-outreach-no-thanks": "نە، سپاس",
 	"mobile-frontend-amc-outreach-enabled-message": "شێوازی پێشکەوتوو ئێستا چالاکە. دەتوانیت لە ڕێکخستنەکانتدا بیکوژێنیتەوە.",
 	"mobile-frontend-amc-outreach-dismissed-message": "دەتوانیت لە ھەرکاتێکدا بێت شێوازی پێشکەوتوو لە ڕێکخستنەکانتدا چالاک بکەیت.",
-	"mobile-frontend-beta-only": "تایبەتمەندی تەنیا لە شێوازی بیتا بەردەستە",
+	"mobile-frontend-beta-only": "تایبەتمەندی تەنیا لە شێوازی بێتا بەردەستە",
 	"prefs-mobile": "ھەڵبژاردەکانی مۆبایل"
 }
