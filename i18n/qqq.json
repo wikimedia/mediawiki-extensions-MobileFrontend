@@ -192,7 +192,6 @@
 	"mobile-frontend-references-citation-error": "Error message body that shows when a citation fails to load via the API.",
 	"mobile-frontend-references-list": "Label for a link to the list of the citations in the article.",
 	"mobile-frontend-requires-mobile": "Message that shows when a special page does not have a desktop equivalent.\n\nPoints user to mobile view link at bottom of page to switch to mobile.\n\nThis should be consistent with {{msg-mw|Mobile-frontend-view}}.",
-	"mobile-frontend-requires-optin": "Message that shows when a page requires beta mode to work. Wikitext that links to [[Special:MobileOptions]] page.",
 	"mobile-frontend-requires-title": "Title shown on page when the page is not available to the user. Currently used for special pages that have no mobile/desktop equivalent or that are only available as experimental features.",
 	"mobile-frontend-return-to-page": "The text of the link that takes the user back to the article",
 	"mobile-frontend-save-error": "Error message shown when a user tries to save settings form without cookies present.",

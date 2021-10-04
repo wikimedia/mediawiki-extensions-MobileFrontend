@@ -11,12 +11,8 @@ use MediaWiki\User\UserOptionsLookup;
 class MobileSpecialPage extends SpecialPage {
 	/** @var bool If true, the page will also be available on desktop */
 	protected $hasDesktopVersion = false;
-	/** @var string Saves the actual mode used by user (stable|beta) */
-	protected $mode = 'stable';
 	/** @var bool Whether this special page should appear on Special:SpecialPages */
 	protected $listed = false;
-	/** @var bool Whether the special page's content should be wrapped in div.content */
-	protected $unstyledContent = true;
 	/** @var Config MobileFrontend's config object */
 	protected $config = null;
 	/** @var string a message key for the error message heading that should be shown on a 404 */
@@ -66,27 +62,17 @@ class MobileSpecialPage extends SpecialPage {
 			# We are not going to return any real content
 			$out->setStatusCode( 404 );
 			$this->renderUnavailableBanner( $this->msg( 'mobile-frontend-requires-mobile' )->parse() );
-		} elseif ( $this->mode !== 'stable' ) {
-			if ( $this->mode === 'beta' && !$this->mobileContext->isBetaGroupMember() ) {
-				$this->renderUnavailableBanner( $this->msg( 'mobile-frontend-requires-optin' )->parse() );
-			} else {
-				$this->executeWhenAvailable( $subPage );
-			}
 		} else {
 			$this->executeWhenAvailable( $subPage );
 		}
 	}
 
 	/**
-	 * Add modules to headers and wrap content in div.content if unstyledContent = true
+	 * Add modules to headers
 	 */
 	public function setHeaders() {
 		parent::setHeaders();
 		$this->addModules();
-
-		if ( $this->unstyledContent ) {
-			$this->getOutput()->setProperty( 'unstyledContent', true );
-		}
 	}
 
 	/**
@@ -97,7 +83,6 @@ class MobileSpecialPage extends SpecialPage {
 	protected function renderUnavailableBanner( $msg ) {
 		$out = $this->getOutput();
 		$out->setPageTitle( $this->msg( 'mobile-frontend-requires-title' ) );
-		$out->setProperty( 'unstyledContent', true );
 		$out->addHTML( Html::warningBox( $msg ) );
 	}
 
