@@ -69,7 +69,7 @@ mfExtend( Skin, View, {
 	 *
 	 * @memberof Skin
 	 * @instance
-	 * @return {string}
+	 * @return {string|undefined}
 	 */
 	getLicenseMsg: function () {
 		var licenseMsg,
@@ -77,24 +77,29 @@ mfExtend( Skin, View, {
 			licensePlural = mw.language.convertNumber( mfLicense.plural );
 
 		if ( mfLicense.link ) {
+			var $licenseLinks = this.parseHTML( mfLicense.link );
+
 			if ( this.$el.find( '#footer-places-terms-use' ).length > 0 ) {
-				licenseMsg = mw.msg(
+				var $termsLink = mw.message(
+					'mobile-frontend-editor-terms-link',
+					this.$el.find( '#footer-places-terms-use a' ).attr( 'href' )
+				).parseDom();
+
+				licenseMsg = mw.message(
 					'mobile-frontend-editor-licensing-with-terms',
-					mw.message(
-						'mobile-frontend-editor-terms-link',
-						this.$el.find( '#footer-places-terms-use a' ).attr( 'href' )
-					).parse(),
-					mfLicense.link,
+					$termsLink,
+					$licenseLinks,
 					licensePlural
-				);
+				).parse();
 			} else {
-				licenseMsg = mw.msg(
+				licenseMsg = mw.message(
 					'mobile-frontend-editor-licensing',
-					mfLicense.link,
+					$licenseLinks,
 					licensePlural
-				);
+				).parse();
 			}
 		}
+
 		return licenseMsg;
 	}
 } );
