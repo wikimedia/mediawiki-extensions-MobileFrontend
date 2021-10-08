@@ -724,7 +724,7 @@ class ApiMobileView extends ApiBase {
 					$data['languagecount'] = count( $languages );
 					$data['displaytitle'] = $parserOutput->getDisplayTitle();
 					// @fixme: Does no work for some extension properties that get added in LinksUpdate
-					$data['pageprops'] = $parserOutput->getProperties();
+					$data['pageprops'] = $parserOutput->getPageProperties();
 				} else {
 					$data['languagecount'] = 0;
 					$data['displaytitle'] = htmlspecialchars( $title->getPrefixedText() );
