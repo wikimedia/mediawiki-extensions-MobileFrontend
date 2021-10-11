@@ -9,7 +9,7 @@ use MobileFrontend\Features\UserModes;
  * @coversDefaultClass \MobileFrontend\Features\FeaturesManager
  * @covers ::__construct
  */
-class FeaturesManagerTest extends MediaWikiTestCase {
+class FeaturesManagerTest extends MediaWikiIntegrationTestCase {
 
 	private function getTestMode( $modeName, $isEnabled = true ) {
 		$modeMock = $this->createMock( \MobileFrontend\Features\IUserMode::class );

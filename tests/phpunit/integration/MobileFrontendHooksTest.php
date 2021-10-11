@@ -5,7 +5,7 @@ use MediaWiki\MediaWikiServices;
 /**
  * @group MobileFrontend
  */
-class MobileFrontendHooksTest extends MediaWikiTestCase {
+class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 	protected function setUp(): void {
 		parent::setUp();
 

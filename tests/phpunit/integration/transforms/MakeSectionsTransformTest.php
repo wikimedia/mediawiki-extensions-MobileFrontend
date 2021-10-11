@@ -7,7 +7,7 @@ use MobileFrontend\Transforms\MakeSectionsTransform;
  *
  * @group MobileFrontend
  */
-class MakeSectionsTransformTest extends MediaWikiTestCase {
+class MakeSectionsTransformTest extends MediaWikiIntegrationTestCase {
 	private const SECTION_INDICATOR = '<div class="mw-ui-icon mw-ui-icon-element indicator '
 		. 'mw-ui-icon-small mw-ui-icon-flush-left"></div>';
 

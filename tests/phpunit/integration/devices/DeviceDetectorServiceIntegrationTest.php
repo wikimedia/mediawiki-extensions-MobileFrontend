@@ -4,7 +4,7 @@ namespace Tests\MobileFrontend\Devices;
 
 use FauxRequest;
 use GlobalVarConfig;
-use MediaWikiTestCase;
+use MediaWikiIntegrationTestCase;
 use MobileFrontend\Devices\DeviceDetectorService;
 
 /**
@@ -15,7 +15,7 @@ use MobileFrontend\Devices\DeviceDetectorService;
  * @group MobileFrontend
  * @group integration
  */
-class DeviceDetectorServiceIntegrationTest extends MediaWikiTestCase {
+class DeviceDetectorServiceIntegrationTest extends MediaWikiIntegrationTestCase {
 	protected function setUp(): void {
 		parent::setUp();
 

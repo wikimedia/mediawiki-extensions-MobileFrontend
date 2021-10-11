@@ -3,7 +3,7 @@
 /**
  * @group MobileFrontend
  */
-class ApiParseExtenderTest extends MediaWikiTestCase {
+class ApiParseExtenderTest extends MediaWikiIntegrationTestCase {
 	// phpcs:ignore Generic.Files.LineLength.TooLong
 	private const SECTION_INDICATOR = '<div class="mw-ui-icon mw-ui-icon-element indicator mw-ui-icon-small mw-ui-icon-flush-left"></div>';
 

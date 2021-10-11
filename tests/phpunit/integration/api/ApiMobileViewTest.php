@@ -6,7 +6,7 @@ use MobileFrontend\Api\ApiMobileView;
 /**
  * @group MobileFrontend
  */
-class ApiMobileViewTest extends MediaWikiTestCase {
+class ApiMobileViewTest extends MediaWikiIntegrationTestCase {
 
 	protected function setUp(): void {
 		parent::setUp();

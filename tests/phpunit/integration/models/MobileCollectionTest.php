@@ -7,7 +7,7 @@ use MobileFrontend\Models\MobilePage;
  * @group MobileFrontend
  * @coversDefaultClass \MobileFrontend\Models\MobileCollection
  */
-class MobileCollectionTest extends MediaWikiTestCase {
+class MobileCollectionTest extends MediaWikiIntegrationTestCase {
 	/**
 	 * @covers ::count
 	 */

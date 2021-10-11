@@ -5,7 +5,7 @@ use Wikimedia\Rdbms\FakeResultWrapper;
 /**
  * @group MobileFrontend
  */
-class SpecialMobileWatchlistTest extends MediaWikiTestCase {
+class SpecialMobileWatchlistTest extends MediaWikiIntegrationTestCase {
 	/**
 	 * @covers SpecialMobileWatchlist::addWatchlistHTML
 	 * @dataProvider provideAddWatchlistHTML

@@ -6,7 +6,7 @@ use Psr\Log\LoggerInterface;
 /**
  * @group MobileFrontend
  */
-class SpecialMobileLanguagesTest extends MediaWikiTestCase {
+class SpecialMobileLanguagesTest extends MediaWikiIntegrationTestCase {
 	/**
 	 * Data provider for testProcessLanguages
 	 */

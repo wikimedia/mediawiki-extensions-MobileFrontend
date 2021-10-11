@@ -3,7 +3,7 @@
 namespace Tests\MobileFrontend\Context;
 
 use MediaWiki\MediaWikiServices;
-use MediaWikiTestCase;
+use MediaWikiIntegrationTestCase;
 use MobileContext;
 
 /**
@@ -14,7 +14,7 @@ use MobileContext;
  * @group MobileFrontend
  * @group integration
  */
-class MobileContextShouldDisplayMobileViewIntegrationTest extends MediaWikiTestCase {
+class MobileContextShouldDisplayMobileViewIntegrationTest extends MediaWikiIntegrationTestCase {
 
 	/**
 	 * @var MobileContext

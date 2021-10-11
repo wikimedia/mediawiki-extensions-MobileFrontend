@@ -5,7 +5,7 @@ use MediaWiki\MediaWikiServices;
 /**
  * @group MobileFrontend
  */
-class MobileContextTest extends MediaWikiTestCase {
+class MobileContextTest extends MediaWikiIntegrationTestCase {
 	/**
 	 * PHP 5.3.2 introduces the ReflectionMethod::setAccessible() method to allow the invocation of
 	 * protected and private methods directly through the Reflection API

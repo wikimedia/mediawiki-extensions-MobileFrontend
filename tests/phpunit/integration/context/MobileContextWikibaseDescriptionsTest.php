@@ -5,7 +5,7 @@ use MediaWiki\MediaWikiServices;
 /**
  * @group MobileFrontend
  */
-class MobileContextWikibaseDescriptionsTest extends MediaWikiTestCase {
+class MobileContextWikibaseDescriptionsTest extends MediaWikiIntegrationTestCase {
 
 	/**
 	 * @var MobileContext

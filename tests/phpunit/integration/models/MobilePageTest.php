@@ -9,7 +9,7 @@ use MobileFrontend\Models\MobilePage;
  * @coversDefaultClass \MobileFrontend\Models\MobilePage
  * @covers ::__construct()
  */
-class MobilePageTest extends MediaWikiTestCase {
+class MobilePageTest extends MediaWikiIntegrationTestCase {
 	// Timestamp from MW format to Unix format
 	// TS_MW is '20181028200709' and to Unix gives
 	// '1540757229' using the wfTimestamp() function.
