@@ -40,6 +40,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 
 		$user = $this->getUser();
 		$output = $this->getOutput();
+		$output->addBodyClasses( 'mw-mf-special-page' );
 		$output->addModules( 'mobile.special.watchlist.scripts' );
 		$output->addModuleStyles( [
 			'mobile.pagelist.styles',

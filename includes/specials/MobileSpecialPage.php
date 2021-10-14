@@ -59,6 +59,7 @@ class MobileSpecialPage extends SpecialPage {
 	 */
 	public function execute( $subPage ) {
 		$out = $this->getOutput();
+		$out->addBodyClasses( 'mw-mf-special-page' );
 		$out->setProperty( 'desktopUrl', $this->getDesktopUrl( $subPage ) );
 		if ( !$this->mobileContext->shouldDisplayMobileView() &&
 			 !$this->hasDesktopVersion ) {

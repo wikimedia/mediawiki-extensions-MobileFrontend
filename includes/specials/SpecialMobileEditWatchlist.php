@@ -98,6 +98,7 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 		$out = $this->getOutput();
 		// turn off #bodyContent element
 		$out->setProperty( 'unstyledContent', true );
+		$out->addBodyClasses( 'mw-mf-special-page' );
 		parent::execute( $mode );
 		$out->setPageTitle( $this->msg( 'watchlist' ) );
 	}
