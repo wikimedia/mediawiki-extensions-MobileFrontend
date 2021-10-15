@@ -144,7 +144,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 		] );
 		$this->offset = $this->getRequest()->getVal( 'offset' );
 
-		if ( $par ) {
+		if ( $par !== null ) {
 			// enter article history view
 			$this->title = Title::newFromText( $par );
 			if ( $this->title && $this->title->exists() ) {
