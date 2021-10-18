@@ -20,7 +20,7 @@
 	"mobile-frontend-joined-years": "{{GENDER:$1|دخل|دخلات}} هادي {{PLURAL:$2|$2 سنين}}",
 	"mobile-frontend-language-heading": "<strong>لوغات</strong>",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "قلّب على لوغة",
-	"mobile-frontend-last-modified-with-user-days": "[$4 أخر تبديل لهاد صفحة {{GENDER:$1|دارو|دارتو}}]  {{PLURAL:$5|[$6 $2]|0=مستخدم مجهول}} هادي {{PLURAL:$3|نهار|يوماين|$3 إيام|$3 يوم}}",
+	"mobile-frontend-last-modified-with-user-days": "[$4 أخر تبديل لهاد صفحة {{GENDER:$1|دارو|دارتو}}]  {{PLURAL:$5|[$6 $2]|0=خدايمي مجهول}} هادي {{PLURAL:$3|نهار|يوماين|$3 إيام|$3 يوم}}",
 	"mobile-frontend-nearby-title": "قريب من هنا",
 	"mobile-frontend-search-content": "تقلاب وسط صفاحي",
 	"mobile-frontend-view-desktop": "ڤيرسيون د پيسي",
