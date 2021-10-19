@@ -26,7 +26,6 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 			'mobile.user.icons'
 		] );
 		$this->setHeaders();
-		$out->setProperty( 'unstyledContent', true );
 		parent::execute( $par );
 	}
 
