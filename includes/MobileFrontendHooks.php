@@ -3,6 +3,7 @@
 use MediaWiki\Auth\AuthenticationRequest;
 use MediaWiki\Auth\AuthManager;
 use MediaWiki\ChangeTags\Taggable;
+use MediaWiki\Extension\AbuseFilter\Variables\VariableHolder;
 use MediaWiki\MediaWikiServices;
 use MobileFrontend\ContentProviders\DefaultContentProvider;
 use MobileFrontend\Models\MobilePage;
@@ -685,7 +686,7 @@ class MobileFrontendHooks {
 	 * Altering the variables generated for a specific user
 	 *
 	 * @see hooks.txt in AbuseFilter extension
-	 * @param AbuseFilterVariableHolder $vars object to add vars to
+	 * @param VariableHolder $vars object to add vars to
 	 * @param User $user
 	 * @param RecentChange|null $rc If the variables should be generated for an RC entry, this
 	 *  is the entry. Null if it's for the current action being filtered.
