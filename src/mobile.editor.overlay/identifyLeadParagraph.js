@@ -18,8 +18,13 @@ module.exports = function identifyLeadParagraph( $body ) {
 	// Keep in sync with MoveLeadParagraphTransform::isNonLeadParagraph()
 	function isNonLeadParagraph( node ) {
 		node = node.cloneNode( true );
+		var $node = $( node );
+		// The paragraph itself can be an invisible template (T293834)
+		if ( $node.hasClass( 've-ce-focusableNode-invisible' ) ) {
+			return true;
+		}
 		// Ignore non-content nodes, TemplateStyles and coordinates
-		$( node ).find( '.ve-ce-branchNode-inlineSlug, .ve-ce-focusableNode-invisible, style, span#coordinates' ).remove();
+		$node.find( '.ve-ce-branchNode-inlineSlug, .ve-ce-focusableNode-invisible, style, span#coordinates' ).remove();
 		if ( isNotEmptyNode( node ) ) {
 			return false;
 		}
