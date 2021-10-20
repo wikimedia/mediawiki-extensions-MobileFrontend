@@ -109,7 +109,6 @@
 	"mobile-frontend-references-citation-error": "Thachair mearachd 's cha b' urrainn dhuinn an t-iomradh seo a luchdadh.",
 	"mobile-frontend-references-list": "Seall liosta shlàn dhe na h-iomraidhean",
 	"mobile-frontend-requires-mobile": "Chan eil an duilleag seo ri làimh air an deasg. Briog air ceangal an seallaidh inneil-làimhe aig bonn na duilleige.",
-	"mobile-frontend-requires-optin": "Chan eil an duilleag seo ri làimh ach ma chleachdas tu am modh beta. Tadhail air [[Special:MobileOptions|duilleag nan roghainnean]] gus pàirt a ghabhail sa mhodh beata.",
 	"mobile-frontend-requires-title": "Chan eil an duilleag ri fhaighinn",
 	"mobile-frontend-save-error": "Mearachd le sàbhaladh nan roghainnean. Dèan cinnteach gu bheil briosgaidean an comas agad.",
 	"mobile-frontend-save-settings": "Sàbhail",

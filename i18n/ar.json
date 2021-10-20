@@ -168,7 +168,6 @@
 	"mobile-frontend-references-citation-error": "حدث خطأ وتعذر تحميل هذا الاستشهاد.",
 	"mobile-frontend-references-list": "اعرض قائمة كاملة بالاستشهادات",
 	"mobile-frontend-requires-mobile": "هذه الصفحة غير متاحة على الحاسب المكتبي. من فضلك اضغط على وصلة نسخة المحمول أسفل الصفحة.",
-	"mobile-frontend-requires-optin": "هذه الصفحة غير متوفرة إلا إذا وافقت على استخدام وضع البيتا(الوضع التجريبي). الرجاء زيارة [[Special:MobileOptions|صفحة التفضيلات]] لتفعيل الوضع.",
 	"mobile-frontend-requires-title": "الصفحة غير متوفرة",
 	"mobile-frontend-return-to-page": "عد إلى الصفحة",
 	"mobile-frontend-save-error": "حدث خطأ أثناء حفظ التعديلات. الرجاء التأكد من أن ملفات تعريف الإرتباط (كوكيز) مفعلة.",

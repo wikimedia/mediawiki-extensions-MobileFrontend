@@ -200,7 +200,6 @@
 	"mobile-frontend-references-citation-error": "Une erreur s’est produite et il n’a pas été possible de charger cette référence.",
 	"mobile-frontend-references-list": "Afficher la liste complète des références",
 	"mobile-frontend-requires-mobile": "Cette page n’est pas disponible sur le bureau. Veuillez cliquer sur le lien d’affichage mobile en bas de la page.",
-	"mobile-frontend-requires-optin": "Cette page n’est pas accessible sauf si vous avez choisi notre mode bêta. Allez sur la [[Special:MobileOptions|page de paramètres]] pour le choisir.",
 	"mobile-frontend-requires-title": "Page indisponible",
 	"mobile-frontend-return-to-page": "Revenir à la page",
 	"mobile-frontend-save-error": "Erreur d’enregistrement des paramètres. Veuillez vérifier que vos témoins de connexion (''cookies'') sont activés.",

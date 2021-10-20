@@ -155,7 +155,6 @@
 	"mobile-frontend-references-citation-error": "Notika kļūda un nebija iespējams ielādēt šo atsauci.",
 	"mobile-frontend-references-list": "Skatīt pilnu atsauču sarakstu",
 	"mobile-frontend-requires-mobile": "Šī lapa nav pieejama no darbvirsmas versijas. Lūdzu, klikšķini uz mobilā skata saites lapas apakšā.",
-	"mobile-frontend-requires-optin": "Šī lapa nav pieejama, kamēr nepievienojies mūsu beta režīmam. Lai pievienoties, apmeklē [[Special:MobileOptions|iestatījumu lapu]].",
 	"mobile-frontend-requires-title": "Lapa nav pieejama",
 	"mobile-frontend-return-to-page": "Atgriezties uz lapu",
 	"mobile-frontend-save-error": "Kļūda saglabājot iestatījumus. Lūdz, pārliecinies, ka ir iespējotas sīkdatnes.",

@@ -85,7 +85,6 @@
 	"mobile-frontend-opt-in-explain": "{{SITENAME}} βeta permitte essayar iste functionalitate experimental e fornir nos tu observationes utile",
 	"mobile-frontend-overlay-close": "Clauder",
 	"mobile-frontend-privacy-link-text": "Confidentialitate",
-	"mobile-frontend-requires-optin": "Iste pagina es solmente disponibile in modo beta. Visita le [[Special:MobileOptions|pagina de configuration]] pro activar lo.",
 	"mobile-frontend-save-error": "Error durante le salveguarda del configuration. Per favor verifica que le cookies es activate in tu navigator.",
 	"mobile-frontend-save-settings": "Confirmar",
 	"mobile-frontend-search-content": "Cerca intra paginas",

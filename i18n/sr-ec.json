@@ -153,7 +153,6 @@
 	"mobile-frontend-references-citation-error": "Дошло је до грешке. Није могуће учитати ову референцу.",
 	"mobile-frontend-references-list": "Прикажи потпуну листу референци",
 	"mobile-frontend-requires-mobile": "Ова страница није доступна у рачунарском приказу. Кликните на линк за мобилни приказ на дну странице.",
-	"mobile-frontend-requires-optin": "Ова страница није доступна осим ако не омогућите бета режим. Посетите [[Special:MobileOptions|страницу подешавања]] да бисте га омогућили.",
 	"mobile-frontend-requires-title": "Недоступна страница",
 	"mobile-frontend-return-to-page": "Повратак на страницу",
 	"mobile-frontend-save-error": "Грешка при чувању подешавања. Уверите се да имате омогућене колачиће.",

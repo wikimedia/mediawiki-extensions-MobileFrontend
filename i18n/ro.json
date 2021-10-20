@@ -161,7 +161,6 @@
 	"mobile-frontend-references-citation-error": "A apărut o eroare care a făcut imposibilă încărcarea acestei referințe.",
 	"mobile-frontend-references-list": "Vezi lista completă a referințelor",
 	"mobile-frontend-requires-mobile": "Această pagină nu este disponibilă pe desktop. Faceți clic pe legătura de versiune mobilă din subsolul paginii.",
-	"mobile-frontend-requires-optin": "Această pagină este disponibilă doar dacă alegeți modul beta. Accesați [[Special:MobileOptions|pagina cu setări]] pentru a comuta la beta.",
 	"mobile-frontend-requires-title": "Pagină indisponibilă",
 	"mobile-frontend-return-to-page": "Înapoi la pagină",
 	"mobile-frontend-save-error": "Eroare la salvarea setărilor. Asigurați-vă că modulele cookie sunt activate.",

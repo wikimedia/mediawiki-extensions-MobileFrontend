@@ -192,7 +192,6 @@
 	"mobile-frontend-references-citation-error": "Ocurrió un error y no se pudo cargar esta cita.",
 	"mobile-frontend-references-list": "Ver la lista completa de citas",
 	"mobile-frontend-requires-mobile": "Esta página solo está disponible para dispositivos móviles. Por favor, haz clic en el enlace de versión para móviles en la parte inferior de la página.",
-	"mobile-frontend-requires-optin": "Esta página no está disponible a menos que actives nuestro modo beta. Visita la [[Special:MobileOptions|página de configuración]] para activarlo.",
 	"mobile-frontend-requires-title": "Página no disponible",
 	"mobile-frontend-return-to-page": "Volver a la página",
 	"mobile-frontend-save-error": "Error al guardar la configuración. Asegúrate de que las «cookies» estén activadas.",

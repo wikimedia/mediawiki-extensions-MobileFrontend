@@ -121,7 +121,6 @@
 	"mobile-frontend-overlay-close": "Zapri",
 	"mobile-frontend-privacy-link-text": "Zasebnost",
 	"mobile-frontend-references-citation": "Citat",
-	"mobile-frontend-requires-optin": "Ta stran je na voljo samo, če privolite v betanačin. Za privolitev obiščite [[Special:MobileOptions|stran z nastavitvami]].",
 	"mobile-frontend-requires-title": "Stran ni na voljo",
 	"mobile-frontend-return-to-page": "Vrnitev na stran",
 	"mobile-frontend-save-error": "Napaka pri shranjevanju nastavitev. Prosimo, preverite, ali imate omogočene piškotke.",

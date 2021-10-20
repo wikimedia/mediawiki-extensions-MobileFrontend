@@ -140,7 +140,6 @@
 	"mobile-frontend-references-citation-error": "Hebo un error y nun se pudo cargar esta cita.",
 	"mobile-frontend-references-list": "Ver la llista completa de cites",
 	"mobile-frontend-requires-mobile": "Esta páxina nun ta disponible nel escritoriu. Faiga clic nel enllaz de vista pa móviles del pie de la páxina.",
-	"mobile-frontend-requires-optin": "Esta páxina nun ta disponible si nun actives el mou beta. Visita la [[Special:MobileOptions|páxina de configuración]] p'activalu.",
 	"mobile-frontend-requires-title": "Páxina non disponible",
 	"mobile-frontend-return-to-page": "Volver a la páxina",
 	"mobile-frontend-save-error": "Error al guardar la configuración. Asegúrese de que tien activaes les cookies.",

@@ -140,7 +140,6 @@
 	"mobile-frontend-references-citation-error": "S'ha produït un error i no ha sigut possible carregar aquesta referència.",
 	"mobile-frontend-references-list": "Vés a la llista completa de referències",
 	"mobile-frontend-requires-mobile": "Aquesta pàgina no està disponible en la versió d'escriptori. Canvieu a la versió mòbil clicant l'enllaç que trobareu al capdavall de la pàgina.",
-	"mobile-frontend-requires-optin": "Aquesta pàgina només està disponible si activeu les funcionalitats beta. Les podeu activar des de la [[Special:MobileOptions|pàgina de preferències]].",
 	"mobile-frontend-requires-title": "Pàgina no disponible",
 	"mobile-frontend-return-to-page": "Torna a la pàgina",
 	"mobile-frontend-save-error": "Error en desar la configuració. Assegureu-vos que teniu les galetes activades.",

@@ -183,7 +183,6 @@
 	"mobile-frontend-references-citation-error": "エラーが発生したため、この引用を読み込むことができません。",
 	"mobile-frontend-references-list": "引用一覧を表示",
 	"mobile-frontend-requires-mobile": "このページはデスクトップでは利用できません。ページの下部にある「モバイルビュー」リンクをクリックしてください。",
-	"mobile-frontend-requires-optin": "ベータ版モードを有効にしていないため、このページを利用できません。有効にするには[[Special:MobileOptions|設定ページ]]を参照してください。",
 	"mobile-frontend-requires-title": "利用できません",
 	"mobile-frontend-return-to-page": "ページに戻る",
 	"mobile-frontend-save-error": "設定を保存する際にエラーが発生しました。Cookie を有効にしていることを確認してください。",

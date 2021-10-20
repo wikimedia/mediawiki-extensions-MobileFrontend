@@ -173,7 +173,6 @@
 	"mobile-frontend-references-citation": "Viittaus",
 	"mobile-frontend-references-list": "Näytä täysi lista viitteistä.",
 	"mobile-frontend-requires-mobile": "Sivua ei ole saatavilla työpöytänäkymänä. Valitse sivun alalaidasta mobiilinäkymä.",
-	"mobile-frontend-requires-optin": "Sivu ei ole käytettävissä kuin beetaversiossa. Voit vaihtaa beetaversioon [[Special:MobileOptions|asetukset sivulla]].",
 	"mobile-frontend-requires-title": "Sivu ei ole saatavissa",
 	"mobile-frontend-return-to-page": "Palaa sivulle",
 	"mobile-frontend-save-error": "Asetuksien tallentaminen epäonnistui. Varmista, että selaimen evästeet ovat käytössä.",

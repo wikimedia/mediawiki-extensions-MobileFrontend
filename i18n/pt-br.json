@@ -174,7 +174,6 @@
 	"mobile-frontend-references-citation-error": "Ocorreu um erro e não foi possível carregar esta citação.",
 	"mobile-frontend-references-list": "Ver a lista completa de citações",
 	"mobile-frontend-requires-mobile": "Esta página não está disponível na área de trabalho. Clique no link de visualização móvel na parte inferior da página.",
-	"mobile-frontend-requires-optin": "Essa página não está disponível fora do modo beta. Acesse a [[Special:MobileOptions|página de configurações]] para ativiar o modo beta.",
 	"mobile-frontend-requires-title": "Página indisponível",
 	"mobile-frontend-return-to-page": "Voltar para página",
 	"mobile-frontend-save-error": "Erro salvando configurações. Por favor confira se seu navegador tem cookies habilitados.",

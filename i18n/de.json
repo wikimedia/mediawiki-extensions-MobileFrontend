@@ -170,7 +170,6 @@
 	"mobile-frontend-references-citation-error": "Es ist ein Fehler aufgetreten und es war nicht möglich, diesen Einzelnachweis zu laden.",
 	"mobile-frontend-references-list": "Vollständige Liste der Einzelnachweise ansehen",
 	"mobile-frontend-requires-mobile": "Diese Seite ist für Desktoprechner nicht verfügbar. Bitte wähle am Seitenende den Link für die mobile Ansicht.",
-	"mobile-frontend-requires-optin": "Diese Seite ist nicht verfügbar, bis du dich für unseren Beta-Modus angemeldet hast. Besuche zur Anmeldung die [[Special:MobileOptions|Einstellungsseite]].",
 	"mobile-frontend-requires-title": "Seite nicht verfügbar",
 	"mobile-frontend-return-to-page": "Zurück zur Seite",
 	"mobile-frontend-save-error": "Fehler beim Speichern der Einstellungen. Stelle sicher, dass Cookies aktiviert sind.",

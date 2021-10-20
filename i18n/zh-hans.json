@@ -218,7 +218,6 @@
 	"mobile-frontend-references-citation-error": "发生错误，无法加载该引文。",
 	"mobile-frontend-references-list": "查看完整引用列表",
 	"mobile-frontend-requires-mobile": "该页面在桌面端不可用。请点击页面底部的手机版视图链接。",
-	"mobile-frontend-requires-optin": "本页不可用，除非你选择使用我们的测试版。访问[[Special:MobileOptions|设置页面]]进行选择。",
 	"mobile-frontend-requires-title": "页面不可用",
 	"mobile-frontend-return-to-page": "返回页面",
 	"mobile-frontend-save-error": "保存设置出错。请确保您已启用cookie。",

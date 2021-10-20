@@ -143,7 +143,6 @@
 	"mobile-frontend-references-citation-error": "Įvyko klaida ir šios citatos nebuvo įmanoma įkelti.",
 	"mobile-frontend-references-list": "Žiūrėti pilną citatų sąrašą",
 	"mobile-frontend-requires-mobile": "Šis puslapis neprieinamas darbalaukio režimu. Prašome spausti ant mobiliosios peržiūros nuorodos, esančios puslapio apačioje.",
-	"mobile-frontend-requires-optin": "Šis puslapis neprieinamas, nebent pasirinktumėte naudoti mūsų beta versiją. Įsijungti ją galite [[Special:MobileOptions|nustatymų puslapyje]].",
 	"mobile-frontend-requires-title": "Nepasiekiamas puslapis",
 	"mobile-frontend-return-to-page": "Grįžti į puslapį",
 	"mobile-frontend-save-error": "Klaida išsaugant nustatymus. Prašome įsitikinti, kad esate aktyvavę slapukus.",

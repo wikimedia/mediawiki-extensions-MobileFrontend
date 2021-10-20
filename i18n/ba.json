@@ -131,7 +131,6 @@
 	"mobile-frontend-references-citation-error": "Хата килеп сыҡты, һәм был цитата тейәлмәне",
 	"mobile-frontend-references-list": "Цитаталарҙың тулы исемлеген ҡарау",
 	"mobile-frontend-requires-mobile": "Был бит компьютерҙе ҡарау өсөн асылмаған.",
-	"mobile-frontend-requires-optin": "Был бит, Һеҙ бета-режимға күсмәйенсә, асылмаҫ. Бының өсөн  [[Special:MobileOptions|көйләүҙәр битенә инегеҙ]].",
 	"mobile-frontend-requires-title": "Бит асылмай.",
 	"mobile-frontend-save-error": "Көйләүҙәрҙе һаҡлағандағы хата. cookie файлдары тоҡандырылғанын тикшерегеҙ?",
 	"mobile-frontend-save-settings": "Һаҡларға",

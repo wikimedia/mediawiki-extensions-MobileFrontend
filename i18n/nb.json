@@ -169,7 +169,6 @@
 	"mobile-frontend-references-citation-error": "Det oppsto en feil og referansen kunne ikke lastes.",
 	"mobile-frontend-references-list": "Vis fullstendig liste over siteringer",
 	"mobile-frontend-requires-mobile": "Denne siden er ikke tilgjengelig for desktop. Trykk på mobilvisning-lenken nederst på siden.",
-	"mobile-frontend-requires-optin": "Denne siden er ikke tilgjengelig hvis du ikke melder deg på betatestingen vår. Besøk [[Special:MobileOptions|innstillingssiden]] for å melde deg på.",
 	"mobile-frontend-requires-title": "Siden er utilgjengelig",
 	"mobile-frontend-return-to-page": "Tilbake til siden",
 	"mobile-frontend-save-error": "Det oppstod en feil under lagring av innstillingene. Sjekk at du har aktivert informasjonskapsler (cookies).",

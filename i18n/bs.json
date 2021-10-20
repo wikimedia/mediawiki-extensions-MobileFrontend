@@ -146,7 +146,6 @@
 	"mobile-frontend-references-citation-error": "Došlo je do greške i ovu referencu nije bilo moguće učitati.",
 	"mobile-frontend-references-list": "Prikaži cijeli spisak referenci",
 	"mobile-frontend-requires-mobile": "Ova stranica nije dostupna na računarskom prikazu. Kliknite na link za prikaz za mobilne uređaje na dnu stranice.",
-	"mobile-frontend-requires-optin": "Ova stranica jedino je dostupna u beta načinu. Otiđite u [[Special:MobileOptions|Postavke]] kako biste ga uključili.",
 	"mobile-frontend-requires-title": "Stranica nije dostupna",
 	"mobile-frontend-return-to-page": "Nazad na stranicu",
 	"mobile-frontend-save-error": "Greška prilikom čuvanja postavki. Provjerite jeste li uključili kolačiće.",

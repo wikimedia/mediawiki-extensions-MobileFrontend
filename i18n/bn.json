@@ -162,7 +162,6 @@
 	"mobile-frontend-references-citation-error": "একটি ত্রুটি ঘটেছে এবং এই উদ্ধৃতি লোড করা সম্ভব হয় নি।",
 	"mobile-frontend-references-list": "উদ্ধৃতির সম্পূর্ণ তালিকা দেখুন",
 	"mobile-frontend-requires-mobile": "এই পাতাটি ডেস্কটপে উপলব্ধ নয়। দয়া করে পাতার নীচের অংশে অবস্থিত মোবাইল লিঙ্কে ক্লিক করুন।",
-	"mobile-frontend-requires-optin": "এই পাতাটি উপলব্ধ নয় যদি না আপনি আমাদের বেটা মোডের সাথে সম্পৃক্ত হন। সম্পৃক্ত হতে [[Special:MobileOptions|সেটিংয়ের পাতায়]] যান।",
 	"mobile-frontend-requires-title": "পাতা অনুপলব্ধ",
 	"mobile-frontend-return-to-page": "পাতায় ফেরত যান",
 	"mobile-frontend-save-error": "সংরক্ষণ সেটিংস ত্রুটি। দয়া করে নিশ্চিত করুন যে আপনার কুকিজ সক্রিয় আছে।",

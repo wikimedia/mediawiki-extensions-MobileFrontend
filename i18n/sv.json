@@ -171,7 +171,6 @@
 	"mobile-frontend-references-citation-error": "Ett fel uppstod och det gick inte att läsa in denna referens.",
 	"mobile-frontend-references-list": "Se full lista över referenser",
 	"mobile-frontend-requires-mobile": "Denna sida är inte tillgänglig i skrivbordsvy. Klicka på mobilformat-länken längst ner på sidan.",
-	"mobile-frontend-requires-optin": "Denna sida är inte tillgänglig om du inte väljer att vara i vårt betaläge. Besök [[Special:MobileOptions|inställningssidan]] för att ställa in det.",
 	"mobile-frontend-requires-title": "Sidan ej tillgänglig",
 	"mobile-frontend-return-to-page": "Återgå till sidan",
 	"mobile-frontend-save-error": "Fel uppstod när inställningar sparades. Var god se till att du har aktiverat kakor.",

@@ -157,7 +157,6 @@
 	"mobile-frontend-references-citation-error": "เกิดข้อผิดพลาดและไม่สามารถโหลดการอ้างอิงนี้ได้",
 	"mobile-frontend-references-list": "ดูรายการอ้างอิงแบบเต็ม",
 	"mobile-frontend-requires-mobile": "หน้านี้ไม่พร้อมใช้งานในรุ่นคอมพิวเตอร์ตั้งโต๊ะ กรุณาคลิกลิงก์ มุมมองสำหรับอุปกรณ์เคลื่อนที่ ที่อยู่ด้านล่างหน้านี้",
-	"mobile-frontend-requires-optin": "หน้านี้ไม่พร้อมใช้งานนอกจากคุณจะเข้าร่วมโหมดเบต้าของเรา ไปที่[[Special:MobileOptions|หน้าการตั้งค่า]]เพื่อเข้าร่วม",
 	"mobile-frontend-requires-title": "หน้าไม่พร้อมใช้งาน",
 	"mobile-frontend-return-to-page": "กลับไปหน้า",
 	"mobile-frontend-save-error": "เกิดข้อผิดพลาดในการบันทึกการตั้งค่า กรุณาตรวจให้แน่ใจว่าคุณได้เปิดใช้งานคุกกี้",

@@ -181,7 +181,6 @@
 	"mobile-frontend-references-citation-error": "Сталася помилка і не вдалося завантажити цю примітку.",
 	"mobile-frontend-references-list": "Переглянути весь список приміток",
 	"mobile-frontend-requires-mobile": "Ця сторінка недоступна у стаціонарному вигляді. Будь ласка, натисніть на мобільний перегляд в нижній частині сторінки.",
-	"mobile-frontend-requires-optin": "Ця сторінка недоступна, якщо ви виберете в нашому режимі бета. Відвідайте [[Special:MobileOptions|сторінку налаштувань]], щоб відмовитися.",
 	"mobile-frontend-requires-title": "Сторінка недоступна",
 	"mobile-frontend-return-to-page": "Повернутися до сторінки",
 	"mobile-frontend-save-error": "Помилка збереження налаштувань. Будь ласка, переконайтеся, що у вас увімкнені куки.",

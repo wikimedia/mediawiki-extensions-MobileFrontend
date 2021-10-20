@@ -131,7 +131,6 @@
 	"mobile-frontend-references-citation": "Manba",
 	"mobile-frontend-references-list": "Manbalarning toʻliq roʻyxatini koʻrish",
 	"mobile-frontend-requires-mobile": "Bu sahifa desktop versiyada mavjud emas. Iltimos, sahifaning pastki qismidagi mobil versiya havolasini bosing.",
-	"mobile-frontend-requires-optin": "Beta rejimimizni yoqmaganingizcha, bu sahifadan foydalana olmaysiz. Yoqish uchun [[Special:MobileOptions|moslamalar sahifasi]]ga tashrif buyuring.",
 	"mobile-frontend-requires-title": "Sahifa mavjud emas",
 	"mobile-frontend-return-to-page": "Sahifaga qaytish",
 	"mobile-frontend-save-error": "Moslamalarni saqlashda xatolik yuz berdi. Iltimos, cookies-fayllar yoqilganligiga ishonch hosil qiling.",

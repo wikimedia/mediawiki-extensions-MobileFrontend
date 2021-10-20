@@ -154,7 +154,6 @@
 	"mobile-frontend-references-citation-error": "Се појави грешка. Не можев да го вчитам наводов.",
 	"mobile-frontend-references-list": "Полн список со наводи",
 	"mobile-frontend-requires-mobile": "Оваа страница не е достапна со обичен изглед. Сменете на мобилен изглед на дното од страницата.",
-	"mobile-frontend-requires-optin": "Страницава не е достапна доколку не изберете да ги користите бета-можностите. Ова можете да го направите во [[Special:MobileOptions|поставките]].",
 	"mobile-frontend-requires-title": "Страницата е недостапна",
 	"mobile-frontend-return-to-page": "Назад на страницата",
 	"mobile-frontend-save-error": "Грешка при зачувувањето на поставките. Проверете дали имате овозможено колачиња.",

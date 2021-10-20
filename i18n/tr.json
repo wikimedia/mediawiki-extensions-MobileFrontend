@@ -190,7 +190,6 @@
 	"mobile-frontend-references-citation-error": "Bir hata oluştu ve bu kaynağı yüklemek mümkün değildi.",
 	"mobile-frontend-references-list": "Kaynakların tam listesini görüntüle",
 	"mobile-frontend-requires-mobile": "Bu sayfa masaüstünde kullanılamaz. Lütfen sayfanın altındaki mobil görünüm bağlantısına tıklayın.",
-	"mobile-frontend-requires-optin": "Deneme modunu tercih etmediğiniz sürece bu sayfayı kullanamazsınız. Tercih etmek için [[Special:MobileOptions|ayarlar sayfasını]] ziyaret edin.",
 	"mobile-frontend-requires-title": "Sayfa kullanılamıyor",
 	"mobile-frontend-return-to-page": "Sayfaya geri dön",
 	"mobile-frontend-save-error": "Ayarlar kaydedilirken hata oluştu. Lütfen çerezleri etkinleştirdiğinizden emin olun.",

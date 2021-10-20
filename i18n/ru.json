@@ -200,7 +200,6 @@
 	"mobile-frontend-references-citation-error": "Произошла ошибка, из-за которой не получилось загрузить это примечание.",
 	"mobile-frontend-references-list": "Посмотреть полный список цитат",
 	"mobile-frontend-requires-mobile": "Эта страница не доступна для просмотра с компьютера. Пожалуйста, нажмите на ссылку мобильного вида в нижней части страницы.",
-	"mobile-frontend-requires-optin": "Эта страница будет недоступна, пока вы не перейдёте в бета-режим. Зайдите для этого на страницу [[Special:MobileOptions|настроек]].",
 	"mobile-frontend-requires-title": "Страница недоступна",
 	"mobile-frontend-return-to-page": "Вернуться на страницу",
 	"mobile-frontend-save-error": "Ошибка при сохранении настроек. Пожалуйста, убедитесь, что у вас включены файлы cookie.",

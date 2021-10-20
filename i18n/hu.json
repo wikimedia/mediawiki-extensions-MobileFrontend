@@ -148,7 +148,6 @@
 	"mobile-frontend-references-citation-error": "Hiba történt, nem lehetett betölteni ezt a forráshivatkozást.",
 	"mobile-frontend-references-list": "Forráshivatkozások teljes listájának megjelenítése",
 	"mobile-frontend-requires-mobile": "Ez a lap nem elérhető asztali módban. Kattints a mobil nézet linkre a lap alján.",
-	"mobile-frontend-requires-optin": "Ez a lap nem érhető el, csak ha bekapcsolod a béta módot. Látogasd meg a [[Special:MobileOptions|beállításokat]] a bekapcsoláshoz.",
 	"mobile-frontend-requires-title": "Lap nem elérhető",
 	"mobile-frontend-return-to-page": "Visszatérés a laphoz",
 	"mobile-frontend-save-error": "Hiba a beállítások mentésekor. Győződj meg arról, hogy be vannak kapcsolva nálad a sütik (cookie-k).",

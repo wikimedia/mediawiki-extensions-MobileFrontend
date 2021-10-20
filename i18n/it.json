@@ -165,7 +165,6 @@
 	"mobile-frontend-references-citation-error": "Si è verificato un errore e non è stato possibile caricare questa citazione.",
 	"mobile-frontend-references-list": "Vedi l'elenco completo delle citazioni",
 	"mobile-frontend-requires-mobile": "Questa pagina non è disponibile sul desktop. Clicca il collegamento alla visualizzazione per mobile in fondo alla pagina.",
-	"mobile-frontend-requires-optin": "Questa pagina non è disponibile se non si opta per la modalità beta. Visita la [[Special:MobileOptions|pagina delle impostazioni]] per scegliere.",
 	"mobile-frontend-requires-title": "Pagina non disponibile",
 	"mobile-frontend-return-to-page": "Ritorna alla pagina",
 	"mobile-frontend-save-error": "Errore durante il salvataggio delle impostazioni. Assicurati di avere i cookie abilitati.",

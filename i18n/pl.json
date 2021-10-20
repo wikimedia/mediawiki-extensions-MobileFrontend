@@ -187,7 +187,6 @@
 	"mobile-frontend-references-citation-error": "Podczas wczytywania przypisu wystąpił błąd.",
 	"mobile-frontend-references-list": "Zobacz pełną listę przypisów",
 	"mobile-frontend-requires-mobile": "Ta strona nie jest dostępna w wersji standardowej. Kliknij link „wersja mobilna” na dole strony.",
-	"mobile-frontend-requires-optin": "Ta strona nie jest dostępna, jeżeli nie włączysz trybu beta. Odwiedź [[Special:MobileOptions|ustawienia]], aby go włączyć.",
 	"mobile-frontend-requires-title": "Strona niedostępna",
 	"mobile-frontend-return-to-page": "Powróć do strony",
 	"mobile-frontend-save-error": "Wystąpił błąd podczas zapisywania ustawień. Upewnij się, że masz włączoną obsługę plików cookie.",

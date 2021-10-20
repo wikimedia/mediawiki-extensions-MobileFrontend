@@ -185,7 +185,6 @@
 	"mobile-frontend-references-citation-error": "發生了錯誤，且無法載入此引用。",
 	"mobile-frontend-references-list": "檢視完整引用清單",
 	"mobile-frontend-requires-mobile": "此頁面無法使用於電腦版。請於頁面底部點選手機版檢視。",
-	"mobile-frontend-requires-optin": "此頁面尚無法使用，除非您開啟我們的測試模式。 請於 [[Special:MobileOptions|設定頁面]] 開啟。",
 	"mobile-frontend-requires-title": "頁面無法使用",
 	"mobile-frontend-return-to-page": "返回頁面",
 	"mobile-frontend-save-error": "儲存設定錯誤。請確認您已開啟 Cookies 功能。",

@@ -5,11 +5,16 @@
 			"Tweety"
 		]
 	},
+	"apihelp-mobileview-description": "موبائل ڏيٺن لاءِ گهربل ڊيٽا موٽائي ٿو.",
+	"apihelp-mobileview-summary": "موبائل ڏيٺن لاءِ گهربل ڊيٽا موٽائي ٿو.",
+	"apihelp-mobileview-param-page": "عمل ڪرڻ لاءِ صفحي جو عنوان.",
 	"apihelp-mobileview-param-redirect": "ڇا چورڻ جو ضروري پيڇو ڪجي.",
 	"apihelp-mobileview-param-noimages": "ڏيکاريو HTML تصويرون کان سواءِ.",
 	"apihelp-mobileview-param-thumbsize": "ٿنبنيل جي وڌ ۾ وڌ ايراضي.",
 	"apihelp-mobileview-param-thumbwidth": "ٿنبنيل جي وڌ ۾ وڌ ويڪر.",
 	"apihelp-mobileview-param-thumbheight": "ٿنبنيل جي وڌ ۾ وڌ اوچائي.",
-	"apierror-mobilefrontend-badidtitle": "مسودي جي خراب آءِ ڊي/موضوع ملاوٽ",
+	"apihelp-mobileview-param-revision": "ڪنھن مخصوص ورجاءَ جي گهر ڪريو.",
+	"apihelp-parse-param-noimages": "موبائل آئوٽ پٽ ۾ عڪسن کي غيرفعال ڪريو.",
+	"apierror-mobilefrontend-badidtitle": "مسودي جي خراب آئڊي/عنوان جي ملاوٽ.",
 	"apiwarn-mobilefrontend-sectionsnotfound": "{{PLURAL:$2|ڀاڱو|ڀاڱا}} $1 نہ لڌو/لڌا."
 }

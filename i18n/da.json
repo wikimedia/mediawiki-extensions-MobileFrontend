@@ -137,7 +137,6 @@
 	"mobile-frontend-opt-in-explain": "Ved at deltage i betaen, får du adgang til eksperimentale funktioner, med risiko for at støde på fejl og problemer.",
 	"mobile-frontend-overlay-close": "Luk",
 	"mobile-frontend-privacy-link-text": "Fortrolighed",
-	"mobile-frontend-requires-optin": "Denne side er ikke tilgængelig, medmindre du tilmelder dig vores beta-tilstand. Besøg [[Special:MobileOptions|indstillinger]] for at tilmelde dig.",
 	"mobile-frontend-requires-title": "Side ikke tilgængelig",
 	"mobile-frontend-return-to-page": "Tilbage til siden",
 	"mobile-frontend-save-error": "Fejl under lagring af indstillinger. Sørg for, at du har aktiveret cookies.",

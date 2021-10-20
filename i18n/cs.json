@@ -159,7 +159,6 @@
 	"mobile-frontend-references-citation-error": "Došlo k chybě a tuto citaci se nepodařilo načíst.",
 	"mobile-frontend-references-list": "Zobrazit úplný seznam citací",
 	"mobile-frontend-requires-mobile": "Tato stránka není k dispozici v klasickém zobrazení. Klikněte na odkaz na mobilní verzi v dolní části obrazovky.",
-	"mobile-frontend-requires-optin": "Tato stránka není k dispozici, pokud se nepřihlásíte k betaverzi. Připojit se můžete na stránce [[Special:MobileOptions|nastavení]].",
 	"mobile-frontend-requires-title": "Stránka není k dispozici",
 	"mobile-frontend-return-to-page": "Zpět ke článku",
 	"mobile-frontend-save-error": "Chyba při ukládání nastavení. Ujistěte se, že máte povolené cookies.",

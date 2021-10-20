@@ -168,7 +168,6 @@
 	"mobile-frontend-references-citation-error": "Không thể tải chú thích này vì gặp phải lỗi.",
 	"mobile-frontend-references-list": "Xem danh sách chú thích đầy đủ",
 	"mobile-frontend-requires-mobile": "Trang này không có sẵn trên máy tính để bàn. Xin hãy nhấn chuột vào liên kết “Phiên bản di động” ở cuối trang.",
-	"mobile-frontend-requires-optin": "Để xem trang này, hãy quyết định kích hoạt chế độ beta. Mở [[Special:MobileOptions|trang tùy chọn]] để kích hoạt.",
 	"mobile-frontend-requires-title": "Trang không có sẵn",
 	"mobile-frontend-return-to-page": "Quay lại trang",
 	"mobile-frontend-save-error": "Lỗi khi lưu cấu hình. Xin vui lòng chắc chắn bật cookie.",
