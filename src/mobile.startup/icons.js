@@ -48,14 +48,16 @@ module.exports = {
 	 * @param {Object} [props] to extend
 	 * @return {Icon}
 	 */
-	cancel: function ( variant, props ) {
+	cancel: function ( variant, props = {} ) {
 		var glyph = variant ? `${CANCEL_GLYPH}-${variant}` : `${CANCEL_GLYPH}-base20`;
+		props.additionalClassNames = props.additionalClassNames || '';
+		props.additionalClassNames += ' cancel';
+
 		return new this.Icon( util.extend( {
 			tagName: 'button',
 			name: glyph,
-			additionalClassNames: 'cancel',
 			label: mw.msg( 'mobile-frontend-overlay-close' )
-		}, props || {} ) );
+		}, props ) );
 	},
 	/**
 	 * Gets a spinner icon.
@@ -65,19 +67,18 @@ module.exports = {
 	 *
 	 * @memberof icons
 	 * @instance
-	 * @param {Object} [options] See `Icon` for more details
+	 * @param {Object} [props] See `Icon` for more details
 	 * @return {Icon}
 	 */
-	spinner: function ( options ) {
-		options = options || {};
-		if ( options.additionalClassNames === undefined ) {
-			options.additionalClassNames = 'spinner loading';
+	spinner: function ( props = {} ) {
+		if ( props.additionalClassNames === undefined ) {
+			props.additionalClassNames = 'spinner loading';
 		}
 
-		return new this.Icon( util.extend( options, {
+		return new this.Icon( util.extend( {
 			name: 'spinner',
 			label: mw.msg( 'mobile-frontend-loading-message' )
-		} ) );
+		}, props ) );
 	},
 	/**
 	 * Gets a failure (error) icon
@@ -100,12 +101,14 @@ module.exports = {
 	 * @param {Object} props
 	 * @return {Icon}
 	 */
-	watchIcon: function ( props ) {
-		return new this.Icon( util.extend( props, {
+	watchIcon: function ( props = {} ) {
+		props.additionalClassNames = props.additionalClassNames || '';
+		props.additionalClassNames += ' watch-this-article';
+
+		return new this.Icon( util.extend( {
 			name: 'star-base20',
-			glyphPrefix: 'wikimedia',
-			additionalClassNames: 'watch-this-article'
-		} ) );
+			glyphPrefix: 'wikimedia'
+		}, props ) );
 	},
 	/**
 	 * Gets a filled watch star icon.
@@ -115,11 +118,13 @@ module.exports = {
 	 * @param {Object} props
 	 * @return {Icon}
 	 */
-	watchedIcon: function ( props ) {
-		return new this.Icon( util.extend( props, {
+	watchedIcon: function ( props = {} ) {
+		props.additionalClassNames = props.additionalClassNames || '';
+		props.additionalClassNames += ' watch-this-article watched';
+
+		return new this.Icon( util.extend( {
 			name: 'unStar-progressive',
-			glyphPrefix: 'wikimedia',
-			additionalClassNames: 'watch-this-article watched'
-		} ) );
+			glyphPrefix: 'wikimedia'
+		}, props ) );
 	}
 };

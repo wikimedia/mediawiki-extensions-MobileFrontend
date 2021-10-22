@@ -12,13 +12,22 @@ class MobileUI {
 	 * @param string $iconType element or before
 	 * @param string $additionalClassNames additional class names you want to associate
 	 *  with the iconed element
+	 * @param string $iconPrefix optional prefix for icons. Defaults to minerva.
 	 * @return string class name for use with HTML element
 	 */
-	public static function iconClass( $iconName, $iconType = 'element', $additionalClassNames = '' ) {
+	public static function iconClass( $iconName, $iconType = 'element', $additionalClassNames = '',
+		$iconPrefix = 'mf'
+	) {
 		$base = 'mw-ui-icon';
-		$modifiers = 'mw-ui-icon-' . $iconType;
+		$modifiers = '';
+		if ( $iconType ) {
+			$modifiers .= 'mw-ui-icon-' . $iconType;
+		}
 		if ( $iconName ) {
-			$modifiers .= ' mw-ui-icon-mf-' . $iconName;
+			$modifiers .= ' mw-ui-icon-' . $iconPrefix . '-' . $iconName;
+		}
+		if ( $iconType === 'element' ) {
+			$additionalClassNames .= ' mw-ui-button mw-ui-quiet';
 		}
 		return $base . ' ' . $modifiers . ' ' . $additionalClassNames;
 	}

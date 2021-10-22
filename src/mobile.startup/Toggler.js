@@ -3,6 +3,7 @@ var browser = require( './Browser' ).getSingleton(),
 	escapeHash = util.escapeHash,
 	arrowOptions = {
 		name: 'expand',
+		type: '',
 		isSmall: true,
 		additionalClassNames: 'indicator mw-ui-icon-flush-left'
 	},

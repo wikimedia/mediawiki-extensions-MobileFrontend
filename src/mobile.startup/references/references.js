@@ -63,12 +63,13 @@ function referenceDrawer( props ) {
 							new Icon( {
 								isSmall: true,
 								name: 'reference',
-								modifier: ''
+								type: ''
 							} ).$el,
 							util.parseHTML( '<span>' ).addClass( 'references-drawer__title' ).text( mw.msg( 'mobile-frontend-references-citation' ) ),
 							icons.cancel( 'gray', {
 								isSmall: true,
-								modifier: 'mw-ui-icon-element mw-ui-icon-flush-right'
+								type: 'element',
+								additionalClassNames: 'mw-ui-icon-flush-right'
 							} ).$el
 						] ),
 					// Add .mw-parser-output so that TemplateStyles styles apply (T244510)

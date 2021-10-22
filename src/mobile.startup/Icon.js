@@ -12,9 +12,6 @@ var
  * @param {Object} options Configuration options
  */
 function Icon( options ) {
-	if ( options.hasText ) {
-		options.modifier = `mw-ui-icon-before ${options.modifier || ''}`;
-	}
 	if ( options.href ) {
 		options.tagName = 'a';
 	}
@@ -31,7 +28,8 @@ mfExtend( Icon, View, {
 	 * @instance
 	 */
 	preRender: function () {
-		this.setRotationClass();
+		this.options._rotationClass = this.getRotationClass();
+		this.options._iconClasses = this.getIconClasses();
 	},
 	/**
 	 * Internal method that sets the correct rotation class for the icon
@@ -41,19 +39,19 @@ mfExtend( Icon, View, {
 	 * @instance
 	 * @private
 	 */
-	setRotationClass: function () {
-		var options = this.options;
-		if ( options.rotation ) {
-			switch ( options.rotation ) {
+	getRotationClass: function () {
+		var rotationClass = '';
+		if ( this.options.rotation ) {
+			switch ( this.options.rotation ) {
 				case -180:
 				case 180:
-					options._rotationClass = 'mf-mw-ui-icon-rotate-flip';
+					rotationClass = 'mf-mw-ui-icon-rotate-flip';
 					break;
 				case -90:
-					options._rotationClass = 'mf-mw-ui-icon-rotate-anti-clockwise';
+					rotationClass = 'mf-mw-ui-icon-rotate-anti-clockwise';
 					break;
 				case 90:
-					options._rotationClass = 'mf-mw-ui-icon-rotate-clockwise';
+					rotationClass = 'mf-mw-ui-icon-rotate-clockwise';
 					break;
 				case 0:
 					break;
@@ -61,6 +59,33 @@ mfExtend( Icon, View, {
 					throw new Error( 'Bad value for rotation given. Must be ±90, 0 or ±180.' );
 			}
 		}
+		return rotationClass;
+	},
+	/**
+	 * Set icon glyph class and icon type class
+	 *
+	 * @memberof Icon
+	 * @instance
+	 * @private
+	 */
+	getIconClasses: function () {
+		var base = this.options.base;
+		var name = this.options.name;
+		var type = this.options.type;
+		var additionalClassNames = this.options.additionalClassNames;
+
+		var modifiers = '';
+		if ( type ) {
+			modifiers += base + '-' + type + ' ';
+		}
+		if ( name ) {
+			modifiers += this.getGlyphClassName();
+		}
+		if ( type === 'element' ) {
+			additionalClassNames += ' mw-ui-button mw-ui-quiet';
+		}
+
+		return base + ' ' + modifiers + ' ' + additionalClassNames;
 	},
 	/**
 	 * @inheritdoc
@@ -73,7 +98,6 @@ mfExtend( Icon, View, {
 	 * @instance
 	 * @mixes View#defaults
 	 * @property {Object} defaults Default options hash.
-	 * @property {boolean} defaults.hasText Whether the icon has text.
 	 * @property {boolean} defaults.isSmall Whether the icon should be small.
 	 * @property {string} [defaults.href] value of href attribute,
 	 *  when set tagName will default to anchor tag
@@ -82,9 +106,10 @@ mfExtend( Icon, View, {
 	 * @property {string} defaults.base String used as a base for generating class names.
 	 * Defaults to 'mw-ui-icon'.
 	 * @property {string} defaults.name Name of the icon.
-	 * @property {string} defaults.modifier Additional class name.
-	 * Defaults to 'mw-ui-icon-element'.
+	 * @property {string} defaults.type Icon type
+	 * Defaults to 'element'.
 	 * @property {string} defaults.title Tooltip text.
+	 * @property {string} defaults.additionalClassNames Additional classes to be added to the icon.
 	 * @property {boolean} defaults.rotation will rotate the icon by a certain number
 	 *  of degrees.
 	 *  Must be ±90, 0 or ±180 or will throw exception.
@@ -92,7 +117,6 @@ mfExtend( Icon, View, {
 	 */
 	defaults: {
 		rotation: 0,
-		hasText: false,
 		href: undefined,
 		glyphPrefix: 'mf',
 		tagName: 'div',
@@ -100,8 +124,9 @@ mfExtend( Icon, View, {
 		isSmall: false,
 		base: 'mw-ui-icon',
 		name: '',
-		modifier: 'mw-ui-icon-element',
-		title: ''
+		type: 'element',
+		title: '',
+		additionalClassNames: ''
 	},
 	/**
 	 * Return the full class name that is required for the icon to render
@@ -121,23 +146,21 @@ mfExtend( Icon, View, {
 	 * @return {string}
 	 */
 	getGlyphClassName: function () {
-		return this.options.base + '-' + this.options.glyphPrefix + '-' + this.options.name;
+		if ( this.options.glyphPrefix ) {
+			return this.options.base + '-' + this.options.glyphPrefix + '-' + this.options.name;
+		}
+		return this.options.base + '-' + this.options.name;
 	},
 	template: util.template(
-		'<{{tagName}} {{#disabled}}disabled{{/disabled}} ' +
-			'{{#isTypeButton}}type="button"{{/isTypeButton}} ' +
-			'class="{{base}} ' +
-				'{{base}}-{{glyphPrefix}}-{{name}} ' +
-				'{{modifier}} ' +
+		'<{{tagName}} ' +
+			'{{#isTypeButton}}type="button" {{#disabled}}disabled{{/disabled}}{{/isTypeButton}} ' +
+			'class="{{_iconClasses}} ' +
 				'{{#isSmall}}mw-ui-icon-small{{/isSmall}} ' +
-				'{{#_rotationClass}}{{_rotationClass}}{{/_rotationClass}} ' +
-				'{{additionalClassNames}}" ' +
+				'{{#_rotationClass}}{{_rotationClass}}{{/_rotationClass}}" ' +
 			'{{#id}}id="{{id}}"{{/id}} ' +
 			'{{#href}}href="{{href}}"{{/href}} ' +
 			'{{#title}}title="{{title}}"{{/title}}>' +
-			'{{#hasText}}<span>{{/hasText}}' +
 				'{{label}}' +
-			'{{#hasText}}</span>{{/hasText}}' +
 		'</{{tagName}}>'
 	)
 } );

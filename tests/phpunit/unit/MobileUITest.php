@@ -55,19 +55,19 @@ class MobileUITest extends \MediaWikiUnitTestCase {
 		return [
 			[
 				'testicon', 'element', 'additionalclassnames',
-				'mw-ui-icon mw-ui-icon-element mw-ui-icon-mf-testicon additionalclassnames'
+				'mw-ui-icon mw-ui-icon-element mw-ui-icon-mf-testicon additionalclassnames mw-ui-button mw-ui-quiet'
 			],
 			[
 				'testicon', 'element', '',
-				'mw-ui-icon mw-ui-icon-element mw-ui-icon-mf-testicon '
+				'mw-ui-icon mw-ui-icon-element mw-ui-icon-mf-testicon  mw-ui-button mw-ui-quiet'
 			],
 			[
 				null, 'element', 'additionalclassnames',
-				'mw-ui-icon mw-ui-icon-element additionalclassnames'
+				'mw-ui-icon mw-ui-icon-element additionalclassnames mw-ui-button mw-ui-quiet'
 			],
 			[
 				null, 'element', '',
-				'mw-ui-icon mw-ui-icon-element '
+				'mw-ui-icon mw-ui-icon-element  mw-ui-button mw-ui-quiet'
 			],
 			[
 				'testicon', 'before', 'additionalclassnames',

@@ -11,7 +11,7 @@ module.exports = function fakeToolbar() {
 
 	$loadingMessage = icons.spinner( {
 		tagName: 'span',
-		hasText: true,
+		type: 'before',
 		additionalClassNames: '',
 		label: mw.msg( 'mobile-frontend-editor-loading' )
 	} ).$el;
