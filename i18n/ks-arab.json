@@ -5,8 +5,11 @@
 			"Rishabhbhat"
 		]
 	},
+	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|بائٹ|بائٹہٕ}} اِضافہٕ",
+	"mobile-frontend-diffview-bytesremoved": "$1 {{PLURAL:$1|بائٹ|بائٹہٕ}} کٕمِی",
 	"mobile-frontend-diffview-comma": "$1، $2",
 	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|اؠڑِٹ|اؠڑِٹہٕ}}",
+	"mobile-frontend-diffview-title": "بَدلاو",
 	"mobile-frontend-editor-blocked-drawer-action-login": "دٲخِل گَژھُن",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "ٹھیٖک چھُ",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "وَضاحَت",
