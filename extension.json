@@ -281,6 +281,7 @@
 				"jquery.throttle-debounce"
 			],
 			"messages": [
+				"mobile-frontend-license-links",
 				"echo-mark-all-as-read",
 				"echo-overlay-link",
 				"mobile-frontend-talk-add-overlay-submit",
