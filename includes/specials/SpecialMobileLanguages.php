@@ -26,7 +26,7 @@ class SpecialMobileLanguages extends SpecialPage {
 		LanguageConverterFactory $languageConverterFactory,
 		LanguageNameUtils $languageNameUtils
 	) {
-		parent::__construct( 'MobileLanguages' );
+		parent::__construct( 'MobileLanguages', '', false );
 		$this->languageConverter = $languageConverterFactory->getLanguageConverter( $this->getContentLanguage() );
 		$this->languageNameUtils = $languageNameUtils;
 		$services = MediaWikiServices::getInstance();
