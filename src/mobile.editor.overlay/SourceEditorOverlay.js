@@ -210,7 +210,8 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 		this.$content.addClass( 'mw-editfont-' + mw.user.options.get( 'editfont' ) );
 		if ( showAnonWarning ) {
 			this.$anonWarning = this.createAnonWarning( options );
-			this.$el.find( '.editor-container' ).append( this.$anonWarning );
+			this.$anonTalkWarning = this.createAnonTalkWarning();
+			this.$el.find( '.editor-container' ).append( [ this.$anonTalkWarning, this.$anonWarning ] );
 			this.$content.hide();
 			// the user has to click login, signup or edit without login,
 			// disable "Next" button on top right
@@ -266,6 +267,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 	 */
 	onClickAnonymous: function () {
 		this.$anonWarning.hide();
+		this.$anonTalkWarning.hide();
 		// reenable "Next" button
 		this.$anonHiddenButtons.show();
 		this._loadContent();

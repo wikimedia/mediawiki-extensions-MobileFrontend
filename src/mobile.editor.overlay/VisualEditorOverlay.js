@@ -134,7 +134,8 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 			this.redoTargetInit();
 		} else {
 			this.$anonWarning = this.createAnonWarning( this.options );
-			this.$el.append( this.$anonWarning );
+			this.$anonTalkWarning = this.createAnonTalkWarning();
+			this.$el.append( [ this.$anonTalkWarning, this.$anonWarning ] );
 			this.$el.find( '.overlay-content' ).hide();
 		}
 
@@ -223,6 +224,7 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 	onClickAnonymous: function () {
 		var self = this;
 		this.$anonWarning.hide();
+		this.$anonTalkWarning.hide();
 		self.$el.find( '.overlay-content' ).show();
 		this.redoTargetInit();
 	},

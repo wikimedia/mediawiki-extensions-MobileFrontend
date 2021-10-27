@@ -560,7 +560,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 		var $actions = $( '<div>' ).addClass( 'actions' ),
 			$anonWarning = $( '<div>' ).addClass( 'anonwarning content' ).append(
 				new MessageBox( {
-					className: 'warningbox anon-msg',
+					className: 'messagebox anon-msg',
 					msg: mw.msg( 'mobile-frontend-editor-anonwarning' )
 				} ).$el,
 				$actions
@@ -602,7 +602,16 @@ mfExtend( EditorOverlayBase, Overlay, {
 
 		return $anonWarning;
 	},
-
+	/**
+	 * Creates and returns a copy of the anon talk message warning
+	 *
+	 * @memberof EditorOverlayBase
+	 * @instance
+	 * @return {jQuery.Element}
+	 */
+	createAnonTalkWarning: function () {
+		return $( '.minerva-anon-talk-message' ).clone();
+	},
 	/**
 	 * Get an options object not containing any defaults or editor
 	 * specific options, so that it can be used to construct a
