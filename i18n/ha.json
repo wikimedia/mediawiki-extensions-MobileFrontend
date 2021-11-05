@@ -136,7 +136,7 @@
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 km}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",
 	"mobile-frontend-nearby-error": "{{SITENAME}} Na kusa na da matsaloli.",
-	"mobile-frontend-nearby-error-guidance": "Gwada watstsake inda kuke.",
+	"mobile-frontend-nearby-error-guidance": "Jarraba sabunta mazauni.",
 	"mobile-frontend-privacy-link-text": "Sirrinka",
 	"mobile-frontend-terms-text": "Ƙa'idojin amfani",
 	"mobile-frontend-view": "Wayar hannu",
