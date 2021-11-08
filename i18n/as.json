@@ -37,7 +37,7 @@
 	"mobile-frontend-fontchanger-option-large": "ডাঙৰ",
 	"mobile-frontend-fontchanger-option-xlarge": "অতি ডাঙৰ",
 	"mobile-frontend-featured-article": "আজিৰ নিৰ্বাচিত সমল",
-	"mobile-frontend-generic-login-new": "<strong>আপোনাৰ দৰে লোকেই {{SITENAME}}ক সৃষ্টি কৰিছে।</strong><br />বৰঙণি জনাবলৈ লগ্‌ ইন কৰক।",
+	"mobile-frontend-generic-login-new": "<strong>আপোনাৰ দৰে লোকেই {{SITENAME}}ৰ সৃষ্টি কৰিছে।</strong><br />বৰঙণি আগবঢ়াবলৈ লগ্‌ ইন কৰক।",
 	"mobile-frontend-joined-just-now": "এইমাত্ৰ যোগদান {{GENDER:$1|কৰিছে}}",
 	"mobile-frontend-joined-minutes": "{{PLURAL:$2|$2 মিনিট}} আগতে যোগদান {{GENDER:$1|কৰিছে}}",
 	"mobile-frontend-joined-days": "{{PLURAL:$2|এদিন|$2 দিন}} আগতে যোগদান {{GENDER:$1|কৰিছে}}",

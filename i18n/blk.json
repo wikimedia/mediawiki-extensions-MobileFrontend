@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Khun Kt",
 			"咽頭べさ"
 		]
 	},
@@ -161,7 +162,7 @@
 	"mobile-frontend-watchlist-filter-all": "ကားကအဝ်ႏ",
 	"mobile-frontend-watchlist-filter-articles": "လိတ်မဲ့ငါဖုံႏ",
 	"mobile-frontend-watchlist-filter-other": "အလင်",
-	"mobile-frontend-watchlist-filter-talk": "အုံကွံ",
+	"mobile-frontend-watchlist-filter-talk": "အိုင်ကိုမ်ဒေါ့ꩻရီ",
 	"mobile-frontend-watchlist-more": "ထဲင်း",
 	"mobile-frontend-watchlist-please-wait": "အိုင်ပွေားဆောင်းသွော့သြ၊ ပွေားထွားခွုမ်မာꩻချက်နဝ်ꩻ ညကယ်ႏထဲင်း နာꩻကထင်းခါꩻနဝ်ꩻသွူ။",
 	"mobile-frontend-watchlist-error": "အဝ်ႏပွေားထွားလိတ်မဲ့ငါယိုကျာꩻ ထွာထိုꩻလဲဉ်း ပျသာႏနာႏတဗာႏနဝ်ꩻသွူ။",

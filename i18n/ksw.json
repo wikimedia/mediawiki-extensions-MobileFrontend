@@ -4,7 +4,11 @@
 			"SawJaemin"
 		]
 	},
+	"mobile-frontend-diffview-bytesadded": "ပာ်ဖှိၣ် $1 {{PLURAL:$1|ဘါဧံ|ဘါဧံ}}",
+	"mobile-frontend-diffview-bytesremoved": "ထူးသံကွံာ် $1 {{PLURAL:$1|ဘါဧံ|ဘါဧံ}}",
+	"mobile-frontend-media-load-fail-retry": "မၤသီထီၣ်",
 	"mobile-frontend-view": "မိးဘဲ တၢ်ကွၢ်ကီ",
+	"mobile-frontend-watchlist-filter-all": "ခဲလၢာ်",
 	"tag-mobile_edit": "လီၤတဲစိအဲၣ်ဒံၣ်",
 	"tag-mobile_web_edit": "မိဘိလ် အဲးဒံး"
 }
