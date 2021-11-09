@@ -46,10 +46,9 @@ function createPromoCampaign(
 ) {
 	// This object maps actions to localStorage keys
 	const ACTIONS_TO_STORAGE_KEYS = {};
-	var key, action;
-	for ( key in actions ) {
-		action = actions[key];
-		ACTIONS_TO_STORAGE_KEYS[action] = `mobile-frontend-${campaignName}-ineligible-${action}`;
+	for ( const key in actions ) {
+		const a = actions[ key ];
+		ACTIONS_TO_STORAGE_KEYS[a] = `mobile-frontend-${campaignName}-ineligible-${a}`;
 	}
 
 	/**

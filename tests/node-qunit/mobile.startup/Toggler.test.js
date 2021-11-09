@@ -413,7 +413,7 @@ QUnit.test( 'MobileFrontend toggle.js - Expand stored sections.', function ( ass
 	);
 
 	// save a toggle state manually
-	expandedSections[ this.title ][ this.headline ] = ( new Date() ).getTime();
+	expandedSections[ this.title ][ this.headline ] = Date.now();
 
 	sandbox.stub( mw.storage.session, 'get' ).callsFake( function () {
 		return JSON.stringify( expandedSections );

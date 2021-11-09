@@ -56,7 +56,7 @@ QUnit.test( 'initialize with subsections', function ( assert ) {
 		subsection = section.subsections[ 0 ];
 
 	assert.strictEqual( section.subsections.length, 1, 'Subsection is added to array' );
-	assert.ok( subsection instanceof Section, 'Subsections are instances of Section' );
+	assert.true( subsection instanceof Section, 'Subsections are instances of Section' );
 
 	assert.strictEqual( subsection.line, 'Line', 'line is set' );
 	assert.strictEqual( subsection.text, 'Text', 'text is set' );

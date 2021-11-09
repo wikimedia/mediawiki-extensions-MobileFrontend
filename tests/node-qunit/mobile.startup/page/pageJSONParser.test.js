@@ -54,10 +54,10 @@ QUnit.test( '.parse()', function ( assert ) {
 	);
 
 	titleJSON.forEach( function ( json ) {
-		const p = pageJSONParser.parse( json );
+		const p2 = pageJSONParser.parse( json );
 
 		assert.strictEqual(
-			p.getDisplayTitle(),
+			p2.getDisplayTitle(),
 			'&lt;script&gt;alert(&quot;oops, XSS possible!&quot;);&lt;/script&gt;',
 			json.testDesc
 		);

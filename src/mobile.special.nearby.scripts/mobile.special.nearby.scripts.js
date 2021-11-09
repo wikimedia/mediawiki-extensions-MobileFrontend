@@ -22,11 +22,11 @@ function hideInitialScreen() {
 
 /**
  * @param {View} view to render
- * @param {jQuery.Object} $nearby where to render
+ * @param {jQuery.Object} $container where to render
  */
-function render( view, $nearby ) {
+function render( view, $container ) {
 	hideInitialScreen();
-	$nearby.empty().append( view.$el ).show();
+	$container.empty().append( view.$el ).show();
 }
 
 router.on( 'hashchange', function () {

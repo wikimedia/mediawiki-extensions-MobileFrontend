@@ -17,7 +17,7 @@ var util = require( './util' ),
  *   scrolling object and disable it until we've loaded.
  * 3. Once you have loaded the list and put it in the DOM, enable the
  *   infinite scrolling detection.
- *   * Everytime the scroller detection triggers a load, it auto disables
+ *   - Every time the scroller detection triggers a load, it auto disables
  *     to not trigger multiple times. After you have loaded, manually
  *     re-enable it.
  *

@@ -54,7 +54,7 @@ QUnit.test( '#getPageLanguages (call)', function ( assert ) {
 	/* global $ */
 	sandbox.stub( $, 'ajax' ).returns( util.Deferred().resolve() );
 	pageGateway.getPageLanguages( 'Title', 'fr' );
-	assert.ok(
+	assert.true(
 		spy.calledWith( testData.getPageLanguagesCall.output )
 	);
 } );

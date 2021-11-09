@@ -49,7 +49,7 @@ QUnit.test( 'emits scroll end event', function ( assert ) {
 	is.setElement( {} );
 
 	is.on( ScrollEndEventEmitter.EVENT_SCROLL_END, function () {
-		assert.ok( true, 'scroll end event emitted' );
+		assert.true( true, 'scroll end event emitted' );
 	} );
 	// trigger stubbed 'scroll:throttled' event
 	eventBus.handler();

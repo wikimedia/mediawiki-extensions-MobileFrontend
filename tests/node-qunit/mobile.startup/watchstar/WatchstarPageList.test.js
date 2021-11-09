@@ -75,7 +75,7 @@ QUnit.test( 'Watchlist status check if no ids', function ( assert ) {
 	// Wait for an internal API call to happen as a side-effect of construction.
 	window.setTimeout( function () {
 		pageList.getPages( [], [] ).then( function () {
-			assert.ok( apiSpy.calledWith( {
+			assert.true( apiSpy.calledWith( {
 				formatversion: 2,
 				action: 'query',
 				prop: 'info',
@@ -109,7 +109,7 @@ QUnit.test( 'Checks watchlist status once', function ( assert ) {
 		pl.getPages( [ 30, 50 ], [] ).then( function () {
 			assert.strictEqual( apiSpy.callCount, 2,
 				'run callback twice (inside postRender and this call) - no caching occurs' );
-			assert.ok( apiSpy.calledWith( {
+			assert.true( apiSpy.calledWith( {
 				formatversion: 2,
 				action: 'query',
 				prop: 'info',

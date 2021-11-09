@@ -11,10 +11,12 @@ let
 	PageHTMLParser, util;
 
 /** @type {sinon.SinonSandbox} */ let sandbox;
+/* eslint-disable jsdoc/valid-types */
 /** @type {typeof import('../../../src/mobile.startup/Page')} */ let stubPage;
 /** @type {typeof import('../../../src/mobile.startup/Page')} */ let mobileTocPage;
 /** @type {typeof import('../../../src/mobile.startup/Page')} */ let desktopPage;
 /** @type {typeof import('../../../src/mobile.startup/Page')} */ let sectionPage;
+/* eslint-enable jsdoc/valid-types */
 
 QUnit.module( 'MobileFrontend PageHTMLParser.js', {
 	beforeEach: function () {

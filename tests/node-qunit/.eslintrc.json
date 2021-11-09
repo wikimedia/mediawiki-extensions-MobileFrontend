@@ -1,12 +1,19 @@
 {
 	"root": true,
 	"extends": [
-		"wikimedia/qunit",
 		"wikimedia/server",
-		"../../src/.eslintrc.json"
+		"wikimedia/mediawiki",
+		"wikimedia/qunit"
 	],
 	"rules": {
-		"no-shadow": "off",
-		"compat/compat": "off"
+		"compat/compat": "off",
+		"computed-property-spacing": "off",
+		"mediawiki/valid-package-file-require": "off",
+		"no-underscore-dangle": "off",
+		"no-use-before-define": "off",
+		"strict": "off"
+	},
+	"env": {
+		"browser": true
 	}
 }
