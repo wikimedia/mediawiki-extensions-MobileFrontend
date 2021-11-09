@@ -103,7 +103,6 @@ Browser.prototype = {
 	 * @return {boolean}
 	 */
 	supportsGeoLocation: memoize( function () {
-		// eslint-disable-next-line compat/compat
 		return 'geolocation' in window.navigator;
 	} )
 };
