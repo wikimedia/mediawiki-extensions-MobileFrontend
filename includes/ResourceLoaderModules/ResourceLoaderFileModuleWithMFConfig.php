@@ -14,7 +14,6 @@ use Xml;
 class ResourceLoaderFileModuleWithMFConfig extends ResourceLoaderFileModule {
 	/** @inheritDoc */
 	public function getScript( ResourceLoaderContext $context ) {
-		// @phan-suppress-next-line SecurityCheck-DoubleEscaped This currently works 🤷🏽‍♂️
 		return Xml::encodeJsCall( 'mw.config.set', [ $this->getConfigData() ] )
 			. parent::getScript( $context );
 	}

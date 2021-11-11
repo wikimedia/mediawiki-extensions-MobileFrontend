@@ -64,6 +64,21 @@ mfExtend( Skin, View, {
 	},
 
 	/**
+	 * @throws {Error} if mediawiki message is in unexpected format.
+	 * @return {JQuery.Object} a list of links
+	 */
+	getLicenseLinks: function () {
+		const mobileLicense = mw.message( 'mobile-frontend-license-links' );
+		const mobileMsgExists = mobileLicense.exists() && mobileLicense.text();
+		const userLanguage = mw.config.get( 'wgUserLanguage' );
+		if ( userLanguage === 'qqx' ) {
+			// Special handling for qqx code so we can easily debug what's going on here.
+			return mobileLicense.parseDom();
+		} else {
+			return mobileMsgExists ? mobileLicense.parseDom() : this.$el.find( '#footer-info-copyright a' ).clone();
+		}
+	},
+	/**
 	 * Returns the appropriate license message including links/name to
 	 * terms of use (if any) and license page
 	 *
@@ -73,18 +88,19 @@ mfExtend( Skin, View, {
 	 */
 	getLicenseMsg: function () {
 		var licenseMsg,
-			mfLicense = mw.config.get( 'wgMFLicense' ),
-			licensePlural = mw.language.convertNumber( mfLicense.plural );
+			$licenseLinks = this.getLicenseLinks();
 
-		if ( mfLicense.link ) {
-			var $licenseLinks = this.parseHTML( mfLicense.link );
+		if ( $licenseLinks.length ) {
+			const licensePlural = mw.language.convertNumber(
+				$licenseLinks.filter( 'a' ).length
+			);
 
 			if ( this.$el.find( '#footer-places-terms-use' ).length > 0 ) {
+
 				var $termsLink = mw.message(
 					'mobile-frontend-editor-terms-link',
 					this.$el.find( '#footer-places-terms-use a' ).attr( 'href' )
 				).parseDom();
-
 				licenseMsg = mw.message(
 					'mobile-frontend-editor-licensing-with-terms',
 					$termsLink,

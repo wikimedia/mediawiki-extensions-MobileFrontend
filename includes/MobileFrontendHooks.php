@@ -522,8 +522,6 @@ class MobileFrontendHooks {
 				'tiny' => MobilePage::TINY_IMAGE_WIDTH,
 				'small' => MobilePage::SMALL_IMAGE_WIDTH,
 			],
-			// Skin.js
-			'wgMFLicense' => MobileFrontendSkinHooks::getLicense( 'editor' ),
 			'wgMFEnableJSConsoleRecruitment' => $config->get( 'MFEnableJSConsoleRecruitment' ),
 			// Browser.js
 			'wgMFDeviceWidthTablet' => self::DEVICE_WIDTH_TABLET,
