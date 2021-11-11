@@ -5,7 +5,9 @@
 			"Joao Xavier"
 		]
 	},
+	"mobile-frontend-changeslist-nocomment": "sen rezumo pri redakturo",
 	"mobile-frontend-copyright": "La kontenajo esas disponebla sub $1, ecepte kande kontree mencionata.",
+	"mobile-frontend-diffview-bytesadded": "juntesis $1 {{PLURAL:$1|bicoko*|bicoki*}}",
 	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|redakturo|redakturi}}",
 	"mobile-frontend-diffview-title": "Modifikuri",
 	"mobile-frontend-editor-blocked-drawer-title": "Vu impedesis pri redaktar {{SITENAME}}",
@@ -60,5 +62,6 @@
 	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions-description": "Savez pri la temo di la pagino, lektanta kurta deskriptado infre la titulo",
 	"mobile-frontend-amc-outreach-intro": "Prizentado di avancita modo",
 	"mobile-frontend-amc-outreach-description": "L`avancita modo provizas plusa resursi pri kronologio en la pagini, listo di pagini vigilata, recenta modifikuri, ed altra utensili por smartfoni*.",
+	"mobile-frontend-amc-outreach-enable": "Permisez avancata funcioni",
 	"mobile-frontend-amc-outreach-enabled-message": "Avancita modo nun esas uzebla. Vu povas nekapabligar ol en vua ajusti."
 }
