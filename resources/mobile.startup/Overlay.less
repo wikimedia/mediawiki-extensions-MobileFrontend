@@ -147,7 +147,7 @@
 .overlay-header {
 	.overlay-title {
 		// Expand the title as wide as possible to limit the size of the
-		// header-action. (Both are displayed as table-cells.)
+		// header-action.
 		width: 100%;
 	}
 
@@ -172,8 +172,6 @@
 			background-color: @color-primary;
 			color: @color-base--inverted;
 			width: auto;
-			display: table-cell;
-			vertical-align: middle;
 
 			&:not( .mw-ui-icon-element ) {
 				padding: 0 1.2em;
@@ -219,11 +217,6 @@
 			// required for text-overflow to work
 			max-width: 1em;
 		}
-	}
-
-	> ul, > div {
-		display: table-cell;
-		vertical-align: middle;
 	}
 
 	> ul {
