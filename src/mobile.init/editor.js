@@ -410,7 +410,7 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 			editorOverride = 'SourceEditor';
 		}
 		// else: action=edit, for which we allow the default to take effect
-		fragment = '#/editor/' + ( mw.util.getParamValue( 'section' ) || ( mw.util.getParamValue( 'action' ) === 'edit' && 'all' ) || '0' );
+		fragment = '#/editor/' + ( mw.util.getParamValue( 'section' ) || ( mw.util.getParamValue( 'action' ) === 'edit' ? 'all' : '0' ) );
 		// eslint-disable-next-line no-restricted-properties
 		if ( window.history && history.pushState ) {
 			uri = mw.Uri();
