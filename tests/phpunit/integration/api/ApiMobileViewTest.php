@@ -554,11 +554,11 @@ Text 2
 	public function testImageScaling() {
 		$api = new ApiMobileView( new ApiMain( new RequestContext() ), 'mobileview' );
 		$scale = $this->getNonPublicMethod( ApiMobileView::class, 'getScaledDimen' );
-		$this->assertEquals( $scale->invokeArgs( $api, [ 100, 50, 20 ] ), 10, 'Check scaling downward' );
-		$this->assertEquals( $scale->invokeArgs( $api, [ 50, 100, 20 ] ), 40, 'Check scaling downward' );
-		$this->assertEquals( $scale->invokeArgs( $api, [ 100, 50, 200 ] ), 100, 'Check scaling upward' );
-		$this->assertEquals( $scale->invokeArgs( $api, [ 50, 100, 200 ] ), 400, 'Check scaling upward' );
-		$this->assertEquals( $scale->invokeArgs( $api, [ 0, 1, 2 ] ), 0, 'Check divide by zero' );
+		$this->assertSame( 10, $scale->invokeArgs( $api, [ 100, 50, 20 ] ), 'Check scaling downward' );
+		$this->assertSame( 40, $scale->invokeArgs( $api, [ 50, 100, 20 ] ), 'Check scaling downward' );
+		$this->assertSame( 100, $scale->invokeArgs( $api, [ 100, 50, 200 ] ), 'Check scaling upward' );
+		$this->assertSame( 400, $scale->invokeArgs( $api, [ 50, 100, 200 ] ), 'Check scaling upward' );
+		$this->assertSame( 0, $scale->invokeArgs( $api, [ 0, 1, 2 ] ), 'Check divide by zero' );
 	}
 
 	/**
