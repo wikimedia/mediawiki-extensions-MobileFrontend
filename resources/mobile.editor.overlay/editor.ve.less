@@ -13,9 +13,15 @@
 		// Also display:table causes CE issues in Mobile Safari (T202991)
 		h1, h2, h3, h4, h5, h6 {
 			display: block;
+
 			// Match section edit icon from read mode
 			// TODO: Move this to a Minerva-specific file
-			min-height: 24px;
+			&:before {
+				content: '';
+				display: inline-block;
+				vertical-align: middle;
+				min-height: 22px;
+			}
 
 			// MinervaNeue applies display:table-cell to these spans, aiming for the
 			// edit-pencils but spilling onto this. It's easier to undo that here than
@@ -24,6 +30,13 @@
 			> span {
 				display: inline;
 			}
+		}
+
+		h2:before {
+			// Match collapse icon from read mode. Collapse icons can be assinged
+			// to other heading levels (e.g. h1), however h2 is the most likely.
+			// TODO: Move this to a Minerva-specific file
+			min-height: 34px;
 		}
 	}
 
