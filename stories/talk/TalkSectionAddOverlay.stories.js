@@ -1,6 +1,6 @@
 import TalkSectionAddOverlay from '../../src/mobile.talk.overlays/TalkSectionAddOverlay';
 import '../../resources/mobile.talk.overlays/talk.less';
-import '../../.storybook/resolve-less-imports/mediawiki.ui/components/inputs.less';
+import '../../.storybook/resolve-less-imports/mediawiki.ui.input/input.less';
 import { action } from '@storybook/addon-actions';
 
 export default {

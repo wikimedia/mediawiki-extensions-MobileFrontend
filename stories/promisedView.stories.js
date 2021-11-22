@@ -1,7 +1,7 @@
 import promisedView from '../src/mobile.startup/promisedView';
 import View from '../src/mobile.startup/View';
 
-import '../.storybook/resolve-less-imports/mediawiki.ui/components/buttons.less';
+import '../.storybook/resolve-less-imports/mediawiki.ui.button/button.less';
 
 export default {
 	title: 'promisedView'

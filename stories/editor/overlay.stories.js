@@ -1,6 +1,6 @@
 import '../../node_modules/oojs-ui/dist/oojs-ui-core.js';
 import '../../node_modules/oojs-ui/dist/oojs-ui-toolbars.js';
-import '../../.storybook/resolve-less-imports/mediawiki.ui/components/inputs.less';
+import '../../.storybook/resolve-less-imports/mediawiki.ui.input/input.less';
 import { wrap } from '../utils';
 import SourceEditorOverlay from '../../src/mobile.editor.overlay/SourceEditorOverlay';
 import VisualEditorOverlay from '../../src/mobile.editor.overlay/VisualEditorOverlay';

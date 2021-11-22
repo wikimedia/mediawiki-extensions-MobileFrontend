@@ -1,5 +1,5 @@
 import Anchor from '../src/mobile.startup/Anchor';
-import '../.storybook/resolve-less-imports/mediawiki.ui/components/anchors.less';
+import '../.storybook/resolve-less-imports/mediawiki.ui.anchor/anchor.less';
 
 export default {
 	title: 'Anchor'

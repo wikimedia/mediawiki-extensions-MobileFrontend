@@ -24,10 +24,12 @@ curl -sSL "https://en.wikipedia.org/w/load.php?modules=mediawiki.ui.icon&debug=t
 
 
 # mediawiki ui
-mkdir -p .storybook/resolve-less-imports/mediawiki.ui/components
-curl -sSL "https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/core/+/master/resources/src/mediawiki.ui/components/buttons.less?format=TEXT" | base64 --decode > .storybook/resolve-less-imports/mediawiki.ui/components/buttons.less
-curl -sSL "https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/core/+/master/resources/src/mediawiki.ui/components/anchors.less?format=TEXT" | base64 --decode > .storybook/resolve-less-imports/mediawiki.ui/components/anchors.less
-curl -sSL "https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/core/+/master/resources/src/mediawiki.ui/components/inputs.less?format=TEXT" | base64 --decode > .storybook/resolve-less-imports/mediawiki.ui/components/inputs.less
+mkdir -p .storybook/resolve-less-imports/mediawiki.ui.button
+mkdir -p .storybook/resolve-less-imports/mediawiki.ui.anchor
+mkdir -p .storybook/resolve-less-imports/mediawiki.ui.input
+curl -sSL "https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/core/+/master/resources/src/mediawiki.ui.button/button.less?format=TEXT" | base64 --decode > .storybook/resolve-less-imports/mediawiki.ui.button/button.less
+curl -sSL "https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/core/+/master/resources/src/mediawiki.ui.anchor/anchor.less?format=TEXT" | base64 --decode > .storybook/resolve-less-imports/mediawiki.ui.anchor/anchor.less
+curl -sSL "https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/core/+/master/resources/src/mediawiki.ui.input/input.less?format=TEXT" | base64 --decode > .storybook/resolve-less-imports/mediawiki.ui.input/input.less
 
 # mediawiki skinning modules
 mkdir -p .storybook/mediawiki.skinning

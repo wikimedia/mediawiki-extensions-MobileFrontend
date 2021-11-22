@@ -1,7 +1,7 @@
 import AddTopicForm from '../../src/mobile.talk.overlays/AddTopicForm';
 import '../../resources/mobile.talk.overlays/talk.less';
 import '../../resources/mobile.startup/panel.less';
-import '../../.storybook/resolve-less-imports/mediawiki.ui/components/inputs.less';
+import '../../.storybook/resolve-less-imports/mediawiki.ui.input/input.less';
 
 import { action } from '@storybook/addon-actions';
 
