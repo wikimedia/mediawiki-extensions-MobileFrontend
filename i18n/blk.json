@@ -106,7 +106,7 @@
 	"mobile-frontend-languages-structured-overlay-no-results": "ဘာႏသာႏငဝ်းငွါဖုံႏ လꩻနွောင်ꩻတဝ်း",
 	"mobile-frontend-languages-structured-overlay-no-results-body": "နာꩻကအဝ်ႏထိုမ်ႏထွားဒါႏ ဘာႏသာႏငဝ်းငွါနဝ်ꩻ လꩻနွောင်ꩻတဝ်းသွူ။",
 	"mobile-frontend-last-modified-date": "အဆုဲင်ꩻသွတ်ꩻ ခြပ်ချော်ꩻခါꩻ $1၊ $2 အခိန်ႏကိုသွူ။",
-	"mobile-frontend-last-modified-with-user-days": "{{PLURAL:$5|[$6 $2]|0=သေတဝ်းအမိဉ်ꩻ ကေားသုင်ꩻသားတဖြာꩻ}} [$4 အဆုဲင်ꩻသွတ် {{GENDER:$1|ခြပ်ချော်ꩻခါꩻ လꩻလဲဉ်း}}]  {{PLURAL:$3|$3 နီꩻ|$3 နီꩻသွူ}}",
+	"mobile-frontend-last-modified-with-user-days": "{{PLURAL:$5|[$6 $2]|0=သေတဝ်းအမိဉ်ꩻ ကေားသုင်ꩻသားတဖြာꩻ}} [$4 အဆုဲင်ꩻသွတ်ꩻ {{GENDER:$1|ခြပ်ချော်ꩻခါꩻ လꩻလဲဉ်း}}]  {{PLURAL:$3|$3 နီꩻ|$3 နီꩻသွူ}}",
 	"mobile-frontend-last-modified-with-user-hours": "{{PLURAL:$5|[$6 $2]|0=သေတဝ်းအမိဉ်ꩻ ကေားသုင်ꩻသားတဖြာꩻ}} [$4 အဆုဲင်ꩻသွတ်ꩻ {{GENDER:$1|ခြပ်ချော်ꩻခါꩻ လꩻလဲဉ်း}}] {{PLURAL:$3|$3 နားရီႏ|$3 နားရီႏသွူ}}",
 	"mobile-frontend-last-modified-with-user-just-now": "{{PLURAL:$4|[$5 $2]|0=သေတဝ်းအမိဉ်ꩻ ကေားသုင်ꩻသားတဖြာꩻ}} အဆုဲင်ꩻသွတ်ꩻ  [$3 စငါခြပ်ချော်ꩻဗွော့ꩻ {{GENDER:$1|ယိုခါဟွောန်ႏသွူ}}]",
 	"mobile-frontend-last-modified-with-user-minutes": "{{PLURAL:$5|[$6 $2]|0=သေတဝ်းအမိဉ်ꩻ ကေားသုင်ꩻသားတဖြာꩻ}} [$4 အဆုဲင်ꩻသွတ်ꩻ {{GENDER:$1|ခြပ်ချော်ꩻခါꩻ လꩻလဲဉ်း}}] {{PLURAL:$3|$3 မိနိစ်|$3 မိနိစ်သွူ}}",
