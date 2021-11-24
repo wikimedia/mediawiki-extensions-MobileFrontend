@@ -39,7 +39,8 @@
 			"Wellwisher",
 			"Yekrats",
 			"Ата",
-			"아라"
+			"아라",
+			"Ajeje Brazorf"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "AbuseFilter extension rule variable that allows distinguishing edits based on if they have been made using the editor of MobileFrontend or not.",
@@ -82,7 +83,7 @@
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Header for the block reason message that appears when a blocked user attempts to edit.",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "Header for the block creator that appears when a blocked user attempts to edit. \nParameters:\n* $1 - user's gender",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "Header for the block expiry that appears when a blocked user attempts to edit.",
-	"mobile-frontend-editor-blocked-drawer-help": "Label for the help link in the drawer that appears when a blocked user attempts to edit.\n{{Identical|Details}}",
+	"mobile-frontend-editor-blocked-drawer-help": "Label for the help link in the drawer that appears when a blocked user attempts to edit.\n{{Identical|Detail}}",
 	"mobile-frontend-editor-generic-block-reason": "Generic error message when we cannot parse the reason why page is blocked from editing. Should not include full stop as used by {{msg-mw|mobile-frontend-editor-blocked-info}}.",
 	"mobile-frontend-editor-cancel": "Caption for cancel button on edit form.\n{{Identical|Cancel}}",
 	"mobile-frontend-editor-cancel-confirm": "Question asking user if they are positive about abandoning unsaved edit.",

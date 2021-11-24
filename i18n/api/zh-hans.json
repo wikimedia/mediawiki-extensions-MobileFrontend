@@ -3,7 +3,8 @@
 		"authors": [
 			"D41D8CD98F",
 			"Hudafu",
-			"Liuxinyu970226"
+			"Liuxinyu970226",
+			"Xzonn"
 		]
 	},
 	"apihelp-mobileview-description": "返回移动浏览需要的数据。",
@@ -37,5 +38,6 @@
 	"apierror-mobilefrontend-badidtitle": "错误的修订id/标题组合。",
 	"apierror-mobilefrontend-toomanysizeparams": "<var>thumbsize</var>与<var>thumbwidth</var>和<var>thumbheight</var>互斥。",
 	"apiwarn-mobilefrontend-ignoringnoheadings": "<var>noheadings</var>在首页上没有意义，予以忽略。",
+	"apiwarn-mobilefrontend-mobileviewdeprecated": "此API已弃用。有关详细信息，请参阅T186627。",
 	"apiwarn-mobilefrontend-sectionsnotfound": "找不到{{PLURAL:$2|章节}}$1。"
 }

@@ -5,7 +5,8 @@
 			"Mechanizatar",
 			"Mikalai Udodau",
 			"Дзяніс Тутэйшы",
-			"Чаховіч Уладзіслаў"
+			"Чаховіч Уладзіслаў",
+			"ZlyiLev"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ці рэдагуе ўдзельнік праз мабільны інтэрфейс",
@@ -31,6 +32,8 @@
 	"mobile-frontend-last-modified-date": "Апошнія змены $1 а $2",
 	"mobile-frontend-main-menu-settings-heading": "Настройкі",
 	"mobile-frontend-missing-image": "Відарыс",
+	"mobile-frontend-nearby-requirements": "Прабачце! Ваш браўзер не падтрымлівае функцыю {{SITENAME}} Побач.",
+	"mobile-frontend-nearby-requirements-guidance": "Паспрабуйце іншы браўзер або ўключыце JavaScript, калі ён выключаны.",
 	"mobile-frontend-nearby-title": "Паблізу",
 	"mobile-frontend-news-items": "Навіны",
 	"mobile-frontend-overlay-close": "Закрыць",

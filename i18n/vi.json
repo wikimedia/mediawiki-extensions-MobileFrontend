@@ -16,7 +16,8 @@
 			"Trần Nguyễn Minh Huy",
 			"Vinhtantran",
 			"Withoutaname",
-			"පසිඳු කාවින්ද"
+			"පසිඳු කාවින්ද",
+			"Ioe2015"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Người dùng có sửa đổi qua giao diện di động hay không",
@@ -138,7 +139,7 @@
 	"mobile-frontend-last-modified-with-user-months": "[$4 {{GENDER:$1}}Sửa đổi lần cuối cùng cách đây $3 tháng] bởi {{PLURAL:$5|[$6 $2]|0=một người dùng vô danh}}.",
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 {{GENDER:$1}}Sửa đổi lần cuối cùng cách đây $3 giây] bởi {{PLURAL:$5|[$6 $2]|0=một người dùng vô danh}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 {{GENDER:$1}}Sửa đổi lần cuối cùng cách đây $3 năm] bởi {{PLURAL:$5|[$6 $2]|0=một người dùng vô danh}}",
-	"mobile-frontend-main-menu": "Trình đơn chính",
+	"mobile-frontend-main-menu": "Bảng chọn chính",
 	"mobile-frontend-main-menu-settings-heading": "Tùy chọn",
 	"mobile-frontend-media-details": "Chi tiết",
 	"mobile-frontend-media-license-link": "Thông tin giấy phép",
