@@ -5,4 +5,4 @@
 # in MediaWiki core 'resources/src/startup/startup.js'.
 
 extends browserslist-config-wikimedia/basic
-not IE <= 10
+
