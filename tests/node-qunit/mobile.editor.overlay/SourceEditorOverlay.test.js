@@ -84,7 +84,7 @@ QUnit.test( '#initialize, blocked user', function ( assert ) {
 		title: 'test.css'
 	}, dBlockedContent ).getLoadingPromise().then( () => {}, function () {
 		done();
-		assert.ok(
+		assert.true(
 			messageStub.calledWithMatch( {
 				partial: false,
 				creator: {
@@ -153,7 +153,7 @@ QUnit.test( '#initialize, as anonymous', function ( assert ) {
 	// SourceEditorOverlay triggers a call to _loadContent so will always start an async request.
 	// Make this test async to ensure it finishes and doesn't cause side effects to other functions.
 	return getContentStub().then( function () {
-		assert.ok( editorOverlay.$anonWarning.length > 0, 'Editorwarning (IP will be saved) visible.' );
-		assert.ok( editorOverlay.$el.find( '.anonymous' ).length > 0, 'Continue login has a second class.' );
+		assert.true( editorOverlay.$anonWarning.length > 0, 'Editorwarning (IP will be saved) visible.' );
+		assert.true( editorOverlay.$el.find( '.anonymous' ).length > 0, 'Continue login has a second class.' );
 	} );
 } );

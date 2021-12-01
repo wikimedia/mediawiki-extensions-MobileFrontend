@@ -36,7 +36,7 @@ QUnit.test( 'Check comment box for logged in users', function ( assert ) {
 		section: 'Test'
 	} );
 
-	assert.ok( overlay.$el.find( '.comment' ).length > 0, 'There is a visible comment box' );
+	assert.true( overlay.$el.find( '.comment' ).length > 0, 'There is a visible comment box' );
 } );
 
 QUnit.test( 'Check disabled property on textarea', function ( assert ) {
@@ -71,7 +71,7 @@ QUnit.test( 'Check api request on save', function ( assert ) {
 	overlay.onSaveClick();
 
 	return deferred.then( function () {
-		assert.ok( spy.calledWith( 'csrf', {
+		assert.true( spy.calledWith( 'csrf', {
 			action: 'edit',
 			title: 'Talk:Test',
 			section: 1,
@@ -106,5 +106,5 @@ QUnit.test( 'Check comment box for logged out users', function ( assert ) {
 		section: 'Test'
 	} );
 
-	assert.ok( overlay.$el.find( '.comment' ).length > 0, 'There is a visible comment box' );
+	assert.true( overlay.$el.find( '.comment' ).length > 0, 'There is a visible comment box' );
 } );

@@ -101,7 +101,7 @@ QUnit.module( 'MobileFrontend CtaDrawer.js', {
 					.replace( /\n/g, ' ' ).replace( /\s+/g, '\\s*' ) );
 
 			sinon.assert.match( subject.$el.find( '.drawer' ).get( 0 ).outerHTML.replace( /\n/g, ' ' ), html );
-			assert.ok( true );
+			assert.true( true );
 		} );
 
 		QUnit.test( 'overrides', function ( assert ) {
@@ -122,7 +122,7 @@ QUnit.module( 'MobileFrontend CtaDrawer.js', {
 					.overrideURLs.replace( /\n/g, ' ' ).replace( /\s+/g, '\\s*' ) );
 
 			sinon.assert.match( subject.$el.find( '.drawer' ).get( 0 ).outerHTML.replace( /\n/g, ' ' ), html );
-			assert.ok( true );
+			assert.true( true );
 		} );
 	} );
 } );

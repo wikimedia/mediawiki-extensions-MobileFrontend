@@ -7,13 +7,13 @@ const assert = require( 'assert' ),
 const waitForPropagation = ( timeMs ) => {
 	// wait 2 seconds so the change can propogate.
 	const d = new Date();
-	browser.waitUntil( () => new Date() - d > timeMs );
+	browser.waitUntil( () => Date.now() - d > timeMs );
 };
 
 const theTextOfTheFirstHeadingShouldContain = ( title ) => {
 	ArticlePage.first_heading_element.waitForDisplayed();
 	assert.strictEqual(
-		ArticlePage.first_heading_element.getText().indexOf( title ) > -1,
+		ArticlePage.first_heading_element.getText().includes( title ),
 		true
 	);
 };
@@ -64,7 +64,7 @@ const pageExists = ( title ) => {
 	return createPage( title, 'Page created by Selenium browser test.' ).then( () => {
 		const d = new Date();
 		// wait 2 seconds so the change can propogate.
-		browser.waitUntil( () => new Date() - d > 2000 );
+		browser.waitUntil( () => Date.now() - d > 2000 );
 	} );
 };
 

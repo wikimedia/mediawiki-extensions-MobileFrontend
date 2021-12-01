@@ -57,7 +57,7 @@ QUnit.test( 'docReady()', function ( assert ) {
 	const done = assert.async();
 
 	util.docReady( () => {
-		assert.ok( 'docReady calls the callback eventually' );
+		assert.true( true, 'docReady calls the callback eventually' );
 		done();
 	} );
 } );

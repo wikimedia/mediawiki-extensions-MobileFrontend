@@ -64,7 +64,7 @@ QUnit.test( 'In watched mode', function ( assert ) {
 	// Avoid API requests due to scroll events (https://phabricator.wikimedia.org/T116258)
 	pl.scrollEndEventEmitter.disable();
 
-	assert.ok( stub.get.notCalled, 'Callback avoided' );
+	assert.true( stub.get.notCalled, 'Callback avoided' );
 	assert.strictEqual( pl.$el.find( '.watch-this-article' ).length, 3, '3 articles have watch stars...' );
 	assert.strictEqual( pl.$el.find( '.' + watchIconName ).length, 3, '...and all are marked as watched.' );
 } );

@@ -46,7 +46,7 @@ QUnit.test( 'ImageGateway#getThumb (missing page)', function ( assert ) {
 	assert.rejects(
 		gateway.getThumb( 'Missing' ),
 		function ( err ) {
-			return err.message.indexOf( 'The API failed' ) !== -1;
+			return err.message.includes( 'The API failed' );
 		},
 		'A missing page throws an error which the client must handle'
 	);

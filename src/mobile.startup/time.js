@@ -32,7 +32,7 @@ function timeAgo( timestampDelta ) {
  * @return {{value: number, unit: string}}
  */
 function getTimeAgoDelta( timestamp ) {
-	var currentTimestamp = Math.round( new Date().getTime() / 1000 );
+	var currentTimestamp = Math.round( Date.now() / 1000 );
 
 	return timeAgo( currentTimestamp - timestamp );
 }

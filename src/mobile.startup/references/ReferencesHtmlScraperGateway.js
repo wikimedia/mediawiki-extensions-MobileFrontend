@@ -32,7 +32,7 @@ mfExtend( ReferencesHtmlScraperGateway, ReferencesGateway, {
 		var $el, $ol, $parent,
 			result = util.Deferred();
 
-		$el = $container.find( '#' + util.escapeSelector( id.substr( 1 ) ) );
+		$el = $container.find( '#' + util.escapeSelector( id.slice( 1 ) ) );
 		if ( $el.length ) {
 			// This finds either the inner <ol class="mw-extended-references">, or the outer
 			// <ol class="references">

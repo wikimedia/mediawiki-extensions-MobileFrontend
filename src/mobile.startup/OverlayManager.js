@@ -77,7 +77,8 @@ OverlayManager.prototype = {
 		}
 	},
 
-	/** Attach overlay to DOM
+	/**
+	 * Attach overlay to DOM
 	 *
 	 * @memberof OverlayManager
 	 * @instance

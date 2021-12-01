@@ -53,9 +53,9 @@ QUnit.test( 'AddTopicForm', function ( assert ) {
 	// form without an input
 	try {
 		formNoInputEvent.$el.find( 'textarea' ).trigger( 'input' );
-		assert.ok( true, 'If form has no onTextInput event handler does not execute' );
+		assert.true( true, 'If form has no onTextInput event handler does not execute' );
 	} catch ( e ) {
-		assert.ok( false, 'If form has no onTextInput no exception is meant to be thrown' );
+		assert.true( false, 'If form has no onTextInput no exception is meant to be thrown' );
 	}
 	assert.strictEqual( form.$el.find( 'input' ).val(), ' Subject', 'Subject input created' );
 	assert.strictEqual( form.$el.find( 'textarea' ).val(), 'Body', 'textarea created' );

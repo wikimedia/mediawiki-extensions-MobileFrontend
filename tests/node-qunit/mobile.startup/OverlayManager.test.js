@@ -60,21 +60,18 @@ QUnit.module( 'MobileFrontend mobile.startup/OverlayManager', {
 } );
 
 QUnit.test( '#getSingleton (hash present and overlay not managed)', function ( assert ) {
-	// eslint-disable-next-line no-restricted-properties
 	const spy = sandbox.spy( window.history, 'replaceState' );
 
 	sandbox.stub( fakeRouter, 'getPath' ).returns( '#/editor/0' );
 	const singleton = OverlayManager.getSingleton();
-	assert.ok( singleton instanceof OverlayManager, 'singleton exists' );
+	assert.true( singleton instanceof OverlayManager, 'singleton exists' );
 	assert.strictEqual( spy.calledOnce, true,
 		'If a page is loaded with a hash fragment a new entry is placed before it to allow the user to go back.' );
 } );
 
 QUnit.test( '#getSingleton (hash present and overlay managed)', function ( assert ) {
 	// replace the current URL before the test
-	// eslint-disable-next-line no-restricted-properties
 	window.history.replaceState( OverlayManager.test.MANAGED_STATE, null, window.location.href );
-	// eslint-disable-next-line no-restricted-properties
 	const spy = sandbox.spy( window.history, 'replaceState' );
 
 	sandbox.stub( fakeRouter, 'getPath' ).returns( '#/editor/0' );
@@ -85,7 +82,7 @@ QUnit.test( '#getSingleton (hash present and overlay managed)', function ( asser
 
 QUnit.test( '#getSingleton', function ( assert ) {
 	const singleton = OverlayManager.getSingleton();
-	assert.ok( singleton instanceof OverlayManager, 'singleton exists' );
+	assert.true( singleton instanceof OverlayManager, 'singleton exists' );
 	assert.strictEqual( singleton, OverlayManager.getSingleton(), 'same object returned each time' );
 } );
 
@@ -213,7 +210,7 @@ QUnit.test( 'route with params', function ( assert ) {
 		path: 'sam/123'
 	} );
 
-	assert.ok( factoryStub.calledWith( '123' ), 'pass params from the route' );
+	assert.true( factoryStub.calledWith( '123' ), 'pass params from the route' );
 } );
 
 QUnit.test( 'hide when route changes', function ( assert ) {
@@ -236,8 +233,8 @@ QUnit.test( 'hide when route changes', function ( assert ) {
 	} );
 
 	assert.strictEqual( fakeOverlay.hide.callCount, 2, 'hide overlay' );
-	assert.ok( fakeOverlay.hide.getCall( 0 ).notCalledWith( true ), 'don\'t force hide (first)' );
-	assert.ok( fakeOverlay.hide.getCall( 1 ).notCalledWith( true ), 'don\'t force hide (second)' );
+	assert.true( fakeOverlay.hide.getCall( 0 ).notCalledWith( true ), 'don\'t force hide (first)' );
+	assert.true( fakeOverlay.hide.getCall( 1 ).notCalledWith( true ), 'don\'t force hide (second)' );
 } );
 
 QUnit.test( 'go back (change route) if overlay hidden but not by route change', function ( assert ) {

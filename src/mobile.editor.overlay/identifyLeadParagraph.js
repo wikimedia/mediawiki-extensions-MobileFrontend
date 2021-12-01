@@ -7,8 +7,6 @@
  * @return {Node|null} The lead paragraph
  */
 module.exports = function identifyLeadParagraph( $body ) {
-	var $paragraphs, i, node;
-
 	// Keep in sync with MoveLeadParagraphTransform::isNotEmptyNode()
 	function isNotEmptyNode( node ) {
 		// Ignore VE whitespace characters
@@ -31,11 +29,11 @@ module.exports = function identifyLeadParagraph( $body ) {
 		return true;
 	}
 
-	$paragraphs = $body.children( 'p' );
-	for ( i = 0; i < $paragraphs.length; i++ ) {
-		node = $paragraphs[ i ];
-		if ( !isNonLeadParagraph( node ) ) {
-			return node;
+	var $paragraphs = $body.children( 'p' );
+	for ( var i = 0; i < $paragraphs.length; i++ ) {
+		var p = $paragraphs[ i ];
+		if ( !isNonLeadParagraph( p ) ) {
+			return p;
 		}
 	}
 	return null;

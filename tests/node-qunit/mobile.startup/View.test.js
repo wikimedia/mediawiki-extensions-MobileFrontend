@@ -57,7 +57,7 @@ QUnit.test( 'View, jQuery proxy functions', function ( assert ) {
 	].forEach( function ( prop ) {
 		const stub = sandbox.stub( view.$el, prop );
 		view[ prop ]( 'test', 1 );
-		assert.ok( stub.calledWith( 'test', 1 ) );
+		assert.true( stub.calledWith( 'test', 1 ) );
 		stub.restore();
 	} );
 } );
@@ -105,7 +105,7 @@ QUnit.test( 'View#delegateEvents', function ( assert ) {
 					events: {
 						'click p span': function ( ev ) {
 							ev.preventDefault();
-							assert.ok( true, 'Span was clicked and handled' );
+							assert.true( true, 'Span was clicked and handled' );
 						},
 						'click p': 'onParagraphClick',
 						click: 'onClick'
@@ -120,11 +120,11 @@ QUnit.test( 'View#delegateEvents', function ( assert ) {
 		template: util.template( '<p><span>test</span></p>' ),
 		onParagraphClick: function ( ev ) {
 			ev.preventDefault();
-			assert.ok( true, 'Paragraph was clicked and handled' );
+			assert.true( true, 'Paragraph was clicked and handled' );
 		},
 		onClick: function ( ev ) {
 			ev.preventDefault();
-			assert.ok( true, 'View was clicked and handled' );
+			assert.true( true, 'View was clicked and handled' );
 		}
 	} );
 
@@ -169,8 +169,8 @@ QUnit.test( 'View#render (with isTemplateMode)', function ( assert ) {
 	view.$el.appendTo( $parent );
 	// and then do a second render...
 	view.render( { text: 'hello' } );
-	assert.ok( view.$el.hasClass( 'foo' ) );
-	assert.ok( view2.$el.hasClass( 'bar' ) );
+	assert.true( view.$el.hasClass( 'foo' ) );
+	assert.true( view2.$el.hasClass( 'bar' ) );
 	assert.strictEqual( textFirstRun, '', 'first run, no text defined' );
 	assert.strictEqual( view.$el.text(), 'hello', 'second run, text has been defined' );
 	assert.strictEqual( view.$el.parent( $parent ).length, 1,

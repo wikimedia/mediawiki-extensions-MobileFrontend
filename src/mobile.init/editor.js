@@ -133,7 +133,7 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 	overlayManager.add( editorPath, function ( sectionId ) {
 		var
 			scrollTop = window.pageYOffset,
-			$content = $( '#mw-content-text' ),
+			$contentText = $( '#mw-content-text' ),
 			editorOptions = {
 				overlayManager: overlayManager,
 				currentPageHTMLParser: currentPageHTMLParser,
@@ -146,8 +146,8 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 				isNewPage: isNewPage,
 				editCount: editCount,
 				oldId: mw.util.getParamValue( 'oldid' ),
-				contentLang: $content.attr( 'lang' ),
-				contentDir: $content.attr( 'dir' ),
+				contentLang: $contentText.attr( 'lang' ),
+				contentDir: $contentText.attr( 'dir' ),
 				sessionId: mw.config.get( 'wgWMESchemaEditAttemptStepSessionId' ) ||
 					mw.Uri().query.editingStatsId ||
 					user.generateRandomSessionId()
@@ -392,11 +392,11 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 
 	$( '#ca-edit a' ).prop( 'href', function ( i, href ) {
 		try {
-			var uri = new mw.Uri( href );
+			var editUri = new mw.Uri( href );
 			// By default the editor opens section 0 (lead section), rather than the whole article.
 			// This might be changed in the future (T210659).
-			uri.query.section = '0';
-			return uri.toString();
+			editUri.query.section = '0';
+			return editUri.toString();
 		} catch ( e ) {
 			// T106244 - the href couldn't be parsed likely due to invalid UTF-8
 			return href;

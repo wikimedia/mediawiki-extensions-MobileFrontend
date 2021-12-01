@@ -22,8 +22,8 @@ module.exports = function ( options ) {
 		WATCH_CLASS = watchIcon.$el.attr( 'class' ),
 		WATCHED_CLASS = watchedIcon.$el.attr( 'class' ),
 		activeIcon = isWatched ? watchedIcon : watchIcon,
-		callback = ( $link, isWatched ) => {
-			$link.attr( 'class', isWatched ?
+		callback = ( $link, watched ) => {
+			$link.attr( 'class', watched ?
 				WATCHED_CLASS : WATCH_CLASS );
 		};
 

@@ -37,7 +37,7 @@ QUnit.test( '#constructor happyView', function ( assert ) {
 		viewSuccess = promisedView( promise );
 
 	assert.strictEqual( viewSuccess.$el.text(), '⌛', 'the view is waiting to resolve' );
-	assert.ok( viewSuccess.$el.hasClass( 'promised-view' ), 'parent element has loading class when loading' );
+	assert.true( viewSuccess.$el.hasClass( 'promised-view' ), 'parent element has loading class when loading' );
 	promise.resolve( happyView );
 	return promise.then( function () {
 		assert.strictEqual( viewSuccess.$el.attr( 'class' ), 'test', 'fully replaces its parent element with happyView\'s parent element' );
@@ -51,7 +51,7 @@ QUnit.test( '#constructor when promise rejects but not to a sadView', function (
 		viewFailure = promisedView( promise );
 
 	assert.strictEqual( viewFailure.$el.text(), '⌛', 'the view is waiting to resolve' );
-	assert.ok( viewFailure.$el.hasClass( 'promised-view' ), 'parent element has loading class when loading' );
+	assert.true( viewFailure.$el.hasClass( 'promised-view' ), 'parent element has loading class when loading' );
 
 	return promise.catch( function () {
 		assert.strictEqual( viewFailure.$el.text(), '⌛', 'the view still shows the loading icon' );
@@ -70,7 +70,7 @@ QUnit.test( '#constructor when promise rejects to a sadView', function ( assert 
 	sadView.append( '😭' );
 
 	assert.strictEqual( viewFailure.$el.text(), '⌛', 'the view is waiting to resolve' );
-	assert.ok( viewFailure.$el.hasClass( 'promised-view' ), 'parent element has loading class when loading' );
+	assert.true( viewFailure.$el.hasClass( 'promised-view' ), 'parent element has loading class when loading' );
 
 	return promise.catch( function () {
 		assert.strictEqual( viewFailure.$el.attr( 'class' ), 'error', 'fully replaces its parent element with sadView\'s parent element' );

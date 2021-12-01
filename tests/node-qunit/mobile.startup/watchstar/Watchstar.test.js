@@ -49,7 +49,7 @@ QUnit.test( 'Render a watchstar', function ( assert ) {
 
 	// position-fixed class may not have loaded and without it the toast is not visible so use
 	// a spy rather than directly testing toast element visibility
-	assert.ok( watchstarSpy.calledTwice, 'The core function was called twice.' );
-	assert.ok( watchedStar.$el.attr( 'class' ).indexOf( 'watched' ) > -1, 'Watched class is correct.' );
-	assert.strictEqual( star.$el.attr( 'class' ).indexOf( 'watched' ), -1, 'Unwatched class is correct.' );
+	assert.true( watchstarSpy.calledTwice, 'The core function was called twice.' );
+	assert.true( watchedStar.$el.attr( 'class' ).includes( 'watched' ), 'Watched class is correct.' );
+	assert.false( star.$el.attr( 'class' ).includes( 'watched' ), 'Unwatched class is correct.' );
 } );

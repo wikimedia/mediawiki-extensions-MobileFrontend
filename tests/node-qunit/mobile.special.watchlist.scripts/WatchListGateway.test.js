@@ -169,10 +169,10 @@ QUnit.test( 'loadWatchlist() loads results from the second page from last item o
 		// Let's call for the next page
 		stub.returns( util.Deferred().resolve( response ) );
 
-		return gateway.loadWatchlist().then( function ( pages ) {
+		return gateway.loadWatchlist().then( function ( pgs ) {
 			// Albert Einstein should be the first result of the next page (not removed)
-			assert.strictEqual( pages.length, 7, 'Albert should be in the results' );
-			assert.strictEqual( pages[0].displayTitle, 'Albert Einstein', 'First item should be Albert' );
+			assert.strictEqual( pgs.length, 7, 'Albert should be in the results' );
+			assert.strictEqual( pgs[0].displayTitle, 'Albert Einstein', 'First item should be Albert' );
 		} );
 	} );
 } );

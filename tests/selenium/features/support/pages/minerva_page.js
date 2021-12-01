@@ -40,7 +40,7 @@ class MinervaPage extends Page {
 		const currentPage = browser.getUrl(),
 			// some cookies might require a valid expiry date.
 			// setting to 1 hour from now.
-			cookieExpiryTime = new Date().getTime() + ( 3600 * 1000 );
+			cookieExpiryTime = Date.now() + ( 3600 * 1000 );
 
 		if ( !currentPage.includes( browser.options.baseUrl ) ) {
 			this.open();

@@ -79,7 +79,7 @@ function storeSectionToggleState( $heading, page ) {
 
 	if ( headline && expandedSections[page.title] ) {
 		if ( isSectionOpen ) {
-			expandedSections[page.title][headline] = ( new Date() ).getTime();
+			expandedSections[page.title][headline] = Date.now();
 		} else {
 			delete expandedSections[page.title][headline];
 		}
@@ -120,18 +120,18 @@ function expandStoredSections( toggler, $container, page ) {
  * @param {Page} page
  */
 function cleanObsoleteStoredSections( page ) {
-	var now = ( new Date() ).getTime(),
+	var now = Date.now(),
 		expandedSections = getExpandedSections( page ),
 		// the number of days between now and the time a setting was saved
 		daysDifference;
-	Object.keys( expandedSections ).forEach( function ( page ) {
-		var sections = expandedSections[ page ];
+	Object.keys( expandedSections ).forEach( function ( p ) {
+		var sections = expandedSections[ p ];
 		// clean the setting if it is more than a day old
 		Object.keys( sections ).forEach( function ( section ) {
 			var timestamp = sections[ section ];
 			daysDifference = Math.floor( ( now - timestamp ) / 1000 / 60 / 60 / 24 );
 			if ( daysDifference >= 1 ) {
-				delete expandedSections[page][section];
+				delete expandedSections[p][section];
 			}
 		} );
 	} );

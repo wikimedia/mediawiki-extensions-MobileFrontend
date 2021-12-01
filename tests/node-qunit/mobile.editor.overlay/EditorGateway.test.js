@@ -211,7 +211,7 @@ QUnit.test( '#getContent (no section)', function ( assert ) {
 	} );
 
 	return gateway.getContent().then( function () {
-		assert.ok( spy.calledWith( {
+		assert.true( spy.calledWith( {
 			action: 'query',
 			prop: [ 'revisions', 'info' ],
 			rvprop: [ 'content', 'timestamp' ],
@@ -249,7 +249,7 @@ QUnit.test( '#getContent, new page', function ( assert ) {
 	return gateway.getContent().then( function ( resp ) {
 		assert.strictEqual( resp.text, '', 'return empty section' );
 		assert.strictEqual( resp.blockinfo, undefined );
-		assert.notOk( spy.called, 'don\'t try to retrieve content using API' );
+		assert.false( spy.called, 'don\'t try to retrieve content using API' );
 	} );
 } );
 
@@ -327,7 +327,7 @@ QUnit.test( '#save, new page', function ( assert ) {
 		summary: 'summary'
 	} ).then( function () {
 		assert.strictEqual( gateway.hasChanged, false, 'reset hasChanged' );
-		assert.ok( postStub.calledWithMatch( 'csrf', util.extend( {}, API_REQUEST_DATA, {
+		assert.true( postStub.calledWithMatch( 'csrf', util.extend( {}, API_REQUEST_DATA, {
 			title: 'Talk:test',
 			text: 'section 0',
 			summary: 'summary',
@@ -350,7 +350,7 @@ QUnit.test( '#save, after #setPrependText', function ( assert ) {
 		summary: 'summary'
 	} ).then( function () {
 		assert.strictEqual( gateway.hasChanged, false, 'reset hasChanged' );
-		assert.ok( postStub.calledWithMatch( 'csrf', util.extend( {}, API_REQUEST_DATA, {
+		assert.true( postStub.calledWithMatch( 'csrf', util.extend( {}, API_REQUEST_DATA, {
 			prependtext: 'abc'
 		} ) ), 'prepend text' );
 	} );
@@ -373,7 +373,7 @@ QUnit.test( '#save, submit CAPTCHA', function ( assert ) {
 		} );
 	} ).then( function () {
 		assert.strictEqual( gateway.hasChanged, false, 'reset hasChanged' );
-		assert.ok( postStub.calledWithMatch( 'csrf', util.extend( {}, API_REQUEST_DATA, {
+		assert.true( postStub.calledWithMatch( 'csrf', util.extend( {}, API_REQUEST_DATA, {
 			section: '1',
 			text: 'section 1',
 			captchaid: 123,
@@ -605,7 +605,7 @@ QUnit.test( '#save, without changes', function ( assert ) {
 			summary: 'summary'
 		} );
 	} ).then( function () {
-		assert.ok( apiHappy.postWithToken.calledWithMatch( 'csrf', util.extend( {}, API_REQUEST_DATA, {
+		assert.true( apiHappy.postWithToken.calledWithMatch( 'csrf', util.extend( {}, API_REQUEST_DATA, {
 			section: '1',
 			text: 'section',
 			basetimestamp: '2013-05-15T00:30:26Z',
@@ -625,10 +625,10 @@ QUnit.test( '#EditorGateway', function ( assert ) {
 	return gateway.getPreview( { text: 'test content' } )
 		.then( resolveSpy )
 		.then( function () {
-			assert.ok( apiHappyTestContent.post.calledWithMatch( {
+			assert.true( apiHappyTestContent.post.calledWithMatch( {
 				text: 'test content'
 			} ) );
-			assert.ok( resolveSpy.calledWith( {
+			assert.true( resolveSpy.calledWith( {
 				line: '',
 				id: '',
 				text: '<h1>Heading 1</h1><h2>Heading 2</h2><p>test content</p>'

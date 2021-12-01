@@ -71,9 +71,9 @@ mfExtend( WatchList, WatchstarPageList, {
 		// watched pages so it's safe to transform the title map to a status map
 		// with each entry marked watched (true).
 		statuses = Object.keys( this.parsePagesFromItems( $items ) )
-			.reduce( function ( statuses, title ) {
-				statuses[ title ] = true;
-				return statuses;
+			.reduce( function ( arr, title ) {
+				arr[ title ] = true;
+				return arr;
 			}, {} );
 		this.renderItems( $items, statuses );
 

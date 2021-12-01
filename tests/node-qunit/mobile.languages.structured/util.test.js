@@ -205,7 +205,7 @@ QUnit.test( '#getFrequentlyUsedLanguages', function ( assert ) {
 
 QUnit.test( '#saveLanguageUsageCount', function ( assert ) {
 	util.saveLanguageUsageCount( 'ko', util.getFrequentlyUsedLanguages() );
-	assert.ok( this.saveSpy.calledWith( {
+	assert.true( this.saveSpy.calledWith( {
 		zh: 2,
 		ko: 2
 	} ), 'Frequently used language is correctly saved.' );
@@ -245,7 +245,7 @@ QUnit.test( '#getStructuredLanguages variants', function ( assert ) {
 		variantsMap[ variant.lang ] = variant;
 	} );
 	suggestedLanguages.forEach( function ( suggestedLanguage ) {
-		assert.ok(
+		assert.true(
 			Object.prototype.hasOwnProperty.call( variantsMap, suggestedLanguage.lang ),
 			'Variant "' + suggestedLanguage.lang + '" is in the list of suggested languages.'
 		);

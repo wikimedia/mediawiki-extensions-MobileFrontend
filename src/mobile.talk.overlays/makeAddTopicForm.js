@@ -19,13 +19,13 @@ function makeAddTopicForm( { licenseMsg, onTextInput, subject, body, disabled } 
 		disabled,
 		subject,
 		body,
-		onTextInput: onTextInput ? function ( subject, body ) {
+		onTextInput: onTextInput ? function ( sub, bd ) {
 			// if the body has content, autosign it!
-			if ( body ) {
-				body = autosign( body );
+			if ( bd ) {
+				bd = autosign( bd );
 			}
 			// propagate up the autosigned content
-			onTextInput.call( this, subject, body );
+			onTextInput.call( this, sub, bd );
 		} : undefined
 	} );
 	return form;

@@ -200,7 +200,7 @@ PageGateway.prototype = {
 			sections = [];
 
 		$headings.each( function () {
-			var level = this.tagName.substr( 1 ),
+			var level = this.tagName.slice( 1 ),
 				$span = $el.find( this ).find( '.mw-headline' );
 
 			if ( $span.length ) {
