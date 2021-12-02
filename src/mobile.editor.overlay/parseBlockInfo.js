@@ -6,21 +6,18 @@ var util = require( '../mobile.startup/util' );
  */
 module.exports = function parseBlockInfo( blockinfo ) {
 	const blockInfo = {
-			partial: blockinfo.blockpartial || false,
-			noCreateAccount: blockinfo.blocknocreate || false,
-			anonOnly: blockinfo.blockanononly === undefined ? true : blockinfo.blockanononly,
-			creator: {
-				name: blockinfo.blockedby,
-				url: null
-			},
-			expiry: null,
-			duration: null,
-			reason: '',
-			blockId: blockinfo.blockid
+		partial: blockinfo.blockpartial || false,
+		noCreateAccount: blockinfo.blocknocreate || false,
+		anonOnly: blockinfo.blockanononly === undefined ? true : blockinfo.blockanononly,
+		creator: {
+			name: blockinfo.blockedby,
+			url: null
 		},
-		expiry = blockinfo.blockexpiry,
-		reason = blockinfo.blockreason,
-		moment = window.moment;
+		expiry: null,
+		duration: null,
+		reason: '',
+		blockId: blockinfo.blockid
+	};
 
 	// Workaround to parse a message parameter for mw.message, see T96885
 	function jqueryMsgParse( wikitext ) {
@@ -46,16 +43,12 @@ module.exports = function parseBlockInfo( blockinfo ) {
 		).getUrl();
 	}
 
-	if ( [ 'infinite', 'indefinite', 'infinity', 'never' ].indexOf( expiry ) === -1 && moment ) {
-		if ( moment( expiry ).diff( moment(), 'seconds' ) <= 86400 ) {
-			// For 24 hour blocks/or remaining expiry time and less, show both date and time
-			blockInfo.expiry = mw.message( 'parentheses', moment( expiry ).format( 'LL, LT' ) ).escaped();
-		} else {
-			blockInfo.expiry = mw.message( 'parentheses', moment( expiry ).format( 'LL' ) ).escaped();
-		}
-		blockInfo.duration = moment().to( expiry, true );
+	if ( [ 'infinite', 'indefinite', 'infinity', 'never' ].indexOf( blockinfo.blockexpiry ) === -1 ) {
+		blockInfo.expiry = mw.message( 'parentheses', blockinfo.blockexpiryformatted ).escaped();
+		blockInfo.duration = blockinfo.blockexpiryrelative;
 	}
 
+	const reason = blockinfo.blockreason;
 	if ( reason ) {
 		blockInfo.reason = jqueryMsgParse( reason ) || mw.html.escape( reason );
 		blockInfo.parsedReason = ( new mw.Api() ).get( {

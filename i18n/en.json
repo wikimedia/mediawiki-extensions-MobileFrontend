@@ -76,7 +76,7 @@
 	"mobile-frontend-editor-blocked-drawer-body-link": "See more",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Reason",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Blocked}} by",
-	"mobile-frontend-editor-blocked-drawer-expiry-header": "Block will expire in",
+	"mobile-frontend-editor-blocked-drawer-expiry-header": "Block will expire",
 	"mobile-frontend-editor-blocked-drawer-help": "See details",
 	"mobile-frontend-editor-generic-block-reason": "Unknown reason",
 	"mobile-frontend-editor-cancel": "Cancel",

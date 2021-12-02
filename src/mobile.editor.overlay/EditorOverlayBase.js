@@ -662,13 +662,9 @@ mfExtend( EditorOverlayBase, Overlay, {
 		return this.dataPromise.then( function ( result ) {
 			// check if user is blocked
 			if ( result && result.blockinfo ) {
-				// Lazy-load moment only if it's needed, it's somewhat large (it is already used on
-				// mobile by Echo's notifications panel, where it's also lazy-loaded)
-				return mw.loader.using( 'moment' ).then( function () {
-					var block = parseBlockInfo( result.blockinfo ),
-						message = blockMessageDrawer( block );
-					return util.Deferred().reject( message );
-				} );
+				var block = parseBlockInfo( result.blockinfo ),
+					message = blockMessageDrawer( block );
+				return util.Deferred().reject( message );
 			}
 			return result;
 		} );

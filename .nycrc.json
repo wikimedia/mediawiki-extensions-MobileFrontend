@@ -34,7 +34,7 @@
 
 	"//": "Set the coverage percentage by category thresholds. Round down to nearest 1%",
 	"statements": 64,
-	"branches": 49,
+	"branches": 48,
 	"functions": 61,
 	"lines": 64,
 
