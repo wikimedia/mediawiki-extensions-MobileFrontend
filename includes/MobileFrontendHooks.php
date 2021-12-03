@@ -456,9 +456,6 @@ class MobileFrontendHooks {
 			// beta cookie
 			$cookies[] = MobileContext::OPTIN_COOKIE_NAME;
 		}
-		// Redirect people who want so from HTTP to HTTPS. Ideally, should be
-		// only for HTTP but we don't vary on protocol.
-		$cookies[] = 'forceHTTPS';
 	}
 
 	/**
