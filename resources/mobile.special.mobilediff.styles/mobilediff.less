@@ -34,6 +34,13 @@ footer {
 }
 
 .diff {
+	// Make sure the contents of our layout table do not overflow viewport
+	display: block;
+
+	tbody, tr, td {
+		display: block;
+	}
+
 	.diff-title {
 		display: none;
 	}
@@ -86,8 +93,8 @@ footer {
 	.mw-diff-inline-deleted del,
 	.mw-diff-inline-changed del {
 		color: #000;
-		word-break: break-all;
 		text-decoration: none;
+		word-wrap: break-word;
 	}
 
 	> span {
