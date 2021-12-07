@@ -57,7 +57,7 @@
 	"mobile-frontend-editor-blocked-drawer-title": "Du er blevet blokeret fra at redigere {{SITENAME}}",
 	"mobile-frontend-editor-blocked-drawer-title-partial": "Du er blevet blokeret fra at redigere på denne side",
 	"mobile-frontend-editor-blocked-drawer-body-link": "Se mere",
-	"mobile-frontend-editor-blocked-drawer-reason-header": "Begrundelse for blokeringen",
+	"mobile-frontend-editor-blocked-drawer-reason-header": "Begrundelse",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Blokeret}} af",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "Blokeringen vil ophøre om",
 	"mobile-frontend-editor-blocked-drawer-help": "Se detaljer",

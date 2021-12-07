@@ -30,7 +30,8 @@
 			"Ykhwong",
 			"관인생략",
 			"밝은소년",
-			"아라"
+			"아라",
+			"Anont"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "사용자가 모바일 인터페이스를 통해 편집하고 있는지 여부",
@@ -73,6 +74,7 @@
 	"mobile-frontend-editor-blocked-drawer-action-randompage": "다른 페이지로 이동",
 	"mobile-frontend-editor-blocked-drawer-title": "{{SITENAME}}에서의 편집이 차단되었습니다.",
 	"mobile-frontend-editor-blocked-drawer-title-partial": "당신은 이 문서의 편집에서 차단되어 있습니다.",
+	"mobile-frontend-editor-blocked-drawer-title-ip": "접속하신 IP 주소는 {{SITENAME}}에서의 편집이 차단되었습니다.",
 	"mobile-frontend-editor-blocked-drawer-title-ip-partial": "당신의 IP 주소가 이 문서의 편집에서 차단되어 있습니다.",
 	"mobile-frontend-editor-blocked-drawer-body-partial": "다른 문서 편집 시도",
 	"mobile-frontend-editor-blocked-drawer-body-login": "계정이 있으면 로그인해 보십시오.",
@@ -232,9 +234,9 @@
 	"mobile-frontend-watchlist-more": "더 보기",
 	"mobile-frontend-watchlist-please-wait": "기다려주세요, 주시문서에 목록을 추가하는 것이 예상보다 오래 걸리고 있습니다.",
 	"mobile-frontend-watchlist-error": "이 문서를 주시문서에 추가하는 중 오류가 있었습니다. 다시 시도해주세요.",
-	"mobile-frontend-watchlist-purpose": "<strong>주시문서 목록은 문서를 북마크하고 그들의 바뀜을 추적하는 것을 돕습니다.</strong><br />보려면 로그인하세요.",
+	"mobile-frontend-watchlist-purpose": "<strong>주시문서 목록은 문서를 북마크하고 문서의 바뀜을 추적하는 것을 돕습니다.</strong><br />보려면 로그인하세요.",
 	"mobile-frontend-watchlist-removed": "내 주시문서 목록에서 $1 문서를 제거했습니다",
-	"mobile-frontend-watchlist-signup-action": "<strong>주시문서 목록은 문서를 북마크하고 그들의 바뀜을 추적하는 것을 돕습니다.</strong><br />지금 시작하려면 가입하세요.",
+	"mobile-frontend-watchlist-signup-action": "<strong>주시문서 목록은 문서를 북마크하고 문서의 바뀜을 추적하는 것을 돕습니다.</strong><br />지금 시작하려면 가입하세요.",
 	"mobile-frontend-user-page-no-owner-page-yet": "아직 사용자 문서가 없습니다",
 	"mobile-frontend-user-page-no-page-yet": "$1의 사용자 문서 없음",
 	"mobile-frontend-user-page-describe-yourself": "당신의 사용자 문서에서 다른 $1에게 당신을 소개할 수 있습니다.",
@@ -258,6 +260,7 @@
 	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions-description": "제목 아래의 짧은 설명과 함께 문서의 주제를 파악합니다",
 	"mobile-frontend-send-feedback": "피드백 보내기",
 	"mobile-frontend-mobile-option-MFLazyLoadImages-description": "필요할 때에만 그림을 불러옵니다.",
+	"mobile-frontend-mobile-option-MFLazyLoadImages": "이미지에 lazy load 기술 적용",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox-description": "성능 및 가독성 개선을 위해 텍스트는 항상 위의 정보상자만 표시합니다.",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "글꼴 크기",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "읽기 경험의 글꼴 크기를 조정합니다.",

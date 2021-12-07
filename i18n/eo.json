@@ -73,7 +73,7 @@
 	"mobile-frontend-editor-cancel-confirm": "Ĉu vi vere volas forlasi via redakton?",
 	"mobile-frontend-editor-captcha-try-again": "Malĝusta kodo, provu denove.",
 	"mobile-frontend-editor-continue": "Sekva",
-	"mobile-frontend-editor-disabled": "Ĉi tiu paĝo estas protektita por malhelpi vandalismon.",
+	"mobile-frontend-editor-disabled": "Ĉi tiu paĝo estas protektita por malhelpi vandalaĵon. [$1 Vidi fonton]",
 	"mobile-frontend-editor-disabled-anon": "Vi devas ensaluti por redakti ĉi tiun paĝon.",
 	"mobile-frontend-editor-editing": "Redaktado",
 	"mobile-frontend-editor-editing-page": "<span><strong>Redaktante</strong> $1</span>",

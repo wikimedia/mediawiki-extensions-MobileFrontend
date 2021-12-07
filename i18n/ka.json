@@ -9,7 +9,8 @@
 			"Otogi",
 			"SHOTHA",
 			"Tokoko",
-			"გიორგიმელა"
+			"გიორგიმელა",
+			"Გიო ოქრო"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "შეიყვანეთ დადასტურების კოდი",
@@ -49,6 +50,7 @@
 	"mobile-frontend-editor-keep-editing": "განაგრძე რედაქტირება",
 	"mobile-frontend-editor-terms-link": "[$1 გამოყენების პირობები]",
 	"mobile-frontend-editor-placeholder": "ეს სექცია ცარიელია. შექმენი ის!",
+	"mobile-frontend-editor-placeholder-new-page": "თქვენ ქმნით ახალ გვერდს {{SITENAME}}-ში!",
 	"mobile-frontend-editor-previewing-page": "<span><strong>წინასწარ გადახედვა</strong> $1</span>",
 	"mobile-frontend-editor-publish": "გამოქვეყნება",
 	"mobile-frontend-editor-save": "შენახვა",

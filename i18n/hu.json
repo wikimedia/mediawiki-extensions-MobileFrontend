@@ -51,7 +51,7 @@
 	"mobile-frontend-editor-anonwarning": "<strong>Figyelem:</strong> Nem vagy bejelentkezve. Ha szerkesztesz, az IP-címed nyilvánosan látható lesz a laptörténetben. Ha <strong>bejelentkezel</strong> vagy <strong>regisztrálsz</strong>, a szerkesztéseid a felhasználónevedhez lesznek társítva, egyéb hasznos dolgok mellett.",
 	"mobile-frontend-editor-blocked-drawer-title": "Számodra blokkolva van a(z) {{SITENAME}} szerkesztésének lehetősége",
 	"mobile-frontend-editor-blocked-drawer-title-partial": "Számodra blokkolva van az oldal szerkesztésének lehetősége",
-	"mobile-frontend-editor-blocked-drawer-reason-header": "Blokkolás indoka",
+	"mobile-frontend-editor-blocked-drawer-reason-header": "Indoklás",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Blokkolta}}",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "A blokk lejáratának ideje",
 	"mobile-frontend-editor-blocked-drawer-help": "Részletek",
@@ -60,7 +60,7 @@
 	"mobile-frontend-editor-cancel-confirm": "Biztos abba akarod hagyni a szerkesztést?",
 	"mobile-frontend-editor-captcha-try-again": "Hibás kód, próbáld újra.",
 	"mobile-frontend-editor-continue": "Következő",
-	"mobile-frontend-editor-disabled": "Ez a lap a vandalizmus megelőzése érdekében védett.",
+	"mobile-frontend-editor-disabled": "Ez a lap a vandalizmus megelőzése érdekében védett. [$1 Forráskód megtekintése]",
 	"mobile-frontend-editor-disabled-anon": "Az oldal szerkesztéséhez be kell jelentkezned.",
 	"mobile-frontend-editor-editing": "Szerkesztés",
 	"mobile-frontend-editor-editing-page": "<span>$1 <strong>szerkesztése</strong></span>",
@@ -244,7 +244,7 @@
 	"mobile-frontend-amc-outreach-enabled-message": "A haladó mód engedélyezve lett. A beállításaidnál tudod kikapcsolni.",
 	"mobile-frontend-amc-outreach-dismissed-message": "Bármikor engedélyezni tudod a haladó módot a beállításaidnál.",
 	"mobile-frontend-beta-only": "Csak a béta módban elérhető funkció",
-	"mobile-frontend-console-recruit": "Tudj meg többet, hogy miképp építjük mobil oldalunkat: https://www.mediawiki.org/wiki/Extension:MobileFrontend",
+	"mobile-frontend-console-recruit": "Tudj meg többet, hogy miképp építjük mobil oldalunkat: https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "A speciális lapok optimalizálása és egyszerűsítése mobilon (ajánlott)",
 	"prefs-mobile": "Mobil beállítások"
 }

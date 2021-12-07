@@ -13,7 +13,8 @@
 			"Stam.nikos",
 			"SucreRouge",
 			"ZaDiak",
-			"Ανώνυμος Βικιπαιδιστής"
+			"Ανώνυμος Βικιπαιδιστής",
+			"Giannaras99"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Εισαγάγετε τον κωδικό επιβεβαίωσης",
@@ -47,10 +48,10 @@
 	"mobile-frontend-editor-blocked-drawer-action-login": "Είσοδος",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "Εντάξει",
 	"mobile-frontend-editor-blocked-drawer-title-ip": "Η διεύθυνση IP σας έχει αποκλεισμό επεξεργασίας για το {{SITENAME}}.",
-	"mobile-frontend-editor-blocked-drawer-reason-header": "Αιτία φραγής",
+	"mobile-frontend-editor-blocked-drawer-reason-header": "Λόγος",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Φράχθηκε}} από",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "Η φραγή θα λήξει στις",
-	"mobile-frontend-editor-blocked-drawer-help": "Λεπτομέρειες",
+	"mobile-frontend-editor-blocked-drawer-help": "Δείτε λεπτομέρειες",
 	"mobile-frontend-editor-generic-block-reason": "Άγνωστη αιτία",
 	"mobile-frontend-editor-cancel": "Ακύρωση",
 	"mobile-frontend-editor-cancel-confirm": "Θέλετε πραγματικά να εγκαταλείψετε την επεξεργασία;",

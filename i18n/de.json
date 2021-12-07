@@ -130,7 +130,7 @@
 	"mobile-frontend-joined-hours": "{{GENDER:$1|Beigetreten}} vor {{PLURAL:$2|einer Stunde|$2 Stunden}}",
 	"mobile-frontend-joined-days": "{{GENDER:$1|Beigetreten}} vor {{PLURAL:$2|einem Tag|$2 Tagen}}",
 	"mobile-frontend-joined-months": "{{GENDER:$1|Beigetreten}} vor {{PLURAL:$2|einem Monat|$2 Monaten}}",
-	"mobile-frontend-joined-years": "{{GENDER:$1|Beigetreten}} vor {{PLURAL:$2|einem Jahr|$2 Jahren}}",
+	"mobile-frontend-joined-years": "{{GENDER:$1|Registriert}} vor {{PLURAL:$2|einem Jahr|$2 Jahren}}",
 	"mobile-frontend-language-heading": "<strong>Sprachen</strong>",
 	"mobile-frontend-languages-404-desc": "Es muss ein gültiger Titel angegeben werden.",
 	"mobile-frontend-languages-404-title": "Sprachenfehler",

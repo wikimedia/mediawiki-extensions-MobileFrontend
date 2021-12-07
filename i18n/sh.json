@@ -3,7 +3,8 @@
 		"authors": [
 			"Conquistador",
 			"OC Ripper",
-			"Vlad5250"
+			"Vlad5250",
+			"BadDog"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Uređuje li korisnikot od mobilnoga sučelja",
@@ -133,6 +134,6 @@
 	"mobile-frontend-watchlist-filter-other": "Ostale",
 	"mobile-frontend-watchlist-filter-talk": "Razgovor",
 	"mobile-frontend-watchlist-more": "više",
-	"tag-mobile_edit": "Mobilno uređivanje",
-	"tag-mobile_web_edit": "Web izmjena mobilnim uređajem"
+	"tag-mobile_edit": "mobilno uređivanje",
+	"tag-mobile_web_edit": "mobilno veb-uređivanje"
 }
