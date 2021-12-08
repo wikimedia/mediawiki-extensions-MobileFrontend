@@ -37,7 +37,9 @@ footer {
 	// Make sure the contents of our layout table do not overflow viewport
 	display: block;
 
-	tbody, tr, td {
+	// doubled up .dif for specificity to override
+	// .content table tbody { display: table-row-group; } in Minerva repo.
+	&.diff tbody, tr, td {
 		display: block;
 	}
 
