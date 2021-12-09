@@ -56,7 +56,8 @@
 			}
 		}
 
-		> a {
+		// T297023: Prevent overriding `mw-ui-icon-element` and making text visible
+		> a:not( .mw-ui-icon-element ) {
 			display: block;
 			color: @grayMedium;
 
