@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Amire80",
 			"MongolWiki",
 			"Sembuk",
 			"Wisdom"
@@ -11,5 +12,6 @@
 	"mobile-frontend-featured-article": "Өнөөдрийн онцлох өгүүлэл",
 	"mobile-frontend-last-modified-date": "Хамгийн сүүлд $1-нд $2-т засварлагдсан",
 	"mobile-frontend-terms-text": "Хэрэглэх нөхцөл",
-	"mobile-frontend-view": "Мобайл хувилбар"
+	"mobile-frontend-view": "Мобайл хувилбар",
+	"mobile-frontend-view-desktop": "Дэлгэц"
 }
