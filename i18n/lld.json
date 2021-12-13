@@ -1,9 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Asenoner"
+			"Asenoner",
+			"Fierodelveneto",
+			"Starladin"
 		]
 	},
+	"mobile-frontend-view": "Verscion mobila",
+	"nearby": "Plates daimpró",
 	"tag-mobile_edit": "Mudazion per mobile",
 	"tag-mobile_web_edit": "Mudazion dal web per mobile"
 }

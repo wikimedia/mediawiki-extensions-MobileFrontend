@@ -7,7 +7,8 @@
 			"Muhammed taha",
 			"Sarchia",
 			"Épine",
-			"ئارام بکر"
+			"ئارام بکر",
+			"Halbast"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "کۆدی پشتڕاستکردنەوە تێ بخە",
@@ -112,6 +113,7 @@
 	"mobile-frontend-media-license-link": "زانیاری بەڵگەنامە",
 	"mobile-frontend-media-load-fail-retry": "بووژانەوە",
 	"mobile-frontend-missing-image": "وێنە",
+	"mobile-frontend-tap-to-display-image": "بۆ پێشاندان پەنجە لە وێنەکە بدە.",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 کم}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 م}}",
 	"mobile-frontend-nearby-error": "{{SITENAME}} ھەندێک کێشەی ھەیە",
@@ -119,6 +121,7 @@
 	"mobile-frontend-nearby-noresults-guidance": "ھەوڵی دروستکردنی پەڕەیەکی نوێ بدە یان شوێن زیاد بکە بۆ دانەیەک کە ھەیە",
 	"mobile-frontend-nearby-title": "لەم نزیکانەدا",
 	"mobile-frontend-nearby-info-heading": "ئەو شوێنانەی نزیکی تۆن",
+	"mobile-frontend-nearby-info-show-button": "وتارە نزیکەکان پیشان بدە",
 	"mobile-frontend-news-items": "لە ھەواڵەکاندا",
 	"mobile-frontend-opt-in-explain": "بیتای {{SITENAME}} ڕێگەیەکە بۆ تۆ تا ھەوڵی بەکارھێنانی ئەم تایبەتمەندییە تاقیکارییانە بدەیت و ڕەخنە و پێشنیارە بەنرخەکانتمان پێ بڵێیت",
 	"mobile-frontend-overlay-close": "داخستن",
@@ -137,6 +140,7 @@
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "بابەت",
 	"mobile-frontend-talk-add-overlay-submit": "زیادکردنی وتووێژ",
 	"mobile-frontend-talk-reply": "وەڵامدانەوە",
+	"mobile-frontend-talk-reply-info": "تێبینی بکە کە خۆگەڕانە وەڵامەکەت بە ناوی بەکارھێنەرییەکەشتەوە واژوو دەکرێت.",
 	"mobile-frontend-talk-topic-wait": "پاشەکەوتکردنی بابەتە نوێیەکەت، تکایە چاوەڕێ بکە.",
 	"mobile-frontend-terms-text": "مەرجەکانی بەکارھێنان",
 	"mobile-frontend-view": "بینینی مۆبایلی",

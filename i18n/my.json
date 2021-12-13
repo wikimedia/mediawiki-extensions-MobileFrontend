@@ -22,6 +22,7 @@
 	"mobile-frontend-categories-add-heading": "<strong><span> $1</span> ကို ကဏ္ဍသစ်များသို့ ပေါင်းထည့်ရန်</strong>",
 	"mobile-frontend-categories-add-wait": "ကဏ္ဍများကို သိမ်းဆည်းနေသည်၊ ကျေးဇူးပြု၍ ခေတ္တစောင့်ပါ။",
 	"mobile-frontend-changeslist-nocomment": "တည်းဖြတ်မှုအတွက် စကားချပ် မရှိပါ",
+	"mobile-frontend-cite-error-title": "ကိုးကားများအား ဆွဲယူနေစဉ် အမှား",
 	"mobile-frontend-clear-search": "ရှင်းလင်း",
 	"mobile-frontend-contributions-404-title": "ဆိုးသော အသုံးပြုသူအမည် ပေးထားသည်",
 	"mobile-frontend-copyright": "အကြောင်းအရာများကို အခြားမှတ်ချက်မရှိပါက $1 အောက်တွင် ရရှိနိုင်ပါသည်။",
@@ -34,6 +35,7 @@
 	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}}ကို တိုးတက်အောင် ကူညီပေးပါ။</strong><br />တည်းဖြတ်ရန်အတွက် ဝင်ရောက်ပါ။",
 	"mobile-frontend-edit-signup-action": "<strong>{{SITENAME}}ကို တိုးတက်အောင် ကူညီပေးပါ။<br />တည်းဖြတ်ရန်အတွက် မှတ်ပုံတင်ပါ။",
 	"mobile-frontend-editor-anon": "အကောင့်ထဲမဝင်ဘဲ တည်းဖြတ်ရန်",
+	"mobile-frontend-editor-anonwarning": "<strong>သတိပေးချက် - </strong> သင်သည် လော့ဂ်အင် ဝင်မထားပါ။ သင်တည်းဖြတ်မှု ပြုလုပ်ပါက သင့်အိုင်ပီလိပ်စာကို မည်သူမဆို တွေ့မြင်နိုင်မည်။ အကယ်၍ သင် <strong>[လော့ဂ်အင်ဝင်]</strong> သို့မဟုတ် <strong>[ အကောင့်တစ်ခု ဖန်တီး]</strong>ပါက၊ သင့်တည်းဖြတ်မှုများသည် သင့်အမည်နှင့် တွဲဖက်မှတ်သားမည် ဖြစ်သည်။",
 	"mobile-frontend-editor-blocked-drawer-title": "{{SITENAME}} တည်းဖြတ်ခြင်းမှ သင့်ကို ပိတ်ပင်ထားပါသည်",
 	"mobile-frontend-editor-blocked-drawer-title-partial": "ဤစာမျက်နှာအားတည်းဖြတ်ခြင်းအတွက် သင့်ကို ပိတ်ပင်ထားပါသည်",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "ပိတ်ပင်မှုအတွက် အကြောင်းရင်း",
@@ -145,6 +147,7 @@
 	"mobile-frontend-talk-add-overlay-submit": "ဆွေးနွေးချက် ပေါင်းထည့်ရန်",
 	"mobile-frontend-talk-reply": "အကြောင်းပြန်ရန်",
 	"mobile-frontend-talk-reply-info": "မှတ်သားရန်မှာ သင်၏ပြန်စာသည် သင်၏အသုံးပြုသူအမည်ဖြင့် အလိုအလျောက် လက်မှတ်ထိုးသွားမည်ဖြစ်ပါသည်။",
+	"mobile-frontend-talk-topic-error-badtoken": "ဆာဗာတွင် အမှားတစ်ခုဖြစ်ခဲ့သည်။ သင်၏တည်းဖြတ်မှုကို မသိမ်းဆည်းနိုင်ပါ။ ဤစာမျက်နှာအားပြန်လည်ခေါ်ကြည့်ပါ။",
 	"mobile-frontend-talk-topic-wait": "သင်၏ အကြောင်းအရာသစ်ကို သိမ်းဆည်းနေသည်၊ ခဏစောင့်ပါ။",
 	"mobile-frontend-terms-text": "အသုံးပြုခြင်းဆိုင်ရာ သတ်မှတ်ချက်များ",
 	"mobile-frontend-view": "မိုလ်ဘိုင်း",
@@ -199,6 +202,6 @@
 	"mobile-frontend-amc-outreach-no-thanks": "မလိုပါ၊ ကျေးဇူးတင်ပါသည်။",
 	"mobile-frontend-amc-outreach-enabled-message": "အဆင့်မြင့်မုဒ်ကို ယခု ခွင့်ပြုလိုက်ပါပြီ။ သင်၏အပြင်အဆင်များထဲတွင် ပြန်လည်ပယ်ဖျက်နိုင်ပါသည်။",
 	"mobile-frontend-amc-outreach-dismissed-message": "သင်၏အပြင်အဆင်များထဲတွင် မည်သည့်အချိန်မဆို ပြန်လည်ခွင့်ပြုနိုင်ပါသည်။",
-	"mobile-frontend-console-recruit": "ကျွန်ုပ်တို့၏ မိုလ်ဘိုင်းဆိုဒ်ကို ဘယ်လိုတည်ဆောက်သလဲ ပိုမိုလေ့လာပါ  @ https://www.mediawiki.org/wiki/Extension:MobileFrontend",
+	"mobile-frontend-console-recruit": "ကျွန်ုပ်တို့၏ မိုလ်ဘိုင်းဆိုဒ်ကို ဘယ်လိုတည်ဆောက်သလဲ ပိုမိုလေ့လာပါ  @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"prefs-mobile": "မိုလ်ဘိုင်း ရွေးချယ်စရာများ"
 }

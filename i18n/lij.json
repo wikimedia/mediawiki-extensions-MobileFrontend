@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Giromin Cangiaxo",
-			"S4b1nuz E.656"
+			"S4b1nuz E.656",
+			"N. Longo"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Se 'n utente o l'è aproeuvo a modificâ doeuviando l'interfaccia pe-i apægi mobbili",
@@ -173,8 +174,8 @@
 	"mobile-frontend-talk-topic-error-spam": "L'argomento o l'è stæto refiou percose o contegniva 'n tocco de spam.",
 	"mobile-frontend-talk-topic-error-badtoken": "Gh'è stæto in aro into serviou. A modiffica a no poeu vese sarvâ. Proeuva a recaregâ sta paggina.",
 	"mobile-frontend-talk-topic-wait": "Sarvataggio do to noeuvo argomento in corso, attende prego.",
-	"mobile-frontend-terms-text": "Condissioin d'utilizzo",
-	"mobile-frontend-view": "Verscion mobile",
+	"mobile-frontend-terms-text": "Condiçioîn d'Ûzo",
+	"mobile-frontend-view": "Versción mòbile",
 	"mobile-frontend-view-desktop": "Desktop",
 	"mobile-frontend-watchlist-a-z": "Lista",
 	"mobile-frontend-watchlist-a-z-empty-howto": "Po-u momento no gh'è nisciun-a paggina tra i to oservæ speciali. A lista di oservæ speciali a t'agiutta a tegnî traccia de voxe che t'interessan. Ti poeu azonzighene toccando l'icon-a a forma de stella.",

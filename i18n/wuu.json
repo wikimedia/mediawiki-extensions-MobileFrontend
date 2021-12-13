@@ -10,7 +10,7 @@
 	"mobile-frontend-changeslist-nocomment": "呒不编辑摘要",
 	"mobile-frontend-copyright": "除非另外声明，内容用$1授权。",
 	"mobile-frontend-editor-anon": "弗登录编辑",
-	"mobile-frontend-editor-anonwarning": "<strong>警告</strong>：侬弗曾登录。如果侬做仔任何编辑，侬个IP地址会公开可见。如果侬<strong>登录</strong>或者<strong>建立只账号</strong>，侬个编辑会归功到侬用户名下底，而且有其他优点。",
+	"mobile-frontend-editor-anonwarning": "<strong>警告：</strong>侬弗曾登录。如果侬做仔任何编辑，侬个IP地址会公开可见。如果侬<strong>登录</strong>或者<strong>建立只账号</strong>，侬个编辑会归功到侬用户名下底，而且有其他优点。",
 	"mobile-frontend-featured-article": "特色内容",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}}靠像侬一样个人建立。</strong><br />登录来贡献。",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "建议个闲话",

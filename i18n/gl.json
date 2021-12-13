@@ -12,7 +12,8 @@
 			"MaxSem",
 			"MetalBrasil",
 			"Toliño",
-			"Vivaelcelta"
+			"Vivaelcelta",
+			"ArenaL5"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Se un usuario está ou non está editando a través da interface móbil",
@@ -38,7 +39,7 @@
 	"mobile-frontend-contributions-404-title": "Nome de usuario incorrecto",
 	"mobile-frontend-copyright": "Todo o contido está dispoñible baixo a licenza $1, agás que se indique o contrario.",
 	"mobile-frontend-desc": "Interface para dispositivos móbiles",
-	"mobile-frontend-diffview-404-desc": "O identificador da revisión solicitada non existe.",
+	"mobile-frontend-diffview-404-desc": "O ID da revisión que solicitou non existe.<br/>Isto adoita estar causado ó seguir unha ligazón diff obsoleta cara unha páxina que foi borrada ou unha ligazón diff que contén caracteres non válidos.",
 	"mobile-frontend-diffview-404-title": "Revisión incorrecta",
 	"mobile-frontend-diffview-anonymous": "Usuario anónimo",
 	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|byte engadido|bytes engadidos}}",
@@ -49,7 +50,7 @@
 	"mobile-frontend-edit-login-action": "<strong>Axude a mellorar {{SITENAME}}.</strong><br />Acceda ao sistema para editar.",
 	"mobile-frontend-edit-signup-action": "Rexístrese para editar.",
 	"mobile-frontend-editor-anon": "Editar sen iniciar sesión",
-	"mobile-frontend-editor-anonwarning": "<strong>Aviso</strong>: non accedeu ao sistema. O seu enderezo IP será visible publicamente se fai calquera edición. Se <strong>accede ao sistema</strong> ou <strong>crea unha conta</strong>, as súas edicións atribuiranse ao seu nome de usuario, xunto con outros beneficios.",
+	"mobile-frontend-editor-anonwarning": "<strong>Aviso:</strong> non accedeu ao sistema. O seu enderezo IP será visible publicamente se fai calquera edición. Se <strong>accede ao sistema</strong> ou <strong>crea unha conta</strong>, as súas edicións atribuiranse ao seu nome de usuario, xunto con outros beneficios.",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Motivo para o bloqueo",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:1$|Bloqueado|Bloqueada}} por",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "O bloqueo caducará o",
@@ -60,6 +61,7 @@
 	"mobile-frontend-editor-captcha-try-again": "Código incorrecto. Inténteo de novo.",
 	"mobile-frontend-editor-continue": "Seguinte",
 	"mobile-frontend-editor-disabled": "Esta páxina está protexida para evitar o vandalismo.",
+	"mobile-frontend-editor-disabled-anon": "Necesita acceder o sitio para editar esta páxina.",
 	"mobile-frontend-editor-editing": "Editando",
 	"mobile-frontend-editor-editing-page": "<span><strong>Editando</strong> $1</span>",
 	"mobile-frontend-editor-error": "Erro! Non se gardou a edición.",
@@ -136,6 +138,7 @@
 	"mobile-frontend-media-load-fail-message": "Houbo un erro ó cargar esta imaxe.",
 	"mobile-frontend-media-load-fail-retry": "Actualizar",
 	"mobile-frontend-missing-image": "Imaxe",
+	"mobile-frontend-tap-to-display-image": "Pulse para amosar a imaxe.",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 km}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",
 	"mobile-frontend-nearby-error": "O sistema de localización de {{SITENAME}} está tendo algúns problemas.",
@@ -149,7 +152,7 @@
 	"mobile-frontend-nearby-info-description": "Pode ler artigos interesantes da {{SITENAME}} sobre lugares preto de vostede.",
 	"mobile-frontend-nearby-info-show-button": "Mostrar artigos na contorna",
 	"mobile-frontend-news-items": "Actualidade",
-	"mobile-frontend-opt-in-explain": "Ao unirse ás probas beta, vostede terá acceso ás últimas funcionalidades experimentais que poden conter erros de software.",
+	"mobile-frontend-opt-in-explain": "{{SITENAME}} βeta é unha forma de probar estas funcionalidades experimentais e dáresnos información útil sobre elas",
 	"mobile-frontend-overlay-close": "Pechar",
 	"mobile-frontend-privacy-link-text": "Protección de datos",
 	"mobile-frontend-references-citation": "Cita",
@@ -231,6 +234,6 @@
 	"mobile-frontend-amc-outreach-enable": "Activar modo avanzado",
 	"mobile-frontend-amc-outreach-no-thanks": "Non, grazas",
 	"mobile-frontend-beta-only": "A funcionalidade só atópase dispoñíbel no modo beta",
-	"mobile-frontend-console-recruit": "Saiba máis sobre a forma en como construímos o noso sitio móbil @ https://www.mediawiki.org/wiki/Extension:MobileFrontend",
+	"mobile-frontend-console-recruit": "Saiba máis sobre a forma en como construímos o noso sitio móbil @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"prefs-mobile": "Preferencias móbiles"
 }

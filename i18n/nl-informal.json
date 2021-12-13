@@ -2,8 +2,9 @@
 	"@metadata": {
 		"authors": [
 			"Effeietsanders",
-			"Siebrand"
+			"Siebrand",
+			"McDutchie"
 		]
 	},
-	"mobile-frontend-opt-in-explain": "Als je meedoet met testen, krijg je toegang tot experimentele functionaliteit, met het risico op fouten en problemen."
+	"mobile-frontend-opt-in-explain": "Met {{SITENAME}} bèta kun je de laatste experimentele functies uitproberen en ons waardevolle feedback geven"
 }

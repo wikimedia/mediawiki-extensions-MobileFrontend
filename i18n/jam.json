@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Katxis"
+			"Katxis",
+			"Dentonius"
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "no edit somri",
@@ -13,6 +14,6 @@
 	"mobile-frontend-terms-text": "Toermz a Yuus",
 	"mobile-frontend-view": "Muobail vyuu‎",
 	"mobile-frontend-view-desktop": "Dextap‎",
-	"tag-mobile_edit": "Muobail edit",
-	"tag-mobile_web_edit": "Mobail web edit"
+	"tag-mobile_edit": "Cellie change",
+	"tag-mobile_web_edit": "Cellie web change"
 }

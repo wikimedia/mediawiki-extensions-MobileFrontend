@@ -244,7 +244,7 @@
 	"mobile-frontend-amc-outreach-enabled-message": "A haladó mód engedélyezve lett. A beállításaidnál tudod kikapcsolni.",
 	"mobile-frontend-amc-outreach-dismissed-message": "Bármikor engedélyezni tudod a haladó módot a beállításaidnál.",
 	"mobile-frontend-beta-only": "Csak a béta módban elérhető funkció",
-	"mobile-frontend-console-recruit": "Tudj meg többet, hogy miképp építjük mobil oldalunkat: https://www.mediawiki.org/wiki/Extension:MobileFrontend",
+	"mobile-frontend-console-recruit": "Tudj meg többet, hogy miképp építjük mobil oldalunkat: https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "A speciális lapok optimalizálása és egyszerűsítése mobilon (ajánlott)",
 	"prefs-mobile": "Mobil beállítások"
 }

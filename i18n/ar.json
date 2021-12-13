@@ -29,7 +29,8 @@
 			"زكريا",
 			"علاء",
 			"محمد أحمد عبد الفتاح",
-			"مشعل الحربي"
+			"مشعل الحربي",
+			"Hhaboh162002"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "ما إذا كان المستخدم يعدل عبر واجهة المحمول",
@@ -202,7 +203,7 @@
 	"mobile-frontend-talk-topic-error-badtoken": "حصل خطأ على الخادوم. لا يمكن حفظ تعديلك. حاول إعادة تحميل الصفحة.",
 	"mobile-frontend-talk-topic-wait": "تحميل موضوعك الجديد, الرجاء الانتظار.",
 	"mobile-frontend-terms-text": "شروط الاستخدام",
-	"mobile-frontend-view": "نسخة المحمول",
+	"mobile-frontend-view": "نسخة للأجهزة المحمولة",
 	"mobile-frontend-view-desktop": "سطح المكتب",
 	"mobile-frontend-watchlist-a-z": "قائمة",
 	"mobile-frontend-watchlist-a-z-empty-howto": "حاليا لا تراقب أي صفحات.  تساعدك قائمة المراقبة على تتبع الصفحات التي تهمك. راقب الصفحات بنقر أيقونة النجمة.",

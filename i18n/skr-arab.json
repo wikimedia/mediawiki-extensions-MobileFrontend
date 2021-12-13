@@ -1,11 +1,22 @@
 {
 	"@metadata": {
 		"authors": [
-			"Saraiki"
+			"Saraiki",
+			"Engr.ismailbhutta",
+			"Kaleem Bhatti"
 		]
 	},
+	"abusefilter-edit-builder-vars-user-mobile": "بھانویں ورتݨ آلا موبائل انٹرفیس دے ذریعے ترمیم کرے یا نہ کرے",
+	"mobile-frontend-account-create-captcha-placeholder": "تصدیقی کوڈ لکھو",
 	"mobile-frontend-categories-search": "قسماں ڳولو",
+	"mobile-frontend-changeslist-nocomment": "تبدیلیاں دا کوئی خلاصہ کائنی",
+	"mobile-frontend-cite-error-title": "حوالے لوڈ کرݨ وچ غلطی تھئی",
+	"mobile-frontend-cite-error": "خراب دہرائی سُن٘ڄاݨ کرواوݨ آلے  پاروں حوالیاں دے چاڑھݨ وچ کوئی مشکل ہے۔",
+	"mobile-frontend-cite-none-available": "ایں ورقے کیتے کوئی حوالے دستیاب کائنی۔",
 	"mobile-frontend-clear-search": "صاف",
+	"mobile-frontend-contributions-404-desc": "ورتݨ آلے دے بغیر یا اینجھا ورتݨ آلا جیندا وجود ہی نہ ہووے نال  ونگاراں وچ ڳول ممکن کائنی۔",
+	"mobile-frontend-contributions-404-title": "ورتݨ آلے دا ناں ٹھیک کائنی ݙتا ڳیا",
+	"mobile-frontend-diffview-anonymous": "گمنام ورتݨ آلے",
 	"mobile-frontend-diffview-title": "تبدیلیاں",
 	"mobile-frontend-editor-cancel": "منسوخ",
 	"mobile-frontend-editor-captcha-try-again": "غلط کوڈ، دوبارہ کوشش کرو۔",
@@ -14,8 +25,11 @@
 	"mobile-frontend-editor-editing": "زیر ترمیم",
 	"mobile-frontend-editor-editing-page": "<span><strong>زیر ترمیم</strong> $1 </span>",
 	"mobile-frontend-editor-keep-editing": "تبدیلی جاری رکھو",
+	"mobile-frontend-editor-publish": "چھاپو",
 	"mobile-frontend-editor-save": "بچاؤ",
 	"mobile-frontend-editor-summary": "خلاصہ:",
+	"mobile-frontend-editor-switch-editor": "ایڈیٹر سوئچ کرو",
+	"mobile-frontend-editor-switch-visual-editor": "دید آلی ایڈیٹنگ تے سوئچ کرو",
 	"mobile-frontend-fontchanger-link": "فونٹ سائز",
 	"mobile-frontend-fontchanger-option-small": "چھوٹا",
 	"mobile-frontend-fontchanger-option-medium": "باقاعدہ",
@@ -30,6 +44,13 @@
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "تجویز کردہ زباناں",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "ٻیاں زباناں",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "زبان دی ڳول",
+	"mobile-frontend-last-modified-with-user-days": "[$4 چھیکڑی {{GENDER:$1|تبدیلی تھئی}} {{PLURAL:$3|$3 ݙینہ}} پہلے]  {{PLURAL:$5|[$6 $2]|0=گمنام ورتݨ آلا}} دے ہتھوں۔",
+	"mobile-frontend-last-modified-with-user-hours": "[$4 چھکڑی {{GENDER:$1|تبدیلی تھئی}} {{PLURAL:$3|$3 گھنٹہ|$3 گھنٹے}} پہلے]  {{PLURAL:$5|[$6 $2]|0=گمنام ورتݨ آلا}} دے ہتھوں",
+	"mobile-frontend-last-modified-with-user-just-now": "[$3 چھیکڑی {{GENDER:$1|تبدیلی}}] ہُݨے ہُݨے {{PLURAL:$4|[$5 $2]|0=گمنام ورتݨ آلا}} دے ہتھوں",
+	"mobile-frontend-last-modified-with-user-minutes": "[$4 چھیکڑی {{GENDER:$1|تبدیلی تھئی}} {{PLURAL:$3|$3 منٹ}} پہلے]  {{PLURAL:$5|[$6 $2]|0=گمنام ورتݨ آلا}} دے ہتھوں۔",
+	"mobile-frontend-last-modified-with-user-months": "[$4 چھکڑی {{GENDER:$1|تبدیلی تھئی}} {{PLURAL:$3|$3 مہینہہ|$3 مہینے}} پہلے]  {{PLURAL:$5|[$6 $2]|0=گمنام ورتݨ آلا}} دے ہتھوں",
+	"mobile-frontend-last-modified-with-user-seconds": "[$4 چھیکڑی {{GENDER:$1|تبدیلی تھئی}} {{PLURAL:$3|$3 سیکنڈ}} پہلے]  {{PLURAL:$5|[$6 $2]|0=گمنام ورتݨ آلا}} دے ہتھوں۔",
+	"mobile-frontend-last-modified-with-user-years": "[$4 چھکڑی {{GENDER:$1|تبدیلی تھئی}} {{PLURAL:$3|$3 سال|$3 سالاں}} پہلے]  {{PLURAL:$5|[$6 $2]|0=گمنام ورتݨ آلا}} دے ہتھوں",
 	"mobile-frontend-main-menu": "اصل مینیو",
 	"mobile-frontend-main-menu-settings-heading": "ترتیباں",
 	"mobile-frontend-media-details": "تفصیلاں",
@@ -46,6 +67,8 @@
 	"mobile-frontend-requires-title": "ورقہ کائنی",
 	"mobile-frontend-return-to-page": "واپس ورقے تے ونڄو",
 	"mobile-frontend-save-settings": "بچاؤ",
+	"mobile-frontend-search-no-results": "ایں عنوان نال کوئی ورقہ کائنی۔",
+	"mobile-frontend-settings-tagline": "پڑھݨ ترجیحاں",
 	"mobile-frontend-settings-beta": "{{SITENAME}} بیٹا",
 	"mobile-frontend-settings-save": "ترتیباں محفوظ تھیاں۔",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "موضوع",
@@ -68,6 +91,11 @@
 	"tag-mobile_edit": "موبائیل توں لکھائی",
 	"tag-mobile_web_edit": "موبائل ویب سائٹ توں تبدیلی",
 	"mobile-frontend-loading-message": "لوڈ تھیدا پئے۔۔۔",
+	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions": "عنوان دی تفصیل",
 	"mobile-frontend-send-feedback": "رائے بھیڄو",
-	"mobile-frontend-mobile-option-MFEnableFontChanger": "فونٹ سائز"
+	"mobile-frontend-mobile-option-MFEnableFontChanger": "فونٹ سائز",
+	"mobile-frontend-mobile-option-amc-learn-more": "ٻیا سِکھو",
+	"mobile-frontend-mobile-option-amc-send-feedback": "رائے بھیڄو",
+	"mobile-frontend-amc-outreach-no-thanks": "کو، شکریہ",
+	"prefs-mobile": "موبائل ترجیحاں."
 }

@@ -36,7 +36,9 @@
 			"Rtemis",
 			"Sahim",
 			"ZxxZxxZ",
-			"پسر یاس"
+			"پسر یاس",
+			"Jeeputer",
+			"Sunfyre"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "اینکه کاربر از میانای تلفن همراه استفاده می‌کند یا نه",
@@ -92,7 +94,7 @@
 	"mobile-frontend-editor-editing-page": "<span><strong>در حال ویرایش </strong> $1</span>",
 	"mobile-frontend-editor-error": "خطا، ویرایش ذخیره نشده‌است.",
 	"mobile-frontend-editor-error-conflict": "خطا، کاربری دیگر این صفحه را ویرایش کرده است.",
-	"mobile-frontend-editor-error-loading": "خطا، امکان بارگیری بخش وجود ندارد.",
+	"mobile-frontend-editor-error-loading": "خطا، امکان بارگیری ویرایشگر وجود ندارد.",
 	"mobile-frontend-editor-error-preview": "خطا، مشکلی غیر منتظره برای بارگیری صفحه پدید آمده. لطفاً صفحه را ببندید و دوباره تلاش کنید.",
 	"mobile-frontend-editor-keep-editing": "ادامه ویرایش‌کردن",
 	"mobile-frontend-editor-licensing": "با ذخیرهٔ تغییرات، شما با انتشار مشارکتتان تحت {{PLURAL:$2|مجوز|مجوز}} $1 موافقت کرده‌اید.",
@@ -136,7 +138,7 @@
 	"mobile-frontend-joined-minutes": "{{PLURAL:$2|$2 دقیقه|$2 دقیقه}} پیش {{GENDER:$1|عضو شد}}",
 	"mobile-frontend-joined-hours": "{{PLURAL:$2|$2 ساعت|$2 ساعت}} پیش {{GENDER:$1|عضو شد}}",
 	"mobile-frontend-joined-days": "{{PLURAL:$2|$2 روز|$2 روز}} پیش {{GENDER:$1|عضو شد}}",
-	"mobile-frontend-joined-months": "{{PLURAL:$2|$2 ما|$2 ماه}} پیش {{GENDER:$1|عضو شد}}",
+	"mobile-frontend-joined-months": "{{PLURAL:$2|$2 ماه}} پیش {{GENDER:$1|عضو شد}}",
 	"mobile-frontend-joined-years": "{{PLURAL:$2|$2 سال|$2 سال}} پیش {{GENDER:$1|عضو شد}}",
 	"mobile-frontend-language-heading": "<strong>زبان‌ها</strong>",
 	"mobile-frontend-languages-404-desc": "یک عنوان معتبر باید مشخص شود.",
@@ -242,7 +244,7 @@
 	"tag-mobile_edit": "ویرایش با تلفن همراه",
 	"tag-mobile_edit-description": "ویرایش انجام‌شده از گوشی همراه (وب یا برنامه)",
 	"tag-advanced_mobile_edit": "ویرایش پیشرفته تلفن همراه",
-	"tag-advanced_mobile_edit-description": "ویرایش کاربر توسط حالت پیضرفته تلفن همراه انجام شده‌است.",
+	"tag-advanced_mobile_edit-description": "ویرایش کاربر توسط حالت پیشرفته انجام شده‌است.",
 	"tag-mobile_web_edit": "ویرایش با مرورگر تلفن همراه",
 	"tag-mobile_web_edit-description": "ویرایش انجام‌شده از وب‌گاه موبایل",
 	"mobile-frontend-loading-message": "در حال بارگیری...",

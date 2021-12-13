@@ -33,6 +33,7 @@
 	"mobile-frontend-main-menu-settings-heading": "అమరికలు",
 	"mobile-frontend-media-details": "వివరాలు",
 	"mobile-frontend-media-license-link": "లైసెన్సు సమాచారం",
+	"mobile-frontend-missing-image": "బొమ్మ",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 కిమీ}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 మీ}}",
 	"mobile-frontend-nearby-title": "చుట్టుపక్కల",

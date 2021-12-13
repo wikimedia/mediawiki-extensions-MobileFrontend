@@ -1,11 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"Amara-Amaziɣ"
+			"Amara-Amaziɣ",
+			"Ayour2002"
 		]
 	},
-	"mobile-frontend-copyright": "<a class='internal' href='/wiki/Wikip%C3%A9dia:Izrfan n umgay' title='Izrfan n umgay'>Izrfan n umgay</a> : Iṭṛiṣn rad tn taft ɣid  <a href='http://creativecommons.org/licenses/by-sa/3.0/deed.fr'>taragt n usnufl Commons tibḍit–baba iga zund</a> ;s tiwtilin lli f fllasn ittuyskarn. Zṛ f mayad ɣ <a href='https://foundation.wikimedia.org/wiki/Conditions_d'utilisation'>tiwtlin  n uskr </a> bac a taft isisfin frurin yaḍn . {{SITENAME}}® est une marque déposée de la <a href='https://foundation.wikimedia.org/wiki/Accueil' title='Wikimedia Foundation'>Wikimedia Foundation, Inc.</a>, tga yat tamaddast lli dar awttas bla tiɣrad.",
-	"mobile-frontend-featured-article": "Isisfiwn f ...",
-	"mobile-frontend-news-items": "ⴳ ⵉⵏⵖⵎⵉⵙⵏ",
-	"tag-mobile_edit": "ⴰⵙⵏⴼⵍ ⵉⵜⵜⵢⴰⵙⴽⴰⵔⵏ ⵖ ⵓⵎⵓⴱⵉⵍ"
+	"mobile-frontend-copyright": "Mayad illa ddu $1 abla iɣ ittuybdar mas ur t-igi.",
+	"mobile-frontend-featured-article": "Isisfiwn f ɣassad ittuyxtarn",
+	"mobile-frontend-news-items": "Ɣ inɣmisn",
+	"mobile-frontend-view": "Annay n ttilifun",
+	"tag-mobile_edit": "Asnfl ittyaskarn zɣ ttilifun",
+	"tag-mobile_web_edit": "Asnfl ittyuskrn zɣ ttilifun"
 }

@@ -8,7 +8,8 @@
 			"Jeluang Terluang",
 			"Kurniasan",
 			"Pizza1016",
-			"SNN95"
+			"SNN95",
+			"Tofeiku"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Masukkan kod pengesahan",
@@ -81,11 +82,12 @@
 	"mobile-frontend-languages-404-desc": "Tajuk yang sah mesti dinyatakan.",
 	"mobile-frontend-languages-404-title": "Ralat bahasa",
 	"mobile-frontend-languages-header": "Bahasa",
-	"mobile-frontend-languages-header-page": "$1 - Bahasa",
+	"mobile-frontend-languages-header-page": "$1 - Bahasa lain",
 	"mobile-frontend-languages-nonexistent-title": "Laman \"$1\" tidak wujud.",
-	"mobile-frontend-languages-text": "$1 terdapat dalam $2 bahasa.",
+	"mobile-frontend-languages-text": "$1 terdapat dalam {{PLURAL:$2|satu bahasa|$2 bahasa}} lain.",
 	"mobile-frontend-languages-variant-header": "Varian {{#language:{{CONTENTLANG}}}}",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Bahasa yang disarankan",
+	"mobile-frontend-languages-structured-overlay-all-languages-header": "Bahasa lain",
 	"mobile-frontend-last-modified-date": "Kali terakhir disunting pada $1, $2",
 	"mobile-frontend-main-menu": "Menu Utama",
 	"mobile-frontend-main-menu-settings-heading": "Tetapan",

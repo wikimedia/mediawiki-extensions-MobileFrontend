@@ -16,7 +16,8 @@
 			"Njardarlogar",
 			"Nsaa",
 			"Pmt",
-			"Tarjeimo"
+			"Tarjeimo",
+			"Abuluntu"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Hvorvidt en bruker redigerer fra mobilgrensesnittet",
@@ -48,6 +49,7 @@
 	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|byte}} lagt til",
 	"mobile-frontend-diffview-bytesnochange": "Ingen endring i størrelse",
 	"mobile-frontend-diffview-bytesremoved": "$1 {{PLURAL:$1|byte}} fjernet",
+	"mobile-frontend-diffview-comma": "$1 $2",
 	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|redigering|redigeringer}}",
 	"mobile-frontend-diffview-title": "Endringer",
 	"mobile-frontend-edit-login-action": "<strong>Hjelp til med å forbedre {{SITENAME}}.</strong><br />Logg inn for å redigere.",
@@ -143,6 +145,7 @@
 	"mobile-frontend-media-load-fail-message": "En feil oppsto under lasting av dette bildet.",
 	"mobile-frontend-media-load-fail-retry": "Oppdater",
 	"mobile-frontend-missing-image": "Bilde",
+	"mobile-frontend-tap-to-display-image": "Trykk for å vise bilde.",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 km}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",
 	"mobile-frontend-nearby-error": "{{GRAMMAR:genitive|{{SITENAME}}}} «I nærheten» har problemer.",
@@ -161,7 +164,7 @@
 	"mobile-frontend-opt-in-explain": "{{SITENAME}} βeta er en måte du kan prøve disse eksperimentelle funksjonene og gi oss verdifull tilbakemelding",
 	"mobile-frontend-overlay-close": "Lukk",
 	"mobile-frontend-privacy-link-text": "Personvern",
-	"mobile-frontend-references-citation": "Sitering",
+	"mobile-frontend-references-citation": "Referanse",
 	"mobile-frontend-references-citation-error": "Det oppsto en feil og referansen kunne ikke lastes.",
 	"mobile-frontend-references-list": "Vis fullstendig liste over siteringer",
 	"mobile-frontend-requires-mobile": "Denne siden er ikke tilgjengelig for desktop. Trykk på mobilvisning-lenken nederst på siden.",
@@ -217,7 +220,7 @@
 	"mobile-frontend-user-page-desired-action": "Denne siden bør opprettes og redigeres av $1",
 	"mobile-frontend-user-page-create-owner-page-link-label": "Opprett din egen",
 	"mobile-frontend-user-page-create-user-page-link-label": "Opprett siden $1",
-	"mobile.css": "/* CSS plassert her vil gjelde alle brukere av mobilsiden */",
+	"mobile.css": "/* CSS plassert her lastes for alle brukere av mobilsiden */",
 	"mobile.js": "/* JavaScript her vil lastes for alle brukere av mobilsiden */",
 	"nearby": "Sider om temaer nær deg",
 	"tag-mobile_edit": "Mobilredigering",
@@ -249,7 +252,7 @@
 	"mobile-frontend-amc-outreach-enabled-message": "Avansert modus er nå slått på. Du kan slå den av i innstillingene dine.",
 	"mobile-frontend-amc-outreach-dismissed-message": "Du kan slå på avansert modus når som helst i innstillingene dine.",
 	"mobile-frontend-beta-only": "Funksjon kun tilgjengelig i betamodus",
-	"mobile-frontend-console-recruit": "Lær mer om hvordan vi bygger den mobile nettsiden vår på https://www.mediawiki.org/wiki/Extension:MobileFrontend",
+	"mobile-frontend-console-recruit": "Lær mer om hvordan vi bygger den mobile nettsiden vår på https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Optimer og forenkle spesialsider på mobil (anbefalt)",
 	"prefs-mobile": "Mobilinnstillinger"
 }

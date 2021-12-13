@@ -2,11 +2,14 @@
 	"@metadata": {
 		"authors": [
 			"Chorobek",
-			"Janatkg"
+			"Janatkg",
+			"Bosogo"
 		]
 	},
 	"mobile-frontend-privacy-link-text": "Купуялыкты сактоо",
+	"mobile-frontend-terms-text": "Колдонуу шарттары",
 	"mobile-frontend-view": "Мобилдик көрүнүш",
 	"mobile-frontend-view-desktop": "Толук түрү",
-	"tag-mobile_edit": "Мобилдик оңдоо"
+	"tag-mobile_edit": "Мобилдик оңдоо",
+	"tag-mobile_web_edit": "Мобилдик версиясынан оңдоо"
 }

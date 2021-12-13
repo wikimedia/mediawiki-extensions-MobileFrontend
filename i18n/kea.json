@@ -7,5 +7,8 @@
 		]
 	},
 	"mobile-frontend-privacy-link-text": "Privasidadi",
-	"mobile-frontend-view": "Vizon móvel"
+	"mobile-frontend-view": "Vizon móvel",
+	"mobile-frontend-view-desktop": "Versãu desktop",
+	"tag-mobile_edit": "Mudansa fetu na móvel",
+	"tag-mobile_web_edit": "Edison fetu na site móvel"
 }

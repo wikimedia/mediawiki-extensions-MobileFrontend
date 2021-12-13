@@ -70,6 +70,7 @@
 	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|Вы сапраўды хочаце стварыць}} новую старонку ў {{SITENAME}}?",
 	"mobile-frontend-editor-save": "Захаваць",
 	"mobile-frontend-editor-uploadenable": "Калі ласка, спачатку загрузіце фота, каб мець магчымасьць рэдагаваць.",
+	"mobile-frontend-fontchanger-option-large": "Вялікі",
 	"mobile-frontend-featured-article": "Сёньняшні абраны матэрыял",
 	"mobile-frontend-last-modified-date": "Апошняе рэдагаваньне ў $2 $1",
 	"mobile-frontend-main-menu-settings-heading": "Налады",
@@ -104,7 +105,9 @@
 	"mobile-frontend-watchlist-more": "болей",
 	"mobile-frontend-watchlist-removed": "$1 выдалена са сьпісу назіраньня",
 	"nearby": "Старонкі на тэмы побач з вамі",
-	"tag-mobile_edit": "Праўка з мабільнай прылады",
+	"tag-mobile_edit": "Рэдагаваньне з мабільнай прылады",
+	"tag-mobile_edit-description": "Рэдагаваньні зробленыя з мабільных прыладаў",
+	"tag-advanced_mobile_edit-description": "Рэдагаваньні зробленыя ўдзельнікам у пашыраным рэжыме",
 	"tag-mobile_web_edit": "Праўка праз мабільную вэрсію сайту",
 	"tag-mobile_web_edit-description": "Рэдагаваньне, зробленае з мабільнай вэрсіі сайту",
 	"mobile-frontend-console-recruit": "Даведайцеся болей пра тое, як мы робім наш мабільны сайт @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend"

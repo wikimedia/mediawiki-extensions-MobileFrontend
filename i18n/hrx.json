@@ -1,8 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Midnight Gambler"
+			"Midnight Gambler",
+			"Iohanen"
 		]
 	},
-	"mobile-frontend-terms-text": "Nutzungsbedingunge"
+	"mobile-frontend-terms-text": "Nutzungsbedingunge",
+	"mobile-frontend-view": "Mobile Aansicht",
+	"tag-mobile_edit": "Mobile Beaarvetung",
+	"tag-mobile_web_edit": "Mobile Web-Beaarvetung"
 }

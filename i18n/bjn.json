@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ezagren"
+			"Ezagren",
+			"Mnam23"
 		]
 	},
+	"mobile-frontend-view": "Tampaian HP",
 	"tag-mobile_edit": "Babakan HP",
 	"tag-mobile_web_edit": "Babakan wéb HP"
 }

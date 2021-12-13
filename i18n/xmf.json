@@ -1,19 +1,20 @@
 {
 	"@metadata": {
 		"authors": [
-			"Silovan"
+			"Silovan",
+			"Narazeni"
 		]
 	},
 	"mobile-frontend-categories-add": "კატეგორიაშა გეძინა",
 	"mobile-frontend-changeslist-nocomment": "ვარე რედაქტირაფაშ რეზიუმე",
 	"mobile-frontend-copyright": "დინორე წჷმორინაფილი რე $1 პირობეფით (შხვა ვარე მეწურაფილჷ-და).",
-	"mobile-frontend-featured-article": "დღაშ გიშაგორილ მასალა",
+	"mobile-frontend-featured-article": "დღაშ გიშაგორილი მასალა",
 	"mobile-frontend-last-modified-date": "ეკონია რედაქტირაფაშ ბორჯი $1-შ, $2-ს",
 	"mobile-frontend-news-items": "ახალ ამბეეფს",
-	"mobile-frontend-privacy-link-text": "კონფიდენციალურობა",
-	"mobile-frontend-terms-text": "გიმორინაფაშ პირობეფი",
+	"mobile-frontend-privacy-link-text": "კონფიდენციალურალა",
+	"mobile-frontend-terms-text": "გჷმორინაფაშ პიჯალეფი",
 	"mobile-frontend-view": "მობილური ვერსია",
 	"mobile-frontend-view-desktop": "დესკტოპი",
 	"tag-mobile_edit": "რედაქტირაფა მობილურით",
-	"tag-mobile_web_edit": "რედაქტირაფა საიტიშ მობილური ვერსიათ"
+	"tag-mobile_web_edit": "რედაქტირაფა ვებ-ხასჷლაშ მობილური ვერსიათ"
 }

@@ -2,13 +2,14 @@
 	"@metadata": {
 		"authors": [
 			"Gazimagomedov",
-			"Аль-Гимравий"
+			"Аль-Гимравий",
+			"Omarov M."
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "Хиса-басиялъул хӀакъалъулъ баян гьечӀо",
 	"mobile-frontend-copyright": "Гьумералда бихьизабураб щинаб жо буго $1 лицензиялда рекъон бугеб.",
 	"mobile-frontend-featured-article": "Жакъасеб тӀасабищараб материал",
-	"mobile-frontend-last-modified-date": "$1 гьумералда ахирисеб хиса-баси гьабуна: $2",
+	"mobile-frontend-last-modified-date": "$1 гьумералда ахирисеб хиса-баси гьабуна: $2-лда",
 	"mobile-frontend-news-items": "ЦӀиял харбал",
 	"mobile-frontend-privacy-link-text": "Конфиденциальность",
 	"mobile-frontend-terms-text": "ХӀалтӀизабиялъул къагӀидаби",

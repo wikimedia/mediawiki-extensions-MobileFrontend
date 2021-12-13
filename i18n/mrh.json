@@ -1,9 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Teitei Para"
+			"Teitei Para",
+			"Chhithai",
+			"Teitei"
 		]
 	},
+	"mobile-frontend-copyright": "A tlôhpa cha $1 ry liata â hmô.",
 	"tag-mobile_edit": "Maobai ta taopathina",
 	"tag-mobile_web_edit": "Mawbai web liata taopathina"
 }

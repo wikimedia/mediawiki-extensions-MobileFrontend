@@ -1,9 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Htawmonzel"
+			"Htawmonzel",
+			"咽頭べさ"
 		]
 	},
+	"mobile-frontend-media-load-fail-retry": "ပြံင်ပဆုဲ",
+	"mobile-frontend-view": "ထၜး နကဵုမဝ်ဗိုင်",
 	"tag-mobile_edit": "ပလေဝ်ဒါန် နကဵုဖုန်",
 	"tag-mobile_web_edit": "ပလေဝ်ဒါန် ဝေပ်သာ် နကဵုဖုန်"
 }

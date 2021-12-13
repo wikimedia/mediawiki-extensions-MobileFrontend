@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joao Xavier"
+		]
+	},
+	"apihelp-mobileview-param-prop-withimages": "Quala informo obtenar:\n;text:HTML de la selektita secioni.\n;sections:Informo pri omna secioni di la pagino.\n;normalizedtitle:Titulo di la pagino, normaligata.\n;lastmodified:''Timestamp'' ISO 8601 pri kande la pagino modifikesis lastafoye, exemple \"2014-04-13T22:42:14Z\".\n;lastmodifiedby:Informo pri la lasta uzero qua modifikis ca pagino.\n;revision:Return the current revision ID of the page.\n;protection:Information about protection level.\n;editable:Whether the current user can edit this page. This includes all factors for logged-in users but not blocked status for anons.\n;languagecount:Number of languages that the page is available in.\n;hasvariants:Whether or not the page is available in other language variants.\n;displaytitle:The rendered title of the page, with &#123;&#123;DISPLAYTITLE&#125;&#125; and such applied.\n;pageprops:Propraji di la pagino.\n;image:Informo pri imajo asociita kun ca pagino.\n;thumb:Miniaturo di imajo asociita kun ca pagino.",
+	"apihelp-mobileview-param-pageprops": "Quala propraji di la pagini montrar, uzanta (\"|\") por separar l'elementi de la listo, o \"*\" por omna propraji."
+}

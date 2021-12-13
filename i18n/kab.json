@@ -1,11 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Belkacem77"
+			"Belkacem77",
+			"Bilalbill"
 		]
 	},
 	"mobile-frontend-editor-disabled": "Asebter-agi yettwammesten mgal aẓdam.",
-	"mobile-frontend-editor-error": "Tuccḍa, abeddil ue yettwasekles ara.",
+	"mobile-frontend-editor-error": "Tuccḍa, abeddil ur yettwasekles ara.",
 	"mobile-frontend-editor-save": "Sekles",
 	"mobile-frontend-editor-uploadenable": "Sali tawlaft akken ad tremdeḍ taẓrigt.",
 	"mobile-frontend-save-settings": "Sekles",

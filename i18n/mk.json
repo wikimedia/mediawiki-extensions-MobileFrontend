@@ -114,7 +114,7 @@
 	"mobile-frontend-languages-variant-header": "Варијанти на {{#language:{{CONTENTLANG}}}}",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Предложени јазици",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Други јазици",
-	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Пребарување јазик",
+	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Пребарување на јазик",
 	"mobile-frontend-last-modified-date": "Последна измена на $1, во $2 ч.",
 	"mobile-frontend-last-modified-with-user-days": "[$4 Последното уредување е {{GENDER:$1|направено}} пред {{PLURAL:$3|еден ден|$3 дена}}] од {{PLURAL:$5|[$6 $2]|0=анонимен корисник}}",
 	"mobile-frontend-last-modified-with-user-hours": "[$4 Последното уредување е {{GENDER:$1|направено}} пред {{PLURAL:$3|еден час|$3 часа}}] од {{PLURAL:$5|[$6 $2]|0=анонимен корисник}}",

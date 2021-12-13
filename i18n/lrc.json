@@ -70,7 +70,7 @@
 	"mobile-frontend-languages-header-page": "$1 - زڤونؽا",
 	"mobile-frontend-languages-nonexistent-title": "بلگه $1 وجود ناره.",
 	"mobile-frontend-languages-text": "$1 ها د $2 {{PLURAL:$2|زڤون|زڤونؽا}}.",
-	"mobile-frontend-languages-variant-header": "{{#زون:{{مینونه زون}}}} آلشتگریا",
+	"mobile-frontend-languages-variant-header": "{{#language:{{CONTENTLANG}}}} آلشتگریا",
 	"mobile-frontend-last-modified-date": "آخرین بار د $1 آلشتکار بیه، د $2",
 	"mobile-frontend-main-menu-settings-heading": "تنظيمات",
 	"mobile-frontend-media-details": "جزئیات",

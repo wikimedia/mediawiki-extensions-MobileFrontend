@@ -11,7 +11,8 @@
 			"बिप्लब आनन्द",
 			"राम प्रसाद जोशी",
 			"सरोज कुमार ढकाल",
-			"हिमाल सुबेदी"
+			"हिमाल सुबेदी",
+			"Saroj Uprety"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "पुष्टिकरण अङ्क प्रविष्ट गर्नुहोस्",
@@ -54,6 +55,7 @@
 	"mobile-frontend-editor-error-preview": "त्रुटि, पूर्वावलोकन गर्दा अप्रत्याशित केहि भयो। कृपया बन्द गर्नुहोस् र फेरि प्रयास गर्नुहोस्।",
 	"mobile-frontend-editor-keep-editing": "सम्पादन जारी राख्नुहोस्।",
 	"mobile-frontend-editor-licensing": "तपाईको परिवर्तनहरू सङ्ग्रह गर्नाले, तपाई $1 {{PLURAL:$2|इजाजतपत्र|licenses}} अन्तर्गतको योगदान जारी गर्न सहमत हुनुहुन्छ।",
+	"mobile-frontend-editor-licensing-with-terms": "तपाईको परिवर्तनहरू सङ्ग्रह गर्नाले, तपाई $1 {{PLURAL:$3|इजाजतपत्र|licenses}} $2 अन्तर्गतको योगदान जारी गर्न सहमत हुनुहुन्छ।",
 	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|}} {{SITENAME}}मा नयाँ पृष्ठ सृजना गर्ने बारेमा, के निश्चित हुनुहुन्छ",
 	"mobile-frontend-editor-placeholder": "यो खण्ड खाली छ। यसलाई विस्तार गर्ने पहिलो व्यक्ति बन्नुहोस्।",
 	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|तपाई}} {{SITENAME}}मा नयाँ पृष्ठ बनाउँदै हुनुहुन्छ।",
@@ -100,7 +102,7 @@
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "अन्य भाषाहरू",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "भाषाको लागि खोज्नुहोस्",
 	"mobile-frontend-last-modified-date": "अन्तिम सम्पादन $1, $2 बजे",
-	"mobile-frontend-last-modified-with-user-days": "{{PLURAL:$5|[$6 $2]|0=अज्ञात प्रयोगकर्ताद्वारा}}द्वारा [{{PLURAL:$3|$3 दिन|$3 दिन}} अगाडि $4 अन्तिम {{GENDER:$1|सम्पादन}}]",
+	"mobile-frontend-last-modified-with-user-days": "{{PLURAL:$5|[$6 $2]|0=अज्ञात प्रयोगकर्ता}}द्वारा [$4 {{PLURAL:$3|$3 दिन|$3 दिन}} अगाडि अन्तिम {{GENDER:$1|सम्पादन}}]",
 	"mobile-frontend-main-menu": "मुख्य सूचीपत्र",
 	"mobile-frontend-main-menu-settings-heading": "सेटिङहरू",
 	"mobile-frontend-media-details": "विवरणहरू",

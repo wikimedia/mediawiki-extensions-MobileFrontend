@@ -3,7 +3,8 @@
 		"authors": [
 			"Chrisportelli",
 			"Leli Forte",
-			"MTSap"
+			"MTSap",
+			"ToniSant"
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "l-ebda taqsira",
@@ -43,5 +44,6 @@
 	"mobile-frontend-watchlist-filter-talk": "Diskussjoni",
 	"mobile-frontend-watchlist-removed": "$1 tneħħa mil-lista ta' osservazzjonijiet tiegħek",
 	"tag-mobile_edit": "Modifika bil-mowbajl",
-	"tag-mobile_web_edit": "Modifika mill-web għall-mowbajl"
+	"tag-mobile_web_edit": "Modifika mill-web għall-mowbajl",
+	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "Paragrafu prinċipali"
 }

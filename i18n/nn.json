@@ -132,7 +132,7 @@
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",
 	"mobile-frontend-nearby-error": "{{GRAMMAR:genitive|{{SITENAME}}}} «Nær her» har vanskar.",
 	"mobile-frontend-nearby-error-guidance": "Freist å oppdatera staden din.",
-	"mobile-frontend-nearby-noresults": "Det er stille her ute… Det vart ikkje funne nokon sider nær deg.",
+	"mobile-frontend-nearby-noresults": "Det er stille her ute… Det vart ikkje funne nokon sider for emne nær deg.",
 	"mobile-frontend-nearby-noresults-guidance": "Freist å oppretta ein ny artikkel eller legg til stad til ein som alt finst.",
 	"mobile-frontend-nearby-requirements": "Diverre stør ikkje nettlesaren {{SITENAME}}-funksjonen «Nær her».",
 	"mobile-frontend-nearby-requirements-guidance": "Freist ein annan nettlesar eller slå på JavaScript om du har slege det av.",
@@ -180,8 +180,15 @@
 	"nearby": "Sider nær deg",
 	"tag-mobile_edit": "mobilendring",
 	"tag-mobile_edit-description": "Endring gjord frå mobil (nett eller småprogram)",
+	"tag-advanced_mobile_edit": "Avansert mobilendring",
+	"tag-advanced_mobile_edit-description": "Endring gjord av ein brukar med avansert modus",
 	"tag-mobile_web_edit": "Mobil nettendring",
 	"tag-mobile_web_edit-description": "Endring gjord frå mobil nettstad",
 	"mobile-frontend-loading-message": "Lastar ...",
-	"mobile-frontend-mobile-option-amc-learn-more": "Lær meir"
+	"mobile-frontend-mobile-option-amc": "Avansert modus",
+	"mobile-frontend-mobile-option-amc-learn-more": "Lær meir",
+	"mobile-frontend-amc-outreach-intro": "Avansert modus er her",
+	"mobile-frontend-amc-outreach-enable": "Slå på avansert modus",
+	"mobile-frontend-amc-outreach-enabled-message": "Avansert modus er no påslegen. Du kan slå han av i innstillingane dine.",
+	"mobile-frontend-amc-outreach-dismissed-message": "Du kan slå på avansert modus kva tid som helst i innstillingane dine."
 }

@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Salomo Christian Hutajulu"
+			"Salomo Christian Hutajulu",
+			"Herryz"
 		]
 	},
-	"tag-mobile_edit": "Patota pangke henpon"
+	"mobile-frontend-view": "Tampilan talipon tangan",
+	"tag-mobile_edit": "Patota pangke henpon",
+	"tag-mobile_web_edit": "Padimposhon web seluler"
 }
