@@ -53,6 +53,7 @@
 	"mobile-frontend-editor-anon": "Muokkaa kirjautumatta sisään",
 	"mobile-frontend-editor-anonwarning": "<strong>Varoitus:</strong> Et ole kirjautunut sisään. IP-osoitteesi tulee näkymään julkisesti, jos teet muokkauksia. Mikäli <strong>kirjaudut sisään</strong> tai <strong>luot tunnuksen</strong>, muokkauksesi yhdistetään käyttäjänimeesi ja saat paremman käyttökokemuksen.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Kirjaudu sisään",
+	"mobile-frontend-editor-blocked-drawer-action-randompage": "Vie minut toiselle sivulle",
 	"mobile-frontend-editor-blocked-drawer-title": "Sinut on estetty muokkaamasta sivustoa {{SITENAME}}.",
 	"mobile-frontend-editor-blocked-drawer-title-partial": "Sinut on estetty muokkaamasta tätä sivua.",
 	"mobile-frontend-editor-blocked-drawer-title-ip": "Sinun IP-osoitteesi on estetty muokkaamasta sivustoa {{SITENAME}}.",
@@ -136,6 +137,7 @@
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Muut kielet",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Etsi kieltä",
 	"mobile-frontend-languages-structured-overlay-no-results": "Kieli ei ole saatavilla.",
+	"mobile-frontend-languages-structured-overlay-no-results-body": "Etsimäsi kieli ei ole saatavilla.",
 	"mobile-frontend-last-modified-date": "Sivua on viimeksi muokattu $1 kello $2",
 	"mobile-frontend-last-modified-with-user-days": "[$4 Viimeksi {{GENDER:$1|muokannut}} {{PLURAL:$3|$3 päivä|$3 päivää}} sitten] {{PLURAL:$5|[$6 $2]|0=anonyymi käyttäjä}}",
 	"mobile-frontend-last-modified-with-user-hours": "[$4 Viimeksi {{GENDER:$1|muokannut}} {{PLURAL:$3|$3 tunti|$3 tuntia}} sitten] {{PLURAL:$5|[$6 $2]|0=anonyymi käyttäjä}}",
@@ -248,6 +250,7 @@
 	"mobile-frontend-amc-outreach-no-thanks": "Ei kiitos",
 	"mobile-frontend-amc-outreach-enabled-message": "Laajennettu tila on nyt käytössä. Voit kytkeä sen pois asetuksista.",
 	"mobile-frontend-amc-outreach-dismissed-message": "Voit kytkeä laajennetun tilan käyttöön koska tahansa asetuksista.",
+	"mobile-frontend-beta-only": "Ominaisuus käytettävissä vain beta-tilassa",
 	"mobile-frontend-console-recruit": "Lisätietoja siitä, miten rakensimme mobiilisivustomme @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"prefs-mobile": "Mobiiliasetukset"
 }
