@@ -38,15 +38,6 @@ global.mw.confirmCloseWindow = function () {
   };
 };
 
-global.moment = ( ts ) => {
-  return {
-    to: ( expiry ) => '1 day',
-    format: () => {
-      return '20th December 2050';
-    }
-  }
-};
-
 // make sure messages work!
 global.mw.msg = function ( key, arg1 ) {
   const val = en[key] || `⧼${key}⧽`;

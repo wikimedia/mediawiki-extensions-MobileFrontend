@@ -31,9 +31,6 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/SourceEditorOverlay', {
 		sandbox.stub( SourceEditorOverlay.prototype, 'log' ).returns( util.Deferred().resolve() );
 		messageStub = sandbox.stub( BlockMessageDetails.prototype, 'initialize' );
 		getContentStub = sandbox.stub( EditorGateway.prototype, 'getContent' );
-		// avoid waiting to load 'moment',
-		// using `expiry: 'infinity'` below ensures we don't need it
-		sandbox.stub( mw.loader, 'using' ).withArgs( 'moment' ).returns( util.Deferred().resolve() );
 		sandbox.stub( mw, 'confirmCloseWindow' ).returns( {
 			release: function () {}
 		} );
