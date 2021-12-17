@@ -39,6 +39,7 @@
 	"mobile-frontend-editor-blocked-drawer-body-link": "Méi gesinn",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Grond",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Gespaart}} vum",
+	"mobile-frontend-editor-blocked-drawer-expiry-header": "Spär leeft of",
 	"mobile-frontend-editor-blocked-drawer-help": "Detailer weisen",
 	"mobile-frontend-editor-generic-block-reason": "Onbekannte Grond",
 	"mobile-frontend-editor-cancel": "Ofbriechen",

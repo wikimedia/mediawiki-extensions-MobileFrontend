@@ -60,7 +60,7 @@
 	"mobile-frontend-editor-blocked-drawer-body-link": "Mehr sehen",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Grund",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Gesperrt}} von",
-	"mobile-frontend-editor-blocked-drawer-expiry-header": "Die Sperre wird ablaufen in",
+	"mobile-frontend-editor-blocked-drawer-expiry-header": "Die Sperre läuft ab",
 	"mobile-frontend-editor-blocked-drawer-help": "Weitere Einzelheiten",
 	"mobile-frontend-editor-generic-block-reason": "Begründung unbekannt",
 	"mobile-frontend-editor-cancel": "Abbrechen",
