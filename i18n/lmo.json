@@ -43,7 +43,7 @@
 	"mobile-frontend-editor-blocked-drawer-body-link": "Varda pussee",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Reson",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Blocad|Blocada|Bloccad/da}} de",
-	"mobile-frontend-editor-blocked-drawer-expiry-header": "El bloch el finirà de chì a",
+	"mobile-frontend-editor-blocked-drawer-expiry-header": "El bloch el finirà",
 	"mobile-frontend-editor-blocked-drawer-help": "Varda i detali",
 	"mobile-frontend-editor-generic-block-reason": "Reson conossuda de nissun",
 	"mobile-frontend-editor-cancel": "Anula",

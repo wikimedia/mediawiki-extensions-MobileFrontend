@@ -90,7 +90,7 @@
 	"mobile-frontend-editor-blocked-drawer-body-link": "Voir davantage",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Motif",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "Bloqué{{GENDER:$1||e}} by",
-	"mobile-frontend-editor-blocked-drawer-expiry-header": "Déblocage dans",
+	"mobile-frontend-editor-blocked-drawer-expiry-header": "Le blocage expirera",
 	"mobile-frontend-editor-blocked-drawer-help": "Voir les détails",
 	"mobile-frontend-editor-generic-block-reason": "Raison inconnue",
 	"mobile-frontend-editor-cancel": "Annuler",

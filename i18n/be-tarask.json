@@ -36,7 +36,7 @@
 	"mobile-frontend-editor-blocked-drawer-title-partial": "Вам забароненае рэдагаваньне гэтай старонкі.",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Прычына",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "Кім {{GENDER:$1|заблякаваны|заблякаваная}}",
-	"mobile-frontend-editor-blocked-drawer-expiry-header": "Тэрмін сканчэньня блякаваньня",
+	"mobile-frontend-editor-blocked-drawer-expiry-header": "Блякаваньне скончыцца",
 	"mobile-frontend-editor-blocked-drawer-help": "Глядзіце падрабязнасьці",
 	"mobile-frontend-editor-generic-block-reason": "Невядомая прычына",
 	"mobile-frontend-editor-cancel": "Скасаваць",

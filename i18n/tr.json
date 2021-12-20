@@ -80,7 +80,7 @@
 	"mobile-frontend-editor-blocked-drawer-body-link": "Daha fazla gör",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Sebep",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Engelleyen}}",
-	"mobile-frontend-editor-blocked-drawer-expiry-header": "Engel şu tarihte bitiyor:",
+	"mobile-frontend-editor-blocked-drawer-expiry-header": "Engel sona erecektir",
 	"mobile-frontend-editor-blocked-drawer-help": "Ayrıntıları bakın",
 	"mobile-frontend-editor-generic-block-reason": "Bilinmeyen sebep",
 	"mobile-frontend-editor-cancel": "İptal",
