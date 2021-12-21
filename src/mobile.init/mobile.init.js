@@ -9,6 +9,7 @@
  * @singleton
  */
 var skin,
+	{ USER_FONT_SIZE_REGULAR, USER_FONT_SIZES } = require( '../constants' ),
 	storage = mw.storage,
 	toggling = require( './toggling' ),
 	lazyLoadedImages = require( './lazyLoadedImages' ),
@@ -19,7 +20,6 @@ var skin,
 	currentPageHTMLParser = require( '../mobile.startup/currentPageHTMLParser' )(),
 	mfUtil = require( '../mobile.startup/util' ),
 	$window = mfUtil.getWindow(),
-	$html = mfUtil.getDocument(),
 	Skin = require( '../mobile.startup/Skin' ),
 	eventBus = require( '../mobile.startup/eventBusSingleton' ),
 	schemaEditAttemptStep = require( './eventLogging/schemaEditAttemptStep' ),
@@ -73,22 +73,31 @@ $window
  * Updates the font size based on the current value in storage
  */
 function updateFontSize() {
-	// FIXME: Ideally 'regular' would come from a shared constant
-	// (currently not possible without using webpack)
-	var userFontSize = storage.get( 'userFontSize', 'regular' );
+	const userFontSize = storage.get( 'userFontSize', USER_FONT_SIZE_REGULAR );
 	// The following classes are used here:
 	// * mf-font-size-small
 	// * mf-font-size-regular
 	// * mf-font-size-large
 	// * mf-font-size-x-large
-	$html.addClass( 'mf-font-size-' + userFontSize );
+	/* eslint-disable mediawiki/class-doc */
+	USER_FONT_SIZES.forEach( function ( fontSize ) {
+		const fontClass = `mf-font-size-${fontSize}`;
+		if ( fontSize === userFontSize ) {
+			document.documentElement.classList.add( fontClass );
+		} else {
+			// If Safari's back/forward cache is being used the previous class may be present.
+			document.documentElement.classList.remove( fontClass );
+		}
+	} );
+	/* eslint-enable mediawiki/class-doc */
 }
 
 // Font must be updated on back button press as users may click
 // back after changing font.
-$window.on( 'pageshow', function () {
+window.addEventListener( 'pageshow', function () {
 	updateFontSize();
 } );
+
 updateFontSize();
 
 // Recruit volunteers through the console
