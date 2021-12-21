@@ -5,6 +5,7 @@ var storage = mw.storage,
 	amcOutreach = require( './mobile.startup/amcOutreach/amcOutreach' ),
 	EXPAND_SECTIONS_KEY = 'expandSections',
 	msg = mw.msg,
+	{ USER_FONT_SIZE_REGULAR } = require( './constants.js' ),
 	FONT_SIZE_KEY = 'userFontSize';
 
 /**
@@ -50,7 +51,7 @@ function addFontChangerToForm( $form ) {
 		currentFontSize = storage.get( FONT_SIZE_KEY );
 
 	fontChangerDropdown = new OO.ui.DropdownInputWidget( {
-		value: currentFontSize || 'regular',
+		value: currentFontSize || USER_FONT_SIZE_REGULAR,
 		options: [
 			{
 				data: 'small',
