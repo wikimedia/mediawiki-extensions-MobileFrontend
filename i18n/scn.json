@@ -47,6 +47,7 @@
 	"mobile-frontend-missing-image": "Mmàggini",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 km}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",
+	"mobile-frontend-nearby-title": "Ntê vicinanzi",
 	"mobile-frontend-news-items": "Attualitati",
 	"mobile-frontend-opt-in-explain": "Participannu â virsioni beta, ci hai la pussibbilitati di usari funziunalitati spririmintali, ma cô rìsicu di ncuntrari errura e prubblemi",
 	"mobile-frontend-overlay-close": "Chiudi",
