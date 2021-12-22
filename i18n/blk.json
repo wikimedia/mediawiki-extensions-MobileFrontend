@@ -37,7 +37,7 @@
 	"mobile-frontend-editor-blocked-drawer-body-link": "ထွားထဲင်း",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "အကျောင်ꩻပျꩻချက်",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|ကေားပေ့ꩻသား}}",
-	"mobile-frontend-editor-blocked-drawer-expiry-header": "ပေ့ꩻထိုꩻမုꩻ သက်တန်ꩻအီႏလို့ခိန်ႏနဝ်ꩻ",
+	"mobile-frontend-editor-blocked-drawer-expiry-header": "ပေ့ꩻဗိဉ်ႏမုꩻသက်တန်ꩻအီႏလို့သွူ",
 	"mobile-frontend-editor-blocked-drawer-help": "ထွား စဲင်းစဲ့အခရာႏဖုံႏ",
 	"mobile-frontend-editor-generic-block-reason": "သေဗာႏတဝ်းအမိဉ်ꩻ ကျောင်ꩻပျꩻချက်",
 	"mobile-frontend-editor-cancel": "မာꩻတဝ်းဒွုမ်",
