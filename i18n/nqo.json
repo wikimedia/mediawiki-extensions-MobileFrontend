@@ -118,6 +118,7 @@
 	"mobile-frontend-languages-structured-overlay-no-results": "ߞߊ߲ ߕߍ߫ ߦߋ߲߬",
 	"mobile-frontend-languages-structured-overlay-no-results-body": "ߌ ߦߋ߫ ߞߊ߲ ߡߍ߲ ߢߌߣߌ߲ ߞߊ߲߬߸ ߏ߬ ߕߴߦߋ߲߬.",
 	"mobile-frontend-last-modified-date": "ߡߊ߬ߦߟߍ߬ߡߊ߲߬ߠߌ߲߬ ߠߊߓߊ߲ ߞߍ߫ ߘߊ߫ $1 ߟߊ߫߸ $2 ߡߊ߬",
+	"mobile-frontend-last-modified-with-user-days": "[$4 {{GENDER:|ߡߊߦߟߍ߬ߡߊ߲߫}} ߠߊ߬ߓߊ߲ ߞߍ߫ ߘߊ߫ $1 ߟߋ߬ ߓߟߏ߫ {{PLURAL:$3|ߕߟߋ߬ $3|ߕߋ߬ߟߋ߫ $3 ߟߎ߫}} ߟߋ߬ ߦߋ߫ ߣߌ߲߬] {{PLURAL:$5|$5|[$2 $6|0=ߟߊ߬ߓߊ߰ߙߊ߬ߟߊ߫ ߕߐߒߕߊ߲ ߘߏ߫]}} ߓߟߏ߫",
 	"mobile-frontend-main-menu": "ߢߣߊߕߊߟߌ ߓߊߖߎߡߊ",
 	"mobile-frontend-main-menu-settings-heading": "ߟߊ߬ߓߍ߲߬ߢߐ߲߰ߡߦߊ߬ߘߊ",
 	"mobile-frontend-media-details": "ߝߊߙߊ߲ߝߊ߯ߛߟߌ",
