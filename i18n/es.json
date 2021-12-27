@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"-jem-",
 			"Amitie 10g",
 			"Armando-Martin",
 			"Awesomecat5",
@@ -70,9 +71,9 @@
 	"mobile-frontend-editor-blocked-drawer-action-login": "Acceder",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "Aceptar",
 	"mobile-frontend-editor-blocked-drawer-action-randompage": "Llévame a otra página",
-	"mobile-frontend-editor-blocked-drawer-title": "Te han bloqueado para impedir que edites {{SITENAME}}.",
+	"mobile-frontend-editor-blocked-drawer-title": "Estás bloqueado y no puedes editar {{SITENAME}}.",
 	"mobile-frontend-editor-blocked-drawer-title-partial": "Estás bloqueado y no puedes editar esta página.",
-	"mobile-frontend-editor-blocked-drawer-title-ip": "Tu dirección IP ha sido bloqueado para impedir que edites {{SITENAME}}.",
+	"mobile-frontend-editor-blocked-drawer-title-ip": "Tu dirección IP está bloqueada y no puedes editar {{SITENAME}}.",
 	"mobile-frontend-editor-blocked-drawer-title-ip-partial": "Tu dirección IP está bloqueada y no puedes editar esta página.",
 	"mobile-frontend-editor-blocked-drawer-body-partial": "Prueba editar otra página.",
 	"mobile-frontend-editor-blocked-drawer-body-login": "Prueba a iniciar sesión si tienes una cuenta.",
