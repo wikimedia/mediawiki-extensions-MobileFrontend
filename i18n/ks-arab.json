@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Iflaq",
-			"Rishabhbhat"
+			"Rishabhbhat",
+			"Teashae"
 		]
 	},
 	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|بائٹ|بائٹہٕ}} اِضافہٕ",
@@ -10,7 +11,7 @@
 	"mobile-frontend-diffview-comma": "$1، $2",
 	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|اؠڑِٹ|اؠڑِٹہٕ}}",
 	"mobile-frontend-diffview-title": "بَدلاو",
-	"mobile-frontend-editor-cancel": "مَنسوٗخ کَرُن",
+	"mobile-frontend-editor-cancel": "مَنسوٗخ",
 	"mobile-frontend-editor-continue": "برٛونٛہہ",
 	"mobile-frontend-editor-publish": "شایع کٔرِو",
 	"mobile-frontend-editor-success": "مُبارَک! تُہند اؠڈِٹ آو شایع کَرنہٕ۔",
@@ -19,7 +20,7 @@
 	"mobile-frontend-editor-summary": "خُلاسہٕ:",
 	"mobile-frontend-joined-just-now": "وۄنؠ گٔمِت {{GENDER:$1|بٔرتی}}",
 	"mobile-frontend-language-heading": "<strong>زَبانٕ</strong>",
-	"mobile-frontend-languages-header": "زَبانٕ",
+	"mobile-frontend-languages-header": "زَبانہٕ",
 	"mobile-frontend-languages-header-page": "$1 - باقیَ زَبانٕ",
 	"mobile-frontend-languages-nonexistent-title": "صَفہٕ $1 چھُ نہٕ موجوٗد",
 	"mobile-frontend-last-modified-date": "آخری اؠڑِٹ $1، $2 بَجے",
@@ -37,7 +38,7 @@
 	"mobile-frontend-references-citation": "حوالہِ",
 	"mobile-frontend-settings-beta": "{{SITENAME}} آزمٲیش",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "موضوٗع",
-	"mobile-frontend-talk-reply": "جواب",
+	"mobile-frontend-talk-reply": "جَوآب",
 	"mobile-frontend-terms-text": "اِستِعمالٕک شَرت",
 	"mobile-frontend-view": "موبائیل سائٹ",
 	"mobile-frontend-view-desktop": "ڈیسک ٹاپ",
