@@ -36,7 +36,7 @@
 	"mobile-frontend-editor-blocked-drawer-title-ip-partial": "Sinu IP-aadress on blokeeritud redigeerimast seda lehekülge.",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Põhjus",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Blokeerinud}}",
-	"mobile-frontend-editor-blocked-drawer-expiry-header": "Blokeeringu aegumistähtaeg",
+	"mobile-frontend-editor-blocked-drawer-expiry-header": "Blokeering aegub",
 	"mobile-frontend-editor-blocked-drawer-help": "Vaata üksikasju",
 	"mobile-frontend-editor-generic-block-reason": "Teadmata põhjus",
 	"mobile-frontend-editor-cancel": "Loobu",
