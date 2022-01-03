@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Edwingudfriend",
+			"Kipala",
 			"Kwisha",
 			"Lloffiwr",
 			"Muddyb Blast Producer",
@@ -21,6 +22,7 @@
 	"mobile-frontend-news-items": "Katika habari",
 	"mobile-frontend-privacy-link-text": "Faragha",
 	"mobile-frontend-save-settings": "Hifadhi mpangilio",
+	"mobile-frontend-terms-text": "Masharti ya matumizi",
 	"mobile-frontend-view": "Mtazamo wa rununu",
 	"mobile-frontend-view-desktop": "Dawati"
 }
