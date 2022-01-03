@@ -566,9 +566,10 @@ mfExtend( EditorOverlayBase, Overlay, {
 				$actions
 			),
 			params = util.extend( {
-			// use wgPageName as this includes the namespace if outside Main
-				returnto: options.returnTo || mw.config.get( 'wgPageName' ),
-				returntoquery: 'action=edit&section=' + options.sectionId,
+				returnto: options.returnTo || (
+					// use wgPageName as this includes the namespace if outside Main
+					mw.config.get( 'wgPageName' ) + '#/editor/' + ( options.sectionId || 'all' )
+				),
 				warning: 'mobile-frontend-edit-login-action'
 			}, options.queryParams ),
 			signupParams = util.extend( {
