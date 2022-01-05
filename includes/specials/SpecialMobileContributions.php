@@ -68,7 +68,10 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 				: $this->getUserFactory()->newFromName( $target );
 		}
 
-		if ( !$this->user ) {
+		if (
+			!$this->user
+			|| ( $this->user->isHidden() && !$this->getUser()->isAllowed( 'hideuser' ) )
+		) {
 			$this->showPageNotFound();
 			return;
 		}
