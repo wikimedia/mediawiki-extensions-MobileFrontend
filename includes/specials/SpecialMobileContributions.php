@@ -76,7 +76,7 @@ class SpecialMobileContributions extends SpecialMobileHistory {
 
 		if (
 			!$this->user
-			|| ( $this->user->isHidden() && !$this->getUser()->isAllowed( 'hideuser' ) )
+			|| ( $this->user->isHidden() && !$this->getAuthority()->isAllowed( 'hideuser' ) )
 		) {
 			$this->showPageNotFound();
 			return;
