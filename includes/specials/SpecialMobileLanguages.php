@@ -2,7 +2,6 @@
 
 use MediaWiki\Languages\LanguageConverterFactory;
 use MediaWiki\Languages\LanguageNameUtils;
-use MediaWiki\MediaWikiServices;
 
 /**
  * Provides a list of languages available for a page
@@ -21,16 +20,17 @@ class SpecialMobileLanguages extends SpecialPage {
 	/**
 	 * @param LanguageConverterFactory $languageConverterFactory
 	 * @param LanguageNameUtils $languageNameUtils
+	 * @param MobileContext $mobileContext
 	 */
 	public function __construct(
 		LanguageConverterFactory $languageConverterFactory,
-		LanguageNameUtils $languageNameUtils
+		LanguageNameUtils $languageNameUtils,
+		MobileContext $mobileContext
 	) {
 		parent::__construct( 'MobileLanguages', '', false );
 		$this->languageConverter = $languageConverterFactory->getLanguageConverter( $this->getContentLanguage() );
 		$this->languageNameUtils = $languageNameUtils;
-		$services = MediaWikiServices::getInstance();
-		$this->mobileContext = $services->getService( 'MobileFrontend.Context' );
+		$this->mobileContext = $mobileContext;
 	}
 
 	/**

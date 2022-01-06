@@ -40,7 +40,8 @@
 			"class": "SpecialMobileLanguages",
 			"services": [
 				"LanguageConverterFactory",
-				"LanguageNameUtils"
+				"LanguageNameUtils",
+				"MobileFrontend.Context"
 			]
 		},
 		"Uploads": "SpecialUploads"
