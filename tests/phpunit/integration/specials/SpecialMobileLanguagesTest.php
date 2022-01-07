@@ -136,7 +136,8 @@ class SpecialMobileLanguagesTest extends MediaWikiIntegrationTestCase {
 
 		$sp = new SpecialMobileLanguages(
 			$services->getLanguageConverterFactory(),
-			$services->getLanguageNameUtils()
+			$services->getLanguageNameUtils(),
+			$mobileContext
 		);
 		$class = new ReflectionClass( SpecialMobileLanguages::class );
 		$method = $class->getMethod( 'processLanguages' );
