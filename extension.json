@@ -338,7 +338,8 @@
 				"resources/mobile.startup/amcOutreach/amcOutreachDrawer.less"
 			],
 			"skinStyles": {
-				"vector": "skinStyles/mobile.startup/vector.less"
+				"vector": "skinStyles/mobile.startup/vector.less",
+				"vector-2022": "skinStyles/mobile.startup/vector.less"
 			},
 			"scripts": [
 				"resources/dist/mobile.startup.runtime.js",
@@ -591,6 +592,7 @@
 			],
 			"skinStyles": {
 				"vector": "skinStyles/mobile.special.nearby.styles/desktop.less",
+				"vector-2022": "skinStyles/mobile.special.nearby.styles/desktop.less",
 				"monobook": "skinStyles/mobile.special.nearby.styles/desktop.less"
 			}
 		},
