@@ -131,7 +131,7 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 		this.log( { action: 'loaded' } );
 
 		if ( !showAnonWarning ) {
-			this.redoTargetInit();
+			this.targetInit();
 		} else {
 			this.$anonWarning = this.createAnonWarning( this.options );
 			this.$anonTalkWarning = this.createAnonTalkWarning();
@@ -142,14 +142,12 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 		this.emit( 'editor-loaded' );
 	},
 	/**
-	 * Re-do some initialization steps that might have happened while the overlay
-	 * was hidden, but only work correctly after it is shown.
+	 * Initialize the target after it has been made visible
 	 */
-	redoTargetInit: function () {
+	targetInit: function () {
 		// Note this.target will not be set if an error occurred and/or destroyTarget was called.
 		if ( this.target ) {
-			this.target.adjustContentPadding();
-			this.target.restoreEditSection();
+			this.target.afterSurfaceReady();
 			this.scrollToLeadParagraph();
 		}
 	},
@@ -226,7 +224,7 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 		this.$anonWarning.hide();
 		this.$anonTalkWarning.hide();
 		self.$el.find( '.overlay-content' ).show();
-		this.redoTargetInit();
+		this.targetInit();
 	},
 	/**
 	 * Reveal the editing interface.
