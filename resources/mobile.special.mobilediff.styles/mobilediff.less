@@ -96,7 +96,9 @@ footer {
 	.mw-diff-inline-changed del {
 		color: #000;
 		text-decoration: none;
-		word-wrap: break-word;
+		// these are styled as inline-blocks
+		// word-wrap and overflow-wrap only apply to inline elements
+		word-break: break-word;
 	}
 
 	> span {
