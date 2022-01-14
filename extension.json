@@ -684,6 +684,7 @@
 		"BeforeInitialize": "MobileFrontendHooks::onBeforeInitialize",
 		"MediaWikiPerformAction": "MobileFrontendHooks::onMediaWikiPerformAction",
 		"OutputPageBeforeHTML": "MobileFrontendHooks::onOutputPageBeforeHTML",
+		"OutputPageBodyAttributes": "MobileFrontendHooks::onOutputPageBodyAttributes",
 		"ResourceLoaderSiteStylesModulePages": "MobileFrontendHooks::onResourceLoaderSiteStylesModulePages",
 		"ResourceLoaderSiteModulePages": "MobileFrontendHooks::onResourceLoaderSiteModulePages",
 		"SkinAfterBottomScripts": "MobileFrontendHooks::onSkinAfterBottomScripts",

@@ -314,6 +314,26 @@ class MobileFrontendHooks {
 	}
 
 	/**
+	 * Modifies the `<body>` element's attributes.
+	 *
+	 * By default, the `class` attribute is set to the output's "bodyClassName"
+	 * property.
+	 *
+	 * @param OutputPage $out
+	 * @param Skin $skin
+	 * @param string[] &$bodyAttrs
+	 */
+	public static function onOutputPageBodyAttributes( OutputPage $out, Skin $skin, &$bodyAttrs ) {
+		$userMode = MediaWikiServices::getInstance()->getService( 'MobileFrontend.AMC.UserMode' );
+		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
+		$isMobile = $context->shouldDisplayMobileView();
+
+		if ( $isMobile && !$userMode->isEnabled() ) {
+			$bodyAttrs['class'] .= ' mw-mf-amc-disabled';
+		}
+	}
+
+	/**
 	 * BeforePageRedirect hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/BeforePageRedirect
 	 *
