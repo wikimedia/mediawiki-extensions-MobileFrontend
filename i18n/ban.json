@@ -3,6 +3,7 @@
 		"authors": [
 			"Carma citrawati",
 			"Chinamoonroll",
+			"Joseagush",
 			"NoiX180"
 		]
 	},
@@ -115,6 +116,8 @@
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Bahasa sané kahundén",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Basa tiosan",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Rereh basa",
+	"mobile-frontend-languages-structured-overlay-no-results": "Basa ten wénten",
+	"mobile-frontend-languages-structured-overlay-no-results-body": "Basa sané Ragané rereh ten wénten.",
 	"mobile-frontend-last-modified-date": "Kaping untat kauhin pinanggal $1, galah $2",
 	"mobile-frontend-last-modified-with-user-days": "[$4 Kaping untat {{GENDER:$1|kauahin}} {{PLURAL:$3|$3 rahina}} sané ungkur] olih {{PLURAL:$5|[$6 $2]|0=sang anganggé anonim}}",
 	"mobile-frontend-last-modified-with-user-hours": "[$4 Kaping untat {{GENDER:$1|kauahin}} {{PLURAL:$3|$3 jam}} sané ungkur] olih {{PLURAL:$5|[$6 $2]|0=sang anganggé anonim}}",
