@@ -2,12 +2,37 @@
 	"@metadata": {
 		"authors": [
 			"Misteld",
-			"Samatics"
+			"Samatics",
+			"Joshateji"
 		]
 	},
+	"mobile-frontend-editor-cancel": "Hònupla",
+	"mobile-frontend-editor-continue": "Yinukọn",
+	"mobile-frontend-editor-publish": "Zinjẹgbonu",
+	"mobile-frontend-editor-save": "Sẹdo",
+	"mobile-frontend-editor-summary": "Bladopọ:",
+	"mobile-frontend-language-heading": "<strong>Ogbè lẹ</strong>",
+	"mobile-frontend-languages-header": "Ogbè lẹ",
+	"mobile-frontend-languages-header-page": "$1 - Ogbè devo lẹ",
+	"mobile-frontend-languages-structured-overlay-all-languages-header": "Ogbè devo lẹ",
+	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Dín ogbè de",
+	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 km}}",
+	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}{{PLURAL:$1|}}",
+	"mobile-frontend-save-settings": "Sẹdo",
+	"mobile-frontend-talk-reply": "Na gblọndo",
 	"mobile-frontend-terms-text": "Osẹ́n Nọtẹn Lọ Tọn Lẹ",
 	"mobile-frontend-view": "Alokan pinpọn",
 	"mobile-frontend-view-desktop": "Zomọ wekanhlanmẹ tọn tavoji tọn",
+	"mobile-frontend-watchlist-a-z": "Todohukanji",
+	"mobile-frontend-watchlist-cta-button-login": "Hùn adà towe",
+	"mobile-frontend-watchlist-filter-all": "Popolẹpo",
+	"mobile-frontend-watchlist-filter-articles": "Weda lẹ",
+	"mobile-frontend-watchlist-filter-other": "Devo",
+	"mobile-frontend-watchlist-filter-talk": "Hodidọ",
+	"mobile-frontend-watchlist-more": "dogọ",
+	"mobile-frontend-user-page-describe-yourself-editors": "zinjẹgbonutọ lẹ",
 	"tag-mobile_edit": "Jlado alokan tọn",
-	"tag-mobile_web_edit": "Jlado Intẹnẹt alokan tọn"
+	"tag-mobile_web_edit": "Jlado Intẹnẹt alokan tọn",
+	"mobile-frontend-mobile-option-MFEnableFontChanger": "Kiklo wekun tọn",
+	"mobile-frontend-mobile-option-amc-learn-more": "Plọnnu dogọ"
 }
