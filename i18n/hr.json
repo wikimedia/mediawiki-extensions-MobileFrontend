@@ -242,7 +242,7 @@
 	"mobile-frontend-amc-outreach-no-thanks": "Ne, hvala",
 	"mobile-frontend-amc-outreach-enabled-message": "Unaprijeđeni modus upravo Vam je omogućen. Možete ga isključiti u Vašim postavkama.",
 	"mobile-frontend-amc-outreach-dismissed-message": "U svakom času možete omogućiti unaprijeđeni modus u Vašim postavkama.",
-	"mobile-frontend-beta-only": "Mogućnost dostupna u beta načinu",
+	"mobile-frontend-beta-only": "Mogućnost dostupna kao beta-mogućnost",
 	"mobile-frontend-console-recruit": "Saznajte više o tome na koji je način izvedena naša mobilna inačica mrežnoga mjesta @ https://www.mediawiki.org/wiki/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Optimiziraj i pojednostavi posebne stranice kad pristupam mobilnim uređajima (preporučeno)",
 	"prefs-mobile": "Mobilne postavke"

@@ -131,7 +131,7 @@
 	"mobile-frontend-featured-article": "Contenido destacado de hoy",
 	"mobile-frontend-generic-404-desc": "No se encontró la página que estás buscando.",
 	"mobile-frontend-generic-404-title": "Error: no se encontró la página",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} está hecho por gente como tú.</strong><br />Regístrate para contribuir.",
+	"mobile-frontend-generic-login-new": "<strong>Personas como tú son las que construyen {{SITENAME}}.</strong><br />Regístrate para contribuir.",
 	"mobile-frontend-history-404-desc": "No se puede acceder al historial de una página que no existe. Esta podría haberse borrado o puedes haber seguido un enlace incorrecto.",
 	"mobile-frontend-history-404-title": "La página no existe",
 	"mobile-frontend-history-no-results": "El filtro siempre no encontró coincidencias en los historiales.",
