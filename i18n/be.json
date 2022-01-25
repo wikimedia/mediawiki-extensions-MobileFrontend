@@ -6,7 +6,8 @@
 			"Mikalai Udodau",
 			"Дзяніс Тутэйшы",
 			"Чаховіч Уладзіслаў",
-			"ZlyiLev"
+			"ZlyiLev",
+			"Chadyka"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ці рэдагуе ўдзельнік праз мабільны інтэрфейс",
@@ -22,6 +23,7 @@
 	"mobile-frontend-diffview-bytesremoved": "$1 {{PLURAL:$1|байт|байты|байтаў}} выдалена",
 	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|праўка|праўкі|правак}}",
 	"mobile-frontend-diffview-title": "Змены",
+	"mobile-frontend-editor-blocked-drawer-action-ok": "Добра",
 	"mobile-frontend-editor-save": "Запісаць",
 	"mobile-frontend-editor-switch-editor": "Пераключыць рэдактар",
 	"mobile-frontend-featured-article": "Выбраны матэрыял дня",

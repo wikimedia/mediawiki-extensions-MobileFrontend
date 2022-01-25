@@ -118,7 +118,7 @@
 	"mobile-frontend-editor-error-loading": "Ошибка: Не удаётся загрузить редактор.",
 	"mobile-frontend-editor-error-preview": "Ошибка — что-то неожиданное произошло после загрузки предпросмотра. Закройте и повторите попытку.",
 	"mobile-frontend-editor-keep-editing": "Продолжить редактирование",
-	"mobile-frontend-editor-licensing": "Сохраняя изменения, вы соглашаетесь разместить ваш вклад под {{PLURAL:$2|1=лицензией|лицензиями}} $1.",
+	"mobile-frontend-editor-licensing": "Сохраняя изменения, вы соглашаетесь на публикацию своего вклада под {{PLURAL:$2|1=лицензией|лицензиями}} $1.",
 	"mobile-frontend-editor-licensing-with-terms": "Сохраняя изменения, вы принимаете $1 и соглашаетесь с тем, что публикуете свой вклад по {{PLURAL:$3|лицензии|лицензиям}} $2.",
 	"mobile-frontend-editor-terms-link": "[$1 Условия использования]",
 	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|Вы действительно хотите создать}} новую страницу на сайте {{SITENAME}}?",
