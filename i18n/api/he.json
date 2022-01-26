@@ -29,7 +29,7 @@
 	"apihelp-mobileview-example-2": "קבלת פרטים על פרק 0 ופרקים שכוללים הערות שוליים של [[Candlemass]]",
 	"apihelp-mobileview-example-3": "קבלת פרטים על פרקים 1 ואילך ופרקים שכוללים הערות שוליים של [[Candlemass]]",
 	"apihelp-parse-param-mobileformat": "החזרת פלט הפענוח בתסדיר שתואם להתקנים ניידים.",
-	"apihelp-parse-param-noimages": "נטרול תמונות בפלט לנייד.",
+	"apihelp-parse-param-noimages": "לא לכלול תמונות בפלט לנייד.",
 	"apihelp-parse-param-mainpage": "החלת התאמות של העמוד הראשי לנייד.",
 	"apihelp-webapp-manifest-description": "מחזיר מצהר (manifest) של יישום רשת.",
 	"apihelp-webapp-manifest-summary": "החזרת המניפסט של יישום הרשת.",
