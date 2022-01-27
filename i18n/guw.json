@@ -3,6 +3,7 @@
 		"authors": [
 			"Joshateji",
 			"Misteld",
+			"Sagbosam",
 			"Samatics"
 		]
 	},
@@ -45,7 +46,7 @@
 	"mobile-frontend-editor-cancel": "Hònupla",
 	"mobile-frontend-editor-cancel-confirm": "Be a jlo na jo vọjlado towe lẹ do nugbo wẹ ya?",
 	"mobile-frontend-editor-continue": "Yinukọn",
-	"mobile-frontend-editor-disabled": "Weda ehe yin hihọbasina nado dapana hẹngble nuhe e behẹn lẹ tọn.",
+	"mobile-frontend-editor-disabled": "Weda ehe yin hihọbasina nado dapana hẹngble nuhe e behẹn lẹ tọn.[$1 pọn asisa]",
 	"mobile-frontend-editor-disabled-anon": "A dona hùn adà towe whẹpo do basi vọjlado na weda ehe.",
 	"mobile-frontend-editor-editing": "Vọjlado to yinyin bibasi",
 	"mobile-frontend-editor-editing-page": "<span><strong>Vọjlado to yinyin bibasi</strong> $1</span>",
@@ -58,6 +59,7 @@
 	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|A kudeji dọ a jlo na wleawuna}} weda yọyọ dé dó {{SITENAME}} ji ya?",
 	"mobile-frontend-editor-placeholder": "Adà ehe tin to tata. Yin omẹ tintan he na hẹn ẹn gbloada.",
 	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|A to awuwlena}} weda yọyọ dé dó {{SITENAME}} ji!",
+	"mobile-frontend-editor-previewing-page": "<span><strong>vọzepọn to yinyin bibasi</strong> $1</span>",
 	"mobile-frontend-editor-publish": "Zinjẹgbonu",
 	"mobile-frontend-editor-save": "Sẹdo",
 	"mobile-frontend-editor-success": "Kọdetọn dagbe! Vọjlado towe ko yin sisẹdo.",
@@ -66,12 +68,17 @@
 	"mobile-frontend-editor-summary-request": "Nawẹ a hẹn weda lọ pọnte dogọ gbọn?",
 	"mobile-frontend-editor-summary": "Bladopọ:",
 	"mobile-frontend-editor-switch-editor": "Diọ vọjlado bayitọ",
+	"mobile-frontend-editor-uploadenable": "Jaale de yẹdide dopo jẹnukọn na vọjlado ni sọgan yin bibasi.",
 	"mobile-frontend-editor-viewing-source-page": "<strong>Pinpọn asisa</strong><span> $1</span>tọn",
 	"mobile-frontend-editor-wait": "Vọjlado to yinyin zize sẹdo, jaale nọte.",
 	"mobile-frontend-expand-sections-status": "Hẹn adà lẹpo gblodeji.",
 	"mobile-frontend-fontchanger-link": "Kiklo wekun tọn",
 	"mobile-frontend-fontchanger-option-small": "Pẹvi",
 	"mobile-frontend-fontchanger-option-large": "Daho",
+	"mobile-frontend-fontchanger-option-xlarge": "Dehe klo hugan",
+	"mobile-frontend-featured-article": "Nuhe hosọ egbe tọn behẹn lẹ",
+	"mobile-frontend-generic-404-desc": "Weda he dín a te ma sọgan yin mimọ.",
+	"mobile-frontend-generic-404-title": "Nuṣiwa - Weda ma yin mimọ",
 	"mobile-frontend-language-heading": "<strong>Ogbè lẹ</strong>",
 	"mobile-frontend-languages-header": "Ogbè lẹ",
 	"mobile-frontend-languages-header-page": "$1 - Ogbè devo lẹ",
@@ -84,6 +91,8 @@
 	"mobile-frontend-missing-image": "Yẹdide",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 km}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}{{PLURAL:$1|}}",
+	"mobile-frontend-overlay-close": "Súnudo",
+	"mobile-frontend-privacy-link-text": "Osẹ́n nudọnamẹ mẹdetiti tọn",
 	"mobile-frontend-save-settings": "Sẹdo",
 	"mobile-frontend-settings-beta": "{{SITENAME}} βeta",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Hosọ",
@@ -101,6 +110,10 @@
 	"mobile-frontend-user-page-describe-yourself-editors": "zinjẹgbonutọ lẹ",
 	"tag-mobile_edit": "Jlado alokan tọn",
 	"tag-mobile_web_edit": "Jlado Intẹnẹt alokan tọn",
+	"mobile-frontend-search-feedback-prompt": "A ma mọ nue dín a te wẹ ya?",
+	"mobile-frontend-mobile-option-MFLazyLoadImages-description": "Hùn yẹdide lẹ to whenu a tindo hudo yetọn kẹdẹ.",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Kiklo wekun tọn",
-	"mobile-frontend-mobile-option-amc-learn-more": "Plọnnu dogọ"
+	"mobile-frontend-mobile-option-amc-learn-more": "Plọnnu dogọ",
+	"mobile-frontend-amc-outreach-no-thanks": "Lala, awanu",
+	"mobile-frontend-console-recruit": "Yọn nususu dogọ gando lehe mi wleawuna nọtẹn mitọn dọ go to @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend"
 }
