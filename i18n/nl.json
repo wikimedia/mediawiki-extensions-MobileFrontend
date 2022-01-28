@@ -73,7 +73,7 @@
 	"mobile-frontend-editor-blocked-drawer-body-link": "Zie meer",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Reden",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Geblokkeerd}} door",
-	"mobile-frontend-editor-blocked-drawer-expiry-header": "Blokkade verloopt over",
+	"mobile-frontend-editor-blocked-drawer-expiry-header": "Blokkade verloopt",
 	"mobile-frontend-editor-blocked-drawer-help": "Meer informatie",
 	"mobile-frontend-editor-generic-block-reason": "Onbekende reden",
 	"mobile-frontend-editor-cancel": "Annuleren",
