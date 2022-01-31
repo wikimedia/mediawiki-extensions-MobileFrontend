@@ -22,6 +22,7 @@
 	"mobile-frontend-editor-switch-visual-editor": "Swichar a visuala redaktado",
 	"mobile-frontend-editor-viewing-source-page": "<strong>Vidanta fonto di</strong><span> $1</span>",
 	"mobile-frontend-editor-loading": "Karganta redaktilo...",
+	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} facesas da personi quale vu.</strong><br />Enirez por kontributar.",
 	"mobile-frontend-language-heading": "<strong>Lingui</strong>",
 	"mobile-frontend-languages-header": "Lingui",
 	"mobile-frontend-languages-header-page": "$1 - Altra lingui",
