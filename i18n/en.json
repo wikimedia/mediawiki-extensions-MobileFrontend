@@ -44,8 +44,6 @@
 	"mobile-frontend-cite-error": "A problem occurred while attempting to load citations due to a bad revision identifier.",
 	"mobile-frontend-cite-none-available": "There are no citations available for this page.",
 	"mobile-frontend-clear-search": "Clear",
-	"mobile-frontend-contributions-404-desc": "Cannot look for contributions without a user or with a user that does not exist.",
-	"mobile-frontend-contributions-404-title": "Bad username given",
 	"mobile-frontend-copyright": "Content is available under $1 unless otherwise noted.",
 	"mobile-frontend-desc": "Mobile Frontend",
 	"mobile-frontend-diffview-404-desc": "The ID for the revision you requested does not exist.<br/>This is usually caused by following an outdated diff link to a page that has been deleted or a diff link containing invalid characters.",
