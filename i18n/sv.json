@@ -61,7 +61,7 @@
 	"mobile-frontend-editor-blocked-drawer-body-link": "Se mer",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Orsak",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Blockerades}} av",
-	"mobile-frontend-editor-blocked-drawer-expiry-header": "Blockeringen löper ut om",
+	"mobile-frontend-editor-blocked-drawer-expiry-header": "Blockeringen kommer löpa ut",
 	"mobile-frontend-editor-blocked-drawer-help": "Se detaljer",
 	"mobile-frontend-editor-generic-block-reason": "Okänd anledning",
 	"mobile-frontend-editor-cancel": "Avbryt",
