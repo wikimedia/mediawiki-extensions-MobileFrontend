@@ -154,7 +154,7 @@
 	"mobile-frontend-last-modified-date": "آخر تعديل بتاريخ $1، $2",
 	"mobile-frontend-last-modified-with-user-days": "[$4 آخر تعديل لهذه الصفحة {{GENDER:$1|قام|قامت}} به]  {{PLURAL:$5|[$6 $2]|0=مستخدم مجهول}} منذ {{PLURAL:$3|يوم واحد|يومين|$3 أيام|$3 يوماً|$3 يوم}}",
 	"mobile-frontend-last-modified-with-user-hours": "[$4 آخر تعديل لهذه الصفحة {{GENDER:$1|قام|قامت}} به]  {{PLURAL:$5|[$6 $2]|0=مستخدم مجهول}} منذ {{PLURAL:$3|ساعة واحدة|ساعتين|$3 ساعات|$3 ساعة}}",
-	"mobile-frontend-last-modified-with-user-just-now": "[$3 آخر تعديل لهذه الصفحة {{GENDER:$1|قام|قامت}} به]  {{PLURAL:$4|[$5 $2]|0=مستخدم مجهول}} قَبْلَ لحظات",
+	"mobile-frontend-last-modified-with-user-just-now": "[$3 {{GENDER:$1|أضاف|أضافت}} {{PLURAL:$4|[$5 $2]|0=مستخدم مجهول}} آخر تعديل لهذه الصفحة] قَبْلَ لحظات",
 	"mobile-frontend-last-modified-with-user-minutes": "[$4 آخر تعديل لهذه الصفحة {{GENDER:$1|قام|قامت}} به]  {{PLURAL:$5|[$6 $2]|0=مستخدم مجهول}} منذ {{PLURAL:$3|دقيقة واحدة|دقيقتين|$3 دقائق|$3 دقيقة}}",
 	"mobile-frontend-last-modified-with-user-months": "[$4 آخر تعديل لهذه الصفحة {{GENDER:$1|قام|قامت}} به]  {{PLURAL:$5|[$6 $2]|0=مستخدم مجهول}} منذ {{PLURAL:$3|شهر واحد|شهرين|$3 أشهر|$3شهراً|$3 شهر}}",
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 آخر تعديل لهذه الصفحة {{GENDER:$1|قام|قامت}} به]  {{PLURAL:$5|[$6 $2]|0=مستخدم مجهول}} منذ {{PLURAL:$3|ثانية واحدة|ثانيتين|$3 ثوان|$3 ثانية}}",
