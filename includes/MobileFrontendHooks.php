@@ -633,27 +633,6 @@ class MobileFrontendHooks {
 				$list['Watchlist'] = 'SpecialMobileWatchlist';
 				$list['EditWatchlist'] = 'SpecialMobileEditWatchlist';
 			}
-
-			// Only override contributions page if AMC is disabled
-			if ( $user->isSafeToLoad() &&
-				!$userMode->isEnabled() &&
-				!$featureManager->isFeatureAvailableForCurrentUser( 'MFUseDesktopContributionsPage' )
-			) {
-				/* Special:MobileContributions redefines Special:History in
-				 * such a way that for Special:Contributions/Foo, Foo is a
-				 * username (in Special:History/Foo, Foo is a page name).
-				 * Redirect people here as this is essential
-				 * Special:Contributions without the bells and whistles.
-				 */
-				$list['Contributions'] = [
-					"class" => "SpecialMobileContributions",
-					"services" => [
-						"NamespaceInfo",
-						"RevisionFactory"
-					]
-				];
-			}
-
 		}
 		// Add Special:Nearby only, if Nearby is activated and Extension:NearbyPages is not (T66316)!
 		if ( !ExtensionRegistry::getInstance()->isLoaded( 'NearbyPages' ) &&

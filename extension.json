@@ -64,7 +64,6 @@
 		"mobile-frontend-categories-add-wait",
 		"mobile-frontend-categories-heading",
 		"mobile-frontend-changeslist-nocomment",
-		"mobile-frontend-contributions-404-desc",
 		"mobile-frontend-copyright",
 		"mobile-frontend-editor-anonwarning",
 		"mobile-frontend-editor-editing-page",
@@ -92,7 +91,6 @@
 		"SpecialMobileOptions": "includes/specials/SpecialMobileOptions.php",
 		"SpecialMobileWatchlist": "includes/specials/SpecialMobileWatchlist.php",
 		"SpecialMobileEditWatchlist": "includes/specials/SpecialMobileEditWatchlist.php",
-		"SpecialMobileContributions": "includes/specials/SpecialMobileContributions.php",
 		"SpecialNearby": "includes/specials/SpecialNearby.php",
 		"SpecialMobileLanguages": "includes/specials/SpecialMobileLanguages.php",
 		"MobileSpecialPage": "includes/specials/MobileSpecialPage.php",
@@ -756,13 +754,6 @@
 			}
 		},
 		"MFUseDesktopSpecialWatchlistPage": {
-			"value": {
-				"base": false,
-				"beta": false,
-				"amc": true
-			}
-		},
-		"MFUseDesktopContributionsPage": {
 			"value": {
 				"base": false,
 				"beta": false,
