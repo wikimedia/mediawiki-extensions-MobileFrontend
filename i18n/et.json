@@ -14,8 +14,6 @@
 	"mobile-frontend-cite-error": "Vigase identifikaatoriga redaktsiooni tõttu ilmnes viidete laadimisel tõrge.",
 	"mobile-frontend-cite-none-available": "Sellel leheküljel pole ühtegi viidet saadaval.",
 	"mobile-frontend-clear-search": "Tühjenda",
-	"mobile-frontend-contributions-404-desc": "Ei saa kaastööd vaadata, kui kasutajat pole määratud või kui kasutajat pole olemas.",
-	"mobile-frontend-contributions-404-title": "Vigane kasutajanimi määratud",
 	"mobile-frontend-copyright": "Sisu on kasutatav litsentsi $1 tingimustel, kui pole öeldud teisiti.",
 	"mobile-frontend-desc": "Mobiili eeskomponent",
 	"mobile-frontend-diffview-404-desc": "Päritud identifikaatoriga redaktsiooni pole.<br />See tähendab harilikult seda, et tegu on vananenud erinevuste lingiga leheküljele, mis on kustutatud, või erinevuste link sisaldab vigaseid märke.",

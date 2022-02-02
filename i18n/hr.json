@@ -23,8 +23,6 @@
 	"mobile-frontend-cite-error": "Pojavio se problem kod učitavanja citata zbog netočne identifikacije izmjene.",
 	"mobile-frontend-cite-none-available": "Ne postoje citati za ovu stranicu.",
 	"mobile-frontend-clear-search": "Očisti",
-	"mobile-frontend-contributions-404-desc": "Nije moguće tražiti doprinose bez navedenog suradničkoga imena ili s nepostojećim imenom.",
-	"mobile-frontend-contributions-404-title": "Dano je neispravno suradničko ime",
 	"mobile-frontend-copyright": "Sadržaji se koriste u skladu s $1 osim ako nije drukčije navedeno.",
 	"mobile-frontend-desc": "Sučelje za mobilne uređaje",
 	"mobile-frontend-diffview-404-desc": "ID izmjene koju ste zahtijevali ne postoji.<br/>Prethodno navedeno uobičajeno prouzročava zastarjela poveznica na razlikovnu inačicu stranice koja je bila izbrisana, ili poveznica koja sadrži znakove koji nisu valjani.",

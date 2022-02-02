@@ -13,8 +13,6 @@
 	"mobile-frontend-cite-error": "Asocedió un error al intentar cargar les cites por cuenta d'un identificador de revisión incorreutu.",
 	"mobile-frontend-cite-none-available": "Nun hai cites disponibles pa esta páxina.",
 	"mobile-frontend-clear-search": "Llimpiar",
-	"mobile-frontend-contributions-404-desc": "Nun pueden buscase contribuciones ensin usuariu o d'un usuariu que nun esiste.",
-	"mobile-frontend-contributions-404-title": "Dióse un usuariu incorreutu",
 	"mobile-frontend-copyright": "El conteníu ta disponible baxo los términos de la $1 si nun s'indica otra cosa.",
 	"mobile-frontend-desc": "Interfaz pa móviles",
 	"mobile-frontend-diffview-404-desc": "La id de la revisión solicitada nun esiste.<br/>De vezu esto produzse por siguir un enllaz de diff desactualizáu a una páxina que se desanició o a un enllaz de diff que contien caráuteres inválidos.",

@@ -28,8 +28,6 @@
 	"mobile-frontend-cite-error": "Hi ha hagut un problema durant la càrrega de referències a causa d'un identificador de revisió incorrecte.",
 	"mobile-frontend-cite-none-available": "No hi ha referències disponibles per a aquesta pàgina.",
 	"mobile-frontend-clear-search": "Anuŀla",
-	"mobile-frontend-contributions-404-desc": "No es poden cercar contribucions sense usuari o amb un usuari inexistent.",
-	"mobile-frontend-contributions-404-title": "Usuari no vàlid",
 	"mobile-frontend-copyright": "El contingut està disponible sota la llicència $1 si no s'indica el contrari.",
 	"mobile-frontend-desc": "Interfície mòbil",
 	"mobile-frontend-diffview-404-desc": "L'identificador de revisió que heu sol·licitat no existeix.<br/>Normalment, això es deu al fet de seguir un enllaç diff obsolet a una pàgina que s'ha suprimit o un enllaç diff que conté caràcters no vàlids.",

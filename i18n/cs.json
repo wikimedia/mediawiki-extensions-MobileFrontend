@@ -30,8 +30,6 @@
 	"mobile-frontend-cite-error": "Při pokusu o načtení citací došlo k chybě kvůli nesprávnému identifikátoru revize.",
 	"mobile-frontend-cite-none-available": "Pro tuto stránku nejsou k dispozici žádné citace.",
 	"mobile-frontend-clear-search": "Smazat",
-	"mobile-frontend-contributions-404-desc": "Nelze hledat příspěvky bez uživatele nebo s neexistujícím uživatelem.",
-	"mobile-frontend-contributions-404-title": "Zadáno špatné uživatelské jméno",
 	"mobile-frontend-copyright": "Text je dostupný pod $1, pokud není uvedeno jinak.",
 	"mobile-frontend-desc": "Mobilní rozhraní",
 	"mobile-frontend-diffview-404-desc": "Požadované ID revize neexistuje.<br/>Toto je obvykle způsobeno tím, že jste následovali zastaralý odkaz na porovnání verzí stránky, jež byla smazána, nebo odkaz obsahuje chybné znaky.",

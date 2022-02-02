@@ -27,8 +27,6 @@
 	"mobile-frontend-cite-error": "Đã xuất hiện lỗi khi thử tải chú thích vì một số phiên bản sai.",
 	"mobile-frontend-cite-none-available": "Không có chú thích cho trang này.",
 	"mobile-frontend-clear-search": "Tẩy trống",
-	"mobile-frontend-contributions-404-desc": "Cần tên người dùng tồn tại để hiển thị các đóng góp.",
-	"mobile-frontend-contributions-404-title": "Đã cung cấp tên người dùng sai",
 	"mobile-frontend-copyright": "Nội dung được phát hành theo $1, ngoại trừ khi có ghi chú khác.",
 	"mobile-frontend-desc": "Giao diện di động",
 	"mobile-frontend-diffview-404-desc": "Mã phiên bản được yêu cầu không tồn tại.<br/>Lỗi này thường do bạn nhấn vào liên kết khác biệt đến trang đã bị xóa hoặc liên kết khác biệt có chứa ký tự không hợp lệ.",

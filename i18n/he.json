@@ -30,8 +30,6 @@
 	"mobile-frontend-cite-error": "אירעה בעיה בזמן ניסיון לטעון ציטוטים בגלל מזהה גרסה גרוע.",
 	"mobile-frontend-cite-none-available": "אין הערות שוליים זמינות עבור הדף הזה.",
 	"mobile-frontend-clear-search": "ניקוי",
-	"mobile-frontend-contributions-404-desc": "לא ניתן לחפש תרומות ללא משתמש או עם משתמש שאינו קיים.",
-	"mobile-frontend-contributions-404-title": "ניתן שם משתמש שגוי",
 	"mobile-frontend-copyright": "התוכן זמין לפי תנאי $1 אלא אם כן נאמר אחרת.",
 	"mobile-frontend-desc": "תצוגה עבור מכשירים ניידים",
 	"mobile-frontend-diffview-404-desc": "מזהה הגרסה שביקשת אינו קיים.<br/>זה בדרך־כלל נגרם על־ידי לחיצה על קישור השוואה מיושן לדף שנמחק או קישור השוואה שמכיל תווים בלתי־תקינים.",

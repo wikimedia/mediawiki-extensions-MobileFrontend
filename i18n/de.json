@@ -29,8 +29,6 @@
 	"mobile-frontend-cite-error": "Beim Versuch, die Einzelnachweise zu laden, ist aufgrund einer ungültigen Versionskennung ein Problem aufgetreten.",
 	"mobile-frontend-cite-none-available": "Für diese Seite sind keine Einzelnachweise verfügbar.",
 	"mobile-frontend-clear-search": "Leeren",
-	"mobile-frontend-contributions-404-desc": "Ohne einen Benutzer oder mit einem nicht vorhandenen Benutzer kann nicht nach Beiträgen gesucht werden.",
-	"mobile-frontend-contributions-404-title": "Ungültigen Benutzernamen angegeben",
 	"mobile-frontend-copyright": "Der Inhalt ist verfügbar unter $1, sofern nicht anders angegeben.",
 	"mobile-frontend-desc": "Ermöglicht die für mobile Endgeräte optimierte Darstellung von Seiten",
 	"mobile-frontend-diffview-404-desc": "Die Kennung für die gewünschte Version ist nicht vorhanden.<br>Die Ursache ist für gewöhnlich ein veralteter Versionsunterschied-Link zu einer gelöschten Seite oder einem Versionsunterschied-Link mit ungültigen Zeichen.",

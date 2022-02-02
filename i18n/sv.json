@@ -30,8 +30,6 @@
 	"mobile-frontend-cite-error": "Ett problem uppstod när referenser skulle läsas in p.g.a. en dålig sidversionsidentifierare.",
 	"mobile-frontend-cite-none-available": "Det finns inga referenser på denna sida.",
 	"mobile-frontend-clear-search": "Rensa",
-	"mobile-frontend-contributions-404-desc": "Kan inte leta efter bidrag utan en användare eller med en användare som inte finns.",
-	"mobile-frontend-contributions-404-title": "Felaktigt användarnamn angavs",
 	"mobile-frontend-copyright": "Innehållet är tillgängligt under $1 om ingenting annat anges.",
 	"mobile-frontend-desc": "Mobilt gränssnitt",
 	"mobile-frontend-diffview-404-desc": "ID för versionen du begärde finns inte.<br/>Detta orsakas oftast av en utdaterad difflänk till en sida som har raderats eller en difflänk som innehåller ogiltiga tecken.",

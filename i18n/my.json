@@ -15,7 +15,6 @@
 	"mobile-frontend-changeslist-nocomment": "တည်းဖြတ်မှုအတွက် စကားချပ် မရှိပါ",
 	"mobile-frontend-cite-error-title": "ကိုးကားများအား ဆွဲယူနေစဉ် အမှား",
 	"mobile-frontend-clear-search": "ရှင်းလင်း",
-	"mobile-frontend-contributions-404-title": "ဆိုးသော အသုံးပြုသူအမည် ပေးထားသည်",
 	"mobile-frontend-copyright": "အကြောင်းအရာများကို အခြားမှတ်ချက်မရှိပါက $1 အောက်တွင် ရရှိနိုင်ပါသည်။",
 	"mobile-frontend-diffview-anonymous": "အမည်မသိ အသုံးပြုသူ",
 	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|ဘိုက်|ဘိုက်}} ပေါင်းထည့်ခဲ့သည်",

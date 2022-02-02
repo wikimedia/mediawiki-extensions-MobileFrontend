@@ -78,8 +78,6 @@
 	"mobile-frontend-cite-error": "由于损坏的修订标识符，当尝试加载引用时发生问题。",
 	"mobile-frontend-cite-none-available": "没有可用于此页面的引用。",
 	"mobile-frontend-clear-search": "清除",
-	"mobile-frontend-contributions-404-desc": "不能在没有指定用户，或是用户不存在时查看贡献。",
-	"mobile-frontend-contributions-404-title": "指定的用户名有误",
 	"mobile-frontend-copyright": "除非另有声明，本网站内容采用$1授权。",
 	"mobile-frontend-desc": "移动版前端",
 	"mobile-frontend-diffview-404-desc": "请求的版本ID不存在。<br/>这通常是因为差异链接过期而指向已删除的页面或差异链接包含无效字符。",

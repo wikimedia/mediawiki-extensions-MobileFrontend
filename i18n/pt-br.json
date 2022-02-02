@@ -34,8 +34,6 @@
 	"mobile-frontend-cite-error": "Ocorreu um problema ao tentar carregar citações devido a um identificador de revisão incorreto.",
 	"mobile-frontend-cite-none-available": "Não há citações disponíveis para esta página.",
 	"mobile-frontend-clear-search": "Limpar",
-	"mobile-frontend-contributions-404-desc": "Não é possível procurar contribuições sem um usuário ou com um usuário que não existe.",
-	"mobile-frontend-contributions-404-title": "Nome de usuário dado inválido",
 	"mobile-frontend-copyright": "Conteúdo disponível sob $1, salvo indicação em contrário.",
 	"mobile-frontend-desc": "Interface para dispositivos móveis",
 	"mobile-frontend-diffview-404-desc": "O ID da revisão que você solicitou não existe.<br/>Geralmente, isso é causado pelo seguimento de um link diff desatualizado para uma página que foi excluída ou de um link diff que contém caracteres inválidos.",

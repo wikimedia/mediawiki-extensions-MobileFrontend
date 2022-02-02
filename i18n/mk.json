@@ -12,8 +12,6 @@
 	"mobile-frontend-cite-error": "Се јави проблем при обидот да вчитам наводи поради неисправна назнака на преработката.",
 	"mobile-frontend-cite-none-available": "На страницава нема наводи.",
 	"mobile-frontend-clear-search": "Исчисти",
-	"mobile-frontend-contributions-404-desc": "Не можам да барам придонеси без корисник или со непостоечки корисник.",
-	"mobile-frontend-contributions-404-title": "Укажано е неважечко корисничко име",
 	"mobile-frontend-copyright": "Содржината е достапна под $1 освен ако не е поинаку наведено.",
 	"mobile-frontend-desc": "Мобилен посредник",
 	"mobile-frontend-diffview-404-desc": "Не постои преработка со таква назнака.<br/>Ова обично се должи на застарена врска со разлики на страница која е избришана или со неважечки знаци во врската.",

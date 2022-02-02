@@ -9,8 +9,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Scribe codice de confirmation",
 	"mobile-frontend-changeslist-nocomment": "modification sin summario",
 	"mobile-frontend-clear-search": "Rader",
-	"mobile-frontend-contributions-404-desc": "Non es possibile cercar contributiones sin usator o con un usator que non existe.",
-	"mobile-frontend-contributions-404-title": "Nomine de usator non valide",
 	"mobile-frontend-copyright": "Le contento es disponibile sub $1 salvo indication contrari.",
 	"mobile-frontend-desc": "Interfacie pro apparatos mobile",
 	"mobile-frontend-diffview-404-desc": "Le numero de version que tu ha requestate non existe.<br/>In general, isto eveni quando on seque un ligamine diff obsolete verso un pagina que ha essite delite o un ligamine diff que contine characteres non valide.",

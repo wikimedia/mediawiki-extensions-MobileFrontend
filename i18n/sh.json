@@ -13,7 +13,6 @@
 	"mobile-frontend-cite-error": "Pojavio se problem pri pokušaju da učitam citate zbog neispravne naznake izmjenete.",
 	"mobile-frontend-cite-none-available": "Na ovoj stranici nema citata.",
 	"mobile-frontend-clear-search": "Očisti",
-	"mobile-frontend-contributions-404-desc": "Ne mogu tražiti doprinose bez korisnika ili s nepostojećim korisnikom.",
 	"mobile-frontend-copyright": "Sadržaj je dostupan pod $1 osim ako je drugačije navedeno.",
 	"mobile-frontend-desc": "Sučelje za mobilne uređaje",
 	"mobile-frontend-diffview-404-desc": "Zahtijevana naznaka izmjene ne postoji",

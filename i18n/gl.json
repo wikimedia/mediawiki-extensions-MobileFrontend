@@ -23,8 +23,6 @@
 	"mobile-frontend-cite-error": "Houbo un problema ó intentar cargar as citas a causa dun identificador de revisión incorrecto.",
 	"mobile-frontend-cite-none-available": "Non hai citas dispoñibles para esta páxina.",
 	"mobile-frontend-clear-search": "Limpar",
-	"mobile-frontend-contributions-404-desc": "Non se poden procurar contribucións sen usuario ou cun usuario que non existe",
-	"mobile-frontend-contributions-404-title": "Nome de usuario incorrecto",
 	"mobile-frontend-copyright": "Todo o contido está dispoñible baixo a licenza $1, agás que se indique o contrario.",
 	"mobile-frontend-desc": "Interface para dispositivos móbiles",
 	"mobile-frontend-diffview-404-desc": "O ID da revisión que solicitou non existe.<br/>Isto adoita estar causado ó seguir unha ligazón diff obsoleta cara unha páxina que foi borrada ou unha ligazón diff que contén caracteres non válidos.",

@@ -52,8 +52,6 @@
 	"mobile-frontend-cite-error": "Ocurrió un error al intentar cargar las citas debido a un identificador de revisión incorrecto.",
 	"mobile-frontend-cite-none-available": "No hay citas disponibles para esta página.",
 	"mobile-frontend-clear-search": "Limpiar",
-	"mobile-frontend-contributions-404-desc": "No se pueden buscar contribuciones sin usuario o con un usuario que no existe",
-	"mobile-frontend-contributions-404-title": "Usuario incorrecto",
 	"mobile-frontend-copyright": "El contenido está disponible bajo la licencia $1, salvo que se indique lo contrario.",
 	"mobile-frontend-desc": "Interfaz móvil",
 	"mobile-frontend-diffview-404-desc": "El identificador de la revisión solicitada no existe. <br/> Esto generalmente se debe a que sigue un enlace de diff desactualizado a una página que ha sido eliminada o un enlace de diffs que contiene caracteres no válidos.",

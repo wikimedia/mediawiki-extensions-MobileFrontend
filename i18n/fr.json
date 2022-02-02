@@ -58,8 +58,6 @@
 	"mobile-frontend-cite-error": "Un problème est survenu lors de la tentative de chargement des références en raison d’un mauvais identificateur de révision.",
 	"mobile-frontend-cite-none-available": "Il n’y a pas de références disponibles pour cette page.",
 	"mobile-frontend-clear-search": "Effacer",
-	"mobile-frontend-contributions-404-desc": "Impossible de rechercher des contributions sans nom d’utilisateur ou avec un nom d’utilisateur qui n’existe pas.",
-	"mobile-frontend-contributions-404-title": "Mauvais nom d’utilisateur fourni",
 	"mobile-frontend-copyright": "Le contenu est disponible sous licence $1 sauf mention contraire.",
 	"mobile-frontend-desc": "Affichage mobile",
 	"mobile-frontend-diffview-404-desc": "L’ID de la révision que vous avez demandé n’existe pas.<br/> En général, cela arrive lorsqu’on suit un lien diff obsolète vers une page qui a été supprimée ou un lien diff contenant des caractères non valides.",

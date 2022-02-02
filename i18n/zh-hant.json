@@ -43,8 +43,6 @@
 	"mobile-frontend-cite-error": "由於一個損毀的修訂識別碼，在試圖載入引用時發生問題。",
 	"mobile-frontend-cite-none-available": "沒有可用於此頁面的引用。",
 	"mobile-frontend-clear-search": "清除",
-	"mobile-frontend-contributions-404-desc": "無使用者或使用者不存在，無法找到貢獻。",
-	"mobile-frontend-contributions-404-title": "給出錯誤的使用者名稱",
 	"mobile-frontend-copyright": "除非另有註明，否則頁面內容均以 $1 條款授權。",
 	"mobile-frontend-desc": "行動前端",
 	"mobile-frontend-diffview-404-desc": "您請求的修訂 ID 並不存在。<br/>這通常是因為逾期的差異連結到的頁面已被刪除，或是差異連結包含無效的字元。",

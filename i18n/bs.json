@@ -20,8 +20,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Unesite kod za potvrdu",
 	"mobile-frontend-changeslist-nocomment": "nema sažetka izmjene",
 	"mobile-frontend-clear-search": "Očisti",
-	"mobile-frontend-contributions-404-desc": "Ne mogu tražiti doprinose bez korisnika ili s nepostojećim korisnikom.",
-	"mobile-frontend-contributions-404-title": "Dato je neispravno korisničko ime",
 	"mobile-frontend-copyright": "Sadržaj je dostupan pod licencom $1 osim ako nije drugačije navedeno.",
 	"mobile-frontend-desc": "Korisnički interfejs za mobilne uređaje",
 	"mobile-frontend-diffview-404-desc": "ID zahtijevane izmjene ne postoji.",

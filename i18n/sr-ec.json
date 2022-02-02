@@ -24,8 +24,6 @@
 	"mobile-frontend-cite-error": "Дошло је до проблема при покушају учитавања референци због идентификатора лоше ревизије.",
 	"mobile-frontend-cite-none-available": "Не постоје референце доступне за ову страницу.",
 	"mobile-frontend-clear-search": "Обриши",
-	"mobile-frontend-contributions-404-desc": "Није могуће тражити доприносе без корисника или са корисником који не постоји.",
-	"mobile-frontend-contributions-404-title": "Дато је лоше корисничко име",
 	"mobile-frontend-copyright": "Садржај је доступан под лиценцом $1 осим ако је другачије наведено.",
 	"mobile-frontend-desc": "Кориснички интерфејс за мобилне уређаје",
 	"mobile-frontend-diffview-404-desc": "ID за ревизију коју сте тражили не постоји.",

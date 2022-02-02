@@ -48,8 +48,6 @@
 	"mobile-frontend-cite-error": "Podczas ładowania przypisu wystąpił błąd związany z błędnym identyfikatorem wersji.",
 	"mobile-frontend-cite-none-available": "Brak przypisów dostępnych dla tej strony.",
 	"mobile-frontend-clear-search": "Wyczyść",
-	"mobile-frontend-contributions-404-desc": "Nie możesz sprawdzić wkładu bez podania użytkownika lub podając nazwę użytkownika, który nie istnieje.",
-	"mobile-frontend-contributions-404-title": "Wybrano złą nazwę użytkownika",
 	"mobile-frontend-copyright": "Treść udostępniana na licencji $1, jeśli nie podano inaczej.",
 	"mobile-frontend-desc": "Mobilny interfejs użytkownika",
 	"mobile-frontend-diffview-404-desc": "ID wersji, które zostało podane nie istnieje.<br/>Przyczyną zazwyczaj jest użycie starego linku do różnicy w stronie, która została usunięta lub linku do różnicy zawierającego nieprawidłowe znaki.",

@@ -14,8 +14,6 @@
 	"mobile-frontend-cite-error": "Eit problem oppstod når me prøvde å laste referansar på grunn av ein galen revisjonsidentifikator.",
 	"mobile-frontend-cite-none-available": "Det er ingen tilgjengelege referansar for denne sida.",
 	"mobile-frontend-clear-search": "Tøm",
-	"mobile-frontend-contributions-404-desc": "Kan ikkje sjå etter bidrag utan brukarnamn eller for ein brukar som ikkje finst.",
-	"mobile-frontend-contributions-404-title": "Ugildt brukarnamn oppgjeve",
 	"mobile-frontend-copyright": "Teksten er tilgjengeleg under $1 om ikkje anna er oppgjeve.",
 	"mobile-frontend-desc": "Mobilgrensesnitt",
 	"mobile-frontend-diffview-404-desc": "ID-en for versjon du bad om finst ikkje.",

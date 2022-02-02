@@ -26,8 +26,6 @@
 	"mobile-frontend-cite-error": "चुकीच्या पुनरावृत्ती अभिज्ञापकामुळे स्रोत लोड करण्याचा प्रयत्न करताना एक समस्या उद्भवली.",
 	"mobile-frontend-cite-none-available": "या पृष्ठासाठी कोणतीही स्रोत उपलब्ध नाहीत.",
 	"mobile-frontend-clear-search": "हटवा",
-	"mobile-frontend-contributions-404-desc": "सदस्यशिवाय किंवा अस्तित्वात नसलेल्या सदस्यसह योगदान शोधू शकत नाही.",
-	"mobile-frontend-contributions-404-title": "खराब वापरकर्तानाव दिले",
 	"mobile-frontend-copyright": "इतर काही नोंद केली नसल्यास,येथील मजकूर $1च्या अंतर्गत उपलब्ध आहे.",
 	"mobile-frontend-desc": "दूरभाष फ्रंटएंड",
 	"mobile-frontend-diffview-404-title": "खराब आवृत्ती",

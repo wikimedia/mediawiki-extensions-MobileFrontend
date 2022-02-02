@@ -36,8 +36,6 @@
 	"mobile-frontend-cite-error": "Ocorreu um erro ao tentar carregar citações devido a um identificador de revisão incorreto.",
 	"mobile-frontend-cite-none-available": "Não existem citações disponíveis para esta página.",
 	"mobile-frontend-clear-search": "Limpar",
-	"mobile-frontend-contributions-404-desc": "Não é possível pesquisar contributos sem ter um utilizador ou com um utilizador que não existe.",
-	"mobile-frontend-contributions-404-title": "Foi fornecido um nome de utilizador incorreto",
 	"mobile-frontend-copyright": "Conteúdo disponibilizado nos termos da $1, salvo indicação em contrário.",
 	"mobile-frontend-desc": "Interface para dispositivos móveis",
 	"mobile-frontend-diffview-404-desc": "O identificador da revisão que pediu não existe.<br/>Normalmente, isto é causado por ter seguido uma hiperligação para uma lista de diferenças desatualizada de uma página que foi eliminada, ou uma hiperligação para uma lista de diferenças que contém caracteres inválidos.",

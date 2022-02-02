@@ -21,8 +21,6 @@
 	"mobile-frontend-cite-error": "Hiba történt a forráshivatkozások betöltése közben egy rossz lapváltozat-azonosító miatt.",
 	"mobile-frontend-cite-none-available": "Nem érhetők el forráshivatkozások ehhez a laphoz.",
 	"mobile-frontend-clear-search": "Törlés",
-	"mobile-frontend-contributions-404-desc": "Felhasználónév megadása nélkül vagy nemlétező felhasználó megadása esetén a közreműködések nem tekinthetők meg.",
-	"mobile-frontend-contributions-404-title": "Rossz felhasználónév lett megadva",
 	"mobile-frontend-copyright": "A lap szövege $1 alatt érhető el, ha nincs külön jelölve.",
 	"mobile-frontend-desc": "Mobil felület",
 	"mobile-frontend-diffview-404-desc": "A kért azonosítójú lapváltozat nem létezik.",

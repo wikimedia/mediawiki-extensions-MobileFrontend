@@ -48,8 +48,6 @@
 	"mobile-frontend-cite-error": "خطا در بارگیری یادکردها به دلیل شناسهٔ ویرایش نادرست.",
 	"mobile-frontend-cite-none-available": "یادکردی برای این صفحه در دست نیست.",
 	"mobile-frontend-clear-search": "پاک‌کردن",
-	"mobile-frontend-contributions-404-desc": "نمی‌توان برای مشارکت‌‌های کاربری که وجود ندارد، جستجو کرد.",
-	"mobile-frontend-contributions-404-title": "نام کاربری نامناسب داده شد",
 	"mobile-frontend-copyright": "محتوا تحت $1 در دسترس است، مگر اینکه خلافش ذکر شده باشد.",
 	"mobile-frontend-desc": "ظاهر تلفن همراه",
 	"mobile-frontend-diffview-404-desc": "شناسه نسخه درخواستی شما وجود ندارد.",

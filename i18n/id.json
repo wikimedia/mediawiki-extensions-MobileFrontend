@@ -35,8 +35,6 @@
 	"mobile-frontend-cite-error": "Terdapat masalah ketika mencoba memuat referensi karena adanya ID revisi yang salah",
 	"mobile-frontend-cite-none-available": "Tidak ada referensi tersedia untuk halaman ini.",
 	"mobile-frontend-clear-search": "Kosongkan",
-	"mobile-frontend-contributions-404-desc": "Tidak dapat mencari sumbangan tanpa pengguna atau dari pengguna yang tidak ada.",
-	"mobile-frontend-contributions-404-title": "Nama pengguna yang diberikan buruk",
 	"mobile-frontend-copyright": "Konten tersedia di bawah $1 kecuali dinyatakan lain.",
 	"mobile-frontend-desc": "Mobile Frontend",
 	"mobile-frontend-diffview-404-desc": "ID untuk revisi yang Anda minta tidak ada.<br />Ini biasanya disebabkan oleh pranala diff yang sudah usang ke halaman yang telah dihapus atau pranala diff yang mengandung karakter tidak sah.",

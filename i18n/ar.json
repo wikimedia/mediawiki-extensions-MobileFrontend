@@ -42,8 +42,6 @@
 	"mobile-frontend-cite-error": "حدثت مشكلة أثناء محاولة تحميل الاستشهادات نتيجة لمعرف مراجعة سيء.",
 	"mobile-frontend-cite-none-available": "لا توجد استشهادات متوفرة لهذه الصفحة.",
 	"mobile-frontend-clear-search": "إفراغ",
-	"mobile-frontend-contributions-404-desc": "لا يمكن البحث عن المساهمات بدون مستخدم أو بمستخدم غير موجود.",
-	"mobile-frontend-contributions-404-title": "اسم مستخدم سيء معطى",
 	"mobile-frontend-copyright": "المحتوى متاح وفق $1 إن لم يرد خلاف ذلك.",
 	"mobile-frontend-desc": "واجهة المحمول",
 	"mobile-frontend-diffview-404-desc": "معرف المراجعة التي طلبتها غير موجودة.<br/>يحدث هذا عادةً باتباع رابط فرق قديم إلى صفحة تم حذفها أو رابط فرق يحتوي على أحرف غير صالحة.",

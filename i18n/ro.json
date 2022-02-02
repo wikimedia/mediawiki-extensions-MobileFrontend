@@ -23,7 +23,6 @@
 	"mobile-frontend-cite-error": "A apărut o eroare în încercarea de a încărca referințele din cauza unui identificator de versiune greșit.",
 	"mobile-frontend-cite-none-available": "Nu există referințe disponibile pentru această pagină.",
 	"mobile-frontend-clear-search": "Curăță",
-	"mobile-frontend-contributions-404-title": "Nume de utilizator furnizat greșit",
 	"mobile-frontend-copyright": "Conținutul este disponibil sub $1, exceptând cazurile în care se specifică altfel.",
 	"mobile-frontend-desc": "Interfața mobilă",
 	"mobile-frontend-diffview-404-desc": "ID-ul pentru revizia pe care ați cerut-o nu există.<br/>Acest lucru este de obieci cauzat prin urmărirea unei legături inactuale de diferență a unei pagini care a fost șterse sau a unei legături de diferență care conține caractere invalide.",

@@ -27,8 +27,6 @@
 	"mobile-frontend-cite-error": "Det oppsto et feil under lasting av referanser på grunn av et ugyldig revisjonsnummer.",
 	"mobile-frontend-cite-none-available": "Det finnes ingen referanser på denne siden.",
 	"mobile-frontend-clear-search": "Tilbakestill",
-	"mobile-frontend-contributions-404-desc": "Kan ikke lete etter bidrag uten en bruker eller med en bruker som ikke finnes.",
-	"mobile-frontend-contributions-404-title": "Ugyldig brukernavn ble oppgitt",
 	"mobile-frontend-copyright": "Innholdet er tilgjengelig under $1 hvis ikke annet er angitt.",
 	"mobile-frontend-desc": "Mobilgrensesnitt",
 	"mobile-frontend-diffview-404-desc": "Revisjons-IDen du ba om eksisterer ikke.<br />Dette kommer som regel av en utdatert difflenke til en side som har blitt slettet eller en difflenke som inneholder ugyldige tegn.",

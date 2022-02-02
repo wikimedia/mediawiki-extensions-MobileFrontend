@@ -41,8 +41,6 @@
 	"mobile-frontend-cite-error": "잘못된 판 식별자로 인해 인용 불러오기 시도 중 문제가 발생했습니다.",
 	"mobile-frontend-cite-none-available": "이 문서에서는 사용 가능한 인용 정보가 없습니다.",
 	"mobile-frontend-clear-search": "지우기",
-	"mobile-frontend-contributions-404-desc": "사용자 지정 없이 또는 존재하지 않는 사용자에 대해서는 기여를 찾을 수 없습니다.",
-	"mobile-frontend-contributions-404-title": "잘못된 사용자 이름이 지정됨",
 	"mobile-frontend-copyright": "별도로 명시하지 않은 경우, 내용은 $1에 따라 사용할 수 있습니다.",
 	"mobile-frontend-desc": "모바일 프론트엔드",
 	"mobile-frontend-diffview-404-desc": "요청한 판에 대한 ID가 존재하지 않습니다.<br />이 문제는 대개 삭제된 문서의 구식의 차이 링크에 진입하거나 유효하지 않은 문자열이 포함된 판 차이 링크에 진입하여 발생합니다.",
