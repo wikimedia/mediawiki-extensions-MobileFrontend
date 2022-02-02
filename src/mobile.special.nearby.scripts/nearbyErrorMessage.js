@@ -36,7 +36,7 @@ module.exports = function nearbyErrorMessage( key ) {
 
 	return new MessageBox(
 		util.extend( {
-			className: 'errorbox'
+			className: 'mw-message-box-error'
 		}, message )
 	);
 };

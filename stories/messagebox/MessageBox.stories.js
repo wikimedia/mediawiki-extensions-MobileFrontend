@@ -8,7 +8,7 @@ export default {
 export const MessageBoxError = () => {
 	return new MessageBox( {
 		heading: 'Bad error',
-		className: 'errorbox',
+		className: 'mw-message-box-error',
 		msg: 'Oh no <strong>everything</strong> is broken!'
 	} ).$el[0];
 };
@@ -20,7 +20,7 @@ MessageBoxError.story = {
 export const MessageBoxWarning = () => {
 	return new MessageBox( {
 		heading: 'Warning',
-		className: 'warningbox',
+		className: 'mw-message-box-warning',
 		msg: 'Just to let you know in case you care.'
 	} ).$el[0];
 };

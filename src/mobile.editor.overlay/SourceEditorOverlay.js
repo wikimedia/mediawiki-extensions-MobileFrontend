@@ -312,7 +312,9 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 
 			hideSpinnerAndShowPreview();
 		}, function () {
-			self.$preview.addClass( 'errorbox' ).text( mw.msg( 'mobile-frontend-editor-error-preview' ) );
+			self.$preview.addClass(
+				'mw-message-box mw-message-box-error'
+			).text( mw.msg( 'mobile-frontend-editor-error-preview' ) );
 
 			hideSpinnerAndShowPreview();
 		} );
@@ -330,7 +332,9 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 	_hidePreview: function () {
 		this.gateway.abortPreview();
 		this.hideSpinner();
-		this.$preview.removeClass( 'errorbox' ).hide();
+		this.$preview.removeClass(
+			'mw-message-box-error'
+		).hide();
 		this.$content.show();
 		window.scrollTo( 0, this.scrollTop );
 		this.showHidden( '.initial-header' );
