@@ -935,7 +935,7 @@ class MobileFrontendHooks {
 	 * Saves mobile host so that the CentralAuth wiki could redirect back properly
 	 *
 	 * @see CentralAuthHooks::doCentralLoginRedirect in CentralAuth extension
-	 * @param CentralAuthUser $centralUser
+	 * @param \MediaWiki\Extension\CentralAuth\User\CentralAuthUser $centralUser
 	 * @param array &$data Redirect data
 	 */
 	public static function onCentralAuthLoginRedirectData( $centralUser, &$data ) {
@@ -950,7 +950,7 @@ class MobileFrontendHooks {
 	 * CentralAuthSilentLoginRedirect hook handler
 	 * Points redirects from CentralAuth wiki to mobile domain if user has logged in from it
 	 * @see SpecialCentralLogin in CentralAuth extension
-	 * @param CentralAuthUser $centralUser
+	 * @param \MediaWiki\Extension\CentralAuth\User\CentralAuthUser $centralUser
 	 * @param string &$url to redirect to
 	 * @param array $info token information
 	 */
