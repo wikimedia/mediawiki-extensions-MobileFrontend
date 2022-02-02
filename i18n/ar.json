@@ -31,7 +31,8 @@
 			"علاء",
 			"محمد أحمد عبد الفتاح",
 			"مشعل الحربي",
-			"Michel Bakni"
+			"Michel Bakni",
+			"SaldırganSincap"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "ما إذا كان المستخدم يعدل عبر واجهة المحمول",
@@ -64,8 +65,12 @@
 	"mobile-frontend-editor-blocked-drawer-title": "مُنع حسابك من تحرير {{SITENAME}}",
 	"mobile-frontend-editor-blocked-drawer-title-partial": "مُنع حسابك من تعديل هذه الصفحة",
 	"mobile-frontend-editor-blocked-drawer-title-ip": "مُنع عنوان بروتوكول الإنترنت خاصتك من تحرير {{SITENAME}}.",
+	"mobile-frontend-editor-blocked-drawer-title-ip-partial": "تم منع عنوان IP الخاص بك من تحرير هذه الصفحة.",
 	"mobile-frontend-editor-blocked-drawer-body-partial": "حاول تحرير صفحة أخرى",
 	"mobile-frontend-editor-blocked-drawer-body-login": "حاول تسجيل الدخول لو كان لديك حساب مستخدم",
+	"mobile-frontend-editor-blocked-drawer-body-login-partial": "حاول تسجيل الدخول إذا كان لديك حساب، أو حاول تعديل صفحة أخرى.",
+	"mobile-frontend-editor-blocked-drawer-body-login-createaccount": "حاول تسجيل الدخول أو إنشاء حساب.",
+	"mobile-frontend-editor-blocked-drawer-body-login-createaccount-partial": "حاول تسجيل الدخول أو إنشاء حساب، أو حاول تحرير صفحة أخرى.",
 	"mobile-frontend-editor-blocked-drawer-body-link": "انظر المزيد",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "السبب",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|تم المنع}} بواسطة",
@@ -76,7 +81,7 @@
 	"mobile-frontend-editor-cancel-confirm": "أتريد حقا أن تهجر تعديلاتك؟",
 	"mobile-frontend-editor-captcha-try-again": "لقد قمت بإدخال رموز خاطئة، الرجاء المحاولة مرة أخرى",
 	"mobile-frontend-editor-continue": "التالي",
-	"mobile-frontend-editor-disabled": "هذه الصفحة محمية لمنع التخريب.",
+	"mobile-frontend-editor-disabled": "هذه الصفحة محمية لمنع التخريب. [$1 أنظر المصدر]",
 	"mobile-frontend-editor-disabled-anon": "يجب عليك تسجيل الدخول لتحرير هذه الصفحة.",
 	"mobile-frontend-editor-editing": "قيد التحرير",
 	"mobile-frontend-editor-editing-page": "<span><strong>تعديل</strong> $1</span>",
@@ -144,7 +149,7 @@
 	"mobile-frontend-last-modified-date": "آخر تعديل بتاريخ $1، $2",
 	"mobile-frontend-last-modified-with-user-days": "[$4 آخر تعديل لهذه الصفحة {{GENDER:$1|قام|قامت}} به]  {{PLURAL:$5|[$6 $2]|0=مستخدم مجهول}} منذ {{PLURAL:$3|يوم واحد|يومين|$3 أيام|$3 يوماً|$3 يوم}}",
 	"mobile-frontend-last-modified-with-user-hours": "[$4 آخر تعديل لهذه الصفحة {{GENDER:$1|قام|قامت}} به]  {{PLURAL:$5|[$6 $2]|0=مستخدم مجهول}} منذ {{PLURAL:$3|ساعة واحدة|ساعتين|$3 ساعات|$3 ساعة}}",
-	"mobile-frontend-last-modified-with-user-just-now": "[$3 آخر تعديل لهذه الصفحة {{GENDER:$1|قام|قامت}} به]  {{PLURAL:$4|[$5 $2]|0=مستخدم مجهول}} قَبْلَ لحظات",
+	"mobile-frontend-last-modified-with-user-just-now": "[$3 {{GENDER:$1|أضاف|أضافت}} {{PLURAL:$4|[$5 $2]|0=مستخدم مجهول}} آخر تعديل لهذه الصفحة] قَبْلَ لحظات",
 	"mobile-frontend-last-modified-with-user-minutes": "[$4 آخر تعديل لهذه الصفحة {{GENDER:$1|قام|قامت}} به]  {{PLURAL:$5|[$6 $2]|0=مستخدم مجهول}} منذ {{PLURAL:$3|دقيقة واحدة|دقيقتين|$3 دقائق|$3 دقيقة}}",
 	"mobile-frontend-last-modified-with-user-months": "[$4 آخر تعديل لهذه الصفحة {{GENDER:$1|قام|قامت}} به]  {{PLURAL:$5|[$6 $2]|0=مستخدم مجهول}} منذ {{PLURAL:$3|شهر واحد|شهرين|$3 أشهر|$3شهراً|$3 شهر}}",
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 آخر تعديل لهذه الصفحة {{GENDER:$1|قام|قامت}} به]  {{PLURAL:$5|[$6 $2]|0=مستخدم مجهول}} منذ {{PLURAL:$3|ثانية واحدة|ثانيتين|$3 ثوان|$3 ثانية}}",
@@ -263,7 +268,7 @@
 	"mobile-frontend-amc-outreach-enabled-message": "تم تمكين الوضع المتقدم الآن، يمكنك إيقاف تشغيله في إعداداتك.",
 	"mobile-frontend-amc-outreach-dismissed-message": "يمكنك تمكين الوضع المتقدم في أي وقت من خلال إعداداتك.",
 	"mobile-frontend-beta-only": "الخاصية متوفرة فقط في نمط البيتا",
-	"mobile-frontend-console-recruit": "مزيد من المعلومات حول كيفية إنشاء موقع للجوال @\nhttps://www.mediawiki.org/wiki/Extension:MobileFrontend",
+	"mobile-frontend-console-recruit": "مزيد من المعلومات حول كيفية إنشاء موقع للجوال @\nhttps://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "تحسين وتبسيط الصفحات الخاصة عند استخدام المحمول (موصى به)",
 	"prefs-mobile": "تفضيلات المحمول"
 }
