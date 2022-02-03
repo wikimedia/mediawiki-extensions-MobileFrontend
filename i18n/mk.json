@@ -42,7 +42,7 @@
 	"mobile-frontend-editor-blocked-drawer-body-link": "Погледајте повеќе",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Причина",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Забранил}}",
-	"mobile-frontend-editor-blocked-drawer-expiry-header": "Истекува",
+	"mobile-frontend-editor-blocked-drawer-expiry-header": "Блокот истекува",
 	"mobile-frontend-editor-blocked-drawer-help": "Подробности",
 	"mobile-frontend-editor-generic-block-reason": "Непозната причина",
 	"mobile-frontend-editor-cancel": "Откажи",
