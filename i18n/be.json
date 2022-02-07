@@ -153,8 +153,15 @@
 	"mobile-frontend-overlay-close": "Закрыць",
 	"mobile-frontend-privacy-link-text": "Прыватнасць",
 	"mobile-frontend-references-citation": "Цытата",
+	"mobile-frontend-requires-title": "Старонка недаступная",
+	"mobile-frontend-return-to-page": "Вярнуцца на старонку",
 	"mobile-frontend-save-settings": "Запісаць",
+	"mobile-frontend-search-content": "Шукаць у старонках",
+	"mobile-frontend-search-content-no-results": "<b>{{int:mobile-frontend-search-content}}</b>, каб убачыць, ці з'яўляецца гэтая фраза недзе.",
+	"mobile-frontend-search-no-results": "Няма старонак з такой назвай.",
+	"mobile-frontend-settings-tagline": "Налады чытання",
 	"mobile-frontend-settings-beta": "Бэта",
+	"mobile-frontend-talk-add-overlay-subject-placeholder": "Загаловак",
 	"mobile-frontend-talk-add-overlay-submit": "Дадаць размову",
 	"mobile-frontend-talk-reply": "Адказаць",
 	"mobile-frontend-terms-text": "Умовы карыстання",
@@ -181,5 +188,6 @@
 	"mobile-frontend-loading-message": "Загрузка...",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Памер шрыфту",
 	"mobile-frontend-mobile-option-amc-learn-more": "Даведацца болей",
-	"mobile-frontend-amc-outreach-no-thanks": "Не, дзякуй"
+	"mobile-frontend-amc-outreach-no-thanks": "Не, дзякуй",
+	"prefs-mobile": "Мабільныя налады"
 }
