@@ -98,7 +98,7 @@
 	"mobile-frontend-editor-disabled-anon": "您需要登入才能編輯此頁面。",
 	"mobile-frontend-editor-editing": "正在編輯",
 	"mobile-frontend-editor-editing-page": "<span><strong>正在編輯</strong> $1</span>",
-	"mobile-frontend-editor-error": "錯誤，編輯尚未儲存。",
+	"mobile-frontend-editor-error": "錯誤，尚未儲存編輯。",
 	"mobile-frontend-editor-error-conflict": "錯誤，其他使用者已編輯此頁面。",
 	"mobile-frontend-editor-error-loading": "錯誤，無法載入編輯器。",
 	"mobile-frontend-editor-error-preview": "錯誤，讀取預覽頁面時發生不明錯誤。請關閉後再試。",

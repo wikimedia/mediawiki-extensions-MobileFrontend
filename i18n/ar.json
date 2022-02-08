@@ -31,7 +31,8 @@
 			"محمد أحمد عبد الفتاح",
 			"مشعل الحربي",
 			"Hhaboh162002",
-			"Michel Bakni"
+			"Michel Bakni",
+			"SaldırganSincap"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "ما إذا كان المستخدم يعدل عبر واجهة المحمول",
@@ -76,8 +77,12 @@
 	"mobile-frontend-editor-blocked-drawer-title": "مُنع حسابك من تحرير {{SITENAME}}",
 	"mobile-frontend-editor-blocked-drawer-title-partial": "مُنع حسابك من تعديل هذه الصفحة",
 	"mobile-frontend-editor-blocked-drawer-title-ip": "مُنع عنوان بروتوكول الإنترنت خاصتك من تحرير {{SITENAME}}.",
+	"mobile-frontend-editor-blocked-drawer-title-ip-partial": "تم منع عنوان IP الخاص بك من تحرير هذه الصفحة.",
 	"mobile-frontend-editor-blocked-drawer-body-partial": "حاول تحرير صفحة أخرى",
 	"mobile-frontend-editor-blocked-drawer-body-login": "حاول تسجيل الدخول لو كان لديك حساب مستخدم",
+	"mobile-frontend-editor-blocked-drawer-body-login-partial": "حاول تسجيل الدخول إذا كان لديك حساب، أو حاول تعديل صفحة أخرى.",
+	"mobile-frontend-editor-blocked-drawer-body-login-createaccount": "حاول تسجيل الدخول أو إنشاء حساب.",
+	"mobile-frontend-editor-blocked-drawer-body-login-createaccount-partial": "حاول تسجيل الدخول أو إنشاء حساب، أو حاول تحرير صفحة أخرى.",
 	"mobile-frontend-editor-blocked-drawer-body-link": "انظر المزيد",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "السبب",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|تم المنع}} بواسطة",
@@ -88,7 +93,7 @@
 	"mobile-frontend-editor-cancel-confirm": "أتريد حقا أن تهجر تعديلاتك؟",
 	"mobile-frontend-editor-captcha-try-again": "لقد قمت بإدخال رموز خاطئة، الرجاء المحاولة مرة أخرى",
 	"mobile-frontend-editor-continue": "التالي",
-	"mobile-frontend-editor-disabled": "هذه الصفحة محمية لمنع التخريب.",
+	"mobile-frontend-editor-disabled": "هذه الصفحة محمية لمنع التخريب. [$1 أنظر المصدر]",
 	"mobile-frontend-editor-disabled-anon": "يجب عليك تسجيل الدخول لتحرير هذه الصفحة.",
 	"mobile-frontend-editor-editing": "قيد التحرير",
 	"mobile-frontend-editor-editing-page": "<span><strong>تعديل</strong> $1</span>",
@@ -273,7 +278,7 @@
 	"mobile-frontend-amc-outreach-enabled-message": "تم تمكين الوضع المتقدم الآن، يمكنك إيقاف تشغيله في إعداداتك.",
 	"mobile-frontend-amc-outreach-dismissed-message": "يمكنك تمكين الوضع المتقدم في أي وقت من خلال إعداداتك.",
 	"mobile-frontend-beta-only": "الخاصية متوفرة فقط في نمط البيتا",
-	"mobile-frontend-console-recruit": "مزيد من المعلومات حول كيفية إنشاء موقع للجوال @\nhttps://www.mediawiki.org/wiki/Extension:MobileFrontend",
+	"mobile-frontend-console-recruit": "مزيد من المعلومات حول كيفية إنشاء موقع للجوال @\nhttps://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "تحسين وتبسيط الصفحات الخاصة عند استخدام المحمول (موصى به)",
 	"prefs-mobile": "تفضيلات المحمول"
 }
