@@ -300,9 +300,10 @@ class SpecialMobileOptions extends MobileSpecialPage {
 		if ( $user->isRegistered() && !$user->matchEditToken( $request->getVal( 'token' ) ) ) {
 			$errorText = __METHOD__ . '(): token mismatch';
 			wfDebugLog( 'mobile', $errorText );
-			$this->getOutput()->addHTML( '<div class="errorbox">'
-				. $this->msg( "mobile-frontend-save-error" )->parse()
-				. '</div>'
+			$this->getOutput()->addHTML(
+				Html::errorBox(
+					$this->msg( "mobile-frontend-save-error" )->parse()
+				)
 			);
 			$this->addSettingsForm();
 			return;

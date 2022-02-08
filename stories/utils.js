@@ -36,7 +36,7 @@ function wrap( view, className, id, style ) {
  */
 function warning( text ) {
 	const node = document.createElement( 'div' );
-	node.setAttribute( 'class', 'warningbox' );
+	node.setAttribute( 'class', 'mw-message-box mw-message-box-warning' );
 	node.textContent = text;
 	return node;
 }

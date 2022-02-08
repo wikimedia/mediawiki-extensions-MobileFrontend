@@ -343,7 +343,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 */
 	reportError: function ( text ) {
 		var errorNotice = new MessageBox( {
-			className: 'errorbox',
+			className: 'mw-message-box-error',
 			msg: text,
 			heading: mw.msg( 'mobile-frontend-editor-error' )
 		} );
@@ -560,7 +560,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 		var $actions = $( '<div>' ).addClass( 'actions' ),
 			$anonWarning = $( '<div>' ).addClass( 'anonwarning content' ).append(
 				new MessageBox( {
-					className: 'messagebox anon-msg',
+					className: 'mw-message-box-notice anon-msg',
 					msg: mw.msg( 'mobile-frontend-editor-anonwarning' )
 				} ).$el,
 				$actions
