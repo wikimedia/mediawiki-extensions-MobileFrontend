@@ -13,7 +13,8 @@
 			"Renardo",
 			"Robin van der Vliet",
 			"Yekrats",
-			"YvesNevelsteen"
+			"YvesNevelsteen",
+			"Spenĉjo"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ĉu jes aŭ ne uzanto redaktas uzante poŝtelefonan interfacon",
@@ -70,7 +71,7 @@
 	"mobile-frontend-editor-error-loading": "Eraro, ne eblas ŝargi la redaktilon.",
 	"mobile-frontend-editor-error-preview": "Eraro, io neatendite okazis ŝargante la antaŭrigardon. Bonvolu fermi kaj provi denove.",
 	"mobile-frontend-editor-keep-editing": "Daŭrigi la redaktadon",
-	"mobile-frontend-editor-licensing": "Konservante ŝanĝojn, vi konsentas publikigi viajn kontribuojn laŭ la {{PLURAL:$2|permesilo|permesiloj}} $1.",
+	"mobile-frontend-editor-licensing": "Se vi konservas ŝanĝojn, per tio vi konsentas publikigi viajn kontribuojn laŭ la {{PLURAL:$2|permesilo|permesiloj}} $1.",
 	"mobile-frontend-editor-licensing-with-terms": "Konservante ŝanĝojn, vi konsentas al la $1 kaj konsentas publikigi viajn kontribuojn laŭ la {{PLURAL:$3|permesilo|permesiloj}} $2.",
 	"mobile-frontend-editor-terms-link": "[$1 Uzkondiĉoj]",
 	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|Ĉu vi certas ke vi volas krei}} novan paĝon sur {{SITENAME}}?",

@@ -69,7 +69,7 @@
 	"mobile-frontend-editor-error-preview": "ত্রুটি, প্রাকদর্শন লোডের সময় অপ্রত্যাশিত কিছু ঘটেছে। দয়া করে বন্ধ করুন ও আবার চেষ্টা করুন।",
 	"mobile-frontend-editor-keep-editing": "সম্পাদনা চলমান রাখুন",
 	"mobile-frontend-editor-licensing": "পরিবর্তন সংরক্ষণের দ্বারা, আপনি আপনার অবদান $1 {{PLURAL:$2|লাইসেন্সের}} অধীনে প্রকাশে সম্মত হচ্ছেন।",
-	"mobile-frontend-editor-licensing-with-terms": "পরিবর্তন সংরক্ষণের দ্বারা, আপনি $1-এ সম্মত ও আপনার অবদান $2 {{PLURAL:$3|লাইসেন্সের}} অধীনে প্রকাশে সম্মত হচ্ছেন।",
+	"mobile-frontend-editor-licensing-with-terms": "পরিবর্তন সংরক্ষণের দ্বারা, আপনি $1-র সাথে সম্মত হচ্ছেন ও আপনার অবদান $2 {{PLURAL:$3|লাইসেন্সের}} অধীনে প্রকাশে সম্মত হচ্ছেন।",
 	"mobile-frontend-editor-terms-link": "[$1 ব্যবহারের শর্তাবলী]",
 	"mobile-frontend-editor-new-page-confirm": "আপনি কি {{SITENAME}}-এ {{GENDER:$1|একটি নতুন পাতা তৈরি করার ব্যাপারে নিশ্চিত}}?",
 	"mobile-frontend-editor-placeholder": "এই অনুচ্ছেদটি খালি। এটি সম্প্রসারণ করুন!",
