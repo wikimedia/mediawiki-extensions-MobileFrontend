@@ -1,0 +1,40 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chadyka"
+		]
+	},
+	"apihelp-mobileview-description": "Вяртае дадзеныя, неабходныя для мабільных праглядаў.",
+	"apihelp-mobileview-summary": "Вяртае дадзеныя, неабходныя для мабільных праглядаў.",
+	"apihelp-mobileview-param-page": "Назва старонкі для апрацоўкі.",
+	"apihelp-mobileview-param-redirect": "Ці праходзіць па перанакіраванням.",
+	"apihelp-mobileview-param-sections": "Аддзелены вертыкальнымі рыскамі спіс нумароў раздзелаў, для якіх трэба вярнуць тэкст. \"all\" можна выкарыстоўваць для вяртання ўсіх. Дыяпазоны ў фармаце \"1-4\" азначаюць атрыманне раздзелаў 1,2,3,4. Дыяпазоны без другога нумара, напр. «1-» азначае атрымаць усё да канца. «references» можна выкарыстоўваць, каб паказаць, што павінны быць вернутыя ўсе раздзелы, якія змяшчаюць зноскі.",
+	"apihelp-mobileview-param-prop": "Якую інфармацыю атрымаць:\n;text:HTML выбраных раздзелаў.\n;sections:Інфармацыя пра ўсе раздзелы старонкі.\n;normalizedtitle:Нармалізаваная назва старонкі.\n;lastmodified:Пазнака часу па ISO 8601, калі старонка была зменена ў апошні раз, напр. \"2014-04-13T22:42:14Z\".\n;lastmodifiedby:Інфармацыя пра ўдзельніка, які змяніў старонку апошнім.\n;revision:Вяртае ідэнтыфікатар бягучай версіі старонкі.\n;protection:Інфармацыя пра ўзровень аховы.\n;editable:Ці можа цяперашні ўдзельнік рэдагаваць гэтую старонку. Гэта ўключае ў сябе ўсе фактары для ўдзельнікаў, якія ўвайшлі ў сістэму, але не заблакіраваны статус для анонімаў.\n;languagecount:Колькасць моваў, на якіх даступная старонка.\n;hasvariants:Ці старонка даступная ў іншых моўных варыянтах.\n;displaytitle:Адлюстраваная назва старонкі, з прымяненнем &#123;&#123;DISPLAYTITLE&#125;&#125; і г. д.\n;pageprops:Уласцівасці старонкі.",
+	"apihelp-mobileview-param-prop-withimages": "Якую інфармацыю атрымаць:\n;text:HTML выбраных раздзелаў.\n;sections:Інфармацыя пра ўсе раздзелы старонкі.\n;normalizedtitle:Нармалізаваная назва старонкі.\n;lastmodified:Пазнака часу па ISO 8601, калі старонка была зменена ў апошні раз, напр. \"2014-04-13T22:42:14Z\".\n;lastmodifiedby:Інфармацыя пра ўдзельніка, які змяніў старонку апошнім.\n;revision:Вяртае ідэнтыфікатар бягучай версіі старонкі.\n;protection:Інфармацыя пра ўзровень аховы.\n;editable:Ці можа цяперашні ўдзельнік рэдагаваць гэтую старонку. Гэта ўключае ў сябе ўсе фактары для ўдзельнікаў, якія ўвайшлі ў сістэму, але не заблакіраваны статус для анонімаў.\n;languagecount:Колькасць моваў, на якіх даступная старонка.\n;hasvariants:Ці старонка даступная ў іншых моўных варыянтах.\n;displaytitle:Адлюстраваная назва старонкі, з прымяненнем &#123;&#123;DISPLAYTITLE&#125;&#125; і г. д.\n;pageprops:Уласцівасці старонкі.\n;image:Інфармацыя аб выяве, звязанай з гэтай старонкай.\n;thumb:Драбніца выявы, звязанай з гэтай старонкай.",
+	"apihelp-mobileview-param-sectionprop": "Якую інфармацыю аб раздзелах атрымаць.",
+	"apihelp-mobileview-param-pageprops": "Якія ўласцівасці старонкі вярнуць, спіс, раздзелены вертыкальнымі рыскамі (\"|\"), або \"*\" для ўсіх уласцівасцяў.",
+	"apihelp-mobileview-param-variant": "Канвертаваць змест у гэты моўны варыянт.",
+	"apihelp-mobileview-param-noimages": "Вяртае HTML без выяваў.",
+	"apihelp-mobileview-param-noheadings": "Не ўключаць загалоўкі ў вывад.",
+	"apihelp-mobileview-param-notransform": "Не трансфармаваць HTML у мабільную версію.",
+	"apihelp-mobileview-param-onlyrequestedsections": "Вяртаць толькі запытаныя раздзелы нават з $1prop=sections.",
+	"apihelp-mobileview-param-offset": "Уявіць, што ўвесь тэкставы вынік з'яўляецца адным радком, і вярнуць падрадок, пачынаючы адсюль.",
+	"apihelp-mobileview-param-maxlen": "Уявіць, што ўвесь тэкставы вынік з'яўляецца адным радком, і абмежаваць вынік гэтай даўжынёй.",
+	"apihelp-mobileview-param-thumbsize": "Максімальныя памеры драбніцы.",
+	"apihelp-mobileview-param-thumbwidth": "Максімальная шырыня драбніцы.",
+	"apihelp-mobileview-param-thumbheight": "Максімальная вышыня драбніцы.",
+	"apihelp-mobileview-param-revision": "Запытаць канкрэтную версію.",
+	"apihelp-mobileview-example-1": "Атрымаць інфармацыю пра раздзел 0 [[Doom metal]]",
+	"apihelp-mobileview-example-2": "Атрымаць інфармацыю аб раздзеле 0 і раздзелах, якія змяшчаюць зноскі старонкі [[Candlemass]]",
+	"apihelp-mobileview-example-3": "Атрымаць інфармацыю аб раздзеле 1 і пазнейшых раздзелах, і аб раздзелах, якія змяшчаюць зноскі, старонкі [[Candlemass]]",
+	"apihelp-parse-param-mobileformat": "Вяртанне вываду парсеру ў фармаце, прыдатным для мабільных прылад.",
+	"apihelp-parse-param-noimages": "Адключыць выявы ў мабільным вывадзе.",
+	"apihelp-parse-param-mainpage": "Прымяняць мабільныя трансфармацыі галоўнай старонкі.",
+	"apihelp-webapp-manifest-description": "Вяртае маніфест вэб-прыкладання.",
+	"apihelp-webapp-manifest-summary": "Вяртае маніфест вэб-прыкладання.",
+	"apierror-mobilefrontend-badidtitle": "Дрэннае спалучэнне ідэнтыфікатара/назвы версіі.",
+	"apierror-mobilefrontend-toomanysizeparams": "<var>thumbsize</var> узаемавыключальны з <var>thumbwidth</var> і <var>thumbheight</var>.",
+	"apiwarn-mobilefrontend-ignoringnoheadings": "<var>noheadings</var> не мае сэнсу на галоўнай старонцы, ігнаруецца.",
+	"apiwarn-mobilefrontend-mobileviewdeprecated": "Гэты API не падтрымліваецца. Глядзіце T186627 для больш падрабязнай інфармацыі.",
+	"apiwarn-mobilefrontend-sectionsnotfound": "{{PLURAL:$2|Раздзел|Раздзелы}} $1 не знойдзены."
+}
