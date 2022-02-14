@@ -14,6 +14,15 @@ class MockApiMobileView extends ApiMobileView {
 		$this->usePageImages = true;
 	}
 
+	public function msg( $key, ...$params ) {
+		$obj = new class {
+			public function parse() {
+				return '{{parsed message}}';
+			}
+		};
+		return $obj;
+	}
+
 	protected function makeTitle( $name ) {
 		$t = Title::newFromText( $name );
 		$row = (object)[

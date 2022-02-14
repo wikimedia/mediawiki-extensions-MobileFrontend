@@ -10,6 +10,7 @@ use ExtensionRegistry;
 use ExtMobileFrontend;
 use FauxRequest;
 use File;
+use Html;
 use ILanguageConverter;
 use ImagePage;
 use MediaWiki\Extension\XAnalytics\XAnalytics;
@@ -219,6 +220,7 @@ class ApiMobileView extends ApiBase {
 						$section = array_intersect_key( $data['sections'][$i - 1], $sectionProp );
 					}
 					$section['id'] = $i;
+
 					if ( isset( $prop['text'] )
 						&& isset( $requestedSections[$i] )
 						&& isset( $data['text'][$i] )
@@ -228,6 +230,25 @@ class ApiMobileView extends ApiBase {
 					}
 					if ( isset( $data['refsections'][$i] ) ) {
 						$section['references'] = true;
+					}
+
+					if ( $i === 0 ) {
+						// The app cannot render Html::warningBox so use a div with inline styles instead.
+						$warning = Html::rawElement(
+							'div',
+							[
+								'style' => 'background-color: #fef6e7; border: 1px solid #fc3;'
+									. 'padding: 12px 24px; margin-bottom: 16px;'
+							],
+							$this->msg( 'apiwarn-mobilefrontend-mobileview-warning' )->parse()
+						);
+						if ( $isXml ) {
+							$text = $section['*'] ?? '';
+							$section['*'] = $warning . $text;
+						} else {
+							$text = $section['text'] ?? '';
+							$section['text'] = $warning . $text;
+						}
 					}
 					$result[] = $section;
 				}

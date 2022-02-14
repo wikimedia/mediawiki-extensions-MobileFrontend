@@ -159,6 +159,14 @@ class ApiMobileViewTest extends MediaWikiIntegrationTestCase {
 	}
 
 	public function provideView() {
+		$warning = Html::rawElement(
+			'div',
+			[
+				'style' => 'background-color: #fef6e7; border: 1px solid #fc3;'
+					. 'padding: 12px 24px; margin-bottom: 16px;'
+			],
+			'{{parsed message}}'
+		);
 		$baseIn = [
 			'action' => 'mobileview',
 			'page' => 'Foo',
@@ -173,7 +181,10 @@ Text 2
 		];
 		$baseOut = [
 			'sections' => [
-				0 => [ 'id' => 0 ],
+				0 => [
+					'id' => 0,
+					'*' => $warning,
+				],
 				1 => [
 					'toclevel' => 1,
 					'line' => 'Section 1',
