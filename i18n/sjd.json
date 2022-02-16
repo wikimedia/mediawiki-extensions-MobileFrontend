@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Meerrahtar"
+			"Meerrahtar",
+			"Merrahtar"
 		]
 	},
 	"mobile-frontend-view": "Мобильнэ версия",
+	"mobile-frontend-view-desktop": "Компьютернэ версия",
 	"tag-mobile_edit": "Вуайхэсс мобильнэ устройства мӣлльтэ",
 	"tag-mobile_web_edit": "Вуайхэсс мобильнэ версиясьт"
 }
