@@ -982,7 +982,8 @@ class MobileFrontendHooks {
 	 * @return string
 	 */
 	public static function findTagline( ParserOutput $po, $fallbackWikibaseDescriptionFunc ) {
-		$desc = $po->getPageProperty( 'wikibase-shortdesc' );
+		// T301915
+		$desc = $po->getPageProperty( 'wikibase-shortdesc' ) ?? false;
 		$item = $po->getPageProperty( 'wikibase_item' );
 		if ( $desc === false && $item && $fallbackWikibaseDescriptionFunc ) {
 			return $fallbackWikibaseDescriptionFunc( $item );
