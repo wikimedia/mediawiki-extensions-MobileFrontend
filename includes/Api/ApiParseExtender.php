@@ -70,15 +70,12 @@ class ApiParseExtender {
 				$mf = new MobileFormatter(
 					MobileFormatter::wrapHTML( $text ), $title, $config, $context
 				);
-				// HACK: need a nice way to request a TOC-free HTML in the first place
-				$mf->remove( [ '.toc', '.mw-headline-anchor' ] );
 
 				$transforms = [];
 				$options = $config->get( 'MFMobileFormatterOptions' );
 				$topHeadingTags = $options['headings'];
 
 				$transforms[] = new SubHeadingTransform( $topHeadingTags );
-
 				$transforms[] = new MakeSectionsTransform(
 					$topHeadingTags,
 					false
