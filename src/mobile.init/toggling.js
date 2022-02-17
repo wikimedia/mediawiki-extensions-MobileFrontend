@@ -1,15 +1,8 @@
-/* global $ */
 module.exports = function () {
 	var
-		$contentContainer = $( '#mw-content-text > .mw-parser-output' ),
 		currentPage = require( '../mobile.startup/currentPage' )(),
 		Toggler = require( '../mobile.startup/Toggler' ),
 		eventBus = require( '../mobile.startup/eventBusSingleton' );
-
-	// If there was no mw-parser-output wrapper, just use the parent.
-	if ( $contentContainer.length === 0 ) {
-		$contentContainer = $( '#mw-content-text' );
-	}
 
 	/**
 	 * Initialises toggling code.
@@ -43,6 +36,13 @@ module.exports = function () {
 		!currentPage.inNamespace( 'special' ) &&
 		mw.config.get( 'wgAction' ) === 'view'
 	) {
-		init( $contentContainer, 'content-', currentPage );
+		mw.hook( 'wikipage.content' ).add( function ( $container ) {
+			var $contentContainer = $container.find( '.mw-parser-output' );
+			// If there was no mw-parser-output wrapper, just use the parent.
+			if ( $contentContainer.length === 0 ) {
+				$contentContainer = $container;
+			}
+			init( $contentContainer, 'content-', currentPage );
+		} );
 	}
 };
