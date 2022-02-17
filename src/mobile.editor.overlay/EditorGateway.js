@@ -252,6 +252,7 @@ EditorGateway.prototype = {
 			pst: true,
 			// Output mobile HTML (bug 54243)
 			mobileformat: true,
+			useskin: mw.config.get( 'skin' ),
 			disabletoc: true,
 			title: this.title,
 			prop: [ 'text', 'sections' ]

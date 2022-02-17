@@ -674,7 +674,6 @@
 	},
 	"Hooks": {
 		"APIGetAllowedParams": "MobileFrontend\\Api\\ApiParseExtender::onAPIGetAllowedParams",
-		"APIAfterExecute": "MobileFrontend\\Api\\ApiParseExtender::onAPIAfterExecute",
 		"APIQuerySiteInfoGeneralInfo": "MobileFrontendHooks::onAPIQuerySiteInfoGeneralInfo",
 		"AuthChangeFormFields": "MobileFrontendHooks::onAuthChangeFormFields",
 		"RequestContextCreateSkin": "MobileFrontendHooks::onRequestContextCreateSkin",

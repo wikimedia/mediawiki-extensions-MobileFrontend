@@ -370,6 +370,10 @@ class MobileContext extends ContextSource {
 			return true;
 		}
 
+		if ( $this->getRequest()->getRawVal( 'mobileformat' ) !== null ) {
+			return true;
+		}
+
 		/**
 		 * If a user is accessing the site from a mobile domain, then we should
 		 * always display the mobile version of the site (otherwise, the cache
