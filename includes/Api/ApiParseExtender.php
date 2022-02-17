@@ -24,7 +24,6 @@ class ApiParseExtender {
 	public static function onAPIGetAllowedParams( ApiBase $module, &$params ) {
 		if ( $module->getModuleName() == 'parse' ) {
 			$params['mobileformat'] = false;
-			$params['mainpage'] = false;
 		}
 	}
 
