@@ -15,6 +15,21 @@ use Title;
  * See https://www.mediawiki.org/wiki/Extension:MobileFrontend#Extended_action.3Dparse
  */
 class ApiParseExtender {
+
+	/**
+	 * Check if an API action can have the mobileformat param
+	 *
+	 * @param string $action
+	 * @return bool
+	 */
+	public static function isParseAction( string $action ): bool {
+		return $action === 'parse' ||
+			// VE calls parse indirectly
+			$action === 'visualeditoredit' ||
+			// DT calls VE indirectly
+			$action === 'discussiontoolsedit';
+	}
+
 	/**
 	 * APIGetAllowedParams hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/APIGetAllowedParams
@@ -22,8 +37,13 @@ class ApiParseExtender {
 	 * @param array|bool &$params Array of parameters
 	 */
 	public static function onAPIGetAllowedParams( ApiBase $module, &$params ) {
-		if ( $module->getModuleName() == 'parse' ) {
-			$params['mobileformat'] = false;
+		$name = $module->getModuleName();
+		// $name is supposed to always be a string, but in some tests it returns null :/
+		if ( $name && self::isParseAction( $name ) ) {
+			$params['mobileformat'] = [
+				ApiBase::PARAM_TYPE => 'boolean',
+				ApiBase::PARAM_HELP_MSG => 'apihelp-parse-param-mobileformat',
+			];
 		}
 	}
 
@@ -38,7 +58,8 @@ class ApiParseExtender {
 
 		$context = $services->getService( 'MobileFrontend.Context' );
 
-		if ( $module->getModuleName() == 'parse' ) {
+		$name = $module->getModuleName();
+		if ( $name && self::isParseAction( $name ) ) {
 			$result = $module->getResult();
 			$data = $result->getResultData();
 			$params = $module->extractRequestParams();
@@ -48,7 +69,7 @@ class ApiParseExtender {
 
 				$mf = new MobileFormatter(
 					MobileFormatter::wrapHTML( $text ), $title, $config, $context
- );
+				);
 				// HACK: need a nice way to request a TOC-free HTML in the first place
 				$mf->remove( [ '.toc', '.mw-headline-anchor' ] );
 
