@@ -13,7 +13,7 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
-	 * Test findTagLine when output has no wikibase elements
+	 * Test findTagline when output has no wikibase elements
 	 *
 	 * @covers MobileFrontendHooks::findTagline
 	 */
@@ -26,7 +26,7 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
-	 * Test findTagLine when output has no wikibase elements
+	 * Test findTagline when output has no wikibase elements
 	 *
 	 * @covers MobileFrontendHooks::findTagline
 	 */
@@ -41,7 +41,7 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
-	 * Test findTagLine when output has no wikibase elements
+	 * Test findTagline when output has no wikibase elements
 	 *
 	 * @covers MobileFrontendHooks::findTagline
 	 */
@@ -60,7 +60,7 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
-	 * Test findTagLine when output has no wikibase elements
+	 * Test findTagline when output has no wikibase elements
 	 *
 	 * @covers MobileFrontendHooks::findTagline
 	 */
