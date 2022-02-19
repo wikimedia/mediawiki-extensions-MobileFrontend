@@ -22,7 +22,7 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 		$fallback = function () {
 			$this->fail( 'Fallback shouldn\'t be called' );
 		};
-		$this->assertFalse( MobileFrontendHooks::findTagline( $po, $fallback ) );
+		$this->assertNull( MobileFrontendHooks::findTagline( $po, $fallback ) );
 	}
 
 	/**

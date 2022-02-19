@@ -979,13 +979,12 @@ class MobileFrontendHooks {
 	 * @param ParserOutput $po
 	 * @param callable $fallbackWikibaseDescriptionFunc A fallback to provide Wikibase description.
 	 * Function takes wikibase_item as a first and only argument
-	 * @return string
+	 * @return ?string the tagline as a string, or else null if none is found
 	 */
 	public static function findTagline( ParserOutput $po, $fallbackWikibaseDescriptionFunc ) {
-		// T301915
-		$desc = $po->getPageProperty( 'wikibase-shortdesc' ) ?? false;
+		$desc = $po->getPageProperty( 'wikibase-shortdesc' );
 		$item = $po->getPageProperty( 'wikibase_item' );
-		if ( $desc === false && $item && $fallbackWikibaseDescriptionFunc ) {
+		if ( $desc === null && $item && $fallbackWikibaseDescriptionFunc ) {
 			return $fallbackWikibaseDescriptionFunc( $item );
 		}
 		return $desc;
