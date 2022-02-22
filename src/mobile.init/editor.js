@@ -403,14 +403,16 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 		}
 	} );
 
-	if ( !router.getPath() && ( mw.util.getParamValue( 'veaction' ) || mw.util.getParamValue( 'action' ) === 'edit' ) ) {
+	// We use wgAction instead of getParamValue('action') as the former can be
+	// overridden by hooks to stop the editor loading automatically.
+	if ( !router.getPath() && ( mw.util.getParamValue( 'veaction' ) || mw.config.get( 'wgAction' ) === 'edit' ) ) {
 		if ( mw.util.getParamValue( 'veaction' ) === 'edit' ) {
 			editorOverride = 'VisualEditor';
 		} else if ( mw.util.getParamValue( 'veaction' ) === 'editsource' ) {
 			editorOverride = 'SourceEditor';
 		}
 		// else: action=edit, for which we allow the default to take effect
-		fragment = '#/editor/' + ( mw.util.getParamValue( 'section' ) || ( mw.util.getParamValue( 'action' ) === 'edit' ? 'all' : '0' ) );
+		fragment = '#/editor/' + ( mw.util.getParamValue( 'section' ) || ( mw.config.get( 'wgAction' ) === 'edit' ? 'all' : '0' ) );
 		// eslint-disable-next-line no-restricted-properties
 		if ( window.history && history.pushState ) {
 			uri = mw.Uri();
