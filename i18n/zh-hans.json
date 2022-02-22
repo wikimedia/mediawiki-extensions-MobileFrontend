@@ -67,7 +67,9 @@
 			"Great Brightstar",
 			"Stang",
 			"Xzonn",
-			"忒有钱"
+			"忒有钱",
+			"GuoPC",
+			"Winston Sung"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "用户是否通过移动版界面编辑",
@@ -132,7 +134,7 @@
 	"mobile-frontend-editor-disabled-anon": "您需要登录以编辑此页面。",
 	"mobile-frontend-editor-editing": "编辑中",
 	"mobile-frontend-editor-editing-page": "<span><strong>编辑</strong>$1</span>",
-	"mobile-frontend-editor-error": "出错，编辑未保存。",
+	"mobile-frontend-editor-error": "出错，尚未保存编辑。",
 	"mobile-frontend-editor-error-conflict": "出错，其他用户已编辑该页面。",
 	"mobile-frontend-editor-error-loading": "出错，无法载入编辑器。",
 	"mobile-frontend-editor-error-preview": "出错，载入预览时发生意外。请关闭后重试。",
@@ -146,7 +148,7 @@
 	"mobile-frontend-editor-previewing-page": "<span><strong>预览</strong>$1</span>",
 	"mobile-frontend-editor-publish": "发⁠布",
 	"mobile-frontend-editor-save": "保存",
-	"mobile-frontend-editor-success": "成功！您的编辑已保存。",
+	"mobile-frontend-editor-success": "成功！已发布您的编辑。",
 	"mobile-frontend-editor-success-landmark-1": "恭喜，您现在是一名{{SITENAME}}的编者了！",
 	"mobile-frontend-editor-success-new-page": "祝贺您创建了一个新页面！",
 	"mobile-frontend-editor-summary-placeholder": "例如：修复错别字、添加内容等",
