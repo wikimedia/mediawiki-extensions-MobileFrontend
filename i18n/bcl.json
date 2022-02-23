@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Brazal.dang",
+			"Daramlagon",
 			"Filipinayzd",
 			"Geopoet",
 			"ShimunUfesoj"
@@ -86,7 +87,7 @@
 	"mobile-frontend-talk-add-overlay-submit": "Magdugang nin diskusyon",
 	"mobile-frontend-talk-reply": "Kasimbagan",
 	"mobile-frontend-talk-reply-info": "Tandai an saimong simbag awtomatikong pinagpirmahan nin saimong ngaran-paragamit.",
-	"mobile-frontend-view": "Magíwasong patanaw",
+	"mobile-frontend-view": "Bersyong pan-mobile",
 	"mobile-frontend-view-desktop": "Desktop",
 	"mobile-frontend-watchlist-a-z": "Listahan",
 	"mobile-frontend-watchlist-a-z-empty-howto": "Ika sa ngunyan mayong binabantayan na arinmang mga pahina. An saimong bantay-listahan makakatabang saimo na baybayon an mga pahina na ika interesadong gayo. Bantayan an mga pahina sa paagi nin pagdutdot kan ikonong bitoon.",
