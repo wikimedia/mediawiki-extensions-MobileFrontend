@@ -6,9 +6,11 @@
 			"Yupik"
 		]
 	},
+	"mobile-frontend-diffview-title": "Nubástusah",
 	"mobile-frontend-editor-anonwarning": "<strong>Váruttâs:</strong> Jieh lah čälittâm jieijâd siisâ. IP-čujottâsâd uáinoo almolávt puohháid, jis hammiih. Jis <strong>čälittah jieijâd siisâ</strong> teikâ <strong>rááhtáh tubdâlduv</strong>, tuu hammim čálloo tuu kevtteetubdâlduvâi rähtim hammiimin já siämmást tun finniih kiävtun ávhálijd piergâsijd.",
 	"mobile-frontend-editor-generic-block-reason": "Tubdâmettum suijâ",
 	"mobile-frontend-editor-continue": "Čuávuvâš",
+	"mobile-frontend-editor-editing": "Hammiimin",
 	"mobile-frontend-editor-terms-link": "[$1 Kevttimiävtuh]",
 	"mobile-frontend-editor-save": "Vuorkkii",
 	"mobile-frontend-language-heading": "<strong>Kielah</strong>",
@@ -17,11 +19,16 @@
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Eres kielah",
 	"mobile-frontend-main-menu": "Válduvaljiittâh",
 	"mobile-frontend-main-menu-settings-heading": "Asâttâsah",
+	"mobile-frontend-missing-image": "Kove",
 	"mobile-frontend-news-items": "Uđđâsijn",
+	"mobile-frontend-overlay-close": "Toopâ",
 	"mobile-frontend-save-settings": "Vuorkkii",
+	"mobile-frontend-settings-tagline": "Luuhâmasâttâsâh",
 	"mobile-frontend-terms-text": "Kevttimiävtuh",
 	"mobile-frontend-view": "Moobiiluáinus",
+	"mobile-frontend-view-desktop": "Pargopevdi",
 	"mobile-frontend-watchlist-filter-all": "Puoh",
+	"mobile-frontend-watchlist-filter-talk": "Savâstâllâm",
 	"tag-mobile_edit": "Moobiilhammim",
 	"tag-mobile_web_edit": "moobiilsiijđoi hammim"
 }
