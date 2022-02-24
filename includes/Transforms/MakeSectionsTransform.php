@@ -54,7 +54,7 @@ class MakeSectionsTransform implements IMobileTransform {
 	}
 
 	/**
-	 * Actually splits splits the body of the document into sections
+	 * Actually splits the body of the document into sections
 	 *
 	 * @param DOMElement $body representing the HTML of the current article. In the HTML the sections
 	 *  should not be wrapped.
