@@ -20,9 +20,14 @@ function loadLanguageSearcher( pageGateway ) {
 			languages: data.languages,
 			variants: data.variants,
 			showSuggestedLanguages: true,
-			deviceLanguage: getDeviceLanguage( navigator )
+			deviceLanguage: getDeviceLanguage( navigator ),
+			onOpen: ( searcher ) => {
+				mw.hook( 'mobileFrontend.languageSearcher.onOpen' ).fire( searcher );
+			},
+			onBannerClick: () => {
+				mw.hook( 'mobileFrontend.languageSearcher.onBannerClick' ).fire();
+			}
 		} );
-
 	} );
 }
 

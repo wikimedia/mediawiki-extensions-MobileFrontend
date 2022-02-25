@@ -1,7 +1,8 @@
 let
 	languageOverlay,
 	LanguageSearcher,
-	sandbox;
+	sandbox,
+	spy;
 const
 	headless = typeof window !== 'object',
 	m = require( '../../../../src/mobile.startup/moduleLoaderSingleton' ),
@@ -38,6 +39,7 @@ QUnit.module( 'MobileFrontend languageOverlay.js', {
 			sandbox.stub( global, 'navigator' ).callsFake( () => {} );
 		}
 
+		spy = sandbox.stub( mw, 'hook' ).returns( { fire: function () {} } );
 		sandbox.stub( m, 'require' ).withArgs( 'mobile.languages.structured/LanguageSearcher' ).returns( LanguageSearcher );
 	},
 	afterEach: function () {
@@ -64,5 +66,6 @@ QUnit.test( '#constructor', function ( assert ) {
 	return languageOverlay.test.loadLanguageSearcher( gateway ).then( function () {
 		assert.strictEqual( overlay.$el.find( '.overlay-content > .promised-view' ).length, 0, 'promisedView has fulfilled its promise' );
 		assert.strictEqual( overlay.$el.find( '.overlay-content > .language-searcher' ).length, 1, 'loaded view rendered in .overlay-content' );
+		sinon.assert.calledWith( spy.withArgs( 'mobileFrontend.languageSearcher.onOpen' ) );
 	} );
 } );
