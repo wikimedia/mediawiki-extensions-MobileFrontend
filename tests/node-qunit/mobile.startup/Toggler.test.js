@@ -59,7 +59,9 @@ QUnit.module( 'MobileFrontend Toggler.js', {
 		this._session = mw.storage.session;
 		mw.storage.session = {
 			get: () => {},
+			getObject: () => {},
 			set: () => {},
+			setObject: () => {},
 			remove: () => {}
 		};
 	},
@@ -294,7 +296,7 @@ QUnit.test( 'Toggling a section stores its state.', function ( assert ) {
 		} ),
 		$section = this.$container.find( 'h2' ),
 		expandedSections = Toggler._getExpandedSections( this.page ),
-		mwStorageSetSpy = sandbox.spy( mw.storage.session, 'set' );
+		mwStorageSetSpy = sandbox.spy( mw.storage.session, 'setObject' );
 
 	assert.strictEqual( $.isEmptyObject( expandedSections[ this.title ] ),
 		true,
@@ -302,14 +304,14 @@ QUnit.test( 'Toggling a section stores its state.', function ( assert ) {
 	);
 
 	toggle.toggle( $section, this.page );
-	const mwStorageSetCall = JSON.parse( mwStorageSetSpy.getCall( 0 ).args[1] );
+	const mwStorageSetCall = mwStorageSetSpy.getCall( 0 ).args[1];
 
 	assert.true( mwStorageSetCall[ this.title ][ this.headline ],
 		'the just toggled section state has been saved'
 	);
 
 	toggle.toggle( $section, this.page );
-	const mwStorageSetCall2 = JSON.parse( mwStorageSetSpy.getCall( 1 ).args[1] );
+	const mwStorageSetCall2 = mwStorageSetSpy.getCall( 1 ).args[1];
 
 	assert.strictEqual( mwStorageSetCall2[ this.title ][ this.headline ],
 		undefined,
@@ -340,7 +342,7 @@ QUnit.test( 'Expanding already expanded section does not toggle it.', function (
 		'section does not have open-block class'
 	);
 
-	const mwStorageSetSpy = sandbox.spy( mw.storage.session, 'set' );
+	const mwStorageSetSpy = sandbox.spy( mw.storage.session, 'setObject' );
 
 	// manually toggle the second section
 	toggle.toggle( $section, this.page );
@@ -352,7 +354,7 @@ QUnit.test( 'Expanding already expanded section does not toggle it.', function (
 	);
 
 	Toggler._getExpandedSections( this.page );
-	const mwStorageSetCall = JSON.parse( mwStorageSetSpy.getCall( 0 ).args[1] );
+	const mwStorageSetCall = mwStorageSetSpy.getCall( 0 ).args[1];
 
 	assert.true( mwStorageSetCall[this.title][ this.headline ],
 		'manually revealed section state has been correctly saved in sessionStorage'
@@ -386,8 +388,8 @@ QUnit.test( 'MobileFrontend toggle.js - Expand stored sections.', function ( ass
 	// save a toggle state manually
 	expandedSections[ this.title ][ this.headline ] = true;
 
-	sandbox.stub( mw.storage.session, 'get' ).callsFake( function () {
-		return JSON.stringify( expandedSections );
+	sandbox.stub( mw.storage.session, 'getObject' ).callsFake( function () {
+		return expandedSections;
 	} );
 	const expandedSectionsFromToggle = Toggler._getExpandedSections( this.page );
 	assert.true( expandedSectionsFromToggle[ this.title ][ this.headline ],

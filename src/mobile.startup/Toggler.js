@@ -42,7 +42,7 @@ function Toggler( options ) {
  * @return {Object} representing open sections
  */
 function getExpandedSections( page ) {
-	var expandedSections = JSON.parse( mw.storage.session.get( 'expandedSections' ) || '{}' );
+	var expandedSections = mw.storage.session.getObject( 'expandedSections' ) || {};
 	expandedSections[page.title] = expandedSections[page.title] || {};
 	return expandedSections;
 }
@@ -53,8 +53,8 @@ function getExpandedSections( page ) {
  * @param {Object} expandedSections
  */
 function saveExpandedSections( expandedSections ) {
-	mw.storage.session.set(
-		'expandedSections', JSON.stringify( expandedSections )
+	mw.storage.session.setObject(
+		'expandedSections', expandedSections
 	);
 }
 
