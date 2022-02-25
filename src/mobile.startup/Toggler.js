@@ -48,27 +48,19 @@ function getExpandedSections( page ) {
 }
 
 /**
+ * Save expandedSections to sessionStorage
+ *
  * @param {Object} expandedSections
- * Save expandedSections to localStorage
  */
 function saveExpandedSections( expandedSections ) {
-	if ( mw.storage.get( 'expandedSections' ) ) {
-		mw.storage.session.set(
-			'expandedSections', JSON.stringify( mw.storage.get( 'expandedSections' ) )
-		);
-		// Clean up any old storage.
-		// The following line can be removed 1 week after
-		// Ib7c0a45fcf8645a900288a26d172781612fa1606 is deployed
-		mw.storage.remove( 'expandedSections' );
-	}
 	mw.storage.session.set(
 		'expandedSections', JSON.stringify( expandedSections )
 	);
 }
 
 /**
- * Given an expanded heading, store it to localStorage.
- * If the heading is collapsed, remove it from localStorage.
+ * Given an expanded heading, store it to sessionStorage.
+ * If the heading is collapsed, remove it from sessionStorage.
  *
  * @param {jQuery.Object} $heading - A heading belonging to a section
  * @param {Page} page
@@ -80,7 +72,7 @@ function storeSectionToggleState( $heading, page ) {
 
 	if ( headline && expandedSections[page.title] ) {
 		if ( isSectionOpen ) {
-			expandedSections[page.title][headline] = Date.now();
+			expandedSections[page.title][headline] = true;
 		} else {
 			delete expandedSections[page.title][headline];
 		}
@@ -112,31 +104,6 @@ function expandStoredSections( toggler, $container, page ) {
 			toggler.toggle( $sectionHeading, page );
 		}
 	} );
-}
-
-/**
- * Clean obsolete (saved more than a day ago) expanded sections from
- * localStorage.
- *
- * @param {Page} page
- */
-function cleanObsoleteStoredSections( page ) {
-	var now = Date.now(),
-		expandedSections = getExpandedSections( page ),
-		// the number of days between now and the time a setting was saved
-		daysDifference;
-	Object.keys( expandedSections ).forEach( function ( p ) {
-		var sections = expandedSections[ p ];
-		// clean the setting if it is more than a day old
-		Object.keys( sections ).forEach( function ( section ) {
-			var timestamp = sections[ section ];
-			daysDifference = Math.floor( ( now - timestamp ) / 1000 / 60 / 60 / 24 );
-			if ( daysDifference >= 1 ) {
-				delete expandedSections[p][section];
-			}
-		} );
-	} );
-	saveExpandedSections( expandedSections );
 }
 
 /**
@@ -395,12 +362,10 @@ Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 
 	if ( !browser.isWideScreen() && page ) {
 		expandStoredSections( this, $container, page );
-		cleanObsoleteStoredSections( page );
 	}
 };
 
 Toggler._getExpandedSections = getExpandedSections;
 Toggler._expandStoredSections = expandStoredSections;
-Toggler._cleanObsoleteStoredSections = cleanObsoleteStoredSections;
 
 module.exports = Toggler;
