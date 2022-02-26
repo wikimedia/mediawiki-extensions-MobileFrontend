@@ -1,8 +1,8 @@
 <?php
 
 use MediaWiki\MediaWikiServices;
-use MediaWiki\Storage\RevisionFactory;
-use MediaWiki\Storage\RevisionRecord;
+use MediaWiki\Revision\RevisionFactory;
+use MediaWiki\Revision\RevisionRecord;
 use Wikimedia\Rdbms\IResultWrapper;
 
 /**
