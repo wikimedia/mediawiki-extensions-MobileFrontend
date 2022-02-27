@@ -391,8 +391,18 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 			$diffLink = Title::makeTitle( $row->rc_namespace, $row->rc_title )->getLocalURL();
 		}
 
-		$this->renderFeedItemHtml( $ts, $diffLink, $username, $comment, $title, $isAnon, $bytes,
-			$isMinor );
+		$options = [
+			'ts' => $ts,
+			'diffLink' => $diffLink,
+			'username' => $username,
+			'comment' => $comment,
+			'title' => $title,
+			'isAnon' => $isAnon,
+			'bytes' => $bytes,
+			'isMinor' => $isMinor,
+		];
+		// @phan-suppress-next-line SecurityCheck-DoubleEscaped
+		$this->renderFeedItemHtml( $options );
 	}
 
 	/**

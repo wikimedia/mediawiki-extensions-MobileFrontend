@@ -252,8 +252,17 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 			// Default to anonymous if unknown
 			$revIsAnon = true;
 		}
-		$this->renderFeedItemHtml( $ts, $diffLink, $username, $comment, $title,
-			$revIsAnon, $bytes, $isMinor );
+		$options = [
+			'ts' => $ts,
+			'diffLink' => $diffLink,
+			'username' => $username,
+			'comment' => $comment,
+			'title' => $title,
+			'isAnon' => $revIsAnon,
+			'bytes' => $bytes,
+			'isMinor' => $isMinor,
+		];
+		$this->renderFeedItemHtml( $options );
 	}
 
 	/**
