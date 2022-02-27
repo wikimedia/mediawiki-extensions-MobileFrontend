@@ -1,5 +1,6 @@
 <?php
 
+use MediaWiki\CommentFormatter\CommentFormatter;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\User\UserFactory;
 use MediaWiki\User\UserGroupManager;
@@ -27,6 +28,8 @@ class MobileSpecialPage extends SpecialPage {
 	protected $userGroupManager;
 	/** @var UserFactory */
 	protected $userFactory;
+	/** @var CommentFormatter */
+	protected $commentFormatter;
 
 	/**
 	 * @param string $page
@@ -40,6 +43,7 @@ class MobileSpecialPage extends SpecialPage {
 		$this->userOptionsLookup = $services->getUserOptionsLookup();
 		$this->userGroupManager = $services->getUserGroupManager();
 		$this->userFactory = $services->getUserFactory();
+		$this->commentFormatter = $services->getCommentFormatter();
 	}
 
 	/**

@@ -33,7 +33,6 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 	 * Formats an edit comment
 	 * @param string $comment The raw comment text
 	 * @param Title $title The title of the page that was edited
-	 * @fixme Duplication with SpecialMobileWatchlist
 	 *
 	 * @return string HTML code
 	 */
@@ -41,7 +40,7 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 		if ( $comment === '' ) {
 			$comment = $this->msg( 'mobile-frontend-changeslist-nocomment' )->plain();
 		} else {
-			$comment = Linker::formatComment( $comment, $title );
+			$comment = $this->commentFormatter->format( $comment, $title );
 			// flatten back to text
 			$comment = htmlspecialchars( Sanitizer::stripAllTags( $comment ) );
 		}

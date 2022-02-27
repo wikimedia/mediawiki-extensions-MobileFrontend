@@ -405,18 +405,4 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		$this->renderFeedItemHtml( $options );
 	}
 
-	/**
-	 * Formats a comment of revision via Linker:formatComment and Sanitizer::stripAllTags
-	 * @param string $comment
-	 * @param Title $title the title object of comments page
-	 * @return string formatted comment
-	 */
-	protected function formatComment( $comment, $title ) {
-		if ( $comment !== '' ) {
-			$comment = Linker::formatComment( $comment, $title );
-			// flatten back to text
-			$comment = htmlspecialchars( Sanitizer::stripAllTags( $comment ) );
-		}
-		return $comment;
-	}
 }
