@@ -151,7 +151,7 @@
 	"mobile-frontend-languages-404-desc": "Un titre valide doit être spécifié.",
 	"mobile-frontend-languages-404-title": "Erreur de langues",
 	"mobile-frontend-languages-header": "Langues",
-	"mobile-frontend-languages-header-page": "$1 - Autres langues",
+	"mobile-frontend-languages-header-page": "$1 — Autres langues",
 	"mobile-frontend-languages-nonexistent-title": "La page « $1 » n’existe pas.",
 	"mobile-frontend-languages-text": "$1 est disponible dans $2 {{PLURAL:$2|autre langue|autres langues}}.",
 	"mobile-frontend-languages-variant-header": "variantes en {{#language:{{CONTENTLANG}}}}",
