@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chaduvari"
+		]
+	},
+	"apiwarn-mobilefrontend-mobileviewdeprecated": "I API వాడుకలో లేదు. మరిన్ని వివరాల కోసం T186627 చూడండి.",
+	"apiwarn-mobilefrontend-sectionsnotfound": "{{PLURAL:$2|విభాగం|విభాగాలు}} $1 కనబడలేదు."
+}
