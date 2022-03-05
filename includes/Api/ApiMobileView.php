@@ -327,7 +327,7 @@ class ApiMobileView extends ApiBase {
 	/**
 	 * Small wrapper around XAnalytics extension
 	 *
-	 * @see MediaWiki\Extensions\XAnalytics\XAnalytics::addItem
+	 * @see MediaWiki\Extension\XAnalytics\XAnalytics::addItem
 	 * @param string $name
 	 * @param string $value
 	 */
