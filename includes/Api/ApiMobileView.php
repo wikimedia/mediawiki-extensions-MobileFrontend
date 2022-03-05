@@ -12,7 +12,7 @@ use FauxRequest;
 use File;
 use ILanguageConverter;
 use ImagePage;
-use MediaWiki\Extensions\XAnalytics\XAnalytics;
+use MediaWiki\Extension\XAnalytics\XAnalytics;
 use MediaWiki\MediaWikiServices;
 use Message;
 use MobileFormatter;
