@@ -29,7 +29,8 @@
 			"Максим Підліснюк",
 			"Тест",
 			"Andriy.v",
-			"DDPAT"
+			"DDPAT",
+			"Ice bulldog"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Чи користувач редагує через мобільний інтерфейс, чи ні",
@@ -254,7 +255,7 @@
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Розмір шрифту",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Контролюйте розмір шрифту для поліпшення свого читацького досвіду.",
 	"mobile-frontend-mobile-option-amc": "Розширений режим",
-	"mobile-frontend-mobile-option-amc-experiment-description": "Розширений режим надає простий доступ до сторінок обговорення, історії сторінок, користувацьких інструментів та іншим інструментам редагування.",
+	"mobile-frontend-mobile-option-amc-experiment-description": "Розширений режим надає простий доступ до сторінок обговорення, історії сторінок, користувацьких інструментів та інших інструментів редагування.",
 	"mobile-frontend-mobile-option-amc-learn-more": "Дізнатися більше",
 	"mobile-frontend-mobile-option-amc-send-feedback": "Надіслати відгук",
 	"mobile-frontend-amc-outreach-intro": "Представляємо розширений режим",
