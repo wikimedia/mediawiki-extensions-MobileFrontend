@@ -1,5 +1,3 @@
-/* global $ */
-
 // FIXME: make this an object with a constructor to facilitate testing
 // (see https://bugzilla.wikimedia.org/show_bug.cgi?id=44264)
 /**
@@ -61,12 +59,12 @@ function apply2( fn1, fn2 ) {
 
 $window
 	.on( 'resize', apply2(
-		mw.util.debounce( 100, function () { eventBus.emit( 'resize' ); } ),
-		$.throttle( 200, function () { eventBus.emit( 'resize:throttled' ); } )
+		mw.util.debounce( function () { eventBus.emit( 'resize' ); }, 100 ),
+		mw.util.throttle( function () { eventBus.emit( 'resize:throttled' ); }, 200 )
 	) )
 	.on( 'scroll', apply2(
-		mw.util.debounce( 100, function () { eventBus.emit( 'scroll' ); } ),
-		$.throttle( 200, function () { eventBus.emit( 'scroll:throttled' ); } )
+		mw.util.debounce( function () { eventBus.emit( 'scroll' ); }, 100 ),
+		mw.util.throttle( function () { eventBus.emit( 'scroll:throttled' ); }, 200 )
 	) );
 
 /**

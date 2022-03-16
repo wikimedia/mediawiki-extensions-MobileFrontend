@@ -276,8 +276,7 @@
 				"user.options",
 				"mediawiki.util",
 				"mediawiki.api",
-				"mediawiki.router",
-				"jquery.throttle-debounce"
+				"mediawiki.router"
 			],
 			"messages": [
 				"mobile-frontend-license-links",
