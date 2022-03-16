@@ -6,7 +6,8 @@
 			"Meno25",
 			"Mido",
 			"ديفيد",
-			"علاء"
+			"علاء",
+			"FiberAhmed"
 		]
 	},
 	"apihelp-mobileview-description": "يعطي البيانات الضرورية لعرض نسخة المحمول.",
@@ -37,7 +38,7 @@
 	"apihelp-parse-param-mainpage": "تطبيق تحويلات المحمول الخاصة بالصفحة الرئيسية",
 	"apihelp-webapp-manifest-description": "يرجع webapp manifest.",
 	"apihelp-webapp-manifest-summary": "يرجع webapp manifest.",
-	"apierror-mobilefrontend-badidtitle": "توافق رقم/عنوان مراجعة سيء.",
+	"apierror-mobilefrontend-badidtitle": "توافق رقم/عنوان مراجعة سيئ.",
 	"apierror-mobilefrontend-toomanysizeparams": "<var>thumbsize</var> يتنافى مع <var>thumbwidth</var> و <var>thumbheight</var>.",
 	"apiwarn-mobilefrontend-ignoringnoheadings": "<var>noheadings</var> ليس لها معنى على الصفحة الرئيسية، جارٍ تجاهلها.",
 	"apiwarn-mobilefrontend-mobileviewdeprecated": "تم إهمال واجهة برمجة التطبيقات هذه، انظر T186627 لمزيد من التفاصيل.",

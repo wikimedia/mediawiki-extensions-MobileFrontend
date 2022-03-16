@@ -32,14 +32,15 @@
 			"محمد أحمد عبد الفتاح",
 			"مشعل الحربي",
 			"Michel Bakni",
-			"SaldırganSincap"
+			"SaldırganSincap",
+			"FiberAhmed"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "ما إذا كان المستخدم يعدل عبر واجهة المحمول",
 	"mobile-frontend-account-create-captcha-placeholder": "أدخل رمز التأكيد",
 	"mobile-frontend-changeslist-nocomment": "لا يوجد ملخص تحرير",
 	"mobile-frontend-cite-error-title": "خطأ في تحميل الاستشهادات",
-	"mobile-frontend-cite-error": "حدثت مشكلة أثناء محاولة تحميل الاستشهادات نتيجة لمعرف مراجعة سيء.",
+	"mobile-frontend-cite-error": "حدثت مشكلة أثناء محاولة تحميل الاستشهادات نتيجة لمعرف مراجعة سيئ.",
 	"mobile-frontend-cite-none-available": "لا توجد استشهادات متوفرة لهذه الصفحة.",
 	"mobile-frontend-clear-search": "إفراغ",
 	"mobile-frontend-contributions-404-desc": "لا يمكن البحث عن المساهمات بدون مستخدم أو بمستخدم غير موجود.",
