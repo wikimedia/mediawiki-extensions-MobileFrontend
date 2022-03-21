@@ -14,8 +14,11 @@ module.exports = function () {
 	 * @ignore
 	 */
 	function init( $container, prefix, page ) {
+		var headingsSelector = mw.config.get( 'wgMFMobileFormatterHeadings' ).map( function ( tagName ) {
+			return '> ' + tagName;
+		} ).join( ',' );
 		// Distinguish headings in content from other headings.
-		$container.find( '> h1,> h2,> h3,> h4,> h5,> h6' ).addClass( 'section-heading' )
+		$container.find( headingsSelector ).addClass( 'section-heading' )
 			.removeAttr( 'onclick' );
 		// Cleanup global as it is no longer needed. We check if it's undefined because
 		// there is no guarantee this won't be run on other skins e.g. Vector or cached HTML.
