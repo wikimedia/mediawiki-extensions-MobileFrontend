@@ -53,7 +53,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 	protected function getQueryConditions() {
 		$conds = [];
 		if ( $this->title ) {
-			$conds[ 'rev_page' ] = $this->title->getArticleID();
+			$conds['rev_page'] = $this->title->getArticleID();
 		}
 		if ( $this->offset ) {
 				$dbr = wfGetDB( DB_REPLICA, self::DB_REVISIONS_TABLE );

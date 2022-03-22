@@ -422,15 +422,15 @@ class MobileFrontendHooks {
 		if ( $ctx->shouldDisplayMobileView() ) {
 			$services = MediaWikiServices::getInstance();
 			$config = $services->getService( 'MobileFrontend.Config' );
-			unset( $pages[ 'MediaWiki:Common.css' ] );
-			unset( $pages[ 'MediaWiki:Print.css' ] );
+			unset( $pages['MediaWiki:Common.css'] );
+			unset( $pages['MediaWiki:Print.css'] );
 			// MediaWiki:<skinname>.css suffers from the same problems as MediaWiki:Common.css
 			// in that it has traditionally been written for desktop skins and is bloated.
 			// We have always removed this on mobile for this reason.
 			// If we loaded this there is absolutely no point in MediaWiki:Mobile.css! (T248415)
-			unset( $pages[ "MediaWiki:$ucaseSkin.css" ] );
+			unset( $pages["MediaWiki:$ucaseSkin.css"] );
 			if ( $config->get( 'MFSiteStylesRenderBlocking' ) ) {
-				$pages[ 'MediaWiki:Mobile.css' ] = [ 'type' => 'style' ];
+				$pages['MediaWiki:Mobile.css'] = [ 'type' => 'style' ];
 			}
 		}
 	}
@@ -447,10 +447,10 @@ class MobileFrontendHooks {
 		$services = MediaWikiServices::getInstance();
 		$config = $services->getService( 'MobileFrontend.Config' );
 		if ( $ctx->shouldDisplayMobileView() ) {
-			unset( $pages[ 'MediaWiki:Common.js' ] );
-			$pages[ 'MediaWiki:Mobile.js' ] = [ 'type' => 'script' ];
+			unset( $pages['MediaWiki:Common.js'] );
+			$pages['MediaWiki:Mobile.js'] = [ 'type' => 'script' ];
 			if ( !$config->get( 'MFSiteStylesRenderBlocking' ) ) {
-				$pages[ 'MediaWiki:Mobile.css' ] = [ 'type' => 'style' ];
+				$pages['MediaWiki:Mobile.css'] = [ 'type' => 'style' ];
 			}
 		}
 	}

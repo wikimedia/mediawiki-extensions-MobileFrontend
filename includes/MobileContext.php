@@ -780,14 +780,14 @@ class MobileContext extends ContextSource {
 		// find out if we already have a templated path
 		$templatePathOffset = strpos( $mobileUrlPathTemplate, '%p' );
 		$templatePathSansToken = substr( $mobileUrlPathTemplate, 0, $templatePathOffset );
-		if ( substr_compare( $parsedUrl[ 'path' ], $scriptPath . $templatePathSansToken, 0 ) > 0 ) {
+		if ( substr_compare( $parsedUrl['path'], $scriptPath . $templatePathSansToken, 0 ) > 0 ) {
 			return;
 		}
 
 		$scriptPathLength = strlen( $scriptPath );
 		// the "+ 1" removes the preceding "/" from the path sans $wgScriptPath
-		$pathSansScriptPath = substr( $parsedUrl[ 'path' ], $scriptPathLength + 1 );
-		$parsedUrl[ 'path' ] = $scriptPath . $templatePathSansToken . $pathSansScriptPath;
+		$pathSansScriptPath = substr( $parsedUrl['path'], $scriptPathLength + 1 );
+		$parsedUrl['path'] = $scriptPath . $templatePathSansToken . $pathSansScriptPath;
 	}
 
 	/**
@@ -1039,12 +1039,12 @@ class MobileContext extends ContextSource {
 	 */
 	public function shouldShowWikibaseDescriptions( $feature, Config $config ) {
 		$displayWikibaseDescriptions = $config->get( 'MFDisplayWikibaseDescriptions' );
-		if ( !isset( $displayWikibaseDescriptions[ $feature ] ) ) {
+		if ( !isset( $displayWikibaseDescriptions[$feature] ) ) {
 			throw new DomainException(
 				"\"{$feature}\" isn't a feature that shows Wikidata descriptions."
 			);
 		}
 
-		return $displayWikibaseDescriptions[ $feature ];
+		return $displayWikibaseDescriptions[$feature];
 	}
 }

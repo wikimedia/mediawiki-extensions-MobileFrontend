@@ -23,7 +23,7 @@ class UserModes implements IteratorAggregate {
 	 * @param IUserMode $mode
 	 */
 	public function registerMode( IUserMode $mode ) {
-		$this->modes[ $mode->getModeIdentifier() ] = $mode;
+		$this->modes[$mode->getModeIdentifier()] = $mode;
 	}
 
 	/**
@@ -36,7 +36,7 @@ class UserModes implements IteratorAggregate {
 		if ( !array_key_exists( $modeIdentifier, $this->modes ) ) {
 			throw new \RuntimeException( "$modeIdentifier User mode is undefined" );
 		}
-		return $this->modes[ $modeIdentifier ];
+		return $this->modes[$modeIdentifier];
 	}
 
 	/**
