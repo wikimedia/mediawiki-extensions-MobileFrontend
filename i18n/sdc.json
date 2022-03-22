@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Jun Misugi"
+			"Jun Misugi",
+			"F Samaritani"
 		]
 	},
 	"mobile-frontend-languages-header": "Linghi",
+	"mobile-frontend-terms-text": "Cundiziòni d'usu",
 	"mobile-frontend-view": "Vistha móbiri",
 	"mobile-frontend-watchlist-filter-articles": "Pàgini",
 	"tag-mobile_edit": "Cuntributu móbiri",
