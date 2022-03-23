@@ -72,7 +72,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 			'a',
 			[
 				'href' => $title->getLocalURL(),
-				'class' => 'pre-content mw-mf-history-wrap-link',
+				'class' => 'mw-mf-history-wrap-link',
 			],
 			$title->getText()
 		);
@@ -90,7 +90,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 		if ( $isTalkNS ) {
 			$namespaceLabel = Html::element( 'span',
 				[ 'class' => 'mw-mf-namespace' ],
-				$title->getNsText() . ': ' );
+				$title->getNsText() . ':' );
 		}
 		$this->getOutput()->addHTML(
 			Html::openElement( 'div', [ 'class' => 'content-header' ] ) .
