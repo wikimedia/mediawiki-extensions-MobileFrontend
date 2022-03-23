@@ -23,7 +23,7 @@ class HtmlStyleUtils {
 			$styleWithValue = explode( ':', $styleString );
 			$style = trim( $styleWithValue[0] );
 			if ( !empty( $style ) ) {
-				$result[ $style ] = trim( $styleWithValue[1] ?? '' );
+				$result[$style] = trim( $styleWithValue[1] ?? '' );
 			}
 		}
 		return $result;

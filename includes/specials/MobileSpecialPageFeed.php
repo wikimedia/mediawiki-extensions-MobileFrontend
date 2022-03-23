@@ -158,7 +158,7 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 		$user = $this->getUser();
 		$lang = $this->getLanguage();
 
-		if ( (bool)( $options[ 'isAnon' ] ?? false ) ) {
+		if ( (bool)( $options['isAnon'] ?? false ) ) {
 			$usernameClass = MobileUI::iconClass( 'userAnonymous', 'before', 'mw-mf-user mw-mf-anon' );
 		} else {
 			$usernameClass = MobileUI::iconClass( 'userAvatar', 'before', 'mw-mf-user' );
@@ -166,37 +166,37 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 
 		$html = Html::openElement( 'li', [ 'class' => 'page-summary' ] );
 
-		if ( isset( $options[ 'diffLink' ] ) && $options[ 'diffLink' ] ) {
-			$html .= Html::openElement( 'a', [ 'href' => $options[ 'diffLink' ], 'class' => 'title' ] );
+		if ( isset( $options['diffLink'] ) && $options['diffLink'] ) {
+			$html .= Html::openElement( 'a', [ 'href' => $options['diffLink'], 'class' => 'title' ] );
 		} else {
 			$html .= Html::openElement( 'div', [ 'class' => 'title' ] );
 		}
 
-		if ( isset( $options[ 'title' ] ) && $options[ 'title' ] ) {
-			$html .= Html::element( 'h3', [], $options[ 'title' ]->getPrefixedText() );
+		if ( isset( $options['title'] ) && $options['title'] ) {
+			$html .= Html::element( 'h3', [], $options['title']->getPrefixedText() );
 		}
 
-		if ( isset( $options[ 'username' ] ) && $options[ 'username' ] && $this->showUsername ) {
+		if ( isset( $options['username'] ) && $options['username'] && $this->showUsername ) {
 			$html .= Html::rawElement( 'p', [ 'class' => $usernameClass ],
-				Html::element( 'span', [], $options[ 'username' ] )
+				Html::element( 'span', [], $options['username'] )
 			);
 		}
 
 		$html .= Html::rawElement(
 			'p',
 			[ 'class' => 'edit-summary component truncated-text multi-line two-line' ],
-			$options[ 'comment' ] ?? ''
+			$options['comment'] ?? ''
 		);
 
-		if ( (bool)( $options[ 'isMinor' ] ?? false ) ) {
+		if ( (bool)( $options['isMinor'] ?? false ) ) {
 			$html .= ChangesList::flag( 'minor' );
 		}
 
 		$html .= Html::openElement( 'div', [ 'class' => 'list-thumb' ] ) .
-			Html::element( 'p', [ 'class' => 'timestamp' ], $lang->userTime( $options[ 'ts' ], $user ) );
+			Html::element( 'p', [ 'class' => 'timestamp' ], $lang->userTime( $options['ts'], $user ) );
 
-		if ( isset( $options[ 'bytes' ] ) && $options[ 'bytes' ] ) {
-			$bytes = $options[ 'bytes' ];
+		if ( isset( $options['bytes'] ) && $options['bytes'] ) {
+			$bytes = $options['bytes'];
 			$formattedBytes = $lang->formatNum( $bytes );
 			if ( $bytes > 0 ) {
 				$formattedBytes = '+' . $formattedBytes;
@@ -216,7 +216,7 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 
 		$html .= Html::closeElement( 'div' );
 
-		if ( isset( $options[ 'diffLink' ] ) && $options[ 'diffLink' ] ) {
+		if ( isset( $options['diffLink'] ) && $options['diffLink'] ) {
 			$html .= Html::closeElement( 'a' );
 		} else {
 			$html .= Html::closeElement( 'div' );

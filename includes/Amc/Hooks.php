@@ -43,7 +43,7 @@ final class Hooks {
 	 * @param array &$preferences
 	 */
 	public static function onGetPreferences( User $user, array &$preferences ) {
-		$preferences[ UserMode::USER_OPTION_MODE_AMC ] = [
+		$preferences[UserMode::USER_OPTION_MODE_AMC] = [
 			'type' => 'api',
 			'default' => UserMode::OPTION_DISABLED
 		];
