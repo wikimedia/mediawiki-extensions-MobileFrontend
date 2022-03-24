@@ -1,3 +1,5 @@
+@import '../../mobile.less/mobile.variables.less';
+
 ul.page-list {
 	margin-left: 0;
 	line-height: inherit;
@@ -13,8 +15,19 @@ ul.page-list {
 	}
 }
 
+.mw-mf-title-wrapper {
+	text-align: left !important;
+	margin: 0 16px;
+
+	@media screen and ( min-width: @width-breakpoint-tablet ) {
+		margin: 0;
+	}
+}
+
+.mw-mf-namespace {
+	margin-right: 0.25em;
+}
+
 .mw-mf-history-wrap-link {
-	display: block;
-	text-align: left;
 	overflow-wrap: break-word;
 }
