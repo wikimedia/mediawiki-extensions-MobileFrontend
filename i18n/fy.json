@@ -42,7 +42,7 @@
 	"mobile-frontend-edit-login-action": "<strong>Help {{GRAMMAR:lidw|{{SITENAME}}}} foarút.</strong><br />Meld jo oan om te bewurkjen.",
 	"mobile-frontend-edit-signup-action": "<strong>Help {{GRAMMAR:lidw|{{SITENAME}}}} foarút.</strong><br />Skriuw jo yn om te bewurkjen.",
 	"mobile-frontend-editor-anon": "Bewurkje sûnder oanmelden",
-	"mobile-frontend-editor-anonwarning": "<strong>Warskôging:</strong> Jo binne net oanmeld. By it fêstlizzen wurdt jo IP-adres opnaam yn 'e sideskiednis. At jo jo <strong>oanmelde</strong> of <strong>in akkount oanmeitsje</strong> ferskine jo bewurkings ûnder jo meidochnamme, njonken oare foardielen.",
+	"mobile-frontend-editor-anonwarning": "<strong>Warskôging:</strong> Jo binne net oanmeld. By it fêstlizzen wurdt jo YP-adres opnaam yn 'e sideskiednis. At jo jo <strong>oanmelde</strong> of <strong>in akkount oanmeitsje</strong> ferskine jo bewurkings ûnder jo meidochnamme, njonken oare foardielen.",
 	"mobile-frontend-editor-blocked-drawer-title": "Jo binne útsletten {{GRAMMAR:lidw|{{SITENAME}}}} te bewurkjen",
 	"mobile-frontend-editor-blocked-drawer-title-partial": "Jo binne útsletten dizze side te bewurkjen",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Reden fan 'e útsluting",
