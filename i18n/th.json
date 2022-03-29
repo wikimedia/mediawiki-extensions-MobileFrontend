@@ -8,7 +8,8 @@
 			"Nullzero",
 			"Octahedron80",
 			"Patsagorn Y.",
-			"กิ๊ฟ เลิกล่ะ สายแข็ง"
+			"กิ๊ฟ เลิกล่ะ สายแข็ง",
+			"Geonuch"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "เลือกว่าจะให้ผู้ใช้แก้ไขผ่านอินเทอร์เฟซสำหรับอุปกรณ์เคลื่อนที่หรือไม่",
@@ -68,7 +69,7 @@
 	"mobile-frontend-editor-cancel-confirm": "คุณต้องการละทิ้งการแก้ไขของคุณหรือไม่?",
 	"mobile-frontend-editor-captcha-try-again": "รหัสไม่ถูกต้อง ลองใหม่อีกครั้ง",
 	"mobile-frontend-editor-continue": "ถัดไป",
-	"mobile-frontend-editor-disabled": "หน้านี้ถูกล็อกเพื่อป้องกันการก่อกวน",
+	"mobile-frontend-editor-disabled": "หน้านี้ถูกป้องกันเพื่อขัดขวางการก่อกวน [$1 ดูต้นฉบับ]",
 	"mobile-frontend-editor-disabled-anon": "คุณจำเป็นต้องเข้าสู่ระบบเพื่อแก้ไขหน้านี้",
 	"mobile-frontend-editor-editing": "กำลังแก้ไข",
 	"mobile-frontend-editor-editing-page": "<span><strong>กำลังแก้ไข</strong> $1</span>",
@@ -95,7 +96,7 @@
 	"mobile-frontend-editor-switch-editor": "เปลี่ยนตัวแก้ไข",
 	"mobile-frontend-editor-switch-visual-editor": "เปลี่ยนไปใช้การแก้ไขแบบมองเห็นได้",
 	"mobile-frontend-editor-uploadenable": "โปรดอัปโหลดรูปภาพก่อนเพื่อเปิดใช้งานการแก้ไข",
-	"mobile-frontend-editor-viewing-source-page": "<strong>กำลังดูโค้ดของ</strong><span> $1</span>",
+	"mobile-frontend-editor-viewing-source-page": "<strong>กำลังดูต้นฉบับของ</strong><span> $1</span>",
 	"mobile-frontend-editor-wait": "กำลังบันทึกการแก้ไข กรุณารอสักครู่",
 	"mobile-frontend-editor-loading": "กำลังโหลดเครื่องมือแก้ไข...",
 	"mobile-frontend-expand-sections-description": "ขยายส่วนต่าง ๆ ในหน้าโดยปริยายเสมอ",
