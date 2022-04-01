@@ -5,6 +5,7 @@ use MediaWiki\Auth\AuthManager;
 use MediaWiki\ChangeTags\Taggable;
 use MediaWiki\Extension\AbuseFilter\Variables\VariableHolder;
 use MediaWiki\MediaWikiServices;
+use MobileFrontend\Api\ApiParseExtender;
 use MobileFrontend\ContentProviders\DefaultContentProvider;
 use MobileFrontend\Models\MobilePage;
 use MobileFrontend\Transforms\LazyImageTransform;
@@ -255,7 +256,7 @@ class MobileFrontendHooks {
 		$services = MediaWikiServices::getInstance();
 		/** @var MobileContext $context */
 		$context = $services->getService( 'MobileFrontend.Context' );
-		$title = $context->getTitle();
+		$title = $out->getTitle();
 		$config = $services->getService( 'MobileFrontend.Config' );
 
 		$displayMobileView = $context->shouldDisplayMobileView();
@@ -291,13 +292,21 @@ class MobileFrontendHooks {
 			&$provider, $out
 		] );
 
-		// T245160 - don't run the mobile formatter on old revisions.
-		// Note if not the default content provider we ignore this requirement.
+		$isParse = ApiParseExtender::isParseAction(
+			$context->getRequest()->getText( 'action' )
+		);
+
 		if ( get_class( $provider ) === $originalProviderClass ) {
 			// This line is important to avoid the default content provider running unnecessarily
 			// on desktop views.
 			$useContentProvider = $displayMobileView;
-			$runMobileFormatter = $displayMobileView && $title->getLatestRevID() > 0;
+			$runMobileFormatter = $displayMobileView && (
+				// T245160 - don't run the mobile formatter on old revisions.
+				// Note if not the default content provider we ignore this requirement.
+				$title->getLatestRevID() > 0 ||
+				// Always allow the formatter in ApiParse
+				$isParse
+			);
 		} else {
 			// When a custom content provider is enabled, always use it.
 			$useContentProvider = true;
@@ -308,8 +317,11 @@ class MobileFrontendHooks {
 			$text = ExtMobileFrontend::domParseWithContentProvider(
 				$provider, $out, $runMobileFormatter
 			);
-			$nonce = $out->getCSP()->getNonce();
-			$text = MakeSectionsTransform::interimTogglingSupport( $nonce ) . $text;
+			// Assume we don't need while-JS-is-loading toggle support if we are using the API
+			if ( !$isParse ) {
+				$nonce = $out->getCSP()->getNonce();
+				$text = MakeSectionsTransform::interimTogglingSupport( $nonce ) . $text;
+			}
 		}
 	}
 
