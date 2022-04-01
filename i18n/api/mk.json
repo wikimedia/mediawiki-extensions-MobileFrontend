@@ -36,5 +36,6 @@
 	"apierror-mobilefrontend-toomanysizeparams": "<var>thumbsize</var> е взаемно исклучиво со <var>thumbwidth</var> и <var>thumbheight</var>.",
 	"apiwarn-mobilefrontend-ignoringnoheadings": "<var>noheadings</var> е бесмислено на главната страница. Затоа, го занемарувам.",
 	"apiwarn-mobilefrontend-mobileviewdeprecated": "Прилогов е застарен. Погл. T186627 за повеќе подробности.",
+	"apiwarn-mobilefrontend-mobileview-warning": "Подновете си го прилогот. Повеќе информации за тоа зошто ви се појавува поракава ќе најдете [[mw:Wikimedia_Apps/Sunsetting_MobileView|тука]].",
 	"apiwarn-mobilefrontend-sectionsnotfound": "Не најдов $1 {{PLURAL:$2|поднаслов|поднаслови}}."
 }
