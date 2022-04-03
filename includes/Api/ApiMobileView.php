@@ -937,17 +937,17 @@ class ApiMobileView extends ApiBase {
 	public function getAllowedParams() {
 		$res = [
 			'page' => [
-				ApiBase::PARAM_REQUIRED => true,
+				ParamValidator::PARAM_REQUIRED => true,
 			],
 			'redirect' => [
-				ApiBase::PARAM_TYPE => [ 'yes', 'no' ],
+				ParamValidator::PARAM_TYPE => [ 'yes', 'no' ],
 				ParamValidator::PARAM_DEFAULT => 'yes',
 			],
 			'sections' => null,
 			'prop' => [
 				ParamValidator::PARAM_DEFAULT => 'text|sections|normalizedtitle',
-				ApiBase::PARAM_ISMULTI => true,
-				ApiBase::PARAM_TYPE => [
+				ParamValidator::PARAM_ISMULTI => true,
+				ParamValidator::PARAM_TYPE => [
 					'id',
 					'text',
 					'sections',
@@ -967,7 +967,7 @@ class ApiMobileView extends ApiBase {
 				]
 			],
 			'sectionprop' => [
-				ApiBase::PARAM_TYPE => [
+				ParamValidator::PARAM_TYPE => [
 					'toclevel',
 					'level',
 					'line',
@@ -976,41 +976,41 @@ class ApiMobileView extends ApiBase {
 					'fromtitle',
 					'anchor',
 				],
-				ApiBase::PARAM_ISMULTI => true,
+				ParamValidator::PARAM_ISMULTI => true,
 				ParamValidator::PARAM_DEFAULT => 'toclevel|line',
 			],
 			'pageprops' => [
-				ApiBase::PARAM_TYPE => 'string',
+				ParamValidator::PARAM_TYPE => 'string',
 				ParamValidator::PARAM_DEFAULT => 'notoc|noeditsection|wikibase_item'
 			],
 			'variant' => [
-				ApiBase::PARAM_TYPE => 'string',
+				ParamValidator::PARAM_TYPE => 'string',
 				ParamValidator::PARAM_DEFAULT => '',
 			],
 			'noheadings' => false,
 			'notransform' => false,
 			'onlyrequestedsections' => false,
 			'offset' => [
-				ApiBase::PARAM_TYPE => 'integer',
+				ParamValidator::PARAM_TYPE => 'integer',
 				IntegerDef::PARAM_MIN => 0,
 				ParamValidator::PARAM_DEFAULT => 0,
 			],
 			'maxlen' => [
-				ApiBase::PARAM_TYPE => 'integer',
+				ParamValidator::PARAM_TYPE => 'integer',
 				IntegerDef::PARAM_MIN => 0,
 				ParamValidator::PARAM_DEFAULT => 0,
 			],
 			'revision' => [
-				ApiBase::PARAM_TYPE => 'integer',
+				ParamValidator::PARAM_TYPE => 'integer',
 				IntegerDef::PARAM_MIN => 0,
 				ParamValidator::PARAM_DEFAULT => 0,
 			],
 		];
 		if ( $this->usePageImages ) {
-			$res['prop'][ApiBase::PARAM_TYPE][] = 'image';
-			$res['prop'][ApiBase::PARAM_TYPE][] = 'thumb';
+			$res['prop'][ParamValidator::PARAM_TYPE][] = 'image';
+			$res['prop'][ParamValidator::PARAM_TYPE][] = 'thumb';
 			$res['thumbsize'] = $res['thumbwidth'] = $res['thumbheight'] = [
-				ApiBase::PARAM_TYPE => 'integer',
+				ParamValidator::PARAM_TYPE => 'integer',
 				IntegerDef::PARAM_MIN => 0,
 			];
 		}

@@ -3,6 +3,7 @@
 namespace MobileFrontend\Api;
 
 use ApiBase;
+use Wikimedia\ParamValidator\ParamValidator;
 
 /**
  * Adds the `mobileformat` param to API calls which use ApiParse.
@@ -38,7 +39,7 @@ class ApiParseExtender {
 		// $name is supposed to always be a string, but in some tests it returns null :/
 		if ( $name && self::isParseAction( $name ) ) {
 			$params['mobileformat'] = [
-				ApiBase::PARAM_TYPE => 'boolean',
+				ParamValidator::PARAM_TYPE => 'boolean',
 				ApiBase::PARAM_HELP_MSG => 'apihelp-parse-param-mobileformat',
 			];
 		}
