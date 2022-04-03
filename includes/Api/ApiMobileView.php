@@ -26,6 +26,7 @@ use Title;
 use User;
 use WANObjectCache;
 use Wikimedia\ParamValidator\ParamValidator;
+use Wikimedia\ParamValidator\TypeDef\IntegerDef;
 use WikiPage;
 
 /**
@@ -991,17 +992,17 @@ class ApiMobileView extends ApiBase {
 			'onlyrequestedsections' => false,
 			'offset' => [
 				ApiBase::PARAM_TYPE => 'integer',
-				ApiBase::PARAM_MIN => 0,
+				IntegerDef::PARAM_MIN => 0,
 				ParamValidator::PARAM_DEFAULT => 0,
 			],
 			'maxlen' => [
 				ApiBase::PARAM_TYPE => 'integer',
-				ApiBase::PARAM_MIN => 0,
+				IntegerDef::PARAM_MIN => 0,
 				ParamValidator::PARAM_DEFAULT => 0,
 			],
 			'revision' => [
 				ApiBase::PARAM_TYPE => 'integer',
-				ApiBase::PARAM_MIN => 0,
+				IntegerDef::PARAM_MIN => 0,
 				ParamValidator::PARAM_DEFAULT => 0,
 			],
 		];
@@ -1010,7 +1011,7 @@ class ApiMobileView extends ApiBase {
 			$res['prop'][ApiBase::PARAM_TYPE][] = 'thumb';
 			$res['thumbsize'] = $res['thumbwidth'] = $res['thumbheight'] = [
 				ApiBase::PARAM_TYPE => 'integer',
-				ApiBase::PARAM_MIN => 0,
+				IntegerDef::PARAM_MIN => 0,
 			];
 		}
 		return $res;
