@@ -1,6 +1,10 @@
 <?php
 
 use MediaWiki\MediaWikiServices;
+use MediaWiki\User\UserIdentity;
+use MediaWiki\User\UserOptionsLookup;
+use Psr\Container\ContainerInterface;
+use Wikimedia\ObjectFactory\ObjectFactory;
 
 /**
  * @group MobileFrontend
@@ -412,6 +416,69 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 			// It handles the stripping of responsive image variants from the parser
 			// output being disabled.
 			[ true, 'image/jpg', false ],
+		];
+	}
+
+	/**
+	 * @covers MobileFrontendHooks::onRequestContextCreateSkin
+	 * @dataProvider provideDefaultMobileSkin
+	 */
+	public function testGetDefaultMobileSkin(
+		?string $fakeMobileSkin,
+		string $fakeDefaultSkin,
+		string $expectedSkin
+	): void {
+		$userOptionLookup = $this->createMock( UserOptionsLookup::class );
+		$mediaWikiServices = $this->createMock( MediaWikiServices::class );
+		$mediaWikiServices->method( 'getUserOptionsLookup' )->willReturn( $userOptionLookup );
+
+		$webRequest = $this->createMock( WebRequest::class );
+		$webRequest->method( 'getHeader' )->willReturn( false );
+		$webRequest->method( 'getVal' )->willReturn( false );
+
+		$mobileContext = $this->createMock( MobileContext::class );
+		$mobileContext->method( 'shouldDisplayMobileView' )->willReturn( true );
+		$mobileContext->method( 'getRequest' )->willReturn( $webRequest );
+
+		$context = $this->createMock( IContextSource::class );
+		$context->method( 'getRequest' )->willReturn( $webRequest );
+		$context->method( 'getUser' )->willReturn(
+			$this->createMock( UserIdentity::class )
+		);
+
+		$skinFactory = new SkinFactory(
+			new ObjectFactory( $this->createMock( ContainerInterface::class ) ), []
+		);
+
+		foreach ( [ $fakeMobileSkin, $fakeDefaultSkin ] as $skinName ) {
+			$skinFactory->register( $skinName, strtoupper( $skinName ), [
+					'class' => SkinFallback::class
+				],
+				true
+			);
+		}
+
+		$config = $this->createMock( Config::class );
+		$config->method( 'get' )->willReturnMap( [
+			[ 'DefaultMobileSkin', $fakeMobileSkin ],
+			[ 'DefaultSkin', $fakeDefaultSkin ],
+		] );
+
+		$this->setService( 'SkinFactory', $skinFactory );
+		$this->setService( 'MobileFrontend.Config', $config );
+		$this->setService( 'MobileFrontend.Context', $mobileContext );
+
+		/**	@var Skin $skin */
+		$skin = null;
+		MobileFrontendHooks::onRequestContextCreateSkin( $context, $skin );
+
+		self::assertSame( $expectedSkin, $skin->getSkinName() );
+	}
+
+	public function provideDefaultMobileSkin(): array {
+		return [
+			[ 'mobile-skin', 'default-skin', 'mobile-skin' ],
+			[ null, 'default-skin', 'default-skin' ]
 		];
 	}
 }
