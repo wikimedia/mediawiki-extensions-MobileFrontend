@@ -42,5 +42,6 @@
 	"apierror-mobilefrontend-toomanysizeparams": "<var>thumbsize</var>, <var>thumbwidth</var> ve <var>thumbheight</var> ile birbirini dışlar.",
 	"apiwarn-mobilefrontend-ignoringnoheadings": "<var>noheadings</var>, görmezden gelerek ana sayfada hiçbir anlam ifade etmiyor.",
 	"apiwarn-mobilefrontend-mobileviewdeprecated": "Bu API kullanımdan kaldırıldı. Daha fazla bilgi için T186627'ye bakınız.",
+	"apiwarn-mobilefrontend-mobileview-warning": "Lütfen uygulamanızı yükseltin. Bu mesajı neden gördüğünüzle ilgili daha fazla bilgiyi [[mw:Wikimedia_Apps/Sunsetting_MobileView|burada]] bulabilirsiniz.",
 	"apiwarn-mobilefrontend-sectionsnotfound": "{{PLURAL:$2|Bölüm|Bölüm}} $1 bulunamadı."
 }
