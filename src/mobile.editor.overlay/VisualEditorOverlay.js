@@ -6,7 +6,9 @@ var EditorOverlayBase = require( './EditorOverlayBase' ),
 	router = mw.loader.require( 'mediawiki.router' ),
 	identifyLeadParagraph = require( './identifyLeadParagraph' ),
 	setPreferredEditor = require( './setPreferredEditor' ),
-	util = require( '../mobile.startup/util' );
+	util = require( '../mobile.startup/util' ),
+	OverlayManager = require( '../mobile.startup/OverlayManager' ),
+	overlayManager = OverlayManager.getSingleton();
 
 /**
  * Overlay for VisualEditor view
@@ -34,6 +36,10 @@ function VisualEditorOverlay( options ) {
 	this.SourceEditorOverlay = options.SourceEditorOverlay;
 	this.isNewPage = options.isNewPage;
 	this.fromModified = options.dataPromise && options.switched;
+
+	// VE surfaces must be attached to the DOM while initializing, and measurable
+	this.$el.addClass( 'editor-overlay-ve-initializing' );
+	overlayManager.container.appendChild( this.$el[ 0 ] );
 
 	// Gateway present for a few utility purposes; the VE articletarget
 	// handles the actual API calls separately
@@ -75,9 +81,10 @@ function VisualEditorOverlay( options ) {
 	// with the API response regardless of what we are waiting for.
 	this.dataPromise = this.origDataPromise.then( function ( data ) {
 		return surfaceReady.then( function () {
+			this.$el.removeClass( 'editor-overlay-ve-initializing' );
 			return data && data.visualeditor;
-		} );
-	} );
+		}.bind( this ) );
+	}.bind( this ) );
 }
 
 mfExtend( VisualEditorOverlay, EditorOverlayBase, {
