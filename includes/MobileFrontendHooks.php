@@ -54,45 +54,18 @@ class MobileFrontendHooks {
 	 * Obtain the default mobile skin
 	 *
 	 * @param Config $config
-	 * @throws RuntimeException if default mobile skin is incorrectly configured
+	 * @throws SkinException If a factory function isn't registered for the skin name
 	 * @return Skin
 	 */
-	protected static function getDefaultMobileSkin( Config $config ) {
-		$skinClass = $config->has( 'MFDefaultSkinClass' )
-			? $config->get( 'MFDefaultSkinClass' )
-			: null;
+	protected static function getDefaultMobileSkin( Config $config ): Skin {
+		$defaultSkin = $config->get( 'DefaultMobileSkin' );
 
-		$skinName = $config->get( 'DefaultMobileSkin' );
-		$knownSkinKeys = [
-			'SkinVector' => 'vector',
-			'SkinMinerva' => 'minerva',
-			'SkinTimeless' => 'timeless',
-			'SkinMonoBook' => 'monobook',
-		];
-
-		if ( class_exists( $skinClass ) ) {
-			// For a best attempt at backward compatibility check the array of known skins
-			$defaultSkin = $knownSkinKeys[$skinClass] ?? null;
-			$message = 'Use of $wgMFDefaultSkinClass has been deprecated, ' .
-				'please use $wgDefaultMobileSkin and provide the skin name. ';
-			if ( $defaultSkin ) {
-				$message .= 'You can replace it  with $wgDefaultMobileSkin = ' .
-					"'$defaultSkin';";
-			} else {
-				$defaultSkin = 'minerva';
-			}
-			// Now warn so the user fixes this.
-			wfWarn( $message );
-		} elseif ( $skinName ) {
-			$defaultSkin = $skinName;
-		} else {
+		if ( !$defaultSkin ) {
 			$defaultSkin = $config->get( 'DefaultSkin' );
 		}
 
 		$factory = MediaWikiServices::getInstance()->getSkinFactory();
-		$skin = $factory->makeSkin( Skin::normalizeKey( $defaultSkin ) );
-
-		return $skin;
+		return $factory->makeSkin( Skin::normalizeKey( $defaultSkin ) );
 	}
 
 	/**
