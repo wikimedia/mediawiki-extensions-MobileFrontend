@@ -8,6 +8,13 @@
 		display: none;
 	}
 
+	&-initializing {
+		height: 0;
+		overflow: hidden;
+		display: block;
+		z-index: -1;
+	}
+
 	.content {
 		// We don't need display:table as there are no edit/collapse buttons
 		// Also display:table causes CE issues in Mobile Safari (T202991)
