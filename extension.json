@@ -794,6 +794,7 @@
 			"value": "X-Subdomain"
 		},
 		"MFRemovableClasses": {
+			"description": "Selectors for elements to be removed from the HTML in content namespaces (defined in wgContentNamespaces) to save bandwidth.",
 			"value": {
 				"beta": [],
 				"base": [
