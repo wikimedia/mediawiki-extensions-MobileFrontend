@@ -36,5 +36,6 @@
 	"apierror-mobilefrontend-toomanysizeparams": "<var>thumbsize</var> узаемавыключальны з <var>thumbwidth</var> і <var>thumbheight</var>.",
 	"apiwarn-mobilefrontend-ignoringnoheadings": "<var>noheadings</var> не мае сэнсу на галоўнай старонцы, ігнаруецца.",
 	"apiwarn-mobilefrontend-mobileviewdeprecated": "Гэты API не падтрымліваецца. Глядзіце T186627 для больш падрабязнай інфармацыі.",
+	"apiwarn-mobilefrontend-mobileview-warning": "Калі ласка, абнавіце свой дадатак. Больш інфармацыі пра тое, чаму вы бачыце гэтае паведамленне, можна знайсці [[mw:Wikimedia_Apps/Sunsetting_MobileView|тут]].",
 	"apiwarn-mobilefrontend-sectionsnotfound": "{{PLURAL:$2|Раздзел|Раздзелы}} $1 не знойдзены."
 }
