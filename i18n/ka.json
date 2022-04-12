@@ -79,6 +79,7 @@
 	"mobile-frontend-languages-nonexistent-title": "გვერდი „$1“ არ არსებობს.",
 	"mobile-frontend-languages-text": "$1 ხელმისაწვდომია $2 {{PLURAL:$2|ენაზე|ენაზე}}",
 	"mobile-frontend-languages-variant-header": "აირჩიეთ {{#language:{{CONTENTLANG}}}} ვარიანტი",
+	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "შემოთავაზებული ენები",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "ყველა ენა",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "ენის ძებნა",
 	"mobile-frontend-last-modified-date": "ბოლოს დარედაქტირდა $1-ში, $2-ზე",
