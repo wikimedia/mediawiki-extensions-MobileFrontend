@@ -68,8 +68,9 @@ mfExtend( SearchOverlay, Overlay, {
 	 * @instance
 	 */
 	onClickSearchContent: function () {
-		var $el = util.getDocument().find( 'body' ),
-			$form = this.$el.find( 'form' );
+		var
+			$form = this.$el.find( 'form' ),
+			$el = $form[ 0 ].parentNode;
 
 		// Add fulltext input to force fulltext search
 		this.parseHTML( '<input>' )
@@ -83,8 +84,10 @@ mfExtend( SearchOverlay, Overlay, {
 		// http://www.w3.org/TR/2011/WD-html5-20110113/webappapis.html#queue-a-task
 		setTimeout( function () {
 			// Firefox doesn't allow submission of a form not in the DOM
-			// so temporarily re-add it
-			$form.appendTo( $el );
+			// so temporarily re-add it if it's gone.
+			if ( !$form[ 0 ].parentNode ) {
+				$form.appendTo( $el );
+			}
 			$form.trigger( 'submit' );
 		}, 0 );
 	},
@@ -163,6 +166,16 @@ mfExtend( SearchOverlay, Overlay, {
 		this.$searchContent = searchResults.$el.hide();
 		// FIXME: `this.$resultContainer` should not be set. Isolate to SearchResultsView class.
 		this.$resultContainer = searchResults.$el.find( '.results-list-container' );
+
+		// On iOS a touchstart event while the keyboard is open will result in a scroll
+		// leading to an accidental click (T299846)
+		// Stopping propagation when the input is focused will prevent scrolling while
+		// the keyboard is collapsed.
+		this.$resultContainer[ 0 ].addEventListener( 'touchstart', ( ev ) => {
+			if ( document.activeElement === this.$input[0] ) {
+				ev.stopPropagation();
+			}
+		} );
 
 		/**
 		 * Hide the spinner and abort timed spinner shows.
