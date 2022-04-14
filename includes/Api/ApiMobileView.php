@@ -918,8 +918,10 @@ class ApiMobileView extends ApiBase {
 		$result = $this->getResult();
 		$protection = [];
 		ApiResult::setArrayType( $protection, 'assoc' );
-		foreach ( $title->getRestrictionTypes() as $type ) {
-			$levels = $title->getRestrictions( $type );
+		$restrictionStore = MediaWikiServices::getInstance()->getRestrictionStore();
+
+		foreach ( $restrictionStore->listApplicableRestrictionTypes( $title ) as $type ) {
+			$levels = $restrictionStore->getRestrictions( $title, $type );
 			if ( $levels ) {
 				$protection[$type] = $levels;
 				ApiResult::setIndexedTagName( $protection[$type], 'level' );
