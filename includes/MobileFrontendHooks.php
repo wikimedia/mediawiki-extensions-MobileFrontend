@@ -245,8 +245,11 @@ class MobileFrontendHooks {
 
 		// if the page is a userpage
 		// @todo: Upstream to core (T248347).
-		$isView = Action::getActionName( $out ) === 'view';
-		if ( $displayMobileView && $title->inNamespaces( NS_USER ) && !$title->isSubpage() && $isView ) {
+		if ( $displayMobileView &&
+			$title->inNamespaces( NS_USER ) &&
+			!$title->isSubpage() &&
+			$out->getActionName() === 'view'
+		) {
 			$userpagetext = ExtMobileFrontend::blankUserPageHTML( $out, $title );
 			if ( $userpagetext ) {
 				$text = $userpagetext;
