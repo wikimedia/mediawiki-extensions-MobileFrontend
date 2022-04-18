@@ -145,7 +145,7 @@
 	"mobile-frontend-last-modified-date": "Останнє редагування: $1, $2",
 	"mobile-frontend-last-modified-with-user-days": "[$4 Остання {{GENDER:$1|зміна зроблена|зміна зроблена}} {{PLURAL:$3|$3 день|$3 дні|$3 днів}} тому] {{PLURAL:$5|[$6 $2]|0=анонімним користувачем}}",
 	"mobile-frontend-last-modified-with-user-hours": "[$4 Остання {{GENDER:$1|зміна зроблена}} {{PLURAL:$3|$3 годину|$3 години|$3 годин}} тому] {{PLURAL:$5|[$6 $2]|0=анонімним користувачем}}",
-	"mobile-frontend-last-modified-with-user-just-now": "[$3 Остання зміна зроблена {{GENDER:$1|}}] вже щойно зроблена {{PLURAL:$4|[$5 $2]|0=анонімним користувачем}}.",
+	"mobile-frontend-last-modified-with-user-just-now": "[$3 Остання зміна зроблена {{GENDER:$1|}}] щойно зроблена {{PLURAL:$4|[$5 $2]|0=анонімним користувачем}}.",
 	"mobile-frontend-last-modified-with-user-minutes": "[$4 Остання {{GENDER:$1|зміна зроблена}} {{PLURAL:$3|$3 хвилину|$3 хвилини|$3 хвилин}} тому] {{PLURAL:$5|[$6 $2]|0=анонімним користувачем}}",
 	"mobile-frontend-last-modified-with-user-months": "[$4 Остання зміна зроблена {{PLURAL:$3|$3 місяць|$3 місяці|$3 місяців}} тому] {{GENDER:$1|}}{{PLURAL:$5|[$6 $2]|0=анонімним користувачем}}",
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 Остання {{GENDER:$1|зміна зроблена}} {{PLURAL:$3|$3 секунду|$3 секунди|$3 секунд}} тому] {{PLURAL:$5|[$6 $2]|0=анонімним користувачем}}",
