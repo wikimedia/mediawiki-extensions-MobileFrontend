@@ -15,6 +15,7 @@ class MobileFrontendEditorHooks {
 	 */
 	public static function getResourceLoaderMFConfigVars() {
 		$config = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Config' );
+		$extensionRegistry = ExtensionRegistry::getInstance();
 
 		return [
 			// schemaEditAttemptStep.js
@@ -24,6 +25,9 @@ class MobileFrontendEditorHooks {
 			// `abtest` means to split between source and visual 50/50
 			// editor.js
 			'wgMFDefaultEditor' => $config->get( 'MFDefaultEditor' ),
+			// wgMFEditorAvailableSkins is defined by skins and means that the skins defined their
+			// MobileFrontend-specific styles, so users can edit on mobile with the skins.
+			'wgMFEditorAvailableSkins' => $extensionRegistry->getAttribute( 'MobileFrontendEditorAvailableSkins' ),
 		];
 	}
 

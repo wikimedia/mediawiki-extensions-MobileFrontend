@@ -13,6 +13,7 @@ var skin,
 	lazyLoadedImages = require( './lazyLoadedImages' ),
 	skinName = mw.config.get( 'skin' ),
 	isPageContentModelEditable = mw.config.get( 'wgMFIsPageContentModelEditable' ),
+	editorAvailableSkins = mw.config.get( 'wgMFEditorAvailableSkins' ),
 	editor = require( './editor' ),
 	currentPage = require( '../mobile.startup/currentPage' )(),
 	currentPageHTMLParser = require( '../mobile.startup/currentPageHTMLParser' )(),
@@ -109,9 +110,11 @@ if ( window.console && window.console.log && window.console.log.apply &&
 
 // setup editor
 if ( !currentPage.inNamespace( 'special' ) && isPageContentModelEditable ) {
-	// TODO: Mobile editor doesn't work well with other skins yet (it looks horribly broken
-	// without some styles that are only defined by Minerva).
-	if ( skinName === 'minerva' ) {
+	// Mobile editor commonly doesn't work well with other skins than Minerva (it looks horribly
+	// broken without some styles that are only defined by Minerva). So we only enable it for the
+	// skin that wants it. Note: The below condition checks minerva for historical reasons. It could
+	// be removed in the future.
+	if ( skinName === 'minerva' || editorAvailableSkins.indexOf( skinName ) !== -1 ) {
 		// TODO: This code should not even be loaded on desktop.
 		// Remove this check when that is fixed (T216537).
 		if ( mw.config.get( 'wgMFMode' ) !== null ) {
