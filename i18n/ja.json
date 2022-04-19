@@ -32,7 +32,8 @@
 			"珍庵",
 			"組曲師",
 			"Afaz",
-			"ネイ"
+			"ネイ",
+			"MirukuPC"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "利用者が携帯機器版インターフェイスで編集しているかどうか",
@@ -178,7 +179,7 @@
 	"mobile-frontend-nearby-error-guidance": "位置情報を更新してみてください。",
 	"mobile-frontend-nearby-noresults": "トピックの付近に関するページはありませんでした。",
 	"mobile-frontend-nearby-noresults-guidance": "新しいページを作ったり、既存のページに位置を追加したりしてみてください。",
-	"mobile-frontend-nearby-permission-denied": "{{SITENAME}}においてサービスの位置情報取得を拒否に設定しました。設定変更はブラウザもしくは機器の設定ページを開いてください",
+	"mobile-frontend-nearby-permission-denied": "{{SITENAME}}においてサービスの位置情報取得を拒否に設定しました。設定変更はブラウザーまたは機器の設定ページを開いてください",
 	"mobile-frontend-nearby-location-unavailable": "{{SITENAME}}はご利用者の位置を特定できませんでした。電波状態の良い場所でやり直してください。",
 	"mobile-frontend-nearby-requirements": "申し訳ありませんが、ご使用中のブラウザーは{{SITENAME}}の付近検索に対応していません。",
 	"mobile-frontend-nearby-requirements-guidance": "別のブラウザーを試すか、または JavaScript を無効にしている場合は有効にしてください。",
