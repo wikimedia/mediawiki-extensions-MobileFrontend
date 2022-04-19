@@ -9,38 +9,18 @@
 			display: block;
 		}
 	}
+
+	// Set dimensions of toggling indicators before JS loads, to avoid content shifting
+	.section-heading .indicator {
+		padding: 8px;
+		border: 0;
+	}
 }
 
-// Toggling indicators are unusable without JavaScript
 .client-nojs {
+	// Toggling indicators are unusable without JavaScript
 	.section-heading .indicator {
 		display: none;
-	}
-}
-
-.section-heading,
-.in-block,
-.mw-parser-output > h1,
-.mw-parser-output > h2,
-.mw-parser-output > h3,
-.mw-parser-output > h4,
-.mw-parser-output > h5 {
-	// Safari needs this. @see T106347
-	display: table;
-
-	.mw-ui-icon {
-		display: inline-block;
-		// In skins like Timeless, Vector, font-size should not be inherited by these icons.
-		font-size: 16px;
-	}
-
-	.mw-headline {
-		width: 100%;
-	}
-
-	> span {
-		display: table-cell;
-		vertical-align: middle;
 	}
 }
 
