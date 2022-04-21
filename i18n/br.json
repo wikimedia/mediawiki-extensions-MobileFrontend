@@ -6,7 +6,8 @@
 			"Fulup",
 			"Gwenn-Ael",
 			"Pymouss",
-			"Y-M D"
+			"Y-M D",
+			"Huñvreüs"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Skrivit ar c'hod kadarnaat",
@@ -30,6 +31,7 @@
 	"mobile-frontend-editor-save": "Enrollañ",
 	"mobile-frontend-editor-summary-request": "Penaos eo bet gwellaet ar bajenn ganeoc'h ?",
 	"mobile-frontend-editor-summary": "Diverradur :",
+	"mobile-frontend-editor-switch-editor": "Cheñch gwelaozer",
 	"mobile-frontend-expand-sections-status": "Astenn an holl rannoù",
 	"mobile-frontend-fontchanger-link": "Ment ar font",
 	"mobile-frontend-featured-article": "Endalc'had erbedet hiziv",
@@ -80,6 +82,7 @@
 	"mobile-frontend-watchlist-more": "muioc'h",
 	"nearby": "Pajennoù tost deoc'h",
 	"tag-mobile_edit": "Kemmañ gant an hezoug",
+	"tag-advanced_mobile_edit": "Kemm gant an hezoug araokaet",
 	"tag-mobile_web_edit": "Kemmañ dre ar web hezoug",
 	"mobile-frontend-console-recruit": "Gouzout hiroc'h war ar mod m'eo bet savet hol lec'hienn hezoug @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend"
 }
