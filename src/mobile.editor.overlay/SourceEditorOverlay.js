@@ -296,6 +296,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 		function hideSpinnerAndShowPreview() {
 			self.hideSpinner();
 			self.$preview.show();
+			mw.hook( 'wikipage.content' ).fire( self.$preview );
 		}
 
 		this.gateway.getPreview( params ).then( function ( result ) {
