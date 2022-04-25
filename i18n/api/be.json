@@ -32,7 +32,7 @@
 	"apihelp-parse-param-mainpage": "Прымяняць мабільныя трансфармацыі галоўнай старонкі.",
 	"apihelp-webapp-manifest-description": "Вяртае маніфест вэб-прыкладання.",
 	"apihelp-webapp-manifest-summary": "Вяртае маніфест вэб-прыкладання.",
-	"apierror-mobilefrontend-badidtitle": "Дрэннае спалучэнне ідэнтыфікатара/назвы версіі.",
+	"apierror-mobilefrontend-badidtitle": "Благое спалучэнне ідэнтыфікатара/назвы версіі.",
 	"apierror-mobilefrontend-toomanysizeparams": "<var>thumbsize</var> узаемавыключальны з <var>thumbwidth</var> і <var>thumbheight</var>.",
 	"apiwarn-mobilefrontend-ignoringnoheadings": "<var>noheadings</var> не мае сэнсу на галоўнай старонцы, ігнаруецца.",
 	"apiwarn-mobilefrontend-mobileviewdeprecated": "Гэты API не падтрымліваецца. Глядзіце T186627 для больш падрабязнай інфармацыі.",
