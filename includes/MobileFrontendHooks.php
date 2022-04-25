@@ -319,6 +319,13 @@ class MobileFrontendHooks {
 		if ( $isMobile && !$userMode->isEnabled() ) {
 			$bodyAttrs['class'] .= ' mw-mf-amc-disabled';
 		}
+
+		if ( $isMobile ) {
+			// Add a class to the body so that TemplateStyles (which can only
+			// access html and body) and gadgets have something to check for.
+			// @stable added in 1.38
+			$bodyAttrs['class'] .= ' mw-mf';
+		}
 	}
 
 	/**
