@@ -31,7 +31,8 @@
 			"밝은소년",
 			"아라",
 			"Anont",
-			"Songhee"
+			"Songhee",
+			"Bluehill"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "사용자가 모바일 인터페이스를 통해 편집하고 있는지 여부",
@@ -233,8 +234,8 @@
 	"mobile-frontend-user-page-desired-action": "이 문서는 $1님만이 만들고 편집할 수 있습니다",
 	"mobile-frontend-user-page-create-owner-page-link-label": "직접 만들기",
 	"mobile-frontend-user-page-create-user-page-link-label": "$1 제목의 문서 만들기",
-	"mobile.css": "/* 이 CSS 설정은 모바일 사이트를 사용하는 사용자에게 적용됩니다 */",
-	"mobile.js": "/* 이 자바스크립트 설정은 모바일 사이트를 사용하는 사용자에게 적용됩니다 */",
+	"mobile.css": "/* 여기의 모든 CSS는 모바일 사이트를 사용하는 사용자에게 로드됩니다 */",
+	"mobile.js": "/* 여기의 자바스크립트는 모바일 사이트를 사용하는 사용자에게 로드됩니다 */",
 	"nearby": "근처 주제의 문서",
 	"tag-mobile_edit": "모바일 편집",
 	"tag-mobile_edit-description": "모바일 (웹 또는 앱)에서의 편집",
