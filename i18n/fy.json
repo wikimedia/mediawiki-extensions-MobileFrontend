@@ -161,7 +161,7 @@
 	"mobile-frontend-save-error": "Ynstellings bewarjen mislearre. Soargje dat jo 'koekjes' ynskeakele hawwe.",
 	"mobile-frontend-save-settings": "Bewarje",
 	"mobile-frontend-search-content": "Sykje yn 'e siden",
-	"mobile-frontend-search-content-no-results": "<b>{{int:mobile-frontend-search-content}}</b> en sjoch oft it sizzen earne foarkomt.",
+	"mobile-frontend-search-content-no-results": "<b>{{int:mobile-frontend-search-content}}</b> om te sjen oft it sizzen earne foarkomt.",
 	"mobile-frontend-search-no-results": "Gjin side mei dy titel.",
 	"mobile-frontend-settings-tagline": "Lêsfoarkarren",
 	"mobile-frontend-settings-beta": "{{SITENAME}} βêta",
