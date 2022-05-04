@@ -7,7 +7,8 @@
 			"Дзяніс Тутэйшы",
 			"Чаховіч Уладзіслаў",
 			"ZlyiLev",
-			"Chadyka"
+			"Chadyka",
+			"No Sleep till Krupki"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ці рэдагуе ўдзельнік праз мабільны інтэрфейс",
@@ -165,7 +166,7 @@
 	"mobile-frontend-search-content-no-results": "<b>{{int:mobile-frontend-search-content}}</b>, каб убачыць, ці з'яўляецца гэтая фраза недзе.",
 	"mobile-frontend-search-no-results": "Няма старонак з такой назвай.",
 	"mobile-frontend-settings-tagline": "Налады чытання",
-	"mobile-frontend-settings-beta": "Бэта",
+	"mobile-frontend-settings-beta": "{{SITENAME}} βэта",
 	"mobile-frontend-settings-save": "Налады захаваныя.",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Што вы думаеце напісаць?",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Загаловак",
