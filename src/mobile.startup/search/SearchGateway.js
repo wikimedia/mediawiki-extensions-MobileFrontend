@@ -135,7 +135,7 @@ SearchGateway.prototype = {
 			} );
 			// sort in order of index
 			results.sort( function ( a, b ) {
-				return a.index < b.index ? -1 : 1;
+				return a.index - b.index;
 			} );
 		}
 
