@@ -242,12 +242,12 @@
 	"mobile-frontend-user-page-create-owner-page-link-label": "صفحه کاربری خود را ایجاد کنید",
 	"mobile-frontend-user-page-create-user-page-link-label": "صفحه‌ای با نام $1 ایجاد کنید",
 	"nearby": "صفحه‌های مرتبط نزدیک شما",
-	"tag-mobile_edit": "ویرایش با تلفن همراه",
+	"tag-mobile_edit": "ویرایش همراه",
 	"tag-mobile_edit-description": "ویرایش انجام‌شده از گوشی همراه (وب یا برنامه)",
-	"tag-advanced_mobile_edit": "ویرایش پیشرفته تلفن همراه",
+	"tag-advanced_mobile_edit": "ویرایش پیشرفتهٔ همراه",
 	"tag-advanced_mobile_edit-description": "ویرایش کاربر توسط حالت پیشرفته انجام شده‌است.",
-	"tag-mobile_web_edit": "ویرایش با مرورگر تلفن همراه",
-	"tag-mobile_web_edit-description": "ویرایش انجام‌شده از وب‌گاه موبایل",
+	"tag-mobile_web_edit": "ویرایش از وبگاه همراه",
+	"tag-mobile_web_edit-description": "ویرایش ایجادشده از وبگاه همراه",
 	"mobile-frontend-loading-message": "در حال بارگیری...",
 	"mobile-frontend-search-feedback-link-text": "بازخوردتان را با ما در میان بگذارید.",
 	"mobile-frontend-search-feedback-prompt": "آنچه که دنبالش بودید را نیافتید؟",
@@ -272,5 +272,5 @@
 	"mobile-frontend-beta-only": "ویژگی‌ها فقط در نسخهٔ آزمایشی وجود دارند",
 	"mobile-frontend-console-recruit": "دربارۀ چگونگی ایجاد سایت موبایل ما @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend بیشتر یاد بگیرید.",
 	"mobile-frontend-special-pages-pref": "بهینه و ساده‌سازی صفحات ویژه برای نمایش در تلفن همراه (پیشنهاد می‌شود)",
-	"prefs-mobile": "ترجیحات تلفن همراه"
+	"prefs-mobile": "ترجیحات همراه"
 }
