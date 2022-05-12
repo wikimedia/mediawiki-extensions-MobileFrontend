@@ -99,7 +99,3 @@ QUnit.test( 'extend()', function ( assert ) {
 	util.extend( a, b );
 	assert.strictEqual( JSON.stringify( a ), '{"a":"apple","b":"banana"}' );
 } );
-
-QUnit.test( 'escapeHash()', function ( assert ) {
-	assert.strictEqual( util.escapeHash( '#escape:...hash' ), '#escape\\:\\.\\.\\.hash' );
-} );

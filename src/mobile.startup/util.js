@@ -118,20 +118,6 @@ module.exports = {
 	extend: function () {
 		return $.extend.apply( $, arguments );
 	},
-	/**
-	 * Escape dots and colons in a hash, jQuery doesn't like them because they
-	 * look like CSS classes and pseudoclasses. See
-	 * http://bugs.jquery.com/ticket/5241
-	 * http://stackoverflow.com/questions/350292/how-do-i-get-jquery-to-select-elements-with-a-period-in-their-id
-	 *
-	 * @memberof util
-	 * @instance
-	 * @param {string} hash A hash to escape
-	 * @return {string}
-	 */
-	escapeHash: function ( hash ) {
-		return hash.replace( /(:|\.)/g, '\\$1' );
-	},
 
 	/**
 	 * @typedef {Object} Template
