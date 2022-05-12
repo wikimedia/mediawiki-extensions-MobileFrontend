@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"ChoiChong"
+			"ChoiChong",
+			"春春眠眠"
 		]
 	},
+	"mobile-frontend-terms-text": "利用規約",
 	"mobile-frontend-view": "モバイルビュー",
 	"tag-mobile_edit": "モバイル直すん",
 	"tag-mobile_web_edit": "モバイルウェブぬ直すん"
