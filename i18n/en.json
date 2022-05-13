@@ -201,7 +201,7 @@
 	"mobile-frontend-talk-reply": "Reply",
 	"mobile-frontend-talk-reply-info": "Note your reply will be automatically signed with your username.",
 	"mobile-frontend-talk-topic-error": "The topic can't be added due to an unknown error.",
-	"mobile-frontend-talk-topic-error-protected": "This talk page is protected, you don't have the permission to add topics to it.",
+	"mobile-frontend-talk-topic-error-protected": "This talk page is protected. You don't have the permission to add topics to it.",
 	"mobile-frontend-talk-topic-error-permission": "The topic can't be added. You don't have the permission to edit pages.",
 	"mobile-frontend-talk-topic-error-spam": "The topic was refused because it contained a spam fragment.",
 	"mobile-frontend-talk-topic-error-badtoken": "There was an error on the server. Your edit can't be saved. Try reloading this page.",
