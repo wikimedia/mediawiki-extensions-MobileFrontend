@@ -162,7 +162,7 @@
 	"mobile-frontend-save-error": "Памылка захавання наладаў. Калі ласка, пераканайцеся, што ў вас уключаны кукі.",
 	"mobile-frontend-save-settings": "Запісаць",
 	"mobile-frontend-search-content": "Шукаць у старонках",
-	"mobile-frontend-search-content-no-results": "<b>{{int:mobile-frontend-search-content}}</b>, каб убачыць, ці з'яўляецца гэтая фраза недзе.",
+	"mobile-frontend-search-content-no-results": "<b>{{int:mobile-frontend-search-content}}</b>, каб убачыць, ці з’яўляецца гэтая фраза недзе.",
 	"mobile-frontend-search-no-results": "Няма старонак з такой назвай.",
 	"mobile-frontend-settings-tagline": "Налады чытання",
 	"mobile-frontend-settings-beta": "{{SITENAME}} βэта",
