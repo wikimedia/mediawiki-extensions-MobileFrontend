@@ -1,6 +1,6 @@
 var browser = require( './Browser' ).getSingleton(),
 	util = require( './util' ),
-	escapeHash = util.escapeHash,
+	escapeSelector = util.escapeSelector,
 	arrowOptions = {
 		name: 'expand',
 		type: '',
@@ -181,16 +181,16 @@ function enableKeyboardActions( toggler, $heading, page ) {
  *
  * @memberof Toggler
  * @instance
- * @param {string} selector A css selector that identifies a single element
+ * @param {string} id A css selector that identifies a single element
  * @param {Object} $container jQuery element to search in
  * @param {Page} page
  */
-Toggler.prototype.reveal = function ( selector, $container, page ) {
+Toggler.prototype.reveal = function ( id, $container, page ) {
 	var $target, $heading;
 
 	// jQuery will throw for hashes containing certain characters which can break toggling
 	try {
-		$target = $container.find( escapeHash( selector ) );
+		$target = $container.find( '#' + escapeSelector( id ) );
 		$heading = $target.parents( '.collapsible-heading' );
 		// The heading is not a section heading, check if in a content block!
 		if ( !$heading.length ) {
@@ -317,7 +317,7 @@ Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 			// Non-latin characters in the hash will be provided percent-encoded, which
 			// jQuery would later fail to cope with.
 			try {
-				decodedHash = decodeURIComponent( hash );
+				decodedHash = decodeURIComponent( hash.slice( 1 ) );
 				self.reveal( decodedHash, $container, page );
 			} catch ( e ) {
 				// sometimes decoding will fail e.g. T262599, T264914. If that happens ignore.
@@ -326,8 +326,8 @@ Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 	}
 
 	/**
-	 * Checks the value of wgInternalRedirectTargetUrl and reveals the collapsed
-	 * section that contains it if present
+	 * Checks the value of wgInternalRedirectTargetUrl and sets the hash if present.
+	 * checkHash() will reveal the collapsed section that contains it afterwards.
 	 *
 	 * @method
 	 */
@@ -337,7 +337,6 @@ Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 
 		if ( internalRedirectHash ) {
 			window.location.hash = internalRedirectHash;
-			self.reveal( internalRedirectHash, $container, page );
 		}
 	}
 	/* eslint-enable no-restricted-properties */
