@@ -185,7 +185,7 @@
 	"mobile-frontend-talk-reply": "תגובה",
 	"mobile-frontend-talk-reply-info": "לתשומת לבך: לתגובתך תתווסף חתימה עם שם המשתמש שלך.",
 	"mobile-frontend-talk-topic-error": "אין אפשרות להוסיף את הנושא בשל שגיאה לא ידועה.",
-	"mobile-frontend-talk-topic-error-protected": "דף שיחה זה מוגן, אין לך הרשאה להוסיף אליו נושאים.",
+	"mobile-frontend-talk-topic-error-protected": "דף השיחה הזה מוגן. אין לך הרשאה להוסיף אליו נושאים.",
 	"mobile-frontend-talk-topic-error-permission": "אין אפשרות להוסיף את הנושא. אין לך הרשאה לערוך דפים.",
 	"mobile-frontend-talk-topic-error-spam": "הנושא נשלל משום שהוא הכיל קטע עם דואר זבל.",
 	"mobile-frontend-talk-topic-error-badtoken": "אירעה שגיאה בשרת. אין אפשרות לשמור את העריכה שלכם. נסו לטעון מחדש את הדף.",

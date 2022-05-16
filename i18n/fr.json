@@ -214,7 +214,7 @@
 	"mobile-frontend-talk-reply": "Répondre",
 	"mobile-frontend-talk-reply-info": "Veuillez noter que votre réponse sera automatiquement signée avec votre nom d’utilisateur.",
 	"mobile-frontend-talk-topic-error": "Le sujet ne peut pas être ajouté à cause d’une erreur inconnue.",
-	"mobile-frontend-talk-topic-error-protected": "Cette page de discussion est protégée, vous n’avez pas le droit d’y ajouter de sujet.",
+	"mobile-frontend-talk-topic-error-protected": "Cette page de discussion est protégée. Vous n’avez pas le droit d’y ajouter de sujet.",
 	"mobile-frontend-talk-topic-error-permission": "Ce sujet ne peut pas être ajouté. Vous n’avez pas le droit de modifier les pages.",
 	"mobile-frontend-talk-topic-error-spam": "Ce sujet a été refusé car il contient un fragment de pourriel.",
 	"mobile-frontend-talk-topic-error-badtoken": "Il y a eu une erreur sur le serveur. Votre modification ne peut pas être enregistrée. Essayez de recharger cette page.",

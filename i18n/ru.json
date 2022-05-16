@@ -218,7 +218,7 @@
 	"mobile-frontend-talk-reply": "Ответить",
 	"mobile-frontend-talk-reply-info": "Обратите внимание, что ваш ответ будет автоматически подписан вашим именем.",
 	"mobile-frontend-talk-topic-error": "Тема не может быть добавлена из-за неизвестной ошибки.",
-	"mobile-frontend-talk-topic-error-protected": "Эта страница обсуждения защищена, а вас нет разрешения на добавление новой темы здесь.",
+	"mobile-frontend-talk-topic-error-protected": "Эта страница обсуждения защищена. У вас нет разрешения на добавление новой темы здесь.",
 	"mobile-frontend-talk-topic-error-permission": "Тема не может быть добавлена. У вас нет прав на редактирование страниц.",
 	"mobile-frontend-talk-topic-error-spam": "В создании этой темы было отказано, потому что она содержит спам-фрагмент.",
 	"mobile-frontend-talk-topic-error-badtoken": "На сервере произошла ошибка, и ваши изменения не могут быть сохранены. Попробуйте перезагрузить страницу.",
