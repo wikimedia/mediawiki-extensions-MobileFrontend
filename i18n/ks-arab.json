@@ -19,7 +19,7 @@
 	"mobile-frontend-editor-cancel": "مَنسوٗخ",
 	"mobile-frontend-editor-continue": "برٛونٛہہ",
 	"mobile-frontend-editor-terms-link": "[$1 اِستِمالٕک شَرط]",
-	"mobile-frontend-editor-publish": "شایع کٔرِو",
+	"mobile-frontend-editor-publish": "شایع",
 	"mobile-frontend-editor-save": "مَحفوٗظ",
 	"mobile-frontend-editor-success": "مُبارَک! تُہند اؠڈِٹ آو شایع کَرنہٕ۔",
 	"mobile-frontend-editor-success-new-page": "نۆو صَفہٕ شایع کَرنہٕ خٲطرٕ مُبارَک!",
@@ -90,6 +90,6 @@
 	"tag-mobile_web_edit": "موبائیل وؠب اؠڑیٹ",
 	"mobile-frontend-loading-message": "لوڑ چھُ گژھن...",
 	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions": "عُنٛوان وَضاحَت",
-	"mobile-frontend-amc-outreach-no-thanks": "نَہ، شُکریا۔",
+	"mobile-frontend-amc-outreach-no-thanks": "نَہ، شُکریا",
 	"prefs-mobile": "موبایِل تَرجِحات"
 }
