@@ -1,6 +1,5 @@
 @import '../../mobile.less/mobile.variables.less';
 @import '../../mobile.less/mobile.mixins.less';
-@import 'mediawiki.mixins.less';
 
 .image-carousel {
 	position: relative;
@@ -32,7 +31,6 @@
 		// (opacity and filter) are also used to help make the image load process
 		// less jarring.
 		//
-		-webkit-transition: background-color 0s 0.15s ease-in, opacity 0.15s ease-in, -webkit-filter 0.15s ease-in;
 		transition: background-color 0s 0.15s ease-in, opacity 0.15s ease-in, -webkit-filter 0.15s ease-in;
 		transition: background-color 0s 0.15s ease-in, opacity 0.15s ease-in, filter 0.15s ease-in;
 		.filter( blur( 3px ) );
