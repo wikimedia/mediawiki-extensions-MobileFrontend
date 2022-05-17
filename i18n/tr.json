@@ -204,7 +204,7 @@
 	"mobile-frontend-talk-reply": "Yanıtla",
 	"mobile-frontend-talk-reply-info": "Cevabınızın otomatik olarak kullanıcı adınız ile imzalanacağını unutmayın.",
 	"mobile-frontend-talk-topic-error": "Bilinmeyen bir hata nedeniyle konu eklenemedi.",
-	"mobile-frontend-talk-topic-error-protected": "Bu tartışma sayfası korunmaktadır, konu ekleme izniniz yok.",
+	"mobile-frontend-talk-topic-error-protected": "Bu tartışma sayfası korunmaktadır. Konu ekleme izniniz yok.",
 	"mobile-frontend-talk-topic-error-permission": "Konu eklenemez. Sayfaları düzenleme izniniz yok.",
 	"mobile-frontend-talk-topic-error-spam": "Konu spam parçası içerdiği için reddedildi.",
 	"mobile-frontend-talk-topic-error-badtoken": "Sunucuda bir hata oluştu. Değişikliğiniz kaydedilemiyor. Bu sayfayı yenilemeyi deneyin.",

@@ -181,7 +181,7 @@
 	"mobile-frontend-talk-reply": "Rispondi",
 	"mobile-frontend-talk-reply-info": "La risposta sarà firmata automaticamente con il tuo nome utente.",
 	"mobile-frontend-talk-topic-error": "L'argomento non può essere aggiunto a causa di un errore sconosciuto.",
-	"mobile-frontend-talk-topic-error-protected": "Questa pagina di discussione è protetta, non hai il permesso di aggiungere argomenti.",
+	"mobile-frontend-talk-topic-error-protected": "Questa pagina di discussione è protetta, Non hai il permesso di aggiungere argomenti.",
 	"mobile-frontend-talk-topic-error-permission": "L'argomento non può essere aggiunto. Non hai il permesso di modificare le pagine.",
 	"mobile-frontend-talk-topic-error-spam": "L'argomento è stato rifiutato perché contiene spam.",
 	"mobile-frontend-talk-topic-error-badtoken": "Si è verificato un errore sul server. La modifica non può essere salvata. Prova a ricaricare questa pagina.",
