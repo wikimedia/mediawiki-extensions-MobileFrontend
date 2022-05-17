@@ -1,5 +1,4 @@
 @import '../../../mobile.less/mobile.variables.less';
-@import 'mediawiki.mixins.animation.less';
 @import 'SearchResultsView.less';
 
 @thumbGap: 15px;
@@ -134,22 +133,12 @@
 	}
 
 	&.visible {
-		.animation( fadeIn 0.5s );
+		animation: fadeIn 0.5s;
 	}
 
 	// see T156509
 	&.overlay-ios {
-		.animation( none );
-	}
-}
-
-@-webkit-keyframes fadeIn {
-	from {
-		opacity: 0;
-	}
-
-	to {
-		opacity: 1;
+		animation: none;
 	}
 }
 
@@ -160,16 +149,6 @@
 
 	to {
 		opacity: 1;
-	}
-}
-
-@-webkit-keyframes fadeOut {
-	from {
-		opacity: 1;
-	}
-
-	to {
-		opacity: 0;
 	}
 }
 
