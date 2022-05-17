@@ -293,15 +293,6 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 	 * @memberof VisualEditorOverlay
 	 * @instance
 	 */
-	onSaveComplete: function () {
-		EditorOverlayBase.prototype.onSaveComplete.apply( this, arguments );
-		this.destroyTarget();
-	},
-	/**
-	 * @inheritdoc
-	 * @memberof VisualEditorOverlay
-	 * @instance
-	 */
 	hasChanged: function () {
 		if ( this.saved ) {
 			// If we just saved, there's not really any changes, and the

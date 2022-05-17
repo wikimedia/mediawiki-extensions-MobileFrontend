@@ -7,7 +7,6 @@ var Overlay = require( '../mobile.startup/Overlay' ),
 	icons = require( '../mobile.startup/icons' ),
 	Button = require( '../mobile.startup/Button' ),
 	Icon = require( '../mobile.startup/Icon' ),
-	toast = require( '../mobile.startup/showOnPageReload' ),
 	mfExtend = require( '../mobile.startup/mfExtend' ),
 	blockMessageDrawer = require( './blockMessageDrawer' ),
 	MessageBox = require( '../mobile.startup/MessageBox' ),
@@ -227,8 +226,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 		}
 	},
 	/**
-	 * Executed when page save is complete. Handles reloading the page, showing toast
-	 * messages.
+	 * Executed when page save is complete. Updates urls and shows toast message.
 	 *
 	 * @memberof EditorOverlayBase
 	 * @instance
@@ -253,6 +251,10 @@ mfExtend( EditorOverlayBase, Overlay, {
 			msg = mw.msg( 'mobile-frontend-editor-success' );
 		}
 
+		if ( !mw.config.get( 'wgPostEditConfirmationDisabled' ) ) {
+			this.showSaveCompleteMsg( msg );
+		}
+
 		/**
 		 * Fired after an edit was successfully saved, like postEdit in MediaWiki core.
 		 *
@@ -263,10 +265,6 @@ mfExtend( EditorOverlayBase, Overlay, {
 		 *  or null if it was a null edit.
 		 */
 		mw.hook( 'postEditMobile' ).fire( { newRevId: newRevId } );
-
-		if ( !mw.config.get( 'wgPostEditConfirmationDisabled' ) ) {
-			toast.showOnPageReload( msg, { type: 'success' } );
-		}
 
 		// Ensure we don't lose this event when logging
 		this.log( {
@@ -286,12 +284,17 @@ mfExtend( EditorOverlayBase, Overlay, {
 			// eslint-disable-next-line no-restricted-properties
 			window.location.hash = '#';
 		}
-
-		// Note the "#" may be in the URL.
-		// If so, using window.location alone will not reload the page
-		// we need to forcefully refresh
-		// eslint-disable-next-line no-restricted-properties
-		window.location.reload();
+	},
+	/**
+	 * Show a save-complete message to the user
+	 *
+	 * @inheritdoc
+	 * @memberof VisualEditorOverlay
+	 * @instance
+	 * @param {string} msg Message
+	 */
+	showSaveCompleteMsg: function ( msg ) {
+		mw.notify( msg, { type: 'success' } );
 	},
 	/**
 	 * Executed when page save fails. Handles logging the error. Subclasses
@@ -517,11 +520,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 							mechanism: 'cancel',
 							type: 'abandon'
 						} );
-						// May not be set if overlay has not been previously shown
-						if ( self.allowCloseWindow ) {
-							self.allowCloseWindow.release();
-						}
-						mw.hook( 'mobileFrontend.editorClosed' ).fire();
+						self.onExit();
 						exit();
 					}
 				} );
@@ -541,12 +540,15 @@ mfExtend( EditorOverlayBase, Overlay, {
 				type: ( this.target && this.target.edited ) ? 'abandon' : 'nochange'
 			} );
 		}
-		// If undefined .show may not have been called
-		if ( this.allowCloseWindow ) {
-			this.allowCloseWindow.release();
+		this.onExit();
+		exit();
+	},
+	onExit: function () {
+		// May not be set if overlay has not been previously shown
+		if ( self.allowCloseWindow ) {
+			self.allowCloseWindow.release();
 		}
 		mw.hook( 'mobileFrontend.editorClosed' ).fire();
-		exit();
 	},
 	/**
 	 * Sets additional values used for anonymous editing warning.
