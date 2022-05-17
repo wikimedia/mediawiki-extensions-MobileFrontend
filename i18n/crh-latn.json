@@ -1,12 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"Don Alessandro"
+			"Don Alessandro",
+			"TayfunEt."
 		]
 	},
 	"mobile-frontend-copyright": "Başqası bildirilmese, malümat $1 litsenziyasınen berile.",
 	"mobile-frontend-languages-header-page": "$1 — Tiller",
 	"mobile-frontend-languages-text": "$1 saifesi $2 {{PLURAL:$2|tilde}} bar.",
+	"mobile-frontend-main-menu-settings-heading": "Sazlamalar",
 	"mobile-frontend-privacy-link-text": "Gizlilik",
 	"mobile-frontend-terms-text": "Qullanuv şartları",
 	"mobile-frontend-view": "Mobil körüniş",
