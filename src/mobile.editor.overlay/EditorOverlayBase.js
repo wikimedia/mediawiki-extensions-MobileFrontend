@@ -272,18 +272,22 @@ mfExtend( EditorOverlayBase, Overlay, {
 			// eslint-disable-next-line camelcase
 			revision_id: newRevId
 		} );
-		if ( self.sectionId ) {
-			// Ideally we'd want to do this via replaceState (see T189173)
-			// eslint-disable-next-line no-restricted-properties
-			window.location.hash = '#' + self.sectionId;
-		} else {
-			// Cancel the hash fragment
-			// otherwise clicking back after a save will take you back to the editor.
-			// We avoid calling the hide method of the overlay here as this can be asynchronous
-			// and may conflict with the window.reload call below.
-			// eslint-disable-next-line no-restricted-properties
-			window.location.hash = '#';
-		}
+		setTimeout( function () {
+			// Wait for any other teardown navigation to happen (e.g. router.back())
+			// before setting our final location.
+			if ( self.sectionId ) {
+				// Ideally we'd want to do this via replaceState (see T189173)
+				// eslint-disable-next-line no-restricted-properties
+				window.location.hash = '#' + self.sectionId;
+			} else {
+				// Cancel the hash fragment
+				// otherwise clicking back after a save will take you back to the editor.
+				// We avoid calling the hide method of the overlay here as this can be asynchronous
+				// and may conflict with the window.reload call below.
+				// eslint-disable-next-line no-restricted-properties
+				window.location.hash = '#';
+			}
+		} );
 	},
 	/**
 	 * Show a save-complete message to the user
