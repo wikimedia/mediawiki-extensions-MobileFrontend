@@ -185,7 +185,7 @@
 	"mobile-frontend-talk-reply": "Svara",
 	"mobile-frontend-talk-reply-info": "Observera att ditt svar automatiskt kommer att undertecknas med ditt användarnamn.",
 	"mobile-frontend-talk-topic-error": "Ämnet kan inte läggas till på grund av ett okänt Fel.",
-	"mobile-frontend-talk-topic-error-protected": "Denna diskussionssida skyddas, du har inte behörighet att lägga till ämnen på den.",
+	"mobile-frontend-talk-topic-error-protected": "Denna diskussionssida är skyddad. Du har inte behörighet att lägga till ämnen på den.",
 	"mobile-frontend-talk-topic-error-permission": "Ämnet kan inte läggas till. Du har inte behörighet att redigera sidor.",
 	"mobile-frontend-talk-topic-error-spam": "Ämnet nekades eftersom det innehöll ett spam-fragment.",
 	"mobile-frontend-talk-topic-error-badtoken": "Ett fel uppstod på servern. Redigeringen kan inte sparas. Försök att ladda om denna sida.",

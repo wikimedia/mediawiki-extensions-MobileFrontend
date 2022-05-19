@@ -169,7 +169,7 @@
 	"mobile-frontend-talk-reply": "Atbilde",
 	"mobile-frontend-talk-reply-info": "Ņem vērā, ka tavai atbildei automātiski tiks pievienots tavs dalībnieka vārds.",
 	"mobile-frontend-talk-topic-error": "Nezināmas kļūdas dēļ tematu nevarēja pievienot.",
-	"mobile-frontend-talk-topic-error-protected": "Šī diskusiju lapa ir aizsargāta, tev nav tiesību tai pievienot tematus.",
+	"mobile-frontend-talk-topic-error-protected": "Šī diskusiju lapa ir aizsargāta. Tev nav tiesību tai pievienot tematus.",
 	"mobile-frontend-talk-topic-error-permission": "Tematu nevar pievienot. Tev nav tiesību labot lapas.",
 	"mobile-frontend-talk-topic-error-spam": "Tēma tika noraidīta, jo tajā bija mēstules fragments.",
 	"mobile-frontend-talk-topic-error-badtoken": "Uz servera notika kļūda. Tavu labojumu nevar saglabāt: Mēģini pārlādēt šo lapu.",
