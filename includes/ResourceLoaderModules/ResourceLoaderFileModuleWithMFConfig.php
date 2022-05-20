@@ -2,18 +2,17 @@
 
 namespace MobileFrontend\ResourceLoaderModules;
 
+use MediaWiki\ResourceLoader as RL;
 use MobileFrontendEditorHooks;
 use MobileFrontendHooks;
-use ResourceLoaderContext;
-use ResourceLoaderFileModule;
 use Xml;
 
 /**
- * ResourceLoaderFileModule subclass with JavaScript config necessary for MobileFrontend.
+ * RL\FileModule subclass with JavaScript config necessary for MobileFrontend.
  */
-class ResourceLoaderFileModuleWithMFConfig extends ResourceLoaderFileModule {
+class ResourceLoaderFileModuleWithMFConfig extends RL\FileModule {
 	/** @inheritDoc */
-	public function getScript( ResourceLoaderContext $context ) {
+	public function getScript( RL\Context $context ) {
 		return Xml::encodeJsCall( 'mw.config.set', [ $this->getConfigData() ] )
 			. parent::getScript( $context );
 	}
@@ -27,7 +26,7 @@ class ResourceLoaderFileModuleWithMFConfig extends ResourceLoaderFileModule {
 	}
 
 	/** @inheritDoc */
-	public function getDefinitionSummary( ResourceLoaderContext $context ) {
+	public function getDefinitionSummary( RL\Context $context ) {
 		$summary = parent::getDefinitionSummary( $context );
 		$summary[] = [
 			'configData' => $this->getConfigData(),
