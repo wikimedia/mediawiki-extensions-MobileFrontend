@@ -1,10 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Aguve"
+			"Aguve",
+			"Azorbli"
 		]
 	},
 	"mobile-frontend-featured-article": "Egbe ƒe nya siwo woda ɖi",
 	"mobile-frontend-news-items": "Le nyadzɔdzɔwo me",
-	"mobile-frontend-view": "Asitelefontɔ"
+	"mobile-frontend-terms-text": "Ezazã Ŋuti Ɖoɖowo",
+	"mobile-frontend-view": "Asitelefontɔ",
+	"mobile-frontend-view-desktop": "Akplɔta"
 }

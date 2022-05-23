@@ -6,6 +6,12 @@
 		]
 	},
 	"mobile-frontend-copyright": "Başqası bildirilmese, malümat $1 litsenziyasınen berile.",
+	"mobile-frontend-fontchanger-link": "Yazı tipi büyükligi",
+	"mobile-frontend-fontchanger-desc": "Daa yahşı oqumaq içün yazı tipini deñiştiriñiz.",
+	"mobile-frontend-fontchanger-option-small": "Kiçkene",
+	"mobile-frontend-fontchanger-option-medium": "Orta",
+	"mobile-frontend-fontchanger-option-large": "Büyük",
+	"mobile-frontend-fontchanger-option-xlarge": "Daa büyük",
 	"mobile-frontend-languages-header-page": "$1 — Tiller",
 	"mobile-frontend-languages-text": "$1 saifesi $2 {{PLURAL:$2|tilde}} bar.",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Önerilgen tiller",
