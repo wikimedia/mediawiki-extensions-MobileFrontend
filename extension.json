@@ -47,7 +47,6 @@
 		"Uploads": "SpecialUploads"
 	},
 	"APIModules": {
-		"mobileview": "MobileFrontend\\Api\\ApiMobileView",
 		"webapp-manifest": "MobileFrontend\\Api\\ApiWebappManifest"
 	},
 	"MessagesDirs": {
@@ -95,10 +94,6 @@
 		"SpecialMobileLanguages": "includes/specials/SpecialMobileLanguages.php",
 		"MobileSpecialPage": "includes/specials/MobileSpecialPage.php",
 		"MobileSpecialPageFeed": "includes/specials/MobileSpecialPageFeed.php"
-	},
-	"TestAutoloadClasses": {
-		"MockApiMobileView": "tests/phpunit/integration/api/MockApiMobileView.php",
-		"MockWikiPage": "tests/phpunit/integration/api/MockWikiPage.php"
 	},
 	"ResourceModules": {
 		"mobile.pagelist.styles": {
