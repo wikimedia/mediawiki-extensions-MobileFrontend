@@ -543,11 +543,15 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 	onSaveComplete: function () {
 		EditorOverlayBase.prototype.onSaveComplete.apply( this, arguments );
 
-		// Note the "#" may be in the URL.
-		// If so, using window.location alone will not reload the page
-		// we need to forcefully refresh
-		// eslint-disable-next-line no-restricted-properties
-		window.location.reload();
+		// The parent class changes the location hash in a setTimeout, so wait
+		// for that to happen before reloading.
+		setTimeout( function () {
+			// Note the "#" may be in the URL.
+			// If so, using window.location alone will not reload the page
+			// we need to forcefully refresh
+			// eslint-disable-next-line no-restricted-properties
+			window.location.reload();
+		} );
 	},
 
 	/**
