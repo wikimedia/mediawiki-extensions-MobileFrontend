@@ -5,6 +5,8 @@ use MediaWiki\Auth\AuthManager;
 use MediaWiki\ChangeTags\Taggable;
 use MediaWiki\Extension\AbuseFilter\Variables\VariableHolder;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\ResourceLoader as RL;
+use MediaWiki\ResourceLoader\ResourceLoader;
 use MobileFrontend\Api\ApiParseExtender;
 use MobileFrontend\ContentProviders\DefaultContentProvider;
 use MobileFrontend\Models\MobilePage;
@@ -1157,7 +1159,7 @@ class MobileFrontendHooks {
 		/** @var MobileContext $context */
 		$context = $services->getService( 'MobileFrontend.Context' );
 		$config = $services->getService( 'MobileFrontend.Config' );
-		$logos = ResourceLoaderSkinModule::getAvailableLogos( $config );
+		$logos = RL\SkinModule::getAvailableLogos( $config );
 		$mfLogo = $logos['icon'] ?? false;
 
 		// do nothing in desktop mode

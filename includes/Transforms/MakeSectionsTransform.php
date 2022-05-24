@@ -7,8 +7,8 @@ use DOMElement;
 use DOMXPath;
 use Exception;
 use Html;
+use MediaWiki\ResourceLoader\ResourceLoader;
 use MobileUI;
-use ResourceLoader;
 
 /**
  * Implements IMobileTransform, that splits the body of the document into
