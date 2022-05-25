@@ -22,7 +22,7 @@
 	"mobile-frontend-contributions-404-title": "Дадзена няслушнае імя ўдзельніка",
 	"mobile-frontend-copyright": "Матэрыял даступны на ўмовах $1, калі не пазначана іншае.",
 	"mobile-frontend-desc": "Мабільны інтэрфейс",
-	"mobile-frontend-diffview-404-desc": "Ідэнтыфікатара версіі, што вы запыталі, няма.",
+	"mobile-frontend-diffview-404-desc": "Ідэнтыфікатара версіі, што вы запыталі, няма.<br/>Звычайна прычынай гэтага з’яўляецца састарэлая спасылка на старонку, якая была выдаленая, альбо спасылка з недапушчальнымі сімваламі.",
 	"mobile-frontend-diffview-404-title": "Няслушная версія",
 	"mobile-frontend-diffview-anonymous": "Ананімны ўдзельнік",
 	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|байт дададзены|байты дададзена|байтаў дададзена}}",
