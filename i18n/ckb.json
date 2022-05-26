@@ -8,7 +8,8 @@
 			"Muhammed taha",
 			"Sarchia",
 			"Épine",
-			"ئارام بکر"
+			"ئارام بکر",
+			"Roj im"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "کۆدی پشتڕاستکردنەوە تێ بخە",
@@ -95,7 +96,7 @@
 	"mobile-frontend-languages-404-desc": "دەبێت ناوێکی دروست دیاری بکرێت.",
 	"mobile-frontend-languages-404-title": "کێشەی زمانەکان",
 	"mobile-frontend-languages-header": "زمانەکان",
-	"mobile-frontend-languages-header-page": "$1 - زمانەکانی تر",
+	"mobile-frontend-languages-header-page": "$1 - زمانەکانی دیکە",
 	"mobile-frontend-languages-nonexistent-title": "پەڕەی «$1» بوونی نییە.",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "زمانە پێشنیازکراوەکان",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "زمانەکانی تر",
