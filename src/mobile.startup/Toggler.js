@@ -122,11 +122,10 @@ Toggler.prototype.toggle = function ( $heading, page ) {
 		$content = $heading.next();
 
 	$heading.toggleClass( 'open-block' );
-	$heading.data( 'indicator' ).remove();
 
 	arrowOptions.rotation = wasExpanded ? 0 : 180;
-	indicator = new Icon( arrowOptions ).prependTo( $heading );
-	$heading.data( 'indicator', indicator );
+	indicator = new Icon( arrowOptions );
+	$heading.data( 'indicator' ).attr( 'class', indicator.getClassName() );
 
 	$headingLabel.attr( 'aria-expanded', !wasExpanded );
 
