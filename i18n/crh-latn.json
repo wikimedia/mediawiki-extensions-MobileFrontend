@@ -5,7 +5,15 @@
 			"TayfunEt."
 		]
 	},
+	"mobile-frontend-changeslist-nocomment": "deñiştirme tasviri yoq",
 	"mobile-frontend-copyright": "Başqası bildirilmese, malümat $1 litsenziyasınen berile.",
+	"mobile-frontend-fontchanger-link": "Yazı tipi büyükligi",
+	"mobile-frontend-fontchanger-desc": "Daa yahşı oqumaq içün yazı tipini deñiştiriñiz.",
+	"mobile-frontend-fontchanger-option-small": "Kiçkene",
+	"mobile-frontend-fontchanger-option-medium": "Orta",
+	"mobile-frontend-fontchanger-option-large": "Balaban",
+	"mobile-frontend-fontchanger-option-xlarge": "Daa balaban",
+	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} sizin kibi kişiler tarafından oluşa.</strong><br />Yardım etmek içün leyhağa qoşulıñız.",
 	"mobile-frontend-languages-header-page": "$1 — Tiller",
 	"mobile-frontend-languages-text": "$1 saifesi $2 {{PLURAL:$2|tilde}} bar.",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Önerilgen tiller",
@@ -15,5 +23,7 @@
 	"mobile-frontend-privacy-link-text": "Gizlilik",
 	"mobile-frontend-terms-text": "Qullanuv şartları",
 	"mobile-frontend-view": "Mobil körüniş",
-	"mobile-frontend-view-desktop": "Tolu"
+	"mobile-frontend-view-desktop": "Tolu",
+	"tag-mobile_edit": "Mobil deñiştirme",
+	"tag-mobile_edit-description": "Deñiştirme mobil ettildi (saytta yaki uyğulamada)"
 }

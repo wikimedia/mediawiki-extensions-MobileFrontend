@@ -5,7 +5,9 @@
 			"Obsuser",
 			"Srdjan m",
 			"Zoranzoki21",
-			"Сербијана"
+			"Сербијана",
+			"Kizule",
+			"Srđan"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Unesite tekst koji vidite iznad",
@@ -99,7 +101,7 @@
 	"mobile-frontend-talk-reply-info": "Napomena na Vaš odgovor će automatski biti dodat vaš potpis.",
 	"mobile-frontend-terms-text": "Uslovi korišćenja",
 	"mobile-frontend-view": "Mobilni prikaz",
-	"mobile-frontend-view-desktop": "Desktop",
+	"mobile-frontend-view-desktop": "Računarski prikaz",
 	"mobile-frontend-watchlist-a-z": "Spisak",
 	"mobile-frontend-watchlist-add": "Stranica $1 je dodata na Vaš spisak nadgledanja",
 	"mobile-frontend-watchlist-back-home": "Nazad na početnu stranu",

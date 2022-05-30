@@ -65,7 +65,7 @@
 	"mobile-frontend-categories-add-wait": "Enrigistrement des catégories, veuillez patienter.",
 	"mobile-frontend-categories-normal": "Basé sur le contenu",
 	"mobile-frontend-categories-hidden": "Organisationnel",
-	"mobile-frontend-changeslist-nocomment": "aucun résumé de modification",
+	"mobile-frontend-changeslist-nocomment": "aucun résumé des modifications",
 	"mobile-frontend-cite-error-title": "Erreur pendant le chargement des références",
 	"mobile-frontend-cite-error": "Un problème est survenu lors de la tentative de chargement des références en raison d’un mauvais identificateur de révision.",
 	"mobile-frontend-cite-none-available": "Il n’y a pas de références disponibles pour cette page.",
