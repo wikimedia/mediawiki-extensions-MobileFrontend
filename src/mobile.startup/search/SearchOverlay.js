@@ -57,6 +57,8 @@ function SearchOverlay( params ) {
 	this.gateway = options.gateway || new options.gatewayClass( this.api );
 
 	this.router = options.router;
+
+	this.currentSearchId = null;
 }
 
 mfExtend( SearchOverlay, Overlay, {
@@ -121,7 +123,9 @@ mfExtend( SearchOverlay, Overlay, {
 	 * @param {jQuery.Event} ev
 	 */
 	onClickResult: function ( ev ) {
-		var $link = this.$el.find( ev.currentTarget );
+		var
+			self = this,
+			$link = this.$el.find( ev.currentTarget );
 		/**
 		 * Fired when the user clicks a search result
 		 *
@@ -136,6 +140,16 @@ mfExtend( SearchOverlay, Overlay, {
 		// when navigating to search results
 		ev.preventDefault();
 		this.router.back().then( function () {
+			// T308288: Appends the current search id as a url param on clickthroughs
+			if ( this.currentSearchId ) {
+				var clickUri = new mw.Uri( location.href );
+				clickUri.query.searchToken = this.currentSearchId;
+				self.router.navigateTo( document.title, {
+					path: clickUri.toString(),
+					useReplaceState: true
+				} );
+				this.currentSearchId = null;
+			}
 			// Router.navigate does not support changing href.
 			// FIXME: Needs upstream change T189173
 			// eslint-disable-next-line no-restricted-properties
@@ -256,6 +270,7 @@ mfExtend( SearchOverlay, Overlay, {
 					var xhr;
 					xhr = self.gateway.search( query );
 					self._pendingQuery = xhr.then( function ( data ) {
+						this.currentSearchId = data.searchId;
 						// FIXME: Given this manipulates SearchResultsView
 						// this should be moved into that class
 						// check if we're getting the rights response in case of out of
