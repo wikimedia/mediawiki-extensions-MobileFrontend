@@ -153,7 +153,7 @@
 	"mobile-frontend-talk-reply": "Vastus",
 	"mobile-frontend-talk-reply-info": "Pane tähele, et sinu kasutajanimi lisandub sinu vastuse juurde iseenesest.",
 	"mobile-frontend-talk-topic-error": "Teemat ei saa lisada teadmata tõrke tõttu.",
-	"mobile-frontend-talk-topic-error-protected": "See arutelulehekülg on kaitstud, sul pole luba siia teemade lisamiseks.",
+	"mobile-frontend-talk-topic-error-protected": "See arutelulehekülg on kaitstud. Sul pole luba siia teemade lisamiseks.",
 	"mobile-frontend-talk-topic-error-permission": "Teemat ei saa lisada. Sul pole luba lehekülgi redigeerida.",
 	"mobile-frontend-talk-topic-error-spam": "See teema lükati tagasi, kuna see sisaldab rämpsposti katkeid.",
 	"mobile-frontend-talk-topic-error-badtoken": "Serveris esines tõrge. Sinu muudatust ei saa salvestada. Proovi lehekülg uuesti laadida.",
