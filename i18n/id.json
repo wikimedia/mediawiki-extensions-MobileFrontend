@@ -191,7 +191,7 @@
 	"mobile-frontend-talk-reply": "Balas",
 	"mobile-frontend-talk-reply-info": "Catatan: balasan Anda akan secara otomatis ditandatangani dengan nama pengguna Anda.",
 	"mobile-frontend-talk-topic-error": "Topik tidak dapat ditambahkan karena galat yang tidak diketahui.",
-	"mobile-frontend-talk-topic-error-protected": "Halaman pembicaraan terkunci, Anda tidak memiliki izin untuk menambahkan topik.",
+	"mobile-frontend-talk-topic-error-protected": "Halaman pembicaraan ini terkunci. Anda tidak memiliki izin untuk menambahkan topik.",
 	"mobile-frontend-talk-topic-error-permission": "Tidak dapat menambahkan topik. Anda tidak memiliki izin untuk menyunting halaman.",
 	"mobile-frontend-talk-topic-error-spam": "Topik ditolak karena mengandung unsur spam.",
 	"mobile-frontend-talk-topic-error-badtoken": "Terjadi kesalahan pada server. Hasil suntingan anda tidak bisa di simpan. Coba muat ulang halaman ini.",
