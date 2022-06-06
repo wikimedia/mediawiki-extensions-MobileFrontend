@@ -1,5 +1,6 @@
 module.exports = function () {
-	var trackdebug = !!mw.util.getParamValue( 'trackdebug' );
+	var trackdebug = !!mw.util.getParamValue( 'trackdebug' ),
+		util = require( '../../mobile.startup/util' );
 
 	if ( !mw.config.exists( 'wgWMESchemaEditAttemptStepSamplingRate' ) ) {
 		return;
@@ -179,6 +180,30 @@ module.exports = function () {
 					// wikitext / visualeditor
 					data.editor_interface === mw.config.get( 'wgMFSchemaEditAttemptStepOversample' )
 				) ? 1 : sampleRate );
+
+				// T309013: Also log via the Metrics Platform:
+				var eventName = 'eas.mf.' + actionPrefix,
+					customData = util.extend(
+						{
+							// Platform can be derived from the agent_client_platform_family
+							// context attribute mixed in by the JavaScript Metrics Platform
+							// Client. The context attribute will be "desktop_browser" or
+							// "mobile_browser" depending on whether the MobileFrontend extension
+							// has signalled that it is enabled.
+							// platform: 'phone',
+
+							integration: 'page'
+						},
+						data
+					);
+
+				delete customData.action;
+
+				// Sampling rate (and therefore whether a stream should oversample) is captured in
+				// the stream config ($wgEventStreams).
+				delete customData.is_oversample;
+
+				mw.eventLog.dispatch( eventName, customData );
 			}
 		} );
 
