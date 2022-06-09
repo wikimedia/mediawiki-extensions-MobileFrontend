@@ -7,7 +7,8 @@
 			"Srdjan m",
 			"Srđan",
 			"Zoranzoki21",
-			"Сербијана"
+			"Сербијана",
+			"Vipz"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Unesite tekst koji vidite iznad",
@@ -119,6 +120,8 @@
 	"nearby": "Stranice o temama blizu Vas",
 	"tag-mobile_edit": "mobilno uređivanje",
 	"tag-mobile_edit-description": "Izmena načinjena sa mobilnog uređaja",
+	"tag-advanced_mobile_edit": "napredna mobilna izmena",
+	"tag-advanced_mobile_edit-description": "Izmena koju je napravio korisnik pomoću naprednog režima",
 	"tag-mobile_web_edit": "mobilno veb-uređivanje",
 	"tag-mobile_web_edit-description": "Izmena načinjena sa mobilne verzije sajta",
 	"mobile-frontend-loading-message": "Učitavam…",

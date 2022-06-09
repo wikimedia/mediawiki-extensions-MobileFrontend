@@ -1,9 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Hanberke"
+			"Hanberke",
+			"TayfunEt."
 		]
 	},
+	"mobile-frontend-terms-text": "Ulanyş şertleri",
+	"mobile-frontend-view": "Mobil görnüş",
+	"mobile-frontend-view-desktop": "Iş stoly",
 	"tag-mobile_edit": "Mobil düzetme",
 	"tag-mobile_web_edit": "Mobil web-düzetme"
 }
