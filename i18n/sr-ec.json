@@ -18,7 +18,7 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Без обзира да ли корисник уређује преко мобилног интерфејса",
-	"mobile-frontend-account-create-captcha-placeholder": "Унесите кôд за потврду",
+	"mobile-frontend-account-create-captcha-placeholder": "Унесите потврдни код",
 	"mobile-frontend-changeslist-nocomment": "нема резимеа измене",
 	"mobile-frontend-cite-error-title": "Грешка при учитавању референци",
 	"mobile-frontend-cite-error": "Дошло је до проблема при покушају учитавања референци због идентификатора лоше ревизије.",
