@@ -1,9 +1,18 @@
 {
 	"@metadata": {
 		"authors": [
-			"Hanberke"
+			"Hanberke",
+			"TayfunEt."
 		]
 	},
+	"mobile-frontend-changeslist-nocomment": "gysgaça mazmuny ýok",
+	"mobile-frontend-copyright": "Mazmun $1 esasynda elýeterlidir.",
+	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Teklip edilýän diller",
+	"mobile-frontend-languages-structured-overlay-all-languages-header": "Beýleki diller",
+	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Dil gözläň",
+	"mobile-frontend-terms-text": "Ulanyş şertleri",
+	"mobile-frontend-view": "Mobil görnüş",
+	"mobile-frontend-view-desktop": "Iş stoly",
 	"tag-mobile_edit": "Mobil düzetme",
 	"tag-mobile_web_edit": "Mobil web-düzetme"
 }
