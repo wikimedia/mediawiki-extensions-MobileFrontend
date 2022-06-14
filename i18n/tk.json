@@ -17,6 +17,7 @@
 	"mobile-frontend-editor-editing-page": "<span>$1 <strong>sahypasyny düzet</strong></span>",
 	"mobile-frontend-editor-keep-editing": "Redaktirlemegi dowam etdiriň",
 	"mobile-frontend-editor-loading": "Redaktor ýüklenýär ...",
+	"mobile-frontend-generic-login-new": "<strong> {{SITENAME}} siziň ýaly adamlar tarapyndan ýasalýar. </strong> <br /> Goşant goşmak üçin giriň.",
 	"mobile-frontend-joined-just-now": "Şu wagt {{GENDER:$1|goşuldy}}",
 	"mobile-frontend-joined-seconds": "{{PLURAL:$2|$2 sekunt}} öň {{GENDER:$1|goşuldy}}",
 	"mobile-frontend-joined-minutes": "{{PLURAL:$2|$2 minut}} öň {{GENDER:$1|goşuldy}}",
