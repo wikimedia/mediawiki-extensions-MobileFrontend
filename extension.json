@@ -743,7 +743,7 @@
 			"value": {
 				"base": false,
 				"beta": false,
-				"amc": false
+				"amc": true
 			}
 		},
 		"MFUseDesktopSpecialWatchlistPage": {
