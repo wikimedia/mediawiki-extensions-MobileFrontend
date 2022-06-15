@@ -52,7 +52,8 @@ function LanguageSearcher( props ) {
 				allLanguages: languages.all,
 				allLanguagesCount: languages.all.length,
 				suggestedLanguages: languages.suggested,
-				suggestedLanguagesCount: languages.suggested.length
+				suggestedLanguagesCount: languages.suggested.length,
+				showSuggestedLanguagesHeader: languages.suggested.length > 0
 			},
 			props
 		)
@@ -83,8 +84,10 @@ mfExtend( LanguageSearcher, View, {
 </div>
 
 <div class="overlay-content-body">
-{{#suggestedLanguagesCount}}
+	{{#showSuggestedLanguagesHeader}}
 	<h3 class="list-header">{{suggestedLanguagesHeader}}</h3>
+	{{/showSuggestedLanguagesHeader}}
+	{{#suggestedLanguagesCount}}
 	<ol class="site-link-list suggested-languages">
 		{{#suggestedLanguages}}
 			<li>
@@ -145,6 +148,7 @@ mfExtend( LanguageSearcher, View, {
 	 */
 	addBanner: function ( bannerHTML ) {
 		this.options.bannerHTML = bannerHTML;
+		this.options.showSuggestedLanguagesHeader = true;
 		this.render();
 	},
 	/**
