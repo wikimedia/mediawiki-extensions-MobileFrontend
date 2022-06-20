@@ -13,8 +13,11 @@
 			"Გიო ოქრო"
 		]
 	},
+	"abusefilter-edit-builder-vars-user-mobile": "არედაქტირებს თუ არა მომხმარებელი მობილური ინტერფეისის გამოყენებით",
 	"mobile-frontend-account-create-captcha-placeholder": "შეიყვანეთ დადასტურების კოდი",
 	"mobile-frontend-changeslist-nocomment": "არ არის რედაქტირების რეზიუმე",
+	"mobile-frontend-cite-error-title": "ციტირებების ჩატვირთვის ხარვეზი",
+	"mobile-frontend-cite-error": "ვერსიის არასწორის იდენტიფიკატორის გამო პრობლემა წარმოიშვა ციტირებების ჩატვირთვისას.",
 	"mobile-frontend-clear-search": "გასუფთავება",
 	"mobile-frontend-copyright": "შინაარსი წარმოდგენილია $1 პირობებით (თუ სხვა არ არის მითითებული).",
 	"mobile-frontend-desc": "მობილური ინტერფეისი",
