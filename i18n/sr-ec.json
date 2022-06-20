@@ -18,7 +18,7 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Без обзира да ли корисник уређује преко мобилног интерфејса",
-	"mobile-frontend-account-create-captcha-placeholder": "Унесите кôд за потврду",
+	"mobile-frontend-account-create-captcha-placeholder": "Унесите потврдни код",
 	"mobile-frontend-categories-heading": "<strong>Категорије</strong>",
 	"mobile-frontend-categories-subheading": "Страница припада следећим категоријама:",
 	"mobile-frontend-categories-nocat": "Страница још не припада ниједној категорији.",

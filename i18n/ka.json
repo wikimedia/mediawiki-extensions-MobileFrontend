@@ -60,6 +60,7 @@
 	"mobile-frontend-editor-summary-placeholder": "გვითხარით რა შეცვალეთ (არასავალდებულო)",
 	"mobile-frontend-editor-summary-request": "რითი გააუმჯობესეთ გვერდი?",
 	"mobile-frontend-editor-summary": "რეზიუმე:",
+	"mobile-frontend-editor-switch-editor": "რედაქტორის გადართვა",
 	"mobile-frontend-editor-switch-visual-editor": "ვიზუალური რედაქტირების რეჟიმზე გადასვლა",
 	"mobile-frontend-editor-uploadenable": "გთხოვთ ჯერ ატვირთოთ ფოტო დასარედაქტირებლად.",
 	"mobile-frontend-editor-viewing-source-page": "<strong>გვერდის წყარო</strong><span> $1</span>",
