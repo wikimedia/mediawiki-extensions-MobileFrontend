@@ -73,7 +73,7 @@
 	"mobile-frontend-editor-blocked-drawer-body-link": "查看更多",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "原因",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|封鎖}}由",
-	"mobile-frontend-editor-blocked-drawer-expiry-header": "封鎖結束於",
+	"mobile-frontend-editor-blocked-drawer-expiry-header": "封鎖結束時間",
 	"mobile-frontend-editor-blocked-drawer-help": "查看詳情",
 	"mobile-frontend-editor-generic-block-reason": "未知原因",
 	"mobile-frontend-editor-cancel": "取消",
