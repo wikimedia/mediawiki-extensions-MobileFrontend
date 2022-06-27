@@ -113,7 +113,7 @@
 	"mobile-frontend-joined-hours": "{{GENDER:$1|Pridružio|Pridružila|Pridružili ste}} se prije {{PLURAL:$2|$2 sat|$2 sata|$2 sati}}",
 	"mobile-frontend-joined-days": "{{GENDER:$1|Pridružio|Pridružila|Pridružili ste}} se prije {{PLURAL:$2|$2 dan|$2 dana}}",
 	"mobile-frontend-joined-months": "{{GENDER:$1|Pridružio|Pridružila|Pridružili ste}} se prije {{PLURAL:$2|$2 mjesec|$2 mjeseca|$2 mjeseci}}",
-	"mobile-frontend-joined-years": "{{GENDER:$1|Pridružio|Pridružila|Pridružili ste}} se prije {{PLURAL:$2|$2 godinu|$2 godine|$2 godina}}",
+	"mobile-frontend-joined-years": "{{GENDER:$1|Pridružio|Pridružila|Pridružio/pridružila}} se prije {{PLURAL:$2|$2 godinu|$2 godine|$2 godina}}",
 	"mobile-frontend-language-heading": "<strong>Jezici</strong>",
 	"mobile-frontend-languages-404-desc": "Trebate navesti odgovarajući naslov.",
 	"mobile-frontend-languages-404-title": "Pogreška s popisom jezika",
