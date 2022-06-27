@@ -255,7 +255,7 @@ Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 					// (a link in a section heading)
 					// See T117880
 					if ( !ev.target.href ) {
-						// prevent taps/clicks on edit button after toggling (bug 56209)
+						// prevent taps/clicks on edit button after toggling (T58209)
 						ev.preventDefault();
 						self.toggle( $heading, page );
 					}

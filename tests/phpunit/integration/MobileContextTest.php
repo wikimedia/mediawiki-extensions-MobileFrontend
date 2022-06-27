@@ -532,7 +532,7 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 	 * @codeCoverageIgnore
 	 * @coversNothing
 	 */
-	public function testBug71329() {
+	public function testT73329() {
 		$services = MediaWikiServices::getInstance();
 		$services->resetServiceForTesting( 'SpecialPageFactory' );
 		RequestContext::resetMain();

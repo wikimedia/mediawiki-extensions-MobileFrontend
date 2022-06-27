@@ -44,7 +44,7 @@ class MobileFrontendHooks {
 		$mobileContext = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
 
 		if ( $mobileContext->shouldDisplayMobileView() ) {
-			// Force non-table based layouts (see bug 63428)
+			// Force non-table based layouts (see T65428)
 			$wgHTMLFormAllowTableFormat = false;
 			// Turn on MediaWiki UI styles so special pages with form are styled.
 			// FIXME: Remove when this becomes the default.
@@ -346,7 +346,7 @@ class MobileFrontendHooks {
 			return;
 		}
 
-		// Bug 43123: force mobile URLs only for local redirects
+		// T45123: force mobile URLs only for local redirects
 		if ( $context->isLocalUrl( $redirect ) ) {
 			$out->addVaryHeader( 'X-Subdomain' );
 			$redirect = $context->getMobileUrl( $redirect );
