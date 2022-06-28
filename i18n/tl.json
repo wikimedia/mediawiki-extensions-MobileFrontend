@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Amire80",
 			"AnakngAraw",
 			"Emem.calist",
 			"GinawaSaHapon",
@@ -24,6 +25,7 @@
 	"mobile-frontend-editor-continue": "Kasunod",
 	"mobile-frontend-editor-disabled": "Protektado ang pahinang ito upang maiwasan ang bandalismo. [$1 Tingnan ang source]",
 	"mobile-frontend-featured-article": "Napiling nilalaman ngayon",
+	"mobile-frontend-generic-login-new": "<strong>Nilikha ang {{SITENAME}} ng mga taong katulad mo.</strong><br />Maglagda (log in) upang mag-ambag.",
 	"mobile-frontend-last-modified-date": "Huling binago noong $1, sa oras na $2.",
 	"mobile-frontend-main-menu-settings-heading": "Mga kagustuhan",
 	"mobile-frontend-media-details": "Mga detalye",
