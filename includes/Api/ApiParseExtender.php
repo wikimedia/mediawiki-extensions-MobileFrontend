@@ -25,7 +25,8 @@ class ApiParseExtender {
 			// VE calls parse indirectly
 			$action === 'visualeditoredit' ||
 			// DT calls VE indirectly
-			$action === 'discussiontoolsedit';
+			$action === 'discussiontoolsedit' ||
+			$action === 'discussiontoolspreview';
 	}
 
 	/**
