@@ -48,7 +48,7 @@
 	"mobile-frontend-copyright": "除非另有註明，否則頁面內容均以 $1 條款授權。",
 	"mobile-frontend-desc": "行動前端",
 	"mobile-frontend-diffview-404-desc": "您請求的修訂 ID 並不存在。<br/>這通常是因為逾期的差異連結到的頁面已被刪除，或是差異連結包含無效的字元。",
-	"mobile-frontend-diffview-404-title": "損壞的修訂",
+	"mobile-frontend-diffview-404-title": "錯誤修訂",
 	"mobile-frontend-diffview-anonymous": "匿名使用者",
 	"mobile-frontend-diffview-bytesadded": "增加 $1 位元組",
 	"mobile-frontend-diffview-bytesnochange": "大小無變化",
