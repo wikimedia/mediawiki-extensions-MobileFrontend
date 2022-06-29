@@ -10,7 +10,7 @@
 	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|bayt}} qoşuldı",
 	"mobile-frontend-diffview-bytesnochange": "İşkerde deñiştirme yoq",
 	"mobile-frontend-diffview-bytesremoved": "$1 {{PLURAL:$1|bayt}} alındı",
-	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|deñiştirme}}",
+	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|DEÑİŞTİRME}}",
 	"mobile-frontend-editor-anon": "Kirmeden devam et",
 	"mobile-frontend-editor-anonwarning": "<strong>Diqqat:</strong> Saytqa kirmegeniñizden sebep deñiştirmeler tarihına siziñ IP adresiñiz yazılır. <strong>Kiriñiz</strong> ya da <strong>Esap etiñiz</strong>, ettigiñiz deñiştirmeler adıñız ve diğer avantajlar üstüne bağlı bolacaq.",
 	"mobile-frontend-editor-editing-page": "<span>$1<strong>saifesi deñiştirile</span>",
