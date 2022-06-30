@@ -5,9 +5,11 @@
 			"Mnam23"
 		]
 	},
+	"mobile-frontend-editor-disabled": "Laman ngini dijagai supaya kada diganggu. [$1 Janaki asal-mulanya]",
 	"mobile-frontend-terms-text": "Katantuan Pamakaian",
 	"mobile-frontend-view": "Tampaian HP",
 	"mobile-frontend-view-desktop": "Tampaian PC",
 	"tag-mobile_edit": "Babakan HP",
+	"tag-advanced_mobile_edit": "Babakan sélulér lanjutan",
 	"tag-mobile_web_edit": "Babakan wéb HP"
 }

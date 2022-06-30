@@ -69,7 +69,9 @@
 			"水獭很懒",
 			"神樂坂秀吉",
 			"科劳",
-			"飞舞回堂前"
+			"飞舞回堂前",
+			"SunAfterRain",
+			"Tiger"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "用户是否通过移动版界面编辑",
@@ -185,8 +187,8 @@
 	"mobile-frontend-last-modified-with-user-days": "{{PLURAL:$5|[$6 $2]|0=匿名用户}}[$4 最后{{GENDER:$1|编辑}}于{{PLURAL:$3|$3天}}前]",
 	"mobile-frontend-last-modified-with-user-hours": "{{PLURAL:$5|[$6 $2]|0=匿名用户}}[$4 最后{{GENDER:$1|编辑}}于{{PLURAL:$3|$3小时}}前]",
 	"mobile-frontend-last-modified-with-user-just-now": "{{PLURAL:$4|[$5 $2]|0=匿名用户}}刚刚[$3 {{GENDER:$1|编辑}}]",
-	"mobile-frontend-last-modified-with-user-minutes": "{{PLURAL:$5|[$6 $2]|0=匿名用户}}[$4 最后{{GENDER:$1|编辑}}于{{PLURAL:$3|$3分}}前]",
-	"mobile-frontend-last-modified-with-user-months": "{{PLURAL:$5|[$6 $2]|0=匿名用户}}[$4 最后{{GENDER:$1|编辑}}于$3月前]",
+	"mobile-frontend-last-modified-with-user-minutes": "{{PLURAL:$5|[$6 $2]|0=匿名用户}}[$4 最后{{GENDER:$1|编辑}}于{{PLURAL:$3|$3分钟}}前]",
+	"mobile-frontend-last-modified-with-user-months": "{{PLURAL:$5|[$6 $2]|0=匿名用户}}[$4 最后{{GENDER:$1|编辑}}于{{PLURAL:$3|$3个月}}前]",
 	"mobile-frontend-last-modified-with-user-seconds": "{{PLURAL:$5|[$6 $2]|0=匿名用户}}[$4 最后{{GENDER:$1|编辑}}于{{PLURAL:$3|$3秒}}前]",
 	"mobile-frontend-last-modified-with-user-years": "{{PLURAL:$5|[$6 $2]|0=匿名用户}}[$4 最后{{GENDER:$1|编辑}}于{{PLURAL:$3|$3年}}前]",
 	"mobile-frontend-main-menu": "主菜单",
