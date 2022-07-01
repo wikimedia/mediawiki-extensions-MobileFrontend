@@ -2,10 +2,13 @@
 	"@metadata": {
 		"authors": [
 			"Gildo Máquina",
-			"Jacinto Jeque"
+			"Jacinto Jeque",
+			"Tomas Armando Moz"
 		]
 	},
+	"mobile-frontend-terms-text": "Mananna oorumeela",
 	"mobile-frontend-view": "woona weettaka",
+	"mobile-frontend-view-desktop": "Nipuro na muteko",
 	"tag-mobile_edit": "Oreerihela ni eyaapelano ya oraami",
 	"tag-mobile_web_edit": "Oreerihela woowiriwa ni ekanyeryo ya mwinterneetini ni oraami a eyaapelano"
 }
