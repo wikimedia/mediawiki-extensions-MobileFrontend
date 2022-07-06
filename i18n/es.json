@@ -42,7 +42,8 @@
 			"Tusca",
 			"VegaDark",
 			"Vivaelcelta",
-			"WikiiiTranslator"
+			"WikiiiTranslator",
+			"Francodiaz7"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si un usuario está editando a través de la interfaz móvil",
@@ -81,7 +82,7 @@
 	"mobile-frontend-editor-blocked-drawer-body-link": "Ver más",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Razón",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Bloqueado|Bloqueada}} por",
-	"mobile-frontend-editor-blocked-drawer-expiry-header": "El bloqueo caducará el",
+	"mobile-frontend-editor-blocked-drawer-expiry-header": "El bloqueo caducará",
 	"mobile-frontend-editor-blocked-drawer-help": "Ver detalles",
 	"mobile-frontend-editor-generic-block-reason": "Motivo desconocido",
 	"mobile-frontend-editor-cancel": "Cancelar",
