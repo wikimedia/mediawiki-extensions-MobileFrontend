@@ -396,6 +396,8 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 					// Trigger intial EditorGateway#setContent and update save button
 					self.onInputWikitextEditor();
 				}
+
+				self.showEditNotices();
 			} );
 	},
 

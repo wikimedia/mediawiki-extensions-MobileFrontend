@@ -74,7 +74,8 @@ EditorGateway.prototype = {
 		function resolve() {
 			return util.Deferred().resolve( {
 				text: self.content || '',
-				blockinfo: self.blockinfo
+				blockinfo: self.blockinfo,
+				notices: self.notices
 			} );
 		}
 
@@ -84,11 +85,10 @@ EditorGateway.prototype = {
 			options = actionParams( {
 				prop: [ 'revisions', 'info' ],
 				rvprop: [ 'content', 'timestamp' ],
-				// TODO: Enable 'editintro' once there is user interface to display the messages
-				inprop: [ 'preloadcontent' /* , 'editintro' */ ],
+				inprop: [ 'preloadcontent', 'editintro' ],
 				inpreloadcustom: self.preload,
 				inpreloadparams: self.preloadparams,
-				/* ineditintrocustom: self.editintro, */
+				ineditintrocustom: self.editintro,
 				titles: self.title,
 				// get block information for this user
 				intestactions: 'edit',
@@ -105,13 +105,11 @@ EditorGateway.prototype = {
 				options.rvsection = this.sectionId;
 			}
 			return this.api.get( options ).then( function ( resp ) {
-				var revision, pageObj;
-
 				if ( resp.error ) {
 					return util.Deferred().reject( resp.error.code );
 				}
 
-				pageObj = resp.query.pages[0];
+				var pageObj = resp.query.pages[0];
 				// page might not exist and caller might not have known.
 				if ( pageObj.missing !== undefined ) {
 					if ( pageObj.preloadcontent ) {
@@ -121,7 +119,7 @@ EditorGateway.prototype = {
 						self.content = '';
 					}
 				} else {
-					revision = pageObj.revisions[0];
+					var revision = pageObj.revisions[0];
 					self.content = revision.content;
 					self.timestamp = revision.timestamp;
 				}
@@ -130,6 +128,7 @@ EditorGateway.prototype = {
 				self.originalContent = self.content;
 				self.blockinfo = self.getBlockInfo( pageObj );
 				self.wouldautocreate = pageObj.wouldautocreate && pageObj.wouldautocreate.edit;
+				self.notices = pageObj.editintro;
 
 				return resolve();
 			} );

@@ -685,6 +685,42 @@ mfExtend( EditorOverlayBase, Overlay, {
 			return result;
 		} );
 	},
+	showEditNotices: function () {
+		if ( !mw.config.get( 'wgMFShowEditNotices' ) || mw.config.get( 'wgMFEditNoticesFeatureConflict' ) ) {
+			return;
+		}
+		this.getLoadingPromise().then( function ( data ) {
+			if ( data.notices ) {
+				var editNotices = Object.keys( data.notices ).filter( function ( key ) {
+					if ( key.indexOf( 'editnotice' ) !== 0 ) {
+						return false;
+					}
+					// The contents of an edit notice is unlikely to change in the 24 hour
+					// expiry window, so just record that a notice with this key has been shown.
+					// If a cheap hashing function was available in core (or the API provided
+					// as hash) it could be used here instead.
+					var storageKey = 'mf-editnotices/' + mw.config.get( 'wgPageName' ) + '#' + key;
+					if ( mw.storage.get( storageKey ) ) {
+						return false;
+					}
+					mw.storage.set( storageKey, '1', 24 * 60 * 60 );
+					return true;
+				} );
+
+				if ( editNotices.length ) {
+					mw.loader.using( 'oojs-ui-windows' ).then( function () {
+						var $container = $( '<div>' ).addClass( 'editor-overlay-editNotices' );
+						editNotices.forEach( function ( key ) {
+							var $notice = $( '<div>' ).append( data.notices[ key ] );
+							$notice.addClass( 'editor-overlay-editNotice' );
+							$container.append( $notice );
+						} );
+						OO.ui.alert( $container );
+					} );
+				}
+			}
+		} );
+	},
 	/**
 	 * Handles a failed save due to a CAPTCHA provided by ConfirmEdit extension.
 	 *
