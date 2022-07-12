@@ -6,6 +6,7 @@
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "sen rezumo pri redakturo",
+	"mobile-frontend-clear-search": "Efacar",
 	"mobile-frontend-copyright": "La kontenajo esas disponebla sub $1, ecepte kande kontree mencionata.",
 	"mobile-frontend-diffview-bytesadded": "juntesis $1 {{PLURAL:$1|bicoko*|bicoki*}}",
 	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|redakturo|redakturi}}",
@@ -63,6 +64,7 @@
 	"mobile-frontend-view-desktop": "Desktop",
 	"mobile-frontend-watchlist-cta-button-login": "Enirar",
 	"mobile-frontend-watchlist-cta-button-signup": "Registragez",
+	"mobile-frontend-watchlist-feed": "Modifikita",
 	"mobile-frontend-watchlist-feed-empty": "Nula pagini modifikesis recente.",
 	"mobile-frontend-watchlist-filter-all": "Omni",
 	"mobile-frontend-watchlist-filter-articles": "Pagini",

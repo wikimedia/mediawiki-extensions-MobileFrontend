@@ -81,7 +81,7 @@
 	"mobile-frontend-editor-keep-editing": "संपादन जारी रखें",
 	"mobile-frontend-editor-licensing": "संपादन सहेजकर आप अपने योगदान को $1 {{PLURAL:$2|लाइसेंस|लाइसेंसों}} के अंतर्गत प्रकाशित करने को तैयार होंगे।",
 	"mobile-frontend-editor-licensing-with-terms": "संपादन सहेजकर आप $1 से सहमत होंगे और अपने योगदान को $2 {{PLURAL:$3|लाइसेंस|लाइसेंसों}} के अंतर्गत प्रकाशित करने को तैयार होंगे।",
-	"mobile-frontend-editor-terms-link": "[$1 उपयोग की शर्तों]",
+	"mobile-frontend-editor-terms-link": "[$1 उपयोग की शर्तें]",
 	"mobile-frontend-editor-new-page-confirm": "क्या आप सच में {{SITENAME}} पर एक नया पृष्ठ {{GENDER:$1|बनाना}} चाहते हैं?",
 	"mobile-frontend-editor-placeholder": "यह अनुभाग खाली है। इसे बढ़ाने वाले पहले सदस्य बनें!",
 	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|आप}} {{SITENAME}} पर नया पृष्ठ बना रहे हैं!",
