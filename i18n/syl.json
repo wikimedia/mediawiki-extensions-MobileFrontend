@@ -1,10 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"এম আবু সাঈদ"
+			"এম আবু সাঈদ",
+			"ꠢꠣꠍꠘ ꠞꠣꠎꠣ"
 		]
 	},
-	"mobile-frontend-view": "ꠝꠥꠛꠣꠁꠟꠞ ꠞꠥꠚ",
+	"mobile-frontend-terms-text": "ꠛꠦꠛꠀꠞꠧꠞ ꠘꠤꠅꠝ",
+	"mobile-frontend-view": "ꠝꠥꠛꠣꠁꠟꠅ ꠎꠦꠟꠣꠘ",
+	"mobile-frontend-view-desktop": "ꠒꠦꠇꠍ꠆ꠐꠙ",
 	"tag-mobile_edit": "ꠝꠥꠛꠣꠁꠟꠖꠤ ꠟꠦꠈꠣ",
 	"tag-mobile_web_edit": "ꠝꠥꠛꠣꠁꠟ ꠅꠄꠛꠖꠤ ꠟꠦꠈꠣ"
 }

@@ -235,7 +235,7 @@
 	"mobile-frontend-user-page-no-owner-page-yet": "Henüz bir kullanıcı sayfanız yok",
 	"mobile-frontend-user-page-no-page-yet": "$1 için kullanıcı sayfası yok",
 	"mobile-frontend-user-page-describe-yourself": "Kendinizi kullanıcı sayfanızdaki $1 ile tanımlayabilirsiniz",
-	"mobile-frontend-user-page-describe-yourself-editors": "düzenleyiciler",
+	"mobile-frontend-user-page-describe-yourself-editors": "editörler",
 	"mobile-frontend-user-page-desired-action": "Bu sayfa $1 tarafından oluşturulmalı ve düzenlenmelidir",
 	"mobile-frontend-user-page-create-owner-page-link-label": "Kendiniz oluşturun",
 	"mobile-frontend-user-page-create-user-page-link-label": "$1 adlı bir sayfa oluşturun",
