@@ -1,10 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Lea.Fakauvea"
+			"Lea.Fakauvea",
+			"Lea.fakauvea"
 		]
 	},
-	"mobile-frontend-view": "Lau i te telefoni",
+	"mobile-frontend-terms-text": "Lēkula faka'aoga",
+	"mobile-frontend-view": "Sio mai tau telefoni",
+	"mobile-frontend-view-desktop": "Sio mai tau pilo",
 	"tag-mobile_edit": "Fetogi to'oto'o",
 	"tag-mobile_web_edit": "Fetogi mai te neti to'oto'o"
 }
