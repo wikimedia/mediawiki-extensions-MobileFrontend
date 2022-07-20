@@ -187,7 +187,7 @@
 	"mobile-frontend-nearby-requirements": "Désolé ! Votre navigateur web ne prend pas en charge la fonction « À proximité » de {{SITENAME}}.",
 	"mobile-frontend-nearby-requirements-guidance": "Essayez un autre navigateur ou activez JavaScript si vous l’aviez désactivé.",
 	"mobile-frontend-nearby-title": "À proximité",
-	"mobile-frontend-nearby-info-heading": "Endroits de proximité",
+	"mobile-frontend-nearby-info-heading": "Endroits autour de vous",
 	"mobile-frontend-nearby-info-description": "Vous pouvez lire des articles intéressants de {{SITENAME}} concernant les lieux qui vous entourent",
 	"mobile-frontend-nearby-info-show-button": "Afficher des articles similaires",
 	"mobile-frontend-news-items": "Actualités",
