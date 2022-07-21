@@ -358,7 +358,7 @@ $specialPageAliases['sk'] = [
 	'Nearby' => [ 'V_okolí', 'VOkolí', 'V_okoli', 'VOkoli' ],
 ];
 
-/** Serbian (Cyrillic script) (српски (ћирилица)‎) */
+/** Serbian (Cyrillic script) (српски (ћирилица)) */
 $specialPageAliases['sr-ec'] = [
 	'History' => [ 'Историја' ],
 	'MobileCite' => [ 'МобилнеРеференце', 'Мобилне_референце' ],
@@ -369,7 +369,7 @@ $specialPageAliases['sr-ec'] = [
 	'Nearby' => [ 'У_близини', 'Близу', 'Оближње' ],
 ];
 
-/** Serbian (Latin script) (srpski (latinica)‎) */
+/** Serbian (Latin script) (srpski (latinica)) */
 $specialPageAliases['sr-el'] = [
 	'History' => [ 'Istorija' ],
 	'MobileCite' => [ 'MobilneReference', 'Mobilne_reference' ],
@@ -423,7 +423,7 @@ $specialPageAliases['vi'] = [
 	'Nearby' => [ 'Lân_cận', 'Kề_bên' ],
 ];
 
-/** Simplified Chinese (中文（简体）‎) */
+/** Simplified Chinese (中文（简体）) */
 $specialPageAliases['zh-hans'] = [
 	'History' => [ '历史' ],
 	'MobileOptions' => [ '移动版选项' ],
@@ -433,7 +433,7 @@ $specialPageAliases['zh-hans'] = [
 	'Nearby' => [ '附近' ],
 ];
 
-/** Traditional Chinese (中文（繁體）‎) */
+/** Traditional Chinese (中文（繁體）) */
 $specialPageAliases['zh-hant'] = [
 	'History' => [ '歷史' ],
 	'MobileOptions' => [ '行動版選項', '流動版選項' ],
@@ -443,7 +443,7 @@ $specialPageAliases['zh-hant'] = [
 	'Nearby' => [ '附近' ],
 ];
 
-/** Hong Kong Traditional Chinese (中文（香港）‎) */
+/** Hong Kong Traditional Chinese (中文（香港）) */
 $specialPageAliases['zh-hk'] = [
 	'MobileOptions' => [ '流動版選項' ],
 	'Uploads' => [ '已上載檔案' ],
