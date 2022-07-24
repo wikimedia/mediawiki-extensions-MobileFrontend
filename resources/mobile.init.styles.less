@@ -2,12 +2,8 @@
 @import 'mediawiki.ui/variables.less';
 
 .client-js {
-	.collapsible-block {
+	.collapsible-block:not( .collapsible-block-js ) {
 		display: none;
-
-		&.open-block {
-			display: block;
-		}
 	}
 
 	// Set dimensions of toggling indicators before JS loads, to avoid content shifting
@@ -56,13 +52,3 @@ ul.footer-places li {
 	content: '' !important;
 }
 // END FOOTER RULES
-
-@media all and ( min-width: @width-breakpoint-tablet ) {
-	.client-js {
-		// Avoid flash of unstyled content for tablet users while JavaScript is loading
-		// onclick attribute is removed by the toggling code.
-		[ onclick ] + .collapsible-block {
-			display: block;
-		}
-	}
-}

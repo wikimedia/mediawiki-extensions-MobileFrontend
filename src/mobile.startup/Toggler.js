@@ -129,7 +129,14 @@ Toggler.prototype.toggle = function ( $heading, page ) {
 
 	$headingLabel.attr( 'aria-expanded', !wasExpanded );
 
-	$content.toggleClass( 'open-block' );
+	if ( $content.hasClass( 'open-block' ) ) {
+		$content.removeClass( 'open-block' );
+		// jquery doesn't allow custom values for the hidden attribute it seems.
+		$content.get( 0 ).setAttribute( 'hidden', 'until-found' );
+	} else {
+		$content.addClass( 'open-block' );
+		$content.removeAttr( 'hidden' );
+	}
 
 	/* T239418 We consider this event as a low-priority one and emit it asynchronously.
 	This ensures that any logic associated with section toggling is async and not contributing
@@ -286,7 +293,12 @@ Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 					// the only way we can tell screen readers what element we're
 					// referring to via `aria-controls`.
 					id: id
-				} );
+				} )
+				.on( 'beforematch', function () {
+					self.toggle( $heading, page );
+				} )
+				.addClass( 'collapsible-block-js' )
+				.get( 0 ).setAttribute( 'hidden', 'until-found' );
 
 			enableKeyboardActions( self, $heading, page );
 			if (
