@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"咽頭べさ"
+			"咽頭べさ",
+			"Aey Tai Nuea"
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "ᥕᥣᥱᥗᥖᥰᥕᥩᥭᥲ",
@@ -23,8 +24,8 @@
 	"mobile-frontend-overlay-close": "ᥞᥙᥰ",
 	"mobile-frontend-privacy-link-text": "ᥞᥨᥛᥱᥘᥨᥛᥲᥔᥧᥢᥱᥖᥨᥝᥴ",
 	"mobile-frontend-settings-tagline": "ᥒᥝᥲᥐᥧᥛᥰᥙᥫᥒᥴ ᥘᥩᥒᥲᥘᥧᥴ",
-	"mobile-frontend-terms-text": "ᥑᥩᥲᥚᥣᥒᥳᥘᥩᥒᥲᥓᥬᥳᥖᥪᥰ",
-	"mobile-frontend-view": "ᥖᥨᥭᥰᥢᥒᥱᥛᥨᥝᥱᥙᥣᥭᥰ",
+	"mobile-frontend-terms-text": "ᥑᥨᥝᥲ ᥚᥣᥒᥳ ᥘᥩᥒ ᥕᥧᥒᥱ ᥖᥪᥰ",
+	"mobile-frontend-view": "ᥖᥨᥭᥰ ᥘᥒᥱ ᥛᥨᥝᥱ ᥙᥣᥭᥰ",
 	"mobile-frontend-view-desktop": "ᥑᥩᥛᥰ",
 	"mobile-frontend-watchlist-cta-button-login": "ᥘᥩᥐᥳᥟᥤᥢᥱ",
 	"mobile-frontend-watchlist-filter-talk": "ᥖᥩᥢᥲᥟᥧᥙᥱ"
