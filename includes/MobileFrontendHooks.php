@@ -217,6 +217,38 @@ class MobileFrontendHooks {
 	}
 
 	/**
+	 * BeforeDisplayNoArticleText hook handler
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/BeforeDisplayNoArticleText
+	 *
+	 * @param Article $article The (empty) article
+	 * @return bool This hook can abort
+	 */
+	public static function onBeforeDisplayNoArticleText( $article ) {
+		/** @var MobileContext $context */
+		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
+		$displayMobileView = $context->shouldDisplayMobileView();
+
+		$title = $article->getTitle();
+
+		// if the page is a userpage
+		// @todo: Upstream to core (T248347).
+		if ( $displayMobileView &&
+			$title->inNamespaces( NS_USER ) &&
+			!$title->isSubpage()
+		) {
+			$out = $article->getContext()->getOutput();
+			$userpagetext = ExtMobileFrontend::blankUserPageHTML( $out, $title );
+			if ( $userpagetext ) {
+				// Replace the default message with ours
+				$out->addHTML( $userpagetext );
+				return false;
+			}
+		}
+
+		return true;
+	}
+
+	/**
 	 * OutputPageBeforeHTML hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/OutputPageBeforeHTML
 	 *
@@ -243,20 +275,6 @@ class MobileFrontendHooks {
 
 		if ( !$title ) {
 			return;
-		}
-
-		// if the page is a userpage
-		// @todo: Upstream to core (T248347).
-		if ( $displayMobileView &&
-			$title->inNamespaces( NS_USER ) &&
-			!$title->isSubpage() &&
-			$out->getActionName() === 'view'
-		) {
-			$userpagetext = ExtMobileFrontend::blankUserPageHTML( $out, $title );
-			if ( $userpagetext ) {
-				$text = $userpagetext;
-				return;
-			}
 		}
 
 		$options = $config->get( 'MFMobileFormatterOptions' );
