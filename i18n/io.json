@@ -28,6 +28,7 @@
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} facesas da personi quale vu.</strong><br />Enirez por kontributar.",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|Eniris}} {{PLURAL:$2|$2 minuto|$2 minuti}} ante nun",
 	"mobile-frontend-joined-days": "{{GENDER:$1|Eniris}} {{PLURAL:$2|$2 dio|$2 dii}} ante nun",
+	"mobile-frontend-joined-months": "{{GENDER:$1|Eniris}} {{PLURAL:$2|$2 monato|$2 monati}} ante nun",
 	"mobile-frontend-language-heading": "<strong>Lingui</strong>",
 	"mobile-frontend-languages-header": "Lingui",
 	"mobile-frontend-languages-header-page": "$1 - Altra lingui",
