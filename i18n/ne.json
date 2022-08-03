@@ -98,7 +98,7 @@
 	"mobile-frontend-last-modified-with-user-days": "{{PLURAL:$5|[$6 $2]|0=अज्ञात प्रयोगकर्ता}}द्वारा [$4 {{PLURAL:$3|$3 दिन|$3 दिन}} अगाडि अन्तिम {{GENDER:$1|सम्पादन}}]",
 	"mobile-frontend-last-modified-with-user-hours": "यो पृष्ठ {{PLURAL:$5|[$6 $2]|0=अज्ञात प्रयोगकर्ता}}द्वारा [$4 {{PLURAL:$3|$3 घण्टा|$3 घण्टा}} अगाडि] {{GENDER:$1|सम्पादन}} गरिएको थियो।",
 	"mobile-frontend-main-menu": "मुख्य सूचीपत्र",
-	"mobile-frontend-main-menu-settings-heading": "सेटिङहरू",
+	"mobile-frontend-main-menu-settings-heading": "रोजाईहरू",
 	"mobile-frontend-media-details": "विवरणहरू",
 	"mobile-frontend-media-license-link": "आज्ञापत्रको जानकारी",
 	"mobile-frontend-media-load-fail-retry": "ताजा गर्नुहोस्",
