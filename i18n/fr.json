@@ -87,7 +87,7 @@
 	"mobile-frontend-edit-login-action": "<strong>Aider à améliorer {{SITENAME}}.</strong><br />Se connecter pour modifier.",
 	"mobile-frontend-edit-signup-action": "<strong>Aider à améliorer {{SITENAME}}.</strong><br />Se connecter pour modifier.",
 	"mobile-frontend-editor-anon": "Modifier sans se connecter",
-	"mobile-frontend-editor-anonwarning": "<strong>Attention :</strong> Vous êtes déconnecté. Votre adresse IP sera affichée publiquement si vous modifiez quoi que ce soit. Si vous </strong>vous connectez</strong> ou <strong>créez un compte</strong>, vos modifications seront associées à votre nom d’utilisateur, parmi d’autres avantages.",
+	"mobile-frontend-editor-anonwarning": "<strong>Attention :</strong> vous êtes déconnecté(e). Votre adresse IP sera affichée publiquement si vous modifiez quoi que ce soit. Si vous </strong>vous connectez</strong> ou <strong>créez un compte</strong>, vos modifications seront associées à votre nom d’utilisateur, parmi d’autres avantages.",
 	"mobile-frontend-editor-blocked-drawer-title": "Vous avez été bloqué pour la modification de {{SITENAME}}",
 	"mobile-frontend-editor-blocked-drawer-title-partial": "Vous avez été bloqué pour modifier de cette page",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Motif de blocage",

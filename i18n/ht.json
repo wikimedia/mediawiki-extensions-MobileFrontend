@@ -2,16 +2,19 @@
 	"@metadata": {
 		"authors": [
 			"Bfpage",
-			"Tisave"
+			"Tisave",
+			"Amire80"
 		]
 	},
 	"mobile-frontend-copyright": "Kontni disponib selon lisans $1 sof si gen lòt endikasyon.",
+	"mobile-frontend-editor-publish": "Pibliye",
+	"mobile-frontend-editor-save": "Anrejistre",
 	"mobile-frontend-news-items": "Nouvèl",
 	"mobile-frontend-privacy-link-text": "Konfidansyalite",
 	"mobile-frontend-terms-text": "Kondisyon itilizasyon",
 	"mobile-frontend-view": "Vèsyon mobil",
 	"mobile-frontend-view-desktop": "Desktop",
-	"tag-mobile_edit": "Atik sa a te modifye ak yon aparèy mobil.",
+	"tag-mobile_edit": "Modifikasyon mobil",
 	"tag-mobile_web_edit": "Chanje sit entènèt la lè l sèvi avèk yon aparèy mobil",
 	"mobile-frontend-search-feedback-link-text": "Ban nou fidbak ou.",
 	"mobile-frontend-search-feedback-prompt": "Pa t 'kapab jwenn sa ou te kap chèche?"

@@ -110,7 +110,7 @@
 	"mobile-frontend-media-details": "Detali",
 	"mobile-frontend-media-license-link": "Informazzion sora la licenza",
 	"mobile-frontend-media-load-fail-message": "A gh'è stad un eror intanta che questa inmagin chì la'era 'dree a caregass.",
-	"mobile-frontend-media-load-fail-retry": "Sgiorna",
+	"mobile-frontend-media-load-fail-retry": "Atualiza",
 	"mobile-frontend-missing-image": "Imagin",
 	"mobile-frontend-tap-to-display-image": "Toca per vardà l'imagin",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 km}}",
