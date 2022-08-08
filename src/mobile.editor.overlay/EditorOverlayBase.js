@@ -549,8 +549,8 @@ mfExtend( EditorOverlayBase, Overlay, {
 	},
 	onExit: function () {
 		// May not be set if overlay has not been previously shown
-		if ( self.allowCloseWindow ) {
-			self.allowCloseWindow.release();
+		if ( this.allowCloseWindow ) {
+			this.allowCloseWindow.release();
 		}
 		mw.hook( 'mobileFrontend.editorClosed' ).fire();
 	},
