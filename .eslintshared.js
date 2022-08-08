@@ -13,7 +13,8 @@ const rules = {
 	],
 	"globals": {
 		"$": "off",
-		"OO": "readonly"
+		"OO": "readonly",
+		"self": "off"
 	},
 	"rules": {
 		"no-restricted-properties": [2,
