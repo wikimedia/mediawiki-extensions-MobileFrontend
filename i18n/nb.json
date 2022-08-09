@@ -183,7 +183,7 @@
 	"mobile-frontend-talk-reply": "Svar",
 	"mobile-frontend-talk-reply-info": "Merk at svaret ditt automatisk vil bli signert med ditt brukernavn.",
 	"mobile-frontend-talk-topic-error": "Diskusjonen kunne ikke startes på grunn av en ukjent feil.",
-	"mobile-frontend-talk-topic-error-protected": "Denne diskusjonssiden er beskyttet, du har ikke tilgang til å starte diskusjoner her.",
+	"mobile-frontend-talk-topic-error-protected": "Denne diskusjonssiden er beskyttet. Du har ikke tilgang til å starte diskusjoner her.",
 	"mobile-frontend-talk-topic-error-permission": "Diskusjonen kunne ikke startes. Du har ikke tilgang til å redigere sider.",
 	"mobile-frontend-talk-topic-error-spam": "Innlegget ditt ble refusert fordi det inneholdt reklamelignende materiale.",
 	"mobile-frontend-talk-topic-error-badtoken": "Det oppsto en feil på serveren. Redigeringen din kunne ikke lagres. Prøv å laste inn siden på nytt.",
