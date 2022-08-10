@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Yupik"
+			"Yupik",
+			"Trondtr"
 		]
 	},
 	"mobile-frontend-editor-generic-block-reason": "Dovdameahttun sivva",
@@ -14,5 +15,6 @@
 	"mobile-frontend-news-items": "Ođđasiin",
 	"mobile-frontend-terms-text": "Geavahaneavttut",
 	"mobile-frontend-view": "Mobiilaoainnus",
+	"mobile-frontend-view-desktop": "Bargobeavdi",
 	"mobile-frontend-watchlist-filter-all": "Buot"
 }

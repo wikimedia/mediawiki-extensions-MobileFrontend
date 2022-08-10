@@ -4,6 +4,7 @@
 			"Yupik"
 		]
 	},
+	"mobile-frontend-changeslist-nocomment": "õʹhtteǩeässmõš ij leäkku",
 	"mobile-frontend-clear-search": "Kuârad",
 	"mobile-frontend-diffview-anonymous": "Nõõmteʹmes õõʹnni",
 	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|muuttâs|muttâz|muttsed}}",
@@ -11,6 +12,7 @@
 	"mobile-frontend-editor-anon": "Muuʹtt ǩeeʹrjtõõđǩâni sizz",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Ǩeeʹrjtõõđ sizz",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Mäinn",
+	"mobile-frontend-editor-blocked-drawer-help": "Čuäʹjet teâđaid",
 	"mobile-frontend-editor-terms-link": "[$1 Ââʹnnem-määin]",
 	"mobile-frontend-editor-publish": "Õlmstââʹtt",
 	"mobile-frontend-editor-save": "Ruõkk",
@@ -25,6 +27,7 @@
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Ooʒʒ ǩiõl",
 	"mobile-frontend-main-menu": "Väʹlddvaʹlljõk",
 	"mobile-frontend-main-menu-settings-heading": "Asetõõzz",
+	"mobile-frontend-media-details": "Teâđ",
 	"mobile-frontend-media-license-link": "Teâđ liseeʹnsest",
 	"mobile-frontend-media-load-fail-retry": "Peiʹvved",
 	"mobile-frontend-news-items": "Ođđsin",
