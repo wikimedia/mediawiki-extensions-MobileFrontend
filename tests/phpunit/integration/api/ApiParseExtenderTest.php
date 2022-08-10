@@ -21,6 +21,8 @@ class ApiParseExtenderTest extends MediaWikiIntegrationTestCase {
 	}
 
 	private function doTest( array $params, string $expected ) {
+		// MobileFrontendContentProvider may use HTTP requests which are forbidden in test environment, so disable.
+		$this->clearHook( 'MobileFrontendContentProvider' );
 		$params += [ 'action' => 'parse', 'wrapoutputclass' => '', 'useskin' => 'minerva' ];
 
 		$request = new FauxRequest( $params );
