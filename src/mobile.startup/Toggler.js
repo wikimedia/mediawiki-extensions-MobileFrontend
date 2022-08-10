@@ -187,29 +187,34 @@ function enableKeyboardActions( toggler, $heading, page ) {
  *
  * @memberof Toggler
  * @instance
- * @param {string} id A css selector that identifies a single element
+ * @param {string} id An element ID within the $container
  * @param {Object} $container jQuery element to search in
  * @param {Page} page
+ * @return {boolean} Target ID was found
  */
 Toggler.prototype.reveal = function ( id, $container, page ) {
-	var $target, $heading;
-
+	var $target;
 	// jQuery will throw for hashes containing certain characters which can break toggling
 	try {
 		$target = $container.find( '#' + escapeSelector( id ) );
-		$heading = $target.parents( '.collapsible-heading' );
-		// The heading is not a section heading, check if in a content block!
-		if ( !$heading.length ) {
-			$heading = $target.parents( '.collapsible-block' ).prev( '.collapsible-heading' );
-		}
-		if ( $heading.length && !$heading.hasClass( 'open-block' ) ) {
-			this.toggle( $heading, page );
-		}
-		if ( $heading.length ) {
-			// scroll again after opening section (opening section makes the page longer)
-			window.scrollTo( 0, $target.offset().top );
-		}
 	} catch ( e ) {}
+	if ( !$target || !$target.length ) {
+		return false;
+	}
+
+	var $heading = $target.parents( '.collapsible-heading' );
+	// The heading is not a section heading, check if in a content block!
+	if ( !$heading.length ) {
+		$heading = $target.parents( '.collapsible-block' ).prev( '.collapsible-heading' );
+	}
+	if ( $heading.length && !$heading.hasClass( 'open-block' ) ) {
+		this.toggle( $heading, page );
+	}
+	if ( $heading.length ) {
+		// scroll again after opening section (opening section makes the page longer)
+		window.scrollTo( 0, $target.offset().top );
+	}
+	return true;
 };
 
 /**
@@ -315,23 +320,43 @@ Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 		}
 	} );
 
-	/* eslint-disable no-restricted-properties */
+	/**
+	 * Percent decode a link fragment
+	 *
+	 * Link fragments can be unencoded, fully encoded or partially
+	 * encoded, as defined in the spec.
+	 *
+	 * We can't just use decodeURI as that assumes the fragment
+	 * is fully encoded, and throws an error on a string like '%A'.
+	 *
+	 * @param {string} text Text to decode
+	 * @return {string|null} Decoded text, null if decoding failed
+	 */
+	function percentDecode( text ) {
+		var params = new URLSearchParams(
+			'q=' +
+			// Query string param decoding replaces '+' with ' ' before doing the
+			// percent_decode, so encode '+' to prevent this.
+			text.replace( /\+/g, '%2B' )
+		);
+		return params.get( 'q' );
+	}
+
 	/**
 	 * Checks the existing hash and toggles open any section that contains the fragment.
 	 *
 	 * @method
 	 */
 	function checkHash() {
+		// eslint-disable-next-line no-restricted-properties
 		var hash = window.location.hash;
-		var decodedHash;
 		if ( hash.indexOf( '#' ) === 0 ) {
-			// Non-latin characters in the hash will be provided percent-encoded, which
-			// jQuery would later fail to cope with.
-			try {
-				decodedHash = decodeURIComponent( hash.slice( 1 ) );
+			hash = hash.slice( 1 );
+			// Per https://html.spec.whatwg.org/multipage/browsing-the-web.html#target-element
+			// we try the raw fragment first, then the percent-decoded fragment.
+			if ( !self.reveal( hash, $container, page ) ) {
+				var decodedHash = percentDecode( hash );
 				self.reveal( decodedHash, $container, page );
-			} catch ( e ) {
-				// sometimes decoding will fail e.g. T262599, T264914. If that happens ignore.
 			}
 		}
 	}
@@ -347,10 +372,10 @@ Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 			internalRedirectHash = internalRedirect ? internalRedirect.split( '#' )[1] : false;
 
 		if ( internalRedirectHash ) {
+			// eslint-disable-next-line no-restricted-properties
 			window.location.hash = internalRedirectHash;
 		}
 	}
-	/* eslint-enable no-restricted-properties */
 
 	checkInternalRedirectAndHash();
 	checkHash();

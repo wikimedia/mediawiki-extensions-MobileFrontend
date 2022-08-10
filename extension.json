@@ -271,7 +271,8 @@
 				"user.options",
 				"mediawiki.util",
 				"mediawiki.api",
-				"mediawiki.router"
+				"mediawiki.router",
+				"web2017-polyfills"
 			],
 			"messages": [
 				"mobile-frontend-license-links",
