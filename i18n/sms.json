@@ -30,6 +30,8 @@
 	"mobile-frontend-media-details": "Teâđ",
 	"mobile-frontend-media-license-link": "Teâđ liseeʹnsest",
 	"mobile-frontend-media-load-fail-retry": "Peiʹvved",
+	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 ǩm}}",
+	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",
 	"mobile-frontend-news-items": "Ođđsin",
 	"mobile-frontend-privacy-link-text": "Teâttsuejjčiõʹlǧǧõs",
 	"mobile-frontend-return-to-page": "Määʹcc sijddu",
