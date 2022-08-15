@@ -6,7 +6,7 @@ use MediaWiki\Languages\LanguageNameUtils;
 /**
  * Provides a list of languages available for a page
  */
-class SpecialMobileLanguages extends SpecialPage {
+class SpecialMobileLanguages extends UnlistedSpecialPage {
 	/** @var Title Saves the title object to get languages for */
 	private $title;
 	/** @var MobileContext */
@@ -27,7 +27,7 @@ class SpecialMobileLanguages extends SpecialPage {
 		LanguageNameUtils $languageNameUtils,
 		MobileContext $mobileContext
 	) {
-		parent::__construct( 'MobileLanguages', '', false );
+		parent::__construct( 'MobileLanguages' );
 		$this->languageConverter = $languageConverterFactory->getLanguageConverter( $this->getContentLanguage() );
 		$this->languageNameUtils = $languageNameUtils;
 		$this->mobileContext = $mobileContext;
