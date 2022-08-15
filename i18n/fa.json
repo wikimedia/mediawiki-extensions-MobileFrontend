@@ -99,7 +99,7 @@
 	"mobile-frontend-editor-error-preview": "خطا، مشکلی غیر منتظره برای بارگیری پیش‌نمایش پدید آمده. لطفاً صفحه را ببندید و دوباره تلاش کنید.",
 	"mobile-frontend-editor-keep-editing": "ادامه ویرایش‌کردن",
 	"mobile-frontend-editor-licensing": "با ذخیرهٔ تغییرات، شما با انتشار مشارکتتان تحت {{PLURAL:$2|مجوز|مجوز}} $1 موافقت کرده‌اید.",
-	"mobile-frontend-editor-licensing-with-terms": "با دخیرهٔ تغییراتتان، شما با $1 و انتشار مشارکتتان تحت {{PLURAL:$3|مجوز|مجوز}} $2 موافقت کرده‌اید.",
+	"mobile-frontend-editor-licensing-with-terms": "با ذخیرهٔ تغییراتتان، شما با $1 و انتشار مشارکتتان تحت {{PLURAL:$3|مجوز|مجوز}} $2 موافقت کرده‌اید.",
 	"mobile-frontend-editor-terms-link": "[$1 شرایط استفاده]",
 	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|آیا مطمئن هستید برای ایجاد}} یک صفحه جدید در {{SITENAME}}؟",
 	"mobile-frontend-editor-placeholder": "این بخش خالی است. اولین نفری باشید که آن را گسترش می‌دهد!",

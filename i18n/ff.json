@@ -1,9 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ibrahima"
+			"Ibrahima",
+			"Amire80",
+			"Ibrahima Malal Sarr",
+			"Musaddam Idriss"
 		]
 	},
+	"mobile-frontend-terms-text": "Kiitorɗum bota",
+	"mobile-frontend-view": "Jiyte saluula",
+	"mobile-frontend-view-desktop": "Jiyte komfuuyuta",
 	"tag-mobile_edit": "Taƴtagol cinndel",
 	"tag-mobile_web_edit": "Taƴtagol cinndel e geese"
 }
