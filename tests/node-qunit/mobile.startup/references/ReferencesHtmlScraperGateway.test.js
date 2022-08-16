@@ -27,6 +27,10 @@ QUnit.module( 'MobileFrontend ReferencesHtmlScraperGateway.test.js', {
 			util.parseHTML( '<div>' ).html( referencesPage )
 		);
 		referencesGateway = new ReferencesHtmlScraperGateway( new mw.Api() );
+		global.mw.util.percentDecodeFragment = function ( decoded ) {
+			// We're not testing percentDecodeFragment here, so only test with decoded values
+			return decoded;
+		};
 	},
 	afterEach: function () {
 		jQuery.tearDown();
@@ -43,14 +47,6 @@ QUnit.test( 'getReference() checking good reference', function ( assert ) {
 QUnit.test( 'getReference() checking bad reference', function ( assert ) {
 	return referencesGateway.getReference( '#cite_note-bad', page, pageHTMLParser ).catch( function ( err ) {
 		assert.strictEqual( err, ReferencesGateway.ERROR_NOT_EXIST, 'When bad id given false returned.' );
-	} );
-} );
-
-QUnit.test( 'getReference() checking encoded reference', function ( assert ) {
-	const id = '#cite_note-Obama_1995,_2004,_pp._9%E2%80%9310-11';
-	return referencesGateway.getReference( id, page, pageHTMLParser ).then( function ( ref ) {
-		assert.strictEqual( ref.text, 'found',
-			'If an encoded ID parameter is given it still resolves correctly.' );
 	} );
 } );
 

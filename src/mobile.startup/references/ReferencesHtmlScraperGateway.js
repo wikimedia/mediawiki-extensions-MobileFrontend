@@ -23,8 +23,7 @@ mfExtend( ReferencesHtmlScraperGateway, ReferencesGateway, {
 	/**
 	 * @memberof ReferencesHtmlScraperGateway
 	 * @instance
-	 * @param {string} id of a DOM element in the page with '#' prefix.
-	 *  can be encoded or decoded.
+	 * @param {string} id ID of a DOM element in the page.
 	 * @param {jQuery.Object} $container to scan for an element
 	 * @return {jQuery.Promise} that can be used by getReference
 	 */
@@ -32,7 +31,7 @@ mfExtend( ReferencesHtmlScraperGateway, ReferencesGateway, {
 		var $el, $ol, $parent,
 			result = util.Deferred();
 
-		$el = $container.find( '#' + util.escapeSelector( id.slice( 1 ) ) );
+		$el = $container.find( '#' + util.escapeSelector( id ) );
 		if ( $el.length ) {
 			// This finds either the inner <ol class="mw-extended-references">, or the outer
 			// <ol class="references">
@@ -66,17 +65,12 @@ mfExtend( ReferencesHtmlScraperGateway, ReferencesGateway, {
 	 * @inheritdoc
 	 * @memberof ReferencesHtmlScraperGateway
 	 * @instance
-	 * @param {string} id
+	 * @param {string} hash Hash fragment with leading '#'
 	 * @param {Page} page (unused)
 	 * @param {PageHTMLParser} pageHTMLParser
 	 */
-	getReference: function ( id, page, pageHTMLParser ) {
-		try {
-			id = decodeURIComponent( id );
-		} catch ( e ) {
-			// try id passed in - may already be decoded (T268059)
-			// if it's not found it will throw an error later down the chain.
-		}
+	getReference: function ( hash, page, pageHTMLParser ) {
+		var id = mw.util.percentDecodeFragment( hash.slice( 1 ) );
 		// If an id is not found it's possible the id passed needs decoding (per T188547).
 		return this.getReferenceFromContainer( id, pageHTMLParser.$el.find( 'ol.references' ) );
 	}

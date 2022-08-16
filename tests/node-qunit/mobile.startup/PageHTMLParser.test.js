@@ -30,6 +30,11 @@ QUnit.module( 'MobileFrontend PageHTMLParser.js', {
 		PageHTMLParser = require( '../../../src/mobile.startup/PageHTMLParser' );
 		util = require( '../../../src/mobile.startup/util' );
 
+		global.mw.util.percentDecodeFragment = function ( decoded ) {
+			// We're not testing percentDecodeFragment here, so only test with decoded values
+			return decoded;
+		};
+
 		stubPage = new PageHTMLParser(
 			util.parseHTML( PARSER_OUTPUT ).html(
 				'<p>lead</p><div class="ambox">a0</div>'

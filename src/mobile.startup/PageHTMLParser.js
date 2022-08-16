@@ -182,7 +182,7 @@ class PageHTMLParser {
 				thumbs.push(
 					new Thumbnail( {
 						el: $a,
-						filename: decodeURIComponent(
+						filename: mw.util.percentDecodeFragment(
 							legacyMatch ? legacyMatch[1] : match[0]
 						)
 					} )

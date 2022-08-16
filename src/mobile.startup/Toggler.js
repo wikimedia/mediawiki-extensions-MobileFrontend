@@ -321,33 +321,6 @@ Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 	} );
 
 	/**
-	 * Percent decode a link fragment
-	 *
-	 * Link fragments can be unencoded, fully encoded or partially
-	 * encoded, as defined in the spec.
-	 *
-	 * We can't just use decodeURI as that assumes the fragment
-	 * is fully encoded, and throws an error on a string like '%A'.
-	 *
-	 * @param {string} text Text to decode
-	 * @return {string|null} Decoded text, null if decoding failed
-	 */
-	function percentDecode( text ) {
-		var params = new URLSearchParams(
-			'q=' +
-			text
-				// Query string param decoding replaces '+' with ' ' before doing the
-				// percent_decode, so encode '+' to prevent this.
-				.replace( /\+/g, '%2B' )
-				// Query strings are split on '&' and then '=' so encode these too.
-				.replace( /&/g, '%26' )
-				.replace( /=/g, '%3D' )
-
-		);
-		return params.get( 'q' );
-	}
-
-	/**
 	 * Checks the existing hash and toggles open any section that contains the fragment.
 	 *
 	 * @method
@@ -360,8 +333,10 @@ Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 			// Per https://html.spec.whatwg.org/multipage/browsing-the-web.html#target-element
 			// we try the raw fragment first, then the percent-decoded fragment.
 			if ( !self.reveal( hash, $container, page ) ) {
-				var decodedHash = percentDecode( hash );
-				self.reveal( decodedHash, $container, page );
+				var decodedHash = mw.util.percentDecodeFragment( hash );
+				if ( decodedHash ) {
+					self.reveal( decodedHash, $container, page );
+				}
 			}
 		}
 	}
