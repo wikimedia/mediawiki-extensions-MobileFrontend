@@ -421,6 +421,7 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 
 	/**
 	 * @covers MobileFrontendHooks::onRequestContextCreateSkin
+	 * @covers MobileFrontendHooks::getSpecialPreferencesUseMobileLayout
 	 * @dataProvider provideDefaultMobileSkin
 	 */
 	public function testGetDefaultMobileSkin(
@@ -446,6 +447,9 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 			$this->createMock( UserIdentity::class )
 		);
 
+		$modeMock = $this->createMock( \MobileFrontend\Amc\UserMode::class );
+		$modeMock->method( 'isEnabled' )->willReturn( true );
+
 		$skinFactory = new SkinFactory(
 			new ObjectFactory( $this->createMock( ContainerInterface::class ) ), []
 		);
@@ -467,6 +471,7 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 		$this->setService( 'SkinFactory', $skinFactory );
 		$this->setService( 'MobileFrontend.Config', $config );
 		$this->setService( 'MobileFrontend.Context', $mobileContext );
+		$this->setService( 'MobileFrontend.AMC.UserMode', $modeMock );
 
 		/**	@var Skin $skin */
 		$skin = null;
