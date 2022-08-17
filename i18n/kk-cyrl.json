@@ -8,7 +8,8 @@
 			"Kaztrans",
 			"U.ayaao.p",
 			"Wertuose",
-			"Wikibilim"
+			"Wikibilim",
+			"СеніңШешең"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Пайдаланушы мобильді интерфейс арқылы өңдеп жатыр ма, өңдеп жатқан жоқ па",
@@ -146,8 +147,8 @@
 	"mobile-frontend-talk-topic-error-permission": "Тақырып қосылмайды. Сізде бетті өңдеуге рұқсатыңыз жоқ.",
 	"mobile-frontend-talk-topic-wait": "Тақырыбыңыз сақталуда, күтіңіз.",
 	"mobile-frontend-terms-text": "Қолдану шарты",
-	"mobile-frontend-view": "Мобайлды көрініс",
-	"mobile-frontend-view-desktop": "Компьютерлік нұсқа",
+	"mobile-frontend-view": "Мобильді көрініс",
+	"mobile-frontend-view-desktop": "Үстелдік нұсқа",
 	"mobile-frontend-watchlist-a-z": "Тізім",
 	"mobile-frontend-watchlist-a-z-empty-howto-alt": "Жұлдызшаны басыңыз",
 	"mobile-frontend-watchlist-add": "$1 бақылау тізіміңізге қосылды",
