@@ -30,8 +30,6 @@ QUnit.module( 'MobileFrontend imports', {
 				LookupElement: () => {}
 			}
 		};
-		// FIXME: Belongs to mock mediawiki - remove when https://github.com/wikimedia/mw-node-qunit/pull/6
-		global.mw.trackSubscribe = () => {};
 		fakeRouter = new OO.EventEmitter();
 		fakeRouter.getPath = sandbox.stub().returns( '' );
 		fakeRouter.back = sandbox.spy();
