@@ -19,7 +19,7 @@ function loadCurrentPage() {
 		return page;
 	}
 
-	const permissions = mw.config.get( 'wgRestrictionEdit', [] ),
+	const permissions = [].concat( mw.config.get( 'wgRestrictionEdit', [] ) ),
 		$content = $( '#content #bodyContent' ),
 		gateway = new PageGateway( new mw.Api() ),
 		relevantTitle = mw.Title.newFromText( mw.config.get( 'wgRelevantPageName' ) ),
