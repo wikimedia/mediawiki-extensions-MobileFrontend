@@ -458,6 +458,7 @@ function bindEditLinksLoginDrawer( router ) {
 					warning: 'mobile-frontend-watchlist-signup-action'
 				}
 			} );
+			document.body.appendChild( drawer.$el[ 0 ] );
 		}
 		drawer.show();
 	}
