@@ -140,12 +140,63 @@ class SpecialMobileOptions extends MobileSpecialPage {
 	}
 
 	/**
+	 * Builds mobile user preferences field.
+	 * @return \OOUI\FieldLayout
+	 * @throws \OOUI\Exception
+	 */
+	private function buildMobileUserPreferences() {
+		$spacer = new OOUI\LabelWidget( [
+			'name' => 'mobile_preference_spacer',
+		] );
+		$userPreferences = new OOUI\FieldLayout(
+			$spacer,
+			[
+				'label' => new OOUI\LabelWidget( [
+					'input' => $spacer,
+					'label' => new OOUI\HtmlSnippet(
+						Html::openElement( 'div' ) .
+						Html::rawElement( 'strong', [],
+							 $this->msg( 'mobile-frontend-user-pref-option' )->parse() ) .
+						Html::rawElement( 'div', [ 'class' => 'option-description' ],
+							 $this->msg( 'mobile-frontend-user-pref-description' )->parse()
+						) .
+						Html::closeElement( 'div' )
+					)
+				] ),
+				'id' => 'mobile-user-pref',
+			]
+		);
+
+		$userPreferences->appendContent( new OOUI\HtmlSnippet(
+			Html::openElement( 'ul', [ 'class' => 'hlist option-links' ] ) .
+			Html::openElement( 'li' ) .
+			Html::rawElement(
+				'a',
+				[ 'href' => Title::newFromText( 'Special:Preferences' )->getLocalURL() ],
+				$this->msg( 'mobile-frontend-user-pref-link' )->parse()
+			) .
+			Html::closeElement( 'li' ) .
+			Html::openElement( 'li' ) .
+			Html::rawElement(
+				'a',
+				// phpcs:ignore Generic.Files.LineLength.TooLong
+				[ 'href' => 'https://www.mediawiki.org/wiki/Moderator_Tools/Content_moderation_on_mobile_web/Preferences' ],
+				$this->msg( 'mobile-frontend-user-pref-feedback' )->parse()
+			) .
+			Html::closeElement( 'li' ) .
+			Html::closeElement( 'ul' )
+		) );
+		return $userPreferences;
+	}
+
+	/**
 	 * Render the settings form (with actual set settings) and add it to the
 	 * output as well as any supporting modules.
 	 */
 	private function addSettingsForm() {
 		$out = $this->getOutput();
 		$user = $this->getUser();
+		$isAMCEnabled = $this->userMode->isEnabled();
 
 		$out->setPageTitle( $this->msg( 'mobile-frontend-main-menu-settings-heading' ) );
 		$out->enableOOUI();
@@ -171,6 +222,11 @@ class SpecialMobileOptions extends MobileSpecialPage {
 
 		if ( $this->amc->isAvailable() ) {
 			$fields[] = $this->buildAMCToggle();
+			// https://phabricator.wikimedia.org/T311720
+			if ( $isAMCEnabled ) {
+				$fields[] = $this->buildMobileUserPreferences();
+			}
+
 		}
 		// beta settings
 		$isInBeta = $this->mobileContext->isBetaGroupMember();
