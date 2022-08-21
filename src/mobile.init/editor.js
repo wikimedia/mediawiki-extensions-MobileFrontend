@@ -493,7 +493,7 @@ function init( currentPage, currentPageHTMLParser, skin, router ) {
 	} else {
 		hideSectionEditIcons( currentPageHTMLParser );
 		editRestrictions = mw.config.get( 'wgRestrictionEdit' );
-		if ( mw.user.isAnon() && Array.isArray( editRestrictions ) && editRestrictions.indexOf( '*' ) !== -1 ) {
+		if ( mw.user.isAnon() && Array.isArray( editRestrictions ) && !editRestrictions.length ) {
 			bindEditLinksLoginDrawer( router );
 		} else {
 			var $link = $( '<a>' ).attr( 'href', '/wiki/' + mw.config.get( 'wgPageName' ) + '?action=edit' );
