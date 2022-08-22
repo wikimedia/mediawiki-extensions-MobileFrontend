@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Vlad5250"
+		]
+	},
+	"apihelp-parse-param-mobileformat": "Daj izlaz analize u formatu prikladnom za mobilne uređaje.",
+	"apihelp-parse-param-noimages": "Onemogući slike u mobilnom izlazu.",
+	"apihelp-parse-param-mainpage": "Primijeni transformacije mobilne glavne stranice.",
+	"apihelp-webapp-manifest-description": "Daje manifest web privitka.",
+	"apihelp-webapp-manifest-summary": "Daje manifest web privitka."
+}
