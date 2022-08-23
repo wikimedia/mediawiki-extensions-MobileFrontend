@@ -38,7 +38,7 @@
 	"mobile-frontend-editor-cancel-confirm": "តើអ្នកពិតជាចង់បោះបង់ការកែប្រែរបស់អ្នកឬ?",
 	"mobile-frontend-editor-captcha-try-again": "កូដមិនត្រឹមត្រូវ។ សូមព្យាយាមម្ដងទៀត។",
 	"mobile-frontend-editor-continue": "បន្ទាប់",
-	"mobile-frontend-editor-disabled": "ទំព័រត្រូវបានការពារពីការបំផ្លិចបំផ្លាញ។",
+	"mobile-frontend-editor-disabled": "ទំព័រត្រូវបានការពារពីការបំផ្លិចបំផ្លាញ។ [$1 មើលកូដ]",
 	"mobile-frontend-editor-disabled-anon": "អ្នកត្រូវតែកត់ឈ្មោះចូលដើម្បីកែប្រែទំព័រនេះ។",
 	"mobile-frontend-editor-editing": "កំពុងកែប្រែ",
 	"mobile-frontend-editor-editing-page": "<span><strong>កំពុងកែប្រែ</strong> $1</span>",
