@@ -42,7 +42,8 @@ class MobileFrontendSkinHooks {
 
 		$desktop = $context->msg( 'mobile-frontend-view-desktop' )->text();
 		return Html::element( 'a',
-			[ 'id' => 'mw-mf-display-toggle', 'href' => $desktopUrl ], $desktop );
+			[ 'id' => 'mw-mf-display-toggle', 'href' => $desktopUrl,
+				'data-event-name' => 'switch_to_desktop' ], $desktop );
 	}
 
 	/**
