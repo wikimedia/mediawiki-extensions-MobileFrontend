@@ -335,9 +335,14 @@ Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 	function percentDecode( text ) {
 		var params = new URLSearchParams(
 			'q=' +
-			// Query string param decoding replaces '+' with ' ' before doing the
-			// percent_decode, so encode '+' to prevent this.
-			text.replace( /\+/g, '%2B' )
+			text
+				// Query string param decoding replaces '+' with ' ' before doing the
+				// percent_decode, so encode '+' to prevent this.
+				.replace( /\+/g, '%2B' )
+				// Query strings are split on '&' and then '=' so encode these too.
+				.replace( /&/g, '%26' )
+				.replace( /=/g, '%3D' )
+
 		);
 		return params.get( 'q' );
 	}
