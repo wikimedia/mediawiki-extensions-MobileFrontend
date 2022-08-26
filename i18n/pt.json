@@ -191,7 +191,7 @@
 	"mobile-frontend-talk-reply": "Responder",
 	"mobile-frontend-talk-reply-info": "Note que a sua resposta será assinada automaticamente com o seu nome de utilizador.",
 	"mobile-frontend-talk-topic-error": "O tópico não pode ser acrescentado devido a um erro desconhecido.",
-	"mobile-frontend-talk-topic-error-protected": "Esta página de discussão está protegida, e não tem permissão para acrescentar tópicos.",
+	"mobile-frontend-talk-topic-error-protected": "Esta página de discussão está protegida. Não tem permissão para lhe acrescentar tópicos.",
 	"mobile-frontend-talk-topic-error-permission": "O tópico não pode ser adicionado. Não tem permissão para editar páginas.",
 	"mobile-frontend-talk-topic-error-spam": "O tópico foi recusado porque continha um fragmento de spam.",
 	"mobile-frontend-talk-topic-error-badtoken": "Ocorreu um erro no servidor. Não foi possível gravar a sua edição. Experimente recarregar esta página.",
