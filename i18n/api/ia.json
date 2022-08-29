@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"apihelp-parse-param-mobileformat": "Retornar le resultato del analyse syntactic in un formato apte pro apparatos mobile.",
+	"apihelp-parse-param-noimages": "Disactivar imagines in le rendition mobile.",
+	"apihelp-parse-param-mainpage": "Applicar transformationes del pagina principal pro apparatos mobile.",
+	"apihelp-webapp-manifest-description": "Retorna un manifesto de application web.",
+	"apihelp-webapp-manifest-summary": "Retorna un manifesto de application web."
+}
