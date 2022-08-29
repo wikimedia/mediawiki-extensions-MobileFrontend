@@ -70,7 +70,7 @@ mfExtend( TalkSectionOverlay, Overlay, {
 	<div class="comment">
 		<div class="list-header">{{reply}}</div>
 		<div class="comment-content">
-			<textarea class="wikitext-editor"></textarea>
+			<textarea class="wikitext-editor" data-event-name="talkpage.focus-comment"></textarea>
 			<p class="license">
 				{{info}}
 				{{{licenseMsg}}}
@@ -118,6 +118,10 @@ mfExtend( TalkSectionOverlay, Overlay, {
 		this.state.text = value;
 		if ( value ) {
 			this.$saveButton.prop( 'disabled', false );
+			if ( !this.state.loggedInput ) {
+				mw.track( 'webuiactions_log.click', 'talkpage.input-comment' );
+				this.state.loggedInput = true;
+			}
 		} else {
 			this.$saveButton.prop( 'disabled', true );
 		}
@@ -200,6 +204,8 @@ mfExtend( TalkSectionOverlay, Overlay, {
 	onSaveClick: function () {
 		var val = this.state.text,
 			self = this;
+
+		mw.track( 'webuiactions_log.click', 'talkpage.publish-comment' );
 
 		function enableSaveButton() {
 			self.$saveButton.prop( 'disabled', false );
