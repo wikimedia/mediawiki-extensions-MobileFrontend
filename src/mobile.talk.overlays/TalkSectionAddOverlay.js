@@ -101,6 +101,11 @@ mfExtend( TalkSectionAddOverlay, Overlay, {
 		this.subject = subject;
 		this.body = body;
 
+		if ( !this._loggedInput ) {
+			mw.track( 'webuiactions_log.click', 'talkpage.input-topic' );
+			this._loggedInput = true;
+		}
+
 		clearTimeout( this.timer );
 		this.timer = setTimeout( function () {
 			if ( !body || !subject ) {
@@ -117,6 +122,7 @@ mfExtend( TalkSectionAddOverlay, Overlay, {
 	 * @instance
 	 */
 	onSaveClick: function () {
+		mw.track( 'webuiactions_log.click', 'talkpage.publish-topic' );
 		this.showHidden( '.saving-header' );
 		this.save().then( function ( status ) {
 			if ( status === 'ok' && this.options.onSaveComplete ) {
