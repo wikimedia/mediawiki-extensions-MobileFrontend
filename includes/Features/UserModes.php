@@ -4,6 +4,7 @@ namespace MobileFrontend\Features;
 
 use ArrayIterator;
 use IteratorAggregate;
+use Traversable;
 
 /**
  * User Modes collection
@@ -42,7 +43,7 @@ class UserModes implements IteratorAggregate {
 	/**
 	 * @return ArrayIterator
 	 */
-	public function getIterator() {
+	public function getIterator(): Traversable {
 		return new ArrayIterator( $this->modes );
 	}
 
