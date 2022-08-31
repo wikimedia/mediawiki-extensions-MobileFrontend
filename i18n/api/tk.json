@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"TayfunEt."
+		]
+	},
+	"apihelp-parse-param-mobileformat": "Jikme-jik enjamlary ykjam enjamlar üçin amatly formatda gaýtaryň.",
+	"apihelp-parse-param-noimages": "Jübi çykyşynda şekilleri öçüriň.",
+	"apihelp-parse-param-mainpage": "Jübi sahypasynyň esasy üýtgeşmelerini ulanyň.",
+	"apihelp-webapp-manifest-description": "Webapp manifestini görkezýär.",
+	"apihelp-webapp-manifest-summary": "Webapp manifestini görkezýär."
+}
