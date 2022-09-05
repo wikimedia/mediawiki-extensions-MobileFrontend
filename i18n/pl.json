@@ -38,7 +38,8 @@
 			"VerMa",
 			"Vuh",
 			"WTM",
-			"Woytecr"
+			"Woytecr",
+			"Msz2001"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Czy użytkownik edytuje lub nie za pomocą interfejsu mobilnego",
@@ -243,7 +244,7 @@
 	"mobile.css": "/* Umieszczony tutaj kod CSS zostanie załadowany u wszystkich użytkowników korzystających z wersji mobilnej */",
 	"mobile.js": "/* Umieszczony tutaj kod JavaScript zostanie załadowany u wszystkich użytkowników korzystających z wersji mobilnej */",
 	"nearby": "Strony na temat obiektów znajdujących się w pobliżu",
-	"tag-mobile_edit": "Z internetu mobilnego",
+	"tag-mobile_edit": "Z urządzenia mobilnego",
 	"tag-mobile_edit-description": "Edycja dokonana z wersji dla urządzeń mobilnych lub za pomocą aplikacji mobilnej",
 	"tag-advanced_mobile_edit": "Zaawansowana edycja mobilna",
 	"tag-advanced_mobile_edit-description": "Edycja wykonana przez użytkownika w trybie zaawansowanym",

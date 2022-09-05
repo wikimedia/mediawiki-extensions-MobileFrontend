@@ -26,6 +26,7 @@
 	"mobile-frontend-last-modified-with-user-years": "[$4 أخر تعديل لهاد صفحة {{GENDER:$1|دارو|دارتو}}]  {{PLURAL:$5|[$6 $2]|0=خدايمي مجهول}} هادي {{PLURAL:$3|سنة|سنتين|$3 سنوات|$3 سنة}}",
 	"mobile-frontend-nearby-title": "قريب من هنا",
 	"mobile-frontend-search-content": "تقلاب وسط صفاحي",
+	"mobile-frontend-terms-text": "شروط تخدام",
 	"mobile-frontend-view-desktop": "ڤيرسيون د پيسي",
 	"mobile-frontend-watchlist-cta-button-signup": "دير كونط",
 	"tag-mobile_edit": "تعديل من تّيليفون",
