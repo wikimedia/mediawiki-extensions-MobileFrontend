@@ -145,9 +145,12 @@ class ExtMobileFrontend {
 			$transforms[] = new MoveLeadParagraphTransform( $title, $title->getLatestRevID() );
 		}
 
+		$start = microtime( true );
 		$formatter->applyTransforms( $transforms );
+		$end = microtime( true );
+		$report = sprintf( "MobileFormatter took %.3f seconds", $end - $start );
 
-		return $formatter->getText();
+		return $formatter->getText() . "\n<!-- $report -->";
 	}
 
 	/**
