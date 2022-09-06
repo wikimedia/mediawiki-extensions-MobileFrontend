@@ -139,7 +139,7 @@
 	"mobile-frontend-nearby-error-guidance": "Klaskit freskaat ho lec’h.",
 	"mobile-frontend-nearby-noresults": "Sioul eo amañ… N’eus bet kavet pajenn evet gant danvez tost.",
 	"mobile-frontend-nearby-noresults-guidance": "Klaskit krouiñ ur bajenn nevez pe ouzhpennañ ul lec’h d’un hini a zo anezhi dija",
-	"mobile-frontend-nearby-permission-denied": "Difennet ho peus da {{SITENAME}} ober gant ar servijoù lec’hiadur. Evit kemmañ an dibab-mañ, kit da arventennoù ho merdeer pe ho ardivink mar plij.",
+	"mobile-frontend-nearby-permission-denied": "Difennet ho peus da {{SITENAME}} ober gant ar servijoù lec’hiadur. Evit kemmañ an dibab-mañ, kit da arventennoù ho merdeer pe hoc’h ardivink mar plij.",
 	"mobile-frontend-nearby-location-unavailable": "Ne c’hell ket {{SITENAME}} kavout ho lec’h. Klaskit en-dro gant ur sinal gwelloc’h mar plij.",
 	"mobile-frontend-nearby-requirements": "Digarezit! Ne c’hell ket ho merdeer ober gant {{SITENAME}} Nearby.",
 	"mobile-frontend-nearby-requirements-guidance": "Grit gant ur merdeer all pe gweredekait JavaScript m’ho peus diweredekaet anezhañ.",

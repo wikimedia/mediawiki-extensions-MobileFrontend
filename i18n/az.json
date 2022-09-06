@@ -86,6 +86,7 @@
 	"mobile-frontend-privacy-link-text": "Məxfilik",
 	"mobile-frontend-references-citation": "İstinad",
 	"mobile-frontend-return-to-page": "Səhifəyə qayıt",
+	"mobile-frontend-search-content": "Səhifələr arasından axtar",
 	"mobile-frontend-settings-tagline": "Oxu seçimləri",
 	"mobile-frontend-settings-save": "Nizamlamalar yadda saxlanıldı.",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Nə düşünürsən?",
@@ -116,5 +117,6 @@
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Şrift ölçüsü",
 	"mobile-frontend-mobile-option-amc": "Təkmilləşdirilmiş rejim",
 	"mobile-frontend-mobile-option-amc-experiment-description": "Təkmilləşdirilmiş rejim müzakirə səhifələrinə, səhifə tarixçələrinə, istifadəçi alətlərinə və digər redaktə vasitələrinə asanlıqla girişi təmin edir.",
-	"mobile-frontend-mobile-option-amc-learn-more": "Daha ətraflı"
+	"mobile-frontend-mobile-option-amc-learn-more": "Daha ətraflı",
+	"mobile-frontend-mobile-option-amc-send-feedback": "Rəy bildirin"
 }
