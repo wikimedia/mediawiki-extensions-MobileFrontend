@@ -3,6 +3,7 @@
 namespace MobileFrontend\Transforms;
 
 use DOMElement;
+use Wikimedia\Parsoid\Utils\DOMCompat;
 
 /**
  * Marks the headings as editable by adding the <code>in-block</code>
@@ -54,9 +55,10 @@ class SubHeadingTransform implements IMobileTransform {
 		$found = false;
 		$subheadings = [];
 		foreach ( $this->topHeadingTags as $tagName ) {
-			$allTags = $body->getElementsByTagName( $tagName );
+			$allTags = DOMCompat::querySelectorAll( $body, $tagName );
 			$elements = [];
 			foreach ( $allTags as $el ) {
+				/** @phan-suppress-next-line PhanUndeclaredMethod DOMNode vs. DOMElement */
 				if ( $el->parentNode->getAttribute( 'class' ) !== 'toctitle' ) {
 					$elements[] = $el;
 				}

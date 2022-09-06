@@ -2,6 +2,7 @@
 
 use HtmlFormatter\HtmlFormatter;
 use MobileFrontend\Transforms\IMobileTransform;
+use Wikimedia\Parsoid\Utils\DOMCompat;
 
 /**
  * Converts HTML into a mobile-friendly version
@@ -53,10 +54,9 @@ class MobileFormatter extends HtmlFormatter {
 		$this->filterContent();
 
 		$doc = $this->getDoc();
-		$body = $doc->getElementsByTagName( 'body' )->item( 0 );
+		$body = DOMCompat::querySelector( $doc, 'body' );
 
 		foreach ( $transforms as $transform ) {
-			/** @phan-suppress-next-line PhanTypeMismatchArgumentSuperType DOMNode vs. DOMElement */
 			$transform->apply( $body );
 		}
 	}

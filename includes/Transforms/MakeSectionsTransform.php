@@ -9,6 +9,7 @@ use Exception;
 use Html;
 use MediaWiki\ResourceLoader\ResourceLoader;
 use MobileUI;
+use Wikimedia\Parsoid\Utils\DOMCompat;
 
 /**
  * Implements IMobileTransform, that splits the body of the document into
@@ -179,9 +180,10 @@ class MakeSectionsTransform implements IMobileTransform {
 		$headings = [];
 
 		foreach ( $this->topHeadingTags as $tagName ) {
-			$allTags = $doc->getElementsByTagName( $tagName );
+			$allTags = DOMCompat::querySelectorAll( $doc, $tagName );
 
 			foreach ( $allTags as $el ) {
+				/** @phan-suppress-next-line PhanUndeclaredMethod DOMNode vs. DOMElement */
 				if ( $el->parentNode->getAttribute( 'class' ) !== 'toctitle' ) {
 					$headings[] = $el;
 				}

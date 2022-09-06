@@ -1,6 +1,7 @@
 <?php
 
 use MobileFrontend\Transforms\LazyImageTransform;
+use Wikimedia\Parsoid\Utils\DOMCompat;
 
 /**
  * @group MobileFrontend
@@ -128,7 +129,7 @@ class LazyImageTransformTest extends \MediaWikiUnitTestCase {
 		$doc = new DOMDocument();
 
 		$doc->loadHTML( self::wrap( self::wrapSection( $img ) ) );
-		$transform->apply( $doc->getElementsByTagName( 'body' )->item( 0 ) );
+		$transform->apply( DOMCompat::querySelector( $doc, 'body' ) );
 		$this->assertEquals(
 			self::wrap( self::wrapSection( $img ) ),
 			$doc->saveHTML(),
@@ -153,7 +154,7 @@ class LazyImageTransformTest extends \MediaWikiUnitTestCase {
 		$doc = new DOMDocument();
 
 		$doc->loadHTML( self::wrap( $img ) );
-		$transform->apply( $doc->getElementsByTagName( 'body' )->item( 0 ) );
+		$transform->apply( DOMCompat::querySelector( $doc, 'body' ) );
 		$this->assertEquals(
 			self::wrap( $img ),
 			$doc->saveHTML(),
@@ -186,7 +187,7 @@ class LazyImageTransformTest extends \MediaWikiUnitTestCase {
 		$doc = new DOMDocument();
 		libxml_use_internal_errors( true );
 		$doc->loadHTML( self::wrap( self::wrapSection( 'First' ) . self::wrapSection( $html ) ) );
-		$transform->apply( $doc->getElementsByTagName( 'body' )->item( 0 ) );
+		$transform->apply( DOMCompat::querySelector( $doc, 'body' ) );
 		$this->assertEquals(
 			self::wrap( self::wrapSection( 'First' ) . self::wrapSection( $expected ) ),
 			$doc->saveHTML(),
