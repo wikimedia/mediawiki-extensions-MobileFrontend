@@ -9,7 +9,8 @@
 			"Wertuose",
 			"Wikibilim",
 			"U.ayaao.p",
-			"СеніңШешең"
+			"СеніңШешең",
+			"TayfunEt."
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Пайдаланушы мобильді интерфейс арқылы өңдеп жатыр ма, өңдеп жатқан жоқ па",
@@ -110,6 +111,7 @@
 	"mobile-frontend-languages-variant-header": "{{#language:{{CONTENTLANG}}}} нұсқасы",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Басқа тілдер",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Тілді іздеу",
+	"mobile-frontend-languages-structured-overlay-no-results-body": "Сіз іздеген тіл қолжетімді емес.",
 	"mobile-frontend-last-modified-date": "Соңғы рет $1, $2 бұрын өңделді",
 	"mobile-frontend-last-modified-with-user-days": "{{PLURAL:$3|$3 күн}} бұрын {{PLURAL:$5|[$6 $2]|0=анонимді қатысушы}} [$4 соңғы рет {{GENDER:$1|өңдеді}}]",
 	"mobile-frontend-last-modified-with-user-hours": "{{PLURAL:$5|[$6 $2]|0=анонимді қатысушы}} [{{PLURAL:$3|$3 сағат|$3 сағат}} бұрын $4 соңғы рет {{GENDER:$1|өңдеді}}]",
@@ -122,7 +124,10 @@
 	"mobile-frontend-main-menu-settings-heading": "Баптаулар",
 	"mobile-frontend-media-details": "Бөлшектер",
 	"mobile-frontend-media-license-link": "Лицензиялық ақпараты",
+	"mobile-frontend-media-load-fail-message": "Бұл кескінді жүктеу кезінде қате орын алды.",
+	"mobile-frontend-media-load-fail-retry": "Жаңарту",
 	"mobile-frontend-missing-image": "Сурет",
+	"mobile-frontend-tap-to-display-image": "Кескінді көрсету үшін түртіңіз.",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 км}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 м}}",
 	"mobile-frontend-nearby-error-guidance": "Сіздің орналасқан жеріңізді жаңартуды көріңіз.",
@@ -166,6 +171,7 @@
 	"mobile-frontend-watchlist-error": "Бұл бетті бейнелегенде, қате орын алды. Қайта ашып көріңіз.",
 	"mobile-frontend-watchlist-removed": "$1 бақылау тізіміңізден аласталды",
 	"mobile-frontend-watchlist-signup-action": "<strong>Бақылау тізімі беттерге бетбелгі қоюға және олардағы өзгерістерді қадағалауға көмектеседі.</strong><br />Тізіміңізді бастау үшін тіркеліңіз.",
+	"mobile-frontend-user-page-no-owner-page-yet": "Сізде әлі пайдаланушы беті жоқ",
 	"mobile-frontend-user-page-describe-yourself-editors": "өңдеушілер",
 	"mobile-frontend-user-page-create-owner-page-link-label": "Жеке бет жасау",
 	"mobile-frontend-user-page-create-user-page-link-label": "«$1» деген бетті бастау",
@@ -192,5 +198,7 @@
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Оқу тәжірибеңіздің қаріп өлшемін басқарыңыз.",
 	"mobile-frontend-mobile-option-amc": "Кеңейтілген режим",
 	"mobile-frontend-mobile-option-amc-learn-more": "Көбірек білу",
-	"mobile-frontend-mobile-option-amc-send-feedback": "Пікір жіберу"
+	"mobile-frontend-mobile-option-amc-send-feedback": "Пікір жіберу",
+	"mobile-frontend-amc-outreach-no-thanks": "Жоқ, рахмет",
+	"mobile-frontend-amc-outreach-enabled-message": "Кеңейтілген режим енді қосылды. Оны параметрлерде өшіруге болады."
 }
