@@ -630,7 +630,6 @@ class MobileFrontendHooks {
 		$services = MediaWikiServices::getInstance();
 		/** @var MobileContext $context */
 		$context = $services->getService( 'MobileFrontend.Context' );
-		$config = $services->getService( 'MobileFrontend.Config' );
 		$userMode = $services->getService( 'MobileFrontend.AMC.UserMode' );
 		$user = $context->getUser();
 		$featureManager = $services->getService( 'MobileFrontend.FeaturesManager' );
@@ -648,12 +647,6 @@ class MobileFrontendHooks {
 				$list['Watchlist'] = SpecialMobileWatchlist::class;
 				$list['EditWatchlist'] = SpecialMobileEditWatchlist::class;
 			}
-		}
-		// Add Special:Nearby only, if Nearby is activated and Extension:NearbyPages is not (T66316)!
-		if ( !ExtensionRegistry::getInstance()->isLoaded( 'NearbyPages' ) &&
-			$config->get( 'MFNearby' )
-		) {
-			$list['Nearby'] = SpecialNearby::class;
 		}
 	}
 
@@ -1136,7 +1129,7 @@ class MobileFrontendHooks {
 			$vars['wgMFLazyLoadImages'] =
 				$featureManager->isFeatureAvailableForCurrentUser( 'MFLazyLoadImages' );
 		}
-		// Needed by mobile.startup, mobile.special.watchlist.scripts, mobile.special.nearby.scripts
+		// Needed by mobile.startup and mobile.special.watchlist.scripts.
 		// Needs to know if in beta mode or not and needs to load for Minerva desktop as well.
 		// Ideally this would be inside ResourceLoaderFileModuleWithMFConfig but
 		// sessions are not allowed there.

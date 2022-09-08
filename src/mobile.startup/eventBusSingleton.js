@@ -3,9 +3,7 @@
  * allow disparate components the ability to subscribe to a set of events and
  * react to those events.
  *
- * Prefer to use a more localized event bus when possible. (e.g.
- * mobile.special.nearby.scripts/nearby.js in Change-Id:
- * I632124515d4c26ae5ce77dd503d00a62e5a65dda)
+ * Prefer to use a more localized event bus when possible.
  *
  * Only import this in files at the edges. For example:
  *

@@ -94,16 +94,6 @@ Browser.prototype = {
 	 */
 	supportsTouchEvents: memoize( function () {
 		return 'ontouchstart' in window;
-	} ),
-	/**
-	 * Detect if browser supports geolocation
-	 *
-	 * @memberof Browser
-	 * @instance
-	 * @return {boolean}
-	 */
-	supportsGeoLocation: memoize( function () {
-		return 'geolocation' in window.navigator;
 	} )
 };
 

@@ -1030,7 +1030,7 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
-	 * Gets whether Wikibase descriptions should be shown in search results, including nearby search,
+	 * Gets whether Wikibase descriptions should be shown in search results,
 	 * and watchlists; or as taglines on article pages.
 	 * Doesn't take into account whether the wikidata descriptions
 	 * feature has been enabled.
