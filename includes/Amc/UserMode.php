@@ -49,7 +49,7 @@ class UserMode implements IUserMode, IUserSelectableMode {
 	 * @param UserIdentity $userIdentity
 	 * @param UserOptionsLookup $userOptionsLookup
 	 * @param UserOptionsManager $userOptionsManager
-	 * @throws \RuntimeException When AMC mode is not available
+	 * @throws RuntimeException When AMC mode is not available
 	 */
 	public function __construct(
 		Manager $amcManager,
