@@ -7,6 +7,7 @@ use DOMElement;
 use DOMNode;
 use DOMXPath;
 use MediaWiki\MediaWikiServices;
+use Wikimedia\Parsoid\Utils\DOMCompat;
 
 class MoveLeadParagraphTransform implements IMobileTransform {
 	/**
@@ -35,9 +36,8 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	 * @param DOMElement $node to be transformed
 	 */
 	public function apply( DOMElement $node ) {
-		$section = $node->getElementsByTagName( 'section' )->item( 0 );
+		$section = DOMCompat::querySelector( $node, 'section' );
 		if ( $section ) {
-			/** @phan-suppress-next-line PhanTypeMismatchArgumentSuperType DOMNode vs. DOMElement */
 			$this->moveFirstParagraphBeforeInfobox( $section, $section->ownerDocument );
 		}
 	}

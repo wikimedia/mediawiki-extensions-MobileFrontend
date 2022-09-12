@@ -6,6 +6,7 @@ use DOMDocument;
 use DOMElement;
 use MobileFrontend\Transforms\Utils\HtmlClassUtils;
 use MobileFrontend\Transforms\Utils\HtmlStyleUtils;
+use Wikimedia\Parsoid\Utils\DOMCompat;
 
 class LazyImageTransform implements IMobileTransform {
 
@@ -39,7 +40,7 @@ class LazyImageTransform implements IMobileTransform {
 	 * @param DOMElement $node to be transformed
 	 */
 	public function apply( DOMElement $node ) {
-		$sections = $node->getElementsByTagName( 'section' );
+		$sections = DOMCompat::querySelectorAll( $node, 'section' );
 		$sectionNumber = 0;
 		foreach ( $sections as $sectionNumber => $section ) {
 			if ( $sectionNumber > 0 ) {
@@ -146,7 +147,7 @@ class LazyImageTransform implements IMobileTransform {
 	private function doRewriteImagesForLazyLoading( $el, DOMDocument $doc ) {
 		$lazyLoadSkipSmallImages = $this->skipSmall;
 
-		foreach ( $el->getElementsByTagName( 'img' ) as $img ) {
+		foreach ( DOMCompat::querySelectorAll( $el, 'img' ) as $img ) {
 			$parent = $img->parentNode;
 			$dimensions = $this->getImageDimensions( $img );
 			$hasCompleteDimensions = isset( $dimensions['width'] ) && isset( $dimensions['height'] );

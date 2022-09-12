@@ -1,6 +1,7 @@
 <?php
 
 use MobileFrontend\Transforms\MoveLeadParagraphTransform;
+use Wikimedia\Parsoid\Utils\DOMCompat;
 use Wikimedia\TestingAccessWrapper;
 
 /**
@@ -26,7 +27,7 @@ class MoveLeadParagraphTransformTest extends \MediaWikiUnitTestCase {
 		$doc = new DOMDocument();
 		$doc->loadHTML( self::wrap( $html ), LIBXML_NOERROR );
 		$xPath = new DOMXPath( $doc );
-		$bodyNode = $doc->getElementsByTagName( 'body' )->item( 0 );
+		$bodyNode = DOMCompat::querySelector( $doc, 'body' );
 
 		$wrappedInfobox = $doc->createElement( 'table' );
 		$wrappedInfobox->setAttribute( 'class', 'infobox' );
@@ -110,7 +111,7 @@ class MoveLeadParagraphTransformTest extends \MediaWikiUnitTestCase {
 		$doc->loadHTML( self::wrap(
 			self::wrapSection( 'First' ) . self::wrapSection( $infobox . $paragraph )
 		) );
-		$transform->apply( $doc->getElementsByTagName( 'body' )->item( 0 ) );
+		$transform->apply( DOMCompat::querySelector( $doc, 'body' ) );
 		$this->assertEquals(
 			self::wrap( self::wrapSection( 'First' ) . self::wrapSection( $infobox . $paragraph ) ),
 			$doc->saveHTML(),
@@ -142,7 +143,7 @@ class MoveLeadParagraphTransformTest extends \MediaWikiUnitTestCase {
 		libxml_use_internal_errors( true );
 		$doc = new DOMDocument();
 		$doc->loadHTML( self::wrap( self::wrapSection( $html ) ) );
-		$transform->apply( $doc->getElementsByTagName( 'body' )->item( 0 ) );
+		$transform->apply( DOMCompat::querySelector( $doc, 'body' ) );
 		$this->assertEquals(
 			self::wrap( self::wrapSection( $expected ) ),
 			$doc->saveHTML(), $reason

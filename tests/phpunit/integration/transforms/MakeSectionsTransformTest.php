@@ -1,6 +1,7 @@
 <?php
 
 use MobileFrontend\Transforms\MakeSectionsTransform;
+use Wikimedia\Parsoid\Utils\DOMCompat;
 
 /**
  * @coversDefaultClass MobileFrontend\Transforms\MakeSectionsTransform
@@ -46,7 +47,7 @@ class MakeSectionsTransformTest extends MediaWikiIntegrationTestCase {
 		$doc = new DOMDocument();
 		$wrapped = self::wrap( $html );
 		$doc->loadHTML( $wrapped );
-		$transform->apply( $doc->getElementsByTagName( 'body' )->item( 0 ) );
+		$transform->apply( DOMCompat::querySelector( $doc, 'body' ) );
 		$this->assertEquals( self::wrap( $expected ), $doc->saveHTML(), $reason );
 		libxml_clear_errors();
 	}

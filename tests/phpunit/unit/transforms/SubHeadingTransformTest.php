@@ -1,6 +1,7 @@
 <?php
 
 use MobileFrontend\Transforms\SubHeadingTransform;
+use Wikimedia\Parsoid\Utils\DOMCompat;
 
 /**
  * @coversDefaultClass MobileFrontend\Transforms\SubHeadingTransform
@@ -29,7 +30,7 @@ class SubHeadingTransformTest extends \MediaWikiUnitTestCase {
 		$transform = new SubHeadingTransform( [ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' ] );
 		$doc = new DOMDocument();
 		$doc->loadHTML( self::wrap( $html ) );
-		$transform->apply( $doc->getElementsByTagName( 'body' )->item( 0 ) );
+		$transform->apply( DOMCompat::querySelector( $doc, 'body' ) );
 		$this->assertEquals( self::wrap( $expected ), $doc->saveHTML(), $explanation );
 	}
 
