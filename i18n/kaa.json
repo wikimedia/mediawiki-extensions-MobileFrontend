@@ -4,7 +4,12 @@
 			"Nurlan"
 		]
 	},
+	"abusefilter-edit-builder-vars-user-mobile": "Paydalanıwshı mobil interfeys arqalı redaktorlaw ámelge asıra aladıma yamasa kerisinsheme?",
+	"mobile-frontend-account-create-captcha-placeholder": "Tastıyıqlaw kodın jiberiw",
+	"mobile-frontend-changeslist-nocomment": "redaktorlaw anıqlaması joq",
+	"mobile-frontend-copyright": "Maǵlıwmat $1 litsenziyası boyınsha alınǵan (eger basqa shártler kórsetilmese).",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} siz sıyaqlı adamlar tárepinen bayıtıladı.</strong><br />Úles qosıw ushın sistemaǵa kiriń.",
+	"mobile-frontend-last-modified-with-user-years": "[$4 Sońǵı {{GENDER:$1|redaktorlaw}} {{PLURAL:$3|$3 jıl}} aldın] {{PLURAL:$5|[$6 $2]|0=anonim paydalanıwshı}} tárepinen ámelge asırıldı",
 	"mobile-frontend-nearby-title": "Jaqın-átirapda",
 	"mobile-frontend-terms-text": "Paydalanıw shártleri",
 	"mobile-frontend-view": "Mobile kórinis",

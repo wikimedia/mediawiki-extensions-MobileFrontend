@@ -130,7 +130,7 @@
 	"mobile-frontend-save-error": "Napaka pri shranjevanju nastavitev. Prosimo, preverite, ali imate omogočene piškotke.",
 	"mobile-frontend-save-settings": "Shrani",
 	"mobile-frontend-search-content": "Iščite znotraj strani",
-	"mobile-frontend-search-content-no-results": "<b>{{int:mobile-frontend-search-content}}, da preverite, ali se ta fraza kje pojavi.",
+	"mobile-frontend-search-content-no-results": "<b>{{int:mobile-frontend-search-content}},</b> da preverite, ali se ta fraza kje pojavi.",
 	"mobile-frontend-search-no-results": "Stran s takim naslovom ne obstaja.",
 	"mobile-frontend-settings-beta": "{{SITENAME}} βeta",
 	"mobile-frontend-settings-save": "Nastavitve so shranjene.",
