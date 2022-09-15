@@ -80,7 +80,6 @@ class MobileFrontendHooks {
 	 * @return bool
 	 */
 	public static function onRequestContextCreateSkin( $context, &$skin ) {
-		global $wgSpecialPreferencesUseMobileLayout;
 		$services = MediaWikiServices::getInstance();
 
 		/** @var MobileContext $mobileContext */
@@ -94,12 +93,6 @@ class MobileFrontendHooks {
 
 		// enable wgUseMediaWikiUIEverywhere
 		self::enableMediaWikiUI();
-
-		// enable SpecialPreferencesUseMobileLayout
-		$specialPreferencesUseMobileLayout = self::getSpecialPreferencesUseMobileLayout();
-		if ( $specialPreferencesUseMobileLayout ) {
-			$wgSpecialPreferencesUseMobileLayout = true;
-		}
 
 		// Handle any X-Analytics header values in the request by adding them
 		// as log items. X-Analytics header values are serialized key=value
@@ -1142,7 +1135,6 @@ class MobileFrontendHooks {
 			$vars['wgMFAmcOutreachUserEligible'] = $outreach->isUserEligible();
 			$vars['wgMFLazyLoadImages'] =
 				$featureManager->isFeatureAvailableForCurrentUser( 'MFLazyLoadImages' );
-			$vars['wgSpecialPreferencesUseMobileLayout'] = self::getSpecialPreferencesUseMobileLayout();
 		}
 		// Needed by mobile.startup, mobile.special.watchlist.scripts, mobile.special.nearby.scripts
 		// Needs to know if in beta mode or not and needs to load for Minerva desktop as well.
@@ -1214,22 +1206,5 @@ class MobileFrontendHooks {
 		global $wgCanonicalServer;
 		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
 		$result['mobileserver'] = $context->getMobileUrl( $wgCanonicalServer );
-	}
-
-	/**
-	 * Check if the new mobile layout should be displayed in SpecialPreferences
-	 * @return bool
-	 */
-	private static function getSpecialPreferencesUseMobileLayout() {
-		$services = MediaWikiServices::getInstance();
-		$mobileContext = $services->getService( 'MobileFrontend.Context' );
-		$isMobileView = $mobileContext->shouldDisplayMobileView();
-		$userMode = $services->getService( 'MobileFrontend.AMC.UserMode' );
-		$amcEnabled = $userMode->isEnabled();
-		if ( $isMobileView && $amcEnabled ) {
-			return true;
-		}
-
-		return false;
 	}
 }
