@@ -645,15 +645,15 @@ class MobileFrontendHooks {
 				!$featureManager->isFeatureAvailableForCurrentUser( 'MFUseDesktopSpecialWatchlistPage' )
 			) {
 				// Replace the standard watchlist view with our custom one
-				$list['Watchlist'] = 'SpecialMobileWatchlist';
-				$list['EditWatchlist'] = 'SpecialMobileEditWatchlist';
+				$list['Watchlist'] = SpecialMobileWatchlist::class;
+				$list['EditWatchlist'] = SpecialMobileEditWatchlist::class;
 			}
 		}
 		// Add Special:Nearby only, if Nearby is activated and Extension:NearbyPages is not (T66316)!
 		if ( !ExtensionRegistry::getInstance()->isLoaded( 'NearbyPages' ) &&
 			$config->get( 'MFNearby' )
 		) {
-			$list['Nearby'] = 'SpecialNearby';
+			$list['Nearby'] = SpecialNearby::class;
 		}
 	}
 
