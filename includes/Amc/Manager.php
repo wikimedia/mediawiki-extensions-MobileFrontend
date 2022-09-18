@@ -3,6 +3,7 @@
 namespace MobileFrontend\Amc;
 
 use Config;
+use ConfigException;
 use MobileContext;
 
 /**
@@ -36,7 +37,7 @@ final class Manager {
 
 	/**
 	 * System config
-	 * @var \Config
+	 * @var Config
 	 */
 	private $config;
 
@@ -52,7 +53,7 @@ final class Manager {
 	/**
 	 * Returns information if the AMC mode is available for current session
 	 * @return bool
-	 * @throws \ConfigException
+	 * @throws ConfigException
 	 */
 	public function isAvailable() {
 		return $this->mobileContext->shouldDisplayMobileView()
