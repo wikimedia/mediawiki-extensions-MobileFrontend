@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Keresturec"
+			"Keresturec",
+			"Vlad5250"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "\nБез огляду чи хаснователь ушорює прейґ мобилного интерфейса",
@@ -224,6 +225,7 @@
 	"mobile-frontend-mobile-option-amc-experiment-description": "Напредни режим оможлївює лєгки приступ ґу боком за разгварку, боком историї, хасновательским  инструментом и ґу другим опцийом за ушорйованє.",
 	"mobile-frontend-mobile-option-amc-learn-more": "Дознайце вецей",
 	"mobile-frontend-mobile-option-amc-send-feedback": "Пошлїце повратни информациї",
+	"mobile-frontend-user-pref-feedback": "Пошлїце повратни информациї",
 	"mobile-frontend-amc-outreach-intro": "Представянє напредного режиму",
 	"mobile-frontend-amc-outreach-description": "Напредни режим оможлївює лєгчейши приступ ґу боком за розгварку, ґу боком историї пременкох, ґу нєдавним пременком и ґу другим ушорйовацким опцийом на мобилним апарату.",
 	"mobile-frontend-amc-outreach-enable": "Оможлївиц  напредни режим",

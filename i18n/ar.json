@@ -260,6 +260,8 @@
 	"mobile-frontend-mobile-option-amc-experiment-description": "يوفر الوضع المتقدم وصولا سهلا إلى صفحات النقاش وصفحات التاريخ وأدوات المستخدم وأدوات التحرير الأخرى.",
 	"mobile-frontend-mobile-option-amc-learn-more": "معرفة المزيد",
 	"mobile-frontend-mobile-option-amc-send-feedback": "إرسال تعليق",
+	"mobile-frontend-user-pref-option": "تفضيلات المستخدم",
+	"mobile-frontend-user-pref-link": "افتح التفضيلات",
 	"mobile-frontend-amc-outreach-intro": "تقديم الوضع المتقدم",
 	"mobile-frontend-amc-outreach-description": "الوضع المتقدم يوفر وظيفة متقدمة لصفحات التاريخ، وصفحات المراقبة، وأحدث التغييرات، وأدوات التحرير الأخرى على المحمول.",
 	"mobile-frontend-amc-outreach-enable": "تمكين الوضع المتقدم",

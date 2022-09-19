@@ -30,6 +30,7 @@
 			"Ypryima",
 			"Ата",
 			"Максим Підліснюк",
+			"Пан Хаунд",
 			"Тест"
 		]
 	},
@@ -256,6 +257,7 @@
 	"mobile-frontend-mobile-option-amc-experiment-description": "Розширений режим надає простий доступ до сторінок обговорення, історії сторінок, користувацьких інструментів та інших інструментів редагування.",
 	"mobile-frontend-mobile-option-amc-learn-more": "Дізнатися більше",
 	"mobile-frontend-mobile-option-amc-send-feedback": "Надіслати відгук",
+	"mobile-frontend-user-pref-option": "Налаштування користувача",
 	"mobile-frontend-amc-outreach-intro": "Представляємо розширений режим",
 	"mobile-frontend-amc-outreach-description": "Розширений режим забезпечує покращений функціонал сторінок перегляду історії редагувань, списку спостережень, нових редагувань, та інших редакторських інструментів у мобільній версії.",
 	"mobile-frontend-amc-outreach-enable": "Увімкнути розширений режим",

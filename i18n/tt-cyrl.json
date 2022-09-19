@@ -3,6 +3,7 @@
 		"authors": [
 			"Derslek",
 			"Ilnur efende",
+			"TayfunEt.",
 			"Ерней",
 			"Ильнар"
 		]
@@ -11,9 +12,16 @@
 	"mobile-frontend-copyright": "Мәгълүмат $1 буенча таратыла (әгәр башкасы күрсәтелмәсә).",
 	"mobile-frontend-desc": "Мобиль интерфейс",
 	"mobile-frontend-diffview-title": "Үзгәрешләр",
+	"mobile-frontend-editor-blocked-drawer-action-login": "Керү",
+	"mobile-frontend-editor-blocked-drawer-action-ok": "Ярар",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Сәбәп",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Тыюлы}}",
+	"mobile-frontend-editor-editing": "Үзгәртү",
 	"mobile-frontend-editor-keep-editing": "Үзгәртүне дәвам итү",
+	"mobile-frontend-editor-publish": "Саклау",
+	"mobile-frontend-editor-save": "Саклау",
+	"mobile-frontend-fontchanger-option-small": "Вак",
+	"mobile-frontend-fontchanger-option-large": "Зур",
 	"mobile-frontend-featured-article": "Көннең сайланган материалы",
 	"mobile-frontend-language-heading": "<strong>Телләр</strong>",
 	"mobile-frontend-languages-404-title": "Тел хатасы",
