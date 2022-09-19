@@ -8,7 +8,8 @@
 			"Чаховіч Уладзіслаў",
 			"ZlyiLev",
 			"Chadyka",
-			"No Sleep till Krupki"
+			"No Sleep till Krupki",
+			"Jarash"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ці рэдагуе ўдзельнік праз мабільны інтэрфейс",
@@ -104,7 +105,7 @@
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Іншыя мовы",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Пошук мовы",
 	"mobile-frontend-last-modified-date": "Апошнія змены $1 а $2",
-	"mobile-frontend-last-modified-with-user-days": "[$4 Апошні раз {{GENDER:$1|змененая}} $3 {{PLURAL:$3|дзень|дня|дзён}} таму] {{PLURAL:$5|[$6 $2]|0=ананімным удзельнікам}}",
+	"mobile-frontend-last-modified-with-user-days": "[$4 Апошні раз {{GENDER:$1|змененая}} $3 {{PLURAL:$3|дзень|дні|дзён}} таму] {{PLURAL:$5|[$6 $2]|0=ананімным удзельнікам}}",
 	"mobile-frontend-last-modified-with-user-hours": "[$4 Апошні раз {{GENDER:$1|змененая}} $3 {{PLURAL:$1|гадзіну|гадзіны|гадзінаў}} таму] {{PLURAL:$5|[$6 $2]|0=ананімным удзельнікам}}",
 	"mobile-frontend-last-modified-with-user-just-now": "[$3 Апошні раз {{GENDER:$1|змененая}} толькі што] {{PLURAL:$4|[$5 $2]|0=ананімным удзельнікам}}",
 	"mobile-frontend-last-modified-with-user-minutes": "[$4 Апошні раз {{GENDER:$1|змененая}} $3 {{PLURAL:$1|хвіліну|хвіліны|хвілінаў}} таму] {{PLURAL:$5|[$6 $2]|0=ананімным удзельнікам}}",

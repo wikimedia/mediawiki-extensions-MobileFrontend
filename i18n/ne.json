@@ -31,6 +31,7 @@
 	"mobile-frontend-clear-search": "सफागर्ने",
 	"mobile-frontend-copyright": "सामाग्री $1 अनुसार उपलब्ध छ, खुलाइएको अवस्था बाहेकको हकमा।",
 	"mobile-frontend-diffview-anonymous": "दर्ता नभएका प्रयोगकर्ता",
+	"mobile-frontend-diffview-bytesnochange": "आकारमा कुनै परिवर्तन छैन",
 	"mobile-frontend-diffview-bytesremoved": "$1 {{PLURAL:$1|बाइट|बाइटहरू}} हटाइयाे",
 	"mobile-frontend-diffview-title": "परिवर्तनहरू",
 	"mobile-frontend-edit-login-action": "<strong>सुधारमा सघाउनुहोस्{{SITENAME}}।</strong><br />सम्पादन गर्न प्रवेश गर्नुहोस्।",
@@ -146,7 +147,7 @@
 	"mobile-frontend-watchlist-a-z": "सूची",
 	"mobile-frontend-watchlist-a-z-empty-howto": "तपाई हाल कुनैपनि पृष्ठहरूलाई निगरानी गरिरहनु भएको छैन। तपाईको अवलोकनसूचीले तपाईलाई रुचि लाग्ने पृष्ठहरू पछ्याइराख्न मद्दत गर्दछ। ताराको प्रतिमामा थिचि पृष्ठहरूलाई अवलोकनसूचीमा हाल्न सक्नुहुनेछ।",
 	"mobile-frontend-watchlist-back-home": "गृहपृष्ठमा फर्कनुहोस्",
-	"mobile-frontend-watchlist-cta-button-login": "प्रवेश",
+	"mobile-frontend-watchlist-cta-button-login": "प्रवेश गर्नुहोस्",
 	"mobile-frontend-watchlist-cta-button-signup": "खाता खाेल्नुहाेस्",
 	"mobile-frontend-watchlist-feed": "परिवर्तन गरिएको",
 	"mobile-frontend-watchlist-filter-all": "सबै",
@@ -181,5 +182,5 @@
 	"mobile-frontend-amc-outreach-no-thanks": "पर्दैन, धन्यवाद",
 	"mobile-frontend-amc-outreach-enabled-message": "उन्नत रिती सक्षम भएको छ। तपाई यसलाई सेटिङ्गमा गई बन्द गर्न सक्नुहुनेछ।",
 	"mobile-frontend-amc-outreach-dismissed-message": "तपाई कुनैपनि समय सेटिङ्गमा गई उन्नत रिती सक्षम गर्न सक्नुहुनेछ।",
-	"prefs-mobile": "मोबाइल रूचिहरू"
+	"prefs-mobile": "मोबाइल अभिरूचिहरू"
 }
