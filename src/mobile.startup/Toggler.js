@@ -66,7 +66,7 @@ function saveExpandedSections( expandedSections ) {
  * @param {Page} page
  */
 function storeSectionToggleState( $heading, page ) {
-	var headline = $heading.find( 'span' ).attr( 'id' ),
+	var headline = $heading.find( '.mw-headline' ).attr( 'id' ),
 		isSectionOpen = $heading.hasClass( 'open-block' ),
 		expandedSections = getExpandedSections( page );
 
