@@ -58,6 +58,11 @@ class MobileFrontendSkinHooks {
 		unset( $args['title'], $args['useformat'] );
 		$args['mobileaction'] = 'toggle_view_mobile';
 		$title = $skin->getTitle();
+		// Title could be null
+		// If no title, there is a problem with context. Possibly inside a test.
+		if ( !$title ) {
+			return '';
+		}
 		$mobileViewUrl = $title->getFullURL( $args );
 		$mobileViewUrl = $context->getMobileUrl( $mobileViewUrl );
 
