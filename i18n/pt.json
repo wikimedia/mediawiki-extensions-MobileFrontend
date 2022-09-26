@@ -83,7 +83,7 @@
 	"mobile-frontend-editor-keep-editing": "Continuar a editar",
 	"mobile-frontend-editor-licensing": "Ao gravar as alterações, concorda em publicar o seu contributo ao abrigo {{PLURAL:$2|da licença|das licenças}} $1.",
 	"mobile-frontend-editor-licensing-with-terms": "Ao gravar as alterações, concorda com $1 e em publicar o seu contributo ao abrigo {{PLURAL:$3|da licença|das licenças}} $2.",
-	"mobile-frontend-editor-terms-link": "[$1 Condições de Uso]",
+	"mobile-frontend-editor-terms-link": "[$1 condições de utilização]",
 	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|Tem a certeza de que pretende criar}} uma página nova na wiki {{SITENAME}}?",
 	"mobile-frontend-editor-placeholder": "Esta secção está vazia. Seja a primeira pessoa a expandi-la!",
 	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|Está a criar}} uma página nova na wiki {{SITENAME}}!",
