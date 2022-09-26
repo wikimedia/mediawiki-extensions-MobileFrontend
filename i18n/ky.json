@@ -3,13 +3,20 @@
 		"authors": [
 			"Chorobek",
 			"Janatkg",
-			"Bosogo"
+			"Bosogo",
+			"TayfunEt."
 		]
 	},
+	"abusefilter-edit-builder-vars-user-mobile": "Колдонуучу мобилдик интерфейс аркылуу түзөтүп жатабы же жокпу",
+	"mobile-frontend-account-create-captcha-placeholder": "Ырастоо кодун киргизиңиз",
+	"mobile-frontend-changeslist-nocomment": "түзөтүү корутундусу жок",
+	"mobile-frontend-main-menu-settings-heading": "Ырастоолор",
+	"mobile-frontend-media-load-fail-retry": "Жаңылоо",
 	"mobile-frontend-privacy-link-text": "Купуялыкты сактоо",
 	"mobile-frontend-terms-text": "Колдонуу шарттары",
 	"mobile-frontend-view": "Мобилдик көрүнүш",
 	"mobile-frontend-view-desktop": "Толук түрү",
+	"mobile-frontend-watchlist-cta-button-login": "Кирүү",
 	"tag-mobile_edit": "Мобилдик оңдоо",
 	"tag-mobile_web_edit": "Мобилдик версиясынан оңдоо"
 }

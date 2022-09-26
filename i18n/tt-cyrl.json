@@ -4,7 +4,8 @@
 			"Derslek",
 			"Ilnur efende",
 			"Ерней",
-			"Ильнар"
+			"Ильнар",
+			"TayfunEt."
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "төзәтмә аңлатмасы юк",
@@ -13,7 +14,12 @@
 	"mobile-frontend-diffview-title": "Үзгәрешләр",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Тыю сәбәбе",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Тыюлы}}",
+	"mobile-frontend-editor-editing": "Үзгәртү",
 	"mobile-frontend-editor-keep-editing": "Үзгәртүне дәвам итү",
+	"mobile-frontend-editor-publish": "Саклау",
+	"mobile-frontend-editor-save": "Саклау",
+	"mobile-frontend-fontchanger-option-small": "Вак",
+	"mobile-frontend-fontchanger-option-large": "Зур",
 	"mobile-frontend-featured-article": "Көннең сайланган материалы",
 	"mobile-frontend-language-heading": "<strong>Телләр</strong>",
 	"mobile-frontend-languages-404-title": "Тел хатасы",

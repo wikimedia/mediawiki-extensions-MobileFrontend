@@ -1,9 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robin van der Vliet"
+			"Robin van der Vliet",
+			"LesVisages"
 		]
 	},
 	"mobile-frontend-languages-header-page": "$1 - toki ante",
-	"mobile-frontend-languages-structured-overlay-all-languages-header": "toki ante"
+	"mobile-frontend-languages-structured-overlay-all-languages-header": "toki ante",
+	"mobile-frontend-terms-text": "lawa kepeken",
+	"mobile-frontend-view": "lipu pi ilo lili",
+	"mobile-frontend-view-desktop": "lipu pi ilo suli"
 }
