@@ -117,13 +117,6 @@ class ExtMobileFrontend {
 
 		$formatter = new MobileFormatter( $html );
 
-		// https://phabricator.wikimedia.org/T232690
-		if ( !$formatter->canApply( $config->get( 'MFMobileFormatterOptions' ) ) ) {
-			// In the future, we might want to prepend a message feeding
-			// back to the user that the page is not mobile friendly.
-			return $html;
-		}
-
 		$hookRunner = new HookRunner( $services->getHookContainer() );
 		$hookRunner->onMobileFrontendBeforeDOM( $context, $formatter );
 

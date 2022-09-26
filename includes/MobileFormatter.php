@@ -44,17 +44,4 @@ class MobileFormatter {
 		// ParserOutput::EDITSECTION_REGEX matching 'mw:editsection' tags (T274709)
 		return XHtmlSerializer::serialize( $this->body, [ 'innerXML' => true, 'smartQuote' => false ] )['html'];
 	}
-
-	/**
-	 * Check whether the MobileFormatter can be applied to the text of a page.
-	 *
-	 * @param array $options with 'maxHeadings' and 'maxImages' keys that limit the MobileFormatter
-	 *  to pages with less than or equal to that number of headings and images.
-	 * @return bool
-	 */
-	public function canApply( array $options ): bool {
-		$headings = DOMCompat::querySelectorAll( $this->body, 'h1,h2,h3,h4,h5,h6' );
-		$images = DOMCompat::querySelectorAll( $this->body, 'img' );
-		return count( $headings ) <= $options['maxHeadings'] && count( $images ) <= $options['maxImages'];
-	}
 }

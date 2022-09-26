@@ -166,8 +166,6 @@ This provides options for the MobileFormatter.
 a page.  This is an interim solution to fix Bug T110436 and shouldn't be used,
 if you don't know, what you do. Moreover, this configuration variable will be
 removed in the near future (hopefully).
-* maxImages - if a page has more than this number of image tags then the formatter will not run
-* maxHeadings - if a page has more than this number of heading tags then the formatter will not run
 * excludeNamespaces - disable the MobileFormatter for these namespaces. Article HTML for mobile will be the same as desktop.
 
 * Type: `Object`
@@ -178,8 +176,6 @@ removed in the near future (hopefully).
 		10,
 		-1
 	],
-	"maxImages": 1000,
-	"maxHeadings": 4000,
 	"headings": [
 		"h1",
 		"h2",
