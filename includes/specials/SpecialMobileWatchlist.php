@@ -295,8 +295,6 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	 * When ?from not set, adds a link "more" to see the other watchlist items.
 	 * @param IResultWrapper $res Result wrapper from db
 	 * @param bool $feed Render as feed (true) or list (false) view?
-	 * @todo FIXME: use templates/PageList.html when server side templates
-	 * are available to keep consistent with nearby view
 	 */
 	protected function showResults( IResultWrapper $res, $feed ) {
 		$output = $this->getOutput();

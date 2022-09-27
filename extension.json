@@ -90,7 +90,6 @@
 		"SpecialMobileOptions": "includes/specials/SpecialMobileOptions.php",
 		"SpecialMobileWatchlist": "includes/specials/SpecialMobileWatchlist.php",
 		"SpecialMobileEditWatchlist": "includes/specials/SpecialMobileEditWatchlist.php",
-		"SpecialNearby": "includes/specials/SpecialNearby.php",
 		"SpecialMobileLanguages": "includes/specials/SpecialMobileLanguages.php",
 		"MobileSpecialPage": "includes/specials/MobileSpecialPage.php",
 		"MobileSpecialPageFeed": "includes/specials/MobileSpecialPageFeed.php"
@@ -122,8 +121,7 @@
 				"mw-ui-icon-mf-spinner:before": "resources/mobile.placeholder.images/ajax-loader.gif",
 				"list-thumb-none": "resources/mobile.placeholder.images/noimage.svg",
 				"userpage-image-placeholder": "resources/mobile.placeholder.images/userpage.svg",
-				"amc-outreach-image": "resources/mobile.startup/amcOutreach/amc-outreach.svg",
-				"mf-nearby-image-info": "resources/mobile.placeholder.images/nearby-article-illustration.svg"
+				"amc-outreach-image": "resources/mobile.startup/amcOutreach/amc-outreach.svg"
 			}
 		},
 		"mobile.userpage.styles": {
@@ -575,20 +573,6 @@
 				"mobile-frontend-fontchanger-link"
 			]
 		},
-		"mobile.special.nearby.styles": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"styles": [
-				"resources/mobile.special.nearby.styles/specialNearby.less"
-			],
-			"skinStyles": {
-				"vector": "skinStyles/mobile.special.nearby.styles/desktop.less",
-				"vector-2022": "skinStyles/mobile.special.nearby.styles/desktop.less",
-				"monobook": "skinStyles/mobile.special.nearby.styles/desktop.less"
-			}
-		},
 		"mobile.special.userlogin.scripts": {
 			"targets": [
 				"mobile",
@@ -596,35 +580,6 @@
 			],
 			"scripts": [
 				"resources/dist/mobile.special.userlogin.scripts.js"
-			]
-		},
-		"mobile.special.nearby.scripts": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
-			"dependencies": [
-				"mobile.special.nearby.styles",
-				"mediawiki.language",
-				"mobile.startup",
-				"mobile.placeholder.images",
-				"mediawiki.router",
-				"mediawiki.Uri"
-			],
-			"messages": [
-				"mobile-frontend-nearby-distance",
-				"mobile-frontend-nearby-distance-meters",
-				"mobile-frontend-nearby-requirements",
-				"mobile-frontend-nearby-requirements-guidance",
-				"mobile-frontend-nearby-error",
-				"mobile-frontend-nearby-error-guidance",
-				"mobile-frontend-nearby-noresults",
-				"mobile-frontend-nearby-noresults-guidance",
-				"mobile-frontend-nearby-location-unavailable",
-				"mobile-frontend-nearby-permission-denied"
-			],
-			"scripts": [
-				"resources/dist/mobile.special.nearby.scripts.js"
 			]
 		},
 		"mobile.special.history.styles": {
@@ -824,12 +779,6 @@
 		"MFSpecialPageTaglines": {
 			"value": []
 		},
-		"MFNearbyRange": {
-			"value": 10000
-		},
-		"MFNearby": {
-			"value": false
-		},
 		"MFSearchAPIParams": {
 			"value": {
 				"ppprop": "displaytitle"
@@ -902,7 +851,6 @@
 		"MFDisplayWikibaseDescriptions": {
 			"value": {
 				"search": false,
-				"nearby": false,
 				"watchlist": false,
 				"tagline": false
 			}

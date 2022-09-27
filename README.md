@@ -254,21 +254,6 @@ viewport.
   ]
 ```
 
-#### $wgMFNearbyRange
-
-The range in meters that should be searched to find nearby pages on
-*Special:Nearby* (defaults to 10km).
-
-* Type: `Integer`
-* Default: `10000`
-
-#### $wgMFNearby
-
-Whether geodata related functionality should be enabled.
-
-* Type: `Boolean`
-* Default: `false`
-
 #### $wgMFSearchAPIParams
 
 Define a set of params that should be passed in every gateway query.
@@ -523,7 +508,6 @@ Set which features will use Wikibase descriptions, e.g.
 ```php
 $wgMFDisplayWikibaseDescriptions = [
   'search' => true,
-  'nearby' => true,
   'watchlist' => false,
   'tagline' => true,
 ];
@@ -534,7 +518,6 @@ $wgMFDisplayWikibaseDescriptions = [
 ```php
   [
     'search' => false,
-    'nearby' => false,
     'watchlist' => false,
     'tagline' => false,
   ]

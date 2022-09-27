@@ -76,9 +76,3 @@ QUnit.test( 'supportsTouchEvents()', function ( assert ) {
 	window.ontouchstart = window.ontouchstart || undefined;
 	assert.strictEqual( browser.supportsTouchEvents(), true );
 } );
-
-QUnit.test( 'supportsGeoLocation()', function ( assert ) {
-	const browser = new Browser( 'Mozilla/5.0 (iPad; CPU OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko)', $html );
-	window.navigator.geolocation = window.navigator.geolocation || undefined;
-	assert.strictEqual( browser.supportsGeoLocation(), true );
-} );

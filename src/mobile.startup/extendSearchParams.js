@@ -12,7 +12,7 @@ var util = require( './util' ),
  *
  * ```
  * var params = extendSearchParams(
- *   'nearby',
+ *   'search',
  *   baseParams,
  *   specializedParams,
  *   moreSpecializedParams
@@ -30,7 +30,6 @@ function extendSearchParams( feature ) {
 			// These must be defined, as these are all the features that this can be used on.
 			// If not defined, all these features will see their API calls broken
 			search: true,
-			nearby: true,
 			watchlist: true,
 			tagline: false
 		},

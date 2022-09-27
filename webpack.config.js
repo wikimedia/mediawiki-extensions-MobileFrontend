@@ -17,7 +17,6 @@ const
 		mobileInit: 'mobile.init',
 		talk: 'mobile.talk.overlays',
 		mobileOptions: 'mobile.special.mobileoptions.scripts',
-		nearby: 'mobile.special.nearby.scripts',
 		userLogin: 'mobile.special.userlogin.scripts',
 		watchlist: 'mobile.special.watchlist.scripts'
 	};
@@ -64,7 +63,6 @@ module.exports = ( env, argv ) => ( {
 		[ENTRIES.mobileInit]: './src/mobile.init/mobile.init.js',
 		// T212823 Make a chunk for each mobile special page
 		[ENTRIES.mobileOptions]: './src/mobile.special.mobileoptions.scripts.js',
-		[ENTRIES.nearby]: './src/mobile.special.nearby.scripts/mobile.special.nearby.scripts.js',
 		[ENTRIES.userLogin]: './src/mobile.special.userlogin.scripts.js',
 		[ENTRIES.watchlist]: './src/mobile.special.watchlist.scripts/mobile.special.watchlist.scripts.js'
 	},
@@ -150,7 +148,6 @@ module.exports = ( env, argv ) => ( {
 						ENTRIES.mobileInit,
 						ENTRIES.mobileDiff,
 						ENTRIES.mobileOptions,
-						ENTRIES.nearby,
 						ENTRIES.userLogin,
 						ENTRIES.watchlist
 					].includes( chunk.name )

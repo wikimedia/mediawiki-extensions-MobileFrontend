@@ -20,7 +20,7 @@ QUnit.module( 'MobileFrontend extendSearchParams.js', {
 			.withArgs( 'wgMFDisplayWikibaseDescriptions' ).returns(
 				{
 					search: true,
-					nearby: false
+					watchlist: false
 				}
 			)
 			.withArgs( 'wgMFQueryPropModules' ).returns( [ 'baz' ] );
@@ -57,7 +57,7 @@ QUnit.test( 'it extends the parameters', function ( assert ) {
 } );
 
 QUnit.test( 'it doesn\'t include Wikibase-specific parameters if the feature is disabled', function ( assert ) {
-	const params = extendSearchParams( 'nearby', {
+	const params = extendSearchParams( 'watchlist', {
 		qux: 'quux'
 	} );
 
