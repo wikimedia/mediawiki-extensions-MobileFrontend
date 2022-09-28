@@ -28,8 +28,6 @@
 	"mobile-frontend-media-details": "Dettàgli",
 	"mobile-frontend-media-load-fail-retry": "Attuarizà",
 	"mobile-frontend-missing-image": "Immàgina",
-	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 km}}",
-	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",
 	"mobile-frontend-privacy-link-text": "Privacy",
 	"mobile-frontend-save-settings": "Saivva",
 	"mobile-frontend-settings-beta": "{{SITENAME}} βeta",

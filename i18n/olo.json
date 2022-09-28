@@ -38,8 +38,6 @@
 	"mobile-frontend-last-modified-with-user-days": "[$4 Jälgimäzekse {{GENDER:$1|kohendanuh}} {{PLURAL:$3|$3 päivy|$3 päiviä}} tagaperin] {{PLURAL:$5|[$6 $2]|0=anoniimu käyttäi}}",
 	"mobile-frontend-main-menu-settings-heading": "Azetukset",
 	"mobile-frontend-missing-image": "Kuva",
-	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 km}}",
-	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",
 	"mobile-frontend-news-items": "Uudizis",
 	"mobile-frontend-overlay-close": "Salbua",
 	"mobile-frontend-privacy-link-text": "Luottamusperiuattehet",

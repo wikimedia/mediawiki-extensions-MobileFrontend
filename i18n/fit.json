@@ -63,7 +63,6 @@
 	"mobile-frontend-media-details": "Tieot",
 	"mobile-frontend-media-license-link": "Tietoa lisensistä",
 	"mobile-frontend-media-load-fail-message": "Virhe kuvan lattaamisessa.",
-	"mobile-frontend-nearby-error": "{{GRAMMAR:genitive|{{SITENAME}}}} Lähistöllä-toiminnossa oon prupleemia.",
 	"mobile-frontend-overlay-close": "Sulje",
 	"mobile-frontend-return-to-page": "Palaa sivule",
 	"mobile-frontend-save-settings": "Säästä",

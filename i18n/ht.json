@@ -94,8 +94,6 @@
 	"mobile-frontend-media-load-fail-retry": "Rafrechi",
 	"mobile-frontend-missing-image": "Imaj",
 	"mobile-frontend-tap-to-display-image": "Tape pou montre imaj.",
-	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 km}}",
-	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",
 	"mobile-frontend-news-items": "Nouvèl",
 	"mobile-frontend-opt-in-explain": "{{SITENAME}} βeta se yon fason pou w eseye fonksyon eksperimantal sa yo epi ba nou bonjan fidbak.",
 	"mobile-frontend-overlay-close": "Fèmen",

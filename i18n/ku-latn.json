@@ -55,8 +55,6 @@
 	"mobile-frontend-main-menu-settings-heading": "Eyar",
 	"mobile-frontend-media-details": "Detay",
 	"mobile-frontend-missing-image": "Wêne",
-	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 km}}",
-	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}{{PLURAL:$1|}}",
 	"mobile-frontend-news-items": "Di nûçeyan de",
 	"mobile-frontend-overlay-close": "Bigre",
 	"mobile-frontend-privacy-link-text": "Cudahî",
