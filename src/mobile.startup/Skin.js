@@ -65,7 +65,7 @@ mfExtend( Skin, View, {
 
 	/**
 	 * @throws {Error} if mediawiki message is in unexpected format.
-	 * @return {JQuery.Object} a list of links
+	 * @return {jQuery.Object} a list of links
 	 */
 	getLicenseLinks: function () {
 		const mobileLicense = mw.message( 'mobile-frontend-license-links' );

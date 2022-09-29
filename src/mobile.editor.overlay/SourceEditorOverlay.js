@@ -156,8 +156,11 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 				} );
 
 				switchToolbar.on( 'switchEditor', function ( mode ) {
-					// NOTE: should be just config.allowSwitchingToVisualMode, but we need to preserve compatibility for a bit.
-					var canSwitch = config.allowSwitchingToVisualMode || config.fullRestbaseUrl || config.allowLossySwitching;
+					// NOTE: Should be just config.allowSwitchingToVisualMode, but we need to
+					// preserve compatibility for a bit.
+					var canSwitch = config.allowSwitchingToVisualMode ||
+						config.fullRestbaseUrl ||
+						config.allowLossySwitching;
 
 					if ( mode === 'visual' ) {
 						if ( !self.gateway.hasChanged ) {

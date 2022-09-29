@@ -146,9 +146,6 @@ mfExtend( TalkSectionAddOverlay, Overlay, {
 				case 'badtoken':
 					editMsg = mw.msg( 'mobile-frontend-talk-topic-error-badtoken' );
 					break;
-				default:
-					editMsg = mw.msg( 'mobile-frontend-talk-topic-error' );
-					break;
 			}
 
 			mw.notify( editMsg, { type: 'error' } );
