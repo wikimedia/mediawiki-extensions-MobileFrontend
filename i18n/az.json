@@ -82,6 +82,8 @@
 	"mobile-frontend-references-citation": "İstinad",
 	"mobile-frontend-return-to-page": "Səhifəyə qayıt",
 	"mobile-frontend-search-content": "Səhifələr arasından axtar",
+	"mobile-frontend-search-content-no-results": "Bu ifadənin başqa hansısa səhifədə olub-olmadığını görmək üçün <b>{{lcfirst:{{int:mobile-frontend-search-content}}}}</b>.",
+	"mobile-frontend-search-no-results": "Bu adda səhifə yoxdur.",
 	"mobile-frontend-settings-tagline": "Oxu seçimləri",
 	"mobile-frontend-settings-save": "Nizamlamalar yadda saxlanıldı.",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Nə düşünürsən?",
