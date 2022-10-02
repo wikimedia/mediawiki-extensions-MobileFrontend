@@ -25,7 +25,6 @@
 		"src/mobile.mediaViewer/mobile.mediaViewer.js",
 		"src/mobile.special.uploads.scripts/mobile.special.uploads.scripts.js",
 		"src/mobile.special.watchlist.scripts/mobile.special.watchlist.scripts.js",
-		"src/mobile.talk.overlays/mobile.talk.overlays.js",
 		"src/mobile.special.mobilediff.scripts.js",
 		"src/mobile.special.mobileoptions.scripts.js",
 		"src/mobile.special.userlogin.scripts.js"

@@ -70,9 +70,7 @@
 		"mobile-frontend-editor-previewing-page",
 		"mobile-frontend-editor-summary",
 		"mobile-frontend-editor-summary-request",
-		"mobile-frontend-editor-wait",
-		"mobile-frontend-talk-add-overlay-submit",
-		"mobile-frontend-talk-topic-wait"
+		"mobile-frontend-editor-wait"
 	],
 	"AutoloadNamespaces": {
 		"MobileFrontend\\": "includes/"
@@ -245,7 +243,6 @@
 				"mobile-frontend-license-links",
 				"echo-mark-all-as-read",
 				"echo-overlay-link",
-				"mobile-frontend-talk-add-overlay-submit",
 				"toc",
 				"mobile-frontend-references-citation-error",
 				"mobile-frontend-references-citation",
@@ -392,38 +389,6 @@
 					"global": true
 				}
 			}
-		},
-		"mobile.talk.overlays": {
-			"dependencies": [
-				"mediawiki.user",
-				"mediawiki.util",
-				"mediawiki.ui.anchor",
-				"mobile.editor.overlay"
-			],
-			"scripts": [
-				"resources/dist/mobile.talk.overlays.js"
-			],
-			"styles": [
-				"resources/mobile.talk.overlays/talk.less"
-			],
-			"messages": [
-				"mobile-frontend-talk-add-overlay-subject-placeholder",
-				"mobile-frontend-talk-add-overlay-content-placeholder",
-				"mobile-frontend-talk-reply",
-				"mobile-frontend-talk-reply-info",
-				"mobile-frontend-talk-topic-error",
-				"mobile-frontend-talk-topic-error-protected",
-				"mobile-frontend-talk-topic-error-permission",
-				"mobile-frontend-talk-topic-error-spam",
-				"mobile-frontend-talk-topic-error-badtoken",
-				"mobile-frontend-talk-topic-wait",
-				"mobile-frontend-editor-cancel",
-				"mobile-frontend-editor-cancel-confirm",
-				"mobile-frontend-editor-error",
-				"mobile-frontend-editor-error-conflict",
-				"mobile-frontend-editor-save",
-				"newsectionsummary"
-			]
 		},
 		"mobile.mediaViewer": {
 			"dependencies": [

@@ -15,7 +15,6 @@ const
 		languages: 'mobile.languages.structured',
 		mediaViewer: 'mobile.mediaViewer',
 		mobileInit: 'mobile.init',
-		talk: 'mobile.talk.overlays',
 		mobileOptions: 'mobile.special.mobileoptions.scripts',
 		userLogin: 'mobile.special.userlogin.scripts',
 		watchlist: 'mobile.special.watchlist.scripts'
@@ -58,7 +57,6 @@ module.exports = ( env, argv ) => ( {
 		[ENTRIES.editorVe]: './src/mobile.editor.ve/mobile.editor.ve.js',
 		[ENTRIES.languages]: './src/mobile.languages.structured/mobile.languages.structured.js',
 		[ENTRIES.mediaViewer]: './src/mobile.mediaViewer/mobile.mediaViewer.js',
-		[ENTRIES.talk]: './src/mobile.talk.overlays/mobile.talk.overlays.js',
 		// all mobile skins,
 		[ENTRIES.mobileInit]: './src/mobile.init/mobile.init.js',
 		// T212823 Make a chunk for each mobile special page
@@ -144,7 +142,6 @@ module.exports = ( env, argv ) => ( {
 						ENTRIES.editorVe,
 						ENTRIES.languages,
 						ENTRIES.mediaViewer,
-						ENTRIES.talk,
 						ENTRIES.mobileInit,
 						ENTRIES.mobileDiff,
 						ENTRIES.mobileOptions,

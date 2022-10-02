@@ -36,10 +36,6 @@
 		"maxSize": "1.6KB"
 	},
 	{
-		"resourceModule": "mobile.talk.overlays",
-		"maxSize": "3.3KB"
-	},
-	{
 		"resourceModule": "mobile.pagelist.styles",
 		"maxSize": "0.8KB"
 	},
