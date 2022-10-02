@@ -137,19 +137,6 @@ EditorGateway.prototype = {
 	},
 
 	/**
-	 * Mark content as modified and set text that should be prepended to given
-	 * section when #save is invoked.
-	 *
-	 * @memberof EditorGateway
-	 * @instance
-	 * @param {string} text Text to be prepended.
-	 */
-	setPrependText: function ( text ) {
-		this.prependtext = text;
-		this.hasChanged = true;
-	},
-
-	/**
 	 * Save the new content of the section, previously set using #setContent.
 	 *
 	 * @memberof EditorGateway
@@ -192,8 +179,6 @@ EditorGateway.prototype = {
 
 			if ( self.content !== undefined ) {
 				apiOptions.text = self.content;
-			} else if ( self.prependtext ) {
-				apiOptions.prependtext = self.prependtext;
 			}
 
 			if ( self.sectionId ) {
