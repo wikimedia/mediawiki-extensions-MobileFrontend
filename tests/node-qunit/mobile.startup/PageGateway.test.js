@@ -5,9 +5,6 @@ const
 	mustache = require( '../utils/mustache' ),
 	oo = require( '../utils/oo' ),
 	jQuery = require( '../utils/jQuery' ),
-	examples = require( './../utils/PageInputs.html' ),
-	page = examples.page,
-	page2 = examples.page2,
 	testData = require( '../utils/PageGateway.responses' );
 let
 	util,
@@ -57,52 +54,4 @@ QUnit.test( '#getPageLanguages (call)', function ( assert ) {
 	assert.true(
 		spy.calledWith( testData.getPageLanguagesCall.output )
 	);
-} );
-
-QUnit.test( '#_getAPIResponseFromHTML', function ( assert ) {
-	const resp = pageGateway._getAPIResponseFromHTML(
-		util.parseHTML( page )
-	);
-	assert.propEqual( testData.getAPIResponseFromHTML.input, resp );
-} );
-
-QUnit.test( '#getSectionsFromHTML malformed (h2 before h1)', function ( assert ) {
-	const resp = pageGateway.getSectionsFromHTML(
-		util.parseHTML( page2 )
-	);
-	assert.propEqual( resp, [
-		{
-			line: 'A1',
-			level: '2',
-			anchor: '1.0',
-			text: '<h3 id="">A2.1</h3>\n',
-			subsections: [ {
-				line: 'A2.1',
-				level: '3',
-				anchor: '',
-				text: '',
-				subsections: []
-			} ]
-		},
-		{
-			line: 'A2.2',
-			level: '2',
-			anchor: '',
-			text: '',
-			subsections: []
-		},
-		{
-			line: 'A2',
-			level: '1',
-			anchor: '',
-			text: '<h2 id="">A2.1</h2>\n',
-			subsections: [ {
-				line: 'A2.1',
-				level: '2',
-				anchor: '',
-				text: '',
-				subsections: []
-			} ]
-		}
-	] );
 } );

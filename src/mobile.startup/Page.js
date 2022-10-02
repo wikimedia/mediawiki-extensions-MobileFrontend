@@ -1,7 +1,6 @@
 var
 	HTML = mw.html,
-	util = require( './util' ),
-	Section = require( './Section' );
+	util = require( './util' );
 
 /**
  * Mobile page view object
@@ -20,7 +19,6 @@ class Page {
 	 *  namespace the page belongs to
 	 * @param {Object} options.protection List of permissions as returned by API,
 	 * e.g. [{ edit: ['*'] }]
-	 * @param {Array} options.sections Array of {Section} objects.
 	 * @param {string} options.url
 	 * @param {string} options.wikidataDescription
 	 * @param {boolean} options.isMainPage Whether the page is the Main Page.
@@ -50,7 +48,6 @@ class Page {
 			displayTitle: options.displayTitle || HTML.escape( title ),
 			namespaceNumber: options.namespaceNumber || 0,
 			protection: options.protection,
-			sections: [],
 			url: options.url || mw.util.getUrl( title ),
 			wikidataDescription: options.wikidataDescription,
 			_isMainPage: options.isMainPage || false,
@@ -61,15 +58,8 @@ class Page {
 			revId: options.revId,
 			_isWatched: options.isWatched,
 			thumbnail: ( Object.prototype.hasOwnProperty.call( options, 'thumbnail' ) ) ?
-				options.thumbnail : false,
-			_sectionLookup: {}
+				options.thumbnail : false
 		} );
-
-		( options.sections || [] ).forEach( function ( sectionData ) {
-			var section = new Section( sectionData );
-			this.sections.push( section );
-			this._sectionLookup[section.id] = section;
-		}.bind( this ) );
 
 		if ( this.thumbnail && this.thumbnail.width ) {
 			this.thumbnail.isLandscape = this.thumbnail.width > this.thumbnail.height;
@@ -153,29 +143,6 @@ class Page {
 			nsId = 0;
 		}
 		return nsId;
-	}
-
-	/**
-	 * FIXME: Change function signature to take the anchor of the heading
-	 *
-	 * @param {string} id of the section as defined by MobileFormatter.
-	 * Note, that currently, this is different from
-	 * the PHP parser in that it relates to top-level sections.
-	 * For example, mf-section-1 would relate to section 1. See FIXME.
-	 * @return {Section}
-	 */
-	getSection( id ) {
-		return this._sectionLookup[ id ];
-	}
-
-	/**
-	 * Obtain the list of high level (and grouped) sections.
-	 * Note that this list will not include subsections.
-	 *
-	 * @return {Array} of Section instances
-	 */
-	getSections() {
-		return this.sections;
 	}
 }
 
