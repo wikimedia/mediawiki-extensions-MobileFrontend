@@ -339,23 +339,6 @@ QUnit.test( '#save, new page', function ( assert ) {
 	} );
 } );
 
-QUnit.test( '#save, after #setPrependText', function ( assert ) {
-	const gateway = new EditorGateway( {
-		api: apiHappy,
-		title: 'test'
-	} );
-
-	gateway.setPrependText( 'abc' );
-	return gateway.save( {
-		summary: 'summary'
-	} ).then( function () {
-		assert.strictEqual( gateway.hasChanged, false, 'reset hasChanged' );
-		assert.true( postStub.calledWithMatch( 'csrf', util.extend( {}, API_REQUEST_DATA, {
-			prependtext: 'abc'
-		} ) ), 'prepend text' );
-	} );
-} );
-
 QUnit.test( '#save, submit CAPTCHA', function ( assert ) {
 	const gateway = new EditorGateway( {
 		api: apiHappy,
