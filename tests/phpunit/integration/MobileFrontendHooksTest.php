@@ -451,6 +451,9 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 		);
 
 		foreach ( [ $fakeMobileSkin, $fakeDefaultSkin ] as $skinName ) {
+			if ( $skinName === null ) {
+				continue;
+			}
 			$skinFactory->register( $skinName, strtoupper( $skinName ), [
 					'class' => SkinFallback::class
 				],

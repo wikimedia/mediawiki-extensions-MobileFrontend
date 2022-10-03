@@ -75,11 +75,14 @@ class WMFBaseDomainExtractor implements BaseDomainExtractorInterface {
 	/**
 	 * Find out whether $hostname matches or is subdomain of any host from $hosts array
 	 *
-	 * @param string $hostname Visited host
+	 * @param string|null $hostname Visited host
 	 * @param string[] $hosts Array of all wikimedia hosts
 	 * @return bool|string Returns wikimedia host base domain, false when not found
 	 */
 	private function matchBaseHostname( $hostname, array $hosts ) {
+		if ( $hostname === null ) {
+			return false;
+		}
 		foreach ( $hosts as $wmfHost ) {
 			if ( $this->endsWith( $hostname, $wmfHost ) ) {
 				return $wmfHost;
