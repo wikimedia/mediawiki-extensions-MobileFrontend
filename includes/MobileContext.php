@@ -952,7 +952,7 @@ class MobileContext extends ContextSource {
 	public function getXAnalyticsHeader() {
 		$response = $this->getRequest()->response();
 		$currentHeader = method_exists( $response, 'getHeader' ) ?
-			$response->getHeader( 'X-Analytics' ) : '';
+			(string)$response->getHeader( 'X-Analytics' ) : '';
 		parse_str( preg_replace( '/; */', '&', $currentHeader ), $logItems );
 		$logItems += $this->getAnalyticsLogItems();
 		if ( count( $logItems ) ) {
