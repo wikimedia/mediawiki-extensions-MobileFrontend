@@ -4,7 +4,8 @@
 			"Abbas dhothar",
 			"BukhariSaeed",
 			"Khalid Mahmood",
-			"Saanvel"
+			"Saanvel",
+			"Bgo eiu"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "کنفرمیشن کوڈ بھیجو",
@@ -29,7 +30,7 @@
 	"mobile-frontend-editor-cancel": "منسوخ",
 	"mobile-frontend-editor-continue": "اگلا",
 	"mobile-frontend-editor-editing": "لکھائی",
-	"mobile-frontend-editor-placeholder-new-page": "\n{{GENDER:$1|تسی}} {{SITENAME}} تے نواں صفحہ بنا رۓ ہو!",
+	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|تسیں}} {{SITENAME}} تے نواں صفحہ بنا رۓ ہو!",
 	"mobile-frontend-editor-save": "بچاؤ",
 	"mobile-frontend-editor-summary": "خلاصہ:",
 	"mobile-frontend-editor-wait": "محفوظ ہو ریا ہے، انتظار کرو۔",
@@ -65,7 +66,7 @@
 	"mobile-frontend-watchlist-cta-button-signup": "سائن اپ",
 	"mobile-frontend-watchlist-feed": "بدلیا",
 	"mobile-frontend-watchlist-filter-all": "سارے",
-	"mobile-frontend-watchlist-filter-articles": "صفے",
+	"mobile-frontend-watchlist-filter-articles": "صفحے",
 	"mobile-frontend-watchlist-filter-other": "ہور",
 	"mobile-frontend-watchlist-filter-talk": "گل بات",
 	"mobile-frontend-watchlist-more": "ہور",
