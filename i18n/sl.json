@@ -36,7 +36,7 @@
 	"mobile-frontend-editor-blocked-drawer-title-ip-partial": "Urejanje te strani z vašim IP-naslovom je preprečeno.",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Razlog",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Blokiral|Blokirala|Blokiral(-a)}}",
-	"mobile-frontend-editor-blocked-drawer-expiry-header": "Blokada bo potekla",
+	"mobile-frontend-editor-blocked-drawer-expiry-header": "Blokiranje bo preteklo",
 	"mobile-frontend-editor-blocked-drawer-help": "Ogled podrobnosti",
 	"mobile-frontend-editor-generic-block-reason": "Neznan razlog",
 	"mobile-frontend-editor-cancel": "Prekliči",

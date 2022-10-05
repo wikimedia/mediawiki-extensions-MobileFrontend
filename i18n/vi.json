@@ -58,7 +58,7 @@
 	"mobile-frontend-editor-blocked-drawer-body-link": "Xem thêm",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Lý do",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1}}Người cấm",
-	"mobile-frontend-editor-blocked-drawer-expiry-header": "Tác vụ cấm hết hạn trong vòng",
+	"mobile-frontend-editor-blocked-drawer-expiry-header": "Tác vụ cấm hết hạn",
 	"mobile-frontend-editor-blocked-drawer-help": "Xem chi tiết",
 	"mobile-frontend-editor-generic-block-reason": "Lý do không rõ",
 	"mobile-frontend-editor-cancel": "Hủy bỏ",
