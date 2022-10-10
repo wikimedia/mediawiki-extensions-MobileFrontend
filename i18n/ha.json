@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Amire80",
 			"Ammarpad",
 			"Anasskoko",
 			"DonCamillo",
@@ -56,7 +57,7 @@
 	"mobile-frontend-editor-editing": "Yin gyara",
 	"mobile-frontend-editor-editing-page": "<span><strong>Yin gyara</strong> $1</span>",
 	"mobile-frontend-editor-error": "Kuskure, ba'a aje gyarar ba.",
-	"mobile-frontend-editor-error-conflict": "kuskure, wani mai'aikaci ya gyara wannan shafi.",
+	"mobile-frontend-editor-error-conflict": "Kuskure, wani mai'aikaci ya gyara wannan shafi.",
 	"mobile-frontend-editor-error-loading": "kuskure, kasa shigar abin gyara.",
 	"mobile-frontend-editor-error-preview": "Kuskure, wani abinda da ba'a zata ba yafaru sanda ake kokarin bayyana shafin dubiya. Yi hakuri ku kulle ku sake gwadawa.",
 	"mobile-frontend-editor-keep-editing": "Cigaba da gyara",
