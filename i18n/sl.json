@@ -117,7 +117,7 @@
 	"mobile-frontend-languages-variant-header": "Različice jezika {{#language:{{CONTENTLANG}}}}",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Predlagani jeziki",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Drugi jeziki",
-	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Poišči jezik",
+	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Poiščite jezik",
 	"mobile-frontend-languages-structured-overlay-no-results": "Jezik ni na voljo",
 	"mobile-frontend-languages-structured-overlay-no-results-body": "Jezik, ki ga iščete, ni na voljo.",
 	"mobile-frontend-last-modified-date": "Zadnja sprememba: $1 ob $2",
