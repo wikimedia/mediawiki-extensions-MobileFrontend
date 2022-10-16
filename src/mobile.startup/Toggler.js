@@ -20,6 +20,9 @@ var browser = require( './Browser' ).getSingleton(),
 /**
  * A class for enabling toggling
  *
+ * Toggling can be disabled on a sepcific heading by adding the
+ * collapsible-heading-disabled class.
+ *
  * @class Toggler
  * @param {Object} options
  * @param {OO.EventEmitter} options.eventBus Object used to emit section-toggled events.
@@ -112,8 +115,13 @@ function expandStoredSections( toggler, $container, page ) {
  * @instance
  * @param {jQuery.Object} $heading A heading belonging to a section
  * @param {Page} page
+ * @return {boolean}
  */
 Toggler.prototype.toggle = function ( $heading, page ) {
+	if ( $heading.hasClass( 'collapsible-heading-disabled' ) ) {
+		return false;
+	}
+
 	var self = this,
 		wasExpanded = $heading.is( '.open-block' );
 
@@ -121,7 +129,10 @@ Toggler.prototype.toggle = function ( $heading, page ) {
 
 	arrowOptions.rotation = wasExpanded ? 0 : 180;
 	var indicator = new Icon( arrowOptions );
-	$heading.data( 'indicator' ).attr( 'class', indicator.getClassName() );
+	var $indicatorElement = $heading.data( 'indicator' );
+	if ( $indicatorElement ) {
+		$indicatorElement.attr( 'class', indicator.getClassName() );
+	}
 
 	var $headingLabel = $heading.find( '.mw-headline' );
 	$headingLabel.attr( 'aria-expanded', !wasExpanded );
@@ -159,6 +170,7 @@ Toggler.prototype.toggle = function ( $heading, page ) {
 	if ( !browser.isWideScreen() ) {
 		storeSectionToggleState( $heading, page );
 	}
+	return true;
 };
 
 /**

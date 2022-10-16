@@ -44,6 +44,7 @@ QUnit.module( 'MobileFrontend Toggler.js', {
 
 		sandbox.stub( mw.config, 'get' ).withArgs( 'wgMFCollapseSectionsByDefault' ).returns( true );
 		sandbox.stub( browser, 'isWideScreen' ).returns( false );
+		sandbox.stub( window, 'scrollTo' );
 
 		this.page = { title: 'Toggle test' };
 		this.$container = $( '<article>' ).html( sectionTemplate );
@@ -400,4 +401,25 @@ QUnit.test( 'MobileFrontend toggle.js - Expand stored sections.', function ( ass
 	assert.strictEqual( $section.hasClass( 'open-block' ), true,
 		'Saved section has been auto expanded.' );
 
+} );
+
+QUnit.test( 'MobileFrontend toggle.js - T320753: Presence of class disables toggling.', function ( assert ) {
+	const toggler = new Toggler( {
+		eventBus: new OO.EventEmitter(),
+		$container: this.$container,
+		prefix: '',
+		page: this.page
+	} );
+	const $heading = this.$container.find( 'h2' );
+	assert.strictEqual(
+		toggler.toggle( $heading, this.page ),
+		true,
+		'toggle is functional'
+	);
+	$heading.addClass( 'collapsible-heading-disabled' );
+	assert.strictEqual(
+		toggler.toggle( $heading, this.page ),
+		false,
+		'Toggle is not functional when collapsible-heading-disabled class is present'
+	);
 } );
