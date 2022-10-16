@@ -67,10 +67,10 @@ function saveExpandedSections( expandedSections ) {
  */
 function storeSectionToggleState( $heading, page ) {
 	var headline = $heading.find( '.mw-headline' ).attr( 'id' ),
-		isSectionOpen = $heading.hasClass( 'open-block' ),
 		expandedSections = getExpandedSections( page );
 
 	if ( headline && expandedSections[page.title] ) {
+		var isSectionOpen = $heading.hasClass( 'open-block' );
 		if ( isSectionOpen ) {
 			expandedSections[page.title][headline] = true;
 		} else {
@@ -115,20 +115,19 @@ function expandStoredSections( toggler, $container, page ) {
  * @param {Page} page
  */
 Toggler.prototype.toggle = function ( $heading, page ) {
-	var indicator,
-		self = this,
-		wasExpanded = $heading.is( '.open-block' ),
-		$headingLabel = $heading.find( '.mw-headline' ),
-		$content = $heading.next();
+	var self = this,
+		wasExpanded = $heading.is( '.open-block' );
 
 	$heading.toggleClass( 'open-block' );
 
 	arrowOptions.rotation = wasExpanded ? 0 : 180;
-	indicator = new Icon( arrowOptions );
+	var indicator = new Icon( arrowOptions );
 	$heading.data( 'indicator' ).attr( 'class', indicator.getClassName() );
 
+	var $headingLabel = $heading.find( '.mw-headline' );
 	$headingLabel.attr( 'aria-expanded', !wasExpanded );
 
+	var $content = $heading.next();
 	if ( $content.hasClass( 'open-block' ) ) {
 		$content.removeClass( 'open-block' );
 		// jquery doesn't allow custom values for the hidden attribute it seems.
@@ -230,35 +229,31 @@ Toggler.prototype.reveal = function ( id, $container, page ) {
  * @private
  */
 Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
-	var tagName, expandSections, indicator, $content,
-		$firstHeading,
-		$link,
-		self = this,
+	var self = this,
 		collapseSectionsByDefault = mw.config.get( 'wgMFCollapseSectionsByDefault' );
 
 	// Also allow .section-heading if some extensions like Wikibase
 	// want to toggle other headlines than direct descendants of $container.
-	$firstHeading = $container.find( '> h1,> h2,> h3,> h4,> h5,> h6,.section-heading' ).eq( 0 );
-	tagName = $firstHeading.prop( 'tagName' ) || 'H1';
+	var $firstHeading = $container.find( '> h1,> h2,> h3,> h4,> h5,> h6,.section-heading' ).eq( 0 );
+	var tagName = $firstHeading.prop( 'tagName' ) || 'H1';
 
 	if ( collapseSectionsByDefault === undefined ) {
 		// Old default behavior if on cached output
 		collapseSectionsByDefault = true;
 	}
 	// NB: 'expandSections' uses localStorage, unlike 'expandedSections' which uses sessionStorage
-	expandSections = !collapseSectionsByDefault || mw.storage.get( 'expandSections' ) === 'true';
+	var expandSections = !collapseSectionsByDefault || mw.storage.get( 'expandSections' ) === 'true';
 
 	$container.children( tagName ).each( function ( i ) {
-		var isReferenceSection,
-			$heading = $container.find( this ),
+		var $heading = $container.find( this ),
 			$headingLabel = $heading.find( '.mw-headline' ),
 			$indicator = $heading.find( '.indicator' ),
 			id = prefix + 'collapsible-block-' + i;
 		// Be sure there is a `section` wrapping the section content.
 		// Otherwise, collapsible sections for this page is not enabled.
 		if ( $heading.next().is( 'section' ) ) {
-			$content = $heading.next( 'section' );
-			isReferenceSection = Boolean( $content.attr( 'data-is-reference-section' ) );
+			var $content = $heading.next( 'section' );
+			var isReferenceSection = Boolean( $content.attr( 'data-is-reference-section' ) );
 			$heading
 				.addClass( 'collapsible-heading ' )
 				.data( 'section-number', i )
@@ -281,7 +276,7 @@ Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 				} );
 
 			arrowOptions.rotation = expandSections ? 180 : 0;
-			indicator = new Icon( arrowOptions );
+			var indicator = new Icon( arrowOptions );
 
 			if ( $indicator.length ) {
 				// replace the existing indicator
@@ -361,7 +356,7 @@ Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 	checkHash();
 	// Restricted to links created by editors and thus outside our control
 	// T166544 - don't do this for reference links - they will be handled elsewhere
-	$link = $container.find( 'a:not(.reference a)' );
+	var $link = $container.find( 'a:not(.reference a)' );
 	$link.on( 'click', function () {
 		// the link might be an internal link with a hash.
 		// if it is check if we need to reveal any sections.
