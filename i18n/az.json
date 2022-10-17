@@ -43,6 +43,7 @@
 	"mobile-frontend-editor-summary-request": "Məqalədə hansı dəyişiklikləri etdiniz?",
 	"mobile-frontend-editor-summary": "Dəyişikliyin xülasəsi:",
 	"mobile-frontend-editor-viewing-source-page": "<span>$1 </span><strong>səhifəsinin mənbəsinə bax</strong>",
+	"mobile-frontend-editor-loading": "Redaktor yüklənir…",
 	"mobile-frontend-expand-sections-description": "Susmaya görə hər zaman bütün səhifələrin bölmələrini genişlət.",
 	"mobile-frontend-expand-sections-status": "Bütün bölmələri genişlət",
 	"mobile-frontend-fontchanger-link": "Şrift ölçüsü",
