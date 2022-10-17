@@ -31,7 +31,7 @@
 	"mobile-frontend-diffview-title": "Spremembe",
 	"mobile-frontend-edit-login-action": "<strong>Pomagajte izboljšati {{GRAMMAR:tožilnik|{{SITENAME}}}}.</strong><br />Prijavite se za urejanje.",
 	"mobile-frontend-edit-signup-action": "<strong>Pomagajte izboljšati {{GRAMMAR:tožilnik|{{SITENAME}}}}.</strong><br />Registrirajte se za urejanje.",
-	"mobile-frontend-editor-anon": "Uredi brez prijave",
+	"mobile-frontend-editor-anon": "Urejanje brez prijave",
 	"mobile-frontend-editor-anonwarning": "<strong>Opozorilo:</strong> Niste prijavljeni. Vaš IP-naslov bo javno viden, če naredite kakršnokoli urejanje. Če se <strong>prijavite</strong> ali <strong>ustvarite račun</strong>, bodo vaša urejanja pripisana vašemu uporabniškemu imenu skupaj z drugimi prednostmi.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Prijava",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "V redu",
