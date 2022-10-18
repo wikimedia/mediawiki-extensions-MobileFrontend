@@ -227,40 +227,6 @@ module.exports = {
 			titles: 'Title',
 			formatversion: 2
 		}
-	},
-	getAPIResponseFromHTML: {
-		input: [
-			{
-				line: 'A1',
-				level: '1',
-				anchor: '1.0',
-				text: ''
-			},
-			{
-				line: 'A2.1',
-				level: '2',
-				anchor: '',
-				text: ''
-			},
-			{
-				line: 'A2.2',
-				level: '2',
-				anchor: '',
-				text: ''
-			},
-			{
-				line: 'A2',
-				level: '1',
-				anchor: '',
-				text: ''
-			},
-			{
-				line: 'A2.1',
-				level: '2',
-				anchor: '',
-				text: ''
-			}
-		]
 	}
 
 };

@@ -1,21 +1,4 @@
 /* eslint-env es6 */
-const page = `<div>
-	<h1><span class="mw-headline" id="1.0">A1</span></h1>
-	<h2><span class="mw-headline">A2.1</span></h2>
-	<h2><span class="mw-headline">A2.2</span></h2>
-	<h1><span class="mw-headline">A2</span></h1>
-	<h2><span class="mw-headline">A2.1</span><span>[<a href="#">edit</a>]</span></h2>
-	<h1>Not to be shown in the TOC<span class="placeholder"></span></h1>
-</div>`;
-
-const page2 = `<div>
-<h2><span class="mw-headline" id="1.0">A1</span></h2>
-<h3><span class="mw-headline">A2.1</span></h3>
-<h2><span class="mw-headline">A2.2</span></h2>
-<h1><span class="mw-headline">A2</span></h1>
-<h2><span class="mw-headline">A2.1</span></h2>
-</div>`;
-
 const referencesPage = `<div id="mfe-test-references">
 <sup id="cite_ref-1" class="reference">
 	<a href="#cite_note-1">[1]</a>
@@ -50,7 +33,5 @@ const referencesPage = `<div id="mfe-test-references">
 
 module.exports = {
 	// A page with references mirroring PHP Parser output
-	referencesPage: referencesPage,
-	page: page,
-	page2: page2
+	referencesPage: referencesPage
 };
