@@ -14,12 +14,9 @@ module.exports = function () {
 	 * @ignore
 	 */
 	function init( $container, prefix, page ) {
-		var headingsSelector = mw.config.get( 'wgMFMobileFormatterHeadings' ).map( function ( tagName ) {
-			return '> ' + tagName;
-		} ).join( ',' );
-		// Distinguish headings in content from other headings.
-		$container.find( headingsSelector ).addClass( 'section-heading' )
-			.removeAttr( 'onclick' );
+		// Only handle headings in content processed by MakeSectionsTransform.
+		// Remove event handler added by MakeSectionsTransform::interimTogglingSupport().
+		$container.find( '.section-heading' ).removeAttr( 'onclick' );
 		// Cleanup global as it is no longer needed. We check if it's undefined because
 		// there is no guarantee this won't be run on other skins e.g. Vector or cached HTML.
 		if ( window.mfTempOpenSection !== undefined ) {
