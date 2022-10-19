@@ -9,7 +9,8 @@
 			"Дзяніс Тутэйшы",
 			"Чаховіч Уладзіслаў",
 			"No Sleep till Krupki",
-			"Jarash"
+			"Jarash",
+			"Tomato Cream"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ці рэдагуе ўдзельнік праз мабільны інтэрфейс",
@@ -129,7 +130,7 @@
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 Апошні раз {{GENDER:$1|змененая}} $3 {{PLURAL:$2|секунду|секунды|секундаў}} таму] {{PLURAL:$5|[$6 $2]|0=ананімным удзельнікам}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 Апошні раз {{GENDER:$1|змененая}} $3 {{PLURAL:$1|год|гады|гадоў}} таму] {{PLURAL:$5|[$6 $2]|0=ананімным удзельнікам}}",
 	"mobile-frontend-main-menu": "Галоўнае меню",
-	"mobile-frontend-main-menu-settings-heading": "Настройкі",
+	"mobile-frontend-main-menu-settings-heading": "Налады",
 	"mobile-frontend-media-details": "Падрабязнасці",
 	"mobile-frontend-media-license-link": "Інфармацыя пра ліцэнзаванне",
 	"mobile-frontend-media-load-fail-message": "Адбылася памылка падчас загрузкі гэтай выявы.",
