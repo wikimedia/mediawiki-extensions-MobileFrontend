@@ -32,6 +32,10 @@ QUnit.module( 'MobileFrontend PageGateway', {
 } );
 
 QUnit.test( '#getPageLanguages (response)', function ( assert ) {
+	sandbox.stub( mw.config, 'get' )
+		.withArgs( 'wgVariantArticlePath' ).returns( '/$2/$1' )
+		.withArgs( 'wgContentLanguage' ).returns( 'sr' )
+		.withArgs( 'wgPageContentLanguage' ).returns( 'sr-ec' );
 	sandbox.stub( this.api, 'get' ).returns( util.Deferred().resolve( testData.getPageLanguagesResponse.input ) );
 
 	return pageGateway.getPageLanguages( 'Test' ).then( function ( resp ) {
@@ -46,6 +50,7 @@ QUnit.test( '#getPageLanguages (response)', function ( assert ) {
 } );
 
 QUnit.test( '#getPageLanguages (call)', function ( assert ) {
+	sandbox.stub( mw.config, 'get' ).withArgs( 'wgPageContentLanguage' ).returns( 'fr' );
 	const spy = sandbox.stub( this.api, 'get' ).returns( util.Deferred().reject() );
 	// prevent rogue ajax request
 	/* global $ */
