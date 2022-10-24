@@ -55,6 +55,20 @@ module.exports = function () {
 					mw.config.get( 'wgMFSchemaEditAttemptStepOversample' ) === 'visualeditor' ||
 					mw.config.get( 'wgMFSchemaEditAttemptStepOversample' ) === 'all'
 				) ? 1 : sampleRate );
+
+				// T309602: Also log via the Metrics Platform:
+				var eventName = 'vefu.' + data.action;
+
+				/* eslint-disable camelcase */
+				var customData = {
+					feature: data.feature,
+					editing_session_id: data.editing_session_id,
+					editor_interface: data.editor_interface,
+					integration: 'page'
+				};
+				/* eslint-enable camelcase */
+
+				mw.eventLog.dispatch( eventName, customData );
 			}
 		} );
 
