@@ -13,7 +13,8 @@
 			"Vadgt",
 			"Xelgen",
 			"Աշոտ1997",
-			"Դավիթ Սարոյան"
+			"Դավիթ Սարոյան",
+			"Սերգեյ Սաֆարյան"
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "Առանց խմբագրման ամփոփման",
@@ -66,5 +67,6 @@
 	"mobile-frontend-watchlist-filter-talk": "Քննարկում",
 	"mobile-frontend-watchlist-more": "Ավելին",
 	"tag-mobile_edit": "Խմբագրում բջջային սարքով",
-	"tag-mobile_web_edit": "Խմբագրում կայքի բջջային տարբերակից"
+	"tag-mobile_web_edit": "Խմբագրում կայքի բջջային տարբերակից",
+	"mobile-frontend-loading-message": "Բեռնվում է…"
 }
