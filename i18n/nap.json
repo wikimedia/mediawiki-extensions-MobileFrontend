@@ -4,7 +4,8 @@
 			"C.R.",
 			"Chelin",
 			"Cryptex nap",
-			"Ruthven"
+			"Ruthven",
+			"Finizio"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si n'utente sta cagnanno pe' bbìa 'e ll'interfaccia p' 'aparecchie mobbele",
@@ -126,7 +127,7 @@
 	"mobile-frontend-talk-topic-error-badtoken": "N'errore è cumparuto dint' 'o server. 'O cagnamiento vuosto nun s'è pututo sarva. Tentate 'e carrecà n'ata vota 'a paggena.",
 	"mobile-frontend-talk-topic-wait": "Sarvanno l'argomento, pe' piacere aspettate.",
 	"mobile-frontend-terms-text": "Cundiziune d'uso",
-	"mobile-frontend-view": "Vista d' 'o mobbele",
+	"mobile-frontend-view": "Vista p''o cellulare",
 	"mobile-frontend-view-desktop": "Desktop",
 	"mobile-frontend-watchlist-a-z": "Elenco",
 	"mobile-frontend-watchlist-a-z-empty-howto": "Nun state a cuntrullà nisciuna paggena. 'A paggena 'e cuntrullate vosta v'aiuta a putè secutà 'e paggene dint' 'e quale site nteressato/a. Cuntrullate paggene facenno nu tuzzuleo a l'icona 'e stella.",

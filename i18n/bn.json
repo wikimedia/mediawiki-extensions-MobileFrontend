@@ -12,7 +12,8 @@
 			"ZI Jony",
 			"Zaheen",
 			"আজিজ",
-			"আফতাবুজ্জামান"
+			"আফতাবুজ্জামান",
+			"খাত্তাব হাসান"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "একজন ব্যবহারকারী মোবাইল ইন্টারফেসের মাধ্যমে সম্পাদনা করছে বা করছে না",
@@ -177,7 +178,7 @@
 	"mobile-frontend-talk-reply": "উত্তর",
 	"mobile-frontend-talk-reply-info": "লক্ষ্য করুন, আপনার উত্তর স্বয়ংক্রিয়ভাবে আপনার ব্যবহারকারী নামসহ স্বাক্ষর করবে।",
 	"mobile-frontend-talk-topic-error": "একটি অজানা ত্রুটির কারণে এই বিষয় যোগ করা যাবে না।",
-	"mobile-frontend-talk-topic-error-protected": "এই আলাপ পাতাটি সুরক্ষিত, এটি বিষয় যোগ করতে আপনার অনুমতি নেই।",
+	"mobile-frontend-talk-topic-error-protected": "এই আলাপ পাতাটি সুরক্ষিত। আপনার এটিতে বিষয় যোগ করার অনুমতি নেই।",
 	"mobile-frontend-talk-topic-error-permission": "বিষয় যোগ করা যাবে না। পাতা সম্পাদনা করতে আপনার অনুমতি নেই।",
 	"mobile-frontend-talk-topic-error-spam": "এটিতে একটি স্প্যামের টুকরা থাকার কারণে এই বিষয় অস্বীকৃত হয়েছে।",
 	"mobile-frontend-talk-topic-error-badtoken": "সার্ভারে একটি ত্রুটি হয়েছিল। আপনার সম্পাদনা সংরক্ষণ করা যাবে না। এই পাতাটি পুনঃলোড করতে চেষ্টা করুন।",
