@@ -45,9 +45,9 @@ class MobileSpecialPageTest extends MediaWikiIntegrationTestCase {
 		$context = new RequestContext();
 		$context->setRequest( new FauxRequest( $params ) );
 		$page = new $class(
+			$this->getServiceContainer()->getDBLoadBalancer(),
 			$this->getServiceContainer()->getNamespaceInfo(),
-			$this->getServiceContainer()->getRevisionFactory(),
-			$this->getServiceContainer()->getRevisionStore()
+			$this->getServiceContainer()->getRevisionFactory()
 		);
 		$page->setContext( $context );
 		$this->assertEquals( $expected, $page->getDesktopUrl( $subPage ) );

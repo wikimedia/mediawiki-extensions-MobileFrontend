@@ -3,7 +3,9 @@
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\RevisionFactory;
 use MediaWiki\Revision\RevisionRecord;
+use Wikimedia\Rdbms\ILoadBalancer;
 use Wikimedia\Rdbms\IResultWrapper;
+use Wikimedia\Rdbms\SelectQueryBuilder;
 
 /**
  * Mobile formatted history of a page
@@ -12,7 +14,6 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 	/** @var bool Whether the mobile special page has a desktop special page */
 	protected $hasDesktopVersion = true;
 	protected const LIMIT = 50;
-	private const DB_REVISIONS_TABLE = 'revision';
 	/** @var string|null Timestamp to offset results from */
 	protected $offset;
 
@@ -33,33 +34,21 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 	/** @var RevisionFactory */
 	private $revisionFactory;
 
+	/** @var ILoadBalancer */
+	private $dbLoadBalancer;
+
 	/**
+	 * @param ILoadBalancer $dbLoadBalancer
 	 * @param NamespaceInfo $namespaceInfo
 	 * @param RevisionFactory $revisionFactory
 	 */
 	public function __construct(
-		NamespaceInfo $namespaceInfo, RevisionFactory $revisionFactory
+		ILoadBalancer $dbLoadBalancer, NamespaceInfo $namespaceInfo, RevisionFactory $revisionFactory
 	) {
 		$this->namespaceInfo = $namespaceInfo;
 		$this->revisionFactory = $revisionFactory;
+		$this->dbLoadBalancer = $dbLoadBalancer;
 		parent::__construct( $this->specialPageName );
-	}
-
-	/**
-	 * Returns a list of query conditions that should be run against the revision table
-	 *
-	 * @return array List of conditions
-	 */
-	protected function getQueryConditions() {
-		$conds = [];
-		if ( $this->title ) {
-			$conds['rev_page'] = $this->title->getArticleID();
-		}
-		if ( $this->offset ) {
-				$dbr = wfGetDB( DB_REPLICA, self::DB_REVISIONS_TABLE );
-				$conds[] = 'rev_timestamp <= ' . $dbr->addQuotes( $this->offset );
-		}
-		return $conds;
 	}
 
 	/**
@@ -175,25 +164,27 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 
 	/**
 	 * Executes the database query and returns the result.
-	 * @see getQueryConditions()
 	 * @return IResultWrapper
 	 */
 	protected function doQuery() {
-		$dbr = wfGetDB( DB_REPLICA, self::DB_REVISIONS_TABLE );
-		$conds = $this->getQueryConditions();
-		$options = [
-			'ORDER BY' => 'rev_timestamp DESC'
-		];
-
-		$options['LIMIT'] = self::LIMIT + 1;
-
+		$dbr = $this->dbLoadBalancer->getConnection( DB_REPLICA );
 		$revQuery = $this->revisionFactory->getQueryInfo();
+		$queryBuilder = $dbr->newSelectQueryBuilder()
+			->tables( $revQuery['tables'] )
+			->fields( $revQuery['fields'] )
+			->joinConds( $revQuery['joins'] );
 
-		$res = $dbr->select(
-			$revQuery['tables'], $revQuery['fields'], $conds, __METHOD__, $options, $revQuery['joins']
-		);
+		if ( $this->title ) {
+			$queryBuilder->where( [ 'rev_page' => $this->title->getArticleID() ] );
+		}
+		if ( $this->offset ) {
+			$queryBuilder->where( $dbr->buildComparison( '<=', [ 'rev_timestamp' => $this->offset ] ) );
+		}
+		$queryBuilder->orderBy( 'rev_timestamp', SelectQueryBuilder::SORT_DESC )
+			->limit( self::LIMIT + 1 )
+			->useIndex( [ 'revision' => 'rev_page_timestamp' ] );
 
-		return $res;
+		return $queryBuilder->caller( __METHOD__ )->fetchResultSet();
 	}
 
 	/**
