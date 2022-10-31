@@ -7,7 +7,7 @@
 			"BadDog"
 		]
 	},
-	"abusefilter-edit-builder-vars-user-mobile": "Uređuje li korisnikot od mobilnoga sučelja",
+	"abusefilter-edit-builder-vars-user-mobile": "Uređuje li korisnik putem mobilnoga sučelja",
 	"mobile-frontend-account-create-captcha-placeholder": "Unesite kôd za potvrdu",
 	"mobile-frontend-categories-heading": "<strong>Kategorije</strong>",
 	"mobile-frontend-categories-subheading": "Stranica pripada sljedećim kategorijama:",
@@ -187,5 +187,10 @@
 	"mobile-frontend-user-page-describe-yourself": "Na svojoj korisničkoj stranici možete se opisati drugim $1",
 	"mobile-frontend-user-page-describe-yourself-editors": "uređivačima",
 	"tag-mobile_edit": "mobilno uređivanje",
-	"tag-mobile_web_edit": "mobilno veb-uređivanje"
+	"tag-advanced_mobile_edit": "napredna mobilna izmjena",
+	"tag-mobile_web_edit": "mobilno veb-uređivanje",
+	"mobile-frontend-loading-message": "Učitavanje...",
+	"mobile-frontend-search-feedback-link-text": "Dajte nam Vaše mišljenje.",
+	"mobile-frontend-search-feedback-prompt": "Niste pronašli što ste tražili?",
+	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions": "Opisi naslova"
 }

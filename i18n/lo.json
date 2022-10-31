@@ -1,10 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"Aefgh39622"
+			"Aefgh39622",
+			"Lookruk"
 		]
 	},
 	"mobile-frontend-copyright": "ເນື້ອໃນສາມາດໃຊ້ໄດ້ພາຍໃຕ້ $1 ຖ້າບໍ່ແມ່ນຢ່າງອື່ນໃດທີ່ລະບຸໄວ້.",
+	"mobile-frontend-joined-days": "{{GENDER:$1|ເຂົ້າຮ່ວມເມື່ອ}} {{PLURAL:$2|$2 ມື້}}ກ່ອນ",
+	"mobile-frontend-joined-months": "{{GENDER:$1|ເຂົ້າຮ່ວມເມື່ອ}} {{PLURAL:$2|$2 ເດືອນ}}ກ່ອນ",
+	"mobile-frontend-joined-years": "{{GENDER:$1|ເຂົ້າຮ່ວມເມື່ອ}} {{PLURAL:$2|$2 ປີ}}ທີ່ແລ້ວ",
 	"mobile-frontend-last-modified-date": "ແກ້ໄຂຄັ້ງລ້າສຸດເມື່ອ $1, ເວລາ $2",
 	"mobile-frontend-privacy-link-text": "ຄວາມເປັນສ່ວນໂຕ",
 	"mobile-frontend-terms-text": "ເງື່ອນໄຂການໃຊ້ງານ",
