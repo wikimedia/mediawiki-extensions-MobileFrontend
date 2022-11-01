@@ -3,7 +3,6 @@
 use MobileFrontend\Transforms\LazyImageTransform;
 use MobileFrontend\Transforms\MakeSectionsTransform;
 use MobileFrontend\Transforms\MoveLeadParagraphTransform;
-use MobileFrontend\Transforms\SubHeadingTransform;
 
 /**
  * @group MobileFrontend
@@ -215,7 +214,7 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 				$this->makeSectionHtml( 0, '' )
 					. $this->makeSectionHeading( 'h3', '<span>h3</span>' )
 					. $this->makeSectionHtml( 1, $longLine
-						. '<h4 class="in-block"><span>h4</span></h4>'
+						. '<h4><span>h4</span></h4>'
 						. 'h4 text.'
 					),
 				$enableSections
@@ -568,7 +567,6 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 		// Sectionify the content and transform it if necessary per section
 
 		$transforms = [];
-		$transforms[] = new SubHeadingTransform( $topHeadingTags );
 
 		$transforms[] = new MakeSectionsTransform(
 			$topHeadingTags,
@@ -590,9 +588,9 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 
 	/**
 	 * @covers MobileFormatter::applyTransforms
-	 * @dataProvider provideHeadingTransform
+	 * @dataProvider provideSectionTransform
 	 */
-	public function testHeadingTransform( array $topHeadingTags, $input, $expectedOutput ) {
+	public function testSectionTransform( array $topHeadingTags, $input, $expectedOutput ) {
 		$t = Title::newFromText( 'Mobile' );
 		$formatter = new MobileFormatter( $input, $t, $this->mfConfig, $this->mfContext );
 
@@ -603,36 +601,8 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 		$this->assertEquals( $expectedOutput, $formatter->getText() );
 	}
 
-	public function provideHeadingTransform() {
+	public function provideSectionTransform() {
 		return [
-
-			// The "in-block" class is added to a subheading.
-			[
-				[ 'h1', 'h2' ],
-				'<h1>Foo</h1><h2>Bar</h2>',
-				$this->makeSectionHtml( 0, '' )
-					. $this->makeSectionHeading( 'h1', 'Foo' )
-					. $this->makeSectionHtml( 1, '<h2 class="in-block">Bar</h2>' )
-			],
-
-			// The "in-block" class is added to a subheading
-			// without overwriting the existing attribute.
-			[
-				[ 'h1', 'h2' ],
-				'<h1>Foo</h1><h2 class="baz">Bar</h2>',
-				$this->makeSectionHtml( 0, '' )
-					. $this->makeSectionHeading( 'h1', 'Foo' )
-					. $this->makeSectionHtml( 1, '<h2 class="baz in-block">Bar</h2>' ),
-			],
-
-			// The "in-block" class is added to all subheadings.
-			[
-				[ 'h1', 'h2', 'h3' ],
-				'<h1>Foo</h1><h2>Bar</h2><h3>Qux</h3>',
-				$this->makeSectionHtml( 0, '' )
-					. $this->makeSectionHeading( 'h1', 'Foo' )
-					. $this->makeSectionHtml( 1, '<h2 class="in-block">Bar</h2><h3 class="in-block">Qux</h3>' )
-			],
 
 			// The first heading found is the highest ranked
 			// subheading.
@@ -641,7 +611,7 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 				'<h2>Bar</h2><h3>Qux</h3>',
 				$this->makeSectionHtml( 0, '' )
 					. $this->makeSectionHeading( 'h2', 'Bar' )
-					. $this->makeSectionHtml( 1, '<h3 class="in-block">Qux</h3>' ),
+					. $this->makeSectionHtml( 1, '<h3>Qux</h3>' ),
 			],
 
 			// Unenclosed text is appended to the expandable container.
@@ -650,7 +620,7 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 				'<h1>Foo</h1><h2>Bar</h2>A',
 				$this->makeSectionHtml( 0, '' )
 					. $this->makeSectionHeading( 'h1', 'Foo' )
-					. $this->makeSectionHtml( 1, '<h2 class="in-block">Bar</h2>A' )
+					. $this->makeSectionHtml( 1, '<h2>Bar</h2>A' )
 			],
 
 			// Unencloded text that appears before the first
@@ -662,7 +632,7 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 				'A<h1>Foo</h1><h2>Bar</h2>',
 				$this->makeSectionHtml( 0, '<p>A</p>' )
 					. $this->makeSectionHeading( 'h1', 'Foo' )
-					. $this->makeSectionHtml( 1, '<h2 class="in-block">Bar</h2>' ),
+					. $this->makeSectionHtml( 1, '<h2>Bar</h2>' ),
 			],
 
 			// Multiple headings are handled identically.
@@ -671,7 +641,7 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 				'<h1>Foo</h1><h2>Bar</h2>Baz<h1>Qux</h1>Quux',
 				$this->makeSectionHtml( 0, '' )
 					. $this->makeSectionHeading( 'h1', 'Foo' )
-					. $this->makeSectionHtml( 1, '<h2 class="in-block">Bar</h2>Baz' )
+					. $this->makeSectionHtml( 1, '<h2>Bar</h2>Baz' )
 					. $this->makeSectionHeading( 'h1', 'Qux', 2 )
 					. $this->makeSectionHtml( 2, 'Quux' ),
 			],

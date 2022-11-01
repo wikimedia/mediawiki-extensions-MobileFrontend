@@ -6,7 +6,6 @@ use MobileFrontend\ContentProviders\IContentProvider;
 use MobileFrontend\Transforms\LazyImageTransform;
 use MobileFrontend\Transforms\MakeSectionsTransform;
 use MobileFrontend\Transforms\MoveLeadParagraphTransform;
-use MobileFrontend\Transforms\SubHeadingTransform;
 use Wikibase\Client\WikibaseClient;
 use Wikibase\DataModel\Entity\ItemId;
 use Wikibase\DataModel\Services\Lookup\TermLookupException;
@@ -128,8 +127,6 @@ class ExtMobileFrontend {
 		if ( $enableSections ) {
 			$options = $config->get( 'MFMobileFormatterOptions' );
 			$topHeadingTags = $options['headings'];
-
-			$transforms[] = new SubHeadingTransform( $topHeadingTags );
 
 			$transforms[] = new MakeSectionsTransform(
 				$topHeadingTags,
