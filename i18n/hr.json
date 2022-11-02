@@ -52,7 +52,7 @@
 	"mobile-frontend-editor-blocked-drawer-body-link": "Vidi više",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Razlog",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Blokirao|Blokirala}} Vas je",
-	"mobile-frontend-editor-blocked-drawer-expiry-header": "Blokada će istječi za",
+	"mobile-frontend-editor-blocked-drawer-expiry-header": "Blokada će isteći",
 	"mobile-frontend-editor-blocked-drawer-help": "Više pojedinosti",
 	"mobile-frontend-editor-generic-block-reason": "Razlog nije poznat",
 	"mobile-frontend-editor-cancel": "Odustani",
