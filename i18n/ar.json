@@ -200,7 +200,7 @@
 	"mobile-frontend-talk-reply": "رد",
 	"mobile-frontend-talk-reply-info": "لاحظ أن ردّك سيُوقّع تلقائيا باسمك.",
 	"mobile-frontend-talk-topic-error": "لا يمكن إضافة هذا الموضوع نتيجة خطأ مجهول.",
-	"mobile-frontend-talk-topic-error-protected": "صفحة النقاش هذه محمية، وليس لديك صلاحية إضافة مواضيع إليها.",
+	"mobile-frontend-talk-topic-error-protected": "صفحة الحديث هذه محمية. ليس لديك إذن لإضافة مواضيع إليها.",
 	"mobile-frontend-talk-topic-error-permission": "لا يمكن إضافة هذا الموضوع، إذ ليس لديك صلاحية تحرير الصفحات.",
 	"mobile-frontend-talk-topic-error-spam": "هذا الموضوع مرفوض لأنه يحوي مقطعاً فيه دعاية.",
 	"mobile-frontend-talk-topic-error-badtoken": "حصل خطأ على الخادوم. لا يمكن حفظ تعديلك. حاول إعادة تحميل الصفحة.",
