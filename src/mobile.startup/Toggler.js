@@ -232,11 +232,6 @@ Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 	var self = this,
 		collapseSectionsByDefault = mw.config.get( 'wgMFCollapseSectionsByDefault' );
 
-	// Also allow .section-heading if some extensions like Wikibase
-	// want to toggle other headlines than direct descendants of $container.
-	var $firstHeading = $container.find( '> h1,> h2,> h3,> h4,> h5,> h6,.section-heading' ).eq( 0 );
-	var tagName = $firstHeading.prop( 'tagName' ) || 'H1';
-
 	if ( collapseSectionsByDefault === undefined ) {
 		// Old default behavior if on cached output
 		collapseSectionsByDefault = true;
@@ -244,7 +239,9 @@ Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 	// NB: 'expandSections' uses localStorage, unlike 'expandedSections' which uses sessionStorage
 	var expandSections = !collapseSectionsByDefault || mw.storage.get( 'expandSections' ) === 'true';
 
-	$container.children( tagName ).each( function ( i ) {
+	// FIXME This should use .find() instead of .children(), some extensions like Wikibase
+	// want to toggle other headlines than direct descendants of $container. (T95889)
+	$container.children( '.section-heading' ).each( function ( i ) {
 		var $heading = $container.find( this ),
 			$headingLabel = $heading.find( '.mw-headline' ),
 			$indicator = $heading.find( '.indicator' ),

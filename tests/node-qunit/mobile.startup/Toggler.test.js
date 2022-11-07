@@ -7,17 +7,25 @@ const
 	mediawiki = require( '../utils/mw' ),
 	mustache = require( '../utils/mustache' ),
 	sectionTemplate = `
-		<h2>
-			<span class="mw-headline" id="First_Section">First Section</span>
-		</h2>
+		<div class="section-heading">
+			<h2>
+				<span class="mw-headline" id="First_Section">First Section</span>
+			</h2>
+		</div>
 		<section>
 			<p>Text</p>
 		</section>
-		<h2 id="section_1">
-			<span class="mw-headline"><a href="#foo">Dummy Link</a></span>
-		</h2>
+		<div class="section-heading">
+			<h2 id="section_1">
+				<span class="mw-headline"><a href="#foo">Dummy Link</a></span>
+			</h2>
+		</div>
 		<section></section>
-		<h2><span class="mw-headline">References</span></h2>
+		<div class="section-heading">
+			<h2>
+				<span class="mw-headline">References</span>
+			</h2>
+		</div>
 		<section data-is-reference-section="1">
 			<ol class="references">
 				<li id="cite_note-1">
@@ -52,8 +60,8 @@ QUnit.module( 'MobileFrontend Toggler.js', {
 		sandbox.stub( browser, 'isWideScreen' ).returns( false );
 
 		this.page = { title: 'Toggle test' };
-		this.$container = $( '<section>' ).html( sectionTemplate );
-		this.$section0 = this.$container.find( 'h2' ).eq( 0 );
+		this.$container = $( '<article>' ).html( sectionTemplate );
+		this.$section0 = this.$container.find( '.section-heading' ).eq( 0 );
 		this.title = this.page.title;
 		this.headline = this.$section0.find( 'span' ).attr( 'id' );
 		this._session = mw.storage.session;
@@ -294,7 +302,7 @@ QUnit.test( 'Toggling a section stores its state.', function ( assert ) {
 			prefix: '',
 			page: this.page
 		} ),
-		$section = this.$container.find( 'h2' ),
+		$section = this.$container.find( '.section-heading' ),
 		expandedSections = Toggler._getExpandedSections( this.page ),
 		mwStorageSetSpy = sandbox.spy( mw.storage.session, 'setObject' );
 
@@ -328,7 +336,7 @@ QUnit.test( 'Expanding already expanded section does not toggle it.', function (
 			prefix: '',
 			page: this.page
 		} ),
-		$section = this.$container.find( 'h2' ),
+		$section = this.$container.find( '.section-heading' ),
 		expandedSections = Toggler._getExpandedSections( this.page );
 
 	assert.strictEqual( $.isEmptyObject( expandedSections[ this.title ] ),
@@ -372,11 +380,8 @@ QUnit.test( 'Expanding already expanded section does not toggle it.', function (
 QUnit.test( 'MobileFrontend toggle.js - Expand stored sections.', function ( assert ) {
 
 	const
-		$section = this.$container.find( 'h2' ).eq( 0 ),
+		$section = this.$container.find( '.section-heading' ).eq( 0 ),
 		expandedSections = Toggler._getExpandedSections( this.page );
-
-	// Restore expanded sections only works on headings that are also section headings
-	this.$container.find( 'h2' ).addClass( 'section-heading' );
 
 	assert.strictEqual( $section.hasClass( 'open-block' ), false, 'Section is collapsed.' );
 

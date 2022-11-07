@@ -4,6 +4,7 @@ namespace MobileFrontend\Transforms;
 
 use DOMDocument;
 use DOMElement;
+use DOMNode;
 use DOMXPath;
 use Exception;
 use Html;
@@ -55,14 +56,35 @@ class MakeSectionsTransform implements IMobileTransform {
 	}
 
 	/**
+	 * @param DOMNode|null $node
+	 * @return string|false Heading tag name if the node is a heading
+	 */
+	private function getHeadingName( $node ) {
+		if ( !( $node instanceof DOMElement ) ) {
+			return false;
+		}
+		// We accept both kinds of nodes that can be returned by getTopHeadings():
+		// a `<h1>` to `<h6>` node, or a `<div class="mw-heading">` node wrapping it.
+		// In the future `<div class="mw-heading">` will be required (T13555).
+		if ( DOMCompat::getClassList( $node )->contains( 'mw-heading' ) ) {
+			$node = DOMCompat::querySelector( $node, implode( ',', $this->topHeadingTags ) );
+			if ( !( $node instanceof DOMElement ) ) {
+				return false;
+			}
+		}
+		return $node->tagName;
+	}
+
+	/**
 	 * Actually splits the body of the document into sections
 	 *
 	 * @param DOMElement $body representing the HTML of the current article. In the HTML the sections
 	 *  should not be wrapped.
-	 * @param DOMElement[] $headings The headings returned by
-	 * @see MobileFormatter::getHeadings
+	 * @param DOMElement[] $headingWrappers The headings (or wrappers) returned by getTopHeadings():
+	 *  `<h1>` to `<h6>` nodes, or `<div class="mw-heading">` nodes wrapping them.
+	 *  In the future `<div class="mw-heading">` will be required (T13555).
 	 */
-	private function makeSections( DOMElement $body, array $headings ) {
+	private function makeSections( DOMElement $body, array $headingWrappers ) {
 		// Find the parser output wrapper div
 		$xpath = new DOMXPath( $body->ownerDocument );
 		$containers = $xpath->query( 'body/div[@class="mw-parser-output"][1]' );
@@ -78,8 +100,8 @@ class MakeSectionsTransform implements IMobileTransform {
 
 		$container = $containers->item( 0 );
 		$containerChild = $container->firstChild;
-		$firstHeading = reset( $headings );
-		$firstHeadingName = $firstHeading ? $firstHeading->nodeName : false;
+		$firstHeading = reset( $headingWrappers );
+		$firstHeadingName = $this->getHeadingName( $firstHeading );
 		$sectionNumber = 0;
 		$sectionBody = $this->createSectionBodyElement( $body->ownerDocument, $sectionNumber, false );
 
@@ -89,10 +111,7 @@ class MakeSectionsTransform implements IMobileTransform {
 
 			// If we've found a top level heading, insert the previous section if
 			// necessary and clear the container div.
-			// Note well the use of DOMNode#nodeName here. Only DOMElement defines
-			// DOMElement#tagName.  So, if there's trailing text - represented by
-			// DOMText - then accessing #tagName will trigger an error.
-			if ( $node->nodeName === $firstHeadingName ) {
+			if ( $firstHeadingName && $this->getHeadingName( $node ) === $firstHeadingName ) {
 				// The heading we are transforming is always 1 section ahead of the
 				// section we are currently processing
 				/** @phan-suppress-next-line PhanTypeMismatchArgumentSuperType DOMNode vs. DOMElement */
@@ -183,8 +202,17 @@ class MakeSectionsTransform implements IMobileTransform {
 			$allTags = DOMCompat::querySelectorAll( $doc, $tagName );
 
 			foreach ( $allTags as $el ) {
-				/** @phan-suppress-next-line PhanUndeclaredMethod DOMNode vs. DOMElement */
-				if ( $el->parentNode->getAttribute( 'class' ) !== 'toctitle' ) {
+				$parent = $el->parentNode;
+				if ( !( $parent instanceof DOMElement ) ) {
+					continue;
+				}
+				// Use the `<div class="mw-heading">` wrapper if it is present. When they are required
+				// (T13555), the querySelectorAll() above can use the class and this can be removed.
+				if ( DOMCompat::getClassList( $parent )->contains( 'mw-heading' ) ) {
+					$el = $parent;
+				}
+				// This check can be removed too when we require the wrappers.
+				if ( $parent->getAttribute( 'class' ) !== 'toctitle' ) {
 					$headings[] = $el;
 				}
 			}
