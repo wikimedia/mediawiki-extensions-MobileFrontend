@@ -5,6 +5,7 @@
 			"Fwolff",
 			"Naudefj",
 			"Oesjaar",
+			"Rooiratel",
 			"Winstonza",
 			"පසිඳු කාවින්ද"
 		]
@@ -87,6 +88,7 @@
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Onderwerp",
 	"mobile-frontend-talk-add-overlay-submit": "Voeg bespreking by",
 	"mobile-frontend-talk-reply": "Antwoord",
+	"mobile-frontend-talk-topic-error-protected": "Hierdie besprekingsbladsy is beskerm. Jy het nie die toestemming om onderwerpe daarby te voeg nie.",
 	"mobile-frontend-terms-text": "Gebruiksvoorwaardes",
 	"mobile-frontend-view": "Selfoonweergawe",
 	"mobile-frontend-view-desktop": "Rekenaarweergawe",
