@@ -6,7 +6,8 @@
 			"Naudefj",
 			"Oesjaar",
 			"Winstonza",
-			"පසිඳු කාවින්ද"
+			"පසිඳු කාවින්ද",
+			"Rooiratel"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Tik bevestigingkode",
@@ -90,6 +91,7 @@
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Onderwerp",
 	"mobile-frontend-talk-add-overlay-submit": "Voeg bespreking by",
 	"mobile-frontend-talk-reply": "Antwoord",
+	"mobile-frontend-talk-topic-error-protected": "Hierdie besprekingsbladsy is beskerm. Jy het nie die toestemming om onderwerpe daarby te voeg nie.",
 	"mobile-frontend-terms-text": "Gebruiksvoorwaardes",
 	"mobile-frontend-view": "Selfoonweergawe",
 	"mobile-frontend-view-desktop": "Rekenaarweergawe",

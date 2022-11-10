@@ -41,6 +41,8 @@
 	"mobile-frontend-languages-header": "بولیاں",
 	"mobile-frontend-languages-header-page": "$1 - ہور بولیاں",
 	"mobile-frontend-languages-nonexistent-title": "صفحہ $1 ہے نئیں۔",
+	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "تجویز کردہ بولیاں",
+	"mobile-frontend-languages-structured-overlay-all-languages-header": "ہور بولیاں",
 	"mobile-frontend-last-modified-date": "آخری واری $1 نوں، $2 وجے پلٹیا گیا",
 	"mobile-frontend-main-menu": "اصل مینو",
 	"mobile-frontend-main-menu-settings-heading": "سیٹنگاں",
