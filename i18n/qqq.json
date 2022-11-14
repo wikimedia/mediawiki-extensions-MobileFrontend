@@ -78,7 +78,7 @@
 	"mobile-frontend-edit-login-action": "Message shown above the login form when it is reached from a link in the editor.",
 	"mobile-frontend-edit-signup-action": "Message shown above the signup form when it is reached from a link in the editor.",
 	"mobile-frontend-editor-anon": "Title for link to edit a page without logging in.",
-	"mobile-frontend-editor-anonwarning": "Warning message, when user want to edit without logging in.",
+	"mobile-frontend-editor-anonwarning": "A warning message, when user tries to edit without logging in.",
 	"mobile-frontend-editor-blocked-drawer-title": "Title for the drawer that appears when a blocked user attempts to edit.",
 	"mobile-frontend-editor-blocked-drawer-title-partial": "Title for the drawer that appears when a partially blocked user attempts to edit.",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Header for the block reason message that appears when a blocked user attempts to edit.",

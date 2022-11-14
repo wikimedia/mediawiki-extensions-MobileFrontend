@@ -36,7 +36,7 @@
 	"mobile-frontend-edit-login-action": "<strong>Pomagajte izboljšati {{GRAMMAR:tožilnik|{{SITENAME}}}}.</strong><br />Prijavite se za urejanje.",
 	"mobile-frontend-edit-signup-action": "<strong>Pomagajte izboljšati {{GRAMMAR:tožilnik|{{SITENAME}}}}.</strong><br />Registrirajte se za urejanje.",
 	"mobile-frontend-editor-anon": "Urejanje brez prijave",
-	"mobile-frontend-editor-anonwarning": "<strong>Opozorilo:</strong> Niste prijavljeni. Vaš IP-naslov bo javno viden, če naredite kakršnokoli urejanje. Če se <strong>prijavite</strong> ali <strong>ustvarite račun</strong>, bodo vaša urejanja pripisana vašemu uporabniškemu imenu skupaj z drugimi prednostmi.",
+	"mobile-frontend-editor-anonwarning": "<strong>Opozorilo:</strong> Niste prijavljeni. Če boste opravili kakršno koli urejanje, bo vaš IP-naslov javno viden. Če se boste <strong>prijavili</strong> ali če si boste <strong>ustvarili račun</strong>, bodo poleg drugih prednosti vaša urejanja pripisana vašemu uporabniškemu imenu.",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Razlog za blokado",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Blokiral|Blokirala|Blokiral(-a)}}",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "Blokada bo potekla",

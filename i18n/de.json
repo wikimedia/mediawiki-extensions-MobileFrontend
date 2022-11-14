@@ -56,7 +56,7 @@
 	"mobile-frontend-edit-login-action": "<strong>Hilf, {{SITENAME}} zu verbessern.</strong><br />Zum Bearbeiten anmelden.",
 	"mobile-frontend-edit-signup-action": "<strong>Hilf, {{SITENAME}} zu verbessern.</strong><br />Zum Bearbeiten registrieren.",
 	"mobile-frontend-editor-anon": "Ohne Anmeldung bearbeiten",
-	"mobile-frontend-editor-anonwarning": "<strong>Warnung:</strong> Du bist nicht angemeldet. Deine IP-Adresse wird bei Bearbeitungen öffentlich sichtbar. <strong>Melde dich an</strong>, damit Bearbeitungen deinem Benutzernamen zugeordnet werden.",
+	"mobile-frontend-editor-anonwarning": "<strong>Warnung:</strong> Du bist nicht angemeldet. Deine IP-Adresse wird bei Bearbeitungen öffentlich sichtbar. <strong>Melde dich an</strong> oder <strong>lege ein Benutzerkonto an</strong>, damit Bearbeitungen deinem Benutzernamen zugeordnet werden. Ein eigenes Benutzerkonto hat eine ganze Reihe von Vorteilen.",
 	"mobile-frontend-editor-blocked-drawer-title": "Du wurdest für das Bearbeiten von {{SITENAME}} gesperrt",
 	"mobile-frontend-editor-blocked-drawer-title-partial": "Du wurdest für das Bearbeiten dieser Seite gesperrt",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Grund für die Sperre",
