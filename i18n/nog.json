@@ -4,9 +4,11 @@
 			"TayfunEt."
 		]
 	},
+	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|байт}} косулды",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Кируьв",
 	"mobile-frontend-editor-blocked-drawer-body-link": "Тагы коьр",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Себеп",
+	"mobile-frontend-editor-cancel": "Бас тартув",
 	"mobile-frontend-fontchanger-option-small": "Кишкене",
 	"mobile-frontend-fontchanger-option-medium": "Есас",
 	"mobile-frontend-fontchanger-option-large": "Улы",
@@ -14,6 +16,7 @@
 	"mobile-frontend-language-heading": "<strong>Тиллер</strong>",
 	"mobile-frontend-languages-header": "Тиллер",
 	"mobile-frontend-languages-header-page": "$1 - Баска тиллер",
+	"mobile-frontend-languages-variant-header": "{{#language:{{CONTENTLANG}}}} вариантлары",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Теклип етилген тиллер",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Баска тиллер",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Тил кыдыр",
