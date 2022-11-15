@@ -14,8 +14,8 @@ use Title;
  * @todo FIXME: Rename this class when its purpose becomes clearer
  */
 class MobilePage {
-	public const SMALL_IMAGE_WIDTH = 150;
-	public const TINY_IMAGE_WIDTH = 80;
+	public const SMALL_IMAGE_WIDTH = 220;
+	public const TINY_IMAGE_WIDTH = 120;
 
 	/**
 	 * @var Title Title for page
