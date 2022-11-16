@@ -169,7 +169,7 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 					'a[href$="section=' + sectionId + '"],' +
 					// contains section=N&...
 					'a[href*="section=' + sectionId + '&"]'
-				).closest( 'h1, h2, h3, h4, h5, h6' );
+				).closest( '.mw-heading, h1, h2, h3, h4, h5, h6' );
 				// When loading on action=edit URLs, there is no page content
 				if ( !$sectionTop.length ) {
 					$sectionTop = $( '#bodyContent' );
