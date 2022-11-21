@@ -29,7 +29,8 @@ function SearchOverlay( params ) {
 			function ( query ) {
 				this.performSearch( query );
 			}.bind( this ),
-			params.defaultSearchPage || ''
+			params.defaultSearchPage || '',
+			params.autocapitalize
 		),
 		options = util.extend( true, {
 			headerChrome: true,

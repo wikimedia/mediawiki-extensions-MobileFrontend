@@ -14,11 +14,14 @@ class SearchHeaderView extends View {
 	 * @param {Function} props.onInput executed every time input changes
 	 * @param {string} props.placeholderMsg
 	 * @param {string} props.action
+	 * @parm {string} [props.autocapitalize] none or sentences
 	 * @param {string} [props.searchTerm] default
 	 */
 	constructor( props ) {
 		super(
-			util.extend( {}, props, {
+			util.extend( {
+				autocapitalize: 'sentences'
+			}, props, {
 				events: {
 					'input input': 'onInput'
 				}
@@ -43,7 +46,9 @@ class SearchHeaderView extends View {
 	get template() {
 		return util.template( `<div class="overlay-title search-header-view">
 		<form method="get" action="{{action}}" class="search-box">
-		<input class="search mw-ui-background-icon-search" type="search" name="search" autocomplete="off" placeholder="{{placeholderMsg}}" aria-label="{{placeholderMsg}}" value="{{searchTerm}}">
+		<input class="search mw-ui-background-icon-search" type="search" name="search"
+			autocapitalize="{{autocapitalize}}"
+			autocomplete="off" placeholder="{{placeholderMsg}}" aria-label="{{placeholderMsg}}" value="{{searchTerm}}">
 		<input type="hidden" name="title" value="{{defaultSearchPage}}">
 		</form>
 </div>` );
