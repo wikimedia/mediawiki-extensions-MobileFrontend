@@ -11,7 +11,7 @@
 			"Mirzali"
 		]
 	},
-	"mobile-frontend-changeslist-nocomment": "kurteya guhartinê tune ye",
+	"mobile-frontend-changeslist-nocomment": "kurteya guhartinê tine ye",
 	"mobile-frontend-clear-search": "Paqij bike",
 	"mobile-frontend-diffview-anonymous": "Bikarhênerê bênav",
 	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|bayt}} lê hatin zêdekirin",
@@ -37,9 +37,11 @@
 	"mobile-frontend-editor-summary": "Kurte:",
 	"mobile-frontend-editor-switch-visual-editor": "Here guhartina dîtbarî",
 	"mobile-frontend-editor-wait": "Guhartin tê tomarkirin, ji kerema xwe re bisekine.",
+	"mobile-frontend-editor-loading": "Edîtor tê barkirin...",
 	"mobile-frontend-generic-404-desc": "Rûpela ku tu lê digerî nehate dîtin.",
 	"mobile-frontend-generic-404-title": "Çewtî: Rûpel nehate dîtin",
 	"mobile-frontend-history-404-title": "Rûpelek wiha tune ye",
+	"mobile-frontend-joined-just-now": "Hema niha {{GENDER:$1|bû endam}}",
 	"mobile-frontend-language-heading": "<strong>Ziman</strong>",
 	"mobile-frontend-languages-404-title": "Çewtiya zimanan",
 	"mobile-frontend-languages-header": "Ziman",
