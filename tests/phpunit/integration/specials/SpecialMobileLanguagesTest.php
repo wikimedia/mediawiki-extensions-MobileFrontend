@@ -166,12 +166,10 @@ class SpecialMobileLanguagesTest extends MediaWikiIntegrationTestCase {
 		$loggerMock = $this->createMock( LoggerInterface::class );
 		$loggerMock->expects( $this->once() )
 			->method( 'warning' )
-			->with( $this->isType( 'string' ), $this->equalTo(
-				[
-					'uri' => $testUri,
-					'langObject' => $langObject
-				]
-		) );
+			->with(
+				$this->isType( 'string' ),
+				[ 'uri' => $testUri, 'langObject' => $langObject ]
+			);
 		$this->setLogger( MobileContext::LOGGER_CHANNEL, $loggerMock );
 
 		$requestMock = $this->createMock( FauxRequest::class );

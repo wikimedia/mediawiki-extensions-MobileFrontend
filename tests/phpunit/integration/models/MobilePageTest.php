@@ -69,8 +69,7 @@ class MobilePageTest extends MediaWikiIntegrationTestCase {
 			[ 'getTimestamp', 'getUser' ]
 		);
 
-		$revisionRecordMock->expects( $this->any() )
-			->method( 'getTimestamp' )
+		$revisionRecordMock->method( 'getTimestamp' )
 			->willReturn( self::TS_MW );
 
 		if ( $testUser ) {
@@ -79,8 +78,7 @@ class MobilePageTest extends MediaWikiIntegrationTestCase {
 
 			$userIdentity = $this->createMock( \MediaWiki\User\UserIdentity::class );
 
-			$userIdentity->expects( $this->any() )
-				->method( 'getId' )
+			$userIdentity->method( 'getId' )
 				->willReturn( $userId );
 
 			$userIdentity->expects( $this->any() )

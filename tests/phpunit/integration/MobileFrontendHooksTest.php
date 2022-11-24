@@ -393,9 +393,7 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 	 * @return File
 	 */
 	private function factoryFile( $mimeType ) {
-		$file = $this->getMockBuilder( File::class )
-			->disableOriginalConstructor()
-			->getMock();
+		$file = $this->createMock( File::class );
 
 		$file->method( 'getMimeType' )
 			->willReturn( $mimeType );

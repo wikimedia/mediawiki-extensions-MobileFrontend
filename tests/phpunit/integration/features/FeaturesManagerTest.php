@@ -13,11 +13,9 @@ class FeaturesManagerTest extends MediaWikiIntegrationTestCase {
 
 	private function getTestMode( $modeName, $isEnabled = true ) {
 		$modeMock = $this->createMock( \MobileFrontend\Features\IUserMode::class );
-		$modeMock->expects( $this->any() )
-			->method( 'getModeIdentifier' )
+		$modeMock->method( 'getModeIdentifier' )
 			->willReturn( $modeName );
-		$modeMock->expects( $this->any() )
-			->method( 'isEnabled' )
+		$modeMock->method( 'isEnabled' )
 			->willReturn( $isEnabled );
 
 		return $modeMock;
