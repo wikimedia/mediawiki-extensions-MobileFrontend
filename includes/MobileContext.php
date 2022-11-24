@@ -434,12 +434,10 @@ class MobileContext extends ContextSource {
 		$stopMobileRedirectCookieSecureValue =
 			$this->config->get( 'MFStopMobileRedirectCookieSecureValue' );
 
-		if ( $expiry === null ) {
-			$expiry = $this->getUseFormatCookieExpiry();
-		}
-
 		$this->getRequest()->response()->setCookie(
-			self::STOP_MOBILE_REDIRECT_COOKIE_NAME, 'true', $expiry,
+			self::STOP_MOBILE_REDIRECT_COOKIE_NAME,
+			'true',
+			$expiry ?? $this->getUseFormatCookieExpiry(),
 			[
 				'domain' => $this->getStopMobileRedirectCookieDomain(),
 				'prefix' => '',
@@ -523,13 +521,10 @@ class MobileContext extends ContextSource {
 	 * @param int|null $expiry Expiration of cookie
 	 */
 	public function setUseFormatCookie( $cookieFormat = 'true', $expiry = null ) {
-		if ( $expiry === null ) {
-			$expiry = $this->getUseFormatCookieExpiry();
-		}
 		$this->getRequest()->response()->setCookie(
 			self::USEFORMAT_COOKIE_NAME,
 			$cookieFormat,
-			$expiry,
+			$expiry ?? $this->getUseFormatCookieExpiry(),
 			[
 				'prefix' => '',
 				'httpOnly' => true,

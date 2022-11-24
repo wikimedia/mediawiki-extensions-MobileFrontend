@@ -172,14 +172,11 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 		$mainContext = new DerivativeContext( RequestContext::getMain() );
 		$out = new OutputPage( $context );
 		$skin = new SkinTemplate();
-		if ( $title === null ) {
-			$title = Title::newMainPage();
-		}
 		// create a FauxRequest to use instead of a WebRequest object (FauxRequest forces
 		// the creation of a FauxResponse, which allows to investigate sent header values)
 		$request = new FauxRequest();
 		$mainContext->setRequest( $request );
-		$mainContext->setTitle( $title );
+		$mainContext->setTitle( $title ?? Title::newMainPage() );
 		$skin->setContext( $mainContext );
 		$mainContext->setOutput( $out );
 		$context->setContext( $mainContext );
