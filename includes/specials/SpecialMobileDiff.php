@@ -243,7 +243,6 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	}
 
 	/**
-	 * Get the intro HTML
 	 * @return string Built HTML for intro section
 	 */
 	private function getIntroHTML() {

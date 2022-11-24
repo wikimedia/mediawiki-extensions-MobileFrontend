@@ -41,8 +41,8 @@ final class Manager {
 	private $config;
 
 	/**
-	 * @param Config $config Config object
-	 * @param MobileContext $mobileContext MobileFrontend context
+	 * @param Config $config
+	 * @param MobileContext $mobileContext
 	 */
 	public function __construct( Config $config, MobileContext $mobileContext ) {
 		$this->config = $config;

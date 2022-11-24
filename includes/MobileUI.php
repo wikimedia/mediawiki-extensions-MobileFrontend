@@ -8,7 +8,7 @@ class MobileUI {
 
 	/**
 	 * Get CSS classes for icons
-	 * @param string $iconName Icon name
+	 * @param string $iconName
 	 * @param string $iconType element or before
 	 * @param string $additionalClassNames additional class names you want to associate
 	 *  with the iconed element
