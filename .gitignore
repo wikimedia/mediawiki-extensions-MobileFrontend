@@ -23,6 +23,5 @@ tests/report
 .bundle/
 resources/dist/
 /.nyc_output/
-/tests/selenium/log
 /.eslintcache
 .vscode
