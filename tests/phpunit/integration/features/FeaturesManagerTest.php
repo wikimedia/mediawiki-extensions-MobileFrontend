@@ -125,7 +125,7 @@ class FeaturesManagerTest extends MediaWikiIntegrationTestCase {
 		$this->assertCount( 2, $featuresInB, 'ModeB should have two features available' );
 		$this->assertArrayHasKey( 'featureA', $featuresInB, 'ModeB should have FeatureA available' );
 		$this->assertArrayHasKey( 'featureB', $featuresInB, 'ModeB should have FeatureB available' );
-		$this->assertEmpty( $featuresInC, 'ModeC should have no features available' );
+		$this->assertCount( 0, $featuresInC, 'ModeC should have no features available' );
 	}
 
 	/**
