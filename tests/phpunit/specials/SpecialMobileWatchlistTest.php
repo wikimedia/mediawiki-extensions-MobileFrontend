@@ -1,5 +1,6 @@
 <?php
 
+use MediaWiki\User\UserIdentityValue;
 use Wikimedia\Rdbms\FakeResultWrapper;
 
 /**
@@ -15,7 +16,7 @@ class SpecialMobileWatchlistTest extends MediaWikiIntegrationTestCase {
 		$context->setTitle( Title::newFromText( 'Special:Watchlist' ) );
 		$wl = new SpecialMobileWatchlist();
 		$wl->setContext( $context );
-		$wl->addWatchlistHTML( $results, new User(), SpecialMobileWatchlist::VIEW_FEED, 'all' );
+		$wl->addWatchlistHTML( $results, UserIdentityValue::newAnonymous( '' ) );
 		$this->assertStringContainsString(
 			$expected,
 			$wl->getOutput()->getHTML(),

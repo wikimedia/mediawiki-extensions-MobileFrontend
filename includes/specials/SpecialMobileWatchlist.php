@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\MediaWikiServices;
+use MediaWiki\User\UserIdentity;
 use Wikimedia\IPUtils;
 use Wikimedia\Rdbms\IResultWrapper;
 
@@ -75,9 +76,9 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	/**
 	 * Builds the watchlist HTML inside the associated OutputPage
 	 * @param IResultWrapper $res
-	 * @param User $user
+	 * @param UserIdentity $user
 	 */
-	public function addWatchlistHTML( IResultWrapper $res, User $user ) {
+	public function addWatchlistHTML( IResultWrapper $res, UserIdentity $user ) {
 		$output = $this->getOutput();
 		$output->addHTML( self::getWatchlistHeader( $user, $this->view, $this->filter ) );
 		$output->addHTML(
@@ -126,14 +127,14 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 
 	/**
 	 * Get the header for the watchlist page
-	 * @param User $user the current user for obtaining default view and filter preferences
+	 * @param UserIdentity $user the current user for obtaining default view and filter preferences
 	 * @param string $view the name of the view to show (optional)
 	 *  If absent a-z will be used.
 	 * @param string|null $filter the name of the filter to show (optional)
 	 *  If absent user preferences will be consulted, defaulting to `all` if no preference
 	 * @return string Parsed HTML
 	 */
-	public static function getWatchlistHeader( User $user, $view = self::VIEW_LIST, $filter = null ) {
+	public static function getWatchlistHeader( UserIdentity $user, $view = self::VIEW_LIST, $filter = null ) {
 		$services = MediaWikiServices::getInstance();
 		$sp = SpecialPage::getTitleFor( 'Watchlist' );
 		$attrsList = $attrsFeed = [];

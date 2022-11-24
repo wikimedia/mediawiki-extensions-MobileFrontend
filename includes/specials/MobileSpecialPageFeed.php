@@ -1,5 +1,6 @@
 <?php
 
+use MediaWiki\Permissions\Authority;
 use MediaWiki\Revision\RevisionRecord;
 use Wikimedia\IPUtils;
 
@@ -74,7 +75,7 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 	/**
 	 * Generates revision text based on user's rights and preference
 	 * @param RevisionRecord $rev
-	 * @param User $user viewing the revision
+	 * @param Authority $user viewing the revision
 	 * @param bool $unhide whether the user wants to see hidden comments
 	 *   if the user doesn't have permission, comment will display as rev-deleted-comment
 	 * @return string plain text label
@@ -107,7 +108,7 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 	/**
 	 * Generates username text based on user's rights and preference
 	 * @param RevisionRecord $rev
-	 * @param User $user viewing the revision
+	 * @param Authority $user viewing the revision
 	 * @param bool $unhide whether the user wants to see hidden usernames
 	 * @return string plain text label
 	 */

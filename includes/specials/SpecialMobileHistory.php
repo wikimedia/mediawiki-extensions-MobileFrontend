@@ -237,12 +237,8 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 		$isMinor = $rev->isMinor();
 
 		$revUser = $rev->getUser( RevisionRecord::FOR_THIS_USER, $user );
-		if ( $revUser ) {
-			$revIsAnon = !( $revUser->isRegistered() );
-		} else {
-			// Default to anonymous if unknown
-			$revIsAnon = true;
-		}
+		// Default to anonymous if unknown
+		$revIsAnon = !$revUser || !$revUser->isRegistered();
 		$options = [
 			'ts' => $ts,
 			'diffLink' => $diffLink,
