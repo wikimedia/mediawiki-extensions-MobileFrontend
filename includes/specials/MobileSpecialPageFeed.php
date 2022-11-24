@@ -109,7 +109,7 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 	 * @param RevisionRecord $rev
 	 * @param User $user viewing the revision
 	 * @param bool $unhide whether the user wants to see hidden usernames
-	 * @return string plain test label
+	 * @return string plain text label
 	 */
 	protected function getUsernameText( $rev, $user, $unhide ) {
 		$revUser = $rev->getUser( RevisionRecord::FOR_THIS_USER, $user );
@@ -117,7 +117,7 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 			$username = $revUser->getName();
 		} else {
 			$revUser = $rev->getUser( RevisionRecord::RAW );
-			$username = IPUtils::prettifyIP( $revUser->getName() );
+			$username = IPUtils::prettifyIP( $revUser->getName() ) ?? $revUser->getName();
 		}
 		if (
 			!RevisionRecord::userCanBitfield(
@@ -129,7 +129,6 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 		) {
 			$username = $this->msg( 'rev-deleted-user' )->text();
 		}
-		// @phan-suppress-next-line PhanTypeMismatchReturnNullable Null is documented on IPUtils::prettifyIP
 		return $username;
 	}
 

@@ -628,10 +628,10 @@ class MobileContext extends ContextSource {
 	public function getMobileUrl( $url, $forceHttps = false ) {
 		if ( $this->shouldDisplayMobileView() ) {
 			$subdomainTokenReplacement = null;
+			'@phan-var string|null $subdomainTokenReplacement';
 			$hookContainer = MediaWikiServices::getInstance()->getHookContainer();
 			if ( $hookContainer->run( 'GetMobileUrl', [ &$subdomainTokenReplacement, $this ] ) ) {
-				// @phan-suppress-next-line PhanRedundantCondition May set by hook
-				if ( !empty( $subdomainTokenReplacement ) ) {
+				if ( $subdomainTokenReplacement !== null ) {
 					$mobileUrlHostTemplate = $this->parseMobileUrlTemplate( 'host' );
 					$mobileToken = $this->getMobileHostToken( $mobileUrlHostTemplate );
 					$this->mobileUrlTemplate = str_replace(
@@ -713,13 +713,11 @@ class MobileContext extends ContextSource {
 
 		foreach ( $templateHostParts as $key => $templateHostPart ) {
 			if ( strstr( $templateHostPart, '%h' ) ) {
-				$parsedHostPartKey = substr( $templateHostPart, 2 );
-				// @phan-suppress-next-line PhanImpossibleTypeComparisonInLoop
+				$parsedHostPartKey = (int)substr( $templateHostPart, 2 );
 				if ( !array_key_exists( $parsedHostPartKey, $parsedHostParts ) ) {
 					// invalid pattern for this host, ignore
 					return;
 				}
-				// @phan-suppress-next-line PhanTypeMismatchDimFetch
 				$targetHostParts[$key] = $parsedHostParts[$parsedHostPartKey];
 			} elseif ( isset( $parsedHostParts[$key] )
 				&& $templateHostPart == $parsedHostParts[$key] ) {

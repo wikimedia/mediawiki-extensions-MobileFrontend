@@ -46,7 +46,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	/**
 	 * Takes 2 ids/keywords and validates them returning respective revisions
 	 *
-	 * @param int[] $revids Array of revision ids currently limited to 2 elements
+	 * @param string[] $revids Array of revision ids currently limited to 2 elements
 	 * @return RevisionRecord[]|null[] Array of previous and next revision. The next revision is
 	 *   null if a bad parameter is passed
 	 */
@@ -95,8 +95,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		$output = $this->getOutput();
 
 		// @FIXME add full support for git-style notation (eg ...123, 123...)
-		// @phan-suppress-next-line PhanTypeMismatchArgument
-		$revisions = $this->getRevisionsToCompare( explode( '...', $par, 2 ) );
+		$revisions = $this->getRevisionsToCompare( explode( '...', $par ?? '', 2 ) );
 		list( $prev, $rev ) = $revisions;
 
 		if ( $rev === null ) {
@@ -347,8 +346,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		$ipAddr = $user ? $user->getName() : '';
 
 		// Note $userId will be 0 and $ipAddr an empty string if the current audience cannot see it.
-		if ( $userId ) {
-			// @phan-suppress-next-line PhanTypeMismatchArgumentNullable
+		if ( $user && $userId ) {
 			$user = $this->getUserFactory()->newFromUserIdentity( $user );
 			$edits = $user->getEditCount();
 			$attrs = [
