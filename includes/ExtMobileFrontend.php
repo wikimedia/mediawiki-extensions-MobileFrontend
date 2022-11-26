@@ -93,10 +93,7 @@ class ExtMobileFrontend {
 			$title->canExist()
 			&& $title->getContentModel() == CONTENT_MODEL_WIKITEXT
 			// And not in certain namespaces
-			&& array_search(
-				$ns,
-				$config->get( 'MFNamespacesWithoutCollapsibleSections' )
-			) === false
+			&& !in_array( $ns, $config->get( 'MFNamespacesWithoutCollapsibleSections' ) )
 			// And not when what's shown is not actually article text
 			&& $isView
 		);
