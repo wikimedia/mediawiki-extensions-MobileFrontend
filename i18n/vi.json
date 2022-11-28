@@ -18,7 +18,8 @@
 			"පසිඳු කාවින්ද",
 			"Ioe2015",
 			"Nguyễn Mạnh An",
-			"NguoiDungKhongDinhDanh"
+			"NguoiDungKhongDinhDanh",
+			"CactiStaccingCrane"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Người dùng có sửa đổi qua giao diện di động hay không",
@@ -192,7 +193,7 @@
 	"mobile-frontend-talk-topic-wait": "Đang lưu chủ đề của bạn, vui lòng chờ.",
 	"mobile-frontend-terms-text": "Điều khoản sử dụng",
 	"mobile-frontend-view": "Phiên bản di động",
-	"mobile-frontend-view-desktop": "Máy tính để bàn",
+	"mobile-frontend-view-desktop": "Phiên bản máy tính",
 	"mobile-frontend-watchlist-a-z": "Danh sách",
 	"mobile-frontend-watchlist-a-z-empty-howto": "Bạn hiện không có theo dõi trang nào. Với danh sách theo dõi, bạn có thể theo dõi các trang bạn quan tâm. Hãy chạm hình ngôi sao để theo dõi các trang.",
 	"mobile-frontend-watchlist-a-z-empty-howto-alt": "Nhấn hình ngôi sao",

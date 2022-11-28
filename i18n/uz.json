@@ -18,6 +18,7 @@
 	"mobile-frontend-changeslist-nocomment": "tahrir izohi yoʻq",
 	"mobile-frontend-cite-error-title": "Manbalarni yuklashda xatolik",
 	"mobile-frontend-cite-error": "Manbalarni yuklashga urinishda nosoz revizion identifikatori bilan bogʻliq muammo yuzaga keldi.",
+	"mobile-frontend-cite-none-available": "Bu sahifa uchun manbalar mavjud emas.",
 	"mobile-frontend-clear-search": "Tozala",
 	"mobile-frontend-copyright": "Matndan $1 litsenziyasi boʻyicha foydalanish mumkin (agar aksi koʻrsatilmagan boʻlsa).",
 	"mobile-frontend-desc": "Mobil interfeys",
