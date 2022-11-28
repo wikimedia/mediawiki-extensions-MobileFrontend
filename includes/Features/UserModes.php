@@ -30,7 +30,7 @@ class UserModes implements IteratorAggregate {
 	/**
 	 * Retrieve registered mode
 	 *
-	 * @param string $modeIdentifier Mode identifier
+	 * @param string $modeIdentifier
 	 * @return IUserMode
 	 */
 	public function getMode( $modeIdentifier ) {

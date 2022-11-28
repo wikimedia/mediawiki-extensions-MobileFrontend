@@ -101,7 +101,7 @@ class FeaturesManager {
 	/**
 	 * Retrieve the current mode
 	 *
-	 * @param string $modeIdentifier Mode identifier
+	 * @param string $modeIdentifier
 	 * @return IUserMode
 	 */
 	public function getMode( $modeIdentifier ) {

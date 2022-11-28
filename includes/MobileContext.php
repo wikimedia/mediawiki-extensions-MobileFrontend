@@ -469,8 +469,6 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
-	 * Get the useformat cookie
-	 *
 	 * This cookie can determine whether or not a user should see the mobile
 	 * version of a page.
 	 *
