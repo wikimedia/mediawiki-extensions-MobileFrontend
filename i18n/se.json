@@ -2,19 +2,26 @@
 	"@metadata": {
 		"authors": [
 			"Yupik",
-			"Trondtr"
+			"Trondtr",
+			"Kimberli Mäkäräinen (WMNO)"
 		]
 	},
+	"mobile-frontend-editor-blocked-drawer-action-login": "Čálit sisa",
 	"mobile-frontend-editor-generic-block-reason": "Dovdameahttun sivva",
 	"mobile-frontend-editor-continue": "Čuovvovaš",
 	"mobile-frontend-editor-terms-link": "[$1 Geavahaneavttut]",
+	"mobile-frontend-editor-save": "Vurke",
 	"mobile-frontend-language-heading": "<strong>Gielat</strong>",
 	"mobile-frontend-languages-header": "Gielat",
 	"mobile-frontend-languages-header-page": "$1 - Eará gielat",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Eará gielat",
 	"mobile-frontend-news-items": "Ođđasiin",
+	"mobile-frontend-save-settings": "Vurke",
 	"mobile-frontend-terms-text": "Geavahaneavttut",
 	"mobile-frontend-view": "Mobiilaoainnus",
 	"mobile-frontend-view-desktop": "Bargobeavdi",
-	"mobile-frontend-watchlist-filter-all": "Buot"
+	"mobile-frontend-watchlist-cta-button-login": "Čálit sisa",
+	"mobile-frontend-watchlist-filter-all": "Buot",
+	"mobile-frontend-search-feedback-link-text": "Atte máhcahaga.",
+	"mobile-frontend-mobile-option-amc-learn-more": "Lassedieđut"
 }
