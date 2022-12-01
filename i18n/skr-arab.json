@@ -57,7 +57,7 @@
 	"mobile-frontend-main-menu-settings-heading": "ترتیباں",
 	"mobile-frontend-media-details": "تفصیلاں",
 	"mobile-frontend-media-license-link": "اجازت نامہ دی معلومات",
-	"mobile-frontend-media-load-fail-retry": "سجرا، تازہ کرو",
+	"mobile-frontend-media-load-fail-retry": "تازہ کرو",
 	"mobile-frontend-missing-image": "تصویر",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 کلومیٹر}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 میٹر}}",
