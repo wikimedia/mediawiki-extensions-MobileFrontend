@@ -243,6 +243,8 @@
 	"mobile-frontend-mobile-option-amc-learn-more": "Дізнатися більше",
 	"mobile-frontend-mobile-option-amc-send-feedback": "Надіслати відгук",
 	"mobile-frontend-user-pref-option": "Налаштування користувача",
+	"mobile-frontend-user-pref-description": "Можна змінити свої налаштування, зокрема пароль, вигляд вебсайту, налаштування сповіщень тощо.",
+	"mobile-frontend-user-pref-link": "Відкрити налаштування",
 	"mobile-frontend-user-pref-feedback": "Надіслати відгук",
 	"mobile-frontend-amc-outreach-intro": "Представляємо розширений режим",
 	"mobile-frontend-amc-outreach-description": "Розширений режим забезпечує покращений функціонал сторінок перегляду історії редагувань, списку спостережень, нових редагувань, та інших редакторських інструментів у мобільній версії.",
