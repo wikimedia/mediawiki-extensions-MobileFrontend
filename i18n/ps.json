@@ -9,7 +9,7 @@
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "تاييدي کوډ مو ورکړئ",
-	"mobile-frontend-changeslist-nocomment": "د سمون لنډيز پرته",
+	"mobile-frontend-changeslist-nocomment": "د سمون لنډیز نسته",
 	"mobile-frontend-clear-search": "سپينول",
 	"mobile-frontend-copyright": "دا مېنځپانگه د $1 سره سم ستاسې لاسرسي کې ده، خو چې مخالف يې وييل شوی وي.",
 	"mobile-frontend-diffview-anonymous": "ورکنومی کارن",
@@ -120,7 +120,7 @@
 	"mobile-frontend-user-page-create-user-page-link-label": "د $1 په نامه کارن مخ جوړ کړي",
 	"tag-mobile_edit": "د موبايل سمون",
 	"tag-mobile_edit-description": "سمون د موبايل له لارې (جال يا کاريال)",
-	"tag-mobile_web_edit": "د موبايل گورت سمون",
+	"tag-mobile_web_edit": "د موبايل وېب سمون",
 	"tag-mobile_web_edit-description": "سمون د موبايل گورت له لارې",
 	"mobile-frontend-loading-message": "برسېرېدنې کې دی...",
 	"mobile-frontend-search-feedback-link-text": "تاسې خپل نظر موږ ته راکړئ",

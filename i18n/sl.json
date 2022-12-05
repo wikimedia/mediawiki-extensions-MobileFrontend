@@ -61,7 +61,7 @@
 	"mobile-frontend-editor-editing-page": "<span><strong>Urejanje strani</strong> $1</span>",
 	"mobile-frontend-editor-error": "Napaka, urejanje ni shranjeno.",
 	"mobile-frontend-editor-error-conflict": "Napaka, stran je urejal drug uporabnik.",
-	"mobile-frontend-editor-error-loading": "Napaka, ne morem naložiti urejevalnika.",
+	"mobile-frontend-editor-error-loading": "Napaka, urejevalnika ni mogoče naložiti.",
 	"mobile-frontend-editor-error-preview": "Napaka, ob nalaganju predogleda se je zgodilo nekaj nepričakovanega. Prosimo, zaprite stran in poskusite znova.",
 	"mobile-frontend-editor-keep-editing": "Nadaljnje urejanje",
 	"mobile-frontend-editor-licensing": "S shranitvijo sprememb se strinjate z objavo svojega prispevka pod {{PLURAL:$2|licenco|licencama|licencami}} $1.",
