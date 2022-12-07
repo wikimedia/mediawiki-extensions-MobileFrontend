@@ -14,7 +14,6 @@ var browser = require( './Browser' ).getSingleton(),
  * @typedef {Object} ToggledEvent
  * @prop {boolean} expanded True if section is opened, false if closed.
  * @prop {Page} page
- * @prop {boolean} isReferenceSection
  * @prop {jQuery.Object} $heading
  */
 
@@ -153,7 +152,6 @@ Toggler.prototype.toggle = function ( $heading, page ) {
 
 		self.eventBus.emit( 'section-toggled', {
 			expanded: wasExpanded,
-			isReferenceSection: Boolean( $content.attr( 'data-is-reference-section' ) ),
 			$heading: $heading
 		} );
 	} );
@@ -250,7 +248,6 @@ Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 		// Otherwise, collapsible sections for this page is not enabled.
 		if ( $heading.next().is( 'section' ) ) {
 			var $content = $heading.next( 'section' );
-			var isReferenceSection = Boolean( $content.attr( 'data-is-reference-section' ) );
 			$heading
 				.addClass( 'collapsible-heading ' )
 				.data( 'section-number', i )
@@ -298,10 +295,9 @@ Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 				.get( 0 ).setAttribute( 'hidden', 'until-found' );
 
 			enableKeyboardActions( self, $heading, page );
+
 			if (
-				!isReferenceSection && (
-					!isClosed && browser.isWideScreen() || expandSections
-				)
+				!isClosed && browser.isWideScreen() || expandSections
 			) {
 				// Expand sections by default on wide screen devices
 				// or if the expand sections setting is set.

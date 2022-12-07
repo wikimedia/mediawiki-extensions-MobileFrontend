@@ -52,13 +52,9 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 	 *
 	 * @param string $sectionNumber
 	 * @param string $contentHtml
-	 * @param bool $isReferenceSection whether the section contains references
 	 * @return string
 	 */
-	private function makeSectionHtml( $sectionNumber, $contentHtml = '',
-		$isReferenceSection = false
-	) {
-		$attrs = $isReferenceSection ? ' data-is-reference-section="1"' : '';
+	private function makeSectionHtml( $sectionNumber, $contentHtml = '' ) {
 		$className = "mf-section-$sectionNumber";
 
 		if ( $sectionNumber > 0 ) {
@@ -66,7 +62,7 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 		}
 
 		return "<section class=\"$className\" id=\"mf-section-$sectionNumber\""
-			. "$attrs>$contentHtml</section>";
+			. ">$contentHtml</section>";
 	}
 
 	/**
