@@ -296,8 +296,14 @@ Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 
 			enableKeyboardActions( self, $heading, page );
 
+			// When the collapsible-headings-collapsed class is present on the body,
+			// never expand **all** sections, regardless of device size or preferences.
+			// (T321618, T322628)
+			var alwaysCollapsed = document.body.classList.contains( 'collapsible-headings-collapsed' );
 			if (
-				!isClosed && browser.isWideScreen() || expandSections
+				!alwaysCollapsed && (
+					!isClosed && browser.isWideScreen() || expandSections
+				)
 			) {
 				// Expand sections by default on wide screen devices
 				// or if the expand sections setting is set.
