@@ -36,7 +36,7 @@
 	"mobile-frontend-edit-login-action": "<strong>Axude a mellorar {{SITENAME}}.</strong><br />Acceda ao sistema para editar.",
 	"mobile-frontend-edit-signup-action": "Rexístrese para editar.",
 	"mobile-frontend-editor-anon": "Editar sen iniciar sesión",
-	"mobile-frontend-editor-anonwarning": "<strong>Aviso:</strong> non accedeu ao sistema. O seu enderezo IP será visible publicamente se fai calquera edición. Se <strong>accede ao sistema</strong> ou <strong>crea unha conta</strong>, as súas edicións atribuiranse ao seu nome de usuario, xunto con outros beneficios.",
+	"mobile-frontend-editor-anonwarning": "<strong>Aviso:</strong> Non accedeu ao sistema. O seu enderezo IP será visible publicamente se fai calquera edición. Se <strong>accede ao sistema</strong> ou <strong>crea unha conta</strong>, as súas edicións quedarán atribuídas ao seu nome de usuario, ademais de obter outros beneficios.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Acceder",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "Aceptar",
 	"mobile-frontend-editor-blocked-drawer-action-randompage": "Levaerme a outra páxina",
