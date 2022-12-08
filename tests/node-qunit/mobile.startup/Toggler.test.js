@@ -21,20 +21,6 @@ const
 			</h2>
 		</div>
 		<section></section>
-		<div class="section-heading">
-			<h2>
-				<span class="mw-headline">References</span>
-			</h2>
-		</div>
-		<section data-is-reference-section="1">
-			<ol class="references">
-				<li id="cite_note-1">
-					<span class="mw-cite-backlink">
-						<a href="#cite_ref-1">↑</a>
-					</span> <span class="reference-text">hello</span>
-				</li>
-			</ol>
-		</section>
 `;
 let
 	sandbox,
@@ -219,8 +205,6 @@ QUnit.test( 'Tablet mode - Open by default', function ( assert ) {
 
 	assert.strictEqual( this.$container.find( '.collapsible-block' ).eq( 1 ).hasClass( 'open-block' ),
 		true, 'check section is visible at start' );
-	assert.strictEqual( this.$container.find( '.collapsible-block' ).eq( 2 ).hasClass( 'open-block' ),
-		false, 'check reference section is hidden at start' );
 } );
 
 /**

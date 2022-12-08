@@ -59,25 +59,25 @@ class MakeSectionsTransformTest extends MediaWikiIntegrationTestCase {
 		yield [
 			'',
 			true,
-			$this->makeSectionHtml( 0, '', false, false ),
+			$this->makeSectionHtml( 0, '', false ),
 			'First section should be added if no content provided'
 		];
 
 		yield [
 			'<div>Body</div><h2>SHeading</h2><div>SBody</div>',
 			true,
-			$this->makeSectionHtml( 0, '<div>Body</div>', false, false )
+			$this->makeSectionHtml( 0, '<div>Body</div>', false )
 			. $this->makeSectionHeading( 'h2', 'SHeading', 1 )
-			. $this->makeSectionHtml( 1, '<div>SBody</div>', false, true ),
+			. $this->makeSectionHtml( 1, '<div>SBody</div>', true ),
 			'Process heading, section and section body'
 		];
 
 		yield [
 			'<div>Body</div><h2>SHeading</h2><div>SBody</div>',
 			false,
-			$this->makeSectionHtml( 0, '<div>Body</div>', false, false )
+			$this->makeSectionHtml( 0, '<div>Body</div>', false )
 			. $this->makeSectionHeading( 'h2', 'SHeading', false )
-			. $this->makeSectionHtml( 1, '<div>SBody</div>', false, false ),
+			. $this->makeSectionHtml( 1, '<div>SBody</div>', false ),
 			'No script shouldn`t use collapsible blocks '
 		];
 	}
@@ -103,17 +103,14 @@ class MakeSectionsTransformTest extends MediaWikiIntegrationTestCase {
 	 *
 	 * @param string $sectionNumber
 	 * @param string $contentHtml
-	 * @param bool $isReferenceSection whether the section contains references
-	 * @param bool $isCollapsible whether the section contains references
+	 * @param bool $isCollapsible whether the section is collapsible
 	 * @return string
 	 */
 	private function makeSectionHtml(
 		$sectionNumber,
 		$contentHtml,
-		$isReferenceSection,
 		$isCollapsible
 	) {
-		$attrs = $isReferenceSection ? ' data-is-reference-section="1"' : '';
 		$className = "mf-section-$sectionNumber";
 
 		if ( $isCollapsible ) {
@@ -121,7 +118,7 @@ class MakeSectionsTransformTest extends MediaWikiIntegrationTestCase {
 		}
 
 		return "<section class=\"$className\" id=\"mf-section-$sectionNumber\""
-			. "$attrs>$contentHtml</section>";
+			. ">$contentHtml</section>";
 	}
 
 	/**
