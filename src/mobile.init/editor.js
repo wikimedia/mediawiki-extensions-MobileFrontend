@@ -5,7 +5,9 @@ var M = require( '../mobile.startup/moduleLoaderSingleton' ),
 	OverlayManager = require( '../mobile.startup/OverlayManager' ),
 	// #ca-edit, .mw-editsection are standard MediaWiki elements
 	// .edit-link comes from MobileFrontend user page creation CTA
-	$allEditLinks = $( '#ca-edit, .mw-editsection a, .edit-link' ),
+	// Links in content are handled separately to allow reloading the content (T324686)
+	$editTab = $( '#ca-edit' ),
+	EDITSECTION_SELECTOR = '.mw-editsection a, .edit-link',
 	user = mw.user,
 	CtaDrawer = require( '../mobile.startup/CtaDrawer' ),
 	contentModel = mw.config.get( 'wgPageContentModel' ),
@@ -25,7 +27,7 @@ var M = require( '../mobile.startup/moduleLoaderSingleton' ),
  */
 function onEditLinkClick( elem, ev, router ) {
 	var section;
-	if ( $allEditLinks.length === 1 ) {
+	if ( $( EDITSECTION_SELECTOR ).length === 0 ) {
 		// If section edit links are not available, the only edit link
 		// should allow editing the whole page (T232170)
 		section = 'all';
@@ -106,9 +108,15 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 		isNewPage = page.id === 0,
 		firstInitDone = false;
 
-	$allEditLinks.on( 'click', function ( ev ) {
+	$editTab.on( 'click', function ( ev ) {
 		onEditLinkClick( this, ev, overlayManager.router );
 	} );
+	mw.hook( 'wikipage.content' ).add( function ( $content ) {
+		$content.find( EDITSECTION_SELECTOR ).on( 'click', function ( ev ) {
+			onEditLinkClick( this, ev, overlayManager.router );
+		} );
+	} );
+
 	overlayManager.add( editorPath, function ( sectionId ) {
 		var
 			scrollTop = window.pageYOffset,
@@ -441,9 +449,15 @@ function bindEditLinksLoginDrawer( router ) {
 		}
 		drawer.show();
 	}
-	$allEditLinks.on( 'click', function ( ev ) {
+	$editTab.on( 'click', function ( ev ) {
 		showLoginDrawer();
 		ev.preventDefault();
+	} );
+	mw.hook( 'wikipage.content' ).add( function ( $content ) {
+		$content.find( EDITSECTION_SELECTOR ).on( 'click', function ( ev ) {
+			showLoginDrawer();
+			ev.preventDefault();
+		} );
 	} );
 	router.route( editorPath, function () {
 		showLoginDrawer();
@@ -494,9 +508,15 @@ function init( currentPage, currentPageHTMLParser, skin, router ) {
  * @param {Router} router
  */
 function bindEditLinksSorryToast( msg, router ) {
-	$allEditLinks.on( 'click', function ( ev ) {
+	$editTab.on( 'click', function ( ev ) {
 		mw.notify( msg );
 		ev.preventDefault();
+	} );
+	mw.hook( 'wikipage.content' ).add( function ( $content ) {
+		$content.find( EDITSECTION_SELECTOR ).on( 'click', function ( ev ) {
+			mw.notify( msg );
+			ev.preventDefault();
+		} );
 	} );
 	router.route( editorPath, function () {
 		mw.notify( msg );
