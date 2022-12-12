@@ -27,7 +27,7 @@
 	"mobile-frontend-edit-login-action": "<strong>Ajuta a migliorà {{SITENAME}}.</strong><br />Va dent per modifegà.",
 	"mobile-frontend-edit-signup-action": "<strong>Aiuta a migliorà {{SITENAME}}.</strong><br />Registress per modifegà.",
 	"mobile-frontend-editor-anon": "Modifega senza andà dent come utent registrad",
-	"mobile-frontend-editor-anonwarning": "<strong>Atenzion:</strong> te seet minga anda dent come un utent registrad. Se te faret di modifeghe el to adress IP el sarà visibile publicament. Se <strong>te vet dent</strong> o <strong>te creet un cunt</strong>, i to modifiche i sarann atribuide al to nom de utent, insema de alter benefizzi.",
+	"mobile-frontend-editor-anonwarning": "<strong>Ocio:</strong> te see minga anda dent come un utent registrad. Se te faret di modifeghe el to adress IP el sarà a la papala de tucc. Se <strong>te vee dent</strong> o <strong>te creet un cunt</strong>, i to modifiche i sarann atribuide al to nom de utent, insema de alter benefizzi.",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Blocad|Blocada|Bloccad/da}} de",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "El bloch el finirà de chì a",
 	"mobile-frontend-editor-generic-block-reason": "Reson conossuda de nissun",
