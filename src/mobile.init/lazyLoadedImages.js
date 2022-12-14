@@ -71,4 +71,9 @@ function init( $container ) {
 
 module.exports = function () {
 	mw.hook( 'wikipage.content' ).add( init );
+	mw.hook( 'mediawiki.gallery.init' ).add( function ( gallery ) {
+		lazyImageLoader.loadImages(
+			lazyImageLoader.queryPlaceholders( gallery )
+		);
+	} );
 };
