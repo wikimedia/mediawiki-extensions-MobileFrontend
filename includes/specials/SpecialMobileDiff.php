@@ -229,7 +229,8 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		if ( $this->rev->isDeleted( RevisionRecord::DELETED_COMMENT ) && !$unhide ) {
 			$commentHtml = $this->msg( 'rev-deleted-comment' )->escaped();
 		} elseif ( $comment !== '' && $comment !== null ) {
-			$commentHtml = Linker::formatComment( $comment, $this->targetTitle );
+			$commentHtml = MediaWikiServices::getInstance()->getCommentFormatter()
+				->format( $comment, $this->targetTitle );
 		} else {
 			$commentHtml = $this->msg( 'mobile-frontend-changeslist-nocomment' )->escaped();
 		}
