@@ -4,6 +4,7 @@ use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\RevisionLookup;
 use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Revision\SlotRecord;
+use MediaWiki\User\UserIdentity;
 
 /**
  * Show the difference between two revisions of a page
@@ -403,11 +404,11 @@ class SpecialMobileDiff extends MobileSpecialPage {
 
 	/**
 	 * Get the list of groups of user
-	 * @param User $user The user object to get the list from
+	 * @param UserIdentity $user The user object to get the list from
 	 * @param IContextSource $context
 	 * @return string comma separated list of user groups
 	 */
-	private function listGroups( User $user, IContextSource $context ) {
+	private function listGroups( UserIdentity $user, IContextSource $context ) {
 		// Get groups to which the user belongs
 		$userGroups = $this->getUserGroupManager()->getUserGroups( $user );
 		$userMembers = [];

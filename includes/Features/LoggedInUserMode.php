@@ -35,7 +35,7 @@ class LoggedInUserMode implements IUserMode {
 	 * @inheritDoc
 	 */
 	public function isEnabled() {
-		return $this->user->isSafeToLoad() ? $this->user->isRegistered() : false;
+		return $this->user->isSafeToLoad() && $this->user->isRegistered();
 	}
 
 	/**

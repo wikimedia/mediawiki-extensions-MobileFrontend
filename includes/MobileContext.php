@@ -201,7 +201,7 @@ class MobileContext extends ContextSource {
 				$this->mobileMode = $mobileAction;
 			} else {
 				$user = $this->getUser();
-				if ( $user->isAnon() ) {
+				if ( !$user->isRegistered() ) {
 					$this->loadMobileModeCookie();
 				} else {
 					$userOptionManager = MediaWikiServices::getInstance()->getUserOptionsManager();
