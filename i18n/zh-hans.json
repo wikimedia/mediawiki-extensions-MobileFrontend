@@ -72,7 +72,9 @@
 			"Winston Sung",
 			"SunAfterRain",
 			"Tiger",
-			"Diskdance"
+			"Diskdance",
+			"Lantianjialiang",
+			"LittlePaw365"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "用户是否通过移动版界面编辑",
@@ -280,8 +282,8 @@
 	"nearby": "您附近的切题页面",
 	"tag-mobile_edit": "移动版编辑",
 	"tag-mobile_edit-description": "来自移动版（网页或应用）的编辑",
-	"tag-advanced_mobile_edit": "高级移动端编辑",
-	"tag-advanced_mobile_edit-description": "用户在高级模式下进行的编辑",
+	"tag-advanced_mobile_edit": "高级移动版的编辑",
+	"tag-advanced_mobile_edit-description": "高级模式下，用户的编辑",
 	"tag-mobile_web_edit": "移动版网页编辑",
 	"tag-mobile_web_edit-description": "来自手机版网站的编辑",
 	"mobile-frontend-loading-message": "正在加载…",
