@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Brettchenweber",
 			"Creepario",
 			"Florian",
 			"MGChecker",
@@ -8,7 +9,7 @@
 			"Predatorix"
 		]
 	},
-	"apihelp-parse-param-mobileformat": "Gebe die Verarbeitungsausgabe in einem für Mobilgeräte tauglichen Format aus.",
+	"apihelp-parse-param-mobileformat": "Gibt die Verarbeitungsausgabe in einem für Mobilgeräte tauglichen Format aus.",
 	"apihelp-parse-param-noimages": "Bilder in der mobilen Ansicht deaktivieren.",
 	"apihelp-parse-param-mainpage": "Wendet mobile Umwandlungen der Hauptseite an.",
 	"apihelp-webapp-manifest-description": "Gibt ein Webapp-Manifest zurück.",
