@@ -160,9 +160,9 @@ class ExtMobileFrontend {
 			return User::newFromAnyId( null, $titleText, null );
 		}
 
-		$pageUserId = User::idFromName( $titleText );
-		if ( $pageUserId ) {
-			return User::newFromId( $pageUserId );
+		$user = User::newFromName( $titleText );
+		if ( $user && $user->isRegistered() ) {
+			return $user;
 		}
 
 		return null;
