@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Jokomarel",
 			"RMizo"
 		]
 	},
@@ -9,6 +10,7 @@
 	"mobile-frontend-featured-article": "Tlangrèlthang...",
 	"mobile-frontend-news-items": "Chanchin thar",
 	"mobile-frontend-privacy-link-text": "Inthupna",
+	"mobile-frontend-terms-text": "Hman dan tur thuthlung",
 	"mobile-frontend-view": "Biakhlatna hmanga thlìrna",
 	"mobile-frontend-view-desktop": "Khawlthluaknei"
 }
