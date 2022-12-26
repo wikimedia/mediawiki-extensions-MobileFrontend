@@ -5,7 +5,8 @@
 			"Florian",
 			"MGChecker",
 			"Metalhead64",
-			"Predatorix"
+			"Predatorix",
+			"Brettchenweber"
 		]
 	},
 	"apihelp-mobileview-description": "Gibt Daten zurück, die für mobile Ansichten benötigt werden.",
@@ -30,7 +31,7 @@
 	"apihelp-mobileview-example-1": "Ruft Informationen zum Abschnitt 0 von [[Doom metal]] ab",
 	"apihelp-mobileview-example-2": "Hole Informationen über Abschnitt 0 und zu Abschnitten, die Verweise auf [[Candlemass]] beinhalten",
 	"apihelp-mobileview-example-3": "Hole Informationen über Abschnitt 1 und folgende, sowie Abschnitte die Verweise auf [[Candlemass]] beinhalten",
-	"apihelp-parse-param-mobileformat": "Gebe die Verarbeitungsausgabe in einem für Mobilgeräte tauglichen Format aus.",
+	"apihelp-parse-param-mobileformat": "Gibt die Verarbeitungsausgabe in einem für Mobilgeräte tauglichen Format aus.",
 	"apihelp-parse-param-noimages": "Bilder in der mobilen Ansicht deaktivieren.",
 	"apihelp-parse-param-mainpage": "Wendet mobile Umwandlungen der Hauptseite an.",
 	"apihelp-webapp-manifest-description": "Gibt ein Webapp-Manifest zurück.",
