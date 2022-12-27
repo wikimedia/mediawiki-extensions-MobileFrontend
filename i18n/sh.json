@@ -194,5 +194,19 @@
 	"mobile-frontend-loading-message": "Učitavanje...",
 	"mobile-frontend-search-feedback-link-text": "Dajte nam Vaše mišljenje.",
 	"mobile-frontend-search-feedback-prompt": "Niste pronašli što ste tražili?",
-	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions": "Opisi naslova"
+	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions": "Opisi naslova",
+	"mobile-frontend-mobile-option-amc": "Napredni režim",
+	"mobile-frontend-mobile-option-amc-experiment-description": "Napredni režim nudi lak pristup stranicama za razgovor, stranicama historije, korisničkim i drugim alatima za uređivanje.",
+	"mobile-frontend-mobile-option-amc-learn-more": "Saznajte više",
+	"mobile-frontend-mobile-option-amc-send-feedback": "Pošalji povratnu informaciju",
+	"mobile-frontend-amc-outreach-intro": "Predstavljamo Napredni režim",
+	"mobile-frontend-amc-outreach-description": "Napredni režim omogućava veću funkcionalnost stranica o historiji, praćenjima, nedavnim promjenama i drugim uređivačkim alatima na mobilnim uređajima.",
+	"mobile-frontend-amc-outreach-enable": "Uključi napredni režim",
+	"mobile-frontend-amc-outreach-no-thanks": "Ne, hvala",
+	"mobile-frontend-amc-outreach-enabled-message": "Napredni režim je omogućen. Možete ga isključiti u Vašim postavkama.",
+	"mobile-frontend-amc-outreach-dismissed-message": "U svakom času možete omogućiti napredni režim u Vašim postavkama.",
+	"mobile-frontend-beta-only": "Funkcija samo dostupna u Beta modu",
+	"mobile-frontend-console-recruit": "Saznajte više o tome kao izgrađujemo naš mobilni portal @ https://www.mediawiki.org/wiki/Extension:MobileFrontend",
+	"mobile-frontend-special-pages-pref": "Optimiziraj i pojednostavi posebne stranice kad pristupam mobilnim uređajima (preporučeno)",
+	"prefs-mobile": "Mobilne postavke"
 }
