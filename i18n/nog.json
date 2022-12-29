@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Abylaikhan 94",
 			"TayfunEt."
 		]
 	},
@@ -10,9 +11,9 @@
 	"mobile-frontend-editor-blocked-drawer-body-link": "Тагы коьр",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Себеп",
 	"mobile-frontend-editor-cancel": "Бас тартув",
-	"mobile-frontend-fontchanger-option-small": "Кишкене",
+	"mobile-frontend-fontchanger-option-small": "Кишкей",
 	"mobile-frontend-fontchanger-option-medium": "Есас",
-	"mobile-frontend-fontchanger-option-large": "Улы",
+	"mobile-frontend-fontchanger-option-large": "Уьйкен",
 	"mobile-frontend-fontchanger-option-xlarge": "Тагы улы",
 	"mobile-frontend-language-heading": "<strong>Тиллер</strong>",
 	"mobile-frontend-languages-header": "Тиллер",
@@ -36,7 +37,7 @@
 	"mobile-frontend-view-desktop": "Маса уьсти",
 	"mobile-frontend-watchlist-cta-button-login": "Кируьв",
 	"mobile-frontend-watchlist-cta-button-signup": "Кошул",
-	"mobile-frontend-watchlist-filter-all": "Еписи",
+	"mobile-frontend-watchlist-filter-all": "Баьри",
 	"mobile-frontend-watchlist-filter-articles": "Бетлер",
 	"mobile-frontend-watchlist-filter-other": "Баска",
 	"mobile-frontend-watchlist-filter-talk": "Кенъези",

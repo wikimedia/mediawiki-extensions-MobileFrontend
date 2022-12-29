@@ -148,7 +148,7 @@
 	"mobile-frontend-return-to-page": "Vrnitev na stran",
 	"mobile-frontend-save-error": "Napaka pri shranjevanju nastavitev. Prosimo, preverite, ali imate omogočene piškotke.",
 	"mobile-frontend-save-settings": "Shrani",
-	"mobile-frontend-search-content": "Iščite znotraj strani",
+	"mobile-frontend-search-content": "Iščite v straneh",
 	"mobile-frontend-search-content-no-results": "<b>{{int:mobile-frontend-search-content}},</b> da preverite, ali se ta fraza kje pojavi.",
 	"mobile-frontend-search-no-results": "Stran s takim naslovom ne obstaja.",
 	"mobile-frontend-settings-tagline": "Nastavitve za branje",
