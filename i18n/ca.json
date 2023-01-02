@@ -18,7 +18,8 @@
 			"Vriullop",
 			"Jmarchn",
 			"Mguix",
-			"Vfc"
+			"Vfc",
+			"Pierpao"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si un usuari està editant a través de la interfície per a mòbils",
@@ -96,6 +97,7 @@
 	"mobile-frontend-expand-sections-status": "Expandir totes les seccions",
 	"mobile-frontend-fontchanger-link": "Mida de lletra",
 	"mobile-frontend-fontchanger-desc": "Augmenta o disminueix la mida del text per una millor llegibilitat.",
+	"mobile-frontend-fontchanger-option-small": "Petit",
 	"mobile-frontend-featured-article": "Article destacat d'avui",
 	"mobile-frontend-generic-404-desc": "No s'ha pogut trobar la pàgina que esteu buscant.",
 	"mobile-frontend-generic-404-title": "Error - Pàgina no trobada",
