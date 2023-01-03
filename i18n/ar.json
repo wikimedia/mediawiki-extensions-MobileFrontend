@@ -34,7 +34,8 @@
 			"زكريا",
 			"علاء",
 			"محمد أحمد عبد الفتاح",
-			"مشعل الحربي"
+			"مشعل الحربي",
+			"Karim185.3"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "ما إذا كان المستخدم يعدل عبر واجهة المحمول",
@@ -81,7 +82,7 @@
 	"mobile-frontend-editor-cancel-confirm": "أتريد حقا أن تهجر تعديلاتك؟",
 	"mobile-frontend-editor-captcha-try-again": "لقد قمت بإدخال رموز خاطئة، الرجاء المحاولة مرة أخرى",
 	"mobile-frontend-editor-continue": "التالي",
-	"mobile-frontend-editor-disabled": "هذه الصفحة محمية لمنع التخريب. [$1 أنظر المصدر]",
+	"mobile-frontend-editor-disabled": "هذه الصفحة محمية لمنع التخريب. [$1 عرض المصدر]",
 	"mobile-frontend-editor-disabled-anon": "يجب عليك تسجيل الدخول لتحرير هذه الصفحة.",
 	"mobile-frontend-editor-editing": "قيد التحرير",
 	"mobile-frontend-editor-editing-page": "<span><strong>تعديل</strong> $1</span>",

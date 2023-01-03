@@ -26,7 +26,8 @@
 			"Polyethylen",
 			"SandroHc",
 			"Ti4goc",
-			"Vitorvicentevalente"
+			"Vitorvicentevalente",
+			"Pierpao"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Se o utilizador está ou não a editar através da interface móvel",
@@ -226,6 +227,8 @@
 	"mobile-frontend-user-page-desired-action": "Esta página deveria ser criada e editada por $1",
 	"mobile-frontend-user-page-create-owner-page-link-label": "Criar a sua própria página",
 	"mobile-frontend-user-page-create-user-page-link-label": "Criar uma página intitulada $1",
+	"mobile.css": "/* Todo o código CSS colocado aqui será carregado para os utilizadores da interface móvel */",
+	"mobile.js": "/* Todo o código JavaScript colocado aqui será carregado para os utilizadores da interface móvel */",
 	"nearby": "Páginas sobre temas perto de si",
 	"tag-mobile_edit": "Edição via dispositivo móvel",
 	"tag-mobile_edit-description": "Edição feita através de um sítio ou dispositivo móvel",
