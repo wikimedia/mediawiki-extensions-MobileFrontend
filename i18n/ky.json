@@ -10,6 +10,7 @@
 	"abusefilter-edit-builder-vars-user-mobile": "Колдонуучу мобилдик интерфейс аркылуу түзөтүп жатабы же жокпу",
 	"mobile-frontend-account-create-captcha-placeholder": "Ырастоо кодун киргизиңиз",
 	"mobile-frontend-changeslist-nocomment": "түзөтүү корутундусу жок",
+	"mobile-frontend-editor-blocked-drawer-help": "Чоо-жайын көрүү",
 	"mobile-frontend-editor-error-preview": "Ката, алдын ала көрүү жүктөөдө күтүүсүз нерсе болду. Жабып, кайра аракет кылыңыз.",
 	"mobile-frontend-editor-placeholder": "Бул бөлүм бош. Аны кеңейтүү үчүн биринчи болуңуз!",
 	"mobile-frontend-editor-publish": "Жарыялоо",

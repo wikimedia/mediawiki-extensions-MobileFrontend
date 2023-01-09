@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"LNDDYL",
+			"Lakejason0",
 			"Liuxinyu970226",
 			"StarrySky",
 			"SunAfterRain",
@@ -16,7 +17,7 @@
 	"mobile-frontend-last-modified-with-user-hours": "{{PLURAL:$5|[$6 $2]|0=匿名用戶}}[$4 最後{{GENDER:$1|編輯}}於{{PLURAL:$3|$3小時}}前]",
 	"mobile-frontend-last-modified-with-user-just-now": "{{PLURAL:$4|[$5 $2]|0=匿名用戶}}剛剛[$3 {{GENDER:$1|編輯}}]",
 	"mobile-frontend-last-modified-with-user-minutes": "{{PLURAL:$5|[$6 $2]|0=匿名用戶}}[$4 最後{{GENDER:$1|編輯}}於{{PLURAL:$3|$3分鐘}}前]",
-	"mobile-frontend-last-modified-with-user-months": "{{PLURAL:$5|[$6 $2]|0=匿名用戶}}[$4最後在$3個月前編輯]",
+	"mobile-frontend-last-modified-with-user-months": "{{PLURAL:$5|[$6 $2]|0=匿名用戶}}[$4 最後{{GENDER:$1|編輯}}於{{PLURAL:$3|$3個月}}前]",
 	"mobile-frontend-last-modified-with-user-seconds": "{{PLURAL:$5|[$6 $2]|0=匿名用戶}}[$4 最後{{GENDER:$1|編輯}}於{{PLURAL:$3|$3秒}}前]",
 	"mobile-frontend-last-modified-with-user-years": "{{PLURAL:$5|[$6 $2]|0=匿名用戶}}[$4 最後{{GENDER:$1|編輯}}於{{PLURAL:$3|$3年}}前]",
 	"mobile-frontend-privacy-link-text": "私隱",
