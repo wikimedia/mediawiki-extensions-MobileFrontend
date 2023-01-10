@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eleassar"
+		]
+	},
+	"apihelp-parse-param-mobileformat": "Vrni izhod razčlenitve v formatu, primernem za mobilne naprave.",
+	"apihelp-parse-param-noimages": "Onemogoči slike v mobilnem izhodu.",
+	"apihelp-parse-param-mainpage": "Uporabi mobilne transformacije glavne strani.",
+	"apihelp-webapp-manifest-description": "Vrne manifest »webapp«.",
+	"apihelp-webapp-manifest-summary": "Vrne manifest »webapp«."
+}
