@@ -49,10 +49,10 @@ class MobileContextShouldDisplayMobileViewIntegrationTest extends MediaWikiInteg
 		$stopMobileRedirectCookie = null,
 		$isMobileUA = false
 	) {
-		$this->setMwGlobals( [
-			'wgMFAutodetectMobileView' => true,
-			'wgMFMobileHeader' => 'X-Subdomain',
-			'wgMobileUrlTemplate' => '%h0.m.%h1.%h2',
+		$this->overrideConfigValues( [
+			'MFAutodetectMobileView' => true,
+			'MFMobileHeader' => 'X-Subdomain',
+			'MobileUrlTemplate' => '%h0.m.%h1.%h2',
 		] );
 
 		$request = $this->context->getRequest();

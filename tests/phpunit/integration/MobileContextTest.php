@@ -1,5 +1,6 @@
 <?php
 
+use MediaWiki\MainConfigNames;
 use MediaWiki\MediaWikiServices;
 
 /**
@@ -60,10 +61,10 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 	 * @covers MobileContext::getMobileUrl
 	 */
 	public function testGetMobileUrl() {
-		$this->setMwGlobals( [
-			'wgMFMobileHeader' => 'X-Subdomain',
-			'wgMobileUrlTemplate' => '%h0.m.%h1.%h2',
-			'wgServer' => '//en.wikipedia.org',
+		$this->overrideConfigValues( [
+			'MFMobileHeader' => 'X-Subdomain',
+			'MobileUrlTemplate' => '%h0.m.%h1.%h2',
+			MainConfigNames::Server => '//en.wikipedia.org',
 		] );
 		$invokes = 0;
 		$context = $this->makeContext();
@@ -98,7 +99,7 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 	 * @covers MobileContext::parseMobileUrlTemplate
 	 */
 	public function testParseMobileUrlTemplate() {
-		$this->setMwGlobals( 'wgMobileUrlTemplate', '%h0.m.%h1.%h2/path/morepath' );
+		$this->overrideConfigValue( 'MobileUrlTemplate', '%h0.m.%h1.%h2/path/morepath' );
 		$context = $this->makeContext();
 		$this->assertEquals(
 			'%h0.m.%h1.%h2',
@@ -120,7 +121,7 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 	 */
 	public function testUpdateMobileUrlHost( $url, $expected, $urlTemplate ) {
 		$updateMobileUrlHost = self::getMethod( "updateMobileUrlHost" );
-		$this->setMwGlobals( 'wgMobileUrlTemplate', $urlTemplate );
+		$this->overrideConfigValue( 'MobileUrlTemplate', $urlTemplate );
 		$parsedUrl = wfParseUrl( $url );
 		$updateMobileUrlHost->invokeArgs( $this->makeContext(), [ &$parsedUrl ] );
 		$this->assertEquals( $expected, wfAssembleUrl( $parsedUrl ) );
@@ -145,9 +146,9 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 	 * @covers MobileContext::usingMobileDomain
 	 */
 	public function testUsingMobileDomain() {
-		$this->setMwGlobals( [
-			'wgMFMobileHeader' => 'X-Subdomain',
-			'wgMobileUrlTemplate' => '%h0.m.%h1.%h2',
+		$this->overrideConfigValues( [
+			'MFMobileHeader' => 'X-Subdomain',
+			'MobileUrlTemplate' => '%h0.m.%h1.%h2',
 		] );
 		$context = $this->makeContext();
 		$this->assertFalse( $context->usingMobileDomain() );
@@ -184,9 +185,9 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 	 */
 	public function testUpdateDesktopUrlHost( $mobile, $desktop, $server ) {
 		$updateMobileUrlHost = self::getMethod( "updateDesktopUrlHost" );
-		$this->setMwGlobals( [
-			'wgServer' => $server,
-			'wgMobileUrlTemplate' => '%h0.m.%h1.%h2',
+		$this->overrideConfigValues( [
+			MainConfigNames::Server => $server,
+			'MobileUrlTemplate' => '%h0.m.%h1.%h2',
 		] );
 		$parsedUrl = wfParseUrl( $mobile );
 		$updateMobileUrlHost->invokeArgs(
@@ -214,9 +215,9 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 	 * @covers MobileContext::updateMobileUrlPath
 	 */
 	public function testUpdateMobileUrlPath() {
-		$this->setMwGlobals( [
-			'wgScriptPath' => '/wiki',
-			'wgMobileUrlTemplate' => "/mobile/%p",
+		$this->overrideConfigValues( [
+			MainConfigNames::ScriptPath => '/wiki',
+			'MobileUrlTemplate' => "/mobile/%p",
 		] );
 		$updateMobileUrlHost = self::getMethod( "updateMobileUrlPath" );
 
@@ -286,7 +287,7 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 
 		$context = $this->makeContext();
 		$startTime = time();
-		$this->setMwGlobals( 'wgMobileFrontendFormatCookieExpiry', 60 );
+		$this->overrideConfigValue( 'MobileFrontendFormatCookieExpiry', 60 );
 		$mfCookieExpected = $startTime + 60;
 		$this->assertTrue(
 			$mfCookieExpected == $getUseFormatCookieExpiry->invokeArgs(
@@ -296,7 +297,7 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 			'Using MobileFrontend expiry.'
 		);
 
-		$this->setMwGlobals( 'wgMobileFrontendFormatCookieExpiry', null );
+		$this->overrideConfigValue( 'MobileFrontendFormatCookieExpiry', null );
 		$defaultMWCookieExpected = $startTime + $wgCookieExpiration;
 		$this->assertTrue(
 			$defaultMWCookieExpected == $getUseFormatCookieExpiry->invokeArgs(
@@ -312,12 +313,12 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 	 */
 	public function testGetStopMobileRedirectCookieDomain() {
 		$context = $this->makeContext();
-		$this->setMwGlobals( [
-			'wgMFStopRedirectCookieHost' => null,
-			'wgServer' => 'http://en.wikipedia.org',
+		$this->overrideConfigValues( [
+			'MFStopRedirectCookieHost' => null,
+			MainConfigNames::Server => 'http://en.wikipedia.org',
 		] );
 		$this->assertEquals( '.wikipedia.org', $context->getStopMobileRedirectCookieDomain() );
-		$this->setMwGlobals( 'wgMFStopRedirectCookieHost', 'foo.bar.baz' );
+		$this->overrideConfigValue( 'MFStopRedirectCookieHost', 'foo.bar.baz' );
 		$this->assertEquals( 'foo.bar.baz', $context->getStopMobileRedirectCookieDomain() );
 	}
 
@@ -444,7 +445,7 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 	 * @dataProvider optInProvider
 	 */
 	public function testOptIn( array $cookies, $isBeta, $enabledInSettings ) {
-		$this->setMwGlobals( 'wgMFEnableBeta', $enabledInSettings );
+		$this->overrideConfigValue( 'MFEnableBeta', $enabledInSettings );
 		$mobileContext = $this->makeContext( '/', $cookies );
 		$this->assertEquals( $isBeta, $mobileContext->isBetaGroupMember() );
 	}
@@ -466,11 +467,11 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 	 * @dataProvider provideToggleView
 	 */
 	public function testToggleView( $page, $url, $urlTemplate, $expectedLocation ) {
-		$this->setMwGlobals( [
-			'wgMobileUrlTemplate' => $urlTemplate,
-			'wgServer' => '//en.wikipedia.org',
+		$this->overrideConfigValues( [
+			'MobileUrlTemplate' => $urlTemplate,
+			MainConfigNames::Server => '//en.wikipedia.org',
 			// 'wgArticlePath' => '/wiki/$1',
-			'wgScriptPath' => '/wiki',
+			MainConfigNames::ScriptPath => '/wiki',
 		] );
 		$context = $this->makeContext( $url );
 		$context->getContext()->setTitle( Title::newFromText( $page ) );
@@ -562,8 +563,8 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
 		$context->setForceMobileView( $forceMobileView );
 
-		$this->setMwGlobals(
-			'wgMFStripResponsiveImages',
+		$this->overrideConfigValue(
+			'MFStripResponsiveImages',
 			$mFStripResponsiveImages
 		);
 

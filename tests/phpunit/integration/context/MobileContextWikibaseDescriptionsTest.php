@@ -21,12 +21,11 @@ class MobileContextWikibaseDescriptionsTest extends MediaWikiIntegrationTestCase
 		parent::setUp();
 
 		// Set relevant configuration variables to their default values.
-		$this->setMwGlobals( [
-			'wgMFDisplayWikibaseDescriptions' => [
+		$this->overrideConfigValue(
+			'MFDisplayWikibaseDescriptions', [
 				'search' => true,
 				'tagline' => false,
-			],
-		] );
+			] );
 
 		$services = MediaWikiServices::getInstance();
 		$this->context = $services->getService( 'MobileFrontend.Context' );

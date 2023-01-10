@@ -12,7 +12,7 @@ class ApiParseExtenderTest extends MediaWikiIntegrationTestCase {
 	 * @covers \MobileFrontend\Api\ApiParseExtender::onAPIGetAllowedParams
 	 */
 	public function testApi( array $params, string $expected ) {
-		$this->setMwGlobals( 'wgMFRemovableClasses',
+		$this->overrideConfigValue( 'MFRemovableClasses',
 			[
 				'base' => [ '.nomobile' ]
 			]

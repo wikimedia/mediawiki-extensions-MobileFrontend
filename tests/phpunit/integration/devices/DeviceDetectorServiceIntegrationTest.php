@@ -19,7 +19,7 @@ class DeviceDetectorServiceIntegrationTest extends MediaWikiIntegrationTestCase 
 	protected function setUp(): void {
 		parent::setUp();
 
-		$this->setMwGlobals( 'wgMFAutodetectMobileView', true );
+		$this->overrideConfigValue( 'MFAutodetectMobileView', true );
 
 		$this->request = new FauxRequest();
 		$this->request->setHeader(
@@ -122,7 +122,7 @@ class DeviceDetectorServiceIntegrationTest extends MediaWikiIntegrationTestCase 
 	 * @covers \MobileFrontend\Devices\DeviceDetectorService::detectDeviceProperties
 	 */
 	public function testItShouldHandleDeviceDetectionBeingDisabled() {
-		$this->setMwGlobals( 'wgMFAutodetectMobileView', false );
+		$this->overrideConfigValue( 'MFAutodetectMobileView', false );
 
 		$this->whenTheRequestIsFromAMobileUA();
 

@@ -666,9 +666,7 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 	 * @dataProvider provideLoggingOfInfoboxesBeingWrappedInContainersWhenWrapped
 	 */
 	public function testLoggingOfInfoboxesBeingWrappedInContainersWhenWrapped( $input ) {
-		$this->setMwGlobals( [
-			'wgMFLogWrappedInfoboxes' => true
-		] );
+		$this->overrideConfigValue( 'MFLogWrappedInfoboxes', true );
 		$title = 'T149884';
 		$t = Title::newFromText( $title, NS_MAIN );
 		$formatter = new MobileFormatter(
@@ -713,9 +711,7 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 	 * @dataProvider provideLoggingOfInfoboxesBeingWrappedInContainersWhenNotWrapped
 	 */
 	public function testLoggingOfInfoboxesBeingWrappedInContainersWhenNotWrapped( $input ) {
-		$this->setMwGlobals( [
-			'wgMFLogWrappedInfoboxes' => true
-		] );
+		$this->overrideConfigValue( 'MFLogWrappedInfoboxes', true );
 		$title = 'T149884';
 
 		$t = Title::newFromText( $title );
@@ -755,9 +751,7 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 	 * @covers MobileFormatter::applyTransforms
 	 */
 	public function testLoggingOfInfoboxesSkipsInfoBoxInsideInfobox() {
-		$this->setMwGlobals( [
-			'wgMFLogWrappedInfoboxes' => true
-		] );
+		$this->overrideConfigValue( 'MFLogWrappedInfoboxes', true );
 
 		// wrapped inside different infobox
 		$input = $this->buildInfoboxHTML( $this->buildInfoboxHTML( 'test' ) );

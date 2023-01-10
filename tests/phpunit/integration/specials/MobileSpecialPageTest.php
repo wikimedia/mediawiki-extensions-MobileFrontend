@@ -1,12 +1,14 @@
 <?php
 
+use MediaWiki\MainConfigNames;
+
 /**
  * @group MobileFrontend
  */
 class MobileSpecialPageTest extends MediaWikiIntegrationTestCase {
 	protected function setUp(): void {
 		parent::setUp();
-		$this->setMwGlobals( 'wgScript', '/wiki/index.php' );
+		$this->overrideConfigValue( MainConfigNames::Script, '/wiki/index.php' );
 	}
 
 	public function provideGetDesktopUrlForMobileHistory() {

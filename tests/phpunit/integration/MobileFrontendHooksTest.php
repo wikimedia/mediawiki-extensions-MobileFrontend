@@ -1,5 +1,6 @@
 <?php
 
+use MediaWiki\MainConfigNames;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\User\UserIdentity;
 use MediaWiki\User\UserOptionsLookup;
@@ -92,13 +93,13 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 		$mfEnableXAnalyticsLogging, $mfAutoDetectMobileView, $mfVaryOnUA, $mfXAnalyticsItems,
 		$isAlternateCanonical, $isXAnalytics, $mfVaryHeaderSet
 	) {
-		$this->setMwGlobals( [
-			'wgMFEnableManifest' => false,
-			'wgMobileUrlTemplate' => $mobileUrlTemplate,
-			'wgMFNoindexPages' => $mfNoindexPages,
-			'wgMFEnableXAnalyticsLogging' => $mfEnableXAnalyticsLogging,
-			'wgMFAutodetectMobileView' => $mfAutoDetectMobileView,
-			'wgMFVaryOnUA' => $mfVaryOnUA,
+		$this->overrideConfigValues( [
+			'MFEnableManifest' => false,
+			'MobileUrlTemplate' => $mobileUrlTemplate,
+			'MFNoindexPages' => $mfNoindexPages,
+			'MFEnableXAnalyticsLogging' => $mfEnableXAnalyticsLogging,
+			'MFAutodetectMobileView' => $mfAutoDetectMobileView,
+			'MFVaryOnUA' => $mfVaryOnUA,
 		] );
 
 		// test with forced mobile view
@@ -219,12 +220,12 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 	 * @covers MobileFrontendHooks::onTitleSquidURLs
 	 */
 	public function testOnTitleSquidURLs() {
-		$this->setMwGlobals( [
-			'wgMobileUrlTemplate' => '%h0.m.%h1.%h2',
-			'wgServer' => 'http://en.wikipedia.org',
-			'wgArticlePath' => '/wiki/$1',
-			'wgScriptPath' => '/w',
-			'wgScript' => '/w/index.php',
+		$this->overrideConfigValues( [
+			'MobileUrlTemplate' => '%h0.m.%h1.%h2',
+			MainConfigNames::Server => 'http://en.wikipedia.org',
+			MainConfigNames::ArticlePath => '/wiki/$1',
+			MainConfigNames::ScriptPath => '/w',
+			MainConfigNames::Script => '/w/index.php',
 		] );
 		$title = Title::newFromText( 'PurgeTest' );
 
@@ -316,10 +317,7 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 		$enabled,
 		$userpref = false
 	) {
-		// set globals
-		$this->setMwGlobals( [
-			'wgMFEnableMobilePreferences' => $enabled,
-		] );
+		$this->overrideConfigValue( 'MFEnableMobilePreferences', $enabled );
 
 		$user = $isAnon ? new User() : $this->getMutableTestUser()->getUser();
 		if ( !$isAnon && $userpref ) {
