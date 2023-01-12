@@ -373,7 +373,9 @@ class MobileFrontendHooks {
 	 * @param DifferenceEngine $diff DifferenceEngine object that's calling
 	 */
 	public static function onDifferenceEngineViewHeader( $diff ) {
-		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
+		$services = MediaWikiServices::getInstance();
+		$context = $services->getService( 'MobileFrontend.Context' );
+		$featureManager = $services->getService( 'MobileFrontend.FeaturesManager' );
 
 		$oldRevRecord = $diff->getOldRevision();
 		$newRevRecord = $diff->getNewRevision();
@@ -381,6 +383,7 @@ class MobileFrontendHooks {
 		// Only do redirects to MobileDiff if user is in mobile view and it's not a special page
 		if ( $context->shouldDisplayMobileView() &&
 			!$context->getTitle()->isSpecialPage() &&
+			!$featureManager->isFeatureAvailableForCurrentUser( 'MFUseDesktopDiffPage' ) &&
 			self::shouldMobileFormatSpecialPages( $context->getUser() )
 		) {
 			$output = $context->getOutput();

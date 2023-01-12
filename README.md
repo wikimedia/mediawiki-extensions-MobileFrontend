@@ -148,6 +148,22 @@ mobile preferences option.
   ]
 ```
 
+#### $wgMFUseDesktopDiffPage
+
+Enables the desktop version of diff pages if set to `true`. If set to
+`false`, the mobile version will be enabled.
+
+* Type: `Array`
+* Default:
+```php
+  [
+    'base' => false,
+    'beta' => false,
+    // Desktop version of watchlist page when AMC is enabled
+    'amc' => false,
+  ]
+```
+
 #### $wgMFEnableJSConsoleRecruitment
 
 Controls whether a message should be logged to the console to attempt to
