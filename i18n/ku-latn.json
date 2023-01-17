@@ -64,7 +64,7 @@
 	"mobile-frontend-editor-error-loading": "Çewtî, edîtor nikare bê barkirin.",
 	"mobile-frontend-editor-error-preview": "Xeletî, Dema barkirina pêşdîtinê, tiştekî nehevîkirî qewimî. Ji kerema xwe re bigire û dîsa biceribîne.",
 	"mobile-frontend-editor-keep-editing": "Guhartinê dewam bike",
-	"mobile-frontend-editor-licensing": "Bi tomarkirina guhartinan, hûn qebûl dikin ku beşdariya xwe di bin {{PLURAL:$2|lîsansa|lîsansên}} $1 de were weşandin.",
+	"mobile-frontend-editor-licensing": "Bi qeydkirina guhartinan, tu qebûl dikî ku beşdariya xwe di bin {{PLURAL:$2|lîsansa|lîsansên}} $1 de biweşînî.",
 	"mobile-frontend-editor-licensing-with-terms": "Bi tomarkirina guhartinan, hûn $1 û weşandina beşdariya xwe di bin {{PLURAL:$3|lîsansa|lîsansên}} $2 de dipejirînin.",
 	"mobile-frontend-editor-terms-link": "[$1 Mercên Bikaranînê]",
 	"mobile-frontend-editor-new-page-confirm": "Bi rastî {{GENDER:$1|tu dixwazî}} rûpeleke nû li ser {{SITENAME}} biafirînî?",
