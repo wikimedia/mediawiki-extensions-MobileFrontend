@@ -31,33 +31,35 @@ PageGateway.prototype = {
 	 * @instance
 	 * @private
 	 * @param  {string} title Name of the page to obtain variants for
+	 * @param  {string} pageLang Content language of the page
 	 * @param  {Object} data Data from API
 	 * @return {Array|boolean} List of language variant objects or false if no variants exist
 	 */
-	_getLanguageVariantsFromApiResponse: function ( title, data ) {
-		var generalData = data.query.general,
-			variantPath = generalData.variantarticlepath,
+	_getLanguageVariantsFromApiResponse: function ( title, pageLang, data ) {
+		var variantsData = data.query.languageinfo[ pageLang ].variantnames,
+			variantPath = mw.config.get( 'wgVariantArticlePath' ),
+			contLang = mw.config.get( 'wgContentLanguage' ),
 			variants = [];
 
-		if ( !generalData.variants ) {
+		// Variants always contain itself.
+		if ( Object.keys( variantsData ).length < 2 ) {
 			return false;
 		}
 
 		// Create the data object for each variant and store it
-		Object.keys( generalData.variants ).forEach( function ( index ) {
-			var item = generalData.variants[ index ],
-				variant = {
-					autonym: item.name,
-					lang: item.code
-				};
+		Object.keys( variantsData ).forEach( function ( code ) {
+			var variant = {
+				autonym: variantsData[ code ],
+				lang: code
+			};
 
-			if ( variantPath ) {
+			if ( variantPath && pageLang === contLang ) {
 				variant.url = variantPath
 					.replace( '$1', title )
-					.replace( '$2', item.code );
+					.replace( '$2', code );
 			} else {
 				variant.url = mw.util.getUrl( title, {
-					variant: item.code
+					variant: code
 				} );
 			}
 			variants.push( variant );
@@ -78,10 +80,18 @@ PageGateway.prototype = {
 	 * and variant links as defined @ https://en.m.wikipedia.org/w/api.php?action=help&modules=query%2Blanglinks
 	 */
 	getPageLanguages: function ( title, language ) {
+		// FIXME: Get rid of special handlings after T326997 is implemented.
+		const PAGELANG_MAP = {
+			'ike-cans': 'iu',
+			'ike-latn': 'iu'
+		};
 		var self = this,
+			viewLang = mw.config.get( 'wgPageContentLanguage' ),
+			pageLang = PAGELANG_MAP[ viewLang ] || viewLang.split( '-' )[ 0 ],
 			args = actionParams( {
-				meta: 'siteinfo',
-				siprop: 'general',
+				meta: 'languageinfo',
+				liprop: 'variantnames',
+				licode: pageLang,
 				prop: 'langlinks',
 				lllimit: 'max',
 				titles: title
@@ -96,7 +106,7 @@ PageGateway.prototype = {
 		return this.api.get( args ).then( function ( resp ) {
 			return {
 				languages: resp.query.pages[0].langlinks || [],
-				variants: self._getLanguageVariantsFromApiResponse( title, resp )
+				variants: self._getLanguageVariantsFromApiResponse( title, pageLang, resp )
 			};
 		}, function () {
 			return util.Deferred().reject();

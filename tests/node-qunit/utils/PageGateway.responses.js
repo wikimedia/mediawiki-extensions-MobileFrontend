@@ -131,45 +131,15 @@ module.exports = {
 						]
 					}
 				],
-				general: {
-					variants: [
-						{
-							code: 'sr',
-							name: 'sr'
-						},
-						{
-							code: 'sr-ec',
-							name: '\u040b\u0438\u0440\u0438\u043b\u0438\u0446\u0430'
-						},
-						{
-							code: 'sr-el',
-							name: 'Latinica'
+				languageinfo: {
+					sr: {
+						variantnames: {
+							sr: '\u040b\u0438\u0440./lat.',
+							'sr-ec': '\u040b\u0438\u0440\u0438\u043b\u0438\u0446\u0430',
+							'sr-el': 'Latinica'
 						}
-					],
-					variantarticlepath: '/$2/$1'
-				},
-				languages: [
-					{
-						code: 'sr',
-						name: 'српски / srpski'
-					},
-					{
-						code: 'sr-ec',
-						name: 'српски (ћирилица)'
-					},
-					{
-						code: 'sr-el',
-						name: 'srpski (latinica)'
-					},
-					{
-						code: 'es',
-						name: 'español'
-					},
-					{
-						code: 'pl',
-						name: 'polski'
 					}
-				]
+				}
 			},
 			limits: {
 				langlinks: 500
@@ -199,7 +169,7 @@ module.exports = {
 			variants: [
 				{
 					lang: 'sr',
-					autonym: 'sr',
+					autonym: '\u040b\u0438\u0440./lat.',
 					url: '/sr/Test'
 				},
 				{
@@ -218,8 +188,9 @@ module.exports = {
 	getPageLanguagesCall: {
 		output: {
 			action: 'query',
-			meta: 'siteinfo',
-			siprop: 'general',
+			meta: 'languageinfo',
+			licode: 'fr',
+			liprop: 'variantnames',
 			prop: 'langlinks',
 			llprop: 'url|autonym|langname',
 			llinlanguagecode: 'fr',
