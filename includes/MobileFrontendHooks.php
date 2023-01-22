@@ -623,7 +623,6 @@ class MobileFrontendHooks {
 		$services = MediaWikiServices::getInstance();
 		/** @var MobileContext $context */
 		$context = $services->getService( 'MobileFrontend.Context' );
-		$userMode = $services->getService( 'MobileFrontend.AMC.UserMode' );
 		$user = $context->getUser();
 		$featureManager = $services->getService( 'MobileFrontend.FeaturesManager' );
 
