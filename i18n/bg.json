@@ -84,6 +84,7 @@
 	"mobile-frontend-history-404-title": "Няма такава страница",
 	"mobile-frontend-history-no-results": "Филтърът не предостави съвпадения в историята.",
 	"mobile-frontend-language-heading": "<strong>Езици</strong>",
+	"mobile-frontend-languages-404-title": "Езикова грешка",
 	"mobile-frontend-languages-header": "Езици",
 	"mobile-frontend-languages-header-page": "$1 — Други езици",
 	"mobile-frontend-languages-text": "$1 е достъпна на още $2 {{PLURAL:$2|език|езика}}.",
