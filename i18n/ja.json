@@ -33,7 +33,9 @@
 			"つぶあん派",
 			"ネイ",
 			"珍庵",
-			"組曲師"
+			"組曲師",
+			"Kokage si",
+			"MathXplore"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "利用者が携帯機器版インターフェイスで編集しているかどうか",
@@ -199,7 +201,7 @@
 	"mobile-frontend-talk-reply": "返信",
 	"mobile-frontend-talk-reply-info": "返信にあなたの利用者名の署名が自動的に付くことにご注意ください。",
 	"mobile-frontend-talk-topic-error": "不明なエラーが発生したため、話題を追加できません。",
-	"mobile-frontend-talk-topic-error-protected": "このトークページは保護されているため、あなたには話題を追加する権限がありません。",
+	"mobile-frontend-talk-topic-error-protected": "このトークページは保護されています。あなたには話題を追加する権限がありません。",
 	"mobile-frontend-talk-topic-error-permission": "話題を追加できません。あなたにはページを編集する権限がありません。",
 	"mobile-frontend-talk-topic-error-spam": "スパムと思わしき内容が含まれているため、話題の追加は拒否されました。",
 	"mobile-frontend-talk-topic-error-badtoken": "サーバーでエラーが発生しました。編集内容を保存できません。このページの再読み込みをお試しください。",

@@ -1,8 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"Bugirbiig"
+			"Bugirbiig",
+			"Akudugu"
 		]
 	},
+	"mobile-frontend-account-create-captcha-placeholder": "Kpɛn'esim yɛlsida safɔbiis",
+	"mobile-frontend-changeslist-nocomment": "ayei maligim sɔb pian'agiŋ nwa",
+	"mobile-frontend-cite-error-title": "Kasɛta ghaʋŋ la pʋ kpɛn'es sʋ'ʋmm",
+	"mobile-frontend-terms-text": "Azaŋi tʋm wada",
+	"mobile-frontend-view": "Tangalnwiing gɔsʋg",
 	"mobile-frontend-view-desktop": "Teebulzug"
 }
