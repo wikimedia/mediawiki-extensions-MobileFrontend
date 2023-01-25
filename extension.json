@@ -510,20 +510,6 @@
 				"mobile-frontend-languages-structured-overlay-no-results-body"
 			]
 		},
-		"mobile.site": {
-			"dependencies": [
-				"site"
-			],
-			"targets": "mobile",
-			"deprecated": "Please do not add this module to the page."
-		},
-		"mobile.site.styles": {
-			"dependencies": [
-				"site.styles"
-			],
-			"targets": "mobile",
-			"deprecated": "Please do not add this module to the page."
-		},
 		"mobile.special.styles": {
 			"targets": "mobile",
 			"styles": [
