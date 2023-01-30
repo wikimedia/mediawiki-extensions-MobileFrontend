@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Adumbrativus",
 			"Autokrator",
 			"Fitoschido",
 			"Laurentianus",
@@ -50,6 +51,7 @@
 	"mobile-frontend-privacy-link-text": "Res privatae",
 	"mobile-frontend-save-error": "Non contigit modos servare. Praesta, ut cookies admittas.",
 	"mobile-frontend-save-settings": "Servare",
+	"mobile-frontend-search-content": "Quaerere intra paginas",
 	"mobile-frontend-settings-beta": "Beta",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Quid agis?",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Argumentum profer",
