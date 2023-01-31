@@ -31,7 +31,8 @@
 			"The Polish",
 			"Una giornata uggiosa '94",
 			"Ximo17",
-			"Pierpao"
+			"Pierpao",
+			"Superpes15"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Se un utente sta modificando attraverso l'interfaccia per dispositivi mobili",
@@ -58,7 +59,7 @@
 	"mobile-frontend-editor-blocked-drawer-action-login": "Entra",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "OK",
 	"mobile-frontend-editor-blocked-drawer-title": "Sei stato bloccato alla modifica su {{SITENAME}}.",
-	"mobile-frontend-editor-blocked-drawer-title-partial": "Sei stato bloccato alle modifica su questa pagina.",
+	"mobile-frontend-editor-blocked-drawer-title-partial": "Sei stato bloccato dalla modifica su questa pagina.",
 	"mobile-frontend-editor-blocked-drawer-title-ip": "Il tuo indirizzo IP è stato bloccato dalle modifiche su {{SITENAME}}.",
 	"mobile-frontend-editor-blocked-drawer-title-ip-partial": "Il tuo indirizzo IP è stato bloccato. Non puoi modificare questa pagina.",
 	"mobile-frontend-editor-blocked-drawer-body-partial": "Prova a modificare un'altra pagina.",
