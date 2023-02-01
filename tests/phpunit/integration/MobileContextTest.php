@@ -556,8 +556,7 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 	public function testShouldStripResponsiveImages(
 		$expected,
 		$forceMobileView,
-		$mFStripResponsiveImages,
-		$stripResponsiveImages = null
+		$mFStripResponsiveImages
 	) {
 		/** @var MobileContext $context */
 		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
@@ -568,8 +567,6 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 			$mFStripResponsiveImages
 		);
 
-		$context->setStripResponsiveImages( $stripResponsiveImages );
-
 		$this->assertEquals( $expected, $context->shouldStripResponsiveImages() );
 	}
 
@@ -578,7 +575,6 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 			[ true, true, true ],
 			[ false, true, false ],
 			[ false, false, true ],
-			[ false, true, true, false ],
 		];
 	}
 }

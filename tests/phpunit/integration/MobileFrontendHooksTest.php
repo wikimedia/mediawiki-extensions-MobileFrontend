@@ -2,6 +2,7 @@
 
 use MediaWiki\MainConfigNames;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Request\FauxRequest;
 use MediaWiki\User\UserIdentity;
 use MediaWiki\User\UserOptionsLookup;
 use Psr\Container\ContainerInterface;
@@ -250,9 +251,8 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 		$shouldConfstrChange,
 		$stripResponsiveImages
 	) {
-		/** @var MobileContext $context */
-		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
-		$context->setStripResponsiveImages( $stripResponsiveImages );
+		$this->overrideConfigValue( 'MFStripResponsiveImages', $stripResponsiveImages );
+		$this->setRequest( new FauxRequest( [ 'mobileformat' => true ] ) );
 
 		$expectedConfstr = $confstr = '';
 
@@ -364,8 +364,8 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 			]
 		);
 
-		MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' )
-			->setStripResponsiveImages( $stripResponsiveImages );
+		$this->overrideConfigValue( 'MFStripResponsiveImages', $stripResponsiveImages );
+		$this->setRequest( new FauxRequest( [ 'mobileformat' => true ] ) );
 
 		// We're only asserting that the `srcset` attribute is unset.
 		$attribs = [ 'srcset' => 'bar' ];
