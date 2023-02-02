@@ -547,34 +547,4 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 		SpecialPage::getTitleFor( 'Search' );
 		$this->assertTrue( true, 'In case of failure this test just crashes' );
 	}
-
-	/**
-	 * @covers MobileContext::shouldStripResponsiveImages
-	 * @covers MobileContext::setForceMobileView
-	 * @dataProvider provideShouldStripResponsiveImages
-	 */
-	public function testShouldStripResponsiveImages(
-		$expected,
-		$forceMobileView,
-		$mFStripResponsiveImages
-	) {
-		/** @var MobileContext $context */
-		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
-		$context->setForceMobileView( $forceMobileView );
-
-		$this->overrideConfigValue(
-			'MFStripResponsiveImages',
-			$mFStripResponsiveImages
-		);
-
-		$this->assertEquals( $expected, $context->shouldStripResponsiveImages() );
-	}
-
-	public static function provideShouldStripResponsiveImages() {
-		return [
-			[ true, true, true ],
-			[ false, true, false ],
-			[ false, false, true ],
-		];
-	}
 }

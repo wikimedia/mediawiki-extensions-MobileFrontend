@@ -487,28 +487,6 @@ class MobileFrontendHooks {
 	}
 
 	/**
-	 * Varies the parser cache if responsive images should have their variants
-	 * stripped from the parser output, since the transformation happens during
-	 * the parse.
-	 *
-	 * See `$wgMFStripResponsiveImages` and `$wgMFResponsiveImageWhitelist` for
-	 * more detail about the stripping of responsive images.
-	 *
-	 * See https://www.mediawiki.org/wiki/Manual:Hooks/PageRenderingHash for more
-	 * detail about the `PageRenderingHash` hook.
-	 *
-	 * @param string &$confstr Reference to the parser cache key
-	 * @param User $user The user that is requesting the page
-	 * @param array &$forOptions The options used to generate the parser cache key
-	 */
-	public static function onPageRenderingHash( &$confstr, User $user, &$forOptions ) {
-		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
-		if ( $context->shouldStripResponsiveImages() ) {
-			$confstr .= '!responsiveimages=0';
-		}
-	}
-
-	/**
 	 * Generate config for usage inside MobileFrontend
 	 * This should be used for variables which:
 	 *  - vary with the html
@@ -1044,44 +1022,6 @@ class MobileFrontendHooks {
 	public static function onHTMLFileCacheUseFileCache() {
 		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
 		return !$context->shouldDisplayMobileView();
-	}
-
-	/**
-	 * Removes the responsive image's variants from the parser output if
-	 * configured to do so and the thumbnail's MIME type isn't whitelisted.
-	 *
-	 * See https://www.mediawiki.org/wiki/Manual:Hooks/ThumbnailBeforeProduceHTML
-	 * for more detail about the `ThumbnailBeforeProduceHTML` hook.
-	 *
-	 * @param ThumbnailImage $thumbnail
-	 * @param array &$attribs The attributes of the DOMElement being contructed
-	 *  to represent the thumbnail
-	 * @param array &$linkAttribs The attributes of the DOMElement being
-	 *  constructed to represent the link to original file
-	 */
-	public static function onThumbnailBeforeProduceHTML( $thumbnail, &$attribs, &$linkAttribs ) {
-		$services = MediaWikiServices::getInstance();
-		/** @var MobileContext $context */
-		$context = $services->getService( 'MobileFrontend.Context' );
-		$config = $services->getService( 'MobileFrontend.Config' );
-		if ( $context->shouldStripResponsiveImages() ) {
-			$file = $thumbnail->getFile();
-			if ( !$file || !in_array( $file->getMimeType(),
-					$config->get( 'MFResponsiveImageWhitelist' ) ) ) {
-				// Remove all responsive image 'srcset' attributes, except
-				// from SVG->PNG renderings which usually aren't too huge,
-				// or other whitelisted types.
-				// Note that in future, srcset may be used for specifying
-				// small-screen-friendly image variants as well as density
-				// variants, so this should be used with caution.
-				unset( $attribs['srcset'] );
-			}
-		}
-
-		// Native image lazy loading is only being experimented on desktop for now
-		if ( $context->shouldDisplayMobileView() ) {
-			unset( $attribs['loading'] );
-		}
 	}
 
 	/**

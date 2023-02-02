@@ -656,8 +656,6 @@
 		"OutputPageParserOutput": "MobileFrontendHooks::onOutputPageParserOutput",
 		"HTMLFileCache::useFileCache": "MobileFrontendHooks::onHTMLFileCacheUseFileCache",
 		"LoginFormValidErrorMessages": "MobileFrontendHooks::onLoginFormValidErrorMessages",
-		"ThumbnailBeforeProduceHTML": "MobileFrontendHooks::onThumbnailBeforeProduceHTML",
-		"PageRenderingHash": "MobileFrontendHooks::onPageRenderingHash",
 		"AfterBuildFeedLinks": "MobileFrontendHooks::onAfterBuildFeedLinks",
 		"MakeGlobalVariablesScript": [
 			"MobileFrontendHooks::onMakeGlobalVariablesScript",
@@ -844,14 +842,6 @@
 		},
 		"MFRSSFeedLink": {
 			"value": false
-		},
-		"MFStripResponsiveImages": {
-			"value": true
-		},
-		"MFResponsiveImageWhitelist": {
-			"value": [
-				"image/svg+xml"
-			]
 		},
 		"MFEnableManifest": {
 			"value": true
