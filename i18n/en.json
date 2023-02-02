@@ -112,7 +112,7 @@
 	"mobile-frontend-editor-viewing-source-page": "<strong>Viewing source of</strong><span> $1</span>",
 	"mobile-frontend-editor-wait": "Saving edit, please wait.",
 	"mobile-frontend-editor-loading": "Loading editor…",
-	"mobile-frontend-expand-sections-description": "Always expand sections of all pages by default.",
+	"mobile-frontend-expand-sections-description": "Always expand sections of content pages by default.",
 	"mobile-frontend-expand-sections-status": "Expand all sections",
 	"mobile-frontend-fontchanger-link": "Font size",
 	"mobile-frontend-fontchanger-desc": "Adjust font size for better readability.",
