@@ -990,17 +990,6 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
-	 * Should image thumbnails in pages remove the high-density additions
-	 * during this request?
-	 *
-	 * @return bool
-	 */
-	public function shouldStripResponsiveImages() {
-		return $this->shouldDisplayMobileView()
-			&& $this->config->get( 'MFStripResponsiveImages' );
-	}
-
-	/**
 	 * Gets whether Wikibase descriptions should be shown in search results,
 	 * and watchlists; or as taglines on article pages.
 	 * Doesn't take into account whether the wikidata descriptions

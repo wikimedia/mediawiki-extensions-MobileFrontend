@@ -539,30 +539,6 @@ $wgMFSpecialPageTaglines = [
   ]
 ```
 
-
-#### $wgMFStripResponsiveImages
-
-Whether to strip `srcset` attributes from all images on mobile renderings. This
-is a sort of brute-force bandwidth optimization at the cost of making images
-fuzzier on most devices.
-
-* Type: `Boolean`
-* Default: `true`
-
-#### $wgMFResponsiveImageWhitelist
-
-Whitelist of source file mime types to retain srcset attributes on when using
-$wgMFStripResponsiveImages. Defaults to allow rasterized SVGs since they
-usually are diagrams that compress well and benefit from the higher resolution.
-
-* Type: `Array`
-* Default:
-```php
-  [
-    "image/svg+xml",
-  ]
-```
-
 #### $wgMFNamespacesWithLeadParagraphs
 
 A list of namespace codes that have lead paragraphs. Lead paragraphs will be

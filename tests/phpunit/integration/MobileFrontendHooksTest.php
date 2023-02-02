@@ -243,31 +243,6 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 		$this->assertArrayEquals( $expected, $urls );
 	}
 
-	/**
-	 * @covers MobileFrontendHooks::onPageRenderingHash
-	 * @dataProvider provideOnPageRenderingHash
-	 */
-	public function testOnPageRenderingHash(
-		$shouldConfstrChange,
-		$stripResponsiveImages
-	) {
-		$this->overrideConfigValue( 'MFStripResponsiveImages', $stripResponsiveImages );
-		$this->setRequest( new FauxRequest( [ 'mobileformat' => true ] ) );
-
-		$expectedConfstr = $confstr = '';
-
-		if ( $shouldConfstrChange ) {
-			$expectedConfstr = '!responsiveimages=0';
-		}
-
-		$user = new User();
-		$forOptions = [];
-
-		MobileFrontendHooks::onPageRenderingHash( $confstr, $user, $forOptions );
-
-		$this->assertSame( $expectedConfstr, $confstr );
-	}
-
 	public static function provideShouldMobileFormatSpecialPages() {
 		return [
 			[
@@ -332,84 +307,6 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 			$expected,
 			MobileFrontendHooks::shouldMobileFormatSpecialPages( $user )
 		);
-	}
-
-	public static function provideOnPageRenderingHash() {
-		return [
-			[ true, true ],
-			[ false, false ],
-		];
-	}
-
-	/**
-	 * @covers MobileFrontendHooks::onPageRenderingHash
-	 * @dataProvider provideDoThumbnailBeforeProduceHTML
-	 */
-	public function testDoThumbnailBeforeProduceHTML(
-		$expected,
-		$mimeType,
-		$stripResponsiveImages = true
-	) {
-		$file = $mimeType ? $this->factoryFile( $mimeType ) : null;
-		$thumbnail = new ThumbnailImage(
-			$file,
-
-			// The following is stub data that stops `ThumbnailImage#__construct`,
-			// triggering a warning.
-			'/foo.svg',
-			false,
-			[
-				'width' => 375,
-				'height' => 667
-			]
-		);
-
-		$this->overrideConfigValue( 'MFStripResponsiveImages', $stripResponsiveImages );
-		$this->setRequest( new FauxRequest( [ 'mobileformat' => true ] ) );
-
-		// We're only asserting that the `srcset` attribute is unset.
-		$attribs = [ 'srcset' => 'bar' ];
-
-		$linkAttribs = [];
-
-		MobileFrontendHooks::onThumbnailBeforeProduceHTML(
-			$thumbnail,
-			$attribs,
-			$linkAttribs
-		);
-
-		$this->assertSame( $expected, array_key_exists( 'srcset', $attribs ) );
-	}
-
-	/**
-	 * Creates an instance of `File` which has the given MIME type.
-	 *
-	 * @param string $mimeType
-	 * @return File
-	 */
-	private function factoryFile( $mimeType ) {
-		$file = $this->createMock( File::class );
-
-		$file->method( 'getMimeType' )
-			->willReturn( $mimeType );
-
-		return $file;
-	}
-
-	public static function provideDoThumbnailBeforeProduceHTML() {
-		return [
-			[ false, 'image/jpg' ],
-
-			// `ThumbnailImage#getFile` can return `null`.
-			[ false, null ],
-
-			// It handles an image with a whitelisted MIME type.
-			[ true, 'image/svg+xml' ],
-
-			// It handles the stripping of responsive image variants from the parser
-			// output being disabled.
-			[ true, 'image/jpg', false ],
-		];
 	}
 
 	/**

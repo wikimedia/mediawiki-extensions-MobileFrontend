@@ -400,7 +400,6 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 			'bytes' => $bytes,
 			'isMinor' => $isMinor,
 		];
-		// @phan-suppress-next-line SecurityCheck-DoubleEscaped
 		$this->renderFeedItemHtml( $options );
 	}
 
