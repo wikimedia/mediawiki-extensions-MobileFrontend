@@ -126,7 +126,7 @@
 	"mobile-frontend-editor-viewing-source-page": "<strong>Affichage de la source</strong><span> de $1</span>",
 	"mobile-frontend-editor-wait": "Enregistrement de la modification, veuillez patienter.",
 	"mobile-frontend-editor-loading": "Chargement de l’éditeur...",
-	"mobile-frontend-expand-sections-description": "Toujours développer par défaut les sections de toutes les pages.",
+	"mobile-frontend-expand-sections-description": "Toujours développer par défaut les sections de contenu des pages.",
 	"mobile-frontend-expand-sections-status": "Développer toutes les sections",
 	"mobile-frontend-fontchanger-link": "Taille de police",
 	"mobile-frontend-fontchanger-desc": "Ajuster la taille de la police pour une meilleure lisibilité.",

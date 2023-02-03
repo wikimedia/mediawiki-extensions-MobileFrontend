@@ -85,7 +85,7 @@
 	"mobile-frontend-editor-viewing-source-page": "<strong>Izvorna koda strani</strong><span> $1</span>",
 	"mobile-frontend-editor-wait": "Shranjujem urejanje. Prosimo, počakajte.",
 	"mobile-frontend-editor-loading": "Nalaganje urejevalnika …",
-	"mobile-frontend-expand-sections-description": "Privzeto vedno razširi razdelke vseh strani.",
+	"mobile-frontend-expand-sections-description": "Privzeto vedno razširi razdelke vsebinskih strani.",
 	"mobile-frontend-expand-sections-status": "Razširi vse razdelke",
 	"mobile-frontend-fontchanger-link": "Velikost pisave",
 	"mobile-frontend-fontchanger-desc": "Prilagodite velikost pisave za boljšo berljivost.",

@@ -95,7 +95,7 @@
 	"mobile-frontend-editor-viewing-source-page": "<strong>Quelltext von</strong><span> $1</span> betrachten",
 	"mobile-frontend-editor-wait": "Speichere Bearbeitung. Bitte warten.",
 	"mobile-frontend-editor-loading": "Lade Editor …",
-	"mobile-frontend-expand-sections-description": "Abschnitte aller Seiten standardmäßig immer ausklappen.",
+	"mobile-frontend-expand-sections-description": "Abschnitte aller Inhaltsseiten standardmäßig immer ausklappen.",
 	"mobile-frontend-expand-sections-status": "Alle Abschnitte expandieren",
 	"mobile-frontend-fontchanger-link": "Schriftgröße",
 	"mobile-frontend-fontchanger-desc": "Die Schriftgröße zur besseren Lesbarkeit anpassen.",

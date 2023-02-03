@@ -103,7 +103,7 @@
 	"mobile-frontend-editor-viewing-source-page": "<strong>Visualização do código-fonte de</strong><span> $1</span>",
 	"mobile-frontend-editor-wait": "A gravar a edição, aguarde por favor.",
 	"mobile-frontend-editor-loading": "A carregar o editor…",
-	"mobile-frontend-expand-sections-description": "Expandir sempre as secções de todas as páginas por omissão.",
+	"mobile-frontend-expand-sections-description": "Expandir sempre as secções das páginas de conteúdo por padrão.",
 	"mobile-frontend-expand-sections-status": "Expandir todas as secções",
 	"mobile-frontend-fontchanger-link": "Tamanho da fonte",
 	"mobile-frontend-fontchanger-desc": "Ajusta a dimensão da fonte para melhorar a legibilidade.",

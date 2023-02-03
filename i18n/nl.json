@@ -109,7 +109,7 @@
 	"mobile-frontend-editor-viewing-source-page": "<strong>Brontekst bekijken van</strong><span> $1</span>",
 	"mobile-frontend-editor-wait": "Een moment geduld. De bewerking wordt opgeslagen.",
 	"mobile-frontend-editor-loading": "Editor aan het laden...",
-	"mobile-frontend-expand-sections-description": "Standaard altijd alle secties van een pagina uitvouwen.",
+	"mobile-frontend-expand-sections-description": "Standaard altijd secties van inhoudspagina's uitvouwen.",
 	"mobile-frontend-expand-sections-status": "Alle secties uitvouwen",
 	"mobile-frontend-fontchanger-link": "Lettergrootte",
 	"mobile-frontend-fontchanger-desc": "Tekstgrootte veranderen om de leesbaarheid te verbeteren.",
