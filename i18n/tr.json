@@ -43,7 +43,7 @@
 			"Watermelon juice"
 		]
 	},
-	"abusefilter-edit-builder-vars-user-mobile": "Bir kullanıcının mobil arayüz üzerinden düzenleme yapıp yapmadığı",
+	"abusefilter-edit-builder-vars-user-mobile": "Bir kullanıcının mobil arayüz üzerinden değişiklik yapıp yapmadığı",
 	"mobile-frontend-account-create-captcha-placeholder": "Onay kodunu girin",
 	"mobile-frontend-changeslist-nocomment": "düzenleme özeti yok",
 	"mobile-frontend-cite-error-title": "Kaynakça yüklenirken hata oluştu",

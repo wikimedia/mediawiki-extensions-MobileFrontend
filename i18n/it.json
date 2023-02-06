@@ -107,7 +107,7 @@
 	"mobile-frontend-editor-viewing-source-page": "<strong>Visualizza wikitesto di</strong><span> $1</span>",
 	"mobile-frontend-editor-wait": "Stiamo salvando la tua modifica, attendi.",
 	"mobile-frontend-editor-loading": "Apertura dell'editor...",
-	"mobile-frontend-expand-sections-description": "Espandi sempre le sezioni di tutte le pagine per impostazione predefinita.",
+	"mobile-frontend-expand-sections-description": "Espandi sempre le sezioni delle pagine di contenuto per impostazione predefinita.",
 	"mobile-frontend-expand-sections-status": "Espandi tutte le sezioni",
 	"mobile-frontend-fontchanger-link": "Dimensione carattere",
 	"mobile-frontend-fontchanger-desc": "Regola la dimensione del carattere per una migliore leggibilità.",

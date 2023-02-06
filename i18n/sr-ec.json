@@ -90,7 +90,7 @@
 	"mobile-frontend-editor-viewing-source-page": "<strong>Приказ извора странице</strong><span> $1</span>",
 	"mobile-frontend-editor-wait": "Чување измене, сачекајте.",
 	"mobile-frontend-editor-loading": "Учитавање уређивача…",
-	"mobile-frontend-expand-sections-description": "Подразумевано увек развиј одељке свих страница.",
+	"mobile-frontend-expand-sections-description": "Подразумевано увек развиј одељке садржинских страница.",
 	"mobile-frontend-expand-sections-status": "Развиј све одељке",
 	"mobile-frontend-fontchanger-link": "Величина фонта",
 	"mobile-frontend-fontchanger-desc": "Прилагодите величину фонта ради боље читљивост.",
