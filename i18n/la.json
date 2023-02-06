@@ -5,7 +5,8 @@
 			"Fitoschido",
 			"Laurentianus",
 			"Lesgles",
-			"UV"
+			"UV",
+			"Adumbrativus"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Recensionem plenone an mobili pagina utens factam esse indicat",
@@ -60,6 +61,7 @@
 	"mobile-frontend-requires-optin": "Haec pagina non patebit nisi modum experimentalem permiseris. Ad quod faciendum adi [[Special:MobileOptions|modos tuos]]!",
 	"mobile-frontend-save-error": "Non contigit modos servare. Praesta, ut cookies admittas.",
 	"mobile-frontend-save-settings": "Servare",
+	"mobile-frontend-search-content": "Quaerere intra paginas",
 	"mobile-frontend-settings-beta": "Beta",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Quid agis?",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Argumentum profer",

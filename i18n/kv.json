@@ -1,4 +1,10 @@
 {
-	"@metadata": [],
-	"mobile-frontend-search-submit": "Выльлаö"
+	"@metadata": {
+		"authors": [
+			"Enye Lav"
+		]
+	},
+	"mobile-frontend-terms-text": "Вӧдитчыны урчитӧмъяс",
+	"mobile-frontend-view": "Мобильнӧй версия",
+	"mobile-frontend-view-desktop": "Пызанвыв версия"
 }
