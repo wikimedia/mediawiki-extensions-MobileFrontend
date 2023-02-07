@@ -80,7 +80,7 @@
 	"mobile-frontend-editor-viewing-source-page": "<strong>Apskata</strong><span> $1 </span><strong>vikikodu</strong>",
 	"mobile-frontend-editor-wait": "Saglabā labojumu, lūdzu uzgaidiet.",
 	"mobile-frontend-editor-loading": "Ielādē redaktoru…",
-	"mobile-frontend-expand-sections-description": "Vienmēr pēc noklusējuma atvērt visas sadaļas.",
+	"mobile-frontend-expand-sections-description": "Pēc noklusējuma vienmēr izvērst satura lapu sadaļas.",
 	"mobile-frontend-expand-sections-status": "Atvērt visas sadaļas",
 	"mobile-frontend-fontchanger-link": "Fonta lielums",
 	"mobile-frontend-fontchanger-desc": "Pielāgot rakstzīmju izmēru labākai lasāmībai.",
