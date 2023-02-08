@@ -37,7 +37,7 @@
 	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|सम्पादन}}",
 	"mobile-frontend-diffview-title": "परिवर्तनहरू",
 	"mobile-frontend-edit-login-action": "<strong>सुधारमा सघाउनुहोस्{{SITENAME}}।</strong><br />सम्पादन गर्न प्रवेश गर्नुहोस्।",
-	"mobile-frontend-edit-signup-action": "<strong>सुधारमा सघाउनुहोस्{{SITENAME}}।</strong><br />सम्पादन गर्न खाता खोल्नुहोस्।",
+	"mobile-frontend-edit-signup-action": "<strong>{{SITENAME}} सुधार गर्न मद्दत गर्नुहोस्।</strong><br />सम्पादन गर्न खाता खोल्नुहोस्।",
 	"mobile-frontend-editor-anon": "प्रवेश नगरिकन सम्पादन गर्नुहोस्",
 	"mobile-frontend-editor-anonwarning": "<strong>चेतावनी:</strong> तपाईंले प्रवेश गर्नुभएको छैन। यदि तपाईंले कुनै पनि सम्पादन गर्नुभयो भने तपाईंको आईपी ठेगाना सार्वजनिक रूपमा देखिनेछ। यदि तपाईं <strong>प्रवेश गर्नुहुन्छ</strong> वा <strong>खाता सिर्जना गर्नुहुन्छ</strong> भने, तपाईंका सम्पादनहरू तपाईंको प्रयोगकर्ता नाममा श्रेय दिइनेछ, अन्य फाइदाहरू सहित।",
 	"mobile-frontend-editor-blocked-drawer-action-login": "प्रवेश गर्नुहोस्",
