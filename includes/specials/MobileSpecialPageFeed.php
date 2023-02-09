@@ -23,6 +23,10 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 	public function execute( $par ) {
 		$out = $this->getOutput();
 		$out->addModuleStyles( [
+			// FIXME: This module should be removed when the following tickets are resolved:
+			// * T305113
+			// * T109277
+			// * T117279
 			'mobile.special.pagefeed.styles',
 			'mobile.user.icons'
 		] );

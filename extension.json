@@ -97,19 +97,11 @@
 	},
 	"ResourceModules": {
 		"mobile.pagelist.styles": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
 			"styles": [
 				"resources/mobile.pagelist.styles/pagelist.less"
 			]
 		},
 		"mobile.pagesummary.styles": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
 			"styles": [
 				"resources/mobile.pagesummary.styles/pagesummary.less"
 			]
@@ -126,10 +118,6 @@
 			}
 		},
 		"mobile.userpage.styles": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
 			"styles": [
 				"resources/mobile.userpage.styles/userpage.less"
 			]
@@ -147,10 +135,6 @@
 			]
 		},
 		"mobile.init.styles": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
 			"styles": [
 				"resources/mobile.init.styles.less"
 			]
@@ -169,10 +153,6 @@
 				"mediawiki.ui.icon",
 				"mobile.ooui.icons",
 				"mobile.startup"
-			],
-			"targets": [
-				"mobile",
-				"desktop"
 			],
 			"messages": [
 				"mobile-frontend-editor-loading",
@@ -214,10 +194,6 @@
 					"global": true
 				}
 			},
-			"targets": [
-				"mobile",
-				"desktop"
-			],
 			"icons": [
 				"close",
 				"previous",
@@ -230,10 +206,6 @@
 			"class": "ResourceLoaderOOUIIconPackModule",
 			"selectorWithoutVariant": ".mw-ui-icon-mf-{name}:before",
 			"selectorWithVariant": ".mw-ui-icon-mf-{name}-{variant}:before",
-			"targets": [
-				"mobile",
-				"desktop"
-			],
 			"variants": {
 				"base20": {
 					"color": "#54595d",
@@ -247,10 +219,6 @@
 		},
 		"mobile.startup": {
 			"class": "MobileFrontend\\ResourceLoaderModules\\ResourceLoaderFileModuleWithMFConfig",
-			"targets": [
-				"mobile",
-				"desktop"
-			],
 			"dependencies": [
 				"mediawiki.page.watch.ajax",
 				"mediawiki.template.mustache",
@@ -340,10 +308,6 @@
 			]
 		},
 		"mobile.editor.overlay": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
 			"dependencies": [
 				"mobile.editor.images",
 				"mobile.user.icons",
@@ -430,10 +394,6 @@
 			}
 		},
 		"mobile.talk.overlays": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
 			"dependencies": [
 				"mediawiki.user",
 				"mediawiki.util",
@@ -466,10 +426,6 @@
 			]
 		},
 		"mobile.mediaViewer": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
 			"dependencies": [
 				"mobile.startup",
 				"mediawiki.router"
@@ -488,10 +444,6 @@
 			]
 		},
 		"mobile.languages.structured": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
 			"dependencies": [
 				"mediawiki.storage",
 				"mobile.startup"
@@ -511,14 +463,12 @@
 			]
 		},
 		"mobile.special.styles": {
-			"targets": "mobile",
 			"styles": [
 				"resources/mobile.special.styles/common.less",
 				"resources/mobile.special.styles/forms.less"
 			]
 		},
 		"mobile.special.watchlist.scripts": {
-			"targets": "mobile",
 			"dependencies": [
 				"mediawiki.api",
 				"mobile.startup",
@@ -529,19 +479,11 @@
 			]
 		},
 		"mobile.special.mobileoptions.styles": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
 			"styles": [
 				"resources/mobile.special.mobileoptions.styles/mobileoptions.less"
 			]
 		},
 		"mobile.special.mobileoptions.scripts": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
 			"dependencies": [
 				"mobile.startup"
 			],
@@ -561,22 +503,16 @@
 			]
 		},
 		"mobile.special.userlogin.scripts": {
-			"targets": [
-				"mobile",
-				"desktop"
-			],
 			"scripts": [
 				"resources/dist/mobile.special.userlogin.scripts.js"
 			]
 		},
 		"mobile.special.history.styles": {
-			"targets": "mobile",
 			"styles": [
 				"resources/mobile.special.history.styles/default.less"
 			]
 		},
 		"mobile.special.pagefeed.styles": {
-			"targets": "mobile",
 			"styles": [
 				"resources/mobile.special.pagefeed.styles/pagefeed.less"
 			]
@@ -600,7 +536,6 @@
 			]
 		},
 		"mobile.special.mobilediff.styles": {
-			"targets": "mobile",
 			"styles": [
 				"resources/mobile.special.mobilediff.styles/mobilediff.less"
 			]

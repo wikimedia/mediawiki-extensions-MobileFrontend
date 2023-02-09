@@ -7,6 +7,7 @@ use Wikimedia\Rdbms\IResultWrapper;
 
 /**
  * Implements the Watchlist special page
+ * @deprecated in future this should use the core Watchlist page (T109277)
  */
 class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	// Performance-safe value with PageImages. Try to keep in sync with
