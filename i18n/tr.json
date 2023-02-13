@@ -39,10 +39,11 @@
 			"SaldırganSincap",
 			"Sezgin İbiş",
 			"Stonecy",
-			"Uncitoyen"
+			"Uncitoyen",
+			"TayfunEt."
 		]
 	},
-	"abusefilter-edit-builder-vars-user-mobile": "Bir kullanıcının mobil arayüz üzerinden düzenleme yapıp yapmadığı",
+	"abusefilter-edit-builder-vars-user-mobile": "Bir kullanıcının mobil arayüz üzerinden değişiklik yapıp yapmadığı",
 	"mobile-frontend-account-create-captcha-placeholder": "Onay kodunu girin",
 	"mobile-frontend-categories-heading": "<strong>Kategoriler</strong>",
 	"mobile-frontend-categories-subheading": "Bu sayfa aşağıdaki kategorilerde yer alır:",
