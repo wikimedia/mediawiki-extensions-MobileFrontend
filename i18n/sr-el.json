@@ -84,7 +84,7 @@
 	"mobile-frontend-editor-viewing-source-page": "<strong>Prikaz izvora stranice</strong><span> $1</span>",
 	"mobile-frontend-editor-wait": "Čuvanje izmene, sačekajte.",
 	"mobile-frontend-editor-loading": "Učitavanje uređivača…",
-	"mobile-frontend-expand-sections-description": "Podrazumevano uvek razvij odeljke svih stranica.",
+	"mobile-frontend-expand-sections-description": "Podrazumevano uvek razvij odeljke sadržinskih stranica.",
 	"mobile-frontend-expand-sections-status": "Razvij sve odeljke",
 	"mobile-frontend-fontchanger-link": "Veličina fonta",
 	"mobile-frontend-fontchanger-desc": "Prilagodite veličinu fonta radi bolje čitljivost.",
