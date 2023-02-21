@@ -196,7 +196,6 @@ class SpecialMobileOptions extends MobileSpecialPage {
 	private function addSettingsForm() {
 		$out = $this->getOutput();
 		$user = $this->getUser();
-		$isAMCEnabled = $this->userMode->isEnabled();
 
 		$out->setPageTitle( $this->msg( 'mobile-frontend-main-menu-settings-heading' ) );
 		$out->enableOOUI();
@@ -222,12 +221,8 @@ class SpecialMobileOptions extends MobileSpecialPage {
 
 		if ( $this->amc->isAvailable() ) {
 			$fields[] = $this->buildAMCToggle();
-			// https://phabricator.wikimedia.org/T311720
-			if ( $isAMCEnabled ) {
-				$fields[] = $this->buildMobileUserPreferences();
-			}
-
 		}
+
 		// beta settings
 		$isInBeta = $this->mobileContext->isBetaGroupMember();
 		if ( $this->config->get( 'MFEnableBeta' ) ) {
@@ -308,6 +303,8 @@ class SpecialMobileOptions extends MobileSpecialPage {
 		if ( $user->isRegistered() ) {
 			$fields[] = new OOUI\HiddenInputWidget( [ 'name' => 'token',
 				'value' => $user->getEditToken() ] );
+			// Special:Preferences link (https://phabricator.wikimedia.org/T327506)
+			$fields[] = $this->buildMobileUserPreferences();
 		}
 
 		$feedbackLink = $this->getConfig()->get( 'MFBetaFeedbackLink' );
