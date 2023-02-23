@@ -310,9 +310,12 @@ class MobileContext extends ContextSource {
 	private function redirectMobileEnabledPages() {
 		$request = $this->getRequest();
 		$title = $this->getTitle();
+		$services = MediaWikiServices::getInstance();
+		$featureManager = $services->getService( 'MobileFrontend.FeaturesManager' );
 
 		$redirectUrl = null;
 		if ( $request->getCheck( 'diff' ) &&
+			!$featureManager->isFeatureAvailableForCurrentUser( 'MFUseDesktopDiffPage' ) &&
 			MobileFrontendHooks::shouldMobileFormatSpecialPages( $this->getUser() )
 		) {
 			$redirectUrl = SpecialMobileDiff::getMobileUrlFromDesktop( $request );

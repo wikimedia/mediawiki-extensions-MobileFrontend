@@ -45,6 +45,8 @@ return [
 			$config->get( 'MFUseDesktopSpecialHistoryPage' ) ) );
 		$manager->registerFeature( new Feature( 'MFUseDesktopSpecialWatchlistPage', 'mobile-frontend',
 			$config->get( 'MFUseDesktopSpecialWatchlistPage' ) ) );
+		$manager->registerFeature( new Feature( 'MFUseDesktopDiffPage', 'mobile-frontend',
+			$config->get( 'MFUseDesktopDiffPage' ) ) );
 
 		$manager->useHookToRegisterExtensionOrSkinFeatures();
 		return $manager;

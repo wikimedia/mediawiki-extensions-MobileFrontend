@@ -688,6 +688,13 @@
 				"amc": true
 			}
 		},
+		"MFUseDesktopDiffPage": {
+			"value": {
+				"base": false,
+				"beta": false,
+				"amc": false
+			}
+		},
 		"MFUseDesktopSpecialWatchlistPage": {
 			"value": {
 				"base": false,
