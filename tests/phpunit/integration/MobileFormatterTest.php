@@ -119,7 +119,7 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 			. 'style="width: 100px;height: 100px;" '
 			. 'data-src="foo.jpg" data-alt="foo" data-width="100" data-height="100" '
 			. 'data-srcset="foo-1.5x.jpg 1.5x, foo-2x.jpg 2x">'
-			. ' '
+			. '&nbsp;'
 			. '</span>';
 		$noscript = '<noscript><img alt="foo" src="foo.jpg" width="100" height="100"></noscript>';
 
@@ -626,7 +626,7 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 			[
 				[ 'h1', 'h2' ],
 				'A<h1>Foo</h1><h2>Bar</h2>',
-				$this->makeSectionHtml( 0, '<p>A</p>' )
+				$this->makeSectionHtml( 0, 'A' )
 					. $this->makeSectionHeading( 'h1', 'Foo' )
 					. $this->makeSectionHtml( 1, '<h2>Bar</h2>' ),
 			],
