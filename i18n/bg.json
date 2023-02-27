@@ -70,7 +70,7 @@
 	"mobile-frontend-editor-uploadenable": "Моля, първо качете снимка за активация на редактирането.",
 	"mobile-frontend-editor-wait": "Редакцията се запазва, моля, изчакайте.",
 	"mobile-frontend-editor-loading": "Редакторът се зарежда...",
-	"mobile-frontend-expand-sections-description": "Винаги да са разгънати секциите на всички страници по подразбиране.",
+	"mobile-frontend-expand-sections-description": "Винаги да са разгънати секциите на страниците със съдържание по подразбиране.",
 	"mobile-frontend-expand-sections-status": "Разгъване на всички секции",
 	"mobile-frontend-fontchanger-link": "Размер на шрифта",
 	"mobile-frontend-fontchanger-desc": "Коригирайте размера на шрифта за по-добра четимост.",
