@@ -5,7 +5,8 @@
 			"Casual",
 			"CoderSI",
 			"Malikxan",
-			"Sociologist"
+			"Sociologist",
+			"TayfunEt."
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Foydalanuvchi mobil interfeys orqali tahrir qiladimi yoki aksinchami?",
@@ -111,6 +112,7 @@
 	"mobile-frontend-main-menu-settings-heading": "Moslamalar",
 	"mobile-frontend-media-details": "Tafsilotlar",
 	"mobile-frontend-media-license-link": "Litsenziya maʼlumoti",
+	"mobile-frontend-media-load-fail-message": "Ushbu rasmni yuklashda xatolik yuz berdi.",
 	"mobile-frontend-media-load-fail-retry": "Yangilash",
 	"mobile-frontend-missing-image": "Tasvir",
 	"mobile-frontend-tap-to-display-image": "Tasvirni koʻrish uchun bosing.",
@@ -128,6 +130,7 @@
 	"mobile-frontend-overlay-close": "Yopish",
 	"mobile-frontend-privacy-link-text": "Konfidensiallik",
 	"mobile-frontend-references-citation": "Manba",
+	"mobile-frontend-references-citation-error": "Xatolik yuz berdi va bu iqtibosni yuklab boʻlmadi.",
 	"mobile-frontend-references-list": "Manbalarning toʻliq roʻyxatini koʻrish",
 	"mobile-frontend-requires-mobile": "Bu sahifa desktop versiyada mavjud emas. Iltimos, sahifaning pastki qismidagi mobil versiya havolasini bosing.",
 	"mobile-frontend-requires-title": "Sahifa mavjud emas",
@@ -168,6 +171,7 @@
 	"mobile-frontend-user-page-describe-yourself": "Foydalanuvchi sahifangizda oʻzingizni boshqalarga $1 bilan tasvirlab berishingiz mumkin",
 	"mobile-frontend-user-page-describe-yourself-editors": "tahrirchilar",
 	"mobile-frontend-user-page-desired-action": "Bu sahifani $1 yaratishi va tahrirlashi kerak",
+	"mobile-frontend-user-page-create-owner-page-link-label": "O'zingizni yarating",
 	"mobile-frontend-user-page-create-user-page-link-label": "$1 nomli sahifa yaratish",
 	"nearby": "Atrofingizdagi obyektlar haqidagi sahifalar",
 	"tag-mobile_edit": "Mobil tahrirlash",
@@ -178,6 +182,7 @@
 	"tag-mobile_web_edit-description": "Mobil dastur dastur orqali qilingan tahrir",
 	"mobile-frontend-loading-message": "Yuklanmoqda...",
 	"mobile-frontend-search-feedback-link-text": "Bizga fikr-mulohazangizni ayting",
+	"mobile-frontend-search-feedback-prompt": "Izlagan narsangizni topa olmadingizmi?",
 	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions": "Sarlavha tavsifi",
 	"mobile-frontend-send-feedback": "Fikr-mulohaza yuborish",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Shrift oʻlchami",
