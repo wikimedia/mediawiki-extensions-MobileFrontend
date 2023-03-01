@@ -71,7 +71,7 @@
 	"mobile-frontend-editor-viewing-source-page": "<span>Lehekülje $1<strong>lähteteksti vaatamine</strong></span>",
 	"mobile-frontend-editor-wait": "Muudatuse salvestamine, palun oota.",
 	"mobile-frontend-editor-loading": "Toimeti laadimine…",
-	"mobile-frontend-expand-sections-description": "Ava alaosad vaikimisi kõigil lehekülgedel.",
+	"mobile-frontend-expand-sections-description": "Ava vaikimisi sisulehekülgede alaosad.",
 	"mobile-frontend-expand-sections-status": "Ava kõik alaosad",
 	"mobile-frontend-fontchanger-link": "Kirjasuurus",
 	"mobile-frontend-fontchanger-desc": "Kohanda loetavuse huvides teksti suurust.",
