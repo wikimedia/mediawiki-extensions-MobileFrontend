@@ -64,6 +64,7 @@ class MobileFormatter extends HtmlFormatter {
 	/**
 	 * @inheritDoc
 	 */
+	#[\ReturnTypeWillChange]
 	protected function parseItemsToRemove() {
 		$removals = parent::parseItemsToRemove();
 
