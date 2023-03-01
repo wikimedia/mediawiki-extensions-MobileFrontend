@@ -27,9 +27,7 @@ class UserModeTest extends MediaWikiIntegrationTestCase {
 		string $userOpt = '1',
 		?UserOptionsManager $userOptsManager = null
 	): UserMode {
-		$config = $this->createNoOpMock( Config::class, [ 'get' ] );
-		$config->method( 'get' )->with( 'MFAdvancedMobileContributions' )
-			->willReturn( $mfAmcConfig );
+		$config = new HashConfig( [ 'MFAdvancedMobileContributions' => $mfAmcConfig ] );
 
 		$user = $this->createNoOpMock( User::class, [ 'isAnon', 'isRegistered', 'getId', 'getName' ] );
 		$user->method( 'isAnon' )->willReturn( $isAnon );

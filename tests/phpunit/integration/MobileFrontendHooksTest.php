@@ -351,17 +351,17 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 			);
 		}
 
-		$config = $this->createMock( Config::class );
-		$config->method( 'get' )->willReturnMap( [
-			[ 'DefaultMobileSkin', $fakeMobileSkin ],
-			[ 'DefaultSkin', $fakeDefaultSkin ],
+		$config = new HashConfig( [
+			'DefaultMobileSkin' => $fakeMobileSkin,
+			'DefaultSkin' => $fakeDefaultSkin,
+			'MFEnableMobilePreferences' => false,
 		] );
 
 		$this->setService( 'SkinFactory', $skinFactory );
 		$this->setService( 'MobileFrontend.Config', $config );
 		$this->setService( 'MobileFrontend.Context', $mobileContext );
 
-		/**	@var Skin $skin */
+		/** @var Skin $skin */
 		$skin = null;
 		MobileFrontendHooks::onRequestContextCreateSkin( $context, $skin );
 

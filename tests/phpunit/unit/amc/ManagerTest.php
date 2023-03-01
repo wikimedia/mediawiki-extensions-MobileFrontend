@@ -9,9 +9,7 @@ use MobileFrontend\Amc\Manager;
 class ManagerTest extends MediaWikiUnitTestCase {
 
 	private function createManager( $mfAmcConfig, $shouldDisplayMobileView, $userIsAnon ): Manager {
-		$config = $this->createNoOpMock( Config::class, [ 'get' ] );
-		$config->method( 'get' )->with( 'MFAdvancedMobileContributions' )
-			->willReturn( $mfAmcConfig );
+		$config = new HashConfig( [ 'MFAdvancedMobileContributions' => $mfAmcConfig ] );
 
 		$mobileContext = $this->createNoOpMock(
 			MobileContext::class,
