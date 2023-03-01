@@ -543,18 +543,29 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 	 * @inheritdoc
 	 * @memberof SourceEditorOverlay
 	 * @instance
+	 * @param {number|null} newRevId ID of the newly created revision, or null if it was a null
+	 *  edit.
 	 */
-	onSaveComplete: function () {
+	onSaveComplete: function ( newRevId ) {
 		EditorOverlayBase.prototype.onSaveComplete.apply( this, arguments );
 
 		// The parent class changes the location hash in a setTimeout, so wait
 		// for that to happen before reloading.
 		setTimeout( function () {
-			// Note the "#" may be in the URL.
-			// If so, using window.location alone will not reload the page
-			// we need to forcefully refresh
-			// eslint-disable-next-line no-restricted-properties
-			window.location.reload();
+			if ( newRevId ) {
+				// Set a notify parameter similar to venotify in VisualEditor.
+				var uri = new mw.Uri( location.href );
+				uri.query.mfnotify = this.isNewPage ? 'created' : 'saved';
+				// eslint-disable-next-line no-restricted-properties
+				window.location.search = uri.getQueryString();
+			} else {
+				// Null edit; do not add notify parameter.
+				// Note the "#" may be in the URL.
+				// If so, using window.location alone will not reload the page
+				// we need to forcefully refresh
+				// eslint-disable-next-line no-restricted-properties
+				window.location.reload();
+			}
 		} );
 	},
 
