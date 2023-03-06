@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"IHLubis",
 			"Simartampua"
 		]
 	},
@@ -8,6 +9,9 @@
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Alasanna iblokir",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "Iblokir ni",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "Blokir kadaluarsa i",
+	"mobile-frontend-terms-text": "Parsaratan ni Pangguna",
+	"mobile-frontend-view": "tarida sian seluler",
+	"mobile-frontend-view-desktop": "Desktop",
 	"tag-mobile_edit": "Pangeditan hape",
 	"tag-mobile_web_edit": "Edit ngon web hape"
 }

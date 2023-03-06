@@ -127,6 +127,7 @@
 	"mobile-frontend-watchlist-back-home": "واپَس اَہَم صَفَس پؠٹھ",
 	"mobile-frontend-watchlist-cta-button-login": "دٲخِل گَژھُن",
 	"mobile-frontend-watchlist-cta-button-signup": "کھاتہٕ بَنٲوِو",
+	"mobile-frontend-watchlist-feed": "تَبدیل کورمت",
 	"mobile-frontend-watchlist-filter-all": "سٲری",
 	"mobile-frontend-watchlist-filter-articles": "صَفہٕ",
 	"mobile-frontend-watchlist-filter-other": "باقی",
@@ -147,8 +148,10 @@
 	"mobile-frontend-send-feedback": "راے دِیو",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "گۄڈٕنِیُک پَرےگرٛاف",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "فانٹ قَد",
+	"mobile-frontend-mobile-option-amc": "اِضٲفی آلہ ایڈِٹ",
 	"mobile-frontend-mobile-option-amc-learn-more": "مٔزیٖد وُچھِو",
 	"mobile-frontend-mobile-option-amc-send-feedback": "راے دِیو",
+	"mobile-frontend-user-pref-feedback": "راے دِیو",
 	"mobile-frontend-amc-outreach-no-thanks": "نَہ، شُکریا",
 	"prefs-mobile": "موبایِل تَرجِحات"
 }
