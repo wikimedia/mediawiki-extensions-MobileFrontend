@@ -103,7 +103,7 @@
 	"mobile-frontend-editor-viewing-source-page": "<strong>Menampilkan sumber dari</strong><span> $1</span>",
 	"mobile-frontend-editor-wait": "Menyimpan suntingan, mohon tunggu.",
 	"mobile-frontend-editor-loading": "Memuat editor…",
-	"mobile-frontend-expand-sections-description": "Selalu kembangkan bagian semua halaman secara baku.",
+	"mobile-frontend-expand-sections-description": "Selalu kembangkan bagian konten halaman secara baku.",
 	"mobile-frontend-expand-sections-status": "Kembangkan semua bagian",
 	"mobile-frontend-fontchanger-link": "Ukuran huruf",
 	"mobile-frontend-fontchanger-desc": "Sesuaikan ukuran fon agar dapat dibaca.",
