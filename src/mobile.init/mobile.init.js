@@ -7,6 +7,8 @@
  * @singleton
  */
 var skin,
+	uri,
+	fragment,
 	{ USER_FONT_SIZE_REGULAR, USER_FONT_SIZES } = require( '../constants' ),
 	storage = mw.storage,
 	toggling = require( './toggling' ),
@@ -89,6 +91,26 @@ function updateFontSize() {
 		}
 	} );
 	/* eslint-enable mediawiki/class-doc */
+}
+
+// Hide URL flags used to pass state through reloads
+// venotify is normally handled in ve.init.mw.DesktopArticleTarget.init.js
+// but that's not loaded on mobile
+// eslint-disable-next-line no-restricted-properties
+if ( window.history && history.pushState ) {
+	// eslint-disable-next-line no-restricted-properties
+	uri = new mw.Uri( window.location.href );
+	if ( uri.query.venotify || uri.query.mfnotify ) {
+		fragment = uri.fragment;
+		delete uri.query.venotify;
+		delete uri.query.mfnotify;
+		// work around mw.Uri percent-encoding fragments
+		uri.fragment = undefined;
+		// eslint-disable-next-line no-restricted-properties
+		window.history.replaceState( null, document.title,
+			uri.toString() + ( typeof fragment === 'string' ? '#' + fragment : '' )
+		);
+	}
 }
 
 // Font must be updated on back button press as users may click
