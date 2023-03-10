@@ -7,8 +7,7 @@
  * @singleton
  */
 var skin,
-	uri,
-	fragment,
+	url,
 	{ USER_FONT_SIZE_REGULAR, USER_FONT_SIZES } = require( '../constants' ),
 	storage = mw.storage,
 	toggling = require( './toggling' ),
@@ -99,17 +98,12 @@ function updateFontSize() {
 // eslint-disable-next-line no-restricted-properties
 if ( window.history && history.pushState ) {
 	// eslint-disable-next-line no-restricted-properties
-	uri = new mw.Uri( window.location.href );
-	if ( uri.query.venotify || uri.query.mfnotify ) {
-		fragment = uri.fragment;
-		delete uri.query.venotify;
-		delete uri.query.mfnotify;
-		// work around mw.Uri percent-encoding fragments
-		uri.fragment = undefined;
+	url = new URL( window.location.href );
+	if ( url.searchParams.has( 'venotify' ) || url.searchParams.has( 'mfnotify' ) ) {
+		url.searchParams.delete( 'venotify' );
+		url.searchParams.delete( 'mfnotify' );
 		// eslint-disable-next-line no-restricted-properties
-		window.history.replaceState( null, document.title,
-			uri.toString() + ( typeof fragment === 'string' ? '#' + fragment : '' )
-		);
+		window.history.replaceState( null, document.title, url.toString() );
 	}
 }
 
