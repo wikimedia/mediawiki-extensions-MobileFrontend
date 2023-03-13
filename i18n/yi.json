@@ -4,7 +4,8 @@
 			"Alefbeis",
 			"Har-wradim",
 			"Imre",
-			"פוילישער"
+			"פוילישער",
+			"Pacha Tchernof"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "צי א באניצער טוט רעדאקטירן דורכן מאבילן אייבערפלאך",
@@ -75,11 +76,11 @@
 	"mobile-frontend-featured-article": "דער הײַנטיקער רעקאמענדירטער אינהאַלט",
 	"mobile-frontend-generic-404-title": "פֿעלער–בלאט נישט געטראפֿן",
 	"mobile-frontend-history-404-title": "נישט פאראן אזא בלאט",
-	"mobile-frontend-language-heading": "<strong>שפראכן</strong>",
+	"mobile-frontend-language-heading": "<strong>שפּראַכן</strong>",
 	"mobile-frontend-languages-404-desc": "מען דאַרף ספעציפֿיצירן א גילטיקן טיטל.",
 	"mobile-frontend-languages-404-title": "שפראכן־פעלער",
 	"mobile-frontend-languages-header": "שפּראַכן",
-	"mobile-frontend-languages-header-page": "$1 - אנדערע שפראכן",
+	"mobile-frontend-languages-header-page": "$1 - אַנדערע שפּראַכן",
 	"mobile-frontend-languages-nonexistent-title": "נישט פאראן דער בלאט \"$1\".",
 	"mobile-frontend-languages-text": "$1 איז פֿאראן אין $2 {{PLURAL:$2|אנדער שפראך|אנדערע שפראכן}}.",
 	"mobile-frontend-languages-variant-header": "{{#language:{{CONTENTLANG}}}} וואריאנטן",
@@ -133,7 +134,7 @@
 	"mobile-frontend-watchlist-filter-articles": "בלעטער",
 	"mobile-frontend-watchlist-filter-other": "אַנדער",
 	"mobile-frontend-watchlist-filter-talk": "שמועס",
-	"mobile-frontend-watchlist-more": "נאך",
+	"mobile-frontend-watchlist-more": "נאָך",
 	"mobile-frontend-watchlist-removed": "אראפגענומען $1 פון אייער אויפפאסונג ליסטע",
 	"mobile-frontend-user-page-no-owner-page-yet": "איר האט נאך נישט קיין באניצער־בלאט",
 	"mobile-frontend-user-page-no-page-yet": "קיין באַניצער־בלאַט נישט פֿאַר $1",

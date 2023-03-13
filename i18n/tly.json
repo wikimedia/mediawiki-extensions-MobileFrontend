@@ -113,7 +113,7 @@
 	"mobile-frontend-media-details": "Әтрофин",
 	"mobile-frontend-media-license-link": "Лисенсијә барәдә",
 	"mobile-frontend-media-load-fail-message": "Шикили виндејәдә хәто беше",
-	"mobile-frontend-media-load-fail-retry": "Нујә карде",
+	"mobile-frontend-media-load-fail-retry": "Nukardə",
 	"mobile-frontend-missing-image": "Шикил",
 	"mobile-frontend-tap-to-display-image": "Егәтән бо шикили винде.",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 км}}",
