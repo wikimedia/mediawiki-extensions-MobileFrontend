@@ -37,14 +37,7 @@
 			]
 		},
 		"MobileOptions": "SpecialMobileOptions",
-		"MobileLanguages": {
-			"class": "SpecialMobileLanguages",
-			"services": [
-				"LanguageConverterFactory",
-				"LanguageNameUtils",
-				"MobileFrontend.Context"
-			]
-		},
+		"MobileLanguages": "SpecialMobileLanguages",
 		"Uploads": "SpecialUploads"
 	},
 	"APIModules": {
