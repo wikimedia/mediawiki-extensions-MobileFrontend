@@ -2,15 +2,16 @@
 	"@metadata": {
 		"authors": [
 			"Simartampua",
-			"IHLubis"
+			"IHLubis",
+			"Amire80"
 		]
 	},
 	"mobile-frontend-editor-blocked-drawer-title": "Akun mu madung iblokir tuna mangedit {{SITENAME}}",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Alasanna iblokir",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "Iblokir ni",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "Blokir kadaluarsa i",
-	"mobile-frontend-terms-text": "Parsaratan ni Pangguna",
-	"mobile-frontend-view": "tarida sian seluler",
+	"mobile-frontend-terms-text": "Parsaratan ni pamake",
+	"mobile-frontend-view": "Tarida sian seluler",
 	"mobile-frontend-view-desktop": "Desktop",
 	"tag-mobile_edit": "Pangeditan hape",
 	"tag-mobile_web_edit": "Edit ngon web hape"
