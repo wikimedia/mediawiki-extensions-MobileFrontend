@@ -6,6 +6,7 @@ use MobileFrontend\Models\MobilePage;
 
 /**
  * The mobile version of the watchlist editing page.
+ * @deprecated in future this should be the core SpecialEditWatchlist page (T109277)
  */
 class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 	/** @var string The name of the title to begin listing the watchlist from */
@@ -224,6 +225,10 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 				'mobile.pagelist.styles',
 				"mobile.placeholder.images",
 				'mobile.pagesummary.styles',
+				// FIXME: This module should be removed when the following tickets are resolved:
+				// * T305113
+				// * T109277
+				// * T117279
 				'mobile.special.pagefeed.styles'
 			]
 		);

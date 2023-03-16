@@ -710,9 +710,11 @@ class MobileFrontendHooks {
 
 		if ( $isMobileView ) {
 			$out = $special->getOutput();
+			// FIXME: mobile.special.styles should be replaced with mediawiki.special module
 			$out->addModuleStyles(
 				[ 'mobile.special.styles' ]
 			);
+			// FIXME: Should be moved to MediaWiki core module.
 			if ( $name === 'Userlogin' || $name === 'CreateAccount' ) {
 				$out->addModules( 'mobile.special.userlogin.scripts' );
 			}
