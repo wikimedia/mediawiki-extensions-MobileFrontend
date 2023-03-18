@@ -770,9 +770,6 @@
 		"MFAmcOutreachMinEditCount": {
 			"value": 100
 		},
-		"MFSchemaEditAttemptStepOversample": {
-			"value": false
-		},
 		"MFTrackBlockNotices": {
 			"value": false
 		},

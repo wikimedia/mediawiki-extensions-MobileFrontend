@@ -105,8 +105,7 @@ function getPreferredEditor() {
 function setupEditor( page, skin, currentPageHTMLParser, router ) {
 	var uri, fragment, editorOverride,
 		overlayManager = OverlayManager.getSingleton(),
-		isNewPage = page.id === 0,
-		firstInitDone = false;
+		isNewPage = page.id === 0;
 
 	$editTab.on( 'click', function ( ev ) {
 		onEditLinkClick( this, ev, overlayManager.router );
@@ -134,10 +133,7 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 				editCount: editCount,
 				oldId: mw.util.getParamValue( 'oldid' ),
 				contentLang: $contentText.attr( 'lang' ),
-				contentDir: $contentText.attr( 'dir' ),
-				sessionId: mw.config.get( 'wgWMESchemaEditAttemptStepSessionId' ) ||
-					mw.Uri().query.editingStatsId ||
-					user.generateRandomSessionId()
+				contentDir: $contentText.attr( 'dir' )
 			},
 			animationDelayDeferred, abortableDataPromise, loadingOverlay, overlayPromise,
 			initMechanism = mw.util.getParamValue( 'redlink' ) ? 'new' : 'click';
@@ -219,19 +215,15 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 		 * @method
 		 */
 		function logInit( editor ) {
-			if ( firstInitDone ) {
-				editorOptions.sessionId = user.generateRandomSessionId();
-			}
-			mw.track( 'mf.schemaEditAttemptStep', {
+			mw.track( 'editAttemptStep', {
 				action: 'init',
 				type: 'section',
 				mechanism: initMechanism,
+				integration: 'page',
 				/* eslint-disable camelcase */
-				editor_interface: editor,
-				editing_session_id: editorOptions.sessionId
+				editor_interface: editor
 				/* eslint-enable camelcase */
 			} );
-			firstInitDone = true;
 		}
 
 		/**

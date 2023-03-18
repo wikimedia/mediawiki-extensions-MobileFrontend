@@ -21,9 +21,7 @@ var skin,
 	mfUtil = require( '../mobile.startup/util' ),
 	$window = mfUtil.getWindow(),
 	Skin = require( '../mobile.startup/Skin' ),
-	eventBus = require( '../mobile.startup/eventBusSingleton' ),
-	schemaEditAttemptStep = require( './eventLogging/schemaEditAttemptStep' ),
-	schemaVisualEditorFeatureUse = require( './eventLogging/schemaVisualEditorFeatureUse' );
+	eventBus = require( '../mobile.startup/eventBusSingleton' );
 
 skin = Skin.getSingleton();
 
@@ -140,11 +138,3 @@ if ( !currentPage.inNamespace( 'special' ) && isPageContentModelEditable ) {
 
 toggling();
 lazyLoadedImages();
-
-// Set up recording for the events we track. The module 'ext.eventLogging'
-// should already be loaded (this doesn't trigger a new HTTP request), but we
-// don't specify a hard dependency because EventLogging may not be installed.
-mw.loader.using( 'ext.eventLogging' ).then( function () {
-	schemaEditAttemptStep();
-	schemaVisualEditorFeatureUse();
-} );

@@ -19,8 +19,6 @@ class MobileFrontendEditorHooks {
 		$extensionRegistry = ExtensionRegistry::getInstance();
 
 		return [
-			// schemaEditAttemptStep.js
-			'wgMFSchemaEditAttemptStepOversample' => $config->get( 'MFSchemaEditAttemptStepOversample' ),
 			// MFDefaultEditor should be `source`, `visual`, or `preference`
 			// `preference` means to fall back on the desktop `visualeditor-editor` setting (if VE has been used)
 			// editor.js
@@ -76,7 +74,6 @@ class MobileFrontendEditorHooks {
 						'mobile.editor.overlay',
 						'mobile.startup',
 					],
-					'scripts' => 'resources/dist/mobile.editor.ve.js'
 				],
 			] );
 		}
