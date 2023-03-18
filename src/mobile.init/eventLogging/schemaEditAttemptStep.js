@@ -103,21 +103,6 @@ module.exports = function () {
 				timeStamp = mw.now(),
 				duration = 0;
 
-			// These are always the same for every event, but they can't be set in defaults,
-			// because the mw.config values are not present yet then, because they are set
-			// by JS code in editor.js. This is a little silly.
-			if ( !mw.storage.get( 'preferredEditor' ) ) {
-				// This check serves to stop us logging the id/bucket after the user has
-				// switched editors for the first time. Future pageloads won't even set
-				// the config values.
-				if ( mw.config.get( 'wgMFSchemaEditAttemptStepAnonymousUserId' ) ) {
-					// eslint-disable-next-line camelcase
-					data.anonymous_user_token = mw.config.get( 'wgMFSchemaEditAttemptStepAnonymousUserId' );
-				}
-				if ( mw.config.get( 'wgMFSchemaEditAttemptStepBucket' ) ) {
-					data.bucket = mw.config.get( 'wgMFSchemaEditAttemptStepBucket' );
-				}
-			}
 			if ( !data.anonymous_user_token ) {
 				// DiscussionTools a/b test
 				if ( mw.config.get( 'wgDiscussionToolsABTestBucket' ) ) {
