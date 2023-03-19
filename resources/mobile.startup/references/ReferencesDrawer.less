@@ -1,11 +1,12 @@
+@import 'mediawiki.skin.variables.less';
 @import '../../../mobile.less/mobile.variables.less';
 @import 'mediawiki.mixins.less';
 
 @drawerPadding: 20px;
 
 .drawer.references-drawer {
-	background-color: @colorGray1;
-	color: @colorGray12;
+	background-color: #000;
+	color: #c8ccd1;
 	max-height: 50%; // on tablet this will become capped at 400px
 	overflow-y: auto;
 	padding: @drawerPadding/2 @drawerPadding @drawerPadding @drawerPadding;
@@ -25,7 +26,7 @@
 	}
 
 	.references-drawer__title {
-		color: @colorGray7;
+		color: #72777d;
 		cursor: default;
 		letter-spacing: 0.2em;
 		font-size: 0.75em;

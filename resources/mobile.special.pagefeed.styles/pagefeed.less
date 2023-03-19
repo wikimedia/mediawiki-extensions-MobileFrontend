@@ -1,9 +1,10 @@
+@import 'mediawiki.skin.variables.less';
 @import '../../mobile.less/mobile.variables.less';
 
 .page-header-bar {
 	li,
 	div {
-		border-bottom: 1px solid @colorGray12;
+		border-bottom: @border-width-base @border-style-base @border-color-subtle;
 		padding: 5px 0 0;
 		line-height: 1.5;
 		text-align: center;
@@ -17,7 +18,7 @@
 		display: inline-block;
 		width: 25%;
 		margin: 0 0 0 -1px;
-		border-left: 1px solid @colorGray12;
+		border-left: @border-width-base @border-style-base @border-color-subtle;
 		border-bottom: 0;
 
 		&:first-child {
@@ -26,13 +27,13 @@
 
 		a {
 			display: block;
-			color: @colorGray5;
+			color: @color-subtle;
 			margin: 0 1px 0 0;
-			border-bottom: 3px solid transparent;
+			border-bottom: 3px @border-style-base @border-color-transparent;
 		}
 
 		&.selected a {
-			border-bottom-color: @border-color-base--focus;
+			border-bottom-color: @border-color-progressive--focus;
 			font-weight: bold;
 		}
 	}
@@ -66,7 +67,7 @@
 // FIXME: Can we generalise these rules into a common design pattern?
 .empty-page {
 	margin: 3em;
-	color: @colorGray7;
+	color: #72777d;
 	text-align: center;
 
 	img {
@@ -83,7 +84,7 @@
 }
 
 .mw-mf-user {
-	color: @grayMediumDark;
+	color: @color-subtle;
 	display: inline-block;  // so that the icon in beta is next to the text when the text is centered
 }
 
@@ -111,7 +112,7 @@ a.mw-mf-watchlist-more {
 }
 
 .minoredit {
-	background: @grayLightest;
+	background: #eaecf0;
 	border-radius: @border-radius-base;
 	font-size: 0.9em;
 	font-weight: bold;

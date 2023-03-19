@@ -1,8 +1,8 @@
-@import 'mediawiki.ui/variables.less';
+@import 'mediawiki.skin.variables.less';
 
 .block-message {
 	h5 {
-		font-weight: bold;
+		font-weight: @font-weight-bold;
 		margin: 0;
 		// This should match the height of an icon in px.
 		// FIXME: Use @icon-glyph-size-md when Minerva's mw-ui-icon skinStyles are in core.
@@ -39,8 +39,8 @@
 	width: 100%;
 	padding: 1em;
 	text-align: right;
-	background-color: @colorGray15;
-	box-shadow: 0 -4px 5px -4px @colorGray15;
+	background-color: @background-color-interactive-subtle;
+	box-shadow: 0 -4px 5px -4px #f8f9fa;
 
 	a.mw-ui-button,
 	button.cancel {
@@ -63,7 +63,7 @@
 	clear: both;
 	padding: 1em;
 	text-align: left;
-	background-color: @colorGray14;
+	background-color: @background-color-interactive;
 	margin-bottom: 3em;
 }
 

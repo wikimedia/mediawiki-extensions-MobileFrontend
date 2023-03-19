@@ -1,3 +1,4 @@
+@import 'mediawiki.skin.variables.less';
 @import '../../mobile.less/mobile.variables.less';
 @import 'mediawiki.mixins.less';
 
@@ -9,7 +10,7 @@
 #mw-mf-page-center {
 	// See https://phabricator.wikimedia.org/T144579#2699879
 	// This prevents the footer margin bottom from collapsing on iOS9.3
-	border-bottom: 1px solid transparent;
+	border-bottom: @border-width-base @border-style-base transparent;
 }
 
 .mw-diff-inline-moved {
@@ -58,7 +59,7 @@ footer {
 
 #mw-mf-diffview {
 	.mw-mf-diff-date {
-		color: @colorGray7;
+		color: #72777d;
 		height: 1em;
 		line-height: 1em;
 		vertical-align: middle;
@@ -155,8 +156,8 @@ footer {
 	#mw-mf-userinfo {
 		height: @userInfoHeight;
 		padding: @userInfoPadding;
-		background-color: @colorGray15;
-		border-top: solid 1px @colorGray12;
+		background-color: #f8f9fa;
+		border-top: @border-width-base @border-style-base @border-color-subtle;
 		bottom: 0;
 		left: 0;
 		right: 0;
@@ -169,14 +170,14 @@ footer {
 			display: inline-block;
 			text-align: left;
 			margin-top: 1.2em;
-			color: @colorGray2;
+			color: @color-base;
 			line-height: 1;
 
 			/* the edit count number */
 			div {
 				text-align: center;
 				font-size: 1.85em;
-				color: @colorGray7;
+				color: #72777d;
 			}
 		}
 

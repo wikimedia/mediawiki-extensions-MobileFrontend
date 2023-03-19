@@ -1,3 +1,4 @@
+@import 'mediawiki.skin.variables.less';
 @import '../../mobile.less/mobile.variables.less';
 
 .editor-overlay {
@@ -24,7 +25,7 @@
 
 	.overlay-header {
 		// The border will only be visible on screens >1000px due to max-width set elsewhere.
-		outline: 1px solid #c8ccd1;
+		outline: @border-width-base @border-style-base @border-color-subtle;
 
 		.header-cancel {
 			padding: 0;
@@ -96,15 +97,15 @@
 		font-size: 1.4em;
 		font-weight: bold;
 		margin: 0.5em 0;
-		color: @grayMediumDark;
+		color: @color-subtle;
 	}
 
 	.buttonBar {
 		.message {
-			color: @color-base--subtle;
+			color: @color-subtle;
 			margin: 0 0 0.7em;
 			padding: 0 0 0.3em;
-			border-bottom: 1px solid @colorGray12;
+			border-bottom: @border-width-base @border-style-base @border-color-subtle;
 
 			p {
 				display: inline-block;
@@ -123,7 +124,7 @@
 	}
 
 	.editor-switcher {
-		border-left: 1px solid @colorGray12;
+		border-left: @border-width-base @border-style-base @border-color-subtle;
 
 		.oo-ui-toolGroup:last-child {
 			border-right: 0;

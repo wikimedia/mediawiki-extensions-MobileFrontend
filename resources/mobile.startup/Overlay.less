@@ -1,3 +1,4 @@
+@import 'mediawiki.skin.variables.less';
 @import '../../mobile.less/mobile.variables.less';
 @import '../../mobile.less/mobile.mixins.less';
 
@@ -130,7 +131,7 @@
 	.panel {
 		padding-top: 12px;
 		padding-bottom: 12px;
-		border-bottom: 1px solid @grayLightest;
+		border-bottom: @border-width-base @border-style-base #eaecf0;
 	}
 }
 
@@ -158,9 +159,8 @@
 		.continue,
 		.submit,
 		.progressive {
-			// FIXME: Use WikimediaUI `@background-color*` variable when available.
-			background-color: @color-primary;
-			color: @color-base--inverted;
+			background-color: @background-color-progressive;
+			color: @color-inverted;
 			width: auto;
 
 			&:not( .mw-ui-icon-element ) {
@@ -168,14 +168,14 @@
 			}
 
 			&[ disabled ] {
-				background-color: @colorGray12;
+				background-color: #c8ccd1;
 				opacity: 1;
 			}
 		}
 
 		// Some overlays e.g. NotificationOverlay use an OOUI icon as the header action.
 		.oo-ui-widget {
-			margin-right: @iconGutterWidth;
+			margin-right: @width-icon-gutter;
 		}
 	}
 
@@ -184,9 +184,8 @@
 	}
 
 	.submit {
-		// FIXME: Use WikimediaUI `@background-color*` variable when available.
-		background-color: @color-primary;
-		color: @color-base--inverted;
+		background-color: @background-color-progressive;
+		color: @color-inverted;
 	}
 
 	h2 {
@@ -241,7 +240,7 @@
 .overlay-footer-container {
 	background-color: @background-color-base;
 	bottom: 0;
-	border-top: 1px solid @grayLight;
+	border-top: @border-width-base @border-style-base @border-color-subtle;
 
 	a {
 		display: block;
@@ -273,14 +272,14 @@
 //   <div class="content"></div>
 // </div>
 .overlay-bottom {
-	border-top: 1px solid @grayLight;
+	border-top: @border-width-base @border-style-base @border-color-subtle;
 	top: auto;
 	bottom: 0;
 	height: auto !important;
-	background: @colorGray15;
+	background: #f8f9fa;
 
 	.overlay-header-container {
-		background: @colorGray15;
+		background: #f8f9fa;
 	}
 }
 

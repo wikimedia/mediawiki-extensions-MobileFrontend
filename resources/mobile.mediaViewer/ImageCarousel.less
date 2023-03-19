@@ -1,3 +1,4 @@
+@import 'mediawiki.skin.variables.less';
 @import '../../mobile.less/mobile.variables.less';
 @import '../../mobile.less/mobile.mixins.less';
 
@@ -82,7 +83,7 @@
 
 .load-fail-msg {
 	text-align: center;
-	color: #fff;
+	color: @color-inverted;
 	padding: 0 65px;
 }
 
@@ -96,7 +97,7 @@
 
 .load-fail-msg-link {
 	a {
-		color: @color-primary;
+		color: @color-link;
 	}
 }
 
@@ -112,7 +113,7 @@
 	padding: 8px 10px;
 	margin: 0;
 	overflow-y: auto;
-	border-top: 1px solid @grayLight;
+	border-top: @border-width-base @border-style-base @border-color-subtle;
 
 	&.is-visible {
 		display: block;

@@ -1,9 +1,9 @@
-@import 'mediawiki.ui/variables.less';
+@import 'mediawiki.skin.variables.less';
 @import '../../mobile.less/mobile.variables.less';
 
 // FIXME: Is `.error` used appropriately or could it be remove/moved to core classes?
 .error {
-	color: @colorError;
+	color: @color-error;
 }
 
 .mw-ui-button-group,
@@ -18,7 +18,7 @@
 
 	.content-header {
 		padding: 0 0 20px;
-		border-bottom: 1px solid @colorGray12;
+		border-bottom: @border-width-base @border-style-base @border-color-subtle;
 
 		ul {
 			&::after {
@@ -42,7 +42,7 @@
 			text-align: center;
 			margin: 0.7em 0;
 			font-size: 1.1em;
-			color: @grayMedium;
+			color: @color-subtle;
 		}
 	}
 

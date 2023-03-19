@@ -1,3 +1,4 @@
+@import 'mediawiki.skin.variables.less';
 @import '../../mobile.less/mobile.variables.less';
 
 @itemPaddingV: 0.8em;
@@ -32,9 +33,9 @@
 	overflow: hidden;
 
 	li {
-		color: @colorGray5;
+		color: @color-subtle;
 		position: relative;
-		border-bottom: 1px solid @grayLightest;
+		border-bottom: @border-width-base @border-style-base #eaecf0;
 		padding-top: @itemPaddingV;
 		padding-bottom: @itemPaddingV;
 		// avoid the gap between thumbnails
@@ -59,13 +60,13 @@
 		// T297023: Prevent overriding `mw-ui-icon-element` and making text visible
 		> a:not( .mw-ui-icon-element ) {
 			display: block;
-			color: @grayMedium;
+			color: #72777d;
 
 			&:active,
 			&:hover,
 			&:visited {
 				text-decoration: none;
-				color: @grayMedium;
+				color: #72777d;
 			}
 		}
 	}
@@ -85,7 +86,7 @@
 	// FIXME: Add component class to all info classes in currently defined page-lists
 	.info,
 	.component {
-		color: @grayMedium;
+		color: #72777d;
 		line-height: 1.2;
 	}
 
@@ -123,7 +124,7 @@
 	&.side-list .list-thumb {
 		padding-top: @itemPaddingV;
 		padding-bottom: @itemPaddingV;
-		color: @colorGray2;
+		color: @color-base;
 
 		p {
 			line-height: 1.2;
