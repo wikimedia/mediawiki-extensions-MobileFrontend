@@ -23,6 +23,7 @@
 	"apihelp-mobileview-param-thumbheight": "Максимальная высота миниатюры",
 	"apihelp-mobileview-param-revision": "Запросить определенную версию.",
 	"apihelp-mobileview-example-1": "Получить информацию о разделе 0 [[Doom metal]]",
+	"apihelp-parse-param-mobileformat": "Вернуть выходные данные синтаксического анализа в формате, подходящем для мобильных устройств.",
 	"apihelp-parse-param-noimages": "Отключить изображения в выводе на мобильном устройстве.",
 	"apihelp-parse-param-mainpage": "Применить мобильные изменения для главной страницы.",
 	"apihelp-webapp-manifest-description": "Возвращает манифест веб-приложения.",

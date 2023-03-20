@@ -240,6 +240,8 @@
 	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions": "Otsikon kuvaukset",
 	"mobile-frontend-send-feedback": "Lähetä palautetta",
 	"mobile-frontend-mobile-option-MFLazyLoadImages-description": "Lataa kuvat vain tarvittaessa.",
+	"mobile-frontend-mobile-option-MFLazyLoadImages": "Lataa kuvat hitaasti",
+	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "Johdantokappale",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Fonttikoko",
 	"mobile-frontend-mobile-option-amc": "Laajennettu tila",
 	"mobile-frontend-mobile-option-amc-experiment-description": "Laajennettu tila tarjoaa helpon pääsyn keskustelusivuihin, historiasivuihin, käyttäjätyökaluihin ja muihin muokkaustyökaluihin.",
