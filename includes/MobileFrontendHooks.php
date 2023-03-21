@@ -3,6 +3,7 @@
 use MediaWiki\Auth\AuthenticationRequest;
 use MediaWiki\Auth\AuthManager;
 use MediaWiki\ChangeTags\Taggable;
+use MediaWiki\Diff\Hook\DifferenceEngineBeforeDiffTableHook;
 use MediaWiki\Extension\AbuseFilter\Variables\VariableHolder;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\ResourceLoader as RL;
@@ -24,7 +25,7 @@ use MobileFrontend\Transforms\MakeSectionsTransform;
  * If your hook changes the behaviour of the Minerva skin, you are in the wrong place.
  * Any changes relating to Minerva should go into Minerva.hooks.php
  */
-class MobileFrontendHooks {
+class MobileFrontendHooks implements DifferenceEngineBeforeDiffTableHook {
 	private const MOBILE_PREFERENCES_SECTION = 'rendering/mobile';
 	public const MOBILE_PREFERENCES_SPECIAL_PAGES = 'mobile-specialpages';
 	public const MOBILE_PREFERENCES_EDITOR = 'mobile-editor';
@@ -1149,5 +1150,17 @@ class MobileFrontendHooks {
 		global $wgCanonicalServer;
 		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
 		$result['mobileserver'] = $context->getMobileUrl( $wgCanonicalServer );
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	public function onDifferenceEngineBeforeDiffTable( DifferenceEngine $differenceEngine, array &$parts ) {
+		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
+		// This check is needed or else the legend gets hidden on desktop, too.
+		if ( $context->shouldDisplayMobileView() ) {
+			// Remove the inline diff legend.
+			$parts[DifferenceEngine::INLINE_LEGEND_KEY] = null;
+		}
 	}
 }
