@@ -10,6 +10,7 @@
 			"Pacha Tchernof"
 		]
 	},
+	"apihelp-parse-param-mobileformat": "Вернуть выходные данные синтаксического анализа в формате, подходящем для мобильных устройств.",
 	"apihelp-parse-param-noimages": "Отключить изображения в выводе на мобильном устройстве.",
 	"apihelp-parse-param-mainpage": "Применить мобильные изменения для главной страницы.",
 	"apihelp-webapp-manifest-description": "Возвращает манифест веб-приложения.",
