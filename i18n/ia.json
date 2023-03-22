@@ -201,6 +201,8 @@
 	"mobile-frontend-user-page-desired-action": "Iste pagina deberea esser create e modificate per $1",
 	"mobile-frontend-user-page-create-owner-page-link-label": "Crear le tue",
 	"mobile-frontend-user-page-create-user-page-link-label": "Crear un pagina con nomine $1",
+	"mobile.css": "/* Le codice CSS placiate hic essera cargate pro le usatores del sito mobile */",
+	"mobile.js": "/* Le codice JavaScript placiate hic essera cargate pro usatores del sito mobile */",
 	"nearby": "Paginas con themas vicin a te",
 	"tag-mobile_edit": "Modification per mobile",
 	"tag-mobile_edit-description": "Modification facite per mobile (web o app)",
