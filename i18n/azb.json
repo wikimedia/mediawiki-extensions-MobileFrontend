@@ -29,7 +29,6 @@
 	"mobile-frontend-joined-months": "{{PLURAL:$2|$2 آی|$2 آی}} قاباق {{GENDER:$1|عوضو اولدو}}",
 	"mobile-frontend-joined-years": "{{PLURAL:$2|$2 ایل|$2 ایل}} قاباق {{GENDER:$1|عوضو اولدو}}",
 	"mobile-frontend-language-heading": "<strong>دیل‌لر</strong>",
-	"mobile-frontend-languages-header": "دیل‌لر",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "ساپورتلانان دیل‌لر",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "بوتون دیللر",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "بیر دیلی آختار",

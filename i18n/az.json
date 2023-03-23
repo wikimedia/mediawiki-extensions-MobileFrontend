@@ -60,8 +60,6 @@
 	"mobile-frontend-joined-months": "{{PLURAL:$2|$2 ay|$2 ay}} əvvəl {{GENDER:$1|qoşulub}}",
 	"mobile-frontend-joined-years": "{{PLURAL:$2|$2 il|$2 il}} əvvəl {{GENDER:$1|qoşulub}}",
 	"mobile-frontend-language-heading": "<strong>Dillər</strong>",
-	"mobile-frontend-languages-header": "Dillər",
-	"mobile-frontend-languages-header-page": "$1 - Digər dillərdə",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Təklif edilən dillər",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Digər dillər",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Dil axtarın",

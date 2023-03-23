@@ -48,8 +48,6 @@
 	"mobile-frontend-fontchanger-option-xlarge": "Extra-Grando",
 	"mobile-frontend-featured-article": "Vetrina",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} ła xe faxesta da xente cofà ti.</strong><br />Łòghite o nòtate par contribuir.",
-	"mobile-frontend-languages-header": "Łéngue",
-	"mobile-frontend-languages-text": "$1 ła se połe catar in {{PLURAL:$2|on altra łéngua|altre $2 łéngue}}.",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Łéngue sujerie",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Altre łéngue",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Serca na łéngua",

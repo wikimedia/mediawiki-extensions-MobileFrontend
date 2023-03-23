@@ -34,7 +34,6 @@
 	"mobile-frontend-editor-placeholder-new-page": "{{SITENAME}}இல் ஒரு புதிய பக்கத்தை {{GENDER:$1|நீங்கள் உருவாக்குகிறீர்கள்}}!",
 	"mobile-frontend-editor-save": "சேமி",
 	"mobile-frontend-featured-article": "இன்றைய சிறப்பு உள்ளடக்கம்",
-	"mobile-frontend-languages-header": "மொழிகள்",
 	"mobile-frontend-last-modified-date": "கடைசியாக $1அன்று $2இல் திருத்தப்பட்டது",
 	"mobile-frontend-main-menu-settings-heading": "அமைப்புகள்",
 	"mobile-frontend-media-details": "விளக்கம்",

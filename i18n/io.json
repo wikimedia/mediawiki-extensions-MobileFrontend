@@ -34,8 +34,6 @@
 	"mobile-frontend-joined-days": "{{GENDER:$1|Eniris}} {{PLURAL:$2|$2 dio|$2 dii}} ante nun",
 	"mobile-frontend-joined-months": "{{GENDER:$1|Eniris}} {{PLURAL:$2|$2 monato|$2 monati}} ante nun",
 	"mobile-frontend-language-heading": "<strong>Lingui</strong>",
-	"mobile-frontend-languages-header": "Lingui",
-	"mobile-frontend-languages-header-page": "$1 - Altra lingui",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Sugestanta lingui",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Omna lingui",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Serchar ula linguo",

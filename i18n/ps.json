@@ -66,8 +66,6 @@
 	"mobile-frontend-joined-months": "{{PLURAL:$2|$2 مياشت|$2 مياشتې}} مخکې يي {{GENDER:$1|غړیتوب تر لاسه کړ}}",
 	"mobile-frontend-joined-years": "{{PLURAL:$2|$2 کال|$2 کاله}} مخکې يې {{GENDER:$1|غړیتوب تر لاسه کړ}}",
 	"mobile-frontend-language-heading": "<strong>ژبې</strong>",
-	"mobile-frontend-languages-header": "ژبې",
-	"mobile-frontend-languages-header-page": "$1 - ژبې",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "ملاتړې ژبې",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "ټولې ژبې",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "د يوي ژبې لټون",

@@ -6,8 +6,6 @@
 		]
 	},
 	"mobile-frontend-copyright": "Башкъасы бильдирильмесе, малюмат $1 лицензиясынен бериле.",
-	"mobile-frontend-languages-header-page": "$1 — Тиллер",
-	"mobile-frontend-languages-text": "$1 саифеси $2 {{PLURAL:$2|тильде}} бар.",
 	"mobile-frontend-privacy-link-text": "Гизлилик",
 	"mobile-frontend-terms-text": "Къулланув шартлары",
 	"mobile-frontend-view": "Мобиль корюниш",

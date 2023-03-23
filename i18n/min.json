@@ -27,7 +27,6 @@
 	"mobile-frontend-joined-days": "{{GENDER:$1|Tadaftar}} {{PLURAL:$2|$2 hari}} nan lalu",
 	"mobile-frontend-joined-years": "{{GENDER:$1|Tadaftar}} {{PLURAL:$2|$2 taun}} nan lalu",
 	"mobile-frontend-language-heading": "<strong>Bahaso</strong>",
-	"mobile-frontend-languages-header": "Bahaso",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Bahaso lain",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Cari bahaso",
 	"mobile-frontend-last-modified-date": "Tarakhia diubah pado $1, pukua $2",

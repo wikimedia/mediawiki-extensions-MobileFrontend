@@ -21,7 +21,6 @@
 	"mobile-frontend-joined-months": "{{GENDER:$1|دخل|دخلات}} هادي {{PLURAL:$2|$2 شهر}}",
 	"mobile-frontend-joined-years": "{{GENDER:$1|دخل|دخلات}} هادي {{PLURAL:$2|$2 سنين}}",
 	"mobile-frontend-language-heading": "<strong>لوغات</strong>",
-	"mobile-frontend-languages-header-page": "$1 - لوغات خرين",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "لوغات مقتارحة",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "لوغات خرين",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "قلّب على لوغة",
