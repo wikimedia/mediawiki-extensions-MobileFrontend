@@ -76,10 +76,7 @@ class MobileFrontendEditorHooks {
 						'mobile.editor.overlay',
 						'mobile.startup',
 					],
-					'scripts' => 'resources/dist/mobile.editor.ve.js',
-					'targets' => [
-						'mobile',
-					],
+					'scripts' => 'resources/dist/mobile.editor.ve.js'
 				],
 			] );
 		}
