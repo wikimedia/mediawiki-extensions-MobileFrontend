@@ -19,6 +19,7 @@
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Тыю сәбәбе",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Тыюлы}}",
 	"mobile-frontend-editor-cancel": "Кире алу",
+	"mobile-frontend-editor-continue": "Алга таба",
 	"mobile-frontend-editor-editing": "Үзгәртү",
 	"mobile-frontend-editor-keep-editing": "Үзгәртүне дәвам итү",
 	"mobile-frontend-editor-placeholder": "Бу бүлек буш. Беренче булып аны киңәйтегез!",
