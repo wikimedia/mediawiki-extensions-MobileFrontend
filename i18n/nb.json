@@ -95,7 +95,7 @@
 	"mobile-frontend-editor-viewing-source-page": "<strong>Viser kilden til</strong><span> $1</span>",
 	"mobile-frontend-editor-wait": "Lagrer redigering, vennligst vent.",
 	"mobile-frontend-editor-loading": "Laster redigeringsverktøy …",
-	"mobile-frontend-expand-sections-description": "Utvid alltid seksjoner på alle sider som standard.",
+	"mobile-frontend-expand-sections-description": "Utvid alltid seksjoner på innholdssider som standard.",
 	"mobile-frontend-expand-sections-status": "Utvid alle avsnitt",
 	"mobile-frontend-fontchanger-link": "Skriftstørrelse",
 	"mobile-frontend-fontchanger-desc": "Still inn skriftstørrelsen for bedre lesbarhet.",
