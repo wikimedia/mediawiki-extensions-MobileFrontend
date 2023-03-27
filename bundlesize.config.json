@@ -8,10 +8,6 @@
 		"maxSize": "12.0KB"
 	},
 	{
-		"resourceModule": "mobile.editor.ve",
-		"maxSize": "0.3KB"
-	},
-	{
 		"resourceModule": "mobile.init",
 		"maxSize": "5370"
 	},

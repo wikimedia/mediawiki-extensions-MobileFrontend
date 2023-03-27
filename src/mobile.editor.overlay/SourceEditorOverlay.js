@@ -462,7 +462,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 		this.$content.prop( 'readonly', true );
 
 		mw.loader.using( 'ext.visualEditor.targetLoader' ).then( function () {
-			mw.libs.ve.targetLoader.addPlugin( 'mobile.editor.ve' );
+			mw.libs.ve.targetLoader.addPlugin( 'ext.visualEditor.mobileArticleTarget' );
 			return mw.libs.ve.targetLoader.loadModules( 'visual' );
 		} ).then(
 			function () {

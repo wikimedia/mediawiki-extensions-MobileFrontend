@@ -1,7 +1,6 @@
 <?php
 
 use MediaWiki\MediaWikiServices;
-use MediaWiki\ResourceLoader\ResourceLoader;
 
 class MobileFrontendEditorHooks {
 	/**
@@ -45,37 +44,6 @@ class MobileFrontendEditorHooks {
 			// mobile.init
 			$vars['wgMFIsPageContentModelEditable'] = self::isPageContentModelEditable( $title );
 			// Accesses getBetaGroupMember so does not belong in onResourceLoaderGetConfigVars
-		}
-	}
-
-	/**
-	 * ResourceLoaderRegisterModules hook handler.
-	 *
-	 * Registers:
-	 *
-	 * * Modules for the Visual Editor overlay, if the VisualEditor extension is loaded
-	 *
-	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ResourceLoaderRegisterModules
-	 *
-	 * @param ResourceLoader $resourceLoader
-	 */
-	public static function onResourceLoaderRegisterModules( ResourceLoader $resourceLoader ) {
-		$resourceBoilerplate = [
-			'localBasePath' => dirname( __DIR__ ),
-			'remoteExtPath' => 'MobileFrontend',
-		];
-
-		// add VisualEditor related modules only, if VisualEditor seems to be installed - T85007
-		if ( ExtensionRegistry::getInstance()->isLoaded( 'VisualEditor' ) ) {
-			$resourceLoader->register( [
-				'mobile.editor.ve' => $resourceBoilerplate + [
-					'dependencies' => [
-						'ext.visualEditor.mobileArticleTarget',
-						'mobile.editor.overlay',
-						'mobile.startup',
-					],
-				],
-			] );
 		}
 	}
 

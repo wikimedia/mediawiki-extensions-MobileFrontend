@@ -324,7 +324,8 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 
 			return mw.loader.using( 'ext.visualEditor.targetLoader' )
 				.then( function () {
-					mw.libs.ve.targetLoader.addPlugin( 'mobile.editor.ve' );
+					mw.libs.ve.targetLoader.addPlugin( 'ext.visualEditor.mobileArticleTarget' );
+					mw.libs.ve.targetLoader.addPlugin( 'mobile.editor.overlay' );
 					return mw.libs.ve.targetLoader.loadModules( editorOptions.mode );
 				} )
 				.then( function () {
