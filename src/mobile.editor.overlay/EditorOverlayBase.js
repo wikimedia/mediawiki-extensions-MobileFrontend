@@ -95,7 +95,6 @@ function EditorOverlayBase( params ) {
 	this.isNewPage = options.isNewPage;
 	this.isNewEditor = options.editCount === 0;
 	this.sectionId = options.sectionId;
-	this.sessionId = options.sessionId;
 	this.overlayManager = options.overlayManager;
 
 	Overlay.call( this, options );
@@ -184,11 +183,9 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 * @param {Object} data
 	 */
 	log: function ( data ) {
-		mw.track( 'mf.schemaEditAttemptStep', util.extend( data, {
+		mw.track( 'editAttemptStep', util.extend( data, {
 			// eslint-disable-next-line camelcase
-			editor_interface: this.editor,
-			// eslint-disable-next-line camelcase
-			editing_session_id: this.sessionId
+			editor_interface: this.editor
 		} ) );
 	},
 	/**
@@ -199,11 +196,9 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 * @param {Object} data
 	 */
 	logFeatureUse: function ( data ) {
-		mw.track( 'mf.schemaVisualEditorFeatureUse', util.extend( data, {
+		mw.track( 'visualEditorFeatureUse', util.extend( data, {
 			// eslint-disable-next-line camelcase
-			editor_interface: this.editor,
-			// eslint-disable-next-line camelcase
-			editing_session_id: this.sessionId
+			editor_interface: this.editor
 		} ) );
 	},
 
@@ -644,7 +639,6 @@ mfExtend( EditorOverlayBase, Overlay, {
 			oldId: this.options.oldId,
 			contentLang: this.options.contentLang,
 			contentDir: this.options.contentDir,
-			sessionId: this.options.sessionId,
 			sectionId: this.options.sectionId
 		};
 	},
