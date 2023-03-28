@@ -1,23 +1,23 @@
 @import 'mediawiki.mixins.less';
 
-.mf-mw-ui-icon-rotate-anti-clockwise:before {
+.mf-mw-ui-icon-rotate-anti-clockwise::before {
 	transform: rotate( -90deg );
 }
 
-.mf-mw-ui-icon-rotate-clockwise:before {
+.mf-mw-ui-icon-rotate-clockwise::before {
 	transform: rotate( 90deg );
 }
 
-.mf-mw-ui-icon-rotate-flip:before {
+.mf-mw-ui-icon-rotate-flip::before {
 	transform: scaleY( -1 );
 }
 
 .rtl {
-	.mf-mw-ui-icon-rotate-anti-clockwise:before {
+	.mf-mw-ui-icon-rotate-anti-clockwise::before {
 		transform: rotate( 90deg );
 	}
 
-	.mf-mw-ui-icon-rotate-clockwise:before {
+	.mf-mw-ui-icon-rotate-clockwise::before {
 		transform: rotate( -90deg );
 	}
 }

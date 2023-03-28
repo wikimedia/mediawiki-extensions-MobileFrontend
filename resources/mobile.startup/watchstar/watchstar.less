@@ -1,11 +1,11 @@
 @import 'mediawiki.mixins.less';
 
 .watch-this-article {
-	&:before {
+	&::before {
 		transition: transform 0.5s;
 	}
 
-	&.watched:before {
+	&.watched::before {
 		transform: rotate( 72deg );
 	}
 }

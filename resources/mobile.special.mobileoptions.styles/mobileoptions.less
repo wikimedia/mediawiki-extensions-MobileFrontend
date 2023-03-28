@@ -71,7 +71,7 @@ form.mw-mf-settings {
 		border-top: 0;
 		padding-top: 0;
 
-		&:before {
+		&::before {
 			content: '';
 			width: 100%;
 			height: 10%;
@@ -84,7 +84,7 @@ form.mw-mf-settings {
 		&:first-child {
 			border-top: solid 1px @colorGray14;
 
-			&:before {
+			&::before {
 				background: none;
 			}
 		}
@@ -105,13 +105,13 @@ form.mw-mf-settings {
 		align-items: center;
 
 		// make parent expand to include floats
-		&:before,
-		&:after {
+		&::before,
+		&::after {
 			content: '';
 			display: table;
 		}
 
-		&:after {
+		&::after {
 			clear: both;
 		}
 	}
