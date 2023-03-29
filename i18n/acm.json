@@ -1,10 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ahmedadeljaff"
+			"Ahmedadeljaff",
+			"MRidhaAJ"
 		]
 	},
+	"abusefilter-edit-builder-vars-user-mobile": "ما إذا جان المستخدم يعدل على واجهة النقال",
+	"mobile-frontend-account-create-captcha-placeholder": "اكتب رمز التأكيد",
+	"mobile-frontend-changeslist-nocomment": "ماكو ملخص تحرير",
 	"mobile-frontend-terms-text": "شروط الأستخدام",
-	"mobile-frontend-view": "عرض بطريقة الهاتف المحمول",
+	"mobile-frontend-view": "عرض بطريقة التلفون",
 	"mobile-frontend-view-desktop": "سطح مكتب"
 }
