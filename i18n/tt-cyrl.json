@@ -22,6 +22,7 @@
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Сәбәп",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Тыюлы}}",
 	"mobile-frontend-editor-cancel": "Кире алу",
+	"mobile-frontend-editor-continue": "Алга таба",
 	"mobile-frontend-editor-disabled": "Бу бит вандализмны булдырмас өчен сакланган. [$1 Чыганакны карау]",
 	"mobile-frontend-editor-editing": "Үзгәртү",
 	"mobile-frontend-editor-keep-editing": "Үзгәртүне дәвам итү",
