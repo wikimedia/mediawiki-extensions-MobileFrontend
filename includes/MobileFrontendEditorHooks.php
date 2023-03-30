@@ -80,6 +80,53 @@ class MobileFrontendEditorHooks {
 	}
 
 	/**
+	 * Decide whether to bother showing the wikitext editor at all.
+	 * If not, we expect the editor initialisation JS to activate.
+	 *
+	 * @param Article $article The article being viewed.
+	 * @param User $user The user-specific settings.
+	 * @return bool Whether to show the wikitext editor or not.
+	 */
+	public static function onCustomEditor( Article $article, User $user ) {
+		$mobileContext = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
+		$req = $article->getContext()->getRequest();
+		$title = $article->getTitle();
+		if (
+			!$req->getVal( 'mfnoscript' ) &&
+			$mobileContext->shouldDisplayMobileView() &&
+			self::isPageContentModelEditable( $title )
+		) {
+
+			$params = $req->getValues();
+			$params['mfnoscript'] = '1';
+			$url = wfScript() . '?' . wfArrayToCgi( $params );
+			$escapedUrl = htmlspecialchars( $url );
+
+			$out = $article->getContext()->getOutput();
+			$titleMsg = $title->exists() ? 'editing' : 'creating';
+			$out->setPageTitle( wfMessage( $titleMsg, $title->getPrefixedText() ) );
+			$out->addWikiMsg( 'mobile-frontend-editor-toload', wfExpandUrl( $url ) );
+
+			// Redirect if the user has no JS (<noscript>)
+			$out->addHeadItem(
+				'mf-noscript-fallback',
+				"<noscript><meta http-equiv=\"refresh\" content=\"0; url=$escapedUrl\"></noscript>"
+			);
+			// Redirect if the user has no ResourceLoader
+			$out->addScript( Html::inlineScript(
+				"(window.NORLQ=window.NORLQ||[]).push(" .
+					"function(){" .
+						"location.href=\"$url\";" .
+					"}" .
+				");"
+			) );
+			$out->setRevisionId( $req->getInt( 'oldid', $article->getRevIdFetched() ) );
+			return false;
+		}
+		return true;
+	}
+
+	/**
 	 * Checks whether the editor can handle the existing content handler type.
 	 *
 	 * @param Title $title
