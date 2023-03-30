@@ -30,6 +30,8 @@
 		"@babel/register": "7.0.0",
 		"@storybook/addon-actions": "6.2.3",
 		"@storybook/html": "6.2.3",
+		"@wikimedia/codex": "0.8.0",
+		"@wikimedia/codex-icons": "0.8.0",
 		"@wikimedia/mw-node-qunit": "6.2.1",
 		"babel-loader": "8.0.5",
 		"babel-plugin-istanbul": "5.2.0",
@@ -54,6 +56,5 @@
 		"svgo": "2.8.0",
 		"webpack": "4.43.0",
 		"webpack-cli": "3.3.11"
-	},
-	"dependencies": {}
+	}
 }
