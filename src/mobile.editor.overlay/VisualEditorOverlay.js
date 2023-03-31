@@ -58,7 +58,10 @@ function VisualEditorOverlay( options ) {
 			sessionStore: true,
 			section: options.sectionId || null,
 			oldId: options.oldId || undefined,
-			targetName: ve.init.mw.MobileArticleTarget.static.trackingName
+			targetName: ve.init.mw.MobileArticleTarget.static.trackingName,
+			preload: options.preload,
+			preloadparams: options.preloadparams,
+			editintro: options.editintro
 		}
 	);
 

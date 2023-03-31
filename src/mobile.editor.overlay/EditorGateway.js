@@ -1,5 +1,6 @@
 var util = require( '../mobile.startup/util' ),
-	actionParams = require( '../mobile.startup/actionParams' );
+	actionParams = require( '../mobile.startup/actionParams' ),
+	veConfig = mw.config.get( 'wgVisualEditorConfig' );
 
 /**
  * API that helps save and retrieve page content
@@ -13,14 +14,20 @@ var util = require( '../mobile.startup/util' ),
  * @param {number} [options.oldId] revision to operate on. If absent defaults to latest.
  * @param {boolean} [options.isNewPage] whether the page being created is new
  * @param {boolean} [options.fromModified] whether the page was loaded in a modified state
+ * @param {string} [options.preload] the name of a page to preload into the editor
+ * @param {Array} [options.preloadparams] parameters to prefill into the preload content
+ * @param {string} [options.editintro] edit intro to add to notices
  */
 function EditorGateway( options ) {
 	this.api = options.api;
 	this.title = options.title;
 	this.sectionId = options.sectionId;
 	this.oldId = options.oldId;
+	this.preload = options.preload;
+	this.preloadparams = options.preloadparams;
+	this.editintro = options.editintro;
 	// return an empty section for new pages
-	this.content = options.isNewPage ? '' : undefined;
+	this.content = ( options.isNewPage && !this.preload ) ? '' : undefined;
 	this.fromModified = options.fromModified;
 	this.hasChanged = options.fromModified;
 }
@@ -103,7 +110,23 @@ EditorGateway.prototype = {
 				pageObj = resp.query.pages[0];
 				// page might not exist and caller might not have known.
 				if ( pageObj.missing !== undefined ) {
-					self.content = '';
+					if ( self.preload && veConfig ) {
+						return self.api.get( actionParams( {
+							action: 'visualeditor',
+							paction: 'wikitext',
+							page: self.title,
+							editintro: self.editintro,
+							preload: self.preload,
+							preloadparams: self.preloadparams
+						} ) ).then( function ( response ) {
+							response = OO.getProp( response, 'visualeditor' ) || [];
+							self.content = response.content;
+
+							return resolve();
+						} );
+					} else {
+						self.content = '';
+					}
 				} else {
 					revision = pageObj.revisions[0];
 					self.content = revision.content;

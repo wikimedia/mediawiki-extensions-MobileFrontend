@@ -120,6 +120,7 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 		var
 			scrollTop = window.pageYOffset,
 			$contentText = $( '#mw-content-text' ),
+			url = new URL( location.href ),
 			editorOptions = {
 				overlayManager: overlayManager,
 				currentPageHTMLParser: currentPageHTMLParser,
@@ -133,7 +134,13 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 				editCount: editCount,
 				oldId: mw.util.getParamValue( 'oldid' ),
 				contentLang: $contentText.attr( 'lang' ),
-				contentDir: $contentText.attr( 'dir' )
+				contentDir: $contentText.attr( 'dir' ),
+				// Arrange preload content if we're on a page with those URL parameters
+				preload: url.searchParams.get( 'preload' ),
+				// Handle numbered array parameters like MediaWiki's PHP code does (T231382)
+				// eslint-disable-next-line max-len
+				preloadparams: new mw.Uri( url.toString(), { arrayParams: true } ).query.preloadparams,
+				editintro: url.searchParams.get( 'editintro' )
 			},
 			animationDelayDeferred, abortableDataPromise, loadingOverlay, overlayPromise,
 			initMechanism = mw.util.getParamValue( 'redlink' ) ? 'new' : 'click';
@@ -305,6 +312,9 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 						section: editorOptions.sectionId === undefined ?
 							null : editorOptions.sectionId,
 						oldId: editorOptions.oldId || undefined,
+						preload: editorOptions.preload,
+						preloadparams: editorOptions.preloadparams,
+						editintro: editorOptions.editintro,
 						// Should be ve.init.mw.MobileArticleTarget.static.trackingName,
 						// but the class hasn't loaded yet.
 						targetName: 'mobile'
