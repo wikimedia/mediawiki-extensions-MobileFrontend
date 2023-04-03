@@ -116,7 +116,7 @@
 	"mobile-frontend-editor-viewing-source-page": "<span>$1</span> <strong>sayfasının kaynağını görüntüleniyor</strong>",
 	"mobile-frontend-editor-wait": "Düzenleme kaydediliyor, lütfen bekleyin.",
 	"mobile-frontend-editor-loading": "Düzenleyici yükleniyor…",
-	"mobile-frontend-expand-sections-description": "Varsayılan olarak her zaman tüm sayfaların bölümlerini genişletin.",
+	"mobile-frontend-expand-sections-description": "Varsayılan olarak her zaman içerik sayfalarının bölümlerini genişletin.",
 	"mobile-frontend-expand-sections-status": "Tüm bölümleri genişlet",
 	"mobile-frontend-fontchanger-link": "Yazı tipi boyutu",
 	"mobile-frontend-fontchanger-desc": "Daha iyi okunabilirlik için yazı tipi boyutunu ayarlayın.",
