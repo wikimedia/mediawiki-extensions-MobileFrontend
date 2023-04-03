@@ -132,7 +132,6 @@ module.exports = ( env, argv ) => ( {
 					// this cacheGroup
 					enforce: true,
 					// Only consider splitting chunks off of these whitelisted entry names
-					// eslint-disable-next-line no-restricted-syntax
 					chunks: ( chunk ) => [
 						ENTRIES.startup,
 						ENTRIES.categories,
@@ -193,7 +192,6 @@ module.exports = ( env, argv ) => ( {
 		maxAssetSize: 48.1 * 1024,
 		maxEntrypointSize: 83.3 * 1024,
 		// The default filter excludes map files but we rename ours.
-		// eslint-disable-next-line no-restricted-properties
 		assetFilter: ( filename ) => !filename.endsWith( srcMapExt )
 	}
 } );

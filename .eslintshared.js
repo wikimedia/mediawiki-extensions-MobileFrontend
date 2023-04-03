@@ -4,9 +4,8 @@
 // `no-restricted-properties` and `no-restricted-syntax` which are array based - ensuring the two
 // values being merged are concatenated
 
-/* eslint-disable quote-props, quotes */
-const merge = require( './node_modules/eslint-config-wikimedia/language/merge.js' );
-const rules = {
+/* eslint-disable quote-props, quotes, strict */
+module.exports = {
 	"extends": [
 		"wikimedia/jquery",
 		"wikimedia/mediawiki"
@@ -17,7 +16,8 @@ const rules = {
 		"self": "off"
 	},
 	"rules": {
-		"no-restricted-properties": [2,
+		"no-restricted-properties": [
+			2,
 			{
 				"property": "done",
 				"message": "The method `done` if used with Deferred objects is incompatible with ES6 Promises. Please use `then`."
@@ -51,7 +51,3 @@ const rules = {
 		"no-jquery/no-global-selector": "off"
 	}
 };
-module.exports = Object.assign(
-	rules,
-	merge( rules, require( './node_modules/eslint-config-wikimedia/language/not-es5.js' ) )
-);

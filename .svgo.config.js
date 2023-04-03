@@ -4,6 +4,8 @@
  * Recommended options from:
  * https://www.mediawiki.org/wiki/Manual:Coding_conventions/SVG#Exemplified_safe_configuration
  */
+
+// eslint-disable-next-line strict
 module.exports = {
 	plugins: [
 		{
@@ -37,4 +39,4 @@ module.exports = {
 		pretty: true
 	},
 	multipass: true
-}
+};
