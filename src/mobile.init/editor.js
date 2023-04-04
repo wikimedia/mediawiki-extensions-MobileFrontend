@@ -57,20 +57,11 @@ function onEditLinkClick( elem, ev, router ) {
  * @return {string} Either 'VisualEditor' or 'SourceEditor'
  */
 function getPreferredEditor() {
-	var defaultEditor, tokenData,
-		preferredEditor = mw.user.options.get( 'mobile-editor' ) || mw.storage.get( 'preferredEditor' );
+	const preferredEditor = mw.user.options.get( 'mobile-editor' ) || mw.storage.get( 'preferredEditor' );
 	if ( preferredEditor ) {
 		return preferredEditor;
 	}
-	defaultEditor = mw.config.get( 'wgMFDefaultEditor' );
-	// Cleaning up after ABTest, remove soon
-	tokenData = mw.storage.getObject( 'MFDefaultEditorABToken' );
-	if ( tokenData && tokenData.expires < Date.now() ) {
-		// The storage never expires by itself. We should keep this for a while, even if we remove
-		// the rest of this code, to clean up after ourselves.
-		mw.storage.remove( 'MFDefaultEditorABToken' );
-		tokenData = null;
-	}
+	const defaultEditor = mw.config.get( 'wgMFDefaultEditor' );
 	switch ( defaultEditor ) {
 		case 'source':
 			return 'SourceEditor';
