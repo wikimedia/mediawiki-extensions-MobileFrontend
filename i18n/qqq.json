@@ -119,6 +119,7 @@
 	"mobile-frontend-editor-viewing-source-page": "A heading saying which page's source code is being viewed. All text should be wrapped in a STRONG tag except the page title itself. Note that STRONG text pushes the buttons off-screen when it's too long (vertical mobile display), but the SPAN part is shortened in that case with an ellipsis (...) before the buttons.\n\nParameters:\n* $1 - page title\n{{Related|Mobile-frontend-editor-page}}",
 	"mobile-frontend-editor-wait": "Text that displays while a page edit is being saved.",
 	"mobile-frontend-editor-loading": "Text that displays while the mobile visual editor is loading.",
+	"mobile-frontend-editor-toload": "Text shown to the user in place of the wikitext editor on action=edit/submit when the MobileFrontend editor is expected to load.\n\nParameters:\n* $1 is the URL which points to a page with a fallback to the wikitext editor if necessary.",
 	"mobile-frontend-expand-sections-description": "On settings page description for turning on/off expansion of all sections on page load.\n\nSee also:\n* {{msg-mw|Mobile-frontend-expand-sections-status}}",
 	"mobile-frontend-expand-sections-status": "On settings page label for turning on/off expansion of all sections on page load.\n\nSee also:\n* {{msg-mw|Mobile-frontend-expand-sections-description}}",
 	"mobile-frontend-fontchanger-link": "{{Identical|Font size}}",
