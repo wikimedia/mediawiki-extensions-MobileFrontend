@@ -33,7 +33,10 @@ function SourceEditorOverlay( options, dataPromise ) {
 		sectionId: options.sectionId,
 		oldId: options.oldId,
 		isNewPage: options.isNewPage,
-		fromModified: !!dataPromise
+		fromModified: !!dataPromise,
+		preload: options.preload,
+		preloadparams: options.preloadparams,
+		editintro: options.editintro
 	} );
 	this.readOnly = !!options.oldId; // If old revision, readOnly mode
 	this.dataPromise = dataPromise || this.gateway.getContent();
