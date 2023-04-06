@@ -97,7 +97,7 @@
 	"mobile-frontend-editor-publish": "Опублікувати",
 	"mobile-frontend-editor-save": "Зберегти",
 	"mobile-frontend-editor-success": "Успіх! Ваше редагування збережено.",
-	"mobile-frontend-editor-success-landmark-1": "Вітаємо, тепер ви - редактор {{SITENAME}}!",
+	"mobile-frontend-editor-success-landmark-1": "Вітаємо, тепер ви редактор {{GRAMMAR:genitive|{{SITENAME}}}}!",
 	"mobile-frontend-editor-success-new-page": "Вітаємо із створенням нової сторінки!",
 	"mobile-frontend-editor-summary-placeholder": "Приклад: виправлено помилку, додано вміст",
 	"mobile-frontend-editor-summary-request": "Як Ви поліпшили сторінку?",

@@ -40,7 +40,8 @@
 			"Wellwisher",
 			"Yekrats",
 			"Ата",
-			"아라"
+			"아라",
+			"MRidhaAJ"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "AbuseFilter extension rule variable that allows distinguishing edits based on if they have been made using the editor of MobileFrontend or not.",
@@ -53,7 +54,7 @@
 	"mobile-frontend-copyright": "A short sentence explaining that the content of the page is available under a particular license. Parameters:\n* $1 - license name\n{{Identical|Content is available under}}",
 	"mobile-frontend-desc": "{{desc|name=Mobile Frontend|url=https://www.mediawiki.org/wiki/Extension:MobileFrontend}}",
 	"mobile-frontend-diffview-404-desc": "Text for 404 page when bad revision id parameter is passed",
-	"mobile-frontend-diffview-404-title": "Heading on 404 page when bad revision id parameter is passed",
+	"mobile-frontend-diffview-404-title": "Heading on 404 page when bad revision ID parameter is passed.",
 	"mobile-frontend-diffview-anonymous": "Label to indicate anonymous user in common mobile diff/change view.\n{{Identical|Anonymous user}}",
 	"mobile-frontend-diffview-bytesadded": "Edit byte-changed counter for common mobile diff/change view when change adds bytes.\n\nParameters:\n* $1 - byte count; may use PLURAL",
 	"mobile-frontend-diffview-bytesnochange": "Edit byte-changed counter for common mobile diff/change view when the edit didn't change the size of the page.",
@@ -262,7 +263,7 @@
 	"mobile-frontend-amc-outreach-enable": "A button on the AMC outreach drawer to enable AMC\n{{Identical|Enable advanced mode}}",
 	"mobile-frontend-amc-outreach-no-thanks": "An anchor on the user on the AMC outreach drawer to dismiss the drawer\n{{Identical|No thanks}}",
 	"mobile-frontend-amc-outreach-enabled-message": "A toast that displays after user enables AMC from the outreach form",
-	"mobile-frontend-amc-outreach-dismissed-message": "A toast that displays after user dismisses AMC drawer",
+	"mobile-frontend-amc-outreach-dismissed-message": "A toast that displays after the user dismisses AMC drawer. \"Settings\" should be consistent with {{msg-mw|Mobile-frontend-main-menu-settings-heading}}.",
 	"mobile-frontend-beta-only": "Tooltip for lock icons on mobile settings page.",
 	"mobile-frontend-console-recruit": "Message that will shown in the JavaScript console to developers. Can be overridden on wiki.",
 	"mobile-frontend-special-pages-pref": "This preference allows editors to disable special page optimisations in mobile. It is enabled by default.",

@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Khanmarat"
+			"Khanmarat",
+			"Sorbat"
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "Төсәтеүнең аңнатмасы йуҡ",
@@ -10,9 +11,9 @@
 	"mobile-frontend-last-modified-date": "$1 $2-гә суңҡы тапҡыр төсәтелгән",
 	"mobile-frontend-news-items": "Йаңалыҡлар",
 	"mobile-frontend-privacy-link-text": "Серне саҡлау",
-	"mobile-frontend-terms-text": "Ҡулланыуның шартлары",
+	"mobile-frontend-terms-text": "Ошланыуның шартлары",
 	"mobile-frontend-view": "Мобиль аңыш",
-	"mobile-frontend-view-desktop": "Стационар",
+	"mobile-frontend-view-desktop": "Эшләү өстәл",
 	"tag-mobile_edit": "Мобиль ҡоралтан төсәтеү",
 	"tag-mobile_web_edit": "Мобиль версиятан төсәткәле"
 }
