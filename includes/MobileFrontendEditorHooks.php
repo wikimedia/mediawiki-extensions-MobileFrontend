@@ -56,15 +56,12 @@ class MobileFrontendEditorHooks {
 	 * @return bool Whether to show the wikitext editor or not.
 	 */
 	public static function onCustomEditor( Article $article, User $user ) {
-		$mobileContext = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
 		$req = $article->getContext()->getRequest();
 		$title = $article->getTitle();
 		if (
 			!$req->getVal( 'mfnoscript' ) &&
-			$mobileContext->shouldDisplayMobileView() &&
-			self::isPageContentModelEditable( $title )
+			self::isSupportedEditRequest( $title, $req )
 		) {
-
 			$params = $req->getValues();
 			$params['mfnoscript'] = '1';
 			$url = wfScript() . '?' . wfArrayToCgi( $params );
@@ -89,6 +86,33 @@ class MobileFrontendEditorHooks {
 				");"
 			) );
 			$out->setRevisionId( $req->getInt( 'oldid', $article->getRevIdFetched() ) );
+			return false;
+		}
+		return true;
+	}
+
+	/**
+	 * Whether the custom editor override should occur
+	 *
+	 * @param Title $title
+	 * @param WebRequest $req
+	 * @return bool Whether the frontend JS will try to display an editor
+	 */
+	protected static function isSupportedEditRequest( Title $title, WebRequest $req ) {
+		$mobileContext = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
+		if ( !$mobileContext->shouldDisplayMobileView() ) {
+			return false;
+		}
+		if ( !self::isPageContentModelEditable( $title ) ) {
+			return false;
+		}
+		// Various things fall back to WikiEditor
+		if ( $req->getVal( 'undo' ) !== null || $req->getVal( 'undoafter' ) !== null ) {
+			// Undo needs to show a diff above the editor
+			return false;
+		}
+		if ( $req->getVal( 'section' ) == 'new' ) {
+			// New sections need a title field
 			return false;
 		}
 		return true;
