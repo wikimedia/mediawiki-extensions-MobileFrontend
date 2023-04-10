@@ -96,6 +96,7 @@
 	"mobile-frontend-editor-viewing-source-page": "<strong>Prohlížení zdrojového kódu stránky</strong><span> $1</span>",
 	"mobile-frontend-editor-wait": "Editace se ukládá, prosím čekejte.",
 	"mobile-frontend-editor-loading": "Načítání editoru…",
+	"mobile-frontend-editor-toload": "Editor se nyní načte. Pokud tuto zprávu stále vidíte po několika sekundách, prosím [$1 obnovte stránku].",
 	"mobile-frontend-expand-sections-description": "Vždy rozbalit všechny původní sekce stránky.",
 	"mobile-frontend-expand-sections-status": "Rozbalit všechny sekce",
 	"mobile-frontend-fontchanger-link": "Velikost písma",

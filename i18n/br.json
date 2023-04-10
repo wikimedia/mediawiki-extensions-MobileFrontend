@@ -83,6 +83,7 @@
 	"mobile-frontend-editor-viewing-source-page": "<strong>Gwelout mammenn</strong><span> $1</span>",
 	"mobile-frontend-editor-wait": "Oc’h enrollañ kemm, gortozit mar plij.",
 	"mobile-frontend-editor-loading": "O kargañ an aozer…",
+	"mobile-frontend-editor-toload": "Emañ ar Gwelaozer o vont da gargañ. Ma welit c'hoazh ar gemennadenn-mañ a-benn un nebeut eilennoù, [$1 kargit ar bajenn en-dro].",
 	"mobile-frontend-expand-sections-description": "Displegañ rannoù ar pajennoù endalc’had atav dre ziouer.",
 	"mobile-frontend-expand-sections-status": "Astenn an holl rannoù",
 	"mobile-frontend-fontchanger-link": "Ment ar font",

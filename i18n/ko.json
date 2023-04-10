@@ -108,6 +108,7 @@
 	"mobile-frontend-editor-viewing-source-page": "<span>$1 </span><strong>문서의 원본을 보는 중</strong>",
 	"mobile-frontend-editor-wait": "편집을 저장하고 있으니 기다려 주십시오.",
 	"mobile-frontend-editor-loading": "편집기를 불러오는 중...",
+	"mobile-frontend-editor-toload": "편집기가 지금 로드됩니다. 몇 초 후에도 이 메시지가 여전히 보이면, [$1 문서를 다시 로드]해 주십시오.",
 	"mobile-frontend-expand-sections-description": "기본적으로 모든 문서의 문단을 항상 확장합니다.",
 	"mobile-frontend-expand-sections-status": "모든 문단 확장",
 	"mobile-frontend-fontchanger-link": "글자 크기",

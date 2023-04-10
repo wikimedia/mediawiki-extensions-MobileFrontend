@@ -102,6 +102,7 @@
 	"mobile-frontend-editor-viewing-source-page": "<strong>Vendo fonte de</strong><span> $1</span>",
 	"mobile-frontend-editor-wait": "Salvando edição, por favor aguarde.",
 	"mobile-frontend-editor-loading": "Carregando editor…",
+	"mobile-frontend-editor-toload": "O editor agora será carregado. Se você ainda vê esta mensagem após alguns segundos, por favor [$1 recarregue a página].",
 	"mobile-frontend-expand-sections-description": "Expandir sempre as seções das páginas por padrão.",
 	"mobile-frontend-expand-sections-status": "Expande todas a seções",
 	"mobile-frontend-fontchanger-link": "Tamanho da fonte",

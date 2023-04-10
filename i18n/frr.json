@@ -11,7 +11,7 @@
 	"mobile-frontend-clear-search": "Leesag maage",
 	"mobile-frontend-copyright": "Det sidj as tu fun oner $1 , wan diar niks ööders stäänt.",
 	"mobile-frontend-desc": "Iinstelang för mobiil aperooten",
-	"mobile-frontend-diffview-404-desc": "Det ID för det wersion, wat dü schükst, as ei diar.<br/>Det komt wel diarfaan, dat ual wersionen stregen wurden san, of dat diar ei tuläät tiakens uun wiar.",
+	"mobile-frontend-diffview-404-desc": "Det ID för det wersion, wat dü schükst, as ei diar.<br/>Det komt wel diarfaan, dat ual wersioonen stregen wurden san, of dat diar ei tuläät tiakens uun wiar.",
 	"mobile-frontend-diffview-404-title": "Det wersion docht niks",
 	"mobile-frontend-diffview-anonymous": "Anonüüm brüker",
 	"mobile-frontend-diffview-bytesadded": "{{PLURAL:$1|ian byte|$1 bytes}} diartu kimen",

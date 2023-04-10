@@ -113,6 +113,7 @@
 	"mobile-frontend-editor-viewing-source-page": "<strong>檢視</strong> <span>$1</span> <strong>的原始碼</strong>",
 	"mobile-frontend-editor-wait": "儲存編輯中，請稍候。",
 	"mobile-frontend-editor-loading": "載入編輯器…",
+	"mobile-frontend-editor-toload": "現在將載入編輯器，若您再幾秒過後仍看到此訊息，請 [$1 重新載入此頁面]。",
 	"mobile-frontend-expand-sections-description": "預設總是在內容頁面展開章節。",
 	"mobile-frontend-expand-sections-status": "展開所有章節",
 	"mobile-frontend-fontchanger-link": "字型大小",
