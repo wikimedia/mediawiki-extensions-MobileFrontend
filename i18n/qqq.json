@@ -275,7 +275,7 @@
 	"mobile-frontend-amc-outreach-enable": "A button on the AMC outreach drawer to enable AMC\n{{Identical|Enable advanced mode}}",
 	"mobile-frontend-amc-outreach-no-thanks": "An anchor on the user on the AMC outreach drawer to dismiss the drawer\n{{Identical|No thanks}}",
 	"mobile-frontend-amc-outreach-enabled-message": "A toast that displays after user enables AMC from the outreach form",
-	"mobile-frontend-amc-outreach-dismissed-message": "A toast that displays after user dismisses AMC drawer",
+	"mobile-frontend-amc-outreach-dismissed-message": "A toast that displays after the user dismisses AMC drawer. \"Settings\" should be consistent with {{msg-mw|Mobile-frontend-main-menu-settings-heading}}.",
 	"mobile-frontend-beta-only": "Tooltip for lock icons on mobile settings page.",
 	"mobile-frontend-console-recruit": "Message that will shown in the JavaScript console to developers. Can be overridden on wiki.",
 	"mobile-frontend-special-pages-pref": "This preference allows editors to disable special page optimisations in mobile. It is enabled by default.",
