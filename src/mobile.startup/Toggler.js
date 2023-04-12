@@ -365,18 +365,7 @@ Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 
 	checkInternalRedirectAndHash();
 	checkHash();
-	// Restricted to links created by editors and thus outside our control
-	// T166544 - don't do this for reference links - they will be handled elsewhere
-	var $link = $container.find( 'a:not(.reference a)' );
-	$link.on( 'click', function () {
-		// the link might be an internal link with a hash.
-		// if it is check if we need to reveal any sections.
-		if ( $link.attr( 'href' ) !== undefined &&
-		$link.attr( 'href' ).indexOf( '#' ) > -1
-		) {
-			checkHash();
-		}
-	} );
+
 	util.getWindow().on( 'hashchange', function () {
 		checkHash();
 	} );
