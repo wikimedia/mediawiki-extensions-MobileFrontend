@@ -103,6 +103,10 @@ class MobileFrontendEditorHooks {
 		if ( !$mobileContext->shouldDisplayMobileView() ) {
 			return false;
 		}
+		if ( $req->getVal( 'action' ) == 'submit' ) {
+			// Don't try to take over if the form has already been submitted
+			return false;
+		}
 		if ( !self::isPageContentModelEditable( $title ) ) {
 			return false;
 		}
