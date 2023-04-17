@@ -10,7 +10,6 @@ var M = require( '../mobile.startup/moduleLoaderSingleton' ),
 	EDITSECTION_SELECTOR = '.mw-editsection a, .edit-link',
 	user = mw.user,
 	CtaDrawer = require( '../mobile.startup/CtaDrawer' ),
-	contentModel = mw.config.get( 'wgPageContentModel' ),
 	veConfig = mw.config.get( 'wgVisualEditorConfig' ),
 	editCount = mw.config.get( 'wgUserEditCount' ),
 	editorPath = /^\/editor\/(\d+|T-\d+|all)$/;
@@ -519,27 +518,9 @@ function bindEditLinksSorryToast( msg, router ) {
 }
 
 module.exports = function ( currentPage, currentPageHTMLParser, skin ) {
-	var isMissing = currentPage.id === 0,
-		router = mw.loader.require( 'mediawiki.router' ),
-		isEditingSupported = router.isSupported();
+	var router = mw.loader.require( 'mediawiki.router' );
 
-	if ( contentModel !== 'wikitext' ) {
-		// Only load the wikitext editor on wikitext. Otherwise we'll rely on the fallback behaviour
-		// (You can test this on MediaWiki:Common.css) ?action=edit url (T173800)
-		return;
-	}
-
-	if ( mw.util.getParamValue( 'undo' ) ) {
-		// Our fancy editor doesn't support undo, but we can rely on the fallback.
-		return;
-	}
-
-	if ( !isEditingSupported ) {
-		// Browser doesn't support mobile editor use the fallback editor.
-		return;
-	}
-
-	if ( currentPage.inNamespace( 'file' ) && isMissing ) {
+	if ( currentPage.inNamespace( 'file' ) && currentPage.id === 0 ) {
 		// Is a new file page (enable upload image only) T60311
 		bindEditLinksSorryToast( mw.msg( 'mobile-frontend-editor-uploadenable' ), router );
 	} else {

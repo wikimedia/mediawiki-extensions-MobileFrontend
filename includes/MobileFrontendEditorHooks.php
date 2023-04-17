@@ -15,16 +15,12 @@ class MobileFrontendEditorHooks {
 	 */
 	public static function getResourceLoaderMFConfigVars() {
 		$config = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Config' );
-		$extensionRegistry = ExtensionRegistry::getInstance();
 
 		return [
 			// MFDefaultEditor should be `source`, `visual`, or `preference`
 			// `preference` means to fall back on the desktop `visualeditor-editor` setting (if VE has been used)
 			// editor.js
 			'wgMFDefaultEditor' => $config->get( 'MFDefaultEditor' ),
-			// wgMFEditorAvailableSkins is defined by skins and means that the skins defined their
-			// MobileFrontend-specific styles, so users can edit on mobile with the skins.
-			'wgMFEditorAvailableSkins' => $extensionRegistry->getAttribute( 'MobileFrontendEditorAvailableSkins' ),
 		];
 	}
 
@@ -37,13 +33,11 @@ class MobileFrontendEditorHooks {
 	 * @param OutputPage $out OutputPage instance calling the hook
 	 */
 	public static function onMakeGlobalVariablesScript( array &$vars, OutputPage $out ) {
-		$title = $out->getTitle();
-		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
+		$mobileContext = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
 
-		if ( $context->shouldDisplayMobileView() ) {
+		if ( $mobileContext->shouldDisplayMobileView() ) {
 			// mobile.init
-			$vars['wgMFIsPageContentModelEditable'] = self::isPageContentModelEditable( $title );
-			// Accesses getBetaGroupMember so does not belong in onResourceLoaderGetConfigVars
+			$vars['wgMFIsSupportedEditRequest'] = self::isSupportedEditRequest( $out->getContext() );
 		}
 	}
 
@@ -60,7 +54,7 @@ class MobileFrontendEditorHooks {
 		$title = $article->getTitle();
 		if (
 			!$req->getVal( 'mfnoscript' ) &&
-			self::isSupportedEditRequest( $title, $req )
+			self::isSupportedEditRequest( $article->getContext() )
 		) {
 			$params = $req->getValues();
 			$params['mfnoscript'] = '1';
@@ -70,7 +64,13 @@ class MobileFrontendEditorHooks {
 			$out = $article->getContext()->getOutput();
 			$titleMsg = $title->exists() ? 'editing' : 'creating';
 			$out->setPageTitle( wfMessage( $titleMsg, $title->getPrefixedText() ) );
-			$out->addWikiMsg( 'mobile-frontend-editor-toload', wfExpandUrl( $url ) );
+
+			if ( $title->inNamespace( NS_FILE ) && !$title->exists() ) {
+				// Is a new file page (enable upload image only) T60311
+				$out->addWikiMsg( 'mobile-frontend-editor-uploadenable' );
+			} else {
+				$out->addWikiMsg( 'mobile-frontend-editor-toload', wfExpandUrl( $url ) );
+			}
 
 			// Redirect if the user has no JS (<noscript>)
 			$out->addHeadItem(
@@ -94,23 +94,40 @@ class MobileFrontendEditorHooks {
 	/**
 	 * Whether the custom editor override should occur
 	 *
-	 * @param Title $title
-	 * @param WebRequest $req
-	 * @return bool Whether the frontend JS will try to display an editor
+	 * @param IContextSource $context
+	 * @return bool Whether the frontend JS should try to display an editor
 	 */
-	protected static function isSupportedEditRequest( Title $title, WebRequest $req ) {
+	protected static function isSupportedEditRequest( IContextSource $context ) {
 		$mobileContext = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
 		if ( !$mobileContext->shouldDisplayMobileView() ) {
 			return false;
 		}
+
+		$extensionRegistry = ExtensionRegistry::getInstance();
+		$editorAvailableSkins = $extensionRegistry->getAttribute( 'MobileFrontendEditorAvailableSkins' );
+		if ( !in_array( $context->getSkin()->getSkinName(), $editorAvailableSkins ) ) {
+			// Mobile editor commonly doesn't work well with other skins than Minerva (it looks horribly
+			// broken without some styles that are only defined by Minerva). So we only enable it for the
+			// skin that wants it.
+			return false;
+		}
+
+		$req = $context->getRequest();
+		$title = $context->getTitle();
+
+		// Various things fall back to WikiEditor
 		if ( $req->getVal( 'action' ) == 'submit' ) {
 			// Don't try to take over if the form has already been submitted
 			return false;
 		}
-		if ( $title->getContentModel() !== 'wikitext' ) {
+		if ( $title->inNamespace( NS_SPECIAL ) ) {
 			return false;
 		}
-		// Various things fall back to WikiEditor
+		if ( $title->getContentModel() !== 'wikitext' ) {
+			// Only load the wikitext editor on wikitext. Otherwise we'll rely on the fallback behaviour
+			// (You can test this on MediaWiki:Common.css) ?action=edit url (T173800)
+			return false;
+		}
 		if ( $req->getVal( 'undo' ) !== null || $req->getVal( 'undoafter' ) !== null ) {
 			// Undo needs to show a diff above the editor
 			return false;
@@ -120,20 +137,6 @@ class MobileFrontendEditorHooks {
 			return false;
 		}
 		return true;
-	}
-
-	/**
-	 * Checks whether the editor can handle the existing content handler type.
-	 *
-	 * @param Title $title
-	 * @return bool
-	 */
-	protected static function isPageContentModelEditable( Title $title ): bool {
-		$contentHandler = MediaWikiServices::getInstance()->getContentHandlerFactory()
-			->getContentHandler( $title->getContentModel() );
-
-		return $contentHandler->supportsDirectEditing()
-			&& $contentHandler->supportsDirectApiEditing();
 	}
 
 }
