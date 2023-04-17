@@ -107,7 +107,7 @@ class MobileFrontendEditorHooks {
 			// Don't try to take over if the form has already been submitted
 			return false;
 		}
-		if ( !self::isPageContentModelEditable( $title ) ) {
+		if ( $title->getContentModel() !== 'wikitext' ) {
 			return false;
 		}
 		// Various things fall back to WikiEditor
