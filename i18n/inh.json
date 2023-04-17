@@ -31,6 +31,7 @@
 	"mobile-frontend-last-modified-date": "ТIеххьара хийца хиннай $1 $2",
 	"mobile-frontend-last-modified-with-user-days": "[$4 ТӀехьара {{GENDER:$1|хувцам}} баьб {{PLURAL:$3|$3 ди хьалха|1=селхан}}] {{PLURAL:$5|доакъашхочо [$6 $2]|0=анонимо}}",
 	"mobile-frontend-last-modified-with-user-hours": "[$4 ТӀеххьара {{GENDER:$1|хувцам баьб}} {{PLURAL:$3|$3 сахьат}} хьалха] {{PLURAL:$5|0=къайла волча|[$6 $2] яхача}} доакъашхочо",
+	"mobile-frontend-last-modified-with-user-just-now": "[$3 ТӀеххьара хувцам баьб] хӀанзза {{PLURAL:$4|{{GENDER:$1|доакъашхочо}} [$5 $2]|0=анонимо}}",
 	"mobile-frontend-last-modified-with-user-minutes": "[$4 ТӀехьара хувцам баьб {{PLURAL:$3|$3 минот|1=минот}} хьалха] {{PLURAL:$5|{{GENDER:$1|доакъашхочо}} [$6 $2]|0=вовзаш воацача доакъашхочо}}",
 	"mobile-frontend-last-modified-with-user-months": "[$4 ТIехьара хувцам баьб {{PLURAL:$3|$3 бутт}} хьалха] {{PLURAL:$5|{{GENDER:$1|доакъашхочо}} [$6 $2]|0=къайла хиннача доакъашхочо}}",
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 ТIехьара хувцам баьб {{PLURAL:$3|$3 секунд}} хьалха] {{PLURAL:$5|{{GENDER:$1|доакъашхочо|доакъашхочо}} [$6 $2]|0=къайла волча доакъашхочо}}",

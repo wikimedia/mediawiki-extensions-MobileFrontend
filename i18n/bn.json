@@ -89,6 +89,7 @@
 	"mobile-frontend-editor-viewing-source-page": "<span>$1 </span><strong>এর উৎস দেখছেন</strong>",
 	"mobile-frontend-editor-wait": "সম্পাদনা সংরক্ষণ হচ্ছে, অপেক্ষা করুন।",
 	"mobile-frontend-editor-loading": "সম্পাদক লোড হচ্ছে…",
+	"mobile-frontend-editor-toload": "সম্পাদকটি এখন লোড হবে। আপনি যদি কয়েক সেকেন্ড পরেও এই বার্তাটি দেখতে পান, তাহলে দয়া করে [$1 পাতাটি পুনঃলোড করুন]।",
 	"mobile-frontend-expand-sections-description": "পূর্বনির্ধারিতভাবে সর্বদা পাতার সকল অনুচ্ছেদ প্রসারিত করুন।",
 	"mobile-frontend-expand-sections-status": "সব অনুচ্ছেদ বিস্তৃত করুন",
 	"mobile-frontend-fontchanger-link": "ফন্টের আকার",
