@@ -1,16 +1,16 @@
+@import 'mediawiki.skin.variables.less';
 @import '../../../mobile.less/mobile.variables.less';
 @import 'SearchResultsView.less';
 
 @thumbGap: 15px;
 @thumbWidth: 70px;
-@colorSpinnerOverlayBackground: #fff;
 @clearIconRightGutterWidth: 0.5em;
 
 .overlay.search-overlay {
-	background: #fff;
+	background: @background-color-base;
 
 	.spinner-container {
-		background-color: @colorSpinnerOverlayBackground;
+		background-color: @background-color-base;
 		bottom: 0;
 		display: none;
 		left: 0;
@@ -21,7 +21,7 @@
 		.spinner {
 			display: block;
 			left: 50%;
-			margin-left: -( @iconSize + @iconGutterWidth * 2 ) / 2;
+			margin-left: -( @size-icon + @width-icon-gutter * 2 ) / 2;
 			position: absolute;
 			top: 10%;
 		}
@@ -34,11 +34,11 @@
 	.results,
 	.search-feedback {
 		// don't use background to preserve .loading properties
-		background-color: #fff;
+		background-color: @background-color-base;
 	}
 
 	.overlay-header {
-		background-color: transparent;
+		background-color: @background-color-transparent;
 	}
 
 	// The search overlay header is a little special so make some tweaks to the CSS
@@ -59,7 +59,7 @@
 
 	.header input {
 		// save space for the clear icon
-		padding-right: ( @iconSize + @iconGutterWidth + @clearIconRightGutterWidth );
+		padding-right: ( @size-icon + @width-icon-gutter + @clearIconRightGutterWidth );
 
 		// See https://msdn.microsoft.com/en-us/library/windows/apps/hh465740.aspx (T102325)
 		&::-ms-clear {
@@ -76,7 +76,7 @@
 	}
 
 	.search-content {
-		border-bottom: 1px solid @grayLight;
+		border-bottom: @border-width-base @border-style-base @border-color-subtle;
 		cursor: pointer;
 
 		.caption {
@@ -123,7 +123,7 @@
 
 	.search-feedback {
 		box-shadow: 0 3px 3px 0 rgba( 117, 117, 117, 0.3 );
-		border-top: 1px solid @colorGray12;
+		border-top: @border-width-base @border-style-base @border-color-subtle;
 		font-size: 0.8em;
 		padding: 0.5em 1em;
 	}

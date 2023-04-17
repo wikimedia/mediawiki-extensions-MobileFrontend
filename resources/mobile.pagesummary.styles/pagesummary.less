@@ -1,3 +1,4 @@
+@import 'mediawiki.skin.variables.less';
 @import '../../mobile.less/mobile.variables.less';
 @import 'mediawiki.mixins.less';
 
@@ -18,8 +19,7 @@
 	h3 {
 		font: inherit;
 		font-weight: bold;
-		// FIXME: Use one of the grays defined in variables.less
-		color: @colorGray5;
+		color: @color-subtle;
 
 		a {
 			color: inherit;
@@ -36,8 +36,8 @@
 	font-size: 0.85em;
 	padding-top: 0.5em;
 	padding-bottom: 0.4em;
-	background-color: @grayLightest;
-	color: @grayMedium;
+	background-color: #eaecf0;
+	color: #72777d;
 }
 
 .list-thumb {
@@ -54,7 +54,7 @@
 
 	// Needs to come last as `.list-thumb-x` would override.
 	&.list-thumb-none {
-		background-color: @grayLightest;
+		background-color: #eaecf0;
 		// Assumes that icon follows standard canvas of 20 x 20px.
 		background-size: 40px 40px;
 		opacity: 0.51; // Equals to `#7d7d7d` on `background-color: #fff`.

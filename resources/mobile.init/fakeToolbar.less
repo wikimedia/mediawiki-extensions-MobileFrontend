@@ -1,3 +1,5 @@
+@import 'mediawiki.skin.variables.less';
+
 .ve-mobile-fakeToolbar-container {
 	position: fixed;
 	z-index: 2;
@@ -6,7 +8,7 @@
 	top: 0;
 	height: 3em;
 	background: #fff;
-	border-bottom: 1px solid #c8ccd1;
+	border-bottom: @border-width-base @border-style-base @border-color-subtle;
 	box-shadow: 0 1px 1px rgba( 0, 0, 0, 0.1 );
 }
 
@@ -19,9 +21,9 @@
 	display: block !important;
 	width: 100% !important;
 	box-sizing: content-box;
-	border-color: #c8ccd1;
-	border-style: solid;
-	border-width: 0 1px;
+	border-color: @border-color-subtle;
+	border-style: @border-style-base;
+	border-width: 0 @border-width-base;
 	margin: 0 -1px;
 
 	.cancel,
@@ -50,7 +52,7 @@
 
 	.mw-ui-icon-mf-spinner {
 		vertical-align: top;
-		border-left: 1px solid #eaecf0;
+		border-left: @border-width-base @border-style-base #eaecf0;
 		cursor: auto;
 		padding: 0 0.875em;
 		// In the unlikely case that the text overflows the width of the screen...
