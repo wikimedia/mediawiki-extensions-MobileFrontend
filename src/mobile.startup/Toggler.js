@@ -239,7 +239,9 @@ Toggler.prototype.reveal = function ( id, $container, page ) {
  * @private
  */
 Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
-	var self = this,
+	var
+		self = this,
+		isWideScreen = browser.isWideScreen(),
 		collapseSectionsByDefault = mw.config.get( 'wgMFCollapseSectionsByDefault' );
 
 	if ( collapseSectionsByDefault === undefined ) {
@@ -314,7 +316,7 @@ Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 			var alwaysCollapsed = document.body.classList.contains( 'collapsible-headings-collapsed' );
 			if (
 				!alwaysCollapsed && (
-					!isClosed && browser.isWideScreen() || expandSections
+					!isClosed && isWideScreen || expandSections
 				)
 			) {
 				// Expand sections by default on wide screen devices
@@ -370,7 +372,7 @@ Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 		checkHash();
 	} );
 
-	if ( !browser.isWideScreen() && page ) {
+	if ( !isWideScreen && page ) {
 		expandStoredSections( this, $container, page );
 	}
 };
