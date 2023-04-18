@@ -198,6 +198,23 @@ QUnit.test( '#findInSectionLead', function ( assert ) {
 
 } );
 
+QUnit.test( '#getThumbnail', function ( assert ) {
+	// Valid anchor.
+	const $container = util.parseHTML( '<div><a href="/wiki/File:Design_portal_logo.jpg" class="image"><span class="lazy-image-placeholder" style="width: 28px;height: 28px;" data-src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Design_portal_logo.jpg/28px-Design_portal_logo.jpg" data-alt="icon" data-width="28" data-height="28" data-class="thumbimage">&nbsp;</span></a></div>' );
+	const parser = new PageHTMLParser( $container );
+	const thumb = parser.getThumbnail( $container.find( PageHTMLParser.THUMB_SELECTOR ) );
+	assert.notStrictEqual( thumb, null, 'Thumbnail found if valid.' );
+	assert.strictEqual( thumb.getFileName(), 'File:Design_portal_logo.jpg', 'Thumbnail found if valid.' );
+
+	// Anchor with 'metadata' class should be excluded.
+	const $containerMetadata = util.parseHTML( '<div><a href="/wiki/File:Design_portal_logo.jpg" class="image"><span class="lazy-image-placeholder" style="width: 28px;height: 28px;" data-src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Design_portal_logo.jpg/28px-Design_portal_logo.jpg" data-alt="icon" data-width="28" data-height="28" data-class="thumbimage noviewer">&nbsp;</span></a></div>' );
+	const parserMetadata = new PageHTMLParser( $containerMetadata );
+	const thumbMetadata = parserMetadata.getThumbnail(
+		$containerMetadata.find( PageHTMLParser.THUMB_SELECTOR )
+	);
+	assert.strictEqual( thumbMetadata, null, 'Thumbnail not found if invalid.' );
+} );
+
 QUnit.test( '#getThumbnails', function ( assert ) {
 	let thumbs;
 	const p = new PageHTMLParser(
