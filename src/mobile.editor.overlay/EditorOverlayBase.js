@@ -3,7 +3,6 @@ var Overlay = require( '../mobile.startup/Overlay' ),
 	util = require( '../mobile.startup/util' ),
 	parseBlockInfo = require( './parseBlockInfo' ),
 	headers = require( '../mobile.startup/headers' ),
-	PageGateway = require( '../mobile.startup/PageGateway' ),
 	icons = require( '../mobile.startup/icons' ),
 	Button = require( '../mobile.startup/Button' ),
 	Icon = require( '../mobile.startup/Icon' ),
@@ -89,7 +88,6 @@ function EditorOverlayBase( params ) {
 	if ( mw.config.get( 'wgNamespaceNumber' ) !== 0 ) {
 		options.summaryRequestMsg = mw.msg( 'mobile-frontend-editor-summary' );
 	}
-	this.pageGateway = new PageGateway( options.api );
 	this.isNewPage = options.isNewPage;
 	this.sectionId = options.sectionId;
 	this.overlayManager = options.overlayManager;
@@ -227,12 +225,9 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 */
 	onSaveComplete: function ( newRevId ) {
 		var
-			title = this.options.title,
 			self = this;
 
 		this.saved = true;
-
-		this.pageGateway.invalidatePage( title );
 
 		if ( newRevId ) {
 			var action;

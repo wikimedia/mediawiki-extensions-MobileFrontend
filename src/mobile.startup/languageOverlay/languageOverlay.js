@@ -2,17 +2,19 @@ const
 	m = require( '../moduleLoaderSingleton' ),
 	getDeviceLanguage = require( './getDeviceLanguage' ),
 	Overlay = require( '../Overlay' ),
+	MessageBox = require( '../MessageBox' ),
+	currentPageHTMLParser = require( '../currentPageHTMLParser' )(),
 	promisedView = require( '../promisedView' );
 
 /**
  * @ignore
- * @param {PageGateway} pageGateway
- * getPageLanguages API call.
  * @return {jQuery.Promise} Resolves to LanguageSearcher
  */
-function loadLanguageSearcher( pageGateway ) {
+function loadLanguageSearcher() {
 	return mw.loader.using( 'mobile.languages.structured' ).then( function () {
-		return pageGateway.getPageLanguages( mw.config.get( 'wgPageName' ), mw.config.get( 'wgUserLanguage' ) );
+		return currentPageHTMLParser.getLanguages(
+			mw.config.get( 'wgTitle' )
+		);
 	} ).then( function ( data ) {
 		const LanguageSearcher = m.require( 'mobile.languages.structured/LanguageSearcher' );
 
@@ -28,21 +30,25 @@ function loadLanguageSearcher( pageGateway ) {
 				mw.hook( 'mobileFrontend.languageSearcher.onBannerClick' ).fire();
 			}
 		} );
+	}, function () {
+		return new MessageBox( {
+			className: 'mw-message-box-error content',
+			msg: mw.msg( 'mobile-frontend-languages-structured-overlay-error' )
+		} );
 	} );
 }
 
 /**
  * Factory function that returns a language featured instance of an Overlay
  *
- * @param {PageGateway} pageGateway
  * @return {Overlay}
  */
-function languageOverlay( pageGateway ) {
+function languageOverlay() {
 	return Overlay.make(
 		{
 			heading: mw.msg( 'mobile-frontend-language-heading' ),
 			className: 'overlay language-overlay'
-		}, promisedView( loadLanguageSearcher( pageGateway ) )
+		}, promisedView( loadLanguageSearcher() )
 	);
 }
 

@@ -210,7 +210,9 @@ mfExtend( LanguageSearcher, View, {
 
 			this.$languageItems.addClass( 'hidden' );
 			if ( filteredList.length ) {
-				this.$siteLinksList.find( '.' + filteredList.join( ',.' ) ).removeClass( 'hidden' );
+				this.$siteLinksList.find(
+					`.${mw.util.escapeRegExp( filteredList.join( ',.' ) )}`
+				).removeClass( 'hidden' );
 				this.$emptyResultsSection.addClass( 'hidden' );
 			} else {
 				this.$emptyResultsSection.removeClass( 'hidden' );

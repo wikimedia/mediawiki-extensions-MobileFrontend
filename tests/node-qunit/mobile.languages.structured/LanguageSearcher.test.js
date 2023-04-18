@@ -97,6 +97,7 @@ QUnit.module( 'MobileFrontend LanguageSearcher.js', {
 
 		LanguageSearcher = require( '../../../src/mobile.languages.structured/LanguageSearcher' );
 
+		mw.util.escapeRegExp = ( str ) => str;
 		sandbox.stub( mw.storage, 'get' ).withArgs( 'langMap' )
 			.returns( JSON.stringify( frequentlyUsedLanguages ) );
 

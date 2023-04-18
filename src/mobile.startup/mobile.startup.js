@@ -1,6 +1,13 @@
-var
+const
 	moduleLoader = require( './moduleLoaderSingleton' ),
 	util = require( './util' );
+
+/**
+ * FIXME: Can be removed when Minerva has removed reference.
+ */
+function DeprecatedPageGateway() {
+	mw.log.warn( '[1.40] Use of PageGateway is a NOOP and deprecated. Please remove this call.' );
+}
 
 // Expose the entry chunk through libraryTarget and library. This allows
 // arbitrary file access via ResourceLoader like
@@ -12,7 +19,7 @@ module.exports = {
 	util,
 	headers: require( './headers' ),
 	View: require( './View' ),
-	PageGateway: require( './PageGateway' ),
+	PageGateway: DeprecatedPageGateway,
 	LanguageInfo: require( './LanguageInfo' ),
 	Browser: require( './Browser' ),
 	Button: require( './Button' ),

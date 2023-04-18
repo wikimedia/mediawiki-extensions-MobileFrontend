@@ -1,5 +1,4 @@
 var
-	log = mw.log,
 	mfUtils = require( '../mobile.startup/util' ),
 	rtlLanguages = require( './rtlLanguages' );
 
@@ -76,6 +75,9 @@ module.exports = {
 	/**
 	 * Determine whether a language is LTR or RTL
 	 * This works around T74153 and T189036
+	 * and the fact that adding dir attribute to HTML in core
+	 * at time of writing is memory-intensive
+	 * (I7cd8a3117f49467e3ff26f35371459a667c71470)
 	 *
 	 * @memberof util
 	 * @instance
@@ -118,7 +120,6 @@ module.exports = {
 		var hasOwn = Object.prototype.hasOwnProperty,
 			maxFrequency = 0,
 			minFrequency = 0,
-			missingDir = 0,
 			suggestedLanguages = [],
 			allLanguages = [],
 			self = this;
@@ -145,7 +146,6 @@ module.exports = {
 			if ( language.dir ) {
 				return language;
 			} else {
-				missingDir++;
 				return self.getDir( language );
 			}
 		}
@@ -196,13 +196,6 @@ module.exports = {
 		}
 
 		allLanguages = allLanguages.sort( compareLanguagesByLanguageName );
-
-		// This works around T74153
-		log.warn(
-			missingDir === 0 ? 'Direction is provided. Please remove handling in getStructuredLanguages' :
-				'`dir` attribute was missing from languages. Is T74153 resolved?'
-		);
-
 		return {
 			suggested: suggestedLanguages,
 			all: allLanguages

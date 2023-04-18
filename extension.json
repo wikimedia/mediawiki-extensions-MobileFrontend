@@ -231,6 +231,7 @@
 				"web2017-polyfills"
 			],
 			"messages": [
+				"mobile-frontend-languages-structured-overlay-error",
 				"mobile-frontend-license-links",
 				"echo-mark-all-as-read",
 				"echo-overlay-link",
