@@ -2,11 +2,14 @@
 	"@metadata": {
 		"authors": [
 			"Joachim Mos",
-			"Servien"
+			"Servien",
+			"Wikiundeplattsnacker"
 		]
 	},
 	"mobile-frontend-missing-image": "Bild",
-	"mobile-frontend-view": "Mobile Ansicht",
+	"mobile-frontend-terms-text": "Brukbedingen",
+	"mobile-frontend-view": "Lütten Bildschirm",
+	"mobile-frontend-view-desktop": "Grooten Bildschirm",
 	"mobile-frontend-watchlist-a-z": "All",
 	"mobile-frontend-watchlist-filter-all": "All",
 	"mobile-frontend-watchlist-filter-other": "Annere",
