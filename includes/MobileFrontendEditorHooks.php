@@ -65,26 +65,17 @@ class MobileFrontendEditorHooks {
 			$titleMsg = $title->exists() ? 'editing' : 'creating';
 			$out->setPageTitle( wfMessage( $titleMsg, $title->getPrefixedText() ) );
 
+			$msg = false;
+			$msgParams = false;
 			if ( $title->inNamespace( NS_FILE ) && !$title->exists() ) {
 				// Is a new file page (enable upload image only) T60311
-				$out->addWikiMsg( 'mobile-frontend-editor-uploadenable' );
+				$msg = 'mobile-frontend-editor-uploadenable';
 			} else {
-				$out->addWikiMsg( 'mobile-frontend-editor-toload', wfExpandUrl( $url ) );
+				$msg = 'mobile-frontend-editor-toload';
+				$msgParams = wfExpandUrl( $url );
 			}
+			$out->showPendingTakeover( $url, $msg, $msgParams );
 
-			// Redirect if the user has no JS (<noscript>)
-			$out->addHeadItem(
-				'mf-noscript-fallback',
-				"<noscript><meta http-equiv=\"refresh\" content=\"0; url=$escapedUrl\"></noscript>"
-			);
-			// Redirect if the user has no ResourceLoader
-			$out->addScript( Html::inlineScript(
-				"(window.NORLQ=window.NORLQ||[]).push(" .
-					"function(){" .
-						"location.href=\"$url\";" .
-					"}" .
-				");"
-			) );
 			$out->setRevisionId( $req->getInt( 'oldid', $article->getRevIdFetched() ) );
 			return false;
 		}
