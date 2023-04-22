@@ -16,9 +16,6 @@ curl -sSL "https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/core/+/maste
 # mediawiki.ui LESS mixins
 curl -sSL "https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/core/+/master/resources/src/mediawiki.less/mediawiki.ui/mixins.buttons.less?format=TEXT" | base64 --decode > .storybook/resolve-less-imports/mediawiki.ui/mixins.buttons.less
 
-# mediawiki.ui variables
-curl -sSL "https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/core/+/master/resources/src/mediawiki.less/mediawiki.ui/variables.less?format=TEXT" | base64 --decode > .storybook/resolve-less-imports/mediawiki.ui/variables.less
-
 # mediawiki.ui icons
 curl -sSL "https://en.wikipedia.org/w/load.php?modules=mediawiki.ui.icon&debug=true&only=styles" > .storybook/icons.less
 

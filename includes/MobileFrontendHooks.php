@@ -29,8 +29,8 @@ class MobileFrontendHooks {
 	public const MOBILE_PREFERENCES_SPECIAL_PAGES = 'mobile-specialpages';
 	public const MOBILE_PREFERENCES_EDITOR = 'mobile-editor';
 	private const ENABLE_SPECIAL_PAGE_OPTIMISATIONS = '1';
-	// This should always be kept in sync with @width-breakpoint-tablet
-	// in resources/src/mediawiki.less/mediawiki.ui/variables.less
+	// This should always be kept in sync with `@width-breakpoint-tablet`
+	// in mediawiki.skin.variables.less
 	private const DEVICE_WIDTH_TABLET = '720px';
 
 	/**
