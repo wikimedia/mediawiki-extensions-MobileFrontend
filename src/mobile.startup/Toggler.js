@@ -7,8 +7,8 @@ var browser = require( './Browser' ).getSingleton(),
 		isSmall: true,
 		additionalClassNames: 'indicator mw-ui-icon-flush-left'
 	},
-	Icon = require( './Icon' ),
-	alwaysCollapsed = document.body.classList.contains( 'collapsible-headings-collapsed' );
+	Icon = require( './Icon' );
+
 /**
  *
  * @typedef {Object} ToggledEvent
@@ -109,6 +109,32 @@ function expandStoredSections( toggler, $container, page ) {
 }
 
 /**
+ * Check if sections should be collapsed by default
+ *
+ * @return {boolean}
+ */
+Toggler.prototype.isCollapsedByDefault = function () {
+	if ( this._isCollapsedByDefault === undefined ) {
+		// This body class overrides site settings and user preferences. As used
+		// on talk pages by DiscussionTools. (T321618, T322628)
+		if ( document.body.classList.contains( 'collapsible-headings-collapsed' ) ) {
+			this._isCollapsedByDefault = true;
+		} else {
+
+			// Check site config
+			this._isCollapsedByDefault = mw.config.get( 'wgMFCollapseSectionsByDefault' ) &&
+				// Only collapse on narrow devices
+				!browser.isWideScreen() &&
+				// Section collapsing can be disabled in MobilePreferences
+				// NB: 'expandSections' uses localStorage, unlike 'expandedSections'
+				// which uses sessionStorage
+				mw.storage.get( 'expandSections' ) !== 'true';
+		}
+	}
+	return this._isCollapsedByDefault;
+};
+
+/**
  * Given a heading, toggle it and any of its children
  *
  * @memberof Toggler
@@ -168,7 +194,7 @@ Toggler.prototype.toggle = function ( $heading, page, fromSaved ) {
 		} );
 	} );
 
-	if ( alwaysCollapsed || !browser.isWideScreen() ) {
+	if ( this.isCollapsedByDefault() ) {
 		storeSectionToggleState( $heading, page );
 	}
 	return true;
@@ -228,8 +254,7 @@ Toggler.prototype.reveal = function ( id, $container, page ) {
 };
 
 /**
- * Enables section toggling in a given container when wgMFCollapseSectionsByDefault
- * is enabled.
+ * Enables section toggling in a given container.
  *
  * @memberof Toggler
  * @instance
@@ -240,17 +265,7 @@ Toggler.prototype.reveal = function ( id, $container, page ) {
  * @private
  */
 Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
-	var
-		self = this,
-		isWideScreen = browser.isWideScreen(),
-		collapseSectionsByDefault = mw.config.get( 'wgMFCollapseSectionsByDefault' );
-
-	if ( collapseSectionsByDefault === undefined ) {
-		// Old default behavior if on cached output
-		collapseSectionsByDefault = true;
-	}
-	// NB: 'expandSections' uses localStorage, unlike 'expandedSections' which uses sessionStorage
-	var expandSections = !collapseSectionsByDefault || mw.storage.get( 'expandSections' ) === 'true';
+	var self = this;
 
 	// FIXME This should use .find() instead of .children(), some extensions like Wikibase
 	// want to toggle other headlines than direct descendants of $container. (T95889)
@@ -284,7 +299,7 @@ Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 					'aria-expanded': 'false'
 				} );
 
-			arrowOptions.rotation = expandSections ? 180 : 0;
+			arrowOptions.rotation = !self.isCollapsedByDefault() ? 180 : 0;
 			var indicator = new Icon( arrowOptions );
 
 			if ( $indicator.length ) {
@@ -311,14 +326,7 @@ Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 
 			enableKeyboardActions( self, $heading, page );
 
-			// When the collapsible-headings-collapsed class is present on the body,
-			// never expand **all** sections, regardless of device size or preferences.
-			// (T321618, T322628)
-			if (
-				!alwaysCollapsed && (
-					!isClosed && isWideScreen || expandSections
-				)
-			) {
+			if ( !self.isCollapsedByDefault() && !isClosed ) {
 				// Expand sections by default on wide screen devices
 				// or if the expand sections setting is set.
 				// The wide screen logic for determining whether to collapse sections initially
@@ -372,7 +380,7 @@ Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 		checkHash();
 	} );
 
-	if ( ( alwaysCollapsed || !browser.isWideScreen() ) && page ) {
+	if ( this.isCollapsedByDefault() && page ) {
 		expandStoredSections( this, $container, page );
 	}
 };
