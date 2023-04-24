@@ -5,6 +5,17 @@
 			"Merrahtar"
 		]
 	},
+	"mobile-frontend-changeslist-nocomment": "нимэ̄нн элля вуайхэз баяс кырьйха",
+	"mobile-frontend-joined-just-now": "Еськ {{GENDER:$1|се̄брэ}}",
+	"mobile-frontend-joined-seconds": "{{GENDER:$1|Се̄брэ}} {{PLURAL:$2|$2 секунда|$2 секунда|$2 секундэдтӭ}} маӈас",
+	"mobile-frontend-joined-minutes": "{{GENDER:$1|Се̄брэ}} {{PLURAL:$2|$2 минута|$2 минута|$2 минутэдтӭ}} маӈас",
+	"mobile-frontend-joined-hours": "{{GENDER:$1|Се̄брэ}} {{PLURAL:$2|$2 ча̄с|$2 ча̄с|$2 ча̄ссэ}} маӈас",
+	"mobile-frontend-joined-days": "{{GENDER:$1|Се̄брэ}} {{PLURAL:$2|$2 пе̄ййв|$2 пе̄йв|$2 пе̄ййвэ}} маӈас",
+	"mobile-frontend-joined-months": "{{GENDER:$1|Се̄брэ}} {{PLURAL:$2|$2 ма̄нн|$2 ма̄н|$2 ма̄ннэ}} маӈас",
+	"mobile-frontend-joined-years": "{{GENDER:$1|Се̄брэ}} {{PLURAL:$2|$2 ыгкь|$2 ыгь|$2 ыгке}} маӈас",
+	"mobile-frontend-language-heading": "Кӣл",
+	"mobile-frontend-languages-structured-overlay-all-languages-header": "Мудта кӣл",
+	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "О̄дзэ кӣл",
 	"mobile-frontend-view": "Мобильнэ ве̄рсья",
 	"mobile-frontend-view-desktop": "Коаммпьютэр ве̄рсья",
 	"tag-mobile_edit": "Вуайхэсс мобильнэ устройства мӣлльтэ",
