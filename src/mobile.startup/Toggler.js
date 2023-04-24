@@ -103,7 +103,7 @@ function expandStoredSections( toggler, $container, page ) {
 			expandedSections[page.title][$headline.attr( 'id' )] &&
 		!$sectionHeading.hasClass( 'open-block' )
 		) {
-			toggler.toggle( $sectionHeading, page );
+			toggler.toggle( $sectionHeading, page, true );
 		}
 	} );
 }
@@ -115,10 +115,11 @@ function expandStoredSections( toggler, $container, page ) {
  * @instance
  * @param {jQuery.Object} $heading A heading belonging to a section
  * @param {Page} page
+ * @param {boolean} fromSaved Section is being toggled from a saved state
  * @return {boolean}
  */
-Toggler.prototype.toggle = function ( $heading, page ) {
-	if ( $heading.hasClass( 'collapsible-heading-disabled' ) ) {
+Toggler.prototype.toggle = function ( $heading, page, fromSaved ) {
+	if ( !fromSaved && $heading.hasClass( 'collapsible-heading-disabled' ) ) {
 		return false;
 	}
 
