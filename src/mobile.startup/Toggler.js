@@ -7,8 +7,8 @@ var browser = require( './Browser' ).getSingleton(),
 		isSmall: true,
 		additionalClassNames: 'indicator mw-ui-icon-flush-left'
 	},
-	Icon = require( './Icon' );
-
+	Icon = require( './Icon' ),
+	alwaysCollapsed = document.body.classList.contains( 'collapsible-headings-collapsed' );
 /**
  *
  * @typedef {Object} ToggledEvent
@@ -168,7 +168,7 @@ Toggler.prototype.toggle = function ( $heading, page, fromSaved ) {
 		} );
 	} );
 
-	if ( !browser.isWideScreen() ) {
+	if ( alwaysCollapsed || !browser.isWideScreen() ) {
 		storeSectionToggleState( $heading, page );
 	}
 	return true;
@@ -314,7 +314,6 @@ Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 			// When the collapsible-headings-collapsed class is present on the body,
 			// never expand **all** sections, regardless of device size or preferences.
 			// (T321618, T322628)
-			var alwaysCollapsed = document.body.classList.contains( 'collapsible-headings-collapsed' );
 			if (
 				!alwaysCollapsed && (
 					!isClosed && isWideScreen || expandSections
@@ -373,7 +372,7 @@ Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 		checkHash();
 	} );
 
-	if ( !isWideScreen && page ) {
+	if ( ( alwaysCollapsed || !browser.isWideScreen() ) && page ) {
 		expandStoredSections( this, $container, page );
 	}
 };
