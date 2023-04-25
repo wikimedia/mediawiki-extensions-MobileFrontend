@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Enye Lav"
+			"Enye Lav",
+			"Merrahtar"
 		]
 	},
+	"mobile-frontend-language-heading": "Кывъяс",
 	"mobile-frontend-terms-text": "Вӧдитчыны урчитӧмъяс",
 	"mobile-frontend-view": "Мобильнӧй версия",
 	"mobile-frontend-view-desktop": "Пызанвыв версия"
