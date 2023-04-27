@@ -34,7 +34,7 @@ mfExtend( Thumbnail, View, {
 	 * @instance
 	 */
 	postRender: function () {
-		this.options.description = this.$el.siblings( '.thumbcaption' ).text();
+		this.options.description = this.$el.siblings( '.thumbcaption, figcaption' ).text();
 	},
 	/**
 	 * Obtain description for thumbnail
