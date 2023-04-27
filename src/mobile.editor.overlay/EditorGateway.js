@@ -90,6 +90,8 @@ EditorGateway.prototype = {
 				titles: self.title,
 				// get block information for this user
 				intestactions: 'edit',
+				// …and test whether this edit will auto-create an account
+				intestactionsautocreate: true,
 				intestactionsdetail: 'full'
 			} );
 			// Load text of old revision if desired
@@ -136,6 +138,7 @@ EditorGateway.prototype = {
 				// save content a second time to be able to check for changes
 				self.originalContent = self.content;
 				self.blockinfo = self.getBlockInfo( pageObj );
+				self.wouldautocreate = pageObj.wouldautocreate && pageObj.wouldautocreate.edit;
 
 				return resolve();
 			} );

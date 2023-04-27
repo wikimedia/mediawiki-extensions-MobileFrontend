@@ -1,8 +1,29 @@
 <?php
 
 use MediaWiki\MediaWikiServices;
+use MediaWiki\ResourceLoader\Context;
 
 class MobileFrontendEditorHooks {
+
+	/**
+	 * Return messages in content language, for use in a ResourceLoader module.
+	 *
+	 * @param Context $context
+	 * @param Config $config
+	 * @param array $messagesKeys
+	 * @return array
+	 */
+	public static function getContentLanguageMessages(
+		Context $context, Config $config, array $messagesKeys = []
+	): array {
+		return array_combine(
+			$messagesKeys,
+			array_map( static function ( $key ) {
+				return wfMessage( $key )->inContentLanguage()->text();
+			}, $messagesKeys )
+		);
+	}
+
 	/**
 	 * Generate config for usage inside MobileFrontend
 	 * This should be used for variables which:

@@ -147,9 +147,7 @@ QUnit.test( '#initialize, as anonymous', function ( assert ) {
 		isAnon: true
 	} );
 
-	// SourceEditorOverlay triggers a call to _loadContent so will always start an async request.
-	// Make this test async to ensure it finishes and doesn't cause side effects to other functions.
-	return getContentStub().then( function () {
+	return editorOverlay.getLoadingPromise().then( function () {
 		assert.true( editorOverlay.$anonWarning.length > 0, 'Editorwarning (IP will be saved) visible.' );
 		assert.true( editorOverlay.$el.find( '.anonymous' ).length > 0, 'Continue login has a second class.' );
 	} );
