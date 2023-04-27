@@ -74,8 +74,10 @@
 		}
 	}
 
-	&-ve .anonwarning {
-		padding-top: 3em;
+	&-ve .overlay-footer-container + * {
+		// Any extra messages (e.g. .minerva-anon-talk-message or .anonwarning)
+		// should leave space for the toolbar above the first message.
+		margin-top: 4em;
 	}
 
 	.preview {
