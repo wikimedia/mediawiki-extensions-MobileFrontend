@@ -562,7 +562,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 			$anonWarning = $( '<div>' ).addClass( 'anonwarning content' ).append(
 				new MessageBox( {
 					className: 'mw-message-box-notice anon-msg',
-					msg: mw.msg( 'mobile-frontend-editor-anonwarning' )
+					msg: mw.message( 'mobile-frontend-editor-anonwarning' ).parse()
 				} ).$el,
 				$actions
 			),
