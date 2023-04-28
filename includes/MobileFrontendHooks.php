@@ -430,9 +430,10 @@ class MobileFrontendHooks {
 	public static function onResourceLoaderSiteStylesModulePages( $skin, &$pages ) {
 		$ctx = MobileContext::singleton();
 		$ucaseSkin = ucfirst( $skin );
-		if ( $ctx->shouldDisplayMobileView() ) {
-			$services = MediaWikiServices::getInstance();
-			$config = $services->getService( 'MobileFrontend.Config' );
+		$services = MediaWikiServices::getInstance();
+		$config = $services->getService( 'MobileFrontend.Config' );
+		// Use Mobile.css instead of MediaWiki:Common.css and MediaWiki:<skinname.css> on mobile views.
+		if ( $ctx->shouldDisplayMobileView() && $config->get( 'MFCustomSiteModules' ) ) {
 			unset( $pages['MediaWiki:Common.css'] );
 			unset( $pages['MediaWiki:Print.css'] );
 			// MediaWiki:<skinname>.css suffers from the same problems as MediaWiki:Common.css
@@ -457,7 +458,8 @@ class MobileFrontendHooks {
 		$ctx = MobileContext::singleton();
 		$services = MediaWikiServices::getInstance();
 		$config = $services->getService( 'MobileFrontend.Config' );
-		if ( $ctx->shouldDisplayMobileView() ) {
+		// Use Mobile.js instead of MediaWiki:Common.js and MediaWiki:<skinname.js> on mobile views.
+		if ( $ctx->shouldDisplayMobileView() && $config->get( 'MFCustomSiteModules' ) ) {
 			unset( $pages['MediaWiki:Common.js'] );
 			$pages['MediaWiki:Mobile.js'] = [ 'type' => 'script' ];
 			if ( !$config->get( 'MFSiteStylesRenderBlocking' ) ) {

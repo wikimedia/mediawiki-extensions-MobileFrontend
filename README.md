@@ -220,6 +220,15 @@ site to render, depending on how large MediaWiki:Mobile.css is for your wiki.
 * Type: `Boolean`
 * Default: `false`
 
+#### $wgMFCustomSiteModules
+
+If set to true, MediaWiki:Mobile.css will be used instead of MediaWiki:Common.css and MediaWiki:<skinname>.css for mobile views.
+
+This is intended for situations where the mobile site is on a different domain.
+
+* Type: `Boolean`
+* Default: `false`
+
 #### $wgMFTrackBlockNotices
 
 If set to true, block notices will be tracked on display, along with some limited
