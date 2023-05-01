@@ -117,7 +117,7 @@
 	"mobile-frontend-languages-nonexistent-title": "صفحو \"$1\" وجود نٿو رکي.",
 	"mobile-frontend-languages-text": "$1 $2 {{PLURAL:$2|ٻولي|ٻولين}} ۾ موجود آھي.",
 	"mobile-frontend-languages-variant-header": "{{#language:{{CONTENTLANG}}}} لھجا",
-	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "تجويزڪيل ٻوليون",
+	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "ڏسيل ٻوليون",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "ٻيون ٻوليون",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "ڪنھن ٻوليءَ لاءِ ڳوليو",
 	"mobile-frontend-last-modified-date": "آخري ڀيرو $1ع تي، $2 وڳي سنواريل",
