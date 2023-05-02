@@ -289,6 +289,7 @@ class MobilePageTest extends MediaWikiIntegrationTestCase {
 		);
 
 		$actual = $mPageWithFile->getSmallThumbnailHtml( $useBackgroundImage );
+		$actual = str_replace( '/>', '>', $actual );
 
 		$this->assertSame( $expected, $actual );
 	}
@@ -306,6 +307,7 @@ class MobilePageTest extends MediaWikiIntegrationTestCase {
 			$this->createTestTitle(), $fileWidthGreatThanHeight
 		);
 		$actual = $mPageWithFile->getSmallThumbnailHtml( $useBackgroundImage );
+		$actual = str_replace( '/>', '>', $actual );
 
 		$this->assertSame( $expected, $actual );
 	}
@@ -405,7 +407,7 @@ class MobilePageTest extends MediaWikiIntegrationTestCase {
 			// With width < height
 			[
 				false,
-				'<img class="list-thumb list-thumb-x" src="https://commons.wikimedia.org/wiki/File:Image.jpg"/>'
+				'<img class="list-thumb list-thumb-x" src="https://commons.wikimedia.org/wiki/File:Image.jpg">'
 			],
 			[
 				true,
@@ -425,7 +427,7 @@ class MobilePageTest extends MediaWikiIntegrationTestCase {
 			// With width > height
 			[
 				false,
-				'<img class="list-thumb list-thumb-y" src="https://commons.wikimedia.org/wiki/File:Image.jpg"/>'
+				'<img class="list-thumb list-thumb-y" src="https://commons.wikimedia.org/wiki/File:Image.jpg">'
 			],
 			[
 				true,
