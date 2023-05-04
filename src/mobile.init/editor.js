@@ -11,7 +11,6 @@ var M = require( '../mobile.startup/moduleLoaderSingleton' ),
 	user = mw.user,
 	CtaDrawer = require( '../mobile.startup/CtaDrawer' ),
 	veConfig = mw.config.get( 'wgVisualEditorConfig' ),
-	editCount = mw.config.get( 'wgUserEditCount' ),
 	editorPath = /^\/editor\/(\d+|T-\d+|all)$/;
 
 /**
@@ -121,7 +120,6 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 				titleObj: page.titleObj,
 				isAnon: user.isAnon(),
 				isNewPage: isNewPage,
-				editCount: editCount,
 				oldId: mw.util.getParamValue( 'oldid' ),
 				contentLang: $contentText.attr( 'lang' ),
 				contentDir: $contentText.attr( 'dir' ),
