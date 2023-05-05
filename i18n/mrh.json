@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Chhithai",
+			"Kiathy",
 			"Laitei",
 			"Teitei",
 			"Teitei Para"
@@ -80,7 +81,7 @@
 	"mobile-frontend-editor-viewing-source-page": "<span> $1</span> <strong>hnawh palâ hai </strong>",
 	"mobile-frontend-editor-wait": "Taopathipa pachô hai, hâ chy bei teh.",
 	"mobile-frontend-editor-loading": "Taopathituhpa khâh hai...",
-	"mobile-frontend-expand-sections-description": "Ualuapa hawhta hmiazy pachhaihpa zydua pakawh parei",
+	"mobile-frontend-expand-sections-description": "Ualuapa hawhta hmiazy pachhaihpa lia a tlôhpa pakawh parei",
 	"mobile-frontend-expand-sections-status": "Châh zydua pakawh",
 	"mobile-frontend-fontchanger-link": "Faut thliena",
 	"mobile-frontend-fontchanger-desc": "Reina pha viana châta faut thliena paryh teh.",
