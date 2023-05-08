@@ -33,7 +33,9 @@
 			"Tmv",
 			"つぶあん派",
 			"ネイ",
-			"MirukuPC"
+			"MirukuPC",
+			"Kokage si",
+			"MathXplore"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "利用者が携帯機器版インターフェイスで編集しているかどうか",
@@ -52,14 +54,14 @@
 	"mobile-frontend-categories-hidden": "隠しカテゴリ",
 	"mobile-frontend-changeslist-nocomment": "編集の要約なし",
 	"mobile-frontend-cite-error-title": "引用の読み込みエラー",
-	"mobile-frontend-cite-error": "版 ID が不正なため、引用の読み込み中に問題が発生しました。",
+	"mobile-frontend-cite-error": "版 ID が正しくないため、引用の読み込み中に問題が発生しました。",
 	"mobile-frontend-cite-none-available": "このページには引用がありません。",
 	"mobile-frontend-clear-search": "消去",
 	"mobile-frontend-contributions-404-desc": "利用者名が未指定の場合や、存在しない利用者の投稿履歴は表示できません。",
 	"mobile-frontend-contributions-404-title": "利用者名が不正です",
 	"mobile-frontend-copyright": "コンテンツは、特に記載されていない限り、$1のもとで利用可能です。",
 	"mobile-frontend-desc": "携帯機器フロントエンド",
-	"mobile-frontend-diffview-404-desc": "あなたの要求した版のIDは存在しません。<br/>これは大抵、すでに削除されたページへの古い diff リンクか、不正な文字を含む diff リンクによって引き起こされます。",
+	"mobile-frontend-diffview-404-desc": "指定された版 ID は存在しません。<br/>これは通常、削除されたページへの古い差分リンクを辿った場合や、無効な文字を含む差分リンクを辿った場合に発生します。",
 	"mobile-frontend-diffview-404-title": "版指定の誤り",
 	"mobile-frontend-diffview-anonymous": "匿名利用者",
 	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|バイト}}追加",
