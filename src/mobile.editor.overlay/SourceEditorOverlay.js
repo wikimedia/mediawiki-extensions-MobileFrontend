@@ -578,7 +578,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 	 * @instance
 	 */
 	showSaveCompleteMsg: function ( msg ) {
-		toast.showOnPageReload( msg, { type: 'success' } );
+		toast.showOnPageReload( msg, { postEdit: true } );
 	},
 
 	/**

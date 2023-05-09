@@ -12,7 +12,16 @@ function showPending() {
 	var data = mw.storage.get( storageKey );
 	if ( data ) {
 		data = JSON.parse( data );
-		mw.notify( data.content, data.options );
+		if ( data.options && data.options.postEdit ) {
+			// Fire a hook after an edit was saved, like in MediaWiki core.
+			mw.loader.using( 'mediawiki.action.view.postEdit' ).then( function () {
+				mw.hook( 'postEdit' ).fire( {
+					message: data.content
+				} );
+			} );
+		} else {
+			mw.notify( data.content, data.options );
+		}
 		mw.storage.remove( storageKey );
 	}
 }

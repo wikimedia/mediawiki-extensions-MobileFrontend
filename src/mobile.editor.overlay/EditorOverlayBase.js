@@ -56,7 +56,6 @@ EditVeTool.prototype.onUpdateState = function () {
  * @uses Icon
  * @uses user
  * @param {Object} params Configuration options
- * @param {number|null} params.editCount of user
  * @param {boolean} params.editSwitcher whether possible to switch mode in header
  * @param {boolean} params.hasToolbar whether the editor has a toolbar
  */
@@ -91,9 +90,7 @@ function EditorOverlayBase( params ) {
 		options.summaryRequestMsg = mw.msg( 'mobile-frontend-editor-summary' );
 	}
 	this.pageGateway = new PageGateway( options.api );
-	this.editCount = options.editCount;
 	this.isNewPage = options.isNewPage;
-	this.isNewEditor = options.editCount === 0;
 	this.sectionId = options.sectionId;
 	this.overlayManager = options.overlayManager;
 
@@ -229,37 +226,29 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 *  edit.
 	 */
 	onSaveComplete: function ( newRevId ) {
-		var msg,
+		var
 			title = this.options.title,
 			self = this;
 
 		this.saved = true;
 
-		// FIXME: use generic method for following 3 lines
 		this.pageGateway.invalidatePage( title );
 
-		if ( this.isNewPage ) {
-			msg = mw.msg( 'mobile-frontend-editor-success-new-page' );
-		} else if ( this.isNewEditor ) {
-			msg = mw.msg( 'mobile-frontend-editor-success-landmark-1' );
-		} else {
-			msg = mw.msg( 'mobile-frontend-editor-success' );
+		if ( newRevId ) {
+			mw.loader.using( 'mediawiki.action.view.postEdit' ).then( function () {
+				var msg;
+				if ( self.isNewPage ) {
+					msg = mw.msg( 'postedit-confirmation-created', mw.user );
+				} else if ( self.options.oldId ) {
+					msg = mw.msg( 'postedit-confirmation-restored', mw.user );
+				} else if ( mw.config.get( 'wgEditSubmitButtonLabelPublish' ) ) {
+					msg = mw.msg( 'postedit-confirmation-published', mw.user );
+				} else {
+					msg = mw.msg( 'postedit-confirmation-saved', mw.user );
+				}
+				self.showSaveCompleteMsg( msg );
+			} );
 		}
-
-		if ( !mw.config.get( 'wgPostEditConfirmationDisabled' ) ) {
-			this.showSaveCompleteMsg( msg );
-		}
-
-		/**
-		 * Fired after an edit was successfully saved, like postEdit in MediaWiki core.
-		 *
-		 * @event postEditMobile
-		 * @member mw.hook
-		 * @param {Object} data
-		 * @param {number|null} data.newRevId (since MW 1.37) ID of the newly created revision,
-		 *  or null if it was a null edit.
-		 */
-		mw.hook( 'postEditMobile' ).fire( { newRevId: newRevId } );
 
 		// Ensure we don't lose this event when logging
 		this.log( {
@@ -293,7 +282,10 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 * @param {string} msg Message
 	 */
 	showSaveCompleteMsg: function ( msg ) {
-		mw.notify( msg, { type: 'success' } );
+		// Fire a hook after an edit was saved, like in MediaWiki core.
+		mw.hook( 'postEdit' ).fire( {
+			message: msg
+		} );
 	},
 	/**
 	 * Executed when page save fails. Handles logging the error. Subclasses
@@ -635,7 +627,6 @@ mfExtend( EditorOverlayBase, Overlay, {
 			titleObj: this.options.titleObj,
 			isAnon: this.options.isAnon,
 			isNewPage: this.options.isNewPage,
-			editCount: this.options.editCount,
 			oldId: this.options.oldId,
 			contentLang: this.options.contentLang,
 			contentDir: this.options.contentDir,
