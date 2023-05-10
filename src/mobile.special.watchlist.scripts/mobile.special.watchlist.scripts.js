@@ -1,9 +1,6 @@
 /* global $ */
 var WatchList = require( './WatchList' ),
-	eventBus = require( '../mobile.startup/eventBusSingleton' ),
-	VIEW_OPTION_NAME = 'mfWatchlistView',
-	userOptions = mw.user.options.get(),
-	FILTER_OPTION_NAME = 'mfWatchlistFilter';
+	eventBus = require( '../mobile.startup/eventBusSingleton' );
 
 /**
  * Initialises JavaScript on Special:Watchlist
@@ -27,16 +24,5 @@ function init() {
 }
 
 $( function () {
-	var api = new mw.Api(),
-		view = $( '.mw-mf-watchlist-button-bar .is-on a' ).data( 'view' ),
-		filter = $( '.mw-mf-watchlist-selector .selected a' ).data( 'filter' );
-
 	init();
-	// Only save if the value has changed.
-	if ( view !== userOptions[VIEW_OPTION_NAME] ) {
-		api.saveOption( VIEW_OPTION_NAME, view );
-	}
-	if ( filter && filter !== userOptions[FILTER_OPTION_NAME] ) {
-		api.saveOption( FILTER_OPTION_NAME, filter );
-	}
 } );

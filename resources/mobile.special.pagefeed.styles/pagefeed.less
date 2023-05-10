@@ -1,3 +1,4 @@
+/* stylelint-disable selector-max-id */
 @import 'mediawiki.skin.variables.less';
 @import '../../mobile.less/mobile.variables.less';
 
@@ -9,6 +10,11 @@
 		line-height: 1.5;
 		text-align: center;
 	}
+}
+
+.mw-mf-special-page.page-Special_Watchlist #bodyContent.content {
+	border-top: @border-width-base @border-style-base @border-color-subtle;
+	margin-top: 20px;
 }
 
 .mw-mf-watchlist-selector {

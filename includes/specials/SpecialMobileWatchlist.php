@@ -19,6 +19,11 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	public const VIEW_LIST = 'a-z';
 	public const VIEW_FEED = 'feed';
 
+	public const WATCHLIST_TAB_PATHS = [
+		'Special:Watchlist',
+		'Special:EditWatchlist'
+	];
+
 	/** @var string Saves, how the watchlist is sorted: a-z or as a feed */
 	private $view;
 
@@ -81,7 +86,6 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	 */
 	public function addWatchlistHTML( IResultWrapper $res, UserIdentity $user ) {
 		$output = $this->getOutput();
-		$output->addHTML( self::getWatchlistHeader( $user, $this->view, $this->filter ) );
 		$output->addHTML(
 			Html::openElement( 'div', [ 'class' => 'content-unstyled' ] )
 		);
@@ -124,63 +128,6 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 				break;
 		}
 		return $conds;
-	}
-
-	/**
-	 * Get the header for the watchlist page
-	 * @param UserIdentity $user the current user for obtaining default view and filter preferences
-	 * @param string $view the name of the view to show (optional)
-	 *  If absent a-z will be used.
-	 * @param string|null $filter the name of the filter to show (optional)
-	 *  If absent user preferences will be consulted, defaulting to `all` if no preference
-	 * @return string Parsed HTML
-	 */
-	public static function getWatchlistHeader( UserIdentity $user, $view = self::VIEW_LIST, $filter = null ) {
-		$services = MediaWikiServices::getInstance();
-		$sp = SpecialPage::getTitleFor( 'Watchlist' );
-		$attrsList = $attrsFeed = [];
-		if ( $filter === null ) {
-			$userOptionsLookup = $services->getUserOptionsLookup();
-			$filter = $userOptionsLookup->getOption( $user, self::FILTER_OPTION_NAME, 'all' );
-		}
-
-		if ( $view === self::VIEW_FEED ) {
-			$attrsList['class'] = MobileUI::buttonClass();
-			// FIXME [MediaWiki UI] This probably be described as a different type of mediawiki ui element
-			$attrsFeed['class'] = MobileUI::buttonClass( 'progressive', 'is-on' );
-		} else {
-			$attrsFeed['class'] = MobileUI::buttonClass();
-			// FIXME [MediaWiki UI] This probably be described as a different type of mediawiki ui element
-			$attrsList['class'] = MobileUI::buttonClass( 'progressive', 'is-on' );
-		}
-
-		$linkRenderer = $services->getLinkRenderer();
-		$html =
-		Html::openElement( 'ul',
-			[ 'class' => 'mw-mf-watchlist-button-bar mw-ui-button-group' ] ) .
-			Html::openElement( 'li', $attrsList ) .
-			$linkRenderer->makeLink( $sp,
-				wfMessage( 'mobile-frontend-watchlist-a-z' )->text(),
-				[
-					'class' => 'button',
-					'data-view' => self::VIEW_LIST,
-				],
-				[ 'watchlistview' => self::VIEW_LIST ]
-			) .
-			Html::closeElement( 'li' ) .
-			Html::openElement( 'li', $attrsFeed ) .
-			$linkRenderer->makeLink( $sp,
-				wfMessage( 'mobile-frontend-watchlist-feed' )->text(),
-				[
-					'class' => 'button',
-					'data-view' => self::VIEW_FEED,
-				],
-				[ 'watchlistview' => self::VIEW_FEED, 'filter' => $filter ]
-			) .
-			Html::closeElement( 'li' ) .
-			Html::closeElement( 'ul' );
-
-		return '<div class="content-header">' . $html . '</div>';
 	}
 
 	/**
@@ -409,5 +356,12 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	 */
 	public function getShortDescription( string $path = '' ): string {
 		return $this->msg( 'watchlisttools-view' )->text();
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	public function getAssociatedNavigationLinks() {
+		return self::WATCHLIST_TAB_PATHS;
 	}
 }
