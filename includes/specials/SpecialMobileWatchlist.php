@@ -404,4 +404,10 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		$this->renderFeedItemHtml( $options );
 	}
 
+	/**
+	 * @inheritDoc
+	 */
+	public function getShortDescription( string $path = '' ): string {
+		return $this->msg( 'watchlisttools-view' )->text();
+	}
 }
