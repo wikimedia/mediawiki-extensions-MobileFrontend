@@ -37,6 +37,7 @@
 	"mobile-frontend-last-modified-with-user-months": "[$4 ТIехьара хувцам баьб {{PLURAL:$3|$3 бутт}} хьалха] {{PLURAL:$5|{{GENDER:$1|доакъашхочо}} [$6 $2]|0=къайла хиннача доакъашхочо}}",
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 ТIехьара хувцам баьб {{PLURAL:$3|$3 секунд}} хьалха] {{PLURAL:$5|{{GENDER:$1|доакъашхочо|доакъашхочо}} [$6 $2]|0=къайла волча доакъашхочо}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 ТIехьара хувцам баьб {{PLURAL:$3|$3 шу}} хьалха] {{PLURAL:$5|{{GENDER:$1|доакъашхочо|доакъашхочо}} [$6 $2]|0=къайла волча доакъашхочо}}",
+	"mobile-frontend-main-menu": "Керттера меню",
 	"mobile-frontend-nearby-noresults": "Цхьаккха хIама яц укхаза-м... Цхьаь цаӀ оагӀув яц йисте йолча моттигах лаьца.",
 	"mobile-frontend-nearby-noresults-guidance": "Керда оагӀув хьакхолла хьажал е тхьовре хьаяь йолаш йолча оагӀонна моттиг тӀатоха.",
 	"mobile-frontend-nearby-title": "Гаьна доаццаш",

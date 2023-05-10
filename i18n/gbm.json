@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"बडा काजी"
+			"बडा काजी",
+			"Yakku3"
 		]
 	},
+	"mobile-frontend-view": "मोबाइल दृश्य",
 	"mobile-frontend-view-desktop": "डेस्कटप"
 }

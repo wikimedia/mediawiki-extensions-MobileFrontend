@@ -54,7 +54,8 @@
 			"Wirbel78",
 			"Александр Сигачёв",
 			"Дмитрий",
-			"Deltaspace"
+			"Deltaspace",
+			"Colt browning"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Редактирует ли участник через мобильный интерфейс",
@@ -100,7 +101,7 @@
 	"mobile-frontend-editor-cancel-confirm": "Вы действительно хотите отказаться от своих изменений?",
 	"mobile-frontend-editor-captcha-try-again": "Неверный код, попробуйте ещё раз.",
 	"mobile-frontend-editor-continue": "Далее",
-	"mobile-frontend-editor-disabled": "Эта страница защищена для предотвращения вандализма. [$1 Посмотреть источник]",
+	"mobile-frontend-editor-disabled": "Эта страница защищена для предотвращения вандализма. [$1 Посмотреть код страницы]",
 	"mobile-frontend-editor-disabled-anon": "Чтобы отредактировать эту страницу, вам нужно войти.",
 	"mobile-frontend-editor-editing": "Редактирование",
 	"mobile-frontend-editor-editing-page": "<span><strong>Редактирование</strong> $1</span>",
