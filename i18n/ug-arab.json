@@ -39,8 +39,6 @@
 	"mobile-frontend-editor-placeholder-new-page": "سىز {{SITENAME}} دا يېڭى بەت {{GENDER:$1|قۇرۇۋاتىسىز}}!",
 	"mobile-frontend-editor-publish": "ئېلان قىلىش",
 	"mobile-frontend-editor-save": "ساقلا",
-	"mobile-frontend-editor-success": "مۇۋەپپەقىيەت! تەھرىرلىشىڭىز ئېلان قىلىندى.",
-	"mobile-frontend-editor-success-new-page": "يېڭى بەت قۇرغانلىقىڭىزنى تەبرىكلەيمىز!",
 	"mobile-frontend-editor-summary-placeholder": "مىسال: مۇقىم خەت بېسىش ، قوشۇلغان مەزمۇن",
 	"mobile-frontend-editor-summary-request": "بەتنى قانداق ياخشىلىدىڭىز؟",
 	"mobile-frontend-editor-summary": "ئۈزۈندە:",

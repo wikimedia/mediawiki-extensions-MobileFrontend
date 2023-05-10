@@ -71,8 +71,6 @@
 	"mobile-frontend-editor-placeholder": "हा विभाग रिकामा आहे.त्याचा विस्तार करणारी आपण 'सर्वप्रथम' व्यक्ति व्हा!",
 	"mobile-frontend-editor-previewing-page": "<span>$1 ची<strong>झलक दाखवित आहे</strong></span>",
 	"mobile-frontend-editor-save": "जतन करा",
-	"mobile-frontend-editor-success": "यशस्वी! तुमचे संपादन जतन करण्यात आले आहे.",
-	"mobile-frontend-editor-success-new-page": "एक नवीन पान बनवल्याबद्दल आपले अभिनंदन !",
 	"mobile-frontend-editor-summary-placeholder": "उदाहरणार्थ: टंकनदोष काढले, आशय जोडला",
 	"mobile-frontend-editor-summary": "सारांश:",
 	"mobile-frontend-editor-viewing-source-page": "<span> $1</span> <strong>स्त्रोत दाखवत आहे</strong>",

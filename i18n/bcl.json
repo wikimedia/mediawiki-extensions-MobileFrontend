@@ -41,8 +41,6 @@
 	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|Minukna mo}} an sarong baguhon na pahina sa {{SITENAME}}!",
 	"mobile-frontend-editor-publish": "Publikar",
 	"mobile-frontend-editor-save": "Itagama",
-	"mobile-frontend-editor-success": "Matrayumpo! An saimong pigliwat ipinagtagama na.",
-	"mobile-frontend-editor-success-landmark-1": "Karokyawan saimo, ika ngunyan saro nang {{SITENAME}} na paraliwat!",
 	"mobile-frontend-editor-summary-placeholder": "Ehemplo: pagpakaray kan mali sa teksto, pagdugang ning laog sa teksto",
 	"mobile-frontend-editor-summary-request": "Pano mo pigpaurog an pahina?",
 	"mobile-frontend-editor-summary": "Sumaryo:",

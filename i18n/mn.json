@@ -17,7 +17,6 @@
 	"mobile-frontend-editor-disabled": "Энэ хуудсыг эвдэн сүйтгэхээс сэргийлэх үүднээс хамгаалсан байна. [ $1 Кодоор харах]",
 	"mobile-frontend-editor-publish": "Хэвлэх",
 	"mobile-frontend-editor-save": "Хадгалах",
-	"mobile-frontend-editor-success": "Амжилт! Таны засвар нийтлэгдсэн.",
 	"mobile-frontend-editor-summary-request": "Та хуудсыг хэрхэн сайжруулсан бэ?",
 	"mobile-frontend-editor-summary": "Товч агуулга:",
 	"mobile-frontend-editor-switch-editor": "Редакторыг солих",

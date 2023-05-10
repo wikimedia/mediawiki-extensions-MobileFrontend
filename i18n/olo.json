@@ -23,8 +23,6 @@
 	"mobile-frontend-editor-placeholder": "Tämä sektsii on tyhjy. Ole enzimäine, kudai luadiu syväindyö täh!",
 	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|Olet luadimas}} uuttu sivuu saitale {{SITENAME}}!",
 	"mobile-frontend-editor-save": "Tallenda",
-	"mobile-frontend-editor-success": "Valmis! Sinun kohendus on tallendettu.",
-	"mobile-frontend-editor-success-new-page": "Hyvittelyt uvven sivun ližiämizes!",
 	"mobile-frontend-editor-summary-request": "Kui kohendit tädä sivuu?",
 	"mobile-frontend-editor-summary": "Yhtehvedo:",
 	"mobile-frontend-featured-article": "Tämänpäivän liittyi syväindö",
