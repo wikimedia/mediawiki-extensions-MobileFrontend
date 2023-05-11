@@ -43,6 +43,7 @@
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "ቋንቋ ድለይ",
 	"mobile-frontend-languages-structured-overlay-no-results": "ቋንቋ ኣይርከብን እዩ",
 	"mobile-frontend-last-modified-date": "ናይ መወዳእታ ኣርትዖት ብ$1፣ ሰዓት $2",
+	"mobile-frontend-main-menu": "ቀንዲ መምረጺ",
 	"mobile-frontend-main-menu-settings-heading": "ምምዕርራያት",
 	"mobile-frontend-media-details": "ዝርዝራት",
 	"mobile-frontend-media-load-fail-retry": "ኣሓድስ",
@@ -67,5 +68,7 @@
 	"mobile-frontend-loading-message": "ይጽዕን ኣሎ...",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "ዓቐን ቅርጺ ፊደል",
 	"mobile-frontend-mobile-option-amc-learn-more": "ተወሳኺ ፍለጥ",
-	"mobile-frontend-amc-outreach-no-thanks": "ኣይፋል፣ የቐንየለይ"
+	"mobile-frontend-user-pref-option": "ምርጫታት ተጠቃሚ",
+	"mobile-frontend-amc-outreach-no-thanks": "ኣይፋል፣ የቐንየለይ",
+	"prefs-mobile": "ምርጫታት ሞባይል"
 }
