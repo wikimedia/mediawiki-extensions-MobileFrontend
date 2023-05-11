@@ -93,6 +93,7 @@
 	"mobile-frontend-editor-viewing-source-page": "<strong>Visar källkoden för</strong><span> $1</span>",
 	"mobile-frontend-editor-wait": "Sparar redigering, vänta.",
 	"mobile-frontend-editor-loading": "Läser in redigerare…",
+	"mobile-frontend-editor-toload": "Editorn kommer nu laddas. Prova att [$1 ladda om sidan] om du fortfarande ser det här meddelandet efter några sekunder.",
 	"mobile-frontend-expand-sections-description": "Expandera alltid avsnitt för innehållssidor som standard.",
 	"mobile-frontend-expand-sections-status": "Expandera alla avsnitt",
 	"mobile-frontend-fontchanger-link": "Teckenstorlek",
