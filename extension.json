@@ -208,7 +208,6 @@
 			]
 		},
 		"mobile.startup": {
-			"class": "MobileFrontend\\ResourceLoaderModules\\ResourceLoaderFileModuleWithMFConfig",
 			"dependencies": [
 				"mediawiki.page.watch.ajax",
 				"mediawiki.template.mustache",
@@ -291,6 +290,10 @@
 				"vector-2022": "skinStyles/mobile.startup/vector.less"
 			},
 			"scripts": [
+				{
+					"name": "mobile.config.js",
+					"callback": "MobileFrontend\\ResourceLoaderModules\\MobileConfig::makeScript"
+				},
 				"resources/dist/mobile.startup.runtime.js",
 				"resources/dist/mobile.common.js",
 				"resources/dist/mobile.startup.js"
