@@ -6,6 +6,7 @@ namespace MobileFrontend\Features;
  * Represents single mobile feature
  *
  * @package MobileFrontend\Features
+ * @codeCoverageIgnore
  */
 interface IFeature {
 

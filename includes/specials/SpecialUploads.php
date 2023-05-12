@@ -4,6 +4,7 @@
  *
  * @file
  * @ingroup SpecialPage
+ * @codeCoverageIgnore
  */
 class SpecialUploads extends RedirectSpecialPage {
 	public function __construct() {

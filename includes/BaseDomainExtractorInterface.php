@@ -6,6 +6,7 @@ namespace MobileFrontend;
  * Helper for operations on domain names
  *
  * Interface DomainExtractorInterface
+ * @codeCoverageIgnore
  */
 interface BaseDomainExtractorInterface {
 
