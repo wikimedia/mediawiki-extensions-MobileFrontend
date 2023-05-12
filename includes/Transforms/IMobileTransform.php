@@ -4,6 +4,9 @@ namespace MobileFrontend\Transforms;
 
 use DOMElement;
 
+/**
+ * @codeCoverageIgnore
+ */
 interface IMobileTransform {
 	/**
 	 * Transforms the DOMElement in some way

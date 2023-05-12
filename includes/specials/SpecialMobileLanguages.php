@@ -4,6 +4,7 @@
  *
  * @file
  * @ingroup SpecialPage
+ * @codeCoverageIgnore
  */
 class SpecialMobileLanguages extends UnlistedSpecialPage {
 	public function __construct() {

@@ -7,6 +7,7 @@ namespace MobileFrontend\Features;
  * As example: AMC Mode
  *
  * @package MobileFrontend\Features
+ * @codeCoverageIgnore
  */
 interface IUserSelectableMode {
 

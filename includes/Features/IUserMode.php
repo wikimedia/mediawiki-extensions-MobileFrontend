@@ -7,6 +7,7 @@ namespace MobileFrontend\Features;
  * As example: Beta Mode
  *
  * @package MobileFrontend\Features
+ * @codeCoverageIgnore
  */
 interface IUserMode {
 
