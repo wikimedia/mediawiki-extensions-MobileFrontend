@@ -24,7 +24,7 @@
 	"mobile-frontend-clear-search": "Počisti",
 	"mobile-frontend-copyright": "Vsebina je na voljo pod licenco $1, razen če je navedeno drugače.",
 	"mobile-frontend-desc": "Mobilni vmesnik",
-	"mobile-frontend-diffview-404-desc": "ID redakcije, ki ste jo zahtevali, ne obstaja.<br/>To po navadi povzroči zastarela povezava na primerjavo razlik strani, ki je bila izbrisana, ali povezava, ki vsebuje neveljavne znake.",
+	"mobile-frontend-diffview-404-desc": "ID redakcije, ki ste jo zahtevali, ne obstaja.<br/>To ponavadi povzroči zastarela povezava na razliko redakcij strani, ki je bila izbrisana, ali povezava na razliko, ki vsebuje neveljavne znake.",
 	"mobile-frontend-diffview-404-title": "Neveljavna redakcija",
 	"mobile-frontend-diffview-anonymous": "Anonimni uporabnik",
 	"mobile-frontend-diffview-bytesadded": "{{PLURAL:$1|dodan|dodana|dodani|dodanih}} $1 {{PLURAL:$1|zlog|zloga|zlogi|zlogov}}",
