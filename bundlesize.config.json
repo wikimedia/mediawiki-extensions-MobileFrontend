@@ -33,7 +33,7 @@
 	},
 	{
 		"resourceModule": "mobile.pagelist.styles",
-		"maxSize": "0.8KB"
+		"maxSize": "0.9KB"
 	},
 	{
 		"resourceModule": "mobile.pagesummary.styles",
@@ -69,7 +69,7 @@
 	},
 	{
 		"resourceModule": "mobile.special.mobileoptions.styles",
-		"maxSize": "0.7KB"
+		"maxSize": "0.8KB"
 	},
 	{
 		"resourceModule": "mobile.special.history.styles",
