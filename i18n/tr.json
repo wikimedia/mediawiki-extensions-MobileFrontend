@@ -40,7 +40,8 @@
 			"Violetanka",
 			"Vito Genovese",
 			"Watermelon juice",
-			"TayfunEt."
+			"TayfunEt.",
+			"Zolgoyo"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Bir kullanıcının mobil arayüz üzerinden değişiklik yapıp yapmadığı",
@@ -121,7 +122,7 @@
 	"mobile-frontend-fontchanger-link": "Yazı tipi boyutu",
 	"mobile-frontend-fontchanger-desc": "Daha iyi okunabilirlik için yazı tipi boyutunu ayarlayın.",
 	"mobile-frontend-fontchanger-option-small": "Küçük",
-	"mobile-frontend-fontchanger-option-medium": "Düzenli",
+	"mobile-frontend-fontchanger-option-medium": "Normal",
 	"mobile-frontend-fontchanger-option-large": "Büyük",
 	"mobile-frontend-fontchanger-option-xlarge": "Ekstra büyük",
 	"mobile-frontend-featured-article": "Bugünün seçkin içeriği",
