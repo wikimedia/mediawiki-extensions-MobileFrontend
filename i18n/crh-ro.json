@@ -18,6 +18,7 @@
 	"mobile-frontend-editor-cancel": "Wazkeş",
 	"mobile-frontend-editor-cancel-confirm": "Wazkeşmek istiymĭsĭñĭz?",
 	"mobile-frontend-editor-disabled": "Saypadı vandalizmden qollamaq üşĭn kĭtlengen. [$1 Menbadı kör]",
+	"mobile-frontend-editor-error": "Hata, degĭştĭrme yayınlanmadı.",
 	"mobile-frontend-editor-keep-editing": "Degĭştĭrmege dewam et",
 	"mobile-frontend-editor-terms-link": "[$1 Qullanuw Şartları]",
 	"mobile-frontend-editor-placeholder": "Mına bölĭk boştır. Onı ilk tolturğan sĭz bolıñız!",

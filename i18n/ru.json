@@ -105,7 +105,7 @@
 	"mobile-frontend-editor-disabled-anon": "Чтобы отредактировать эту страницу, вам нужно войти.",
 	"mobile-frontend-editor-editing": "Редактирование",
 	"mobile-frontend-editor-editing-page": "<span><strong>Редактирование</strong> $1</span>",
-	"mobile-frontend-editor-error": "Ошибка, правка не была сохранена.",
+	"mobile-frontend-editor-error": "Ошибка, правка не была опубликована.",
 	"mobile-frontend-editor-error-conflict": "Ошибка: другой пользователь отредактировал эту страницу.",
 	"mobile-frontend-editor-error-loading": "Ошибка: невозможно загрузить редактор.",
 	"mobile-frontend-editor-error-preview": "Ошибка, произошло что-то неожиданное при загрузке предпросмотра. Пожалуйста, закройте и повторите попытку.",
