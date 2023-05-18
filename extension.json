@@ -518,7 +518,6 @@
 		"SkinAfterBottomScripts": "MobileFrontendHooks::onSkinAfterBottomScripts",
 		"SkinAddFooterLinks": "MobileFrontendHooks::onSkinAddFooterLinks",
 		"BeforePageRedirect": "MobileFrontendHooks::onBeforePageRedirect",
-		"DifferenceEngineBeforeDiffTable": "MobileFrontendHooks",
 		"DifferenceEngineViewHeader": "MobileFrontendHooks::onDifferenceEngineViewHeader",
 		"GetCacheVaryCookies": "MobileFrontendHooks::onGetCacheVaryCookies",
 		"SpecialPage_initList": "MobileFrontendHooks::onSpecialPageInitList",
@@ -564,11 +563,6 @@
 			"MobileFrontend\\Amc\\Hooks::onManualLogEntryBeforePublish",
 			"MobileFrontendHooks::onTaggableObjectCreation"
 		]
-	},
-	"HookHandlers": {
-		"MobileFrontendHooks": {
-			"class": "MobileFrontendHooks"
-		}
 	},
 	"config": {
 		"MFCustomSiteModules": {
