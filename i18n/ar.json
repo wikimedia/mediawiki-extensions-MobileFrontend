@@ -35,7 +35,8 @@
 			"زكريا",
 			"علاء",
 			"محمد أحمد عبد الفتاح",
-			"مشعل الحربي"
+			"مشعل الحربي",
+			"Alshamiri1"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "ما إذا كان المستخدم يعدل عبر واجهة المحمول",
@@ -112,7 +113,7 @@
 	"mobile-frontend-editor-viewing-source-page": "<strong>عرض مصدر</strong><span> $1</span>",
 	"mobile-frontend-editor-wait": "جار حفظ التعديل، انتظر رجاءً.",
 	"mobile-frontend-editor-loading": "جارٍ تحميل المحرر...",
-	"mobile-frontend-expand-sections-description": "قم بإظهار كل أقسام الصفحات افتراضيًا",
+	"mobile-frontend-expand-sections-description": "قم دائمًا بتوسيع أقسام صفحات المحتوى افتراضيًا.",
 	"mobile-frontend-expand-sections-status": "أظهر كل الأقسام",
 	"mobile-frontend-fontchanger-link": "حجم الخط",
 	"mobile-frontend-fontchanger-desc": "تعديل حجم الخط لتيسير القراءة.",
