@@ -1,5 +1,6 @@
 <?php
 
+use MediaWiki\Request\FauxRequest;
 use MediaWiki\ResourceLoader\Context;
 use MobileFrontend\ResourceLoaderModules\MobileConfig;
 use Psr\Log\NullLogger;

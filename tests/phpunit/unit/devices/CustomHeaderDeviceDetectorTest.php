@@ -2,8 +2,8 @@
 
 namespace Tests\MobileFrontend\Devices;
 
-use FauxRequest;
 use HashConfig;
+use MediaWiki\Request\FauxRequest;
 use MobileFrontend\Devices\CustomHeaderDeviceDetector;
 
 /**
