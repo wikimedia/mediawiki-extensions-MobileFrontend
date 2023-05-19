@@ -217,6 +217,7 @@ QUnit.test( '#getContent (no section)', function ( assert ) {
 			rvprop: [ 'content', 'timestamp' ],
 			titles: 'MediaWiki:Test.css',
 			intestactions: 'edit',
+			intestactionsautocreate: true,
 			intestactionsdetail: 'full',
 			formatversion: 2
 		} ), 'rvsection not passed to api request' );

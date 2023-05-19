@@ -551,10 +551,22 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 */
 	createAnonWarning: function ( options ) {
 		var $actions = $( '<div>' ).addClass( 'actions' ),
+			// Use MediaWiki ResourceLoader require(), not Webpack require()
+			contLangMessages = (
+				// eslint-disable-next-line camelcase
+				typeof __non_webpack_require__ !== 'undefined' ?
+					// eslint-disable-next-line no-undef
+					__non_webpack_require__( './contLangMessages.json' ) :
+					{}
+			),
+			msg = this.gateway.wouldautocreate ?
+				'mobile-frontend-editor-autocreatewarning' :
+				'mobile-frontend-editor-anonwarning',
 			$anonWarning = $( '<div>' ).addClass( 'anonwarning content' ).append(
 				new MessageBox( {
 					className: 'mw-message-box-notice anon-msg',
-					msg: mw.message( 'mobile-frontend-editor-anonwarning' ).parse()
+					// eslint-disable-next-line mediawiki/msg-doc
+					msg: mw.message( msg, contLangMessages[ 'tempuser-helppage' ] ).parse()
 				} ).$el,
 				$actions
 			),

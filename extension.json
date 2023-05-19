@@ -316,8 +316,15 @@
 				"mediawiki.jqueryMsg",
 				"mediawiki.widgets.AbandonEditDialog"
 			],
-			"scripts": [
-				"resources/dist/mobile.editor.overlay.js"
+			"packageFiles": [
+				"resources/dist/mobile.editor.overlay.js",
+				{
+					"name": "resources/dist/contLangMessages.json",
+					"callback": "MobileFrontendEditorHooks::getContentLanguageMessages",
+					"callbackParam": [
+						"tempuser-helppage"
+					]
+				}
 			],
 			"styles": [
 				"resources/mobile.editor.overlay/editor.less",
@@ -346,6 +353,7 @@
 				"mobile-frontend-editor-switch-editor",
 				"mobile-frontend-editor-switch-visual-editor",
 				"mobile-frontend-editor-anonwarning",
+				"mobile-frontend-editor-autocreatewarning",
 				"mobile-frontend-editor-editing",
 				"mobile-frontend-editor-blocked-drawer-action-login",
 				"mobile-frontend-editor-blocked-drawer-action-ok",

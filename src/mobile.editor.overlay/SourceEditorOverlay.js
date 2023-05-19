@@ -138,9 +138,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 	 */
 	postRender: function () {
 		var self = this,
-			config = this.visualEditorConfig,
-			options = this.options,
-			showAnonWarning = options.isAnon && !options.switched;
+			config = this.visualEditorConfig;
 
 		// log edit attempt
 		this.log( { action: 'ready' } );
@@ -215,15 +213,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 		// * mw-editfont-sans-serif
 		// * mw-editfont-serif
 		this.$content.addClass( 'mw-editfont-' + mw.user.options.get( 'editfont' ) );
-		if ( showAnonWarning ) {
-			this.$anonWarning = this.createAnonWarning( options );
-			this.$anonTalkWarning = this.createAnonTalkWarning();
-			this.$el.find( '.editor-container' ).append( [ this.$anonTalkWarning, this.$anonWarning ] );
-			this.$content.hide();
-			// the user has to click login, signup or edit without login,
-			// disable "Next" button on top right
-			this.$anonHiddenButtons = this.$el.find( '.overlay-header .continue, .editor-switcher' ).hide();
-		}
+
 		// make license links open in separate tabs
 		this.$el.find( '.license a' ).attr( 'target', '_blank' );
 
@@ -260,9 +250,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 			} );
 		}
 
-		if ( !showAnonWarning ) {
-			this._loadContent();
-		}
+		this._loadContent();
 	},
 
 	/**
@@ -277,7 +265,8 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 		this.$anonTalkWarning.hide();
 		// reenable "Next" button
 		this.$anonHiddenButtons.show();
-		this._loadContent();
+		this.$content.show();
+		this._resizeEditor();
 	},
 
 	/**
@@ -424,6 +413,19 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 				var content = result.text;
 
 				self.setContent( content );
+
+				var options = self.options;
+				var showAnonWarning = options.isAnon && !options.switched;
+
+				if ( showAnonWarning ) {
+					self.$anonWarning = self.createAnonWarning( options );
+					self.$anonTalkWarning = self.createAnonTalkWarning();
+					self.$el.find( '.editor-container' ).append( [ self.$anonTalkWarning, self.$anonWarning ] );
+					self.$content.hide();
+					// the user has to click login, signup or edit without login,
+					// disable "Next" button on top right
+					self.$anonHiddenButtons = self.$el.find( '.overlay-header .continue' ).hide();
+				}
 
 				if ( self.gateway.fromModified ) {
 					// Trigger intial EditorGateway#setContent and update save button

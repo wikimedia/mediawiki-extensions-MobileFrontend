@@ -83,6 +83,9 @@ function VisualEditorOverlay( options ) {
 	// Overlay is only shown after this is resolved. It must be resolved
 	// with the API response regardless of what we are waiting for.
 	this.dataPromise = this.origDataPromise.then( function ( data ) {
+		this.gateway.wouldautocreate =
+			data && data.visualeditor && data.visualeditor.wouldautocreate;
+
 		return surfaceReady.then( function () {
 			this.$el.removeClass( 'editor-overlay-ve-initializing' );
 			return data && data.visualeditor;
