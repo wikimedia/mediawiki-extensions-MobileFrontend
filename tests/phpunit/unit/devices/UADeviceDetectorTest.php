@@ -2,7 +2,7 @@
 
 namespace Tests\MobileFrontend\Devices;
 
-use FauxRequest;
+use MediaWiki\Request\FauxRequest;
 use MobileFrontend\Devices\UADeviceDetector;
 
 /**
