@@ -32,7 +32,6 @@ function SourceEditorOverlay( options, dataPromise ) {
 		title: options.title,
 		sectionId: options.sectionId,
 		oldId: options.oldId,
-		isNewPage: options.isNewPage,
 		fromModified: !!dataPromise,
 		preload: options.preload,
 		preloadparams: options.preloadparams,
@@ -413,6 +412,11 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 				var content = result.text;
 
 				self.setContent( content );
+
+				// If the loaded content is not the default content, enable the save button
+				if ( self.hasChanged() ) {
+					self.$el.find( '.continue, .submit' ).prop( 'disabled', false );
+				}
 
 				var options = self.options;
 				var showAnonWarning = options.isAnon && !options.switched;

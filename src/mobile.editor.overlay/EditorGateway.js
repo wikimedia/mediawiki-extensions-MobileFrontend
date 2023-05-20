@@ -11,7 +11,6 @@ var util = require( '../mobile.startup/util' ),
  * @param {string} options.title the title to edit
  * @param {string|null} options.sectionId the id of the section to operate edits on.
  * @param {number} [options.oldId] revision to operate on. If absent defaults to latest.
- * @param {boolean} [options.isNewPage] whether the page being created is new
  * @param {boolean} [options.fromModified] whether the page was loaded in a modified state
  * @param {string} [options.preload] the name of a page to preload into the editor
  * @param {Array} [options.preloadparams] parameters to prefill into the preload content
@@ -25,8 +24,7 @@ function EditorGateway( options ) {
 	this.preload = options.preload;
 	this.preloadparams = options.preloadparams;
 	this.editintro = options.editintro;
-	// return an empty section for new pages
-	this.content = ( options.isNewPage && !this.preload ) ? '' : undefined;
+	this.content = undefined;
 	this.fromModified = options.fromModified;
 	this.hasChanged = options.fromModified;
 }
@@ -118,6 +116,7 @@ EditorGateway.prototype = {
 				if ( pageObj.missing !== undefined ) {
 					if ( pageObj.preloadcontent ) {
 						self.content = pageObj.preloadcontent.content;
+						self.hasChanged = !pageObj.preloadisdefault;
 					} else {
 						self.content = '';
 					}
