@@ -358,6 +358,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 			];
 			// Note we do not use LinkRenderer here as this will render
 			// a broken link if the user page does not exist
+			// @phan-suppress-next-line SecurityCheck-XSS False positive related to T183174
 			$output->addHTML(
 				Html::openElement( 'div', $attrs ) .
 				$this->getLinkRenderer()->makeLink(
