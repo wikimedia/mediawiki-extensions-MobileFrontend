@@ -23,7 +23,7 @@ class MobileUIIntegrationTest extends MediaWikiIntegrationTestCase {
 	 * Data provider for testing Mobile::contentElement
 	 * @return array
 	 */
-	public function contentElementDataProvider() {
+	public static function contentElementDataProvider() {
 		return [
 			[
 				'<span>Test html</span>', 'test',

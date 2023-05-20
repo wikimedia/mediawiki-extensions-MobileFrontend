@@ -90,7 +90,7 @@ class MobileContextShouldDisplayMobileViewIntegrationTest extends MediaWikiInteg
 		$this->assertSame( $expected, $this->context->shouldDisplayMobileView() );
 	}
 
-	public function shouldDisplayMobileViewProvider() {
+	public static function shouldDisplayMobileViewProvider() {
 		return [
 
 			// By default, the mobile view shouldn't be displayed.

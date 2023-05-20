@@ -352,7 +352,7 @@ class MobilePageTest extends MediaWikiIntegrationTestCase {
 	 *
 	 * @return array
 	 */
-	public function getPlaceHolderThumbnailHtmlDataProvider() {
+	public static function getPlaceHolderThumbnailHtmlDataProvider() {
 		return [
 			[
 				'', '',
@@ -378,7 +378,7 @@ class MobilePageTest extends MediaWikiIntegrationTestCase {
 	 *
 	 * @return array
 	 */
-	public function getSmallThumbnailHtmlWithNoFileDataProvider() {
+	public static function getSmallThumbnailHtmlWithNoFileDataProvider() {
 		return [
 			[ false, '' ],
 			[ true, '' ]
@@ -390,7 +390,7 @@ class MobilePageTest extends MediaWikiIntegrationTestCase {
 	 *
 	 * @return array
 	 */
-	public function getSmallThumbnailHtmlWithNoThumbDataProvider() {
+	public static function getSmallThumbnailHtmlWithNoThumbDataProvider() {
 		return [
 			[ false, '' ],
 			[ true, '' ]
@@ -402,7 +402,7 @@ class MobilePageTest extends MediaWikiIntegrationTestCase {
 	 *
 	 * @return array
 	 */
-	public function getSmallThumbnailHtmlWidthLessThanHeightDataProvider() {
+	public static function getSmallThumbnailHtmlWidthLessThanHeightDataProvider() {
 		return [
 			// With width < height
 			[
@@ -422,7 +422,7 @@ class MobilePageTest extends MediaWikiIntegrationTestCase {
 	 *
 	 * @return array
 	 */
-	public function getSmallThumbnailHtmlWidthGreaterThanHeightDataProvider() {
+	public static function getSmallThumbnailHtmlWidthGreaterThanHeightDataProvider() {
 		return [
 			// With width > height
 			[

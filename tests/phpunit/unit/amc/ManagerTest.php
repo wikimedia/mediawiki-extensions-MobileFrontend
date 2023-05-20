@@ -25,7 +25,7 @@ class ManagerTest extends MediaWikiUnitTestCase {
 		return new Manager( $config, $mobileContext );
 	}
 
-	public function provideIsAvailable() {
+	public static function provideIsAvailable() {
 		yield 'MF AMC config: true, display mobile view: true, user is anon: false' => [ true, true, false, true ];
 
 		yield 'MF AMC config: false, display mobile view: true, user is anon: false' => [ false, true, false, false ];

@@ -55,7 +55,7 @@ class MoveLeadParagraphTransformTest extends \MediaWikiUnitTestCase {
 		);
 	}
 
-	public function provideIdentifyInfoboxElement(): array {
+	public static function provideIdentifyInfoboxElement(): array {
 		return [
 			[
 				'html' => '<p></p>',
@@ -151,7 +151,7 @@ class MoveLeadParagraphTransformTest extends \MediaWikiUnitTestCase {
 		libxml_clear_errors();
 	}
 
-	public function provideTransform() {
+	public static function provideTransform() {
 		$divinfobox = '<div class="infobox infobox_v3">infobox</div>';
 		$hatnote = '<div role="note" class="hatnote navigation-not-searchable">hatnote.</div>';
 		$infobox = '<table class="infobox">1</table>';

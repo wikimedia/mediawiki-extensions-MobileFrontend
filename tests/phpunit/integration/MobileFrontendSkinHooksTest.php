@@ -28,7 +28,7 @@ class MobileFrontendSkinHooksTest extends MediaWikiLangTestCase {
 		$this->assertSame( $expected, $actual );
 	}
 
-	public function provideGetTermsLinkData() {
+	public static function provideGetTermsLinkData() {
 		return [
 			[ true, null ],
 			[ false, '<a href="https://wiki.mobilefrontend.mf">Text should escape &lt;</a>' ]

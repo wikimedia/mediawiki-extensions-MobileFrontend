@@ -8,7 +8,7 @@ use MediaWiki\Request\FauxRequest;
 class ApiParseExtenderTest extends MediaWikiIntegrationTestCase {
 
 	/**
-	 * @dataProvider getData
+	 * @dataProvider provideData
 	 * @covers \MobileFrontend\Api\ApiParseExtender::onAPIGetAllowedParams
 	 */
 	public function testApi( array $params, array $expected ) {
@@ -46,7 +46,7 @@ class ApiParseExtenderTest extends MediaWikiIntegrationTestCase {
 		}
 	}
 
-	public function getData() {
+	public static function provideData() {
 		return [
 			[
 				[

@@ -197,7 +197,7 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 	/**
 	 * Dataprovider for testOnBeforePageDisplay
 	 */
-	public function onBeforePageDisplayDataProvider() {
+	public static function onBeforePageDisplayDataProvider() {
 		return [
 			// wgMobileUrlTemplate, wgMFNoindexPages, wgMFEnableXAnalyticsLogging, wgMFAutodetectMobileView,
 			// wgMFVaryOnUA, XanalyticsItems, alternate & canonical link, XAnalytics, Vary header User-Agent
@@ -368,7 +368,7 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 		self::assertSame( $expectedSkin, $skin->getSkinName() );
 	}
 
-	public function provideDefaultMobileSkin(): array {
+	public static function provideDefaultMobileSkin(): array {
 		return [
 			[ 'mobile-skin', 'default-skin', 'mobile-skin' ],
 			[ null, 'default-skin', 'default-skin' ]

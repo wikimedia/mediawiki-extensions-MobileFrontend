@@ -21,7 +21,7 @@ class HtmlClassUtilsTest extends \MediaWikiUnitTestCase {
 		$this->assertEquals( $expected,  HtmlClassUtils::parseClassString( ' class1   class2  ' ) );
 	}
 
-	public function parseClassStringProvider() {
+	public static function parseClassStringProvider() {
 		yield 'Empty string should return empty array' => [
 			'',
 			[]
@@ -64,7 +64,7 @@ class HtmlClassUtilsTest extends \MediaWikiUnitTestCase {
 		$this->assertEquals( $expected,  HtmlClassUtils::formClassString( $classes ) );
 	}
 
-	public function formClassStringProvider() {
+	public static function formClassStringProvider() {
 		yield [
 			[
 				'class1' => true,
@@ -108,7 +108,7 @@ class HtmlClassUtilsTest extends \MediaWikiUnitTestCase {
 		);
 	}
 
-	public function filterAllowedClassesProvider() {
+	public static function filterAllowedClassesProvider() {
 		yield [
 			[ 'class1' => true, 'class2' => false ],
 			[ 'class2' , 'class1' ],

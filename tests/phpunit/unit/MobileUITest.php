@@ -51,7 +51,7 @@ class MobileUITest extends \MediaWikiUnitTestCase {
 	 * ]
 	 * @return array
 	 */
-	public function iconClassDataProvider() {
+	public static function iconClassDataProvider() {
 		return [
 			[
 				'testicon', 'element', 'additionalclassnames',
@@ -92,7 +92,7 @@ class MobileUITest extends \MediaWikiUnitTestCase {
 	 * Data provider for testing Mobile::buttonClass().
 	 * @return array
 	 */
-	public function buttonClassDataProvider() {
+	public static function buttonClassDataProvider() {
 		return [
 			[
 				'progressive', 'additionalclassnames',
@@ -125,7 +125,7 @@ class MobileUITest extends \MediaWikiUnitTestCase {
 	 * Data provider for testing Mobile::anchorClass().
 	 * @return array
 	 */
-	public function anchorClassDataProvider() {
+	public static function anchorClassDataProvider() {
 		return [
 			[
 				'progressive', 'additionalclassnames',

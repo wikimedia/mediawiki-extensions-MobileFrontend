@@ -24,7 +24,7 @@ class SpecialMobileWatchlistTest extends MediaWikiIntegrationTestCase {
 		);
 	}
 
-	public function provideAddWatchlistHTML() {
+	public static function provideAddWatchlistHTML() {
 		$fakeRow = [
 			'rc_timestamp' => '20190425105407',
 			'rc_namespace' => '0',

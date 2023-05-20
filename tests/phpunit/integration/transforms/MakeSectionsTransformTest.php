@@ -52,32 +52,32 @@ class MakeSectionsTransformTest extends MediaWikiIntegrationTestCase {
 		libxml_clear_errors();
 	}
 
-	public function provideTransform() {
+	public static function provideTransform() {
 		// Test section:
 		// Test common based functionality
 
 		yield [
 			'',
 			true,
-			$this->makeSectionHtml( 0, '', false ),
+			self::makeSectionHtml( 0, '', false ),
 			'First section should be added if no content provided'
 		];
 
 		yield [
 			'<div>Body</div><h2>SHeading</h2><div>SBody</div>',
 			true,
-			$this->makeSectionHtml( 0, '<div>Body</div>', false )
-			. $this->makeSectionHeading( 'h2', 'SHeading', 1 )
-			. $this->makeSectionHtml( 1, '<div>SBody</div>', true ),
+			self::makeSectionHtml( 0, '<div>Body</div>', false )
+			. self::makeSectionHeading( 'h2', 'SHeading', 1 )
+			. self::makeSectionHtml( 1, '<div>SBody</div>', true ),
 			'Process heading, section and section body'
 		];
 
 		yield [
 			'<div>Body</div><h2>SHeading</h2><div>SBody</div>',
 			false,
-			$this->makeSectionHtml( 0, '<div>Body</div>', false )
-			. $this->makeSectionHeading( 'h2', 'SHeading', false )
-			. $this->makeSectionHtml( 1, '<div>SBody</div>', false ),
+			self::makeSectionHtml( 0, '<div>Body</div>', false )
+			. self::makeSectionHeading( 'h2', 'SHeading', false )
+			. self::makeSectionHtml( 1, '<div>SBody</div>', false ),
 			'No script shouldn`t use collapsible blocks '
 		];
 	}
@@ -90,7 +90,7 @@ class MakeSectionsTransformTest extends MediaWikiIntegrationTestCase {
 	 * @param int|bool $sectionNumber heading corresponds to or false if noscript
 	 * @return string
 	 */
-	private function makeSectionHeading( $heading, $innerHtml, $sectionNumber = 1 ) {
+	private static function makeSectionHeading( $heading, $innerHtml, $sectionNumber = 1 ) {
 		return "<$heading class=\"section-heading\""
 			. ( $sectionNumber === false ? '' : " onclick=\"mfTempOpenSection($sectionNumber)\"" )
 			. ">"
@@ -106,7 +106,7 @@ class MakeSectionsTransformTest extends MediaWikiIntegrationTestCase {
 	 * @param bool $isCollapsible whether the section is collapsible
 	 * @return string
 	 */
-	private function makeSectionHtml(
+	private static function makeSectionHtml(
 		$sectionNumber,
 		$contentHtml,
 		$isCollapsible

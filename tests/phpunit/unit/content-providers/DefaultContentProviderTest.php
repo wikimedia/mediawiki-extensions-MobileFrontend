@@ -22,7 +22,7 @@ class DefaultContentProviderTest extends \MediaWikiUnitTestCase {
 	/**
 	 * Data provider for testGetHtml()
 	 */
-	public function getHtmlDataProvider() {
+	public static function getHtmlDataProvider() {
 		return [
 			[ null ],
 			[ "<a>anchor</a>" ],

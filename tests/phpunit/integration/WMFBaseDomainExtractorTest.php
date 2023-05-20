@@ -17,7 +17,7 @@ class WMFBaseDomainExtractorTest extends \PHPUnit\Framework\TestCase {
 		$this->assertEquals( $baseDomain, $extractor->getCookieDomain( $server ) );
 	}
 
-	public function getBaseDomainProvider() {
+	public static function getBaseDomainProvider() {
 		return [
 			// Production wikis
 			[ 'http://wikipedia.org', '.wikipedia.org' ],

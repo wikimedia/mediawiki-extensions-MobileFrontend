@@ -41,7 +41,7 @@ class LazyImageTransformTest extends \MediaWikiUnitTestCase {
 		$this->assertEquals( $expected, $mf->getImageDimensions( $img ) );
 	}
 
-	public function provideGetImageDimensions() {
+	public static function provideGetImageDimensions() {
 		return [
 			[
 				[ 'width' => '500px', 'height' => '500px' ],
@@ -97,7 +97,7 @@ class LazyImageTransformTest extends \MediaWikiUnitTestCase {
 	/**
 	 * @see https://phabricator.wikimedia.org/T162623
 	 */
-	public function provideIsDimensionSmallerThanThreshold() {
+	public static function provideIsDimensionSmallerThanThreshold() {
 		return [
 			[ '40px', true ],
 			[ '50px', true ],
@@ -196,7 +196,7 @@ class LazyImageTransformTest extends \MediaWikiUnitTestCase {
 		libxml_clear_errors();
 	}
 
-	public function provideTransform() {
+	public static function provideTransform() {
 		$img = '<img src="kitty.jpg" width="500" height="400">';
 		$placeholder = '<span class="lazy-image-placeholder" style="width: 500px;height: 400px;" '
 			. 'data-src="kitty.jpg" data-width="500" data-height="400">&nbsp;</span>';

@@ -22,7 +22,7 @@ class MobileFormatterUnitTest extends \MediaWikiUnitTestCase {
 	 * Data provider for testing MobileFormatter::canApply
 	 * @return array
 	 */
-	public function canApplyDataProvider() {
+	public static function canApplyDataProvider() {
 		return [
 			[
 				'<h1>hello</h1>text<h2>text</h2>',

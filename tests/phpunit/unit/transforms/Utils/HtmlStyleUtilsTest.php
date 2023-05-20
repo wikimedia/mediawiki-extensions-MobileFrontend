@@ -16,7 +16,7 @@ class HtmlStyleUtilsTest extends \MediaWikiUnitTestCase {
 		$this->assertEquals( $expected,  HtmlStyleUtils::parseStyleString( $style ) );
 	}
 
-	public function parseStyleStringProvider() {
+	public static function parseStyleStringProvider() {
 		yield 'empty string should produce empty array' => [
 			'',
 			[]
@@ -56,7 +56,7 @@ class HtmlStyleUtilsTest extends \MediaWikiUnitTestCase {
 		$this->assertEquals( $expected, HtmlStyleUtils::formStyleString( $styles ) );
 	}
 
-	public function formStyleStringProvider() {
+	public static function formStyleStringProvider() {
 		yield 'Empty array should return empty string' => [
 			[],
 			''
@@ -92,7 +92,7 @@ class HtmlStyleUtilsTest extends \MediaWikiUnitTestCase {
 		);
 	}
 
-	public function filterAllowedStylesProvider() {
+	public static function filterAllowedStylesProvider() {
 		yield [
 			[ 'style1' => '', 'style2' => '10px' ],
 			[ 'style2' , 'style1' ],

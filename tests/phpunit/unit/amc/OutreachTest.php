@@ -46,7 +46,7 @@ class OutreachTest extends MediaWikiUnitTestCase {
 	}
 
 	/** @return Generator */
-	public function provideIsCampaignActive(): Generator {
+	public static function provideIsCampaignActive(): Generator {
 		yield '$mfAmcOutreach config enabled, expects campaign to be active' => [ true, true ];
 		yield '$mfAmcOutreach config disabled, expects campaign to be inactive' => [ false, false ];
 	}
@@ -63,7 +63,7 @@ class OutreachTest extends MediaWikiUnitTestCase {
 	}
 
 	/** @return Generator */
-	public function provideIsUserEligible(): Generator {
+	public static function provideIsUserEligible(): Generator {
 		yield '$mfAmcOutreach config enabled, user is eligible' => [ true, true ];
 		yield '$mfAmcOutreach config disabled, user is not eligible' => [ false, false ];
 	}

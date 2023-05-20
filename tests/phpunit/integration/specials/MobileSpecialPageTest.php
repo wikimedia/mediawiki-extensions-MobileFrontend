@@ -12,7 +12,7 @@ class MobileSpecialPageTest extends MediaWikiIntegrationTestCase {
 		$this->overrideConfigValue( MainConfigNames::Script, '/wiki/index.php' );
 	}
 
-	public function provideGetDesktopUrlForMobileHistory() {
+	public static function provideGetDesktopUrlForMobileHistory() {
 		return [
 			[
 				'SpecialMobileHistory',
@@ -56,7 +56,7 @@ class MobileSpecialPageTest extends MediaWikiIntegrationTestCase {
 		$this->assertEquals( $expected, $page->getDesktopUrl( $subPage ) );
 	}
 
-	public function provideGetDesktopUrlForMobileDiff() {
+	public static function provideGetDesktopUrlForMobileDiff() {
 		return [
 			[
 				'SpecialMobileDiff',

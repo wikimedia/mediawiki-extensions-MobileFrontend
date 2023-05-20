@@ -71,7 +71,7 @@ class UserModeTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/** @return Generator */
-	public function provideIsEnabledData(): Generator {
+	public static function provideIsEnabledData(): Generator {
 		// Structure: [ $mfAmcConfig, $shouldDisplayMV, $isAnon, $userOpt, $expected ]
 
 		yield 'AMC is disabled for anon users with user options set to 1' => [ true, true, true, '1', false ];
@@ -107,7 +107,7 @@ class UserModeTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/** @return Generator */
-	public function provideSetEnabledData(): Generator {
+	public static function provideSetEnabledData(): Generator {
 		yield 'Enable AMC for this user' => [ true ];
 		yield 'Disable AMC for this user ' => [ false ];
 	}
@@ -133,7 +133,7 @@ class UserModeTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/** @return Generator */
-	public function provideIsAvailableThrowsData(): Generator {
+	public static function provideIsAvailableThrowsData(): Generator {
 		yield 'AMC is not available when mobile view is not set and is registered user (config false)' =>
 			[ false, false, false ];
 		yield 'AMC is not available when mobile view is set and is registered user (config false)' =>

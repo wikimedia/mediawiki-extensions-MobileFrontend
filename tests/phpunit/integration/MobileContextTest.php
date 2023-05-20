@@ -128,7 +128,7 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 		$this->assertEquals( $expected, wfAssembleUrl( $parsedUrl ) );
 	}
 
-	public function updateMobileUrlHostProvider() {
+	public static function updateMobileUrlHostProvider() {
 		return [
 			[
 				'http://en.wikipedia.org/wiki/Gustavus_Airport',
@@ -169,7 +169,7 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 		$this->assertEquals( $desktop, $url );
 	}
 
-	public function updateDesktopUrlQueryProvider() {
+	public static function updateDesktopUrlQueryProvider() {
 		$baseUrl = 'http://en.m.wikipedia.org/wiki/Gustavus_Airport';
 
 		return [
@@ -197,7 +197,7 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 		$this->assertEquals( $desktop, wfAssembleUrl( $parsedUrl ) );
 	}
 
-	public function updateDesktopUrlHostProvider() {
+	public static function updateDesktopUrlHostProvider() {
 		return [
 			[
 				'http://bm.m.wikipedia.org/wiki/' . urlencode( 'Nyɛ_fɔlɔ' ),
@@ -272,7 +272,7 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 		$this->assertEquals( $assert, $context->getMobileAction() );
 	}
 
-	public function getMobileActionProvider() {
+	public static function getMobileActionProvider() {
 		return [
 			[ null ],
 			[ 'view_normal_site' ],
@@ -349,7 +349,7 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 		$this->assertEquals( $expected, $logItems[$trimmedKey] );
 	}
 
-	public function addAnalyticsLogItemProvider() {
+	public static function addAnalyticsLogItemProvider() {
 		return [
 			[ 'mf-m', [ 'a' ], 'a' ],
 			[ ' mf-m', [ 'b ' ], 'b' ],
@@ -373,7 +373,7 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 		$this->assertEquals( $expectedHeader, $context->getXAnalyticsHeader() );
 	}
 
-	public function getXAnalyticsHeaderProvider() {
+	public static function getXAnalyticsHeaderProvider() {
 		return [
 			[
 				null,
@@ -413,7 +413,7 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 		$this->assertEquals( $val, $logItems[$key] );
 	}
 
-	public function addAnalyticsLogItemFromXAnalyticsProvider() {
+	public static function addAnalyticsLogItemFromXAnalyticsProvider() {
 		return [
 			[ 'mf-m=a', 'mf-m', 'a' ],
 			// check key/val trimming
@@ -433,7 +433,7 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 		$this->assertEquals( $result, $context->getMobileHostToken( $domainTemplate ) );
 	}
 
-	public function getMobileHostTokenProvider() {
+	public static function getMobileHostTokenProvider() {
 		return [
 			[ '%h1.m.%h2.%h3', 'm.' ],
 			[ '', '' ],
@@ -451,7 +451,7 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 		$this->assertEquals( $isBeta, $mobileContext->isBetaGroupMember() );
 	}
 
-	public function optInProvider() {
+	public static function optInProvider() {
 		return [
 			[ [], false, true ],
 			[ [ MobileContext::OPTIN_COOKIE_NAME => MobileContext::MODE_BETA ], true, true ],
@@ -482,7 +482,7 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 		$this->assertEquals( $expectedLocation, $location );
 	}
 
-	public function provideToggleView() {
+	public static function provideToggleView() {
 		$token = '%h0.m.%h1.%h2';
 		return [
 			[ 'Foo', '/', '', '' ],
