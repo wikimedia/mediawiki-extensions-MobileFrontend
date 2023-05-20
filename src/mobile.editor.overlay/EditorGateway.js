@@ -1,6 +1,5 @@
 var util = require( '../mobile.startup/util' ),
-	actionParams = require( '../mobile.startup/actionParams' ),
-	veConfig = mw.config.get( 'wgVisualEditorConfig' );
+	actionParams = require( '../mobile.startup/actionParams' );
 
 /**
  * API that helps save and retrieve page content
@@ -87,6 +86,11 @@ EditorGateway.prototype = {
 			options = actionParams( {
 				prop: [ 'revisions', 'info' ],
 				rvprop: [ 'content', 'timestamp' ],
+				// TODO: Enable 'editintro' once there is user interface to display the messages
+				inprop: [ 'preloadcontent' /* , 'editintro' */ ],
+				inpreloadcustom: self.preload,
+				inpreloadparams: self.preloadparams,
+				/* ineditintrocustom: self.editintro, */
 				titles: self.title,
 				// get block information for this user
 				intestactions: 'edit',
@@ -112,20 +116,8 @@ EditorGateway.prototype = {
 				pageObj = resp.query.pages[0];
 				// page might not exist and caller might not have known.
 				if ( pageObj.missing !== undefined ) {
-					if ( self.preload && veConfig ) {
-						return self.api.get( actionParams( {
-							action: 'visualeditor',
-							paction: 'wikitext',
-							page: self.title,
-							editintro: self.editintro,
-							preload: self.preload,
-							preloadparams: self.preloadparams
-						} ) ).then( function ( response ) {
-							response = OO.getProp( response, 'visualeditor' ) || [];
-							self.content = response.content;
-
-							return resolve();
-						} );
+					if ( pageObj.preloadcontent ) {
+						self.content = pageObj.preloadcontent.content;
 					} else {
 						self.content = '';
 					}

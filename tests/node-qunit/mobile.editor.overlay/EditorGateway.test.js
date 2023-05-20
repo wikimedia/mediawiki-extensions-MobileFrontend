@@ -211,16 +211,11 @@ QUnit.test( '#getContent (no section)', function ( assert ) {
 	} );
 
 	return gateway.getContent().then( function () {
-		assert.true( spy.calledWith( {
+		assert.true( spy.calledWith( sinon.match( {
 			action: 'query',
-			prop: [ 'revisions', 'info' ],
-			rvprop: [ 'content', 'timestamp' ],
 			titles: 'MediaWiki:Test.css',
-			intestactions: 'edit',
-			intestactionsautocreate: true,
-			intestactionsdetail: 'full',
-			formatversion: 2
-		} ), 'rvsection not passed to api request' );
+			rvsection: undefined
+		} ) ), 'rvsection not passed to api request' );
 	} );
 } );
 
