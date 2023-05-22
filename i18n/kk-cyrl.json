@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Ajiniyaz Nurniyazov",
 			"Arystanbek",
 			"Batyrbek.kz",
 			"Eldar zh96",
@@ -68,7 +69,7 @@
 	"mobile-frontend-editor-error-preview": "Қате, алдын ала көру жүктелгенде, күтпеген бірдеңе орын алды. Жауып, қайта қосып көріңіз.",
 	"mobile-frontend-editor-keep-editing": "Өңдемені жалғастыру",
 	"mobile-frontend-editor-licensing": "Өзгерістерді сақтау арқылы үлесіңізді $1 {{PLURAL:$2|лицензиясы}} аясында жариялауға келісесіз.",
-	"mobile-frontend-editor-licensing-with-terms": "Өзгерістерді сақтау арқылы үлесіңізді $2 {{PLURAL:$3|лицензиясы}} аясында жариялауға келісесіз.",
+	"mobile-frontend-editor-licensing-with-terms": "Ózgerislerdi saqlaw arqalı siz óz úlesińizdi $2 {{PLURAL:$3|licenziyası|licenziyaları}} shártlerine muwapıq járiyalawǵa kelisim beresiz.",
 	"mobile-frontend-editor-terms-link": "[$1 Қолдану шарты]",
 	"mobile-frontend-editor-new-page-confirm": "{{SITENAME}} сайтында жаңа бет {{GENDER:$1|бастағыңыз келе ме}}?",
 	"mobile-frontend-editor-placeholder": "Бұл бөлім бос. Жетілдіру үшін бірінші болыңыз!",

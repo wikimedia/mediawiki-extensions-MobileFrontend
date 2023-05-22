@@ -33,6 +33,7 @@
 	"mobile-frontend-edit-signup-action": "<strong>Pomagajte izboljšati {{GRAMMAR:tožilnik|{{SITENAME}}}}.</strong><br />Registrirajte se za urejanje.",
 	"mobile-frontend-editor-anon": "Urejanje brez prijave",
 	"mobile-frontend-editor-anonwarning": "<strong>Opozorilo:</strong> Niste prijavljeni. Če boste opravili kakršno koli urejanje, bo vaš IP-naslov javno viden. Če se boste <strong>prijavili</strong> ali če si boste <strong>ustvarili račun</strong>, bodo poleg drugih prednosti vaša urejanja pripisana vašemu uporabniškemu imenu.",
+	"mobile-frontend-editor-autocreatewarning": "<strong>Opozorilo:</strong> Niste prijavljeni. Vaše rejanje bo pripisano <strong>[[$1|samodejno ustvarjenemu imenu]]</strong> tako, da bo v vaš brskalnik dodan piškotek. Uveljavljeni uporabniki bodo videli vaš IP-naslov. Če se boste <strong>prijavili</strong> ali če si boste <strong>ustvarili račun</strong>, bodo urejanja pripisana imenu, ki si ga boste izbrali, deležni pa boste tudi drugih prednosti.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Prijava",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "V redu",
 	"mobile-frontend-editor-blocked-drawer-action-randompage": "Pelji me na drugo stran",

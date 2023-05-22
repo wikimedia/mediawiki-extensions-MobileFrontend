@@ -65,6 +65,7 @@
 	"mobile-frontend-edit-signup-action": "<strong>{{SITENAME}} sitesine geliştirmemize yardımcı olun.</strong><br />Düzenlemek için kayıt olun.",
 	"mobile-frontend-editor-anon": "Oturum açmadan düzenle",
 	"mobile-frontend-editor-anonwarning": "<strong>Uyarı:</strong> Oturum açmadınız. Herhangi bir düzenleme yaparsanız IP adresiniz herkes tarafından görülebilir. <strong>Oturum açarsanız</strong> veya <strong>bir hesap oluşturursanız</strong>, düzenlemeleriniz diğer avantajların yanı sıra kullanıcı adınızla da ilişkilendirilir.",
+	"mobile-frontend-editor-autocreatewarning": "<strong>Uyarı:</strong> Oturum açmadınız. Düzenlemeniz, tarayıcınıza bir çerez eklenerek <strong>[[$1|kendiliğinden oluşturulmuş bir adla]]</strong> ilişkilendirilecektir. IP adresiniz güvenilir kullanıcılar tarafından görülecektir. <strong>Oturum açarsanız</strong> ya da <strong>hesap oluşturursanız</strong>, düzenlemeleriniz diğer kazanımlara ek olarak, seçtiğiniz bir adla ilişkilendirilir.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Oturum aç",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "Tamam",
 	"mobile-frontend-editor-blocked-drawer-action-randompage": "Beni başka bir sayfaya götür",
