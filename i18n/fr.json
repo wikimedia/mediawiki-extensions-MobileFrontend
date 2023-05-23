@@ -49,7 +49,8 @@
 			"Wyz",
 			"Yann.fauche",
 			"Yasten",
-			"عبد الحق فارح"
+			"عبد الحق فارح",
+			"Edu!"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si un utilisateur est ou non en cours de modification via l’interface mobile",
@@ -73,7 +74,7 @@
 	"mobile-frontend-edit-login-action": "<strong>Aider à améliorer {{SITENAME}}.</strong><br />Se connecter pour modifier.",
 	"mobile-frontend-edit-signup-action": "<strong>Aider à améliorer {{SITENAME}}.</strong><br />Se connecter pour modifier.",
 	"mobile-frontend-editor-anon": "Modifier sans se connecter",
-	"mobile-frontend-editor-anonwarning": "<strong>Attention :</strong> vous êtes déconnecté(e). Votre adresse IP sera affichée publiquement si vous modifiez quoi que ce soit. Si vous </strong>vous connectez</strong> ou <strong>créez un compte</strong>, vos modifications seront associées à votre nom d’utilisateur, parmi d’autres avantages.",
+	"mobile-frontend-editor-anonwarning": "<strong>Attention :</strong> vous êtes déconnecté(e). Votre adresse IP sera affichée publiquement si vous modifiez quoi que ce soit. Si vous <strong>vous connectez</strong> ou <strong>créez un compte</strong>, vos modifications seront associées à votre nom d’utilisateur, parmi d’autres avantages.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Se connecter",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "OK",
 	"mobile-frontend-editor-blocked-drawer-action-randompage": "M’amener sur une autre page",
