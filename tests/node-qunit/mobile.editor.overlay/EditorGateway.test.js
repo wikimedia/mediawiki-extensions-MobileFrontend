@@ -1,8 +1,9 @@
-let sandbox, EditorGateway, spy, postStub, apiReject, apiHappy, apiRvNoSection,
+let sandbox, EditorGateway, spy, postStub, missingPostStub, apiReject, apiHappy,
+	apiMissingPage, apiRvNoSection,
 	apiCaptchaFail, apiAbuseFilterDisallow, apiAbuseFilterWarning, apiAbuseFilterOther,
 	apiTestError, apiReadOnly, apiExpiredToken, apiWithSectionLine, apiHappyTestContent,
 	apiEmptySuccessResponse, apiNoSectionLine, apiRejectHttp,
-	happyResponse;
+	happyResponse, missingPageResponse, happyPostResponse;
 const
 	util = require( '../../../src/mobile.startup/util' ),
 	API_REQUEST_DATA = {
@@ -57,7 +58,22 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/EditorGateway', {
 				]
 			}
 		} );
+		missingPageResponse = util.Deferred().resolve( {
+			query: {
+				pages: [
+					{
+						missing: true
+					}
+				]
+			}
+		} );
+		happyPostResponse = util.Deferred().resolve( {
+			edit: {
+				result: 'Success'
+			}
+		} );
 		apiHappy = new mw.Api();
+		apiMissingPage = new mw.Api();
 		apiReject = new mw.Api();
 		apiRvNoSection = new mw.Api();
 		apiCaptchaFail = new mw.Api();
@@ -81,6 +97,7 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/EditorGateway', {
 			} )
 		);
 		spy = sandbox.stub( apiHappy, 'get' ).returns( happyResponse );
+		sandbox.stub( apiMissingPage, 'get' ).returns( missingPageResponse );
 		sandbox.stub( apiReject, 'get' ).returns( happyResponse );
 		sandbox.stub( apiRejectHttp, 'get' ).returns( happyResponse );
 		sandbox.stub( apiHappyTestContent, 'get' ).returns( happyResponse );
@@ -108,13 +125,8 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/EditorGateway', {
 			}
 		) );
 		sandbox.stub( apiRejectHttp, 'postWithToken' ).returns( util.Deferred().reject() );
-		postStub = sandbox.stub( apiHappy, 'postWithToken' ).returns(
-			util.Deferred().resolve( {
-				edit: {
-					result: 'Success'
-				}
-			} )
-		);
+		postStub = sandbox.stub( apiHappy, 'postWithToken' ).returns( happyPostResponse );
+		missingPostStub = sandbox.stub( apiMissingPage, 'postWithToken' ).returns( happyPostResponse );
 		sandbox.stub( apiEmptySuccessResponse, 'postWithToken' ).returns( util.Deferred().resolve( {} ) );
 		sandbox.stub( apiHappyTestContent, 'post' ).returns( util.Deferred().resolve( {
 			parse: {
@@ -235,20 +247,6 @@ QUnit.test( '#getContent', function ( assert ) {
 	} );
 } );
 
-QUnit.test( '#getContent, new page', function ( assert ) {
-	const gateway = new EditorGateway( {
-		api: apiHappy,
-		title: 'test',
-		isNewPage: true
-	} );
-
-	return gateway.getContent().then( function ( resp ) {
-		assert.strictEqual( resp.text, '', 'return empty section' );
-		assert.strictEqual( resp.blockinfo, undefined );
-		assert.false( spy.called, 'don\'t try to retrieve content using API' );
-	} );
-} );
-
 QUnit.test( '#getContent, missing section', function ( assert ) {
 	const gateway = new EditorGateway( {
 		api: apiRvNoSection,
@@ -312,18 +310,18 @@ QUnit.test( '#save, success', function ( assert ) {
 
 QUnit.test( '#save, new page', function ( assert ) {
 	const gateway = new EditorGateway( {
-		api: apiHappy,
-		title: 'Talk:test',
-		isNewPage: true
+		api: apiMissingPage,
+		title: 'Talk:test'
 	} );
 
-	gateway.getContent();
-	gateway.setContent( 'section 0' );
-	return gateway.save( {
-		summary: 'summary'
+	return gateway.getContent().then( function () {
+		gateway.setContent( 'section 0' );
+		return gateway.save( {
+			summary: 'summary'
+		} );
 	} ).then( function () {
 		assert.strictEqual( gateway.hasChanged, false, 'reset hasChanged' );
-		assert.true( postStub.calledWithMatch( 'csrf', util.extend( {}, API_REQUEST_DATA, {
+		assert.true( missingPostStub.calledWithMatch( 'csrf', util.extend( {}, API_REQUEST_DATA, {
 			title: 'Talk:test',
 			text: 'section 0',
 			summary: 'summary',

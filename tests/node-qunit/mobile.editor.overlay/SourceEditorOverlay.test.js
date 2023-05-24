@@ -106,7 +106,6 @@ QUnit.test( '#initialize, with given page and section', function ( assert ) {
 	// The gateway is initialized with the correct properties,
 	// particularly the correct section ID.
 	assert.strictEqual( editorOverlay.gateway.title, 'test' );
-	assert.strictEqual( editorOverlay.gateway.isNewPage, undefined );
 	assert.strictEqual( editorOverlay.gateway.oldId, undefined );
 	assert.strictEqual( editorOverlay.gateway.sectionId, '0' );
 
@@ -122,7 +121,6 @@ QUnit.test( '#initialize, without a section', function ( assert ) {
 
 	return getContentStub().then( function () {
 		assert.strictEqual( editorOverlay.gateway.title, 'test.css' );
-		assert.strictEqual( editorOverlay.gateway.isNewPage, undefined );
 		assert.strictEqual( editorOverlay.gateway.oldId, undefined );
 		assert.strictEqual( editorOverlay.gateway.sectionId, undefined );
 	} );

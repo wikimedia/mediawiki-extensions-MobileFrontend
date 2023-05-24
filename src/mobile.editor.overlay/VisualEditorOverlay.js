@@ -47,8 +47,7 @@ function VisualEditorOverlay( options ) {
 		api: options.api,
 		title: options.title,
 		sectionId: options.sectionId,
-		oldId: options.oldId,
-		isNewPage: options.isNewPage
+		oldId: options.oldId
 	} );
 
 	this.origDataPromise = this.options.dataPromise || mw.libs.ve.targetLoader.requestPageData(
