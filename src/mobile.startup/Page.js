@@ -94,6 +94,24 @@ class Page {
 	}
 
 	/**
+	 * Check if the visual editor is available on this page
+	 *
+	 * @return {boolean}
+	 */
+	isVisualAvailable() {
+		// FIXME: Should we consider default site options and user prefs?
+		var config = mw.config.get( 'wgVisualEditorConfig' );
+		if ( !config ) {
+			return false;
+		}
+		var visualEditorNamespaces = config.namespaces || [];
+
+		return !mw.config.get( 'wgVisualEditorDisabledByHook' ) &&
+			visualEditorNamespaces.indexOf( mw.config.get( 'wgNamespaceNumber' ) ) !== -1 &&
+			this.isWikiText();
+	}
+
+	/**
 	 * Checks whether the current page is the main page
 	 *
 	 * @return {boolean}
