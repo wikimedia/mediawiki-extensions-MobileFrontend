@@ -102,7 +102,7 @@
 	left: 0;
 	width: 100%;
 	background: #fff;
-	z-index: @z-indexOverlay;
+	z-index: @z-index-overlay-backdrop;
 	display: none;
 
 	&.visible {
@@ -220,7 +220,7 @@
 	width: 100%;
 	background: @background-color-base;
 	// prevent .page-list or VE surface overlaping the header when scrolling
-	z-index: @z-indexOverOverlay;
+	z-index: @z-index-overlay;
 
 	&.position-fixed {
 		position: fixed;
