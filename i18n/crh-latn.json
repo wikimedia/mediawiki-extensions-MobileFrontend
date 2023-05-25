@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Don Alessandro",
-			"TayfunEt."
+			"TayfunEt.",
+			"Zolgoyo"
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "deñiştirme tasviri yoq",
@@ -34,11 +35,11 @@
 	"mobile-frontend-editor-success": "Yahşı! Deñiştirme yayınlandı.",
 	"mobile-frontend-editor-success-landmark-1": "Tebrik etermiz, endi siz {{SITENAME}} yardım eterisiñiz!",
 	"mobile-frontend-editor-success-new-page": "Hayırlı bolsun, yañı saife yaratıñız!",
-	"mobile-frontend-editor-summary-placeholder": "Meselâ: Sabit yazım hatası, eklengen münderice",
+	"mobile-frontend-editor-summary-placeholder": "Meselâ: imlâ hatası tüzetildi, malümat qoşuldı",
 	"mobile-frontend-editor-summary-request": "Maqaleni qanday deñiştirdiñiz?",
 	"mobile-frontend-editor-summary": "Qısqa tarif:",
 	"mobile-frontend-editor-switch-editor": "Redaktor deñiştir",
-	"mobile-frontend-editor-switch-visual-editor": "Vizual bolaraq deñiştir",
+	"mobile-frontend-editor-switch-visual-editor": "Vizual olaraq deñiştir",
 	"mobile-frontend-editor-viewing-source-page": "<span>$1</span> <strong>saifesiniñ koduna qaraysıñız</strong>",
 	"mobile-frontend-editor-wait": "Deñiştirme saqlana, lütfen bekleñiz.",
 	"mobile-frontend-editor-loading": "Deñiştirme saifesi yüklene...",
@@ -87,11 +88,11 @@
 	"mobile-frontend-news-items": "Haberlerde",
 	"mobile-frontend-overlay-close": "Qapat",
 	"mobile-frontend-privacy-link-text": "Gizlilik",
-	"mobile-frontend-requires-title": "Saife qullanım tışı",
+	"mobile-frontend-requires-title": "Saife qullanılmay",
 	"mobile-frontend-return-to-page": "Saifege keri qayt",
 	"mobile-frontend-save-settings": "Saqla",
 	"mobile-frontend-search-content": "Saifeler içinde qıdırıñız",
-	"mobile-frontend-search-content-no-results": "<b>{{int:mobile-frontend-search-content}}</b> belki onday taparsıñız qıdırğanıñıznı.",
+	"mobile-frontend-search-content-no-results": "<b>{{int:mobile-frontend-search-content}}</b> belki onda qıdırğanıñıznı taparsıñız.",
 	"mobile-frontend-search-no-results": "Anavday adnan bir saife yoq.",
 	"mobile-frontend-settings-save": "Sazlamalar saqlandı.",
 	"mobile-frontend-talk-add-overlay-content-placeholder": "Fikiriñiz qanday?",
@@ -120,17 +121,17 @@
 	"tag-mobile_web_edit": "Mobil web deñiştirme",
 	"tag-mobile_web_edit-description": "Deñiştirme mobil web sayttan ettildi",
 	"mobile-frontend-loading-message": "Yüklene...",
-	"mobile-frontend-search-feedback-link-text": "Bizge fikiriñizni aytıñız.",
+	"mobile-frontend-search-feedback-link-text": "Bizge fikriñizni aytıñız.",
 	"mobile-frontend-search-feedback-prompt": "Qıdırğanıñıznı tapamadıñızmı?",
-	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions": "Başlıq tasvirleri",
+	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions": "Serleva tasvirleri",
 	"mobile-frontend-send-feedback": "Fikir yiber",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Yazı tipi büyükligi",
 	"mobile-frontend-mobile-option-amc": "Kelişken mod",
 	"mobile-frontend-mobile-option-amc-learn-more": "Daa fazla bilgi",
 	"mobile-frontend-mobile-option-amc-send-feedback": "Fikir yiber",
-	"mobile-frontend-user-pref-option": "Qullanıcı tercihleri",
-	"mobile-frontend-user-pref-link": "Tercihlerni ​​aç",
+	"mobile-frontend-user-pref-option": "Qullanıcı sazlamaları",
+	"mobile-frontend-user-pref-link": "Sazlamalarnı ​​aç",
 	"mobile-frontend-user-pref-feedback": "Fikir yiber",
 	"mobile-frontend-amc-outreach-no-thanks": "Yoq teşekkürler",
-	"prefs-mobile": "Mobil tercihler"
+	"prefs-mobile": "Mobil sazlamalar"
 }
