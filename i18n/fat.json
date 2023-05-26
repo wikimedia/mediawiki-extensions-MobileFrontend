@@ -3,6 +3,7 @@
 		"authors": [
 			"AkosuaamoafoaAA",
 			"Ebenoffen1",
+			"Leonard Nketsia",
 			"Robertjamal12"
 		]
 	},
@@ -47,12 +48,12 @@
 	"mobile-frontend-editor-disabled-anon": "Ɔwɔ dɛ ekɔ mu ansaana eetum aayɛ nsesa wɔ dɛm kratafa yi do.",
 	"mobile-frontend-editor-editing": "Nsesaeɛ",
 	"mobile-frontend-editor-editing-page": "<span><strong>Editing</strong> $1</span>",
-	"mobile-frontend-editor-error": "Nfomdo, nntum ankora nsesaeɛ no",
+	"mobile-frontend-editor-error": "Nfomdo, nsesa no nntɔɔ gua",
 	"mobile-frontend-editor-error-conflict": "Mfomdo, obi fofor asesa dɛm krataafa yi.",
 	"mobile-frontend-editor-error-loading": "Mfomdo, nnkotum ebuei nsesamufo yi.",
 	"mobile-frontend-editor-error-preview": "Mfomdo, a w'ani nndado siiɛ berɛ a ebue kane de no. Mepa wo kyew tom na sane bue bio.",
 	"mobile-frontend-editor-keep-editing": "Tua do sesa",
-	"mobile-frontend-editor-licensing": "Gye to mu dɛ ebɛgyae ntoboa no ahyɛ$1 {{PLURAL:$2|tumi krataa|tumi nkrataa}}ase berɛ a erekora nsesae no.",
+	"mobile-frontend-editor-licensing": "Egye to mu dɛ ibegyaa wo mboae no ahyɛ $1 {{PLURAL:$2|tumdze krataa|tumdze nkrataa}}ase ber a edze nsesa roto gua no.",
 	"mobile-frontend-editor-terms-link": "[$1 Nyehɛaɛ a cwɔ mu]",
 	"mobile-frontend-terms-text": "Nhyehyɛɛ a ɔfa no dwumadzi ho",
 	"mobile-frontend-view": "Mbrɛ ɔba wɔ mobael do",
