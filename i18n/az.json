@@ -13,10 +13,15 @@
 			"Şeyx Şamil"
 		]
 	},
+	"abusefilter-edit-builder-vars-user-mobile": "İstifadəçinin mobil interfeys vasitəsilə redaktə edib-etməməsi",
 	"mobile-frontend-account-create-captcha-placeholder": "Təsdiq kodu daxil et",
 	"mobile-frontend-changeslist-nocomment": "redaktənin izahı yoxdur",
+	"mobile-frontend-cite-error-title": "Sitatları yükləmə xətası",
+	"mobile-frontend-cite-error": "Səhv versiya identifikatoru səbəbindən sitatları yükləməyə cəhd edərkən problem baş verdi.",
+	"mobile-frontend-cite-none-available": "Bu səhifə üçün heç bir sitat yoxdur.",
 	"mobile-frontend-clear-search": "Təmizlə",
 	"mobile-frontend-copyright": "Əksi qeyd olunmayıbsa, bu məzmun $1 çərçivəsində yayımlanır.",
+	"mobile-frontend-desc": "Mobil Frontend",
 	"mobile-frontend-diffview-bytesadded": "$1 bayt əlavə edildi",
 	"mobile-frontend-diffview-bytesremoved": "$1 bayt çıxarıldı",
 	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}} saytının inkişaf etdirilməsinə kömək edin.</strong><br />Redaktə etmək üçün daxil olun.",
