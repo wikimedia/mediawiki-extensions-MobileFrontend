@@ -1,9 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Amire80"
+			"Amire80",
+			"Nikki"
 		]
 	},
+	"mobile-frontend-editor-blocked-drawer-action-login": "ᡩᠣᠰᡳᠮᠪᡳ",
+	"mobile-frontend-language-heading": "<strong>ᡤᡳᠰᡠᠨ</strong>",
 	"mobile-frontend-languages-header-page": "$1 - ᠇ᠨᡩᡝᡵᡝ ᡨᠠᠠᠯ",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "᠇ᠨᡩᡝᡵᡝ ᡨᠠᠠᠯ",
 	"mobile-frontend-main-menu-settings-heading": "ᡳᠨᠰᡨᡝᠯᠯᡝᠨ",

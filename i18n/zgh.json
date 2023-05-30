@@ -41,7 +41,7 @@
 	"mobile-frontend-editor-blocked-drawer-body-link": "ⵥⵕ ⵓⴳⴳⴰⵔ",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "ⵜⴰⵎⵏⵜⵉⵍⵜ",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|ⵉⵜⵜⵓⴳⴷⴰⵍ|ⵜⴻⵜⵜⴳⴷⴰⵍ}} ⵙ",
-	"mobile-frontend-editor-blocked-drawer-expiry-header": "ⵔⴰⴷ ⵉⵎⴷ ⵓⴳⴷⴷⵓⵍ ⴳ",
+	"mobile-frontend-editor-blocked-drawer-expiry-header": "ⵔⴰⴷ ⵉⵎⴷ ⵓⴳⴷⴰⵍ",
 	"mobile-frontend-editor-blocked-drawer-help": "ⵥⵕ ⵉⴼⵔⵓⵔⵉⵜⵏ",
 	"mobile-frontend-editor-generic-block-reason": "ⴰⵙⵔⴰⴳ ⴰⵔⵓⵙⵙⵉⵏ",
 	"mobile-frontend-editor-cancel": "ⵙⵔ",
