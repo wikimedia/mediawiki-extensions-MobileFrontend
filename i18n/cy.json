@@ -33,6 +33,8 @@
 	"mobile-frontend-editor-anon": "Golygu heb fewngofnodi",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Mewngofnodi",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "Iawn",
+	"mobile-frontend-editor-blocked-drawer-title": "Rydych chi wedi cael eich blocio rhag golygu {{SITENAME}}.",
+	"mobile-frontend-editor-blocked-drawer-title-ip": "Mae eich cyfeiriad IP wedi'i flocio rhag golygu {{SITENAME}}.",
 	"mobile-frontend-editor-blocked-drawer-body-link": "Gweld mwy",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Rheswm",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Rhwystrwyd}} gan",
