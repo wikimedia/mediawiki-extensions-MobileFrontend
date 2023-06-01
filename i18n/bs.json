@@ -71,6 +71,7 @@
 	"mobile-frontend-editor-viewing-source-page": "<strong>Pregled izvornog koda stranice</strong><span> $1</span>",
 	"mobile-frontend-editor-wait": "Čuvam izmjenu, sačekajte.",
 	"mobile-frontend-editor-loading": "Učitavam uređivač…",
+	"mobile-frontend-editor-toload": "Uređivač će se sad učitati. Ako i nakon nekoliko sekundi budete vidjeli ovu poruku, [$1 osvježite stranicu].",
 	"mobile-frontend-expand-sections-description": "Uvijek raširi odlomke svih stranica.",
 	"mobile-frontend-expand-sections-status": "Raširi sve odlomke",
 	"mobile-frontend-fontchanger-link": "Veličina fonta",
