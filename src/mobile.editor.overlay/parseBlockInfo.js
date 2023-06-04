@@ -21,8 +21,7 @@ module.exports = function parseBlockInfo( blockinfo ) {
 
 	// Workaround to parse a message parameter for mw.message, see T96885
 	function jqueryMsgParse( wikitext ) {
-		// eslint-disable-next-line new-cap
-		const parser = new mw.jqueryMsg.parser();
+		const parser = new mw.jqueryMsg.Parser();
 		try {
 			const ast = parser.wikiTextToAst( wikitext );
 			return parser.emitter.emit( ast ).html();
