@@ -3,6 +3,7 @@
 use MediaWiki\MediaWikiServices;
 use MobileFrontend\Api\ApiParseExtender;
 use MobileFrontend\ContentProviders\IContentProvider;
+use MobileFrontend\Hooks\HookRunner;
 use MobileFrontend\Transforms\LazyImageTransform;
 use MobileFrontend\Transforms\MakeSectionsTransform;
 use MobileFrontend\Transforms\MoveLeadParagraphTransform;
@@ -112,8 +113,8 @@ class ExtMobileFrontend {
 			$context
 		);
 
-		$hookContainer = $services->getHookContainer();
-		$hookContainer->run( 'MobileFrontendBeforeDOM', [ $context, $formatter ] );
+		$hookRunner = new HookRunner( $services->getHookContainer() );
+		$hookRunner->onMobileFrontendBeforeDOM( $context, $formatter );
 
 		$shouldLazyTransformImages = $featureManager->isFeatureAvailableForCurrentUser( 'MFLazyLoadImages' );
 		$leadParagraphEnabled = in_array( $ns, $config->get( 'MFNamespacesWithLeadParagraphs' ) );

@@ -2,6 +2,7 @@
 
 use MediaWiki\MediaWikiServices;
 use MobileFrontend\Devices\DeviceDetectorService;
+use MobileFrontend\Hooks\HookRunner;
 use MobileFrontend\WMFBaseDomainExtractor;
 use Wikimedia\IPUtils;
 
@@ -298,8 +299,8 @@ class MobileContext extends ContextSource {
 		$this->mobileView = $this->shouldDisplayMobileViewInternal();
 		if ( $this->mobileView ) {
 			$this->redirectMobileEnabledPages();
-			$hookContainer = MediaWikiServices::getInstance()->getHookContainer();
-			$hookContainer->run( 'EnterMobileMode', [ $this ] );
+			$hookRunner = new HookRunner( MediaWikiServices::getInstance()->getHookContainer() );
+			$hookRunner->onEnterMobileMode( $this );
 		}
 		return $this->mobileView;
 	}
@@ -624,9 +625,8 @@ class MobileContext extends ContextSource {
 	public function getMobileUrl( $url, $forceHttps = false ) {
 		if ( $this->shouldDisplayMobileView() ) {
 			$subdomainTokenReplacement = null;
-			'@phan-var string|null $subdomainTokenReplacement';
-			$hookContainer = MediaWikiServices::getInstance()->getHookContainer();
-			if ( $hookContainer->run( 'GetMobileUrl', [ &$subdomainTokenReplacement, $this ] ) ) {
+			$hookRunner = new HookRunner( MediaWikiServices::getInstance()->getHookContainer() );
+			if ( $hookRunner->onGetMobileUrl( $subdomainTokenReplacement, $this ) ) {
 				if ( $subdomainTokenReplacement !== null ) {
 					$mobileUrlHostTemplate = $this->parseMobileUrlTemplate( 'host' );
 					$mobileToken = $this->getMobileHostToken( $mobileUrlHostTemplate );

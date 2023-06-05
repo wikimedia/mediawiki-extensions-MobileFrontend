@@ -9,6 +9,7 @@ use MediaWiki\ResourceLoader as RL;
 use MediaWiki\ResourceLoader\ResourceLoader;
 use MobileFrontend\Api\ApiParseExtender;
 use MobileFrontend\ContentProviders\DefaultContentProvider;
+use MobileFrontend\Hooks\HookRunner;
 use MobileFrontend\Models\MobilePage;
 use MobileFrontend\Transforms\LazyImageTransform;
 use MobileFrontend\Transforms\MakeSectionsTransform;
@@ -124,8 +125,8 @@ class MobileFrontendHooks {
 			$skin = self::getDefaultMobileSkin( $config );
 		}
 
-		$hookContainer = $services->getHookContainer();
-		$hookContainer->run( 'RequestContextCreateSkinMobile', [ $mobileContext, $skin ] );
+		$hookRunner = new HookRunner( $services->getHookContainer() );
+		$hookRunner->onRequestContextCreateSkinMobile( $mobileContext, $skin );
 
 		return false;
 	}
@@ -282,9 +283,9 @@ class MobileFrontendHooks {
 
 		$provider = new DefaultContentProvider( $text );
 		$originalProviderClass = DefaultContentProvider::class;
-		$services->getHookContainer()->run( 'MobileFrontendContentProvider', [
-			&$provider, $out
-		] );
+		( new HookRunner( $services->getHookContainer() ) )->onMobileFrontendContentProvider(
+			$provider, $out
+		);
 
 		$isParse = ApiParseExtender::isParseAction(
 			$context->getRequest()->getText( 'action' )
@@ -844,8 +845,8 @@ class MobileFrontendHooks {
 			$out->addModuleStyles( [ 'mobile.init.styles' ] );
 
 			// Allow modifications in mobile only mode
-			$hookContainer = $services->getHookContainer();
-			$hookContainer->run( 'BeforePageDisplayMobile', [ &$out, &$skin ] );
+			$hookRunner = new HookRunner( $services->getHookContainer() );
+			$hookRunner->onBeforePageDisplayMobile( $out, $skin );
 		}
 
 		// T204691

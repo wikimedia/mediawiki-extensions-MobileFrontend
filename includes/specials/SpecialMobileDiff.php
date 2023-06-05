@@ -5,6 +5,7 @@ use MediaWiki\Revision\RevisionLookup;
 use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Revision\SlotRecord;
 use MediaWiki\User\UserIdentity;
+use MobileFrontend\Hooks\HookRunner;
 
 /**
  * Show the difference between two revisions of a page
@@ -48,7 +49,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	 * Takes 2 ids/keywords and validates them returning respective revisions
 	 *
 	 * @param string[] $revids Array of revision ids currently limited to 2 elements
-	 * @return RevisionRecord[]|null[] Array of previous and next revision. The next revision is
+	 * @return (RevisionRecord|null)[] Array of previous and next revision. The next revision is
 	 *   null if a bad parameter is passed
 	 */
 	private function getRevisionsToCompare( $revids ) {
@@ -132,10 +133,9 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		// Allow other extensions to load more stuff here
 		// Now provides RevisionRecord objects, breaking change,
 		// Thanks extension must be updated first
-		$hookContainer = MediaWikiServices::getInstance()->getHookContainer();
-		$hookContainer->run(
-			'BeforeSpecialMobileDiffDisplay',
-			[ &$output, $this->mobileContext, $revisions ]
+		$hookRunner = new HookRunner( MediaWikiServices::getInstance()->getHookContainer() );
+		$hookRunner->onBeforeSpecialMobileDiffDisplay(
+			$output, $this->mobileContext, $revisions
 		);
 
 		$output->addHTML( '<div id="mw-mf-diffview" class="content-unstyled"><div id="mw-mf-diffarea">' );
