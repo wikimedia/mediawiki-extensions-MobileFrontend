@@ -23,6 +23,7 @@
 	"mobile-frontend-categories-add-wait": "ကဏ္ဍများကို သိမ်းဆည်းနေသည်၊ ကျေးဇူးပြု၍ ခေတ္တစောင့်ပါ။",
 	"mobile-frontend-changeslist-nocomment": "တည်းဖြတ်မှုအတွက် စကားချပ် မရှိပါ",
 	"mobile-frontend-cite-error-title": "ကိုးကားများအား ဆွဲယူနေစဉ် အမှား",
+	"mobile-frontend-cite-none-available": "ဤစာမျက်နှာအတွက် ကိုးကားချက်များ မရရှိနိုင်ပါ။",
 	"mobile-frontend-clear-search": "ရှင်းလင်း",
 	"mobile-frontend-contributions-404-title": "ဆိုးသော အသုံးပြုသူအမည် ပေးထားသည်",
 	"mobile-frontend-copyright": "အကြောင်းအရာများကို အခြားမှတ်ချက်မရှိပါက $1 အောက်တွင် ရရှိနိုင်ပါသည်။",
@@ -133,6 +134,7 @@
 	"mobile-frontend-opt-in-explain": "{{SITENAME}} အစမ်းမူကွဲသည် စမ်းသပ်အဆင့် အင်္ဂါရပ်များကို စမ်းကြည့်ရန် နည်းလမ်းတစ်ခုဖြစ်ပြီး ကျွန်ုပ်တို့အား အကျိုးရှိသော အကြံပြုချက်ကို ပေးသည်",
 	"mobile-frontend-overlay-close": "ပိတ်ရန်",
 	"mobile-frontend-privacy-link-text": "ကိုယ်ရေးမူဝါဒ",
+	"mobile-frontend-references-citation": "ကိုးကား",
 	"mobile-frontend-requires-mobile": "ဤစာမျက်နှာသည် စားပွဲတင်ကွန်ပျူတာမြင်ကွင်းဖြင့် မရရှိနိုင်ပါ။ စာမျက်နှာအောက်ခြေရှိ မိုလ်ဘိုင်းမြင်ကွင်းလင့်ခ်ကို နှိပ်ပါ။",
 	"mobile-frontend-requires-title": "စာမျက်နှာ မရနိုင်ပါ",
 	"mobile-frontend-return-to-page": "စာမျက်နှာသို့ ပြန်သွားရန်",
@@ -202,6 +204,7 @@
 	"mobile-frontend-amc-outreach-no-thanks": "မလိုပါ၊ ကျေးဇူးတင်ပါသည်။",
 	"mobile-frontend-amc-outreach-enabled-message": "အဆင့်မြင့်မုဒ်ကို ယခု ခွင့်ပြုလိုက်ပါပြီ။ သင်၏အပြင်အဆင်များထဲတွင် ပြန်လည်ပယ်ဖျက်နိုင်ပါသည်။",
 	"mobile-frontend-amc-outreach-dismissed-message": "သင်၏အပြင်အဆင်များထဲတွင် မည်သည့်အချိန်မဆို ပြန်လည်ခွင့်ပြုနိုင်ပါသည်။",
+	"mobile-frontend-beta-only": "ဝန်ဆောင်မှုကို ဘီတာမုဒ်တွင်သာ ရနိုင်သည်",
 	"mobile-frontend-console-recruit": "ကျွန်ုပ်တို့၏ မိုလ်ဘိုင်းဆိုဒ်ကို ဘယ်လိုတည်ဆောက်သလဲ ပိုမိုလေ့လာပါ  @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"prefs-mobile": "မိုလ်ဘိုင်း ရွေးချယ်စရာများ"
 }
