@@ -7,7 +7,8 @@
 			"Sony dandiwal",
 			"Tow",
 			"ਗੁਰਪ੍ਰੀਤ ਹੁੰਦਲ",
-			"ਪ੍ਰਚਾਰਕ"
+			"ਪ੍ਰਚਾਰਕ",
+			"Nikki"
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "ਕੋਈ ਸੋਧ ਸਾਰ ਨਹੀਂ",
@@ -81,6 +82,7 @@
 	"mobile-frontend-terms-text": "ਵਰਤੋਂ ਦੀਆਂ ਸ਼ਰਤਾਂ",
 	"mobile-frontend-view": "ਮੋਬਾਈਲੀ ਦਿੱਖ",
 	"mobile-frontend-view-desktop": "ਡੈਸਕਟਾਪ",
+	"mobile-frontend-watchlist-add": "$1 ਨੂੰ ਆਪਣੀ ਧਿਆਨਸੂਚੀ ਵਿੱਚ ਸ਼ਾਮਲ ਕਰੋ",
 	"mobile-frontend-watchlist-back-home": "ਘਰ ਵਾਪਿਸ",
 	"mobile-frontend-watchlist-feed-empty": "ਹਾਲੀਆ ਬਦਲਾਵਾਂ ਨਾਲ ਕੋਈ ਸਫ਼ੇ ਨਹੀਂ ਹਨ।",
 	"mobile-frontend-watchlist-filter-all": "ਸਾਰੇ",
