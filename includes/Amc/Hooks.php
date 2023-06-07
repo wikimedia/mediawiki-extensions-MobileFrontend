@@ -81,12 +81,8 @@ final class Hooks {
 	 * @param \RecentChange $rc
 	 */
 	public static function onRecentChangeSave( \RecentChange $rc ) {
-		try {
-			// To be safe, we should use the User objected provided via RecentChange, not the
-			// currently logged-in user.
-			self::injectTagsIfPerformerUsesAMC( $rc, $rc->getPerformerIdentity() );
-		} catch ( \MWException $exception ) {
-			// ignore when performer is not found
-		}
+		// To be safe, we should use the User objected provided via RecentChange, not the
+		// currently logged-in user.
+		self::injectTagsIfPerformerUsesAMC( $rc, $rc->getPerformerIdentity() );
 	}
 }
