@@ -389,8 +389,8 @@ class SpecialMobileOptions extends MobileSpecialPage {
 			}
 
 			$latestUser = $this->getUser()->getInstanceForUpdate();
-			if ( $latestUser === null ) {
-				// The user is anon or could not be loaded from the database.
+			if ( $latestUser === null || !$latestUser->isNamed() ) {
+				// The user is anon, temp user or could not be loaded from the database.
 				return;
 			}
 
