@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Agilight",
+			"Karak-Kyzyl",
 			"Көпек",
 			"Монгуш Салим"
 		]
@@ -13,7 +14,7 @@
 	"mobile-frontend-privacy-link-text": "Хуу медээлел",
 	"mobile-frontend-terms-text": "Ажыглаарының байдалдары",
 	"mobile-frontend-view": "Мобильдиг янзызы",
-	"mobile-frontend-view-desktop": "Стационарлыг",
+	"mobile-frontend-view-desktop": "Стационарлыг янзызы",
 	"tag-mobile_edit": "Мобилдиг эдилге",
 	"tag-mobile_web_edit": "мобилдиг янзызындан эдилге"
 }
