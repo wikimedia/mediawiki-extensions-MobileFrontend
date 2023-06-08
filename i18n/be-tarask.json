@@ -6,7 +6,8 @@
 			"Red Winged Duck",
 			"Renessaince",
 			"Wizardist",
-			"Zedlik"
+			"Zedlik",
+			"Jarash"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ці рэдагуе ўдзельнік праз мабільны інтэрфэйс",
@@ -59,6 +60,7 @@
 	"mobile-frontend-fontchanger-option-large": "Вялікі",
 	"mobile-frontend-featured-article": "Сёньняшні абраны матэрыял",
 	"mobile-frontend-last-modified-date": "Апошняе рэдагаваньне ў $2 $1",
+	"mobile-frontend-last-modified-with-user-just-now": "[$3 Апошні раз {{GENDER:$1|рэдагавалася}} толькі што] {{PLURAL:$4|[$5 $2]|0=ананімным удзельнікам}}",
 	"mobile-frontend-main-menu-settings-heading": "Налады",
 	"mobile-frontend-missing-image": "Выява",
 	"mobile-frontend-news-items": "Навіны",
