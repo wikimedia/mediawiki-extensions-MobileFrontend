@@ -230,23 +230,9 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 		 * @return {bool}
 		 */
 		function shouldLoadVisualEditor() {
-			var
-				// FIXME: Should we consider default site options and user prefs?
-				isVisualEditorEnabled = !!veConfig,
-				preferredEditor = getPreferredEditor(),
-				visualEditorNamespaces = ( veConfig && veConfig.namespaces ) || [];
+			var preferredEditor = getPreferredEditor();
 
-			return isVisualEditorEnabled &&
-
-				// Only for pages with a wikitext content model
-				page.isWikiText() &&
-
-				// Only in enabled namespaces
-				visualEditorNamespaces.indexOf( mw.config.get( 'wgNamespaceNumber' ) ) !== -1 &&
-
-				// Not on pages which are outputs of the Page Translation feature
-				mw.config.get( 'wgTranslatePageTranslation' ) !== 'translation' &&
-
+			return page.isVisualAvailable() &&
 				(
 					// If the user prefers the VisualEditor or the user has no preference and
 					// the VisualEditor is the default editor for this wiki

@@ -37,13 +37,24 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/SourceEditorOverlay', {
 		sandbox.stub( window, 'scrollTo' );
 		sandbox.stub( mw.util, 'getUrl' ).returns( '/w/index.php?title=User:Test' );
 		sandbox.stub( mw.config, 'get' )
+			.withArgs( 'wgPageName' ).returns( 'User:Test' )
+			.withArgs( 'wgRelevantPageName' ).returns( 'User:Test' )
+			.withArgs( 'wgRevisionId' ).returns( 123 )
+			.withArgs( 'wgArticleId' ).returns( 321 )
+			.withArgs( 'wgNamespaceNumber' ).returns( 2 )
+			.withArgs( 'wgIsMainPage' ).returns( false )
 			.withArgs( 'wgFormattedNamespaces' ).returns( { 2: 'User' } )
 			.withArgs( 'wgNamespaceIds' ).returns( { user: 2 } );
-		sandbox.stub( mw.Title, 'makeTitle' ).returns( {
+		const stubTitle = {
 			getUrl: function () {
 				return '/w/index.php?title=User:Test';
+			},
+			getPrefixedText: function () {
+				return 'User:Test';
 			}
-		} );
+		};
+		sandbox.stub( mw.Title, 'makeTitle' ).returns( stubTitle );
+		sandbox.stub( mw.Title, 'newFromText' ).returns( stubTitle );
 		getContentStub.returns( util.Deferred().resolve( {
 			text: 'section 0',
 			blockinfo: null

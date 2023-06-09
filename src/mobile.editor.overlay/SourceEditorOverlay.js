@@ -8,7 +8,8 @@ var EditorOverlayBase = require( './EditorOverlayBase' ),
 	mfExtend = require( '../mobile.startup/mfExtend' ),
 	toast = require( '../mobile.startup/showOnPageReload' ),
 	setPreferredEditor = require( './setPreferredEditor' ),
-	VisualEditorOverlay = require( './VisualEditorOverlay' );
+	VisualEditorOverlay = require( './VisualEditorOverlay' ),
+	currentPage = require( '../mobile.startup/currentPage' );
 
 /**
  * Overlay that shows an editor
@@ -39,7 +40,8 @@ function SourceEditorOverlay( options, dataPromise ) {
 	} );
 	this.readOnly = !!options.oldId; // If old revision, readOnly mode
 	this.dataPromise = dataPromise || this.gateway.getContent();
-	if ( this.isVisualEditorEnabled() ) {
+	this.currentPage = currentPage();
+	if ( this.currentPage.isVisualAvailable() ) {
 		options.editSwitcher = true;
 	}
 	if ( this.readOnly ) {
@@ -94,24 +96,6 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 		this._resizeEditor();
 	},
 	/**
-	 * Check whether VisualEditor is enabled or not.
-	 *
-	 * @memberof SourceEditorOverlay
-	 * @instance
-	 * @return {boolean}
-	 */
-	isVisualEditorEnabled: function () {
-		var config = this.visualEditorConfig,
-			ns = config.namespaces;
-
-		return ns &&
-			ns.indexOf(
-				mw.config.get( 'wgNamespaceNumber' )
-			) > -1 &&
-			mw.config.get( 'wgTranslatePageTranslation' ) !== 'translation' &&
-			mw.config.get( 'wgPageContentModel' ) === 'wikitext';
-	},
-	/**
 	 * Wikitext Editor input handler
 	 *
 	 * @memberof SourceEditorOverlay
@@ -143,7 +127,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 		this.log( { action: 'ready' } );
 		this.log( { action: 'loaded' } );
 
-		if ( this.isVisualEditorEnabled() ) {
+		if ( this.currentPage.isVisualAvailable() ) {
 			mw.loader.using( 'ext.visualEditor.switching' ).then( function () {
 				var switchToolbar, windowManager, switchWindow,
 					toolFactory = new OO.ui.ToolFactory(),
