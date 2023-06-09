@@ -44,7 +44,8 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/SourceEditorOverlay', {
 			.withArgs( 'wgNamespaceNumber' ).returns( 2 )
 			.withArgs( 'wgIsMainPage' ).returns( false )
 			.withArgs( 'wgFormattedNamespaces' ).returns( { 2: 'User' } )
-			.withArgs( 'wgNamespaceIds' ).returns( { user: 2 } );
+			.withArgs( 'wgNamespaceIds' ).returns( { user: 2 } )
+			.withArgs( 'wgVisualEditorConfig' ).returns( { namespaces: [ 1, 2 ] } );
 		const stubTitle = {
 			getUrl: function () {
 				return '/w/index.php?title=User:Test';

@@ -232,16 +232,20 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 		function shouldLoadVisualEditor() {
 			var preferredEditor = getPreferredEditor();
 
-			return page.isVisualAvailable() &&
+			return page.isVESourceAvailable() || (
+				page.isVEVisualAvailable() &&
 				(
-					// If the user prefers the VisualEditor or the user has no preference and
-					// the VisualEditor is the default editor for this wiki
-					preferredEditor === 'VisualEditor' ||
-					// We've loaded it via the URL for this request
-					editorOverride === 'VisualEditor'
-				) &&
+					(
+						// If the user prefers visual mode or the user has no preference and
+						// the visual mode is the default editor for this wiki
+						preferredEditor === 'VisualEditor' ||
+						// We've loaded it via the URL for this request
+						editorOverride === 'VisualEditor'
+					) &&
 
-				editorOverride !== 'SourceEditor';
+					editorOverride !== 'SourceEditor'
+				)
+			);
 		}
 
 		/**
@@ -276,7 +280,9 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 			// Inform other interested code that we're loading the editor
 			mw.hook( 'mobileFrontend.editorOpening' ).fire();
 
-			editorOptions.mode = 'visual';
+			editorOptions.mode = mw.config.get( 'wgMFEnableVEWikitextEditor' ) && getPreferredEditor() === 'SourceEditor' ?
+				'source' :
+				'visual';
 			editorOptions.dataPromise = mw.loader.using( 'ext.visualEditor.targetLoader' ).then( function () {
 				abortableDataPromise = mw.libs.ve.targetLoader.requestPageData(
 					editorOptions.mode,
@@ -300,6 +306,13 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 				.then( function () {
 					mw.libs.ve.targetLoader.addPlugin( 'ext.visualEditor.mobileArticleTarget' );
 					mw.libs.ve.targetLoader.addPlugin( 'mobile.editor.overlay' );
+					if ( mw.config.get( 'wgMFEnableVEWikitextEditor' ) ) {
+						// Target loader only loads wikitext editor if the desktop
+						// preference is set.
+						// TODO: Have a cleaner API for this instead of duplicating
+						// the module name here.
+						mw.libs.ve.targetLoader.addPlugin( 'ext.visualEditor.mwwikitext' );
+					}
 					return mw.libs.ve.targetLoader.loadModules( editorOptions.mode );
 				} )
 				.then( function () {

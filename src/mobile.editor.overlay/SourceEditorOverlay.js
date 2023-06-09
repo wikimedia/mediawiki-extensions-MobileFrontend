@@ -41,7 +41,7 @@ function SourceEditorOverlay( options, dataPromise ) {
 	this.readOnly = !!options.oldId; // If old revision, readOnly mode
 	this.dataPromise = dataPromise || this.gateway.getContent();
 	this.currentPage = currentPage();
-	if ( this.currentPage.isVisualAvailable() ) {
+	if ( this.currentPage.isVEVisualAvailable() ) {
 		options.editSwitcher = true;
 	}
 	if ( this.readOnly ) {
@@ -127,7 +127,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 		this.log( { action: 'ready' } );
 		this.log( { action: 'loaded' } );
 
-		if ( this.currentPage.isVisualAvailable() ) {
+		if ( this.currentPage.isVEVisualAvailable() ) {
 			mw.loader.using( 'ext.visualEditor.switching' ).then( function () {
 				var switchToolbar, windowManager, switchWindow,
 					toolFactory = new OO.ui.ToolFactory(),
