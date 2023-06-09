@@ -53,7 +53,7 @@
 	"mobile-frontend-editor-blocked-drawer-help": "Ogled podrobnosti",
 	"mobile-frontend-editor-generic-block-reason": "Neznan razlog",
 	"mobile-frontend-editor-cancel": "Prekliči",
-	"mobile-frontend-editor-cancel-confirm": "Ali resnično želite zavreči svoje urejanje?",
+	"mobile-frontend-editor-cancel-confirm": "Ali resnično želite opustiti svoje urejanje?",
 	"mobile-frontend-editor-captcha-try-again": "Napačna koda, poskusite znova.",
 	"mobile-frontend-editor-continue": "Naprej",
 	"mobile-frontend-editor-disabled": "Stran je zaradi preprečevanja vandalizma zaščitena. [$1 Ogled vira]",

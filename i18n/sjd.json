@@ -7,6 +7,7 @@
 	},
 	"mobile-frontend-changeslist-nocomment": "нимэ̄нн элля вуайхэзэ баяс кырьйха",
 	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|ба̄ййт лашшэнҍ|ба̄йт лашшнэнҍ|ба̄ййтэ лашшэнҍ}}",
+	"mobile-frontend-editor-previewing-page": "Э̄ввткӣһчмушш",
 	"mobile-frontend-joined-just-now": "Еськ {{GENDER:$1|се̄брэ}}",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|Се̄брэ}} {{PLURAL:$2|$2 секунда|$2 секунда|$2 секундэдтӭ}} маӈас",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|Се̄брэ}} {{PLURAL:$2|$2 минута|$2 минута|$2 минутэдтӭ}} маӈас",
