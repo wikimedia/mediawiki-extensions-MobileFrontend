@@ -6,7 +6,6 @@ var EditorOverlayBase = require( './EditorOverlayBase' ),
 	EditorGateway = require( './EditorGateway' ),
 	fakeToolbar = require( '../mobile.init/fakeToolbar' ),
 	mfExtend = require( '../mobile.startup/mfExtend' ),
-	toast = require( '../mobile.startup/showOnPageReload' ),
 	setPreferredEditor = require( './setPreferredEditor' ),
 	VisualEditorOverlay = require( './VisualEditorOverlay' ),
 	currentPage = require( '../mobile.startup/currentPage' );
@@ -567,8 +566,8 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 	 * @memberof SourceEditorOverlay
 	 * @instance
 	 */
-	showSaveCompleteMsg: function ( msg ) {
-		toast.showOnPageReload( msg, { postEdit: true } );
+	showSaveCompleteMsg: function ( action ) {
+		mw.loader.require( 'mediawiki.action.view.postEdit' ).fireHookOnPageReload( action );
 	},
 
 	/**

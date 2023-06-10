@@ -36,10 +36,8 @@ class MobileFrontendEditorHooks {
 	 */
 	public static function getResourceLoaderMFConfigVars() {
 		$config = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Config' );
-		$coreConfig = MediaWikiServices::getInstance()->getMainConfig();
 
 		return [
-			'wgEditSubmitButtonLabelPublish' => $coreConfig->get( 'EditSubmitButtonLabelPublish' ),
 			// MFDefaultEditor should be `source`, `visual`, or `preference`
 			// `preference` means to fall back on the desktop `visualeditor-editor` setting (if VE has been used)
 			// editor.js
