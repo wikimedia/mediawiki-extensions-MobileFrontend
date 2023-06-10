@@ -551,7 +551,6 @@
 			"MobileFrontendHooks::onGetPreferences",
 			"MobileFrontend\\Amc\\Hooks::onGetPreferences"
 		],
-		"Gadgets::allowLegacy": "MobileFrontendHooks::onAllowLegacyGadgets",
 		"CentralAuthLoginRedirectData": "MobileFrontendHooks::onCentralAuthLoginRedirectData",
 		"CentralAuthSilentLoginRedirect": "MobileFrontendHooks::onCentralAuthSilentLoginRedirect",
 		"CustomEditor": "MobileFrontendEditorHooks::onCustomEditor",
