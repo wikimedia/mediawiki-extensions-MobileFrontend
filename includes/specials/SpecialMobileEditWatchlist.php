@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\MediaWikiServices;
+use MobileFrontend\Hooks\HookRunner;
 use MobileFrontend\Models\MobileCollection;
 use MobileFrontend\Models\MobilePage;
 
@@ -179,10 +180,10 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 		// Begin rendering of watchlist.
 		$watchlist = [ $ns => $allPages ];
 		$services = MediaWikiServices::getInstance();
-		$services->getHookContainer()->run(
-			'SpecialMobileEditWatchlist::images',
-			[ $this->getContext(), &$watchlist, &$images ]
-		);
+		( new HookRunner( $services->getHookContainer() ) )
+			->onSpecialMobileEditWatchlist__images(
+				$this->getContext(), $watchlist, $images
+			);
 
 		// create list of pages
 		$mobilePages = new MobileCollection();

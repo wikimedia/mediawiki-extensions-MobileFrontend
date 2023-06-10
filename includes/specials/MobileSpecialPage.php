@@ -5,6 +5,7 @@ use MediaWiki\MediaWikiServices;
 use MediaWiki\User\UserFactory;
 use MediaWiki\User\UserGroupManager;
 use MediaWiki\User\UserOptionsLookup;
+use MobileFrontend\Hooks\HookRunner;
 
 /**
  * Basic mobile implementation of SpecialPage to use in specific mobile special pages
@@ -125,8 +126,8 @@ class MobileSpecialPage extends SpecialPage {
 		if ( $rl->isModuleRegistered( $specialScriptModuleName ) ) {
 			$out->addModules( $specialScriptModuleName );
 		}
-		$hookContainer = MediaWikiServices::getInstance()->getHookContainer();
-		$hookContainer->run( 'MobileSpecialPageStyles', [ $id, $out ] );
+		$hookRunner = new HookRunner( MediaWikiServices::getInstance()->getHookContainer() );
+		$hookRunner->onMobileSpecialPageStyles( $id, $out );
 	}
 
 	/**
