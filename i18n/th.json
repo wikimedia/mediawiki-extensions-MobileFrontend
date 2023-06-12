@@ -84,6 +84,7 @@
 	"mobile-frontend-editor-viewing-source-page": "<strong>กำลังดูต้นฉบับของ</strong><span> $1</span>",
 	"mobile-frontend-editor-wait": "กำลังบันทึกการแก้ไข กรุณารอสักครู่",
 	"mobile-frontend-editor-loading": "กำลังโหลดเครื่องมือแก้ไข...",
+	"mobile-frontend-editor-toload": "กำลังโหลดตัวแก้ไข หากคุณยังคงเห็นข้อความนี้หลังจากไม่กี่วินาที โปรด[$1 โหลดหน้านี้ใหม่]",
 	"mobile-frontend-expand-sections-description": "ขยายส่วนต่าง ๆ ในหน้าโดยปริยายเสมอ",
 	"mobile-frontend-expand-sections-status": "ขยายส่วนทั้งหมด",
 	"mobile-frontend-fontchanger-link": "ขนาดอักษร",
