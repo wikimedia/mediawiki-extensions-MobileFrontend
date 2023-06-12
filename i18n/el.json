@@ -12,10 +12,13 @@
 			"Stam.nikos",
 			"SucreRouge",
 			"ZaDiak",
-			"Ανώνυμος Βικιπαιδιστής"
+			"Ανώνυμος Βικιπαιδιστής",
+			"Giannaras99",
+			"Gpbiza",
+			"NikosLikomitros"
 		]
 	},
-	"mobile-frontend-account-create-captcha-placeholder": "Εισαγάγετε τον κωδικό επιβεβαίωσης",
+	"mobile-frontend-account-create-captcha-placeholder": "Εισάγετε τον κωδικό επιβεβαίωσης",
 	"mobile-frontend-categories-heading": "<strong>Κατηγορίες</strong>",
 	"mobile-frontend-categories-subheading": "Η σελίδα ανήκει στις ακόλουθες κατηγορίες:",
 	"mobile-frontend-categories-nocat": "Αυτή η σελίδα δεν ανήκει σε καμία κατηγορία, ακόμη.",
@@ -118,6 +121,7 @@
 	"mobile-frontend-main-menu-settings-heading": "Ρυθμίσεις",
 	"mobile-frontend-media-details": "Λεπτομέρειες",
 	"mobile-frontend-media-license-link": "Πληροφορίες αδειοδότησης",
+	"mobile-frontend-media-load-fail-message": "Παρουσιάστηκε σφάλμα κατά τη φόρτωση αυτής της εικόνας",
 	"mobile-frontend-media-load-fail-retry": "Ανανέωση",
 	"mobile-frontend-missing-image": "Εικόνα",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 km}}",
@@ -140,6 +144,7 @@
 	"mobile-frontend-privacy-link-text": "Ιδιωτικότητα",
 	"mobile-frontend-references-citation": "Παραπομπή",
 	"mobile-frontend-references-list": "Εμφάνιση πλήρους λίστας παραπομπών",
+	"mobile-frontend-requires-title": "Η σελίδα δεν είναι διαθέσιμη",
 	"mobile-frontend-return-to-page": "Επιστροφή στη σελίδα",
 	"mobile-frontend-save-error": "Σφάλμα κατά την αποθήκευση των ρυθμίσεων. Παρακαλούμε βεβαιωθείτε ότι έχετε ενεργοποιημένα τα cookies.",
 	"mobile-frontend-save-settings": "Αποθήκευση",
@@ -161,9 +166,11 @@
 	"mobile-frontend-watchlist-a-z": "Κατάλογος",
 	"mobile-frontend-watchlist-a-z-empty-howto-alt": "Κάντε κλικ στο εικονίδιο με το αστέρι",
 	"mobile-frontend-watchlist-add": "Προστέθηκε  $1  στη λίστα παρακολούθησης σας",
+	"mobile-frontend-watchlist-back-home": "Επιστροφή στην αρχική σελίδα",
 	"mobile-frontend-watchlist-cta-button-login": "Είσοδος",
 	"mobile-frontend-watchlist-cta-button-signup": "Εγγραφή",
 	"mobile-frontend-watchlist-feed": "Τροποποιημένα",
+	"mobile-frontend-watchlist-feed-empty": "Δεν υπάρχουν σελίδες με πρόσφατες αλλαγές.",
 	"mobile-frontend-watchlist-filter-all": "Όλα",
 	"mobile-frontend-watchlist-filter-articles": "Σελίδες",
 	"mobile-frontend-watchlist-filter-other": "Άλλο",
@@ -187,6 +194,7 @@
 	"mobile-frontend-search-feedback-prompt": "Δεν βρήκατε αυτό που ψάχνατε;",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "Εισαγωγική παράγραφος",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Μέγεθος γραμματοσειράς",
+	"mobile-frontend-mobile-option-amc-learn-more": "Μάθετε περισσότερα",
 	"mobile-frontend-amc-outreach-no-thanks": "Όχι ευχαριστώ",
 	"prefs-mobile": "Προτιμήσεις κινητού"
 }
