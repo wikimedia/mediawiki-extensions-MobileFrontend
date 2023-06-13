@@ -921,16 +921,6 @@ class MobileFrontendHooks implements TextSlotDiffRendererTablePrefixHook {
 	}
 
 	/**
-	 * Gadgets::allowLegacy hook handler
-	 *
-	 * @return bool
-	 */
-	public static function onAllowLegacyGadgets() {
-		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
-		return !$context->shouldDisplayMobileView();
-	}
-
-	/**
 	 * CentralAuthLoginRedirectData hook handler
 	 * Saves mobile host so that the CentralAuth wiki could redirect back properly
 	 *
