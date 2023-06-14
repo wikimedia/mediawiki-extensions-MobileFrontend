@@ -1,11 +1,12 @@
 /**
  * SVGO Configuration
- * Compatible to v2.4.0+
+ * Compatible to v3.0.0+
  * Recommended options from:
  * https://www.mediawiki.org/wiki/Manual:Coding_conventions/SVG#Exemplified_safe_configuration
  */
 
-// eslint-disable-next-line strict
+'use strict';
+
 module.exports = {
 	plugins: [
 		{
@@ -13,7 +14,7 @@ module.exports = {
 			name: 'preset-default',
 			params: {
 				overrides: {
-					cleanupIDs: false,
+					cleanupIds: false,
 					removeDesc: false,
 					removeTitle: false,
 					removeViewBox: false,
