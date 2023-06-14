@@ -18,9 +18,12 @@
 			"Shirayuki"
 		]
 	},
-	"mobile-frontend-editor-licensing": "By saving changes, you agree to release your contribution under the $1 {{PLURAL:$2|licence|licences}}.",
-	"mobile-frontend-editor-licensing-with-terms": "By saving changes, you agree to the $1 and agree to release your contribution under the $2 {{PLURAL:$3|licence|licences}}.",
+	"mobile-frontend-editor-licensing": "By publishing changes, you agree to release your contribution under the $1 {{PLURAL:$2|licence|licences}}.",
+	"mobile-frontend-editor-licensing-with-terms": "By publishing changes, you agree to the $1 and agree to release your contribution under the $2 {{PLURAL:$3|licence|licences}}.",
+	"mobile-frontend-history-no-results": "The filter did not provide any history matches.",
 	"mobile-frontend-last-modified-date": "Last modified on $1, at $2",
 	"mobile-frontend-media-license-link": "Licence information",
+	"tag-mobile_edit": "Mobile edit",
+	"tag-advanced_mobile_edit": "Advanced mobile edit",
 	"tag-mobile_web_edit": "Mobile web edit"
 }
