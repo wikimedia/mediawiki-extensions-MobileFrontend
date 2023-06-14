@@ -547,10 +547,10 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 		setTimeout( function () {
 			if ( newRevId ) {
 				// Set a notify parameter similar to venotify in VisualEditor.
-				var uri = new mw.Uri( location.href );
-				uri.query.mfnotify = this.isNewPage ? 'created' : 'saved';
+				var url = new URL( location.href );
+				url.searchParams.set( 'mfnotify', this.isNewPage ? 'created' : 'saved' );
 				// eslint-disable-next-line no-restricted-properties
-				window.location.search = uri.getQueryString();
+				window.location.search = url.search;
 			} else {
 				// Null edit; do not add notify parameter.
 				// Note the "#" may be in the URL.

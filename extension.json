@@ -139,7 +139,7 @@
 				"mediawiki.jqueryMsg",
 				"mediawiki.router",
 				"mediawiki.storage",
-				"mediawiki.Uri",
+				"web2017-polyfills",
 				"mediawiki.ui.icon",
 				"mobile.ooui.icons",
 				"mobile.startup"
@@ -305,6 +305,7 @@
 				"mobile.user.icons",
 				"oojs-ui.styles.icons-editing-core",
 				"mediawiki.util",
+				"mediawiki.Uri",
 				"mediawiki.notification",
 				"mediawiki.editfont.styles",
 				"user.options",

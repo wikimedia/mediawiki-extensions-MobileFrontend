@@ -92,7 +92,7 @@ function getPreferredEditor() {
  * @param {Router} router
  */
 function setupEditor( page, skin, currentPageHTMLParser, router ) {
-	var uri, fragment, editorOverride,
+	var editorOverride,
 		overlayManager = OverlayManager.getSingleton(),
 		isNewPage = page.id === 0;
 
@@ -368,16 +368,11 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 	} );
 
 	$( '#ca-edit a' ).prop( 'href', function ( i, href ) {
-		try {
-			var editUri = new mw.Uri( href );
-			// By default the editor opens section 0 (lead section), rather than the whole article.
-			// This might be changed in the future (T210659).
-			editUri.query.section = '0';
-			return editUri.toString();
-		} catch ( e ) {
-			// T106244 - the href couldn't be parsed likely due to invalid UTF-8
-			return href;
-		}
+		const editUrl = new URL( href, location.href );
+		// By default the editor opens section 0 (lead section), rather than the whole article.
+		// This might be changed in the future (T210659).
+		editUrl.searchParams.set( 'section', '0' );
+		return editUrl.toString();
 	} );
 
 	// We use wgAction instead of getParamValue('action') as the former can be
@@ -389,17 +384,18 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 			editorOverride = 'SourceEditor';
 		}
 		// else: action=edit, for which we allow the default to take effect
-		fragment = '#/editor/' + ( mw.util.getParamValue( 'section' ) || ( mw.config.get( 'wgAction' ) === 'edit' ? 'all' : '0' ) );
+		const fragment = '#/editor/' + ( mw.util.getParamValue( 'section' ) || ( mw.config.get( 'wgAction' ) === 'edit' ? 'all' : '0' ) );
 		// eslint-disable-next-line no-restricted-properties
 		if ( window.history && history.pushState ) {
-			uri = mw.Uri();
-			delete uri.query.action;
-			delete uri.query.veaction;
-			delete uri.query.section;
+			const url = new URL( location.href );
+			url.searchParams.delete( 'action' );
+			url.searchParams.delete( 'veaction' );
+			url.searchParams.delete( 'section' );
+			url.hash = fragment;
 			// Note: replaceState rather than pushState, because we're
 			// just reformatting the URL to the equivalent-meaning for the
 			// mobile site.
-			history.replaceState( null, document.title, uri.toString() + fragment );
+			history.replaceState( null, document.title, url );
 		} else {
 			router.navigate( fragment );
 		}
