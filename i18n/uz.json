@@ -6,7 +6,8 @@
 			"CoderSI",
 			"Malikxan",
 			"Sociologist",
-			"TayfunEt."
+			"TayfunEt.",
+			"Zolgoyo"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Foydalanuvchi mobil interfeys orqali tahrir qiladimi yoki aksinchami?",
@@ -187,6 +188,7 @@
 	"mobile-frontend-mobile-option-amc-experiment-description": "Kengaytirilgan rejim munozara sahifalari, tarix sahifalari, foydalanuvchi asboblari va boshqa tahrirlash asboblariga oson kirish imkonini taqdim etadi.",
 	"mobile-frontend-mobile-option-amc-learn-more": "Koʻproq",
 	"mobile-frontend-mobile-option-amc-send-feedback": "Fikr-mulohaza yuborish",
+	"mobile-frontend-user-pref-option": "Foydalanuvchi moslamalari",
 	"mobile-frontend-user-pref-link": "Moslamalarni ochish",
 	"mobile-frontend-user-pref-feedback": "Fikr-mulohaza yuborish",
 	"mobile-frontend-amc-outreach-intro": "Yetuk rejim bilan tanishuv",
