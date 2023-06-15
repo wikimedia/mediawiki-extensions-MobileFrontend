@@ -220,10 +220,10 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 *
 	 * @memberof EditorOverlayBase
 	 * @instance
-	 * @param {number|null} newRevId ID of the newly created revision, or null if it was a null
-	 *  edit.
+	 * @param {number|null} newRevId ID of the newly created revision, or null if it was a null edit.
+	 * @param {string} [redirectUrl] URL to redirect to, if different than the current URL.
 	 */
-	onSaveComplete: function ( newRevId ) {
+	onSaveComplete: function ( newRevId, redirectUrl ) {
 		var
 			self = this;
 
@@ -250,7 +250,10 @@ mfExtend( EditorOverlayBase, Overlay, {
 		setTimeout( function () {
 			// Wait for any other teardown navigation to happen (e.g. router.back())
 			// before setting our final location.
-			if ( self.sectionId ) {
+			if ( redirectUrl ) {
+				// eslint-disable-next-line no-restricted-properties
+				window.location.href = redirectUrl;
+			} else if ( self.sectionId ) {
 				// Ideally we'd want to do this via replaceState (see T189173)
 				// eslint-disable-next-line no-restricted-properties
 				window.location.hash = '#' + self.sectionId;

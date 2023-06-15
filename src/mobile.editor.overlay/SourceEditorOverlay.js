@@ -515,17 +515,17 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 		this.showHidden( '.saving-header' );
 
 		this.gateway.save( options )
-			.then( function ( newRevId ) {
+			.then( function ( newRevId, redirectUrl ) {
 				var title = self.options.title;
 				// Special case behaviour of main page
-				if ( mw.config.get( 'wgIsMainPage' ) ) {
+				if ( mw.config.get( 'wgIsMainPage' ) && !redirectUrl ) {
 					// FIXME: Blocked on T189173
 					// eslint-disable-next-line no-restricted-properties
 					window.location = mw.util.getUrl( title );
 					return;
 				}
 
-				self.onSaveComplete( newRevId );
+				self.onSaveComplete( newRevId, redirectUrl );
 			}, function ( data ) {
 				self.onSaveFailure( data );
 			} );
@@ -535,16 +535,19 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 	 * @inheritdoc
 	 * @memberof SourceEditorOverlay
 	 * @instance
-	 * @param {number|null} newRevId ID of the newly created revision, or null if it was a null
-	 *  edit.
+	 * @param {number|null} newRevId ID of the newly created revision, or null if it was a null edit.
+	 * @param {string} [redirectUrl] URL to redirect to, if different than the current URL.
 	 */
-	onSaveComplete: function ( newRevId ) {
+	onSaveComplete: function ( newRevId, redirectUrl ) {
 		EditorOverlayBase.prototype.onSaveComplete.apply( this, arguments );
 
 		// The parent class changes the location hash in a setTimeout, so wait
 		// for that to happen before reloading.
 		setTimeout( function () {
-			if ( newRevId ) {
+			if ( redirectUrl ) {
+				// eslint-disable-next-line no-restricted-properties
+				window.location.href = redirectUrl;
+			} else if ( newRevId ) {
 				// Set a notify parameter similar to venotify in VisualEditor.
 				var url = new URL( location.href );
 				url.searchParams.set( 'mfnotify', this.isNewPage ? 'created' : 'saved' );
