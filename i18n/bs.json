@@ -54,6 +54,7 @@
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Blokirao|Blokirala}} Vas je",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "Blokada će isteći za",
 	"mobile-frontend-editor-blocked-drawer-help": "Detalji",
+	"mobile-frontend-editor-generic-block-reason": "Nepoznat razlog",
 	"mobile-frontend-editor-cancel": "Otkaži",
 	"mobile-frontend-editor-cancel-confirm": "Želite li zaista odbaciti svoje izmjene?",
 	"mobile-frontend-editor-captcha-try-again": "Pogrešan kôd, pokušajte ponovo.",
@@ -136,6 +137,7 @@
 	"mobile-frontend-media-load-fail-message": "Došlo je do greške pri učitavanju slike.",
 	"mobile-frontend-media-load-fail-retry": "Osvježi",
 	"mobile-frontend-missing-image": "Slika",
+	"mobile-frontend-tap-to-display-image": "Dodirnite za prikaz slike.",
 	"mobile-frontend-nearby-distance": "{{PLURAL:$1|$1 km}}",
 	"mobile-frontend-nearby-distance-meters": "{{PLURAL:$1|$1 m}}",
 	"mobile-frontend-nearby-error": "Funkcija \"U blizini\" {{GRAMMAR:genitiv|{{SITENAME}}}} trenutno je u kvaru.",
@@ -222,6 +224,7 @@
 	"mobile-frontend-search-feedback-prompt": "Niste mogli pronaći to što ste tražili?",
 	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions": "Opisi naslova",
 	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions-description": "Saznajte više o temi stranice pomoću kratkog opisa ispod naslova",
+	"mobile-frontend-send-feedback": "Komentiraj",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Veličina fonta",
 	"mobile-frontend-mobile-option-amc": "Napredni režim",
 	"mobile-frontend-mobile-option-amc-experiment-description": "Napredni režim nudi lak pristup stranicama za razgovor, historiji izmjena, korisničkim i drugim alatima za uređivanje.",
@@ -229,5 +232,6 @@
 	"mobile-frontend-mobile-option-amc-send-feedback": "Komentiraj",
 	"mobile-frontend-amc-outreach-intro": "Predstavljamo napredni režim",
 	"mobile-frontend-amc-outreach-enable": "Uključi napredni režim",
-	"mobile-frontend-amc-outreach-no-thanks": "Ne, hvala"
+	"mobile-frontend-amc-outreach-no-thanks": "Ne, hvala",
+	"prefs-mobile": "Mobilne postavke"
 }
