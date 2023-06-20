@@ -521,6 +521,25 @@ mfExtend( EditorOverlayBase, Overlay, {
 		}
 		this.onExit();
 		exit();
+		if ( mw.config.get( 'wgAction' ) === 'edit' ) {
+			// We got into the overlay via directly visiting an action=edit
+			// URL, which has been taken over. As such, depending on
+			// how we got here, the normal overlay process isn't going to
+			// produce the correct result.
+			setTimeout( function () {
+				// This needs to happen after the overlay-hide has completed
+				// so we have access to the "real" URL, and `exit`
+				// unfortunately doesn't expose a promise for this. There's
+				// several setTimeouts within the hide, so we're just going
+				// to use a long-enough setTimeout of our own to skip those.
+				if ( !mw.util.getParamValue( 'veaction' ) && !mw.util.getParamValue( 'action' ) ) {
+					// Use reload if possible, to emulate having gone back
+					location.reload();
+				} else {
+					location.href = mw.util.getUrl();
+				}
+			}, 100 );
+		}
 	},
 	onExit: function () {
 		// May not be set if overlay has not been previously shown

@@ -385,18 +385,20 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 		const fragment = '#/editor/' + ( mw.util.getParamValue( 'section' ) || ( mw.config.get( 'wgAction' ) === 'edit' ? 'all' : '0' ) );
 		// eslint-disable-next-line no-restricted-properties
 		if ( window.history && history.pushState ) {
+			// We're reformatting the action=edit URL into a view URL and
+			// replacing it into the history, and then will fall through to
+			// router.navigate which will move us to the editing URL for the
+			// mobile site. We do this because the editor overlay deeply
+			// expects to have been opened on top of an actual page, and e.g.
+			// closing the editor via the X will produce unexpected behavior
+			// otherwise.
 			const url = new URL( location.href );
 			url.searchParams.delete( 'action' );
 			url.searchParams.delete( 'veaction' );
 			url.searchParams.delete( 'section' );
-			url.hash = fragment;
-			// Note: replaceState rather than pushState, because we're
-			// just reformatting the URL to the equivalent-meaning for the
-			// mobile site.
 			history.replaceState( null, document.title, url );
-		} else {
-			router.navigate( fragment );
 		}
+		router.navigate( fragment );
 	}
 }
 
