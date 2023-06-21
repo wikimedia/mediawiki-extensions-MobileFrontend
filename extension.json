@@ -305,7 +305,6 @@
 				"mobile.user.icons",
 				"oojs-ui.styles.icons-editing-core",
 				"mediawiki.util",
-				"mediawiki.Uri",
 				"mediawiki.notification",
 				"mediawiki.editfont.styles",
 				"user.options",

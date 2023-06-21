@@ -125,9 +125,7 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 				contentDir: $contentText.attr( 'dir' ),
 				// Arrange preload content if we're on a page with those URL parameters
 				preload: url.searchParams.get( 'preload' ),
-				// Handle numbered array parameters like MediaWiki's PHP code does (T231382)
-				// eslint-disable-next-line max-len
-				preloadparams: new mw.Uri( url.toString(), { arrayParams: true } ).query.preloadparams,
+				preloadparams: mw.util.getArrayParam( 'preloadparams', url.searchParams ),
 				editintro: url.searchParams.get( 'editintro' )
 			},
 			animationDelayDeferred, abortableDataPromise, loadingOverlay, overlayPromise,
