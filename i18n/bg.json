@@ -18,13 +18,14 @@
 			"Vodnokon4e",
 			"Лорд Бъмбъри",
 			"පසිඳු කාවින්ද",
-			"TayfunEt."
+			"TayfunEt.",
+			"Zolgoyo"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Редактира ли потребителя от мобилен интерфейс",
 	"mobile-frontend-account-create-captcha-placeholder": "Въведете код за потвърждение",
 	"mobile-frontend-changeslist-nocomment": "редакция без резюме",
-	"mobile-frontend-cite-error-title": "Грешка при зареждане на цитати",
+	"mobile-frontend-cite-error-title": "Грешка при зареждане на цитирания",
 	"mobile-frontend-clear-search": "Изчистване",
 	"mobile-frontend-copyright": "Съдържанието е достъпно под условията на лиценза $1, освен ако не е посочено друго.",
 	"mobile-frontend-diffview-anonymous": "Анонимен потребител",
