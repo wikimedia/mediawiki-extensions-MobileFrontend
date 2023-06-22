@@ -108,7 +108,7 @@
 	"mobile-frontend-editor-viewing-source-page": "<strong>Перегляд джерела</strong><span> $1</span>",
 	"mobile-frontend-editor-wait": "Збереження редагування, зачекайте.",
 	"mobile-frontend-editor-loading": "Завантаження редактора…",
-	"mobile-frontend-expand-sections-description": "Завжди розгортати розділи усіх сторінок за замовчуванням.",
+	"mobile-frontend-expand-sections-description": "Завжди розгортати розділи контентових сторінок за замовчуванням.",
 	"mobile-frontend-expand-sections-status": "Розгорнути всі розділи",
 	"mobile-frontend-fontchanger-link": "Розмір шрифту",
 	"mobile-frontend-fontchanger-desc": "Підлаштувати розмір шрифту для зручності читання.",

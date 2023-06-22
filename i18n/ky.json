@@ -55,7 +55,7 @@
 	"mobile-frontend-editor-continue": "Кийинки",
 	"mobile-frontend-editor-disabled": "Бул барак вандализмди алдын алуу үчүн корголгон. [ $1 Булакты көрүү]",
 	"mobile-frontend-editor-disabled-anon": "Бул баракты түзөтүү үчүн системага кирүүңүз керек.",
-	"mobile-frontend-editor-editing": "Оңдоп-түзөө",
+	"mobile-frontend-editor-editing": "Түзөтүү",
 	"mobile-frontend-editor-editing-page": "<span>$1 <strong>баракча түзөтүлүүдө</strong></span>",
 	"mobile-frontend-editor-error": "Ката, оңдоп-түзөтүү сакталган жок.",
 	"mobile-frontend-editor-error-conflict": "Ката, башка колдонуучу бул баракты түзөттү.",
@@ -114,6 +114,7 @@
 	"mobile-frontend-view": "Мобилдик көрүнүш",
 	"mobile-frontend-view-desktop": "Компьютердик көрүнүш",
 	"mobile-frontend-watchlist-cta-button-login": "Кирүү",
+	"mobile-frontend-user-page-describe-yourself-editors": "түзөтүүчүлөр",
 	"tag-mobile_edit": "Мобилдик оңдоо",
 	"tag-mobile_web_edit": "Мобилдик версиясынан оңдоо"
 }
