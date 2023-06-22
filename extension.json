@@ -304,6 +304,7 @@
 				"mobile.editor.images",
 				"mobile.user.icons",
 				"oojs-ui.styles.icons-editing-core",
+				"mediawiki.action.view.postEdit",
 				"mediawiki.util",
 				"mediawiki.Uri",
 				"mediawiki.notification",

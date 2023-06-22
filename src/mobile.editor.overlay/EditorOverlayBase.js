@@ -235,19 +235,15 @@ mfExtend( EditorOverlayBase, Overlay, {
 		this.pageGateway.invalidatePage( title );
 
 		if ( newRevId ) {
-			mw.loader.using( 'mediawiki.action.view.postEdit' ).then( function () {
-				var msg;
-				if ( self.isNewPage ) {
-					msg = mw.msg( 'postedit-confirmation-created', mw.user );
-				} else if ( self.options.oldId ) {
-					msg = mw.msg( 'postedit-confirmation-restored', mw.user );
-				} else if ( mw.config.get( 'wgEditSubmitButtonLabelPublish' ) ) {
-					msg = mw.msg( 'postedit-confirmation-published', mw.user );
-				} else {
-					msg = mw.msg( 'postedit-confirmation-saved', mw.user );
-				}
-				self.showSaveCompleteMsg( msg );
-			} );
+			var action;
+			if ( self.isNewPage ) {
+				action = 'created';
+			} else if ( self.options.oldId ) {
+				action = 'restored';
+			} else {
+				action = 'saved';
+			}
+			self.showSaveCompleteMsg( action );
 		}
 
 		// Ensure we don't lose this event when logging
@@ -279,13 +275,10 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 * @inheritdoc
 	 * @memberof VisualEditorOverlay
 	 * @instance
-	 * @param {string} msg Message
+	 * @param {string} action One of 'saved', 'created', 'restored'
 	 */
-	showSaveCompleteMsg: function ( msg ) {
-		// Fire a hook after an edit was saved, like in MediaWiki core.
-		mw.hook( 'postEdit' ).fire( {
-			message: msg
-		} );
+	showSaveCompleteMsg: function ( action ) {
+		mw.loader.require( 'mediawiki.action.view.postEdit' ).fireHook( action );
 	},
 	/**
 	 * Executed when page save fails. Handles logging the error. Subclasses
