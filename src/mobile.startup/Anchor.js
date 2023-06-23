@@ -39,9 +39,9 @@ class Anchor extends View {
 	 */
 	get template() {
 		return util.template( `
-<a {{#href}}href="{{href}}"{{/href}} class="mw-ui-anchor
-	{{#progressive}} mw-ui-progressive{{/progressive}}
-	{{#destructive}} mw-ui-destructive{{/destructive}}
+<a {{#href}}href="{{href}}"{{/href}} class="mw-mf-anchor
+	{{#progressive}} mw-mf-anchor-progressive{{/progressive}}
+	{{#destructive}} mw-mf-anchor-destructive{{/destructive}}
 	 {{additionalClassNames}}">{{label}}</a>
 	` );
 	}

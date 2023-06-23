@@ -9,7 +9,7 @@ module.exports = {
 				Log in
 			</a>
 			<div class="cta-drawer__anchors">
-				<a href=" signUp " class=" mw-ui-anchor mw-ui-progressive ">
+				<a href=" signUp " class=" mw-mf-anchor mw-mf-anchor-progressive ">
 					Sign up
 				</a>
 			</div>
@@ -25,7 +25,7 @@ module.exports = {
 				custom log in
 			</a>
 			<div class="cta-drawer__anchors">
-				<a href=" customSignUp " class=" mw-ui-anchor mw-ui-progressive ">
+				<a href=" customSignUp " class=" mw-mf-anchor mw-mf-anchor-progressive ">
 					custom sign up
 				</a>
 			</div>

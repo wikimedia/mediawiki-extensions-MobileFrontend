@@ -57,17 +57,6 @@ class MobileUI {
 	}
 
 	/**
-	 * Get CSS classes for anchors
-	 * @param string $modifier Type of anchor (progressive, destructive)
-	 * @param string $additionalClassNames additional class names you want to associate
-	 *  with the anchor element
-	 * @return string class name for use with HTML element
-	 */
-	public static function anchorClass( $modifier = '', $additionalClassNames = '' ) {
-		return self::semanticClass( 'mw-ui-anchor', $modifier, $additionalClassNames );
-	}
-
-	/**
 	 * Mark some html as being content
 	 * @param string $html HTML content
 	 * @param string $className additional class names
