@@ -42,6 +42,5 @@
 	"apihelp-parse-param-mobileformat": "{{doc-apihelp-param|parse|mobileformat}}",
 	"apihelp-parse-param-noimages": "{{doc-apihelp-param|parse|noimages}}",
 	"apihelp-parse-param-mainpage": "{{doc-apihelp-param|parse|mainpage}}",
-	"apihelp-webapp-manifest-description": "{{doc-apihelp-description|webapp-manifest}}",
 	"apihelp-webapp-manifest-summary": "{{doc-apihelp-summary|webapp-manifest}}"
 }

@@ -11,6 +11,5 @@
 	"apihelp-parse-param-mobileformat": "Return parse output in a format suitable for mobile devices.",
 	"apihelp-parse-param-noimages": "Disable images in mobile output.",
 	"apihelp-parse-param-mainpage": "Apply mobile main page transformations.",
-	"apihelp-webapp-manifest-description": "Returns a webapp manifest.",
 	"apihelp-webapp-manifest-summary": "Returns a webapp manifest."
 }
