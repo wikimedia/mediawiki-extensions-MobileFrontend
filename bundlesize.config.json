@@ -1,7 +1,7 @@
 [
 	{
 		"resourceModule": "mobile.startup",
-		"maxSize": "22KB"
+		"maxSize": "22.6KB"
 	},
 	{
 		"resourceModule": "mobile.editor.overlay",
@@ -77,7 +77,7 @@
 	},
 	{
 		"resourceModule": "mobile.special.pagefeed.styles",
-		"maxSize": "0.7KB"
+		"maxSize": "0.8KB"
 	},
 	{
 		"resourceModule": "mobile.special.mobilediff.images",
