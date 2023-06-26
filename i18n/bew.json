@@ -27,7 +27,7 @@
 	"mobile-frontend-editor-anonwarning": "<strong>Wanti-wanti:</strong> Lu kaga' lagi masup. Lu punya aderès IP bakal kiatan ama halayak umum kalo lu banyak bikin permakan. Kalo lu  <strong>masup</strong> atawa <strong>ngeja rèkening</strong>, lu punya permakan bakal dinisbatin ke lu punya nama pemaké, beserènta macem-macem keuntungan laènnya.",
 	"mobile-frontend-editor-autocreatewarning": "<strong>Wanti-wanti:</strong> Lu belon masup. Lu punya permakan bakalan dinisbatin ke <strong>[[$1|nama nyang dibuat otomatis]]</strong> dengen nambahin kuki ke lu punya pengorag. Lu punya aderès IP bakalan kiatan ke pemaké-pemaké nyang kepercaya. Kalo lu <strong>masup</strong> atawa <strong>ngeja rèkening</strong>, lu punya permakan bakal dinisbatin ke nama nyang lu pilih, beserènta manpaat laènnya.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Masup",
-	"mobile-frontend-editor-blocked-drawer-action-ok": "Baè’",
+	"mobile-frontend-editor-blocked-drawer-action-ok": "Baè'",
 	"mobile-frontend-editor-blocked-drawer-action-randompage": "Bawa gua ke halaman laèn",
 	"mobile-frontend-editor-blocked-drawer-title": "Lu udah diblokir deri mermak {{SITENAME}}.",
 	"mobile-frontend-editor-blocked-drawer-title-partial": "Lu udah diblokir deri mermak ni halaman.",

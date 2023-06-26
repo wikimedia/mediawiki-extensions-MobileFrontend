@@ -10,6 +10,5 @@
 	"apihelp-parse-param-mobileformat": "Trả về văn bản đã lọc theo một định dạng thích hợp với thiết bị di động.",
 	"apihelp-parse-param-noimages": "Tắt hình ảnh trên di động.",
 	"apihelp-parse-param-mainpage": "Áp dụng chuyển đổi trang chính di động.",
-	"apihelp-webapp-manifest-description": "Trả về bảng kê khai ứng dụng web.",
 	"apihelp-webapp-manifest-summary": "Trả về bảng kê khai ứng dụng web."
 }

@@ -14,6 +14,5 @@
 	"apihelp-parse-param-mobileformat": "Ayrıştırma çıkışını mobil cihazlar için uygun bir biçimde döndür.",
 	"apihelp-parse-param-noimages": "Mobil çıkışındaki resimleri devre dışı bırakın.",
 	"apihelp-parse-param-mainpage": "Mobil anasayfa dönüşümlerini uygulayın.",
-	"apihelp-webapp-manifest-description": "Bir web uygulaması bildirimi döndürür.",
 	"apihelp-webapp-manifest-summary": "Bir web uygulaması bildirimi döndürür."
 }

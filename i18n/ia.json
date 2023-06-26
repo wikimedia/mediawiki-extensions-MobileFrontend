@@ -104,6 +104,7 @@
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Altere linguas",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Cercar un lingua",
 	"mobile-frontend-languages-structured-overlay-no-results": "Lingua indisponibile",
+	"mobile-frontend-languages-structured-overlay-error": "Un error ha occurrite durante le cargamento de linguas pro iste pagina.",
 	"mobile-frontend-languages-structured-overlay-no-results-body": "Le lingua que tu cerca non es disponibile.",
 	"mobile-frontend-last-modified-date": "Ultime modification le $1 a $2",
 	"mobile-frontend-last-modified-with-user-days": "[$4 Ultime {{GENDER:$1|modification}} {{PLURAL:$3|$3 die|$3 dies}} retro] per {{PLURAL:$5|[$6 $2]|0=un usator anonyme}}",

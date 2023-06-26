@@ -8,6 +8,5 @@
 	"apihelp-parse-param-mobileformat": "모바일 장치에 적합한 형태의 구문 분석 출력을 반환합니다.",
 	"apihelp-parse-param-noimages": "모바일 출력에 그림을 보여주지 않습니다.",
 	"apihelp-parse-param-mainpage": "모바일 대문 변환을 적용합니다.",
-	"apihelp-webapp-manifest-description": "웹앱 매니페스트를 반환합니다.",
 	"apihelp-webapp-manifest-summary": "웹앱 매니페스트를 반환합니다."
 }

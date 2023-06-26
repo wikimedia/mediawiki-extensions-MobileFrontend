@@ -153,6 +153,7 @@
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Autres langues",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Rechercher une langue",
 	"mobile-frontend-languages-structured-overlay-no-results": "Langue non disponible",
+	"mobile-frontend-languages-structured-overlay-error": "Il y a eu une erreur lors du chargement des langues pour cette page.",
 	"mobile-frontend-languages-structured-overlay-no-results-body": "La langue que vous cherchez n’est pas disponible.",
 	"mobile-frontend-last-modified-date": "Dernière modification le $1, à $2",
 	"mobile-frontend-last-modified-with-user-days": "[$4 Dernière modification il y a $3 jour{{PLURAL:$3||s}}] par {{GENDER:$1|}}{{PLURAL:$5|[$6 $2]|0=un utilisateur anonyme}}",

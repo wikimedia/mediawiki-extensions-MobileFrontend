@@ -10,6 +10,5 @@
 	"apihelp-parse-param-mobileformat": "以适配移动设备的格式返回解析输出。",
 	"apihelp-parse-param-noimages": "在移动输出中禁用图片。",
 	"apihelp-parse-param-mainpage": "应用移动首页转换。",
-	"apihelp-webapp-manifest-description": "返回webapp证明。",
 	"apihelp-webapp-manifest-summary": "返回webapp证明。"
 }

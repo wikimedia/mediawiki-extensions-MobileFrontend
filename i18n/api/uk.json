@@ -8,6 +8,5 @@
 	"apihelp-parse-param-mobileformat": "Видати проаналізований результат у форматі, що підходить для мобільних пристроїв.",
 	"apihelp-parse-param-noimages": "Вимкнути зображення у мобільному результаті.",
 	"apihelp-parse-param-mainpage": "Застосувати перетворення головної сторінки у мобільному вигляді.",
-	"apihelp-webapp-manifest-description": "Повертає маніфест webapp.",
 	"apihelp-webapp-manifest-summary": "Виводить маніфест webapp."
 }

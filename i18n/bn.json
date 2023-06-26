@@ -114,6 +114,7 @@
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "অন্যান্য ভাষা",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "একটি ভাষা খুঁজুন",
 	"mobile-frontend-languages-structured-overlay-no-results": "ভাষা উপলব্ধ নয়",
+	"mobile-frontend-languages-structured-overlay-error": "এই পাতার জন্য ভাষা লোড করার সময় একটি ত্রুটি হয়েছে।",
 	"mobile-frontend-languages-structured-overlay-no-results-body": "আপনি যে ভাষা খুঁজছেন তা উপলব্ধ নয়।",
 	"mobile-frontend-last-modified-date": "$2, $1 তারিখে সর্বশেষ সম্পাদিত",
 	"mobile-frontend-last-modified-with-user-days": "{{PLURAL:$5|[$6 $2]|0=অনিবন্ধিত ব্যবহারকারী}} দ্বারা [$4 {{PLURAL:$3|$3 দিন}} আগে সর্বশেষ {{GENDER:$1|সম্পাদিত}}]",

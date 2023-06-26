@@ -7,6 +7,5 @@
 	"apihelp-parse-param-mobileformat": "Дај расчленувачки извод во формат погоден за мобилни уреди.",
 	"apihelp-parse-param-noimages": "Оневозможи слики во мобилниот извод.",
 	"apihelp-parse-param-mainpage": "Примени преобразби на главната мобилна страница.",
-	"apihelp-webapp-manifest-description": "Дава манифест на семрежиот прилог.",
 	"apihelp-webapp-manifest-summary": "Дава манифест на семрежиот прилог."
 }

@@ -7,6 +7,5 @@
 	"apihelp-parse-param-mobileformat": "Devolver la salida del analís nun formatu afayadizu pa preseos móviles.",
 	"apihelp-parse-param-noimages": "Desactivar les imaxes na salida pa móvil",
 	"apihelp-parse-param-mainpage": "Aplicar les tresformaciones de la páxina principal pa móviles.",
-	"apihelp-webapp-manifest-description": "Devuelve un manifest de webapp.",
 	"apihelp-webapp-manifest-summary": "Devuelve un manifest de webapp."
 }

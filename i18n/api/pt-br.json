@@ -9,6 +9,5 @@
 	"apihelp-parse-param-mobileformat": "Retornar saída de análise em um formato adequado para dispositivos móveis.",
 	"apihelp-parse-param-noimages": "Desativar imagens na saída mobile.",
 	"apihelp-parse-param-mainpage": "Aplique as transformações da página principal mobile.",
-	"apihelp-webapp-manifest-description": "Retorna um manifesto do webapp.",
 	"apihelp-webapp-manifest-summary": "Retorna um manifesto do webapp."
 }

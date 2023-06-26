@@ -14,6 +14,5 @@
 	"apihelp-parse-param-mobileformat": "أرجع خرج محلل بصيغة مناسبة للأجهزة المحمولة.",
 	"apihelp-parse-param-noimages": "تعطيل الصور في خرج المحمول.",
 	"apihelp-parse-param-mainpage": "تطبيق تحويلات المحمول الخاصة بالصفحة الرئيسية",
-	"apihelp-webapp-manifest-description": "يرجع webapp manifest.",
 	"apihelp-webapp-manifest-summary": "يرجع webapp manifest."
 }

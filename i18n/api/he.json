@@ -8,6 +8,5 @@
 	"apihelp-parse-param-mobileformat": "החזרת פלט הפענוח בתסדיר שתואם להתקנים ניידים.",
 	"apihelp-parse-param-noimages": "לא לכלול תמונות בפלט לנייד.",
 	"apihelp-parse-param-mainpage": "החלת התאמות של העמוד הראשי לנייד.",
-	"apihelp-webapp-manifest-description": "מחזיר מצהר (manifest) של יישום רשת.",
 	"apihelp-webapp-manifest-summary": "החזרת המניפסט של יישום הרשת."
 }

@@ -9,6 +9,5 @@
 	"apihelp-parse-param-mobileformat": "Returnera tolk-utdata i ett format som passar mobila enheter.",
 	"apihelp-parse-param-noimages": "Inaktivera bilder i mobil utdata.",
 	"apihelp-parse-param-mainpage": "Applicera mobila transformationer av huvudsidan.",
-	"apihelp-webapp-manifest-description": "Returnerar ett webbappsmanifest.",
 	"apihelp-webapp-manifest-summary": "Returnerar ett webbappsmanifest."
 }

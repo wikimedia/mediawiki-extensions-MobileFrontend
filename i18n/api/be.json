@@ -7,6 +7,5 @@
 	"apihelp-parse-param-mobileformat": "Вяртанне вываду парсеру ў фармаце, прыдатным для мабільных прылад.",
 	"apihelp-parse-param-noimages": "Адключыць выявы ў мабільным вывадзе.",
 	"apihelp-parse-param-mainpage": "Прымяняць мабільныя трансфармацыі галоўнай старонкі.",
-	"apihelp-webapp-manifest-description": "Вяртае маніфест вэб-прыкладання.",
 	"apihelp-webapp-manifest-summary": "Вяртае маніфест вэб-прыкладання."
 }

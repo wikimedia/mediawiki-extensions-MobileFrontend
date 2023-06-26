@@ -8,6 +8,5 @@
 	"apihelp-parse-param-mobileformat": "Zwróć wyjście parsera w formacie właściwym dla urządzeń mobilnych.",
 	"apihelp-parse-param-noimages": "Wyłącz wyświetlanie grafik w wersji mobilnej.",
 	"apihelp-parse-param-mainpage": "Zastosuj mobilne przekształcenia strony głównej.",
-	"apihelp-webapp-manifest-description": "Zwraca manifest webapp.",
 	"apihelp-webapp-manifest-summary": "Zwraca manifest webapp."
 }

@@ -8,6 +8,5 @@
 	"apihelp-parse-param-mobileformat": "Returner parserresultat i et format som passer for mobile enheter.",
 	"apihelp-parse-param-noimages": "Slå av bilder i mobilresultater.",
 	"apihelp-parse-param-mainpage": "Bruk forsideomgjøring for mobil.",
-	"apihelp-webapp-manifest-description": "Returnerer et webapp-manifest.",
 	"apihelp-webapp-manifest-summary": "Returnerer et webapp-manifest."
 }

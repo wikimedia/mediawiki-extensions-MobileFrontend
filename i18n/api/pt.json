@@ -8,6 +8,5 @@
 	"apihelp-parse-param-mobileformat": "Devolver o resultado da análise sintática numa forma adequada para dispositivos móveis.",
 	"apihelp-parse-param-noimages": "Desativar imagens no resultado para dispositivos móveis.",
 	"apihelp-parse-param-mainpage": "Aplicar as transformações da página principal para dispositivos móveis.",
-	"apihelp-webapp-manifest-description": "Devolve um manifesto de aplicação da Internet.",
 	"apihelp-webapp-manifest-summary": "Devolve um manifesto de aplicação da Internet."
 }

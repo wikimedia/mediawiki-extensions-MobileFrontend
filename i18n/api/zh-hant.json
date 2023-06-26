@@ -9,6 +9,5 @@
 	"apihelp-parse-param-mobileformat": "以適合於行動裝置的格式回傳解析輸出內容。",
 	"apihelp-parse-param-noimages": "在手機輸出中停用圖片。",
 	"apihelp-parse-param-mainpage": "套用手機首頁轉換。",
-	"apihelp-webapp-manifest-description": "回傳 webapp manifest。",
 	"apihelp-webapp-manifest-summary": "回傳 webapp manifest。"
 }
