@@ -13,6 +13,11 @@
 	border-bottom: @border-width-base @border-style-base transparent;
 }
 
+.mw-mf-diff-small-icon {
+	.cdx-mixin-css-icon-background( @size-icon-small );
+	.cdx-mixin-css-icon-size( @size-icon-small );
+}
+
 .mw-diff-inline-moved {
 	position: relative;
 
@@ -121,11 +126,6 @@ footer {
 		text-decoration: none;
 	}
 
-	.meta span {
-		// FIXME: Revisited when icons standardised (see I31e96ee6785eb5c634295051159c16445de1165c)
-		margin-left: -1em;
-	}
-
 	#mw-mf-userinfo .meta,
 	.mw-mf-diff-date span,
 	.meta span {
@@ -163,6 +163,7 @@ footer {
 		background-color: #f8f9fa;
 		border-top: @border-width-base @border-style-base @border-color-subtle;
 		bottom: 0;
+		position: fixed;
 		left: 0;
 		right: 0;
 

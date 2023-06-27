@@ -6,60 +6,38 @@
  */
 class MobileUITest extends \MediaWikiUnitTestCase {
 	/**
-	 * @see MobileUI::iconClass() for params doc
-	 * @covers ::iconClass
-	 * @dataProvider iconClassDataProvider
+	 * @see MobileUI::icon for params doc
+	 * @covers ::icon
+	 * @dataProvider iconDataProvider
 	 */
-	public function testIconClass(
-		$iconName, $iconType, $additionalClassNames, $expected
+	public function testIcon(
+		$iconName, $additionalClassNames, $expected
 	) {
-		$actual = MobileUI::iconClass( $iconName, $iconType, $additionalClassNames );
+		$actual = MobileUI::icon( $iconName, $additionalClassNames );
 
-		$this->assertSame( $expected, $actual );
+		$this->assertSame( '<span class="' . $expected . '"></span>', $actual );
 	}
 
 	/**
-	 * Data provider for testing MobileUI::iconClass().
+	 * Data provider for testing MobileUI::icon().
 	 * Format (e.g.);
 	 * [
-	 *     'testicon', 'element', 'additionalclassnames', // expected
+	 *     'testicon', 'additionalclassnames', // expected
 	 *     'mw-ui-icon mw-ui-icon-element mw-ui-icon-mf-testicon additionalclassnames'  // actual
 	 * ]
 	 * @return array
 	 */
-	public static function iconClassDataProvider() {
+	public static function iconDataProvider() {
 		return [
 			[
-				'testicon', 'element', 'additionalclassnames',
-				'mw-ui-icon mw-ui-icon-element mw-ui-icon-mf-testicon additionalclassnames mw-ui-button mw-ui-quiet'
+				'testicon',
+				'additionalclassnames',
+				'mw-mf-icon mw-mf-icon-testicon additionalclassnames'
 			],
 			[
-				'testicon', 'element', '',
-				'mw-ui-icon mw-ui-icon-element mw-ui-icon-mf-testicon  mw-ui-button mw-ui-quiet'
-			],
-			[
-				null, 'element', 'additionalclassnames',
-				'mw-ui-icon mw-ui-icon-element additionalclassnames mw-ui-button mw-ui-quiet'
-			],
-			[
-				null, 'element', '',
-				'mw-ui-icon mw-ui-icon-element  mw-ui-button mw-ui-quiet'
-			],
-			[
-				'testicon', 'before', 'additionalclassnames',
-				'mw-ui-icon mw-ui-icon-before mw-ui-icon-mf-testicon additionalclassnames'
-			],
-			[
-				'testicon', 'before', '',
-				'mw-ui-icon mw-ui-icon-before mw-ui-icon-mf-testicon '
-			],
-			[
-				null, 'before', 'additionalclassnames',
-				'mw-ui-icon mw-ui-icon-before additionalclassnames'
-			],
-			[
-				null, 'before', '',
-				'mw-ui-icon mw-ui-icon-before '
+				'testicon',
+				'',
+				'mw-mf-icon mw-mf-icon-testicon'
 			]
 		];
 	}

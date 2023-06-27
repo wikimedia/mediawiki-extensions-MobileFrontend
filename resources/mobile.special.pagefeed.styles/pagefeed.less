@@ -94,6 +94,16 @@
 	display: inline-block;  // so that the icon in beta is next to the text when the text is centered
 }
 
+.mw-mf-icon-userAvatar {
+	.cdx-mixin-css-icon( @cdx-icon-user-avatar, @param-is-button-icon: false,
+	@param-fill-color: @color-subtle );
+}
+
+.mw-mf-icon-userTemporary {
+	.cdx-mixin-css-icon( @cdx-icon-user-temporary, @param-is-button-icon: false,
+	@param-fill-color: @color-subtle );
+}
+
 .mw-mf-anon {
 	color: inherit;
 }
@@ -114,8 +124,20 @@ a.mw-mf-watchlist-more {
 	color: @color-success;
 }
 
+.mw-mf-icon-upTriangle {
+	.cdx-mixin-css-icon( @cdx-icon-up-triangle, @param-is-button-icon: false );
+}
+
+.mw-mf-icon-upTriangle-constructive {
+	.cdx-mixin-css-icon( @cdx-icon-up-triangle, @param-is-button-icon: false, @param-fill-color: @color-success );
+}
+
 .mw-mf-bytesremoved {
 	color: @color-destructive;
+}
+
+.mw-mf-icon-upTriangle-destructive {
+	.cdx-mixin-css-icon( @cdx-icon-down-triangle, @param-is-button-icon: false, @param-fill-color: @color-destructive );
 }
 
 .minoredit {

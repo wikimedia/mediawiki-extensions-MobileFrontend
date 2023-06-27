@@ -1,35 +1,22 @@
 <?php
 
-// FIXME: Use OOUI PHP when available.
 /**
  * Helper methods for generating parts of the UI.
+ *
+ * @internal not for use outside MobileFrontend.
  */
 class MobileUI {
-
 	/**
-	 * Get CSS classes for icons
+	 * Renders a icon using Codex markup styled with Codex mixins
+	 *
 	 * @param string $iconName
-	 * @param string $iconType element or before
-	 * @param string $additionalClassNames additional class names you want to associate
-	 *  with the iconed element
-	 * @param string $iconPrefix optional prefix for icons. Defaults to minerva.
-	 * @return string class name for use with HTML element
+	 * @param string $className
+	 * @return string
 	 */
-	public static function iconClass( $iconName, $iconType = 'element', $additionalClassNames = '',
-		$iconPrefix = 'mf'
-	) {
-		$base = 'mw-ui-icon';
-		$modifiers = '';
-		if ( $iconType ) {
-			$modifiers .= 'mw-ui-icon-' . $iconType;
-		}
-		if ( $iconName ) {
-			$modifiers .= ' mw-ui-icon-' . $iconPrefix . '-' . $iconName;
-		}
-		if ( $iconType === 'element' ) {
-			$additionalClassNames .= ' mw-ui-button mw-ui-quiet';
-		}
-		return $base . ' ' . $modifiers . ' ' . $additionalClassNames;
+	public static function icon( $iconName, $className = '' ) {
+		return Html::element( 'span', [
+			'class' => trim( 'mw-mf-icon mw-mf-icon-' . $iconName . ' ' . $className ),
+		] );
 	}
 
 	/**

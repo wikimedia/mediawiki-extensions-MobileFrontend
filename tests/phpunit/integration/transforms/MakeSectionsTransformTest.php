@@ -9,8 +9,8 @@ use Wikimedia\Parsoid\Utils\DOMCompat;
  * @group MobileFrontend
  */
 class MakeSectionsTransformTest extends MediaWikiIntegrationTestCase {
-	private const SECTION_INDICATOR = '<div class="mw-ui-icon mw-ui-icon-element indicator '
-		. 'mw-ui-icon-small mw-ui-icon-flush-left mw-ui-button mw-ui-quiet"></div>';
+	private const SECTION_INDICATOR = '<div class="mw-mf-icon indicator mw-ui-icon-small '
+		. 'mw-ui-icon-flush-left mw-ui-icon"></div>';
 
 	public static function wrap( $html ) {
 		return "<!DOCTYPE HTML>

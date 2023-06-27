@@ -9,7 +9,6 @@ use DOMXPath;
 use Exception;
 use Html;
 use MediaWiki\ResourceLoader\ResourceLoader;
-use MobileUI;
 use Wikimedia\Parsoid\Utils\DOMCompat;
 
 /**
@@ -156,8 +155,11 @@ class MakeSectionsTransform implements IMobileTransform {
 
 		// prepend indicator - this avoids a reflow by creating a placeholder for a toggling indicator
 		$indicator = $doc->createElement( 'div' );
-		$indicator->setAttribute( 'class', MobileUI::iconClass( '', 'element',
-			'indicator mw-ui-icon-small mw-ui-icon-flush-left' ) );
+		$indicator->setAttribute( 'class',
+			// Icon classes are retained for compatibility with Minerva until it is updated
+			// to use Codex.
+			// This should be removed/adapted when Icon.js is using Codex icons.
+			'mw-mf-icon indicator mw-ui-icon-small mw-ui-icon-flush-left mw-ui-icon' );
 		$heading->insertBefore( $indicator, $heading->firstChild );
 	}
 

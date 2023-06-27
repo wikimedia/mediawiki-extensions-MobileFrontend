@@ -253,22 +253,27 @@ class SpecialMobileDiff extends MobileSpecialPage {
 			$bytesChanged = $this->rev->getSize();
 		}
 		$icon = 'upTriangle';
-		$bytesClassNames = 'meta mw-ui-icon-small ';
+		$bytesClassNames = 'meta mw-mf-diff-small-icon ';
 
+		$sizeIcon = '';
 		if ( $bytesChanged > 0 ) {
 			$changeMsg = 'mobile-frontend-diffview-bytesadded';
-			$sizeClass = MobileUI::iconClass( $icon . '-constructive', 'before',
-				$bytesClassNames . 'mw-mf-bytesadded' );
+			$sizeIcon = MobileUI::icon( $icon . '-constructive' );
+			$sizeClass = $bytesClassNames . 'mw-mf-bytesadded';
 		} elseif ( $bytesChanged === 0 ) {
 			$changeMsg = 'mobile-frontend-diffview-bytesnochange';
-			$sizeClass = MobileUI::iconClass( $icon, 'before',
-				$bytesClassNames . 'mw-mf-bytesneutral mf-mw-ui-icon-rotate-clockwise' );
+			$sizeIcon = MobileUI::icon( $icon );
+			$sizeClass = $bytesClassNames . 'mw-mf-bytesneutral mf-mw-ui-icon-rotate-clockwise';
 		} else {
 			$changeMsg = 'mobile-frontend-diffview-bytesremoved';
-			$sizeClass = MobileUI::iconClass( $icon . '-destructive', 'before',
-				$bytesClassNames . 'mw-mf-bytesremoved mf-mw-ui-icon-rotate-flip' );
+			$sizeIcon = MobileUI::icon( $icon . '-destructive' );
+			$sizeClass = $bytesClassNames . 'mw-mf-bytesremoved mf-mw-ui-icon-rotate-flip';
 			$bytesChanged = abs( $bytesChanged );
 		}
+
+		// Add whitespace between icon and label.
+		$sizeIcon .= ' ';
+
 		$ts = new MWTimestamp( $this->rev->getTimestamp() );
 		$user = $this->getUser();
 		$actionMessageKey = MediaWikiServices::getInstance()->getPermissionManager()
@@ -287,6 +292,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 			"actionLinkUrl" => $this->targetTitle->getLocalURL( [ 'action' => 'edit' ] ),
 			"actionLinkLabel" => $this->msg( $actionMessageKey )->text(),
 			"sizeClass" => $sizeClass,
+			'html-size-icon' => $sizeIcon,
 			"bytesChanged" => $this->msg( $changeMsg )->numParams( $bytesChanged )->text(),
 			"separator" => $this->msg( 'comma-separator' )->text(),
 			"bytesChangedTimeDate" => $this->getLanguage()->getHumanTimestamp( $ts ),
@@ -351,7 +357,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 			$user = $this->getUserFactory()->newFromUserIdentity( $user );
 			$edits = $user->getEditCount();
 			$attrs = [
-				'class' => MobileUI::iconClass( 'userAvatar-base20', 'before', 'mw-mf-user' ),
+				'class' => 'mw-mf-user',
 				'data-revision-id' => $this->revId,
 				'data-user-name' => $user->getName(),
 				'data-user-gender' => $this->getUserOptionsLookup()->getOption( $user, 'gender' ),
@@ -360,6 +366,9 @@ class SpecialMobileDiff extends MobileSpecialPage {
 			// a broken link if the user page does not exist
 			$output->addHTML(
 				Html::openElement( 'div', $attrs ) .
+				 MobileUI::icon( $user->isNamed() ? 'userAvatar' : 'userTemporary' ) .
+				// Add whitespace between icon and label.
+				' ' .
 				$this->getLinkRenderer()->makeLink(
 					$user->getUserPage(),
 					$user->getName(),
@@ -382,9 +391,9 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		} elseif ( $ipAddr ) {
 			$userPage = SpecialPage::getTitleFor( 'Contributions', $ipAddr );
 			$output->addHTML(
-				Html::element( 'div', [
-					'class' => MobileUI::iconClass( 'userAnonymous-base20', 'before', 'mw-mf-user mw-mf-anon' ),
-				], $this->msg( 'mobile-frontend-diffview-anonymous' )->text() ) .
+				Html::rawElement( 'div', [
+					'class' => 'mw-mf-user mw-mf-anon',
+				], MobileUI::icon( 'userAnonymous' ) . $this->msg( 'mobile-frontend-diffview-anonymous' )->escaped() ) .
 				'<div>' .
 					$this->getLinkRenderer()->makeLink( $userPage, $ipAddr ) .
 				'</div>'

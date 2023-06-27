@@ -163,10 +163,15 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 		$lang = $this->getLanguage();
 
 		if ( (bool)( $options['isAnon'] ?? false ) ) {
-			$usernameClass = MobileUI::iconClass( 'userAnonymous', 'before', 'mw-mf-user mw-mf-anon' );
+			$usernameClass = 'mw-mf-user mw-mf-anon';
+			$iconHTML = MobileUI::icon( 'userAnonymous' );
 		} else {
-			$usernameClass = MobileUI::iconClass( 'userAvatar', 'before', 'mw-mf-user' );
+			$usernameClass = 'mw-mf-user';
+			$iconHTML = MobileUI::icon( 'userAvatar' );
 		}
+
+		// Add whitespace between icon and label.
+		$iconHTML .= ' ';
 
 		$html = Html::openElement( 'li', [ 'class' => 'page-summary' ] );
 
@@ -182,6 +187,7 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 
 		if ( isset( $options['username'] ) && $options['username'] && $this->showUsername ) {
 			$html .= Html::rawElement( 'p', [ 'class' => $usernameClass ],
+				$iconHTML . ' ' .
 				Html::element( 'span', [], $options['username'] )
 			);
 		}

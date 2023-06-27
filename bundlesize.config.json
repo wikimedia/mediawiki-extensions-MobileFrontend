@@ -65,7 +65,7 @@
 	},
 	{
 		"resourceModule": "mobile.special.styles",
-		"maxSize": "0.7KB"
+		"maxSize": "0.8KB"
 	},
 	{
 		"resourceModule": "mobile.special.mobileoptions.styles",
@@ -77,7 +77,7 @@
 	},
 	{
 		"resourceModule": "mobile.special.pagefeed.styles",
-		"maxSize": "0.8KB"
+		"maxSize": "1.6KB"
 	},
 	{
 		"resourceModule": "mobile.special.mobilediff.images",
