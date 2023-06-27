@@ -93,8 +93,10 @@ footer {
 
 	.mw-diff-inline-added ins,
 	.mw-diff-inline-changed ins,
+	.mw-diff-inline-moved ins,
 	.mw-diff-inline-deleted del,
-	.mw-diff-inline-changed del {
+	.mw-diff-inline-changed del,
+	.mw-diff-inline-moved del {
 		color: #000;
 		text-decoration: none;
 		// these are styled as inline-blocks
@@ -107,12 +109,14 @@ footer {
 	}
 
 	.mw-diff-inline-added ins,
-	.mw-diff-inline-changed ins {
+	.mw-diff-inline-changed ins,
+	.mw-diff-inline-moved ins {
 		background-color: #75c877;
 	}
 
 	.mw-diff-inline-deleted del,
-	.mw-diff-inline-changed del {
+	.mw-diff-inline-changed del,
+	.mw-diff-inline-moved del {
 		background-color: #e07076;
 		text-decoration: none;
 	}
