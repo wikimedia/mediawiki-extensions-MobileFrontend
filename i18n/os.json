@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Amikeco",
-			"Bouron"
+			"Bouron",
+			"Таймураз"
 		]
 	},
 	"mobile-frontend-clear-search": "Схафын",
@@ -14,6 +15,7 @@
 	"mobile-frontend-opt-in-explain": "Мобилон бетамæ иу гæнгæйæ, ды эксперименталон функцитæм бавналæн исыс, фæлæтас у исты баг кæнæ рæдыдыл фембæлын.",
 	"mobile-frontend-save-settings": "Уаг бавæрын",
 	"mobile-frontend-settings-beta": "Бета",
+	"mobile-frontend-terms-text": "Спайдайы домæн",
 	"mobile-frontend-view": "Мобилон хуыз",
 	"mobile-frontend-view-desktop": "Æнæхъæн",
 	"tag-mobile_edit": "мобилон архайæнæй конд ивд",
