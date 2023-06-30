@@ -19,18 +19,6 @@ class MobileUITest extends \MediaWikiUnitTestCase {
 	}
 
 	/**
-	 * @see MobileUI::buttonClass() for params doc
-	 * @covers ::semanticClass
-	 * @covers ::buttonClass
-	 * @dataProvider buttonClassDataProvider
-	 */
-	public function testButtonClass( $modifier, $additionalClassNames, $expected ) {
-		$actual = MobileUI::buttonClass( $modifier, $additionalClassNames );
-
-		$this->assertSame( $expected, $actual );
-	}
-
-	/**
 	 * Data provider for testing MobileUI::iconClass().
 	 * Format (e.g.);
 	 * [
@@ -75,38 +63,4 @@ class MobileUITest extends \MediaWikiUnitTestCase {
 			]
 		];
 	}
-
-	/**
-	 * Data provider for testing Mobile::buttonClass().
-	 * @return array
-	 */
-	public static function buttonClassDataProvider() {
-		return [
-			[
-				'progressive', 'additionalclassnames',
-				'mw-ui-button mw-ui-progressive additionalclassnames'
-			],
-			[
-				null, 'additionalclassnames',
-				'mw-ui-button  additionalclassnames'
-			],
-			[
-				'destructive', 'additionalclassnames',
-				'mw-ui-button mw-ui-destructive additionalclassnames'
-			],
-			[
-				'progressive', '',
-				'mw-ui-button mw-ui-progressive '
-			],
-			[
-				'destructive', '',
-				'mw-ui-button mw-ui-destructive '
-			],
-			[
-				null, '',
-				'mw-ui-button  '
-			]
-		];
-	}
-
 }
