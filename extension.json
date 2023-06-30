@@ -307,7 +307,6 @@
 				"oojs-ui.styles.icons-editing-core",
 				"mediawiki.action.view.postEdit",
 				"mediawiki.util",
-				"mediawiki.Uri",
 				"mediawiki.notification",
 				"mediawiki.editfont.styles",
 				"user.options",
