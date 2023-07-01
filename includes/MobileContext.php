@@ -16,7 +16,6 @@ class MobileContext extends ContextSource {
 	public const STOP_MOBILE_REDIRECT_COOKIE_NAME = 'stopMobileRedirect';
 	public const USEFORMAT_COOKIE_NAME = 'mf_useformat';
 	public const USER_MODE_PREFERENCE_NAME = 'mfMode';
-	public const LOGGER_CHANNEL = 'mobile';
 
 	// Keep in sync with https://wikitech.wikimedia.org/wiki/X-Analytics.
 	private const ANALYTICS_HEADER_KEY = 'mf-m';
