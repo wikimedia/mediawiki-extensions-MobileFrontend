@@ -121,6 +121,7 @@
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Andre språk",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Søk etter språk",
 	"mobile-frontend-languages-structured-overlay-no-results": "Språket er ikke tilgjengelig",
+	"mobile-frontend-languages-structured-overlay-error": "En feil oppsto under lastingen av språk for denne siden.",
 	"mobile-frontend-languages-structured-overlay-no-results-body": "Språket du leter etter er ikke tilgjengelig.",
 	"mobile-frontend-last-modified-date": "Sist redigert $1 kl. $2",
 	"mobile-frontend-last-modified-with-user-days": "[$4 Sist {{GENDER:$1|redigert}} for {{PLURAL:$3|$3 dag|$3 dager}} siden] av {{PLURAL:$5|[$6 $2]|0=en anonym bruker}}",
