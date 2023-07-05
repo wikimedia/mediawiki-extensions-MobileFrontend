@@ -69,9 +69,9 @@ To run the full test suite run:
 
     npm run precommit
 
-To run only PHP tests:
+To run only PHP tests, from your MediaWiki installation path:
 
-    php ../../tests/phpunit/phpunit.php "tests/phpunit/"
+    composer phpunit:entrypoint -- extensions/MobileFrontend/tests/phpunit/
 
 To run only MobileFrontend JS tests:
 
