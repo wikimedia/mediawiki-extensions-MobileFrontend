@@ -20,13 +20,10 @@ var EditorOverlayBase = require( './EditorOverlayBase' ),
  * @extends EditorOverlayBase
  *
  * @param {Object} options Configuration options
- * @param {Object} [options.visualEditorConfig] falls back to wgVisualEditorConfig if not defined
  * @param {jQuery.Promise} [dataPromise] Optional promise for loading content
  */
 function SourceEditorOverlay( options, dataPromise ) {
 	this.isFirefox = /firefox/i.test( window.navigator.userAgent );
-	this.visualEditorConfig = options.visualEditorConfig ||
-		mw.config.get( 'wgVisualEditorConfig' ) || {};
 	this.gateway = new EditorGateway( {
 		api: options.api,
 		title: options.title,
@@ -119,8 +116,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 	 * @instance
 	 */
 	postRender: function () {
-		var self = this,
-			config = this.visualEditorConfig;
+		var self = this;
 
 		// log edit attempt
 		this.log( { action: 'ready' } );
@@ -128,7 +124,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 
 		if ( this.currentPage.isVEVisualAvailable() ) {
 			mw.loader.using( 'ext.visualEditor.switching' ).then( function () {
-				var switchToolbar, windowManager, switchWindow,
+				var switchToolbar,
 					toolFactory = new OO.ui.ToolFactory(),
 					toolGroupFactory = new OO.ui.ToolGroupFactory();
 
@@ -139,30 +135,12 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 				} );
 
 				switchToolbar.on( 'switchEditor', function ( mode ) {
-					// NOTE: Should be just config.allowSwitchingToVisualMode, but we need to
-					// preserve compatibility for a bit.
-					var canSwitch = config.allowSwitchingToVisualMode ||
-						config.fullRestbaseUrl ||
-						config.allowLossySwitching;
-
 					if ( mode === 'visual' ) {
 						if ( !self.gateway.hasChanged ) {
 							self._switchToVisualEditor();
-						} else if ( canSwitch ) {
+						} else {
 							// Pass wikitext if there are changes.
 							self._switchToVisualEditor( self.gateway.content );
-						} else {
-							windowManager = new OO.ui.WindowManager();
-							switchWindow = new mw.libs.ve.SwitchConfirmDialog();
-							windowManager.$element.appendTo( document.body );
-							windowManager.addWindows( [ switchWindow ] );
-							windowManager.openWindow( switchWindow, { mode: 'simple' } )
-								.closed.then( function ( data ) {
-									if ( data && data.action === 'discard' ) {
-										self._switchToVisualEditor();
-									}
-									windowManager.destroy();
-								} );
 						}
 					}
 				} );
