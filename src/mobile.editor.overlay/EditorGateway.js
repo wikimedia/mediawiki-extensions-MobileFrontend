@@ -202,10 +202,16 @@ EditorGateway.prototype = {
 				apiOptions.section = self.sectionId;
 			}
 
+			// TODO: When `wouldautocreate` is true, we should also set up:
+			// - apiOptions.returntofragment to be the URL fragment to link to the section
+			//   (but we don't know what it is; `sectionId` here is the number)
+			// - apiOptions.returntoquery to be 'redirect=no' if we're saving a redirect
+			//   (but we have can't figure that out, unless we parse the wikitext)
+
 			self.api.postWithToken( 'csrf', apiOptions ).then( function ( data ) {
 				if ( data && data.edit && data.edit.result === 'Success' ) {
 					self.hasChanged = false;
-					result.resolve( data.edit.newrevid );
+					result.resolve( data.edit.newrevid, data.edit.tempusercreatedredirect );
 				} else {
 					result.reject( data );
 				}
