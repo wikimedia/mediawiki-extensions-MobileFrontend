@@ -196,6 +196,8 @@ class SpecialMobileOptions extends MobileSpecialPage {
 	private function addSettingsForm() {
 		$out = $this->getOutput();
 		$user = $this->getUser();
+		$userNameUtils = MediaWikiServices::getInstance()->getUserNameUtils();
+		$isTemp = $userNameUtils->isTemp( $user->getName() );
 
 		$out->setPageTitle( $this->msg( 'mobile-frontend-main-menu-settings-heading' ) );
 		$out->enableOOUI();
@@ -219,7 +221,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 		] );
 		$form->addClasses( [ 'mw-mf-settings' ] );
 
-		if ( $this->amc->isAvailable() ) {
+		if ( $this->amc->isAvailable() && !$isTemp ) {
 			$fields[] = $this->buildAMCToggle();
 		}
 
@@ -300,7 +302,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 			'type' => 'submit',
 		] );
 
-		if ( $user->isRegistered() ) {
+		if ( $user->isRegistered() && !$isTemp ) {
 			$fields[] = new OOUI\HiddenInputWidget( [ 'name' => 'token',
 				'value' => $user->getEditToken() ] );
 			// Special:Preferences link (https://phabricator.wikimedia.org/T327506)
