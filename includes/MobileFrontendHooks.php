@@ -1122,7 +1122,7 @@ class MobileFrontendHooks implements TextSlotDiffRendererTablePrefixHook {
 			$context->shouldDisplayMobileView() && $mfLogo
 			&& in_array( $action, [ AuthManager::ACTION_LOGIN, AuthManager::ACTION_CREATE ], true )
 		) {
-			$logoHtml = Html::rawElement( 'div', [ 'class' => 'watermark' ],
+			$logoHtml = Html::rawElement( 'div', [ 'class' => 'mw-mf-watermark' ],
 				Html::element( 'img', [ 'src' => $mfLogo, 'alt' => '' ] ) );
 			$formDescriptor = [
 				'mfLogo' => [
