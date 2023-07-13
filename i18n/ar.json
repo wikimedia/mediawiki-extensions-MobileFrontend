@@ -36,7 +36,8 @@
 			"علاء",
 			"محمد أحمد عبد الفتاح",
 			"مشعل الحربي",
-			"Alshamiri1"
+			"Alshamiri1",
+			"أيوب"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "ما إذا كان المستخدم يعدل عبر واجهة المحمول",
@@ -46,7 +47,7 @@
 	"mobile-frontend-cite-error": "حدثت مشكلة أثناء محاولة تحميل الاستشهادات نتيجة لمعرف مراجعة سيئ.",
 	"mobile-frontend-cite-none-available": "لا توجد استشهادات متوفرة لهذه الصفحة.",
 	"mobile-frontend-clear-search": "إفراغ",
-	"mobile-frontend-copyright": "المحتوى متاح وفق $1 إن لم يرد خلاف ذلك.",
+	"mobile-frontend-copyright": "المحتوى متاح وفق $1 ما لم يرد خلاف ذلك.",
 	"mobile-frontend-desc": "واجهة المحمول",
 	"mobile-frontend-diffview-404-desc": "معرف المراجعة التي طلبتها غير موجودة.<br/>يحدث هذا عادةً باتباع رابط فرق قديم إلى صفحة تم حذفها أو رابط فرق يحتوي على أحرف غير صالحة.",
 	"mobile-frontend-diffview-404-title": "نسخة خاطئة",
