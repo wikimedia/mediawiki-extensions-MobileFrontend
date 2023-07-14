@@ -433,7 +433,8 @@
 		"mobile.special.styles": {
 			"styles": [
 				"resources/mobile.special.styles/common.less",
-				"resources/mobile.special.styles/forms.less"
+				"resources/mobile.special.styles/forms.less",
+				"resources/mobile.special.styles/login.less"
 			]
 		},
 		"mobile.special.watchlist.scripts": {
