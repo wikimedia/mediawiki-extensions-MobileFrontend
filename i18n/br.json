@@ -31,7 +31,7 @@
 	"mobile-frontend-edit-login-action": "<strong>Sikourit da wellaat {{SITENAME}}.</strong><br />Kevreit evit aozañ.",
 	"mobile-frontend-edit-signup-action": "<strong>Sikourit da wellaat {{SITENAME}}.</strong><br />Krouit ur gont evit aozañ.",
 	"mobile-frontend-editor-anon": "Kemmañ hep kevreañ",
-	"mobile-frontend-editor-anonwarning": "</strong>Diwallit :</strong> N'oc'h ket kevreet. Gallout a raio an holl dud gwelet ho chomlec'h IP ma rit kemmoù. Ma <strong>kevreit</strong> pe <strong>krouit ur gont</strong>, e vo deroet ho kemmoù d'hoc'h anv-implijer, e-touez spletoù all.",
+	"mobile-frontend-editor-anonwarning": "<strong>Diwallit :</strong> N'oc'h ket kevreet. Gallout a raio an holl dud gwelet ho chomlec'h IP ma rit kemmoù. Ma <strong>kevreit</strong> pe <strong>krouit ur gont</strong>, e vo deroet ho kemmoù d'hoc'h anv-implijer, e-touez spletoù all.",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Stanket}} gant",
 	"mobile-frontend-editor-generic-block-reason": "Abeg dianav",
 	"mobile-frontend-editor-cancel": "Nullañ",
