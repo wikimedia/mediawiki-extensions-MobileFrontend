@@ -294,7 +294,9 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 	) {
 		$this->overrideConfigValue( 'MFEnableMobilePreferences', $enabled );
 
-		$user = $isAnon ? new User() : $this->getMutableTestUser()->getUser();
+		$user = $this->createMock( User::class );
+		$user->method( 'isRegistered' )->willReturn( !$isAnon );
+		$user->method( 'isSafeToLoad' )->willReturn( true );
 		if ( !$isAnon && $userpref ) {
 			$userOptionsManager = MediaWikiServices::getInstance()->getUserOptionsManager();
 			$userOptionsManager->setOption(
