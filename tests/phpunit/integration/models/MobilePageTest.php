@@ -2,6 +2,8 @@
 
 use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Revision\RevisionStore;
+use MediaWiki\User\UserIdentity;
+use MediaWiki\User\UserIdentityValue;
 use MobileFrontend\Models\MobilePage;
 
 /**
@@ -54,27 +56,18 @@ class MobilePageTest extends MediaWikiIntegrationTestCase {
 	/**
 	 * Mock the RevisionStore class
 	 * @param Title $title
-	 * @param TestUser|null $testUser
+	 * @param UserIdentity|null $user
 	 * @return RevisionStore
 	 */
-	private function mockRevisionStore( Title $title, TestUser $testUser = null ) {
-		// Create a mock of the RevisionRecord class.
-		$revisionRecordMock = $this->getMockForAbstractClass(
-			RevisionRecord::class,
-			[],
-			'',
-			false,
-			false,
-			false,
-			[ 'getTimestamp', 'getUser' ]
-		);
+	private function mockRevisionStore( Title $title, UserIdentity $user = null ) {
+		$revisionRecordMock = $this->createMock( RevisionRecord::class );
 
 		$revisionRecordMock->method( 'getTimestamp' )
 			->willReturn( self::TS_MW );
 
-		if ( $testUser ) {
-			$userId = $testUser->getUser()->getId();
-			$userName = $testUser->getUser()->getName();
+		if ( $user ) {
+			$userId = $user->getId();
+			$userName = $user->getName();
 
 			$userIdentity = $this->createMock( \MediaWiki\User\UserIdentity::class );
 
@@ -191,8 +184,8 @@ class MobilePageTest extends MediaWikiIntegrationTestCase {
 	 */
 	public function testGetLatestEdit() {
 		$title = $this->createTestTitle();
-		$testUser = self::getTestUser();
-		$revMock = $this->mockRevisionStore( $title, $testUser );
+		$user = new UserIdentityValue( 42, 'foo' );
+		$revMock = $this->mockRevisionStore( $title, $user );
 
 		$mobilePage = new MobilePage( $title, false );
 		$this->setService( 'RevisionStore', $revMock );
@@ -203,7 +196,7 @@ class MobilePageTest extends MediaWikiIntegrationTestCase {
 		$this->assertArrayHasKey( 'name', $actual );
 		$this->assertArrayHasKey( 'gender', $actual );
 		$this->assertSame( self::TS_MW_TO_TS_UNIX, $actual['timestamp'] );
-		$this->assertSame( $testUser->getUser()->getName(), $actual['name'] );
+		$this->assertSame( $user->getName(), $actual['name'] );
 		$this->assertSame( 'unknown', $actual['gender'] );
 	}
 
