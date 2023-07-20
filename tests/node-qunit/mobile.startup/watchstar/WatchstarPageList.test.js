@@ -49,7 +49,7 @@ QUnit.module( 'MobileFrontend mobile.startup/WatchstarPageList', {
 
 		watchIconName = new Icon( {
 			glyphPrefix: 'wikimedia',
-			name: 'unStar-progressive'
+			icon: 'unStar-progressive'
 		} ).getGlyphClassName();
 		sandbox.stub( user, 'isAnon' ).returns( false );
 	},

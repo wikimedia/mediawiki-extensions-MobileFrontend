@@ -1,9 +1,10 @@
 module.exports = {
 	defaultURLs: `
 		<div class=" drawer drawer-container__drawer position-fixed">
-			<div
-				class=" mw-ui-icon mw-ui-icon-element mw-ui-icon-mf-expand cancel mw-ui-button mw-ui-quiet "
-			> </div>
+			<button type="button" class="cdx-button cdx-button--size-large cdx-button--weight-quiet cdx-button--icon-only cancel">
+				<span class="mw-ui-icon mw-ui-icon-mf-expand "> </span>
+				<span></span>
+			</button>
 			<p> </p>
 			<a href=" logIn " class=" mw-ui-button mw-ui-progressive ">
 				Log in
@@ -17,9 +18,10 @@ module.exports = {
 	`,
 	overrideURLs: `
 		<div class=" drawer drawer-container__drawer position-fixed">
-			<div
-			class=" mw-ui-icon mw-ui-icon-element mw-ui-icon-mf-expand cancel mw-ui-button mw-ui-quiet "
-			> </div>
+			<button type="button" class="cdx-button cdx-button--size-large cdx-button--weight-quiet cdx-button--icon-only cancel">
+				<span class="mw-ui-icon mw-ui-icon-mf-expand "> </span>
+				<span></span>
+			</button>
 			<p> </p>
 			<a href=" customLogIn " class=" mw-ui-button mw-ui-progressive ">
 				custom log in

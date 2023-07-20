@@ -1,7 +1,7 @@
 'use strict';
 const Button = require( '../mobile.startup/Button' ),
 	View = require( '../mobile.startup/View' ),
-	Icon = require( '../mobile.startup/Icon' ),
+	IconButton = require( '../mobile.startup/IconButton' ),
 	util = require( '../mobile.startup/util' );
 
 /**
@@ -124,8 +124,8 @@ class BlockMessageDetails extends View {
 			new Button( this.getButtonConfig() ).$el
 		);
 		this.$el.find( '.block-message-icon' ).prepend(
-			( new Icon( {
-				name: 'block-destructive',
+			( new IconButton( {
+				icon: 'block-destructive',
 				additionalClassNames: 'mw-ui-icon-flush-top'
 			} ) ).$el
 		);

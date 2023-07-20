@@ -56,14 +56,7 @@ class SearchResultsView extends View {
 		const feedbackLink = mw.config.get( 'wgCirrusSearchFeedbackLink' );
 		super.postRender( options );
 		this.$el.find( '.search-content' ).prepend(
-			new Icon( {
-				tagName: 'a',
-				// When this icon is clicked we want to reset the hash for subsequent views
-				href: '#',
-				name: 'articlesSearch',
-				additionalClassNames: 'mw-ui-icon-flush-left',
-				label: mw.msg( 'mobile-frontend-search-content' )
-			} ).$el
+			new Icon( { icon: 'articlesSearch' } ).$el
 		);
 		this.$el.find( '.spinner-container' ).append( $spinner );
 		if ( feedbackLink ) {

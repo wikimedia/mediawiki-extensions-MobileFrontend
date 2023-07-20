@@ -154,12 +154,10 @@ class MakeSectionsTransform implements IMobileTransform {
 		}
 
 		// prepend indicator - this avoids a reflow by creating a placeholder for a toggling indicator
-		$indicator = $doc->createElement( 'div' );
+		$indicator = $doc->createElement( 'button' );
 		$indicator->setAttribute( 'class',
-			// Icon classes are retained for compatibility with Minerva until it is updated
-			// to use Codex.
-			// This should be removed/adapted when Icon.js is using Codex icons.
-			'mw-mf-icon indicator mw-ui-icon-small mw-ui-icon-flush-left mw-ui-icon' );
+			'cdx-button cdx-button--weight-quiet cdx-button--icon-only indicator mf-button-flush-left'
+		);
 		$heading->insertBefore( $indicator, $heading->firstChild );
 	}
 

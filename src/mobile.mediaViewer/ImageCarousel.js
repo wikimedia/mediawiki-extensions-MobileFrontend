@@ -1,7 +1,7 @@
 var View = require( '../mobile.startup/View' ),
 	util = require( '../mobile.startup/util' ),
 	mfExtend = require( '../mobile.startup/mfExtend' ),
-	Icon = require( '../mobile.startup/Icon' ),
+	IconButton = require( '../mobile.startup/IconButton' ),
 	icons = require( '../mobile.startup/icons' ),
 	Button = require( '../mobile.startup/Button' ),
 	detailsButton = new Button( {
@@ -9,13 +9,13 @@ var View = require( '../mobile.startup/View' ),
 		additionalClassNames: 'button',
 		progressive: true
 	} ),
-	slideLeftButton = new Icon( {
+	slideLeftButton = new IconButton( {
 		rotation: 90,
-		name: 'expand-invert'
+		icon: 'expand-invert'
 	} ),
-	slideRightButton = new Icon( {
+	slideRightButton = new IconButton( {
 		rotation: -90,
-		name: 'expand-invert'
+		icon: 'expand-invert'
 	} ),
 	LoadErrorMessage = require( './LoadErrorMessage' ),
 	ImageGateway = require( './ImageGateway' ),

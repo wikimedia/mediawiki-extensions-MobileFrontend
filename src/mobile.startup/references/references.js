@@ -3,7 +3,8 @@ var references,
 	util = require( '../util' ),
 	icons = require( '../icons' ),
 	ReferencesGateway = require( './ReferencesGateway' ),
-	Icon = require( '../Icon' );
+	Icon = require( '../Icon' ),
+	IconButton = require( '../IconButton' );
 
 /**
  * Create a callback for clicking references
@@ -28,7 +29,7 @@ function makeOnNestedReferenceClickHandler( onNestedReferenceClick ) {
 /**
  * Drawer for references
  *
- * @uses Icon
+ * @uses IconButton
  * @param {Object} props
  * @param {boolean} [props.error] whether an error has occurred
  * @param {string} props.title of reference e.g [1]
@@ -39,7 +40,7 @@ function makeOnNestedReferenceClickHandler( onNestedReferenceClick ) {
  * @return {Drawer}
  */
 function referenceDrawer( props ) {
-	const errorIcon = props.error ? new Icon( {
+	const errorIcon = props.error ? new IconButton( {
 		name: 'error',
 		isSmall: true
 	} ).$el : null;
@@ -61,15 +62,13 @@ function referenceDrawer( props ) {
 						.addClass( 'references-drawer__header' )
 						.append( [
 							new Icon( {
-								isSmall: true,
-								name: 'reference',
-								type: ''
+								icon: 'reference',
+								isSmall: true
 							} ).$el,
 							util.parseHTML( '<span>' ).addClass( 'references-drawer__title' ).text( mw.msg( 'mobile-frontend-references-citation' ) ),
 							icons.cancel( 'gray', {
 								isSmall: true,
-								type: 'element',
-								additionalClassNames: 'mw-ui-icon-flush-right'
+								additionalClassNames: 'mf-button-flush-right'
 							} ).$el
 						] ),
 					// Add .mw-parser-output so that TemplateStyles styles apply (T244510)

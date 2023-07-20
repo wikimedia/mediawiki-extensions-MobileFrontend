@@ -103,7 +103,10 @@ QUnit.test( 'HTML is valid', function ( assert ) {
 	const subject = new Drawer( {} );
 	assert.strictEqual(
 		subject.$el.find( '.drawer' ).get( 0 ).outerHTML,
-		'<div class="drawer drawer-container__drawer position-fixed"><div class="mw-ui-icon mw-ui-icon-element mw-ui-icon-mf-expand cancel mw-ui-button mw-ui-quiet  "></div></div>'
+		`<div class="drawer drawer-container__drawer position-fixed"><button type="button" class="cdx-button cdx-button--size-large cdx-button--weight-quiet cdx-button--icon-only cancel">
+				<span class="mw-ui-icon mw-ui-icon-mf-expand "> </span>
+				<span></span>
+		</button></div>`
 	);
 } );
 

@@ -7,6 +7,8 @@
 @thumbWidth: 70px;
 @thumbSpace: @thumbWidth + @thumbGap;
 
+/* stylelint-disable no-descending-specificity */
+
 // Pages
 
 // Lists of pages
@@ -41,32 +43,16 @@
 		// avoid the gap between thumbnails
 		margin: -1px 0 0;
 		line-height: 19px;
+		display: flex;
+		align-items: center;
 
-		// FIXME: use more generic class here to apply to any icon in a page list
-		.watch-this-article {
-			position: absolute;
-			right: 0;
-			top: @itemPaddingV;
-			// undo thumbnail damage
-			margin-top: 1px;
-
-			button {
-				position: absolute;
-				text-indent: inherit;
-				outline: 0;
-			}
-		}
-
-		// T297023: Prevent overriding `mw-ui-icon-element` and making text visible
-		> a:not( .mw-ui-icon-element ) {
+		a:not( .cdx-button ),
+		.title {
+			flex-grow: 1;
 			display: block;
-			color: #72777d;
 
-			&:active,
-			&:hover,
-			&:visited {
+			&:hover {
 				text-decoration: none;
-				color: #72777d;
 			}
 		}
 	}

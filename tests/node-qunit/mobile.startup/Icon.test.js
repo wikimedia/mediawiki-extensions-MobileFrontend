@@ -25,50 +25,9 @@ QUnit.module( 'MobileFrontend Icon.js', {
 	}
 } );
 
-QUnit.test( 'creates a link if passed href option', function ( assert ) {
-	const
-		url = 'https://www.foo.com',
-		icon = new Icon( {
-			href: url
-		} );
-
-	assert.strictEqual( icon.$el[0].tagName, 'A' );
-	assert.strictEqual( icon.$el[0].getAttribute( 'href' ), url );
-} );
-
-QUnit.test( 'does not add href attribute when not a link', function ( assert ) {
+QUnit.test( 'getIconClasses generates icon classes using icon', function ( assert ) {
 	const icon = new Icon( {
-		tagName: 'div'
-	} );
-
-	assert.strictEqual( icon.$el[0].tagName, 'DIV' );
-	assert.strictEqual( icon.$el[0].href, undefined );
-} );
-
-QUnit.test( 'adds disabled attribute when a button', function ( assert ) {
-	const icon = new Icon( {
-		tagName: 'button',
-		disabled: true
-	} );
-
-	assert.strictEqual( icon.$el[0].tagName, 'BUTTON' );
-	assert.strictEqual( icon.$el[0].disabled, true );
-} );
-
-QUnit.test( 'does not add disabled attribute when not a button', function ( assert ) {
-	const icon = new Icon( {
-		tagName: 'div',
-		disabled: true
-	} );
-
-	assert.strictEqual( icon.$el[0].tagName, 'DIV' );
-	assert.strictEqual( icon.$el[0].disabled, undefined );
-} );
-
-QUnit.test( 'getIconClasses generates icon classes using icon name', function ( assert ) {
-	const icon = new Icon( {
-		name: 'user',
-		type: ''
+		icon: 'user'
 	} );
 
 	assert.strictEqual( icon.getIconClasses(), 'mw-ui-icon mw-ui-icon-mf-user ' );
@@ -76,39 +35,11 @@ QUnit.test( 'getIconClasses generates icon classes using icon name', function ( 
 
 QUnit.test( 'getIconClasses generates icon classes using custom icon prefix', function ( assert ) {
 	const icon = new Icon( {
-		name: 'user',
-		type: '',
+		icon: 'user',
 		glyphPrefix: 'wikimedia'
 	} );
 
 	assert.strictEqual( icon.getIconClasses(), 'mw-ui-icon mw-ui-icon-wikimedia-user ' );
-} );
-
-QUnit.test( 'getIconClasses generates icon classes using icon type', function ( assert ) {
-	const icon = new Icon( {
-		name: 'user',
-		type: 'before'
-	} );
-
-	assert.strictEqual( icon.getIconClasses(), 'mw-ui-icon mw-ui-icon-before mw-ui-icon-mf-user ' );
-} );
-
-QUnit.test( 'getIconClasses adds button classes using icon type element', function ( assert ) {
-	const icon = new Icon( {
-		name: 'user',
-		type: 'element'
-	} );
-
-	assert.strictEqual( icon.getIconClasses(), 'mw-ui-icon mw-ui-icon-element mw-ui-icon-mf-user  mw-ui-button mw-ui-quiet' );
-} );
-
-QUnit.test( 'getIconClasses adds additional classes', function ( assert ) {
-	const icon = new Icon( {
-		name: 'user',
-		additionalClassNames: 'test'
-	} );
-
-	assert.strictEqual( icon.getIconClasses(), 'mw-ui-icon mw-ui-icon-element mw-ui-icon-mf-user test mw-ui-button mw-ui-quiet' );
 } );
 
 QUnit.test( 'getRotationClasses returns rotation classes', function ( assert ) {
@@ -125,7 +56,7 @@ QUnit.test( 'getRotationClasses returns rotation classes', function ( assert ) {
 
 QUnit.test( 'getGlyphClassName uses icon prefix', function ( assert ) {
 	const icon = new Icon( {
-		name: 'user',
+		icon: 'user',
 		glyphPrefix: 'wikimedia'
 	} );
 
@@ -134,7 +65,7 @@ QUnit.test( 'getGlyphClassName uses icon prefix', function ( assert ) {
 
 QUnit.test( 'getGlyphClassName does not use icon prefix if not provided', function ( assert ) {
 	const icon = new Icon( {
-		name: 'user',
+		icon: 'user',
 		glyphPrefix: ''
 	} );
 
@@ -143,9 +74,9 @@ QUnit.test( 'getGlyphClassName does not use icon prefix if not provided', functi
 
 QUnit.test( 'adds small classes', function ( assert ) {
 	const icon = new Icon( {
-		name: 'user',
+		icon: 'user',
 		isSmall: true
 	} );
 
-	assert.strictEqual( icon.getClassName(), 'mw-ui-icon mw-ui-icon-element mw-ui-icon-mf-user  mw-ui-button mw-ui-quiet mw-ui-icon-small ' );
+	assert.strictEqual( icon.getClassName(), 'mw-ui-icon mw-ui-icon-mf-user mw-ui-icon-small ' );
 } );

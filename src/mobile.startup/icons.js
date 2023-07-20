@@ -1,6 +1,7 @@
 var
 	CANCEL_GLYPH = 'close',
 	Icon = require( './Icon' ),
+	IconButton = require( './IconButton' ),
 	util = require( './util' );
 
 /**
@@ -18,6 +19,7 @@ module.exports = {
 	CANCEL_GLYPH: CANCEL_GLYPH,
 	// Exported to support testing and stubbing
 	Icon: Icon,
+	IconButton: IconButton,
 	/**
 	 * Gets a back icon
 	 *
@@ -26,12 +28,12 @@ module.exports = {
 	 *
 	 * @memberof icons
 	 * @instance
-	 * @return {Icon}
+	 * @return {IconButton}
 	 */
 	back: function () {
-		return new Icon( {
+		return new IconButton( {
 			tagName: 'button',
-			name: 'previous-base20',
+			icon: 'previous-base20',
 			additionalClassNames: 'back',
 			label: mw.msg( 'mobile-frontend-overlay-close' )
 		} );
@@ -46,21 +48,22 @@ module.exports = {
 	 * @instance
 	 * @param {string} [variant] defaults to `base20`.
 	 * @param {Object} [props] to extend
-	 * @return {Icon}
+	 * @return {IconButton}
 	 */
 	cancel: function ( variant, props = {} ) {
 		var glyph = variant ? `${CANCEL_GLYPH}-${variant}` : `${CANCEL_GLYPH}-base20`;
 		props.additionalClassNames = props.additionalClassNames || '';
 		props.additionalClassNames += ' cancel';
 
-		return new this.Icon( util.extend( {
+		return new this.IconButton( util.extend( {
 			tagName: 'button',
-			name: glyph,
+			icon: glyph,
 			label: mw.msg( 'mobile-frontend-overlay-close' )
 		}, props ) );
 	},
 	/**
-	 * Gets a spinner icon.
+	 * Gets a spinner icon. This uses IconButton but should never actually
+	 * be a button or have full button styles, as its purely presentational
 	 *
 	 * The icon should be used to inform the user that the front-end is
 	 * communicating with the back-end.
@@ -68,28 +71,39 @@ module.exports = {
 	 * @memberof icons
 	 * @instance
 	 * @param {Object} [props] See `Icon` for more details
-	 * @return {Icon}
+	 * @return {IconButton}
 	 */
 	spinner: function ( props = {} ) {
 		if ( props.additionalClassNames === undefined ) {
 			props.additionalClassNames = 'spinner loading';
 		}
 
-		return new this.Icon( util.extend( {
-			name: 'spinner',
+		const spinner = new this.IconButton( util.extend( {
+			tagName: 'span',
+			icon: 'spinner',
 			label: mw.msg( 'mobile-frontend-loading-message' )
 		}, props ) );
+
+		// Update the element to not use button classes or attributes
+		spinner.$el.removeClass();
+		// eslint-disable-next-line mediawiki/class-doc
+		spinner.$el.addClass( props.additionalClassNames );
+		spinner.$el.attr( 'type', '' );
+		if ( spinner.options.isIconOnly ) {
+			spinner.$el.addClass( 'mf-icon-element' );
+		}
+		return spinner;
 	},
 	/**
 	 * Gets a failure (error) icon
 	 *
 	 * @memberof icons
 	 * @instance
-	 * @return {Icon}
+	 * @return {IconButton}
 	 */
 	error: function () {
-		return new Icon( {
-			name: 'alert-invert',
+		return new IconButton( {
+			icon: 'alert-invert',
 			additionalClassNames: 'load-fail-msg-icon'
 		} );
 	},
@@ -99,14 +113,14 @@ module.exports = {
 	 * @memberof icons
 	 * @instance
 	 * @param {Object} props
-	 * @return {Icon}
+	 * @return {IconButton}
 	 */
 	watchIcon: function ( props = {} ) {
 		props.additionalClassNames = props.additionalClassNames || '';
 		props.additionalClassNames += ' watch-this-article';
 
-		return new this.Icon( util.extend( {
-			name: 'star-base20',
+		return new this.IconButton( util.extend( {
+			icon: 'star-base20',
 			glyphPrefix: 'wikimedia'
 		}, props ) );
 	},
@@ -116,14 +130,14 @@ module.exports = {
 	 * @memberof icons
 	 * @instance
 	 * @param {Object} props
-	 * @return {Icon}
+	 * @return {IconButton}
 	 */
 	watchedIcon: function ( props = {} ) {
 		props.additionalClassNames = props.additionalClassNames || '';
 		props.additionalClassNames += ' watch-this-article watched';
 
-		return new this.Icon( util.extend( {
-			name: 'unStar-progressive',
+		return new this.IconButton( util.extend( {
+			icon: 'unStar-progressive',
 			glyphPrefix: 'wikimedia'
 		}, props ) );
 	}

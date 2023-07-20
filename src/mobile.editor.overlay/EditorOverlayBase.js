@@ -5,7 +5,7 @@ var Overlay = require( '../mobile.startup/Overlay' ),
 	headers = require( '../mobile.startup/headers' ),
 	icons = require( '../mobile.startup/icons' ),
 	Button = require( '../mobile.startup/Button' ),
-	Icon = require( '../mobile.startup/Icon' ),
+	IconButton = require( '../mobile.startup/IconButton' ),
 	mfExtend = require( '../mobile.startup/mfExtend' ),
 	blockMessageDrawer = require( './blockMessageDrawer' ),
 	MessageBox = require( '../mobile.startup/MessageBox' ),
@@ -52,7 +52,7 @@ EditVeTool.prototype.onUpdateState = function () {
  *
  * @class EditorOverlayBase
  * @extends Overlay
- * @uses Icon
+ * @uses IconButton
  * @uses user
  * @param {Object} params Configuration options
  * @param {boolean} params.editSwitcher whether possible to switch mode in header
@@ -400,9 +400,11 @@ mfExtend( EditorOverlayBase, Overlay, {
 					editingMsg: options.editingMsg
 				} ),
 				options.readOnly ? [] : [
-					new Icon( {
+					new IconButton( {
 						tagName: 'button',
-						name: 'next-invert',
+						action: 'progressive',
+						weight: 'primary',
+						icon: 'next-invert',
 						additionalClassNames: 'continue',
 						disabled: true,
 						title: options.continueMsg

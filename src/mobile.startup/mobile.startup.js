@@ -24,6 +24,7 @@ module.exports = {
 	Browser: require( './Browser' ),
 	Button: require( './Button' ),
 	Icon: require( './Icon' ),
+	IconButton: require( './IconButton' ),
 	ReferencesGateway: require( './references/ReferencesGateway' ),
 	ReferencesHtmlScraperGateway: require( './references/ReferencesHtmlScraperGateway' ),
 	icons: require( './icons' ),

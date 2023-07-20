@@ -16,7 +16,7 @@ QUnit.module( 'MobileFrontend icons.js', {
 		mediaWiki.setUp( sandbox, global );
 		mustache.setUp( sandbox, global );
 		icons = require( '../../../src/mobile.startup/icons' );
-		spy = sandbox.spy( icons, 'Icon' );
+		spy = sandbox.spy( icons, 'IconButton' );
 	},
 	afterEach: function () {
 		sandbox.restore();
@@ -28,7 +28,7 @@ QUnit.test( '#cancel()', function ( assert ) {
 	icons.cancel();
 	assert.propEqual( spy.getCall( 0 ).args[ 0 ], {
 		tagName: 'button',
-		name: icons.CANCEL_GLYPH + '-base20',
+		icon: icons.CANCEL_GLYPH + '-base20',
 		additionalClassNames: ' cancel',
 		label: mw.msg( 'mobile-frontend-overlay-close' ),
 		isTypeButton: true
@@ -39,7 +39,7 @@ QUnit.test( '#cancel(variant)', function ( assert ) {
 	icons.cancel( 'gray' );
 	assert.propEqual( spy.getCall( 0 ).args[ 0 ], {
 		tagName: 'button',
-		name: icons.CANCEL_GLYPH + '-gray',
+		icon: icons.CANCEL_GLYPH + '-gray',
 		additionalClassNames: ' cancel',
 		label: mw.msg( 'mobile-frontend-overlay-close' ),
 		isTypeButton: true
@@ -50,7 +50,7 @@ QUnit.test( '#cancel(, props)', function ( assert ) {
 	icons.cancel( '', { additionalClassNames: 'test' } );
 	assert.propEqual( spy.getCall( 0 ).args[ 0 ], {
 		tagName: 'button',
-		name: icons.CANCEL_GLYPH + '-base20',
+		icon: icons.CANCEL_GLYPH + '-base20',
 		additionalClassNames: 'test cancel',
 		label: mw.msg( 'mobile-frontend-overlay-close' ),
 		isTypeButton: true
@@ -63,9 +63,10 @@ QUnit.test( '#spinner(props)', function ( assert ) {
 		additionalClassNames: 'will-not-be-ignored'
 	} );
 	assert.propEqual( spy.getCall( 0 ).args[ 0 ], {
+		tagName: 'span',
 		foo: 'will be passed down',
 		additionalClassNames: 'will-not-be-ignored',
-		name: 'spinner',
+		icon: 'spinner',
 		label: mw.msg( 'mobile-frontend-loading-message' )
 	}, 'Options are passed down' );
 } );
@@ -75,9 +76,10 @@ QUnit.test( '#spinner()', function ( assert ) {
 		foo: 'will be passed down'
 	} );
 	assert.propEqual( spy.getCall( 0 ).args[ 0 ], {
+		tagName: 'span',
 		foo: 'will be passed down',
 		additionalClassNames: 'spinner loading',
-		name: 'spinner',
+		icon: 'spinner',
 		label: mw.msg( 'mobile-frontend-loading-message' )
 	}, 'Options are passed down' );
 } );

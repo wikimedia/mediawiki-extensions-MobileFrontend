@@ -212,6 +212,7 @@
 				"mediawiki.page.watch.ajax",
 				"mediawiki.template.mustache",
 				"mediawiki.ui.button",
+				"codex-search-styles",
 				"mediawiki.ui.icon",
 				"mediawiki.Title",
 				"mobile.pagelist.styles",

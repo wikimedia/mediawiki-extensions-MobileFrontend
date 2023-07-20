@@ -36,7 +36,7 @@ QUnit.test( '#constructor happyView', function ( assert ) {
 	const promise = util.Deferred(),
 		viewSuccess = promisedView( promise );
 
-	assert.strictEqual( viewSuccess.$el.text(), '⌛', 'the view is waiting to resolve' );
+	assert.strictEqual( viewSuccess.$el.text().trim(), '⌛', 'the view is waiting to resolve' );
 	assert.true( viewSuccess.$el.hasClass( 'promised-view' ), 'parent element has loading class when loading' );
 	promise.resolve( happyView );
 	return promise.then( function () {
@@ -50,11 +50,11 @@ QUnit.test( '#constructor when promise rejects but not to a sadView', function (
 		promise = util.Deferred().reject( new Error( 'fake test error' ) ),
 		viewFailure = promisedView( promise );
 
-	assert.strictEqual( viewFailure.$el.text(), '⌛', 'the view is waiting to resolve' );
+	assert.strictEqual( viewFailure.$el.text().trim(), '⌛', 'the view is waiting to resolve' );
 	assert.true( viewFailure.$el.hasClass( 'promised-view' ), 'parent element has loading class when loading' );
 
 	return promise.catch( function () {
-		assert.strictEqual( viewFailure.$el.text(), '⌛', 'the view still shows the loading icon' );
+		assert.strictEqual( viewFailure.$el.text().trim(), '⌛', 'the view still shows the loading icon' );
 	} );
 } );
 
@@ -69,7 +69,7 @@ QUnit.test( '#constructor when promise rejects to a sadView', function ( assert 
 
 	sadView.append( '😭' );
 
-	assert.strictEqual( viewFailure.$el.text(), '⌛', 'the view is waiting to resolve' );
+	assert.strictEqual( viewFailure.$el.text().trim(), '⌛', 'the view is waiting to resolve' );
 	assert.true( viewFailure.$el.hasClass( 'promised-view' ), 'parent element has loading class when loading' );
 
 	return promise.catch( function () {

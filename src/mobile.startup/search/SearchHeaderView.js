@@ -1,6 +1,6 @@
 const util = require( '../util' ),
 	View = require( '../View' ),
-	Icon = require( '../Icon' );
+	IconButton = require( '../IconButton' );
 
 /**
  * @extends View
@@ -55,9 +55,10 @@ class SearchHeaderView extends View {
 	}
 	/** @inheritdoc */
 	postRender() {
-		const clearIcon = new Icon( {
+		const clearIcon = new IconButton( {
 			tagName: 'button',
-			name: 'clear',
+			icon: 'clear',
+			size: 'medium',
 			isSmall: true,
 			label: mw.msg( 'mobile-frontend-clear-search' ),
 			additionalClassNames: 'clear',

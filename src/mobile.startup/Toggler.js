@@ -2,12 +2,12 @@ var browser = require( './Browser' ).getSingleton(),
 	util = require( './util' ),
 	escapeSelector = util.escapeSelector,
 	arrowOptions = {
-		name: 'expand',
-		type: '',
+		icon: 'expand',
 		isSmall: true,
-		additionalClassNames: 'indicator mw-ui-icon-flush-left'
+		size: 'medium',
+		additionalClassNames: 'indicator mf-button-flush-left'
 	},
-	Icon = require( './Icon' );
+	IconButton = require( './IconButton' );
 
 /**
  *
@@ -155,10 +155,11 @@ Toggler.prototype.toggle = function ( $heading, page, fromSaved ) {
 	$heading.toggleClass( 'open-block' );
 
 	arrowOptions.rotation = wasExpanded ? 0 : 180;
-	var indicator = new Icon( arrowOptions );
+	var newIndicator = new IconButton( arrowOptions );
 	var $indicatorElement = $heading.data( 'indicator' );
 	if ( $indicatorElement ) {
-		$indicatorElement.attr( 'class', indicator.getClassName() );
+		$indicatorElement.replaceWith( newIndicator.$el );
+		$heading.data( 'indicator', newIndicator.$el );
 	}
 
 	var $headingLabel = $heading.find( '.mw-headline' );
@@ -300,8 +301,7 @@ Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 				} );
 
 			arrowOptions.rotation = !self.isCollapsedByDefault() ? 180 : 0;
-			var indicator = new Icon( arrowOptions );
-
+			var indicator = new IconButton( arrowOptions );
 			if ( $indicator.length ) {
 				// replace the existing indicator
 				$indicator.replaceWith( indicator.$el );

@@ -14,7 +14,7 @@ var
  * @class SearchOverlay
  * @extends Overlay
  * @uses SearchGateway
- * @uses Icon
+ * @uses IconButton
  *
  * @param {Object} params Configuration options
  * @param {string} params.placeholderMsg Search input placeholder text.

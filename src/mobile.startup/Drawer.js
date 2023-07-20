@@ -2,7 +2,7 @@ var
 	mfExtend = require( './mfExtend' ),
 	View = require( './View' ),
 	util = require( './util' ),
-	Icon = require( './Icon' );
+	IconButton = require( './IconButton' );
 
 /**
  * A {@link View} that pops up from the bottom of the screen.
@@ -19,8 +19,8 @@ var
  */
 function Drawer( props ) {
 	this.drawerClassName = props.className || '';
-	this.collapseIcon = new Icon( {
-		name: 'expand',
+	this.collapseIcon = new IconButton( {
+		icon: 'expand',
 		additionalClassNames: 'cancel'
 	} );
 	View.call( this,

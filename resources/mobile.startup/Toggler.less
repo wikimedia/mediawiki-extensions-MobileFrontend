@@ -10,6 +10,16 @@
 			opacity: 0.5;
 		}
 	}
+
+	// Vertically center toggle buttons in the case of long, multiline headings
+	.section-heading {
+		display: flex;
+		align-items: center;
+
+		.indicator {
+			max-height: 32px;
+		}
+	}
 }
 
 @media print {

@@ -4,15 +4,12 @@ const icons = require( '../mobile.startup/icons' );
 module.exports = function fakeToolbar() {
 	var $fakeToolbar, $goBack, $loadingMessage;
 
-	$goBack = icons.cancel( null, {
-		tagName: 'a'
-	} ).$el.attr( 'tabindex', '0' )
-		.attr( 'role', 'button' );
+	$goBack = icons.cancel().$el;
 
+	// FIXME: Should not be a button, instead should be an icon with text
 	$loadingMessage = icons.spinner( {
 		tagName: 'span',
-		type: 'before',
-		additionalClassNames: '',
+		isIconOnly: false,
 		label: mw.msg( 'mobile-frontend-editor-loading' )
 	} ).$el;
 

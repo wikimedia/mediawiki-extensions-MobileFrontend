@@ -105,6 +105,10 @@
 	z-index: @z-indexOverlay;
 	display: none;
 
+	.cdx-button {
+		border-radius: 0;
+	}
+
 	&.visible {
 		display: block;
 	}
@@ -143,33 +147,11 @@
 	}
 
 	.header-action {
+		// TODO: Remove these styles once Codex icons are fully implemented
 		a,
 		button {
 			&[ disabled ] {
 				opacity: 0.5;
-			}
-
-			&:focus {
-				outline: 0;
-			}
-		}
-
-		// FIXME: Overlay buttons should be given the mw-ui-button class instead
-		// of re-implementing it's properties here.
-		.continue,
-		.submit,
-		.progressive {
-			background-color: @background-color-progressive;
-			color: @color-inverted;
-			width: auto;
-
-			&:not( .mw-ui-icon-element ) {
-				padding: 0 1.2em;
-			}
-
-			&[ disabled ] {
-				background-color: #c8ccd1;
-				opacity: 1;
 			}
 		}
 
@@ -177,10 +159,6 @@
 		.oo-ui-widget {
 			margin-right: @width-icon-gutter;
 		}
-	}
-
-	button {
-		cursor: pointer;
 	}
 
 	.submit {

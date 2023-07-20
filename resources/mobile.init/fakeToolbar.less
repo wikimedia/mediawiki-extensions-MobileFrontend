@@ -18,52 +18,12 @@
 
 .ve-mobile-fakeToolbar {
 	height: 3em;
-	display: block !important;
+	display: flex !important;
+	align-items: center;
 	width: 100% !important;
 	box-sizing: content-box;
 	border-color: @border-color-subtle;
 	border-style: @border-style-base;
 	border-width: 0 @border-width-base;
 	margin: 0 -1px;
-
-	.cancel,
-	.mw-ui-icon-mf-spinner {
-		display: inline-block;
-		width: 3em;
-		height: 3em;
-		// Needs !important to override content-box set in .mw-ui-icon styles
-		box-sizing: border-box !important;
-		// Override .mw-ui-icon + span
-		margin-left: 0 !important;
-
-		&::before {
-			background-size: 20px 20px;
-		}
-	}
-
-	.cancel {
-		padding: 0;
-		color: transparent;
-
-		&:hover {
-			background-color: #eaecf0;
-		}
-	}
-
-	.mw-ui-icon-mf-spinner {
-		vertical-align: top;
-		border-left: @border-width-base @border-style-base #eaecf0;
-		cursor: auto;
-		padding: 0 0.875em;
-		// In the unlikely case that the text overflows the width of the screen...
-		width: calc( ~'100vw - 3em' );
-		// Must be less than the Minerva tablet threshold
-		max-width: 500px;
-		overflow: hidden;
-		text-overflow: ellipsis;
-
-		&::before {
-			margin-right: 0.3em;
-		}
-	}
 }

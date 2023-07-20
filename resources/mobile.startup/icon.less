@@ -1,6 +1,43 @@
 @import 'mediawiki.skin.variables.less';
 @import 'mediawiki.mixins.less';
 
+.cdx-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.mf-button-flush-left {
+	&.cdx-button {
+		.cdx-mixin-button-layout-flush( 'start', true );
+	}
+
+	&.cdx-button--size-large {
+		.cdx-mixin-button-layout-flush( 'start', true, 'large' );
+	}
+}
+
+.mf-button-flush-right {
+	&.cdx-button {
+		.cdx-mixin-button-layout-flush( 'end', true );
+	}
+
+	&.cdx-button--size-large {
+		.cdx-mixin-button-layout-flush( 'end', true, 'large' );
+	}
+}
+
+// Similar to the legacy mw-ui-icon-element class
+// To be used in cases were an icon is styled like an icon only button,
+// but shouldnt be a button (i.e. spinner icon)
+.mf-icon-element {
+	padding: 12px;
+
+	span + span {
+		.mixin-screen-reader-text();
+	}
+}
+
 .mf-mw-ui-icon-rotate-anti-clockwise::before {
 	transform: rotate( -90deg );
 }

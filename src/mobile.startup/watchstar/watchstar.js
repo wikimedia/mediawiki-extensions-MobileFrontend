@@ -7,7 +7,7 @@ var icons = require( '../icons' );
  * @param {Object} options Configuration options
  * @param {Page} options.page
  * @param {boolean} options.isWatched is the article watched?
- * @return {Icon}
+ * @return {IconButton}
  */
 module.exports = function ( options ) {
 	const isWatched = options.isWatched,
@@ -17,13 +17,14 @@ module.exports = function ( options ) {
 		iconProps = {
 			href: mw.Title.newFromText( options.page.title ).getUrl( { action } )
 		},
-		watchIcon = icons.watchIcon( iconProps ),
-		watchedIcon = icons.watchedIcon( iconProps ),
-		WATCH_CLASS = watchIcon.$el.attr( 'class' ),
-		WATCHED_CLASS = watchedIcon.$el.attr( 'class' ),
-		activeIcon = isWatched ? watchedIcon : watchIcon,
+		watchButton = icons.watchIcon( iconProps ),
+		watchedButton = icons.watchedIcon( iconProps ),
+		WATCH_CLASS = watchButton.getIcon().$el.attr( 'class' ),
+		WATCHED_CLASS = watchedButton.getIcon().$el.attr( 'class' ),
+		activeIcon = isWatched ? watchedButton : watchButton,
 		callback = ( $link, watched ) => {
-			$link.attr( 'class', watched ?
+			const $icon = $link.find( '.mw-ui-icon' );
+			$icon.attr( 'class', watched ?
 				WATCHED_CLASS : WATCH_CLASS );
 		};
 
