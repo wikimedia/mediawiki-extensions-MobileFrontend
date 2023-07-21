@@ -256,7 +256,7 @@ class PageHTMLParser {
 		};
 		return {
 			languages: Array.prototype.map.call(
-				document.querySelectorAll( '#p-lang li a' ),
+				document.querySelectorAll( '#p-lang .interlanguage-link a' ),
 				mapLinkToLanguageObj
 			),
 			variants: Array.prototype.map.call(
