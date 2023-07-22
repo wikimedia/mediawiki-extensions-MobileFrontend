@@ -4,7 +4,8 @@ var M = require( '../mobile.startup/moduleLoaderSingleton' ),
 	editorLoadingOverlay = require( './editorLoadingOverlay' ),
 	OverlayManager = require( '../mobile.startup/OverlayManager' ),
 	// #ca-edit, .mw-editsection are standard MediaWiki elements
-	// .edit-link comes from MobileFrontend user page creation CTA
+	// .edit-link can be added to links anywhere to trigger the editor (e.g. MobileFrontend
+	// user page creation CTA, edit-full-page overflow menu item)
 	// Links in content are handled separately to allow reloading the content (T324686)
 	$editTab = $( '#ca-edit' ),
 	EDITSECTION_SELECTOR = '.mw-editsection a, .edit-link',
@@ -96,11 +97,12 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 		overlayManager = OverlayManager.getSingleton(),
 		isNewPage = page.id === 0;
 
-	$editTab.on( 'click', function ( ev ) {
+	$editTab.add( '.edit-link' ).on( 'click.mfeditlink', function ( ev ) {
 		onEditLinkClick( this, ev, overlayManager.router );
 	} );
 	mw.hook( 'wikipage.content' ).add( function ( $content ) {
-		$content.find( EDITSECTION_SELECTOR ).on( 'click', function ( ev ) {
+		// make sure that any .edit-link links in here don't get double-handled
+		$content.find( EDITSECTION_SELECTOR ).off( 'click.mfeditlink' ).on( 'click.mfeditlink', function ( ev ) {
 			onEditLinkClick( this, ev, overlayManager.router );
 		} );
 	} );
