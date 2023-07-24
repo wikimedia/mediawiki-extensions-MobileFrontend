@@ -119,6 +119,7 @@
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Άλλες γλώσσες",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Αναζήτηση για γλώσσα",
 	"mobile-frontend-languages-structured-overlay-no-results": "Η γλώσσα δεν είναι διαθέσιμη",
+	"mobile-frontend-languages-structured-overlay-error": "Παρουσιάστηκε σφάλμα κατά τη φόρτωση των γλωσσών για αυτήν τη σελίδα.",
 	"mobile-frontend-languages-structured-overlay-no-results-body": "Η γλώσσα που αναζητήσατε δεν είναι διαθέσιμη.",
 	"mobile-frontend-last-modified-date": "Τελευταία επεξεργασία στις $1, στις $2",
 	"mobile-frontend-last-modified-with-user-days": "[$4 Τελευταία επεξεργασία {{PLURAL:$3|$3 ημέρα|$3 ημέρες}} πριν] από {{PLURAL:$5|{{GENDER:$1|τον\nτην}} [$6 $2]|0=ανώνυμο χρήστη}}",
