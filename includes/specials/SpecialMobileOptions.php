@@ -196,8 +196,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 	private function addSettingsForm() {
 		$out = $this->getOutput();
 		$user = $this->getUser();
-		$userNameUtils = MediaWikiServices::getInstance()->getUserNameUtils();
-		$isTemp = $userNameUtils->isTemp( $user->getName() );
+		$isTemp = $user->isTemp();
 
 		$out->setPageTitle( $this->msg( 'mobile-frontend-main-menu-settings-heading' ) );
 		$out->enableOOUI();
