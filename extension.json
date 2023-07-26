@@ -408,7 +408,9 @@
 				"mobile-frontend-media-details",
 				"mobile-frontend-media-license-link",
 				"mobile-frontend-media-load-fail-message",
-				"mobile-frontend-media-load-fail-retry"
+				"mobile-frontend-media-load-fail-retry",
+				"mobile-frontend-media-next",
+				"mobile-frontend-media-prev"
 			]
 		},
 		"mobile.languages.structured": {

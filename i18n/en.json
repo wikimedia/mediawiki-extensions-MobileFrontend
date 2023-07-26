@@ -154,6 +154,8 @@
 	"mobile-frontend-media-license-link": "License information",
 	"mobile-frontend-media-load-fail-message": "There was an error while loading this image.",
 	"mobile-frontend-media-load-fail-retry": "Refresh",
+	"mobile-frontend-media-next": "Show next image",
+	"mobile-frontend-media-prev": "Show previous image",
 	"mobile-frontend-missing-image": "Image",
 	"mobile-frontend-tap-to-display-image": "Tap to display image.",
 	"mobile-frontend-news-items": "In the news",

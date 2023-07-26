@@ -11,11 +11,13 @@ var View = require( '../mobile.startup/View' ),
 	} ),
 	slideLeftButton = new IconButton( {
 		rotation: 90,
-		icon: 'expand-invert'
+		icon: 'expand-invert',
+		label: mw.msg( 'mobile-frontend-media-prev' )
 	} ),
 	slideRightButton = new IconButton( {
 		rotation: -90,
-		icon: 'expand-invert'
+		icon: 'expand-invert',
+		label: mw.msg( 'mobile-frontend-media-next' )
 	} ),
 	LoadErrorMessage = require( './LoadErrorMessage' ),
 	ImageGateway = require( './ImageGateway' ),
@@ -62,7 +64,7 @@ mfExtend( ImageCarousel, View, {
 	 * @instance
 	 */
 	template: util.template( `
-<button class="prev slider-button"></button>
+<button title="{{prevMsg}}" class="prev slider-button"></button>
 <div class="main">
 	<div class="image-wrapper">
 		<div class="image"></div>
@@ -74,7 +76,7 @@ mfExtend( ImageCarousel, View, {
 		<p class="license"><a href="#">{{licenseLinkMsg}}</a></p>
 	</div>
 </div>
-<button class="next slider-button"></button>
+<button title="{{nextMsg}}" class="next slider-button"></button>
 	` ),
 
 	/**
@@ -84,10 +86,14 @@ mfExtend( ImageCarousel, View, {
 	 * @property {Object} defaults Default options hash.
 	 * @property {mw.Api} defaults.api instance of API to use
 	 * @property {string} defaults.licenseLinkMsg Link to license information in media viewer.
+	 * @property {string} defaults.prevMsg Title for "prev" button in media viewer.
+	 * @property {string} defaults.nextMsg Title for "next" button in media viewer.
 	 * @property {Thumbnail[]} defaults.thumbnails a list of thumbnails to browse
 	 */
 	defaults: util.extend( {}, View.prototype.defaults, {
 		licenseLinkMsg: mw.msg( 'mobile-frontend-media-license-link' ),
+		prevMsg: mw.msg( 'mobile-frontend-media-prev' ),
+		nextMsg: mw.msg( 'mobile-frontend-media-next' ),
 		thumbnails: []
 	} ),
 	/**

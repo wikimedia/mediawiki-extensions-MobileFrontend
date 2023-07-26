@@ -161,6 +161,8 @@
 	"mobile-frontend-media-license-link": "Link to license information in media viewer.\n{{Identical|License information}}",
 	"mobile-frontend-media-load-fail-message": "Message shown when media loading fails",
 	"mobile-frontend-media-load-fail-retry": "Link to reload page that's shown when media loading fails\n{{Identical|Refresh}}",
+	"mobile-frontend-media-next": "Alt text for a button that shows the next image.",
+	"mobile-frontend-media-prev": "Alt text for a button that shows the previous image.",
 	"mobile-frontend-missing-image": "When the mobile site removes images it replaces them with a link to the image and the alt text of the image. If no alt text is provided this string is shown to inform the user it is an image.\n{{Identical|Image}}",
 	"mobile-frontend-tap-to-display-image": "Alert the user that they need to click the image to display it",
 	"mobile-frontend-news-items": "The title that will appear before the element with the mf-itn selector.",
