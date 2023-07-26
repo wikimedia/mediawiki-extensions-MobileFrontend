@@ -126,6 +126,20 @@ footer {
 		text-decoration: none;
 	}
 
+	.mw-diff-inline-added.mw-diff-empty-line,
+	.mw-diff-inline-deleted.mw-diff-empty-line,
+	.mw-inline-diff-newline {
+		&::after {
+			content: '';
+		}
+	}
+
+	.mw-diff-empty-line {
+		ins, del {
+			display: inline;
+		}
+	}
+
 	#mw-mf-userinfo .meta,
 	.mw-mf-diff-date span,
 	.meta span {
