@@ -1,0 +1,30 @@
+{
+	"@metadata": {
+		"authors": [
+			"Winston Sung"
+		]
+	},
+	"mobile-frontend-changeslist-nocomment": "呒不编辑摘要",
+	"mobile-frontend-copyright": "除非另外声明，内容用$1授权。",
+	"mobile-frontend-editor-anon": "弗登录编辑",
+	"mobile-frontend-editor-anonwarning": "<strong>警告：</strong>侬弗曾登录。如果侬做仔任何编辑，侬个IP地址会公开可见。如果侬<strong>登录</strong>或者<strong>建立只账号</strong>，侬个编辑会归功到侬用户名下底，而且有其他优点。",
+	"mobile-frontend-featured-article": "特色内容",
+	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}}靠像侬一样个人建立。</strong><br />登录来贡献。",
+	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "建议个闲话",
+	"mobile-frontend-last-modified-date": "阿末趟编辑来拉$1 $2",
+	"mobile-frontend-last-modified-with-user-days": "{{PLURAL:$5|[$6 $2]|0=匿名用户}}[$4 阿末趟{{GENDER:$1|编辑}}来拉{{PLURAL:$3|$3天}}前]",
+	"mobile-frontend-last-modified-with-user-hours": "{{PLURAL:$5|[$6 $2]|0=匿名用户}}[$4 阿末趟{{GENDER:$1|编辑}}来拉{{PLURAL:$3|$3个钟头}}前]",
+	"mobile-frontend-last-modified-with-user-just-now": "{{PLURAL:$4|[$5 $2]|0=匿名用户}}刚巧[$3 {{GENDER:$1|编辑}}]",
+	"mobile-frontend-last-modified-with-user-minutes": "{{PLURAL:$5|[$6 $2]|0=匿名用户}}[$4 阿末趟{{GENDER:$1|编辑}}来拉{{PLURAL:$3|$3分钟}}前]",
+	"mobile-frontend-last-modified-with-user-months": "{{PLURAL:$5|[$6 $2]|0=匿名用户}}[$4 阿末趟{{GENDER:$1|编辑}}来拉{{PLURAL:$3|$3个号头}}前]",
+	"mobile-frontend-last-modified-with-user-seconds": "{{PLURAL:$5|[$6 $2]|0=匿名用户}}[$4 阿末趟{{GENDER:$1|编辑}}来拉{{PLURAL:$3|$3秒}}前]",
+	"mobile-frontend-last-modified-with-user-years": "{{PLURAL:$5|[$6 $2]|0=匿名用户}}[$4 阿末趟{{GENDER:$1|编辑}}来拉{{PLURAL:$3|$3年}}前]",
+	"mobile-frontend-media-details": "零零碎碎",
+	"mobile-frontend-news-items": "近段辰光个事体",
+	"mobile-frontend-privacy-link-text": "隐私",
+	"mobile-frontend-terms-text": "使用条款",
+	"mobile-frontend-view": "手机版视图",
+	"mobile-frontend-view-desktop": "桌面版",
+	"tag-mobile_edit": "移动版编辑",
+	"tag-mobile_web_edit": "移动网页编辑"
+}
