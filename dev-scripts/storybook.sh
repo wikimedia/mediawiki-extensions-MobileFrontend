@@ -50,4 +50,5 @@ mkdir -p .storybook/mediawiki-skins-MinervaNeue/resources/skins.minerva.base.sty
 mkdir -p .storybook/mediawiki-skins-MinervaNeue/resources/skins.minerva.base.styles/content
 mkdir -p .storybook/mediawiki-skins-MinervaNeue/resources/skins.minerva.base.styles/content/tablet
 curl -sSL "https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/skins/MinervaNeue/+/master/resources/skins.minerva.base.styles/ui.less?format=TEXT" | base64 --decode > .storybook/mediawiki-skins-MinervaNeue/resources/skins.minerva.base.styles/ui.less
+curl -sSL "https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/skins/MinervaNeue/+/master/resources/skins.minerva.base.styles/icons.less?format=TEXT" | base64 --decode > .storybook/mediawiki-skins-MinervaNeue/resources/skins.minerva.base.styles/icons.less
 curl -sSL "https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/skins/MinervaNeue/+/master/resources/skins.minerva.base.styles/content/tablet/common.less?format=TEXT" | base64 --decode > .storybook/mediawiki-skins-MinervaNeue/resources/skins.minerva.base.styles/content/tablet/common.less
