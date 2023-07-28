@@ -2,6 +2,7 @@ import OO from 'oojs';
 import jQuery from 'jquery';
 import mustache from 'mustache';
 import './styles.less';
+import '@wikimedia/codex/dist/codex.style.css';
 import en from '../i18n/en.json';
 import mockMediaWiki from '@wikimedia/mw-node-qunit/src/mockMediaWiki';
 

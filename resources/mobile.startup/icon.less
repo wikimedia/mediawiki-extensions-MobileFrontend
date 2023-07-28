@@ -40,6 +40,23 @@
 	}
 }
 
+// Similar to deprecated .mw-ui-block
+// TODO: Replace with Codex Button group
+// Extra specificity so that it overrides .cdx-button--fake-button inline-flex rule.
+.mf-button-block.cdx-button--fake-button {
+	border-radius: 0;
+	display: block;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+
+	span {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
 .mf-mw-ui-icon-rotate-anti-clockwise::before {
 	transform: rotate( -90deg );
 }

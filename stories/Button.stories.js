@@ -1,8 +1,6 @@
 import Button from '../src/mobile.startup/Button';
 import { action } from '@storybook/addon-actions';
 
-import '../.storybook/resolve-less-imports/mediawiki.ui.button/button.less';
-
 export default {
 	title: 'Button'
 };

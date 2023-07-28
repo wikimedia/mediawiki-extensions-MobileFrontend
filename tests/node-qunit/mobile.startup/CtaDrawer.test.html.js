@@ -6,11 +6,11 @@ module.exports = {
 				<span></span>
 			</button>
 			<p> </p>
-			<a href=" logIn " class=" mw-ui-button mw-ui-progressive ">
-				Log in
+			<a type="button" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--size-medium cdx-button--weight-primary cdx-button--action-progressive " href="logIn">
+				<span>Log in</span>
 			</a>
 			<div class="cta-drawer__anchors">
-				<a href=" signUp " class=" mw-mf-anchor mw-mf-anchor-progressive ">
+				<a href="signUp" class="mw-mf-anchor mw-mf-anchor-progressive ">
 					Sign up
 				</a>
 			</div>
@@ -23,11 +23,11 @@ module.exports = {
 				<span></span>
 			</button>
 			<p> </p>
-			<a href=" customLogIn " class=" mw-ui-button mw-ui-progressive ">
-				custom log in
+			<a type="button" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--size-medium cdx-button--weight-primary cdx-button--action-progressive " href="customLogIn">
+				<span>custom log in</span>
 			</a>
 			<div class="cta-drawer__anchors">
-				<a href=" customSignUp " class=" mw-mf-anchor mw-mf-anchor-progressive ">
+				<a href="customSignUp" class="mw-mf-anchor mw-mf-anchor-progressive ">
 					custom sign up
 				</a>
 			</div>

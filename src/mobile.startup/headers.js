@@ -91,7 +91,8 @@ function saveHeader( heading, additionalClassNames ) {
 				tagName: 'button',
 				additionalClassNames: 'save submit',
 				disabled: true,
-				label: util.saveButtonMessage()
+				label: util.saveButtonMessage(),
+				size: 'large'
 			} )
 		],
 		icons.back(),

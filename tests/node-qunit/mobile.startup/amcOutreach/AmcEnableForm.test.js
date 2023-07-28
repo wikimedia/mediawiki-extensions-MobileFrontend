@@ -48,5 +48,5 @@ QUnit.test( 'renders correctly', function ( assert ) {
 	assert.strictEqual( subject.$el.find( 'input[name=\'f1name\'][value=\'f1value\']' ).length, 1, 'Field 1 is rendered' );
 	assert.strictEqual( subject.$el.find( 'input[name=\'f2name\'][value=\'f2value\']' ).length, 1, 'Field 2 is rendered' );
 	assert.strictEqual( subject.$el.find( 'button' ).length, 1, 'Submit button is rendered' );
-	assert.strictEqual( subject.$el.find( 'button' ).text(), 'Submit', 'Submit button has label' );
+	assert.strictEqual( subject.$el.find( 'button' ).text().trim(), 'Submit', 'Submit button has label' );
 } );

@@ -1,10 +1,13 @@
 var
 	mfExtend = require( './mfExtend' ),
 	util = require( './util' ),
-	View = require( './View' );
+	View = require( './View' ),
+	IconButton = require( './IconButton' );
 
 /**
  * A wrapper for creating a button.
+ * FIXME: T343036 This file should be combined with IconButton, all gadgets/extentions
+ * using Button.js and IconButton.js will need to be updated to reflect this
  *
  * @class Button
  * @extends View
@@ -12,13 +15,40 @@ var
  * @param {Object} options Configuration options
  */
 function Button( options ) {
-	if ( options.href ) {
-		options.tagName = 'a';
-	}
 	View.call( this, options );
 }
 
 mfExtend( Button, View, {
+	/**
+	 * @inheritdoc
+	 * @memberof IconButton
+	 * @instance
+	 */
+	preRender: function () {
+		// Mapping existing props to Codex props used in IconButton
+		var action = 'default';
+		if ( this.options.progressive ) {
+			action = 'progressive';
+		} else if ( this.options.destructive ) {
+			action = 'destructive';
+		}
+		var weight = this.options.quiet ? 'quiet' : 'normal';
+		if ( this.options.progressive || this.options.destructive ) {
+			weight = 'primary';
+		}
+		if ( this.options.block ) {
+			this.options.additionalClassNames += ' mf-button-block';
+		}
+		var options = util.extend( {
+			weight: weight,
+			action: action,
+			isIconOnly: false,
+			icon: null
+		}, this.options );
+
+		this._button = new IconButton( options );
+		this.options._buttonHTML = this._button.$el.get( 0 ).outerHTML;
+	},
 	/**
 	 * @inheritdoc
 	 * @memberof Button
@@ -49,19 +79,14 @@ mfExtend( Button, View, {
 		quiet: undefined,
 		additionalClassNames: '',
 		href: undefined,
-		label: undefined
+		label: undefined,
+		size: 'medium'
 	},
 	/**
 	 * @memberof Button
 	 * @instance
 	 */
-	template: util.template( `<{{tagName}} {{#disabled}}disabled{{/disabled}}
-{{#href}}href="{{href}}"{{/href}}
-class="mw-ui-button {{#progressive}}mw-ui-progressive{{/progressive}}
-	{{#block}}mw-ui-block{{/block}}
-	{{#quiet}}mw-ui-quiet{{/quiet}}
-	{{#destructive}}mw-ui-destructive{{/destructive}} {{additionalClassNames}}
-">{{label}}</{{tagName}}>` )
+	template: util.template( '{{{_buttonHTML}}}' )
 } );
 
 module.exports = Button;

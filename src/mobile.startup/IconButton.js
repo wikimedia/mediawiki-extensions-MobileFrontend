@@ -30,14 +30,17 @@ mfExtend( IconButton, View, {
 	 */
 	preRender: function () {
 		this.options._buttonClasses = this.getButtonClasses();
-		this._icon = new Icon( {
-			base: this.options.base,
-			glyphPrefix: this.options.glyphPrefix,
-			icon: this.options.icon,
-			rotation: this.options.rotation,
-			isSmall: this.options.isSmall
-		} );
-		this.options._iconHTML = this._icon.$el.get( 0 ).outerHTML;
+		this.options._iconHTML = '';
+		if ( this.options.icon ) {
+			this._icon = new Icon( {
+				base: this.options.base,
+				glyphPrefix: this.options.glyphPrefix,
+				icon: this.options.icon,
+				rotation: this.options.rotation,
+				isSmall: this.options.isSmall
+			} );
+			this.options._iconHTML = this._icon.$el.get( 0 ).outerHTML;
+		}
 	},
 	getButtonClasses: function () {
 		var additionalClassNames = this.options.additionalClassNames;
