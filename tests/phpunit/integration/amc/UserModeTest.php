@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\User\UserIdentity;
+use MediaWiki\User\UserOptionsLookup;
 use MediaWiki\User\UserOptionsManager;
 use MobileFrontend\Amc\Manager;
 use MobileFrontend\Amc\UserMode;
@@ -16,7 +17,7 @@ class UserModeTest extends MediaWikiIntegrationTestCase {
 	 * @param bool $shouldDisplayMV
 	 * @param bool $isAnon
 	 * @param string $userOpt
-	 * @param ?UserOptionsManager|null $userOptsManager
+	 * @param bool $useWorkingUserOptionsManager
 	 *
 	 * @return UserMode
 	 */
@@ -25,7 +26,7 @@ class UserModeTest extends MediaWikiIntegrationTestCase {
 		bool $shouldDisplayMV = true,
 		bool $isAnon = false,
 		string $userOpt = '1',
-		?UserOptionsManager $userOptsManager = null
+		bool $useWorkingUserOptionsManager = false
 	): UserMode {
 		$config = new HashConfig( [ 'MFAdvancedMobileContributions' => $mfAmcConfig ] );
 
@@ -45,17 +46,27 @@ class UserModeTest extends MediaWikiIntegrationTestCase {
 
 		$manager = new Manager( $config, $context );
 
-		if ( $userOptsManager === null ) {
-			$userOptsManager = $this->createNoOpMock( UserOptionsManager::class, [ 'getOption' ] );
-			$userOptsManager->method( 'getOption' )->willReturn( $userOpt );
-
+		$overriddenOptVal = null;
+		if ( $useWorkingUserOptionsManager ) {
+			$userOptsManager = $this->createMock( UserOptionsManager::class );
+			$userOptsManager->method( 'setOption' )->willReturnCallback(
+				static function ( $u, $opt, $val ) use ( &$overriddenOptVal ) {
+					$overriddenOptVal = $val;
+				} );
+		} else {
+			$userOptsManager = $this->createNoOpMock( UserOptionsManager::class );
 		}
-		$this->setService( 'UserOptionsManager', $userOptsManager );
+
+		$userOptsLookup = $this->createMock( UserOptionsLookup::class );
+		$userOptsLookup->method( 'getOption' )
+			->willReturnCallback( static function () use ( &$overriddenOptVal, $userOpt ) {
+				return $overriddenOptVal ?? $userOpt;
+			} );
 
 		return new UserMode(
 			$manager,
 			$user,
-			$this->getServiceContainer()->getUserOptionsLookup(),
+			$userOptsLookup,
 			$userOptsManager
 		);
 	}
@@ -123,9 +134,7 @@ class UserModeTest extends MediaWikiIntegrationTestCase {
 			true,
 			false,
 			'1',
-			// We want a real UserOptionsManager here so the system
-			// can actually save the option
-			$this->getServiceContainer()->getUserOptionsManager()
+			true
 		);
 		$userMode->setEnabled( $isEnabled );
 

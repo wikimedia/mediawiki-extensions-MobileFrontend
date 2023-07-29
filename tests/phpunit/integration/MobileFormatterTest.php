@@ -13,6 +13,7 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 	private const SECTION_INDICATOR = '<button class="cdx-button cdx-button--weight-quiet cdx-button--icon-only indicator mf-button-flush-left"></button>';
 	private const HATNOTE_CLASSNAME = 'hatnote';
 	private const INFOBOX_CLASSNAME = 'infobox';
+	private const TITLE_REV_ID = 42;
 
 	/**
 	 * @var Config
@@ -74,7 +75,7 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 	 * @dataProvider provideHtmlTransform
 	 */
 	public function testHtmlTransform( $input, $expected, $callback = false ) {
-		$t = Title::newFromText( 'Mobile' );
+		$t = Title::makeTitle( NS_MAIN, __METHOD__ );
 
 		// "yay" to Windows!
 		$input = str_replace( "\r", '', $input );
@@ -576,7 +577,7 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 		if ( $showFirstParagraphBeforeInfobox ) {
 			$transforms[] = new MoveLeadParagraphTransform(
 				$title,
-				$title->getLatestRevID()
+				self::TITLE_REV_ID
 			);
 		}
 		return $transforms;
@@ -587,12 +588,12 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 	 * @dataProvider provideSectionTransform
 	 */
 	public function testSectionTransform( array $topHeadingTags, $input, $expectedOutput ) {
-		$t = Title::newFromText( 'Mobile' );
+		$t = Title::makeTitle( NS_MAIN, __METHOD__ );
 		$formatter = new MobileFormatter( $input, $t, $this->mfConfig, $this->mfContext );
 
 		$formatter->applyTransforms(
 			self::buildTransforms( $topHeadingTags, false, $t, true, false, false )
- );
+		);
 
 		$this->assertEquals( $expectedOutput, $formatter->getText() );
 	}
@@ -652,7 +653,7 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 	public function testT137375() {
 		$input = '<p>Hello, world!</p><h2>Section heading</h2><ol class="references"></ol>';
 		$formatter = new MobileFormatter(
-			$input, Title::newFromText( 'Special:Foo' ), $this->mfConfig, $this->mfContext
+			$input, Title::makeTitle( NS_SPECIAL, 'Foo' ), $this->mfConfig, $this->mfContext
 		);
 		$formatter->applyTransforms( [] );
 		// Success is not crashing when the input is not a DOMElement.
@@ -668,7 +669,7 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 	public function testLoggingOfInfoboxesBeingWrappedInContainersWhenWrapped( $input ) {
 		$this->overrideConfigValue( 'MFLogWrappedInfoboxes', true );
 		$title = 'T149884';
-		$t = Title::newFromText( $title, NS_MAIN );
+		$t = Title::makeTitle( NS_MAIN, $title );
 		$formatter = new MobileFormatter(
 			MobileFormatter::wrapHTML( $input ),
 			$t,
@@ -682,8 +683,8 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 			->will( $this->returnCallback( function ( $message ) use ( $title ) {
 				// Debug message contains Page title
 				$this->assertStringContainsString( $title, $message );
-				// and contains revision id which is 0 by default
-				$this->assertStringContainsString( '0', $message );
+				// and contains revision id
+				$this->assertStringContainsString( self::TITLE_REV_ID, $message );
 			} ) );
 
 		$this->setLogger( 'mobile', $loggerMock );
@@ -714,7 +715,7 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 		$this->overrideConfigValue( 'MFLogWrappedInfoboxes', true );
 		$title = 'T149884';
 
-		$t = Title::newFromText( $title );
+		$t = Title::makeTitle( NS_MAIN, $title );
 		$formatter = new MobileFormatter(
 			MobileFormatter::wrapHTML( $input ),
 			$t,
@@ -756,10 +757,10 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 		// wrapped inside different infobox
 		$input = self::buildInfoboxHTML( self::buildInfoboxHTML( 'test' ) );
 		$title = 'T163805';
-		$t = Title::newFromText( $title, NS_MAIN );
+		$t = Title::makeTitle( NS_MAIN, $title );
 		$formatter = new MobileFormatter(
 			MobileFormatter::wrapHTML( $input ),
-			Title::newFromText( $title, NS_MAIN ),
+			Title::makeTitle( NS_MAIN, $title ),
 			$this->mfConfig,
 			$this->mfContext
 		);

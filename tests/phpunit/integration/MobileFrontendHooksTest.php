@@ -297,13 +297,12 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 		$user = $this->createMock( User::class );
 		$user->method( 'isRegistered' )->willReturn( !$isAnon );
 		$user->method( 'isSafeToLoad' )->willReturn( true );
-		if ( !$isAnon && $userpref ) {
-			$userOptionsManager = MediaWikiServices::getInstance()->getUserOptionsManager();
-			$userOptionsManager->setOption(
-				$user,
-				MobileFrontendHooks::MOBILE_PREFERENCES_SPECIAL_PAGES,
-				true
-			);
+		if ( !$isAnon ) {
+			$userOptLookup = $this->createMock( UserOptionsLookup::class );
+			$userOptLookup->method( 'getOption' )
+				->with( $user, MobileFrontendHooks::MOBILE_PREFERENCES_SPECIAL_PAGES )
+				->willReturn( $userpref ?: $this->returnArgument( 2 ) );
+			$this->setService( 'UserOptionsLookup', $userOptLookup );
 		}
 		$this->assertSame(
 			$expected,

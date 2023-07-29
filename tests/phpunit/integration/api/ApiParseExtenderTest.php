@@ -4,8 +4,14 @@ use MediaWiki\Request\FauxRequest;
 
 /**
  * @group MobileFrontend
+ * @group Database
  */
 class ApiParseExtenderTest extends MediaWikiIntegrationTestCase {
+
+	protected function tearDown(): void {
+		MobileContext::resetInstanceForTesting();
+		parent::tearDown();
+	}
 
 	/**
 	 * @dataProvider provideData
@@ -26,11 +32,11 @@ class ApiParseExtenderTest extends MediaWikiIntegrationTestCase {
 		$params += [ 'action' => 'parse', 'wrapoutputclass' => '', 'useskin' => 'minerva' ];
 
 		$request = new FauxRequest( $params );
-		$mainContext = new DerivativeContext( RequestContext::getMain() );
-		$mainContext->setRequest( $request );
+		$requestContext = new RequestContext();
+		$requestContext->setRequest( $request );
 		MobileContext::resetInstanceForTesting();
 		$context = MobileContext::singleton();
-		$context->setContext( $mainContext );
+		$context->setContext( $requestContext );
 
 		$api = new ApiMain( $context );
 		$api->execute();

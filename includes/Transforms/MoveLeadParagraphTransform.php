@@ -7,11 +7,12 @@ use DOMElement;
 use DOMNode;
 use DOMXPath;
 use MediaWiki\MediaWikiServices;
+use Title;
 use Wikimedia\Parsoid\Utils\DOMCompat;
 
 class MoveLeadParagraphTransform implements IMobileTransform {
 	/**
-	 * @var string
+	 * @var Title|string
 	 */
 	private $title;
 
@@ -21,7 +22,7 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	private $revId;
 
 	/**
-	 * @param string $title for logging purposes
+	 * @param Title|string $title for logging purposes
 	 * @param int $revId for logging purposes
 	 */
 	public function __construct( $title, $revId ) {
