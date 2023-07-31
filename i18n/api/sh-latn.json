@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Winston Sung"
+		]
+	},
+	"apihelp-parse-param-mobileformat": "Daj izlaz analize u formatu prikladnom za mobilne uređaje.",
+	"apihelp-parse-param-noimages": "Onemogući slike u mobilnom izlazu.",
+	"apihelp-parse-param-mainpage": "Primijeni transformacije mobilne glavne stranice.",
+	"apihelp-webapp-manifest-summary": "Daje manifest web privitka."
+}
