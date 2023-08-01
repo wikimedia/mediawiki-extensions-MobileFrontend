@@ -17,13 +17,17 @@ module.exports = function ( options ) {
 		iconProps = {
 			href: mw.Title.newFromText( options.page.title ).getUrl( { action } )
 		},
-		watchButton = icons.watchIcon( iconProps ),
-		watchedButton = icons.watchedIcon( iconProps ),
-		WATCH_CLASS = watchButton.getIcon().$el.attr( 'class' ),
-		WATCHED_CLASS = watchedButton.getIcon().$el.attr( 'class' ),
+		watchButton = icons.watch( iconProps ),
+		watchedButton = icons.watched( iconProps ),
+		WATCH_BUTTON_CLASS = watchButton.getClassName(),
+		WATCHED_BUTTON_CLASS = watchedButton.getClassName(),
+		WATCH_CLASS = watchButton.getIcon().getClassName(),
+		WATCHED_CLASS = watchedButton.getIcon().getClassName(),
 		activeIcon = isWatched ? watchedButton : watchButton,
 		callback = ( $link, watched ) => {
-			const $icon = $link.find( '.mw-ui-icon' );
+			$link.attr( 'class', watched ?
+				WATCHED_BUTTON_CLASS : WATCH_BUTTON_CLASS );
+			const $icon = $link.find( '.mf-icon' );
 			$icon.attr( 'class', watched ?
 				WATCHED_CLASS : WATCH_CLASS );
 		};

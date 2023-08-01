@@ -2,11 +2,19 @@
 @import 'mediawiki.mixins.less';
 
 .watch-this-article {
-	&::before {
+	.mf-icon {
 		transition: transform 0.5s;
 	}
 
-	&.watched::before {
+	&.watched .mf-icon {
 		transform: rotate( 72deg );
 	}
+}
+
+.mw-ui-icon-mf-star-subtle {
+	.cdx-mixin-css-icon( @cdx-icon-star, @param-fill-color: @color-subtle );
+}
+
+.mw-ui-icon-mf-unStar-progressive {
+	.cdx-mixin-css-icon( @cdx-icon-un-star, @param-fill-color: @color-progressive );
 }

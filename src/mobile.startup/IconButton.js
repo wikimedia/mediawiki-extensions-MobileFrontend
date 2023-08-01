@@ -93,9 +93,8 @@ mfExtend( IconButton, View, {
 	 * Defaults to true.
 	 * @property {boolean} defaults.disabled should only be used with tagName button
 	 * @property {string} defaults.base String used as a base for generating class names.
-	 * Defaults to 'mw-ui-icon'.
+	 * Defaults to 'mf-icon'.
 	 * @property {string} defaults.glyphPrefix Prefix for the icon class
-	 * Defaults to 'mf'.
 	 * @property {string} defaults.icon Name of the icon.
 	 * @property {boolean} defaults.rotation will rotate the icon by a certain number
 	 *  of degrees. Must be ±90, 0 or ±180 or will throw exception.
@@ -111,7 +110,7 @@ mfExtend( IconButton, View, {
 		action: '',
 		isIconOnly: true,
 		disabled: false,
-		base: 'mw-ui-icon',
+		base: 'mf-icon',
 		glyphPrefix: 'mf',
 		icon: '',
 		rotation: 0,

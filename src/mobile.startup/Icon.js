@@ -73,7 +73,7 @@ mfExtend( Icon, View, {
 			classes += this.getGlyphClassName() + ' ';
 		}
 		if ( isSmall ) {
-			classes += 'mw-ui-icon-small ';
+			classes += 'mf-icon--small ';
 		}
 		if ( additionalClassNames ) {
 			classes += additionalClassNames + ' ';
@@ -91,8 +91,8 @@ mfExtend( Icon, View, {
 	 * @memberof Icon
 	 * @instance
 	 * @mixes View#defaults
-	 * @property {string} defaults.base String used as a base for generating class names.
-	 * Defaults to 'mw-ui-icon'.
+	 * @property {string} defaults.base Base icon class.
+	 * Defaults to 'mf-icon'.
 	 * @property {string} defaults.glyphPrefix Prefix for the icon class
 	 * Defaults to 'mf'.
 	 * @property {string} defaults.icon Name of the icon.
@@ -102,7 +102,7 @@ mfExtend( Icon, View, {
 	 * @property {string} defaults.addtionalClassNames Additional classes to be added to the icon.
 	 */
 	defaults: {
-		base: 'mw-ui-icon',
+		base: 'mf-icon',
 		glyphPrefix: 'mf',
 		icon: '',
 		rotation: 0,
@@ -128,9 +128,9 @@ mfExtend( Icon, View, {
 	 */
 	getGlyphClassName: function () {
 		if ( this.options.glyphPrefix ) {
-			return this.options.base + '-' + this.options.glyphPrefix + '-' + this.options.icon;
+			return 'mw-ui-icon-' + this.options.glyphPrefix + '-' + this.options.icon;
 		}
-		return this.options.base + '-' + this.options.icon;
+		return 'mw-ui-icon-' + this.options.icon;
 	},
 
 	template: util.template(

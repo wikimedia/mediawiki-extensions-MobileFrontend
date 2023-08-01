@@ -30,7 +30,7 @@ QUnit.test( 'getIconClasses generates icon classes using icon', function ( asser
 		icon: 'user'
 	} );
 
-	assert.strictEqual( icon.getIconClasses(), 'mw-ui-icon mw-ui-icon-mf-user ' );
+	assert.strictEqual( icon.getIconClasses(), 'mf-icon mw-ui-icon-mf-user ' );
 } );
 
 QUnit.test( 'getIconClasses generates icon classes using custom icon prefix', function ( assert ) {
@@ -39,7 +39,7 @@ QUnit.test( 'getIconClasses generates icon classes using custom icon prefix', fu
 		glyphPrefix: 'wikimedia'
 	} );
 
-	assert.strictEqual( icon.getIconClasses(), 'mw-ui-icon mw-ui-icon-wikimedia-user ' );
+	assert.strictEqual( icon.getIconClasses(), 'mf-icon mw-ui-icon-wikimedia-user ' );
 } );
 
 QUnit.test( 'getRotationClasses returns rotation classes', function ( assert ) {
@@ -78,5 +78,5 @@ QUnit.test( 'adds small classes', function ( assert ) {
 		isSmall: true
 	} );
 
-	assert.strictEqual( icon.getClassName(), 'mw-ui-icon mw-ui-icon-mf-user mw-ui-icon-small ' );
+	assert.strictEqual( icon.getClassName(), 'mf-icon mw-ui-icon-mf-user mf-icon--small ' );
 } );

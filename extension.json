@@ -101,7 +101,7 @@
 			"useDataURI": false,
 			"selector": ".{name}",
 			"images": {
-				"mw-ui-icon-mf-spinner:before": "resources/mobile.placeholder.images/ajax-loader.gif",
+				"mw-ui-icon-mf-spinner": "resources/mobile.placeholder.images/ajax-loader.gif",
 				"list-thumb-none": "resources/mobile.placeholder.images/noimage.svg",
 				"userpage-image-placeholder": "resources/mobile.placeholder.images/userpage.svg",
 				"amc-outreach-image": "resources/mobile.startup/amcOutreach/amc-outreach.svg"
@@ -115,8 +115,8 @@
 		"mobile.startup.images": {
 			"class": "ResourceLoaderOOUIIconPackModule",
 			"defaultColor": "#54595d",
-			"selectorWithoutVariant": ".mw-ui-icon-mf-{name}:before",
-			"selectorWithVariant": ".mw-ui-icon-mf-{name}-{variant}:before",
+			"selectorWithoutVariant": ".mw-ui-icon-mf-{name}",
+			"selectorWithVariant": ".mw-ui-icon-mf-{name}-{variant}",
 			"icons": [
 				"articlesSearch",
 				"clear",
@@ -140,7 +140,6 @@
 				"mediawiki.router",
 				"mediawiki.storage",
 				"web2017-polyfills",
-				"mediawiki.ui.icon",
 				"mobile.ooui.icons",
 				"mobile.startup"
 			],
@@ -168,8 +167,8 @@
 		},
 		"mobile.ooui.icons": {
 			"class": "ResourceLoaderOOUIIconPackModule",
-			"selectorWithoutVariant": ".mw-ui-icon-mf-{name}:before",
-			"selectorWithVariant": ".mw-ui-icon-mf-{name}-{variant}:before",
+			"selectorWithoutVariant": ".mw-ui-icon-mf-{name}",
+			"selectorWithVariant": ".mw-ui-icon-mf-{name}-{variant}",
 			"variants": {
 				"base20": {
 					"color": "#54595d",
@@ -194,8 +193,8 @@
 		},
 		"mobile.user.icons": {
 			"class": "ResourceLoaderOOUIIconPackModule",
-			"selectorWithoutVariant": ".mw-ui-icon-mf-{name}:before",
-			"selectorWithVariant": ".mw-ui-icon-mf-{name}-{variant}:before",
+			"selectorWithoutVariant": ".mw-ui-icon-mf-{name}",
+			"selectorWithVariant": ".mw-ui-icon-mf-{name}-{variant}",
 			"variants": {
 				"base20": {
 					"color": "#54595d",
@@ -212,7 +211,6 @@
 				"mediawiki.page.watch.ajax",
 				"mediawiki.template.mustache",
 				"codex-search-styles",
-				"mediawiki.ui.icon",
 				"mediawiki.Title",
 				"mobile.pagelist.styles",
 				"mobile.pagesummary.styles",
@@ -382,7 +380,7 @@
 		},
 		"mobile.editor.images": {
 			"class": "ResourceLoaderOOUIIconPackModule",
-			"selectorWithVariant": ".mw-ui-icon-mf-{name}-{variant}:before",
+			"selectorWithVariant": ".mw-ui-icon-mf-{name}-{variant}",
 			"icons": [
 				"block"
 			],
@@ -490,8 +488,8 @@
 		},
 		"mobile.special.mobilediff.images": {
 			"class": "ResourceLoaderOOUIIconPackModule",
-			"selectorWithoutVariant": ".mw-ui-icon-mf-{name}:before",
-			"selectorWithVariant": ".mw-ui-icon-mf-{name}-{variant}:before",
+			"selectorWithoutVariant": ".mw-ui-icon-mf-{name}",
+			"selectorWithVariant": ".mw-ui-icon-mf-{name}-{variant}",
 			"variants": {
 				"constructive": {
 					"color": "#14866d",

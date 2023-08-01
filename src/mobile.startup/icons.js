@@ -115,13 +115,13 @@ module.exports = {
 	 * @param {Object} props
 	 * @return {IconButton}
 	 */
-	watchIcon: function ( props = {} ) {
+	watch: function ( props = {} ) {
 		props.additionalClassNames = props.additionalClassNames || '';
 		props.additionalClassNames += ' watch-this-article';
 
 		return new this.IconButton( util.extend( {
-			icon: 'star-base20',
-			glyphPrefix: 'wikimedia'
+			icon: 'star-subtle',
+			glyphPrefix: 'mf'
 		}, props ) );
 	},
 	/**
@@ -132,13 +132,13 @@ module.exports = {
 	 * @param {Object} props
 	 * @return {IconButton}
 	 */
-	watchedIcon: function ( props = {} ) {
+	watched: function ( props = {} ) {
 		props.additionalClassNames = props.additionalClassNames || '';
 		props.additionalClassNames += ' watch-this-article watched';
 
 		return new this.IconButton( util.extend( {
 			icon: 'unStar-progressive',
-			glyphPrefix: 'wikimedia'
+			glyphPrefix: 'mf'
 		}, props ) );
 	}
 };

@@ -1,80 +1,36 @@
 @import 'mediawiki.skin.variables.less';
 @import 'mediawiki.mixins.less';
 
-// Used to center the contents of buttons, i.e. section collapse buttons
-// TODO: See if these can be removed after mw-ui-icon usage is replaced with Codex
-.cdx-button {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
+.mf-icon {
+	.cdx-mixin-css-icon-background( );
+	.cdx-mixin-css-icon-size( );
+	.cdx-mixin-css-icon-alignment( );
+	font-size: 14px;
 }
 
-.mf-button-flush-left {
-	&.cdx-button {
-		.cdx-mixin-button-layout-flush( 'start', true );
-	}
-
-	&.cdx-button--size-large {
-		.cdx-mixin-button-layout-flush( 'start', true, 'large' );
-	}
+.mf-icon--small {
+	.cdx-mixin-css-icon-background( @size-icon-small );
+	.cdx-mixin-css-icon-size( @size-icon-small );
 }
 
-.mf-button-flush-right {
-	&.cdx-button {
-		.cdx-mixin-button-layout-flush( 'end', true );
-	}
-
-	&.cdx-button--size-large {
-		.cdx-mixin-button-layout-flush( 'end', true, 'large' );
-	}
-}
-
-// Similar to the legacy mw-ui-icon-element class
-// To be used in cases were an icon is styled like an icon only button,
-// but shouldnt be a button (i.e. spinner icon)
-.mf-icon-element {
-	padding: 12px;
-
-	span + span {
-		.mixin-screen-reader-text();
-	}
-}
-
-// Similar to deprecated .mw-ui-block
-// TODO: Replace with Codex Button group
-// Extra specificity so that it overrides .cdx-button--fake-button inline-flex rule.
-.mf-button-block.cdx-button--fake-button {
-	border-radius: 0;
-	display: block;
-	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
-
-	span {
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-	}
-}
-
-.mf-mw-ui-icon-rotate-anti-clockwise::before {
+.mf-mw-ui-icon-rotate-anti-clockwise {
 	transform: rotate( -90deg );
 }
 
-.mf-mw-ui-icon-rotate-clockwise::before {
+.mf-mw-ui-icon-rotate-clockwise {
 	transform: rotate( 90deg );
 }
 
-.mf-mw-ui-icon-rotate-flip::before {
+.mf-mw-ui-icon-rotate-flip {
 	transform: scaleY( -1 );
 }
 
 .rtl {
-	.mf-mw-ui-icon-rotate-anti-clockwise::before {
+	.mf-mw-ui-icon-rotate-anti-clockwise {
 		transform: rotate( 90deg );
 	}
 
-	.mf-mw-ui-icon-rotate-clockwise::before {
+	.mf-mw-ui-icon-rotate-clockwise {
 		transform: rotate( -90deg );
 	}
 }
