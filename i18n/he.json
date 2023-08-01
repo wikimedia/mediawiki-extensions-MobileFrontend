@@ -138,6 +138,8 @@
 	"mobile-frontend-media-license-link": "מידע על הרישיון",
 	"mobile-frontend-media-load-fail-message": "אירעה שגיאה בעת טעינת התמונה הזאת.",
 	"mobile-frontend-media-load-fail-retry": "רענון",
+	"mobile-frontend-media-next": "הצגת התמונה הבאה",
+	"mobile-frontend-media-prev": "הצגת התמונה הקודמת",
 	"mobile-frontend-missing-image": "תמונה",
 	"mobile-frontend-tap-to-display-image": "יש ללחוץ כדי להציג את התמונה.",
 	"mobile-frontend-news-items": "בחדשות",

@@ -138,6 +138,8 @@
 	"mobile-frontend-media-license-link": "Lizenzinformationen",
 	"mobile-frontend-media-load-fail-message": "Beim Laden dieses Bildes gab es einen Fehler.",
 	"mobile-frontend-media-load-fail-retry": "Aktualisieren",
+	"mobile-frontend-media-next": "Nächstes Bild anzeigen",
+	"mobile-frontend-media-prev": "Vorheriges Bild anzeigen",
 	"mobile-frontend-missing-image": "Bild",
 	"mobile-frontend-tap-to-display-image": "Tippe, um das Bild anzuzeigen.",
 	"mobile-frontend-news-items": "In den Nachrichten",
