@@ -483,9 +483,12 @@ class SpecialMobileDiff extends MobileSpecialPage {
 	/**
 	 * Get the URL for Desktop version of difference view
 	 * @param string|null $subPage URL of mobile diff page
-	 * @return string Url to mobile diff page
+	 * @return string|null Url to mobile diff page
 	 */
 	public function getDesktopUrl( $subPage ) {
+		if ( $subPage === null ) {
+			return null;
+		}
 		$parts = explode( '...', $subPage );
 		if ( count( $parts ) > 1 ) {
 			$params = [ 'diff' => $parts[1], 'oldid' => $parts[0] ];
