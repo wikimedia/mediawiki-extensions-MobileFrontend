@@ -173,6 +173,8 @@
 	"mobile-frontend-media-license-link": "Информация о лицензии",
 	"mobile-frontend-media-load-fail-message": "Произошла ошибка при загрузке этого изображения.",
 	"mobile-frontend-media-load-fail-retry": "Обновить",
+	"mobile-frontend-media-next": "Показать следующее изображение",
+	"mobile-frontend-media-prev": "Показать предыдущее изображение",
 	"mobile-frontend-missing-image": "Изображение",
 	"mobile-frontend-tap-to-display-image": "Нажмите, чтобы показать изображение.",
 	"mobile-frontend-news-items": "В новостях",

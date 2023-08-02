@@ -146,6 +146,8 @@
 	"mobile-frontend-media-license-link": "Informazioni sulla licenza",
 	"mobile-frontend-media-load-fail-message": "Si è verificato un errore durante il caricamento di questa immagine.",
 	"mobile-frontend-media-load-fail-retry": "Aggiorna",
+	"mobile-frontend-media-next": "Mostra l'immagine successiva",
+	"mobile-frontend-media-prev": "Mostra l'immagine precedente",
 	"mobile-frontend-missing-image": "Immagine",
 	"mobile-frontend-tap-to-display-image": "Tocca per visualizzare l'immagine.",
 	"mobile-frontend-news-items": "Novità",
