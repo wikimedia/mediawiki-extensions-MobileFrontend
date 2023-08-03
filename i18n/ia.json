@@ -120,6 +120,8 @@
 	"mobile-frontend-media-license-link": "Information de licentia",
 	"mobile-frontend-media-load-fail-message": "Un error occurreva durante le cargamento de iste imagine.",
 	"mobile-frontend-media-load-fail-retry": "Refrescar",
+	"mobile-frontend-media-next": "Monstrar le imagine sequente",
+	"mobile-frontend-media-prev": "Monstrar le imagine precedente",
 	"mobile-frontend-missing-image": "Imagine",
 	"mobile-frontend-tap-to-display-image": "Tocca pro monstrar imagine.",
 	"mobile-frontend-news-items": "Actualitates",

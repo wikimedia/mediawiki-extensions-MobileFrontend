@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Numulunj pilgae"
+			"Numulunj pilgae",
+			"Валгриш"
 		]
 	},
+	"mobile-frontend-media-next": "Няфтемс сяда товолдонь уликсть",
 	"mobile-frontend-terms-text": "Тевс нолдамань ётт",
 	"mobile-frontend-view": "Сарксфононь верзие",
 	"mobile-frontend-view-desktop": "Шра лангонь верзие"

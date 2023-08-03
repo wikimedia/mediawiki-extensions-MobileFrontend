@@ -140,6 +140,8 @@
 	"mobile-frontend-media-license-link": "लाइसेंस की जानकारी",
 	"mobile-frontend-media-load-fail-message": "इस चित्र को लोड करते समय एक त्रुटि आई।",
 	"mobile-frontend-media-load-fail-retry": "ताज़ा करें",
+	"mobile-frontend-media-next": "अगला चित्र दिखाएँ",
+	"mobile-frontend-media-prev": "पिछला चित्र दिखाएँ",
 	"mobile-frontend-missing-image": "चित्र",
 	"mobile-frontend-tap-to-display-image": "चित्र देखने के लिए टैप करें।",
 	"mobile-frontend-news-items": "खबरों में",
