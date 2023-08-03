@@ -506,10 +506,11 @@ class MobileFrontendHooks implements TextSlotDiffRendererTablePrefixHook {
 	public static function getResourceLoaderMFConfigVars() {
 		$vars = [];
 		$config = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Config' );
+		$mfScriptPath = $config->get( 'MFScriptPath' );
 		$pageProps = $config->get( 'MFQueryPropModules' );
 		$searchParams = $config->get( 'MFSearchAPIParams' );
 		// Avoid API warnings and allow integration with optional extensions.
-		if ( ExtensionRegistry::getInstance()->isLoaded( 'PageImages' ) ) {
+		if ( $mfScriptPath || ExtensionRegistry::getInstance()->isLoaded( 'PageImages' ) ) {
 			$pageProps[] = 'pageimages';
 			$searchParams = array_merge_recursive( $searchParams, [
 				'piprop' => 'thumbnail',

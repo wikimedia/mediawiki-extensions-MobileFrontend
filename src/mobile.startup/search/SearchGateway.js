@@ -152,10 +152,13 @@ SearchGateway.prototype = {
 	 */
 	search: function ( query ) {
 		var xhr, request,
+			scriptPath = mw.config.get( 'wgMFScriptPath' ),
 			self = this;
 
 		if ( !this.isCached( query ) ) {
-			xhr = this.api.get( this.getApiData( query ) );
+			xhr = this.api.get( this.getApiData( query ), scriptPath ? {
+				url: scriptPath
+			} : undefined );
 			request = xhr
 				.then( function ( data, jqXHR ) {
 					// resolve the Deferred object
