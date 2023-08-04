@@ -130,6 +130,8 @@
 	"mobile-frontend-media-license-link": "লাইসেন্স তথ্য",
 	"mobile-frontend-media-load-fail-message": "এই ছবি লোড করার সময় একটি ত্রুটি হয়েছে।",
 	"mobile-frontend-media-load-fail-retry": "পুনঃসতেজ",
+	"mobile-frontend-media-next": "পরবর্তী চিত্র দেখান",
+	"mobile-frontend-media-prev": "পূর্ববর্তী চিত্র দেখান",
 	"mobile-frontend-missing-image": "চিত্র",
 	"mobile-frontend-tap-to-display-image": "চিত্র দেখতে টোকা দিন।",
 	"mobile-frontend-news-items": "আপনি জানেন কি...",

@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Венина Наталья Константиновна",
 			"Сай",
 			"Санюн Вадик"
 		]
@@ -8,7 +9,7 @@
 	"mobile-frontend-copyright": "Содержанийым $1 лийцензий почеш кучылт кертыда (весым возымо огыл гын).",
 	"mobile-frontend-last-modified-date": "Пытартыш гана $1 кечын $2 шагатлан тӧрлаталтын",
 	"mobile-frontend-privacy-link-text": "Конфиденциальность",
-	"mobile-frontend-terms-text": "Пайдаланымаш условий",
+	"mobile-frontend-terms-text": "Пайдаланымаш келшык",
 	"mobile-frontend-view": "Мобильный версий",
 	"mobile-frontend-view-desktop": "Стационарный",
 	"tag-mobile_edit": "Телефон гоч тӧрлаташ",
