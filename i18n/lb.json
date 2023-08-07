@@ -6,6 +6,7 @@
 			"MaxSem",
 			"Robby",
 			"Soued031",
+			"Volvox",
 			"Zoranzoki21"
 		]
 	},
@@ -94,6 +95,8 @@
 	"mobile-frontend-media-details": "Detailer",
 	"mobile-frontend-media-license-link": "Lizenzinformatioun",
 	"mobile-frontend-media-load-fail-retry": "Aktualiséieren",
+	"mobile-frontend-media-next": "Nächst Bild weisen",
+	"mobile-frontend-media-prev": "Viregt Bild weisen",
 	"mobile-frontend-missing-image": "Bild",
 	"mobile-frontend-news-items": "An den Neiegkeeten",
 	"mobile-frontend-opt-in-explain": "Duerch d'Matmaache bei Beta, kritt Dir Zougang op experimentell Funktiounen, mam Risiko datt Problemer a Feeler geschéien.",

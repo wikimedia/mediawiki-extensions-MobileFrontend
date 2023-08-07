@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Lifeway",
 			"Венина Наталья Константиновна",
 			"Сай",
 			"Санюн Вадик"
@@ -11,7 +12,7 @@
 	"mobile-frontend-privacy-link-text": "Конфиденциальность",
 	"mobile-frontend-terms-text": "Пайдаланымаш келшык",
 	"mobile-frontend-view": "Мобильный версий",
-	"mobile-frontend-view-desktop": "Стационарный",
+	"mobile-frontend-view-desktop": "Десктоп",
 	"tag-mobile_edit": "Телефон гоч тӧрлаташ",
 	"tag-mobile_web_edit": "мобильный гочын тӧрлаташ"
 }
