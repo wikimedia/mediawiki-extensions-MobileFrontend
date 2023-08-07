@@ -183,17 +183,17 @@ See: <https://www.mediawiki.org/wiki/Reading/Features/Article_lead_image>
 
 #### MFScriptPath
 
-When set will override the default search script path
-e.g.
-`https://en.wikipedia.org/w`
-will route queries (e.g. API) to English Wikipedia.
-
-Note, this will make the wiki read only. Non-anonymous HTTP requests will throw CORS error.
-This may also cause compatibility problems with other extensions.
+When set will override the default search script path.
 This should not be used in production, it is strictly for development purposes.
 
 * Type: `string`
 * Default: ''
+
+e.g $wgMFScriptPath = "https://it.wikipedia.org/w/api.php"
+
+When caching this configuration variable, to show Wikidata descriptions please
+update $wgMFEnableWikidataDescriptions and $wgMFDisplayWikibaseDescriptions as these are
+disabled by default.
 
 #### $wgMFMobileFormatterOptions
 

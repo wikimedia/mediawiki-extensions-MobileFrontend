@@ -56,10 +56,12 @@ class MobileFrontendEditorHooks {
 	 */
 	public static function onMakeGlobalVariablesScript( array &$vars, OutputPage $out ) {
 		$mobileContext = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
+		$config = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Config' );
 
 		if ( $mobileContext->shouldDisplayMobileView() ) {
 			// mobile.init
 			$vars['wgMFIsSupportedEditRequest'] = self::isSupportedEditRequest( $out->getContext() );
+			$vars['wgMFScriptPath'] = $config->get( 'MFScriptPath' );
 		}
 	}
 

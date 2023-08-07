@@ -614,7 +614,7 @@
 				"amc": true
 			}
 		},
-		"wgMFScriptPath": {
+		"MFScriptPath": {
 			"description": "Reroute search queries to a different host",
 			"value": ""
 		},
