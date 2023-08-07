@@ -54,7 +54,8 @@
 			"Дмитрий",
 			"Megakott",
 			"Pacha Tchernof",
-			"Deltaspace"
+			"Deltaspace",
+			"Colt browning"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Редактирует ли участник через мобильный интерфейс",
@@ -257,11 +258,11 @@
 	"mobile-frontend-user-page-create-owner-page-link-label": "Создать личную страницу",
 	"mobile-frontend-user-page-create-user-page-link-label": "Создание страницы $1",
 	"nearby": "Страницы на темы об объектах поблизости",
-	"tag-mobile_edit": "правка с мобильного устройства",
+	"tag-mobile_edit": "с мобильного устройства",
 	"tag-mobile_edit-description": "Правки, сделанные через мобильное устройство (на сайте или через приложение)",
-	"tag-advanced_mobile_edit": "расширенная мобильная правка",
+	"tag-advanced_mobile_edit": "через&nbsp;расширенный мобильный режим",
 	"tag-advanced_mobile_edit-description": "Правка, сделанная в Расширенном режиме",
-	"tag-mobile_web_edit": "правка из мобильной версии",
+	"tag-mobile_web_edit": "из мобильной версии",
 	"tag-mobile_web_edit-description": "Правка, сделанная через мобильную версию сайта",
 	"mobile-frontend-loading-message": "Загружается…",
 	"mobile-frontend-search-feedback-link-text": "Напишите отзыв.",

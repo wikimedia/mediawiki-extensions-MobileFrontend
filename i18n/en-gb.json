@@ -15,7 +15,8 @@
 			"Mako001",
 			"Nikki",
 			"Robin Owain",
-			"Satdeep gill"
+			"Satdeep gill",
+			"Reedy"
 		]
 	},
 	"mobile-frontend-categories-hidden": "Organisational",
@@ -39,5 +40,6 @@
 	"tag-mobile_web_edit-description": "Edit made from mobile web site",
 	"mobile-frontend-loading-message": "Loading…",
 	"mobile-frontend-amc-outreach-no-thanks": "No thanks",
-	"mobile-frontend-console-recruit": "Maybe you can help! This is open source software and we need volunteers to help us build it, make it better and fix any bugs that you might be seeing in this JavaScript console!\n\nYou can find our backlog @ https://phabricator.wikimedia.org/project/profile/67/"
+	"mobile-frontend-console-recruit": "Maybe you can help! This is open source software and we need volunteers to help us build it, make it better and fix any bugs that you might be seeing in this JavaScript console!\n\nYou can find our backlog @ https://phabricator.wikimedia.org/project/profile/67/",
+	"mobile-frontend-special-pages-pref": "Optimise and simplify special pages when on mobile (recommended)"
 }
