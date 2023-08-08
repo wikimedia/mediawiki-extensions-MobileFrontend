@@ -18,12 +18,20 @@
 
 .ve-mobile-fakeToolbar {
 	height: 3em;
-	display: flex !important;
+	display: flex;
 	align-items: center;
-	width: 100% !important;
+	width: 100%;
 	box-sizing: content-box;
 	border-color: @border-color-subtle;
 	border-style: @border-style-base;
 	border-width: 0 @border-width-base;
 	margin: 0 -1px;
+
+	> button {
+		border-right: @border-width-base @border-style-base @background-color-neutral !important;
+	}
+
+	> .loading > .mf-icon {
+		margin-left: 1em;
+	}
 }
