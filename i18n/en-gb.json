@@ -15,7 +15,8 @@
 			"Shirayuki",
 			"Nikki",
 			"Satdeep gill",
-			"Mako001"
+			"Mako001",
+			"Reedy"
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "ਕੋਈ ਸੋਧ ਸਾਰ ਨਹੀਂ",
@@ -70,5 +71,6 @@
 	"mobile-frontend-loading-message": "Loading…",
 	"mobile-frontend-mobile-option-amc-learn-more": "ਹੋਰ ਸਿੱਖੋ",
 	"mobile-frontend-amc-outreach-no-thanks": "No thanks",
+	"mobile-frontend-special-pages-pref": "Optimise and simplify special pages when on mobile (recommended)",
 	"prefs-mobile": "ਮੋਬਾਈਲੀ ਤਰਜੀਹਾਂ"
 }
