@@ -34,17 +34,6 @@
 	}
 }
 
-// Similar to the legacy mw-ui-icon-element class
-// To be used in cases were an icon is styled like an icon only button,
-// but shouldnt be a button (i.e. spinner icon)
-.mf-icon-element {
-	padding: 12px;
-
-	span + span {
-		.mixin-screen-reader-text();
-	}
-}
-
 // Similar to deprecated .mw-ui-block
 // TODO: Replace with Codex Button group
 // Extra specificity so that it overrides .cdx-button--fake-button inline-flex rule.

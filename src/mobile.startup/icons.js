@@ -90,7 +90,7 @@ module.exports = {
 		spinner.$el.addClass( props.additionalClassNames );
 		spinner.$el.attr( 'type', '' );
 		if ( spinner.options.isIconOnly ) {
-			spinner.$el.addClass( 'mf-icon-element' );
+			spinner.$el.addClass( 'mf-spinner-icon-element' );
 		}
 		return spinner;
 	},
