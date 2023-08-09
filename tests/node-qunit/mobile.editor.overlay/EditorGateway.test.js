@@ -43,6 +43,8 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/EditorGateway', {
 		jQuery.setUp( sandbox, global );
 		oo.setUp( sandbox, global );
 		mediaWiki.setUp( sandbox, global );
+		// FIXME: can be replaced with a stub when https://github.com/wikimedia/mw-node-qunit/pull/34 is resolved.
+		mw.user.acquireTempUserName = () => global.$.Deferred().resolve();
 		EditorGateway = require( '../../../src/mobile.editor.overlay/EditorGateway' );
 		happyResponse = util.Deferred().resolve( {
 			query: {

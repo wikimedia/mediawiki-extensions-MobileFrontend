@@ -267,9 +267,14 @@ EditorGateway.prototype = {
 		} );
 
 		this.abortPreview();
-		this._pending = this.api.post( options );
+		// Acquire a temporary user username before previewing, so that signatures and
+		// user-related magic words display the temp user instead of IP user in the preview. (T331397)
+		var promise = mw.user.acquireTempUserName().then( function () {
+			self._pending = self.api.post( options );
+			return self._pending;
+		} );
 
-		return this._pending.then( function ( resp ) {
+		return promise.then( function ( resp ) {
 			if ( resp && resp.parse && resp.parse.text ) {
 				// When editing section 0 or the whole page, there is no section name, so skip
 				if ( self.sectionId && self.sectionId !== '0' &&
