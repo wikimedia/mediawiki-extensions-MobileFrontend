@@ -10,7 +10,7 @@
 		"lint:es5": "eslint --no-eslintrc --ignore-path .eslintignore.es5 resources",
 		"lint:frontend": "npm -s run lint:es5 && npm -s run lint:js && npm -s run lint:css",
 		"lint:js": "eslint --cache .",
-		"lint:css": "stylelint '**/*.less'",
+		"lint:css": "stylelint \"**/*.less\"",
 		"lint:i18n": "banana-checker --requireLowerCase=0 i18n/",
 		"minify-svg": "svgo --config=.svgo.config.js --quiet --recursive --folder resources/",
 		"test": "npm -s run lint && bash ./dev-scripts/svg_check.sh && npm -s run coverage && npm -s run test:bundle && npm -s run jsdoc",
