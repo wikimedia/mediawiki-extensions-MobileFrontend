@@ -367,7 +367,7 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 		return loadingOverlay;
 	} );
 
-	$( '#ca-edit a' ).prop( 'href', function ( i, href ) {
+	$( '#ca-edit a, a#ca-edit' ).prop( 'href', function ( i, href ) {
 		const editUrl = new URL( href, location.href );
 		// By default the editor opens section 0 (lead section), rather than the whole article.
 		// This might be changed in the future (T210659).
