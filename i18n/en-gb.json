@@ -15,7 +15,8 @@
 			"Shirayuki",
 			"Mako001",
 			"Nikki",
-			"Satdeep gill"
+			"Satdeep gill",
+			"Reedy"
 		]
 	},
 	"mobile-frontend-editor-blocked-drawer-action-randompage": "Take me to another page",
@@ -40,5 +41,6 @@
 	"tag-mobile_web_edit": "Mobile web edit",
 	"tag-mobile_web_edit-description": "Edit made from mobile web site",
 	"mobile-frontend-loading-message": "Loading…",
-	"mobile-frontend-amc-outreach-no-thanks": "No thanks"
+	"mobile-frontend-amc-outreach-no-thanks": "No thanks",
+	"mobile-frontend-special-pages-pref": "Optimise and simplify special pages when on mobile (recommended)"
 }
