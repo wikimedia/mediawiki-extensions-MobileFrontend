@@ -125,8 +125,7 @@ class MakeSectionsTransformTest extends MediaWikiIntegrationTestCase {
 	 * @covers ::interimTogglingSupport
 	 */
 	public function testInterimTogglingSupport() {
-		$nonce = RequestContext::getMain()->getOutput()->getCSP()->getNonce();
-		$js = MakeSectionsTransform::interimTogglingSupport( $nonce );
+		$js = MakeSectionsTransform::interimTogglingSupport();
 
 		$this->assertStringContainsString(
 			'function mfTempOpenSection(',

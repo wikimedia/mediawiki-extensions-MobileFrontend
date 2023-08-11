@@ -228,10 +228,9 @@ class MakeSectionsTransform implements IMobileTransform {
 	/**
 	 * Make it possible to open sections while JavaScript is still loading.
 	 *
-	 * @param string|null $nonce CSP nonce or null if feature is disabled
 	 * @return string The JavaScript code to add event handlers to the skin
 	 */
-	public static function interimTogglingSupport( $nonce ) {
+	public static function interimTogglingSupport() {
 		$js = <<<JAVASCRIPT
 function mfTempOpenSection( id ) {
 	var block = document.getElementById( "mf-section-" + id );
@@ -244,8 +243,7 @@ function mfTempOpenSection( id ) {
 }
 JAVASCRIPT;
 		return Html::inlineScript(
-			ResourceLoader::filter( 'minify-js', $js ),
-			$nonce
+			ResourceLoader::filter( 'minify-js', $js )
 		);
 	}
 

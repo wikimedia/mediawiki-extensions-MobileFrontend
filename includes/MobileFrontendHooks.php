@@ -217,7 +217,7 @@ class MobileFrontendHooks implements TextSlotDiffRendererTablePrefixHook {
 		) {
 			$html .= Html::inlineScript( ResourceLoader::filter( 'minify-js',
 				LazyImageTransform::gradeCImageSupport()
-			), $skin->getOutput()->getCSP()->getNonce() );
+			) );
 		}
 	}
 
@@ -859,8 +859,7 @@ class MobileFrontendHooks implements TextSlotDiffRendererTablePrefixHook {
 
 		if ( $displayMobileView ) {
 			// Adds inline script to allow opening of sections while JS is still loading
-			$nonce = $out->getCSP()->getNonce();
-			$out->prependHTML( MakeSectionsTransform::interimTogglingSupport( $nonce ) );
+			$out->prependHTML( MakeSectionsTransform::interimTogglingSupport() );
 		}
 	}
 
