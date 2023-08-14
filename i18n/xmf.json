@@ -82,7 +82,7 @@
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "ნინაშ გორუა",
 	"mobile-frontend-last-modified-date": "ეკონია რედაქტირაფაშ ბორჯი $1-შ, $2-ს",
 	"mobile-frontend-last-modified-with-user-days": "[$4 ბოლო {{GENDER:$1|რედაქტირაფა}} რდჷ {{PLURAL:$3|$3 დღაშ}} კინოხ] {{PLURAL:$5|მახვარებუ [$6 $2]-შით|0=ანონიმური მახვარებუშით}}",
-	"mobile-frontend-last-modified-with-user-hours": "[$4 ბოლო {{GENDER:$1|რედაქტირაფა}} რდჷ {{PLURAL:$3|$3 დღაშ}} კინოხ] {{PLURAL:$5|მახვარებუ [$6 $2]-შით|0=ანონიმური მახვარებუშით}}",
+	"mobile-frontend-last-modified-with-user-hours": "[$4 ბოლო {{GENDER:$1|რედაქტირაფა}} რდჷ {{PLURAL:$3|$3 სათიშ}} კინოხ] {{PLURAL:$5|მახვარებუ [$6 $2]-შით|0=ანონიმური მახვარებუშით}}",
 	"mobile-frontend-last-modified-with-user-just-now": "[$3 ბოლო {{GENDER:$1|რედაქტირაფა}}] რდჷ ასერდე {{PLURAL:$4|მახვარებუ [$5 $2]-შით|0=ანონიმური მახვარებუშით}}",
 	"mobile-frontend-last-modified-with-user-minutes": "[$4 ბოლო {{GENDER:$1|რედაქტირაფა}} რდჷ {{PLURAL:$3|$3 წუთიშ}} კინოხ] {{PLURAL:$5|მახვარებუ [$6 $2]-შით|0=ანონიმური მახვარებუშით}}",
 	"mobile-frontend-last-modified-with-user-months": "[$4 ბოლო {{GENDER:$1|რედაქტირაფა}} რდჷ {{PLURAL:$3|$3 თუთაშ}} კინოხ] {{PLURAL:$5|მახვარებუ [$6 $2]-შით|0=ანონიმური მახვარებუშით}}",

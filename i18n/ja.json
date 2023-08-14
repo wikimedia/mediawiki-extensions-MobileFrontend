@@ -35,7 +35,8 @@
 			"ネイ",
 			"MirukuPC",
 			"Kokage si",
-			"MathXplore"
+			"MathXplore",
+			"Ryoya3"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "利用者が携帯機器版インターフェイスで編集しているかどうか",
@@ -256,6 +257,7 @@
 	"mobile-frontend-mobile-option-MFLazyLoadImages": "画像の遅延読み込み",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox-description": "文章が常にinfoboxよりも先に表示され、パフォーマンスや可読性が向上します。",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "フォントサイズ",
+	"mobile-frontend-mobile-option-amc": "拡張編集モード",
 	"mobile-frontend-mobile-option-amc-experiment-description": "最新版は、会話・ノートページ、履歴、利用者ツール、その他の編集ツールへの簡便なアクセスを提供します。",
 	"mobile-frontend-mobile-option-amc-learn-more": "詳細",
 	"mobile-frontend-mobile-option-amc-send-feedback": "フィードバックを送信",

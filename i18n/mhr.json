@@ -3,7 +3,8 @@
 		"authors": [
 			"Сай",
 			"Санюн Вадик",
-			"Венина Наталья Константиновна"
+			"Венина Наталья Константиновна",
+			"Lifeway"
 		]
 	},
 	"mobile-frontend-copyright": "Содержанийым $1 лийцензий почеш кучылт кертыда (весым возымо огыл гын).",
@@ -11,7 +12,7 @@
 	"mobile-frontend-privacy-link-text": "Конфиденциальность",
 	"mobile-frontend-terms-text": "Пайдаланымаш келшык",
 	"mobile-frontend-view": "Мобильный версий",
-	"mobile-frontend-view-desktop": "Стационарный",
+	"mobile-frontend-view-desktop": "Десктоп",
 	"tag-mobile_edit": "Телефон гоч тӧрлаташ",
 	"tag-mobile_web_edit": "мобильный гочын тӧрлаташ"
 }
