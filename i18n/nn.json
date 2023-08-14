@@ -64,6 +64,7 @@
 	"mobile-frontend-editor-uploadenable": "Last fyrst opp eit bilete for å aktivera endring.",
 	"mobile-frontend-editor-viewing-source-page": "<strong>Ser på kjelda til</strong><span> $1</span>",
 	"mobile-frontend-editor-wait": "Lagrar endring, vent litt.",
+	"mobile-frontend-editor-toload": "Endringsverktøyet vil no lastast inn. [$1 Last sida på nytt] dersom du framleis ser denne meldinga etter nokre sekund.",
 	"mobile-frontend-expand-sections-description": "Vid alltid ut alle bolkar som standard.",
 	"mobile-frontend-expand-sections-status": "Vid ut alle bolkar",
 	"mobile-frontend-fontchanger-link": "Skriftstorleik",
