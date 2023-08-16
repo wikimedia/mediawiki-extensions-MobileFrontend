@@ -184,6 +184,7 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 		if ( this.target ) {
 			this.target.afterSurfaceReady();
 			this.scrollToLeadParagraph();
+			this.showEditNotices();
 		}
 	},
 	/**

@@ -5,6 +5,7 @@ use MediaWiki\Auth\AuthManager;
 use MediaWiki\ChangeTags\Taggable;
 use MediaWiki\Diff\Hook\TextSlotDiffRendererTablePrefixHook;
 use MediaWiki\Extension\AbuseFilter\Variables\VariableHolder;
+use MediaWiki\Extension\Gadgets\GadgetRepo;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\ResourceLoader as RL;
 use MediaWiki\ResourceLoader\ResourceLoader;
@@ -540,6 +541,8 @@ class MobileFrontendHooks implements TextSlotDiffRendererTablePrefixHook {
 			'wgMFCollapseSectionsByDefault' => $config->get( 'MFCollapseSectionsByDefault' ),
 			// extendSearchParams.js
 			'wgMFTrackBlockNotices' => $config->get( 'MFTrackBlockNotices' ),
+			// EditorOverlayBase.js
+			'wgMFShowEditNotices' => $config->get( 'MFShowEditNotices' ),
 		];
 		return $vars;
 	}
@@ -1072,12 +1075,45 @@ class MobileFrontendHooks implements TextSlotDiffRendererTablePrefixHook {
 			$vars['wgMFAmcOutreachUserEligible'] = $outreach->isUserEligible();
 			$vars['wgMFLazyLoadImages'] =
 				$featureManager->isFeatureAvailableForCurrentUser( 'MFLazyLoadImages' );
+			$vars['wgMFEditNoticesFeatureConflict'] = self::hasEditNoticesFeatureConflict(
+				$config, $context->getUser()
+			);
 		}
 		// Needed by mobile.startup and mobile.special.watchlist.scripts.
 		// Needs to know if in beta mode or not and needs to load for Minerva desktop as well.
 		// Ideally this would be inside ResourceLoaderFileModuleWithMFConfig but
 		// sessions are not allowed there.
 		$vars += self::getWikibaseStaticConfigVars( $context, $config );
+	}
+
+	/**
+	 * Check if a conflicting edit notices gadget is enabled for the current user
+	 *
+	 * @param Config $config
+	 * @param User $user
+	 * @return bool
+	 */
+	public static function hasEditNoticesFeatureConflict( Config $config, User $user ) {
+		$gadgetName = $config->get( 'MFEditNoticesConflictingGadgetName' );
+		if ( !$gadgetName ) {
+			return false;
+		}
+
+		$extensionRegistry = ExtensionRegistry::getInstance();
+		if ( $extensionRegistry->isLoaded( 'Gadgets' ) ) {
+			// @phan-suppress-next-line PhanUndeclaredClassMethod
+			$gadgetsRepo = GadgetRepo::singleton();
+			$match = array_search( $gadgetName, $gadgetsRepo->getGadgetIds(), true );
+			if ( $match !== false ) {
+				try {
+					return $gadgetsRepo->getGadget( $gadgetName )
+						->isEnabled( $user );
+				} catch ( \InvalidArgumentException $e ) {
+					return false;
+				}
+			}
+		}
+		return false;
 	}
 
 	/**

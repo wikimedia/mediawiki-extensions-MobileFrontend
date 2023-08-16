@@ -798,6 +798,14 @@
 		},
 		"MFStopMobileRedirectCookieSecureValue": {
 			"value": true
+		},
+		"MFShowEditNotices": {
+			"value": true,
+			"description": "Show edit notices when starting to edit. Once shown, an edit notice is not shown again for 24 hours."
+		},
+		"MFEditNoticesConflictingGadgetName": {
+			"value": "EditNoticesOnMobile",
+			"description": "Internal name of the 'edit notices on mobile' gadget, which conflicts with showEditNotices in EditorOverlay. showEditNotices will not run when the user has this gadget enabled."
 		}
 	},
 	"DefaultUserOptions": {
