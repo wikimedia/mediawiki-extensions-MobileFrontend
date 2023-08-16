@@ -60,7 +60,7 @@
 	"mobile-frontend-languages-structured-overlay-no-results": "Mutauro haupo",
 	"mobile-frontend-languages-structured-overlay-no-results-body": "Mutauro wauri kutsvaga haupo.",
 	"mobile-frontend-last-modified-date": "Rakapedzisirwa kuchinjirudzwa musi wa $1, kuma $2",
-	"mobile-frontend-last-modified-with-user-days": "[ $4 yakapedzirisa {{GENDER:$1|kuchinjirudzwa}} {{PLURAL:$3|zuva ri$3 rapfuura|mazuva ma$3 apfuura}} ne {{PLURAL:$5|[$6 $2]|0=mushandisi asingazivikanwi}}",
+	"mobile-frontend-last-modified-with-user-days": "[ $4 yakapedzirisa {{GENDER:$1|kuchinjirudzwa}} {{PLURAL:$3|zuva ri$3 rapfuura|mazuva ma$3 apfuura}} ] na {{PLURAL:$5|[$6 $2]|0=mushandisi asingazivikanwi}}",
 	"mobile-frontend-last-modified-with-user-hours": "[ $4 Yakapedzisira {{GENDER:$1|kuchinjirudzwa}} {{PLURAL:$3|awa ri$3 rapfuura|maawa ma$3 apfuura}}] ne {{PLURAL:$5|[$6 $2]|0=mushandisi asingazivikanwi}}",
 	"mobile-frontend-last-modified-with-user-just-now": "[ $3 Yakapedzisira {{GENDER:$1|kuchinjirudzwa}}] izvezvi ne {{PLURAL:$4|[$5 $2]|0=mushandisi asingazivikanwi}}",
 	"mobile-frontend-last-modified-with-user-minutes": "[$4 Yakapedzisira {{GENDER:$1|kuchinjirudzwa}} {{PLURAL:$3|mineti ri$3 rapfuura|mamineti ma$3 apfuura}}] ne {{PLURAL:$5|[ $6 $2]|0=mushandisi asingazivikanwi}}",
