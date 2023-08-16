@@ -137,6 +137,8 @@
 	"mobile-frontend-media-license-link": "Lisensinformasjon",
 	"mobile-frontend-media-load-fail-message": "En feil oppsto under lasting av dette bildet.",
 	"mobile-frontend-media-load-fail-retry": "Oppdater",
+	"mobile-frontend-media-next": "Vis neste bilde",
+	"mobile-frontend-media-prev": "Vis forrige bilde",
 	"mobile-frontend-missing-image": "Bilde",
 	"mobile-frontend-tap-to-display-image": "Trykk for å vise bilde.",
 	"mobile-frontend-news-items": "I nyhetene",
