@@ -127,8 +127,13 @@
 			]
 		},
 		"mobile.init.styles": {
+			"class": "ResourceLoaderLessVarFileModule",
 			"styles": [
-				"resources/mobile.init.styles.less"
+				"resources/mobile.init.styles.less",
+				"resources/mobile.init/mobile.less"
+			],
+			"lessMessages": [
+				"mobile-frontend-tap-to-display-image"
 			]
 		},
 		"mobile.init": {
@@ -153,9 +158,6 @@
 				"mobile-frontend-editor-uploadenable",
 				"apierror-readonly",
 				"mobile-frontend-console-recruit"
-			],
-			"styles": [
-				"resources/mobile.init/mobile.less"
 			],
 			"skinStyles": {
 				"minerva": [

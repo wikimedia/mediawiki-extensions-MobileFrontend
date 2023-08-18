@@ -8,9 +8,10 @@
  */
 var skin,
 	url,
-	{ USER_FONT_SIZE_REGULAR, USER_FONT_SIZES } = require( '../constants' ),
-	storage = mw.storage,
 	toggling = require( './toggling' ),
+	FONT_SIZE_KEY = 'mf-font-size',
+	storage = mw.storage,
+	api = new mw.Api(),
 	lazyLoadedImages = require( './lazyLoadedImages' ),
 	editor = require( './editor' ),
 	currentPage = require( '../mobile.startup/currentPage' )(),
@@ -64,29 +65,6 @@ $window
 		mw.util.throttle( function () { eventBus.emit( 'scroll:throttled' ); }, 200 )
 	) );
 
-/**
- * Updates the font size based on the current value in storage
- */
-function updateFontSize() {
-	const userFontSize = storage.get( 'userFontSize', USER_FONT_SIZE_REGULAR );
-	// The following classes are used here:
-	// * mf-font-size-small
-	// * mf-font-size-regular
-	// * mf-font-size-large
-	// * mf-font-size-x-large
-	/* eslint-disable mediawiki/class-doc */
-	USER_FONT_SIZES.forEach( function ( fontSize ) {
-		const fontClass = `mf-font-size-${fontSize}`;
-		if ( fontSize === userFontSize ) {
-			document.documentElement.classList.add( fontClass );
-		} else {
-			// If Safari's back/forward cache is being used the previous class may be present.
-			document.documentElement.classList.remove( fontClass );
-		}
-	} );
-	/* eslint-enable mediawiki/class-doc */
-}
-
 // Hide URL flags used to pass state through reloads
 // venotify is normally handled in ve.init.mw.DesktopArticleTarget.init.js
 // but that's not loaded on mobile
@@ -102,14 +80,6 @@ if ( window.history && history.pushState ) {
 	}
 }
 
-// Font must be updated on back button press as users may click
-// back after changing font.
-window.addEventListener( 'pageshow', function () {
-	updateFontSize();
-} );
-
-updateFontSize();
-
 // Recruit volunteers through the console
 // (note console.log may not be a function so check via apply)
 /* eslint-disable no-console */
@@ -124,5 +94,24 @@ if ( mw.config.get( 'wgMFIsSupportedEditRequest' ) ) {
 	editor( currentPage, currentPageHTMLParser, skin );
 }
 
+/**
+ * One time action to migrate legacy font size to new system.
+ * FIXME: Can be removed in 1 months time and replaced with `storage.remove( 'userFontSize' );`
+ */
+function migrateLegacyFontSizeValue() {
+	let currentValue = storage.get( 'userFontSize' );
+	if ( currentValue ) {
+		// x-large is mapped to xlarge but others are the same.
+		currentValue = currentValue.replace( '-', '' );
+		if ( mw.user.isAnon() ) {
+			mw.clientPrefs.set( FONT_SIZE_KEY, currentValue );
+		} else {
+			api.saveOption( FONT_SIZE_KEY, currentValue );
+		}
+		storage.remove( 'userFontSize' );
+	}
+}
+
+migrateLegacyFontSizeValue();
 toggling();
 lazyLoadedImages();

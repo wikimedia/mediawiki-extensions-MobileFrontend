@@ -32,6 +32,7 @@ class MobileFrontendHooks implements TextSlotDiffRendererTablePrefixHook {
 	private const MOBILE_PREFERENCES_SECTION = 'rendering/mobile';
 	public const MOBILE_PREFERENCES_SPECIAL_PAGES = 'mobile-specialpages';
 	public const MOBILE_PREFERENCES_EDITOR = 'mobile-editor';
+	public const MOBILE_PREFERENCES_FONTSIZE = 'mf-font-size';
 	private const ENABLE_SPECIAL_PAGE_OPTIMISATIONS = '1';
 	// This should always be kept in sync with `@width-breakpoint-tablet`
 	// in mediawiki.skin.variables.less
@@ -850,6 +851,12 @@ class MobileFrontendHooks implements TextSlotDiffRendererTablePrefixHook {
 			$out->addModules( [ 'mobile.init' ] );
 			$out->addModuleStyles( [ 'mobile.init.styles' ] );
 
+			$fontSize = $services->getUserOptionsLookup()->getOption(
+				$context->getUser(), 'mf-font-size'
+			) ?? 'regular';
+
+			$context->getOutput()->addHtmlClasses( 'mf-font-size-clientpref-' . $fontSize );
+
 			// Allow modifications in mobile only mode
 			$hookRunner = new HookRunner( $services->getHookContainer() );
 			$hookRunner->onBeforePageDisplayMobile( $out, $skin );
@@ -913,6 +920,7 @@ class MobileFrontendHooks implements TextSlotDiffRendererTablePrefixHook {
 		$preferences[SpecialMobileWatchlist::VIEW_OPTION_NAME] = $definition;
 		$preferences[MobileContext::USER_MODE_PREFERENCE_NAME] = $definition;
 		$preferences[self::MOBILE_PREFERENCES_EDITOR] = $definition;
+		$preferences[self::MOBILE_PREFERENCES_FONTSIZE] = $definition;
 
 		if ( $config->get( 'MFEnableMobilePreferences' ) ) {
 			$preferences[ self::MOBILE_PREFERENCES_SPECIAL_PAGES ] = [

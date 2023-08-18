@@ -1,13 +1,23 @@
 /* global $ */
 var storage = mw.storage,
+	clientPrefs = mw.user.clientPrefs,
+	api = new mw.Api(),
 	browser = require( './mobile.startup/Browser' ).getSingleton(),
 	toast = require( './mobile.startup/showOnPageReload' ),
 	amcOutreach = require( './mobile.startup/amcOutreach/amcOutreach' ),
 	EXPAND_SECTIONS_KEY = 'expandSections',
 	msg = mw.msg,
-	{ USER_FONT_SIZE_REGULAR } = require( './constants.js' ),
-	FONT_SIZE_KEY = 'userFontSize';
-
+	USER_FONT_SIZE_SMALL = 'small',
+	USER_FONT_SIZE_REGULAR = 'regular',
+	USER_FONT_SIZE_LARGE = 'large',
+	USER_FONT_SIZE_XLARGE = 'xlarge',
+	// FIXME: This value should be synced between back-end and front-end code,
+	// but it's currently hard-coded because ResourceLoader virtual imports
+	// i.e. require( './config.json') are incompatible with the
+	// Webpack build. Requires updating to Webpack 5 and common.js magic comments.
+	// https://webpack.js.org/configuration/module/#moduleparserjavascriptcommonjsmagiccomments
+	// e.g: require(/* webpackIgnore: true */ './config.json');
+	FONT_SIZE_KEY = 'mf-font-size';
 /**
  * Notifies the user that settings were asynchronously saved.
  *
@@ -48,25 +58,26 @@ function createLabel( heading, description ) {
  */
 function addFontChangerToForm( $form ) {
 	var fontChanger, fontChangerDropdown,
-		currentFontSize = storage.get( FONT_SIZE_KEY );
-
+		currentFontSize = ( mw.user.isAnon() ) ?
+			clientPrefs.get( FONT_SIZE_KEY ) :
+			mw.user.options.get( FONT_SIZE_KEY );
 	fontChangerDropdown = new OO.ui.DropdownInputWidget( {
 		value: currentFontSize || USER_FONT_SIZE_REGULAR,
 		options: [
 			{
-				data: 'small',
+				data: USER_FONT_SIZE_SMALL,
 				label: msg( 'mobile-frontend-fontchanger-option-small' )
 			},
 			{
-				data: 'regular',
+				data: USER_FONT_SIZE_REGULAR,
 				label: msg( 'mobile-frontend-fontchanger-option-medium' )
 			},
 			{
-				data: 'large',
+				data: USER_FONT_SIZE_LARGE,
 				label: msg( 'mobile-frontend-fontchanger-option-large' )
 			},
 			{
-				data: 'x-large',
+				data: USER_FONT_SIZE_XLARGE,
 				label: msg( 'mobile-frontend-fontchanger-option-xlarge' )
 			}
 		]
@@ -79,7 +90,11 @@ function addFontChangerToForm( $form ) {
 		}
 	);
 	fontChangerDropdown.on( 'change', function ( value ) {
-		storage.set( FONT_SIZE_KEY, value );
+		if ( mw.user.isAnon() ) {
+			clientPrefs.set( FONT_SIZE_KEY, value );
+		} else {
+			api.saveOption( FONT_SIZE_KEY, value );
+		}
 		notify();
 	} );
 
