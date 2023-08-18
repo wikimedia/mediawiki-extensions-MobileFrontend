@@ -176,14 +176,6 @@ class SpecialMobileOptions extends MobileSpecialPage {
 				$this->msg( 'mobile-frontend-user-pref-link' )->parse()
 			) .
 			Html::closeElement( 'li' ) .
-			Html::openElement( 'li' ) .
-			Html::rawElement(
-				'a',
-				// phpcs:ignore Generic.Files.LineLength.TooLong
-				[ 'href' => 'https://www.mediawiki.org/wiki/Moderator_Tools/Content_moderation_on_mobile_web/Preferences' ],
-				$this->msg( 'mobile-frontend-user-pref-feedback' )->parse()
-			) .
-			Html::closeElement( 'li' ) .
 			Html::closeElement( 'ul' )
 		) );
 		return $userPreferences;
