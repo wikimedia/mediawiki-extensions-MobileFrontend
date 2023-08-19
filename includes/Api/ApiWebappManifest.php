@@ -5,7 +5,7 @@ namespace MobileFrontend\Api;
 use ApiBase;
 use ApiFormatJson;
 use MediaWiki\MediaWikiServices;
-use Title;
+use MediaWiki\Title\Title;
 
 /**
  * Return the webapp manifest for this wiki

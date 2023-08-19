@@ -6,7 +6,7 @@ use File;
 use Html;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\RevisionRecord;
-use Title;
+use MediaWiki\Title\Title;
 
 /**
  * Retrieves information specific to a mobile page

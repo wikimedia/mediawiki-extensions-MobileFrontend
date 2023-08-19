@@ -7,7 +7,7 @@ use DOMElement;
 use DOMNode;
 use DOMXPath;
 use MediaWiki\MediaWikiServices;
-use Title;
+use MediaWiki\Title\Title;
 use Wikimedia\Parsoid\Utils\DOMCompat;
 
 class MoveLeadParagraphTransform implements IMobileTransform {
