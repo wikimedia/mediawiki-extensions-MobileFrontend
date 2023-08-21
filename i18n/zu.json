@@ -2,11 +2,14 @@
 	"@metadata": {
 		"authors": [
 			"3atbulletz",
+			"INgobemnyama",
 			"Irus",
 			"Nkankane"
 		]
 	},
-	"mobile-frontend-view": "Buka ikhasi ngomakhalekhukhwini",
+	"mobile-frontend-terms-text": "imigomo yokusebenzisa",
+	"mobile-frontend-view": "Buka ikhasi ngomakhalipha",
+	"mobile-frontend-view-desktop": "Inqwakama",
 	"tag-mobile_edit": "Ukuhlela okwenziwa kumakhalekhukhwini",
 	"tag-mobile_web_edit": "Ukuhlela okwenziwe ngomakhalekhukhwini"
 }
