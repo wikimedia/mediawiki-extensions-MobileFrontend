@@ -121,6 +121,8 @@
 	"mobile-frontend-media-license-link": "Licences informācija",
 	"mobile-frontend-media-load-fail-message": "Ielādējot šo attēlu atgadījās kļūda.",
 	"mobile-frontend-media-load-fail-retry": "Atjaunināt",
+	"mobile-frontend-media-next": "Rādīt nākamo attēlu",
+	"mobile-frontend-media-prev": "Rādīt iepriekšējo attēlu",
 	"mobile-frontend-missing-image": "Attēls",
 	"mobile-frontend-tap-to-display-image": "Piespied, lai parādītu attēlu.",
 	"mobile-frontend-news-items": "Ziņās",
