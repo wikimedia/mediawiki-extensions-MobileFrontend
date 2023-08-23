@@ -227,7 +227,6 @@
 	"mobile-frontend-user-pref-option": "個人設定",
 	"mobile-frontend-user-pref-description": "パスワード、ウェブサイトの外観、通知設定、などの個人設定を変更します。",
 	"mobile-frontend-user-pref-link": "個人設定を開く",
-	"mobile-frontend-user-pref-feedback": "フィードバックを送信",
 	"mobile-frontend-amc-outreach-intro": "最新版の導入",
 	"mobile-frontend-amc-outreach-description": "改良版では、携帯端末で使える特別ページとして編集履歴、ウォッチリスト、最近の更新を追加、編集ツールにその他の機能を補足します。",
 	"mobile-frontend-amc-outreach-enable": "最新版を有効にする",

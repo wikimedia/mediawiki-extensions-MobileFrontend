@@ -234,7 +234,6 @@
 	"mobile-frontend-user-pref-option": "使用者偏好設定",
 	"mobile-frontend-user-pref-description": "更改您的偏好設定，包括密碼、網站外觀、通知設定等。",
 	"mobile-frontend-user-pref-link": "開啟偏好設定",
-	"mobile-frontend-user-pref-feedback": "發送意見回饋",
 	"mobile-frontend-amc-outreach-intro": "進階模式介紹",
 	"mobile-frontend-amc-outreach-description": "進階模式提供歷史頁面的擴充功能、監視清單頁面、最近修改，以及在手機上的其它編輯工具。",
 	"mobile-frontend-amc-outreach-enable": "啟用進階模式",
