@@ -65,8 +65,7 @@ class MobileFormatter extends HtmlFormatter {
 	/**
 	 * @inheritDoc
 	 */
-	#[\ReturnTypeWillChange]
-	protected function parseItemsToRemove() {
+	protected function parseItemsToRemove(): array {
 		$removals = parent::parseItemsToRemove();
 
 		// Remove specified content in content namespaces
@@ -78,6 +77,8 @@ class MobileFormatter extends HtmlFormatter {
 			}
 
 			foreach ( $removableClasses as $itemToRemove ) {
+				$type = '';
+				$rawName = '';
 				if ( $this->parseSelector( $itemToRemove, $type, $rawName ) ) {
 					$removals[$type][] = $rawName;
 				}
