@@ -688,6 +688,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 		} );
 	},
 	showEditNotices: function () {
+		var overlay = this;
 		if ( !mw.config.get( 'wgMFShowEditNotices' ) || mw.config.get( 'wgMFEditNoticesFeatureConflict' ) ) {
 			return;
 		}
@@ -718,6 +719,11 @@ mfExtend( EditorOverlayBase, Overlay, {
 							$container.append( $notice );
 						} );
 						OO.ui.alert( $container );
+
+						overlay.logFeatureUse( {
+							feature: 'notices',
+							action: 'show'
+						} );
 					} );
 				}
 			}
