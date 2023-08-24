@@ -222,8 +222,9 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 * @instance
 	 * @param {number|null} newRevId ID of the newly created revision, or null if it was a null edit.
 	 * @param {string} [redirectUrl] URL to redirect to, if different than the current URL.
+	 * @param {boolean} [tempUserCreated] Whether a temporary user was created
 	 */
-	onSaveComplete: function ( newRevId, redirectUrl ) {
+	onSaveComplete: function ( newRevId, redirectUrl, tempUserCreated ) {
 		var
 			self = this;
 
@@ -238,7 +239,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 			} else {
 				action = 'saved';
 			}
-			self.showSaveCompleteMsg( action );
+			self.showSaveCompleteMsg( action, tempUserCreated );
 		}
 
 		// Ensure we don't lose this event when logging
@@ -274,9 +275,10 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 * @memberof VisualEditorOverlay
 	 * @instance
 	 * @param {string} action One of 'saved', 'created', 'restored'
+	 * @param {boolean} [tempUserCreated] Whether a temporary user was created
 	 */
-	showSaveCompleteMsg: function ( action ) {
-		mw.loader.require( 'mediawiki.action.view.postEdit' ).fireHook( action );
+	showSaveCompleteMsg: function ( action, tempUserCreated ) {
+		mw.loader.require( 'mediawiki.action.view.postEdit' ).fireHook( action, tempUserCreated );
 	},
 	/**
 	 * Executed when page save fails. Handles logging the error. Subclasses
