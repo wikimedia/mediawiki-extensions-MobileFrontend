@@ -64,7 +64,7 @@
 		}
 	}
 
-	&-ve .overlay-footer-container + * {
+	&-ve .overlay-footer-container + *:not( .ve-mobile-fakeToolbar ) {
 		// Any extra messages (e.g. .minerva-anon-talk-message or .anonwarning)
 		// should leave space for the toolbar above the first message.
 		margin-top: 4em;
