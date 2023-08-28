@@ -33,7 +33,7 @@
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Пачкатэмын}}",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "Пачкатон быроз",
 	"mobile-frontend-editor-generic-block-reason": "Тодмотэм муг",
-	"mobile-frontend-editor-cancel": "Берытсконо",
+	"mobile-frontend-editor-cancel": "Берланьтон",
 	"mobile-frontend-editor-cancel-confirm": "Зэмен ик-а воштонъёстылэсь куштӥськемды потэ?",
 	"mobile-frontend-editor-captcha-try-again": "Шонертэм код, выльысь турттэ.",
 	"mobile-frontend-editor-continue": "Азьлань",
@@ -97,8 +97,8 @@
 	"mobile-frontend-terms-text": "Уже кутон условиос",
 	"mobile-frontend-view": "Мобильной версия",
 	"mobile-frontend-view-desktop": "Ӝӧквыл",
-	"mobile-frontend-watchlist-cta-button-login": "Пырыны",
-	"mobile-frontend-watchlist-filter-all": "Ваньзэ",
+	"mobile-frontend-watchlist-cta-button-login": "Эрикрадъяськоно",
+	"mobile-frontend-watchlist-filter-all": "Ваньмыз",
 	"tag-mobile_edit": "Моб. амалэн тупатон",
 	"tag-mobile_web_edit": "Сайтлэн мобильной версиетӥз тупатон"
 }
