@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Astahar",
 			"Chavash",
 			"Chuvash",
 			"Chuvash2014"
@@ -11,6 +12,9 @@
 	"mobile-frontend-expand-sections-status": "Пĕтĕм пайне сар",
 	"mobile-frontend-language-heading": "<strong>Чĕлхесем</strong>",
 	"mobile-frontend-missing-image": "Ӳкерчĕк",
+	"mobile-frontend-terms-text": "Усӑ курмалли условисем",
+	"mobile-frontend-view": "Мобильлӗ верси",
+	"mobile-frontend-view-desktop": "Сӗтелҫи верси",
 	"mobile-frontend-watchlist-back-home": "Килелле",
 	"tag-mobile_edit": "Мобиллĕ япаларан тӳрлетни",
 	"tag-mobile_web_edit": "Мобиллĕ версине тӳрлетни"

@@ -157,6 +157,8 @@
 	"mobile-frontend-media-license-link": "Informacje o licencji",
 	"mobile-frontend-media-load-fail-message": "Wystąpił błąd podczas ładowania tego obrazu.",
 	"mobile-frontend-media-load-fail-retry": "Odśwież",
+	"mobile-frontend-media-next": "Pokaż następną grafikę",
+	"mobile-frontend-media-prev": "Pokaż poprzednią grafikę",
 	"mobile-frontend-missing-image": "Grafika",
 	"mobile-frontend-tap-to-display-image": "Stuknij, aby wyświetlić obraz.",
 	"mobile-frontend-news-items": "Aktualności",
