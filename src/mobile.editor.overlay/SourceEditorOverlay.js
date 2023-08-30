@@ -495,7 +495,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 		this.showHidden( '.saving-header' );
 
 		this.gateway.save( options )
-			.then( function ( newRevId, redirectUrl ) {
+			.then( function ( newRevId, redirectUrl, tempUserCreated ) {
 				var title = self.options.title;
 				// Special case behaviour of main page
 				if ( mw.config.get( 'wgIsMainPage' ) && !redirectUrl ) {
@@ -505,7 +505,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 					return;
 				}
 
-				self.onSaveComplete( newRevId, redirectUrl );
+				self.onSaveComplete( newRevId, redirectUrl, tempUserCreated );
 			}, function ( data ) {
 				self.onSaveFailure( data );
 			} );
@@ -517,6 +517,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 	 * @instance
 	 * @param {number|null} newRevId ID of the newly created revision, or null if it was a null edit.
 	 * @param {string} [redirectUrl] URL to redirect to, if different than the current URL.
+	 * @param {boolean} [tempUserCreated] Whether a temporary user was created
 	 */
 	onSaveComplete: function ( newRevId, redirectUrl ) {
 		EditorOverlayBase.prototype.onSaveComplete.apply( this, arguments );
@@ -549,8 +550,8 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 	 * @memberof SourceEditorOverlay
 	 * @instance
 	 */
-	showSaveCompleteMsg: function ( action ) {
-		mw.loader.require( 'mediawiki.action.view.postEdit' ).fireHookOnPageReload( action );
+	showSaveCompleteMsg: function ( action, tempUserCreated ) {
+		mw.loader.require( 'mediawiki.action.view.postEdit' ).fireHookOnPageReload( action, tempUserCreated );
 	},
 
 	/**
