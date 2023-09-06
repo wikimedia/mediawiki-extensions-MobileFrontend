@@ -3,7 +3,8 @@
 		"authors": [
 			"Chavash",
 			"Chuvash",
-			"Chuvash2014"
+			"Chuvash2014",
+			"Astahar"
 		]
 	},
 	"mobile-frontend-editor-editing": "Тӳрлетни",
@@ -13,6 +14,9 @@
 	"mobile-frontend-languages-header": "Чĕлхесем",
 	"mobile-frontend-languages-header-page": "$1 - Чĕлхесем",
 	"mobile-frontend-missing-image": "Ӳкерчĕк",
+	"mobile-frontend-terms-text": "Усӑ курмалли условисем",
+	"mobile-frontend-view": "Мобильлӗ верси",
+	"mobile-frontend-view-desktop": "Сӗтелҫи верси",
 	"mobile-frontend-watchlist-back-home": "Килелле",
 	"tag-mobile_edit": "Мобиллĕ япаларан тӳрлетни",
 	"tag-mobile_web_edit": "Мобиллĕ версине тӳрлетни"
