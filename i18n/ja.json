@@ -113,7 +113,7 @@
 	"mobile-frontend-editor-viewing-source-page": "<span>$1</span> の<strong>ソースを閲覧中</strong>",
 	"mobile-frontend-editor-wait": "編集内容を保存しています。お待ちください。",
 	"mobile-frontend-editor-loading": "エディタの読み込み中...",
-	"mobile-frontend-expand-sections-description": "どのページでも全ての節を展開する。",
+	"mobile-frontend-expand-sections-description": "未設定状態ではコンテンツページの節を常に展開する。",
 	"mobile-frontend-expand-sections-status": "すべての節を展開",
 	"mobile-frontend-fontchanger-link": "フォント サイズ",
 	"mobile-frontend-fontchanger-desc": "読みやすいフォントサイズに調整できます。",
