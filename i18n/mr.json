@@ -138,6 +138,8 @@
 	"mobile-frontend-user-page-create-user-page-link-label": "$1 नावाचे पान तयार करा",
 	"tag-mobile_edit": "[[विकिपीडिया:मोबाईल संपादन|मोबाईल संपादन]]",
 	"tag-mobile_edit-description": "मोबाईल (जाल किंवा अॅप) मार्फत संपादन करण्यात आले",
+	"tag-advanced_mobile_edit": "प्रगत मोबाईल संपादन",
+	"tag-advanced_mobile_edit-description": "सदस्याने प्रगत माध्यम वापरून संपादन केले",
 	"tag-mobile_web_edit": "मोबाईल वेब संपादन",
 	"tag-mobile_web_edit-description": "मोबाईल संकेतस्थळाकडून संपादन झाले",
 	"mobile-frontend-loading-message": "भारण करीत आहे...",
