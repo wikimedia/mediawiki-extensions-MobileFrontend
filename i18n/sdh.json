@@ -2,20 +2,37 @@
 	"@metadata": {
 		"authors": [
 			"Kurdbuddha",
-			"Paraw2"
+			"Paraw2",
+			"TerranBoy"
 		]
 	},
+	"mobile-frontend-clear-search": "پاکەوکردن",
 	"mobile-frontend-copyright": "ناوەرۆک لەژێر $1 لەوەردەسە، مەگەر پێچەوانەێ وەتریابۊ.",
+	"mobile-frontend-diffview-title": "ئاڵشتکاریەیل",
+	"mobile-frontend-editor-blocked-drawer-action-ok": "باشە",
+	"mobile-frontend-editor-blocked-drawer-body-link": "فێشتر بۊنە",
+	"mobile-frontend-editor-blocked-drawer-reason-header": "هووکار",
+	"mobile-frontend-editor-generic-block-reason": "هووکار نەزانریاێ",
+	"mobile-frontend-editor-editing": "دەسکاریکردن",
+	"mobile-frontend-editor-publish": "بڵاوکردنەوە",
 	"mobile-frontend-languages-header": "زوانەیل",
+	"mobile-frontend-languages-structured-overlay-all-languages-header": "زوانەیل تر",
+	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "مینەی زوانێگ کردن",
 	"mobile-frontend-last-modified-date": "دۊائەمین وێراشتەکاری $1، لە $2",
 	"mobile-frontend-missing-image": "وێنە",
 	"mobile-frontend-privacy-link-text": "هەشارێتی",
-	"mobile-frontend-terms-text": "مەرجەیل ئەوکاربردن",
-	"mobile-frontend-view": "دۊنین موبایلی",
+	"mobile-frontend-terms-text": "مەرجەیل وەکاربردن",
+	"mobile-frontend-view": "دیەن مۆبایلی",
 	"mobile-frontend-view-desktop": "کامپیوتەر",
 	"mobile-frontend-watchlist-a-z": "پێرست",
 	"mobile-frontend-watchlist-filter-all": "گشت",
 	"mobile-frontend-watchlist-filter-articles": "پەڕەیل",
+	"mobile-frontend-watchlist-filter-talk": "وەتوویش",
+	"mobile-frontend-watchlist-more": "فێشتر",
+	"mobile-frontend-user-page-describe-yourself-editors": "دەسکاریکەرەیل",
 	"tag-mobile_edit": "وەگەرد موبایل وێراشتە کریاس",
-	"tag-mobile_web_edit": "وە وێب موبایل وێراشتە کریاس"
+	"tag-mobile_web_edit": "وە وێب موبایل وێراشتە کریاس",
+	"mobile-frontend-mobile-option-amc-learn-more": "فێشتر بزانە",
+	"mobile-frontend-amc-outreach-no-thanks": "نە، سپاس",
+	"prefs-mobile": "هەڵوژاننەگان مۆبایل"
 }
