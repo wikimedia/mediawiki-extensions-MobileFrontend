@@ -1,10 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Aandeginini"
+			"Aandeginini",
+			"Nibi-zhimaaganish"
 		]
 	},
+	"mobile-frontend-terms-text": "Ogimaakandan",
 	"mobile-frontend-view": "Waabam giigidowin",
+	"mobile-frontend-view-desktop": "Ozhibii'ige-adoopowin mazinaabikiwebinigan",
 	"tag-mobile_edit": "Giigidowin aanji'",
 	"tag-mobile_web_edit": "Giigidowin waasamoo-asabing aanji'"
 }
