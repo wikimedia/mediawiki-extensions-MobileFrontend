@@ -3,7 +3,7 @@ module.exports = {
 		<div class=" drawer drawer-container__drawer position-fixed">
 			<button type="button" class="cdx-button cdx-button--size-large cdx-button--weight-quiet cdx-button--icon-only cancel">
 				<span class="mf-icon mw-ui-icon-mf-expand "> </span>
-				<span></span>
+				<span>mobile-frontend-drawer-arrow-label</span>
 			</button>
 			<p> </p>
 			<a type="button" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--size-medium cdx-button--weight-primary cdx-button--action-progressive " href="logIn">
@@ -20,7 +20,7 @@ module.exports = {
 		<div class=" drawer drawer-container__drawer position-fixed">
 			<button type="button" class="cdx-button cdx-button--size-large cdx-button--weight-quiet cdx-button--icon-only cancel">
 				<span class="mf-icon mw-ui-icon-mf-expand "> </span>
-				<span></span>
+				<span>mobile-frontend-drawer-arrow-label</span>
 			</button>
 			<p> </p>
 			<a type="button" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--size-medium cdx-button--weight-primary cdx-button--action-progressive " href="customLogIn">

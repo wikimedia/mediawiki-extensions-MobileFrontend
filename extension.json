@@ -234,6 +234,7 @@
 				"web2017-polyfills"
 			],
 			"messages": [
+				"mobile-frontend-drawer-arrow-label",
 				"mobile-frontend-languages-structured-overlay-error",
 				"mobile-frontend-license-links",
 				"echo-mark-all-as-read",

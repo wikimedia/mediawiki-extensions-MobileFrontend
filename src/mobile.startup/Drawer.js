@@ -21,7 +21,8 @@ function Drawer( props ) {
 	this.drawerClassName = props.className || '';
 	this.collapseIcon = new IconButton( {
 		icon: 'expand',
-		additionalClassNames: 'cancel'
+		additionalClassNames: 'cancel',
+		label: mw.msg( 'mobile-frontend-drawer-arrow-label' )
 	} );
 	View.call( this,
 		util.extend(
