@@ -4,10 +4,9 @@ var browser = require( './Browser' ).getSingleton(),
 	arrowOptions = {
 		icon: 'expand',
 		isSmall: true,
-		size: 'medium',
-		additionalClassNames: 'indicator mf-button-flush-left'
+		additionalClassNames: 'indicator'
 	},
-	IconButton = require( './IconButton' );
+	Icon = require( './Icon' );
 
 /**
  *
@@ -156,7 +155,7 @@ Toggler.prototype.toggle = function ( $heading, fromSaved ) {
 	$heading.toggleClass( 'open-block' );
 
 	arrowOptions.rotation = wasExpanded ? 0 : 180;
-	var newIndicator = new IconButton( arrowOptions );
+	var newIndicator = new Icon( arrowOptions );
 	var $indicatorElement = $heading.data( 'indicator' );
 	if ( $indicatorElement ) {
 		$indicatorElement.replaceWith( newIndicator.$el );
@@ -295,7 +294,7 @@ Toggler.prototype._enable = function () {
 				} );
 
 			arrowOptions.rotation = !self.isCollapsedByDefault() ? 180 : 0;
-			var indicator = new IconButton( arrowOptions );
+			var indicator = new Icon( arrowOptions );
 			if ( $indicator.length ) {
 				// replace the existing indicator
 				$indicator.replaceWith( indicator.$el );
