@@ -148,14 +148,16 @@ mfExtend( EditorOverlayBase, Overlay, {
 		<div class="save-panel panel hideable hidden">
 			<div id="error-notice-container"></div>
 			<h2 class="summary-request">{{{summaryRequestMsg}}}</h2>
-			<textarea rows="2" class="mw-ui-input summary" placeholder="{{summaryMsg}}"></textarea>
+			<div class="summary-input"></div>
 			{{#licenseMsg}}<div class="license">{{{licenseMsg}}}</div>{{/licenseMsg}}
 		</div>
 		<div class="captcha-panel panel hideable hidden">
 			<div class="captcha-box">
 				<img id="image" src="">
 				<div id="question"></div>
-				<input class="captcha-word mw-ui-input" placeholder="{{captchaMsg}}" />
+				<div class="cdx-text-input">
+					<input class="captcha-word cdx-text-input__input" placeholder="{{captchaMsg}}" />
+				</div>
 			</div>
 		</div>
 	</div>
@@ -419,6 +421,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 			headers.savingHeader( mw.msg( 'mobile-frontend-editor-wait' ) )
 		];
 	},
+
 	/**
 	 * @inheritdoc
 	 * @memberof EditorOverlayBase
@@ -428,7 +431,6 @@ mfExtend( EditorOverlayBase, Overlay, {
 		this.$errorNoticeContainer = this.$el.find( '#error-notice-container' );
 
 		Overlay.prototype.postRender.apply( this );
-
 		this.showHidden( '.initial-header' );
 	},
 	show: function () {

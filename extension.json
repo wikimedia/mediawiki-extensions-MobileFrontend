@@ -315,7 +315,7 @@
 				"mediawiki.editfont.styles",
 				"user.options",
 				"oojs-ui",
-				"mediawiki.ui.input",
+				"codex-search-styles",
 				"mobile.startup",
 				"mediawiki.user",
 				"mediawiki.confirmCloseWindow",

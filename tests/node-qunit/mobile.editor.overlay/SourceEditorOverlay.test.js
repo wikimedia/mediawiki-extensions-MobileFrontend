@@ -19,6 +19,11 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/SourceEditorOverlay', {
 		mediaWiki.setUp( sandbox, global );
 		mustache.setUp( sandbox, global );
 		oo.setUp( sandbox, global );
+		global.OO.ui.MultilineTextInputWidget = function () {
+			return {
+				$element: global.$( '<div>' )
+			};
+		};
 		sandbox.stub( mw, 'msg' ).withArgs( 'mobile-frontend-editor-continue' ).returns( 'Continue' )
 			.withArgs( 'mobile-frontend-editor-save' ).returns( 'Save' )
 			.withArgs( 'mobile-frontend-editor-publish' ).returns( 'Publish' );

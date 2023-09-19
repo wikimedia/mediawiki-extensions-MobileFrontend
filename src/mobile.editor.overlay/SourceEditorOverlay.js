@@ -210,6 +210,17 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 			} );
 		}
 
+		// Render edit summary
+		this.summaryTextArea = new OO.ui.MultilineTextInputWidget( {
+			placeholder: this.options.summaryMsg,
+			classes: [ 'summary' ],
+			value: '',
+			maxRows: 2
+		} );
+		this.$el.find( '.summary-input' ).append(
+			this.summaryTextArea.$element
+		);
+
 		this._loadContent();
 	},
 
@@ -467,6 +478,15 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 	},
 
 	/**
+	 * Get the current edit summary.
+	 *
+	 * @return {string}
+	 */
+	getEditSummary: function () {
+		return this.summaryTextArea.getValue();
+	},
+
+	/**
 	 * Executed when the editor clicks the save/publish button. Handles logging and submitting
 	 * the save action to the editor API.
 	 *
@@ -477,7 +497,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 	onSaveBegin: function () {
 		var self = this,
 			options = {
-				summary: this.$el.find( '.summary' ).val()
+				summary: this.getEditSummary()
 			};
 
 		if ( self.sectionLine !== '' ) {
