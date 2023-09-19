@@ -32,7 +32,6 @@ class ExtMobileFrontend {
 		$canViewHidden = !$isHidden || $out->getAuthority()->isAllowed( 'hideuser' );
 
 		$out->addModuleStyles( [
-			'mediawiki.ui.icon',
 			'mobile.userpage.styles', 'mobile.userpage.images'
 		] );
 

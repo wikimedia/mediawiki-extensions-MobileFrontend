@@ -1,6 +1,5 @@
 import { action } from '@storybook/addon-actions';
 import IconButton from '../src/mobile.startup/IconButton';
-import '../.storybook/icons.less';
 import '../resources/mobile.startup/icon.less';
 
 export default {

@@ -2,7 +2,6 @@
 set -eu
 
 mkdir -p .storybook/resolve-less-imports
-mkdir -p .storybook/resolve-less-imports/mediawiki.ui
 
 # Fetch resources via curl, `-sSL` silently, Show only errors, Location header and also on a 3XX response code.
 # MediaWiki skin LESS variables, defaults in core
@@ -12,17 +11,6 @@ sed "s/..\/..\/lib\/codex/@wikimedia\/codex/g" .storybook/resolve-less-imports/m
 
 # MediaWiki LESS mixins
 curl -sSL "https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/core/+/master/resources/src/mediawiki.less/mediawiki.mixins.less?format=TEXT" | base64 --decode > .storybook/resolve-less-imports/mediawiki.mixins.less
-
-# mediawiki.ui LESS mixins
-curl -sSL "https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/core/+/master/resources/src/mediawiki.less/mediawiki.ui/mixins.buttons.less?format=TEXT" | base64 --decode > .storybook/resolve-less-imports/mediawiki.ui/mixins.buttons.less
-
-# mediawiki.ui icons
-curl -sSL "https://en.wikipedia.org/w/load.php?modules=mediawiki.ui.icon&debug=true&only=styles" > .storybook/icons.less
-
-
-# mediawiki ui
-mkdir -p .storybook/resolve-less-imports/mediawiki.ui.input
-curl -sSL "https://gerrit.wikimedia.org/r/plugins/gitiles/mediawiki/core/+/master/resources/src/mediawiki.ui.input/input.less?format=TEXT" | base64 --decode > .storybook/resolve-less-imports/mediawiki.ui.input/input.less
 
 # mediawiki skinning modules
 mkdir -p .storybook/mediawiki.skinning
