@@ -104,7 +104,7 @@ function migrateLegacyFontSizeValue() {
 		// x-large is mapped to xlarge but others are the same.
 		currentValue = currentValue.replace( '-', '' );
 		if ( mw.user.isAnon() ) {
-			mw.clientPrefs.set( FONT_SIZE_KEY, currentValue );
+			mw.user.clientPrefs.set( FONT_SIZE_KEY, currentValue );
 		} else {
 			api.saveOption( FONT_SIZE_KEY, currentValue );
 		}

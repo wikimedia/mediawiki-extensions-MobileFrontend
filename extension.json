@@ -143,6 +143,7 @@
 			],
 			"dependencies": [
 				"mediawiki.api",
+				"mediawiki.user",
 				"mediawiki.jqueryMsg",
 				"mediawiki.router",
 				"mediawiki.storage",
