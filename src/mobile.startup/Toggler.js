@@ -29,14 +29,12 @@ var browser = require( './Browser' ).getSingleton(),
  * @param {jQuery.Object} options.$container to apply toggling to
  * @param {string} options.prefix a prefix to use for the id.
  * @param {Page} options.page to allow storage of session for future visits
- * @param {boolean} [options.isClosed]
  */
 function Toggler( options ) {
 	this.eventBus = options.eventBus;
 	this.$container = options.$container;
 	this.prefix = options.prefix;
 	this.page = options.page;
-	this.isClosed = options.isClosed;
 	this._enable();
 }
 
@@ -322,7 +320,7 @@ Toggler.prototype._enable = function () {
 
 			enableKeyboardActions( self, $heading );
 
-			if ( !self.isCollapsedByDefault() && !self.isClosed ) {
+			if ( !self.isCollapsedByDefault() ) {
 				// Expand sections by default on wide screen devices
 				// or if the expand sections setting is set.
 				// The wide screen logic for determining whether to collapse sections initially
