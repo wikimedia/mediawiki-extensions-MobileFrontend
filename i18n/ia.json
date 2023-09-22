@@ -28,6 +28,7 @@
 	"mobile-frontend-editor-anonwarning": "<strong>Attention:</strong> Tu non ha aperite session. Tu adresse IP essera publicamente visibile si tu face modificationes. Si tu <strong>aperi session</strong> o <strong>crea un conto</strong>, le modificationes essera attribuite a tu nomine de usator, inter altere avantages.",
 	"mobile-frontend-editor-autocreatewarning": "<strong>Attention:</strong> Tu non ha aperite session. Tu modification essera attribuite a un <strong>[[$1|nomine automaticamente generate]]</strong> per medio de un cookie ligate a tu navigator del web. Tu adresse IP essera visibile a usatores digne de fide. Si tu <strong>aperi session</strong> o <strong>crea un conto</strong>, tu modificationes essera attribuite al nomine de tu preferentia, inter altere beneficios.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Aperir session",
+	"mobile-frontend-drawer-arrow-label": "Clauder",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "OK",
 	"mobile-frontend-editor-blocked-drawer-action-randompage": "Portar me a un altere pagina",
 	"mobile-frontend-editor-blocked-drawer-title": "Tu ha essite blocate de modificar {{SITENAME}}.",

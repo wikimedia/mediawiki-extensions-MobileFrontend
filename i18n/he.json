@@ -46,6 +46,7 @@
 	"mobile-frontend-editor-anonwarning": "<strong>אזהרה:</strong> לא נכנסת לחשבון. כתובת ה־IP שלך תוצג לציבור אם תעשה עריכות כלשהן. <strong>כניסה</strong> או <strong>יצירת חשבון</strong> יאפשרו ייחוס של העריכות שלך לשם המשתמש שלך ויתרונות נוספים.",
 	"mobile-frontend-editor-autocreatewarning": "<strong>אזהרה:</strong> לא נכנסת לחשבון. העריכה שלך תיוחס ל<strong>[[$1|שם מחולל אוטומטית]]</strong> באמצעות הוספת עוגייה לדפדפן שלך. כתובת ה־IP שלך תוצג למשתמשים אמינים. <strong>כניסה לחשבון</strong> או <strong>יצירת חשבון</strong> תגרומנה לכך שהעריכות שלך תיוחסנה לשם הנבחר שלך, ויש לזה עוד יתרונות.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "כניסה לחשבון",
+	"mobile-frontend-drawer-arrow-label": "סגירה",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "אישור",
 	"mobile-frontend-editor-blocked-drawer-action-randompage": "קחו אותי לדף אחר",
 	"mobile-frontend-editor-blocked-drawer-title": "נחסמת מעריכת {{SITENAME}}.",
