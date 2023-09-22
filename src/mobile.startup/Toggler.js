@@ -33,7 +33,11 @@ var browser = require( './Browser' ).getSingleton(),
  */
 function Toggler( options ) {
 	this.eventBus = options.eventBus;
-	this._enable( options.$container, options.prefix, options.page, options.isClosed );
+	this.$container = options.$container;
+	this.prefix = options.prefix;
+	this.page = options.page;
+	this.isClosed = options.isClosed;
+	this._enable();
 }
 
 /**
@@ -101,9 +105,9 @@ function expandStoredSections( toggler, $container, page ) {
 		// toggle only if the section is not already expanded
 		if (
 			expandedSections[page.title][$headline.attr( 'id' )] &&
-		!$sectionHeading.hasClass( 'open-block' )
+			!$sectionHeading.hasClass( 'open-block' )
 		) {
-			toggler.toggle( $sectionHeading, page, true );
+			toggler.toggle( $sectionHeading, true );
 		}
 	} );
 }
@@ -140,11 +144,10 @@ Toggler.prototype.isCollapsedByDefault = function () {
  * @memberof Toggler
  * @instance
  * @param {jQuery.Object} $heading A heading belonging to a section
- * @param {Page} page
  * @param {boolean} fromSaved Section is being toggled from a saved state
  * @return {boolean}
  */
-Toggler.prototype.toggle = function ( $heading, page, fromSaved ) {
+Toggler.prototype.toggle = function ( $heading, fromSaved ) {
 	if ( !fromSaved && $heading.hasClass( 'collapsible-heading-disabled' ) ) {
 		return false;
 	}
@@ -196,7 +199,7 @@ Toggler.prototype.toggle = function ( $heading, page, fromSaved ) {
 	} );
 
 	if ( this.isCollapsedByDefault() ) {
-		storeSectionToggleState( $heading, page );
+		storeSectionToggleState( $heading, this.page );
 	}
 	return true;
 };
@@ -206,13 +209,12 @@ Toggler.prototype.toggle = function ( $heading, page, fromSaved ) {
  *
  * @param {Toggler} toggler instance.
  * @param {jQuery.Object} $heading
- * @param {Page} page
  */
-function enableKeyboardActions( toggler, $heading, page ) {
+function enableKeyboardActions( toggler, $heading ) {
 	$heading.on( 'keypress', function ( ev ) {
 		if ( ev.which === 13 || ev.which === 32 ) {
 			// Only handle keypresses on the "Enter" or "Space" keys
-			toggler.toggle( $heading, page );
+			toggler.toggle( $heading );
 		}
 	} ).find( 'a' ).on( 'keypress mouseup', function ( ev ) {
 		ev.stopPropagation();
@@ -225,15 +227,13 @@ function enableKeyboardActions( toggler, $heading, page ) {
  * @memberof Toggler
  * @instance
  * @param {string} id An element ID within the $container
- * @param {Object} $container jQuery element to search in
- * @param {Page} page
  * @return {boolean} Target ID was found
  */
-Toggler.prototype.reveal = function ( id, $container, page ) {
+Toggler.prototype.reveal = function ( id ) {
 	var $target;
 	// jQuery will throw for hashes containing certain characters which can break toggling
 	try {
-		$target = $container.find( '#' + escapeSelector( id ) );
+		$target = this.$container.find( '#' + escapeSelector( id ) );
 	} catch ( e ) {}
 	if ( !$target || !$target.length ) {
 		return false;
@@ -245,7 +245,7 @@ Toggler.prototype.reveal = function ( id, $container, page ) {
 		$heading = $target.parents( '.collapsible-block' ).prev( '.collapsible-heading' );
 	}
 	if ( $heading.length && !$heading.hasClass( 'open-block' ) ) {
-		this.toggle( $heading, page );
+		this.toggle( $heading );
 	}
 	if ( $heading.length ) {
 		// scroll again after opening section (opening section makes the page longer)
@@ -259,22 +259,18 @@ Toggler.prototype.reveal = function ( id, $container, page ) {
  *
  * @memberof Toggler
  * @instance
- * @param {jQuery.Object} $container to apply toggling to
- * @param {string} prefix a prefix to use for the id.
- * @param {Page} page to allow storage of session for future visits
- * @param {boolean} [isClosed] whether the element should begin closed
  * @private
  */
-Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
+Toggler.prototype._enable = function () {
 	var self = this;
 
 	// FIXME This should use .find() instead of .children(), some extensions like Wikibase
 	// want to toggle other headlines than direct descendants of $container. (T95889)
-	$container.children( '.section-heading' ).each( function ( i ) {
-		var $heading = $container.find( this ),
+	this.$container.children( '.section-heading' ).each( function ( i ) {
+		var $heading = self.$container.find( this ),
 			$headingLabel = $heading.find( '.mw-headline' ),
 			$indicator = $heading.find( '.indicator' ),
-			id = prefix + 'collapsible-block-' + i;
+			id = self.prefix + 'collapsible-block-' + i;
 		// Be sure there is a `section` wrapping the section content.
 		// Otherwise, collapsible sections for this page is not enabled.
 		if ( $heading.next().is( 'section' ) ) {
@@ -289,7 +285,7 @@ Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 					if ( !ev.target.href ) {
 						// prevent taps/clicks on edit button after toggling (T58209)
 						ev.preventDefault();
-						self.toggle( $heading, page );
+						self.toggle( $heading );
 					}
 				} );
 			$headingLabel
@@ -319,19 +315,19 @@ Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 					id: id
 				} )
 				.on( 'beforematch', function () {
-					self.toggle( $heading, page );
+					self.toggle( $heading );
 				} )
 				.addClass( 'collapsible-block-js' )
 				.get( 0 ).setAttribute( 'hidden', 'until-found' );
 
-			enableKeyboardActions( self, $heading, page );
+			enableKeyboardActions( self, $heading );
 
-			if ( !self.isCollapsedByDefault() && !isClosed ) {
+			if ( !self.isCollapsedByDefault() && !self.isClosed ) {
 				// Expand sections by default on wide screen devices
 				// or if the expand sections setting is set.
 				// The wide screen logic for determining whether to collapse sections initially
 				// should be kept in sync with mobileoptions#initLocalStorageElements().
-				self.toggle( $heading, page );
+				self.toggle( $heading );
 			}
 		}
 	} );
@@ -348,10 +344,10 @@ Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 			hash = hash.slice( 1 );
 			// Per https://html.spec.whatwg.org/multipage/browsing-the-web.html#target-element
 			// we try the raw fragment first, then the percent-decoded fragment.
-			if ( !self.reveal( hash, $container, page ) ) {
+			if ( !self.reveal( hash ) ) {
 				var decodedHash = mw.util.percentDecodeFragment( hash );
 				if ( decodedHash ) {
-					self.reveal( decodedHash, $container, page );
+					self.reveal( decodedHash );
 				}
 			}
 		}
@@ -380,8 +376,8 @@ Toggler.prototype._enable = function ( $container, prefix, page, isClosed ) {
 		checkHash();
 	} );
 
-	if ( this.isCollapsedByDefault() && page ) {
-		expandStoredSections( this, $container, page );
+	if ( this.isCollapsedByDefault() && this.page ) {
+		expandStoredSections( this, this.$container, this.page );
 	}
 };
 
