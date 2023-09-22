@@ -116,10 +116,12 @@ function expandStoredSections( toggler, $container, page ) {
  */
 Toggler.prototype.isCollapsedByDefault = function () {
 	if ( this._isCollapsedByDefault === undefined ) {
-		// This body class overrides site settings and user preferences. As used
-		// on talk pages by DiscussionTools. (T321618, T322628)
-		if ( document.body.classList.contains( 'collapsible-headings-collapsed' ) ) {
-			this._isCollapsedByDefault = true;
+		// Thess classes override site settings and user preferences. For example:
+		// * ...-collapsed used on talk pages by DiscussionTools. (T321618, T322628)
+		// * ...-expanded used in previews (T336572)
+		var $override = this.$container.closest( '.collapsible-headings-collapsed, .collapsible-headings-expanded' );
+		if ( $override.length ) {
+			this._isCollapsedByDefault = $override.hasClass( 'collapsible-headings-collapsed' );
 		} else {
 
 			// Check site config
