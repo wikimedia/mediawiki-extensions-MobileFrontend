@@ -279,7 +279,8 @@ Toggler.prototype._enable = function () {
 					// don't toggle, if the click target was a link
 					// (a link in a section heading)
 					// See T117880
-					if ( !ev.target.href ) {
+					var clickedLink = ev.target.closest( 'a' );
+					if ( !clickedLink || !clickedLink.href ) {
 						// prevent taps/clicks on edit button after toggling (T58209)
 						ev.preventDefault();
 						self.toggle( $heading );
