@@ -29,6 +29,7 @@
 	"mobile-frontend-editor-anonwarning": "<strong>Предупредување:</strong> Не сте најавени. Вашата IP-адреса ќе биде јавно видлива ако уредувате. Ако <strong>се најавите</strong> или <strong>направите сметка</strong>, тогаш уредувањата ќе се припишуваат на вашето корисничко име, покрај другите погодности.",
 	"mobile-frontend-editor-autocreatewarning": "<strong>Предупредување:</strong> Не сте најавени. Вашето уредување ќе му се припише на <strong>[[$1|автоматски создадено име]]</strong> додавајќи колаче во вашиот прелистувач. Вашата IP-адреса ќе биде видлива за доверливи корисници. Ако <strong>се најавите</strong> или <strong>направите сметка</strong>, уредувањата ќе му се припишуваат на името што ќе го изберете, заедно со други поволности.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Најава",
+	"mobile-frontend-drawer-arrow-label": "Затвори",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "ОК",
 	"mobile-frontend-editor-blocked-drawer-action-randompage": "Дај друга страница",
 	"mobile-frontend-editor-blocked-drawer-title": "Имате забрана за уредување на {{SITENAME}}.",

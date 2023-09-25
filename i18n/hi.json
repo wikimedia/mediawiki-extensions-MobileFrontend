@@ -51,6 +51,7 @@
 	"mobile-frontend-editor-anon": "लॉग-इन किए बिना संपादित करें",
 	"mobile-frontend-editor-anonwarning": "<strong>सावधान:</strong> आपने लॉग-इन नहीं किया है। अगर आप सम्पादन करते हैं तो इस पृष्ठ के संपादन इतिहास में आपका IP पता दृश्य होगा। अगर आप <strong>लॉग-इन</strong> करते हैं या <strong>खाता बनाते हैं</strong> तो दूसरे सुविधाओं के साथ-साथ आपके संपादनों का श्रेय आपके सदस्यनाम पर दिया जाएगा।",
 	"mobile-frontend-editor-blocked-drawer-action-login": "लॉग-इन करें",
+	"mobile-frontend-drawer-arrow-label": "बंद करें",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "ठीक है",
 	"mobile-frontend-editor-blocked-drawer-action-randompage": "मुझे दूसरे पृष्ठ पर ले जाएँ",
 	"mobile-frontend-editor-blocked-drawer-title": "आपको {{SITENAME}} को संपादित करने से अवरोधित कर दिया गया है।",

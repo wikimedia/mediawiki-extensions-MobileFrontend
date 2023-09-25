@@ -30,6 +30,7 @@
 	"mobile-frontend-editor-anon": "Änneren ouni anzeloggen",
 	"mobile-frontend-editor-anonwarning": "<strong>Opgepasst:</strong> Dir sidd net ageloggt. Är IP-Adress gëtt net ëffentlech siichtbar wann Dir Ännerungen maacht. Wann Dir Iech <strong>aloggt</strong> oder <strong>e Benotzerkont uleet</strong>, ginn Är Ännerungen Ärem Benotzernumm zougesprach an Dir profitéiert och vun anere Virdeeler.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Aloggen",
+	"mobile-frontend-drawer-arrow-label": "Zoumaachen",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "OK",
 	"mobile-frontend-editor-blocked-drawer-title": "Dir gouft fir d'Änneren op {{SITENAME}} gespaart.",
 	"mobile-frontend-editor-blocked-drawer-title-partial": "Dir gouft fir Ännerungen op dëser Säit gespaart.",
