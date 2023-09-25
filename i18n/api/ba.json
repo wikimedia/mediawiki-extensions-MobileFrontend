@@ -5,7 +5,8 @@
 			"Lizalizaufa",
 			"Азат Хәлилов",
 			"Гизатуллина",
-			"Янмурза Баки"
+			"Янмурза Баки",
+			"З. ӘЙЛЕ"
 		]
 	},
 	"apihelp-mobileview-description": "Мобиль тәҡдим итеү өсөн кәрәк мәғлүмәттәрҙе кире ҡайтара.",
@@ -21,5 +22,5 @@
 	"apihelp-mobileview-param-thumbwidth": "Миниатюраның максималь дәүмәле.",
 	"apihelp-mobileview-param-thumbheight": "Миниатюраның максималь бейеклеге.",
 	"apihelp-mobileview-example-1": "[[Doom metal]] мәҡәләлә 0 бүлеге тураһында мәғлүмәт алырға.",
-	"apihelp-parse-param-noimages": "Мобиль сайтта рәсемдәрҙе күрһәтмәҫкә"
+	"apihelp-parse-param-noimages": "Мобиль ҡорамалда рәсемдәрҙе күрһәтеүҙе һүндерергә"
 }
