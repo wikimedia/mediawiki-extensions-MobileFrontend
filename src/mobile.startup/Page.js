@@ -110,11 +110,13 @@ class Page {
 	 * @return {boolean}
 	 */
 	isVEVisualAvailable() {
+		if ( !this.isVEAvailable() ) {
+			return false;
+		}
 		var config = mw.config.get( 'wgVisualEditorConfig' );
 		var visualEditorNamespaces = config.namespaces || [];
 
-		return this.isVEAvailable() &&
-			visualEditorNamespaces.indexOf( mw.config.get( 'wgNamespaceNumber' ) ) !== -1;
+		return visualEditorNamespaces.indexOf( mw.config.get( 'wgNamespaceNumber' ) ) !== -1;
 	}
 
 	/**
