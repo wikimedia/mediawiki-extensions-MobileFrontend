@@ -76,7 +76,7 @@
 	"mobile-frontend-last-modified-with-user-days": "[$4 ТӀаьххьара {{GENDER:$1|нисдар}} дина {{PLURAL:$3|$3 де хьалха|1=селхана}}] {{PLURAL:$5|декъашхочо [$6 $2]|0=анонимо}}",
 	"mobile-frontend-last-modified-with-user-hours": "[$4 ТӀаьххьара {{GENDER:$1|нисдар дина}} {{PLURAL:$3|$3 сахьт}} хьалха] {{PLURAL:$5|цӀе хьулйина [$6 $2]|0=декъашхочо}}",
 	"mobile-frontend-last-modified-with-user-just-now": "[$3 ТӀаьхьара {{GENDER:$1|нисдар}}] дина дукха хан йоцуш {{PLURAL:$4|декъашхочо [$5 $2]|0=анонимо}}",
-	"mobile-frontend-last-modified-with-user-minutes": "[$4 ТӀаьххьара {{GENDER:$1|нисдар}} дина {{PLURAL:$3|$3 минот}} хьалха] {{PLURAL:$5|декъашхочо [$6 $2]|0=цӀе хьулйина декъашхочо}}",
+	"mobile-frontend-last-modified-with-user-minutes": "[$4 ТӀаьххьара {{GENDER:$1|нисдар}} дина {{PLURAL:$3|$3 минот}} хьалха] {{PLURAL:$5|декъашхочо [$6 $2]|0=аноним декъашхочо}}",
 	"mobile-frontend-last-modified-with-user-months": "[$4 ТӀаьхьара нисдар дина {{PLURAL:$3|$3 бутт}} хьалха] {{PLURAL:$5|{{GENDER:$1|декъашхочо}} [$6 $2]|0=анонимо}}",
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 ТӀаьхьара {{GENDER:$1|нисдар}} дина {{PLURAL:$3|$3 секунд}} хьалха] {{PLURAL:$5|декъашхочо [$6 $2]|0=анонимо}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 ТӀаьхьара {{GENDER:$1|нисдар}} дина {{PLURAL:$3|$3 шо}} хьалха] {{PLURAL:$5|декъашхочо [$6 $2]|0=анонимо}}",
