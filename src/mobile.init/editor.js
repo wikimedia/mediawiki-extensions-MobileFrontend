@@ -7,7 +7,9 @@ var M = require( '../mobile.startup/moduleLoaderSingleton' ),
 	// .edit-link can be added to links anywhere to trigger the editor (e.g. MobileFrontend
 	// user page creation CTA, edit-full-page overflow menu item)
 	// Links in content are handled separately to allow reloading the content (T324686)
-	$editTab = $( '#ca-edit' ),
+	$editTab = $( '#ca-edit, #ca-editsource, #ca-viewsource, #ca-ve-edit, #ca-ve-create, #ca-createsource' ),
+	hasTwoEditIcons = $editTab.length > 1,
+	editorOverride = null,
 	EDITSECTION_SELECTOR = '.mw-editsection a, .edit-link',
 	user = mw.user,
 	CtaDrawer = require( '../mobile.startup/CtaDrawer' ),
@@ -37,6 +39,17 @@ function onEditLinkClick( elem, ev, router ) {
 	if ( mw.config.get( 'wgPageName' ) !== mw.util.getParamValue( 'title', elem.href ) ) {
 		return;
 	}
+	if ( hasTwoEditIcons ) {
+		if ( elem.id === 'ca-ve-edit' || elem.id === 'ca-ve-create' ) {
+			// "Edit" tab loads the visual editor
+			editorOverride = 'VisualEditor';
+		} else if ( elem.id === 'ca-editsource' || elem.id === 'ca-createsource' ) {
+			// "Edit source" tab loads the source editor
+			editorOverride = 'SourceEditor';
+		} else {
+			// Any other edit links (e.g. for sections) load the preferred editor
+		}
+	}
 	router.navigate( '#/editor/' + section );
 	// DO NOT USE stopPropagation or you'll break click tracking in WikimediaEvents
 	// You DO NOT NEED to
@@ -56,6 +69,11 @@ function onEditLinkClick( elem, ev, router ) {
  * @return {string} Either 'VisualEditor' or 'SourceEditor'
  */
 function getPreferredEditor() {
+	if ( editorOverride ) {
+		// Temporary override, set via the URL for this request
+		// or by clicking the chosen mode when both tabs are shown
+		return editorOverride;
+	}
 	const preferredEditor = mw.user.options.get( 'mobile-editor' ) || mw.storage.get( 'preferredEditor' );
 	if ( preferredEditor ) {
 		return preferredEditor;
@@ -93,7 +111,7 @@ function getPreferredEditor() {
  * @param {Router} router
  */
 function setupEditor( page, skin, currentPageHTMLParser, router ) {
-	var editorOverride,
+	var
 		overlayManager = OverlayManager.getSingleton(),
 		isNewPage = page.id === 0;
 
@@ -246,17 +264,9 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 
 			return page.isVESourceAvailable() || (
 				page.isVEVisualAvailable() &&
-				(
-					(
-						// If the user prefers visual mode or the user has no preference and
-						// the visual mode is the default editor for this wiki
-						preferredEditor === 'VisualEditor' ||
-						// We've loaded it via the URL for this request
-						editorOverride === 'VisualEditor'
-					) &&
-
-					editorOverride !== 'SourceEditor'
-				)
+				// If the user prefers visual mode or the user has no preference and
+				// the visual mode is the default editor for this wiki
+				preferredEditor === 'VisualEditor'
 			);
 		}
 
@@ -395,10 +405,13 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 			} );
 		} );
 
+		// Reset the temporary override for the next load
+		editorOverride = null;
+
 		return loadingOverlay;
 	} );
 
-	$( '#ca-edit a, a#ca-edit' ).prop( 'href', function ( i, href ) {
+	$( '#ca-edit a, a#ca-edit, #ca-editsource a, a#ca-editsource' ).prop( 'href', function ( i, href ) {
 		const editUrl = new URL( href, location.href );
 		// By default the editor opens section 0 (lead section), rather than the whole article.
 		// This might be changed in the future (T210659).
