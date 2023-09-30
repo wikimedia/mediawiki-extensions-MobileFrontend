@@ -109,7 +109,7 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 		$skin = $param['sk'];
 
 		// run the test
-		MobileFrontendHooks::onBeforePageDisplay( $out, $skin );
+		( new MobileFrontendHooks )->onBeforePageDisplay( $out, $skin );
 
 		// test, if alternate or canonical link is added, but not both
 		$links = $out->getLinkTags();
@@ -136,7 +136,7 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 		$skin = $param['sk'];
 
 		// run the test
-		MobileFrontendHooks::onBeforePageDisplay( $out, $skin );
+		( new MobileFrontendHooks )->onBeforePageDisplay( $out, $skin );
 		// test, if alternate or canonical link is added, but not both
 		$links = $out->getLinkTags();
 		$this->assertCount( $isAlternateCanonical, $links,
@@ -364,7 +364,7 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 
 		/** @var Skin $skin */
 		$skin = null;
-		MobileFrontendHooks::onRequestContextCreateSkin( $context, $skin );
+		( new MobileFrontendHooks )->onRequestContextCreateSkin( $context, $skin );
 
 		self::assertSame( $expectedSkin, $skin->getSkinName() );
 	}

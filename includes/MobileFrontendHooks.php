@@ -1,15 +1,49 @@
 <?php
 
+// phpcs:disable MediaWiki.NamingConventions.LowerCamelFunctionsName.FunctionName
+
+use MediaWiki\Api\Hook\APIQuerySiteInfoGeneralInfoHook;
 use MediaWiki\Auth\AuthenticationRequest;
 use MediaWiki\Auth\AuthManager;
+use MediaWiki\Cache\Hook\HTMLFileCache__useFileCacheHook;
+use MediaWiki\ChangeTags\Hook\ChangeTagsListActiveHook;
+use MediaWiki\ChangeTags\Hook\ListDefinedTagsHook;
 use MediaWiki\ChangeTags\Taggable;
+use MediaWiki\Diff\Hook\DifferenceEngineViewHeaderHook;
 use MediaWiki\Diff\Hook\TextSlotDiffRendererTablePrefixHook;
 use MediaWiki\Extension\AbuseFilter\Variables\VariableHolder;
 use MediaWiki\Extension\Gadgets\GadgetRepo;
+use MediaWiki\Hook\AfterBuildFeedLinksHook;
+use MediaWiki\Hook\BeforeInitializeHook;
+use MediaWiki\Hook\BeforePageDisplayHook;
+use MediaWiki\Hook\BeforePageRedirectHook;
+use MediaWiki\Hook\GetCacheVaryCookiesHook;
+use MediaWiki\Hook\LoginFormValidErrorMessagesHook;
+use MediaWiki\Hook\MakeGlobalVariablesScriptHook;
+use MediaWiki\Hook\ManualLogEntryBeforePublishHook;
+use MediaWiki\Hook\MediaWikiPerformActionHook;
+use MediaWiki\Hook\OutputPageBeforeHTMLHook;
+use MediaWiki\Hook\OutputPageBodyAttributesHook;
+use MediaWiki\Hook\OutputPageParserOutputHook;
+use MediaWiki\Hook\RecentChange_saveHook;
+use MediaWiki\Hook\RequestContextCreateSkinHook;
+use MediaWiki\Hook\SkinAddFooterLinksHook;
+use MediaWiki\Hook\SkinAfterBottomScriptsHook;
+use MediaWiki\Hook\TitleSquidURLsHook;
+use MediaWiki\Hook\UserLoginCompleteHook;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Page\Hook\BeforeDisplayNoArticleTextHook;
+use MediaWiki\Preferences\Hook\GetPreferencesHook;
+use MediaWiki\Request\WebRequest;
 use MediaWiki\ResourceLoader as RL;
+use MediaWiki\ResourceLoader\Hook\ResourceLoaderSiteModulePagesHook;
+use MediaWiki\ResourceLoader\Hook\ResourceLoaderSiteStylesModulePagesHook;
 use MediaWiki\ResourceLoader\ResourceLoader;
+use MediaWiki\SpecialPage\Hook\AuthChangeFormFieldsHook;
+use MediaWiki\SpecialPage\Hook\SpecialPage_initListHook;
+use MediaWiki\SpecialPage\Hook\SpecialPageBeforeExecuteHook;
 use MediaWiki\Title\Title;
+use MediaWiki\User\Hook\UserGetDefaultOptionsHook;
 use MobileFrontend\Api\ApiParseExtender;
 use MobileFrontend\ContentProviders\DefaultContentProvider;
 use MobileFrontend\Hooks\HookRunner;
@@ -20,15 +54,43 @@ use MobileFrontend\Transforms\MakeSectionsTransform;
 /**
  * Hook handlers for MobileFrontend extension
  *
- * Hook handler method names should be in the form of:
- *	on<HookName>()
- * For instance, the hook handler for the 'RequestContextCreateSkin' would be called:
- *	onRequestContextCreateSkin()
- *
  * If your hook changes the behaviour of the Minerva skin, you are in the wrong place.
  * Any changes relating to Minerva should go into Minerva.hooks.php
  */
-class MobileFrontendHooks implements TextSlotDiffRendererTablePrefixHook {
+class MobileFrontendHooks implements
+	TextSlotDiffRendererTablePrefixHook,
+	APIQuerySiteInfoGeneralInfoHook,
+	AuthChangeFormFieldsHook,
+	RequestContextCreateSkinHook,
+	BeforeInitializeHook,
+	MediaWikiPerformActionHook,
+	BeforeDisplayNoArticleTextHook,
+	OutputPageBeforeHTMLHook,
+	OutputPageBodyAttributesHook,
+	ResourceLoaderSiteStylesModulePagesHook,
+	ResourceLoaderSiteModulePagesHook,
+	SkinAfterBottomScriptsHook,
+	SkinAddFooterLinksHook,
+	BeforePageRedirectHook,
+	DifferenceEngineViewHeaderHook,
+	GetCacheVaryCookiesHook,
+	SpecialPage_initListHook,
+	ListDefinedTagsHook,
+	ChangeTagsListActiveHook,
+	RecentChange_saveHook,
+	SpecialPageBeforeExecuteHook,
+	UserLoginCompleteHook,
+	BeforePageDisplayHook,
+	GetPreferencesHook,
+	OutputPageParserOutputHook,
+	HTMLFileCache__useFileCacheHook,
+	LoginFormValidErrorMessagesHook,
+	AfterBuildFeedLinksHook,
+	MakeGlobalVariablesScriptHook,
+	TitleSquidURLsHook,
+	UserGetDefaultOptionsHook,
+	ManualLogEntryBeforePublishHook
+{
 	private const MOBILE_PREFERENCES_SECTION = 'rendering/mobile';
 	public const MOBILE_PREFERENCES_SPECIAL_PAGES = 'mobile-specialpages';
 	public const MOBILE_PREFERENCES_EDITOR = 'mobile-editor';
@@ -84,7 +146,7 @@ class MobileFrontendHooks implements TextSlotDiffRendererTablePrefixHook {
 	 *                                key on to override the skin that will be used for the context.
 	 * @return bool
 	 */
-	public static function onRequestContextCreateSkin( $context, &$skin ) {
+	public function onRequestContextCreateSkin( $context, &$skin ) {
 		$services = MediaWikiServices::getInstance();
 
 		/** @var MobileContext $mobileContext */
@@ -138,11 +200,14 @@ class MobileFrontendHooks implements TextSlotDiffRendererTablePrefixHook {
 	/**
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/BeforeInitialize
 	 *
-	 * @param mixed $title
-	 * @param mixed $unused
+	 * @param Title $title
+	 * @param null $unused
 	 * @param OutputPage $out
+	 * @param User $user
+	 * @param WebRequest $request
+	 * @param MediaWiki $mediaWiki
 	 */
-	public static function onBeforeInitialize( $title, $unused, OutputPage $out ) {
+	public function onBeforeInitialize( $title, $unused, $out, $user, $request, $mediaWiki ) {
 		// Set the mobile target.
 		// Note that it is NOT SAFE to look at Title, Skin or User from this hook (the title may
 		// be invalid here, and is not yet rewritten, normalised, or replaced by other hooks).
@@ -161,10 +226,10 @@ class MobileFrontendHooks implements TextSlotDiffRendererTablePrefixHook {
 	 * @param Article $article
 	 * @param Title $title Page title
 	 * @param User $user User performing action
-	 * @param RequestContext $request
+	 * @param WebRequest $request
 	 * @param MediaWiki $wiki
 	 */
-	public static function onMediaWikiPerformAction( $output, $article, $title,
+	public function onMediaWikiPerformAction( $output, $article, $title,
 		$user, $request, $wiki
 	) {
 		self::enableMediaWikiUI();
@@ -179,7 +244,7 @@ class MobileFrontendHooks implements TextSlotDiffRendererTablePrefixHook {
 	 *   keys should be strings and will be used for generating the ID of the footer item
 	 *   and value should be an HTML string.
 	 */
-	public static function onSkinAddFooterLinks( Skin $skin, string $key, array &$footerLinks ) {
+	public function onSkinAddFooterLinks( Skin $skin, string $key, array &$footerLinks ) {
 		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
 
 		if ( $key === 'places' ) {
@@ -207,7 +272,7 @@ class MobileFrontendHooks implements TextSlotDiffRendererTablePrefixHook {
 	 * @param string &$html bottomScripts text. Append to $text to add additional
 	 *                      text/scripts after the stock bottom scripts.
 	 */
-	public static function onSkinAfterBottomScripts( Skin $skin, &$html ) {
+	public function onSkinAfterBottomScripts( $skin, &$html ) {
 		$services = MediaWikiServices::getInstance();
 		/** @var MobileContext $context */
 		$context = $services->getService( 'MobileFrontend.Context' );
@@ -231,7 +296,7 @@ class MobileFrontendHooks implements TextSlotDiffRendererTablePrefixHook {
 	 * @param Article $article The (empty) article
 	 * @return bool This hook can abort
 	 */
-	public static function onBeforeDisplayNoArticleText( $article ) {
+	public function onBeforeDisplayNoArticleText( $article ) {
 		/** @var MobileContext $context */
 		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
 		$displayMobileView = $context->shouldDisplayMobileView();
@@ -265,7 +330,7 @@ class MobileFrontendHooks implements TextSlotDiffRendererTablePrefixHook {
 	 * @param OutputPage $out the OutputPage object to which wikitext is added
 	 * @param string &$text the HTML to be wrapped inside the #mw-content-text element
 	 */
-	public static function onOutputPageBeforeHTML( $out, &$text ) {
+	public function onOutputPageBeforeHTML( $out, &$text ) {
 		// This hook can be executed more than once per page view if the page content is composed from
 		// multiple sources! Anything that doesn't depend on $text should use onBeforePageDisplay.
 
@@ -329,7 +394,7 @@ class MobileFrontendHooks implements TextSlotDiffRendererTablePrefixHook {
 	 * @param Skin $skin
 	 * @param string[] &$bodyAttrs
 	 */
-	public static function onOutputPageBodyAttributes( OutputPage $out, Skin $skin, &$bodyAttrs ) {
+	public function onOutputPageBodyAttributes( $out, $skin, &$bodyAttrs ): void {
 		$userMode = MediaWikiServices::getInstance()->getService( 'MobileFrontend.AMC.UserMode' );
 		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
 		$isMobile = $context->shouldDisplayMobileView();
@@ -355,7 +420,7 @@ class MobileFrontendHooks implements TextSlotDiffRendererTablePrefixHook {
 	 * @param string &$redirect URL string, modifiable
 	 * @param string &$code HTTP code (eg '301' or '302'), modifiable
 	 */
-	public static function onBeforePageRedirect( $out, &$redirect, &$code ) {
+	public function onBeforePageRedirect( $out, &$redirect, &$code ) {
 		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
 		$shouldDisplayMobileView = $context->shouldDisplayMobileView();
 		if ( !$shouldDisplayMobileView ) {
@@ -377,7 +442,7 @@ class MobileFrontendHooks implements TextSlotDiffRendererTablePrefixHook {
 	 *
 	 * @param DifferenceEngine $diff DifferenceEngine object that's calling
 	 */
-	public static function onDifferenceEngineViewHeader( $diff ) {
+	public function onDifferenceEngineViewHeader( $diff ) {
 		$services = MediaWikiServices::getInstance();
 		$context = $services->getService( 'MobileFrontend.Context' );
 		$featureManager = $services->getService( 'MobileFrontend.FeaturesManager' );
@@ -432,7 +497,7 @@ class MobileFrontendHooks implements TextSlotDiffRendererTablePrefixHook {
 	 * @param string $skin
 	 * @param array &$pages to sort modules from.
 	 */
-	public static function onResourceLoaderSiteStylesModulePages( $skin, &$pages ) {
+	public function onResourceLoaderSiteStylesModulePages( $skin, array &$pages ): void {
 		$ctx = MobileContext::singleton();
 		$ucaseSkin = ucfirst( $skin );
 		$services = MediaWikiServices::getInstance();
@@ -459,7 +524,7 @@ class MobileFrontendHooks implements TextSlotDiffRendererTablePrefixHook {
 	 * @param string $skin
 	 * @param array &$pages to sort modules from.
 	 */
-	public static function onResourceLoaderSiteModulePages( $skin, &$pages ) {
+	public function onResourceLoaderSiteModulePages( $skin, array &$pages ): void {
 		$ctx = MobileContext::singleton();
 		$services = MediaWikiServices::getInstance();
 		$config = $services->getService( 'MobileFrontend.Config' );
@@ -481,7 +546,7 @@ class MobileFrontendHooks implements TextSlotDiffRendererTablePrefixHook {
 	 * @param array &$cookies array of cookies name, add a value to it
 	 *                        if you want to add a cookie that have to vary cache options
 	 */
-	public static function onGetCacheVaryCookies( $out, &$cookies ) {
+	public function onGetCacheVaryCookies( $out, &$cookies ) {
 		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
 		$mobileUrlTemplate = $context->getMobileUrlTemplate();
 
@@ -610,7 +675,7 @@ class MobileFrontendHooks implements TextSlotDiffRendererTablePrefixHook {
 	 *
 	 * @param array &$list list of special page classes
 	 */
-	public static function onSpecialPageInitList( &$list ) {
+	public function onSpecialPage_initList( &$list ) {
 		$services = MediaWikiServices::getInstance();
 		/** @var MobileContext $context */
 		$context = $services->getService( 'MobileFrontend.Context' );
@@ -634,13 +699,29 @@ class MobileFrontendHooks implements TextSlotDiffRendererTablePrefixHook {
 	}
 
 	/**
-	 * ListDefinedTags and ChangeTagsListActive hook handler
+	 * ListDefinedTags hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ListDefinedTags
+	 *
+	 * @param array &$tags The list of tags. Add your extension's tags to this array.
+	 */
+	public function onListDefinedTags( &$tags ) {
+		$this->addDefinedTags( $tags );
+	}
+
+	/**
+	 * ChangeTagsListActive hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ChangeTagsListActive
 	 *
 	 * @param array &$tags The list of tags. Add your extension's tags to this array.
 	 */
-	public static function onListDefinedTags( &$tags ) {
+	public function onChangeTagsListActive( &$tags ) {
+		$this->addDefinedTags( $tags );
+	}
+
+	/**
+	 * @param array &$tags
+	 */
+	public function addDefinedTags( &$tags ) {
 		$tags[] = 'mobile edit';
 		$tags[] = 'mobile web edit';
 	}
@@ -649,9 +730,23 @@ class MobileFrontendHooks implements TextSlotDiffRendererTablePrefixHook {
 	 * RecentChange_save hook handler that tags mobile changes
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/RecentChange_save
 	 *
+	 * @param RecentChange $recentChange
+	 */
+	public function onRecentChange_save( $recentChange ) {
+		self::onTaggableObjectCreation( $recentChange );
+	}
+
+	/**
 	 * ManualLogEntryBeforePublish hook handler that tags actions logged when user uses mobile mode
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ManualLogEntryBeforePublish
 	 *
+	 * @param ManualLogEntry $logEntry
+	 */
+	public function onManualLogEntryBeforePublish( $logEntry ): void {
+		self::onTaggableObjectCreation( $logEntry );
+	}
+
+	/**
 	 * @param Taggable $taggable Object to tag
 	 */
 	public static function onTaggableObjectCreation( Taggable $taggable ) {
@@ -709,7 +804,7 @@ class MobileFrontendHooks implements TextSlotDiffRendererTablePrefixHook {
 	 * @param SpecialPage $special
 	 * @param string $subpage subpage name
 	 */
-	public static function onSpecialPageBeforeExecute( SpecialPage $special, $subpage ) {
+	public function onSpecialPageBeforeExecute( $special, $subpage ) {
 		$services = MediaWikiServices::getInstance();
 		/** @var MobileContext $context */
 		$context = $services->getService( 'MobileFrontend.Context' );
@@ -741,10 +836,11 @@ class MobileFrontendHooks implements TextSlotDiffRendererTablePrefixHook {
 	 * Used here to handle watchlist actions made by anons to be handled after
 	 * login or account creation.
 	 *
-	 * @param User &$currentUser the user object that was created on login
+	 * @param User $currentUser the user object that was created on login
 	 * @param string &$injected_html From 1.13, any HTML to inject after the login success message.
+	 * @param bool $direct
 	 */
-	public static function onUserLoginComplete( &$currentUser, &$injected_html ) {
+	public function onUserLoginComplete( $currentUser, &$injected_html, $direct ) {
 		$services = MediaWikiServices::getInstance();
 		$context = $services->getService( 'MobileFrontend.Context' );
 		if ( !$context->shouldDisplayMobileView() ) {
@@ -771,10 +867,10 @@ class MobileFrontendHooks implements TextSlotDiffRendererTablePrefixHook {
 	 * BeforePageDisplay hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/BeforePageDisplay
 	 *
-	 * @param OutputPage &$out
-	 * @param Skin &$skin Skin object that will be used to generate the page, added in 1.13.
+	 * @param OutputPage $out
+	 * @param Skin $skin Skin object that will be used to generate the page, added in 1.13.
 	 */
-	public static function onBeforePageDisplay( OutputPage &$out, Skin &$skin ) {
+	public function onBeforePageDisplay( $out, $skin ): void {
 		$context = MobileContext::singleton();
 		$services = MediaWikiServices::getInstance();
 		$config = $services->getService( 'MobileFrontend.Config' );
@@ -879,7 +975,7 @@ class MobileFrontendHooks implements TextSlotDiffRendererTablePrefixHook {
 	 *
 	 * @param array &$tags Added feed links
 	 */
-	public static function onAfterBuildFeedLinks( array &$tags ) {
+	public function onAfterBuildFeedLinks( &$tags ) {
 		$services = MediaWikiServices::getInstance();
 		/** @var MobileContext $context */
 		$context = $services->getService( 'MobileFrontend.Context' );
@@ -894,7 +990,7 @@ class MobileFrontendHooks implements TextSlotDiffRendererTablePrefixHook {
 	 *
 	 * @param array &$defaultUserOptions Reference to default options array
 	 */
-	public static function onUserGetDefaultOptions( &$defaultUserOptions ) {
+	public function onUserGetDefaultOptions( &$defaultUserOptions ) {
 		$config = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Config' );
 		if ( $config->get( 'MFEnableMobilePreferences' ) ) {
 			$defaultUserOptions += [
@@ -910,7 +1006,7 @@ class MobileFrontendHooks implements TextSlotDiffRendererTablePrefixHook {
 	 * @param User $user User whose preferences are being modified
 	 * @param array &$preferences Preferences description array, to be fed to an HTMLForm object
 	 */
-	public static function onGetPreferences( $user, &$preferences ) {
+	public function onGetPreferences( $user, &$preferences ) {
 		$config = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Config' );
 		$definition = [
 			'type' => 'api',
@@ -999,7 +1095,7 @@ class MobileFrontendHooks implements TextSlotDiffRendererTablePrefixHook {
 	 * @param OutputPage $outputPage the OutputPage object to which wikitext is added
 	 * @param ParserOutput $po
 	 */
-	public static function onOutputPageParserOutput( $outputPage, ParserOutput $po ) {
+	public function onOutputPageParserOutput( $outputPage, $po ): void {
 		$services = MediaWikiServices::getInstance();
 		/** @var MobileContext $context */
 		$context = $services->getService( 'MobileFrontend.Context' );
@@ -1028,9 +1124,10 @@ class MobileFrontendHooks implements TextSlotDiffRendererTablePrefixHook {
 	 * Disables file caching for mobile pageviews
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/HTMLFileCache::useFileCache
 	 *
+	 * @param IContextSource $context
 	 * @return bool
 	 */
-	public static function onHTMLFileCacheUseFileCache() {
+	public function onHTMLFileCache__useFileCache( $context ) {
 		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
 		return !$context->shouldDisplayMobileView();
 	}
@@ -1040,7 +1137,7 @@ class MobileFrontendHooks implements TextSlotDiffRendererTablePrefixHook {
 	 *
 	 * @param array &$messages Array of already added messages
 	 */
-	public static function onLoginFormValidErrorMessages( &$messages ) {
+	public function onLoginFormValidErrorMessages( array &$messages ) {
 		$messages = array_merge( $messages,
 			[
 				// watchstart sign up CTA
@@ -1066,7 +1163,7 @@ class MobileFrontendHooks implements TextSlotDiffRendererTablePrefixHook {
 	 * @param array &$vars Variables to be added into the output
 	 * @param OutputPage $out OutputPage instance calling the hook
 	 */
-	public static function onMakeGlobalVariablesScript( array &$vars, OutputPage $out ) {
+	public function onMakeGlobalVariablesScript( &$vars, $out ): void {
 		$services = MediaWikiServices::getInstance();
 		$userMode = $services->getService( 'MobileFrontend.AMC.UserMode' );
 		$featureManager = $services->getService( 'MobileFrontend.FeaturesManager' );
@@ -1134,7 +1231,7 @@ class MobileFrontendHooks implements TextSlotDiffRendererTablePrefixHook {
 	 * @param Title $title the article title
 	 * @param array &$urls the set of URLs to purge
 	 */
-	public static function onTitleSquidURLs( Title $title, array &$urls ) {
+	public function onTitleSquidURLs( $title, &$urls ) {
 		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
 		foreach ( $urls as $url ) {
 			$newUrl = $context->getMobileUrl( $url );
@@ -1152,8 +1249,8 @@ class MobileFrontendHooks implements TextSlotDiffRendererTablePrefixHook {
 	 * @param array &$formDescriptor A form descriptor suitable for the HTMLForm constructor
 	 * @param string $action One of the AuthManager::ACTION_* constants
 	 */
-	public static function onAuthChangeFormFields(
-		array $requests, array $fieldInfo, array &$formDescriptor, $action
+	public function onAuthChangeFormFields(
+		$requests, $fieldInfo, &$formDescriptor, $action
 	) {
 		$services = MediaWikiServices::getInstance();
 		/** @var MobileContext $context */
@@ -1184,7 +1281,7 @@ class MobileFrontendHooks implements TextSlotDiffRendererTablePrefixHook {
 	 * @param ApiQuerySiteinfo $module
 	 * @param array &$result Api result array
 	 */
-	public static function onAPIQuerySiteInfoGeneralInfo( ApiQuerySiteinfo $module, array &$result ) {
+	public function onAPIQuerySiteInfoGeneralInfo( $module, &$result ) {
 		global $wgCanonicalServer;
 		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
 		$result['mobileserver'] = $context->getMobileUrl( $wgCanonicalServer );

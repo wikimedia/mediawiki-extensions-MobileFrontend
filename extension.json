@@ -521,69 +521,78 @@
 		"remoteExtPath": "MobileFrontend"
 	},
 	"Hooks": {
-		"APIGetAllowedParams": "MobileFrontend\\Api\\ApiParseExtender::onAPIGetAllowedParams",
-		"APIQuerySiteInfoGeneralInfo": "MobileFrontendHooks::onAPIQuerySiteInfoGeneralInfo",
-		"AuthChangeFormFields": "MobileFrontendHooks::onAuthChangeFormFields",
-		"RequestContextCreateSkin": "MobileFrontendHooks::onRequestContextCreateSkin",
-		"BeforeInitialize": "MobileFrontendHooks::onBeforeInitialize",
-		"MediaWikiPerformAction": "MobileFrontendHooks::onMediaWikiPerformAction",
-		"BeforeDisplayNoArticleText": "MobileFrontendHooks::onBeforeDisplayNoArticleText",
-		"OutputPageBeforeHTML": "MobileFrontendHooks::onOutputPageBeforeHTML",
-		"OutputPageBodyAttributes": "MobileFrontendHooks::onOutputPageBodyAttributes",
-		"ResourceLoaderSiteStylesModulePages": "MobileFrontendHooks::onResourceLoaderSiteStylesModulePages",
-		"ResourceLoaderSiteModulePages": "MobileFrontendHooks::onResourceLoaderSiteModulePages",
-		"SkinAfterBottomScripts": "MobileFrontendHooks::onSkinAfterBottomScripts",
-		"SkinAddFooterLinks": "MobileFrontendHooks::onSkinAddFooterLinks",
-		"BeforePageRedirect": "MobileFrontendHooks::onBeforePageRedirect",
+		"APIGetAllowedParams": "ApiParse",
+		"APIQuerySiteInfoGeneralInfo": "MobileFrontendHooks",
+		"AuthChangeFormFields": "MobileFrontendHooks",
+		"RequestContextCreateSkin": "MobileFrontendHooks",
+		"BeforeInitialize": "MobileFrontendHooks",
+		"MediaWikiPerformAction": "MobileFrontendHooks",
+		"BeforeDisplayNoArticleText": "MobileFrontendHooks",
+		"OutputPageBeforeHTML": "MobileFrontendHooks",
+		"OutputPageBodyAttributes": "MobileFrontendHooks",
+		"ResourceLoaderSiteStylesModulePages": "MobileFrontendHooks",
+		"ResourceLoaderSiteModulePages": "MobileFrontendHooks",
+		"SkinAfterBottomScripts": "MobileFrontendHooks",
+		"SkinAddFooterLinks": "MobileFrontendHooks",
+		"BeforePageRedirect": "MobileFrontendHooks",
 		"TextSlotDiffRendererTablePrefix": "MobileFrontendHooks",
-		"DifferenceEngineViewHeader": "MobileFrontendHooks::onDifferenceEngineViewHeader",
-		"GetCacheVaryCookies": "MobileFrontendHooks::onGetCacheVaryCookies",
-		"SpecialPage_initList": "MobileFrontendHooks::onSpecialPageInitList",
+		"DifferenceEngineViewHeader": "MobileFrontendHooks",
+		"GetCacheVaryCookies": "MobileFrontendHooks",
+		"SpecialPage_initList": "MobileFrontendHooks",
 		"ListDefinedTags": [
-			"MobileFrontendHooks::onListDefinedTags",
-			"MobileFrontend\\Amc\\Hooks::onListDefinedTags"
+			"MobileFrontendHooks",
+			"Amc"
 		],
 		"ChangeTagsListActive": [
-			"MobileFrontendHooks::onListDefinedTags",
-			"MobileFrontend\\Amc\\Hooks::onListDefinedTags"
+			"MobileFrontendHooks",
+			"Amc"
 		],
 		"RecentChange_save": [
-			"MobileFrontendHooks::onTaggableObjectCreation",
-			"MobileFrontend\\Amc\\Hooks::onRecentChangeSave"
+			"MobileFrontendHooks",
+			"Amc"
 		],
 		"AbuseFilter-generateUserVars": "MobileFrontendHooks::onAbuseFilterGenerateUserVars",
 		"AbuseFilter-builder": "MobileFrontendHooks::onAbuseFilterBuilder",
-		"SpecialPageBeforeExecute": "MobileFrontendHooks::onSpecialPageBeforeExecute",
-		"UserLoginComplete": "MobileFrontendHooks::onUserLoginComplete",
-		"BeforePageDisplay": "MobileFrontendHooks::onBeforePageDisplay",
+		"SpecialPageBeforeExecute": "MobileFrontendHooks",
+		"UserLoginComplete": "MobileFrontendHooks",
+		"BeforePageDisplay": "MobileFrontendHooks",
 		"GetPreferences": [
-			"MobileFrontendHooks::onGetPreferences",
-			"MobileFrontend\\Amc\\Hooks::onGetPreferences"
+			"MobileFrontendHooks",
+			"Amc"
 		],
 		"CentralAuthLoginRedirectData": "MobileFrontendHooks::onCentralAuthLoginRedirectData",
 		"CentralAuthSilentLoginRedirect": "MobileFrontendHooks::onCentralAuthSilentLoginRedirect",
-		"CustomEditor": "MobileFrontendEditorHooks::onCustomEditor",
-		"OutputPageParserOutput": "MobileFrontendHooks::onOutputPageParserOutput",
-		"HTMLFileCache::useFileCache": "MobileFrontendHooks::onHTMLFileCacheUseFileCache",
-		"LoginFormValidErrorMessages": "MobileFrontendHooks::onLoginFormValidErrorMessages",
-		"AfterBuildFeedLinks": "MobileFrontendHooks::onAfterBuildFeedLinks",
+		"CustomEditor": "MobileFrontendEditorHooks",
+		"OutputPageParserOutput": "MobileFrontendHooks",
+		"HTMLFileCache::useFileCache": "MobileFrontendHooks",
+		"LoginFormValidErrorMessages": "MobileFrontendHooks",
+		"AfterBuildFeedLinks": "MobileFrontendHooks",
 		"MakeGlobalVariablesScript": [
-			"MobileFrontendHooks::onMakeGlobalVariablesScript",
-			"MobileFrontendEditorHooks::onMakeGlobalVariablesScript"
+			"MobileFrontendHooks",
+			"MobileFrontendEditorHooks"
 		],
-		"TitleSquidURLs": "MobileFrontendHooks::onTitleSquidURLs",
+		"TitleSquidURLs": "MobileFrontendHooks",
 		"UserGetDefaultOptions": [
-			"MobileFrontendHooks::onUserGetDefaultOptions",
-			"MobileFrontend\\Amc\\Hooks::onUserGetDefaultOptions"
+			"MobileFrontendHooks",
+			"Amc"
 		],
 		"ManualLogEntryBeforePublish": [
-			"MobileFrontend\\Amc\\Hooks::onManualLogEntryBeforePublish",
-			"MobileFrontendHooks::onTaggableObjectCreation"
+			"Amc",
+			"MobileFrontendHooks"
 		]
 	},
 	"HookHandlers": {
 		"MobileFrontendHooks": {
 			"class": "MobileFrontendHooks"
+		},
+		"MobileFrontendEditorHooks": {
+			"class": "MobileFrontendEditorHooks"
+		},
+		"Amc": {
+			"class": "MobileFrontend\\Amc\\Hooks"
+		},
+		"ApiParse": {
+			"class": "MobileFrontend\\Api\\ApiParseExtender"
 		}
 	},
 	"config": {

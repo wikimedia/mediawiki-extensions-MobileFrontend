@@ -3,6 +3,7 @@
 namespace MobileFrontend\Api;
 
 use ApiBase;
+use MediaWiki\Api\Hook\APIGetAllowedParamsHook;
 use Wikimedia\ParamValidator\ParamValidator;
 
 /**
@@ -12,7 +13,7 @@ use Wikimedia\ParamValidator\ParamValidator;
  * ensure ApiParse is in skin mode), and will cause MobileFrontend's
  * onOutputPageBeforeHTML to apply mobile-specific page transformations.
  */
-class ApiParseExtender {
+class ApiParseExtender implements APIGetAllowedParamsHook {
 
 	/**
 	 * Check if an API action can have the mobileformat param
@@ -33,9 +34,10 @@ class ApiParseExtender {
 	 * APIGetAllowedParams hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/APIGetAllowedParams
 	 * @param ApiBase $module
-	 * @param array|bool &$params Array of parameters
+	 * @param array &$params Array of parameters
+	 * @param int $flags
 	 */
-	public static function onAPIGetAllowedParams( ApiBase $module, &$params ) {
+	public function onAPIGetAllowedParams( $module, &$params, $flags ) {
 		$name = $module->getModuleName();
 		// $name is supposed to always be a string, but in some tests it returns null :/
 		if ( $name && self::isParseAction( $name ) ) {

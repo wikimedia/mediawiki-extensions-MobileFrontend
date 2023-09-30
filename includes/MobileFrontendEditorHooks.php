@@ -1,9 +1,14 @@
 <?php
 
+use MediaWiki\Hook\CustomEditorHook;
+use MediaWiki\Hook\MakeGlobalVariablesScriptHook;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\ResourceLoader\Context;
 
-class MobileFrontendEditorHooks {
+class MobileFrontendEditorHooks implements
+	CustomEditorHook,
+	MakeGlobalVariablesScriptHook
+{
 
 	/**
 	 * Return messages in content language, for use in a ResourceLoader module.
@@ -54,7 +59,7 @@ class MobileFrontendEditorHooks {
 	 * @param array &$vars Variables to be added into the output
 	 * @param OutputPage $out OutputPage instance calling the hook
 	 */
-	public static function onMakeGlobalVariablesScript( array &$vars, OutputPage $out ) {
+	public function onMakeGlobalVariablesScript( &$vars, $out ): void {
 		$mobileContext = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
 		$config = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Config' );
 
@@ -73,7 +78,7 @@ class MobileFrontendEditorHooks {
 	 * @param User $user The user-specific settings.
 	 * @return bool Whether to show the wikitext editor or not.
 	 */
-	public static function onCustomEditor( Article $article, User $user ) {
+	public function onCustomEditor( $article, $user ) {
 		$req = $article->getContext()->getRequest();
 		$title = $article->getTitle();
 		if (

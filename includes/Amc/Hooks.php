@@ -1,9 +1,17 @@
 <?php
 
+// phpcs:disable MediaWiki.NamingConventions.LowerCamelFunctionsName.FunctionName
+
 namespace MobileFrontend\Amc;
 
+use MediaWiki\ChangeTags\Hook\ChangeTagsListActiveHook;
+use MediaWiki\ChangeTags\Hook\ListDefinedTagsHook;
 use MediaWiki\ChangeTags\Taggable;
+use MediaWiki\Hook\ManualLogEntryBeforePublishHook;
+use MediaWiki\Hook\RecentChange_saveHook;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Preferences\Hook\GetPreferencesHook;
+use MediaWiki\User\Hook\UserGetDefaultOptionsHook;
 use MediaWiki\User\UserIdentity;
 use User;
 
@@ -12,7 +20,14 @@ use User;
  *
  * @package MobileFrontend\Amc
  */
-final class Hooks {
+final class Hooks implements
+	ListDefinedTagsHook,
+	ChangeTagsListActiveHook,
+	RecentChange_saveHook,
+	GetPreferencesHook,
+	UserGetDefaultOptionsHook,
+	ManualLogEntryBeforePublishHook
+{
 
 	/**
 	 * Helper method to tag objects like Logs or Recent changes
@@ -33,7 +48,7 @@ final class Hooks {
 	 *
 	 * @param array &$defaultUserOptions Reference to default options array
 	 */
-	public static function onUserGetDefaultOptions( &$defaultUserOptions ) {
+	public function onUserGetDefaultOptions( &$defaultUserOptions ) {
 		$defaultUserOptions[UserMode::USER_OPTION_MODE_AMC] = UserMode::OPTION_DISABLED;
 	}
 
@@ -42,7 +57,7 @@ final class Hooks {
 	 * @param User $user
 	 * @param array &$preferences
 	 */
-	public static function onGetPreferences( User $user, array &$preferences ) {
+	public function onGetPreferences( $user, &$preferences ) {
 		$preferences[UserMode::USER_OPTION_MODE_AMC] = [
 			'type' => 'api',
 			'default' => UserMode::OPTION_DISABLED
@@ -50,16 +65,23 @@ final class Hooks {
 	}
 
 	/**
-	 * ListDefinedTags and ChangeTagsListActive hook handler
+	 * ListDefinedTags hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ListDefinedTags
+	 *
+	 * @param array &$tags The list of tags. Add your extension's tags to this array.
+	 */
+	public function onListDefinedTags( &$tags ) {
+		$tags[] = Manager::AMC_EDIT_TAG;
+	}
+
+	/**
+	 * ChangeTagsListActive hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ChangeTagsListActive
 	 *
 	 * @param array &$tags The list of tags. Add your extension's tags to this array.
-	 * @return bool
 	 */
-	public static function onListDefinedTags( &$tags ) {
+	public function onChangeTagsListActive( &$tags ) {
 		$tags[] = Manager::AMC_EDIT_TAG;
-		return true;
 	}
 
 	/**
@@ -68,7 +90,7 @@ final class Hooks {
 	 *
 	 * @param \ManualLogEntry $logEntry
 	 */
-	public static function onManualLogEntryBeforePublish( \ManualLogEntry $logEntry ) {
+	public function onManualLogEntryBeforePublish( $logEntry ): void {
 		$performer = MediaWikiServices::getInstance()->getUserFactory()->
 			newFromUserIdentity( $logEntry->getPerformerIdentity() );
 		self::injectTagsIfPerformerUsesAMC( $logEntry, $performer );
@@ -80,7 +102,7 @@ final class Hooks {
 	 *
 	 * @param \RecentChange $rc
 	 */
-	public static function onRecentChangeSave( \RecentChange $rc ) {
+	public function onRecentChange_save( $rc ) {
 		// To be safe, we should use the User objected provided via RecentChange, not the
 		// currently logged-in user.
 		self::injectTagsIfPerformerUsesAMC( $rc, $rc->getPerformerIdentity() );
