@@ -100,7 +100,7 @@
 	"mobile-frontend-editor-placeholder": "此章節尚是空的。成為第一個編輯它的人吧！",
 	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|您}}正在於{{SITENAME}}{{GENDER:$1|建立}}新頁面中！",
 	"mobile-frontend-editor-previewing-page": "<span><strong>正在預覽</strong> $1</span>",
-	"mobile-frontend-editor-publish": "發⁠佈",
+	"mobile-frontend-editor-publish": "發布",
 	"mobile-frontend-editor-save": "儲存",
 	"mobile-frontend-editor-summary-placeholder": "譬如：修正筆誤、增加內容",
 	"mobile-frontend-editor-summary-request": "您是如何改善此頁面的？",
