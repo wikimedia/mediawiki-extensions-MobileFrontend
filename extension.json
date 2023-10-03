@@ -157,6 +157,8 @@
 				"mobile-frontend-editor-disabled",
 				"mobile-frontend-editor-disabled-anon",
 				"mobile-frontend-editor-uploadenable",
+				"mobile-frontend-editor-loadingtooslow",
+				"mobile-frontend-editor-loadbasiceditor",
 				"apierror-readonly",
 				"mobile-frontend-console-recruit"
 			],

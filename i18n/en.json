@@ -111,6 +111,8 @@
 	"mobile-frontend-editor-viewing-source-page": "<strong>Viewing source of</strong><span> $1</span>",
 	"mobile-frontend-editor-wait": "Publishing edit, please wait.",
 	"mobile-frontend-editor-loading": "Loading editor…",
+	"mobile-frontend-editor-loadingtooslow": "Slow connection?",
+	"mobile-frontend-editor-loadbasiceditor": "Switch to source editor",
 	"mobile-frontend-editor-toload": "The editor will now load. If you still see this message after a few seconds, please [$1 reload the page].",
 	"mobile-frontend-expand-sections-description": "Always expand sections of content pages by default.",
 	"mobile-frontend-expand-sections-status": "Expand all sections",

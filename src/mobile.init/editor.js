@@ -130,6 +130,7 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 				preloadparams: mw.util.getArrayParam( 'preloadparams', url.searchParams ),
 				editintro: url.searchParams.get( 'editintro' )
 			},
+			visualAbortPromise = $.Deferred(),
 			animationDelayDeferred, abortableDataPromise, loadingOverlay, overlayPromise,
 			initMechanism = mw.util.getParamValue( 'redlink' ) ? 'new' : 'click';
 
@@ -197,6 +198,17 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 			} );
 
 			$( document.body ).removeClass( 've-loading' );
+		}
+
+		function loadBasicEditor() {
+			// Note that this option was used when logging a wikitext init later
+			initMechanism = 'tooslow';
+
+			// This restarts the loading (whether it was aborted when loading the code or the data)
+			visualAbortPromise.reject();
+			if ( abortableDataPromise && abortableDataPromise.abort ) {
+				abortableDataPromise.abort();
+			}
 		}
 
 		/**
@@ -302,19 +314,29 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 				return abortableDataPromise;
 			} );
 
-			return mw.loader.using( 'ext.visualEditor.targetLoader' )
+			var visualLoadingPromise = mw.loader.using( 'ext.visualEditor.targetLoader' )
 				.then( function () {
-					mw.libs.ve.targetLoader.addPlugin( 'ext.visualEditor.mobileArticleTarget' );
-					mw.libs.ve.targetLoader.addPlugin( 'mobile.editor.overlay' );
-					if ( mw.config.get( 'wgMFEnableVEWikitextEditor' ) ) {
-						// Target loader only loads wikitext editor if the desktop
-						// preference is set.
-						// TODO: Have a cleaner API for this instead of duplicating
-						// the module name here.
-						mw.libs.ve.targetLoader.addPlugin( 'ext.visualEditor.mwwikitext' );
-					}
-					return mw.libs.ve.targetLoader.loadModules( editorOptions.mode );
-				} )
+					// Load 'mobile.editor.overlay' separately, so that if we fall back to basic
+					// editor, we can display it without waiting for the visual code
+					return mw.loader.using( 'mobile.editor.overlay' ).then( function () {
+						mw.libs.ve.targetLoader.addPlugin( 'ext.visualEditor.mobileArticleTarget' );
+						if ( mw.config.get( 'wgMFEnableVEWikitextEditor' ) ) {
+							// Target loader only loads wikitext editor if the desktop
+							// preference is set.
+							// TODO: Have a cleaner API for this instead of duplicating
+							// the module name here.
+							mw.libs.ve.targetLoader.addPlugin( 'ext.visualEditor.mwwikitext' );
+						}
+						return mw.libs.ve.targetLoader.loadModules( editorOptions.mode );
+					} );
+				} );
+
+			// Continue when loading is completed or aborted
+			var visualPromise = $.Deferred();
+			visualLoadingPromise.then( visualPromise.resolve, visualPromise.reject );
+			visualAbortPromise.then( visualPromise.reject, visualPromise.reject );
+
+			return visualPromise
 				.then( function () {
 					var VisualEditorOverlay = M.require( 'mobile.editor.overlay/VisualEditorOverlay' ),
 						SourceEditorOverlay = M.require( 'mobile.editor.overlay/SourceEditorOverlay' );
@@ -330,7 +352,8 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 		// showLoading() has to run after the overlay has opened, which disables page scrolling.
 		// clearLoading() has to run after the loading overlay is hidden in any way
 		// (either when loading is aborted, or when the editor overlay is shown instead).
-		loadingOverlay = editorLoadingOverlay( showLoading, clearLoading );
+		loadingOverlay = editorLoadingOverlay( showLoading, clearLoading,
+			shouldLoadVisualEditor() ? loadBasicEditor : null );
 
 		if ( shouldLoadVisualEditor() ) {
 			overlayPromise = loadVisualEditorMaybe();
@@ -341,7 +364,15 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 		// Wait for the scroll animation to finish before we show the editor overlay
 		util.Promise.all( [ overlayPromise, animationDelayDeferred ] ).then( function ( overlay ) {
 			// Wait for the data to load before we show the editor overlay
-			overlay.getLoadingPromise().then( function () {
+			overlay.getLoadingPromise().catch( function ( error ) {
+				if ( visualAbortPromise.state() === 'rejected' ) {
+					return loadSourceEditor().then( function ( sourceOverlay ) {
+						overlay = sourceOverlay;
+						return overlay.getLoadingPromise();
+					} );
+				}
+				return $.Deferred().reject( error ).promise();
+			} ).then( function () {
 				// Make sure the user did not close the loading overlay while we were waiting
 				var overlayData = overlayManager.stack[0];
 				if ( !overlayData || overlayData.overlay !== loadingOverlay ) {
