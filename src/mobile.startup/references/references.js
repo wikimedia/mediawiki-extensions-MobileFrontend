@@ -4,6 +4,7 @@ var references,
 	icons = require( '../icons' ),
 	ReferencesGateway = require( './ReferencesGateway' ),
 	Icon = require( '../Icon' ),
+	ReferencesHtmlScraperGateway = require( './ReferencesHtmlScraperGateway' ),
 	IconButton = require( '../IconButton' );
 
 /**
@@ -93,6 +94,7 @@ references = {
 	test: {
 		makeOnNestedReferenceClickHandler
 	},
+	ReferencesHtmlScraperGateway,
 	referenceDrawer,
 	/**
 	 * Fetch and render nested reference upon click

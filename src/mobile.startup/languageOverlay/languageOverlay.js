@@ -24,10 +24,11 @@ function loadLanguageSearcher() {
 			showSuggestedLanguages: true,
 			deviceLanguage: getDeviceLanguage( navigator ),
 			onOpen: ( searcher ) => {
+				/**
+				 * @event mobileFrontend.languageSearcher.onOpen
+				 * @internal for use in ContentTranslation only.
+				 */
 				mw.hook( 'mobileFrontend.languageSearcher.onOpen' ).fire( searcher );
-			},
-			onBannerClick: () => {
-				mw.hook( 'mobileFrontend.languageSearcher.onBannerClick' ).fire();
 			}
 		} );
 	}, function () {

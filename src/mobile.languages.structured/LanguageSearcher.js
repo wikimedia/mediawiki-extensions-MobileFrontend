@@ -18,7 +18,6 @@ const
  *  section should be rendered.
  * @param {string} [props.deviceLanguage] the device's primary language
  * @param {Function} [props.onOpen] callback that fires on opening the searcher
- * @param {Function} [props.onBannerClick] callback that fires when banner is clicked
  */
 function LanguageSearcher( props ) {
 	/**
@@ -38,7 +37,6 @@ function LanguageSearcher( props ) {
 			{
 				className: 'language-searcher',
 				events: {
-					'click .language-search-banner': props.onBannerClick,
 					'click a': 'onLinkClick',
 					'input .search': 'onSearchInput'
 				},
@@ -161,7 +159,10 @@ mfExtend( LanguageSearcher, View, {
 	onLinkClick: function ( ev ) {
 		const $link = this.$el.find( ev.currentTarget ),
 			lang = $link.attr( 'lang' );
-
+		/**
+		 * @event mobileFrontend.languageSearcher.linkClick
+		 * @internal for use in GrowthExperiments only.
+		 */
 		mw.hook( 'mobileFrontend.languageSearcher.linkClick' ).fire( lang );
 		langUtil.saveLanguageUsageCount( lang, langUtil.getFrequentlyUsedLanguages() );
 	},
@@ -218,6 +219,10 @@ mfExtend( LanguageSearcher, View, {
 				this.$emptyResultsSection.removeClass( 'hidden' );
 				// Fire with the search query and the DOM element corresponding to no-results
 				// message so that it can be customized in hook handler
+				/**
+				 * @event mobileFrontend.editorOpening
+				 * @internal for use in ContentTranslation only.
+				 */
 				mw.hook( 'mobileFrontend.languageSearcher.noresults' )
 					.fire( searchQuery, this.$emptyResultsSection.get( 0 ) );
 			}

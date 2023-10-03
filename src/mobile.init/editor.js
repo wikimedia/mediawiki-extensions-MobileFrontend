@@ -277,10 +277,15 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 		 * @ignore
 		 * @method
 		 * @return {jQuery.Promise} Promise resolved with the editor overlay
+		 * @fires mobileFrontend.editorOpening
 		 */
 		function loadSourceEditor() {
 			logInit( 'wikitext' );
 			// Inform other interested code that we're loading the editor
+			/**
+			 * @event mobileFrontend.editorOpening
+			 * @internal for use in GrowthExperiments only.
+			 */
 			mw.hook( 'mobileFrontend.editorOpening' ).fire();
 
 			return mw.loader.using( 'mobile.editor.overlay' ).then( function () {
@@ -300,6 +305,10 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 		function loadVisualEditorMaybe() {
 			logInit( 'visualeditor' );
 			// Inform other interested code that we're loading the editor
+			/**
+			 * @event mobileFrontend.editorOpening
+			 * @internal for use in GrowthExperiments only.
+			 */
 			mw.hook( 'mobileFrontend.editorOpening' ).fire();
 
 			editorOptions.mode = mw.config.get( 'wgMFEnableVEWikitextEditor' ) && getPreferredEditor() === 'SourceEditor' ?
