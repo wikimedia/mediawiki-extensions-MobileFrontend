@@ -9,7 +9,7 @@
 	},
 	"mobile-frontend-editor-editing": "Тӳрлетни",
 	"mobile-frontend-editor-editing-page": "<span>$1 <strong>Тӳрлетни</strong></span>",
-	"mobile-frontend-expand-sections-status": "Пĕтĕм пайне сар",
+	"mobile-frontend-expand-sections-status": "Мӗнпур пайсене уҫ",
 	"mobile-frontend-language-heading": "<strong>Чĕлхесем</strong>",
 	"mobile-frontend-languages-header": "Чĕлхесем",
 	"mobile-frontend-languages-header-page": "$1 - Чĕлхесем",
@@ -19,5 +19,5 @@
 	"mobile-frontend-view-desktop": "Сӗтелҫи верси",
 	"mobile-frontend-watchlist-back-home": "Килелле",
 	"tag-mobile_edit": "Мобиллĕ япаларан тӳрлетни",
-	"tag-mobile_web_edit": "Мобиллĕ версине тӳрлетни"
+	"tag-mobile_web_edit": "Мобиллӗ версирен тӳрлетни"
 }
