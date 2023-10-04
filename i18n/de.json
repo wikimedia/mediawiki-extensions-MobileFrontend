@@ -95,6 +95,8 @@
 	"mobile-frontend-editor-viewing-source-page": "<strong>Quelltext von</strong><span> $1</span> betrachten",
 	"mobile-frontend-editor-wait": "Veröffentlichen der Bearbeitung. Bitte warten.",
 	"mobile-frontend-editor-loading": "Lade Editor …",
+	"mobile-frontend-editor-loadingtooslow": "Langsame Verbindung?",
+	"mobile-frontend-editor-loadbasiceditor": "Zum Quelltext-Editor wechseln",
 	"mobile-frontend-editor-toload": "Der Editor wird jetzt geladen. Falls du diese Nachricht in einigen Sekunden immer noch siehst, [$1 aktualisiere bitte die Seite].",
 	"mobile-frontend-expand-sections-description": "Abschnitte aller Inhaltsseiten standardmäßig immer ausklappen.",
 	"mobile-frontend-expand-sections-status": "Alle Abschnitte expandieren",

@@ -98,7 +98,7 @@
 	"mobile-frontend-editor-disabled-anon": "Necesitas iniciar sesión para editar esta página.",
 	"mobile-frontend-editor-editing": "Editando",
 	"mobile-frontend-editor-editing-page": "<span><strong>Edición</strong> de «$1»</span>",
-	"mobile-frontend-editor-error": "Error, edición no guardada.",
+	"mobile-frontend-editor-error": "Error, edición no publicada.",
 	"mobile-frontend-editor-error-conflict": "Error, otro usuario ha editado esta página.",
 	"mobile-frontend-editor-error-loading": "Error, no se puede cargar el editor.",
 	"mobile-frontend-editor-error-preview": "Error: ha sucedido algo inesperado al cargar la vista previa. Por favor, cierra y vuelve a intentarlo.",

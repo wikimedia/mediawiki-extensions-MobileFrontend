@@ -75,6 +75,8 @@
 	"mobile-frontend-editor-viewing-source-page": "<span>$1 </span><strong>forráskódjának megtekintése</strong>",
 	"mobile-frontend-editor-wait": "Szerkesztés mentése, kérlek, várj.",
 	"mobile-frontend-editor-loading": "Szerkesztő betöltése...",
+	"mobile-frontend-editor-loadingtooslow": "Lassú a kapcsolat?",
+	"mobile-frontend-editor-loadbasiceditor": "Váltás forráskód szerkesztésre",
 	"mobile-frontend-expand-sections-description": "Mindig bontsa ki a lapok összes szakaszát alapértelmezetten.",
 	"mobile-frontend-expand-sections-status": "Összes szakasz kibontása",
 	"mobile-frontend-fontchanger-link": "Betűméret",
