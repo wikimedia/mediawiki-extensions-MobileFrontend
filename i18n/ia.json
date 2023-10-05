@@ -77,6 +77,8 @@
 	"mobile-frontend-editor-viewing-source-page": "<strong>Codice-fonte de</strong><span> $1</span>",
 	"mobile-frontend-editor-wait": "Publica modification, per favor attende.",
 	"mobile-frontend-editor-loading": "Cargante editor…",
+	"mobile-frontend-editor-loadingtooslow": "Connexion lente?",
+	"mobile-frontend-editor-loadbasiceditor": "Passar al editor de codice fonte",
 	"mobile-frontend-editor-toload": "Le editor se carga ora. Si tu vide ancora iste message post poc secundas, per favor [$1 recarga le pagina].",
 	"mobile-frontend-expand-sections-description": "Sempre expander le sectiones de paginas de contento per predefinition.",
 	"mobile-frontend-expand-sections-status": "Expander tote le sectiones",

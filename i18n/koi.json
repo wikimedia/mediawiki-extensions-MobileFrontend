@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Merrahtar"
+			"Merrahtar",
+			"Римма"
 		]
 	},
+	"mobile-frontend-editor-loadingtooslow": "Жагӧн йитӧм?",
+	"mobile-frontend-editor-loadbasiceditor": "Вуджӧ заводитӧм тексттэз веськӧтӧм дынӧ",
 	"mobile-frontend-language-heading": "Кыввез"
 }
