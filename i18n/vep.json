@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Sebranik",
-			"Игорь Бродский"
+			"Игорь Бродский",
+			"Лариса Чиркова"
 		]
 	},
 	"mobile-frontend-copyright": "südäiolend kävutadas $1-licenzijan mödhe, ku ei ole ozutadud toižin.",
@@ -11,8 +12,8 @@
 	"mobile-frontend-last-modified-date": "Jäl'gmäine redakcii om olnu kunpäiväl $1, aigal $2",
 	"mobile-frontend-news-items": "Uzištusiš",
 	"mobile-frontend-privacy-link-text": "Konfidencialižuz",
-	"mobile-frontend-terms-text": "Kävutamižen arvoimižed",
-	"mobile-frontend-view": "Mobiline versii",
+	"mobile-frontend-terms-text": "Kävutamižen sändod",
+	"mobile-frontend-view": "Telefonan versii",
 	"mobile-frontend-view-desktop": "Radlaud",
 	"tag-mobile_edit": "Redakcii mobiližes ladimespäi",
 	"tag-mobile_web_edit": "Redaktiruind saitan mobiližen versijan kal't"
