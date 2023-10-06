@@ -90,6 +90,8 @@
 	"mobile-frontend-editor-viewing-source-page": "<strong>Приказ извора странице</strong><span> $1</span>",
 	"mobile-frontend-editor-wait": "Објављивање измене, сачекајте.",
 	"mobile-frontend-editor-loading": "Учитавање уређивача…",
+	"mobile-frontend-editor-loadingtooslow": "Спора веза?",
+	"mobile-frontend-editor-loadbasiceditor": "Пребаци на изворно уређивање",
 	"mobile-frontend-editor-toload": "Уређивач се сада учитава. Ако се не учита [$1 освежите страницу].",
 	"mobile-frontend-expand-sections-description": "Подразумевано увек развиј одељке садржинских страница.",
 	"mobile-frontend-expand-sections-status": "Развиј све одељке",
