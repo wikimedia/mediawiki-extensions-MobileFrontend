@@ -164,9 +164,12 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	 * elements that are not infoboxes.
 	 *
 	 * @param DOMElement $leadSection
-	 * @param DOMDocument $doc Document to which the section belongs
+	 * @param ?DOMDocument $doc Document to which the section belongs
 	 */
-	private function moveFirstParagraphBeforeInfobox( DOMElement $leadSection, DOMDocument $doc ) {
+	private function moveFirstParagraphBeforeInfobox( DOMElement $leadSection, ?DOMDocument $doc ) {
+		if ( $doc === null ) {
+			return;
+		}
 		$xPath = new DOMXPath( $doc );
 		$infobox = $this->identifyInfoboxElement( $xPath, $leadSection );
 

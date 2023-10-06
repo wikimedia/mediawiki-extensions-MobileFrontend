@@ -84,8 +84,12 @@ class MakeSectionsTransform implements IMobileTransform {
 	 *  In the future `<div class="mw-heading">` will be required (T13555).
 	 */
 	private function makeSections( DOMElement $body, array $headingWrappers ) {
+		$ownerDocument = $body->ownerDocument;
+		if ( $ownerDocument === null ) {
+			return;
+		}
 		// Find the parser output wrapper div
-		$xpath = new DOMXPath( $body->ownerDocument );
+		$xpath = new DOMXPath( $ownerDocument );
 		$containers = $xpath->query( 'body/div[@class="mw-parser-output"][1]' );
 		if ( !$containers->length ) {
 			// No wrapper? This could be an old parser cache entry, or perhaps the
@@ -102,7 +106,7 @@ class MakeSectionsTransform implements IMobileTransform {
 		$firstHeading = reset( $headingWrappers );
 		$firstHeadingName = $this->getHeadingName( $firstHeading );
 		$sectionNumber = 0;
-		$sectionBody = $this->createSectionBodyElement( $body->ownerDocument, $sectionNumber, false );
+		$sectionBody = $this->createSectionBodyElement( $ownerDocument, $sectionNumber, false );
 
 		while ( $containerChild ) {
 			$node = $containerChild;
@@ -114,13 +118,13 @@ class MakeSectionsTransform implements IMobileTransform {
 				// The heading we are transforming is always 1 section ahead of the
 				// section we are currently processing
 				/** @phan-suppress-next-line PhanTypeMismatchArgumentSuperType DOMNode vs. DOMElement */
-				$this->prepareHeading( $body->ownerDocument, $node, $sectionNumber + 1, $this->scriptsEnabled );
+				$this->prepareHeading( $ownerDocument, $node, $sectionNumber + 1, $this->scriptsEnabled );
 				// Insert the previous section body and reset it for the new section
 				$container->insertBefore( $sectionBody, $node );
 
 				$sectionNumber += 1;
 				$sectionBody = $this->createSectionBodyElement(
-					$body->ownerDocument,
+					$ownerDocument,
 					$sectionNumber,
 					$this->scriptsEnabled
 				);
@@ -156,7 +160,7 @@ class MakeSectionsTransform implements IMobileTransform {
 		// prepend indicator - this avoids a reflow by creating a placeholder for a toggling indicator
 		$indicator = $doc->createElement( 'span' );
 		$indicator->setAttribute( 'class', 'indicator mf-icon mw-ui-icon-mf-expand mf-icon--small' );
-		$heading->insertBefore( $indicator, $heading->firstChild );
+		$heading->insertBefore( $indicator, $heading->firstChild ?? $heading );
 	}
 
 	/**

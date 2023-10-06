@@ -142,9 +142,12 @@ class LazyImageTransform implements IMobileTransform {
 	 * Enables images to be loaded asynchronously
 	 *
 	 * @param DOMElement|DOMDocument $el Element or document to rewrite images in.
-	 * @param DOMDocument $doc Document to create elements in
+	 * @param ?DOMDocument $doc Document to create elements in
 	 */
-	private function doRewriteImagesForLazyLoading( $el, DOMDocument $doc ) {
+	private function doRewriteImagesForLazyLoading( $el, ?DOMDocument $doc ) {
+		if ( $doc === null ) {
+			return;
+		}
 		$lazyLoadSkipSmallImages = $this->skipSmall;
 
 		foreach ( DOMCompat::querySelectorAll( $el, 'img' ) as $img ) {
