@@ -700,6 +700,14 @@ mfExtend( EditorOverlayBase, Overlay, {
 					if ( key.indexOf( 'editnotice' ) !== 0 ) {
 						return false;
 					}
+					if ( key === 'editnotice-notext' ) {
+						// This notice is shown on pages which don't have any
+						// other edit notices. It's blank by default, but
+						// some wikis have it template-generated and hidden
+						// by CSS. It's filtered out from VE's API response,
+						// but not from the source mode.
+						return false;
+					}
 					// The contents of an edit notice is unlikely to change in the 24 hour
 					// expiry window, so just record that a notice with this key has been shown.
 					// If a cheap hashing function was available in core (or the API provided
