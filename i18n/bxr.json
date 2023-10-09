@@ -4,7 +4,8 @@
 			"Баир Балданов"
 		]
 	},
-	"mobile-frontend-terms-text": "Хэрэглэхэ нүхэсэл",
+	"mobile-frontend-copyright": "Хэрбэеэ ондоо юумэнэй заагдаагүй һаа, $1 зүбшөөрэлөөр удхыень хаража болохоор.",
+	"mobile-frontend-terms-text": "Хэрэглэлгын эрилтэ",
 	"mobile-frontend-view": "мобильна хубилбари",
 	"mobile-frontend-view-desktop": "Дэлгэсэ"
 }
