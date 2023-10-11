@@ -2,9 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Enye Lav",
-			"Merrahtar"
+			"Merrahtar",
+			"СерМар"
 		]
 	},
+	"mobile-frontend-copyright": "Мӧдтор кӧ абу индӧма, контентыскӧд позьӧ тӧдмасьны $1 лицензия серти.",
 	"mobile-frontend-language-heading": "Кывъяс",
 	"mobile-frontend-terms-text": "Вӧдитчыны урчитӧмъяс",
 	"mobile-frontend-view": "Мобильнӧй версия",
