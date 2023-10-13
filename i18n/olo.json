@@ -4,7 +4,8 @@
 			"Denö",
 			"Ilja.mos",
 			"Mashoi7",
-			"Pyscowicz"
+			"Pyscowicz",
+			"Ruppijeva"
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "ei yhtehveduo kohenduksis",
@@ -39,8 +40,8 @@
 	"mobile-frontend-save-settings": "Tallenda",
 	"mobile-frontend-settings-beta": "{{SITENAME}} Beta",
 	"mobile-frontend-terms-text": "Käyttöehtot",
-	"mobile-frontend-view": "Mobilnoi versii",
-	"mobile-frontend-view-desktop": "Käyttö tiedokonehel",
+	"mobile-frontend-view": "Mobil'noi versii",
+	"mobile-frontend-view-desktop": "Tiedokonehen ruadostola",
 	"mobile-frontend-watchlist-back-home": "Järilleh ezisivule",
 	"mobile-frontend-watchlist-cta-button-login": "Kirjuttai",
 	"mobile-frontend-watchlist-cta-button-signup": "Registriiruiččei",
