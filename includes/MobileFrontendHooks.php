@@ -608,8 +608,6 @@ class MobileFrontendHooks implements
 			'wgMFCollapseSectionsByDefault' => $config->get( 'MFCollapseSectionsByDefault' ),
 			// extendSearchParams.js
 			'wgMFTrackBlockNotices' => $config->get( 'MFTrackBlockNotices' ),
-			// EditorOverlayBase.js
-			'wgMFShowEditNotices' => $config->get( 'MFShowEditNotices' ),
 		];
 		return $vars;
 	}

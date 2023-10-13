@@ -691,7 +691,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 	},
 	showEditNotices: function () {
 		var overlay = this;
-		if ( !mw.config.get( 'wgMFShowEditNotices' ) || mw.config.get( 'wgMFEditNoticesFeatureConflict' ) ) {
+		if ( mw.config.get( 'wgMFEditNoticesFeatureConflict' ) ) {
 			return;
 		}
 		this.getLoadingPromise().then( function ( data ) {
