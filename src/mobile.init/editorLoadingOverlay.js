@@ -14,7 +14,7 @@ var
  * @return {Overlay}
  */
 function editorLoadingOverlay( afterShow, afterHide, loadBasicEditor ) {
-	var
+	var timeout,
 		$fakeToolbar = fakeToolbar(),
 		$loadBasicWrapper = $( '<div>' ).addClass( 've-loadbasiceditor' ),
 		loadBasicButton = new IconButton( {
@@ -32,8 +32,19 @@ function editorLoadingOverlay( afterShow, afterHide, loadBasicEditor ) {
 			onBeforeExit: function ( exit ) {
 				exit();
 				afterHide();
+				if ( timeout ) {
+					clearTimeout( timeout );
+				}
 			}
-		} );
+		} ),
+		logFeatureUse = function ( feature, action ) {
+			mw.track( 'visualEditorFeatureUse', {
+				feature: feature,
+				action: action,
+				// eslint-disable-next-line camelcase
+				editor_interface: 'visualeditor'
+			} );
+		};
 
 	overlay.show = function () {
 		Overlay.prototype.show.call( this );
@@ -50,12 +61,14 @@ function editorLoadingOverlay( afterShow, afterHide, loadBasicEditor ) {
 			)
 		);
 
-		setTimeout( function () {
+		timeout = setTimeout( function () {
 			$loadBasicWrapper.addClass( 've-loadbasiceditor-shown' );
+			logFeatureUse( 'mobileVisualFallback', 'context-show' );
 		}, 3000 );
 
 		loadBasicButton.$el.on( 'click', function () {
 			$loadBasicWrapper.removeClass( 've-loadbasiceditor-shown' );
+			logFeatureUse( 'mobileVisualFallback', 'fallback-confirm' );
 			loadBasicEditor();
 		} );
 	}
