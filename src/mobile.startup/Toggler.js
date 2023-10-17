@@ -193,6 +193,14 @@ Toggler.prototype.toggle = function ( $heading, fromSaved ) {
 			expanded: wasExpanded,
 			$heading: $heading
 		} );
+		/**
+		 * @event mobileFrontend.section-toggled
+		 * @internal for use inside ExternalGuidance.
+		 */
+		mw.hook( 'mobileFrontend.section-toggled' ).fire( {
+			expanded: wasExpanded,
+			$heading: $heading
+		} );
 	} );
 
 	if ( this.isCollapsedByDefault() ) {

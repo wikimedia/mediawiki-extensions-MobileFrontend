@@ -452,6 +452,10 @@ mfExtend( EditorOverlayBase, Overlay, {
 		Overlay.prototype.show.call( this );
 
 		// Inform other interested code that the editor has loaded
+		/**
+		 * @event mobileFrontend.editorOpened
+		 * @internal for use in ContentTranslation and GrowthExperiments only.
+		 */
 		mw.hook( 'mobileFrontend.editorOpened' ).fire( this.editor );
 	},
 	/**
@@ -555,6 +559,10 @@ mfExtend( EditorOverlayBase, Overlay, {
 		if ( this.allowCloseWindow ) {
 			this.allowCloseWindow.release();
 		}
+		/**
+		 * @event mobileFrontend.editorClosed
+		 * @internal for use in ContentTranslation and GrowthExperiments only.
+		 */
 		mw.hook( 'mobileFrontend.editorClosed' ).fire();
 	},
 	/**

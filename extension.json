@@ -303,7 +303,8 @@
 				},
 				"resources/dist/mobile.startup.runtime.js",
 				"resources/dist/mobile.common.js",
-				"resources/dist/mobile.startup.js"
+				"resources/dist/mobile.startup.js",
+				"resources/mobile.startup.exports.js"
 			]
 		},
 		"mobile.editor.overlay": {

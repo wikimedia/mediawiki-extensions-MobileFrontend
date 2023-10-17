@@ -1,7 +1,7 @@
 [
 	{
 		"resourceModule": "mobile.startup",
-		"maxSize": "23.2KB"
+		"maxSize": "24.0KB"
 	},
 	{
 		"resourceModule": "mobile.editor.overlay",
