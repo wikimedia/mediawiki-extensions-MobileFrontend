@@ -1,8 +1,7 @@
 var
 	CANCEL_GLYPH = 'close',
 	Icon = require( './Icon' ),
-	IconButton = require( './IconButton' ),
-	util = require( './util' );
+	IconButton = require( './IconButton' );
 
 /**
  * A set of shared icons.
@@ -15,11 +14,11 @@ var
  * @singleton
  * @uses Icon
  */
-module.exports = {
-	CANCEL_GLYPH: CANCEL_GLYPH,
+const icons = {
+	CANCEL_GLYPH,
 	// Exported to support testing and stubbing
-	Icon: Icon,
-	IconButton: IconButton,
+	Icon,
+	IconButton,
 	/**
 	 * Gets a back icon
 	 *
@@ -31,7 +30,7 @@ module.exports = {
 	 * @return {IconButton}
 	 */
 	back: function () {
-		return new IconButton( {
+		return new icons.IconButton( {
 			tagName: 'button',
 			icon: 'previous-base20',
 			additionalClassNames: 'back',
@@ -55,7 +54,7 @@ module.exports = {
 		props.additionalClassNames = props.additionalClassNames || '';
 		props.additionalClassNames += ' cancel';
 
-		return new this.IconButton( util.extend( {
+		return new icons.IconButton( Object.assign( {
 			tagName: 'button',
 			icon: glyph,
 			label: mw.msg( 'mobile-frontend-overlay-close' )
@@ -78,7 +77,7 @@ module.exports = {
 			props.additionalClassNames = 'spinner loading';
 		}
 
-		const spinner = new this.IconButton( util.extend( {
+		const spinner = new icons.IconButton( Object.assign( {
 			tagName: 'span',
 			icon: 'spinner',
 			label: mw.msg( 'mobile-frontend-loading-message' )
@@ -102,7 +101,7 @@ module.exports = {
 	 * @return {IconButton}
 	 */
 	error: function () {
-		return new IconButton( {
+		return new icons.IconButton( {
 			icon: 'alert-invert',
 			additionalClassNames: 'load-fail-msg-icon'
 		} );
@@ -119,7 +118,7 @@ module.exports = {
 		props.additionalClassNames = props.additionalClassNames || '';
 		props.additionalClassNames += ' watch-this-article';
 
-		return new this.IconButton( util.extend( {
+		return new icons.IconButton( Object.assign( {
 			icon: 'star-subtle',
 			glyphPrefix: 'mf'
 		}, props ) );
@@ -136,9 +135,11 @@ module.exports = {
 		props.additionalClassNames = props.additionalClassNames || '';
 		props.additionalClassNames += ' watch-this-article watched';
 
-		return new this.IconButton( util.extend( {
+		return new icons.IconButton( Object.assign( {
 			icon: 'unStar-progressive',
 			glyphPrefix: 'mf'
 		}, props ) );
 	}
 };
+
+module.exports = icons;
