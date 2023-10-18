@@ -13,6 +13,7 @@ const currentPageHTMLParser = require( './currentPageHTMLParser' );
 const time = require( './time' );
 const Icon = require( './Icon' );
 
+const LanguageInfo = require( './LanguageInfo' );
 const IconButton = require( './IconButton' );
 const currentPage = require( './currentPage' );
 const Drawer = require( './Drawer' );
@@ -40,6 +41,8 @@ const Skin = require( './Skin' );
 const mediaViewer = {
 	overlay: require( './mediaViewer/overlay' )
 };
+const languageInfoOverlay = require( './languageOverlay/languageInfoOverlay' );
+const languageOverlay = require( './languageOverlay/languageOverlay' );
 
 // Expose the entry chunk through libraryTarget and library. This allows
 // arbitrary file access via ResourceLoader like
@@ -61,7 +64,7 @@ module.exports = {
 	/**
 	 * @deprecated 1.41 should be moved into Minerva
 	 */
-	LanguageInfo: require( './LanguageInfo' ),
+	LanguageInfo,
 	/**
 	 * @deprecated use navigator.userAgent instead.
 	 */
@@ -122,8 +125,8 @@ module.exports = {
 	lazyImages: {
 		lazyImageLoader
 	},
-	languageOverlay: require( './languageOverlay/languageOverlay' ),
-	languageInfoOverlay: require( './languageOverlay/languageInfoOverlay' ),
+	languageOverlay,
+	languageInfoOverlay,
 	mediaViewer,
 	amcOutreach: require( './amcOutreach/amcOutreach' ),
 	Section: require( './Section' )
@@ -218,6 +221,15 @@ mw._mobileFrontend = {
 	license: function () {
 		const skin = Skin.getSingleton();
 		return skin.getLicenseMsg();
+	},
+	/**
+	 * @internal for use inside Minerva
+	 */
+	languages: {
+		languageOverlay,
+		languageInfoOverlay: function ( api, showSuggestedLanguage ) {
+			languageInfoOverlay( new LanguageInfo( api ), showSuggestedLanguage );
+		}
 	}
 };
 
