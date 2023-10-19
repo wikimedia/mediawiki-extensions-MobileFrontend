@@ -10,7 +10,8 @@
 			"Nullzero",
 			"Octahedron80",
 			"Patsagorn Y.",
-			"กิ๊ฟ เลิกล่ะ สายแข็ง"
+			"กิ๊ฟ เลิกล่ะ สายแข็ง",
+			"Bebiezaza"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "เลือกว่าจะให้ผู้ใช้แก้ไขผ่านอินเทอร์เฟซสำหรับอุปกรณ์เคลื่อนที่หรือไม่",
@@ -34,7 +35,7 @@
 	"mobile-frontend-edit-login-action": "<strong>ร่วมปรับปรุง {{SITENAME}}</strong><br />เข้าสู่ระบบเพื่อแก้ไข",
 	"mobile-frontend-edit-signup-action": "<strong>ช่วยปรับปรุง {{SITENAME}}</strong><br />สร้างบัญชีเพื่อร่วมแก้ไข",
 	"mobile-frontend-editor-anon": "แก้ไขโดยไม่เข้าสู่ระบบ",
-	"mobile-frontend-editor-anonwarning": "<strong>คำเตือน:</strong> คุณยังมิได้เข้าสู่ระบบ สาธารณะจะเห็นเลขที่อยู่ไอพีของคุณหากคุณแก้ไข หากคุณ<strong>เข้าสู่ระบบ</strong>หรือ<strong>สร้างบัญชี</strong> การแก้ไขของคุณจะถือว่าเป็นของชื่อผู้ใช้ของคุณ ร่วมกับประโยชน์อื่น",
+	"mobile-frontend-editor-anonwarning": "<strong>คำเตือน:</strong> คุณไม่ได้เข้าสู่ระบบ สาธารณะจะเห็นเลขที่อยู่ไอพีของคุณถ้าคุณแก้ไข หากคุณ<strong>เข้าสู่ระบบ</strong>หรือ<strong>สร้างบัญชี</strong> การแก้ไขของคุณจะถือว่าเป็นของชื่อผู้ใช้ของคุณ พร้อมทั้งอาจได้รับประโยชน์อื่น ๆ ด้วย",
 	"mobile-frontend-editor-blocked-drawer-action-login": "เข้าสู่ระบบ",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "ตกลง",
 	"mobile-frontend-editor-blocked-drawer-action-randompage": "พาฉันไปที่หน้าอื่น",
