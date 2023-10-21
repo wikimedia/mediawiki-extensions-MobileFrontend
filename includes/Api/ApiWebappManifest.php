@@ -37,7 +37,7 @@ class ApiWebappManifest extends ApiBase {
 			$request = $services->getHttpRequestFactory()->create( $appleTouchIconUrl, [], __METHOD__ );
 			$request->execute();
 			$appleTouchIconContent = $request->getContent();
-			if ( !empty( $appleTouchIconContent ) ) {
+			if ( $appleTouchIconContent !== '' ) {
 				$appleTouchIconSize = getimagesizefromstring( $appleTouchIconContent );
 			}
 			$icon = [

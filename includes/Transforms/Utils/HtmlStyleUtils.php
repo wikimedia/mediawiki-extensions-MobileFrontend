@@ -14,7 +14,7 @@ class HtmlStyleUtils {
 	 * @return array
 	 */
 	public static function parseStyleString( string $styleAttr ): array {
-		if ( empty( $styleAttr ) ) {
+		if ( $styleAttr === '' ) {
 			return [];
 		}
 		$styleStrings = preg_split( '/\;/', $styleAttr, -1, PREG_SPLIT_NO_EMPTY );
@@ -22,7 +22,7 @@ class HtmlStyleUtils {
 		foreach ( $styleStrings as $styleString ) {
 			$styleWithValue = explode( ':', $styleString );
 			$style = trim( $styleWithValue[0] );
-			if ( !empty( $style ) ) {
+			if ( $style !== '' ) {
 				$result[$style] = trim( $styleWithValue[1] ?? '' );
 			}
 		}
@@ -39,7 +39,7 @@ class HtmlStyleUtils {
 	public static function formStyleString( array $styles ): string {
 		$styleString = '';
 		foreach ( $styles as $style => $value ) {
-			if ( empty( $value ) ) {
+			if ( $value === '' ) {
 				$styleString .= $style . ';';
 
 			} else {
