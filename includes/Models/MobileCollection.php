@@ -32,7 +32,7 @@ class MobileCollection implements IteratorAggregate, Countable, Emptiable {
 	 * @return bool
 	 */
 	public function isEmpty() {
-		return empty( $this->pages );
+		return !$this->pages;
 	}
 
 	/**
