@@ -23,6 +23,37 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 		return $method;
 	}
 
+	/**
+	 * Used as test value for $wgMobileUrlCallback, here and in MobileFrontendHooksTest.
+	 *
+	 * This is a copy of Wikimedia's mobile URL callback, but the logic of the callback
+	 * itself is tested in the operations/mediawiki-config repo so the tests here don't
+	 * need to cover that.
+	 *
+	 * @param string $domain
+	 * @return string
+	 */
+	public static function mobileUrlCallback( string $domain ): string {
+		switch ( $domain ) {
+			case 'wikisource.org':
+				return 'm.wikisource.org';
+			case 'wikitech.wikimedia.org':
+				return 'wikitech.wikimedia.org';
+			case 'wikidata.beta.wmflabs.org':
+				return 'm.wikidata.beta.wmflabs.org';
+			case 'wikifunctions.beta.wmflabs.org':
+				return 'm.wikifunctions.beta.wmflabs.org';
+		}
+
+		$domainParts = explode( '.', $domain );
+		if ( $domainParts[0] === 'www' ) {
+			$domainParts[0] = 'm';
+		} else {
+			array_splice( $domainParts, 1, 0, [ 'm' ] );
+		}
+		return implode( '.', $domainParts );
+	}
+
 	protected function tearDown(): void {
 		parent::tearDown();
 
@@ -59,16 +90,111 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
+	 * @covers MobileContext::hasMobileDomain
+	 */
+	public function testHasMobileDomain() {
+		// not configured
+		$this->overrideConfigValues( [
+			'MobileUrlCallback' => null,
+			'MobileUrlTemplate' => '',
+		] );
+
+		$this->overrideConfigValue( MainConfigNames::Server, '//en.wikipedia.org' );
+		$context = $this->makeContext();
+		$this->assertFalse( $context->hasMobileDomain() );
+
+		// callback
+		$this->overrideConfigValues( [
+			'MobileUrlCallback' => [ self::class, 'mobileUrlCallback' ],
+			'MobileUrlTemplate' => '',
+		] );
+
+		$this->overrideConfigValue( MainConfigNames::Server, '//en.wikipedia.org' );
+		$context = $this->makeContext();
+		$this->assertTrue( $context->hasMobileDomain() );
+
+		// When a domain is returned unchanged, there is no mobile domain.
+		$this->overrideConfigValue( MainConfigNames::Server, '//wikitech.wikimedia.org' );
+		$context = $this->makeContext();
+		$this->assertFalse( $context->hasMobileDomain() );
+
+		// template
+		$this->overrideConfigValues( [
+			'MobileUrlCallback' => null,
+			'MobileUrlTemplate' => '%h0.m.%h1.%h2',
+		] );
+
+		$this->overrideConfigValue( MainConfigNames::Server, '//en.wikipedia.org' );
+		$context = $this->makeContext();
+		$this->assertTrue( $context->hasMobileDomain() );
+
+		// the template is ignored when the callback is set
+		$this->overrideConfigValues( [
+			'MobileUrlCallback' => [ self::class, 'mobileUrlCallback' ],
+			'MobileUrlTemplate' => 'm.%h1.%h2',
+		] );
+
+		$this->overrideConfigValue( MainConfigNames::Server, '//wikitech.wikimedia.org' );
+		$context = $this->makeContext();
+		$this->assertFalse( $context->hasMobileDomain() );
+	}
+
+	/**
 	 * @covers MobileContext::getMobileUrl
 	 */
 	public function testGetMobileUrl() {
 		$this->overrideConfigValues( [
 			'MFMobileHeader' => 'X-Subdomain',
+			MainConfigNames::Server => '//en.wikipedia.org',
+			'MobileUrlCallback' => [ self::class, 'mobileUrlCallback' ],
+			'MobileUrlTemplate' => '%h0.%h1.m.%h2',
+		] );
+		$context = $this->makeContext();
+		$context->getRequest()->setHeader( 'X-Subdomain', 'M' );
+
+		$this->assertEquals(
+			'http://en.m.wikipedia.org/wiki/Article',
+			$context->getMobileUrl( 'http://en.wikipedia.org/wiki/Article' )
+		);
+		$this->assertEquals(
+			'//en.m.wikipedia.org/wiki/Article',
+			$context->getMobileUrl( '//en.wikipedia.org/wiki/Article' )
+		);
+		// test local Urls - task T107505
+		$this->assertEquals(
+			'http://en.m.wikipedia.org/wiki/Article',
+			$context->getMobileUrl( '/wiki/Article' )
+		);
+		// test other wikis
+		$this->assertEquals(
+			'http://de.m.wiktionary.org/wiki/Article',
+			$context->getMobileUrl( 'http://de.wiktionary.org/wiki/Article' )
+		);
+		$this->assertEquals(
+			'http://m.wikidata.org/wiki/Q1',
+			$context->getMobileUrl( 'http://www.wikidata.org/wiki/Q1' )
+		);
+		$this->assertEquals(
+			'http://wikitech.wikimedia.org/wiki/Main_Page',
+			$context->getMobileUrl( 'http://wikitech.wikimedia.org/wiki/Main_Page' )
+		);
+	}
+
+	/**
+	 * @covers MobileContext::getMobileUrl
+	 */
+	public function testGetMobileUrl_template() {
+		$this->overrideConfigValues( [
+			'MFMobileHeader' => 'X-Subdomain',
+			'MobileUrlCallback' => null,
 			'MobileUrlTemplate' => '%h0.m.%h1.%h2',
 			MainConfigNames::Server => '//en.wikipedia.org',
 		] );
 		$invokes = 0;
 		$context = $this->makeContext();
+		$this->expectDeprecationAndContinue(
+			'/Use of GetMobileUrl hook .* was deprecated in MobileFrontend 1\.42\./'
+		);
 		$this->setTemporaryHook(
 			'GetMobileUrl',
 			function ( &$string, $hookCtx ) use (
@@ -149,6 +275,18 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 	public function testUsingMobileDomain() {
 		$this->overrideConfigValues( [
 			'MFMobileHeader' => 'X-Subdomain',
+			'MobileUrlCallback' => [ self::class, 'mobileUrlCallback' ],
+			'MobileUrlTemplate' => '',
+		] );
+		$context = $this->makeContext();
+		$this->assertFalse( $context->usingMobileDomain() );
+		$context->getRequest()->setHeader( 'X-Subdomain', 'M' );
+		$this->assertTrue( $context->usingMobileDomain() );
+
+		// test deprecated config variable
+		$this->overrideConfigValues( [
+			'MFMobileHeader' => 'X-Subdomain',
+			'MobileUrlCallback' => null,
 			'MobileUrlTemplate' => '%h0.m.%h1.%h2',
 		] );
 		$context = $this->makeContext();
@@ -188,6 +326,20 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 		$updateMobileUrlHost = self::getMethod( "updateDesktopUrlHost" );
 		$this->overrideConfigValues( [
 			MainConfigNames::Server => $server,
+			'MobileUrlCallback' => [ self::class, 'mobileUrlCallback' ],
+			'MobileUrlTemplate' => '',
+		] );
+		$parsedUrl = wfParseUrl( $mobile );
+		$updateMobileUrlHost->invokeArgs(
+			$this->makeContext(),
+			[ &$parsedUrl ] );
+		$this->assertEquals( $desktop, wfAssembleUrl( $parsedUrl ) );
+
+		// test deprecated config variable
+		$updateMobileUrlHost = self::getMethod( "updateDesktopUrlHost" );
+		$this->overrideConfigValues( [
+			MainConfigNames::Server => $server,
+			'MobileUrlCallback' => null,
 			'MobileUrlTemplate' => '%h0.m.%h1.%h2',
 		] );
 		$parsedUrl = wfParseUrl( $mobile );
@@ -218,6 +370,7 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 	public function testUpdateMobileUrlPath() {
 		$this->overrideConfigValues( [
 			MainConfigNames::ScriptPath => '/wiki',
+			'MobileUrlCallback' => null,
 			'MobileUrlTemplate' => "/mobile/%p",
 		] );
 		$updateMobileUrlHost = self::getMethod( "updateMobileUrlPath" );
@@ -467,8 +620,24 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 	 * @covers MobileContext::doToggling
 	 * @dataProvider provideToggleView
 	 */
-	public function testToggleView( $page, $url, $urlTemplate, $expectedLocation ) {
+	public function testToggleView( $page, $url, $urlCallback, $urlTemplate, $expectedLocation ) {
 		$this->overrideConfigValues( [
+			'MobileUrlCallback' => $urlCallback,
+			'MobileUrlTemplate' => '',
+			MainConfigNames::Server => '//en.wikipedia.org',
+			// 'wgArticlePath' => '/wiki/$1',
+			MainConfigNames::ScriptPath => '/wiki',
+		] );
+		$context = $this->makeContext( $url );
+		$context->getContext()->setTitle( Title::newFromText( $page ) );
+		$context->checkToggleView();
+		$context->doToggling();
+		$location = $context->getOutput()->getRedirect();
+		$this->assertEquals( $expectedLocation, $location );
+
+		// test deprecated config variable
+		$this->overrideConfigValues( [
+			'MobileUrlCallback' => null,
 			'MobileUrlTemplate' => $urlTemplate,
 			MainConfigNames::Server => '//en.wikipedia.org',
 			// 'wgArticlePath' => '/wiki/$1',
@@ -483,48 +652,49 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 	}
 
 	public static function provideToggleView() {
-		$token = '%h0.m.%h1.%h2';
+		$mobileUrlCallback = [ self::class, 'mobileUrlCallback' ];
+		$mobileUrlTemplate = '%h0.m.%h1.%h2';
 		return [
-			[ 'Foo', '/', '', '' ],
-			[ 'Foo', '/', $token, '' ],
-			[ 'Main Page', '/wiki/Main_Page', '', '' ],
-			[ 'Main Page', '/wiki/Main_Page', $token, '' ],
-			[ 'Main Page', '/wiki/Main_Page?useformat=mobile', '', '' ],
-			[ 'Main Page', '/wiki/Main_Page?useformat=mobile', $token, '' ],
-			[ 'Main Page', '/wiki/Main_Page?useformat=desktop', '', '' ],
-			[ 'Main Page', '/wiki/Main_Page?useformat=desktop', $token, '' ],
-			[ 'Foo', '/?mobileaction=toggle_view_desktop', '', '' ],
-			[ 'Foo', '/?mobileaction=toggle_view_mobile', '', '' ],
-			[ 'Page', '/wiki/Page?mobileaction=toggle_view_desktop',
-				'', ''
-			],
+			[ 'Foo', '/', null, '', '' ],
+			[ 'Foo', '/', $mobileUrlCallback, $mobileUrlTemplate, '' ],
+			[ 'Main Page', '/wiki/Main_Page', null, '', '' ],
+			[ 'Main Page', '/wiki/Main_Page', $mobileUrlCallback, $mobileUrlTemplate, '' ],
+			[ 'Main Page', '/wiki/Main_Page?useformat=mobile', null, '', '' ],
+			[ 'Main Page', '/wiki/Main_Page?useformat=mobile', $mobileUrlCallback, $mobileUrlTemplate, '' ],
+			[ 'Main Page', '/wiki/Main_Page?useformat=desktop', null, '', '' ],
+			[ 'Main Page', '/wiki/Main_Page?useformat=desktop', $mobileUrlCallback, $mobileUrlTemplate, '' ],
+			[ 'Foo', '/?mobileaction=toggle_view_desktop', null, '', '' ],
+			[ 'Foo', '/?mobileaction=toggle_view_mobile', null, '', '' ],
+			[ 'Page', '/wiki/Page?mobileaction=toggle_view_desktop', null, '', '' ],
 			/*
 			FIXME: works locally but fails in Jerkins
 			array( 'Main Page', '/?mobileaction=toggle_view_desktop',
-				$token, 'http://en.wikipedia.org/wiki/Main_Page'
+				$mobileUrlCallback, $mobileUrlTemplate, 'http://en.wikipedia.org/wiki/Main_Page'
 			),
 			array( 'Main Page', '/?mobileaction=toggle_view_mobile',
-				$token, 'http://en.m.wikipedia.org/wiki/Main_Page'
+				$mobileUrlCallback, $mobileUrlTemplate, 'http://en.m.wikipedia.org/wiki/Main_Page'
 			),
 			array( 'Page', '/wiki/Page?mobileaction=toggle_view_mobile',
-				$token, 'http://en.m.wikipedia.org/wiki/Page'
+				$mobileUrlCallback, $mobileUrlTemplate, 'http://en.m.wikipedia.org/wiki/Page'
 			),
 			array( 'Page', '/wiki/Page?mobileaction=toggle_view_desktop',
-				$token, 'http://en.wikipedia.org/wiki/Page'
+				$mobileUrlCallback, $mobileUrlTemplate, 'http://en.wikipedia.org/wiki/Page'
 			),
 			array( 'Special:Foo',
 				'/wiki/index.php?title=Special:Foo&bar=baz&mobileaction=toggle_view_desktop',
-				$token, 'http://en.wikipedia.org/w/index.php?title=Special:Foo&bar=baz'
+				$mobileUrlCallback, $mobileUrlTemplate,
+				'http://en.wikipedia.org/w/index.php?title=Special:Foo&bar=baz'
 			),
 			array( 'Special:Foo',
 				'/wiki/index.php?title=Special%3AFoo&bar=baz&mobileaction=toggle_view_mobile',
-				$token, 'http://en.m.wikipedia.org/w/index.php?title=Special:Foo&bar=baz'
+				$mobileUrlCallback, $mobileUrlTemplate,
+				'http://en.m.wikipedia.org/w/index.php?title=Special:Foo&bar=baz'
 			),
 			array( 'Page', '/wiki/index.php?title=Page&mobileaction=toggle_view_desktop',
-				$token, 'http://en.wikipedia.org/wiki/Page',
+				$mobileUrlCallback, $mobileUrlTemplate, 'http://en.wikipedia.org/wiki/Page',
 			),
 			array( 'Page', '/wiki/index.php?title=Page&mobileaction=toggle_view_mobile',
-				$token, 'http://en.m.wikipedia.org/wiki/Page',
+				$mobileUrlCallback, $mobileUrlTemplate, 'http://en.m.wikipedia.org/wiki/Page',
 			),
 			*/
 		];

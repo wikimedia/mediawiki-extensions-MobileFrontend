@@ -547,15 +547,16 @@ class MobileFrontendHooks implements
 	 *                        if you want to add a cookie that have to vary cache options
 	 */
 	public function onGetCacheVaryCookies( $out, &$cookies ) {
+		/** @var MobileContext $context */
 		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
-		$mobileUrlTemplate = $context->getMobileUrlTemplate();
+		$hasMobileUrl = $context->hasMobileDomain();
 
 		// Enables mobile cookies on wikis w/o mobile domain
 		$cookies[] = MobileContext::USEFORMAT_COOKIE_NAME;
 		// Don't redirect to mobile if user had explicitly opted out of it
 		$cookies[] = MobileContext::STOP_MOBILE_REDIRECT_COOKIE_NAME;
 
-		if ( $context->shouldDisplayMobileView() || !$mobileUrlTemplate ) {
+		if ( $context->shouldDisplayMobileView() || !$hasMobileUrl ) {
 			// beta cookie
 			$cookies[] = MobileContext::OPTIN_COOKIE_NAME;
 		}
@@ -875,14 +876,14 @@ class MobileFrontendHooks implements
 		$mfEnableXAnalyticsLogging = $config->get( 'MFEnableXAnalyticsLogging' );
 		$mfNoIndexPages = $config->get( 'MFNoindexPages' );
 		$isCanonicalLinkHandledByCore = $config->get( 'EnableCanonicalServerLink' );
-		$mfMobileUrlTemplate = $context->getMobileUrlTemplate();
+		$hasMobileUrl = $context->hasMobileDomain();
 		$displayMobileView = $context->shouldDisplayMobileView();
 
 		$title = $skin->getTitle();
 
 		// an canonical/alternate link is only useful, if the mobile and desktop URL are different
 		// and $wgMFNoindexPages needs to be true
-		if ( $mfMobileUrlTemplate && $mfNoIndexPages ) {
+		if ( $hasMobileUrl && $mfNoIndexPages ) {
 			$link = false;
 
 			if ( !$displayMobileView ) {
@@ -911,7 +912,7 @@ class MobileFrontendHooks implements
 		if (
 			$config->get( 'MFVaryOnUA' ) &&
 			$config->get( 'MFAutodetectMobileView' ) &&
-			!$config->get( 'MobileUrlTemplate' )
+			!$hasMobileUrl
 		) {
 			$out->addVaryHeader( 'User-Agent' );
 		}

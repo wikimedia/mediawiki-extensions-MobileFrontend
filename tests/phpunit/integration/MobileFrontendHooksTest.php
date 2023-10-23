@@ -90,13 +90,14 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 	 * @covers MobileFrontendHooks::onBeforePageDisplay
 	 * @dataProvider onBeforePageDisplayDataProvider
 	 */
-	public function testOnBeforePageDisplay( $mobileUrlTemplate, $mfNoindexPages,
+	public function testOnBeforePageDisplay( $useMobileUrl, $mfNoindexPages,
 		$mfEnableXAnalyticsLogging, $mfAutoDetectMobileView, $mfVaryOnUA, $mfXAnalyticsItems,
 		$isAlternateCanonical, $isXAnalytics, $mfVaryHeaderSet
 	) {
 		$this->overrideConfigValues( [
 			'MFEnableManifest' => false,
-			'MobileUrlTemplate' => $mobileUrlTemplate,
+			'MobileUrlCallback' => $useMobileUrl ? [ MobileContextTest::class, 'mobileUrlCallback' ] : null,
+			'MobileUrlTemplate' => '',
 			'MFNoindexPages' => $mfNoindexPages,
 			'MFEnableXAnalyticsLogging' => $mfEnableXAnalyticsLogging,
 			'MFAutodetectMobileView' => $mfAutoDetectMobileView,
@@ -199,7 +200,7 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 	 */
 	public static function onBeforePageDisplayDataProvider() {
 		return [
-			// wgMobileUrlTemplate, wgMFNoindexPages, wgMFEnableXAnalyticsLogging, wgMFAutodetectMobileView,
+			// use mobile URL, wgMFNoindexPages, wgMFEnableXAnalyticsLogging, wgMFAutodetectMobileView,
 			// wgMFVaryOnUA, XanalyticsItems, alternate & canonical link, XAnalytics, Vary header User-Agent
 			[ true, true, true, true, true,
 				[ 'mf-m' => 'a' ], 1, 'mf-m=a', false, ],
@@ -222,7 +223,8 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 	 */
 	public function testOnTitleSquidURLs() {
 		$this->overrideConfigValues( [
-			'MobileUrlTemplate' => '%h0.m.%h1.%h2',
+			'MobileUrlCallback' => [ MobileContextTest::class, 'mobileUrlCallback' ],
+			'MobileUrlTemplate' => '',
 			MainConfigNames::Server => 'http://en.wikipedia.org',
 			MainConfigNames::ArticlePath => '/wiki/$1',
 			MainConfigNames::ScriptPath => '/w',

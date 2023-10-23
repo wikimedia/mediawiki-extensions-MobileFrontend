@@ -10,12 +10,14 @@ use MobileContext;
  *
  * @stable to implement
  * @ingroup Hooks
+ * @deprecated since 1.42, use $wgMobileUrlCallback instead
  */
 interface GetMobileUrlHook {
 	/**
 	 * @param string|null &$subdomainTokenReplacement
 	 * @param MobileContext $context
 	 * @return bool|void True or no return value to continue or false to abort
+	 * @deprecated since 1.42, use $wgMobileUrlCallback instead
 	 */
 	public function onGetMobileUrl( ?string &$subdomainTokenReplacement, MobileContext $context );
 }
