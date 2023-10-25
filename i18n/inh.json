@@ -18,7 +18,7 @@
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Блок техай}}",
 	"mobile-frontend-editor-continue": "ДIахо",
 	"mobile-frontend-editor-editing": "Тоадар",
-	"mobile-frontend-editor-licensing": "Ӏайха даь дола хувцамаш дIаяздарца Хье раьза волга хьахайт Ӏа хьай къахьагам $1 яхача {{PLURAL:$2|1=лицензеца|лицензешца}} кепатоха.",
+	"mobile-frontend-editor-licensing": "Ӏайха даь хувцамаш дӀаяздарца им дул Ӏа хьай къахьагам $1 яхача {{PLURAL:$2|1=лицензеца|лицензешца}} кепатоха.",
 	"mobile-frontend-editor-placeholder-new-page": "{{SITENAME}} чу керда оагӀув кхолла гӀерт {{GENDER:$1|хьо}}!",
 	"mobile-frontend-editor-publish": "Кéпатóха",
 	"mobile-frontend-editor-summary-placeholder": "Масала: гIалат тоадаьд, чулоацам тӀатехаб",
