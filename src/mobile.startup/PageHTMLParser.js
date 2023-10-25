@@ -240,8 +240,9 @@ class PageHTMLParser {
 			let langname;
 			let title = node.getAttribute( 'title' ) || pageTitle;
 			if ( title.indexOf( DELIMITER ) > -1 ) {
-				langname = title.split( DELIMITER )[ 1 ];
-				title = title.split( DELIMITER )[ 0 ];
+				title = title.split( DELIMITER );
+				langname = title.pop();
+				title = title.join( DELIMITER );
 			}
 			if ( !langname ) {
 				langname = autonym;
