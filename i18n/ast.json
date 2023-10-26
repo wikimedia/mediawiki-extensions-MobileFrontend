@@ -3,7 +3,8 @@
 		"authors": [
 			"Enolp",
 			"Fitoschido",
-			"Xuacu"
+			"Xuacu",
+			"YoaR"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si un usuariu ta editando o non pela interfaz pa móvil",
@@ -34,7 +35,7 @@
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "El bloquéu va caducar el",
 	"mobile-frontend-editor-blocked-drawer-help": "Detalles",
 	"mobile-frontend-editor-generic-block-reason": "Motivu desconocíu",
-	"mobile-frontend-editor-cancel": "Encaboxar",
+	"mobile-frontend-editor-cancel": "Zarrar",
 	"mobile-frontend-editor-cancel-confirm": "¿Realmente quier abandonar la edición?",
 	"mobile-frontend-editor-captcha-try-again": "Códigu incorreutu, vuelva a intentalo.",
 	"mobile-frontend-editor-continue": "Siguiente",

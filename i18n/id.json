@@ -26,7 +26,9 @@
 			"Uchup19",
 			"Veracious",
 			"William Surya Permana",
-			"WillsonEP09"
+			"WillsonEP09",
+			"David Wadie Fisher-Freberg",
+			"Stevannus rua"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Menentukan apakah pengguna menyunting melalui antarmuka seluler atau tidak",
@@ -236,6 +238,7 @@
 	"mobile-frontend-mobile-option-amc-learn-more": "Pelajari lebih lanjut",
 	"mobile-frontend-mobile-option-amc-send-feedback": "Kirim umpan balik",
 	"mobile-frontend-user-pref-option": "Preferensi pengguna",
+	"mobile-frontend-user-pref-description": "Ubah preferensi Anda, termasuk kata sandi, tampilan situs, pengaturan pemberitahuan, dan banyak lagi.",
 	"mobile-frontend-user-pref-link": "Buka preferensi",
 	"mobile-frontend-user-pref-feedback": "Kirim umpan balik",
 	"mobile-frontend-amc-outreach-intro": "Memperkenalkan Mode Lanjutan",
