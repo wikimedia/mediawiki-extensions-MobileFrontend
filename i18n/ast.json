@@ -3,7 +3,8 @@
 		"authors": [
 			"Enolp",
 			"Fitoschido",
-			"Xuacu"
+			"Xuacu",
+			"YoaR"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si un usuariu ta editando o non pela interfaz pa móvil",
@@ -15,7 +16,7 @@
 	"mobile-frontend-clear-search": "Llimpiar",
 	"mobile-frontend-copyright": "El conteníu ta disponible baxo los términos de la $1 si nun s'indica otra cosa.",
 	"mobile-frontend-desc": "Interfaz pa móviles",
-	"mobile-frontend-diffview-404-desc": "La id de la revisión solicitada nun esiste.<br/>De vezu esto produzse por siguir un enllaz de diff desactualizáu a una páxina que se desanició o a un enllaz de diff que contien caráuteres inválidos.",
+	"mobile-frontend-diffview-404-desc": "La id de la revisión solicitada nun esiste.<br/>De vezu esto produzse por siguir un enllaz de diff desactualizáu a una páxina que se desanició o a un enllaz de diff que contién caráuteres inválidos.",
 	"mobile-frontend-diffview-404-title": "Revisión incorreuta",
 	"mobile-frontend-diffview-anonymous": "Usuariu anónimu",
 	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|byte amestáu|bytes amestaos}}",
@@ -34,7 +35,7 @@
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "El bloquéu va caducar el",
 	"mobile-frontend-editor-blocked-drawer-help": "Detalles",
 	"mobile-frontend-editor-generic-block-reason": "Motivu desconocíu",
-	"mobile-frontend-editor-cancel": "Encaboxar",
+	"mobile-frontend-editor-cancel": "Zarrar",
 	"mobile-frontend-editor-cancel-confirm": "¿Realmente quier abandonar la edición?",
 	"mobile-frontend-editor-captcha-try-again": "Códigu incorreutu, vuelva a intentalo.",
 	"mobile-frontend-editor-continue": "Siguiente",
