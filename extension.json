@@ -557,7 +557,7 @@
 		"AbuseFilter-generateUserVars": "MobileFrontendHooks::onAbuseFilterGenerateUserVars",
 		"AbuseFilter-builder": "MobileFrontendHooks::onAbuseFilterBuilder",
 		"SpecialPageBeforeExecute": "MobileFrontendHooks",
-		"UserLoginComplete": "MobileFrontendHooks",
+		"PostLoginRedirect": "MobileFrontendHooks",
 		"BeforePageDisplay": "MobileFrontendHooks",
 		"GetPreferences": [
 			"MobileFrontendHooks",

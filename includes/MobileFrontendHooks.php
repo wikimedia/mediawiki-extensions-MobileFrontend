@@ -25,12 +25,12 @@ use MediaWiki\Hook\MediaWikiPerformActionHook;
 use MediaWiki\Hook\OutputPageBeforeHTMLHook;
 use MediaWiki\Hook\OutputPageBodyAttributesHook;
 use MediaWiki\Hook\OutputPageParserOutputHook;
+use MediaWiki\Hook\PostLoginRedirectHook;
 use MediaWiki\Hook\RecentChange_saveHook;
 use MediaWiki\Hook\RequestContextCreateSkinHook;
 use MediaWiki\Hook\SkinAddFooterLinksHook;
 use MediaWiki\Hook\SkinAfterBottomScriptsHook;
 use MediaWiki\Hook\TitleSquidURLsHook;
-use MediaWiki\Hook\UserLoginCompleteHook;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Page\Hook\BeforeDisplayNoArticleTextHook;
 use MediaWiki\Preferences\Hook\GetPreferencesHook;
@@ -79,7 +79,7 @@ class MobileFrontendHooks implements
 	ChangeTagsListActiveHook,
 	RecentChange_saveHook,
 	SpecialPageBeforeExecuteHook,
-	UserLoginCompleteHook,
+	PostLoginRedirectHook,
 	BeforePageDisplayHook,
 	GetPreferencesHook,
 	OutputPageParserOutputHook,
@@ -828,18 +828,17 @@ class MobileFrontendHooks implements
 	}
 
 	/**
-	 * UserLoginComplete hook handler
-	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/UserLoginComplete
+	 * PostLoginRedirect hook handler
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/PostLoginRedirect
 	 *
 	 * Used here to handle watchlist actions made by anons to be handled after
-	 * login or account creation.
+	 * login or account creation redirect.
 	 *
-	 * @param User $currentUser the user object that was created on login
-	 * @param string &$injected_html From 1.13, any HTML to inject after the login success message.
-	 * @param bool $direct
+	 * @inheritDoc
 	 */
-	public function onUserLoginComplete( $currentUser, &$injected_html, $direct ) {
+	public function onPostLoginRedirect( &$returnTo, &$returnToQuery, &$type ) {
 		$services = MediaWikiServices::getInstance();
+		/** @var MobileContext $context */
 		$context = $services->getService( 'MobileFrontend.Context' );
 		if ( !$context->shouldDisplayMobileView() ) {
 			return;
@@ -847,16 +846,16 @@ class MobileFrontendHooks implements
 
 		// If 'watch' is set from the login form, watch the requested article
 		$campaign = $context->getRequest()->getVal( 'campaign' );
-		$returnto = $context->getRequest()->getVal( 'returnto' );
-		$returntoquery = $context->getRequest()->getVal( 'returntoquery' );
 
 		// The user came from one of the drawers that prompted them to login.
 		// We must watch the article per their original intent.
-		if ( $campaign === 'mobile_watchPageActionCta' || $returntoquery === 'article_action=watch' ) {
-			$title = Title::newFromText( $returnto );
+		if ( $campaign === 'mobile_watchPageActionCta' ||
+			wfArrayToCgi( $returnToQuery ) === 'article_action=watch'
+		) {
+			$title = Title::newFromText( $returnTo );
 			// protect against watching special pages (these cannot be watched!)
 			if ( $title !== null && !$title->isSpecialPage() ) {
-				$services->getWatchlistManager()->addWatch( $currentUser, $title );
+				$services->getWatchlistManager()->addWatch( $context->getAuthority(), $title );
 			}
 		}
 	}
