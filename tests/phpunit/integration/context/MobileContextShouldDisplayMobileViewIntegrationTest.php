@@ -52,7 +52,7 @@ class MobileContextShouldDisplayMobileViewIntegrationTest extends MediaWikiInteg
 		$this->overrideConfigValues( [
 			'MFAutodetectMobileView' => true,
 			'MFMobileHeader' => 'X-Subdomain',
-			'MobileUrlTemplate' => '%h0.m.%h1.%h2',
+			'MobileUrlCallback' => fn ( $domain ) => "m.$domain",
 		] );
 
 		$request = $this->context->getRequest();

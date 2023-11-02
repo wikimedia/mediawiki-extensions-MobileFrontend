@@ -598,6 +598,12 @@
 			"class": "MobileFrontend\\Api\\ApiParseExtender"
 		}
 	},
+	"DeprecatedHooks": {
+		"GetMobileUrl": {
+			"deprecatedVersion": "1.42",
+			"component": "MobileFrontend"
+		}
+	},
 	"config": {
 		"MFCustomSiteModules": {
 			"value": false
@@ -735,6 +741,9 @@
 		},
 		"MobileUrlTemplate": {
 			"value": ""
+		},
+		"MobileUrlCallback": {
+			"value": null
 		},
 		"MobileFrontendFormatCookieExpiry": {
 			"value": null

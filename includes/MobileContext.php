@@ -99,6 +99,13 @@ class MobileContext extends ContextSource {
 	private $mobileUrlTemplate = null;
 
 	/**
+	 * In-process cache for checking whether the current wiki has a mobile URL that's
+	 * different from the desktop one.
+	 * @var bool|null
+	 */
+	private $hasMobileUrl = null;
+
+	/**
 	 * @var Config
 	 */
 	private $config;
@@ -599,6 +606,7 @@ class MobileContext extends ContextSource {
 	 *
 	 * @param string $mobileUrlHostTemplate URL host
 	 * @return string
+	 * @deprecated
 	 */
 	public function getMobileHostToken( $mobileUrlHostTemplate ) {
 		return preg_replace( '/%h[0-9]\.{0,1}/', '', $mobileUrlHostTemplate );
@@ -608,12 +616,42 @@ class MobileContext extends ContextSource {
 	 * Get the template for mobile URLs.
 	 * @see $wgMobileUrlTemplate
 	 * @return string
+	 * @deprecated In other classes, use hasMobileUrl() instead.
 	 */
-	public function getMobileUrlTemplate() {
+	private function getMobileUrlTemplate() {
 		if ( $this->mobileUrlTemplate === null ) {
 			$this->mobileUrlTemplate = $this->config->get( 'MobileUrlTemplate' );
 		}
 		return $this->mobileUrlTemplate;
+	}
+
+	/**
+	 * Returns the callback from $wgMobileUrlCallback, which changes
+	 *   a desktop domain into a mobile domain.
+	 * @return callable|null
+	 * @phan-return callable(string):string|null
+	 */
+	private function getMobileUrlCallback(): ?callable {
+		return $this->config->get( 'MobileUrlCallback' );
+	}
+
+	/**
+	 * True if the current wiki has a mobile URL that's different from the desktop one.
+	 * @return bool
+	 */
+	public function hasMobileDomain(): bool {
+		if ( $this->hasMobileUrl === null ) {
+			$mobileUrlCallback = $this->getMobileUrlCallback();
+			if ( $mobileUrlCallback ) {
+				$server = wfExpandUrl( $this->getConfig()->get( 'Server' ), PROTO_CANONICAL );
+				$serverParts = wfParseUrl( $server );
+				$mobileDomain = call_user_func( $mobileUrlCallback, $serverParts['host'] );
+				$this->hasMobileUrl = $mobileDomain !== $serverParts['host'];
+			} else {
+				$this->hasMobileUrl = $this->getMobileUrlTemplate() !== '';
+			}
+		}
+		return $this->hasMobileUrl;
 	}
 
 	/**
@@ -651,7 +689,12 @@ class MobileContext extends ContextSource {
 			}
 		}
 
-		$this->updateMobileUrlHost( $parsedUrl );
+		$mobileUrlCallback = $this->getMobileUrlCallback();
+		if ( $mobileUrlCallback ) {
+			$parsedUrl['host'] = call_user_func( $mobileUrlCallback, $parsedUrl['host'] );
+		} else {
+			$this->updateMobileUrlHost( $parsedUrl );
+		}
 		if ( $forceHttps ) {
 			$parsedUrl['scheme'] = 'https';
 			$parsedUrl['delimiter'] = '://';
@@ -670,7 +713,7 @@ class MobileContext extends ContextSource {
 	 */
 	public function usingMobileDomain() {
 		$mobileHeader = $this->config->get( 'MFMobileHeader' );
-		return ( $this->config->get( 'MobileUrlTemplate' )
+		return ( $this->hasMobileDomain()
 			&& $mobileHeader
 			&& $this->getRequest()->getHeader( $mobileHeader ) !== false
 		);
@@ -692,6 +735,7 @@ class MobileContext extends ContextSource {
 	/**
 	 * Update host of given URL to conform to mobile URL template.
 	 * @param array &$parsedUrl Result of parseUrl() or wfParseUrl()
+	 * @deprecated
 	 */
 	protected function updateMobileUrlHost( array &$parsedUrl ) {
 		if ( IPUtils::isIPAddress( $parsedUrl['host'] ) ) {
@@ -734,8 +778,7 @@ class MobileContext extends ContextSource {
 	protected function updateDesktopUrlHost( array &$parsedUrl ) {
 		$server = $this->getConfig()->get( 'Server' );
 
-		$mobileUrlHostTemplate = $this->parseMobileUrlTemplate( 'host' );
-		if ( !strlen( $mobileUrlHostTemplate ) ) {
+		if ( !$this->hasMobileDomain() ) {
 			return;
 		}
 
@@ -764,6 +807,7 @@ class MobileContext extends ContextSource {
 	 * in the not to distant future.
 	 *
 	 * @param array &$parsedUrl Result of parseUrl() or wfParseUrl()
+	 * @deprecated
 	 */
 	protected function updateMobileUrlPath( array &$parsedUrl ) {
 		$scriptPath = $this->getConfig()->get( 'ScriptPath' );
@@ -794,6 +838,7 @@ class MobileContext extends ContextSource {
 	 * Optionally specify which portion of the template you want returned.
 	 * @param string|null $part which part to return?
 	 * @return mixed
+	 * @deprecated
 	 */
 	public function parseMobileUrlTemplate( $part = null ) {
 		$mobileUrlTemplate = $this->getMobileUrlTemplate();
@@ -834,7 +879,7 @@ class MobileContext extends ContextSource {
 	 */
 	public function toggleView( $view ) {
 		$this->viewChange = $view;
-		if ( !strlen( trim( $this->getMobileUrlTemplate() ) ) ) {
+		if ( !$this->hasMobileDomain() ) {
 			$this->useFormat = $view;
 		}
 	}
@@ -843,8 +888,6 @@ class MobileContext extends ContextSource {
 	 * Performs view change as requested vy toggleView()
 	 */
 	public function doToggling() {
-		$mobileUrlTemplate = $this->getMobileUrlTemplate();
-
 		if ( !$this->viewChange ) {
 			return;
 		}
@@ -860,8 +903,8 @@ class MobileContext extends ContextSource {
 			// @TODO is this necessary with unsetting the cookie via JS?
 			$this->unsetStopMobileRedirectCookie();
 
-			// if no mobileurl template, set mobile cookie
-			if ( !strlen( trim( $mobileUrlTemplate ) ) ) {
+			// if no mobile domain support, set mobile cookie
+			if ( !$this->hasMobileDomain() ) {
 				$this->setUseFormatCookie();
 			} else {
 				// else redirect to mobile domain
@@ -876,8 +919,8 @@ class MobileContext extends ContextSource {
 				$this->unsetUseFormatCookie();
 			}
 
-			if ( strlen( trim( $mobileUrlTemplate ) ) ) {
-				// if mobileurl template, redirect to desktop domain
+			if ( $this->hasMobileDomain() ) {
+				// if there is mobile domain support, redirect to desktop domain
 				$desktopUrl = $this->getDesktopUrl( $url );
 				$this->getOutput()->redirect( $desktopUrl, 301 );
 			}
@@ -971,7 +1014,7 @@ class MobileContext extends ContextSource {
 	 * @param string $xanalytics_item In the format key=value
 	 */
 	public function addAnalyticsLogItemFromXAnalytics( $xanalytics_item ) {
-		list( $key, $val ) = explode( '=', $xanalytics_item, 2 );
+		[ $key, $val ] = explode( '=', $xanalytics_item, 2 );
 		$this->addAnalyticsLogItem( urldecode( $key ), urldecode( $val ) );
 	}
 
