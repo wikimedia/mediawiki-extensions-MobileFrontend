@@ -71,7 +71,6 @@ mfExtend( WatchstarPageList, PageList, {
 	/**
 	 * @param {jQuery.Element} $items
 	 * @param {WatchStatusMap} statuses
-	 * @return {void}
 	 */
 	queryUnitializedItems: function () {
 		return this.$el.find( 'li:not(.with-watchstar)' );
@@ -116,7 +115,6 @@ mfExtend( WatchstarPageList, PageList, {
 	/**
 	 * @param {jQuery.Element} $items
 	 * @param {WatchStatusMap} statuses
-	 * @return {void}
 	 */
 	renderItems: function ( $items, statuses ) {
 		var self = this;
