@@ -1021,6 +1021,8 @@ class MobileFrontendHooks implements
 				'type' => 'check',
 				'label-message' => 'mobile-frontend-special-pages-pref',
 				'help-message' => 'mobile-frontend-special-pages-pref',
+				// The following messages are generated here:
+				// * prefs-mobile
 				'section' => self::MOBILE_PREFERENCES_SECTION
 			];
 		}

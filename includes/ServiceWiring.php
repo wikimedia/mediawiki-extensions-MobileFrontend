@@ -33,18 +33,40 @@ return [
 		// maybe we can get all available features by looping through MobileFrontend.Feature.*
 		// and register it here, it would be nice to have something like
 		// $services->getAllByPrefix('MobileFrontend.Feature')
+
+		// Generates the following messages:
+		// * mobile-frontend-mobile-option-MFEnableWikidataDescriptions
+		// * mobile-frontend-mobile-option-MFEnableWikidataDescriptions-description
 		$manager->registerFeature( new Feature( 'MFEnableWikidataDescriptions', 'mobile-frontend',
 			$config->get( 'MFEnableWikidataDescriptions' ) ) );
+		// Generates the following messages:
+		// * mobile-frontend-mobile-option-MFLazyLoadImages
+		// * mobile-frontend-mobile-option-MFLazyLoadImages-description
 		$manager->registerFeature( new Feature( 'MFLazyLoadImages', 'mobile-frontend',
 			$config->get( 'MFLazyLoadImages' ) ) );
+		// Generates the following messages:
+		// * mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox
+		// * mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox-description
 		$manager->registerFeature( new Feature( 'MFShowFirstParagraphBeforeInfobox', 'mobile-frontend',
 			$config->get( 'MFShowFirstParagraphBeforeInfobox' ) ) );
+		// Generates the following messages:
+		// * mobile-frontend-mobile-option-MFEnableFontChanger
+		// * mobile-frontend-mobile-option-MFEnableFontChanger-description
 		$manager->registerFeature( new Feature( 'MFEnableFontChanger', 'mobile-frontend',
 			$config->get( 'MFEnableFontChanger' ) ) );
+		// Generates the following messages:
+		// * mobile-frontend-mobile-option-MFUseDesktopSpecialHistoryPage
+		// * mobile-frontend-mobile-option-MFUseDesktopSpecialHistoryPage-description
 		$manager->registerFeature( new Feature( 'MFUseDesktopSpecialHistoryPage', 'mobile-frontend',
 			$config->get( 'MFUseDesktopSpecialHistoryPage' ) ) );
+		// Generates the following messages:
+		// * mobile-frontend-mobile-option-MFUseDesktopSpecialWatchlistPage
+		// * mobile-frontend-mobile-option-MFUseDesktopSpecialWatchlistPage-description
 		$manager->registerFeature( new Feature( 'MFUseDesktopSpecialWatchlistPage', 'mobile-frontend',
 			$config->get( 'MFUseDesktopSpecialWatchlistPage' ) ) );
+		// Generates the following messages:
+		// * mobile-frontend-mobile-option-MFUseDesktopDiffPage
+		// * mobile-frontend-mobile-option-MFUseDesktopDiffPage-description
 		$manager->registerFeature( new Feature( 'MFUseDesktopDiffPage', 'mobile-frontend',
 			$config->get( 'MFUseDesktopDiffPage' ) ) );
 
