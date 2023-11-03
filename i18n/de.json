@@ -44,7 +44,7 @@
 	"mobile-frontend-edit-signup-action": "<strong>Hilf, {{SITENAME}} zu verbessern.</strong><br />Zum Bearbeiten registrieren.",
 	"mobile-frontend-editor-anon": "Ohne Anmeldung bearbeiten",
 	"mobile-frontend-editor-anonwarning": "<strong>Warnung:</strong> Du bist nicht angemeldet. Deine IP-Adresse wird bei Bearbeitungen öffentlich sichtbar. <strong>Melde dich an</strong> oder <strong>lege ein Benutzerkonto an</strong>, damit Bearbeitungen deinem Benutzernamen zugeordnet werden. Ein eigenes Benutzerkonto hat eine ganze Reihe von Vorteilen.",
-	"mobile-frontend-editor-autocreatewarning": "<strong>Warnung:</strong> Du bist nicht angemeldet. Deine Eingabe wird einem <strong>[[$1|automatisch generierten Namen]]</strong> zugeordnet, indem ein Cookie in deinem Browser gespeichert wird. Deine IP-Adresse wird für vertrauenswürdige Benutzer sichtbar sein. Wenn du dich <strong>anmeldest</strong> oder <strong>ein Konto erstellst</strong>, werden deine Bearbeitungen einem von dir gewählten Namen zugeordnet; dies hat auch weitere Vorzüge.",
+	"mobile-frontend-editor-autocreatewarning": "<strong>Warnung:</strong> Sie sind nicht angemeldet. Sobald du eine Änderung vornimmst, wird ein temporäres Konto für dich erstellt. [[$1|Weitere Informationen]]. <strong>Melde dich an</strong> oder <strong>erstelle ein Konto</strong>, um nach Ablauf dieses Kontos weiterhin Benachrichtigungen zu erhalten und auf andere Funktionen zugreifen zu können.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Anmelden",
 	"mobile-frontend-drawer-arrow-label": "Schließen",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "OK",
