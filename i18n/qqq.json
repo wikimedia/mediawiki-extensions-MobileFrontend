@@ -63,7 +63,7 @@
 	"mobile-frontend-edit-signup-action": "Message shown above the signup form when it is reached from a link in the editor.",
 	"mobile-frontend-editor-anon": "Title for link to edit a page without logging in.",
 	"mobile-frontend-editor-anonwarning": "A warning message, when user tries to edit without logging in.",
-	"mobile-frontend-editor-autocreatewarning": "A warning message, when user tries to edit without logging in, and temporary user auto-creation is enabled.\nParameters:\n* $1 - a link to the documentation page for temporary accounts",
+	"mobile-frontend-editor-autocreatewarning": "A warning message, when user tries to edit without logging in, and temporary user auto-creation is enabled.\nParameters:\n* $1 - a link to the documentation page for temporary accounts\n\nThis message is similar to these:\n* {{msg-mw|Autocreate-edit-warning}}\n* {{msg-mw|Discussiontools-replywidget-autocreate-warning}}",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Label for a button in the mobile block message drawer.\n{{identical|Log in}}",
 	"mobile-frontend-drawer-arrow-label": "Label for the arrow icon button in the drawer",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "Label for a button in the mobile block message drawer.",

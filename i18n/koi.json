@@ -5,7 +5,11 @@
 			"Римма"
 		]
 	},
+	"mobile-frontend-copyright": "Модік абу кӧ иньдӧм, пытшкӧссӧ позьӧ видзӧтны $1 лицензия сьӧрті",
 	"mobile-frontend-editor-loadingtooslow": "Жагӧна йитӧм?",
 	"mobile-frontend-editor-loadbasiceditor": "Вуджӧ заводитӧм тексттэз веськӧтӧм дынӧ",
-	"mobile-frontend-language-heading": "Кыввез"
+	"mobile-frontend-language-heading": "Кыввез",
+	"mobile-frontend-terms-text": "Вӧдитчан корӧм",
+	"mobile-frontend-view": "Мобильнӧй версия",
+	"mobile-frontend-view-desktop": "Пызанвыв версия"
 }

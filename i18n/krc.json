@@ -14,11 +14,9 @@
 	"mobile-frontend-desc": "Мобил интерфейс",
 	"mobile-frontend-diffview-anonymous": "Аноним",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Кириу",
-	"mobile-frontend-featured-article": "Бюгюннгю сайланнган материал",
 	"mobile-frontend-last-modified-date": "Ахыр тюрлениуле $2 $1 этилгендиле",
 	"mobile-frontend-main-menu-settings-heading": "Сайтны мобил версиясыны джарашдырыўлары",
 	"mobile-frontend-missing-image": "Сурат",
-	"mobile-frontend-news-items": "Джангылыкълада",
 	"mobile-frontend-opt-in-explain": "Бета-тест этиўге къошулсагъыз, талай экспериментал функцияны хайырландырыргъа эркинлик берилликди, алай а халатха неда проблемагъа тюберге къоркъуў ёсерикди.",
 	"mobile-frontend-privacy-link-text": "Ташалыкъ",
 	"mobile-frontend-save-settings": "Джарашдырыўланы сакъла",
@@ -26,8 +24,6 @@
 	"mobile-frontend-terms-text": "Хайырланыу шартла",
 	"mobile-frontend-view": "Мобил версия",
 	"mobile-frontend-view-desktop": "Стационар",
-	"mobile-frontend-watchlist-add": "«$1» бетни кёзде тургъан тизменге къош",
-	"mobile-frontend-watchlist-removed": "«$1» бетни кёзде тургъан тизменгден кетер",
 	"tag-mobile_edit": "Мобил адыр бла тюрлендириу",
 	"tag-mobile_web_edit": "Сайтны мобил версиясындан тюрлендириу"
 }

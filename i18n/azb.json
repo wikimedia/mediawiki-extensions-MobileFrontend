@@ -20,7 +20,6 @@
 	"mobile-frontend-editor-editing-page": "<span><strong>$1 </strong> دَییشدیریلیر</span>",
 	"mobile-frontend-editor-switch-editor": "دییشدیریجینی دَییش",
 	"mobile-frontend-fontchanger-link": "فوْنت سایزی",
-	"mobile-frontend-featured-article": "گونون سئچیلمیش یازی سی",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} سیزین کیمی آدام‌لارین الی ایله یارانیب‌دیر.</strong><br /> قاتیلماق اوچون حسابینیزا گیرین.",
 	"mobile-frontend-joined-seconds": "{{PLURAL:$2|$2 ثانیه|$2 ثانیه}} قاباق {{GENDER:$1|عوضو اولدو}}",
 	"mobile-frontend-joined-minutes": "{{PLURAL:$2|$2 دقیقه|$2 دقیقه}} قاباق {{GENDER:$1|عوضو اولدو}}",
@@ -37,7 +36,6 @@
 	"mobile-frontend-last-modified-with-user-months": "سون دَییشدیرمه {{PLURAL:$3|$3 آی}} قاباق {{PLURAL:$5|[$6 $2]|0=بیر تانیلماز ایشلدن}} طرفیندن [$4 {{GENDER:$1|ائدیلیبدیر}}]",
 	"mobile-frontend-main-menu-settings-heading": "موبایل سایت ترجیحلری",
 	"mobile-frontend-missing-image": "شکیل",
-	"mobile-frontend-news-items": "خبرلرده",
 	"mobile-frontend-privacy-link-text": "شخصی حریم",
 	"mobile-frontend-save-settings": "ذخیره ائت",
 	"mobile-frontend-search-content": "صفحه‌لرده آختاریش",
@@ -47,12 +45,10 @@
 	"mobile-frontend-terms-text": "ایشلتمک شرطلری",
 	"mobile-frontend-view": "موبایل نوسخه‌سی‌",
 	"mobile-frontend-view-desktop": "دسکتاپ",
-	"mobile-frontend-watchlist-add": "$1 سیزین ایزله‌دیکلرینیزه آرتیریلدی",
 	"mobile-frontend-watchlist-filter-all": "بوتون",
 	"mobile-frontend-watchlist-filter-articles": "یازیلار",
 	"mobile-frontend-watchlist-filter-other": "آیری",
 	"mobile-frontend-watchlist-filter-talk": "دانیشیق",
-	"mobile-frontend-watchlist-removed": "$1 سیزین ایزله‌دیکلرینیزدن سیلیندی",
 	"tag-mobile_edit": "موبایل ایله دَییشیک",
 	"tag-mobile_web_edit": "موبایل وبی ایله دَییشیک"
 }

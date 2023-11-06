@@ -3,6 +3,7 @@
 		"authors": [
 			"AmaryllisGardener",
 			"Caliburn",
+			"CiphriusKane",
 			"John Reid",
 			"MinecraftAustralia"
 		]
@@ -10,19 +11,14 @@
 	"abusefilter-edit-builder-vars-user-mobile": "Whether or nae a uiser is eeditin throu the mobile interface",
 	"mobile-frontend-account-create-captcha-placeholder": "Enter confirmation code",
 	"mobile-frontend-changeslist-nocomment": "no eedit summary",
-	"mobile-frontend-cite-error-title": "Error laidin citations",
-	"mobile-frontend-cite-error": "A problem occurred while attemptin tae load citations due tae a bad reveesion identifier.",
-	"mobile-frontend-cite-none-available": "Thare are no citations available for this page.",
 	"mobile-frontend-clear-search": "Clear",
 	"mobile-frontend-copyright": "Content is available unner $1 unless itherwise notit.",
 	"mobile-frontend-editor-licensing": "Bi hainin chynges, ye agree tae release yer contreebution unner the $1 license.",
 	"mobile-frontend-editor-licensing-with-terms": "Bi hainin chynges, ye agree til the $1 n agree tae release yer contreebution unner the $2 license.",
-	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|Ar ye sair ye want tae cræft}} ae new page oan {{SITENAME}}?",
+	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|Ar ye shuir that ye want tae mak}} ae new page on {{SITENAME}}?",
 	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|Ye}} {{GENDER:$1|ar cræftin}} ae new page oan {{SITENAME}}!",
 	"mobile-frontend-editor-switch-editor": "Switch eediter",
-	"mobile-frontend-featured-article": "The day's featurt content",
 	"mobile-frontend-last-modified-date": "Last eeditit on $1, at $2",
-	"mobile-frontend-news-items": "In the news",
 	"mobile-frontend-privacy-link-text": "Privacy",
 	"mobile-frontend-requires-mobile": "This page isna available oan desktap. Please clap the mobile luik-at airtin at the bottom o the page.",
 	"mobile-frontend-requires-title": "Page naw available",
