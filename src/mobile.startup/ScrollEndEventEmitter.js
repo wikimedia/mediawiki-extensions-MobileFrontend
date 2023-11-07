@@ -127,6 +127,9 @@ mfExtend( ScrollEndEventEmitter, {
 	 * @return {boolean}
 	 */
 	scrollNearEnd: function () {
+		if ( !this.$el || !this.$el.offset() ) {
+			return false;
+		}
 		var $window = util.getWindow(),
 			scrollBottom = $window.scrollTop() + $window.height(),
 			endPosition = this.$el.offset().top + this.$el.outerHeight();
