@@ -3,6 +3,7 @@ var View = require( '../mobile.startup/View' ),
 	mfExtend = require( '../mobile.startup/mfExtend' ),
 	IconButton = require( '../mobile.startup/IconButton' ),
 	icons = require( '../mobile.startup/icons' ),
+	eventBus = require( '../mobile.startup/eventBusSingleton' ),
 	Button = require( '../mobile.startup/Button' ),
 	detailsButton = new Button( {
 		label: mw.msg( 'mobile-frontend-media-details' ),
@@ -31,8 +32,7 @@ var View = require( '../mobile.startup/View' ),
  *
  * @class ImageCarousel
  * @extends View
- * @param {Object} options Configuration options
- * @param {OO.EventEmitter} options.eventBus Object used to listen for resize:throttled events
+ * @param {Object} options Configuration options, see Overlay#defaults
  */
 function ImageCarousel( options ) {
 	this.gateway = options.gateway || new ImageGateway( {
@@ -296,7 +296,7 @@ mfExtend( ImageCarousel, View, {
 			showLoadFailMsg();
 		} );
 
-		this.eventBus.on( 'resize:throttled', this._positionImage.bind( this ) );
+		eventBus.on( 'resize:throttled', this._positionImage.bind( this ) );
 		this._positionImage();
 	},
 
