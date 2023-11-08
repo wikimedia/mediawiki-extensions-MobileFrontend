@@ -450,17 +450,18 @@ class MobileFrontendHooks implements
 		$oldRevRecord = $diff->getOldRevision();
 		$newRevRecord = $diff->getNewRevision();
 
+		$otherParams = $diff->getContext()->getRequest()->getValues();
+		$title = $context->getTitle();
+		$output = $context->getOutput();
 		// Only do redirects to MobileDiff if user is in mobile view and it's not a special page
 		if ( $context->shouldDisplayMobileView() &&
-			!$context->getTitle()->isSpecialPage() &&
+			!$title->isSpecialPage() &&
 			!$featureManager->isFeatureAvailableForCurrentUser( 'MFUseDesktopDiffPage' ) &&
 			self::shouldMobileFormatSpecialPages( $context->getUser() )
 		) {
-			$output = $context->getOutput();
 			$newRevId = $newRevRecord->getId();
 
 			// Pass other query parameters, e.g. 'unhide' (T263937)
-			$otherParams = $diff->getContext()->getRequest()->getValues();
 			unset( $otherParams['diff'] );
 			unset( $otherParams['oldid'] );
 			// We pass diff/oldid through the page title, so we must unset any parameters
@@ -487,6 +488,12 @@ class MobileFrontendHooks implements
 			} else {
 				$output->redirect( $redirectUrl );
 			}
+		} elseif (
+			$featureManager->isFeatureAvailableForCurrentUser( 'MFUseDesktopDiffPage' ) &&
+			!isset( $otherParams['diffonly'] )
+		) {
+			$otherParams['diffonly'] = '1';
+			$output->redirect( $title->getFullUrl( $otherParams ) );
 		}
 	}
 
