@@ -4,7 +4,8 @@
 			"AmaryllisGardener",
 			"Caliburn",
 			"John Reid",
-			"MinecraftAustralia"
+			"MinecraftAustralia",
+			"CiphriusKane"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Whether or nae a uiser is eeditin throu the mobile interface",
@@ -17,7 +18,7 @@
 	"mobile-frontend-copyright": "Content is available unner $1 unless itherwise notit.",
 	"mobile-frontend-editor-licensing": "Bi hainin chynges, ye agree tae release yer contreebution unner the $1 license.",
 	"mobile-frontend-editor-licensing-with-terms": "Bi hainin chynges, ye agree til the $1 n agree tae release yer contreebution unner the $2 license.",
-	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|Ar ye sair ye want tae cræft}} ae new page oan {{SITENAME}}?",
+	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|Ar ye shuir that ye want tae mak}} ae new page on {{SITENAME}}?",
 	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|Ye}} {{GENDER:$1|ar cræftin}} ae new page oan {{SITENAME}}!",
 	"mobile-frontend-editor-switch-editor": "Switch eediter",
 	"mobile-frontend-featured-article": "The day's featurt content",
