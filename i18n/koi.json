@@ -1,8 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Merrahtar"
+			"Merrahtar",
+			"Римма"
 		]
 	},
-	"mobile-frontend-language-heading": "Кыввез"
+	"mobile-frontend-copyright": "Модік абу кӧ иньдӧм, пытшкӧссӧ позьӧ видзӧтны $1 лицензия сьӧрті",
+	"mobile-frontend-language-heading": "Кыввез",
+	"mobile-frontend-terms-text": "Вӧдитчан корӧм",
+	"mobile-frontend-view": "Мобильнӧй версия",
+	"mobile-frontend-view-desktop": "Пызанвыв версия"
 }
