@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
+			"Din-nani1",
 			"Dnshitobu",
 			"Musahfm"
 		]
 	},
+	"mobile-frontend-copyright": "Lahabali be yaɣili ŋɔ $1 gbaa yihi bɛ yi ti a tibili",
 	"mobile-frontend-terms-text": "Soya ni zalisi",
 	"mobile-frontend-view": "Nucheeni-baŋ lihigu",
 	"mobile-frontend-view-desktop": "Desktop",

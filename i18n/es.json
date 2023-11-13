@@ -118,6 +118,8 @@
 	"mobile-frontend-editor-viewing-source-page": "<strong>Viendo el código fuente de</strong><span> $1</span>",
 	"mobile-frontend-editor-wait": "Publicando la edición, espera un momento.",
 	"mobile-frontend-editor-loading": "Cargando el editor…",
+	"mobile-frontend-editor-loadingtooslow": "¿Tu conexión es lenta?",
+	"mobile-frontend-editor-loadbasiceditor": "Cambia al editor de código",
 	"mobile-frontend-editor-toload": "El editor se está cargando. Si sigues viendo este mensaje pasados unos segundos [$1 recarga la página].",
 	"mobile-frontend-expand-sections-description": "Ampliar siempre todas las secciones de todas las páginas de contenido de manera predeterminada",
 	"mobile-frontend-expand-sections-status": "Expandir todas las secciones",
