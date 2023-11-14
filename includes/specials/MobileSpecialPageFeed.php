@@ -28,7 +28,6 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 			// * T109277
 			// * T117279
 			'mobile.special.pagefeed.styles',
-			'mobile.user.icons'
 		] );
 		$this->setHeaders();
 		parent::execute( $par );

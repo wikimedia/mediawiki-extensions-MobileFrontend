@@ -14,10 +14,9 @@ class MobileUI {
 	 * @return string
 	 */
 	public static function icon( $iconName, $className = '' ) {
-		$legacyIconClass = 'mw-mf-icon-' . $iconName;
 		$iconClass = 'mf-icon-' . $iconName;
 		return Html::element( 'span', [
-			'class' => trim( 'mw-mf-icon ' . $iconClass . ' ' . $legacyIconClass . ' ' . $className ),
+			'class' => trim( 'mw-mf-icon ' . $iconClass . ' ' . $className ),
 		] );
 	}
 

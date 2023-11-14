@@ -94,13 +94,18 @@
 	display: inline-block;  // so that the icon in beta is next to the text when the text is centered
 }
 
-.mw-mf-icon-userAvatar {
+.mf-icon-userAvatar {
 	.cdx-mixin-css-icon( @cdx-icon-user-avatar, @param-is-button-icon: false,
 	@param-fill-color: @color-subtle );
 }
 
-.mw-mf-icon-userTemporary {
+.mf-icon-userTemporary {
 	.cdx-mixin-css-icon( @cdx-icon-user-temporary, @param-is-button-icon: false,
+	@param-fill-color: @color-subtle );
+}
+
+.mf-icon-userAnonymous {
+	.cdx-mixin-css-icon( @cdx-icon-user-anonymous, @param-is-button-icon: false,
 	@param-fill-color: @color-subtle );
 }
 
