@@ -128,7 +128,6 @@ class SpecialMobileDiff extends MobileSpecialPage {
 			'mobile.special.pagefeed.styles',
 			'mobile.user.icons'
 		] );
-		$output->addModules( 'mobile.special.mobilediff.images' );
 
 		// Allow other extensions to load more stuff here
 		// Now provides RevisionRecord objects, breaking change,

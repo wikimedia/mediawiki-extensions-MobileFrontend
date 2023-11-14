@@ -80,10 +80,6 @@
 		"maxSize": "1.6KB"
 	},
 	{
-		"resourceModule": "mobile.special.mobilediff.images",
-		"maxSize": "0.4KB"
-	},
-	{
 		"resourceModule": "mobile.special.mobilediff.styles",
 		"maxSize": "1.1KB"
 	}

@@ -490,24 +490,6 @@
 				"resources/mobile.special.pagefeed.styles/pagefeed.less"
 			]
 		},
-		"mobile.special.mobilediff.images": {
-			"class": "ResourceLoaderOOUIIconPackModule",
-			"selectorWithoutVariant": ".mw-ui-icon-mf-{name}",
-			"selectorWithVariant": ".mw-ui-icon-mf-{name}-{variant}",
-			"variants": {
-				"constructive": {
-					"color": "#14866d",
-					"global": true
-				},
-				"destructive": {
-					"color": "#d33",
-					"global": true
-				}
-			},
-			"icons": [
-				"upTriangle"
-			]
-		},
 		"mobile.special.mobilediff.styles": {
 			"styles": [
 				"resources/mobile.special.mobilediff.styles/mobilediff.less"

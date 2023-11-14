@@ -32,12 +32,12 @@ class MobileUITest extends \MediaWikiUnitTestCase {
 			[
 				'testicon',
 				'additionalclassnames',
-				'mw-mf-icon mw-mf-icon-testicon additionalclassnames'
+				'mw-mf-icon mf-icon-testicon mw-mf-icon-testicon additionalclassnames'
 			],
 			[
 				'testicon',
 				'',
-				'mw-mf-icon mw-mf-icon-testicon'
+				'mw-mf-icon mf-icon-testicon mw-mf-icon-testicon'
 			]
 		];
 	}
