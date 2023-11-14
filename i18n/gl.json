@@ -52,7 +52,7 @@
 	"mobile-frontend-editor-blocked-drawer-body-link": "Ver máis",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Motivo",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:1$|Bloqueado|Bloqueada}} por",
-	"mobile-frontend-editor-blocked-drawer-expiry-header": "O bloqueo caducará o",
+	"mobile-frontend-editor-blocked-drawer-expiry-header": "O bloqueo caducará",
 	"mobile-frontend-editor-blocked-drawer-help": "Máis detalles",
 	"mobile-frontend-editor-generic-block-reason": "Razón descoñecida",
 	"mobile-frontend-editor-cancel": "Cancelar",
