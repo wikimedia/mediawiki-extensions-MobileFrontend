@@ -207,7 +207,8 @@ class ExtMobileFrontend {
 		// It doesn't matter here since the page doesn't exist.
 		$data['editUrl'] = $title->getLinkURL( [ 'action' => 'edit', 'section' => 0 ] );
 		$data['editSection'] = 0;
-		$data['createPageLinkAdditionalClasses'] = $isCurrentUser ? 'mw-ui-button' : '';
+		$data['createPageLinkAdditionalClasses'] = $isCurrentUser ?
+			'cdx-button cdx-button--action-progressive cdx-button--weight-primary' : '';
 
 		$templateParser = new TemplateParser( __DIR__ . '/templates' );
 		return $templateParser->processTemplate( 'UserPageCta', $data );
