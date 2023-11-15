@@ -37,11 +37,7 @@
 	},
 	{
 		"resourceModule": "mobile.pagesummary.styles",
-		"maxSize": "0.4KB"
-	},
-	{
-		"resourceModule": "mobile.placeholder.images",
-		"maxSize": "0.3KB"
+		"maxSize": "0.5KB"
 	},
 	{
 		"resourceModule": "mobile.userpage.styles",

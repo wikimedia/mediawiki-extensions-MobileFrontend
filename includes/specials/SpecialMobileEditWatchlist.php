@@ -222,7 +222,6 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 		$out->addModuleStyles(
 			[
 				'mobile.pagelist.styles',
-				"mobile.placeholder.images",
 				'mobile.pagesummary.styles',
 				// FIXME: This module should be removed when the following tickets are resolved:
 				// * T305113

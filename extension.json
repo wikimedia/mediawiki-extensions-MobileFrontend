@@ -98,17 +98,6 @@
 				"resources/mobile.pagesummary.styles/pagesummary.less"
 			]
 		},
-		"mobile.placeholder.images": {
-			"class": "ResourceLoaderImageModule",
-			"useDataURI": false,
-			"selector": ".{name}",
-			"images": {
-				"mw-ui-icon-mf-spinner": "resources/mobile.placeholder.images/ajax-loader.gif",
-				"list-thumb-none": "resources/mobile.placeholder.images/noimage.svg",
-				"userpage-image-placeholder": "resources/mobile.placeholder.images/userpage.svg",
-				"amc-outreach-image": "resources/mobile.startup/amcOutreach/amc-outreach.svg"
-			}
-		},
 		"mobile.userpage.styles": {
 			"styles": [
 				"resources/mobile.userpage.styles/userpage.less"
@@ -221,7 +210,6 @@
 				"mediawiki.Title",
 				"mobile.pagelist.styles",
 				"mobile.pagesummary.styles",
-				"mobile.placeholder.images",
 				"mobile.startup.images",
 				"mobile.ooui.icons",
 				"mediawiki.language",
