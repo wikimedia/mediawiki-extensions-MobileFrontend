@@ -3,8 +3,12 @@
 		"authors": [
 			"Mainframe98",
 			"Siebrand",
-			"Sjoerddebruin"
+			"Sjoerddebruin",
+			"McDutchie"
 		]
 	},
-	"apihelp-parse-param-noimages": "Afbeeldingen uitschakelen in de mobiele uitvoer."
+	"apihelp-parse-param-mobileformat": "Verwerkte uitvoer retourneren in een formaat dat geschikt is voor mobiele apparaten.",
+	"apihelp-parse-param-noimages": "Afbeeldingen uitschakelen in de mobiele uitvoer.",
+	"apihelp-parse-param-mainpage": "Mobiele hoofdpagina-transformaties toepassen.",
+	"apihelp-webapp-manifest-summary": "Retourneert een webapp-manifest."
 }
