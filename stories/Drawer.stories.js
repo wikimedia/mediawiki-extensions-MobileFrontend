@@ -4,10 +4,10 @@ import { action } from '@storybook/addon-actions';
 import CtaDrawer from '../src/mobile.startup/CtaDrawer';
 import references from '../src/mobile.startup/references/references';
 import blockMessageDrawer from '../src/mobile.editor.overlay/blockMessageDrawer';
-import '../resources/mobile.editor.overlay/BlockMessageDetails.less';
 import '../resources/mobile.startup/Drawer.less';
 import '../resources/mobile.startup/references/ReferencesDrawer.less';
 import '../.storybook/mediawiki-skins-MinervaNeue/skinStyles/mobile.startup/drawers.less';
+import '../resources/mobile.editor.overlay/editor.less';
 
 export default {
 	title: 'Drawer'

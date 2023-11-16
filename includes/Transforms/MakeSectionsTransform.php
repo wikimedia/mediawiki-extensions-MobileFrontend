@@ -162,7 +162,7 @@ class MakeSectionsTransform implements IMobileTransform {
 
 		// prepend indicator - this avoids a reflow by creating a placeholder for a toggling indicator
 		$indicator = $doc->createElement( 'span' );
-		$indicator->setAttribute( 'class', 'indicator mf-icon mw-ui-icon-mf-expand mf-icon--small' );
+		$indicator->setAttribute( 'class', 'indicator mf-icon mf-icon-expand mf-icon--small' );
 		$heading->insertBefore( $indicator, $heading->firstChild ?? $heading );
 	}
 

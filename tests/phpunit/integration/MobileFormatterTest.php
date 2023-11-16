@@ -9,8 +9,7 @@ use MobileFrontend\Transforms\MoveLeadParagraphTransform;
  */
 class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 	private const TOC = '<div id="toc" class="toc-mobile"><h2>Contents</h2></div>';
-	// phpcs:ignore Generic.Files.LineLength.TooLong
-	private const SECTION_INDICATOR = '<span class="indicator mf-icon mw-ui-icon-mf-expand mf-icon--small"></span>';
+	private const SECTION_INDICATOR = '<span class="indicator mf-icon mf-icon-expand mf-icon--small"></span>';
 	private const HATNOTE_CLASSNAME = 'hatnote';
 	private const INFOBOX_CLASSNAME = 'infobox';
 	private const TITLE_REV_ID = 42;

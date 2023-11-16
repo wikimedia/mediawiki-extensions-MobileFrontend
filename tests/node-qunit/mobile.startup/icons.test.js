@@ -28,7 +28,7 @@ QUnit.test( '#cancel()', function ( assert ) {
 	icons.cancel();
 	assert.propEqual( spy.getCall( 0 ).args[ 0 ], {
 		tagName: 'button',
-		icon: icons.CANCEL_GLYPH + '-base20',
+		icon: icons.CANCEL_GLYPH,
 		additionalClassNames: ' cancel',
 		label: mw.msg( 'mobile-frontend-overlay-close' ),
 		isTypeButton: true
@@ -50,7 +50,7 @@ QUnit.test( '#cancel(, props)', function ( assert ) {
 	icons.cancel( '', { additionalClassNames: 'test' } );
 	assert.propEqual( spy.getCall( 0 ).args[ 0 ], {
 		tagName: 'button',
-		icon: icons.CANCEL_GLYPH + '-base20',
+		icon: icons.CANCEL_GLYPH,
 		additionalClassNames: 'test cancel',
 		label: mw.msg( 'mobile-frontend-overlay-close' ),
 		isTypeButton: true

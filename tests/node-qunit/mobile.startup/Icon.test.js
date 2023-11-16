@@ -30,7 +30,7 @@ QUnit.test( 'getIconClasses generates icon classes using icon', function ( asser
 		icon: 'user'
 	} );
 
-	assert.strictEqual( icon.getIconClasses(), 'mf-icon mw-ui-icon-mf-user ' );
+	assert.strictEqual( icon.getIconClasses(), 'mf-icon mf-icon-user ' );
 } );
 
 QUnit.test( 'getIconClasses generates icon classes using custom icon prefix', function ( assert ) {
@@ -39,7 +39,7 @@ QUnit.test( 'getIconClasses generates icon classes using custom icon prefix', fu
 		glyphPrefix: 'wikimedia'
 	} );
 
-	assert.strictEqual( icon.getIconClasses(), 'mf-icon mw-ui-icon-wikimedia-user ' );
+	assert.strictEqual( icon.getIconClasses(), 'mf-icon mf-icon-wikimedia-user ' );
 } );
 
 QUnit.test( 'getRotationClasses returns rotation classes', function ( assert ) {
@@ -48,10 +48,10 @@ QUnit.test( 'getRotationClasses returns rotation classes', function ( assert ) {
 	const iconNeg90 = new Icon( { rotation: -90 } );
 	const icon90 = new Icon( { rotation: 90 } );
 
-	assert.strictEqual( iconNeg180.getRotationClass(), 'mf-mw-ui-icon-rotate-flip' );
-	assert.strictEqual( icon180.getRotationClass(), 'mf-mw-ui-icon-rotate-flip' );
-	assert.strictEqual( iconNeg90.getRotationClass(), 'mf-mw-ui-icon-rotate-anti-clockwise' );
-	assert.strictEqual( icon90.getRotationClass(), 'mf-mw-ui-icon-rotate-clockwise' );
+	assert.strictEqual( iconNeg180.getRotationClass(), 'mf-icon-rotate-flip' );
+	assert.strictEqual( icon180.getRotationClass(), 'mf-icon-rotate-flip' );
+	assert.strictEqual( iconNeg90.getRotationClass(), 'mf-icon-rotate-anti-clockwise' );
+	assert.strictEqual( icon90.getRotationClass(), 'mf-icon-rotate-clockwise' );
 } );
 
 QUnit.test( 'getGlyphClassName uses icon prefix', function ( assert ) {
@@ -60,7 +60,7 @@ QUnit.test( 'getGlyphClassName uses icon prefix', function ( assert ) {
 		glyphPrefix: 'wikimedia'
 	} );
 
-	assert.strictEqual( icon.getGlyphClassName(), 'mw-ui-icon-wikimedia-user' );
+	assert.strictEqual( icon.getGlyphClassName(), 'mf-icon-wikimedia-user' );
 } );
 
 QUnit.test( 'getGlyphClassName does not use icon prefix if not provided', function ( assert ) {
@@ -69,7 +69,7 @@ QUnit.test( 'getGlyphClassName does not use icon prefix if not provided', functi
 		glyphPrefix: ''
 	} );
 
-	assert.strictEqual( icon.getGlyphClassName(), 'mw-ui-icon-user' );
+	assert.strictEqual( icon.getGlyphClassName(), 'mf-icon-user' );
 } );
 
 QUnit.test( 'adds small classes', function ( assert ) {
@@ -78,5 +78,5 @@ QUnit.test( 'adds small classes', function ( assert ) {
 		isSmall: true
 	} );
 
-	assert.strictEqual( icon.getClassName(), 'mf-icon mw-ui-icon-mf-user mf-icon--small ' );
+	assert.strictEqual( icon.getClassName(), 'mf-icon mf-icon-user mf-icon--small ' );
 } );

@@ -2,7 +2,7 @@ module.exports = {
 	defaultURLs: `
 		<div class=" drawer drawer-container__drawer position-fixed">
 			<button type="button" class="cdx-button cdx-button--size-large cdx-button--weight-quiet cdx-button--icon-only cancel">
-				<span class="mf-icon mw-ui-icon-mf-expand "> </span>
+				<span class="mf-icon mf-icon-expand "> </span>
 				<span>mobile-frontend-drawer-arrow-label</span>
 			</button>
 			<p> </p>
@@ -19,7 +19,7 @@ module.exports = {
 	overrideURLs: `
 		<div class=" drawer drawer-container__drawer position-fixed">
 			<button type="button" class="cdx-button cdx-button--size-large cdx-button--weight-quiet cdx-button--icon-only cancel">
-				<span class="mf-icon mw-ui-icon-mf-expand "> </span>
+				<span class="mf-icon mf-icon-expand "> </span>
 				<span>mobile-frontend-drawer-arrow-label</span>
 			</button>
 			<p> </p>

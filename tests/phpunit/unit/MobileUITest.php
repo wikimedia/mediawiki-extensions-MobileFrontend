@@ -23,7 +23,7 @@ class MobileUITest extends \MediaWikiUnitTestCase {
 	 * Format (e.g.);
 	 * [
 	 *     'testicon', 'additionalclassnames', // expected
-	 *     'mw-ui-icon mw-ui-icon-element mw-ui-icon-mf-testicon additionalclassnames'  // actual
+	 *     '<icon classes> additionalclassnames'  // actual
 	 * ]
 	 * @return array
 	 */

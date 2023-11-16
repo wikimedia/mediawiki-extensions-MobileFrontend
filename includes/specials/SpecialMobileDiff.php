@@ -260,11 +260,11 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		} elseif ( $bytesChanged === 0 ) {
 			$changeMsg = 'mobile-frontend-diffview-bytesnochange';
 			$sizeIcon = MobileUI::icon( $icon );
-			$sizeClass = $bytesClassNames . 'mw-mf-bytesneutral mf-mw-ui-icon-rotate-clockwise';
+			$sizeClass = $bytesClassNames . 'mw-mf-bytesneutral mf-icon-rotate-clockwise';
 		} else {
 			$changeMsg = 'mobile-frontend-diffview-bytesremoved';
 			$sizeIcon = MobileUI::icon( $icon . '-destructive' );
-			$sizeClass = $bytesClassNames . 'mw-mf-bytesremoved mf-mw-ui-icon-rotate-flip';
+			$sizeClass = $bytesClassNames . 'mw-mf-bytesremoved mf-icon-rotate-flip';
 			$bytesChanged = abs( $bytesChanged );
 		}
 

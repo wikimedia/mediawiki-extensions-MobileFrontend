@@ -111,7 +111,6 @@ mfExtend( IconButton, View, {
 		isIconOnly: true,
 		disabled: false,
 		base: 'mf-icon',
-		glyphPrefix: 'mf',
 		icon: '',
 		rotation: 0,
 		isSmall: false

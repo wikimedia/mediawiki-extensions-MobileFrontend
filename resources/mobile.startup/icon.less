@@ -1,36 +1,24 @@
 @import 'mediawiki.skin.variables.less';
 @import 'mediawiki.mixins.less';
 
-.mf-icon {
-	.cdx-mixin-css-icon-background( );
-	.cdx-mixin-css-icon-size( );
-	.cdx-mixin-css-icon-alignment( );
-	font-size: 14px;
-}
-
-.mf-icon--small {
-	.cdx-mixin-css-icon-background( @size-icon-small );
-	.cdx-mixin-css-icon-size( @size-icon-small );
-}
-
-.mf-mw-ui-icon-rotate-anti-clockwise {
+.mf-icon-rotate-anti-clockwise {
 	transform: rotate( -90deg );
 }
 
-.mf-mw-ui-icon-rotate-clockwise {
+.mf-icon-rotate-clockwise {
 	transform: rotate( 90deg );
 }
 
-.mf-mw-ui-icon-rotate-flip {
+.mf-icon-rotate-flip {
 	transform: scaleY( -1 );
 }
 
 .rtl {
-	.mf-mw-ui-icon-rotate-anti-clockwise {
+	.mf-icon-rotate-anti-clockwise {
 		transform: rotate( 90deg );
 	}
 
-	.mf-mw-ui-icon-rotate-clockwise {
+	.mf-icon-rotate-clockwise {
 		transform: rotate( -90deg );
 	}
 }

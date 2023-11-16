@@ -38,13 +38,13 @@ mfExtend( Icon, View, {
 			switch ( this.options.rotation ) {
 				case -180:
 				case 180:
-					rotationClass = 'mf-mw-ui-icon-rotate-flip';
+					rotationClass = 'mf-icon-rotate-flip';
 					break;
 				case -90:
-					rotationClass = 'mf-mw-ui-icon-rotate-anti-clockwise';
+					rotationClass = 'mf-icon-rotate-anti-clockwise';
 					break;
 				case 90:
-					rotationClass = 'mf-mw-ui-icon-rotate-clockwise';
+					rotationClass = 'mf-icon-rotate-clockwise';
 					break;
 				case 0:
 					break;
@@ -103,7 +103,7 @@ mfExtend( Icon, View, {
 	 */
 	defaults: {
 		base: 'mf-icon',
-		glyphPrefix: 'mf',
+		glyphPrefix: null,
 		icon: '',
 		rotation: 0,
 		isSmall: false,
@@ -128,9 +128,9 @@ mfExtend( Icon, View, {
 	 */
 	getGlyphClassName: function () {
 		if ( this.options.glyphPrefix ) {
-			return 'mw-ui-icon-' + this.options.glyphPrefix + '-' + this.options.icon;
+			return 'mf-icon-' + this.options.glyphPrefix + '-' + this.options.icon;
 		}
-		return 'mw-ui-icon-' + this.options.icon;
+		return 'mf-icon-' + this.options.icon;
 	},
 
 	template: util.template(

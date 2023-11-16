@@ -32,7 +32,7 @@ const icons = {
 	back: function () {
 		return new icons.IconButton( {
 			tagName: 'button',
-			icon: 'previous-base20',
+			icon: 'previous',
 			additionalClassNames: 'back',
 			label: mw.msg( 'mobile-frontend-overlay-close' )
 		} );
@@ -45,12 +45,12 @@ const icons = {
 	 *
 	 * @memberof icons
 	 * @instance
-	 * @param {string} [variant] defaults to `base20`.
+	 * @param {string} [variant].
 	 * @param {Object} [props] to extend
 	 * @return {IconButton}
 	 */
 	cancel: function ( variant, props = {} ) {
-		var glyph = variant ? `${CANCEL_GLYPH}-${variant}` : `${CANCEL_GLYPH}-base20`;
+		var glyph = variant ? `${CANCEL_GLYPH}-${variant}` : `${CANCEL_GLYPH}`;
 		props.additionalClassNames = props.additionalClassNames || '';
 		props.additionalClassNames += ' cancel';
 
@@ -119,8 +119,7 @@ const icons = {
 		props.additionalClassNames += ' watch-this-article';
 
 		return new icons.IconButton( Object.assign( {
-			icon: 'star-subtle',
-			glyphPrefix: 'mf'
+			icon: 'star-subtle'
 		}, props ) );
 	},
 	/**
@@ -136,8 +135,7 @@ const icons = {
 		props.additionalClassNames += ' watch-this-article watched';
 
 		return new icons.IconButton( Object.assign( {
-			icon: 'unStar-progressive',
-			glyphPrefix: 'mf'
+			icon: 'unStar-progressive'
 		}, props ) );
 	}
 };
