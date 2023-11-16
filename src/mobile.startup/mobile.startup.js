@@ -43,6 +43,7 @@ const mediaViewer = {
 };
 const languageInfoOverlay = require( './languageOverlay/languageInfoOverlay' );
 const languageOverlay = require( './languageOverlay/languageOverlay' );
+const amcOutreach = require( './amcOutreach/amcOutreach' );
 
 // Expose the entry chunk through libraryTarget and library. This allows
 // arbitrary file access via ResourceLoader like
@@ -128,12 +129,16 @@ module.exports = {
 	languageOverlay,
 	languageInfoOverlay,
 	mediaViewer,
-	amcOutreach: require( './amcOutreach/amcOutreach' ),
+	amcOutreach,
 	Section: require( './Section' )
 };
 
 mw.mobileFrontend = moduleLoader;
 mw._mobileFrontend = {
+	/**
+	 * @internal for use inside Minerva only.
+	 */
+	amcOutreach,
 	/**
 	 * @internal for use inside GrowthExperiments only.
 	 */
