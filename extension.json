@@ -103,23 +103,10 @@
 				"resources/mobile.userpage.styles/userpage.less"
 			]
 		},
-		"mobile.startup.images": {
-			"class": "ResourceLoaderOOUIIconPackModule",
-			"defaultColor": "#54595d",
-			"selectorWithoutVariant": ".mw-ui-icon-mf-{name}",
-			"selectorWithVariant": ".mw-ui-icon-mf-{name}-{variant}",
-			"icons": [
-				"articlesSearch",
-				"clear",
-				"error",
-				"reference"
-			]
-		},
 		"mobile.init.styles": {
 			"class": "ResourceLoaderLessVarFileModule",
 			"styles": [
-				"resources/mobile.init.styles.less",
-				"resources/mobile.init/mobile.less"
+				"resources/mobile.init.styles/main.less"
 			],
 			"lessMessages": [
 				"mobile-frontend-tap-to-display-image"
@@ -137,7 +124,6 @@
 				"mediawiki.router",
 				"mediawiki.storage",
 				"web2017-polyfills",
-				"mobile.ooui.icons",
 				"mobile.startup"
 			],
 			"messages": [
@@ -153,65 +139,23 @@
 			],
 			"skinStyles": {
 				"minerva": [
-					"resources/mobile.init/fakeToolbar.less",
-					"resources/mobile.init/editor.less"
+					"resources/mobile.init.styles/fakeToolbar.less",
+					"resources/mobile.init.styles/editor.less"
 				]
 			},
 			"scripts": [
 				"resources/dist/mobile.init.js"
 			]
 		},
-		"mobile.ooui.icons": {
-			"class": "ResourceLoaderOOUIIconPackModule",
-			"selectorWithoutVariant": ".mw-ui-icon-mf-{name}",
-			"selectorWithVariant": ".mw-ui-icon-mf-{name}-{variant}",
-			"variants": {
-				"base20": {
-					"color": "#54595d",
-					"global": true
-				},
-				"gray": {
-					"color": "#a2a9b1",
-					"global": true
-				},
-				"invert": {
-					"color": "#fff",
-					"global": true
-				}
-			},
-			"icons": [
-				"close",
-				"previous",
-				"next",
-				"alert",
-				"expand"
-			]
-		},
-		"mobile.user.icons": {
-			"class": "ResourceLoaderOOUIIconPackModule",
-			"selectorWithoutVariant": ".mw-ui-icon-mf-{name}",
-			"selectorWithVariant": ".mw-ui-icon-mf-{name}-{variant}",
-			"variants": {
-				"base20": {
-					"color": "#54595d",
-					"global": true
-				}
-			},
-			"icons": [
-				"userAnonymous",
-				"userAvatar"
-			]
-		},
 		"mobile.startup": {
 			"dependencies": [
 				"mediawiki.page.watch.ajax",
 				"mediawiki.template.mustache",
+				"mobile.init.styles",
 				"codex-search-styles",
 				"mediawiki.Title",
 				"mobile.pagelist.styles",
 				"mobile.pagesummary.styles",
-				"mobile.startup.images",
-				"mobile.ooui.icons",
 				"mediawiki.language",
 				"mediawiki.jqueryMsg",
 				"mediawiki.user",
@@ -292,8 +236,6 @@
 		},
 		"mobile.editor.overlay": {
 			"dependencies": [
-				"mobile.editor.images",
-				"mobile.user.icons",
 				"oojs-ui.styles.icons-editing-core",
 				"mediawiki.action.view.postEdit",
 				"mediawiki.util",
@@ -319,9 +261,7 @@
 				}
 			],
 			"styles": [
-				"resources/mobile.editor.overlay/editor.less",
-				"resources/mobile.editor.overlay/BlockMessageDetails.less",
-				"resources/mobile.editor.overlay/editor.ve.less"
+				"resources/mobile.editor.overlay/editor.less"
 			],
 			"messages": [
 				"mobile-frontend-editor-continue",
@@ -369,19 +309,6 @@
 				"mobile-frontend-editor-anon",
 				"parentheses"
 			]
-		},
-		"mobile.editor.images": {
-			"class": "ResourceLoaderOOUIIconPackModule",
-			"selectorWithVariant": ".mw-ui-icon-mf-{name}-{variant}",
-			"icons": [
-				"block"
-			],
-			"variants": {
-				"destructive": {
-					"color": "#d33",
-					"global": true
-				}
-			}
 		},
 		"mobile.mediaViewer": {
 			"dependencies": [

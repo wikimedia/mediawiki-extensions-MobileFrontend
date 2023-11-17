@@ -4,9 +4,7 @@
 	h5 {
 		font-weight: @font-weight-bold;
 		margin: 0;
-		// This should match the height of an icon in px.
-		// FIXME: Use @icon-glyph-size-md when Minerva's mw-ui-icon skinStyles are in core.
-		line-height: 20px;
+		line-height: unit( @size-icon-medium, rem );
 	}
 
 	h6 {
@@ -15,6 +13,7 @@
 }
 
 .block-message-icon {
+	.cdx-mixin-button-layout-flush( 'top', true, 'large' );
 	float: left;
 	padding: 12px;
 }

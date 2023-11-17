@@ -1,14 +1,25 @@
 @import 'mediawiki.skin.variables.less';
+@import 'mobile.less';
+@import 'icons.less';
 
 .client-js {
 	.collapsible-block:not( .collapsible-block-js ) {
 		display: none;
 	}
+
+	.section-heading {
+		align-items: center;
+	}
+}
+
+.mf-icon {
+	.cdx-mixin-css-icon-background( );
+	.cdx-mixin-css-icon-size( );
+	.cdx-mixin-css-icon-alignment( );
+	font-size: 14px;
 }
 
 .section-heading .indicator {
-	width: 16px;
-	height: 16px;
 	margin-right: 6px;
 }
 

@@ -1,11 +1,11 @@
 [
 	{
 		"resourceModule": "mobile.startup",
-		"maxSize": "24.0KB"
+		"maxSize": "24.2KB"
 	},
 	{
 		"resourceModule": "mobile.editor.overlay",
-		"maxSize": "12.6KB"
+		"maxSize": "13.4KB"
 	},
 	{
 		"resourceModule": "mobile.init",
@@ -44,22 +44,6 @@
 		"maxSize": "0.4KB"
 	},
 	{
-		"resourceModule": "mobile.startup.images",
-		"maxSize": "0.8KB"
-	},
-	{
-		"resourceModule": "mobile.ooui.icons",
-		"maxSize": "0.8KB"
-	},
-	{
-		"resourceModule": "mobile.user.icons",
-		"maxSize": "0.5KB"
-	},
-	{
-		"resourceModule": "mobile.editor.images",
-		"maxSize": "0.4KB"
-	},
-	{
 		"resourceModule": "mobile.special.styles",
 		"maxSize": "0.8KB"
 	},
@@ -77,6 +61,6 @@
 	},
 	{
 		"resourceModule": "mobile.special.mobilediff.styles",
-		"maxSize": "1.1KB"
+		"maxSize": "1.4KB"
 	}
 ]
