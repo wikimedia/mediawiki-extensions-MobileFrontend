@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
+			"Joachim Yirkang",
 			"Linus Konkor",
 			"Zakaria Tunsung"
 		]
 	},
+	"mobile-frontend-copyright": "Yɛlɛ yaga be la a pule poɔŋ $1 sɛɛ ka yɛlɛ mine kpɛ.",
 	"mobile-frontend-terms-text": "Sagebo yelsɛgeree",
 	"mobile-frontend-view": "Tangaraa kaabo",
 	"mobile-frontend-view-desktop": "Kɔmpita niŋe"
