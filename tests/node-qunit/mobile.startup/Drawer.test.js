@@ -43,6 +43,7 @@ QUnit.test( 'visible on show()', function ( assert ) {
 	const
 		done = assert.async(),
 		onShow = () => {
+			// eslint-disable-next-line no-use-before-define
 			assertVisible( subject );
 			assert.true( true );
 			done();
@@ -76,6 +77,7 @@ QUnit.test( 'hidden on hide()', function ( assert ) {
 	const
 		done = assert.async(),
 		onBeforeHide = () => {
+			// eslint-disable-next-line no-use-before-define
 			assertHidden( subject );
 			assert.true( true );
 			done();
@@ -89,6 +91,7 @@ QUnit.test( 'hidden on mask click', function ( assert ) {
 	const
 		done = assert.async(),
 		onBeforeHide = () => {
+			// eslint-disable-next-line no-use-before-define
 			assertHidden( subject );
 			assert.true( true );
 			done();

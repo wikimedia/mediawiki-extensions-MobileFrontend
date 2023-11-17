@@ -10,7 +10,6 @@
 		"computed-property-spacing": "off",
 		"mediawiki/valid-package-file-require": "off",
 		"no-underscore-dangle": "off",
-		"no-use-before-define": "off",
 		"strict": "off"
 	},
 	"env": {

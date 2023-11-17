@@ -45,7 +45,6 @@ module.exports = {
 		"computed-property-spacing": "off",
 		// Not using ResourceLoader modules
 		"mediawiki/valid-package-file-require": "off",
-		"no-use-before-define": "off",
 		"no-underscore-dangle": "off",
 		"no-jquery/no-class-state": "off",
 		"no-jquery/no-global-selector": "off"
