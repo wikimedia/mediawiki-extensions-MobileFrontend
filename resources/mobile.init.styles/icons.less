@@ -42,3 +42,25 @@
 	.cdx-mixin-css-icon( @cdx-icon-expand, @param-is-button-icon: false,
 	@param-fill-color: #fff );
 }
+
+.mf-icon-rotate-anti-clockwise {
+	transform: rotate( -90deg );
+}
+
+.mf-icon-rotate-clockwise {
+	transform: rotate( 90deg );
+}
+
+.mf-icon-rotate-flip {
+	transform: scaleY( -1 );
+}
+
+.rtl {
+	.mf-icon-rotate-anti-clockwise {
+		transform: rotate( 90deg );
+	}
+
+	.mf-icon-rotate-clockwise {
+		transform: rotate( -90deg );
+	}
+}
