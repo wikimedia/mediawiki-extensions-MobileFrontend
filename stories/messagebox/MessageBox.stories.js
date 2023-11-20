@@ -32,7 +32,7 @@ MessageBoxWarning.story = {
 export const MessageBoxSuccess = () => {
 	return new MessageBox( {
 		heading: 'Yes!',
-		className: 'successbox',
+		className: 'mw-message-box-success',
 		msg: 'You did it!'
 	} ).$el[0];
 };

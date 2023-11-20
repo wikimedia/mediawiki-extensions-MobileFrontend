@@ -1,5 +1,8 @@
 
 @import '../mobile.less/mobile.variables.less';
+@msg-mobile-frontend-tap-to-display-image: 'Tap to display';
+@import '../resources/mobile.init.styles/main.less';
+@import '../resources/mobile.editor.overlay/editor.less';
 
 // resets
 html, body {
@@ -54,97 +57,10 @@ a {
  */
 @loadUri: 'https://en.m.wikipedia.beta.wmflabs.org/w/load.php';
 
-.icon( @module, @name ) {
-	background-image: url( '@{loadUri}?modules=@{module}&image=@{name}&format=rasterized&skin=minerva' );
-}
-
-.icon-variant( @module, @name, @variant ) {
-	background-image: url( '@{loadUri}?modules=@{module}&image=@{name}&variant=@{variant}&format=rasterized&skin=minerva' );
-}
-
-.mw-ui-icon-mf-expand:before {
-	.icon('mobile.ooui.icons', 'expand' );
-}
-
-.mw-ui-icon-mf-search-clear:before {
-	.icon('mobile.startup.images', 'search-clear' );
-}
-
-.mw-ui-icon-mf-expand-invert:before {
-	.icon-variant('mobile.ooui.icons', 'expand', 'invert' );
-}
-
-.mw-ui-icon-mf-expand-gray:before {
-	.icon-variant('mobile.ooui.icons', 'expand',  'gray' );
-}
-
-.mw-ui-icon-mf-spinner:before {
-	.icon('mobile.placeholder.images', 'mw-ui-icon-mf-spinner:before' );
-}
-
-.mw-ui-icon-mf-error:before {
-	.icon('mobile.startup.images', 'error' );
-}
-
-.mw-ui-icon-mf-previous:before {
-	.icon('mobile.ooui.icons', 'previous' );
-}
-
-.mw-ui-icon-mf-previous-base20:before {
-	.icon-variant('mobile.ooui.icons', 'previous', 'base20' );
-}
-
-.mw-ui-icon-mf-close:before {
-	.icon('mobile.ooui.icons', 'close' );
-}
-
-.mw-ui-icon-mf-close-base20:before {
-	.icon-variant('mobile.ooui.icons', 'close', 'base20' );
-}
-
-.mw-ui-icon-mf-close-gray:before {
-	.icon-variant('mobile.ooui.icons', 'close', 'gray' );
-}
-
-.mw-ui-icon-mf-citation-invert:before {
-	.icon('mobile.startup.images', 'citation' );
-}
-
-.mw-ui-icon-mf-search-content:before {
-	.icon('mobile.startup.images', 'search-content' );
-}
-
-.mw-ui-icon-mf-alert-invert:before {
-	.icon-variant('mobile.ooui.icons', 'alert', 'invert' );
-}
-
-.amc-outreach-image {
-	.icon('mobile.placeholder.images', 'amc-outreach-image' );
-}
-
-.mw-ui-icon-mf-profile:before {
-	.icon('mobile.user.icons', 'userAvatar' );
-}
-
-.list-thumb-none {
-	.icon('mobile.placeholder.images', 'list-thumb-none' );
-}
-
-input.search,
-.mw-ui-icon-minerva-magnifying-glass:before {
-	.icon('skins.minerva.content.styles.images', 'input.search%2C.mw-ui-icon-minerva-magnifying-glass%3Abefore' );
-}
-
-.mw-ui-icon-wikimedia-star-base20:before {
-	.icon('skins.minerva.icons.wikimedia', 'star');
-}
-
-.mw-ui-icon-unStar-progressive:before {
-	.icon-variant('skins.minerva.icons.wikimedia', 'unStar', 'progressive');
-}
-
-.oo-ui-icon-check {
-	.icon-variant('oojs-ui.styles.icons-interactions', 'check', 'invert');
+.cdx-button.cdx-button--icon-only {
+	span + span {
+		display: none;
+	}
 }
 
 @import './mediawiki-skins-MinervaNeue/resources/skins.minerva.base.styles/ui.less';

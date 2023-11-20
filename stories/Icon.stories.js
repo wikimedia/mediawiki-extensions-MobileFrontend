@@ -57,7 +57,7 @@ export const ArrowRotated180Degrees = () => {
 			isSmall: true,
 			rotation: 180,
 			label: 'Arrow small',
-			hasText: true,
+			isIconOnly: false,
 			events: {
 				click: action( 'click' )
 			}
@@ -66,7 +66,7 @@ export const ArrowRotated180Degrees = () => {
 			icon: 'expand',
 			rotation: 180,
 			label: 'Arrow',
-			hasText: true,
+			isIconOnly: false,
 			events: {
 				click: action( 'click' )
 			}
@@ -79,6 +79,37 @@ ArrowRotated180Degrees.story = {
 	name: 'arrow rotated 180 degrees'
 };
 
+export const ArrowRotated90Degrees = () => {
+	const container = document.createElement( 'div' );
+	[
+		new IconButton( {
+			icon: 'expand',
+			isSmall: true,
+			rotation: 90,
+			label: 'Arrow',
+			isIconOnly: false,
+			events: {
+				click: action( 'click' )
+			}
+		} ),
+		new IconButton( {
+			icon: 'expand',
+			isSmall: true,
+			rotation: -90,
+			label: 'Arrow',
+			isIconOnly: false,
+			events: {
+				click: action( 'click' )
+			}
+		} )
+	].forEach( ( node ) => container.appendChild( node.$el[0] ) );
+	return container;
+};
+
+ArrowRotated90Degrees.story = {
+	name: 'arrow rotated 90 degrees'
+};
+
 export const ArrowWithLabel = () => {
 	const container = document.createElement( 'div' );
 	[
@@ -86,7 +117,7 @@ export const ArrowWithLabel = () => {
 			icon: 'expand',
 			isSmall: true,
 			label: 'Arrow small',
-			hasText: true,
+			isIconOnly: false,
 			events: {
 				click: action( 'click' )
 			}
@@ -94,7 +125,7 @@ export const ArrowWithLabel = () => {
 		new IconButton( {
 			icon: 'expand',
 			label: 'Arrow',
-			hasText: true,
+			isIconOnly: false,
 			events: {
 				click: action( 'click' )
 			}
