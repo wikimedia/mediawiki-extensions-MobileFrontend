@@ -1,28 +1,6 @@
 @import 'mediawiki.skin.variables.less';
 @import 'mediawiki.mixins.less';
 
-.mf-icon-rotate-anti-clockwise {
-	transform: rotate( -90deg );
-}
-
-.mf-icon-rotate-clockwise {
-	transform: rotate( 90deg );
-}
-
-.mf-icon-rotate-flip {
-	transform: scaleY( -1 );
-}
-
-.rtl {
-	.mf-icon-rotate-anti-clockwise {
-		transform: rotate( 90deg );
-	}
-
-	.mf-icon-rotate-clockwise {
-		transform: rotate( -90deg );
-	}
-}
-
 .mw-ui-icon-mf-articleSearch {
 	.cdx-mixin-css-icon( @cdx-icon-article-search, @param-is-button-icon: false, @param-fill-color: @color-subtle );
 }
