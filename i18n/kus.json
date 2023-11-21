@@ -3,12 +3,14 @@
 		"authors": [
 			"Bugirbiig",
 			"Akudugu",
-			"Amire80"
+			"Amire80",
+			"Mozanky"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Kpɛn'esim yɛlsida safɔbiis",
-	"mobile-frontend-changeslist-nocomment": "ayei dɛmisim gbɛlima pian'agiŋ nwa",
+	"mobile-frontend-changeslist-nocomment": "Pian'agiŋ dɛmisʋg kae",
 	"mobile-frontend-cite-error-title": "Kasɛta ghaʋŋ la pʋ kpɛn'es sʋ'ʋmm",
+	"mobile-frontend-copyright": "Malisim bɛnɛ $1 ni ya'a ka'a nɛ yɛlsi'a paasɛ",
 	"mobile-frontend-terms-text": "Azaŋi tʋm wada",
 	"mobile-frontend-view": "Tangalnwiing gɔsʋg",
 	"mobile-frontend-view-desktop": "Teebulzug"
