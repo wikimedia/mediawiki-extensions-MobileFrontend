@@ -9,7 +9,7 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Rievdadago geavaheaddji mobiilageavahanlavtta bokte",
-	"mobile-frontend-account-create-captcha-placeholder": "Čále duođaštuskoda",
+	"mobile-frontend-account-create-captcha-placeholder": "Čále duođaštankoda",
 	"mobile-frontend-changeslist-nocomment": "čoahkkáigeassu váilu",
 	"mobile-frontend-clear-search": "Gurre",
 	"mobile-frontend-copyright": "Sisdoalu sáhttá geavahit liseanssain $1, jus ii boađe eará diehtu.",
@@ -26,7 +26,7 @@
 	"mobile-frontend-edit-login-action": "<strong>Veahket mu buoridit {{SITENAME}}.</strong><br />Čálit sisa rievdadit.",
 	"mobile-frontend-edit-signup-action": "<strong>Veahket buoridit {{SITENAME}}.</strong><br />Čálit sisa rievdadit.",
 	"mobile-frontend-editor-anon": "Rievdat čálitkeahttá sisa",
-	"mobile-frontend-editor-anonwarning": "<strong>Váruhus:</strong> It leat čálihuvvon sisa. Du IP-čujuhus báhcá almmolaččat oidnosii dán siiddu rievdadushistorjái. Jus <strong>čálihat sisa</strong> dahje <strong>ráhkadat geavaheaddjidovddaldaga</strong>, de du rievdadeamit merkejuvvojit geavaheaddjinamain ja seammás oaččut eará ovdamuniid.",
+	"mobile-frontend-editor-anonwarning": "<strong>Várrehus:</strong> It leat čálihuvvon sisa. Du IP-čujuhus báhcá almmolaččat oidnosii dán siiddu rievdadushistorjái. Jus <strong>čálihat sisa</strong> dahje <strong>ráhkadat geavaheaddjidovddaldaga</strong>, de du rievdadeamit merkejuvvojit geavaheaddjinamain ja seammás oaččut eará ovdamuniid.",
 	"mobile-frontend-editor-autocreatewarning": "<strong>Fuomáš:</strong> Don it leat sisa čálihuvvon. Du rievdadusaide boahtá <strong>[[$1|auto-genererejuvvon namma]]</strong> go bijat diehtočoahku iežat neahttasiidui. Du IP čujuhus boahtá leat almmolaš jáhkehahtti geavaheddjiide. Jus don <strong>čálihat sisa</strong> dahje <strong>ráhkadat geavaheaddjidovddaldaga</strong>, du rievdadusaide boahtá namma maid ieš válljet ja seammás oaččut maiddai eará ovdamuniid. ",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Čálit sisa",
 	"mobile-frontend-drawer-arrow-label": "Gidde",
