@@ -45,30 +45,6 @@
 	}
 }
 
-// FIXME [mediawiki ui] These rules should not be needed and are specifically for Watchlist
-// This should use another MediaWiki UI widget
-// stylelint-disable no-descending-specificity
-.content-header .mw-ui-button-group {
-	li {
-		// override '.content li' default margin
-		margin: 0;
-	}
-
-	li.mw-ui-button {
-		padding: 0;
-		min-width: 30%;
-	}
-
-	a,
-	a:visited,
-	a:hover {
-		padding: 0.5em 1em;
-		display: block;
-		color: inherit;
-		text-decoration: none;
-	}
-}
-
 // empty watchlist item (does not include revision information)
 // FIXME: Can we generalise these rules into a common design pattern?
 .empty-page {
