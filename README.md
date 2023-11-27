@@ -365,7 +365,8 @@ Controls whether tablets should be shown the mobile site. Works only if
 
 #### $wgMobileUrlTemplate
 
-Template for mobile URLs.
+Template for mobile URLs. Deprecated in favor of $wgMobileUrlCallback, which
+can also be used to generate mobile URLs for interwiki links.
 
 This will be used to transcode regular URLs into mobile URLs for the mobile
 view.

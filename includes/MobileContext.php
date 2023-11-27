@@ -609,6 +609,7 @@ class MobileContext extends ContextSource {
 	 * @deprecated
 	 */
 	public function getMobileHostToken( $mobileUrlHostTemplate ) {
+		wfDeprecated( __METHOD__, '1.42', 'MobileFrontend' );
 		return preg_replace( '/%h[0-9]\.{0,1}/', '', $mobileUrlHostTemplate );
 	}
 
@@ -621,6 +622,13 @@ class MobileContext extends ContextSource {
 	private function getMobileUrlTemplate() {
 		if ( $this->mobileUrlTemplate === null ) {
 			$this->mobileUrlTemplate = $this->config->get( 'MobileUrlTemplate' );
+		}
+		// Only issue deprecation warning when $wgMobileUrlTemplate is set.
+		// Neither $wgMobileUrlTemplate nor $wgMobileUrlCallback being set is a valid
+		// non-deprecated scenario, and in that case hasMobileDomain() will call this
+		// method as fallback.
+		if ( $this->mobileUrlTemplate ) {
+			wfDeprecated( __METHOD__, '1.42', 'MobileFrontend' );
 		}
 		return $this->mobileUrlTemplate;
 	}
@@ -692,7 +700,7 @@ class MobileContext extends ContextSource {
 		$mobileUrlCallback = $this->getMobileUrlCallback();
 		if ( $mobileUrlCallback ) {
 			$parsedUrl['host'] = call_user_func( $mobileUrlCallback, $parsedUrl['host'] );
-		} else {
+		} elseif ( $this->getMobileUrlTemplate() ) {
 			$this->updateMobileUrlHost( $parsedUrl );
 		}
 		if ( $forceHttps ) {
@@ -738,6 +746,8 @@ class MobileContext extends ContextSource {
 	 * @deprecated
 	 */
 	protected function updateMobileUrlHost( array &$parsedUrl ) {
+		wfDeprecated( __METHOD__, '1.42', 'MobileFrontend' );
+
 		if ( IPUtils::isIPAddress( $parsedUrl['host'] ) ) {
 			// Do not update host when IP is used
 			return;
@@ -810,6 +820,8 @@ class MobileContext extends ContextSource {
 	 * @deprecated
 	 */
 	protected function updateMobileUrlPath( array &$parsedUrl ) {
+		wfDeprecated( __METHOD__, '1.42', 'MobileFrontend' );
+
 		$scriptPath = $this->getConfig()->get( 'ScriptPath' );
 
 		$mobileUrlPathTemplate = $this->parseMobileUrlTemplate( 'path' );
@@ -841,6 +853,8 @@ class MobileContext extends ContextSource {
 	 * @deprecated
 	 */
 	public function parseMobileUrlTemplate( $part = null ) {
+		wfDeprecated( __METHOD__, '1.42', 'MobileFrontend' );
+
 		$mobileUrlTemplate = $this->getMobileUrlTemplate();
 
 		$pathStartPos = strpos( $mobileUrlTemplate, '/' );
