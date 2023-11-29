@@ -2,9 +2,9 @@
 
 use MediaWiki\CommentFormatter\CommentFormatter;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\User\Options\UserOptionsLookup;
 use MediaWiki\User\UserFactory;
 use MediaWiki\User\UserGroupManager;
-use MediaWiki\User\UserOptionsLookup;
 use MobileFrontend\Hooks\HookRunner;
 
 /**

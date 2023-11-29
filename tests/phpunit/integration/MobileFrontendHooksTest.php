@@ -3,8 +3,8 @@
 use MediaWiki\MainConfigNames;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Request\FauxRequest;
+use MediaWiki\User\Options\UserOptionsLookup;
 use MediaWiki\User\UserIdentity;
-use MediaWiki\User\UserOptionsLookup;
 use Psr\Container\ContainerInterface;
 use Wikimedia\ObjectFactory\ObjectFactory;
 
