@@ -1,8 +1,8 @@
 <?php
 
 use MediaWiki\User\Options\UserOptionsLookup;
+use MediaWiki\User\Options\UserOptionsManager;
 use MediaWiki\User\UserIdentity;
-use MediaWiki\User\UserOptionsManager;
 use MobileFrontend\Amc\Manager;
 use MobileFrontend\Amc\UserMode;
 

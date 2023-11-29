@@ -4,8 +4,8 @@ namespace MobileFrontend\Amc;
 
 use MediaWiki\MediaWikiServices;
 use MediaWiki\User\Options\UserOptionsLookup;
+use MediaWiki\User\Options\UserOptionsManager;
 use MediaWiki\User\UserIdentity;
-use MediaWiki\User\UserOptionsManager;
 use MobileFrontend\Features\IUserMode;
 use MobileFrontend\Features\IUserSelectableMode;
 use RuntimeException;
