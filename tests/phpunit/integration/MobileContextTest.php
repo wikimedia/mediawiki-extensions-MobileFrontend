@@ -119,6 +119,9 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 		$this->assertFalse( $context->hasMobileDomain() );
 
 		// template
+		$this->expectDeprecationAndContinue(
+			'/Use of MobileContext::getMobileUrlTemplate was deprecated in MobileFrontend 1\.42\./'
+		);
 		$this->overrideConfigValues( [
 			'MobileUrlCallback' => null,
 			'MobileUrlTemplate' => '%h0.m.%h1.%h2',
@@ -193,7 +196,7 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 		$invokes = 0;
 		$context = $this->makeContext();
 		$this->expectDeprecationAndContinue(
-			'/Use of GetMobileUrl hook .* was deprecated in MobileFrontend 1\.42\./'
+			'/Use of (GetMobileUrl hook .*|MobileContext::.*MobileUrl.*) was deprecated in MobileFrontend 1\.42\./'
 		);
 		$this->setTemporaryHook(
 			'GetMobileUrl',
@@ -226,6 +229,9 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 	 * @covers MobileContext::parseMobileUrlTemplate
 	 */
 	public function testParseMobileUrlTemplate() {
+		$this->expectDeprecationAndContinue(
+			'/Use of MobileContext::.*MobileUrlTemplate was deprecated in MobileFrontend 1\.42\./'
+		);
 		$this->overrideConfigValue( 'MobileUrlTemplate', '%h0.m.%h1.%h2/path/morepath' );
 		$context = $this->makeContext();
 		$this->assertEquals(
@@ -247,6 +253,9 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 	 * @dataProvider updateMobileUrlHostProvider
 	 */
 	public function testUpdateMobileUrlHost( $url, $expected, $urlTemplate ) {
+		$this->expectDeprecationAndContinue(
+			'/Use of MobileContext::.*MobileUrl.* was deprecated in MobileFrontend 1\.42\./'
+		);
 		$updateMobileUrlHost = self::getMethod( "updateMobileUrlHost" );
 		$this->overrideConfigValue( 'MobileUrlTemplate', $urlTemplate );
 		$parsedUrl = wfParseUrl( $url );
@@ -284,6 +293,9 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 		$this->assertTrue( $context->usingMobileDomain() );
 
 		// test deprecated config variable
+		$this->expectDeprecationAndContinue(
+			'/Use of MobileContext::.*MobileUrl.* was deprecated in MobileFrontend 1\.42\./'
+		);
 		$this->overrideConfigValues( [
 			'MFMobileHeader' => 'X-Subdomain',
 			'MobileUrlCallback' => null,
@@ -336,6 +348,9 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 		$this->assertEquals( $desktop, wfAssembleUrl( $parsedUrl ) );
 
 		// test deprecated config variable
+		$this->expectDeprecationAndContinue(
+			'/Use of MobileContext::.*MobileUrl.* was deprecated in MobileFrontend 1\.42\./'
+		);
 		$updateMobileUrlHost = self::getMethod( "updateDesktopUrlHost" );
 		$this->overrideConfigValues( [
 			MainConfigNames::Server => $server,
@@ -368,6 +383,9 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 	 * @covers MobileContext::updateMobileUrlPath
 	 */
 	public function testUpdateMobileUrlPath() {
+		$this->expectDeprecationAndContinue(
+			'/Use of MobileContext::.*MobileUrl.* was deprecated in MobileFrontend 1\.42\./'
+		);
 		$this->overrideConfigValues( [
 			MainConfigNames::ScriptPath => '/wiki',
 			'MobileUrlCallback' => null,
@@ -582,6 +600,9 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 	 * @dataProvider getMobileHostTokenProvider
 	 */
 	public function testGetMobileHostToken( $domainTemplate, $result ) {
+		$this->expectDeprecationAndContinue(
+			'/Use of MobileContext::getMobileHostToken was deprecated in MobileFrontend 1\.42\./'
+		);
 		$context = $this->makeContext();
 		$this->assertEquals( $result, $context->getMobileHostToken( $domainTemplate ) );
 	}
