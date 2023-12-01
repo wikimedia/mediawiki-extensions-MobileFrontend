@@ -79,7 +79,7 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 		$request->setCookies( $cookies, '' );
 
 		MobileContext::resetInstanceForTesting();
-		/** @var MobileContext $context */
+		/** @var MobileContext $instance */
 		$instance = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
 
 		/** @var MutableContext $context */

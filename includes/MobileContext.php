@@ -3,6 +3,7 @@
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
 use MobileFrontend\Devices\DeviceDetectorService;
+use MobileFrontend\Features\FeaturesManager;
 use MobileFrontend\Hooks\HookRunner;
 use MobileFrontend\WMFBaseDomainExtractor;
 use Wikimedia\IPUtils;
@@ -281,6 +282,7 @@ class MobileContext extends ContextSource {
 	 */
 	private static function isAmcUser() {
 		$services = MediaWikiServices::getInstance();
+		/** @var \MobileFrontend\Amc\UserMode $userMode */
 		$userMode = $services->getService( 'MobileFrontend.AMC.UserMode' );
 		return $userMode->isEnabled();
 	}
@@ -319,6 +321,7 @@ class MobileContext extends ContextSource {
 		$request = $this->getRequest();
 		$title = $this->getTitle();
 		$services = MediaWikiServices::getInstance();
+		/** @var FeaturesManager $featureManager */
 		$featureManager = $services->getService( 'MobileFrontend.FeaturesManager' );
 
 		$redirectUrl = null;

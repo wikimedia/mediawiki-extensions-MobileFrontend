@@ -3,6 +3,7 @@
 use MediaWiki\MediaWikiServices;
 use MediaWiki\User\Options\UserOptionsManager;
 use MobileFrontend\Amc\UserMode;
+use MobileFrontend\Features\FeaturesManager;
 use MobileFrontend\Features\IFeature;
 
 /**
@@ -87,56 +88,56 @@ class SpecialMobileOptions extends MobileSpecialPage {
 
 	private function buildAMCToggle() {
 		/** @var \MobileFrontend\Amc\UserMode $userMode */
-			$userMode = $this->services->getService( 'MobileFrontend.AMC.UserMode' );
-			$amcToggle = new OOUI\CheckboxInputWidget( [
-				'name' => 'enableAMC',
-				'infusable' => true,
-				'selected' => $userMode->isEnabled(),
-				'id' => 'enable-amc-toggle',
-				'value' => '1',
-			] );
-			$layout = new OOUI\FieldLayout(
-				$amcToggle,
-				[
-					'label' => new OOUI\LabelWidget( [
-						'input' => $amcToggle,
-						'label' => new OOUI\HtmlSnippet(
-							Html::openElement( 'div' ) .
-							Html::rawElement( 'strong', [],
-								$this->msg( 'mobile-frontend-mobile-option-amc' )->parse() ) .
-							Html::rawElement( 'div', [ 'class' => 'option-description' ],
-								$this->msg( 'mobile-frontend-mobile-option-amc-experiment-description' )->parse()
-							) .
-							Html::closeElement( 'div' )
-						)
-					] ),
-					'id' => 'amc-field',
-				]
-			);
-			// placing links inside a label reduces usability and accessibility so
-			// append links to $layout and outside of label instead
-			// https://www.w3.org/TR/html52/sec-forms.html#example-42c5e0c5
-			$layout->appendContent( new OOUI\HtmlSnippet(
-					Html::openElement( 'ul', [ 'class' => 'hlist option-links' ] ) .
-					Html::openElement( 'li' ) .
-					Html::rawElement(
-							'a',
-							// phpcs:ignore Generic.Files.LineLength.TooLong
-							[ 'href' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Reading/Web/Advanced_mobile_contributions' ],
-							$this->msg( 'mobile-frontend-mobile-option-amc-learn-more' )->parse()
-					) .
-					Html::closeElement( 'li' ) .
-					Html::openElement( 'li' ) .
-					Html::rawElement(
-							'a',
-							// phpcs:ignore Generic.Files.LineLength.TooLong
-							[ 'href' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Talk:Reading/Web/Advanced_mobile_contributions' ],
-							$this->msg( 'mobile-frontend-mobile-option-amc-send-feedback' )->parse()
-					) .
-					Html::closeElement( 'li' ) .
-					Html::closeElement( 'ul' )
-			) );
-			return $layout;
+		$userMode = $this->services->getService( 'MobileFrontend.AMC.UserMode' );
+		$amcToggle = new OOUI\CheckboxInputWidget( [
+			'name' => 'enableAMC',
+			'infusable' => true,
+			'selected' => $userMode->isEnabled(),
+			'id' => 'enable-amc-toggle',
+			'value' => '1',
+		] );
+		$layout = new OOUI\FieldLayout(
+			$amcToggle,
+			[
+				'label' => new OOUI\LabelWidget( [
+					'input' => $amcToggle,
+					'label' => new OOUI\HtmlSnippet(
+						Html::openElement( 'div' ) .
+						Html::rawElement( 'strong', [],
+							$this->msg( 'mobile-frontend-mobile-option-amc' )->parse() ) .
+						Html::rawElement( 'div', [ 'class' => 'option-description' ],
+							$this->msg( 'mobile-frontend-mobile-option-amc-experiment-description' )->parse()
+						) .
+						Html::closeElement( 'div' )
+					)
+				] ),
+				'id' => 'amc-field',
+			]
+		);
+		// placing links inside a label reduces usability and accessibility so
+		// append links to $layout and outside of label instead
+		// https://www.w3.org/TR/html52/sec-forms.html#example-42c5e0c5
+		$layout->appendContent( new OOUI\HtmlSnippet(
+			Html::openElement( 'ul', [ 'class' => 'hlist option-links' ] ) .
+			Html::openElement( 'li' ) .
+			Html::rawElement(
+					'a',
+					// phpcs:ignore Generic.Files.LineLength.TooLong
+					[ 'href' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Reading/Web/Advanced_mobile_contributions' ],
+					$this->msg( 'mobile-frontend-mobile-option-amc-learn-more' )->parse()
+			) .
+			Html::closeElement( 'li' ) .
+			Html::openElement( 'li' ) .
+			Html::rawElement(
+					'a',
+					// phpcs:ignore Generic.Files.LineLength.TooLong
+					[ 'href' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Talk:Reading/Web/Advanced_mobile_contributions' ],
+					$this->msg( 'mobile-frontend-mobile-option-amc-send-feedback' )->parse()
+			) .
+			Html::closeElement( 'li' ) .
+			Html::closeElement( 'ul' )
+		) );
+		return $layout;
 	}
 
 	/**
@@ -245,6 +246,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 				]
 			);
 
+			/** @var FeaturesManager $manager */
 			$manager = $this->services->getService( 'MobileFrontend.FeaturesManager' );
 			// TODO The userMode should know how to retrieve features assigned to that mode,
 			// we shouldn't do any special logic like this in anywhere else in the code

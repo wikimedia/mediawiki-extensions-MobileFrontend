@@ -4,6 +4,7 @@ use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
 use MobileFrontend\Api\ApiParseExtender;
 use MobileFrontend\ContentProviders\IContentProvider;
+use MobileFrontend\Features\FeaturesManager;
 use MobileFrontend\Hooks\HookRunner;
 use MobileFrontend\Transforms\LazyImageTransform;
 use MobileFrontend\Transforms\MakeSectionsTransform;
@@ -79,6 +80,7 @@ class ExtMobileFrontend {
 	 */
 	public static function domParseMobile( OutputPage $out, $html = '' ) {
 		$services = MediaWikiServices::getInstance();
+		/** @var FeaturesManager $featureManager */
 		$featureManager = $services->getService( 'MobileFrontend.FeaturesManager' );
 		/** @var MobileContext $context */
 		$context = $services->getService( 'MobileFrontend.Context' );
@@ -180,6 +182,7 @@ class ExtMobileFrontend {
 	protected static function getUserPageContent( IContextSource $output,
 		User $pageUser, Title $title
 	) {
+		/** @var MobileContext $context */
 		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
 		$pageUsername = $pageUser->getName();
 		// Is the current user viewing their own page?
