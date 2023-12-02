@@ -421,7 +421,6 @@
 		"AuthChangeFormFields": "MobileFrontendHooks",
 		"RequestContextCreateSkin": "MobileFrontendHooks",
 		"BeforeInitialize": "MobileFrontendHooks",
-		"MediaWikiPerformAction": "MobileFrontendHooks",
 		"BeforeDisplayNoArticleText": "MobileFrontendHooks",
 		"OutputPageBeforeHTML": "MobileFrontendHooks",
 		"OutputPageBodyAttributes": "MobileFrontendHooks",
