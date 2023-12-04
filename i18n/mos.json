@@ -2,9 +2,25 @@
 	"@metadata": {
 		"authors": [
 			"Hasslaebetch",
-			"Abdul Fatawu 352"
+			"Abdul Fatawu 352",
+			"Raizkgh"
 		]
 	},
+	"abusefilter-edit-builder-vars-user-mobile": "Ned sã n maand a taab n maand a sẽn datã, a tõe n maana a sẽn dat n maan a to wã",
+	"mobile-frontend-account-create-captcha-placeholder": "Kê bumb ninga n wilg tɩ ya fo la bala",
+	"mobile-frontend-changeslist-nocomment": "Pa tar sõss sẽn na yɩl n tall sõssã",
+	"mobile-frontend-clear-search": "Vẽenege",
+	"mobile-frontend-copyright": "Sõngr yaa $1 pʋgẽ, sã n pa be bũmb a to sẽn wilgd ye.",
+	"mobile-frontend-desc": "Sõngr taoor-lʋɩtgã",
+	"mobile-frontend-diffview-404-desc": "Y sẽn da baoo wã yʋy ka be ye. Yaa ne rẽ n kɩt tɩ b pa le tõe n paam n paam n bãng tɩ b pa tar n tõe n paam tɩ b sõssã yaa sõma ye.<br/>",
+	"mobile-frontend-diffview-404-title": "Neng lebg-n-gɛsga",
+	"mobile-frontend-diffview-anonymous": "Sõngd-n-taag sẽn pa mi a soaba",
+	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|byte|bytes}} pãas",
+	"mobile-frontend-diffview-bytesnochange": "Pa toeem-b ye",
+	"mobile-frontend-diffview-bytesremoved": "$1 {{PLURAL:$1|byte|bytes}} yeesame",
+	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|edit|edits}}",
+	"mobile-frontend-diffview-title": "Tedge",
+	"mobile-frontend-edit-login-action": "<strong>Sõng-y n maneg {{SITENAME}} wã.</strong><br /> Log-y n tool-y neda.",
 	"mobile-frontend-terms-text": "Bãngre tʋʋma",
 	"mobile-frontend-view": "Nugẽ bãnga geese",
 	"mobile-frontend-view-desktop": "Ordinateere"

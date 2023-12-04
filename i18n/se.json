@@ -9,7 +9,7 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Rievdadago geavaheaddji mobiilageavahanlavtta bokte",
-	"mobile-frontend-account-create-captcha-placeholder": "Čále duođaštuskoda",
+	"mobile-frontend-account-create-captcha-placeholder": "Čále duođaštankoda",
 	"mobile-frontend-changeslist-nocomment": "čoahkkáigeassu váilu",
 	"mobile-frontend-cite-error-title": "Gáldočujuhusaid viežžan ii lihkostuvvan",
 	"mobile-frontend-cite-error": "Meattáhus ilmmai dan botta go gáldočujuhusaid lei viežžame, eahpegustojeaddji siidoveršuvdnanummára dihte.",
@@ -29,7 +29,7 @@
 	"mobile-frontend-edit-login-action": "<strong>Veahket mu buoridit {{SITENAME}}.</strong><br />Čálit sisa rievdadit.",
 	"mobile-frontend-edit-signup-action": "<strong>Veahket buoridit {{SITENAME}}.</strong><br />Čálit sisa rievdadit.",
 	"mobile-frontend-editor-anon": "Rievdat čálitkeahttá sisa",
-	"mobile-frontend-editor-anonwarning": "<strong>Váruhus:</strong> It leat čálihuvvon sisa. Du IP-čujuhus báhcá almmolaččat oidnosii dán siiddu rievdadushistorjái. Jus <strong>čálihat sisa</strong> dahje <strong>ráhkadat geavaheaddjidovddaldaga</strong>, de du rievdadeamit merkejuvvojit geavaheaddjinamain ja seammás oaččut eará ovdamuniid.",
+	"mobile-frontend-editor-anonwarning": "<strong>Várrehus:</strong> It leat čálihuvvon sisa. Du IP-čujuhus báhcá almmolaččat oidnosii dán siiddu rievdadushistorjái. Jus <strong>čálihat sisa</strong> dahje <strong>ráhkadat geavaheaddjidovddaldaga</strong>, de du rievdadeamit merkejuvvojit geavaheaddjinamain ja seammás oaččut eará ovdamuniid.",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Hehttii}} geavaheaddji",
 	"mobile-frontend-editor-generic-block-reason": "Dovdatmeahttun sivva",
 	"mobile-frontend-editor-cancel": "Gaskkalduhte",
