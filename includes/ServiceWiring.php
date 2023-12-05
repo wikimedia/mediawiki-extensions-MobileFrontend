@@ -74,9 +74,10 @@ return [
 		return $manager;
 	},
 	'MobileFrontend.AMC.Manager' => static function ( MediaWikiServices $services ) {
-		$config = $services->getService( 'MobileFrontend.Config' );
-		$context = $services->getService( 'MobileFrontend.Context' );
-		return new MobileFrontend\Amc\Manager( $config, $context );
+		return new MobileFrontend\Amc\Manager(
+			$services->getService( 'MobileFrontend.Config' ),
+			$services->getService( 'MobileFrontend.Context' )
+		);
 	},
 	'MobileFrontend.AMC.UserMode' => static function ( MediaWikiServices $services ) {
 		return new MobileFrontend\Amc\UserMode(
@@ -87,12 +88,11 @@ return [
 		);
 	},
 	'MobileFrontend.AMC.Outreach' => static function ( MediaWikiServices $services ) {
-		$config = $services->getService( 'MobileFrontend.Config' );
 		return new MobileFrontend\Amc\Outreach(
 			$services->getService( 'MobileFrontend.AMC.UserMode' ),
 			$services->getService( 'MobileFrontend.AMC.Manager' ),
 			$services->getService( 'MobileFrontend.Context' )->getUser(),
-			$config
+			$services->getService( 'MobileFrontend.Config' )
 		);
 	},
 	'MobileFrontend.Context' => static function () {

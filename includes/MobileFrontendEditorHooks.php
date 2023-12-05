@@ -60,6 +60,7 @@ class MobileFrontendEditorHooks implements
 	 * @param OutputPage $out OutputPage instance calling the hook
 	 */
 	public function onMakeGlobalVariablesScript( &$vars, $out ): void {
+		/** @var MobileContext $mobileContext */
 		$mobileContext = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
 		$config = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Config' );
 
@@ -118,6 +119,7 @@ class MobileFrontendEditorHooks implements
 	 * @return bool Whether the frontend JS should try to display an editor
 	 */
 	protected static function isSupportedEditRequest( IContextSource $context ) {
+		/** @var MobileContext $mobileContext */
 		$mobileContext = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
 		if ( !$mobileContext->shouldDisplayMobileView() ) {
 			return false;

@@ -3,6 +3,7 @@
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\RevisionFactory;
 use MediaWiki\Revision\RevisionRecord;
+use MobileFrontend\Features\FeaturesManager;
 use Wikimedia\Rdbms\ILoadBalancer;
 use Wikimedia\Rdbms\IResultWrapper;
 use Wikimedia\Rdbms\SelectQueryBuilder;
@@ -104,6 +105,7 @@ class SpecialMobileHistory extends MobileSpecialPageFeed {
 			$title->getContentModel()
 		);
 		$actionOverrides = $contentHandler->getActionOverrides();
+		/** @var FeaturesManager $featureManager */
 		$featureManager = $services->getService( 'MobileFrontend.FeaturesManager' );
 
 		// if history is overwritten, assume, that SpecialMobileHistory can't handle them
