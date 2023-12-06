@@ -15,7 +15,8 @@
 			"Surya Prakash.S.A.",
 			"கௌசிக் பிரபு",
 			"தமிழ்க்குரிசில்",
-			"மதனாஹரன்"
+			"மதனாஹரன்",
+			"Fahimrazick"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "பாதுகாப்புக் குறியீட்டை உள்ளிடவும்",
@@ -43,8 +44,8 @@
 	"mobile-frontend-save-settings": "சேமி",
 	"mobile-frontend-settings-beta": "பீட்டா",
 	"mobile-frontend-terms-text": "பயன்பாட்டு விதிகள்",
-	"mobile-frontend-view": "கைபேசிப் பார்வை",
-	"mobile-frontend-view-desktop": "கணினி பதிப்பு",
+	"mobile-frontend-view": "கைப்பேசிப் பார்வை",
+	"mobile-frontend-view-desktop": "கணினி",
 	"mobile-frontend-watchlist-a-z": "பட்டியல்",
 	"mobile-frontend-watchlist-a-z-empty-howto-alt": "பக்கத்தில் தொடக்கத்தில் உள்ள நட்சத்திரத்தை சொடுக்கவும்",
 	"mobile-frontend-watchlist-add": "$1 உங்களது கவனிப்புப் பட்டியலில் சேர்க்கப்பட்டது.",
