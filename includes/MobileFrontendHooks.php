@@ -21,7 +21,6 @@ use MediaWiki\Hook\GetCacheVaryCookiesHook;
 use MediaWiki\Hook\LoginFormValidErrorMessagesHook;
 use MediaWiki\Hook\MakeGlobalVariablesScriptHook;
 use MediaWiki\Hook\ManualLogEntryBeforePublishHook;
-use MediaWiki\Hook\MediaWikiPerformActionHook;
 use MediaWiki\Hook\OutputPageBeforeHTMLHook;
 use MediaWiki\Hook\OutputPageBodyAttributesHook;
 use MediaWiki\Hook\OutputPageParserOutputHook;
@@ -64,7 +63,6 @@ class MobileFrontendHooks implements
 	AuthChangeFormFieldsHook,
 	RequestContextCreateSkinHook,
 	BeforeInitializeHook,
-	MediaWikiPerformActionHook,
 	BeforeDisplayNoArticleTextHook,
 	OutputPageBeforeHTMLHook,
 	OutputPageBodyAttributesHook,
@@ -100,26 +98,6 @@ class MobileFrontendHooks implements
 	// This should always be kept in sync with `@width-breakpoint-tablet`
 	// in mediawiki.skin.variables.less
 	private const DEVICE_WIDTH_TABLET = '720px';
-
-	/**
-	 * Enables the global booleans $wgHTMLFormAllowTableFormat and $wgUseMediaWikiUIEverywhere
-	 * for mobile users.
-	 */
-	private static function enableMediaWikiUI() {
-		// FIXME: Temporary variables, will be deprecated in core in the future
-		global $wgHTMLFormAllowTableFormat, $wgUseMediaWikiUIEverywhere;
-
-		/** @var MobileContext $mobileContext */
-		$mobileContext = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
-
-		if ( $mobileContext->shouldDisplayMobileView() ) {
-			// Force non-table based layouts (see T65428)
-			$wgHTMLFormAllowTableFormat = false;
-			// Turn on MediaWiki UI styles so special pages with form are styled.
-			// FIXME: Remove when this becomes the default.
-			$wgUseMediaWikiUIEverywhere = true;
-		}
-	}
 
 	/**
 	 * Obtain the default mobile skin
@@ -159,9 +137,6 @@ class MobileFrontendHooks implements
 		if ( !$mobileContext->shouldDisplayMobileView() ) {
 			return true;
 		}
-
-		// enable wgUseMediaWikiUIEverywhere
-		self::enableMediaWikiUI();
 
 		// Handle any X-Analytics header values in the request by adding them
 		// as log items. X-Analytics header values are serialized key=value
@@ -218,23 +193,6 @@ class MobileFrontendHooks implements
 		if ( $context->shouldDisplayMobileView() ) {
 			$out->setTarget( 'mobile' );
 		}
-	}
-
-	/**
-	 * MediaWikiPerformAction hook handler (enable mwui for all pages)
-	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/MediaWikiPerformAction
-	 *
-	 * @param OutputPage $output
-	 * @param Article $article
-	 * @param Title $title Page title
-	 * @param User $user User performing action
-	 * @param WebRequest $request
-	 * @param MediaWiki $wiki
-	 */
-	public function onMediaWikiPerformAction( $output, $article, $title,
-		$user, $request, $wiki
-	) {
-		self::enableMediaWikiUI();
 	}
 
 	/**
