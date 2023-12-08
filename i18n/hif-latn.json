@@ -3,11 +3,16 @@
 		"authors": [
 			"Abdul Kadir",
 			"Girmitya",
-			"Karthi.dr"
+			"Karthi.dr",
+			"Thakurji"
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "koi badle ke summary nai hai",
+	"mobile-frontend-copyright": "Agar duusra kaaran nai dewa gais hae, tab aap ii panna me likha gae chij ke aap $1 ke niche kaam me lae sakta hai.",
 	"mobile-frontend-last-modified-date": "$1 ke $2 baje, ii panna ke badlaa gais rahaa",
 	"mobile-frontend-privacy-link-text": "Gupt",
+	"mobile-frontend-terms-text": "Use kare ke niyam",
+	"mobile-frontend-view": "Mobile view",
+	"mobile-frontend-view-desktop": "Desktop",
 	"tag-mobile_edit": "Mobile badlao"
 }
