@@ -16,6 +16,10 @@ use MobileFrontend\Devices\DeviceDetectorService;
  * @group integration
  */
 class DeviceDetectorServiceIntegrationTest extends MediaWikiIntegrationTestCase {
+
+	private FauxRequest $request;
+	private array $server;
+
 	protected function setUp(): void {
 		parent::setUp();
 
