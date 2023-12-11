@@ -73,7 +73,7 @@
 	"mobile-frontend-edit-login-action": "<strong>Help mee met het verbeteren van {{SITENAME}}.</strong><br />Meld u aan om te bewerken.",
 	"mobile-frontend-edit-signup-action": "<strong>Help mee met het verbeteren van {{SITENAME}}.</strong><br />Schrijf u in om te kunnen bewerken.",
 	"mobile-frontend-editor-anon": "Bewerken zonder aan te melden",
-	"mobile-frontend-editor-anonwarning": "<strong>Let op</strong>: U bent niet ingelogd. Maakt u wijzigingen, dan wordt uw IP-adres voor iedereen zichtbaar. Als u <strong>inlogt</strong> of <strong>een account aanmaakt</strong>, dan worden uw bewerkingen aan uw gebruikersnaam toegeschreven. Daarnaast zijn er andere voordelen.",
+	"mobile-frontend-editor-anonwarning": "<strong>Waarschuwing:</strong> U bent niet aangemeld.\nUw IP-adres zal voor iedereen zichtbaar zijn als u wijzigingen aanbrengt. Als u <strong>zich aanmeldt</strong> of <strong>een account aanmaakt</strong>, worden uw bewerkingen aan uw gebruikersnaam toegeschreven. Er zijn ook nog andere voordelen.",
 	"mobile-frontend-editor-blocked-drawer-title": "Uw account is geblokkeerd van het bewerken van {{SITENAME}}",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Reden voor blokkade",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Geblokkeerd}} door",

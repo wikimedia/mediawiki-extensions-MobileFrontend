@@ -17,7 +17,7 @@
 	"mobile-frontend-clear-search": "Gurre",
 	"mobile-frontend-copyright": "Sisdoalu sáhttá geavahit liseanssain $1, jus ii boađe eará diehtu.",
 	"mobile-frontend-desc": "Mobiilageavahanlakta",
-	"mobile-frontend-diffview-404-desc": "Siidoveršuvnna ID'a maid sihtet ii gávdno.<br/>Dasa lea dávjá sivvan erohusliŋka boarásnuvvan siidduide mat leat sihkkojuvvon dahje mat sisttisdollet eahpegustojeaddji mearkkaid.",
+	"mobile-frontend-diffview-404-desc": "Siidoveršuvnna ID'a maid sihtet ii gávdno.<br/>Dasa lea dávjá sivvan boarásnuvvan erohusliŋka siidui mii lea sihkkojuvvon dahje erohusliŋka, mas leat eahpegustojeaddji mearkkat.",
 	"mobile-frontend-diffview-404-title": "eahpegustojeaddji siidoveršuvdna",
 	"mobile-frontend-diffview-anonymous": "Anonyma geavaheaddji",
 	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|stávval|stávvala}} biddjon",

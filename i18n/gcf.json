@@ -1,8 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Laetitia Kb"
+			"Laetitia Kb",
+			"EritajGwadloup"
 		]
 	},
-	"mobile-frontend-view-mobile": "Powtab"
+	"mobile-frontend-copyright": "Kontni disponib adan lisans $1 sof si i ni lòt endikasyon.",
+	"mobile-frontend-terms-text": "Kondisyon pou itilizasyon",
+	"mobile-frontend-view": "Vèsyon mobil",
+	"mobile-frontend-view-desktop": "Vèsyon òdinatè"
 }
