@@ -111,6 +111,8 @@
 	"mobile-frontend-editor-viewing-source-page": "<strong>عرض مصدر</strong><span> $1</span>",
 	"mobile-frontend-editor-wait": "نشر التحرير ، يرجى الانتظار.",
 	"mobile-frontend-editor-loading": "جارٍ تحميل المحرر...",
+	"mobile-frontend-editor-loadingtooslow": "اتصال بطيء؟",
+	"mobile-frontend-editor-loadbasiceditor": "التبديل إلى محرر المصدر",
 	"mobile-frontend-editor-toload": "سيتم الآن تحميل المحرر، إذا استمر ظهور هذه الرسالة بعد بضع ثوانٍ، فتُرجَى [$1 إعادة تحميل الصفحة].",
 	"mobile-frontend-expand-sections-description": "قم دائمًا بتوسيع أقسام صفحات المحتوى افتراضيًا.",
 	"mobile-frontend-expand-sections-status": "أظهر كل الأقسام",
