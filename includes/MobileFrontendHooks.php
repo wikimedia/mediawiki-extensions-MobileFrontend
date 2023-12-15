@@ -10,7 +10,6 @@ use MediaWiki\ChangeTags\Hook\ChangeTagsListActiveHook;
 use MediaWiki\ChangeTags\Hook\ListDefinedTagsHook;
 use MediaWiki\ChangeTags\Taggable;
 use MediaWiki\Diff\Hook\DifferenceEngineViewHeaderHook;
-use MediaWiki\Diff\Hook\TextSlotDiffRendererTablePrefixHook;
 use MediaWiki\Extension\AbuseFilter\Variables\VariableHolder;
 use MediaWiki\Extension\Gadgets\GadgetRepo;
 use MediaWiki\Hook\AfterBuildFeedLinksHook;
@@ -58,7 +57,6 @@ use MobileFrontend\Transforms\MakeSectionsTransform;
  * Any changes relating to Minerva should go into Minerva.hooks.php
  */
 class MobileFrontendHooks implements
-	TextSlotDiffRendererTablePrefixHook,
 	APIQuerySiteInfoGeneralInfoHook,
 	AuthChangeFormFieldsHook,
 	RequestContextCreateSkinHook,
@@ -1271,21 +1269,5 @@ class MobileFrontendHooks implements
 		/** @var MobileContext $context */
 		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
 		$result['mobileserver'] = $context->getMobileUrl( $wgCanonicalServer );
-	}
-
-	/**
-	 * @inheritDoc
-	 */
-	public function onTextSlotDiffRendererTablePrefix(
-		TextSlotDiffRenderer $textSlotDiffRenderer,
-		IContextSource $context,
-		array &$parts
-	) {
-		/** @var MobileContext $context */
-		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
-		// Remove the inline diff legend for mobile (including in desktop mode for MobileDiff).
-		if ( $context->shouldDisplayMobileView() || $context->getTitle()->isSpecial( 'MobileDiff' ) ) {
-			$parts[TextSlotDiffRenderer::INLINE_LEGEND_KEY] = null;
-		}
 	}
 }

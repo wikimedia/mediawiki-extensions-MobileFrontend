@@ -429,7 +429,6 @@
 		"SkinAfterBottomScripts": "MobileFrontendHooks",
 		"SkinAddFooterLinks": "MobileFrontendHooks",
 		"BeforePageRedirect": "MobileFrontendHooks",
-		"TextSlotDiffRendererTablePrefix": "MobileFrontendHooks",
 		"DifferenceEngineViewHeader": "MobileFrontendHooks",
 		"GetCacheVaryCookies": "MobileFrontendHooks",
 		"SpecialPage_initList": "MobileFrontendHooks",
