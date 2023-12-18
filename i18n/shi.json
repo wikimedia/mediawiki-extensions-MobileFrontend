@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Amara-Amaziɣ",
-			"Ayour2002"
+			"Ayour2002",
+			"AguzulH"
 		]
 	},
 	"mobile-frontend-copyright": "Mayad illa ddu $1 abla iɣ ittuybdar mas ur t-igi.",
@@ -10,6 +11,7 @@
 	"mobile-frontend-news-items": "Ɣ inɣmisn",
 	"mobile-frontend-terms-text": "Tifadiwin n usmrs",
 	"mobile-frontend-view": "Annay n ttilifun",
+	"mobile-frontend-view-desktop": "Tunɣilt n usira",
 	"tag-mobile_edit": "Asnfl ittyaskarn zɣ ttilifun",
 	"tag-mobile_web_edit": "Asnfl ittyuskrn zɣ ttilifun"
 }
