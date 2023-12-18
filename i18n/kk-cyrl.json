@@ -67,7 +67,7 @@
 	"mobile-frontend-editor-error-preview": "Қате, алдын ала көру жүктелгенде, күтпеген бірдеңе орын алды. Жауып, қайта қосып көріңіз.",
 	"mobile-frontend-editor-keep-editing": "Өңдемені жалғастыру",
 	"mobile-frontend-editor-licensing": "Өзгерістерді сақтау арқылы үлесіңізді $1 {{PLURAL:$2|лицензиясы}} аясында жариялауға келісесіз.",
-	"mobile-frontend-editor-licensing-with-terms": "Өзгерістерді сақтау арқылы сіз өз үлесіңізді $2 және $3 лицензия шарттары аясында жариялауға келісім бересіз.",
+	"mobile-frontend-editor-licensing-with-terms": "Өзгерістерді сақтау арқылы сіз өз үлесіңізді $2 лицензия шарттары аясында жариялауға келісім бересіз.",
 	"mobile-frontend-editor-terms-link": "[$1 Қолдану шарты]",
 	"mobile-frontend-editor-new-page-confirm": "{{SITENAME}} сайтында жаңа бет {{GENDER:$1|бастағыңыз келе ме}}?",
 	"mobile-frontend-editor-placeholder": "Бұл бөлім бос. Жетілдіру үшін бірінші болыңыз!",
