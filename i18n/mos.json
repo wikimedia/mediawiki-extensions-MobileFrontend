@@ -58,7 +58,7 @@
 	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1}} Yãmb sɩd rat n naan neng sõsg a ye {{SITENAME}} zugu?",
 	"mobile-frontend-editor-placeholder": "Sul kãngã ya zaalem. Bɩ y yɩ pipi n paas-a!",
 	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1 Yãmb naana me}} neng paalg n be {{SITENAME}} zugu!",
-	"mobile-frontend-editor-previewing-page": "<span><strong>rẽng-gesga</strong>$1</span></strong>",
+	"mobile-frontend-editor-previewing-page": "<span><strong>rẽng-gesga</strong>$1</span></span>",
 	"mobile-frontend-editor-publish": "B yiisda",
 	"mobile-frontend-editor-save": "Bingi",
 	"mobile-frontend-editor-summary-placeholder": "Makr: B sẽn da yãk tɩ b gʋls n pa le gʋlsd, b sẽn le paasd bũmb ningã",
