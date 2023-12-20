@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Meqqal"
+			"Meqqal",
+			"CorrelMoris38"
 		]
 	},
+	"mobile-frontend-copyright": "Suang pinotounda miampai $1 suai ko'poinsolimpad nokomoi.",
 	"mobile-frontend-featured-article": "Babasaon Tadau Diti",
 	"mobile-frontend-terms-text": "Kooturan do Momoguno",
 	"mobile-frontend-view": "Kointalangan mobile",
