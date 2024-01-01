@@ -54,7 +54,7 @@
 	"mobile-frontend-language-heading": "<strong>Languages</strong>",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Zuliya shɛŋa ŋan pahi",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Yuli bo zuliya shɛli",
-	"mobile-frontend-last-modified-date": "Maliniŋ din daa niŋ €1,daa $2",
+	"mobile-frontend-last-modified-date": "Maliniŋ din daa niŋ €1, daa $2",
 	"mobile-frontend-last-modified-with-user-days": "[$4 Last {{GENDER:$1|edited}} {{PLURAL:$3|$3 day|$3 days}} ago] by {{PLURAL:$5|[$6 $2]|0=an ŋʋn ka baŋbu}}",
 	"mobile-frontend-last-modified-with-user-hours": "[$4 Last {{GENDER:$1|edited}} {{PLURAL:$3|$3 hour|$3 hours}} ago] by {{PLURAL:$5|[$6 $2]|0=an ŋun ka baŋbu}}",
 	"mobile-frontend-last-modified-with-user-just-now": "[$3 Last {{GENDER:$1|edited}}] just now by {{PLURAL:$4|[$5 $2]|0=an ŋun ka baŋbu}}",
