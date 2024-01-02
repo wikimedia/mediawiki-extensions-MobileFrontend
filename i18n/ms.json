@@ -9,7 +9,8 @@
 			"Kurniasan",
 			"Pizza1016",
 			"SNN95",
-			"Tofeiku"
+			"Tofeiku",
+			"Hakimi97"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Masukkan kod pengesahan",
@@ -64,6 +65,7 @@
 	"mobile-frontend-expand-sections-status": "Kembangkan semua bahagian",
 	"mobile-frontend-fontchanger-link": "Saiz huruf",
 	"mobile-frontend-fontchanger-desc": "Besarkan atau kecilkan teks supaya mudah dibaca.",
+	"mobile-frontend-fontchanger-option-small": "Kecil",
 	"mobile-frontend-featured-article": "Kandungan pilihan hari ini",
 	"mobile-frontend-generic-404-desc": "Laman yang anda cari tidak dapat dijumpai.",
 	"mobile-frontend-generic-404-title": "Ralat - Halaman tidak dijumpai",
