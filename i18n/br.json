@@ -28,6 +28,7 @@
 	"mobile-frontend-edit-signup-action": "<strong>Sikourit da wellaat {{SITENAME}}.</strong><br />Krouit ur gont evit aozañ.",
 	"mobile-frontend-editor-anon": "Kemmañ hep kevreañ",
 	"mobile-frontend-editor-anonwarning": "<strong>Diwallit :</strong> N'oc'h ket kevreet. Gallout a raio an holl dud gwelet ho chomlec'h IP ma rit kemmoù. Ma <strong>kevreit</strong> pe <strong>krouit ur gont</strong>, e vo deroet ho kemmoù d'hoc'h anv-implijer, e-touez spletoù all.",
+	"mobile-frontend-editor-autocreatewarning": "<strong>Diwallit:</strong> N’oc’h ket kevreet. Pa rit ur c’hemm e vo krouet ur gont evitoc’h evit ur mare. [[$1|Gouzout hiroc’h]]. <strong>Kevreit</strong> pe <strong>krouit ur gont</strong> evit kenderc’hel da gaout kemennoù goude ma vo aet ar gont-mañ da dermen, ha da c’hallout ober gant arc’hweladurioù all.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Kevreañ",
 	"mobile-frontend-drawer-arrow-label": "Serriñ",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "Mat eo",

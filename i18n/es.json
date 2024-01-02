@@ -67,7 +67,7 @@
 	"mobile-frontend-edit-signup-action": "<strong>Ayuda a mejorar {{SITENAME}}.</strong><br />Regístrate para editar.",
 	"mobile-frontend-editor-anon": "Editar sin iniciar sesión",
 	"mobile-frontend-editor-anonwarning": "<strong>Advertencia:</strong> no has iniciado sesión. Tu dirección IP será visible públicamente si haces cualquier edición. Si <strong>inicias sesión</strong> o <strong>creas una cuenta</strong>, tus ediciones se atribuirán a tu nombre de usuario, junto con otros beneficios.",
-	"mobile-frontend-editor-autocreatewarning": "<strong>Advertencia:</strong> no has iniciado sesión. Su edición se atribuirá a un <strong>[[$1|nombre generado automáticamente]]</strong> al agregar una cookie a su navegador. Su dirección IP será visible para los usuarios de confianza. Si <strong>inicias sesión</strong> o <strong>crea una cuenta</strong>, sus ediciones se atribuirán al nombre que elija, junto con otros beneficios.",
+	"mobile-frontend-editor-autocreatewarning": "<strong>Advertencia:</strong> no has iniciado sesión. Una vez que hagas una edición, se creará una cuenta temporal para ti. [[$1|Más información]]. <strong>Accede</strong> o <strong>cree una cuenta</strong> para continuar recibiendo notificaciones después de que expire esta cuenta, y también para acceder a otras funciones.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Acceder",
 	"mobile-frontend-drawer-arrow-label": "Cerrar",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "Aceptar",
