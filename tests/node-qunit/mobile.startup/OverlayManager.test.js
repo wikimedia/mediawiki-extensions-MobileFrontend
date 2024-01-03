@@ -49,7 +49,10 @@ QUnit.module( 'MobileFrontend mobile.startup/OverlayManager', {
 		fakeRouter = new OO.EventEmitter();
 		fakeRouter.getPath = () => '';
 		fakeRouter.back = sandbox.spy();
-		sandbox.stub( mw.loader, 'require' ).withArgs( 'mediawiki.router' ).returns( fakeRouter );
+		const requireStub = sandbox.stub();
+		/* eslint-disable-next-line camelcase */
+		global.__non_webpack_require__ = requireStub;
+		requireStub.withArgs( 'mediawiki.router' ).returns( fakeRouter );
 		overlayManager = new OverlayManager( fakeRouter, document.body );
 		OverlayManager.test.__clearCache();
 	},

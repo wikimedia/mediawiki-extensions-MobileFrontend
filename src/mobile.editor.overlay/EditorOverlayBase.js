@@ -280,7 +280,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 * @param {boolean} [tempUserCreated] Whether a temporary user was created
 	 */
 	showSaveCompleteMsg: function ( action, tempUserCreated ) {
-		mw.loader.require( 'mediawiki.action.view.postEdit' ).fireHook( action, tempUserCreated );
+		__non_webpack_require__( 'mediawiki.action.view.postEdit' ).fireHook( action, tempUserCreated );
 	},
 	/**
 	 * Executed when page save fails. Handles logging the error. Subclasses
@@ -578,10 +578,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 			// Use MediaWiki ResourceLoader require(), not Webpack require()
 			contLangMessages = (
 				// eslint-disable-next-line camelcase
-				typeof __non_webpack_require__ !== 'undefined' ?
-					// eslint-disable-next-line no-undef
-					__non_webpack_require__( './contLangMessages.json' ) :
-					{}
+				__non_webpack_require__( './contLangMessages.json' )
 			),
 			msg = this.gateway.wouldautocreate ?
 				'mobile-frontend-editor-autocreatewarning' :

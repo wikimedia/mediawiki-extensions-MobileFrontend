@@ -11,6 +11,9 @@
 		"browser": true,
 		"commonjs": true
 	},
+	"globals": {
+		"__non_webpack_require__": true
+	},
 	"rules": {
 		"no-var": "off",
 		"no-shadow": "warn",

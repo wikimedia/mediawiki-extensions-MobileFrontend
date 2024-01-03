@@ -571,7 +571,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 	 * @instance
 	 */
 	showSaveCompleteMsg: function ( action, tempUserCreated ) {
-		mw.loader.require( 'mediawiki.action.view.postEdit' ).fireHookOnPageReload( action, tempUserCreated );
+		__non_webpack_require__( 'mediawiki.action.view.postEdit' ).fireHookOnPageReload( action, tempUserCreated );
 	},
 
 	/**

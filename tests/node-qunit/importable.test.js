@@ -17,6 +17,18 @@ const path = require( 'path' ),
 
 QUnit.module( 'MobileFrontend imports', {
 	beforeEach: function () {
+		/* eslint-disable-next-line camelcase */
+		global.__non_webpack_require__ = ( module ) => {
+			switch ( module ) {
+				case 'mediawiki.router':
+					return {
+						on: () => {},
+						getPath: () => {}
+					};
+				default:
+					return {};
+			}
+		};
 		sandbox = sinon.sandbox.create();
 		dom.setUp( sandbox, global );
 		jQuery.setUp( sandbox, global );
