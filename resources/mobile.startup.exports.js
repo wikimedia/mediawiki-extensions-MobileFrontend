@@ -4,8 +4,3 @@
 // object after this transfer has been made.
 module.exports = mw._mobileFrontend;
 delete mw._mobileFrontend;
-
-mw.log.deprecate(
-	mw.mobileFrontend, 'require', mw.mobileFrontend.require,
-	'[1.41] Please refer to T348807 for migration notes.'
-);
