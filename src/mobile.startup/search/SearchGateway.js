@@ -81,6 +81,7 @@ SearchGateway.prototype = {
 	 */
 	_highlightSearchTerm: function ( label, term ) {
 		label = util.parseHTML( '<span>' ).text( label ).html();
+		term = term.trim();
 		term = util.parseHTML( '<span>' ).text( term ).html();
 
 		return label.replace( this._createSearchRegEx( term ), '<strong>$1</strong>' );
