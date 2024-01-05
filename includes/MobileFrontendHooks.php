@@ -2,6 +2,7 @@
 
 // phpcs:disable MediaWiki.NamingConventions.LowerCamelFunctionsName.FunctionName
 
+use MediaWiki\Actions\ActionEntryPoint;
 use MediaWiki\Api\Hook\APIQuerySiteInfoGeneralInfoHook;
 use MediaWiki\Auth\AuthenticationRequest;
 use MediaWiki\Auth\AuthManager;
@@ -180,7 +181,7 @@ class MobileFrontendHooks implements
 	 * @param OutputPage $out
 	 * @param User $user
 	 * @param WebRequest $request
-	 * @param MediaWiki $mediaWiki
+	 * @param ActionEntryPoint $mediaWiki
 	 */
 	public function onBeforeInitialize( $title, $unused, $out, $user, $request, $mediaWiki ) {
 		// Set the mobile target.
