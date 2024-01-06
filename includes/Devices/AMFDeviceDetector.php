@@ -2,7 +2,7 @@
 
 namespace MobileFrontend\Devices;
 
-use WebRequest;
+use MediaWiki\Request\WebRequest;
 
 /**
  * Detect mobile and tablet devices using environment variables set by the

@@ -1,7 +1,10 @@
 <?php
 
 use MediaWiki\CommentFormatter\CommentFormatter;
+use MediaWiki\Config\Config;
+use MediaWiki\Html\Html;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\User\Options\UserOptionsLookup;
 use MediaWiki\User\UserFactory;
 use MediaWiki\User\UserGroupManager;

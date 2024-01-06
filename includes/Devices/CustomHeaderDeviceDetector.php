@@ -2,8 +2,8 @@
 
 namespace MobileFrontend\Devices;
 
-use Config;
-use WebRequest;
+use MediaWiki\Config\Config;
+use MediaWiki\Request\WebRequest;
 
 /**
  * Detects mobile devices by testing whether a custom request header is present.

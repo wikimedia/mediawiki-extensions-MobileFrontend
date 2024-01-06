@@ -5,7 +5,7 @@ namespace MobileFrontend\Models;
 use ArrayIterator;
 use Countable;
 use IteratorAggregate;
-use MediaWiki\Emptiable;
+use MediaWiki\Libs\Emptiable;
 
 /**
  * A collection of pages, which are represented by the MobilePage class.

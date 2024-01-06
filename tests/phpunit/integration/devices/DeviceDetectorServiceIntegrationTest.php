@@ -2,7 +2,7 @@
 
 namespace Tests\MobileFrontend\Devices;
 
-use GlobalVarConfig;
+use MediaWiki\Config\GlobalVarConfig;
 use MediaWiki\Request\FauxRequest;
 use MediaWikiIntegrationTestCase;
 use MobileFrontend\Devices\DeviceDetectorService;

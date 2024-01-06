@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\Html\Html;
+
 class MobileFrontendSkinHooks {
 	/**
 	 * Returns HTML of terms of use link or null if it shouldn't be displayed

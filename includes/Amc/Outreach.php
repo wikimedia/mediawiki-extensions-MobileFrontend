@@ -2,8 +2,9 @@
 
 namespace MobileFrontend\Amc;
 
-use Config;
-use User;
+use MediaWiki\Config\Config;
+use MediaWiki\Config\ConfigException;
+use MediaWiki\User\User;
 
 final class Outreach {
 	/**
@@ -65,7 +66,7 @@ final class Outreach {
 	 * Whether or not the current user is eligible to see the outreach campaign
 	 *
 	 * @return bool
-	 * @throws \ConfigException
+	 * @throws ConfigException
 	 */
 	public function isUserEligible() {
 		return $this->isCampaignActive() &&

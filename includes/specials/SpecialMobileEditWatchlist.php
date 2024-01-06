@@ -1,6 +1,10 @@
 <?php
 
+use MediaWiki\Html\Html;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\SpecialPage\SpecialPage;
+use MediaWiki\Specials\SpecialEditWatchlist;
+use MediaWiki\Title\Title;
 use MobileFrontend\Hooks\HookRunner;
 use MobileFrontend\Models\MobileCollection;
 use MobileFrontend\Models\MobilePage;

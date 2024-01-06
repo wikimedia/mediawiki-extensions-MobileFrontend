@@ -1,5 +1,6 @@
 <?php
 
+use MediaWiki\Title\Title;
 use MobileFrontend\Models\MobileCollection;
 use MobileFrontend\Models\MobilePage;
 

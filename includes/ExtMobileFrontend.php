@@ -1,7 +1,10 @@
 <?php
 
+use MediaWiki\Html\TemplateParser;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Output\OutputPage;
 use MediaWiki\Title\Title;
+use MediaWiki\User\User;
 use MobileFrontend\Api\ApiParseExtender;
 use MobileFrontend\ContentProviders\IContentProvider;
 use MobileFrontend\Features\FeaturesManager;

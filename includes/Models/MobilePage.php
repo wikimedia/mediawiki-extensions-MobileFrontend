@@ -3,7 +3,7 @@
 namespace MobileFrontend\Models;
 
 use File;
-use Html;
+use MediaWiki\Html\Html;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Title\Title;

@@ -2,6 +2,7 @@
 
 use MediaWiki\Request\FauxRequest;
 use MediaWiki\ResourceLoader\Context;
+use MediaWiki\ResourceLoader\ResourceLoader;
 use MobileFrontend\ResourceLoaderModules\MobileConfig;
 use Psr\Log\NullLogger;
 

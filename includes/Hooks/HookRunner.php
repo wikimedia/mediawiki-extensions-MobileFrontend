@@ -6,11 +6,11 @@ namespace MobileFrontend\Hooks;
 
 use IContextSource;
 use MediaWiki\HookContainer\HookContainer;
+use MediaWiki\Output\OutputPage;
 use MobileContext;
 use MobileFormatter;
 use MobileFrontend\ContentProviders\IContentProvider;
 use MobileFrontend\Features\FeaturesManager;
-use OutputPage;
 use Skin;
 
 /**

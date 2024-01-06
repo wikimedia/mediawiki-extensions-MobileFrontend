@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\Config\HashConfig;
+use MediaWiki\User\User;
 use MobileFrontend\Amc\Manager;
 use MobileFrontend\Amc\Outreach;
 use MobileFrontend\Amc\UserMode;

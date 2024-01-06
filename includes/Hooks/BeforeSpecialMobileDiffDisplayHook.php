@@ -2,9 +2,9 @@
 
 namespace MobileFrontend\Hooks;
 
+use MediaWiki\Output\OutputPage;
 use MediaWiki\Revision\RevisionRecord;
 use MobileContext;
-use OutputPage;
 
 /**
  * This is a hook handler interface, see docs/Hooks.md in core.

@@ -1,6 +1,8 @@
 <?php
 
+use MediaWiki\Config\Config;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\Title\Title;
 use MobileFrontend\Devices\DeviceDetectorService;
 use MobileFrontend\Features\FeaturesManager;

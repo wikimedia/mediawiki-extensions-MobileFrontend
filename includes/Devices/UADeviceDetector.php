@@ -23,7 +23,7 @@
 
 namespace MobileFrontend\Devices;
 
-use WebRequest;
+use MediaWiki\Request\WebRequest;
 
 /**
  * Detect mobile and tablet devices by testing whether the User-Agent request

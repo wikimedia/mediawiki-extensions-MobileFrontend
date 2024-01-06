@@ -1,4 +1,7 @@
 <?php
+
+use MediaWiki\SpecialPage\RedirectSpecialPage;
+
 /**
  * Redirect from Special:Uploads to Special:ListFiles
  *

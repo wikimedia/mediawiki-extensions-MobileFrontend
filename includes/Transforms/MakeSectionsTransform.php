@@ -7,7 +7,7 @@ use DOMElement;
 use DOMNode;
 use DOMXPath;
 use Exception;
-use Html;
+use MediaWiki\Html\Html;
 use MediaWiki\ResourceLoader\ResourceLoader;
 use Wikimedia\Parsoid\Utils\DOMCompat;
 

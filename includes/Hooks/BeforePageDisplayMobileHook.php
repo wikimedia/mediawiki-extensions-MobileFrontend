@@ -2,7 +2,7 @@
 
 namespace MobileFrontend\Hooks;
 
-use OutputPage;
+use MediaWiki\Output\OutputPage;
 use Skin;
 
 /**

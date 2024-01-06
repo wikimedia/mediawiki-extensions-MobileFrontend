@@ -1,4 +1,7 @@
 <?php
+
+use MediaWiki\SpecialPage\UnlistedSpecialPage;
+
 /**
  * Redirect from Special:MobileLanguages to the article
  *

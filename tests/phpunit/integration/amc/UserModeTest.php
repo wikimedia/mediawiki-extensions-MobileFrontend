@@ -1,7 +1,9 @@
 <?php
 
+use MediaWiki\Config\HashConfig;
 use MediaWiki\User\Options\UserOptionsLookup;
 use MediaWiki\User\Options\UserOptionsManager;
+use MediaWiki\User\User;
 use MediaWiki\User\UserIdentity;
 use MobileFrontend\Amc\Manager;
 use MobileFrontend\Amc\UserMode;

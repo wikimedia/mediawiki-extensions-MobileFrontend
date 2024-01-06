@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\Config\Config;
+use MediaWiki\Title\Title;
 use MobileFrontend\Transforms\LazyImageTransform;
 use MobileFrontend\Transforms\MakeSectionsTransform;
 use MobileFrontend\Transforms\MoveLeadParagraphTransform;

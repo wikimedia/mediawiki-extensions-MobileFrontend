@@ -1,5 +1,8 @@
 <?php
 
+use MediaWiki\Html\Html;
+use MediaWiki\Html\TemplateParser;
+
 /**
  * Helper methods for generating parts of the UI.
  *

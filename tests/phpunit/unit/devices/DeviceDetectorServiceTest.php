@@ -3,10 +3,10 @@
 namespace Tests\MobileFrontend\Devices;
 
 use MediaWiki\Request\FauxRequest;
+use MediaWiki\Request\WebRequest;
 use MobileFrontend\Devices\DeviceDetector;
 use MobileFrontend\Devices\DeviceDetectorService;
 use MobileFrontend\Devices\DeviceProperties;
-use WebRequest;
 
 /**
  * @group MobileFrontend

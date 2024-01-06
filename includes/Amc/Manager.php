@@ -2,8 +2,8 @@
 
 namespace MobileFrontend\Amc;
 
-use Config;
-use ConfigException;
+use MediaWiki\Config\Config;
+use MediaWiki\Config\ConfigException;
 use MobileContext;
 
 /**

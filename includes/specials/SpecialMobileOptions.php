@@ -1,10 +1,15 @@
 <?php
 
+use MediaWiki\Deferred\DeferredUpdates;
+use MediaWiki\Html\Html;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Request\WebRequest;
+use MediaWiki\Title\Title;
 use MediaWiki\User\Options\UserOptionsManager;
 use MobileFrontend\Amc\UserMode;
 use MobileFrontend\Features\FeaturesManager;
 use MobileFrontend\Features\IFeature;
+use Wikimedia\Rdbms\ReadOnlyMode;
 
 /**
  * Adds a special page with mobile specific preferences

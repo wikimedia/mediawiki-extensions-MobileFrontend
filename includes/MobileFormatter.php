@@ -1,6 +1,7 @@
 <?php
 
 use HtmlFormatter\HtmlFormatter;
+use MediaWiki\Config\Config;
 use MediaWiki\Title\Title;
 use MobileFrontend\Transforms\IMobileTransform;
 use Wikimedia\Parsoid\Utils\DOMCompat;

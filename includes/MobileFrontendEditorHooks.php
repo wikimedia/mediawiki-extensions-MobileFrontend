@@ -1,9 +1,12 @@
 <?php
 
+use MediaWiki\Config\Config;
 use MediaWiki\Hook\CustomEditorHook;
 use MediaWiki\Hook\MakeGlobalVariablesScriptHook;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Output\OutputPage;
 use MediaWiki\ResourceLoader\Context;
+use MediaWiki\User\User;
 
 class MobileFrontendEditorHooks implements
 	CustomEditorHook,

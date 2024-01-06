@@ -2,8 +2,8 @@
 
 namespace MobileFrontend\Devices;
 
-use Config;
-use WebRequest;
+use MediaWiki\Config\Config;
+use MediaWiki\Request\WebRequest;
 
 /**
  * MobileFrontend's device detector.

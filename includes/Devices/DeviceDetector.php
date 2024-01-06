@@ -23,7 +23,7 @@
 
 namespace MobileFrontend\Devices;
 
-use WebRequest;
+use MediaWiki\Request\WebRequest;
 
 /**
  * Detects the properties of the device that's making the request on behalf of

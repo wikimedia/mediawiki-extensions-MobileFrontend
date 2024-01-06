@@ -2,6 +2,8 @@
 
 namespace MobileFrontend\Features;
 
+use MediaWiki\User\User;
+
 /**
  * An easy way to enable features only for logged in users.
  * This class is an Adapter for the User object to fulfill FeatureManager requirements.
@@ -20,14 +22,14 @@ namespace MobileFrontend\Features;
 class LoggedInUserMode implements IUserMode {
 
 	/**
-	 * @var \User
+	 * @var User
 	 */
 	private $user;
 
 	/**
-	 * @param \User $user
+	 * @param User $user
 	 */
-	public function __construct( \User $user ) {
+	public function __construct( User $user ) {
 		$this->user = $user;
 	}
 

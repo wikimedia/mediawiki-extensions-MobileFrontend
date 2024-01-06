@@ -1,7 +1,10 @@
 <?php
 
+use MediaWiki\Html\Html;
+use MediaWiki\Parser\Sanitizer;
 use MediaWiki\Permissions\Authority;
 use MediaWiki\Revision\RevisionRecord;
+use MediaWiki\Title\Title;
 use Wikimedia\IPUtils;
 
 /**
