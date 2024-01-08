@@ -1,10 +1,18 @@
 {
 	"@metadata": {
 		"authors": [
-			"EritajGwadloup"
+			"EritajGwadloup",
+			"Histnou"
 		]
 	},
+	"mobile-frontend-clear-search": "Éfasé",
 	"mobile-frontend-copyright": "Kontni disponib adan lisans $1 sof si i ni lòt endikasyon.",
+	"mobile-frontend-desc": "Entèfas mobil",
+	"mobile-frontend-diffview-anonymous": "Itilizatè anonim",
+	"mobile-frontend-editor-blocked-drawer-action-login": "Konnékté-w",
+	"mobile-frontend-editor-blocked-drawer-action-ok": "OK",
+	"mobile-frontend-editor-blocked-drawer-action-randompage": "Méné-mwen si ondòt paj",
+	"mobile-frontend-editor-blocked-drawer-title": "Ou té bloké pou modifyé {{SITENAME}}.",
 	"mobile-frontend-terms-text": "Kondisyon pou itilizasyon",
 	"mobile-frontend-view": "Vèsyon mobil",
 	"mobile-frontend-view-desktop": "Vèsyon òdinatè"
