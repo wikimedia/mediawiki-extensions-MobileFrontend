@@ -420,7 +420,6 @@
 		"APIQuerySiteInfoGeneralInfo": "MobileFrontendHooks",
 		"AuthChangeFormFields": "MobileFrontendHooks",
 		"RequestContextCreateSkin": "MobileFrontendHooks",
-		"BeforeInitialize": "MobileFrontendHooks",
 		"BeforeDisplayNoArticleText": "MobileFrontendHooks",
 		"OutputPageBeforeHTML": "MobileFrontendHooks",
 		"OutputPageBodyAttributes": "MobileFrontendHooks",

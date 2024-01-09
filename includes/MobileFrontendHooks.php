@@ -2,7 +2,6 @@
 
 // phpcs:disable MediaWiki.NamingConventions.LowerCamelFunctionsName.FunctionName
 
-use MediaWiki\Actions\ActionEntryPoint;
 use MediaWiki\Api\Hook\APIQuerySiteInfoGeneralInfoHook;
 use MediaWiki\Auth\AuthenticationRequest;
 use MediaWiki\Auth\AuthManager;
@@ -15,7 +14,6 @@ use MediaWiki\Diff\Hook\DifferenceEngineViewHeaderHook;
 use MediaWiki\Extension\AbuseFilter\Variables\VariableHolder;
 use MediaWiki\Extension\Gadgets\GadgetRepo;
 use MediaWiki\Hook\AfterBuildFeedLinksHook;
-use MediaWiki\Hook\BeforeInitializeHook;
 use MediaWiki\Hook\BeforePageDisplayHook;
 use MediaWiki\Hook\BeforePageRedirectHook;
 use MediaWiki\Hook\GetCacheVaryCookiesHook;
@@ -37,7 +35,6 @@ use MediaWiki\Output\OutputPage;
 use MediaWiki\Page\Hook\BeforeDisplayNoArticleTextHook;
 use MediaWiki\Parser\ParserOutput;
 use MediaWiki\Preferences\Hook\GetPreferencesHook;
-use MediaWiki\Request\WebRequest;
 use MediaWiki\ResourceLoader as RL;
 use MediaWiki\ResourceLoader\Hook\ResourceLoaderSiteModulePagesHook;
 use MediaWiki\ResourceLoader\Hook\ResourceLoaderSiteStylesModulePagesHook;
@@ -67,7 +64,6 @@ class MobileFrontendHooks implements
 	APIQuerySiteInfoGeneralInfoHook,
 	AuthChangeFormFieldsHook,
 	RequestContextCreateSkinHook,
-	BeforeInitializeHook,
 	BeforeDisplayNoArticleTextHook,
 	OutputPageBeforeHTMLHook,
 	OutputPageBodyAttributesHook,
@@ -177,27 +173,6 @@ class MobileFrontendHooks implements
 		$hookRunner->onRequestContextCreateSkinMobile( $mobileContext, $skin );
 
 		return false;
-	}
-
-	/**
-	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/BeforeInitialize
-	 *
-	 * @param Title $title
-	 * @param null $unused
-	 * @param OutputPage $out
-	 * @param User $user
-	 * @param WebRequest $request
-	 * @param ActionEntryPoint $mediaWiki
-	 */
-	public function onBeforeInitialize( $title, $unused, $out, $user, $request, $mediaWiki ) {
-		// Set the mobile target.
-		// Note that it is NOT SAFE to look at Title, Skin or User from this hook (the title may
-		// be invalid here, and is not yet rewritten, normalised, or replaced by other hooks).
-		// May only look at WebRequest.
-		$context = MobileContext::singleton();
-		if ( $context->shouldDisplayMobileView() ) {
-			$out->setTarget( 'mobile' );
-		}
 	}
 
 	/**
