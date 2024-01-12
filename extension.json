@@ -367,6 +367,12 @@
 			]
 		},
 		"mobile.special.mobileoptions.styles": {
+			"class": "MediaWiki\\ResourceLoader\\CodexModule",
+			"codexStyleOnly": "true",
+			"codexComponents": [
+				"CdxRadio",
+				"CdxToggleSwitch"
+			],
 			"styles": [
 				"resources/mobile.special.mobileoptions.styles/mobileoptions.less"
 			]
@@ -380,14 +386,26 @@
 			],
 			"messages": [
 				"mobile-frontend-settings-save",
-				"mobile-frontend-fontchanger-option-small",
-				"mobile-frontend-fontchanger-option-medium",
-				"mobile-frontend-fontchanger-option-large",
-				"mobile-frontend-fontchanger-option-xlarge",
-				"mobile-frontend-expand-sections-description",
-				"mobile-frontend-expand-sections-status",
-				"mobile-frontend-fontchanger-desc",
-				"mobile-frontend-fontchanger-link"
+				"mf-font-size-name",
+				"mf-font-size-description",
+				"mf-font-size-small-label",
+				"mf-font-size-regular-label",
+				"mf-font-size-large-label",
+				"mf-font-size-xlarge-label",
+				"mf-expand-sections-0-label",
+				"mf-expand-sections-1-label",
+				"mf-expand-sections-description",
+				"mf-expand-sections-name",
+				"skin-night-mode-name",
+				"skin-night-mode-description",
+				"skin-night-mode-0-label",
+				"skin-night-mode-1-label",
+				"skin-night-mode-2-label",
+				"mw-mf-amc-name",
+				"mw-mf-amc-description",
+				"mw-mf-amc-0-label",
+				"mw-mf-amc-1-label",
+				"mw-mf-amc-1-label"
 			]
 		},
 		"mobile.special.userlogin.scripts": {

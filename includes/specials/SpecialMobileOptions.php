@@ -109,9 +109,9 @@ class SpecialMobileOptions extends MobileSpecialPage {
 					'label' => new OOUI\HtmlSnippet(
 						Html::openElement( 'div' ) .
 						Html::rawElement( 'strong', [],
-							$this->msg( 'mobile-frontend-mobile-option-amc' )->parse() ) .
+							$this->msg( 'mw-mf-amc-name' )->parse() ) .
 						Html::rawElement( 'div', [ 'class' => 'option-description' ],
-							$this->msg( 'mobile-frontend-mobile-option-amc-experiment-description' )->parse()
+							$this->msg( 'mw-mf-amc-description' )->parse()
 						) .
 						Html::closeElement( 'div' )
 					)

@@ -22,22 +22,45 @@ SETTINGS PAGE
 	}
 }
 
+.skin-client-pref-description {
+	font-weight: normal;
+	font-size: 0.8em;
+}
+
+.cdx-toggle-switch__label {
+	flex-grow: 1;
+	display: flex;
+	flex-flow: column;
+}
+
 form.mw-mf-settings {
 	margin: 0;
 	padding: 0;
 	padding-bottom: 40px;
 
+	.cdx-toggle-switch {
+		display: flex;
+	}
+
+	#mf-client-preferences label,
 	.oo-ui-fieldLayout-header strong {
 		font-weight: bold;
 	}
 
+	.mw-portlet > label > .skin-client-pref-description,
 	.option-description, .option-links {
 		font-weight: normal;
+		display: block;
 		font-size: 0.8em;
 		padding-right: 8px;
 		line-height: 1.4em;
 	}
 
+	.mw-portlet > label > .skin-client-pref-description {
+		margin-bottom: 8px;
+	}
+
+	#mf-client-preferences .mw-portlet,
 	.oo-ui-fieldLayout {
 		border-bottom: @border-width-base @border-style-base #eaecf0;
 		padding-top: 12.5px;
@@ -53,19 +76,27 @@ form.mw-mf-settings {
 		margin-top: 10px !important;
 	}
 
+	#mf-client-preferences,
 	#amc-field, #mobile-user-pref {
-		.hlist {
+		ul.hlist {
 			padding-top: 0.4em;
 
 			> li {
 				margin-right: 15px;
 			}
 		}
+	}
 
+	#amc-field, #mobile-user-pref {
 		.option-links {
 			// margin should be same as margin applied to .oo-ui-fieldLayout-body
 			margin: 0 16px;
 		}
+	}
+
+	#mf-client-preferences {
+		// margin should be same as margin applied to .oo-ui-fieldLayout-body
+		margin: 0 16px;
 	}
 
 	#beta-field {

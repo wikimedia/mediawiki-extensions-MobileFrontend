@@ -129,9 +129,9 @@ Toggler.prototype.isCollapsedByDefault = function () {
 				// Only collapse on narrow devices
 				!browser.isWideScreen() &&
 				// Section collapsing can be disabled in MobilePreferences
-				// NB: 'expandSections' uses localStorage, unlike 'expandedSections'
-				// which uses sessionStorage
-				mw.storage.get( 'expandSections' ) !== 'true';
+				!document.documentElement.classList.contains(
+					'mf-expand-sections-clientpref-1'
+				);
 		}
 	}
 	return this._isCollapsedByDefault;

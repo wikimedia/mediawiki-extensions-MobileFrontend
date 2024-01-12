@@ -95,6 +95,7 @@ class MobileFrontendHooks implements
 	public const MOBILE_PREFERENCES_SPECIAL_PAGES = 'mobile-specialpages';
 	public const MOBILE_PREFERENCES_EDITOR = 'mobile-editor';
 	public const MOBILE_PREFERENCES_FONTSIZE = 'mf-font-size';
+	public const MOBILE_PREFERENCES_EXPAND_SECTIONS = 'mf-expand-sections';
 	private const ENABLE_SPECIAL_PAGE_OPTIMISATIONS = '1';
 	// This should always be kept in sync with `@width-breakpoint-tablet`
 	// in mediawiki.skin.variables.less
@@ -343,6 +344,7 @@ class MobileFrontendHooks implements
 		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
 		$isMobile = $context->shouldDisplayMobileView();
 
+		// FIXME: This can be removed when existing references have been updated.
 		if ( $isMobile && !$userMode->isEnabled() ) {
 			$bodyAttrs['class'] .= ' mw-mf-amc-disabled';
 		}
@@ -904,10 +906,20 @@ class MobileFrontendHooks implements
 			$out->addModuleStyles( [ 'mobile.init.styles' ] );
 
 			$fontSize = $services->getUserOptionsLookup()->getOption(
-				$context->getUser(), 'mf-font-size'
+				$context->getUser(), self::MOBILE_PREFERENCES_FONTSIZE
 			) ?? 'regular';
+			$expandSections = $services->getUserOptionsLookup()->getOption(
+				$context->getUser(), self::MOBILE_PREFERENCES_EXPAND_SECTIONS
+			) ?? '0';
 
-			$context->getOutput()->addHtmlClasses( 'mf-font-size-clientpref-' . $fontSize );
+			/** @var \MobileFrontend\Amc\UserMode $userMode */
+			$userMode = MediaWikiServices::getInstance()->getService( 'MobileFrontend.AMC.UserMode' );
+			$amc = !$userMode->isEnabled() ? '0' : '1';
+			$context->getOutput()->addHtmlClasses( [
+				'mf-expand-sections-clientpref-' . $expandSections,
+				'mf-font-size-clientpref-' . $fontSize,
+				'mw-mf-amc-clientpref-' . $amc
+			] );
 
 			// Allow modifications in mobile only mode
 			$hookRunner = new HookRunner( $services->getHookContainer() );
@@ -973,6 +985,7 @@ class MobileFrontendHooks implements
 		$preferences[MobileContext::USER_MODE_PREFERENCE_NAME] = $definition;
 		$preferences[self::MOBILE_PREFERENCES_EDITOR] = $definition;
 		$preferences[self::MOBILE_PREFERENCES_FONTSIZE] = $definition;
+		$preferences[self::MOBILE_PREFERENCES_EXPAND_SECTIONS] = $definition;
 
 		if ( $config->get( 'MFEnableMobilePreferences' ) ) {
 			$preferences[ self::MOBILE_PREFERENCES_SPECIAL_PAGES ] = [

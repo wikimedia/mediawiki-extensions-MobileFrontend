@@ -1,16 +1,16 @@
 /* global $ */
-var storage = mw.storage,
-	clientPrefs = mw.user.clientPrefs,
-	api = new mw.Api(),
+/* See T354224 for information on the @wikimedia/mediawiki.skins.clientpreferences module. */
+var clientPrefs = require( '@wikimedia/mediawiki.skins.clientpreferences' ),
 	browser = require( './mobile.startup/Browser' ).getSingleton(),
 	toast = require( './mobile.startup/showOnPageReload' ),
 	amcOutreach = require( './mobile.startup/amcOutreach/amcOutreach' ),
-	EXPAND_SECTIONS_KEY = 'expandSections',
+	EXPAND_SECTIONS_KEY = 'mf-expand-sections',
 	msg = mw.msg,
 	USER_FONT_SIZE_SMALL = 'small',
 	USER_FONT_SIZE_REGULAR = 'regular',
 	USER_FONT_SIZE_LARGE = 'large',
 	USER_FONT_SIZE_XLARGE = 'xlarge',
+	NIGHT_MODE_THEME = 'skin-night-mode',
 	// FIXME: This value should be synced between back-end and front-end code,
 	// but it's currently hard-coded because ResourceLoader virtual imports
 	// i.e. require( './config.json') are incompatible with the
@@ -30,104 +30,20 @@ function notify( isPending ) {
 		mw.notify( msg( 'mobile-frontend-settings-save' ) );
 	}
 }
-/**
- * Creates a label for use with a form input
- *
- * @param {string} heading
- * @param {string} description
- * @return {OO.ui.LabelWidget}
- */
-function createLabel( heading, description ) {
-	var $label = $( '<div>' );
-	$label.append( $( '<strong>' ).text( heading ) );
-	$label.append(
-		$( '<div>' )
-			.addClass( 'option-description' )
-			.text( description )
-	);
-
-	return new OO.ui.LabelWidget( {
-		label: $label
-	} );
-}
 
 /**
  * Adds a font changer field to the form
  *
  * @param {jQuery.Object} $form
+ * @param {Record<string,ClientPreference>} clientPreferences
+ * @return {Promise<Node>}
  */
-function addFontChangerToForm( $form ) {
-	var fontChanger, fontChangerDropdown,
-		currentFontSize = ( mw.user.isAnon() ) ?
-			clientPrefs.get( FONT_SIZE_KEY ) :
-			mw.user.options.get( FONT_SIZE_KEY );
-	fontChangerDropdown = new OO.ui.DropdownInputWidget( {
-		value: currentFontSize || USER_FONT_SIZE_REGULAR,
-		options: [
-			{
-				data: USER_FONT_SIZE_SMALL,
-				label: msg( 'mobile-frontend-fontchanger-option-small' )
-			},
-			{
-				data: USER_FONT_SIZE_REGULAR,
-				label: msg( 'mobile-frontend-fontchanger-option-medium' )
-			},
-			{
-				data: USER_FONT_SIZE_LARGE,
-				label: msg( 'mobile-frontend-fontchanger-option-large' )
-			},
-			{
-				data: USER_FONT_SIZE_XLARGE,
-				label: msg( 'mobile-frontend-fontchanger-option-xlarge' )
-			}
-		]
-	} );
-	fontChanger = new OO.ui.FieldLayout(
-		fontChangerDropdown,
-		{
-			label: createLabel( mw.msg( 'mobile-frontend-fontchanger-link' ),
-				mw.msg( 'mobile-frontend-fontchanger-desc' ) ).$element
-		}
-	);
-	fontChangerDropdown.on( 'change', function ( value ) {
-		if ( mw.user.isAnon() ) {
-			clientPrefs.set( FONT_SIZE_KEY, value );
-		} else {
-			api.saveOption( FONT_SIZE_KEY, value );
-		}
-		notify();
-	} );
-
-	fontChanger.$element.prependTo( $form );
-}
-
-/**
- * Adds an expand all sections field to the form
- *
- * @param {jQuery.Object} $form
- */
-function addExpandAllSectionsToForm( $form ) {
-	var cb, cbField;
-
-	cb = new OO.ui.ToggleSwitchWidget( {
-		name: EXPAND_SECTIONS_KEY,
-		value: storage.get( EXPAND_SECTIONS_KEY ) === 'true'
-	} );
-	cbField = new OO.ui.FieldLayout(
-		cb,
-		{
-			label: createLabel(
-				mw.msg( 'mobile-frontend-expand-sections-status' ),
-				mw.msg( 'mobile-frontend-expand-sections-description' )
-			).$element
-		}
-	);
-	cb.on( 'change', function ( value ) {
-		storage.set( EXPAND_SECTIONS_KEY, value ? 'true' : 'false' );
-		notify();
-	} );
-
-	cbField.$element.prependTo( $form );
+function addClientPreferencesToForm( $form, clientPreferences ) {
+	const cp = document.createElement( 'div' );
+	const id = 'mf-client-preferences';
+	cp.id = id;
+	$form.prepend( cp );
+	return clientPrefs.render( `#${id}`, clientPreferences, true );
 }
 
 /**
@@ -222,20 +138,87 @@ function initMobileOptions() {
 	}
 	infuseToggles( toggles, $form );
 
-	if (
+	const clientPreferences = {};
+	const showExpandSectionsClientPreference = (
 		// Don't show this option on large screens since it's only honored for small screens.
 		// This logic should be kept in sync with Toggle._enable().
 		!browser.isWideScreen() &&
 		// don't add the option if the sections are set by default as the setting doesn't
 		// work in the opposite direction! (more background on T239195)
 		mw.config.get( 'wgMFCollapseSectionsByDefault' )
-	) {
-		addExpandAllSectionsToForm( $form );
-	}
+	);
 
 	if ( mw.config.get( 'wgMFEnableFontChanger' ) ) {
-		addFontChangerToForm( $form );
+		clientPreferences[ FONT_SIZE_KEY ] = {
+			options: [
+				USER_FONT_SIZE_SMALL,
+				USER_FONT_SIZE_REGULAR,
+				USER_FONT_SIZE_LARGE,
+				USER_FONT_SIZE_XLARGE
+			],
+			preferenceKey: FONT_SIZE_KEY,
+			callback: notify
+		};
 	}
+
+	const skin = mw.config.get( 'skin' );
+	clientPreferences[ NIGHT_MODE_THEME ] = {
+		options: [ '2', '0', '1' ],
+		preferenceKey: `${skin}-night-mode`
+	};
+
+	if ( showExpandSectionsClientPreference ) {
+		clientPreferences[ EXPAND_SECTIONS_KEY ] = {
+			options: [
+				'0',
+				'1'
+			],
+			type: 'switch',
+			preferenceKey: EXPAND_SECTIONS_KEY,
+			callback: notify
+		};
+	}
+
+	if ( !mw.user.isAnon() ) {
+		clientPreferences[ 'mw-mf-amc' ] = {
+			options: [
+				'0',
+				'1'
+			],
+			type: 'switch',
+			preferenceKey: 'mf_amc_optin',
+			callback: () => location.reload()
+		};
+	}
+
+	// Transport existing links to new layout.
+
+	/**
+	 * Currently toggle switches have duplicate headings and a description that is not
+	 * part of the toggle switch layout.
+	 * This works around this to retain the classic MobileFrontend layout for these
+	 * controls.
+	 * FIXME: This should be upstreamed to @wikimedia/mediawiki.skins.clientpreferences
+	 *
+	 * @param {jQuery} $node
+	 */
+	function modifyToggleSwitch( $node ) {
+		// Move the description from the heading into the label.
+		$node.find( '.skin-client-pref-description' )
+			.appendTo( $node.find( '.cdx-toggle-switch__label' ) );
+		// Drop the duplicate label.
+		$node.find( '> label' ).remove();
+	}
+
+	addClientPreferencesToForm( $form, clientPreferences ).then( () => {
+		// Make some modifications that are currently not supported by the Vector client preferences
+		// Move the links from the server side preference into the row.
+		$( '#amc-field .option-links' ).appendTo( '#skin-client-prefs-mw-mf-amc' );
+		modifyToggleSwitch( $( '#skin-client-prefs-mf-expand-sections' ) );
+		modifyToggleSwitch( $( '#skin-client-prefs-mw-mf-amc' ) );
+		// Remove the server side rendered OOUI field.
+		$( '#amc-field' ).remove();
+	} );
 }
 
 mw.loader.using( 'oojs-ui-widgets' ).then( initMobileOptions );
