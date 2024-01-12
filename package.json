@@ -12,7 +12,8 @@
 		"lint:js": "eslint --cache .",
 		"lint:css": "stylelint \"**/*.less\"",
 		"lint:i18n": "banana-checker --requireLowerCase=0 i18n/",
-		"minify-svg": "svgo --config=.svgo.config.js --quiet --recursive --folder resources/",
+		"minify": "npm -s run minify:svg",
+		"minify:svg": "svgo --config=.svgo.config.js --quiet --recursive --folder resources/",
 		"test": "npm -s run lint && bash ./dev-scripts/svg_check.sh && npm -s run coverage && npm -s run test:bundle && npm -s run jsdoc",
 		"test:bundle": "bash ./dev-scripts/check_bundle.sh",
 		"jsdoc": "jsdoc -c jsdoc.json",
@@ -53,7 +54,7 @@
 		"qunit": "2.20.0",
 		"sinon": "4.5.0",
 		"stylelint-config-wikimedia": "0.16.1",
-		"svgo": "3.0.2",
+		"svgo": "3.2.0",
 		"webpack": "5.89.0",
 		"webpack-cli": "5.1.4"
 	}
