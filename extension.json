@@ -104,7 +104,7 @@
 			]
 		},
 		"mobile.init.styles": {
-			"class": "ResourceLoaderLessVarFileModule",
+			"class": "MediaWiki\\ResourceLoader\\LessVarFileModule",
 			"styles": [
 				"resources/mobile.init.styles/main.less"
 			],
@@ -113,7 +113,7 @@
 			]
 		},
 		"mobile.init": {
-			"class": "ResourceLoaderLessVarFileModule",
+			"class": "MediaWiki\\ResourceLoader\\LessVarFileModule",
 			"lessMessages": [
 				"mobile-frontend-tap-to-display-image"
 			],
