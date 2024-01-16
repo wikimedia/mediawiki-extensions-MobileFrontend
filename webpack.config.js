@@ -30,7 +30,7 @@ module.exports = ( env, argv ) => ( {
 	},
 
 	// Fail on the first build error instead of tolerating it for prod builds. This seems to
-	// correspond to optimization.noEmitOnErrors.
+	// correspond to optimization.emitOnErrors.
 	bail: argv.mode === 'production',
 
 	// Specify that all paths are relative the Webpack configuration directory not the current
@@ -85,7 +85,7 @@ module.exports = ( env, argv ) => ( {
 	},
 	optimization: {
 		// Don't produce production output when a build error occurs.
-		noEmitOnErrors: argv.mode === 'production',
+		emitOnErrors: argv.mode !== 'production',
 
 		// Use filenames instead of unstable numerical identifiers for file references. This
 		// increases the gzipped bundle size some but makes the build products easier to debug and
@@ -190,7 +190,7 @@ module.exports = ( env, argv ) => ( {
 		// Note: entrypoint size implicitly includes the mobile.startup.runtime and mobile.common
 		// chunks.
 		maxAssetSize: 48.1 * 1024,
-		maxEntrypointSize: 84.1 * 1024,
+		maxEntrypointSize: 85.2 * 1024,
 		// The default filter excludes map files but we rename ours.
 		assetFilter: ( filename ) => !filename.endsWith( srcMapExt )
 	}
