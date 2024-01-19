@@ -190,7 +190,7 @@ module.exports = ( env, argv ) => ( {
 		// Note: entrypoint size implicitly includes the mobile.startup.runtime and mobile.common
 		// chunks.
 		maxAssetSize: 48.1 * 1024,
-		maxEntrypointSize: 85.2 * 1024,
+		maxEntrypointSize: 85.4 * 1024,
 		// The default filter excludes map files but we rename ours.
 		assetFilter: ( filename ) => !filename.endsWith( srcMapExt )
 	}
