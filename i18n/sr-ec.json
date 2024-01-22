@@ -14,7 +14,8 @@
 			"Zoranzoki21",
 			"Милан Јелисавчић",
 			"Михајло Анђелковић",
-			"Сербијана"
+			"Сербијана",
+			"Zenfiric"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Без обзира да ли корисник уређује преко мобилног интерфејса",
@@ -82,7 +83,7 @@
 	"mobile-frontend-editor-success-landmark-1": "Честитамо, постали сте уредник {{GRAMMAR:генитив|{{SITENAME}}}}!",
 	"mobile-frontend-editor-success-new-page": "Честитамо на прављењу нове странице!",
 	"mobile-frontend-editor-summary-placeholder": "Пример: исправљене типографске грешке, додат садржај",
-	"mobile-frontend-editor-summary-request": "Како сте побољшали страницу?",
+	"mobile-frontend-editor-summary-request": "Резиме Ваше измене",
 	"mobile-frontend-editor-summary": "Резиме:",
 	"mobile-frontend-editor-switch-editor": "Промени уређивач",
 	"mobile-frontend-editor-switch-visual-editor": "Пребаци на визуелно уређивање",

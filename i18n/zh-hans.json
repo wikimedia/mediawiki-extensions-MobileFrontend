@@ -74,7 +74,9 @@
 			"科劳",
 			"飞舞回堂前",
 			"Lantianjialiang",
-			"LittlePaw365"
+			"LittlePaw365",
+			"Xyb",
+			"沈澄心"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "用户是否通过移动版界面编辑",
@@ -257,7 +259,7 @@
 	"mobile-frontend-watchlist-cta-button-login": "登录",
 	"mobile-frontend-watchlist-cta-button-signup": "注册",
 	"mobile-frontend-watchlist-feed": "被修改",
-	"mobile-frontend-watchlist-feed-empty": "没有新的更改的页面。",
+	"mobile-frontend-watchlist-feed-empty": "没有最近更改过的页面。",
 	"mobile-frontend-watchlist-filter-all": "所有",
 	"mobile-frontend-watchlist-filter-articles": "页面",
 	"mobile-frontend-watchlist-filter-other": "其他",
