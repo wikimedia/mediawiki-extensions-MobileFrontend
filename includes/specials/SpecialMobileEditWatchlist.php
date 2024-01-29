@@ -241,7 +241,7 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 	 * @return string html representation of collection in watchlist view
 	 */
 	protected function getViewHtml( MobileCollection $collection ) {
-		$html = Html::openElement( 'ul', [ 'class' => 'content-unstyled mw-mf-page-list page-list thumbs'
+		$html = Html::openElement( 'ul', [ 'class' => 'content-unstyled mw-mf-page-list thumbs'
 			. ' page-summary-list mw-mf-watchlist-page-list' ] );
 		foreach ( $collection as $mobilePage ) {
 			$html .= $this->getLineHtml( $mobilePage );

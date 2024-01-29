@@ -71,7 +71,7 @@ abstract class MobileSpecialPageFeed extends MobileSpecialPage {
 				Html::element( 'h2', [ 'class' => 'list-header' ], $date ) .
 				Html::openElement( 'ul', [
 					// TODO remove page-list after initial release T337741
-						'class' => 'mw-mf-page-list page-list diff-summary-list side-list'
+						'class' => 'mw-mf-page-list diff-summary-list side-list'
 					]
 				)
 			);

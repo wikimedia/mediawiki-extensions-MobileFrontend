@@ -68,7 +68,7 @@ mfExtend( PageList, View, {
 		this.renderPageImages();
 	},
 	template: util.template( `
-<ul class="mw-mf-page-list page-list thumbs actionable">
+<ul class="mw-mf-page-list thumbs actionable">
 	{{#pages}}
 		{{>item}}
 	{{/pages}}
