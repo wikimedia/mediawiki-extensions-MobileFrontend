@@ -11,7 +11,8 @@
 			"Patsagorn Y.",
 			"กิ๊ฟ เลิกล่ะ สายแข็ง",
 			"Ekminarin",
-			"Bebiezaza"
+			"Bebiezaza",
+			"RidJasper"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "เลือกว่าจะให้ผู้ใช้แก้ไขผ่านอินเทอร์เฟซสำหรับอุปกรณ์เคลื่อนที่หรือไม่",
@@ -51,7 +52,7 @@
 	"mobile-frontend-editor-blocked-drawer-body-link": "ดูเพิ่ม",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "เหตุผล",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "ดำเนินการ{{GENDER:$1|บล็อก}}โดย",
-	"mobile-frontend-editor-blocked-drawer-expiry-header": "การบล็อกจะหมดอายุใน",
+	"mobile-frontend-editor-blocked-drawer-expiry-header": "การบล็อกจะหมดอายุ",
 	"mobile-frontend-editor-blocked-drawer-help": "ดูรายละเอียดเพิ่มเติม",
 	"mobile-frontend-editor-generic-block-reason": "ไม่ทราบเหตุผล",
 	"mobile-frontend-editor-cancel": "ยกเลิก",
@@ -121,6 +122,7 @@
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "ภาษาที่แนะนำ",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "ภาษาอื่น ๆ",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "ค้นหาภาษา",
+	"mobile-frontend-languages-structured-overlay-no-results": "ภาษาไม่พร้อมใช้งาน",
 	"mobile-frontend-last-modified-date": "แก้ไขล่าสุดเมื่อ $1 เวลา $2",
 	"mobile-frontend-last-modified-with-user-days": "[$4 {{GENDER:$1|แก้ไข}}ล่าสุดเมื่อ {{PLURAL:$3|$3 วัน}}ก่อน]โดย {{PLURAL:$5|[$6 $2]|0=ผู้ใช้นิรนาม}}",
 	"mobile-frontend-last-modified-with-user-hours": "[$4 {{GENDER:$1|แก้ไข}}ล่าสุดเมื่อ {{PLURAL:$3|$3 ชั่วโมง}}ก่อน]โดย {{PLURAL:$5|[$6 $2]|0=ผู้ใช้นิรนาม}}",

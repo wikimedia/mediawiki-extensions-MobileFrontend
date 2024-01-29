@@ -6,12 +6,14 @@
 			"Sembuk",
 			"Wisdom",
 			"TayfunEt.",
-			"Chinneeb"
+			"Chinneeb",
+			"Enkhsaihan2005",
+			"Zolgoyo"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Хэрэглэгч гар утасны интерфейсээр дамжуулан засварлаж байгаа эсэх",
 	"mobile-frontend-changeslist-nocomment": "засварлах хураангуй байхгүй",
-	"mobile-frontend-copyright": "Текст нь <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a>-ийн хувьд оршин буй; зарим нэг нэмэлт нөхцөл байж магадгүй. <a href='https://foundation.wikimedia.org/wiki/Terms_of_Use'>Хэрэглээний нөхцөл</a> хуудсаас илүү дэлгэрэнгүй мэдээлэл авна уу. Википедиа нь <a href='https://wikimediafoundation.org/'>Wikimedia Foundation, Inc. (Викимедиа сан)</a> ашгийн бус байгууллагын доор бүртгэлтэй таних тэмдэг болно.",
+	"mobile-frontend-copyright": "Тусгай тайлбар байхгүй бол энэ агуулгыг $1 лицензийн дагуу хэрэглэх боломжтой.",
 	"mobile-frontend-editor-anon": "Логингүй засвар хийх",
 	"mobile-frontend-editor-disabled": "Энэ хуудсыг эвдэн сүйтгэхээс сэргийлэх үүднээс хамгаалсан байна. [ $1 Кодоор харах]",
 	"mobile-frontend-editor-publish": "Хэвлэх",
@@ -26,6 +28,6 @@
 	"mobile-frontend-last-modified-date": "Хамгийн сүүлд $1-нд $2-т засварлагдсан",
 	"mobile-frontend-main-menu": "Үндсэн цэс",
 	"mobile-frontend-terms-text": "Хэрэглэх нөхцөл",
-	"mobile-frontend-view": "Мобайл хувилбар",
+	"mobile-frontend-view": "Гар утасны хувилбар",
 	"mobile-frontend-view-desktop": "Дэлгэц"
 }
