@@ -17,7 +17,7 @@ function ModuleLoader() {
 ModuleLoader.prototype = {
 	/**
 	 * Require (import) a module previously defined using define().
-	 * Searches core module registry using mw.loader.require before consulting
+	 * Searches core module registry using ResourceLoader require before consulting
 	 * its own local registry. This method is deprecated, please do not use.
 	 *
 	 * @memberof ModuleLoader
@@ -40,7 +40,7 @@ ModuleLoader.prototype = {
 		}
 		args = id.split( '/' );
 		try {
-			module = mw.loader.require( args[0] );
+			module = __non_webpack_require__( args[0] );
 			if ( module[ args[1] ] ) {
 				return module[ args[1] ];
 			} else {

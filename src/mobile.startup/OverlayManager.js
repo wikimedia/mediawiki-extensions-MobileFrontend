@@ -389,7 +389,7 @@ OverlayManager.prototype = {
 OverlayManager.getSingleton = function () {
 	if ( !overlayManager ) {
 		const
-			router = mw.loader.require( 'mediawiki.router' ),
+			router = __non_webpack_require__( 'mediawiki.router' ),
 			container = document.createElement( 'div' ),
 			// Note getPath returns hash minus the '#' character:
 			hash = router.getPath(),

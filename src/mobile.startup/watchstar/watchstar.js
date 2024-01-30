@@ -11,8 +11,7 @@ var icons = require( '../icons' );
  */
 module.exports = function ( options ) {
 	const isWatched = options.isWatched,
-		// FIXME: mw.loader.require is not a public function (T235198)
-		watchstar = mw.loader.require( 'mediawiki.page.watch.ajax' ).watchstar,
+		watchstar = __non_webpack_require__( 'mediawiki.page.watch.ajax' ).watchstar,
 		action = isWatched ? 'unwatch' : 'watch',
 		iconProps = {
 			href: mw.Title.newFromText( options.page.title ).getUrl( { action } )

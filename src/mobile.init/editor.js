@@ -572,7 +572,7 @@ function bindEditLinksSorryToast( msg, router ) {
 }
 
 module.exports = function ( currentPage, currentPageHTMLParser, skin ) {
-	var router = mw.loader.require( 'mediawiki.router' );
+	var router = __non_webpack_require__( 'mediawiki.router' );
 
 	if ( currentPage.inNamespace( 'file' ) && currentPage.id === 0 ) {
 		// Is a new file page (enable upload image only) T60311

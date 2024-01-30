@@ -22,10 +22,7 @@ var View = require( '../mobile.startup/View' ),
 	} ),
 	LoadErrorMessage = require( './LoadErrorMessage' ),
 	ImageGateway = require( './ImageGateway' ),
-	// FIXME: mw.loader.require is a private function but there's no other way to get hold of
-	// this right now using require will cause webpack to resolve it
-	// Can be rewritten to mw.router when https://gerrit.wikimedia.org/r/#/c/mediawiki/core/+/482732 has been merged
-	router = mw.loader.require( 'mediawiki.router' );
+	router = __non_webpack_require__( 'mediawiki.router' );
 
 /**
  * Displays images in full screen overlay

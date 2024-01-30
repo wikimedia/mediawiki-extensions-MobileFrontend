@@ -16,13 +16,16 @@ const
 QUnit.module( 'MobileFrontend Watchstar.js', {
 	beforeEach: function () {
 		sandbox = sinon.sandbox.create();
+		const requireStub = sandbox.stub();
+		/* eslint-disable-next-line camelcase */
+		global.__non_webpack_require__ = requireStub;
 		dom.setUp( sandbox, global );
 		jQuery.setUp( sandbox, global );
 		mediawiki.setUp( sandbox, global );
 		mustache.setUp( sandbox, global );
 		oo.setUp( sandbox, global );
 		watchstarSpy = sandbox.spy();
-		sandbox.stub( global.mw.loader, 'require' ).withArgs( 'mediawiki.page.watch.ajax' ).returns( {
+		requireStub.withArgs( 'mediawiki.page.watch.ajax' ).returns( {
 			watchstar: watchstarSpy
 		} );
 		sandbox.stub( global.mw.Title, 'newFromText' ).returns(
