@@ -34,7 +34,10 @@ module.exports = function () {
 	if (
 		// Avoid this running on Watchlist.
 		!currentPage.inNamespace( 'special' ) &&
-		mw.config.get( 'wgAction' ) === 'view'
+		(
+			mw.config.get( 'wgAction' ) === 'view' ||
+			mw.config.get( 'wgAction' ) === 'edit'
+		)
 	) {
 		mw.hook( 'wikipage.content' ).add( function ( $container ) {
 			var $contentContainer = $container.find( '.mw-parser-output' );
