@@ -1,13 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ella Lachow"
+			"Ella Lachow",
+			"Malaalaa"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Issi yaray mobaaliyan giigissiiddi de'ii woykko giigissennee",
 	"mobile-frontend-account-create-captcha-placeholder": "Markkatettaa koodiyaa gelissa",
 	"mobile-frontend-changeslist-nocomment": "giigissuwaa qantta qonccissoy baawa",
 	"mobile-frontend-clear-search": "Qucca",
+	"mobile-frontend-copyright": "Hara ogiyan hassayissetana xaykko xaafoy $1an de'ees.",
 	"mobile-frontend-diffview-title": "Laameta",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Gela",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "Likke",
