@@ -84,7 +84,6 @@ return [
 		return new MobileFrontend\Amc\UserMode(
 			$services->getService( 'MobileFrontend.AMC.Manager' ),
 			$services->getService( 'MobileFrontend.Context' )->getUser(),
-			$services->getUserOptionsLookup(),
 			$services->getUserOptionsManager()
 		);
 	},

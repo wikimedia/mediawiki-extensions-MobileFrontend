@@ -3,7 +3,6 @@
 namespace MobileFrontend\Amc;
 
 use MediaWiki\MediaWikiServices;
-use MediaWiki\User\Options\UserOptionsLookup;
 use MediaWiki\User\Options\UserOptionsManager;
 use MediaWiki\User\UserIdentity;
 use MobileFrontend\Features\IUserMode;
@@ -35,11 +34,6 @@ class UserMode implements IUserMode, IUserSelectableMode {
 	private $amc;
 
 	/**
-	 * @var UserOptionsLookup
-	 */
-	private $userOptionsLookup;
-
-	/**
 	 * @var UserOptionsManager
 	 */
 	private $userOptionsManager;
@@ -47,19 +41,16 @@ class UserMode implements IUserMode, IUserSelectableMode {
 	/**
 	 * @param Manager $amcManager
 	 * @param UserIdentity $userIdentity
-	 * @param UserOptionsLookup $userOptionsLookup
 	 * @param UserOptionsManager $userOptionsManager
 	 * @throws RuntimeException When AMC mode is not available
 	 */
 	public function __construct(
 		Manager $amcManager,
 		UserIdentity $userIdentity,
-		UserOptionsLookup $userOptionsLookup,
 		UserOptionsManager $userOptionsManager
 	) {
 		$this->amc = $amcManager;
 		$this->userIdentity = $userIdentity;
-		$this->userOptionsLookup = $userOptionsLookup;
 		$this->userOptionsManager = $userOptionsManager;
 	}
 
@@ -75,7 +66,7 @@ class UserMode implements IUserMode, IUserSelectableMode {
 	 * @return bool
 	 */
 	public function isEnabled() {
-		$userOption = $this->userOptionsLookup->getOption(
+		$userOption = $this->userOptionsManager->getOption(
 			$this->userIdentity,
 			self::USER_OPTION_MODE_AMC,
 			self::OPTION_DISABLED
@@ -116,7 +107,6 @@ class UserMode implements IUserMode, IUserSelectableMode {
 		return new self(
 			$services->getService( 'MobileFrontend.AMC.Manager' ),
 			$userIdentity,
-			$services->getUserOptionsLookup(),
 			$services->getUserOptionsManager()
 		);
 	}
