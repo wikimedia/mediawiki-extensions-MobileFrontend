@@ -393,6 +393,10 @@ class MobileFrontendHooks implements
 		$services = MediaWikiServices::getInstance();
 		/** @var MobileContext $context */
 		$context = $services->getService( 'MobileFrontend.Context' );
+		if ( !$context->shouldDisplayMobileView() ) {
+			// this code should only apply to mobile view.
+			return;
+		}
 		/** @var FeaturesManager $featureManager */
 		$featureManager = $services->getService( 'MobileFrontend.FeaturesManager' );
 
@@ -403,7 +407,7 @@ class MobileFrontendHooks implements
 		$title = $context->getTitle();
 		$output = $context->getOutput();
 		// Only do redirects to MobileDiff if user is in mobile view and it's not a special page
-		if ( $context->shouldDisplayMobileView() &&
+		if (
 			!$title->isSpecialPage() &&
 			!$featureManager->isFeatureAvailableForCurrentUser( 'MFUseDesktopDiffPage' ) &&
 			self::shouldMobileFormatSpecialPages( $context->getUser() )
