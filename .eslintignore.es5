@@ -1,1 +1,0 @@
-resources/dist/tests.*.js

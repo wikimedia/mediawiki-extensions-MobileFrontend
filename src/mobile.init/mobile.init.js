@@ -10,6 +10,7 @@ var skin,
 	url,
 	toggling = require( './toggling' ),
 	FONT_SIZE_KEY = 'mf-font-size',
+	SECTION_COLLAPSING_TOGGLE = 'mf-expand-sections',
 	storage = mw.storage,
 	api = new mw.Api(),
 	lazyLoadedImages = require( './lazyLoadedImages' ),
@@ -112,6 +113,19 @@ function migrateLegacyFontSizeValue() {
 	}
 }
 
+function migrateLegacyExpandAllSectionsToggle() {
+	const currentValue = mw.storage.get( 'expandSections' );
+	if ( currentValue ) {
+		if ( mw.user.isAnon() ) {
+			mw.user.clientPrefs.set( SECTION_COLLAPSING_TOGGLE, '1' );
+		} else {
+			api.saveOption( SECTION_COLLAPSING_TOGGLE, '1' );
+		}
+		storage.remove( 'expandSections' );
+	}
+}
+
+migrateLegacyExpandAllSectionsToggle();
 migrateLegacyFontSizeValue();
 toggling();
 lazyLoadedImages();
