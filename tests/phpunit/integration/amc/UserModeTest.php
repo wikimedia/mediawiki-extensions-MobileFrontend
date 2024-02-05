@@ -1,7 +1,6 @@
 <?php
 
 use MediaWiki\Config\HashConfig;
-use MediaWiki\User\Options\UserOptionsLookup;
 use MediaWiki\User\Options\UserOptionsManager;
 use MediaWiki\User\User;
 use MediaWiki\User\UserIdentity;
@@ -56,11 +55,11 @@ class UserModeTest extends MediaWikiIntegrationTestCase {
 					$overriddenOptVal = $val;
 				} );
 		} else {
-			$userOptsManager = $this->createNoOpMock( UserOptionsManager::class );
+			$userOptsManager = $this->createMock( UserOptionsManager::class );
+			$userOptsManager->expects( $this->never() )->method( 'setOption' );
 		}
 
-		$userOptsLookup = $this->createMock( UserOptionsLookup::class );
-		$userOptsLookup->method( 'getOption' )
+		$userOptsManager->method( 'getOption' )
 			->willReturnCallback( static function () use ( &$overriddenOptVal, $userOpt ) {
 				return $overriddenOptVal ?? $userOpt;
 			} );
@@ -68,7 +67,6 @@ class UserModeTest extends MediaWikiIntegrationTestCase {
 		return new UserMode(
 			$manager,
 			$user,
-			$userOptsLookup,
 			$userOptsManager
 		);
 	}
