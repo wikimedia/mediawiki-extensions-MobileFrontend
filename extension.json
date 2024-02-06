@@ -556,6 +556,10 @@
 			"description": "Default editor when there is no user preference set (mobile-editor). One of 'source', 'visual', or 'preference' (inherit desktop editor preference).",
 			"value": "preference"
 		},
+		"MFFallbackEditor": {
+			"description": "When MFDefaultEditor is set to 'preference' and no desktop preference is set, use this editor. Set to 'source' or 'visual'.",
+			"value": "source"
+		},
 		"MFEnableVEWikitextEditor": {
 			"description": "Eanble VisualEditor's wikitext editor as a replacement for MobileFrontend's source editor.",
 			"value": false
