@@ -33,7 +33,7 @@
 	"mobile-frontend-editor-save": "بچاؤ",
 	"mobile-frontend-editor-summary": "خلاصہ:",
 	"mobile-frontend-editor-wait": "محفوظ ہو ریا ہے، انتظار کرو۔",
-	"mobile-frontend-fontchanger-option-small": "نکا",
+	"mf-font-size-small-label": "نکا",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} نوں تواڈے ورگے لوکاں ولوں ہی بنایا گیا ہے۔</strong><br />لکھن لئی لاگ ان ہوو۔",
 	"mobile-frontend-joined-years": "{{PLURAL:$2|$2 سال|$2 سالاں}} توں {{GENDER:$1|میمبر}}",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "تجویز کردہ بولیاں",

@@ -89,7 +89,7 @@
 	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions": "Otsikon kuvvaukset",
 	"mobile-frontend-send-feedback": "Lähätä palautetta",
 	"mobile-frontend-mobile-option-MFLazyLoadImages-description": "Lattaa kuvat vain tarvittaessa.",
-	"mobile-frontend-mobile-option-amc": "Avanseerattu tila",
+	"mw-mf-amc-name": "Avanseerattu tila",
 	"mobile-frontend-amc-outreach-intro": "Esittelyssä avanseerattu tila",
 	"mobile-frontend-amc-outreach-enable": "Ota käythöön avanseerattu tila",
 	"prefs-mobile": "Mupiili-inställninkit"

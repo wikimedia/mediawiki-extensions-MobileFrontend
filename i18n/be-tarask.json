@@ -54,7 +54,7 @@
 	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|Вы сапраўды хочаце стварыць}} новую старонку ў {{SITENAME}}?",
 	"mobile-frontend-editor-save": "Захаваць",
 	"mobile-frontend-editor-uploadenable": "Калі ласка, спачатку загрузіце фота, каб мець магчымасьць рэдагаваць.",
-	"mobile-frontend-fontchanger-option-large": "Вялікі",
+	"mf-font-size-large-label": "Вялікі",
 	"mobile-frontend-last-modified-date": "Апошняе рэдагаваньне ў $2 $1",
 	"mobile-frontend-last-modified-with-user-just-now": "[$3 Апошні раз {{GENDER:$1|рэдагавалася}} толькі што] {{PLURAL:$4|[$5 $2]|0=ананімным удзельнікам}}",
 	"mobile-frontend-main-menu-settings-heading": "Налады",
