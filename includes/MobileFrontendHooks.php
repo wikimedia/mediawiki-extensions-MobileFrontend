@@ -911,7 +911,7 @@ class MobileFrontendHooks implements
 
 			$fontSize = $services->getUserOptionsLookup()->getOption(
 				$context->getUser(), self::MOBILE_PREFERENCES_FONTSIZE
-			) ?? 'regular';
+			) ?? 'small';
 			$expandSections = $services->getUserOptionsLookup()->getOption(
 				$context->getUser(), self::MOBILE_PREFERENCES_EXPAND_SECTIONS
 			) ?? '0';
