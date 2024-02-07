@@ -78,8 +78,7 @@ function getPreferredEditor() {
 	if ( preferredEditor ) {
 		return preferredEditor;
 	}
-	const defaultEditor = mw.config.get( 'wgMFDefaultEditor' );
-	switch ( defaultEditor ) {
+	switch ( mw.config.get( 'wgMFDefaultEditor' ) ) {
 		case 'source':
 			return 'SourceEditor';
 		case 'visual':
@@ -91,9 +90,8 @@ function getPreferredEditor() {
 			if ( mw.user.options.get( 'visualeditor-hidebetawelcome' ) || mw.user.options.get( 'visualeditor-hideusered' ) ) {
 				return mw.user.options.get( 'visualeditor-editor' ) === 'visualeditor' ? 'VisualEditor' : 'SourceEditor';
 			} else {
-				// We don't know what their preference is.
-				// For now, continue to give them the source editor.
-				return 'SourceEditor';
+				// When there is no desktop preference, we use MFFallbackEditor.
+				return mw.config.get( 'wgMFFallbackEditor' ) === 'visual' ? 'VisualEditor' : 'SourceEditor';
 			}
 	}
 	// In the event of misconfiguration, fall back to source

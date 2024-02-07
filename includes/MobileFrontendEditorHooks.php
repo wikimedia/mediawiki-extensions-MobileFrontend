@@ -46,10 +46,8 @@ class MobileFrontendEditorHooks implements
 		$config = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Config' );
 
 		return [
-			// MFDefaultEditor should be `source`, `visual`, or `preference`
-			// `preference` means to fall back on the desktop `visualeditor-editor` setting (if VE has been used)
-			// editor.js
 			'wgMFDefaultEditor' => $config->get( 'MFDefaultEditor' ),
+			'wgMFFallbackEditor' => $config->get( 'MFFallbackEditor' ),
 			'wgMFEnableVEWikitextEditor' => $config->get( 'MFEnableVEWikitextEditor' ),
 		];
 	}
