@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ella Lachow"
+			"Ella Lachow",
+			"Malaalaa"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Issi yaray mobaaliyan giigissiiddi de'ii woykko giigissennee",
@@ -11,6 +12,7 @@
 	"mobile-frontend-cite-error": "Iita zaaretuwaa dummayiyaa gaasoy besota ehaanaassi maliyo wode metoy merettiis.",
 	"mobile-frontend-cite-none-available": "Ha sinttaassi ayba naqaashinne baawa.",
 	"mobile-frontend-clear-search": "Qucca",
+	"mobile-frontend-copyright": "Hara ogiyan hassayissetana xaykko xaafoy $1an de'ees.",
 	"mobile-frontend-diffview-title": "Laameta",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Gela",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "Likke",
