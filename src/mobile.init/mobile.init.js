@@ -113,6 +113,16 @@ function migrateLegacyFontSizeValue() {
 	}
 }
 
+function migrateXLargeToLarge() {
+	if ( document.documentElement.classList.contains( 'mf-font-size-clientpref-xlarge' ) ) {
+		if ( mw.user.isAnon() ) {
+			mw.user.clientPrefs.set( FONT_SIZE_KEY, 'large' );
+		} else {
+			api.saveOption( FONT_SIZE_KEY, 'large' );
+		}
+	}
+}
+
 function migrateLegacyExpandAllSectionsToggle() {
 	const currentValue = mw.storage.get( 'expandSections' );
 	if ( currentValue ) {
@@ -125,6 +135,7 @@ function migrateLegacyExpandAllSectionsToggle() {
 	}
 }
 
+migrateXLargeToLarge();
 migrateLegacyExpandAllSectionsToggle();
 migrateLegacyFontSizeValue();
 toggling();

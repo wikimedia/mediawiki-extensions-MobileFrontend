@@ -127,7 +127,6 @@
 	"mf-font-size-small-label": "Font size option (for the {{msg-mw|mobile-frontend-fontchanger-link}} dropdown)\n{{Identical|Small}}",
 	"mf-font-size-regular-label": "Font size option (for the {{msg-mw|mobile-frontend-fontchanger-link}} dropdown)\n{{Identical|Regular}}",
 	"mf-font-size-large-label": "Font size option (for the {{msg-mw|mobile-frontend-fontchanger-link}} dropdown)\n{{Identical|Large}}",
-	"mf-font-size-xlarge-label": "Font size option (for the {{msg-mw|mobile-frontend-fontchanger-link}} dropdown)",
 	"mobile-frontend-generic-404-desc": "Generic description of the HTTP 404 error shown to users",
 	"mobile-frontend-generic-404-title": "Title for a generic HTTP 404 error page.\n{{Identical|Page not found}}",
 	"mobile-frontend-generic-login-new": "Combined message visible on [[Special:UserLogin]] to remind users how {{SITENAME}} relies on contributions and call to action that follows {{msg-mw|mobile-frontend-generic-login}} asking them to login.\n\nSee also:\n* {{msg-mw|mobile-frontend-generic-login}}* {{msg-mw|mobile-frontend-generic-login-action}}",

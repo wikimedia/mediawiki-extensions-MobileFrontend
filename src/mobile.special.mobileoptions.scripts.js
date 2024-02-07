@@ -9,7 +9,6 @@ var clientPrefs = require( '@wikimedia/mediawiki.skins.clientpreferences' ),
 	USER_FONT_SIZE_SMALL = 'small',
 	USER_FONT_SIZE_REGULAR = 'regular',
 	USER_FONT_SIZE_LARGE = 'large',
-	USER_FONT_SIZE_XLARGE = 'xlarge',
 	NIGHT_MODE_THEME = 'skin-night-mode',
 	// FIXME: This value should be synced between back-end and front-end code,
 	// but it's currently hard-coded because ResourceLoader virtual imports
@@ -153,8 +152,7 @@ function initMobileOptions() {
 			options: [
 				USER_FONT_SIZE_SMALL,
 				USER_FONT_SIZE_REGULAR,
-				USER_FONT_SIZE_LARGE,
-				USER_FONT_SIZE_XLARGE
+				USER_FONT_SIZE_LARGE
 			],
 			preferenceKey: FONT_SIZE_KEY,
 			callback: notify
