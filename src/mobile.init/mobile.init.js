@@ -95,24 +95,6 @@ if ( mw.config.get( 'wgMFIsSupportedEditRequest' ) ) {
 	editor( currentPage, currentPageHTMLParser, skin );
 }
 
-/**
- * One time action to migrate legacy font size to new system.
- * FIXME: Can be removed in 1 months time and replaced with `storage.remove( 'userFontSize' );`
- */
-function migrateLegacyFontSizeValue() {
-	let currentValue = storage.get( 'userFontSize' );
-	if ( currentValue ) {
-		// x-large is mapped to xlarge but others are the same.
-		currentValue = currentValue.replace( '-', '' );
-		if ( mw.user.isAnon() ) {
-			mw.user.clientPrefs.set( FONT_SIZE_KEY, currentValue );
-		} else {
-			api.saveOption( FONT_SIZE_KEY, currentValue );
-		}
-		storage.remove( 'userFontSize' );
-	}
-}
-
 function migrateXLargeToLarge() {
 	if ( document.documentElement.classList.contains( 'mf-font-size-clientpref-xlarge' ) ) {
 		if ( mw.user.isAnon() ) {
@@ -137,6 +119,5 @@ function migrateLegacyExpandAllSectionsToggle() {
 
 migrateXLargeToLarge();
 migrateLegacyExpandAllSectionsToggle();
-migrateLegacyFontSizeValue();
 toggling();
 lazyLoadedImages();
