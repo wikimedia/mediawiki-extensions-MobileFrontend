@@ -136,6 +136,12 @@
 	}
 }
 
+.mf-icon-search {
+	.cdx-mixin-css-icon( @cdx-icon-search, @param-fill-color: @color-subtle );
+	// We don't want the default vertical-align of text-bottom because it messes with the centering of the search bar
+	vertical-align: inherit;
+}
+
 @keyframes fadeIn {
 	from {
 		opacity: 0;
