@@ -196,6 +196,8 @@
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Контрола величине фонта за искуство читања.",
 	"mw-mf-amc-name": "Напредни режим",
 	"mw-mf-amc-description": "Напредни режим омогућава једноставан приступ страницама за разговор, страницама историје, корисничким алатима и другим алатима за уређивање.",
+	"mw-mf-amc-0-label": "Онемогућено",
+	"mw-mf-amc-1-label": "Омогућено",
 	"mobile-frontend-mobile-option-amc-learn-more": "Сазнајте више",
 	"mobile-frontend-mobile-option-amc-send-feedback": "Пошаљите повратне информације",
 	"mobile-frontend-user-pref-option": "Корисничка подешавања",
