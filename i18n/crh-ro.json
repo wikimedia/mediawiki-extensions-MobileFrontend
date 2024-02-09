@@ -7,7 +7,7 @@
 	"mobile-frontend-changeslist-nocomment": "deñíştírme taswirí yok",
 	"mobile-frontend-diffview-anonymous": "Anonim kullanuwşî",
 	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|bayt}} koşîldî",
-	"mobile-frontend-diffview-bytesnochange": "Balabanlîkta park yok",
+	"mobile-frontend-diffview-bytesnochange": "Balabanlîkta fark yok",
 	"mobile-frontend-diffview-bytesremoved": "$1 {{PLURAL:$1|bayt}} alîndî",
 	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|deñíştírme}}",
 	"mobile-frontend-diffview-title": "Deñíştírmeler",
