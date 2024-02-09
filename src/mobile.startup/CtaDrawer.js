@@ -82,8 +82,8 @@ function signUpParams() {
 }
 
 CtaDrawer.prototype.test = {
-	redirectParams: redirectParams,
-	signUpParams: signUpParams
+	redirectParams,
+	signUpParams
 };
 
 module.exports = CtaDrawer;

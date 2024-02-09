@@ -27,7 +27,7 @@ mfExtend( ReferencesHtmlScraperGateway, ReferencesGateway, {
 	 * @param {jQuery.Object} $container to scan for an element
 	 * @return {jQuery.Promise} that can be used by getReference
 	 */
-	getReferenceFromContainer: function ( id, $container ) {
+	getReferenceFromContainer( id, $container ) {
 		var $el, $ol, $parent,
 			result = util.Deferred();
 
@@ -56,7 +56,7 @@ mfExtend( ReferencesHtmlScraperGateway, ReferencesGateway, {
 	 * @param {jQuery.Object|undefined} $reference
 	 * @returns {string}
 	 */
-	getReferenceHtml: function ( $reference ) {
+	getReferenceHtml( $reference ) {
 		return $reference ?
 			$reference.find( '.mw-reference-text, .reference-text' ).first().html() :
 			'';
@@ -69,7 +69,7 @@ mfExtend( ReferencesHtmlScraperGateway, ReferencesGateway, {
 	 * @param {Page} page (unused)
 	 * @param {PageHTMLParser} pageHTMLParser
 	 */
-	getReference: function ( hash, page, pageHTMLParser ) {
+	getReference( hash, page, pageHTMLParser ) {
 		var id = mw.util.percentDecodeFragment( hash.slice( 1 ) );
 		// If an id is not found it's possible the id passed needs decoding (per T188547).
 		return this.getReferenceFromContainer( id, pageHTMLParser.$el.find( 'ol.references' ) );

@@ -33,7 +33,7 @@ mfExtend( Thumbnail, View, {
 	 * @memberof Thumbnail
 	 * @instance
 	 */
-	postRender: function () {
+	postRender() {
 		this.options.description = this.$el.siblings( '.thumbcaption, figcaption' ).text();
 	},
 	/**
@@ -43,7 +43,7 @@ mfExtend( Thumbnail, View, {
 	 * @instance
 	 * @return {string}
 	 */
-	getDescription: function () {
+	getDescription() {
 		return this.options.description;
 	},
 	/**
@@ -53,7 +53,7 @@ mfExtend( Thumbnail, View, {
 	 * @instance
 	 * @return {string}
 	 */
-	getFileName: function () {
+	getFileName() {
 		return this.options.filename;
 	}
 } );

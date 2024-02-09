@@ -41,9 +41,7 @@ function makeHeader( headingOrView, headerActions, headerCancel, additionalClass
 	}
 	if ( headerActions && headerActions.length ) {
 		$el.find( '.header-action' ).append(
-			headerActions.map( function ( component ) {
-				return component.$el;
-			} )
+			headerActions.map( ( component ) => component.$el )
 		);
 	}
 	return $el[0];
@@ -120,8 +118,8 @@ function savingHeader( heading ) {
 }
 
 module.exports = {
-	savingHeader: savingHeader,
-	saveHeader: saveHeader,
-	formHeader: formHeader,
-	header: header
+	savingHeader,
+	saveHeader,
+	formHeader,
+	header
 };

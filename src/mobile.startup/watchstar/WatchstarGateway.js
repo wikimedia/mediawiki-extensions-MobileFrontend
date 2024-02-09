@@ -50,12 +50,14 @@ WatchstarGateway.prototype = {
 	 * @param {PageTitle[]} titles
 	 * @return {jQuery.Deferred<WatchStatusMap>}
 	 */
-	getStatuses: function ( ids, titles ) {
+	getStatuses( ids, titles ) {
 		// Issue two requests and coalesce the results.
 		return util.Promise.all( [
 			this.getStatusesByID( ids ),
 			this.getStatusesByTitle( titles )
-		] ).then( function () { return util.extend.apply( util, arguments ); } );
+		] ).then( function () {
+			return util.extend.apply( util, arguments );
+		} );
 	},
 
 	/**
@@ -64,7 +66,7 @@ WatchstarGateway.prototype = {
 	 * @param {PageID[]} ids
 	 * @return {jQuery.Deferred<WatchStatusMap>}
 	 */
-	getStatusesByID: function ( ids ) {
+	getStatusesByID( ids ) {
 		var self = this;
 		if ( !ids.length ) {
 			return util.Deferred().resolve( {} );
@@ -76,9 +78,7 @@ WatchstarGateway.prototype = {
 			prop: 'info',
 			inprop: 'watched',
 			pageids: ids
-		} ).then( function ( rsp ) {
-			return self._unmarshalGetResponse( rsp );
-		} );
+		} ).then( ( rsp ) => self._unmarshalGetResponse( rsp ) );
 	},
 
 	/**
@@ -87,7 +87,7 @@ WatchstarGateway.prototype = {
 	 * @param {PageTitle[]} titles
 	 * @return {jQuery.Deferred<WatchStatusMap>}
 	 */
-	getStatusesByTitle: function ( titles ) {
+	getStatusesByTitle( titles ) {
 		var self = this;
 		if ( !titles.length ) {
 			return util.Deferred().resolve( {} );
@@ -96,10 +96,8 @@ WatchstarGateway.prototype = {
 		return this.api.get( actionParams( {
 			prop: 'info',
 			inprop: 'watched',
-			titles: titles
-		} ) ).then( function ( rsp ) {
-			return self._unmarshalGetResponse( rsp );
-		} );
+			titles
+		} ) ).then( ( rsp ) => self._unmarshalGetResponse( rsp ) );
 	},
 
 	/**
@@ -109,10 +107,10 @@ WatchstarGateway.prototype = {
 	 * @param {WatchStatus} watched
 	 * @return {jQuery.Deferred}
 	 */
-	postStatusesByTitle: function ( titles, watched ) {
+	postStatusesByTitle( titles, watched ) {
 		var params = {
 			action: 'watch',
-			titles: titles
+			titles
 		};
 		if ( !watched ) {
 			params.unwatch = !watched;
@@ -128,9 +126,9 @@ WatchstarGateway.prototype = {
 	 * @see getStatusesByID
 	 * @see getStatusesByTitle
 	 */
-	_unmarshalGetResponse: function ( rsp ) {
+	_unmarshalGetResponse( rsp ) {
 		var pages = rsp && rsp.query && rsp.query.pages || [];
-		return pages.reduce( function ( statuses, page ) {
+		return pages.reduce( ( statuses, page ) => {
 			statuses[page.title] = page.watched;
 			return statuses;
 		}, {} );

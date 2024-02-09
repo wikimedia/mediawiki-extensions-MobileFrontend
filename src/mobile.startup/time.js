@@ -150,10 +150,10 @@ function getRegistrationMessage( ts, gender ) {
 }
 
 module.exports = {
-	getLastModifiedMessage: getLastModifiedMessage,
-	getRegistrationMessage: getRegistrationMessage,
-	timeAgo: timeAgo,
-	getTimeAgoDelta: getTimeAgoDelta,
-	isNow: isNow,
-	isRecent: isRecent
+	getLastModifiedMessage,
+	getRegistrationMessage,
+	timeAgo,
+	getTimeAgoDelta,
+	isNow,
+	isRecent
 };

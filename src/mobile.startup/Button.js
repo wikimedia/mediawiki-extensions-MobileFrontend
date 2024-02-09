@@ -24,7 +24,7 @@ mfExtend( Button, View, {
 	 * @memberof IconButton
 	 * @instance
 	 */
-	preRender: function () {
+	preRender() {
 		// Mapping existing props to Codex props used in IconButton
 		var action = 'default';
 		if ( this.options.progressive ) {
@@ -40,8 +40,8 @@ mfExtend( Button, View, {
 			this.options.additionalClassNames += ' mf-button-block';
 		}
 		var options = util.extend( {
-			weight: weight,
-			action: action,
+			weight,
+			action,
 			isIconOnly: false,
 			icon: null
 		}, this.options );

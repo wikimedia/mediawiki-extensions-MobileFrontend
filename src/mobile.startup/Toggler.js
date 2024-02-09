@@ -183,7 +183,7 @@ Toggler.prototype.toggle = function ( $heading, fromSaved ) {
 
 	Currently costly reflow-inducing viewport size computation is being done for lazy-loaded
 	images by the main listener to this event. */
-	mw.requestIdleCallback( function () {
+	mw.requestIdleCallback( () => {
 		/**
 		 * Global event emitted after a section has been toggled
 		 *
@@ -193,7 +193,7 @@ Toggler.prototype.toggle = function ( $heading, fromSaved ) {
 
 		self.eventBus.emit( 'section-toggled', {
 			expanded: wasExpanded,
-			$heading: $heading
+			$heading
 		} );
 		/**
 		 * @event mobileFrontend.section-toggled
@@ -201,7 +201,7 @@ Toggler.prototype.toggle = function ( $heading, fromSaved ) {
 		 */
 		mw.hook( 'mobileFrontend.section-toggled' ).fire( {
 			expanded: wasExpanded,
-			$heading: $heading
+			$heading
 		} );
 	} );
 
@@ -218,14 +218,12 @@ Toggler.prototype.toggle = function ( $heading, fromSaved ) {
  * @param {jQuery.Object} $heading
  */
 function enableKeyboardActions( toggler, $heading ) {
-	$heading.on( 'keypress', function ( ev ) {
+	$heading.on( 'keypress', ( ev ) => {
 		if ( ev.which === 13 || ev.which === 32 ) {
 			// Only handle keypresses on the "Enter" or "Space" keys
 			toggler.toggle( $heading );
 		}
-	} ).find( 'a' ).on( 'keypress mouseup', function ( ev ) {
-		ev.stopPropagation();
-	} );
+	} ).find( 'a' ).on( 'keypress mouseup', ( ev ) => ev.stopPropagation() );
 }
 
 /**
@@ -285,7 +283,7 @@ Toggler.prototype._enable = function () {
 			$heading
 				.addClass( 'collapsible-heading ' )
 				.data( 'section-number', i )
-				.on( 'click', function ( ev ) {
+				.on( 'click', ( ev ) => {
 					// don't toggle, if the click target was a link
 					// (a link in a section heading)
 					// See T117880
@@ -320,11 +318,9 @@ Toggler.prototype._enable = function () {
 					// We need to give each content block a unique id as that's
 					// the only way we can tell screen readers what element we're
 					// referring to via `aria-controls`.
-					id: id
+					id
 				} )
-				.on( 'beforematch', function () {
-					self.toggle( $heading );
-				} )
+				.on( 'beforematch', () => self.toggle( $heading ) )
 				.addClass( 'collapsible-block-js' )
 				.get( 0 ).setAttribute( 'hidden', 'until-found' );
 
@@ -380,9 +376,7 @@ Toggler.prototype._enable = function () {
 	checkInternalRedirectAndHash();
 	checkHash();
 
-	util.getWindow().on( 'hashchange', function () {
-		checkHash();
-	} );
+	util.getWindow().on( 'hashchange', () => checkHash() );
 
 	if ( this.isCollapsedByDefault() && this.page ) {
 		expandStoredSections( this, this.$container, this.page );

@@ -21,7 +21,7 @@ mfExtend( Icon, View, {
 	 * @memberof Icon
 	 * @instance
 	 */
-	preRender: function () {
+	preRender() {
 		this.options._iconClasses = this.getIconClasses();
 	},
 	/**
@@ -32,7 +32,7 @@ mfExtend( Icon, View, {
 	 * @instance
 	 * @private
 	 */
-	getRotationClass: function () {
+	getRotationClass() {
 		var rotationClass = '';
 		if ( this.options.rotation ) {
 			switch ( this.options.rotation ) {
@@ -61,7 +61,7 @@ mfExtend( Icon, View, {
 	 * @instance
 	 * @private
 	 */
-	getIconClasses: function () {
+	getIconClasses() {
 		var base = this.options.base;
 		var icon = this.options.icon;
 		var isSmall = this.options.isSmall;
@@ -116,7 +116,7 @@ mfExtend( Icon, View, {
 	 * @instance
 	 * @return {string}
 	 */
-	getClassName: function () {
+	getClassName() {
 		return this.$el.attr( 'class' );
 	},
 	/**
@@ -126,7 +126,7 @@ mfExtend( Icon, View, {
 	 * @instance
 	 * @return {string}
 	 */
-	getGlyphClassName: function () {
+	getGlyphClassName() {
 		if ( this.options.glyphPrefix ) {
 			return 'mf-icon-' + this.options.glyphPrefix + '-' + this.options.icon;
 		}

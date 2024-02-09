@@ -12,14 +12,12 @@ const
  * @return {jQuery.Promise} Resolves to LanguageSearcher
  */
 function loadLanguageInfoSearcher( languageInfo, showSuggestedLanguages ) {
-	return mw.loader.using( 'mobile.languages.structured' ).then( function () {
-		return languageInfo.getLanguages();
-	} ).then( function ( data ) {
+	return mw.loader.using( 'mobile.languages.structured' ).then( () => languageInfo.getLanguages() ).then( ( data ) => {
 		const LanguageSearcher = m.require( 'mobile.languages.structured/LanguageSearcher' );
 		return new LanguageSearcher( {
 			languages: data.languages,
 			variants: data.variants,
-			showSuggestedLanguages: showSuggestedLanguages,
+			showSuggestedLanguages,
 			deviceLanguage: getDeviceLanguage( navigator )
 		} );
 
@@ -45,7 +43,7 @@ function languageInfoOverlay( languageInfo, showSuggestedLanguages ) {
 
 // To make knowing when async logic has resolved easier in tests
 languageInfoOverlay.test = {
-	loadLanguageInfoSearcher: loadLanguageInfoSearcher
+	loadLanguageInfoSearcher
 };
 
 module.exports = languageInfoOverlay;

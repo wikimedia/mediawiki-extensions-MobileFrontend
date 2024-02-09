@@ -47,10 +47,10 @@ mfExtend( PageList, View, {
 	 * @memberof PageList
 	 * @instance
 	 */
-	renderPageImages: function () {
+	renderPageImages() {
 		var self = this;
 
-		setTimeout( function () {
+		setTimeout( () => {
 			self.$el.find( '.list-thumb' ).each( function () {
 				var style = self.$el.find( this ).data( 'style' );
 				self.$el.find( this ).attr( 'style', style );
@@ -64,7 +64,7 @@ mfExtend( PageList, View, {
 	 * @memberof PageList
 	 * @instance
 	 */
-	postRender: function () {
+	postRender() {
 		this.renderPageImages();
 	},
 	template: util.template( `

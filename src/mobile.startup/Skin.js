@@ -46,7 +46,7 @@ mfExtend( Skin, View, {
 	 * @memberof Skin
 	 * @instance
 	 */
-	postRender: function () {
+	postRender() {
 		var $el = this.$el;
 
 		if ( browser.supportsTouchEvents() ) {
@@ -67,7 +67,7 @@ mfExtend( Skin, View, {
 	 * @throws {Error} if mediawiki message is in unexpected format.
 	 * @return {jQuery.Object} a list of links
 	 */
-	getLicenseLinks: function () {
+	getLicenseLinks() {
 		const mobileLicense = mw.message( 'mobile-frontend-license-links' );
 		const mobileMsgExists = mobileLicense.exists() && mobileLicense.text();
 		const userLanguage = mw.config.get( 'wgUserLanguage' );
@@ -86,7 +86,7 @@ mfExtend( Skin, View, {
 	 * @instance
 	 * @return {string|undefined}
 	 */
-	getLicenseMsg: function () {
+	getLicenseMsg() {
 		var licenseMsg,
 			$licenseLinks = this.getLicenseLinks();
 

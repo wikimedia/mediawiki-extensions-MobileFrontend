@@ -84,7 +84,7 @@ mfExtend( ScrollEndEventEmitter, {
 	 * @instance
 	 * @private
 	 */
-	_bindScroll: function () {
+	_bindScroll() {
 		if ( !this._scrollHandler ) {
 			this._scrollHandler = this._onScroll.bind( this );
 			this.eventBus.on( 'scroll:throttled', this._scrollHandler );
@@ -97,7 +97,7 @@ mfExtend( ScrollEndEventEmitter, {
 	 * @instance
 	 * @private
 	 */
-	_unbindScroll: function () {
+	_unbindScroll() {
 		if ( this._scrollHandler ) {
 			this.eventBus.off( 'scroll:throttled', this._scrollHandler );
 			this._scrollHandler = null;
@@ -110,7 +110,7 @@ mfExtend( ScrollEndEventEmitter, {
 	 * @instance
 	 * @private
 	 */
-	_onScroll: function () {
+	_onScroll() {
 		if ( this.$el && this.enabled && this.scrollNearEnd() ) {
 			// Disable when triggering an event. Won't trigger again until
 			// re-enabled.
@@ -126,7 +126,7 @@ mfExtend( ScrollEndEventEmitter, {
 	 * @private
 	 * @return {boolean}
 	 */
-	scrollNearEnd: function () {
+	scrollNearEnd() {
 		if ( !this.$el || !this.$el.offset() ) {
 			return false;
 		}
@@ -141,7 +141,7 @@ mfExtend( ScrollEndEventEmitter, {
 	 * @memberof ScrollEndEventEmitter
 	 * @instance
 	 */
-	enable: function () {
+	enable() {
 		this.enabled = true;
 		this._bindScroll();
 	},
@@ -151,7 +151,7 @@ mfExtend( ScrollEndEventEmitter, {
 	 * @memberof ScrollEndEventEmitter
 	 * @instance
 	 */
-	disable: function () {
+	disable() {
 		this.enabled = false;
 		this._unbindScroll();
 	},
@@ -163,7 +163,7 @@ mfExtend( ScrollEndEventEmitter, {
 	 * @param {jQuery.Object} $el jQuery element where we want to listen for
 	 * scroll end.
 	 */
-	setElement: function ( $el ) {
+	setElement( $el ) {
 		this.$el = $el;
 	}
 } );

@@ -37,9 +37,7 @@ function OverlayManager( router, container ) {
  * @param {Overlay} overlay
  */
 function attachHideEvent( overlay ) {
-	overlay.on( 'hide', function () {
-		overlay.emit( '_om_hide' );
-	} );
+	overlay.on( 'hide', () => overlay.emit( '_om_hide' ) );
 }
 
 OverlayManager.prototype = {
@@ -54,7 +52,7 @@ OverlayManager.prototype = {
 	 * @instance
 	 * @private
 	 */
-	_onHideOverlayOutsideOverlayManager: function () {
+	_onHideOverlayOutsideOverlayManager() {
 		if ( !this.stack.length ) {
 			return;
 		}
@@ -85,7 +83,7 @@ OverlayManager.prototype = {
 	 * @private
 	 * @param {Overlay} overlay to attach
 	 */
-	_attachOverlay: function ( overlay ) {
+	_attachOverlay( overlay ) {
 		if ( !overlay.$el.parents().length ) {
 			this.container.appendChild( overlay.$el[0] );
 		}
@@ -98,7 +96,7 @@ OverlayManager.prototype = {
 	 * @private
 	 * @param {Overlay} overlay to show
 	 */
-	_show: function ( overlay ) {
+	_show( overlay ) {
 		// Mark the state so that if the page is refreshed, we don't generate an extra history entry
 		// (see #getSingleton below and T201852).
 		// eslint-disable-next-line no-restricted-properties
@@ -124,13 +122,14 @@ OverlayManager.prototype = {
 	 * @param {Function} onBeforeExitCancel to pass to onBeforeExit
 	 * @return {boolean} Whether the overlay has been hidden
 	 */
-	_hideOverlay: function ( overlay, onBeforeExitCancel ) {
+	_hideOverlay( overlay, onBeforeExitCancel ) {
 		let result;
 
 		function exit() {
 			result = true;
 			overlay.hide();
 		}
+
 		// remove the callback for updating state when overlay closed using
 		// overlay close button
 		overlay.off( '_om_hide' );
@@ -157,7 +156,7 @@ OverlayManager.prototype = {
 	 * @private
 	 * @param {Object|null} match Object with factory function's result. null if no match.
 	 */
-	_processMatch: function ( match ) {
+	_processMatch( match ) {
 		var factoryResult,
 			self = this;
 
@@ -188,7 +187,7 @@ OverlayManager.prototype = {
 	 * @private
 	 * @param {jQuery.Event} ev Event object.
 	 */
-	_checkRoute: function ( ev ) {
+	_checkRoute( ev ) {
 		const current = this.stack[0];
 
 		// When entering an overlay for the first time,
@@ -214,9 +213,7 @@ OverlayManager.prototype = {
 			return;
 		}
 
-		const match = Object.keys( this.entries ).reduce( function ( m, id ) {
-			return m || this._matchRoute( ev.path, this.entries[ id ] );
-		}.bind( this ), null );
+		const match = Object.keys( this.entries ).reduce( ( m, id ) => m || this._matchRoute( ev.path, this.entries[id] ), null );
 
 		if ( !match ) {
 			// if hidden and no new matches, reset the stack
@@ -241,7 +238,7 @@ OverlayManager.prototype = {
 	 * @return {Object|null} Match object with factory function's result.
 	 *  Returns null if no match.
 	 */
-	_matchRoute: function ( path, entry ) {
+	_matchRoute( path, entry ) {
 		var
 			next,
 			didMatch,
@@ -268,7 +265,7 @@ OverlayManager.prototype = {
 		 */
 		function getNext() {
 			return {
-				path: path,
+				path,
 				// Important for managing states of things such as the image overlay which change
 				// overlay routing parameters during usage.
 				route: entry.route,
@@ -342,19 +339,17 @@ OverlayManager.prototype = {
 	 * capturing group (e.g. `/\/hi\/(.*)/`).
 	 * @param {Function} factory a function returning an overlay
 	 */
-	add: function ( route, factory ) {
+	add( route, factory ) {
 		var self = this,
 			entry = {
-				route: route,
-				factory: factory
+				route,
+				factory
 			};
 
 		this.entries[route] = entry;
 		// Check if overlay should be shown for the current path.
 		// The DOM must fully load before we can show the overlay because Overlay relies on it.
-		util.docReady( function () {
-			self._processMatch( self._matchRoute( self.router.getPath(), entry ) );
-		} );
+		util.docReady( () => self._processMatch( self._matchRoute( self.router.getPath(), entry ) ) );
 	},
 
 	/**
@@ -366,9 +361,9 @@ OverlayManager.prototype = {
 	 * @instance
 	 * @param {Object} overlay The overlay to display
 	 */
-	replaceCurrent: function ( overlay ) {
+	replaceCurrent( overlay ) {
 		if ( this.stack.length === 0 ) {
-			throw new Error( 'Trying to replace OverlayManager\'s current overlay, but stack is empty' );
+			throw new Error( "Trying to replace OverlayManager's current overlay, but stack is empty" );
 		}
 		const stackOverlay = this.stack[0].overlay;
 		if ( stackOverlay ) {

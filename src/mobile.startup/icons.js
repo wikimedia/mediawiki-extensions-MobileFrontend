@@ -29,7 +29,7 @@ const icons = {
 	 * @instance
 	 * @return {IconButton}
 	 */
-	back: function () {
+	back() {
 		return new icons.IconButton( {
 			tagName: 'button',
 			icon: 'previous',
@@ -46,10 +46,11 @@ const icons = {
 	 * @memberof icons
 	 * @instance
 	 * @param {string} [variant].
+	 * @param variant
 	 * @param {Object} [props] to extend
 	 * @return {IconButton}
 	 */
-	cancel: function ( variant, props = {} ) {
+	cancel( variant, props = {} ) {
 		var glyph = variant ? `${CANCEL_GLYPH}-${variant}` : `${CANCEL_GLYPH}`;
 		props.additionalClassNames = props.additionalClassNames || '';
 		props.additionalClassNames += ' cancel';
@@ -72,7 +73,7 @@ const icons = {
 	 * @param {Object} [props] See `Icon` for more details
 	 * @return {IconButton}
 	 */
-	spinner: function ( props = {} ) {
+	spinner( props = {} ) {
 		if ( props.additionalClassNames === undefined ) {
 			props.additionalClassNames = 'spinner loading';
 		}
@@ -100,7 +101,7 @@ const icons = {
 	 * @instance
 	 * @return {IconButton}
 	 */
-	error: function () {
+	error() {
 		return new icons.IconButton( {
 			icon: 'alert-invert',
 			additionalClassNames: 'load-fail-msg-icon'
@@ -114,7 +115,7 @@ const icons = {
 	 * @param {Object} props
 	 * @return {IconButton}
 	 */
-	watch: function ( props = {} ) {
+	watch( props = {} ) {
 		props.additionalClassNames = props.additionalClassNames || '';
 		props.additionalClassNames += ' watch-this-article';
 
@@ -130,7 +131,7 @@ const icons = {
 	 * @param {Object} props
 	 * @return {IconButton}
 	 */
-	watched: function ( props = {} ) {
+	watched( props = {} ) {
 		props.additionalClassNames = props.additionalClassNames || '';
 		props.additionalClassNames += ' watch-this-article watched';
 

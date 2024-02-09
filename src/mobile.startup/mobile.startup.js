@@ -216,6 +216,7 @@ mw._mobileFrontend = {
 	/**
 	 * Show a notification on page reload.
 	 *
+	 * @param msg
 	 * @internal for Minerva
 	 * @return {jQuery.Deferred}
 	 */
@@ -223,7 +224,7 @@ mw._mobileFrontend = {
 	/**
 	 * @internal for use inside VisualEditor
 	 */
-	license: function () {
+	license() {
 		const skin = Skin.getSingleton();
 		return skin.getLicenseMsg();
 	},
@@ -232,7 +233,7 @@ mw._mobileFrontend = {
 	 */
 	languages: {
 		languageOverlay,
-		languageInfoOverlay: function ( api, showSuggestedLanguage ) {
+		languageInfoOverlay( api, showSuggestedLanguage ) {
 			languageInfoOverlay( new LanguageInfo( api ), showSuggestedLanguage );
 		}
 	}

@@ -11,11 +11,10 @@ const
  * @return {jQuery.Promise} Resolves to LanguageSearcher
  */
 function loadLanguageSearcher() {
-	return mw.loader.using( 'mobile.languages.structured' ).then( function () {
-		return currentPageHTMLParser.getLanguages(
+	return mw.loader.using( 'mobile.languages.structured' ).then( () =>
+		currentPageHTMLParser.getLanguages(
 			mw.config.get( 'wgTitle' )
-		);
-	} ).then( function ( data ) {
+		) ).then( ( data ) => {
 		const LanguageSearcher = m.require( 'mobile.languages.structured/LanguageSearcher' );
 
 		return new LanguageSearcher( {
@@ -23,20 +22,13 @@ function loadLanguageSearcher() {
 			variants: data.variants,
 			showSuggestedLanguages: true,
 			deviceLanguage: getDeviceLanguage( navigator ),
-			onOpen: ( searcher ) => {
-				/**
-				 * @event mobileFrontend.languageSearcher.onOpen
-				 * @internal for use in ContentTranslation only.
-				 */
-				mw.hook( 'mobileFrontend.languageSearcher.onOpen' ).fire( searcher );
-			}
+			onOpen: ( searcher ) => mw.hook( 'mobileFrontend.languageSearcher.onOpen' ).fire( searcher )
 		} );
-	}, function () {
-		return new MessageBox( {
+	}, () =>
+		new MessageBox( {
 			className: 'mw-message-box-error content',
 			msg: mw.msg( 'mobile-frontend-languages-structured-overlay-error' )
-		} );
-	} );
+		} ) );
 }
 
 /**
@@ -55,7 +47,7 @@ function languageOverlay() {
 
 // To make knowing when async logic has resolved easier in tests
 languageOverlay.test = {
-	loadLanguageSearcher: loadLanguageSearcher
+	loadLanguageSearcher
 };
 
 module.exports = languageOverlay;

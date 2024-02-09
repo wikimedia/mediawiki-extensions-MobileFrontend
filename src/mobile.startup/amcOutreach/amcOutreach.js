@@ -76,5 +76,5 @@ module.exports = {
 
 		return campaign;
 	},
-	ACTIONS: ACTIONS
+	ACTIONS
 };

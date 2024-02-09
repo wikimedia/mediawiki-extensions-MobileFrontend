@@ -13,7 +13,7 @@ module.exports = {
 	 *
 	 * @return {string}
 	 */
-	saveButtonMessage: function () {
+	saveButtonMessage() {
 		return mw.config.get( 'wgEditSubmitButtonLabelPublish' ) ?
 			mw.msg( 'mobile-frontend-editor-publish' ) : mw.msg( 'mobile-frontend-editor-save' );
 	},
@@ -32,7 +32,7 @@ module.exports = {
 		 * @instance
 		 * @return {jQuery.Promise}
 		 */
-		all: function ( promises ) {
+		all( promises ) {
 			return $.when.apply( $, promises );
 		}
 	},
@@ -44,7 +44,7 @@ module.exports = {
 	 * @param {string} selector
 	 * @return {string}
 	 */
-	escapeSelector: function ( selector ) {
+	escapeSelector( selector ) {
 		return $.escapeSelector( selector );
 	},
 	/**
@@ -55,7 +55,7 @@ module.exports = {
 	 * @param {Function} fn
 	 * @return {jQuery.Object}
 	 */
-	docReady: function ( fn ) {
+	docReady( fn ) {
 		return $( fn );
 	},
 	/**
@@ -65,7 +65,7 @@ module.exports = {
 	 * @instance
 	 * @return {jQuery.Deferred}
 	 */
-	Deferred: function () {
+	Deferred() {
 		return $.Deferred();
 	},
 	/**
@@ -75,7 +75,7 @@ module.exports = {
 	 * @instance
 	 * @return {jQuery.Object} element representing the documentElement
 	 */
-	getDocument: function () {
+	getDocument() {
 		return $( document.documentElement );
 	},
 	/**
@@ -85,7 +85,7 @@ module.exports = {
 	 * @instance
 	 * @return {jQuery.Object}
 	 */
-	getWindow: function () {
+	getWindow() {
 		return $( window );
 	},
 	/**
@@ -100,7 +100,7 @@ module.exports = {
 	 *  in which the HTML fragment will be created
 	 * @return {jQuery.Object}
 	 */
-	parseHTML: function ( html, ctx ) {
+	parseHTML( html, ctx ) {
 		ctx = ctx || document;
 		return $( $.parseHTML( html, ctx ) );
 	},
@@ -115,31 +115,17 @@ module.exports = {
 	 * @instance
 	 * @return {Object}
 	 */
-	extend: function () {
+	extend() {
 		return $.extend.apply( $, arguments );
 	},
 
-	/**
-	 * @typedef {Object} Template
-	 * @property {Function} render returning string of rendered HTML
-	 *
-	 * Centralised place for template rendering.
-	 *
-	 * T223927: We depend on the global Mustache brought in by the
-	 * mediawiki.template.mustache module but do not delegate to
-	 * mediawiki.template.mustache.js because its render method returns a jQuery
-	 * object, but our MobileFrontend code depends on .render returning a string.
-	 *
-	 * @param {string} source code of template that is Mustache compatible.
-	 * @return {Template}
-	 */
-	template: function ( source ) {
+	template( source ) {
 		return {
 			/**
 			 * @ignore
 			 * @return {string} The raw source code of the template
 			 */
-			getSource: function () {
+			getSource() {
 				return source;
 			},
 			/**
@@ -148,11 +134,11 @@ module.exports = {
 			 * @param {Object} partials Map partial names to Mustache template objects
 			 * @return {string} Rendered HTML
 			 */
-			render: function ( data, partials ) {
+			render( data, partials ) {
 				const partialSource = {};
 				// Map MobileFrontend templates to partial strings
 				Object.keys( partials || {} ).forEach( ( key ) => {
-					partialSource[ key ] = partials[ key ].getSource();
+					partialSource[key] = partials[key].getSource();
 				} );
 
 				// Use global Mustache which is loaded by mediawiki.template.mustache (a

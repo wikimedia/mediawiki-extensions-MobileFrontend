@@ -42,7 +42,7 @@ function Drawer( props ) {
 					ev.preventDefault();
 					this.hide();
 				}.bind( this ),
-				click: function ( ev ) {
+				click( ev ) {
 					ev.stopPropagation();
 				}
 			}, props.events ) }
@@ -62,7 +62,7 @@ mfExtend( Drawer, View, {
 	 * @method
 	 * @return {jQuery.Promise}
 	 */
-	show: function () {
+	show() {
 		const d = util.Deferred();
 		this.$el.find( '.drawer-container__mask' )
 			.addClass( 'drawer-container__mask--visible' );
@@ -72,15 +72,13 @@ mfExtend( Drawer, View, {
 			// (0ms doesn't work on Firefox, 10ms is enough)
 			//
 			// FIXME: setTimeout should be reconsidered in T209129
-			setTimeout( function () {
+			setTimeout( () => {
 				this.$el.find( '.drawer' ).addClass( 'visible' );
 				if ( this.options.onShow ) {
 					this.options.onShow( d );
 				}
-				setTimeout( function () {
-					d.resolve();
-				}, this.minHideDelay );
-			}.bind( this ), this.minHideDelay );
+				setTimeout( () => d.resolve(), this.minHideDelay );
+			}, this.minHideDelay );
 		} else {
 			d.resolve();
 		}
@@ -93,15 +91,15 @@ mfExtend( Drawer, View, {
 	 * @memberof View
 	 * @instance
 	 */
-	hide: function () {
+	hide() {
 		this.$el.find( '.drawer-container__mask' )
 			.removeClass( 'drawer-container__mask--visible' );
 		this.$el.find( '.drawer' ).removeClass( 'visible' );
 		// see comment in show()
-		setTimeout( function () {
+		setTimeout( () => {
 			this.$el.find( '.drawer' ).removeClass( 'visible' );
 			this.options.onBeforeHide( this );
-		}.bind( this ), this.minHideDelay );
+		}, this.minHideDelay );
 	},
 
 	/**
@@ -109,7 +107,7 @@ mfExtend( Drawer, View, {
 	 * @memberof Drawer
 	 * @instance
 	 */
-	postRender: function () {
+	postRender() {
 		const props = this.options,
 			$mask = util.parseHTML( '<div>' )
 				.addClass( 'drawer-container__mask' ),

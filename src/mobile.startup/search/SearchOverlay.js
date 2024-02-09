@@ -26,9 +26,7 @@ function SearchOverlay( params ) {
 	var header = searchHeader(
 			params.placeholderMsg,
 			params.action || mw.config.get( 'wgScript' ),
-			function ( query ) {
-				this.performSearch( query );
-			}.bind( this ),
+			( query ) => this.performSearch( query ),
 			params.defaultSearchPage || '',
 			params.autocapitalize
 		),
@@ -70,10 +68,10 @@ mfExtend( SearchOverlay, Overlay, {
 	 * @memberof SearchOverlay
 	 * @instance
 	 */
-	onClickSearchContent: function () {
+	onClickSearchContent() {
 		var
 			$form = this.$el.find( 'form' ),
-			$el = $form[ 0 ].parentNode;
+			$el = $form[0].parentNode;
 
 		// Add fulltext input to force fulltext search
 		this.parseHTML( '<input>' )
@@ -85,10 +83,10 @@ mfExtend( SearchOverlay, Overlay, {
 			.appendTo( $form );
 		// history.back queues a task so might run after this call. Thus we use setTimeout
 		// http://www.w3.org/TR/2011/WD-html5-20110113/webappapis.html#queue-a-task
-		setTimeout( function () {
+		setTimeout( () => {
 			// Firefox doesn't allow submission of a form not in the DOM
 			// so temporarily re-add it if it's gone.
-			if ( !$form[ 0 ].parentNode ) {
+			if ( !$form[0].parentNode ) {
 				$form.appendTo( $el );
 			}
 			$form.trigger( 'submit' );
@@ -101,7 +99,7 @@ mfExtend( SearchOverlay, Overlay, {
 	 * @memberof SearchOverlay
 	 * @instance
 	 */
-	onClickOverlayContent: function () {
+	onClickOverlayContent() {
 		this.$el.find( '.cancel' ).trigger( 'click' );
 	},
 
@@ -112,7 +110,7 @@ mfExtend( SearchOverlay, Overlay, {
 	 * @memberof SearchOverlay
 	 * @instance
 	 */
-	hideKeyboardOnScroll: function () {
+	hideKeyboardOnScroll() {
 		this.$input.trigger( 'blur' );
 	},
 
@@ -123,7 +121,7 @@ mfExtend( SearchOverlay, Overlay, {
 	 * @instance
 	 * @param {jQuery.Event} ev
 	 */
-	onClickResult: function ( ev ) {
+	onClickResult( ev ) {
 		var
 			self = this,
 			$link = this.$el.find( ev.currentTarget );
@@ -163,7 +161,7 @@ mfExtend( SearchOverlay, Overlay, {
 	 * @memberof SearchOverlay
 	 * @instance
 	 */
-	postRender: function () {
+	postRender() {
 		var self = this,
 			searchResults = new SearchResultsView( {
 				searchContentLabel: mw.msg( 'mobile-frontend-search-content' ),
@@ -186,7 +184,7 @@ mfExtend( SearchOverlay, Overlay, {
 		// leading to an accidental click (T299846)
 		// Stopping propagation when the input is focused will prevent scrolling while
 		// the keyboard is collapsed.
-		this.$resultContainer[ 0 ].addEventListener( 'touchstart', ( ev ) => {
+		this.$resultContainer[0].addEventListener( 'touchstart', ( ev ) => {
 			if ( document.activeElement === this.$input[0] ) {
 				ev.stopPropagation();
 			}
@@ -204,13 +202,12 @@ mfExtend( SearchOverlay, Overlay, {
 		// Show a spinner on top of search results
 		// FIXME: Given this manipulates SearchResultsView this should be moved into that class
 		this.$spinner = searchResults.$el.find( '.spinner-container' );
-		this.on( 'search-start', function ( searchData ) {
+		this.on( 'search-start', ( searchData ) => {
 			if ( timer ) {
 				clearSearch();
 			}
-			timer = setTimeout( function () {
-				self.$spinner.show();
-			}, SEARCH_SPINNER_DELAY - searchData.delay );
+			timer = setTimeout( () => self.$spinner.show(),
+				SEARCH_SPINNER_DELAY - searchData.delay );
 		} );
 		this.on( 'search-results', clearSearch );
 	},
@@ -222,7 +219,7 @@ mfExtend( SearchOverlay, Overlay, {
 	 * @memberof SearchOverlay
 	 * @instance
 	 */
-	showKeyboard: function () {
+	showKeyboard() {
 		var len = this.$input.val().length;
 		this.$input.trigger( 'focus' );
 		// Cursor to the end of the input
@@ -236,7 +233,7 @@ mfExtend( SearchOverlay, Overlay, {
 	 * @memberof SearchOverlay
 	 * @instance
 	 */
-	show: function () {
+	show() {
 		// Overlay#show defines the actual overlay visibility.
 		Overlay.prototype.show.apply( this, arguments );
 
@@ -252,7 +249,7 @@ mfExtend( SearchOverlay, Overlay, {
 	 * @instance
 	 * @param {string} query
 	 */
-	performSearch: function ( query ) {
+	performSearch( query ) {
 		var
 			self = this,
 			api = this.api,
@@ -267,7 +264,7 @@ mfExtend( SearchOverlay, Overlay, {
 			clearTimeout( this.timer );
 
 			if ( query.length ) {
-				this.timer = setTimeout( function () {
+				this.timer = setTimeout( () => {
 					var xhr;
 					xhr = self.gateway.search( query );
 					self._pendingQuery = xhr.then( function ( data ) {
@@ -287,7 +284,7 @@ mfExtend( SearchOverlay, Overlay, {
 
 							// eslint-disable-next-line no-new
 							new WatchstarPageList( {
-								api: api,
+								api,
 								funnel: 'search',
 								pages: data.results,
 								el: self.$resultContainer
@@ -295,7 +292,11 @@ mfExtend( SearchOverlay, Overlay, {
 
 							self.$results = self.$resultContainer.find( 'li' );
 						}
-					} ).promise( { abort: function () { xhr.abort(); } } );
+					} ).promise( {
+						abort() {
+							xhr.abort();
+						}
+					} );
 				}, delay );
 			} else {
 				self.resetSearch();
@@ -309,7 +310,7 @@ mfExtend( SearchOverlay, Overlay, {
 	 *
 	 * @private
 	 */
-	resetSearch: function () {
+	resetSearch() {
 		this.$el.find( '.overlay-content' ).children().hide();
 	}
 } );

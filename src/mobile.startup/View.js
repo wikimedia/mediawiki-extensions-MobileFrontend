@@ -168,7 +168,7 @@ mfExtend( View, {
 	 * @param {Object} options Object passed to the constructor.
 	 * @param {Object.<string, string>} [options.events]
 	 */
-	initialize: function ( options ) {
+	initialize( options ) {
 		var self = this;
 
 		OO.EventEmitter.call( this );
@@ -195,7 +195,7 @@ mfExtend( View, {
 		if ( this.$el.length ) {
 			this._postInitialize( options );
 		} else {
-			util.docReady( function () {
+			util.docReady( () => {
 				// Note the element may not be in the document so must use global jQuery here
 				self.$el = $( options.el );
 				self._postInitialize( options );
@@ -211,7 +211,7 @@ mfExtend( View, {
 	 * @private
 	 * @param {Object} props
 	 */
-	_postInitialize: function ( props ) {
+	_postInitialize( props ) {
 		// eslint-disable-next-line mediawiki/class-doc
 		this.$el.addClass( props.className );
 		// border-box will be added provided this flag is not set
@@ -229,7 +229,8 @@ mfExtend( View, {
 	 * @memberof View
 	 * @instance
 	 */
-	preRender: function () {},
+	preRender() {
+	},
 
 	/**
 	 * Function called after the view is rendered. Can be redefined in
@@ -238,7 +239,8 @@ mfExtend( View, {
 	 * @memberof View
 	 * @instance
 	 */
-	postRender: function () {},
+	postRender() {
+	},
 
 	/**
 	 * Fill this.$el with template rendered using data if template is set.
@@ -249,7 +251,7 @@ mfExtend( View, {
 	 * options
 	 * @chainable
 	 */
-	render: function ( data ) {
+	render( data ) {
 		var $el, html;
 		util.extend( this.options, data );
 		this.preRender();
@@ -288,22 +290,22 @@ mfExtend( View, {
 	 * @instance
 	 * @param {Object} events Optionally set this events instead of the ones on this.
 	 */
-	delegateEvents: function ( events ) {
+	delegateEvents( events ) {
 		var match, key, method;
 		events = events || this.options.events;
 		if ( events ) {
 			// Remove current events before re-binding them
 			this.undelegateEvents();
 			for ( key in events ) {
-				method = events[ key ];
+				method = events[key];
 				// If the method is a string name of this.method, get it
 				if ( typeof method !== 'function' ) {
-					method = this[ events[ key ] ];
+					method = this[events[key]];
 				}
 				if ( method ) {
 					// Extract event and selector from the key
 					match = key.match( delegateEventSplitter );
-					this.delegate( match[ 1 ], match[ 2 ], method.bind( this ) );
+					this.delegate( match[1], match[2], method.bind( this ) );
 				}
 			}
 		}
@@ -320,7 +322,7 @@ mfExtend( View, {
 	 * @param {string} selector
 	 * @param {Function} listener
 	 */
-	delegate: function ( eventName, selector, listener ) {
+	delegate( eventName, selector, listener ) {
 		this.$el.on( eventName + '.delegateEvents' + this.cid, selector,
 			listener );
 	},
@@ -333,7 +335,7 @@ mfExtend( View, {
 	 * @memberof View
 	 * @instance
 	 */
-	undelegateEvents: function () {
+	undelegateEvents() {
 		if ( this.$el ) {
 			this.$el.off( '.delegateEvents' + this.cid );
 		}
@@ -349,7 +351,7 @@ mfExtend( View, {
 	 * @param {string} selector
 	 * @param {Function} listener
 	 */
-	undelegate: function ( eventName, selector, listener ) {
+	undelegate( eventName, selector, listener ) {
 		this.$el.off( eventName + '.delegateEvents' + this.cid, selector,
 			listener );
 	},
@@ -362,7 +364,7 @@ mfExtend( View, {
 	 * @param {string} html to turn into a jQuery object.
 	 * @return {jQuery.Object}
 	 */
-	parseHTML: function ( html ) {
+	parseHTML( html ) {
 		// document is explicitly passed due to a bug we found in Safari 11.1.2 where failure
 		// to use document resulted in an element without access to the documentElement
 		// this should be redundant, but no problem in being explicit (T214451).
@@ -499,7 +501,7 @@ mfExtend( View, {
 	'insertBefore',
 	'remove',
 	'detach'
-].forEach( function ( prop ) {
+].forEach( ( prop ) => {
 	View.prototype[prop] = function () {
 		this.$el[prop].apply( this.$el, arguments );
 		return this;
@@ -515,9 +517,7 @@ mfExtend( View, {
  */
 View.make = function ( options = {}, children = [] ) {
 	var view = new View( options );
-	children.forEach( function ( $child ) {
-		view.append( $child );
-	} );
+	children.forEach( ( $child ) => view.append( $child ) );
 	return view;
 };
 

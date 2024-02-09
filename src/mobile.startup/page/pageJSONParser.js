@@ -43,7 +43,7 @@ function parse( resp ) {
 			id: resp.pageid,
 			isMissing: !!resp.missing,
 			url: mw.util.getUrl( resp.title ),
-			displayTitle: displayTitle // this is HTML!
+			displayTitle // this is HTML!
 		} )
 	);
 }

@@ -62,6 +62,6 @@ NoCache.prototype.get = function () { };
 NoCache.prototype.set = function () { };
 
 module.exports = {
-	MemoryCache: MemoryCache,
-	NoCache: NoCache
+	MemoryCache,
+	NoCache
 };

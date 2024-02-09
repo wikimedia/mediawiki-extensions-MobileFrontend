@@ -32,7 +32,7 @@ SearchGateway.prototype = {
 	 * @param {string} query to search for
 	 * @return {Object}
 	 */
-	getApiData: function ( query ) {
+	getApiData( query ) {
 		var prefix = this.generator.prefix,
 			data = extendSearchParams( 'search', {
 				generator: this.generator.name
@@ -61,7 +61,7 @@ SearchGateway.prototype = {
 	 * @return {Object} a regular expression that can be used to search for that str
 	 * @private
 	 */
-	_createSearchRegEx: function ( str ) {
+	_createSearchRegEx( str ) {
 		// '\[' can be unescaped, but leave it balanced with '`]'
 		// eslint-disable-next-line no-useless-escape
 		str = str.replace( /[-\[\]{}()*+?.,\\^$|#\s]/g, '\\$&' );
@@ -79,7 +79,7 @@ SearchGateway.prototype = {
 	 * @return {string} safe html string with matched terms encapsulated in strong tags
 	 * @private
 	 */
-	_highlightSearchTerm: function ( label, term ) {
+	_highlightSearchTerm( label, term ) {
 		label = util.parseHTML( '<span>' ).text( label ).html();
 		term = term.trim();
 		term = util.parseHTML( '<span>' ).text( term ).html();
@@ -97,7 +97,7 @@ SearchGateway.prototype = {
 	 * @return {Object} data needed to create a {Page}
 	 * @private
 	 */
-	_getPage: function ( query, pageInfo ) {
+	_getPage( query, pageInfo ) {
 		var page = pageJSONParser.parse( pageInfo );
 
 		// If displaytext is set in the generator result (eg. by Wikibase),
@@ -124,20 +124,16 @@ SearchGateway.prototype = {
 	 * @return {Array}
 	 * @private
 	 */
-	_processData: function ( query, data ) {
+	_processData( query, data ) {
 		var self = this,
 			results = [];
 
 		if ( data.query ) {
 
 			results = data.query.pages || {};
-			results = Object.keys( results ).map( function ( id ) {
-				return self._getPage( query, results[ id ] );
-			} );
+			results = Object.keys( results ).map( ( id ) => self._getPage( query, results[id] ) );
 			// sort in order of index
-			results.sort( function ( a, b ) {
-				return a.index - b.index;
-			} );
+			results.sort( ( a, b ) => a.index - b.index );
 		}
 
 		return results;
@@ -151,7 +147,7 @@ SearchGateway.prototype = {
 	 * @param {string} query to search for
 	 * @return {jQuery.Deferred}
 	 */
-	search: function ( query ) {
+	search( query ) {
 		var xhr, request,
 			scriptPath = mw.config.get( 'wgMFScriptPath' ),
 			self = this;
@@ -161,14 +157,14 @@ SearchGateway.prototype = {
 				url: scriptPath
 			} : undefined );
 			request = xhr
-				.then( function ( data, jqXHR ) {
+				.then( ( data, jqXHR ) => {
 					// resolve the Deferred object
 					return {
-						query: query,
+						query,
 						results: self._processData( query, data ),
 						searchId: jqXHR && jqXHR.getResponseHeader( 'x-search-id' )
 					};
-				}, function () {
+				}, () => {
 					// reset cached result, it maybe contains no value
 					self.searchCache[query] = undefined;
 				} );
@@ -176,7 +172,9 @@ SearchGateway.prototype = {
 			// cache the result to prevent the execution of one search query twice
 			// in one session
 			this.searchCache[query] = request.promise( {
-				abort: function () { xhr.abort(); }
+				abort() {
+					xhr.abort();
+				}
 			} );
 		}
 
@@ -191,8 +189,8 @@ SearchGateway.prototype = {
 	 * @param {string} query
 	 * @return {boolean}
 	 */
-	isCached: function ( query ) {
-		return Boolean( this.searchCache[ query ] );
+	isCached( query ) {
+		return Boolean( this.searchCache[query] );
 	}
 };
 

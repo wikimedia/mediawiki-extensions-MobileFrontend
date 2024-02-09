@@ -79,7 +79,7 @@ Browser.prototype = {
 	 * @instance
 	 * @return {boolean}
 	 */
-	isWideScreen: memoize( function () {
+	isWideScreen: memoize( () => {
 		var val = parseInt( mw.config.get( 'wgMFDeviceWidthTablet' ), 10 );
 		// Check viewport width to determine mobile vs tablet.
 		// Note: Mobile devices held in landscape mode might receive tablet treatment.
@@ -92,9 +92,7 @@ Browser.prototype = {
 	 * @instance
 	 * @return {boolean}
 	 */
-	supportsTouchEvents: memoize( function () {
-		return 'ontouchstart' in window;
-	} )
+	supportsTouchEvents: memoize( () => 'ontouchstart' in window )
 };
 
 /**

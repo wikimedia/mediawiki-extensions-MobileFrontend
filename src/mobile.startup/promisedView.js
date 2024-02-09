@@ -15,11 +15,11 @@ function promisedView( promise ) {
 		className: 'promised-view'
 	} );
 	view.$el.append( icons.spinner().$el );
-	promise.then( function ( newView ) {
+	promise.then( ( newView ) => {
 		view.$el.replaceWith( newView.$el );
 		// update the internal reference.
 		view.$el = newView.$el;
-	}, function ( errorView ) {
+	}, ( errorView ) => {
 		if ( !errorView || !errorView.$el ) {
 			// return early to keep backwards compatibility with clients of
 			// promisedView that do not reject to an error view

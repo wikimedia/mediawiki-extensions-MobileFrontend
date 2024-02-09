@@ -36,8 +36,7 @@ mfExtend( WatchstarPageList, PageList, {
 	 * @property {Object} defaults Default options hash.
 	 * @property {mw.Api} defaults.api
 	 */
-
-	postRender: function () {
+	postRender() {
 		var
 			self = this,
 			$items,
@@ -50,7 +49,7 @@ mfExtend( WatchstarPageList, PageList, {
 		$items = this.queryUnitializedItems();
 		pages = this.parsePagesFromItems( $items );
 
-		Object.keys( pages ).forEach( function ( title ) {
+		Object.keys( pages ).forEach( ( title ) => {
 			var id = pages[title];
 			// Favor IDs since they're short and unlikely to exceed URL length
 			// limits when batched.
@@ -63,16 +62,15 @@ mfExtend( WatchstarPageList, PageList, {
 			}
 		} );
 
-		return this.getPages( ids, titles ).then( function ( statuses ) {
-			self.renderItems( $items, statuses );
-		} );
+		return this.getPages( ids, titles )
+			.then( ( statuses ) => self.renderItems( $items, statuses ) );
 	},
 
 	/**
 	 * @param {jQuery.Element} $items
 	 * @param {WatchStatusMap} statuses
 	 */
-	queryUnitializedItems: function () {
+	queryUnitializedItems() {
 		return this.$el.find( 'li:not(.with-watchstar)' );
 	},
 
@@ -85,7 +83,7 @@ mfExtend( WatchstarPageList, PageList, {
 	 * @param {PageTitle[]} titles
 	 * @return {jQuery.Deferred<WatchStatusMap>}
 	 */
-	getPages: function ( ids, titles ) {
+	getPages( ids, titles ) {
 		// Rendering Watchstars for anonymous users is not useful. Short-circuit
 		// the request.
 		if ( user.isAnon() ) {
@@ -101,13 +99,13 @@ mfExtend( WatchstarPageList, PageList, {
 	 * @memberof WatchstarPageList
 	 * @instance
 	 */
-	parsePagesFromItems: function ( $items ) {
+	parsePagesFromItems( $items ) {
 		var
 			self = this,
 			pages = {};
-		$items.each( function ( _, item ) {
+		$items.each( ( _, item ) => {
 			var $item = self.$el.find( item );
-			pages[ $item.attr( 'title' ) ] = $item.data( 'id' );
+			pages[$item.attr( 'title' )] = $item.data( 'id' );
 		} );
 		return pages;
 	},
@@ -116,7 +114,7 @@ mfExtend( WatchstarPageList, PageList, {
 	 * @param {jQuery.Element} $items
 	 * @param {WatchStatusMap} statuses
 	 */
-	renderItems: function ( $items, statuses ) {
+	renderItems( $items, statuses ) {
 		var self = this;
 
 		// Rendering Watchstars for anonymous users is not useful. Nothing to do.
@@ -125,7 +123,7 @@ mfExtend( WatchstarPageList, PageList, {
 		}
 
 		// Create watch stars for each entry in list
-		$items.each( function ( _, item ) {
+		$items.each( ( _, item ) => {
 			var
 				$item = self.$el.find( item ),
 				page = new Page( {
@@ -134,7 +132,7 @@ mfExtend( WatchstarPageList, PageList, {
 					title: $item.attr( 'title' ),
 					id: $item.data( 'id' )
 				} ),
-				watched = statuses[ page.getTitle() ];
+				watched = statuses[page.getTitle()];
 
 			self._appendWatchstar( $item, page, watched );
 			$item.addClass( 'with-watchstar' );
@@ -146,13 +144,13 @@ mfExtend( WatchstarPageList, PageList, {
 	 * @param {Page} page
 	 * @param {WatchStatus} watched
 	 */
-	_appendWatchstar: function ( $item, page, watched ) {
+	_appendWatchstar( $item, page, watched ) {
 		watchstar( {
 			// WatchstarPageList.getPages() already retrieved the status of
 			// each page. Explicitly set the watch state so another request
 			// will not be issued by the Watchstar.
 			isWatched: watched,
-			page: page
+			page
 		} ).appendTo( $item );
 	}
 } );

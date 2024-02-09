@@ -28,7 +28,7 @@ mfExtend( IconButton, View, {
 	 * @memberof IconButton
 	 * @instance
 	 */
-	preRender: function () {
+	preRender() {
 		this.options._buttonClasses = this.getButtonClasses();
 		this.options._iconHTML = '';
 		if ( this.options.icon ) {
@@ -42,7 +42,7 @@ mfExtend( IconButton, View, {
 			this.options._iconHTML = this._icon.$el.get( 0 ).outerHTML;
 		}
 	},
-	getButtonClasses: function () {
+	getButtonClasses() {
 		var additionalClassNames = this.options.additionalClassNames;
 		var size = this.options.size;
 		var weight = this.options.weight;
@@ -122,10 +122,10 @@ mfExtend( IconButton, View, {
 	 * @instance
 	 * @return {string}
 	 */
-	getClassName: function () {
+	getClassName() {
 		return this.$el.attr( 'class' );
 	},
-	getIcon: function () {
+	getIcon() {
 		return this._icon;
 	},
 	template: util.template( `

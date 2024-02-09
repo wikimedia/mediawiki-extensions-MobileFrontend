@@ -50,9 +50,7 @@ function Overlay( props ) {
 					{
 						// FIXME: Remove .initial-header selector
 						'click .cancel, .confirm, .initial-header .back': 'onExitClick',
-						click: ( ev ) => {
-							ev.stopPropagation();
-						}
+						click: ( ev ) => ev.stopPropagation()
 					},
 					props.events
 				)
@@ -83,7 +81,7 @@ mfExtend( Overlay, View, {
 	 * @instance
 	 * @method
 	 */
-	showSpinner: function () {
+	showSpinner() {
 		this.$el.find( '.spinner' ).removeClass( 'hidden' );
 	},
 
@@ -94,7 +92,7 @@ mfExtend( Overlay, View, {
 	 * @instance
 	 * @method
 	 */
-	hideSpinner: function () {
+	hideSpinner() {
 		this.$el.find( '.spinner' ).addClass( 'hidden' );
 	},
 
@@ -103,7 +101,7 @@ mfExtend( Overlay, View, {
 	 * @memberof Overlay
 	 * @instance
 	 */
-	postRender: function () {
+	postRender() {
 		const footerAnchor = this.options.footerAnchor;
 		this.$overlayContent = this.$el.find( '.overlay-content' );
 		if ( this.isIos ) {
@@ -128,14 +126,15 @@ mfExtend( Overlay, View, {
 	 * @instance
 	 * @param {Object} ev event object
 	 */
-	onExitClick: function ( ev ) {
+	onExitClick( ev ) {
 		const exit = function () {
 			this.hide();
 		}.bind( this );
 		ev.preventDefault();
 		ev.stopPropagation();
 		if ( this.options.onBeforeExit ) {
-			this.options.onBeforeExit( exit, function () {} );
+			this.options.onBeforeExit( exit, () => {
+			} );
 		} else {
 			exit();
 		}
@@ -147,7 +146,7 @@ mfExtend( Overlay, View, {
 	 * @memberof Overlay
 	 * @instance
 	 */
-	show: function () {
+	show() {
 		var $html = util.getDocument();
 
 		this.scrollTop = window.pageYOffset;
@@ -174,7 +173,7 @@ mfExtend( Overlay, View, {
 	 * @final
 	 * @return {boolean} Whether the overlay was successfully hidden or not
 	 */
-	hide: function () {
+	hide() {
 		util.getDocument().removeClass( 'overlay-enabled' );
 		// return to last known scroll position
 		window.scrollTo( window.pageXOffset, this.scrollTop );
@@ -182,10 +181,10 @@ mfExtend( Overlay, View, {
 		// Since the hash change event caused by emitting hide will be detected later
 		// and to avoid the article being shown during a transition from one overlay to
 		// another, we regretfully detach the element asynchronously.
-		this.hideTimeout = setTimeout( function () {
+		this.hideTimeout = setTimeout( () => {
 			this.$el.detach();
 			this.hideTimeout = null;
-		}.bind( this ), 0 );
+		}, 0 );
 
 		/**
 		 * Fired when the overlay is closed.
@@ -208,7 +207,7 @@ mfExtend( Overlay, View, {
 	 * @protected
 	 * @param {string} className CSS selector to show
 	 */
-	showHidden: function ( className ) {
+	showHidden( className ) {
 		this.$el.find( '.hideable' ).addClass( 'hidden' );
 		this.$el.find( className ).removeClass( 'hidden' );
 	}

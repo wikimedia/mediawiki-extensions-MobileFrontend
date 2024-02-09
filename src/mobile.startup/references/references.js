@@ -108,15 +108,15 @@ references = {
 	 * @param {Function} onShowNestedReference function call when a nested reference is triggered.
 	 * @return {jQuery.Deferred}
 	 */
-	showReference: function ( id, page, refNumber, pageHTMLParser, gateway, props,
+	showReference( id, page, refNumber, pageHTMLParser, gateway, props,
 		onShowNestedReference
 	) {
-		return gateway.getReference( id, page, pageHTMLParser ).then( function ( reference ) {
+		return gateway.getReference( id, page, pageHTMLParser ).then( ( reference ) => {
 			const drawer = referenceDrawer( util.extend( {
 				title: refNumber,
 				text: reference.text,
 				parentText: reference.parentText,
-				onNestedReferenceClick: function ( href, text ) {
+				onNestedReferenceClick( href, text ) {
 					references.showReference(
 						href,
 						page,
@@ -128,7 +128,7 @@ references = {
 							onShowNestedReference( drawer, nestedDrawer );
 						} else {
 							mw.log.warn( 'Please provide onShowNestedReferences parameter.' );
-							document.body.appendChild( nestedDrawer.$el[ 0 ] );
+							document.body.appendChild( nestedDrawer.$el[0] );
 							drawer.hide();
 							nestedDrawer.show();
 						}
@@ -136,7 +136,7 @@ references = {
 				}
 			}, props ) );
 			return drawer;
-		}, function ( err ) {
+		}, ( err ) => {
 			// If non-existent reference nothing to do.
 			if ( err === ReferencesGateway.ERROR_NOT_EXIST ) {
 				return;

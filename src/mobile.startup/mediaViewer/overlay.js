@@ -22,7 +22,7 @@ function mediaViewerOverlay( options ) {
 		promisedView(
 			util.Promise.all( [
 				mw.loader.using( 'mobile.mediaViewer' )
-			] ).then( function () {
+			] ).then( () => {
 				var ImageCarousel = m.require( 'mobile.mediaViewer' ).ImageCarousel;
 				return new ImageCarousel( options );
 			} )

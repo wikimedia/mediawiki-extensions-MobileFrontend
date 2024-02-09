@@ -44,9 +44,9 @@ function showOnPageReload( content, options ) {
 		return;
 	}
 	mw.storage.set( storageKey, JSON.stringify( {
-		content: content,
-		options: options
+		content,
+		options
 	} ) );
 }
 
-module.exports = { showOnPageReload: showOnPageReload };
+module.exports = { showOnPageReload };

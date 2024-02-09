@@ -20,9 +20,7 @@ function queryPlaceholders( root ) {
  */
 function loadImages( placeholders ) {
 	return util.Promise.all(
-		placeholders.map( function ( placeholder ) {
-			return module.exports.loadImage( placeholder ).promise;
-		} )
+		placeholders.map( ( placeholder ) => module.exports.loadImage( placeholder ).promise )
 	);
 }
 
@@ -47,7 +45,7 @@ function loadImage( placeholder ) {
 	image.style.cssText = placeholder.style.cssText || '';
 
 	// When the image has loaded
-	image.addEventListener( 'load', function () {
+	image.addEventListener( 'load', () => {
 		// Swap the HTML inside the placeholder (to keep the layout and
 		// dimensions the same and not trigger layouts
 		image.classList.add( 'image-lazy-loaded' );
@@ -56,7 +54,7 @@ function loadImage( placeholder ) {
 		}
 		deferred.resolve( 'load' );
 	}, { once: true } );
-	image.addEventListener( 'error', function () {
+	image.addEventListener( 'error', () => {
 		// Swap the HTML and let the browser decide what to do with the broken image.
 		if ( placeholder.parentNode ) {
 			placeholder.parentNode.replaceChild( image, placeholder );
@@ -72,16 +70,16 @@ function loadImage( placeholder ) {
 
 	return {
 		promise: deferred,
-		image: image
+		image
 	};
 }
 
 module.exports = {
 	placeholderClass,
-	queryPlaceholders: queryPlaceholders,
-	loadImages: loadImages,
-	loadImage: loadImage,
+	queryPlaceholders,
+	loadImages,
+	loadImage,
 	test: {
-		placeholderClass: placeholderClass
+		placeholderClass
 	}
 };
