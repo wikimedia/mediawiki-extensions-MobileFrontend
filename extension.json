@@ -557,7 +557,7 @@
 		},
 		"MFFallbackEditor": {
 			"description": "When MFDefaultEditor is set to 'preference' and no desktop preference is set, use this editor. Set to 'source' or 'visual'.",
-			"value": "source"
+			"value": "visual"
 		},
 		"MFEnableVEWikitextEditor": {
 			"description": "Eanble VisualEditor's wikitext editor as a replacement for MobileFrontend's source editor.",
