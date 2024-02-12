@@ -99,7 +99,6 @@
 	"mf-font-size-small-label": "Malé",
 	"mf-font-size-regular-label": "Běžné",
 	"mf-font-size-large-label": "Velké",
-	"mf-font-size-xlarge-label": "Extrémně velké",
 	"mobile-frontend-generic-404-desc": "Požadovanou stránku se nepodařilo nalézt.",
 	"mobile-frontend-generic-404-title": "Chyba – Stránka nenalezena",
 	"mobile-frontend-generic-login-new": "<strong>{{GRAMMAR:4sg|{{SITENAME}}}} vytvářejí lidé, jako jste vy.</strong><br />Přihlaste se a přispívejte.",

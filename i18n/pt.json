@@ -111,7 +111,6 @@
 	"mf-font-size-small-label": "Pequeno",
 	"mf-font-size-regular-label": "Normal",
 	"mf-font-size-large-label": "Grande",
-	"mf-font-size-xlarge-label": "Extra grande",
 	"mobile-frontend-generic-404-desc": "Não foi possível encontrar a página que procura.",
 	"mobile-frontend-generic-404-title": "Erro - Página não encontrada",
 	"mobile-frontend-generic-login-new": "<strong>A wiki {{SITENAME}} é feita por pessoas como você.</strong><br />Inicie uma sessão para colaborar.",

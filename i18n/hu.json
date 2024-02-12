@@ -84,7 +84,6 @@
 	"mf-font-size-small-label": "Kicsi",
 	"mf-font-size-regular-label": "Normál",
 	"mf-font-size-large-label": "Nagy",
-	"mf-font-size-xlarge-label": "Extra nagy",
 	"mobile-frontend-generic-404-desc": "A keresett oldal nem található.",
 	"mobile-frontend-generic-404-title": "Hiba – Az oldal nem található",
 	"mobile-frontend-generic-login-new": "<strong>A(z) {{SITENAME}} wikit hozzád hasonló emberek készítik.</strong><br />Jelentkezz be a közreműkodéshez.",

@@ -111,7 +111,6 @@
 	"mf-font-size-small-label": "Kecil",
 	"mf-font-size-regular-label": "Normal",
 	"mf-font-size-large-label": "Besar",
-	"mf-font-size-xlarge-label": "Lebih besar",
 	"mobile-frontend-generic-404-desc": "Halaman yang Anda cari tidak ditemukan.",
 	"mobile-frontend-generic-404-title": "Galat - Halaman tidak ditemukan",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} dibuat oleh orang-orang seperti Anda.</strong><br />Masuk log untuk berkontribusi.",

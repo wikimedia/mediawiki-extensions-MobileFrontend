@@ -121,7 +121,6 @@
 	"mf-font-size-small-label": "Klein",
 	"mf-font-size-regular-label": "Normaal",
 	"mf-font-size-large-label": "Groot",
-	"mf-font-size-xlarge-label": "Extra groot",
 	"mobile-frontend-generic-404-desc": "De pagina die u zoekt kan niet worden gevonden.",
 	"mobile-frontend-generic-404-title": "Foutmelding - Pagina niet gevonden",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} wordt gemaakt door mensen zoals u.</strong><br />Meld u aan om bij te dragen.",

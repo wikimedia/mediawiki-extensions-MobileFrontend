@@ -77,7 +77,6 @@
 	"mf-font-size-small-label": "Kichik",
 	"mf-font-size-regular-label": "Oʻrtacha",
 	"mf-font-size-large-label": "Katta",
-	"mf-font-size-xlarge-label": "Juda katta",
 	"mobile-frontend-generic-404-desc": "Siz qidirayotgan sahifani topishning imkoni boʻlmadi.",
 	"mobile-frontend-generic-404-title": "Xatolik: Sahifa topilmadi",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} siz kabi odamlar tomonidan boyitilmoqdadir.</strong><br />Hissa qoʻshish uchun tizimga kiring.",

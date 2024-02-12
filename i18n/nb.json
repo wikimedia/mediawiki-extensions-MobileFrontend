@@ -103,7 +103,6 @@
 	"mf-font-size-small-label": "Liten",
 	"mf-font-size-regular-label": "Vanlig",
 	"mf-font-size-large-label": "Stor",
-	"mf-font-size-xlarge-label": "Ekstra stor",
 	"mobile-frontend-generic-404-desc": "Siden du så etter ble ikke funnet.",
 	"mobile-frontend-generic-404-title": "Feil – siden ble ikke funnet",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} lages av folk som deg.</strong><br />Logg inn for å bidra.",

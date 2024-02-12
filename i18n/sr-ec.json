@@ -97,7 +97,6 @@
 	"mf-font-size-small-label": "Мала",
 	"mf-font-size-regular-label": "Нормална",
 	"mf-font-size-large-label": "Велика",
-	"mf-font-size-xlarge-label": "Веома велика",
 	"mobile-frontend-generic-404-desc": "Страница коју сте тражили није пронађена.",
 	"mobile-frontend-generic-404-title": "Грешка — страница није пронађена",
 	"mobile-frontend-generic-login-new": "<strong>Пројекат {{SITENAME}} стварају људи попут вас.</strong><br />Пријавите се да бисте доприносили.",

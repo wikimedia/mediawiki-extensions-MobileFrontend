@@ -109,7 +109,6 @@
 	"mf-font-size-small-label": "Piccolo",
 	"mf-font-size-regular-label": "Regolare",
 	"mf-font-size-large-label": "Grande",
-	"mf-font-size-xlarge-label": "Molto grande",
 	"mobile-frontend-generic-404-desc": "La pagina che stai cercando non è stata trovata.",
 	"mobile-frontend-generic-404-title": "Errore - pagina non trovata",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} è fatta da persone come te.</strong><br />Accedi per contribuire.",

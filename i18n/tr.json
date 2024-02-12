@@ -125,7 +125,6 @@
 	"mf-font-size-small-label": "Küçük",
 	"mf-font-size-regular-label": "Normal",
 	"mf-font-size-large-label": "Büyük",
-	"mf-font-size-xlarge-label": "Ekstra büyük",
 	"mobile-frontend-generic-404-desc": "Aradığınız sayfa bulunamadı.",
 	"mobile-frontend-generic-404-title": "Hata - Sayfa bulunamadı",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} sizin gibi insanlar tarafından oluşturulmuştur.</strong><br />Katkıda bulunmak için oturum açın.",

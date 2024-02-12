@@ -78,7 +78,6 @@
 	"mf-font-size-small-label": "Malé",
 	"mf-font-size-regular-label": "Bežné",
 	"mf-font-size-large-label": "Veľké",
-	"mf-font-size-xlarge-label": "Extrémne veľké",
 	"mobile-frontend-generic-404-desc": "Požadovanú stránku sa nepodarilo nájsť.",
 	"mobile-frontend-generic-404-title": "Chyba – Stránka nenájdená",
 	"mobile-frontend-generic-login-new": "<strong>{{GRAMMAR:akuzatív|{{SITENAME}}}} tvoria ľudia ako vy.</strong><br />Prihláste sa a prispievajte.",

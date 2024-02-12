@@ -81,7 +81,6 @@
 	"mf-font-size-small-label": "Mali",
 	"mf-font-size-regular-label": "Normalni",
 	"mf-font-size-large-label": "Veliki",
-	"mf-font-size-xlarge-label": "Veoma veliki",
 	"mobile-frontend-generic-404-desc": "Stranica koju tražite nije pronađena.",
 	"mobile-frontend-generic-404-title": "Greška - stranica nije pronađena",
 	"mobile-frontend-generic-login-new": "<strong>{{GRAMMAR:akuzativ|{{SITENAME}}}} su napravili ljudi poput Vas.</strong><br />Prijavite se da biste doprinosili.",

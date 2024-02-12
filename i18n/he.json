@@ -104,7 +104,6 @@
 	"mf-font-size-small-label": "קטן",
 	"mf-font-size-regular-label": "רגיל",
 	"mf-font-size-large-label": "גדול",
-	"mf-font-size-xlarge-label": "גדול מאוד",
 	"mobile-frontend-generic-404-desc": "הדף שחיפשת לא נמצא.",
 	"mobile-frontend-generic-404-title": "שגיאה – הדף לא נמצא",
 	"mobile-frontend-generic-login-new": "<strong>אנשים כמוך בונים את {{SITENAME}}</strong><br />נא להיכנס כדי לתרום.",

@@ -110,7 +110,6 @@
 	"mf-font-size-small-label": "작게",
 	"mf-font-size-regular-label": "보통",
 	"mf-font-size-large-label": "크게",
-	"mf-font-size-xlarge-label": "매우 크게",
 	"mobile-frontend-generic-404-desc": "찾고 있는 문서를 찾을 수 없습니다.",
 	"mobile-frontend-generic-404-title": "오류 - 페이지를 찾을 수 없습니다",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} 프로젝트는 여러분과 같은 사람들이 만듭니다.</strong><br />기여하려면 로그인하세요.",

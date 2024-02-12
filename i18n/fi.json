@@ -109,7 +109,6 @@
 	"mf-font-size-small-label": "Pieni",
 	"mf-font-size-regular-label": "Normaali",
 	"mf-font-size-large-label": "Suuri",
-	"mf-font-size-xlarge-label": "Erittäin suuri",
 	"mobile-frontend-generic-404-desc": "Etsimääsi sivua ei löytynyt.",
 	"mobile-frontend-generic-404-title": "Virhe - sivua ei löydy",
 	"mobile-frontend-generic-login-new": "<strong>{{GRAMMAR:partitive|{{SITENAME}}}} rakentavat sinun kaltaisesi ihmiset.</strong><br />Aloita artikkelin muokkaaminen kirjautumalla sisään.",

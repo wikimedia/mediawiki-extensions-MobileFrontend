@@ -83,7 +83,6 @@
 	"mf-font-size-small-label": "Lille",
 	"mf-font-size-regular-label": "Almindelig",
 	"mf-font-size-large-label": "Stor",
-	"mf-font-size-xlarge-label": "Ekstra stor",
 	"mobile-frontend-generic-404-desc": "Siden du søger efter kunne ikke findes.",
 	"mobile-frontend-generic-404-title": "Fejl - Siden blev ikke fundet",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} laves af personer som dig.</strong><br />Log ind for at bidrage.",

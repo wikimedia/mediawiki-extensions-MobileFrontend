@@ -111,7 +111,6 @@
 	"mf-font-size-small-label": "Малий",
 	"mf-font-size-regular-label": "Звичайний",
 	"mf-font-size-large-label": "Великий",
-	"mf-font-size-xlarge-label": "Дуже великий",
 	"mobile-frontend-generic-404-desc": "Сторінку, яку ви шукали, не знайдено.",
 	"mobile-frontend-generic-404-title": "Помилка - сторінку не знайдено",
 	"mobile-frontend-generic-login-new": "<strong>Проєкт «{{SITENAME}}» творять такі ж люди, як і Ви.</strong><br />Увійдіть, щоб робити внесок.",

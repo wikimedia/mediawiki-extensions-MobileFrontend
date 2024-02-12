@@ -52,7 +52,6 @@
 	"mf-font-size-small-label": "Kiçik",
 	"mf-font-size-regular-label": "Orta",
 	"mf-font-size-large-label": "Böyük",
-	"mf-font-size-xlarge-label": "Çox böyük",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} sizin kimi istifadəçilər tərəfindən hazırlanır.</strong><br />Öz töhfənizi vermək üçün daxil olun.",
 	"mobile-frontend-joined-seconds": "{{PLURAL:$2|$2 saniyə|$2 saniyə}} əvvəl {{GENDER:$1|qoşulub}}",
 	"mobile-frontend-joined-minutes": "{{PLURAL:$2|$2 dəqiqə|$2 dəqiqə}} əvvəl {{GENDER:$1|qoşulub}}",

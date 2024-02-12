@@ -93,7 +93,6 @@
 	"mf-font-size-small-label": "Mažas",
 	"mf-font-size-regular-label": "Įprastas",
 	"mf-font-size-large-label": "Didelis",
-	"mf-font-size-xlarge-label": "Labai didelis",
 	"mobile-frontend-generic-404-desc": "Nerastas puslapis, kurio ieškote.",
 	"mobile-frontend-generic-404-title": "Klaida - Puslapis nerastas",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} yra sukurtas žmonių, tokių pačių kaip jūs.</strong><br />Prisijunkite norėdami prisidėti.",

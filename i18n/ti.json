@@ -25,7 +25,6 @@
 	"mf-font-size-small-label": "ንእሽቶ",
 	"mf-font-size-regular-label": "ንቡር",
 	"mf-font-size-large-label": "ዓቢ",
-	"mf-font-size-xlarge-label": "ተወሳኺ ዓቢ",
 	"mobile-frontend-generic-404-title": "ጌጋ፦ ገጽ ኣይተረኽበን",
 	"mobile-frontend-joined-just-now": "ሕጂ ጥራይ {{GENDER:$1|ተጸንቢሩ|ተጸንቢራ}}",
 	"mobile-frontend-joined-seconds": "ቅድሚ {{PLURAL:$2|$2 ካልኢት|$2 ካልኢታት}} {{GENDER:$1|ተጸንቢሩ|ተጸንቢራ}}",

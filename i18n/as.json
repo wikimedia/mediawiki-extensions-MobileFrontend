@@ -35,7 +35,6 @@
 	"mf-font-size-small-label": "সৰু",
 	"mf-font-size-regular-label": "নিয়মীয়া",
 	"mf-font-size-large-label": "ডাঙৰ",
-	"mf-font-size-xlarge-label": "অতি ডাঙৰ",
 	"mobile-frontend-generic-login-new": "<strong>আপোনাৰ দৰে লোকেই {{SITENAME}}ৰ সৃষ্টি কৰিছে।</strong><br />বৰঙণি আগবঢ়াবলৈ লগ্‌ ইন কৰক।",
 	"mobile-frontend-joined-just-now": "এইমাত্ৰ যোগদান {{GENDER:$1|কৰিছে}}",
 	"mobile-frontend-joined-minutes": "{{PLURAL:$2|$2 মিনিট}} আগতে যোগদান {{GENDER:$1|কৰিছে}}",

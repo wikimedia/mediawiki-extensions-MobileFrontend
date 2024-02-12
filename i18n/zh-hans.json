@@ -159,7 +159,6 @@
 	"mf-font-size-small-label": "小",
 	"mf-font-size-regular-label": "正常",
 	"mf-font-size-large-label": "大",
-	"mf-font-size-xlarge-label": "特大",
 	"mobile-frontend-generic-404-desc": "找不到您正在寻找的页面。",
 	"mobile-frontend-generic-404-title": "404错误——找不到页面",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}}是由像您一样的人构筑的。</strong><br />登录以贡献。",

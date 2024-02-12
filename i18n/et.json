@@ -73,7 +73,6 @@
 	"mf-font-size-small-label": "Väike",
 	"mf-font-size-regular-label": "Tavaline",
 	"mf-font-size-large-label": "Suur",
-	"mf-font-size-xlarge-label": "Eriti suur",
 	"mobile-frontend-generic-404-desc": "Ei leitud lehekülge, mida otsid.",
 	"mobile-frontend-generic-404-title": "Tõrge – lehekülge ei leitud",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} on teinud sinusugused inimesed.</strong><br />Logi sisse, et kaastööd teha.",

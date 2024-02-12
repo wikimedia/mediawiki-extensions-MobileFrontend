@@ -123,7 +123,6 @@
 	"mf-font-size-small-label": "Mała",
 	"mf-font-size-regular-label": "Zwykła",
 	"mf-font-size-large-label": "Duża",
-	"mf-font-size-xlarge-label": "Bardzo duża",
 	"mobile-frontend-generic-404-desc": "Nie można odnaleźć strony, której szukasz.",
 	"mobile-frontend-generic-404-title": "Błąd - nie znaleziono strony",
 	"mobile-frontend-generic-login-new": "<strong>{{GRAMMAR:B.lp|{{SITENAME}}}} tworzą tacy ludzie, jak Ty.</strong><br />Zaloguj się, aby ją rozwijać.",

@@ -136,7 +136,6 @@
 	"mf-font-size-small-label": "Маленький",
 	"mf-font-size-regular-label": "Стандартный",
 	"mf-font-size-large-label": "Большой",
-	"mf-font-size-xlarge-label": "Очень большой",
 	"mobile-frontend-generic-404-desc": "Не удалось найти страницу, которую вы ищете.",
 	"mobile-frontend-generic-404-title": "Ошибка — Страница не найдена",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} делается такими же людьми, как и вы.</strong><br />Войдите, чтобы внести свой вклад.",

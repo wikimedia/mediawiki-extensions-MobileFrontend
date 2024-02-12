@@ -96,7 +96,6 @@
 	"mf-font-size-small-label": "Μικρά",
 	"mf-font-size-regular-label": "Κανονικά",
 	"mf-font-size-large-label": "Μεγάλα",
-	"mf-font-size-xlarge-label": "Πολύ μεγάλα",
 	"mobile-frontend-generic-404-desc": "Η σελίδα που ψάχνατε δεν βρέθηκε.",
 	"mobile-frontend-generic-404-title": "Σφάλμα - Η σελίδα δεν βρέθηκε",
 	"mobile-frontend-generic-login-new": "Η <strong>{{SITENAME}} δημιουργείται από ανθρώπους σαν κι εσάς.</strong><br />Συνδεθείτε για να συνεισφέρετε.",

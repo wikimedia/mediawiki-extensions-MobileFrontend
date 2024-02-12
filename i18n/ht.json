@@ -68,7 +68,6 @@
 	"mf-font-size-small-label": "Ti",
 	"mf-font-size-regular-label": "Regilye",
 	"mf-font-size-large-label": "Gwo",
-	"mf-font-size-xlarge-label": "Trè gwo",
 	"mobile-frontend-joined-just-now": "Li te {{GENDER:$1|rantre}} jis kounye a",
 	"mobile-frontend-joined-seconds": "Li te {{GENDER:$1|rantre}} {{PLURAL:$2|$2 segonn}} de sa",
 	"mobile-frontend-joined-minutes": "Li te {{GENDER:$1|rantre}} {{PLURAL:$2|$2 minit}} de sa",

@@ -104,7 +104,6 @@
 	"mf-font-size-small-label": "छोटा",
 	"mf-font-size-regular-label": "साधारण",
 	"mf-font-size-large-label": "बड़ा",
-	"mf-font-size-xlarge-label": "विशाल",
 	"mobile-frontend-generic-404-desc": "जिस पृष्ठ को आप खोज रहे हैं वह नहीं मिला।",
 	"mobile-frontend-generic-404-title": "त्रुटि - पृष्ठ नहीं मिला",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} को आप जैसे लोगों ने बनाया है।</strong><br />योगदान करने के लिए लॉग-इन करें।",

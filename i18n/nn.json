@@ -71,7 +71,6 @@
 	"mf-font-size-small-label": "Liten",
 	"mf-font-size-regular-label": "Vanleg",
 	"mf-font-size-large-label": "Stor",
-	"mf-font-size-xlarge-label": "Ekstra stor",
 	"mobile-frontend-generic-404-desc": "Sida du ser etter vart ikkje funnen.",
 	"mobile-frontend-generic-404-title": "Feil - fann ikkje sida",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} vert laga av folk som deg.</strong><br />Logg inn for å bidra.",

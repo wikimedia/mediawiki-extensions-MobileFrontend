@@ -69,7 +69,6 @@
 	"mf-font-size-small-label": "ⴰⵎⵥⵥⴰⵏ",
 	"mf-font-size-regular-label": "ⴰⵏⵎⵢⵓⵔ",
 	"mf-font-size-large-label": "ⴰⵎⵇⵇⵔⴰⵏ",
-	"mf-font-size-xlarge-label": "ⴰⴱⵔⵎⵇⵇⵔⴰⵏ",
 	"mobile-frontend-generic-404-title": "ⵜⴰⵣⴳⵍⵜ - ⵓⵔ ⵜⴻⵜⵜⵢⴰⴼⴰ ⵜⴰⵙⵏⴰ",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} ⵙⴽⵔⵏ ⵜ ⵉⵡⴷⴰⵏ ⴰⵎ ⴽⵢⵢ/ⴽⵎⵎ.</strong><br />ⴽⵛⵎ ⵃⵎⴰ ⴰⴷ ⵜⴰⵎⵓⵜ.",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|ⵉⵍⴽⵎ|ⵜⵍⴽⵎ}} ⵖⴰⵙ ⴷⵖⵉ",

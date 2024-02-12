@@ -87,7 +87,6 @@
 	"mf-font-size-small-label": "პატარა",
 	"mf-font-size-regular-label": "სტანდარტული",
 	"mf-font-size-large-label": "დიდი",
-	"mf-font-size-xlarge-label": "ძალიან დიდი",
 	"mobile-frontend-generic-404-desc": "გვერდი, რომელსაც ეძებთ, ვერ მოიძებნა.",
 	"mobile-frontend-generic-404-title": "შეცდომა - გვერდი არ მოიძებნა",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} შექმნილია თქვენნაირი ადამიანების მიერ.</strong><br />წვლილის შესატანად, შედით ანგარიშზე.",

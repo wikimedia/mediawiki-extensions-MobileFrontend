@@ -104,7 +104,6 @@
 	"mf-font-size-small-label": "Liten",
 	"mf-font-size-regular-label": "Vanlig",
 	"mf-font-size-large-label": "Stor",
-	"mf-font-size-xlarge-label": "Extra stor",
 	"mobile-frontend-generic-404-desc": "Sidan du letar efter kunde inte hittas.",
 	"mobile-frontend-generic-404-title": "Fel - Sidan hittades inte",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} är skapad av personer som du.</strong><br />Logga in för att bidra.",

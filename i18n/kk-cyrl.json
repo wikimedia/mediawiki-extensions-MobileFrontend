@@ -91,7 +91,6 @@
 	"mf-font-size-small-label": "Кішкентай",
 	"mf-font-size-regular-label": "Тұрақты",
 	"mf-font-size-large-label": "Үлкен",
-	"mf-font-size-xlarge-label": "Өте үлкен",
 	"mobile-frontend-generic-404-desc": "Сіз қарап тұрған бет табылмады.",
 	"mobile-frontend-generic-404-title": "Қате - Бет табылмады",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} жобасын сіз сияқты адамдар дамытады.</strong><br />Үлес қосу үшін жүйеге кіріңіз.",

@@ -118,7 +118,6 @@
 	"mf-font-size-small-label": "صغير",
 	"mf-font-size-regular-label": "عادي",
 	"mf-font-size-large-label": "كبير",
-	"mf-font-size-xlarge-label": "كبير جدًا",
 	"mobile-frontend-generic-404-desc": "لم يتم العثور على الصفحة التي تبحث عنها",
 	"mobile-frontend-generic-404-title": "خطأ - الصفحة غير موجودة",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} موقع يساهم فيه أشخاص مثلك. سجل دخولك لتساهم.</strong>",

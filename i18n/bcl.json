@@ -49,7 +49,6 @@
 	"mf-font-size-small-label": "Sadit",
 	"mf-font-size-regular-label": "Tama lang",
 	"mf-font-size-large-label": "Dakula",
-	"mf-font-size-xlarge-label": "Mas dakula",
 	"mobile-frontend-generic-404-title": "Kasalaan - Dae madukayan an pahina",
 	"mobile-frontend-generic-login-new": "<strong>Piggibo an {{SITENAME}} kan mga tawo na arog mo.</strong><br />Maglaog tanganing makakontribuwer.",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|Nagbali}} ngunyan lang",

@@ -84,7 +84,6 @@
 	"mf-font-size-small-label": "Micre",
 	"mf-font-size-regular-label": "Normal",
 	"mf-font-size-large-label": "Grande",
-	"mf-font-size-xlarge-label": "Extra grande",
 	"mobile-frontend-generic-404-desc": "Le pagina que tu cerca non pote esser trovate.",
 	"mobile-frontend-generic-404-title": "Error - Pagina non trovate",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} es facite per gente como tu.</strong><br />Aperi session pro contribuer.",

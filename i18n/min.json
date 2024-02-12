@@ -23,7 +23,6 @@
 	"mf-font-size-small-label": "Ketek",
 	"mf-font-size-regular-label": "Normal",
 	"mf-font-size-large-label": "Gadang",
-	"mf-font-size-xlarge-label": "Gadang bana",
 	"mobile-frontend-joined-days": "{{GENDER:$1|Tadaftar}} {{PLURAL:$2|$2 hari}} nan lalu",
 	"mobile-frontend-joined-years": "{{GENDER:$1|Tadaftar}} {{PLURAL:$2|$2 taun}} nan lalu",
 	"mobile-frontend-language-heading": "<strong>Bahaso</strong>",
