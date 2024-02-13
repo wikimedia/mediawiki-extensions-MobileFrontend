@@ -225,9 +225,11 @@
 	"mobile-frontend-user-pref-description": "เปลี่ยนแปลงการตั้งค่าของคุณ รวมทั้งรหัสผ่าน หน้าตาของเว็บไซต์ การตั้งค่าการแจ้งเตือน และอื่น ๆ",
 	"mobile-frontend-user-pref-link": "เปิดการตั้งค่า",
 	"mobile-frontend-user-pref-feedback": "ส่งคำติชม",
+	"mobile-frontend-amc-outreach-intro": "แนะนำโหมดขั้นสูง",
 	"mobile-frontend-amc-outreach-enable": "เปิดใช้งานโหมดขั้นสูง",
 	"mobile-frontend-amc-outreach-no-thanks": "ไม่ขอบคุณ",
 	"mobile-frontend-amc-outreach-enabled-message": "เปิดใช้งานโหมดขั้นสูงแล้ว คุณสามารถปิดใช้งานในการตั้งค่าของคุณ",
 	"mobile-frontend-amc-outreach-dismissed-message": "คุณสามารถเปิดใช้งานโหมดขั้นสูงตอนไหนก็ได้ในการตั้งค่าของคุณ",
+	"mobile-frontend-beta-only": "คุณสมบัตินี้มีเฉพาะในโหมดเบต้าเท่านั้น",
 	"prefs-mobile": "การตั้งค่าอุปกรณ์เคลื่อนที่"
 }

@@ -32,7 +32,7 @@
 	"mobile-frontend-edit-login-action": "<strong>Alî bike ku {{SITENAME}} bi pêş bikeve.</strong><br />Ji bo guhartinê têkeve.",
 	"mobile-frontend-edit-signup-action": "<strong>Alîkar bibe ku {{SITENAME}} pêşbikeve.</strong><br />Ji bo guhartinê hesabekî çêke.",
 	"mobile-frontend-editor-anon": "Bê têketinê biguhêre",
-	"mobile-frontend-editor-anonwarning": "<strong>Hişyarî:</strong> Hûn têneketî ne. Ger guhartinekê bikin navnîşana IPya we dê ji raya giştî re xuya bibe. Heke hûn <strong>têkevin</strong> an <strong>hesabekî çêkin</strong>, dê guhartinên we, digel feydeyên din, ji navê bikarhêneriya we re werin nîşankirin.",
+	"mobile-frontend-editor-anonwarning": "<strong>Hişyarî:</strong> Tu ne têketî yî. Eger guhartinekê bikî, adresa te ya IPyê dê ji herkesî re xuya bibe. Eger <strong>têkevî</strong> yan jî <strong>hesabekî çêkî</strong> digel feydeyên din, dê guhartinên te bi navê bikarhêneriya te re werin nîşankirin.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Têkeve",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "Baş e",
 	"mobile-frontend-editor-blocked-drawer-action-randompage": "Min bibe rûpeleke din",
