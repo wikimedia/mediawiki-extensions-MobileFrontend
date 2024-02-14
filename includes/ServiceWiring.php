@@ -56,11 +56,6 @@ return [
 		$manager->registerFeature( new Feature( 'MFEnableFontChanger', 'mobile-frontend',
 			$config->get( 'MFEnableFontChanger' ) ) );
 		// Generates the following messages:
-		// * mobile-frontend-mobile-option-MFUseDesktopSpecialHistoryPage
-		// * mobile-frontend-mobile-option-MFUseDesktopSpecialHistoryPage-description
-		$manager->registerFeature( new Feature( 'MFUseDesktopSpecialHistoryPage', 'mobile-frontend',
-			$config->get( 'MFUseDesktopSpecialHistoryPage' ) ) );
-		// Generates the following messages:
 		// * mobile-frontend-mobile-option-MFUseDesktopSpecialWatchlistPage
 		// * mobile-frontend-mobile-option-MFUseDesktopSpecialWatchlistPage-description
 		$manager->registerFeature( new Feature( 'MFUseDesktopSpecialWatchlistPage', 'mobile-frontend',

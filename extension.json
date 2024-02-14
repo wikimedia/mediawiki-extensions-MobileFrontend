@@ -412,11 +412,6 @@
 				"resources/dist/mobile.special.userlogin.scripts.js"
 			]
 		},
-		"mobile.special.history.styles": {
-			"styles": [
-				"resources/mobile.special.history.styles/default.less"
-			]
-		},
 		"mobile.special.pagefeed.styles": {
 			"styles": [
 				"resources/mobile.special.pagefeed.styles/pagefeed.less"
@@ -522,13 +517,6 @@
 		},
 		"MFEnableMobilePreferences": {
 			"value": false
-		},
-		"MFUseDesktopSpecialHistoryPage": {
-			"value": {
-				"base": true,
-				"beta": true,
-				"amc": true
-			}
 		},
 		"MFUseDesktopDiffPage": {
 			"value": {

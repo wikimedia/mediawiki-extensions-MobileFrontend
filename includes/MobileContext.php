@@ -2,8 +2,6 @@
 
 use MediaWiki\Config\Config;
 use MediaWiki\MediaWikiServices;
-use MediaWiki\SpecialPage\SpecialPage;
-use MediaWiki\Title\Title;
 use MobileFrontend\Devices\DeviceDetectorService;
 use MobileFrontend\Features\FeaturesManager;
 use MobileFrontend\Hooks\HookRunner;
@@ -332,35 +330,6 @@ class MobileContext extends ContextSource {
 			MobileFrontendHooks::shouldMobileFormatSpecialPages( $this->getUser() )
 		) {
 			$redirectUrl = SpecialMobileDiff::getMobileUrlFromDesktop( $request );
-		}
-
-		if ( $request->getVal( 'action' ) === 'history' &&
-			// IContextSource::getTitle() can be null
-			$title !== null &&
-			// check, if SpecialMobileHistory supports the history action set for this title
-			// content model
-			SpecialMobileHistory::shouldUseSpecialHistory( $title, $this->getUser() )
-		) {
-			$values = $this->getRequest()->getValues();
-			$curid = $request->getInt( 'curid' );
-			// avoid infinite redirect loops
-			unset( $values['action'] );
-			// Avoid multiple history parameters
-			unset( $values['title'] );
-			// the curid when passed to a page ignores the title as it represents a page
-			// ID.
-			// e.g. URL ?title=Special:History/John_Finnie&curid=31775812 will not show
-			// Special:History but the page associated with id `31775812`
-			// For consistency it must be stripped and used
-			// More details on T214531
-			if ( $curid ) {
-				$title = Title::newFromID( $curid );
-				unset( $values['curid'] );
-			} else {
-				$title = $this->getTitle();
-			}
-			$redirectUrl = SpecialPage::getTitleFor( 'History', $title )->
-				getLocalURL( $values );
 		}
 
 		if ( $redirectUrl ) {
