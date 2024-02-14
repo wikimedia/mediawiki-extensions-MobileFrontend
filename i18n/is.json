@@ -8,7 +8,8 @@
 			"Snævar",
 			"Sveinki",
 			"Sveinn í Felli",
-			"Þjarkur"
+			"Þjarkur",
+			"Stefán Örvar Sigmundsson"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Hvort sem notandi breytir síðu með farsímaviðmótinu eða ekki",
@@ -156,7 +157,7 @@
 	"mobile-frontend-watchlist-cta-button-login": "Innskrá",
 	"mobile-frontend-watchlist-cta-button-signup": "Nýskrá",
 	"mobile-frontend-watchlist-feed": "Breytt",
-	"mobile-frontend-watchlist-feed-empty": "Engar síður með nýlegar breytingar",
+	"mobile-frontend-watchlist-feed-empty": "Það eru engar síður með nýlegar breytingar.",
 	"mobile-frontend-watchlist-filter-all": "Allar",
 	"mobile-frontend-watchlist-filter-articles": "Síður",
 	"mobile-frontend-watchlist-filter-other": "Aðrar",

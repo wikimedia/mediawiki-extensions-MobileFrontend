@@ -81,7 +81,7 @@
 	"mobile-frontend-editor-licensing-with-terms": "פרסום השינויים מהווה את הסכמתך ל$1 ולפרסום התרומה שלך לפי תנאי {{PLURAL:$3|רישיון|רישיונות}} $2.",
 	"mobile-frontend-editor-terms-link": "[$1 תנאי שימוש]",
 	"mobile-frontend-editor-new-page-confirm": "האם {{GENDER:$1|אתה רוצה|את רוצה|ברצונך}} ליצור דף חדש באתר {{SITENAME}}?",
-	"mobile-frontend-editor-placeholder": "הפסקה הזאת ריקה. רוצה להתחיל לכתוב אותה?",
+	"mobile-frontend-editor-placeholder": "הפסקה הזאת ריקה. באפשרותך להרחיב אותה לפני כולם!",
 	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|אתה יוצר|את יוצרת}} דף חדש באתר {{SITENAME}}!",
 	"mobile-frontend-editor-previewing-page": "<span><strong>תצוגה מקדימה של</strong> $1</span>",
 	"mobile-frontend-editor-publish": "פרסום",
