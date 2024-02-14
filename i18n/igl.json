@@ -1,10 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"AgnesAbah"
+			"AgnesAbah",
+			"Beracy"
 		]
 	},
 	"mobile-frontend-terms-text": "Alukuma du cheku",
 	"mobile-frontend-view": "Ígo foonú",
-	"mobile-frontend-view-desktop": "Komputa"
+	"mobile-frontend-view-desktop": "Komputa",
+	"mw-mf-amc-0-label": "Us jecheñ",
+	"mw-mf-amc-1-label": "Ijeche"
 }
