@@ -101,7 +101,7 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	background: #fff;
+	background: @background-color-base;
 	z-index: @z-indexOverlay;
 	display: none;
 
@@ -141,7 +141,7 @@
 	.panel {
 		padding-top: 12px;
 		padding-bottom: 12px;
-		border-bottom: @border-width-base @border-style-base #eaecf0;
+		border-bottom: @border-width-base @border-style-base @border-color-muted;
 	}
 }
 
@@ -260,10 +260,10 @@
 	top: auto;
 	bottom: 0;
 	height: auto !important;
-	background: #f8f9fa;
+	background: @background-color-interactive-subtle;
 
 	.overlay-header-container {
-		background: #f8f9fa;
+		background: @background-color-interactive-subtle;
 	}
 }
 

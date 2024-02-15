@@ -1,3 +1,5 @@
+@import 'mediawiki.skin.variables.less';
+
 // We want these transitions to only occur when entering the editor, but not when leaving it.
 // Leaving uses browser back navigation and we shouldn't "delay" it.
 .ve-loading {
@@ -37,8 +39,8 @@
 	width: 100%;
 	padding: 1em;
 	box-sizing: border-box;
-	background: #fff;
-	border-bottom: 1px solid #c8ccd1;
+	background: @background-color-base;
+	border-bottom: 1px solid @border-color-subtle;
 	box-shadow: 0 1px 1px rgba( 0, 0, 0, 0.1 );
 	visibility: hidden;
 	transform: translateY( -100% );
