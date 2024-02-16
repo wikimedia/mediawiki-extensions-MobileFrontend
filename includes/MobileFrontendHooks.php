@@ -922,7 +922,9 @@ class MobileFrontendHooks implements
 			$context->getOutput()->addHtmlClasses( [
 				'mf-expand-sections-clientpref-' . $expandSections,
 				'mf-font-size-clientpref-' . $fontSize,
-				'mw-mf-amc-clientpref-' . $amc
+				'mw-mf-amc-clientpref-' . $amc,
+				// Help us detect cached states.
+				'T357724'
 			] );
 
 			// Allow modifications in mobile only mode
