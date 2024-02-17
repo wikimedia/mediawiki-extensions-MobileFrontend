@@ -54,7 +54,7 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	private static function matchElement( DOMElement $node, $requiredTagName, $requiredClass ) {
 		$classes = explode( ' ', $node->getAttribute( 'class' ) );
 		return ( $requiredTagName === false || strtolower( $node->tagName ) === $requiredTagName )
-			&& !empty( preg_grep( $requiredClass, $classes ) );
+			&& preg_grep( $requiredClass, $classes );
 	}
 
 	/**
