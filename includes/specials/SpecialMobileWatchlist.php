@@ -7,6 +7,7 @@ use MediaWiki\Title\Title;
 use MediaWiki\User\UserIdentity;
 use MediaWiki\Utils\MWTimestamp;
 use Wikimedia\IPUtils;
+use Wikimedia\Rdbms\IConnectionProvider;
 use Wikimedia\Rdbms\IResultWrapper;
 
 /**
@@ -28,11 +29,15 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		'Special:EditWatchlist'
 	];
 
+	private IConnectionProvider $connectionProvider;
+
 	/** @var string Saves, how the watchlist is sorted: a-z or as a feed */
 	private $view;
 
-	public function __construct() {
+	public function __construct( IConnectionProvider $connectionProvider ) {
 		parent::__construct( 'Watchlist' );
+
+		$this->connectionProvider = $connectionProvider;
 	}
 
 	/** @var string Saves the actual used filter in feed view */
@@ -184,7 +189,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	 */
 	protected function doFeedQuery() {
 		$user = $this->getUser();
-		$dbr = wfGetDB( DB_REPLICA, 'watchlist' );
+		$dbr = $this->connectionProvider->getReplicaDatabase( false, 'watchlist' );
 
 		// Possible where conditions
 		$conds = $this->getNSConditions( 'rc_namespace' );

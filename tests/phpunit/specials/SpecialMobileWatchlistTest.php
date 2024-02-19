@@ -13,9 +13,12 @@ class SpecialMobileWatchlistTest extends MediaWikiIntegrationTestCase {
 	 * @dataProvider provideAddWatchlistHTML
 	 */
 	public function testAddWatchlistHTML( $results, $expected, $msg ) {
+		$services = $this->getServiceContainer();
+		$connectionProvider = $services->getConnectionProvider();
+
 		$context = new DerivativeContext( RequestContext::getMain() );
 		$context->setTitle( Title::newFromText( 'Special:Watchlist' ) );
-		$wl = new SpecialMobileWatchlist();
+		$wl = new SpecialMobileWatchlist( $connectionProvider );
 		$wl->setContext( $context );
 		$wl->addWatchlistHTML( $results, UserIdentityValue::newAnonymous( '' ) );
 		$this->assertStringContainsString(

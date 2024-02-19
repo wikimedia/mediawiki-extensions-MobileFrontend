@@ -653,7 +653,12 @@ class MobileFrontendHooks implements
 				!$featureManager->isFeatureAvailableForCurrentUser( 'MFUseDesktopSpecialWatchlistPage' )
 			) {
 				// Replace the standard watchlist view with our custom one
-				$list['Watchlist'] = SpecialMobileWatchlist::class;
+				$list['Watchlist'] = [
+					'class' => SpecialMobileWatchlist::class,
+					'services' => [
+						'ConnectionProvider',
+					],
+				];
 				$list['EditWatchlist'] = SpecialMobileEditWatchlist::class;
 			}
 		}
@@ -739,7 +744,10 @@ class MobileFrontendHooks implements
 			$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
 			$vars->setVar( 'user_mobile', $context->shouldDisplayMobileView() );
 		} else {
-			$dbr = wfGetDB( DB_REPLICA );
+			$dbr = MediaWikiServices::getInstance()
+				->getConnectionProvider()
+				->getReplicaDatabase();
+
 			$tags = ChangeTags::getTags( $dbr, $rc->getAttribute( 'rc_id' ) );
 			$val = (bool)array_intersect( $tags, [ 'mobile edit', 'mobile web edit' ] );
 			$vars->setVar( 'user_mobile', $val );
