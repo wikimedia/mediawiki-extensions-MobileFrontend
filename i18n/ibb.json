@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Akpanufun"
+			"Akpanufun",
+			"Enojohn"
 		]
 	},
+	"mobile-frontend-copyright": "Si sine aba ke idak $1 me ukpughode aba.",
 	"mobile-frontend-terms-text": "Nahga abu Kama",
 	"mobile-frontend-view": "Use mkpo etuk mkpo",
 	"mobile-frontend-view-desktop": "Ekebe ndise akpokoro"

@@ -236,9 +236,11 @@
 	"mobile-frontend-mobile-option-amc-experiment-description": "โหมดขั้นสูงช่วยให้เข้าถึงหน้าพูดคุย หน้าประวัติ เครื่องมือผู้ใช้ และเครื่องมือการแก้ไขอื่น ๆ ได้อย่างง่าย",
 	"mobile-frontend-mobile-option-amc-learn-more": "เรียนรู้เพิ่มเติม",
 	"mobile-frontend-mobile-option-amc-send-feedback": "ส่งคำติชม",
+	"mobile-frontend-amc-outreach-intro": "แนะนำโหมดขั้นสูง",
 	"mobile-frontend-amc-outreach-enable": "เปิดใช้งานโหมดขั้นสูง",
 	"mobile-frontend-amc-outreach-no-thanks": "ไม่ขอบคุณ",
 	"mobile-frontend-amc-outreach-enabled-message": "เปิดใช้งานโหมดขั้นสูงแล้ว คุณสามารถปิดใช้งานในการตั้งค่าของคุณ",
 	"mobile-frontend-amc-outreach-dismissed-message": "คุณสามารถเปิดใช้งานโหมดขั้นสูงตอนไหนก็ได้ในการตั้งค่าของคุณ",
+	"mobile-frontend-beta-only": "คุณสมบัตินี้มีเฉพาะในโหมดเบต้าเท่านั้น",
 	"prefs-mobile": "การตั้งค่าอุปกรณ์เคลื่อนที่"
 }

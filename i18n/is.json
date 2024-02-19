@@ -8,7 +8,8 @@
 			"Snævar",
 			"Sveinki",
 			"Sveinn í Felli",
-			"Þjarkur"
+			"Þjarkur",
+			"Stefán Örvar Sigmundsson"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Hvort sem notandi breytir síðu með farsímaviðmótinu eða ekki",
@@ -44,7 +45,7 @@
 	"mobile-frontend-editor-blocked-drawer-body-login": "Prófaðu að skrá þig inn ef þú ert með aðgang.",
 	"mobile-frontend-editor-blocked-drawer-body-login-partial": "Prófaðu að skrá þig inn ef þú átt aðgang, eða reyndu að breyta annari síðu.",
 	"mobile-frontend-editor-blocked-drawer-body-login-createaccount": "Reyndu að skrá þig inn eða búa til aðgang.",
-	"mobile-frontend-editor-blocked-drawer-body-login-createaccount-partial": "Prófaðu að skrá þig inn eða búa til aðgang, eða reyndu að breyta annari síðu.",
+	"mobile-frontend-editor-blocked-drawer-body-login-createaccount-partial": "Reyndu að skrá þig inn eða búa til aðgang, eða reyndu að breyta annari síðu.",
 	"mobile-frontend-editor-blocked-drawer-body-link": "Sjá meira",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Ástæða",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Bannaður|Bönnuð|Bannað}} af",
@@ -69,7 +70,7 @@
 	"mobile-frontend-editor-terms-link": "[$1 Notkunarskilmála]",
 	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|Ertu viss um að þú viljir stofna}} nýja síðu á {{SITENAME}}?",
 	"mobile-frontend-editor-placeholder": "Þessi hluti er tómur. Vertu fyrst(ur) til að bæta við hann!",
-	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|Þú ert að stofna}} nýja síðu á {{SITENAME}}!",
+	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|Þú ert að búa til}} nýja síðu á {{SITENAME}}!",
 	"mobile-frontend-editor-previewing-page": "<span><strong>Forskoða</strong> $1</span>",
 	"mobile-frontend-editor-publish": "Gefa út",
 	"mobile-frontend-editor-save": "Vista",
@@ -191,7 +192,7 @@
 	"mobile-frontend-watchlist-cta-button-login": "Innskrá",
 	"mobile-frontend-watchlist-cta-button-signup": "Nýskrá",
 	"mobile-frontend-watchlist-feed": "Breytt",
-	"mobile-frontend-watchlist-feed-empty": "Engar síður með nýlegar breytingar",
+	"mobile-frontend-watchlist-feed-empty": "Það eru engar síður með nýlegar breytingar.",
 	"mobile-frontend-watchlist-filter-all": "Allar",
 	"mobile-frontend-watchlist-filter-articles": "Síður",
 	"mobile-frontend-watchlist-filter-other": "Aðrar",
