@@ -6,7 +6,7 @@ use DOMDocument;
 use DOMElement;
 use DOMNode;
 use DOMXPath;
-use Exception;
+use LogicException;
 use MediaWiki\Html\Html;
 use MediaWiki\ResourceLoader\ResourceLoader;
 use Wikimedia\Parsoid\Utils\DOMCompat;
@@ -100,7 +100,7 @@ class MakeSectionsTransform implements IMobileTransform {
 			// Try using the <body> as the container.
 			$containers = $xpath->query( 'body' );
 			if ( !$containers->length ) {
-				throw new Exception( "HTML lacked body element even though we put it there ourselves" );
+				throw new LogicException( "HTML lacked body element even though we put it there ourselves" );
 			}
 		}
 
