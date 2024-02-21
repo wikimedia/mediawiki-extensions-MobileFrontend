@@ -50,6 +50,7 @@
 	"mobile-frontend-editor-placeholder": "Bahagian ini kosong. Jadilah yang pertama untuk mengembangkannya!",
 	"mobile-frontend-editor-placeholder-new-page": "Anda sedang mencipta laman baru dalam {{SITENAME}}!",
 	"mobile-frontend-editor-previewing-page": "<span><strong>Pratayang</strong> $1</span>",
+	"mobile-frontend-editor-publish": "Terbitkan",
 	"mobile-frontend-editor-save": "Simpan",
 	"mobile-frontend-editor-summary-placeholder": "Contoh: Baiki ejaan, tambah kandungan",
 	"mobile-frontend-editor-summary-request": "Apakah pembaikan yang anda lakukan pada laman ini?",
