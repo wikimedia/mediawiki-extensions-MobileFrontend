@@ -30,13 +30,14 @@
 }
 
 // TODO: Replace with Codex Button group
-// Extra specificity so that it overrides .cdx-button--fake-button inline-flex rule.
+// Extra specificity so that it overrides .cdx-button--fake-button rules.
 .mf-button-block.cdx-button--fake-button {
 	border-radius: 0;
-	display: block;
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
+	// Integer value prevents off-by-1px vertical alignment
+	line-height: 30px;
 
 	span {
 		display: block;
