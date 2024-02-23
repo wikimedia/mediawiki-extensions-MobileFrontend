@@ -525,16 +525,16 @@
 		},
 		"MFUseDesktopSpecialHistoryPage": {
 			"value": {
-				"base": false,
-				"beta": false,
+				"base": true,
+				"beta": true,
 				"amc": true
 			}
 		},
 		"MFUseDesktopDiffPage": {
 			"value": {
-				"base": false,
-				"beta": false,
-				"amc": false
+				"base": true,
+				"beta": true,
+				"amc": true
 			}
 		},
 		"MFUseDesktopSpecialWatchlistPage": {
