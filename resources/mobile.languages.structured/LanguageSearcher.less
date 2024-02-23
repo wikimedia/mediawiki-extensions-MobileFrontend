@@ -10,6 +10,8 @@
 	.search-box {
 		// Always show the language search input
 		display: block;
+		// Make sure the absolutely positioned search icon overlaps the search input
+		position: relative;
 	}
 
 	.search {
@@ -61,7 +63,7 @@
 
 			.autonym {
 				// FIXME: Does this really need to be emphasized?
-				color: @color-emphasized;
+				color: @color-emphasized; // TODO
 				font-weight: bold;
 			}
 
