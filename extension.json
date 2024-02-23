@@ -87,6 +87,9 @@
 		"MobileSpecialPage": "includes/specials/MobileSpecialPage.php",
 		"MobileSpecialPageFeed": "includes/specials/MobileSpecialPageFeed.php"
 	},
+	"TestAutoloadNamespaces": {
+		"MobileFrontend\\Tests\\": "tests/phpunit/"
+	},
 	"ResourceModules": {
 		"mobile.pagelist.styles": {
 			"styles": [

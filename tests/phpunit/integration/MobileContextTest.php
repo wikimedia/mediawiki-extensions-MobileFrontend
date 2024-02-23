@@ -5,6 +5,7 @@ use MediaWiki\MediaWikiServices;
 use MediaWiki\Request\FauxRequest;
 use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\Title\Title;
+use MobileFrontend\Tests\Utils;
 
 /**
  * @group MobileFrontend
@@ -23,37 +24,6 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 		$method->setAccessible( true );
 
 		return $method;
-	}
-
-	/**
-	 * Used as test value for $wgMobileUrlCallback, here and in MobileFrontendHooksTest.
-	 *
-	 * This is a copy of Wikimedia's mobile URL callback, but the logic of the callback
-	 * itself is tested in the operations/mediawiki-config repo so the tests here don't
-	 * need to cover that.
-	 *
-	 * @param string $domain
-	 * @return string
-	 */
-	public static function mobileUrlCallback( string $domain ): string {
-		switch ( $domain ) {
-			case 'wikisource.org':
-				return 'm.wikisource.org';
-			case 'wikitech.wikimedia.org':
-				return 'wikitech.wikimedia.org';
-			case 'wikidata.beta.wmflabs.org':
-				return 'm.wikidata.beta.wmflabs.org';
-			case 'wikifunctions.beta.wmflabs.org':
-				return 'm.wikifunctions.beta.wmflabs.org';
-		}
-
-		$domainParts = explode( '.', $domain );
-		if ( $domainParts[0] === 'www' ) {
-			$domainParts[0] = 'm';
-		} else {
-			array_splice( $domainParts, 1, 0, [ 'm' ] );
-		}
-		return implode( '.', $domainParts );
 	}
 
 	protected function tearDown(): void {
@@ -107,7 +77,7 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 
 		// callback
 		$this->overrideConfigValues( [
-			'MobileUrlCallback' => [ self::class, 'mobileUrlCallback' ],
+			'MobileUrlCallback' => [ Utils::class, 'mobileUrlCallback' ],
 			'MobileUrlTemplate' => '',
 		] );
 
@@ -135,7 +105,7 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 
 		// the template is ignored when the callback is set
 		$this->overrideConfigValues( [
-			'MobileUrlCallback' => [ self::class, 'mobileUrlCallback' ],
+			'MobileUrlCallback' => [ Utils::class, 'mobileUrlCallback' ],
 			'MobileUrlTemplate' => 'm.%h1.%h2',
 		] );
 
@@ -151,7 +121,7 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 		$this->overrideConfigValues( [
 			'MFMobileHeader' => 'X-Subdomain',
 			MainConfigNames::Server => '//en.wikipedia.org',
-			'MobileUrlCallback' => [ self::class, 'mobileUrlCallback' ],
+			'MobileUrlCallback' => [ Utils::class, 'mobileUrlCallback' ],
 			'MobileUrlTemplate' => '%h0.%h1.m.%h2',
 		] );
 		$context = $this->makeContext();
@@ -286,7 +256,7 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 	public function testUsingMobileDomain() {
 		$this->overrideConfigValues( [
 			'MFMobileHeader' => 'X-Subdomain',
-			'MobileUrlCallback' => [ self::class, 'mobileUrlCallback' ],
+			'MobileUrlCallback' => [ Utils::class, 'mobileUrlCallback' ],
 			'MobileUrlTemplate' => '',
 		] );
 		$context = $this->makeContext();
@@ -340,7 +310,7 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 		$updateMobileUrlHost = self::getMethod( "updateDesktopUrlHost" );
 		$this->overrideConfigValues( [
 			MainConfigNames::Server => $server,
-			'MobileUrlCallback' => [ self::class, 'mobileUrlCallback' ],
+			'MobileUrlCallback' => [ Utils::class, 'mobileUrlCallback' ],
 			'MobileUrlTemplate' => '',
 		] );
 		$parsedUrl = wfParseUrl( $mobile );
@@ -675,7 +645,7 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 	}
 
 	public static function provideToggleView() {
-		$mobileUrlCallback = [ self::class, 'mobileUrlCallback' ];
+		$mobileUrlCallback = [ Utils::class, 'mobileUrlCallback' ];
 		$mobileUrlTemplate = '%h0.m.%h1.%h2';
 		return [
 			[ 'Foo', '/', null, '', '' ],
