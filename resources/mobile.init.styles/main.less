@@ -17,6 +17,11 @@
 	.cdx-mixin-css-icon-size( );
 	.cdx-mixin-css-icon-alignment( );
 	font-size: 14px;
+
+	// Temporary fix for https://phabricator.wikimedia.org/T356540
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: ~'calc( max( @{size-icon-medium}, @{min-size-icon-medium} ) )';
 }
 
 .section-heading .indicator {
@@ -26,6 +31,9 @@
 .mf-icon--small {
 	.cdx-mixin-css-icon-background( @size-icon-small );
 	.cdx-mixin-css-icon-size( @size-icon-small );
+
+	// Temporary fix for https://phabricator.wikimedia.org/T356540
+	background-size: ~'calc( max( @{size-icon-small}, @{min-size-icon-small} ) )';
 }
 
 .client-nojs {
