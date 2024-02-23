@@ -90,7 +90,7 @@ class MobileSpecialPage extends SpecialPage {
 	 */
 	protected function renderUnavailableBanner( $msg ) {
 		$out = $this->getOutput();
-		$out->setPageTitle( $this->msg( 'mobile-frontend-requires-title' ) );
+		$out->setPageTitleMsg( $this->msg( 'mobile-frontend-requires-title' ) );
 		$out->addHTML( Html::warningBox( $msg ) );
 	}
 

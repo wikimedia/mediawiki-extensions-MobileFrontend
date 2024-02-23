@@ -102,7 +102,7 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 		$out = $this->getOutput();
 		$out->addBodyClasses( 'mw-mf-special-page' );
 		parent::execute( $mode );
-		$out->setPageTitle( $this->msg( 'watchlist' ) );
+		$out->setPageTitleMsg( $this->msg( 'watchlist' ) );
 	}
 
 	/**

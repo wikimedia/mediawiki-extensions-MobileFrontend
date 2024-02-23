@@ -77,7 +77,7 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		);
 		$this->filter = $req->getVal( 'filter', $userOption );
 
-		$output->setPageTitle( $this->msg( 'watchlist' ) );
+		$output->setPageTitleMsg( $this->msg( 'watchlist' ) );
 
 		if ( $this->view === self::VIEW_FEED ) {
 			$res = $this->doFeedQuery();
