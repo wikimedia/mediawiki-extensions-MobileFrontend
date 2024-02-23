@@ -11,6 +11,7 @@ use MediaWiki\Title\Title;
 use MediaWiki\User\Options\UserOptionsLookup;
 use MediaWiki\User\User;
 use MediaWiki\User\UserIdentity;
+use MobileFrontend\Tests\Utils;
 use Psr\Container\ContainerInterface;
 use Wikimedia\ObjectFactory\ObjectFactory;
 
@@ -102,7 +103,7 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 	) {
 		$this->overrideConfigValues( [
 			'MFEnableManifest' => false,
-			'MobileUrlCallback' => $useMobileUrl ? [ MobileContextTest::class, 'mobileUrlCallback' ] : null,
+			'MobileUrlCallback' => $useMobileUrl ? [ Utils::class, 'mobileUrlCallback' ] : null,
 			'MobileUrlTemplate' => '',
 			'MFNoindexPages' => $mfNoindexPages,
 			'MFEnableXAnalyticsLogging' => $mfEnableXAnalyticsLogging,
@@ -229,7 +230,7 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 	 */
 	public function testOnTitleSquidURLs() {
 		$this->overrideConfigValues( [
-			'MobileUrlCallback' => [ MobileContextTest::class, 'mobileUrlCallback' ],
+			'MobileUrlCallback' => [ Utils::class, 'mobileUrlCallback' ],
 			'MobileUrlTemplate' => '',
 			MainConfigNames::Server => 'http://en.wikipedia.org',
 			MainConfigNames::ArticlePath => '/wiki/$1',
