@@ -2,11 +2,6 @@
 @import 'mediawiki.skin.variables.less';
 @import 'panel.less';
 
-.mw-body p,
-.content p {
-	line-height: 1.5;
-}
-
 // FIXME: The first rule is for cached HTML. It means anonymous users cannot use "Standard"
 // until page cache has flushed, but this is better than serving anonymous users "Standard"
 // when they didn't want it.
@@ -15,6 +10,14 @@
 	.mw-body p,
 	.content p {
 		font-size: 1rem;
+	}
+}
+
+.mf-font-size-clientpref-regular,
+.mf-font-size-clientpref-xlarge,
+.mf-font-size-clientpref-large {
+	.content {
+		line-height: 1.5;
 	}
 }
 
