@@ -25,6 +25,7 @@
 			"Rodrigo codignoli",
 			"TheEduGobi",
 			"Tuliouel",
+			"YuriNikolai",
 			555
 		]
 	},
@@ -101,8 +102,8 @@
 	"mf-expand-sections-name": "Expande todas a seções",
 	"mf-font-size-name": "Tamanho da fonte",
 	"mf-font-size-description": "Ajusta a dimensão da fonte para melhorar a legibilidade.",
-	"mf-font-size-small-label": "Pequeno",
-	"mf-font-size-regular-label": "Normal",
+	"mf-font-size-small-label": "Padrão",
+	"mf-font-size-regular-label": "Médio",
 	"mf-font-size-large-label": "Grande",
 	"mobile-frontend-generic-404-desc": "A página que você está procurando não foi encontrada.",
 	"mobile-frontend-generic-404-title": "Erro - Página não encontrada",

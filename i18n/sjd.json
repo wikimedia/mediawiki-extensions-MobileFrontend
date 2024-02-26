@@ -8,7 +8,7 @@
 	"mobile-frontend-changeslist-nocomment": "нимэ̄нн элля вуайхэзэ баяс кырьйха",
 	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|ба̄ййт лашшэнҍ|ба̄йт лашшнэнҍ|ба̄ййтэ лашшэнҍ}}",
 	"mobile-frontend-diffview-bytesremoved": "$1 {{PLURAL:$1|ба̄ййт ко̄ппчей|ба̄йт ко̄ппчьенҍ|ба̄ййтэ ко̄ппчей}}",
-	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|вуайхэсс|вуайхэз|вуайхэссэ}}",
+	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|воа̄йхэсс|воа̄йхэз|воа̄йхэссэ}}",
 	"mobile-frontend-editor-editing": "Вуайхэмушш",
 	"mobile-frontend-editor-editing-page": "<span><strong>Вуайхэмушш</strong> $1</span>",
 	"mobile-frontend-editor-keep-editing": "Ю̄ттҍкэ вуайхэмуж",

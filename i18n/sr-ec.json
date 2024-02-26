@@ -92,6 +92,8 @@
 	"mobile-frontend-editor-toload": "Уређивач се сада учитава. Ако се не учита [$1 освежите страницу].",
 	"mf-expand-sections-description": "Подразумевано увек развиј одељке садржинских страница.",
 	"mf-expand-sections-name": "Развиј све одељке",
+	"mf-expand-sections-0-label": "Скупи (подразумевано)",
+	"mf-expand-sections-1-label": "Развији (подразумевано)",
 	"mf-font-size-name": "Текст",
 	"mf-font-size-description": "Прилагодите величину фонта ради боље читљивост.",
 	"mf-font-size-small-label": "Стандардна",
