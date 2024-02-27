@@ -94,7 +94,7 @@ class MobileFrontendEditorHooks implements
 
 			$out = $article->getContext()->getOutput();
 			$titleMsg = $title->exists() ? 'editing' : 'creating';
-			$out->setPageTitle( wfMessage( $titleMsg, $title->getPrefixedText() ) );
+			$out->setPageTitleMsg( wfMessage( $titleMsg, $title->getPrefixedText() ) );
 
 			$msg = false;
 			$msgParams = false;

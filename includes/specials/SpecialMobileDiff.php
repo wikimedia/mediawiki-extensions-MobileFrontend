@@ -110,7 +110,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 
 		if ( $rev === null ) {
 			$this->showRevisionNotFound();
-			$output->setPageTitle(
+			$output->setPageTitleMsg(
 				$this->msg( 'mobile-frontend-diffview-404-title' )
 			);
 			return false;
@@ -123,7 +123,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 		$this->targetTitle = $title;
 		$this->getSkin()->setRelevantTitle( $title );
 
-		$output->setPageTitle( $this->msg(
+		$output->setPageTitleMsg( $this->msg(
 			'mobile-frontend-diffview-title',
 			$title->getPrefixedText()
 		) );

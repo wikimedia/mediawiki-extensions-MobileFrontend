@@ -196,7 +196,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 		$user = $this->getUser();
 		$isTemp = $user->isTemp();
 
-		$out->setPageTitle( $this->msg( 'mobile-frontend-main-menu-settings-heading' ) );
+		$out->setPageTitleMsg( $this->msg( 'mobile-frontend-main-menu-settings-heading' ) );
 		$out->enableOOUI();
 
 		if ( $this->getRequest()->getCheck( 'success' ) ) {
