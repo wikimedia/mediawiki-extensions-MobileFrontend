@@ -3,13 +3,15 @@
 		"authors": [
 			"Gazimagomedov",
 			"Omarov M.",
-			"Аль-Гимравий"
+			"Аль-Гимравий",
+			"Augustus A C"
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "Хисизабиялъул къокъбаян гьечӀо",
 	"mobile-frontend-copyright": "Контент рагьараб буго $1 лицензиялда гъоркь, цогидаб бихьизабун гьечӀони.",
 	"mobile-frontend-featured-article": "Жакъасеб тӀасабищараб контент",
 	"mobile-frontend-last-modified-date": "Ахирисеб нухалъ хисизаби: $1, $2",
+	"mobile-frontend-main-menu": "БетӀераб меню",
 	"mobile-frontend-news-items": "ЦӀиял харбал",
 	"mobile-frontend-privacy-link-text": "Конфиденциаллъи",
 	"mobile-frontend-terms-text": "ХӀалтӀизабиялъул шартӀал",
