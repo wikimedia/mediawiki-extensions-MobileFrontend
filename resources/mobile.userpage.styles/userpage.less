@@ -17,6 +17,16 @@
 		background-position: center;
 		background-repeat: no-repeat;
 		opacity: 0.2;
+
+		html.skin-night-mode-clientpref-1 & {
+			filter: invert( 1 ) hue-rotate( 180deg );
+		}
+
+		@media ( prefers-color-scheme: dark ) {
+			html.skin-night-mode-clientpref-2 & {
+				filter: invert( 1 ) hue-rotate( 180deg );
+			}
+		}
 	}
 
 	// be specific in order to override default padding
