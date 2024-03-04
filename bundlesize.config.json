@@ -52,10 +52,6 @@
 		"maxSize": "2.2KB"
 	},
 	{
-		"resourceModule": "mobile.special.history.styles",
-		"maxSize": "0.4KB"
-	},
-	{
 		"resourceModule": "mobile.special.pagefeed.styles",
 		"maxSize": "2.0KB"
 	},
