@@ -42,8 +42,6 @@
 	"mf-font-size-regular-label": "ਆਮ",
 	"mf-font-size-large-label": "ਵੱਡਾ",
 	"mobile-frontend-generic-404-desc": "ਜੋ ਸਫ਼ਾ ਤੁਸੀਂ ਭਾਲ ਰਹੇ ਹੋ ਲੱਭਿਆ ਨਹੀਂ ਜਾ ਸਕਿਆ।",
-	"mobile-frontend-history-404-title": "ਅਜਿਹਾ ਕੋਈ ਸਫ਼ਾ ਨਹੀਂ",
-	"mobile-frontend-history-no-results": "ਛਾਨਣੀ ਨੇ ਕੋਈ ਅਤੀਤ ਮੇਲ ਨਹੀਂ ਪੈਦਾ ਕੀਤਾ।",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|Joined}} ਹੁਣੇ",
 	"mobile-frontend-language-heading": "<strong>ਬੋਲੀਆਂ</strong>",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "ਸੁਝਾਈਆਂ ਗਈਆਂ ਬੋਲੀਆਂ",

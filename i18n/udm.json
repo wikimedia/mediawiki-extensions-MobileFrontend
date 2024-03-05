@@ -69,8 +69,6 @@
 	"mobile-frontend-generic-404-desc": "Утчам бамдэс шедьтыны ӧз лу.",
 	"mobile-frontend-generic-404-title": "Янгыш — Бам шедьымтэ",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} тӥ кадь ик адямиосын лэсьтӥське.</strong><br/>Пырелэ, юрттон понна.",
-	"mobile-frontend-history-404-desc": "Луисьтэм бамлэсь историзэ учконтэм. Оло сое быдтӥзы вылэм, оло умойтэм чӧлсконэн выжиллямды.",
-	"mobile-frontend-history-404-title": "Со бам ӧвӧл",
 	"mobile-frontend-joined-just-now": "Али гинэ {{GENDER:$1|итӥськиз}}",
 	"mobile-frontend-joined-seconds": "{{PLURAL:$2|$2 секунд}} талэсь азьло {{GENDER:$1|пыриськиз}}",
 	"mobile-frontend-joined-minutes": "{{PLURAL:$2|$2 минут}} талэсь азьло {{GENDER:$1|пыриськиз}}",

@@ -78,8 +78,6 @@
 	"mf-font-size-large-label": "Голям",
 	"mobile-frontend-generic-404-desc": "Страницата, която търсите, не може да бъде намерена.",
 	"mobile-frontend-generic-404-title": "Грешка - Страницата не е намерена",
-	"mobile-frontend-history-404-title": "Няма такава страница",
-	"mobile-frontend-history-no-results": "Филтърът не предостави съвпадения в историята.",
 	"mobile-frontend-language-heading": "<strong>Езици</strong>",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Предложени езици",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Други езици",

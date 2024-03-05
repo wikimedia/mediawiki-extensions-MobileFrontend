@@ -76,7 +76,6 @@
 	"mobile-frontend-generic-404-desc": "ទំព័រដែលអ្នកកំពុងរក រកមិនឃើញទេ។",
 	"mobile-frontend-generic-404-title": "បញ្ហា - ទំព័ររកមិនឃើញ",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} ត្រូវបានស្ថាបនាដោយបុគ្គលទូទៅដូចអ្នកដែរ។</strong><br />សូមកត់ឈ្មោះចូលដើម្បីរួមចំណែក។",
-	"mobile-frontend-history-404-title": "គ្មានទំព័របែបនេះទេ",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|ទើបនឹងចូលរួម}}ឥឡូវនេះ",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|ទើបនឹងចូលរួម}} {{PLURAL:$2|$2 វិនាទី|$2 វិនាទី}} មុននេះ",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|ទើបនឹងចូលរួម}} {{PLURAL:$2|$2 នាទី|$2 នាទី}} មុននេះ",

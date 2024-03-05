@@ -78,7 +78,6 @@
 	"mf-font-size-description": "व्यवस्तीत वाचता येण्यासाठी फाँट समायोजित करा",
 	"mobile-frontend-generic-404-desc": "तुम्ही शोधू पाहात असलेले पान सापडले नाही.",
 	"mobile-frontend-generic-404-title": "त्रुटी - पान सापडले नाही",
-	"mobile-frontend-history-404-title": "असे पान नाही",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "सुचविलेल्या भाषा",
 	"mobile-frontend-last-modified-date": "शेवटचे संपादन $1 रोजी, $2 वाजता",
 	"mobile-frontend-last-modified-with-user-days": "[$4 शेवटचा {{GENDER:$1|बदल}} {{PLURAL:$3|$3 दिवसा|$3 दिवसां}} पूर्वी] {{PLURAL:$5|[$6 $2]|0=अनामिक सदस्या}} कडून",

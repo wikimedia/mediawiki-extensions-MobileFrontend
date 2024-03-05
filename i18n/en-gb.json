@@ -23,7 +23,6 @@
 	"mobile-frontend-editor-blocked-drawer-body-link": "See more",
 	"mobile-frontend-editor-licensing": "By publishing changes, you agree to release your contribution under the $1 {{PLURAL:$2|licence|licences}}.",
 	"mobile-frontend-editor-licensing-with-terms": "By publishing changes, you agree to the $1 and agree to release your contribution under the $2 {{PLURAL:$3|licence|licences}}.",
-	"mobile-frontend-history-no-results": "The filter did not provide any history matches.",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Other languages",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Search for a language",
 	"mobile-frontend-languages-structured-overlay-no-results": "Language not available",

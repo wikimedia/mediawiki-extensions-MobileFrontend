@@ -53,7 +53,6 @@
 	"mf-font-size-small-label": "ꯑꯄꯤꯛꯄ",
 	"mf-font-size-regular-label": "ꯆꯥꯡꯅꯥꯏꯅꯥ",
 	"mf-font-size-large-label": "ꯑꯆꯧꯕ",
-	"mobile-frontend-history-404-title": "ꯃꯁꯤꯒꯨꯝꯕ ꯂꯃꯥꯏ ꯂꯩꯇꯦ",
 	"mobile-frontend-joined-just-now": "ꯍꯧꯖꯤꯛꯇꯥ {{GENDER:$1|ꯌꯥꯎꯈꯔꯦ}}",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|ꯌꯥꯎꯈꯤꯕ}} {{PLURAL:$2|ꯁꯦꯀꯦꯟ $2}} ꯐꯥꯔꯦ",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|ꯌꯥꯎꯈꯤꯕ}} {{PLURAL:$2|ꯃꯤꯅꯨꯠ $2}}ꯅꯤ ꯐꯥꯔꯦ",

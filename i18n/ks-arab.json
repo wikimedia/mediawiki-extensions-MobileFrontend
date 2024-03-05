@@ -69,7 +69,6 @@
 	"mf-font-size-large-label": "بۆڈ",
 	"mobile-frontend-generic-404-title": "نُقُص - صَفہٕ دراو نہٕ تَلاشَس مَنٛز",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} چھُ تُہؠ ہِیوے نَفرو تَخلیٖق کۆرمُت۔</strong><br />شَرکتھ کَرنہٕ خٲطرٕ گژھِو دٲخٕل۔",
-	"mobile-frontend-history-404-title": "یُتھ چھُ نہٕ کانٛہہ صَفہٕ",
 	"mobile-frontend-joined-just-now": "وۄنؠ گٔمِت {{GENDER:$1|بٔرتی}}",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|مُنسَلِق}}  {{PLURAL:$2|$2 سیکنٛڈ}} پؠٹھٕ",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|مُنسَلِق}}  {{PLURAL:$2|$2 مِنٹھ}} پؠٹھٕ",

@@ -31,7 +31,6 @@
 	"mf-font-size-small-label": "Kíşkene",
 	"mf-font-size-regular-label": "Orta",
 	"mf-font-size-large-label": "Balaban",
-	"mobile-frontend-history-404-title": "Ánawday sayifa yok",
 	"mobile-frontend-joined-just-now": "Şímdí {{GENDER:$1|katîldî}}",
 	"mobile-frontend-joined-seconds": "{{PLURAL:$2|$2 saniye}} ewel {{GENDER:$1|katîlgan}}",
 	"mobile-frontend-joined-minutes": "{{PLURAL:$2|$2 dakka}} ewel {{GENDER:$1|katîlgan}}",

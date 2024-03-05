@@ -27,7 +27,6 @@
 	"mobile-frontend-editor-anon": "නිර්නාමිකව සංස්කරණය කරන්න",
 	"mobile-frontend-editor-placeholder-new-page": "{{SITENAME}} හි නව පිටුවක් {{GENDER:$1|ඔබ නිර්මාණය කරමින්}} පවතී!",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} ඔබ වැනි අයෙක් විසින් නිමවා ඇත.</strong><br />දායක වීමට පිවිසෙන්න.",
-	"mobile-frontend-history-no-results": "සපයන ලද දත්ත වෙන් කිරීමට අදාළ පෙර සටහන් නැත.",
 	"mobile-frontend-last-modified-date": "අවසාන වරට සංස්කරණය කළේ $1 වන දා, $2 ට",
 	"mobile-frontend-main-menu-settings-heading": "ජංගම අඩවි සැකසුම්",
 	"mobile-frontend-missing-image": "පිංතූරය",

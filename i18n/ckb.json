@@ -85,8 +85,6 @@
 	"mobile-frontend-generic-404-desc": "ئەو پەڕەیەی بەدوایدا دەگەڕێیت نەدۆزرایەوە.",
 	"mobile-frontend-generic-404-title": "ھەڵە - پەڕەکە نەدۆزرایەوە",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} لەلایەن کەسانی وەک تۆوە دروست بووە.</strong>\nبچۆ ژوورەوە بۆ بەردەوامبوون.",
-	"mobile-frontend-history-404-desc": "ناتوانیت سەیری مێژووی پەڕەیەک بکەیت کە بوونی نییە. لەوانەیە سڕدرابێتەوە یانیش دوای بەستەرێکی مردوو کەوتبیت.",
-	"mobile-frontend-history-404-title": "پەڕەیەکی وا نییە",
 	"mobile-frontend-joined-seconds": "{{PLURAL:$2|$2 چرکە|$2 چرکە}} پێش ئێستا {{GENDER:$1|ھاتە پاڵییەوە}}",
 	"mobile-frontend-joined-hours": "{{PLURAL:$2|$2 سەعات|$2 سەعات}} پێش ئێستا {{GENDER:$1|ھاتە پاڵییەوە}}",
 	"mobile-frontend-joined-months": "{{PLURAL:$2|$2 مانگ|$2 مانگ}} پێش ئێستا {{GENDER:$1|ھاتە پاڵییەوە}}",

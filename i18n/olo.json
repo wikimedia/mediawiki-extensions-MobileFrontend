@@ -27,7 +27,6 @@
 	"mobile-frontend-editor-summary-request": "Kui kohendit tädä sivuu?",
 	"mobile-frontend-editor-summary": "Yhtehvedo:",
 	"mobile-frontend-generic-404-title": "Haireh - Sivuu ei lövvy",
-	"mobile-frontend-history-404-title": "Ei nengostu sivuu",
 	"mobile-frontend-last-modified-date": "Jälgimäzet muutokset $2, $1",
 	"mobile-frontend-last-modified-with-user-days": "[$4 Jälgimäzekse {{GENDER:$1|kohendanuh}} {{PLURAL:$3|$3 päivy|$3 päiviä}} tagaperin] {{PLURAL:$5|[$6 $2]|0=anoniimu käyttäi}}",
 	"mobile-frontend-main-menu-settings-heading": "Azetukset",

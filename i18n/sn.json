@@ -43,8 +43,6 @@
 	"mobile-frontend-generic-404-desc": "Zanhi rauri kutsvaga harina kukwanisa kuwanikwa.",
 	"mobile-frontend-generic-404-title": "Bosho - Zanhi harina kuwanikwa",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} yakagadzirwa nevanhu vakaita sewe.</strong><br /> Zvizarurise kuti ubatsire.",
-	"mobile-frontend-history-404-desc": "Hazvikwanisike kuti uringe nhoroondo ye zanhi risipo. Rinogona kunge rakabharanurwa kana kuti watevera kochekero yakashata.",
-	"mobile-frontend-history-404-title": "Hapana zanhi rakadaro",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|Afundikira}} izvezvi",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|Apfundira}} {{PLURAL:$2| sekondi ri $2 rapfuura|masekondi ma $2 apfuura}}",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|Apfundira}} {{PLURAL:$2|mineti ri$2 rapfuura|mamineti ma$2 apfuura}}",

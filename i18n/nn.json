@@ -74,8 +74,6 @@
 	"mobile-frontend-generic-404-desc": "Sida du ser etter vart ikkje funnen.",
 	"mobile-frontend-generic-404-title": "Feil - fann ikkje sida",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} vert laga av folk som deg.</strong><br />Logg inn for å bidra.",
-	"mobile-frontend-history-404-desc": "Du kan ikkje sjå på historikken til ei side som ikkje finst. Sida kan ha vorte sletta, eller du kan ha fylgt ei ugild lenkje.",
-	"mobile-frontend-history-404-title": "Inga slik side",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|Vart}} med nett no",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|Vart}} med for {{PLURAL:$2|eitt sekund|$2 sekund}} sidan",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|Vart}} med for {{PLURAL:$2|eitt minutt|$2 minutt}} sidan",

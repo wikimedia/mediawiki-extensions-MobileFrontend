@@ -77,7 +77,6 @@
 	"mobile-frontend-generic-404-desc": "နာꩻထိုမ်ႏထွားဒါႏ လိတ်မဲ့ငါနဝ်ꩻ တမော့ꩻနွောင်ꩻတဝ်းသွူ။",
 	"mobile-frontend-generic-404-title": "အမာႏ - မော့ꩻတဝ်း လိတ်မဲ့ငါ",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} နဝ်ꩻ မာꩻခါꩻဒျာႏ တောမ်ႏလိုꩻပုဂ္ဂိုလ်ႏ နုဲင်းနာꩻသွူ။</strong><br />စွဲးကမ်းကိုတာႏ နွို့သွော့အကောက်ကိုသြ။",
-	"mobile-frontend-history-404-title": "လိတ်မဲ့ငါနုဲင်းနဝ်ꩻ အဝ်ႏတဝ်း",
 	"mobile-frontend-joined-just-now": "စငါနွို့ခါꩻဗွော့ꩻ {{GENDER:$1|နဝ်ꩻဟွောန်ႏ}}",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|နွို့လွောန် လꩻလဲဉ်း}} {{PLURAL:$2|$2 စက္ကန့်|$2 စက္ကန့်ဖုံႏ}}",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|နွို့လွောန် လꩻလဲဉ်း}} {{PLURAL:$2|$2 မိနိစ်|$2 မိနိစ်ဖုံႏ}}",

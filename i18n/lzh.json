@@ -20,7 +20,6 @@
 	"mobile-frontend-editor-save": "儲",
 	"mobile-frontend-editor-summary-placeholder": "如：糾錯，擴文",
 	"mobile-frontend-editor-summary-request": "何所刪改？",
-	"mobile-frontend-history-404-title": "無此頁",
 	"mobile-frontend-language-heading": "<strong>語</strong>",
 	"mobile-frontend-last-modified-date": "末纂於$1 $2",
 	"mobile-frontend-last-modified-with-user-days": "[$4 {{GENDER:$1|纂}}於{{PLURAL:$3|$3日|$3日}}前]，出自{{PLURAL:$5|[$6 $2]|0=佚名手筆}}",

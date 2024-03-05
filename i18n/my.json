@@ -80,7 +80,6 @@
 	"mobile-frontend-generic-404-desc": "သင်ရှာဖွေနေသော စာမျက်နှာကို မတွေ့နိုင်ပါ။",
 	"mobile-frontend-generic-404-title": "အမှား - စာမျက်နှာ မတွေ့ပါ",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} ကို သင်ကဲ့သို့သော လူပုဂ္ဂိုလ်များဖြင့် ပြုလုပ်ထားပါသည်။</strong><br />ပံ့ပိုးရန် အကောင့်ထဲဝင်ပါ။",
-	"mobile-frontend-history-404-title": "ယင်းကဲ့သို့စာမျက်နှာ မရှိပါ",
 	"mobile-frontend-joined-just-now": "ယခုလေးတင် {{GENDER:$1|ဝင်ရောက်လာခဲ့သည်}}",
 	"mobile-frontend-joined-seconds": "{{PLURAL:$2|$2 စက္ကန့်|$2 စက္ကန့်}} အကြာက {{GENDER:$1|ဝင်ရောက်လာခဲ့သည်}}",
 	"mobile-frontend-joined-minutes": "{{PLURAL:$2|$2 မိနစ်|$2 မိနစ်}} အကြာက {{GENDER:$1|ဝင်ရောက်လာခဲ့သည်}}",

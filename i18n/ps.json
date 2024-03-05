@@ -52,8 +52,6 @@
 	"mobile-frontend-generic-404-desc": "هغه پاڼه چې تاسو یې په لټه کې یاست ونه موندل شوه.",
 	"mobile-frontend-generic-404-title": "تيروتنه -مخ ونه موندل شو",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} ستاسې په څېر خلکو جوړ کړی.</strong><br />د گډون لپاره ورننوځئ.",
-	"mobile-frontend-history-404-desc": "د هغه پاڼې لپاره تاریخ نشی لیدلی چې شتون نلري. کیدی شي دا له منځه وړل شوي وي یا ممکن تاسو خراب لوری تعقیب کړي وي.",
-	"mobile-frontend-history-404-title": "داسې پاڼه نشته",
 	"mobile-frontend-joined-just-now": "وس دستي يي {{GENDER:$1|غړیتوب}} ترلاسه کړ",
 	"mobile-frontend-joined-seconds": "{{PLURAL:$2|$2 ثانیه|$2 ثانيې}} ترمخه يې \n{{GENDER:$1|غړيتوب ترلاسه کړ}}",
 	"mobile-frontend-joined-minutes": "{{PLURAL:$2|$2 دقیقه|$2 دقیقې}} ترمخه يې \n{{GENDER:$1|غړيتوب ترلاسه کړ}}",

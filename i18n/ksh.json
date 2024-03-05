@@ -51,7 +51,6 @@
 	"mobile-frontend-generic-404-desc": "Di Sigg, woh De noh aam lohre bes, kunnte mer nit fenge.",
 	"mobile-frontend-generic-404-title": "Fähler - Sigg nit jefonge",
 	"mobile-frontend-generic-login-new": "<strong>{{ucfirst:{{GRAMMAR:Nom|{{ucfirst:{{SITENAME}}}}}}}} weed vun Minsche wi Do un esch jeamaat.</strong><br />Donn ennlogg, öm jät beijzedrahre.",
-	"mobile-frontend-history-404-title": "Kein esu en Sigg",
 	"mobile-frontend-language-heading": "<strong>Schprohche</strong>",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Vörjeschlonn un ongerschtöz Schprohche",
 	"mobile-frontend-last-modified-date": "Et läz verändert aam $1 öm $2 Uhr.",

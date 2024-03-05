@@ -77,7 +77,6 @@
 	"mobile-frontend-generic-404-desc": "D'Säit no Där Dir gesicht hutt gouf net fonnt.",
 	"mobile-frontend-generic-404-title": "Feeler - Säit net fonnt",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} ass vu Leit wéi Iech gemaach.</strong><br />Loggt Iech a fir matzemaachen.",
-	"mobile-frontend-history-404-title": "Säit gëtt et net",
 	"mobile-frontend-joined-just-now": "Elo grad {{GENDER:$1|bäigetrueden}}",
 	"mobile-frontend-joined-years": "{{PLURAL:$2|Virun engem Joer|Viru(n) $2 Joer}} {{GENDER:$1|bäeigetreeden}}",
 	"mobile-frontend-language-heading": "<strong>Sproochen</strong>",
