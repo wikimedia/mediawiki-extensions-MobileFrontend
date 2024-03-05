@@ -6,7 +6,8 @@
 			"MaxSem",
 			"Robby",
 			"Soued031",
-			"Zoranzoki21"
+			"Zoranzoki21",
+			"Volvox"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ob e Benotzer de mobilen Interface benotzt fir z'änneren",
@@ -62,7 +63,7 @@
 	"mobile-frontend-editor-success": "Är Ännerung gouf verëffentlecht!",
 	"mobile-frontend-editor-success-landmark-1": "Felicitatiounen, Dir sidd elo een {{SITENAME}}-Auteur.",
 	"mobile-frontend-editor-success-new-page": "Felicitatioun fir d'Uleeë vun enger neier Säit!",
-	"mobile-frontend-editor-summary-placeholder": "Beispill: Tippfeeler verbessert, Inhalt dobäigesat",
+	"mobile-frontend-editor-summary-placeholder": "Beispill: Tippfeeler verbessert, Inhalt derbäigesat",
 	"mobile-frontend-editor-summary-request": "Wéi hutt Dir d'Säit verbessert?",
 	"mobile-frontend-editor-summary": "Resumé:",
 	"mobile-frontend-editor-switch-editor": "Editeur wiesselen",
