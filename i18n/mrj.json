@@ -4,7 +4,8 @@
 			"Nadezhda"
 		]
 	},
-	"mobile-frontend-terms-text": "Кычылтмы условивлӓ",
+	"mobile-frontend-copyright": "Весӹм анжыктымы агыл гӹнь, контентӹм $1 лицензи доно кычылт кердӓт.",
+	"mobile-frontend-terms-text": "Кычылтмаш условивлӓ",
 	"mobile-frontend-view": "Мобильный верси",
-	"mobile-frontend-view-desktop": "Пӓшӓзӹ стӧл"
+	"mobile-frontend-view-desktop": "Десктоп"
 }
