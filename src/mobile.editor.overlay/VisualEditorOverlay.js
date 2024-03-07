@@ -9,7 +9,8 @@ var EditorOverlayBase = require( './EditorOverlayBase' ),
 	util = require( '../mobile.startup/util' ),
 	OverlayManager = require( '../mobile.startup/OverlayManager' ),
 	overlayManager = OverlayManager.getSingleton(),
-	currentPage = require( '../mobile.startup/currentPage' );
+	currentPage = require( '../mobile.startup/currentPage' ),
+	teleportTarget = __non_webpack_require__( 'mediawiki.page.ready' ).teleportTarget;
 
 /**
  * Overlay for VisualEditor view
@@ -180,6 +181,7 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 	 * Initialize the target after it has been made visible
 	 */
 	targetInit: function () {
+		teleportTarget.classList.add( 'notheme' );
 		// Note this.target will not be set if an error occurred and/or destroyTarget was called.
 		if ( this.target ) {
 			this.target.afterSurfaceReady();
@@ -234,6 +236,7 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 	 */
 	onBeforeExit: function ( exit, cancel ) {
 		var overlay = this;
+		teleportTarget.classList.remove( 'notheme' );
 		EditorOverlayBase.prototype.onBeforeExit.call( this, function () {
 			// If this function is called, the parent method has decided that we should exit
 			exit();

@@ -395,7 +395,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 {{/hasToolbar}}
 {{#hasToolbar}}<div class="toolbar"></div>{{/hasToolbar}}
 {{#editSwitcher}}
-	<div class="switcher-container">
+	<div class="switcher-container notheme">
 	</div>
 {{/editSwitcher}}
 				` ).render( {
