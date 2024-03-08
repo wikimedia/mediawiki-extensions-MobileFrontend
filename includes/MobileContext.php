@@ -3,7 +3,6 @@
 use MediaWiki\Config\Config;
 use MediaWiki\MediaWikiServices;
 use MobileFrontend\Devices\DeviceDetectorService;
-use MobileFrontend\Features\FeaturesManager;
 use MobileFrontend\Hooks\HookRunner;
 use MobileFrontend\WMFBaseDomainExtractor;
 use Wikimedia\IPUtils;
@@ -307,34 +306,10 @@ class MobileContext extends ContextSource {
 		$this->checkToggleView();
 		$this->mobileView = $this->shouldDisplayMobileViewInternal();
 		if ( $this->mobileView ) {
-			$this->redirectMobileEnabledPages();
 			$hookRunner = new HookRunner( MediaWikiServices::getInstance()->getHookContainer() );
 			$hookRunner->onEnterMobileMode( $this );
 		}
 		return $this->mobileView;
-	}
-
-	/**
-	 * If a page has an equivalent but different mobile page redirect to it
-	 */
-	private function redirectMobileEnabledPages() {
-		$request = $this->getRequest();
-		$title = $this->getTitle();
-		$services = MediaWikiServices::getInstance();
-		/** @var FeaturesManager $featureManager */
-		$featureManager = $services->getService( 'MobileFrontend.FeaturesManager' );
-
-		$redirectUrl = null;
-		if ( $request->getCheck( 'diff' ) &&
-			!$featureManager->isFeatureAvailableForCurrentUser( 'MFUseDesktopDiffPage' ) &&
-			MobileFrontendHooks::shouldMobileFormatSpecialPages( $this->getUser() )
-		) {
-			$redirectUrl = SpecialMobileDiff::getMobileUrlFromDesktop( $request );
-		}
-
-		if ( $redirectUrl ) {
-			$this->getOutput()->redirect( $redirectUrl );
-		}
 	}
 
 	/**

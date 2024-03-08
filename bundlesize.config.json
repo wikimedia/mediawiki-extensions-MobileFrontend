@@ -54,9 +54,5 @@
 	{
 		"resourceModule": "mobile.special.pagefeed.styles",
 		"maxSize": "2.0KB"
-	},
-	{
-		"resourceModule": "mobile.special.mobilediff.styles",
-		"maxSize": "1.6KB"
 	}
 ]

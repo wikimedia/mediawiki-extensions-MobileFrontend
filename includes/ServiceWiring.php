@@ -60,12 +60,6 @@ return [
 		// * mobile-frontend-mobile-option-MFUseDesktopSpecialWatchlistPage-description
 		$manager->registerFeature( new Feature( 'MFUseDesktopSpecialWatchlistPage', 'mobile-frontend',
 			$config->get( 'MFUseDesktopSpecialWatchlistPage' ) ) );
-		// Generates the following messages:
-		// * mobile-frontend-mobile-option-MFUseDesktopDiffPage
-		// * mobile-frontend-mobile-option-MFUseDesktopDiffPage-description
-		$manager->registerFeature( new Feature( 'MFUseDesktopDiffPage', 'mobile-frontend',
-			$config->get( 'MFUseDesktopDiffPage' ) ) );
-
 		$manager->useHookToRegisterExtensionOrSkinFeatures();
 		return $manager;
 	},

@@ -103,18 +103,13 @@ class MobileSpecialPage extends SpecialPage {
 		$name = $this->getName();
 		$id = strtolower( $name );
 		// FIXME: These modules should not exist in MobileFrontend, please see:
-		// 	* T305113: [EPIC] Remove mobile history page
-		//  * T117279: [EPIC] Core should provide inline diffs as well as side by side
-		//    (Move InlineDifferenceEngine into core / remove MobileDiff)
 		//  * T109277: [EPIC]: Use core watchlist code for mobile experience
 		//  * T91201 [EPIC] Accessibility settings/preferences
 		// Possible values:
-		// * mobile.special.mobilediff.styles
 		// * mobile.special.watchlist.scripts
 		// * mobile.special.watchlist.styles
 		// * mobile.special.mobileoptions.styles
 		// * mobile.special.mobileoptions.scripts
-		// * mobile.special.history.styles
 		$specialStyleModuleName = 'mobile.special.' . $id . '.styles';
 		$specialScriptModuleName = 'mobile.special.' . $id . '.scripts';
 

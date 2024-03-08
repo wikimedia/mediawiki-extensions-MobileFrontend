@@ -406,45 +406,8 @@ class MobileFrontendHooks implements
 		$otherParams = $diff->getContext()->getRequest()->getValues();
 		$title = $context->getTitle();
 		$output = $context->getOutput();
-		// Only do redirects to MobileDiff if user is in mobile view and it's not a special page
-		if (
-			!$title->isSpecialPage() &&
-			!$featureManager->isFeatureAvailableForCurrentUser( 'MFUseDesktopDiffPage' ) &&
-			self::shouldMobileFormatSpecialPages( $context->getUser() )
-		) {
-			$newRevId = $newRevRecord->getId();
-
-			// Pass other query parameters, e.g. 'unhide' (T263937)
-			unset( $otherParams['diff'] );
-			unset( $otherParams['oldid'] );
-			// We pass diff/oldid through the page title, so we must unset any parameters
-			// that override the title (but don't override diff/oldid)
-			unset( $otherParams['title'] );
-			unset( $otherParams['curid'] );
-
-			$redirectUrl = SpecialPage::getTitleFor( 'MobileDiff', (string)$newRevId )->getFullURL( $otherParams );
-
-			// The MobileDiff page currently only supports showing a single revision, so
-			// only redirect to MobileDiff if we are sure this isn't a multi-revision diff.
-			if ( $oldRevRecord ) {
-				// Get the revision immediately before the new revision
-				$prevRevRecord = MediaWikiServices::getInstance()
-					->getRevisionLookup()
-					->getPreviousRevision( $newRevRecord );
-				if ( $prevRevRecord ) {
-					$prevRevId = $prevRevRecord->getId();
-					$oldRevId = $oldRevRecord->getId();
-					if ( $prevRevId === $oldRevId ) {
-						$output->redirect( $redirectUrl );
-					}
-				}
-			} else {
-				$output->redirect( $redirectUrl );
-			}
-		} elseif (
-			$featureManager->isFeatureAvailableForCurrentUser( 'MFUseDesktopDiffPage' ) &&
-			!isset( $otherParams['diffonly'] )
-		) {
+		// On diff pages on mobile if not specified default to diff only mode.
+		if ( !isset( $otherParams['diffonly'] ) ) {
 			$otherParams['diffonly'] = '1';
 			$output->redirect( $title->getFullUrl( $otherParams ) );
 		}
