@@ -160,6 +160,9 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 			options = this.options,
 			showAnonWarning = options.isAnon && !options.switched;
 
+		// T358528 - For mobile editor to appear in light-mode, when
+		// night-mode is enabled, add the .notheme class to the teleportTarget
+		teleportTarget.classList.add( 'notheme' );
 		EditorOverlayBase.prototype.show.apply( this, arguments );
 
 		// log edit attempt
@@ -181,7 +184,6 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 	 * Initialize the target after it has been made visible
 	 */
 	targetInit: function () {
-		teleportTarget.classList.add( 'notheme' );
 		// Note this.target will not be set if an error occurred and/or destroyTarget was called.
 		if ( this.target ) {
 			this.target.afterSurfaceReady();
