@@ -5,13 +5,14 @@
 			"Kipala",
 			"Kwisha",
 			"Lloffiwr",
+			"MaryMunyoki",
 			"Muddyb Blast Producer",
 			"Rance",
 			"Stephenwanjau"
 		]
 	},
 	"mobile-frontend-clear-search": "Futa",
-	"mobile-frontend-copyright": "Nakala inapatikana chini ya <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a>; masuala ya ziada yanaweza kukubalika. Tazama <a href='https://foundation.wikimedia.org/wiki/Terms_of_Use'>Masharti ya Utumiaji</a> kwa maelezo zaidi. {{SITENAME}} ni nembo iliosajiliwa na <a href='https://wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, asasi isiyokuwa ya kifaida.",
+	"mobile-frontend-copyright": "Maudhui yanapatikana kwa chini ya $1 isipokuwa iwe imebainishwa vinginevyo.",
 	"mobile-frontend-editor-blocked-drawer-title-partial": "Umezuiwa kuhariri ukurasa huu.",
 	"mobile-frontend-editor-blocked-drawer-body-partial": "Jaribu kuhariri ukurasa mwingine.",
 	"mobile-frontend-editor-blocked-drawer-body-login-createaccount-partial": "Jaribu kuingia au kuunda akaunti, au jaribu kuhariri ukurasa mwingine.",
