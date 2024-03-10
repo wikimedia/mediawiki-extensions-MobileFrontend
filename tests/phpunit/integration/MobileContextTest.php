@@ -426,7 +426,6 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 	 * @covers MobileContext::getUseFormatCookieExpiry
 	 */
 	public function testGetUseFormatCookieExpiry() {
-		global $wgCookieExpiration;
 		$getUseFormatCookieExpiry = self::getMethod( 'getUseFormatCookieExpiry' );
 
 		$context = $this->makeContext();
@@ -442,7 +441,8 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 		);
 
 		$this->overrideConfigValue( 'MobileFrontendFormatCookieExpiry', null );
-		$defaultMWCookieExpected = $startTime + $wgCookieExpiration;
+		$defaultMWCookieExpected = $startTime +
+			$this->getServiceContainer()->getMainConfig()->get( MainConfigNames::CookieExpiration );
 		$this->assertTrue(
 			$defaultMWCookieExpected == $getUseFormatCookieExpiry->invokeArgs(
 				$context,
@@ -470,9 +470,9 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 	 * @covers MobileContext::isLocalUrl
 	 */
 	public function testIsLocalUrl() {
-		global $wgServer;
+		$server = $this->getServiceContainer()->getMainConfig()->get( MainConfigNames::Server );
 		$context = $this->makeContext();
-		$this->assertTrue( $context->isLocalUrl( $wgServer ) );
+		$this->assertTrue( $context->isLocalUrl( $server ) );
 		$this->assertFalse( $context->isLocalUrl( 'http://www.google.com' ) );
 	}
 
