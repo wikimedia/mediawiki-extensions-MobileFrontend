@@ -549,7 +549,7 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 					'<p>paragraph 1</p>'
 				),
 
-				$enableSections,  false, true,
+				$enableSections, false, true,
 			],
 		];
 	}
@@ -681,12 +681,12 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 		$loggerMock = $this->createMock( \Psr\Log\LoggerInterface::class );
 		$loggerMock->expects( $this->once() )
 			->method( 'info' )
-			->will( $this->returnCallback( function ( $message ) use ( $title ) {
+			->willReturnCallback( function ( $message ) use ( $title ) {
 				// Debug message contains Page title
 				$this->assertStringContainsString( $title, $message );
 				// and contains revision id
 				$this->assertStringContainsString( self::TITLE_REV_ID, $message );
-			} ) );
+			} );
 
 		$this->setLogger( 'mobile', $loggerMock );
 		$formatter->applyTransforms(
