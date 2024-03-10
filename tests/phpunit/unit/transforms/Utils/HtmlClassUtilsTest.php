@@ -13,12 +13,12 @@ class HtmlClassUtilsTest extends \MediaWikiUnitTestCase {
 	 * @dataProvider parseClassStringProvider
 	 */
 	public function testParseClassString( $classes, $expected ) {
-		$this->assertEquals( [],  HtmlClassUtils::parseClassString( '    ' ) );
+		$this->assertEquals( [], HtmlClassUtils::parseClassString( '    ' ) );
 		$expected = [
 			'class1' => true,
 			'class2' => true,
 		];
-		$this->assertEquals( $expected,  HtmlClassUtils::parseClassString( ' class1   class2  ' ) );
+		$this->assertEquals( $expected, HtmlClassUtils::parseClassString( ' class1   class2  ' ) );
 	}
 
 	public static function parseClassStringProvider() {
@@ -61,7 +61,7 @@ class HtmlClassUtilsTest extends \MediaWikiUnitTestCase {
 	 * @dataProvider formClassStringProvider
 	 */
 	public function testFormClassString( array $classes, string $expected ) {
-		$this->assertEquals( $expected,  HtmlClassUtils::formClassString( $classes ) );
+		$this->assertEquals( $expected, HtmlClassUtils::formClassString( $classes ) );
 	}
 
 	public static function formClassStringProvider() {
@@ -111,7 +111,7 @@ class HtmlClassUtilsTest extends \MediaWikiUnitTestCase {
 	public static function filterAllowedClassesProvider() {
 		yield [
 			[ 'class1' => true, 'class2' => false ],
-			[ 'class2' , 'class1' ],
+			[ 'class2', 'class1' ],
 			[],
 			[ 'class1' => true, 'class2' => false ],
 		];

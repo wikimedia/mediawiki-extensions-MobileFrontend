@@ -46,7 +46,7 @@ class CustomHeaderDeviceDetectorTest extends \MediaWikiUnitTestCase {
 	 * @covers \MobileFrontend\Devices\DeviceProperties::isTabletDevice
 	 */
 	public function testIsMobileWhenMobileHeaderIsPresent() {
-		$this->request->setHeader( 'FooHeader',  '' );
+		$this->request->setHeader( 'FooHeader', '' );
 
 		$properties = $this->detector->detectDeviceProperties( $this->request, [] );
 

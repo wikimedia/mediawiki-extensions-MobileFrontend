@@ -13,7 +13,7 @@ class HtmlStyleUtilsTest extends \MediaWikiUnitTestCase {
 	 * @dataProvider parseStyleStringProvider
 	 */
 	public function testParseStyleString( string $style, array $expected ) {
-		$this->assertEquals( $expected,  HtmlStyleUtils::parseStyleString( $style ) );
+		$this->assertEquals( $expected, HtmlStyleUtils::parseStyleString( $style ) );
 	}
 
 	public static function parseStyleStringProvider() {
@@ -95,7 +95,7 @@ class HtmlStyleUtilsTest extends \MediaWikiUnitTestCase {
 	public static function filterAllowedStylesProvider() {
 		yield [
 			[ 'style1' => '', 'style2' => '10px' ],
-			[ 'style2' , 'style1' ],
+			[ 'style2', 'style1' ],
 			[],
 			[ 'style1' => '', 'style2' => '10px' ],
 		];

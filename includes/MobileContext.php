@@ -842,7 +842,7 @@ class MobileContext extends ContextSource {
 		if ( $pathStartPos === false ) {
 			$host = substr( $mobileUrlTemplate, 0 );
 		} else {
-			$host = substr( $mobileUrlTemplate, 0,  $pathStartPos );
+			$host = substr( $mobileUrlTemplate, 0, $pathStartPos );
 		}
 
 		$path = substr( $mobileUrlTemplate, $pathStartPos );

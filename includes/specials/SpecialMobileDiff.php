@@ -106,7 +106,7 @@ class SpecialMobileDiff extends MobileSpecialPage {
 
 		// @FIXME add full support for git-style notation (eg ...123, 123...)
 		$revisions = $this->getRevisionsToCompare( explode( '...', $par ?? '', 2 ) );
-		list( $prev, $rev ) = $revisions;
+		[ $prev, $rev ] = $revisions;
 
 		if ( $rev === null ) {
 			$this->showRevisionNotFound();
