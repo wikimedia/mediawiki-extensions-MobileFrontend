@@ -459,18 +459,12 @@ class MobileFrontendHooks implements
 	 */
 	public function onResourceLoaderSiteStylesModulePages( $skin, array &$pages ): void {
 		$ctx = MobileContext::singleton();
-		$ucaseSkin = ucfirst( $skin );
 		$services = MediaWikiServices::getInstance();
 		$config = $services->getService( 'MobileFrontend.Config' );
-		// Use Mobile.css instead of MediaWiki:Common.css and MediaWiki:<skinname.css> on mobile views.
+		// Use Mobile.css instead of MediaWiki:Common.css on mobile views.
 		if ( $ctx->shouldDisplayMobileView() && $config->get( 'MFCustomSiteModules' ) ) {
 			unset( $pages['MediaWiki:Common.css'] );
 			unset( $pages['MediaWiki:Print.css'] );
-			// MediaWiki:<skinname>.css suffers from the same problems as MediaWiki:Common.css
-			// in that it has traditionally been written for desktop skins and is bloated.
-			// We have always removed this on mobile for this reason.
-			// If we loaded this there is absolutely no point in MediaWiki:Mobile.css! (T248415)
-			unset( $pages["MediaWiki:$ucaseSkin.css"] );
 			if ( $config->get( 'MFSiteStylesRenderBlocking' ) ) {
 				$pages['MediaWiki:Mobile.css'] = [ 'type' => 'style' ];
 			}
