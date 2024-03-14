@@ -1,3 +1,1 @@
 resources/dist/* -diff
-.storybook/mediawiki-skins-MinervaNeue/** -diff
-.storybook/resolve-less-imports/** -diff

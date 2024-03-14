@@ -16,9 +16,7 @@
 		"test": "npm -s run lint && bash ./dev-scripts/svg_check.sh && npm -s run coverage && npm -s run test:bundle && npm -s run jsdoc",
 		"test:bundle": "bash ./dev-scripts/check_bundle.sh",
 		"jsdoc": "jsdoc -c jsdoc.json",
-		"doc": "npm run jsdoc && npm run build-storybook && npm run coverage",
-		"storybook": "./dev-scripts/storybook.sh && start-storybook",
-		"build-storybook": "# DISABLED! ./dev-scripts/storybook.sh && build-storybook -o docs/ui"
+		"doc": "npm run jsdoc && npm run coverage"
 	},
 	"engines": {
 		"node": "14.17.5"
@@ -28,8 +26,6 @@
 		"@babel/core": "7.23.7",
 		"@babel/preset-env": "7.23.8",
 		"@babel/register": "7.23.7",
-		"@storybook/addon-actions": "6.2.3",
-		"@storybook/html": "6.2.3",
 		"@wikimedia/codex": "1.0.1",
 		"@wikimedia/codex-icons": "1.0.1",
 		"@wikimedia/mediawiki.skins.clientpreferences": "1.1.1",

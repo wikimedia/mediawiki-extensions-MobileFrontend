@@ -3,10 +3,6 @@
 *.kate-swp
 .*.swp
 .idea/
-/.storybook/mediawiki-skins-MinervaNeue/
-/.storybook/mediawiki.skinning
-/.storybook/resolve-less-imports/
-/.storybook/icons.less
 node_modules/
 tmp/
 /docs/js/
