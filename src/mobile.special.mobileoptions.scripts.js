@@ -1,7 +1,6 @@
 /* global $ */
 /* See T354224 for information on the @wikimedia/mediawiki.skins.clientpreferences module. */
 var clientPrefs = require( '@wikimedia/mediawiki.skins.clientpreferences' ),
-	browser = require( './mobile.startup/Browser' ).getSingleton(),
 	toast = require( './mobile.startup/showOnPageReload' ),
 	amcOutreach = require( './mobile.startup/amcOutreach/amcOutreach' ),
 	EXPAND_SECTIONS_KEY = 'mf-expand-sections',
@@ -139,14 +138,6 @@ function initMobileOptions() {
 	infuseToggles( toggles, $form );
 
 	const clientPreferences = {};
-	const showExpandSectionsClientPreference = (
-		// Don't show this option on large screens since it's only honored for small screens.
-		// This logic should be kept in sync with Toggle._enable().
-		!browser.isWideScreen() &&
-		// don't add the option if the sections are set by default as the setting doesn't
-		// work in the opposite direction! (more background on T239195)
-		mw.config.get( 'wgMFCollapseSectionsByDefault' )
-	);
 
 	if ( mw.config.get( 'wgMFEnableFontChanger' ) ) {
 		clientPreferences[ FONT_SIZE_KEY ] = {
@@ -177,17 +168,15 @@ function initMobileOptions() {
 		};
 	}
 
-	if ( showExpandSectionsClientPreference ) {
-		clientPreferences[ EXPAND_SECTIONS_KEY ] = {
-			options: [
-				'0',
-				'1'
-			],
-			type: 'switch',
-			preferenceKey: EXPAND_SECTIONS_KEY,
-			callback: notify
-		};
-	}
+	clientPreferences[ EXPAND_SECTIONS_KEY ] = {
+		options: [
+			'0',
+			'1'
+		],
+		type: 'switch',
+		preferenceKey: EXPAND_SECTIONS_KEY,
+		callback: notify
+	};
 
 	if ( !mw.user.isAnon() ) {
 		clientPreferences[ 'mw-mf-amc' ] = {
@@ -228,6 +217,7 @@ function initMobileOptions() {
 		modifyToggleSwitch( $( '#skin-client-prefs-mw-mf-amc' ) );
 		// Remove the server side rendered OOUI field.
 		$( '#amc-field' ).remove();
+
 	} );
 }
 
