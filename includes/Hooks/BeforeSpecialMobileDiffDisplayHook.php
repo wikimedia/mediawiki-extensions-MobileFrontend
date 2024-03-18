@@ -15,6 +15,7 @@ use MobileContext;
  */
 interface BeforeSpecialMobileDiffDisplayHook {
 	/**
+	 * @deprecated 1.42 now a NOOP.
 	 * @param OutputPage &$output
 	 * @param MobileContext $mobileContext
 	 * @param (RevisionRecord|null)[] $revisions

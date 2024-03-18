@@ -26,17 +26,11 @@
 	"SpecialPages": {
 		"MobileDiff": {
 			"class": "SpecialMobileDiff",
-			"services": [
-				"RevisionLookup"
-			]
+			"services": []
 		},
 		"History": {
 			"class": "SpecialMobileHistory",
-			"services": [
-				"DBLoadBalancer",
-				"NamespaceInfo",
-				"RevisionFactory"
-			]
+			"services": []
 		},
 		"MobileOptions": "SpecialMobileOptions",
 		"MobileLanguages": "SpecialMobileLanguages",
@@ -419,11 +413,6 @@
 			"styles": [
 				"resources/mobile.special.pagefeed.styles/pagefeed.less"
 			]
-		},
-		"mobile.special.mobilediff.styles": {
-			"styles": [
-				"resources/mobile.special.mobilediff.styles/mobilediff.less"
-			]
 		}
 	},
 	"ResourceFileModulePaths": {
@@ -520,13 +509,6 @@
 		},
 		"MFEnableMobilePreferences": {
 			"value": false
-		},
-		"MFUseDesktopDiffPage": {
-			"value": {
-				"base": true,
-				"beta": true,
-				"amc": true
-			}
 		},
 		"MFUseDesktopSpecialWatchlistPage": {
 			"value": {
