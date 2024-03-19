@@ -9,7 +9,6 @@
 	},
 	"mobile-frontend-changeslist-nocomment": "Хувцамах лаьца хӀама яздаьдац",
 	"mobile-frontend-copyright": "Чударá тIакхоачилга $1  яхача лицензе бокъонашца да, нагахьа санна кхыдар белгалдаь деце.",
-	"mobile-frontend-diffview-bytesremoved": "$1 {{PLURAL:$1|байт}} дӀаяьккхай",
 	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}} мáзаоагӀув дегӀайоалае гӀо де.</strong><br />Чувала чистема чу хувцамаш дергдолаш.",
 	"mobile-frontend-edit-signup-action": "<strong>ГӀо де {{SITENAME}} дегӀайоалае.</strong><br />Аккаунт хьакхолла хувцамаш дергдолаш.",
 	"mobile-frontend-editor-anon": "Системача чу ца воалаш хувцамаш де",

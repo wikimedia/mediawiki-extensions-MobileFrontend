@@ -5,12 +5,6 @@
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "deñĭştĭrme taswirĭ yoq",
-	"mobile-frontend-diffview-anonymous": "Anonim qullanuwşı",
-	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|bayt}} qoşıldı",
-	"mobile-frontend-diffview-bytesnochange": "Balabanlıqta parq yoq",
-	"mobile-frontend-diffview-bytesremoved": "$1 {{PLURAL:$1|bayt}} alındı",
-	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|deñĭştĭrme}}",
-	"mobile-frontend-diffview-title": "Deñĭştĭrmeler",
 	"mobile-frontend-editor-anon": "Kĭrmeden deñĭştĭr",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Kĭrĭş",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Sebep",

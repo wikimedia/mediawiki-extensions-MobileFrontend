@@ -5,12 +5,6 @@
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "hapana pfupiso yechinjirudzo",
-	"mobile-frontend-diffview-anonymous": "Mushandisi asingazivikanwi",
-	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|bhaiti rawedzerwa|mabhaiti awedzerwa}}",
-	"mobile-frontend-diffview-bytesnochange": "Hapana shanduko mumakuriro",
-	"mobile-frontend-diffview-bytesremoved": "$1 {{PLURAL:$1|bhaiti rabviswa|mabhaiti abviswa}}",
-	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|chinjirudzo|zvichinjirudzo}}",
-	"mobile-frontend-diffview-title": "Zvishanduko",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "BHO",
 	"mobile-frontend-editor-blocked-drawer-action-randompage": "Ndiendesei kurimwe zanhi",
 	"mobile-frontend-editor-blocked-drawer-body-link": "Ona zvakadzama",

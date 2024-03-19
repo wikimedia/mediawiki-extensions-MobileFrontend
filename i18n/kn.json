@@ -15,8 +15,6 @@
 	"mobile-frontend-clear-search": "ಅಳಿಸಿ",
 	"mobile-frontend-copyright": "ವಿಶೇಷವಾಗಿ ಟಿಪ್ಪಣಿ ಮಾಡದಿದ್ದ ಹೊರತು ಪಠ್ಯ \"$1\" ರಡಿ ಲಭ್ಯವಿದೆ.",
 	"mobile-frontend-desc": "ಮೊಬೈಲ್ ಮುನ್ನೆಲೆ",
-	"mobile-frontend-diffview-anonymous": "ಅನಾಮಿಕ ಸದಸ್ಯ",
-	"mobile-frontend-diffview-title": "ಬದಲಾವಣೆಗಳು",
 	"mobile-frontend-editor-anonwarning": "<strong>ಎಚ್ಚರಿಕೆ :</strong> ನೀವು ಲಾಗ್ ಇನ್ ಆಗಿಲ್ಲ. ನೀವು ಯಾವುದೇ ಸಂಪಾದನೆ ಮಾಡಿದರೆ ನಿಮ್ಮ ಐಪಿ ವಿಳಾಸವು ಸಾರ್ವಜನಿಕವಾಗಿ ಕಾಣುತ್ತದೆ. ನೀವು <strong>ಲಾಗ್ ಇನ್</strong> ಆದರೆ, ಅಥವಾ <strong>ಖಾತೆ ರಚಿಸಿದರೆ</strong>, ನಿಮ್ಮ ಸಂಪಾದನೆಗಳನ್ನು ನಿಮ್ಮ ಬಳಕೆದಾರ ಹೆಸರಿಗೆ ಕೊಡಲಾಗುವುದು, ಇನ್ನಿತರ ಅನುಕೂಲಗಳೊಂದಿಗೆ.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "ಲಾಗ್ ಇನ್",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "ಸರಿ",

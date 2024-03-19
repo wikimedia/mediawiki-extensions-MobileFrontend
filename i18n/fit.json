@@ -7,8 +7,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Kirjota varmistuskooti",
 	"mobile-frontend-changeslist-nocomment": "ei mookkausyhteenvetoa",
 	"mobile-frontend-desc": "Mupiilikäyttöliittymä",
-	"mobile-frontend-diffview-bytesremoved": "$1 {{PLURAL:$1|merkki|merkkiä}} otettu poies",
-	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|mookkaus|mookkausta}}",
 	"mobile-frontend-editor-anon": "Mookkaa lokkaamatta sisäle",
 	"mobile-frontend-editor-blocked-drawer-title": "Sinut oon estetty mookkaamasta {{GRAMMAR:partitive|{{SITENAME}}}}",
 	"mobile-frontend-editor-blocked-drawer-title-partial": "Sinut oon estetty mookkaamasta tätä sivua",

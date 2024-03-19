@@ -11,13 +11,6 @@
 	"mobile-frontend-clear-search": "فرغ",
 	"mobile-frontend-copyright": "المحتوى متاح وفق $1 إن لم يرد خلاف ذلك.",
 	"mobile-frontend-desc": "واجهة النقال",
-	"mobile-frontend-diffview-404-desc": "معرف المراجعة التي طلبته مو موجود.<br/>يصير هيج عادةً باتباع رابط فرق قديم إلى صفحة محذوفة لو رابط فرق بيه أحرف مو صالحة.",
-	"mobile-frontend-diffview-404-title": "نسخة غلط",
-	"mobile-frontend-diffview-anonymous": "مستخدم غريب",
-	"mobile-frontend-diffview-bytesadded": "أُضيف {{PLURAL:$1|بايت|$1 بايت}}",
-	"mobile-frontend-diffview-bytesnochange": "ماكو تغيير بالحجم",
-	"mobile-frontend-diffview-bytesremoved": "أُزيل {{PLURAL:$1|بايت|$1 بايت}}",
-	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|تعديل}}",
 	"mobile-frontend-terms-text": "شروط الأستخدام",
 	"mobile-frontend-view": "عرض بطريقة التلفون",
 	"mobile-frontend-view-desktop": "سطح مكتب"

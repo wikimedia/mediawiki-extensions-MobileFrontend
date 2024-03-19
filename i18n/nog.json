@@ -7,10 +7,6 @@
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "тасвир джазылмаган",
-	"mobile-frontend-diffview-anonymous": "Аноним кулланувшы",
-	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|байт}} косулды",
-	"mobile-frontend-diffview-bytesnochange": "Улулыкта парк йок",
-	"mobile-frontend-diffview-bytesremoved": "$1 {{PLURAL:$1|байт}} алынды",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Кируьв",
 	"mobile-frontend-editor-blocked-drawer-body-link": "Тагы коьр",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Себеп",
