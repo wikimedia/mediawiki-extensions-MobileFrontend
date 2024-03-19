@@ -35,6 +35,18 @@ class SpecialMobileDiff extends UnlistedSpecialPage {
 	 * @inheritDoc
 	 */
 	public function execute( $subPage ) {
-		$this->getOutput()->redirect( $this->getDesktopUrl( $subPage ), '301' );
+		$out = $this->getOutput();
+		if ( !$subPage ) {
+			$out->setStatusCode( 404 );
+			$out->addHTML(
+				Html::errorBox(
+					$out->msg( 'mobile-frontend-generic-404-title' )->text(),
+					$out->msg( 'mobile-frontend-generic-404-desc' )->text()
+				)
+			);
+
+			return;
+		}
+		$out->redirect( $this->getDesktopUrl( $subPage ), '301' );
 	}
 }
