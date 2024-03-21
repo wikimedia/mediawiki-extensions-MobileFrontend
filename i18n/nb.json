@@ -86,7 +86,7 @@
 	"mobile-frontend-editor-loadbasiceditor": "Bytt til kilderedigering",
 	"mobile-frontend-editor-toload": "Redigeringsverktøyet lastes inn. [$1 Last siden på nytt] hvis du fortsatt ser denne beskjeden etter noen sekunder.",
 	"mf-expand-sections-description": "Utvid alltid seksjoner på innholdssider som standard.",
-	"mf-expand-sections-name": "Utvid alle avsnitt",
+	"mf-expand-sections-name": "Utvid alle seksjoner",
 	"mf-expand-sections-0-label": "Skjul som standard",
 	"mf-expand-sections-1-label": "Vis som standard",
 	"mf-font-size-name": "Tekst",
