@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Protostar"
+			"Protostar",
+			"122112ê"
 		]
 	},
+	"mobile-frontend-copyright": "Di tin dɛn we de insay de ɔnda $1 pas nɔmɔ dɛn tɔk ɔda tin.",
 	"mobile-frontend-last-modified-date": "Last èdito $1, $2",
 	"mobile-frontend-news-items": "Na dhi nyuz",
 	"mobile-frontend-privacy-link-text": "Privasy",
