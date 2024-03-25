@@ -22,6 +22,9 @@ QUnit.module( 'MobileFrontend Drawer.js', {
 		jQuery.setUp( sandbox, global );
 		oo.setUp( sandbox, global );
 
+		// requestAnimationFrame doesn't exist in Node
+		global.requestAnimationFrame = setTimeout;
+
 		// Additional Drawer global dependency.
 		mw.setUp( sandbox, global );
 		mustache.setUp( sandbox, global );

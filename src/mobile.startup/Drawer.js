@@ -51,8 +51,7 @@ function Drawer( props ) {
 }
 
 mfExtend( Drawer, View, {
-	// in milliseconds
-	minHideDelay: 100,
+	$mask: null,
 
 	/**
 	 * Shows panel after a slight delay
@@ -64,24 +63,20 @@ mfExtend( Drawer, View, {
 	 */
 	show() {
 		const d = util.Deferred();
-		this.$el.find( '.drawer-container__mask' )
-			.addClass( 'drawer-container__mask--visible' );
-		if ( !this.$el.find( '.drawer' ).hasClass( 'visible' ) ) {
-			// use setTimeout to allow the browser to redraw if render() was called
-			// just before show(); this is important for animations to work
-			// (0ms doesn't work on Firefox, 10ms is enough)
-			//
-			// FIXME: setTimeout should be reconsidered in T209129
-			setTimeout( () => {
-				this.$el.find( '.drawer' ).addClass( 'visible' );
-				// IntersectionObserver doesn't fire for content
-				// in drawers, so trigger manually (T361212)
-				mw.hook( 'mobileFrontend.loadLazyImages' ).fire( this.$el );
-				if ( this.options.onShow ) {
-					this.options.onShow( d );
-				}
-				setTimeout( () => d.resolve(), this.minHideDelay );
-			}, this.minHideDelay );
+		this.$el.prepend( this.$mask );
+		// Force redraw by asking the browser to measure the element's width
+		this.$el.width();
+		const $drawer = this.$el.find( '.drawer' );
+		this.$mask.addClass( 'drawer-container__mask--visible' );
+		if ( !$drawer.hasClass( 'visible' ) ) {
+			$drawer.addClass( 'visible' );
+			// IntersectionObserver doesn't fire for content
+			// in drawers, so trigger manually (T361212)
+			mw.hook( 'mobileFrontend.loadLazyImages' ).fire( this.$el );
+			if ( this.options.onShow ) {
+				this.options.onShow( d );
+			}
+			requestAnimationFrame( () => d.resolve() );
 		} else {
 			d.resolve();
 		}
@@ -95,14 +90,18 @@ mfExtend( Drawer, View, {
 	 * @instance
 	 */
 	hide() {
-		this.$el.find( '.drawer-container__mask' )
-			.removeClass( 'drawer-container__mask--visible' );
-		this.$el.find( '.drawer' ).removeClass( 'visible' );
-		// see comment in show()
+		const $drawer = this.$el.find( '.drawer' );
+		$drawer.removeClass( 'visible' );
+		this.$mask.removeClass( 'drawer-container__mask--visible' );
+		// Should really use 'transitionend' event here, but as the
+		// parent $drawer element is often detatched as well, this
+		// might not fire until the next show animation.
 		setTimeout( () => {
-			this.$el.find( '.drawer' ).removeClass( 'visible' );
+			this.$mask.detach();
+		}, 100 );
+		requestAnimationFrame( () => {
 			this.options.onBeforeHide( this );
-		}, this.minHideDelay );
+		} );
 	},
 
 	/**
@@ -111,9 +110,8 @@ mfExtend( Drawer, View, {
 	 * @instance
 	 */
 	postRender() {
+		this.$mask = util.parseHTML( '<div>' ).addClass( 'drawer-container__mask' );
 		const props = this.options,
-			$mask = util.parseHTML( '<div>' )
-				.addClass( 'drawer-container__mask' ),
 			// eslint-disable-next-line mediawiki/class-doc
 			$drawer = util.parseHTML( '<div>' )
 				.addClass( `drawer drawer-container__drawer position-fixed ${ this.drawerClassName }`.trim() );
@@ -127,7 +125,6 @@ mfExtend( Drawer, View, {
 			// append children
 			$drawer.append( props.children );
 		}
-		this.$el.append( $mask );
 		this.$el.append( $drawer );
 	}
 } );
