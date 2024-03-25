@@ -6,7 +6,7 @@
 			"Simartampua"
 		]
 	},
-	"mobile-frontend-copyright": "Konten adong i toru on tele tong idokon juo nalain",
+	"mobile-frontend-copyright": "Konten on adong itoru $1 kacuali adong idokon na lain",
 	"mobile-frontend-editor-blocked-drawer-title": "Akun mu madung iblokir tuna mangedit {{SITENAME}}",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Alasanna iblokir",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "Iblokir ni",
