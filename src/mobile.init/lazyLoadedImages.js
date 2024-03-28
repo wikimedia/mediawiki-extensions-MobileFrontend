@@ -59,6 +59,15 @@ function init( $container ) {
 	} );
 }
 
+/**
+ * @event mobileFrontend.loadLazyImages
+ * @param {jQuery} $container
+ */
+mw.hook( 'mobileFrontend.loadLazyImages' ).add( function ( $container ) {
+	const imagePlaceholders = lazyImageLoader.queryPlaceholders( $container[ 0 ] );
+	lazyImageLoader.loadImages( imagePlaceholders );
+} );
+
 module.exports = function () {
 	mw.hook( 'wikipage.content' ).add( init );
 };

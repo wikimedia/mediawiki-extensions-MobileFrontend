@@ -74,6 +74,9 @@ mfExtend( Drawer, View, {
 			// FIXME: setTimeout should be reconsidered in T209129
 			setTimeout( () => {
 				this.$el.find( '.drawer' ).addClass( 'visible' );
+				// IntersectionObserver doesn't fire for content
+				// in drawers, so trigger manually (T361212)
+				mw.hook( 'mobileFrontend.loadLazyImages' ).fire( this.$el );
 				if ( this.options.onShow ) {
 					this.options.onShow( d );
 				}
