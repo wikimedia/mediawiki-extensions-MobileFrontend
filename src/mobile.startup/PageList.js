@@ -89,10 +89,11 @@ mfExtend( PageList, View, {
     {{#latitude}}data-latlng="{{latitude}},{{longitude}}"{{/latitude}}
     data-title="{{title}}">
     <div class="list-thumb
-      {{^thumbnail}}list-thumb-none list-thumb-x{{/thumbnail}}
       {{#thumbnail.isLandscape}}list-thumb-y{{/thumbnail.isLandscape}}
       {{^thumbnail.isLandscape}}list-thumb-x{{/thumbnail.isLandscape}}"
-      {{#thumbnail}}data-style="background-image: url( {{thumbnail.source}} )"{{/thumbnail}}></div>
+      {{#thumbnail}}data-style="background-image: url( {{thumbnail.source}} )"{{/thumbnail}}>
+      {{^thumbnail}}<span class="mf-icon-image"></span>{{/thumbnail}}
+	</div>
     <h3>{{{displayTitle}}}</h3>
     {{#wikidataDescription}}
     <div class="wikidata-description">{{wikidataDescription}}</div>

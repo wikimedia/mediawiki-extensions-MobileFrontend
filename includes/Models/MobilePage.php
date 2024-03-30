@@ -67,14 +67,6 @@ class MobilePage {
 	}
 
 	/**
-	 * Set rev_timestamp of latest edit to this page
-	 * @param string $timestamp Timestamp (MW format)
-	 */
-	public function setLatestTimestamp( $timestamp ) {
-		$this->revisionTimestamp = $timestamp;
-	}
-
-	/**
 	 * Retrieve the last edit to this page.
 	 * @return array defining edit with keys:
 	 * - string name
@@ -107,27 +99,6 @@ class MobilePage {
 	 */
 	public function getTitle() {
 		return $this->title;
-	}
-
-	/**
-	 * Get a placeholder div container for thumbnails
-	 * @param string $className Class for element
-	 * @param string $iconClassName controls size of thumbnail, defaults to empty string
-	 * @return string
-	 */
-	public static function getPlaceHolderThumbnailHtml( $className, $iconClassName = '' ) {
-		return Html::element( 'div', [
-			'class' => 'list-thumb list-thumb-placeholder ' . $iconClassName . ' ' . $className,
-		] );
-	}
-
-	/**
-	 * Check whether a page has a thumbnail associated with it
-	 *
-	 * @return bool whether the page has an image associated with it
-	 */
-	public function hasThumbnail() {
-		return $this->file ? true : false;
 	}
 
 	/**
