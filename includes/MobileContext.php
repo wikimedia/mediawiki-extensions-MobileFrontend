@@ -851,6 +851,9 @@ class MobileContext extends ContextSource {
 	 * Performs view change as requested vy toggleView()
 	 */
 	public function doToggling() {
+		// make sure viewChange is set
+		$this->shouldDisplayMobileView();
+
 		if ( !$this->viewChange ) {
 			return;
 		}

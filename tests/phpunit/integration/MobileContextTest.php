@@ -614,6 +614,13 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 	 * @dataProvider provideToggleView
 	 */
 	public function testToggleView( $page, $url, $urlCallback, $urlTemplate, $expectedLocation ) {
+		if ( $urlTemplate ) {
+			// might or might not trigger a deprecation warning depending on the code path
+			$this->filterDeprecated(
+				'/Use of (GetMobileUrl hook .*|MobileContext::.*MobileUrl.*) was deprecated in MobileFrontend 1\.42\./'
+			);
+		}
+
 		$this->overrideConfigValues( [
 			'MobileUrlCallback' => $urlCallback,
 			'MobileUrlTemplate' => '',
