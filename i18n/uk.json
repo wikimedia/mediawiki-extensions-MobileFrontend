@@ -228,7 +228,7 @@
 	"mobile-frontend-user-page-no-owner-page-yet": "У вас поки немає сторінки користувача",
 	"mobile-frontend-user-page-no-page-yet": "У $1 ще немає сторінки користувача",
 	"mobile-frontend-user-page-describe-yourself": "Ви можете описати себе для інших $1 на Вашій сторінці користувача",
-	"mobile-frontend-user-page-describe-yourself-editors": "Редактори",
+	"mobile-frontend-user-page-describe-yourself-editors": "редакторів",
 	"mobile-frontend-user-page-desired-action": "Цю сторінку має створити та відредагувати $1",
 	"mobile-frontend-user-page-create-owner-page-link-label": "Створити свою власну",
 	"mobile-frontend-user-page-create-user-page-link-label": "Створити сторінку з назвою $1",
