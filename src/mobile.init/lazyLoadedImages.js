@@ -8,6 +8,13 @@ const lazyImageLoader = require( '../mobile.startup/lazyImages/lazyImageLoader' 
  * @param {jQuery} $container
  */
 function init( $container ) {
+
+	// T360781 - since this is invoked via hook, the value of $container is not guaranteed.
+	// If undefined, return early since no further work can be done on $container.
+	if ( !( $container[ 0 ] instanceof HTMLElement ) ) {
+		return;
+	}
+
 	const imagePlaceholders = lazyImageLoader.queryPlaceholders( $container[ 0 ] );
 
 	// Regardless of whether or not lazy load is turned on
