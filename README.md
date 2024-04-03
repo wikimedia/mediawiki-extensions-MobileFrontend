@@ -129,6 +129,7 @@ mobile preferences option.
     // Enable desktop version of watchlist page when AMC is enabled
     'amc' => true,
   ]
+```
 
 #### $wgMFEnableJSConsoleRecruitment
 
