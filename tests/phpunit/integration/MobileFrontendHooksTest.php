@@ -5,7 +5,6 @@ use MediaWiki\Context\DerivativeContext;
 use MediaWiki\Context\IContextSource;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\MainConfigNames;
-use MediaWiki\MediaWikiServices;
 use MediaWiki\Output\OutputPage;
 use MediaWiki\Parser\ParserOutput;
 use MediaWiki\Request\FauxRequest;
@@ -29,7 +28,15 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 	}
 
 	private function newMobileFrontendHooks(): MobileFrontendHooks {
-		return new MobileFrontendHooks( null );
+		$services = $this->getServiceContainer();
+		return new MobileFrontendHooks(
+			$services->getHookContainer(),
+			$services->getService( 'MobileFrontend.Config' ),
+			$services->getSkinFactory(),
+			$services->getUserOptionsLookup(),
+			$services->getWatchlistManager(),
+			null
+		);
 	}
 
 	/**
@@ -336,8 +343,6 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 		string $expectedSkin
 	): void {
 		$userOptionLookup = $this->createMock( UserOptionsLookup::class );
-		$mediaWikiServices = $this->createMock( MediaWikiServices::class );
-		$mediaWikiServices->method( 'getUserOptionsLookup' )->willReturn( $userOptionLookup );
 
 		$webRequest = $this->createMock( WebRequest::class );
 		$webRequest->method( 'getHeader' )->willReturn( false );
@@ -375,12 +380,20 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 		] );
 
 		$this->setService( 'SkinFactory', $skinFactory );
-		$this->setService( 'MobileFrontend.Config', $config );
 		$this->setService( 'MobileFrontend.Context', $mobileContext );
 
 		/** @var Skin $skin */
 		$skin = null;
-		$this->newMobileFrontendHooks()->onRequestContextCreateSkin( $context, $skin );
+		$services = $this->getServiceContainer();
+		$mobileFrontendHooks = new MobileFrontendHooks(
+			$services->getHookContainer(),
+			$config,
+			$skinFactory,
+			$userOptionLookup,
+			$services->getWatchlistManager(),
+			null
+		);
+		$mobileFrontendHooks->onRequestContextCreateSkin( $context, $skin );
 
 		self::assertSame( $expectedSkin, $skin->getSkinName() );
 	}
