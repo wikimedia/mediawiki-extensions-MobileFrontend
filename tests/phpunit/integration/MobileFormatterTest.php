@@ -29,7 +29,7 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 	protected function setUp(): void {
 		parent::setUp();
 
-		$services = \MediaWiki\MediaWikiServices::getInstance();
+		$services = $this->getServiceContainer();
 		$this->mfConfig = $services->getService( 'MobileFrontend.Config' );
 		$this->mfContext = $services->getService( 'MobileFrontend.Context' );
 	}

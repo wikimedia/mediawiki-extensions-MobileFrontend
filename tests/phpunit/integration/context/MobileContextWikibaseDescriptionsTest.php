@@ -1,7 +1,6 @@
 <?php
 
 use MediaWiki\Config\Config;
-use MediaWiki\MediaWikiServices;
 
 /**
  * @group MobileFrontend
@@ -28,7 +27,7 @@ class MobileContextWikibaseDescriptionsTest extends MediaWikiIntegrationTestCase
 				'tagline' => false,
 			] );
 
-		$services = MediaWikiServices::getInstance();
+		$services = $this->getServiceContainer();
 		$this->context = $services->getService( 'MobileFrontend.Context' );
 		$this->config = $services->getService( 'MobileFrontend.Config' );
 	}

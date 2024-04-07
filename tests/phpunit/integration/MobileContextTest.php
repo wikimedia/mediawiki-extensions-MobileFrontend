@@ -1,7 +1,6 @@
 <?php
 
 use MediaWiki\MainConfigNames;
-use MediaWiki\MediaWikiServices;
 use MediaWiki\Request\FauxRequest;
 use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\Title\Title;
@@ -52,7 +51,7 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 
 		MobileContext::resetInstanceForTesting();
 		/** @var MobileContext $instance */
-		$instance = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
+		$instance = $this->getServiceContainer()->getService( 'MobileFrontend.Context' );
 
 		/** @var MutableContext $context */
 		$context = $instance->getContext();
@@ -705,7 +704,7 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 	 * @coversNothing
 	 */
 	public function testT73329() {
-		$services = MediaWikiServices::getInstance();
+		$services = $this->getServiceContainer();
 		$services->resetServiceForTesting( 'SpecialPageFactory' );
 		RequestContext::resetMain();
 		$req = new FauxRequest(
