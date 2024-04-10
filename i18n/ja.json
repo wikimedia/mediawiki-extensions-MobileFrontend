@@ -37,7 +37,8 @@
 			"ネイ",
 			"珍庵",
 			"組曲師",
-			"Chqaz"
+			"Chqaz",
+			"Salvare"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "利用者が携帯機器版インターフェイスで編集しているかどうか",
@@ -113,6 +114,7 @@
 	"mobile-frontend-editor-viewing-source-page": "<span>$1</span> の<strong>ソースを閲覧中</strong>",
 	"mobile-frontend-editor-wait": "編集内容を公開しています。お待ちください。",
 	"mobile-frontend-editor-loading": "エディタの読み込み中...",
+	"mobile-frontend-editor-loadingtooslow": "接続が遅いですか？",
 	"mobile-frontend-editor-loadbasiceditor": "ソースエディターに切り替える",
 	"mobile-frontend-editor-toload": "エディターを読み込んでいます。このメッセージが引き続き表示される場合、[$1 ページを再読み込み]してください。",
 	"mobile-frontend-expand-sections-description": "未設定状態ではコンテンツページの節を常に展開する。",
