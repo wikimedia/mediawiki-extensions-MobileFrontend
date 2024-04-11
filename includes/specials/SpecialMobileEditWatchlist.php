@@ -42,12 +42,7 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 		$thumb = $mp->getSmallThumbnailHtml( true );
 		$title = $mp->getTitle();
 		if ( !$thumb ) {
-			$thumb = Html::rawElement( 'div', [
-				'class' => 'list-thumb list-thumb-placeholder'
-				], Html::element( 'span', [
-					'class' => 'mf-icon-image'
-				] )
-			);
+			$thumb = MobilePage::getPlaceHolderThumbnailHtml( 'list-thumb-none', 'list-thumb-x' );
 		}
 		$timestamp = $mp->getLatestTimestamp();
 		$user = $this->getUser();
