@@ -145,11 +145,16 @@
 			]
 		},
 		"mobile.startup": {
+			"class": "MediaWiki\\ResourceLoader\\CodexModule",
+			"codexStyleOnly": true,
+			"codexComponents": [
+				"CdxButton",
+				"CdxIcon"
+			],
 			"dependencies": [
 				"mediawiki.page.watch.ajax",
 				"mediawiki.template.mustache",
 				"mobile.init.styles",
-				"codex-search-styles",
 				"mediawiki.Title",
 				"mobile.pagelist.styles",
 				"mobile.pagesummary.styles",
@@ -232,6 +237,13 @@
 			]
 		},
 		"mobile.editor.overlay": {
+			"class": "MediaWiki\\ResourceLoader\\CodexModule",
+			"codexStyleOnly": true,
+			"codexComponents": [
+				"CdxButton",
+				"CdxIcon",
+				"CdxTextInput"
+			],
 			"dependencies": [
 				"oojs-ui.styles.icons-editing-core",
 				"mediawiki.action.view.postEdit",
@@ -240,7 +252,6 @@
 				"mediawiki.editfont.styles",
 				"user.options",
 				"oojs-ui",
-				"codex-search-styles",
 				"mobile.startup",
 				"mediawiki.user",
 				"mediawiki.confirmCloseWindow",

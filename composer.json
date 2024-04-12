@@ -16,6 +16,7 @@
 			"minus-x fix .",
 			"phpcbf"
 		],
+		"test:size": "php ../../vendor/phpunit/phpunit/phpunit -c ../../phpunit.xml.dist tests/phpunit/structure/MobileFrontendBundleSizeTest.php",
 		"phan": "phan -d . --long-progress-bar"
 	},
 	"config": {
