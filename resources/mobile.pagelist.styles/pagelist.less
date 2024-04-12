@@ -23,7 +23,9 @@
 //    <div class="title"><h3>San Francisco</h3></div>
 //  </li>
 //  <li  class="page-summary">
-//    <div class="list-thumb list-thumb-none list-thumb-x"></div>
+//    <div class="list-thumb list-thumb-x">
+//		<span class="mf-icon-image"></span>
+//	  </div>
 //    <div class="title"><h3>New York</h3></div>
 //  </li>
 // </ul>
@@ -87,6 +89,13 @@
 		.title {
 			// 22px is the width of the watchlist star, +2px for additional padding
 			padding-right: 24px;
+		}
+
+		.list-thumb {
+			background-color: var( --background-color-neutral );
+			display: flex;
+			align-items: center;
+			justify-content: center;
 		}
 	}
 
