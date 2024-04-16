@@ -36,7 +36,9 @@
 			"Yfdyh000",
 			"Zhxy 519",
 			"一個正常人",
-			"飞舞回堂前"
+			"飞舞回堂前",
+			"Cookai1205",
+			"H78c67c"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "使用者是否透過行動版介面編輯",
@@ -223,7 +225,7 @@
 	"mobile-frontend-user-page-desired-action": "此頁面應該由$1建立與編輯",
 	"mobile-frontend-user-page-create-owner-page-link-label": "建立您自己的",
 	"mobile-frontend-user-page-create-user-page-link-label": "建立名為$1的頁面",
-	"mobile.css": "/* 此處的 CSS 將影響使用手機版的使用者 */",
+	"mobile.css": "/* 此處所有的CSS都會在使用者使用行動版網站時載入 */",
 	"mobile.js": "/* 此處所有的JavaScript都會在使用者使用行動版網站時載入 */",
 	"tag-mobile_edit": "行動版編輯",
 	"tag-mobile_edit-description": "使用行動版（網頁或應用程式）作出的編輯",
