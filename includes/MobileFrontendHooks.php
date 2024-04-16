@@ -32,6 +32,7 @@ use MediaWiki\Hook\TitleSquidURLsHook;
 use MediaWiki\Html\Html;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Output\OutputPage;
+use MediaWiki\Page\Hook\ArticleParserOptionsHook;
 use MediaWiki\Page\Hook\BeforeDisplayNoArticleTextHook;
 use MediaWiki\Parser\ParserOutput;
 use MediaWiki\Preferences\Hook\GetPreferencesHook;
@@ -83,6 +84,7 @@ class MobileFrontendHooks implements
 	BeforePageDisplayHook,
 	GetPreferencesHook,
 	OutputPageParserOutputHook,
+	ArticleParserOptionsHook,
 	HTMLFileCache__useFileCacheHook,
 	LoginFormValidErrorMessagesHook,
 	AfterBuildFeedLinksHook,
@@ -1058,6 +1060,24 @@ class MobileFrontendHooks implements
 			if ( $desc ) {
 				self::setTagline( $outputPage, $desc );
 			}
+		}
+	}
+
+	/**
+	 * ArticleParserOptions hook handler
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ArticleParserOptions
+	 *
+	 * @param Article $article
+	 * @param ParserOptions $parserOptions
+	 */
+	public function onArticleParserOptions( Article $article, ParserOptions $parserOptions ) {
+		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
+		$config = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Config' );
+
+		// set the collapsible sections parser flag so that section content is wrapped in a div for easier targeting
+		// only if we're in mobile view and the config flag is set
+		if ( $context->shouldDisplayMobileView() && $config->get( 'MFUseParsoid' ) ) {
+			$parserOptions->setCollapsibleSections();
 		}
 	}
 

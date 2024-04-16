@@ -566,3 +566,12 @@ preferences.
 
 * Type: `Boolean`
 * Default: `true`
+
+#### $wgMFUseParsoid
+
+Temporary config flag to gate MobileFrontend work to make parsoid output
+compatible with section collapsing.  Can be removed once either parsoid is
+fully rolled out or we have a better way of targeting parsoid read views only
+
+* Type: `Boolean`
+* Default: `false`
