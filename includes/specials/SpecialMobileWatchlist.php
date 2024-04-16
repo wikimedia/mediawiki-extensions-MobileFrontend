@@ -21,7 +21,6 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 
 	public const VIEW_OPTION_NAME = 'mfWatchlistView';
 	public const FILTER_OPTION_NAME = 'mfWatchlistFilter';
-	public const VIEW_LIST = 'a-z';
 	public const VIEW_FEED = 'feed';
 
 	public const WATCHLIST_TAB_PATHS = [
@@ -30,9 +29,6 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	];
 
 	private IConnectionProvider $connectionProvider;
-
-	/** @var string Saves, how the watchlist is sorted: a-z or as a feed */
-	private $view;
 
 	public function __construct( IConnectionProvider $connectionProvider ) {
 		parent::__construct( 'Watchlist' );
@@ -64,12 +60,6 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		] );
 		$req = $this->getRequest();
 
-		# Show watchlist feed if that person is an editor
-		$watchlistEditCountThreshold = $this->getConfig()->get( 'MFWatchlistEditCountThreshold' );
-		$defaultView = $this->getUser()->getEditCount() > $watchlistEditCountThreshold ?
-			self::VIEW_FEED : self::VIEW_LIST;
-		$this->view = $req->getVal( 'watchlistview', $defaultView );
-
 		$userOption = $this->getUserOptionsLookup()->getOption(
 			$user,
 			self::FILTER_OPTION_NAME,
@@ -79,12 +69,8 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 
 		$output->setPageTitleMsg( $this->msg( 'watchlist' ) );
 
-		if ( $this->view === self::VIEW_FEED ) {
-			$res = $this->doFeedQuery();
-			$this->addWatchlistHTML( $res, $user );
-		} else {
-			$output->redirect( SpecialPage::getTitleFor( 'EditWatchlist' )->getLocalURL() );
-		}
+		$res = $this->doFeedQuery();
+		$this->addWatchlistHTML( $res, $user );
 	}
 
 	/**
