@@ -6,13 +6,14 @@
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "بدون خلاصه",
-	"mobile-frontend-copyright": "محتوا جه تحت $1 دسترسی دارنی، مگر اینکه خلافش ثابت بَواشه.",
+	"mobile-frontend-copyright": "محتوا جه تحت $1 دسترسی دارنی، مگر اینکه ونه خلاف ثابت بَواشه.",
 	"mobile-frontend-last-modified-date": "$1 ِآخرین تغییر، $2 دله",
 	"mobile-frontend-main-menu": "اصلی رج",
 	"mobile-frontend-privacy-link-text": "شخصی حریم",
-	"mobile-frontend-terms-text": "استفاده هاکردن شرایط",
-	"mobile-frontend-view": "موبایلی هارشائن",
-	"mobile-frontend-view-desktop": "کامپیوتر",
+	"mobile-frontend-terms-text": "استفاده‌یِ شرایط",
+	"mobile-frontend-view": "موبایل هارشی‌ین",
+	"mobile-frontend-view-desktop": "کامپیوتر هارشی‌ین",
+	"mobile-frontend-watchlist-filter-articles": "صفحات",
 	"tag-mobile_edit": "موبایل جه دَچی‌ین",
 	"tag-mobile_web_edit": "موبایل ِبروزر جه دچی‌ین"
 }
