@@ -152,7 +152,6 @@
 	"mobile-frontend-media-next": "Alt text for a button that shows the next image.",
 	"mobile-frontend-media-prev": "Alt text for a button that shows the previous image.",
 	"mobile-frontend-missing-image": "When the mobile site removes images it replaces them with a link to the image and the alt text of the image. If no alt text is provided this string is shown to inform the user it is an image.\n{{Identical|Image}}",
-	"mobile-frontend-tap-to-display-image": "Alert the user that they need to click the image to display it",
 	"mobile-frontend-opt-in-explain": "Used as description for the \"Beta\" in [[Special:MobileOptions]], if the beta is not enabled.",
 	"mobile-frontend-overlay-close": "Text for the button in an overlay that, when clicked, dismisses the overlay.\n{{Identical|Close}}",
 	"mobile-frontend-privacy-link-text": "Custom version of \"Privacy policy\" link text for mobile footer, intended to be as brief as possible to take up as little screen real estate as possible.\n{{Identical|Privacy}}",

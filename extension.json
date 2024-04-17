@@ -104,16 +104,10 @@
 			"class": "MediaWiki\\ResourceLoader\\LessVarFileModule",
 			"styles": [
 				"resources/mobile.init.styles/main.less"
-			],
-			"lessMessages": [
-				"mobile-frontend-tap-to-display-image"
 			]
 		},
 		"mobile.init": {
 			"class": "MediaWiki\\ResourceLoader\\LessVarFileModule",
-			"lessMessages": [
-				"mobile-frontend-tap-to-display-image"
-			],
 			"dependencies": [
 				"mediawiki.api",
 				"mediawiki.user",
