@@ -108,6 +108,8 @@
 	"mobile-frontend-missing-image": "Hoto",
 	"mobile-frontend-tap-to-display-image": "Danna dan bayyana hoton.",
 	"mobile-frontend-privacy-link-text": "Sirrinka",
+	"mobile-frontend-search-content": "Ku bincika cikin shafukan dake akwai",
+	"mobile-frontend-search-content-no-results": "<b>{{int:mobile-frontend-search-content}}</b> domin kuga ko akwai abunda kuke nema.",
 	"mobile-frontend-terms-text": "Ƙa'idojin amfani",
 	"mobile-frontend-view": "Wayar hannu",
 	"mobile-frontend-view-desktop": "Komputa",

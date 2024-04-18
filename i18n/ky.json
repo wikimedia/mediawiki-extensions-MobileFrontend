@@ -20,6 +20,7 @@
 	"mobile-frontend-editor-anon": "Аккаунтка кирбестен түзөтүү",
 	"mobile-frontend-editor-anonwarning": "<strong>Эскертүү:</strong> Сиз системага кирген жоксуз. Эгер кандайдыр бир түзөтүүлөрдү киргизсеңиз, анда IP дарегиңиз жалпыга ачык көрүнөт. Эгер сиз <strong>кирсеңиз</strong> же <strong>аккаунт түзсөңүз,</strong> анда түзөтүүлөрүңүз башка артыкчылыктар менен катар колдонуучу атыңызга таандык болот.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Кирүү",
+	"mobile-frontend-drawer-arrow-label": "Жабуу",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "макул",
 	"mobile-frontend-editor-blocked-drawer-action-randompage": "Башка бир баракчага өтүү",
 	"mobile-frontend-editor-blocked-drawer-title": "Сизге {{SITENAME}} сайтын түзөтүү бөгөттөлдү.",
