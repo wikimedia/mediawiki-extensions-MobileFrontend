@@ -121,7 +121,6 @@
 	"mobile-frontend-media-load-fail-message": "Při načítání tohoto obrázku došlo k chybě.",
 	"mobile-frontend-media-load-fail-retry": "Obnovit",
 	"mobile-frontend-missing-image": "Obrázek",
-	"mobile-frontend-tap-to-display-image": "Obrázek zobrazíte klepnutím.",
 	"mobile-frontend-opt-in-explain": "{{SITENAME}} beta je způsob, kterým můžete vyzkoušet tyto funkce, na kterých teprve pracujeme, a poslat nám k nim zpětnou vazbu",
 	"mobile-frontend-overlay-close": "Zavřít",
 	"mobile-frontend-privacy-link-text": "Ochrana soukromí",

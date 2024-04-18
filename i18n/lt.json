@@ -116,7 +116,6 @@
 	"mobile-frontend-media-load-fail-message": "Įkeliant šį paveikslėlį įvyko klaida.",
 	"mobile-frontend-media-load-fail-retry": "Atnaujinti",
 	"mobile-frontend-missing-image": "Paveikslėlis",
-	"mobile-frontend-tap-to-display-image": "Bakstelėkite, kad būtų rodomas paveikslėlis.",
 	"mobile-frontend-opt-in-explain": "Naudodamiesi {{SITENAME}} βeta galėsite išbandyti šias, dar tik eksperimentines funkcijas, ir palikti mums naudingų atsiliepimų",
 	"mobile-frontend-overlay-close": "Uždaryti",
 	"mobile-frontend-privacy-link-text": "Privatumas",

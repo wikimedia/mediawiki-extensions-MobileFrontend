@@ -109,7 +109,6 @@
 	"mobile-frontend-media-load-fail-message": "Upp kom villa við að hlaða inn þessari mynd.",
 	"mobile-frontend-media-load-fail-retry": "Endurhlaða",
 	"mobile-frontend-missing-image": "Mynd",
-	"mobile-frontend-tap-to-display-image": "Ýttu til að sýna myndina.",
 	"mobile-frontend-opt-in-explain": "{{SITENAME}} βeta er leið fyrir þig til að prófa þessa tilraunaeiginleika og veita okkur verðmæta ábendingu",
 	"mobile-frontend-overlay-close": "Loka",
 	"mobile-frontend-privacy-link-text": "Persónuvernd",

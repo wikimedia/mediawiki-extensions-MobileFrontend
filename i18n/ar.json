@@ -141,7 +141,6 @@
 	"mobile-frontend-media-load-fail-message": "حدث خطأ أثناء تحميل هذه الصورة.",
 	"mobile-frontend-media-load-fail-retry": "تحديث",
 	"mobile-frontend-missing-image": "صورة",
-	"mobile-frontend-tap-to-display-image": "انقر لعرض الصورة",
 	"mobile-frontend-opt-in-explain": "{{SITENAME}} بيتا هي طريقة للوصول إلى أحدث الميزات التجريبية وإرسال تعليقات قيمة لنا.",
 	"mobile-frontend-overlay-close": "أغلق",
 	"mobile-frontend-privacy-link-text": "الخصوصية",

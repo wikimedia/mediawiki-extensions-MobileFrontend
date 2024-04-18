@@ -115,7 +115,6 @@
 	"mobile-frontend-media-load-fail-message": "यो तस्बिरलाई खोल्दा यहाँ केही त्रुटि हुन गएको छ।",
 	"mobile-frontend-media-load-fail-retry": "ताजा गर्नुहोस्",
 	"mobile-frontend-missing-image": "चित्र",
-	"mobile-frontend-tap-to-display-image": "छवि प्रदर्शन गर्न ट्याप गर्नुहोस्।",
 	"mobile-frontend-opt-in-explain": "{{SITENAME}} परीक्षण तपाईंका लागि यी प्रयोगात्मक सुविधाहरू प्रयास गर्ने र हामीलाई बहुमूल्य प्रतिक्रिया प्रदान गर्ने तरिका हो।",
 	"mobile-frontend-overlay-close": "बन्द गर्ने",
 	"mobile-frontend-privacy-link-text": "गोपनीयता",

@@ -127,7 +127,6 @@
 	"mobile-frontend-media-load-fail-message": "Houve um erro ao carregar esta imagem.",
 	"mobile-frontend-media-load-fail-retry": "Atualizar",
 	"mobile-frontend-missing-image": "Imagem",
-	"mobile-frontend-tap-to-display-image": "Toque para exibir a imagem.",
 	"mobile-frontend-opt-in-explain": "βeta de {{SITENAME}} é uma maneira para você experimentar esses recursos experimentais e nos fornecer um importantes comentários",
 	"mobile-frontend-overlay-close": "Fechar",
 	"mobile-frontend-privacy-link-text": "Privacidade",

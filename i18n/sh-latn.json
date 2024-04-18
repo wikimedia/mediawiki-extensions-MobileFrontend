@@ -94,7 +94,6 @@
 	"mobile-frontend-media-load-fail-message": "Došlo je do greške pri učitavanju ove slike.",
 	"mobile-frontend-media-load-fail-retry": "Preučitaj",
 	"mobile-frontend-missing-image": "Slika",
-	"mobile-frontend-tap-to-display-image": "Dodirnite za prikaz slike.",
 	"mobile-frontend-opt-in-explain": "{{SITENAME}} βeta Vam pruža priliku da isprobate nove mogućnosti i da nam kažete šta o njima mislite",
 	"mobile-frontend-overlay-close": "Zatvori",
 	"mobile-frontend-privacy-link-text": "Privatnost",

@@ -108,7 +108,6 @@
 	"mobile-frontend-media-load-fail-message": "Došlo je do greške pri učitavanju ove slike.",
 	"mobile-frontend-media-load-fail-retry": "Osveži",
 	"mobile-frontend-missing-image": "Slika",
-	"mobile-frontend-tap-to-display-image": "Tapnite za prikaz slike.",
 	"mobile-frontend-opt-in-explain": "{{SITENAME}} βeta je način da isprobate ove eksperimentalne funkcije i pružite nam vredne povratne informacije",
 	"mobile-frontend-overlay-close": "Zatvori",
 	"mobile-frontend-privacy-link-text": "Privatnost",

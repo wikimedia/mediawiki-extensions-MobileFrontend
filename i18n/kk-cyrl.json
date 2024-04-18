@@ -113,7 +113,6 @@
 	"mobile-frontend-media-load-fail-message": "Бұл кескінді жүктеу кезінде қате орын алды.",
 	"mobile-frontend-media-load-fail-retry": "Жаңарту",
 	"mobile-frontend-missing-image": "Сурет",
-	"mobile-frontend-tap-to-display-image": "Кескінді көрсету үшін түртіңіз.",
 	"mobile-frontend-opt-in-explain": "{{SITENAME}} βeta — бұл эксперименттік мүмкіндіктерді пайдаланып көру және бізге құнды пікір қалдыру жолы",
 	"mobile-frontend-overlay-close": "Жабу",
 	"mobile-frontend-privacy-link-text": "Жеке меншік",

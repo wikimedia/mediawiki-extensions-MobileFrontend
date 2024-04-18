@@ -119,7 +119,6 @@
 	"mobile-frontend-media-load-fail-message": "Đã xuất hiện lỗi khi tải hình này.",
 	"mobile-frontend-media-load-fail-retry": "Làm mới",
 	"mobile-frontend-missing-image": "Hình",
-	"mobile-frontend-tap-to-display-image": "Nhấn để hiểu thị hình ảnh.",
 	"mobile-frontend-opt-in-explain": "{{SITENAME}} βeta cho phép bạn sử dụng các tính năng thử nghiệm này và gửi lời phản hồi quý giá",
 	"mobile-frontend-overlay-close": "Đóng",
 	"mobile-frontend-privacy-link-text": "Riêng tư",

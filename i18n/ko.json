@@ -131,7 +131,6 @@
 	"mobile-frontend-media-load-fail-message": "이 그림을 불러오는 동안 오류가 발생했습니다.",
 	"mobile-frontend-media-load-fail-retry": "새로 고침",
 	"mobile-frontend-missing-image": "그림",
-	"mobile-frontend-tap-to-display-image": "사진을 보려면 터치하세요.",
 	"mobile-frontend-opt-in-explain": "{{SITENAME}} 베타 기능은 이 실험적인 기능들을 시도해보고 저희에게 소중한 의견을 제공할 수 있는 수단입니다",
 	"mobile-frontend-overlay-close": "닫기",
 	"mobile-frontend-privacy-link-text": "개인정보",

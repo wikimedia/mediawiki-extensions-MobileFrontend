@@ -110,7 +110,6 @@
 	"mobile-frontend-media-load-fail-message": "შეცდომა მოხდა ამ სურათის ჩატვირთვისას.",
 	"mobile-frontend-media-load-fail-retry": "განახლება",
 	"mobile-frontend-missing-image": "სურათი",
-	"mobile-frontend-tap-to-display-image": "დააჭირეთ, რათა სურათი გამოჩნდეს.",
 	"mobile-frontend-opt-in-explain": "{{SITENAME}}-ბეტა — თქვენთვის შემდეგი ექსპერიმენტული ფუნქციების გამოყენებისა და სასარგებლო უკუკავშირის საშუალებაა",
 	"mobile-frontend-overlay-close": "დახურვა",
 	"mobile-frontend-privacy-link-text": "უსაფრთხოება",
