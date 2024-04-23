@@ -117,6 +117,8 @@ class MobileSpecialPage extends SpecialPage {
 			$out->addModuleStyles( [
 				// FIXME: mobile.special.styles should be replaced with mediawiki.special module
 				'mobile.special.styles',
+				// Can be merged with mobile.special.styles when T363205 is addressed.
+				'mobile.special.codex.styles',
 				$specialStyleModuleName
 			] );
 		}

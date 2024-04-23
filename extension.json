@@ -138,14 +138,18 @@
 				"resources/dist/mobile.init.js"
 			]
 		},
-		"mobile.startup": {
+		"mobile.codex.styles": {
 			"class": "MediaWiki\\ResourceLoader\\CodexModule",
 			"codexStyleOnly": true,
 			"codexComponents": [
 				"CdxButton",
-				"CdxIcon"
-			],
+				"CdxIcon",
+				"CdxTextInput"
+			]
+		},
+		"mobile.startup": {
 			"dependencies": [
+				"mobile.codex.styles",
 				"mediawiki.page.watch.ajax",
 				"mediawiki.template.mustache",
 				"mobile.init.styles",
@@ -231,13 +235,6 @@
 			]
 		},
 		"mobile.editor.overlay": {
-			"class": "MediaWiki\\ResourceLoader\\CodexModule",
-			"codexStyleOnly": true,
-			"codexComponents": [
-				"CdxButton",
-				"CdxIcon",
-				"CdxTextInput"
-			],
 			"dependencies": [
 				"oojs-ui.styles.icons-editing-core",
 				"mediawiki.action.view.postEdit",
@@ -368,13 +365,15 @@
 				"resources/dist/mobile.special.watchlist.scripts.js"
 			]
 		},
-		"mobile.special.mobileoptions.styles": {
+		"mobile.special.codex.styles": {
 			"class": "MediaWiki\\ResourceLoader\\CodexModule",
 			"codexStyleOnly": "true",
 			"codexComponents": [
 				"CdxRadio",
 				"CdxToggleSwitch"
-			],
+			]
+		},
+		"mobile.special.mobileoptions.styles": {
 			"styles": [
 				"resources/mobile.special.mobileoptions.styles/mobileoptions.less"
 			]
