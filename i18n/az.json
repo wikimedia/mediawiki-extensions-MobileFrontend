@@ -51,7 +51,7 @@
 	"mobile-frontend-editor-disabled": "Bu səhifə vandalizmin qarşısını almaq məqsədilə mühafizə olunur. [$1 Mənbə koduna bax]",
 	"mobile-frontend-editor-disabled-anon": "Bu səhifəni redaktə etmək üçün daxil olmalısınız.",
 	"mobile-frontend-editor-editing": "Redaktə olunur",
-	"mobile-frontend-editor-editing-page": "<span><strong>Redaktə olunur:/strong> $1</span>",
+	"mobile-frontend-editor-editing-page": "<span><strong>Redaktə olunur:</strong> $1</span>",
 	"mobile-frontend-editor-error": "Xəta, redaktə dərc edilmədi.",
 	"mobile-frontend-editor-error-conflict": "Xəta, başqa istifadəçi bu səhifəni redaktə etdi.",
 	"mobile-frontend-editor-error-loading": "Xəta, redaktoru yükləmək mümkün olmadı.",
