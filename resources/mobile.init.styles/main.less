@@ -5,6 +5,17 @@
 .client-js {
 	.collapsible-block:not( .collapsible-block-js ) {
 		display: none;
+		// But show it for tablets.
+		@media all and ( min-width: @width-breakpoint-tablet ) {
+			display: block;
+		}
+	}
+
+	// For expand all sections client preference:
+	&.mf-expand-sections-clientpref-1 {
+		.collapsible-block:not( .collapsible-block-js ) {
+			display: block;
+		}
 	}
 
 	.section-heading {
