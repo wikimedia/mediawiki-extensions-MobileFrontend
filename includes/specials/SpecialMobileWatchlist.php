@@ -8,7 +8,9 @@ use MediaWiki\User\UserIdentity;
 use MediaWiki\Utils\MWTimestamp;
 use Wikimedia\IPUtils;
 use Wikimedia\Rdbms\IConnectionProvider;
+use Wikimedia\Rdbms\IReadableDatabase;
 use Wikimedia\Rdbms\IResultWrapper;
+use Wikimedia\Rdbms\SelectQueryBuilder;
 
 /**
  * Implements the Watchlist special page
@@ -98,10 +100,11 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 	/**
 	 * Returns an array of conditions restricting namespace in queries
 	 * @param string $column Namespace db key
+	 * @param IReadableDatabase $dbr
 	 *
 	 * @return array
 	 */
-	protected function getNSConditions( $column ) {
+	protected function getNSConditions( $column, $dbr ) {
 		$conds = [];
 		switch ( $this->filter ) {
 			case 'all':
@@ -110,15 +113,15 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 			case 'articles':
 				// @fixme content namespaces
 				// Has to be unquoted or MySQL will filesort for wl_namespace
-				$conds[] = "$column = 0";
+				$conds[] = $dbr->expr( $column, '=', NS_MAIN );
 				break;
 			case 'talk':
 				// check project talk, user talk and talk pages
-				$conds[] = "$column IN (1, 3, 5)";
+				$conds[] = $dbr->expr( $column, '=', [ NS_TALK, NS_USER_TALK, NS_PROJECT_TALK ] );
 				break;
 			case 'other':
 				// @fixme
-				$conds[] = "$column NOT IN (0, 1, 3, 5)";
+				$conds[] = $dbr->expr( $column, '!=', [ NS_MAIN, NS_TALK, NS_USER_TALK, NS_PROJECT_TALK ] );
 				break;
 		}
 		return $conds;
@@ -178,49 +181,44 @@ class SpecialMobileWatchlist extends MobileSpecialPageFeed {
 		$dbr = $this->connectionProvider->getReplicaDatabase( false, 'watchlist' );
 
 		// Possible where conditions
-		$conds = $this->getNSConditions( 'rc_namespace' );
+		$conds = $this->getNSConditions( 'rc_namespace', $dbr );
 
 		// snip....
 
 		// @todo This should be changed to use WatchedItemQuerySerivce
 
 		$rcQuery = RecentChange::getQueryInfo();
-		$tables = array_merge( $rcQuery['tables'], [ 'watchlist' ] );
-		$fields = $rcQuery['fields'];
+		$queryBuilder = $dbr->newSelectQueryBuilder()
+			->queryInfo( $rcQuery );
 		$innerConds = [
 			'wl_user' => $user->getId(),
 			'wl_namespace=rc_namespace',
 			'wl_title=rc_title',
 			// FIXME: Filter out wikidata changes which currently show as anonymous (see T51315)
-			'rc_type!=' . $dbr->addQuotes( RC_EXTERNAL ),
+			$dbr->expr( 'rc_type', '!=', RC_EXTERNAL ),
 		];
 		// Filter out category membership changes if configured
 		$userOption = $this->userOptionsLookup->getBoolOption( $user, 'hidecategorization' );
 		if ( $userOption ) {
-			$innerConds[] = 'rc_type!=' . $dbr->addQuotes( RC_CATEGORIZE );
+			$innerConds[] = $dbr->expr( 'rc_type', '!=', RC_CATEGORIZE );
 		}
-		$join_conds = [
-			'watchlist' => [
-				'INNER JOIN',
-				$innerConds,
-			],
-		] + $rcQuery['joins'];
-		$query_options = [
-			'ORDER BY' => 'rc_timestamp DESC',
-			'LIMIT' => self::LIMIT
-		];
+		$queryBuilder->join( 'watchlist', null, $innerConds );
 
 		$rollbacker = MediaWikiServices::getInstance()->getPermissionManager()
 			->userHasRight( $user, 'rollback' );
 		if ( $rollbacker ) {
-			$tables[] = 'page';
-			$join_conds['page'] = [ 'LEFT JOIN', 'rc_cur_id=page_id' ];
-			$fields[] = 'page_latest';
+			$queryBuilder->leftJoin( 'page', null, 'rc_cur_id=page_id' );
+			$queryBuilder->field( 'page_latest' );
 		}
 
-		ChangeTags::modifyDisplayQuery( $tables, $fields, $conds, $join_conds, $query_options, '' );
+		MediaWikiServices::getInstance()->getChangeTagsStore()
+			->modifyDisplayQueryBuilder( $queryBuilder, 'recentchanges' );
 
-		return $dbr->select( $tables, $fields, $conds, __METHOD__, $query_options, $join_conds );
+		return $queryBuilder
+			->orderBy( 'rc_timestamp', SelectQueryBuilder::SORT_DESC )
+			->limit( self::LIMIT )
+			->caller( __METHOD__ )
+			->fetchResultSet();
 	}
 
 	/**
