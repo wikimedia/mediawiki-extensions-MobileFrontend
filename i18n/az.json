@@ -159,6 +159,8 @@
 	"mobile-frontend-user-page-desired-action": "Bu səhifə $1 tərəfindən yaradılmalı və redaktə edilməlidir",
 	"mobile-frontend-user-page-create-owner-page-link-label": "Özünüz yaradın",
 	"mobile-frontend-user-page-create-user-page-link-label": "$1 adlı səhifə yaradın",
+	"mobile.css": "/* Buradakı bütün CSS mobil saytın istifadəçiləri üçün yüklənəcək */",
+	"mobile.js": "/* Buradakı JavaScript kodu mobil saytın istifadəçiləri üçün yüklənəcək */",
 	"tag-mobile_edit": "Mobil redaktə",
 	"tag-mobile_edit-description": "Mobil vasitəsilə (veb və ya tətbiqdən) edilən redaktə",
 	"tag-advanced_mobile_edit": "Təkmilləşdirilmiş mobil redaktə",
