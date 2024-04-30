@@ -10,7 +10,8 @@
 			"Toghrul Rahimli",
 			"Vugar 1981",
 			"Wertuose",
-			"Şeyx Şamil"
+			"Şeyx Şamil",
+			"Nemoralis"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "İstifadəçinin mobil interfeys vasitəsilə redaktə edib-etməməsi",
@@ -59,7 +60,7 @@
 	"mobile-frontend-editor-disabled": "Bu səhifə vandalizmin qarşısını almaq məqsədilə mühafizə olunur. [$1 Mənbə koduna bax]",
 	"mobile-frontend-editor-disabled-anon": "Bu səhifəni redaktə etmək üçün daxil olmalısınız.",
 	"mobile-frontend-editor-editing": "Redaktə olunur",
-	"mobile-frontend-editor-editing-page": "<span><strong>Redaktə olunur:/strong> $1</span>",
+	"mobile-frontend-editor-editing-page": "<span><strong>Redaktə olunur:</strong> $1</span>",
 	"mobile-frontend-editor-error-conflict": "Xəta, başqa istifadəçi bu səhifəni redaktə etdi.",
 	"mobile-frontend-editor-error-loading": "Xəta, redaktoru yükləmək mümkün olmadı.",
 	"mobile-frontend-editor-error-preview": "Xəta, sınaq görüntüsü yüklənərkən gözlənilməz bir şey baş verdi. Bağlayın və yenidən cəhd edin.",
@@ -176,6 +177,8 @@
 	"mobile-frontend-user-page-desired-action": "Bu səhifə $1 tərəfindən yaradılmalı və redaktə edilməlidir",
 	"mobile-frontend-user-page-create-owner-page-link-label": "Özünüz yaradın",
 	"mobile-frontend-user-page-create-user-page-link-label": "$1 adlı səhifə yaradın",
+	"mobile.css": "/* Buradakı bütün CSS mobil saytın istifadəçiləri üçün yüklənəcək */",
+	"mobile.js": "/* Buradakı JavaScript kodu mobil saytın istifadəçiləri üçün yüklənəcək */",
 	"tag-mobile_edit": "Mobil redaktə",
 	"tag-mobile_edit-description": "Mobil vasitəsilə (veb və ya tətbiqdən) edilən redaktə",
 	"tag-advanced_mobile_edit": "Təkmilləşdirilmiş mobil redaktə",
