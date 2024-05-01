@@ -56,6 +56,8 @@
 	"mf-font-size-name": "Saiz huruf",
 	"mf-font-size-description": "Besarkan atau kecilkan teks supaya mudah dibaca.",
 	"mf-font-size-small-label": "Kecil",
+	"mf-font-size-regular-label": "Sederhana",
+	"mf-font-size-large-label": "Besar",
 	"mobile-frontend-generic-404-desc": "Laman yang anda cari tidak dapat dijumpai.",
 	"mobile-frontend-generic-404-title": "Ralat - Halaman tidak dijumpai",
 	"mobile-frontend-language-heading": "<strong>Bahasa</strong>",
