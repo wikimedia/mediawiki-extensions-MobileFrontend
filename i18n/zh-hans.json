@@ -135,7 +135,7 @@
 	"mobile-frontend-editor-error-preview": "出错，加载预览时发生意外。请关闭后重试。",
 	"mobile-frontend-editor-keep-editing": "继续编辑",
 	"mobile-frontend-editor-licensing": "通过发布更改，您同意将您的贡献根据$1{{PLURAL:$2|许可协议}}发布。",
-	"mobile-frontend-editor-licensing-with-terms": "通过发布更改，您同意$1并同意将您的贡献根据$2{{PLURAL:$3|许可协议}}发布。",
+	"mobile-frontend-editor-licensing-with-terms": "发布更改即表明您同意$1，并同意根据$2{{PLURAL:$3|许可协议}}发布您的贡献。",
 	"mobile-frontend-editor-terms-link": "[$1 使用条款]",
 	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|您是否想}}在{{SITENAME}}创建一个新页面？",
 	"mobile-frontend-editor-placeholder": "这个章节还是空的。成为第一个充实它的人吧！",

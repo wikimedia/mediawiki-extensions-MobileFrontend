@@ -96,7 +96,7 @@
 	"mobile-frontend-editor-error-preview": "錯誤，讀取預覽頁面時發生不明錯誤。請關閉後再試。",
 	"mobile-frontend-editor-keep-editing": "繼續編輯",
 	"mobile-frontend-editor-licensing": "透過發布變更，代表您同意以$1{{PLURAL:$2|授權條款}}釋出您的貢獻。",
-	"mobile-frontend-editor-licensing-with-terms": "透過發布變更，代表您同意$1並以$2{{PLURAL:$3|授權條款}}釋出您的貢獻。",
+	"mobile-frontend-editor-licensing-with-terms": "發布了變更就意味著您同意$1，而且同意採用$2{{PLURAL:$3|授權條款}}釋出您的貢獻。",
 	"mobile-frontend-editor-terms-link": "[$1 使用條款]",
 	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|您想要}}於{{SITENAME}}上建立新頁面嗎？",
 	"mobile-frontend-editor-placeholder": "此章節尚是空的。成為第一個編輯它的人吧！",
