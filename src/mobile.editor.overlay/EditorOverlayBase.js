@@ -577,7 +577,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 		var $actions = $( '<div>' ).addClass( 'actions' ),
 			// Use MediaWiki ResourceLoader require(), not Webpack require()
 			contLangMessages = (
-				// eslint-disable-next-line camelcase
+
 				__non_webpack_require__( './contLangMessages.json' )
 			),
 			msg = this.gateway.wouldautocreate ?

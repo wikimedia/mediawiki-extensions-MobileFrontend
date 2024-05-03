@@ -400,7 +400,7 @@ OverlayManager.getSingleton = function () {
 			// eslint-disable-next-line no-restricted-properties
 			window.history.replaceState( null, null, '#' );
 			// eslint-disable-next-line no-restricted-properties
-			window.history.pushState( MANAGED_STATE, null, `#${hash}` );
+			window.history.pushState( MANAGED_STATE, null, `#${ hash }` );
 		}
 		overlayManager = new OverlayManager( router, container );
 	}

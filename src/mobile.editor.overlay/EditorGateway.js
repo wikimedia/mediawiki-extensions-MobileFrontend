@@ -296,7 +296,9 @@ EditorGateway.prototype = {
 				return util.Deferred().reject();
 			}
 		} ).promise( {
-			abort: function () { self._pending.abort(); }
+			abort: function () {
+				self._pending.abort();
+			}
 		} );
 	}
 };

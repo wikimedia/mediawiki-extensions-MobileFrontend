@@ -11,7 +11,9 @@ QUnit.module( 'MobileFrontend mfExtend.test.js', {
 		oo.setUp( sandbox, global );
 		mfExtend = require( '../../../src/mobile.startup/mfExtend' );
 	},
-	afterEach: function () { sandbox.restore(); }
+	afterEach: function () {
+		sandbox.restore();
+	}
 } );
 
 QUnit.test( 'mfExtend() - extending from constructor', function ( assert ) {

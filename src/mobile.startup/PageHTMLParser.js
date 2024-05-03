@@ -2,9 +2,9 @@ const
 	Thumbnail = require( './Thumbnail' ),
 	HEADING_SELECTOR = mw.config.get( 'wgMFMobileFormatterHeadings', [ 'h1', 'h2', 'h3', 'h4', 'h5' ] ).join( ',' ),
 	EXCLUDE_THUMBNAIL_CLASS_SELECTORS = [ 'noviewer', 'metadata' ],
-	NOT_SELECTORS = EXCLUDE_THUMBNAIL_CLASS_SELECTORS.map( ( excludeSelector ) => `:not(.${excludeSelector})` ).join( '' ),
+	NOT_SELECTORS = EXCLUDE_THUMBNAIL_CLASS_SELECTORS.map( ( excludeSelector ) => `:not(.${ excludeSelector })` ).join( '' ),
 	THUMB_SELECTOR = [ 'a.image', 'a.thumbimage, a.mw-file-description' ].map(
-		( selector ) => `${selector}${NOT_SELECTORS}`
+		( selector ) => `${ selector }${ NOT_SELECTORS }`
 	).join( ',' );
 
 class PageHTMLParser {

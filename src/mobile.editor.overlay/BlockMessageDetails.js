@@ -12,6 +12,7 @@ class BlockMessageDetails extends View {
 	get isTemplateMode() {
 		return true;
 	}
+
 	/**
 	 * @inheritdoc
 	 */
@@ -75,6 +76,7 @@ class BlockMessageDetails extends View {
 			expiryHeader: mw.msg( 'mobile-frontend-editor-blocked-drawer-expiry-header' )
 		};
 	}
+
 	/**
 	 * Configure the call to action depending on the type of block.
 	 *
@@ -115,6 +117,7 @@ class BlockMessageDetails extends View {
 
 		return config;
 	}
+
 	/**
 	 * @inheritdoc
 	 */
@@ -132,6 +135,7 @@ class BlockMessageDetails extends View {
 			drawer.$el.find( '.block-message-reason div' ).html( htmlReason );
 		} );
 	}
+
 	/**
 	 * @inheritdoc
 	 */

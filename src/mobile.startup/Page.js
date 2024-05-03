@@ -74,6 +74,7 @@ class Page {
 	getDisplayTitle() {
 		return this.displayTitle;
 	}
+
 	/**
 	 * Determine if current page is in a specified namespace
 	 *
@@ -137,6 +138,7 @@ class Page {
 	isMainPage() {
 		return this._isMainPage;
 	}
+
 	/**
 	 * Checks whether the current page is watched
 	 *

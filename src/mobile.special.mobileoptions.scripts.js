@@ -42,7 +42,7 @@ function addClientPreferencesToForm( $form, clientPreferences ) {
 	const id = 'mf-client-preferences';
 	cp.id = id;
 	$form.prepend( cp );
-	return clientPrefs.render( `#${id}`, clientPreferences, true );
+	return clientPrefs.render( `#${ id }`, clientPreferences, true );
 }
 
 /**
@@ -156,15 +156,15 @@ function initMobileOptions() {
 	// the documentElement.
 	// FIXME: We can remove the NIGHT_MODE_THEME_LEGACY reference once T359983 is resolved.
 	const docClass = document.documentElement.getAttribute( 'class' );
-	if ( docClass.indexOf( `${NIGHT_MODE_THEME_LEGACY}-clientpref` ) > -1 ) {
+	if ( docClass.indexOf( `${ NIGHT_MODE_THEME_LEGACY }-clientpref` ) > -1 ) {
 		clientPreferences[ NIGHT_MODE_THEME_LEGACY ] = {
 			options: [ '2', '0', '1' ],
-			preferenceKey: `${skin}-night-mode`
+			preferenceKey: `${ skin }-night-mode`
 		};
 	} else {
 		clientPreferences[ THEME ] = {
 			options: [ 'day', 'night', 'os' ],
-			preferenceKey: `${skin}-theme`
+			preferenceKey: `${ skin }-theme`
 		};
 	}
 

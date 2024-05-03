@@ -160,7 +160,7 @@ module.exports = ( env, argv ) => ( {
 
 		// Rename source map extensions. Per T173491 files with a .map extension cannot be served
 		// from prod.
-		sourceMapFilename: `[file]${srcMapExt}`,
+		sourceMapFilename: `[file]${ srcMapExt }`,
 
 		// Expose the module.exports of each module entry chunk through the global
 		// mfModules[name].

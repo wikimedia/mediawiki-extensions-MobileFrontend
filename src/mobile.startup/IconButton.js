@@ -54,13 +54,13 @@ mfExtend( IconButton, View, {
 			classes += 'cdx-button--fake-button cdx-button--fake-button--enabled ';
 		}
 		if ( size ) {
-			classes += `cdx-button--size-${size} `;
+			classes += `cdx-button--size-${ size } `;
 		}
 		if ( weight ) {
-			classes += `cdx-button--weight-${weight} `;
+			classes += `cdx-button--weight-${ weight } `;
 		}
 		if ( action ) {
-			classes += `cdx-button--action-${action} `;
+			classes += `cdx-button--action-${ action } `;
 		}
 		if ( isIconOnly ) {
 			classes += 'cdx-button--icon-only ';

@@ -48,7 +48,7 @@ function createPromoCampaign(
 	const ACTIONS_TO_STORAGE_KEYS = {};
 	for ( const key in actions ) {
 		const a = actions[ key ];
-		ACTIONS_TO_STORAGE_KEYS[a] = `mobile-frontend-${campaignName}-ineligible-${a}`;
+		ACTIONS_TO_STORAGE_KEYS[a] = `mobile-frontend-${ campaignName }-ineligible-${ a }`;
 	}
 
 	/**
@@ -65,7 +65,7 @@ function createPromoCampaign(
 	function validateAction( action ) {
 		if ( !( action in actions ) ) {
 			throw new Error(
-				`Action '${action}' not found in 'actions' object. Please add this to
+				`Action '${ action }' not found in 'actions' object. Please add this to
 				the object when creating a campaign with promoCampaign.js if you believe
 				this is a valid action.`
 			);

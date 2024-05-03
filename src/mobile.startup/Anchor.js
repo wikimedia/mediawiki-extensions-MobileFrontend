@@ -14,6 +14,7 @@ class Anchor extends View {
 	get isTemplateMode() {
 		return true;
 	}
+
 	/**
 	 * @memberof Anchor
 	 * @instance
@@ -34,6 +35,7 @@ class Anchor extends View {
 			label: undefined
 		};
 	}
+
 	/**
 	 * @inheritdoc
 	 */
