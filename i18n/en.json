@@ -37,7 +37,7 @@
 			"Yuvaraj Pandian"
 		]
 	},
-	"abusefilter-edit-builder-vars-user-mobile": "Whether or not a user is editing through the mobile interface",
+	"abusefilter-edit-builder-vars-user-mobile": "Whether or not a user is editing through the mobile interface ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "Enter confirmation code",
 	"mobile-frontend-changeslist-nocomment": "no edit summary",
 	"mobile-frontend-clear-search": "Clear",
