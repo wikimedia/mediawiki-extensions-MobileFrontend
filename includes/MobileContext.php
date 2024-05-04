@@ -237,14 +237,6 @@ class MobileContext extends ContextSource {
 			$mode = '';
 		}
 		$services = MediaWikiServices::getInstance();
-		$stats = $services->getStatsdDataFactory();
-		// Update statistics
-		if ( $mode === self::MODE_BETA ) {
-			$stats->updateCount( 'mobile.opt_in_cookie_set', 1 );
-		}
-		if ( !$mode ) {
-			$stats->updateCount( 'mobile.opt_in_cookie_unset', 1 );
-		}
 		$this->mobileMode = $mode;
 
 		$user = $this->getUser();
