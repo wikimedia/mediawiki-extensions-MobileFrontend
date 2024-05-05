@@ -42,7 +42,7 @@
 	"mobile-frontend-changeslist-nocomment": "no edit summary",
 	"mobile-frontend-clear-search": "Clear",
 	"mobile-frontend-copyright": "Content is available under $1 unless otherwise noted.",
-	"mobile-frontend-desc": "Mobile Frontend",
+	"mobile-frontend-desc": "Helps improve the mobile presence of a MediaWiki instance",
 	"mobile-frontend-edit-login-action": "<strong>Help improve {{SITENAME}}.</strong><br />Log in to edit.",
 	"mobile-frontend-edit-signup-action": "<strong>Help improve {{SITENAME}}.</strong><br />Sign up to edit.",
 	"mobile-frontend-editor-anon": "Edit without logging in",
