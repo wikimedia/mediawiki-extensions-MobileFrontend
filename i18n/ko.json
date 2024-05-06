@@ -35,7 +35,7 @@
 			"아라"
 		]
 	},
-	"abusefilter-edit-builder-vars-user-mobile": "사용자가 모바일 인터페이스를 통해 편집하고 있는지 여부",
+	"abusefilter-edit-builder-vars-user-mobile": "사용자가 모바일 인터페이스를 통해 편집하고 있는지 여부 ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "인증 코드를 입력하세요",
 	"mobile-frontend-changeslist-nocomment": "편집 요약 없음",
 	"mobile-frontend-clear-search": "지우기",

@@ -18,7 +18,7 @@
 			"Сербијана"
 		]
 	},
-	"abusefilter-edit-builder-vars-user-mobile": "Без обзира да ли корисник уређује преко мобилног интерфејса",
+	"abusefilter-edit-builder-vars-user-mobile": "Без обзира да ли корисник уређује преко мобилног интерфејса ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "Унесите потврдни код",
 	"mobile-frontend-changeslist-nocomment": "нема описа измене",
 	"mobile-frontend-clear-search": "Обриши",

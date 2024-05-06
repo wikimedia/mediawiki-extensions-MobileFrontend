@@ -23,7 +23,7 @@
 			"קיפודנחש"
 		]
 	},
-	"abusefilter-edit-builder-vars-user-mobile": "האם משתמש עורך דרך הממשק למכשירים ניידים או לא",
+	"abusefilter-edit-builder-vars-user-mobile": "האם משתמש עורך דרך הממשק למכשירים ניידים או לא ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "נא להזין קוד ביטחון",
 	"mobile-frontend-changeslist-nocomment": "אין תקציר עריכה",
 	"mobile-frontend-clear-search": "ניקוי",

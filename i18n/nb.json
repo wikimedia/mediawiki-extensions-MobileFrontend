@@ -21,7 +21,7 @@
 			"Tarjeimo"
 		]
 	},
-	"abusefilter-edit-builder-vars-user-mobile": "Hvorvidt en bruker redigerer fra mobilgrensesnittet",
+	"abusefilter-edit-builder-vars-user-mobile": "Hvorvidt en bruker redigerer fra mobilgrensesnittet ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "Skriv inn bekreftelseskode",
 	"mobile-frontend-changeslist-nocomment": "ingen redigeringsforklaring",
 	"mobile-frontend-clear-search": "Tøm",

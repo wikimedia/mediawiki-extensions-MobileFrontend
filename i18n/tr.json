@@ -44,7 +44,7 @@
 			"Zolgoyo"
 		]
 	},
-	"abusefilter-edit-builder-vars-user-mobile": "Bir kullanıcının mobil arayüz üzerinden değişiklik yapıp yapmadığı",
+	"abusefilter-edit-builder-vars-user-mobile": "Bir kullanıcının mobil arayüz üzerinden değişiklik yapıp yapmadığı ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "Onay kodunu girin",
 	"mobile-frontend-changeslist-nocomment": "düzenleme özeti yok",
 	"mobile-frontend-clear-search": "Temizle",

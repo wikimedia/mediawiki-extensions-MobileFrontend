@@ -12,6 +12,7 @@
 			"EugeneZelenko",
 			"Fryed-peach",
 			"Jdlrobson",
+			"Jon Harald Søby",
 			"JoostBotman",
 			"Kghbln",
 			"Liuxinyu970226",
@@ -44,7 +45,7 @@
 			"아라"
 		]
 	},
-	"abusefilter-edit-builder-vars-user-mobile": "AbuseFilter extension rule variable that allows distinguishing edits based on if they have been made using the editor of MobileFrontend or not. ($1 is the text that will be inserted into the filter code editor.)",
+	"abusefilter-edit-builder-vars-user-mobile": "AbuseFilter extension rule variable that allows distinguishing edits based on if they have been made using the editor of MobileFrontend or not.\n\nParameters:\n* $1 - text that will be inserted into the filter code editor",
 	"mobile-frontend-account-create-captcha-placeholder": "Placeholder for captcha input field",
 	"mobile-frontend-changeslist-nocomment": "Text to mark an empty edit summary in mobile watchlist/history/recentchanges overview.",
 	"mobile-frontend-clear-search": "Tooltip for clear button that appears when you type into search box.\n{{Identical|Clear}}",
