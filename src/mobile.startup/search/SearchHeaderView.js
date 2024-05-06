@@ -28,6 +28,7 @@ class SearchHeaderView extends View {
 			} )
 		);
 	}
+
 	/** @inheritdoc */
 	onInput( ev ) {
 		const query = ev.target.value;
@@ -38,10 +39,12 @@ class SearchHeaderView extends View {
 			this.clearIcon.$el.hide();
 		}
 	}
+
 	/** @inheritdoc */
 	get isTemplateMode() {
 		return true;
 	}
+
 	/** @inheritdoc */
 	get template() {
 		return util.template( `<div class="overlay-title search-header-view">
@@ -53,6 +56,7 @@ class SearchHeaderView extends View {
 		</form>
 </div>` );
 	}
+
 	/** @inheritdoc */
 	postRender() {
 		const clearIcon = new IconButton( {

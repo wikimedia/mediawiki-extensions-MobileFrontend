@@ -51,7 +51,7 @@ const icons = {
 	 * @return {IconButton}
 	 */
 	cancel( variant, props = {} ) {
-		var glyph = variant ? `${CANCEL_GLYPH}-${variant}` : `${CANCEL_GLYPH}`;
+		var glyph = variant ? `${ CANCEL_GLYPH }-${ variant }` : `${ CANCEL_GLYPH }`;
 		props.additionalClassNames = props.additionalClassNames || '';
 		props.additionalClassNames += ' cancel';
 

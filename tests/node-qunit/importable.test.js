@@ -71,5 +71,5 @@ QUnit.test( 'All our code is importable in headless Node.js', ( assert ) => {
 		}
 	}
 	assert.strictEqual( errors.length, 0,
-		`There were no errors when importing any of the modules:\n\n${errors.join( '\n' )}` );
+		`There were no errors when importing any of the modules:\n\n${ errors.join( '\n' ) }` );
 } );

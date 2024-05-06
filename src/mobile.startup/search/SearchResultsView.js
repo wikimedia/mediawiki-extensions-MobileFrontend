@@ -20,6 +20,7 @@ class SearchResultsView extends View {
 	get isTemplateMode() {
 		return true;
 	}
+
 	/** @inheritdoc */
 	get template() {
 		return util.template( `
@@ -43,6 +44,7 @@ class SearchResultsView extends View {
 </div>`
 		);
 	}
+
 	/** @inheritdoc */
 	preRender() {
 		const feedbackLink = mw.config.get( 'wgCirrusSearchFeedbackLink' );
@@ -51,6 +53,7 @@ class SearchResultsView extends View {
 				prompt: mw.msg( 'mobile-frontend-search-feedback-prompt' ) };
 		}
 	}
+
 	/** @inheritdoc */
 	postRender( options ) {
 		const feedbackLink = mw.config.get( 'wgCirrusSearchFeedbackLink' );

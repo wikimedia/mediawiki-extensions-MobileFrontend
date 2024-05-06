@@ -9,7 +9,6 @@ var browser = require( './Browser' ).getSingleton(),
 	Icon = require( './Icon' );
 
 /**
- *
  * @typedef {Object} ToggledEvent
  * @prop {boolean} expanded True if section is opened, false if closed.
  * @prop {Page} page

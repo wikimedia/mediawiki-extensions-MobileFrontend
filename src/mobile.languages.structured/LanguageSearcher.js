@@ -212,7 +212,7 @@ mfExtend( LanguageSearcher, View, {
 			this.$languageItems.addClass( 'hidden' );
 			if ( filteredList.length ) {
 				this.$siteLinksList.find(
-					`.${mw.util.escapeRegExp( filteredList.join( ',.' ) )}`
+					`.${ mw.util.escapeRegExp( filteredList.join( ',.' ) ) }`
 				).removeClass( 'hidden' );
 				this.$emptyResultsSection.addClass( 'hidden' );
 			} else {

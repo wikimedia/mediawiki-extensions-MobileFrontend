@@ -58,12 +58,20 @@ function apply2( fn1, fn2 ) {
 
 $window
 	.on( 'resize', apply2(
-		mw.util.debounce( function () { eventBus.emit( 'resize' ); }, 100 ),
-		mw.util.throttle( function () { eventBus.emit( 'resize:throttled' ); }, 200 )
+		mw.util.debounce( function () {
+			eventBus.emit( 'resize' );
+		}, 100 ),
+		mw.util.throttle( function () {
+			eventBus.emit( 'resize:throttled' );
+		}, 200 )
 	) )
 	.on( 'scroll', apply2(
-		mw.util.debounce( function () { eventBus.emit( 'scroll' ); }, 100 ),
-		mw.util.throttle( function () { eventBus.emit( 'scroll:throttled' ); }, 200 )
+		mw.util.debounce( function () {
+			eventBus.emit( 'scroll' );
+		}, 100 ),
+		mw.util.throttle( function () {
+			eventBus.emit( 'scroll:throttled' );
+		}, 200 )
 	) );
 
 // Hide URL flags used to pass state through reloads

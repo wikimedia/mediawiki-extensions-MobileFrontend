@@ -113,7 +113,7 @@ mfExtend( Drawer, View, {
 				.addClass( 'drawer-container__mask' ),
 			// eslint-disable-next-line mediawiki/class-doc
 			$drawer = util.parseHTML( '<div>' )
-				.addClass( `drawer drawer-container__drawer position-fixed ${this.drawerClassName}`.trim() );
+				.addClass( `drawer drawer-container__drawer position-fixed ${ this.drawerClassName }`.trim() );
 
 		if ( props.showCollapseIcon ) {
 			// append the collapse icon at the top of the drawer

@@ -19,7 +19,7 @@ function makeHeader( headingOrView, headerActions, headerCancel, additionalClass
 			heading
 		},
 		html = util.template( `
-<div class="overlay-header header ${additionalClassNames || ''} hideable">
+<div class="overlay-header header ${ additionalClassNames || '' } hideable">
 	<ul class="header-cancel">
 		<li></li>
 	</ul>
@@ -57,7 +57,7 @@ function makeHeader( headingOrView, headerActions, headerCancel, additionalClass
  * @return {Element}
  */
 function header( heading, headerActions, headerCancel, additionalClassNames ) {
-	heading = `<div class="overlay-title"><h2>${heading}</h2></div>`;
+	heading = `<div class="overlay-title"><h2>${ heading }</h2></div>`;
 	return makeHeader( heading, headerActions, headerCancel, additionalClassNames );
 }
 

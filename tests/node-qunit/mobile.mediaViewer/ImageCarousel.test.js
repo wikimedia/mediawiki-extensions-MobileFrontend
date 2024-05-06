@@ -46,15 +46,27 @@ QUnit.module( 'MobileFrontend mobile.mediaViewer/ImageCarousel.js', {
 		this.thumbnails = [
 			{
 				filename: 'foo',
-				getFileName: function () { return ''; },
-				getPath: function () { return ''; },
-				getDescription: function () { return ''; }
+				getFileName: function () {
+					return '';
+				},
+				getPath: function () {
+					return '';
+				},
+				getDescription: function () {
+					return '';
+				}
 			},
 			{
 				filename: 'bar',
-				getFileName: function () { return ''; },
-				getPath: function () { return ''; },
-				getDescription: function () { return ''; }
+				getFileName: function () {
+					return '';
+				},
+				getPath: function () {
+					return '';
+				},
+				getDescription: function () {
+					return '';
+				}
 			}
 		];
 	},

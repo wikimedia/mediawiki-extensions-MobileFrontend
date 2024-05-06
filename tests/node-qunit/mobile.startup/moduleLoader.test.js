@@ -13,7 +13,9 @@ QUnit.module( 'MobileFrontend ModuleLoader', {
 		ModuleLoader = require( '../../../src/mobile.startup/moduleLoader' );
 		this.loader = new ModuleLoader();
 	},
-	afterEach: function () { sandbox.restore(); }
+	afterEach: function () {
+		sandbox.restore();
+	}
 } );
 
 QUnit.test( '#require', function ( assert ) {

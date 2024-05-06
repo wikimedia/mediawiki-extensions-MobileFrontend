@@ -115,7 +115,9 @@ QUnit.module( 'MobileFrontend lazyImageLoader.js', {
 
 		sandbox.stub( global, 'Image' ).returns( image );
 		const deferred = lazyImageLoader.loadImages( [ placeholder, placeholder ] ).then(
-			function () { assert.true( true, 'Promise resolves.' ); }
+			function () {
+				assert.true( true, 'Promise resolves.' );
+			}
 		);
 		image.dispatchEvent( new Event( 'load' ) );
 
@@ -133,7 +135,9 @@ QUnit.module( 'MobileFrontend lazyImageLoader.js', {
 			.onFirstCall().returns( failureImage )
 			.onSecondCall().returns( successImage );
 		const deferred = lazyImageLoader.loadImages( [ placeholder, placeholder ] ).then(
-			function () { assert.true( true, 'Promise resolves.' ); }
+			function () {
+				assert.true( true, 'Promise resolves.' );
+			}
 		);
 		failureImage.dispatchEvent( new Event( 'error' ) );
 		successImage.dispatchEvent( new Event( 'load' ) );
