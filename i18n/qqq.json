@@ -50,7 +50,7 @@
 	"mobile-frontend-changeslist-nocomment": "Text to mark an empty edit summary in mobile watchlist/history/recentchanges overview.",
 	"mobile-frontend-clear-search": "Tooltip for clear button that appears when you type into search box.\n{{Identical|Clear}}",
 	"mobile-frontend-copyright": "A short sentence explaining that the content of the page is available under a particular license. Parameters:\n* $1 - license name\n{{Identical|Content is available under}}",
-	"mobile-frontend-desc": "{{desc|name=Mobile Frontend|url=https://www.mediawiki.org/wiki/Extension:MobileFrontend}}",
+	"mobile-frontend-desc": "{{desc|name=Mobile Frontend|url=https://www.mediawiki.org/wiki/Extension:MobileFrontend}}\n\n\"Instance\" can be translated as \"an installation\" or \"website\".",
 	"mobile-frontend-edit-login-action": "Message shown above the login form when it is reached from a link in the editor.",
 	"mobile-frontend-edit-signup-action": "Message shown above the signup form when it is reached from a link in the editor.",
 	"mobile-frontend-editor-anon": "Title for link to edit a page without logging in.",

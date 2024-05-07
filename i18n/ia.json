@@ -5,12 +5,12 @@
 			"Remux"
 		]
 	},
-	"abusefilter-edit-builder-vars-user-mobile": "Si un usator es o non es in curso de modification per le interfacie mobile",
+	"abusefilter-edit-builder-vars-user-mobile": "Si un usator es o non es in curso de modification per le interfacie mobile ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "Scribe codice de confirmation",
 	"mobile-frontend-changeslist-nocomment": "modification sin summario",
 	"mobile-frontend-clear-search": "Rader",
 	"mobile-frontend-copyright": "Le contento es disponibile sub $1 salvo indication contrari.",
-	"mobile-frontend-desc": "Interfacie pro apparatos mobile",
+	"mobile-frontend-desc": "Adjuta a meliorar le presentia mobile de un servitor MediaWiki",
 	"mobile-frontend-edit-login-action": "<strong>Adjuta a meliorar {{SITENAME}}.</strong><br />\nAperi session pro modificar.",
 	"mobile-frontend-edit-signup-action": "<strong>Adjuta a meliorar {{SITENAME}}.</strong><br />\nInscribe te pro modificar.",
 	"mobile-frontend-editor-anon": "Modificar sin aperir session",

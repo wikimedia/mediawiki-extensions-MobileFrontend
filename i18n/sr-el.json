@@ -16,7 +16,6 @@
 	"mobile-frontend-changeslist-nocomment": "nema opisa izmene",
 	"mobile-frontend-clear-search": "Obriši",
 	"mobile-frontend-copyright": "Sadržaj je dostupan pod licencom $1 osim ako je drugačije navedeno.",
-	"mobile-frontend-desc": "Korisnički interfejs za mobilne uređaje",
 	"mobile-frontend-edit-login-action": "<strong>Pomozite u poboljšavanju {{GRAMMAR:dativ|{{SITENAME}}}}.</strong><br />Prijavite se da biste uređivali.",
 	"mobile-frontend-edit-signup-action": "<strong>Pomozite u poboljšavanju {{GRAMMAR:dativ|{{SITENAME}}}}.</strong><br />Registrujte se da biste uređivali.",
 	"mobile-frontend-editor-anon": "Uredi bez prijave",

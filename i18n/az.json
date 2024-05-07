@@ -14,12 +14,12 @@
 			"Şeyx Şamil"
 		]
 	},
-	"abusefilter-edit-builder-vars-user-mobile": "İstifadəçinin mobil interfeys vasitəsilə redaktə edib-etməməsi",
+	"abusefilter-edit-builder-vars-user-mobile": "İstifadəçinin mobil interfeys vasitəsilə redaktə edib-etməməsi ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "Təsdiq kodu daxil et",
 	"mobile-frontend-changeslist-nocomment": "redaktənin izahı yoxdur",
 	"mobile-frontend-clear-search": "Təmizlə",
 	"mobile-frontend-copyright": "Əksi qeyd olunmayıbsa, bu məzmun $1 çərçivəsində yayımlanır.",
-	"mobile-frontend-desc": "Mobil Frontend",
+	"mobile-frontend-desc": "MediaWiki proqram təminatının mobil mövcudluğunu yaxşılaşdırmağa kömək edir",
 	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}} layihəsinin inkişafına kömək edin.</strong><br />Redaktə etmək üçün daxil olun.",
 	"mobile-frontend-edit-signup-action": "<strong>{{SITENAME}} layihəsinin inkişafına kömək edin.</strong><br />Redaktə etmək üçün qeydiyyatdan keçin.",
 	"mobile-frontend-editor-anon": "Daxil olmadan redaktə et",
