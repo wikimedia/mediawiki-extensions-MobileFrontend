@@ -18,7 +18,7 @@
 	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}} сайтны маджаллашдырыууна болушлукъ этигиз.</strong><br />Тюзетиу этер ючюн киригиз.",
 	"mobile-frontend-edit-signup-action": "<strong>{{SITENAME}} сайтны маджаллашдырыууна болушлукъ этигиз.</strong><br />Тюзетиу этер ючюн регистрация этигиз.",
 	"mobile-frontend-editor-anon": "Олтуруу ачхмагъанлай тюзет",
-	"mobile-frontend-editor-anonwarning": "<strong>Эс бёлюгюз!</strong> Сиз системагъа кирмегенсиз. Тюрлендириу этсегиз, сизни IP-адресигиз бу бетни тюрлениу тарихине джазыллыкъды эмда ачыкъ кёрюннюкдю. Сиз <strong>кирсегиз</strong> неда <strong>хыйсаб къурасагъыз</strong>, тюрлендириулеригиз аны орнуна къошулуучу атыгъыз бла байламлы боллукъдула эмда башха онглулукъларыгъыз боллукъду.",
+	"mobile-frontend-editor-anonwarning": "<strong>Эс бёлюгюз:</strong> Системагъа кирмегенсиз. Тюзетиу этсегиз, сизни IP-адресигиз бу бетни тюзетиу тарихине джазыллыкъды эмда хар ким да кёрюрча боллукъду. Системагъа <strong>[кирсегиз]</strong> неда <strong>[хыйсаб къурасагъыз]</strong>, тюзетиулеригиз аны орнуна хайырланыучу атыгъыз бла байламлы боллукъду, эмда башха онглулукъларыгъыз боллукъду.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Кир",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "ОК",
 	"mobile-frontend-editor-blocked-drawer-action-randompage": "Мени башха бетге элт",
