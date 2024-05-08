@@ -6,7 +6,8 @@
 			"Anasskoko",
 			"DonCamillo",
 			"Em-em",
-			"Gwanki"
+			"Gwanki",
+			"KwinK2ra"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Kodai ko a'a wani ma'aikaci yana gyara ta amfani da sigar wayar hannu",
@@ -14,7 +15,7 @@
 	"mobile-frontend-changeslist-nocomment": "babu gajeren bayani",
 	"mobile-frontend-clear-search": "Share",
 	"mobile-frontend-copyright": "Akwai ƙunshiyar a ƙarƙashin $1 har sai an sanar da akasin haka.",
-	"mobile-frontend-desc": "Siffar gaban wayar hannu",
+	"mobile-frontend-desc": "Yana taimakawa wajen inganta kasancewar wayar hannu ta misali MediaWiki",
 	"mobile-frontend-edit-login-action": "<strong>Taimaka inganta {{SITENAME}}.</strong><br />Shiga ciki zuwa gyara.",
 	"mobile-frontend-edit-signup-action": "<strong>Taimaka inganta {{SITENAME}}.</strong><br />Yi rijista dan fara gyara.",
 	"mobile-frontend-editor-anon": "Yi gyara ba tare da kun shiga ba",
