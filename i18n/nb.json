@@ -26,7 +26,7 @@
 	"mobile-frontend-changeslist-nocomment": "ingen redigeringsforklaring",
 	"mobile-frontend-clear-search": "Tøm",
 	"mobile-frontend-copyright": "Innholdet er tilgjengelig under $1 hvis ikke annet er angitt.",
-	"mobile-frontend-desc": "Mobilgrensesnitt",
+	"mobile-frontend-desc": "Hjelper til å forbedre den mobile tilstedeværelsen for en MediaWiki-instans",
 	"mobile-frontend-edit-login-action": "<strong>Hjelp til med å forbedre {{SITENAME}}.</strong><br />Logg inn for å redigere.",
 	"mobile-frontend-edit-signup-action": "<strong>Hjelp til med å forbedre {{SITENAME}}.</strong><br />Registrer deg for å redigere.",
 	"mobile-frontend-editor-anon": "Rediger uten å logge inn",
