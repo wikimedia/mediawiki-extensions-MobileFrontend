@@ -12,6 +12,7 @@ use MobileFrontend\Hooks\HookRunner;
 use MobileFrontend\Transforms\LazyImageTransform;
 use MobileFrontend\Transforms\MakeSectionsTransform;
 use MobileFrontend\Transforms\MoveLeadParagraphTransform;
+use MobileFrontend\Transforms\RemovableClassesTransform;
 use Wikibase\Client\WikibaseClient;
 use Wikibase\DataModel\Entity\ItemId;
 use Wikibase\DataModel\Services\Lookup\TermLookupException;
@@ -111,12 +112,7 @@ class ExtMobileFrontend {
 			return $html;
 		}
 
-		$formatter = new MobileFormatter(
-			MobileFormatter::wrapHtml( $html ),
-			$title,
-			$config,
-			$context
-		);
+		$formatter = new MobileFormatter( $html );
 
 		$hookRunner = new HookRunner( $services->getHookContainer() );
 		$hookRunner->onMobileFrontendBeforeDOM( $context, $formatter );
@@ -127,6 +123,19 @@ class ExtMobileFrontend {
 			$featureManager->isFeatureAvailableForCurrentUser( 'MFShowFirstParagraphBeforeInfobox' );
 
 		$transforms = [];
+		// Remove specified content in content namespaces
+		if ( in_array( $title->getNamespace(), $config->get( 'ContentNamespaces' ), true ) ) {
+			$mfRemovableClasses = $config->get( 'MFRemovableClasses' );
+			$removableClasses = $mfRemovableClasses['base'];
+			if ( $context->isBetaGroupMember() ) {
+				$removableClasses = array_unique(
+					array_merge( $removableClasses, $mfRemovableClasses['beta'] )
+				);
+			}
+
+			$transforms[] = new RemovableClassesTransform( $removableClasses );
+		}
+
 		if ( $enableSections ) {
 			$options = $config->get( 'MFMobileFormatterOptions' );
 			$topHeadingTags = $options['headings'];
