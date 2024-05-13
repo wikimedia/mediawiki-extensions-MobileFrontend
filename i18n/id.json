@@ -28,7 +28,8 @@
 			"William Surya Permana",
 			"WillsonEP09",
 			"David Wadie Fisher-Freberg",
-			"Stevannus rua"
+			"Stevannus rua",
+			"MarioMS"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Menentukan apakah pengguna menyunting melalui antarmuka seluler atau tidak",
@@ -174,7 +175,7 @@
 	"mobile-frontend-opt-in-explain": "{{SITENAME}} βeta adalah cara bagi Anda untuk mencoba fitur-fitur eksperimental dan memberikan kami umpan balik yang berharga",
 	"mobile-frontend-overlay-close": "Tutup",
 	"mobile-frontend-privacy-link-text": "Privasi",
-	"mobile-frontend-references-citation": "Kutipan",
+	"mobile-frontend-references-citation": "Sitasi",
 	"mobile-frontend-references-citation-error": "Terdapat galat sehingga tidak dapat memuat referensi ini.",
 	"mobile-frontend-references-list": "Lihat daftar referensi lengkap",
 	"mobile-frontend-requires-mobile": "Halaman ini tidak tersedia dalam tampilan PC. Silakan klik pranala tampilan HP di bagian bawah halaman.",
