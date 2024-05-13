@@ -11,12 +11,12 @@
 			"Yerpo"
 		]
 	},
-	"abusefilter-edit-builder-vars-user-mobile": "Ali uporabnik ureja prek mobilnega vmesnika ali ne",
+	"abusefilter-edit-builder-vars-user-mobile": "Ali uporabnik ureja prek mobilnega vmesnika ali ne ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "Vnesite potrditveno kodo",
 	"mobile-frontend-changeslist-nocomment": "brez povzetka urejanja",
 	"mobile-frontend-clear-search": "Počisti",
 	"mobile-frontend-copyright": "Vsebina je na voljo pod licenco $1, razen če je navedeno drugače.",
-	"mobile-frontend-desc": "Mobilni vmesnik",
+	"mobile-frontend-desc": "Pomaga izboljšati mobilno prisotnost primerka MediaWikija",
 	"mobile-frontend-edit-login-action": "<strong>Pomagajte izboljšati {{GRAMMAR:tožilnik|{{SITENAME}}}}.</strong><br />Prijavite se za urejanje.",
 	"mobile-frontend-edit-signup-action": "<strong>Pomagajte izboljšati {{GRAMMAR:tožilnik|{{SITENAME}}}}.</strong><br />Registrirajte se za urejanje.",
 	"mobile-frontend-editor-anon": "Urejanje brez prijave",
