@@ -8,12 +8,12 @@
 			"Къарачайлы"
 		]
 	},
-	"abusefilter-edit-builder-vars-user-mobile": "Бу хайырланыучуну мобил интерфейсни юсю бла тюзетиу этиб этмедиги",
+	"abusefilter-edit-builder-vars-user-mobile": "Бу хайырланыучуну мобил интерфейсни юсю бла тюзетиу этиб-этмедиги ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "Мюкюл кодну киргиз",
 	"mobile-frontend-changeslist-nocomment": "Тюрлендириуню ачыкълауу джокъду",
 	"mobile-frontend-clear-search": "Тазала",
 	"mobile-frontend-copyright": "Ичиндегиси,  $1 лицензиягъа кёре бериледи (башха белгиленмеген эсе).",
-	"mobile-frontend-desc": "Мобил интерфейс",
+	"mobile-frontend-desc": "MediaWiki программаны мобилде болууун маджаллашдырыргъа болушады",
 	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}} сайтны маджаллашдырыууна болушлукъ этигиз.</strong><br />Тюзетиу этер ючюн киригиз.",
 	"mobile-frontend-edit-signup-action": "<strong>{{SITENAME}} сайтны маджаллашдырыууна болушлукъ этигиз.</strong><br />Тюзетиу этер ючюн регистрация этигиз.",
 	"mobile-frontend-editor-anon": "Олтуруу ачхмагъанлай тюзет",
