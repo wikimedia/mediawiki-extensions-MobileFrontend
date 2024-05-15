@@ -5,6 +5,7 @@ var EditorOverlayBase = require( './EditorOverlayBase' ),
 	saveFailureMessage = require( './saveFailureMessage' ),
 	EditorGateway = require( './EditorGateway' ),
 	fakeToolbar = require( '../mobile.init/fakeToolbar' ),
+	MessageBox = require( '../mobile.startup/MessageBox' ),
 	mfExtend = require( '../mobile.startup/mfExtend' ),
 	setPreferredEditor = require( './setPreferredEditor' ),
 	VisualEditorOverlay = require( './VisualEditorOverlay' ),
@@ -281,10 +282,12 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 
 			hideSpinnerAndShowPreview();
 		}, function () {
-			self.$preview.addClass(
-				'mw-message-box mw-message-box-error'
-			).text( mw.msg( 'mobile-frontend-editor-error-preview' ) );
-
+			self.$preview.replaceWith(
+				new MessageBox( {
+					type: 'error',
+					msg: mw.msg( 'mobile-frontend-editor-error-preview' )
+				} ).$el
+			);
 			hideSpinnerAndShowPreview();
 		} );
 
@@ -301,8 +304,9 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 	_hidePreview: function () {
 		this.gateway.abortPreview();
 		this.hideSpinner();
+		// FIXME: Don't rely on internals - we re-render template instead.
 		this.$preview.removeClass(
-			'mw-message-box-error'
+			'cdx-message--error'
 		).hide();
 		this.$content.show();
 		window.scrollTo( 0, this.scrollTop );

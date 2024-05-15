@@ -26,7 +26,8 @@ function loadLanguageSearcher() {
 		} );
 	}, () =>
 		new MessageBox( {
-			className: 'mw-message-box-error content',
+			type: 'error',
+			className: 'content',
 			msg: mw.msg( 'mobile-frontend-languages-structured-overlay-error' )
 		} ) );
 }

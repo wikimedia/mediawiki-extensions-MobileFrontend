@@ -332,7 +332,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 */
 	reportError: function ( text ) {
 		var errorNotice = new MessageBox( {
-			className: 'mw-message-box-error',
+			type: 'error',
 			msg: text,
 			heading: mw.msg( 'mobile-frontend-editor-error' )
 		} );
@@ -585,7 +585,8 @@ mfExtend( EditorOverlayBase, Overlay, {
 				'mobile-frontend-editor-anonwarning',
 			$anonWarning = $( '<div>' ).addClass( 'anonwarning content' ).append(
 				new MessageBox( {
-					className: 'mw-message-box-notice anon-msg',
+					type: 'notice',
+					className: 'anon-msg',
 					// eslint-disable-next-line mediawiki/msg-doc
 					msg: mw.message( msg, contLangMessages[ 'tempuser-helppage' ] ).parse()
 				} ).$el,
