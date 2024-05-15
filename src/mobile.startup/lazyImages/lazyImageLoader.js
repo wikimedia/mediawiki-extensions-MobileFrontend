@@ -34,9 +34,16 @@ function loadImage( placeholder ) {
 	var
 		deferred = util.Deferred(),
 		// data-width and height are attributes and do not specify dimension.
-		width = placeholder.dataset.width || '0',
-		height = placeholder.dataset.height || '0',
-		image = new Image( parseInt( width, 10 ), parseInt( height, 10 ) );
+		width = placeholder.dataset.width,
+		height = placeholder.dataset.height,
+		image = new Image();
+
+	if ( width ) {
+		image.setAttribute( 'width', parseInt( width, 10 ) );
+	}
+	if ( height ) {
+		image.setAttribute( 'height', parseInt( height, 10 ) );
+	}
 
 	// eslint-disable-next-line mediawiki/class-doc
 	image.className = placeholder.dataset.class || '';
