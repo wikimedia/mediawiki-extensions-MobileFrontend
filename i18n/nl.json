@@ -108,6 +108,8 @@
 	"mobile-frontend-editor-toload": "De editor wordt nu geladen. Als u dit bericht na een paar seconden nog ziet, kunt u [$1 de pagina opnieuw laden].",
 	"mf-expand-sections-description": "Standaard altijd secties van inhoudspagina's uitvouwen.",
 	"mf-expand-sections-name": "Alle secties uitvouwen",
+	"mf-expand-sections-0-label": "Standaard inklappen",
+	"mf-expand-sections-1-label": "Standaard uitklappen",
 	"mf-font-size-name": "Tekst",
 	"mf-font-size-description": "Tekst aanpassen om de leesbaarheid te verbeteren.",
 	"mf-font-size-small-label": "Standaard",
