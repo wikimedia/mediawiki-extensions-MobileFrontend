@@ -196,5 +196,6 @@
 	"mobile-frontend-amc-outreach-enabled-message": "เปิดใช้งานโหมดขั้นสูงแล้ว คุณสามารถปิดใช้งานในการตั้งค่าของคุณ",
 	"mobile-frontend-amc-outreach-dismissed-message": "คุณสามารถเปิดใช้งานโหมดขั้นสูงตอนไหนก็ได้ในการตั้งค่าของคุณ",
 	"mobile-frontend-beta-only": "คุณสมบัตินี้มีเฉพาะในโหมดเบต้าเท่านั้น",
+	"mobile-frontend-console-recruit": "เรียนรู้เพิ่มเติมเกี่ยวกับวิธีที่เราสร้างไซต์มือถือของเราที่ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"prefs-mobile": "การตั้งค่าอุปกรณ์เคลื่อนที่"
 }

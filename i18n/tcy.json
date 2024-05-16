@@ -20,6 +20,7 @@
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|Joined}} ಇತ್ತೆ",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|Joined}} {{PLURAL:$2|$2 minute|$2 ಮಿನಿಟ್ಗ್}} ದುಂಬು",
 	"mobile-frontend-joined-hours": "{{GENDER:$1|Joined}} {{PLURAL:$2|$2 hour|$2 ಗಂಟೆಗ್}} ದುಂಬು",
+	"mobile-frontend-language-heading": "<strong>ಬಾಸೆಲು</strong>",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "ಬೇತೆ ಬಾಸೆలు",
 	"mobile-frontend-last-modified-date": "$1ಆನಿ, $2ಗ್ ಅಕೇರಿದ ಬದಲಾವಣೆ",
 	"mobile-frontend-last-modified-with-user-months": "[$4 ಅಕೆರಿದ {{GENDER:$1|ಸಂಪೊಲಿಪುನು}} {{PLURAL:$3|$3 month|$3 months}} ದುಂಬು]  {{PLURAL:$5|[$6 $2]|0=an anonymous user}} ಮಲ್ತೆರು.",
