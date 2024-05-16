@@ -34,12 +34,12 @@
 			"Тест"
 		]
 	},
-	"abusefilter-edit-builder-vars-user-mobile": "Чи користувач редагує через мобільний інтерфейс, чи ні",
+	"abusefilter-edit-builder-vars-user-mobile": "Чи користувач редагує через мобільний інтерфейс, чи ні ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "Введіть код підтвердження",
 	"mobile-frontend-changeslist-nocomment": "нема опису редагування",
 	"mobile-frontend-clear-search": "Очистити",
 	"mobile-frontend-copyright": "Вміст доступний на умовах $1, якщо не вказано інше.",
-	"mobile-frontend-desc": "Мобільний інтерфейс",
+	"mobile-frontend-desc": "Допомагає покращити мобільну присутність проєкту на MediaWiki",
 	"mobile-frontend-edit-login-action": "<strong>Допоможіть покращити {{GRAMMAR:Accusative|{{SITENAME}}}}.</strong><br />Увійдіть, щоб редагувати.",
 	"mobile-frontend-edit-signup-action": "<strong>Допоможіть покращити {{GRAMMAR:Accusative|{{SITENAME}}}}.</strong><br />Зареєструйтеся для редагування.",
 	"mobile-frontend-editor-anon": "Редагувати без автентифікації",
