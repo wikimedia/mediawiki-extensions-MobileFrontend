@@ -113,7 +113,7 @@ class MakeSectionsTransformTest extends MediaWikiIntegrationTestCase {
 		$className = "mf-section-$sectionNumber";
 
 		if ( $isCollapsible ) {
-			$className .= ' ' . MobileFormatter::STYLE_COLLAPSIBLE_SECTION_CLASS;
+			$className .= ' ' . MakeSectionsTransform::STYLE_COLLAPSIBLE_SECTION_CLASS;
 		}
 
 		return "<section class=\"$className\" id=\"mf-section-$sectionNumber\""

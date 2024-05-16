@@ -8,6 +8,9 @@ use MobileFrontend\Transforms\MoveLeadParagraphTransform;
 
 /**
  * @group MobileFrontend
+ * @covers MobileFormatter
+ * @covers \MobileFrontend\Transforms\MakeSectionsTransform
+ * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform
  */
 class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 	private const TOC = '<div id="toc" class="toc-mobile"><h2>Contents</h2></div>';
@@ -60,7 +63,7 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 		$className = "mf-section-$sectionNumber";
 
 		if ( $sectionNumber > 0 ) {
-			$className .= ' ' . MobileFormatter::STYLE_COLLAPSIBLE_SECTION_CLASS;
+			$className .= ' ' . MakeSectionsTransform::STYLE_COLLAPSIBLE_SECTION_CLASS;
 		}
 
 		return "<section class=\"$className\" id=\"mf-section-$sectionNumber\""
@@ -70,50 +73,25 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 	/**
 	 * @param string $input
 	 * @param string $expected
-	 * @param callable|bool $callback
-	 * @covers MobileFormatter::applyTransforms
-	 * @covers MobileFormatter::parseItemsToRemove
+	 * @param bool $skipSmallImages
+	 * @covers \MobileFrontend\Transforms\LazyImageTransform
 	 * @dataProvider provideHtmlTransform
 	 */
-	public function testHtmlTransform( $input, $expected, $callback = false ) {
-		$t = Title::makeTitle( NS_MAIN, __METHOD__ );
-
-		// "yay" to Windows!
-		$input = str_replace( "\r", '', $input );
+	public function testHtmlTransform( $input, $expected, $skipSmallImages = false ) {
+		$title = Title::makeTitle( NS_MAIN, __METHOD__ );
 
 		$mf = new MobileFormatter(
-			MobileFormatter::wrapHTML( $input ), $t, $this->mfConfig, $this->mfContext
+			MobileFormatter::wrapHTML( $input ), $title, $this->mfConfig, $this->mfContext
 		);
 
-		$transforms = $callback ? $callback( $t ) : [];
+		$transforms = self::buildTransforms( $title, $skipSmallImages );
 		$mf->applyTransforms( $transforms );
 
 		$html = $mf->getText();
 		$this->assertEquals( str_replace( "\n", '', $expected ), str_replace( "\n", '', $html ) );
 	}
 
-	/**
-	 * @covers MobileFormatter::applyTransforms
-	 */
-	public function testHtmlTransformWhenSkippingLazyLoadingSmallImages() {
-		$smallPic = '<img src="smallPicture.jpg" style="width: 4.4ex; height:3.34ex;">';
-		$enableSections = function ( Title $t ) {
-			return self::buildTransforms( [ 'h1', 'h2' ], true, $t, true, false, false );
-		};
-
-		$this->testHtmlTransform(
-			'<p>text</p><h2>heading 1</h2>' . $smallPic,
-			self::makeSectionHtml( 0, '<p>text</p>' )
-			. self::makeSectionHeading( 'h2', 'heading 1' )
-			. self::makeSectionHtml( 1, $smallPic ),
-			$enableSections
-		);
-	}
-
 	public static function provideHtmlTransform() {
-		$enableSections = static function ( Title $t ) {
-			return self::buildTransforms( [ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' ], false, $t, true, true, true );
-		};
 		$longLine = "\n" . str_repeat( 'A', 5000 );
 		$originalImage = '<img alt="foo" src="foo.jpg" width="100" '
 			. 'height="100" srcset="foo-1.5x.jpg 1.5x, foo-2x.jpg 2x">';
@@ -124,6 +102,7 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 			. '&nbsp;'
 			. '</span>';
 		$noscript = '<noscript><img alt="foo" src="foo.jpg" width="100" height="100"></noscript>';
+		$smallPic = '<img src="smallPicture.jpg" style="width: 4.4ex; height:3.34ex;">';
 
 		return [
 			// Nested headings are not wrapped
@@ -136,18 +115,8 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 						. '<h2>Heading</h2>I am awesome</div>Text' )
 					. self::makeSectionHeading( 'h2', 'test' )
 					. self::makeSectionHtml( 1, '<p>more text</p>' ),
-				$enableSections,
-				false
 			],
 			// # Lazy loading images
-			// Main page not impacted
-			[
-				'<div>a</div><h2>Today</h2>' . $originalImage . '<h2>Tomorrow</h2>Test.',
-				'<div>a</div><h2>Today</h2>' . $originalImage . '<h2>Tomorrow</h2>Test.',
-				// use default formatter
-				false,
-				true,
-			],
 			// Lead section images not impacted
 			[
 				'<p>' . $originalImage . '</p><h2>heading 1</h2><p>text</p>'
@@ -157,8 +126,15 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 					. self::makeSectionHtml( 1, '<p>text</p>' )
 					. self::makeSectionHeading( 'h2', 'heading 2', 2 )
 					. self::makeSectionHtml( 2, 'abc' ),
-				$enableSections,
-				true,
+			],
+			// Small images not impacted when configured
+			[
+				'<p>text</p><h2>heading 1</h2>' . $smallPic,
+				self::makeSectionHtml( 0, '<p>text</p>' )
+					. self::makeSectionHeading( 'h2', 'heading 1' )
+					. self::makeSectionHtml( 1, $smallPic ),
+				// Skip small images
+				true
 			],
 			// Test lazy loading of images outside the lead section
 			[
@@ -171,8 +147,6 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 					)
 					. self::makeSectionHeading( 'h2', 'heading 2', 2 )
 					. self::makeSectionHtml( 2, 'abc' ),
-				$enableSections,
-				true,
 			],
 			// https://phabricator.wikimedia.org/T130025, last section filtered
 			[
@@ -185,8 +159,6 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 					)
 					. self::makeSectionHeading( 'h2', 'heading 2', 2 )
 					. self::makeSectionHtml( 2, $noscript . $placeholder ),
-				$enableSections,
-				true,
 			],
 
 			// # Section wrapping
@@ -201,7 +173,6 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 						. '<a class="edit-page" href="#editor/2">Edit</a>'
 					)
 					. self::makeSectionHtml( 1, $longLine ),
-				$enableSections
 			],
 			// \n</h3> in headers
 			[
@@ -215,7 +186,6 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 						. '<h4><span>h4</span></h4>'
 						. 'h4 text.'
 					),
-				$enableSections
 			],
 			// \n</h6> in headers
 			[
@@ -224,7 +194,6 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 				self::makeSectionHtml( 0, '' )
 					. self::makeSectionHeading( 'h6', '<span>h6</span>' )
 					. self::makeSectionHtml( 1, $longLine ),
-				$enableSections
 			],
 			// T38670
 			[
@@ -237,7 +206,6 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 						. 'History</span><a class="edit-page" href="#editor/2">Edit</a>'
 					)
 				. self::makeSectionHtml( 1, $longLine ),
-				$enableSections
 			],
 
 			// Infobox and the first paragraph in lead section transformations
@@ -252,8 +220,6 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 					1,
 					'<p>paragraph 3</p>'
 				),
-
-				$enableSections, false, true,
 			],
 			[
 				// hat-note, lead section, no infobox, another section
@@ -274,8 +240,6 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 					1,
 					'<p>paragraph 3</p>'
 				),
-
-				$enableSections, false, true,
 			],
 			[
 				// hat-note, lead section, infobox, another section
@@ -298,8 +262,6 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 					1,
 					'<p>paragraph 3</p>'
 				),
-
-				$enableSections, false, true,
 			],
 			[
 				// first paragraph is already before the lead section
@@ -320,8 +282,6 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 					1,
 					'<p>paragraph 3</p>'
 				),
-
-				$enableSections, false, true,
 			],
 			[
 				// infobox, but no paragraphs in the lead section
@@ -338,8 +298,6 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 					1,
 					'<p>paragraph 1</p>'
 				),
-
-				$enableSections, false, true,
 			],
 			[
 				// no lead section, infobox after the first section
@@ -354,8 +312,6 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 					'<p>paragraph 1</p>' .
 					'<table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox</td></tr></table>'
 				),
-
-				$enableSections, false, true,
 			],
 			[
 				// two infoboxes, lead section, another section
@@ -376,8 +332,6 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 					1,
 					'<p>paragraph 1</p>'
 				),
-
-				$enableSections, false, true,
 			],
 			[
 				// first paragraph (which has coordinates and is hidden on mobile),
@@ -394,8 +348,6 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 					'<p>paragraph 2</p>' .
 					'<table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox</td></tr></table>'
 				),
-
-				$enableSections, false, true,
 			],
 			[
 				// hatnote, infobox, thumbnail, lead section, another section
@@ -420,8 +372,6 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 					1,
 					'<p>paragraph 3</p>'
 				),
-
-				$enableSections, false, true,
 			],
 
 			[
@@ -443,8 +393,6 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 					1,
 					'<p>paragraph 3</p>'
 				),
-
-				$enableSections, false, true,
 			],
 
 			[
@@ -466,8 +414,6 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 					1,
 					'<p>paragraph 3</p>'
 				),
-
-				$enableSections, false, true,
 			],
 			[
 				// infobox, a paragraph, list element
@@ -481,7 +427,6 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 					'<p>paragraph</p><ol><li>item 1</li><li>item 2</li></ol>' .
 					'<table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox</td></tr></table>'
 				),
-				$enableSections, false, true,
 			],
 			[
 				// 2 hat-notes, ambox, 2 infoboxes, 2 paragraphs, another section
@@ -511,8 +456,6 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 					1,
 					'<p>paragraph 3</p>'
 				),
-
-				$enableSections, false, true,
 			],
 
 			[
@@ -529,8 +472,6 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 					'<table class="' . self::INFOBOX_CLASSNAME . '">' .
 					'<tr><td><p>SURPRISE PARAGRAPH</p></td></tr></table>'
 				),
-
-				$enableSections, false, true,
 			],
 
 			[
@@ -548,31 +489,25 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 					'<div><table class="' . self::INFOBOX_CLASSNAME . '"><tr><td>infobox</td></tr></table></div>' .
 					'<p>paragraph 1</p>'
 				),
-
-				$enableSections, false, true,
 			],
 		];
 	}
 
 	public static function buildTransforms(
-		$topHeadingTags,
-		$lazyLoadSkipImages,
 		$title,
-		bool $scriptsEnabled,
-		bool $shouldLazyTransformImages,
-		bool $showFirstParagraphBeforeInfobox
+		bool $lazyLoadSkipSmallImages = false,
+		$topHeadingTags = [ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' ],
+		bool $shouldLazyTransformImages = true,
+		bool $showFirstParagraphBeforeInfobox = true
 	) {
 		// Sectionify the content and transform it if necessary per section
 
 		$transforms = [];
 
-		$transforms[] = new MakeSectionsTransform(
-			$topHeadingTags,
-			$scriptsEnabled
-		);
+		$transforms[] = new MakeSectionsTransform( $topHeadingTags, true );
 
 		if ( $shouldLazyTransformImages ) {
-			$transforms[] = new LazyImageTransform( $lazyLoadSkipImages );
+			$transforms[] = new LazyImageTransform( $lazyLoadSkipSmallImages );
 		}
 
 		if ( $showFirstParagraphBeforeInfobox ) {
@@ -585,15 +520,14 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
-	 * @covers MobileFormatter::applyTransforms
 	 * @dataProvider provideSectionTransform
 	 */
 	public function testSectionTransform( array $topHeadingTags, $input, $expectedOutput ) {
-		$t = Title::makeTitle( NS_MAIN, __METHOD__ );
-		$formatter = new MobileFormatter( $input, $t, $this->mfConfig, $this->mfContext );
+		$title = Title::makeTitle( NS_MAIN, __METHOD__ );
+		$formatter = new MobileFormatter( $input, $title, $this->mfConfig, $this->mfContext );
 
 		$formatter->applyTransforms(
-			self::buildTransforms( $topHeadingTags, false, $t, true, false, false )
+			self::buildTransforms( $title, false, $topHeadingTags )
 		);
 
 		$this->assertEquals( $expectedOutput, $formatter->getText() );
@@ -648,8 +582,6 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 
 	/**
 	 * @see https://phabricator.wikimedia.org/T137375
-	 * @covers MobileFormatter::applyTransforms
-	 * @covers MobileFormatter::parseItemsToRemove
 	 */
 	public function testT137375() {
 		$input = '<p>Hello, world!</p><h2>Section heading</h2><ol class="references"></ol>';
@@ -664,16 +596,15 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 	/**
 	 * @see https://phabricator.wikimedia.org/T149884
 	 * @param string $input
-	 * @covers MobileFormatter::applyTransforms
 	 * @dataProvider provideLoggingOfInfoboxesBeingWrappedInContainersWhenWrapped
 	 */
 	public function testLoggingOfInfoboxesBeingWrappedInContainersWhenWrapped( $input ) {
 		$this->overrideConfigValue( 'MFLogWrappedInfoboxes', true );
-		$title = 'T149884';
-		$t = Title::makeTitle( NS_MAIN, $title );
+		$titleText = 'T149884';
+		$title = Title::makeTitle( NS_MAIN, $titleText );
 		$formatter = new MobileFormatter(
 			MobileFormatter::wrapHTML( $input ),
-			$t,
+			$title,
 			$this->mfConfig,
 			$this->mfContext
 		);
@@ -681,17 +612,15 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 		$loggerMock = $this->createMock( \Psr\Log\LoggerInterface::class );
 		$loggerMock->expects( $this->once() )
 			->method( 'info' )
-			->willReturnCallback( function ( $message ) use ( $title ) {
+			->willReturnCallback( function ( $message ) use ( $titleText ) {
 				// Debug message contains Page title
-				$this->assertStringContainsString( $title, $message );
+				$this->assertStringContainsString( $titleText, $message );
 				// and contains revision id
 				$this->assertStringContainsString( self::TITLE_REV_ID, $message );
 			} );
 
 		$this->setLogger( 'mobile', $loggerMock );
-		$formatter->applyTransforms(
-			self::buildTransforms( [], false, $t, false, false, true )
-		);
+		$formatter->applyTransforms( self::buildTransforms( $title ) );
 	}
 
 	public static function provideLoggingOfInfoboxesBeingWrappedInContainersWhenWrapped() {
@@ -708,18 +637,15 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 
 	/**
 	 * @see https://phabricator.wikimedia.org/T149884
-	 * @covers MobileFormatter::applyTransforms
-	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::logInfoboxesWrappedInContainers
 	 * @dataProvider provideLoggingOfInfoboxesBeingWrappedInContainersWhenNotWrapped
 	 */
 	public function testLoggingOfInfoboxesBeingWrappedInContainersWhenNotWrapped( $input ) {
 		$this->overrideConfigValue( 'MFLogWrappedInfoboxes', true );
-		$title = 'T149884';
 
-		$t = Title::makeTitle( NS_MAIN, $title );
+		$title = Title::makeTitle( NS_MAIN, 'T149884' );
 		$formatter = new MobileFormatter(
 			MobileFormatter::wrapHTML( $input ),
-			$t,
+			$title,
 			$this->mfConfig,
 			$this->mfContext
 		);
@@ -729,9 +655,7 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 			->method( 'info' );
 
 		$this->setLogger( 'mobile', $loggerMock );
-		$formatter->applyTransforms(
-			self::buildTransforms( [], false, $t, false, false, true )
-		);
+		$formatter->applyTransforms( self::buildTransforms( $title ) );
 	}
 
 	public static function provideLoggingOfInfoboxesBeingWrappedInContainersWhenNotWrapped() {
@@ -750,18 +674,16 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 
 	/**
 	 * @see https://phabricator.wikimedia.org/T163805
-	 * @covers MobileFormatter::applyTransforms
 	 */
 	public function testLoggingOfInfoboxesSkipsInfoBoxInsideInfobox() {
 		$this->overrideConfigValue( 'MFLogWrappedInfoboxes', true );
 
 		// wrapped inside different infobox
 		$input = self::buildInfoboxHTML( self::buildInfoboxHTML( 'test' ) );
-		$title = 'T163805';
-		$t = Title::makeTitle( NS_MAIN, $title );
+		$title = Title::makeTitle( NS_MAIN, 'T163805' );
 		$formatter = new MobileFormatter(
 			MobileFormatter::wrapHTML( $input ),
-			Title::makeTitle( NS_MAIN, $title ),
+			$title,
 			$this->mfConfig,
 			$this->mfContext
 		);
@@ -771,9 +693,7 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 			->method( 'info' );
 
 		$this->setLogger( 'mobile', $loggerMock );
-		$formatter->applyTransforms(
-			self::buildTransforms( [], false, $t, true, false, true )
-		);
+		$formatter->applyTransforms( self::buildTransforms( $title ) );
 	}
 
 	/**

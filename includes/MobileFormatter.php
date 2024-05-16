@@ -10,10 +10,6 @@ use Wikimedia\Parsoid\Utils\DOMCompat;
  * Converts HTML into a mobile-friendly version
  */
 class MobileFormatter extends HtmlFormatter {
-	/**
-	 * Class name for collapsible section wrappers
-	 */
-	public const STYLE_COLLAPSIBLE_SECTION_CLASS = 'collapsible-block';
 
 	/**
 	 * @var Title
