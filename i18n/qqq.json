@@ -194,7 +194,7 @@
 	"mobile-frontend-user-page-create-user-page-link-label": "Label of the edit button. $1 is the title of the page.",
 	"mobile.css": "{{optional}}\nSee also:\n* {{msg-mw|Mobile.js}} (Optional message)\n{{related/css}}",
 	"mobile.js": "{{optional}}\nSee also:\n* {{msg-mw|Mobile.css}} (Optional message)\n{{related/js}}",
-	"tag-mobile_edit": "Short change tag name for edits coming  from mobile (web or apps).\n\nSee also:\n* {{msg-mw|Tag-mobile edit-description}}",
+	"tag-mobile_edit": "Short change tag name for edits coming from mobile (web or apps).\n\nSee also:\n* {{msg-mw|Tag-mobile edit-description}}",
 	"tag-mobile_edit-description": "Short change tag description. for edits coming from mobile (web or apps).\n\nSee also:\n* {{msg-mw|Tag-mobile edit}}",
 	"tag-advanced_mobile_edit": "short change tag name for advanced mobile edits\n\nSee also:\n* {{msg-mw|tag-advanced_mobile_edit-description}}",
 	"tag-advanced_mobile_edit-description": "Change tag description for edits coming from users with advanced mobile contributions mode enabled \n\nSee also:\n* {{msg-mw|tag-advanced_mobile_edit}}",

@@ -11,6 +11,7 @@
 			"Kkairri",
 			"Kokage si",
 			"LaMagiaaa",
+			"Likibp",
 			"Los688",
 			"Marine-Blue",
 			"MathXplore",
@@ -41,12 +42,12 @@
 			"組曲師"
 		]
 	},
-	"abusefilter-edit-builder-vars-user-mobile": "利用者が携帯機器版インターフェイスで編集しているかどうか",
+	"abusefilter-edit-builder-vars-user-mobile": "利用者が携帯機器版インターフェイスで編集しているかどうか（$1）",
 	"mobile-frontend-account-create-captcha-placeholder": "確認コードを入力",
 	"mobile-frontend-changeslist-nocomment": "編集の要約なし",
 	"mobile-frontend-clear-search": "消去",
 	"mobile-frontend-copyright": "コンテンツは、特に記載されていない限り、$1のもとで利用可能です。",
-	"mobile-frontend-desc": "携帯機器フロントエンド",
+	"mobile-frontend-desc": "MediaWiki インスタンスのモバイルプレゼンスの向上を支援します。",
 	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}}改善に協力</strong><br />編集するにはログインしてください。",
 	"mobile-frontend-edit-signup-action": "<strong>{{SITENAME}}改善に協力</strong><br />編集するには利用者登録をしてください。",
 	"mobile-frontend-editor-anon": "ログインせずに編集",
