@@ -1076,13 +1076,19 @@ class MobileFrontendHooks implements
 	 * @param ParserOptions $parserOptions
 	 */
 	public function onArticleParserOptions( Article $article, ParserOptions $parserOptions ) {
-		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
-		$config = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Config' );
+		// while the parser is actively being migrated, we rely on the ParserMigration extension for using Parsoid
+		if ( ExtensionRegistry::getInstance()->isLoaded( 'ParserMigration' ) ) {
+			$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
+			$oracle = MediaWikiServices::getInstance()->getService( 'ParserMigration.Oracle' );
 
-		// set the collapsible sections parser flag so that section content is wrapped in a div for easier targeting
-		// only if we're in mobile view and the config flag is set
-		if ( $context->shouldDisplayMobileView() && $config->get( 'MFUseParsoid' ) ) {
-			$parserOptions->setCollapsibleSections();
+			$shouldUseParsoid =
+				$oracle->shouldUseParsoid( $context->getUser(), $context->getRequest(), $article->getTitle() );
+
+			// set the collapsible sections parser flag so that section content is wrapped in a div for easier targeting
+			// only if we're in mobile view and parsoid is enabled
+			if ( $context->shouldDisplayMobileView() && $shouldUseParsoid ) {
+				$parserOptions->setCollapsibleSections();
+			}
 		}
 	}
 

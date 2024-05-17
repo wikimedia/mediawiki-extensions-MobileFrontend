@@ -384,4 +384,32 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 			[ null, 'default-skin', 'default-skin' ]
 		];
 	}
+
+	public static function provideArticleParserOptions() {
+		return [
+			[ false, false, false ],
+			[ false, true, false ],
+			[ true, false, false ],
+			[ true, true, true ],
+		];
+	}
+
+	/**
+	 * @covers MobileFrontendHooks::onArticleParserOptions
+	 * @dataProvider provideArticleParserOptions
+	 */
+	public function testArticleParserOptions( bool $isMobile, bool $isParsoid, bool $expected ) {
+		// this section of the code depends on the ParserMigration extension being loaded
+		$this->markTestSkippedIfExtensionNotLoaded( 'ParserMigration' );
+
+		MobileContext::singleton()->setForceMobileView( $isMobile );
+		$this->overrideConfigValue( 'ParserMigrationEnableParsoidArticlePages', $isParsoid );
+
+		$article = new Article( Title::newMainPage() );
+		$parserOptions = ParserOptions::newFromAnon();
+
+		( new MobileFrontendHooks )->onArticleParserOptions( $article, $parserOptions );
+
+		$this->assertSame( $expected, $parserOptions->getCollapsibleSections() );
+	}
 }

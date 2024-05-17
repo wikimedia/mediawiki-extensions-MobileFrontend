@@ -729,10 +729,6 @@
 		"MFEditNoticesConflictingGadgetName": {
 			"value": "EditNoticesOnMobile",
 			"description": "Internal name of the 'edit notices on mobile' gadget, which conflicts with showEditNotices in EditorOverlay. showEditNotices will not run when the user has this gadget enabled."
-		},
-		"MFUseParsoid": {
-			"value": false,
-			"description": "(temporary) guard MobileFrontend's section collapsing logic behind a flag, while the boundaries of parsoid are resolved"
 		}
 	},
 	"DefaultUserOptions": {
