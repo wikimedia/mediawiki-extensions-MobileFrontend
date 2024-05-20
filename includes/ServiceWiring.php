@@ -60,6 +60,8 @@ return [
 		// * mobile-frontend-mobile-option-MFUseDesktopSpecialWatchlistPage-description
 		$manager->registerFeature( new Feature( 'MFUseDesktopSpecialWatchlistPage', 'mobile-frontend',
 			$config->get( 'MFUseDesktopSpecialWatchlistPage' ) ) );
+		$manager->registerFeature( new Feature( 'MFUseDesktopSpecialEditWatchlistPage', 'mobile-frontend',
+			$config->get( 'MFUseDesktopSpecialEditWatchlistPage' ) ) );
 		$manager->useHookToRegisterExtensionOrSkinFeatures();
 		return $manager;
 	},
