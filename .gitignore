@@ -5,11 +5,8 @@
 .idea/
 node_modules/
 tmp/
-/docs/js/
-/docs/lcov-report/
-/docs/lcov.info
-/docs/php/
-/docs/ui/
+/docs/*
+!/docs/*.md
 dev-scripts/remotes
 /vendor
 /composer.lock
