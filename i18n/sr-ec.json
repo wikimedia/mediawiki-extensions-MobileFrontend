@@ -23,6 +23,7 @@
 	"mobile-frontend-changeslist-nocomment": "нема описа измене",
 	"mobile-frontend-clear-search": "Обриши",
 	"mobile-frontend-copyright": "Садржај је доступан под лиценцом $1 осим ако је другачије наведено.",
+	"mobile-frontend-desc": "Унапређује мобилну варијанту Медијавикија",
 	"mobile-frontend-edit-login-action": "<strong>Помозите у побољшавању {{SITENAME}}.</strong><br />Пријавите се да бисте уређивали.",
 	"mobile-frontend-edit-signup-action": "<strong>Помозите у побољшавању {{SITENAME}}.</strong><br />Региструјте се да бисте уређивали.",
 	"mobile-frontend-editor-anon": "Уреди без пријаве",

@@ -10,12 +10,12 @@
 			"Y-M D"
 		]
 	},
-	"abusefilter-edit-builder-vars-user-mobile": "Hag-eñ emañ un implijer oc’h aozañ gant an etrefas hezoug",
+	"abusefilter-edit-builder-vars-user-mobile": "Mar bez un implijer oc’h aozañ gant an etrefas hezoug ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "Skrivit ar c'hod kadarnaat",
 	"mobile-frontend-changeslist-nocomment": "Diverradenn ebet eus ar c'hemm",
 	"mobile-frontend-clear-search": "Riñsañ",
 	"mobile-frontend-copyright": "Danvez a c'haller implijout dindan $1 nemet ha notet e vefe ar c'hontrol.",
-	"mobile-frontend-desc": "Talbenn evit an hezougoù",
+	"mobile-frontend-desc": "Skoazellañ a ra da wellaat ar c'heweriañ hezoug en un ensavadur MediaWiki",
 	"mobile-frontend-edit-login-action": "<strong>Sikourit da wellaat {{SITENAME}}.</strong><br />Kevreit evit aozañ.",
 	"mobile-frontend-edit-signup-action": "<strong>Sikourit da wellaat {{SITENAME}}.</strong><br />Krouit ur gont evit aozañ.",
 	"mobile-frontend-editor-anon": "Kemmañ hep kevreañ",
