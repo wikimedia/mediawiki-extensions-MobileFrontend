@@ -520,6 +520,13 @@
 		"MFEnableMobilePreferences": {
 			"value": false
 		},
+		"MFUseDesktopSpecialEditWatchlistPage": {
+			"value": {
+				"base": false,
+				"beta": false,
+				"amc": true
+			}
+		},
 		"MFUseDesktopSpecialWatchlistPage": {
 			"value": {
 				"base": false,

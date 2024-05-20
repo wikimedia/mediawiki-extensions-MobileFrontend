@@ -130,6 +130,22 @@ mobile preferences option.
     'amc' => true,
   ]
 ```
+#### $wgMFUseDesktopSpecialEditWatchlistPage
+
+Enables the desktop version of the Special:EditWatchlist page if set to `true`. If set to
+`false`, the mobile version will be enabled but can still be overridden by the user's
+mobile preferences option.
+
+* Type: `Array`
+* Default:
+```php
+  [
+    'base' => false,
+    'beta' => false,
+    // Enable desktop version of watchlist page when AMC is enabled
+    'amc' => true,
+  ]
+```
 
 #### $wgMFEnableJSConsoleRecruitment
 

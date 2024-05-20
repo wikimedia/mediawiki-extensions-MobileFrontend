@@ -605,10 +605,10 @@ class MobileFrontendHooks implements
 		// Perform substitutions of pages that are unsuitable for mobile
 		// FIXME: Upstream these changes to core.
 		if ( $context->shouldDisplayMobileView() &&
-			self::shouldMobileFormatSpecialPages( $user )
+			self::shouldMobileFormatSpecialPages( $user ) && $user->isSafeToLoad()
 		) {
 
-			if ( $user->isSafeToLoad() &&
+			if (
 				!$featureManager->isFeatureAvailableForCurrentUser( 'MFUseDesktopSpecialWatchlistPage' )
 			) {
 				// Replace the standard watchlist view with our custom one
@@ -618,6 +618,11 @@ class MobileFrontendHooks implements
 						'ConnectionProvider',
 					],
 				];
+			}
+
+			if (
+				!$featureManager->isFeatureAvailableForCurrentUser( 'MFUseDesktopSpecialEditWatchlistPage' )
+			) {
 				$list['EditWatchlist'] = SpecialMobileEditWatchlist::class;
 			}
 		}
