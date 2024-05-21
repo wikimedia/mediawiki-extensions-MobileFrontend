@@ -23,7 +23,6 @@ class HookRunner implements
 	MobileFrontendBeforeDOMHook,
 	MobileFrontendContentProviderHook,
 	MobileFrontendFeaturesRegistrationHook,
-	MobileSpecialPageStylesHook,
 	RequestContextCreateSkinMobileHook,
 	SpecialMobileEditWatchlistImagesHook
 {
@@ -80,16 +79,6 @@ class HookRunner implements
 		return $this->hookContainer->run(
 			'MobileFrontendFeaturesRegistration',
 			[ $featuresManager ]
-		);
-	}
-
-	/**
-	 * @inheritDoc
-	 */
-	public function onMobileSpecialPageStyles( string $id, OutputPage $out ) {
-		return $this->hookContainer->run(
-			'MobileSpecialPageStyles',
-			[ $id, $out ]
 		);
 	}
 

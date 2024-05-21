@@ -608,19 +608,6 @@ class MobileFrontendHooks implements
 		if ( $context->shouldDisplayMobileView() &&
 			self::shouldMobileFormatSpecialPages( $user ) && $user->isSafeToLoad()
 		) {
-
-			if (
-				!$featuresManager->isFeatureAvailableForCurrentUser( 'MFUseDesktopSpecialWatchlistPage' )
-			) {
-				// Replace the standard watchlist view with our custom one
-				$list['Watchlist'] = [
-					'class' => SpecialMobileWatchlist::class,
-					'services' => [
-						'ConnectionProvider',
-					],
-				];
-			}
-
 			if (
 				!$featuresManager->isFeatureAvailableForCurrentUser( 'MFUseDesktopSpecialEditWatchlistPage' )
 			) {
@@ -957,8 +944,6 @@ class MobileFrontendHooks implements
 			'type' => 'api',
 			'default' => '',
 		];
-		$preferences[SpecialMobileWatchlist::FILTER_OPTION_NAME] = $definition;
-		$preferences[SpecialMobileWatchlist::VIEW_OPTION_NAME] = $definition;
 		$preferences[MobileContext::USER_MODE_PREFERENCE_NAME] = $definition;
 		$preferences[self::MOBILE_PREFERENCES_EDITOR] = $definition;
 		$preferences[self::MOBILE_PREFERENCES_FONTSIZE] = $definition;
