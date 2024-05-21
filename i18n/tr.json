@@ -49,7 +49,7 @@
 	"mobile-frontend-changeslist-nocomment": "düzenleme özeti yok",
 	"mobile-frontend-clear-search": "Temizle",
 	"mobile-frontend-copyright": "Aksi belirtilmedikçe içeriğin kullanımı $1 lisansı kapsamında uygundur.",
-	"mobile-frontend-desc": "Mobil Arayüz",
+	"mobile-frontend-desc": "MediaWiki örneğinin mobil görünüşünün iyileştirilmesine yardımcı olur",
 	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}} sitesine geliştirmemize yardımcı olun.</strong><br />Düzenlemek için oturum açın.",
 	"mobile-frontend-edit-signup-action": "<strong>{{SITENAME}} sitesine geliştirmemize yardımcı olun.</strong><br />Düzenlemek için kayıt olun.",
 	"mobile-frontend-editor-anon": "Oturum açmadan düzenle",
