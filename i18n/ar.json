@@ -37,7 +37,8 @@
 			"زكريا",
 			"علاء",
 			"محمد أحمد عبد الفتاح",
-			"مشعل الحربي"
+			"مشعل الحربي",
+			"NEHAOUA"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "ما إذا كان المستخدم يعدل عبر واجهة المحمول",
@@ -63,6 +64,7 @@
 	"mobile-frontend-editor-anon": "حرر بلا تسجيل الدخول",
 	"mobile-frontend-editor-anonwarning": "<strong>تحذير</strong>: لمُ تُسجِّل الدخول. سيظهر عنوان بروتوكول الإنترنت الخاص بك علناً بعد قيامك بأي تعديل. إذا <strong>سجلت دخولك</strong> أو <strong>أنشأت حسابًا</strong>، فتعديلاتك ستنسب لاسم المستخدم الخاص بك، مع العديد من الميزات الأخرى.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "تسجيل دخول",
+	"mobile-frontend-drawer-arrow-label": "إغلاق",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "موافق",
 	"mobile-frontend-editor-blocked-drawer-action-randompage": "انتقل إلى صفحة أخرى",
 	"mobile-frontend-editor-blocked-drawer-title": "مُنع حسابك من تحرير {{SITENAME}}",
@@ -157,6 +159,8 @@
 	"mobile-frontend-media-license-link": "معلومات الترخيص",
 	"mobile-frontend-media-load-fail-message": "حدث خطأ أثناء تحميل هذه الصورة.",
 	"mobile-frontend-media-load-fail-retry": "تحديث",
+	"mobile-frontend-media-next": "إظهار الصورة التالية",
+	"mobile-frontend-media-prev": "عرض الصورة السابقة",
 	"mobile-frontend-missing-image": "صورة",
 	"mobile-frontend-tap-to-display-image": "انقر لعرض الصورة",
 	"mobile-frontend-news-items": "في الأخبار",
