@@ -529,8 +529,8 @@
 		},
 		"MFUseDesktopSpecialWatchlistPage": {
 			"value": {
-				"base": false,
-				"beta": false,
+				"base": true,
+				"beta": true,
 				"amc": true
 			}
 		},
