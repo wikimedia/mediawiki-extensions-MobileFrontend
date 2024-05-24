@@ -19,7 +19,6 @@ use Skin;
  */
 class HookRunner implements
 	BeforePageDisplayMobileHook,
-	EnterMobileModeHook,
 	GetMobileUrlHook,
 	MobileFrontendBeforeDOMHook,
 	MobileFrontendContentProviderHook,
@@ -41,16 +40,6 @@ class HookRunner implements
 		return $this->hookContainer->run(
 			'BeforePageDisplayMobile',
 			[ &$out, &$skin ]
-		);
-	}
-
-	/**
-	 * @inheritDoc
-	 */
-	public function onEnterMobileMode( MobileContext $mobileContext ) {
-		return $this->hookContainer->run(
-			'EnterMobileMode',
-			[ $mobileContext ]
 		);
 	}
 

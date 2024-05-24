@@ -305,10 +305,6 @@ class MobileContext extends ContextSource {
 		// check if we need to toggle between mobile/desktop view
 		$this->checkToggleView();
 		$this->mobileView = $this->shouldDisplayMobileViewInternal();
-		if ( $this->mobileView ) {
-			$hookRunner = new HookRunner( MediaWikiServices::getInstance()->getHookContainer() );
-			$hookRunner->onEnterMobileMode( $this );
-		}
 		return $this->mobileView;
 	}
 
