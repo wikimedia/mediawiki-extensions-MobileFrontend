@@ -9,7 +9,8 @@
 			"ਗੁਰਪ੍ਰੀਤ ਹੁੰਦਲ",
 			"ਪ੍ਰਚਾਰਕ",
 			"Nikki",
-			"Kuldeepburjbhalaike"
+			"Kuldeepburjbhalaike",
+			"Cabal"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "ਕੀ ਕੋਈ ਵਰਤੋਂਕਾਰ ਮੋਬਾਈਲ ਇੰਟਰਫੇਸ ਰਾਹੀਂ ਸੋਧ ਕਰ ਰਿਹਾ ਹੈ ਜਾਂ ਨਹੀਂ",
@@ -58,7 +59,7 @@
 	"mobile-frontend-editor-error-loading": "ਗਲਤੀ, ਐਡੀਟਰ ਲੋਡ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ।",
 	"mobile-frontend-editor-keep-editing": "ਸੋਧਣਾ ਜਾਰੀ ਰੱਖੋ",
 	"mobile-frontend-editor-terms-link": "[$1 ਵਰਤੋ ਦੀਆਂ ਸ਼ਰਤਾਂ]",
-	"mobile-frontend-editor-publish": "ਪ੍ਰਕਾਸ਼ਿਤ ਕਰੋ",
+	"mobile-frontend-editor-publish": "ਛਾਪੋ",
 	"mobile-frontend-editor-save": "ਸਾਂਭੋ",
 	"mobile-frontend-editor-success": "ਸਫ਼ਲਤਾ! ਤੁਹਾਡੀ ਸੋਧ ਪ੍ਰਕਾਸ਼ਿਤ ਹੋਈ ਸੀ।",
 	"mobile-frontend-editor-success-landmark-1": "ਵਧਾਈਆਂ, ਤੁਸੀਂ ਹੁਣ {{SITENAME}} ਸੋਧਕਾਰ ਹੋ!",
@@ -79,7 +80,7 @@
 	"mobile-frontend-fontchanger-option-xlarge": "ਵਾਧੂ ਵੱਡਾ",
 	"mobile-frontend-featured-article": "ਅੱਜ ਦੀ ਚੋਣਵੀਂ ਸਮੱਗਰੀ",
 	"mobile-frontend-generic-404-desc": "ਜੋ ਸਫ਼ਾ ਤੁਸੀਂ ਭਾਲ ਰਹੇ ਹੋ ਲੱਭਿਆ ਨਹੀਂ ਜਾ ਸਕਿਆ।",
-	"mobile-frontend-generic-404-title": "ਗਲਤੀ - ਪੰਨਾ ਨਹੀਂ ਮਿਲਿਆ",
+	"mobile-frontend-generic-404-title": "ਗ਼ਲਤੀ - ਪੰਨਾ ਨਹੀਂ ਮਿਲਿਆ",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} ਤੁਹਾਡੇ ਵਰਗੇ ਲੋਕਾਂ ਦੁਆਰਾ ਬਣਾਇਆ ਗਿਆ ਹੈ।</strong><br /> ਯੋਗਦਾਨ ਪਾਉਣ ਲਈ ਦਾਖਲ ਹੋਵੋ।",
 	"mobile-frontend-history-404-title": "ਅਜਿਹਾ ਕੋਈ ਸਫ਼ਾ ਨਹੀਂ",
 	"mobile-frontend-history-no-results": "ਛਾਨਣੀ ਨੇ ਕੋਈ ਅਤੀਤ ਮੇਲ ਨਹੀਂ ਪੈਦਾ ਕੀਤਾ।",
@@ -144,7 +145,7 @@
 	"mobile-frontend-watchlist-cta-button-login": "ਦਾਖਲ",
 	"mobile-frontend-watchlist-cta-button-signup": "ਖਾਤਾ ਬਣਾਓ",
 	"mobile-frontend-watchlist-feed-empty": "ਹਾਲੀਆ ਤਬਦੀਲੀਆਂ ਵਾਲੇ ਕੋਈ ਸਫ਼ੇ ਨਹੀਂ ਹਨ।",
-	"mobile-frontend-watchlist-filter-all": "ਸਭ",
+	"mobile-frontend-watchlist-filter-all": "ਸਾਰੇ",
 	"mobile-frontend-watchlist-filter-articles": "ਸਫ਼ੇ",
 	"mobile-frontend-watchlist-filter-other": "ਹੋਰ",
 	"mobile-frontend-watchlist-filter-talk": "ਗੱਲ-ਬਾਤ",
