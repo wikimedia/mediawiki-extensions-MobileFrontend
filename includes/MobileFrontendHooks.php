@@ -220,13 +220,13 @@ class MobileFrontendHooks implements
 		$services = MediaWikiServices::getInstance();
 		/** @var MobileContext $context */
 		$context = $services->getService( 'MobileFrontend.Context' );
-		/** @var FeaturesManager $featureManager */
-		$featureManager = $services->getService( 'MobileFrontend.FeaturesManager' );
+		/** @var FeaturesManager $featuresManager */
+		$featuresManager = $services->getService( 'MobileFrontend.FeaturesManager' );
 
 		// TODO: We may want to enable the following script on Desktop Minerva...
 		// ... when Minerva is widely used.
 		if ( $context->shouldDisplayMobileView() &&
-			$featureManager->isFeatureAvailableForCurrentUser( 'MFLazyLoadImages' )
+			$featuresManager->isFeatureAvailableForCurrentUser( 'MFLazyLoadImages' )
 		) {
 			$html .= Html::inlineScript( ResourceLoader::filter( 'minify-js',
 				LazyImageTransform::gradeCImageSupport()
@@ -399,8 +399,8 @@ class MobileFrontendHooks implements
 			// this code should only apply to mobile view.
 			return;
 		}
-		/** @var FeaturesManager $featureManager */
-		$featureManager = $services->getService( 'MobileFrontend.FeaturesManager' );
+		/** @var FeaturesManager $featuresManager */
+		$featuresManager = $services->getService( 'MobileFrontend.FeaturesManager' );
 
 		$oldRevRecord = $diff->getOldRevision();
 		$newRevRecord = $diff->getNewRevision();
@@ -542,11 +542,11 @@ class MobileFrontendHooks implements
 	) {
 		$features = array_keys( $config->get( 'MFDisplayWikibaseDescriptions' ) );
 		$result = [ 'wgMFDisplayWikibaseDescriptions' => [] ];
-		/** @var FeaturesManager $featureManager */
-		$featureManager = MediaWikiServices::getInstance()
+		/** @var FeaturesManager $featuresManager */
+		$featuresManager = MediaWikiServices::getInstance()
 			->getService( 'MobileFrontend.FeaturesManager' );
 
-		$descriptionsEnabled = $featureManager->isFeatureAvailableForCurrentUser(
+		$descriptionsEnabled = $featuresManager->isFeatureAvailableForCurrentUser(
 			'MFEnableWikidataDescriptions'
 		);
 
@@ -599,8 +599,8 @@ class MobileFrontendHooks implements
 		/** @var MobileContext $context */
 		$context = $services->getService( 'MobileFrontend.Context' );
 		$user = $context->getUser();
-		/** @var FeaturesManager $featureManager */
-		$featureManager = $services->getService( 'MobileFrontend.FeaturesManager' );
+		/** @var FeaturesManager $featuresManager */
+		$featuresManager = $services->getService( 'MobileFrontend.FeaturesManager' );
 
 		// Perform substitutions of pages that are unsuitable for mobile
 		// FIXME: Upstream these changes to core.
@@ -609,7 +609,7 @@ class MobileFrontendHooks implements
 		) {
 
 			if (
-				!$featureManager->isFeatureAvailableForCurrentUser( 'MFUseDesktopSpecialWatchlistPage' )
+				!$featuresManager->isFeatureAvailableForCurrentUser( 'MFUseDesktopSpecialWatchlistPage' )
 			) {
 				// Replace the standard watchlist view with our custom one
 				$list['Watchlist'] = [
@@ -621,7 +621,7 @@ class MobileFrontendHooks implements
 			}
 
 			if (
-				!$featureManager->isFeatureAvailableForCurrentUser( 'MFUseDesktopSpecialEditWatchlistPage' )
+				!$featuresManager->isFeatureAvailableForCurrentUser( 'MFUseDesktopSpecialEditWatchlistPage' )
 			) {
 				$list['EditWatchlist'] = SpecialMobileEditWatchlist::class;
 			}
@@ -1048,12 +1048,12 @@ class MobileFrontendHooks implements
 		/** @var MobileContext $context */
 		$context = $services->getService( 'MobileFrontend.Context' );
 		$config = $services->getService( 'MobileFrontend.Config' );
-		/** @var FeaturesManager $featureManager */
-		$featureManager = $services->getService( 'MobileFrontend.FeaturesManager' );
+		/** @var FeaturesManager $featuresManager */
+		$featuresManager = $services->getService( 'MobileFrontend.FeaturesManager' );
 		$title = $outputPage->getTitle();
 		$descriptionsEnabled = !$title->isMainPage() &&
 			$title->getNamespace() === NS_MAIN &&
-			$featureManager->isFeatureAvailableForCurrentUser(
+			$featuresManager->isFeatureAvailableForCurrentUser(
 				'MFEnableWikidataDescriptions'
 			) && $context->shouldShowWikibaseDescriptions( 'tagline', $config );
 
@@ -1141,8 +1141,8 @@ class MobileFrontendHooks implements
 		$services = MediaWikiServices::getInstance();
 		/** @var \MobileFrontend\Amc\UserMode $userMode */
 		$userMode = $services->getService( 'MobileFrontend.AMC.UserMode' );
-		/** @var FeaturesManager $featureManager */
-		$featureManager = $services->getService( 'MobileFrontend.FeaturesManager' );
+		/** @var FeaturesManager $featuresManager */
+		$featuresManager = $services->getService( 'MobileFrontend.FeaturesManager' );
 		$config = $services->getService( 'MobileFrontend.Config' );
 
 		// If the device is a mobile, Remove the category entry.
@@ -1157,7 +1157,7 @@ class MobileFrontendHooks implements
 			$vars['wgMFAmcOutreachActive'] = $outreach->isCampaignActive();
 			$vars['wgMFAmcOutreachUserEligible'] = $outreach->isUserEligible();
 			$vars['wgMFLazyLoadImages'] =
-				$featureManager->isFeatureAvailableForCurrentUser( 'MFLazyLoadImages' );
+				$featuresManager->isFeatureAvailableForCurrentUser( 'MFLazyLoadImages' );
 			$vars['wgMFEditNoticesFeatureConflict'] = self::hasEditNoticesFeatureConflict(
 				$config, $context->getUser()
 			);

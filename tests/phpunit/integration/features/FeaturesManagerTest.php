@@ -29,7 +29,7 @@ class FeaturesManagerTest extends MediaWikiIntegrationTestCase {
 	 * Test that hook is used to allow extensions/skins to register features.
 	 * @covers ::useHookToRegisterExtensionOrSkinFeatures
 	 */
-	public function testFeatureManagerUsesHooks() {
+	public function testFeaturesManagerUsesHooks() {
 		$called = false;
 		$userModes = new UserModes();
 		$manager = new FeaturesManager( $userModes );

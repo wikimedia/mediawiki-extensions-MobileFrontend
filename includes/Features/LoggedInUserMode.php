@@ -6,7 +6,7 @@ use MediaWiki\User\User;
 
 /**
  * An easy way to enable features only for logged in users.
- * This class is an Adapter for the User object to fulfill FeatureManager requirements.
+ * This class is an Adapter for the User object to fulfill FeaturesManager requirements.
  * Instead of hardcoding ` if ( $user->isRegistered() ) { ` logic in each feature code,
  * we can re-use this mode and have `isRegistered` check only in one place for all features.
  *

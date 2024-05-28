@@ -83,8 +83,8 @@ class ExtMobileFrontend {
 	 */
 	public static function domParseMobile( OutputPage $out, $html = '' ) {
 		$services = MediaWikiServices::getInstance();
-		/** @var FeaturesManager $featureManager */
-		$featureManager = $services->getService( 'MobileFrontend.FeaturesManager' );
+		/** @var FeaturesManager $featuresManager */
+		$featuresManager = $services->getService( 'MobileFrontend.FeaturesManager' );
 		/** @var MobileContext $context */
 		$context = $services->getService( 'MobileFrontend.Context' );
 		$config = $services->getService( 'MobileFrontend.Config' );
@@ -121,10 +121,10 @@ class ExtMobileFrontend {
 		$hookRunner = new HookRunner( $services->getHookContainer() );
 		$hookRunner->onMobileFrontendBeforeDOM( $context, $formatter );
 
-		$shouldLazyTransformImages = $featureManager->isFeatureAvailableForCurrentUser( 'MFLazyLoadImages' );
+		$shouldLazyTransformImages = $featuresManager->isFeatureAvailableForCurrentUser( 'MFLazyLoadImages' );
 		$leadParagraphEnabled = in_array( $ns, $config->get( 'MFNamespacesWithLeadParagraphs' ) );
 		$showFirstParagraphBeforeInfobox = $leadParagraphEnabled &&
-			$featureManager->isFeatureAvailableForCurrentUser( 'MFShowFirstParagraphBeforeInfobox' );
+			$featuresManager->isFeatureAvailableForCurrentUser( 'MFShowFirstParagraphBeforeInfobox' );
 
 		$transforms = [];
 		if ( $enableSections ) {
