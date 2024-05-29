@@ -101,9 +101,9 @@ class MobileFrontendHooks implements
 	public const MOBILE_PREFERENCES_FONTSIZE = 'mf-font-size';
 	public const MOBILE_PREFERENCES_EXPAND_SECTIONS = 'mf-expand-sections';
 	private const ENABLE_SPECIAL_PAGE_OPTIMISATIONS = '1';
-	// This should always be kept in sync with `@width-breakpoint-tablet`
+	// This should always be kept in sync with Codex `@min-width-breakpoint-tablet`
 	// in mediawiki.skin.variables.less
-	private const DEVICE_WIDTH_TABLET = '720px';
+	private const DEVICE_WIDTH_TABLET = '640px';
 
 	/**
 	 * Obtain the default mobile skin
