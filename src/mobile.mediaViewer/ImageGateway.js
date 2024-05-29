@@ -23,7 +23,7 @@ function findSizeBucket( size ) {
  * @class ImageGateway
  *
  * @param {Object} options Configuration options
- * @cfg {mw.Api} options.api
+ * @param {mw.Api} options.api
  */
 function ImageGateway( options ) {
 	this._cache = {};
