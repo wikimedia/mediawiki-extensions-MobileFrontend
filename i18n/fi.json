@@ -157,6 +157,7 @@
 	"mobile-frontend-overlay-close": "Sulje",
 	"mobile-frontend-privacy-link-text": "Yksityisyys",
 	"mobile-frontend-references-citation": "Viittaus",
+	"mobile-frontend-references-citation-error": "Tapahtui virhe, eikä tätä viitettä voitu ladata.",
 	"mobile-frontend-references-list": "Näytä täysi lista viitteistä.",
 	"mobile-frontend-requires-mobile": "Sivua ei ole saatavilla työpöytänäkymänä. Valitse sivun alalaidasta mobiilinäkymä.",
 	"mobile-frontend-requires-title": "Sivu ei ole saatavissa",
