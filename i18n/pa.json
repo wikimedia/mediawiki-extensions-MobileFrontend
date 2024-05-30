@@ -9,7 +9,8 @@
 			"Sony dandiwal",
 			"Tow",
 			"ਗੁਰਪ੍ਰੀਤ ਹੁੰਦਲ",
-			"ਪ੍ਰਚਾਰਕ"
+			"ਪ੍ਰਚਾਰਕ",
+			"Cabal"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "ਕੀ ਕੋਈ ਵਰਤੋਂਕਾਰ ਮੋਬਾਈਲ ਇੰਟਰਫੇਸ ਰਾਹੀਂ ਸੋਧ ਕਰ ਰਿਹਾ ਹੈ ਜਾਂ ਨਹੀਂ",
@@ -52,7 +53,7 @@
 	"mobile-frontend-editor-error-loading": "ਗਲਤੀ, ਐਡੀਟਰ ਲੋਡ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ।",
 	"mobile-frontend-editor-keep-editing": "ਸੋਧਣਾ ਜਾਰੀ ਰੱਖੋ",
 	"mobile-frontend-editor-terms-link": "[$1 ਵਰਤੋ ਦੀਆਂ ਸ਼ਰਤਾਂ]",
-	"mobile-frontend-editor-publish": "ਪ੍ਰਕਾਸ਼ਿਤ ਕਰੋ",
+	"mobile-frontend-editor-publish": "ਛਾਪੋ",
 	"mobile-frontend-editor-save": "ਸਾਂਭੋ",
 	"mobile-frontend-editor-summary-placeholder": "ਉਦਾਹਰਨ: ਗਲਤੀ ਸੁਧਾਰੀ, ਸਮੱਗਰੀ ਸ਼ਾਮਲ ਕੀਤੀ",
 	"mobile-frontend-editor-summary-request": "ਤੁਸੀਂ ਇਹ ਸਫ਼ਾ ਕਿਵੇਂ ਸੁਧਾਰਿਆ?",
@@ -74,7 +75,7 @@
 	"mf-font-size-regular-label": "ਆਮ",
 	"mf-font-size-large-label": "ਵੱਡਾ",
 	"mobile-frontend-generic-404-desc": "ਜੋ ਸਫ਼ਾ ਤੁਸੀਂ ਭਾਲ ਰਹੇ ਹੋ ਲੱਭਿਆ ਨਹੀਂ ਜਾ ਸਕਿਆ।",
-	"mobile-frontend-generic-404-title": "ਗਲਤੀ - ਪੰਨਾ ਨਹੀਂ ਮਿਲਿਆ",
+	"mobile-frontend-generic-404-title": "ਗ਼ਲਤੀ - ਪੰਨਾ ਨਹੀਂ ਮਿਲਿਆ",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} ਤੁਹਾਡੇ ਵਰਗੇ ਲੋਕਾਂ ਦੁਆਰਾ ਬਣਾਇਆ ਗਿਆ ਹੈ।</strong><br /> ਯੋਗਦਾਨ ਪਾਉਣ ਲਈ ਦਾਖਲ ਹੋਵੋ।",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|Joined}} ਹੁਣੇ",
 	"mobile-frontend-joined-seconds": "{{PLURAL:$2|$2 ਸਕਿੰਟ}} ਪਹਿਲਾਂ {{GENDER:$1|ਸ਼ਾਮਲ ਹੋਏ}}",
@@ -125,7 +126,7 @@
 	"mobile-frontend-watchlist-cta-button-login": "ਦਾਖਲ",
 	"mobile-frontend-watchlist-cta-button-signup": "ਖਾਤਾ ਬਣਾਓ",
 	"mobile-frontend-watchlist-feed-empty": "ਹਾਲੀਆ ਤਬਦੀਲੀਆਂ ਵਾਲੇ ਕੋਈ ਸਫ਼ੇ ਨਹੀਂ ਹਨ।",
-	"mobile-frontend-watchlist-filter-all": "ਸਭ",
+	"mobile-frontend-watchlist-filter-all": "ਸਾਰੇ",
 	"mobile-frontend-watchlist-filter-articles": "ਸਫ਼ੇ",
 	"mobile-frontend-watchlist-filter-other": "ਹੋਰ",
 	"mobile-frontend-watchlist-filter-talk": "ਗੱਲ-ਬਾਤ",
