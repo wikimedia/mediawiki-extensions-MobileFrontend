@@ -32,7 +32,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 	/**
 	 * @var \MobileFrontend\Features\FeaturesManager
 	 */
-	private $featureManager;
+	private $featuresManager;
 
 	/** @var UserMode */
 	private $userMode;
@@ -47,7 +47,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 		parent::__construct( 'MobileOptions' );
 		$this->services = MediaWikiServices::getInstance();
 		$this->amc = $this->services->getService( 'MobileFrontend.AMC.Manager' );
-		$this->featureManager = $this->services->getService( 'MobileFrontend.FeaturesManager' );
+		$this->featuresManager = $this->services->getService( 'MobileFrontend.FeaturesManager' );
 		$this->userMode = $this->services->getService( 'MobileFrontend.AMC.UserMode' );
 		$this->userOptionsManager = $this->services->getUserOptionsManager();
 		$this->readOnlyMode = $this->services->getReadOnlyMode();
@@ -66,7 +66,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 	public function setJsConfigVars() {
 		$this->getOutput()->addJsConfigVars( [
 			'wgMFCollapseSectionsByDefault' => $this->getConfig()->get( 'MFCollapseSectionsByDefault' ),
-			'wgMFEnableFontChanger' => $this->featureManager->isFeatureAvailableForCurrentUser(
+			'wgMFEnableFontChanger' => $this->featuresManager->isFeatureAvailableForCurrentUser(
 				'MFEnableFontChanger'
 			),
 		] );
