@@ -7,12 +7,12 @@
 			"Pikne"
 		]
 	},
-	"abusefilter-edit-builder-vars-user-mobile": "Kas kasutaja redigeerib mobiililiidese kaudu",
+	"abusefilter-edit-builder-vars-user-mobile": "Kas kasutaja redigeerib mobiililiidese kaudu ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "Sisesta kinnituskood",
 	"mobile-frontend-changeslist-nocomment": "resümee puudub",
 	"mobile-frontend-clear-search": "Tühjenda",
 	"mobile-frontend-copyright": "Sisu on kasutatav litsentsi $1 tingimustel, kui pole öeldud teisiti.",
-	"mobile-frontend-desc": "Mobiili eeskomponent",
+	"mobile-frontend-desc": "Aitab teha MediaWiki tarkvara paremini mobiilis kasutatavaks.",
 	"mobile-frontend-edit-login-action": "<strong>Aita {{GRAMMAR:partitive|{{SITENAME}}}} täiendada.</strong><br />Logi sisse, et redigeerida.",
 	"mobile-frontend-edit-signup-action": "<strong>Aita {{GRAMMAR:partitive|{{SITENAME}}}} täiendada.</strong><br />Registreeru, et redigeerida.",
 	"mobile-frontend-editor-anon": "Redigeeri sisse logimata",
