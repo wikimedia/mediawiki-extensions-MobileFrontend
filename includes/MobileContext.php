@@ -1,6 +1,9 @@
 <?php
 
 use MediaWiki\Config\Config;
+use MediaWiki\Context\ContextSource;
+use MediaWiki\Context\IContextSource;
+use MediaWiki\Context\RequestContext;
 use MediaWiki\MediaWikiServices;
 use MobileFrontend\Devices\DeviceDetectorService;
 use MobileFrontend\Hooks\HookRunner;

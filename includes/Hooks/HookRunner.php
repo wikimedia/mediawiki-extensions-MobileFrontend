@@ -4,7 +4,7 @@
 
 namespace MobileFrontend\Hooks;
 
-use IContextSource;
+use MediaWiki\Context\IContextSource;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\Output\OutputPage;
 use MobileContext;
