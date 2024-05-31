@@ -67,7 +67,7 @@
 	"mobile-frontend-editor-loadingtooslow": "ਹੌਲੀ ਕੁਨੈਕਸ਼ਨ?",
 	"mobile-frontend-editor-loadbasiceditor": "ਸਰੋਤ ਸੰਪਾਦਕ 'ਤੇ ਸਵਿਚ ਕਰੋ",
 	"mobile-frontend-editor-toload": "ਸੰਪਾਦਕ ਹੁਣ ਲੋਡ ਹੋਵੇਗਾ। ਜੇਕਰ ਤੁਸੀਂ ਕੁਝ ਸਕਿੰਟਾਂ ਬਾਅਦ ਵੀ ਇਹ ਸੁਨੇਹਾ ਦੇਖਦੇ ਹੋ, ਤਾਂ ਕਿਰਪਾ ਕਰਕੇ [$1 ਪੰਨਾ ਰੀਲੋਡ ਕਰੋ]।",
-	"mf-expand-sections-description": "ਹਮੇਸ਼ਾਂ ਮੂਲ ਰੂਪ ਵਿੱਚ ਸਮੱਗਰੀ ਪੰਨਿਆਂ ਦੇ ਭਾਗਾਂ ਨੂੰ ਫੈਲਾਓ।",
+	"mf-expand-sections-description": "ਹਮੇਸ਼ਾਂ ਮੂਲ ਰੂਪ ਵਿੱਚ ਸਮੱਗਰੀ ਸਫ਼ਿਆਂ ਦੇ ਭਾਗਾਂ ਨੂੰ ਫੈਲਾਓ।",
 	"mf-expand-sections-name": "ਸਾਰੇ ਭਾਗ ਫੈਲਾਓ",
 	"mf-font-size-name": "ਲਿਖਤ",
 	"mf-font-size-description": "ਬਿਹਤਰ ਪੜ੍ਹਨਯੋਗਤਾ ਲਈ ਲਿਖਤ ਨੂੰ ਵਿਵਸਥਿਤ ਕਰੋ।",
@@ -159,6 +159,6 @@
 	"mobile-frontend-amc-outreach-enabled-message": "ਉੱਨਤ ਮੋਡ ਹੁਣ ਚਾਲੂ ਹੈ। ਤੁਸੀਂ ਇਸ ਨੂੰ ਆਪਣੀਆਂ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਬੰਦ ਕਰ ਸਕਦੇ ਹੋ।",
 	"mobile-frontend-amc-outreach-dismissed-message": "ਤੁਸੀਂ ਆਪਣੀ ਸੈਟਿੰਗਜ਼ ਵਿੱਚ ਕਿਸੇ ਵੀ ਸਮੇਂ ਉੱਨਤ ਮੋਡ ਨੂੰ ਸਮਰੱਥ ਕਰ ਸਕਦੇ ਹੋ।",
 	"mobile-frontend-console-recruit": "ਇਸ ਬਾਰੇ ਹੋਰ ਜਾਣੋ ਕਿ ਅਸੀਂ ਆਪਣੀ ਮੋਬਾਈਲ ਸਾਈਟ ਕਿਵੇਂ ਬਣਾਉਂਦੇ ਹਾਂ @https://www.mediawiki.org/wiki/Special: MyLangage/Extension: MobileFrontend",
-	"mobile-frontend-special-pages-pref": "ਮੋਬਾਈਲ ਉੱਤੇ ਹੋਣ ਸਮੇਂ ਵਿਸ਼ੇਸ਼ ਪੰਨਿਆਂ ਨੂੰ ਅਨੁਕੂਲ ਅਤੇ ਸਰਲ ਬਣਾਓ (ਸਿਫਾਰਸ਼ ਕੀਤੀ ਗਈ)",
+	"mobile-frontend-special-pages-pref": "ਮੋਬਾਈਲ ਉੱਤੇ ਹੋਣ ਸਮੇਂ ਖਾਸ ਸਫ਼ਿਆਂ ਨੂੰ ਅਨੁਕੂਲ ਅਤੇ ਸਰਲ ਬਣਾਓ (ਸਿਫਾਰਸ਼ ਕੀਤੀ ਗਈ)",
 	"prefs-mobile": "ਮੋਬਾਈਲੀ ਤਰਜੀਹਾਂ"
 }
