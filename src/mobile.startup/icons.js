@@ -45,8 +45,7 @@ const icons = {
 	 *
 	 * @memberof icons
 	 * @instance
-	 * @param {string} [variant].
-	 * @param variant
+	 * @param {string} [variant]
 	 * @param {Object} [props] to extend
 	 * @return {IconButton}
 	 */

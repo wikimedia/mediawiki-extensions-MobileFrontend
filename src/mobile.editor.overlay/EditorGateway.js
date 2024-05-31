@@ -210,7 +210,8 @@ EditorGateway.prototype = {
 			self.api.postWithToken( 'csrf', apiOptions ).then( function ( data ) {
 				if ( data && data.edit && data.edit.result === 'Success' ) {
 					self.hasChanged = false;
-					result.resolve( data.edit.newrevid, data.edit.tempusercreatedredirect, data.edit.tempusercreated );
+					result.resolve( data.edit.newrevid, data.edit.tempusercreatedredirect,
+						data.edit.tempusercreated );
 				} else {
 					result.reject( data );
 				}
@@ -267,7 +268,8 @@ EditorGateway.prototype = {
 
 		this.abortPreview();
 		// Acquire a temporary user username before previewing, so that signatures and
-		// user-related magic words display the temp user instead of IP user in the preview. (T331397)
+		// user-related magic words display the temp user instead of IP user in the
+		// preview. (T331397)
 		var promise = mw.user.acquireTempUserName().then( function () {
 			self._pending = self.api.post( options );
 			return self._pending;

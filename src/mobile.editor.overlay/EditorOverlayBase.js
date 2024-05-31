@@ -222,7 +222,8 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 *
 	 * @memberof EditorOverlayBase
 	 * @instance
-	 * @param {number|null} newRevId ID of the newly created revision, or null if it was a null edit.
+	 * @param {number|null} newRevId ID of the newly created revision, or null if it was a
+	 * null edit.
 	 * @param {string} [redirectUrl] URL to redirect to, if different than the current URL.
 	 * @param {boolean} [tempUserCreated] Whether a temporary user was created
 	 */

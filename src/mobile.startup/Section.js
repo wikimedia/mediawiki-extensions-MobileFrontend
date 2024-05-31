@@ -19,7 +19,8 @@ function Section( options ) {
 	this.id = options.id || null;
 	this.anchor = options.anchor;
 	this.subsections = [];
-	( options.subsections || [] ).forEach( ( section ) => self.subsections.push( new Section( section ) ) );
+	( options.subsections || [] ).forEach( ( section ) => self.subsections.push(
+		new Section( section ) ) );
 	View.call( this, options );
 }
 

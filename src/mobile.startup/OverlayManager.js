@@ -213,7 +213,8 @@ OverlayManager.prototype = {
 			return;
 		}
 
-		const match = Object.keys( this.entries ).reduce( ( m, id ) => m || this._matchRoute( ev.path, this.entries[id] ), null );
+		const match = Object.keys( this.entries ).reduce( ( m, id ) => m ||
+			this._matchRoute( ev.path, this.entries[id] ), null );
 
 		if ( !match ) {
 			// if hidden and no new matches, reset the stack
@@ -349,7 +350,8 @@ OverlayManager.prototype = {
 		this.entries[route] = entry;
 		// Check if overlay should be shown for the current path.
 		// The DOM must fully load before we can show the overlay because Overlay relies on it.
-		util.docReady( () => self._processMatch( self._matchRoute( self.router.getPath(), entry ) ) );
+		util.docReady( () => self._processMatch( self._matchRoute( self.router.getPath(),
+			entry ) ) );
 	},
 
 	/**

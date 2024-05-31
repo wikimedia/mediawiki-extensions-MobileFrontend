@@ -91,6 +91,7 @@ mfExtend( Icon, View, {
 	 * @memberof Icon
 	 * @instance
 	 * @mixes View#defaults
+	 * @property {Object} defaults
 	 * @property {string} defaults.base Base icon class.
 	 * Defaults to 'mf-icon'.
 	 * @property {string} defaults.glyphPrefix Prefix for the icon class
