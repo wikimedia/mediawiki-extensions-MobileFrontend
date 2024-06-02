@@ -2,6 +2,7 @@
 
 // phpcs:disable MediaWiki.NamingConventions.LowerCamelFunctionsName.FunctionName
 
+use MediaWiki\Actions\ActionEntryPoint;
 use MediaWiki\Api\Hook\APIQuerySiteInfoGeneralInfoHook;
 use MediaWiki\Auth\AuthenticationRequest;
 use MediaWiki\Auth\AuthManager;
@@ -11,7 +12,6 @@ use MediaWiki\ChangeTags\Hook\ListDefinedTagsHook;
 use MediaWiki\ChangeTags\Taggable;
 use MediaWiki\Config\Config;
 use MediaWiki\Context\IContextSource;
-use MediaWiki\Diff\Hook\DifferenceEngineViewHeaderHook;
 use MediaWiki\Extension\AbuseFilter\Variables\VariableHolder;
 use MediaWiki\Extension\Gadgets\GadgetRepo;
 use MediaWiki\Hook\AfterBuildFeedLinksHook;
@@ -21,6 +21,7 @@ use MediaWiki\Hook\GetCacheVaryCookiesHook;
 use MediaWiki\Hook\LoginFormValidErrorMessagesHook;
 use MediaWiki\Hook\MakeGlobalVariablesScriptHook;
 use MediaWiki\Hook\ManualLogEntryBeforePublishHook;
+use MediaWiki\Hook\MediaWikiPerformActionHook;
 use MediaWiki\Hook\OutputPageBeforeHTMLHook;
 use MediaWiki\Hook\OutputPageBodyAttributesHook;
 use MediaWiki\Hook\OutputPageParserOutputHook;
@@ -74,7 +75,7 @@ class MobileFrontendHooks implements
 	SkinAfterBottomScriptsHook,
 	SkinAddFooterLinksHook,
 	BeforePageRedirectHook,
-	DifferenceEngineViewHeaderHook,
+	MediaWikiPerformActionHook,
 	GetCacheVaryCookiesHook,
 	SpecialPage_initListHook,
 	ListDefinedTagsHook,
@@ -385,14 +386,22 @@ class MobileFrontendHooks implements
 	}
 
 	/**
-	 * DifferenceEngineViewHeader hook handler
-	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/DifferenceEngineViewHeader
+	 * MediaWikiPerformActionHook hook handler
+	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/MediaWikiPerformActionHook
 	 *
-	 * Redirect Diff page to mobile version if appropriate
+	 * Set Diff page to diff-only mode for mobile view
 	 *
-	 * @param DifferenceEngine $diff DifferenceEngine object that's calling
+	 * @param OutputPage $output Context output
+	 * @param Article $article Article on which the action will be performed
+	 * @param Title $title Title on which the action will be performed
+	 * @param User $user Context user
+	 * @param WebRequest $request Context request
+	 * @param ActionEntryPoint $entryPoint
+	 * @return bool|void True or no return value to continue or false to abort
 	 */
-	public function onDifferenceEngineViewHeader( $diff ) {
+	public function onMediaWikiPerformAction( $output, $article, $title, $user,
+		$request, $entryPoint
+	) {
 		$services = MediaWikiServices::getInstance();
 		/** @var MobileContext $context */
 		$context = $services->getService( 'MobileFrontend.Context' );
@@ -400,19 +409,10 @@ class MobileFrontendHooks implements
 			// this code should only apply to mobile view.
 			return;
 		}
-		/** @var FeaturesManager $featuresManager */
-		$featuresManager = $services->getService( 'MobileFrontend.FeaturesManager' );
 
-		$oldRevRecord = $diff->getOldRevision();
-		$newRevRecord = $diff->getNewRevision();
-
-		$otherParams = $diff->getContext()->getRequest()->getValues();
-		$title = $context->getTitle();
-		$output = $context->getOutput();
-		// On diff pages on mobile if not specified default to diff only mode.
-		if ( !isset( $otherParams['diffonly'] ) ) {
-			$otherParams['diffonly'] = '1';
-			$output->redirect( $title->getFullUrl( $otherParams ) );
+		// Default to diff-only mode on mobile diff pages if not specified.
+		if ( !$request->getCheck( 'diffonly' ) ) {
+			$request->setVal( 'diffonly', 'true' );
 		}
 	}
 
