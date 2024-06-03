@@ -7,7 +7,7 @@ var util = require( './util' ),
  * the bottom of an Element is scrolled to.
  *
  * @class ScrollEndEventEmitter
- * @mixins OO.EventEmitter
+ * @mixes OO.EventEmitter
  *
  * Use this class in a view to help it do infinite scrolling.
  *

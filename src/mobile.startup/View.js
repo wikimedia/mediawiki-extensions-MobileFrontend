@@ -92,7 +92,7 @@ function uniqueId( prefix ) {
  * ```
  *
  * @class View
- * @mixins OO.EventEmitter
+ * @mixes OO.EventEmitter
  */
 
 function View() {
