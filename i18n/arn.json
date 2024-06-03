@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
+			"Cuatro Remos",
 			"Manke ruLpa"
 		]
 	},
+	"mobile-frontend-copyright": "Tüfachi mülen $1 müten am mapu mvlelu, dem ka afimiñ kiñe chi küme niey.",
 	"mobile-frontend-joined-just-now": "Fewla {{GENDER:$1|konküley}}",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|Konpey}} {{PLURAL:$2|$2 sequndo}} mew",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|Konpey}} {{PLURAL:$2|$2 minuto}} mew",
