@@ -76,7 +76,8 @@
 			"沈澄心",
 			"神樂坂秀吉",
 			"科劳",
-			"飞舞回堂前"
+			"飞舞回堂前",
+			"Anterdc99"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "用户是否通过移动版界面编辑",
@@ -137,7 +138,7 @@
 	"mobile-frontend-editor-licensing": "通过发布更改，您同意将您的贡献根据$1{{PLURAL:$2|许可协议}}发布。",
 	"mobile-frontend-editor-licensing-with-terms": "发布更改即表明您同意$1，并同意根据$2{{PLURAL:$3|许可协议}}发布您的贡献。",
 	"mobile-frontend-editor-terms-link": "[$1 使用条款]",
-	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|您是否想}}在{{SITENAME}}创建一个新页面？",
+	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|您确定想要}}在{{SITENAME}}创建新页面吗？",
 	"mobile-frontend-editor-placeholder": "这个章节还是空的。成为第一个充实它的人吧！",
 	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|您}}正在{{SITENAME}}创建新页面！",
 	"mobile-frontend-editor-previewing-page": "<span><strong>预览</strong>$1</span>",
