@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			1100100,
 			"Indunil Chamara",
 			"Roonyh",
 			"Sahan.ssw",
@@ -12,8 +13,7 @@
 			"පසිඳු කාවින්ද",
 			"බිඟුවා",
 			"ශ්වෙත",
-			"හරිත",
-			1100100
+			"හරිත"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "ආරක්ෂක පාඨය ඇතුළු කරන්න",
