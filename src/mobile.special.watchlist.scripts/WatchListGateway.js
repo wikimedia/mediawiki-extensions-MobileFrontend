@@ -10,7 +10,7 @@ var
  */
 function WatchListGateway( api, lastTitle ) {
 	this.api = api;
-	// Try to keep it in sync with SpecialMobileWatchlist::LIMIT (php)
+	// Try to keep it in sync with SpecialMobileEditWatchlist::LIMIT (php)
 	this.limit = 50;
 
 	if ( lastTitle ) {

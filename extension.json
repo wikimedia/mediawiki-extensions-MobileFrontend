@@ -70,16 +70,12 @@
 		"MobileFrontendSkinHooks": "includes/MobileFrontendSkinHooks.php",
 		"MobileContext": "includes/MobileContext.php",
 		"MobileFormatter": "includes/MobileFormatter.php",
-		"MobileUI": "includes/MobileUI.php",
 		"SpecialUploads": "includes/specials/SpecialUploads.php",
 		"SpecialMobileHistory": "includes/specials/SpecialMobileHistory.php",
 		"SpecialMobileDiff": "includes/specials/SpecialMobileDiff.php",
 		"SpecialMobileOptions": "includes/specials/SpecialMobileOptions.php",
-		"SpecialMobileWatchlist": "includes/specials/SpecialMobileWatchlist.php",
 		"SpecialMobileEditWatchlist": "includes/specials/SpecialMobileEditWatchlist.php",
-		"SpecialMobileLanguages": "includes/specials/SpecialMobileLanguages.php",
-		"MobileSpecialPage": "includes/specials/MobileSpecialPage.php",
-		"MobileSpecialPageFeed": "includes/specials/MobileSpecialPageFeed.php"
+		"SpecialMobileLanguages": "includes/specials/SpecialMobileLanguages.php"
 	},
 	"TestAutoloadNamespaces": {
 		"MobileFrontend\\Tests\\": "tests/phpunit/"
@@ -417,11 +413,6 @@
 			"scripts": [
 				"resources/dist/mobile.special.userlogin.scripts.js"
 			]
-		},
-		"mobile.special.pagefeed.styles": {
-			"styles": [
-				"resources/mobile.special.pagefeed.styles/pagefeed.less"
-			]
 		}
 	},
 	"ResourceFileModulePaths": {
@@ -524,13 +515,6 @@
 			"value": {
 				"base": false,
 				"beta": false,
-				"amc": true
-			}
-		},
-		"MFUseDesktopSpecialWatchlistPage": {
-			"value": {
-				"base": true,
-				"beta": true,
 				"amc": true
 			}
 		},

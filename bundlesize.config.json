@@ -45,14 +45,10 @@
 	},
 	{
 		"resourceModule": "mobile.special.styles",
-		"maxSize": "0.8KB"
+		"maxSize": "1.0KB"
 	},
 	{
 		"resourceModule": "mobile.special.mobileoptions.styles",
-		"maxSize": "2.2KB"
-	},
-	{
-		"resourceModule": "mobile.special.pagefeed.styles",
 		"maxSize": "2.2KB"
 	}
 ]

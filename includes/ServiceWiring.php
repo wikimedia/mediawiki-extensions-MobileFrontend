@@ -55,11 +55,6 @@ return [
 		// * mobile-frontend-mobile-option-MFEnableFontChanger-description
 		$manager->registerFeature( new Feature( 'MFEnableFontChanger', 'mobile-frontend',
 			$config->get( 'MFEnableFontChanger' ) ) );
-		// Generates the following messages:
-		// * mobile-frontend-mobile-option-MFUseDesktopSpecialWatchlistPage
-		// * mobile-frontend-mobile-option-MFUseDesktopSpecialWatchlistPage-description
-		$manager->registerFeature( new Feature( 'MFUseDesktopSpecialWatchlistPage', 'mobile-frontend',
-			$config->get( 'MFUseDesktopSpecialWatchlistPage' ) ) );
 		$manager->registerFeature( new Feature( 'MFUseDesktopSpecialEditWatchlistPage', 'mobile-frontend',
 			$config->get( 'MFUseDesktopSpecialEditWatchlistPage' ) ) );
 		$manager->useHookToRegisterExtensionOrSkinFeatures();

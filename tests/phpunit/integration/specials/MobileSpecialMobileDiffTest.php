@@ -7,7 +7,7 @@ use MediaWiki\Request\FauxRequest;
 /**
  * @group MobileFrontend
  */
-class MobileSpecialPageTest extends MediaWikiIntegrationTestCase {
+class MobileSpecialMobileDiffTest extends MediaWikiIntegrationTestCase {
 	protected function setUp(): void {
 		parent::setUp();
 		$this->overrideConfigValue( MainConfigNames::Script, '/wiki/index.php' );

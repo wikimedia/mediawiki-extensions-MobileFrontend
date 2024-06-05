@@ -14,6 +14,12 @@ use MobileFrontend\Models\MobilePage;
  * @deprecated in future this should be the core SpecialEditWatchlist page (T109277)
  */
 class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
+	private const WATCHLIST_TAB_PATHS = [
+		'Special:Watchlist',
+		'Special:EditWatchlist'
+	];
+	private const LIMIT = 50;
+
 	/** @var string The name of the title to begin listing the watchlist from */
 	protected $offsetTitle;
 
@@ -143,7 +149,42 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 	private function getPagesToDisplay( $pages ) {
 		$offset = $this->getPageOffset( $pages );
 		// Get the slice we are going to display and display it
-		return array_slice( $pages, $offset, SpecialMobileWatchlist::LIMIT, true );
+		return array_slice( $pages, $offset, self::LIMIT, true );
+	}
+
+	/**
+	 * Get the HTML needed to show if a user doesn't watch any page, show information
+	 * how to watch pages where no pages have been watched.
+	 * @param bool $feed Render as feed (true) or list (false) view?
+	 * @param Language $lang The language of the current mode
+	 * @return string
+	 */
+	public static function getEmptyListHtml( $feed, $lang ) {
+		$dir = $lang->isRTL() ? 'rtl' : 'ltr';
+
+		$config = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Config' );
+		$imgUrl = $config->get( 'ExtensionAssetsPath' ) .
+			"/MobileFrontend/images/emptywatchlist-page-actions-$dir.png";
+
+		if ( $feed ) {
+			$msg = Html::element( 'p', [], wfMessage( 'mobile-frontend-watchlist-feed-empty' )->plain() );
+		} else {
+			$msg = Html::element( 'p', [],
+				wfMessage( 'mobile-frontend-watchlist-a-z-empty-howto' )->plain()
+			);
+			$msg .= Html::element( 'img', [
+				'src' => $imgUrl,
+				'alt' => wfMessage( 'mobile-frontend-watchlist-a-z-empty-howto-alt' )->plain(),
+			] );
+		}
+
+		return Html::openElement( 'div', [ 'class' => 'info empty-page' ] ) .
+			$msg .
+			Html::element( 'a',
+				[ 'class' => 'button', 'href' => Title::newMainPage()->getLocalURL() ],
+				wfMessage( 'mobile-frontend-watchlist-back-home' )->plain()
+			) .
+			Html::closeElement( 'div' );
 	}
 
 	/**
@@ -156,7 +197,7 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 	private function getNextPage( $pages ) {
 		$total = count( $pages );
 		$offset = $this->getPageOffset( $pages );
-		$limit = SpecialMobileWatchlist::LIMIT;
+		$limit = self::LIMIT;
 
 		// Work out if we need a more button and where to start from
 		if ( $total > $offset + $limit ) {
@@ -211,7 +252,7 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 		}
 
 		if ( $mobilePages->isEmpty() ) {
-			$html = SpecialMobileWatchlist::getEmptyListHtml( false, $this->getLanguage() );
+			$html = self::getEmptyListHtml( false, $this->getLanguage() );
 		} else {
 			$html = $this->getViewHtml( $mobilePages );
 		}
@@ -231,12 +272,7 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 		$out->addModuleStyles(
 			[
 				'mobile.pagelist.styles',
-				'mobile.pagesummary.styles',
-				// FIXME: This module should be removed when the following tickets are resolved:
-				// * T305113
-				// * T109277
-				// * T117279
-				'mobile.special.pagefeed.styles'
+				'mobile.pagesummary.styles'
 			]
 		);
 	}
@@ -259,6 +295,6 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 	 * @inheritDoc
 	 */
 	public function getAssociatedNavigationLinks() {
-		return SpecialMobileWatchlist::WATCHLIST_TAB_PATHS;
+		return self::WATCHLIST_TAB_PATHS;
 	}
 }

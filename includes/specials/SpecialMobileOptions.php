@@ -14,7 +14,7 @@ use Wikimedia\Rdbms\ReadOnlyMode;
 /**
  * Adds a special page with mobile specific preferences
  */
-class SpecialMobileOptions extends MobileSpecialPage {
+class SpecialMobileOptions extends SpecialPage {
 	/** @var bool Whether this special page has a desktop version or not */
 	protected $hasDesktopVersion = true;
 
@@ -42,6 +42,10 @@ class SpecialMobileOptions extends MobileSpecialPage {
 
 	/** @var ReadOnlyMode */
 	private $readOnlyMode;
+	/** @var MobileContext */
+	private $mobileContext;
+	/** @var Config MobileFrontend's config object */
+	protected $config = null;
 
 	public function __construct() {
 		parent::__construct( 'MobileOptions' );
@@ -49,8 +53,10 @@ class SpecialMobileOptions extends MobileSpecialPage {
 		$this->amc = $this->services->getService( 'MobileFrontend.AMC.Manager' );
 		$this->featuresManager = $this->services->getService( 'MobileFrontend.FeaturesManager' );
 		$this->userMode = $this->services->getService( 'MobileFrontend.AMC.UserMode' );
+		$this->mobileContext = $this->services->getService( 'MobileFrontend.Context' );
 		$this->userOptionsManager = $this->services->getUserOptionsManager();
 		$this->readOnlyMode = $this->services->getReadOnlyMode();
+		$this->config = $this->services->getService( 'MobileFrontend.Config' );
 	}
 
 	/**
@@ -78,8 +84,18 @@ class SpecialMobileOptions extends MobileSpecialPage {
 	 */
 	public function execute( $par = '' ) {
 		parent::execute( $par );
+		$out = $this->getOutput();
 
 		$this->setHeaders();
+		$out->addBodyClasses( 'mw-mf-special-page' );
+		$out->addModuleStyles( [
+			'mobile.special.styles',
+			'mobile.special.codex.styles',
+			'mobile.special.mobileoptions.styles',
+		] );
+		$out->addModules( [
+			'mobile.special.mobileoptions.scripts',
+		] );
 		$this->setJsConfigVars();
 
 		$this->mobileContext->setForceMobileView( true );
@@ -188,6 +204,20 @@ class SpecialMobileOptions extends MobileSpecialPage {
 	}
 
 	/**
+	 * Mark some html as being content
+	 * @param string $html HTML content
+	 * @param string $className additional class names
+	 * @return string of html
+	 */
+	private static function contentElement( $html, $className = '' ) {
+		$templateParser = new TemplateParser( __DIR__ . '/templates' );
+		return $templateParser->processTemplate( 'ContentBox', [
+			'className' => $className,
+			'html' => $html,
+		] );
+	}
+
+	/**
 	 * Render the settings form (with actual set settings) and add it to the
 	 * output as well as any supporting modules.
 	 */
@@ -201,7 +231,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 
 		if ( $this->getRequest()->getCheck( 'success' ) ) {
 			$out->wrapWikiMsg(
-				MobileUI::contentElement(
+				self::contentElement(
 					Html::successBox(
 						$this->msg( 'savedprefs' )->parse(),
 						'mw-mf-mobileoptions-message'
@@ -272,7 +302,7 @@ class SpecialMobileOptions extends MobileSpecialPage {
 				$fields[] = new OOUI\FieldLayout(
 					new OOUI\IconWidget( [
 						'icon' => $icon,
-						'title' => wfMessage( 'mobile-frontend-beta-only' )->text(),
+						'title' => $this->msg( 'mobile-frontend-beta-only' )->text(),
 					] ),
 					[
 						'classes' => $classNames,
@@ -280,9 +310,9 @@ class SpecialMobileOptions extends MobileSpecialPage {
 							'label' => new OOUI\HtmlSnippet(
 								Html::rawElement( 'div', [],
 									Html::element( 'strong', [],
-										wfMessage( $feature->getNameKey() )->text() ) .
+										$this->msg( $feature->getNameKey() )->text() ) .
 									Html::element( 'div', [ 'class' => 'option-description' ],
-										wfMessage( $feature->getDescriptionKey() )->text() )
+										$this->msg( $feature->getDescriptionKey() )->text() )
 								)
 							),
 						] )
