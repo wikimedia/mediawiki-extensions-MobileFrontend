@@ -38,6 +38,7 @@ function LanguageSearcher( props ) {
 				className: 'language-searcher',
 				events: {
 					'click a': 'onLinkClick',
+					'click .language-search-banner': 'onSearchBannerClick',
 					'input .search': 'onSearchInput'
 				},
 				// the rest are template properties
@@ -143,11 +144,16 @@ mfExtend( LanguageSearcher, View, {
 	 *
 	 * @stable for use inside ContentTranslation
 	 * @param {string} bannerHTML
+	 * @param {string} firstMissingLanguage
 	 */
-	addBanner: function ( bannerHTML ) {
+	addBanner: function ( bannerHTML, firstMissingLanguage ) {
 		this.options.bannerHTML = bannerHTML;
+		this.options.bannerFirstLanguage = firstMissingLanguage;
 		this.options.showSuggestedLanguagesHeader = true;
 		this.render();
+	},
+	onSearchBannerClick: function () {
+		this.$el.find( '.search' ).val( this.options.bannerFirstLanguage ).trigger( 'input' );
 	},
 	/**
 	 * Article link click event handler
