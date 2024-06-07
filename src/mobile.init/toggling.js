@@ -2,6 +2,7 @@ module.exports = function () {
 	var
 		currentPage = require( '../mobile.startup/currentPage' )(),
 		Toggler = require( '../mobile.startup/Toggler' ),
+		sectionCollapsing = require( '../mobile.startup/sectionCollapsing' ),
 		eventBus = require( '../mobile.startup/eventBusSingleton' );
 
 	/**
@@ -14,21 +15,26 @@ module.exports = function () {
 	 * @ignore
 	 */
 	function init( $container, prefix, page ) {
-		// Only handle headings in content processed by MakeSectionsTransform.
-		// Remove event handler added by MakeSectionsTransform::interimTogglingSupport().
-		$container.find( '.section-heading' ).removeAttr( 'onclick' );
-		// Cleanup global as it is no longer needed. We check if it's undefined because
-		// there is no guarantee this won't be run on other skins e.g. Vector or cached HTML.
-		if ( window.mfTempOpenSection !== undefined ) {
-			delete window.mfTempOpenSection;
+		const isParsoidEnabled = !!document.querySelector( '.mw-parser-output[data-mw-parsoid-version]' );
+		if ( isParsoidEnabled ) {
+			sectionCollapsing.init( $container[0] );
+		} else {
+			// Only handle headings in content processed by MakeSectionsTransform.
+			// Remove event handler added by MakeSectionsTransform::interimTogglingSupport().
+			$container.find( '.section-heading' ).removeAttr( 'onclick' );
+			// Cleanup global as it is no longer needed. We check if it's undefined because
+			// there is no guarantee this won't be run on other skins e.g. Vector or cached HTML.
+			if ( window.mfTempOpenSection !== undefined ) {
+				delete window.mfTempOpenSection;
+			}
+			// eslint-disable-next-line no-new
+			new Toggler( {
+				$container: $container,
+				prefix: prefix,
+				page: page,
+				eventBus: eventBus
+			} );
 		}
-		// eslint-disable-next-line no-new
-		new Toggler( {
-			$container: $container,
-			prefix: prefix,
-			page: page,
-			eventBus: eventBus
-		} );
 	}
 
 	if (

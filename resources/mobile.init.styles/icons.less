@@ -1,6 +1,18 @@
 @import 'mediawiki.skin.variables.less';
 @import 'mediawiki.mixins.less';
 
+.mf-icon {
+	.cdx-mixin-css-icon-background( );
+	.cdx-mixin-css-icon-size( );
+	.cdx-mixin-css-icon-alignment( );
+	font-size: 14px;
+
+	// Temporary fix for https://phabricator.wikimedia.org/T356540
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: ~'calc( max( @{size-icon-medium}, @{min-size-icon-medium} ) )';
+}
+
 .mf-icon-close {
 	.cdx-mixin-css-icon( @cdx-icon-close, @param-is-button-icon: false,
 	@param-fill-color: @color-subtle );
@@ -39,6 +51,11 @@
 .mf-icon-expand-invert {
 	.cdx-mixin-css-icon( @cdx-icon-expand, @param-is-button-icon: false,
 	@param-fill-color: @color-inverted );
+}
+
+.mf-icon-collapse {
+	.cdx-mixin-css-icon( @cdx-icon-collapse, @param-is-button-icon: false,
+	@param-fill-color: @color-subtle );
 }
 
 .mf-icon-rotate-anti-clockwise {

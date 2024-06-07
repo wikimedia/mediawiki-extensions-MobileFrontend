@@ -2,6 +2,8 @@
 @import 'mobile.less';
 @import 'icons.less';
 
+/* stylelint-disable no-descending-specificity */
+
 .client-js {
 	.collapsible-block:not( .collapsible-block-js ) {
 		display: none;
@@ -21,18 +23,18 @@
 	.section-heading {
 		align-items: center;
 	}
-}
 
-.mf-icon {
-	.cdx-mixin-css-icon-background( );
-	.cdx-mixin-css-icon-size( );
-	.cdx-mixin-css-icon-alignment( );
-	font-size: 14px;
+	.mw-heading .mf-collapsible-heading {
+		align-items: center;
+		cursor: pointer;
+		border-bottom: @border-width-base @border-style-base @border-color-muted;
+		padding-bottom: 0.5em;
 
-	// Temporary fix for https://phabricator.wikimedia.org/T356540
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: ~'calc( max( @{size-icon-medium}, @{min-size-icon-medium} ) )';
+		// Arrow icon
+		.indicator {
+			margin-right: 6px;
+		}
+	}
 }
 
 .section-heading .indicator {
