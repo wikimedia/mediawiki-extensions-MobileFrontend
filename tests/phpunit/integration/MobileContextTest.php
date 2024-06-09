@@ -1,5 +1,6 @@
 <?php
 
+use MediaWiki\Context\MutableContext;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\MainConfigNames;
 use MediaWiki\Request\FauxRequest;

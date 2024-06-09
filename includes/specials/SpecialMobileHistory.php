@@ -1,6 +1,8 @@
 <?php
 
 use MediaWiki\SpecialPage\UnlistedSpecialPage;
+use MediaWiki\Title\Title;
+use MediaWiki\User\User;
 
 /**
  * Mobile formatted history of a page

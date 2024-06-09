@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\Message\Message;
+
 /**
  * @group MobileFrontend
  * @coversDefaultClass \MobileFrontendSkinHooks
