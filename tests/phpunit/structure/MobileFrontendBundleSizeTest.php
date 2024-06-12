@@ -5,7 +5,7 @@ namespace Tests\MobileFrontend\Structure;
 /**
  * @group MobileFrontend
  */
-class MobileFrontendBundleSizeTest extends \MediaWiki\Tests\Structure\BundleSizeTest {
+class MobileFrontendBundleSizeTest extends \MediaWiki\Tests\Structure\BundleSizeTestBase {
 
 	/** @inheritDoc */
 	public function getBundleSizeConfig(): string {
