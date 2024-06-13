@@ -114,7 +114,6 @@ class MakeSectionsTransform implements IMobileTransform {
 		while ( $containerChild ) {
 			$node = $containerChild;
 			$containerChild = $containerChild->nextSibling;
-
 			// If we've found a top level heading, insert the previous section if
 			// necessary and clear the container div.
 			if ( $firstHeadingName && $this->getHeadingName( $node ) === $firstHeadingName ) {
