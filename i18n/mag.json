@@ -4,12 +4,12 @@
 			"ऐक्टिवेटेड्"
 		]
 	},
-	"abusefilter-edit-builder-vars-user-mobile": "सदस्स मोबाइल् अन्तराफलकसे सम्पादित करैतहथ कि न",
+	"abusefilter-edit-builder-vars-user-mobile": "कि कौनो सदस्स मोबाइल अन्तराफलकके माध्यमसे सम्पादन करित हे कि न ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "पुष्टीकरण कोड् डाली",
 	"mobile-frontend-changeslist-nocomment": "कौनो सम्पादन सारान्श न",
 	"mobile-frontend-clear-search": "खाली करी",
 	"mobile-frontend-copyright": "सामग्री $1 के अन्तर्गत उपलब्ध हे जखनितक अलिगेसे बतावल न जाइत ।",
-	"mobile-frontend-desc": "मोबाइल् फ्रण्टेण्ड्",
+	"mobile-frontend-desc": "मीडियाविकि उदाहरणके मोबाइल उपस्थितिमे सुधार करेमे सहायता करहे",
 	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}} के निमन बनावेमे सहायता करी</strong><br />सम्पादित करेलागि प्रबेश करी ।",
 	"mobile-frontend-edit-signup-action": "<strong>{{SITENAME}} के निमन बनावेमे सहायता करी</strong><br />सम्पादित करेलागि खाता बनावी ।",
 	"mobile-frontend-editor-anon": "बिन खातामे प्रबेशके सम्पादन करी",
