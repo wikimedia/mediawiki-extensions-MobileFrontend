@@ -39,7 +39,7 @@ function init( container ) {
 	).forEach( ( wrapper ) => {
 		const heading = wrapper.firstElementChild;
 		const content = wrapper.nextElementSibling;
-		heading.classList.add( 'mf-collapsible-heading' );
+		wrapper.classList.add( 'mf-collapsible-heading' );
 
 		// Update the heading text to account for semantics of collapsing sections
 		const headingText = document.createElement( 'span' );

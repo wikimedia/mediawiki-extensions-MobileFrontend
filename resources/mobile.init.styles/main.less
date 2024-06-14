@@ -24,11 +24,14 @@
 		align-items: center;
 	}
 
-	.mw-heading .mf-collapsible-heading {
-		align-items: center;
+	.mw-heading.mf-collapsible-heading {
 		cursor: pointer;
 		border-bottom: @border-width-base @border-style-base @border-color-muted;
 		padding-bottom: 0.5em;
+
+		h1, h2, h3, h4, h5, h6 {
+			align-items: center;
+		}
 
 		// Arrow icon
 		.indicator {
