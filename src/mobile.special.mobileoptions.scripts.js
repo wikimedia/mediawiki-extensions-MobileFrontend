@@ -9,7 +9,6 @@ var clientPrefs = require( '@wikimedia/mediawiki.skins.clientpreferences' ),
 	USER_FONT_SIZE_REGULAR = 'regular',
 	USER_FONT_SIZE_LARGE = 'large',
 	THEME = 'skin-theme',
-	NIGHT_MODE_THEME_LEGACY = 'skin-night-mode',
 	// FIXME: This value should be synced between back-end and front-end code,
 	// but it's currently hard-coded because ResourceLoader virtual imports
 	// i.e. require( './config.json') are incompatible with the
@@ -152,21 +151,10 @@ function initMobileOptions() {
 	}
 
 	const skin = mw.config.get( 'skin' );
-	// Register for legacy classes and new classes depending on whether the legacy class is found on
-	// the documentElement.
-	// FIXME: We can remove the NIGHT_MODE_THEME_LEGACY reference once T359983 is resolved.
-	const docClass = document.documentElement.getAttribute( 'class' );
-	if ( docClass.indexOf( `${ NIGHT_MODE_THEME_LEGACY }-clientpref` ) > -1 ) {
-		clientPreferences[ NIGHT_MODE_THEME_LEGACY ] = {
-			options: [ '2', '0', '1' ],
-			preferenceKey: `${ skin }-night-mode`
-		};
-	} else {
-		clientPreferences[ THEME ] = {
-			options: [ 'day', 'night', 'os' ],
-			preferenceKey: `${ skin }-theme`
-		};
-	}
+	clientPreferences[ THEME ] = {
+		options: [ 'day', 'night', 'os' ],
+		preferenceKey: `${ skin }-theme`
+	};
 
 	clientPreferences[ EXPAND_SECTIONS_KEY ] = {
 		options: [
