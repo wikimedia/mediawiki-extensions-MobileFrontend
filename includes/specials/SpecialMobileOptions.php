@@ -6,7 +6,7 @@ use MediaWiki\Html\Html;
 use MediaWiki\Html\TemplateParser;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Request\WebRequest;
-use MediaWiki\SpecialPage\SpecialPage;
+use MediaWiki\SpecialPage\UnlistedSpecialPage;
 use MediaWiki\Title\Title;
 use MediaWiki\User\Options\UserOptionsManager;
 use MobileFrontend\Amc\UserMode;
@@ -17,7 +17,7 @@ use Wikimedia\Rdbms\ReadOnlyMode;
 /**
  * Adds a special page with mobile specific preferences
  */
-class SpecialMobileOptions extends SpecialPage {
+class SpecialMobileOptions extends UnlistedSpecialPage {
 	/** @var bool Whether this special page has a desktop version or not */
 	protected $hasDesktopVersion = true;
 
