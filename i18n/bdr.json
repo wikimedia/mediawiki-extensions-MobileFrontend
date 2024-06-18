@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Tofeiku"
+			"Tofeiku",
+			"Ultron90"
 		]
 	},
+	"mobile-frontend-copyright": "Isi sinedio kok $1 kesuali' boi bineraan.",
 	"mobile-frontend-terms-text": "Sarat Makay",
 	"mobile-frontend-view": "Pengendaan talipaun",
 	"mobile-frontend-view-desktop": "Kompute"

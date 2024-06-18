@@ -17,6 +17,7 @@
 	"mobile-frontend-editor-summary-placeholder": "Mısalı: Qáteni dúzettim, maǵlıwmat qostım",
 	"mobile-frontend-editor-summary": "Qısqasha túsindirme:",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} siz sıyaqlı adamlar tárepinen bayıtıladı.</strong><br />Úles qosıw ushın sistemaǵa kiriń.",
+	"mobile-frontend-joined-seconds": "{{PLURAL:$2|$2 sekund}} burın {{GENDER:$1|qosılǵan}}",
 	"mobile-frontend-joined-hours": "{{PLURAL:$2|$2 saat|$2 saat}} burın {{GENDER:$1|qosıldı}}",
 	"mobile-frontend-joined-months": "{{PLURAL:$2|$2 ay}} burın {{GENDER:$1|qosılǵan}}",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Usınıs etilgen tiller",
@@ -34,5 +35,8 @@
 	"mobile-frontend-watchlist-filter-other": "Basqa",
 	"mobile-frontend-watchlist-filter-talk": "Talqılaw",
 	"mobile-frontend-watchlist-more": "jáne",
-	"tag-advanced_mobile_edit": "Keńeytilgen mobil redaktorlaw"
+	"tag-mobile_edit": "Mobil qurılma",
+	"tag-mobile_edit-description": "Redaktorlaw mobil qurılmada orınlanǵan (saytta yamasa qosımshada)",
+	"tag-advanced_mobile_edit": "Keńeytilgen mobil redaktorlaw",
+	"tag-mobile_web_edit": "Mobil versiya"
 }
