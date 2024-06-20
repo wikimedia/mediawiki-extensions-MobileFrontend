@@ -857,11 +857,16 @@ class MobileContext extends ContextSource {
 			return;
 		}
 
+		$title = $this->getTitle();
+		if ( !$title ) {
+			return;
+		}
+
 		$query = $this->getRequest()->getQueryValues();
 		unset( $query['mobileaction'] );
 		unset( $query['useformat'] );
 		unset( $query['title'] );
-		$url = $this->getTitle()->getFullURL( $query, false, PROTO_CURRENT );
+		$url = $title->getFullURL( $query, false, PROTO_CURRENT );
 
 		if ( $this->viewChange == 'mobile' ) {
 			// unset stopMobileRedirect cookie
