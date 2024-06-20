@@ -9,8 +9,7 @@ var EditorOverlayBase = require( './EditorOverlayBase' ),
 	util = require( '../mobile.startup/util' ),
 	OverlayManager = require( '../mobile.startup/OverlayManager' ),
 	overlayManager = OverlayManager.getSingleton(),
-	currentPage = require( '../mobile.startup/currentPage' ),
-	teleportTarget = __non_webpack_require__( 'mediawiki.page.ready' ).teleportTarget;
+	currentPage = require( '../mobile.startup/currentPage' );
 
 /**
  * Overlay for VisualEditor view
@@ -160,9 +159,6 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 			options = this.options,
 			showAnonWarning = options.isAnon && !options.switched;
 
-		// T358528 - For mobile editor to appear in light-mode, when
-		// night-mode is enabled, add the .notheme class to the teleportTarget
-		teleportTarget.classList.add( 'notheme' );
 		EditorOverlayBase.prototype.show.apply( this, arguments );
 
 		// log edit attempt
@@ -238,7 +234,6 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 	 */
 	onBeforeExit: function ( exit, cancel ) {
 		var overlay = this;
-		teleportTarget.classList.remove( 'notheme' );
 		EditorOverlayBase.prototype.onBeforeExit.call( this, function () {
 			// If this function is called, the parent method has decided that we should exit
 			exit();
