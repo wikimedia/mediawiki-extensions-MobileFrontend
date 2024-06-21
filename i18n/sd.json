@@ -10,12 +10,12 @@
 			"Tweety"
 		]
 	},
-	"abusefilter-edit-builder-vars-user-mobile": "ڪو واپرائيندڙ موبائل انٽرفيس ذريعي سنوار ڪري رهيو آهي يا نہ",
+	"abusefilter-edit-builder-vars-user-mobile": "ڪو واپرائيندڙ موبائل انٽرفيس ذريعي سنوار ڪري رهيو آهي يا نہ ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "تصديقي ڪوڊ داخل ڪريو",
 	"mobile-frontend-changeslist-nocomment": "سنوار جو تَتُ ڪونھي",
 	"mobile-frontend-clear-search": "ختم ڪريو",
 	"mobile-frontend-copyright": "مواد $1 ھيٺ موجود آھي جيسيتائين ٻي صورت واضع نہ ڪئي وڃي.",
-	"mobile-frontend-desc": "موبائل فرنٽڊ",
+	"mobile-frontend-desc": "ميڊياوڪي انسٽانس جي موبائل موجودگي کي بھتر بنائڻ ۾ مدد ڪري ٿو",
 	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}} کي بھتر ڪرڻ ۾ مدد ڪريو.</strong><br/> سنوارڻ لاءِ داخل ٿيو.",
 	"mobile-frontend-edit-signup-action": "<strong>{{SITENAME}} کي بھتر ڪرڻ ۾ مدد ڪريو.</strong><br /> سنوارڻ لاءِ کاتو کوليو.",
 	"mobile-frontend-editor-anon": "داخل ٿيڻ بغير سنواريو",
