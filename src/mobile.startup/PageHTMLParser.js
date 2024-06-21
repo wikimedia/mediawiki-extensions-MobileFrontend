@@ -77,6 +77,13 @@ class PageHTMLParser {
 			// lead is easy
 			$lead = this.getLeadSectionElement();
 			if ( $lead && $lead.length ) {
+
+				// Handle nested sections in Parsoid wikitext parset opt-in scenario.
+				var $nestedSection = $lead.find( 'section[data-mw-section-id="0"]' );
+				if ( $nestedSection.length ) {
+					return withNestedChildren( $nestedSection.children( selector ) );
+				}
+
 				return withNestedChildren( $lead.children( selector ) );
 			} else {
 				$heading = this.findSectionHeadingByIndex( 1 );
