@@ -10,7 +10,6 @@ use MediaWiki\SpecialPage\UnlistedSpecialPage;
 use MediaWiki\Title\Title;
 use MediaWiki\User\Options\UserOptionsManager;
 use MobileFrontend\Amc\UserMode;
-use MobileFrontend\Features\FeaturesManager;
 use MobileFrontend\Features\IFeature;
 use Wikimedia\Rdbms\ReadOnlyMode;
 
@@ -20,11 +19,6 @@ use Wikimedia\Rdbms\ReadOnlyMode;
 class SpecialMobileOptions extends UnlistedSpecialPage {
 	/** @var bool Whether this special page has a desktop version or not */
 	protected $hasDesktopVersion = true;
-
-	/**
-	 * @var MediaWikiServices
-	 */
-	private $services;
 
 	/**
 	 * Advanced Mobile Contributions mode
@@ -52,14 +46,14 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 
 	public function __construct() {
 		parent::__construct( 'MobileOptions' );
-		$this->services = MediaWikiServices::getInstance();
-		$this->amc = $this->services->getService( 'MobileFrontend.AMC.Manager' );
-		$this->featuresManager = $this->services->getService( 'MobileFrontend.FeaturesManager' );
-		$this->userMode = $this->services->getService( 'MobileFrontend.AMC.UserMode' );
-		$this->mobileContext = $this->services->getService( 'MobileFrontend.Context' );
-		$this->userOptionsManager = $this->services->getUserOptionsManager();
-		$this->readOnlyMode = $this->services->getReadOnlyMode();
-		$this->config = $this->services->getService( 'MobileFrontend.Config' );
+		$services = MediaWikiServices::getInstance();
+		$this->amc = $services->getService( 'MobileFrontend.AMC.Manager' );
+		$this->featuresManager = $services->getService( 'MobileFrontend.FeaturesManager' );
+		$this->userMode = $services->getService( 'MobileFrontend.AMC.UserMode' );
+		$this->mobileContext = $services->getService( 'MobileFrontend.Context' );
+		$this->userOptionsManager = $services->getUserOptionsManager();
+		$this->readOnlyMode = $services->getReadOnlyMode();
+		$this->config = $services->getService( 'MobileFrontend.Config' );
 	}
 
 	/**
@@ -111,12 +105,10 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 	}
 
 	private function buildAMCToggle() {
-		/** @var \MobileFrontend\Amc\UserMode $userMode */
-		$userMode = $this->services->getService( 'MobileFrontend.AMC.UserMode' );
 		$amcToggle = new OOUI\CheckboxInputWidget( [
 			'name' => 'enableAMC',
 			'infusable' => true,
-			'selected' => $userMode->isEnabled(),
+			'selected' => $this->userMode->isEnabled(),
 			'id' => 'enable-amc-toggle',
 			'value' => '1',
 		] );
@@ -284,13 +276,15 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 				]
 			);
 
-			/** @var FeaturesManager $manager */
-			$manager = $this->services->getService( 'MobileFrontend.FeaturesManager' );
 			// TODO The userMode should know how to retrieve features assigned to that mode,
 			// we shouldn't do any special logic like this in anywhere else in the code
 			$features = array_diff(
-				$manager->getAvailableForMode( $manager->getMode( IFeature::CONFIG_BETA ) ),
-				$manager->getAvailableForMode( $manager->getMode( IFeature::CONFIG_STABLE ) )
+				$this->featuresManager->getAvailableForMode(
+					$this->featuresManager->getMode( IFeature::CONFIG_BETA )
+				),
+				$this->featuresManager->getAvailableForMode(
+					$this->featuresManager->getMode( IFeature::CONFIG_STABLE )
+				)
 			);
 
 			$classNames = [ 'mobile-options-beta-feature' ];
