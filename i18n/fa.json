@@ -39,7 +39,9 @@
 			"Sahim",
 			"Sunfyre",
 			"ZxxZxxZ",
-			"پسر یاس"
+			"پسر یاس",
+			"Darafsh",
+			"Ebrahim"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "اینکه کاربر از میانای تلفن همراه استفاده می‌کند یا نه",
@@ -96,7 +98,7 @@
 	"mobile-frontend-editor-error-conflict": "خطا، کاربری دیگر این صفحه را ویرایش کرده است.",
 	"mobile-frontend-editor-error-loading": "خطا، امکان بارگیری ویرایشگر وجود ندارد.",
 	"mobile-frontend-editor-error-preview": "خطا، مشکلی غیر منتظره برای بارگیری پیش‌نمایش پدید آمده. لطفاً صفحه را ببندید و دوباره تلاش کنید.",
-	"mobile-frontend-editor-keep-editing": "ادامه ویرایش‌کردن",
+	"mobile-frontend-editor-keep-editing": "ادامهٔ ویرایش",
 	"mobile-frontend-editor-licensing": "با انتشار تغییرات، شما با انتشار مشارکتتان تحت {{PLURAL:$2|مجوز|مجوزهای}} $1 موافقت خواهید کرد.",
 	"mobile-frontend-editor-licensing-with-terms": "با انتشار تغییراتتان، شما با $1 و انتشار مشارکتتان تحت {{PLURAL:$3|مجوز|مجوزهای}} $2 موافقت خواهید کرد.",
 	"mobile-frontend-editor-terms-link": "[$1 شرایط استفاده]",
