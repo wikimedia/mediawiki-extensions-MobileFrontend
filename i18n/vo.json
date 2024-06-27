@@ -1,9 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"Malafaya"
+			"Malafaya",
+			"Morozof"
 		]
 	},
+	"mobile-frontend-copyright": "Ninäd binon dagetovik bai stips ela $1 pläsif votikos penunon.",
 	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|Jafol}} padi nulik su {{SITENAME}}!",
-	"mobile-frontend-privacy-link-text": "Privat"
+	"mobile-frontend-privacy-link-text": "Privat",
+	"mobile-frontend-terms-text": "Stipots geba",
+	"mobile-frontend-view": "Logot pro parats polovik",
+	"mobile-frontend-view-desktop": "Cifaskrin"
 }
