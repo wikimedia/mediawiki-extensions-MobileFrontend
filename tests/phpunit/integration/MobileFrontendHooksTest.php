@@ -28,6 +28,10 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 		MobileContext::resetInstanceForTesting();
 	}
 
+	private function newMobileFrontendHooks(): MobileFrontendHooks {
+		return new MobileFrontendHooks( null );
+	}
+
 	/**
 	 * Test findTagline when output has no wikibase elements
 	 *
@@ -120,7 +124,7 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 		$skin = $param['sk'];
 
 		// run the test
-		( new MobileFrontendHooks )->onBeforePageDisplay( $out, $skin );
+		$this->newMobileFrontendHooks()->onBeforePageDisplay( $out, $skin );
 
 		// test, if alternate or canonical link is added, but not both
 		$links = $out->getLinkTags();
@@ -147,7 +151,7 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 		$skin = $param['sk'];
 
 		// run the test
-		( new MobileFrontendHooks )->onBeforePageDisplay( $out, $skin );
+		$this->newMobileFrontendHooks()->onBeforePageDisplay( $out, $skin );
 		// test, if alternate or canonical link is added, but not both
 		$links = $out->getLinkTags();
 		$this->assertCount( $isAlternateCanonical, $links,
@@ -376,7 +380,7 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 
 		/** @var Skin $skin */
 		$skin = null;
-		( new MobileFrontendHooks )->onRequestContextCreateSkin( $context, $skin );
+		$this->newMobileFrontendHooks()->onRequestContextCreateSkin( $context, $skin );
 
 		self::assertSame( $expectedSkin, $skin->getSkinName() );
 	}
@@ -411,7 +415,7 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 		$article = new Article( Title::newMainPage() );
 		$parserOptions = ParserOptions::newFromAnon();
 
-		( new MobileFrontendHooks )->onArticleParserOptions( $article, $parserOptions );
+		$this->newMobileFrontendHooks()->onArticleParserOptions( $article, $parserOptions );
 
 		$this->assertSame( $expected, $parserOptions->getCollapsibleSections() );
 	}

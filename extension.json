@@ -475,7 +475,10 @@
 	},
 	"HookHandlers": {
 		"MobileFrontendHooks": {
-			"class": "MobileFrontendHooks"
+			"class": "MobileFrontendHooks",
+			"optional_services": [
+				"GadgetsRepo"
+			]
 		},
 		"MobileFrontendEditorHooks": {
 			"class": "MobileFrontendEditorHooks"
