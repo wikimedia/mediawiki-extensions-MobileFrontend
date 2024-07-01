@@ -135,19 +135,17 @@ class MobileFrontendHooks implements
 	/**
 	 * Obtain the default mobile skin
 	 *
-	 * @param Config $config
 	 * @throws SkinException If a factory function isn't registered for the skin name
 	 * @return Skin
 	 */
-	protected static function getDefaultMobileSkin( Config $config ): Skin {
-		$defaultSkin = $config->get( 'DefaultMobileSkin' );
+	protected function getDefaultMobileSkin(): Skin {
+		$defaultSkin = $this->config->get( 'DefaultMobileSkin' );
 
 		if ( !$defaultSkin ) {
-			$defaultSkin = $config->get( 'DefaultSkin' );
+			$defaultSkin = $this->config->get( 'DefaultSkin' );
 		}
 
-		$factory = MediaWikiServices::getInstance()->getSkinFactory();
-		return $factory->makeSkin( Skin::normalizeKey( $defaultSkin ) );
+		return $this->skinFactory->makeSkin( Skin::normalizeKey( $defaultSkin ) );
 	}
 
 	/**
@@ -197,7 +195,7 @@ class MobileFrontendHooks implements
 		if ( $userSkin && Skin::normalizeKey( $userSkin ) === $userSkin ) {
 			$skin = $this->skinFactory->makeSkin( $userSkin );
 		} else {
-			$skin = self::getDefaultMobileSkin( $this->config );
+			$skin = $this->getDefaultMobileSkin();
 		}
 
 		$hookRunner = new HookRunner( $this->hookContainer );
@@ -556,13 +554,12 @@ class MobileFrontendHooks implements
 
 	/**
 	 * @param MobileContext $context
-	 * @param Config $config
 	 * @return array
 	 */
-	private static function getWikibaseStaticConfigVars(
-		MobileContext $context, Config $config
+	private function getWikibaseStaticConfigVars(
+		MobileContext $context
 	) {
-		$features = array_keys( $config->get( 'MFDisplayWikibaseDescriptions' ) );
+		$features = array_keys( $this->config->get( 'MFDisplayWikibaseDescriptions' ) );
 		$result = [ 'wgMFDisplayWikibaseDescriptions' => [] ];
 		/** @var FeaturesManager $featuresManager */
 		$featuresManager = MediaWikiServices::getInstance()
@@ -574,7 +571,7 @@ class MobileFrontendHooks implements
 
 		foreach ( $features as $feature ) {
 			$result['wgMFDisplayWikibaseDescriptions'][$feature] = $descriptionsEnabled &&
-				$context->shouldShowWikibaseDescriptions( $feature, $config );
+				$context->shouldShowWikibaseDescriptions( $feature, $this->config );
 		}
 
 		return $result;
@@ -583,14 +580,13 @@ class MobileFrontendHooks implements
 	/**
 	 * Should special pages be replaced with mobile formatted equivalents?
 	 *
+	 * @internal
 	 * @param User $user for which we need to make the decision based on user prefs
 	 * @return bool whether special pages should be substituted with
 	 *   mobile friendly equivalents
 	 */
-	public static function shouldMobileFormatSpecialPages( $user ) {
-		$services = MediaWikiServices::getInstance();
-		$config = $services->getService( 'MobileFrontend.Config' );
-		$enabled = $config->get( 'MFEnableMobilePreferences' );
+	public function shouldMobileFormatSpecialPages( $user ) {
+		$enabled = $this->config->get( 'MFEnableMobilePreferences' );
 
 		if ( !$enabled ) {
 			return true;
@@ -602,7 +598,7 @@ class MobileFrontendHooks implements
 			return true;
 		}
 
-		$userOption = $services->getUserOptionsLookup()->getOption(
+		$userOption = $this->userOptionsLookup->getOption(
 			$user,
 			self::MOBILE_PREFERENCES_SPECIAL_PAGES,
 			self::ENABLE_SPECIAL_PAGE_OPTIMISATIONS
@@ -627,7 +623,7 @@ class MobileFrontendHooks implements
 		// Perform substitutions of pages that are unsuitable for mobile
 		// FIXME: Upstream these changes to core.
 		if ( $context->shouldDisplayMobileView() &&
-			self::shouldMobileFormatSpecialPages( $user ) && $user->isSafeToLoad()
+			$this->shouldMobileFormatSpecialPages( $user ) && $user->isSafeToLoad()
 		) {
 			if (
 				!$featuresManager->isFeatureAvailableForCurrentUser( 'MFUseDesktopSpecialEditWatchlistPage' )
@@ -1166,7 +1162,7 @@ class MobileFrontendHooks implements
 		// Needs to know if in beta mode or not and needs to load for Minerva desktop as well.
 		// Ideally this would be inside ResourceLoaderFileModuleWithMFConfig but
 		// sessions are not allowed there.
-		$vars += self::getWikibaseStaticConfigVars( $context, $this->config );
+		$vars += $this->getWikibaseStaticConfigVars( $context );
 	}
 
 	/**

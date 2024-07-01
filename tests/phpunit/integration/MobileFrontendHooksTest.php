@@ -315,6 +315,7 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 		$enabled,
 		$userpref = false
 	) {
+		$services = $this->getServiceContainer();
 		$this->overrideConfigValue( 'MFEnableMobilePreferences', $enabled );
 
 		$user = $this->createMock( User::class );
@@ -325,11 +326,20 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 			$userOptLookup->method( 'getOption' )
 				->with( $user, MobileFrontendHooks::MOBILE_PREFERENCES_SPECIAL_PAGES )
 				->willReturn( $userpref ?: $this->returnArgument( 2 ) );
-			$this->setService( 'UserOptionsLookup', $userOptLookup );
+		} else {
+			$userOptLookup = $services->getUserOptionsLookup();
 		}
+		$mobileFrontendHooks = new MobileFrontendHooks(
+			$services->getHookContainer(),
+			$services->getService( 'MobileFrontend.Config' ),
+			$services->getSkinFactory(),
+			$userOptLookup,
+			$services->getWatchlistManager(),
+			null
+		);
 		$this->assertSame(
 			$expected,
-			MobileFrontendHooks::shouldMobileFormatSpecialPages( $user )
+			$mobileFrontendHooks->shouldMobileFormatSpecialPages( $user )
 		);
 	}
 
