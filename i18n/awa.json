@@ -4,7 +4,8 @@
 			"1AnuraagPandey",
 			"1PandeyAnurag",
 			"Ajeetsinghawadhi",
-			"NehalDaveND"
+			"NehalDaveND",
+			"पर्वत सुबेदी"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "कन्फर्मेशन कोड मेल लिखा जाय",
@@ -17,7 +18,7 @@
 	"mobile-frontend-last-modified-date": "अन्तिम दाँइ एकर बदलाव $1 कय $2 बजे भवा रहा",
 	"mobile-frontend-privacy-link-text": "गोपनीयता",
 	"mobile-frontend-terms-text": "उपयोग कय शर्त",
-	"mobile-frontend-view": "दूरभाष दृश्य",
+	"mobile-frontend-view": "मोवाइल दृश्य",
 	"mobile-frontend-view-desktop": "डेस्कटप",
 	"tag-mobile_edit": "दूरभाष सम्पादन",
 	"tag-mobile_web_edit": "दूरभाष जाल सम्पादन"

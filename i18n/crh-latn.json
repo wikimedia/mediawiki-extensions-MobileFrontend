@@ -24,7 +24,7 @@
 	"mobile-frontend-editor-keep-editing": "Deñiştirmege devam",
 	"mobile-frontend-editor-terms-link": "[$1 Qullanuv Şartları]",
 	"mobile-frontend-editor-placeholder": "Mına bölik boştır. Onı ilk tolturğan siz boluñız!",
-	"mobile-frontend-editor-placeholder-new-page": "{{SITENAME}} leyhasında cañı saife {{GENDER:$1|yaratasıñız}}!",
+	"mobile-frontend-editor-placeholder-new-page": "{{SITENAME}} leyhasında yañı saife {{GENDER:$1|yaratasıñız}}!",
 	"mobile-frontend-editor-previewing-page": "<span>$1 <strong>saifesi közden keçirile</strong></span>",
 	"mobile-frontend-editor-publish": "Yayınla",
 	"mobile-frontend-editor-save": "Saqla",

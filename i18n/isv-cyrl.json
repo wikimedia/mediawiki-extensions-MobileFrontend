@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
+			"IJzeren Jan",
 			"Qiorly"
 		]
 	},
-	"mobile-frontend-copyright": "Содржање јест доступно под дозволенјем $1, ако не јест написано иначе.",
+	"mobile-frontend-copyright": "Содржанје јест доступно под лиценцијеју $1, ако не јест написано иначе.",
 	"mobile-frontend-terms-text": "Услоија употрєбјанја",
 	"mobile-frontend-view": "Мобилна версија",
 	"mobile-frontend-view-desktop": "Компјутерна версија"
