@@ -9,10 +9,10 @@ use MediaWiki\ChangeTags\Hook\ListDefinedTagsHook;
 use MediaWiki\ChangeTags\Taggable;
 use MediaWiki\Hook\ManualLogEntryBeforePublishHook;
 use MediaWiki\Hook\RecentChange_saveHook;
-use MediaWiki\MediaWikiServices;
 use MediaWiki\Preferences\Hook\GetPreferencesHook;
 use MediaWiki\User\Hook\UserGetDefaultOptionsHook;
 use MediaWiki\User\User;
+use MediaWiki\User\UserFactory;
 use MediaWiki\User\UserIdentity;
 
 /**
@@ -28,6 +28,13 @@ final class Hooks implements
 	UserGetDefaultOptionsHook,
 	ManualLogEntryBeforePublishHook
 {
+	private UserFactory $userFactory;
+
+	public function __construct(
+		UserFactory $userFactory
+	) {
+		$this->userFactory = $userFactory;
+	}
 
 	/**
 	 * Helper method to tag objects like Logs or Recent changes
@@ -91,7 +98,7 @@ final class Hooks implements
 	 * @param \ManualLogEntry $logEntry
 	 */
 	public function onManualLogEntryBeforePublish( $logEntry ): void {
-		$performer = MediaWikiServices::getInstance()->getUserFactory()->
+		$performer = $this->userFactory->
 			newFromUserIdentity( $logEntry->getPerformerIdentity() );
 		self::injectTagsIfPerformerUsesAMC( $logEntry, $performer );
 	}
