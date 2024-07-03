@@ -75,7 +75,7 @@
 	"mobile-frontend-editor-new-page-confirm": "{{SITENAME}} сайтында жаңа бет {{GENDER:$1|бастағыңыз келе ме}}?",
 	"mobile-frontend-editor-placeholder": "Бұл бөлім бос. Жетілдіру үшін бірінші болыңыз!",
 	"mobile-frontend-editor-placeholder-new-page": "{{SITENAME}} сайтында жаңа бет {{GENDER:$1|бастаудасыз}}!",
-	"mobile-frontend-editor-previewing-page": "<span> $1 <strong>қарап шығылуда</strong></span>",
+	"mobile-frontend-editor-previewing-page": "<span> $1 <strong>алдын ала қаралуда</strong></span>",
 	"mobile-frontend-editor-publish": "Жариялау",
 	"mobile-frontend-editor-save": "Сақтау",
 	"mobile-frontend-editor-summary-placeholder": "Мысалы: қатені түзедім, мәлімет қостым",

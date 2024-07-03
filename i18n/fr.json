@@ -50,7 +50,9 @@
 			"Wyz",
 			"Yann.fauche",
 			"Yasten",
-			"عبد الحق فارح"
+			"عبد الحق فارح",
+			"MacOS Weed",
+			"SleaY"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si un utilisateur est ou non en cours de modification via l’interface mobile",
@@ -126,6 +128,7 @@
 	"mobile-frontend-editor-viewing-source-page": "<strong>Affichage de la source</strong><span> de $1</span>",
 	"mobile-frontend-editor-wait": "Publication de la modification, veuillez patienter.",
 	"mobile-frontend-editor-loading": "Chargement de l’éditeur...",
+	"mobile-frontend-editor-loadingtooslow": "Connection lente?",
 	"mobile-frontend-editor-toload": "L’éditeur va maintenant se charger. Si vous voyez encore ce message après quelques secondes, veuillez [$1 recharger la page].",
 	"mobile-frontend-expand-sections-description": "Toujours développer par défaut les sections de contenu des pages.",
 	"mobile-frontend-expand-sections-status": "Développer toutes les sections",

@@ -11,7 +11,8 @@
 			"Tomato Cream",
 			"ZlyiLev",
 			"Дзяніс Тутэйшы",
-			"Чаховіч Уладзіслаў"
+			"Чаховіч Уладзіслаў",
+			"Kapatych"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ці рэдагуе ўдзельнік праз мабільны інтэрфейс",
@@ -177,7 +178,7 @@
 	"mobile-frontend-user-page-create-owner-page-link-label": "Стварыце ўласную",
 	"mobile-frontend-user-page-create-user-page-link-label": "Стварыць старонку пад назвай $1",
 	"tag-mobile_edit": "Праўка з маб. прылады",
-	"tag-mobile_edit-description": "Праўка, зробленая праз мабільную прыладу (сайт або дадатак)",
+	"tag-mobile_edit-description": "Праўка, зробленая праз мабільную прыладу (сайт або праграму)",
 	"tag-advanced_mobile_edit": "Пашыраная мабільная праўка",
 	"tag-advanced_mobile_edit-description": "Праўка, зробленая ўдзельнікам у пашыраным рэжыме",
 	"tag-mobile_web_edit": "Праўка праз мабільную версію сайта",

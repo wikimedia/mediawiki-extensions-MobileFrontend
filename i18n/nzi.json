@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Valentine Badu"
+			"Valentine Badu",
+			"Elliot one"
 		]
 	},
+	"mobile-frontend-copyright": "Kɔntente ne le gyi $1 kyesɛɛ   ɛka nwo edwɛkɛ",
 	"mobile-frontend-terms-text": "Kɛsi ɔwɔ kɛ ɛfa yɛ wɛbesaete ne ɛdi gyima la",
 	"mobile-frontend-view": "Moba zo",
 	"mobile-frontend-view-desktop": "Kɔmpita  zo"
