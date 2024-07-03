@@ -168,7 +168,7 @@ class MobileFrontendHooks implements
 		$userOption = $services->getUserOptionsLookup()->getOption(
 			$context->getUser(), 'mobileskin'
 		);
-		$userSkin = $context->getRequest()->getVal( 'useskin', $userOption );
+		$userSkin = $context->getRequest()->getRawVal( 'useskin', $userOption );
 		if ( $userSkin && Skin::normalizeKey( $userSkin ) === $userSkin ) {
 			$skin = $services->getSkinFactory()->makeSkin( $userSkin );
 		} else {
@@ -771,7 +771,7 @@ class MobileFrontendHooks implements
 		}
 
 		// If 'watch' is set from the login form, watch the requested article
-		$campaign = $context->getRequest()->getVal( 'campaign' );
+		$campaign = $context->getRequest()->getRawVal( 'campaign' );
 
 		// The user came from one of the drawers that prompted them to login.
 		// We must watch the article per their original intent.

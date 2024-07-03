@@ -337,7 +337,7 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 
 		$webRequest = $this->createMock( WebRequest::class );
 		$webRequest->method( 'getHeader' )->willReturn( false );
-		$webRequest->method( 'getVal' )->willReturn( false );
+		$webRequest->method( 'getRawVal' )->willReturn( null );
 
 		$mobileContext = $this->createMock( MobileContext::class );
 		$mobileContext->method( 'shouldDisplayMobileView' )->willReturn( true );
