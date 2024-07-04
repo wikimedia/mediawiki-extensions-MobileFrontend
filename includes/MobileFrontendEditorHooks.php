@@ -140,7 +140,7 @@ class MobileFrontendEditorHooks implements
 		$title = $context->getTitle();
 
 		// Various things fall back to WikiEditor
-		if ( $req->getVal( 'action' ) == 'submit' ) {
+		if ( $req->getRawVal( 'action' ) === 'submit' ) {
 			// Don't try to take over if the form has already been submitted
 			return false;
 		}
@@ -152,11 +152,11 @@ class MobileFrontendEditorHooks implements
 			// (You can test this on MediaWiki:Common.css) ?action=edit url (T173800)
 			return false;
 		}
-		if ( $req->getVal( 'undo' ) !== null || $req->getVal( 'undoafter' ) !== null ) {
+		if ( $req->getCheck( 'undo' ) || $req->getCheck( 'undoafter' ) ) {
 			// Undo needs to show a diff above the editor
 			return false;
 		}
-		if ( $req->getVal( 'section' ) == 'new' ) {
+		if ( $req->getRawVal( 'section' ) === 'new' ) {
 			// New sections need a title field
 			return false;
 		}
