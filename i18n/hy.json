@@ -33,6 +33,7 @@
 	"mobile-frontend-editor-publish": "Հրապարակել",
 	"mf-font-size-name": "Տեքստ",
 	"mf-font-size-small-label": "Փոքր",
+	"mf-font-size-regular-label": "Միջին",
 	"mf-font-size-large-label": "Մեծ",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Առաջարկվող լեզուներ",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Այլ լեզուներ",
@@ -58,5 +59,6 @@
 	"mobile-frontend-watchlist-more": "Ավելին",
 	"tag-mobile_edit": "Խմբագրում բջջային սարքով",
 	"tag-mobile_web_edit": "Խմբագրում կայքի բջջային տարբերակից",
-	"mobile-frontend-loading-message": "Բեռնվում է…"
+	"mobile-frontend-loading-message": "Բեռնվում է…",
+	"mobile-frontend-mobile-option-MFEnableFontChanger": "Տառաչափ"
 }
