@@ -481,7 +481,10 @@
 			"class": "MobileFrontendEditorHooks"
 		},
 		"Amc": {
-			"class": "MobileFrontend\\Amc\\Hooks"
+			"class": "MobileFrontend\\Amc\\Hooks",
+			"services": [
+				"UserFactory"
+			]
 		},
 		"ApiParse": {
 			"class": "MobileFrontend\\Api\\ApiParseExtender"
