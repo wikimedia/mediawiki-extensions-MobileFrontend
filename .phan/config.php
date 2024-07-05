@@ -7,6 +7,7 @@ $cfg['directory_list'] = array_merge(
 	[
 		'../../extensions/AbuseFilter',
 		'../../extensions/CentralAuth',
+		'../../extensions/Gadgets',
 		'../../extensions/LiquidThreads',
 		'../../extensions/PageImages',
 		'../../extensions/XAnalytics',
@@ -20,6 +21,7 @@ $cfg['exclude_analysis_directory_list'] = array_merge(
 	[
 		'../../extensions/AbuseFilter',
 		'../../extensions/CentralAuth',
+		'../../extensions/Gadgets',
 		'../../extensions/LiquidThreads',
 		'../../extensions/PageImages',
 		'../../extensions/XAnalytics',

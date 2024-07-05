@@ -106,6 +106,14 @@ class MobileFrontendHooks implements
 	// in mediawiki.skin.variables.less
 	private const DEVICE_WIDTH_TABLET = '640px';
 
+	private ?GadgetRepo $gadgetRepo;
+
+	public function __construct(
+		?GadgetRepo $gadgetRepo
+	) {
+		$this->gadgetRepo = $gadgetRepo;
+	}
+
 	/**
 	 * Obtain the default mobile skin
 	 *
@@ -1145,7 +1153,7 @@ class MobileFrontendHooks implements
 			$vars['wgMFAmcOutreachUserEligible'] = $outreach->isUserEligible();
 			$vars['wgMFLazyLoadImages'] =
 				$featuresManager->isFeatureAvailableForCurrentUser( 'MFLazyLoadImages' );
-			$vars['wgMFEditNoticesFeatureConflict'] = self::hasEditNoticesFeatureConflict(
+			$vars['wgMFEditNoticesFeatureConflict'] = $this->hasEditNoticesFeatureConflict(
 				$config, $context->getUser()
 			);
 		}
@@ -1163,20 +1171,17 @@ class MobileFrontendHooks implements
 	 * @param User $user
 	 * @return bool
 	 */
-	public static function hasEditNoticesFeatureConflict( Config $config, User $user ) {
+	private function hasEditNoticesFeatureConflict( Config $config, User $user ): bool {
 		$gadgetName = $config->get( 'MFEditNoticesConflictingGadgetName' );
 		if ( !$gadgetName ) {
 			return false;
 		}
 
-		$extensionRegistry = ExtensionRegistry::getInstance();
-		if ( $extensionRegistry->isLoaded( 'Gadgets' ) ) {
-			// @phan-suppress-next-line PhanUndeclaredClassMethod
-			$gadgetsRepo = GadgetRepo::singleton();
-			$match = array_search( $gadgetName, $gadgetsRepo->getGadgetIds(), true );
+		if ( $this->gadgetRepo ) {
+			$match = array_search( $gadgetName, $this->gadgetRepo->getGadgetIds(), true );
 			if ( $match !== false ) {
 				try {
-					return $gadgetsRepo->getGadget( $gadgetName )
+					return $this->gadgetRepo->getGadget( $gadgetName )
 						->isEnabled( $user );
 				} catch ( \InvalidArgumentException $e ) {
 					return false;
