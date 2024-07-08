@@ -72,5 +72,6 @@
 	"nearby": "Էջեր մոտակա օբյեկտների մասին",
 	"tag-mobile_edit": "Խմբագրում բջջային սարքով",
 	"tag-mobile_web_edit": "Խմբագրում կայքի բջջային տարբերակից",
-	"mobile-frontend-loading-message": "Բեռնվում է…"
+	"mobile-frontend-loading-message": "Բեռնվում է…",
+	"mobile-frontend-mobile-option-MFEnableFontChanger": "Տառաչափ"
 }

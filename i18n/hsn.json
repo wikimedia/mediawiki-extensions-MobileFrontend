@@ -1,10 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"ChoiChong"
+			"ChoiChong",
+			"孟天皓"
 		]
 	},
+	"mobile-frontend-copyright": "除非另有註明，否則頁面內容均以 $1 條款授權。",
+	"mobile-frontend-terms-text": "使用條款",
 	"mobile-frontend-view": "手机版视图",
+	"mobile-frontend-view-desktop": "桌面版",
 	"tag-mobile_edit": "移动版编辑",
 	"tag-mobile_web_edit": "移动版亇网页编辑"
 }
