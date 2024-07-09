@@ -180,7 +180,9 @@ mfExtend( LanguageSearcher, View, {
 	 * @param {jQuery.Event} ev Event object.
 	 */
 	onSearchInput: function ( ev ) {
-		this.filterLanguages( this.$el.find( ev.target ).val().toLowerCase() );
+		const searchOrigin = ev.originalEvent === undefined ? 'entrypoint-banner' : 'ui';
+
+		this.filterLanguages( ev.target.value.toLowerCase(), searchOrigin );
 	},
 	/**
 	 * Filter the language list to only show languages that match the current search term.
@@ -188,8 +190,9 @@ mfExtend( LanguageSearcher, View, {
 	 * @memberof LanguageSearcher
 	 * @instance
 	 * @param {string} searchQuery of search term (lowercase).
+	 * @param {'entrypoint-banner'|'ui'} searchOrigin for internal use by CX entrypoints only
 	 */
-	filterLanguages: function ( searchQuery ) {
+	filterLanguages: function ( searchQuery, searchOrigin ) {
 		const filteredList = [];
 
 		if ( searchQuery ) {
@@ -230,7 +233,7 @@ mfExtend( LanguageSearcher, View, {
 				 * @internal for use in ContentTranslation only.
 				 */
 				mw.hook( 'mobileFrontend.languageSearcher.noresults' )
-					.fire( searchQuery, this.$emptyResultsSection.get( 0 ) );
+					.fire( searchQuery, this.$emptyResultsSection.get( 0 ), searchOrigin );
 			}
 			this.$siteLinksList.addClass( 'filtered' );
 			this.$subheaders.addClass( 'hidden' );
