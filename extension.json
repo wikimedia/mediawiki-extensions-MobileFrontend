@@ -32,7 +32,14 @@
 			"class": "SpecialMobileHistory",
 			"services": []
 		},
-		"MobileOptions": "SpecialMobileOptions",
+		"MobileOptions": {
+			"class": "SpecialMobileOptions",
+			"services": [
+				"UserOptionsManager",
+				"ReadOnlyMode",
+				"MobileFrontend.Config"
+			]
+		},
 		"MobileLanguages": "SpecialMobileLanguages",
 		"Uploads": "SpecialUploads"
 	},

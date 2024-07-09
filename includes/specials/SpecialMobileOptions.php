@@ -35,25 +35,29 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 	private $userMode;
 
 	/** @var UserOptionsManager */
-	private $userOptionsManager;
+	private UserOptionsManager $userOptionsManager;
 
 	/** @var ReadOnlyMode */
-	private $readOnlyMode;
+	private ReadOnlyMode $readOnlyMode;
 	/** @var MobileContext */
 	private $mobileContext;
 	/** @var Config MobileFrontend's config object */
-	protected $config = null;
+	protected Config $config;
 
-	public function __construct() {
+	public function __construct(
+		UserOptionsManager $userOptionsManager,
+		ReadOnlyMode $readOnlyMode,
+		Config $config
+	) {
 		parent::__construct( 'MobileOptions' );
 		$services = MediaWikiServices::getInstance();
 		$this->amc = $services->getService( 'MobileFrontend.AMC.Manager' );
 		$this->featuresManager = $services->getService( 'MobileFrontend.FeaturesManager' );
 		$this->userMode = $services->getService( 'MobileFrontend.AMC.UserMode' );
 		$this->mobileContext = $services->getService( 'MobileFrontend.Context' );
-		$this->userOptionsManager = $services->getUserOptionsManager();
-		$this->readOnlyMode = $services->getReadOnlyMode();
-		$this->config = $services->getService( 'MobileFrontend.Config' );
+		$this->userOptionsManager = $userOptionsManager;
+		$this->readOnlyMode = $readOnlyMode;
+		$this->config = $config;
 	}
 
 	/**
