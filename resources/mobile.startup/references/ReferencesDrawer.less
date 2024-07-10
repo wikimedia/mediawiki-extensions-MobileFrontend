@@ -5,8 +5,8 @@
 @drawerPadding: 20px;
 
 .drawer.references-drawer {
-	background-color: #000;
-	color: #c8ccd1;
+	background-color: #000; // Fixed colors, don't use color design tokens
+	color: #c8ccd1; // Fixed colors, don't use color design tokens
 	max-height: 50%; // on tablet this will become capped at 400px
 	overflow-y: auto;
 	padding: @drawerPadding/2 @drawerPadding @drawerPadding @drawerPadding;
@@ -20,7 +20,9 @@
 	}
 
 	img {
-		background: @color-inverted-fixed;
+		// Invert MathML images to ensure formulas
+		// appear as white on dark background T366220
+		filter: invert( 1 );
 	}
 
 	.references-drawer__header {
