@@ -89,6 +89,7 @@
 	"mobile-frontend-editor-viewing-source-page": "<span>$1</span><strong>को स्रोत हेर्दै</strong>",
 	"mobile-frontend-editor-wait": "सम्पादन सङ्ग्रह हुँदैछ, कृपया प्रतीक्षा गर्नुहोस्",
 	"mobile-frontend-editor-loading": "सम्पादक खुल्दै छ…",
+	"mobile-frontend-editor-toload": "सम्पादक अब खुल्नेछ। यदि तपाईले अझै पनि केही सेकेन्डपछि यो सन्देश देख्नुहुन्छ भने, कृपया [$1 पृष्ठ पुन: ताजा गर्नुहोस्]।",
 	"mobile-frontend-expand-sections-description": "पूर्वनिर्धारित रूपमा सामग्री पृष्ठहरूको खण्डहरू सधैं विस्तार गर्नुहोस्।",
 	"mobile-frontend-expand-sections-status": "सबै खण्डहरू खुलाउनुहोस्",
 	"mobile-frontend-fontchanger-link": "लिपि आकार",
