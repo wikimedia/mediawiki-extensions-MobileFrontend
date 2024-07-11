@@ -117,6 +117,7 @@
 	"mobile-frontend-editor-wait": "Publication de la modification, veuillez patienter.",
 	"mobile-frontend-editor-loading": "Chargement de l’éditeur...",
 	"mobile-frontend-editor-loadingtooslow": "Connection lente?",
+	"mobile-frontend-editor-loadbasiceditor": "Basculer vers l’éditeur de wikicode",
 	"mobile-frontend-editor-toload": "L’éditeur va maintenant se charger. Si vous voyez encore ce message après quelques secondes, veuillez [$1 recharger la page].",
 	"mf-expand-sections-description": "Toujours développer par défaut les sections de contenu des pages.",
 	"mf-expand-sections-name": "Développer toutes les sections",
