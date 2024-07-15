@@ -130,7 +130,7 @@
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 ბოლოს {{GENDER:$1|დარედაქტირდა}} {{PLURAL:$3|$3 წამის}} წინ] {{PLURAL:$5|მომხმარებელ [$6 $2]-ის|ანონიმური მომხმარებლის}} მიერ",
 	"mobile-frontend-last-modified-with-user-years": "[$4 ბოლოს {{GENDER:$1|დარედაქტირდა}} {{PLURAL:$3|$3 წლის}} წინ] {{PLURAL:$5|მომხმარებელ [$6 $2]-ის|ანონიმური მომხმარებლის}} მიერ",
 	"mobile-frontend-main-menu": "მთავარი მენიუ",
-	"mobile-frontend-main-menu-settings-heading": "პარამეტრები",
+	"mobile-frontend-main-menu-settings-heading": "კონფიგურაცია",
 	"mobile-frontend-media-details": "დეტალები",
 	"mobile-frontend-media-license-link": "ლიცენზიის ინფორმაცია",
 	"mobile-frontend-media-load-fail-message": "შეცდომა მოხდა ამ სურათის ჩატვირთვისას.",

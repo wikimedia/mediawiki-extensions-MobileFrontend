@@ -3,13 +3,15 @@
 		"authors": [
 			"Kai theos en ho logos",
 			"Pare Mo",
-			"Redhotchili23"
+			"Redhotchili23",
+			"Billie bb"
 		]
 	},
-	"mobile-frontend-copyright": "Ang ini nga teksto ay makita sa idalum <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a>; ang nadugang nga impormasyon ay pwede ma-aply. Tan-awa <a href='https://foundation.wikimedia.org/wiki/Terms_of_Use'>Terms of Use</a> para sa mga detalye. Ang Wikipedya ay rehistrado trademark sang <a href='https://wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, wala profidad nga organisasyon.",
+	"mobile-frontend-copyright": "Ang kaundan matigayon sa idalom sang $1 luwas kon may iban nga ginsambit.",
 	"mobile-frontend-featured-article": "Subong nga napili nga balasahon",
 	"mobile-frontend-news-items": "Sa balita",
 	"mobile-frontend-terms-text": "Mga Tulumanon kag Kilinahanglanon sa Paggamit",
+	"mobile-frontend-view": "Pagtan-aw sa mobile",
 	"mobile-frontend-view-desktop": "Desktop",
 	"tag-mobile_edit": "Pagdumalang mobil",
 	"tag-mobile_web_edit": "Pagdumalang mobil sa web"

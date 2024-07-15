@@ -86,7 +86,7 @@
 	"mobile-frontend-featured-article": "Bugungi tanlangan matn",
 	"mobile-frontend-generic-404-desc": "Siz qidirayotgan sahifani topishning imkoni boʻlmadi.",
 	"mobile-frontend-generic-404-title": "Xatolik: Sahifa topilmadi",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} siz kabi odamlar tomonidan boyitilmoqdadir.</strong><br />Hissa qoʻshish uchun tizimga kiring.",
+	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} siz kabi insonlar tomonidan yuritiladi.</strong><br />Hissa qoʻshish uchun tizimga kiring.",
 	"mobile-frontend-history-404-title": "Bunday sahifa yoʻq",
 	"mobile-frontend-joined-just-now": "Hozirgina {{GENDER:$1|qoʻshildi}}",
 	"mobile-frontend-joined-seconds": "{{PLURAL:$2|$2 soniya}} avval {{GENDER:$1|qoʻshildi}}",
