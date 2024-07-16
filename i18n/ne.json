@@ -18,7 +18,7 @@
 			"हिमाल सुबेदी"
 		]
 	},
-	"abusefilter-edit-builder-vars-user-mobile": "प्रयोगकर्ताले मोबाइल इन्टरफेस मार्फत सम्पादन गरिरहेको छ वा छैन",
+	"abusefilter-edit-builder-vars-user-mobile": "प्रयोगकर्ताले मोबाइल इन्टरफेस मार्फत सम्पादन गरिरहेको छ वा छैन $1",
 	"mobile-frontend-account-create-captcha-placeholder": "पुष्टिकरण अङ्क प्रविष्ट गर्नुहोस्",
 	"mobile-frontend-changeslist-nocomment": "कुनै सम्पादन सारांश छैन",
 	"mobile-frontend-clear-search": "सफागर्ने",
@@ -59,7 +59,7 @@
 	"mobile-frontend-editor-error-loading": "त्रुटि, सम्पादक लोड गर्न सकिएन।",
 	"mobile-frontend-editor-error-preview": "त्रुटि, पूर्वावलोकन गर्दा अप्रत्याशित केहि भयो। कृपया बन्द गर्नुहोस् र फेरि प्रयास गर्नुहोस्।",
 	"mobile-frontend-editor-keep-editing": "सम्पादन जारी राख्नुहोस्।",
-	"mobile-frontend-editor-licensing": "तपाईको परिवर्तनहरू सङ्ग्रह गर्नाले, तपाई $1 {{PLURAL:$2|इजाजतपत्र|licenses}} अन्तर्गतको योगदान जारी गर्न सहमत हुनुहुन्छ।",
+	"mobile-frontend-editor-licensing": "तपाईको परिवर्तनहरू सङ्ग्रह गर्न, तपाई $1 {{PLURAL:$2|इजाजतपत्र|अनुमतिपत्र}} अन्तर्गतको योगदान जारी गर्न सहमत हुनुहुन्छ।",
 	"mobile-frontend-editor-licensing-with-terms": "तपाईको परिवर्तनहरू सङ्ग्रह गर्नाले, तपाई $1 {{PLURAL:$3|इजाजतपत्र|licenses}} $2 अन्तर्गतको योगदान जारी गर्न सहमत हुनुहुन्छ।",
 	"mobile-frontend-editor-terms-link": "[$1 प्रयोगका सर्तहरू]",
 	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|}} {{SITENAME}}मा नयाँ पृष्ठ सृजना गर्ने बारेमा, के निश्चित हुनुहुन्छ",
@@ -80,7 +80,7 @@
 	"mobile-frontend-editor-toload": "सम्पादक अब खुल्नेछ। यदि तपाईले अझै पनि केही सेकेन्डपछि यो सन्देश देख्नुहुन्छ भने, कृपया [$1 पृष्ठ पुन: ताजा गर्नुहोस्]।",
 	"mf-expand-sections-description": "पूर्वनिर्धारित रूपमा सामग्री पृष्ठहरूको खण्डहरू सधैं विस्तार गर्नुहोस्।",
 	"mf-expand-sections-name": "सबै खण्डहरू खुलाउनुहोस्",
-	"mf-font-size-name": "लिपि आकार",
+	"mf-font-size-name": "पाठ",
 	"mf-font-size-description": "उत्तम पठनीयताको लागि लिपि आकारलाई समायोजन गर्नुहोस्।",
 	"mf-font-size-small-label": "सानो",
 	"mf-font-size-regular-label": "नियमित",
