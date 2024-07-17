@@ -38,6 +38,7 @@
 			"Yfdyh000",
 			"Zhxy 519",
 			"一個正常人",
+			"列维劳德",
 			"飞舞回堂前"
 		]
 	},
@@ -89,7 +90,7 @@
 	"mobile-frontend-editor-terms-link": "[$1 使用條款]",
 	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|您想要}}於{{SITENAME}}上建立新頁面嗎？",
 	"mobile-frontend-editor-placeholder": "此章節尚是空的。成為第一個編輯它的人吧！",
-	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|您}}正在於{{SITENAME}}{{GENDER:$1|建立}}新頁面中！",
+	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|您}}正在於{{SITENAME}}{{GENDER:$1|建立}}新頁面！",
 	"mobile-frontend-editor-previewing-page": "<span><strong>正在預覽</strong> $1</span>",
 	"mobile-frontend-editor-publish": "發布",
 	"mobile-frontend-editor-save": "儲存",
