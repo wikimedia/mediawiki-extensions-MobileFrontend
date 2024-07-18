@@ -5,7 +5,7 @@
 			"Merrahtar"
 		]
 	},
-	"mobile-frontend-changeslist-nocomment": "нимэ̄нн элля вуайхэзэ баяс кырьйха",
+	"mobile-frontend-changeslist-nocomment": "нимӣ элля воа̄йхэз баяс кырьйха",
 	"mobile-frontend-editor-editing": "Вуайхэмушш",
 	"mobile-frontend-editor-editing-page": "<span><strong>Вуайхэмушш</strong> $1</span>",
 	"mobile-frontend-editor-keep-editing": "Ю̄ттҍкэ вуайхэмуж",
@@ -21,12 +21,13 @@
 	"mobile-frontend-language-heading": "Кӣл",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Мудта кӣл",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "О̄дзэ кӣл",
-	"mobile-frontend-last-modified-date": "Лысст маӈьмусс вуэр вуайхувэ $1 $2 ч.",
+	"mobile-frontend-last-modified-date": "Лысст маӈьмусс вуэр воа̄йхувэ $1 $2 ч.",
 	"mobile-frontend-references-citation": "Ка̄ййв",
 	"mobile-frontend-view": "Мобильнэ ве̄рсья",
 	"mobile-frontend-view-desktop": "Коаммпьютэр ве̄рсья",
 	"mobile-frontend-user-page-create-owner-page-link-label": "Лыһкэ ӣжянт лыст",
 	"tag-mobile_edit": "пэ̄йель мобильнэ аппарат воа̄йхэсс",
+	"tag-advanced_mobile_edit": "пэ̄йель ко̄ммтна мобильнэ режим",
 	"tag-mobile_web_edit": "воа̄йхэсс мобильнэ ве̄рсьясьт",
 	"mobile-frontend-amc-outreach-no-thanks": "Эйй, па̄ссьпэ"
 }

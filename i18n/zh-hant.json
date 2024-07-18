@@ -38,7 +38,8 @@
 			"Zhxy 519",
 			"一個正常人",
 			"飞舞回堂前",
-			"Cookai1205"
+			"Cookai1205",
+			"列维劳德"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "使用者是否透過行動版介面編輯",
@@ -89,7 +90,7 @@
 	"mobile-frontend-editor-terms-link": "[$1 使用條款]",
 	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|您想要}}於{{SITENAME}}上建立新頁面嗎？",
 	"mobile-frontend-editor-placeholder": "此章節尚是空的。成為第一個編輯它的人吧！",
-	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|您}}正在於{{SITENAME}}{{GENDER:$1|建立}}新頁面中！",
+	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|您}}正在於{{SITENAME}}{{GENDER:$1|建立}}新頁面！",
 	"mobile-frontend-editor-previewing-page": "<span><strong>正在預覽</strong> $1</span>",
 	"mobile-frontend-editor-publish": "發布",
 	"mobile-frontend-editor-save": "儲存",
@@ -200,7 +201,7 @@
 	"mobile-frontend-search-feedback-prompt": "找不到您尋找的內容？",
 	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions": "標題描述",
 	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions-description": "了解有關標題下方帶簡短描述的頁面主題",
-	"mobile-frontend-send-feedback": "送出回饋",
+	"mobile-frontend-send-feedback": "傳送意見回饋",
 	"mobile-frontend-mobile-option-MFLazyLoadImages-description": "僅在需要時載入圖片。",
 	"mobile-frontend-mobile-option-MFLazyLoadImages": "緩慢載入圖片",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "起頭段落",
@@ -212,7 +213,7 @@
 	"mw-mf-amc-0-label": "已停用",
 	"mw-mf-amc-1-label": "已啟用",
 	"mobile-frontend-mobile-option-amc-learn-more": "了解更多",
-	"mobile-frontend-mobile-option-amc-send-feedback": "送出回饋",
+	"mobile-frontend-mobile-option-amc-send-feedback": "傳送意見回饋",
 	"mobile-frontend-user-pref-option": "使用者偏好設定",
 	"mobile-frontend-user-pref-description": "更改您的偏好設定，包括密碼、網站外觀、通知設定等。",
 	"mobile-frontend-user-pref-link": "開啟偏好設定",
