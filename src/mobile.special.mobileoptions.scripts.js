@@ -16,6 +16,7 @@ var clientPrefs = require( '@wikimedia/mediawiki.skins.clientpreferences' ),
 	// https://webpack.js.org/configuration/module/#moduleparserjavascriptcommonjsmagiccomments
 	// e.g: require(/* webpackIgnore: true */ './config.json');
 	FONT_SIZE_KEY = 'mf-font-size';
+
 /**
  * Notifies the user that settings were asynchronously saved.
  *
@@ -27,6 +28,19 @@ function notify( isPending ) {
 	} else {
 		mw.notify( msg( 'mobile-frontend-settings-save' ) );
 	}
+}
+
+let api;
+/**
+ * @param {Object<string,string|number>} options
+ * @return {JQuery.Promise<Object>}
+ */
+function saveOptions( options ) {
+	api = api || new mw.Api();
+	// @ts-ignore
+	return api.saveOptions( options, {
+		global: 'update'
+	} );
 }
 
 /**
@@ -41,7 +55,7 @@ function addClientPreferencesToForm( $form, clientPreferences ) {
 	const id = 'mf-client-preferences';
 	cp.id = id;
 	$form.prepend( cp );
-	return clientPrefs.render( `#${ id }`, clientPreferences, true );
+	return clientPrefs.render( `#${ id }`, clientPreferences, { saveOptions } );
 }
 
 /**
@@ -209,4 +223,12 @@ function initMobileOptions() {
 	} );
 }
 
-mw.loader.using( 'oojs-ui-widgets' ).then( initMobileOptions );
+if ( !window.QUnit ) {
+	mw.loader.using( 'oojs-ui-widgets' ).then( initMobileOptions );
+}
+
+module.exports = {
+	test: {
+		addClientPreferencesToForm
+	}
+};
