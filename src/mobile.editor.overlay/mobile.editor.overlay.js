@@ -1,4 +1,4 @@
-var m = require( './../mobile.startup/moduleLoaderSingleton' ),
+const m = require( './../mobile.startup/moduleLoaderSingleton' ),
 	SourceEditorOverlay = require( './SourceEditorOverlay' ),
 	VisualEditorOverlay = require( './VisualEditorOverlay' );
 

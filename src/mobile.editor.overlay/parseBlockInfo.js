@@ -1,4 +1,4 @@
-var util = require( '../mobile.startup/util' );
+const util = require( '../mobile.startup/util' );
 
 /**
  * @param {string} blockinfo

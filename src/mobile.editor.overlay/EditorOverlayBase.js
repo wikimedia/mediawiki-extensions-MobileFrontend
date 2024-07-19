@@ -1,5 +1,5 @@
 /* global $ */
-var Overlay = require( '../mobile.startup/Overlay' ),
+const Overlay = require( '../mobile.startup/Overlay' ),
 	util = require( '../mobile.startup/util' ),
 	parseBlockInfo = require( './parseBlockInfo' ),
 	headers = require( '../mobile.startup/headers' ),
@@ -59,7 +59,7 @@ EditVeTool.prototype.onUpdateState = function () {
  * @param {boolean} params.hasToolbar whether the editor has a toolbar
  */
 function EditorOverlayBase( params ) {
-	var
+	const
 		options = util.extend(
 			true,
 			{
@@ -228,13 +228,13 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 * @param {boolean} [tempUserCreated] Whether a temporary user was created
 	 */
 	onSaveComplete: function ( newRevId, redirectUrl, tempUserCreated ) {
-		var
+		const
 			self = this;
 
 		this.saved = true;
 
 		if ( newRevId ) {
-			var action;
+			let action;
 			if ( self.isNewPage ) {
 				action = 'created';
 			} else if ( self.options.oldId ) {
@@ -292,7 +292,9 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 * @param {Object} data API response
 	 */
 	onSaveFailure: function ( data ) {
-		var code = data && data.errors && data.errors[0] && data.errors[0].code,
+		let code = data && data.errors && data.errors[0] && data.errors[0].code;
+
+		const
 			// Compare to ve.init.mw.ArticleTargetEvents.js in VisualEditor.
 			typeMap = {
 				badtoken: 'userBadToken',
@@ -332,7 +334,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 * @param {string} text Text (HTML) of message to display to user
 	 */
 	reportError: function ( text ) {
-		var errorNotice = new MessageBox( {
+		const errorNotice = new MessageBox( {
 			type: 'error',
 			msg: text,
 			heading: mw.msg( 'mobile-frontend-editor-error' )
@@ -435,7 +437,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 		this.showHidden( '.initial-header' );
 	},
 	show: function () {
-		var self = this;
+		const self = this;
 		this.allowCloseWindow = mw.confirmCloseWindow( {
 			// Returns true if content has changed
 			test: function () {
@@ -498,7 +500,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 * @param {Function} cancel Callback to cancel exiting the overlay
 	 */
 	onBeforeExit: function ( exit, cancel ) {
-		var self = this;
+		const self = this;
 		if ( this.hasChanged() && !this.switching ) {
 			if ( !this.windowManager ) {
 				this.windowManager = OO.ui.getWindowManager();
@@ -575,7 +577,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 * @return {jQuery.Element}
 	 */
 	createAnonWarning: function ( options ) {
-		var $actions = $( '<div>' ).addClass( 'actions' ),
+		const $actions = $( '<div>' ).addClass( 'actions' ),
 			// Use MediaWiki ResourceLoader require(), not Webpack require()
 			contLangMessages = (
 
@@ -689,7 +691,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 		return this.dataPromise.then( function ( result ) {
 			// check if user is blocked
 			if ( result && result.blockinfo ) {
-				var block = parseBlockInfo( result.blockinfo ),
+				const block = parseBlockInfo( result.blockinfo ),
 					message = blockMessageDrawer( block );
 				return util.Deferred().reject( message );
 			}
@@ -697,13 +699,13 @@ mfExtend( EditorOverlayBase, Overlay, {
 		} );
 	},
 	showEditNotices: function () {
-		var overlay = this;
+		const overlay = this;
 		if ( mw.config.get( 'wgMFEditNoticesFeatureConflict' ) ) {
 			return;
 		}
 		this.getLoadingPromise().then( function ( data ) {
 			if ( data.notices ) {
-				var editNotices = Object.keys( data.notices ).filter( function ( key ) {
+				const editNotices = Object.keys( data.notices ).filter( function ( key ) {
 					if ( key.indexOf( 'editnotice' ) !== 0 ) {
 						return false;
 					}
@@ -719,7 +721,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 					// expiry window, so just record that a notice with this key has been shown.
 					// If a cheap hashing function was available in core (or the API provided
 					// as hash) it could be used here instead.
-					var storageKey = 'mf-editnotices/' + mw.config.get( 'wgPageName' ) + '#' + key;
+					const storageKey = 'mf-editnotices/' + mw.config.get( 'wgPageName' ) + '#' + key;
 					if ( mw.storage.get( storageKey ) ) {
 						return false;
 					}
@@ -729,9 +731,9 @@ mfExtend( EditorOverlayBase, Overlay, {
 
 				if ( editNotices.length ) {
 					mw.loader.using( 'oojs-ui-windows' ).then( function () {
-						var $container = $( '<div>' ).addClass( 'editor-overlay-editNotices' );
+						const $container = $( '<div>' ).addClass( 'editor-overlay-editNotices' );
 						editNotices.forEach( function ( key ) {
-							var $notice = $( '<div>' ).append( data.notices[ key ] );
+							const $notice = $( '<div>' ).append( data.notices[ key ] );
 							$notice.addClass( 'editor-overlay-editNotice' );
 							$container.append( $notice );
 						} );
@@ -754,7 +756,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 * @param {Object} details Details returned from the api.
 	 */
 	handleCaptcha: function ( details ) {
-		var self = this,
+		const self = this,
 			$input = this.$el.find( '.captcha-word' );
 
 		if ( this.captchaShown ) {

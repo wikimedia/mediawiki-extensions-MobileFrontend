@@ -9,7 +9,7 @@ module.exports = function saveFailureMessage( data ) {
 	// Handle a few exceptions where it is unsuitable for end-users
 	// (some error messages are seemingly intended for tool developers).
 
-	var code = data && data.errors && data.errors[0] && data.errors[0].code;
+	const code = data && data.errors && data.errors[0] && data.errors[0].code;
 
 	if ( code === 'editconflict' ) {
 		return mw.msg( 'mobile-frontend-editor-error-conflict' );

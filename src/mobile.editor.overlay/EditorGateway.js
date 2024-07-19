@@ -1,4 +1,4 @@
-var util = require( '../mobile.startup/util' ),
+const util = require( '../mobile.startup/util' ),
 	actionParams = require( '../mobile.startup/actionParams' );
 
 /**
@@ -39,7 +39,7 @@ EditorGateway.prototype = {
 	 * @return {Object|null}
 	 */
 	getBlockInfo: function ( pageObj ) {
-		var blockedError;
+		let blockedError;
 
 		if ( pageObj.actions &&
 			pageObj.actions.edit &&
@@ -68,8 +68,9 @@ EditorGateway.prototype = {
 	 * @return {jQuery.Promise}
 	 */
 	getContent: function () {
-		var options,
-			self = this;
+		let options;
+
+		const self = this;
 
 		function resolve() {
 			return util.Deferred().resolve( {
@@ -109,7 +110,7 @@ EditorGateway.prototype = {
 					return util.Deferred().reject( resp.error.code );
 				}
 
-				var pageObj = resp.query.pages[0];
+				const pageObj = resp.query.pages[0];
 				// page might not exist and caller might not have known.
 				if ( pageObj.missing !== undefined ) {
 					if ( pageObj.preloadcontent ) {
@@ -119,7 +120,7 @@ EditorGateway.prototype = {
 						self.content = '';
 					}
 				} else {
-					var revision = pageObj.revisions[0];
+					const revision = pageObj.revisions[0];
 					self.content = revision.content;
 					self.timestamp = revision.timestamp;
 				}
@@ -168,7 +169,7 @@ EditorGateway.prototype = {
 	 * of error, `details` can be any object (usually error message).
 	 */
 	save: function ( options ) {
-		var self = this,
+		const self = this,
 			result = util.Deferred();
 
 		options = options || {};
@@ -179,7 +180,7 @@ EditorGateway.prototype = {
 		 * @return {jQuery.Deferred}
 		 */
 		function saveContent() {
-			var apiOptions = {
+			const apiOptions = {
 				action: 'edit',
 				errorformat: 'html',
 				errorlang: mw.config.get( 'wgUserLanguage' ),
@@ -245,10 +246,11 @@ EditorGateway.prototype = {
 	 * @return {jQuery.Deferred}
 	 */
 	getPreview: function ( options ) {
-		var
+		let
 			sectionLine = '',
-			sectionId = '',
-			self = this;
+			sectionId = '';
+
+		const self = this;
 
 		util.extend( options, {
 			action: 'parse',
@@ -270,7 +272,7 @@ EditorGateway.prototype = {
 		// Acquire a temporary user username before previewing, so that signatures and
 		// user-related magic words display the temp user instead of IP user in the
 		// preview. (T331397)
-		var promise = mw.user.acquireTempUserName().then( function () {
+		const promise = mw.user.acquireTempUserName().then( function () {
 			self._pending = self.api.post( options );
 			return self._pending;
 		} );

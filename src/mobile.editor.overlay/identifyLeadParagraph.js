@@ -16,7 +16,7 @@ module.exports = function identifyLeadParagraph( $body ) {
 	// Keep in sync with MoveLeadParagraphTransform::isNonLeadParagraph()
 	function isNonLeadParagraph( node ) {
 		node = node.cloneNode( true );
-		var $node = $( node );
+		const $node = $( node );
 		// The paragraph itself can be an invisible template (T293834)
 		if ( $node.hasClass( 've-ce-focusableNode-invisible' ) ) {
 			return true;
@@ -29,9 +29,9 @@ module.exports = function identifyLeadParagraph( $body ) {
 		return true;
 	}
 
-	var $paragraphs = $body.children( 'p' );
-	for ( var i = 0; i < $paragraphs.length; i++ ) {
-		var p = $paragraphs[ i ];
+	const $paragraphs = $body.children( 'p' );
+	for ( let i = 0; i < $paragraphs.length; i++ ) {
+		const p = $paragraphs[ i ];
 		if ( !isNonLeadParagraph( p ) ) {
 			return p;
 		}
