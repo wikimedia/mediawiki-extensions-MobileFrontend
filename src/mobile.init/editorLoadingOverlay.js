@@ -1,4 +1,4 @@
-var
+const
 	fakeToolbar = require( './fakeToolbar' ),
 	IconButton = require( '../mobile.startup/IconButton' ),
 	Overlay = require( '../mobile.startup/Overlay' );
@@ -14,7 +14,8 @@ var
  * @return {Overlay}
  */
 function editorLoadingOverlay( afterShow, afterHide, loadBasicEditor ) {
-	var timeout,
+	let timeout;
+	const
 		$fakeToolbar = fakeToolbar(),
 		$loadBasicWrapper = $( '<div>' ).addClass( 've-loadbasiceditor' ),
 		loadBasicButton = new IconButton( {

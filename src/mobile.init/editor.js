@@ -1,5 +1,5 @@
 /* global $ */
-var M = require( '../mobile.startup/moduleLoaderSingleton' ),
+const M = require( '../mobile.startup/moduleLoaderSingleton' ),
 	util = require( '../mobile.startup/util' ),
 	editorLoadingOverlay = require( './editorLoadingOverlay' ),
 	OverlayManager = require( '../mobile.startup/OverlayManager' ),
@@ -9,12 +9,13 @@ var M = require( '../mobile.startup/moduleLoaderSingleton' ),
 	// Links in content are handled separately to allow reloading the content (T324686)
 	$editTab = $( '#ca-edit, #ca-editsource, #ca-viewsource, #ca-ve-edit, #ca-ve-create, #ca-createsource' ),
 	hasTwoEditIcons = $editTab.length > 1,
-	editorOverride = null,
 	EDITSECTION_SELECTOR = '.mw-editsection a, .edit-link',
 	user = mw.user,
 	CtaDrawer = require( '../mobile.startup/CtaDrawer' ),
 	veConfig = mw.config.get( 'wgVisualEditorConfig' ),
 	editorPath = /^\/editor\/(\d+|T-\d+|all)$/;
+
+let editorOverride = null;
 
 /**
  * Event handler for edit link clicks. Will prevent default link
@@ -27,7 +28,7 @@ var M = require( '../mobile.startup/moduleLoaderSingleton' ),
  * @param {Router} router
  */
 function onEditLinkClick( elem, ev, router ) {
-	var section;
+	let section;
 	if ( $( EDITSECTION_SELECTOR ).length === 0 ) {
 		// If section edit links are not available, the only edit link
 		// should allow editing the whole page (T232170)
@@ -109,7 +110,7 @@ function getPreferredEditor() {
  * @param {Router} router
  */
 function setupEditor( page, skin, currentPageHTMLParser, router ) {
-	var
+	const
 		overlayManager = OverlayManager.getSingleton(),
 		isNewPage = page.id === 0;
 
@@ -124,7 +125,7 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 	} );
 
 	overlayManager.add( editorPath, function ( sectionId ) {
-		var
+		const
 			scrollTop = window.pageYOffset,
 			$contentText = $( '#mw-content-text' ),
 			url = new URL( location.href ),
@@ -146,8 +147,11 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 				preloadparams: mw.util.getArrayParam( 'preloadparams', url.searchParams ),
 				editintro: url.searchParams.get( 'editintro' )
 			},
-			visualAbortPromise = $.Deferred(),
-			animationDelayDeferred, abortableDataPromise, loadingOverlay, overlayPromise,
+			visualAbortPromise = $.Deferred();
+
+		const animationDelayDeferred = util.Deferred();
+
+		let abortableDataPromise, overlayPromise,
 			initMechanism = mw.util.getParamValue( 'redlink' ) ? 'new' : 'click';
 
 		if ( sectionId !== 'all' ) {
@@ -155,12 +159,12 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 		}
 
 		function showLoading() {
-			var $page, $content, $sectionTop, fakeScroll, enableVisualSectionEditing;
+			let $sectionTop, fakeScroll, enableVisualSectionEditing;
 
 			$( document.body ).addClass( 've-loading' );
 
-			$page = $( '#mw-mf-page-center' );
-			$content = $( '#content' );
+			const $page = $( '#mw-mf-page-center' );
+			const $content = $( '#content' );
 			if ( sectionId === '0' || sectionId === 'all' ) {
 				$sectionTop = $( '#bodyContent' );
 			} else {
@@ -262,7 +266,7 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 		 * @return {bool}
 		 */
 		function shouldLoadVisualEditor() {
-			var preferredEditor = getPreferredEditor();
+			const preferredEditor = getPreferredEditor();
 
 			return page.isVESourceAvailable() || (
 				page.isVEVisualAvailable() &&
@@ -291,7 +295,7 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 			mw.hook( 'mobileFrontend.editorOpening' ).fire();
 
 			return mw.loader.using( 'mobile.editor.overlay' ).then( function () {
-				var SourceEditorOverlay = M.require( 'mobile.editor.overlay/SourceEditorOverlay' );
+				const SourceEditorOverlay = M.require( 'mobile.editor.overlay/SourceEditorOverlay' );
 				return new SourceEditorOverlay( editorOptions );
 			} );
 		}
@@ -335,7 +339,7 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 				return abortableDataPromise;
 			} );
 
-			var visualLoadingPromise = mw.loader.using( 'ext.visualEditor.targetLoader' )
+			const visualLoadingPromise = mw.loader.using( 'ext.visualEditor.targetLoader' )
 				.then( function () {
 					// Load 'mobile.editor.overlay' separately, so that if we fall back to basic
 					// editor, we can display it without waiting for the visual code
@@ -353,13 +357,13 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 				} );
 
 			// Continue when loading is completed or aborted
-			var visualPromise = $.Deferred();
+			const visualPromise = $.Deferred();
 			visualLoadingPromise.then( visualPromise.resolve, visualPromise.reject );
 			visualAbortPromise.then( visualPromise.reject, visualPromise.reject );
 
 			return visualPromise
 				.then( function () {
-					var VisualEditorOverlay = M.require( 'mobile.editor.overlay/VisualEditorOverlay' ),
+					const VisualEditorOverlay = M.require( 'mobile.editor.overlay/VisualEditorOverlay' ),
 						SourceEditorOverlay = M.require( 'mobile.editor.overlay/SourceEditorOverlay' );
 					editorOptions.SourceEditorOverlay = SourceEditorOverlay;
 					return new VisualEditorOverlay( editorOptions );
@@ -368,13 +372,12 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 				} );
 		}
 
-		animationDelayDeferred = util.Deferred();
-
 		// showLoading() has to run after the overlay has opened, which disables page scrolling.
 		// clearLoading() has to run after the loading overlay is hidden in any way
 		// (either when loading is aborted, or when the editor overlay is shown instead).
-		loadingOverlay = editorLoadingOverlay( showLoading, clearLoading,
-			shouldLoadVisualEditor() ? loadBasicEditor : null );
+		const loadingOverlay = editorLoadingOverlay(
+			showLoading, clearLoading, shouldLoadVisualEditor() ? loadBasicEditor : null
+		);
 
 		if ( shouldLoadVisualEditor() ) {
 			overlayPromise = loadVisualEditorMaybe();
@@ -395,7 +398,7 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 				return $.Deferred().reject( error ).promise();
 			} ).then( function () {
 				// Make sure the user did not close the loading overlay while we were waiting
-				var overlayData = overlayManager.stack[0];
+				const overlayData = overlayManager.stack[0];
 				if ( !overlayData || overlayData.overlay !== loadingOverlay ) {
 					return;
 				}
@@ -481,7 +484,7 @@ function hideSectionEditIcons( currentPageHTMLParser ) {
  * @param {Router} router
  */
 function bindEditLinksLoginDrawer( router ) {
-	var drawer;
+	let drawer;
 	function showLoginDrawer() {
 		if ( !drawer ) {
 			drawer = new CtaDrawer( {
@@ -521,10 +524,10 @@ function bindEditLinksLoginDrawer( router ) {
  * @param {Router} router
  */
 function init( currentPage, currentPageHTMLParser, skin, router ) {
-	var isReadOnly, isEditable, editErrorMessage, editRestrictions;
+	let editErrorMessage, editRestrictions;
 	// see: https://www.mediawiki.org/wiki/Manual:Interface/JavaScript#Page-specific
-	isReadOnly = mw.config.get( 'wgMinervaReadOnly' );
-	isEditable = !isReadOnly && mw.config.get( 'wgIsProbablyEditable' );
+	const isReadOnly = mw.config.get( 'wgMinervaReadOnly' );
+	const isEditable = !isReadOnly && mw.config.get( 'wgIsProbablyEditable' );
 
 	if ( isEditable ) {
 		// Edit button updated in setupEditor.
@@ -535,7 +538,7 @@ function init( currentPage, currentPageHTMLParser, skin, router ) {
 		if ( mw.user.isAnon() && Array.isArray( editRestrictions ) && !editRestrictions.length ) {
 			bindEditLinksLoginDrawer( router );
 		} else {
-			var $link = $( '<a>' ).attr( 'href', mw.util.getUrl( mw.config.get( 'wgPageName' ), { action: 'edit' } ) );
+			const $link = $( '<a>' ).attr( 'href', mw.util.getUrl( mw.config.get( 'wgPageName' ), { action: 'edit' } ) );
 			editErrorMessage = isReadOnly ? mw.msg( 'apierror-readonly' ) : mw.message( 'mobile-frontend-editor-disabled', $link ).parseDom();
 			bindEditLinksSorryToast( editErrorMessage, router );
 		}
@@ -570,7 +573,7 @@ function bindEditLinksSorryToast( msg, router ) {
 }
 
 module.exports = function ( currentPage, currentPageHTMLParser, skin ) {
-	var router = __non_webpack_require__( 'mediawiki.router' );
+	const router = __non_webpack_require__( 'mediawiki.router' );
 
 	if ( currentPage.inNamespace( 'file' ) && currentPage.id === 0 ) {
 		// Is a new file page (enable upload image only) T60311

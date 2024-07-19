@@ -1,5 +1,5 @@
 module.exports = function () {
-	var
+	const
 		currentPage = require( '../mobile.startup/currentPage' )(),
 		Toggler = require( '../mobile.startup/Toggler' ),
 		sectionCollapsing = require( '../mobile.startup/sectionCollapsing' ),
@@ -46,7 +46,7 @@ module.exports = function () {
 		)
 	) {
 		mw.hook( 'wikipage.content' ).add( function ( $container ) {
-			var $contentContainer = $container.find( '.mw-parser-output' );
+			let $contentContainer = $container.find( '.mw-parser-output' );
 			// If there was no mw-parser-output wrapper, just use the parent.
 			if ( $contentContainer.length === 0 ) {
 				$contentContainer = $container;

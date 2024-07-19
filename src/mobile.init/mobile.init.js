@@ -6,8 +6,9 @@
  * @class mw.mobileFrontend
  * @singleton
  */
-var skin,
-	url,
+let url;
+
+const
 	toggling = require( './toggling' ),
 	FONT_SIZE_KEY = 'mf-font-size',
 	SECTION_COLLAPSING_TOGGLE = 'mf-expand-sections',
@@ -22,7 +23,7 @@ var skin,
 	Skin = require( '../mobile.startup/Skin' ),
 	eventBus = require( '../mobile.startup/eventBusSingleton' );
 
-skin = Skin.getSingleton();
+const skin = Skin.getSingleton();
 
 /**
  * Given 2 functions, it returns a function that will run both with it's
