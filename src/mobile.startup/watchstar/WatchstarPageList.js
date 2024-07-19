@@ -1,4 +1,4 @@
-var PageList = require( '../PageList' ),
+const PageList = require( '../PageList' ),
 	watchstar = require( './watchstar' ),
 	user = mw.user,
 	util = require( '../util' ),
@@ -37,20 +37,18 @@ mfExtend( WatchstarPageList, PageList, {
 	 * @property {mw.Api} defaults.api
 	 */
 	postRender() {
-		var
+		const
 			self = this,
-			$items,
-			pages,
 			ids = [],
 			titles = [];
 
 		PageList.prototype.postRender.apply( this );
 
-		$items = this.queryUnitializedItems();
-		pages = this.parsePagesFromItems( $items );
+		const $items = this.queryUnitializedItems();
+		const pages = this.parsePagesFromItems( $items );
 
 		Object.keys( pages ).forEach( ( title ) => {
-			var id = pages[title];
+			const id = pages[title];
 			// Favor IDs since they're short and unlikely to exceed URL length
 			// limits when batched.
 			if ( id && id !== '0' ) {
@@ -100,11 +98,11 @@ mfExtend( WatchstarPageList, PageList, {
 	 * @instance
 	 */
 	parsePagesFromItems( $items ) {
-		var
+		const
 			self = this,
 			pages = {};
 		$items.each( ( _, item ) => {
-			var $item = self.$el.find( item );
+			const $item = self.$el.find( item );
 			pages[$item.attr( 'title' )] = $item.data( 'id' );
 		} );
 		return pages;
@@ -115,7 +113,7 @@ mfExtend( WatchstarPageList, PageList, {
 	 * @param {WatchStatusMap} statuses
 	 */
 	renderItems( $items, statuses ) {
-		var self = this;
+		const self = this;
 
 		// Rendering Watchstars for anonymous users is not useful. Nothing to do.
 		if ( user.isAnon() ) {
@@ -124,7 +122,7 @@ mfExtend( WatchstarPageList, PageList, {
 
 		// Create watch stars for each entry in list
 		$items.each( ( _, item ) => {
-			var
+			const
 				$item = self.$el.find( item ),
 				page = new Page( {
 					// FIXME: Set sections so we don't hit the api (hacky)

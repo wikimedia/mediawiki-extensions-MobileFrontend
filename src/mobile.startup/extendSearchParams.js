@@ -1,4 +1,4 @@
-var util = require( './util' ),
+const util = require( './util' ),
 	actionParams = require( './actionParams.js' );
 
 /**
@@ -25,16 +25,14 @@ var util = require( './util' ),
  * @return {Object}
  */
 function extendSearchParams( feature ) {
-	var displayWikibaseDescriptions = mw.config.get( 'wgMFDisplayWikibaseDescriptions' ) || {
+	const displayWikibaseDescriptions = mw.config.get( 'wgMFDisplayWikibaseDescriptions' ) || {
 			// These must be defined, as these are all the features that this can be used on.
 			// If not defined, all these features will see their API calls broken
 			search: true,
 			watchlist: true,
 			tagline: false
 		},
-		scriptPath = mw.config.get( 'wgMFScriptPath' ),
-		args,
-		result;
+		scriptPath = mw.config.get( 'wgMFScriptPath' );
 
 	if ( !Object.prototype.hasOwnProperty.call( displayWikibaseDescriptions, feature ) ) {
 		throw new Error( '"' + feature + '" isn\'t a feature that shows Wikibase descriptions.' );
@@ -49,13 +47,13 @@ function extendSearchParams( feature ) {
 	//   prop: []
 	// }, params, /* ..., */ mw.config.get( 'wgMFSearchAPIParams' ) );
 	// ```
-	args = Array.prototype.slice.call( arguments, 1 );
+	const args = Array.prototype.slice.call( arguments, 1 );
 	args.unshift( {
 		prop: []
 	} );
 	args.push( mw.config.get( 'wgMFSearchAPIParams' ) );
 
-	result = util.extend.apply( {}, args );
+	const result = util.extend.apply( {}, args );
 	result.prop = result.prop.concat( mw.config.get( 'wgMFQueryPropModules' ) );
 
 	if ( displayWikibaseDescriptions[feature] ) {

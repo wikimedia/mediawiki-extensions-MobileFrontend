@@ -116,7 +116,7 @@ function createPromoCampaign(
 			return mwStorage.set( ACTIONS_TO_STORAGE_KEYS[action], '~' );
 		},
 		makeAllActionsIneligible() {
-			var key, action;
+			let key, action;
 			for ( key in actions ) {
 				action = actions[key];
 				this.makeActionIneligible( action );

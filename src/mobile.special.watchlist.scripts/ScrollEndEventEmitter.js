@@ -1,4 +1,4 @@
-var util = require( '../mobile.startup/util' ),
+const util = require( '../mobile.startup/util' ),
 	mfExtend = require( '../mobile.startup/mfExtend' );
 
 /**
@@ -130,7 +130,7 @@ mfExtend( ScrollEndEventEmitter, {
 		if ( !this.$el || !this.$el.offset() ) {
 			return false;
 		}
-		var $window = util.getWindow(),
+		const $window = util.getWindow(),
 			scrollBottom = $window.scrollTop() + $window.height(),
 			endPosition = this.$el.offset().top + this.$el.outerHeight();
 		return scrollBottom + this.threshold > endPosition;

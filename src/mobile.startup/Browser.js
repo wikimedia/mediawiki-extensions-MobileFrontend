@@ -1,6 +1,6 @@
-var
-	util = require( './util' ),
-	browser;
+const util = require( './util' );
+
+let browser;
 
 /**
  * Memoize a class method. Caches the result of the method based on the
@@ -15,8 +15,8 @@ function memoize( method ) {
 	 *
 	 * @return {Function}
 	 */
-	var memoized = function () {
-		var cache = this[ '__cache' + memoized.cacheId ] ||
+	const memoized = function () {
+		const cache = this[ '__cache' + memoized.cacheId ] ||
 			( this[ '__cache' + memoized.cacheId ] = {} ),
 			key = [].join.call( arguments, '|' );
 		if ( Object.prototype.hasOwnProperty.call( cache, key ) ) {
@@ -51,7 +51,7 @@ Browser.prototype = {
 	 * @return {boolean}
 	 */
 	isIos: memoize( function ( version ) {
-		var ua = this.userAgent,
+		const ua = this.userAgent,
 			ios = /ipad|iphone|ipod/i.test( ua );
 
 		if ( ios && version ) {
@@ -80,7 +80,7 @@ Browser.prototype = {
 	 * @return {boolean}
 	 */
 	isWideScreen: memoize( () => {
-		var val = parseInt( mw.config.get( 'wgMFDeviceWidthTablet' ), 10 );
+		const val = parseInt( mw.config.get( 'wgMFDeviceWidthTablet' ), 10 );
 		// Check viewport width to determine mobile vs tablet.
 		// Note: Mobile devices held in landscape mode might receive tablet treatment.
 		return window.innerWidth >= val;
@@ -100,7 +100,7 @@ Browser.prototype = {
  * @return {Browser}
  */
 Browser.getSingleton = function () {
-	var $html;
+	let $html;
 	if ( !browser ) {
 		$html = util.getDocument();
 		browser = new Browser( window.navigator.userAgent, $html );

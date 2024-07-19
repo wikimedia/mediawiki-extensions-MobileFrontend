@@ -9,8 +9,8 @@ const util = require( '../util' );
  * @return {Page}
  */
 function parse( resp ) {
-	var revision, displayTitle,
-		thumb = resp.thumbnail,
+	let displayTitle;
+	const thumb = resp.thumbnail,
 		pageprops = resp.pageprops || {
 			displaytitle: mw.html.escape( resp.title )
 		},
@@ -34,7 +34,7 @@ function parse( resp ) {
 
 	// page may or may not exist.
 	if ( resp.revisions && resp.revisions[0] ) {
-		revision = resp.revisions[0];
+		const revision = resp.revisions[0];
 		resp.lastModified = new Date( revision.timestamp );
 	}
 

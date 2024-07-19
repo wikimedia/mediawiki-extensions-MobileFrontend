@@ -1,4 +1,4 @@
-var
+const
 	icons = require( './icons' ),
 	View = require( './View' );
 
@@ -11,7 +11,7 @@ var
  * @return {View}
  */
 function promisedView( promise ) {
-	var view = new View( {
+	const view = new View( {
 		className: 'promised-view'
 	} );
 	view.$el.append( icons.spinner().$el );

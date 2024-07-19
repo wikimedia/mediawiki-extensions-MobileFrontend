@@ -1,9 +1,10 @@
 /* global $ */
-var util = require( './util' ),
+const util = require( './util' ),
 	mfExtend = require( './mfExtend' ),
 	// Cached regex to split keys for `delegate`.
-	delegateEventSplitter = /^(\S+)\s*(.*)$/,
-	idCounter = 0;
+	delegateEventSplitter = /^(\S+)\s*(.*)$/;
+
+let idCounter = 0;
 
 /**
  * Generate a unique integer id (unique within the entire client session).
@@ -13,7 +14,7 @@ var util = require( './util' ),
  * @return {string}
  */
 function uniqueId( prefix ) {
-	var id = ( ++idCounter ).toString();
+	const id = ( ++idCounter ).toString();
 	return prefix ? prefix + id : id;
 }
 
@@ -169,7 +170,7 @@ mfExtend( View, {
 	 * @param {Object.<string, string>} [options.events]
 	 */
 	initialize( options ) {
-		var self = this;
+		const self = this;
 
 		OO.EventEmitter.call( this );
 		options = util.extend( {}, this.defaults, options );
@@ -252,7 +253,7 @@ mfExtend( View, {
 	 * @chainable
 	 */
 	render( data ) {
-		var $el, html;
+		let $el, html;
 		util.extend( this.options, data );
 		this.preRender();
 		this.undelegateEvents();
@@ -291,7 +292,7 @@ mfExtend( View, {
 	 * @param {Object} events Optionally set this events instead of the ones on this.
 	 */
 	delegateEvents( events ) {
-		var match, key, method;
+		let match, key, method;
 		events = events || this.options.events;
 		if ( events ) {
 			// Remove current events before re-binding them
@@ -516,7 +517,7 @@ mfExtend( View, {
  * @return {View}
  */
 View.make = function ( options = {}, children = [] ) {
-	var view = new View( options );
+	const view = new View( options );
 	children.forEach( ( $child ) => view.append( $child ) );
 	return view;
 };

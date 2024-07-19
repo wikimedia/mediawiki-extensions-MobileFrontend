@@ -1,4 +1,4 @@
-var units = [ 'seconds', 'minutes', 'hours', 'days', 'months', 'years' ],
+const units = [ 'seconds', 'minutes', 'hours', 'days', 'months', 'years' ],
 	util = require( './util' ),
 	limits = [ 1, 60, 3600, 86400, 2592000, 31536000 ];
 
@@ -13,7 +13,7 @@ var units = [ 'seconds', 'minutes', 'hours', 'days', 'months', 'years' ],
  * @return {{value: number, unit: string}}
  */
 function timeAgo( timestampDelta ) {
-	var i = 0;
+	let i = 0;
 	while ( i < limits.length && timestampDelta > limits[i + 1] ) {
 		++i;
 	}
@@ -32,7 +32,7 @@ function timeAgo( timestampDelta ) {
  * @return {{value: number, unit: string}}
  */
 function getTimeAgoDelta( timestamp ) {
-	var currentTimestamp = Math.round( Date.now() / 1000 );
+	const currentTimestamp = Math.round( Date.now() / 1000 );
 
 	return timeAgo( currentTimestamp - timestamp );
 }
@@ -73,9 +73,7 @@ function isNow( delta ) {
  * @return {string}
  */
 function getLastModifiedMessage( ts, username, gender, historyUrl ) {
-	var delta,
-		lastEditedElement, usernameElement,
-		linkAll = typeof historyUrl === 'undefined',
+	const linkAll = typeof historyUrl === 'undefined',
 		keys = {
 			seconds: 'mobile-frontend-last-modified-with-user-seconds',
 			minutes: 'mobile-frontend-last-modified-with-user-minutes',
@@ -88,7 +86,7 @@ function getLastModifiedMessage( ts, username, gender, historyUrl ) {
 
 	gender = gender || 'unknown';
 
-	delta = getTimeAgoDelta( ts );
+	const delta = getTimeAgoDelta( ts );
 	if ( isNow( delta ) ) {
 		args.push( 'mobile-frontend-last-modified-with-user-just-now', gender, username );
 	} else {
@@ -97,10 +95,10 @@ function getLastModifiedMessage( ts, username, gender, historyUrl ) {
 		);
 	}
 
-	lastEditedElement = linkAll ?
+	const lastEditedElement = linkAll ?
 		util.parseHTML( '<strong>' ).attr( 'class', 'last-modified-text-accent' ) :
 		util.parseHTML( '<a>' ).attr( 'href', historyUrl || '#' );
-	usernameElement = linkAll ?
+	const usernameElement = linkAll ?
 		util.parseHTML( '<span>' ).attr( 'class', 'last-modified-text-accent' ) :
 		util.parseHTML( '<a>' ).attr( 'href', mw.util.getUrl( 'User:' + username ) );
 
@@ -126,26 +124,26 @@ function getLastModifiedMessage( ts, username, gender, historyUrl ) {
  * @return {string}
  */
 function getRegistrationMessage( ts, gender ) {
-	var delta, html,
-		keys = {
-			seconds: 'mobile-frontend-joined-seconds',
-			minutes: 'mobile-frontend-joined-minutes',
-			hours: 'mobile-frontend-joined-hours',
-			days: 'mobile-frontend-joined-days',
-			months: 'mobile-frontend-joined-months',
-			years: 'mobile-frontend-joined-years'
-		},
-		args = [];
+	const keys = {
+		seconds: 'mobile-frontend-joined-seconds',
+		minutes: 'mobile-frontend-joined-minutes',
+		hours: 'mobile-frontend-joined-hours',
+		days: 'mobile-frontend-joined-days',
+		months: 'mobile-frontend-joined-months',
+		years: 'mobile-frontend-joined-years'
+	};
+
+	const args = [];
 
 	gender = gender || 'unknown';
 
-	delta = getTimeAgoDelta( parseInt( ts, 10 ) );
+	const delta = getTimeAgoDelta( parseInt( ts, 10 ) );
 	if ( isNow( delta ) ) {
 		args.push( 'mobile-frontend-joined-just-now', gender );
 	} else {
 		args.push( keys[ delta.unit ], gender, mw.language.convertNumber( delta.value ) );
 	}
-	html = mw.message.apply( this, args ).parse();
+	const html = mw.message.apply( this, args ).parse();
 	return html;
 }
 

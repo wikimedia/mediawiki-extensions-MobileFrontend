@@ -1,4 +1,4 @@
-var
+const
 	mfExtend = require( './mfExtend' ),
 	util = require( './util' ),
 	View = require( './View' ),
@@ -26,20 +26,20 @@ mfExtend( Button, View, {
 	 */
 	preRender() {
 		// Mapping existing props to Codex props used in IconButton
-		var action = 'default';
+		let action = 'default';
 		if ( this.options.progressive ) {
 			action = 'progressive';
 		} else if ( this.options.destructive ) {
 			action = 'destructive';
 		}
-		var weight = this.options.quiet ? 'quiet' : 'normal';
+		let weight = this.options.quiet ? 'quiet' : 'normal';
 		if ( this.options.progressive || this.options.destructive ) {
 			weight = 'primary';
 		}
 		if ( this.options.block ) {
 			this.options.additionalClassNames += ' mf-button-block';
 		}
-		var options = util.extend( {
+		const options = util.extend( {
 			weight,
 			action,
 			isIconOnly: false,

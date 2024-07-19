@@ -66,8 +66,9 @@ class PageHTMLParser {
 	 * @return {jQuery.Object}
 	 */
 	findChildInSectionLead( sectionIndex, selector ) {
-		var $heading, $nextHeading, $el, $lead,
-			headingSelector = HEADING_SELECTOR;
+		let $heading, $nextHeading;
+
+		const headingSelector = HEADING_SELECTOR;
 
 		function withNestedChildren( $matchingNodes ) {
 			return $matchingNodes.find( selector ).addBack();
@@ -75,11 +76,11 @@ class PageHTMLParser {
 
 		if ( sectionIndex === 0 ) {
 			// lead is easy
-			$lead = this.getLeadSectionElement();
+			const $lead = this.getLeadSectionElement();
 			if ( $lead && $lead.length ) {
 
 				// Handle nested sections in Parsoid wikitext parset opt-in scenario.
-				var $nestedSection = $lead.find( 'section[data-mw-section-id="0"]' );
+				const $nestedSection = $lead.find( 'section[data-mw-section-id="0"]' );
 				if ( $nestedSection.length ) {
 					return withNestedChildren( $nestedSection.children( selector ) );
 				}
@@ -105,7 +106,7 @@ class PageHTMLParser {
 		// and that this is a wrapped section
 		if ( $heading.hasClass( 'section-heading' ) ) {
 			// get content of section
-			$el = $heading.next();
+			const $el = $heading.next();
 			// inside section find the first heading
 			$nextHeading = $el.find( headingSelector ).eq( 0 );
 			return $nextHeading.length ?
@@ -156,15 +157,15 @@ class PageHTMLParser {
 	 * @return {Thumbnail|null}
 	 */
 	getThumbnail( $a ) {
-		var
-			notSelector = '.' + EXCLUDE_THUMBNAIL_CLASS_SELECTORS.join( ',.' ),
+		const notSelector = '.' + EXCLUDE_THUMBNAIL_CLASS_SELECTORS.join( ',.' ),
 			$lazyImage = $a.find( '.lazy-image-placeholder' ),
-			// Parents need to be checked as well.
-			valid = $a.parents( notSelector ).length === 0 &&
-					$a.find( notSelector ).length === 0,
 			href = $a.attr( 'href' ),
 			legacyMatch = href && href.match( /title=([^/&]+)/ ),
 			match = href && href.match( /[^/]+$/ );
+
+		// Parents need to be checked as well.
+		let valid = $a.parents( notSelector ).length === 0 &&
+			$a.find( notSelector ).length === 0;
 
 		// filter out invalid lazy loaded images if so far image is valid
 		if ( $lazyImage.length && valid ) {
@@ -200,18 +201,17 @@ class PageHTMLParser {
 	 * @return {Thumbnail[]}
 	 */
 	getThumbnails( $el ) {
-		var
+		const
 			self = this,
-			$thumbs,
 			thumbs = [];
 
 		$el = $el || this.$el;
 
-		$thumbs = $el.find( THUMB_SELECTOR );
+		const $thumbs = $el.find( THUMB_SELECTOR );
 
 		$thumbs.each( function () {
-			var $a = $el.find( this );
-			var thumb = self.getThumbnail( $a );
+			const $a = $el.find( this );
+			const thumb = self.getThumbnail( $a );
 
 			if ( thumb ) {
 				thumbs.push( thumb );

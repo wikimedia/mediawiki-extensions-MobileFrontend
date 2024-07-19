@@ -1,4 +1,4 @@
-var m = require( '../moduleLoaderSingleton' ),
+const m = require( '../moduleLoaderSingleton' ),
 	promisedView = require( '../promisedView' ),
 	util = require( '../util' ),
 	header = require( '../headers' ).header,
@@ -12,7 +12,7 @@ var m = require( '../moduleLoaderSingleton' ),
  * @return {Overlay}
  */
 function mediaViewerOverlay( options ) {
-	var overlay = Overlay.make(
+	const overlay = Overlay.make(
 		{
 			headers: [
 				header( '', [], icons.cancel( 'gray' ) )
@@ -23,7 +23,7 @@ function mediaViewerOverlay( options ) {
 			util.Promise.all( [
 				mw.loader.using( 'mobile.mediaViewer' )
 			] ).then( () => {
-				var ImageCarousel = m.require( 'mobile.mediaViewer' ).ImageCarousel;
+				const ImageCarousel = m.require( 'mobile.mediaViewer' ).ImageCarousel;
 				return new ImageCarousel( options );
 			} )
 		)

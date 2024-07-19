@@ -1,10 +1,11 @@
-var skin,
-	browser = require( './Browser' ).getSingleton(),
+const browser = require( './Browser' ).getSingleton(),
 	View = require( './View' ),
 	util = require( './util' ),
 	currentPage = require( './currentPage' ),
 	eventBus = require( './eventBusSingleton' ),
 	mfExtend = require( './mfExtend' );
+
+let skin;
 
 /**
  * Representation of the current skin being rendered.
@@ -20,7 +21,7 @@ var skin,
  * scroll:throttled, resize:throttled, and section-toggled events
  */
 function Skin( params ) {
-	var options = util.extend( {}, params );
+	const options = util.extend( {}, params );
 
 	this.page = options.page;
 	this.name = options.name;
@@ -47,7 +48,7 @@ mfExtend( Skin, View, {
 	 * @instance
 	 */
 	postRender() {
-		var $el = this.$el;
+		const $el = this.$el;
 
 		if ( browser.supportsTouchEvents() ) {
 			$el.addClass( 'touch-events' );
@@ -87,9 +88,9 @@ mfExtend( Skin, View, {
 	 * @return {string|undefined}
 	 */
 	getLicenseMsg() {
-		var licenseMsg,
-			$licenseLinks = this.getLicenseLinks();
+		const $licenseLinks = this.getLicenseLinks();
 
+		let licenseMsg;
 		if ( $licenseLinks.length ) {
 			const licensePlural = mw.language.convertNumber(
 				$licenseLinks.filter( 'a' ).length
@@ -97,7 +98,7 @@ mfExtend( Skin, View, {
 
 			if ( this.$el.find( '#footer-places-terms-use' ).length > 0 ) {
 
-				var $termsLink = mw.message(
+				const $termsLink = mw.message(
 					'mobile-frontend-editor-terms-link',
 					this.$el.find( '#footer-places-terms-use a' ).attr( 'href' )
 				).parseDom();

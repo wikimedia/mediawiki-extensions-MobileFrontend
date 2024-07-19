@@ -1,4 +1,4 @@
-var
+const
 	View = require( './View' ),
 	util = require( './util' ),
 	mfExtend = require( './mfExtend' );

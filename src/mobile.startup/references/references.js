@@ -1,5 +1,4 @@
-var references,
-	Drawer = require( '../Drawer' ),
+const Drawer = require( '../Drawer' ),
 	util = require( '../util' ),
 	icons = require( '../icons' ),
 	ReferencesGateway = require( './ReferencesGateway' ),
@@ -90,7 +89,7 @@ function referenceDrawer( props ) {
 	);
 }
 
-references = {
+const references = {
 	test: {
 		makeOnNestedReferenceClickHandler
 	},

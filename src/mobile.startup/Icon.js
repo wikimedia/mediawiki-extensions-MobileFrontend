@@ -1,4 +1,4 @@
-var
+const
 	mfExtend = require( './mfExtend' ),
 	util = require( './util' ),
 	View = require( './View' );
@@ -33,7 +33,7 @@ mfExtend( Icon, View, {
 	 * @private
 	 */
 	getRotationClass() {
-		var rotationClass = '';
+		let rotationClass = '';
 		if ( this.options.rotation ) {
 			switch ( this.options.rotation ) {
 				case -180:
@@ -62,13 +62,13 @@ mfExtend( Icon, View, {
 	 * @private
 	 */
 	getIconClasses() {
-		var base = this.options.base;
-		var icon = this.options.icon;
-		var isSmall = this.options.isSmall;
-		var rotationClasses = this.getRotationClass();
-		var additionalClassNames = this.options.additionalClassNames;
+		const base = this.options.base;
+		const icon = this.options.icon;
+		const isSmall = this.options.isSmall;
+		const rotationClasses = this.getRotationClass();
+		const additionalClassNames = this.options.additionalClassNames;
 
-		var classes = base + ' ';
+		let classes = base + ' ';
 		if ( icon ) {
 			classes += this.getGlyphClassName() + ' ';
 		}

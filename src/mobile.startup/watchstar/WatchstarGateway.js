@@ -1,4 +1,4 @@
-var util = require( '../util' ),
+const util = require( '../util' ),
 	actionParams = require( '../actionParams' );
 
 /**
@@ -67,7 +67,7 @@ WatchstarGateway.prototype = {
 	 * @return {jQuery.Deferred<WatchStatusMap>}
 	 */
 	getStatusesByID( ids ) {
-		var self = this;
+		const self = this;
 		if ( !ids.length ) {
 			return util.Deferred().resolve( {} );
 		}
@@ -88,7 +88,7 @@ WatchstarGateway.prototype = {
 	 * @return {jQuery.Deferred<WatchStatusMap>}
 	 */
 	getStatusesByTitle( titles ) {
-		var self = this;
+		const self = this;
 		if ( !titles.length ) {
 			return util.Deferred().resolve( {} );
 		}
@@ -108,7 +108,7 @@ WatchstarGateway.prototype = {
 	 * @return {jQuery.Deferred}
 	 */
 	postStatusesByTitle( titles, watched ) {
-		var params = {
+		const params = {
 			action: 'watch',
 			titles
 		};
@@ -127,7 +127,7 @@ WatchstarGateway.prototype = {
 	 * @see getStatusesByTitle
 	 */
 	_unmarshalGetResponse( rsp ) {
-		var pages = rsp && rsp.query && rsp.query.pages || [];
+		const pages = rsp && rsp.query && rsp.query.pages || [];
 		return pages.reduce( ( statuses, page ) => {
 			statuses[page.title] = page.watched;
 			return statuses;

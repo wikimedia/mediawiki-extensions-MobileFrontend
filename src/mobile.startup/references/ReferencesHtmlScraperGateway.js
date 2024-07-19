@@ -1,4 +1,4 @@
-var ReferencesGateway = require( './ReferencesGateway' ),
+const ReferencesGateway = require( './ReferencesGateway' ),
 	mfExtend = require( './../mfExtend' ),
 	util = require( './../util' );
 
@@ -28,14 +28,15 @@ mfExtend( ReferencesHtmlScraperGateway, ReferencesGateway, {
 	 * @return {jQuery.Promise} that can be used by getReference
 	 */
 	getReferenceFromContainer( id, $container ) {
-		var $el, $ol, $parent,
-			result = util.Deferred();
+		const result = util.Deferred();
 
-		$el = $container.find( '#' + util.escapeSelector( id ) );
+		const $el = $container.find( '#' + util.escapeSelector( id ) );
 		if ( $el.length ) {
+			let $parent;
+
 			// This finds either the inner <ol class="mw-extended-references">, or the outer
 			// <ol class="references">
-			$ol = $el.closest( 'ol' );
+			const $ol = $el.closest( 'ol' );
 			if ( $ol.hasClass( 'mw-extended-references' ) ) {
 				$parent = $ol.parent();
 			}
@@ -70,7 +71,7 @@ mfExtend( ReferencesHtmlScraperGateway, ReferencesGateway, {
 	 * @param {PageHTMLParser} pageHTMLParser
 	 */
 	getReference( hash, page, pageHTMLParser ) {
-		var id = mw.util.percentDecodeFragment( hash.slice( 1 ) );
+		const id = mw.util.percentDecodeFragment( hash.slice( 1 ) );
 		// If an id is not found it's possible the id passed needs decoding (per T188547).
 		return this.getReferenceFromContainer( id, pageHTMLParser.$el.find( 'ol.references' ) );
 	}

@@ -1,4 +1,4 @@
-var
+const
 	pageJSONParser = require( '../page/pageJSONParser' ),
 	util = require( '../util' ),
 	extendSearchParams = require( '../extendSearchParams' );
@@ -33,7 +33,7 @@ SearchGateway.prototype = {
 	 * @return {Object}
 	 */
 	getApiData( query ) {
-		var prefix = this.generator.prefix,
+		const prefix = this.generator.prefix,
 			data = extendSearchParams( 'search', {
 				generator: this.generator.name
 			} );
@@ -98,7 +98,7 @@ SearchGateway.prototype = {
 	 * @private
 	 */
 	_getPage( query, pageInfo ) {
-		var page = pageJSONParser.parse( pageInfo );
+		const page = pageJSONParser.parse( pageInfo );
 
 		// If displaytext is set in the generator result (eg. by Wikibase),
 		// use that as display title.
@@ -125,8 +125,9 @@ SearchGateway.prototype = {
 	 * @private
 	 */
 	_processData( query, data ) {
-		var self = this,
-			results = [];
+		const self = this;
+
+		let results = [];
 
 		if ( data.query ) {
 
@@ -148,15 +149,14 @@ SearchGateway.prototype = {
 	 * @return {jQuery.Deferred}
 	 */
 	search( query ) {
-		var xhr, request,
-			scriptPath = mw.config.get( 'wgMFScriptPath' ),
+		const scriptPath = mw.config.get( 'wgMFScriptPath' ),
 			self = this;
 
 		if ( !this.isCached( query ) ) {
-			xhr = this.api.get( this.getApiData( query ), scriptPath ? {
+			const xhr = this.api.get( this.getApiData( query ), scriptPath ? {
 				url: scriptPath
 			} : undefined );
-			request = xhr
+			const request = xhr
 				.then( ( data, jqXHR ) => {
 					// resolve the Deferred object
 					return {

@@ -1,4 +1,4 @@
-var
+const
 	util = require( '../util' ),
 	placeholderClass = 'lazy-image-placeholder';
 
@@ -31,7 +31,7 @@ function loadImages( placeholders ) {
  * @return {{promise: jQuery.Deferred<'load'|'error'>, image: HTMLImageElement}}
  */
 function loadImage( placeholder ) {
-	var
+	const
 		deferred = util.Deferred(),
 		// data-width and height are attributes and do not specify dimension.
 		width = placeholder.dataset.width,

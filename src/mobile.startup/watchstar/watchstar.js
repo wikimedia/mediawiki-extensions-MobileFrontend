@@ -1,4 +1,4 @@
-var icons = require( '../icons' );
+const icons = require( '../icons' );
 
 /**
  * A clickable watchstar for logged in users.

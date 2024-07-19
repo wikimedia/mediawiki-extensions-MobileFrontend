@@ -1,4 +1,4 @@
-var util = require( './util.js' ),
+const util = require( './util.js' ),
 	mfExtend = require( './mfExtend' ),
 	View = require( './View' );
 
@@ -11,7 +11,7 @@ var util = require( './util.js' ),
  * @param {Object} options Configuration options
  */
 function Section( options ) {
-	var self = this;
+	const self = this;
 	options.tag = 'h' + options.level;
 	this.line = options.line;
 	this.text = options.text;

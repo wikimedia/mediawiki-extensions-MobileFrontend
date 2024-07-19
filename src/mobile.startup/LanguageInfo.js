@@ -1,4 +1,4 @@
-var util = require( './util.js' ),
+const util = require( './util.js' ),
 	actionParams = require( './actionParams' );
 
 /**

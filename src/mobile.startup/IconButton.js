@@ -1,4 +1,4 @@
-var
+const
 	mfExtend = require( './mfExtend' ),
 	util = require( './util' ),
 	View = require( './View' ),
@@ -43,12 +43,12 @@ mfExtend( IconButton, View, {
 		}
 	},
 	getButtonClasses() {
-		var additionalClassNames = this.options.additionalClassNames;
-		var size = this.options.size;
-		var weight = this.options.weight;
-		var action = this.options.action;
-		var isIconOnly = this.options.isIconOnly;
-		var classes = 'cdx-button ';
+		const additionalClassNames = this.options.additionalClassNames;
+		const size = this.options.size;
+		const weight = this.options.weight;
+		const action = this.options.action;
+		const isIconOnly = this.options.isIconOnly;
+		let classes = 'cdx-button ';
 
 		if ( this.options.tagName !== 'button' ) {
 			classes += 'cdx-button--fake-button cdx-button--fake-button--enabled ';

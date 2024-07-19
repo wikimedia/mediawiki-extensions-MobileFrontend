@@ -1,4 +1,4 @@
-var
+const
 	Drawer = require( './Drawer' ),
 	util = require( './util' ),
 	Button = require( './Button' ),
@@ -31,7 +31,7 @@ var
  * @return {Drawer}
  */
 function CtaDrawer( options = {} ) {
-	var params = redirectParams( options.queryParams, options.returnTo );
+	const params = redirectParams( options.queryParams, options.returnTo );
 	return new Drawer(
 		util.extend( {
 			children: [

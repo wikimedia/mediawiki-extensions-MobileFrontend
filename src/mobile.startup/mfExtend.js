@@ -7,7 +7,7 @@
  * @param {Object} [prototype]
  */
 function mfExtend( Child, ParentOrPrototype, prototype ) {
-	var key;
+	let key;
 	if ( prototype ) {
 		OO.inheritClass( Child, ParentOrPrototype );
 	} else {

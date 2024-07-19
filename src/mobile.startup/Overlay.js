@@ -1,4 +1,4 @@
-var
+const
 	View = require( './View' ),
 	header = require( './headers' ).header,
 	Anchor = require( './Anchor' ),
@@ -147,7 +147,7 @@ mfExtend( Overlay, View, {
 	 * @instance
 	 */
 	show() {
-		var $html = util.getDocument();
+		const $html = util.getDocument();
 
 		this.scrollTop = window.pageYOffset;
 
@@ -224,7 +224,7 @@ mfExtend( Overlay, View, {
  * @return {Overlay}
  */
 Overlay.make = function ( options, view ) {
-	var overlay = new Overlay( options );
+	const overlay = new Overlay( options );
 	overlay.$el.find( '.overlay-content' ).append( view.$el );
 	return overlay;
 };

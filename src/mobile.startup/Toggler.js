@@ -1,4 +1,4 @@
-var browser = require( './Browser' ).getSingleton(),
+const browser = require( './Browser' ).getSingleton(),
 	util = require( './util' ),
 	escapeSelector = util.escapeSelector,
 	arrowOptions = {
@@ -44,7 +44,7 @@ function Toggler( options ) {
  * @return {Object} representing open sections
  */
 function getExpandedSections( page ) {
-	var expandedSections = mw.storage.session.getObject( 'expandedSections' ) || {};
+	const expandedSections = mw.storage.session.getObject( 'expandedSections' ) || {};
 	expandedSections[page.title] = expandedSections[page.title] || {};
 	return expandedSections;
 }
@@ -68,11 +68,11 @@ function saveExpandedSections( expandedSections ) {
  * @param {Page} page
  */
 function storeSectionToggleState( $heading, page ) {
-	var headline = $heading.find( '.mw-headline' ).attr( 'id' ),
+	const headline = $heading.find( '.mw-headline' ).attr( 'id' ),
 		expandedSections = getExpandedSections( page );
 
 	if ( headline && expandedSections[page.title] ) {
-		var isSectionOpen = $heading.hasClass( 'open-block' );
+		const isSectionOpen = $heading.hasClass( 'open-block' );
 		if ( isSectionOpen ) {
 			expandedSections[page.title][headline] = true;
 		} else {
@@ -91,13 +91,12 @@ function storeSectionToggleState( $heading, page ) {
  * @param {Page} page
  */
 function expandStoredSections( toggler, $container, page ) {
-	var $sectionHeading, $headline,
-		expandedSections = getExpandedSections( page ),
+	const expandedSections = getExpandedSections( page ),
 		$headlines = $container.find( '.section-heading span' );
 
 	$headlines.each( function () {
-		$headline = $container.find( this );
-		$sectionHeading = $headline.parents( '.section-heading' );
+		const $headline = $container.find( this );
+		const $sectionHeading = $headline.parents( '.section-heading' );
 		// toggle only if the section is not already expanded
 		if (
 			expandedSections[page.title][$headline.attr( 'id' )] &&
@@ -118,7 +117,7 @@ Toggler.prototype.isCollapsedByDefault = function () {
 		// Thess classes override site settings and user preferences. For example:
 		// * ...-collapsed used on talk pages by DiscussionTools. (T321618, T322628)
 		// * ...-expanded used in previews (T336572)
-		var $override = this.$container.closest( '.collapsible-headings-collapsed, .collapsible-headings-expanded' );
+		const $override = this.$container.closest( '.collapsible-headings-collapsed, .collapsible-headings-expanded' );
 		if ( $override.length ) {
 			this._isCollapsedByDefault = $override.hasClass( 'collapsible-headings-collapsed' );
 		} else {
@@ -150,23 +149,23 @@ Toggler.prototype.toggle = function ( $heading, fromSaved ) {
 		return false;
 	}
 
-	var self = this,
+	const self = this,
 		wasExpanded = $heading.is( '.open-block' );
 
 	$heading.toggleClass( 'open-block' );
 
 	arrowOptions.rotation = wasExpanded ? 0 : 180;
-	var newIndicator = new Icon( arrowOptions );
-	var $indicatorElement = $heading.data( 'indicator' );
+	const newIndicator = new Icon( arrowOptions );
+	const $indicatorElement = $heading.data( 'indicator' );
 	if ( $indicatorElement ) {
 		$indicatorElement.replaceWith( newIndicator.$el );
 		$heading.data( 'indicator', newIndicator.$el );
 	}
 
-	var $headingLabel = $heading.find( '.mw-headline' );
+	const $headingLabel = $heading.find( '.mw-headline' );
 	$headingLabel.attr( 'aria-expanded', !wasExpanded );
 
-	var $content = $heading.next();
+	const $content = $heading.next();
 	if ( $content.hasClass( 'open-block' ) ) {
 		$content.removeClass( 'open-block' );
 		// jquery doesn't allow custom values for the hidden attribute it seems.
@@ -234,7 +233,7 @@ function enableKeyboardActions( toggler, $heading ) {
  * @return {boolean} Target ID was found
  */
 Toggler.prototype.reveal = function ( id ) {
-	var $target;
+	let $target;
 	// jQuery will throw for hashes containing certain characters which can break toggling
 	try {
 		$target = this.$container.find( '#' + escapeSelector( id ) );
@@ -243,7 +242,7 @@ Toggler.prototype.reveal = function ( id ) {
 		return false;
 	}
 
-	var $heading = $target.parents( '.collapsible-heading' );
+	let $heading = $target.parents( '.collapsible-heading' );
 	// The heading is not a section heading, check if in a content block!
 	if ( !$heading.length ) {
 		$heading = $target.parents( '.collapsible-block' ).prev( '.collapsible-heading' );
@@ -266,19 +265,19 @@ Toggler.prototype.reveal = function ( id ) {
  * @private
  */
 Toggler.prototype._enable = function () {
-	var self = this;
+	const self = this;
 
 	// FIXME This should use .find() instead of .children(), some extensions like Wikibase
 	// want to toggle other headlines than direct descendants of $container. (T95889)
 	this.$container.children( '.section-heading' ).each( function ( i ) {
-		var $heading = self.$container.find( this ),
+		const $heading = self.$container.find( this ),
 			$headingLabel = $heading.find( '.mw-headline' ),
 			$indicator = $heading.find( '.indicator' ),
 			id = self.prefix + 'collapsible-block-' + i;
 		// Be sure there is a `section` wrapping the section content.
 		// Otherwise, collapsible sections for this page is not enabled.
 		if ( $heading.next().is( 'section' ) ) {
-			var $content = $heading.next( 'section' );
+			const $content = $heading.next( 'section' );
 			$heading
 				.addClass( 'collapsible-heading ' )
 				.data( 'section-number', i )
@@ -286,7 +285,7 @@ Toggler.prototype._enable = function () {
 					// don't toggle, if the click target was a link
 					// (a link in a section heading)
 					// See T117880
-					var clickedLink = ev.target.closest( 'a' );
+					const clickedLink = ev.target.closest( 'a' );
 					if ( !clickedLink || !clickedLink.href ) {
 						// prevent taps/clicks on edit button after toggling (T58209)
 						ev.preventDefault();
@@ -302,7 +301,7 @@ Toggler.prototype._enable = function () {
 				} );
 
 			arrowOptions.rotation = !self.isCollapsedByDefault() ? 180 : 0;
-			var indicator = new Icon( arrowOptions );
+			const indicator = new Icon( arrowOptions );
 			if ( $indicator.length ) {
 				// replace the existing indicator
 				$indicator.replaceWith( indicator.$el );
@@ -342,13 +341,13 @@ Toggler.prototype._enable = function () {
 	 */
 	function checkHash() {
 		// eslint-disable-next-line no-restricted-properties
-		var hash = window.location.hash;
+		let hash = window.location.hash;
 		if ( hash.indexOf( '#' ) === 0 ) {
 			hash = hash.slice( 1 );
 			// Per https://html.spec.whatwg.org/multipage/browsing-the-web.html#target-element
 			// we try the raw fragment first, then the percent-decoded fragment.
 			if ( !self.reveal( hash ) ) {
-				var decodedHash = mw.util.percentDecodeFragment( hash );
+				const decodedHash = mw.util.percentDecodeFragment( hash );
 				if ( decodedHash ) {
 					self.reveal( decodedHash );
 				}
@@ -363,7 +362,7 @@ Toggler.prototype._enable = function () {
 	 * @method
 	 */
 	function checkInternalRedirectAndHash() {
-		var internalRedirect = mw.config.get( 'wgInternalRedirectTargetUrl' ),
+		const internalRedirect = mw.config.get( 'wgInternalRedirectTargetUrl' ),
 			internalRedirectHash = internalRedirect ? internalRedirect.split( '#' )[1] : false;
 
 		if ( internalRedirectHash ) {

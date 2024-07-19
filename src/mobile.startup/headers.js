@@ -1,4 +1,4 @@
-var util = require( './util' ),
+const util = require( './util' ),
 	Button = require( './Button' ),
 	icons = require( './icons' );
 

@@ -1,4 +1,4 @@
-var
+const
 	HTML = mw.html,
 	util = require( './util' );
 
@@ -114,8 +114,8 @@ class Page {
 		if ( !this.isVEAvailable() ) {
 			return false;
 		}
-		var config = mw.config.get( 'wgVisualEditorConfig' );
-		var visualEditorNamespaces = config.namespaces || [];
+		const config = mw.config.get( 'wgVisualEditorConfig' );
+		const visualEditorNamespaces = config.namespaces || [];
 
 		return visualEditorNamespaces.indexOf( mw.config.get( 'wgNamespaceNumber' ) ) !== -1;
 	}
@@ -172,8 +172,8 @@ class Page {
 	 * @return {number} namespace Number
 	 */
 	getNamespaceId() {
-		var nsId,
-			args = this.title.split( ':' );
+		let nsId;
+		const args = this.title.split( ':' );
 
 		if ( args[1] ) {
 			nsId = mw.config.get( 'wgNamespaceIds' )[ args[0].toLowerCase().replace( ' ', '_' ) ] || 0;

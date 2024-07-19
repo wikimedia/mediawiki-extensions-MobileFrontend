@@ -1,4 +1,4 @@
-var
+const
 	mfExtend = require( '../mfExtend' ),
 	Overlay = require( '../Overlay' ),
 	util = require( '../util' ),
@@ -23,7 +23,7 @@ var
  * @param {SearchGateway} [params.gateway]
  */
 function SearchOverlay( params ) {
-	var header = searchHeader(
+	const header = searchHeader(
 			params.placeholderMsg,
 			params.action || mw.config.get( 'wgScript' ),
 			( query ) => this.performSearch( query ),
@@ -69,7 +69,7 @@ mfExtend( SearchOverlay, Overlay, {
 	 * @instance
 	 */
 	onClickSearchContent() {
-		var
+		const
 			$form = this.$el.find( 'form' ),
 			$el = $form[0].parentNode;
 
@@ -122,7 +122,7 @@ mfExtend( SearchOverlay, Overlay, {
 	 * @param {jQuery.Event} ev
 	 */
 	onClickResult( ev ) {
-		var
+		const
 			self = this,
 			$link = this.$el.find( ev.currentTarget );
 		/**
@@ -141,7 +141,7 @@ mfExtend( SearchOverlay, Overlay, {
 		this.router.back().then( function () {
 			// T308288: Appends the current search id as a url param on clickthroughs
 			if ( this.currentSearchId ) {
-				var clickUrl = new URL( location.href );
+				const clickUrl = new URL( location.href );
 				clickUrl.searchParams.set( 'searchToken', this.currentSearchId );
 				self.router.navigateTo( document.title, {
 					path: clickUrl.toString(),
@@ -162,13 +162,13 @@ mfExtend( SearchOverlay, Overlay, {
 	 * @instance
 	 */
 	postRender() {
-		var self = this,
+		const self = this,
 			searchResults = new SearchResultsView( {
 				searchContentLabel: mw.msg( 'mobile-frontend-search-content' ),
 				noResultsMsg: mw.msg( 'mobile-frontend-search-no-results' ),
 				searchContentNoResultsMsg: mw.message( 'mobile-frontend-search-content-no-results' ).parse()
-			} ),
-			timer;
+			} );
+		let timer;
 
 		this.$el.find( '.overlay-content' ).append( searchResults.$el );
 		Overlay.prototype.postRender.call( this );
@@ -220,7 +220,7 @@ mfExtend( SearchOverlay, Overlay, {
 	 * @instance
 	 */
 	showKeyboard() {
-		var len = this.$input.val().length;
+		const len = this.$input.val().length;
 		this.$input.trigger( 'focus' );
 		// Cursor to the end of the input
 		if ( this.$input[0].setSelectionRange ) {
@@ -250,7 +250,7 @@ mfExtend( SearchOverlay, Overlay, {
 	 * @param {string} query
 	 */
 	performSearch( query ) {
-		var
+		const
 			self = this,
 			api = this.api,
 			delay = this.gateway.isCached( query ) ? 0 : SEARCH_DELAY;
@@ -265,8 +265,7 @@ mfExtend( SearchOverlay, Overlay, {
 
 			if ( query.length ) {
 				this.timer = setTimeout( () => {
-					var xhr;
-					xhr = self.gateway.search( query );
+					const xhr = self.gateway.search( query );
 					self._pendingQuery = xhr.then( function ( data ) {
 						this.currentSearchId = data.searchId;
 						// FIXME: Given this manipulates SearchResultsView

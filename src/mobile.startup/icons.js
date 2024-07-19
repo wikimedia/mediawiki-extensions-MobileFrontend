@@ -1,4 +1,4 @@
-var
+const
 	CANCEL_GLYPH = 'close',
 	Icon = require( './Icon' ),
 	IconButton = require( './IconButton' );
@@ -50,7 +50,7 @@ const icons = {
 	 * @return {IconButton}
 	 */
 	cancel( variant, props = {} ) {
-		var glyph = variant ? `${ CANCEL_GLYPH }-${ variant }` : `${ CANCEL_GLYPH }`;
+		const glyph = variant ? `${ CANCEL_GLYPH }-${ variant }` : `${ CANCEL_GLYPH }`;
 		props.additionalClassNames = props.additionalClassNames || '';
 		props.additionalClassNames += ' cancel';
 

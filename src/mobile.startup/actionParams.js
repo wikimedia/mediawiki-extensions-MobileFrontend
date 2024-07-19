@@ -1,4 +1,4 @@
-var util = require( './util' ),
+const util = require( './util' ),
 	defaultParams = {
 		action: 'query',
 		formatversion: 2
@@ -11,7 +11,7 @@ var util = require( './util' ),
  * @return {Object}
  */
 function actionParams( otherParams ) {
-	var scriptPath = mw.config.get( 'wgMFScriptPath' );
+	const scriptPath = mw.config.get( 'wgMFScriptPath' );
 	return util.extend( {}, defaultParams, {
 		origin: scriptPath ? '*' : undefined
 	}, otherParams );

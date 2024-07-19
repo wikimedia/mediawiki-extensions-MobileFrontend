@@ -26,8 +26,7 @@ ModuleLoader.prototype = {
 	 * @return {Object} Required module, can be any JavaScript object.
 	 */
 	require( id ) {
-		var module, args,
-			registry = this._register;
+		const registry = this._register;
 
 		/**
 		 * @return {Object} Module
@@ -39,9 +38,9 @@ ModuleLoader.prototype = {
 			return registry[id];
 		}
 
-		args = id.split( '/' );
+		const args = id.split( '/' );
 		try {
-			module = __non_webpack_require__( args[0] );
+			const module = __non_webpack_require__( args[0] );
 			if ( module[args[1]] ) {
 				return module[args[1]];
 			} else {
@@ -62,7 +61,7 @@ ModuleLoader.prototype = {
 	 * @return {Object}
 	 */
 	define( id, obj ) {
-		var self = this;
+		const self = this;
 
 		if ( Object.hasOwnProperty.call( this._register, id ) ) {
 			throw new Error( 'Module already exists: ' + id );
@@ -92,7 +91,7 @@ ModuleLoader.prototype = {
 	 * needs to be already defined!)
 	 */
 	deprecate( id, obj, replacement ) {
-		var msg;
+		let msg;
 		if ( replacement ) {
 			// add an alternative for this module, if any given
 			msg = 'Use ' + replacement + ' instead.';

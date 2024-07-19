@@ -1,6 +1,6 @@
-var
-	util = require( './util' ),
-	overlayManager = null;
+const util = require( './util' );
+
+let overlayManager = null;
 
 // We pass this to history.pushState/replaceState to indicate that we're controlling the page URL.
 // Then we look for this marker on page load so that if the page is refreshed, we don't generate an
@@ -157,8 +157,7 @@ OverlayManager.prototype = {
 	 * @param {Object|null} match Object with factory function's result. null if no match.
 	 */
 	_processMatch( match ) {
-		var factoryResult,
-			self = this;
+		const self = this;
 
 		if ( match ) {
 			if ( match.overlay ) {
@@ -166,7 +165,7 @@ OverlayManager.prototype = {
 				self._show( match.overlay );
 			} else {
 				// else create an overlay using the factory function result
-				factoryResult = match.factoryResult;
+				const factoryResult = match.factoryResult;
 				// We were getting errors relating to no factoryResult.
 				// This should never happen.
 				// If it does an error should not be thrown.
@@ -240,11 +239,12 @@ OverlayManager.prototype = {
 	 *  Returns null if no match.
 	 */
 	_matchRoute( path, entry ) {
-		var
-			next,
+		let
 			didMatch,
 			captures,
-			match,
+			match;
+
+		const
 			previous = this.stack[1],
 			self = this;
 
@@ -281,7 +281,7 @@ OverlayManager.prototype = {
 				self.stack.shift();
 				return previous;
 			} else {
-				next = getNext();
+				const next = getNext();
 				if ( this.stack[0] && next.path === this.stack[0].path ) {
 					// current overlay path is same as path to check which means overlay
 					// is attempting to refresh so just replace current overlay with new
@@ -341,7 +341,7 @@ OverlayManager.prototype = {
 	 * @param {Function} factory a function returning an overlay
 	 */
 	add( route, factory ) {
-		var self = this,
+		const self = this,
 			entry = {
 				route,
 				factory

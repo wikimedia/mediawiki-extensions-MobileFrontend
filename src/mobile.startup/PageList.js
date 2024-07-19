@@ -1,4 +1,4 @@
-var util = require( './util.js' ),
+const util = require( './util.js' ),
 	mfExtend = require( './mfExtend' ),
 	View = require( './View' ),
 	browser = require( './Browser' ).getSingleton();
@@ -48,11 +48,11 @@ mfExtend( PageList, View, {
 	 * @instance
 	 */
 	renderPageImages() {
-		var self = this;
+		const self = this;
 
 		setTimeout( () => {
 			self.$el.find( '.list-thumb' ).each( function () {
-				var style = self.$el.find( this ).data( 'style' );
+				const style = self.$el.find( this ).data( 'style' );
 				self.$el.find( this ).attr( 'style', style );
 			} );
 			// Delay an unnecessary load of images on mobile (slower?) connections

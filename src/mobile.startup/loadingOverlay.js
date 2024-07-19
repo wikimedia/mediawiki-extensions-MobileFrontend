@@ -1,4 +1,4 @@
-var
+const
 	icons = require( './icons' ),
 	Overlay = require( './Overlay' );
 
@@ -9,7 +9,7 @@ var
  * @return {Overlay}
  */
 function loadingOverlay() {
-	var overlay = new Overlay( {
+	const overlay = new Overlay( {
 		className: 'overlay overlay-loading',
 		noHeader: true
 	} );
