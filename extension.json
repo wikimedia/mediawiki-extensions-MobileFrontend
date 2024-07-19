@@ -483,6 +483,13 @@
 	"HookHandlers": {
 		"MobileFrontendHooks": {
 			"class": "MobileFrontendHooks",
+			"services": [
+				"HookContainer",
+				"MobileFrontend.Config",
+				"SkinFactory",
+				"UserOptionsLookup",
+				"WatchlistManager"
+			],
 			"optional_services": [
 				"GadgetsRepo"
 			]
