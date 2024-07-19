@@ -1,4 +1,4 @@
-var util = require( './../mobile.startup/util' ),
+const util = require( './../mobile.startup/util' ),
 	mfExtend = require( './../mobile.startup/mfExtend' ),
 	icons = require( './../mobile.startup/icons' ),
 	View = require( './../mobile.startup/View' );

@@ -1,4 +1,4 @@
-var sizeBuckets = [ 320, 640, 800, 1024, 1280, 1920, 2560, 2880 ],
+const sizeBuckets = [ 320, 640, 800, 1024, 1280, 1920, 2560, 2880 ],
 	actionParams = require( './../mobile.startup/actionParams' ),
 	util = require( './../mobile.startup/util' );
 
@@ -10,7 +10,7 @@ var sizeBuckets = [ 320, 640, 800, 1024, 1280, 1920, 2560, 2880 ],
  * @return {number}
  */
 function findSizeBucket( size ) {
-	var i = 0;
+	let i = 0;
 	while ( size > sizeBuckets[i] && i < sizeBuckets.length - 1 ) {
 		++i;
 	}
@@ -36,7 +36,7 @@ function ImageGateway( options ) {
  * @return {jQuery.Deferred} with the image info
  */
 ImageGateway.prototype.getThumb = function ( title ) {
-	var cachedThumb = this._cache[title],
+	const cachedThumb = this._cache[title],
 		$window = util.getWindow(),
 		imageSizeMultiplier = ( window.devicePixelRatio && window.devicePixelRatio > 1 ) ?
 			window.devicePixelRatio : 1;
