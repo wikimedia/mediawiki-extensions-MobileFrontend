@@ -1,6 +1,6 @@
 /* global $ */
 /* See T354224 for information on the @wikimedia/mediawiki.skins.clientpreferences module. */
-var clientPrefs = require( '@wikimedia/mediawiki.skins.clientpreferences' ),
+const clientPrefs = require( '@wikimedia/mediawiki.skins.clientpreferences' ),
 	toast = require( './mobile.startup/showOnPageReload' ),
 	amcOutreach = require( './mobile.startup/amcOutreach/amcOutreach' ),
 	EXPAND_SECTIONS_KEY = 'mf-expand-sections',
@@ -67,18 +67,13 @@ function addClientPreferencesToForm( $form, clientPreferences ) {
  */
 function infuseToggles( toggleObjects, $form ) {
 	toggleObjects.forEach( function ( toggleObject ) {
-		var
-			$toggleElement = toggleObject.$el,
-			toggleSwitch,
-			enableToggle,
-			$checkbox;
-
-		enableToggle = OO.ui.infuse( $toggleElement );
-		$checkbox = enableToggle.$element;
-
-		toggleSwitch = new OO.ui.ToggleSwitchWidget( {
+		const $toggleElement = toggleObject.$el;
+		const enableToggle = OO.ui.infuse( $toggleElement );
+		const $checkbox = enableToggle.$element;
+		const toggleSwitch = new OO.ui.ToggleSwitchWidget( {
 			value: enableToggle.isSelected()
 		} );
+
 		// Strangely the ToggleSwitchWidget does not behave as an input so any change
 		// to it is not reflected in the form. (see T182466)
 		// Ideally we'd replaceWith here and not have to hide the original element.
@@ -125,7 +120,7 @@ function infuseToggles( toggleObjects, $form ) {
  * The checkbox is used for turning on/off expansion of all sections on page load.
  */
 function initMobileOptions() {
-	var $form = $( '#mobile-options' ),
+	const $form = $( '#mobile-options' ),
 		$betaToggle = $( '#enable-beta-toggle' ),
 		$amcToggle = $( '#enable-amc-toggle' ),
 		toggles = [];

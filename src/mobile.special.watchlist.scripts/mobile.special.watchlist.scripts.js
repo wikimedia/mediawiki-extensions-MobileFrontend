@@ -1,12 +1,12 @@
 /* global $ */
-var WatchList = require( './WatchList' ),
+const WatchList = require( './WatchList' ),
 	eventBus = require( '../mobile.startup/eventBusSingleton' );
 
 /**
  * Initialises JavaScript on Special:Watchlist
  */
 function init() {
-	var $watchlist = $( 'ul.mw-mf-watchlist-page-list' );
+	const $watchlist = $( 'ul.mw-mf-watchlist-page-list' );
 
 	// FIXME: find more elegant way to not show watchlist stars on recent changes
 	if ( $( '.mw-mf-watchlist-selector' ).length === 0 ) {

@@ -1,4 +1,4 @@
-var
+const
 	pageJSONParser = require( '../mobile.startup/page/pageJSONParser' ),
 	util = require( '../mobile.startup/util' ),
 	extendSearchParams = require( '../mobile.startup/extendSearchParams' );
@@ -36,7 +36,7 @@ WatchListGateway.prototype = {
 	 * @return {jQuery.Deferred}
 	 */
 	loadWatchlist: function () {
-		var self = this,
+		const self = this,
 			params = extendSearchParams( 'watchlist', {
 				prop: [ 'info', 'revisions' ],
 				rvprop: 'timestamp|user',
@@ -66,7 +66,7 @@ WatchListGateway.prototype = {
 	 * @return {Page[]}
 	 */
 	parseData: function ( data ) {
-		var pages;
+		let pages;
 
 		if ( !data.query || !data.query.pages ) {
 			return [];

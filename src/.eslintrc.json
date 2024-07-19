@@ -15,7 +15,6 @@
 		"__non_webpack_require__": true
 	},
 	"rules": {
-		"no-var": "off",
 		"no-shadow": "warn",
 		"jsdoc/check-tag-names": "off",
 		"jsdoc/no-undefined-types": "off",
