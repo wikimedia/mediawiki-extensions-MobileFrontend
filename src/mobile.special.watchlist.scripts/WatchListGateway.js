@@ -48,9 +48,7 @@ WatchListGateway.prototype = {
 		if ( this.canContinue === false ) {
 			return util.Deferred().resolve( [] );
 		}
-		return this.api.get( params, {
-			url: this.apiUrl
-		} ).then( function ( data ) {
+		return this.api.get( params ).then( function ( data ) {
 			if ( data.continue !== undefined ) {
 				self.continueParams = data.continue;
 			} else {

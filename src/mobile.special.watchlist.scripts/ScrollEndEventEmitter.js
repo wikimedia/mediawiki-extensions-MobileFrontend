@@ -1,5 +1,5 @@
-var util = require( './util' ),
-	mfExtend = require( './mfExtend' );
+var util = require( '../mobile.startup/util' ),
+	mfExtend = require( '../mobile.startup/mfExtend' );
 
 /**
  * Class to assist a view in implementing infinite scrolling on some DOM

@@ -10,7 +10,7 @@ QUnit.module( 'MobileFrontend ScrollEndEventEmitter.js', {
 		sandbox = sinon.sandbox.create();
 		oo.setUp( sandbox, global );
 
-		ScrollEndEventEmitter = require( '../../../src/mobile.startup/ScrollEndEventEmitter' );
+		ScrollEndEventEmitter = require( '../../../src/mobile.special.watchlist.scripts/ScrollEndEventEmitter' );
 	},
 	afterEach: function () {
 		sandbox.restore();

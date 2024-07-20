@@ -88,12 +88,6 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 		$html .=
 			Html::element( 'h3', [], $titleText );
 
-		if ( $lastModified ) {
-			$html .= Html::openElement( 'div', [ 'class' => 'info' ] ) .
-				Html::element( 'span', array_merge( $dataAttrs, [ 'class' => 'modified-enhancement' ] ),
-					$lastModified ) .
-				Html::closeElement( 'div' );
-		}
 		$html .= Html::closeElement( 'a' ) .
 			Html::closeElement( 'li' );
 

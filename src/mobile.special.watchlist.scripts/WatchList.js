@@ -2,7 +2,7 @@ var
 	mfExtend = require( '../mobile.startup/mfExtend' ),
 	PageList = require( '../mobile.startup/PageList' ),
 	WatchstarPageList = require( '../mobile.startup/watchstar/WatchstarPageList' ),
-	ScrollEndEventEmitter = require( '../mobile.startup/ScrollEndEventEmitter' ),
+	ScrollEndEventEmitter = require( './ScrollEndEventEmitter' ),
 	util = require( '../mobile.startup/util' ),
 	WatchListGateway = require( './WatchListGateway' );
 
@@ -107,7 +107,8 @@ mfExtend( WatchList, WatchstarPageList, {
 	appendPage: function ( page ) {
 		// wikidata descriptions should not show in this view.
 		var templateOptions = util.extend( {}, page, {
-			wikidataDescription: undefined
+			wikidataDescription: undefined,
+			lastModified: undefined
 		} );
 		this.$el.append( this.templatePartials.item.render( templateOptions ) );
 	},
