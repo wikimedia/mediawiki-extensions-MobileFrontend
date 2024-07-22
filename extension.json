@@ -707,9 +707,6 @@
 		"MFSiteStylesRenderBlocking": {
 			"value": false
 		},
-		"MFWatchlistEditCountThreshold": {
-			"value": 10
-		},
 		"MFAdvancedMobileContributions": {
 			"value": true
 		},
