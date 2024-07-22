@@ -38,7 +38,8 @@
 			"一個正常人",
 			"飞舞回堂前",
 			"Cookai1205",
-			"H78c67c"
+			"H78c67c",
+			"列维劳德"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "使用者是否透過行動版介面編輯",
@@ -99,7 +100,7 @@
 	"mobile-frontend-editor-terms-link": "[$1 使用條款]",
 	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|您想要}}於{{SITENAME}}上建立新頁面嗎？",
 	"mobile-frontend-editor-placeholder": "此章節尚是空的。成為第一個編輯它的人吧！",
-	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|您}}正在於{{SITENAME}}{{GENDER:$1|建立}}新頁面中！",
+	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|您}}正在於{{SITENAME}}{{GENDER:$1|建立}}新頁面！",
 	"mobile-frontend-editor-previewing-page": "<span><strong>正在預覽</strong> $1</span>",
 	"mobile-frontend-editor-publish": "發布",
 	"mobile-frontend-editor-save": "儲存",
@@ -253,7 +254,7 @@
 	"mobile-frontend-search-feedback-prompt": "找不到您尋找的內容？",
 	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions": "標題描述",
 	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions-description": "了解有關標題下方帶簡短描述的頁面主題",
-	"mobile-frontend-send-feedback": "送出回饋",
+	"mobile-frontend-send-feedback": "傳送意見回饋",
 	"mobile-frontend-mobile-option-MFLazyLoadImages-description": "僅在需要時載入圖片。",
 	"mobile-frontend-mobile-option-MFLazyLoadImages": "緩慢載入圖片",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "起頭段落",
@@ -263,7 +264,7 @@
 	"mobile-frontend-mobile-option-amc": "進階模式",
 	"mobile-frontend-mobile-option-amc-experiment-description": "進階模式提供可輕鬆存取討論頁、歷史頁面、使用者工具、以及其它編輯工具。",
 	"mobile-frontend-mobile-option-amc-learn-more": "了解更多",
-	"mobile-frontend-mobile-option-amc-send-feedback": "送出回饋",
+	"mobile-frontend-mobile-option-amc-send-feedback": "傳送意見回饋",
 	"mobile-frontend-amc-outreach-intro": "進階模式介紹",
 	"mobile-frontend-amc-outreach-description": "進階模式提供歷史頁面的擴充功能、監視清單頁面、最近修改，以及在手機上的其它編輯工具。",
 	"mobile-frontend-amc-outreach-enable": "啟用進階模式",
