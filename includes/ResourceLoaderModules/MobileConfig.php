@@ -2,10 +2,10 @@
 
 namespace MobileFrontend\ResourceLoaderModules;
 
+use MediaWiki\Html\Html;
 use MediaWiki\ResourceLoader as RL;
 use MobileFrontendEditorHooks;
 use MobileFrontendHooks;
-use Xml;
 
 /**
  * A callback to deliver JavaScript config necessary for MobileFrontend.
@@ -16,7 +16,7 @@ class MobileConfig {
 	 * @return string
 	 */
 	public static function makeScript( RL\Context $context ) {
-		return Xml::encodeJsCall( 'mw.config.set', [ self::getConfigData() ] );
+		return Html::encodeJsCall( 'mw.config.set', [ self::getConfigData() ] );
 	}
 
 	/**
