@@ -100,12 +100,21 @@ See: https://www.mediawiki.org/wiki/Analytics/Kraken/Data_Formats/X-Analytics
 * Type: `Boolean`
 * Default: `false`
 
-#### $wgMFUsePreferredEditor
+#### $wgMFDefaultEditor
 
-Use the user's preferred editor (i.e. visual editor or source editor) on first load. Uses the `visualeditor-editor` user option.
+Default editor when there is no user preference set (mobile-editor).
+One of `source`, `visual`, or `preference` (inherit desktop editor preference).
 
-* Type: `Boolean`
-* Default: `false`
+* Type: `string`
+* Default: `preference`
+
+#### $wgMFFallbackEditor
+
+When MFDefaultEditor is set to `preference` and no desktop preference is set,
+use this editor. Set to `source` or `visual`.
+
+* Type: `string`
+* Default: `visual`
 
 #### $wgMFEnableMobilePreferences
 
@@ -139,16 +148,7 @@ recruit volunteers.
 * Type: `Boolean`
 * Default: `false`
 
-#### $wgMFIsBannerEnabled
-
-Whether or not the banner experiment is enabled.
-
-See: <https://www.mediawiki.org/wiki/Reading/Features/Article_lead_image>
-
-* Type: `Boolean`
-* Default: `true`
-
-#### MFScriptPath
+#### $wgMFScriptPath
 
 When set will override the default search script path.
 This should not be used in production, it is strictly for development purposes.
@@ -174,7 +174,25 @@ removed in the near future (hopefully).
 * excludeNamespaces - disable the MobileFormatter for these namespaces. Article HTML for mobile will be the same as desktop.
 
 * Type: `Object`
-* Default: `{ headings: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'], maxImages: 1000, maxHeadings: 4000 }`
+* Default:
+```php
+[
+	"excludeNamespaces": [
+		10,
+		-1
+	],
+	"maxImages": 1000,
+	"maxHeadings": 4000,
+	"headings": [
+		"h1",
+		"h2",
+		"h3",
+		"h4",
+		"h5",
+		"h6"
+	]
+]
+```
 
 #### $wgMFSiteStylesRenderBlocking
 
@@ -221,12 +239,16 @@ item will be stripped from the page.
 * Type: `Array`
 * Default:
 ```php
-  [
-    // These rules will be used for all transformations in the beta channel of the site
-    'beta' => [],
-    // These rules will be used for all transformations
-    'base' => [],
-  ]
+[
+  // These rules will be used for all transformations in the beta channel of the site
+	"beta": [],
+  // These rules will be used for all transformations
+	"base": [
+		".navbox",
+		".vertical-navbox",
+		".nomobile"
+	]
+]
 ```
 
 #### $wgMFLazyLoadImages
@@ -293,7 +315,7 @@ Pages with smaller parsed HTML size are not cached.  Set to 0 to cache
 everything or to some large value to disable caching completely.
 
 * Type: `Integer`
-* Default: `64 * 1024`
+* Default: `65536`
 
 #### $wgMFAutodetectMobileView
 
@@ -419,7 +441,7 @@ Whether beta mode is enabled.
 Whether Advanced mode is available for users.
 
 * Type: `Boolean`
-* Default: `false`
+* Default: `true`
 
 #### $wgMFAmcOutreach
 
@@ -435,7 +457,7 @@ When Amc Outreach is enabled, this option sets the minimum number of edits a use
 * Type: `Number`
 * Default: 100
 
-#### MFBetaFeedbackLink
+#### $wgMFBetaFeedbackLink
 
 Link to feedback page for beta features. If false no feedback link will be shown.
 
@@ -536,12 +558,7 @@ $wgMFSpecialPageTaglines = [
 ```
 
 * Type: `Array`
-* Default:
-```php
-  [
-    "MobileOptions" => "mobile-frontend-settings-tagline"
-  ]
-```
+* Default: `[]`
 
 #### $wgMFNamespacesWithLeadParagraphs
 
@@ -566,3 +583,80 @@ preferences.
 
 * Type: `Boolean`
 * Default: `true`
+
+#### $wgMFEditNoticesConflictingGadgetName
+
+Internal name of the 'edit notices on mobile' gadget,
+which conflicts with showEditNotices in EditorOverlay.
+showEditNotices will not run when the user has this gadget enabled.
+
+* Type: `string`
+* Default: `"EditNoticesOnMobile"`
+
+#### $wgMFEnableFontChanger
+
+Enable the font-size options for users.
+
+* Type: `Array`
+* Default:
+```php
+[
+	"base" => true,
+	"beta" => true
+]
+```
+
+#### $wgMFEnableManifest
+
+Add a webapp-manifest link to mobile view output.
+
+* Type: `Boolean`
+* Default: `true`
+
+#### $wgMFEnableVEWikitextEditor
+
+Eanble VisualEditor's wikitext editor as a replacement for MobileFrontend's source editor.
+
+* Type: `Boolean`
+* Default: `false`
+
+#### $wgMFLazyLoadSkipSmallImages
+
+Skip lazy-loading transform on small-dimension images.
+
+* Type: `Boolean`
+* Default: `false`
+
+#### $wgMFLogWrappedInfoboxes
+
+Log when finding infoboxes wrapped with container.
+
+* Type: `Boolean`
+* Default: `true`
+
+#### $wgMFManifestBackgroundColor
+
+Background color to use in webapp-manifest.
+
+* Type: `string`
+* Default: `"#fff"`
+
+#### $wgMFManifestThemeColor
+
+Theme color to use in webapp-manifest.
+
+* Type: `string`
+* Default: `"#eaecf0"`
+
+#### $wgMFShowFirstParagraphBeforeInfobox
+
+Move first paragraph in articles to before infobox.
+
+* Type: `Array`
+* Default:
+```php
+[
+	"base" => true,
+	"beta" => true
+]
+```
