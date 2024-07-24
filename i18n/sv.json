@@ -113,7 +113,7 @@
 	"mobile-frontend-history-404-desc": "Kan inte titta på historiken för en sida som inte finns. Det kan ha raderats eller du kanske har följt en trasig länk.",
 	"mobile-frontend-history-404-title": "Ingen sådan sida",
 	"mobile-frontend-history-no-results": "Ingen historik överensstämmer med det angivna filtret.",
-	"mobile-frontend-joined-just-now": "{{GENDER:$1|Registrerade sig}} precis nu",
+	"mobile-frontend-joined-just-now": "{{GENDER:$1|Registrerade sig}} alldeles nyss",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|Registrerade sig för}} {{PLURAL:$2|$2 sekund|$2 sekunder}} sedan",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|Registrerade sig för}} {{PLURAL:$2|$2 minut|$2 minuter}} sedan",
 	"mobile-frontend-joined-hours": "{{GENDER:$1|Registrerade sig för}} {{PLURAL:$2|$2 timme|$2 timmar}} sedan",

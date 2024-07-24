@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"IJzeren Jan"
+		]
+	},
+	"apihelp-parse-param-mobileformat": "Vrnuti izhod parsera v formatu podhodečem mobilnym aparatam.",
+	"apihelp-parse-param-noimages": "Unemožniti izobraženje obrazkov v mobilnom izhodu.",
+	"apihelp-parse-param-mainpage": "Priměniti mobilne prěobraženja za glavnu stranicu.",
+	"apihelp-webapp-manifest-summary": "Vračaje manifest «webapp»."
+}
