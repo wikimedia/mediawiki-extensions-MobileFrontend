@@ -434,7 +434,7 @@ class MobileFrontendHooks implements
 		}
 
 		// Default to diff-only mode on mobile diff pages if not specified.
-		if ( !$request->getCheck( 'diffonly' ) ) {
+		if ( $request->getCheck( 'diff' ) && !$request->getCheck( 'diffonly' ) ) {
 			$request->setVal( 'diffonly', 'true' );
 		}
 	}
