@@ -488,7 +488,8 @@
 				"MobileFrontend.Config",
 				"SkinFactory",
 				"UserOptionsLookup",
-				"WatchlistManager"
+				"WatchlistManager",
+				"MobileFrontend.Context"
 			],
 			"optional_services": [
 				"GadgetsRepo"
