@@ -878,10 +878,6 @@ class MobileFrontendHooks implements
 				'mf-font-size-clientpref-' . $fontSize,
 				'mw-mf-amc-clientpref-' . $amc
 			] );
-
-			// Allow modifications in mobile only mode
-			$hookRunner = new HookRunner( $this->hookContainer );
-			$hookRunner->onBeforePageDisplayMobile( $out, $skin );
 		}
 
 		// T204691
