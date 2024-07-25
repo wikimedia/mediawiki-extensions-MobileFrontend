@@ -7,14 +7,15 @@
 			"Kaleem Bhatti",
 			"Mehtab ahmed",
 			"Sindhu",
-			"Tweety"
+			"Tweety",
+			"Charoo"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "ڪو واپرائيندڙ موبائل انٽرفيس ذريعي سنوار ڪري رهيو آهي يا نہ",
 	"mobile-frontend-account-create-captcha-placeholder": "تصديقي ڪوڊ داخل ڪريو",
 	"mobile-frontend-changeslist-nocomment": "سنوار جو تَتُ ڪونھي",
 	"mobile-frontend-clear-search": "ختم ڪريو",
-	"mobile-frontend-copyright": "مواد $1 ھيٺ موجود آھي جيسيتائين ٻي صورت واضع نہ ڪئي وڃي.",
+	"mobile-frontend-copyright": "مواد $1 تحت موجود آھي جيسيتائين ٻي صورت واضع نہ ڪئي وڃي.",
 	"mobile-frontend-desc": "موبائل فرنٽڊ",
 	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}} کي بھتر ڪرڻ ۾ مدد ڪريو.</strong><br/> سنوارڻ لاءِ داخل ٿيو.",
 	"mobile-frontend-edit-signup-action": "<strong>{{SITENAME}} کي بھتر ڪرڻ ۾ مدد ڪريو.</strong><br /> سنوارڻ لاءِ کاتو کوليو.",
@@ -42,7 +43,7 @@
 	"mobile-frontend-editor-cancel-confirm": "ڇا توھان سچ ۾ پنھنجي سنوار ڇڏي ڏيڻ ٿا چاھيو؟",
 	"mobile-frontend-editor-captcha-try-again": "غلط ڪوڊ، ٻيھر ڪوشش ڪريو.",
 	"mobile-frontend-editor-continue": "اڳيون",
-	"mobile-frontend-editor-disabled": "ھي صفحو تخريبڪاري کا بچائڻ لاءِ تحفظيل آھي. [ذريعو ڏسو $1]",
+	"mobile-frontend-editor-disabled": "ھي صفحو تخريبڪاريءَ کان بچائڻ لاءِ تحفظيل آھي. [$1 ذريعو ڏسو]",
 	"mobile-frontend-editor-disabled-anon": "ھن صفحي کي سنوارڻ لاءِ توھان کي داخل ٿيڻو پوندو.",
 	"mobile-frontend-editor-editing": "— سنواريندي",
 	"mobile-frontend-editor-editing-page": "<span>$1</span> کي <span>سنواريندي</span>",
