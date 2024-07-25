@@ -12,7 +12,6 @@ use MediaWiki\Request\WebRequest;
 use MediaWiki\Title\Title;
 use MediaWiki\User\Options\UserOptionsLookup;
 use MediaWiki\User\User;
-use MediaWiki\User\UserIdentity;
 use MobileFrontend\Tests\Utils;
 use Psr\Container\ContainerInterface;
 use Wikimedia\ObjectFactory\ObjectFactory;
@@ -36,6 +35,7 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 			$services->getUserOptionsLookup(),
 			$services->getWatchlistManager(),
 			$services->getService( 'MobileFrontend.Context' ),
+			$services->getService( 'MobileFrontend.FeaturesManager' ),
 			null
 		);
 	}
@@ -336,6 +336,7 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 			$userOptLookup,
 			$services->getWatchlistManager(),
 			$services->getService( 'MobileFrontend.Context' ),
+			$services->getService( 'MobileFrontend.FeaturesManager' ),
 			null
 		);
 		$this->assertSame(
@@ -354,6 +355,7 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 		string $expectedSkin
 	): void {
 		$userOptionLookup = $this->createMock( UserOptionsLookup::class );
+		$user = new User();
 
 		$webRequest = $this->createMock( WebRequest::class );
 		$webRequest->method( 'getHeader' )->willReturn( false );
@@ -362,12 +364,11 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 		$mobileContext = $this->createMock( MobileContext::class );
 		$mobileContext->method( 'shouldDisplayMobileView' )->willReturn( true );
 		$mobileContext->method( 'getRequest' )->willReturn( $webRequest );
+		$mobileContext->method( 'getUser' )->willReturn( $user );
 
 		$context = $this->createMock( IContextSource::class );
 		$context->method( 'getRequest' )->willReturn( $webRequest );
-		$context->method( 'getUser' )->willReturn(
-			$this->createMock( UserIdentity::class )
-		);
+		$context->method( 'getUser' )->willReturn( $user );
 
 		$skinFactory = new SkinFactory(
 			new ObjectFactory( $this->createMock( ContainerInterface::class ) ), []
@@ -403,6 +404,7 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 			$userOptionLookup,
 			$services->getWatchlistManager(),
 			$services->getService( 'MobileFrontend.Context' ),
+			$services->getService( 'MobileFrontend.FeaturesManager' ),
 			null
 		);
 		$mobileFrontendHooks->onRequestContextCreateSkin( $context, $skin );
