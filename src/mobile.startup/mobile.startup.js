@@ -110,7 +110,7 @@ mw._mobileFrontend = {
 	/**
 	 * Show a notification on page reload.
 	 *
-	 * @param msg
+	 * @param {string} msg
 	 * @internal for Minerva
 	 * @return {jQuery.Deferred}
 	 */
