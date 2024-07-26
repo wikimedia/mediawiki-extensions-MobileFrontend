@@ -59,22 +59,9 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 		$user = $this->getUser();
 		$titleText = $title->getPrefixedText();
 		if ( $timestamp ) {
-			$lastModified = $this->msg(
-				'mobile-frontend-last-modified-date',
-				$this->getLanguage()->userDate( $timestamp, $user ),
-				$this->getLanguage()->userTime( $timestamp, $user )
-			)->text();
-			$edit = $mp->getLatestEdit();
-			$dataAttrs = [
-				'data-timestamp' => $edit['timestamp'],
-				'data-user-name' => $edit['name'],
-				'data-user-gender' => $edit['gender'],
-			];
 			$className = 'title';
 		} else {
 			$className = 'title new';
-			$lastModified = '';
-			$dataAttrs = [];
 		}
 
 		$html =

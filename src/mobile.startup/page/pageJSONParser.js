@@ -32,12 +32,6 @@ function parse( resp ) {
 		resp.thumbnail.isLandscape = thumb.width > thumb.height;
 	}
 
-	// page may or may not exist.
-	if ( resp.revisions && resp.revisions[0] ) {
-		const revision = resp.revisions[0];
-		resp.lastModified = new Date( revision.timestamp );
-	}
-
 	return new Page(
 		util.extend( resp, {
 			id: resp.pageid,

@@ -98,9 +98,6 @@ mfExtend( PageList, View, {
     {{#wikidataDescription}}
     <div class="wikidata-description">{{wikidataDescription}}</div>
     {{/wikidataDescription}}
-    {{#lastModified}}
-    <div class="info">{{lastModified}}</div>
-    {{/lastModified}}
     {{#proximity}}
     <div class="info proximity">{{proximity}}</div>
     {{/proximity}}

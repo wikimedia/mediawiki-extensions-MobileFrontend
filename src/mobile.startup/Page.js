@@ -23,7 +23,6 @@ class Page {
 	 * @param {string} options.wikidataDescription
 	 * @param {boolean} options.isMainPage Whether the page is the Main Page.
 	 * @param {boolean} options.isMissing Whether the page exists in the wiki.
-	 * @param {Date} [options.lastModified]
 	 * @param {string} options.anchor
 	 * @param {string} [options.relevantTitle] associated with page.
 	 *  For example Special:WhatLinksHere/Foo would be associated with the page `Foo`.
@@ -53,7 +52,6 @@ class Page {
 			_isMainPage: options.isMainPage || false,
 			isMissing: ( options.isMissing !== undefined ) ?
 				options.isMissing : options.id === 0,
-			lastModified: options.lastModified,
 			anchor: options.anchor,
 			revId: options.revId,
 			_isWatched: options.isWatched,

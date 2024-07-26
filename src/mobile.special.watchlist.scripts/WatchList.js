@@ -107,8 +107,7 @@ mfExtend( WatchList, WatchstarPageList, {
 	appendPage: function ( page ) {
 		// wikidata descriptions should not show in this view.
 		const templateOptions = util.extend( {}, page, {
-			wikidataDescription: undefined,
-			lastModified: undefined
+			wikidataDescription: undefined
 		} );
 		this.$el.append( this.templatePartials.item.render( templateOptions ) );
 	},
