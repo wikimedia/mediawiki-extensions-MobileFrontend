@@ -1193,7 +1193,7 @@ class MobileFrontendHooks implements
 
 	/**
 	 * Handler for TitleSquidURLs hook to add copies of the cache purge
-	 * URLs which are transformed according to the wgMobileUrlTemplate, so
+	 * URLs which are transformed according to the wgMobileUrlCallback, so
 	 * that both mobile and non-mobile URL variants get purged.
 	 *
 	 * @see * https://www.mediawiki.org/wiki/Manual:Hooks/TitleSquidURLs

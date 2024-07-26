@@ -500,12 +500,6 @@
 			"class": "MobileFrontend\\Api\\ApiParseExtender"
 		}
 	},
-	"DeprecatedHooks": {
-		"GetMobileUrl": {
-			"deprecatedVersion": "1.42",
-			"component": "MobileFrontend"
-		}
-	},
 	"config": {
 		"MFCustomSiteModules": {
 			"value": false
@@ -630,9 +624,6 @@
 		},
 		"MFShowMobileViewToTablets": {
 			"value": true
-		},
-		"MobileUrlTemplate": {
-			"value": ""
 		},
 		"MobileUrlCallback": {
 			"value": null

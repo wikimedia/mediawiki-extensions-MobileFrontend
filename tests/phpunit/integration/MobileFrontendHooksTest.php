@@ -111,7 +111,6 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 		$this->overrideConfigValues( [
 			'MFEnableManifest' => false,
 			'MobileUrlCallback' => $useMobileUrl ? [ Utils::class, 'mobileUrlCallback' ] : null,
-			'MobileUrlTemplate' => '',
 			'MFNoindexPages' => $mfNoindexPages,
 			'MFEnableXAnalyticsLogging' => $mfEnableXAnalyticsLogging,
 			'MFAutodetectMobileView' => $mfAutoDetectMobileView,
@@ -238,7 +237,6 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 	public function testOnTitleSquidURLs() {
 		$this->overrideConfigValues( [
 			'MobileUrlCallback' => [ Utils::class, 'mobileUrlCallback' ],
-			'MobileUrlTemplate' => '',
 			MainConfigNames::Server => 'http://en.wikipedia.org',
 			MainConfigNames::ArticlePath => '/wiki/$1',
 			MainConfigNames::ScriptPath => '/w',
