@@ -8,6 +8,7 @@ const PageList = require( '../PageList' ),
 
 /**
  * @typedef {Object.<PageTitle, PageID>} PageTitleToPageIDMap
+ * @ignore
  */
 
 /**
@@ -18,6 +19,7 @@ const PageList = require( '../PageList' ),
  * @uses WatchstarGateway
  * @uses Watchstar
  * @extends PageList
+ * @ignore
  *
  * @fires WatchstarPageList#unwatch
  * @fires WatchstarPageList#watch
@@ -65,8 +67,10 @@ mfExtend( WatchstarPageList, PageList, {
 	},
 
 	/**
+	 * @memberof WatchstarPageList
 	 * @param {jQuery.Element} $items
 	 * @param {WatchStatusMap} statuses
+	 * @ignore
 	 */
 	queryUnitializedItems() {
 		return this.$el.find( 'li:not(.with-watchstar)' );
@@ -80,6 +84,7 @@ mfExtend( WatchstarPageList, PageList, {
 	 * @param {PageID[]} ids
 	 * @param {PageTitle[]} titles
 	 * @return {jQuery.Deferred<WatchStatusMap>}
+	 * @ignore
 	 */
 	getPages( ids, titles ) {
 		// Rendering Watchstars for anonymous users is not useful. Short-circuit
@@ -95,7 +100,7 @@ mfExtend( WatchstarPageList, PageList, {
 	 * @param {jQuery.Element} $items
 	 * @return {PageTitleToPageIDMap}
 	 * @memberof WatchstarPageList
-	 * @instance
+	 * @ignore
 	 */
 	parsePagesFromItems( $items ) {
 		const
@@ -111,6 +116,8 @@ mfExtend( WatchstarPageList, PageList, {
 	/**
 	 * @param {jQuery.Element} $items
 	 * @param {WatchStatusMap} statuses
+	 * @memberof WatchstarPageList
+	 * @ignore
 	 */
 	renderItems( $items, statuses ) {
 		const self = this;
@@ -141,6 +148,7 @@ mfExtend( WatchstarPageList, PageList, {
 	 * @param {jQuery.Object} $item
 	 * @param {Page} page
 	 * @param {WatchStatus} watched
+	 * @private
 	 */
 	_appendWatchstar( $item, page, watched ) {
 		watchstar( {

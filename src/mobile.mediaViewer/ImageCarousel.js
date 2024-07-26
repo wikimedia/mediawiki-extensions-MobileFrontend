@@ -28,8 +28,9 @@ const View = require( '../mobile.startup/View' ),
  * Displays images in full screen overlay
  *
  * @class ImageCarousel
- * @extends View
+ * @extends module:mobile.startup/View
  * @param {Object} options Configuration options, see Overlay#defaults
+ * @private
  */
 function ImageCarousel( options ) {
 	this.gateway = options.gateway || new ImageGateway( {

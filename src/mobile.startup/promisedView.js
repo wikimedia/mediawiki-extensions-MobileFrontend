@@ -3,14 +3,17 @@ const
 	View = require( './View' );
 
 /**
+ * Internal for use inside Echo, GrowthExperiments only.
  * It's a view that spins until the promise resolves!
  * If the promise successfully resolves, the newView will be shown. if the
  * promise rejects and rejects to a view, the errorView will be shown.
  *
+ * @function promisedView
+ * @memberof module:mobile.startup
  * @param {jQuery.Promise} promise
- * @return {View}
+ * @return {module:mobile.startup/View}
  */
-function promisedView( promise ) {
+module.exports = function promisedView( promise ) {
 	const view = new View( {
 		className: 'promised-view'
 	} );
@@ -32,6 +35,4 @@ function promisedView( promise ) {
 	} );
 
 	return view;
-}
-
-module.exports = promisedView;
+};

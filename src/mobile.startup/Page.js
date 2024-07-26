@@ -2,11 +2,10 @@ const
 	HTML = mw.html,
 	util = require( './util' );
 
-/**
- * Mobile page view object
- */
 class Page {
 	/**
+	 * @class module:mobile.startup/Page
+	 * @classdesc Mobile page view object
 	 * @param {Object} options Configuration options
 	 * @param {number} options.id Page ID. The default value of 0 represents a
 	 * new or missing page. Be sure to override it to avoid side effects.
@@ -67,6 +66,7 @@ class Page {
 	/**
 	 * Retrieve the title that should be displayed to the user
 	 *
+	 * @memberof module:mobile.startup/Page
 	 * @return {string} HTML
 	 */
 	getDisplayTitle() {
@@ -76,6 +76,7 @@ class Page {
 	/**
 	 * Determine if current page is in a specified namespace
 	 *
+	 * @memberof module:mobile.startup/Page
 	 * @param {string} namespace Name of namespace
 	 * @return {boolean}
 	 */
@@ -86,6 +87,7 @@ class Page {
 	/**
 	 * Determines if content model is wikitext
 	 *
+	 * @memberof module:mobile.startup/Page
 	 * @return {boolean}
 	 */
 	isWikiText() {
@@ -95,6 +97,7 @@ class Page {
 	/**
 	 * Check if the visual editor is available on this page
 	 *
+	 * @memberof module:mobile.startup/Page
 	 * @return {boolean}
 	 */
 	isVEAvailable() {
@@ -106,6 +109,7 @@ class Page {
 	/**
 	 * Check if the visual editor in visual mode is available on this page
 	 *
+	 * @memberof module:mobile.startup/Page
 	 * @return {boolean}
 	 */
 	isVEVisualAvailable() {
@@ -121,6 +125,7 @@ class Page {
 	/**
 	 * Check if the visual editor in source mode is available on this page
 	 *
+	 * @memberof module:mobile.startup/Page
 	 * @return {boolean}
 	 */
 	isVESourceAvailable() {
@@ -131,6 +136,7 @@ class Page {
 	/**
 	 * Checks whether the current page is the main page
 	 *
+	 * @memberof module:mobile.startup/Page
 	 * @return {boolean}
 	 */
 	isMainPage() {
@@ -140,6 +146,7 @@ class Page {
 	/**
 	 * Checks whether the current page is watched
 	 *
+	 * @memberof module:mobile.startup/Page
 	 * @return {boolean}
 	 */
 	isWatched() {
@@ -149,6 +156,7 @@ class Page {
 	/**
 	 * Return the latest revision id for this page
 	 *
+	 * @memberof module:mobile.startup/Page
 	 * @return {number}
 	 */
 	getRevisionId() {
@@ -158,6 +166,7 @@ class Page {
 	/**
 	 * Return prefixed page title
 	 *
+	 * @memberof module:mobile.startup/Page
 	 * @return {string}
 	 */
 	getTitle() {
@@ -167,6 +176,7 @@ class Page {
 	/**
 	 * return namespace id
 	 *
+	 * @memberof module:mobile.startup/Page
 	 * @return {number} namespace Number
 	 */
 	getNamespaceId() {

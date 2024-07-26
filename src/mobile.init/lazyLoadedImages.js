@@ -1,10 +1,15 @@
 const lazyImageLoader = require( '../mobile.startup/lazyImages/lazyImageLoader' );
 
 /**
+ * @namespace Hooks
+ */
+
+/**
  * Initialise lazy loading images to supplement the HTML changes inside the
  * MobileFormatter.
  *
  * @param {jQuery} $container
+ * @private
  */
 function init( $container ) {
 
@@ -60,7 +65,10 @@ function init( $container ) {
 }
 
 /**
- * @event mobileFrontend.loadLazyImages
+ * Make modifications after an image was lazy loaded, stable for use.
+ *
+ * @event ~'mobileFrontend.loadLazyImages'
+ * @memberof Hooks
  * @param {jQuery} $container
  */
 mw.hook( 'mobileFrontend.loadLazyImages' ).add( function ( $container ) {

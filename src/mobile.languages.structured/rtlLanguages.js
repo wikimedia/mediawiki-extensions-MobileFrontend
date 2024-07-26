@@ -1,3 +1,6 @@
+/**
+ * @private
+ */
 module.exports = [
 	'acm',
 	'aeb',

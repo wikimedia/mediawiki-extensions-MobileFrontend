@@ -19,6 +19,7 @@ const EditorOverlayBase = require( './EditorOverlayBase' ),
  * @uses EditorGateway
  * @uses VisualEditorOverlay
  * @extends EditorOverlayBase
+ * @private
  *
  * @param {Object} options Configuration options
  * @param {jQuery.Promise} [dataPromise] Optional promise for loading content
@@ -484,6 +485,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 	/**
 	 * Get the current edit summary.
 	 *
+	 * @memberof SourceEditorOverlay
 	 * @return {string}
 	 */
 	getEditSummary: function () {

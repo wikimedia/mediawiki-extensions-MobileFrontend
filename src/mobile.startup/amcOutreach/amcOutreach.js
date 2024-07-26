@@ -1,3 +1,13 @@
+/**
+ * Describes a promotional campaign for advanced mobile contributions.
+ *
+ * @typedef {Object} module:mobile.startup/AmcOutreach~PromoCampaign
+ * @property {Function} showIfEligible
+ * @property {Function} makeActionIneligible
+ * @property {Function} makeAllActionsIneligible
+ * @property {Function} isCampaignActive
+ */
+
 const
 	toast = require( '../showOnPageReload' ),
 	createPromoCampaign = require( '../promoCampaign/promoCampaign' ),
@@ -26,9 +36,16 @@ const
 // singleton;
 let campaign;
 
+/**
+ * Internal for use inside Minerva only. See {@link module:mobile.startup} for access.
+ *
+ * @exports mobile.startup/AmcOutreach
+ */
 module.exports = {
 	/**
-	 * @return {PromoCampaign}
+	 * Loads a promotion campaign for advanced mobile contributions if the user is eligible.
+	 *
+	 * @return {module:mobile.startup/AmcOutreach~PromoCampaign}
 	 */
 	loadCampaign: () => {
 		if ( campaign ) {
@@ -51,7 +68,7 @@ module.exports = {
 			 * @param {string} [returnToQuery] Optional query params to add to redirected
 			 * URL after user enables AMC. Can also include anchor (e.g.
 			 * `foo=bar#/Talk`
-			 * @return {Drawer|null}
+			 * @return {module:mobile.startup/Drawer|null}
 			 */
 			( action, onBeforeHide, returnToTitle, returnToQuery ) => {
 				return amcOutreachDrawer(
@@ -76,5 +93,8 @@ module.exports = {
 
 		return campaign;
 	},
+	/**
+	 * @private
+	 */
 	ACTIONS
 };

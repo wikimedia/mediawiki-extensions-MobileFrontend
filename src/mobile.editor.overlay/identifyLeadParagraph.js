@@ -3,6 +3,7 @@
  * Find first paragraph that has text content, i.e. paragraphs that are not empty.
  * Keep in sync with MoveLeadParagraphTransform::identifyLeadParagraph().
  *
+ * @private
  * @param {jQuery} $body Where to search for paragraphs
  * @return {Node|null} The lead paragraph
  */

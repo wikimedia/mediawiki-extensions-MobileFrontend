@@ -12,6 +12,7 @@ const
  * Overlay displaying search results
  *
  * @class SearchOverlay
+ * @memberof module:mobile.startup/search
  * @extends Overlay
  * @uses SearchGateway
  * @uses IconButton

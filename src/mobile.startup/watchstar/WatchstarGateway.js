@@ -2,17 +2,21 @@ const util = require( '../util' ),
 	actionParams = require( '../actionParams' );
 
 /**
+ * @ignore
  * @typedef {string|number} PageID Page ID. 0 / "0" is a special no-ID value.
  * {@link https://www.mediawiki.org/wiki/Manual:Page_table#page_id Page ID}
  *
+ * @ignore
  * @typedef {string} PageTitle Canonical page title.
  * {@link https://www.mediawiki.org/wiki/Manual:Title.php#Canonical_forms Canonical forms}
  *
+ * @ignore
  * @typedef {boolean} WatchStatus Page watch status; true if watched, false if
  *                                unwatched.
  * {@link https://www.mediawiki.org/wiki/API:Info API:Info} (see inprop.watched)
  * {@link https://www.mediawiki.org/wiki/API:Watch API:Watch} (see unwatch)
  *
+ * @ignore
  * @typedef {Object.<PageTitle, WatchStatus>} WatchStatusMap
  */
 
@@ -22,6 +26,7 @@ const util = require( '../util' ),
  *
  * @class WatchstarGateway
  * @param {mw.Api} api
+ * @ignore
  */
 function WatchstarGateway( api ) {
 	this.api = api;
@@ -125,6 +130,7 @@ WatchstarGateway.prototype = {
 	 * @return {jQuery.Deferred<WatchStatusMap>}
 	 * @see getStatusesByID
 	 * @see getStatusesByTitle
+	 * @ignore
 	 */
 	_unmarshalGetResponse( rsp ) {
 		const pages = rsp && rsp.query && rsp.query.pages || [];

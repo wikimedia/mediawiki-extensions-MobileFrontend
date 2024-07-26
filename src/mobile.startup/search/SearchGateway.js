@@ -1,10 +1,17 @@
+/**
+ * Internal for use inside Minerva only. See {@link module:mobile.startup} for access.
+ *
+ * @module module:mobile.startup/search
+ */
 const
 	pageJSONParser = require( '../page/pageJSONParser' ),
 	util = require( '../util' ),
 	extendSearchParams = require( '../extendSearchParams' );
 
 /**
- * @class SearchGateway
+ * Interact with MediaWiki search API.
+ *
+ * @memberof module:mobile.startup/search
  * @uses mw.Api
  * @param {mw.Api} api
  */

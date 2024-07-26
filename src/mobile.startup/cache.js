@@ -9,6 +9,7 @@
  * In memory cache implementation
  *
  * @class MemoryCache
+ * @private
  */
 function MemoryCache() {
 	this._cache = {};
@@ -20,7 +21,7 @@ function MemoryCache() {
  * @memberof MemoryCache
  * @instance
  * @param {string} key
- * @return {Mixed}
+ * @return {any}
  */
 MemoryCache.prototype.get = function ( key ) {
 	return this._cache[ key ];
@@ -32,7 +33,7 @@ MemoryCache.prototype.get = function ( key ) {
  * @memberof MemoryCache
  * @instance
  * @param {string} key
- * @param {Mixed} value
+ * @param {any} value
  */
 MemoryCache.prototype.set = function ( key, value ) {
 	this._cache[ key ] = value;

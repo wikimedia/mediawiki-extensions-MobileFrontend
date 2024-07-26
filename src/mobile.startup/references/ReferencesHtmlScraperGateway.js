@@ -6,7 +6,8 @@ const ReferencesGateway = require( './ReferencesGateway' ),
  * Gateway for retrieving references via the content of the Page
  *
  * @class ReferencesHtmlScraperGateway
- * @extends ReferencesGateway
+ * @memberof module:mobile.startup/references
+ * @extends module:mobile.startup/references~Gateway
  * @inheritdoc
  */
 function ReferencesHtmlScraperGateway() {
@@ -54,6 +55,7 @@ mfExtend( ReferencesHtmlScraperGateway, ReferencesGateway, {
 		return result.promise();
 	},
 	/**
+	 * @memberof ReferencesHtmlScraperGateway
 	 * @param {jQuery.Object|undefined} $reference
 	 * @returns {string}
 	 */
@@ -68,7 +70,7 @@ mfExtend( ReferencesHtmlScraperGateway, ReferencesGateway, {
 	 * @instance
 	 * @param {string} hash Hash fragment with leading '#'
 	 * @param {Page} page (unused)
-	 * @param {PageHTMLParser} pageHTMLParser
+	 * @param {module:mobile.startup/PageHTMLParser} pageHTMLParser
 	 */
 	getReference( hash, page, pageHTMLParser ) {
 		const id = mw.util.percentDecodeFragment( hash.slice( 1 ) );

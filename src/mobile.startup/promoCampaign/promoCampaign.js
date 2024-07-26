@@ -1,12 +1,4 @@
 /**
- * @typedef {Object} PromoCampaign
- * @property {Function} showIfEligible
- * @property {Function} makeActionIneligible
- * @property {Function} makeAllActionsIneligible
- * @property {Function} isCampaignActive
- */
-
-/**
  * Creates a campaign that makes showing promo drawers, modals, etc that should
  * only be shown once (using localStorage) per action (when page loads, when
  * user clicks on a link, etc) easier. The campaign executes a given callback
@@ -16,6 +8,7 @@
  * time. If `ineligible`, the `showIfEligible` will not execute the `onShow`
  * callback.
  *
+ * @ignore
  * @param {Function} onShow A callback intended to show something related to the
  * campaign (drawer, modal, etc) when executed. The callback will only execute
  * after the client calls `showIfEligible` and only if the passed in action is
@@ -34,7 +27,7 @@
  * @param {boolean} userEligible Is current user eligible
  * @param {mw.storage} mwStorage Used to mark actions as ineligible
  * into localStorage
- * @return {PromoCampaign}
+ * @return {mobile.startup/AmcOutreach~PromoCampaign}
  */
 function createPromoCampaign(
 	onShow,
@@ -88,11 +81,12 @@ function createPromoCampaign(
 
 	return {
 		/**
+		 * @ignore
 		 * @param {string} action Should be one of the values in the
 		 * actions param
 		 * @param {...*} [args] Args to pass to the onShow callback
 		 * @throws {Error} Throws an error if action is not valid.
-		 * @return {Drawer|null} Returns Drawer if drawer is eligible to be shown and
+		 * @return {module:mobile.startup/Drawer|null} Returns Drawer if drawer is eligible to be shown and
 		 * null if not.
 		 */
 		showIfEligible( action, ...args ) {
@@ -104,6 +98,7 @@ function createPromoCampaign(
 			return onShow( action, ...args );
 		},
 		/**
+		 * @ignore
 		 * @param {string} action
 		 * @throws {Error} Throws an error if action is not valid.
 		 * @return {boolean} Whether the save operation was successful

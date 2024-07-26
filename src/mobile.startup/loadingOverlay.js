@@ -6,7 +6,8 @@ const
  * Overlay that initially shows loading animation until
  * caller hides it with .hide()
  *
- * @return {Overlay}
+ * @ignore
+ * @return {module:mobile.startup/Overlay}
  */
 function loadingOverlay() {
 	const overlay = new Overlay( {

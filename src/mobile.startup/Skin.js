@@ -11,7 +11,7 @@ let skin;
  * Representation of the current skin being rendered.
  *
  * @class Skin
- * @extends View
+ * @extends module:mobile.startup/View
  * @uses Browser
  * @uses Page
  * @fires Skin#click
@@ -34,7 +34,7 @@ mfExtend( Skin, View, {
 	/**
 	 * @memberof Skin
 	 * @instance
-	 * @mixes View#defaults
+	 * @mixes module:mobile.startup/View#defaults
 	 * @property {Object} defaults Default options hash.
 	 * @property {Page} defaults.page page the skin is currently rendering
 	 */
@@ -65,6 +65,7 @@ mfExtend( Skin, View, {
 	},
 
 	/**
+	 * @memberof Skin
 	 * @throws {Error} if mediawiki message is in unexpected format.
 	 * @return {jQuery.Object} a list of links
 	 */

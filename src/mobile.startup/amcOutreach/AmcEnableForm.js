@@ -5,17 +5,21 @@ const
 
 /**
  * @typedef {Object} FormField
+ * @private
  * @property {string} name
  * @property {string} value
  */
 
 /**
+ * A form for enabling the advanced mobile editor mode.
+ *
  * @param {Object} options
  * @param {string} options.postUrl Form will POST to this endpoint
  * @param {FormField[]} options.fields An array of hidden form fields
  * @param {string} options.buttonLabel Label for submit button
  * submitted
- * @extends View
+ * @extends module:mobile.startup/View
+ * @ignore
  */
 class AmcEnableForm extends View {
 	/** @inheritdoc */

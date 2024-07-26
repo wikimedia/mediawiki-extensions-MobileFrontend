@@ -1,4 +1,8 @@
 /* global $ */
+/**
+ * @class EditorOverlayBase
+ * @private
+ */
 const Overlay = require( '../mobile.startup/Overlay' ),
 	util = require( '../mobile.startup/util' ),
 	parseBlockInfo = require( './parseBlockInfo' ),
@@ -16,6 +20,7 @@ const Overlay = require( '../mobile.startup/Overlay' ),
  *
  * @param {OO.ui.ToolGroup} toolGroup
  * @param {Object} config
+ * @private
  */
 function EditVeTool( toolGroup, config ) {
 	config = config || {};
@@ -51,6 +56,7 @@ EditVeTool.prototype.onUpdateState = function () {
  * Base class for SourceEditorOverlay and VisualEditorOverlay
  *
  * @class EditorOverlayBase
+ * @private
  * @extends Overlay
  * @uses IconButton
  * @uses user
@@ -384,6 +390,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 	},
 	/**
 	 * @inheritdoc
+	 * @memberof EditorOverlayBase
 	 */
 	preRender: function () {
 		const options = this.options;
@@ -456,8 +463,10 @@ mfExtend( EditorOverlayBase, Overlay, {
 
 		// Inform other interested code that the editor has loaded
 		/**
-		 * @event mobileFrontend.editorOpened
-		 * @internal for use in ContentTranslation and GrowthExperiments only.
+		 * Internal for use in ContentTranslation and GrowthExperiments only.
+		 *
+		 * @event ~'mobileFrontend.editorOpened'
+		 * @memberof Hooks
 		 */
 		mw.hook( 'mobileFrontend.editorOpened' ).fire( this.editor );
 	},
@@ -563,8 +572,10 @@ mfExtend( EditorOverlayBase, Overlay, {
 			this.allowCloseWindow.release();
 		}
 		/**
-		 * @event mobileFrontend.editorClosed
-		 * @internal for use in ContentTranslation and GrowthExperiments only.
+		 * Internal for use in ContentTranslation and GrowthExperiments only.
+		 *
+		 * @event ~'mobileFrontend.editorClosed'
+		 * @memberof Hooks
 		 */
 		mw.hook( 'mobileFrontend.editorClosed' ).fire();
 	},
@@ -648,6 +659,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 * specific options, so that it can be used to construct a
 	 * different editor for switching.
 	 *
+	 * @memberof EditorOverlayBase
 	 * @return {Object} Options
 	 */
 	getOptionsForSwitch: function () {

@@ -24,7 +24,7 @@ const util = require( './util' ),
  *  `wgMFDisplayWikibaseDescriptions` configuration variable for detail
  * @return {Object}
  */
-function extendSearchParams( feature ) {
+module.exports = function extendSearchParams( feature ) {
 	const displayWikibaseDescriptions = mw.config.get( 'wgMFDisplayWikibaseDescriptions' ) || {
 			// These must be defined, as these are all the features that this can be used on.
 			// If not defined, all these features will see their API calls broken
@@ -67,5 +67,4 @@ function extendSearchParams( feature ) {
 		result.origin = '*';
 	}
 	return actionParams( result );
-}
-module.exports = extendSearchParams;
+};

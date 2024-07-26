@@ -16,6 +16,7 @@ const EditorOverlayBase = require( './EditorOverlayBase' ),
  *
  * @class VisualEditorOverlay
  * @extends EditorOverlayBase
+ * @private
  *
  * @param {Object} options Configuration options
  * @param {SourceEditorOverlay} options.SourceEditorOverlay Class to use for standard
@@ -178,6 +179,7 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 	},
 	/**
 	 * Initialize the target after it has been made visible
+	 * @memberof VisualEditorOverlay
 	 */
 	targetInit: function () {
 		// Note this.target will not be set if an error occurred and/or destroyTarget was called.
@@ -194,6 +196,7 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 	 * Their normal position is different because of (most importantly) the lead paragraph
 	 * transformation to move it before the infobox, and also invisible templates and slugs
 	 * caused by the presence of hatnote templates (both only shown in edit mode).
+	 * @memberof VisualEditorOverlay
 	 */
 	scrollToLeadParagraph: function () {
 		let editLead, editLeadView, readLead, offset, initialCursorOffset;

@@ -5,7 +5,10 @@ const Button = require( '../mobile.startup/Button' ),
 	util = require( '../mobile.startup/util' );
 
 /**
- * @extends View
+ * Renders a block message details.
+ *
+ * @extends module:mobile.startup/View
+ * @private
  */
 class BlockMessageDetails extends View {
 	/** @inheritdoc */

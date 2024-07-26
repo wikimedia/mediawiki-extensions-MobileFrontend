@@ -4,7 +4,7 @@ const util = require( './util.js' ),
 /**
  * API for providing language data.
  *
- * @class LanguageInfo
+ * @class module:mobile.startup/languages~LanguageInfo
  * @param {mw.Api} api
  */
 function LanguageInfo( api ) {
@@ -17,7 +17,7 @@ LanguageInfo.prototype = {
 	 * Get languageinfo API data from the local wiki, and transform it into a
 	 * format usable by LanguageSearcher.
 	 *
-	 * @memberof LanguageInfo
+	 * @memberof module:mobile.startup/languages~LanguageInfo
 	 * @instance
 	 * @returns {jQuery.Deferred}
 	 */

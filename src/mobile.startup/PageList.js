@@ -7,7 +7,7 @@ const util = require( './util.js' ),
  * List of items page view
  *
  * @class PageList
- * @extends View
+ * @extends module:mobile.startup/View
  */
 function PageList() {
 	View.apply( this, arguments );
@@ -17,7 +17,7 @@ mfExtend( PageList, View, {
 	/**
 	 * @memberof PageList
 	 * @instance
-	 * @mixes View#defaults
+	 * @mixes module:mobile.startup/View#defaults
 	 * @property {Object} defaults Default options hash.
 	 * @property {Page[]} defaults.pages Array of Page objects. These should match
 	 *                              the Page model and not necessarily the

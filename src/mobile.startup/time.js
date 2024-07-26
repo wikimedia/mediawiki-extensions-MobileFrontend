@@ -2,12 +2,10 @@ const units = [ 'seconds', 'minutes', 'hours', 'days', 'months', 'years' ],
 	util = require( './util' ),
 	limits = [ 1, 60, 3600, 86400, 2592000, 31536000 ];
 
-/** @class time */
-
 /**
  * Calculate the correct unit of timestamp
  *
- * @memberof time
+ * @memberof module:mobile.startup/time
  * @instance
  * @param {number} timestampDelta
  * @return {{value: number, unit: string}}
@@ -26,8 +24,7 @@ function timeAgo( timestampDelta ) {
 /**
  * Calculate the correct unit of timestamp delta
  *
- * @memberof time
- * @instance
+ * @memberof module:mobile.startup/time
  * @param {number} timestamp
  * @return {{value: number, unit: string}}
  */
@@ -40,8 +37,8 @@ function getTimeAgoDelta( timestamp ) {
 /**
  * Whether timestamp delta is less than a day old
  *
- * @memberof time
  * @instance
+ * @memberof module:mobile.startup/time
  * @param {{value: number, unit: string}} delta Object of timestamp and its label
  * @return {boolean}
  */
@@ -52,8 +49,8 @@ function isRecent( delta ) {
 /**
  * Is delta less than 10 seconds?
  *
- * @memberof time
  * @instance
+ * @memberof module:mobile.startup/time
  * @param {{value: number, unit: string}} delta Object of timestamp and its label
  * @return {boolean}
  */
@@ -64,8 +61,8 @@ function isNow( delta ) {
 /**
  * Return a message relating to the last modified relative time.
  *
- * @memberof time
  * @instance
+ * @memberof module:mobile.startup/time
  * @param {number} ts timestamp
  * @param {string} username of the last user to modify the page
  * @param {string} gender of the last user to modify the page
@@ -117,8 +114,8 @@ function getLastModifiedMessage( ts, username, gender, historyUrl ) {
 /**
  * Return a message relating to the registration date of the user
  *
- * @memberof time
  * @instance
+ * @memberof module:mobile.startup/time
  * @param {string} ts timestamp
  * @param {string} [gender] of the last user editing this page
  * @return {string}
@@ -147,6 +144,11 @@ function getRegistrationMessage( ts, gender ) {
 	return html;
 }
 
+/**
+ * Utility library for relative time.
+ *
+ * @exports module:mobile.startup/time
+ */
 module.exports = {
 	getLastModifiedMessage,
 	getRegistrationMessage,

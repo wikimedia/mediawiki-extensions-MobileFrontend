@@ -20,10 +20,9 @@ function findSizeBucket( size ) {
 /**
  * API for retrieving image thumbnails for a given page
  *
- * @class ImageGateway
- *
  * @param {Object} options Configuration options
  * @param {mw.Api} options.api
+ * @private
  */
 function ImageGateway( options ) {
 	this._cache = {};
