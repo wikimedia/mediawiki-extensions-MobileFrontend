@@ -114,6 +114,7 @@ class MobileFrontendHooks implements
 	private SkinFactory $skinFactory;
 	private UserOptionsLookup $userOptionsLookup;
 	private WatchlistManager $watchlistManager;
+	private MobileContext $mobileContext;
 	private ?GadgetRepo $gadgetRepo;
 
 	public function __construct(
@@ -122,6 +123,7 @@ class MobileFrontendHooks implements
 		SkinFactory $skinFactory,
 		UserOptionsLookup $userOptionsLookup,
 		WatchlistManager $watchlistManager,
+		MobileContext $mobileContext,
 		?GadgetRepo $gadgetRepo
 	) {
 		$this->hookContainer = $hookContainer;
@@ -129,6 +131,7 @@ class MobileFrontendHooks implements
 		$this->skinFactory = $skinFactory;
 		$this->userOptionsLookup = $userOptionsLookup;
 		$this->watchlistManager = $watchlistManager;
+		$this->mobileContext = $mobileContext;
 		$this->gadgetRepo = $gadgetRepo;
 	}
 
@@ -158,10 +161,7 @@ class MobileFrontendHooks implements
 	 * @return bool
 	 */
 	public function onRequestContextCreateSkin( $context, &$skin ) {
-		$services = MediaWikiServices::getInstance();
-
-		/** @var MobileContext $mobileContext */
-		$mobileContext = $services->getService( 'MobileFrontend.Context' );
+		$mobileContext = $this->mobileContext;
 
 		$mobileContext->doToggling();
 		if ( !$mobileContext->shouldDisplayMobileView() ) {
@@ -214,9 +214,7 @@ class MobileFrontendHooks implements
 	 *   and value should be an HTML string.
 	 */
 	public function onSkinAddFooterLinks( Skin $skin, string $key, array &$footerLinks ) {
-		/** @var MobileContext $context */
-		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
-
+		$context = $this->mobileContext;
 		if ( $key === 'places' ) {
 			if ( $context->shouldDisplayMobileView() ) {
 				$terms = MobileFrontendSkinHooks::getTermsLink( $skin );
@@ -244,14 +242,12 @@ class MobileFrontendHooks implements
 	 */
 	public function onSkinAfterBottomScripts( $skin, &$html ) {
 		$services = MediaWikiServices::getInstance();
-		/** @var MobileContext $context */
-		$context = $services->getService( 'MobileFrontend.Context' );
 		/** @var FeaturesManager $featuresManager */
 		$featuresManager = $services->getService( 'MobileFrontend.FeaturesManager' );
 
 		// TODO: We may want to enable the following script on Desktop Minerva...
 		// ... when Minerva is widely used.
-		if ( $context->shouldDisplayMobileView() &&
+		if ( $this->mobileContext->shouldDisplayMobileView() &&
 			$featuresManager->isFeatureAvailableForCurrentUser( 'MFLazyLoadImages' )
 		) {
 			$html .= Html::inlineScript( ResourceLoader::filter( 'minify-js',
@@ -268,9 +264,7 @@ class MobileFrontendHooks implements
 	 * @return bool This hook can abort
 	 */
 	public function onBeforeDisplayNoArticleText( $article ) {
-		/** @var MobileContext $context */
-		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
-		$displayMobileView = $context->shouldDisplayMobileView();
+		$displayMobileView = $this->mobileContext->shouldDisplayMobileView();
 
 		$title = $article->getTitle();
 
@@ -305,9 +299,7 @@ class MobileFrontendHooks implements
 		// This hook can be executed more than once per page view if the page content is composed from
 		// multiple sources! Anything that doesn't depend on $text should use onBeforePageDisplay.
 
-		$services = MediaWikiServices::getInstance();
-		/** @var MobileContext $context */
-		$context = $services->getService( 'MobileFrontend.Context' );
+		$context = $this->mobileContext;
 		$title = $out->getTitle();
 		$displayMobileView = $context->shouldDisplayMobileView();
 
@@ -367,9 +359,7 @@ class MobileFrontendHooks implements
 	public function onOutputPageBodyAttributes( $out, $skin, &$bodyAttrs ): void {
 		/** @var \MobileFrontend\Amc\UserMode $userMode */
 		$userMode = MediaWikiServices::getInstance()->getService( 'MobileFrontend.AMC.UserMode' );
-		/** @var MobileContext $context */
-		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
-		$isMobile = $context->shouldDisplayMobileView();
+		$isMobile = $this->mobileContext->shouldDisplayMobileView();
 
 		// FIXME: This can be removed when existing references have been updated.
 		if ( $isMobile && !$userMode->isEnabled() ) {
@@ -394,17 +384,15 @@ class MobileFrontendHooks implements
 	 * @param string &$code HTTP code (eg '301' or '302'), modifiable
 	 */
 	public function onBeforePageRedirect( $out, &$redirect, &$code ) {
-		/** @var MobileContext $context */
-		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
-		$shouldDisplayMobileView = $context->shouldDisplayMobileView();
+		$shouldDisplayMobileView = $this->mobileContext->shouldDisplayMobileView();
 		if ( !$shouldDisplayMobileView ) {
 			return;
 		}
 
 		// T45123: force mobile URLs only for local redirects
-		if ( $context->isLocalUrl( $redirect ) ) {
+		if ( $this->mobileContext->isLocalUrl( $redirect ) ) {
 			$out->addVaryHeader( 'X-Subdomain' );
-			$redirect = $context->getMobileUrl( $redirect );
+			$redirect = $this->mobileContext->getMobileUrl( $redirect );
 		}
 	}
 
@@ -425,10 +413,7 @@ class MobileFrontendHooks implements
 	public function onMediaWikiPerformAction( $output, $article, $title, $user,
 		$request, $entryPoint
 	) {
-		$services = MediaWikiServices::getInstance();
-		/** @var MobileContext $context */
-		$context = $services->getService( 'MobileFrontend.Context' );
-		if ( !$context->shouldDisplayMobileView() ) {
+		if ( !$this->mobileContext->shouldDisplayMobileView() ) {
 			// this code should only apply to mobile view.
 			return;
 		}
@@ -447,7 +432,7 @@ class MobileFrontendHooks implements
 	 * @param array &$pages to sort modules from.
 	 */
 	public function onResourceLoaderSiteStylesModulePages( $skin, array &$pages ): void {
-		$ctx = MobileContext::singleton();
+		$ctx = $this->mobileContext;
 		// Use Mobile.css instead of MediaWiki:Common.css on mobile views.
 		if ( $ctx->shouldDisplayMobileView() && $this->config->get( 'MFCustomSiteModules' ) ) {
 			unset( $pages['MediaWiki:Common.css'] );
@@ -466,7 +451,7 @@ class MobileFrontendHooks implements
 	 * @param array &$pages to sort modules from.
 	 */
 	public function onResourceLoaderSiteModulePages( $skin, array &$pages ): void {
-		$ctx = MobileContext::singleton();
+		$ctx = $this->mobileContext;
 		// Use Mobile.js instead of MediaWiki:Common.js and MediaWiki:<skinname.js> on mobile views.
 		if ( $ctx->shouldDisplayMobileView() && $this->config->get( 'MFCustomSiteModules' ) ) {
 			unset( $pages['MediaWiki:Common.js'] );
@@ -486,16 +471,15 @@ class MobileFrontendHooks implements
 	 *                        if you want to add a cookie that have to vary cache options
 	 */
 	public function onGetCacheVaryCookies( $out, &$cookies ) {
-		/** @var MobileContext $context */
-		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
-		$hasMobileUrl = $context->hasMobileDomain();
-
 		// Enables mobile cookies on wikis w/o mobile domain
 		$cookies[] = MobileContext::USEFORMAT_COOKIE_NAME;
 		// Don't redirect to mobile if user had explicitly opted out of it
 		$cookies[] = MobileContext::STOP_MOBILE_REDIRECT_COOKIE_NAME;
 
-		if ( $context->shouldDisplayMobileView() || !$hasMobileUrl ) {
+		if (
+			$this->mobileContext->shouldDisplayMobileView() ||
+			!$this->mobileContext->hasMobileDomain()
+		) {
 			// beta cookie
 			$cookies[] = MobileContext::OPTIN_COOKIE_NAME;
 		}
@@ -614,16 +598,16 @@ class MobileFrontendHooks implements
 	 */
 	public function onSpecialPage_initList( &$list ) {
 		$services = MediaWikiServices::getInstance();
-		/** @var MobileContext $context */
-		$context = $services->getService( 'MobileFrontend.Context' );
-		$user = $context->getUser();
+		$user = $this->mobileContext->getUser();
 		/** @var FeaturesManager $featuresManager */
 		$featuresManager = $services->getService( 'MobileFrontend.FeaturesManager' );
 
 		// Perform substitutions of pages that are unsuitable for mobile
 		// FIXME: Upstream these changes to core.
-		if ( $context->shouldDisplayMobileView() &&
-			$this->shouldMobileFormatSpecialPages( $user ) && $user->isSafeToLoad()
+		if (
+			$this->mobileContext->shouldDisplayMobileView() &&
+			$this->shouldMobileFormatSpecialPages( $user ) &&
+			$user->isSafeToLoad()
 		) {
 			if (
 				!$featuresManager->isFeatureAvailableForCurrentUser( 'MFUseDesktopSpecialEditWatchlistPage' )
@@ -745,12 +729,8 @@ class MobileFrontendHooks implements
 	 * @param string $subpage subpage name
 	 */
 	public function onSpecialPageBeforeExecute( $special, $subpage ) {
-		$services = MediaWikiServices::getInstance();
-		/** @var MobileContext $context */
-		$context = $services->getService( 'MobileFrontend.Context' );
-
-		$isMobileView = $context->shouldDisplayMobileView();
-		$taglines = $context->getConfig()->get( 'MFSpecialPageTaglines' );
+		$isMobileView = $this->mobileContext->shouldDisplayMobileView();
+		$taglines = $this->mobileContext->getConfig()->get( 'MFSpecialPageTaglines' );
 		$name = $special->getName();
 
 		if ( $isMobileView ) {
@@ -779,9 +759,8 @@ class MobileFrontendHooks implements
 	 * @inheritDoc
 	 */
 	public function onPostLoginRedirect( &$returnTo, &$returnToQuery, &$type ) {
-		$services = MediaWikiServices::getInstance();
-		/** @var MobileContext $context */
-		$context = $services->getService( 'MobileFrontend.Context' );
+		$context = $this->mobileContext;
+
 		if ( !$context->shouldDisplayMobileView() ) {
 			return;
 		}
@@ -810,7 +789,7 @@ class MobileFrontendHooks implements
 	 * @param Skin $skin Skin object that will be used to generate the page, added in 1.13.
 	 */
 	public function onBeforePageDisplay( $out, $skin ): void {
-		$context = MobileContext::singleton();
+		$context = $this->mobileContext;
 		$mfEnableXAnalyticsLogging = $this->config->get( 'MFEnableXAnalyticsLogging' );
 		$mfNoIndexPages = $this->config->get( 'MFNoindexPages' );
 		$isCanonicalLinkHandledByCore = $this->config->get( 'EnableCanonicalServerLink' );
@@ -923,10 +902,10 @@ class MobileFrontendHooks implements
 	 * @param array &$tags Added feed links
 	 */
 	public function onAfterBuildFeedLinks( &$tags ) {
-		$services = MediaWikiServices::getInstance();
-		/** @var MobileContext $context */
-		$context = $services->getService( 'MobileFrontend.Context' );
-		if ( $context->shouldDisplayMobileView() && !$this->config->get( 'MFRSSFeedLink' ) ) {
+		if (
+			$this->mobileContext->shouldDisplayMobileView() &&
+			!$this->config->get( 'MFRSSFeedLink' )
+		) {
 			$tags = [];
 		}
 	}
@@ -1043,8 +1022,6 @@ class MobileFrontendHooks implements
 	 */
 	public function onOutputPageParserOutput( $outputPage, $po ): void {
 		$services = MediaWikiServices::getInstance();
-		/** @var MobileContext $context */
-		$context = $services->getService( 'MobileFrontend.Context' );
 		/** @var FeaturesManager $featuresManager */
 		$featuresManager = $services->getService( 'MobileFrontend.FeaturesManager' );
 		$title = $outputPage->getTitle();
@@ -1052,10 +1029,10 @@ class MobileFrontendHooks implements
 			$title->getNamespace() === NS_MAIN &&
 			$featuresManager->isFeatureAvailableForCurrentUser(
 				'MFEnableWikidataDescriptions'
-			) && $context->shouldShowWikibaseDescriptions( 'tagline', $this->config );
+			) && $this->mobileContext->shouldShowWikibaseDescriptions( 'tagline', $this->config );
 
 		// Only set the tagline if the feature has been enabled and the article is in the main namespace
-		if ( $context->shouldDisplayMobileView() && $descriptionsEnabled ) {
+		if ( $this->mobileContext->shouldDisplayMobileView() && $descriptionsEnabled ) {
 			$desc = self::findTagline( $po, static function ( $item ) {
 				return ExtMobileFrontend::getWikibaseDescription( $item );
 			} );
@@ -1075,7 +1052,7 @@ class MobileFrontendHooks implements
 	public function onArticleParserOptions( Article $article, ParserOptions $parserOptions ) {
 		// while the parser is actively being migrated, we rely on the ParserMigration extension for using Parsoid
 		if ( ExtensionRegistry::getInstance()->isLoaded( 'ParserMigration' ) ) {
-			$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
+			$context = $this->mobileContext;
 			$oracle = MediaWikiServices::getInstance()->getService( 'ParserMigration.Oracle' );
 
 			$shouldUseParsoid =
@@ -1098,9 +1075,7 @@ class MobileFrontendHooks implements
 	 * @return bool
 	 */
 	public function onHTMLFileCache__useFileCache( $context ) {
-		/** @var MobileContext $context */
-		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
-		return !$context->shouldDisplayMobileView();
+		return !$this->mobileContext->shouldDisplayMobileView();
 	}
 
 	/**
@@ -1142,8 +1117,7 @@ class MobileFrontendHooks implements
 		$featuresManager = $services->getService( 'MobileFrontend.FeaturesManager' );
 
 		// If the device is a mobile, Remove the category entry.
-		/** @var MobileContext $context */
-		$context = $services->getService( 'MobileFrontend.Context' );
+		$context = $this->mobileContext;
 		if ( $context->shouldDisplayMobileView() ) {
 			/** @var \MobileFrontend\Amc\Outreach $outreach */
 			$outreach = $services->getService( 'MobileFrontend.AMC.Outreach' );
@@ -1202,10 +1176,8 @@ class MobileFrontendHooks implements
 	 * @param array &$urls the set of URLs to purge
 	 */
 	public function onTitleSquidURLs( $title, &$urls ) {
-		/** @var MobileContext $context */
-		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
 		foreach ( $urls as $url ) {
-			$newUrl = $context->getMobileUrl( $url );
+			$newUrl = $this->mobileContext->getMobileUrl( $url );
 			if ( $newUrl !== false && $newUrl !== $url ) {
 				$urls[] = $newUrl;
 			}
@@ -1223,15 +1195,12 @@ class MobileFrontendHooks implements
 	public function onAuthChangeFormFields(
 		$requests, $fieldInfo, &$formDescriptor, $action
 	) {
-		$services = MediaWikiServices::getInstance();
-		/** @var MobileContext $context */
-		$context = $services->getService( 'MobileFrontend.Context' );
 		$logos = RL\SkinModule::getAvailableLogos( $this->config );
 		$mfLogo = $logos['icon'] ?? false;
 
 		// do nothing in desktop mode
 		if (
-			$context->shouldDisplayMobileView() && $mfLogo
+			$this->mobileContext->shouldDisplayMobileView() && $mfLogo
 			&& in_array( $action, [ AuthManager::ACTION_LOGIN, AuthManager::ACTION_CREATE ], true )
 		) {
 			$logoHtml = Html::rawElement( 'div', [ 'class' => 'mw-mf-watermark' ],
@@ -1253,8 +1222,6 @@ class MobileFrontendHooks implements
 	 */
 	public function onAPIQuerySiteInfoGeneralInfo( $module, &$result ) {
 		global $wgCanonicalServer;
-		/** @var MobileContext $context */
-		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
-		$result['mobileserver'] = $context->getMobileUrl( $wgCanonicalServer );
+		$result['mobileserver'] = $this->mobileContext->getMobileUrl( $wgCanonicalServer );
 	}
 }

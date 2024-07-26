@@ -35,6 +35,7 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 			$services->getSkinFactory(),
 			$services->getUserOptionsLookup(),
 			$services->getWatchlistManager(),
+			$services->getService( 'MobileFrontend.Context' ),
 			null
 		);
 	}
@@ -190,6 +191,7 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 	 * SkinTemplate (sk) and OutputPage (out)
 	 */
 	protected function getContextSetup( $mode, $mfXAnalyticsItems, $title = null ) {
+		$this->getServiceContainer()->resetServiceForTesting( 'MobileFrontend.Context' );
 		MobileContext::resetInstanceForTesting();
 		$context = MobileContext::singleton();
 
@@ -335,6 +337,7 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 			$services->getSkinFactory(),
 			$userOptLookup,
 			$services->getWatchlistManager(),
+			$services->getService( 'MobileFrontend.Context' ),
 			null
 		);
 		$this->assertSame(
@@ -401,6 +404,7 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 			$skinFactory,
 			$userOptionLookup,
 			$services->getWatchlistManager(),
+			$services->getService( 'MobileFrontend.Context' ),
 			null
 		);
 		$mobileFrontendHooks->onRequestContextCreateSkin( $context, $skin );
