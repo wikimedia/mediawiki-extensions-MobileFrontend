@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Amire80",
 			"Bencemac",
 			"BáthoryPéter",
 			"Csega",
@@ -15,7 +16,7 @@
 			"ViDam"
 		]
 	},
-	"abusefilter-edit-builder-vars-user-mobile": "Egy felhasználó a mobil felületen keresztül fordít-e.",
+	"abusefilter-edit-builder-vars-user-mobile": "Egy felhasználó a mobil felületen keresztül fordít-e ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "Írd be a megerősítő kódot",
 	"mobile-frontend-changeslist-nocomment": "nincs szerkesztési összefoglaló",
 	"mobile-frontend-clear-search": "Törlés",
@@ -80,12 +81,12 @@
 	"mobile-frontend-generic-404-title": "Hiba – Az oldal nem található",
 	"mobile-frontend-generic-login-new": "<strong>A(z) {{SITENAME}} wikit hozzád hasonló emberek készítik.</strong><br />Jelentkezz be a közreműkodéshez.",
 	"mobile-frontend-joined-just-now": "Épp most {{GENDER:$1|csatlakozott}}",
-	"mobile-frontend-joined-seconds": "$2 másodperce {{GENDER:$1|csatlakozott}}",
-	"mobile-frontend-joined-minutes": "$2 perce {{GENDER:$1|csatlakozott}}",
-	"mobile-frontend-joined-hours": "$2 órája {{GENDER:$1|csatlakozott}}",
-	"mobile-frontend-joined-days": "$2 napja {{GENDER:$1|csatlakozott}}",
-	"mobile-frontend-joined-months": "$2 hónapja {{GENDER:$1|csatlakozott}}",
-	"mobile-frontend-joined-years": "$2 éve {{GENDER:$1|csatlakozott}}",
+	"mobile-frontend-joined-seconds": "$2 {{PLURAL:$2|másodperce}} {{GENDER:$1|csatlakozott}}",
+	"mobile-frontend-joined-minutes": "$2 {{PLURAL:$2|perce}} {{GENDER:$1|csatlakozott}}",
+	"mobile-frontend-joined-hours": "$2 {{PLURAL:$2|órája}} {{GENDER:$1|csatlakozott}}",
+	"mobile-frontend-joined-days": "{{PLURAL:$2|$2 napja}} {{GENDER:$1|csatlakozott}}",
+	"mobile-frontend-joined-months": "{{PLURAL:$2|$2 hónapja}} {{GENDER:$1|csatlakozott}}",
+	"mobile-frontend-joined-years": "{{PLURAL:$2|$2 éve}} {{GENDER:$1|csatlakozott}}",
 	"mobile-frontend-language-heading": "<strong>Nyelvek</strong>",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Javasolt nyelvek",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "További nyelvek",

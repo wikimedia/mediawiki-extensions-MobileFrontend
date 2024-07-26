@@ -105,7 +105,7 @@
 	"mobile-frontend-joined-hours": "{{GENDER:$1|הצטרף|הצטרפה}} לפני {{PLURAL:$2|שעה|שעתיים|$2 שעות}}",
 	"mobile-frontend-joined-days": "{{GENDER:$1|הצטרף|הצטרפה}} לפני {{PLURAL:$2|יום|יומיים|$2 ימים}}",
 	"mobile-frontend-joined-months": "{{GENDER:$1|הצטרף|הצטרפה}} לפני {{PLURAL:$2|חודש|חודשיים|$2 חודשים}}",
-	"mobile-frontend-joined-years": "{{GENDER:$1|הצטרף|הצטרפה}} לפני {{PLURAL:$1|שנה|שנתיים|$2 שנה|$2 שנים}}",
+	"mobile-frontend-joined-years": "{{GENDER:$1|הצטרף|הצטרפה}} לפני {{PLURAL:$2|שנה|שנתיים|$2 שנה|$2 שנים}}",
 	"mobile-frontend-language-heading": "<strong>שפות</strong>",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "שפות מוצעות",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "שפות אחרות",

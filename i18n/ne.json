@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Amire80",
 			"Bada Kaji",
 			"CAPTAIN MEDUSA",
 			"Krish Dulal",
@@ -95,8 +96,8 @@
 	"mobile-frontend-generic-404-title": "त्रुटि - पृष्ठ फेला परेन",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} तपाई जस्तै मानिसहरूबाट बनेको हो। </strong><br />योगदानका गर्नका लागि प्रवेश गर्नुहोस्।",
 	"mobile-frontend-joined-just-now": "भर्खरै {{GENDER:$1|जोडिनुभयो}}",
-	"mobile-frontend-joined-seconds": "{{PLURAL:$1|$2 सेकेण्ड}} अघि {{GENDER:$1|जोडिनुभयो}}को थियो",
-	"mobile-frontend-joined-minutes": "$2 {{PLURAL:$1|$2 मिनेट}} अघि {{GENDER:$1|आबद्ध}}",
+	"mobile-frontend-joined-seconds": "{{PLURAL:$2|$2 सेकेण्ड}} अघि {{GENDER:$1|जोडिनुभयो}}को थियो",
+	"mobile-frontend-joined-minutes": "$2 {{PLURAL:$2|$2 मिनेट}} अघि {{GENDER:$1|आबद्ध}}",
 	"mobile-frontend-joined-hours": "{{PLURAL:$2|$2 घण्टा}} पहिले {{GENDER:$1|सामेल}} हुनुभयो",
 	"mobile-frontend-joined-days": "{{PLURAL:$2|$2 दिन}} अघि {{GENDER:$1|सामेल}} हुनुभयो",
 	"mobile-frontend-joined-months": "{{PLURAL:$2|$2 महिना}} पहिले {{GENDER:$1|सामेल हुनुभयो}}",
