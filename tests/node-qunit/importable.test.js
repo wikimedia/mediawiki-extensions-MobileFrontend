@@ -42,6 +42,7 @@ QUnit.module( 'MobileFrontend imports', {
 				LookupElement: () => {}
 			}
 		};
+		global.location = new URL( 'https://example.com' );
 		fakeRouter = new OO.EventEmitter();
 		fakeRouter.getPath = sandbox.stub().returns( '' );
 		fakeRouter.back = sandbox.spy();

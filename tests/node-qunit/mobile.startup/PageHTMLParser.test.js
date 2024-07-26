@@ -209,6 +209,20 @@ QUnit.test( '#getThumbnail', function ( assert ) {
 	assert.notStrictEqual( thumb, null, 'Thumbnail found if valid.' );
 	assert.strictEqual( thumb.getFileName(), 'File:Design_portal_logo.jpg', 'Thumbnail found if valid.' );
 
+	// Valid anchor with ?uselang=fa
+	const $containerUseLang = util.parseHTML( '<div><a href="/wiki/File:Design_portal_logo.jpg?uselang=fa" class="image"><span class="lazy-image-placeholder" style="width: 28px;height: 28px;" data-src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Design_portal_logo.jpg/28px-Design_portal_logo.jpg" data-alt="icon" data-width="28" data-height="28" data-class="thumbimage">&nbsp;</span></a></div>' );
+	const parserUseLang = new PageHTMLParser( $containerUseLang );
+	const thumbUseLang = parserUseLang.getThumbnail( $containerUseLang.find( PageHTMLParser.THUMB_SELECTOR ) );
+	assert.notStrictEqual( thumbUseLang, null, 'Thumbnail found if valid.' );
+	assert.strictEqual( thumbUseLang.getFileName(), 'File:Design_portal_logo.jpg', 'Thumbnail found if valid.' );
+
+	// Valid anchor with legacy URL
+	const $containerLegacy = util.parseHTML( '<div><a href="/w/index.php?debug=1&title=File:Design_portal_logo.jpg&uselang=fa" class="image"><span class="lazy-image-placeholder" style="width: 28px;height: 28px;" data-src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Design_portal_logo.jpg/28px-Design_portal_logo.jpg" data-alt="icon" data-width="28" data-height="28" data-class="thumbimage">&nbsp;</span></a></div>' );
+	const parserLegacy = new PageHTMLParser( $containerLegacy );
+	const thumbLegacy = parserLegacy.getThumbnail( $containerLegacy.find( PageHTMLParser.THUMB_SELECTOR ) );
+	assert.notStrictEqual( thumbLegacy, null, 'Thumbnail found if valid.' );
+	assert.strictEqual( thumbLegacy.getFileName(), 'File:Design_portal_logo.jpg', 'Thumbnail found if valid.' );
+
 	// Anchor with 'metadata' class should be excluded.
 	const $containerMetadata = util.parseHTML( '<div><a href="/wiki/File:Design_portal_logo.jpg" class="image"><span class="lazy-image-placeholder" style="width: 28px;height: 28px;" data-src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Design_portal_logo.jpg/28px-Design_portal_logo.jpg" data-alt="icon" data-width="28" data-height="28" data-class="thumbimage noviewer">&nbsp;</span></a></div>' );
 	const parserMetadata = new PageHTMLParser( $containerMetadata );

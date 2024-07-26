@@ -167,8 +167,9 @@ class PageHTMLParser {
 		const notSelector = '.' + EXCLUDE_THUMBNAIL_CLASS_SELECTORS.join( ',.' ),
 			$lazyImage = $a.find( '.lazy-image-placeholder' ),
 			href = $a.attr( 'href' ),
-			legacyMatch = href && href.match( /title=([^/&]+)/ ),
-			match = href && href.match( /[^/]+$/ );
+			url = href && new URL( href, location.href ),
+			legacyTitle = url && url.searchParams.get( 'title' ),
+			match = url && url.pathname.match( /[^/]+$/ );
 
 		// Parents need to be checked as well.
 		let valid = $a.parents( notSelector ).length === 0 &&
@@ -182,11 +183,11 @@ class PageHTMLParser {
 				.test( $lazyImage.data( 'class' ) );
 		}
 
-		if ( valid && ( legacyMatch || match ) ) {
+		if ( valid && ( legacyTitle !== null || match ) ) {
 			return new Thumbnail( {
 				el: $a,
 				filename: mw.util.percentDecodeFragment(
-					legacyMatch ? legacyMatch[1] : match[0]
+					legacyTitle !== null ? legacyTitle : match[0]
 				)
 			} );
 		}
