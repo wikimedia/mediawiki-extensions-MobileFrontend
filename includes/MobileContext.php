@@ -550,7 +550,8 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
-	 * True if the current wiki has a mobile URL that's different from the desktop one.
+	 * True if the current wiki has separate mobile and desktop domains (regardless
+	 * of which domain is used by the current request).
 	 * @return bool
 	 */
 	public function hasMobileDomain(): bool {
@@ -574,8 +575,8 @@ class MobileContext extends ContextSource {
 	 *
 	 * Typically this is a URL for the current wiki, but it can be anything as long as
 	 * $wgMobileUrlCallback can convert its domain (so e.g. interwiki links can be
-	 * converted). If the domain is not recognized $wgMobileUrlCallback (including
-	 * when it is already a mobile domain) or the wiki does not use mobile domains and
+	 * converted). If the domain is already a mobile domain, or not recognized by
+	 * $wgMobileUrlCallback, or the wiki does not use mobile domains and so
 	 * $wgMobileUrlCallback is not set, the URL will be returned unchanged (except
 	 * $forceHttps will still be applied).
 	 *
@@ -610,10 +611,14 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
-	 * If a mobile-domain is specified by the $wgMobileUrlCallback and
-	 * there's a mobile header, then we assume the user is accessing
-	 * the site from the mobile-specific domain (because why would the
-	 * desktop site set the header?).
+	 * Checks whether the current request is using the mobile domain.
+	 *
+	 * This assumes that some infrastructure outside MediaWiki will set a
+	 * header (specified by $wgMFMobileHeader) on requests which use the
+	 * mobile domain. This means that the traffic routing layer can rewrite
+	 * hostnames to be canonical, so non-MobileFrontend-aware code can still
+	 * work.
+	 *
 	 * @return bool
 	 */
 	public function usingMobileDomain() {
@@ -625,7 +630,10 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
-	 * Take a URL and return a copy that removes any mobile tokens
+	 * Take a URL and return a copy that removes any mobile tokens.
+	 *
+	 * This only works with URLs of the current wiki.
+	 *
 	 * @param string $url representing a page on the mobile domain e.g. `https://en.m.wikipedia.org/`
 	 * @return string (absolute url)
 	 */
