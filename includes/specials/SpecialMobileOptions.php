@@ -3,7 +3,6 @@
 use MediaWiki\Config\Config;
 use MediaWiki\Deferred\DeferredUpdates;
 use MediaWiki\Html\Html;
-use MediaWiki\Html\TemplateParser;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Request\WebRequest;
 use MediaWiki\SpecialPage\UnlistedSpecialPage;
@@ -209,11 +208,9 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 	 * @return string of html
 	 */
 	private static function contentElement( $html, $className = '' ) {
-		$templateParser = new TemplateParser( __DIR__ . '/templates' );
-		return $templateParser->processTemplate( 'ContentBox', [
-			'className' => $className,
-			'html' => $html,
-		] );
+		return Html::rawElement( 'div', [
+			'class' => 'content'
+		], $html );
 	}
 
 	/**
