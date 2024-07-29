@@ -19,7 +19,8 @@
 			"Vinhtantran",
 			"Withoutaname",
 			"පසිඳු කාවින්ද",
-			"CactiStaccingCrane"
+			"CactiStaccingCrane",
+			"Amire80"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Người dùng có sửa đổi qua giao diện di động hay không",
@@ -112,12 +113,12 @@
 	"mobile-frontend-history-404-title": "Không tìm thấy trang",
 	"mobile-frontend-history-no-results": "Bộ lọc không khớp với lịch sử nào.",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1}}Vừa tham gia",
-	"mobile-frontend-joined-seconds": "{{GENDER:$1}}Tham gia cách đây $2 giây",
-	"mobile-frontend-joined-minutes": "{{GENDER:$1}}Tham gia cách đây $2 phút",
-	"mobile-frontend-joined-hours": "{{GENDER:$1}}Tham gia cách đây $2 giờ",
-	"mobile-frontend-joined-days": "{{GENDER:$1}}Tham gia cách đây $2 ngày",
-	"mobile-frontend-joined-months": "{{GENDER:$1}}Tham gia cách đây $2 tháng",
-	"mobile-frontend-joined-years": "{{GENDER:$1}}Tham gia cách đây $2 năm",
+	"mobile-frontend-joined-seconds": "{{GENDER:$1|Tham gia}} cách đây {{PLURAL:$2|$2 giây}}",
+	"mobile-frontend-joined-minutes": "{{GENDER:$1|Tham gia}} cách đây {{PLURAL:$2|$2 phút}}",
+	"mobile-frontend-joined-hours": "{{GENDER:$1|Tham gia}} cách đây {{PLURAL:$2|$2 giờ}}",
+	"mobile-frontend-joined-days": "{{GENDER:$1|Tham gia}} cách đây {{PLURAL:$2|$2 ngày}}",
+	"mobile-frontend-joined-months": "{{GENDER:$1|Tham gia}} cách đây {{PLURAL:$2|$2 tháng}}",
+	"mobile-frontend-joined-years": "{{GENDER:$1|Tham gia}} cách đây {{PLURAL:$2|$2 năm}}",
 	"mobile-frontend-language-heading": "<strong>Ngôn ngữ</strong>",
 	"mobile-frontend-languages-404-desc": "Một tên trang hợp lệ cần được định rõ.",
 	"mobile-frontend-languages-404-title": "Lỗi ngôn ngữ",

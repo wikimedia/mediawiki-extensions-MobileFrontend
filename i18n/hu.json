@@ -12,7 +12,8 @@
 			"Misibacsi",
 			"Tacsipacsi",
 			"ViDam",
-			"Hanna Tardos"
+			"Hanna Tardos",
+			"Amire80"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Egy felhasználó a mobil felületen keresztül fordít-e.",
@@ -95,12 +96,12 @@
 	"mobile-frontend-history-404-title": "Nincs ilyen lap",
 	"mobile-frontend-history-no-results": "A szűrő nem adott laptörténet-találatot.",
 	"mobile-frontend-joined-just-now": "Épp most {{GENDER:$1|csatlakozott}}",
-	"mobile-frontend-joined-seconds": "$2 másodperce {{GENDER:$1|csatlakozott}}",
-	"mobile-frontend-joined-minutes": "$2 perce {{GENDER:$1|csatlakozott}}",
-	"mobile-frontend-joined-hours": "$2 órája {{GENDER:$1|csatlakozott}}",
-	"mobile-frontend-joined-days": "$2 napja {{GENDER:$1|csatlakozott}}",
-	"mobile-frontend-joined-months": "$2 hónapja {{GENDER:$1|csatlakozott}}",
-	"mobile-frontend-joined-years": "$2 éve {{GENDER:$1|csatlakozott}}",
+	"mobile-frontend-joined-seconds": "$2 {{PLURAL:$2|másodperce}} {{GENDER:$1|csatlakozott}}",
+	"mobile-frontend-joined-minutes": "$2 {{PLURAL:$2|perce}} {{GENDER:$1|csatlakozott}}",
+	"mobile-frontend-joined-hours": "$2 {{PLURAL:$2|órája}} {{GENDER:$1|csatlakozott}}",
+	"mobile-frontend-joined-days": "{{PLURAL:$2|$2 napja}} {{GENDER:$1|csatlakozott}}",
+	"mobile-frontend-joined-months": "{{PLURAL:$2|$2 hónapja}} {{GENDER:$1|csatlakozott}}",
+	"mobile-frontend-joined-years": "{{PLURAL:$2|$2 éve}} {{GENDER:$1|csatlakozott}}",
 	"mobile-frontend-language-heading": "<strong>Nyelvek</strong>",
 	"mobile-frontend-languages-404-desc": "Egy érvényes címet meg kell adni.",
 	"mobile-frontend-languages-404-title": "Nyelvek hiba",

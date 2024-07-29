@@ -12,7 +12,8 @@
 			"Jarash",
 			"Tomato Cream",
 			"Plaga med",
-			"Kapatych"
+			"Kapatych",
+			"Amire80"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ці рэдагуе ўдзельнік праз мабільны інтэрфейс",
@@ -105,11 +106,11 @@
 	"mobile-frontend-history-no-results": "Фільтр не даў ніякіх супадзенняў у гісторыі.",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|Далучыўся|Далучылася}} толькі што",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|Далучыўся|Далучылася}} $2 {{PLURAL:$2|секунду|секунды|секундаў}} таму",
-	"mobile-frontend-joined-minutes": "{{GENDER:$1|Далучыўся|Далучылася}} $2 {{PLURAL:$1|хвіліну|хвіліны|хвілінаў}} таму",
-	"mobile-frontend-joined-hours": "{{GENDER:$1|Далучыўся|Далучылася}} $2 {{PLURAL:$1|гадзіну|гадзіны|гадзінаў}} таму",
-	"mobile-frontend-joined-days": "{{GENDER:$1|Далучыўся|Далучылася}} $2 {{PLURAL:$1|дзень|дня|дзён}} таму",
-	"mobile-frontend-joined-months": "{{GENDER:$1|Далучыўся|Далучылася}} $2 {{PLURAL:$1|месяц|месяцы|месяцаў}} таму",
-	"mobile-frontend-joined-years": "{{GENDER:$1|Далучыўся|Далучылася}} $2 {{PLURAL:$1|год|гады|гадоў}} таму",
+	"mobile-frontend-joined-minutes": "{{GENDER:$1|Далучыўся|Далучылася}} $2 {{PLURAL:$2|хвіліну|хвіліны|хвілінаў}} таму",
+	"mobile-frontend-joined-hours": "{{GENDER:$1|Далучыўся|Далучылася}} $2 {{PLURAL:$2|гадзіну|гадзіны|гадзінаў}} таму",
+	"mobile-frontend-joined-days": "{{GENDER:$1|Далучыўся|Далучылася}} $2 {{PLURAL:$2|дзень|дня|дзён}} таму",
+	"mobile-frontend-joined-months": "{{GENDER:$1|Далучыўся|Далучылася}} $2 {{PLURAL:$2|месяц|месяцы|месяцаў}} таму",
+	"mobile-frontend-joined-years": "{{GENDER:$1|Далучыўся|Далучылася}} $2 {{PLURAL:$2|год|гады|гадоў}} таму",
 	"mobile-frontend-language-heading": "<strong>Мовы</strong>",
 	"mobile-frontend-languages-404-desc": "Трэба ўказаць слушную назву.",
 	"mobile-frontend-languages-404-title": "Моўная памылка",
