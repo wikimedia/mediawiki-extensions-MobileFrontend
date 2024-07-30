@@ -6,9 +6,7 @@ use MediaWiki\Context\IContextSource;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\MediaWikiServices;
 use MobileFrontend\Devices\DeviceDetectorService;
-use MobileFrontend\Hooks\HookRunner;
 use MobileFrontend\WMFBaseDomainExtractor;
-use Wikimedia\IPUtils;
 
 /**
  * Provide various request-dependant methods to use in mobile context
@@ -95,11 +93,6 @@ class MobileContext extends ContextSource {
 	 * @var string|null Domain to use for the stopMobileRedirect cookie
 	 */
 	public static $mfStopRedirectCookieHost = null;
-
-	/**
-	 * @var string|null Stores the actual mobile url template.
-	 */
-	private $mobileUrlTemplate = null;
 
 	/**
 	 * In-process cache for checking whether the current wiki has a mobile URL that's
@@ -547,41 +540,6 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
-	 * Take a URL Host Template and return the mobile token portion
-	 *
-	 * Eg if a desktop domain is en.wikipedia.org, but the mobile variant is
-	 * en.m.wikipedia.org, the mobile token is 'm.'
-	 *
-	 * @param string $mobileUrlHostTemplate URL host
-	 * @return string
-	 * @deprecated
-	 */
-	public function getMobileHostToken( $mobileUrlHostTemplate ) {
-		wfDeprecated( __METHOD__, '1.42', 'MobileFrontend' );
-		return preg_replace( '/%h[0-9]\.{0,1}/', '', $mobileUrlHostTemplate );
-	}
-
-	/**
-	 * Get the template for mobile URLs.
-	 * @see $wgMobileUrlTemplate
-	 * @return string
-	 * @deprecated In other classes, use hasMobileUrl() instead.
-	 */
-	private function getMobileUrlTemplate() {
-		if ( $this->mobileUrlTemplate === null ) {
-			$this->mobileUrlTemplate = $this->config->get( 'MobileUrlTemplate' );
-		}
-		// Only issue deprecation warning when $wgMobileUrlTemplate is set.
-		// Neither $wgMobileUrlTemplate nor $wgMobileUrlCallback being set is a valid
-		// non-deprecated scenario, and in that case hasMobileDomain() will call this
-		// method as fallback.
-		if ( $this->mobileUrlTemplate ) {
-			wfDeprecated( __METHOD__, '1.42', 'MobileFrontend' );
-		}
-		return $this->mobileUrlTemplate;
-	}
-
-	/**
 	 * Returns the callback from $wgMobileUrlCallback, which changes
 	 *   a desktop domain into a mobile domain.
 	 * @return callable|null
@@ -604,35 +562,28 @@ class MobileContext extends ContextSource {
 				$mobileDomain = call_user_func( $mobileUrlCallback, $serverParts['host'] );
 				$this->hasMobileUrl = $mobileDomain !== $serverParts['host'];
 			} else {
-				$this->hasMobileUrl = $this->getMobileUrlTemplate() !== '';
+				$this->hasMobileUrl = false;
 			}
 		}
 		return $this->hasMobileUrl;
 	}
 
 	/**
-	 * Take a URL and return a copy that conforms to the mobile URL template
+	 * Take a URL and return the equivalent mobile URL (ie. replace the domain with the
+	 * mobile domain).
+	 *
+	 * Typically this is a URL for the current wiki, but it can be anything as long as
+	 * $wgMobileUrlCallback can convert its domain (so e.g. interwiki links can be
+	 * converted). If the domain is not recognized $wgMobileUrlCallback (including
+	 * when it is already a mobile domain) or the wiki does not use mobile domains and
+	 * $wgMobileUrlCallback is not set, the URL will be returned unchanged (except
+	 * $forceHttps will still be applied).
+	 *
 	 * @param string $url URL to convert
-	 * @param bool $forceHttps should force HTTPS?
+	 * @param bool $forceHttps Force HTTPS, even if the original URL used HTTP
 	 * @return string|bool
 	 */
 	public function getMobileUrl( $url, $forceHttps = false ) {
-		if ( $this->shouldDisplayMobileView() ) {
-			$subdomainTokenReplacement = null;
-			$hookRunner = new HookRunner( MediaWikiServices::getInstance()->getHookContainer() );
-			if ( $hookRunner->onGetMobileUrl( $subdomainTokenReplacement, $this ) ) {
-				if ( $subdomainTokenReplacement !== null ) {
-					$mobileUrlHostTemplate = $this->parseMobileUrlTemplate( 'host' );
-					$mobileToken = $this->getMobileHostToken( $mobileUrlHostTemplate );
-					$this->mobileUrlTemplate = str_replace(
-						$mobileToken,
-						$subdomainTokenReplacement,
-						$this->getMobileUrlTemplate()
-					);
-				}
-			}
-		}
-
 		$parsedUrl = wfParseUrl( $url );
 		// if parsing failed, maybe it's a local Url, try to expand and reparse it - task T107505
 		if ( !$parsedUrl ) {
@@ -648,8 +599,6 @@ class MobileContext extends ContextSource {
 		$mobileUrlCallback = $this->getMobileUrlCallback();
 		if ( $mobileUrlCallback ) {
 			$parsedUrl['host'] = call_user_func( $mobileUrlCallback, $parsedUrl['host'] );
-		} elseif ( $this->getMobileUrlTemplate() ) {
-			$this->updateMobileUrlHost( $parsedUrl );
 		}
 		if ( $forceHttps ) {
 			$parsedUrl['scheme'] = 'https';
@@ -661,7 +610,7 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
-	 * If a mobile-domain is specified by the $wgMobileUrlTemplate and
+	 * If a mobile-domain is specified by the $wgMobileUrlCallback and
 	 * there's a mobile header, then we assume the user is accessing
 	 * the site from the mobile-specific domain (because why would the
 	 * desktop site set the header?).
@@ -689,47 +638,6 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
-	 * Update host of given URL to conform to mobile URL template.
-	 * @param array &$parsedUrl Result of parseUrl() or wfParseUrl()
-	 * @deprecated
-	 */
-	protected function updateMobileUrlHost( array &$parsedUrl ) {
-		wfDeprecated( __METHOD__, '1.42', 'MobileFrontend' );
-
-		if ( IPUtils::isIPAddress( $parsedUrl['host'] ) ) {
-			// Do not update host when IP is used
-			return;
-		}
-		$mobileUrlHostTemplate = $this->parseMobileUrlTemplate( 'host' );
-		if ( !strlen( $mobileUrlHostTemplate ) ) {
-			return;
-		}
-
-		$parsedHostParts = explode( ".", $parsedUrl['host'] );
-		$templateHostParts = explode( ".", $mobileUrlHostTemplate );
-		$targetHostParts = [];
-
-		foreach ( $templateHostParts as $key => $templateHostPart ) {
-			if ( strstr( $templateHostPart, '%h' ) ) {
-				$parsedHostPartKey = (int)substr( $templateHostPart, 2 );
-				if ( !array_key_exists( $parsedHostPartKey, $parsedHostParts ) ) {
-					// invalid pattern for this host, ignore
-					return;
-				}
-				$targetHostParts[$key] = $parsedHostParts[$parsedHostPartKey];
-			} elseif ( isset( $parsedHostParts[$key] )
-				&& $templateHostPart == $parsedHostParts[$key] ) {
-				$targetHostParts = $parsedHostParts;
-				break;
-			} else {
-				$targetHostParts[$key] = $templateHostPart;
-			}
-		}
-
-		$parsedUrl['host'] = implode( ".", $targetHostParts );
-	}
-
-	/**
 	 * Update the host of a given URL to strip out any mobile tokens
 	 * @param array &$parsedUrl Result of parseUrl() or wfParseUrl()
 	 */
@@ -753,80 +661,6 @@ class MobileContext extends ContextSource {
 			$query = wfCgiToArray( $parsedUrl['query'] );
 			unset( $query['useformat'] );
 			$parsedUrl['query'] = wfArrayToCgi( $query );
-		}
-	}
-
-	/**
-	 * Update path of given URL to conform to mobile URL template.
-	 *
-	 * NB: this is not actually being used anywhere at the moment. It will
-	 * take some magic to get MW to properly handle path modifications like
-	 * this is intended to provide. This will hopefully be implemented someday
-	 * in the not to distant future.
-	 *
-	 * @param array &$parsedUrl Result of parseUrl() or wfParseUrl()
-	 * @deprecated
-	 */
-	protected function updateMobileUrlPath( array &$parsedUrl ) {
-		wfDeprecated( __METHOD__, '1.42', 'MobileFrontend' );
-
-		$scriptPath = $this->getConfig()->get( 'ScriptPath' );
-
-		$mobileUrlPathTemplate = $this->parseMobileUrlTemplate( 'path' );
-
-		// if there's no path template, no reason to continue.
-		if ( !strlen( $mobileUrlPathTemplate ) ) {
-			return;
-		}
-
-		// find out if we already have a templated path
-		$templatePathOffset = strpos( $mobileUrlPathTemplate, '%p' );
-		$templatePathSansToken = substr( $mobileUrlPathTemplate, 0, $templatePathOffset );
-		if ( substr_compare( $parsedUrl['path'], $scriptPath . $templatePathSansToken, 0 ) > 0 ) {
-			return;
-		}
-
-		$scriptPathLength = strlen( $scriptPath );
-		// the "+ 1" removes the preceding "/" from the path sans $wgScriptPath
-		$pathSansScriptPath = substr( $parsedUrl['path'], $scriptPathLength + 1 );
-		$parsedUrl['path'] = $scriptPath . $templatePathSansToken . $pathSansScriptPath;
-	}
-
-	/**
-	 * Parse mobile URL template into its host and path components.
-	 *
-	 * Optionally specify which portion of the template you want returned.
-	 * @param string|null $part which part to return?
-	 * @return mixed
-	 * @deprecated
-	 */
-	public function parseMobileUrlTemplate( $part = null ) {
-		wfDeprecated( __METHOD__, '1.42', 'MobileFrontend' );
-
-		$mobileUrlTemplate = $this->getMobileUrlTemplate();
-
-		$pathStartPos = strpos( $mobileUrlTemplate, '/' );
-
-		/**
-		 * This if/else block exists because of an annoying aspect of substr()
-		 * Even if you pass 'null' or 'false' into the 'length' param, it
-		 * will return an empty string.
-		 * http://www.stopgeek.com/wp-content/uploads/2007/07/sense.jpg
-		 */
-		if ( $pathStartPos === false ) {
-			$host = substr( $mobileUrlTemplate, 0 );
-		} else {
-			$host = substr( $mobileUrlTemplate, 0, $pathStartPos );
-		}
-
-		$path = substr( $mobileUrlTemplate, $pathStartPos );
-
-		if ( $part == 'host' ) {
-			return $host;
-		} elseif ( $part == 'path' ) {
-			return $path;
-		} else {
-			return [ 'host' => $host, 'path' => $path ];
 		}
 	}
 
