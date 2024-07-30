@@ -2,12 +2,13 @@
 	"@metadata": {
 		"authors": [
 			"Amikeco",
+			"Amire80",
 			"Bouron",
 			"Таймураз"
 		]
 	},
 	"mobile-frontend-clear-search": "Схафын",
-	"mobile-frontend-copyright": "Текст у сæрибар<a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike License</a> лицензимæ гæсгæ; гæнæн ис æндæр æм ис. Бæстондæр бакæс <a href='https://foundation.wikimedia.org/wiki/Terms_of_Use'>Пайда гæныны домæнтæ</a>. {{SITENAME}} у<a href='https://wikimediafoundation.org/'> Викимеди фондыон</a> регистраци гонд нысан.",
+	"mobile-frontend-copyright": "Мидис у гом {{grammar:allative|$1}} гæсгæ, кæд æндæр исты амынд нæу, уæд.",
 	"mobile-frontend-desc": "Мобилон хуыз",
 	"mobile-frontend-missing-image": "Ныв",
 	"mobile-frontend-opt-in-explain": "Мобилон бетамæ иу гæнгæйæ, ды эксперименталон функцитæм бавналæн исыс, фæлæтас у исты баг кæнæ рæдыдыл фембæлын.",
