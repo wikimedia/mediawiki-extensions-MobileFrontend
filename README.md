@@ -358,6 +358,9 @@ A callback that takes a domain name, and changes it into a mobile domain name.
 When that is not possible, it should return its input unchanged. On wikifarms,
 the domain name might belong to another wiki.
 
+For mobile domains to work, some infrastructure outside MediaWiki needs to tag
+requests sent to the mobile domain with the header specified by $wgMFMobileHeader.
+
 * Type: `callable` (`string -> string`)
 * Default: `null`
 
