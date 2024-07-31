@@ -18,7 +18,6 @@ use Skin;
  * @internal
  */
 class HookRunner implements
-	BeforePageDisplayMobileHook,
 	MobileFrontendBeforeDOMHook,
 	MobileFrontendContentProviderHook,
 	MobileFrontendFeaturesRegistrationHook,
@@ -29,16 +28,6 @@ class HookRunner implements
 
 	public function __construct( HookContainer $hookContainer ) {
 		$this->hookContainer = $hookContainer;
-	}
-
-	/**
-	 * @inheritDoc
-	 */
-	public function onBeforePageDisplayMobile( OutputPage &$out, Skin &$skin ) {
-		return $this->hookContainer->run(
-			'BeforePageDisplayMobile',
-			[ &$out, &$skin ]
-		);
 	}
 
 	/**
