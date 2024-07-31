@@ -5,7 +5,8 @@
 			"Ahmed-Najib-Biabani-Ibrahimkhel",
 			"Amjad Khan",
 			"Baloch Khan",
-			"عثمان خان شاہ"
+			"عثمان خان شاہ",
+			"Amire80"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "تاييدي کوډ مو ورکړئ",
@@ -56,9 +57,9 @@
 	"mobile-frontend-history-404-desc": "د هغه پاڼې لپاره تاریخ نشی لیدلی چې شتون نلري. کیدی شي دا له منځه وړل شوي وي یا ممکن تاسو خراب لوری تعقیب کړي وي.",
 	"mobile-frontend-history-404-title": "داسې پاڼه نشته",
 	"mobile-frontend-joined-just-now": "وس دستي يي {{GENDER:$1|غړیتوب}} ترلاسه کړ",
-	"mobile-frontend-joined-seconds": "{{PLURAL:$2|$2 ثانیه|$2 ثانيې}} ترمخه يې \n{{GENDER:$1|غړيتوب ترلاسه کړ}}",
+	"mobile-frontend-joined-seconds": "{{PLURAL:$2|$2 ثانیه|$2 ثانيې}} ترمخه يې {{GENDER:$1|غړيتوب ترلاسه کړ}}",
 	"mobile-frontend-joined-minutes": "{{PLURAL:$2|$2 دقیقه|$2 دقیقې}} ترمخه يې \n{{GENDER:$1|غړيتوب ترلاسه کړ}}",
-	"mobile-frontend-joined-hours": "{{PLURAL:$2|$2 ګړۍ|$2 ګړيه}} ترمخه يې \n{{GENDER:$1|غړيتوب ترلاسه کړ}}",
+	"mobile-frontend-joined-hours": "{{PLURAL:$2|$2 ګړۍ|$2 ګړيه}} ترمخه يې {{GENDER:$1|غړيتوب ترلاسه کړ}}",
 	"mobile-frontend-joined-days": "{{PLURAL:$2|$2 ورځ|$2 ورځې}} مخکې يي  {{GENDER:$1|غړیتوب تر لاسه کړ }}",
 	"mobile-frontend-joined-months": "{{PLURAL:$2|$2 مياشت|$2 مياشتې}} مخکې يي {{GENDER:$1|غړیتوب تر لاسه کړ}}",
 	"mobile-frontend-joined-years": "{{PLURAL:$2|$2 کال|$2 کاله}} مخکې يې {{GENDER:$1|غړیتوب تر لاسه کړ}}",

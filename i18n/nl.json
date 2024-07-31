@@ -38,7 +38,8 @@
 			"TheDJ",
 			"User555",
 			"Wiki13",
-			"Xbaked potatox"
+			"Xbaked potatox",
+			"Mitsjol"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Of een gebruiker wel of niet via de mobiele interface bewerkt",
@@ -157,8 +158,8 @@
 	"mobile-frontend-media-license-link": "Licentiegegevens",
 	"mobile-frontend-media-load-fail-message": "Er is een fout opgetreden bij het laden van deze afbeelding.",
 	"mobile-frontend-media-load-fail-retry": "Vernieuwen",
-	"mobile-frontend-media-next": "Volgende afbeelding tonen",
-	"mobile-frontend-media-prev": "Vorige afbeelding tonen",
+	"mobile-frontend-media-next": "Volgende afbeelding weergeven",
+	"mobile-frontend-media-prev": "Vorige afbeelding weergeven",
 	"mobile-frontend-missing-image": "Afbeelding",
 	"mobile-frontend-tap-to-display-image": "Klik om afbeelding weer te geven.",
 	"mobile-frontend-news-items": "In het nieuws",

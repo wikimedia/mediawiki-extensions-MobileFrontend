@@ -19,7 +19,8 @@
 			"Vodnokon4e",
 			"Zolgoyo",
 			"Лорд Бъмбъри",
-			"පසිඳු කාවින්ද"
+			"පසිඳු කාවින්ද",
+			"Yasen igra"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Редактира ли потребителя от мобилен интерфейс",
@@ -83,6 +84,12 @@
 	"mobile-frontend-generic-404-title": "Грешка - Страницата не е намерена",
 	"mobile-frontend-history-404-title": "Няма такава страница",
 	"mobile-frontend-history-no-results": "Филтърът не предостави съвпадения в историята.",
+	"mobile-frontend-joined-seconds": "{{GENDER:$1|Присъединил|Присъедини ла}} се преди {{PLURAL:$2|$2 секунда|$2 секунди}}",
+	"mobile-frontend-joined-minutes": "{{GENDER:$1|Присъединил|Присъедини ла}} се преди {{PLURAL:$2|$2 минута|$2 минути}}",
+	"mobile-frontend-joined-hours": "{{GENDER:$1|Присъединил|Присъедини ла}} се преди {{PLURAL:$2|$2 час|$2 часа}}",
+	"mobile-frontend-joined-days": "{{GENDER:$1|Присъединил|Присъедини ла}} се преди {{PLURAL:$2|$2 ден|$2 дни}}",
+	"mobile-frontend-joined-months": "{{GENDER:$1|Присъединил|Присъедини ла}} се преди {{PLURAL:$2|$2 месец|$2 месеца}}",
+	"mobile-frontend-joined-years": "{{GENDER:$1|Присъединил|Присъедини ла}} се преди {{PLURAL:$2|$2 година|$2 години}}",
 	"mobile-frontend-language-heading": "<strong>Езици</strong>",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Предложени езици",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Други езици",
