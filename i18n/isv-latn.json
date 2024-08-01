@@ -31,7 +31,7 @@
 	"mobile-frontend-editor-blocked-drawer-body-link": "Gledite veče",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Pričina",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Zablokovany|Zablokovana}} koristnikom",
-	"mobile-frontend-editor-blocked-drawer-expiry-header": "Blokada iztekne",
+	"mobile-frontend-editor-blocked-drawer-expiry-header": "Blokada izteče",
 	"mobile-frontend-editor-blocked-drawer-help": "Gledite podrobnosti",
 	"mobile-frontend-editor-generic-block-reason": "Neznajema pričina",
 	"mobile-frontend-editor-cancel": "Anulovati",
