@@ -19,7 +19,8 @@
 			"Trần Nguyễn Minh Huy",
 			"Vinhtantran",
 			"Withoutaname",
-			"පසිඳු කාවින්ද"
+			"පසිඳු කාවින්ද",
+			"Amire80"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Người dùng có sửa đổi qua giao diện di động hay không",
@@ -92,12 +93,12 @@
 	"mobile-frontend-generic-404-title": "Lỗi – Không tìm thấy trang",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} do những người như bạn làm nên.</strong><br />Hãy đăng nhập để đóng góp.",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1}}Vừa tham gia",
-	"mobile-frontend-joined-seconds": "{{GENDER:$1}}Tham gia cách đây $2 giây",
-	"mobile-frontend-joined-minutes": "{{GENDER:$1}}Tham gia cách đây $2 phút",
-	"mobile-frontend-joined-hours": "{{GENDER:$1}}Tham gia cách đây $2 giờ",
-	"mobile-frontend-joined-days": "{{GENDER:$1}}Tham gia cách đây $2 ngày",
-	"mobile-frontend-joined-months": "{{GENDER:$1}}Tham gia cách đây $2 tháng",
-	"mobile-frontend-joined-years": "{{GENDER:$1}}Tham gia cách đây $2 năm",
+	"mobile-frontend-joined-seconds": "{{GENDER:$1|Tham gia}} cách đây {{PLURAL:$2|$2 giây}}",
+	"mobile-frontend-joined-minutes": "{{GENDER:$1|Tham gia}} cách đây {{PLURAL:$2|$2 phút}}",
+	"mobile-frontend-joined-hours": "{{GENDER:$1|Tham gia}} cách đây {{PLURAL:$2|$2 giờ}}",
+	"mobile-frontend-joined-days": "{{GENDER:$1|Tham gia}} cách đây {{PLURAL:$2|$2 ngày}}",
+	"mobile-frontend-joined-months": "{{GENDER:$1|Tham gia}} cách đây {{PLURAL:$2|$2 tháng}}",
+	"mobile-frontend-joined-years": "{{GENDER:$1|Tham gia}} cách đây {{PLURAL:$2|$2 năm}}",
 	"mobile-frontend-language-heading": "<strong>Ngôn ngữ</strong>",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Ngôn ngữ gợi ý",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Ngôn ngữ khác",

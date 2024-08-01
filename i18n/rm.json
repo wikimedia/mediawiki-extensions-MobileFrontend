@@ -3,11 +3,12 @@
 		"authors": [
 			"Gion-andri",
 			"Kazu89",
-			"Terfili"
+			"Terfili",
+			"Amire80"
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "negina resumaziun da la midada",
-	"mobile-frontend-copyright": "Il text è disponibel sut la licenza <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Creative Commons Attribution/Share-Alike</a>; ulteriuras cundiziuns pon esser applitgablas. Detagls chattas ti en las <a href='https://foundation.wikimedia.org/wiki/Terms_of_Use'>cundiziuns d'utilisaziun</a>. Vichipedia è ina marca registrada da la <a href='https://wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, ina organisaziun senza finamira da profit.",
+	"mobile-frontend-copyright": "Il cuntegn è disponibel sut la licenza $1 sche betg inditgà autramain.",
 	"mobile-frontend-privacy-link-text": "Protecziun da datas",
 	"mobile-frontend-terms-text": "Cundiziuns d'utilisaziun",
 	"mobile-frontend-view": "Versiun mobila",

@@ -2,10 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Crucifunked",
-			"HackerPunki"
+			"HackerPunki",
+			"Amire80"
 		]
 	},
-	"mobile-frontend-copyright": "El testu está disponibri baju la <a href='http://en.wikipedia.org/wiki/{{SITENAME}}:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License'>Licéncia Creative Commons Attribution/Share-Alike</a>; cláusulas adicionalis puén apricalsi. Guipai <a href='https://foundation.wikimedia.org/wiki/Terms_of_Use'>Terms of Use</a> pa conocel más detallis. Güiquipeya es una marca rustria la <a href='https://wikimediafoundation.org/'>Wikimedia Foundation, Inc.</a>, una olganización sin ánimu de lucru.",
+	"mobile-frontend-copyright": "El continiu está disponibri bahu $1 a nu sel que se diga lo contrariu.",
 	"mobile-frontend-terms-text": "Términus de gastu",
 	"mobile-frontend-view": "Versión pa móvilis"
 }

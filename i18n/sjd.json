@@ -23,11 +23,14 @@
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "О̄дзэ кӣл",
 	"mobile-frontend-last-modified-date": "Лысст маӈьмусс вуэр воа̄йхувэ $1 $2 ч.",
 	"mobile-frontend-references-citation": "Ка̄ййв",
+	"mobile-frontend-settings-save": "Воа̄йхэз ле̄в пынньма.",
 	"mobile-frontend-view": "Мобильнэ ве̄рсья",
 	"mobile-frontend-view-desktop": "Коаммпьютэр ве̄рсья",
 	"mobile-frontend-user-page-create-owner-page-link-label": "Лыһкэ ӣжянт лыст",
 	"tag-mobile_edit": "пэ̄йель мобильнэ аппарат воа̄йхэсс",
 	"tag-advanced_mobile_edit": "пэ̄йель ко̄ммтна мобильнэ режим",
 	"tag-mobile_web_edit": "воа̄йхэсс мобильнэ ве̄рсьясьт",
-	"mobile-frontend-amc-outreach-no-thanks": "Эйй, па̄ссьпэ"
+	"mobile-frontend-user-pref-option": "Оаннӭй оа̄ссмуж",
+	"mobile-frontend-amc-outreach-no-thanks": "Эйй, па̄ссьпэ",
+	"prefs-mobile": "Мобильнэ оа̄ссмуж"
 }
