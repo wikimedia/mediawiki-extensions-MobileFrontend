@@ -5,6 +5,7 @@
 			"Kimberli Mäkäräinen (WMNO)",
 			"Lea-Christine Sara",
 			"Trondtr",
+			"WMNO sámeprošeakta",
 			"Yupik"
 		]
 	},
@@ -74,6 +75,8 @@
 	"mobile-frontend-editor-toload": "Rievdadanprográmma vižžo. Jus ain oainnát dán dieđu moatti sekundda geahčen, [$1 viečča siiddu ođđasit].",
 	"mf-expand-sections-description": "Viiddit álohii osiid standáriin sisdoallosiidduin.",
 	"mf-expand-sections-name": "Viiddit buot teakstaosiid.",
+	"mf-expand-sections-0-label": "Čiega standárdan",
+	"mf-expand-sections-1-label": "Čájet standárdan",
 	"mf-font-size-name": "Teaksta",
 	"mf-font-size-description": "Divo teavstta vai buorrána lohkan.",
 	"mf-font-size-small-label": "Dábálaš",
