@@ -8,8 +8,7 @@
 		"template": "node_modules/jsdoc-wmf-theme"
 	},
 	"plugins": [
-		"node_modules/jsdoc-wmf-theme/plugins/default",
-		"plugins/markdown"
+		"node_modules/jsdoc-wmf-theme/plugins/default"
 	],
 	"source": {
 		"include": [ "resources", "src" ]
@@ -29,6 +28,10 @@
 				"mw.Api": "https://doc.wikimedia.org/mediawiki-core/master/js/mw.Api.html",
 				"mw.message": "https://doc.wikimedia.org/mediawiki-core/master/js/mw.html#.message",
 				"mw.util": "https://doc.wikimedia.org/mediawiki-core/master/js/module-mediawiki.util.html"
+			},
+			"maintitle": "MobileFrontend",
+			"siteMap": {
+				"sections": true
 			}
 		}
 	}
