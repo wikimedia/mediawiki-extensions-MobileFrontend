@@ -1,5 +1,4 @@
 /* global $ */
-
 const
 	PageHTMLParser = require( './PageHTMLParser' );
 
@@ -12,7 +11,8 @@ let pageHTMLParser;
  * Because this depends on the presence of certain DOM elements, it
  * should only be called after the DOMContentLoaded event.
  *
- * @return {PageHTMLParser}
+ * @ignore
+ * @return {module:mobile.startup/PageHTMLParser}
  */
 function loadCurrentPageHTMLParser() {
 	if ( pageHTMLParser ) {

@@ -12,7 +12,7 @@ const formHeader = require( '../headers' ).formHeader,
  * @param {string} autocapitalize
  * @return {jQuery.Element}
  */
-function searchHeader( placeholderMsg, action, onInput, defaultSearchPage, autocapitalize ) {
+module.exports = function searchHeader( placeholderMsg, action, onInput, defaultSearchPage, autocapitalize ) {
 	return formHeader(
 		new SearchHeaderView( {
 			placeholderMsg,
@@ -26,6 +26,4 @@ function searchHeader( placeholderMsg, action, onInput, defaultSearchPage, autoc
 		],
 		false
 	);
-}
-
-module.exports = searchHeader;
+};

@@ -4,8 +4,10 @@ const
 	mfExtend = require( './mfExtend' );
 
 /**
+ * Render CSS version of Codex message component.
+ *
  * @class MessageBox
- * @extends View
+ * @extends module:mobile.startup/View
  */
 function MessageBox() {
 	View.apply( this, arguments );
@@ -21,7 +23,7 @@ mfExtend( MessageBox, View, {
 	/**
 	 * @memberof MessageBox
 	 * @instance
-	 * @mixes View#defaults
+	 * @mixes module:mobile.startup/View#defaults
 	 * @property {Object} defaults Default options hash.
 	 * @property {string} [defaults.heading] heading to show along with message (text)
 	 * @property {string} defaults.msg message to show (html)

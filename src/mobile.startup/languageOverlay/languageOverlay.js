@@ -22,6 +22,12 @@ function loadLanguageSearcher() {
 			variants: data.variants,
 			showSuggestedLanguages: true,
 			deviceLanguage: getDeviceLanguage( navigator ),
+			/**
+			 * Stable for use inside ContentTranslation.
+			 * @event ~'mobileFrontend.languageSearcher.onOpen'
+			 * @memberof Hooks
+			 * @param {Hooks~LanguageSearcher} searcher
+			 */
 			onOpen: ( searcher ) => mw.hook( 'mobileFrontend.languageSearcher.onOpen' ).fire( searcher )
 		} );
 	}, () =>
@@ -33,9 +39,11 @@ function loadLanguageSearcher() {
 }
 
 /**
- * Factory function that returns a language featured instance of an Overlay
+ * Factory function that returns a language featured instance of an Overlay.
  *
- * @return {Overlay}
+ * @function
+ * @memberof module:mobile.startup/languages
+ * @return {module:mobile.startup/Overlay}
  */
 function languageOverlay() {
 	return Overlay.make(

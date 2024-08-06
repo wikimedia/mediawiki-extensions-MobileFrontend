@@ -4,9 +4,11 @@ const
 	extendSearchParams = require( '../mobile.startup/extendSearchParams' );
 
 /**
- * @class WatchListGateway
+ * API for interacting with watchlist.
+ *
  * @param {mw.Api} api
  * @param {string} lastTitle of page listed in Watchlist to be used as a continuation parameter
+ * @private
  */
 function WatchListGateway( api, lastTitle ) {
 	this.api = api;

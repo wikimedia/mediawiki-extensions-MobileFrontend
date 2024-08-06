@@ -1,3 +1,8 @@
+/**
+ * Internal for use inside Minerva only. See {@link module:mobile.startup} for access.
+ *
+ * @module mobile.startup/mediaViewer
+ */
 const m = require( '../moduleLoaderSingleton' ),
 	promisedView = require( '../promisedView' ),
 	util = require( '../util' ),
@@ -8,8 +13,10 @@ const m = require( '../moduleLoaderSingleton' ),
 /**
  * Produce an overlay for mediaViewer
  *
+ * @name overlay
+ * @memberof module:mobile.startup/mediaViewer
  * @param {Object} options
- * @return {Overlay}
+ * @return {module:mobile.startup/Overlay}
  */
 function mediaViewerOverlay( options ) {
 	const overlay = Overlay.make(

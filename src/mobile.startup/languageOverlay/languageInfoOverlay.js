@@ -27,10 +27,13 @@ function loadLanguageInfoSearcher( languageInfo, showSuggestedLanguages ) {
 /**
  * Factory function that returns a language info featured instance of an Overlay
  *
- * @param {LanguageInfo} languageInfo
+ * @ignore
+ * @function
+ * @memberof module:mobile.startup/languages
+ * @param {module:mobile.startup/languages~LanguageInfo} languageInfo
  * @param {boolean} showSuggestedLanguages If the suggested languages section
  * should be rendered.
- * @return {Overlay}
+ * @return {module:mobile.startup/Overlay}
  */
 function languageInfoOverlay( languageInfo, showSuggestedLanguages ) {
 	return Overlay.make(

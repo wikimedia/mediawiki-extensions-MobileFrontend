@@ -11,13 +11,15 @@ const
  * Callback intended to allow the client run extra logic (e.g. show a modal)
  * after the drawer is dismissed.
  *
- * @callback onBeforeHide
+ * @callback module:mobile.startup~onBeforeHide
  */
 
 /**
+ * @ignore
+ * @memberof module:mobile.startup
  * @param {string} action Used by the drawer to notify promoCampaign when the
  * action has become 'ineligible' (e.g. after enabling or dismissing the drawer).
- * @param {PromoCampaign} promoCampaign
+ * @param {module:mobile.startup/AmcOutreach~PromoCampaign} promoCampaign
  * @param {mw.message} mwMessage Used for i18n
  * @param {mw.util} mwUtil Used to determine POST url for the enable form
  * @param {Toast} toast Displays success message after user submits enable form
@@ -27,9 +29,9 @@ const
  * AMC
  * @param {string} [returnToQuery] Optional query params to add to redirected
  * URL after user enables AMC
- * @return {Drawer} Returns the drawer that is shown
+ * @return {module:mobile.startup/Drawer} Returns the drawer that is shown
  */
-function amcOutreachDrawer(
+module.exports = function amcOutreachDrawer(
 	action,
 	promoCampaign,
 	mwMessage,
@@ -91,6 +93,4 @@ function amcOutreachDrawer(
 			onBeforeHide();
 		}
 	} );
-}
-
-module.exports = amcOutreachDrawer;
+};

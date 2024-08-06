@@ -13,6 +13,8 @@ const browser = require( './Browser' ).getSingleton(),
  * @prop {boolean} expanded True if section is opened, false if closed.
  * @prop {Page} page
  * @prop {jQuery.Object} $heading
+ * @memberof module:mobile.startup
+ * @ignore
  */
 
 /**
@@ -42,6 +44,7 @@ function Toggler( options ) {
  *
  * @param {Page} page
  * @return {Object} representing open sections
+ * @ignore
  */
 function getExpandedSections( page ) {
 	const expandedSections = mw.storage.session.getObject( 'expandedSections' ) || {};
@@ -53,6 +56,7 @@ function getExpandedSections( page ) {
  * Save expandedSections to sessionStorage
  *
  * @param {Object} expandedSections
+ * @ignore
  */
 function saveExpandedSections( expandedSections ) {
 	mw.storage.session.setObject(
@@ -66,6 +70,7 @@ function saveExpandedSections( expandedSections ) {
  *
  * @param {jQuery.Object} $heading - A heading belonging to a section
  * @param {Page} page
+ * @ignore
  */
 function storeSectionToggleState( $heading, page ) {
 	const headline = $heading.find( '.mw-headline' ).attr( 'id' ),
@@ -89,6 +94,7 @@ function storeSectionToggleState( $heading, page ) {
  * @param {Toggler} toggler
  * @param {jQuery.Object} $container
  * @param {Page} page
+ * @ignore
  */
 function expandStoredSections( toggler, $container, page ) {
 	const expandedSections = getExpandedSections( page ),
@@ -185,8 +191,10 @@ Toggler.prototype.toggle = function ( $heading, fromSaved ) {
 		/**
 		 * Global event emitted after a section has been toggled
 		 *
-		 * @event section-toggled
+		 * @event ~section-toggled
 		 * @type {ToggledEvent}
+		 * @memberof module:mobile.startup~Toggler
+		 * @ignore
 		 */
 
 		self.eventBus.emit( 'section-toggled', {
@@ -194,8 +202,10 @@ Toggler.prototype.toggle = function ( $heading, fromSaved ) {
 			$heading
 		} );
 		/**
-		 * @event mobileFrontend.section-toggled
-		 * @internal for use inside ExternalGuidance.
+		 * Internal for use inside ExternalGuidance.
+		 *
+		 * @event ~'mobileFrontend.section-toggled'
+		 * @memberof Hooks
 		 */
 		mw.hook( 'mobileFrontend.section-toggled' ).fire( {
 			expanded: wasExpanded,
@@ -214,6 +224,7 @@ Toggler.prototype.toggle = function ( $heading, fromSaved ) {
  *
  * @param {Toggler} toggler instance.
  * @param {jQuery.Object} $heading
+ * @ignore
  */
 function enableKeyboardActions( toggler, $heading ) {
 	$heading.on( 'keypress', ( ev ) => {

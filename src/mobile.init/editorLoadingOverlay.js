@@ -8,12 +8,13 @@ const
 /**
  * Like loadingOverlay(), but with a fake editor toolbar instead of the spinner.
  *
+ * @private
  * @param {Function} afterShow Callback which runs after overlay is shown
  * @param {Function} afterHide Callback which runs after overlay is hidden
  * @param {Function} [loadBasicEditor] Callback for the "Use basic editor" button
- * @return {Overlay}
+ * @return {module:mobile.startup/Overlay}
  */
-function editorLoadingOverlay( afterShow, afterHide, loadBasicEditor ) {
+module.exports = function editorLoadingOverlay( afterShow, afterHide, loadBasicEditor ) {
 	let timeout;
 	const
 		$fakeToolbar = fakeToolbar(),
@@ -84,6 +85,4 @@ function editorLoadingOverlay( afterShow, afterHide, loadBasicEditor ) {
 	} );
 
 	return overlay;
-}
-
-module.exports = editorLoadingOverlay;
+};

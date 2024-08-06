@@ -10,7 +10,8 @@ const
  * using Button.js and IconButton.js will need to be updated to reflect this
  *
  * @class Button
- * @extends View
+ * @private
+ * @extends module:mobile.startup/View
  *
  * @param {Object} options Configuration options
  */
@@ -58,7 +59,7 @@ mfExtend( Button, View, {
 	/**
 	 * @memberof Button
 	 * @instance
-	 * @mixes View#defaults
+	 * @mixes module:mobile.startup/View#defaults
 	 * @property {Object} defaults Default options hash.
 	 * @property {string} defaults.tagName The name of the tag in which the button is wrapped.
 	 * @property {boolean} defaults.block is stacked button

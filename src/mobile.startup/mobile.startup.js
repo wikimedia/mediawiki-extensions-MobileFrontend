@@ -28,78 +28,113 @@ const amcOutreach = require( './amcOutreach/amcOutreach' );
 
 // Expose chunk to temporary variable which will be deleted and exported via ResourceLoader
 // package inside mobile.startup.exports.
+
+/**
+ * The main library for accessing MobileFrontend's stable APIs.
+ *
+ * @module mobile.startup
+ */
 mw._mobileFrontend = {
 	/**
-	 * @internal for use inside Minerva only.
+	 * Internal for use inside Minerva only
+	 *
+	 * @memberof module:mobile.startup
+	 * @type module:mobile.startup/AmcOutreach
 	 */
+
 	amcOutreach,
-	/**
-	 * @internal for use inside GrowthExperiments only.
-	 */
+	// Internal for use inside GrowthExperiments only.
 	overlayHeader: headers.header,
 	/**
-	 * @internal for use inside Minerva, GrowthExperiments only.
+	 * Internal for use inside Minerva, GrowthExperiments only.
+	 * @type module:mobile.startup/Drawer
 	 */
 	Drawer,
-	/**
-	 * @internal for use inside Minerva only.
-	 */
+	// Internal for use inside Minerva only.
 	CtaDrawer,
 	/**
-	 * @internal for use inside Minerva, ExternalGuidance and Echo only.
+	 * Internal for use inside Minerva, ExternalGuidance and Echo only.
+	 *
+	 * @memberof module:mobile.startup
+	 * @type module:mobile.startup/View
 	 */
 	View,
 	/**
-	 * @internal for use inside Minerva, ExternalGuidance,
+	 * Internal for use inside Minerva, ExternalGuidance,
 	 *  GrowthExperiments and Echo only.
+	 *
+	 * @memberof module:mobile.startup
+	 * @type module:mobile.startup/Overlay
 	 */
 	Overlay,
 	/**
-	 * @internal for use inside Minerva only.
+	 * Internal for use inside Minerva only.
+	 *
+	 * @memberof module:mobile.startup
+	 * @type module:mobile.startup/PageHTMLParser
 	 */
 	currentPageHTMLParser,
 	/**
-	 * @internal for use inside Minerva, ExternalGuidance and Echo only.
+	 * Internal for use inside Minerva, ExternalGuidance and Echo only.
+	 *
+	 * @memberof module:mobile.startup
+	 * @return {module:mobile.startup/OverlayManager}
 	 */
 	getOverlayManager: () => {
 		return OverlayManager.getSingleton();
 	},
 	/**
-	 * @internal for use inside Minerva only.
+	 * Internal for use inside Minerva only.
+	 * @type module:mobile.startup/Page
+	 * @memberof module:mobile.startup
 	 */
 	currentPage,
 	/**
-	 * @internal for use inside Minerva only.
+	 * Internal for use inside Minerva only.
+	 * @type module:mobile.startup/PageHTMLParser
+	 * @memberof module:mobile.startup
 	 */
 	PageHTMLParser,
 	/**
-	 * @internal for use inside Minerva only.
+	 * Internal for use inside Minerva only.
+	 * @type module:mobile.startup/Icon
+	 * @memberof module:mobile.startup
 	 */
 	spinner: icons.spinner,
 	/**
-	 * @internal for use inside Minerva only.
+	 * Internal for use inside Minerva only.
+	 *
+	 * @memberof module:mobile.startup
+	 * @type module:mobile.startup/mediaViewer
 	 */
 	mediaViewer,
 	/**
-	 * @internal for use inside Minerva only.
+	 * Internal for use inside Minerva only.
+	 *
+	 * @memberof module:mobile.startup
+	 * @type module:mobile.startup/references
 	 */
 	references,
 	/**
-	 * @internal for use inside Minerva only.
+	 * Internal for use inside Minerva only.
+	 *
+	 * @memberof module:mobile.startup
+	 * @type module:mobile.startup/search
 	 */
 	search,
 	/**
-	 * @internal for use inside Minerva only.
+	 * Internal for use inside Minerva only.
+	 *
+	 * @memberof module:mobile.startup
+	 * @type module:mobile.startup/time
 	 */
 	time,
-	/**
-	 * @internal for use inside Echo, GrowthExperiments only.
-	 */
+	// Internal for use inside Echo, GrowthExperiments only.
 	promisedView,
 	/**
-	 * Loads all images on the page.
+	 * Loads all images on the page, stable to call.
 	 *
-	 * @stable for skins to call
+	 * @memberof module:mobile.startup
 	 * @return {jQuery.Deferred}
 	 */
 	loadAllImagesInPage: () => {
@@ -108,27 +143,46 @@ mw._mobileFrontend = {
 		);
 	},
 	/**
-	 * Show a notification on page reload.
+	 * Show a notification on page reload, internal for Minerva
 	 *
+	 * @memberof module:mobile.startup
 	 * @param {string} msg
-	 * @internal for Minerva
 	 * @return {jQuery.Deferred}
 	 */
 	notifyOnPageReload: ( msg ) => showOnPageReload( msg ),
 	/**
-	 * @internal for use inside VisualEditor
+	 * Internal for use inside VisualEditor
+	 *
+	 * @memberof module:mobile.startup
+	 * @return {string|undefined}
 	 */
 	license() {
 		const skin = Skin.getSingleton();
 		return skin.getLicenseMsg();
 	},
 	/**
-	 * @internal for use inside Minerva
+	 * Internal for use inside Minerva. See {@link module:mobile.startup} for access.
+	 *
+	 * @module mobile.startup/languages
+	 */
+	/**
+	 * Access to language overlays for usage inside Minerva only.
+	 *
+	 * @memberof module:mobile.startup
+	 * @type module:mobile.startup/languages
 	 */
 	languages: {
 		languageOverlay,
+		/**
+		 * Shows information about suggested languages.
+		 *
+		 * @memberof module:mobile.startup/languages
+		 * @param {mw.Api} api
+		 * @param {boolean} showSuggestedLanguage If the suggested languages section
+		 * should be rendered.
+		 */
 		languageInfoOverlay( api, showSuggestedLanguage ) {
-			languageInfoOverlay( new LanguageInfo( api ), showSuggestedLanguage );
+			return languageInfoOverlay( new LanguageInfo( api ), showSuggestedLanguage );
 		}
 	}
 };

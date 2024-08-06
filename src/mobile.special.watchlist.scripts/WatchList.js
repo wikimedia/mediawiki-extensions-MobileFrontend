@@ -18,6 +18,7 @@ const
  * @fires watch
  * @param {Object} params Configuration options
  * @param {OO.EventEmitter} params.eventBus Object used to listen for scroll:throttled events
+ * @private
  */
 function WatchList( params ) {
 	let lastTitle;

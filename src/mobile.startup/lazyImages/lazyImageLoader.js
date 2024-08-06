@@ -3,6 +3,7 @@ const
 	placeholderClass = 'lazy-image-placeholder';
 
 /**
+ * @ignore
  * @param {HTMLElement} root
  * @return {HTMLElement[]}
  */
@@ -15,6 +16,7 @@ function queryPlaceholders( root ) {
 /**
  * Load an image on demand
  *
+ * @ignore
  * @param {HTMLElement[]} placeholders a list of images that have not been loaded.
  * @return {jQuery.Deferred}
  */
@@ -27,6 +29,7 @@ function loadImages( placeholders ) {
 /**
  * Load an image on demand
  *
+ * @ignore
  * @param {HTMLElement} placeholder
  * @return {{promise: jQuery.Deferred<'load'|'error'>, image: HTMLImageElement}}
  */

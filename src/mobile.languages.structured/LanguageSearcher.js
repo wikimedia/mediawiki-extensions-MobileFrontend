@@ -5,11 +5,11 @@ const
 	mfExtend = require( '../mobile.startup/mfExtend' );
 
 /**
- * Overlay displaying a structured list of languages for a page
- *
- * @class LanguageSearcher
- * @extends View
- *
+ * @class Hooks~LanguageSearcher
+ * @classdesc Overlay displaying a structured list of languages for a page, only accessible via
+ * the  {@link Hooks~'mobileFrontend.languageSearcher.onOpen' mobileFrontend.languageSearcher.onOpen hook}.
+ * @hideconstructor
+ * @extends module:mobile.startup/View
  * @param {Object} props Configuration options
  * @param {Object[]} props.languages list of language objects as returned by the API
  * @param {Array|boolean} props.variants language variant objects
@@ -142,7 +142,8 @@ mfExtend( LanguageSearcher, View, {
 	 * Method that can be called outside MF extension to render
 	 * a banner inside the language overlay.
 	 *
-	 * @stable for use inside ContentTranslation
+	 * Stable for use inside ContentTranslation
+	 * @memberof LanguageSearcher
 	 * @param {string} bannerHTML
 	 * @param {string} firstMissingLanguage
 	 */
@@ -166,8 +167,10 @@ mfExtend( LanguageSearcher, View, {
 		const $link = this.$el.find( ev.currentTarget ),
 			lang = $link.attr( 'lang' );
 		/**
-		 * @event mobileFrontend.languageSearcher.linkClick
-		 * @internal for use in GrowthExperiments only.
+		 * Internal for use in GrowthExperiments only.
+		 *
+		 * @event ~'mobileFrontend.languageSearcher.linkClick'
+		 * @memberof Hooks
 		 */
 		mw.hook( 'mobileFrontend.languageSearcher.linkClick' ).fire( lang );
 		langUtil.saveLanguageUsageCount( lang, langUtil.getFrequentlyUsedLanguages() );
@@ -229,8 +232,10 @@ mfExtend( LanguageSearcher, View, {
 				// Fire with the search query and the DOM element corresponding to no-results
 				// message so that it can be customized in hook handler
 				/**
-				 * @event mobileFrontend.editorOpening
-				 * @internal for use in ContentTranslation only.
+				 * Internal for use in ContentTranslation only.
+				 *
+				 * @event ~'mobileFrontend.editorOpening'
+				 * @memberof Hooks
 				 */
 				mw.hook( 'mobileFrontend.languageSearcher.noresults' )
 					.fire( searchQuery, this.$emptyResultsSection.get( 0 ), searchOrigin );

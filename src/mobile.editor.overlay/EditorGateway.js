@@ -4,8 +4,6 @@ const util = require( '../mobile.startup/util' ),
 /**
  * API that helps save and retrieve page content
  *
- * @class EditorGateway
- *
  * @param {Object} options Configuration options
  * @param {mw.Api} options.api an Api to use.
  * @param {string} options.title the title to edit
@@ -15,6 +13,7 @@ const util = require( '../mobile.startup/util' ),
  * @param {string} [options.preload] the name of a page to preload into the editor
  * @param {Array} [options.preloadparams] parameters to prefill into the preload content
  * @param {string} [options.editintro] edit intro to add to notices
+ * @private
  */
 function EditorGateway( options ) {
 	this.api = options.api;

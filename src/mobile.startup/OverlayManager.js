@@ -14,7 +14,7 @@ const MANAGED_STATE = 'MobileFrontend OverlayManager was here!';
  * This allows overlays to function like real pages, with similar browser back/forward
  * and refresh behavior.
  *
- * @class OverlayManager
+ * @class module:mobile.startup/OverlayManager
  * @param {Router} router
  * @param {Element} container where overlays should be managed
  */
@@ -34,7 +34,8 @@ function OverlayManager( router, container ) {
 /**
  * Attach an event to the overlays hide event
  *
- * @param {Overlay} overlay
+ * @param {module:mobile.startup/Overlay} overlay
+ * @private
  */
 function attachHideEvent( overlay ) {
 	overlay.on( 'hide', () => overlay.emit( '_om_hide' ) );
@@ -48,7 +49,7 @@ OverlayManager.prototype = {
 	 * on an overlay that it itself managed by the OverlayManager.
 	 * MUST be called when the stack is not empty.
 	 *
-	 * @memberof OverlayManager
+	 * @memberof module:mobile.startup/OverlayManager
 	 * @instance
 	 * @private
 	 */
@@ -78,10 +79,10 @@ OverlayManager.prototype = {
 	/**
 	 * Attach overlay to DOM
 	 *
-	 * @memberof OverlayManager
+	 * @memberof module:mobile.startup/OverlayManager
 	 * @instance
 	 * @private
-	 * @param {Overlay} overlay to attach
+	 * @param {module:mobile.startup/Overlay} overlay to attach
 	 */
 	_attachOverlay( overlay ) {
 		if ( !overlay.$el.parents().length ) {
@@ -91,10 +92,10 @@ OverlayManager.prototype = {
 	/**
 	 * Show the overlay and bind the '_om_hide' event to _onHideOverlay.
 	 *
-	 * @memberof OverlayManager
+	 * @memberof module:mobile.startup/OverlayManager
 	 * @instance
 	 * @private
-	 * @param {Overlay} overlay to show
+	 * @param {module:mobile.startup/Overlay} overlay to show
 	 */
 	_show( overlay ) {
 		// Mark the state so that if the page is refreshed, we don't generate an extra history entry
@@ -115,10 +116,10 @@ OverlayManager.prototype = {
 	/**
 	 * Hide overlay
 	 *
-	 * @memberof OverlayManager
+	 * @memberof module:mobile.startup/OverlayManager
 	 * @instance
 	 * @private
-	 * @param {Overlay} overlay to hide
+	 * @param {module:mobile.startup/Overlay} overlay to hide
 	 * @param {Function} onBeforeExitCancel to pass to onBeforeExit
 	 * @return {boolean} Whether the overlay has been hidden
 	 */
@@ -151,7 +152,7 @@ OverlayManager.prototype = {
 	/**
 	 * Show match's overlay if match is not null.
 	 *
-	 * @memberof OverlayManager
+	 * @memberof module:mobile.startup/OverlayManager
 	 * @instance
 	 * @private
 	 * @param {Object|null} match Object with factory function's result. null if no match.
@@ -181,7 +182,7 @@ OverlayManager.prototype = {
 	/**
 	 * A callback for Router's `route` event.
 	 *
-	 * @memberof OverlayManager
+	 * @memberof module:mobile.startup/OverlayManager
 	 * @instance
 	 * @private
 	 * @param {jQuery.Event} ev Event object.
@@ -230,7 +231,7 @@ OverlayManager.prototype = {
 	 * Check if a given path matches one of the existing entries and
 	 * remove it from the stack.
 	 *
-	 * @memberof OverlayManager
+	 * @memberof module:mobile.startup/OverlayManager
 	 * @instance
 	 * @private
 	 * @param {string} path Path (hash) to check.
@@ -312,7 +313,7 @@ OverlayManager.prototype = {
 	 *         return new HiOverlay( { name: name } ) );
 	 *     } );
 	 *
-	 * @memberof OverlayManager
+	 * @memberof module:mobile.startup/OverlayManager
 	 * @instance
 	 * @param {RegExp|string} route definition that can be a regular
 	 * expression (optionally with parameters) or a string literal.
@@ -359,7 +360,7 @@ OverlayManager.prototype = {
 	 * URL. This is useful for when you want to switch overlays, but don't want to
 	 * change the back button or close box behavior.
 	 *
-	 * @memberof OverlayManager
+	 * @memberof module:mobile.startup/OverlayManager
 	 * @instance
 	 * @param {Object} overlay The overlay to display
 	 */
@@ -380,8 +381,8 @@ OverlayManager.prototype = {
 /**
  * Retrieve a singleton instance using 'mediawiki.router'.
  *
- * @memberof OverlayManager
- * @return {OverlayManager}
+ * @memberof module:mobile.startup/OverlayManager
+ * @return {module:mobile.startup/OverlayManager}
  */
 OverlayManager.getSingleton = function () {
 	if ( !overlayManager ) {

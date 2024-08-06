@@ -3,6 +3,7 @@ const
 	BlockMessageDetails = require( './BlockMessageDetails' );
 
 /**
+ * @private
  * @typedef {Object} BlockMessageOptions
  * @property {number} blockId representing the block
  * @property {boolean} partial is this a partial block?
@@ -19,8 +20,9 @@ const
  * This creates the drawer at the bottom of the screen that appears when a
  * blocked user tries to edit.
  *
+ * @private
  * @param {BlockMessageOptions} props
- * @return {Drawer}
+ * @return {module:mobile.startup/Drawer}
  */
 module.exports = function blockMessageDrawer( props ) {
 	const blockDrawer = new Drawer( {

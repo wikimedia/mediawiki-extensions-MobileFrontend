@@ -1,5 +1,4 @@
 /* global $ */
-
 const
 	Page = require( './Page' );
 
@@ -11,6 +10,7 @@ let page;
  * Because this depends on the presence of certain DOM elements, it
  * should only be called after the DOMContentLoaded event.
  *
+ * @ignore
  * @return {Page}
  */
 function loadCurrentPage() {

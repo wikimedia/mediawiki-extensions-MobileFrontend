@@ -7,10 +7,9 @@ const
 	mfExtend = require( './mfExtend' );
 
 /**
- * Mobile modal window
- *
- * @class Overlay
- * @extends View
+ * @class module:mobile.startup/Overlay
+ * @classdesc Mobile modal window
+ * @extends module:mobile.startup/View
  * @uses Icon
  * @uses Button
  * @fires Overlay#hide
@@ -77,7 +76,7 @@ mfExtend( Overlay, View, {
 	/**
 	 * Shows the spinner right to the input field.
 	 *
-	 * @memberof Overlay
+	 * @memberof module:mobile.startup/Overlay
 	 * @instance
 	 * @method
 	 */
@@ -88,7 +87,7 @@ mfExtend( Overlay, View, {
 	/**
 	 * Hide the spinner near to the input field.
 	 *
-	 * @memberof Overlay
+	 * @memberof module:mobile.startup/Overlay
 	 * @instance
 	 * @method
 	 */
@@ -98,7 +97,7 @@ mfExtend( Overlay, View, {
 
 	/**
 	 * @inheritdoc
-	 * @memberof Overlay
+	 * @memberof module:mobile.startup/Overlay
 	 * @instance
 	 */
 	postRender() {
@@ -122,7 +121,7 @@ mfExtend( Overlay, View, {
 	/**
 	 * ClickBack event handler
 	 *
-	 * @memberof Overlay
+	 * @memberof module:mobile.startup/Overlay
 	 * @instance
 	 * @param {Object} ev event object
 	 */
@@ -143,7 +142,7 @@ mfExtend( Overlay, View, {
 	/**
 	 * Attach overlay to current view and show it.
 	 *
-	 * @memberof Overlay
+	 * @memberof module:mobile.startup/Overlay
 	 * @instance
 	 */
 	show() {
@@ -168,7 +167,7 @@ mfExtend( Overlay, View, {
 	 * Detach the overlay from the current view
 	 * Should not be overriden as soon to be deprecated.
 	 *
-	 * @memberof Overlay
+	 * @memberof module:mobile.startup/Overlay
 	 * @instance
 	 * @final
 	 * @return {boolean} Whether the overlay was successfully hidden or not
@@ -202,7 +201,7 @@ mfExtend( Overlay, View, {
 	 * Can't use jQuery's hide() and show() because show() sets display: block.
 	 * And we want display: table for headers.
 	 *
-	 * @memberof Overlay
+	 * @memberof module:mobile.startup/Overlay
 	 * @instance
 	 * @protected
 	 * @param {string} className CSS selector to show
@@ -216,12 +215,12 @@ mfExtend( Overlay, View, {
 /**
  * Factory method for an overlay with a single child
  *
- * @memberof Overlay
+ * @memberof module:mobile.startup/Overlay
  * @instance
  * @protected
  * @param {Object} options
- * @param {View} view
- * @return {Overlay}
+ * @param {module:mobile.startup/View} view
+ * @return {module:mobile.startup/Overlay}
  */
 Overlay.make = function ( options, view ) {
 	const overlay = new Overlay( options );

@@ -106,7 +106,7 @@ function getPreferredEditor() {
  * @ignore
  * @param {Page} page The page to edit.
  * @param {Skin} skin
- * @param {PageHTMLParser} currentPageHTMLParser
+ * @param {module:mobile.startup/PageHTMLParser} currentPageHTMLParser
  * @param {Router} router
  */
 function setupEditor( page, skin, currentPageHTMLParser, router ) {
@@ -279,7 +279,6 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 		/**
 		 * Load source editor
 		 *
-		 * @private
 		 * @ignore
 		 * @method
 		 * @return {jQuery.Promise} Promise resolved with the editor overlay
@@ -289,8 +288,10 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 			logInit( 'wikitext' );
 			// Inform other interested code that we're loading the editor
 			/**
-			 * @event mobileFrontend.editorOpening
-			 * @internal for use in GrowthExperiments only.
+			 * Internal for use in GrowthExperiments only.
+			 *
+			 * @event ~'mobileFrontend.editorOpening'
+			 * @memberof Hooks
 			 */
 			mw.hook( 'mobileFrontend.editorOpening' ).fire();
 
@@ -312,8 +313,10 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 			logInit( 'visualeditor' );
 			// Inform other interested code that we're loading the editor
 			/**
-			 * @event mobileFrontend.editorOpening
-			 * @internal for use in GrowthExperiments only.
+			 * Internal for use in GrowthExperiments only.
+			 *
+			 * @event ~'mobileFrontend.editorOpening'
+			 * @memberof Hooks
 			 */
 			mw.hook( 'mobileFrontend.editorOpening' ).fire();
 
@@ -470,7 +473,7 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
  *
  * @method
  * @ignore
- * @param {PageHTMLParser} currentPageHTMLParser
+ * @param {module:mobile.startup/PageHTMLParser} currentPageHTMLParser
  */
 function hideSectionEditIcons( currentPageHTMLParser ) {
 	currentPageHTMLParser.$el.find( '.mw-editsection' ).hide();
@@ -519,7 +522,7 @@ function bindEditLinksLoginDrawer( router ) {
  * @method
  * @ignore
  * @param {Page} currentPage
- * @param {PageHTMLParser} currentPageHTMLParser
+ * @param {module:mobile.startup/PageHTMLParser} currentPageHTMLParser
  * @param {Skin} skin
  * @param {Router} router
  */

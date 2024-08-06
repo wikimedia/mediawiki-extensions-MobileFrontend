@@ -5,9 +5,8 @@ const util = require( './util.js' ),
 /**
  * Builds a section of a page
  *
- * @class Section
- * @extends View
- *
+ * @extends module:mobile.startup/View
+ * @ignore
  * @param {Object} options Configuration options
  */
 function Section( options ) {
@@ -32,7 +31,7 @@ mfExtend( Section, View, {
 	/**
 	 * @memberof Section
 	 * @instance
-	 * @mixes View#defaults
+	 * @mixes module:mobile.startup/View#defaults
 	 * @property {Object} defaults Default options hash.
 	 * @property {string} defaults.text Section text.
 	 */

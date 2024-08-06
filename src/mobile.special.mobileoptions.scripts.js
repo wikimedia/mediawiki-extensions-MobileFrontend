@@ -20,6 +20,7 @@ const clientPrefs = require( '@wikimedia/mediawiki.skins.clientpreferences' ),
 /**
  * Notifies the user that settings were asynchronously saved.
  *
+ * @private
  * @param {boolean} [isPending] if set toast will show after page has been reloaded.
  */
 function notify( isPending ) {
@@ -32,6 +33,7 @@ function notify( isPending ) {
 
 let api;
 /**
+ * @ignore
  * @param {Object<string,string|number>} options
  * @return {JQuery.Promise<Object>}
  */
@@ -46,6 +48,7 @@ function saveOptions( options ) {
 /**
  * Adds a font changer field to the form
  *
+ * @private
  * @param {jQuery.Object} $form
  * @param {Record<string,ClientPreference>} clientPreferences
  * @return {Promise<Node>}
@@ -62,6 +65,7 @@ function addClientPreferencesToForm( $form, clientPreferences ) {
  * Helper method to infuse checkbox elements with OO magic
  * Additionally it applies all known hacks to make it mobile friendly
  *
+ * @private
  * @param {Object[]} toggleObjects an array of toggle objects to infuse
  * @param {jQuery.Object} $form form to submit when there is interaction with toggle
  */
@@ -118,6 +122,7 @@ function infuseToggles( toggleObjects, $form ) {
 /**
  * Add features, that depends on localStorage, such as "expand all sections" or "fontchanger".
  * The checkbox is used for turning on/off expansion of all sections on page load.
+ * @private
  */
 function initMobileOptions() {
 	const $form = $( '#mobile-options' ),

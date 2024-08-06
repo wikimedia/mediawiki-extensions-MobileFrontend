@@ -6,6 +6,7 @@ let browser;
  * Memoize a class method. Caches the result of the method based on the
  * arguments. Instances do not share a cache.
  *
+ * @private
  * @param {Function} method Method to be memoized
  * @return {Function}
  */
@@ -32,6 +33,7 @@ function memoize( method ) {
  * Representation of user's current browser
  *
  * @class Browser
+ * @private
  * @param {string} ua the user agent of the current browser
  * @param {jQuery.Object} $container an element to associate with the Browser object
  */

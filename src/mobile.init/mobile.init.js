@@ -2,9 +2,7 @@
 // (see https://bugzilla.wikimedia.org/show_bug.cgi?id=44264)
 /**
  * mobileFrontend namespace
- *
- * @class mw.mobileFrontend
- * @singleton
+ * @private
  */
 let url;
 
@@ -47,6 +45,7 @@ function apply2( fn1, fn2 ) {
  * resize event throttled to 200 ms.
  *
  * @event resize
+ * @memberof window
  */
 
 /**
@@ -55,6 +54,7 @@ function apply2( fn1, fn2 ) {
  * scroll event throttled to 200 ms.
  *
  * @event scroll
+ * @memberof window
  */
 
 $window

@@ -5,10 +5,9 @@ const
 	IconButton = require( './IconButton' );
 
 /**
- * A {@link View} that pops up from the bottom of the screen.
- *
- * @class Drawer
- * @extends View
+ * @classdesc A {@link View} that pops up from the bottom of the screen.
+ * @class module:mobile.startup/Drawer
+ * @extends module:mobile.startup/View
  * @final
  * @param {Object} props
  * @param {string} [props.className] Additional CSS classes to add
@@ -56,7 +55,7 @@ mfExtend( Drawer, View, {
 	/**
 	 * Shows panel after a slight delay
 	 *
-	 * @memberof View
+	 * @memberof module:mobile.startup/Drawer
 	 * @instance
 	 * @method
 	 * @return {jQuery.Promise}
@@ -86,7 +85,7 @@ mfExtend( Drawer, View, {
 	/**
 	 * Hides panel
 	 *
-	 * @memberof View
+	 * @memberof module:mobile.startup/Drawer
 	 * @instance
 	 */
 	hide() {
@@ -106,7 +105,7 @@ mfExtend( Drawer, View, {
 
 	/**
 	 * @inheritdoc
-	 * @memberof Drawer
+	 * @memberof module:mobile.startup/Drawer
 	 * @instance
 	 */
 	postRender() {

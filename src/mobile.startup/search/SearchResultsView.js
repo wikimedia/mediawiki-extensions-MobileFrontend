@@ -6,8 +6,9 @@ const View = require( '../View' ),
 	util = require( '../util' );
 
 /**
- * @class SearchResultsView
- * @extends View
+ * Render search results.
+ *
+ * @extends module:mobile.startup/View
  * @param {Object} options
  * @param {string} options.searchContentLabel actionable label to tell the user they can "search
  *  within pages rather than doing a full text search

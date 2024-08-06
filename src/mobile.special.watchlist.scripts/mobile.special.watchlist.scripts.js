@@ -4,6 +4,7 @@ const WatchList = require( './WatchList' ),
 
 /**
  * Initialises JavaScript on Special:Watchlist
+ * @private
  */
 function init() {
 	const $watchlist = $( 'ul.mw-mf-watchlist-page-list' );

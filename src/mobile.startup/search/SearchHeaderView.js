@@ -3,7 +3,7 @@ const util = require( '../util' ),
 	IconButton = require( '../IconButton' );
 
 /**
- * @extends View
+ * @extends module:mobile.startup/View
  */
 class SearchHeaderView extends View {
 	/**

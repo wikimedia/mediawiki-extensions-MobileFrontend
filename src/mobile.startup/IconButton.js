@@ -8,7 +8,7 @@ const
  * A wrapper for creating an icon button.
  *
  * @class IconButton
- * @extends View
+ * @extends module:mobile.startup/View
  *
  * @param {Object} options Configuration options
  */
@@ -76,7 +76,7 @@ mfExtend( IconButton, View, {
 	/**
 	 * @memberof IconButton
 	 * @instance
-	 * @mixes View#defaults
+	 * @mixes module:mobile.startup/View#defaults
 	 * @property {Object} defaults Default options hash.
 	 * @property {string} defaults.tagName The name of the tag in which the button is wrapped.
 	 *  Defaults to 'a' when href option present.

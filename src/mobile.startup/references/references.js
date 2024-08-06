@@ -9,6 +9,7 @@ const Drawer = require( '../Drawer' ),
 /**
  * Create a callback for clicking references
  *
+ * @ignore
  * @param {Function} onNestedReferenceClick
  * @return {Function}
  */
@@ -29,6 +30,7 @@ function makeOnNestedReferenceClickHandler( onNestedReferenceClick ) {
 /**
  * Drawer for references
  *
+ * @memberof module:mobile.startup/references
  * @uses IconButton
  * @param {Object} props
  * @param {boolean} [props.error] whether an error has occurred
@@ -37,7 +39,7 @@ function makeOnNestedReferenceClickHandler( onNestedReferenceClick ) {
  * @param {string} [props.parentText] is the HTML of the parent reference if there is one
  * @param {Function} [props.onNestedReferenceClick] callback for when a reference
  *  inside the reference is clicked.
- * @return {Drawer}
+ * @return {module:mobile.startup/Drawer}
  */
 function referenceDrawer( props ) {
 	const errorIcon = props.error ? new IconButton( {
@@ -89,6 +91,11 @@ function referenceDrawer( props ) {
 	);
 }
 
+/**
+ * Internal for use inside Minerva only. See {@link module:mobile.startup} for access.
+ *
+ * @exports module:mobile.startup/references
+ */
 const references = {
 	test: {
 		makeOnNestedReferenceClickHandler
@@ -101,8 +108,8 @@ const references = {
 	 * @param {string} id of the reference to be retrieved
 	 * @param {Page} page to locate reference for
 	 * @param {string} refNumber the number it identifies as in the page
-	 * @param {PageHTMLParser} pageHTMLParser
-	 * @param {Gateway} gateway
+	 * @param {module:mobile.startup/PageHTMLParser} pageHTMLParser
+	 * @param {module:mobile.startup/references~Gateway} gateway
 	 * @param {Object} props for referenceDrawer
 	 * @param {Function} onShowNestedReference function call when a nested reference is triggered.
 	 * @return {jQuery.Deferred}

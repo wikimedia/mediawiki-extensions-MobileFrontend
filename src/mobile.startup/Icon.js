@@ -4,11 +4,9 @@ const
 	View = require( './View' );
 
 /**
- * A wrapper for creating an icon.
- *
- * @class Icon
- * @extends View
- *
+ * @class module:mobile.startup/Icon
+ * @classdesc A wrapper for creating an icon.
+ * @extends module:mobile.startup/View
  * @param {Object} options Configuration options
  */
 function Icon( options ) {
@@ -90,7 +88,7 @@ mfExtend( Icon, View, {
 	/**
 	 * @memberof Icon
 	 * @instance
-	 * @mixes View#defaults
+	 * @mixes module:mobile.startup/View#defaults
 	 * @property {Object} defaults
 	 * @property {string} defaults.base Base icon class.
 	 * Defaults to 'mf-icon'.
