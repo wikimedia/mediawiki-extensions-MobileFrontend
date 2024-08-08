@@ -276,8 +276,11 @@ mfExtend( View, {
 	},
 
 	/**
-	 * Set callbacks, where `this.options.events` is a hash of
+	 * Set callbacks for events.
 	 *
+	 * `this.options.events` is a hash of pairs:
+	 *
+	 * ```
 	 * { 'event selector': 'callback' }
 	 *
 	 * {
@@ -285,8 +288,9 @@ mfExtend( View, {
 	 *   'click .button': 'save',
 	 *   'click .open': function(e) { ... }
 	 * }
+	 * ```
 	 *
-	 * pairs. Callbacks will be bound to the view, with `this` set properly.
+	 * Callbacks will be bound to the view, with `this` set properly.
 	 * Uses event delegation for efficiency.
 	 * Omitting the selector binds the event to `this.el`.
 	 *
