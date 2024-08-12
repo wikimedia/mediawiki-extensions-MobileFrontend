@@ -25,6 +25,7 @@ use MediaWiki\Hook\SkinAfterBottomScriptsHook;
 use MediaWiki\Hook\TitleSquidURLsHook;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\Html\Html;
+use MediaWiki\MainConfigNames;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Output\Hook\AfterBuildFeedLinksHook;
 use MediaWiki\Output\Hook\BeforePageDisplayHook;
@@ -142,12 +143,8 @@ class MobileFrontendHooks implements
 	 * @return Skin
 	 */
 	protected function getDefaultMobileSkin(): Skin {
-		$defaultSkin = $this->config->get( 'DefaultMobileSkin' );
-
-		if ( !$defaultSkin ) {
-			$defaultSkin = $this->config->get( 'DefaultSkin' );
-		}
-
+		$defaultSkin = $this->config->get( 'DefaultMobileSkin' ) ?:
+			$this->config->get( MainConfigNames::DefaultSkin );
 		return $this->skinFactory->makeSkin( Skin::normalizeKey( $defaultSkin ) );
 	}
 

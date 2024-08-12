@@ -386,7 +386,7 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 
 		$config = new HashConfig( [
 			'DefaultMobileSkin' => $fakeMobileSkin,
-			'DefaultSkin' => $fakeDefaultSkin,
+			MainConfigNames::DefaultSkin => $fakeDefaultSkin,
 			'MFEnableMobilePreferences' => false,
 		] );
 
