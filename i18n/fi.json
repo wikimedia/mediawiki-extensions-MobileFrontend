@@ -232,7 +232,7 @@
 	"tag-mobile_edit": "Mobiilimuokkaus",
 	"tag-mobile_edit-description": "Mobiilimuokkaus (mobiilisivusto tai -sovellus)",
 	"tag-advanced_mobile_edit": "Edistynyt mobiilimuokkaus",
-	"tag-advanced_mobile_edit-description": "Muokkaus, jonka käyttäjä on tehnyt käyttäen Edistynyttä mobiilimuokkausta",
+	"tag-advanced_mobile_edit-description": "Edistyneellä mobiilimuokkaimella tehty muokkaus",
 	"tag-mobile_web_edit": "mobiilisivusto-muokkaus",
 	"tag-mobile_web_edit-description": "Muokkaus, joka on tehty mobiiliverkkosivulta",
 	"mobile-frontend-loading-message": "Ladataan…",
