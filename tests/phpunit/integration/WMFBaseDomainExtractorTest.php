@@ -9,7 +9,6 @@ class WMFBaseDomainExtractorTest extends \PHPUnit\Framework\TestCase {
 	 * @covers ::getCookieDomain
 	 * @covers ::matchBaseHostname
 	 * @covers ::extractSubdomain
-	 * @covers ::endsWith
 	 * @dataProvider getBaseDomainProvider
 	 */
 	public function testGetBaseDomain( $server, $baseDomain ) {

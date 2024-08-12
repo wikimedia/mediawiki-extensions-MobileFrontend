@@ -84,7 +84,7 @@ class WMFBaseDomainExtractor implements BaseDomainExtractorInterface {
 			return false;
 		}
 		foreach ( $hosts as $wmfHost ) {
-			if ( $this->endsWith( $hostname, $wmfHost ) ) {
+			if ( str_ends_with( $hostname, $wmfHost ) ) {
 				return $wmfHost;
 			}
 		}
@@ -96,7 +96,7 @@ class WMFBaseDomainExtractor implements BaseDomainExtractorInterface {
 	 * ex: extractSubdomain('en.commons.wikimedia.org', '.wikimedia.org') => 'commons.wikimedia.org'
 	 *
 	 * This function assumes that $fullHostname is a subdomain of $baseDomain. Please
-	 * do the endsWith() check first before calling this function
+	 * do the str_ends_with() check first before calling this function
 	 *
 	 * @param string $fullHostname
 	 * @param string $baseDomain
@@ -110,19 +110,4 @@ class WMFBaseDomainExtractor implements BaseDomainExtractorInterface {
 		return $subdomain . $baseDomain;
 	}
 
-	/**
-	 * Check that $haystack ends with $needle. When $needle is
-	 * empty, it should return false.
-	 *
-	 * @param string $haystack
-	 * @param string $needle
-	 * @return bool
-	 */
-	private function endsWith( $haystack, $needle ) {
-		$length = strlen( $needle );
-		if ( $length === 0 ) {
-			return true;
-		}
-		return substr( $haystack, -$length ) === $needle;
-	}
 }
