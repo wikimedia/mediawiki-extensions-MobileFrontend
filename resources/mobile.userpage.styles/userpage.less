@@ -18,11 +18,13 @@
 		background-repeat: no-repeat;
 		opacity: 0.2;
 
-		html.skin-theme-clientpref-night & {
-			filter: invert( 1 ) hue-rotate( 180deg );
+		@media screen {
+			html.skin-theme-clientpref-night & {
+				filter: invert( 1 ) hue-rotate( 180deg );
+			}
 		}
 
-		@media ( prefers-color-scheme: dark ) {
+		@media screen and ( prefers-color-scheme: dark ) {
 			html.skin-theme-clientpref-os & {
 				filter: invert( 1 ) hue-rotate( 180deg );
 			}
