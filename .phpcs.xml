@@ -7,12 +7,6 @@
 	<rule ref="Generic.Files.OneObjectStructurePerFile.MultipleFound">
 		<exclude-pattern>tests/phpunit/*</exclude-pattern>
 	</rule>
-	<rule ref="MediaWiki.Commenting.FunctionComment.MissingDocumentationPublic">
-		<exclude-pattern>tests/phpunit/*</exclude-pattern>
-	</rule>
-	<rule ref="MediaWiki.Commenting.FunctionComment.MissingDocumentationProtected">
-		<exclude-pattern>tests/phpunit/*</exclude-pattern>
-	</rule>
 	<file>.</file>
 	<arg name="extensions" value="php"/>
 	<arg name="encoding" value="UTF-8"/>
