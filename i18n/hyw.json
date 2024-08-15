@@ -7,6 +7,7 @@
 			"Շահէն"
 		]
 	},
+	"mobile-frontend-copyright": "Բովանդակութիւնը առկայ է $1 ներքոյ, եթէ այլ բան նշուած չէ։",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Մուտք գործել",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "Լաւ",
 	"mobile-frontend-editor-blocked-drawer-body-partial": "Փորձէ ուրիշ էջ խմբագրել:",
@@ -17,6 +18,9 @@
 	"mobile-frontend-editor-blocked-drawer-help": "Տե՛ս մանրամասնութիւնները",
 	"mobile-frontend-editor-cancel": "Չեղարկել",
 	"mobile-frontend-main-menu-settings-heading": "Կարգաւորումներ",
+	"mobile-frontend-terms-text": "Օգտագործման պայմաններ",
+	"mobile-frontend-view": "Բջիջային տեսք",
+	"mobile-frontend-view-desktop": "Սովորական",
 	"mobile-frontend-watchlist-more": "աւելի",
 	"tag-mobile_edit": "Առձեռն խմբագրում",
 	"tag-mobile_web_edit": "Խմբագրում կայքի առձեռն տարբերակէն"
