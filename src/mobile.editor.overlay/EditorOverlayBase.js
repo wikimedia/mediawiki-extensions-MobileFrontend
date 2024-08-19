@@ -257,6 +257,10 @@ mfExtend( EditorOverlayBase, Overlay, {
 			// eslint-disable-next-line camelcase
 			revision_id: newRevId
 		} );
+		if ( tempUserCreated && redirectUrl ) {
+			// The caller handles this redirect, either in SourceEditorOverlay or in VE's ArticleTarget
+			return;
+		}
 		setTimeout( function () {
 			// Wait for any other teardown navigation to happen (e.g. router.back())
 			// before setting our final location.

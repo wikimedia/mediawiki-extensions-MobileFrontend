@@ -532,6 +532,11 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 				}
 
 				self.onSaveComplete( newRevId, redirectUrl, tempUserCreated );
+
+				if ( redirectUrl && tempUserCreated ) {
+					// eslint-disable-next-line no-restricted-properties
+					window.location.href = redirectUrl;
+				}
 			}, function ( data ) {
 				self.onSaveFailure( data );
 			} );
