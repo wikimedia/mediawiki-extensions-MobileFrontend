@@ -12,7 +12,7 @@
 	"mobile-frontend-cite-error": "صارت مشكلة أثناء محاولة تحميل الاستشهادات نتيجة لمعرف مراجعة مو زين",
 	"mobile-frontend-cite-none-available": "ماكو استشهادات متوفرة لهاي الصفحة.",
 	"mobile-frontend-clear-search": "فرغ",
-	"mobile-frontend-copyright": "المحتوى متاح وفق $1 إن لم يرد خلاف ذلك.",
+	"mobile-frontend-copyright": "المحتوه موجود بموجب رخصه $1 إلا بحاله ذكر خلافه.",
 	"mobile-frontend-desc": "واجهة النقال",
 	"mobile-frontend-diffview-404-desc": "معرف المراجعة التي طلبته مو موجود.<br/>يصير هيج عادةً باتباع رابط فرق قديم إلى صفحة محذوفة لو رابط فرق بيه أحرف مو صالحة.",
 	"mobile-frontend-diffview-404-title": "نسخة غلط",
@@ -21,7 +21,7 @@
 	"mobile-frontend-diffview-bytesnochange": "ماكو تغيير بالحجم",
 	"mobile-frontend-diffview-bytesremoved": "أُزيل {{PLURAL:$1|بايت|$1 بايت}}",
 	"mobile-frontend-diffview-editcount": "<div>$1</div> {{PLURAL:$1|تعديل}}",
-	"mobile-frontend-terms-text": "شروط الأستخدام",
-	"mobile-frontend-view": "عرض بطريقة التلفون",
+	"mobile-frontend-terms-text": "شروط الاستخدام",
+	"mobile-frontend-view": "طلع بطريقه التلفون",
 	"mobile-frontend-view-desktop": "سطح مكتب"
 }
