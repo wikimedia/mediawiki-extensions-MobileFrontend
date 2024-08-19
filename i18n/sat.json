@@ -5,11 +5,21 @@
 			"Amire80",
 			"Manik Soren",
 			"Ramjit Tudu",
-			"ᱢᱩᱨᱢᱩ"
+			"ᱢᱩᱨᱢᱩ",
+			"ᱤᱧ ᱢᱟᱛᱟᱞ"
 		]
 	},
+	"abusefilter-edit-builder-vars-user-mobile": "ᱢᱳᱵᱟᱭᱤᱞ ᱤᱱᱴᱟᱨᱯᱷᱮᱥ ᱛᱟᱞᱟᱛᱮ ᱡᱟᱦᱟᱱ ᱵᱮᱣᱦᱟᱨᱤᱭᱟᱹ ᱠᱚ ᱥᱟᱯᱲᱟᱣᱚᱜ ᱠᱟᱱᱟ ᱥᱮ ᱵᱟᱝ ᱾",
+	"mobile-frontend-account-create-captcha-placeholder": "ᱥᱟᱹᱵᱩᱫ ᱨᱮᱭᱟᱜ ᱠᱳᱰ ᱚᱞ ᱢᱮ",
 	"mobile-frontend-changeslist-nocomment": "ᱥᱟᱯᱲᱟᱣ ᱜᱩᱴ ᱫᱚ ᱵᱟᱹᱱᱩᱜ-ᱟ",
+	"mobile-frontend-clear-search": "ᱥᱟᱯᱷᱟ",
 	"mobile-frontend-copyright": "ᱩᱱᱩᱫᱩᱜ ᱫᱚ ᱧᱟᱢᱚᱜ-ᱟ $1 ᱞᱮᱠᱟᱛᱮ  ᱵᱟᱝᱠᱷᱟᱱ ᱚᱞ ᱛᱟᱦᱮᱱᱟ",
+	"mobile-frontend-editor-anon": "ᱞᱚᱜ ᱤᱱ ᱵᱟᱝ ᱠᱟᱛᱮ ᱜᱮ ᱚᱞ ᱢᱮ",
+	"mobile-frontend-editor-blocked-drawer-action-login": "ᱵᱚᱞᱚᱜ ᱢᱮ",
+	"mobile-frontend-drawer-arrow-label": "ᱵᱚᱸᱫᱚ",
+	"mobile-frontend-editor-blocked-drawer-action-ok": "ᱴᱷᱤᱠ ᱜᱮᱭᱟ",
+	"mobile-frontend-editor-blocked-drawer-action-randompage": "ᱤᱧ ᱮᱴᱟᱜ ᱢᱤᱫᱴᱴ ᱥᱟᱦᱴᱟ ᱨᱮ ᱤᱫᱤᱧ ᱢᱮ",
+	"mobile-frontend-editor-blocked-drawer-title-partial": "ᱟᱢ ᱱᱚᱶᱟ ᱥᱟᱦᱴᱟ ᱥᱟᱯᱲᱟᱣ ᱫᱚ ᱵᱟᱝᱮᱢ ᱫᱟᱲᱮᱭᱟᱜ-ᱟ᱾",
 	"mobile-frontend-editor-uploadenable": "ᱥᱟᱯᱲᱟᱣ ᱪᱟᱹᱞᱩᱭᱛᱮ ᱯᱩᱭᱞᱩᱨᱮ ᱢᱤᱫᱴᱮᱱ ᱪᱤᱛᱟᱹᱨ ᱞᱟᱫᱮᱭᱢᱮ",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "ᱢᱤᱫ ᱯᱟᱹᱨᱥᱤ ᱥᱮᱸᱫᱽᱨᱟᱭᱢᱮ",
 	"mobile-frontend-last-modified-date": "ᱢᱩᱪᱟᱹᱫ ᱥᱟᱯᱲᱟᱣ ᱦᱩᱭᱞᱮᱱᱟ: $1, $2",
