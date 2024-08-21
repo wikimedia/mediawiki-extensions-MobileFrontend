@@ -14,6 +14,7 @@ use MobileFrontend\Hooks\HookRunner;
 use MobileFrontend\Transforms\LazyImageTransform;
 use MobileFrontend\Transforms\MakeSectionsTransform;
 use MobileFrontend\Transforms\MoveLeadParagraphTransform;
+use MobileFrontend\Transforms\NativeLazyImageTransform;
 use MobileFrontend\Transforms\RemovableClassesTransform;
 use Wikibase\Client\WikibaseClient;
 use Wikibase\DataModel\Entity\ItemId;
@@ -157,7 +158,11 @@ class ExtMobileFrontend {
 		}
 
 		if ( $shouldLazyTransformImages ) {
-			$transforms[] = new LazyImageTransform( $config->get( 'MFLazyLoadSkipSmallImages' ) );
+			if ( $shouldUseParsoid ) {
+				$transforms[] = new NativeLazyImageTransform();
+			} else {
+				$transforms[] = new LazyImageTransform( $config->get( 'MFLazyLoadSkipSmallImages' ) );
+			}
 		}
 
 		if ( $showFirstParagraphBeforeInfobox ) {
