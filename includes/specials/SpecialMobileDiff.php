@@ -41,7 +41,7 @@ class SpecialMobileDiff extends UnlistedSpecialPage {
 			$out->setStatusCode( 404 );
 			$out->addHTML(
 				Html::errorBox(
-					$out->msg( 'mobile-frontend-generic-404-title' )->text(),
+					$out->msg( 'mobile-frontend-generic-404-title' )->parse(),
 					$out->msg( 'mobile-frontend-generic-404-desc' )->text()
 				)
 			);
