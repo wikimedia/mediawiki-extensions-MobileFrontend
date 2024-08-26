@@ -76,7 +76,9 @@
 			"Lantianjialiang",
 			"LittlePaw365",
 			"Xyb",
-			"沈澄心"
+			"沈澄心",
+			"Anterdc99",
+			"Hamish"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "用户是否通过移动版界面编辑",
@@ -116,7 +118,7 @@
 	"mobile-frontend-editor-blocked-drawer-body-link": "查看更多",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "原因",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|封禁}}者：",
-	"mobile-frontend-editor-blocked-drawer-expiry-header": "封禁还未期满",
+	"mobile-frontend-editor-blocked-drawer-expiry-header": "封禁过期时间",
 	"mobile-frontend-editor-blocked-drawer-help": "查看详情",
 	"mobile-frontend-editor-generic-block-reason": "未知原因",
 	"mobile-frontend-editor-cancel": "取消",

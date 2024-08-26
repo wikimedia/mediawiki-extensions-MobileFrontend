@@ -41,7 +41,7 @@
 	"mobile-frontend-editor-error": "Maaf, suntingan tidak disimpan.",
 	"mobile-frontend-editor-error-conflict": "Ralat, seorang pengguna telah menyunting halaman ini.",
 	"mobile-frontend-editor-error-loading": "Ralat, bahagian tidak dapat dimuatkan.",
-	"mobile-frontend-editor-error-preview": "Ralat, berlakunya sesuatu di luar jangkaan sewaktu memuatkan pratayang. Sila tutup dan cuba lagi.",
+	"mobile-frontend-editor-error-preview": "Ralat, berlakunya sesuatu di luar jangkaan sewaktu memuatkan pralihat. Sila tutup dan cuba lagi.",
 	"mobile-frontend-editor-keep-editing": "Sambung menyunting",
 	"mobile-frontend-editor-licensing": "Dengan menyimpan perubahan ini, anda dikira bersetuju untuk menerbitkan sumbangan anda dengan {{PLURAL:$2|lesen|lesen-lesen}} $1.",
 	"mobile-frontend-editor-licensing-with-terms": "Dengan menyimpan perubahan ini, anda dikira bersetuju dengan $1 dan bersetuju untuk menerbitkan sumbangan anda dengan {{PLURAL:$3|lesen|lesen-lesen}} $2.",
