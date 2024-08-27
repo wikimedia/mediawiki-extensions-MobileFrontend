@@ -1,3 +1,5 @@
+const isCollapsedByDefault = require( './isCollapsedByDefault' );
+
 function toggle( content, headingText, icon ) {
 	const currentlyHidden = content.hidden;
 
@@ -32,6 +34,7 @@ function init( container ) {
 			highestHeadingLevel = Math.min( level, highestHeadingLevel );
 		}
 	} );
+	const isCollapsed = isCollapsedByDefault();
 
 	headingWrappers.filter( ( wrapper ) =>
 		// Only collapse the highest heading level (i.e. H1 is higher than H2)
@@ -46,13 +49,17 @@ function init( container ) {
 		headingText.textContent = heading.textContent;
 		headingText.setAttribute( 'tabindex', '0' );
 		headingText.setAttribute( 'role', 'button' );
-		headingText.setAttribute( 'aria-expanded', 'true' );
+		headingText.setAttribute( 'aria-expanded', !isCollapsed );
 		headingText.setAttribute( 'aria-controls', content.id );
 
 		// Create the dropdown arrow
 		const icon = document.createElement( 'span' );
-		icon.classList.add( 'mf-icon', 'mf-icon--small', 'mf-icon-collapse', 'indicator' );
+		const iconClass = isCollapsed ? 'mf-icon-expand' : 'mf-icon-collapse';
+		// eslint-disable-next-line mediawiki/class-doc
+		icon.classList.add( 'mf-icon', 'mf-icon--small', iconClass, 'indicator' );
 		icon.setAttribute( 'aria-hidden', true );
+		content.hidden = isCollapsed ? 'until-found' : false;
+		content.classList.add( 'collapsible-block-js' );
 
 		// Replace contents of the heading element
 		heading.innerHTML = '';

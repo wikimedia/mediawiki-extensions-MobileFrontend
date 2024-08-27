@@ -2,9 +2,21 @@
 @import 'mobile.less';
 @import 'icons.less';
 
+@selector-parsoid-top-heading: ~'.mw-parser-output > section > section > .mw-heading';
+
 /* stylelint-disable no-descending-specificity */
 
 .client-js {
+
+	/* For Parsoid HTML hide the div until the hidden attribute has been added. */
+	/* .mw-parser-output > section limits this to top level headings */
+	&.mf-expand-sections-clientpref-0 @{selector-parsoid-top-heading} + div:not( .collapsible-block-js ) {
+		@media all and ( max-width: @max-width-breakpoint-tablet ) {
+			display: none;
+		}
+	}
+
+	// FIXME: For legacy parser, can be removed when Parsoid is everywhere.
 	.collapsible-block:not( .collapsible-block-js ) {
 		display: none;
 		// But show it for tablets.
@@ -13,6 +25,7 @@
 		}
 	}
 
+	// FIXME: For legacy parser, can be removed when Parsoid is everywhere.
 	// For expand all sections client preference:
 	&.mf-expand-sections-clientpref-1 {
 		.collapsible-block:not( .collapsible-block-js ) {
@@ -22,6 +35,11 @@
 
 	.section-heading {
 		align-items: center;
+	}
+
+	// Reserve border space for the parsoid headings to avoid 1px reflow.
+	@{selector-parsoid-top-heading} {
+		border-bottom: @border-width-base @border-style-base transparent;
 	}
 
 	.mw-heading.mf-collapsible-heading {
@@ -41,6 +59,7 @@
 	}
 }
 
+// FIXME: For legacy parser, can be removed when Parsoid is everywhere.
 .section-heading .indicator {
 	margin-right: 6px;
 }
@@ -53,6 +72,7 @@
 	background-size: ~'calc( max( @{size-icon-small}, @{min-size-icon-small} ) )';
 }
 
+// FIXME: For legacy parser, can be removed when Parsoid is everywhere.
 .client-nojs {
 	// Toggling indicators are unusable without JavaScript
 	.section-heading .indicator {

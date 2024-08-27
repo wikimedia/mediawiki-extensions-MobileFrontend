@@ -1,4 +1,4 @@
-const browser = require( './Browser' ).getSingleton(),
+const
 	util = require( './util' ),
 	escapeSelector = util.escapeSelector,
 	arrowOptions = {
@@ -7,6 +7,7 @@ const browser = require( './Browser' ).getSingleton(),
 		additionalClassNames: 'indicator'
 	},
 	Icon = require( './Icon' );
+const isCollapsedByDefault = require( './isCollapsedByDefault.js' );
 
 /**
  * @typedef {Object} ToggledEvent
@@ -127,15 +128,8 @@ Toggler.prototype.isCollapsedByDefault = function () {
 		if ( $override.length ) {
 			this._isCollapsedByDefault = $override.hasClass( 'collapsible-headings-collapsed' );
 		} else {
-
 			// Check site config
-			this._isCollapsedByDefault = mw.config.get( 'wgMFCollapseSectionsByDefault' ) &&
-				// Only collapse on narrow devices
-				!browser.isWideScreen() &&
-				// Section collapsing can be disabled in MobilePreferences
-				!document.documentElement.classList.contains(
-					'mf-expand-sections-clientpref-1'
-				);
+			this._isCollapsedByDefault = isCollapsedByDefault();
 		}
 	}
 	return this._isCollapsedByDefault;
