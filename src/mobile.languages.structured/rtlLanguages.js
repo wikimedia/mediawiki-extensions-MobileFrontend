@@ -5,6 +5,7 @@ module.exports = [
 	'acm',
 	'aeb',
 	'aeb-arab',
+	'apc',
 	'ar',
 	'arc',
 	'arq',
