@@ -1,8 +1,6 @@
 <?php
 
 use HtmlFormatter\HtmlFormatter;
-use MediaWiki\Config\Config;
-use MediaWiki\Title\Title;
 use MobileFrontend\Transforms\IMobileTransform;
 use Wikimedia\Parsoid\Utils\DOMCompat;
 
@@ -12,34 +10,11 @@ use Wikimedia\Parsoid\Utils\DOMCompat;
 class MobileFormatter extends HtmlFormatter {
 
 	/**
-	 * @var Title
+	 * @inheritDoc
 	 */
-	protected $title;
-
-	/**
-	 * @var Config
-	 */
-	private $config;
-
-	/**
-	 * @var MobileContext
-	 */
-	private $context;
-
-	/**
-	 * @param string $html Text to process
-	 * @param Title $title Title to which $html belongs
-	 * @param Config $config
-	 * @param MobileContext $context
-	 */
-	public function __construct(
-		$html, Title $title, Config $config, MobileContext $context
-	) {
-		parent::__construct( $html );
-
-		$this->title = $title;
-		$this->context = $context;
-		$this->config = $config;
+	public function __construct( $html ) {
+		// This is specific to HtmlFormatter, decouple it from callers.
+		parent::__construct( self::wrapHTML( $html ) );
 	}
 
 	/**
@@ -48,41 +23,12 @@ class MobileFormatter extends HtmlFormatter {
 	 *   to html DOM
 	 */
 	public function applyTransforms( array $transforms ) {
-		// Apply all removals before continuing with transforms (see T185040 for example)
-		$this->filterContent();
-
 		$doc = $this->getDoc();
 		$body = DOMCompat::querySelector( $doc, 'body' );
 
 		foreach ( $transforms as $transform ) {
 			$transform->apply( $body );
 		}
-	}
-
-	/**
-	 * @inheritDoc
-	 */
-	protected function parseItemsToRemove(): array {
-		$removals = parent::parseItemsToRemove();
-
-		// Remove specified content in content namespaces
-		if ( in_array( $this->title->getNamespace(), $this->config->get( 'ContentNamespaces' ), true ) ) {
-			$mfRemovableClasses = $this->config->get( 'MFRemovableClasses' );
-			$removableClasses = $mfRemovableClasses['base'];
-			if ( $this->context->isBetaGroupMember() ) {
-				$removableClasses = array_merge( $removableClasses, $mfRemovableClasses['beta'] );
-			}
-
-			foreach ( $removableClasses as $itemToRemove ) {
-				$type = '';
-				$rawName = '';
-				if ( $this->parseSelector( $itemToRemove, $type, $rawName ) ) {
-					$removals[$type][] = $rawName;
-				}
-			}
-		}
-
-		return $removals;
 	}
 
 	/**

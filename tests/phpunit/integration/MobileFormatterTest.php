@@ -5,12 +5,14 @@ use MediaWiki\Title\Title;
 use MobileFrontend\Transforms\LazyImageTransform;
 use MobileFrontend\Transforms\MakeSectionsTransform;
 use MobileFrontend\Transforms\MoveLeadParagraphTransform;
+use MobileFrontend\Transforms\RemovableClassesTransform;
 
 /**
  * @group MobileFrontend
  * @covers MobileFormatter
  * @covers \MobileFrontend\Transforms\MakeSectionsTransform
  * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform
+ * @covers \MobileFrontend\Transforms\RemovableClassesTransform
  */
 class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 	private const TOC = '<div id="toc" class="toc-mobile"><h2>Contents</h2></div>';
@@ -80,9 +82,7 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 	public function testHtmlTransform( $input, $expected, $skipSmallImages = false ) {
 		$title = Title::makeTitle( NS_MAIN, __METHOD__ );
 
-		$mf = new MobileFormatter(
-			MobileFormatter::wrapHTML( $input ), $title, $this->mfConfig, $this->mfContext
-		);
+		$mf = new MobileFormatter( $input );
 
 		$transforms = self::buildTransforms( $title, $skipSmallImages );
 		$mf->applyTransforms( $transforms );
@@ -490,6 +490,15 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 					'<p>paragraph 1</p>'
 				),
 			],
+
+			// Remove non-mobile elements
+			[
+				'<div class="nomobile some-other-class">Foo</div><div class="not-nomobile">Bar</div>' .
+					'<div class="not-navbox">Foo</div><div class="navbox">Foo</div>',
+				self::makeSectionHtml(
+					0, '<div class="not-nomobile">Bar</div><div class="not-navbox">Foo</div>'
+				)
+			]
 		];
 	}
 
@@ -503,6 +512,9 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 		// Sectionify the content and transform it if necessary per section
 
 		$transforms = [];
+
+		// List some selectors for example
+		$transforms[] = new RemovableClassesTransform( [ '.nomobile', '.navbox' ] );
 
 		$transforms[] = new MakeSectionsTransform( $topHeadingTags, true );
 
@@ -524,7 +536,7 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 	 */
 	public function testSectionTransform( array $topHeadingTags, $input, $expectedOutput ) {
 		$title = Title::makeTitle( NS_MAIN, __METHOD__ );
-		$formatter = new MobileFormatter( $input, $title, $this->mfConfig, $this->mfContext );
+		$formatter = new MobileFormatter( $input );
 
 		$formatter->applyTransforms(
 			self::buildTransforms( $title, false, $topHeadingTags )
@@ -585,9 +597,7 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 	 */
 	public function testT137375() {
 		$input = '<p>Hello, world!</p><h2>Section heading</h2><ol class="references"></ol>';
-		$formatter = new MobileFormatter(
-			$input, Title::makeTitle( NS_SPECIAL, 'Foo' ), $this->mfConfig, $this->mfContext
-		);
+		$formatter = new MobileFormatter( $input );
 		$formatter->applyTransforms( [] );
 		// Success is not crashing when the input is not a DOMElement.
 		$this->assertTrue( true );
@@ -600,15 +610,11 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 	 */
 	public function testLoggingOfInfoboxesBeingWrappedInContainersWhenWrapped( $input ) {
 		$this->overrideConfigValue( 'MFLogWrappedInfoboxes', true );
+
+		$formatter = new MobileFormatter( $input );
+
 		$titleText = 'T149884';
 		$title = Title::makeTitle( NS_MAIN, $titleText );
-		$formatter = new MobileFormatter(
-			MobileFormatter::wrapHTML( $input ),
-			$title,
-			$this->mfConfig,
-			$this->mfContext
-		);
-
 		$loggerMock = $this->createMock( \Psr\Log\LoggerInterface::class );
 		$loggerMock->expects( $this->once() )
 			->method( 'info' )
@@ -618,8 +624,8 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 				// and contains revision id
 				$this->assertStringContainsString( self::TITLE_REV_ID, $message );
 			} );
-
 		$this->setLogger( 'mobile', $loggerMock );
+
 		$formatter->applyTransforms( self::buildTransforms( $title ) );
 	}
 
@@ -642,19 +648,14 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 	public function testLoggingOfInfoboxesBeingWrappedInContainersWhenNotWrapped( $input ) {
 		$this->overrideConfigValue( 'MFLogWrappedInfoboxes', true );
 
-		$title = Title::makeTitle( NS_MAIN, 'T149884' );
-		$formatter = new MobileFormatter(
-			MobileFormatter::wrapHTML( $input ),
-			$title,
-			$this->mfConfig,
-			$this->mfContext
-		);
+		$formatter = new MobileFormatter( $input );
 
 		$loggerMock = $this->createMock( \Psr\Log\LoggerInterface::class );
 		$loggerMock->expects( $this->never() )
 			->method( 'info' );
-
 		$this->setLogger( 'mobile', $loggerMock );
+
+		$title = Title::makeTitle( NS_MAIN, 'T149884' );
 		$formatter->applyTransforms( self::buildTransforms( $title ) );
 	}
 
@@ -669,6 +670,8 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 			[ "<p>First para</p><div><div><div>$box</div></div></div>" ],
 			// if wrapped inside mw-stack no logging occurs
 			[ "<div class=\"mw-stack\">$box</div>" ],
+			// if wrapped inside navbox, which should be removed before this transform (T185040)
+			[ "<div class=\"navbox\">$box</div>" ],
 		];
 	}
 
@@ -680,19 +683,14 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 
 		// wrapped inside different infobox
 		$input = self::buildInfoboxHTML( self::buildInfoboxHTML( 'test' ) );
-		$title = Title::makeTitle( NS_MAIN, 'T163805' );
-		$formatter = new MobileFormatter(
-			MobileFormatter::wrapHTML( $input ),
-			$title,
-			$this->mfConfig,
-			$this->mfContext
-		);
+		$formatter = new MobileFormatter( $input );
 
 		$loggerMock = $this->createMock( \Psr\Log\LoggerInterface::class );
 		$loggerMock->expects( $this->never() )
 			->method( 'info' );
-
 		$this->setLogger( 'mobile', $loggerMock );
+
+		$title = Title::makeTitle( NS_MAIN, 'T163805' );
 		$formatter->applyTransforms( self::buildTransforms( $title ) );
 	}
 
