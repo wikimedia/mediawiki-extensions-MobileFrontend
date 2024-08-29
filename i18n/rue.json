@@ -4,7 +4,8 @@
 			"Dicto23456",
 			"Gazeb",
 			"KHMELNYTSKYIA",
-			"Tkalyn"
+			"Tkalyn",
+			"Constraque"
 		]
 	},
 	"mobile-frontend-clear-search": "Очістити",
@@ -20,6 +21,6 @@
 	"mobile-frontend-terms-text": "Умови використання",
 	"mobile-frontend-view": "Мобілна верзія",
 	"mobile-frontend-view-desktop": "Десктоп",
-	"tag-mobile_edit": "Редагування з мобільного пристрою",
-	"tag-mobile_web_edit": "Редагування через мобільну версію"
+	"tag-mobile_edit": "Едітованя з мобілного пристроя",
+	"tag-mobile_web_edit": "Едітованя через мобілну верзію"
 }

@@ -51,5 +51,6 @@
 	"mobile-frontend-watchlist-more": "ଅଧିକ",
 	"tag-mobile_edit": "ମୋବାଇଲ ସମ୍ପାଦନା",
 	"tag-mobile_edit-description": "ମୋବାଇଲ ସାଇଟଦ୍ଵାରା ହେଇଥିବା ବଦଳଗୁଡିକ",
-	"tag-mobile_web_edit": "ମୋବାଇଲ ୱେବ ବଦଳ"
+	"tag-mobile_web_edit": "ମୋବାଇଲ ୱେବ ବଦଳ",
+	"mobile-frontend-loading-message": "ଖୋଲୁଛି..."
 }

@@ -47,7 +47,7 @@
 	"abusefilter-edit-builder-vars-user-mobile": "اینکه کاربر از میانای تلفن همراه استفاده می‌کند یا نه",
 	"mobile-frontend-account-create-captcha-placeholder": "کد امنیتی را وارد کنید",
 	"mobile-frontend-changeslist-nocomment": "بدون خلاصۀ ویرایش",
-	"mobile-frontend-clear-search": "پاک‌کردن",
+	"mobile-frontend-clear-search": "پاک کردن",
 	"mobile-frontend-copyright": "محتوا تحت $1 در دسترس است، مگر اینکه خلافش ذکر شده باشد.",
 	"mobile-frontend-desc": "ظاهر تلفن همراه",
 	"mobile-frontend-edit-login-action": "<strong>به بهبود {{SITENAME}} کمک کنید.</strong><br />ورود برای ویرایش.",
