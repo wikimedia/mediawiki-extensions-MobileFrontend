@@ -35,7 +35,7 @@ class MobileFrontendSkinHooks {
 		if ( $url ) {
 			$url = wfAppendQuery( $url, 'mobileaction=toggle_view_desktop' );
 		} else {
-			$title = $skin->getTitle();
+			$title = $skin->getTitle() ?? Title::newMainPage();
 			$url = $title->getLocalURL(
 				$req->appendQueryValue( 'mobileaction', 'toggle_view_desktop' )
 			);
