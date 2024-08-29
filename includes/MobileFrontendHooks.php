@@ -859,9 +859,10 @@ class MobileFrontendHooks implements
 			// If sections are never collapsed by default, we do not show an "expand sections"
 			// option in Special:MobileOptions so the user option is ignored.
 			$siteDefaultCollapseSections = $context->getConfig()->get( 'MFCollapseSectionsByDefault' );
-			$expandSections = $siteDefaultCollapseSections ? $this->userOptionsLookup->getOption(
+			$userSectionsPreference = $this->userOptionsLookup->getOption(
 				$context->getUser(), self::MOBILE_PREFERENCES_EXPAND_SECTIONS
-			) : '1';
+			) ? '1' : '0';
+			$expandSections = $siteDefaultCollapseSections ? $userSectionsPreference : '1';
 
 			/** @var \MobileFrontend\Amc\UserMode $userMode */
 			$userMode = MediaWikiServices::getInstance()->getService( 'MobileFrontend.AMC.UserMode' );
