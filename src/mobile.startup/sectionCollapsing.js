@@ -1,19 +1,43 @@
 const isCollapsedByDefault = require( './isCollapsedByDefault' );
 
-function toggle( content, headingText, icon ) {
-	const currentlyHidden = content.hidden;
-
+/**
+ * Sets attributes on collapsible elements based on collapsed state
+ *
+ * @method
+ * @param {HTMLElement} container div element containing collapsible heading
+ * @param {HTMLElement} headingText span element containing heading text
+ * @param {HTMLElement} icon span element for icon
+ * @param {boolean} isCollapsed collapsed state to set
+ * @ignore
+ */
+function setCollapsedState( content, headingText, icon, isCollapsed ) {
 	// show the content if hidden, hide if shown (until found so find in page works)
-	content.hidden = currentlyHidden ? false : 'until-found';
+	content.hidden = isCollapsed ? 'until-found' : false;
 
 	// update the dropdown state based on the content visibility
-	if ( currentlyHidden ) {
+	if ( isCollapsed ) {
 		headingText.setAttribute( 'aria-expanded', 'true' );
-		icon.classList.replace( 'mf-icon-expand', 'mf-icon-collapse' );
+		icon.classList.add( 'mf-icon-expand' );
+		icon.classList.remove( 'mf-icon-collapse' );
 	} else {
 		headingText.setAttribute( 'aria-expanded', 'false' );
-		icon.classList.replace( 'mf-icon-collapse', 'mf-icon-expand' );
+		icon.classList.add( 'mf-icon-collapse' );
+		icon.classList.remove( 'mf-icon-expand' );
 	}
+}
+
+/**
+ * Toggles collapsible state for a heading
+ *
+ * @method
+ * @param {HTMLElement} container div element containing collapsible heading
+ * @param {HTMLElement} headingText span element containing heading text
+ * @param {HTMLElement} icon span element for icon
+ * @ignore
+ */
+function toggle( content, headingText, icon ) {
+	const currentlyHidden = content.hidden;
+	setCollapsedState( content, headingText, icon, !currentlyHidden );
 }
 
 /**
@@ -24,42 +48,30 @@ function toggle( content, headingText, icon ) {
  * @ignore
  */
 function init( container ) {
-	const headingWrappers = Array.from( container.querySelectorAll( '.mf-section-0 section .mw-heading' ) );
-	let highestHeadingLevel = 6;
-	// Find which heading level to collapse
-	headingWrappers.forEach( ( wrapper ) => {
-		const headingClass = wrapper.getAttribute( 'class' ).match( /mw-heading\d/i );
-		if ( headingClass ) {
-			const level = headingClass[0].slice( -1 );
-			highestHeadingLevel = Math.min( level, highestHeadingLevel );
-		}
-	} );
 	const isCollapsed = isCollapsedByDefault();
-
-	headingWrappers.filter( ( wrapper ) =>
-		// Only collapse the highest heading level (i.e. H1 is higher than H2)
-		wrapper.classList.contains( `mw-heading${ highestHeadingLevel }` )
-	).forEach( ( wrapper ) => {
-		const heading = wrapper.firstElementChild;
-		const content = wrapper.nextElementSibling;
+	const headingWrappers = Array.from( container.querySelectorAll( '.mw-parser-output > section > section > .mw-heading' ) );
+	headingWrappers.forEach( ( wrapper ) => {
 		wrapper.classList.add( 'mf-collapsible-heading' );
+		const heading = wrapper.firstElementChild;
+
+		// Add class to collapsible content
+		// Used in CSS before hidden attribute is added
+		const content = wrapper.nextElementSibling;
+		content.classList.add( 'mf-collapsible-content' );
 
 		// Update the heading text to account for semantics of collapsing sections
 		const headingText = document.createElement( 'span' );
 		headingText.textContent = heading.textContent;
 		headingText.setAttribute( 'tabindex', '0' );
 		headingText.setAttribute( 'role', 'button' );
-		headingText.setAttribute( 'aria-expanded', !isCollapsed );
 		headingText.setAttribute( 'aria-controls', content.id );
 
 		// Create the dropdown arrow
 		const icon = document.createElement( 'span' );
-		const iconClass = isCollapsed ? 'mf-icon-expand' : 'mf-icon-collapse';
-		// eslint-disable-next-line mediawiki/class-doc
-		icon.classList.add( 'mf-icon', 'mf-icon--small', iconClass, 'indicator' );
+		icon.classList.add( 'mf-icon', 'mf-icon--small', 'mf-collapsible-icon' );
 		icon.setAttribute( 'aria-hidden', true );
-		content.hidden = isCollapsed ? 'until-found' : false;
-		content.classList.add( 'collapsible-block-js' );
+
+		setCollapsedState( content, headingText, icon, isCollapsed );
 
 		// Replace contents of the heading element
 		heading.innerHTML = '';
