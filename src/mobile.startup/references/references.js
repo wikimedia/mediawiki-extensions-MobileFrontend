@@ -37,6 +37,7 @@ function makeOnNestedReferenceClickHandler( onNestedReferenceClick ) {
  * @param {string} props.title of reference e.g [1]
  * @param {string} props.text is the HTML of the reference
  * @param {string} [props.parentText] is the HTML of the parent reference if there is one
+ * @param {boolean} props.isSubref true when this reference has a parent
  * @param {Function} [props.onNestedReferenceClick] callback for when a reference
  *  inside the reference is clicked.
  * @return {module:mobile.startup/Drawer}
@@ -46,6 +47,17 @@ function referenceDrawer( props ) {
 		name: 'error',
 		isSmall: true
 	} ).$el : null;
+
+	const mainRef = props.isSubref ? props.parentText : props.text;
+	const mainRefHtml = util.parseHTML( '<div>' )
+		.addClass( 'main-reference-content' )
+		.html( mainRef );
+	if ( !mainRef ) {
+		mainRefHtml.append( icons.spinner().$el );
+	}
+	const subRefHtml = props.isSubref ?
+		util.parseHTML( '<div>' ).html( props.text ) : '';
+
 	return new Drawer(
 		util.extend(
 			{
@@ -73,16 +85,13 @@ function referenceDrawer( props ) {
 								additionalClassNames: 'mf-button-flush-right'
 							} ).$el
 						] ),
+
 					// Add .mw-parser-output so that TemplateStyles styles apply (T244510)
 					util.parseHTML( '<div>' ).addClass( 'mw-parser-output' ).append( [
 						errorIcon,
-						props.parentText ?
-							util.parseHTML( '<div>' ).html( props.parentText ) :
-							'',
 						util.parseHTML( '<sup>' ).text( props.title ),
-						props.text ?
-							util.parseHTML( '<span>' ).html( ' ' + props.text ) :
-							icons.spinner().$el
+						mainRefHtml,
+						subRefHtml
 					] )
 				]
 			},
@@ -122,6 +131,7 @@ const references = {
 				title: refNumber,
 				text: reference.text,
 				parentText: reference.parentText,
+				isSubref: reference.isSubref,
 				onNestedReferenceClick( href, text ) {
 					references.showReference(
 						href,

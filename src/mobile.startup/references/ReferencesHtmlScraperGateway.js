@@ -38,7 +38,8 @@ mfExtend( ReferencesHtmlScraperGateway, ReferencesGateway, {
 			// This finds either the inner <ol class="mw-extended-references">, or the outer
 			// <ol class="references">
 			const $ol = $el.closest( 'ol' );
-			if ( $ol.hasClass( 'mw-extended-references' ) ) {
+			const isSubref = $ol.hasClass( 'mw-extended-references' );
+			if ( isSubref ) {
 				$parent = $ol.parent();
 			}
 			// The following classes are used here:
@@ -47,7 +48,8 @@ mfExtend( ReferencesHtmlScraperGateway, ReferencesGateway, {
 			( $parent || $el ).find( '.external' ).addClass( this.EXTERNAL_LINK_CLASS );
 			result.resolve( {
 				text: this.getReferenceHtml( $el ),
-				parentText: this.getReferenceHtml( $parent )
+				parentText: this.getReferenceHtml( $parent ),
+				isSubref
 			} );
 		} else {
 			result.reject( ReferencesGateway.ERROR_NOT_EXIST );
@@ -57,11 +59,11 @@ mfExtend( ReferencesHtmlScraperGateway, ReferencesGateway, {
 	/**
 	 * @memberof ReferencesHtmlScraperGateway
 	 * @param {jQuery.Object|undefined} $reference
-	 * @returns {string}
+	 * @return {string|undefined}
 	 */
 	getReferenceHtml( $reference ) {
 		return $reference ?
-			$reference.find( '.mw-reference-text, .reference-text' ).first().html() :
+			$reference.children( '.mw-reference-text, .reference-text' ).first().html() :
 			'';
 	},
 	/**
