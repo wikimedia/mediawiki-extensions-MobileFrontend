@@ -96,7 +96,7 @@
 	"mobile-frontend-history-no-results": "Kyangcyam hu ku nwai tyai nkhang na̱ tai á̱si̱ nang a cat a̱ni.",
 	"mobile-frontend-joined-just-now": "A sii {{GENDER:$1|shyia̱ nwuai}} hu ma̱ninika",
 	"mobile-frontend-joined-seconds": "A ku {{GENDER:$1|shyia̱ nwuai}} hu mi̱ da̱ {{PLURAL:$2|a̱da̱dei mbwak $2 ka̱|a̱cyuang mbwak $2 na̱}} sii swak a̱ni",
-	"mobile-frontend-joined-minutes": "A ku {{GENDER:$1|shyia̱ nwuai}} hu mi̱ di̱ {{PLURAL:$2|miti $2 ku|mmiti $2 na̱}} sii swak a̱ni",
+	"mobile-frontend-joined-minutes": "A ku {{GENDER:$1|shyia̱ nwuo}} hu mi̱ di̱ {{PLURAL:$2|miti $2 ku|mmiti $2 na̱}} sii swak a̱ni",
 	"mobile-frontend-joined-hours": "A ku {{GENDER:$1|shyia̱ nwuai}} hu mi̱ di̱ {{PLURAL:$2|awa $2 a̱|áwa $2 ba̱}} sii swak a̱ni",
 	"mobile-frontend-joined-days": "A ku {{GENDER:$1|shyia̱ nwuai}} hu mi̱ di̱ {{PLURAL:$2|mam $2 ku|mmam $2 na̱}} sii swak a̱ni",
 	"mobile-frontend-joined-months": "A ku {{GENDER:$1|shyia̱ nwuai}} hu mi̱ di̱ {{PLURAL:$2|zwat $2 ji̱|zwát $2 ji̱}} sii swak a̱ni",
