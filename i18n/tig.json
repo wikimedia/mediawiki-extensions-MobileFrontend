@@ -1,9 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Bbeshir"
+			"Bbeshir",
+			"IdrisSeid"
 		]
 	},
+	"mobile-frontend-copyright": "ሕቡር የሀላ ምን ገብእ፡ ለጽበጥ ዲብ ሐንቴ $1 ልትርከብ።",
+	"mobile-frontend-terms-text": "ሽሩጣት መትነፍዖት",
 	"mobile-frontend-view": "ርኢየት ሞባይል",
 	"mobile-frontend-view-desktop": "ዴስክቶፕ"
 }
