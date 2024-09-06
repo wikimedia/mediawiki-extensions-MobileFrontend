@@ -545,7 +545,7 @@
 			"value": "visual"
 		},
 		"MFEnableVEWikitextEditor": {
-			"description": "Eanble VisualEditor's wikitext editor as a replacement for MobileFrontend's source editor.",
+			"description": "Enable VisualEditor's wikitext editor as a replacement for MobileFrontend's source editor.",
 			"value": false
 		},
 		"MFEnableJSConsoleRecruitment": {
@@ -592,7 +592,8 @@
 		"MFNamespacesWithLeadParagraphs": {
 			"value": [
 				0
-			]
+			],
+			"merge_strategy": "provide_default"
 		},
 		"MFLazyLoadImages": {
 			"value": {
