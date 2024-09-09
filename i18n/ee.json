@@ -2,9 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Aguve",
-			"Azorbli"
+			"Azorbli",
+			"E4Esau"
 		]
 	},
+	"mobile-frontend-copyright": "Woate ŋu akpɔ emenyawo le $1 te negbe ɖe wogblɔe bubui hafi.",
 	"mobile-frontend-featured-article": "Egbe ƒe nya siwo woda ɖi",
 	"mobile-frontend-news-items": "Le nyadzɔdzɔwo me",
 	"mobile-frontend-terms-text": "Ezazã Ŋuti Ɖoɖowo",

@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Winston Sung"
+			"Winston Sung",
+			"BadDog"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Uređuje li korisnik putem mobilnoga sučelja",
@@ -167,8 +168,8 @@
 	"mobile-frontend-mobile-option-MFLazyLoadImages-description": "Učitavanje slika samo kada je potrebno.",
 	"mobile-frontend-mobile-option-amc": "Napredni režim",
 	"mobile-frontend-mobile-option-amc-experiment-description": "Napredni režim nudi lak pristup stranicama za razgovor, stranicama historije, korisničkim i drugim alatima za uređivanje.",
-	"mobile-frontend-mobile-option-amc-learn-more": "Saznajte više",
-	"mobile-frontend-mobile-option-amc-send-feedback": "Pošalji povratnu informaciju",
+	"mobile-frontend-mobile-option-amc-learn-more": "Detaljnije",
+	"mobile-frontend-mobile-option-amc-send-feedback": "Povratne informacije",
 	"mobile-frontend-amc-outreach-intro": "Predstavljamo Napredni režim",
 	"mobile-frontend-amc-outreach-description": "Napredni režim omogućava veću funkcionalnost stranica o historiji, praćenjima, nedavnim promjenama i drugim uređivačkim alatima na mobilnim uređajima.",
 	"mobile-frontend-amc-outreach-enable": "Uključi napredni režim",
