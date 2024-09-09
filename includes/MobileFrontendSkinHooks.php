@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\Html\Html;
+use MediaWiki\MediaWikiServices;
 
 class MobileFrontendSkinHooks {
 	/**
@@ -40,7 +41,8 @@ class MobileFrontendSkinHooks {
 				$req->appendQueryValue( 'mobileaction', 'toggle_view_desktop' )
 			);
 		}
-		$desktopUrl = $context->getDesktopUrl( wfExpandUrl( $url, PROTO_RELATIVE ) );
+		$urlUtils = MediaWikiServices::getInstance()->getUrlUtils();
+		$desktopUrl = $context->getDesktopUrl( $urlUtils->expand( $url, PROTO_RELATIVE ) ?? '' );
 
 		$desktop = $context->msg( 'mobile-frontend-view-desktop' )->text();
 		return Html::element( 'a',

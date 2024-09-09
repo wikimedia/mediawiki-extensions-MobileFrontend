@@ -53,6 +53,7 @@ use MediaWiki\Title\Title;
 use MediaWiki\User\Hook\UserGetDefaultOptionsHook;
 use MediaWiki\User\Options\UserOptionsLookup;
 use MediaWiki\User\User;
+use MediaWiki\Utils\UrlUtils;
 use MediaWiki\Watchlist\WatchlistManager;
 use MobileFrontend\Api\ApiParseExtender;
 use MobileFrontend\ContentProviders\DefaultContentProvider;
@@ -969,10 +970,11 @@ class MobileFrontendHooks implements
 	 */
 	public static function onCentralAuthSilentLoginRedirect( $centralUser, &$url, $info ) {
 		if ( isset( $info['mobileServer'] ) ) {
-			$mobileUrlParsed = wfParseUrl( $info['mobileServer'] );
-			$urlParsed = wfParseUrl( $url );
-			$urlParsed['host'] = $mobileUrlParsed['host'];
-			$url = wfAssembleUrl( $urlParsed );
+			$urlUtils = MediaWikiServices::getInstance()->getUrlUtils();
+			$mobileUrlParsed = $urlUtils->parse( $info['mobileServer'] );
+			$urlParsed = $urlUtils->parse( $url );
+			$urlParsed['host'] = $mobileUrlParsed['host'] ?? '';
+			$url = UrlUtils::assemble( $urlParsed );
 		}
 	}
 

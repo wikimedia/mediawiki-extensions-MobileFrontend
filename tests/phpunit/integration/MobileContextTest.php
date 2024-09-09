@@ -6,6 +6,7 @@ use MediaWiki\MainConfigNames;
 use MediaWiki\Request\FauxRequest;
 use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\Title\Title;
+use MediaWiki\Utils\UrlUtils;
 use MobileFrontend\Tests\Utils;
 
 /**
@@ -39,9 +40,12 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 	 * @return MobileContext
 	 */
 	private function makeContext( $url = '/', $cookies = [] ) {
+		$services = $this->getServiceContainer();
+		$urlUtils = $services->getUrlUtils();
+
 		$query = [];
 		if ( $url ) {
-			$params = wfParseUrl( wfExpandUrl( $url ) );
+			$params = $urlUtils->parse( $urlUtils->expand( $url, PROTO_CURRENT ) ?? '' );
 			if ( isset( $params['query'] ) ) {
 				$query = wfCgiToArray( $params['query'] );
 			}
@@ -53,7 +57,7 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 
 		MobileContext::resetInstanceForTesting();
 		/** @var MobileContext $instance */
-		$instance = $this->getServiceContainer()->getService( 'MobileFrontend.Context' );
+		$instance = $services->getService( 'MobileFrontend.Context' );
 
 		/** @var MutableContext $context */
 		$context = $instance->getContext();
@@ -150,9 +154,10 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 	 */
 	public function testUpdateDesktopUrlQuery( $mobile, $desktop ) {
 		$updateDesktopUrlQuery = self::getMethod( "updateDesktopUrlQuery" );
-		$parsedUrl = wfParseUrl( $mobile );
+		$urlUtils = $this->getServiceContainer()->getUrlUtils();
+		$parsedUrl = $urlUtils->parse( $mobile );
 		$updateDesktopUrlQuery->invokeArgs( $this->makeContext(), [ &$parsedUrl ] );
-		$url = wfAssembleUrl( $parsedUrl );
+		$url = UrlUtils::assemble( $parsedUrl );
 		$this->assertEquals( $desktop, $url );
 	}
 
@@ -177,11 +182,12 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 			MainConfigNames::Server => $server,
 			'MobileUrlCallback' => [ Utils::class, 'mobileUrlCallback' ],
 		] );
-		$parsedUrl = wfParseUrl( $mobile );
+		$urlUtils = $this->getServiceContainer()->getUrlUtils();
+		$parsedUrl = $urlUtils->parse( $mobile );
 		$updateDesktopUrlHost->invokeArgs(
 			$this->makeContext(),
 			[ &$parsedUrl ] );
-		$this->assertEquals( $desktop, wfAssembleUrl( $parsedUrl ) );
+		$this->assertEquals( $desktop, UrlUtils::assemble( $parsedUrl ) );
 	}
 
 	public static function updateDesktopUrlHostProvider() {
