@@ -2,6 +2,8 @@
 
 namespace MobileFrontend;
 
+use MediaWiki\MediaWikiServices;
+
 /**
  * Utility class to find base domain for given host.
  *
@@ -54,11 +56,12 @@ class WMFBaseDomainExtractor implements BaseDomainExtractorInterface {
 	public function getCookieDomain( $server ) {
 		// Per http://php.net/manual/en/function.parse-url.php,
 		// If the requested component doesn't exist within the given
-		// URL, NULL will be returned. So wfParseUrl() will return
-		// false as it calls parse_url() if a valid server URL is not
+		// URL, NULL will be returned. So UrlUtils::parse() will return
+		// null as it calls parse_url() if a valid server URL is not
 		// given except it's an empty string.
-		$parsedUrl = wfParseUrl( $server );
-		$host = $parsedUrl !== false ? $parsedUrl['host'] : null;
+		$services = MediaWikiServices::getInstance();
+		$urlUtils = $services->getUrlUtils();
+		$host = $urlUtils->parse( (string)$server )['host'] ?? '';
 
 		$wikiHost = $this->matchBaseHostname( $host, $this->wmfWikiHosts );
 		if ( $wikiHost !== false ) {

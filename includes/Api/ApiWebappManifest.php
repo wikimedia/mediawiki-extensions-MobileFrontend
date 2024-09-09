@@ -17,6 +17,7 @@ class ApiWebappManifest extends ApiBase {
 	 */
 	public function execute() {
 		$services = MediaWikiServices::getInstance();
+		$urlUtils = $services->getUrlUtils();
 
 		$config = $this->getConfig();
 		$resultObj = $this->getResult();
@@ -33,7 +34,7 @@ class ApiWebappManifest extends ApiBase {
 
 		$appleTouchIcon = $config->get( 'AppleTouchIcon' );
 		if ( $appleTouchIcon !== false ) {
-			$appleTouchIconUrl = wfExpandUrl( $appleTouchIcon, PROTO_CURRENT );
+			$appleTouchIconUrl = $urlUtils->expand( $appleTouchIcon, PROTO_CURRENT ) ?? '';
 			$request = $services->getHttpRequestFactory()->create( $appleTouchIconUrl, [], __METHOD__ );
 			$request->execute();
 			$appleTouchIconContent = $request->getContent();

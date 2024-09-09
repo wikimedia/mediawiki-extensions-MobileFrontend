@@ -133,9 +133,10 @@ class MobilePage {
 				'class' => $className,
 			];
 
-			$imgUrl = wfExpandUrl( $thumb->getUrl(), PROTO_CURRENT );
+			$urlUtils = MediaWikiServices::getInstance()->getUrlUtils();
+			$imgUrl = $urlUtils->expand( (string)$thumb->getUrl(), PROTO_CURRENT ) ?? '';
 			if ( $useBackgroundImage ) {
-				$props['style'] = 'background-image: url("' . wfExpandUrl( $imgUrl, PROTO_CURRENT ) . '")';
+				$props['style'] = 'background-image: url("' . $urlUtils->expand( $imgUrl, PROTO_CURRENT ) . '")';
 				$text = '';
 			} else {
 				$props['src'] = $imgUrl;

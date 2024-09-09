@@ -5,6 +5,7 @@ use MediaWiki\Context\ContextSource;
 use MediaWiki\Context\IContextSource;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Utils\UrlUtils;
 use MobileFrontend\Devices\DeviceDetectorService;
 use MobileFrontend\WMFBaseDomainExtractor;
 
@@ -550,10 +551,11 @@ class MobileContext extends ContextSource {
 		if ( $this->hasMobileUrl === null ) {
 			$mobileUrlCallback = $this->getMobileUrlCallback();
 			if ( $mobileUrlCallback ) {
-				$server = wfExpandUrl( $this->getConfig()->get( 'Server' ), PROTO_CANONICAL );
-				$serverParts = wfParseUrl( $server );
-				$mobileDomain = call_user_func( $mobileUrlCallback, $serverParts['host'] );
-				$this->hasMobileUrl = $mobileDomain !== $serverParts['host'];
+				$urlUtils = MediaWikiServices::getInstance()->getUrlUtils();
+				$server = $urlUtils->expand( $this->getConfig()->get( 'Server' ), PROTO_CANONICAL ) ?? '';
+				$host = $urlUtils->parse( $server )['host'] ?? '';
+				$mobileDomain = call_user_func( $mobileUrlCallback, $host );
+				$this->hasMobileUrl = $mobileDomain !== $host;
 			} else {
 				$this->hasMobileUrl = false;
 			}
@@ -577,12 +579,13 @@ class MobileContext extends ContextSource {
 	 * @return string|bool
 	 */
 	public function getMobileUrl( $url, $forceHttps = false ) {
-		$parsedUrl = wfParseUrl( $url );
+		$urlUtils = MediaWikiServices::getInstance()->getUrlUtils();
+		$parsedUrl = $urlUtils->parse( $url );
 		// if parsing failed, maybe it's a local Url, try to expand and reparse it - task T107505
 		if ( !$parsedUrl ) {
-			$expandedUrl = wfExpandUrl( $url );
+			$expandedUrl = $urlUtils->expand( $url, PROTO_CURRENT );
 			if ( $expandedUrl ) {
-				$parsedUrl = wfParseUrl( $expandedUrl );
+				$parsedUrl = $urlUtils->parse( $expandedUrl );
 			}
 			if ( !$expandedUrl || !$parsedUrl ) {
 				return false;
@@ -598,7 +601,7 @@ class MobileContext extends ContextSource {
 			$parsedUrl['delimiter'] = '://';
 		}
 
-		$assembleUrl = wfAssembleUrl( $parsedUrl );
+		$assembleUrl = UrlUtils::assemble( $parsedUrl );
 		return $assembleUrl;
 	}
 
@@ -630,16 +633,17 @@ class MobileContext extends ContextSource {
 	 * @return string (absolute url)
 	 */
 	public function getDesktopUrl( $url ) {
-		$parsedUrl = wfParseUrl( $url );
+		$urlUtils = MediaWikiServices::getInstance()->getUrlUtils();
+		$parsedUrl = $urlUtils->parse( $url ) ?? [];
 		$this->updateDesktopUrlHost( $parsedUrl );
 		$this->updateDesktopUrlQuery( $parsedUrl );
-		$desktopUrl = wfAssembleUrl( $parsedUrl );
+		$desktopUrl = UrlUtils::assemble( $parsedUrl );
 		return $desktopUrl;
 	}
 
 	/**
 	 * Update the host of a given URL to strip out any mobile tokens
-	 * @param array &$parsedUrl Result of parseUrl() or wfParseUrl()
+	 * @param array &$parsedUrl Result of parseUrl() or UrlUtils::parse()
 	 */
 	protected function updateDesktopUrlHost( array &$parsedUrl ) {
 		$server = $this->getConfig()->get( 'Server' );
@@ -648,13 +652,14 @@ class MobileContext extends ContextSource {
 			return;
 		}
 
-		$parsedWgServer = wfParseUrl( $server );
-		$parsedUrl['host'] = $parsedWgServer['host'];
+		$urlUtils = MediaWikiServices::getInstance()->getUrlUtils();
+		$parsedWgServer = $urlUtils->parse( $server );
+		$parsedUrl['host'] = $parsedWgServer['host'] ?? '';
 	}
 
 	/**
 	 * Update the query portion of a given URL to remove any 'useformat' params
-	 * @param array &$parsedUrl Result of parseUrl() or wfParseUrl()
+	 * @param array &$parsedUrl Result of parseUrl() or UrlUtils::parse()
 	 */
 	protected function updateDesktopUrlQuery( array &$parsedUrl ) {
 		if ( isset( $parsedUrl['query'] ) && strpos( $parsedUrl['query'], 'useformat' ) !== false ) {
@@ -753,9 +758,10 @@ class MobileContext extends ContextSource {
 	 * @return bool
 	 */
 	public function isLocalUrl( $url ) {
-		$parsedTarget = wfParseUrl( $url );
-		$parsedServer = wfParseUrl( $this->config->get( 'Server' ) );
-		return $parsedTarget['host'] === $parsedServer['host'];
+		$urlUtils = MediaWikiServices::getInstance()->getUrlUtils();
+		$parsedTargetHost = $urlUtils->parse( $url )['host'] ?? '';
+		$parsedServerHost = $urlUtils->parse( $this->config->get( 'Server' ) )['host'] ?? '';
+		return $parsedTargetHost === $parsedServerHost;
 	}
 
 	/**

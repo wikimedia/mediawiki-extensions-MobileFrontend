@@ -104,7 +104,8 @@ class MobileFrontendEditorHooks implements
 				$msg = 'mobile-frontend-editor-uploadenable';
 			} else {
 				$msg = 'mobile-frontend-editor-toload';
-				$msgParams = wfExpandUrl( $url );
+				$urlUtils = MediaWikiServices::getInstance()->getUrlUtils();
+				$msgParams = $urlUtils->expand( $url, PROTO_CURRENT );
 			}
 			$out->showPendingTakeover( $url, $msg, $msgParams );
 
