@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Kscanne",
 			"MinecraftAustralia",
 			"Smirkybec",
 			"Tem",
@@ -8,6 +9,7 @@
 		]
 	},
 	"mobile-frontend-clear-search": "Glan",
+	"mobile-frontend-copyright": "Tá an t-ábhar seo ar fáil faoi $1 mura luaitear a mhalairt.",
 	"mobile-frontend-editor-blocked-drawer-help": "Sonraí",
 	"mobile-frontend-editor-cancel": "Cealaigh",
 	"mobile-frontend-editor-continue": "Ar aghaidh",
