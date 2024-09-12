@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Winston Sung"
+			"Winston Sung",
+			"BadDog"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Uređuje li korisnik putem mobilnoga sučelja",
@@ -63,10 +64,10 @@
 	"mobile-frontend-editor-viewing-source-page": "<strong>Prikaz izvora stranice</strong><span> $1</span>",
 	"mobile-frontend-editor-wait": "Čuvanje izmjene; molimo, sačekajte.",
 	"mobile-frontend-editor-loading": "Učitavanje uređivača...",
-	"mf-expand-sections-description": "Uvijek rasklopljaj podnaslove sadržinskih stranica.",
-	"mf-expand-sections-name": "Rasklopljaj sve odlomke",
+	"mf-expand-sections-description": "Uvijek rasklapa odjeljke sadržinskih stranica.",
+	"mf-expand-sections-name": "Rasklapaj sve odjeljke",
 	"mf-font-size-name": "Veličina fonta",
-	"mf-font-size-description": "Prilagođivanje veličine slova, radi bolje čitljivosti.",
+	"mf-font-size-description": "Prilagodite veličinu fonta radi bolje čitljivosti.",
 	"mf-font-size-small-label": "Mala",
 	"mf-font-size-regular-label": "Normalna",
 	"mf-font-size-large-label": "Velika",
@@ -145,9 +146,9 @@
 	"mobile-frontend-send-feedback": "Pošalji povratnu informaciju",
 	"mobile-frontend-mobile-option-MFLazyLoadImages-description": "Učitavanje slika samo kada je potrebno.",
 	"mw-mf-amc-name": "Napredni režim",
-	"mw-mf-amc-description": "Napredni režim nudi lak pristup stranicama za razgovor, stranicama historije, korisničkim i drugim alatima za uređivanje.",
-	"mobile-frontend-mobile-option-amc-learn-more": "Saznajte više",
-	"mobile-frontend-mobile-option-amc-send-feedback": "Pošalji povratnu informaciju",
+	"mw-mf-amc-description": "Nudi lak pristup stranicama za razgovor, stranicama historije, korisničkim alatkama i drugim alatkama za uređivanje.",
+	"mobile-frontend-mobile-option-amc-learn-more": "Detaljnije",
+	"mobile-frontend-mobile-option-amc-send-feedback": "Povratne informacije",
 	"mobile-frontend-amc-outreach-intro": "Predstavljamo Napredni režim",
 	"mobile-frontend-amc-outreach-description": "Napredni režim omogućava veću funkcionalnost stranica o historiji, praćenjima, nedavnim promjenama i drugim uređivačkim alatima na mobilnim uređajima.",
 	"mobile-frontend-amc-outreach-enable": "Uključi napredni režim",
