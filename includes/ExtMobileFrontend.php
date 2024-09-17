@@ -96,6 +96,13 @@ class ExtMobileFrontend {
 		$action = $context->getRequest()->getText( 'action', 'view' );
 		$isView = $action === 'view' || ApiParseExtender::isParseAction( $action );
 
+		$shouldUseParsoid = false;
+		if ( ExtensionRegistry::getInstance()->isLoaded( 'ParserMigration' ) ) {
+			$oracle = MediaWikiServices::getInstance()->getService( 'ParserMigration.Oracle' );
+			$shouldUseParsoid =
+				$oracle->shouldUseParsoid( $context->getUser(), $context->getRequest(), $title );
+		}
+
 		$enableSections = (
 			// Don't collapse sections e.g. on JS pages
 			$title->canExist()
@@ -104,6 +111,7 @@ class ExtMobileFrontend {
 			&& !in_array( $ns, $config->get( 'MFNamespacesWithoutCollapsibleSections' ) )
 			// And not when what's shown is not actually article text
 			&& $isView
+			&& !$shouldUseParsoid
 		);
 
 		// https://phabricator.wikimedia.org/T232690

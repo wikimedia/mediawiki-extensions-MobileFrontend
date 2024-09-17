@@ -49,7 +49,7 @@ function toggle( content, headingText, icon ) {
  */
 function init( container ) {
 	const isCollapsed = isCollapsedByDefault();
-	const headingWrappers = Array.from( container.querySelectorAll( '.mw-parser-output > section > section > .mw-heading' ) );
+	const headingWrappers = Array.from( container.querySelectorAll( '.mw-parser-output > section > .mw-heading' ) );
 	headingWrappers.forEach( ( wrapper ) => {
 		wrapper.classList.add( 'mf-collapsible-heading' );
 		const heading = wrapper.firstElementChild;
