@@ -72,7 +72,7 @@
 	"mf-font-size-large-label": "Katta",
 	"mobile-frontend-generic-404-desc": "Siz qidirayotgan sahifani topishning imkoni boʻlmadi.",
 	"mobile-frontend-generic-404-title": "Xatolik: Sahifa topilmadi",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} siz kabi insonlar tomonidan yuritiladi.</strong><br />Hissa qoʻshish uchun tizimga kiring.",
+	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} siz kabi odamlar tomonidan yaratiladi.</strong><br />Hissa qoʻshish uchun tizimga kiring.",
 	"mobile-frontend-joined-just-now": "Hozirgina {{GENDER:$1|qoʻshildi}}",
 	"mobile-frontend-joined-seconds": "{{PLURAL:$2|$2 soniya}} avval {{GENDER:$1|qoʻshildi}}",
 	"mobile-frontend-joined-minutes": "{{PLURAL:$2|$2 daqiqa}} avval {{GENDER:$1|qoʻshildi}}",
