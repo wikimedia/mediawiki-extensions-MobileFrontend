@@ -68,7 +68,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 		content: util.template( `
 <div lang="{{contentLang}}" dir="{{contentDir}}" class="editor-container content">
 	<textarea class="wikitext-editor" id="wikitext-editor" cols="40" rows="10" placeholder="{{placeholder}}"></textarea>
-	<div class="preview collapsible-headings-expanded"></div>
+	<div class="preview collapsible-headings-expanded mw-body-content"></div>
 </div>
 		` )
 	} ),
