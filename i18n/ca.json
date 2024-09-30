@@ -19,7 +19,8 @@
 			"Toniher",
 			"Vfc",
 			"Vriullop",
-			"Pierpao"
+			"Pierpao",
+			"Lluis Cat"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si un usuari està editant a través de la interfície per a mòbils",
@@ -49,7 +50,7 @@
 	"mobile-frontend-editor-blocked-drawer-body-link": "Mostra’n més",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Motiu",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "Blocatge per",
-	"mobile-frontend-editor-blocked-drawer-expiry-header": "El blocatge venç el",
+	"mobile-frontend-editor-blocked-drawer-expiry-header": "El blocatge vencerà",
 	"mobile-frontend-editor-blocked-drawer-help": "Més informació",
 	"mobile-frontend-editor-generic-block-reason": "Motiu desconegut",
 	"mobile-frontend-editor-cancel": "Cancel·la",

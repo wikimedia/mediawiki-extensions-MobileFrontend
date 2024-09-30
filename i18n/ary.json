@@ -8,6 +8,7 @@
 			"Tifratin"
 		]
 	},
+	"mobile-frontend-copyright": "لمحتوى متوفر تحت الترخيص $1 من غير يلا تڭال لعكس.",
 	"mobile-frontend-editor-anonwarning": "<strong>عنداك</strong>: ڭاعما تكونيكطيتي. غادي تبان لادريسة أي پي ديالك ملي غادي دير شي تعديل. إلا <strong>تكونيكطيتي</strong> ولا <strong>درتي كونط</strong>، تعديلات لي غادي تدير غادي يتحسبو ل لكونط ديالك، ب زيادة على بزاف د لحوايج غادي تستافد منهم.",
 	"mobile-frontend-editor-blocked-drawer-body-partial": "حاول تبدّل شي صفحة خرا",
 	"mobile-frontend-editor-blocked-drawer-body-link": "شوف كتر",
@@ -36,6 +37,7 @@
 	"mobile-frontend-search-content-no-results": "<b>{{int:mobile-frontend-search-content}}</b> باش تشوف فين كاينة هاد لكلمة.",
 	"mobile-frontend-search-no-results": "ماكايناش صفحة بهاد لعنوان.",
 	"mobile-frontend-terms-text": "شروط تخدام",
+	"mobile-frontend-view": "ڤيرسيون موبيل",
 	"mobile-frontend-view-desktop": "ڤيرسيون د پيسي",
 	"mobile-frontend-watchlist-cta-button-signup": "دير كونط",
 	"tag-mobile_edit": "تعديل من تّيليفون",
