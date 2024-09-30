@@ -11,6 +11,7 @@
 			"Robertjamal12"
 		]
 	},
+	"abusefilter-edit-builder-vars-user-mobile": "Sɛ obi redi dwuma wɔ ahomatrofoɔ so anaa onni dwuma ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "Bɔ confirmation code",
 	"mobile-frontend-changeslist-nocomment": "Nsakrae biara nni hɔ a ɛsɛ sɛ yɛbɔ no mua",
 	"mobile-frontend-clear-search": "Pepa",
@@ -50,7 +51,7 @@
 	"mobile-frontend-editor-error-loading": "Mfomsoɔ, wonntumi mmue msesamufoɔ yi.",
 	"mobile-frontend-editor-error-preview": "Mfomsoɔ, biribi a w'ani nnaso siiɛ berɛ a worebui kane deɛ no. Mepa wo kyɛw tom na sane bue biom.",
 	"mobile-frontend-editor-keep-editing": "Tua so sesa",
-	"mobile-frontend-editor-licensing": "Gye to mu sɛ wobɛgyae ntoboa no ahyɛ$1 {{PLURAL:$2|tumi krataa|tumi nkrataa}}ase berɛ a worekora nsesaeɛ no",
+	"mobile-frontend-editor-licensing": "Gye to mu sɛ wobɛgyae ntoboa no ahyɛ $1 {{PLURAL:$2|tumi krataa|tumi nkrataa}} ase berɛ a worekora nsesaeɛ no",
 	"mobile-frontend-editor-licensing-with-terms": "Berɛ a worekora nsesaeɛ, wogye $1 to mu na wosane gye to mu sɛ wobɛgyae wo ntoboa ahyɛ $2 {{PLURAL:$3|tumi krataa|tumi nkrataa}} ase.",
 	"mobile-frontend-editor-terms-link": "[Nhyehyɛeɛ a ɛwɔ $1 mu]",
 	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|Wogye di sɛ wopɛ sɛ wobue }}krataafa foforɔ wɔ{{beaɛ no din}}?",
