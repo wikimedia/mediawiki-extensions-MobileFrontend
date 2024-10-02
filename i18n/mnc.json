@@ -5,13 +5,14 @@
 			"ChoiChong",
 			"Chulsu463",
 			"Moon0319",
-			"Obonggi"
+			"Obonggi",
+			"MiiCii"
 		]
 	},
-	"mobile-frontend-copyright": "encu gisun akūce ere medege $1 de dosirengge mutembi.",
-	"mobile-frontend-terms-text": "baitalan i kooli fafun",
-	"mobile-frontend-view": "axxafun i tuwambi",
-	"mobile-frontend-view-desktop": "desktop",
+	"mobile-frontend-copyright": "Gūwa getukelere gisun bisireci tulgiyen, ere asui tatan -i baktambun $1 toose bubure be baitalambi.",
+	"mobile-frontend-terms-text": "Baitalara justan",
+	"mobile-frontend-view": "Aššafun ban -i tuwara nirugan",
+	"mobile-frontend-view-desktop": "Bodotun -i ban",
 	"tag-mobile_edit": "Axxafun banjibusi",
 	"tag-mobile_web_edit": "Axxafun asu banjibusi"
 }

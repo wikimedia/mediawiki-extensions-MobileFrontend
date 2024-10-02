@@ -69,7 +69,7 @@
 	"mobile-frontend-editor-anonwarning": "A warning message, when user tries to edit without logging in.",
 	"mobile-frontend-editor-autocreatewarning": "A warning message, when user tries to edit without logging in, and temporary user auto-creation is enabled.\nParameters:\n* $1 - a link to the documentation page for temporary accounts",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Label for a button in the mobile block message drawer.\n{{identical|Log in}}",
-	"mobile-frontend-drawer-arrow-label": "Label for the arrow icon button in the drawer",
+	"mobile-frontend-drawer-arrow-label": "Label for the arrow icon button in the drawer, which closes the drawer.",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "Label for a button in the mobile block message drawer.",
 	"mobile-frontend-editor-blocked-drawer-action-randompage": "Label for a button in the mobile block message drawer. The button links to [[Special:RandomPage]].",
 	"mobile-frontend-editor-blocked-drawer-title": "Title for the drawer that appears when a user with a blocked account attempts to edit.\n\nSee also:\n* {{msg-mw|Mobile-frontend-editor-blocked-drawer-title-partial}}\n* {{msg-mw|Mobile-frontend-editor-blocked-drawer-title-ip}}\n* {{msg-mw|Mobile-frontend-editor-blocked-drawer-title-ip-partial}}",
