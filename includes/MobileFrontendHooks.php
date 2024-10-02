@@ -189,10 +189,10 @@ class MobileFrontendHooks implements
 
 		// Allow overriding of skin by useskin e.g. useskin=vector&useformat=mobile or by
 		// setting the mobileskin preferences (api only currently)
-		$userOption = $this->userOptionsLookup->getOption(
-			$context->getUser(), 'mobileskin'
-		);
-		$userSkin = $context->getRequest()->getRawVal( 'useskin', $userOption );
+		$userSkin = $context->getRequest()->getRawVal( 'useskin' ) ??
+			$this->userOptionsLookup->getOption(
+				$context->getUser(), 'mobileskin'
+			);
 		if ( $userSkin && Skin::normalizeKey( $userSkin ) === $userSkin ) {
 			$skin = $this->skinFactory->makeSkin( $userSkin );
 		} else {
