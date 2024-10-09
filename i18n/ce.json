@@ -60,7 +60,7 @@
 	"mobile-frontend-editor-placeholder": "ХӀара дакъа даьсса ду. Иза дуьзна {{GENDER:|хьалхара}} хила!",
 	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|Ахьа}} {{SITENAME}}н сайта тӀехь керла агӀо кхуллуш йу!",
 	"mobile-frontend-editor-previewing-page": "<span><strong>Хьалххе хьажар</strong> $1</span>",
-	"mobile-frontend-editor-publish": "ДӀайазйе",
+	"mobile-frontend-editor-publish": "ДӀайазйан",
 	"mobile-frontend-editor-save": "Ӏалашдан",
 	"mobile-frontend-editor-summary-placeholder": "Масала: ГӀалат нисдина, чуьраниг тӀетоьхна",
 	"mobile-frontend-editor-summary-request": "АгӀонна хӀун хийцамаш бина ахьа?",

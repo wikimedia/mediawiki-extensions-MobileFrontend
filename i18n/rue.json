@@ -21,7 +21,7 @@
 	"mobile-frontend-joined-years": "{{GENDER:$1|Припоїв ся|Припоїла ся}} перед {{PLURAL:$2|$2 роками|$2 роком}}",
 	"mobile-frontend-language-heading": "<strong>Языкы</strong>",
 	"mobile-frontend-last-modified-date": "Останнє редагування: $1, $2",
-	"mobile-frontend-main-menu-settings-heading": "Наштелёваня мобілной верзії",
+	"mobile-frontend-main-menu-settings-heading": "Наставлїня",
 	"mobile-frontend-news-items": "Новины",
 	"mobile-frontend-opt-in-explain": "Припоїнём к бетатесту здобудете доступ к експеріменталным функціям, але з різіком, же трафите на хыбы і проблемы.",
 	"mobile-frontend-privacy-link-text": "Охорона пріватности",
