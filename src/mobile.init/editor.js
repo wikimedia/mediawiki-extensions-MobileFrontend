@@ -510,7 +510,7 @@ function bindEditLinksLoginDrawer( router ) {
 			ev.preventDefault();
 		} );
 	} );
-	router.route( editorPath, function () {
+	router.addRoute( editorPath, function () {
 		showLoginDrawer();
 	} );
 	router.checkRoute();
@@ -569,7 +569,7 @@ function bindEditLinksSorryToast( msg, router ) {
 			ev.preventDefault();
 		} );
 	} );
-	router.route( editorPath, function () {
+	router.addRoute( editorPath, function () {
 		mw.notify( msg );
 	} );
 	router.checkRoute();
