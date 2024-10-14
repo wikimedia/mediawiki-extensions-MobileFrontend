@@ -11,6 +11,7 @@
 	"mobile-frontend-clear-search": "Очістити",
 	"mobile-frontend-copyright": "Обсяг є доступный під $1, кідь не є вказане інше.",
 	"mobile-frontend-desc": "Мобілный інтерфейс",
+	"mf-font-size-small-label": "Штандартный",
 	"mobile-frontend-joined-just-now": "Нынї {{GENDER:$1|припоїв ся|припоїла ся}}",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|Припоїв ся|Припоїла ся}} перед {{PLURAL:$2|$2 секундами|$2 секундов}}",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|Припоїв ся|Припоїла ся}} перед {{PLURAL:$2|$2 минутами|$2 минутов}}",
