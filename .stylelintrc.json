@@ -1,11 +1,9 @@
 {
 	"extends": [
-		"stylelint-config-wikimedia/mediawiki",
-		"stylelint-config-wikimedia/support-modern"
+		"stylelint-config-wikimedia"
 	],
 	"rules": {
 		"declaration-no-important": null,
-		"stylistic/selector-list-comma-newline-after": null,
 		"declaration-property-unit-disallowed-list": null,
 		"selector-class-pattern": null
 	}
