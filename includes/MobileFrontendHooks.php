@@ -683,16 +683,17 @@ class MobileFrontendHooks implements
 	 *  is the entry. Null if it's for the current action being filtered.
 	 */
 	public static function onAbuseFilterGenerateUserVars( $vars, $user, RecentChange $rc = null ) {
+		$services = MediaWikiServices::getInstance();
+
 		if ( !$rc ) {
 			/** @var MobileContext $context */
-			$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
+			$context = $services->getService( 'MobileFrontend.Context' );
 			$vars->setVar( 'user_mobile', $context->shouldDisplayMobileView() );
 		} else {
-			$dbr = MediaWikiServices::getInstance()
-				->getConnectionProvider()
-				->getReplicaDatabase();
 
-			$tags = ChangeTags::getTags( $dbr, $rc->getAttribute( 'rc_id' ) );
+			$dbr = $services->getConnectionProvider()->getReplicaDatabase();
+
+			$tags = $services->getChangeTagsStore()->getTags( $dbr, $rc->getAttribute( 'rc_id' ) );
 			$val = (bool)array_intersect( $tags, [ 'mobile edit', 'mobile web edit' ] );
 			$vars->setVar( 'user_mobile', $val );
 		}
