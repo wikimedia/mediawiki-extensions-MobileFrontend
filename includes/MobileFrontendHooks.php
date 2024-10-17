@@ -529,8 +529,6 @@ class MobileFrontendHooks implements
 			'wgMFEnableJSConsoleRecruitment' => $config->get( 'MFEnableJSConsoleRecruitment' ),
 			// Browser.js
 			'wgMFDeviceWidthTablet' => self::DEVICE_WIDTH_TABLET,
-			// toggle.js
-			'wgMFCollapseSectionsByDefault' => $config->get( 'MFCollapseSectionsByDefault' ),
 			// extendSearchParams.js
 			'wgMFTrackBlockNotices' => $config->get( 'MFTrackBlockNotices' ),
 		];
@@ -861,13 +859,9 @@ class MobileFrontendHooks implements
 			$fontSize = $this->userOptionsLookup->getOption(
 				$context->getUser(), self::MOBILE_PREFERENCES_FONTSIZE
 			) ?? 'small';
-			// If sections are never collapsed by default, we do not show an "expand sections"
-			// option in Special:MobileOptions so the user option is ignored.
-			$siteDefaultCollapseSections = $context->getConfig()->get( 'MFCollapseSectionsByDefault' );
-			$userSectionsPreference = $this->userOptionsLookup->getOption(
+			$expandSections = $this->userOptionsLookup->getOption(
 				$context->getUser(), self::MOBILE_PREFERENCES_EXPAND_SECTIONS
 			) ? '1' : '0';
-			$expandSections = $siteDefaultCollapseSections ? $userSectionsPreference : '1';
 
 			/** @var \MobileFrontend\Amc\UserMode $userMode */
 			$userMode = MediaWikiServices::getInstance()->getService( 'MobileFrontend.AMC.UserMode' );

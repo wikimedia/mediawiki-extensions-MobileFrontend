@@ -71,7 +71,6 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 	 */
 	public function setJsConfigVars() {
 		$this->getOutput()->addJsConfigVars( [
-			'wgMFCollapseSectionsByDefault' => $this->getConfig()->get( 'MFCollapseSectionsByDefault' ),
 			'wgMFEnableFontChanger' => $this->featuresManager->isFeatureAvailableForCurrentUser(
 				'MFEnableFontChanger'
 			),

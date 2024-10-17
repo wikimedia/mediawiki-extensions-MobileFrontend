@@ -42,7 +42,6 @@ QUnit.module( 'MobileFrontend Toggler.js', {
 		browser = require( '../../../src/mobile.startup/Browser' ).getSingleton();
 		Toggler = require( '../../../src/mobile.startup/Toggler' );
 
-		sandbox.stub( mw.config, 'get' ).withArgs( 'wgMFCollapseSectionsByDefault' ).returns( true );
 		sandbox.stub( browser, 'isWideScreen' ).returns( false );
 		sandbox.stub( window, 'scrollTo' );
 
@@ -212,8 +211,7 @@ QUnit.test( 'Tablet mode - Open by default', function ( assert ) {
  * Expand sections user setting
  */
 QUnit.test( 'Tablet mode - Open by default 2', function ( assert ) {
-
-	mw.config.get.withArgs( 'wgMFCollapseSectionsByDefault' ).returns( false );
+	browser.isWideScreen.returns( true );
 
 	/* eslint-disable-next-line no-new */
 	new Toggler( {
@@ -234,7 +232,6 @@ QUnit.test( 'Accessibility - Pressing space/ enter toggles a heading', function 
 		ev = $.Event( 'keypress' );
 
 	browser.isWideScreen.returns( false );
-	mw.config.get.withArgs( 'wgMFCollapseSectionsByDefault' ).returns( true );
 
 	/* eslint-disable-next-line no-new */
 	new Toggler( {

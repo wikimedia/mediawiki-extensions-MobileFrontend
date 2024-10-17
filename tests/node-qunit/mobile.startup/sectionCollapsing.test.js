@@ -11,6 +11,8 @@ QUnit.module( 'MobileFrontend sectionCollapsing.js', {
 		dom.setUp( sandbox, global );
 		jQuery.setUp( sandbox, global );
 		sectionCollapsing = require( '../../../src/mobile.startup/sectionCollapsing' );
+		const browser = require( '../../../src/mobile.startup/Browser' ).getSingleton();
+		sandbox.stub( browser, 'isWideScreen' ).returns( false );
 	},
 	afterEach: function () {
 		jQuery.tearDown();
@@ -83,9 +85,9 @@ QUnit.test( 'init() - talk pages', ( assert ) => {
 	);
 
 	const heading = container.querySelector( '.mw-heading' );
-	assert.strictEqual( heading.getAttribute( 'aria-expanded' ), 'false', 'collapsed by default' );
+	assert.strictEqual( heading.getAttribute( 'aria-expanded' ), 'true', 'collapsed by default' );
 	container.querySelector( '.mw-editsection a' ).dispatchEvent( new Event( 'click', {
 		bubbles: true
 	} ) );
-	assert.strictEqual( heading.getAttribute( 'aria-expanded' ), 'false', 'was not impacted by click' );
+	assert.strictEqual( heading.getAttribute( 'aria-expanded' ), 'true', 'was not impacted by click' );
 } );

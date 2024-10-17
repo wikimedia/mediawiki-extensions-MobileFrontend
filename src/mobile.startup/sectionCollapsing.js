@@ -37,7 +37,7 @@ function setCollapsedState( content, headingText, icon, isCollapsed ) {
  */
 function toggle( content, headingText, icon ) {
 	const currentlyHidden = content.hidden;
-	setCollapsedState( content, headingText, icon, !currentlyHidden );
+	setCollapsedState( content, headingText, icon, currentlyHidden );
 }
 
 /**

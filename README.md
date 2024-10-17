@@ -469,21 +469,6 @@ In which namespaces sections shouldn't be collapsed.
   ]
 ```
 
-#### $wgMFCollapseSectionsByDefault
-
-Controls whether to collapse sections by default.
-
-Leave at default `true` for "encyclopedia style", where the section 0 lead text
-will always be visible and subsequent sections may be collapsed by default.
-
-In tablet sections will always be expanded by default regardless of this
-setting.
-
-Set to `false` for "dictionary style", sections are not collapsed.
-
-* Type: `Boolean`
-* Default: `true`
-
 #### $wgMFUseWikibase
 
 If set to true, the use Wikibase is enabled and associated features is enabled.
