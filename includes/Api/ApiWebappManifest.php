@@ -2,8 +2,8 @@
 
 namespace MobileFrontend\Api;
 
-use ApiBase;
-use ApiFormatJson;
+use MediaWiki\Api\ApiBase;
+use MediaWiki\Api\ApiFormatJson;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
 

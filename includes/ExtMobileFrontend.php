@@ -4,6 +4,7 @@ use MediaWiki\Context\IContextSource;
 use MediaWiki\Html\TemplateParser;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Output\OutputPage;
+use MediaWiki\Registration\ExtensionRegistry;
 use MediaWiki\Title\Title;
 use MediaWiki\User\User;
 use MobileFrontend\Api\ApiParseExtender;

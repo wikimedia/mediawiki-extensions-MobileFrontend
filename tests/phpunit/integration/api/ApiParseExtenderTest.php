@@ -1,5 +1,6 @@
 <?php
 
+use MediaWiki\Api\ApiMain;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\Request\FauxRequest;
 
