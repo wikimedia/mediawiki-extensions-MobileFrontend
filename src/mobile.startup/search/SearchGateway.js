@@ -132,14 +132,12 @@ SearchGateway.prototype = {
 	 * @private
 	 */
 	_processData( query, data ) {
-		const self = this;
-
 		let results = [];
 
 		if ( data.query ) {
 
 			results = data.query.pages || {};
-			results = Object.keys( results ).map( ( id ) => self._getPage( query, results[id] ) );
+			results = Object.keys( results ).map( ( id ) => this._getPage( query, results[id] ) );
 			// sort in order of index
 			results.sort( ( a, b ) => a.index - b.index );
 		}
@@ -156,8 +154,7 @@ SearchGateway.prototype = {
 	 * @return {jQuery.Deferred}
 	 */
 	search( query ) {
-		const scriptPath = mw.config.get( 'wgMFScriptPath' ),
-			self = this;
+		const scriptPath = mw.config.get( 'wgMFScriptPath' );
 
 		if ( !this.isCached( query ) ) {
 			const xhr = this.api.get( this.getApiData( query ), scriptPath ? {
@@ -168,12 +165,12 @@ SearchGateway.prototype = {
 					// resolve the Deferred object
 					( data, jqXHR ) => ( {
 						query,
-						results: self._processData( query, data ),
+						results: this._processData( query, data ),
 						searchId: jqXHR && jqXHR.getResponseHeader( 'x-search-id' )
 					} ),
 					() => {
 						// reset cached result, it maybe contains no value
-						self.searchCache[query] = undefined;
+						this.searchCache[query] = undefined;
 					}
 				);
 

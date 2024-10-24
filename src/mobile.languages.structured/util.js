@@ -123,8 +123,7 @@ module.exports = {
 		showSuggestedLanguages,
 		deviceLanguage
 	) {
-		const hasOwn = Object.prototype.hasOwnProperty,
-			self = this;
+		const hasOwn = Object.prototype.hasOwnProperty;
 
 		let maxFrequency = 0,
 			minFrequency = 0,
@@ -153,7 +152,7 @@ module.exports = {
 			if ( language.dir ) {
 				return language;
 			} else {
-				return self.getDir( language );
+				return this.getDir( language );
 			}
 		};
 

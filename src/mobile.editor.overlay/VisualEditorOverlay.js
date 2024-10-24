@@ -239,12 +239,11 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 	 * @instance
 	 */
 	onBeforeExit: function ( exit, cancel ) {
-		const overlay = this;
 		EditorOverlayBase.prototype.onBeforeExit.call( this, () => {
 			// If this function is called, the parent method has decided that we should exit
 			exit();
 			// VE-specific cleanup
-			overlay.destroyTarget();
+			this.destroyTarget();
 		}, cancel );
 	},
 	/**
@@ -262,10 +261,9 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 	 * @instance
 	 */
 	onClickAnonymous: function () {
-		const self = this;
 		this.$anonWarning.hide();
 		this.$anonTalkWarning.hide();
-		self.$el.find( '.overlay-content' ).show();
+		this.$el.find( '.overlay-content' ).show();
 		this.targetInit();
 	},
 	/**
@@ -285,8 +283,7 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 	 * @param {jQuery.Promise} [dataPromise] Optional promise for loading content
 	 */
 	switchToSourceEditor: function ( dataPromise ) {
-		const self = this,
-			SourceEditorOverlay = this.SourceEditorOverlay,
+		const SourceEditorOverlay = this.SourceEditorOverlay,
 			options = this.getOptionsForSwitch();
 		this.log( {
 			action: 'abort',
@@ -314,9 +311,9 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 		}
 		const newOverlay = new SourceEditorOverlay( options, dataPromise );
 		newOverlay.getLoadingPromise().then( () => {
-			self.switching = true;
-			self.overlayManager.replaceCurrent( newOverlay );
-			self.switching = false;
+			this.switching = true;
+			this.overlayManager.replaceCurrent( newOverlay );
+			this.switching = false;
 		} );
 	},
 	/**

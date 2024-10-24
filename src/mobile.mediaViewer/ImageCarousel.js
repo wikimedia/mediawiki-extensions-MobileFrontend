@@ -121,11 +121,10 @@ mfExtend( ImageCarousel, View, {
 	 * @instance
 	 */
 	preRender: function () {
-		const self = this;
 		this.options.thumbnails.forEach( ( thumbnail, i ) => {
-			if ( thumbnail.getFileName() === self.options.title ) {
-				self.options.caption = thumbnail.getDescription();
-				self.galleryOffset = i;
+			if ( thumbnail.getFileName() === this.options.title ) {
+				this.options.caption = thumbnail.getDescription();
+				this.galleryOffset = i;
 			}
 		} );
 	},
@@ -191,8 +190,7 @@ mfExtend( ImageCarousel, View, {
 		const
 			$el = this.$el,
 			$spinner = icons.spinner().$el,
-			thumbs = this.options.thumbnails || [],
-			self = this;
+			thumbs = this.options.thumbnails || [];
 
 		/**
 		 * Display media load failure message
@@ -201,7 +199,7 @@ mfExtend( ImageCarousel, View, {
 		 * @ignore
 		 */
 		const showLoadFailMsg = () => {
-			self.hasLoadError = true;
+			this.hasLoadError = true;
 
 			$spinner.hide();
 			// hide broken image if present
@@ -209,8 +207,8 @@ mfExtend( ImageCarousel, View, {
 
 			// show error message if not visible already
 			if ( $el.find( '.load-fail-msg' ).length === 0 ) {
-				new LoadErrorMessage( { retryPath: self.router.getPath() } )
-					.on( 'retry', self._handleRetry.bind( self ) )
+				new LoadErrorMessage( { retryPath: this.router.getPath() } )
+					.on( 'retry', this._handleRetry.bind( this ) )
 					.prependTo( $el.find( '.image' ) );
 			}
 		};
@@ -236,15 +234,15 @@ mfExtend( ImageCarousel, View, {
 
 		this.$details.prepend( detailsButton.$el );
 
-		this.gateway.getThumb( self.options.title ).then( ( data ) => {
+		this.gateway.getThumb( this.options.title ).then( ( data ) => {
 			let author;
 			const url = data.descriptionurl + '#mw-jump-to-license';
 
 			$spinner.hide();
 
-			self.thumbWidth = data.thumbwidth;
-			self.thumbHeight = data.thumbheight;
-			self.imgRatio = data.thumbwidth / data.thumbheight;
+			this.thumbWidth = data.thumbwidth;
+			this.thumbHeight = data.thumbheight;
+			this.imgRatio = data.thumbwidth / data.thumbheight;
 
 			// We need to explicitly specify document for context param as jQuery 3
 			// will create a new document for the element if the context is
@@ -252,7 +250,7 @@ mfExtend( ImageCarousel, View, {
 			// can fire in both the active document and new document which can cause
 			// insidious bugs.
 			// (https://api.jquery.com/jquery.parsehtml/#entry-longdesc)
-			$img = self.parseHTML( '<img>', document );
+			$img = this.parseHTML( '<img>', document );
 
 			// Remove the loader when the image is loaded or display load fail
 			// message on failure
@@ -269,11 +267,11 @@ mfExtend( ImageCarousel, View, {
 			// event prior to setting the image src
 			// (https://stackoverflow.com/questions/12354865/image-onload-event-and-browser-cache#answer-12355031)
 			$img.on( 'load', addImageLoadClass ).on( 'error', showLoadFailMsg );
-			$img.attr( 'src', data.thumburl ).attr( 'alt', self.options.caption );
+			$img.attr( 'src', data.thumburl ).attr( 'alt', this.options.caption );
 			$el.find( '.image' ).append( $img );
 
-			self.$details.addClass( 'is-visible' );
-			self._positionImage();
+			this.$details.addClass( 'is-visible' );
+			this._positionImage();
 			$el.find( '.image-details a' ).attr( 'href', url );
 			if ( data.extmetadata ) {
 				// Add license information
@@ -289,7 +287,7 @@ mfExtend( ImageCarousel, View, {
 					$el.find( '.license' ).prepend( author + ' &bull; ' );
 				}
 			}
-			self.adjustDetails();
+			this.adjustDetails();
 		}, () => {
 			// retrieving image location failed so show load fail msg
 			showLoadFailMsg();

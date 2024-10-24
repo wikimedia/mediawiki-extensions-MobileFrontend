@@ -123,9 +123,7 @@ mfExtend( SearchOverlay, Overlay, {
 	 * @param {jQuery.Event} ev
 	 */
 	onClickResult( ev ) {
-		const
-			self = this,
-			$link = this.$el.find( ev.currentTarget );
+		const $link = this.$el.find( ev.currentTarget );
 		/**
 		 * Fired when the user clicks a search result
 		 *
@@ -141,14 +139,14 @@ mfExtend( SearchOverlay, Overlay, {
 		ev.preventDefault();
 		this.router.back().then( () => {
 			// T308288: Appends the current search id as a url param on clickthroughs
-			if ( self.currentSearchId ) {
+			if ( this.currentSearchId ) {
 				const clickUrl = new URL( location.href );
-				clickUrl.searchParams.set( 'searchToken', self.currentSearchId );
-				self.router.navigateTo( document.title, {
+				clickUrl.searchParams.set( 'searchToken', this.currentSearchId );
+				this.router.navigateTo( document.title, {
 					path: clickUrl.toString(),
 					useReplaceState: true
 				} );
-				self.currentSearchId = null;
+				this.currentSearchId = null;
 			}
 			// Router.navigate does not support changing href.
 			// FIXME: Needs upstream change T189173
@@ -163,12 +161,11 @@ mfExtend( SearchOverlay, Overlay, {
 	 * @instance
 	 */
 	postRender() {
-		const self = this,
-			searchResults = new SearchResultsView( {
-				searchContentLabel: mw.msg( 'mobile-frontend-search-content' ),
-				noResultsMsg: mw.msg( 'mobile-frontend-search-no-results' ),
-				searchContentNoResultsMsg: mw.message( 'mobile-frontend-search-content-no-results' ).parse()
-			} );
+		const searchResults = new SearchResultsView( {
+			searchContentLabel: mw.msg( 'mobile-frontend-search-content' ),
+			noResultsMsg: mw.msg( 'mobile-frontend-search-no-results' ),
+			searchContentNoResultsMsg: mw.message( 'mobile-frontend-search-content-no-results' ).parse()
+		} );
 		let timer;
 
 		this.$el.find( '.overlay-content' ).append( searchResults.$el );
@@ -196,7 +193,7 @@ mfExtend( SearchOverlay, Overlay, {
 		 * FIXME: Given this manipulates SearchResultsView this should be moved into that class
 		 */
 		const clearSearch = () => {
-			self.$spinner.hide();
+			this.$spinner.hide();
 			clearTimeout( timer );
 		};
 
@@ -207,7 +204,7 @@ mfExtend( SearchOverlay, Overlay, {
 			if ( timer ) {
 				clearSearch();
 			}
-			timer = setTimeout( () => self.$spinner.show(),
+			timer = setTimeout( () => this.$spinner.show(),
 				SEARCH_SPINNER_DELAY - searchData.delay );
 		} );
 		this.on( 'search-results', clearSearch );
@@ -252,30 +249,29 @@ mfExtend( SearchOverlay, Overlay, {
 	 */
 	performSearch( query ) {
 		const
-			self = this,
 			api = this.api,
 			delay = this.gateway.isCached( query ) ? 0 : SEARCH_DELAY;
 
 		// it seems the input event can be fired when virtual keyboard is closed
 		// (Chrome for Android)
 		if ( query !== this.lastQuery ) {
-			if ( self._pendingQuery ) {
-				self._pendingQuery.abort();
+			if ( this._pendingQuery ) {
+				this._pendingQuery.abort();
 			}
 			clearTimeout( this.timer );
 
 			if ( query.length ) {
 				this.timer = setTimeout( () => {
-					const xhr = self.gateway.search( query );
-					self._pendingQuery = xhr.then( ( data ) => {
-						self.currentSearchId = data.searchId;
+					const xhr = this.gateway.search( query );
+					this._pendingQuery = xhr.then( ( data ) => {
+						this.currentSearchId = data.searchId;
 						// FIXME: Given this manipulates SearchResultsView
 						// this should be moved into that class
 						// check if we're getting the rights response in case of out of
 						// order responses (need to get the current value of the input)
-						if ( data && data.query === self.$input.val() ) {
-							self.$el.toggleClass( 'no-results', data.results.length === 0 );
-							self.$searchContent
+						if ( data && data.query === this.$input.val() ) {
+							this.$el.toggleClass( 'no-results', data.results.length === 0 );
+							this.$searchContent
 								.show()
 								.find( 'p' )
 								.hide()
@@ -287,10 +283,10 @@ mfExtend( SearchOverlay, Overlay, {
 								api,
 								funnel: 'search',
 								pages: data.results,
-								el: self.$resultContainer
+								el: this.$resultContainer
 							} );
 
-							self.$results = self.$resultContainer.find( 'li' );
+							this.$results = this.$resultContainer.find( 'li' );
 						}
 					} ).promise( {
 						abort() {
@@ -299,7 +295,7 @@ mfExtend( SearchOverlay, Overlay, {
 					} );
 				}, delay );
 			} else {
-				self.resetSearch();
+				this.resetSearch();
 			}
 
 			this.lastQuery = query;

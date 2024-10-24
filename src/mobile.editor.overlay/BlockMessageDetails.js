@@ -125,7 +125,6 @@ class BlockMessageDetails extends View {
 	 * @inheritdoc
 	 */
 	postRender() {
-		const drawer = this;
 		this.$el.find( '.block-message-buttons' ).prepend(
 			new Button( this.getButtonConfig() ).$el
 		);
@@ -135,7 +134,7 @@ class BlockMessageDetails extends View {
 			} ) ).$el
 		);
 		this.options.parsedReason.then( ( htmlReason ) => {
-			drawer.$el.find( '.block-message-reason div' ).html( htmlReason );
+			this.$el.find( '.block-message-reason div' ).html( htmlReason );
 		} );
 	}
 

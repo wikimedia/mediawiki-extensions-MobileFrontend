@@ -158,12 +158,10 @@ OverlayManager.prototype = {
 	 * @param {Object|null} match Object with factory function's result. null if no match.
 	 */
 	_processMatch( match ) {
-		const self = this;
-
 		if ( match ) {
 			if ( match.overlay ) {
 				// if the match is an overlay that was previously opened, reuse it
-				self._show( match.overlay );
+				this._show( match.overlay );
 			} else {
 				// else create an overlay using the factory function result
 				const factoryResult = match.factoryResult;
@@ -173,7 +171,7 @@ OverlayManager.prototype = {
 				if ( factoryResult ) {
 					match.overlay = factoryResult;
 					attachHideEvent( match.overlay );
-					self._show( factoryResult );
+					this._show( factoryResult );
 				}
 			}
 		}
@@ -245,9 +243,7 @@ OverlayManager.prototype = {
 			captures,
 			match;
 
-		const
-			previous = this.stack[1],
-			self = this;
+		const previous = this.stack[1];
 
 		if ( typeof entry.route === 'string' ) {
 			didMatch = entry.route === path;
@@ -270,14 +266,14 @@ OverlayManager.prototype = {
 			// Important for managing states of things such as the image overlay which change
 			// overlay routing parameters during usage.
 			route: entry.route,
-			factoryResult: entry.factory.apply( self, captures )
+			factoryResult: entry.factory.apply( this, captures )
 		} );
 
 		if ( didMatch ) {
 			// if previous stacked overlay's path matches, assume we're going back
 			// and reuse a previously opened overlay
 			if ( previous && previous.path === path ) {
-				self.stack.shift();
+				this.stack.shift();
 				return previous;
 			} else {
 				const next = getNext();
@@ -285,9 +281,9 @@ OverlayManager.prototype = {
 					// current overlay path is same as path to check which means overlay
 					// is attempting to refresh so just replace current overlay with new
 					// overlay
-					self.stack[0] = next;
+					this.stack[0] = next;
 				} else {
-					self.stack.unshift( next );
+					this.stack.unshift( next );
 				}
 				return next;
 			}
@@ -340,16 +336,15 @@ OverlayManager.prototype = {
 	 * @param {Function} factory a function returning an overlay
 	 */
 	add( route, factory ) {
-		const self = this,
-			entry = {
-				route,
-				factory
-			};
+		const entry = {
+			route,
+			factory
+		};
 
 		this.entries[route] = entry;
 		// Check if overlay should be shown for the current path.
 		// The DOM must fully load before we can show the overlay because Overlay relies on it.
-		util.docReady( () => self._processMatch( self._matchRoute( self.router.getPath(),
+		util.docReady( () => this._processMatch( this._matchRoute( this.router.getPath(),
 			entry ) ) );
 	},
 

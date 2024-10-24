@@ -10,7 +10,6 @@ const util = require( './util.js' ),
  * @param {Object} options Configuration options
  */
 function Section( options ) {
-	const self = this;
 	options.tag = 'h' + options.level;
 	this.line = options.line;
 	this.text = options.text;
@@ -18,7 +17,7 @@ function Section( options ) {
 	this.id = options.id || null;
 	this.anchor = options.anchor;
 	this.subsections = [];
-	( options.subsections || [] ).forEach( ( section ) => self.subsections.push(
+	( options.subsections || [] ).forEach( ( section ) => this.subsections.push(
 		new Section( section ) ) );
 	View.call( this, options );
 }

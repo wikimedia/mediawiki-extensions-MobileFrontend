@@ -38,26 +38,25 @@ WatchListGateway.prototype = {
 	 * @return {jQuery.Deferred}
 	 */
 	loadWatchlist: function () {
-		const self = this,
-			params = extendSearchParams( 'watchlist', {
-				prop: [ 'info', 'revisions' ],
-				rvprop: 'timestamp|user',
-				generator: 'watchlistraw',
-				gwrnamespace: '0',
-				gwrlimit: this.limit
-			}, this.continueParams );
+		const params = extendSearchParams( 'watchlist', {
+			prop: [ 'info', 'revisions' ],
+			rvprop: 'timestamp|user',
+			generator: 'watchlistraw',
+			gwrnamespace: '0',
+			gwrlimit: this.limit
+		}, this.continueParams );
 
 		if ( this.canContinue === false ) {
 			return util.Deferred().resolve( [] );
 		}
 		return this.api.get( params ).then( ( data ) => {
 			if ( data.continue !== undefined ) {
-				self.continueParams = data.continue;
+				this.continueParams = data.continue;
 			} else {
-				self.canContinue = false;
+				this.canContinue = false;
 			}
 
-			return self.parseData( data );
+			return this.parseData( data );
 		} );
 	},
 

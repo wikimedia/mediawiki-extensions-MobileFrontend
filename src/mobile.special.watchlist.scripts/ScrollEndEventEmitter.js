@@ -46,11 +46,10 @@ const util = require( '../mobile.startup/util' ),
  *           this.scrollEndEventEmitter.disable();
  *         },
  *         _loadPhotos: function () {
- *           var self = this;
  *           this.gateway.getPhotos().then( ( photos ) => {
  *             // load photos into the DOM ...
  *             // 3. and (re-)enable infinite scrolling
- *             self.scrollEndEventEmitter.enable();
+ *             this.scrollEndEventEmitter.enable();
  *           } );
  *         }
  *       } );
