@@ -200,7 +200,7 @@ mfExtend( ImageCarousel, View, {
 		 * @method
 		 * @ignore
 		 */
-		function showLoadFailMsg() {
+		const showLoadFailMsg = () => {
 			self.hasLoadError = true;
 
 			$spinner.hide();
@@ -213,7 +213,7 @@ mfExtend( ImageCarousel, View, {
 					.on( 'retry', self._handleRetry.bind( self ) )
 					.prependTo( $el.find( '.image' ) );
 			}
-		}
+		};
 
 		/**
 		 * Start image load transitions
@@ -221,9 +221,9 @@ mfExtend( ImageCarousel, View, {
 		 * @method
 		 * @ignore
 		 */
-		function addImageLoadClass() {
+		const addImageLoadClass = () => {
 			$img.addClass( 'image-loaded' );
-		}
+		};
 
 		if ( thumbs.length < 2 ) {
 			this._disableArrowImages();

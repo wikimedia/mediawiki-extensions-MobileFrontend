@@ -195,10 +195,10 @@ mfExtend( SearchOverlay, Overlay, {
 		 * Hide the spinner and abort timed spinner shows.
 		 * FIXME: Given this manipulates SearchResultsView this should be moved into that class
 		 */
-		function clearSearch() {
+		const clearSearch = () => {
 			self.$spinner.hide();
 			clearTimeout( timer );
-		}
+		};
 
 		// Show a spinner on top of search results
 		// FIXME: Given this manipulates SearchResultsView this should be moved into that class

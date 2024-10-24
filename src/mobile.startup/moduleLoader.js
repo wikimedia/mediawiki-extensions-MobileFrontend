@@ -67,14 +67,14 @@ ModuleLoader.prototype = {
 			throw new Error( 'Module already exists: ' + id );
 		}
 		this._register[id] = obj;
-		// return an object of additionally functions to do with the registered module
+		// return an object of additional functions to do with the registered module
 		return {
 			/**
 			 * @see ModuleLoader#deprecate
 			 * @param {string} deprecatedId Defined module id, which is deprecated.
 			 * @ignore
 			 */
-			deprecate( deprecatedId ) {
+			deprecate: ( deprecatedId ) => {
 				self.deprecate( deprecatedId, obj, id );
 			}
 		};

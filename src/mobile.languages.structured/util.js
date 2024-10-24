@@ -149,13 +149,13 @@ module.exports = {
 		 * @param {Object} language
 		 * @return {Object} which has 'dir' key.
 		 */
-		function addLangDir( language ) {
+		const addLangDir = ( language ) => {
 			if ( language.dir ) {
 				return language;
 			} else {
 				return self.getDir( language );
 			}
-		}
+		};
 
 		// Separate languages into suggested and all languages.
 		if ( showSuggestedLanguages ) {

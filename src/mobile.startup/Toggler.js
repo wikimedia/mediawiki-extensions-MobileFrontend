@@ -274,8 +274,8 @@ Toggler.prototype._enable = function () {
 
 	// FIXME This should use .find() instead of .children(), some extensions like Wikibase
 	// want to toggle other headlines than direct descendants of $container. (T95889)
-	this.$container.children( '.section-heading' ).each( function ( i ) {
-		const $heading = self.$container.find( this ),
+	this.$container.children( '.section-heading' ).each( ( i, headingEl ) => {
+		const $heading = this.$container.find( headingEl ),
 			$headingLabel = $heading.find( '.mw-headline' ),
 			$indicator = $heading.find( '.indicator' ),
 			id = self.prefix + 'collapsible-block-' + i;
@@ -344,7 +344,7 @@ Toggler.prototype._enable = function () {
 	 *
 	 * @method
 	 */
-	function checkHash() {
+	const checkHash = () => {
 		// eslint-disable-next-line no-restricted-properties
 		let hash = window.location.hash;
 		if ( hash.indexOf( '#' ) === 0 ) {
@@ -358,7 +358,7 @@ Toggler.prototype._enable = function () {
 				}
 			}
 		}
-	}
+	};
 
 	/**
 	 * Checks the value of wgInternalRedirectTargetUrl and sets the hash if present.

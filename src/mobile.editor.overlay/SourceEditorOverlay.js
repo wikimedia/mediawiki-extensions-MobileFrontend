@@ -262,11 +262,11 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 			params.mainpage = 1; // Setting it to 0 will have the same effect
 		}
 
-		function hideSpinnerAndShowPreview() {
+		const hideSpinnerAndShowPreview = () => {
 			self.hideSpinner();
 			self.$preview.show();
 			mw.hook( 'wikipage.content' ).fire( self.$preview );
-		}
+		};
 
 		this.gateway.getPreview( params ).then( ( result ) => {
 			const parsedText = result.text,

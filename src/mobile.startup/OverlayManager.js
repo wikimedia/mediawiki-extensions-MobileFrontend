@@ -265,15 +265,13 @@ OverlayManager.prototype = {
 		 * @ignore
 		 * @return {Object}
 		 */
-		function getNext() {
-			return {
-				path,
-				// Important for managing states of things such as the image overlay which change
-				// overlay routing parameters during usage.
-				route: entry.route,
-				factoryResult: entry.factory.apply( self, captures )
-			};
-		}
+		const getNext = () => ( {
+			path,
+			// Important for managing states of things such as the image overlay which change
+			// overlay routing parameters during usage.
+			route: entry.route,
+			factoryResult: entry.factory.apply( self, captures )
+		} );
 
 		if ( didMatch ) {
 			// if previous stacked overlay's path matches, assume we're going back
