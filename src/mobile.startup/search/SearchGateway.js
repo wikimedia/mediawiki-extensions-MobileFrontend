@@ -164,17 +164,18 @@ SearchGateway.prototype = {
 				url: scriptPath
 			} : undefined );
 			const request = xhr
-				.then( ( data, jqXHR ) => {
+				.then(
 					// resolve the Deferred object
-					return {
+					( data, jqXHR ) => ( {
 						query,
 						results: self._processData( query, data ),
 						searchId: jqXHR && jqXHR.getResponseHeader( 'x-search-id' )
-					};
-				}, () => {
-					// reset cached result, it maybe contains no value
-					self.searchCache[query] = undefined;
-				} );
+					} ),
+					() => {
+						// reset cached result, it maybe contains no value
+						self.searchCache[query] = undefined;
+					}
+				);
 
 			// cache the result to prevent the execution of one search query twice
 			// in one session

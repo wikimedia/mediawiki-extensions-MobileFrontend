@@ -23,7 +23,7 @@ function init( $container ) {
 
 	// Regardless of whether or not lazy load is turned on
 	// We need to load in all images before print
-	window.addEventListener( 'beforeprint', function () {
+	window.addEventListener( 'beforeprint', () => {
 		lazyImageLoader.loadImages( imagePlaceholders );
 	} );
 
@@ -71,7 +71,7 @@ function init( $container ) {
  * @memberof Hooks
  * @param {jQuery} $container
  */
-mw.hook( 'mobileFrontend.loadLazyImages' ).add( function ( $container ) {
+mw.hook( 'mobileFrontend.loadLazyImages' ).add( ( $container ) => {
 	const imagePlaceholders = lazyImageLoader.queryPlaceholders( $container[ 0 ] );
 	lazyImageLoader.loadImages( imagePlaceholders );
 } );

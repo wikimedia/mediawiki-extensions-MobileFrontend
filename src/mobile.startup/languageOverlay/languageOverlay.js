@@ -11,10 +11,9 @@ const
  * @return {jQuery.Promise} Resolves to LanguageSearcher
  */
 function loadLanguageSearcher() {
-	return mw.loader.using( 'mobile.languages.structured' ).then( () =>
-		currentPageHTMLParser.getLanguages(
-			mw.config.get( 'wgTitle' )
-		) ).then( ( data ) => {
+	return mw.loader.using( 'mobile.languages.structured' ).then( () => currentPageHTMLParser.getLanguages(
+		mw.config.get( 'wgTitle' )
+	) ).then( ( data ) => {
 		const LanguageSearcher = m.require( 'mobile.languages.structured/LanguageSearcher' );
 
 		return new LanguageSearcher( {
@@ -24,18 +23,18 @@ function loadLanguageSearcher() {
 			deviceLanguage: getDeviceLanguage( navigator ),
 			/**
 			 * Stable for use inside ContentTranslation.
+			 *
 			 * @event ~'mobileFrontend.languageSearcher.onOpen'
 			 * @memberof Hooks
 			 * @param {Hooks~LanguageSearcher} searcher
 			 */
 			onOpen: ( searcher ) => mw.hook( 'mobileFrontend.languageSearcher.onOpen' ).fire( searcher )
 		} );
-	}, () =>
-		new MessageBox( {
-			type: 'error',
-			className: 'content',
-			msg: mw.msg( 'mobile-frontend-languages-structured-overlay-error' )
-		} ) );
+	}, () => new MessageBox( {
+		type: 'error',
+		className: 'content',
+		msg: mw.msg( 'mobile-frontend-languages-structured-overlay-error' )
+	} ) );
 }
 
 /**

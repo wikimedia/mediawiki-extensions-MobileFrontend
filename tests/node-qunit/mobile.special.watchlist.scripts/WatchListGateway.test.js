@@ -114,7 +114,7 @@ QUnit.module( 'MobileFrontend WatchListGateway.js', {
 			.returns( [ 'h1', 'h2', 'h3', 'h4', 'h5' ] );
 		// needed for browser tests. If not stubbed, pageJSONParser.parse() will call
 		// mw.util.getUrl which calls mw.config.get and expects back a value
-		sandbox.stub( mw.util, 'getUrl' ).callsFake( function () {} );
+		sandbox.stub( mw.util, 'getUrl' ).callsFake( () => {} );
 
 		WatchListGateway = require( '../../../src/mobile.special.watchlist.scripts/WatchListGateway' );
 	},
@@ -124,13 +124,13 @@ QUnit.module( 'MobileFrontend WatchListGateway.js', {
 	}
 } );
 
-QUnit.test( 'loadWatchlist() loads results from the first page', function ( assert ) {
+QUnit.test( 'loadWatchlist() loads results from the first page', ( assert ) => {
 	const gateway = new WatchListGateway( new mw.Api() );
 
 	sandbox.stub( mw.Api.prototype, 'get' )
 		.returns( util.Deferred().resolve( response ) );
 
-	return gateway.loadWatchlist().then( function ( pages ) {
+	return gateway.loadWatchlist().then( ( pages ) => {
 		const params = mw.Api.prototype.get.firstCall.args[0];
 
 		assert.strictEqual( params.continue, '', 'It should set the continue parameter' );
@@ -140,7 +140,7 @@ QUnit.test( 'loadWatchlist() loads results from the first page', function ( asse
 	} );
 } );
 
-QUnit.test( 'loadWatchlist() loads results from the second page from last item of first', function ( assert ) {
+QUnit.test( 'loadWatchlist() loads results from the second page from last item of first', ( assert ) => {
 	const lastTitle = 'Albert Einstein',
 		gateway = new WatchListGateway( new mw.Api(), lastTitle ),
 		response1 = util.extend( {}, response, {
@@ -155,7 +155,7 @@ QUnit.test( 'loadWatchlist() loads results from the second page from last item o
 	const stub = sandbox.stub( mw.Api.prototype, 'get' )
 		.returns( util.Deferred().resolve( response1 ) );
 
-	return gateway.loadWatchlist().then( function ( pages ) {
+	return gateway.loadWatchlist().then( ( pages ) => {
 		const params = mw.Api.prototype.get.firstCall.args[0];
 
 		assert.strictEqual( params.continue, 'gwrcontinue||', 'It should set the continue parameter' );
@@ -169,7 +169,7 @@ QUnit.test( 'loadWatchlist() loads results from the second page from last item o
 		// Let's call for the next page
 		stub.returns( util.Deferred().resolve( response ) );
 
-		return gateway.loadWatchlist().then( function ( pgs ) {
+		return gateway.loadWatchlist().then( ( pgs ) => {
 			// Albert Einstein should be the first result of the next page (not removed)
 			assert.strictEqual( pgs.length, 7, 'Albert should be in the results' );
 			assert.strictEqual( pgs[0].displayTitle, 'Albert Einstein', 'First item should be Albert' );
@@ -177,7 +177,7 @@ QUnit.test( 'loadWatchlist() loads results from the second page from last item o
 	} );
 } );
 
-QUnit.test( 'loadWatchlist() doesn\'t throw an error when no pages are returned', function ( assert ) {
+QUnit.test( 'loadWatchlist() doesn\'t throw an error when no pages are returned', ( assert ) => {
 	const gateway = new WatchListGateway( new mw.Api() );
 
 	sandbox.stub( mw.Api.prototype, 'get' )
@@ -185,18 +185,18 @@ QUnit.test( 'loadWatchlist() doesn\'t throw an error when no pages are returned'
 			batchcomplete: ''
 		} ) );
 
-	return gateway.loadWatchlist().then( function ( pages ) {
+	return gateway.loadWatchlist().then( ( pages ) => {
 		assert.propEqual( pages, [] );
 	} );
 } );
 
-QUnit.test( 'loadWatchlist() marks pages as new if necessary', function ( assert ) {
+QUnit.test( 'loadWatchlist() marks pages as new if necessary', ( assert ) => {
 	const gateway = new WatchListGateway( new mw.Api() );
 
 	sandbox.stub( mw.Api.prototype, 'get' )
 		.returns( util.Deferred().resolve( response ) );
 
-	return gateway.loadWatchlist().then( function ( pages ) {
+	return gateway.loadWatchlist().then( ( pages ) => {
 		assert.strictEqual( pages[0].isMissing, false, 'Albert Einstein page isn\'t marked as new' );
 		assert.strictEqual( pages[6].isMissing, true, 'zzzz page is marked as new' );
 	} );

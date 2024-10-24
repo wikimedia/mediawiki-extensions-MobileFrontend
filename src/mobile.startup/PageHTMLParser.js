@@ -11,7 +11,7 @@ class PageHTMLParser {
 	/**
 	 * @constructor
 	 * @class module:mobile.startup/PageHTMLParser
-     * @classdesc Parses an article and converts it into a queriable object.
+	 * @classdesc Parses an article and converts it into a queriable object.
 	 * @param {jQuery.Object} $container Used when parsing to find children within
 	 * this container
 	 */

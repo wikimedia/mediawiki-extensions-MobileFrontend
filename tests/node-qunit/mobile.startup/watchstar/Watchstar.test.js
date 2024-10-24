@@ -41,7 +41,7 @@ QUnit.module( 'MobileFrontend Watchstar.js', {
 	}
 } );
 
-QUnit.test( 'Render a watchstar', function ( assert ) {
+QUnit.test( 'Render a watchstar', ( assert ) => {
 	const page = { title: 'Foo' },
 		watchedStar = watchstar( {
 			page,

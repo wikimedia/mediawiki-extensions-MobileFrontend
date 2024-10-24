@@ -30,7 +30,7 @@ QUnit.module( 'MobileFrontend mobile.startup/SearchResultsView.js', {
 	}
 } );
 
-QUnit.test( 'renders correctly', function ( assert ) {
+QUnit.test( 'renders correctly', ( assert ) => {
 	const overlay = new SearchResultsView( {
 
 	} );

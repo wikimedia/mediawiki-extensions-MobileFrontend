@@ -45,7 +45,7 @@ module.exports = function () {
 			mw.config.get( 'wgAction' ) === 'edit'
 		)
 	) {
-		mw.hook( 'wikipage.content' ).add( function ( $container ) {
+		mw.hook( 'wikipage.content' ).add( ( $container ) => {
 			let $contentContainer = $container.find( '.mw-parser-output' );
 			// If there was no mw-parser-output wrapper, just use the parent.
 			if ( $contentContainer.length === 0 ) {

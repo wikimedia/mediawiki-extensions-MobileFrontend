@@ -44,7 +44,7 @@ EditorGateway.prototype = {
 			pageObj.actions.edit &&
 			Array.isArray( pageObj.actions.edit )
 		) {
-			pageObj.actions.edit.some( function ( error ) {
+			pageObj.actions.edit.some( ( error ) => {
 				if ( [ 'blocked', 'autoblocked' ].indexOf( error.code ) !== -1 ) {
 					blockedError = error;
 					return true;
@@ -104,7 +104,7 @@ EditorGateway.prototype = {
 			if ( this.sectionId ) {
 				options.rvsection = this.sectionId;
 			}
-			return this.api.get( options ).then( function ( resp ) {
+			return this.api.get( options ).then( ( resp ) => {
 				if ( resp.error ) {
 					return util.Deferred().reject( resp.error.code );
 				}
@@ -207,7 +207,7 @@ EditorGateway.prototype = {
 			// - apiOptions.returntoquery to be 'redirect=no' if we're saving a redirect
 			//   (but we have can't figure that out, unless we parse the wikitext)
 
-			self.api.postWithToken( 'csrf', apiOptions ).then( function ( data ) {
+			self.api.postWithToken( 'csrf', apiOptions ).then( ( data ) => {
 				if ( data && data.edit && data.edit.result === 'Success' ) {
 					self.hasChanged = false;
 					result.resolve( data.edit.newrevid, data.edit.tempusercreatedredirect,
@@ -215,7 +215,7 @@ EditorGateway.prototype = {
 				} else {
 					result.reject( data );
 				}
-			}, function ( code, data ) {
+			}, ( code, data ) => {
 				result.reject( data );
 			} );
 			return result;
@@ -271,12 +271,12 @@ EditorGateway.prototype = {
 		// Acquire a temporary user username before previewing, so that signatures and
 		// user-related magic words display the temp user instead of IP user in the
 		// preview. (T331397)
-		const promise = mw.user.acquireTempUserName().then( function () {
+		const promise = mw.user.acquireTempUserName().then( () => {
 			self._pending = self.api.post( options );
 			return self._pending;
 		} );
 
-		return promise.then( function ( resp ) {
+		return promise.then( ( resp ) => {
 			if ( resp && resp.parse && resp.parse.text ) {
 				// When editing section 0 or the whole page, there is no section name, so skip
 				if ( self.sectionId && self.sectionId !== '0' &&

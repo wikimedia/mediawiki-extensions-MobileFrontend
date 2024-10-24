@@ -2,6 +2,7 @@ const browser = require( './Browser' ).getSingleton();
 
 /**
  * Checks if sections should be collapsed by default.
+ *
  * @ignore
  *
  * @return {boolean}

@@ -42,7 +42,7 @@ QUnit.module( 'MobileFrontend Drawer.js', {
 	}
 } );
 
-QUnit.test( 'visible on show()', function ( assert ) {
+QUnit.test( 'visible on show()', ( assert ) => {
 	const
 		done = assert.async(),
 		onShow = () => {
@@ -59,7 +59,7 @@ QUnit.test( 'visible on show()', function ( assert ) {
 	} );
 } );
 
-QUnit.test( 'accepts onShow and events', function ( assert ) {
+QUnit.test( 'accepts onShow and events', ( assert ) => {
 	const
 		done = assert.async(),
 		onShow = () => {
@@ -76,7 +76,7 @@ QUnit.test( 'accepts onShow and events', function ( assert ) {
 	subject.show();
 } );
 
-QUnit.test( 'hidden on hide()', function ( assert ) {
+QUnit.test( 'hidden on hide()', ( assert ) => {
 	const
 		done = assert.async(),
 		onBeforeHide = () => {
@@ -90,7 +90,7 @@ QUnit.test( 'hidden on hide()', function ( assert ) {
 	subject.hide();
 } );
 
-QUnit.test( 'hidden on mask click', function ( assert ) {
+QUnit.test( 'hidden on mask click', ( assert ) => {
 	const
 		done = assert.async(),
 		onBeforeHide = () => {
@@ -105,7 +105,7 @@ QUnit.test( 'hidden on mask click', function ( assert ) {
 	subject.$el.find( '.drawer-container__mask' )[0].dispatchEvent( new window.Event( 'click', { bubbles: true } ) );
 } );
 
-QUnit.test( 'HTML is valid', function ( assert ) {
+QUnit.test( 'HTML is valid', ( assert ) => {
 	const subject = new Drawer( {} );
 	assert.strictEqual(
 		subject.$el.find( '.drawer' ).get( 0 ).outerHTML,

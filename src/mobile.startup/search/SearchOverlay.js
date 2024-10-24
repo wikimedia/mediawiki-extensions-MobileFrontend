@@ -139,7 +139,7 @@ mfExtend( SearchOverlay, Overlay, {
 		// FIXME: ugly hack that removes search from browser history
 		// when navigating to search results
 		ev.preventDefault();
-		this.router.back().then( function () {
+		this.router.back().then( () => {
 			// T308288: Appends the current search id as a url param on clickthroughs
 			if ( self.currentSearchId ) {
 				const clickUrl = new URL( location.href );
@@ -267,7 +267,7 @@ mfExtend( SearchOverlay, Overlay, {
 			if ( query.length ) {
 				this.timer = setTimeout( () => {
 					const xhr = self.gateway.search( query );
-					self._pendingQuery = xhr.then( function ( data ) {
+					self._pendingQuery = xhr.then( ( data ) => {
 						self.currentSearchId = data.searchId;
 						// FIXME: Given this manipulates SearchResultsView
 						// this should be moved into that class

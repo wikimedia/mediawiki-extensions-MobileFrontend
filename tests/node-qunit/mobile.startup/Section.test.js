@@ -23,7 +23,7 @@ QUnit.module( 'MobileFrontend Section.js', {
 	}
 } );
 
-QUnit.test( 'initialize with options', function ( assert ) {
+QUnit.test( 'initialize with options', ( assert ) => {
 	const section = new Section( {
 		level: '1',
 		line: 'Line',
@@ -41,7 +41,7 @@ QUnit.test( 'initialize with options', function ( assert ) {
 	assert.strictEqual( section.subsections.length, 0, 'Subsections are empty' );
 } );
 
-QUnit.test( 'initialize with subsections', function ( assert ) {
+QUnit.test( 'initialize with subsections', ( assert ) => {
 	const
 		section = new Section( {
 			subsections: [ {

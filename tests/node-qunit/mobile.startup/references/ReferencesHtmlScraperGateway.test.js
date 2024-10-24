@@ -38,20 +38,14 @@ QUnit.module( 'MobileFrontend ReferencesHtmlScraperGateway.test.js', {
 	}
 } );
 
-QUnit.test( 'getReference() checking good reference', function ( assert ) {
-	return referencesGateway.getReference( '#cite_note-1', page, pageHTMLParser ).then( function ( ref ) {
-		assert.strictEqual( ref.text, 'hello' );
-	} );
-} );
+QUnit.test( 'getReference() checking good reference', ( assert ) => referencesGateway.getReference( '#cite_note-1', page, pageHTMLParser ).then( ( ref ) => {
+	assert.strictEqual( ref.text, 'hello' );
+} ) );
 
-QUnit.test( 'getReference() checking bad reference', function ( assert ) {
-	return referencesGateway.getReference( '#cite_note-bad', page, pageHTMLParser ).catch( function ( err ) {
-		assert.strictEqual( err, ReferencesGateway.ERROR_NOT_EXIST, 'When bad id given false returned.' );
-	} );
-} );
+QUnit.test( 'getReference() checking bad reference', ( assert ) => referencesGateway.getReference( '#cite_note-bad', page, pageHTMLParser ).catch( ( err ) => {
+	assert.strictEqual( err, ReferencesGateway.ERROR_NOT_EXIST, 'When bad id given false returned.' );
+} ) );
 
-QUnit.test( 'getReference() adds an extra class for external links', function ( assert ) {
-	return referencesGateway.getReference( '#cite_note-2', page, pageHTMLParser ).then( function ( ref ) {
-		assert.notStrictEqual( ref.text.indexOf( referencesGateway.EXTERNAL_LINK_CLASS ), -1 );
-	} );
-} );
+QUnit.test( 'getReference() adds an extra class for external links', ( assert ) => referencesGateway.getReference( '#cite_note-2', page, pageHTMLParser ).then( ( ref ) => {
+	assert.notStrictEqual( ref.text.indexOf( referencesGateway.EXTERNAL_LINK_CLASS ), -1 );
+} ) );

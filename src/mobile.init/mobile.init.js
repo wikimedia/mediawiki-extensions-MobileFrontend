@@ -2,6 +2,7 @@
 // (see https://bugzilla.wikimedia.org/show_bug.cgi?id=44264)
 /**
  * mobileFrontend namespace
+ *
  * @private
  */
 let url;
@@ -59,18 +60,18 @@ function apply2( fn1, fn2 ) {
 
 $window
 	.on( 'resize', apply2(
-		mw.util.debounce( function () {
+		mw.util.debounce( () => {
 			eventBus.emit( 'resize' );
 		}, 100 ),
-		mw.util.throttle( function () {
+		mw.util.throttle( () => {
 			eventBus.emit( 'resize:throttled' );
 		}, 200 )
 	) )
 	.on( 'scroll', apply2(
-		mw.util.debounce( function () {
+		mw.util.debounce( () => {
 			eventBus.emit( 'scroll' );
 		}, 100 ),
-		mw.util.throttle( function () {
+		mw.util.throttle( () => {
 			eventBus.emit( 'scroll:throttled' );
 		}, 200 )
 	) );

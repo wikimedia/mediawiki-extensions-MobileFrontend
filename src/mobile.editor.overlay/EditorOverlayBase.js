@@ -261,7 +261,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 			// The caller handles this redirect, either in SourceEditorOverlay or in VE's ArticleTarget
 			return;
 		}
-		setTimeout( function () {
+		setTimeout( () => {
 			// Wait for any other teardown navigation to happen (e.g. router.back())
 			// before setting our final location.
 			if ( redirectUrl ) {
@@ -520,7 +520,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 				this.windowManager.addWindows( [ new mw.widgets.AbandonEditDialog() ] );
 			}
 			this.windowManager.openWindow( 'abandonedit' )
-				.closed.then( function ( data ) {
+				.closed.then( ( data ) => {
 					if ( data && data.action === 'discard' ) {
 						// log abandonment
 						self.log( {
@@ -555,7 +555,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 			// URL, which has been taken over. As such, depending on
 			// how we got here, the normal overlay process isn't going to
 			// produce the correct result.
-			setTimeout( function () {
+			setTimeout( () => {
 				// This needs to happen after the overlay-hide has completed
 				// so we have access to the "real" URL, and `exit`
 				// unfortunately doesn't expose a promise for this. There's
@@ -641,9 +641,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 			];
 
 		$actions.append(
-			anonymousEditorActions.map( function ( action ) {
-				return action.$el;
-			} )
+			anonymousEditorActions.map( ( action ) => action.$el )
 		);
 
 		return $anonWarning;
@@ -704,7 +702,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 * @return {jQuery.Promise}
 	 */
 	getLoadingPromise: function () {
-		return this.dataPromise.then( function ( result ) {
+		return this.dataPromise.then( ( result ) => {
 			// check if user is blocked
 			if ( result && result.blockinfo ) {
 				const block = parseBlockInfo( result.blockinfo ),
@@ -719,9 +717,9 @@ mfExtend( EditorOverlayBase, Overlay, {
 		if ( mw.config.get( 'wgMFEditNoticesFeatureConflict' ) ) {
 			return;
 		}
-		this.getLoadingPromise().then( function ( data ) {
+		this.getLoadingPromise().then( ( data ) => {
 			if ( data.notices ) {
-				const editNotices = Object.keys( data.notices ).filter( function ( key ) {
+				const editNotices = Object.keys( data.notices ).filter( ( key ) => {
 					if ( key.indexOf( 'editnotice' ) !== 0 ) {
 						return false;
 					}
@@ -746,9 +744,9 @@ mfExtend( EditorOverlayBase, Overlay, {
 				} );
 
 				if ( editNotices.length ) {
-					mw.loader.using( 'oojs-ui-windows' ).then( function () {
+					mw.loader.using( 'oojs-ui-windows' ).then( () => {
 						const $container = $( '<div>' ).addClass( 'editor-overlay-editNotices' );
-						editNotices.forEach( function ( key ) {
+						editNotices.forEach( ( key ) => {
 							const $notice = $( '<div>' ).append( data.notices[ key ] );
 							$notice.addClass( 'editor-overlay-editNotice' );
 							$container.append( $notice );
@@ -778,7 +776,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 		if ( this.captchaShown ) {
 			$input.val( '' );
 			$input.attr( 'placeholder', this.options.captchaTryAgainMsg );
-			setTimeout( function () {
+			setTimeout( () => {
 				$input.attr( 'placeholder', self.options.captchaMsg );
 			}, 2000 );
 		}

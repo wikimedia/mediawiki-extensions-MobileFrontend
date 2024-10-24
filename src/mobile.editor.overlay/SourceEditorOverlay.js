@@ -125,7 +125,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 		this.log( { action: 'loaded' } );
 
 		if ( this.currentPage.isVEVisualAvailable() ) {
-			mw.loader.using( 'ext.visualEditor.switching' ).then( function () {
+			mw.loader.using( 'ext.visualEditor.switching' ).then( () => {
 				const toolFactory = new OO.ui.ToolFactory(),
 					toolGroupFactory = new OO.ui.ToolGroupFactory();
 
@@ -135,7 +135,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 					classes: [ 'editor-switcher' ]
 				} );
 
-				switchToolbar.on( 'switchEditor', function ( mode ) {
+				switchToolbar.on( 'switchEditor', ( mode ) => {
 					if ( mode === 'visual' ) {
 						if ( !self.gateway.hasChanged ) {
 							self._switchToVisualEditor();
@@ -185,12 +185,12 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 
 		this.$content
 			.on( 'input', this._resizeEditor.bind( this ) )
-			.one( 'input', function () {
+			.one( 'input', () => {
 				self.log( { action: 'firstChange' } );
 			} );
 
 		if ( this.isFirefox ) {
-			this.$content.on( 'mousedown', function () {
+			this.$content.on( 'mousedown', () => {
 				// Support: Firefox Mobile
 				// Firefox scrolls back to the top of the page *every time*
 				// you tap on the textarea. This makes things slightly
@@ -205,7 +205,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 					docEl.scrollTop = scrollTop;
 				}
 				window.addEventListener( 'scroll', blockScroll );
-				setTimeout( function () {
+				setTimeout( () => {
 					window.removeEventListener( 'scroll', blockScroll );
 				}, 1000 );
 			} );
@@ -268,7 +268,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 			mw.hook( 'wikipage.content' ).fire( self.$preview );
 		}
 
-		this.gateway.getPreview( params ).then( function ( result ) {
+		this.gateway.getPreview( params ).then( ( result ) => {
 			const parsedText = result.text,
 				parsedSectionLine = result.line;
 
@@ -281,7 +281,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 			} ).$el.find( 'a' ).on( 'click', false );
 
 			hideSpinnerAndShowPreview();
-		}, function () {
+		}, () => {
 			self.$preview.replaceWith(
 				new MessageBox( {
 					type: 'error',
@@ -384,7 +384,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 		this.$content.hide();
 
 		this.getLoadingPromise()
-			.then( function ( result ) {
+			.then( ( result ) => {
 				const content = result.text;
 
 				self.setContent( content );
@@ -445,11 +445,11 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 		this.$el.append( fakeToolbar() );
 		this.$content.prop( 'readonly', true );
 
-		mw.loader.using( 'ext.visualEditor.targetLoader' ).then( function () {
+		mw.loader.using( 'ext.visualEditor.targetLoader' ).then( () => {
 			mw.libs.ve.targetLoader.addPlugin( 'ext.visualEditor.mobileArticleTarget' );
 			return mw.libs.ve.targetLoader.loadModules( 'visual' );
 		} ).then(
-			function () {
+			() => {
 				const options = self.getOptionsForSwitch();
 				options.SourceEditorOverlay = SourceEditorOverlay;
 				if ( wikitext ) {
@@ -465,13 +465,13 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 				}
 
 				const newOverlay = new VisualEditorOverlay( options );
-				newOverlay.getLoadingPromise().then( function () {
+				newOverlay.getLoadingPromise().then( () => {
 					self.switching = true;
 					self.overlayManager.replaceCurrent( newOverlay );
 					self.switching = false;
 				} );
 			},
-			function () {
+			() => {
 				self.$el.removeClass( 'switching' );
 				self.$el.find( '.overlay-header-container' ).show();
 				self.$el.find( '.ve-mobile-fakeToolbar-container' ).remove();
@@ -521,7 +521,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 		this.showHidden( '.saving-header' );
 
 		this.gateway.save( options )
-			.then( function ( newRevId, redirectUrl, tempUserCreated ) {
+			.then( ( newRevId, redirectUrl, tempUserCreated ) => {
 				const title = self.options.title;
 				// Special case behaviour of main page
 				if ( mw.config.get( 'wgIsMainPage' ) && !redirectUrl ) {
@@ -537,7 +537,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 					// eslint-disable-next-line no-restricted-properties
 					window.location.href = redirectUrl;
 				}
-			}, function ( data ) {
+			}, ( data ) => {
 				self.onSaveFailure( data );
 			} );
 	},
@@ -607,9 +607,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 
 			// Some errors may be temporary, but for others we know for sure that the save will
 			// never succeed, so don't confuse the user by giving them the option to retry.
-			noRetry = data.errors && data.errors.some( function ( error ) {
-				return error.code === 'abusefilter-disallowed';
-			} );
+			noRetry = data.errors && data.errors.some( ( error ) => error.code === 'abusefilter-disallowed' );
 
 			if ( noRetry ) {
 				// disable continue and save buttons, reenabled when user changes content

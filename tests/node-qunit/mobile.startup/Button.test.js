@@ -25,7 +25,7 @@ QUnit.module( 'MobileFrontend Button.js', {
 	}
 } );
 
-QUnit.test( 'creates a link if passed href option', function ( assert ) {
+QUnit.test( 'creates a link if passed href option', ( assert ) => {
 	const
 		url = 'https://www.foo.com',
 		button = new Button( {
@@ -36,7 +36,7 @@ QUnit.test( 'creates a link if passed href option', function ( assert ) {
 	assert.strictEqual( button.$el[0].getAttribute( 'href' ), 'https://www.foo.com' );
 } );
 
-QUnit.test( 'does not add href attribute when not a link', function ( assert ) {
+QUnit.test( 'does not add href attribute when not a link', ( assert ) => {
 	const button = new Button( {
 		tagName: 'div'
 	} );

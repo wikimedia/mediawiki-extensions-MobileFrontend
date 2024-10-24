@@ -141,7 +141,7 @@ QUnit.test( 'saves the language count when link is clicked', function ( assert )
 	);
 } );
 
-QUnit.test( 'without variants, input event filters languages', function ( assert ) {
+QUnit.test( 'without variants, input event filters languages', ( assert ) => {
 	const languageSearcher = new LanguageSearcher( {
 		languages: apiLanguages,
 		variants: false,

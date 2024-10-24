@@ -32,15 +32,15 @@ QUnit.module( 'MobileFrontend extendSearchParams.js', {
 	}
 } );
 
-QUnit.test( 'it throws if the feature is invalid', function ( assert ) {
+QUnit.test( 'it throws if the feature is invalid', ( assert ) => {
 	const expectedError = new Error( '"foo" isn\'t a feature that shows Wikibase descriptions.' );
 
-	assert.throws( function () {
+	assert.throws( () => {
 		extendSearchParams( 'foo', {} );
 	}, expectedError );
 } );
 
-QUnit.test( 'it extends the parameters', function ( assert ) {
+QUnit.test( 'it extends the parameters', ( assert ) => {
 	const params = extendSearchParams( 'search', {
 			qux: 'quux',
 			prop: [ 'corge' ]
@@ -56,7 +56,7 @@ QUnit.test( 'it extends the parameters', function ( assert ) {
 	assert.propEqual( params, expectedParams );
 } );
 
-QUnit.test( 'it doesn\'t include Wikibase-specific parameters if the feature is disabled', function ( assert ) {
+QUnit.test( 'it doesn\'t include Wikibase-specific parameters if the feature is disabled', ( assert ) => {
 	const params = extendSearchParams( 'watchlist', {
 		qux: 'quux'
 	} );
@@ -65,7 +65,7 @@ QUnit.test( 'it doesn\'t include Wikibase-specific parameters if the feature is 
 	assert.strictEqual( params.wbptterms, undefined );
 } );
 
-QUnit.test( 'it adds the MobileFrontend configuration to given terms types', function ( assert ) {
+QUnit.test( 'it adds the MobileFrontend configuration to given terms types', ( assert ) => {
 	const params = extendSearchParams( 'search', {
 		wbptterms: 'grault'
 	} );
@@ -77,7 +77,7 @@ QUnit.test( 'it adds the MobileFrontend configuration to given terms types', fun
 	);
 } );
 
-QUnit.test( 'it prioritizes MobileFrontend configuration', function ( assert ) {
+QUnit.test( 'it prioritizes MobileFrontend configuration', ( assert ) => {
 	const params = extendSearchParams( 'search', {
 			foo: 'quux'
 		} ),
@@ -95,7 +95,7 @@ QUnit.test( 'it prioritizes MobileFrontend configuration', function ( assert ) {
 	);
 } );
 
-QUnit.test( 'it is variadic', function ( assert ) {
+QUnit.test( 'it is variadic', ( assert ) => {
 	const params = extendSearchParams(
 			'search',
 			{

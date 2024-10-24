@@ -21,13 +21,13 @@ QUnit.module( 'MobileFrontend mobile.mediaViewer/ImageGateway', {
 	}
 } );
 
-QUnit.test( '#findSizeBucket', function ( assert ) {
+QUnit.test( '#findSizeBucket', ( assert ) => {
 	assert.strictEqual( findSizeBucket( 300 ), 320, 'value lower than bucket' );
 	assert.strictEqual( findSizeBucket( 800 ), 800, 'exact value' );
 	assert.strictEqual( findSizeBucket( 9999 ), 2880, 'value greater than last bucket' );
 } );
 
-QUnit.test( 'ImageGateway#getThumb (missing page)', function ( assert ) {
+QUnit.test( 'ImageGateway#getThumb (missing page)', ( assert ) => {
 	const api = {
 			get: function () {
 				return util.Deferred().resolve( {
@@ -45,9 +45,7 @@ QUnit.test( 'ImageGateway#getThumb (missing page)', function ( assert ) {
 		gateway = new ImageGateway( { api: api } );
 	assert.rejects(
 		gateway.getThumb( 'Missing' ),
-		function ( err ) {
-			return err.message.includes( 'The API failed' );
-		},
+		( err ) => err.message.includes( 'The API failed' ),
 		'A missing page throws an error which the client must handle'
 	);
 } );

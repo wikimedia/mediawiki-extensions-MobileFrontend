@@ -87,7 +87,7 @@ QUnit.test( 'Shows details bar and image with successful api response', function
 		}
 	} );
 
-	return this.imageGateway.getThumb().then( function () {
+	return this.imageGateway.getThumb().then( () => {
 		assert.strictEqual( overlay.$el.find( 'img' ).length, 1, 'Image is present.' );
 		assert.strictEqual( overlay.$el.find( '.load-fail-msg' ).length, 0, 'Load error msg is not visible' );
 		assert.strictEqual( overlay.$el.find( '.image-details.is-visible' ).length, 1, 'Details bar present' );
@@ -111,7 +111,7 @@ QUnit.test( 'Shows error message with failed api response', function ( assert ) 
 		}
 	} );
 
-	return imageGateway.getThumb().catch( function () {
+	return imageGateway.getThumb().catch( () => {
 		assert.strictEqual( overlay.$el.find( '.load-fail-msg' ).length, 1, 'Load error msg is visible' );
 		assert.strictEqual( overlay.$el.find( '.image-details.is-visible' ).length, 0, 'Details bar is hidden' );
 	} );
@@ -135,7 +135,7 @@ QUnit.test( 'Toggling of details is disabled when overlay has load failure', fun
 		}
 	} );
 
-	return imageGateway.getThumb().catch( function () {
+	return imageGateway.getThumb().catch( () => {
 		assert.strictEqual( overlay.$el.find( '.image-details.is-visible' ).length, 0, 'Details bar is hidden' );
 		assert.notStrictEqual( overlay.$el.find( '.image-details' ), 'none', 'Slider buttons are shown' );
 		assert.notStrictEqual( overlay.$el.find( '.prev' ), 'none', 'Slider buttons are still shown' );
@@ -160,7 +160,7 @@ QUnit.test( 'Toggling of details is enabled when overlay loads successfully', fu
 		}
 	} );
 
-	return this.imageGateway.getThumb().then( function () {
+	return this.imageGateway.getThumb().then( () => {
 		assert.strictEqual( overlay.$el.find( '.image-details.is-visible' ).length, 1, 'Details bar is shown' );
 		assert.notStrictEqual( overlay.$el.find( '.image-details' ).attr( 'style' ), 'display: none;', 'Ensure display none rule is not set' );
 		assert.notStrictEqual( overlay.$el.find( '.prev' ).attr( 'style' ), 'display: none;', 'Slider buttons are shown' );

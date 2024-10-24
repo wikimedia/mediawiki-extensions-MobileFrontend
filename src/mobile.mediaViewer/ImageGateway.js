@@ -49,7 +49,7 @@ ImageGateway.prototype.getThumb = function ( title ) {
 			// for retina displays and zooming
 			iiurlwidth: findSizeBucket( $window.width() * imageSizeMultiplier ),
 			iiurlheight: findSizeBucket( $window.height() * imageSizeMultiplier )
-		} ) ).then( function ( resp ) {
+		} ) ).then( ( resp ) => {
 			// imageinfo is undefined for missing pages.
 			if ( resp.query && resp.query.pages &&
 				resp.query.pages[0] && resp.query.pages[0].imageinfo ) {

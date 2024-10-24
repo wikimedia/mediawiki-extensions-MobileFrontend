@@ -16,14 +16,14 @@ QUnit.module( 'MobileFrontend mfExtend.test.js', {
 	}
 } );
 
-QUnit.test( 'mfExtend() - extending from constructor', function ( assert ) {
+QUnit.test( 'mfExtend() - extending from constructor', ( assert ) => {
 	function TestChild() {}
 	function TestPrototype() {}
 	mfExtend( TestChild, TestPrototype, {} );
 	assert.true( TestChild.prototype instanceof TestPrototype );
 } );
 
-QUnit.test( 'mfExtend() - extending from object', function ( assert ) {
+QUnit.test( 'mfExtend() - extending from object', ( assert ) => {
 	const testPrototype = new TestPrototype();
 	function TestChild() {}
 	function TestPrototype() {
@@ -36,7 +36,7 @@ QUnit.test( 'mfExtend() - extending from object', function ( assert ) {
 	assert.strictEqual( testChild.protoMethod(), true );
 } );
 
-QUnit.test( 'mfExtend() - extending from constructor with overrides', function ( assert ) {
+QUnit.test( 'mfExtend() - extending from constructor with overrides', ( assert ) => {
 	function TestChild() {}
 	function TestPrototype() {
 		this.protoMethod = function () {

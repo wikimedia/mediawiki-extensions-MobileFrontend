@@ -17,7 +17,7 @@ QUnit.module( 'MobileFrontend ScrollEndEventEmitter.js', {
 	}
 } );
 
-QUnit.test( 'initializes properly', function ( assert ) {
+QUnit.test( 'initializes properly', ( assert ) => {
 	const
 		eventBus = {
 			on: sinon.spy()
@@ -34,7 +34,7 @@ QUnit.test( 'initializes properly', function ( assert ) {
 		is._scrollHandler ).calledOnce, true, 'Scrolling handler is bound' );
 } );
 
-QUnit.test( 'emits scroll end event', function ( assert ) {
+QUnit.test( 'emits scroll end event', ( assert ) => {
 	const
 		eventBus = {
 			on: function ( _, handler ) {
@@ -48,14 +48,14 @@ QUnit.test( 'emits scroll end event', function ( assert ) {
 	sandbox.stub( is, 'scrollNearEnd' ).returns( true );
 	is.setElement( {} );
 
-	is.on( ScrollEndEventEmitter.EVENT_SCROLL_END, function () {
+	is.on( ScrollEndEventEmitter.EVENT_SCROLL_END, () => {
 		assert.true( true, 'scroll end event emitted' );
 	} );
 	// trigger stubbed 'scroll:throttled' event
 	eventBus.handler();
 } );
 
-QUnit.test( 'doesn\'t emit when disabled', function ( assert ) {
+QUnit.test( 'doesn\'t emit when disabled', ( assert ) => {
 	const
 		emitSpy = sandbox.spy( ScrollEndEventEmitter.prototype, 'emit' ),
 		eventBus = {

@@ -47,6 +47,7 @@ mw._mobileFrontend = {
 	overlayHeader: headers.header,
 	/**
 	 * Internal for use inside Minerva, GrowthExperiments only.
+	 *
 	 * @type module:mobile.startup/Drawer
 	 */
 	Drawer,
@@ -80,23 +81,24 @@ mw._mobileFrontend = {
 	 * @memberof module:mobile.startup
 	 * @return {module:mobile.startup/OverlayManager}
 	 */
-	getOverlayManager: () => {
-		return OverlayManager.getSingleton();
-	},
+	getOverlayManager: () => OverlayManager.getSingleton(),
 	/**
 	 * Internal for use inside Minerva only.
+	 *
 	 * @type module:mobile.startup/Page
 	 * @memberof module:mobile.startup
 	 */
 	currentPage,
 	/**
 	 * Internal for use inside Minerva only.
+	 *
 	 * @type module:mobile.startup/PageHTMLParser
 	 * @memberof module:mobile.startup
 	 */
 	PageHTMLParser,
 	/**
 	 * Internal for use inside Minerva only.
+	 *
 	 * @type module:mobile.startup/Icon
 	 * @memberof module:mobile.startup
 	 */
@@ -137,11 +139,9 @@ mw._mobileFrontend = {
 	 * @memberof module:mobile.startup
 	 * @return {jQuery.Deferred}
 	 */
-	loadAllImagesInPage: () => {
-		return lazyImageLoader.loadImages(
-			lazyImageLoader.queryPlaceholders( document.getElementById( 'content' ) )
-		);
-	},
+	loadAllImagesInPage: () => lazyImageLoader.loadImages(
+		lazyImageLoader.queryPlaceholders( document.getElementById( 'content' ) )
+	),
 	/**
 	 * Show a notification on page reload, internal for Minerva
 	 *

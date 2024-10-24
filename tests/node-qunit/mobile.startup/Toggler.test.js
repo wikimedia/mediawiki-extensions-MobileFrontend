@@ -378,9 +378,7 @@ QUnit.test( 'MobileFrontend toggle.js - Expand stored sections.', function ( ass
 	// save a toggle state manually
 	expandedSections[ this.title ][ this.headline ] = true;
 
-	sandbox.stub( mw.storage.session, 'getObject' ).callsFake( function () {
-		return expandedSections;
-	} );
+	sandbox.stub( mw.storage.session, 'getObject' ).callsFake( () => expandedSections );
 	const expandedSectionsFromToggle = Toggler._getExpandedSections( this.page );
 	assert.true( expandedSectionsFromToggle[ this.title ][ this.headline ],
 		'manually created section state has been saved correctly'

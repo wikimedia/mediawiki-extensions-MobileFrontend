@@ -44,12 +44,10 @@ QUnit.test( 'returns a drawer', function ( assert ) {
 	const subject = amcOutreachDrawer(
 		'onLoad',
 		this.promoCampaign,
-		() => {
-			return {
-				parse: () => 'parse',
-				text: () => ''
-			};
-		},
+		() => ( {
+			parse: () => 'parse',
+			text: () => ''
+		} ),
 		{
 			getUrl: () => 'getUrl'
 		},
@@ -69,12 +67,10 @@ QUnit.test( 'calls promoCampaign.makeActionIneligible and onBeforeHide callback 
 		drawer = amcOutreachDrawer(
 			'onLoad',
 			this.promoCampaign,
-			() => {
-				return {
-					parse: () => 'parse',
-					text: () => ''
-				};
-			},
+			() => ( {
+				parse: () => 'parse',
+				text: () => ''
+			} ),
 			{
 				getUrl: () => 'getUrl'
 			},
@@ -104,12 +100,10 @@ QUnit.test( 'calls promoCampaign.makeActionIneligible and toast.showOnPageReload
 		drawer = amcOutreachDrawer(
 			'onLoad',
 			this.promoCampaign,
-			() => {
-				return {
-					parse: () => 'parse',
-					text: () => ''
-				};
-			},
+			() => ( {
+				parse: () => 'parse',
+				text: () => ''
+			} ),
 			{
 				getUrl: () => 'getUrl'
 			},

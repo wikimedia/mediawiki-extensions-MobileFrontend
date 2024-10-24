@@ -35,6 +35,7 @@ QUnit.module( 'MobileFrontend languageOverlay.js', {
 
 		// languageOverlay uses a global navigator so we need to stub it for headless tests
 		if ( headless ) {
+			// eslint-disable-next-line n/no-unsupported-features/node-builtins
 			global.navigator = global.navigator || undefined;
 			sandbox.stub( global, 'navigator' ).callsFake( () => {} );
 		}
@@ -48,7 +49,7 @@ QUnit.module( 'MobileFrontend languageOverlay.js', {
 	}
 } );
 
-QUnit.test( '#constructor', function ( assert ) {
+QUnit.test( '#constructor', ( assert ) => {
 	const
 		gatewayDeferred = util.Deferred().resolve( {
 			languages: [],
@@ -63,7 +64,7 @@ QUnit.test( '#constructor', function ( assert ) {
 
 	assert.strictEqual( overlay.$el.find( '.overlay-content > .promised-view' ).text().trim(), '⌛', 'loading view rendered in .overlay-content' );
 
-	return languageOverlay.test.loadLanguageSearcher( gateway ).then( function () {
+	return languageOverlay.test.loadLanguageSearcher( gateway ).then( () => {
 		assert.strictEqual( overlay.$el.find( '.overlay-content > .promised-view' ).length, 0, 'promisedView has fulfilled its promise' );
 		assert.strictEqual( overlay.$el.find( '.overlay-content > .language-searcher' ).length, 1, 'loaded view rendered in .overlay-content' );
 		sinon.assert.calledWith( spy.withArgs( 'mobileFrontend.languageSearcher.onOpen' ) );
