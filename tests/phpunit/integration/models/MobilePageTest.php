@@ -60,7 +60,7 @@ class MobilePageTest extends MediaWikiIntegrationTestCase {
 	 * @param UserIdentity|null $user
 	 * @return RevisionStore
 	 */
-	private function mockRevisionStore( Title $title, UserIdentity $user = null ) {
+	private function mockRevisionStore( Title $title, ?UserIdentity $user = null ) {
 		$revisionRecordMock = $this->createMock( RevisionRecord::class );
 
 		$revisionRecordMock->method( 'getTimestamp' )
