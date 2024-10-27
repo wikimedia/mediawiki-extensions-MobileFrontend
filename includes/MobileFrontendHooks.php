@@ -685,7 +685,7 @@ class MobileFrontendHooks implements
 	 * @param RecentChange|null $rc If the variables should be generated for an RC entry, this
 	 *  is the entry. Null if it's for the current action being filtered.
 	 */
-	public static function onAbuseFilterGenerateUserVars( $vars, $user, RecentChange $rc = null ) {
+	public static function onAbuseFilterGenerateUserVars( $vars, $user, ?RecentChange $rc = null ) {
 		$services = MediaWikiServices::getInstance();
 
 		if ( !$rc ) {
