@@ -5,7 +5,9 @@
 			"Kimberli Mäkäräinen (WMNO)",
 			"Lea-Christine Sara",
 			"Trondtr",
-			"Yupik"
+			"Yupik",
+			"Jon Harald Søby",
+			"WMNO sámeprošeakta"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Rievdadago geavaheaddji mobiilageavahanlavtta bokte",
@@ -54,7 +56,7 @@
 	"mobile-frontend-editor-cancel-confirm": "Áiggutgo don duođaid guođđit rievdadeami?",
 	"mobile-frontend-editor-captcha-try-again": "Boasttu beassansátni, geahččal ođđasit.",
 	"mobile-frontend-editor-continue": "Boahtte",
-	"mobile-frontend-editor-disabled": "Dát siidu lea suddjejuvvon vai hehttet vandalisma. [$1 Čájet gáldo] ",
+	"mobile-frontend-editor-disabled": "Dát siidu lea suddjejuvvon vai hehttet billisteami. [$1 Čájet wikiteavstta] ",
 	"mobile-frontend-editor-disabled-anon": "Don fertet čálihit sisa vai beasat rievdadit dán siiddu.",
 	"mobile-frontend-editor-editing": "Rievdadeapmi",
 	"mobile-frontend-editor-editing-page": "<span><strong>Rievdadeapmi</strong> $1</span>",

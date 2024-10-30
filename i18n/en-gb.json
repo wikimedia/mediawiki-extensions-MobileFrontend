@@ -27,7 +27,6 @@
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Other languages",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Search for a language",
 	"mobile-frontend-languages-structured-overlay-no-results": "Language not available",
-	"mobile-frontend-last-modified-date": "Last modified on $1, at $2",
 	"mobile-frontend-media-license-link": "Licence information",
 	"mobile-frontend-watchlist-a-z": "List",
 	"mobile-frontend-watchlist-a-z-empty-howto-alt": "Click the star icon",
@@ -39,7 +38,6 @@
 	"tag-mobile_edit": "Mobile edit",
 	"tag-advanced_mobile_edit": "Advanced mobile edit",
 	"tag-mobile_web_edit": "Mobile web edit",
-	"tag-mobile_web_edit-description": "Edit made from mobile web site",
 	"mobile-frontend-loading-message": "Loading…",
 	"mobile-frontend-amc-outreach-no-thanks": "No thanks",
 	"mobile-frontend-special-pages-pref": "Optimise and simplify special pages when on mobile (recommended)"
