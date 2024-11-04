@@ -6,6 +6,7 @@
 			"Kassala"
 		]
 	},
+	"mobile-frontend-clear-search": "ኣጽረ",
 	"mobile-frontend-copyright": "ሕቡር የሀላ ምን ገብእ፡ ለጽበጥ ዲብ ሐንቴ $1 ልትርከብ።",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "ሰኒ",
 	"mobile-frontend-editor-blocked-drawer-action-randompage": "ኣስክ ብዕደት ገጽ ንስኣኒ",
@@ -23,7 +24,9 @@
 	"mobile-frontend-generic-404-title": "ጌጋ - ገጽ ኣይተረከበትኒ",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "ብዕድ ሉቃት",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "ሉቀት ሕዘ",
+	"mobile-frontend-main-menu-settings-heading": "ቃነዮት",
 	"mobile-frontend-media-details": "ተፋሲል",
+	"mobile-frontend-media-load-fail-retry": "ኣሓድስ",
 	"mobile-frontend-missing-image": "ሱረት",
 	"mobile-frontend-overlay-close": "ድባእ",
 	"mobile-frontend-privacy-link-text": "ስትረት",
@@ -36,5 +39,7 @@
 	"mobile-frontend-watchlist-filter-articles": "ገጻት",
 	"mobile-frontend-watchlist-filter-other": "ብዕድ",
 	"mobile-frontend-watchlist-filter-talk": "ህድግ",
-	"mobile-frontend-watchlist-more": "ዚያደት"
+	"mobile-frontend-watchlist-more": "ዚያደት",
+	"mobile-frontend-loading-message": "ጸዕን ህላ...",
+	"mobile-frontend-mobile-option-amc-learn-more": "ዝያዳ ተዓለም"
 }
