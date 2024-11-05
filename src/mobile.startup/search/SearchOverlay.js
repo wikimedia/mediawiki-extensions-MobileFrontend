@@ -141,14 +141,14 @@ mfExtend( SearchOverlay, Overlay, {
 		ev.preventDefault();
 		this.router.back().then( function () {
 			// T308288: Appends the current search id as a url param on clickthroughs
-			if ( this.currentSearchId ) {
+			if ( self.currentSearchId ) {
 				const clickUrl = new URL( location.href );
-				clickUrl.searchParams.set( 'searchToken', this.currentSearchId );
+				clickUrl.searchParams.set( 'searchToken', self.currentSearchId );
 				self.router.navigateTo( document.title, {
 					path: clickUrl.toString(),
 					useReplaceState: true
 				} );
-				this.currentSearchId = null;
+				self.currentSearchId = null;
 			}
 			// Router.navigate does not support changing href.
 			// FIXME: Needs upstream change T189173
@@ -268,7 +268,7 @@ mfExtend( SearchOverlay, Overlay, {
 				this.timer = setTimeout( () => {
 					const xhr = self.gateway.search( query );
 					self._pendingQuery = xhr.then( function ( data ) {
-						this.currentSearchId = data.searchId;
+						self.currentSearchId = data.searchId;
 						// FIXME: Given this manipulates SearchResultsView
 						// this should be moved into that class
 						// check if we're getting the rights response in case of out of
