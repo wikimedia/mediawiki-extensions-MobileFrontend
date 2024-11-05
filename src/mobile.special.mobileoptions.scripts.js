@@ -70,7 +70,7 @@ function addClientPreferencesToForm( $form, clientPreferences ) {
  * @param {jQuery.Object} $form form to submit when there is interaction with toggle
  */
 function infuseToggles( toggleObjects, $form ) {
-	toggleObjects.forEach( function ( toggleObject ) {
+	toggleObjects.forEach( ( toggleObject ) => {
 		const $toggleElement = toggleObject.$el;
 		const enableToggle = OO.ui.infuse( $toggleElement );
 		const $checkbox = enableToggle.$element;
@@ -90,12 +90,12 @@ function infuseToggles( toggleObjects, $form ) {
 		// listening on checkbox change is required to make the clicking on label working.
 		// Otherwise clicking on label changes the checkbox "checked" state
 		// but it's not reflected in the toggle switch
-		$checkbox.on( 'change', function () {
+		$checkbox.on( 'change', () => {
 			// disable checkbox as submit is delayed by 0.25s
 			$checkbox.attr( 'disabled', true );
 			toggleSwitch.setValue( enableToggle.isSelected() );
 		} );
-		toggleSwitch.on( 'change', function ( value ) {
+		toggleSwitch.on( 'change', ( value ) => {
 			// execute callback
 			toggleObject.onToggle( value );
 
@@ -112,7 +112,7 @@ function infuseToggles( toggleObjects, $form ) {
 			// starts submitting the form.
 			// Let's call submit on the form after toggle button transition is done
 			// (0.25s, defined in OOUI)
-			setTimeout( function () {
+			setTimeout( () => {
 				$form.trigger( 'submit' );
 			}, 250 );
 		} );
@@ -122,6 +122,7 @@ function infuseToggles( toggleObjects, $form ) {
 /**
  * Add features, that depends on localStorage, such as "expand all sections" or "fontchanger".
  * The checkbox is used for turning on/off expansion of all sections on page load.
+ *
  * @private
  */
 function initMobileOptions() {

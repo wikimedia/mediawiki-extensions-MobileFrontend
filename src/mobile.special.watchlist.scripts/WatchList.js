@@ -72,7 +72,7 @@ mfExtend( WatchList, WatchstarPageList, {
 		// watched pages so it's safe to transform the title map to a status map
 		// with each entry marked watched (true).
 		const statuses = Object.keys( this.parsePagesFromItems( $items ) )
-			.reduce( function ( arr, title ) {
+			.reduce( ( arr, title ) => {
 				arr[ title ] = true;
 				return arr;
 			}, {} );
@@ -90,12 +90,12 @@ mfExtend( WatchList, WatchstarPageList, {
 	 * @instance
 	 */
 	_loadPages: function () {
-		this.gateway.loadWatchlist().then( function ( pages ) {
-			pages.forEach( function ( page ) {
+		this.gateway.loadWatchlist().then( ( pages ) => {
+			pages.forEach( ( page ) => {
 				this.appendPage( page );
-			}.bind( this ) );
+			} );
 			this.render();
-		}.bind( this ) );
+		} );
 	},
 
 	/**

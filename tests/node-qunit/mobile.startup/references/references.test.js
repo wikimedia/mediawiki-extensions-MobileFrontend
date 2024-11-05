@@ -34,19 +34,19 @@ QUnit.module( 'MobileFrontend: references', {
 	}
 } );
 
-QUnit.test( 'Bad reference not shown', function ( assert ) {
+QUnit.test( 'Bad reference not shown', ( assert ) => {
 	const promise = util.Deferred().reject( ReferencesGateway.ERROR_NOT_EXIST ).promise(),
 		showSpy = sandbox.spy( Drawer.prototype, 'show' );
 
 	sandbox.stub( gateway, 'getReference' ).returns( promise );
 	references.showReference( '#cite_note-bad', page, '1', pageParser, gateway );
 
-	return promise.catch( function () {
+	return promise.catch( () => {
 		assert.strictEqual( showSpy.callCount, 0, 'Show is not called.' );
 	} );
 } );
 
-QUnit.test( 'Good reference causes render', function ( assert ) {
+QUnit.test( 'Good reference causes render', ( assert ) => {
 	const promise = util.Deferred().resolve( {
 			text: 'I am a reference'
 		} ).promise(),
@@ -56,13 +56,13 @@ QUnit.test( 'Good reference causes render', function ( assert ) {
 	sandbox.stub( gateway, 'getReference' ).returns( promise );
 	references.showReference( '#cite_note-good', page, '1', pageParser, gateway );
 
-	return promise.then( function () {
+	return promise.then( () => {
 		assert.strictEqual( renderSpy.callCount, 1, 'Render is called.' );
 		done();
 	} );
 } );
 
-QUnit.test( 'Reference failure renders error in drawer', function ( assert ) {
+QUnit.test( 'Reference failure renders error in drawer', ( assert ) => {
 	const promise = util.Deferred().reject( ReferencesGateway.ERROR_OTHER ).promise(),
 		renderSpy = sandbox.spy( Drawer.prototype, 'render' ),
 		done = assert.async();
@@ -70,13 +70,13 @@ QUnit.test( 'Reference failure renders error in drawer', function ( assert ) {
 	sandbox.stub( gateway, 'getReference' ).returns( promise );
 	references.showReference( '#cite_note-bad', page, '1', pageParser, gateway );
 
-	return promise.catch( function () {
+	return promise.catch( () => {
 		assert.strictEqual( renderSpy.callCount, 1, 'Render is called.' );
 		done();
 	} );
 } );
 
-QUnit.test( 'makeOnNestedReferenceClickHandler runs when associated with link', function ( assert ) {
+QUnit.test( 'makeOnNestedReferenceClickHandler runs when associated with link', ( assert ) => {
 	const spy = sandbox.spy(),
 		sup = document.createElement( 'sup' ),
 		anchor = document.createElement( 'a' ),

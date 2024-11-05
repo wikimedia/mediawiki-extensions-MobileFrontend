@@ -134,7 +134,7 @@ class BlockMessageDetails extends View {
 				icon: 'block-destructive'
 			} ) ).$el
 		);
-		this.options.parsedReason.then( function ( htmlReason ) {
+		this.options.parsedReason.then( ( htmlReason ) => {
 			drawer.$el.find( '.block-message-reason div' ).html( htmlReason );
 		} );
 	}

@@ -143,6 +143,7 @@ mfExtend( LanguageSearcher, View, {
 	 * a banner inside the language overlay.
 	 *
 	 * Stable for use inside ContentTranslation
+	 *
 	 * @memberof LanguageSearcher
 	 * @param {string} bannerHTML
 	 * @param {string} firstMissingLanguage
@@ -199,7 +200,7 @@ mfExtend( LanguageSearcher, View, {
 		const filteredList = [];
 
 		if ( searchQuery ) {
-			this.options.languages.forEach( function ( language ) {
+			this.options.languages.forEach( ( language ) => {
 				const langname = language.langname;
 				// search by language code or language name
 				if ( language.autonym.toLowerCase().indexOf( searchQuery ) > -1 ||
@@ -211,7 +212,7 @@ mfExtend( LanguageSearcher, View, {
 			} );
 
 			if ( this.options.variants ) {
-				this.options.variants.forEach( function ( variant ) {
+				this.options.variants.forEach( ( variant ) => {
 					// search by variant code or variant name
 					if ( variant.autonym.toLowerCase().indexOf( searchQuery ) > -1 ||
 						variant.lang.toLowerCase().indexOf( searchQuery ) > -1

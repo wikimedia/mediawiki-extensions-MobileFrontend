@@ -58,7 +58,7 @@ QUnit.module( 'MobileFrontend mobile.startup/WatchstarPageList', {
 	}
 } );
 
-QUnit.test( 'Watchlist status check if no ids', function ( assert ) {
+QUnit.test( 'Watchlist status check if no ids', ( assert ) => {
 	const
 		done = assert.async(),
 		mwApi = new mw.Api(),
@@ -72,8 +72,8 @@ QUnit.test( 'Watchlist status check if no ids', function ( assert ) {
 		} );
 
 	// Wait for an internal API call to happen as a side-effect of construction.
-	window.setTimeout( function () {
-		pageList.getPages( [], [] ).then( function () {
+	window.setTimeout( () => {
+		pageList.getPages( [], [] ).then( () => {
 			assert.true( apiSpy.calledWith( {
 				formatversion: 2,
 				action: 'query',
@@ -87,7 +87,7 @@ QUnit.test( 'Watchlist status check if no ids', function ( assert ) {
 	}, 0 );
 } );
 
-QUnit.test( 'Checks watchlist status once', function ( assert ) {
+QUnit.test( 'Checks watchlist status once', ( assert ) => {
 	const
 		done = assert.async(),
 		mwApi = new mw.Api(),
@@ -104,8 +104,8 @@ QUnit.test( 'Checks watchlist status once', function ( assert ) {
 		} );
 
 	// Wait for an internal API call to happen as a side-effect of construction.
-	window.setTimeout( function () {
-		pl.getPages( [ 30, 50 ], [] ).then( function () {
+	window.setTimeout( () => {
+		pl.getPages( [ 30, 50 ], [] ).then( () => {
 			assert.strictEqual( apiSpy.callCount, 2,
 				'run callback twice (inside postRender and this call) - no caching occurs' );
 			assert.true( apiSpy.calledWith( {

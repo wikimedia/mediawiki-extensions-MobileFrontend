@@ -38,7 +38,7 @@ QUnit.module( 'MobileFrontend mobile.startup/SearchOverlay.js', {
 	}
 } );
 
-QUnit.test( 'renders correctly', function ( assert ) {
+QUnit.test( 'renders correctly', ( assert ) => {
 	const overlay = new SearchOverlay( overlayOptions );
 
 	assert.strictEqual( overlay.$el.find( '.overlay-title' ).length, 1, 'It contains an overlay title' );
@@ -46,13 +46,13 @@ QUnit.test( 'renders correctly', function ( assert ) {
 	assert.strictEqual( overlay.$el.find( '.results-list-container' ).length, 1, 'Contains search results container' );
 } );
 
-QUnit.test( 'resetSearch', function ( assert ) {
+QUnit.test( 'resetSearch', ( assert ) => {
 	const overlay = new SearchOverlay( overlayOptions );
 	overlay.resetSearch();
 	assert.strictEqual( overlay.$el.find( '.search-results-view' ).is( 'visible' ), false, 'All children are now hidden' );
 } );
 
-QUnit.test( 'onClickOverlayContent', function ( assert ) {
+QUnit.test( 'onClickOverlayContent', ( assert ) => {
 	const overlay = new SearchOverlay( overlayOptions );
 
 	overlay.onClickOverlayContent();

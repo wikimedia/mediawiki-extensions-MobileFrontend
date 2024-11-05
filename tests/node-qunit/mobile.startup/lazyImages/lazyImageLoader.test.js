@@ -18,15 +18,15 @@ QUnit.module( 'MobileFrontend lazyImageLoader.js', {
 		jQuery.tearDown();
 		sandbox.restore();
 	}
-}, function () {
-	QUnit.test( '#queryPlaceholders() empty', function ( assert ) {
+}, () => {
+	QUnit.test( '#queryPlaceholders() empty', ( assert ) => {
 		const
 			root = document.createElement( 'div' ),
 			actual = lazyImageLoader.queryPlaceholders( root );
 		assert.propEqual( actual, [], 'The result is empty.' );
 	} );
 
-	QUnit.test( '#queryPlaceholders() nonempty', function ( assert ) {
+	QUnit.test( '#queryPlaceholders() nonempty', ( assert ) => {
 		const
 			root = document.createElement( 'div' ),
 			placeholder = document.createElement( 'div' );
@@ -38,7 +38,7 @@ QUnit.module( 'MobileFrontend lazyImageLoader.js', {
 		assert.propEqual( actual, [ placeholder ], 'The result is nonempty.' );
 	} );
 
-	QUnit.test( '#loadImage() copy attributes', function ( assert ) {
+	QUnit.test( '#loadImage() copy attributes', ( assert ) => {
 		const
 			attrs = {
 				width: '1',
@@ -54,53 +54,51 @@ QUnit.module( 'MobileFrontend lazyImageLoader.js', {
 		// eslint-disable-next-line mediawiki/class-doc
 		placeholder.className = lazyImageLoader.test.placeholderClass;
 		placeholder.style.width = '3px';
-		Object.keys( attrs ).forEach( function ( name ) {
+		Object.keys( attrs ).forEach( ( name ) => {
 			placeholder.setAttribute( 'data-' + name, attrs[name] );
 		} );
 
 		const result = lazyImageLoader.loadImage( placeholder );
 
-		Object.keys( attrs ).forEach( function ( name ) {
+		Object.keys( attrs ).forEach( ( name ) => {
 			assert.strictEqual( result.image.getAttribute( name ), attrs[name], name + ' is set.' );
 		} );
 		assert.strictEqual( result.image.style.width, '3px', 'Style from placeholder is set.' );
 	} );
 
-	QUnit.test( '#loadImage() loaded', function ( assert ) {
+	QUnit.test( '#loadImage() loaded', ( assert ) => {
 		const
 			placeholder = document.createElement( 'div' );
 
 		const result = lazyImageLoader.loadImage( placeholder );
 		result.image.dispatchEvent( new Event( 'load' ) );
-		return result.promise.then( function ( status ) {
+		return result.promise.then( ( status ) => {
 			assert.strictEqual( status, 'load', 'Promise resolves on load.' );
 		} );
 	} );
 
-	QUnit.test( '#loadImage() load error', function ( assert ) {
+	QUnit.test( '#loadImage() load error', ( assert ) => {
 		const
 			placeholder = document.createElement( 'div' );
 
 		const result = lazyImageLoader.loadImage( placeholder );
 		result.image.dispatchEvent( new Event( 'error' ) );
-		return result.promise.then( function ( status ) {
+		return result.promise.then( ( status ) => {
 			assert.strictEqual( status, 'error', 'Promise resolves even on error.' );
 		} );
 	} );
 
-	QUnit.test( '#loadImages() empty', function ( assert ) {
-		return lazyImageLoader.loadImages( [] ).then( function () {
-			assert.true( true, 'Promise resolves.' );
-		} );
-	} );
+	QUnit.test( '#loadImages() empty', ( assert ) => lazyImageLoader.loadImages( [] ).then( () => {
+		assert.true( true, 'Promise resolves.' );
+	} ) );
 
-	QUnit.test( '#loadImages() nonempty', function ( assert ) {
+	QUnit.test( '#loadImages() nonempty', ( assert ) => {
 		const
 			placeholder = document.createElement( 'div' ),
 			image = new Image();
 
 		sandbox.stub( global, 'Image' ).returns( image );
-		const deferred = lazyImageLoader.loadImages( [ placeholder ] ).then( function () {
+		const deferred = lazyImageLoader.loadImages( [ placeholder ] ).then( () => {
 			assert.true( true, 'Promise resolves.' );
 		} );
 		image.dispatchEvent( new Event( 'load' ) );
@@ -108,14 +106,14 @@ QUnit.module( 'MobileFrontend lazyImageLoader.js', {
 		return deferred;
 	} );
 
-	QUnit.test( '#loadImages() plural', function ( assert ) {
+	QUnit.test( '#loadImages() plural', ( assert ) => {
 		const
 			placeholder = document.createElement( 'div' ),
 			image = new Image();
 
 		sandbox.stub( global, 'Image' ).returns( image );
 		const deferred = lazyImageLoader.loadImages( [ placeholder, placeholder ] ).then(
-			function () {
+			() => {
 				assert.true( true, 'Promise resolves.' );
 			}
 		);
@@ -124,7 +122,7 @@ QUnit.module( 'MobileFrontend lazyImageLoader.js', {
 		return deferred;
 	} );
 
-	QUnit.test( '#loadImages() one fails to load, one succeeds', function ( assert ) {
+	QUnit.test( '#loadImages() one fails to load, one succeeds', ( assert ) => {
 		const
 			placeholder = document.createElement( 'div' ),
 			failureImage = new Image(),
@@ -135,7 +133,7 @@ QUnit.module( 'MobileFrontend lazyImageLoader.js', {
 			.onFirstCall().returns( failureImage )
 			.onSecondCall().returns( successImage );
 		const deferred = lazyImageLoader.loadImages( [ placeholder, placeholder ] ).then(
-			function () {
+			() => {
 				assert.true( true, 'Promise resolves.' );
 			}
 		);

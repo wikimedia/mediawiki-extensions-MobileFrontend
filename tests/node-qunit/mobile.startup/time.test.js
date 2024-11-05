@@ -2,7 +2,7 @@ const time = require( '../../../src/mobile.startup/time' );
 
 QUnit.module( 'MobileFrontend time.js' );
 
-QUnit.test( 'timeAgo()', function ( assert ) {
+QUnit.test( 'timeAgo()', ( assert ) => {
 	assert.propEqual( time.timeAgo( 40 ), {
 		value: 40,
 		unit: 'seconds'

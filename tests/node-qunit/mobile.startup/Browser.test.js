@@ -24,7 +24,7 @@ QUnit.module( 'MobileFrontend Browser.js', {
 	}
 } );
 
-QUnit.test( 'isIos()', function ( assert ) {
+QUnit.test( 'isIos()', ( assert ) => {
 	const browser = new Browser( 'Mozilla/5.0 (iPad; CPU OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko)', $html ),
 		browser4 = new Browser( 'Mozilla/5.0 (iPad; CPU OS 4_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko)', $html ),
 		browser5 = new Browser( 'Mozilla/5.0 (iPad; CPU OS 5_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko)', $html ),
@@ -40,7 +40,7 @@ QUnit.test( 'isIos()', function ( assert ) {
 	assert.strictEqual( browser5.isIos( 5 ), true );
 } );
 
-QUnit.test( 'Methods are cached', function ( assert ) {
+QUnit.test( 'Methods are cached', ( assert ) => {
 	const ipad = new Browser( 'Mozilla/5.0 (iPad; CPU OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko)', $html ),
 		iphone = new Browser( 'Mozilla/5.0 (iPhone; CPU iPhone OS 8_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/8.0 Mobile/11A465 Safari/9537.53', $html ),
 		android2 = new Browser( 'Android 2', $html );
@@ -63,15 +63,13 @@ QUnit.test( 'Methods are cached', function ( assert ) {
 	assert.strictEqual( Object.keys( cache( iphone, 'isIos' ) ).length, 2, 'isIos on iphone cached as expected' );
 } );
 
-QUnit.test( 'isWideScreen()', function ( assert ) {
+QUnit.test( 'isWideScreen()', ( assert ) => {
 	const browser = new Browser( 'Mozilla/5.0 (iPad; CPU OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko)', $html );
-	sandbox.stub( mw.config, 'get' ).callsFake( function () {
-		return '720px';
-	} );
+	sandbox.stub( mw.config, 'get' ).callsFake( () => '720px' );
 	assert.strictEqual( browser.isWideScreen(), true );
 } );
 
-QUnit.test( 'supportsTouchEvents()', function ( assert ) {
+QUnit.test( 'supportsTouchEvents()', ( assert ) => {
 	const browser = new Browser( 'Mozilla/5.0 (iPad; CPU OS 7_0 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko)', $html );
 	window.ontouchstart = window.ontouchstart || undefined;
 	assert.strictEqual( browser.supportsTouchEvents(), true );

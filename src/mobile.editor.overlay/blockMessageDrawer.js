@@ -41,7 +41,7 @@ module.exports = function blockMessageDrawer( props ) {
 			$drawer.css( 'top', drawerTop + ( buttonsTop - creatorTop ) );
 			$seeMore.on(
 				'click',
-				function () {
+				() => {
 					const $container = blockDrawer.$el.find( '.block-message-container' );
 					$drawer.css( 'top', 0 );
 					$container.css( 'overflow-y', 'auto' );

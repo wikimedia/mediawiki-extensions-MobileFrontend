@@ -13,7 +13,7 @@ QUnit.module( 'MobileFrontend getDeviceLanguage', {
 	}
 } );
 
-QUnit.test( 'returns language code of device in lowercase', function ( assert ) {
+QUnit.test( 'returns language code of device in lowercase', ( assert ) => {
 	const cases = [
 		[ {}, undefined ],
 		[ { languages: [ 'en-US' ] }, 'en-us' ],
@@ -23,7 +23,7 @@ QUnit.test( 'returns language code of device in lowercase', function ( assert ) 
 		[ { systemLanguage: 'en-US' }, 'en-us' ]
 	];
 
-	cases.forEach( function ( testCase ) {
+	cases.forEach( ( testCase ) => {
 		const result = getDeviceLanguage( testCase[ 0 ] );
 		assert.strictEqual( result, testCase[1], 'returns correct code' );
 	} );

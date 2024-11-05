@@ -28,7 +28,7 @@ QUnit.module( 'MobileFrontend Page.js', {
 	}
 } );
 
-QUnit.test( '#isMainPage', function ( assert ) {
+QUnit.test( '#isMainPage', ( assert ) => {
 	const p = new Page( {
 			title: 'Main Page',
 			isMainPage: true

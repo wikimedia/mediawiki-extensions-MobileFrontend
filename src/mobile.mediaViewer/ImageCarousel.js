@@ -122,7 +122,7 @@ mfExtend( ImageCarousel, View, {
 	 */
 	preRender: function () {
 		const self = this;
-		this.options.thumbnails.forEach( function ( thumbnail, i ) {
+		this.options.thumbnails.forEach( ( thumbnail, i ) => {
 			if ( thumbnail.getFileName() === self.options.title ) {
 				self.options.caption = thumbnail.getDescription();
 				self.galleryOffset = i;
@@ -236,7 +236,7 @@ mfExtend( ImageCarousel, View, {
 
 		this.$details.prepend( detailsButton.$el );
 
-		this.gateway.getThumb( self.options.title ).then( function ( data ) {
+		this.gateway.getThumb( self.options.title ).then( ( data ) => {
 			let author;
 			const url = data.descriptionurl + '#mw-jump-to-license';
 
@@ -290,7 +290,7 @@ mfExtend( ImageCarousel, View, {
 				}
 			}
 			self.adjustDetails();
-		}, function () {
+		}, () => {
 			// retrieving image location failed so show load fail msg
 			showLoadFailMsg();
 		} );

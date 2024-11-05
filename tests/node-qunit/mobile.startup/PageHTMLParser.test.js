@@ -127,7 +127,7 @@ QUnit.module( 'MobileFrontend PageHTMLParser.js', {
 	}
 } );
 
-QUnit.test( '#findInSectionLead', function ( assert ) {
+QUnit.test( '#findInSectionLead', ( assert ) => {
 	// check desktop page
 	[
 		[ 0, 'a0', 'lead section' ],
@@ -135,7 +135,7 @@ QUnit.test( '#findInSectionLead', function ( assert ) {
 		[ 2, 'a1.1', 'h3' ],
 		[ 3, '', 'h4', 'selector does not match', '.foo' ],
 		[ 111, '', 'Non-existent section' ]
-	].forEach( function ( params, i ) {
+	].forEach( ( params, i ) => {
 		const
 			section = params[0],
 			expect = params[1],
@@ -152,7 +152,7 @@ QUnit.test( '#findInSectionLead', function ( assert ) {
 		[ 0, 'a0', 'lead section' ],
 		[ 3, '', 'h4', 'selector does not match', '.foo' ],
 		[ 111, '', 'Non-existent section' ]
-	].forEach( function ( testcase ) {
+	].forEach( ( testcase ) => {
 		assert.strictEqual(
 			stubPage.findChildInSectionLead( testcase[0], testcase[3] || '.ambox' ).text(),
 			testcase[1],
@@ -168,7 +168,7 @@ QUnit.test( '#findInSectionLead', function ( assert ) {
 		[ 3, '', 'h4', 'selector does not match', '.foo' ],
 		[ 7, 'a3', 'h2 later' ],
 		[ 111, '', 'Non-existent section' ]
-	].forEach( function ( testcase ) {
+	].forEach( ( testcase ) => {
 		assert.strictEqual(
 			sectionPage.findChildInSectionLead( testcase[0], testcase[3] || '.ambox' ).text(),
 			testcase[1],
@@ -180,7 +180,7 @@ QUnit.test( '#findInSectionLead', function ( assert ) {
 		[ 1, 'a1', 'h2' ],
 		[ 2, 'a1.1', 'h3' ],
 		[ 111, '', 'Non-existent section' ]
-	].forEach( function ( testcase ) {
+	].forEach( ( testcase ) => {
 		assert.strictEqual(
 			mobileTocPage.findChildInSectionLead( testcase[0], testcase[3] || '.ambox' ).text(),
 			testcase[1],
@@ -191,7 +191,7 @@ QUnit.test( '#findInSectionLead', function ( assert ) {
 	[
 		[ 8, '.ambox', /[\s]*nested-ambox-parent,[\s]*nested-ambox-1,\s*nested-ambox-2[\s]*/, 'Nested elements in section' ],
 		[ 9, '.ambox', /[\s]*nested-ambox-parent,[\s]*nested-ambox-1,[\s]*nested-ambox-2[\s]*/, 'Nested elements in subsection' ]
-	].forEach( function ( testcase ) {
+	].forEach( ( testcase ) => {
 		const result = sectionPage.findChildInSectionLead( testcase[0], testcase[1] );
 		sinon.assert.match(
 			result.not( result.children() ).text(),
@@ -201,7 +201,7 @@ QUnit.test( '#findInSectionLead', function ( assert ) {
 
 } );
 
-QUnit.test( '#getThumbnail', function ( assert ) {
+QUnit.test( '#getThumbnail', ( assert ) => {
 	// Valid anchor.
 	const $container = util.parseHTML( '<div><a href="/wiki/File:Design_portal_logo.jpg" class="image"><span class="lazy-image-placeholder" style="width: 28px;height: 28px;" data-src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Design_portal_logo.jpg/28px-Design_portal_logo.jpg" data-alt="icon" data-width="28" data-height="28" data-class="thumbimage">&nbsp;</span></a></div>' );
 	const parser = new PageHTMLParser( $container );
@@ -232,7 +232,7 @@ QUnit.test( '#getThumbnail', function ( assert ) {
 	assert.strictEqual( thumbMetadata, null, 'Thumbnail not found if invalid.' );
 } );
 
-QUnit.test( '#getThumbnails', function ( assert ) {
+QUnit.test( '#getThumbnails', ( assert ) => {
 	let thumbs;
 	const p = new PageHTMLParser(
 		util.parseHTML( '<div><a href="/wiki/File:Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg" class="image view-border-box"><img alt="Cyanolimnas cerverai by Allan Brooks cropped.jpg" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg/300px-Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg" width="300" height="303" data-file-width="454" data-file-height="459"></a></div>' )
@@ -298,7 +298,7 @@ QUnit.test( '#getThumbnails', function ( assert ) {
 		'Thumbnail found if there is a typo.' );
 } );
 
-QUnit.test( '#getLanguages', function ( assert ) {
+QUnit.test( '#getLanguages', ( assert ) => {
 	const html = `<div id="p-lang">
 		<h4>Languages</h4>
 		<section>
@@ -322,7 +322,7 @@ QUnit.test( '#getLanguages', function ( assert ) {
 	assert.strictEqual( langs.languages[ 0 ].autonym, 'Français', 'Expected autonym' );
 } );
 
-QUnit.test( '#getLanguages (no hyphen)', function ( assert ) {
+QUnit.test( '#getLanguages (no hyphen)', ( assert ) => {
 	const html = `<div id="p-lang">
 		<h4>Languages</h4>
 		<section>
@@ -346,7 +346,7 @@ QUnit.test( '#getLanguages (no hyphen)', function ( assert ) {
 	assert.strictEqual( langs.languages[ 0 ].langname, 'Français', 'Language falls back to autonym when not available' );
 } );
 
-QUnit.test( '#getLanguages (T349000)', function ( assert ) {
+QUnit.test( '#getLanguages (T349000)', ( assert ) => {
 	const html = `<div id="p-lang">
 		<h4>Languages</h4>
 		<section>

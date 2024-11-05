@@ -62,7 +62,7 @@ QUnit.module( 'MobileFrontend mobile.startup/OverlayManager', {
 	}
 } );
 
-QUnit.test( '#getSingleton (hash present and overlay not managed)', function ( assert ) {
+QUnit.test( '#getSingleton (hash present and overlay not managed)', ( assert ) => {
 	const spy = sandbox.spy( window.history, 'replaceState' );
 
 	sandbox.stub( fakeRouter, 'getPath' ).returns( '#/editor/0' );
@@ -72,7 +72,7 @@ QUnit.test( '#getSingleton (hash present and overlay not managed)', function ( a
 		'If a page is loaded with a hash fragment a new entry is placed before it to allow the user to go back.' );
 } );
 
-QUnit.test( '#getSingleton (hash present and overlay managed)', function ( assert ) {
+QUnit.test( '#getSingleton (hash present and overlay managed)', ( assert ) => {
 	// replace the current URL before the test
 	window.history.replaceState( OverlayManager.test.MANAGED_STATE, null, window.location.href );
 	const spy = sandbox.spy( window.history, 'replaceState' );
@@ -83,7 +83,7 @@ QUnit.test( '#getSingleton (hash present and overlay managed)', function ( asser
 		'If the history entry was added/removed by overlay manager, no URI correct occurs.' );
 } );
 
-QUnit.test( '#getSingleton', function ( assert ) {
+QUnit.test( '#getSingleton', ( assert ) => {
 	const singleton = OverlayManager.getSingleton();
 	assert.true( singleton instanceof OverlayManager, 'singleton exists' );
 	assert.strictEqual( singleton, OverlayManager.getSingleton(), 'same object returned each time' );
@@ -92,9 +92,7 @@ QUnit.test( '#getSingleton', function ( assert ) {
 QUnit.test( '#add', function ( assert ) {
 	const fakeOverlay = this.createFakeOverlay();
 
-	overlayManager.add( /^test$/, function () {
-		return fakeOverlay;
-	} );
+	overlayManager.add( /^test$/, () => fakeOverlay );
 	fakeRouter.emit( 'route', {
 		path: 'test'
 	} );
@@ -106,9 +104,7 @@ QUnit.test( '#show', function ( assert ) {
 	const fakeOverlay = this.createFakeOverlay(),
 		showSpy = sandbox.spy( overlayManager, '_show' );
 
-	overlayManager.add( /^showTest$/, function () {
-		return fakeOverlay;
-	} );
+	overlayManager.add( /^showTest$/, () => fakeOverlay );
 	fakeRouter.emit( 'route', {
 		path: 'showTest'
 	} );
@@ -122,16 +118,14 @@ QUnit.test( '#add, with current path', function ( assert ) {
 		deferred = util.Deferred();
 	fakeRouter.getPath = sandbox.stub().returns( 'baha' );
 
-	overlayManager.add( /^baha$/, function () {
-		return fakeOverlay;
-	} );
+	overlayManager.add( /^baha$/, () => fakeOverlay );
 
 	// Wait for $.ready because OverlayManager#add() does
-	util.docReady( function () {
+	util.docReady( () => {
 		deferred.resolve();
 	} );
 
-	return deferred.then( function () {
+	return deferred.then( () => {
 		assert.strictEqual( fakeOverlay.show.callCount, 1, 'show registered overlay' );
 	} );
 } );
@@ -145,16 +139,14 @@ QUnit.test( '#add, with string literal (matching)', function ( assert ) {
 	// operations (e.g. ''.match()) on a string literal (which would cause an
 	// error since this is an invalid regex (Unterminated character)
 	// eslint-disable-next-line no-useless-escape
-	overlayManager.add( '[.*+?^${}()|[\][(foo)', function () {
-		return fakeOverlay;
-	} );
+	overlayManager.add( '[.*+?^${}()|[\][(foo)', () => fakeOverlay );
 	fakeRouter.emit( 'route', {
 		// eslint-disable-next-line no-useless-escape
 		path: '[.*+?^${}()|[\][(foo)'
 	} );
 	deferred.resolve( fakeOverlay );
 
-	return deferred.then( function () {
+	return deferred.then( () => {
 		assert.strictEqual( fakeOverlay.show.callCount, 1, 'show called for string that matches' );
 	} );
 } );
@@ -165,15 +157,13 @@ QUnit.test( '#add, with string literal (not matching)', function ( assert ) {
 	deferred.show = sandbox.spy();
 
 	// eslint-disable-next-line no-useless-escape
-	overlayManager.add( '[.*+?^${}()|[\](foo)', function () {
-		return deferred;
-	} );
+	overlayManager.add( '[.*+?^${}()|[\](foo)', () => deferred );
 	fakeRouter.emit( 'route', {
 		path: '(bar)'
 	} );
 	deferred.resolve( fakeOverlay );
 
-	return deferred.then( function () {
+	return deferred.then( () => {
 		assert.strictEqual( fakeOverlay.show.callCount, 0, 'show not called for string that doesn\'t match' );
 	} );
 } );
@@ -187,9 +177,7 @@ QUnit.test( '#replaceCurrent', function ( assert ) {
 		overlayManagerEmpty.replaceCurrent( {} );
 	}, 'throws exceptions if you replace an empty stack' );
 
-	overlayManager.add( /^test$/, function () {
-		return fakeOverlay;
-	} );
+	overlayManager.add( /^test$/, () => fakeOverlay );
 
 	fakeRouter.emit( 'route', {
 		path: 'test'
@@ -331,19 +319,17 @@ QUnit.test( 'do not go back (change route) if overlay hidden by change in route'
 		'route back is not called if the hash has already changed from what it was for the overlay' );
 } );
 
-QUnit.test( 'preventDefault called when you cancel an exit request', function ( assert ) {
+QUnit.test( 'preventDefault called when you cancel an exit request', ( assert ) => {
 	const $container = util.parseHTML( '<div>' ),
 		manager = new OverlayManager( fakeRouter, $container[ 0 ] ),
 		backEvent = routeEvent( { path: '' } ),
 		backEventPreventDefaultSpy = sandbox.spy( backEvent, 'preventDefault' );
 
-	manager.add( /^canceloverlay$/, function () {
-		return new Overlay( {
-			onBeforeExit: function ( _exit, cancel ) {
-				cancel();
-			}
-		} );
-	} );
+	manager.add( /^canceloverlay$/, () => new Overlay( {
+		onBeforeExit: function ( _exit, cancel ) {
+			cancel();
+		}
+	} ) );
 	fakeRouter.emit( 'route', routeEvent( { path: 'canceloverlay' } ) );
 	// try to go back.
 	fakeRouter.emit( 'route', backEvent );
@@ -352,7 +338,7 @@ QUnit.test( 'preventDefault called when you cancel an exit request', function ( 
 		'Prevent default was called when the user attempted to go back, preventing an address bar change.' );
 } );
 
-QUnit.test( 'Browser back can be overidden', function ( assert ) {
+QUnit.test( 'Browser back can be overidden', ( assert ) => {
 	const escapableOverlay = new Overlay( {} ),
 		done = assert.async(),
 		$container = util.parseHTML( '<div>' ),
@@ -362,12 +348,8 @@ QUnit.test( 'Browser back can be overidden', function ( assert ) {
 		manager = new OverlayManager( fakeRouter, $container[ 0 ] );
 
 	// define 2 routes
-	manager.add( /^proceed$/, function () {
-		return escapableOverlay;
-	} );
-	manager.add( /^youcannotpass$/, function () {
-		return cannotGoBackOverlay;
-	} );
+	manager.add( /^proceed$/, () => escapableOverlay );
+	manager.add( /^youcannotpass$/, () => cannotGoBackOverlay );
 	fakeRouter.emit( 'route', routeEvent( { path: 'proceed' } ) );
 	assert.strictEqual( $container.find( escapableOverlay.$el ).length, 1,
 		'escapable overlay is displayed' );
@@ -446,9 +428,7 @@ QUnit.test( 'prevent route change', function ( assert ) {
 QUnit.test( 'stack increases and decreases at right times', function ( assert ) {
 	const self = this;
 
-	overlayManager.add( /^test\/(\d+)$/, function () {
-		return self.createFakeOverlay();
-	} );
+	overlayManager.add( /^test\/(\d+)$/, () => self.createFakeOverlay() );
 	fakeRouter.emit( 'route', {
 		path: 'test/0'
 	} );
@@ -471,9 +451,7 @@ QUnit.test( 'stack increases and decreases at right times', function ( assert ) 
 QUnit.test( 'replace overlay when route event path is equal to current path', function ( assert ) {
 	const self = this;
 
-	overlayManager.add( /^test\/(\d+)$/, function () {
-		return self.createFakeOverlay();
-	} );
+	overlayManager.add( /^test\/(\d+)$/, () => self.createFakeOverlay() );
 	fakeRouter.emit( 'route', {
 		path: 'test/0'
 	} );

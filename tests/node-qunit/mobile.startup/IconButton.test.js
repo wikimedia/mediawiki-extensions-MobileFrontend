@@ -25,7 +25,7 @@ QUnit.module( 'MobileFrontend IconButton.js', {
 	}
 } );
 
-QUnit.test( 'creates a link if passed href option', function ( assert ) {
+QUnit.test( 'creates a link if passed href option', ( assert ) => {
 	const
 		url = 'https://www.foo.com',
 		button = new IconButton( {
@@ -36,7 +36,7 @@ QUnit.test( 'creates a link if passed href option', function ( assert ) {
 	assert.strictEqual( button.$el[0].getAttribute( 'href' ), url );
 } );
 
-QUnit.test( 'does not add href attribute when not a link', function ( assert ) {
+QUnit.test( 'does not add href attribute when not a link', ( assert ) => {
 	const button = new IconButton( {
 		tagName: 'div'
 	} );
@@ -45,7 +45,7 @@ QUnit.test( 'does not add href attribute when not a link', function ( assert ) {
 	assert.strictEqual( button.$el[0].href, undefined );
 } );
 
-QUnit.test( 'adds disabled attribute when a button', function ( assert ) {
+QUnit.test( 'adds disabled attribute when a button', ( assert ) => {
 	const button = new IconButton( {
 		tagName: 'button',
 		disabled: true
@@ -55,7 +55,7 @@ QUnit.test( 'adds disabled attribute when a button', function ( assert ) {
 	assert.strictEqual( button.$el[0].disabled, true );
 } );
 
-QUnit.test( 'does not add disabled attribute when not a button', function ( assert ) {
+QUnit.test( 'does not add disabled attribute when not a button', ( assert ) => {
 	const button = new IconButton( {
 		tagName: 'div',
 		disabled: true
@@ -65,7 +65,7 @@ QUnit.test( 'does not add disabled attribute when not a button', function ( asse
 	assert.strictEqual( button.$el[0].disabled, undefined );
 } );
 
-QUnit.test( 'adds additional classes', function ( assert ) {
+QUnit.test( 'adds additional classes', ( assert ) => {
 	const button = new IconButton( {
 		icon: 'user',
 		additionalClassNames: 'test'

@@ -24,7 +24,7 @@ QUnit.module( 'MobileFrontend pageJSONParser', {
 	}
 } );
 
-QUnit.test( '.parse()', function ( assert ) {
+QUnit.test( '.parse()', ( assert ) => {
 	const p = new Page( {
 			title: '<script>alert("oops, XSS possible!");</script>'
 		} ),
@@ -53,7 +53,7 @@ QUnit.test( '.parse()', function ( assert ) {
 		'Check against XSS in Page.js constructor displaytitle (when title set)'
 	);
 
-	titleJSON.forEach( function ( json ) {
+	titleJSON.forEach( ( json ) => {
 		const p2 = pageJSONParser.parse( json );
 
 		assert.strictEqual(

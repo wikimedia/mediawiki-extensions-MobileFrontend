@@ -70,19 +70,17 @@ module.exports = {
 			 * `foo=bar#/Talk`
 			 * @return {module:mobile.startup/Drawer|null}
 			 */
-			( action, onBeforeHide, returnToTitle, returnToQuery ) => {
-				return amcOutreachDrawer(
-					action,
-					campaign,
-					mw.message,
-					mw.util,
-					toast,
-					mw.user.tokens.get( 'csrfToken' ),
-					onBeforeHide,
-					returnToTitle,
-					returnToQuery
-				);
-			},
+			( action, onBeforeHide, returnToTitle, returnToQuery ) => amcOutreachDrawer(
+				action,
+				campaign,
+				mw.message,
+				mw.util,
+				toast,
+				mw.user.tokens.get( 'csrfToken' ),
+				onBeforeHide,
+				returnToTitle,
+				returnToQuery
+			),
 			ACTIONS,
 			CAMPAIGN_NAME,
 			// in minerva desktop, this config will not be set

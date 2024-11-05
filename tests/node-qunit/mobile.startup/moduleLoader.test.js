@@ -37,7 +37,7 @@ QUnit.test( '#define', function ( assert ) {
 	const loader = this.loader;
 	loader.define( 'foo', 1 );
 	loader.define( 'bar', 5 );
-	assert.throws( function () {
+	assert.throws( () => {
 		loader.define( 'bar', 50 );
 	}, 'Cannot define two modules with the same name' );
 	assert.strictEqual( this.loader.require( 'bar' ), 5, 'Returns first definition of module.' );

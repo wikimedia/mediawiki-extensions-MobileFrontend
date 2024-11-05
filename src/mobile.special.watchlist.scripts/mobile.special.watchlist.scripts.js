@@ -4,6 +4,7 @@ const WatchList = require( './WatchList' ),
 
 /**
  * Initialises JavaScript on Special:Watchlist
+ *
  * @private
  */
 function init() {
@@ -24,6 +25,6 @@ function init() {
 	$watchlist.find( '.mw-mf-watchlist-more' ).remove();
 }
 
-$( function () {
+$( () => {
 	init();
 } );

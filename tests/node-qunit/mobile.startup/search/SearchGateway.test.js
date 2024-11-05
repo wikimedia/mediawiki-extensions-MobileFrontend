@@ -23,7 +23,7 @@ QUnit.module( 'MobileFrontend: SearchGateway',
 			SearchGateway = require( '../../../../src/mobile.startup/search/SearchGateway' );
 
 			sandbox.stub( mw.util, 'getUrl' ).returns( 'Title' );
-			sandbox.stub( mw.config, 'get' ).callsFake( function ( name ) {
+			sandbox.stub( mw.config, 'get' ).callsFake( ( name ) => {
 				switch ( name ) {
 					case 'wgMFDisplayWikibaseDescriptions': return { search: '' };
 					case 'wgMFSearchGenerator': return { prefix: '' };
@@ -31,41 +31,39 @@ QUnit.module( 'MobileFrontend: SearchGateway',
 			} );
 
 			this.gateway = new SearchGateway( new mw.Api() );
-			sandbox.stub( this.gateway.api, 'get' ).callsFake( function () {
-				return util.Deferred().resolve( {
-					warnings: {
-						query: {
-							'*': 'Formatting of continuation data will be changing soon. To continue using the current formatting, use the "rawcontinue" parameter. To begin using the new format, pass an empty string for "continue" in the initial query.'
-						}
-					},
+			sandbox.stub( this.gateway.api, 'get' ).callsFake( () => util.Deferred().resolve( {
+				warnings: {
 					query: {
-						pages: {
-							2: {
-								index: 1,
-								pageid: 2,
-								ns: 0,
-								title: 'Claude Monet',
-								thumbnail: {
-									source: 'http://127.0.0.1:8080/images/thumb/5/54/Claude_Monet%2C_Impression%2C_soleil_levant.jpg/80px-Claude_Monet%2C_Impression%2C_soleil_levant.jpg',
-									width: 80,
-									height: 62
-								}
-							},
-							60: {
-								index: 2,
-								pageid: 60,
-								ns: 0,
-								title: 'Barack Obama',
-								thumbnail: {
-									source: 'http://127.0.0.1:8080/images/thumb/8/8d/President_Barack_Obama.jpg/64px-President_Barack_Obama.jpg',
-									width: 64,
-									height: 80
-								}
+						'*': 'Formatting of continuation data will be changing soon. To continue using the current formatting, use the "rawcontinue" parameter. To begin using the new format, pass an empty string for "continue" in the initial query.'
+					}
+				},
+				query: {
+					pages: {
+						2: {
+							index: 1,
+							pageid: 2,
+							ns: 0,
+							title: 'Claude Monet',
+							thumbnail: {
+								source: 'http://127.0.0.1:8080/images/thumb/5/54/Claude_Monet%2C_Impression%2C_soleil_levant.jpg/80px-Claude_Monet%2C_Impression%2C_soleil_levant.jpg',
+								width: 80,
+								height: 62
+							}
+						},
+						60: {
+							index: 2,
+							pageid: 60,
+							ns: 0,
+							title: 'Barack Obama',
+							thumbnail: {
+								source: 'http://127.0.0.1:8080/images/thumb/8/8d/President_Barack_Obama.jpg/64px-President_Barack_Obama.jpg',
+								width: 64,
+								height: 80
 							}
 						}
 					}
-				} );
-			} );
+				}
+			} ) );
 		},
 
 		afterEach: function () {
@@ -74,7 +72,7 @@ QUnit.module( 'MobileFrontend: SearchGateway',
 			sandbox.restore();
 		}
 	},
-	function () {
+	() => {
 		QUnit.test( '._highlightSearchTerm', function ( assert ) {
 			const gateway = this.gateway;
 
@@ -95,13 +93,13 @@ QUnit.module( 'MobileFrontend: SearchGateway',
 				[ '<script>alert("FAIL")</script> should be safe',
 					'<script>alert("FAIL"', '<strong>&lt;script&gt;alert("FAIL"</strong>)&lt;/script&gt; should be safe' ]
 			];
-			data.forEach( function ( item, i ) {
+			data.forEach( ( item, i ) => {
 				assert.strictEqual( gateway._highlightSearchTerm( item[ 0 ], item[ 1 ] ), item[ 2 ], 'highlightSearchTerm test ' + i );
 			} );
 		} );
 
 		QUnit.test( 'show redirect targets', function ( assert ) {
-			return this.gateway.search( 'barack' ).then( function ( response ) {
+			return this.gateway.search( 'barack' ).then( ( response ) => {
 				assert.strictEqual( response.query, 'barack' );
 				assert.strictEqual( response.results.length, 2 );
 				assert.strictEqual( response.results[ 0 ].displayTitle, 'Claude Monet' );
@@ -143,9 +141,9 @@ QUnit.module( 'MobileFrontend: SearchGateway',
 			}
 		} );
 
-		QUnit.test( 'Wikidata Description in search results', function ( assert ) {
+		QUnit.test( 'Wikidata Description in search results', ( assert ) => {
 			const searchApi = new SearchGateway( new mw.Api() );
-			return searchApi.search( 'brad' ).then( function ( resp ) {
+			return searchApi.search( 'brad' ).then( ( resp ) => {
 				const results = resp.results;
 				assert.strictEqual(
 					results[0].wikidataDescription,

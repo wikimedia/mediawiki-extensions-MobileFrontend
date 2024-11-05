@@ -4,7 +4,7 @@ const cache = require( '../../../src/mobile.startup/cache' ),
 
 QUnit.module( 'MobileFrontend cache.js' );
 
-QUnit.test( 'cache set() and get()', function ( assert ) {
+QUnit.test( 'cache set() and get()', ( assert ) => {
 	memoryCache.set( 'key', 'value' );
 	assert.strictEqual( memoryCache.get( 'key' ), 'value' );
 } );

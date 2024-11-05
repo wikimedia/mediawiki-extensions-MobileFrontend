@@ -34,7 +34,7 @@ QUnit.module( 'MobileFrontend WatchList.js', {
 	}
 } );
 
-QUnit.test( 'In watched mode', function ( assert ) {
+QUnit.test( 'In watched mode', ( assert ) => {
 	const
 		stub = {
 			get: sandbox.stub()

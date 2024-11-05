@@ -241,10 +241,10 @@ QUnit.test( '#getStructuredLanguages variants', function ( assert ) {
 	const suggestedLanguages = util.getStructuredLanguages(
 		this.apiLanguages, this.apiVariants, {}, true, this.deviceLanguage
 	).suggested;
-	this.apiVariants.forEach( function ( variant ) {
+	this.apiVariants.forEach( ( variant ) => {
 		variantsMap[ variant.lang ] = variant;
 	} );
-	suggestedLanguages.forEach( function ( suggestedLanguage ) {
+	suggestedLanguages.forEach( ( suggestedLanguage ) => {
 		assert.true(
 			Object.prototype.hasOwnProperty.call( variantsMap, suggestedLanguage.lang ),
 			'Variant "' + suggestedLanguage.lang + '" is in the list of suggested languages.'

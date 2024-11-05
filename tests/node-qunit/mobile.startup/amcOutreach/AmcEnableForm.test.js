@@ -26,7 +26,7 @@ QUnit.module( 'MobileFrontend amcOutreach/AmcEnableForm.js', {
 	}
 } );
 
-QUnit.test( 'renders correctly', function ( assert ) {
+QUnit.test( 'renders correctly', ( assert ) => {
 	const subject = new AmcEnableForm( {
 		postUrl: 'https://foo.com',
 		fields: [

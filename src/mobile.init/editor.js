@@ -117,14 +117,14 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 	$editTab.add( '.edit-link' ).on( 'click.mfeditlink', function ( ev ) {
 		onEditLinkClick( this, ev, overlayManager.router );
 	} );
-	mw.hook( 'wikipage.content' ).add( function ( $content ) {
+	mw.hook( 'wikipage.content' ).add( ( $content ) => {
 		// make sure that any .edit-link links in here don't get double-handled
 		$content.find( EDITSECTION_SELECTOR ).off( 'click.mfeditlink' ).on( 'click.mfeditlink', function ( ev ) {
 			onEditLinkClick( this, ev, overlayManager.router );
 		} );
 	} );
 
-	overlayManager.add( editorPath, function ( sectionId ) {
+	overlayManager.add( editorPath, ( sectionId ) => {
 		const
 			scrollTop = window.pageYOffset,
 			$contentText = $( '#mw-content-text' ),
@@ -295,7 +295,7 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 			 */
 			mw.hook( 'mobileFrontend.editorOpening' ).fire();
 
-			return mw.loader.using( 'mobile.editor.overlay' ).then( function () {
+			return mw.loader.using( 'mobile.editor.overlay' ).then( () => {
 				const SourceEditorOverlay = M.require( 'mobile.editor.overlay/SourceEditorOverlay' );
 				return new SourceEditorOverlay( editorOptions );
 			} );
@@ -323,7 +323,7 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 			editorOptions.mode = mw.config.get( 'wgMFEnableVEWikitextEditor' ) && getPreferredEditor() === 'SourceEditor' ?
 				'source' :
 				'visual';
-			editorOptions.dataPromise = mw.loader.using( 'ext.visualEditor.targetLoader' ).then( function () {
+			editorOptions.dataPromise = mw.loader.using( 'ext.visualEditor.targetLoader' ).then( () => {
 				abortableDataPromise = mw.libs.ve.targetLoader.requestPageData(
 					editorOptions.mode,
 					editorOptions.titleObj.getPrefixedDb(),
@@ -343,10 +343,10 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 			} );
 
 			const visualLoadingPromise = mw.loader.using( 'ext.visualEditor.targetLoader' )
-				.then( function () {
+				.then(
 					// Load 'mobile.editor.overlay' separately, so that if we fall back to basic
 					// editor, we can display it without waiting for the visual code
-					return mw.loader.using( 'mobile.editor.overlay' ).then( function () {
+					() => mw.loader.using( 'mobile.editor.overlay' ).then( () => {
 						mw.libs.ve.targetLoader.addPlugin( 'ext.visualEditor.mobileArticleTarget' );
 						if ( mw.config.get( 'wgMFEnableVEWikitextEditor' ) ) {
 							// Target loader only loads wikitext editor if the desktop
@@ -356,8 +356,8 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 							mw.libs.ve.targetLoader.addPlugin( 'ext.visualEditor.mwwikitext' );
 						}
 						return mw.libs.ve.targetLoader.loadModules( editorOptions.mode );
-					} );
-				} );
+					} )
+				);
 
 			// Continue when loading is completed or aborted
 			const visualPromise = $.Deferred();
@@ -365,14 +365,12 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 			visualAbortPromise.then( visualPromise.reject, visualPromise.reject );
 
 			return visualPromise
-				.then( function () {
+				.then( () => {
 					const VisualEditorOverlay = M.require( 'mobile.editor.overlay/VisualEditorOverlay' ),
 						SourceEditorOverlay = M.require( 'mobile.editor.overlay/SourceEditorOverlay' );
 					editorOptions.SourceEditorOverlay = SourceEditorOverlay;
 					return new VisualEditorOverlay( editorOptions );
-				}, function () {
-					return loadSourceEditor();
-				} );
+				}, () => loadSourceEditor() );
 		}
 
 		// showLoading() has to run after the overlay has opened, which disables page scrolling.
@@ -389,17 +387,17 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 		}
 
 		// Wait for the scroll animation to finish before we show the editor overlay
-		util.Promise.all( [ overlayPromise, animationDelayDeferred ] ).then( function ( overlay ) {
+		util.Promise.all( [ overlayPromise, animationDelayDeferred ] ).then( ( overlay ) => {
 			// Wait for the data to load before we show the editor overlay
-			overlay.getLoadingPromise().catch( function ( error ) {
+			overlay.getLoadingPromise().catch( ( error ) => {
 				if ( visualAbortPromise.state() === 'rejected' ) {
-					return loadSourceEditor().then( function ( sourceOverlay ) {
+					return loadSourceEditor().then( ( sourceOverlay ) => {
 						overlay = sourceOverlay;
 						return overlay.getLoadingPromise();
 					} );
 				}
 				return $.Deferred().reject( error ).promise();
-			} ).then( function () {
+			} ).then( () => {
 				// Make sure the user did not close the loading overlay while we were waiting
 				const overlayData = overlayManager.stack[0];
 				if ( !overlayData || overlayData.overlay !== loadingOverlay ) {
@@ -407,7 +405,7 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 				}
 				// Show the editor!
 				overlayManager.replaceCurrent( overlay );
-			}, function ( error, apiResponse ) {
+			}, ( error, apiResponse ) => {
 				// Could not load the editor.
 				overlayManager.router.back();
 				if ( error.show ) {
@@ -428,7 +426,7 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 		return loadingOverlay;
 	} );
 
-	$( '#ca-edit a, a#ca-edit, #ca-editsource a, a#ca-editsource' ).prop( 'href', function ( i, href ) {
+	$( '#ca-edit a, a#ca-edit, #ca-editsource a, a#ca-editsource' ).prop( 'href', ( i, href ) => {
 		const editUrl = new URL( href, location.href );
 		// By default the editor opens section 0 (lead section), rather than the whole article.
 		// This might be changed in the future (T210659).
@@ -461,7 +459,7 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 			url.searchParams.delete( 'section' );
 			history.replaceState( null, document.title, url );
 		}
-		util.docReady( function () {
+		util.docReady( () => {
 			router.navigate( fragment );
 		} );
 	}
@@ -500,17 +498,17 @@ function bindEditLinksLoginDrawer( router ) {
 		}
 		drawer.show();
 	}
-	$editTab.on( 'click', function ( ev ) {
+	$editTab.on( 'click', ( ev ) => {
 		showLoginDrawer();
 		ev.preventDefault();
 	} );
-	mw.hook( 'wikipage.content' ).add( function ( $content ) {
-		$content.find( EDITSECTION_SELECTOR ).on( 'click', function ( ev ) {
+	mw.hook( 'wikipage.content' ).add( ( $content ) => {
+		$content.find( EDITSECTION_SELECTOR ).on( 'click', ( ev ) => {
 			showLoginDrawer();
 			ev.preventDefault();
 		} );
 	} );
-	router.addRoute( editorPath, function () {
+	router.addRoute( editorPath, () => {
 		showLoginDrawer();
 	} );
 	router.checkRoute();
@@ -559,17 +557,17 @@ function init( currentPage, currentPageHTMLParser, skin, router ) {
  * @param {Router} router
  */
 function bindEditLinksSorryToast( msg, router ) {
-	$editTab.on( 'click', function ( ev ) {
+	$editTab.on( 'click', ( ev ) => {
 		mw.notify( msg );
 		ev.preventDefault();
 	} );
-	mw.hook( 'wikipage.content' ).add( function ( $content ) {
-		$content.find( EDITSECTION_SELECTOR ).on( 'click', function ( ev ) {
+	mw.hook( 'wikipage.content' ).add( ( $content ) => {
+		$content.find( EDITSECTION_SELECTOR ).on( 'click', ( ev ) => {
 			mw.notify( msg );
 			ev.preventDefault();
 		} );
 	} );
-	router.addRoute( editorPath, function () {
+	router.addRoute( editorPath, () => {
 		mw.notify( msg );
 	} );
 	router.checkRoute();

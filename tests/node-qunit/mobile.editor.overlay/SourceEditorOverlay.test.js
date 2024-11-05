@@ -77,7 +77,7 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/SourceEditorOverlay', {
 	}
 } );
 
-QUnit.test( '#initialize, blocked user', function ( assert ) {
+QUnit.test( '#initialize, blocked user', ( assert ) => {
 	const dBlockedContent = util.Deferred().resolve( {
 			text: 'section 0',
 			blockinfo: {
@@ -98,7 +98,7 @@ QUnit.test( '#initialize, blocked user', function ( assert ) {
 
 	new SourceEditorOverlay( {
 		title: 'test.css'
-	}, dBlockedContent ).getLoadingPromise().then( () => {}, function () {
+	}, dBlockedContent ).getLoadingPromise().then( () => {}, () => {
 		done();
 		assert.true(
 			messageStub.calledWithMatch( {
@@ -116,7 +116,7 @@ QUnit.test( '#initialize, blocked user', function ( assert ) {
 	} );
 } );
 
-QUnit.test( '#initialize, with given page and section', function ( assert ) {
+QUnit.test( '#initialize, with given page and section', ( assert ) => {
 	const editorOverlay = new SourceEditorOverlay( {
 		title: 'test',
 		sectionId: '0'
@@ -128,24 +128,24 @@ QUnit.test( '#initialize, with given page and section', function ( assert ) {
 	assert.strictEqual( editorOverlay.gateway.oldId, undefined );
 	assert.strictEqual( editorOverlay.gateway.sectionId, '0' );
 
-	return editorOverlay.getLoadingPromise().then( function () {
+	return editorOverlay.getLoadingPromise().then( () => {
 		assert.strictEqual( editorOverlay.$content.val(), 'section 0', 'load correct section' );
 	} );
 } );
 
-QUnit.test( '#initialize, without a section', function ( assert ) {
+QUnit.test( '#initialize, without a section', ( assert ) => {
 	const editorOverlay = new SourceEditorOverlay( {
 		title: 'test.css'
 	} );
 
-	return getContentStub().then( function () {
+	return getContentStub().then( () => {
 		assert.strictEqual( editorOverlay.gateway.title, 'test.css' );
 		assert.strictEqual( editorOverlay.gateway.oldId, undefined );
 		assert.strictEqual( editorOverlay.gateway.sectionId, undefined );
 	} );
 } );
 
-QUnit.test( '#preview', function ( assert ) {
+QUnit.test( '#preview', ( assert ) => {
 	const editorOverlay = new SourceEditorOverlay( {
 		title: 'test',
 		sectionId: '0'
@@ -153,18 +153,18 @@ QUnit.test( '#preview', function ( assert ) {
 
 	editorOverlay.onStageChanges();
 
-	return previewResolve.then( function () {
+	return previewResolve.then( () => {
 		assert.strictEqual( editorOverlay.$preview.text(), '\n\npreviewtest', 'preview loaded correctly' );
 	} );
 } );
 
-QUnit.test( '#initialize, as anonymous', function ( assert ) {
+QUnit.test( '#initialize, as anonymous', ( assert ) => {
 	const editorOverlay = new SourceEditorOverlay( {
 		title: 'Main_page',
 		isAnon: true
 	} );
 
-	return editorOverlay.getLoadingPromise().then( function () {
+	return editorOverlay.getLoadingPromise().then( () => {
 		assert.true( editorOverlay.$anonWarning.length > 0, 'Editorwarning (IP will be saved) visible.' );
 		assert.true( editorOverlay.$el.find( '.anonymous' ).length > 0, 'Continue login has a second class.' );
 	} );

@@ -5,7 +5,7 @@
  */
 module.exports = function setPreferredEditor( editor ) {
 	if ( mw.user.isNamed() ) {
-		new mw.Api().saveOption( 'mobile-editor', editor ).then( function () {
+		new mw.Api().saveOption( 'mobile-editor', editor ).then( () => {
 			mw.user.options.set( 'mobile-editor', editor );
 		} );
 	} else {

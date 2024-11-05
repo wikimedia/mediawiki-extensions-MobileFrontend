@@ -83,15 +83,15 @@ function VisualEditorOverlay( options ) {
 		// If source is passed in without being in modes, it'll just fall back to visual
 		defaultMode: this.options.mode === 'source' ? 'source' : 'visual'
 	} );
-	this.target.once( 'surfaceReady', function () {
+	this.target.once( 'surfaceReady', () => {
 		surfaceReady.resolve();
 
-		this.target.getSurface().getModel().getDocument().once( 'transact', function () {
+		this.target.getSurface().getModel().getDocument().once( 'transact', () => {
 			this.log( { action: 'firstChange' } );
-		}.bind( this ) );
-	}.bind( this ) );
+		} );
+	} );
 	let firstLoad = true;
-	this.target.on( 'surfaceReady', function () {
+	this.target.on( 'surfaceReady', () => {
 		setPreferredEditor( this.target.getDefaultMode() === 'source' ? 'SourceEditor' : 'VisualEditor' );
 		// On first surfaceReady we wait for any dialogs to be closed before running targetInit.
 		// On subsequent surfaceReady's (i.e. edit mode switch) we can initialize immediately.
@@ -99,21 +99,21 @@ function VisualEditorOverlay( options ) {
 			this.targetInit();
 		}
 		firstLoad = false;
-	}.bind( this ) );
+	} );
 
 	this.target.load( this.origDataPromise );
 
 	// Overlay is only shown after this is resolved. It must be resolved
 	// with the API response regardless of what we are waiting for.
-	this.dataPromise = this.origDataPromise.then( function ( data ) {
+	this.dataPromise = this.origDataPromise.then( ( data ) => {
 		this.gateway.wouldautocreate =
 			data && data.visualeditor && data.visualeditor.wouldautocreate;
 
-		return surfaceReady.then( function () {
+		return surfaceReady.then( () => {
 			this.$el.removeClass( 'editor-overlay-ve-initializing' );
 			return data && data.visualeditor;
-		}.bind( this ) );
-	}.bind( this ) );
+		} );
+	} );
 }
 
 mfExtend( VisualEditorOverlay, EditorOverlayBase, {
@@ -179,6 +179,7 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 	},
 	/**
 	 * Initialize the target after it has been made visible
+	 *
 	 * @memberof VisualEditorOverlay
 	 */
 	targetInit: function () {
@@ -196,6 +197,7 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 	 * Their normal position is different because of (most importantly) the lead paragraph
 	 * transformation to move it before the infobox, and also invisible templates and slugs
 	 * caused by the presence of hatnote templates (both only shown in edit mode).
+	 *
 	 * @memberof VisualEditorOverlay
 	 */
 	scrollToLeadParagraph: function () {
@@ -239,7 +241,7 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 	 */
 	onBeforeExit: function ( exit, cancel ) {
 		const overlay = this;
-		EditorOverlayBase.prototype.onBeforeExit.call( this, function () {
+		EditorOverlayBase.prototype.onBeforeExit.call( this, () => {
 			// If this function is called, the parent method has decided that we should exit
 			exit();
 			// VE-specific cleanup
@@ -315,7 +317,7 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 			} );
 		}
 		const newOverlay = new SourceEditorOverlay( options, dataPromise );
-		newOverlay.getLoadingPromise().then( function () {
+		newOverlay.getLoadingPromise().then( () => {
 			self.switching = true;
 			self.overlayManager.replaceCurrent( newOverlay );
 			self.switching = false;

@@ -50,7 +50,7 @@ WatchListGateway.prototype = {
 		if ( this.canContinue === false ) {
 			return util.Deferred().resolve( [] );
 		}
-		return this.api.get( params ).then( function ( data ) {
+		return this.api.get( params ).then( ( data ) => {
 			if ( data.continue !== undefined ) {
 				self.continueParams = data.continue;
 			} else {
@@ -78,9 +78,7 @@ WatchListGateway.prototype = {
 
 		// Sort results alphabetically (the api map doesn't have any order). The
 		// watchlist is ordered alphabetically right now.
-		pages.sort( function ( p1, p2 ) {
-			return p1.title === p2.title ? 0 : ( p1.title < p2.title ? -1 : 1 );
-		} );
+		pages.sort( ( p1, p2 ) => p1.title === p2.title ? 0 : ( p1.title < p2.title ? -1 : 1 ) );
 
 		// If we requested from the last item of the previous page, we shall
 		// remove the first result (to avoid it being repeated)

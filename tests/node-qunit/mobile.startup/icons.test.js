@@ -24,7 +24,7 @@ QUnit.module( 'MobileFrontend icons.js', {
 	}
 } );
 
-QUnit.test( '#cancel()', function ( assert ) {
+QUnit.test( '#cancel()', ( assert ) => {
 	icons.cancel();
 	assert.propEqual( spy.getCall( 0 ).args[ 0 ], {
 		tagName: 'button',
@@ -35,7 +35,7 @@ QUnit.test( '#cancel()', function ( assert ) {
 	}, 'Options are passed down' );
 } );
 
-QUnit.test( '#cancel(variant)', function ( assert ) {
+QUnit.test( '#cancel(variant)', ( assert ) => {
 	icons.cancel( 'gray' );
 	assert.propEqual( spy.getCall( 0 ).args[ 0 ], {
 		tagName: 'button',
@@ -46,7 +46,7 @@ QUnit.test( '#cancel(variant)', function ( assert ) {
 	}, 'Options are passed down' );
 } );
 
-QUnit.test( '#cancel(, props)', function ( assert ) {
+QUnit.test( '#cancel(, props)', ( assert ) => {
 	icons.cancel( '', { additionalClassNames: 'test' } );
 	assert.propEqual( spy.getCall( 0 ).args[ 0 ], {
 		tagName: 'button',
@@ -57,7 +57,7 @@ QUnit.test( '#cancel(, props)', function ( assert ) {
 	}, 'Options are passed down' );
 } );
 
-QUnit.test( '#spinner(props)', function ( assert ) {
+QUnit.test( '#spinner(props)', ( assert ) => {
 	icons.spinner( {
 		foo: 'will be passed down',
 		additionalClassNames: 'will-not-be-ignored'
@@ -71,7 +71,7 @@ QUnit.test( '#spinner(props)', function ( assert ) {
 	}, 'Options are passed down' );
 } );
 
-QUnit.test( '#spinner()', function ( assert ) {
+QUnit.test( '#spinner()', ( assert ) => {
 	icons.spinner( {
 		foo: 'will be passed down'
 	} );

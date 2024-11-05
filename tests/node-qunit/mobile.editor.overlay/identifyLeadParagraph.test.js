@@ -122,7 +122,7 @@ function provideCases() {
 	];
 }
 
-QUnit.test( 'identifyLeadParagraph', function ( assert ) {
+QUnit.test( 'identifyLeadParagraph', ( assert ) => {
 	const cases = provideCases();
 
 	for ( let i = 0; i < cases.length; i++ ) {
