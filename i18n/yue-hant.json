@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"H78c67c",
+			"SCP-2000",
 			"Winston Sung",
 			"Yueman"
 		]
@@ -10,6 +11,7 @@
 	"mobile-frontend-clear-search": "清除",
 	"mobile-frontend-copyright": "除非另外講明，響呢版度嘅內容係根據$1嘅條款發佈。",
 	"mobile-frontend-editor-anon": "唔登入就改",
+	"mobile-frontend-editor-autocreatewarning": "<strong>警告：</strong>你冇登入到。當你一作出修改，系統會開個臨時戶口畀你。[[$1|知多啲]]。想喺呢個戶口過期之後繼續收到通知，並解鎖更多功能嘅話，請<strong>登入</strong>或<strong>開返個戶口</strong>。",
 	"mobile-frontend-editor-blocked-drawer-action-login": "簽到",
 	"mobile-frontend-drawer-arrow-label": "閂",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "得",
