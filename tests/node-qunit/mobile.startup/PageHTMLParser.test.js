@@ -304,7 +304,10 @@ QUnit.test( '#getLanguages', ( assert ) => {
 		<section>
 			<ul class="minerva-languages">
 				<li class="interlanguage-link interwiki-fr mw-list-item">
-					<a href="https://fr.wikipedia.org/wiki/Tyrannosaurus" title="Tyrannosaurus – French"
+					<a href="https://fr.wikipedia.org/wiki/Tyrannosaurus"
+						data-title="Tyrannosaurus"
+						data-language-local-name="French"
+						title="Tyrannosaurus – French"
 						lang="fr" hreflang="fr" class="interlanguage-link-target"><span>Français</span></a>
 				</li>
 			</ul>
@@ -328,7 +331,9 @@ QUnit.test( '#getLanguages (no hyphen)', ( assert ) => {
 		<section>
 			<ul class="minerva-languages">
 				<li class="interlanguage-link interwiki-fr mw-list-item">
-					<a href="https://fr.wikipedia.org/wiki/Tyrannosaurus" title="Tyrannosaurus"
+					<a href="https://fr.wikipedia.org/wiki/Tyrannosaurus"
+						data-title="Tyrannosaurus"
+						title="Tyrannosaurus"
 						lang="fr" hreflang="fr" class="interlanguage-link-target"><span>Français</span></a>
 				</li>
 			</ul>
@@ -361,7 +366,11 @@ QUnit.test( '#getLanguages (T349000)', ( assert ) => {
 			  <li class="interlanguage-link "><a href="https://da.wikipedia.org/wiki/Mission:_Impossible_%E2%80%93_Dead_Reckoning_Part_One" title="Mission: Impossible – Dead Reckoning Part One – Danish" lang="da" hreflang="da" class="interlanguage-link-target"><span>Dansk</span></a></li>
 			  <li class="interlanguage-link "><a href="https://de.wikipedia.org/wiki/Mission:_Impossible_%E2%80%93_Dead_Reckoning_Teil_Eins" title="Mission: Impossible – Dead Reckoning Teil Eins – German" lang="de" hreflang="de" class="interlanguage-link-target"><span>Deutsch</span></a></li>
 			  <li class="interlanguage-link "><a href="https://el.wikipedia.org/wiki/%CE%95%CF%80%CE%B9%CE%BA%CE%AF%CE%BD%CE%B4%CF%85%CE%BD%CE%B7_%CE%91%CF%80%CE%BF%CF%83%CF%84%CE%BF%CE%BB%CE%AE:_%CE%98%CE%B1%CE%BD%CE%AC%CF%83%CE%B9%CE%BC%CE%B7_%CE%95%CE%BA%CE%B4%CE%AF%CE%BA%CE%B7%CF%83%CE%B7_%E2%80%93_%CE%9C%CE%AD%CF%81%CE%BF%CF%82_%CE%A0%CF%81%CF%8E%CF%84%CE%BF" title="Επικίνδυνη Αποστολή: Θανάσιμη Εκδίκηση – Μέρος Πρώτο – Greek" lang="el" hreflang="el" class="interlanguage-link-target"><span>Ελληνικά</span></a></li>
-			  <li class="interlanguage-link "><a href="https://en.wikipedia.org/wiki/Mission:_Impossible_%E2%80%93_Dead_Reckoning_Part_One" title="Mission: Impossible – Dead Reckoning Part One – English" lang="en" hreflang="en" class="interlanguage-link-target"><span>English</span></a></li>
+			  <li class="interlanguage-link "><a href="https://en.wikipedia.org/wiki/Mission:_Impossible_%E2%80%93_Dead_Reckoning_Part_One"
+			  	data-title="Mission: Impossible – Dead Reckoning Part One"
+				title="Mission: Impossible – Dead Reckoning Part One – English"
+				lang="en" hreflang="en"
+				class="interlanguage-link-target"><span>English</span></a></li>
 			  <li class="interlanguage-link "><a href="https://es.wikipedia.org/wiki/Misi%C3%B3n_imposible:_sentencia_mortal_-_Parte_1" title="Misión imposible: sentencia mortal - Parte 1 – Spanish" lang="es" hreflang="es" class="interlanguage-link-target"><span>Español</span></a></li>
 			  <li class="interlanguage-link "><a href="https://fa.wikipedia.org/wiki/%D9%85%D8%A3%D9%85%D9%88%D8%B1%DB%8C%D8%AA:_%D8%BA%DB%8C%D8%B1%D9%85%D9%85%DA%A9%D9%86_%E2%80%93_%D8%B1%D9%88%D8%B2%D8%B4%D9%85%D8%A7%D8%B1_%D9%85%D8%B1%DA%AF_%D9%82%D8%B3%D9%85%D8%AA_%D8%A7%D9%88%D9%84" title="مأموریت: غیرممکن – روزشمار مرگ قسمت اول – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target"><span>فارسی</span></a></li>
 			  <li class="interlanguage-link "><a href="https://fi.wikipedia.org/wiki/Mission:_Impossible_%E2%80%93_Dead_Reckoning_Part_One" title="Mission: Impossible – Dead Reckoning Part One – Finnish" lang="fi" hreflang="fi" class="interlanguage-link-target"><span>Suomi</span></a></li>
@@ -403,6 +412,7 @@ QUnit.test( '#getLanguages (T349000)', ( assert ) => {
 	assert.strictEqual( langs.variants.length, 0, 'Expected variants' );
 	assert.strictEqual(
 		langs.languages.filter( ( lang ) => lang.lang === 'en' )[ 0 ].title,
-		'Mission: Impossible – Dead Reckoning Part One', 'Check the English title'
+		'Mission: Impossible – Dead Reckoning Part One',
+		'Check the English title'
 	);
 } );

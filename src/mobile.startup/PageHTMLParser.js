@@ -250,21 +250,13 @@ class PageHTMLParser {
 	 */
 	getLanguages( pageTitle ) {
 		const mapLinkToLanguageObj = ( node ) => {
-			const DELIMITER = ' – ';
 			// Name of language (e.g. עברית for Hebrew)
 			const autonym = node.textContent;
 			// The name of the language in the current language
 			// e.g. for english this would be Hebrew
-			let langname;
-			let title = node.getAttribute( 'title' ) || pageTitle;
-			if ( title.indexOf( DELIMITER ) > -1 ) {
-				title = title.split( DELIMITER );
-				langname = title.pop();
-				title = title.join( DELIMITER );
-			}
-			if ( !langname ) {
-				langname = autonym;
-			}
+			const langname = node.getAttribute( 'data-language-local-name' ) || autonym;
+			const title = node.getAttribute( 'data-title' ) || pageTitle;
+
 			return {
 				lang: node.getAttribute( 'hreflang' ),
 				autonym,
