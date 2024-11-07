@@ -14,6 +14,12 @@
 		}
 	}
 
+	// Interim toggling support, see mfTempOpenSection() in MakeSectionsTransform
+	// (duplicate class to provide higher specificity than the previous rule)
+	.collapsible-block.open-block.open-block {
+		display: block;
+	}
+
 	@{selector-parsoid-top-heading}:not( .mf-collapsible-heading ) {
 		padding-left: 22px;
 	}
