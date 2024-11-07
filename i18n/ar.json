@@ -41,7 +41,7 @@
 			"مشعل الحربي"
 		]
 	},
-	"abusefilter-edit-builder-vars-user-mobile": "سواء كان المستخدم يعدّ عبر واجهة الهاتف المحمول ($1)",
+	"abusefilter-edit-builder-vars-user-mobile": "سواء كان المستخدم يعدل عبر واجهة الهاتف المحمول ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "أدخل رمز التأكيد",
 	"mobile-frontend-changeslist-nocomment": "لا يوجد ملخص تحرير",
 	"mobile-frontend-clear-search": "إفراغ",
