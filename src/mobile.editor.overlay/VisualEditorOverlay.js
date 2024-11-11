@@ -3,7 +3,6 @@ const EditorOverlayBase = require( './EditorOverlayBase' ),
 	EditorGateway = require( './EditorGateway' ),
 	fakeToolbar = require( '../mobile.init/fakeToolbar' ),
 	mfExtend = require( '../mobile.startup/mfExtend' ),
-	router = __non_webpack_require__( 'mediawiki.router' ),
 	identifyLeadParagraph = require( './identifyLeadParagraph' ),
 	setPreferredEditor = require( './setPreferredEditor' ),
 	util = require( '../mobile.startup/util' ),
@@ -311,10 +310,7 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 			// If switching with edits we can't stay in section editing, as a VE edit
 			// can always affect the whole document (e.g. references)
 			options.sectionId = null;
-			router.navigateTo( document.title, {
-				path: '#/editor/all',
-				useReplaceState: true
-			} );
+			history.replaceState( null, document.title, '#/editor/all' );
 		}
 		const newOverlay = new SourceEditorOverlay( options, dataPromise );
 		newOverlay.getLoadingPromise().then( () => {
