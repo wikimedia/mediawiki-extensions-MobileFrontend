@@ -234,21 +234,18 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 * @param {boolean} [tempUserCreated] Whether a temporary user was created
 	 */
 	onSaveComplete: function ( newRevId, redirectUrl, tempUserCreated ) {
-		const
-			self = this;
-
 		this.saved = true;
 
 		if ( newRevId ) {
 			let action;
-			if ( self.isNewPage ) {
+			if ( this.isNewPage ) {
 				action = 'created';
-			} else if ( self.options.oldId ) {
+			} else if ( this.options.oldId ) {
 				action = 'restored';
 			} else {
 				action = 'saved';
 			}
-			self.showSaveCompleteMsg( action, tempUserCreated );
+			this.showSaveCompleteMsg( action, tempUserCreated );
 		}
 
 		// Ensure we don't lose this event when logging
@@ -267,10 +264,10 @@ mfExtend( EditorOverlayBase, Overlay, {
 			if ( redirectUrl ) {
 				// eslint-disable-next-line no-restricted-properties
 				window.location.href = redirectUrl;
-			} else if ( self.sectionId ) {
+			} else if ( this.sectionId ) {
 				// Ideally we'd want to do this via replaceState (see T189173)
 				// eslint-disable-next-line no-restricted-properties
-				window.location.hash = '#' + self.sectionId;
+				window.location.hash = '#' + this.sectionId;
 			} else {
 				// Cancel the hash fragment
 				// otherwise clicking back after a save will take you back to the editor.
@@ -448,10 +445,9 @@ mfExtend( EditorOverlayBase, Overlay, {
 		this.showHidden( '.initial-header' );
 	},
 	show: function () {
-		const self = this;
 		this.allowCloseWindow = mw.confirmCloseWindow( {
 			// Returns true if content has changed
-			test: () => self.hasChanged(),
+			test: () => this.hasChanged(),
 
 			// Message to show the user, if content has changed
 			message: mw.msg( 'mobile-frontend-editor-cancel-confirm' ),
@@ -510,7 +506,6 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 * @param {Function} cancel Callback to cancel exiting the overlay
 	 */
 	onBeforeExit: function ( exit, cancel ) {
-		const self = this;
 		if ( this.hasChanged() && !this.switching ) {
 			if ( !this.windowManager ) {
 				this.windowManager = OO.ui.getWindowManager();
@@ -520,12 +515,12 @@ mfExtend( EditorOverlayBase, Overlay, {
 				.closed.then( ( data ) => {
 					if ( data && data.action === 'discard' ) {
 						// log abandonment
-						self.log( {
+						this.log( {
 							action: 'abort',
 							mechanism: 'cancel',
 							type: 'abandon'
 						} );
-						self.onExit();
+						this.onExit();
 						exit();
 					}
 				} );
@@ -710,7 +705,6 @@ mfExtend( EditorOverlayBase, Overlay, {
 		} );
 	},
 	showEditNotices: function () {
-		const overlay = this;
 		if ( mw.config.get( 'wgMFEditNoticesFeatureConflict' ) ) {
 			return;
 		}
@@ -750,7 +744,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 						} );
 						OO.ui.alert( $container );
 
-						overlay.logFeatureUse( {
+						this.logFeatureUse( {
 							feature: 'notices',
 							action: 'show'
 						} );
@@ -767,14 +761,13 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 * @param {Object} details Details returned from the api.
 	 */
 	handleCaptcha: function ( details ) {
-		const self = this,
-			$input = this.$el.find( '.captcha-word' );
+		const $input = this.$el.find( '.captcha-word' );
 
 		if ( this.captchaShown ) {
 			$input.val( '' );
 			$input.attr( 'placeholder', this.options.captchaTryAgainMsg );
 			setTimeout( () => {
-				$input.attr( 'placeholder', self.options.captchaMsg );
+				$input.attr( 'placeholder', this.options.captchaMsg );
 			}, 2000 );
 		}
 

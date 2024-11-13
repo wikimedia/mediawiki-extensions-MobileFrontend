@@ -63,9 +63,8 @@ function LanguageSearcher( props ) {
 	if ( !onOpen ) {
 		return;
 	}
-	const searcher = this;
 	setTimeout( () => {
-		onOpen( searcher );
+		onOpen( this );
 	}, 0 );
 }
 

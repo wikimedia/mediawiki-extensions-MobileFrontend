@@ -426,9 +426,7 @@ QUnit.test( 'prevent route change', function ( assert ) {
 } );
 
 QUnit.test( 'stack increases and decreases at right times', function ( assert ) {
-	const self = this;
-
-	overlayManager.add( /^test\/(\d+)$/, () => self.createFakeOverlay() );
+	overlayManager.add( /^test\/(\d+)$/, () => this.createFakeOverlay() );
 	fakeRouter.emit( 'route', {
 		path: 'test/0'
 	} );
@@ -449,9 +447,7 @@ QUnit.test( 'stack increases and decreases at right times', function ( assert ) 
 } );
 
 QUnit.test( 'replace overlay when route event path is equal to current path', function ( assert ) {
-	const self = this;
-
-	overlayManager.add( /^test\/(\d+)$/, () => self.createFakeOverlay() );
+	overlayManager.add( /^test\/(\d+)$/, () => this.createFakeOverlay() );
 	fakeRouter.emit( 'route', {
 		path: 'test/0'
 	} );

@@ -69,12 +69,10 @@ EditorGateway.prototype = {
 	getContent: function () {
 		let options;
 
-		const self = this;
-
 		const resolve = () => util.Deferred().resolve( {
-			text: self.content || '',
-			blockinfo: self.blockinfo,
-			notices: self.notices
+			text: this.content || '',
+			blockinfo: this.blockinfo,
+			notices: this.notices
 		} );
 
 		if ( this.content !== undefined ) {
@@ -84,10 +82,10 @@ EditorGateway.prototype = {
 				prop: [ 'revisions', 'info' ],
 				rvprop: [ 'content', 'timestamp' ],
 				inprop: [ 'preloadcontent', 'editintro' ],
-				inpreloadcustom: self.preload,
-				inpreloadparams: self.preloadparams,
-				ineditintrocustom: self.editintro,
-				titles: self.title,
+				inpreloadcustom: this.preload,
+				inpreloadparams: this.preloadparams,
+				ineditintrocustom: this.editintro,
+				titles: this.title,
 				// get block information for this user
 				intestactions: 'edit',
 				// …and test whether this edit will auto-create an account
@@ -111,22 +109,22 @@ EditorGateway.prototype = {
 				// page might not exist and caller might not have known.
 				if ( pageObj.missing !== undefined ) {
 					if ( pageObj.preloadcontent ) {
-						self.content = pageObj.preloadcontent.content;
-						self.hasChanged = !pageObj.preloadisdefault;
+						this.content = pageObj.preloadcontent.content;
+						this.hasChanged = !pageObj.preloadisdefault;
 					} else {
-						self.content = '';
+						this.content = '';
 					}
 				} else {
 					const revision = pageObj.revisions[0];
-					self.content = revision.content;
-					self.timestamp = revision.timestamp;
+					this.content = revision.content;
+					this.timestamp = revision.timestamp;
 				}
 
 				// save content a second time to be able to check for changes
-				self.originalContent = self.content;
-				self.blockinfo = self.getBlockInfo( pageObj );
-				self.wouldautocreate = pageObj.wouldautocreate && pageObj.wouldautocreate.edit;
-				self.notices = pageObj.editintro;
+				this.originalContent = this.content;
+				this.blockinfo = this.getBlockInfo( pageObj );
+				this.wouldautocreate = pageObj.wouldautocreate && pageObj.wouldautocreate.edit;
+				this.notices = pageObj.editintro;
 
 				return resolve();
 			} );
@@ -166,8 +164,7 @@ EditorGateway.prototype = {
 	 * of error, `details` can be any object (usually error message).
 	 */
 	save: function ( options ) {
-		const self = this,
-			result = util.Deferred();
+		const result = util.Deferred();
 
 		options = options || {};
 
@@ -183,20 +180,20 @@ EditorGateway.prototype = {
 				errorlang: mw.config.get( 'wgUserLanguage' ),
 				errorsuselocal: 1,
 				formatversion: 2,
-				title: self.title,
+				title: this.title,
 				summary: options.summary,
 				captchaid: options.captchaId,
 				captchaword: options.captchaWord,
-				basetimestamp: self.timestamp,
-				starttimestamp: self.timestamp
+				basetimestamp: this.timestamp,
+				starttimestamp: this.timestamp
 			};
 
-			if ( self.content !== undefined ) {
-				apiOptions.text = self.content;
+			if ( this.content !== undefined ) {
+				apiOptions.text = this.content;
 			}
 
-			if ( self.sectionId ) {
-				apiOptions.section = self.sectionId;
+			if ( this.sectionId ) {
+				apiOptions.section = this.sectionId;
 			}
 
 			// TODO: When `wouldautocreate` is true, we should also set up:
@@ -205,9 +202,9 @@ EditorGateway.prototype = {
 			// - apiOptions.returntoquery to be 'redirect=no' if we're saving a redirect
 			//   (but we have can't figure that out, unless we parse the wikitext)
 
-			self.api.postWithToken( 'csrf', apiOptions ).then( ( data ) => {
+			this.api.postWithToken( 'csrf', apiOptions ).then( ( data ) => {
 				if ( data && data.edit && data.edit.result === 'Success' ) {
-					self.hasChanged = false;
+					this.hasChanged = false;
 					result.resolve( data.edit.newrevid, data.edit.tempusercreatedredirect,
 						data.edit.tempusercreated );
 				} else {
@@ -247,8 +244,6 @@ EditorGateway.prototype = {
 			sectionLine = '',
 			sectionId = '';
 
-		const self = this;
-
 		util.extend( options, {
 			action: 'parse',
 			// Enable section preview mode to avoid errors (T51218)
@@ -270,14 +265,14 @@ EditorGateway.prototype = {
 		// user-related magic words display the temp user instead of IP user in the
 		// preview. (T331397)
 		const promise = mw.user.acquireTempUserName().then( () => {
-			self._pending = self.api.post( options );
-			return self._pending;
+			this._pending = this.api.post( options );
+			return this._pending;
 		} );
 
 		return promise.then( ( resp ) => {
 			if ( resp && resp.parse && resp.parse.text ) {
 				// When editing section 0 or the whole page, there is no section name, so skip
-				if ( self.sectionId && self.sectionId !== '0' &&
+				if ( this.sectionId && this.sectionId !== '0' &&
 					resp.parse.sections !== undefined &&
 					resp.parse.sections[0] !== undefined
 				) {
@@ -298,7 +293,7 @@ EditorGateway.prototype = {
 			}
 		} ).promise( {
 			abort: () => {
-				self._pending.abort();
+				this._pending.abort();
 			}
 		} );
 	}

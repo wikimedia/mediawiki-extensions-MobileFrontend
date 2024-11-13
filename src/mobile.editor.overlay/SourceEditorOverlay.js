@@ -118,8 +118,6 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 	 * @instance
 	 */
 	postRender: function () {
-		const self = this;
-
 		// log edit attempt
 		this.log( { action: 'ready' } );
 		this.log( { action: 'loaded' } );
@@ -137,11 +135,11 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 
 				switchToolbar.on( 'switchEditor', ( mode ) => {
 					if ( mode === 'visual' ) {
-						if ( !self.gateway.hasChanged ) {
-							self._switchToVisualEditor();
+						if ( !this.gateway.hasChanged ) {
+							this._switchToVisualEditor();
 						} else {
 							// Pass wikitext if there are changes.
-							self._switchToVisualEditor( self.gateway.content );
+							this._switchToVisualEditor( this.gateway.content );
 						}
 					}
 				} );
@@ -156,7 +154,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 					}
 				] );
 
-				self.$el.find( '.switcher-container' ).html( switchToolbar.$element );
+				this.$el.find( '.switcher-container' ).html( switchToolbar.$element );
 				switchToolbar.emit( 'updateState' );
 			} );
 		}
@@ -186,7 +184,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 		this.$content
 			.on( 'input', this._resizeEditor.bind( this ) )
 			.one( 'input', () => {
-				self.log( { action: 'firstChange' } );
+				this.log( { action: 'firstChange' } );
 			} );
 
 		if ( this.isFirefox ) {
@@ -249,10 +247,9 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 	 * @instance
 	 */
 	onStageChanges: function () {
-		const self = this,
-			params = {
-				text: this.getContent()
-			};
+		const params = {
+			text: this.getContent()
+		};
 
 		this.scrollTop = util.getDocument().find( 'body' ).scrollTop();
 		this.$content.hide();
@@ -263,26 +260,26 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 		}
 
 		const hideSpinnerAndShowPreview = () => {
-			self.hideSpinner();
-			self.$preview.show();
-			mw.hook( 'wikipage.content' ).fire( self.$preview );
+			this.hideSpinner();
+			this.$preview.show();
+			mw.hook( 'wikipage.content' ).fire( this.$preview );
 		};
 
 		this.gateway.getPreview( params ).then( ( result ) => {
 			const parsedText = result.text,
 				parsedSectionLine = result.line;
 
-			self.sectionId = result.id;
+			this.sectionId = result.id;
 			// On desktop edit summaries strip tags. Mimic this behavior on mobile devices
-			self.sectionLine = self.parseHTML( '<div>' ).html( parsedSectionLine ).text();
+			this.sectionLine = this.parseHTML( '<div>' ).html( parsedSectionLine ).text();
 			new Section( {
-				el: self.$preview,
+				el: this.$preview,
 				text: parsedText
 			} ).$el.find( 'a' ).on( 'click', false );
 
 			hideSpinnerAndShowPreview();
 		}, () => {
-			self.$preview.replaceWith(
+			this.$preview.replaceWith(
 				new MessageBox( {
 					type: 'error',
 					msg: mw.msg( 'mobile-frontend-editor-error-preview' )
@@ -379,40 +376,38 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 	 * @private
 	 */
 	_loadContent: function () {
-		const self = this;
-
 		this.$content.hide();
 
 		this.getLoadingPromise()
 			.then( ( result ) => {
 				const content = result.text;
 
-				self.setContent( content );
+				this.setContent( content );
 
 				// If the loaded content is not the default content, enable the save button
-				if ( self.hasChanged() ) {
-					self.$el.find( '.continue, .submit' ).prop( 'disabled', false );
+				if ( this.hasChanged() ) {
+					this.$el.find( '.continue, .submit' ).prop( 'disabled', false );
 				}
 
-				const options = self.options;
+				const options = this.options;
 				const showAnonWarning = options.isAnon && !options.switched;
 
 				if ( showAnonWarning ) {
-					self.$anonWarning = self.createAnonWarning( options );
-					self.$anonTalkWarning = self.createAnonTalkWarning();
-					self.$el.find( '.editor-container' ).append( [ self.$anonTalkWarning, self.$anonWarning ] );
-					self.$content.hide();
+					this.$anonWarning = this.createAnonWarning( options );
+					this.$anonTalkWarning = this.createAnonTalkWarning();
+					this.$el.find( '.editor-container' ).append( [ this.$anonTalkWarning, this.$anonWarning ] );
+					this.$content.hide();
 					// the user has to click login, signup or edit without login,
 					// disable "Next" button on top right
-					self.$anonHiddenButtons = self.$el.find( '.overlay-header .continue' ).hide();
+					this.$anonHiddenButtons = this.$el.find( '.overlay-header .continue' ).hide();
 				}
 
-				if ( self.gateway.fromModified ) {
+				if ( this.gateway.fromModified ) {
 					// Trigger intial EditorGateway#setContent and update save button
-					self.onInputWikitextEditor();
+					this.onInputWikitextEditor();
 				}
 
-				self.showEditNotices();
+				this.showEditNotices();
 			} );
 	},
 
@@ -426,7 +421,6 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 	 * @param {string} [wikitext] Wikitext to pass to VE
 	 */
 	_switchToVisualEditor: function ( wikitext ) {
-		const self = this;
 		this.log( {
 			action: 'abort',
 			type: 'switchnochange',
@@ -450,7 +444,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 			return mw.libs.ve.targetLoader.loadModules( 'visual' );
 		} ).then(
 			() => {
-				const options = self.getOptionsForSwitch();
+				const options = this.getOptionsForSwitch();
 				options.SourceEditorOverlay = SourceEditorOverlay;
 				if ( wikitext ) {
 					options.dataPromise = mw.libs.ve.targetLoader.requestPageData( 'visual', mw.config.get( 'wgRelevantPageName' ), {
@@ -466,16 +460,16 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 
 				const newOverlay = new VisualEditorOverlay( options );
 				newOverlay.getLoadingPromise().then( () => {
-					self.switching = true;
-					self.overlayManager.replaceCurrent( newOverlay );
-					self.switching = false;
+					this.switching = true;
+					this.overlayManager.replaceCurrent( newOverlay );
+					this.switching = false;
 				} );
 			},
 			() => {
-				self.$el.removeClass( 'switching' );
-				self.$el.find( '.overlay-header-container' ).show();
-				self.$el.find( '.ve-mobile-fakeToolbar-container' ).remove();
-				self.$content.prop( 'readonly', false );
+				this.$el.removeClass( 'switching' );
+				this.$el.find( '.overlay-header-container' ).show();
+				this.$el.find( '.ve-mobile-fakeToolbar-container' ).remove();
+				this.$content.prop( 'readonly', false );
 				// FIXME: We should show an error notification, but right now toast
 				// notifications are not dismissible when shown within the editor.
 			}
@@ -501,13 +495,12 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 	 * @instance
 	 */
 	onSaveBegin: function () {
-		const self = this,
-			options = {
-				summary: this.getEditSummary()
-			};
+		const options = {
+			summary: this.getEditSummary()
+		};
 
-		if ( self.sectionLine !== '' ) {
-			options.summary = '/* ' + self.sectionLine + ' */' + options.summary;
+		if ( this.sectionLine !== '' ) {
+			options.summary = '/* ' + this.sectionLine + ' */' + options.summary;
 		}
 		EditorOverlayBase.prototype.onSaveBegin.apply( this, arguments );
 		if ( this.confirmAborted ) {
@@ -522,7 +515,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 
 		this.gateway.save( options )
 			.then( ( newRevId, redirectUrl, tempUserCreated ) => {
-				const title = self.options.title;
+				const title = this.options.title;
 				// Special case behaviour of main page
 				if ( mw.config.get( 'wgIsMainPage' ) && !redirectUrl ) {
 					// FIXME: Blocked on T189173
@@ -531,14 +524,14 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 					return;
 				}
 
-				self.onSaveComplete( newRevId, redirectUrl, tempUserCreated );
+				this.onSaveComplete( newRevId, redirectUrl, tempUserCreated );
 
 				if ( redirectUrl && tempUserCreated ) {
 					// eslint-disable-next-line no-restricted-properties
 					window.location.href = redirectUrl;
 				}
 			}, ( data ) => {
-				self.onSaveFailure( data );
+				this.onSaveFailure( data );
 			} );
 	},
 

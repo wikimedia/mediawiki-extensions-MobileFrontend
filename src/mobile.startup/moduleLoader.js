@@ -61,8 +61,6 @@ ModuleLoader.prototype = {
 	 * @return {Object}
 	 */
 	define( id, obj ) {
-		const self = this;
-
 		if ( Object.hasOwnProperty.call( this._register, id ) ) {
 			throw new Error( 'Module already exists: ' + id );
 		}
@@ -75,7 +73,7 @@ ModuleLoader.prototype = {
 			 * @ignore
 			 */
 			deprecate: ( deprecatedId ) => {
-				self.deprecate( deprecatedId, obj, id );
+				this.deprecate( deprecatedId, obj, id );
 			}
 		};
 	},

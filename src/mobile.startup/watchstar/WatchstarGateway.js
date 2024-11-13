@@ -72,7 +72,6 @@ WatchstarGateway.prototype = {
 	 * @return {jQuery.Deferred<WatchStatusMap>}
 	 */
 	getStatusesByID( ids ) {
-		const self = this;
 		if ( !ids.length ) {
 			return util.Deferred().resolve( {} );
 		}
@@ -83,7 +82,7 @@ WatchstarGateway.prototype = {
 			prop: 'info',
 			inprop: 'watched',
 			pageids: ids
-		} ).then( ( rsp ) => self._unmarshalGetResponse( rsp ) );
+		} ).then( ( rsp ) => this._unmarshalGetResponse( rsp ) );
 	},
 
 	/**
@@ -93,7 +92,6 @@ WatchstarGateway.prototype = {
 	 * @return {jQuery.Deferred<WatchStatusMap>}
 	 */
 	getStatusesByTitle( titles ) {
-		const self = this;
 		if ( !titles.length ) {
 			return util.Deferred().resolve( {} );
 		}
@@ -102,7 +100,7 @@ WatchstarGateway.prototype = {
 			prop: 'info',
 			inprop: 'watched',
 			titles
-		} ) ).then( ( rsp ) => self._unmarshalGetResponse( rsp ) );
+		} ) ).then( ( rsp ) => this._unmarshalGetResponse( rsp ) );
 	},
 
 	/**

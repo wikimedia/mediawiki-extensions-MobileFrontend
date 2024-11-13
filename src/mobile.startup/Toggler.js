@@ -149,8 +149,7 @@ Toggler.prototype.toggle = function ( $heading, fromSaved ) {
 		return false;
 	}
 
-	const self = this,
-		wasExpanded = $heading.is( '.open-block' );
+	const wasExpanded = $heading.is( '.open-block' );
 
 	$heading.toggleClass( 'open-block' );
 
@@ -191,7 +190,7 @@ Toggler.prototype.toggle = function ( $heading, fromSaved ) {
 		 * @ignore
 		 */
 
-		self.eventBus.emit( 'section-toggled', {
+		this.eventBus.emit( 'section-toggled', {
 			expanded: wasExpanded,
 			$heading
 		} );
@@ -270,7 +269,6 @@ Toggler.prototype.reveal = function ( id ) {
  * @private
  */
 Toggler.prototype._enable = function () {
-	const self = this;
 
 	// FIXME This should use .find() instead of .children(), some extensions like Wikibase
 	// want to toggle other headlines than direct descendants of $container. (T95889)
@@ -278,7 +276,7 @@ Toggler.prototype._enable = function () {
 		const $heading = this.$container.find( headingEl ),
 			$headingLabel = $heading.find( '.mw-headline' ),
 			$indicator = $heading.find( '.indicator' ),
-			id = self.prefix + 'collapsible-block-' + i;
+			id = this.prefix + 'collapsible-block-' + i;
 		// Be sure there is a `section` wrapping the section content.
 		// Otherwise, collapsible sections for this page is not enabled.
 		if ( $heading.next().is( 'section' ) ) {
@@ -294,7 +292,7 @@ Toggler.prototype._enable = function () {
 					if ( !clickedLink || !clickedLink.href ) {
 						// prevent taps/clicks on edit button after toggling (T58209)
 						ev.preventDefault();
-						self.toggle( $heading );
+						this.toggle( $heading );
 					}
 				} );
 			$headingLabel
@@ -305,7 +303,7 @@ Toggler.prototype._enable = function () {
 					'aria-expanded': 'false'
 				} );
 
-			arrowOptions.rotation = !self.isCollapsedByDefault() ? 180 : 0;
+			arrowOptions.rotation = !this.isCollapsedByDefault() ? 180 : 0;
 			const indicator = new Icon( arrowOptions );
 			if ( $indicator.length ) {
 				// replace the existing indicator
@@ -323,18 +321,18 @@ Toggler.prototype._enable = function () {
 					// referring to via `aria-controls`.
 					id
 				} )
-				.on( 'beforematch', () => self.toggle( $heading ) )
+				.on( 'beforematch', () => this.toggle( $heading ) )
 				.addClass( 'collapsible-block-js' )
 				.get( 0 ).setAttribute( 'hidden', 'until-found' );
 
-			enableKeyboardActions( self, $heading );
+			enableKeyboardActions( this, $heading );
 
-			if ( !self.isCollapsedByDefault() ) {
+			if ( !this.isCollapsedByDefault() ) {
 				// Expand sections by default on wide screen devices
 				// or if the expand sections setting is set.
 				// The wide screen logic for determining whether to collapse sections initially
 				// should be kept in sync with mobileoptions#initLocalStorageElements().
-				self.toggle( $heading );
+				this.toggle( $heading );
 			}
 		}
 	} );
@@ -351,10 +349,10 @@ Toggler.prototype._enable = function () {
 			hash = hash.slice( 1 );
 			// Per https://html.spec.whatwg.org/multipage/browsing-the-web.html#target-element
 			// we try the raw fragment first, then the percent-decoded fragment.
-			if ( !self.reveal( hash ) ) {
+			if ( !this.reveal( hash ) ) {
 				const decodedHash = mw.util.percentDecodeFragment( hash );
 				if ( decodedHash ) {
-					self.reveal( decodedHash );
+					this.reveal( decodedHash );
 				}
 			}
 		}

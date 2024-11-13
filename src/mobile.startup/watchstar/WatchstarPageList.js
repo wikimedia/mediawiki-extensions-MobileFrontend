@@ -40,7 +40,6 @@ mfExtend( WatchstarPageList, PageList, {
 	 */
 	postRender() {
 		const
-			self = this,
 			ids = [],
 			titles = [];
 
@@ -63,7 +62,7 @@ mfExtend( WatchstarPageList, PageList, {
 		} );
 
 		return this.getPages( ids, titles )
-			.then( ( statuses ) => self.renderItems( $items, statuses ) );
+			.then( ( statuses ) => this.renderItems( $items, statuses ) );
 	},
 
 	/**
@@ -104,10 +103,9 @@ mfExtend( WatchstarPageList, PageList, {
 	 */
 	parsePagesFromItems( $items ) {
 		const
-			self = this,
 			pages = {};
 		$items.each( ( _, item ) => {
-			const $item = self.$el.find( item );
+			const $item = this.$el.find( item );
 			pages[$item.attr( 'title' )] = $item.data( 'id' );
 		} );
 		return pages;
@@ -120,8 +118,6 @@ mfExtend( WatchstarPageList, PageList, {
 	 * @ignore
 	 */
 	renderItems( $items, statuses ) {
-		const self = this;
-
 		// Rendering Watchstars for anonymous users is not useful. Nothing to do.
 		if ( user.isAnon() ) {
 			return;
@@ -130,7 +126,7 @@ mfExtend( WatchstarPageList, PageList, {
 		// Create watch stars for each entry in list
 		$items.each( ( _, item ) => {
 			const
-				$item = self.$el.find( item ),
+				$item = this.$el.find( item ),
 				page = new Page( {
 					// FIXME: Set sections so we don't hit the api (hacky)
 					sections: [],
@@ -139,7 +135,7 @@ mfExtend( WatchstarPageList, PageList, {
 				} ),
 				watched = statuses[page.getTitle()];
 
-			self._appendWatchstar( $item, page, watched );
+			this._appendWatchstar( $item, page, watched );
 			$item.addClass( 'with-watchstar' );
 		} );
 	},

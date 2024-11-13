@@ -173,8 +173,6 @@ mfExtend( View, {
 	 * @param {Object.<string, string>} [options.events]
 	 */
 	initialize( options ) {
-		const self = this;
-
 		OO.EventEmitter.call( this );
 		options = util.extend( {}, this.defaults, options );
 		this.options = options;
@@ -201,8 +199,8 @@ mfExtend( View, {
 		} else {
 			util.docReady( () => {
 				// Note the element may not be in the document so must use global jQuery here
-				self.$el = $( options.el );
-				self._postInitialize( options );
+				this.$el = $( options.el );
+				this._postInitialize( options );
 			} );
 		}
 	},
