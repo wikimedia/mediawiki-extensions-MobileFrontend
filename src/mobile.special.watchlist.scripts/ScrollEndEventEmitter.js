@@ -47,7 +47,7 @@ const util = require( '../mobile.startup/util' ),
  *         },
  *         _loadPhotos: function () {
  *           var self = this;
- *           this.gateway.getPhotos().then( function ( photos ) {
+ *           this.gateway.getPhotos().then( ( photos ) => {
  *             // load photos into the DOM ...
  *             // 3. and (re-)enable infinite scrolling
  *             self.scrollEndEventEmitter.enable();

@@ -451,10 +451,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 		const self = this;
 		this.allowCloseWindow = mw.confirmCloseWindow( {
 			// Returns true if content has changed
-			test: function () {
-				// Check if content has changed
-				return self.hasChanged();
-			},
+			test: () => self.hasChanged(),
 
 			// Message to show the user, if content has changed
 			message: mw.msg( 'mobile-frontend-editor-cancel-confirm' ),

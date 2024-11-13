@@ -71,13 +71,11 @@ EditorGateway.prototype = {
 
 		const self = this;
 
-		function resolve() {
-			return util.Deferred().resolve( {
-				text: self.content || '',
-				blockinfo: self.blockinfo,
-				notices: self.notices
-			} );
-		}
+		const resolve = () => util.Deferred().resolve( {
+			text: self.content || '',
+			blockinfo: self.blockinfo,
+			notices: self.notices
+		} );
 
 		if ( this.content !== undefined ) {
 			return resolve();
@@ -178,7 +176,7 @@ EditorGateway.prototype = {
 		 *
 		 * @return {jQuery.Deferred}
 		 */
-		function saveContent() {
+		const saveContent = () => {
 			const apiOptions = {
 				action: 'edit',
 				errorformat: 'html',
@@ -219,7 +217,7 @@ EditorGateway.prototype = {
 				result.reject( data );
 			} );
 			return result;
-		}
+		};
 
 		return saveContent();
 	},
@@ -299,7 +297,7 @@ EditorGateway.prototype = {
 				return util.Deferred().reject();
 			}
 		} ).promise( {
-			abort: function () {
+			abort: () => {
 				self._pending.abort();
 			}
 		} );

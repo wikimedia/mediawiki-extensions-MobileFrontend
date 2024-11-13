@@ -210,17 +210,15 @@ class PageHTMLParser {
 	 * @return {Thumbnail[]}
 	 */
 	getThumbnails( $el ) {
-		const
-			self = this,
-			thumbs = [];
+		const thumbs = [];
 
 		$el = $el || this.$el;
 
 		const $thumbs = $el.find( THUMB_SELECTOR );
 
-		$thumbs.each( function () {
-			const $a = $el.find( this );
-			const thumb = self.getThumbnail( $a );
+		$thumbs.each( ( i, thumbEl ) => {
+			const $a = $el.find( thumbEl );
+			const thumb = this.getThumbnail( $a );
 
 			if ( thumb ) {
 				thumbs.push( thumb );

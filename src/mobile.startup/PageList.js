@@ -48,12 +48,10 @@ mfExtend( PageList, View, {
 	 * @instance
 	 */
 	renderPageImages() {
-		const self = this;
-
 		setTimeout( () => {
-			self.$el.find( '.list-thumb' ).each( function () {
-				const style = self.$el.find( this ).data( 'style' );
-				self.$el.find( this ).attr( 'style', style );
+			this.$el.find( '.list-thumb' ).each( ( i, thumbEl ) => {
+				const style = this.$el.find( thumbEl ).data( 'style' );
+				this.$el.find( thumbEl ).attr( 'style', style );
 			} );
 			// Delay an unnecessary load of images on mobile (slower?) connections
 			// In particular on search results which can be regenerated quickly.
