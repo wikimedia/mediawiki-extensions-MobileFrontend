@@ -1,0 +1,5 @@
+{
+	"name": "mobile.startup",
+	"main": "main.js",
+	"private": true
+}

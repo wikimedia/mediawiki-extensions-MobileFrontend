@@ -3,16 +3,20 @@
  * @class EditorOverlayBase
  * @private
  */
-const Overlay = require( '../mobile.startup/Overlay' ),
-	util = require( '../mobile.startup/util' ),
-	parseBlockInfo = require( './parseBlockInfo' ),
-	headers = require( '../mobile.startup/headers' ),
-	icons = require( '../mobile.startup/icons' ),
-	Button = require( '../mobile.startup/Button' ),
-	IconButton = require( '../mobile.startup/IconButton' ),
-	mfExtend = require( '../mobile.startup/mfExtend' ),
-	blockMessageDrawer = require( './blockMessageDrawer' ),
-	MessageBox = require( '../mobile.startup/MessageBox' ),
+const mobile = require( 'mobile.startup' ),
+	Overlay = mobile.Overlay,
+	// Use MediaWiki ResourceLoader require(), not Webpack require()
+	contLangMessages = (
+		require( './contLangMessages.json' )
+	),
+	util = mobile.util,
+	parseBlockInfo = require( './parseBlockInfo.js' ),
+	headers = mobile.headers,
+	Button = mobile.Button,
+	IconButton = mobile.IconButton,
+	mfExtend = mobile.mfExtend,
+	blockMessageDrawer = require( './blockMessageDrawer.js' ),
+	MessageBox = mobile.MessageBox,
 	mwUser = mw.user;
 
 /**
@@ -288,7 +292,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 * @param {boolean} [tempUserCreated] Whether a temporary user was created
 	 */
 	showSaveCompleteMsg: function ( action, tempUserCreated ) {
-		__non_webpack_require__( 'mediawiki.action.view.postEdit' ).fireHook( action, tempUserCreated );
+		require( 'mediawiki.action.view.postEdit' ).fireHook( action, tempUserCreated );
 	},
 	/**
 	 * Executed when page save fails. Handles logging the error. Subclasses
@@ -425,7 +429,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 						title: options.continueMsg
 					} )
 				],
-				icons.cancel(),
+				mobile.cancelIcon(),
 				'initial-header'
 			),
 			headers.saveHeader( options.previewingMsg, 'save-header hidden' ),
@@ -585,11 +589,6 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 */
 	createAnonWarning: function ( options ) {
 		const $actions = $( '<div>' ).addClass( 'actions' ),
-			// Use MediaWiki ResourceLoader require(), not Webpack require()
-			contLangMessages = (
-
-				__non_webpack_require__( './contLangMessages.json' )
-			),
 			msg = this.gateway.wouldautocreate ?
 				'mobile-frontend-editor-autocreatewarning' :
 				'mobile-frontend-editor-anonwarning',

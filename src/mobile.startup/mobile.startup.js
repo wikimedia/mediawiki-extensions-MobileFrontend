@@ -25,6 +25,14 @@ const mediaViewer = {
 const languageInfoOverlay = require( './languageOverlay/languageInfoOverlay' );
 const languageOverlay = require( './languageOverlay/languageOverlay' );
 const amcOutreach = require( './amcOutreach/amcOutreach' );
+const util = require( './util.js' );
+const mfExtend = require( './mfExtend.js' );
+const actionParams = require( './actionParams.js' );
+const Icon = require( './Icon.js' );
+const IconButton = require( './IconButton.js' );
+const MessageBox = require( './MessageBox.js' );
+const Section = require( './Section.js' );
+const Button = require( './Button.js' );
 
 // Expose chunk to temporary variable which will be deleted and exported via ResourceLoader
 // package inside mobile.startup.exports.
@@ -34,7 +42,57 @@ const amcOutreach = require( './amcOutreach/amcOutreach' );
  *
  * @module mobile.startup
  */
-mw._mobileFrontend = {
+module.exports = {
+	/**
+	 * Internal, strictly for use inside MobileFrontend only
+	 *
+	 * @private
+	 */
+	Section,
+	/**
+	 * Internal, strictly for use inside MobileFrontend only
+	 *
+	 * @private
+	 */
+	MessageBox,
+	/**
+	 * Internal, strictly for use inside MobileFrontend only
+	 *
+	 * @private
+	 */
+	Icon,
+	/**
+	 * Internal, strictly for use inside MobileFrontend only
+	 *
+	 * @private
+	 */
+	IconButton,
+	/**
+	 * Internal, strictly for use inside MobileFrontend only
+	 *
+	 * @private
+	 */
+	Button,
+	/**
+	 * Internal, strictly for use inside MobileFrontend only
+	 *
+	 * @private
+	 */
+	actionParams,
+	/**
+	 * Internal, strictly for use inside MobileFrontend only
+	 *
+	 * @private
+	 */
+	mfExtend,
+	/**
+	 * Internal, strictly for use inside MobileFrontend only
+	 *
+	 * @memberof module:mobile.startup
+	 * @type module:mobile.startup/util
+	 * @private
+	 */
+	util,
 	/**
 	 * Internal for use inside Minerva only
 	 *
@@ -43,6 +101,10 @@ mw._mobileFrontend = {
 	 */
 
 	amcOutreach,
+	/**
+	 * @private for use inside MobileFrontend only.
+	 */
+	headers,
 	// Internal for use inside GrowthExperiments only.
 	overlayHeader: headers.header,
 	/**
@@ -103,6 +165,11 @@ mw._mobileFrontend = {
 	 * @memberof module:mobile.startup
 	 */
 	spinner: icons.spinner,
+	/**
+	 * Internal for use inside MobileFrontend only
+	 * @private
+	 */
+	cancelIcon: icons.cancel,
 	/**
 	 * Internal for use inside Minerva only.
 	 *

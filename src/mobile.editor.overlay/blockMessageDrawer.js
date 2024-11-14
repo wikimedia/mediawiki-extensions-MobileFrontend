@@ -1,6 +1,6 @@
-const
-	Drawer = require( '../mobile.startup/Drawer' ),
-	BlockMessageDetails = require( './BlockMessageDetails' );
+const mobile = require( 'mobile.startup' );
+const Drawer = mobile.Drawer;
+const BlockMessageDetails = require( './BlockMessageDetails.js' );
 
 /**
  * @private

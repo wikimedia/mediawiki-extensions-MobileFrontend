@@ -1,6 +1,7 @@
 /* global $ */
-const M = require( '../mobile.startup/moduleLoaderSingleton' ),
+const
 	util = require( '../mobile.startup/util' ),
+	fakeToolbar = require( './fakeToolbar' ),
 	editorLoadingOverlay = require( './editorLoadingOverlay' ),
 	OverlayManager = require( '../mobile.startup/OverlayManager' ),
 	// #ca-edit, .mw-editsection are standard MediaWiki elements
@@ -130,6 +131,7 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 			$contentText = $( '#mw-content-text' ),
 			url = new URL( location.href ),
 			editorOptions = {
+				fakeToolbar,
 				overlayManager: overlayManager,
 				currentPageHTMLParser: currentPageHTMLParser,
 				fakeScroll: 0,
@@ -296,7 +298,7 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 			mw.hook( 'mobileFrontend.editorOpening' ).fire();
 
 			return mw.loader.using( 'mobile.editor.overlay' ).then( () => {
-				const SourceEditorOverlay = M.require( 'mobile.editor.overlay/SourceEditorOverlay' );
+				const SourceEditorOverlay = __non_webpack_require__( 'mobile.editor.overlay' ).SourceEditorOverlay;
 				return new SourceEditorOverlay( editorOptions );
 			} );
 		}
@@ -366,8 +368,9 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 
 			return visualPromise
 				.then( () => {
-					const VisualEditorOverlay = M.require( 'mobile.editor.overlay/VisualEditorOverlay' ),
-						SourceEditorOverlay = M.require( 'mobile.editor.overlay/SourceEditorOverlay' );
+					const editorOverlays = __non_webpack_require__( 'mobile.editor.overlay' );
+					const VisualEditorOverlay = editorOverlays.VisualEditorOverlay;
+					const SourceEditorOverlay = editorOverlays.SourceEditorOverlay;
 					editorOptions.SourceEditorOverlay = SourceEditorOverlay;
 					return new VisualEditorOverlay( editorOptions );
 				}, () => loadSourceEditor() );

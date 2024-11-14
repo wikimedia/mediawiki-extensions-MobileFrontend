@@ -63,7 +63,7 @@ QUnit.test( 'docReady()', ( assert ) => {
 } );
 
 QUnit.test( 'Deferred() - resolve', ( assert ) => {
-	const deferred = new util.Deferred(),
+	const deferred = util.Deferred(),
 		response = 'response';
 	deferred.resolve( response );
 	return deferred.then( ( res ) => {
@@ -72,7 +72,7 @@ QUnit.test( 'Deferred() - resolve', ( assert ) => {
 } );
 
 QUnit.test( 'Deferred() - reject', ( assert ) => {
-	const deferred = new util.Deferred(),
+	const deferred = util.Deferred(),
 		response = 'response';
 	deferred.reject( response );
 	return deferred.catch( ( error ) => {

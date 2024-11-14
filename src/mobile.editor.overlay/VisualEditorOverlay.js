@@ -1,14 +1,13 @@
 /* global ve, $ */
-const EditorOverlayBase = require( './EditorOverlayBase' ),
-	EditorGateway = require( './EditorGateway' ),
-	fakeToolbar = require( '../mobile.init/fakeToolbar' ),
-	mfExtend = require( '../mobile.startup/mfExtend' ),
-	identifyLeadParagraph = require( './identifyLeadParagraph' ),
-	setPreferredEditor = require( './setPreferredEditor' ),
-	util = require( '../mobile.startup/util' ),
-	OverlayManager = require( '../mobile.startup/OverlayManager' ),
-	overlayManager = OverlayManager.getSingleton(),
-	currentPage = require( '../mobile.startup/currentPage' );
+const mobile = require( 'mobile.startup' ),
+	EditorOverlayBase = require( './EditorOverlayBase.js' ),
+	EditorGateway = require( './EditorGateway.js' ),
+	mfExtend = mobile.mfExtend,
+	identifyLeadParagraph = require( './identifyLeadParagraph.js' ),
+	setPreferredEditor = require( './setPreferredEditor.js' ),
+	util = mobile.util,
+	overlayManager = mobile.getOverlayManager(),
+	currentPage = mobile.currentPage;
 
 /**
  * Overlay for VisualEditor view
@@ -300,7 +299,7 @@ mfExtend( VisualEditorOverlay, EditorOverlayBase, {
 
 		this.$el.addClass( 'switching' );
 		this.$el.find( '.overlay-header-container' ).hide();
-		this.$el.append( fakeToolbar() );
+		this.$el.append( this.fakeToolbar() );
 		this.target.getSurface().setReadOnly( true );
 
 		if ( dataPromise ) {

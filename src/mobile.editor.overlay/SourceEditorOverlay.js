@@ -1,15 +1,15 @@
-const EditorOverlayBase = require( './EditorOverlayBase' ),
-	util = require( '../mobile.startup/util' ),
-	icons = require( '../mobile.startup/icons' ),
-	Section = require( '../mobile.startup/Section' ),
-	saveFailureMessage = require( './saveFailureMessage' ),
-	EditorGateway = require( './EditorGateway' ),
-	fakeToolbar = require( '../mobile.init/fakeToolbar' ),
-	MessageBox = require( '../mobile.startup/MessageBox' ),
-	mfExtend = require( '../mobile.startup/mfExtend' ),
-	setPreferredEditor = require( './setPreferredEditor' ),
-	VisualEditorOverlay = require( './VisualEditorOverlay' ),
-	currentPage = require( '../mobile.startup/currentPage' );
+const mobile = require( 'mobile.startup' ),
+	EditorOverlayBase = require( './EditorOverlayBase.js' ),
+	util = mobile.util,
+	spinner = mobile.spinner,
+	Section = mobile.Section,
+	saveFailureMessage = require( './saveFailureMessage.js' ),
+	EditorGateway = require( './EditorGateway.js' ),
+	MessageBox = mobile.MessageBox,
+	mfExtend = mobile.mfExtend,
+	setPreferredEditor = require( './setPreferredEditor.js' ),
+	VisualEditorOverlay = require( './VisualEditorOverlay.js' ),
+	currentPage = mobile.currentPage;
 
 /**
  * Overlay that shows an editor
@@ -162,7 +162,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 		EditorOverlayBase.prototype.postRender.apply( this );
 
 		// This spinner is still used when displaying save/preview panel
-		this.$el.find( '.overlay-content' ).append( icons.spinner().$el );
+		this.$el.find( '.overlay-content' ).append( spinner().$el );
 		this.hideSpinner();
 
 		this.$preview = this.$el.find( '.preview' );
@@ -436,7 +436,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 
 		this.$el.addClass( 'switching' );
 		this.$el.find( '.overlay-header-container' ).hide();
-		this.$el.append( fakeToolbar() );
+		this.$el.append( this.fakeToolbar() );
 		this.$content.prop( 'readonly', true );
 
 		mw.loader.using( 'ext.visualEditor.targetLoader' ).then( () => {
@@ -576,7 +576,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 	 * @instance
 	 */
 	showSaveCompleteMsg: function ( action, tempUserCreated ) {
-		__non_webpack_require__( 'mediawiki.action.view.postEdit' ).fireHookOnPageReload( action, tempUserCreated );
+		require( 'mediawiki.action.view.postEdit' ).fireHookOnPageReload( action, tempUserCreated );
 	},
 
 	/**

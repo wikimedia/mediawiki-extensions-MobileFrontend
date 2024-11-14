@@ -43,6 +43,7 @@
 		"jsdom": "12.2.0",
 		"less": "3.8.1",
 		"less-loader": "11.1.4",
+		"mobile.startup": "file:./src/mobile.startup/package",
 		"mustache": "3.0.1",
 		"nyc": "15.0.0",
 		"oojs": "7.0.1",

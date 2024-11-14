@@ -1,5 +1,6 @@
-const util = require( '../mobile.startup/util' ),
-	actionParams = require( '../mobile.startup/actionParams' );
+const mobile = require( 'mobile.startup' );
+const util = mobile.util;
+const actionParams = mobile.actionParams;
 
 /**
  * API that helps save and retrieve page content

@@ -234,7 +234,7 @@
 				"resources/dist/mobile.startup.runtime.js",
 				"resources/dist/mobile.common.js",
 				"resources/dist/mobile.startup.js",
-				"resources/mobile.startup.exports.js"
+				"resources/mobile.startup/exports.js"
 			]
 		},
 		"mobile.editor.overlay": {
@@ -253,9 +253,19 @@
 				"mediawiki.widgets.AbandonEditDialog"
 			],
 			"packageFiles": [
-				"resources/dist/mobile.editor.overlay.js",
+				"src/mobile.editor.overlay/mobile.editor.overlay.js",
+				"src/mobile.editor.overlay/BlockMessageDetails.js",
+				"src/mobile.editor.overlay/blockMessageDrawer.js",
+				"src/mobile.editor.overlay/EditorGateway.js",
+				"src/mobile.editor.overlay/EditorOverlayBase.js",
+				"src/mobile.editor.overlay/identifyLeadParagraph.js",
+				"src/mobile.editor.overlay/parseBlockInfo.js",
+				"src/mobile.editor.overlay/saveFailureMessage.js",
+				"src/mobile.editor.overlay/setPreferredEditor.js",
+				"src/mobile.editor.overlay/SourceEditorOverlay.js",
+				"src/mobile.editor.overlay/VisualEditorOverlay.js",
 				{
-					"name": "resources/dist/contLangMessages.json",
+					"name": "src/mobile.editor.overlay/contLangMessages.json",
 					"callback": "MobileFrontendEditorHooks::getContentLanguageMessages",
 					"callbackParam": [
 						"tempuser-helppage"

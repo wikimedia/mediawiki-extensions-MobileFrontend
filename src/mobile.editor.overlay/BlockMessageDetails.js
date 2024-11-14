@@ -1,8 +1,9 @@
 'use strict';
-const Button = require( '../mobile.startup/Button' ),
-	View = require( '../mobile.startup/View' ),
-	Icon = require( '../mobile.startup/Icon' ),
-	util = require( '../mobile.startup/util' );
+const mobile = require( 'mobile.startup' );
+const Button = mobile.Button,
+	View = mobile.View,
+	Icon = mobile.Icon,
+	util = mobile.util;
 
 /**
  * Renders a block message details.
