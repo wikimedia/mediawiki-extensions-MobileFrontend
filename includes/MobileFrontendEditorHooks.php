@@ -98,17 +98,17 @@ class MobileFrontendEditorHooks implements
 			$titleMsg = $title->exists() ? 'editing' : 'creating';
 			$out->setPageTitleMsg( wfMessage( $titleMsg, $title->getPrefixedText() ) );
 
-			$msg = false;
-			$msgParams = false;
+			$msgParams = [];
 			if ( $title->inNamespace( NS_FILE ) && !$title->exists() ) {
 				// Is a new file page (enable upload image only) T60311
 				$msg = 'mobile-frontend-editor-uploadenable';
 			} else {
 				$msg = 'mobile-frontend-editor-toload';
 				$urlUtils = MediaWikiServices::getInstance()->getUrlUtils();
-				$msgParams = $urlUtils->expand( $url, PROTO_CURRENT );
+				$msgParams[] = $urlUtils->expand( $url, PROTO_CURRENT );
 			}
-			$out->showPendingTakeover( $url, $msg, $msgParams );
+			// @phan-suppress-next-line PhanTypeMismatchArgumentNullable Only null for invalid URL, shouldn't happen
+			$out->showPendingTakeover( $url, $msg, ...$msgParams );
 
 			$out->setRevisionId( $req->getInt( 'oldid', $article->getRevIdFetched() ) );
 			return false;
