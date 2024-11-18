@@ -146,6 +146,7 @@
 			"codexComponents": [
 				"CdxButton",
 				"CdxIcon",
+				"CdxMessage",
 				"CdxTextInput"
 			]
 		},
