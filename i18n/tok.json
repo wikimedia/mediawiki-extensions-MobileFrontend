@@ -2,9 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Robin van der Vliet",
-			"LesVisages"
+			"LesVisages",
+			"Tamzin"
 		]
 	},
+	"mobile-frontend-copyright": "lipu li toki ante ala la, sina ken kepeken lipu ni tan lawa $1",
 	"mobile-frontend-languages-header-page": "$1 - toki ante",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "toki ante",
 	"mobile-frontend-terms-text": "lawa kepeken",
