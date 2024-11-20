@@ -5,6 +5,25 @@ const lazyImageLoader = require( '../mobile.startup/lazyImages/lazyImageLoader' 
  */
 
 /**
+ * Initialise lazy loading images which utilizes native browser support.
+ *
+ * @private
+ */
+function initNative() {
+	// Regardless of whether or not lazy load is turned on
+	// We need to load in all images before print
+	window.addEventListener( 'beforeprint', () => {
+		// Printing documents with images that are lazy loaded is broken in Safari
+		// https://bugs.webkit.org/show_bug.cgi?id=224547
+		Array.prototype.forEach.call(
+			document.querySelectorAll( 'img' ),
+			( img ) => {
+				img.loading = 'eager';
+			}
+		);
+	} );
+}
+/**
  * Initialise lazy loading images to supplement the HTML changes inside the
  * MobileFormatter.
  *
@@ -17,6 +36,11 @@ function init( $container ) {
 	// If undefined, return early since no further work can be done on $container.
 	if ( !( $container[ 0 ] instanceof HTMLElement ) ) {
 		return;
+	}
+
+	// When using Parsoid switch to native lazy loading (T230812)
+	if ( $container.find( '[data-mw-parsoid-version]' ).length ) {
+		return initNative();
 	}
 
 	const imagePlaceholders = lazyImageLoader.queryPlaceholders( $container[ 0 ] );
@@ -76,6 +100,12 @@ mw.hook( 'mobileFrontend.loadLazyImages' ).add( ( $container ) => {
 	lazyImageLoader.loadImages( imagePlaceholders );
 } );
 
-module.exports = function () {
+const exports = function () {
 	mw.hook( 'wikipage.content' ).add( init );
 };
+
+exports.test = {
+	initNative
+};
+
+module.exports = exports;

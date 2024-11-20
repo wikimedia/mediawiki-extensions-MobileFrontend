@@ -34,32 +34,18 @@ class LazyImageTransform implements IMobileTransform {
 	}
 
 	/**
-	 * Insert a table of content placeholder into the element
-	 * which will be progressively enhanced via JS
+	 * Insert a image placeholder into the element
+	 * which will be lazy loaded via JS.
+	 * Assumes Legacy parser, not compatible with Parsoid.
 	 *
 	 * @param DOMElement $node to be transformed
 	 */
 	public function apply( DOMElement $node ) {
-		// Parsoid can have nested sections, so ideally we'd use a child combinator
-		// here to avoid multiple applications of the lazy image transform to the
-		// nested sections.  For example, `.mw-parser-output > section`
-		$query = 'section';
-
-		// Until section collapsing in MFE is made to work with Parsoid output,
-		// all of Parsoid's sections are nested in the first mf section.
-		$parserOutput = DOMCompat::querySelector( $node, '.mw-parser-output' );
-		$isParsoid = $parserOutput && $parserOutput->hasAttribute( 'data-mw-parsoid-version' );
-		if ( $isParsoid ) {
-			$query = '#mf-section-0 > section';
-		}
-
-		$sections = DOMCompat::querySelectorAll( $node, $query );
-		$sectionNumber = 0;
+		$sections = DOMCompat::querySelectorAll( $node, 'section' );
 		foreach ( $sections as $sectionNumber => $section ) {
 			if ( $sectionNumber > 0 ) {
 				$this->doRewriteImagesForLazyLoading( $section, $section->ownerDocument );
 			}
-			$sectionNumber++;
 		}
 	}
 
