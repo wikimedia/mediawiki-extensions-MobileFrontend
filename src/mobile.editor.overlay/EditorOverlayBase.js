@@ -182,6 +182,10 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 * @instance
 	 */
 	sectionId: '',
+
+	fakeToolbar() {
+		return this.options.fakeToolbar;
+	},
 	/**
 	 * Logs an event to http://meta.wikimedia.org/wiki/Schema:EditAttemptStep
 	 *
