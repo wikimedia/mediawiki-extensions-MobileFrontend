@@ -13,7 +13,9 @@ const
  * @param {string} [props.className] Additional CSS classes to add
  * @param {jQuery.Element[]} [props.children] An array of elements to append to
  * @param {Function} [props.onShow] Callback called before showing the drawer.
- * @param {Function} [props.onBeforeHide] Callback called before hiding the drawer
+ *  It receives a promise given the show process is asynchronous. This is used in
+ *  production by GrowthExperiments.
+ * @param {Function} [props.onBeforeHide] Callback called before hidi ng the drawer
  */
 function Drawer( props ) {
 	this.drawerClassName = props.className || '';
@@ -57,8 +59,10 @@ mfExtend( Drawer, View, {
 	 * @memberof module:mobile.startup/Drawer
 	 * @instance
 	 * @method
+	 * @return {jQuery.Promise} which is used by GrowthExperiments
 	 */
 	show() {
+		const d = util.Deferred();
 		this.$el.prepend( this.$mask );
 		// Force redraw by asking the browser to measure the element's width
 		this.$el.width();
@@ -70,9 +74,13 @@ mfExtend( Drawer, View, {
 			// in drawers, so trigger manually (T361212)
 			mw.hook( 'mobileFrontend.loadLazyImages' ).fire( this.$el );
 			if ( this.options.onShow ) {
-				this.options.onShow();
+				this.options.onShow( d );
 			}
+			requestAnimationFrame( () => d.resolve() );
+		} else {
+			d.resolve();
 		}
+		return d.promise();
 	},
 
 	/**

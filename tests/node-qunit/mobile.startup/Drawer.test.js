@@ -44,18 +44,19 @@ QUnit.module( 'MobileFrontend Drawer.js', {
 
 QUnit.test( 'visible on show()', ( assert ) => {
 	const
+		done = assert.async(),
 		onShow = () => {
 			// eslint-disable-next-line no-use-before-define
 			assertVisible( subject );
 			assert.true( true );
+			done();
 		},
-		subject = new Drawer( {
-			onShow
-		} );
+		subject = new Drawer( {} );
 
-	subject.show();
-	// show again and it's still visible.
-	subject.show();
+	subject.show().then( onShow ).then( () => {
+		// show again and it's still visible./
+		subject.show().then( onShow );
+	} );
 } );
 
 QUnit.test( 'accepts onShow and events', ( assert ) => {
