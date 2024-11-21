@@ -35,6 +35,16 @@ If you are not running Vagrant, be sure to set your `MEDIAWIKI_URL` env
 variable to your local index path, e.g.
 `MEDIAWIKI_URL=http://localhost/index.php/`
 
+### Development Server (JS/CSS Changes)
+
+1. **Install Dependencies**:
+   ```bash
+   npm install
+2. **Start the Dev Server**:
+   ```bash
+   npm run start
+This watches and auto-reloads changes.
+
 ### Committing
 
 Commits are important as they give the reviewer more information to

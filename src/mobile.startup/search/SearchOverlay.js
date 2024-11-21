@@ -59,6 +59,7 @@ function SearchOverlay( params ) {
 	this.router = options.router;
 
 	this.currentSearchId = null;
+	this.resetSearch( true );
 }
 
 mfExtend( SearchOverlay, Overlay, {
@@ -235,6 +236,8 @@ mfExtend( SearchOverlay, Overlay, {
 		// Overlay#show defines the actual overlay visibility.
 		Overlay.prototype.show.apply( this, arguments );
 
+		mw.hook( 'ext.MobileFrontend.searchOverlay.open' ).fire();
+
 		this.showKeyboard();
 	},
 
@@ -248,6 +251,7 @@ mfExtend( SearchOverlay, Overlay, {
 	 * @param {string} query
 	 */
 	performSearch( query ) {
+		this.resetSearch();
 		const
 			api = this.api,
 			delay = this.gateway.isCached( query ) ? 0 : SEARCH_DELAY;
@@ -255,6 +259,8 @@ mfExtend( SearchOverlay, Overlay, {
 		// it seems the input event can be fired when virtual keyboard is closed
 		// (Chrome for Android)
 		if ( query !== this.lastQuery ) {
+			// Start tracking when search is performed.
+			mw.hook( 'ext.MobileFrontend.searchOverlay.startQuery' ).fire();
 			if ( this._pendingQuery ) {
 				this._pendingQuery.abort();
 			}
@@ -288,6 +294,7 @@ mfExtend( SearchOverlay, Overlay, {
 
 							this.$results = this.$resultContainer.find( 'li' );
 						}
+						mw.hook( 'ext.MobileFrontend.searchOverlay.displayResults' ).fire();
 					} ).promise( {
 						abort() {
 							xhr.abort();
@@ -295,7 +302,7 @@ mfExtend( SearchOverlay, Overlay, {
 					} );
 				}, delay );
 			} else {
-				this.resetSearch();
+				this.resetSearch( true );
 			}
 
 			this.lastQuery = query;
@@ -304,10 +311,15 @@ mfExtend( SearchOverlay, Overlay, {
 	/**
 	 * Clear results
 	 *
+	 * @param boolean fireHook
 	 * @private
 	 */
-	resetSearch() {
-		this.$el.find( '.overlay-content' ).children().hide();
+	resetSearch( fireHook ) {
+		const $content = this.$el.find( '.overlay-content' );
+		$content.children().hide();
+		if ( fireHook ) {
+			mw.hook( 'ext.MobileFrontend.searchOverlay.empty' ).fire( $content[ 0 ] );
+		}
 	}
 } );
 
