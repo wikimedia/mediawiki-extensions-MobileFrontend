@@ -5,39 +5,40 @@ const
 
 /**
  * API for interacting with watchlist.
- *
- * @param {mw.Api} api
- * @param {string} lastTitle of page listed in Watchlist to be used as a continuation parameter
- * @private
  */
-function WatchListGateway( api, lastTitle ) {
-	this.api = api;
-	// Try to keep it in sync with SpecialMobileEditWatchlist::LIMIT (php)
-	this.limit = 50;
+class WatchListGateway {
+	/**
+	 * @param {mw.Api} api
+	 * @param {string} lastTitle of page listed in Watchlist to be used as a continuation parameter
+	 * @private
+	 */
+	constructor( api, lastTitle ) {
+		this.api = api;
+		// Try to keep it in sync with SpecialMobileEditWatchlist::LIMIT (php)
+		this.limit = 50;
 
-	if ( lastTitle ) {
-		this.continueParams = {
-			continue: 'gwrcontinue||',
-			gwrcontinue: '0|' + lastTitle.replace( / /g, '_' )
-		};
-		this.shouldSkipFirstTitle = true;
-	} else {
-		this.continueParams = {
-			continue: ''
-		};
-		this.shouldSkipFirstTitle = false;
+		if ( lastTitle ) {
+			this.continueParams = {
+				continue: 'gwrcontinue||',
+				gwrcontinue: '0|' + lastTitle.replace( / /g, '_' )
+			};
+			this.shouldSkipFirstTitle = true;
+		} else {
+			this.continueParams = {
+				continue: ''
+			};
+			this.shouldSkipFirstTitle = false;
+		}
+
+		this.canContinue = true;
 	}
 
-	this.canContinue = true;
-}
-
-WatchListGateway.prototype = {
 	/**
 	 * Load the list of items on the watchlist
 	 *
 	 * @return {jQuery.Deferred}
 	 */
-	loadWatchlist: function () {
+	loadWatchlist() {
 		const params = extendSearchParams( 'watchlist', {
 			prop: [ 'info', 'revisions' ],
 			rvprop: 'timestamp|user',
@@ -58,7 +59,7 @@ WatchListGateway.prototype = {
 
 			return this.parseData( data );
 		} );
-	},
+	}
 
 	/**
 	 * Parse api response data into pagelist item format
@@ -66,7 +67,7 @@ WatchListGateway.prototype = {
 	 * @param {Object[]} data
 	 * @return {Page[]}
 	 */
-	parseData: function ( data ) {
+	parseData( data ) {
 		let pages;
 
 		if ( !data.query || !data.query.pages ) {
@@ -89,7 +90,6 @@ WatchListGateway.prototype = {
 		// Transform the items to a sensible format
 		return pages.map( pageJSONParser.parse );
 	}
-
-};
+}
 
 module.exports = WatchListGateway;

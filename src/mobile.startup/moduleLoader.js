@@ -3,25 +3,21 @@
  *
  * A module in this context is essentially a Javascript class (not to be confused with
  * ResourceLoader modules).
- *
- * @class ModuleLoader
  */
-function ModuleLoader() {
-	/**
-	 * @property {Object} register of defined modules
-	 * @private
-	 */
-	this._register = {};
-}
+class ModuleLoader {
+	constructor() {
+		/**
+		 * @property {Object} register of defined modules
+		 * @private
+		 */
+		this._register = {};
+	}
 
-ModuleLoader.prototype = {
 	/**
 	 * Require (import) a module previously defined using define().
 	 * Searches core module registry using ResourceLoader require before consulting
 	 * its own local registry. This method is deprecated, please do not use.
 	 *
-	 * @memberof ModuleLoader
-	 * @instance
 	 * @param {string} id Required module id.
 	 * @return {Object} Required module, can be any JavaScript object.
 	 */
@@ -49,13 +45,11 @@ ModuleLoader.prototype = {
 		} catch ( e ) {
 			return localRequire();
 		}
-	},
+	}
 
 	/**
 	 * Define a module which can be later required (imported) using require().
 	 *
-	 * @memberof ModuleLoader
-	 * @instance
 	 * @param {string} id Defined module id.
 	 * @param {Object} obj Defined module body, can be any JavaScript object.
 	 * @return {Object}
@@ -76,13 +70,11 @@ ModuleLoader.prototype = {
 				this.deprecate( deprecatedId, obj, id );
 			}
 		};
-	},
+	}
 
 	/**
 	 * Deprecate a module and give an replacement (if there is any).
 	 *
-	 * @memberof ModuleLoader
-	 * @instance
 	 * @param {string} id Defined module id, which is deprecated.
 	 * @param {Object} obj Defined module body, can be any JavaScript object.
 	 * @param {string} [replacement] Give an optional replacement for this module (which
@@ -97,6 +89,6 @@ ModuleLoader.prototype = {
 		// register it as a deprecated one
 		mw.log.deprecate( this._register, id, obj, msg );
 	}
-};
+}
 
 module.exports = ModuleLoader;

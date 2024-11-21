@@ -67,20 +67,6 @@ module.exports = ( env, argv ) => ( {
 			'./mockMediaWiki': path.resolve( __dirname, 'tests/node-qunit/utils/blank.js' )
 		}
 	},
-	module: {
-		rules: [ {
-			test: /\.js$/,
-			exclude: /node_modules/,
-			use: {
-				loader: 'babel-loader',
-				options: {
-					// Beware of https://github.com/babel/babel-loader/issues/690. Changes to browsers require
-					// manual invalidation.
-					cacheDirectory: true
-				}
-			}
-		} ]
-	},
 	optimization: {
 		// Don't produce production output when a build error occurs.
 		emitOnErrors: argv.mode !== 'production',
@@ -147,7 +133,9 @@ module.exports = ( env, argv ) => ( {
 		}
 	},
 
+	target: 'browserslist',
 	output: {
+
 		// Specify the destination of all build products.
 		path: distDir,
 

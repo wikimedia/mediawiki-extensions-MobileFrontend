@@ -1,5 +1,4 @@
-const util = require( '../mobile.startup/util' ),
-	mfExtend = require( '../mobile.startup/mfExtend' );
+const util = require( '../mobile.startup/util' );
 
 /**
  * Class to assist a view in implementing infinite scrolling on some DOM
@@ -25,10 +24,9 @@ const util = require( '../mobile.startup/util' ),
  *     @example
  *     <code>
  *       var
- *         mfExtend = require( './mfExtend' ),
  *         ScrollEndEventEmitter = require( './ScrollEndEventEmitter' ),
  *         eventBus = require( './eventBusSingleton' );
- *       mfExtend( PhotoList, View, {
+ *       class PhotoList extends View {
  *         //...
  *         initialize: function ( options ) {
  *           this.gateway = new PhotoListGateway( {
@@ -38,7 +36,7 @@ const util = require( '../mobile.startup/util' ),
  *           this.scrollEndEventEmitter = new ScrollEndEventEmitter( eventBus, 1000 );
  *           this.scrollEndEventEmitter.on( ScrollEndEventEmitter.EVENT_SCROLL_END,
  *             this._loadPhotos.bind( this ) );
- *           View.prototype.initialize.apply( this, arguments );
+ *           super.initialize( options );
  *         },
  *         preRender: function () {
  *           // 2. Disable until we've got the list rendered and set DOM el
@@ -52,48 +50,39 @@ const util = require( '../mobile.startup/util' ),
  *             this.scrollEndEventEmitter.enable();
  *           } );
  *         }
- *       } );
+ *       }
  *     </code>
  *
  * @fires ScrollEndEventEmitter#ScrollEndEventEmitter-scrollEnd
- * @param {Object} eventBus object to listen for scroll:throttled events
- * @param {number} [threshold=100] distance in pixels used to calculate if scroll
- * position is near the end of the $el
  */
-function ScrollEndEventEmitter( eventBus, threshold ) {
-	this.threshold = threshold || 100;
-	this.eventBus = eventBus;
-	this.enable();
-	OO.EventEmitter.call( this );
-}
-OO.mixinClass( ScrollEndEventEmitter, OO.EventEmitter );
+class ScrollEndEventEmitter {
+	/**
+	 * @param {Object} eventBus object to listen for scroll:throttled events
+	 * @param {number} [threshold=100] distance in pixels used to calculate if scroll
+	 * position is near the end of the $el
+	 */
+	constructor( eventBus, threshold ) {
+		this.threshold = threshold || 100;
+		this.eventBus = eventBus;
+		this.enable();
+		OO.EventEmitter.call( this );
+	}
 
-/**
- * Fired when scroll bottom has been reached.
- *
- * @event ScrollEndEventEmitter#ScrollEndEventEmitter-scrollEnd
- */
-ScrollEndEventEmitter.EVENT_SCROLL_END = 'ScrollEndEventEmitter-scrollEnd';
-
-mfExtend( ScrollEndEventEmitter, {
 	/**
 	 * Listen to scroll on window and notify this._onScroll
 	 *
-	 * @memberof ScrollEndEventEmitter
-	 * @instance
 	 * @private
 	 */
 	_bindScroll() {
 		if ( !this._scrollHandler ) {
-			this._scrollHandler = this._onScroll.bind( this );
+			this._scrollHandler = () => this._onScroll();
 			this.eventBus.on( 'scroll:throttled', this._scrollHandler );
 		}
-	},
+	}
+
 	/**
 	 * Unbind scroll handler
 	 *
-	 * @memberof ScrollEndEventEmitter
-	 * @instance
 	 * @private
 	 */
 	_unbindScroll() {
@@ -101,12 +90,11 @@ mfExtend( ScrollEndEventEmitter, {
 			this.eventBus.off( 'scroll:throttled', this._scrollHandler );
 			this._scrollHandler = null;
 		}
-	},
+	}
+
 	/**
 	 * Scroll handler. Triggers load event when near the end of the container.
 	 *
-	 * @memberof ScrollEndEventEmitter
-	 * @instance
 	 * @private
 	 */
 	_onScroll() {
@@ -116,12 +104,11 @@ mfExtend( ScrollEndEventEmitter, {
 			this.disable();
 			this.emit( ScrollEndEventEmitter.EVENT_SCROLL_END );
 		}
-	},
+	}
+
 	/**
 	 * Is the scroll position near the end of the container element?
 	 *
-	 * @memberof ScrollEndEventEmitter
-	 * @instance
 	 * @private
 	 * @return {boolean}
 	 */
@@ -133,38 +120,41 @@ mfExtend( ScrollEndEventEmitter, {
 			scrollBottom = $window.scrollTop() + $window.height(),
 			endPosition = this.$el.offset().top + this.$el.outerHeight();
 		return scrollBottom + this.threshold > endPosition;
-	},
+	}
+
 	/**
 	 * Enable the ScrollEndEventEmitter so that it triggers events.
-	 *
-	 * @memberof ScrollEndEventEmitter
-	 * @instance
 	 */
 	enable() {
 		this.enabled = true;
 		this._bindScroll();
-	},
+	}
+
 	/**
 	 * Disable the ScrollEndEventEmitter so that it doesn't trigger events.
-	 *
-	 * @memberof ScrollEndEventEmitter
-	 * @instance
 	 */
 	disable() {
 		this.enabled = false;
 		this._unbindScroll();
-	},
+	}
+
 	/**
 	 * Set the element to compare to scroll position to
 	 *
-	 * @memberof ScrollEndEventEmitter
-	 * @instance
 	 * @param {jQuery.Object} $el jQuery element where we want to listen for
 	 * scroll end.
 	 */
 	setElement( $el ) {
 		this.$el = $el;
 	}
-} );
+}
+OO.mixinClass( ScrollEndEventEmitter, OO.EventEmitter );
+
+/**
+ * Fired when scroll bottom has been reached.
+ *
+ * @event ScrollEndEventEmitter#ScrollEndEventEmitter-scrollEnd
+ */
+ScrollEndEventEmitter.EVENT_SCROLL_END = 'ScrollEndEventEmitter-scrollEnd';
 
 module.exports = ScrollEndEventEmitter;

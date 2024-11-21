@@ -4,5 +4,5 @@
 # See also browsers definition in ResourceLoader startup module
 # in MediaWiki core 'resources/src/startup/startup.js'.
 
-extends browserslist-config-wikimedia/basic
+extends browserslist-config-wikimedia/modern
 

@@ -2,50 +2,47 @@ const browser = require( './Browser' ).getSingleton(),
 	View = require( './View' ),
 	util = require( './util' ),
 	currentPage = require( './currentPage' ),
-	eventBus = require( './eventBusSingleton' ),
-	mfExtend = require( './mfExtend' );
+	eventBus = require( './eventBusSingleton' );
 
 let skin;
 
 /**
  * Representation of the current skin being rendered.
  *
- * @class Skin
- * @extends module:mobile.startup/View
  * @uses Browser
  * @uses Page
  * @fires Skin#click
- * @param {Object} params Configuration options
- * @param {OO.EventEmitter} params.eventBus Object used to listen for
- * @param {Page} params.page
- * scroll:throttled, resize:throttled, and section-toggled events
  */
-function Skin( params ) {
-	const options = util.extend( {}, params );
-
-	this.page = options.page;
-	this.name = options.name;
-	this.eventBus = options.eventBus;
-	options.isBorderBox = false;
-	View.call( this, options );
-}
-
-mfExtend( Skin, View, {
+class Skin extends View {
 	/**
-	 * @memberof Skin
-	 * @instance
+	 * @param {Object} params Configuration options
+	 * @param {OO.EventEmitter} params.eventBus Object used to listen for
+	 * @param {Page} params.page
+	 * scroll:throttled, resize:throttled, and section-toggled events
+	 */
+	constructor( params ) {
+		const options = util.extend( {
+			isBorderBox: false
+		}, params );
+		super( options );
+		this.page = options.page;
+		this.name = options.name;
+		this.eventBus = options.eventBus;
+	}
+
+	/**
 	 * @mixes module:mobile.startup/View#defaults
 	 * @property {Object} defaults Default options hash.
 	 * @property {Page} defaults.page page the skin is currently rendering
 	 */
-	defaults: {
-		page: undefined
-	},
+	get defaults() {
+		return {
+			page: undefined
+		};
+	}
 
 	/**
 	 * @inheritdoc
-	 * @memberof Skin
-	 * @instance
 	 */
 	postRender() {
 		const $el = this.$el;
@@ -62,10 +59,9 @@ mfExtend( Skin, View, {
 		this.$el.find( '#mw-mf-page-center' ).on( 'click', ( ev ) => {
 			this.emit( 'click', ev );
 		} );
-	},
+	}
 
 	/**
-	 * @memberof Skin
 	 * @throws {Error} if mediawiki message is in unexpected format.
 	 * @return {jQuery.Object} a list of links
 	 */
@@ -79,13 +75,12 @@ mfExtend( Skin, View, {
 		} else {
 			return mobileMsgExists ? mobileLicense.parseDom() : this.$el.find( '#footer-info-copyright a' ).clone();
 		}
-	},
+	}
+
 	/**
 	 * Returns the appropriate license message including links/name to
 	 * terms of use (if any) and license page
 	 *
-	 * @memberof Skin
-	 * @instance
 	 * @return {string|undefined}
 	 */
 	getLicenseMsg() {
@@ -120,7 +115,7 @@ mfExtend( Skin, View, {
 
 		return licenseMsg;
 	}
-} );
+}
 
 /**
  * Get a skin singleton

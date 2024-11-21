@@ -13,35 +13,25 @@ const MANAGED_STATE = 'MobileFrontend OverlayManager was here!';
  *
  * This allows overlays to function like real pages, with similar browser back/forward
  * and refresh behavior.
- *
- * @class module:mobile.startup/OverlayManager
- * @param {Router} router
- * @param {Element} container where overlays should be managed
  */
-function OverlayManager( router, container ) {
-	router.on( 'route', this._checkRoute.bind( this ) );
-	this.router = router;
-	// use an object instead of an array for entries so that we don't
-	// duplicate entries that already exist
-	this.entries = {};
-	// stack of all the open overlays, stack[0] is the latest one
-	this.stack = [];
-	this.hideCurrent = true;
-	// Set the element that overlays will be appended to
-	this.container = container;
-}
+class OverlayManager {
+	/**
+	 * @param {Router} router
+	 * @param {Element} container where overlays should be managed
+	 */
+	constructor( router, container ) {
+		router.on( 'route', this._checkRoute.bind( this ) );
+		this.router = router;
+		// use an object instead of an array for entries so that we don't
+		// duplicate entries that already exist
+		this.entries = {};
+		// stack of all the open overlays, stack[0] is the latest one
+		this.stack = [];
+		this.hideCurrent = true;
+		// Set the element that overlays will be appended to
+		this.container = container;
+	}
 
-/**
- * Attach an event to the overlays hide event
- *
- * @param {module:mobile.startup/Overlay} overlay
- * @private
- */
-function attachHideEvent( overlay ) {
-	overlay.on( 'hide', () => overlay.emit( '_om_hide' ) );
-}
-
-OverlayManager.prototype = {
 	/**
 	 * Don't try to hide the active overlay on a route change event triggered
 	 * by hiding another overlay.
@@ -49,8 +39,6 @@ OverlayManager.prototype = {
 	 * on an overlay that it itself managed by the OverlayManager.
 	 * MUST be called when the stack is not empty.
 	 *
-	 * @memberof module:mobile.startup/OverlayManager
-	 * @instance
 	 * @private
 	 */
 	_onHideOverlayOutsideOverlayManager() {
@@ -74,13 +62,11 @@ OverlayManager.prototype = {
 			// does the route need to change?
 			this.router.back();
 		}
-	},
+	}
 
 	/**
 	 * Attach overlay to DOM
 	 *
-	 * @memberof module:mobile.startup/OverlayManager
-	 * @instance
 	 * @private
 	 * @param {module:mobile.startup/Overlay} overlay to attach
 	 */
@@ -88,12 +74,11 @@ OverlayManager.prototype = {
 		if ( !overlay.$el.parents().length ) {
 			this.container.appendChild( overlay.$el[0] );
 		}
-	},
+	}
+
 	/**
 	 * Show the overlay and bind the '_om_hide' event to _onHideOverlay.
 	 *
-	 * @memberof module:mobile.startup/OverlayManager
-	 * @instance
 	 * @private
 	 * @param {module:mobile.startup/Overlay} overlay to show
 	 */
@@ -107,17 +92,15 @@ OverlayManager.prototype = {
 		// It will fire if an Overlay emits a hide event (See attachHideEvent)
 		// in the case where a route change has not occurred (this event is disabled
 		// inside _hideOverlay which is called inside _checkRoute)
-		overlay.once( '_om_hide', this._onHideOverlayOutsideOverlayManager.bind( this ) );
+		overlay.once( '_om_hide', () => this._onHideOverlayOutsideOverlayManager() );
 
 		this._attachOverlay( overlay );
 		overlay.show();
-	},
+	}
 
 	/**
 	 * Hide overlay
 	 *
-	 * @memberof module:mobile.startup/OverlayManager
-	 * @instance
 	 * @private
 	 * @param {module:mobile.startup/Overlay} overlay to hide
 	 * @param {Function} onBeforeExitCancel to pass to onBeforeExit
@@ -143,17 +126,15 @@ OverlayManager.prototype = {
 
 		// if closing prevented, reattach the callback
 		if ( !result ) {
-			overlay.once( '_om_hide', this._onHideOverlayOutsideOverlayManager.bind( this ) );
+			overlay.once( '_om_hide', () => this._onHideOverlayOutsideOverlayManager() );
 		}
 
 		return result;
-	},
+	}
 
 	/**
 	 * Show match's overlay if match is not null.
 	 *
-	 * @memberof module:mobile.startup/OverlayManager
-	 * @instance
 	 * @private
 	 * @param {Object|null} match Object with factory function's result. null if no match.
 	 */
@@ -175,13 +156,11 @@ OverlayManager.prototype = {
 				}
 			}
 		}
-	},
+	}
 
 	/**
 	 * A callback for Router's `route` event.
 	 *
-	 * @memberof module:mobile.startup/OverlayManager
-	 * @instance
 	 * @private
 	 * @param {jQuery.Event} ev Event object.
 	 */
@@ -223,14 +202,12 @@ OverlayManager.prototype = {
 
 		this.hideCurrent = true;
 		this._processMatch( match );
-	},
+	}
 
 	/**
 	 * Check if a given path matches one of the existing entries and
 	 * remove it from the stack.
 	 *
-	 * @memberof module:mobile.startup/OverlayManager
-	 * @instance
 	 * @private
 	 * @param {string} path Path (hash) to check.
 	 * @param {Object} entry Entry object created in OverlayManager#add.
@@ -290,7 +267,7 @@ OverlayManager.prototype = {
 		}
 
 		return null;
-	},
+	}
 
 	/**
 	 * Add an overlay that should be shown for a specific fragment identifier.
@@ -307,8 +284,6 @@ OverlayManager.prototype = {
 	 *         return new HiOverlay( { name: name } ) );
 	 *     } );
 	 *
-	 * @memberof module:mobile.startup/OverlayManager
-	 * @instance
 	 * @param {RegExp|string} route definition that can be a regular
 	 * expression (optionally with parameters) or a string literal.
 	 *
@@ -346,15 +321,13 @@ OverlayManager.prototype = {
 		// The DOM must fully load before we can show the overlay because Overlay relies on it.
 		util.docReady( () => this._processMatch( this._matchRoute( this.router.getPath(),
 			entry ) ) );
-	},
+	}
 
 	/**
 	 * Replace the currently displayed overlay with a new overlay without changing the
 	 * URL. This is useful for when you want to switch overlays, but don't want to
 	 * change the back button or close box behavior.
 	 *
-	 * @memberof module:mobile.startup/OverlayManager
-	 * @instance
 	 * @param {Object} overlay The overlay to display
 	 */
 	replaceCurrent( overlay ) {
@@ -369,39 +342,49 @@ OverlayManager.prototype = {
 		attachHideEvent( overlay );
 		this._show( overlay );
 	}
-};
+
+	/**
+	 * Retrieve a singleton instance using 'mediawiki.router'.
+	 *
+	 * @memberof module:mobile.startup/OverlayManager
+	 * @return {module:mobile.startup/OverlayManager}
+	 */
+	static getSingleton() {
+		if ( !overlayManager ) {
+			const
+				router = __non_webpack_require__( 'mediawiki.router' ),
+				container = document.createElement( 'div' ),
+				// Note getPath returns hash minus the '#' character:
+				hash = router.getPath(),
+				// eslint-disable-next-line no-restricted-properties
+				state = window.history.state;
+			container.className = 'mw-overlays-container';
+			document.body.appendChild( container );
+			// If an overlay was loaded by directly navigating to an URL with a hash (e.g. linked from
+			// another page or browser bookmark), generate an extra history entry to allow closing the
+			// overlay without leaving the page (see T201852). Put our marker into the entry state so
+			// that we can detect it if the page is refreshed and do not generate another entry.
+			if ( hash && state !== MANAGED_STATE ) {
+				// eslint-disable-next-line no-restricted-properties
+				window.history.replaceState( null, null, '#' );
+				// eslint-disable-next-line no-restricted-properties
+				window.history.pushState( MANAGED_STATE, null, `#${ hash }` );
+			}
+			overlayManager = new OverlayManager( router, container );
+		}
+		return overlayManager;
+	}
+}
 
 /**
- * Retrieve a singleton instance using 'mediawiki.router'.
+ * Attach an event to the overlays hide event
  *
- * @memberof module:mobile.startup/OverlayManager
- * @return {module:mobile.startup/OverlayManager}
+ * @param {module:mobile.startup/Overlay} overlay
+ * @private
  */
-OverlayManager.getSingleton = function () {
-	if ( !overlayManager ) {
-		const
-			router = __non_webpack_require__( 'mediawiki.router' ),
-			container = document.createElement( 'div' ),
-			// Note getPath returns hash minus the '#' character:
-			hash = router.getPath(),
-			// eslint-disable-next-line no-restricted-properties
-			state = window.history.state;
-		container.className = 'mw-overlays-container';
-		document.body.appendChild( container );
-		// If an overlay was loaded by directly navigating to an URL with a hash (e.g. linked from
-		// another page or browser bookmark), generate an extra history entry to allow closing the
-		// overlay without leaving the page (see T201852). Put our marker into the entry state so
-		// that we can detect it if the page is refreshed and do not generate another entry.
-		if ( hash && state !== MANAGED_STATE ) {
-			// eslint-disable-next-line no-restricted-properties
-			window.history.replaceState( null, null, '#' );
-			// eslint-disable-next-line no-restricted-properties
-			window.history.pushState( MANAGED_STATE, null, `#${ hash }` );
-		}
-		overlayManager = new OverlayManager( router, container );
-	}
-	return overlayManager;
-};
+function attachHideEvent( overlay ) {
+	overlay.on( 'hide', () => overlay.emit( '_om_hide' ) );
+}
 
 OverlayManager.test = {
 	MANAGED_STATE,

@@ -2,9 +2,6 @@ const util = require( '../util' ),
 	View = require( '../View' ),
 	IconButton = require( '../IconButton' );
 
-/**
- * @extends module:mobile.startup/View
- */
 class SearchHeaderView extends View {
 	/**
 	 * constructor
@@ -67,14 +64,14 @@ class SearchHeaderView extends View {
 			label: mw.msg( 'mobile-frontend-clear-search' ),
 			additionalClassNames: 'clear',
 			events: {
-				click: function () {
+				click: () => {
 					this.$el.find( 'input' ).val( '' ).trigger( 'focus' );
 					this.options.onInput( '' );
 					clearIcon.$el.hide();
 					// In beta the clear button is on top of the search input.
 					// Stop propagation so that the input doesn't receive the click.
 					return false;
-				}.bind( this )
+				}
 			}
 		} );
 		this.clearIcon = clearIcon;

@@ -3,63 +3,61 @@ const
 	header = require( './headers' ).header,
 	Anchor = require( './Anchor' ),
 	util = require( './util' ),
-	browser = require( './Browser' ).getSingleton(),
-	mfExtend = require( './mfExtend' );
+	browser = require( './Browser' ).getSingleton();
 
 /**
- * @class module:mobile.startup/Overlay
- * @classdesc Mobile modal window
- * @extends module:mobile.startup/View
+ * Mobile modal window
+ *
  * @uses Icon
  * @uses Button
  * @fires Overlay#hide
- * @param {Object} props
- * @param {Object} props.events - custom events to be bound to the overlay.
- * @param {boolean} [props.headerChrome] Whether the header has chrome.
- * @param {View[]} [props.headerActions] children (usually buttons or icons)
- *   that should be placed in the header actions. Ignored when `headers` used.
- * @param {string} [props.heading] heading for the overlay header. Use `headers` where
- *  overlays require more than one header. Ignored when `headers` used.
- * @param {boolean} props.noHeader renders an overlay without a header
- * @param {Element[]} [props.headers] allows overlays to have more than one
- *  header. When used it is an array of jQuery Objects representing
- *  headers created via the header util function. It is expected that only one of these
- *  should be visible. If undefined, headerActions and heading is used.
- * @param {Object} [props.footerAnchor] options for an optional Anchor
- *  that can appear in the footer
- * @param {Function} props.onBeforeExit allows a consumer to prevent exits in certain
- *  situations. This callback gets the following parameters:
- *  - 1) the exit function which should be run after the consumer has made their changes.
- *  - 2) the cancel function which should be run if the consumer explicitly changes their mind
  */
-function Overlay( props ) {
-	this.isIos = browser.isIos();
+class Overlay extends View {
+	/**
+	 * @param {Object} props
+	 * @param {Object} props.events - custom events to be bound to the overlay.
+	 * @param {boolean} [props.headerChrome] Whether the header has chrome.
+	 * @param {View[]} [props.headerActions] children (usually buttons or icons)
+	 *   that should be placed in the header actions. Ignored when `headers` used.
+	 * @param {string} [props.heading] heading for the overlay header. Use `headers` where
+	 *  overlays require more than one header. Ignored when `headers` used.
+	 * @param {boolean} props.noHeader renders an overlay without a header
+	 * @param {Element[]} [props.headers] allows overlays to have more than one
+	 *  header. When used it is an array of jQuery Objects representing
+	 *  headers created via the header util function. It is expected that only one of these
+	 *  should be visible. If undefined, headerActions and heading is used.
+	 * @param {Object} [props.footerAnchor] options for an optional Anchor
+	 *  that can appear in the footer
+	 * @param {Function} props.onBeforeExit allows a consumer to prevent exits in certain
+	 *  situations. This callback gets the following parameters:
+	 *  - 1) the exit function which should be run after the consumer has made their changes.
+	 *  - 2) the cancel function which should be run if the consumer explicitly changes their mind
+	 */
+	constructor( props ) {
+		super(
+			util.extend(
+				true,
+				{
+					headerChrome: false,
+					className: 'overlay'
+				},
+				props,
+				{
+					events: util.extend(
+						{
+							// FIXME: Remove .initial-header selector
+							'click .cancel, .confirm, .initial-header .back': 'onExitClick',
+							click: ( ev ) => ev.stopPropagation()
+						},
+						props.events
+					)
+				}
+			)
+		);
+	}
 
-	View.call(
-		this,
-		util.extend(
-			true,
-			{
-				headerChrome: false,
-				className: 'overlay'
-			},
-			props,
-			{
-				events: util.extend(
-					{
-						// FIXME: Remove .initial-header selector
-						'click .cancel, .confirm, .initial-header .back': 'onExitClick',
-						click: ( ev ) => ev.stopPropagation()
-					},
-					props.events
-				)
-			}
-		)
-	);
-}
-
-mfExtend( Overlay, View, {
-	template: util.template( `
+	get template() {
+		return util.template( `
 {{^noHeader}}
 <div class="overlay-header-container header-container{{#headerChrome}}
 	header-chrome{{/headerChrome}} position-fixed">
@@ -69,9 +67,20 @@ mfExtend( Overlay, View, {
 	{{>content}}
 </div>
 <div class="overlay-footer-container position-fixed"></div>
-	` ),
+	` );
+	}
 
-	hideTimeout: null,
+	get isIos() {
+		return browser.isIos();
+	}
+
+	set hideTimeout( timeout ) {
+		this._hideTimeout = timeout;
+	}
+
+	get hideTimeout() {
+		return this._hideTimeout;
+	}
 
 	/**
 	 * Shows the spinner right to the input field.
@@ -82,7 +91,7 @@ mfExtend( Overlay, View, {
 	 */
 	showSpinner() {
 		this.$el.find( '.spinner' ).removeClass( 'hidden' );
-	},
+	}
 
 	/**
 	 * Hide the spinner near to the input field.
@@ -93,7 +102,7 @@ mfExtend( Overlay, View, {
 	 */
 	hideSpinner() {
 		this.$el.find( '.spinner' ).addClass( 'hidden' );
-	},
+	}
 
 	/**
 	 * @inheritdoc
@@ -116,7 +125,7 @@ mfExtend( Overlay, View, {
 			)
 		];
 		this.$el.find( '.overlay-header-container' ).append( headers );
-	},
+	}
 
 	/**
 	 * ClickBack event handler
@@ -126,9 +135,9 @@ mfExtend( Overlay, View, {
 	 * @param {Object} ev event object
 	 */
 	onExitClick( ev ) {
-		const exit = function () {
+		const exit = () => {
 			this.hide();
-		}.bind( this );
+		};
 		ev.preventDefault();
 		ev.stopPropagation();
 		if ( this.options.onBeforeExit ) {
@@ -138,7 +147,8 @@ mfExtend( Overlay, View, {
 			exit();
 		}
 
-	},
+	}
+
 	/**
 	 * Attach overlay to current view and show it.
 	 *
@@ -162,7 +172,8 @@ mfExtend( Overlay, View, {
 			clearTimeout( this.hideTimeout );
 			this.hideTimeout = null;
 		}
-	},
+	}
+
 	/**
 	 * Detach the overlay from the current view
 	 * Should not be overriden as soon to be deprecated.
@@ -193,7 +204,7 @@ mfExtend( Overlay, View, {
 		this.emit( 'hide' );
 
 		return true;
-	},
+	}
 
 	/**
 	 * Show elements that are selected by the className.
@@ -210,7 +221,7 @@ mfExtend( Overlay, View, {
 		this.$el.find( '.hideable' ).addClass( 'hidden' );
 		this.$el.find( className ).removeClass( 'hidden' );
 	}
-} );
+}
 
 /**
  * Factory method for an overlay with a single child

@@ -23,16 +23,15 @@ const util = require( '../util' ),
 /**
  * API for retrieving and modifying page watch statuses. This module interacts
  * with two endpoints, API:Info for GETs and API:Watch and for POSTs.
- *
- * @class WatchstarGateway
- * @param {mw.Api} api
- * @ignore
  */
-function WatchstarGateway( api ) {
-	this.api = api;
-}
+class WatchstarGateway {
+	/**
+	 * @param {mw.Api} api
+	 */
+	constructor( api ) {
+		this.api = api;
+	}
 
-WatchstarGateway.prototype = {
 	/**
 	 * Issues zero to two asynchronous HTTP requests for the watch status of
 	 * each page ID and title passed.
@@ -49,8 +48,6 @@ WatchstarGateway.prototype = {
 	 * and ID members will behave as expected but there is no reason to issue
 	 * such a request.
 	 *
-	 * @memberof WatchstarGateway
-	 * @instance
 	 * @param {PageID[]} ids
 	 * @param {PageTitle[]} titles
 	 * @return {jQuery.Deferred<WatchStatusMap>}
@@ -63,11 +60,9 @@ WatchstarGateway.prototype = {
 		] ).then( function () {
 			return util.extend.apply( util, arguments );
 		} );
-	},
+	}
 
 	/**
-	 * @memberof WatchstarGateway
-	 * @instance
 	 * @param {PageID[]} ids
 	 * @return {jQuery.Deferred<WatchStatusMap>}
 	 */
@@ -83,11 +78,9 @@ WatchstarGateway.prototype = {
 			inprop: 'watched',
 			pageids: ids
 		} ).then( ( rsp ) => this._unmarshalGetResponse( rsp ) );
-	},
+	}
 
 	/**
-	 * @memberof WatchstarGateway
-	 * @instance
 	 * @param {PageTitle[]} titles
 	 * @return {jQuery.Deferred<WatchStatusMap>}
 	 */
@@ -101,11 +94,9 @@ WatchstarGateway.prototype = {
 			inprop: 'watched',
 			titles
 		} ) ).then( ( rsp ) => this._unmarshalGetResponse( rsp ) );
-	},
+	}
 
 	/**
-	 * @memberof WatchstarGateway
-	 * @instance
 	 * @param {PageTitle[]} titles
 	 * @param {WatchStatus} watched
 	 * @return {jQuery.Deferred}
@@ -119,11 +110,9 @@ WatchstarGateway.prototype = {
 			params.unwatch = !watched;
 		}
 		return this.api.postWithToken( 'watch', params );
-	},
+	}
 
 	/**
-	 * @memberof WatchstarGateway
-	 * @instance
 	 * @param {Object} rsp The API:Info response.
 	 * @return {jQuery.Deferred<WatchStatusMap>}
 	 * @see getStatusesByID
@@ -137,6 +126,6 @@ WatchstarGateway.prototype = {
 			return statuses;
 		}, {} );
 	}
-};
+}
 
 module.exports = WatchstarGateway;

@@ -1,80 +1,78 @@
 const
 	View = require( '../mobile.startup/View' ),
 	util = require( '../mobile.startup/util' ),
-	langUtil = require( './util' ),
-	mfExtend = require( '../mobile.startup/mfExtend' );
+	langUtil = require( './util' );
 
 /**
- * @class Hooks~LanguageSearcher
- * @classdesc Overlay displaying a structured list of languages for a page, only accessible via
- * the  {@link Hooks~'mobileFrontend.languageSearcher.onOpen' mobileFrontend.languageSearcher.onOpen hook}.
+ * Overlay displaying a structured list of languages for a page, only accessible via
+ * the {@link Hooks~'mobileFrontend.languageSearcher.onOpen' mobileFrontend.languageSearcher.onOpen hook}.
+ *
  * @hideconstructor
- * @extends module:mobile.startup/View
- * @param {Object} props Configuration options
- * @param {Object[]} props.languages list of language objects as returned by the API
- * @param {Array|boolean} props.variants language variant objects
- *  or false if no variants exist
- * @param {boolean} props.showSuggestedLanguages If the suggested languages
- *  section should be rendered.
- * @param {string} [props.deviceLanguage] the device's primary language
- * @param {Function} [props.onOpen] callback that fires on opening the searcher
  */
-function LanguageSearcher( props ) {
+class LanguageSearcher extends View {
 	/**
-	 * @prop {StructuredLanguages} languages` JSDoc.
+	 * @param {Object} props Configuration options
+	 * @param {Object[]} props.languages list of language objects as returned by the API
+	 * @param {Array|boolean} props.variants language variant objects
+	 *  or false if no variants exist
+	 * @param {boolean} props.showSuggestedLanguages If the suggested languages
+	 *  section should be rendered.
+	 * @param {string} [props.deviceLanguage] the device's primary language
+	 * @param {Function} [props.onOpen] callback that fires on opening the searcher
 	 */
-	const languages = langUtil.getStructuredLanguages(
-		props.languages,
-		props.variants,
-		langUtil.getFrequentlyUsedLanguages(),
-		props.showSuggestedLanguages,
-		props.deviceLanguage
-	);
+	constructor( props ) {
+		/**
+		 * @prop {StructuredLanguages} languages` JSDoc.
+		 */
+		const languages = langUtil.getStructuredLanguages(
+			props.languages,
+			props.variants,
+			langUtil.getFrequentlyUsedLanguages(),
+			props.showSuggestedLanguages,
+			props.deviceLanguage
+		);
 
-	View.call(
-		this,
-		util.extend(
-			{
-				className: 'language-searcher',
-				events: {
-					'click a': 'onLinkClick',
-					'click .language-search-banner': 'onSearchBannerClick',
-					'input .search': 'onSearchInput'
+		super(
+			util.extend(
+				{
+					className: 'language-searcher',
+					events: {
+						'click a': 'onLinkClick',
+						'click .language-search-banner': 'onSearchBannerClick',
+						'input .search': 'onSearchInput'
+					},
+					// the rest are template properties
+					inputPlaceholder: mw.msg( 'mobile-frontend-languages-structured-overlay-search-input-placeholder' ),
+					// we can't rely on CSS only to uppercase the headings. See https://stackoverflow.com/questions/3777443/css-text-transform-not-working-properly-for-turkish-characters
+					allLanguagesHeader: mw.msg( 'mobile-frontend-languages-structured-overlay-all-languages-header' ).toLocaleUpperCase(),
+					suggestedLanguagesHeader: mw.msg( 'mobile-frontend-languages-structured-overlay-suggested-languages-header' ).toLocaleUpperCase(),
+					noResultsFoundHeader: mw.msg( 'mobile-frontend-languages-structured-overlay-no-results' ),
+					noResultsFoundMessage: mw.msg( 'mobile-frontend-languages-structured-overlay-no-results-body' ),
+					allLanguages: languages.all,
+					allLanguagesCount: languages.all.length,
+					suggestedLanguages: languages.suggested,
+					suggestedLanguagesCount: languages.suggested.length,
+					showSuggestedLanguagesHeader: languages.suggested.length > 0
 				},
-				// the rest are template properties
-				inputPlaceholder: mw.msg( 'mobile-frontend-languages-structured-overlay-search-input-placeholder' ),
-				// we can't rely on CSS only to uppercase the headings. See https://stackoverflow.com/questions/3777443/css-text-transform-not-working-properly-for-turkish-characters
-				allLanguagesHeader: mw.msg( 'mobile-frontend-languages-structured-overlay-all-languages-header' ).toLocaleUpperCase(),
-				suggestedLanguagesHeader: mw.msg( 'mobile-frontend-languages-structured-overlay-suggested-languages-header' ).toLocaleUpperCase(),
-				noResultsFoundHeader: mw.msg( 'mobile-frontend-languages-structured-overlay-no-results' ),
-				noResultsFoundMessage: mw.msg( 'mobile-frontend-languages-structured-overlay-no-results-body' ),
-				allLanguages: languages.all,
-				allLanguagesCount: languages.all.length,
-				suggestedLanguages: languages.suggested,
-				suggestedLanguagesCount: languages.suggested.length,
-				showSuggestedLanguagesHeader: languages.suggested.length > 0
-			},
-			props
-		)
-	);
+				props
+			)
+		);
 
-	// defer event to be emitted after event handler has been registered
-	const onOpen = props.onOpen;
-	if ( !onOpen ) {
-		return;
+		// defer event to be emitted after event handler has been registered
+		const onOpen = props.onOpen;
+		if ( !onOpen ) {
+			return;
+		}
+		setTimeout( () => {
+			onOpen( this );
+		}, 0 );
 	}
-	setTimeout( () => {
-		onOpen( this );
-	}, 0 );
-}
 
-mfExtend( LanguageSearcher, View, {
 	/**
 	 * @inheritdoc
-	 * @memberof LanguageSearcher
-	 * @instance
 	 */
-	template: util.template( `
+	get template() {
+		return util.template( `
 <div class="panel">
 	<div class="panel-body search-box">
 		<input type="search" class="search" placeholder="{{inputPlaceholder}}">
@@ -124,46 +122,46 @@ mfExtend( LanguageSearcher, View, {
 		<p class="empty-results-body">{{noResultsFoundMessage}}</p>
 	</section>
 </div>
-	` ),
+	` );
+	}
+
 	/**
 	 * @inheritdoc
-	 * @memberof LanguageSearcher
-	 * @instance
 	 */
-	postRender: function () {
+	postRender() {
 		// cache
 		this.$siteLinksList = this.$el.find( '.site-link-list' );
 		this.$languageItems = this.$siteLinksList.find( 'a' );
 		this.$subheaders = this.$el.find( 'h3' );
 		this.$emptyResultsSection = this.$el.find( '.empty-results' );
-	},
+	}
+
 	/**
 	 * Method that can be called outside MF extension to render
 	 * a banner inside the language overlay.
 	 *
 	 * Stable for use inside ContentTranslation
 	 *
-	 * @memberof LanguageSearcher
 	 * @param {string} bannerHTML
 	 * @param {string} firstMissingLanguage
 	 */
-	addBanner: function ( bannerHTML, firstMissingLanguage ) {
+	addBanner( bannerHTML, firstMissingLanguage ) {
 		this.options.bannerHTML = bannerHTML;
 		this.options.bannerFirstLanguage = firstMissingLanguage;
 		this.options.showSuggestedLanguagesHeader = true;
 		this.render();
-	},
-	onSearchBannerClick: function () {
+	}
+
+	onSearchBannerClick() {
 		this.$el.find( '.search' ).val( this.options.bannerFirstLanguage ).trigger( 'input' );
-	},
+	}
+
 	/**
 	 * Article link click event handler
 	 *
-	 * @memberof LanguageSearcher
-	 * @instance
 	 * @param {jQuery.Event} ev
 	 */
-	onLinkClick: function ( ev ) {
+	onLinkClick( ev ) {
 		const $link = this.$el.find( ev.currentTarget ),
 			lang = $link.attr( 'lang' );
 		/**
@@ -174,28 +172,26 @@ mfExtend( LanguageSearcher, View, {
 		 */
 		mw.hook( 'mobileFrontend.languageSearcher.linkClick' ).fire( lang );
 		langUtil.saveLanguageUsageCount( lang, langUtil.getFrequentlyUsedLanguages() );
-	},
+	}
+
 	/**
 	 * Search input handler
 	 *
-	 * @memberof LanguageSearcher
-	 * @instance
 	 * @param {jQuery.Event} ev Event object.
 	 */
-	onSearchInput: function ( ev ) {
+	onSearchInput( ev ) {
 		const searchOrigin = ev.originalEvent === undefined ? 'entrypoint-banner' : 'ui';
 
 		this.filterLanguages( ev.target.value.toLowerCase(), searchOrigin );
-	},
+	}
+
 	/**
 	 * Filter the language list to only show languages that match the current search term.
 	 *
-	 * @memberof LanguageSearcher
-	 * @instance
 	 * @param {string} searchQuery of search term (lowercase).
 	 * @param {'entrypoint-banner'|'ui'} searchOrigin for internal use by CX entrypoints only
 	 */
-	filterLanguages: function ( searchQuery, searchOrigin ) {
+	filterLanguages( searchQuery, searchOrigin ) {
 		const filteredList = [];
 
 		if ( searchQuery ) {
@@ -249,6 +245,6 @@ mfExtend( LanguageSearcher, View, {
 			this.$emptyResultsSection.addClass( 'hidden' );
 		}
 	}
-} );
+}
 
 module.exports = LanguageSearcher;

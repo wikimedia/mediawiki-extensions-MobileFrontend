@@ -3,7 +3,6 @@ const PageList = require( '../PageList' ),
 	user = mw.user,
 	util = require( '../util' ),
 	Page = require( '../Page' ),
-	mfExtend = require( '../mfExtend' ),
 	WatchstarGateway = require( './WatchstarGateway' );
 
 /**
@@ -14,25 +13,29 @@ const PageList = require( '../PageList' ),
 /**
  * List of items page view
  *
- * @class WatchstarPageList
  * @uses Page
  * @uses WatchstarGateway
  * @uses Watchstar
- * @extends PageList
  * @ignore
  *
  * @fires WatchstarPageList#unwatch
  * @fires WatchstarPageList#watch
- * @param {Object} options Configuration options
  */
-function WatchstarPageList( options ) {
-	this.wsGateway = new WatchstarGateway( options.api );
-	PageList.apply( this, arguments );
-}
+class WatchstarPageList extends PageList {
 
-mfExtend( WatchstarPageList, PageList, {
 	/**
-	 * @memberof WatchstarPageList
+	 * @param {Object} options Configuration options
+	 */
+	constructor( options ) {
+		super( options );
+	}
+
+	initialize( options ) {
+		this.wsGateway = new WatchstarGateway( options.api );
+		super.initialize( options );
+	}
+
+	/**
 	 * @instance
 	 * @mixes PageList#defaults
 	 * @property {Object} defaults Default options hash.
@@ -43,7 +46,7 @@ mfExtend( WatchstarPageList, PageList, {
 			ids = [],
 			titles = [];
 
-		PageList.prototype.postRender.apply( this );
+		super.postRender();
 
 		const $items = this.queryUnitializedItems();
 		const pages = this.parsePagesFromItems( $items );
@@ -63,22 +66,20 @@ mfExtend( WatchstarPageList, PageList, {
 
 		return this.getPages( ids, titles )
 			.then( ( statuses ) => this.renderItems( $items, statuses ) );
-	},
+	}
 
 	/**
-	 * @memberof WatchstarPageList
 	 * @param {jQuery.Element} $items
 	 * @param {WatchStatusMap} statuses
 	 * @ignore
 	 */
 	queryUnitializedItems() {
 		return this.$el.find( 'li:not(.with-watchstar)' );
-	},
+	}
 
 	/**
 	 * Retrieve pages
 	 *
-	 * @memberof WatchstarPageList
 	 * @instance
 	 * @param {PageID[]} ids
 	 * @param {PageTitle[]} titles
@@ -93,12 +94,11 @@ mfExtend( WatchstarPageList, PageList, {
 		}
 
 		return this.wsGateway.getStatuses( ids, titles );
-	},
+	}
 
 	/**
 	 * @param {jQuery.Element} $items
 	 * @return {PageTitleToPageIDMap}
-	 * @memberof WatchstarPageList
 	 * @ignore
 	 */
 	parsePagesFromItems( $items ) {
@@ -109,12 +109,11 @@ mfExtend( WatchstarPageList, PageList, {
 			pages[$item.attr( 'title' )] = $item.data( 'id' );
 		} );
 		return pages;
-	},
+	}
 
 	/**
 	 * @param {jQuery.Element} $items
 	 * @param {WatchStatusMap} statuses
-	 * @memberof WatchstarPageList
 	 * @ignore
 	 */
 	renderItems( $items, statuses ) {
@@ -138,7 +137,7 @@ mfExtend( WatchstarPageList, PageList, {
 			this._appendWatchstar( $item, page, watched );
 			$item.addClass( 'with-watchstar' );
 		} );
-	},
+	}
 
 	/**
 	 * @param {jQuery.Object} $item
@@ -155,6 +154,6 @@ mfExtend( WatchstarPageList, PageList, {
 			page
 		} ).appendTo( $item );
 	}
-} );
+}
 
 module.exports = WatchstarPageList;

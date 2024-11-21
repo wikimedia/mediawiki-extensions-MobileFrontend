@@ -1,4 +1,4 @@
-let sandbox, ImageGateway, findSizeBucket;
+let sandbox, ImageGateway;
 const
 	sinon = require( 'sinon' ),
 	dom = require( '../utils/dom' ),
@@ -13,7 +13,6 @@ QUnit.module( 'MobileFrontend mobile.mediaViewer/ImageGateway', {
 		jQuery.setUp( sandbox, global );
 		mediaWiki.setUp( sandbox, global );
 		ImageGateway = require( '../../../src/mobile.mediaViewer/ImageGateway' );
-		findSizeBucket = ImageGateway._findSizeBucket;
 	},
 	afterEach: function () {
 		jQuery.tearDown();
@@ -22,9 +21,9 @@ QUnit.module( 'MobileFrontend mobile.mediaViewer/ImageGateway', {
 } );
 
 QUnit.test( '#findSizeBucket', ( assert ) => {
-	assert.strictEqual( findSizeBucket( 300 ), 320, 'value lower than bucket' );
-	assert.strictEqual( findSizeBucket( 800 ), 800, 'exact value' );
-	assert.strictEqual( findSizeBucket( 9999 ), 2880, 'value greater than last bucket' );
+	assert.strictEqual( ImageGateway.findSizeBucket( 300 ), 320, 'value lower than bucket' );
+	assert.strictEqual( ImageGateway.findSizeBucket( 800 ), 800, 'exact value' );
+	assert.strictEqual( ImageGateway.findSizeBucket( 9999 ), 2880, 'value greater than last bucket' );
 } );
 
 QUnit.test( 'ImageGateway#getThumb (missing page)', ( assert ) => {

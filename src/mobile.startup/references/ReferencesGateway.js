@@ -4,34 +4,40 @@
  *
  * @class module:mobile.startup/references~Gateway
  * @abstract
- *
- * @param {mw.Api} api
  */
-function ReferencesGateway( api ) {
-	this.api = api;
+class ReferencesGateway {
+	/**
+	 * @param {mw.Api} api
+	 */
+	constructor( api ) {
+		this.api = api;
+	}
+
+	// eslint-disable-next-line jsdoc/require-returns-check
+	/**
+	 * Return the matched reference via API or DOM query
+	 *
+	 * @memberof module:mobile.startup/references~Gateway
+	 * @instance
+	 * @param {string} id CSS selector
+	 * @param {Page} page to find reference for
+	 * @param {module:mobile.startup/PageHTMLParser} pageHTMLParser
+	 * @return {jQuery.Promise} resolves with an Object representing reference
+	 *  with a `text` property
+	 *  The promise should be rejected with ReferenceGateway.ERROR_NOT_EXIST:
+	 *  if the reference is not found.
+	 *  If for some reason locating the reference fails return ReferenceGateway.ERROR_OTHER.
+	 */
+	// eslint-disable-next-line no-unused-vars
+	getReference( id, page, pageHTMLParser ) {
+		// overridden
+	}
 }
 
 /**
- * Return the matched reference via API or DOM query
- *
  * @memberof module:mobile.startup/references~Gateway
- * @instance
- * @param {string} id CSS selector
- * @param {Page} page to find reference for
- * @param {module:mobile.startup/PageHTMLParser} pageHTMLParser
- * @return {jQuery.Promise} resolves with an Object representing reference
- *  with a `text` property
- *  The promise should be rejected with ReferenceGateway.ERROR_NOT_EXIST:
- *  if the reference is not found.
- *  If for some reason locating the reference fails return ReferenceGateway.ERROR_OTHER.
- */
-ReferencesGateway.prototype.getReference = null;
-
-/**
- * ERROR_NOT_EXIST error code to be returned by getReference
+ * @property ERROR_NOT_EXIST error code to be returned by getReference
  *  when a reference does not exist.
- *
- * @memberof module:mobile.startup/references~Gateway
  * @type string
  */
 ReferencesGateway.ERROR_NOT_EXIST = 'NOT_EXIST_ERROR';

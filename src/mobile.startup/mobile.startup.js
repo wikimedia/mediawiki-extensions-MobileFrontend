@@ -26,7 +26,6 @@ const languageInfoOverlay = require( './languageOverlay/languageInfoOverlay' );
 const languageOverlay = require( './languageOverlay/languageOverlay' );
 const amcOutreach = require( './amcOutreach/amcOutreach' );
 const util = require( './util.js' );
-const mfExtend = require( './mfExtend.js' );
 const actionParams = require( './actionParams.js' );
 const Icon = require( './Icon.js' );
 const IconButton = require( './IconButton.js' );
@@ -79,12 +78,6 @@ module.exports = {
 	 * @private
 	 */
 	actionParams,
-	/**
-	 * Internal, strictly for use inside MobileFrontend only
-	 *
-	 * @private
-	 */
-	mfExtend,
 	/**
 	 * Internal, strictly for use inside MobileFrontend only
 	 *

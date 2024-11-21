@@ -1,28 +1,26 @@
 const
 	View = require( './View' ),
-	util = require( './util' ),
-	mfExtend = require( './mfExtend' );
+	util = require( './util' );
 
 /**
  * Render CSS version of Codex message component.
- *
- * @class MessageBox
- * @extends module:mobile.startup/View
  */
-function MessageBox() {
-	View.apply( this, arguments );
-}
-
-mfExtend( MessageBox, View, {
+class MessageBox extends View {
 	/**
 	 * @inheritdoc
-	 * @memberof MessageBox
-	 * @instance
 	 */
-	isTemplateMode: true,
+	constructor( props ) {
+		super( props );
+	}
+
 	/**
-	 * @memberof MessageBox
-	 * @instance
+	 * @inheritdoc
+	 */
+	get isTemplateMode() {
+		return true;
+	}
+
+	/**
 	 * @mixes module:mobile.startup/View#defaults
 	 * @property {Object} defaults Default options hash.
 	 * @property {string} [defaults.heading] heading to show along with message (text)
@@ -30,12 +28,12 @@ mfExtend( MessageBox, View, {
 	 * @property {string} defaults.type either error, notice or warning
 	 * @property {string} defaults.className
 	 */
-	defaults: {},
-	/**
-	 * @memberof MessageBox
-	 * @instance
-	 */
-	template: util.template( `
+	get defaults() {
+		return {};
+	}
+
+	get template() {
+		return util.template( `
 <div
   class="cdx-message cdx-message--block cdx-message--{{type}} {{className}}"
   aria-live="polite"
@@ -48,7 +46,8 @@ mfExtend( MessageBox, View, {
   {{{msg}}}
   </div>
 </div>
-	` )
-} );
+	` );
+	}
+}
 
 module.exports = MessageBox;

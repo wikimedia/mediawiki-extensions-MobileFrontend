@@ -11,56 +11,48 @@
  * @class MemoryCache
  * @private
  */
-function MemoryCache() {
-	this._cache = {};
+class MemoryCache {
+	constructor() {
+		this._cache = {};
+	}
+
+	/**
+	 * Retrieve a cached value from a key
+	 *
+	 * @param {string} key
+	 * @return {any}
+	 */
+	get( key ) {
+		return this._cache[ key ];
+	}
+
+	/**
+	 * Cache a value by key
+	 *
+	 * @param {string} key
+	 * @param {any} value
+	 */
+	set( key, value ) {
+		this._cache[ key ] = value;
+	}
 }
 
 /**
- * Retrieve a cached value from a key
- *
- * @memberof MemoryCache
- * @instance
- * @param {string} key
- * @return {any}
- */
-MemoryCache.prototype.get = function ( key ) {
-	return this._cache[ key ];
-};
-
-/**
- * Cache a value by key
- *
- * @memberof MemoryCache
- * @instance
- * @param {string} key
- * @param {any} value
- */
-MemoryCache.prototype.set = function ( key, value ) {
-	this._cache[ key ] = value;
-};
-
-/**
  * Null object cache implementation
- *
- * @class NoCache
  */
-function NoCache() { }
+class NoCache {
+	constructor() { }
 
-/**
- * NoOp
- *
- * @memberof NoCache
- * @instance
- */
-NoCache.prototype.get = function () { };
+	/**
+	 * NoOp
+	 */
+	get() { }
 
-/**
- * NoOp
- *
- * @memberof NoCache
- * @instance
- */
-NoCache.prototype.set = function () { };
+	/**
+	 * NoOp
+	 */
+	set() { }
+}
 
 module.exports = {
 	MemoryCache,

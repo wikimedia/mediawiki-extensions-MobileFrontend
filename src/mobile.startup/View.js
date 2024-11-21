@@ -1,6 +1,5 @@
 /* global $ */
 const util = require( './util' ),
-	mfExtend = require( './mfExtend' ),
 	// Cached regex to split keys for `delegate`.
 	delegateEventSplitter = /^(\S+)\s*(.*)$/;
 
@@ -20,6 +19,8 @@ function uniqueId( prefix ) {
 }
 
 /**
+ * Describes a component for rendering.
+ *
  * Should be extended using extend().
  *
  * When options contains el property, this.$el in the constructed object
@@ -86,48 +87,33 @@ function uniqueId( prefix ) {
  *       View.call( this, util.extends( {}, defaultOptions, options ) );
  *     }
  *     View = require( './View' );
- *     require( './mfExtend' )( Section, View, {
- *       template: mw.template.compile( "&lt;h2&gt;{{title}}&lt;/h2&gt;" ),
- *     } );
+ *     class Section extends View {
+ *       get template() {
+ *         return mw.template.compile( "&lt;h2&gt;{{title}}&lt;/h2&gt;" ),
+ *       }
+ *     }
  *     section = new Section( { title: 'Test', text: 'Test section body' } );
  *     section.appendTo( 'body' );
  * ```
  *
- * @class module:mobile.startup/View
- * @memberof module:mobile.startup/View
- * @classdesc Describes a component for rendering.
  * @mixes OO.EventEmitter
  */
+class View {
+	/**
+	 * @param {Object} options Object passed to the constructor.
+	 * @param {Object.<string, string>} [options.events]
+	 */
+	constructor( options ) {
+		this.initialize( options );
+	}
 
-function View() {
-	this.initialize.apply( this, arguments );
-}
-OO.mixinClass( View, OO.EventEmitter );
-mfExtend( View, {
 	/**
-	 * Name of tag that contains the rendered template
-	 *
-	 * @memberof module:mobile.startup/View
-	 * @instance
-	 * @property {string} tagName
+	 * @property {Object}
+	 * Specifies the template used in render().
 	 */
-	tagName: 'div',
-	/**
-	 * Tells the View to ignore tagName and className when constructing the element
-	 * and to rely solely on the template
-	 *
-	 * @memberof module:mobile.startup/View
-	 * @instance
-	 * @property {boolean} isTemplateMode
-	 */
-	isTemplateMode: false,
-	/**
-	 * @memberof module:mobile.startup/View
-	 * @instance
-	 * @property {any}
-	 * Specifies the template used in render(). Object|string
-	 */
-	template: undefined,
+	get template() {
+		return undefined;
+	}
 
 	/**
 	 * Specifies partials (sub-templates) for the main template. Example:
@@ -138,23 +124,21 @@ mfExtend( View, {
 	 *     // <h1>Heading</h1>
 	 *     // {{>content}}
 	 *
-	 *     oo.mfExtend( SomeView, View, {
-	 *       template: util.template( '<source-code>' ),
-	 *       templatePartials: { content: util.template( '<source-code>' ) }
+	 *     class SomeView extends View {
+	 *       get template() { return util.template( '<source-code>' ) }
+	 *       get templatePartials() { return { content: util.template( '<source-code>' ) } }
 	 *     }
 	 *
-	 * @memberof module:mobile.startup/View
-	 * @instance
 	 * @property {Object}
 	 */
-	templatePartials: {},
+	get templatePartials() {
+		return {};
+	}
 
 	/**
 	 * A set of default options that are merged with options passed into the initialize
 	 * function.
 	 *
-	 * @memberof module:mobile.startup/View
-	 * @instance
 	 * @property {Object} defaults Default options hash.
 	 * @property {jQuery.Object|string} [defaults.el] jQuery selector to use for rendering.
 	 * @property {boolean} [defaults.skipTemplateRender] Whether to enhance views already in
@@ -162,13 +146,32 @@ mfExtend( View, {
 	 * Use in conjunction with View::defaults.$el to associate the View with an existing
 	 * already rendered element in the DOM.
 	 */
-	defaults: {},
+	get defaults() {
+		return {};
+	}
+
+	/**
+	 * Name of tag that contains the rendered template
+	 *
+	 * @property {string} tagName
+	 */
+	get tagName() {
+		return 'div';
+	}
+
+	/**
+	 * Tells the View to ignore tagName and className when constructing the element
+	 * and to rely solely on the template
+	 *
+	 * @property {boolean} isTemplateMode
+	 */
+	get isTemplateMode() {
+		return false;
+	}
 
 	/**
 	 * Run once during construction to set up the View
 	 *
-	 * @memberof module:mobile.startup/View
-	 * @instance
 	 * @param {Object} options Object passed to the constructor.
 	 * @param {Object.<string, string>} [options.events]
 	 */
@@ -178,13 +181,6 @@ mfExtend( View, {
 		this.options = options;
 		// Assign a unique id for dom events binding/unbinding
 		this.cid = uniqueId( 'view' );
-
-		// TODO: if template compilation is too slow, don't compile them on a
-		// per object basis, but don't worry about it now (maybe add cache to
-		// M.template.compile())
-		if ( typeof this.template === 'string' ) {
-			this.template = mw.template.compile( this.template );
-		}
 
 		if ( options.el ) {
 			// Note the element may not be in the document so must use global jQuery here
@@ -203,13 +199,11 @@ mfExtend( View, {
 				this._postInitialize( options );
 			} );
 		}
-	},
+	}
 
 	/**
 	 * Called when this.$el is ready.
 	 *
-	 * @memberof module:mobile.startup/View
-	 * @instance
 	 * @private
 	 * @param {Object} props
 	 */
@@ -222,33 +216,25 @@ mfExtend( View, {
 		}
 
 		this.render( {} );
-	},
+	}
 
 	/**
 	 * Function called before the view is rendered. Can be redefined in
 	 * objects that extend View.
-	 *
-	 * @memberof module:mobile.startup/View
-	 * @instance
 	 */
 	preRender() {
-	},
+	}
 
 	/**
 	 * Function called after the view is rendered. Can be redefined in
 	 * objects that extend View.
-	 *
-	 * @memberof module:mobile.startup/View
-	 * @instance
 	 */
 	postRender() {
-	},
+	}
 
 	/**
 	 * Fill this.$el with template rendered using data if template is set.
 	 *
-	 * @memberof module:mobile.startup/View
-	 * @instance
 	 * @param {Object} data Template data. Will be merged into the view's
 	 * options
 	 * @chainable
@@ -271,7 +257,7 @@ mfExtend( View, {
 		this.postRender();
 		this.delegateEvents();
 		return this;
-	},
+	}
 
 	/**
 	 * Set callbacks for events.
@@ -292,8 +278,6 @@ mfExtend( View, {
 	 * Uses event delegation for efficiency.
 	 * Omitting the selector binds the event to `this.el`.
 	 *
-	 * @memberof module:mobile.startup/View
-	 * @instance
 	 * @param {Object} events Optionally set this events instead of the ones on this.
 	 */
 	delegateEvents( events ) {
@@ -315,15 +299,13 @@ mfExtend( View, {
 				}
 			}
 		}
-	},
+	}
 
 	/**
 	 * Add a single event listener to the view's element (or a child element
 	 * using `selector`). This only works for delegate-able events: not `focus`
 	 * or `blur`.
 	 *
-	 * @memberof module:mobile.startup/View
-	 * @instance
 	 * @param {string} eventName
 	 * @param {string} selector
 	 * @param {Function} listener
@@ -331,28 +313,23 @@ mfExtend( View, {
 	delegate( eventName, selector, listener ) {
 		this.$el.on( eventName + '.delegateEvents' + this.cid, selector,
 			listener );
-	},
+	}
 
 	/**
 	 * Clears all callbacks previously bound to the view by `delegateEvents`.
 	 * You usually don't need to use this, but may wish to if you have multiple
 	 * views attached to the same DOM element.
-	 *
-	 * @memberof module:mobile.startup/View
-	 * @instance
 	 */
 	undelegateEvents() {
 		if ( this.$el ) {
 			this.$el.off( '.delegateEvents' + this.cid );
 		}
-	},
+	}
 
 	/**
 	 * A finer-grained `undelegateEvents` for removing a single delegated event.
 	 * `selector` and `listener` are both optional.
 	 *
-	 * @memberof module:mobile.startup/View
-	 * @instance
 	 * @param {string} eventName
 	 * @param {string} selector
 	 * @param {Function} listener
@@ -360,13 +337,11 @@ mfExtend( View, {
 	undelegate( eventName, selector, listener ) {
 		this.$el.off( eventName + '.delegateEvents' + this.cid, selector,
 			listener );
-	},
+	}
 
 	/**
 	 * See parseHTML method of util singleton
 	 *
-	 * @memberof module:mobile.startup/View
-	 * @instance
 	 * @param {string} html to turn into a jQuery object.
 	 * @return {jQuery.Object}
 	 */
@@ -376,7 +351,22 @@ mfExtend( View, {
 		// this should be redundant, but no problem in being explicit (T214451).
 		return util.parseHTML( html, document );
 	}
-} );
+
+	/**
+	 * Generates a view with children
+	 *
+	 * @param {Object} options
+	 * @param {jQuery.Element[]} children
+	 * @return {View}
+	 */
+	static make( options = {}, children = [] ) {
+		const view = new View( options );
+		children.forEach( ( $child ) => view.append( $child ) );
+		return view;
+	}
+}
+
+OO.mixinClass( View, OO.EventEmitter );
 
 /**
  * @memberof View
@@ -513,18 +503,5 @@ mfExtend( View, {
 		return this;
 	};
 } );
-
-/**
- * Generates a view with children
- *
- * @param {Object} options
- * @param {jQuery.Element[]} children
- * @return {module:mobile.startup/View}
- */
-View.make = function ( options = {}, children = [] ) {
-	const view = new View( options );
-	children.forEach( ( $child ) => view.append( $child ) );
-	return view;
-};
 
 module.exports = View;

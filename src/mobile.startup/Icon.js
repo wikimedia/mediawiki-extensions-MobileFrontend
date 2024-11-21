@@ -1,33 +1,29 @@
 const
-	mfExtend = require( './mfExtend' ),
 	util = require( './util' ),
 	View = require( './View' );
 
 /**
- * @class module:mobile.startup/Icon
- * @classdesc A wrapper for creating an icon.
- * @extends module:mobile.startup/View
- * @param {Object} options Configuration options
+ * A wrapper for creating an icon.
  */
-function Icon( options ) {
-	View.call( this, options );
-}
+class Icon extends View {
+	/**
+	 * @param {Object} options Configuration options
+	 */
+	constructor( options ) {
+		super( options );
+	}
 
-mfExtend( Icon, View, {
 	/**
 	 * @inheritdoc
-	 * @memberof Icon
-	 * @instance
 	 */
 	preRender() {
 		this.options._iconClasses = this.getIconClasses();
-	},
+	}
+
 	/**
 	 * Internal method that sets the correct rotation class for the icon
 	 * based on the value of rotation
 	 *
-	 * @memberof Icon
-	 * @instance
 	 * @private
 	 */
 	getRotationClass() {
@@ -51,12 +47,11 @@ mfExtend( Icon, View, {
 			}
 		}
 		return rotationClass;
-	},
+	}
+
 	/**
 	 * Set icon glyph class and icon type class
 	 *
-	 * @memberof Icon
-	 * @instance
 	 * @private
 	 */
 	getIconClasses() {
@@ -78,16 +73,16 @@ mfExtend( Icon, View, {
 		}
 
 		return classes + rotationClasses;
-	},
+	}
+
 	/**
 	 * @inheritdoc
-	 * @memberof Icon
-	 * @instance
 	 */
-	isTemplateMode: true,
+	get isTemplateMode() {
+		return true;
+	}
+
 	/**
-	 * @memberof Icon
-	 * @instance
 	 * @mixes module:mobile.startup/View#defaults
 	 * @property {Object} defaults
 	 * @property {string} defaults.base Base icon class.
@@ -100,29 +95,29 @@ mfExtend( Icon, View, {
 	 * @property {boolean} defaults.isSmall If icon is small.
 	 * @property {string} defaults.addtionalClassNames Additional classes to be added to the icon.
 	 */
-	defaults: {
-		base: 'mf-icon',
-		glyphPrefix: null,
-		icon: '',
-		rotation: 0,
-		isSmall: false,
-		additionalClassNames: null
-	},
+	get defaults() {
+		return {
+			base: 'mf-icon',
+			glyphPrefix: null,
+			icon: '',
+			rotation: 0,
+			isSmall: false,
+			additionalClassNames: null
+		};
+	}
+
 	/**
 	 * Return the full class name that is required for the icon to render
 	 *
-	 * @memberof Icon
-	 * @instance
 	 * @return {string}
 	 */
 	getClassName() {
 		return this.$el.attr( 'class' );
-	},
+	}
+
 	/**
 	 * Return the class that relates to the icon glyph
 	 *
-	 * @memberof Icon
-	 * @instance
 	 * @return {string}
 	 */
 	getGlyphClassName() {
@@ -130,11 +125,13 @@ mfExtend( Icon, View, {
 			return 'mf-icon-' + this.options.glyphPrefix + '-' + this.options.icon;
 		}
 		return 'mf-icon-' + this.options.icon;
-	},
+	}
 
-	template: util.template(
-		'<span class="{{_iconClasses}}"> </span>'
-	)
-} );
+	get template() {
+		return util.template(
+			'<span class="{{_iconClasses}}"> </span>'
+		);
+	}
+}
 
 module.exports = Icon;

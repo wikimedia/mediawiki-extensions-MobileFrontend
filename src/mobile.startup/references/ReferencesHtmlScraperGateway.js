@@ -1,29 +1,24 @@
 const ReferencesGateway = require( './ReferencesGateway' ),
-	mfExtend = require( './../mfExtend' ),
 	util = require( './../util' );
 
 /**
  * Gateway for retrieving references via the content of the Page
  *
- * @class ReferencesHtmlScraperGateway
  * @memberof module:mobile.startup/references
- * @extends module:mobile.startup/references~Gateway
  * @inheritdoc
  */
-function ReferencesHtmlScraperGateway() {
-	ReferencesGateway.apply( this, arguments );
-}
+class ReferencesHtmlScraperGateway extends ReferencesGateway {
+	constructor() {
+		super( arguments );
+		/**
+		 * @memberof ReferencesHtmlScraperGateway
+		 * @property EXTERNAL_LINK_CLASS a CSS class to place on external links
+		 * in addition to the default 'external' class.
+		 */
+		this.EXTERNAL_LINK_CLASS = 'external--reference';
+	}
 
-mfExtend( ReferencesHtmlScraperGateway, ReferencesGateway, {
 	/**
-	 * @memberof ReferencesHtmlScraperGateway
-	 * @property EXTERNAL_LINK_CLASS a CSS class to place on external links
-	 * in addition to the default 'external' class.
-	 */
-	EXTERNAL_LINK_CLASS: 'external--reference',
-	/**
-	 * @memberof ReferencesHtmlScraperGateway
-	 * @instance
 	 * @param {string} id ID of a DOM element in the page.
 	 * @param {jQuery.Object} $container to scan for an element
 	 * @return {jQuery.Promise} that can be used by getReference
@@ -55,7 +50,8 @@ mfExtend( ReferencesHtmlScraperGateway, ReferencesGateway, {
 			result.reject( ReferencesGateway.ERROR_NOT_EXIST );
 		}
 		return result.promise();
-	},
+	}
+
 	/**
 	 * @memberof ReferencesHtmlScraperGateway
 	 * @param {jQuery.Object|undefined} $reference
@@ -65,11 +61,10 @@ mfExtend( ReferencesHtmlScraperGateway, ReferencesGateway, {
 		return $reference ?
 			$reference.children( '.mw-reference-text, .reference-text' ).first().html() :
 			'';
-	},
+	}
+
 	/**
 	 * @inheritdoc
-	 * @memberof ReferencesHtmlScraperGateway
-	 * @instance
 	 * @param {string} hash Hash fragment with leading '#'
 	 * @param {Page} page (unused)
 	 * @param {module:mobile.startup/PageHTMLParser} pageHTMLParser
@@ -79,6 +74,6 @@ mfExtend( ReferencesHtmlScraperGateway, ReferencesGateway, {
 		// If an id is not found it's possible the id passed needs decoding (per T188547).
 		return this.getReferenceFromContainer( id, pageHTMLParser.$el.find( 'ol.references' ) );
 	}
-} );
+}
 
 module.exports = ReferencesHtmlScraperGateway;

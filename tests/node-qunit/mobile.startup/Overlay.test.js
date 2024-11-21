@@ -1,7 +1,6 @@
 const
 	sinon = require( 'sinon' ),
 	jQuery = require( '../utils/jQuery' ),
-	mfExtend = require( '../../../src/mobile.startup/mfExtend' ),
 	dom = require( '../utils/dom' ),
 	mediaWiki = require( '../utils/mw' ),
 	mustache = require( '../utils/mustache' ),
@@ -73,15 +72,17 @@ QUnit.test( '#make', ( assert ) => {
 } );
 
 QUnit.test( 'HTML overlay', ( assert ) => {
-	function TestOverlay() {
-		Overlay.apply( this, arguments );
-	}
+	class TestOverlay extends Overlay {
+		constructor( props ) {
+			super( props );
+		}
 
-	mfExtend( TestOverlay, Overlay, {
-		templatePartials: util.extend( {}, Overlay.prototype.templatePartials, {
-			content: util.template( '<div class="content">YO</div>' )
-		} )
-	} );
+		get templatePartials() {
+			return util.extend( {}, Overlay.prototype.templatePartials, {
+				content: util.template( '<div class="content">YO</div>' )
+			} );
+		}
+	}
 	const overlay = new TestOverlay( {
 		heading: 'Awesome'
 	} );

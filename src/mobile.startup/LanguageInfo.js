@@ -5,13 +5,14 @@ const util = require( './util.js' ),
  * API for providing language data.
  *
  * @class module:mobile.startup/languages~LanguageInfo
- * @param {mw.Api} api
  */
-function LanguageInfo( api ) {
-	this.api = api;
-}
-
-LanguageInfo.prototype = {
+class LanguageInfo {
+	/**
+	 * @param {mw.Api} api
+	 */
+	constructor( api ) {
+		this.api = api;
+	}
 
 	/**
 	 * Get languageinfo API data from the local wiki, and transform it into a
@@ -59,6 +60,6 @@ LanguageInfo.prototype = {
 			} )
 		} ), () => util.Deferred().reject() );
 	}
-};
+}
 
 module.exports = LanguageInfo;

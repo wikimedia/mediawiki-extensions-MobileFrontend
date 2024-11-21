@@ -1,5 +1,4 @@
 const
-	mfExtend = require( '../mfExtend' ),
 	Overlay = require( '../Overlay' ),
 	util = require( '../util' ),
 	searchHeader = require( './searchHeader' ),
@@ -11,64 +10,60 @@ const
 /**
  * Overlay displaying search results
  *
- * @class SearchOverlay
  * @memberof module:mobile.startup/search
- * @extends Overlay
  * @uses SearchGateway
  * @uses IconButton
- *
- * @param {Object} params Configuration options
- * @param {string} params.placeholderMsg Search input placeholder text.
- * @param {string} [params.action] of form defaults to the value of wgScript
- * @param {string} [params.defaultSearchPage] The default search page e.g. Special:Search
- * @param {SearchGateway} [params.gateway]
  */
-function SearchOverlay( params ) {
-	const header = searchHeader(
-			params.placeholderMsg,
-			params.action || mw.config.get( 'wgScript' ),
-			( query ) => this.performSearch( query ),
-			params.defaultSearchPage || '',
-			params.autocapitalize
-		),
-		options = util.extend( true, {
-			headerChrome: true,
-			isBorderBox: false,
-			className: 'overlay search-overlay',
-			headers: [ header ],
-			events: {
-				'click .search-content': 'onClickSearchContent',
-				'click .overlay-content': 'onClickOverlayContent',
-				'click .overlay-content > div': function ( ev ) {
-					ev.stopPropagation();
-				},
-				'touchstart .results': 'hideKeyboardOnScroll',
-				'mousedown .results': 'hideKeyboardOnScroll',
-				'click .results a': 'onClickResult'
-			}
-		},
-		params );
+class SearchOverlay extends Overlay {
+	/**
+	 * @param {Object} params Configuration options
+	 * @param {string} params.placeholderMsg Search input placeholder text.
+	 * @param {string} [params.action] of form defaults to the value of wgScript
+	 * @param {string} [params.defaultSearchPage] The default search page e.g. Special:Search
+	 * @param {SearchGateway} [params.gateway]
+	 */
+	constructor( params ) {
+		const header = searchHeader(
+				params.placeholderMsg,
+				params.action || mw.config.get( 'wgScript' ),
+				( query ) => this.performSearch( query ),
+				params.defaultSearchPage || '',
+				params.autocapitalize
+			),
+			options = util.extend( true, {
+				headerChrome: true,
+				isBorderBox: false,
+				className: 'overlay search-overlay',
+				headers: [ header ],
+				events: {
+					'click .search-content': 'onClickSearchContent',
+					'click .overlay-content': 'onClickOverlayContent',
+					'click .overlay-content > div': function ( ev ) {
+						ev.stopPropagation();
+					},
+					'touchstart .results': 'hideKeyboardOnScroll',
+					'mousedown .results': 'hideKeyboardOnScroll',
+					'click .results a': 'onClickResult'
+				}
+			},
+			params );
 
-	this.header = header;
-	Overlay.call( this, options );
+		super( options );
+		this.header = header;
 
-	this.api = options.api;
-	// eslint-disable-next-line new-cap
-	this.gateway = options.gateway || new options.gatewayClass( this.api );
+		this.api = options.api;
+		// eslint-disable-next-line new-cap
+		this.gateway = options.gateway || new options.gatewayClass( this.api );
 
-	this.router = options.router;
+		this.router = options.router;
 
-	this.currentSearchId = null;
-	this.resetSearch( true );
-}
-
-mfExtend( SearchOverlay, Overlay, {
+		this.currentSearchId = null;
+		this.resetSearch( true );
+	}
 
 	/**
 	 * Initialize 'search within pages' functionality
 	 *
-	 * @memberof SearchOverlay
-	 * @instance
 	 */
 	onClickSearchContent() {
 		const
@@ -93,34 +88,29 @@ mfExtend( SearchOverlay, Overlay, {
 			}
 			$form.trigger( 'submit' );
 		}, 0 );
-	},
+	}
 
 	/**
 	 * Tapping on background only should hide the overlay
 	 *
-	 * @memberof SearchOverlay
-	 * @instance
 	 */
 	onClickOverlayContent() {
 		this.$el.find( '.cancel' ).trigger( 'click' );
-	},
+	}
 
 	/**
 	 * Hide the keyboard when scrolling starts (avoid weird situation when
 	 * user taps on an item, the keyboard hides and wrong item is clicked).
 	 *
-	 * @memberof SearchOverlay
-	 * @instance
 	 */
 	hideKeyboardOnScroll() {
-		this.$input.trigger( 'blur' );
-	},
+		const $input = this.getInput();
+		$input.trigger( 'blur' );
+	}
 
 	/**
 	 * Handle the user clicking a result.
 	 *
-	 * @memberof SearchOverlay
-	 * @instance
 	 * @param {jQuery.Event} ev
 	 */
 	onClickResult( ev ) {
@@ -154,12 +144,14 @@ mfExtend( SearchOverlay, Overlay, {
 			// eslint-disable-next-line no-restricted-properties
 			window.location.href = $link.attr( 'href' );
 		} );
-	},
+	}
+
+	getInput() {
+		return this.$el.find( this.header ).find( 'input' );
+	}
 
 	/**
 	 * @inheritdoc
-	 * @memberof SearchOverlay
-	 * @instance
 	 */
 	postRender() {
 		const searchResults = new SearchResultsView( {
@@ -170,10 +162,10 @@ mfExtend( SearchOverlay, Overlay, {
 		let timer;
 
 		this.$el.find( '.overlay-content' ).append( searchResults.$el );
-		Overlay.prototype.postRender.call( this );
+		super.postRender();
 
-		// FIXME: `this.$input` should not be set. Isolate to searchHeader function
-		this.$input = this.$el.find( this.header ).find( 'input' );
+		// FIXME: `$input` should not be set. Isolate to searchHeader function
+		const $input = this.getInput();
 		// FIXME: `this.$searchContent` should not be set. Isolate to SearchResultsView class.
 		this.$searchContent = searchResults.$el.hide();
 		// FIXME: `this.$resultContainer` should not be set. Isolate to SearchResultsView class.
@@ -184,7 +176,7 @@ mfExtend( SearchOverlay, Overlay, {
 		// Stopping propagation when the input is focused will prevent scrolling while
 		// the keyboard is collapsed.
 		this.$resultContainer[0].addEventListener( 'touchstart', ( ev ) => {
-			if ( document.activeElement === this.$input[0] ) {
+			if ( document.activeElement === $input[0] ) {
 				ev.stopPropagation();
 			}
 		} );
@@ -209,49 +201,45 @@ mfExtend( SearchOverlay, Overlay, {
 				SEARCH_SPINNER_DELAY - searchData.delay );
 		} );
 		this.on( 'search-results', clearSearch );
-	},
+	}
 
 	/**
 	 * Trigger a focus() event on search input in order to
 	 * bring up the virtual keyboard.
 	 *
-	 * @memberof SearchOverlay
-	 * @instance
 	 */
 	showKeyboard() {
-		const len = this.$input.val().length;
-		this.$input.trigger( 'focus' );
+		const $input = this.getInput();
+		const len = $input.val().length;
+		$input.trigger( 'focus' );
 		// Cursor to the end of the input
-		if ( this.$input[0].setSelectionRange ) {
-			this.$input[0].setSelectionRange( len, len );
+		if ( $input[0].setSelectionRange ) {
+			$input[0].setSelectionRange( len, len );
 		}
-	},
+	}
 
 	/**
 	 * @inheritdoc
-	 * @memberof SearchOverlay
-	 * @instance
 	 */
 	show() {
 		// Overlay#show defines the actual overlay visibility.
-		Overlay.prototype.show.apply( this, arguments );
+		super.show();
 
 		mw.hook( 'ext.MobileFrontend.searchOverlay.open' ).fire();
 
 		this.showKeyboard();
-	},
+	}
 
 	/**
 	 * Perform search and render results inside current view.
 	 * FIXME: Much of the logic for caching and pending queries inside this function should
 	 * actually live in SearchGateway, please move out.
 	 *
-	 * @memberof SearchOverlay
-	 * @instance
 	 * @param {string} query
 	 */
 	performSearch( query ) {
 		this.resetSearch();
+		const $input = this.getInput();
 		const
 			api = this.api,
 			delay = this.gateway.isCached( query ) ? 0 : SEARCH_DELAY;
@@ -275,7 +263,7 @@ mfExtend( SearchOverlay, Overlay, {
 						// this should be moved into that class
 						// check if we're getting the rights response in case of out of
 						// order responses (need to get the current value of the input)
-						if ( data && data.query === this.$input.val() ) {
+						if ( data && data.query === $input.val() ) {
 							this.$el.toggleClass( 'no-results', data.results.length === 0 );
 							this.$searchContent
 								.show()
@@ -307,7 +295,8 @@ mfExtend( SearchOverlay, Overlay, {
 
 			this.lastQuery = query;
 		}
-	},
+	}
+
 	/**
 	 * Clear results
 	 *
@@ -321,6 +310,6 @@ mfExtend( SearchOverlay, Overlay, {
 			mw.hook( 'ext.MobileFrontend.searchOverlay.empty' ).fire( $content[ 0 ] );
 		}
 	}
-} );
+}
 
 module.exports = SearchOverlay;

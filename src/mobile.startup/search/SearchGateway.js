@@ -15,27 +15,25 @@ const
  * @uses mw.Api
  * @param {mw.Api} api
  */
-function SearchGateway( api ) {
-	this.api = api;
-	this.searchCache = {};
-	this.generator = mw.config.get( 'wgMFSearchGenerator' );
-}
-
-SearchGateway.prototype = {
+class SearchGateway {
 	/**
-	 * The namespace to search in.
-	 *
-	 * @memberof SearchGateway
-	 * @instance
-	 * @type {number}
+	 * @param {mw.Api} api
 	 */
-	searchNamespace: 0,
+	constructor( api ) {
+		this.api = api;
+		this.searchCache = {};
+		this.generator = mw.config.get( 'wgMFSearchGenerator' );
+		/**
+		 * The namespace to search in.
+		 *
+		 * @type {number}
+		 */
+		this.searchNamespace = 0;
+	}
 
 	/**
 	 * Get the data used to do the search query api call.
 	 *
-	 * @memberof SearchGateway
-	 * @instance
 	 * @param {string} query to search for
 	 * @return {Object}
 	 */
@@ -57,13 +55,11 @@ SearchGateway.prototype = {
 			data.pithumbsize = mw.config.get( 'wgMFThumbnailSizes' ).tiny;
 		}
 		return data;
-	},
+	}
 
 	/**
 	 * Escapes regular expression wildcards (metacharacters) by adding a \\ prefix
 	 *
-	 * @memberof SearchGateway
-	 * @instance
 	 * @param {string} str a string
 	 * @return {Object} a regular expression that can be used to search for that str
 	 * @private
@@ -73,14 +69,12 @@ SearchGateway.prototype = {
 		// eslint-disable-next-line no-useless-escape
 		str = str.replace( /[-\[\]{}()*+?.,\\^$|#\s]/g, '\\$&' );
 		return new RegExp( '^(' + str + ')', 'ig' );
-	},
+	}
 
 	/**
 	 * Takes a label potentially beginning with term
 	 * and highlights term if it is present with strong
 	 *
-	 * @memberof SearchGateway
-	 * @instance
 	 * @param {string} label a piece of text
 	 * @param {string} term a string to search for from the start
 	 * @return {string} safe html string with matched terms encapsulated in strong tags
@@ -92,13 +86,11 @@ SearchGateway.prototype = {
 		term = util.parseHTML( '<span>' ).text( term ).html();
 
 		return label.replace( this._createSearchRegEx( term ), '<strong>$1</strong>' );
-	},
+	}
 
 	/**
 	 * Return data used for creating {Page} objects
 	 *
-	 * @memberof SearchGateway
-	 * @instance
 	 * @param {string} query to search for
 	 * @param {Object} pageInfo from the API
 	 * @return {Object} data needed to create a {Page}
@@ -119,13 +111,11 @@ SearchGateway.prototype = {
 		page.index = pageInfo.index;
 
 		return page;
-	},
+	}
 
 	/**
 	 * Process the data returned by the api call.
 	 *
-	 * @memberof SearchGateway
-	 * @instance
 	 * @param {string} query to search for
 	 * @param {Object} data from api
 	 * @return {Array}
@@ -143,13 +133,11 @@ SearchGateway.prototype = {
 		}
 
 		return results;
-	},
+	}
 
 	/**
 	 * Perform a search for the given query.
 	 *
-	 * @memberof SearchGateway
-	 * @instance
 	 * @param {string} query to search for
 	 * @return {jQuery.Deferred}
 	 */
@@ -184,19 +172,17 @@ SearchGateway.prototype = {
 		}
 
 		return this.searchCache[query];
-	},
+	}
 
 	/**
 	 * Check if the search has already been performed in given session.
 	 *
-	 * @memberof SearchGateway
-	 * @instance
 	 * @param {string} query
 	 * @return {boolean}
 	 */
 	isCached( query ) {
 		return Boolean( this.searchCache[query] );
 	}
-};
+}
 
 module.exports = SearchGateway;

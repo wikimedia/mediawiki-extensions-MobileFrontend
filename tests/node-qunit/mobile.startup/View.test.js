@@ -4,7 +4,6 @@ const
 	mustache = require( '../utils/mustache' ),
 	jQuery = require( '../utils/jQuery' ),
 	dom = require( '../utils/dom' ),
-	mfExtend = require( '../../../src/mobile.startup/mfExtend' ),
 	util = require( '../../../src/mobile.startup/util' ),
 	oo = require( '../utils/oo' ),
 	sinon = require( 'sinon' );
@@ -63,16 +62,19 @@ QUnit.test( 'View, jQuery proxy functions', ( assert ) => {
 } );
 
 QUnit.test( 'View#preRender', ( assert ) => {
-	function ChildView() {
-		View.apply( this, arguments );
-	}
+	class ChildView extends View {
+		constructor( props ) {
+			super( props );
+		}
 
-	mfExtend( ChildView, View, {
-		template: util.template( '<p>{{text}}</p>' ),
-		preRender: function () {
+		get template() {
+			return util.template( '<p>{{text}}</p>' );
+		}
+
+		preRender() {
 			this.options.text = 'hello';
 		}
-	} );
+	}
 
 	const view = new ChildView();
 	assert.strictEqual( view.$el.html(), '<p>hello</p>', 'manipulate template data' );
@@ -80,15 +82,15 @@ QUnit.test( 'View#preRender', ( assert ) => {
 
 QUnit.test( 'View#postRender', ( assert ) => {
 	const spy = sandbox.spy();
-	function ChildView() {
-		View.apply( this, arguments );
-	}
+	class ChildView extends View {
+		constructor( props ) {
+			super( props );
+		}
 
-	mfExtend( ChildView, View, {
-		postRender: function () {
+		postRender() {
 			spy();
 		}
-	} );
+	}
 
 	// eslint-disable-next-line no-new
 	new ChildView();
@@ -96,37 +98,39 @@ QUnit.test( 'View#postRender', ( assert ) => {
 } );
 
 QUnit.test( 'View#delegateEvents', ( assert ) => {
+	class EventsView extends View {
+		constructor( props ) {
+			super(
+				util.extend(
+					{
+						events: {
+							'click p span': function ( ev ) {
+								ev.preventDefault();
+								assert.true( true, 'Span was clicked and handled' );
+							},
+							'click p': 'onParagraphClick',
+							click: 'onClick'
+						}
+					},
+					props
+				)
+			);
+		}
 
-	function EventsView( props ) {
-		View.call(
-			this,
-			util.extend(
-				{
-					events: {
-						'click p span': function ( ev ) {
-							ev.preventDefault();
-							assert.true( true, 'Span was clicked and handled' );
-						},
-						'click p': 'onParagraphClick',
-						click: 'onClick'
-					}
-				},
-				props
-			)
-		);
-	}
+		get template() {
+			return util.template( '<p><span>test</span></p>' );
+		}
 
-	mfExtend( EventsView, View, {
-		template: util.template( '<p><span>test</span></p>' ),
-		onParagraphClick: function ( ev ) {
+		onParagraphClick( ev ) {
 			ev.preventDefault();
 			assert.true( true, 'Paragraph was clicked and handled' );
-		},
-		onClick: function ( ev ) {
+		}
+
+		onClick( ev ) {
 			ev.preventDefault();
 			assert.true( true, 'View was clicked and handled' );
 		}
-	} );
+	}
 
 	const view = new EventsView();
 	view.appendTo( 'body' );
@@ -143,22 +147,25 @@ QUnit.test( 'View#delegateEvents', ( assert ) => {
 
 QUnit.test( 'View#render (with isTemplateMode)', ( assert ) => {
 	const $parent = $( '<div>' );
-	function TemplateModeView() {
-		View.apply( this, arguments );
+	class TemplateModeView extends View {
+		get template() {
+			return util.template( '<p class="foo"><span>{{text}}</span></p>' );
+		}
+
+		get isTemplateMode() {
+			return true;
+		}
 	}
 
-	mfExtend( TemplateModeView, View, {
-		template: util.template( '<p class="foo"><span>{{text}}</span></p>' ),
-		isTemplateMode: true
-	} );
+	class ContainerView extends View {
+		constructor() {
+			super( { className: 'bar' } );
+		}
 
-	function ContainerView() {
-		View.call( this, { className: 'bar' } );
+		get template() {
+			return util.template( '<p class="foo"><span>test</span></p>' );
+		}
 	}
-
-	mfExtend( ContainerView, View, {
-		template: util.template( '<p class="foo"><span>test</span></p>' )
-	} );
 
 	const view = new TemplateModeView();
 	const textFirstRun = view.$el.text();
@@ -178,20 +185,25 @@ QUnit.test( 'View#render (with isTemplateMode)', ( assert ) => {
 } );
 
 QUnit.test( 'View#render events (with isTemplateMode)', ( assert ) => {
-	function TemplateModeView( props ) {
-		View.call(
-			this,
-			util.extend( { events: { 'click span': 'onClick' } }, props )
-		);
-	}
+	class TemplateModeView extends View {
+		constructor( props ) {
+			super(
+				util.extend( { events: { 'click span': 'onClick' } }, props )
+			);
+		}
 
-	mfExtend( TemplateModeView, View, {
-		onClick: function () {
+		onClick() {
 			this.$el.empty().text( 'hello world' );
-		},
-		template: util.template( '<p class="foo"><span>test</span></p>' ),
-		isTemplateMode: true
-	} );
+		}
+
+		get template() {
+			return util.template( '<p class="foo"><span>test</span></p>' );
+		}
+
+		get isTemplateMode() {
+			return true;
+		}
+	}
 
 	const view = new TemplateModeView();
 	// trigger event

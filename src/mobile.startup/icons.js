@@ -25,8 +25,6 @@ const icons = {
 	 * The icon should be used to inform the user that the front-end is
 	 * communicating with the back-end.
 	 *
-	 * @memberof icons
-	 * @instance
 	 * @return {IconButton}
 	 */
 	back() {
@@ -43,8 +41,6 @@ const icons = {
 	 * The icon should be used to inform the user that the front-end is
 	 * communicating with the back-end.
 	 *
-	 * @memberof icons
-	 * @instance
 	 * @param {string} [variant]
 	 * @param {Object} [props] to extend
 	 * @return {IconButton}
@@ -67,8 +63,6 @@ const icons = {
 	 * The icon should be used to inform the user that the front-end is
 	 * communicating with the back-end.
 	 *
-	 * @memberof icons
-	 * @instance
 	 * @param {Object} [props] See `Icon` for more details
 	 * @return {IconButton}
 	 */
@@ -96,8 +90,6 @@ const icons = {
 	/**
 	 * Gets a failure (error) icon
 	 *
-	 * @memberof icons
-	 * @instance
 	 * @return {IconButton}
 	 */
 	error() {
@@ -109,8 +101,6 @@ const icons = {
 	/**
 	 * Gets a non-filled watch star icon.
 	 *
-	 * @memberof icons
-	 * @instance
 	 * @param {Object} props
 	 * @return {IconButton}
 	 */
@@ -125,8 +115,6 @@ const icons = {
 	/**
 	 * Gets a filled watch star icon.
 	 *
-	 * @memberof icons
-	 * @instance
 	 * @param {Object} props
 	 * @return {IconButton}
 	 */

@@ -5,7 +5,6 @@ const
 /**
  * A wrapper for creating an anchor.
  *
- * @extends module:mobile.startup/View
  * @private
  */
 class Anchor extends View {
@@ -17,8 +16,6 @@ class Anchor extends View {
 	}
 
 	/**
-	 * @memberof Anchor
-	 * @instance
 	 * @mixes module:mobile.startup/View#defaults
 	 * @property {Object} defaults Default options hash.
 	 * @property {boolean} defaults.progressive is progressive action

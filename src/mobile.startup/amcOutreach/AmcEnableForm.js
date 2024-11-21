@@ -13,15 +13,19 @@ const
 /**
  * A form for enabling the advanced mobile editor mode.
  *
- * @param {Object} options
- * @param {string} options.postUrl Form will POST to this endpoint
- * @param {FormField[]} options.fields An array of hidden form fields
- * @param {string} options.buttonLabel Label for submit button
- * submitted
- * @extends module:mobile.startup/View
  * @ignore
  */
 class AmcEnableForm extends View {
+	/**
+	 * @param {Object} options
+	 * @param {string} options.postUrl Form will POST to this endpoint
+	 * @param {FormField[]} options.fields An array of hidden form fields
+	 * @param {string} options.buttonLabel Label for submit button
+	 */
+	constructor( options ) {
+		super( options );
+	}
+
 	/** @inheritdoc */
 	get isTemplateMode() {
 		return true;

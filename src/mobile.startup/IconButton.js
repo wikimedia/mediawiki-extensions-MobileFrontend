@@ -1,32 +1,27 @@
 const
-	mfExtend = require( './mfExtend' ),
 	util = require( './util' ),
 	View = require( './View' ),
 	Icon = require( './Icon' );
 
 /**
  * A wrapper for creating an icon button.
- *
- * @class IconButton
- * @extends module:mobile.startup/View
- *
- * @param {Object} options Configuration options
  */
-function IconButton( options ) {
-	if ( options.href ) {
-		options.tagName = 'a';
+class IconButton extends View {
+	/**
+	 * @param {Object} options Configuration options
+	 */
+	constructor( options ) {
+		if ( options.href ) {
+			options.tagName = 'a';
+		}
+		if ( options.tagName === 'button' ) {
+			options.isTypeButton = true;
+		}
+		super( options );
 	}
-	if ( options.tagName === 'button' ) {
-		options.isTypeButton = true;
-	}
-	View.call( this, options );
-}
 
-mfExtend( IconButton, View, {
 	/**
 	 * @inheritdoc
-	 * @memberof IconButton
-	 * @instance
 	 */
 	preRender() {
 		this.options._buttonClasses = this.getButtonClasses();
@@ -41,7 +36,8 @@ mfExtend( IconButton, View, {
 			} );
 			this.options._iconHTML = this._icon.$el.get( 0 ).outerHTML;
 		}
-	},
+	}
+
 	getButtonClasses() {
 		const additionalClassNames = this.options.additionalClassNames;
 		const size = this.options.size;
@@ -66,16 +62,16 @@ mfExtend( IconButton, View, {
 			classes += 'cdx-button--icon-only ';
 		}
 		return classes + additionalClassNames;
-	},
+	}
+
 	/**
 	 * @inheritdoc
-	 * @memberof IconButton
-	 * @instance
 	 */
-	isTemplateMode: true,
+	get isTemplateMode() {
+		return true;
+	}
+
 	/**
-	 * @memberof IconButton
-	 * @instance
 	 * @mixes module:mobile.startup/View#defaults
 	 * @property {Object} defaults Default options hash.
 	 * @property {string} defaults.tagName The name of the tag in which the button is wrapped.
@@ -100,35 +96,39 @@ mfExtend( IconButton, View, {
 	 *  of degrees. Must be ±90, 0 or ±180 or will throw exception.
 	 * @property {boolean} defaults.isSmall Whether the icon should be small.
 	 */
-	defaults: {
-		tagName: 'button',
-		href: undefined,
-		additionalClassNames: '',
-		title: '',
-		size: 'large',
-		weight: 'quiet',
-		action: '',
-		isIconOnly: true,
-		disabled: false,
-		base: 'mf-icon',
-		icon: '',
-		rotation: 0,
-		isSmall: false
-	},
+	get defaults() {
+		return {
+			tagName: 'button',
+			href: undefined,
+			additionalClassNames: '',
+			title: '',
+			size: 'large',
+			weight: 'quiet',
+			action: '',
+			isIconOnly: true,
+			disabled: false,
+			base: 'mf-icon',
+			icon: '',
+			rotation: 0,
+			isSmall: false
+		};
+	}
+
 	/**
 	 * Return the full class name that is required for the icon to render
 	 *
-	 * @memberof IconButton
-	 * @instance
 	 * @return {string}
 	 */
 	getClassName() {
 		return this.$el.attr( 'class' );
-	},
+	}
+
 	getIcon() {
 		return this._icon;
-	},
-	template: util.template( `
+	}
+
+	get template() {
+		return util.template( `
 		<{{tagName}}
 			type="button"
 			{{#isTypeButton}}{{#disabled}}disabled{{/disabled}}{{/isTypeButton}}
@@ -139,7 +139,8 @@ mfExtend( IconButton, View, {
 				{{{_iconHTML}}}
 				<span>{{label}}</span>
 		</{{tagName}}>
-	` )
-} );
+		` );
+	}
+}
 
 module.exports = IconButton;
