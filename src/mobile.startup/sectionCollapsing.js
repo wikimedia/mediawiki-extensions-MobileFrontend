@@ -52,34 +52,27 @@ function init( container ) {
 	const headingWrappers = Array.from( container.querySelectorAll( '.mw-parser-output > section > .mw-heading' ) );
 	headingWrappers.forEach( ( wrapper ) => {
 		wrapper.classList.add( 'mf-collapsible-heading' );
-		const heading = wrapper.firstElementChild;
 
 		// Add class to collapsible content
 		// Used in CSS before hidden attribute is added
 		const content = wrapper.nextElementSibling;
 		content.classList.add( 'mf-collapsible-content' );
 
-		// Update the heading text to account for semantics of collapsing sections
-		const headingText = document.createElement( 'span' );
-		headingText.textContent = heading.textContent;
-		headingText.setAttribute( 'tabindex', '0' );
-		headingText.setAttribute( 'role', 'button' );
-		headingText.setAttribute( 'aria-controls', content.id );
+		// Update the heading wrapper to account for semantics of collapsing sections
+		wrapper.setAttribute( 'tabindex', '0' );
+		wrapper.setAttribute( 'role', 'button' );
+		wrapper.setAttribute( 'aria-controls', content.id );
 
 		// Create the dropdown arrow
 		const icon = document.createElement( 'span' );
 		icon.classList.add( 'mf-icon', 'mf-icon--small', 'mf-collapsible-icon' );
 		icon.setAttribute( 'aria-hidden', true );
+		wrapper.prepend( icon );
 
-		setCollapsedState( content, headingText, icon, isCollapsed );
-
-		// Replace contents of the heading element
-		heading.innerHTML = '';
-		heading.append( icon );
-		heading.append( headingText );
+		setCollapsedState( content, wrapper, icon, isCollapsed );
 
 		// Register the click handlers
-		heading.addEventListener( 'click', () => toggle( content, headingText, icon ) );
+		wrapper.addEventListener( 'click', () => toggle( content, wrapper, icon ) );
 	} );
 }
 
