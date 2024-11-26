@@ -61,10 +61,17 @@ function init( container ) {
 
 		// Update the heading text to account for semantics of collapsing sections
 		const headingText = document.createElement( 'span' );
-		headingText.textContent = heading.textContent;
+		// Move children of heading to headingText
+		headingText.append.apply( headingText, heading.childNodes );
 		headingText.setAttribute( 'tabindex', '0' );
 		headingText.setAttribute( 'role', 'button' );
 		headingText.setAttribute( 'aria-controls', content.id );
+		// move 'id' attribute from 'heading' to 'headingText'
+		const headingId = heading.getAttribute( 'id' );
+		if ( headingId ) {
+			heading.removeAttribute( 'id' );
+			headingText.setAttribute( 'id', headingId );
+		}
 
 		// Create the dropdown arrow
 		const icon = document.createElement( 'span' );
