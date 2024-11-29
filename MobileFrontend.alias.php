@@ -51,7 +51,11 @@ $specialPageAliases['av'] = [
 
 /** Azerbaijani (azərbaycanca) */
 $specialPageAliases['az'] = [
+	'Uploads' => [ 'Yükləmələrim' ],
 	'History' => [ 'Tarixçə' ],
+	'MobileCite' => [ 'Mobilİstinad' ],
+	'MobileOptions' => [ 'MobilSeçimlər' ],
+	'MobileDiff' => [ 'MobilFərq' ],
 	'MobileLanguages' => [ 'MobilDillər' ],
 ];
 
