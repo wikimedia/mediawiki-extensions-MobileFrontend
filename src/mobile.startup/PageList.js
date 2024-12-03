@@ -84,7 +84,6 @@ mfExtend( PageList, View, {
 <li title="{{title}}" data-id="{{id}}" class="page-summary">
   <a href="{{url}}" class="title {{#isMissing}}new{{/isMissing}}"
     {{#anchor}}name="{{anchor}}"{{/anchor}}
-    {{#latitude}}data-latlng="{{latitude}},{{longitude}}"{{/latitude}}
     data-title="{{title}}">
     <div class="list-thumb
       {{#thumbnail.isLandscape}}list-thumb-y{{/thumbnail.isLandscape}}
@@ -96,9 +95,6 @@ mfExtend( PageList, View, {
     {{#wikidataDescription}}
     <div class="wikidata-description">{{wikidataDescription}}</div>
     {{/wikidataDescription}}
-    {{#proximity}}
-    <div class="info proximity">{{proximity}}</div>
-    {{/proximity}}
   </a>
 </li>
 	` )
