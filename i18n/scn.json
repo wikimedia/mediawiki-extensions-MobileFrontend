@@ -5,13 +5,14 @@
 			"Aushulz",
 			"Gmelfi",
 			"Pippinu",
-			"Sarvaturi"
+			"Sarvaturi",
+			"GianAntonucci"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Nzirisci lu còdici di cunfirma",
 	"mobile-frontend-changeslist-nocomment": "nuḍḍu riassuntu dû canciamentu",
 	"mobile-frontend-clear-search": "Scancella",
-	"mobile-frontend-copyright": "Stu cuntinutu è dispunìbbili sutta â $1 quannu nun veni spicificatu diversamenti.",
+	"mobile-frontend-copyright": "U cuntinutu è dispunìbbili ê senzi dâ licenza $1, abbestra ca nun cc'è scrittu a n'autra manera.",
 	"mobile-frontend-desc": "Ntirfaccia mòbbili",
 	"mobile-frontend-editor-anon": "Cancia senza trasiri",
 	"mobile-frontend-editor-anonwarning": "<strong>Accura:</strong> Nun trasisti. Lu tò nnirizzu IP addiventa visìbbili pubblicamenti quannu fai nu canciamentu. Si <strong>trasi</strong> o puru <strong>crei nu cuntu</strong>, li canciamenti chi fai vèninu attribbuiti ô tò nomu utenti, sparti d'àutri vantaggi.",
@@ -64,7 +65,7 @@
 	"mobile-frontend-settings-save": "Li mpustazzioni foru sarvati.",
 	"mobile-frontend-terms-text": "Cunnizzioni d'usu",
 	"mobile-frontend-view": "Virsioni mòbbili",
-	"mobile-frontend-view-desktop": "Desktop",
+	"mobile-frontend-view-desktop": "Scagnu",
 	"mobile-frontend-watchlist-cta-button-login": "Trasi",
 	"mobile-frontend-watchlist-filter-all": "Tutti",
 	"mobile-frontend-watchlist-filter-articles": "Pàggini",
