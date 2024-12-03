@@ -14,7 +14,6 @@ const mobile = require( 'mobile.startup' ),
 	headers = mobile.headers,
 	Button = mobile.Button,
 	IconButton = mobile.IconButton,
-	mfExtend = mobile.mfExtend,
 	blockMessageDrawer = require( './blockMessageDrawer.js' ),
 	MessageBox = mobile.MessageBox,
 	mwUser = mw.user;
@@ -58,57 +57,64 @@ EditVeTool.prototype.onUpdateState = function () {
 
 /**
  * Base class for SourceEditorOverlay and VisualEditorOverlay
- *
  * @class EditorOverlayBase
  * @private
  * @extends Overlay
  * @uses IconButton
  * @uses user
- * @param {Object} params Configuration options
- * @param {boolean} params.editSwitcher whether possible to switch mode in header
- * @param {boolean} params.hasToolbar whether the editor has a toolbar
  */
-function EditorOverlayBase( params ) {
-	const
-		options = util.extend(
-			true,
-			{
-				onBeforeExit: this.onBeforeExit.bind( this ),
-				className: 'overlay editor-overlay',
-				isBorderBox: false
-			},
-			params,
-			{
-				events: util.extend(
-					{
-						'click .back': 'onClickBack',
-						'click .continue': 'onClickContinue',
-						'click .submit': 'onClickSubmit',
-						'click .anonymous': 'onClickAnonymous'
-					},
-					params.events
-				)
-			}
-		);
-
-	if ( options.isNewPage ) {
-		options.placeholder = mw.msg( 'mobile-frontend-editor-placeholder-new-page', mwUser );
-	}
-	// change the message to request a summary when not in article namespace
-	if ( mw.config.get( 'wgNamespaceNumber' ) !== 0 ) {
-		options.summaryRequestMsg = mw.msg( 'mobile-frontend-editor-summary' );
-	}
-	this.isNewPage = options.isNewPage;
-	this.sectionId = options.sectionId;
-	this.overlayManager = options.overlayManager;
-
-	Overlay.call( this, options );
-}
-
-mfExtend( EditorOverlayBase, Overlay, {
+class EditorOverlayBase extends Overlay {
 	/**
-	 * @memberof EditorOverlayBase
-	 * @instance
+	 * @param {Object} params Configuration options
+	 * @param {boolean} params.editSwitcher whether possible to switch mode in header
+	 * @param {boolean} params.hasToolbar whether the editor has a toolbar
+	 */
+	constructor( params ) {
+		const
+			options = util.extend(
+				true,
+				{
+					onBeforeExit: ( exit, cancel ) => {
+						this.onBeforeExit( exit, cancel );
+					},
+					className: 'overlay editor-overlay',
+					isBorderBox: false
+				},
+				params,
+				{
+					events: util.extend(
+						{
+							'click .back': 'onClickBack',
+							'click .continue': 'onClickContinue',
+							'click .submit': 'onClickSubmit',
+							'click .anonymous': 'onClickAnonymous'
+						},
+						params.events
+					)
+				}
+			);
+
+		if ( options.isNewPage ) {
+			options.placeholder = mw.msg( 'mobile-frontend-editor-placeholder-new-page', mwUser );
+		}
+		// change the message to request a summary when not in article namespace
+		if ( mw.config.get( 'wgNamespaceNumber' ) !== 0 ) {
+			options.summaryRequestMsg = mw.msg( 'mobile-frontend-editor-summary' );
+		}
+		super( options );
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	initialize( options ) {
+		this.isNewPage = options.isNewPage;
+		this.sectionId = options.sectionId;
+		this.overlayManager = options.overlayManager;
+		super.initialize( options );
+	}
+
+	/**
 	 * @mixes Overlay#defaults
 	 * @property {Object} defaults Default options hash.
 	 * @property {OverlayManager} defaults.overlayManager instance
@@ -132,25 +138,27 @@ mfExtend( EditorOverlayBase, Overlay, {
 	 * @property {string} defaults.licenseMsg Text and link of the license,
 	 * under which this contribution will be released to inform the user.
 	 */
-	defaults: util.extend( {}, Overlay.prototype.defaults, {
-		hasToolbar: false,
-		continueMsg: mw.msg( 'mobile-frontend-editor-continue' ),
-		closeMsg: mw.msg( 'mobile-frontend-editor-keep-editing' ),
-		summaryRequestMsg: mw.msg( 'mobile-frontend-editor-summary-request' ),
-		summaryMsg: mw.msg( 'mobile-frontend-editor-summary-placeholder' ),
-		placeholder: mw.msg( 'mobile-frontend-editor-placeholder' ),
-		captchaMsg: mw.msg( 'mobile-frontend-account-create-captcha-placeholder' ),
-		captchaTryAgainMsg: mw.msg( 'mobile-frontend-editor-captcha-try-again' ),
-		switchMsg: mw.msg( 'mobile-frontend-editor-switch-editor' ),
-		confirmMsg: mw.msg( 'mobile-frontend-editor-cancel-confirm' ),
-		licenseMsg: undefined
-	} ),
+	get defaults() {
+		return util.extend( {}, super.defaults, {
+			hasToolbar: false,
+			continueMsg: mw.msg( 'mobile-frontend-editor-continue' ),
+			closeMsg: mw.msg( 'mobile-frontend-editor-keep-editing' ),
+			summaryRequestMsg: mw.msg( 'mobile-frontend-editor-summary-request' ),
+			summaryMsg: mw.msg( 'mobile-frontend-editor-summary-placeholder' ),
+			placeholder: mw.msg( 'mobile-frontend-editor-placeholder' ),
+			captchaMsg: mw.msg( 'mobile-frontend-account-create-captcha-placeholder' ),
+			captchaTryAgainMsg: mw.msg( 'mobile-frontend-editor-captcha-try-again' ),
+			switchMsg: mw.msg( 'mobile-frontend-editor-switch-editor' ),
+			confirmMsg: mw.msg( 'mobile-frontend-editor-cancel-confirm' ),
+			licenseMsg: undefined
+		} );
+	}
+
 	/**
 	 * @inheritdoc
-	 * @memberof EditorOverlayBase
-	 * @instance
 	 */
-	template: util.template( `
+	get template() {
+		return util.template( `
 <div class="overlay-header-container header-container position-fixed"></div>
 
 <div class="overlay-content">
@@ -176,51 +184,43 @@ mfExtend( EditorOverlayBase, Overlay, {
 <div class="overlay-footer-container position-fixed">
 	{{>footer}}
 </div>
-	` ),
-	/**
-	 * @memberof EditorOverlayBase
-	 * @instance
-	 */
-	sectionId: '',
+	` );
+	}
 
 	fakeToolbar() {
 		return this.options.fakeToolbar;
-	},
+	}
+
 	/**
 	 * Logs an event to http://meta.wikimedia.org/wiki/Schema:EditAttemptStep
 	 *
-	 * @memberof EditorOverlayBase
-	 * @instance
 	 * @param {Object} data
 	 */
-	log: function ( data ) {
+	log( data ) {
 		mw.track( 'editAttemptStep', util.extend( data, {
 			// eslint-disable-next-line camelcase
 			editor_interface: this.editor
 		} ) );
-	},
+	}
+
 	/**
 	 * Logs an event to http://meta.wikimedia.org/wiki/Schema:VisualEditorFeatureUse
 	 *
-	 * @memberof EditorOverlayBase
-	 * @instance
 	 * @param {Object} data
 	 */
-	logFeatureUse: function ( data ) {
+	logFeatureUse( data ) {
 		mw.track( 'visualEditorFeatureUse', util.extend( data, {
 			// eslint-disable-next-line camelcase
 			editor_interface: this.editor
 		} ) );
-	},
+	}
 
 	/**
 	 * If this is a new article, require confirmation before saving.
 	 *
-	 * @memberof EditorOverlayBase
-	 * @instance
 	 * @return {boolean} The user confirmed saving
 	 */
-	confirmSave: function () {
+	confirmSave() {
 		if ( this.isNewPage &&
 			// TODO: Replace with an OOUI dialog
 			// eslint-disable-next-line no-alert
@@ -230,18 +230,17 @@ mfExtend( EditorOverlayBase, Overlay, {
 		} else {
 			return true;
 		}
-	},
+	}
+
 	/**
 	 * Executed when page save is complete. Updates urls and shows toast message.
 	 *
-	 * @memberof EditorOverlayBase
-	 * @instance
 	 * @param {number|null} newRevId ID of the newly created revision, or null if it was a
 	 * null edit.
 	 * @param {string} [redirectUrl] URL to redirect to, if different than the current URL.
 	 * @param {boolean} [tempUserCreated] Whether a temporary user was created
 	 */
-	onSaveComplete: function ( newRevId, redirectUrl, tempUserCreated ) {
+	onSaveComplete( newRevId, redirectUrl, tempUserCreated ) {
 		this.saved = true;
 
 		if ( newRevId ) {
@@ -285,28 +284,26 @@ mfExtend( EditorOverlayBase, Overlay, {
 				window.location.hash = '#';
 			}
 		} );
-	},
+	}
+
 	/**
 	 * Show a save-complete message to the user
 	 *
 	 * @inheritdoc
-	 * @memberof VisualEditorOverlay
-	 * @instance
 	 * @param {string} action One of 'saved', 'created', 'restored'
 	 * @param {boolean} [tempUserCreated] Whether a temporary user was created
 	 */
-	showSaveCompleteMsg: function ( action, tempUserCreated ) {
+	showSaveCompleteMsg( action, tempUserCreated ) {
 		require( 'mediawiki.action.view.postEdit' ).fireHook( action, tempUserCreated );
-	},
+	}
+
 	/**
 	 * Executed when page save fails. Handles logging the error. Subclasses
 	 * should display error messages as appropriate.
 	 *
-	 * @memberof EditorOverlayBase
-	 * @instance
 	 * @param {Object} data API response
 	 */
-	onSaveFailure: function ( data ) {
+	onSaveFailure( data ) {
 		let code = data && data.errors && data.errors[0] && data.errors[0].code;
 
 		const
@@ -340,33 +337,32 @@ mfExtend( EditorOverlayBase, Overlay, {
 			message: code,
 			type: typeMap[code] || 'responseUnknown'
 		} );
-	},
+	}
+
 	/**
 	 * Report load errors back to the user. Silently record the error using EventLogging.
 	 *
-	 * @memberof EditorOverlayBase
-	 * @instance
 	 * @param {string} text Text (HTML) of message to display to user
 	 */
-	reportError: function ( text ) {
+	reportError( text ) {
 		const errorNotice = new MessageBox( {
 			type: 'error',
 			msg: text,
 			heading: mw.msg( 'mobile-frontend-editor-error' )
 		} );
 		this.$errorNoticeContainer.html( errorNotice.$el );
-	},
-	hideErrorNotice: function () {
+	}
+
+	hideErrorNotice() {
 		this.$errorNoticeContainer.empty();
-	},
+	}
+
 	/**
 	 * Prepares the penultimate screen before saving.
 	 * Expects to be overridden by child class.
 	 *
-	 * @memberof EditorOverlayBase
-	 * @instance
 	 */
-	onStageChanges: function () {
+	onStageChanges() {
 		this.showHidden( '.save-header, .save-panel' );
 		this.hideErrorNotice();
 		this.log( {
@@ -377,15 +373,14 @@ mfExtend( EditorOverlayBase, Overlay, {
 		// problems are avoided (header position not updating to the top of the
 		// screen, instead staying lower until a subsequent scroll event).
 		window.scrollTo( 0, 1 );
-	},
+	}
+
 	/**
 	 * Executed when the editor clicks the save button. Expects to be overridden by child
 	 * class. Checks if the save needs to be confirmed.
 	 *
-	 * @memberof EditorOverlayBase
-	 * @instance
 	 */
-	onSaveBegin: function () {
+	onSaveBegin() {
 		this.confirmAborted = false;
 		this.hideErrorNotice();
 		// Ask for confirmation in some cases
@@ -396,12 +391,12 @@ mfExtend( EditorOverlayBase, Overlay, {
 		this.log( {
 			action: 'saveAttempt'
 		} );
-	},
+	}
+
 	/**
 	 * @inheritdoc
-	 * @memberof EditorOverlayBase
 	 */
-	preRender: function () {
+	preRender() {
 		const options = this.options;
 
 		this.options.headers = [
@@ -439,20 +434,19 @@ mfExtend( EditorOverlayBase, Overlay, {
 			headers.saveHeader( options.previewingMsg, 'save-header hidden' ),
 			headers.savingHeader( mw.msg( 'mobile-frontend-editor-wait' ) )
 		];
-	},
+	}
 
 	/**
 	 * @inheritdoc
-	 * @memberof EditorOverlayBase
-	 * @instance
 	 */
-	postRender: function () {
+	postRender() {
 		this.$errorNoticeContainer = this.$el.find( '#error-notice-container' );
 
-		Overlay.prototype.postRender.apply( this );
+		super.postRender();
 		this.showHidden( '.initial-header' );
-	},
-	show: function () {
+	}
+
+	show() {
 		this.allowCloseWindow = mw.confirmCloseWindow( {
 			// Returns true if content has changed
 			test: () => this.hasChanged(),
@@ -464,7 +458,7 @@ mfExtend( EditorOverlayBase, Overlay, {
 		} );
 
 		this.saved = false;
-		Overlay.prototype.show.call( this );
+		super.show();
 
 		// Inform other interested code that the editor has loaded
 		/**
@@ -474,46 +468,41 @@ mfExtend( EditorOverlayBase, Overlay, {
 		 * @memberof Hooks
 		 */
 		mw.hook( 'mobileFrontend.editorOpened' ).fire( this.editor );
-	},
+	}
+
 	/**
 	 * Back button click handler
 	 *
-	 * @memberof EditorOverlayBase
-	 * @instance
 	 */
-	onClickBack: function () {},
+	onClickBack() {}
+
 	/**
 	 * Submit button click handler
 	 *
-	 * @memberof EditorOverlayBase
-	 * @instance
 	 */
-	onClickSubmit: function () {
+	onClickSubmit() {
 		this.onSaveBegin();
-	},
+	}
+
 	/**
 	 * Continue button click handler
 	 *
-	 * @memberof EditorOverlayBase
-	 * @instance
 	 */
-	onClickContinue: function () {
+	onClickContinue() {
 		this.onStageChanges();
-	},
+	}
+
 	/**
 	 * "Edit without logging in" button click handler
 	 *
-	 * @memberof EditorOverlayBase
-	 * @instance
 	 */
-	onClickAnonymous: function () {},
+	onClickAnonymous() {}
+
 	/**
-	 * @memberof EditorOverlayBase
-	 * @instance
 	 * @param {Function} exit Callback to exit the overlay
 	 * @param {Function} cancel Callback to cancel exiting the overlay
 	 */
-	onBeforeExit: function ( exit, cancel ) {
+	onBeforeExit( exit, cancel ) {
 		if ( this.hasChanged() && !this.switching ) {
 			if ( !this.windowManager ) {
 				this.windowManager = OO.ui.getWindowManager();
@@ -569,8 +558,9 @@ mfExtend( EditorOverlayBase, Overlay, {
 				}
 			}, 100 );
 		}
-	},
-	onExit: function () {
+	}
+
+	onExit() {
 		// May not be set if overlay has not been previously shown
 		if ( this.allowCloseWindow ) {
 			this.allowCloseWindow.release();
@@ -582,16 +572,15 @@ mfExtend( EditorOverlayBase, Overlay, {
 		 * @memberof Hooks
 		 */
 		mw.hook( 'mobileFrontend.editorClosed' ).fire();
-	},
+	}
+
 	/**
 	 * Sets additional values used for anonymous editing warning.
 	 *
-	 * @memberof EditorOverlayBase
-	 * @instance
 	 * @param {Object} options
 	 * @return {jQuery.Element}
 	 */
-	createAnonWarning: function ( options ) {
+	createAnonWarning( options ) {
 		const $actions = $( '<div>' ).addClass( 'actions' ),
 			msg = this.gateway.wouldautocreate ?
 				'mobile-frontend-editor-autocreatewarning' :
@@ -640,26 +629,25 @@ mfExtend( EditorOverlayBase, Overlay, {
 		);
 
 		return $anonWarning;
-	},
+	}
+
 	/**
 	 * Creates and returns a copy of the anon talk message warning
 	 *
-	 * @memberof EditorOverlayBase
-	 * @instance
 	 * @return {jQuery.Element}
 	 */
-	createAnonTalkWarning: function () {
+	createAnonTalkWarning() {
 		return $( '.minerva-anon-talk-message' ).clone();
-	},
+	}
+
 	/**
 	 * Get an options object not containing any defaults or editor
 	 * specific options, so that it can be used to construct a
 	 * different editor for switching.
 	 *
-	 * @memberof EditorOverlayBase
 	 * @return {Object} Options
 	 */
-	getOptionsForSwitch: function () {
+	getOptionsForSwitch() {
 		// Only preserve options that would be passed in editor.js#setupEditor
 		// and skip over defaults.
 		return {
@@ -678,25 +666,22 @@ mfExtend( EditorOverlayBase, Overlay, {
 			contentDir: this.options.contentDir,
 			sectionId: this.options.sectionId
 		};
-	},
+	}
 
 	/**
 	 * Checks whether the state of the thing being edited as changed. Expects to be
 	 * implemented by child class.
 	 *
-	 * @memberof EditorOverlayBase
-	 * @instance
 	 */
-	hasChanged: function () {},
+	hasChanged() {}
+
 	/**
 	 * Get a promise that is resolved when the editor data has loaded,
 	 * or rejected when we're refusing to load the editor because the user is blocked.
 	 *
-	 * @memberof EditorOverlayBase
-	 * @instance
 	 * @return {jQuery.Promise}
 	 */
-	getLoadingPromise: function () {
+	getLoadingPromise() {
 		return this.dataPromise.then( ( result ) => {
 			// check if user is blocked
 			if ( result && result.blockinfo ) {
@@ -706,8 +691,9 @@ mfExtend( EditorOverlayBase, Overlay, {
 			}
 			return result;
 		} );
-	},
-	showEditNotices: function () {
+	}
+
+	showEditNotices() {
 		if ( mw.config.get( 'wgMFEditNoticesFeatureConflict' ) ) {
 			return;
 		}
@@ -755,15 +741,14 @@ mfExtend( EditorOverlayBase, Overlay, {
 				}
 			}
 		} );
-	},
+	}
+
 	/**
 	 * Handles a failed save due to a CAPTCHA provided by ConfirmEdit extension.
 	 *
-	 * @memberof EditorOverlayBase
-	 * @instance
 	 * @param {Object} details Details returned from the api.
 	 */
-	handleCaptcha: function ( details ) {
+	handleCaptcha( details ) {
 		const $input = this.$el.find( '.captcha-word' );
 
 		if ( this.captchaShown ) {
@@ -799,6 +784,6 @@ mfExtend( EditorOverlayBase, Overlay, {
 		this.showHidden( '.save-header, .captcha-panel' );
 		this.captchaShown = true;
 	}
-} );
+}
 
 module.exports = EditorOverlayBase;

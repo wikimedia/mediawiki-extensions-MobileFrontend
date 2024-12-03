@@ -6,7 +6,6 @@ const mobile = require( 'mobile.startup' ),
 	saveFailureMessage = require( './saveFailureMessage.js' ),
 	EditorGateway = require( './EditorGateway.js' ),
 	MessageBox = mobile.MessageBox,
-	mfExtend = mobile.mfExtend,
 	setPreferredEditor = require( './setPreferredEditor.js' ),
 	VisualEditorOverlay = require( './VisualEditorOverlay.js' ),
 	currentPage = mobile.currentPage;
@@ -14,110 +13,106 @@ const mobile = require( 'mobile.startup' ),
 /**
  * Overlay that shows an editor
  *
- * @class SourceEditorOverlay
  * @uses Section
  * @uses EditorGateway
  * @uses VisualEditorOverlay
- * @extends EditorOverlayBase
  * @private
- *
- * @param {Object} options Configuration options
- * @param {jQuery.Promise} [dataPromise] Optional promise for loading content
  */
-function SourceEditorOverlay( options, dataPromise ) {
-	this.isFirefox = /firefox/i.test( window.navigator.userAgent );
-	this.gateway = new EditorGateway( {
-		api: options.api,
-		title: options.title,
-		sectionId: options.sectionId,
-		oldId: options.oldId,
-		fromModified: !!dataPromise,
-		preload: options.preload,
-		preloadparams: options.preloadparams,
-		editintro: options.editintro
-	} );
-	this.readOnly = !!options.oldId; // If old revision, readOnly mode
-	this.dataPromise = dataPromise || this.gateway.getContent();
-	this.currentPage = currentPage();
-	if ( this.currentPage.isVEVisualAvailable() ) {
-		options.editSwitcher = true;
+class SourceEditorOverlay extends EditorOverlayBase {
+	/**
+	 * @param {Object} options Configuration options
+	 * @param {jQuery.Promise} [dataPromise] Optional promise for loading content
+	 */
+	constructor( options, dataPromise ) {
+		super(
+			util.extend( true,
+				{ events: { 'input .wikitext-editor': 'onInputWikitextEditor' } },
+				options,
+				{ dataPromise }
+			)
+		);
 	}
-	if ( this.readOnly ) {
-		options.readOnly = true;
-		options.editingMsg = mw.msg( 'mobile-frontend-editor-viewing-source-page', options.title );
-	} else {
-		options.editingMsg = mw.msg( 'mobile-frontend-editor-editing-page', options.title );
-	}
-	options.previewingMsg = mw.msg( 'mobile-frontend-editor-previewing-page', options.title );
-	EditorOverlayBase.call(
-		this,
-		util.extend( true,
-			{ events: { 'input .wikitext-editor': 'onInputWikitextEditor' } },
-			options
-		)
-	);
-}
 
-mfExtend( SourceEditorOverlay, EditorOverlayBase, {
-	/**
-	 * @inheritdoc
-	 * @memberof SourceEditorOverlay
-	 * @instance
-	 */
-	templatePartials: util.extend( {}, EditorOverlayBase.prototype.templatePartials, {
-		content: util.template( `
-<div lang="{{contentLang}}" dir="{{contentDir}}" class="editor-container content">
-	<textarea class="wikitext-editor" id="wikitext-editor" cols="40" rows="10" placeholder="{{placeholder}}"></textarea>
-	<div class="preview collapsible-headings-expanded mw-body-content"></div>
-</div>
-		` )
-	} ),
-	/**
-	 * @memberof SourceEditorOverlay
-	 * @instance
-	 */
-	editor: 'wikitext',
-	/**
-	 * @memberof SourceEditorOverlay
-	 * @instance
-	 */
-	sectionLine: '',
+	initialize( options ) {
+		this.isFirefox = /firefox/i.test( window.navigator.userAgent );
+		this.gateway = new EditorGateway( {
+			api: options.api,
+			title: options.title,
+			sectionId: options.sectionId,
+			oldId: options.oldId,
+			fromModified: !!options.dataPromise,
+			preload: options.preload,
+			preloadparams: options.preloadparams,
+			editintro: options.editintro
+		} );
+		this.readOnly = !!options.oldId; // If old revision, readOnly mode
+		this.dataPromise = options.dataPromise || this.gateway.getContent();
+		this.currentPage = currentPage();
+		if ( this.currentPage.isVEVisualAvailable() ) {
+			options.editSwitcher = true;
+		}
+		if ( this.readOnly ) {
+			options.readOnly = true;
+			options.editingMsg = mw.msg( 'mobile-frontend-editor-viewing-source-page', options.title );
+		} else {
+			options.editingMsg = mw.msg( 'mobile-frontend-editor-editing-page', options.title );
+		}
+		options.previewingMsg = mw.msg( 'mobile-frontend-editor-previewing-page', options.title );
+		this.sectionLine = '';
+		super.initialize( options );
+	}
+
+	get editor() {
+		return 'wikitext';
+	}
 
 	/**
 	 * @inheritdoc
-	 * @memberof SourceEditorOverlay
-	 * @instance
 	 */
-	show: function () {
-		EditorOverlayBase.prototype.show.apply( this, arguments );
+	get templatePartials() {
+		return util.extend(
+			{},
+			super.templatePartials, {
+				content: util.template( `
+		<div lang="{{contentLang}}" dir="{{contentDir}}" class="editor-container content">
+			<textarea class="wikitext-editor" id="wikitext-editor" cols="40" rows="10" placeholder="{{placeholder}}"></textarea>
+			<div class="preview collapsible-headings-expanded mw-body-content"></div>
+		</div>
+				` )
+			}
+		);
+	}
+
+	/**
+	 * @inheritdoc
+	 */
+	show() {
+		super.show();
 		// Ensure we do this after showing the overlay, otherwise it doesn't work.
 		this._resizeEditor();
-	},
+	}
+
 	/**
 	 * Wikitext Editor input handler
 	 *
-	 * @memberof SourceEditorOverlay
-	 * @instance
 	 */
-	onInputWikitextEditor: function () {
+	onInputWikitextEditor() {
 		this.gateway.setContent( this.$el.find( '.wikitext-editor' ).val() );
 		this.$el.find( '.continue, .submit' ).prop( 'disabled', false );
-	},
+	}
+
 	/**
 	 * @inheritdoc
-	 * @memberof SourceEditorOverlay
-	 * @instance
 	 */
-	onClickBack: function () {
-		EditorOverlayBase.prototype.onClickBack.apply( this, arguments );
+	onClickBack() {
+		super.onClickBack();
 		this._hidePreview();
-	},
+	}
+
 	/**
 	 * @inheritdoc
-	 * @memberof SourceEditorOverlay
-	 * @instance
 	 */
-	postRender: function () {
+	postRender() {
 		// log edit attempt
 		this.log( { action: 'ready' } );
 		this.log( { action: 'loaded' } );
@@ -159,7 +154,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 			} );
 		}
 
-		EditorOverlayBase.prototype.postRender.apply( this );
+		super.postRender();
 
 		// This spinner is still used when displaying save/preview panel
 		this.$el.find( '.overlay-content' ).append( spinner().$el );
@@ -182,7 +177,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 		}
 
 		this.$content
-			.on( 'input', this._resizeEditor.bind( this ) )
+			.on( 'input', () => this._resizeEditor() )
 			.one( 'input', () => {
 				this.log( { action: 'firstChange' } );
 			} );
@@ -221,32 +216,28 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 		);
 
 		this._loadContent();
-	},
+	}
 
 	/**
 	 * Handles click on "Edit without login" in anonymous editing warning.
 	 *
-	 * @memberof SourceEditorOverlay
-	 * @instance
 	 * @private
 	 */
-	onClickAnonymous: function () {
+	onClickAnonymous() {
 		this.$anonWarning.hide();
 		this.$anonTalkWarning.hide();
 		// reenable "Next" button
 		this.$anonHiddenButtons.show();
 		this.$content.show();
 		this._resizeEditor();
-	},
+	}
 
 	/**
 	 * Prepares the preview interface and reveals the save screen of the overlay
 	 *
 	 * @inheritdoc
-	 * @memberof SourceEditorOverlay
-	 * @instance
 	 */
-	onStageChanges: function () {
+	onStageChanges() {
 		const params = {
 			text: this.getContent()
 		};
@@ -288,17 +279,15 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 			hideSpinnerAndShowPreview();
 		} );
 
-		EditorOverlayBase.prototype.onStageChanges.apply( this, arguments );
-	},
+		super.onStageChanges();
+	}
 
 	/**
 	 * Hides the preview and reverts back to initial screen.
 	 *
-	 * @memberof SourceEditorOverlay
-	 * @instance
 	 * @private
 	 */
-	_hidePreview: function () {
+	_hidePreview() {
 		this.gateway.abortPreview();
 		this.hideSpinner();
 		// FIXME: Don't rely on internals - we re-render template instead.
@@ -308,15 +297,13 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 		this.$content.show();
 		window.scrollTo( 0, this.scrollTop );
 		this.showHidden( '.initial-header' );
-	},
+	}
 
 	/**
 	 * Resize the editor textarea, maintaining scroll position in iOS
 	 *
-	 * @memberof SourceEditorOverlay
-	 * @instance
 	 */
-	_resizeEditor: function () {
+	_resizeEditor() {
 		let scrollTop, container, $scrollContainer;
 
 		if ( !this.$scrollContainer ) {
@@ -341,41 +328,35 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 				.css( 'height', ( this.$content.prop( 'scrollHeight' ) + 2 ) + 'px' );
 			$scrollContainer.scrollTop( scrollTop );
 		}
-	},
+	}
 
 	/**
 	 * Set content to the user input field.
 	 *
-	 * @memberof SourceEditorOverlay
-	 * @instance
 	 * @param {string} content The content to set.
 	 */
-	setContent: function ( content ) {
+	setContent( content ) {
 		this.$content
 			.show()
 			.val( content );
 		this._resizeEditor();
-	},
+	}
 
 	/**
 	 * Returns the content of the user input field.
 	 *
-	 * @memberof SourceEditorOverlay
-	 * @instance
 	 * @return {string}
 	 */
-	getContent: function () {
+	getContent() {
 		return this.$content.val();
-	},
+	}
 
 	/**
 	 * Requests content from the API and reveals it in UI.
 	 *
-	 * @memberof SourceEditorOverlay
-	 * @instance
 	 * @private
 	 */
-	_loadContent: function () {
+	_loadContent() {
 		this.$content.hide();
 
 		this.getLoadingPromise()
@@ -409,18 +390,16 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 
 				this.showEditNotices();
 			} );
-	},
+	}
 
 	/**
 	 * Loads a {VisualEditorOverlay} and replaces the existing SourceEditorOverlay with it
 	 * based on the current option values.
 	 *
-	 * @memberof SourceEditorOverlay
-	 * @instance
 	 * @private
 	 * @param {string} [wikitext] Wikitext to pass to VE
 	 */
-	_switchToVisualEditor: function ( wikitext ) {
+	_switchToVisualEditor( wikitext ) {
 		this.log( {
 			action: 'abort',
 			type: 'switchnochange',
@@ -474,27 +453,24 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 				// notifications are not dismissible when shown within the editor.
 			}
 		);
-	},
+	}
 
 	/**
 	 * Get the current edit summary.
 	 *
-	 * @memberof SourceEditorOverlay
 	 * @return {string}
 	 */
-	getEditSummary: function () {
+	getEditSummary() {
 		return this.summaryTextArea.getValue();
-	},
+	}
 
 	/**
 	 * Executed when the editor clicks the save/publish button. Handles logging and submitting
 	 * the save action to the editor API.
 	 *
 	 * @inheritdoc
-	 * @memberof SourceEditorOverlay
-	 * @instance
 	 */
-	onSaveBegin: function () {
+	onSaveBegin() {
 		const options = {
 			summary: this.getEditSummary()
 		};
@@ -502,7 +478,7 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 		if ( this.sectionLine !== '' ) {
 			options.summary = '/* ' + this.sectionLine + ' */' + options.summary;
 		}
-		EditorOverlayBase.prototype.onSaveBegin.apply( this, arguments );
+		super.onSaveBegin();
 		if ( this.confirmAborted ) {
 			return;
 		}
@@ -533,19 +509,17 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 			}, ( data ) => {
 				this.onSaveFailure( data );
 			} );
-	},
+	}
 
 	/**
 	 * @inheritdoc
-	 * @memberof SourceEditorOverlay
-	 * @instance
 	 * @param {number|null} newRevId ID of the newly created revision, or null if it was a
 	 * null edit.
 	 * @param {string} [redirectUrl] URL to redirect to, if different than the current URL.
 	 * @param {boolean} [tempUserCreated] Whether a temporary user was created
 	 */
-	onSaveComplete: function ( newRevId, redirectUrl ) {
-		EditorOverlayBase.prototype.onSaveComplete.apply( this, arguments );
+	onSaveComplete( newRevId, redirectUrl, tempUserCreated ) {
+		super.onSaveComplete( newRevId, redirectUrl, tempUserCreated );
 
 		// The parent class changes the location hash in a setTimeout, so wait
 		// for that to happen before reloading.
@@ -568,26 +542,22 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 				window.location.reload();
 			}
 		} );
-	},
+	}
 
 	/**
 	 * @inheritdoc
-	 * @memberof SourceEditorOverlay
-	 * @instance
 	 */
-	showSaveCompleteMsg: function ( action, tempUserCreated ) {
+	showSaveCompleteMsg( action, tempUserCreated ) {
 		require( 'mediawiki.action.view.postEdit' ).fireHookOnPageReload( action, tempUserCreated );
-	},
+	}
 
 	/**
 	 * Executed when page save fails. Handles error display and bookkeeping,
 	 * passes logging duties to the parent.
 	 *
 	 * @inheritdoc
-	 * @memberof SourceEditorOverlay
-	 * @instance
 	 */
-	onSaveFailure: function ( data ) {
+	onSaveFailure( data ) {
 		let msg, noRetry;
 
 		if ( data.edit && data.edit.captcha ) {
@@ -608,19 +578,17 @@ mfExtend( SourceEditorOverlay, EditorOverlayBase, {
 			}
 		}
 
-		EditorOverlayBase.prototype.onSaveFailure.apply( this, arguments );
-	},
+		super.onSaveFailure( data );
+	}
 
 	/**
 	 * Checks whether the existing content has changed.
 	 *
-	 * @memberof SourceEditorOverlay
-	 * @instance
 	 * @return {boolean}
 	 */
-	hasChanged: function () {
+	hasChanged() {
 		return this.gateway.hasChanged;
 	}
-} );
+}
 
 module.exports = SourceEditorOverlay;

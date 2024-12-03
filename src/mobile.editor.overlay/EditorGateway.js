@@ -5,40 +5,40 @@ const actionParams = mobile.actionParams;
 /**
  * API that helps save and retrieve page content
  *
- * @param {Object} options Configuration options
- * @param {mw.Api} options.api an Api to use.
- * @param {string} options.title the title to edit
- * @param {string|null} options.sectionId the id of the section to operate edits on.
- * @param {number} [options.oldId] revision to operate on. If absent defaults to latest.
- * @param {boolean} [options.fromModified] whether the page was loaded in a modified state
- * @param {string} [options.preload] the name of a page to preload into the editor
- * @param {Array} [options.preloadparams] parameters to prefill into the preload content
- * @param {string} [options.editintro] edit intro to add to notices
  * @private
  */
-function EditorGateway( options ) {
-	this.api = options.api;
-	this.title = options.title;
-	this.sectionId = options.sectionId;
-	this.oldId = options.oldId;
-	this.preload = options.preload;
-	this.preloadparams = options.preloadparams;
-	this.editintro = options.editintro;
-	this.content = undefined;
-	this.fromModified = options.fromModified;
-	this.hasChanged = options.fromModified;
-}
-
-EditorGateway.prototype = {
+class EditorGateway {
+	/**
+	 * @param {Object} options Configuration options
+	 * @param {mw.Api} options.api an Api to use.
+	 * @param {string} options.title the title to edit
+	 * @param {string|null} options.sectionId the id of the section to operate edits on.
+	 * @param {number} [options.oldId] revision to operate on. If absent defaults to latest.
+	 * @param {boolean} [options.fromModified] whether the page was loaded in a modified state
+	 * @param {string} [options.preload] the name of a page to preload into the editor
+	 * @param {Array} [options.preloadparams] parameters to prefill into the preload content
+	 * @param {string} [options.editintro] edit intro to add to notices
+	 */
+	constructor( options ) {
+		this.api = options.api;
+		this.title = options.title;
+		this.sectionId = options.sectionId;
+		this.oldId = options.oldId;
+		this.preload = options.preload;
+		this.preloadparams = options.preloadparams;
+		this.editintro = options.editintro;
+		this.content = undefined;
+		this.fromModified = options.fromModified;
+		this.hasChanged = options.fromModified;
+	}
 
 	/**
 	 * Get the block (if there is one) from the result.
 	 *
-	 * @memberof EditorGateway
 	 * @param {Object} pageObj Page object
 	 * @return {Object|null}
 	 */
-	getBlockInfo: function ( pageObj ) {
+	getBlockInfo( pageObj ) {
 		let blockedError;
 
 		if ( pageObj.actions &&
@@ -59,15 +59,15 @@ EditorGateway.prototype = {
 		}
 
 		return null;
-	},
+	}
+
 	/**
 	 * Get the content of a page.
 	 *
-	 * @memberof EditorGateway
 	 * @instance
 	 * @return {jQuery.Promise}
 	 */
-	getContent: function () {
+	getContent() {
 		let options;
 
 		const resolve = () => util.Deferred().resolve( {
@@ -130,29 +130,27 @@ EditorGateway.prototype = {
 				return resolve();
 			} );
 		}
-	},
+	}
 
 	/**
 	 * Mark content as modified and set changes to be submitted when #save
 	 * is invoked.
 	 *
-	 * @memberof EditorGateway
 	 * @instance
 	 * @param {string} content New section content.
 	 */
-	setContent: function ( content ) {
+	setContent( content ) {
 		if ( this.originalContent !== content || this.fromModified ) {
 			this.hasChanged = true;
 		} else {
 			this.hasChanged = false;
 		}
 		this.content = content;
-	},
+	}
 
 	/**
 	 * Save the new content of the section, previously set using #setContent.
 	 *
-	 * @memberof EditorGateway
 	 * @instance
 	 * @param {Object} options Configuration options
 	 * @param {string} [options.summary] Optional summary for the edit.
@@ -164,7 +162,7 @@ EditorGateway.prototype = {
 	 * `type` and `details` properties. `type` is a string describing the type
 	 * of error, `details` can be any object (usually error message).
 	 */
-	save: function ( options ) {
+	save( options ) {
 		const result = util.Deferred();
 
 		options = options || {};
@@ -218,29 +216,27 @@ EditorGateway.prototype = {
 		};
 
 		return saveContent();
-	},
+	}
 
 	/**
 	 * Abort any pending previews.
 	 *
-	 * @memberof EditorGateway
 	 * @instance
 	 */
-	abortPreview: function () {
+	abortPreview() {
 		if ( this._pending ) {
 			this._pending.abort();
 		}
-	},
+	}
 
 	/**
 	 * Get page preview from the API and abort any existing previews.
 	 *
-	 * @memberof EditorGateway
 	 * @instance
 	 * @param {Object} options API query parameters
 	 * @return {jQuery.Deferred}
 	 */
-	getPreview: function ( options ) {
+	getPreview( options ) {
 		let
 			sectionLine = '',
 			sectionId = '';
@@ -298,6 +294,6 @@ EditorGateway.prototype = {
 			}
 		} );
 	}
-};
+}
 
 module.exports = EditorGateway;
