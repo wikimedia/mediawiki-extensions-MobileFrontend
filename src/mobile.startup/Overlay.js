@@ -239,4 +239,36 @@ Overlay.make = function ( options, view ) {
 	return overlay;
 };
 
+/**
+ * ES5 compatible version of class for backwards compatibility
+ *
+ * @param {Object} props
+ * @deprecated 1.44
+ * @ignore
+ */
+function ClassES5( props ) {
+	mw.log.warn( '[1.44] Extending Overlay class constructor is deprecated. Please use Overlay.make' );
+	View.ClassES5.call( this, util.extend(
+		true,
+		{
+			headerChrome: false,
+			className: 'overlay'
+		},
+		props,
+		{
+			events: util.extend(
+				{
+					// FIXME: Remove .initial-header selector
+					'click .cancel, .confirm, .initial-header .back': 'onExitClick',
+					click: ( ev ) => ev.stopPropagation()
+				},
+				props.events
+			)
+		}
+	) );
+}
+ClassES5.prototype = Overlay.prototype;
+ClassES5.make = Overlay.make;
+
+Overlay.ClassES5 = ClassES5;
 module.exports = Overlay;
