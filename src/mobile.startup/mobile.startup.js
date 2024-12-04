@@ -114,7 +114,7 @@ module.exports = {
 	 * @memberof module:mobile.startup
 	 * @type module:mobile.startup/View
 	 */
-	View,
+	View: View.ClassES5,
 	/**
 	 * Internal for use inside Minerva, ExternalGuidance,
 	 *  GrowthExperiments and Echo only.
@@ -122,7 +122,7 @@ module.exports = {
 	 * @memberof module:mobile.startup
 	 * @type module:mobile.startup/Overlay
 	 */
-	Overlay,
+	Overlay: Overlay.ClassES5,
 	/**
 	 * Internal for use inside Minerva only.
 	 *

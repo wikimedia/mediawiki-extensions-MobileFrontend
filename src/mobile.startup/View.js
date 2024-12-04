@@ -504,4 +504,19 @@ OO.mixinClass( View, OO.EventEmitter );
 	};
 } );
 
+/**
+ * ES5 compatible version of class for backwards compatibility
+ *
+ * @deprecated 1.44
+ * @param {Object} options
+ * @ignore
+ */
+function ClassES5( options ) {
+	mw.log.warn( '[1.44] Extending View class constructor is deprecated. Please use Overlay.make' );
+	this.initialize( options );
+}
+ClassES5.prototype = View.prototype;
+ClassES5.make = View.make;
+
+View.ClassES5 = ClassES5;
 module.exports = View;
