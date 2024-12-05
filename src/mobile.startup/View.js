@@ -156,7 +156,7 @@ class View {
 	 * @property {string} tagName
 	 */
 	get tagName() {
-		return 'div';
+		return this.options.tagName || 'div';
 	}
 
 	/**
@@ -512,7 +512,7 @@ OO.mixinClass( View, OO.EventEmitter );
  * @ignore
  */
 function ClassES5( options ) {
-	mw.log.warn( '[1.44] Extending View class constructor is deprecated. Please use Overlay.make' );
+	mw.log.warn( '[1.44] Extending View class constructor is deprecated. Please use View.make' );
 	this.initialize( options );
 }
 ClassES5.prototype = View.prototype;
