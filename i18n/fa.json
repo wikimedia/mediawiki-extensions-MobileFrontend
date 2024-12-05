@@ -41,7 +41,8 @@
 			"ZxxZxxZ",
 			"پسر یاس",
 			"Darafsh",
-			"Ebrahim"
+			"Ebrahim",
+			"Amiria703"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "اینکه کاربر از میانای تلفن همراه استفاده می‌کند یا نه",
@@ -105,7 +106,7 @@
 	"mobile-frontend-editor-viewing-source-page": "<strong>مشاهدهٔ منبع</strong><span> $1</span>",
 	"mobile-frontend-editor-wait": "در حال انتشار ویرایش، منتظر باشید.",
 	"mobile-frontend-editor-loading": "در حال بارگذاری ویرایشگر...",
-	"mobile-frontend-editor-loadingtooslow": "سرعقت اتصالتان کم است؟",
+	"mobile-frontend-editor-loadingtooslow": "سرعت اتصالتان کم است؟",
 	"mobile-frontend-editor-loadbasiceditor": "تغییر به ویرایشگر متنی",
 	"mobile-frontend-editor-toload": "ویرایشگر اکنون بارگیری خواهد شد. اگر پس از چند ثانیه همچنان این پیام را می‌بینید، لطفاً [$1 صفحه را تازه‌سازی کنید].",
 	"mf-expand-sections-description": "گسترش همیشگی بخش‌های صفحه‌های محتوایی به صورت پیش‌فرض.",
