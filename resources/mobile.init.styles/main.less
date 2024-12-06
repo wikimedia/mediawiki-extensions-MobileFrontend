@@ -20,8 +20,13 @@
 		display: block;
 	}
 
-	@{selector-parsoid-top-heading}:not( .mf-collapsible-heading ) {
-		padding-left: 22px;
+	@{selector-parsoid-top-heading}:not( .mf-collapsible-heading )::before {
+		// Reserve the correct space for the collapsible heading icon (T381655)
+		content: '';
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin-right: 6px;
 	}
 
 	@{selector-parsoid-top-heading} {
