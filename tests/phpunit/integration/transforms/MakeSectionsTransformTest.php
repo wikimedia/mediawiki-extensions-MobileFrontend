@@ -22,6 +22,7 @@ class MakeSectionsTransformTest extends MediaWikiIntegrationTestCase {
 	 * @covers ::makeSections
 	 * @covers ::createSectionBodyElement
 	 * @covers ::getTopHeadings
+	 * @covers ::getFirstHeading
 	 * @covers ::prepareHeading
 	 * @covers ::__construct
 	 *
@@ -141,5 +142,57 @@ class MakeSectionsTransformTest extends MediaWikiIntegrationTestCase {
 			$js,
 			'contains class name to be toggled'
 		);
+	}
+
+	/**
+	 * @covers ::getFirstHeading
+	 *
+	 * @dataProvider provideGetFirstHeading
+	 *
+	 * @param string $html
+	 * @param string $expected
+	 * @param string $reason
+	 */
+	public function testGetFirstHeading( string $html, string $expected, string $reason ) {
+		$transform = new MakeSectionsTransform( [ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' ], true );
+		$doc = new DOMDocument();
+		$doc->loadHTML( self::wrap( $html ) );
+		$body = DOMCompat::querySelector( $doc, 'body' );
+		$this->assertNotNull( $body, 'Body should exist in wrapped HTML' );
+
+		$result = $transform->getFirstHeading( $body );
+		$this->assertEquals( $expected, $result, $reason );
+	}
+
+	public static function provideGetFirstHeading() {
+		yield [
+			'',
+			'',
+			'No content, so no heading should be found'
+		];
+
+		yield [
+			'<div class="mw-parser-output"></div>',
+			'',
+			'Empty .mw-parser-output should return no heading'
+		];
+
+		yield [
+			'<div class="mw-parser-output"><p>Text</p><h2>Heading</h2></div>',
+			'h2',
+			'First heading (h2) should be found'
+		];
+
+		yield [
+			'<div class="mw-parser-output"><p>Paragraph</p><p>p2</p><h3>Heading</h3><h2>Another Heading</h2></div>',
+			'h3',
+			'First heading (h3) should be returned, not p or h2'
+		];
+
+		yield [
+			'<div class="content"><h2>Outside Content</h2></div>',
+			'',
+			'.mw-parser-output does not exist, so no heading should be found'
+		];
 	}
 }

@@ -57,6 +57,7 @@ EditVeTool.prototype.onUpdateState = function () {
 
 /**
  * Base class for SourceEditorOverlay and VisualEditorOverlay
+ *
  * @class EditorOverlayBase
  * @private
  * @extends Overlay
