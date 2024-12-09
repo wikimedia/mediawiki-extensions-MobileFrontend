@@ -160,6 +160,7 @@ module.exports = {
 	spinner: icons.spinner,
 	/**
 	 * Internal for use inside MobileFrontend only
+	 *
 	 * @private
 	 */
 	cancelIcon: icons.cancel,
