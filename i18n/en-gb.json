@@ -19,24 +19,9 @@
 			"Shirayuki"
 		]
 	},
-	"mobile-frontend-editor-blocked-drawer-action-randompage": "Take me to another page",
-	"mobile-frontend-editor-blocked-drawer-body-link": "See more",
 	"mobile-frontend-history-no-results": "The filter did not provide any history matches.",
-	"mobile-frontend-languages-structured-overlay-all-languages-header": "Other languages",
-	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Search for a language",
-	"mobile-frontend-languages-structured-overlay-no-results": "Language not available",
 	"mobile-frontend-media-license-link": "Licence information",
 	"mobile-frontend-watchlist-a-z": "List",
-	"mobile-frontend-watchlist-a-z-empty-howto-alt": "Click the star icon",
 	"mobile-frontend-watchlist-add": "Added $1 to your watchlist",
-	"mobile-frontend-watchlist-cta-button-login": "Log in",
-	"mobile-frontend-watchlist-cta-button-signup": "Sign up",
-	"mobile-frontend-watchlist-filter-other": "Other",
-	"mobile-frontend-user-page-create-owner-page-link-label": "Create your own",
-	"tag-mobile_edit": "Mobile edit",
-	"tag-advanced_mobile_edit": "Advanced mobile edit",
-	"tag-mobile_web_edit": "Mobile web edit",
-	"mobile-frontend-loading-message": "Loading…",
-	"mobile-frontend-amc-outreach-no-thanks": "No thanks",
 	"mobile-frontend-special-pages-pref": "Optimise and simplify special pages when on mobile (recommended)"
 }
