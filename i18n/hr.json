@@ -16,7 +16,7 @@
 			"Teoo3"
 		]
 	},
-	"abusefilter-edit-builder-vars-user-mobile": "Suradnik uređuje iz mobilnoga sučelja",
+	"abusefilter-edit-builder-vars-user-mobile": "Suradnik uređuje iz mobilnoga sučelja ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "Unesite kôd za potvrdu",
 	"mobile-frontend-changeslist-nocomment": "bez sažetka",
 	"mobile-frontend-clear-search": "Očisti",
@@ -84,9 +84,9 @@
 	"mf-expand-sections-name": "Proširi sve odlomke",
 	"mf-font-size-name": "Veličina fonta",
 	"mf-font-size-description": "Prilagođavanje veličine fonta radi bolje čitljivosti.",
-	"mf-font-size-small-label": "Mala",
-	"mf-font-size-regular-label": "Normalna",
-	"mf-font-size-large-label": "Velika",
+	"mf-font-size-small-label": "Standardna",
+	"mf-font-size-regular-label": "Veća",
+	"mf-font-size-large-label": "Najveća",
 	"mobile-frontend-generic-404-desc": "Stranica koju tražite nije pronađena.",
 	"mobile-frontend-generic-404-title": "Pogreška: stranica nije pronađena",
 	"mobile-frontend-generic-login-new": "Projekt <strong>{{SITENAME}} načinili su ljudi poput Vas.</strong><br />Prijavite se da biste doprinosili.",

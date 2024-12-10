@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Boesenbergia"
+			"Boesenbergia",
+			"Munajad.MH"
 		]
 	},
-	"abusefilter-edit-builder-vars-user-mobile": "Nantowaghi apa pangangghuy meccè' lèbât tangas raè sèlulèr apa enjâ'",
+	"abusefilter-edit-builder-vars-user-mobile": "Manḍhâ'â pangangghuy meccè' lèbât seluler ($1) otabâ enten",
 	"mobile-frontend-account-create-captcha-placeholder": "Pamaso' koḍe konfirmasi",
 	"mobile-frontend-copyright": "Kontèn tasaḍiyâ è $1 kajhâbhâ bâḍâ katrangan laèn.",
 	"mobile-frontend-terms-text": "Katantowan Paghuna'an",
