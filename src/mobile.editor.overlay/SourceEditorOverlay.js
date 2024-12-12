@@ -431,7 +431,7 @@ class SourceEditorOverlay extends EditorOverlayBase {
 						oldId: options.oldId || mw.config.get( 'wgRevisionId' ),
 						targetName: 'mobile',
 						modified: true,
-						wikitext: wikitext
+						wikitext
 					} );
 				} else {
 					delete options.dataPromise;

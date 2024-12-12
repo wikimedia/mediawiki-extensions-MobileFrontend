@@ -38,7 +38,7 @@ class SearchOverlay extends Overlay {
 				events: {
 					'click .search-content': 'onClickSearchContent',
 					'click .overlay-content': 'onClickOverlayContent',
-					'click .overlay-content > div': function ( ev ) {
+					'click .overlay-content > div'( ev ) {
 						ev.stopPropagation();
 					},
 					'touchstart .results': 'hideKeyboardOnScroll',
@@ -301,6 +301,7 @@ class SearchOverlay extends Overlay {
 	 * Clear results
 	 *
 	 * @param boolean fireHook
+	 * @param fireHook
 	 * @private
 	 */
 	resetSearch( fireHook ) {

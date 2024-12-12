@@ -134,13 +134,13 @@ function initMobileOptions() {
 	if ( $betaToggle.length ) {
 		toggles.push( {
 			$el: $betaToggle,
-			onToggle: function () {}
+			onToggle() {}
 		} );
 	}
 	if ( $amcToggle.length ) {
 		toggles.push( {
 			$el: $amcToggle,
-			onToggle: function ( value ) {
+			onToggle( value ) {
 				if ( !value && amcOutreach.loadCampaign().isCampaignActive() ) {
 					// Make all amc outreach actions ineligible so the user doesn't have
 					// to see the outreach drawer again
