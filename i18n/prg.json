@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
+			"Kxeo",
 			"Nertiks",
 			"Nērtiks Jōrgesuns"
 		]
 	},
+	"mobile-frontend-copyright": "Ēnturs ast preiēimins pa $1, ik ni indicijja kitawīdai.",
 	"mobile-frontend-terms-text": "Tērpausnas rēgulas",
 	"mobile-frontend-view": "Mōbila wersiōni",
 	"mobile-frontend-view-desktop": "Klassiskas wīds",
