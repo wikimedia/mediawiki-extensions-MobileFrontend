@@ -1,11 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
+			"Ameisenigel",
 			"Joachim Mos",
 			"Servien",
 			"Wikiundeplattsnacker"
 		]
 	},
+	"mobile-frontend-copyright": "De Inholt is ünner $1 togänglich, wenn nich anners angeven.",
 	"mobile-frontend-missing-image": "Bild",
 	"mobile-frontend-terms-text": "Brukbedingen",
 	"mobile-frontend-view": "Lütten Bildschirm",
