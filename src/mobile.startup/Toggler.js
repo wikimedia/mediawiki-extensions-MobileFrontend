@@ -132,9 +132,6 @@ class Toggler {
 			} );
 		} );
 
-		if ( this.isCollapsedByDefault() ) {
-			storeSectionToggleState( $heading, this.page );
-		}
 		return true;
 	}
 
@@ -288,86 +285,7 @@ class Toggler {
 		checkHash();
 
 		util.getWindow().on( 'hashchange', () => checkHash() );
-
-		if ( this.isCollapsedByDefault() && this.page ) {
-			expandStoredSections( this, this.$container, this.page );
-		}
 	}
-}
-
-/**
- * Using the settings module looks at what sections were previously expanded on
- * existing page.
- *
- * @param {Page} page
- * @return {Object} representing open sections
- * @ignore
- */
-function getExpandedSections( page ) {
-	const expandedSections = mw.storage.session.getObject( 'expandedSections' ) || {};
-	expandedSections[page.title] = expandedSections[page.title] || {};
-	return expandedSections;
-}
-
-/**
- * Save expandedSections to sessionStorage
- *
- * @param {Object} expandedSections
- * @ignore
- */
-function saveExpandedSections( expandedSections ) {
-	mw.storage.session.setObject(
-		'expandedSections', expandedSections
-	);
-}
-
-/**
- * Given an expanded heading, store it to sessionStorage.
- * If the heading is collapsed, remove it from sessionStorage.
- *
- * @param {jQuery.Object} $heading - A heading belonging to a section
- * @param {Page} page
- * @ignore
- */
-function storeSectionToggleState( $heading, page ) {
-	const headline = $heading.find( '.mw-headline' ).attr( 'id' ),
-		expandedSections = getExpandedSections( page );
-
-	if ( headline && expandedSections[page.title] ) {
-		const isSectionOpen = $heading.hasClass( 'open-block' );
-		if ( isSectionOpen ) {
-			expandedSections[page.title][headline] = true;
-		} else {
-			delete expandedSections[page.title][headline];
-		}
-
-		saveExpandedSections( expandedSections );
-	}
-}
-
-/**
- * Expand sections that were previously expanded before leaving this page.
- *
- * @param {Toggler} toggler
- * @param {jQuery.Object} $container
- * @param {Page} page
- * @ignore
- */
-function expandStoredSections( toggler, $container, page ) {
-	const expandedSections = getExpandedSections( page ),
-		$headlines = $container.find( '.section-heading span' );
-
-	$headlines.each( function () {
-		const $headline = $container.find( this );
-		const $sectionHeading = $headline.parents( '.section-heading' );
-		// toggle only if the section is not already expanded
-		if (
-			expandedSections[page.title][$headline.attr( 'id' )] &&
-			!$sectionHeading.hasClass( 'open-block' )
-		) {
-			toggler.toggle( $sectionHeading, true );
-		}
-	} );
 }
 
 /**
@@ -385,8 +303,5 @@ function enableKeyboardActions( toggler, $heading ) {
 		}
 	} ).find( 'a' ).on( 'keypress mouseup', ( ev ) => ev.stopPropagation() );
 }
-
-Toggler._getExpandedSections = getExpandedSections;
-Toggler._expandStoredSections = expandStoredSections;
 
 module.exports = Toggler;
