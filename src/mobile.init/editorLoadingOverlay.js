@@ -31,7 +31,7 @@ module.exports = function editorLoadingOverlay( afterShow, afterHide, loadBasicE
 			className: 'overlay overlay-loading',
 			noHeader: true,
 			isBorderBox: false,
-			onBeforeExit( exit ) {
+			onBeforeExit: function ( exit ) {
 				exit();
 				afterHide();
 				if ( timeout ) {
@@ -41,8 +41,8 @@ module.exports = function editorLoadingOverlay( afterShow, afterHide, loadBasicE
 		} ),
 		logFeatureUse = function ( feature, action ) {
 			mw.track( 'visualEditorFeatureUse', {
-				feature,
-				action,
+				feature: feature,
+				action: action,
 				// eslint-disable-next-line camelcase
 				editor_interface: 'visualeditor'
 			} );

@@ -18,7 +18,7 @@ function init() {
 			el: $watchlist,
 			funnel: 'watchlist',
 			skipTemplateRender: true,
-			eventBus
+			eventBus: eventBus
 		} );
 	}
 	// not needed now we have JS view which has infinite scrolling
