@@ -39,6 +39,7 @@ class SearchOverlay extends Overlay {
 					'click .search-content': 'onClickSearchContent',
 					'click .overlay-content': 'onClickOverlayContent',
 					'click .overlay-content > div': function ( ev ) {
+						mw.hook( 'ext.wikimediaEvents.webUIClick.event' ).fire( ev );
 						ev.stopPropagation();
 					},
 					'touchstart .results': 'hideKeyboardOnScroll',
