@@ -22,15 +22,15 @@ class BlockMessageDetails extends View {
 	 */
 	get defaults() {
 		return {
-			createDetailsAnchorHref() {
+			createDetailsAnchorHref: function () {
 				return function ( blockId, render ) {
 					return mw.util.getUrl( 'Special:BlockList', { wpTarget: '#' + render( blockId ) } );
 				};
 			},
-			createDetailsAnchorLabel() {
+			createDetailsAnchorLabel: function () {
 				return mw.msg( 'mobile-frontend-editor-blocked-drawer-help' );
 			},
-			createTitle() {
+			createTitle: function () {
 				let msgKey = 'mobile-frontend-editor-blocked-drawer-title';
 				if ( mw.user.isAnon() ) {
 					msgKey += '-ip';
@@ -45,7 +45,7 @@ class BlockMessageDetails extends View {
 				// * mobile-frontend-editor-blocked-drawer-title-ip-partial
 				return mw.msg( msgKey );
 			},
-			createBody() {
+			createBody: function () {
 				let msgKey = '';
 				if ( mw.user.isAnon() && this.anonOnly ) {
 					msgKey = 'mobile-frontend-editor-blocked-drawer-body';
@@ -72,7 +72,7 @@ class BlockMessageDetails extends View {
 			},
 			seeMoreLink: mw.msg( 'mobile-frontend-editor-blocked-drawer-body-link' ),
 			reasonHeader: mw.msg( 'mobile-frontend-editor-blocked-drawer-reason-header' ),
-			creatorHeader() {
+			creatorHeader: function () {
 				// The gender is the subject (the blockee) not the object (the blocker).
 				return mw.msg( 'mobile-frontend-editor-blocked-drawer-creator-header',
 					mw.user.options.get( 'gender' ) );
@@ -113,7 +113,7 @@ class BlockMessageDetails extends View {
 		if ( cta && mw.config.get( 'wgMFTrackBlockNotices' ) ) {
 			mw.track( 'counter.MediaWiki.BlockNotices.' + wiki + '.MobileFrontend.ctaShown', 1 );
 			config.events = {
-				click() {
+				click: function () {
 					mw.track( 'counter.MediaWiki.BlockNotices.' + wiki + '.MobileFrontend.ctaClicked', 1 );
 				}
 			};

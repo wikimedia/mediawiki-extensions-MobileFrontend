@@ -29,10 +29,10 @@ module.exports = function () {
 			}
 			// eslint-disable-next-line no-new
 			new Toggler( {
-				$container,
-				prefix,
-				page,
-				eventBus
+				$container: $container,
+				prefix: prefix,
+				page: page,
+				eventBus: eventBus
 			} );
 		}
 	}

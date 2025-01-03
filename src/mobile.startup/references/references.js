@@ -64,7 +64,7 @@ function referenceDrawer( props ) {
 				showCollapseIcon: false,
 				className: 'drawer position-fixed text references-drawer',
 				events: {
-					'click sup a'( ev ) {
+					'click sup a': function ( ev ) {
 						// Stop default scroll to hash fragment behaviour.
 						ev.preventDefault();
 					},
