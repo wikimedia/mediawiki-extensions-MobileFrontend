@@ -91,7 +91,7 @@
 	"mobile-frontend-edit-signup-action": "<strong>帮助改进{{SITENAME}}。</strong><br />注册以编辑。",
 	"mobile-frontend-editor-anon": "不登录编辑",
 	"mobile-frontend-editor-anonwarning": "<strong>警告：</strong>您没有登录。如果您进行任何编辑，您的IP地址会公开展示。如果您<strong>登录</strong>或<strong>创建账号</strong>，您的编辑会以您的用户名署名，此外还有其他益处。",
-	"mobile-frontend-editor-autocreatewarning": "<strong>警告：</strong>您尚未登录。您进行编辑后，我们会给您创建临时账号。[[$1|了解更多]]。<strong>登录</strong>或<strong>创建账号</strong>可在该账号到期失效后继续接受通知，以及使用其他功能。",
+	"mobile-frontend-editor-autocreatewarning": "<strong>警告：</strong>您进行编辑后，我们会为您创建临时账号。[[$1|了解更多信息]]。<strong>登录</strong>或<strong>创建账号</strong>可在该账号到期失效后继续接受通知，以及使用其他功能。",
 	"mobile-frontend-editor-blocked-drawer-action-login": "登录",
 	"mobile-frontend-drawer-arrow-label": "关闭",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "确定",
