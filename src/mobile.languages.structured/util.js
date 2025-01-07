@@ -89,7 +89,7 @@ module.exports = {
 	 * @param {Object} language with 'lang' key.
 	 * @return {Object} language with 'lang' key and new 'dir' key.
 	 */
-	getDir: function ( language ) {
+	getDir( language ) {
 		const dir = rtlLanguages.indexOf( language.lang ) > -1 ? 'rtl' : 'ltr';
 		return mfUtils.extend( {}, language, { dir } );
 	},
@@ -116,7 +116,7 @@ module.exports = {
 	 * @param {string} [deviceLanguage] the device's primary language
 	 * @return {StructuredLanguages}
 	 */
-	getStructuredLanguages: function (
+	getStructuredLanguages(
 		languages,
 		variants,
 		frequentlyUsedLanguages,
@@ -213,7 +213,7 @@ module.exports = {
 	 * @instance
 	 * @return {Object}
 	 */
-	getFrequentlyUsedLanguages: function () {
+	getFrequentlyUsedLanguages() {
 		const languageMap = mw.storage.get( 'langMap' );
 
 		return languageMap ? JSON.parse( languageMap ) : {};
@@ -226,7 +226,7 @@ module.exports = {
 	 * @instance
 	 * @param {Object} languageMap
 	 */
-	saveFrequentlyUsedLanguages: function ( languageMap ) {
+	saveFrequentlyUsedLanguages( languageMap ) {
 		mw.storage.set( 'langMap', JSON.stringify( languageMap ) );
 	},
 
@@ -239,7 +239,7 @@ module.exports = {
 	 * @param {string} languageCode
 	 * @param {Object} frequentlyUsedLanguages list of the frequently used languages
 	 */
-	saveLanguageUsageCount: function ( languageCode, frequentlyUsedLanguages ) {
+	saveLanguageUsageCount( languageCode, frequentlyUsedLanguages ) {
 		let count = frequentlyUsedLanguages[ languageCode ] || 0;
 
 		count += 1;

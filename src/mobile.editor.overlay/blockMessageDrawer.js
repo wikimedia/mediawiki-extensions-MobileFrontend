@@ -27,10 +27,10 @@ const BlockMessageDetails = require( './BlockMessageDetails.js' );
 module.exports = function blockMessageDrawer( props ) {
 	const blockDrawer = new Drawer( {
 		className: 'drawer block-message',
-		onBeforeHide: function ( drawer ) {
+		onBeforeHide: ( drawer ) => {
 			drawer.$el.remove();
 		},
-		onShow: function () {
+		onShow: () => {
 			const $drawer = blockDrawer.$el.find( '.drawer.block-message' ),
 				drawerTop = $drawer.offset().top - 100,
 				creatorTop = blockDrawer.$el.find( '.block-message-creator' ).offset().top - 100,

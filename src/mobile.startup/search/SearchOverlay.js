@@ -38,7 +38,7 @@ class SearchOverlay extends Overlay {
 				events: {
 					'click .search-content': 'onClickSearchContent',
 					'click .overlay-content': 'onClickOverlayContent',
-					'click .overlay-content > div': function ( ev ) {
+					'click .overlay-content > div': ( ev ) => {
 						mw.hook( 'ext.wikimediaEvents.webUIClick.event' ).fire( ev );
 						ev.stopPropagation();
 					},

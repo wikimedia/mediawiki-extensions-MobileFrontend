@@ -16,6 +16,8 @@
 	},
 	"rules": {
 		"no-shadow": "warn",
+		"object-shorthand": "warn",
+		"prefer-arrow-callback": "warn",
 		"jsdoc/check-tag-names": "off",
 		"jsdoc/no-undefined-types": "off",
 		"jsdoc/require-returns": "off",
