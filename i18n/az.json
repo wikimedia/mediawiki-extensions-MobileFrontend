@@ -11,7 +11,8 @@
 			"Vugar 1981",
 			"Wertuose",
 			"Şeyx Şamil",
-			"Nemoralis"
+			"Nemoralis",
+			"Gadir"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "İstifadəçinin mobil interfeys vasitəsilə redaktə edib-etməməsi",
@@ -166,7 +167,7 @@
 	"tag-mobile_edit-description": "Mobil vasitəsilə (veb və ya tətbiqdən) edilən redaktə",
 	"tag-advanced_mobile_edit": "Təkmilləşdirilmiş mobil redaktə",
 	"tag-advanced_mobile_edit-description": "Təkmilləşdirilmiş rejim ilə edilmiş redaktələr",
-	"tag-mobile_web_edit": "Mobil veb redaktə",
+	"tag-mobile_web_edit": "Mobil veb-redaktə",
 	"tag-mobile_web_edit-description": "Mobil veb saytdan redaktə",
 	"mobile-frontend-loading-message": "Yüklənir...",
 	"mobile-frontend-search-feedback-link-text": "Bizə rəy bildirin.",
