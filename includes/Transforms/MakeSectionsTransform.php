@@ -229,48 +229,6 @@ class MakeSectionsTransform implements IMobileTransform {
 		return $headings;
 	}
 
-		/**
-		 * Retrieves the tag name of the first heading element (e.g., `h1`, `h2`, etc.)
-		 * inside the `.mw-parser-output` container. If no headings are found, returns an
-		 * empty string.
-		 *
-		 * Note: The function loops over all top-level sibling elements inside
-		 * .mw-parser-output until it finds the first heading element. This approach is
-		 * considered acceptable because:
-		 *  1. It breaks immediately upon finding the first heading, so performance is not
-		 *     significantly impacted.
-		 *  2. Practical HTML article structures are unlikely to contain a large number
-		 *     of elements without headings.
-		 *
-		 * @param DOMElement $doc
-		 * @return string
-		 */
-	public function getFirstHeading( DOMElement $doc ): string {
-		$parserContent = DOMCompat::querySelector( $doc, '.mw-parser-output' );
-
-		if ( !$parserContent ) {
-			return '';
-		}
-
-		// Start with the first child element of '.mw-parser-output'
-		$currentElement = DOMCompat::getFirstElementChild( $parserContent );
-
-		// Traverse siblings to find the first heading element
-		while ( $currentElement ) {
-			// Check if the current element's tag name matches any heading tag
-			if ( in_array( $currentElement->tagName, $this->topHeadingTags ) ) {
-
-				return $currentElement->tagName;
-			}
-
-			// Move to the next sibling
-			$currentElement = DOMCompat::getNextElementSibling( $currentElement );
-		}
-
-		// Return an empty string if no heading is found
-		return '';
-	}
-
 	/**
 	 * Make it possible to open sections while JavaScript is still loading.
 	 *
