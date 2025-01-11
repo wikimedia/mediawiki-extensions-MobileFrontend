@@ -2,6 +2,7 @@
 
 use MediaWiki\Context\RequestContext;
 use MediaWiki\MainConfigNames;
+use MediaWiki\Output\OutputPage;
 use MediaWiki\Request\FauxRequest;
 
 /**
@@ -10,39 +11,60 @@ use MediaWiki\Request\FauxRequest;
 class MobileSpecialMobileDiffTest extends MediaWikiIntegrationTestCase {
 	protected function setUp(): void {
 		parent::setUp();
-		$this->overrideConfigValue( MainConfigNames::Script, '/wiki/index.php' );
+		$this->overrideConfigValues( [
+			MainConfigNames::Script => '/wiki/index.php',
+			MainConfigNames::Server => 'https://example.org',
+		] );
 	}
 
-	public static function provideGetDesktopUrlForMobileDiff() {
+	public static function mobileDiffProvider() {
 		return [
 			[
-				'SpecialMobileDiff',
 				'100',
 				[ 'foo' => 'bar' ],
-				'/wiki/index.php?diff=100',
+				'https://example.org/wiki/index.php?diff=100',
 			],
 			[
-				'SpecialMobileDiff',
 				'100...101',
 				[ 'mobileaction' => 'toggle_view_mobile', 'unhide' => 1 ],
-				'/wiki/index.php?diff=101&oldid=100&unhide=1',
+				'https://example.org/wiki/index.php?oldid=100&diff=101&unhide=1',
+			],
+			[
+				'100...102',
+				[ 'unhide' => 'yes' ],
+				'https://example.org/wiki/index.php?oldid=100&diff=102&unhide=1',
+			],
+			[
+				'',
+				[],
+				'https://example.org/wiki/Special:Diff',
 			],
 		];
 	}
 
 	/**
-	 * @param string $class
 	 * @param string $subPage
 	 * @param array $params
-	 * @param string|null $expected
-	 * @covers SpecialMobileDiff::getDesktopUrl
-	 * @dataProvider provideGetDesktopUrlForMobileDiff
+	 * @param string $expectedUrl
+	 * @covers SpecialMobileDiff
+	 * @dataProvider mobileDiffProvider
 	 */
-	public function testGetDesktopUrlWithMobileDiff( $class, $subPage, array $params, $expected ) {
+	public function testMobileDiff( $subPage, array $params, $expectedUrl ) {
+		$page = new SpecialMobileDiff();
+
 		$context = new RequestContext();
 		$context->setRequest( new FauxRequest( $params ) );
-		$page = new $class( $this->getServiceContainer()->getRevisionLookup() );
+
+		$output = new OutputPage( $context );
+		$context->setOutput( $output );
+
 		$page->setContext( $context );
-		$this->assertEquals( $expected, $page->getDesktopUrl( $subPage ) );
+
+		$page->execute( $subPage );
+
+		$redirectUrl = $page->getOutput()->getRedirect();
+		$expandedRedirectUrl = $this->getServiceContainer()->getUrlUtils()->expand( $redirectUrl, PROTO_HTTPS );
+
+		$this->assertEquals( $expectedUrl, $expandedRedirectUrl );
 	}
 }

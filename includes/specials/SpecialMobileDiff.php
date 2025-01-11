@@ -1,53 +1,47 @@
 <?php
 
-use MediaWiki\Html\Html;
-use MediaWiki\SpecialPage\UnlistedSpecialPage;
+use MediaWiki\SpecialPage\RedirectSpecialPage;
+use MediaWiki\SpecialPage\SpecialPage;
 
 /**
- * Show the difference between two revisions of a page
+ * Formerly a special page to show the difference between two revisions of a page - decomissioned in T358293
+ * Now redirects to the core diff functionality; or, if called without a subpage, to the form at Special:Diff
  */
-class SpecialMobileDiff extends UnlistedSpecialPage {
+class SpecialMobileDiff extends RedirectSpecialPage {
 	public function __construct() {
 		parent::__construct( 'MobileDiff' );
 	}
 
 	/**
-	 * Get the URL for Desktop version of difference view
-	 * @param string|null $subPage URL of mobile diff page
-	 * @return string|null Url to mobile diff page
+	 * Determine the page to redirect to
+	 *
+	 * @param string|null $subPage The subpage, if any, passed to Special:MobileDiff
+	 * @return Title|bool Either a Title object representing Special:Diff, or `true` to indicate that the redirect
+	 * should be to index.php with the added parameters
 	 */
-	public function getDesktopUrl( $subPage ) {
-		if ( $subPage === null ) {
-			return null;
+	public function getRedirect( $subPage ) {
+		// If called without a subpage, redirect to the form at Special:Diff
+		if ( $subPage == null ) {
+			return SpecialPage::getTitleFor( 'Diff' );
 		}
+
+		// Retrieve the diff parameters from the subpage
 		$parts = explode( '...', $subPage );
 		if ( count( $parts ) > 1 ) {
-			$params = [ 'diff' => $parts[1], 'oldid' => $parts[0] ];
+			$this->mAddedRedirectParams['oldid'] = $parts[0];
+			$this->mAddedRedirectParams['diff'] = $parts[1];
 		} else {
-			$params = [ 'diff' => $parts[0] ];
+			$this->mAddedRedirectParams['diff'] = $parts[0];
 		}
-		if ( $this->getRequest()->getVal( 'unhide' ) ) {
-			$params['unhide'] = 1;
-		}
-		return wfAppendQuery( wfScript(), $params );
-	}
 
-	/**
-	 * @inheritDoc
-	 */
-	public function execute( $subPage ) {
-		$out = $this->getOutput();
-		if ( !$subPage ) {
-			$out->setStatusCode( 404 );
-			$out->addHTML(
-				Html::errorBox(
-					$out->msg( 'mobile-frontend-generic-404-title' )->parse(),
-					$out->msg( 'mobile-frontend-generic-404-desc' )->text()
-				)
-			);
-
-			return;
+		// Maintain backwards compatibility: SpecialMobileDiff used
+		// `getRequest()->getBool( 'unhide' )`, whereas Article::showDiffPage
+		// currently uses `$request->getInt( 'unhide' ) === 1`
+		if ( $this->getRequest()->getBool( 'unhide' ) ) {
+			$this->mAddedRedirectParams['unhide'] = 1;
 		}
-		$out->redirect( $this->getDesktopUrl( $subPage ), '301' );
+
+		// Redirect to index.php with the added query parameters
+		return true;
 	}
 }
