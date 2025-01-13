@@ -105,7 +105,7 @@
 	"mobile-frontend-last-modified-with-user-seconds": "{{PLURAL:$5|[$6 $2]|0=ਇੱਕ ਅਗਿਆਤ ਵਰਤੋਂਕਾਰ}} ਵੱਲੋਂ [$4 ਆਖ਼ਰੀ {{GENDER:$1| ਸੋਧ}} {{PLURAL:$3|$3 ਸਕਿੰਟ}} ਪਹਿਲਾਂ] ਕੀਤੀ ਗਈ",
 	"mobile-frontend-last-modified-with-user-years": "{{PLURAL:$5|[$6 $2]|0=ਇੱਕ ਅਗਿਆਤ ਵਰਤੋਂਕਾਰ}} ਵੱਲੋਂ [$4 ਆਖ਼ਰੀ {{GENDER:$1| ਸੋਧ}} {{PLURAL:$3|$3 ਸਾਲ}} ਪਹਿਲਾਂ] ਕੀਤੀ ਗਈ",
 	"mobile-frontend-main-menu": "ਮੁੱਖ ਮੀਨੂ",
-	"mobile-frontend-main-menu-settings-heading": "ਸੈਟਿੰਗਾਂ",
+	"mobile-frontend-main-menu-settings-heading": "ਤਰਜੀਹਾਂ",
 	"mobile-frontend-media-details": "ਬਿਓਰਾ",
 	"mobile-frontend-media-license-link": "ਲਸੰਸ ਜਾਣਕਾਰੀ",
 	"mobile-frontend-media-load-fail-message": "ਇਸ ਚਿੱਤਰ ਨੂੰ ਲੋਡ ਕਰਨ ਵਿੱਚ ਇੱਕ ਤਰੁੱਟੀ ਆਈ ਸੀ",
