@@ -116,6 +116,7 @@ class SearchOverlay extends Overlay {
 	 */
 	onClickResult( ev ) {
 		const $link = this.$el.find( ev.currentTarget );
+		mw.hook( 'ext.MobileFrontend.searchOverlay.click' ).fire();
 		/**
 		 * Fired when the user clicks a search result
 		 *
