@@ -55,7 +55,8 @@
 			"SleaY",
 			"Goombiis",
 			"Mahabarata",
-			"Rayquachu"
+			"Rayquachu",
+			"Niridya"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si un utilisateur est ou non en cours de modification via l’interface mobile",
@@ -233,8 +234,8 @@
 	"mobile.js": "/* Tout code JavaScript placé ici sera chargé avec les pages accédées par les utilisateurs du site mobile */",
 	"tag-mobile_edit": "Modification par mobile",
 	"tag-mobile_edit-description": "Modification effectuée depuis un mobile (web ou application)",
-	"tag-advanced_mobile_edit": "Modification sur mobile avancée",
-	"tag-advanced_mobile_edit-description": "Modification faite par l’utilisateur en mode avancé",
+	"tag-advanced_mobile_edit": "Modification par mobile en mode avancé",
+	"tag-advanced_mobile_edit-description": "Modification effectuée par un utilisateur en mode avancé sur mobile",
 	"tag-mobile_web_edit": "Modification par le web mobile",
 	"tag-mobile_web_edit-description": "Modification effectuée depuis le site web mobile",
 	"mobile-frontend-loading-message": "Chargement en cours...",
