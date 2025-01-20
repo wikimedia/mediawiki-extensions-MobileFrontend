@@ -108,9 +108,19 @@ class BlockMessageDetails extends View {
 
 		if ( cta && mw.config.get( 'wgMFTrackBlockNotices' ) ) {
 			mw.track( 'counter.MediaWiki.BlockNotices.' + wiki + '.MobileFrontend.ctaShown', 1 );
+			mw.track( 'stats.mediawiki_block_notices_total', 1, {
+				source: 'MobileFrontend',
+				action: 'ctaShown',
+				wiki
+			} );
 			config.events = {
 				click() {
 					mw.track( 'counter.MediaWiki.BlockNotices.' + wiki + '.MobileFrontend.ctaClicked', 1 );
+					mw.track( 'stats.mediawiki_block_notices_total', 1, {
+						source: 'MobileFrontend',
+						action: 'ctaClicked',
+						wiki
+					} );
 				}
 			};
 		}

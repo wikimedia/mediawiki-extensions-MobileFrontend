@@ -50,12 +50,22 @@ module.exports = function blockMessageDrawer( props ) {
 
 					if ( mw.config.get( 'wgMFTrackBlockNotices' ) ) {
 						mw.track( 'counter.MediaWiki.BlockNotices.' + wiki + '.MobileFrontend.reasonShown', 1 );
+						mw.track( 'stats.mediawiki_block_notices_total', 1, {
+							source: 'MobileFrontend',
+							action: 'reasonShown',
+							wiki
+						} );
 					}
 				}
 			);
 
 			if ( mw.config.get( 'wgMFTrackBlockNotices' ) ) {
 				mw.track( 'counter.MediaWiki.BlockNotices.' + wiki + '.MobileFrontend.shown', 1 );
+				mw.track( 'stats.mediawiki_block_notices_total', 1, {
+					source: 'MobileFrontend',
+					action: 'shown',
+					wiki
+				} );
 			}
 		},
 		children: [
