@@ -41,7 +41,8 @@
 			"Vito Genovese",
 			"Watermelon juice",
 			"TayfunEt.",
-			"Zolgoyo"
+			"Zolgoyo",
+			"Wooze"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Bir kullanıcının mobil arayüz üzerinden değişiklik yapıp yapmadığı",
@@ -244,7 +245,7 @@
 	"nearby": "Yakınınızdaki başlıklardan sayfalar",
 	"tag-mobile_edit": "Mobil değişiklik",
 	"tag-mobile_edit-description": "Mobilden (web veya uygulama) yapılan düzenleme",
-	"tag-advanced_mobile_edit": "Gelişmiş mobil değişikliği",
+	"tag-advanced_mobile_edit": "Gelişmiş mobil değişiklik",
 	"tag-advanced_mobile_edit-description": "Gelişmiş mod ile kullanıcı tarafından yapılan düzenleme",
 	"tag-mobile_web_edit": "Mobil ağ değişikliği",
 	"tag-mobile_web_edit-description": "Mobil web sitesinden yapılan düzenleme",
