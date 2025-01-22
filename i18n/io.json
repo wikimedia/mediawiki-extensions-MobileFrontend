@@ -47,6 +47,7 @@
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 Lastafoye {{GENDER:$1|redaktita}} {{PLURAL:$3|$3 sekundo|$3 sekundi}} ante nun] da {{PLURAL:$5|[$6 $2]|0=ul anonima uzero}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 Lastafoye {{GENDER:$1|redaktita}} {{PLURAL:$3|$3 yaro|$3 yari}} ante nun] da {{PLURAL:$5|[$6 $2]|0=anonima uzero}}",
 	"mobile-frontend-main-menu-settings-heading": "Preferaji",
+	"mobile-frontend-media-details": "Detali",
 	"mobile-frontend-media-load-fail-message": "Eventis eroro dum la charjado di ca imajo.",
 	"mobile-frontend-missing-image": "Imajo",
 	"mobile-frontend-overlay-close": "Klozez",
