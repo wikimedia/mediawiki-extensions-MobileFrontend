@@ -259,33 +259,41 @@ class SearchOverlay extends Overlay {
 			if ( query.length ) {
 				this.timer = setTimeout( () => {
 					const xhr = this.gateway.search( query );
-					this._pendingQuery = xhr.then( ( data ) => {
-						this.currentSearchId = data.searchId;
-						// FIXME: Given this manipulates SearchResultsView
-						// this should be moved into that class
-						// check if we're getting the rights response in case of out of
-						// order responses (need to get the current value of the input)
-						if ( data && data.query === $input.val() ) {
-							this.$el.toggleClass( 'no-results', data.results.length === 0 );
-							this.$searchContent
-								.show()
-								.find( 'p' )
-								.hide()
-								.filter( data.results.length ? '.with-results' : '.without-results' )
-								.show();
 
-							// eslint-disable-next-line no-new
-							new WatchstarPageList( {
-								api,
-								funnel: 'search',
-								pages: data.results,
-								el: this.$resultContainer
-							} );
+					this._pendingQuery = xhr.then(
+						( data ) => {
+							if ( xhr.state() === 'resolved' && !data ) {
+								return;
+							}
 
-							this.$results = this.$resultContainer.find( 'li' );
+							this.currentSearchId = data.searchId;
+
+							// FIXME: Given this manipulates SearchResultsView
+							// this should be moved into that class
+							// check if we're getting the rights response in case of out of
+							// order responses (need to get the current value of the input)
+							if ( data && data.query === $input.val() ) {
+								this.$el.toggleClass( 'no-results', data.results.length === 0 );
+								this.$searchContent
+									.show()
+									.find( 'p' )
+									.hide()
+									.filter( data.results.length ? '.with-results' : '.without-results' )
+									.show();
+
+								// eslint-disable-next-line no-new
+								new WatchstarPageList( {
+									api,
+									funnel: 'search',
+									pages: data.results,
+									el: this.$resultContainer
+								} );
+
+								this.$results = this.$resultContainer.find( 'li' );
+							}
+							mw.hook( 'ext.MobileFrontend.searchOverlay.displayResults' ).fire();
 						}
-						mw.hook( 'ext.MobileFrontend.searchOverlay.displayResults' ).fire();
-					} ).promise( {
+					).promise( {
 						abort() {
 							xhr.abort();
 						}
