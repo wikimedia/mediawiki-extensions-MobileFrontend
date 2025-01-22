@@ -81,4 +81,11 @@ QUnit.test( 'init() - talk pages', ( assert ) => {
 		1,
 		'Icon is added'
 	);
+
+	const heading = container.querySelector( '.mw-heading' );
+	assert.strictEqual( heading.getAttribute( 'aria-expanded' ), 'false', 'collapsed by default' );
+	container.querySelector( '.mw-editsection a' ).dispatchEvent( new Event( 'click', {
+		bubbles: true
+	} ) );
+	assert.strictEqual( heading.getAttribute( 'aria-expanded' ), 'false', 'was not impacted by click' );
 } );
