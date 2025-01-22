@@ -72,7 +72,15 @@ function init( container ) {
 		setCollapsedState( content, wrapper, icon, isCollapsed );
 
 		// Register the click handlers
-		wrapper.addEventListener( 'click', () => toggle( content, wrapper, icon ) );
+		wrapper.addEventListener( 'click', ( ev ) => {
+			// Only toggle if a non-link was clicked.
+			// We don't want sections to collapse if the edit link is clicked for
+			// example.
+			const clickedLink = ev.target.closest( 'a' );
+			if ( !clickedLink ) {
+				toggle( content, wrapper, icon );
+			}
+		} );
 	} );
 }
 
