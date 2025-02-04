@@ -240,7 +240,6 @@ class SearchOverlay extends Overlay {
 	 * @param {string} query
 	 */
 	performSearch( query ) {
-		this.resetSearch();
 		const $input = this.getInput();
 		const
 			api = this.api,
@@ -249,6 +248,9 @@ class SearchOverlay extends Overlay {
 		// it seems the input event can be fired when virtual keyboard is closed
 		// (Chrome for Android)
 		if ( query !== this.lastQuery ) {
+			// Only reset search if the query is different from the last.
+			// This avoids an issue with unexpected input events e.g. T381289.
+			this.resetSearch();
 			// Start tracking when search is performed.
 			mw.hook( 'ext.MobileFrontend.searchOverlay.startQuery' ).fire();
 			if ( this._pendingQuery ) {
