@@ -39,7 +39,8 @@
 			"つぶあん派",
 			"ネイ",
 			"珍庵",
-			"組曲師"
+			"組曲師",
+			"Waki285"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "利用者が携帯機器版インターフェイスで編集しているかどうか（$1）",
@@ -52,7 +53,7 @@
 	"mobile-frontend-edit-signup-action": "<strong>{{SITENAME}}改善に協力</strong><br />編集するには利用者登録をしてください。",
 	"mobile-frontend-editor-anon": "ログインせずに編集",
 	"mobile-frontend-editor-anonwarning": "<strong>警告:</strong> あなたはログインしていません。このまま編集するとあなたの IP アドレスが公開されます。<strong>ログイン</strong>または<strong>アカウントを作成</strong>すると、編集内容がそのアカウントに帰属するようになるなどの利点があります。",
-	"mobile-frontend-editor-autocreatewarning": "<strong>警告:</strong>あなたはログインしていません。このまま編集すると、ブラウザにクッキーを追加することにより[[$1|自動生成された名前]]で帰属表示されます。信頼された利用者があなたのIPアドレスを見ることができます。<strong>ログイン</strong>または<strong>アカウント作成</strong>をすると、自分の選んだ利用者名で帰属表示されるほか、様々なメリットを受けられます。",
+	"mobile-frontend-editor-autocreatewarning": "<strong>警告:</strong>あなたはログインしていません。このまま編集すると、臨時アカウントが作成されます。[[$1|詳細はこちら]]。このアカウントの有効期限が切れた後も通知を受け取り続けたり、その他の機能を利用するには、<strong>ログイン</strong>するか<strong>アカウントを作成</strong>してください。",
 	"mobile-frontend-editor-blocked-drawer-action-login": "ログイン",
 	"mobile-frontend-drawer-arrow-label": "閉じる",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "承認",
@@ -108,6 +109,8 @@
 	"mobile-frontend-editor-toload": "エディターを読み込んでいます。このメッセージが引き続き表示される場合、[$1 ページを再読み込み]してください。",
 	"mf-expand-sections-description": "未設定状態ではコンテンツページの節を常に展開する。",
 	"mf-expand-sections-name": "すべての節を展開",
+	"mf-expand-sections-0-label": "デフォルトで折りたたむ",
+	"mf-expand-sections-1-label": "デフォルトで展開",
 	"mf-font-size-name": "テキスト",
 	"mf-font-size-description": "読みやすいテキストに調整できます。",
 	"mf-font-size-small-label": "標準",
@@ -128,6 +131,7 @@
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "他の言語",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "言語の検索",
 	"mobile-frontend-languages-structured-overlay-no-results": "使用言語は未設定です",
+	"mobile-frontend-languages-structured-overlay-error": "このページの言語の読み込み中にエラーが発生しました。",
 	"mobile-frontend-languages-structured-overlay-no-results-body": "お探しの言語は設定されていません。",
 	"mobile-frontend-last-modified-date": "最終更新は $1 による $2 の編集",
 	"mobile-frontend-last-modified-with-user-days": "[$4 最終{{GENDER:$1|更新}}: {{PLURAL:$3|$3日}}前]、{{PLURAL:$5|[$6 $2]|0=匿名利用者}}",
@@ -196,6 +200,7 @@
 	"mobile-frontend-search-feedback-link-text": "フィードバックをください",
 	"mobile-frontend-search-feedback-prompt": "探していたものが見つかりませんでしたか？",
 	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions": "記事の説明",
+	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions-description": "タイトルの下の短い説明でページの主題について知ることができます",
 	"mobile-frontend-send-feedback": "フィードバックを送信",
 	"mobile-frontend-mobile-option-MFLazyLoadImages-description": "必要となった時に画像を読み込みます。",
 	"mobile-frontend-mobile-option-MFLazyLoadImages": "画像の遅延読み込み",
@@ -203,6 +208,8 @@
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "フォントサイズ",
 	"mw-mf-amc-name": "拡張編集モード",
 	"mw-mf-amc-description": "最新版は、会話・ノートページ、履歴、利用者ツール、その他の編集ツールへの簡便なアクセスを提供します。",
+	"mw-mf-amc-0-label": "無効",
+	"mw-mf-amc-1-label": "有効",
 	"mobile-frontend-mobile-option-amc-learn-more": "詳細",
 	"mobile-frontend-mobile-option-amc-send-feedback": "フィードバックを送信",
 	"mobile-frontend-user-pref-option": "個人設定",
@@ -214,6 +221,8 @@
 	"mobile-frontend-amc-outreach-no-thanks": "いいえ、結構です",
 	"mobile-frontend-amc-outreach-enabled-message": "Advanced modeは、現在有効です。設定からオフにすることができます。",
 	"mobile-frontend-amc-outreach-dismissed-message": "Advanced modeは、設定からいつでも有効にできます。",
+	"mobile-frontend-beta-only": "ベータモードでのみ利用可能な機能",
+	"mobile-frontend-console-recruit": "モバイルサイトの構築方法の詳細については、https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend をご覧ください。",
 	"mobile-frontend-special-pages-pref": "モバイル端末の時、特別ページを最適化・簡素化します（推奨）",
 	"prefs-mobile": "モバイル設定"
 }
