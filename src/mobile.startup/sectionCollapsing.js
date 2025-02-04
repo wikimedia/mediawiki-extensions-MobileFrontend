@@ -16,11 +16,11 @@ function setCollapsedState( content, headingText, icon, isCollapsed ) {
 
 	// update the dropdown state based on the content visibility
 	if ( isCollapsed ) {
-		headingText.setAttribute( 'aria-expanded', 'true' );
+		headingText.setAttribute( 'aria-expanded', 'false' );
 		icon.classList.add( 'mf-icon-expand' );
 		icon.classList.remove( 'mf-icon-collapse' );
 	} else {
-		headingText.setAttribute( 'aria-expanded', 'false' );
+		headingText.setAttribute( 'aria-expanded', 'true' );
 		icon.classList.add( 'mf-icon-collapse' );
 		icon.classList.remove( 'mf-icon-expand' );
 	}
@@ -37,7 +37,9 @@ function setCollapsedState( content, headingText, icon, isCollapsed ) {
  */
 function toggle( content, headingText, icon ) {
 	const currentlyHidden = content.hidden;
-	setCollapsedState( content, headingText, icon, currentlyHidden );
+	setCollapsedState( content, headingText, icon,
+		// This should reflect **new** collapsed state
+		!currentlyHidden );
 }
 
 /**

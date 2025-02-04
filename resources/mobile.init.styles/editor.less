@@ -31,6 +31,18 @@
 	}
 }
 
+/** In parsoid */
+.mw-parser-output[ data-mw-parsoid-version ] {
+	/* hide edit buttons until expanded (T384408) */
+	.mw-editsection {
+		visibility: hidden;
+	}
+
+	[ aria-expanded='true' ] .mw-editsection {
+		visibility: visible;
+	}
+}
+
 .ve-loadbasiceditor {
 	text-align: center;
 	position: absolute;

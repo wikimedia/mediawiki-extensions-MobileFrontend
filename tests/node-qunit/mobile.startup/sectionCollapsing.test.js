@@ -4,6 +4,7 @@ const jQuery = require( '../utils/jQuery' );
 
 let sectionCollapsing;
 let sandbox;
+let browser;
 
 QUnit.module( 'MobileFrontend sectionCollapsing.js', {
 	beforeEach: function () {
@@ -11,8 +12,7 @@ QUnit.module( 'MobileFrontend sectionCollapsing.js', {
 		dom.setUp( sandbox, global );
 		jQuery.setUp( sandbox, global );
 		sectionCollapsing = require( '../../../src/mobile.startup/sectionCollapsing' );
-		const browser = require( '../../../src/mobile.startup/Browser' ).getSingleton();
-		sandbox.stub( browser, 'isWideScreen' ).returns( false );
+		browser = require( '../../../src/mobile.startup/Browser' ).getSingleton();
 	},
 	afterEach: function () {
 		jQuery.tearDown();
@@ -20,9 +20,7 @@ QUnit.module( 'MobileFrontend sectionCollapsing.js', {
 	}
 } );
 
-QUnit.test( 'init() - article pages', ( assert ) => {
-	const container = document.createElement( 'div' );
-	container.innerHTML = `<div class="mw-parser-output">
+const ARTICLE_HTML = `<div class="mw-parser-output">
 	<section>
 		<div id="a" class="mw-heading">
 			<h2 id="History">History</h2>
@@ -33,6 +31,11 @@ QUnit.test( 'init() - article pages', ( assert ) => {
 		</div>
 	</section>
 `;
+
+QUnit.test( 'init() - article pages', ( assert ) => {
+	sandbox.stub( browser, 'isWideScreen' ).returns( false );
+	const container = document.createElement( 'div' );
+	container.innerHTML = ARTICLE_HTML;
 	sectionCollapsing.init( container );
 	assert.true(
 		container.querySelector( '#b' ).classList.contains( 'mf-collapsible-content' ),
@@ -48,9 +51,29 @@ QUnit.test( 'init() - article pages', ( assert ) => {
 		'History',
 		'The heading text was was not changed'
 	);
+	const heading = container.querySelector( '.mw-heading' );
+	assert.strictEqual( heading.getAttribute( 'aria-expanded' ), 'false', 'collasped by default' );
+	heading.dispatchEvent( new Event( 'click', {
+		bubbles: true
+	} ) );
+	assert.strictEqual( heading.getAttribute( 'aria-expanded' ), 'true', 'section is now expanded' );
+} );
+
+QUnit.test( 'init() - article pages on tablet page', ( assert ) => {
+	sandbox.stub( browser, 'isWideScreen' ).returns( true );
+	const container = document.createElement( 'div' );
+	container.innerHTML = ARTICLE_HTML;
+	sectionCollapsing.init( container );
+	assert.true(
+		container.querySelector( '#b' ).classList.contains( 'mf-collapsible-content' ),
+		'section body marked as collapsible'
+	);
+	const heading = container.querySelector( '.mw-heading' );
+	assert.strictEqual( heading.getAttribute( 'aria-expanded' ), 'true', 'expanded by default' );
 } );
 
 QUnit.test( 'init() - talk pages', ( assert ) => {
+	sandbox.stub( browser, 'isWideScreen' ).returns( false );
 	const container = document.createElement( 'div' );
 	container.innerHTML = `<div class="mw-parser-output">
 	<section>
@@ -85,9 +108,9 @@ QUnit.test( 'init() - talk pages', ( assert ) => {
 	);
 
 	const heading = container.querySelector( '.mw-heading' );
-	assert.strictEqual( heading.getAttribute( 'aria-expanded' ), 'true', 'collapsed by default' );
+	assert.strictEqual( heading.getAttribute( 'aria-expanded' ), 'false', 'collapsed by default' );
 	container.querySelector( '.mw-editsection a' ).dispatchEvent( new Event( 'click', {
 		bubbles: true
 	} ) );
-	assert.strictEqual( heading.getAttribute( 'aria-expanded' ), 'true', 'was not impacted by click' );
+	assert.strictEqual( heading.getAttribute( 'aria-expanded' ), 'false', 'was not impacted by click' );
 } );
