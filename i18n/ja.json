@@ -39,7 +39,8 @@
 			"組曲師",
 			"Chqaz",
 			"Salvare",
-			"Likibp"
+			"Likibp",
+			"Waki285"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "利用者が携帯機器版インターフェイスで編集しているかどうか",
@@ -145,6 +146,7 @@
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "他の言語",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "言語の検索",
 	"mobile-frontend-languages-structured-overlay-no-results": "使用言語は未設定です",
+	"mobile-frontend-languages-structured-overlay-error": "このページの言語の読み込み中にエラーが発生しました。",
 	"mobile-frontend-languages-structured-overlay-no-results-body": "お探しの言語は設定されていません。",
 	"mobile-frontend-last-modified-date": "最終更新は $1 による $2 の編集",
 	"mobile-frontend-last-modified-with-user-days": "[$4 最終{{GENDER:$1|更新}}: {{PLURAL:$3|$3日}}前]、{{PLURAL:$5|[$6 $2]|0=匿名利用者}}",
@@ -224,6 +226,7 @@
 	"mobile-frontend-search-feedback-link-text": "フィードバックをください",
 	"mobile-frontend-search-feedback-prompt": "探していたものが見つかりませんでしたか？",
 	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions": "記事の説明",
+	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions-description": "タイトルの下の短い説明でページの主題について知ることができます",
 	"mobile-frontend-send-feedback": "フィードバックを送信",
 	"mobile-frontend-mobile-option-MFLazyLoadImages-description": "必要となった時に画像を読み込みます。",
 	"mobile-frontend-mobile-option-MFLazyLoadImages": "画像の遅延読み込み",
@@ -242,6 +245,8 @@
 	"mobile-frontend-amc-outreach-no-thanks": "いいえ、結構です",
 	"mobile-frontend-amc-outreach-enabled-message": "Advanced modeは、現在有効です。設定からオフにすることができます。",
 	"mobile-frontend-amc-outreach-dismissed-message": "Advanced modeは、設定からいつでも有効にできます。",
+	"mobile-frontend-beta-only": "ベータモードでのみ利用可能な機能",
+	"mobile-frontend-console-recruit": "モバイルサイトの構築方法の詳細については、https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend をご覧ください。",
 	"mobile-frontend-special-pages-pref": "モバイル端末の時、特別ページを最適化・簡素化します（推奨）",
 	"prefs-mobile": "モバイル設定"
 }
