@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
+			"Tejoebāsa",
 			"YaThaWinTha"
 		]
 	},
+	"mobile-frontend-copyright": "အကြောင်းအရာတိကို အခြားမှတ်ချက်မဟိပါကေ $1 အောက်တွင် ရဟိနိုင်ပါရေ။",
 	"mobile-frontend-terms-text": "အသုံးပြုမူဆိုင်ရာ သတ်မှတ်ချက်တိ",
 	"mobile-frontend-view": "ဖုန်းမြင်ကွင်း",
 	"mobile-frontend-view-desktop": "စပွဲတင်ကွန်ပျူတာ"
