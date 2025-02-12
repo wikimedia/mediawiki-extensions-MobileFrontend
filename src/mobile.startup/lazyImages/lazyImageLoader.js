@@ -75,7 +75,8 @@ function loadImage( placeholder ) {
 	}, { once: true } );
 
 	// Trigger image download after binding the load handler
-	image.src = placeholder.dataset.src || '';
+	// Todo: Remove placeholder.dataset.src once cache is reset
+	image.src = placeholder.dataset.mwSrc || placeholder.dataset.src || '';
 	image.srcset = placeholder.dataset.srcset || '';
 
 	return {

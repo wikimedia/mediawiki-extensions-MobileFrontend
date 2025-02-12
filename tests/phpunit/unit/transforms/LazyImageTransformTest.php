@@ -199,20 +199,19 @@ class LazyImageTransformTest extends \MediaWikiUnitTestCase {
 	public static function provideTransform() {
 		$img = '<img src="kitty.jpg" width="500" height="400">';
 		$placeholder = '<span class="lazy-image-placeholder" style="width: 500px;height: 400px;" '
-			. 'data-src="kitty.jpg" data-width="500" data-height="400">&nbsp;</span>';
+			. 'data-mw-src="kitty.jpg" data-width="500" data-height="400">&nbsp;</span>';
 		$imgStyle = '<img src="bigPicture.jpg" style="vertical-align: top; '
 			. 'width: 84.412ex; height:70.343ex; background:none;">';
 
 		$imgStyleBad = '<img src="bigPicture.jpg" style=" width: 84.412ex ; '
 			. ' vertical-align  :  top ;  height:70.343ex; background:   none;   ">';
 
-		// `width` and `height` should be added in front of string
 		$placeholderStyle = '<span class="lazy-image-placeholder" '
 			. 'style="width: 84.412ex;height: 70.343ex;vertical-align: top;" '
-			. 'data-src="bigPicture.jpg">&nbsp;</span>';
+			. 'data-mw-src="bigPicture.jpg">&nbsp;</span>';
 		$imgSmall = '<img src="kitty.jpg" width="5" height="5">';
 		$placeholderSmall = '<span class="lazy-image-placeholder" style="width: 5px;height: 5px;" '
-			. 'data-src="kitty.jpg" data-width="5" data-height="5">&nbsp;</span>';
+			. 'data-mw-src="kitty.jpg" data-width="5" data-height="5">&nbsp;</span>';
 		$imgNoAttribs = '<img src="foo.jpg">';
 
 		$imgWithThumbborder = '<img src="bigPicture.jpg" style="vertical-align: top; '
@@ -221,7 +220,7 @@ class LazyImageTransformTest extends \MediaWikiUnitTestCase {
 
 		$placeholderWithThumbborder = '<span class="lazy-image-placeholder thumbborder" '
 			. 'style="width: 84.412ex;height: 70.343ex;vertical-align: top;" '
-			. 'data-src="bigPicture.jpg" '
+			. 'data-mw-src="bigPicture.jpg" '
 			. 'data-class="class thumbborder">&nbsp;</span>';
 
 		return [
