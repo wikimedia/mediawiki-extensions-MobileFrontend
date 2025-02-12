@@ -195,7 +195,8 @@ class LazyImageTransform implements IMobileTransform {
 			);
 			foreach ( [ 'src', 'alt', 'width', 'height', 'srcset', 'class', 'usemap' ] as $attr ) {
 				if ( $img->hasAttribute( $attr ) ) {
-					$imgPlaceholder->setAttribute( "data-$attr", $img->getAttribute( $attr ) );
+					$prefix = $attr === 'src' ? 'data-mw-' : 'data-';
+					$imgPlaceholder->setAttribute( $prefix . $attr, $img->getAttribute( $attr ) );
 				}
 			}
 			// Assume data saving and remove srcset attribute from the non-js experience
