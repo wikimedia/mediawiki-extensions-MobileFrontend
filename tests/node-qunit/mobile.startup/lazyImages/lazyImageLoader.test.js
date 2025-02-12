@@ -54,8 +54,12 @@ QUnit.module( 'MobileFrontend lazyImageLoader.js', {
 		// eslint-disable-next-line mediawiki/class-doc
 		placeholder.className = lazyImageLoader.test.placeholderClass;
 		placeholder.style.width = '3px';
-		Object.keys( attrs ).forEach( function ( name ) {
-			placeholder.setAttribute( 'data-' + name, attrs[name] );
+		Object.keys( attrs ).forEach( ( name ) => {
+			const attrNamePrefix = [
+				'src', 'srcset'
+			].includes( name ) ? 'data-mw' : 'data';
+			const attrName = `${ attrNamePrefix }-${ name }`;
+			placeholder.setAttribute( attrName, attrs[name] );
 		} );
 
 		const result = lazyImageLoader.loadImage( placeholder );
