@@ -192,7 +192,8 @@ class LazyImageTransform implements IMobileTransform {
 			);
 			foreach ( [ 'src', 'alt', 'width', 'height', 'srcset', 'class', 'usemap' ] as $attr ) {
 				if ( $img->hasAttribute( $attr ) ) {
-					$imgPlaceholder->setAttribute( "data-$attr", $img->getAttribute( $attr ) );
+					$prefix = ( $attr === 'src' || $attr === 'srcset' ) ? 'data-mw-' : 'data-';
+					$imgPlaceholder->setAttribute( $prefix . $attr, $img->getAttribute( $attr ) );
 				}
 			}
 			// Assume data saving and remove srcset attribute from the non-js experience
@@ -274,7 +275,7 @@ class LazyImageTransform implements IMobileTransform {
 		p = ns[i].nextSibling;
 		if ( p && p.className && p.className.indexOf( 'lazy-image-placeholder' ) > -1 ) {
 			img = document.createElement( 'img' );
-			img.setAttribute( 'src', p.getAttribute( 'data-src' ) );
+			img.setAttribute( 'src', p.getAttribute( 'data-mw-src' ) );
 			img.setAttribute( 'width', p.getAttribute( 'data-width' ) );
 			img.setAttribute( 'height', p.getAttribute( 'data-height' ) );
 			img.setAttribute( 'alt', p.getAttribute( 'data-alt' ) );
