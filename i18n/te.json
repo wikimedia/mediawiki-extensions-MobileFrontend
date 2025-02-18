@@ -78,7 +78,7 @@
 	"mf-font-size-large-label": "పెద్ద",
 	"mobile-frontend-generic-404-desc": "మీరు వెతుకుతున్న పేజీ కనబడలేదు.",
 	"mobile-frontend-generic-404-title": "లోపం -  పేజీ కనబడలేదు",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} ను మీవంటి వారే తయారు చేసారు.</strong><br />తోడ్పడేందుకు లాగినవండి.",
+	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} ను మీవంటి వారే తయారు చేస్తున్నారు.</strong><br />మీరు కూడా ఇక్కడ లాగినై, రచనలు చేసి, వికీపీడియా అభివృద్ధికి తోడ్పడండి.",
 	"mobile-frontend-joined-just-now": "ఇప్పుడే {{GENDER:$1|చేరారు}}",
 	"mobile-frontend-joined-seconds": "{{PLURAL:$2|$2 సెకండు|$2 సెకండ్ల}} క్రితం {{GENDER:$1|చేరారు}}",
 	"mobile-frontend-joined-minutes": "{{PLURAL:$2|$2 నిమిషం|$2 నిమిషాల}} క్రితం {{GENDER:$1|చేరారు}}",
