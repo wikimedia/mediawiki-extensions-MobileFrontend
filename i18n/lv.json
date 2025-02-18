@@ -7,12 +7,12 @@
 			"Silraks"
 		]
 	},
-	"abusefilter-edit-builder-vars-user-mobile": "Vai dalībnieks labo, izmantojot mobilo saskarni",
+	"abusefilter-edit-builder-vars-user-mobile": "Vai dalībnieks labo, izmantojot mobilo saskarni ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "Ievadiet apstiprinājuma kodu",
 	"mobile-frontend-changeslist-nocomment": "nav labojuma kopsavilkuma",
 	"mobile-frontend-clear-search": "Notīrīt",
 	"mobile-frontend-copyright": "Saturs ir pieejams saskaņā ar $1, ja vien nav norādīts citādi.",
-	"mobile-frontend-desc": "Mobilais skats",
+	"mobile-frontend-desc": "Palīdz uzlabot MediaWiki instances darbību mobilajās ierīcēs",
 	"mobile-frontend-edit-login-action": "<strong>Palīdzi uzlabot Vikipēdiju.</strong><br />Pieslēdzies, lai labotu.",
 	"mobile-frontend-edit-signup-action": "<strong>Palīdzi uzlabot Vikipēdiju.</strong><br />Reģistrējies, lai labotu.",
 	"mobile-frontend-editor-anon": "Labot bez pieslēgšanās",
