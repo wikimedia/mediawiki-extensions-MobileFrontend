@@ -296,6 +296,11 @@ class LazyImageTransformTest extends \MediaWikiUnitTestCase {
 			$js,
 			'make sure the replacement to image tag was properly done'
 		);
+		$this->assertStringContainsString(
+			'data-mw-src',
+			$js,
+			'verify the script looks for data-mw-src attribute'
+		);
 	}
 
 }
