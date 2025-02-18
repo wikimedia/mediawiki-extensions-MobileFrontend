@@ -278,7 +278,7 @@ class LazyImageTransform implements IMobileTransform {
 		p = ns[i].nextSibling;
 		if ( p && p.className && p.className.indexOf( 'lazy-image-placeholder' ) > -1 ) {
 			img = document.createElement( 'img' );
-			img.setAttribute( 'src', p.getAttribute( 'data-src' ) );
+			img.setAttribute( 'src', p.getAttribute( 'data-mw-src' ) );
 			img.setAttribute( 'width', p.getAttribute( 'data-width' ) );
 			img.setAttribute( 'height', p.getAttribute( 'data-height' ) );
 			img.setAttribute( 'alt', p.getAttribute( 'data-alt' ) );
