@@ -59,7 +59,6 @@ class SearchOverlay extends Overlay {
 		this.router = options.router;
 
 		this.currentSearchId = null;
-		this.resetSearch( true );
 	}
 
 	/**
@@ -229,6 +228,15 @@ class SearchOverlay extends Overlay {
 
 		mw.hook( 'ext.MobileFrontend.searchOverlay.open' ).fire();
 
+		// T386735 - Fire empty search hook when the query is length 0
+		// Cannot use resetSearch for this hook, because resetSearch() is called before show()
+		const $input = this.getInput();
+		const len = $input.val().length;
+		if ( len === 0 ) {
+			const $content = this.$el.find( '.overlay-content' );
+			mw.hook( 'ext.MobileFrontend.searchOverlay.empty' ).fire( $content[ 0 ] );
+		}
+
 		this.showKeyboard();
 	}
 
@@ -302,7 +310,11 @@ class SearchOverlay extends Overlay {
 					} );
 				}, delay );
 			} else {
-				this.resetSearch( true );
+				this.resetSearch();
+
+				// Fire empty search hook when the query is length 0
+				const $content = this.$el.find( '.overlay-content' );
+				mw.hook( 'ext.MobileFrontend.searchOverlay.empty' ).fire( $content[ 0 ] );
 			}
 
 			this.lastQuery = query;
@@ -312,15 +324,10 @@ class SearchOverlay extends Overlay {
 	/**
 	 * Clear results
 	 *
-	 * @param boolean fireHook
 	 * @private
 	 */
-	resetSearch( fireHook ) {
-		const $content = this.$el.find( '.overlay-content' );
-		$content.children().hide();
-		if ( fireHook ) {
-			mw.hook( 'ext.MobileFrontend.searchOverlay.empty' ).fire( $content[ 0 ] );
-		}
+	resetSearch() {
+		this.$el.find( '.overlay-content' ).children().hide();
 	}
 }
 
