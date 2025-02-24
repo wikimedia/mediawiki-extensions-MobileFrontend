@@ -55,7 +55,11 @@ QUnit.module( 'MobileFrontend lazyImageLoader.js', {
 		placeholder.className = lazyImageLoader.test.placeholderClass;
 		placeholder.style.width = '3px';
 		Object.keys( attrs ).forEach( ( name ) => {
-			placeholder.setAttribute( 'data-' + name, attrs[name] );
+			const attrNamePrefix = [
+				'src', 'srcset'
+			].includes( name ) ? 'data-mw' : 'data';
+			const attrName = `${ attrNamePrefix }-${ name }`;
+			placeholder.setAttribute( attrName, attrs[name] );
 		} );
 
 		const result = lazyImageLoader.loadImage( placeholder );

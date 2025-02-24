@@ -195,7 +195,7 @@ class LazyImageTransform implements IMobileTransform {
 			);
 			foreach ( [ 'src', 'alt', 'width', 'height', 'srcset', 'class', 'usemap' ] as $attr ) {
 				if ( $img->hasAttribute( $attr ) ) {
-					$prefix = $attr === 'src' ? 'data-mw-' : 'data-';
+					$prefix = ( $attr === 'src' || $attr === 'srcset' ) ? 'data-mw-' : 'data-';
 					$imgPlaceholder->setAttribute( $prefix . $attr, $img->getAttribute( $attr ) );
 				}
 			}
