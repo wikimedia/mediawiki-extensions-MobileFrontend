@@ -98,7 +98,7 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 		$placeholder = '<span class="lazy-image-placeholder" '
 			. 'style="width: 100px;height: 100px;" '
 			. 'data-mw-src="foo.jpg" data-alt="foo" data-width="100" data-height="100" '
-			. 'data-srcset="foo-1.5x.jpg 1.5x, foo-2x.jpg 2x">'
+			. 'data-mw-srcset="foo-1.5x.jpg 1.5x, foo-2x.jpg 2x">'
 			. '&nbsp;'
 			. '</span>';
 		$noscript = '<noscript><img alt="foo" src="foo.jpg" width="100" height="100"></noscript>';
