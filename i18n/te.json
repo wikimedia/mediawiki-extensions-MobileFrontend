@@ -93,7 +93,7 @@
 	"mobile-frontend-featured-article": "నేటి విశేష వ్యాసం",
 	"mobile-frontend-generic-404-desc": "మీరు వెతుకుతున్న పేజీ కనబడలేదు.",
 	"mobile-frontend-generic-404-title": "లోపం -  పేజీ కనబడలేదు",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} ను మీవంటి వారే తయారు చేసారు.</strong><br />తోడ్పడేందుకు లాగినవండి.",
+	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} ను మీవంటి వారే తయారు చేస్తున్నారు.</strong><br />మీరు కూడా ఇక్కడ లాగినై, రచనలు చేసి, వికీపీడియా అభివృద్ధికి తోడ్పడండి.",
 	"mobile-frontend-history-404-desc": "అసలు ఉనికిలోనే లేని పేజీ చరిత్రను చూడలేరు. దాన్ని తొలగించి ఉండవచ్చు, లేదా మీరు నొక్కిన లింకు తప్పుదై ఉండవచ్చు.",
 	"mobile-frontend-history-404-title": "అలాంటి పేజీ ఏదీ లేదు",
 	"mobile-frontend-history-no-results": "ఆ వడపోతకు సరిపోలే చరిత్ర ఏదీ లేదు.",
