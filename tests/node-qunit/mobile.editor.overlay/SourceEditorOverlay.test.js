@@ -1,6 +1,6 @@
-let sandbox, messageStub, getContentStub, previewResolve,
-	BlockMessageDetails,
-	EditorGateway, SourceEditorOverlay;
+let sandbox, getContentStub, previewResolve,
+	View, BlockMessageDetails, EditorGateway, SourceEditorOverlay,
+	stubArgs;
 const
 	testUrl = '/w/index.php?title=User:Test',
 	jQuery = require( '../utils/jQuery' ),
@@ -33,10 +33,18 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/SourceEditorOverlay', {
 		EditorGateway = require( '../../../src/mobile.editor.overlay/EditorGateway' );
 		SourceEditorOverlay = require( '../../../src/mobile.editor.overlay/SourceEditorOverlay' );
 		BlockMessageDetails = require( '../../../src/mobile.editor.overlay/BlockMessageDetails' );
+		View = require( '../../../src/mobile.startup/View' );
+
+		stubArgs = {};
+		sandbox.stub( BlockMessageDetails, 'factory' ).value( ( args ) => {
+			stubArgs = args;
+
+			return new View( {} );
+		} );
 
 		// prevent event logging requests
 		sandbox.stub( SourceEditorOverlay.prototype, 'log' ).returns( util.Deferred().resolve() );
-		messageStub = sandbox.stub( BlockMessageDetails.prototype, 'initialize' );
+
 		getContentStub = sandbox.stub( EditorGateway.prototype, 'getContent' );
 		sandbox.stub( mw, 'confirmCloseWindow' ).returns( {
 			release: function () {}
@@ -101,7 +109,7 @@ QUnit.test( '#initialize, blocked user', ( assert ) => {
 	}, dBlockedContent ).getLoadingPromise().then( () => {}, () => {
 		done();
 		assert.true(
-			messageStub.calledWithMatch( {
+			sinon.match( {
 				partial: false,
 				creator: {
 					name: 'Test',
@@ -110,8 +118,7 @@ QUnit.test( '#initialize, blocked user', ( assert ) => {
 				expiry: null,
 				duration: null,
 				reason: 'Testreason'
-			} ),
-			'There is a drawer notice, that i am blocked from editing'
+			} ).test( stubArgs )
 		);
 	} );
 } );

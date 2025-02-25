@@ -1,3 +1,5 @@
+/* global $ */
+
 'use strict';
 const mobile = require( 'mobile.startup' );
 const Button = mobile.Button,
@@ -5,23 +7,13 @@ const Button = mobile.Button,
 	Icon = mobile.Icon,
 	util = mobile.util;
 
-/**
- * Renders a block message details.
- *
- * @extends module:mobile.startup/View
- * @private
- */
-class BlockMessageDetails extends View {
-	/** @inheritdoc */
-	get isTemplateMode() {
-		return true;
-	}
-
+const blockMessageUtils = {
 	/**
-	 * @inheritdoc
+	 * @param {Object} options
+	 * @return {BlockMessageOptions}
 	 */
-	get defaults() {
-		return {
+	makeTemplateOptions( options ) {
+		return Object.assign( {}, options, {
 			createDetailsAnchorHref: () => ( blockId, render ) => mw.util.getUrl(
 				'Special:BlockList', { wpTarget: '#' + render( blockId ) }
 			),
@@ -31,7 +23,7 @@ class BlockMessageDetails extends View {
 				if ( mw.user.isAnon() ) {
 					msgKey += '-ip';
 				}
-				if ( this.partial ) {
+				if ( options.partial ) {
 					msgKey += '-partial';
 				}
 				// The following messages can be passed here:
@@ -43,18 +35,18 @@ class BlockMessageDetails extends View {
 			},
 			createBody: () => {
 				let msgKey = '';
-				if ( mw.user.isAnon() && this.anonOnly ) {
+				if ( mw.user.isAnon() && options.anonOnly ) {
 					msgKey = 'mobile-frontend-editor-blocked-drawer-body';
-					if ( this.noCreateAccount ) {
+					if ( options.noCreateAccount ) {
 						msgKey += '-login';
 					} else {
 						msgKey += '-login-createaccount';
 					}
-					if ( this.partial ) {
+					if ( options.partial ) {
 						msgKey += '-partial';
 					}
 				} else {
-					if ( this.partial ) {
+					if ( options.partial ) {
 						msgKey = 'mobile-frontend-editor-blocked-drawer-body-partial';
 					}
 				}
@@ -74,26 +66,27 @@ class BlockMessageDetails extends View {
 				mw.user.options.get( 'gender' )
 			),
 			expiryHeader: mw.msg( 'mobile-frontend-editor-blocked-drawer-expiry-header' )
-		};
-	}
+		} );
+	},
 
 	/**
 	 * Configure the call to action depending on the type of block.
 	 *
-	 * @return {Object} Configuration options
+	 * @param {BlockMessageOptions} options
+	 * @return {Object} Configuration options for Button element
 	 */
-	getButtonConfig() {
+	getButtonConfig( options ) {
 		let cta = true;
 		const config = {
 				progressive: true
 			},
 			wiki = mw.config.get( 'wgDBname' );
 
-		if ( mw.user.isAnon() && this.options.anonOnly ) {
+		if ( mw.user.isAnon() && options.anonOnly ) {
 			// The user can avoid the block by logging in
 			config.label = mw.msg( 'mobile-frontend-editor-blocked-drawer-action-login' );
 			config.href = new mw.Title( 'Special:UserLogin' ).getUrl();
-		} else if ( this.options.partial ) {
+		} else if ( options.partial ) {
 			// The user can avoid the block by editing a different page
 			config.label = mw.msg( 'mobile-frontend-editor-blocked-drawer-action-randompage' );
 			config.href = new mw.Title( 'Special:Random' ).getUrl();
@@ -126,31 +119,38 @@ class BlockMessageDetails extends View {
 		}
 
 		return config;
-	}
+	},
 
 	/**
-	 * @inheritdoc
+	 * Creates the block message details element.
+	 *
+	 * @param {Element} child
+	 * @param {BlockMessageOptions} options
+	 * @return {Element[]}
 	 */
-	postRender() {
-		this.$el.find( '.block-message-buttons' ).prepend(
-			new Button( this.getButtonConfig() ).$el
+	makeChildren( child, options ) {
+		const $child = $( child );
+		$child.find( '.block-message-buttons' ).prepend(
+			new Button( this.getButtonConfig( options ) ).$el
 		);
-		this.$el.find( '.block-message-icon' ).prepend(
+		$child.find( '.block-message-icon' ).prepend(
 			( new Icon( {
 				icon: 'block-destructive'
 			} ) ).$el
 		);
-		this.options.parsedReason.then( ( htmlReason ) => {
-			this.$el.find( '.block-message-reason div' ).html( htmlReason );
-		} );
-	}
 
-	/**
-	 * @inheritdoc
-	 */
-	get template() {
-		return util.template( `
-<div class="block-message block-message-container">
+		if ( options.parsedReason instanceof Promise ) {
+			options.parsedReason.then( ( htmlReason ) => {
+				$child.find( '.block-message-reason div' ).html( htmlReason );
+			} );
+		}
+
+		// Move all children
+		return Array.from( $child.children() );
+	}
+};
+
+const template = util.template( `<div>
   <div class="block-message-icon"></div>
   <div class="block-message-info">
     <div class="block-message-item block-message-title">
@@ -204,7 +204,24 @@ class BlockMessageDetails extends View {
   <div class="block-message-buttons">
   </div>
 </div>` );
-	}
-}
 
-module.exports = BlockMessageDetails;
+/**
+ * @param {BlockMessageOptions} options
+ * @return {View}
+ */
+module.exports = {
+	factory: ( options ) => {
+		const blockMessageOptions = blockMessageUtils.makeTemplateOptions( options );
+		const view = template.render( blockMessageOptions );
+
+		return View.make(
+			Object.assign(
+				options,
+				{
+					className: 'block-message block-message-container'
+				}
+			),
+			blockMessageUtils.makeChildren( view, blockMessageOptions )
+		);
+	}
+};

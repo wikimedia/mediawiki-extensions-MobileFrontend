@@ -33,9 +33,6 @@
 }
 
 .block-message-buttons {
-	position: fixed;
-	left: 0;
-	bottom: 0;
 	width: 100%;
 	padding: 1em;
 	text-align: right;
@@ -64,7 +61,10 @@
 	padding: 1em;
 	text-align: left;
 	background-color: @background-color-interactive;
-	margin-bottom: 3em;
+	margin-bottom: 0;
+	max-height: 30vh;
+	overflow-y: scroll;
+	display: none;
 }
 
 .block-message-title {

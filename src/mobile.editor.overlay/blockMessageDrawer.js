@@ -1,6 +1,6 @@
+const blockMessageDetails = require( './BlockMessageDetails.js' );
 const mobile = require( 'mobile.startup' );
 const Drawer = mobile.Drawer;
-const BlockMessageDetails = require( './BlockMessageDetails.js' );
 
 /**
  * @private
@@ -13,6 +13,7 @@ const BlockMessageDetails = require( './BlockMessageDetails.js' );
  * @property {string} reason for block
  * @property {string} [duration] of block e.g. "1 week"
  * @property {string} [expiry] of block, wrapped in parentheses
+ * @property {Promise<string>} [parsedReason] the reason for the block.
  *  e.g. "(1st September 2019)"
  */
 
@@ -25,39 +26,55 @@ const BlockMessageDetails = require( './BlockMessageDetails.js' );
  * @return {module:mobile.startup/Drawer}
  */
 module.exports = function blockMessageDrawer( props ) {
+	let eventListener;
+
+	const repositionDrawer = ( $drawer ) => {
+		const $container = $drawer.find( '.block-message-container' );
+		const $button = $drawer.find( '> .cdx-button' );
+		const newTop = window.innerHeight - $container.height() - $button.height();
+
+		$drawer.css( 'top', newTop > 0 ? `${ newTop }px` : 0 );
+	};
+
 	const blockDrawer = new Drawer( {
 		className: 'drawer block-message',
 		onBeforeHide: ( drawer ) => {
+			if ( typeof eventListener === 'function' ) {
+				window.removeEventListener( 'resize', eventListener );
+				eventListener = null;
+			}
+
 			drawer.$el.remove();
 		},
 		onShow: () => {
-			const $drawer = blockDrawer.$el.find( '.drawer.block-message' ),
-				drawerTop = $drawer.offset().top - 100,
-				creatorTop = blockDrawer.$el.find( '.block-message-creator' ).offset().top - 100,
-				buttonsTop = blockDrawer.$el.find( '.block-message-buttons' ).offset().top - 100,
-				$seeMore = blockDrawer.$el.find( '.block-message-see-more' ),
-				wiki = mw.config.get( 'wgDBname' );
+			const $drawer = blockDrawer.$el.find( '.drawer.block-message' );
+			const $seeMore = $drawer.find( '.block-message-see-more' );
+			const wiki = mw.config.get( 'wgDBname' );
 
-			$drawer.css( 'top', drawerTop + ( buttonsTop - creatorTop ) );
-			$seeMore.on(
-				'click',
-				() => {
-					const $container = blockDrawer.$el.find( '.block-message-container' );
-					$drawer.css( 'top', 0 );
-					$container.css( 'overflow-y', 'auto' );
-					$container.css( 'height', buttonsTop - $container.offset().top );
-					$seeMore.hide();
+			// Delay the UI update a little bit until the component heights are
+			// set, otherwise computing the new drawer top will fail.
+			setTimeout( () => repositionDrawer( $drawer ), 100 );
 
-					if ( mw.config.get( 'wgMFTrackBlockNotices' ) ) {
-						mw.track( 'counter.MediaWiki.BlockNotices.' + wiki + '.MobileFrontend.reasonShown', 1 );
-						mw.track( 'stats.mediawiki_block_notices_total', 1, {
-							source: 'MobileFrontend',
-							action: 'reasonShown',
-							wiki
-						} );
-					}
+			// Reposition the popup when the viewport size changes
+			eventListener = () => repositionDrawer( $drawer );
+			window.addEventListener( 'resize', eventListener );
+
+			$seeMore.on( 'click', () => {
+				const $reason = $drawer.find( '.block-message-reason' );
+				$reason.show();
+				$seeMore.hide();
+
+				repositionDrawer( $drawer );
+
+				if ( mw.config.get( 'wgMFTrackBlockNotices' ) ) {
+					mw.track( 'counter.MediaWiki.BlockNotices.' + wiki + '.MobileFrontend.reasonShown', 1 );
+					mw.track( 'stats.mediawiki_block_notices_total', 1, {
+						source: 'MobileFrontend',
+						action: 'reasonShown',
+						wiki
+					} );
 				}
-			);
+			} );
 
 			if ( mw.config.get( 'wgMFTrackBlockNotices' ) ) {
 				mw.track( 'counter.MediaWiki.BlockNotices.' + wiki + '.MobileFrontend.shown', 1 );
@@ -69,8 +86,9 @@ module.exports = function blockMessageDrawer( props ) {
 			}
 		},
 		children: [
-			( new BlockMessageDetails( props ) ).$el
+			( blockMessageDetails.factory( props ) ).$el
 		]
 	} );
+
 	return blockDrawer;
 };
