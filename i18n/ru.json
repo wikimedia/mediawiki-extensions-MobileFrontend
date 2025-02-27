@@ -55,7 +55,8 @@
 			"Vlad5250",
 			"Wirbel78",
 			"Александр Сигачёв",
-			"Дмитрий"
+			"Дмитрий",
+			"Yurina Tatiana"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Редактирует ли участник через мобильный интерфейс",
@@ -119,6 +120,7 @@
 	"mobile-frontend-editor-viewing-source-page": "<strong>Просмотр исходного текста</strong><span> $1</span>",
 	"mobile-frontend-editor-wait": "Правка публикуется, пожалуйста, подождите.",
 	"mobile-frontend-editor-loading": "Загрузка редактора…",
+	"mobile-frontend-editor-loadingtooslow": "Медленное соединение?",
 	"mobile-frontend-editor-loadbasiceditor": "Переключиться в редактор кода",
 	"mobile-frontend-editor-toload": "Редактор скоро загрузится. Если через несколько секунд вы будете по-прежнему видеть это сообщение, пожалуйста, [$1 перезагрузите страницу].",
 	"mf-expand-sections-description": "Всегда раскрывать на страницах разделы с содержанием по умолчанию.",
