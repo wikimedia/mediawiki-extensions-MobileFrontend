@@ -58,7 +58,7 @@ QUnit.module( 'MobileFrontend lazyImageLoader.js', {
 			const attrNamePrefix = [
 				'src', 'srcset'
 			].includes( name ) ? 'data-mw' : 'data';
-			const attrName = `${ attrNamePrefix }-${ name }`;
+			const attrName = `${attrNamePrefix}-${name}`;
 			placeholder.setAttribute( attrName, attrs[name] );
 		} );
 
