@@ -2,6 +2,7 @@
 
 use MediaWiki\SpecialPage\RedirectSpecialPage;
 use MediaWiki\SpecialPage\SpecialPage;
+use MediaWiki\Title\Title;
 
 /**
  * Formerly a special page to show the difference between two revisions of a page - decomissioned in T358293
