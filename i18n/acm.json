@@ -5,7 +5,7 @@
 			"MRidhaAJ"
 		]
 	},
-	"abusefilter-edit-builder-vars-user-mobile": "ما إذا جان المستخدم يعدل على واجهة النقال",
+	"abusefilter-edit-builder-vars-user-mobile": "ما إذا جان المستخدم يعدل على واجهة النقال ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "اكتب رمز التأكيد",
 	"mobile-frontend-changeslist-nocomment": "ماكو ملخص تحرير",
 	"mobile-frontend-clear-search": "فرغ",

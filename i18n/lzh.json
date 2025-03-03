@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Au0727",
 			"Itsmine",
 			"Jason924tw",
 			"LNDDYL",
@@ -10,11 +11,21 @@
 			"逆襲的天邪鬼"
 		]
 	},
+	"abusefilter-edit-builder-vars-user-mobile": "纂於掌上書卷與否（$1）",
+	"mobile-frontend-account-create-captcha-placeholder": "告核符",
+	"mobile-frontend-changeslist-nocomment": "未見纂要",
+	"mobile-frontend-clear-search": "盡除之",
 	"mobile-frontend-copyright": "若無側註，諸文皆奉$1以行。",
-	"mobile-frontend-edit-login-action": "登簿以纂。",
-	"mobile-frontend-edit-signup-action": "增簿以纂。",
+	"mobile-frontend-edit-login-action": "<strong>助{{SITENAME}}之長。</strong><br />登薄以纂。",
+	"mobile-frontend-edit-signup-action": "<strong>助{{SITENAME}}之長。</strong><br />造冊以纂。",
+	"mobile-frontend-editor-anon": "無名而纂",
+	"mobile-frontend-editor-anonwarning": "<strong>警示</strong>：子未登簿，若纂，IP將誌。苟<strong>登簿</strong>或<strong>造冊</strong>，是纂將存以子名，及他效。",
+	"mobile-frontend-editor-autocreatewarning": "<strong>警告：</strong>子未登簿，若纂，草簿將立[[$1|願聞其詳]]。苟<strong>登簿</strong>或<strong>造冊</strong>，此簿雖毀而書信不斷，功用不失。",
+	"mobile-frontend-editor-blocked-drawer-action-login": "登簿",
+	"mobile-frontend-drawer-arrow-label": "閉",
+	"mobile-frontend-editor-blocked-drawer-action-ok": "可",
 	"mobile-frontend-editor-editing": "方纂",
-	"mobile-frontend-editor-editing-page": "<strong>方纂</strong><span>$1</span>",
+	"mobile-frontend-editor-editing-page": "<span><strong>方纂</strong>$1</span>",
 	"mobile-frontend-editor-save": "儲",
 	"mobile-frontend-editor-summary-placeholder": "如：糾錯，擴文",
 	"mobile-frontend-editor-summary-request": "何所刪改？",
@@ -32,11 +43,11 @@
 	"mobile-frontend-privacy-link-text": "隱私",
 	"mobile-frontend-save-settings": "儲",
 	"mobile-frontend-search-no-results": "無本題之頁。",
-	"mobile-frontend-settings-beta": "試灶",
+	"mobile-frontend-settings-beta": "{{SITENAME}}試灶",
 	"mobile-frontend-terms-text": "取用須知",
 	"mobile-frontend-view": "掌中書卷",
 	"mobile-frontend-view-desktop": "桌上書卷",
-	"mobile-frontend-watchlist-a-z-empty-howto-alt": "按頁頂之星",
+	"mobile-frontend-watchlist-a-z-empty-howto-alt": "撳星標",
 	"mobile-frontend-watchlist-back-home": "返卷首",
 	"mobile-frontend-watchlist-cta-button-login": "登簿",
 	"mobile-frontend-watchlist-cta-button-signup": "增簿",
@@ -46,5 +57,8 @@
 	"mobile-frontend-watchlist-filter-talk": "議",
 	"mobile-frontend-watchlist-more": "詳",
 	"tag-mobile_edit": "於掌中卷所纂",
-	"tag-mobile_web_edit": "纂於掌中卷"
+	"tag-mobile_web_edit": "纂於掌中卷",
+	"mw-mf-amc-0-label": "既閉",
+	"mw-mf-amc-1-label": "既啟",
+	"mobile-frontend-mobile-option-amc-learn-more": "願聞其詳"
 }
