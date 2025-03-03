@@ -3,9 +3,11 @@
 		"authors": [
 			"OIS",
 			"Renan",
-			"Stavanger7"
+			"Stavanger7",
+			"Lisyeng"
 		]
 	},
+	"mobile-frontend-copyright": "Contenete es disponibil sub $1 sin que altrimen notat.",
 	"mobile-frontend-privacy-link-text": "Privatie",
 	"mobile-frontend-terms-text": "Conditiones de Usu",
 	"mobile-frontend-view": "Aspecte mobil",
