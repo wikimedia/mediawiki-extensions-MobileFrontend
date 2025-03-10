@@ -55,7 +55,7 @@
 	"mobile-frontend-editor-keep-editing": "Virufuere mat Änneren",
 	"mobile-frontend-editor-licensing": "Duerch d'Späichere vun Ären Ännerunge sidd Dir mat der Publikatioun vun Ärem Beitrag ënner {{PLURAL:$2|der $1-Lizenz|der $1-Lizenzen}} d'accord.",
 	"mobile-frontend-editor-licensing-with-terms": "Duerch Späicher vun den Ännerunge sidd Dir mat de(n) $1 a mat der Publikatioun vun Ärem Beitrag ënner {{PLURAL:$3|der $2-Lizenz|der $2-Lizenzen}} d'accord.",
-	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|Sidd Dir sécher datt Dir}} eng nei säit op {{SITENAME}} uleeë wëllt?",
+	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|Sidd Dir sécher, datt Dir}} eng nei Säit op {{SITENAME}} uleeë wëllt?",
 	"mobile-frontend-editor-placeholder": "Dësen Abschnitt ass eidel. Sidd deen Éischte fir en ze erweideren!",
 	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|Dir}} leet eng nei Säit op {{SITENAME}} un!",
 	"mobile-frontend-editor-previewing-page": "<span>$1<strong>weisen ouni ze späicheren</strong></span>",
