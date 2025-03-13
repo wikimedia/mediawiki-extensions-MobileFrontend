@@ -12,7 +12,7 @@
 	"mobile-frontend-account-create-captcha-placeholder": "تاييدي کوډ مو ورکړئ",
 	"mobile-frontend-changeslist-nocomment": "د سمون لنډيز نشته",
 	"mobile-frontend-clear-search": "سپينول",
-	"mobile-frontend-copyright": "دا مېنځپانگه د $1 سره سم ستاسې لاسرسي کې ده، خو چې مخالف يې وييل شوي وي.",
+	"mobile-frontend-copyright": "دا منځپانگه د $1 سره سم ستاسې لاسرسي کې ده، خو چې مخالف يې ويل شوي وي.",
 	"mobile-frontend-edit-login-action": "<strong>ښه والي کې مرسته وکړئ {{SITENAME}}.</strong><br />سمون لپاره غونډال ته ننوځئ.",
 	"mobile-frontend-edit-signup-action": "<strong>د {{SITENAME}} په ښه والې کې مرسته وکړئ.</strong><br />د سمولو لپاره ننوځئ.",
 	"mobile-frontend-editor-anon": "غونډال ته له ننوتلو پرته سمون",
