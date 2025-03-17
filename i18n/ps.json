@@ -12,7 +12,7 @@
 	"mobile-frontend-account-create-captcha-placeholder": "تاييدي کوډ مو ورکړئ",
 	"mobile-frontend-changeslist-nocomment": "د سمون لنډيز نشته",
 	"mobile-frontend-clear-search": "سپينول",
-	"mobile-frontend-copyright": "دا مېنځپانگه د $1 سره سم ستاسې لاسرسي کې ده، خو چې مخالف يې وييل شوي وي.",
+	"mobile-frontend-copyright": "دا منځپانگه د $1 سره سم ستاسې لاسرسي کې ده، خو چې مخالف يې ويل شوي وي.",
 	"mobile-frontend-diffview-anonymous": "ورکنومی کارن",
 	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|تورى ورگډ شو|تورى ورگډ شول}}",
 	"mobile-frontend-diffview-bytesnochange": "په اندازه کې يي هیڅ بدلون نه دي رامېنځ ته شوي.",
