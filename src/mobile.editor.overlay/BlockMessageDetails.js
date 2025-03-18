@@ -1,8 +1,8 @@
 'use strict';
 const mobile = require( 'mobile.startup' );
-const Button = mobile.Button,
-	View = mobile.View,
-	Icon = mobile.Icon,
+const Button = mobile.class.Button,
+	View = mobile.class.View,
+	Icon = mobile.class.Icon,
 	util = mobile.util;
 
 /**

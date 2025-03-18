@@ -47,36 +47,6 @@ module.exports = {
 	 *
 	 * @private
 	 */
-	Section,
-	/**
-	 * Internal, strictly for use inside MobileFrontend only
-	 *
-	 * @private
-	 */
-	MessageBox,
-	/**
-	 * Internal, strictly for use inside MobileFrontend only
-	 *
-	 * @private
-	 */
-	Icon,
-	/**
-	 * Internal, strictly for use inside MobileFrontend only
-	 *
-	 * @private
-	 */
-	IconButton,
-	/**
-	 * Internal, strictly for use inside MobileFrontend only
-	 *
-	 * @private
-	 */
-	Button,
-	/**
-	 * Internal, strictly for use inside MobileFrontend only
-	 *
-	 * @private
-	 */
 	actionParams,
 	/**
 	 * Internal, strictly for use inside MobileFrontend only
@@ -109,20 +79,34 @@ module.exports = {
 	// Internal for use inside Minerva only.
 	CtaDrawer,
 	/**
-	 * Internal for use inside Minerva, ExternalGuidance and Echo only.
-	 *
+	 * @internal for use strictly inside MobileFrontend only. Other extensions
+	 *  should use View.make and Overlay.make
+	 */
+	class: {
+		View,
+		Overlay,
+		Section,
+		MessageBox,
+		Icon,
+		IconButton,
+		Button
+	},
+	/**
+	 * @stable for use
 	 * @memberof module:mobile.startup
 	 * @type module:mobile.startup/View
 	 */
-	View: View.ClassES5,
+	View: {
+		make: View.make
+	},
 	/**
-	 * Internal for use inside Minerva, ExternalGuidance,
-	 *  GrowthExperiments and Echo only.
-	 *
+	 * @stable for use
 	 * @memberof module:mobile.startup
 	 * @type module:mobile.startup/Overlay
 	 */
-	Overlay: Overlay.ClassES5,
+	Overlay: {
+		make: Overlay.make
+	},
 	/**
 	 * Internal for use inside Minerva only.
 	 *

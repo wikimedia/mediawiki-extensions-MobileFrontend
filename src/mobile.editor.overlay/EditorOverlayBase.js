@@ -4,7 +4,7 @@
  * @private
  */
 const mobile = require( 'mobile.startup' ),
-	Overlay = mobile.Overlay,
+	Overlay = mobile.class.Overlay,
 	// Use MediaWiki ResourceLoader require(), not Webpack require()
 	contLangMessages = (
 		require( './contLangMessages.json' )
@@ -12,10 +12,10 @@ const mobile = require( 'mobile.startup' ),
 	util = mobile.util,
 	parseBlockInfo = require( './parseBlockInfo.js' ),
 	headers = mobile.headers,
-	Button = mobile.Button,
-	IconButton = mobile.IconButton,
+	Button = mobile.class.Button,
+	IconButton = mobile.class.IconButton,
 	blockMessageDrawer = require( './blockMessageDrawer.js' ),
-	MessageBox = mobile.MessageBox,
+	MessageBox = mobile.class.MessageBox,
 	mwUser = mw.user;
 
 /**
