@@ -50,7 +50,7 @@
 	"mobile-frontend-editor-error-loading": "ھەڵە، ناتواندرێت دەستکاریکەرەکە بار بکرێت.",
 	"mobile-frontend-editor-error-preview": "ھەڵە، شتێکی چاوەڕواننەکراو ڕوویدا لەکاتی ھەوڵدان بۆ بەدەستھێنانی پێشبینی. تکایە دایبخەرەوە و دووبارە ھەوڵ بدەرەوە.",
 	"mobile-frontend-editor-keep-editing": "بەردەوام بە لە دەستکاریکردن",
-	"mobile-frontend-editor-licensing": "بە پاشەکەوتکردنی گۆڕانکارییەکان، تۆ بڵاوکردنەوەی بەشدارییەکانت پەسەند دەکەیت لەژێر $1 {{PLURAL:$2|بەڵگەنامەکان}}.",
+	"mobile-frontend-editor-licensing": "بە بڵاوکردنەوەی گۆڕانکارییەکان، تۆ بڵاوکردنەوەی بەشدارییەکانت پەسەند دەکەیت لەژێر $1 {{PLURAL:$2|بەڵگەنامەکان}}.",
 	"mobile-frontend-editor-licensing-with-terms": "بە پاشەکەوتکردنی گۆڕانکارییەکان، تۆ $1 پەسەند دەکەیت و ڕازی دەبیت بە بڵاوکردنەوەی بەشدارییەکانت لەژێر $2 {{PLURAL:$3|بەڵگەنامەکان}}",
 	"mobile-frontend-editor-terms-link": "[$1 مەرجی بەکارھێنان]",
 	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|دڵنیایت کە دەتەوێت پەڕەیەکی}} نوێ دروست بکەیت لە {{SITENAME}}؟",
