@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Boulaur",
-			"Cedric31"
+			"Cedric31",
+			"Lhanars"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Entratz lo còdi de confirmacion",
@@ -20,6 +21,7 @@
 	"mobile-frontend-featured-article": "Contengut recomandat del jorn",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Lengas suggeridas",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Totas las lengas",
+	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Cercar una lenga",
 	"mobile-frontend-last-modified-date": "Darrièra modificacion lo $1, a $2",
 	"mobile-frontend-main-menu-settings-heading": "Paramètres",
 	"mobile-frontend-missing-image": "Imatge",
@@ -42,6 +44,6 @@
 	"mobile-frontend-watchlist-filter-talk": "Discussion",
 	"mobile-frontend-watchlist-more": "mai",
 	"tag-mobile_edit": "Modificacion per mobil",
-	"tag-mobile_web_edit": "Modificacion pel web mobil",
+	"tag-mobile_web_edit": "modificacion per un mobil",
 	"tag-mobile_web_edit-description": "Modificacion efectuada dempuèi lo site web mobil"
 }
