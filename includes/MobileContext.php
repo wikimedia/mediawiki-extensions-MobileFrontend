@@ -554,7 +554,7 @@ class MobileContext extends ContextSource {
 				$urlUtils = MediaWikiServices::getInstance()->getUrlUtils();
 				$server = $urlUtils->expand( $this->getConfig()->get( 'Server' ), PROTO_CANONICAL ) ?? '';
 				$host = $urlUtils->parse( $server )['host'] ?? '';
-				$mobileDomain = call_user_func( $mobileUrlCallback, $host );
+				$mobileDomain = $mobileUrlCallback( $host );
 				$this->hasMobileUrl = $mobileDomain !== $host;
 			} else {
 				$this->hasMobileUrl = false;
@@ -594,7 +594,7 @@ class MobileContext extends ContextSource {
 
 		$mobileUrlCallback = $this->getMobileUrlCallback();
 		if ( $mobileUrlCallback ) {
-			$parsedUrl['host'] = call_user_func( $mobileUrlCallback, $parsedUrl['host'] );
+			$parsedUrl['host'] = $mobileUrlCallback( $parsedUrl['host'] );
 		}
 		if ( $forceHttps ) {
 			$parsedUrl['scheme'] = 'https';
