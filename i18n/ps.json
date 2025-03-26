@@ -23,7 +23,7 @@
 	"mobile-frontend-edit-login-action": "<strong>ښه والي کې مرسته وکړئ {{SITENAME}}.</strong><br />سمون لپاره غونډال ته ننوځئ.",
 	"mobile-frontend-edit-signup-action": "<strong>د {{SITENAME}} په ښه والې کې مرسته وکړئ.</strong><br />د سمولو لپاره ننوځئ.",
 	"mobile-frontend-editor-anon": "غونډال ته له ننوتلو پرته سمون",
-	"mobile-frontend-editor-anonwarning": "<strong>گواښنه:</strong> تاسو غونډال ته ننوتي نه ياست. که تاسو کوم سمونونه وکړئ، نو ستاسو وېبپته به ټولو ته ښکاره شي. که تاسو <strong>خپل گڼون ته ننوځئ</strong> يا <strong>يو گڼون جوړ کړئ</strong>، ستاسو سمونونه به ستاسو تر کارننوم لاندې ستاسو ونډو کې خوندي شي، چې ډېرې ګټې نورې هم لري.",
+	"mobile-frontend-editor-anonwarning": "<strong>گواښنه:</strong> تاسې غونډال کې نه ياست ننوتي. که تاسې هر ډول سمونونه کوی، نو ستاسې IP‌پته به ټولو ته ښکاري. که تاسې <strong>خپل گڼون ته ننوځئ</strong> يا <strong>يو گڼون جوړوئ</strong>، نو ستاسې سمونونه به ستاسې کارن‌نوم سره اړونده شي، چې ډېرې نورې ګټې هم لري.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "غونډال ته ننوتل",
 	"mobile-frontend-drawer-arrow-label": "تړل",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "هوکې",
