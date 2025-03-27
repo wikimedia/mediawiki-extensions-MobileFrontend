@@ -14,7 +14,6 @@ let fixture,
 /* eslint-disable jsdoc/valid-types */
 /** @type {typeof import('../../../src/mobile.startup/Page')} */ let stubPage;
 /** @type {typeof import('../../../src/mobile.startup/Page')} */ let mobileTocPage;
-/** @type {typeof import('../../../src/mobile.startup/Page')} */ let desktopPage;
 /** @type {typeof import('../../../src/mobile.startup/Page')} */ let sectionPage;
 /* eslint-enable jsdoc/valid-types */
 
@@ -45,79 +44,91 @@ QUnit.module( 'MobileFrontend PageHTMLParser.js', {
 		);
 		mobileTocPage = new PageHTMLParser(
 			util.parseHTML( PARSER_OUTPUT ).html( `
-				<div class="mf-section-0">
+				<section class="mf-section-0">
 					<div class="ambox">a0</div>
 					<p>lead</p>
+				</section>
+				<div class="mw-heading section-heading">
+					<h2>1</h2>
 				</div>
-				<h2 class="section-heading">1</h2>
-				<div class="mf-section-1">
+				<section class="mf-section-1">
 					<div class="ambox">a1</div>
-					<h3>1.1</h3>
+					<div class="mw-heading">
+						<h3>1.1</h3>
+					</div>
 					<div class="ambox">a1.1</div>
-				</div>
-			` )
-		);
-		desktopPage = new PageHTMLParser(
-			util.parseHTML( PARSER_OUTPUT ).html( `
-				<p>lead</p>
-				<div class="ambox">a0</div>
-				<h2>1</h2>
-				<div class="ambox">a1</div>
-				<h3>1.1</h3>
-				<div class="ambox">a1.1</div>
+				</section>
 			` )
 		);
 		sectionPage = new PageHTMLParser(
 			util.parseHTML( PARSER_OUTPUT ).html( `
-				<div class="mf-section-0">
+				<section class="mf-section-0">
 					<p>lead</p>
 					<div class="ambox">a0</div>
+				</section>
+				<div class="mw-heading section-heading">
+					<h2>1</h2>
 				</div>
-
-				<h2 class="section-heading">1</h2>
-				<div class="mf-section-1">
+				<section class="mf-section-1">
 					<div class="ambox">a1</div>
-
-					<h3>1.1</h3>
+					<div class="mw-heading">
+						<h3>1.1</h3>
+					</div>
 					<div class="ambox">a1.1</div>
 
-					<h4>1.1.1</h4>
+					<div class="mw-heading">
+						<h4>1.1.1</h4>
+					</div>
 					<div class="ambox">a1.1.1</div>
 
-					<h4>1.1.2</h4>
+					<div class="mw-heading">
+						<h4>1.1.2</h4>
+					</div>
 					<div class="ambox">a1.1.2</div>
 
-					<h3>1.2</h3>
+					<div class="mw-heading">
+						<h3>1.2</h3>
+					</div>
 					<div class="ambox">a1.1</div>
+				</secttion>
+
+				<div class="mw-heading section-heading">
+					<h2>2</h2>
 				</div>
-
-				<h2 class="section-heading">2</h2>
-				<div class="mf-section-6"><div class="ambox">a2</div></div>
-
-				<h2 class="section-heading">3</h2>
-				<div class="mf-section-7"><div class="ambox">a3</div></div>
-
-				<h2 class="section-heading">Section with nested Ambox</h2>
-				<div class="mf-section-8">
+				<section class="mf-section-6"><div class="ambox">a2</div></section>
+				<div class="mw-heading section-heading">
+					<h2>3</h2>
+				</div>
+				<section class="mf-section-7">
+					<div class="ambox">a3</div>
+				</section>
+				<div class="mw-heading section-heading">
+					<h2>Section with nested Ambox</h2>
+				</div>
+				<section class="mf-section-8">
 					<div class="ambox">
 						<p>nested-ambox-parent,</p>
 						<div class="ambox">nested-ambox-1,</div>
 						<div class="ambox">nested-ambox-2</div>
 					</div>
-				</div>
+				</section>
 
-				<h2 class="section-heading">Sub-section with nested Ambox</h2>
-				<div class="mf-section-9">
+				<div class="mw-heading section-heading">
+					<h2>Sub-section with nested Ambox</h2>
+				</div>
+				<section class="mf-section-9">
 					<div class="ambox">
 						<p>nested-ambox-parent,</p>
 						<div class="ambox">nested-ambox-1,</div>
 						<div class="ambox">nested-ambox-2</div>
 					</div>
-
-					<h3>subsection heading</h3>
-
-					<h3>Another subsection heading</h3>
-				</div>
+					<div class="mw-heading">
+						<h3>subsection heading</h3>
+					</div>
+					<div class="mw-heading">
+						<h3>Another subsection heading</h3>
+					</div>
+				</section>
 			` ) // end .html()
 		); // end new Page();
 	},
@@ -128,25 +139,6 @@ QUnit.module( 'MobileFrontend PageHTMLParser.js', {
 } );
 
 QUnit.test( '#findInSectionLead', ( assert ) => {
-	// check desktop page
-	[
-		[ 0, 'a0', 'lead section' ],
-		[ 1, 'a1', 'h2' ],
-		[ 2, 'a1.1', 'h3' ],
-		[ 3, '', 'h4', 'selector does not match', '.foo' ],
-		[ 111, '', 'Non-existent section' ]
-	].forEach( ( params, i ) => {
-		const
-			section = params[0],
-			expect = params[1],
-			test = params[2],
-			selector = params[3] || '.ambox';
-		assert.strictEqual(
-			desktopPage.findChildInSectionLead( section, selector ).text(),
-			expect,
-			'Found correct text in desktop test ' + i + ' case: ' + test
-		);
-	} );
 	// check stub
 	[
 		[ 0, 'a0', 'lead section' ],
