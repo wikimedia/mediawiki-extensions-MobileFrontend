@@ -26,11 +26,6 @@ QUnit.module( 'MobileFrontend languageOverlay.js', {
 		LanguageSearcher = require( '../../../../src/mobile.languages.structured/LanguageSearcher' );
 		languageOverlay = require( '../../../../src/mobile.startup/languageOverlay/languageOverlay' );
 
-		sandbox.stub( mw, 'msg' )
-			.withArgs( 'mobile-frontend-language-heading' ).returns( '' )
-			.withArgs( 'mobile-frontend-loading-message' ).returns( '⌛' )
-			.withArgs( 'mobile-frontend-languages-structured-overlay-all-languages-header' ).returns( '' )
-			.withArgs( 'mobile-frontend-languages-structured-overlay-suggested-languages-header' ).returns( '' );
 		sandbox.stub( mw.loader, 'using' ).withArgs( 'mobile.languages.structured' ).returns( util.Deferred().resolve() );
 
 		// languageOverlay uses a global navigator so we need to stub it for headless tests
@@ -62,7 +57,7 @@ QUnit.test( '#constructor', ( assert ) => {
 		},
 		overlay = languageOverlay( gateway );
 
-	assert.strictEqual( overlay.$el.find( '.overlay-content > .promised-view' ).text().trim(), '⌛', 'loading view rendered in .overlay-content' );
+	assert.strictEqual( overlay.$el.find( '.overlay-content > .promised-view' ).text().trim(), 'mobile-frontend-loading-message', 'loading view rendered in .overlay-content' );
 
 	return languageOverlay.test.loadLanguageSearcher( gateway ).then( () => {
 		assert.strictEqual( overlay.$el.find( '.overlay-content > .promised-view' ).length, 0, 'promisedView has fulfilled its promise' );

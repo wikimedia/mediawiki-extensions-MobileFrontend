@@ -24,15 +24,6 @@ QUnit.module( 'MobileFrontend CtaDrawer.js', {
 		// Additional CtaDrawer global dependency.
 		mw.setUp( sandbox, global );
 		mustache.setUp( sandbox, global );
-
-		// Force consistent messaging between Special:JavaScriptTest and Node.js.
-		sandbox.stub( global.mw, 'msg' ).callsFake( ( id ) => {
-			switch ( id ) {
-				case 'mobile-frontend-watchlist-cta-button-login': return 'Log in';
-				case 'mobile-frontend-watchlist-cta-button-signup': return 'Sign up';
-			}
-			return id;
-		} );
 		sandbox.stub( global.mw.util, 'getUrl' ).callsFake( ( pageName, params ) => params.type ? 'signUp' : 'logIn' );
 
 		// Dynamically import Views to use fresh sandboxed dependencies.
