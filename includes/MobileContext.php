@@ -115,10 +115,6 @@ class MobileContext extends ContextSource {
 		self::$instance = null;
 	}
 
-	/**
-	 * @param IContextSource $context
-	 * @param Config $config
-	 */
 	protected function __construct( IContextSource $context, Config $config ) {
 		$this->setContext( $context );
 		$this->config = $config;
@@ -521,7 +517,6 @@ class MobileContext extends ContextSource {
 	/**
 	 * True if the current wiki has separate mobile and desktop domains (regardless
 	 * of which domain is used by the current request).
-	 * @return bool
 	 */
 	public function hasMobileDomain(): bool {
 		if ( $this->hasMobileUrl !== null ) {

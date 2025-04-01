@@ -21,7 +21,6 @@ class UserModes implements IteratorAggregate {
 
 	/**
 	 * Register new User Mode
-	 * @param IUserMode $mode
 	 */
 	public function registerMode( IUserMode $mode ) {
 		$this->modes[$mode->getModeIdentifier()] = $mode;

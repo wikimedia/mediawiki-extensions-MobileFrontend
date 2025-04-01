@@ -12,11 +12,6 @@ use MobileFrontend\Amc\UserMode;
  */
 class OutreachTest extends MediaWikiUnitTestCase {
 
-	/**
-	 * @param bool $mfAmcOutreach
-	 *
-	 * @return Outreach
-	 */
 	private function createOutreach( bool $mfAmcOutreach ): Outreach {
 		$userMode = $this->createNoOpMock( UserMode::class, [ 'isEnabled' ] );
 		$userMode->method( 'isEnabled' )->willReturn( false );
@@ -47,7 +42,6 @@ class OutreachTest extends MediaWikiUnitTestCase {
 		return new Outreach( $userMode, $amcManager, $user, $config );
 	}
 
-	/** @return Generator */
 	public static function provideIsCampaignActive(): Generator {
 		yield '$mfAmcOutreach config enabled, expects campaign to be active' => [ true, true ];
 		yield '$mfAmcOutreach config disabled, expects campaign to be inactive' => [ false, false ];
@@ -64,7 +58,6 @@ class OutreachTest extends MediaWikiUnitTestCase {
 		$this->assertSame( $expected, $outreach->isCampaignActive() );
 	}
 
-	/** @return Generator */
 	public static function provideIsUserEligible(): Generator {
 		yield '$mfAmcOutreach config enabled, user is eligible' => [ true, true ];
 		yield '$mfAmcOutreach config disabled, user is not eligible' => [ false, false ];

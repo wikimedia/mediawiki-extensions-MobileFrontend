@@ -12,7 +12,6 @@ use Psr\Log\NullLogger;
  */
 class MobileConfigTest extends MediaWikiIntegrationTestCase {
 
-	/** @return Context */
 	private function createContext(): Context {
 		$rl = $this->createNoOpMock( ResourceLoader::class, [ 'getLogger' ] );
 		$rl->method( 'getLogger' )->willReturn( new NullLogger() );
