@@ -106,7 +106,7 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 		}
 	}
 
-	private function buildAMCToggle() {
+	private function buildAMCToggle(): OOUI\FieldLayout {
 		$amcToggle = new OOUI\CheckboxInputWidget( [
 			'name' => 'enableAMC',
 			'infusable' => true,
