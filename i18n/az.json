@@ -61,7 +61,7 @@
 	"mobile-frontend-editor-licensing": "Dəyişiklikləri yayımlamaqla siz töhfənizin $1 {{PLURAL:$2|lisenziyası|lisenziyaları}} altında yayımlanması ilə razılaşdığınızı bildirmiş olursunuz.",
 	"mobile-frontend-editor-licensing-with-terms": "Dəyişiklikləri yayımlamaqla siz $1ni qəbul edirsiniz və töhfənizin $2 {{PLURAL:$3|lisenziyası|lisenziyaları}} altında yayımlanması ilə razılaşdığınızı bildirmiş olursunuz.",
 	"mobile-frontend-editor-terms-link": "[$1 İstifadə Şərtləri]",
-	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|Siz}} {{SITENAME}} layihəsində yeni səhifə yaratmaq istədiyinizdən əminsinizmi?",
+	"mobile-frontend-editor-new-page-confirm": "{{SITENAME}} saytında {{GENDER:$1|yeni səhifə yaratmaq istədiyinizə əminsiniz}}?",
 	"mobile-frontend-editor-placeholder": "Bu bölmə boşdur. Onu ilk genişləndirən siz olun!",
 	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|Siz}} yeni {{SITENAME}} səhifəsi yaradırsınız!",
 	"mobile-frontend-editor-previewing-page": "<span><strong>Sınaq göstərişi:</strong> $1</span>",
