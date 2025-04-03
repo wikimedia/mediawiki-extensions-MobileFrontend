@@ -79,7 +79,7 @@
 	"mobile-frontend-editor-cancel-confirm": "Question asking user if they are positive about abandoning unsaved edit.",
 	"mobile-frontend-editor-captcha-try-again": "A message shown when user enters wrong CAPTCHA and a new one is displayed.",
 	"mobile-frontend-editor-continue": "Caption for the next (as in \"next step\") button on edit form which takes you to the screen that shows a preview and license information.\n{{Identical|Next}}",
-	"mobile-frontend-editor-disabled": "Toast message that appears when a user is unable to edit a page and clicks edit icon.",
+	"mobile-frontend-editor-disabled": "Toast message that appears when a user is unable to edit a page and clicks edit icon. $1 is a URL.",
 	"mobile-frontend-editor-disabled-anon": "Message that appears in a drawer when a user is not logged in and anonymous edits are disabled.",
 	"mobile-frontend-editor-editing": "A heading indicating that the user is currently editing.\n{{Identical|Editing}}",
 	"mobile-frontend-editor-editing-page": "A heading saying what page is being edited. All text should be wrapped in a STRONG tag except the page title itself. Note that STRONG text pushes the buttons off-screen when it's too long (vertical mobile display), but the SPAN part is shortened in that case with an ellipsis (...) before the buttons.\n\nParameters:\n* $1 - page title\n{{Related|Mobile-frontend-editor-page}}\n{{Identical|Editing}}",
