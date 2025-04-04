@@ -26,9 +26,6 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/SourceEditorOverlay', {
 				$element: global.$( '<div>' )
 			};
 		};
-		sandbox.stub( mw, 'msg' ).withArgs( 'mobile-frontend-editor-continue' ).returns( 'Continue' )
-			.withArgs( 'mobile-frontend-editor-save' ).returns( 'Save' )
-			.withArgs( 'mobile-frontend-editor-publish' ).returns( 'Publish' );
 
 		EditorGateway = require( '../../../src/mobile.editor.overlay/EditorGateway' );
 		SourceEditorOverlay = require( '../../../src/mobile.editor.overlay/SourceEditorOverlay' );

@@ -24,7 +24,6 @@ QUnit.module( 'MobileFrontend promisedView.js', {
 			className: 'test'
 		} );
 		happyView.append( '😃' );
-		sandbox.stub( mw, 'msg' ).withArgs( 'mobile-frontend-loading-message' ).returns( '⌛' );
 	},
 	afterEach: function () {
 		jQuery.tearDown();
@@ -36,7 +35,7 @@ QUnit.test( '#constructor happyView', ( assert ) => {
 	const promise = util.Deferred(),
 		viewSuccess = promisedView( promise );
 
-	assert.strictEqual( viewSuccess.$el.text().trim(), '⌛', 'the view is waiting to resolve' );
+	assert.strictEqual( viewSuccess.$el.text().trim(), 'mobile-frontend-loading-message', 'the view is waiting to resolve' );
 	assert.true( viewSuccess.$el.hasClass( 'promised-view' ), 'parent element has loading class when loading' );
 	promise.resolve( happyView );
 	return promise.then( () => {
@@ -50,11 +49,11 @@ QUnit.test( '#constructor when promise rejects but not to a sadView', ( assert )
 		promise = util.Deferred().reject( new Error( 'fake test error' ) ),
 		viewFailure = promisedView( promise );
 
-	assert.strictEqual( viewFailure.$el.text().trim(), '⌛', 'the view is waiting to resolve' );
+	assert.strictEqual( viewFailure.$el.text().trim(), 'mobile-frontend-loading-message', 'the view is waiting to resolve' );
 	assert.true( viewFailure.$el.hasClass( 'promised-view' ), 'parent element has loading class when loading' );
 
 	return promise.catch( () => {
-		assert.strictEqual( viewFailure.$el.text().trim(), '⌛', 'the view still shows the loading icon' );
+		assert.strictEqual( viewFailure.$el.text().trim(), 'mobile-frontend-loading-message', 'the view still shows the loading icon' );
 	} );
 } );
 
@@ -69,7 +68,7 @@ QUnit.test( '#constructor when promise rejects to a sadView', ( assert ) => {
 
 	sadView.append( '😭' );
 
-	assert.strictEqual( viewFailure.$el.text().trim(), '⌛', 'the view is waiting to resolve' );
+	assert.strictEqual( viewFailure.$el.text().trim(), 'mobile-frontend-loading-message', 'the view is waiting to resolve' );
 	assert.true( viewFailure.$el.hasClass( 'promised-view' ), 'parent element has loading class when loading' );
 
 	return promise.catch( () => {
