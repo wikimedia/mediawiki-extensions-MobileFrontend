@@ -47,7 +47,6 @@
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "AbuseFilter extension rule variable that allows distinguishing edits based on if they have been made using the editor of MobileFrontend or not.\n\nParameters:\n* $1 - text that will be inserted into the filter code editor",
 	"mobile-frontend-account-create-captcha-placeholder": "Placeholder for captcha input field",
-	"mobile-frontend-changeslist-nocomment": "Text to mark an empty edit summary in mobile watchlist/history/recentchanges overview.",
 	"mobile-frontend-clear-search": "Tooltip for clear button that appears when you type into search box.\n{{Identical|Clear}}",
 	"mobile-frontend-copyright": "A short sentence explaining that the content of the page is available under a particular license. Parameters:\n* $1 - license name\n{{Identical|Content is available under}}",
 	"mobile-frontend-desc": "{{desc|name=Mobile Frontend|url=https://www.mediawiki.org/wiki/Extension:MobileFrontend}}\n\n\"Instance\" can be translated as \"an installation\" or \"website\".",
