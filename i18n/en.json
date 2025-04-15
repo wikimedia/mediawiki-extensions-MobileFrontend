@@ -39,7 +39,6 @@
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Whether or not a user is editing through the mobile interface ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "Enter confirmation code",
-	"mobile-frontend-changeslist-nocomment": "no edit summary",
 	"mobile-frontend-clear-search": "Clear",
 	"mobile-frontend-copyright": "Content is available under $1 unless otherwise noted.",
 	"mobile-frontend-desc": "Helps improve the mobile presence of a MediaWiki instance",
