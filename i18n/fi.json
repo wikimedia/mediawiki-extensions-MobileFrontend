@@ -33,7 +33,6 @@
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Muokkaako käyttäjä mobiilikäyttöliittymän kautta ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "Kirjoita varmistuskoodi",
-	"mobile-frontend-changeslist-nocomment": "ei muokkausyhteenvetoa",
 	"mobile-frontend-clear-search": "Tyhjennä",
 	"mobile-frontend-copyright": "Sisältö on käytettävissä lisenssillä $1, ellei toisin mainita.",
 	"mobile-frontend-desc": "Auttaa parantamaan MediaWiki-ilmentymän mobiiliulkoasua",

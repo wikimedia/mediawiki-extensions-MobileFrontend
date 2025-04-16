@@ -44,7 +44,6 @@
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Of een gebruiker wel of niet via de mobiele interface bewerkt ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "Bevestigingscode invoeren",
-	"mobile-frontend-changeslist-nocomment": "geen bewerkingssamenvatting",
 	"mobile-frontend-clear-search": "Wissen",
 	"mobile-frontend-copyright": "De inhoud is, tenzij anders aangegeven, beschikbaar onder $1",
 	"mobile-frontend-desc": "Helpt de mobiele aanwezigheid van een MediaWiki-installatie te verbeteren",

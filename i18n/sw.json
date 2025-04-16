@@ -15,7 +15,6 @@
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ikiwa mtumiaji anahariri au la kupitia kiolesura cha simu ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "Weka kanuni ya kuthibitisha",
-	"mobile-frontend-changeslist-nocomment": "hakuna muhtasari wa uhariri",
 	"mobile-frontend-clear-search": "Futa",
 	"mobile-frontend-copyright": "Maudhui yanapatikana kwa chini ya $1 isipokuwa iwe imebainishwa vinginevyo.",
 	"mobile-frontend-edit-login-action": "<strong>Saidia kuboresha {{SITENAME}}.</strong><br />Ingia ili kuhariri.",

@@ -44,7 +44,6 @@
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "سواء كان المستخدم يعدل عبر واجهة الهاتف المحمول ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "أدخل رمز التأكيد",
-	"mobile-frontend-changeslist-nocomment": "لا يوجد ملخص تحرير",
 	"mobile-frontend-clear-search": "إفراغ",
 	"mobile-frontend-copyright": "المحتوى متاح وفق $1 ما لم يرد خلاف ذلك.",
 	"mobile-frontend-desc": "يساعد على تحسين الوجود المحمول لنسخة MediaWiki",

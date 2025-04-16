@@ -5,7 +5,6 @@
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Kirjota varmistuskooti",
-	"mobile-frontend-changeslist-nocomment": "ei mookkausyhteenvetoa",
 	"mobile-frontend-desc": "Mupiilikäyttöliittymä",
 	"mobile-frontend-editor-anon": "Mookkaa lokkaamatta sisäle",
 	"mobile-frontend-editor-blocked-drawer-title": "Sinut oon estetty mookkaamasta {{GRAMMAR:partitive|{{SITENAME}}}}",

@@ -44,7 +44,6 @@
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "使用者是否透過行動版介面編輯（$1）",
 	"mobile-frontend-account-create-captcha-placeholder": "輸入確認碼",
-	"mobile-frontend-changeslist-nocomment": "無編輯摘要",
 	"mobile-frontend-clear-search": "清除",
 	"mobile-frontend-copyright": "除非另有註明，否則頁面內容均以 $1 條款授權。",
 	"mobile-frontend-desc": "協助改善 MediaWiki 實例的行動裝置呈現",

@@ -11,7 +11,6 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Хэрэглэгч гар утасны интерфейсээр дамжуулан засварлаж байгаа эсэх",
-	"mobile-frontend-changeslist-nocomment": "засварлах хураангуй байхгүй",
 	"mobile-frontend-copyright": "Тусгай тайлбар байхгүй бол энэ агуулгыг $1 лицензийн дагуу хэрэглэх боломжтой.",
 	"mobile-frontend-editor-anon": "Логингүй засвар хийх",
 	"mobile-frontend-editor-disabled": "Энэ хуудсыг эвдэн сүйтгэхээс сэргийлэх үүднээс хамгаалсан байна. [ $1 Кодоор харах]",

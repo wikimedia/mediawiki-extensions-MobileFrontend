@@ -7,7 +7,6 @@
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Дали корисник уредува од мобилниот посредник ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "Внесете го потврдниот код",
-	"mobile-frontend-changeslist-nocomment": "нема опис на уредувањето",
 	"mobile-frontend-clear-search": "Исчисти",
 	"mobile-frontend-copyright": "Содржината е достапна под $1 освен ако не е поинаку наведено.",
 	"mobile-frontend-desc": "Помага во подобрувањето на мобилното присуство на примерок на МедијаВики",

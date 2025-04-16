@@ -45,7 +45,6 @@
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "利用者が携帯機器版インターフェイスで編集しているかどうか（$1）",
 	"mobile-frontend-account-create-captcha-placeholder": "確認コードを入力",
-	"mobile-frontend-changeslist-nocomment": "編集の要約なし",
 	"mobile-frontend-clear-search": "消去",
 	"mobile-frontend-copyright": "コンテンツは、特に記載されていない限り、$1のもとで利用可能です。",
 	"mobile-frontend-desc": "MediaWiki インスタンスのモバイルプレゼンスの向上を支援します。",

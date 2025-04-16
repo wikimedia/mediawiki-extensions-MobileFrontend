@@ -35,7 +35,6 @@
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Чи користувач редагує через мобільний інтерфейс, чи ні ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "Введіть код підтвердження",
-	"mobile-frontend-changeslist-nocomment": "нема опису редагування",
 	"mobile-frontend-clear-search": "Очистити",
 	"mobile-frontend-copyright": "Вміст доступний на умовах $1, якщо не вказано інше.",
 	"mobile-frontend-desc": "Допомагає покращити мобільну присутність проєкту на MediaWiki",

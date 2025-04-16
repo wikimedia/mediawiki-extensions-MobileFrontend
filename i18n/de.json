@@ -25,7 +25,6 @@
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ob ein Benutzer über die mobile Oberfläche bearbeitet ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "Bestätigungscode eingeben",
-	"mobile-frontend-changeslist-nocomment": "keine Bearbeitungszusammenfassung",
 	"mobile-frontend-clear-search": "Leeren",
 	"mobile-frontend-copyright": "Der Inhalt ist verfügbar unter $1, sofern nicht anders angegeben.",
 	"mobile-frontend-desc": "Hilft, die mobile Darstellung einer MediaWiki-Instanz zu verbessern",

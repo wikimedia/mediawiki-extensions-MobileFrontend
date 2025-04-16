@@ -25,7 +25,6 @@
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Huruvida eller inte en användare redigerar via mobila gränssnittet ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "Ange bekräftelsekod",
-	"mobile-frontend-changeslist-nocomment": "ingen redigeringssammanfattning",
 	"mobile-frontend-clear-search": "Rensa",
 	"mobile-frontend-copyright": "Innehållet är tillgängligt under $1 om ingenting annat anges.",
 	"mobile-frontend-desc": "Hjälper till att förbättra den mobila närvaron av en MediaWiki-instans",

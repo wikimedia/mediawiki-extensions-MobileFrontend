@@ -18,7 +18,6 @@
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Uređuje li korisnik putem mobilnog interfejsa",
 	"mobile-frontend-account-create-captcha-placeholder": "Unesite kod za potvrdu",
-	"mobile-frontend-changeslist-nocomment": "nema sažetka izmjene",
 	"mobile-frontend-clear-search": "Očisti",
 	"mobile-frontend-copyright": "Sadržaj je dostupan pod licencom $1 osim ako nije drugačije navedeno.",
 	"mobile-frontend-desc": "Korisnički interfejs za mobilne uređaje",

@@ -23,7 +23,6 @@
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Hvorvidt en bruker redigerer fra mobilgrensesnittet ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "Skriv inn bekreftelseskode",
-	"mobile-frontend-changeslist-nocomment": "ingen redigeringsforklaring",
 	"mobile-frontend-clear-search": "Tøm",
 	"mobile-frontend-copyright": "Innholdet er tilgjengelig under $1 hvis ikke annet er angitt.",
 	"mobile-frontend-desc": "Hjelper til å forbedre den mobile tilstedeværelsen for en MediaWiki-instans",

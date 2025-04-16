@@ -18,7 +18,6 @@
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Se un usuario está ou non está editando a través da interface móbil ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "Escribe o código de confirmación",
-	"mobile-frontend-changeslist-nocomment": "sen resumo de edición",
 	"mobile-frontend-clear-search": "Limpar",
 	"mobile-frontend-copyright": "Todo o contido está dispoñible baixo a licenza $1, agás que se indique o contrario.",
 	"mobile-frontend-desc": "Axuda a mellorar a presenza móbil dunha instancia de MediaWiki",

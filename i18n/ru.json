@@ -61,7 +61,6 @@
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Редактирует ли участник через мобильный интерфейс ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "Введите код подтверждения",
-	"mobile-frontend-changeslist-nocomment": "нет описания правки",
 	"mobile-frontend-clear-search": "Очистить",
 	"mobile-frontend-copyright": "Если не указано иное, содержание доступно по лицензии $1.",
 	"mobile-frontend-desc": "Помогает улучшить мобильное присутствие проекта на движке MediaWiki",

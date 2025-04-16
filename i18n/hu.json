@@ -18,7 +18,6 @@
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Egy felhasználó a mobil felületen keresztül fordít-e ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "Írd be a megerősítő kódot",
-	"mobile-frontend-changeslist-nocomment": "nincs szerkesztési összefoglaló",
 	"mobile-frontend-clear-search": "Törlés",
 	"mobile-frontend-copyright": "A lap szövege $1 alatt érhető el, ha nincs külön jelölve.",
 	"mobile-frontend-desc": "Segít javítani gy MediaWiki-példány mobilos megjelenését",

@@ -22,7 +22,6 @@
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Είτε ένας χρήστης επεξεργάζεται είτε όχι μέσω της διεπαφής για κινητά",
 	"mobile-frontend-account-create-captcha-placeholder": "Εισάγετε τον κωδικό επιβεβαίωσης",
-	"mobile-frontend-changeslist-nocomment": "καμία σύνοψη επεξεργασίας",
 	"mobile-frontend-clear-search": "Εκκαθάριση",
 	"mobile-frontend-copyright": "Το περιεχόμενο είναι διαθέσιμο υπό  $1  εκτός αν αναφέρεται διαφορετικά.",
 	"mobile-frontend-desc": "Διεπαφή κινητών συσκευών",

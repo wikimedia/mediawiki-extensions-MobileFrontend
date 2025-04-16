@@ -24,7 +24,6 @@
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Hvorvidt en bruger redigerer via mobilgrænsefladen ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "Indtast bekræftelseskode",
-	"mobile-frontend-changeslist-nocomment": "ingen redigeringsopsummering",
 	"mobile-frontend-clear-search": "Ryd",
 	"mobile-frontend-copyright": "Indholdet er udgivet under $1 medmindre andet er angivet.",
 	"mobile-frontend-desc": "Hjælper med at forbedre den mobile tilstedeværelse af en MediaWiki-instans",

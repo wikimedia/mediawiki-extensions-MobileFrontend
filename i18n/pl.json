@@ -44,7 +44,6 @@
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Czy użytkownik edytuje lub nie za pomocą interfejsu mobilnego ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "Wprowadź kod potwierdzenia",
-	"mobile-frontend-changeslist-nocomment": "brak opisu edycji",
 	"mobile-frontend-clear-search": "Wyczyść",
 	"mobile-frontend-copyright": "Treść udostępniana na licencji $1, jeśli nie podano inaczej.",
 	"mobile-frontend-desc": "Poprawia wygląd i zachowanie MediaWiki na urządzeniach mobilnych",

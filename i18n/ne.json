@@ -20,7 +20,6 @@
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "प्रयोगकर्ताले मोबाइल इन्टरफेस मार्फत सम्पादन गरिरहेको छ वा छैन $1",
 	"mobile-frontend-account-create-captcha-placeholder": "पुष्टिकरण अङ्क प्रविष्ट गर्नुहोस्",
-	"mobile-frontend-changeslist-nocomment": "कुनै सम्पादन सारांश छैन",
 	"mobile-frontend-clear-search": "सफागर्ने",
 	"mobile-frontend-copyright": "सामाग्री $1 अनुसार उपलब्ध छ, खुलाइएको अवस्था बाहेकको हकमा।",
 	"mobile-frontend-desc": "मिडियाविकि उदाहरणको मोबाइल उपस्थिति सुधार गर्न मद्दत गर्दछ",

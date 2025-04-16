@@ -12,7 +12,6 @@
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ці рэдагуе ўдзельнік праз мабільны інтэрфэйс ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "Увядзіце код пацьверджаньня",
-	"mobile-frontend-changeslist-nocomment": "няма апісаньня зьменаў",
 	"mobile-frontend-clear-search": "Ачысьціць",
 	"mobile-frontend-copyright": "Зьмест даступны на ўмовах $1, калі не пазначанае іншае.",
 	"mobile-frontend-desc": "Дапамагае палепшыць мабільную прысутнасьць існасьці MediaWiki",

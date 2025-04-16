@@ -6,7 +6,6 @@
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Rabotaje li koristnik ili ne s pomočju mobilnogo interfejsa ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "Vvedite kod za potvrdženje",
-	"mobile-frontend-changeslist-nocomment": "bez opisa pravky",
 	"mobile-frontend-clear-search": "Izčistiti",
 	"mobile-frontend-copyright": "Sodržanje jest dostupno pod licencijeju $1, ako ne jest napisano inače.",
 	"mobile-frontend-desc": "Pomagaje ulěpšiti funkcionovanje MediaWiki-projektov na mobilnyh aparatah",

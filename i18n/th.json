@@ -17,7 +17,6 @@
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "เลือกว่าจะให้ผู้ใช้แก้ไขผ่านอินเทอร์เฟซสำหรับอุปกรณ์เคลื่อนที่หรือไม่  ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "กรอกรหัสยืนยัน",
-	"mobile-frontend-changeslist-nocomment": "ไม่มีคำอธิบายอย่างย่อ",
 	"mobile-frontend-clear-search": "ล้าง",
 	"mobile-frontend-copyright": "เนื้อหาอนุญาตให้เผยแพร่ภายใต้ $1 เว้นแต่ระบุไว้เป็นอื่น",
 	"mobile-frontend-desc": "ฟรอนต์เอนด์สำหรับอุปกรณ์เคลื่อนที่",

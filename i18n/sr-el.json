@@ -13,7 +13,6 @@
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Bez obzira da li korisnik uređuje preko mobilnog interfejsa",
 	"mobile-frontend-account-create-captcha-placeholder": "Unesite potvrdni kod",
-	"mobile-frontend-changeslist-nocomment": "nema opisa izmene",
 	"mobile-frontend-clear-search": "Obriši",
 	"mobile-frontend-copyright": "Sadržaj je dostupan pod licencom $1 osim ako je drugačije navedeno.",
 	"mobile-frontend-edit-login-action": "<strong>Pomozite u poboljšavanju {{GRAMMAR:dativ|{{SITENAME}}}}.</strong><br />Prijavite se da biste uređivali.",
