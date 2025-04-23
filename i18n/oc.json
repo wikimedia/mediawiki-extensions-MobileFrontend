@@ -19,6 +19,7 @@
 	"mobile-frontend-diffview-title": "Cambiaments",
 	"mobile-frontend-editor-anon": "Edicion sens obrir una session",
 	"mobile-frontend-editor-anonwarning": "<strong>Atencion:</strong> Non avètz obèrt cap de session. Vòstra adreça IP serà visibla publicament se fasètz quina que siá modificacion. Se <strong>vos connectatz</strong> o <strong>creatz un compte</strong>, vòstras modificacions seràn atribuidas a vòstre nom d'utilizator, amb d'autres avantatges.",
+	"mobile-frontend-editor-placeholder-new-page": "Sètz vam de crear una nòva pagina sul projècte {{SITENAME}}!",
 	"mobile-frontend-expand-sections-status": "Desvolopar totas las seccions",
 	"mobile-frontend-featured-article": "Contengut recomandat del jorn",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} es realizat per de gents coma vos.</strong><br />Registratz-vos per contribuir-i.",
