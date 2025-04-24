@@ -115,17 +115,6 @@ class SearchOverlay extends Overlay {
 	 */
 	onClickResult( ev ) {
 		const $link = this.$el.find( ev.currentTarget );
-		mw.hook( 'ext.MobileFrontend.searchOverlay.click' ).fire();
-		/**
-		 * Fired when the user clicks a search result
-		 *
-		 * @type {Object}
-		 * @property {jQuery.Object} result The jQuery-wrapped DOM element that
-		 *  the user clicked
-		 * @property {number} resultIndex The zero-based index of the
-		 *  result in the set of results
-		 * @property {jQuery.Event} originalEvent The original event
-		 */
 		// FIXME: ugly hack that removes search from browser history
 		// when navigating to search results
 		ev.preventDefault();
@@ -226,17 +215,6 @@ class SearchOverlay extends Overlay {
 		// Overlay#show defines the actual overlay visibility.
 		super.show();
 
-		mw.hook( 'ext.MobileFrontend.searchOverlay.open' ).fire();
-
-		// T386735 - Fire empty search hook when the query is length 0
-		// Cannot use resetSearch for this hook, because resetSearch() is called before show()
-		const $input = this.getInput();
-		const len = $input.val().length;
-		if ( len === 0 ) {
-			const $content = this.$el.find( '.overlay-content' );
-			mw.hook( 'ext.MobileFrontend.searchOverlay.empty' ).fire( $content[ 0 ] );
-		}
-
 		this.showKeyboard();
 	}
 
@@ -256,11 +234,6 @@ class SearchOverlay extends Overlay {
 		// it seems the input event can be fired when virtual keyboard is closed
 		// (Chrome for Android)
 		if ( query !== this.lastQuery ) {
-			// Only reset search if the query is different from the last.
-			// This avoids an issue with unexpected input events e.g. T381289.
-			this.resetSearch();
-			// Start tracking when search is performed.
-			mw.hook( 'ext.MobileFrontend.searchOverlay.startQuery' ).fire();
 			if ( this._pendingQuery ) {
 				this._pendingQuery.abort();
 			}
@@ -301,7 +274,6 @@ class SearchOverlay extends Overlay {
 
 								this.$results = this.$resultContainer.find( 'li' );
 							}
-							mw.hook( 'ext.MobileFrontend.searchOverlay.displayResults' ).fire();
 						}
 					).promise( {
 						abort() {
@@ -311,10 +283,6 @@ class SearchOverlay extends Overlay {
 				}, delay );
 			} else {
 				this.resetSearch();
-
-				// Fire empty search hook when the query is length 0
-				const $content = this.$el.find( '.overlay-content' );
-				mw.hook( 'ext.MobileFrontend.searchOverlay.empty' ).fire( $content[ 0 ] );
 			}
 
 			this.lastQuery = query;
