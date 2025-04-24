@@ -1,5 +1,5 @@
-const util = require( './util' ),
-	actionParams = require( './actionParams.js' );
+const util = require( '../mobile.startup/util.js' ),
+	actionParams = require( '../mobile.startup/actionParams.js' );
 
 /**
  * Extends the API query parameters to include those parameters required to also fetch Wikibase
@@ -25,14 +25,11 @@ const util = require( './util' ),
  * @return {Object}
  */
 module.exports = function extendSearchParams( feature ) {
+	// These must be defined, as these are all the features that this can be used on.
+	// If not defined, all these features will see their API calls broken
 	const displayWikibaseDescriptions = mw.config.get( 'wgMFDisplayWikibaseDescriptions' ) || {
-			// These must be defined, as these are all the features that this can be used on.
-			// If not defined, all these features will see their API calls broken
-			search: true,
-			watchlist: true,
-			tagline: false
-		},
-		scriptPath = mw.config.get( 'wgMFScriptPath' );
+		watchlist: true
+	};
 
 	if ( !Object.prototype.hasOwnProperty.call( displayWikibaseDescriptions, feature ) ) {
 		throw new Error( '"' + feature + '" isn\'t a feature that shows Wikibase descriptions.' );
@@ -62,9 +59,5 @@ module.exports = function extendSearchParams( feature ) {
 		}
 	}
 
-	if ( scriptPath ) {
-		// A foreign api is being accessed! Enable anonymous CORS queries!
-		result.origin = '*';
-	}
 	return actionParams( result );
 };

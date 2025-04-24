@@ -1,6 +1,6 @@
-const util = require( './util.js' ),
-	View = require( './View' ),
-	browser = require( './Browser' ).getSingleton();
+const util = require( '../mobile.startup/util.js' ),
+	View = require( '../mobile.startup/View' ),
+	browser = require( '../mobile.startup/Browser' ).getSingleton();
 
 /**
  * List of items page view

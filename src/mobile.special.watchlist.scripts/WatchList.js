@@ -1,6 +1,6 @@
 const
-	PageList = require( '../mobile.startup/PageList' ),
-	WatchstarPageList = require( '../mobile.startup/watchstar/WatchstarPageList' ),
+	PageList = require( './PageList' ),
+	WatchstarPageList = require( './WatchstarPageList' ),
 	ScrollEndEventEmitter = require( './ScrollEndEventEmitter' ),
 	util = require( '../mobile.startup/util' ),
 	WatchListGateway = require( './WatchListGateway' );

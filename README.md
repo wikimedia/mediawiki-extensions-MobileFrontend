@@ -158,20 +158,6 @@ recruit volunteers.
 * Type: `Boolean`
 * Default: `false`
 
-#### $wgMFScriptPath
-
-When set will override the default search script path.
-This should not be used in production, it is strictly for development purposes.
-
-* Type: `string`
-* Default: ''
-
-e.g $wgMFScriptPath = "https://it.wikipedia.org/w/api.php"
-
-When caching this configuration variable, to show Wikidata descriptions please
-update $wgMFEnableWikidataDescriptions and $wgMFDisplayWikibaseDescriptions as these are
-disabled by default.
-
 #### $wgMFMobileFormatterOptions
 
 This provides options for the MobileFormatter.
@@ -280,7 +266,8 @@ viewport.
 
 #### $wgMFSearchAPIParams
 
-Define a set of params that should be passed in every gateway query.
+[DEPRECATED]
+Define a set of params that should be passed in every gateway query. Only applies to Special:EditWatchlist.
 
 * Type: `Array`
 * Default:
@@ -293,8 +280,9 @@ Define a set of params that should be passed in every gateway query.
 
 #### $wgMFQueryPropModules
 
+[DEPRECATED]
 Define a set of page props that should be associated with requests for pages
-via the API.
+via the API. Only applies to Special:EditWatchlist
 
 * Type: `Array`
 * Default: `['pageprops']`
@@ -305,19 +293,6 @@ Sets RSS feed `<link>` being outputted or not while on mobile version.
 
 * Type: `Boolean`
 * Default: `false`
-
-#### $wgMFSearchGenerator
-
-Define the generator that should be used for mobile search.
-
-* Type: `Array`
-* Default:
-```php
-  [
-    'name' => 'prefixsearch',
-    'prefix' => 'ps',
-  ]
-```
 
 #### $wgMFAutodetectMobileView
 

@@ -1,8 +1,8 @@
-const PageList = require( '../PageList' ),
+const PageList = require( './PageList' ),
 	watchstar = require( './watchstar' ),
 	user = mw.user,
-	util = require( '../util' ),
-	Page = require( '../Page' ),
+	util = require( '../mobile.startup/util' ),
+	Page = require( '../mobile.startup/Page' ),
 	WatchstarGateway = require( './WatchstarGateway' );
 
 /**

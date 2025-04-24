@@ -249,6 +249,26 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 				$this->msg( 'mobile-frontend-watchlist-more' )->text() );
 		}
 		$out = $this->getOutput();
+
+		$config = $out->getConfig();
+		$searchParams = $config->get( 'MFSearchAPIParams' );
+		$mfScriptPath = $config->get( 'MFScriptPath' );
+		$pageProps = $config->get( 'MFQueryPropModules' );
+		// Avoid API warnings and allow integration with optional extensions.
+		if ( $mfScriptPath || ExtensionRegistry::getInstance()->isLoaded( 'PageImages' ) ) {
+			$pageProps[] = 'pageimages';
+			$searchParams = array_merge_recursive( $searchParams, [
+				'piprop' => 'thumbnail',
+				'pithumbsize' => MobilePage::SMALL_IMAGE_WIDTH,
+				'pilimit' => 50,
+			] );
+		}
+
+		$out->addJSConfigVars( [
+			'wgMFScriptPath' => $mfScriptPath,
+			'wgMFSearchAPIParams' => $searchParams,
+			'wgMFQueryPropModules' => $pageProps,
+		] );
 		$out->addHTML( $html );
 		$out->addModules( 'mobile.special.watchlist.scripts' );
 		$out->addModuleStyles(

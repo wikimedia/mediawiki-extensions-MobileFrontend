@@ -1,5 +1,5 @@
-const Page = require( '../Page' );
-const util = require( '../util' );
+const Page = require( '../mobile.startup/Page' );
+const util = require( '../mobile.startup/util' );
 
 /**
  * Create a Page object from an API response.

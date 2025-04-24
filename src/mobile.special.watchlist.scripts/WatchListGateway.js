@@ -1,7 +1,7 @@
 const
-	pageJSONParser = require( '../mobile.startup/page/pageJSONParser' ),
+	pageJSONParser = require( './pageJSONParser' ),
 	util = require( '../mobile.startup/util' ),
-	extendSearchParams = require( '../mobile.startup/extendSearchParams' );
+	extendSearchParams = require( './extendSearchParams' );
 
 /**
  * API for interacting with watchlist.

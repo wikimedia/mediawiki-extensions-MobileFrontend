@@ -1,11 +1,11 @@
 const
-	WatchstarGateway = require( '../../../../src/mobile.startup/watchstar/WatchstarGateway' ),
+	WatchstarGateway = require( '../../../src/mobile.special.watchlist.scripts/WatchstarGateway' ),
 	// setup dependencies
-	dom = require( '../../utils/dom' ),
-	jQuery = require( '../../utils/jQuery' ),
+	dom = require( '../utils/dom' ),
+	jQuery = require( '../utils/jQuery' ),
 	sinon = require( 'sinon' ),
-	mediawiki = require( '../../utils/mw' ),
-	util = require( '../../../../src/mobile.startup/util' ),
+	mediawiki = require( '../utils/mw' ),
+	util = require( '../../../src/mobile.startup/util' ),
 	GET_RESPONSE = {
 		batchcomplete: true,
 		query: {

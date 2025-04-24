@@ -1,7 +1,7 @@
-const dom = require( '../../utils/dom' );
-const jQuery = require( '../../utils/jQuery' );
-const mw = require( '../../utils/mw' );
-const oo = require( '../../utils/oo' );
+const dom = require( '../utils/dom' );
+const jQuery = require( '../utils/jQuery' );
+const mw = require( '../utils/mw' );
+const oo = require( '../utils/oo' );
 let Page;
 let pageJSONParser;
 const sinon = require( 'sinon' );
@@ -15,8 +15,8 @@ QUnit.module( 'MobileFrontend pageJSONParser', {
 		jQuery.setUp( sandbox, global );
 		oo.setUp( sandbox, global );
 
-		Page = require( '../../../../src/mobile.startup/Page' );
-		pageJSONParser = require( '../../../../src/mobile.startup/page/pageJSONParser' );
+		Page = require( '../../../src/mobile.startup/Page' );
+		pageJSONParser = require( '../../../src/mobile.special.watchlist.scripts/pageJSONParser' );
 	},
 	afterEach: function () {
 		jQuery.tearDown();

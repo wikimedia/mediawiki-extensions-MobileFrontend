@@ -1,4 +1,4 @@
-const icons = require( '../icons' );
+const icons = require( '../mobile.startup/icons' );
 
 /**
  * A clickable watchstar for logged in users.

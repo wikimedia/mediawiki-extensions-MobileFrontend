@@ -1,5 +1,5 @@
-const util = require( '../util' ),
-	actionParams = require( '../actionParams' );
+const util = require( '../mobile.startup/util' ),
+	actionParams = require( '../mobile.startup/actionParams' );
 
 /**
  * @ignore

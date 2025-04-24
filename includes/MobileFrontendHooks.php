@@ -69,7 +69,6 @@ use MobileFrontend\Api\ApiParseExtender;
 use MobileFrontend\ContentProviders\DefaultContentProvider;
 use MobileFrontend\Features\FeaturesManager;
 use MobileFrontend\Hooks\HookRunner;
-use MobileFrontend\Models\MobilePage;
 use MobileFrontend\Transforms\LazyImageTransform;
 use MobileFrontend\Transforms\MakeSectionsTransform;
 
@@ -537,35 +536,13 @@ class MobileFrontendHooks implements
 	public static function getResourceLoaderMFConfigVars() {
 		$vars = [];
 		$config = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Config' );
-		$mfScriptPath = $config->get( 'MFScriptPath' );
-		$pageProps = $config->get( 'MFQueryPropModules' );
-		$searchParams = $config->get( 'MFSearchAPIParams' );
-		// Avoid API warnings and allow integration with optional extensions.
-		if ( $mfScriptPath || ExtensionRegistry::getInstance()->isLoaded( 'PageImages' ) ) {
-			$pageProps[] = 'pageimages';
-			$searchParams = array_merge_recursive( $searchParams, [
-				'piprop' => 'thumbnail',
-				'pithumbsize' => MobilePage::SMALL_IMAGE_WIDTH,
-				'pilimit' => 50,
-			] );
-		}
 
 		// Get the licensing agreement that is displayed in the uploading interface.
 		$vars += [
-			// extendSearchParams
-			'wgMFSearchAPIParams' => $searchParams,
-			'wgMFQueryPropModules' => $pageProps,
-			// SearchGateway.js
-			'wgMFSearchGenerator' => $config->get( 'MFSearchGenerator' ),
-			// PhotoListGateway.js, SearchGateway.js
-			'wgMFThumbnailSizes' => [
-				'tiny' => MobilePage::TINY_IMAGE_WIDTH,
-				'small' => MobilePage::SMALL_IMAGE_WIDTH,
-			],
 			'wgMFEnableJSConsoleRecruitment' => $config->get( 'MFEnableJSConsoleRecruitment' ),
 			// Browser.js
 			'wgMFDeviceWidthTablet' => self::DEVICE_WIDTH_TABLET,
-			// extendSearchParams.js
+			// src/mobile.editor.overlay
 			'wgMFTrackBlockNotices' => $config->get( 'MFTrackBlockNotices' ),
 		];
 		return $vars;

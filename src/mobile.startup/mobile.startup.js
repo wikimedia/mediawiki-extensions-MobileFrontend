@@ -12,10 +12,6 @@ const OverlayManager = require( './OverlayManager' );
 const View = require( './View' );
 const Overlay = require( './Overlay' );
 const references = require( './references/references' );
-const search = {
-	SearchOverlay: require( './search/SearchOverlay' ),
-	SearchGateway: require( './search/SearchGateway' )
-};
 const promisedView = require( './promisedView' );
 const headers = require( './headers' );
 const Skin = require( './Skin' );
@@ -162,13 +158,6 @@ module.exports = {
 	 * @type module:mobile.startup/references
 	 */
 	references,
-	/**
-	 * Internal for use inside Minerva only.
-	 *
-	 * @memberof module:mobile.startup
-	 * @type module:mobile.startup/search
-	 */
-	search,
 	/**
 	 * Internal for use inside Minerva only.
 	 *

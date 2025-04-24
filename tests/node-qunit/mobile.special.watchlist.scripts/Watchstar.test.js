@@ -4,12 +4,12 @@ let
 	watchstar, watchstarSpy;
 const
 	// setup dependencies
-	dom = require( '../../utils/dom' ),
-	jQuery = require( '../../utils/jQuery' ),
+	dom = require( '../utils/dom' ),
+	jQuery = require( '../utils/jQuery' ),
 	sinon = require( 'sinon' ),
-	mediawiki = require( '../../utils/mw' ),
-	mustache = require( '../../utils/mustache' ),
-	oo = require( '../../utils/oo' );
+	mediawiki = require( '../utils/mw' ),
+	mustache = require( '../utils/mustache' ),
+	oo = require( '../utils/oo' );
 
 /** @type {sinon.SinonSandbox} */ let sandbox;
 
@@ -33,7 +33,7 @@ QUnit.module( 'MobileFrontend Watchstar.js', {
 		);
 
 		// requires OO global
-		watchstar = require( '../../../../src/mobile.startup/watchstar/watchstar' );
+		watchstar = require( '../../../src/mobile.special.watchlist.scripts/watchstar' );
 	},
 	afterEach: function () {
 		jQuery.tearDown();

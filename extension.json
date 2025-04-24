@@ -160,7 +160,6 @@
 				"mediawiki.template.mustache",
 				"mobile.init.styles",
 				"mediawiki.Title",
-				"mobile.pagelist.styles",
 				"mobile.pagesummary.styles",
 				"mediawiki.language",
 				"mediawiki.jqueryMsg",
@@ -207,12 +206,6 @@
 				"mobile-frontend-editor-terms-link",
 				"watch",
 				"unwatch",
-				"mobile-frontend-clear-search",
-				"mobile-frontend-search-content",
-				"mobile-frontend-search-no-results",
-				"mobile-frontend-search-content-no-results",
-				"mobile-frontend-search-feedback-prompt",
-				"mobile-frontend-search-feedback-link-text",
 				"mobile-frontend-language-heading",
 				"mobile-frontend-amc-outreach-intro",
 				"mobile-frontend-amc-outreach-description",
@@ -545,7 +538,7 @@
 			}
 		},
 		"MFScriptPath": {
-			"description": "Reroute search queries to a different host",
+			"description": "Reroute search queries to a different host. Only applies to Special:EditWatchlist.",
 			"value": ""
 		},
 		"MFEnableXAnalyticsLogging": {
@@ -623,20 +616,16 @@
 			"value": []
 		},
 		"MFSearchAPIParams": {
+			"description": "Configuration flag for Special:EditWatchlist.",
 			"value": {
 				"ppprop": "displaytitle"
 			}
 		},
 		"MFQueryPropModules": {
+			"description": "Configuration flag for Special:EditWatchlist.",
 			"value": [
 				"pageprops"
 			]
-		},
-		"MFSearchGenerator": {
-			"value": {
-				"name": "prefixsearch",
-				"prefix": "ps"
-			}
 		},
 		"MFAutodetectMobileView": {
 			"value": true

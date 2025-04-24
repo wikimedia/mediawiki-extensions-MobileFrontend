@@ -1,7 +1,7 @@
 [
 	{
 		"resourceModule": "mobile.startup",
-		"maxSize": "23.6KB"
+		"maxSize": "16.9KB"
 	},
 	{
 		"resourceModule": "mobile.editor.overlay",
@@ -9,7 +9,7 @@
 	},
 	{
 		"resourceModule": "mobile.init",
-		"maxSize": "6.1KB"
+		"maxSize": "5.7KB"
 	},
 	{
 		"resourceModule": "mobile.languages.structured",
@@ -29,7 +29,7 @@
 	},
 	{
 		"resourceModule": "mobile.special.watchlist.scripts",
-		"maxSize": "1.6KB"
+		"maxSize": "3.1KB"
 	},
 	{
 		"resourceModule": "mobile.pagelist.styles",
@@ -45,7 +45,7 @@
 	},
 	{
 		"resourceModule": "mobile.special.styles",
-		"maxSize": "1.0KB"
+		"maxSize": "1.4KB"
 	},
 	{
 		"resourceModule": "mobile.special.mobileoptions.styles",

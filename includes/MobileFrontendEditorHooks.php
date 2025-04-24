@@ -71,7 +71,6 @@ class MobileFrontendEditorHooks implements
 		if ( $mobileContext->shouldDisplayMobileView() ) {
 			// mobile.init
 			$vars['wgMFIsSupportedEditRequest'] = self::isSupportedEditRequest( $out->getContext() );
-			$vars['wgMFScriptPath'] = $config->get( 'MFScriptPath' );
 		}
 	}
 

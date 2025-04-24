@@ -24,7 +24,7 @@ QUnit.module( 'MobileFrontend extendSearchParams.js', {
 				}
 			)
 			.withArgs( 'wgMFQueryPropModules' ).returns( [ 'baz' ] );
-		extendSearchParams = require( '../../../src/mobile.startup/extendSearchParams' );
+		extendSearchParams = require( '../../../src/mobile.special.watchlist.scripts/extendSearchParams.js' );
 	},
 	afterEach: function () {
 		jQuery.tearDown();

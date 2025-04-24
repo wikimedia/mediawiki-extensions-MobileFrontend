@@ -1,11 +1,11 @@
 const
-	util = require( '../../../../src/mobile.startup/util' ),
-	dom = require( '../../utils/dom' ),
-	jQuery = require( '../../utils/jQuery' ),
+	util = require( '../../../src/mobile.startup/util' ),
+	dom = require( '../utils/dom' ),
+	jQuery = require( '../utils/jQuery' ),
 	sinon = require( 'sinon' ),
-	mediawiki = require( '../../utils/mw' ),
-	mustache = require( '../../utils/mustache' ),
-	oo = require( '../../utils/oo' ),
+	mediawiki = require( '../utils/mw' ),
+	mustache = require( '../utils/mustache' ),
+	oo = require( '../utils/oo' ),
 	apiResp = {
 		query: {
 			pages: [ {
@@ -26,7 +26,7 @@ let
 	watchIconName,
 	sandbox;
 
-QUnit.module( 'MobileFrontend mobile.startup/WatchstarPageList', {
+QUnit.module( 'MobileFrontend mobile.special.watchlist.scripts/WatchstarPageList', {
 	beforeEach: function () {
 		sandbox = sinon.createSandbox();
 		dom.setUp( sandbox, global );
@@ -42,9 +42,9 @@ QUnit.module( 'MobileFrontend mobile.startup/WatchstarPageList', {
 		sandbox.stub( global.mw.Title, 'newFromText' ).returns(
 			{ getUrl: function () {} }
 		);
-		WatchstarPageList = require( '../../../../src/mobile.startup/watchstar/WatchstarPageList' );
+		WatchstarPageList = require( '../../../src/mobile.special.watchlist.scripts/WatchstarPageList' );
 		user = mw.user;
-		Icon = require( '../../../../src/mobile.startup/Icon' );
+		Icon = require( '../../../src/mobile.startup/Icon' );
 
 		watchIconName = new Icon( {
 			icon: 'unStar-progressive'
