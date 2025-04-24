@@ -2,7 +2,7 @@
 
 namespace MobileFrontend\Models;
 
-use File;
+use MediaWiki\FileRepo\File\File;
 use MediaWiki\Html\Html;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\RevisionRecord;

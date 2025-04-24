@@ -7,11 +7,11 @@ namespace MobileFrontend\Hooks;
 use MediaWiki\Context\IContextSource;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\Output\OutputPage;
+use MediaWiki\Skin\Skin;
 use MobileContext;
 use MobileFormatter;
 use MobileFrontend\ContentProviders\IContentProvider;
 use MobileFrontend\Features\FeaturesManager;
-use Skin;
 
 /**
  * This is a hook runner class, see docs/Hooks.md in core.

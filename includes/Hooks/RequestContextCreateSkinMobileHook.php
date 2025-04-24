@@ -2,8 +2,8 @@
 
 namespace MobileFrontend\Hooks;
 
+use MediaWiki\Skin\Skin;
 use MobileContext;
-use Skin;
 
 /**
  * This is a hook handler interface, see docs/Hooks.md in core.

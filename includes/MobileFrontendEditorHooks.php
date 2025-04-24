@@ -6,6 +6,7 @@ use MediaWiki\Hook\CustomEditorHook;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Output\Hook\MakeGlobalVariablesScriptHook;
 use MediaWiki\Output\OutputPage;
+use MediaWiki\Page\Article;
 use MediaWiki\Registration\ExtensionRegistry;
 use MediaWiki\ResourceLoader\Context;
 use MediaWiki\User\User;
