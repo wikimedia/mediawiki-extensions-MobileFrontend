@@ -51,7 +51,7 @@
 	"mobile-frontend-fontchanger-option-xlarge": "Daa balaban",
 	"mobile-frontend-generic-404-desc": "Qıdırğanıñız saife tapılmadı.",
 	"mobile-frontend-generic-404-title": "Hata - Saife tapılmadı",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} siziñ kibi adamlar tarafından yapıla.</strong><br />Öz issesini qoşıp yardım etmek içün kiriñiz.",
+	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} siziñ kibi adamlar tarafından yapıla.</strong><br />Öz isseñizni qoşıp yardım etmek içün kiriñiz.",
 	"mobile-frontend-history-404-title": "Anavday bir saife yoq",
 	"mobile-frontend-joined-just-now": "Şimdi {{GENDER:$1|qoşuldı}}",
 	"mobile-frontend-joined-seconds": "{{PLURAL:$2|$2 saniye}} evel {{GENDER:$1|qoşuldı}}",
