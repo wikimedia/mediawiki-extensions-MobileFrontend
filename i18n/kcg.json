@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kambai Akau"
+			"Kambai Akau",
+			"Friday musa"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ke a̱tyunta̱m wu jhyuk di̱n vak tyannwuan jet a̱bwoi ja ku da̱ a̱nia wa bah ($1)",
@@ -162,6 +163,7 @@
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Nyia̱ tyok tazwa shi nvam ga̱lyuut hu a ka mban fwuong nyinyang fang ang hu.",
 	"mw-mf-amc-name": "A̱gba̱ndang sangak",
 	"mw-mf-amc-description": "Sangak á̱zanson ni̱ njhyi a̱ta̱lyen a̱hyohyoot nwuai mi̱ ngwat a̱lyiat, ngwat nkhang, nkyangta̱m a̱tyunta̱m, ma̱ng nkyangta̱m jhyuk jhyang.",
+	"mw-mf-amc-1-label": "Khwuk",
 	"mobile-frontend-mobile-option-amc-learn-more": "Myiam nkyang njhyang",
 	"mobile-frontend-mobile-option-amc-send-feedback": "Ta̱m ma̱ng a̱di̱dam",
 	"mobile-frontend-amc-outreach-intro": "Á̱son Á̱lyiat A̱gba̱ndang Sangak",
