@@ -90,7 +90,9 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/blockMessageDrawer', {
 } );
 
 QUnit.test( 'blockMessageDrawer', async ( assert ) => {
-	const drawer = blockMessageDrawer( {} );
+	const drawer = blockMessageDrawer( {
+		parsedReason: util.Deferred().resolve( '' ).promise()
+	} );
 
 	// Assert the factory method returns a Drawer with listeners set-up
 	// for the show and hide events that reposition the popup.

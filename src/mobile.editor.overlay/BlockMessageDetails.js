@@ -1,5 +1,3 @@
-/* global $ */
-
 'use strict';
 const mobile = require( 'mobile.startup' );
 const Button = mobile.Button,
@@ -7,13 +5,23 @@ const Button = mobile.Button,
 	Icon = mobile.Icon,
 	util = mobile.util;
 
-const blockMessageUtils = {
+/**
+ * Renders a block message details.
+ *
+ * @extends module:mobile.startup/View
+ * @private
+ */
+class BlockMessageDetails extends View {
+	/** @inheritdoc */
+	get isTemplateMode() {
+		return true;
+	}
+
 	/**
-	 * @param {Object} options
-	 * @return {BlockMessageOptions}
+	 * @inheritdoc
 	 */
-	makeTemplateOptions( options ) {
-		return Object.assign( {}, options, {
+	get defaults() {
+		return {
 			createDetailsAnchorHref: () => ( blockId, render ) => mw.util.getUrl(
 				'Special:BlockList', { wpTarget: '#' + render( blockId ) }
 			),
@@ -23,7 +31,7 @@ const blockMessageUtils = {
 				if ( mw.user.isAnon() ) {
 					msgKey += '-ip';
 				}
-				if ( options.partial ) {
+				if ( this.partial ) {
 					msgKey += '-partial';
 				}
 				// The following messages can be passed here:
@@ -35,18 +43,18 @@ const blockMessageUtils = {
 			},
 			createBody: () => {
 				let msgKey = '';
-				if ( mw.user.isAnon() && options.anonOnly ) {
+				if ( mw.user.isAnon() && this.anonOnly ) {
 					msgKey = 'mobile-frontend-editor-blocked-drawer-body';
-					if ( options.noCreateAccount ) {
+					if ( this.noCreateAccount ) {
 						msgKey += '-login';
 					} else {
 						msgKey += '-login-createaccount';
 					}
-					if ( options.partial ) {
+					if ( this.partial ) {
 						msgKey += '-partial';
 					}
 				} else {
-					if ( options.partial ) {
+					if ( this.partial ) {
 						msgKey = 'mobile-frontend-editor-blocked-drawer-body-partial';
 					}
 				}
@@ -66,27 +74,26 @@ const blockMessageUtils = {
 				mw.user.options.get( 'gender' )
 			),
 			expiryHeader: mw.msg( 'mobile-frontend-editor-blocked-drawer-expiry-header' )
-		} );
-	},
+		};
+	}
 
 	/**
 	 * Configure the call to action depending on the type of block.
 	 *
-	 * @param {BlockMessageOptions} options
-	 * @return {Object} Configuration options for Button element
+	 * @return {Object} Configuration options
 	 */
-	getButtonConfig( options ) {
+	getButtonConfig() {
 		let cta = true;
 		const config = {
 				progressive: true
 			},
 			wiki = mw.config.get( 'wgDBname' );
 
-		if ( mw.user.isAnon() && options.anonOnly ) {
+		if ( mw.user.isAnon() && this.options.anonOnly ) {
 			// The user can avoid the block by logging in
 			config.label = mw.msg( 'mobile-frontend-editor-blocked-drawer-action-login' );
 			config.href = new mw.Title( 'Special:UserLogin' ).getUrl();
-		} else if ( options.partial ) {
+		} else if ( this.options.partial ) {
 			// The user can avoid the block by editing a different page
 			config.label = mw.msg( 'mobile-frontend-editor-blocked-drawer-action-randompage' );
 			config.href = new mw.Title( 'Special:Random' ).getUrl();
@@ -119,38 +126,31 @@ const blockMessageUtils = {
 		}
 
 		return config;
-	},
+	}
 
 	/**
-	 * Creates the block message details element.
-	 *
-	 * @param {Element} child
-	 * @param {BlockMessageOptions} options
-	 * @return {Element[]}
+	 * @inheritdoc
 	 */
-	makeChildren( child, options ) {
-		const $child = $( child );
-		$child.find( '.block-message-buttons' ).prepend(
-			new Button( this.getButtonConfig( options ) ).$el
+	postRender() {
+		this.$el.find( '.block-message-buttons' ).prepend(
+			new Button( this.getButtonConfig() ).$el
 		);
-		$child.find( '.block-message-icon' ).prepend(
+		this.$el.find( '.block-message-icon' ).prepend(
 			( new Icon( {
 				icon: 'block-destructive'
 			} ) ).$el
 		);
-
-		if ( options.parsedReason instanceof Promise ) {
-			options.parsedReason.then( ( htmlReason ) => {
-				$child.find( '.block-message-reason div' ).html( htmlReason );
-			} );
-		}
-
-		// Move all children
-		return Array.from( $child.children() );
+		this.options.parsedReason.then( ( htmlReason ) => {
+			this.$el.find( '.block-message-reason div' ).html( htmlReason );
+		} );
 	}
-};
 
-const template = util.template( `<div>
+	/**
+	 * @inheritdoc
+	 */
+	get template() {
+		return util.template( `
+<div class="block-message block-message-container">
   <div class="block-message-icon"></div>
   <div class="block-message-info">
     <div class="block-message-item block-message-title">
@@ -204,24 +204,7 @@ const template = util.template( `<div>
   <div class="block-message-buttons">
   </div>
 </div>` );
-
-/**
- * @param {BlockMessageOptions} options
- * @return {View}
- */
-module.exports = {
-	factory: ( options ) => {
-		const blockMessageOptions = blockMessageUtils.makeTemplateOptions( options );
-		const view = template.render( blockMessageOptions );
-
-		return View.make(
-			Object.assign(
-				options,
-				{
-					className: 'block-message block-message-container'
-				}
-			),
-			blockMessageUtils.makeChildren( view, blockMessageOptions )
-		);
 	}
-};
+}
+
+module.exports = BlockMessageDetails;
