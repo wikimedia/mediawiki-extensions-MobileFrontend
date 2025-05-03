@@ -1,4 +1,4 @@
-const blockMessageDetails = require( './BlockMessageDetails.js' );
+const BlockMessageDetails = require( './BlockMessageDetails.js' );
 const mobile = require( 'mobile.startup' );
 const Drawer = mobile.Drawer;
 
@@ -86,7 +86,7 @@ module.exports = function blockMessageDrawer( props ) {
 			}
 		},
 		children: [
-			( blockMessageDetails.factory( props ) ).$el
+			( new BlockMessageDetails( props ) ).$el
 		]
 	} );
 
