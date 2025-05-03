@@ -88,7 +88,7 @@ function enterText( searcher, text ) {
 
 QUnit.module( 'MobileFrontend LanguageSearcher.js', {
 	beforeEach: function () {
-		sandbox = sinon.sandbox.create();
+		sandbox = sinon.createSandbox();
 		dom.setUp( sandbox, global );
 		jQuery.setUp( sandbox, global );
 		oo.setUp( sandbox, global );

@@ -43,7 +43,7 @@ let
 
 QUnit.module( 'MobileFrontend: WatchstarGateway.js', {
 	beforeEach: function () {
-		sandbox = sinon.sandbox.create();
+		sandbox = sinon.createSandbox();
 		dom.setUp( sandbox, global );
 		jQuery.setUp( sandbox, global );
 		mediawiki.setUp( sandbox, global );

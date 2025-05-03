@@ -15,7 +15,7 @@ const
 
 QUnit.module( 'MobileFrontend Watchstar.js', {
 	beforeEach: function () {
-		sandbox = sinon.sandbox.create();
+		sandbox = sinon.createSandbox();
 		const requireStub = sandbox.stub();
 		/* eslint-disable-next-line camelcase */
 		global.__non_webpack_require__ = requireStub;

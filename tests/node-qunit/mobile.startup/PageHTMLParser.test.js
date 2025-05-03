@@ -23,7 +23,7 @@ QUnit.module( 'MobileFrontend PageHTMLParser.js', {
 		if ( fixture ) {
 			fixture.remove();
 		}
-		sandbox = sinon.sandbox.create();
+		sandbox = sinon.createSandbox();
 		dom.setUp( sandbox, global );
 		mw.setUp( sandbox, global );
 		mustache.setUp( sandbox, global );

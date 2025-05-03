@@ -10,7 +10,7 @@ const
 
 QUnit.module( 'MobileFrontend util.js', {
 	beforeEach: function () {
-		sandbox = sinon.sandbox.create();
+		sandbox = sinon.createSandbox();
 		dom.setUp( sandbox, global );
 		mw.setUp( sandbox, global );
 		jQuery.setUp( sandbox, global );

@@ -15,7 +15,7 @@ let
 
 QUnit.module( 'MobileFrontend Drawer.js', {
 	beforeEach: function () {
-		sandbox = sinon.sandbox.create();
+		sandbox = sinon.createSandbox();
 
 		// Set up required by all Views.
 		dom.setUp( sandbox, global );

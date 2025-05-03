@@ -6,7 +6,7 @@ const
 
 QUnit.module( 'MobileFrontend mobile.editor.overlay/BlockMessageDetails', {
 	beforeEach: function () {
-		this.sandbox = sinon.sandbox.create();
+		this.sandbox = sinon.createSandbox();
 		dom.setUp( this.sandbox, global );
 		jQuery.setUp( this.sandbox, global );
 		this.BlockMessageDetails = require( '../../../src/mobile.editor.overlay/BlockMessageDetails' );

@@ -16,7 +16,7 @@ let
 
 QUnit.module( 'MobileFrontend mobile.startup/OverlayManager', {
 	beforeEach: function () {
-		sandbox = sinon.sandbox.create();
+		sandbox = sinon.createSandbox();
 		dom.setUp( sandbox, global );
 		oo.setUp( sandbox, global );
 		jQuery.setUp( sandbox, global );

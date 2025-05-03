@@ -7,7 +7,7 @@ let
 
 QUnit.module( 'MobileFrontend ScrollEndEventEmitter.js', {
 	beforeEach: function () {
-		sandbox = sinon.sandbox.create();
+		sandbox = sinon.createSandbox();
 		oo.setUp( sandbox, global );
 
 		ScrollEndEventEmitter = require( '../../../src/mobile.special.watchlist.scripts/ScrollEndEventEmitter' );

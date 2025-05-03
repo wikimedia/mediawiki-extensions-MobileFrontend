@@ -12,7 +12,7 @@ let
 QUnit.module( 'MobileFrontend Browser.js', {
 	beforeEach: function () {
 		let tmpDOM;
-		sandbox = sinon.sandbox.create();
+		sandbox = sinon.createSandbox();
 		dom.setUp( sandbox, global );
 		jQuery.setUp( sandbox, global );
 		mediawiki.setUp( sandbox, global );

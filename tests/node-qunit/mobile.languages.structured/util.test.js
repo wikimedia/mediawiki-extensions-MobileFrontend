@@ -180,7 +180,7 @@ QUnit.module( 'MobileFrontend mobile.languages.structured/util.test.js', {
 			]
 		};
 
-		sandbox = sinon.sandbox.create();
+		sandbox = sinon.createSandbox();
 		dom.setUp( sandbox, global );
 		jQuery.setUp( sandbox, global );
 		mediaWiki.setUp( sandbox, global );

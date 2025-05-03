@@ -7,7 +7,7 @@ const
 
 QUnit.module( 'MobileFrontend extendSearchParams.js', {
 	beforeEach: function () {
-		sandbox = sinon.sandbox.create();
+		sandbox = sinon.createSandbox();
 		mediaWiki.setUp( sandbox, global );
 		dom.setUp( sandbox, global );
 		jQuery.setUp( sandbox, global );

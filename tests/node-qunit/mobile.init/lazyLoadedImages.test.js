@@ -5,7 +5,7 @@ let sandbox, lazyLoadedImages;
 
 QUnit.module( 'MobileFrontend lazyLoadedImages', {
 	beforeEach: function () {
-		sandbox = sinon.sandbox.create();
+		sandbox = sinon.createSandbox();
 		dom.setUp( sandbox, global );
 		mediaWiki.setUp( sandbox, global );
 		lazyLoadedImages = require( '../../../src/mobile.init/lazyLoadedImages' );

@@ -13,7 +13,7 @@ let
 
 QUnit.module( 'MobileFrontend Page.js', {
 	beforeEach: function () {
-		sandbox = sinon.sandbox.create();
+		sandbox = sinon.createSandbox();
 		dom.setUp( sandbox, global );
 		mw.setUp( sandbox, global );
 		mustache.setUp( sandbox, global );

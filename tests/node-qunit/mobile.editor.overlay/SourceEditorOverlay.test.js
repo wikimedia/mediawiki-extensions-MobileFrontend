@@ -14,7 +14,7 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/SourceEditorOverlay', {
 	beforeEach: function () {
 		/* eslint-disable-next-line camelcase */
 		global.__non_webpack_require__ = require( '../webpackRequire.stub' );
-		sandbox = sinon.sandbox.create();
+		sandbox = sinon.createSandbox();
 		dom.setUp( sandbox, global );
 		jQuery.setUp( sandbox, global );
 		mediaWiki.setUp( sandbox, global );

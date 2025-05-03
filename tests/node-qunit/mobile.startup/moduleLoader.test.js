@@ -7,7 +7,7 @@ const
 
 QUnit.module( 'MobileFrontend ModuleLoader', {
 	beforeEach: function () {
-		sandbox = sinon.sandbox.create();
+		sandbox = sinon.createSandbox();
 		oo.setUp( sandbox, global );
 
 		ModuleLoader = require( '../../../src/mobile.startup/moduleLoader' );

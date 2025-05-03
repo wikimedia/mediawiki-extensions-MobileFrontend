@@ -9,7 +9,7 @@ let sandbox;
 
 QUnit.module( 'MobileFrontend pageJSONParser', {
 	beforeEach: function () {
-		sandbox = sinon.sandbox.create();
+		sandbox = sinon.createSandbox();
 		dom.setUp( sandbox, global );
 		mw.setUp( sandbox, global );
 		jQuery.setUp( sandbox, global );

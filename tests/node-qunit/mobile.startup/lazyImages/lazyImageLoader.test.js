@@ -9,7 +9,7 @@ let
 
 QUnit.module( 'MobileFrontend lazyImageLoader.js', {
 	beforeEach: function () {
-		sandbox = sinon.sandbox.create();
+		sandbox = sinon.createSandbox();
 		dom.setUp( sandbox, global );
 		jQuery.setUp( sandbox, global ); // Needed for Deferreds.
 		mediaWiki.setUp( sandbox, global ); // util.Deferred() uses mw.log().

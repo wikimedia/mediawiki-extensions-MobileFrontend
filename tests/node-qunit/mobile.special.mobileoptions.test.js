@@ -8,7 +8,7 @@ const
 let mobileoptions, sandbox;
 QUnit.module( 'mobile.special.mobileoptions.scripts', {
 	beforeEach: function () {
-		sandbox = sinon.sandbox.create();
+		sandbox = sinon.createSandbox();
 		dom.setUp( sandbox, global );
 		jQuery.setUp( sandbox, global );
 		oo.setUp( sandbox, global );

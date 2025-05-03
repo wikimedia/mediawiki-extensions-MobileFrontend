@@ -12,7 +12,7 @@ const
 
 QUnit.module( 'MobileFrontend ReferencesHtmlScraperGateway.test.js', {
 	beforeEach: function () {
-		sandbox = sinon.sandbox.create();
+		sandbox = sinon.createSandbox();
 		dom.setUp( sandbox, global );
 		jQuery.setUp( sandbox, global );
 		oo.setUp( sandbox, global );

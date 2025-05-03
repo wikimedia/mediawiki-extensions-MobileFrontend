@@ -9,7 +9,7 @@ let
 
 QUnit.module( 'MobileFrontend mobile.editor.overlay/identifyLeadParagraph', {
 	beforeEach: function () {
-		sandbox = sinon.sandbox.create();
+		sandbox = sinon.createSandbox();
 		dom.setUp( sandbox, global );
 		jQuery.setUp( sandbox, global );
 		identifyLeadParagraph = require( '../../../src/mobile.editor.overlay/identifyLeadParagraph' );

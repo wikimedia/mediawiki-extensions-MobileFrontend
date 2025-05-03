@@ -8,7 +8,7 @@ let browser;
 
 QUnit.module( 'MobileFrontend sectionCollapsing.js', {
 	beforeEach: function () {
-		sandbox = sinon.sandbox.create();
+		sandbox = sinon.createSandbox();
 		dom.setUp( sandbox, global );
 		jQuery.setUp( sandbox, global );
 		sectionCollapsing = require( '../../../src/mobile.startup/sectionCollapsing' );

@@ -29,7 +29,7 @@ QUnit.module( 'MobileFrontend imports', {
 					return {};
 			}
 		};
-		sandbox = sinon.sandbox.create();
+		sandbox = sinon.createSandbox();
 		dom.setUp( sandbox, global );
 		jQuery.setUp( sandbox, global );
 		oo.setUp( sandbox, global );

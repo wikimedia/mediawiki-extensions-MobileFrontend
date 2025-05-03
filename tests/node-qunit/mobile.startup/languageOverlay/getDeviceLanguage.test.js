@@ -6,7 +6,7 @@ const
 
 QUnit.module( 'MobileFrontend getDeviceLanguage', {
 	beforeEach: function () {
-		sandbox = sinon.sandbox.create();
+		sandbox = sinon.createSandbox();
 	},
 	afterEach: function () {
 		sandbox.restore();
