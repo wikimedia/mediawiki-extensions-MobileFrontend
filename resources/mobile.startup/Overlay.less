@@ -2,18 +2,16 @@
 @import '../../mobile.less/mobile.variables.less';
 @import '../../mobile.less/mobile.mixins.less';
 
-/* stylelint-disable no-descending-specificity */
-
 .overlay-enabled {
-	// stylelint-disable-next-line selector-max-id
+	/* stylelint-disable-next-line selector-max-id */
 	#mw-mf-page-center {
 		overflow: hidden;
 		// FIXME: override old overlay styles, remove when old overlays gone
 		display: block;
 	}
 
-	// stylelint-disable-next-line selector-max-id
 	.overlay,
+	/* stylelint-disable-next-line selector-max-id */
 	#mw-mf-page-center {
 		// use height instead of bottom 0 so that overlay expands when there's
 		// more content, don't use min-height because of
