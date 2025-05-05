@@ -15,7 +15,7 @@
 			"Чаховіч Уладзіслаў"
 		]
 	},
-	"abusefilter-edit-builder-vars-user-mobile": "Ці рэдагуе ўдзельнік праз мабільны інтэрфейс",
+	"abusefilter-edit-builder-vars-user-mobile": "Ці рэдагуе ўдзельнік праз мабільны інтэрфейс ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "Увядзіце код пацвярджэння",
 	"mobile-frontend-clear-search": "Ачысціць",
 	"mobile-frontend-copyright": "Матэрыял даступны на ўмовах $1, калі не пазначана іншае.",
@@ -75,10 +75,10 @@
 	"mobile-frontend-editor-loading": "Загрузка рэдактара…",
 	"mf-expand-sections-description": "Прадвызначана, заўсёды разгортваць раздзелы ўсіх старонак.",
 	"mf-expand-sections-name": "Разгортваць усе раздзелы",
-	"mf-font-size-name": "Памер шрыфту",
+	"mf-font-size-name": "Тэкст",
 	"mf-font-size-description": "Наладзіць памер шрыфту для лепшай чытальнасці",
-	"mf-font-size-small-label": "Дробны",
-	"mf-font-size-regular-label": "Звычайны",
+	"mf-font-size-small-label": "Стандартны",
+	"mf-font-size-regular-label": "Сярэдні",
 	"mf-font-size-large-label": "Вялікі",
 	"mobile-frontend-generic-404-desc": "Старонку, якую вы шукаеце, не было магчыма знайсці.",
 	"mobile-frontend-generic-404-title": "Памылка: старонка не знойдзена",
