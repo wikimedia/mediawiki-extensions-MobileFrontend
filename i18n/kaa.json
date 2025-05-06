@@ -2,13 +2,17 @@
 	"@metadata": {
 		"authors": [
 			"Ajiniyaz Nurniyazov",
-			"Nurlan"
+			"Nurlan",
+			"Janabaevazizbek"
 		]
 	},
-	"abusefilter-edit-builder-vars-user-mobile": "Paydalanıwshı mobil interfeys arqalı redaktorlaw ámelge asıra aladıma yamasa kerisinsheme?",
+	"abusefilter-edit-builder-vars-user-mobile": "Paydalanıwshı mobil interfeys arqalı redaktorlaw ámelge asıra aladı ma yamasa kerisinshe me?",
 	"mobile-frontend-account-create-captcha-placeholder": "Tastıyıqlaw kodın jiberiw",
 	"mobile-frontend-changeslist-nocomment": "redaktorlaw anıqlaması joq",
+	"mobile-frontend-clear-search": "Tazalaw",
 	"mobile-frontend-copyright": "Maǵlıwmat $1 litsenziyası boyınsha alınǵan (eger basqa shártler kórsetilmese).",
+	"mobile-frontend-desc": "MediaWikidiń mobil kórinisin jaqsılawǵa járdem beredi",
+	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}} saytın rawajlandırıwǵa úles qosıń.</strong><br />Redaktorlaw ushın kiriń.",
 	"mobile-frontend-editor-anon": "Akkauntqa kirmesten redaktorlaw",
 	"mobile-frontend-editor-anonwarning": "<strong>Dıqqat:</strong> Siz sistemaǵa kirmegensiz. Sol ushın siz tárepińizden orınlanǵan hárqanday redaktorlaw siziń IP adresińizge jazıladı hám ol hámmege kórinedi. Eger siz <strong>[$1 sistemaǵa kirseńiz]</strong> yamasa <strong>[$2 akkaunt jaratsańız]</strong>, redaktorlaw háreketlerińiz paydalanıwshı atıńızǵa jazıladı hám sizde basqa da artıqmashlıqlar payda boladı.",
 	"mobile-frontend-editor-editing-page": "<span>$1 <strong>beti redaktorlanıp atır</strong> </span>",
@@ -17,6 +21,9 @@
 	"mobile-frontend-editor-publish": "Járiyalaw",
 	"mobile-frontend-editor-summary-placeholder": "Mısalı: Qáteni dúzettim, maǵlıwmat qostım",
 	"mobile-frontend-editor-summary": "Qısqasha túsindirme:",
+	"mf-font-size-name": "Tekst",
+	"mf-font-size-description": "Jaqsıraq oqıw ushın tekst ólshemin sazlaw.",
+	"mf-font-size-regular-label": "Ortasha",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} siz sıyaqlı adamlar tárepinen bayıtıladı.</strong><br />Úles qosıw ushın sistemaǵa kiriń.",
 	"mobile-frontend-joined-seconds": "{{PLURAL:$2|$2 sekund}} burın {{GENDER:$1|qosılǵan}}",
 	"mobile-frontend-joined-hours": "{{PLURAL:$2|$2 saat|$2 saat}} burın {{GENDER:$1|qosıldı}}",
