@@ -30,6 +30,7 @@
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Usınıs etilgen tiller",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Basqa tiller",
 	"mobile-frontend-last-modified-date": "Aqırǵı márte ózgertilgen waqıt: $1, $2",
+	"mobile-frontend-last-modified-with-user-days": "{{PLURAL:$3|$3 kún}} aldın {{PLURAL:$5|[$6 $2]|0=anonim paydalanıwshı}} [$4 aqırǵı ret {{GENDER:$1|redaktorladı}}]",
 	"mobile-frontend-last-modified-with-user-hours": "{{PLURAL:$5|[$6 $2]|0=anonim paydalanıwshı}} [{{PLURAL:$3|$3 saat|$3 saat}} burın $4 sońǵı ret {{GENDER:$1|ózgertti}}]",
 	"mobile-frontend-last-modified-with-user-months": "[$4 Eń sońǵı márte {{PLURAL:$3|$3 ay}} burın] {{PLURAL:$5|[$6 $2]|0=anonim paydalanıwshı}} {{GENDER:$1|redaktorladı}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 Sońǵı {{GENDER:$1|redaktorlaw}} {{PLURAL:$3|$3 jıl}} aldın] {{PLURAL:$5|[$6 $2]|0=anonim paydalanıwshı}} tárepinen ámelge asırıldı",
@@ -46,5 +47,6 @@
 	"tag-mobile_edit-description": "Redaktorlaw mobil qurılmada orınlanǵan (saytta yamasa qosımshada)",
 	"tag-advanced_mobile_edit": "Keńeytilgen mobil redaktorlaw",
 	"tag-mobile_web_edit": "Mobil versiya",
-	"tag-mobile_web_edit-description": "Redaktorlaw mobil versiyada orınlanǵan"
+	"tag-mobile_web_edit-description": "Redaktorlaw mobil versiyada orınlanǵan",
+	"mw-mf-amc-name": "Keńeytilgen rejim"
 }
