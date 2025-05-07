@@ -2,13 +2,16 @@
 	"@metadata": {
 		"authors": [
 			"Ajiniyaz Nurniyazov",
-			"Nurlan"
+			"Nurlan",
+			"Janabaevazizbek"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Paydalanıwshı mobil interfeys arqalı redaktorlaw ámelge asıra aladıma yamasa kerisinsheme?",
 	"mobile-frontend-account-create-captcha-placeholder": "Tastıyıqlaw kodın jiberiw",
 	"mobile-frontend-changeslist-nocomment": "redaktorlaw anıqlaması joq",
+	"mobile-frontend-clear-search": "Tazalaw",
 	"mobile-frontend-copyright": "Maǵlıwmat $1 litsenziyası boyınsha alınǵan (eger basqa shártler kórsetilmese).",
+	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}} saytın rawajlandırıwǵa úles qosıń.</strong><br />Redaktorlaw ushın kiriń.",
 	"mobile-frontend-editor-anon": "Akkauntqa kirmesten redaktorlaw",
 	"mobile-frontend-editor-anonwarning": "<strong>Dıqqat:</strong> Siz sistemaǵa kirmegensiz. Sol ushın siz tárepińizden orınlanǵan hárqanday redaktorlaw siziń IP adresińizge jazıladı hám ol hámmege kórinedi. Eger siz <strong>[$1 sistemaǵa kirseńiz]</strong> yamasa <strong>[$2 akkaunt jaratsańız]</strong>, redaktorlaw háreketlerińiz paydalanıwshı atıńızǵa jazıladı hám sizde basqa da artıqmashlıqlar payda boladı.",
 	"mobile-frontend-editor-editing-page": "<span>$1 <strong>beti redaktorlanıp atır</strong> </span>",
@@ -24,6 +27,7 @@
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Usınıs etilgen tiller",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Basqa tiller",
 	"mobile-frontend-last-modified-date": "Aqırǵı márte ózgertilgen waqıt: $1, $2",
+	"mobile-frontend-last-modified-with-user-days": "{{PLURAL:$3|$3 kún}} aldın {{PLURAL:$5|[$6 $2]|0=anonim paydalanıwshı}} [$4 aqırǵı ret {{GENDER:$1|redaktorladı}}]",
 	"mobile-frontend-last-modified-with-user-hours": "{{PLURAL:$5|[$6 $2]|0=anonim paydalanıwshı}} [{{PLURAL:$3|$3 saat|$3 saat}} burın $4 sońǵı ret {{GENDER:$1|ózgertti}}]",
 	"mobile-frontend-last-modified-with-user-months": "[$4 Eń sońǵı márte {{PLURAL:$3|$3 ay}} burın] {{PLURAL:$5|[$6 $2]|0=anonim paydalanıwshı}} {{GENDER:$1|redaktorladı}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 Sońǵı {{GENDER:$1|redaktorlaw}} {{PLURAL:$3|$3 jıl}} aldın] {{PLURAL:$5|[$6 $2]|0=anonim paydalanıwshı}} tárepinen ámelge asırıldı",
