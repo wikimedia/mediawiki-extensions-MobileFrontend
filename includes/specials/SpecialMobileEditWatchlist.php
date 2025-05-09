@@ -1,11 +1,14 @@
 <?php
 
+use MediaWiki\FileRepo\RepoGroup;
+use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\Html\Html;
 use MediaWiki\Language\Language;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\Specials\SpecialEditWatchlist;
 use MediaWiki\Title\Title;
+use MediaWiki\Watchlist\WatchedItemStoreInterface;
 use MobileFrontend\Hooks\HookRunner;
 use MobileFrontend\Models\MobileCollection;
 use MobileFrontend\Models\MobilePage;
@@ -24,10 +27,18 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 	/** @var string The name of the title to begin listing the watchlist from */
 	protected $offsetTitle;
 
-	public function __construct() {
+	private HookContainer $hookContainer;
+	private RepoGroup $repoGroup;
+
+	public function __construct(
+		HookContainer $hookContainer,
+		RepoGroup $repoGroup,
+		WatchedItemStoreInterface $watchStoreItem
+	) {
+		$this->hookContainer = $hookContainer;
+		$this->repoGroup = $repoGroup;
 		$req = $this->getRequest();
 		$this->offsetTitle = $req->getVal( 'from', '' );
-		$watchStoreItem = MediaWikiServices::getInstance()->getWatchedItemStore();
 		parent::__construct( $watchStoreItem );
 	}
 
@@ -211,8 +222,7 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 
 		// Begin rendering of watchlist.
 		$watchlist = [ $ns => $allPages ];
-		$services = MediaWikiServices::getInstance();
-		( new HookRunner( $services->getHookContainer() ) )
+		( new HookRunner( $this->hookContainer ) )
 			->onSpecialMobileEditWatchlist__images(
 				$this->getContext(), $watchlist, $images
 			);
@@ -220,12 +230,11 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 		// create list of pages
 		$mobilePages = new MobileCollection();
 		$pageKeys = array_keys( $watchlist[$ns] );
-		$repoGroup = $services->getRepoGroup();
 		foreach ( $pageKeys as $dbkey ) {
 			if ( isset( $images[$ns][$dbkey] ) ) {
 				$page = new MobilePage(
 					Title::makeTitleSafe( $ns, $dbkey ),
-					$repoGroup->findFile( $images[$ns][$dbkey] )
+					$this->repoGroup->findFile( $images[$ns][$dbkey] )
 				);
 			} else {
 				$page = new MobilePage( Title::makeTitleSafe( $ns, $dbkey ) );

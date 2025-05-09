@@ -636,7 +636,14 @@ class MobileFrontendHooks implements
 			if (
 				!$this->featuresManager->isFeatureAvailableForCurrentUser( 'MFUseDesktopSpecialEditWatchlistPage' )
 			) {
-				$list['EditWatchlist'] = SpecialMobileEditWatchlist::class;
+				$list['EditWatchlist'] = [
+					'class' => SpecialMobileEditWatchlist::class,
+					'services' => [
+						'HookContainer',
+						'RepoGroup',
+						'WatchedItemStore',
+					],
+				];
 			}
 		}
 	}
