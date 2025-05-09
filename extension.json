@@ -44,7 +44,14 @@
 		"Uploads": "SpecialUploads"
 	},
 	"APIModules": {
-		"webapp-manifest": "MobileFrontend\\Api\\ApiWebappManifest"
+		"webapp-manifest": {
+			"class": "MobileFrontend\\Api\\ApiWebappManifest",
+			"services": [
+				"ContentLanguage",
+				"HttpRequestFactory",
+				"UrlUtils"
+			]
+		}
 	},
 	"MessagesDirs": {
 		"MobileFrontend": [
