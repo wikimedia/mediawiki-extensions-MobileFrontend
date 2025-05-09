@@ -4,7 +4,7 @@ use MediaWiki\FileRepo\RepoGroup;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\Html\Html;
 use MediaWiki\Language\Language;
-use MediaWiki\MediaWikiServices;
+use MediaWiki\MainConfigNames;
 use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\Specials\SpecialEditWatchlist;
 use MediaWiki\Title\Title;
@@ -152,11 +152,10 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 	 * @param Language $lang The language of the current mode
 	 * @return string
 	 */
-	public static function getEmptyListHtml( $feed, $lang ) {
+	private function getEmptyListHtml( $feed, $lang ) {
 		$dir = $lang->isRTL() ? 'rtl' : 'ltr';
 
-		$config = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Config' );
-		$imgUrl = $config->get( 'ExtensionAssetsPath' ) .
+		$imgUrl = $this->getConfig()->get( MainConfigNames::ExtensionAssetsPath ) .
 			"/MobileFrontend/images/emptywatchlist-page-actions-$dir.png";
 
 		if ( $feed ) {
@@ -243,7 +242,7 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 		}
 
 		if ( $mobilePages->isEmpty() ) {
-			$html = self::getEmptyListHtml( false, $this->getLanguage() );
+			$html = $this->getEmptyListHtml( false, $this->getLanguage() );
 		} else {
 			$html = $this->getViewHtml( $mobilePages );
 		}
