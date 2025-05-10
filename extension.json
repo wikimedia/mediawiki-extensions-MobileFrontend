@@ -493,6 +493,7 @@
 				"HookContainer",
 				"MobileFrontend.Config",
 				"SkinFactory",
+				"UrlUtils",
 				"UserOptionsLookup",
 				"WatchlistManager",
 				"MobileFrontend.Context",
