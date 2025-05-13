@@ -128,11 +128,13 @@ class MobileFrontendHooks implements
 	private MobileContext $mobileContext;
 	private FeaturesManager $featuresManager;
 	private ?GadgetRepo $gadgetRepo;
+	private MobileFrontendSkinHooks $skinHooks;
 
 	public function __construct(
 		HookContainer $hookContainer,
 		Config $config,
 		SkinFactory $skinFactory,
+		UrlUtils $urlUtils,
 		UserOptionsLookup $userOptionsLookup,
 		WatchlistManager $watchlistManager,
 		MobileContext $mobileContext,
@@ -147,6 +149,7 @@ class MobileFrontendHooks implements
 		$this->mobileContext = $mobileContext;
 		$this->featuresManager = $featuresManager;
 		$this->gadgetRepo = $gadgetRepo;
+		$this->skinHooks = new MobileFrontendSkinHooks( $urlUtils );
 	}
 
 	/**
@@ -227,15 +230,15 @@ class MobileFrontendHooks implements
 		$context = $this->mobileContext;
 		if ( $key === 'places' ) {
 			if ( $context->shouldDisplayMobileView() ) {
-				$terms = MobileFrontendSkinHooks::getTermsLink( $skin );
+				$terms = $this->skinHooks->getTermsLink( $skin );
 				if ( $terms ) {
 					$footerLinks['terms-use'] = $terms;
 				}
-				$footerLinks['desktop-toggle'] = MobileFrontendSkinHooks::getDesktopViewLink( $skin, $context );
+				$footerLinks['desktop-toggle'] = $this->skinHooks->getDesktopViewLink( $skin, $context );
 			} else {
 				// If desktop site append a mobile view link
 				$footerLinks['mobileview'] =
-					MobileFrontendSkinHooks::getMobileViewLink( $skin, $context );
+					$this->skinHooks->getMobileViewLink( $skin, $context );
 			}
 		}
 	}
