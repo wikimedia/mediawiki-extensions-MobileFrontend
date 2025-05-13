@@ -523,8 +523,6 @@ class MobileFrontendHooks implements
 
 		// Get the licensing agreement that is displayed in the uploading interface.
 		$vars += [
-			// Page.js
-			'wgMFMobileFormatterHeadings' => $config->get( 'MFMobileFormatterOptions' )['headings'],
 			// extendSearchParams
 			'wgMFSearchAPIParams' => $searchParams,
 			'wgMFQueryPropModules' => $pageProps,
