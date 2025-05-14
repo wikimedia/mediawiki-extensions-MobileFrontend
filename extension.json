@@ -637,9 +637,6 @@
 				"prefix": "ps"
 			}
 		},
-		"MFMinCachedPageSize": {
-			"value": 65536
-		},
 		"MFAutodetectMobileView": {
 			"value": true
 		},

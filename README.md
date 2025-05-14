@@ -319,14 +319,6 @@ Define the generator that should be used for mobile search.
   ]
 ```
 
-#### $wgMFMinCachedPageSize
-
-Pages with smaller parsed HTML size are not cached.  Set to 0 to cache
-everything or to some large value to disable caching completely.
-
-* Type: `Integer`
-* Default: `65536`
-
 #### $wgMFAutodetectMobileView
 
 Set this to true to automatically show mobile view depending on people's
