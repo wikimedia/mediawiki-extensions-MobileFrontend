@@ -1,8 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Lorenzoitza"
+			"Lorenzoitza",
+			"ChenchoYucateco"
 		]
 	},
-	"mobile-frontend-view": "Bix u yila'al ti selulaar"
+	"mobile-frontend-copyright": "Le ba'axo'ob ku taasik yáan ichil u pajtalil $1, wa ku ya'alal wa mae'.",
+	"mobile-frontend-terms-text": "U jetsílo'ob bix kun meyajtbil",
+	"mobile-frontend-view": "Bix u yila'al ti selulaar",
+	"mobile-frontend-view-desktop": "U taanil cha´an nu'ukul ts'íib"
 }
