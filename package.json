@@ -9,7 +9,7 @@
 		"lint": "npm -s run lint:i18n && npm -s run lint:frontend",
 		"lint:frontend": "npm -s run lint:js && npm -s run lint:css",
 		"lint:js": "eslint --cache .",
-		"lint:css": "stylelint \"**/*.less\"",
+		"lint:css": "stylelint --cache \"**/*.less\"",
 		"lint:i18n": "banana-checker --requireLowerCase=0 i18n/",
 		"minify": "npm -s run minify:svg",
 		"minify:svg": "svgo --config=.svgo.config.js --quiet --recursive --folder resources/",

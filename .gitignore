@@ -18,3 +18,4 @@ resources/dist/
 /.nyc_output/
 /.eslintcache
 .vscode
+/.stylelintcache
