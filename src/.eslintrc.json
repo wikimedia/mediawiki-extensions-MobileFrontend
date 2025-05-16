@@ -23,11 +23,5 @@
 		"jsdoc/require-returns": "off",
 		"jsdoc/require-property-type": "off",
 		"jsdoc/valid-types": "off"
-	},
-	"settings": {
-		"polyfills": [
-			"URL",
-			"URLSearchParams"
-		]
 	}
 }
