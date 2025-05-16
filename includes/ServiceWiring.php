@@ -27,9 +27,11 @@ return [
 	},
 	'MobileFrontend.FeaturesManager' => static function ( MediaWikiServices $services ): FeaturesManager {
 		$config = $services->getService( 'MobileFrontend.Config' );
-		$userModes = $services->getService( 'MobileFrontend.UserModes' );
 
-		$manager = new FeaturesManager( $userModes );
+		$manager = new FeaturesManager(
+			$services->getHookContainer(),
+			$services->getService( 'MobileFrontend.UserModes' )
+		);
 		// register default features
 		// maybe we can get all available features by looping through MobileFrontend.Feature.*
 		// and register it here, it would be nice to have something like

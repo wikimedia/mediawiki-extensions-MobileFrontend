@@ -11,6 +11,15 @@ use MobileFrontend\Features\UserModes;
  */
 class FeaturesManagerTest extends MediaWikiIntegrationTestCase {
 
+	private function newInstance(
+		UserModes $userModes
+	): FeaturesManager {
+		return new FeaturesManager(
+			$this->getServiceContainer()->getHookContainer(),
+			$userModes
+		);
+	}
+
 	private function getTestMode( $modeName, $isEnabled = true ) {
 		$modeMock = $this->createMock( \MobileFrontend\Features\IUserMode::class );
 		$modeMock->method( 'getModeIdentifier' )
@@ -32,7 +41,7 @@ class FeaturesManagerTest extends MediaWikiIntegrationTestCase {
 	public function testFeaturesManagerUsesHooks() {
 		$called = false;
 		$userModes = new UserModes();
-		$manager = new FeaturesManager( $userModes );
+		$manager = $this->newInstance( $userModes );
 		$this->setTemporaryHook( 'MobileFrontendFeaturesRegistration',
 			function ( $actual ) use ( &$called, $manager ) {
 				$this->assertSame( $manager, $actual );
@@ -54,7 +63,7 @@ class FeaturesManagerTest extends MediaWikiIntegrationTestCase {
 
 		$userModes = new UserModes();
 
-		$manager = new FeaturesManager( $userModes );
+		$manager = $this->newInstance( $userModes );
 		$manager->registerFeature( $featureA );
 		$this->expectException( RuntimeException::class );
 		$manager->registerFeature( $featureA );
@@ -70,7 +79,7 @@ class FeaturesManagerTest extends MediaWikiIntegrationTestCase {
 
 		$userModes = new UserModes();
 
-		$manager = new FeaturesManager( $userModes );
+		$manager = $this->newInstance( $userModes );
 		$manager->registerFeature( $featureA );
 
 		$actual = $manager->getFeature( 'featureA' );
@@ -82,7 +91,7 @@ class FeaturesManagerTest extends MediaWikiIntegrationTestCase {
 	 */
 	public function testGetFeatureThrowsExceptionWhenFeatureNotFound() {
 		$userModes = new UserModes();
-		$manager = new FeaturesManager( $userModes );
+		$manager = $this->newInstance( $userModes );
 		$this->expectException( RuntimeException::class );
 		$manager->getFeature( 'featureA' );
 	}
@@ -108,7 +117,7 @@ class FeaturesManagerTest extends MediaWikiIntegrationTestCase {
 		$userModes->registerMode( $modeBMock );
 		$userModes->registerMode( $modeCMock );
 
-		$manager = new FeaturesManager( $userModes );
+		$manager = $this->newInstance( $userModes );
 		$manager->registerFeature( $featureA );
 		$manager->registerFeature( $featureB );
 		$manager->registerFeature( $featureC );
@@ -138,7 +147,7 @@ class FeaturesManagerTest extends MediaWikiIntegrationTestCase {
 
 		$userModes = new UserModes();
 		$userModes->registerMode( $modeAMock );
-		$manager = new FeaturesManager( $userModes );
+		$manager = $this->newInstance( $userModes );
 		$manager->registerFeature( $featureA );
 
 		$this->assertFalse( $manager->isFeatureAvailableForCurrentUser( 'featureA' ) );
@@ -157,7 +166,7 @@ class FeaturesManagerTest extends MediaWikiIntegrationTestCase {
 		$userModes = new UserModes();
 		$userModes->registerMode( $modeAMock );
 		$userModes->registerMode( $modeBMock );
-		$manager = new FeaturesManager( $userModes );
+		$manager = $this->newInstance( $userModes );
 		$manager->registerFeature( $featureA );
 
 		$this->assertTrue( $manager->isFeatureAvailableForCurrentUser( 'featureA' ) );
@@ -174,7 +183,7 @@ class FeaturesManagerTest extends MediaWikiIntegrationTestCase {
 			->method( 'getMode' )
 			->with( 'testMode' )
 			->willReturn( $modeMock );
-		$manager = new FeaturesManager( $userModes );
+		$manager = $this->newInstance( $userModes );
 		$this->assertEquals( $modeMock, $manager->getMode( 'testMode' ) );
 	}
 }
