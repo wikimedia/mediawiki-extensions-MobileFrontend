@@ -834,7 +834,7 @@ class EditorOverlayBase extends Overlay {
 						// Show this on every visit, not once a day like the edit notices
 						return true;
 					}
-					if ( key.indexOf( 'editnotice' ) !== 0 ) {
+					if ( !key.startsWith( 'editnotice' ) ) {
 						return false;
 					}
 					if ( key === 'editnotice-notext' ) {
@@ -896,14 +896,14 @@ class EditorOverlayBase extends Overlay {
 		}
 
 		// handle different mime types different
-		if ( details.mime.indexOf( 'image/' ) === 0 ) {
+		if ( details.mime.startsWith( 'image/' ) ) {
 			// image based CAPTCHA's like provided by FancyCaptcha, ReCaptcha or similar
 			this.$el.find( '.captcha-panel#question' ).detach();
 			this.$el.find( '.captcha-panel img' ).attr( 'src', details.url );
 		} else {
 			// not image based CAPTCHA.
 			this.$el.find( '.captcha-panel #image' ).detach();
-			if ( details.mime.indexOf( 'text/html' ) === 0 ) {
+			if ( details.mime.startsWith( 'text/html' ) ) {
 				// handle mime type of HTML as HTML content (display as-is).
 				// QuestyCaptcha now have default MIME type "text/html": see T147606
 				this.$el.find( '.captcha-panel #question' ).html( details.question );

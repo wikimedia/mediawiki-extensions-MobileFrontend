@@ -236,7 +236,7 @@ class Toggler {
 		const checkHash = () => {
 			// eslint-disable-next-line no-restricted-properties
 			let hash = window.location.hash;
-			if ( hash.indexOf( '#' ) === 0 ) {
+			if ( hash.startsWith( '#' ) ) {
 				hash = hash.slice( 1 );
 				// Per https://html.spec.whatwg.org/multipage/browsing-the-web.html#target-element
 				// we try the raw fragment first, then the percent-decoded fragment.
