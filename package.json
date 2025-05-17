@@ -35,7 +35,7 @@
 		"browserslist-config-wikimedia": "0.7.0",
 		"clean-webpack-plugin": "0.1.19",
 		"cross-env": "5.2.1",
-		"eslint-config-wikimedia": "0.28.2",
+		"eslint-config-wikimedia": "0.29.1",
 		"grunt-banana-checker": "0.13.0",
 		"jquery": "3.7.1",
 		"jsdoc": "4.0.3",
