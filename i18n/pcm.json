@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Samatics"
+			"Samatics",
+			"Pingponging"
 		]
 	},
+	"mobile-frontend-copyright": "Na $1 kova tins wey dey hie onles dem tok anoda tin.",
 	"mobile-frontend-terms-text": "How You Go Yuz Wetin Dey Hie",
 	"mobile-frontend-view": "Show-am like hanset",
 	"mobile-frontend-view-desktop": "Destop"
