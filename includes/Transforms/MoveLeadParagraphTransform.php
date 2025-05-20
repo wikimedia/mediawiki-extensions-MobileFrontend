@@ -15,11 +15,7 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	 * @var Title|string
 	 */
 	private $title;
-
-	/**
-	 * @var int
-	 */
-	private $revId;
+	private int $revId;
 
 	/**
 	 * @param Title|string $title for logging purposes

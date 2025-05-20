@@ -12,7 +12,7 @@ class DefaultContentProviderTest extends \MediaWikiUnitTestCase {
 	 * @covers ::getHTML
 	 * @dataProvider getHtmlDataProvider
 	 */
-	public function testGetHtml( $expected ) {
+	public function testGetHtml( string $expected ) {
 		$defaultContentProvider = new DefaultContentProvider( $expected );
 		$actual = $defaultContentProvider->getHTML();
 
@@ -24,7 +24,6 @@ class DefaultContentProviderTest extends \MediaWikiUnitTestCase {
 	 */
 	public static function getHtmlDataProvider() {
 		return [
-			[ null ],
 			[ "<a>anchor</a>" ],
 			[ "<html>I'm here</html>" ],
 			[ "<img src='...' />" ],

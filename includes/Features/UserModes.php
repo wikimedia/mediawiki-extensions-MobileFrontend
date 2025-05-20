@@ -17,7 +17,7 @@ class UserModes implements IteratorAggregate {
 	/**
 	 * @var array<string,IUserMode>
 	 */
-	private $modes = [];
+	private array $modes = [];
 
 	/**
 	 * Register new User Mode

@@ -14,10 +14,8 @@ class CustomHeaderDeviceDetector implements DeviceDetector {
 
 	/**
 	 * The name of the custom request header.
-	 *
-	 * @var string
 	 */
-	private $customHeaderName;
+	private ?string $customHeaderName;
 
 	/**
 	 * @param Config $config The global config. Currently this can be any instance

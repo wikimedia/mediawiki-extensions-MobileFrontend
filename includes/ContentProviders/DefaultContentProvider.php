@@ -4,15 +4,12 @@ namespace MobileFrontend\ContentProviders;
 
 class DefaultContentProvider implements IContentProvider {
 
-	/**
-	 * @var string
-	 */
-	private $html;
+	private string $html;
 
 	/**
 	 * @param string $html HTML relating to content
 	 */
-	public function __construct( $html ) {
+	public function __construct( string $html ) {
 		$this->html = $html;
 	}
 

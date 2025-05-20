@@ -8,7 +8,7 @@ use Wikimedia\Parsoid\Utils\DOMCompat;
 class RemovableClassesTransform implements IMobileTransform {
 
 	/** @var string[] */
-	private $removableClasses;
+	private array $removableClasses;
 
 	/**
 	 * @param string[] $removableClasses List of slectors denoting elements to be removed

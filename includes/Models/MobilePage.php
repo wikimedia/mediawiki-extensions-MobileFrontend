@@ -17,10 +17,7 @@ class MobilePage {
 	public const SMALL_IMAGE_WIDTH = 220;
 	public const TINY_IMAGE_WIDTH = 120;
 
-	/**
-	 * @var Title
-	 */
-	private $title;
+	private Title $title;
 	/**
 	 * @var RevisionRecord|bool|null
 	 */

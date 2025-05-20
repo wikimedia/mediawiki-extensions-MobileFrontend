@@ -8,8 +8,8 @@ use MobileFrontend\Features\Feature;
  * @covers ::__construct()
  */
 class FeatureTest extends \MediaWikiUnitTestCase {
-	/** @var array */
-	private $madeUpConfigVariable;
+
+	private array $madeUpConfigVariable;
 
 	protected function setUp(): void {
 		parent::setUp();

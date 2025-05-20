@@ -44,7 +44,7 @@ class DeviceDetectorService implements DeviceDetector {
 	/**
 	 * @var DeviceDetector[]
 	 */
-	private $children;
+	private array $children;
 
 	/**
 	 * @param DeviceDetector[] $children

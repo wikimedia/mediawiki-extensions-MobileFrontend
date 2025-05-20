@@ -18,31 +18,15 @@ final class Outreach {
 	 */
 	private const MIN_EDIT_COUNT_CONFIG_NAME = 'MFAmcOutreachMinEditCount';
 
-	/**
-	 * @var UserMode
-	 */
-	private $userMode;
-	/**
-	 * @var User
-	 */
-	private $user;
-	/**
-	 * @var Manager
-	 */
-	private $amc;
+	private UserMode $userMode;
+	private User $user;
+	private Manager $amc;
 
 	/**
 	 * System config
-	 * @var Config
 	 */
-	private $config;
+	private Config $config;
 
-	/**
-	 * @param UserMode $userMode
-	 * @param Manager $amcManager
-	 * @param User $user
-	 * @param Config $config
-	 */
 	public function __construct(
 		UserMode $userMode, Manager $amcManager, User $user, Config $config
 	) {

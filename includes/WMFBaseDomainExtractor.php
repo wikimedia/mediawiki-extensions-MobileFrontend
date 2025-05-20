@@ -17,7 +17,7 @@ class WMFBaseDomainExtractor implements BaseDomainExtractorInterface {
 	/**
 	 * @var string[]
 	 */
-	private $wmfWikiHosts = [
+	private array $wmfWikiHosts = [
 		'wikipedia.org',
 		'wikibooks.org',
 		'wikiversity.org',
@@ -34,7 +34,7 @@ class WMFBaseDomainExtractor implements BaseDomainExtractorInterface {
 	/**
 	 * @var string[]
 	 */
-	private $wmfMultiDomainWikiHosts = [
+	private array $wmfMultiDomainWikiHosts = [
 		// commons, office, meta, outreach, wikimania, incubator, etc...
 		'.wikimedia.org',
 		// beta cluster

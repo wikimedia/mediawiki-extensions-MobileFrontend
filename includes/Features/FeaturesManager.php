@@ -22,7 +22,7 @@ class FeaturesManager {
 	 *
 	 * @var array<IFeature>
 	 */
-	private $features = [];
+	private array $features = [];
 
 	private HookContainer $hookContainer;
 	private UserModes $userModes;

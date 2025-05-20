@@ -2,6 +2,8 @@
 
 namespace MobileFrontend\Features;
 
+use MobileContext;
+
 /**
  * Temporary class to provide a bridge between old stable mode handling and new Feature management
  * system.
@@ -16,15 +18,9 @@ namespace MobileFrontend\Features;
  */
 class StableUserMode implements IUserMode {
 
-	/**
-	 * @var \MobileContext
-	 */
-	private $context;
+	private MobileContext $context;
 
-	/**
-	 * @param \MobileContext $context Mobile context
-	 */
-	public function __construct( \MobileContext $context ) {
+	public function __construct( MobileContext $context ) {
 		$this->context = $context;
 	}
 

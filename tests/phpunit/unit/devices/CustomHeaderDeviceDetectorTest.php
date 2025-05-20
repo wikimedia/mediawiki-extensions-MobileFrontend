@@ -10,15 +10,9 @@ use MobileFrontend\Devices\CustomHeaderDeviceDetector;
  * @group MobileFrontend
  */
 class CustomHeaderDeviceDetectorTest extends \MediaWikiUnitTestCase {
-	/**
-	 * @var \MobileFrontend\Devices\UADeviceDetector
-	 */
-	private $detector;
 
-	/**
-	 * @var FauxRequest
-	 */
-	private $request;
+	private CustomHeaderDeviceDetector $detector;
+	private FauxRequest $request;
 
 	protected function setUp(): void {
 		parent::setUp();

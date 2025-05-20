@@ -31,19 +31,17 @@ class MakeSectionsTransform implements IMobileTransform {
 
 	/**
 	 * Whether scripts can be added in the output.
-	 * @var bool
 	 */
-	private $scriptsEnabled;
+	private bool $scriptsEnabled;
 
 	/**
 	 * List of tags that could be considered as section headers.
-	 * @var array
+	 * @var string[]
 	 */
-	private $topHeadingTags;
+	private array $topHeadingTags;
 
 	/**
-	 *
-	 * @param array $topHeadingTags list of tags could ne cosidered as sections
+	 * @param string[] $topHeadingTags list of tags could ne cosidered as sections
 	 * @param bool $scriptsEnabled wheather scripts are enabled
 	 */
 	public function __construct(

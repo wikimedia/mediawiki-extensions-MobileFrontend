@@ -23,27 +23,10 @@ class UserMode implements IUserMode, IUserSelectableMode {
 	 */
 	public const OPTION_DISABLED = '0';
 
-	/**
-	 * @var UserIdentity
-	 */
-	private $userIdentity;
+	private UserIdentity $userIdentity;
+	private Manager $amc;
+	private UserOptionsManager $userOptionsManager;
 
-	/**
-	 * @var Manager
-	 */
-	private $amc;
-
-	/**
-	 * @var UserOptionsManager
-	 */
-	private $userOptionsManager;
-
-	/**
-	 * @param Manager $amcManager
-	 * @param UserIdentity $userIdentity
-	 * @param UserOptionsManager $userOptionsManager
-	 * @throws RuntimeException When AMC mode is not available
-	 */
 	public function __construct(
 		Manager $amcManager,
 		UserIdentity $userIdentity,

@@ -10,15 +10,8 @@ use MobileFrontend\Devices\AMFDeviceDetector;
  */
 class AMFDeviceDetectorTest extends \MediaWikiUnitTestCase {
 
-	/**
-	 * @var WebRequest
-	 */
-	private $request;
-
-	/**
-	 * @var AMFDeviceDetector
-	 */
-	private $detector;
+	private WebRequest $request;
+	private AMFDeviceDetector $detector;
 
 	protected function setUp(): void {
 		parent::setUp();

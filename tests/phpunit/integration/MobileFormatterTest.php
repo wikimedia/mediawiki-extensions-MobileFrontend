@@ -1,6 +1,5 @@
 <?php
 
-use MediaWiki\Config\Config;
 use MediaWiki\Title\Title;
 use MobileFrontend\Transforms\LazyImageTransform;
 use MobileFrontend\Transforms\MakeSectionsTransform;
@@ -15,29 +14,11 @@ use MobileFrontend\Transforms\RemovableClassesTransform;
  * @covers \MobileFrontend\Transforms\RemovableClassesTransform
  */
 class MobileFormatterTest extends MediaWikiIntegrationTestCase {
-	private const TOC = '<div id="toc" class="toc-mobile"><h2>Contents</h2></div>';
+
 	private const SECTION_INDICATOR = '<span class="indicator mf-icon mf-icon-expand mf-icon--small"></span>';
 	private const HATNOTE_CLASSNAME = 'hatnote';
 	private const INFOBOX_CLASSNAME = 'infobox';
 	private const TITLE_REV_ID = 42;
-
-	/**
-	 * @var Config
-	 */
-	private $mfConfig;
-
-	/**
-	 * @var MobileContext
-	 */
-	private $mfContext;
-
-	protected function setUp(): void {
-		parent::setUp();
-
-		$services = $this->getServiceContainer();
-		$this->mfConfig = $services->getService( 'MobileFrontend.Config' );
-		$this->mfContext = $services->getService( 'MobileFrontend.Context' );
-	}
 
 	/**
 	 * Helper function that creates section headings from a heading and title

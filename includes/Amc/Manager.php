@@ -30,16 +30,13 @@ final class Manager {
 
 	/**
 	 * MobileContext used to retrieve shouldDisplayMobileView and user information
-	 *
-	 * @var MobileContext
 	 */
-	private $mobileContext;
+	private MobileContext $mobileContext;
 
 	/**
 	 * System config
-	 * @var Config
 	 */
-	private $config;
+	private Config $config;
 
 	/**
 	 * @param Config $config

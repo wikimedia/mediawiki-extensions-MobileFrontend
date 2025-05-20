@@ -15,10 +15,7 @@ use MobileContext;
  */
 class MobileContextShouldDisplayMobileViewIntegrationTest extends MediaWikiIntegrationTestCase {
 
-	/**
-	 * @var MobileContext
-	 */
-	private $context;
+	private MobileContext $context;
 
 	protected function setUp(): void {
 		parent::setUp();

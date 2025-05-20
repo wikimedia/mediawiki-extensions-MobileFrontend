@@ -8,19 +8,13 @@ namespace MobileFrontend\Features;
 class Feature implements IFeature {
 
 	private const DEFAULT_ENABLED_MODE = false;
-	/**
-	 * @var string
-	 */
-	private $name;
+
+	private string $name;
 	/**
 	 * Feature group (mobile-frontend, minerva, ...)
-	 * @var string
 	 */
-	private $group;
-	/**
-	 * @var array
-	 */
-	private $options;
+	private string $group;
+	private array $options;
 
 	/**
 	 * @param string $name feature name (used as an ID)

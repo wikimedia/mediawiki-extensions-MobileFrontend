@@ -8,7 +8,9 @@ use MediaWiki\Request\WebRequest;
 use MediaWiki\SpecialPage\UnlistedSpecialPage;
 use MediaWiki\Title\Title;
 use MediaWiki\User\Options\UserOptionsManager;
+use MobileFrontend\Amc\Manager;
 use MobileFrontend\Amc\UserMode;
+use MobileFrontend\Features\FeaturesManager;
 use MobileFrontend\Features\IFeature;
 use Wikimedia\Rdbms\ReadOnlyMode;
 
@@ -21,25 +23,13 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 
 	/**
 	 * Advanced Mobile Contributions mode
-	 * @var \MobileFrontend\Amc\Manager
 	 */
-	private $amc;
-
-	/**
-	 * @var \MobileFrontend\Features\FeaturesManager
-	 */
-	private $featuresManager;
-
-	/** @var UserMode */
-	private $userMode;
-
-	/** @var UserOptionsManager */
+	private Manager $amc;
+	private FeaturesManager $featuresManager;
+	private UserMode $userMode;
 	private UserOptionsManager $userOptionsManager;
-
-	/** @var ReadOnlyMode */
 	private ReadOnlyMode $readOnlyMode;
-	/** @var MobileContext */
-	private $mobileContext;
+	private MobileContext $mobileContext;
 	/** @var Config MobileFrontend's config object */
 	protected Config $config;
 

@@ -29,21 +29,19 @@ class MobileContext extends ContextSource {
 
 	/**
 	 * Saves the testing mode user has opted in: 'beta' or 'stable'
-	 * @var string|null
 	 */
-	protected $mobileMode = null;
+	protected ?string $mobileMode = null;
 
 	/**
 	 * Save explicitly requested format
-	 * @var string|null
 	 */
-	protected $useFormat = null;
+	protected ?string $useFormat = null;
 
 	/**
 	 * Key/value pairs of things to add to X-Analytics response header for analytics
 	 * @var array[]
 	 */
-	protected $analyticsLogItems = [];
+	protected array $analyticsLogItems = [];
 
 	/**
 	 * The memoized result of `MobileContext#isMobileDevice`.
@@ -52,56 +50,46 @@ class MobileContext extends ContextSource {
 	 * yet to be called.
 	 *
 	 * @see MobileContext#isMobileDevice
-	 *
-	 * @var bool|null
 	 */
-	private $isMobileDevice = null;
+	private ?bool $isMobileDevice = null;
 
 	/**
 	 * Saves requested Mobile action
-	 * @var string|null
 	 */
-	protected $mobileAction = null;
+	protected ?string $mobileAction = null;
 
 	/**
 	 * Save whether the mobile view is explicitly requested
-	 * @var bool
 	 */
-	private $forceMobileView = false;
+	private bool $forceMobileView = false;
 
 	/**
 	 * Save whether we should display the mobile view
-	 * @var bool|null
 	 */
-	private $mobileView = null;
+	private ?bool $mobileView = null;
 
 	/**
 	 * Have we already checked for desktop/mobile view toggling?
-	 * @var bool
 	 */
-	private $toggleViewChecked = false;
+	private bool $toggleViewChecked = false;
 
-	/**
-	 * @var self|null
-	 */
-	private static $instance = null;
+	private static ?self $instance = null;
 
 	/**
 	 * @var string|null What to switch the view to
 	 */
-	private $viewChange = null;
+	private ?string $viewChange = null;
 
 	/**
 	 * @var string|null Domain to use for the stopMobileRedirect cookie
 	 */
-	public static $mfStopRedirectCookieHost = null;
+	public static ?string $mfStopRedirectCookieHost = null;
 
 	/**
 	 * In-process cache for checking whether the current wiki has a mobile URL that's
 	 * different from the desktop one.
-	 * @var bool|null
 	 */
-	private $hasMobileUrl = null;
+	private ?bool $hasMobileUrl = null;
 
 	private Config $config;
 

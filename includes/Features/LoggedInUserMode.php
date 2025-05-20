@@ -21,10 +21,7 @@ use MediaWiki\User\User;
  */
 class LoggedInUserMode implements IUserMode {
 
-	/**
-	 * @var User
-	 */
-	private $user;
+	private User $user;
 
 	/**
 	 * @param User $user
