@@ -66,6 +66,7 @@
 	"mobile-frontend-editor-viewing-source-page": "<strong>Йуьхьанцара тексте хьажар</strong><span> $1</span>",
 	"mobile-frontend-editor-wait": "Нисдар Ӏалашдеш ду, дехар до, собарде.",
 	"mobile-frontend-editor-loading": "Редактор тӀейаккхар…",
+	"mobile-frontend-editor-loadingtooslow": "Меллаша зӀе йуй?",
 	"mobile-frontend-editor-loadbasiceditor": "Кодан редактор хӀоттайе",
 	"mobile-frontend-editor-toload": "Редактор кестта схьайелира йу. Нагахь санна масех секунд йаьлча а хьуна и хаам гуш белахь, дехар до, [$1 агӀо йухасхьайелла]",
 	"mf-expand-sections-description": "Даима агӀонаш тӀехь Ӏад йитаран кепаца чулацаман дакъош схьаделла.",

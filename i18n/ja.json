@@ -189,7 +189,7 @@
 	"mobile-frontend-user-page-create-owner-page-link-label": "作成する",
 	"mobile-frontend-user-page-create-user-page-link-label": "$1 を作成する",
 	"mobile.css": "/* ここに記述した全てのCSSはモバイル版サイトの利用者に影響します */",
-	"mobile.js": "/* ここにある全てのJavaScriptはモバイル版サイトの利用者に影響します */",
+	"mobile.js": "/* ここにあるすべてのJavaScriptはモバイル版サイトの利用者に影響します */",
 	"tag-mobile_edit": "モバイル編集",
 	"tag-mobile_edit-description": "モバイルから行われた編集（ウェブまたはアプリ）",
 	"tag-advanced_mobile_edit": "改良版モバイル編集",
