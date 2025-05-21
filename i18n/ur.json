@@ -14,7 +14,7 @@
 			"පසිඳු කාවින්ද"
 		]
 	},
-	"abusefilter-edit-builder-vars-user-mobile": "جب صارف موبائل انٹرفیس کے ذریعے ترمیم کرے",
+	"abusefilter-edit-builder-vars-user-mobile": "جب صارف موبائل انٹرفیس ($1) کے ذریعے ترمیم کرے",
 	"mobile-frontend-account-create-captcha-placeholder": "تصدیقی کوڈ درج کریں",
 	"mobile-frontend-clear-search": "خالی کریں",
 	"mobile-frontend-copyright": "تمام مواد $1 کے تحت میسر ہے، جب تک اس کی مخالفت مذکور نہ ہو۔",
@@ -70,6 +70,8 @@
 	"mobile-frontend-editor-viewing-source-page": "<strong>مشاہدۂ مسودہ</strong><span> $1</span>",
 	"mobile-frontend-editor-wait": "ترمیم محفوظ ہو رہی ہے، براہ کرم انتظار کریں۔",
 	"mobile-frontend-editor-loading": "خانہ ترمیم کھل رہا ہے۔۔۔",
+	"mobile-frontend-editor-loadingtooslow": "کیا آپ کے کنیکشن سست روی کا شکار ہیں؟",
+	"mobile-frontend-editor-loadbasiceditor": "ابھی ماخذی ترمیم میں منتقل ہوں",
 	"mobile-frontend-editor-toload": "خانہ ترمیم لوڈ ہو رہا ہے۔ اگر کچھ سیکنڈ تک یہی پیغام دکھائی دے تو براہ کرم [$1 صفحہ دوبارہ لوڈ کریں]۔",
 	"mf-expand-sections-description": "نئے صفحات کا مطالعہ کرتے وقت تمام قطعات کو ہمیشہ کھلا رکھیں۔",
 	"mf-expand-sections-name": "تمام قطعات کھولیں",
