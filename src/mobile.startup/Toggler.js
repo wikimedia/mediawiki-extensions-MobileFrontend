@@ -87,8 +87,7 @@ class Toggler {
 			$heading.data( 'indicator', newIndicator.$el );
 		}
 
-		const $headingLabel = $heading.find( '.mw-headline' );
-		$headingLabel.attr( 'aria-expanded', !wasExpanded );
+		$heading.attr( 'aria-expanded', !wasExpanded );
 
 		const $content = $heading.next();
 		if ( $content.hasClass( 'open-block' ) ) {
@@ -181,7 +180,6 @@ class Toggler {
 		// want to toggle other headlines than direct descendants of $container. (T95889)
 		this.$container.children( '.section-heading' ).each( ( i, headingEl ) => {
 			const $heading = this.$container.find( headingEl ),
-				$headingLabel = $heading.find( '.mw-headline' ),
 				$indicator = $heading.find( '.indicator' ),
 				id = this.prefix + 'collapsible-block-' + i;
 			// Be sure there is a `section` wrapping the section content.
@@ -202,7 +200,7 @@ class Toggler {
 							this.toggle( $heading );
 						}
 					} );
-				$headingLabel
+				$heading
 					.attr( {
 						tabindex: 0,
 						role: 'button',

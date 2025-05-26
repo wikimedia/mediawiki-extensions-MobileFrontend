@@ -7,17 +7,17 @@ const
 	mediawiki = require( '../utils/mw' ),
 	mustache = require( '../utils/mustache' ),
 	sectionTemplate = `
-		<div class="section-heading">
-			<h2>
-				<span class="mw-headline" id="First_Section">First Section</span>
+		<div class="mw-heading mw-heading2 section-heading">
+			<h2 id="First_Section">
+				First Section
 			</h2>
 		</div>
 		<section>
 			<p>Text</p>
 		</section>
-		<div class="section-heading">
+		<div class="mw-heading mw-heading2 section-heading">
 			<h2 id="section_1">
-				<span class="mw-headline"><a href="#foo">Dummy Link</a></span>
+				<a href="#foo">Dummy Link</a>
 			</h2>
 		</div>
 		<section></section>
@@ -169,24 +169,24 @@ QUnit.test( 'Accessibility - Verify ARIA attributes', function ( assert ) {
 			page: this.page
 		} ),
 		$section = this.$container.find( '#section_1' ),
-		$headingLabel = this.$container.find( '.mw-headline' ).eq( 1 ),
+		$headingWrapper = $section.parent(),
 		$content = this.$container.find( '.collapsible-block' ).eq( 1 );
 
 	toggle.toggle( this.$section0 );
 
 	// Test the initial state produced by the init function
 	assert.strictEqual( $content.hasClass( 'open-block' ), false, 'check content is hidden at start' );
-	assert.strictEqual( $headingLabel.attr( 'aria-expanded' ), 'false', 'check aria-expanded is false at start' );
+	assert.strictEqual( $headingWrapper.attr( 'aria-expanded' ), 'false', 'check aria-expanded is false at start' );
 
 	// Test what the toggle() function gives us when hiding the section
 	$section.trigger( 'click' );
 	assert.strictEqual( $content.hasClass( 'open-block' ), true, 'check content is visible after toggling' );
-	assert.strictEqual( $headingLabel.attr( 'aria-expanded' ), 'true', 'check aria-expanded is true after toggling' );
+	assert.strictEqual( $headingWrapper.attr( 'aria-expanded' ), 'true', 'check aria-expanded is true after toggling' );
 
 	// Test what the toggle() function gives us when showing the section
 	$section.trigger( 'click' );
 	assert.strictEqual( $content.hasClass( 'open-block' ), false, 'check content is hidden after toggling' );
-	assert.strictEqual( $headingLabel.attr( 'aria-expanded' ), 'false', 'check aria-expanded is false after toggling' );
+	assert.strictEqual( $headingWrapper.attr( 'aria-expanded' ), 'false', 'check aria-expanded is false after toggling' );
 } );
 
 /**
