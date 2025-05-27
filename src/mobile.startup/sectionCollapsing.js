@@ -4,23 +4,23 @@ const isCollapsedByDefault = require( './isCollapsedByDefault' );
  * Sets attributes on collapsible elements based on collapsed state
  *
  * @method
- * @param {HTMLElement} container div element containing collapsible heading
- * @param {HTMLElement} headingText span element containing heading text
+ * @param {HTMLElement} content div element containing collapsible content
+ * @param {HTMLElement} heading div element containing heading text
  * @param {HTMLElement} icon span element for icon
  * @param {boolean} isCollapsed collapsed state to set
  * @ignore
  */
-function setCollapsedState( content, headingText, icon, isCollapsed ) {
+function setCollapsedState( content, heading, icon, isCollapsed ) {
 	// show the content if hidden, hide if shown (until found so find in page works)
 	content.hidden = isCollapsed ? 'until-found' : false;
 
 	// update the dropdown state based on the content visibility
 	if ( isCollapsed ) {
-		headingText.setAttribute( 'aria-expanded', 'false' );
+		heading.setAttribute( 'aria-expanded', 'false' );
 		icon.classList.add( 'mf-icon-expand' );
 		icon.classList.remove( 'mf-icon-collapse' );
 	} else {
-		headingText.setAttribute( 'aria-expanded', 'true' );
+		heading.setAttribute( 'aria-expanded', 'true' );
 		icon.classList.add( 'mf-icon-collapse' );
 		icon.classList.remove( 'mf-icon-expand' );
 	}
@@ -30,14 +30,14 @@ function setCollapsedState( content, headingText, icon, isCollapsed ) {
  * Toggles collapsible state for a heading
  *
  * @method
- * @param {HTMLElement} container div element containing collapsible heading
- * @param {HTMLElement} headingText span element containing heading text
+ * @param {HTMLElement} content div element containing collapsible content
+ * @param {HTMLElement} heading div element containing heading text
  * @param {HTMLElement} icon span element for icon
  * @ignore
  */
-function toggle( content, headingText, icon ) {
+function toggle( content, heading, icon ) {
 	const currentlyHidden = content.hidden;
-	setCollapsedState( content, headingText, icon,
+	setCollapsedState( content, heading, icon,
 		// This should reflect **new** collapsed state
 		!currentlyHidden );
 }
@@ -80,6 +80,16 @@ function init( container ) {
 			// example.
 			const clickedLink = ev.target.closest( 'a' );
 			if ( !clickedLink ) {
+				toggle( content, wrapper, icon );
+			}
+		} );
+		wrapper.addEventListener( 'keypress', ( ev ) => {
+			// Only toggle if a non-link was clicked.
+			// We don't want sections to collapse if the edit link is clicked for
+			// example.
+			const clickedLink = ev.target.closest( 'a' );
+			// Only handle keypresses on the "Enter" or "Space" keys
+			if ( !clickedLink && ( ev.which === 13 || ev.which === 32 ) ) {
 				toggle( content, wrapper, icon );
 			}
 		} );
