@@ -39,7 +39,8 @@
 			"علاء",
 			"محمد أحمد عبد الفتاح",
 			"مشعل الحربي",
-			"Hubaishan"
+			"Hubaishan",
+			"Lolekek"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "سواء كان المستخدم يعدل عبر واجهة الهاتف المحمول ($1)",
@@ -60,7 +61,7 @@
 	"mobile-frontend-editor-blocked-drawer-title": "مُنع حسابك من تحرير {{SITENAME}}",
 	"mobile-frontend-editor-blocked-drawer-title-partial": "مُنع حسابك من تعديل هذه الصفحة",
 	"mobile-frontend-editor-blocked-drawer-title-ip": "مُنع عنوان بروتوكول الإنترنت خاصتك من تحرير {{SITENAME}}.",
-	"mobile-frontend-editor-blocked-drawer-title-ip-partial": "تم منع عنوان IP الخاص بك من تحرير هذه الصفحة.",
+	"mobile-frontend-editor-blocked-drawer-title-ip-partial": "مُنع عنوان IP الخاص بك من تحرير هذه الصفحة.",
 	"mobile-frontend-editor-blocked-drawer-body-partial": "حاول تحرير صفحة أخرى",
 	"mobile-frontend-editor-blocked-drawer-body-login": "حاول تسجيل الدخول لو كان لديك حساب مستخدم",
 	"mobile-frontend-editor-blocked-drawer-body-login-partial": "حاول تسجيل الدخول إذا كان لديك حساب، أو حاول تعديل صفحة أخرى.",
