@@ -67,6 +67,21 @@
 	display: none;
 }
 
+@media screen and ( max-height: 460px ) {
+	.drawer-container .block-message {
+		// (T390834) On very small screen sizes (i.e. mobile phones in landscape
+		// mode), when the block reason is shown, the height of the div with the
+		// drawer class (that fills the top half of the popup with a white
+		// background) becomes too small (roughly half the screen size), thus
+		// causing a transparent region to appear between the top half of the
+		// popup and the block reason.
+		//
+		// This serves to override the rule from the "drawer" class that sets
+		// the height of that region so it can cover the whole screen height.
+		max-height: none;
+	}
+}
+
 .block-message-title {
 	color: @color-destructive;
 }
