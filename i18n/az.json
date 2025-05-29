@@ -12,7 +12,8 @@
 			"Wertuose",
 			"Şeyx Şamil",
 			"Nemoralis",
-			"Gadir"
+			"Gadir",
+			"Əkrəm"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "İstifadəçinin mobil interfeys vasitəsilə redaktə edib-etməməsi",
@@ -115,7 +116,7 @@
 	"mobile-frontend-last-modified-with-user-years": "[$4 Sonuncu {{GENDER:$1|redaktə}} {{PLURAL:$3|$3 il}} əvvəl] {{PLURAL:$5|[$6 $2]|0=anonim istifadəçi}} tərəfindən edilib",
 	"mobile-frontend-main-menu": "Ana səhifə",
 	"mobile-frontend-main-menu-settings-heading": "Nizamlamalar",
-	"mobile-frontend-media-details": "Detallar",
+	"mobile-frontend-media-details": "Ətraflı",
 	"mobile-frontend-media-license-link": "Lisenziya məlumatı",
 	"mobile-frontend-media-load-fail-message": "Bu şəkli yükləyərkən xəta baş verdi.",
 	"mobile-frontend-media-load-fail-retry": "Yenilə",
