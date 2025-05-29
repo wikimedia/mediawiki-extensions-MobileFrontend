@@ -1,6 +1,28 @@
 const isCollapsedByDefault = require( './isCollapsedByDefault' );
 
 /**
+ * Sets attributes on collapsible header based on collapsed state
+ *
+ * @method
+ * @param {HTMLElement} heading span element containing heading text
+ * @param {HTMLElement} icon span element for icon
+ * @param {boolean} isCollapsed collapsed state to set
+ * @ignore
+ */
+function setCollapsedHeadingState( heading, icon, isCollapsed ) {
+	// update the dropdown state based on the content visibility
+	if ( isCollapsed ) {
+		heading.setAttribute( 'aria-expanded', 'false' );
+		icon.classList.add( 'mf-icon-expand' );
+		icon.classList.remove( 'mf-icon-collapse' );
+	} else {
+		heading.setAttribute( 'aria-expanded', 'true' );
+		icon.classList.add( 'mf-icon-collapse' );
+		icon.classList.remove( 'mf-icon-expand' );
+	}
+}
+
+/**
  * Sets attributes on collapsible elements based on collapsed state
  *
  * @method
@@ -14,16 +36,7 @@ function setCollapsedState( content, heading, icon, isCollapsed ) {
 	// show the content if hidden, hide if shown (until found so find in page works)
 	content.hidden = isCollapsed ? 'until-found' : false;
 
-	// update the dropdown state based on the content visibility
-	if ( isCollapsed ) {
-		heading.setAttribute( 'aria-expanded', 'false' );
-		icon.classList.add( 'mf-icon-expand' );
-		icon.classList.remove( 'mf-icon-collapse' );
-	} else {
-		heading.setAttribute( 'aria-expanded', 'true' );
-		icon.classList.add( 'mf-icon-collapse' );
-		icon.classList.remove( 'mf-icon-expand' );
-	}
+	setCollapsedHeadingState( heading, icon, isCollapsed );
 }
 
 /**
@@ -70,6 +83,11 @@ function init( container ) {
 		icon.classList.add( 'mf-icon', 'mf-icon--small', 'mf-collapsible-icon' );
 		icon.setAttribute( 'aria-hidden', true );
 		wrapper.prepend( icon );
+
+		// T389820 toggle the icon by expanding the heading on match.
+		content.addEventListener( 'beforematch', () => {
+			setCollapsedHeadingState( wrapper, icon, false );
+		} );
 
 		setCollapsedState( content, wrapper, icon, isCollapsed );
 
