@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Epiphanus Jidechukwu",
 			"Mbachuvm",
 			"Pasjoesscc",
 			"Tochiprecious",
@@ -9,12 +10,15 @@
 			"Weather Top Wizard"
 		]
 	},
-	"abusefilter-edit-builder-vars-user-mobile": "Ma onye ọrụ na-edezi ma ọ bụ na ọnaghị site na interface mkpanaka",
+	"abusefilter-edit-builder-vars-user-mobile": "Ma onye ọrụ ọna maọbụ ọnaghi edezi site na interface mkpanaka ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "Tinye koodu Nkwenye",
 	"mobile-frontend-clear-search": "Kpochapụ",
 	"mobile-frontend-copyright": "Ọdịnaya dị n'okpuru $1 belụsọ na edere ya otú ọzọ.",
-	"mobile-frontend-desc": "Mobile Frontend",
+	"mobile-frontend-desc": "Na-enyere aka imeziwanye ọnụnọ ekwentị nke ìhè atụ MediaWiki",
+	"mobile-frontend-edit-login-action": "<strong>Nyere aka melite {{SITENAME}}.</strong><br /> Banye ka idezie.",
+	"mobile-frontend-edit-signup-action": "<strong>Nyere aka melite {{SITENAME}}.</strong><br /> Debanye aha ka idezie.",
 	"mobile-frontend-editor-anon": "Dezie na-abanyeghị",
+	"mobile-frontend-editor-anonwarning": "<strong>Idọakanantị:</strong> Ị banyebeghị. Onye ọbụla ga-ahụ akara IP gị ma ọbụrụ na-ime ndezi n'ebe a. IJiri <strong>aha banye </strong> m'ọbụ <strong>kepụta akanụtụ</strong>, ndezi niile i ga-eme gosi n'aha gi, tinyere ihe nrite ndị ọzọ.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Banye",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "Ngwanu",
 	"mobile-frontend-editor-blocked-drawer-action-randompage": "Buje m na ibe ọzọ",
