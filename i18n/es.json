@@ -3,6 +3,7 @@
 		"authors": [
 			"-jem-",
 			"Amitie 10g",
+			"Arely",
 			"Armando-Martin",
 			"Awesomecat5",
 			"Benfutbol10",
@@ -15,6 +16,7 @@
 			"Eulalio",
 			"Fitoschido",
 			"Francodiaz7",
+			"Fredy",
 			"Imre",
 			"Invadinado",
 			"Jack30",
@@ -50,7 +52,7 @@
 			"WikiiiTranslator"
 		]
 	},
-	"abusefilter-edit-builder-vars-user-mobile": "Si un usuario está editando a través de la interfaz móvil",
+	"abusefilter-edit-builder-vars-user-mobile": "Si un usuario está editando o no a través de la interfaz móvil ( $1 )",
 	"mobile-frontend-account-create-captcha-placeholder": "Escribe el código de confirmación",
 	"mobile-frontend-clear-search": "Limpiar",
 	"mobile-frontend-copyright": "El contenido está disponible bajo la licencia $1, salvo que se indique lo contrario.",
@@ -120,7 +122,7 @@
 	"mf-font-size-name": "Tamaño del texto",
 	"mf-font-size-description": "Ajustar el tamaño del texto para mejorar la legibilidad",
 	"mf-font-size-small-label": "Pequeño",
-	"mf-font-size-regular-label": "Normal",
+	"mf-font-size-regular-label": "Medio",
 	"mf-font-size-large-label": "Grande",
 	"mobile-frontend-generic-404-desc": "No se encontró la página que estás buscando.",
 	"mobile-frontend-generic-404-title": "Error: no se encontró la página",

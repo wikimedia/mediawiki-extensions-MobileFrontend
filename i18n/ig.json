@@ -80,6 +80,7 @@
 	"mf-font-size-name": "Ederede",
 	"mf-font-size-description": "Hazie ederede ka e nwee ike ịgụ ya nke ọma.",
 	"mf-font-size-small-label": "Ụkpụrụ",
+	"mf-font-size-regular-label": "Ọkara",
 	"mf-font-size-large-label": "Nnukwu",
 	"mobile-frontend-generic-404-desc": "Enweghị ike ịchọta ibe ị na-achọ.",
 	"mobile-frontend-generic-404-title": "Njehie - Achọtaghị ibe",
@@ -168,6 +169,7 @@
 	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions-description": "Mụta maka isiokwu nke ibe ahụ nakwa nkọwa dị nkenke n'okpuru isiokwu ahụ",
 	"mobile-frontend-send-feedback": "Zipu nzaghachi",
 	"mobile-frontend-mobile-option-MFLazyLoadImages-description": "Budata onyonyo naanị mgbe achọrọ ha.",
+	"mobile-frontend-mobile-option-MFLazyLoadImages": "Budata onyonyo umengwụ",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "Paragraf ndu",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox-description": "Ederede ga na-egosi mgbe niile n'elu igbe ozi, na-emeziwanye arụmọrụ yana agụmagụ.",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "nha fọnt",
@@ -181,5 +183,14 @@
 	"mobile-frontend-user-pref-option": "Mmasị ndị ọrụ",
 	"mobile-frontend-user-pref-description": "Gbanwee mmasị gị, gụnyere paswọọdụ, ọdịdị weebụsaịtị, ntọala ọkwa, na ihe ndị ọzọ.",
 	"mobile-frontend-user-pref-link": "Mepee mmasị",
-	"mobile-frontend-amc-outreach-intro": "Iwebata ụdị dị ọrụ"
+	"mobile-frontend-amc-outreach-intro": "Iwebata ụdị dị ọrụ",
+	"mobile-frontend-amc-outreach-description": "Ụdị dị elu na-eweta ngbasawanye ọrụ nke ibe akụkọ ihe mere eme, ibe ndepụta nlele, mgbanwe ndị na-adịbeghị anya, yana ngwa ọrụ ndị ndezi ndị ọzọ na mkpanaka.",
+	"mobile-frontend-amc-outreach-enable": "Kwado udị ọnọdụ dị elu",
+	"mobile-frontend-amc-outreach-no-thanks": "Mba, daalụ",
+	"mobile-frontend-amc-outreach-enabled-message": "Agbanyere ọnọdụ dị elu ugbu a. Ị nwere ike ịgbanyụọ ya na ntọala gị.",
+	"mobile-frontend-amc-outreach-dismissed-message": "Ị nwere ike ịgbanye ọnọdụ dị elu n'oge ọ bụla na Ntọala gị.",
+	"mobile-frontend-beta-only": "Njirimara dị naanị na ọnọdụ beta",
+	"mobile-frontend-console-recruit": "Mụtakwuo maka otu anyị si arụ saịtị mkpanaka anyị na https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
+	"mobile-frontend-special-pages-pref": "Melite ma mee ka ibe pụrụ iche dị mfe mgbe ị nọ na mkpanaka (akwadoro)",
+	"prefs-mobile": "Nhọrọ mkpanaaka"
 }
