@@ -49,7 +49,7 @@
 		"oojs": "7.0.1",
 		"oojs-ui": "0.48.3",
 		"pre-commit": "1.2.2",
-		"qunit": "2.20.0",
+		"qunit": "2.24.1",
 		"sinon": "12.0.1",
 		"stylelint-config-wikimedia": "0.18.0",
 		"svgo": "3.2.0",
