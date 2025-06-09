@@ -55,7 +55,7 @@
 	"mobile-frontend-editor-autocreatewarning": "<strong>警告:</strong>あなたはログインしていません。このまま編集すると、臨時アカウントが作成されます。[[$1|詳細はこちら]]。このアカウントの有効期限が切れた後も通知を受け取り続けたり、その他の機能を利用するには、<strong>ログイン</strong>するか<strong>アカウントを作成</strong>してください。",
 	"mobile-frontend-editor-blocked-drawer-action-login": "ログイン",
 	"mobile-frontend-drawer-arrow-label": "閉じる",
-	"mobile-frontend-editor-blocked-drawer-action-ok": "承認",
+	"mobile-frontend-editor-blocked-drawer-action-ok": "OK",
 	"mobile-frontend-editor-blocked-drawer-action-randompage": "別のページへ移動",
 	"mobile-frontend-editor-blocked-drawer-title": "あなたは {{SITENAME}} で編集ブロックされています。",
 	"mobile-frontend-editor-blocked-drawer-title-partial": "あなたはこのページの編集についてブロックされています。",

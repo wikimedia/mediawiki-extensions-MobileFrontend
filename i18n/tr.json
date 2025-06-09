@@ -69,7 +69,7 @@
 	"mobile-frontend-editor-blocked-drawer-body-login-createaccount": "Oturum açmayı veya bir hesap oluşturmayı deneyin.",
 	"mobile-frontend-editor-blocked-drawer-body-login-createaccount-partial": "Oturum açmayı veya bir hesap oluşturmayı veya başka bir sayfayı düzenlemeyi deneyin.",
 	"mobile-frontend-editor-blocked-drawer-body-link": "Daha fazla gör",
-	"mobile-frontend-editor-blocked-drawer-reason-header": "Sebep",
+	"mobile-frontend-editor-blocked-drawer-reason-header": "Gerekçe",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Engelleyen}}",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "Engel sona erecektir",
 	"mobile-frontend-editor-blocked-drawer-help": "Ayrıntıları bakın",
