@@ -1,9 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"고솜"
+			"고솜",
+			"Whatback11"
 		]
 	},
+	"mobile-frontend-copyright": "ᄐᆞ로 명시ᄐᆞ지 않은 경우, 내용은 $1에 따라 사용ᄒᆞᆯ 수 잇수다.",
+	"mobile-frontend-terms-text": "이용 약관",
+	"mobile-frontend-view": "모바일 ᄇᆞ레기",
+	"mobile-frontend-view-desktop": "상우털",
 	"tag-mobile_edit": "모바일서 바꼬기",
 	"tag-mobile_web_edit": "모바일 웹 바꼬기"
 }

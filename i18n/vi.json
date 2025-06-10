@@ -19,7 +19,8 @@
 			"Trần Nguyễn Minh Huy",
 			"Vinhtantran",
 			"Withoutaname",
-			"පසිඳු කාවින්ද"
+			"පසිඳු කාවින්ද",
+			"Quangquy322"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Người dùng có sửa đổi qua giao diện di động hay không",
@@ -81,6 +82,7 @@
 	"mobile-frontend-editor-viewing-source-page": "<strong>Xem mã nguồn</strong><span> $1</span>",
 	"mobile-frontend-editor-wait": "Đang lưu sửa đổi, vui lòng chờ.",
 	"mobile-frontend-editor-loading": "Đang tải trình soạn thảo…",
+	"mobile-frontend-editor-toload": "Trình soạn thảo sẽ tải bây giờ. Nếu một chốc nữa thông điệp này vẫn xuất hiện, xin hãy [$1 tải lại trang].",
 	"mf-expand-sections-description": "Luôn mở rộng tất cả các phần trang theo mặc định.",
 	"mf-expand-sections-name": "Mở rộng tất cả các tiêu đề",
 	"mf-font-size-name": "Kích thước chữ",
