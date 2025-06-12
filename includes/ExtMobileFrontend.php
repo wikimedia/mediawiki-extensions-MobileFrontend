@@ -80,12 +80,12 @@ class ExtMobileFrontend {
 	 * Transforms content to be mobile friendly version.
 	 * Filters out various elements and runs the MobileFormatter.
 	 *
-	 * @param OutputPage $out
+	 * @param IContextSource $out
 	 * @param string $html to render.
 	 *
 	 * @return string
 	 */
-	public static function domParseMobile( OutputPage $out, $html = '' ) {
+	public static function domParseMobile( IContextSource $out, $html = '' ) {
 		$services = MediaWikiServices::getInstance();
 		/** @var FeaturesManager $featuresManager */
 		$featuresManager = $services->getService( 'MobileFrontend.FeaturesManager' );
