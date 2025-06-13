@@ -204,12 +204,13 @@ class LazyImageTransform implements IMobileTransform {
 
 			// T145222: Add a non-breaking space inside placeholders to ensure that they do not report
 			// themselves as invisible when inline.
-			$imgPlaceholder->appendChild( $doc->createEntityReference( 'nbsp' ) );
+			$imgPlaceholder->appendChild( $doc->createTextNode( "\u{00A0}" ) );
 
 			// Set the placeholder where the original image was
 			$parent->replaceChild( $imgPlaceholder, $img );
 			// Add the original image to the HTML only markup
-			$noscript->appendChild( $img );
+			// DOMDocument treats <noscript> as a scripting context, so we can't append Elements.
+			DOMCompat::setInnerHTML( $noscript, DOMCompat::getOuterHTML( $img ) );
 			// Insert the HTML only markup before the placeholder
 			$parent->insertBefore( $noscript, $imgPlaceholder );
 		}

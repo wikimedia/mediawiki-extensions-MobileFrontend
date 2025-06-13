@@ -1,46 +1,59 @@
 <?php
 
-use HtmlFormatter\HtmlFormatter;
 use MobileFrontend\Transforms\IMobileTransform;
 use Wikimedia\Parsoid\Utils\DOMCompat;
+use Wikimedia\Parsoid\Utils\DOMUtils;
+use Wikimedia\Parsoid\Wt2Html\XHtmlSerializer;
 
 /**
  * Converts HTML into a mobile-friendly version
  */
-class MobileFormatter extends HtmlFormatter {
+class MobileFormatter {
+
+	/** @var DOMElement */
+	private $body;
 
 	/**
 	 * @inheritDoc
 	 */
-	public function __construct( $html ) {
-		// This is specific to HtmlFormatter, decouple it from callers.
-		parent::__construct( self::wrapHTML( $html ) );
+	public function __construct( string $html ) {
+		$doc = DOMUtils::parseHTML( $html );
+		$this->body = DOMCompat::getBody( $doc );
 	}
 
 	/**
 	 * Performs various transformations to the content to make it appropriate for mobile devices.
+	 *
 	 * @param array<IMobileTransform> $transforms lit of transforms to be sequentually applied
 	 *   to html DOM
 	 */
-	public function applyTransforms( array $transforms ) {
-		$doc = $this->getDoc();
-		$body = DOMCompat::querySelector( $doc, 'body' );
-
+	public function applyTransforms( array $transforms ): void {
 		foreach ( $transforms as $transform ) {
-			$transform->apply( $body );
+			$transform->apply( $this->body );
 		}
 	}
 
 	/**
+	 * Get the serialized HTML
+	 *
+	 * @return string
+	 */
+	public function getHtml(): string {
+		// Like DOMCompat::getInnerHTML(), but disable 'smartQuote' for compatibility with
+		// ParserOutput::EDITSECTION_REGEX matching 'mw:editsection' tags (T274709)
+		return XHtmlSerializer::serialize( $this->body, [ 'innerXML' => true, 'smartQuote' => false ] )['html'];
+	}
+
+	/**
 	 * Check whether the MobileFormatter can be applied to the text of a page.
-	 * @param string $text
+	 *
 	 * @param array $options with 'maxHeadings' and 'maxImages' keys that limit the MobileFormatter
 	 *  to pages with less than or equal to that number of headings and images.
 	 * @return bool
 	 */
-	public static function canApply( $text, $options ) {
-		$headings = preg_match_all( '/<[hH][1-6]/', $text );
-		$imgs = preg_match_all( '/<img/', $text );
-		return $headings <= $options['maxHeadings'] && $imgs <= $options['maxImages'];
+	public function canApply( array $options ): bool {
+		$headings = DOMCompat::querySelectorAll( $this->body, 'h1,h2,h3,h4,h5,h6' );
+		$images = DOMCompat::querySelectorAll( $this->body, 'img' );
+		return count( $headings ) <= $options['maxHeadings'] && count( $images ) <= $options['maxImages'];
 	}
 }

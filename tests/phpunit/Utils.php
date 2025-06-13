@@ -2,6 +2,10 @@
 
 namespace MobileFrontend\Tests;
 
+use DOMElement;
+use Wikimedia\Parsoid\Utils\DOMCompat;
+use Wikimedia\Parsoid\Utils\DOMUtils;
+
 /**
  * Class with utility methods for MF tests.
  */
@@ -36,4 +40,38 @@ class Utils {
 		}
 		return implode( '.', $domainParts );
 	}
+
+	/**
+	 * @param string $html
+	 * @return DOMElement
+	 */
+	public static function createBody( string $html ): DOMElement {
+		$doc = DOMUtils::parseHTML( $html );
+		return DOMCompat::getBody( $doc );
+	}
+
+	/**
+	 * @param DOMElement $element
+	 * @return string
+	 */
+	public static function getInnerHTML( DOMElement $element ): string {
+		return DOMCompat::getInnerHTML( $element );
+	}
+
+	/**
+	 * @param string $html
+	 * @return string
+	 */
+	public static function wrapSection( string $html ): string {
+		return "<section>$html</section>";
+	}
+
+	/**
+	 * @param string $html
+	 * @return string
+	 */
+	public static function wrapParserOutput( string $html ): string {
+		return "<div class=\"mw-parser-output\">$html</div>";
+	}
+
 }

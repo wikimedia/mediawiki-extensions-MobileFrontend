@@ -1,22 +1,12 @@
 <?php
 
+use MobileFrontend\Tests\Utils;
 use MobileFrontend\Transforms\LazyImageTransform;
-use Wikimedia\Parsoid\Utils\DOMCompat;
 
 /**
  * @group MobileFrontend
  */
 class LazyImageTransformTest extends \MediaWikiUnitTestCase {
-	public static function wrap( $html ) {
-		return "<!DOCTYPE HTML>
-<html><body>$html</body></html>
-";
-	}
-
-	public static function wrapSection( $html ) {
-		return "<section>$html</section>";
-	}
-
 	/**
 	 * @param array $expected what we expect the dimensions to be.
 	 * @param string $w value of width attribute (if any)
@@ -122,20 +112,16 @@ class LazyImageTransformTest extends \MediaWikiUnitTestCase {
 	 * @covers \MobileFrontend\Transforms\LazyImageTransform::copyClasses
 	 */
 	public function testTransformFirstSection() {
-		$img = '<img src="kitty.jpg" width="500" height="400">';
+		$img = '<img src="kitty.jpg" width="500" height="400"/>';
 
 		$transform = new LazyImageTransform( false );
-		libxml_use_internal_errors( true );
-		$doc = new DOMDocument();
-
-		$doc->loadHTML( self::wrap( self::wrapSection( $img ) ) );
-		$transform->apply( DOMCompat::querySelector( $doc, 'body' ) );
+		$body = Utils::createBody( Utils::wrapSection( $img ) );
+		$transform->apply( $body );
 		$this->assertEquals(
-			self::wrap( self::wrapSection( $img ) ),
-			$doc->saveHTML(),
+			Utils::wrapSection( $img ),
+			Utils::getInnerHTML( $body ),
 			"First section should be ignored"
 		);
-		libxml_clear_errors();
 	}
 
 	/**
@@ -147,20 +133,16 @@ class LazyImageTransformTest extends \MediaWikiUnitTestCase {
 	 * @covers \MobileFrontend\Transforms\LazyImageTransform::copyClasses
 	 */
 	public function testTransformUnwrappedSection() {
-		$img = '<img src="kitty.jpg" width="500" height="400">';
+		$img = '<img src="kitty.jpg" width="500" height="400"/>';
 
 		$transform = new LazyImageTransform( false );
-		libxml_use_internal_errors( true );
-		$doc = new DOMDocument();
-
-		$doc->loadHTML( self::wrap( $img ) );
-		$transform->apply( DOMCompat::querySelector( $doc, 'body' ) );
+		$body = Utils::createBody( $img );
+		$transform->apply( $body );
 		$this->assertEquals(
-			self::wrap( $img ),
-			$doc->saveHTML(),
+			$img,
+			Utils::getInnerHTML( $body ),
 			"Unwrapped to <section> image should be ignored"
 		);
-		libxml_clear_errors();
 	}
 
 	/**
@@ -184,44 +166,42 @@ class LazyImageTransformTest extends \MediaWikiUnitTestCase {
 		string $explanation
 	) {
 		$transform = new LazyImageTransform( $skipSmallImages );
-		$doc = new DOMDocument();
-		libxml_use_internal_errors( true );
-		$doc->loadHTML( self::wrap( self::wrapSection( 'First' ) . self::wrapSection( $html ) ) );
-		$transform->apply( DOMCompat::querySelector( $doc, 'body' ) );
+		$body = Utils::createBody( Utils::wrapSection( 'First' ) . Utils::wrapSection( $html ) );
+		$transform->apply( $body );
 		$this->assertEquals(
-			self::wrap( self::wrapSection( 'First' ) . self::wrapSection( $expected ) ),
-			$doc->saveHTML(),
+			Utils::wrapSection( 'First' ) . Utils::wrapSection( $expected ),
+			Utils::getInnerHTML( $body ),
 			$explanation
 		);
-		libxml_clear_errors();
 	}
 
 	public static function provideTransform() {
-		$img = '<img src="kitty.jpg" width="500" height="400">';
+		$nbsp = "\u{00A0}";
+		$img = '<img src="kitty.jpg" width="500" height="400"/>';
 		$placeholder = '<span class="lazy-image-placeholder" style="width: 500px;height: 400px;" '
-			. 'data-mw-src="kitty.jpg" data-width="500" data-height="400">&nbsp;</span>';
+			. 'data-mw-src="kitty.jpg" data-width="500" data-height="400">' . $nbsp . '</span>';
 		$imgStyle = '<img src="bigPicture.jpg" style="vertical-align: top; '
-			. 'width: 84.412ex; height:70.343ex; background:none;">';
+			. 'width: 84.412ex; height:70.343ex; background:none;"/>';
 
 		$imgStyleBad = '<img src="bigPicture.jpg" style=" width: 84.412ex ; '
-			. ' vertical-align  :  top ;  height:70.343ex; background:   none;   ">';
+			. ' vertical-align  :  top ;  height:70.343ex; background:   none;   "/>';
 
 		$placeholderStyle = '<span class="lazy-image-placeholder" '
 			. 'style="width: 84.412ex;height: 70.343ex;vertical-align: top;" '
-			. 'data-mw-src="bigPicture.jpg">&nbsp;</span>';
-		$imgSmall = '<img src="kitty.jpg" width="5" height="5">';
+			. 'data-mw-src="bigPicture.jpg">' . $nbsp . '</span>';
+		$imgSmall = '<img src="kitty.jpg" width="5" height="5"/>';
 		$placeholderSmall = '<span class="lazy-image-placeholder" style="width: 5px;height: 5px;" '
-			. 'data-mw-src="kitty.jpg" data-width="5" data-height="5">&nbsp;</span>';
-		$imgNoAttribs = '<img src="foo.jpg">';
+			. 'data-mw-src="kitty.jpg" data-width="5" data-height="5">' . $nbsp . '</span>';
+		$imgNoAttribs = '<img src="foo.jpg"/>';
 
 		$imgWithThumbborder = '<img src="bigPicture.jpg" style="vertical-align: top; '
 			. 'width: 84.412ex; height:70.343ex; background:none;" '
-			. 'class="class thumbborder">';
+			. 'class="class thumbborder"/>';
 
 		$placeholderWithThumbborder = '<span class="lazy-image-placeholder thumbborder" '
 			. 'style="width: 84.412ex;height: 70.343ex;vertical-align: top;" '
 			. 'data-mw-src="bigPicture.jpg" '
-			. 'data-class="class thumbborder">&nbsp;</span>';
+			. 'data-class="class thumbborder">' . $nbsp . '</span>';
 
 		return [
 			[

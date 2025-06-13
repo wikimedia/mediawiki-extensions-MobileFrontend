@@ -255,9 +255,9 @@ JAVASCRIPT;
 	 * Performs html transformation that splits the body of the document into
 	 * sections demarcated by the $headings elements. Also moves the first paragraph
 	 * in the lead section above the infobox.
-	 * @param DOMElement $doc html document
+	 * @param DOMElement $node to be transformed
 	 */
-	public function apply( DOMElement $doc ) {
-		$this->makeSections( $doc, $this->getTopHeadings( $doc ) );
+	public function apply( DOMElement $node ) {
+		$this->makeSections( $node, $this->getTopHeadings( $node ) );
 	}
 }

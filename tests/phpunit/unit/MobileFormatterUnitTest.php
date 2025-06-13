@@ -11,15 +11,16 @@ class MobileFormatterUnitTest extends \MediaWikiUnitTestCase {
 	 * @dataProvider canApplyDataProvider
 	 */
 	public function testCanApply(
-		$text, $options, $expected
+		$html, $options, $expected
 	) {
-		$actual = MobileFormatter::canApply( $text, $options );
+		$formatter = new MobileFormatter( $html );
+		$actual = $formatter->canApply( $options );
 
 		$this->assertSame( $expected, $actual );
 	}
 
 	/**
-	 * Data provider for testing MobileFormatter::canApply
+	 * Data provider for testing canApply()
 	 * @return array
 	 */
 	public static function canApplyDataProvider() {

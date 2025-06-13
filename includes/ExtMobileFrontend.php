@@ -116,14 +116,14 @@ class ExtMobileFrontend {
 			&& !$shouldUseParsoid
 		);
 
+		$formatter = new MobileFormatter( $html );
+
 		// https://phabricator.wikimedia.org/T232690
-		if ( !MobileFormatter::canApply( $html, $config->get( 'MFMobileFormatterOptions' ) ) ) {
+		if ( !$formatter->canApply( $config->get( 'MFMobileFormatterOptions' ) ) ) {
 			// In future we might want to prepend a message feeding
 			// back to the user that the page is not mobile friendly.
 			return $html;
 		}
-
-		$formatter = new MobileFormatter( $html );
 
 		$hookRunner = new HookRunner( $services->getHookContainer() );
 		$hookRunner->onMobileFrontendBeforeDOM( $context, $formatter );
@@ -174,7 +174,7 @@ class ExtMobileFrontend {
 		$end = microtime( true );
 		$report = sprintf( "MobileFormatter took %.3f seconds", $end - $start );
 
-		return $formatter->getText() . "\n<!-- $report -->";
+		return $formatter->getHtml() . "\n<!-- $report -->";
 	}
 
 	/**

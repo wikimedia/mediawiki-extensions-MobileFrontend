@@ -1,7 +1,7 @@
 <?php
 
+use MobileFrontend\Tests\Utils;
 use MobileFrontend\Transforms\MakeSectionsTransform;
-use Wikimedia\Parsoid\Utils\DOMCompat;
 
 /**
  * @coversDefaultClass MobileFrontend\Transforms\MakeSectionsTransform
@@ -10,12 +10,6 @@ use Wikimedia\Parsoid\Utils\DOMCompat;
  */
 class MakeSectionsTransformTest extends MediaWikiIntegrationTestCase {
 	private const SECTION_INDICATOR = '<span class="indicator mf-icon mf-icon-expand mf-icon--small"></span>';
-
-	public static function wrap( $html ) {
-		return "<!DOCTYPE HTML>
-<html><body>$html</body></html>
-";
-	}
 
 	/**
 	 * @covers ::apply
@@ -42,13 +36,9 @@ class MakeSectionsTransformTest extends MediaWikiIntegrationTestCase {
 			[ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' ],
 			$scriptsEnabled
 		);
-		libxml_use_internal_errors( true );
-		$doc = new DOMDocument();
-		$wrapped = self::wrap( $html );
-		$doc->loadHTML( $wrapped );
-		$transform->apply( DOMCompat::querySelector( $doc, 'body' ) );
-		$this->assertEquals( self::wrap( $expected ), $doc->saveHTML(), $reason );
-		libxml_clear_errors();
+		$body = Utils::createBody( $html );
+		$transform->apply( $body );
+		$this->assertEquals( $expected, Utils::getInnerHTML( $body ), $reason );
 	}
 
 	public static function provideTransform() {
