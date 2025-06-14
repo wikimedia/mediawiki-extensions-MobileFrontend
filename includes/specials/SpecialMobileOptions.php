@@ -161,7 +161,6 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 	/**
 	 * Builds mobile user preferences field.
 	 * @return \OOUI\FieldLayout
-	 * @throws \OOUI\Exception
 	 */
 	private function buildMobileUserPreferences() {
 		$spacer = new OOUI\LabelWidget( [
