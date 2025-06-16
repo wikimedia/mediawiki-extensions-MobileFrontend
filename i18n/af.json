@@ -7,7 +7,8 @@
 			"Oesjaar",
 			"Winstonza",
 			"පසිඳු කාවින්ද",
-			"Rooiratel"
+			"Rooiratel",
+			"Pkeciy"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Tik bevestigingkode",
@@ -144,7 +145,7 @@
 	"mobile-frontend-search-feedback-link-text": "Gee asb. terugvoering aan ons",
 	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "Inleidingsparagraaf",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Lettergrootte",
-	"mobile-frontend-mobile-option-amc-learn-more": "Leer meer",
+	"mobile-frontend-mobile-option-amc-learn-more": "Meer inligting",
 	"mobile-frontend-mobile-option-amc-send-feedback": "Stuur terugvoering",
 	"mobile-frontend-amc-outreach-no-thanks": "Nee dankie",
 	"prefs-mobile": "Mobiele voorkeure"
