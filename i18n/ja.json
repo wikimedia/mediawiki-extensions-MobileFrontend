@@ -219,7 +219,7 @@
 	"mobile-frontend-amc-outreach-description": "改良版では、携帯端末で使える特別ページとして編集履歴、ウォッチリスト、最近の更新を追加、編集ツールにその他の機能を補足します。",
 	"mobile-frontend-amc-outreach-enable": "最新版を有効にする",
 	"mobile-frontend-amc-outreach-no-thanks": "いいえ、結構です",
-	"mobile-frontend-amc-outreach-enabled-message": "Advanced modeは、現在有効です。設定からオフにすることができます。",
+	"mobile-frontend-amc-outreach-enabled-message": "Advanced mode が現在有効です。設定から無効にできます。",
 	"mobile-frontend-amc-outreach-dismissed-message": "Advanced modeは、設定からいつでも有効にできます。",
 	"mobile-frontend-beta-only": "ベータモードでのみ利用可能な機能",
 	"mobile-frontend-console-recruit": "モバイルサイトの構築方法の詳細については、https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend をご覧ください。",
