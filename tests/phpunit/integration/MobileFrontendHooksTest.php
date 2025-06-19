@@ -248,6 +248,67 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
+	 * @covers MobileFrontendHooks
+	 */
+	public function testIndexPhpVaryHeader() {
+		$defaultVary = 'Vary: Accept-Encoding, Cookie';
+
+		$this->overrideConfigValues( [
+			'Server' => '//en.example.org',
+			'MFAutodetectMobileView' => false,
+			'MFEnableManifest' => false,
+			'MFEnableXAnalyticsLogging' => false,
+			'MFMobileHeader' => null,
+			'MFVaryOnUA' => false,
+			'MobileUrlCallback' => null,
+		] );
+		$out = $this->getContextSetup( null, [] )[ 'out' ];
+
+		$this->assertEquals(
+			$defaultVary,
+			$out->getVaryHeader(),
+			'unchanged when MFMobileHeader disabled and hook not called'
+		);
+
+		$this->newMobileFrontendHooks()->onMediaWikiPerformAction(
+			$out,
+			null,
+			null,
+			null,
+			$out->getRequest(),
+			null
+		);
+		$this->assertEquals(
+			$defaultVary,
+			$out->getVaryHeader(),
+			'unchanged when disabled and called'
+		);
+
+		$this->overrideConfigValues( [ 'MFMobileHeader' => 'X-Subdomain' ] );
+		$out = $this->getContextSetup( null, [] )[ 'out' ];
+
+		$this->assertEquals(
+			$defaultVary,
+			$out->getVaryHeader(),
+			'unchanged when enabled and not called'
+		);
+
+		$this->newMobileFrontendHooks()->onMediaWikiPerformAction(
+			$out,
+			null,
+			null,
+			null,
+			$out->getRequest(),
+			null
+		);
+		$this->assertEquals(
+			'Vary: Accept-Encoding, Cookie, X-Subdomain',
+			$out->getVaryHeader(),
+			'add X-Subdomain when enabled and called'
+		);
+	}
+
+	/**
 	 * @covers MobileFrontendHooks::onTitleSquidURLs
 	 */
 	public function testOnTitleSquidURLs() {
