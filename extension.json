@@ -584,7 +584,7 @@
 			}
 		},
 		"MFMobileHeader": {
-			"value": "X-Subdomain"
+			"value": null
 		},
 		"MFRemovableClasses": {
 			"description": "Selectors for elements to be removed from the HTML in content namespaces (defined in wgContentNamespaces) to save bandwidth.",

@@ -609,17 +609,16 @@ class MobileContext extends ContextSource {
 	 * Checks whether the current request is using the mobile domain.
 	 *
 	 * This assumes that some infrastructure outside MediaWiki will set a
-	 * header (specified by $wgMFMobileHeader) on requests which use the
-	 * mobile domain. This means that the traffic routing layer can rewrite
-	 * hostnames to be canonical, so non-MobileFrontend-aware code can still
-	 * work.
+	 * header (specified by $wgMFMobileHeader) on requests which should use the
+	 * mobile format. This means that the traffic routing layer can rewrite
+	 * any m-dot hostnames to be canonical, allowing non-MobileFrontend-aware
+	 * code in MediaWiki to work as-is.
 	 *
 	 * @return bool
 	 */
 	public function usingMobileDomain() {
 		$mobileHeader = $this->config->get( 'MFMobileHeader' );
-		return ( $this->hasMobileDomain()
-			&& $mobileHeader
+		return ( $mobileHeader
 			&& $this->getRequest()->getHeader( $mobileHeader ) !== false
 		);
 	}

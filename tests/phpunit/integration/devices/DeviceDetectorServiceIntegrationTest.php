@@ -91,7 +91,7 @@ class DeviceDetectorServiceIntegrationTest extends MediaWikiIntegrationTestCase 
 	public function testItShouldPrioritizeTheCustomRequestHeader() {
 		// The custom header //should// either be M or ZERO, per
 		// <https://github.com/wikimedia/operations-puppet/blob/2a2714c28eab25eed469375dc5322ea6a6ef85df/modules/varnish/templates/text-frontend.inc.vcl.erb#L74-L78>.
-
+		$this->overrideConfigValue( 'MFMobileHeader', 'X-Subdomain' );
 		$this->request->setHeader( 'X-Subdomain', 'M' );
 
 		$properties = $this->detectDeviceProperties();
