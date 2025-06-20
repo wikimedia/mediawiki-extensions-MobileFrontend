@@ -176,7 +176,9 @@ class MobileFrontendHooks implements
 	public function onRequestContextCreateSkin( $context, &$skin ) {
 		$mobileContext = $this->mobileContext;
 
+		// If mobileaction is set, save toggling cookie and do a redirect
 		$mobileContext->doToggling();
+
 		if ( !$mobileContext->shouldDisplayMobileView() ) {
 			return true;
 		}
@@ -401,6 +403,7 @@ class MobileFrontendHooks implements
 
 		// T45123: force mobile URLs only for local redirects
 		if ( $this->mobileContext->isLocalUrl( $redirect ) ) {
+			// FIXME: This should use $wgMFMobileHeader
 			$out->addVaryHeader( 'X-Subdomain' );
 			$redirect = $this->mobileContext->getMobileUrl( $redirect );
 		}

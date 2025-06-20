@@ -236,7 +236,9 @@ be collected.
 #### $wgMFMobileHeader
 
 Requests containing header with this name will be considered as coming from
-mobile devices.
+mobile devices. This header only takes effect if the current wiki has a
+dedicated mobile subdomain (as determined by $wgMobileUrlCallback being set
+and returning a different value when given $wgServer).
 
 * Type: `String`
 * Default: `'X-Subdomain'`

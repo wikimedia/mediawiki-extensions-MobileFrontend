@@ -282,7 +282,7 @@ class MobileContext extends ContextSource {
 	 * the mobile view.
 	 *
 	 * Primacy is given to the page action - we will never show mobile view
-	 * for page edits or page history. 'userformat' request param is then
+	 * for page edits or page history. 'useformat' request param is then
 	 * honored, followed by cookie settings, then actual device detection,
 	 * finally falling back on false.
 	 * @return bool
@@ -291,7 +291,7 @@ class MobileContext extends ContextSource {
 		if ( $this->mobileView !== null ) {
 			return $this->mobileView;
 		}
-		// check if we need to toggle between mobile/desktop view
+		// Compute viewChange, to toggle between mobile/desktop view
 		$this->checkToggleView();
 		$this->mobileView = $this->shouldDisplayMobileViewInternal();
 		return $this->mobileView;
@@ -686,10 +686,10 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
-	 * Performs view change as requested vy toggleView()
+	 * Set toggling cookie and redirect, as requested by toggleView()
 	 */
 	public function doToggling() {
-		// make sure viewChange is set
+		// Compute viewChange now, if not already
 		$this->shouldDisplayMobileView();
 
 		if ( !$this->viewChange ) {
