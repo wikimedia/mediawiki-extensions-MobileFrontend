@@ -4,6 +4,8 @@
 			"Sauit"
 		]
 	},
+	"mobile-frontend-copyright": "Атын ыйымматак буоллагына, ис коһооно $1 лицензияга баар.",
 	"mobile-frontend-terms-text": "Туһаныы условиялара",
-	"mobile-frontend-view": "Мобильнай биэрсийэ"
+	"mobile-frontend-view": "Мобильнай биэрсийэ",
+	"mobile-frontend-view-desktop": "Остоол биэрсийэтэ"
 }
