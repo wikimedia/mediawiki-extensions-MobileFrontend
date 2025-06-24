@@ -33,7 +33,7 @@ class ReferencesHtmlScraperGateway extends ReferencesGateway {
 			// This finds either the inner <ol class="mw-extended-references">, or the outer
 			// <ol class="references">
 			const $ol = $el.closest( 'ol' );
-			const isSubref = $ol.hasClass( 'mw-extended-references' );
+			const isSubref = $ol.hasClass( 'mw-subreference-list' );
 			if ( isSubref ) {
 				$parent = $ol.parent();
 			}
