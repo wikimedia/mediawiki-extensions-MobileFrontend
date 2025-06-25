@@ -40,7 +40,7 @@
 	"mobile-frontend-edit-signup-action": "<strong>Auta parantamaan {{GRAMMAR:partitive|{{SITENAME}}}}.</strong><br />Luo tunnus muokataksesi.",
 	"mobile-frontend-editor-anon": "Muokkaa kirjautumatta sisään",
 	"mobile-frontend-editor-anonwarning": "<strong>Varoitus:</strong> Et ole kirjautunut sisään. IP-osoitteesi tulee näkymään julkisesti, jos teet muokkauksia. Mikäli <strong>kirjaudut sisään</strong> tai <strong>luot tunnuksen</strong>, muokkauksesi yhdistetään käyttäjänimeesi ja saat paremman käyttökokemuksen.",
-	"mobile-frontend-editor-autocreatewarning": "<strong>Varoitus:</strong> Et ole kirjautunut sisään. Kun teet muokkauksen, sinulle luodaan väliaikainen tunnus. [[$1||Lisätietoja]]. <strong>Kirjaudu sisään</strong> tai <strong>luo käyttäjätunnus</strong> jatkaaksesi ilmoitusten saamista tämän tunnuksen vanhenemisen jälkeen sekä päästäksesi käyttämään muita ominaisuuksia.",
+	"mobile-frontend-editor-autocreatewarning": "<strong>Varoitus:</strong> Et ole kirjautunut sisään. Kun teet muokkauksen, sinulle luodaan tilapäinen tunnus. [[$1|Lisätietoja]]. <strong>Kirjaudu sisään</strong> tai <strong>luo käyttäjätunnus</strong> jatkaaksesi ilmoitusten saamista tämän tunnuksen vanhenemisen jälkeen sekä päästäksesi käyttämään lisäominaisuuksia.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Kirjaudu sisään",
 	"mobile-frontend-drawer-arrow-label": "Sulje",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "OK",
