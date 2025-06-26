@@ -15,6 +15,7 @@ use MediaWiki\Config\Config;
 use MediaWiki\Context\IContextSource;
 use MediaWiki\Extension\AbuseFilter\Variables\VariableHolder;
 use MediaWiki\Extension\Gadgets\GadgetRepo;
+use MediaWiki\Hook\ApiBeforeMainHook;
 use MediaWiki\Hook\LoginFormValidErrorMessagesHook;
 use MediaWiki\Hook\ManualLogEntryBeforePublishHook;
 use MediaWiki\Hook\MediaWikiPerformActionHook;
@@ -80,6 +81,7 @@ use MobileFrontend\Transforms\MakeSectionsTransform;
  */
 class MobileFrontendHooks implements
 	APIQuerySiteInfoGeneralInfoHook,
+	ApiBeforeMainHook,
 	AuthChangeFormFieldsHook,
 	RequestContextCreateSkinHook,
 	BeforeDisplayNoArticleTextHook,
@@ -403,17 +405,35 @@ class MobileFrontendHooks implements
 
 		// T45123: force mobile URLs only for local redirects
 		if ( $this->mobileContext->isLocalUrl( $redirect ) ) {
-			// FIXME: This should use $wgMFMobileHeader
-			$out->addVaryHeader( 'X-Subdomain' );
 			$redirect = $this->mobileContext->getMobileUrl( $redirect );
 		}
 	}
 
 	/**
-	 * MediaWikiPerformActionHook hook handler
+	 * This hook is called early on api.php requests.
+	 *
+	 * @param ApiMain &$main
+	 * @return void
+	 */
+	public function onApiBeforeMain( &$main ) {
+		// T390929: api.php varies on MobileContext::shouldDisplayMobileView(),
+		// based on skin involvement (e.g. api.php?action=parse&useskin),
+		// and various extension hooks (e.g. URLs returned by query modules).
+		//
+		// NOTE: This OutputPage object is discarded and replaced for ApiHelp responses,
+		// such as the /w/api.php landing page. This is fine because those are personalised
+		// and uncachable (Cache-Control: private).
+		$mobileHeader = $this->config->get( 'MFMobileHeader' );
+		if ( $mobileHeader ) {
+			$main->getOutput()->addVaryHeader( $mobileHeader );
+		}
+	}
+
+	/**
+	 * This hook is called early on index.php requests.
+	 *
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/MediaWikiPerformActionHook
 	 *
-	 * Set Diff page to diff-only mode for mobile view
 	 *
 	 * @param OutputPage $output Context output
 	 * @param Article $article Article on which the action will be performed
@@ -421,19 +441,25 @@ class MobileFrontendHooks implements
 	 * @param User $user Context user
 	 * @param WebRequest $request Context request
 	 * @param ActionEntryPoint $entryPoint
-	 * @return bool|void True or no return value to continue or false to abort
+	 * @return void
 	 */
 	public function onMediaWikiPerformAction( $output, $article, $title, $user,
 		$request, $entryPoint
 	) {
-		if ( !$this->mobileContext->shouldDisplayMobileView() ) {
-			// this code should only apply to mobile view.
-			return;
+		// T390929: index.php varies on MobileContext::shouldDisplayMobileView,
+		// especially in onRequestContextCreateSkin and onBeforePageRedirect.
+		$mobileHeader = $this->config->get( 'MFMobileHeader' );
+		if ( $mobileHeader ) {
+			$output->addVaryHeader( $mobileHeader );
 		}
 
-		// Default to diff-only mode on mobile diff pages if not specified.
-		if ( $request->getCheck( 'diff' ) && !$request->getCheck( 'diffonly' ) ) {
-			$request->setVal( 'diffonly', 'true' );
+		// Set Diff page to diff-only mode for mobile view
+		// this code should only apply to mobile view.
+		if ( $this->mobileContext->shouldDisplayMobileView() ) {
+			// Default to diff-only mode on mobile diff pages if not specified.
+			if ( $request->getCheck( 'diff' ) && !$request->getCheck( 'diffonly' ) ) {
+				$request->setVal( 'diffonly', 'true' );
+			}
 		}
 	}
 
