@@ -20,7 +20,8 @@
 			"Vinhtantran",
 			"Withoutaname",
 			"පසිඳු කාවින්ද",
-			"Quangquy322"
+			"Quangquy322",
+			"Chaiwan2009"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Người dùng có sửa đổi qua giao diện di động hay không",
@@ -32,6 +33,7 @@
 	"mobile-frontend-edit-signup-action": "<strong>Giúp cải thiện {{SITENAME}}.</strong><br />Mở tài khoản để sửa đổi.",
 	"mobile-frontend-editor-anon": "Sửa đổi ẩn danh (không đăng nhập)",
 	"mobile-frontend-editor-anonwarning": "<strong>Cảnh báo:</strong> Bạn chưa đăng nhập. Địa chỉ IP của bạn sẽ bị hiển thị công khai nếu bạn thực hiện bất kỳ sửa đổi nào. Nếu bạn <strong>đăng nhập</strong> hoặc <strong>mở tài khoản</strong>, sửa đổi của bạn sẽ được gắn với tên đăng nhập của bạn, cùng nhiều lợi ích khác.",
+	"mobile-frontend-editor-autocreatewarning": "<strong>Cảnh báo:</strong> Bạn chưa đăng nhập. Sau khi bạn chỉnh sửa, một tài khoản tạm thời sẽ được tạo cho bạn. [[$1|Tìm hiểu thêm]]. <strong>Đăng nhập</strong> hoặc <strong>tạo tài khoản</strong> để tiếp tục nhận thông báo sau khi tài khoản này hết hạn",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Đăng nhập",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "OK",
 	"mobile-frontend-editor-blocked-drawer-action-randompage": "Đưa tôi tới trang khác",
