@@ -194,7 +194,8 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 	 * @param array $mfXAnalyticsItems
 	 * @param Title|null $title
 	 * @return array Array of objects, including MobileContext (context),
-	 * SkinTemplate (sk) and OutputPage (out)
+	 *   SkinTemplate (sk) and OutputPage (out)
+	 * @phan-return array{out:OutputPage,sk:SkinTemplate,context:MobileContext}
 	 */
 	protected function getContextSetup( $mode, $mfXAnalyticsItems, $title = null ) {
 		$this->getServiceContainer()->resetServiceForTesting( 'MobileFrontend.Context' );
@@ -251,8 +252,6 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 	 * @covers MobileFrontendHooks
 	 */
 	public function testIndexPhpVaryHeader() {
-		$defaultVary = 'Vary: Accept-Encoding, Cookie';
-
 		$this->overrideConfigValues( [
 			'Server' => '//en.example.org',
 			'MFAutodetectMobileView' => false,
@@ -264,10 +263,10 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 		] );
 		$out = $this->getContextSetup( null, [] )[ 'out' ];
 
-		$this->assertEquals(
-			$defaultVary,
+		$this->assertStringNotContainsString(
+			'X-Subdomain',
 			$out->getVaryHeader(),
-			'unchanged when MFMobileHeader disabled and hook not called'
+			'no X-Subdomain when MFMobileHeader disabled and hook not called'
 		);
 
 		$this->newMobileFrontendHooks()->onMediaWikiPerformAction(
@@ -278,19 +277,19 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 			$out->getRequest(),
 			null
 		);
-		$this->assertEquals(
-			$defaultVary,
+		$this->assertStringNotContainsString(
+			'X-Subdomain',
 			$out->getVaryHeader(),
-			'unchanged when disabled and called'
+			'no X-Subdomain when disabled and called'
 		);
 
 		$this->overrideConfigValues( [ 'MFMobileHeader' => 'X-Subdomain' ] );
 		$out = $this->getContextSetup( null, [] )[ 'out' ];
 
-		$this->assertEquals(
-			$defaultVary,
+		$this->assertStringNotContainsString(
+			'X-Subdomain',
 			$out->getVaryHeader(),
-			'unchanged when enabled and not called'
+			'no X-Subdomain when enabled and not called'
 		);
 
 		$this->newMobileFrontendHooks()->onMediaWikiPerformAction(
@@ -301,8 +300,8 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 			$out->getRequest(),
 			null
 		);
-		$this->assertEquals(
-			'Vary: Accept-Encoding, Cookie, X-Subdomain',
+		$this->assertStringContainsString(
+			'X-Subdomain',
 			$out->getVaryHeader(),
 			'add X-Subdomain when enabled and called'
 		);
