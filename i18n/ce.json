@@ -50,7 +50,7 @@
 	"mobile-frontend-editor-licensing": "Хийцам Ӏалашбина, хьо реза хуьлу хьайн къинхьегам дӀасабаржо $1 {{PLURAL:$2|лицензи|лицензеш}} буха тӀехь.",
 	"mobile-frontend-editor-licensing-with-terms": "Хийцамаш дӀайазбина, ахьа $1 тӀелоцу, цул совнах реза хуьйла $2 {{PLURAL:$3|лицензица}} хьайн къинхьегам дӀайазбан.",
 	"mobile-frontend-editor-terms-link": "[$1 Лелоран биллам]",
-	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|Хьона бакъалла лаьий}} {{SITENAME}} сайтан чохь керла агӀо кхолла?",
+	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|Хьуна бакъалла а лаьий}} {{SITENAME}} сайтан тӀехь керла агӀо кхолла?",
 	"mobile-frontend-editor-placeholder": "ХӀара дакъа даьсса ду. Иза дуьзна {{GENDER:|хьалхара}} хила!",
 	"mobile-frontend-editor-placeholder-new-page": "{{SITENAME}}н сайта тӀехь керла агӀо кхуллуш ву {{GENDER:$1|хьо}}!",
 	"mobile-frontend-editor-previewing-page": "<span><strong>Хьалххе хьажар</strong> $1</span>",
