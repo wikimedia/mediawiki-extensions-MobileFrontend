@@ -6,7 +6,8 @@
 			"Ерней",
 			"Ильнар",
 			"TayfunEt.",
-			"Zolgoyo"
+			"Zolgoyo",
+			"Ильгиз"
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "төзәтмә аңлатмасы юк",
@@ -80,7 +81,7 @@
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Тема",
 	"mobile-frontend-terms-text": "Куллану шартлары",
 	"mobile-frontend-view": "Мобиль юрама",
-	"mobile-frontend-view-desktop": "Санак",
+	"mobile-frontend-view-desktop": "Компьютер версиясе",
 	"mobile-frontend-watchlist-cta-button-login": "Керү",
 	"mobile-frontend-watchlist-cta-button-signup": "Теркәлү",
 	"mobile-frontend-watchlist-filter-all": "Барысы",
