@@ -259,13 +259,13 @@ class ExtMobileFrontend {
 		$termLookup = WikibaseClient::getTermLookup();
 		try {
 			$itemId = new ItemId( $item );
-		} catch ( InvalidArgumentException $exception ) {
+		} catch ( InvalidArgumentException ) {
 			return null;
 		}
 
 		try {
 			return $termLookup->getDescription( $itemId, $contLang->getCode() );
-		} catch ( TermLookupException $exception ) {
+		} catch ( TermLookupException ) {
 			return null;
 		}
 	}

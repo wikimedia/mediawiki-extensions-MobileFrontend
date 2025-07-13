@@ -202,10 +202,9 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 	/**
 	 * Mark some html as being content
 	 * @param string $html HTML content
-	 * @param string $className additional class names
 	 * @return string of html
 	 */
-	private static function contentElement( $html, $className = '' ) {
+	private static function contentElement( $html ) {
 		return Html::rawElement( 'div', [
 			'class' => 'content'
 		], $html );

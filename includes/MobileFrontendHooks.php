@@ -1179,7 +1179,7 @@ class MobileFrontendHooks implements
 				try {
 					return $this->gadgetRepo->getGadget( $gadgetName )
 						->isEnabled( $user );
-				} catch ( \InvalidArgumentException $e ) {
+				} catch ( \InvalidArgumentException ) {
 					return false;
 				}
 			}
