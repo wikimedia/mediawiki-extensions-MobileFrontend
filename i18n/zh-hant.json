@@ -162,7 +162,7 @@
 	"mobile-frontend-last-modified-with-user-years": "{{PLURAL:$5|[$6 $2]|0=匿名使用者}}[$4 最後{{GENDER:$1|編輯}}於 {{PLURAL:$3|$3年}}前]",
 	"mobile-frontend-main-menu": "主選單",
 	"mobile-frontend-main-menu-settings-heading": "設定",
-	"mobile-frontend-media-details": "詳細資料",
+	"mobile-frontend-media-details": "詳細資訊",
 	"mobile-frontend-media-license-link": "授權條款資訊",
 	"mobile-frontend-media-load-fail-message": "載入此圖片時發生錯誤",
 	"mobile-frontend-media-load-fail-retry": "重新整理",
