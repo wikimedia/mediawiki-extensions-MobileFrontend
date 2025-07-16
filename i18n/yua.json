@@ -9,7 +9,8 @@
 			"Rousmery96",
 			"Saknicte86",
 			"Teen12",
-			"Weritabris16"
+			"Weritabris16",
+			"26agcp"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Wa wa ma' jump'éel usuario táan u editando yo'osal le interfaz móvil ( $1 )",
@@ -37,7 +38,7 @@
 	"mobile-frontend-editor-blocked-drawer-body-login-createaccount-partial": "Prueba a iniciar sesión o crear una cuenta, o prueba a editar otra página.",
 	"mobile-frontend-editor-blocked-drawer-body-link": "Il u lak’",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Beyo'",
-	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Bloqueado|Bloqueada}} por",
+	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Bloquearta'an}} tumen",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "El bloqueo caducará",
 	"mobile-frontend-editor-blocked-drawer-help": "Ver detalles",
 	"mobile-frontend-editor-generic-block-reason": "Motivo desconocido",
@@ -83,7 +84,7 @@
 	"mf-font-size-description": "Ajustar el tamaño del texto para mejorar la legibilidad",
 	"mf-font-size-small-label": "Estandáar",
 	"mf-font-size-regular-label": "Medio",
-	"mf-font-size-large-label": "Chóowák",
+	"mf-font-size-large-label": "Nojoch",
 	"mobile-frontend-generic-404-desc": "No se encontró la página que estás buscando.",
 	"mobile-frontend-generic-404-title": "Error: no se encontró la página",
 	"mobile-frontend-generic-login-new": "<strong>Personas como tú son las que construyen {{SITENAME}}.</strong><br />Regístrate para contribuir.",
