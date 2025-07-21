@@ -9,7 +9,8 @@
 			"Rousmery96",
 			"Saknicte86",
 			"Teen12",
-			"Weritabris16"
+			"Weritabris16",
+			"26agcp"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Escribe el código de confirmación",
@@ -33,7 +34,7 @@
 	"mobile-frontend-editor-blocked-drawer-body-login-createaccount-partial": "Prueba a iniciar sesión o crear una cuenta, o prueba a editar otra página.",
 	"mobile-frontend-editor-blocked-drawer-body-link": "Il u lak’",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Beyo'",
-	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Bloqueado|Bloqueada}} por",
+	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Bloquearta'an}} tumen",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "El bloqueo caducará",
 	"mobile-frontend-editor-blocked-drawer-help": "Ver detalles",
 	"mobile-frontend-editor-generic-block-reason": "Motivo desconocido",
