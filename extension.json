@@ -436,6 +436,7 @@
 		"BeforeDisplayNoArticleText": "MobileFrontendHooks",
 		"OutputPageBeforeHTML": "MobileFrontendHooks",
 		"OutputPageBodyAttributes": "MobileFrontendHooks",
+		"ResourceLoaderBeforeResponse": "MobileFrontendHooks",
 		"ResourceLoaderSiteStylesModulePages": "MobileFrontendHooks",
 		"ResourceLoaderSiteModulePages": "MobileFrontendHooks",
 		"SkinAfterBottomScripts": "MobileFrontendHooks",

@@ -49,6 +49,7 @@ use MediaWiki\RecentChanges\RecentChange;
 use MediaWiki\Registration\ExtensionRegistry;
 use MediaWiki\Request\WebRequest;
 use MediaWiki\ResourceLoader as RL;
+use MediaWiki\ResourceLoader\Hook\ResourceLoaderBeforeResponseHook;
 use MediaWiki\ResourceLoader\Hook\ResourceLoaderSiteModulePagesHook;
 use MediaWiki\ResourceLoader\Hook\ResourceLoaderSiteStylesModulePagesHook;
 use MediaWiki\ResourceLoader\ResourceLoader;
@@ -86,6 +87,7 @@ class MobileFrontendHooks implements
 	BeforeDisplayNoArticleTextHook,
 	OutputPageBeforeHTMLHook,
 	OutputPageBodyAttributesHook,
+	ResourceLoaderBeforeResponseHook,
 	ResourceLoaderSiteStylesModulePagesHook,
 	ResourceLoaderSiteModulePagesHook,
 	SkinAfterBottomScriptsHook,
@@ -425,6 +427,25 @@ class MobileFrontendHooks implements
 		$mobileHeader = $this->config->get( 'MFMobileHeader' );
 		if ( $mobileHeader ) {
 			$main->getOutput()->addVaryHeader( $mobileHeader );
+		}
+	}
+
+	/**
+	 * This hook is called early on load.php requests.
+	 *
+	 * @param RL\Context $context
+	 * @param string[] &$extraHeaders
+	 */
+	public function onResourceLoaderBeforeResponse( RL\Context $context, array &$extraHeaders ): void {
+		// T390929: load.php varies when $wgMFCustomSiteModules is enabled,
+		// through the onResourceLoaderSiteStylesModulePages and onResourceLoaderSiteModulePages
+		// hooks in this file.
+		global $wgMFMobileHeader, $wgMFCustomSiteModules;
+		if ( $wgMFMobileHeader
+			&& $wgMFCustomSiteModules
+			&& array_intersect( $context->getModules(), [ 'startup', 'site', 'site.styles' ] )
+		) {
+			$extraHeaders[] = "Vary: $wgMFMobileHeader";
 		}
 	}
 
