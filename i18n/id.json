@@ -32,12 +32,12 @@
 			"WillsonEP09"
 		]
 	},
-	"abusefilter-edit-builder-vars-user-mobile": "Menentukan apakah pengguna menyunting melalui antarmuka seluler atau tidak",
+	"abusefilter-edit-builder-vars-user-mobile": "Menentukan apakah pengguna menyunting melalui antarmuka seluler atau tidak ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "Masukkan kode konfirmasi",
 	"mobile-frontend-changeslist-nocomment": "tidak ada ringkasan suntingan",
 	"mobile-frontend-clear-search": "Kosongkan",
 	"mobile-frontend-copyright": "Konten tersedia di bawah $1 kecuali dinyatakan lain.",
-	"mobile-frontend-desc": "Mobile Frontend",
+	"mobile-frontend-desc": "Membantu tampilan ponsel situs web MediaWiki",
 	"mobile-frontend-edit-login-action": "<strong>Bantu kami meperbaiki {{SITENAME}}.</strong><br />Masuk log untuk menyunting.",
 	"mobile-frontend-edit-signup-action": "<strong>Bantu kami meperbaiki {{SITENAME}}.</strong><br />Mendaftarlah untuk menyunting.",
 	"mobile-frontend-editor-anon": "Sunting tanpa masuk log",
@@ -195,6 +195,8 @@
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Kendalikan ukuran huruf untuk pengalaman membaca Anda.",
 	"mw-mf-amc-name": "Mode lanjutan",
 	"mw-mf-amc-description": "Mode lanjutan menyediakan akses yang mudah ke halaman pembicaraan, riwayat halaman, peralatan pengguna, dan peralatan penyuntingan lainnya.",
+	"mw-mf-amc-0-label": "Dinonaktifkan",
+	"mw-mf-amc-1-label": "Diaktifkan",
 	"mobile-frontend-mobile-option-amc-learn-more": "Pelajari lebih lanjut",
 	"mobile-frontend-mobile-option-amc-send-feedback": "Kirim umpan balik",
 	"mobile-frontend-user-pref-option": "Preferensi pengguna",
