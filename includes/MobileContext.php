@@ -6,6 +6,7 @@ use MediaWiki\Context\IContextSource;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Utils\UrlUtils;
+use MobileFrontend\Amc\UserMode;
 use MobileFrontend\Devices\DeviceDetectorService;
 use MobileFrontend\WMFBaseDomainExtractor;
 
@@ -63,13 +64,13 @@ class MobileContext extends ContextSource {
 	protected $mobileAction = null;
 
 	/**
-	 * Save whether mobile view is explicitly requested
+	 * Save whether the mobile view is explicitly requested
 	 * @var bool
 	 */
 	private $forceMobileView = false;
 
 	/**
-	 * Save whether or not we should display the mobile view
+	 * Save whether we should display the mobile view
 	 * @var bool|null
 	 */
 	private $mobileView = null;
@@ -102,10 +103,7 @@ class MobileContext extends ContextSource {
 	 */
 	private $hasMobileUrl = null;
 
-	/**
-	 * @var Config
-	 */
-	private $config;
+	private Config $config;
 
 	/**
 	 * Returns the actual MobileContext Instance or create a new if no exists
@@ -195,32 +193,34 @@ class MobileContext extends ContextSource {
 	 * @return string
 	 */
 	private function getMobileMode() {
-		$enableBeta = $this->config->get( 'MFEnableBeta' );
-
-		if ( !$enableBeta ) {
+		if ( !$this->config->get( 'MFEnableBeta' ) ) {
 			return '';
 		}
-		if ( $this->mobileMode === null ) {
-			$mobileAction = $this->getMobileAction();
-			if ( $mobileAction === self::MODE_BETA || $mobileAction === self::MODE_STABLE ) {
-				$this->mobileMode = $mobileAction;
+
+		if ( $this->mobileMode !== null ) {
+			return $this->mobileMode;
+		}
+
+		$mobileAction = $this->getMobileAction();
+		if ( $mobileAction === self::MODE_BETA || $mobileAction === self::MODE_STABLE ) {
+			$this->mobileMode = $mobileAction;
+		} else {
+			$user = $this->getUser();
+			if ( !$user->isRegistered() ) {
+				$this->loadMobileModeCookie();
 			} else {
-				$user = $this->getUser();
-				if ( !$user->isRegistered() ) {
+				$userOptionManager = MediaWikiServices::getInstance()->getUserOptionsManager();
+				$mode = $userOptionManager->getOption( $user, self::USER_MODE_PREFERENCE_NAME );
+				$this->mobileMode = $mode;
+				// Edge case where preferences are corrupt or the user opted
+				// in before change.
+				if ( $mode === null ) {
+					// Should we set the user option here?
 					$this->loadMobileModeCookie();
-				} else {
-					$userOptionManager = MediaWikiServices::getInstance()->getUserOptionsManager();
-					$mode = $userOptionManager->getOption( $user, self::USER_MODE_PREFERENCE_NAME );
-					$this->mobileMode = $mode;
-					// Edge case where preferences are corrupt or the user opted
-					// in before change.
-					if ( $mode === null ) {
-						// Should we set the user option here?
-						$this->loadMobileModeCookie();
-					}
 				}
 			}
 		}
+
 		return $this->mobileMode;
 	}
 
@@ -237,12 +237,11 @@ class MobileContext extends ContextSource {
 		if ( $mode !== self::MODE_BETA ) {
 			$mode = '';
 		}
-		$services = MediaWikiServices::getInstance();
 		$this->mobileMode = $mode;
 
 		$user = $this->getUser();
 		if ( $user->getId() ) {
-			$userOptionsManager = $services->getUserOptionsManager();
+			$userOptionsManager = MediaWikiServices::getInstance()->getUserOptionsManager();
 			$userOptionsManager->setOption(
 				$user,
 				self::USER_MODE_PREFERENCE_NAME,
@@ -265,23 +264,23 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
-	 * Whether the current user is has advanced mobile contributions enabled.
+	 * Whether the current user has advanced mobile contributions enabled.
 	 * @return bool
 	 */
 	private static function isAmcUser() {
 		$services = MediaWikiServices::getInstance();
-		/** @var \MobileFrontend\Amc\UserMode $userMode */
+		/** @var UserMode $userMode */
 		$userMode = $services->getService( 'MobileFrontend.AMC.UserMode' );
 		return $userMode->isEnabled();
 	}
 
 	/**
-	 * Determine whether or not we should display the mobile view
+	 * Determine whether we should display the mobile view
 	 *
 	 * Step through the hierarchy of what should or should not trigger
 	 * the mobile view.
 	 *
-	 * Primacy is given to the page action - we will never show mobile view
+	 * Primacy is given to the page action - we will never show the mobile view
 	 * for page edits or page history. 'useformat' request param is then
 	 * honored, followed by cookie settings, then actual device detection,
 	 * finally falling back on false.
@@ -307,7 +306,7 @@ class MobileContext extends ContextSource {
 			return true;
 		}
 
-		// always display desktop or mobile view if it's explicitly requested
+		// always display the desktop or mobile view if it's explicitly requested
 		$useFormat = $this->getUseFormat();
 		if ( $useFormat == 'desktop' ) {
 			return false;
@@ -376,9 +375,6 @@ class MobileContext extends ContextSource {
 	 * @param int|null $expiry Expire time of cookie
 	 */
 	public function setStopMobileRedirectCookie( $expiry = null ) {
-		$stopMobileRedirectCookieSecureValue =
-			$this->config->get( 'MFStopMobileRedirectCookieSecureValue' );
-
 		$this->getRequest()->response()->setCookie(
 			self::STOP_MOBILE_REDIRECT_COOKIE_NAME,
 			'true',
@@ -386,7 +382,7 @@ class MobileContext extends ContextSource {
 			[
 				'domain' => $this->getStopMobileRedirectCookieDomain(),
 				'prefix' => '',
-				'secure' => (bool)$stopMobileRedirectCookieSecureValue,
+				'secure' => (bool)$this->config->get( 'MFStopMobileRedirectCookieSecureValue' ),
 			]
 		);
 	}
@@ -407,22 +403,18 @@ class MobileContext extends ContextSource {
 	 * @return string
 	 */
 	public function getStopMobileRedirectCookie() {
-		$stopMobileRedirectCookie = $this->getRequest()
+		return $this->getRequest()
 			->getCookie( self::STOP_MOBILE_REDIRECT_COOKIE_NAME, '' );
-
-		return $stopMobileRedirectCookie;
 	}
 
 	/**
-	 * This cookie can determine whether or not a user should see the mobile
+	 * This cookie can determine whether a user should see the mobile
 	 * version of a page.
 	 *
 	 * @return string|null
 	 */
 	public function getUseFormatCookie() {
-		$useFormatFromCookie = $this->getRequest()->getCookie( self::USEFORMAT_COOKIE_NAME, '' );
-
-		return $useFormatFromCookie;
+		return $this->getRequest()->getCookie( self::USEFORMAT_COOKIE_NAME, '' );
 	}
 
 	/**
@@ -431,15 +423,14 @@ class MobileContext extends ContextSource {
 	 * @return string|null
 	 */
 	public function getCookieDomain() {
-		$helper = new WMFBaseDomainExtractor();
-		return $helper->getCookieDomain( $this->config->get( 'Server' ) );
+		return ( new WMFBaseDomainExtractor() )->getCookieDomain( $this->config->get( 'Server' ) );
 	}
 
 	/**
 	 * Determine the correct domain to use for the stopMobileRedirect cookie
 	 *
 	 * Will use $wgMFStopRedirectCookieHost if it's set, otherwise will use
-	 * result of getCookieDomain()
+	 * the result of getCookieDomain()
 	 * @return string|null
 	 */
 	public function getStopMobileRedirectCookieDomain() {
@@ -457,10 +448,10 @@ class MobileContext extends ContextSource {
 	/**
 	 * Set the mf_useformat cookie
 	 *
-	 * This cookie can determine whether or not a user should see the mobile
+	 * This cookie can determine whether a user should see the mobile
 	 * version of pages.
 	 *
-	 * @param string $cookieFormat should user see mobile version of pages?
+	 * @param string $cookieFormat should user see the mobile version of pages?
 	 * @param int|null $expiry Expiration of cookie
 	 */
 	public function setUseFormatCookie( $cookieFormat = 'true', $expiry = null ) {
@@ -494,7 +485,7 @@ class MobileContext extends ContextSource {
 	 * Get the expiration time for the mf_useformat cookie
 	 *
 	 * @param int|null $startTime The base time (in seconds since Epoch) from which to calculate
-	 * 		cookie expiration. If null, time() is used.
+	 *  cookie expiration. If null, time() is used.
 	 * @param int|null $cookieDuration The time (in seconds) the cookie should last
 	 * @return int The time (in seconds since Epoch) that the cookie should expire
 	 */
@@ -509,8 +500,7 @@ class MobileContext extends ContextSource {
 			$startTime = time();
 		}
 
-		$expiry = $startTime + $cookieDuration;
-		return $expiry;
+		return $startTime + $cookieDuration;
 	}
 
 	/**
@@ -525,11 +515,9 @@ class MobileContext extends ContextSource {
 		$mobileFrontendFormatCookieExpiry =
 			$this->config->get( 'MobileFrontendFormatCookieExpiry' );
 
-		$cookieExpiration = $this->getConfig()->get( 'CookieExpiration' );
-
-		$cookieDuration = ( abs( intval( $mobileFrontendFormatCookieExpiry ) ) > 0 ) ?
-			$mobileFrontendFormatCookieExpiry : $cookieExpiration;
-		return $cookieDuration;
+		return ( abs( (int)$mobileFrontendFormatCookieExpiry ) > 0 )
+			? $mobileFrontendFormatCookieExpiry
+			: $this->getConfig()->get( 'CookieExpiration' );
 	}
 
 	/**
@@ -548,18 +536,21 @@ class MobileContext extends ContextSource {
 	 * @return bool
 	 */
 	public function hasMobileDomain(): bool {
-		if ( $this->hasMobileUrl === null ) {
-			$mobileUrlCallback = $this->getMobileUrlCallback();
-			if ( $mobileUrlCallback ) {
-				$urlUtils = MediaWikiServices::getInstance()->getUrlUtils();
-				$server = $urlUtils->expand( $this->getConfig()->get( 'Server' ), PROTO_CANONICAL ) ?? '';
-				$host = $urlUtils->parse( $server )['host'] ?? '';
-				$mobileDomain = $mobileUrlCallback( $host );
-				$this->hasMobileUrl = $mobileDomain !== $host;
-			} else {
-				$this->hasMobileUrl = false;
-			}
+		if ( $this->hasMobileUrl !== null ) {
+			return $this->hasMobileUrl;
 		}
+
+		$mobileUrlCallback = $this->getMobileUrlCallback();
+		if ( $mobileUrlCallback ) {
+			$urlUtils = MediaWikiServices::getInstance()->getUrlUtils();
+			$server = $urlUtils->expand( $this->getConfig()->get( 'Server' ), PROTO_CANONICAL ) ?? '';
+			$host = $urlUtils->parse( $server )['host'] ?? '';
+			$mobileDomain = $mobileUrlCallback( $host );
+			$this->hasMobileUrl = $mobileDomain !== $host;
+		} else {
+			$this->hasMobileUrl = false;
+		}
+
 		return $this->hasMobileUrl;
 	}
 
@@ -567,10 +558,10 @@ class MobileContext extends ContextSource {
 	 * Take a URL and return the equivalent mobile URL (ie. replace the domain with the
 	 * mobile domain).
 	 *
-	 * Typically this is a URL for the current wiki, but it can be anything as long as
+	 * Typically, this is a URL for the current wiki, but it can be anything as long as
 	 * $wgMobileUrlCallback can convert its domain (so e.g. interwiki links can be
 	 * converted). If the domain is already a mobile domain, or not recognized by
-	 * $wgMobileUrlCallback, or the wiki does not use mobile domains and so
+	 * $wgMobileUrlCallback, or the wiki does not use mobile domains, and so
 	 * $wgMobileUrlCallback is not set, the URL will be returned unchanged (except
 	 * $forceHttps will still be applied).
 	 *
@@ -601,8 +592,7 @@ class MobileContext extends ContextSource {
 			$parsedUrl['delimiter'] = '://';
 		}
 
-		$assembleUrl = UrlUtils::assemble( $parsedUrl );
-		return $assembleUrl;
+		return UrlUtils::assemble( $parsedUrl );
 	}
 
 	/**
@@ -636,8 +626,8 @@ class MobileContext extends ContextSource {
 		$parsedUrl = $urlUtils->parse( $url ) ?? [];
 		$this->updateDesktopUrlHost( $parsedUrl );
 		$this->updateDesktopUrlQuery( $parsedUrl );
-		$desktopUrl = UrlUtils::assemble( $parsedUrl );
-		return $desktopUrl;
+
+		return UrlUtils::assemble( $parsedUrl );
 	}
 
 	/**
@@ -645,14 +635,12 @@ class MobileContext extends ContextSource {
 	 * @param array &$parsedUrl Result of parseUrl() or UrlUtils::parse()
 	 */
 	protected function updateDesktopUrlHost( array &$parsedUrl ) {
-		$server = $this->getConfig()->get( 'Server' );
-
 		if ( !$this->hasMobileDomain() ) {
 			return;
 		}
 
-		$urlUtils = MediaWikiServices::getInstance()->getUrlUtils();
-		$parsedWgServer = $urlUtils->parse( $server );
+		$parsedWgServer = MediaWikiServices::getInstance()->getUrlUtils()
+			->parse( $this->getConfig()->get( 'Server' ) );
 		$parsedUrl['host'] = $parsedWgServer['host'] ?? '';
 	}
 
@@ -671,9 +659,9 @@ class MobileContext extends ContextSource {
 	/**
 	 * Toggles view to one specified by the user
 	 *
-	 * If a user has requested a particular view (eg clicked 'Desktop' from
+	 * If a user has requested a particular view (e.g. clicked 'Desktop' from
 	 * a mobile page), set the requested view for this particular request
-	 * and set a cookie to keep them on that view for subsequent requests.
+	 * and set a cookie to keep them on that view for any subsequent requests.
 	 *
 	 * @param string $view User requested particular view
 	 */
@@ -685,7 +673,7 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
-	 * Set toggling cookie and redirect, as requested by toggleView()
+	 * Set the toggling cookie and redirect, as requested by toggleView()
 	 */
 	public function doToggling() {
 		// Compute viewChange now, if not already
@@ -711,7 +699,7 @@ class MobileContext extends ContextSource {
 			// @TODO is this necessary with unsetting the cookie via JS?
 			$this->unsetStopMobileRedirectCookie();
 
-			// if no mobile domain support, set mobile cookie
+			// if no mobile domain support, set the mobile cookie
 			if ( !$this->hasMobileDomain() ) {
 				$this->setUseFormatCookie();
 			} else {
@@ -736,7 +724,7 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
-	 * Determine whether or not we need to toggle the view, and toggle it
+	 * Determine whether we need to toggle the view, and toggle it
 	 */
 	public function checkToggleView() {
 		if ( !$this->toggleViewChecked ) {
@@ -751,7 +739,7 @@ class MobileContext extends ContextSource {
 	}
 
 	/**
-	 * Determine whether or not a given URL is local
+	 * Determine whether a given URL is local
 	 *
 	 * @param string $url URL to check against
 	 * @return bool
@@ -805,16 +793,17 @@ class MobileContext extends ContextSource {
 			(string)$response->getHeader( 'X-Analytics' ) : '';
 		parse_str( preg_replace( '/; */', '&', $currentHeader ), $logItems );
 		$logItems += $this->getAnalyticsLogItems();
-		if ( count( $logItems ) ) {
-			$xanalytics_items = [];
-			foreach ( $logItems as $key => $val ) {
-				$xanalytics_items[] = urlencode( $key ) . "=" . urlencode( $val );
-			}
-			$headerValue = implode( ';', $xanalytics_items );
-			return "X-Analytics: $headerValue";
-		} else {
+		if ( !count( $logItems ) ) {
 			return false;
 		}
+
+		$items = [];
+		foreach ( $logItems as $key => $val ) {
+			$items[] = urlencode( $key ) . "=" . urlencode( $val );
+		}
+		$headerValue = implode( ';', $items );
+
+		return "X-Analytics: $headerValue";
 	}
 
 	/**
