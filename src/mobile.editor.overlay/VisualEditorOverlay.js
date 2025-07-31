@@ -170,6 +170,8 @@ class VisualEditorOverlay extends EditorOverlayBase {
 			this.$anonTalkWarning = this.createAnonTalkWarning();
 			this.$el.append( [ this.$anonTalkWarning, this.$anonWarning ] );
 			this.$el.find( '.overlay-content' ).hide();
+			// De-select the surface so most tools are disabled (T336437)
+			this.target.getSurface().getModel().setNullSelection();
 		}
 
 		this.emit( 'editor-loaded' );
