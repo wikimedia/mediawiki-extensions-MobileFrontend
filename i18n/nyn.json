@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kakonjo"
+			"Kakonjo",
+			"Owobusingye"
 		]
 	},
+	"mobile-frontend-copyright": "Ebirimu biriho ahansi ya $1 okwihaho ekirikworekwa.",
 	"mobile-frontend-terms-text": "Enkozesa",
 	"mobile-frontend-view": "Endeeba ye simu",
 	"mobile-frontend-view-desktop": "Computa muta fururwa"
