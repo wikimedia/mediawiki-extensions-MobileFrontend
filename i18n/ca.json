@@ -25,7 +25,6 @@
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si un usuari està editant a través de la interfície per a mòbils",
 	"mobile-frontend-account-create-captcha-placeholder": "Introduïu el codi de confirmació",
-	"mobile-frontend-clear-search": "Anuŀla",
 	"mobile-frontend-copyright": "El contingut està disponible sota la llicència $1 si no s'indica el contrari.",
 	"mobile-frontend-desc": "Interfície mòbil",
 	"mobile-frontend-edit-login-action": "<strong>Ajudeu a millorar el projecte {{SITENAME}}.</strong><br />Inicieu sessió per editar.",
@@ -110,9 +109,6 @@
 	"mobile-frontend-requires-title": "Pàgina no disponible",
 	"mobile-frontend-save-error": "Error en desar la configuració. Assegureu-vos que teniu les galetes activades.",
 	"mobile-frontend-save-settings": "Desa",
-	"mobile-frontend-search-content": "Buscar dins les pàgines",
-	"mobile-frontend-search-content-no-results": "<b>{{int:mobile-frontend-search-content}}</b> per veure si aquesta frase apareix a algun lloc.",
-	"mobile-frontend-search-no-results": "No hi ha cap pàgina amb aquest títol.",
 	"mobile-frontend-settings-beta": "{{SITENAME}}, versió beta",
 	"mobile-frontend-terms-text": "Condicions d'ús",
 	"mobile-frontend-view": "Versió per a mòbils",
@@ -144,8 +140,6 @@
 	"tag-mobile_web_edit": "Edició web per a mòbils",
 	"tag-mobile_web_edit-description": "Modificació feta des de lloc web per a mòbils",
 	"mobile-frontend-loading-message": "S’està carregant…",
-	"mobile-frontend-search-feedback-link-text": "Doneu-nos la vostra opinió.",
-	"mobile-frontend-search-feedback-prompt": "No heu trobat allò que cercàveu?",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Mida del text",
 	"mobile-frontend-mobile-option-amc-learn-more": "Informeu-vos-en"
 }

@@ -9,7 +9,6 @@
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Nangtukeun yén pamaké téh ngéit maké séluler atawa henteu",
 	"mobile-frontend-account-create-captcha-placeholder": "Asupkeun kodeu konfirmasi",
-	"mobile-frontend-clear-search": "Bersihkeun",
 	"mobile-frontend-copyright": "Eusi nu nyangkaruk ditangtayungan ku $1 iwal lamun disebutkeun béda.",
 	"mobile-frontend-desc": "Mobile Frontend",
 	"mobile-frontend-edit-login-action": "<strong>Bantuan kami ngaropéa {{SITENAME}}.</strong><br />Asup log pikeun ngédit.",
@@ -84,9 +83,6 @@
 	"mobile-frontend-requires-title": "Kaca teu nyangkaruk",
 	"mobile-frontend-save-error": "Kasalahan nyimpen pangaturan. Pastikeun yén anjeun geus ngahurungkeun kuki.",
 	"mobile-frontend-save-settings": "Simpen",
-	"mobile-frontend-search-content": "Paluruh na kaca",
-	"mobile-frontend-search-content-no-results": "<b>{{int:mobile-frontend-search-content}}</b> pikeun manggihan ieu frasa dimana waé.",
-	"mobile-frontend-search-no-results": "Taya kaca pikeun ieu judul.",
 	"mobile-frontend-settings-beta": "Béta",
 	"mobile-frontend-terms-text": "Katangtuan Pamakéan",
 	"mobile-frontend-view": "Pidangan sélulér",
@@ -116,7 +112,5 @@
 	"tag-mobile_web_edit": "Éditan wéb HP",
 	"tag-mobile_web_edit-description": "Éditan dijieun tina situs wéb sélulér",
 	"mobile-frontend-loading-message": "Muatkeun...",
-	"mobile-frontend-search-feedback-link-text": "Béré kami eupan balik anjeun",
-	"mobile-frontend-search-feedback-prompt": "Bisa teu manggihan nu keur ku anjeun ditéangan téh?",
 	"mobile-frontend-console-recruit": "\\o/ Héy! Ieu mangrupa pakakas lemes kodeu nembrak sarta kami perlu rélawan pikeun mantuan ngamekarkeunna, ngajadikeunna leuwih écés sarta ngabebenah kutu nu meureun anjeun manggihanna dina ieu konsol JavaScript!\n\nAnjeun bisa nyusud backlog kami @ https://phabricator.wikimedia.org/project/profile/67/"
 }

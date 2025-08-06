@@ -11,7 +11,6 @@
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Nemtokaké yèn naraguna mbesut sarana mukantara sèlulèr apa ora",
 	"mobile-frontend-account-create-captcha-placeholder": "Isinen kodhe konfirmasi",
-	"mobile-frontend-clear-search": "Busak",
 	"mobile-frontend-copyright": "Isi cumepak kanthi pangayoman $1, kajaba ana katerangan liyané.",
 	"mobile-frontend-desc": "Mukantara Punsèl",
 	"mobile-frontend-edit-login-action": "<strong>Éwangi ndandani {{SITENAME}}.</strong><br />Mlebua log saperlu ndandani.",
@@ -100,9 +99,6 @@
 	"mobile-frontend-requires-title": "Kaca ora ana",
 	"mobile-frontend-save-error": "Ana masalah nalika nyimpen setèlan. Kowé kudu ngurubaké kuki.",
 	"mobile-frontend-save-settings": "Simpen",
-	"mobile-frontend-search-content": "Golek ing sajroning kaca-kaca",
-	"mobile-frontend-search-content-no-results": "<b>{{int:mobile-frontend-search-content}}</b> saperlu ngertèni unèn-unèn iki ana ing ngendi baé.",
-	"mobile-frontend-search-no-results": "Ora ana kaca mawa sesirah iki.",
 	"mobile-frontend-settings-beta": "{{SITENAME}} βeta",
 	"mobile-frontend-terms-text": "Bebakuning Panganggo",
 	"mobile-frontend-view": "Praèn punsèl",
@@ -133,8 +129,6 @@
 	"tag-mobile_web_edit": "Besutan wèb punsèl",
 	"tag-mobile_web_edit-description": "Besutan saka situs wèb punsèl",
 	"mobile-frontend-loading-message": "Ngamot…",
-	"mobile-frontend-search-feedback-link-text": "Nyuwun sarané panjenengan.",
-	"mobile-frontend-search-feedback-prompt": "Ora nemokaké sing panjenengan golèki?",
 	"mobile-frontend-send-feedback": "Kirimi pamrayoga",
 	"mobile-frontend-mobile-option-MFLazyLoadImages-description": "Mot gambar mung nalika butuh."
 }

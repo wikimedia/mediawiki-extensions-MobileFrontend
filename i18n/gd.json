@@ -7,7 +7,6 @@
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Co-dhiù a dheasaicheas cleachdaiche leis an eadar-aghaidh inneil-làimhe gus nach deasaich",
 	"mobile-frontend-account-create-captcha-placeholder": "Cuir còd dearbhaidh a-steach",
-	"mobile-frontend-clear-search": "Falamhaich",
 	"mobile-frontend-copyright": "Tha an t-susbaint seo ri fhaighinn fo $1 mur eil an caochladh 'ga innse.",
 	"mobile-frontend-desc": "Eadar-aghaidh inneil-làimhe",
 	"mobile-frontend-edit-login-action": "<strong>Cuidich gus piseach a thoirt air {{SITENAME}}.</strong><br />Log a-steach airson deasachadh.",
@@ -74,9 +73,6 @@
 	"mobile-frontend-requires-title": "Chan eil an duilleag ri fhaighinn",
 	"mobile-frontend-save-error": "Mearachd le sàbhaladh nan roghainnean. Dèan cinnteach gu bheil briosgaidean an comas agad.",
 	"mobile-frontend-save-settings": "Sàbhail",
-	"mobile-frontend-search-content": "Lorg am broinn dhuilleagan.",
-	"mobile-frontend-search-content-no-results": "<b>{{int:mobile-frontend-search-content}}</b> feuch an nochd an abairt seo àite sam bith.",
-	"mobile-frontend-search-no-results": "Chan eil duilleag air a bheil an tiotal seo ann.",
 	"mobile-frontend-settings-beta": "Beta",
 	"mobile-frontend-terms-text": "Teirmichean a' chleachdaidh",
 	"mobile-frontend-view": "Sealladh inneil-làimhe",
@@ -107,7 +103,5 @@
 	"tag-mobile_edit-description": "Deasachadh a rinneadh o inneal-làimhe (lìon no aplacaid)",
 	"tag-mobile_web_edit": "Deasachadh-lìn inneil-làimhe",
 	"tag-mobile_web_edit-description": "Deasachadh a rinneadh on làrach inneil-làimhe",
-	"mobile-frontend-loading-message": "'Ga luchdadh...",
-	"mobile-frontend-search-feedback-link-text": "Cuir do bheachdan thugainn.",
-	"mobile-frontend-search-feedback-prompt": "Nach do lorg thu na bha thu a' sireadh?"
+	"mobile-frontend-loading-message": "'Ga luchdadh..."
 }

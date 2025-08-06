@@ -14,7 +14,6 @@
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Masukkan kod pengesahan",
-	"mobile-frontend-clear-search": "Padamkan",
 	"mobile-frontend-copyright": "Kandungan disediakan dengan $1 kecuali jika dinyatakan sebaliknya.",
 	"mobile-frontend-desc": "Mobile Frontend",
 	"mobile-frontend-edit-login-action": "Log masuk untuk menyunting.",
@@ -76,8 +75,6 @@
 	"mobile-frontend-requires-title": "Laman tiada",
 	"mobile-frontend-save-error": "Berlaku ralat ketika menyimpan tetapan. Sila pastikan bahawa anda telah menghidupkan ciri kuki.",
 	"mobile-frontend-save-settings": "Simpan",
-	"mobile-frontend-search-content": "Cari dalam teks laman",
-	"mobile-frontend-search-no-results": "Tiada laman dengan tajuk ini.",
 	"mobile-frontend-settings-tagline": "Keutamaan pembacaan",
 	"mobile-frontend-settings-beta": "Beta",
 	"mobile-frontend-terms-text": "Syarat-syarat Penggunaan",

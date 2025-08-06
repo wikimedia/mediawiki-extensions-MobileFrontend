@@ -4,7 +4,6 @@
 			"Mogoeilor"
 		]
 	},
-	"mobile-frontend-clear-search": "پاکسا کردن",
 	"mobile-frontend-copyright": "مإنۈنأ ايچو سي $1 مإن دسرسإ مأر یو کإ یأ جۈر دیأ نڤشدإ ڤابۈ.",
 	"mobile-frontend-editor-anon": "آلشدکاری کردن بی یو کاْ بیائین ڤامیٛن.",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "دلیل نیاگری",
@@ -44,8 +43,6 @@
 	"mobile-frontend-references-citation": "جادیار کردن",
 	"mobile-frontend-requires-title": "بٱلگاْ میٛن دٱسرس نی",
 	"mobile-frontend-save-settings": "کۊ کردن",
-	"mobile-frontend-search-content": "پاٛی جۊری میٛن بٱلگاْیٱل",
-	"mobile-frontend-search-no-results": "چونو بٱلگاْیی ڤا ای داسوݩ نیڌ",
 	"mobile-frontend-settings-beta": "{{SITENAME}} بتا",
 	"mobile-frontend-settings-save": "میزونکاری کۊ ڤابیڌ.",
 	"mobile-frontend-terms-text": "ڤاجإیل ب کارگرهڌني",

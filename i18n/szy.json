@@ -8,7 +8,6 @@
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "misaungayay namakay baziyoung nu mobaylu(zikecan a dinwa) mikawaway-kalumyitiay haw",
 	"mobile-frontend-account-create-captcha-placeholder": "suliten malucekay a banggu",
-	"mobile-frontend-clear-search": "palawpis",
 	"mobile-frontend-copyright": "anu izaw ku zuma buhci tu kamu, kasabelih aazihen a lacul i labu, pisaungay hamin $1 sapabeli tu kinli a ceding.",
 	"mobile-frontend-desc": "baziyoung nu mobaylu(zikecan a dinwa) nuayawan",
 	"mobile-frontend-edit-login-action": "<strong>miedap misakapah {{SITENAME}}.</strong><br />patalabu tu mikawaway-kalumyiti.",
@@ -78,9 +77,6 @@
 	"mobile-frontend-requires-mobile": "tina belih la’cus pisaungay i tinnaway a baziyong. isasa’ nu kasabelih pisapecec baziyoung nu mobaylu(zikecan a dinwa) ciwsace.",
 	"mobile-frontend-requires-title": "kasabelih la’cus misaungay",
 	"mobile-frontend-save-error": "misuped setin mungangaw. pilucekan mawawah tu kisu ku Cookies sasahicaan.",
-	"mobile-frontend-search-content": "ilabu nu kasabelih mikilim",
-	"mobile-frontend-search-content-no-results": "<b>{{int:mobile-frontend-search-content}}</b> sapiciwsac tina kamu tahkal haw i zuma kakitizaan.",
-	"mobile-frontend-search-no-results": "inayi’ kasabelih pisaungay.",
 	"mobile-frontend-settings-beta": "mitanam",
 	"mobile-frontend-terms-text": "mamaala a cedang",
 	"mobile-frontend-view": "baziyoung nu mobaylu(zikecan a dinwa) ciwsace",
@@ -108,7 +104,5 @@
 	"tag-mobile_edit-description": "pisaungay baziyoung nu mobaylu(zikecan a dinwa) nasanga’ay a mikawaway-kalumyiti (calay-bekih(wangyi) saca App)",
 	"tag-mobile_web_edit": "baziyoung nu mobaylu(zikecan a dinwa) calay-belih(wangyi) mikawaway-kalumyiti",
 	"tag-mobile_web_edit-description": "baziyoung nu mobaylu(zikecan a dinwa) calay-belih(wangyi) sami mikawaway-kalumyiti",
-	"mobile-frontend-loading-message": "miasip henay ayza…",
-	"mobile-frontend-search-feedback-link-text": "nipabeli kami nu misuay a nabalucu'an hwidubaku.",
-	"mobile-frontend-search-feedback-prompt": "cay katepa papatun a lacul nu misu?"
+	"mobile-frontend-loading-message": "miasip henay ayza…"
 }

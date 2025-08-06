@@ -24,7 +24,6 @@
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ҡатнашыусы мобиль интерфейс аша мөхәррирләйме",
 	"mobile-frontend-account-create-captcha-placeholder": "Раҫлау кодын индерергә",
-	"mobile-frontend-clear-search": "Таҙартырға",
 	"mobile-frontend-copyright": "Башҡа шарт булмаһа, $1 лицензияһына ярашлы, эстәлек менән һәр кем файҙалана ала.",
 	"mobile-frontend-desc": "Мобиль интерфейс",
 	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}} сайтын яҡшыртырға ярҙам итегеҙ.</strong><br /> Мөхәррирләү өсөн танылығыҙ.",
@@ -94,9 +93,6 @@
 	"mobile-frontend-requires-title": "Бит асылмай.",
 	"mobile-frontend-save-error": "Көйләүҙәрҙе һаҡлағанда хата сыҡты. Cookie тоҡандырылғанмы икәнлеген тикшерегеҙ.",
 	"mobile-frontend-save-settings": "Һаҡларға",
-	"mobile-frontend-search-content": "Биттәрҙә эҙләргә.",
-	"mobile-frontend-search-content-no-results": "<b>{{int:mobile-frontend-search-content}}</b> ҡайҙа булһа ла был фраза осрағанды күреү өсөн.",
-	"mobile-frontend-search-no-results": "Бындай атамалы бит юҡ.",
 	"mobile-frontend-settings-beta": "{{SITENAME}} (бета-өлгө)",
 	"mobile-frontend-terms-text": "Ҡулланыу шарттары",
 	"mobile-frontend-view": "Мобиль версия",
@@ -125,7 +121,5 @@
 	"tag-mobile_edit-description": "Мобиль ҡоролмалар аша үҙгәртеүҙәр (сайтта йәки ҡушымта аша).",
 	"tag-mobile_web_edit": "Мобиль ҡушымта аша үҙгәртеү",
 	"tag-mobile_web_edit-description": "Сайттың мобиль версияһы аша яһалған төҙәтеү.",
-	"mobile-frontend-loading-message": "Йөкләнә...",
-	"mobile-frontend-search-feedback-link-text": "Фекер яҙығыҙ",
-	"mobile-frontend-search-feedback-prompt": "Эҙләгәнегеҙҙе таба алдығыҙмы?"
+	"mobile-frontend-loading-message": "Йөкләнә..."
 }

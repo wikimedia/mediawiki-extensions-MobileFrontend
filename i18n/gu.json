@@ -15,7 +15,6 @@
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "ખાતરી કોડ દાખલ કરો",
-	"mobile-frontend-clear-search": "સાફ કરો",
 	"mobile-frontend-copyright": "અલગથી ઉલ્લેખ ન કરાયો હોય ત્યાં સુધી માહિતી $1 હેઠળ ઉપલબ્ધ છે.",
 	"mobile-frontend-desc": "મોબાઈલ દેખાવ",
 	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}} ને સુધારવા મદદ કરો.</strong><br />ફેરફાર કરવા માટે પ્રવેશ કરો.",

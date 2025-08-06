@@ -8,7 +8,6 @@
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Kpɛhimi koodi shɛli din wuhi ni bɛ saɣiti",
-	"mobile-frontend-clear-search": "Nyahibu",
 	"mobile-frontend-copyright": "Lahabali be yaɣili ŋɔ $1 gbaa yihi bɛ yi ti a tibili",
 	"mobile-frontend-desc": "Nucheebaŋ tooni",
 	"mobile-frontend-edit-login-action": "<strong>Help improve {{SITENAME}}.</strong><br />kpɛmi ka niŋ maliniŋ.",
@@ -79,7 +78,6 @@
 	"mobile-frontend-missing-image": "Anfooni",
 	"mobile-frontend-overlay-close": "Kparima",
 	"mobile-frontend-requires-title": "Paaji maa lahi kani",
-	"mobile-frontend-search-content": "Lihimi paajinima puuni",
 	"mobile-frontend-settings-tagline": "Karimbu suhuyurilim",
 	"mobile-frontend-settings-beta": "{{SITENAME}} βeta",
 	"mobile-frontend-terms-text": "Soya ni zalisi",

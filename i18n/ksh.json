@@ -7,7 +7,6 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ov ene Metmaacher övver de mobihle Schnettschtäll Änderonge aam Maache es udder nit.",
-	"mobile-frontend-clear-search": "Läddesch maache",
 	"mobile-frontend-copyright": "Dä Täx schtäjt unger dä $1 sulang nix söns jesaaat es.",
 	"mobile-frontend-desc": "Der Zohjang för Mobiljerääte",
 	"mobile-frontend-edit-login-action": "Donn ennlogge, öm jät ze verändere un et Wikki ze verbäßere.",
@@ -56,8 +55,6 @@
 	"mobile-frontend-references-citation": "Zetaht",
 	"mobile-frontend-requires-title": "Di Sigg es ni ze han.",
 	"mobile-frontend-save-settings": "Faßhallde",
-	"mobile-frontend-search-content": "En Sigge söhke",
-	"mobile-frontend-search-no-results": "Mer han kein Sigg met dä Övverschreff.",
 	"mobile-frontend-settings-beta": "Betta",
 	"mobile-frontend-terms-text": "De Bedengonge för der Jebruch",
 	"mobile-frontend-view": "Aansech om Mobiljerät",
@@ -82,7 +79,5 @@
 	"tag-mobile_edit": "Mobihl beärbeidt",
 	"tag-mobile_web_edit": "Mobihl övver et Wäb beärbeidt",
 	"mobile-frontend-loading-message": "Ben am Lahde&nbsp;…",
-	"mobile-frontend-search-feedback-link-text": "Jivv ons Ding Rökmäldong.",
-	"mobile-frontend-search-feedback-prompt": "Nit jefonge, woh De noh aam loore wohß?",
 	"mobile-frontend-console-recruit": "Heh dat sen Projramme med offe Quältäx, un mer bruche Lück, di hällfe, dat bäßer ze mahche un de Fähler ze reparehre, di mer heh em JahvaSkrepp süht.\n\nDo kanns onser onjedonn Saache fenge @ https://phabricator.wikimedia.org/project/profile/67/"
 }

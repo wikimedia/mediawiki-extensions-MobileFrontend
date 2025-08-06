@@ -9,7 +9,6 @@
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "بوکی ایشلدن موبایل اوزصفحه سی یله دَییشدیریر یا یوخ",
-	"mobile-frontend-clear-search": "تمیزله",
 	"mobile-frontend-copyright": "عکسی بللیلشدیریلمزسه، ایچینده‌کیلر $1 لیسانسی آلتیندادیلار.",
 	"mobile-frontend-editor-editing-page": "<span><strong>$1 </strong> دَییشدیریلیر</span>",
 	"mobile-frontend-editor-switch-editor": "دییشدیریجینی دَییش",
@@ -32,8 +31,6 @@
 	"mobile-frontend-missing-image": "شکیل",
 	"mobile-frontend-privacy-link-text": "شخصی حریم",
 	"mobile-frontend-save-settings": "ذخیره ائت",
-	"mobile-frontend-search-content": "صفحه‌لرده آختاریش",
-	"mobile-frontend-search-no-results": "بو عونوانلا هئچ بیر صفحه یوخدور.",
 	"mobile-frontend-settings-tagline": "اوْخوما ترجیحلری",
 	"mobile-frontend-settings-beta": "بتا",
 	"mobile-frontend-terms-text": "ایشلتمک شرطلری",

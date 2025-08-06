@@ -10,7 +10,6 @@
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "צי א באניצער טוט רעדאקטירן דורכן מאבילן אייבערפלאך",
 	"mobile-frontend-account-create-captcha-placeholder": "איינגעבן באַשטעטיקונג קאד",
-	"mobile-frontend-clear-search": "רייניקן",
 	"mobile-frontend-copyright": "דער אינהאַלט איז פֿאַראַן אונטער $1 ווען נישט באוויזן אנדערש.",
 	"mobile-frontend-desc": "מאבייל אויסשטעלונג",
 	"mobile-frontend-edit-login-action": "<strong>העלפט פארבעסערן  {{SITENAME}}.</strong>\n<br /> לאגירט אריין כדי צו רעדאקטירן.",
@@ -73,9 +72,6 @@
 	"mobile-frontend-references-citation": "ציטירונג",
 	"mobile-frontend-requires-title": "בלאט נישט דערגרייכלעך",
 	"mobile-frontend-save-settings": "אויפהיטן",
-	"mobile-frontend-search-content": "זוכן אין בלעטער",
-	"mobile-frontend-search-content-no-results": "<b>{{int:mobile-frontend-search-content}}</b> כדי צו זען צי דער אויסדרוק געפינט זיך אין ערגעץ.",
-	"mobile-frontend-search-no-results": "קיין בלאט נישט מיט דעם טיטל.",
 	"mobile-frontend-settings-beta": "{{SITENAME}} בעטע",
 	"mobile-frontend-terms-text": "ניצבאדינגונגען",
 	"mobile-frontend-view": "מאָביל־אויסשטעלונג",
@@ -99,6 +95,5 @@
 	"tag-mobile_edit-description": "רעדאַקטירט פון מאביל (וועב אדער אַפ)",
 	"tag-advanced_mobile_edit": "פֿארגעשריטענע מאביל־רעדאקטירונג",
 	"tag-mobile_web_edit": "מאביל וועב־רעדאקטירונג",
-	"mobile-frontend-loading-message": "לאָדנדיק…",
-	"mobile-frontend-search-feedback-link-text": "גיט אונז אייער פידבעק."
+	"mobile-frontend-loading-message": "לאָדנדיק…"
 }

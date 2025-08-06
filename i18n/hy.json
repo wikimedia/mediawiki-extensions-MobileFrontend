@@ -17,7 +17,6 @@
 			"Սերգեյ Սաֆարյան"
 		]
 	},
-	"mobile-frontend-clear-search": "Մաքրել",
 	"mobile-frontend-copyright": "Բովանդակությունը թողարկված է $1 թույլատրագրով, եթե այլ բան նշված չէ։",
 	"mobile-frontend-desc": "Բջջային միջերես",
 	"mobile-frontend-edit-login-action": "Օգնեք բարելավել {{SITENAME}} կայքը:</strong><br />Մուտք գործեք խմբագրելու համար:",
@@ -46,8 +45,6 @@
 	"mobile-frontend-overlay-close": "Փակել",
 	"mobile-frontend-privacy-link-text": "Գաղտնիություն",
 	"mobile-frontend-save-settings": "Պահպանել կարգավորումները",
-	"mobile-frontend-search-content": "Ընտրել էջերում",
-	"mobile-frontend-search-no-results": "Այս անվանումով էջեր չկան։",
 	"mobile-frontend-terms-text": "Օգտագործման պայմաններ",
 	"mobile-frontend-view": "Տեսքը բջջայինով",
 	"mobile-frontend-view-desktop": "Սովորական",

@@ -12,7 +12,6 @@
 			"ಮಲ್ನಾಡಾಚ್ ಕೊಂಕ್ಣೊ"
 		]
 	},
-	"mobile-frontend-clear-search": "ಅಳಿಸಿ",
 	"mobile-frontend-copyright": "ವಿಶೇಷವಾಗಿ ಟಿಪ್ಪಣಿ ಮಾಡದಿದ್ದ ಹೊರತು ಪಠ್ಯ \"$1\" ರಡಿ ಲಭ್ಯವಿದೆ.",
 	"mobile-frontend-desc": "ಮೊಬೈಲ್ ಮುನ್ನೆಲೆ",
 	"mobile-frontend-editor-anonwarning": "<strong>ಎಚ್ಚರಿಕೆ :</strong> ನೀವು ಲಾಗ್ ಇನ್ ಆಗಿಲ್ಲ. ನೀವು ಯಾವುದೇ ಸಂಪಾದನೆ ಮಾಡಿದರೆ ನಿಮ್ಮ ಐಪಿ ವಿಳಾಸವು ಸಾರ್ವಜನಿಕವಾಗಿ ಕಾಣುತ್ತದೆ. ನೀವು <strong>ಲಾಗ್ ಇನ್</strong> ಆದರೆ, ಅಥವಾ <strong>ಖಾತೆ ರಚಿಸಿದರೆ</strong>, ನಿಮ್ಮ ಸಂಪಾದನೆಗಳನ್ನು ನಿಮ್ಮ ಬಳಕೆದಾರ ಹೆಸರಿಗೆ ಕೊಡಲಾಗುವುದು, ಇನ್ನಿತರ ಅನುಕೂಲಗಳೊಂದಿಗೆ.",
@@ -49,7 +48,6 @@
 	"mobile-frontend-privacy-link-text": "ಗೋಪ್ಯತೆ",
 	"mobile-frontend-requires-title": "ಪುಟ ಲಭ್ಯವಿಲ್ಲ",
 	"mobile-frontend-save-settings": "ಉಳಿಸಿ",
-	"mobile-frontend-search-no-results": "ಈ ಶೀರ್ಷಿಕೆಯ ಯಾವುದೇ ಪುಟವಿಲ್ಲ.",
 	"mobile-frontend-settings-tagline": "ಓದುವ ಪ್ರಾಶಸ್ತ್ಯಗಳು",
 	"mobile-frontend-settings-beta": "{{SITENAME}} βeta",
 	"mobile-frontend-terms-text": "ಬಳಕೆಯ ನಿಬಂಧನೆಗಳು",
@@ -67,6 +65,5 @@
 	"tag-mobile_edit-description": "ಮೊಬೈಲಿನಿಂದ ಮಾಡಿದ ಸಂಪಾದನೆ (ವೆಬ್ ಅಥವಾ ಆ್ಯಪ್)",
 	"tag-advanced_mobile_edit": "ಮುಂದುವರೆದ ಮೊಬೈಲ್ ಸಂಪಾದನೆ",
 	"tag-mobile_web_edit": "ಮೊಬೈಲ್ ವೆಬ್ ಸಂಪಾದನೆ",
-	"mobile-frontend-search-feedback-link-text": "ನಮಗೆ ನಿಮ್ಮ ಪ್ರತಿಕ್ರಿಯೆ ಕೊಡಿ.",
 	"prefs-mobile": "ಮೊಬೈಲ್ ಪ್ರಾಶಸ್ತ್ಯಗಳು"
 }

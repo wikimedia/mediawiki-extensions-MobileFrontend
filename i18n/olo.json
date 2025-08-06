@@ -8,7 +8,6 @@
 			"Ruppijeva"
 		]
 	},
-	"mobile-frontend-clear-search": "Tyhjendä",
 	"mobile-frontend-copyright": "Syväindö on käytös licenzien $1 mugah, ei lienne toizin mainittu.",
 	"mobile-frontend-editor-cancel": "Hylgiä",
 	"mobile-frontend-editor-captcha-try-again": "Viäry koudu, opi vie kerdu.",
@@ -43,6 +42,5 @@
 	"mobile-frontend-watchlist-filter-all": "Kai",
 	"mobile-frontend-watchlist-filter-articles": "Sivut",
 	"tag-mobile_edit": "Kohendus mobil'nois laittehes",
-	"tag-mobile_web_edit": "Kohendus saitan mobilnoin versien kauti",
-	"mobile-frontend-search-feedback-link-text": "Anna meile työndyö."
+	"tag-mobile_web_edit": "Kohendus saitan mobilnoin versien kauti"
 }

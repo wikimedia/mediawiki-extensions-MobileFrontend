@@ -3,7 +3,6 @@
 		"authors": []
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "تَصدیٖقی کوڈ کٔرِو دَرٕج",
-	"mobile-frontend-clear-search": "خٲلی کٔرِو",
 	"mobile-frontend-copyright": "تَمام مَواد چھُ $1 تَحَت دٕستِیاب، اَگر کانٛہہ باقٕے اِجازَت نامہٕ چھُ نہٕ موجوٗد.",
 	"mobile-frontend-desc": "موبایِل طرٕز",
 	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}} ہٕنٛز تَرقی مَنٛز کٔرِو مَدَتھ۔</strong><br />اؠڈِٹ کَرنہٕ خٲطرٕ گٔژھِو دٲخٕل۔",
@@ -88,7 +87,6 @@
 	"mobile-frontend-references-citation": "حَوالہٕ",
 	"mobile-frontend-requires-title": "صَفہٕ چھُنہٕ دٕستِیاب",
 	"mobile-frontend-save-settings": "مَحفوٗظ",
-	"mobile-frontend-search-content": "صَفَن مَنٛز کٔرِو تَلاش",
 	"mobile-frontend-settings-beta": "{{SITENAME}} آزمٲیش",
 	"mobile-frontend-settings-save": "طَرٕز آو مَحفوٗظ کَرنہٕ.",
 	"mobile-frontend-terms-text": "اِستِمالٕک شَرٕط",

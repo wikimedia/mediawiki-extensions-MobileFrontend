@@ -9,7 +9,6 @@
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "رازینه پشت راسگری نه وارد كو",
-	"mobile-frontend-clear-search": "پاك كردن",
 	"mobile-frontend-copyright": "مینونه ها د دسرس سی $1 مر وه شلک هنی نوشته بوئه",
 	"mobile-frontend-edit-login-action": "اومائن د سیستم سی ویرایشت",
 	"mobile-frontend-edit-signup-action": "ثوت نام کردن سی ویرایشت",
@@ -52,8 +51,6 @@
 	"mobile-frontend-requires-mobile": "ای بلگه د میزکار دیار نئ. لطف بکیت د تیه دیاری موبایل که دگمه بلگه هوم پیوند بیه بپورنیت.",
 	"mobile-frontend-requires-title": "بلگه د دسرس نئ",
 	"mobile-frontend-save-settings": "اماییه كردن",
-	"mobile-frontend-search-content": "پی جوری مینجا بلگیا",
-	"mobile-frontend-search-no-results": "چنی بلگه ای وا ای داسون نئ.",
 	"mobile-frontend-settings-beta": "بتا",
 	"mobile-frontend-terms-text": "کلیمه یا وه کار گرتنی",
 	"mobile-frontend-view": "ديئن موبایلی",

@@ -10,7 +10,6 @@
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si n'utente sta cagnanno pe' bbìa 'e ll'interfaccia p' 'aparecchie mobbele",
 	"mobile-frontend-account-create-captcha-placeholder": "Miette 'u codece 'e cunferma",
-	"mobile-frontend-clear-search": "Pulezza",
 	"mobile-frontend-copyright": "Cuntenute suggiette a licienza 'e auso $1 se nun fuje ritto atro.",
 	"mobile-frontend-desc": "Nterfaccia d' 'o mobbile",
 	"mobile-frontend-edit-login-action": "<strong>Aiutate a migliurà {{SITENAME}}.</strong><br />Trasite pe' putè cagnà.",
@@ -77,9 +76,6 @@
 	"mobile-frontend-requires-title": "Paggena ca nun se tròva",
 	"mobile-frontend-save-error": "Errore a sarvà 'e mpustziune. Assicurateve d'avé 'e cookie abbiate.",
 	"mobile-frontend-save-settings": "Sarva",
-	"mobile-frontend-search-content": "Ascià dint' 'e paggene",
-	"mobile-frontend-search-content-no-results": "<b>{{int:mobile-frontend-search-content}}</b> pe' vedè si sta frase cumpare pe' tutt' 'e parte.",
-	"mobile-frontend-search-no-results": "Nisciuna paggena cu stu titolo.",
 	"mobile-frontend-settings-beta": "Beta",
 	"mobile-frontend-terms-text": "Cundiziune d'uso",
 	"mobile-frontend-view": "Vista p''o cellulare",
@@ -109,7 +105,5 @@
 	"tag-mobile_web_edit": "Cagnamiento web pe cellulare",
 	"tag-mobile_web_edit-description": "Cagnamiento fatto 'a na web pe ll'apparicchie mobbele",
 	"mobile-frontend-loading-message": "Carrecanno...",
-	"mobile-frontend-search-feedback-link-text": "Datece nu feedback.",
-	"mobile-frontend-search-feedback-prompt": "Nun avite truvato cosa jateve truvanno?",
 	"mobile-frontend-console-recruit": "\\o/ Uè! Chist'è nu software open source e nce serveno sempe vuluntarie pe' ce aiutà a fravecà stu coso, 'o facimmo meglio e accunciammo sempe tutt' 'e nguacchie ca se tròvano, pure chilli ca vuje putisseve vedé dint'a sta cunzola JavaScript!\n\nPutite truvà 'o riggistro arreto nuosto ccà @ https://phabricator.wikimedia.org/project/profile/67/"
 }

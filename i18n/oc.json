@@ -7,7 +7,6 @@
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Entratz lo còdi de confirmacion",
-	"mobile-frontend-clear-search": "Escafar",
 	"mobile-frontend-copyright": "Lo contengut es disponible jos licéncia $1 levat mencion contrària.",
 	"mobile-frontend-desc": "Afichatge mobil",
 	"mobile-frontend-editor-anon": "Edicion sens obrir una session",
@@ -23,9 +22,6 @@
 	"mobile-frontend-missing-image": "Imatge",
 	"mobile-frontend-overlay-close": "Tampar",
 	"mobile-frontend-privacy-link-text": "Confidencialitat",
-	"mobile-frontend-search-content": "Cercar dins las paginas",
-	"mobile-frontend-search-content-no-results": "<b>{{int:mobile-frontend-search-content}}</b> per veire se la frasa mencionada aparéis dins una pagian.",
-	"mobile-frontend-search-no-results": "Non i a cap de pagina amb aqueste títol.",
 	"mobile-frontend-settings-beta": "Bèta",
 	"mobile-frontend-terms-text": "Condicions d'utilizacion",
 	"mobile-frontend-view": "Afichatge mobil",

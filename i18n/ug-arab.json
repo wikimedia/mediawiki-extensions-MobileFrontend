@@ -11,7 +11,6 @@
 			"چۈشكۈن"
 		]
 	},
-	"mobile-frontend-clear-search": "تازىلا",
 	"mobile-frontend-copyright": "خاتىرىلەنگەندىن باشقا تېكست مەزمۇنى $1 ماددىسىغا ئاساسەن تەمىنلىنىدۇ.",
 	"mobile-frontend-editor-anon": "تىزىملىتىپ كىرمەي تەھرىرلەڭ",
 	"mobile-frontend-editor-anonwarning": "<strong>ئەسكەرتىش:</strong> سىز تىزىملاپ كىرمىدىڭىز. IP ئادرېسىڭىزنى تەھرىرلىسىڭىز ئاشكارا كۆرۈنىدۇ. ئەگەردە<strong>تىزىملاپ كىرسىڭىز</strong> ياكى <strong> ھېسابات قۇرسىڭىز</strong>، تەھرىرلىگىڭىز باشقا پايدىلار بىلەن بىللە ئىشلەتكۈچى ئىسمىڭىزغا باغلىنىدۇ.",
@@ -79,9 +78,6 @@
 	"mobile-frontend-overlay-close": "ياپ",
 	"mobile-frontend-privacy-link-text": "شەخسىي سىر",
 	"mobile-frontend-save-settings": "ساقلا",
-	"mobile-frontend-search-content": "بەتلەردىن ئىزدەڭ",
-	"mobile-frontend-search-content-no-results": "<b>{{int:mobile-frontend-search-content}}</b> بۇ جۈملىنىڭ قەيەردە كۆرۈنگەنلىكىنى كۆرۈش.",
-	"mobile-frontend-search-no-results": "بۇ ماۋزۇ بار بەت يوق.",
 	"mobile-frontend-settings-save": "تەڭشەكلەر ساقلاندى.",
 	"mobile-frontend-terms-text": "ئىشلىتىش شەرتلىرى",
 	"mobile-frontend-view": "يان تېلېفون كۆرۈنۈشى",
@@ -106,7 +102,6 @@
 	"tag-mobile_web_edit": "يانفون بېتىنى تەھرىرلەش",
 	"tag-mobile_web_edit-description": "كۆچمە تور بېكەتتىن تەھرىرلەش",
 	"mobile-frontend-loading-message": "يۈكلىنۋاتىدۇ…",
-	"mobile-frontend-search-feedback-link-text": "تەكلىپ-پىكىرلىرىڭىزنى بېرىڭ.",
 	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions": "تەسۋىرلەپ يېزىڭ",
 	"mobile-frontend-send-feedback": "تەكلىپ-پىكىر ئەۋەتىڭ",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "خەت چوڭلۇقى",

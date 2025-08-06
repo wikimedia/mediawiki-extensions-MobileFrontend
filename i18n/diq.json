@@ -13,7 +13,6 @@
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Kodê tesdiqi cı de",
-	"mobile-frontend-clear-search": "Pak ke",
 	"mobile-frontend-copyright": "Zerrekê cı bınê $1 de qeyd biyo.",
 	"mobile-frontend-desc": "Vergılo mobil",
 	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}}'i vıraşten rë marë desteg bë.</strong><br />Qandë vurnayışi cı kewë",
@@ -57,8 +56,6 @@
 	"mobile-frontend-privacy-link-text": "Nımıtış",
 	"mobile-frontend-references-citation": "Vate",
 	"mobile-frontend-save-settings": "Qeyd ke",
-	"mobile-frontend-search-content": "Şıma miyanê riperran ra bıgeyrê",
-	"mobile-frontend-search-no-results": "Be nê sernamey ra yew pele çıniya.",
 	"mobile-frontend-settings-beta": "{{SITENAME}} βeta",
 	"mobile-frontend-settings-save": "Eyari qeyd biyê",
 	"mobile-frontend-terms-text": "Şertê gurenayışi",

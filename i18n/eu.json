@@ -11,7 +11,6 @@
 			"පසිඳු කාවින්ද"
 		]
 	},
-	"mobile-frontend-clear-search": "Garbitu",
 	"mobile-frontend-copyright": "Eduki guztia $1(r)en babespean dago, ez bada kontrakoa esaten.",
 	"mobile-frontend-editor-anon": "Editatu saioa hasi gabe",
 	"mobile-frontend-editor-cancel": "Utzi",
@@ -44,6 +43,5 @@
 	"tag-mobile_edit": "Mugikor edizioa",
 	"tag-mobile_web_edit": "Mugikor web edizioa",
 	"mobile-frontend-loading-message": "Kargatzen...",
-	"mobile-frontend-search-feedback-link-text": "Egiguzu iruzkina.",
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Letra-tamaina"
 }

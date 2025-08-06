@@ -10,7 +10,6 @@
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Nzirisci lu còdici di cunfirma",
-	"mobile-frontend-clear-search": "Scancella",
 	"mobile-frontend-copyright": "U cuntinutu è dispunìbbili ê senzi dâ licenza $1, abbestra ca nun cc'è scrittu a n'autra manera.",
 	"mobile-frontend-desc": "Ajuta a migghiurari la prisenza mòbbili di n'istanza MediaWiki",
 	"mobile-frontend-editor-anon": "Cancia senza trasiri",
@@ -59,7 +58,6 @@
 	"mobile-frontend-references-citation": "Citazzioni",
 	"mobile-frontend-requires-title": "Pàggina nun dispunìbbili",
 	"mobile-frontend-save-settings": "Sarva",
-	"mobile-frontend-search-no-results": "Nuḍḍa pàggina cu stu tìtulu.",
 	"mobile-frontend-settings-beta": "{{SITENAME}} βeta",
 	"mobile-frontend-settings-save": "Li mpustazzioni foru sarvati.",
 	"mobile-frontend-terms-text": "Cunnizzioni d'usu",
