@@ -4,7 +4,8 @@
 			"H78c67c",
 			"SCP-2000",
 			"Winston Sung",
-			"Yueman"
+			"Yueman",
+			"Ktchankt"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "用戶係咪用流動版介面編輯（$1）",
@@ -14,7 +15,7 @@
 	"mobile-frontend-desc": "幫手改善MediaWiki響流動裝置嘅顯示效果",
 	"mobile-frontend-edit-login-action": "<strong>幫手改善{{SITENAME}}。</strong><br />簽到後就可以改文。",
 	"mobile-frontend-edit-signup-action": "<strong>幫手改善{{SITENAME}}。</strong><br />開戶口後就可以改文。",
-	"mobile-frontend-editor-anon": "唔登入就改",
+	"mobile-frontend-editor-anon": "唔簽到就改",
 	"mobile-frontend-editor-anonwarning": "<strong>警告</strong>：你未簽到。如果你進行任何編輯，你嘅IP地址就會被公開。如果你<strong>簽到</strong>或者<strong>開戶口</strong>，你嘅編輯將會用你個用戶名標示，仲有其他好處。",
 	"mobile-frontend-editor-autocreatewarning": "<strong>警告：</strong>你冇登入到。當你一作出修改，系統會開個臨時戶口畀你。[[$1|知多啲]]。想喺呢個戶口過期之後繼續收到通知，並解鎖更多功能嘅話，請<strong>登入</strong>或<strong>開返個戶口</strong>。",
 	"mobile-frontend-editor-blocked-drawer-action-login": "簽到",
