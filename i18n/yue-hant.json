@@ -41,7 +41,7 @@
 	"mobile-frontend-editor-captcha-try-again": "錯嘅驗證碼，請再試過。",
 	"mobile-frontend-editor-continue": "下個",
 	"mobile-frontend-editor-disabled": "呢版為咗防止破壞而保護住。[$1 睇原始碼]",
-	"mobile-frontend-editor-disabled-anon": "你要登入咗先可以改呢版。",
+	"mobile-frontend-editor-disabled-anon": "你要簽到咗先可以改呢版。",
 	"mobile-frontend-editor-editing": "編輯緊",
 	"mobile-frontend-editor-editing-page": "<span><strong>編輯緊</strong>$1</span>",
 	"mobile-frontend-editor-error": "錯誤，修改冇發佈到。",
