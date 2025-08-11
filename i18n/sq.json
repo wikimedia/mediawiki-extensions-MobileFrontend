@@ -7,7 +7,8 @@
 			"Kosovastar",
 			"Liridon",
 			"Olsi",
-			"INNERLMNT"
+			"INNERLMNT",
+			"Xhulianoo"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Vendos kodin e konfirmimit",
@@ -37,7 +38,7 @@
 	"mobile-frontend-talk-add-overlay-submit": "Shto diskutimin",
 	"mobile-frontend-talk-topic-wait": "Duke ruajtur temën tuaj të re, ju lutemi të prisni.",
 	"mobile-frontend-terms-text": "Kushtet e Përdorimit",
-	"mobile-frontend-view": "Për celular",
+	"mobile-frontend-view": "Pamja për celular",
 	"mobile-frontend-view-desktop": "Desktopi",
 	"tag-mobile_edit": "Redaktim nga celulari",
 	"tag-mobile_web_edit": "Redaktim në versionin web nga celulari"

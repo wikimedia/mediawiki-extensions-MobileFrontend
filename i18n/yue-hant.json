@@ -4,7 +4,8 @@
 			"Winston Sung",
 			"H78c67c",
 			"Yueman",
-			"SCP-2000"
+			"SCP-2000",
+			"Ktchankt"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "輸入確認碼",
@@ -15,7 +16,7 @@
 	"mobile-frontend-diffview-title": "改動",
 	"mobile-frontend-edit-login-action": "<strong>幫手改善{{SITENAME}}。</strong><br />簽到後就可以改文。",
 	"mobile-frontend-edit-signup-action": "<strong>幫手改善{{SITENAME}}。</strong><br />開戶口後就可以改文。",
-	"mobile-frontend-editor-anon": "唔登入就改",
+	"mobile-frontend-editor-anon": "唔簽到就改",
 	"mobile-frontend-editor-anonwarning": "<strong>警告</strong>：你未簽到。如果你進行任何編輯，你嘅IP地址就會被公開。如果你<strong>簽到</strong>或者<strong>開戶口</strong>，你嘅編輯將會用你個用戶名標示，仲有其他好處。",
 	"mobile-frontend-editor-blocked-drawer-action-login": "簽到",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "得",
@@ -40,7 +41,7 @@
 	"mobile-frontend-editor-captcha-try-again": "錯嘅驗證碼，請再試過。",
 	"mobile-frontend-editor-continue": "下個",
 	"mobile-frontend-editor-disabled": "呢版為咗防止破壞而保護住。[$1 睇原始碼]",
-	"mobile-frontend-editor-disabled-anon": "你要登入咗先可以改呢版。",
+	"mobile-frontend-editor-disabled-anon": "你要簽到咗先可以改呢版。",
 	"mobile-frontend-editor-editing": "編輯緊",
 	"mobile-frontend-editor-editing-page": "<span><strong>編輯緊</strong>$1</span>",
 	"mobile-frontend-editor-error-conflict": "錯誤，第位用戶改過呢版。",

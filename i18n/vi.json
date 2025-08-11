@@ -21,7 +21,8 @@
 			"පසිඳු කාවින්ද",
 			"CactiStaccingCrane",
 			"Quangquy322",
-			"Chaiwan2009"
+			"Chaiwan2009",
+			"Nvdtn19"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Người dùng có sửa đổi qua giao diện di động hay không",
@@ -49,10 +50,10 @@
 	"mobile-frontend-editor-blocked-drawer-action-login": "Đăng nhập",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "OK",
 	"mobile-frontend-editor-blocked-drawer-action-randompage": "Đưa tôi tới trang khác",
-	"mobile-frontend-editor-blocked-drawer-title": "Bạn đã bị cấm không được sửa đổi {{SITENAME}}.",
-	"mobile-frontend-editor-blocked-drawer-title-partial": "Bạn đã bị cấm không được sửa đổi trang này.",
-	"mobile-frontend-editor-blocked-drawer-title-ip": "Địa chỉ IP của bạn đã bị cấm không được sửa đổi {{SITENAME}}.",
-	"mobile-frontend-editor-blocked-drawer-title-ip-partial": "Địa chỉ IP của bạn đã bị cấm không được sửa đổi trang này.",
+	"mobile-frontend-editor-blocked-drawer-title": "Rất tiếc, bạn đã bị cấm không được sửa đổi {{SITENAME}}.",
+	"mobile-frontend-editor-blocked-drawer-title-partial": "Rất tiếc, bạn đã bị cấm không được sửa đổi trang này.",
+	"mobile-frontend-editor-blocked-drawer-title-ip": "Rất tiếc, địa chỉ IP của bạn đã bị cấm không được sửa đổi {{SITENAME}}.",
+	"mobile-frontend-editor-blocked-drawer-title-ip-partial": "Rất tiếc, địa chỉ IP của bạn đã bị cấm không được sửa đổi trang này.",
 	"mobile-frontend-editor-blocked-drawer-body-partial": "Thử sửa đổi trang khác.",
 	"mobile-frontend-editor-blocked-drawer-body-login": "Thử đăng nhập nếu bạn có tài khoản.",
 	"mobile-frontend-editor-blocked-drawer-body-login-partial": "Thử đăng nhập nếu bạn có tài khoản, hoặc thử sửa đổi trang khác.",
@@ -68,7 +69,7 @@
 	"mobile-frontend-editor-cancel-confirm": "Bạn có thực sự muốn từ bỏ sửa đổi của bạn?",
 	"mobile-frontend-editor-captcha-try-again": "Mã sai, hãy thử lại.",
 	"mobile-frontend-editor-continue": "Tiếp",
-	"mobile-frontend-editor-disabled": "Trang này bị khóa để ngừa phá hoại. [$1 Xem mã nguồn]",
+	"mobile-frontend-editor-disabled": "Trang này đã bị khóa để tránh phá hoại. [$1 Xem mã nguồn]",
 	"mobile-frontend-editor-disabled-anon": "Bạn cần phải đăng nhập để sửa trang này.",
 	"mobile-frontend-editor-editing": "Sửa đổi",
 	"mobile-frontend-editor-editing-page": "<span><strong>Sửa đổi</strong> $1</span>",
