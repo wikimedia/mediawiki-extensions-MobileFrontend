@@ -29,7 +29,6 @@ class Button extends View {
 	 * @mixes module:mobile.startup/View#defaults
 	 * @property {Object} defaults Default options hash.
 	 * @property {string} defaults.tagName The name of the tag in which the button is wrapped.
-	 * @property {boolean} defaults.block is stacked button
 	 * @property {boolean} defaults.progressive is progressive action
 	 * @property {boolean} defaults.quiet is quiet button
 	 * @property {boolean} defaults.destructive is destructive action
@@ -42,7 +41,6 @@ class Button extends View {
 		return {
 			tagName: 'a',
 			disabled: false,
-			block: undefined,
 			progressive: undefined,
 			destructive: undefined,
 			quiet: undefined,
@@ -71,9 +69,6 @@ class Button extends View {
 		let weight = this.options.quiet ? 'quiet' : 'normal';
 		if ( this.options.progressive || this.options.destructive ) {
 			weight = 'primary';
-		}
-		if ( this.options.block ) {
-			this.options.additionalClassNames += ' mf-button-block';
 		}
 		const options = util.extend( {
 			weight,
