@@ -81,8 +81,7 @@ function referenceDrawer( props ) {
 							} ).$el,
 							util.parseHTML( '<span>' ).addClass( 'references-drawer__title' ).text( mw.msg( 'mobile-frontend-references-citation' ) ),
 							icons.cancel( 'gray', {
-								isSmall: true,
-								additionalClassNames: 'mf-button-flush-right'
+								isSmall: true
 							} ).$el
 						] ),
 

@@ -1,33 +1,5 @@
 @import 'mediawiki.skin.variables.less';
 @import 'mediawiki.mixins.less';
-/* stylelint-disable no-descending-specificity */
-
-// Used to center the contents of buttons, i.e. section collapse buttons
-.cdx-button {
-	.mf-icon + span:not( :empty ) {
-		margin-left: 8px;
-	}
-}
-
-.mf-button-flush-left {
-	&.cdx-button {
-		.cdx-mixin-button-layout-flush( 'start', true );
-	}
-
-	&.cdx-button--size-large {
-		.cdx-mixin-button-layout-flush( 'start', true, 'large' );
-	}
-}
-
-.mf-button-flush-right {
-	&.cdx-button {
-		.cdx-mixin-button-layout-flush( 'end', true );
-	}
-
-	&.cdx-button--size-large {
-		.cdx-mixin-button-layout-flush( 'end', true, 'large' );
-	}
-}
 
 // TODO: Replace with Codex Button group
 // Extra specificity so that it overrides .cdx-button--fake-button rules.

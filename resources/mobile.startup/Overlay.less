@@ -10,9 +10,9 @@
 		display: block;
 	}
 
-	.overlay,
 	/* stylelint-disable-next-line selector-max-id */
-	#mw-mf-page-center {
+	#mw-mf-page-center,
+	.overlay {
 		// use height instead of bottom 0 so that overlay expands when there's
 		// more content, don't use min-height because of
 		// http://stackoverflow.com/questions/3808512/the-inherited-height-of-a-child-div-from-a-parent-with-a-min-height-attribute
@@ -144,6 +144,21 @@
 	}
 }
 
+.overlay-footer-container {
+	background-color: @background-color-base;
+	bottom: 0;
+	border-top: @border-subtle;
+
+	a {
+		display: block;
+		// The 1em bottom whitespace is applied as padding since Chrome and Safari ignore
+		// it otherwise. The 10px padding corresponds with the icon margin.
+		padding: 1em 1em 1em 10px;
+		line-height: 1em;
+		text-align: center;
+	}
+}
+
 .overlay-header {
 	.overlay-title {
 		// Expand the title as wide as possible to limit the size of the
@@ -198,8 +213,8 @@
 	}
 }
 
-.overlay-header-container,
-.overlay-footer-container {
+.overlay-footer-container,
+.overlay-header-container {
 	width: 100%;
 	background: @background-color-base;
 	// prevent .mw-mf-page-list or VE surface overlaping the header when scrolling
@@ -218,21 +233,6 @@
 
 .overlay-header-container {
 	top: 0;
-}
-
-.overlay-footer-container {
-	background-color: @background-color-base;
-	bottom: 0;
-	border-top: @border-subtle;
-
-	a {
-		display: block;
-		// The 1em bottom whitespace is applied as padding since Chrome and Safari ignore
-		// it otherwise. The 10px padding corresponds with the icon margin.
-		padding: 1em 1em 1em 10px;
-		line-height: 1em;
-		text-align: center;
-	}
 }
 
 // Bottom Overlays
