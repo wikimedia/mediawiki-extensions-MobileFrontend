@@ -42,7 +42,8 @@
 			"Vito Genovese",
 			"Watermelon juice",
 			"Zolgoyo",
-			"Wooze"
+			"Wooze",
+			"Gadir"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Bir kullanıcının mobil arayüz üzerinden değişiklik yapıp yapmadığı ($1)",
@@ -93,7 +94,7 @@
 	"mobile-frontend-editor-terms-link": "[$1 Kullanım Şartları]",
 	"mobile-frontend-editor-new-page-confirm": "{{SITENAME}} sitesinde yeni bir sayfa {{GENDER:$1|oluşturmak istediğinizden emin misiniz}}?",
 	"mobile-frontend-editor-placeholder": "Bu bölüm boş. İlk genişleten siz olun!",
-	"mobile-frontend-editor-placeholder-new-page": "{{SITENAME}} sitesinde yeni bir sayfa {{GENDER:$1|oluşturuyorsunuz}}!",
+	"mobile-frontend-editor-placeholder-new-page": "Siz yeni bir {{SITENAME}} sayfası {{GENDER:$1|oluşturuyorsunuz}}!",
 	"mobile-frontend-editor-previewing-page": "<span>$1 <strong>sayfasını önizleniyor</strong></span>",
 	"mobile-frontend-editor-publish": "Yayımla",
 	"mobile-frontend-editor-save": "Kaydet",
