@@ -30,7 +30,7 @@
 	"mobile-frontend-last-modified-with-user-months": "[$4 أخر تعديل لهاد صفحة {{GENDER:$1|دارو|دارتو}}]  {{PLURAL:$5|[$6 $2]|0=خدايمي مجهول}} هادي {{PLURAL:$3|شهر واحد|شهرين|$3 أشهر|$3شهراً|$3 شهر}}",
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 أخر تعديل لهاد صفحة {{GENDER:$1|دارو|دارتو}}]  {{PLURAL:$5|[$6 $2]|0=خدايمي مجهول}} هادي {{PLURAL:$3|تانية وحدة|تانيتين|$3 توان|$3 تانية}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 أخر تعديل لهاد صفحة {{GENDER:$1|دارو|دارتو}}]  {{PLURAL:$5|[$6 $2]|0=خدايمي مجهول}} هادي {{PLURAL:$3|عام|عاماين|$3 سنين|$3 لعام}}",
-	"mobile-frontend-terms-text": "شروط تخدام",
+	"mobile-frontend-terms-text": "شروط التخدام",
 	"mobile-frontend-view": "ڤيرسيون موبيل",
 	"mobile-frontend-view-desktop": "ڤيرسيون د پيسي",
 	"mobile-frontend-watchlist-cta-button-signup": "دير كونط",
