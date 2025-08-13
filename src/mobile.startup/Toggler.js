@@ -47,7 +47,7 @@ class Toggler {
 	 */
 	isCollapsedByDefault() {
 		if ( this._isCollapsedByDefault === undefined ) {
-			// Thess classes override site settings and user preferences. For example:
+			// These classes override site settings and user preferences. For example:
 			// * ...-collapsed used on talk pages by DiscussionTools. (T321618, T322628)
 			// * ...-expanded used in previews (T336572)
 			const $override = this.$container.closest( '.collapsible-headings-collapsed, .collapsible-headings-expanded' );

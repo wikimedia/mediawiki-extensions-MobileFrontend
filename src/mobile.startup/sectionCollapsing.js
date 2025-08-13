@@ -63,7 +63,18 @@ function toggle( content, heading, icon ) {
  * @ignore
  */
 function init( container ) {
-	const isCollapsed = isCollapsedByDefault();
+	let isCollapsed;
+	// These classes override site settings and user preferences. For example:
+	// * ...-collapsed used on talk pages by DiscussionTools. (T321618, T322628)
+	// * ...-expanded used in previews (T336572)
+	const override = container.closest( '.collapsible-headings-collapsed, .collapsible-headings-expanded' );
+	if ( override ) {
+		isCollapsed = override.classList.contains( 'collapsible-headings-collapsed' );
+	} else {
+		// Check site config
+		isCollapsed = isCollapsedByDefault();
+	}
+
 	const headingWrappers = Array.from( container.querySelectorAll( '.mw-parser-output > section > .mw-heading' ) );
 	headingWrappers.forEach( ( wrapper ) => {
 		wrapper.classList.add( 'mf-collapsible-heading' );
