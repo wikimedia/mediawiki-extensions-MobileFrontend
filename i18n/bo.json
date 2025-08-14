@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"TayfunEt.",
+			"Tenzin Thoesam",
 			"Zolgoyo",
 			"ཁ་བཏགས་ནག་པོ"
 		]
@@ -10,5 +11,7 @@
 	"mobile-frontend-editor-blocked-drawer-action-login": "ནང་འཛུལ།",
 	"mobile-frontend-editor-cancel": "རྩིས་མེད།",
 	"mobile-frontend-editor-save": "ཉར་བ།",
-	"mobile-frontend-view": "ཁ་པར་ལྟ་རྣམ།"
+	"mobile-frontend-terms-text": "སྤྱོད་ལམ་ཁྲིམས་ལུགས།",
+	"mobile-frontend-view": "ཁ་པར་ལྟ་རྣམ།",
+	"mobile-frontend-view-desktop": "འཇགས་རིས་"
 }
