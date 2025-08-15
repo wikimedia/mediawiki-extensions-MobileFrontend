@@ -47,23 +47,25 @@ This watches and auto-reloads changes.
 
 ### Committing
 
-Commits are important as they give the reviewer more information to
+Commit messages are important as they give the reviewer more information to
 successfully review your code and find errors or potential problems you might
 not have thought of.
 
 Commits are also useful when troubleshooting issues and refactoring. If it's
-not clear why a line of code is in the repository important bug fixes could be
+not clear why a line of code is in the repository, important bug fixes could be
 lost.
 
 Commits should be as minor as possible. Please avoid removing unrelated
-console.log statements, fixing unrelated whitespace etc. do that in a separate
-commit which mentions the word cleanup.
+console.log statements, fixing unrelated whitespace, etc. Do that in a separate
+commit which mentions the word "cleanup".
 
-First line commit should summarise the commit with bug it fixes if applicable.
-e.g. *Fix problem with toggling see bug x*.
+The first line of the commit message should summarise the commit with the bug
+it fixes if applicable. E.g.: *Fix problem with toggling*.
 
-Second line should be blank. Third line should go into detail where necessary
-providing links to blog posts/other bugs to provide more background. Mention
+The second line should be blank.
+
+The third line should go into detail where necessary providing links
+to blog posts or other bugs to provide more background. Mention
 the platforms/browsers the change is for where necessary, e.g.:
 
 * *This is a problem on Android but not OSX, see `http://<url></url>` which
