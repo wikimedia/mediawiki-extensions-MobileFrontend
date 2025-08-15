@@ -21,7 +21,7 @@
 		"MediaWiki": ">= 1.45"
 	},
 	"ConfigRegistry": {
-		"mobilefrontend": "GlobalVarConfig::newInstance"
+		"mobilefrontend": "MediaWiki\\Config\\GlobalVarConfig::newInstance"
 	},
 	"SpecialPages": {
 		"MobileDiff": {
