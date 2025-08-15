@@ -99,7 +99,7 @@
 	"mobile-frontend-editor-loading": "Loading editor…",
 	"mobile-frontend-editor-loadingtooslow": "Slow connection?",
 	"mobile-frontend-editor-loadbasiceditor": "Switch to source editor",
-	"mobile-frontend-editor-toload": "The editor will now load. If you still see this message after a few seconds, please [$1 reload the page].",
+	"mobile-frontend-editor-toload": "The editor will now load. If you still see this message after a few seconds, please [$1 refresh the page].",
 	"mf-expand-sections-description": "Always expand sections of content pages by default.",
 	"mf-expand-sections-name": "Expand all sections",
 	"mf-expand-sections-0-label": "Collapse by default",
