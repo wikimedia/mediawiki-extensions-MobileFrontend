@@ -3,12 +3,15 @@
 		"authors": [
 			"ཁ་བཏགས་ནག་པོ",
 			"TayfunEt.",
-			"Zolgoyo"
+			"Zolgoyo",
+			"Tenzin Thoesam"
 		]
 	},
 	"mobile-frontend-copyright": "དེ་མིན་གྱི་མཆན་འགྲེལ་ཡོད་ན་མ་གཏོགས། དྲ་བའི་ནང་དོན་ $1 སྟེང་དུ་ཡོད།",
 	"mobile-frontend-editor-blocked-drawer-action-login": "ནང་འཛུལ།",
 	"mobile-frontend-editor-cancel": "རྩིས་མེད།",
 	"mobile-frontend-editor-save": "ཉར་བ།",
-	"mobile-frontend-view": "ཁ་པར་ལྟ་རྣམ།"
+	"mobile-frontend-terms-text": "སྤྱོད་ལམ་ཁྲིམས་ལུགས།",
+	"mobile-frontend-view": "ཁ་པར་ལྟ་རྣམ།",
+	"mobile-frontend-view-desktop": "འཇགས་རིས་"
 }

@@ -13,7 +13,7 @@
 	"mobile-frontend-cite-error": "Pojavio se problem pri pokušaju da učitam citate zbog neispravne naznake izmjenete.",
 	"mobile-frontend-cite-none-available": "Na ovoj stranici nema citata.",
 	"mobile-frontend-clear-search": "Očisti",
-	"mobile-frontend-copyright": "Sadržina je dostupna pod licencom $1 ako nije drugačije naznačeno.",
+	"mobile-frontend-copyright": "Sadržaj je dostupan pod licencom $1 ako nije drugačije naznačeno.",
 	"mobile-frontend-desc": "Sučelje za mobilne uređaje",
 	"mobile-frontend-diffview-404-desc": "Ne postoji izmjena s ovom naznakom.<br/>Prethodno navedeno uobičajeno prouzročava zastarjeli link na razlikovnu inačicu stranice koja je bila izbrisana ili sa znakovima u linku koji nisu valjani.",
 	"mobile-frontend-diffview-404-title": "Loša izmjena",
