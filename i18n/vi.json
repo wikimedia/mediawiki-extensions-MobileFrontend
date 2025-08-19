@@ -22,7 +22,8 @@
 			"පසිඳු කාවින්ද",
 			"Quangquy322",
 			"Chaiwan2009",
-			"Nvdtn19"
+			"Nvdtn19",
+			"Băng Tỏa"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Người dùng có sửa đổi thông qua giao diện di động hay không ($1)",
@@ -69,7 +70,7 @@
 	"mobile-frontend-editor-error-preview": "Lỗi: Cái gì đó bất ngờ đã xảy ra khi đang hiển thị bản xem trước. Hãy đóng và thử lại.",
 	"mobile-frontend-editor-keep-editing": "Sửa tiếp",
 	"mobile-frontend-editor-licensing": "Với việc lưu các thay đổi, bạn đồng ý phát hành đóng góp của mình theo {{PLURAL:$2|}}giấy phép $1.",
-	"mobile-frontend-editor-licensing-with-terms": "Với việc lưu các thay đổi, bạn chấp nhận $1 và đồng ý phát hành đóng góp của mình theo {{PLURAL:$3|}}giấy phép $2.",
+	"mobile-frontend-editor-licensing-with-terms": "Lưu các thay đổi có nghĩa là bạn chấp nhận $1 và đồng ý phát hành đóng góp của mình theo {{PLURAL:$3|}}giấy phép $2.",
 	"mobile-frontend-editor-terms-link": "[$1 Điều khoản sử dụng]",
 	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1}}Bạn có chắc chắn muốn tạo một trang mới tại {{SITENAME}}?",
 	"mobile-frontend-editor-placeholder": "Đề mục này còn trống. Hãy là người đầu tiên mở rộng nó!",

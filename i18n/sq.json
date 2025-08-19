@@ -18,6 +18,13 @@
 	"mobile-frontend-desc": "Për celular",
 	"mobile-frontend-editor-placeholder-new-page": "Po krijon një faqe të re në {{SITENAME}}!",
 	"mobile-frontend-editor-summary-placeholder": "Shembull: Rregullova gabimet drejtshkrimore, shtova përmbajtje",
+	"mf-expand-sections-description": "Zgjero gjithmonë pjesët e faqeve të përmbajtjes si parazgjedhje.",
+	"mf-expand-sections-name": "Zgjero të gjitha pjesët",
+	"mf-font-size-name": "Teksti",
+	"mf-font-size-description": "Rregullo tekstin për lexueshmëri më të mirë.",
+	"mf-font-size-small-label": "Standard",
+	"mf-font-size-regular-label": "I mesëm",
+	"mf-font-size-large-label": "I madh",
 	"mobile-frontend-last-modified-date": "Redaktimi i fundit më $1, në $2",
 	"mobile-frontend-last-modified-with-user-days": "[$4 Redaktuar së fundmi {{PLURAL:$3|$3 ditë|$3 ditë}} më parë] nga {{PLURAL:$5|[$6 $2]|0=një përdorues pa llogari}}",
 	"mobile-frontend-last-modified-with-user-hours": "[$4 Redaktuar së fundmi {{PLURAL:$3|$3 orë|$3 orë}} më parë] nga {{PLURAL:$5|[$6 $2]|0=një përdorues pa llogari}}",
@@ -34,5 +41,11 @@
 	"mobile-frontend-view": "Pamja për celular",
 	"mobile-frontend-view-desktop": "Desktopi",
 	"tag-mobile_edit": "Redaktim nga celulari",
-	"tag-mobile_web_edit": "Redaktim në versionin web nga celulari"
+	"tag-mobile_web_edit": "Redaktim në versionin web nga celulari",
+	"mobile-frontend-send-feedback": "Dërgo vlerësim",
+	"mw-mf-amc-name": "Moda e avancuar",
+	"mobile-frontend-mobile-option-amc-learn-more": "Mëso më shumë",
+	"mobile-frontend-mobile-option-amc-send-feedback": "Dërgo vlerësim",
+	"mobile-frontend-user-pref-option": "Parapëlqimet e përdoruesit",
+	"mobile-frontend-user-pref-link": "Hap parapëlqimet"
 }

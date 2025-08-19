@@ -45,7 +45,7 @@
 	"mobile-frontend-editor-disabled": "Бул барак вандализмди алдын алуу үчүн корголгон. [ $1 Булакты көрүү]",
 	"mobile-frontend-editor-disabled-anon": "Бул баракты түзөтүү үчүн системага кирүүңүз керек.",
 	"mobile-frontend-editor-editing": "Түзөтүү",
-	"mobile-frontend-editor-editing-page": "<span>«‎$1»‎ <strong>түзөтүлүүдө</strong></span>",
+	"mobile-frontend-editor-editing-page": "<span>\"‎$1\" <strong>түзөтүлүүдө</strong></span>",
 	"mobile-frontend-editor-error": "Ката, түзөтүү жарыяланган жок.",
 	"mobile-frontend-editor-error-conflict": "Ката, башка колдонуучу бул баракты түзөттү.",
 	"mobile-frontend-editor-error-loading": "Ката, редакторду жүктөө мүмкүн болбой жатат.",
