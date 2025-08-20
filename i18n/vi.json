@@ -29,7 +29,7 @@
 	"abusefilter-edit-builder-vars-user-mobile": "Người dùng có sửa đổi thông qua giao diện di động hay không ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "Nhập mã xác nhận",
 	"mobile-frontend-copyright": "Nội dung được phát hành theo $1, ngoại trừ khi có ghi chú khác.",
-	"mobile-frontend-desc": "Giúp cải thiện sự hiện diện trên thiết bị di động của một phiên bản MediaWiki",
+	"mobile-frontend-desc": "Giúp cải thiện trang MediaWiki cho người dùng di động",
 	"mobile-frontend-edit-login-action": "<strong>Giúp cải thiện {{SITENAME}}.</strong><br />\nHãy đăng nhập để sửa đổi.",
 	"mobile-frontend-edit-signup-action": "<strong>Giúp cải thiện {{SITENAME}}.</strong><br />Mở tài khoản để sửa đổi.",
 	"mobile-frontend-editor-anon": "Sửa đổi ẩn danh (không đăng nhập)",
