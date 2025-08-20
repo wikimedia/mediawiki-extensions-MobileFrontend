@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"N. Longo"
+		]
+	},
+	"apihelp-parse-param-mobileformat": "O restitoìsce l'output inte 'n formâto adàtto pe-i apægi mòbili",
+	"apihelp-parse-param-noimages": "O dezatîva e inmàgine inte l'output mòbile.",
+	"apihelp-parse-param-mainpage": "Àpplica e trasformaçioìn da pàgina prinçipâ pe mòbile.",
+	"apihelp-webapp-manifest-summary": "O restitoìsce 'n manifèsto webapp."
+}
