@@ -5,7 +5,8 @@
 			"Har-wradim",
 			"Imre",
 			"פוילישער",
-			"Pacha Tchernof"
+			"Pacha Tchernof",
+			"Shvermer"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "צי א באניצער טוט רעדאקטירן דורכן מאבילן אייבערפלאך",
@@ -109,9 +110,9 @@
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "טעמע",
 	"mobile-frontend-talk-add-overlay-submit": "צולייגן דיסקוסיע",
 	"mobile-frontend-talk-reply": "ענטפער",
-	"mobile-frontend-terms-text": "ניצבאדינגונגען",
-	"mobile-frontend-view": "מאָביל־אויסשטעלונג",
-	"mobile-frontend-view-desktop": "נארמאלע אויסשטעלונג",
+	"mobile-frontend-terms-text": "באַדינגונגען פון באַנוץ",
+	"mobile-frontend-view": "מאָביל אויסשטעל",
+	"mobile-frontend-view-desktop": "נארמאלער אויסשטעל",
 	"mobile-frontend-watchlist-a-z": "ליסטע",
 	"mobile-frontend-watchlist-a-z-empty-howto-alt": "קליקט דעם שטערן־סימבאל",
 	"mobile-frontend-watchlist-add": "צוגעלייגט $1 צו אייער אויפפאסונג ליסטע",

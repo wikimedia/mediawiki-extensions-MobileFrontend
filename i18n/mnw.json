@@ -24,7 +24,7 @@
 	"mobile-frontend-editor-publish": "တြးပ္တိတ်",
 	"mobile-frontend-editor-save": "ဂိုၚ်သိပ်",
 	"mobile-frontend-editor-summary-request": "ဗီုလဵု မၞး ဂွံပခိုဟ်ပ္တိုန် မုက်လိက်ရော？",
-	"mobile-frontend-editor-summary": "သကေမ်:",
+	"mobile-frontend-editor-summary": "သကေမ်-",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|မလုပ်ကၠုၚ်}}စိုပ်ဆၜိုတ်လၟုဟ်ရ",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|မလုပ်ကၠုၚ်စိုပ်}} အကြာ{{PLURAL:$2|$2 သိတ်ကိန်|$2 သိတ်ကိန်ရ}}",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|မလုပ်ကၠုၚ်စိုပ်}} အကြာ{{PLURAL:$2|$2 မိနေတ်|$2 မိနေတ်ရ}}",
