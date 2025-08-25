@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Olve Utne"
+			"Olve Utne",
+			"Yupik"
 		]
 	},
 	"mobile-frontend-editor-blocked-drawer-action-ok": "Miededav",
+	"mf-font-size-name": "Täkksta",
 	"mobile-frontend-main-menu-settings-heading": "Hiebadime",
 	"mobile-frontend-save-settings": "Vurrki",
 	"mobile-frontend-settings-beta": "{{SITENAME}} βeta",

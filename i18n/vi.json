@@ -85,7 +85,7 @@
 	"mobile-frontend-editor-viewing-source-page": "<strong>Xem mã nguồn</strong><span> $1</span>",
 	"mobile-frontend-editor-wait": "Đang lưu sửa đổi, vui lòng chờ.",
 	"mobile-frontend-editor-loading": "Đang tải trình soạn thảo…",
-	"mobile-frontend-editor-loadingtooslow": "Kết nối chậm?",
+	"mobile-frontend-editor-loadingtooslow": "Bạn có kết nối chậm?",
 	"mobile-frontend-editor-loadbasiceditor": "Hãy chuyển sang trình soạn thảo mã nguồn",
 	"mobile-frontend-editor-toload": "Trình soạn thảo sẽ tải bây giờ. Nếu một chốc nữa thông điệp này vẫn xuất hiện, xin hãy [$1 tải lại trang].",
 	"mf-expand-sections-description": "Luôn mở rộng tất cả các đề mục trang theo mặc định.",
