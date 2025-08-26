@@ -5,7 +5,8 @@
 			"Har-wradim",
 			"Imre",
 			"Pacha Tchernof",
-			"פוילישער"
+			"פוילישער",
+			"Shvermer"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "צי א באניצער טוט רעדאקטירן דורכן מאבילן אייבערפלאך",
@@ -78,9 +79,9 @@
 	"mobile-frontend-search-content-no-results": "<b>{{int:mobile-frontend-search-content}}</b> כדי צו זען צי דער אויסדרוק געפינט זיך אין ערגעץ.",
 	"mobile-frontend-search-no-results": "קיין בלאט נישט מיט דעם טיטל.",
 	"mobile-frontend-settings-beta": "{{SITENAME}} בעטע",
-	"mobile-frontend-terms-text": "ניצבאדינגונגען",
-	"mobile-frontend-view": "מאָביל־אויסשטעלונג",
-	"mobile-frontend-view-desktop": "נארמאלע אויסשטעלונג",
+	"mobile-frontend-terms-text": "באַדינגונגען פון באַנוץ",
+	"mobile-frontend-view": "מאָביל אויסשטעל",
+	"mobile-frontend-view-desktop": "נארמאלער אויסשטעל",
 	"mobile-frontend-watchlist-a-z-empty-howto-alt": "קליקט דעם שטערן־סימבאל",
 	"mobile-frontend-watchlist-back-home": "צוריק צום היימבלאַט",
 	"mobile-frontend-watchlist-cta-button-login": "אַרײנלאגירן",
