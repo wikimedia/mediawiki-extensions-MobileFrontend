@@ -196,7 +196,7 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	 * @return bool
 	 */
 	private function isNotEmptyNode( Node $node ) {
-		return (bool)preg_match( '/\S/', $node->textContent );
+		return (bool)preg_match( '/\S/', $node->textContent ?? '' );
 	}
 
 	/**

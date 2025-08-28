@@ -30,6 +30,6 @@ $cfg['exclude_analysis_directory_list'] = array_merge(
 	]
 );
 
-$cfg['exclude_file_regex'] = '@/parsoid/src/DOM/@';
+$cfg['exclude_file_regex'] = '@/parsoid/src/DOM/|/.phan/stubs/DomImpl.php@';
 
 return $cfg;
