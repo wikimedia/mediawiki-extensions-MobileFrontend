@@ -2,6 +2,7 @@
 
 use MobileFrontend\Tests\Utils;
 use MobileFrontend\Transforms\LazyImageTransform;
+use Wikimedia\Parsoid\Utils\DOMCompat;
 
 /**
  * @group MobileFrontend
@@ -17,7 +18,7 @@ class LazyImageTransformTest extends \MediaWikiUnitTestCase {
 	 */
 	public function testGetImageDimensions( $expected, $w, $h, $style ) {
 		$mf = new LazyImageTransform();
-		$doc = new DOMDocument();
+		$doc = DOMCompat::newDocument();
 		$img = $doc->createElement( 'img' );
 		if ( $style ) {
 			$img->setAttribute( 'style', $style );

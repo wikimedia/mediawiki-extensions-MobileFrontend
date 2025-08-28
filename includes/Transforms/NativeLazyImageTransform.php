@@ -2,8 +2,8 @@
 
 namespace MobileFrontend\Transforms;
 
-use DOMDocument;
-use DOMElement;
+use Wikimedia\Parsoid\DOM\Document;
+use Wikimedia\Parsoid\DOM\Element;
 use Wikimedia\Parsoid\Utils\DOMCompat;
 
 /**
@@ -12,9 +12,9 @@ use Wikimedia\Parsoid\Utils\DOMCompat;
 class NativeLazyImageTransform implements IMobileTransform {
 
 	/**
-	 * @param DOMElement $node to be transformed
+	 * @param Element $node to be transformed
 	 */
-	public function apply( DOMElement $node ) {
+	public function apply( Element $node ) {
 		// Parsoid can have nested sections, so we use a child combinator
 		// here to avoid multiple applications of the lazy image transform to the
 		// nested sections.
@@ -29,10 +29,10 @@ class NativeLazyImageTransform implements IMobileTransform {
 	/**
 	 * Enables images to be loaded asynchronously
 	 *
-	 * @param DOMElement|DOMDocument $el Element or document to rewrite images in.
-	 * @param ?DOMDocument $doc Document to create elements in
+	 * @param Element|Document $el Element or document to rewrite images in.
+	 * @param ?Document $doc Document to create elements in
 	 */
-	private function doRewriteImagesForLazyLoading( $el, ?DOMDocument $doc ) {
+	private function doRewriteImagesForLazyLoading( $el, ?Document $doc ) {
 		if ( $doc === null ) {
 			return;
 		}

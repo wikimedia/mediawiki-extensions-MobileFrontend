@@ -2,7 +2,7 @@
 
 namespace MobileFrontend\Transforms;
 
-use DOMElement;
+use Wikimedia\Parsoid\DOM\Element;
 use Wikimedia\Parsoid\Utils\DOMCompat;
 
 class RemovableClassesTransform implements IMobileTransform {
@@ -18,9 +18,9 @@ class RemovableClassesTransform implements IMobileTransform {
 	}
 
 	/**
-	 * @param DOMElement $node to be transformed
+	 * @param Element $node to be transformed
 	 */
-	public function apply( DOMElement $node ) {
+	public function apply( Element $node ) {
 		foreach ( $this->removableClasses as $selector ) {
 			foreach ( DOMCompat::querySelectorAll( $node, $selector ) as $element ) {
 				$element->parentNode->removeChild( $element );

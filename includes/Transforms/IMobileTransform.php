@@ -2,15 +2,15 @@
 
 namespace MobileFrontend\Transforms;
 
-use DOMElement;
+use Wikimedia\Parsoid\DOM\Element;
 
 /**
  * @codeCoverageIgnore
  */
 interface IMobileTransform {
 	/**
-	 * Transforms the DOMElement in some way
-	 * @param DOMElement $node to be transformed
+	 * Transforms the DOM Element in some way
+	 * @param Element $node to be transformed
 	 */
-	public function apply( DOMElement $node );
+	public function apply( Element $node );
 }

@@ -590,7 +590,7 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 		$input = '<p>Hello, world!</p><h2>Section heading</h2><ol class="references"></ol>';
 		$formatter = new MobileFormatter( $input );
 		$formatter->applyTransforms( [] );
-		// Success is not crashing when the input is not a DOMElement.
+		// Success is not crashing when the input is not an Element.
 		$this->assertTrue( true );
 	}
 

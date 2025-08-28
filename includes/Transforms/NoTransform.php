@@ -2,7 +2,7 @@
 
 namespace MobileFrontend\Transforms;
 
-use DOMElement;
+use Wikimedia\Parsoid\DOM\Element;
 
 class NoTransform implements IMobileTransform {
 
@@ -25,9 +25,9 @@ class NoTransform implements IMobileTransform {
 
 	/**
 	 * Does nothing.
-	 * @param DOMElement $node to be transformed
+	 * @param Element $node to be transformed
 	 */
-	public function apply( DOMElement $node ) {
+	public function apply( Element $node ) {
 		// nothing happens
 	}
 }

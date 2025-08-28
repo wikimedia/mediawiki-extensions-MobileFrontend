@@ -2,13 +2,13 @@
 
 namespace MobileFrontend\Transforms;
 
-use DOMDocument;
-use DOMElement;
-use DOMNode;
 use DOMXPath;
 use LogicException;
 use MediaWiki\Html\Html;
 use MediaWiki\ResourceLoader\ResourceLoader;
+use Wikimedia\Parsoid\DOM\Document;
+use Wikimedia\Parsoid\DOM\Element;
+use Wikimedia\Parsoid\DOM\Node;
 use Wikimedia\Parsoid\Utils\DOMCompat;
 
 /**
@@ -53,11 +53,11 @@ class MakeSectionsTransform implements IMobileTransform {
 	}
 
 	/**
-	 * @param DOMNode|null $node
+	 * @param Node|null $node
 	 * @return string|false Heading tag name if the node is a heading
 	 */
 	private function getHeadingName( $node ) {
-		if ( !( $node instanceof DOMElement ) ) {
+		if ( !( $node instanceof Element ) ) {
 			return false;
 		}
 		// We accept both kinds of nodes that can be returned by getTopHeadings():
@@ -65,7 +65,7 @@ class MakeSectionsTransform implements IMobileTransform {
 		// In the future `<div class="mw-heading">` will be required (T13555).
 		if ( DOMCompat::getClassList( $node )->contains( 'mw-heading' ) ) {
 			$node = DOMCompat::querySelector( $node, implode( ',', $this->topHeadingTags ) );
-			if ( !( $node instanceof DOMElement ) ) {
+			if ( !( $node instanceof Element ) ) {
 				return false;
 			}
 		}
@@ -75,13 +75,13 @@ class MakeSectionsTransform implements IMobileTransform {
 	/**
 	 * Actually splits the body of the document into sections
 	 *
-	 * @param DOMElement $body representing the HTML of the current article. In the HTML the sections
+	 * @param Element $body representing the HTML of the current article. In the HTML the sections
 	 *  should not be wrapped.
-	 * @param DOMElement[] $headingWrappers The headings (or wrappers) returned by getTopHeadings():
+	 * @param Element[] $headingWrappers The headings (or wrappers) returned by getTopHeadings():
 	 *  `<h1>` to `<h6>` nodes, or `<div class="mw-heading">` nodes wrapping them.
 	 *  In the future `<div class="mw-heading">` will be required (T13555).
 	 */
-	private function makeSections( DOMElement $body, array $headingWrappers ) {
+	private function makeSections( Element $body, array $headingWrappers ) {
 		$ownerDocument = $body->ownerDocument;
 		if ( $ownerDocument === null ) {
 			return;
@@ -117,7 +117,7 @@ class MakeSectionsTransform implements IMobileTransform {
 			if ( $firstHeadingName && $this->getHeadingName( $node ) === $firstHeadingName ) {
 				// The heading we are transforming is always 1 section ahead of the
 				// section we are currently processing
-				/** @phan-suppress-next-line PhanTypeMismatchArgumentSuperType DOMNode vs. DOMElement */
+				/** @phan-suppress-next-line PhanTypeMismatchArgumentSuperType Node vs. Element */
 				$this->prepareHeading( $ownerDocument, $node, $sectionNumber + 1, $this->scriptsEnabled );
 				// Insert the previous section body and reset it for the new section
 				$container->insertBefore( $sectionBody, $node );
@@ -143,13 +143,13 @@ class MakeSectionsTransform implements IMobileTransform {
 	/**
 	 * Prepare section headings, add required classes and onclick actions
 	 *
-	 * @param DOMDocument $doc
-	 * @param DOMElement $heading
+	 * @param Document $doc
+	 * @param Element $heading
 	 * @param int $sectionNumber
 	 * @param bool $isCollapsible
 	 */
 	private function prepareHeading(
-		DOMDocument $doc, DOMElement $heading, $sectionNumber, $isCollapsible
+		Document $doc, Element $heading, $sectionNumber, $isCollapsible
 	) {
 		$className = $heading->hasAttribute( 'class' ) ? $heading->getAttribute( 'class' ) . ' ' : '';
 		$heading->setAttribute( 'class', $className . 'section-heading' );
@@ -166,13 +166,13 @@ class MakeSectionsTransform implements IMobileTransform {
 	/**
 	 * Creates a Section body element
 	 *
-	 * @param DOMDocument $doc
+	 * @param Document $doc
 	 * @param int $sectionNumber
 	 * @param bool $isCollapsible
 	 *
-	 * @return DOMElement
+	 * @return Element
 	 */
-	private function createSectionBodyElement( DOMDocument $doc, $sectionNumber, $isCollapsible ) {
+	private function createSectionBodyElement( Document $doc, $sectionNumber, $isCollapsible ) {
 		$sectionClass = 'mf-section-' . $sectionNumber;
 		if ( $isCollapsible ) {
 			// TODO: Probably good to rename this to the more generic 'section'.
@@ -194,10 +194,10 @@ class MakeSectionsTransform implements IMobileTransform {
 	 * Note well that the rank order is defined by the
 	 * <code>MobileFormatter#topHeadingTags</code> property.
 	 *
-	 * @param DOMElement $doc
+	 * @param Element $doc
 	 * @return array An array first is the highest rank headings
 	 */
-	private function getTopHeadings( DOMElement $doc ): array {
+	private function getTopHeadings( Element $doc ): array {
 		$headings = [];
 
 		foreach ( $this->topHeadingTags as $tagName ) {
@@ -205,7 +205,7 @@ class MakeSectionsTransform implements IMobileTransform {
 
 			foreach ( $allTags as $el ) {
 				$parent = $el->parentNode;
-				if ( !( $parent instanceof DOMElement ) ) {
+				if ( !( $parent instanceof Element ) ) {
 					continue;
 				}
 				// Use the `<div class="mw-heading">` wrapper if it is present. When they are required
@@ -253,9 +253,9 @@ JAVASCRIPT;
 	 * Performs html transformation that splits the body of the document into
 	 * sections demarcated by the $headings elements. Also moves the first paragraph
 	 * in the lead section above the infobox.
-	 * @param DOMElement $node to be transformed
+	 * @param Element $node to be transformed
 	 */
-	public function apply( DOMElement $node ) {
+	public function apply( Element $node ) {
 		$this->makeSections( $node, $this->getTopHeadings( $node ) );
 	}
 }

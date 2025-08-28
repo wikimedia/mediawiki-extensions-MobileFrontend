@@ -2,6 +2,7 @@
 
 use MobileFrontend\Tests\Utils;
 use MobileFrontend\Transforms\MoveLeadParagraphTransform;
+use Wikimedia\Parsoid\Utils\DOMCompat;
 use Wikimedia\TestingAccessWrapper;
 
 /**
@@ -124,7 +125,7 @@ class MoveLeadParagraphTransformTest extends \MediaWikiUnitTestCase {
 		$reason = 'Move lead paragraph unexpected result'
 	) {
 		$transform = new MoveLeadParagraphTransform( 'A', 1 );
-		$doc = new DOMDocument();
+		$doc = DOMCompat::newDocument();
 		$body = Utils::createBody( Utils::wrapSection( $html ) );
 		$transform->apply( $body );
 		$this->assertEquals(

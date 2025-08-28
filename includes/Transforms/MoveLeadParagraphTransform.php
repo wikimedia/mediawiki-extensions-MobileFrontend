@@ -2,12 +2,12 @@
 
 namespace MobileFrontend\Transforms;
 
-use DOMDocument;
-use DOMElement;
-use DOMNode;
 use DOMXPath;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
+use Wikimedia\Parsoid\DOM\Document;
+use Wikimedia\Parsoid\DOM\Element;
+use Wikimedia\Parsoid\DOM\Node;
 use Wikimedia\Parsoid\Utils\DOMCompat;
 
 class MoveLeadParagraphTransform implements IMobileTransform {
@@ -30,9 +30,9 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	 * Rearranges content so that text in the lead paragraph is prioritised to appear
 	 * before the infobox. Lead
 	 *
-	 * @param DOMElement $node to be transformed
+	 * @param Element $node to be transformed
 	 */
-	public function apply( DOMElement $node ) {
+	public function apply( Element $node ) {
 		$section = DOMCompat::querySelector( $node, 'section' );
 		if ( $section ) {
 			$this->moveFirstParagraphBeforeInfobox( $section, $section->ownerDocument );
@@ -41,13 +41,13 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 
 	/**
 	 * Helper function to verify that passed $node matched tagName and has set required classname
-	 * @param DOMElement $node Node to verify
+	 * @param Element $node Node to verify
 	 * @param string|bool $requiredTagName Required tag name, has to be lowercase
 	 *   if false it is ignored and requiredClass is used.
 	 * @param string $requiredClass Regular expression with required class name
 	 * @return bool
 	 */
-	private static function matchElement( DOMElement $node, $requiredTagName, $requiredClass ) {
+	private static function matchElement( Element $node, $requiredTagName, $requiredClass ) {
 		$classes = explode( ' ', $node->getAttribute( 'class' ) );
 		return ( $requiredTagName === false || strtolower( $node->tagName ) === $requiredTagName )
 			&& preg_grep( $requiredClass, $classes );
@@ -55,9 +55,9 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 
 	/**
 	 * Iterate up the DOM tree until find a parent node which has the parent $parent
-	 * @param DOMNode $node
-	 * @param DOMNode $parent
-	 * @return DOMNode representing a node which is either $node or an ancestor of $node which
+	 * @param Node $node
+	 * @param Node $parent
+	 * @return Node representing a node which is either $node or an ancestor of $node which
 	 *  has a parent $parent. Note, it is assumed that $node will always be a descendent of $parent so
 	 *  if this is not true, you probably shouldn't be using this function and I, as the writer of this
 	 *  code cannot be held responsible for portals that open to another dimension or your laptop
@@ -74,10 +74,10 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	/**
 	 * Extract the first infobox in document
 	 * @param DOMXPath $xPath XPath object to execute the query
-	 * @param DOMElement $section Where to search for an infobox
-	 * @return DOMElement|null The first infobox
+	 * @param Element $section Where to search for an infobox
+	 * @return Element|null The first infobox
 	 */
-	private function identifyInfoboxElement( DOMXPath $xPath, DOMElement $section ): ?DOMElement {
+	private function identifyInfoboxElement( DOMXPath $xPath, Element $section ): ?Element {
 		$paths = [
 			// Infoboxes: *.infobox
 			'.//*[contains(concat(" ",normalize-space(@class)," ")," infobox ")]',
@@ -88,7 +88,7 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 		$query = '(' . implode( '|', $paths ) . ')';
 		$infobox = $xPath->query( $query, $section )->item( 0 );
 
-		if ( $infobox instanceof DOMElement ) {
+		if ( $infobox instanceof Element ) {
 			// Check if the infobox is inside a container
 			$node = $infobox;
 			$wrapperClass = '/^(mw-stack|collapsible)$/';
@@ -124,17 +124,17 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	 * Keep in sync with mobile.init/identifyLeadParagraph.js.
 	 *
 	 * @param DOMXPath $xPath XPath object to execute the query
-	 * @param DOMElement $section Where to search for paragraphs
-	 * @return DOMElement|null The lead paragraph
+	 * @param Element $section Where to search for paragraphs
+	 * @return Element|null The lead paragraph
 	 */
-	private function identifyLeadParagraph( DOMXPath $xPath, DOMElement $section ): ?DOMElement {
+	private function identifyLeadParagraph( DOMXPath $xPath, Element $section ): ?Element {
 		$paragraphs = $xPath->query( './p', $section );
 
 		$index = 0;
 		while ( $index < $paragraphs->length ) {
 			$node = $paragraphs->item( $index );
 			if ( $node && !$this->isNonLeadParagraph( $xPath, $node ) ) {
-				/** @phan-suppress-next-line PhanTypeMismatchReturn DOMNode vs. DOMElement */
+				/** @phan-suppress-next-line PhanTypeMismatchReturn Node vs. Element */
 				return $node;
 			}
 
@@ -159,10 +159,10 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	 * Note that the first paragraph is not moved before hatnotes, or mbox or other
 	 * elements that are not infoboxes.
 	 *
-	 * @param DOMElement $leadSection
-	 * @param ?DOMDocument $doc Document to which the section belongs
+	 * @param Element $leadSection
+	 * @param ?Document $doc Document to which the section belongs
 	 */
-	private function moveFirstParagraphBeforeInfobox( DOMElement $leadSection, ?DOMDocument $doc ) {
+	private function moveFirstParagraphBeforeInfobox( Element $leadSection, ?Document $doc ) {
 		if ( $doc === null ) {
 			return;
 		}
@@ -182,7 +182,7 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 				$elementAfterParagraphQuery = $xPath->query( 'following-sibling::*[1]', $leadParagraph );
 				if ( $elementAfterParagraphQuery->length > 0 ) {
 					$elem = $elementAfterParagraphQuery->item( 0 );
-					/** @phan-suppress-next-line PhanUndeclaredProperty DOMNode vs. DOMElement */
+					/** @phan-suppress-next-line PhanUndeclaredProperty Node vs. Element */
 					if ( $elem->tagName === 'ol' || $elem->tagName === 'ul' ) {
 						$listElementAfterParagraph = $elem;
 					}
@@ -194,7 +194,7 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 				}
 			} elseif ( !$isTopLevelInfobox ) {
 				$isInWrongPlace = $this->hasNoNonEmptyPrecedingParagraphs( $xPath,
-					/** @phan-suppress-next-line PhanTypeMismatchArgumentSuperType DOMNode vs. DOMElement */
+					/** @phan-suppress-next-line PhanTypeMismatchArgumentSuperType Node vs. Element */
 					self::findParentWithParent( $infobox, $leadSection )
 				);
 				$loggingEnabled = MediaWikiServices::getInstance()
@@ -215,10 +215,10 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	 *
 	 * Keep in sync with mobile.init/identifyLeadParagraph.js.
 	 *
-	 * @param DOMNode $node
+	 * @param Node $node
 	 * @return bool
 	 */
-	private function isNotEmptyNode( DOMNode $node ) {
+	private function isNotEmptyNode( Node $node ) {
 		return (bool)preg_match( '/\S/', $node->textContent );
 	}
 
@@ -229,18 +229,20 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	 * Keep in sync with mobile.init/identifyLeadParagraph.js.
 	 *
 	 * @param DOMXPath $xPath An XPath query
-	 * @param DOMNode $node DOM Node to verify
+	 * @param Node $node DOM Node to verify
 	 * @return bool
 	 */
 	private function isNonLeadParagraph( $xPath, $node ) {
 		if (
 			$node->nodeType === XML_ELEMENT_NODE &&
-			/** @phan-suppress-next-line PhanUndeclaredProperty DOMNode vs. DOMElement */
+			/** @phan-suppress-next-line PhanUndeclaredProperty Node vs. Element */
 			$node->tagName === 'p' &&
 			$this->isNotEmptyNode( $node )
 		) {
 			// Clone the node so we can modifiy it
 			$node = $node->cloneNode( true );
+			// @var Element $node
+			'@phan-var Element $node';
 
 			// Remove any TemplateStyle tags, or coordinate wrappers...
 			$templateStyles = $xPath->query( '(.//style|.//span[@id="coordinates"])', $node );
@@ -266,11 +268,11 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	 * `isSameNode()` check. If those elements are not in the order, we will quickly get to
 	 * $node->previousSibling==null and return false instead of the whole traversing document.
 	 *
-	 * @param DOMNode $first
-	 * @param DOMNode $second
+	 * @param Node $first
+	 * @param Node $second
 	 * @return bool
 	 */
-	private function isPreviousSibling( DOMNode $first, DOMNode $second ) {
+	private function isPreviousSibling( Node $first, Node $second ) {
 		$node = $second->previousSibling;
 		while ( $node !== null ) {
 			if ( $node->isSameNode( $first ) ) {
@@ -285,10 +287,10 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	 * Check if there are any non-empty siblings before $element
 	 *
 	 * @param DOMXPath $xPath
-	 * @param DOMElement $element
+	 * @param Element $element
 	 * @return bool
 	 */
-	private function hasNoNonEmptyPrecedingParagraphs( DOMXPath $xPath, DOMElement $element ) {
+	private function hasNoNonEmptyPrecedingParagraphs( DOMXPath $xPath, Element $element ) {
 		$node = $element->previousSibling;
 		while ( $node !== null ) {
 			if ( !$this->isNonLeadParagraph( $xPath, $node ) ) {

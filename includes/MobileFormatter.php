@@ -1,6 +1,7 @@
 <?php
 
 use MobileFrontend\Transforms\IMobileTransform;
+use Wikimedia\Parsoid\DOM\Element;
 use Wikimedia\Parsoid\Utils\DOMCompat;
 use Wikimedia\Parsoid\Utils\DOMUtils;
 use Wikimedia\Parsoid\Wt2Html\XHtmlSerializer;
@@ -10,7 +11,7 @@ use Wikimedia\Parsoid\Wt2Html\XHtmlSerializer;
  */
 class MobileFormatter {
 
-	/** @var DOMElement */
+	/** @var Element */
 	private $body;
 
 	/**
