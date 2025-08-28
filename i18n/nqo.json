@@ -15,7 +15,7 @@
 	"mobile-frontend-edit-signup-action": "<strong>ߘߍ߬ߡߍ߲߬ߠߌ߲ ߞߍ߫ {{SITENAME}} ߘߐߦߙߌߥߊ ߟߊ߫.</strong>ߖߊ߬ߕߋ߬ߘߊ ߘߏ߫ ߟߊߞߊ߬ ߞߊ߬ ߡߊ߬ߦߟߍ߬ߡߊ߲߬ߠߌ߲ ߞߍ߫.",
 	"mobile-frontend-editor-anon": "ߌ ߜߊ߲߬ߞߎ߲߬ߓߊߟߌ ߕߏ߫ ߞߵߊ߬ ߡߊߦߟߍ߬ߡߊ߲߫",
 	"mobile-frontend-editor-anonwarning": "<strong>ߖߊ߲߬ߓߌ߬ߟߊ߬ߟߌ:</strong> ߌ ߜߊ߲߬ߞߎ߲߬ߣߍ߲߬ ߕߍ߫. ߌ ߓߊ߯ ߡߊ߬ߦߟߍ߬ߡߊ߲߬ߠߌ߲ ߛߎ߯-ߎ߯-ߛߎ߫ ߞߍ߫߸ ߌ ߟߊ߫ IP ߛߊ߲߬ߓߊ߬ߕߐ߮ ߘߌ߫ ߞߍ߫ ߜߍߘߐ߫ ߦߋߕߊ ߘߌ߫.ߣߴߌ ߞߵߌ <strong>ߜߊ߲߬ߞߎ߲߫</strong> ߥߟߊ߫ <strong>ߞߊ߬ ߖߊ߬ߕߋ߬ߘߊ ߟߊߞߊ߬</strong> ߌ ߟߊ߫ ߡߊ߬ߦߟߍ߬ߡߊ߲߬ߣߍ߲ ߠߎ߬ ߘߌ߫ ߓߌ߬ߟߊ߬ ߌ ߜߊ߲߬ߞߎ߲߬ ߕߐ߮ ߟߊ߫߸ ߊ߬ ߣߌ߫ ߣߝߊ߬ ߜߘߍ߫ ߟߎ߫.",
-	"mobile-frontend-editor-autocreatewarning": "<strong>ߌ ߖߊ߲߬ߕߏ߫:</strong> ߌ ߜߊ߲߬ߞߎ߲߬ߣߍ߲߫ ߕߍ߫. ߣߴߌ ߞߊ߬ ߡߊ߬ߦߟߍ߬ߡߊ߲߬ߠߌ߲ ߞߍ߫, ߥߊ߯ߕߌ߫ ߟߕߊߡߌ߲߫ ߖߊߕߋߘߊ ߘߏ߫ ߘߌ߫ ߟߊߞߊ߬ ߌ ߢߍ߫. [[ߘߏ߫ ߜߘߍ߫ ߟߎ߫ ߘߐߞߊ߬ߙߊ߲߫|$1]]. <strong>ߌ ߜߊ߲߬ߞߎ߲߫</strong> ߥߟߊ߫ ߞߊ߬ <strong>ߖߊ߬ߕߋ߬ߘߊ ߘߏ߫ ߟߊߞߊ߬</strong> ߛߴߌ ߘߴߛߋ߫ ߞߊ߲߬ߞߎߡߊ ߟߎ߬ ߟߊߛߐ߬ߘߐ߲߬ ߠߊ߫ ߞߍ߬ߣߍ߲ ߖߊ߬ߕߋ߬ߘߊ ߏ߬ ߛߕߊ ߝߊ ߞߐ߫߸ ߊ߬ ߣߌ߫ ߞߏ߫ ߛߌߦߊߡߊ߲߫ ߜߘߍ߫ ߟߎ߫.",
+	"mobile-frontend-editor-autocreatewarning": "<strong>ߌ ߖߊ߲߬ߕߏ߫:</strong> ߌ ߜߊ߲߬ߞߎ߲߬ߣߍ߲߫ ߕߍ߫. ߣߴߌ ߞߊ߬ ߡߊ߬ߦߟߍ߬ߡߊ߲߬ߠߌ߲ ߞߍ߫, ߥߊ߯ߕߌ߫ ߟߕߊߡߌ߲߫ ߖߊߕߋߘߊ ߘߏ߫ ߘߌ߫ ߟߊߞߊ߬ ߌ ߢߍ߫. [[$1|Learn more]]. <strong>ߌ ߜߊ߲߬ߞߎ߲߫</strong> ߥߟߊ߫ ߞߊ߬ <strong>ߖߊ߬ߕߋ߬ߘߊ ߘߏ߫ ߟߊߞߊ߬</strong> ߛߴߌ ߘߴߛߋ߫ ߞߊ߲߬ߞߎߡߊ ߟߎ߬ ߟߊߛߐ߬ߘߐ߲߬ ߠߊ߫ ߞߍ߬ߣߍ߲ ߖߊ߬ߕߋ߬ߘߊ ߏ߬ ߛߕߊ ߝߊ ߞߐ߫߸ ߊ߬ ߣߌ߫ ߞߏ߫ ߛߌߦߊߡߊ߲߫ ߜߘߍ߫ ߟߎ߫.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "ߌ ߜߊ߲߬ߞߎ߲߬",
 	"mobile-frontend-drawer-arrow-label": "ߊ߬ ߘߊߕߎ߲߯",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "ߏ߬ߞߍ߫",
