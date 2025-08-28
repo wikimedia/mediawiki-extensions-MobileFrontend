@@ -2,13 +2,13 @@
 
 namespace MobileFrontend\Transforms;
 
-use DOMXPath;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
 use Wikimedia\Parsoid\DOM\Document;
 use Wikimedia\Parsoid\DOM\Element;
 use Wikimedia\Parsoid\DOM\Node;
 use Wikimedia\Parsoid\Utils\DOMCompat;
+use Wikimedia\Parsoid\Utils\DOMUtils;
 
 class MoveLeadParagraphTransform implements IMobileTransform {
 	/**
@@ -48,8 +48,8 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	 * @return bool
 	 */
 	private static function matchElement( Element $node, $requiredTagName, $requiredClass ) {
-		$classes = explode( ' ', $node->getAttribute( 'class' ) );
-		return ( $requiredTagName === false || strtolower( $node->tagName ) === $requiredTagName )
+		$classes = iterator_to_array( DOMCompat::getClassList( $node ) );
+		return ( $requiredTagName === false || DOMUtils::nodeName( $node ) === $requiredTagName )
 			&& preg_grep( $requiredClass, $classes );
 	}
 
@@ -68,25 +68,22 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 		while ( $search->parentNode && !$search->parentNode->isSameNode( $parent ) ) {
 			$search = $search->parentNode;
 		}
+		// @var Node $search We assert this will always find a parent.
+		'@phan-var Node $search';
 		return $search;
 	}
 
 	/**
 	 * Extract the first infobox in document
-	 * @param DOMXPath $xPath XPath object to execute the query
 	 * @param Element $section Where to search for an infobox
 	 * @return Element|null The first infobox
 	 */
-	private function identifyInfoboxElement( DOMXPath $xPath, Element $section ): ?Element {
-		$paths = [
-			// Infoboxes: *.infobox
-			'.//*[contains(concat(" ",normalize-space(@class)," ")," infobox ")]',
-			// Thumbnail images: .thumb, figure (Parsoid)
-			'.//*[contains(concat(" ",normalize-space(@class)," ")," thumb ")]',
-			'.//figure',
-		];
-		$query = '(' . implode( '|', $paths ) . ')';
-		$infobox = $xPath->query( $query, $section )->item( 0 );
+	private function identifyInfoboxElement( Element $section ): ?Element {
+		$infobox = DOMCompat::querySelector(
+			$section,
+			// Infoboxes are .infobox, and thumbnail images are .thumb, figure
+			'.infobox, .thumb, figure'
+		);
 
 		if ( $infobox instanceof Element ) {
 			// Check if the infobox is inside a container
@@ -101,10 +98,10 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 			}
 			// For images, include any containers.
 			// We don't need to check if the parent is an infobox, because it
-			// would've matched first in the XPath query.
+			// would've matched first in the selector query.
 			if (
-				strtolower( $infobox->tagName ) === 'figure' ||
-				strpos( $infobox->getAttribute( 'class' ), 'thumb' ) !== false
+				DOMUtils::nodeName( $infobox ) === 'figure' ||
+				DOMCompat::getClassList( $infobox )->contains( 'thumb' )
 			) {
 				while ( $infobox->parentNode !== $section ) {
 					$infobox = $infobox->parentNode;
@@ -121,24 +118,17 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	 * only.
 	 * example: `<p> <span> </span> </p>` is not a lead paragraph
 	 *
-	 * Keep in sync with mobile.init/identifyLeadParagraph.js.
+	 * Keep in sync with mobile.editor.overlay/identifyLeadParagraph.js.
 	 *
-	 * @param DOMXPath $xPath XPath object to execute the query
 	 * @param Element $section Where to search for paragraphs
 	 * @return Element|null The lead paragraph
 	 */
-	private function identifyLeadParagraph( DOMXPath $xPath, Element $section ): ?Element {
-		$paragraphs = $xPath->query( './p', $section );
-
-		$index = 0;
-		while ( $index < $paragraphs->length ) {
-			$node = $paragraphs->item( $index );
-			if ( $node && !$this->isNonLeadParagraph( $xPath, $node ) ) {
-				/** @phan-suppress-next-line PhanTypeMismatchReturn Node vs. Element */
+	private function identifyLeadParagraph( Element $section ): ?Element {
+		$paragraphs = DOMCompat::querySelectorAll( $section, ':scope > p' );
+		foreach ( $paragraphs as $node ) {
+			if ( !$this->isNonLeadParagraph( $node ) ) {
 				return $node;
 			}
-
-			++$index;
 		}
 		return null;
 	}
@@ -166,11 +156,10 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 		if ( $doc === null ) {
 			return;
 		}
-		$xPath = new DOMXPath( $doc );
-		$infobox = $this->identifyInfoboxElement( $xPath, $leadSection );
+		$infobox = $this->identifyInfoboxElement( $leadSection );
 
 		if ( $infobox ) {
-			$leadParagraph = $this->identifyLeadParagraph( $xPath, $leadSection );
+			$leadParagraph = $this->identifyLeadParagraph( $leadSection );
 			$isTopLevelInfobox = $infobox->parentNode->isSameNode( $leadSection );
 
 			if ( $leadParagraph && $isTopLevelInfobox &&
@@ -179,12 +168,13 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 				$listElementAfterParagraph = null;
 				$where = $infobox;
 
-				$elementAfterParagraphQuery = $xPath->query( 'following-sibling::*[1]', $leadParagraph );
-				if ( $elementAfterParagraphQuery->length > 0 ) {
-					$elem = $elementAfterParagraphQuery->item( 0 );
-					/** @phan-suppress-next-line PhanUndeclaredProperty Node vs. Element */
-					if ( $elem->tagName === 'ol' || $elem->tagName === 'ul' ) {
-						$listElementAfterParagraph = $elem;
+				$elementAfterParagraph = DOMCompat::getNextElementSibling(
+					$leadParagraph
+				);
+				if ( $elementAfterParagraph ) {
+					$nodeName = DOMUtils::nodeName( $elementAfterParagraph );
+					if ( $nodeName === 'ol' || $nodeName === 'ul' ) {
+						$listElementAfterParagraph = $elementAfterParagraph;
 					}
 				}
 
@@ -193,7 +183,7 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 					$leadSection->insertBefore( $listElementAfterParagraph, $where );
 				}
 			} elseif ( !$isTopLevelInfobox ) {
-				$isInWrongPlace = $this->hasNoNonEmptyPrecedingParagraphs( $xPath,
+				$isInWrongPlace = $this->hasNoNonEmptyPrecedingParagraphs(
 					/** @phan-suppress-next-line PhanTypeMismatchArgumentSuperType Node vs. Element */
 					self::findParentWithParent( $infobox, $leadSection )
 				);
@@ -228,15 +218,13 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	 *
 	 * Keep in sync with mobile.init/identifyLeadParagraph.js.
 	 *
-	 * @param DOMXPath $xPath An XPath query
 	 * @param Node $node DOM Node to verify
 	 * @return bool
 	 */
-	private function isNonLeadParagraph( $xPath, $node ) {
+	private function isNonLeadParagraph( $node ) {
 		if (
 			$node->nodeType === XML_ELEMENT_NODE &&
-			/** @phan-suppress-next-line PhanUndeclaredProperty Node vs. Element */
-			$node->tagName === 'p' &&
+			DOMUtils::nodeName( $node ) === 'p' &&
 			$this->isNotEmptyNode( $node )
 		) {
 			// Clone the node so we can modifiy it
@@ -245,7 +233,9 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 			'@phan-var Element $node';
 
 			// Remove any TemplateStyle tags, or coordinate wrappers...
-			$templateStyles = $xPath->query( '(.//style|.//span[@id="coordinates"])', $node );
+			$templateStyles = DOMCompat::querySelectorAll(
+				$node, 'style, span#coordinates'
+			);
 			foreach ( $templateStyles as $style ) {
 				$style->parentNode->removeChild( $style );
 			}
@@ -286,14 +276,13 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	/**
 	 * Check if there are any non-empty siblings before $element
 	 *
-	 * @param DOMXPath $xPath
 	 * @param Element $element
 	 * @return bool
 	 */
-	private function hasNoNonEmptyPrecedingParagraphs( DOMXPath $xPath, Element $element ) {
+	private function hasNoNonEmptyPrecedingParagraphs( Element $element ) {
 		$node = $element->previousSibling;
 		while ( $node !== null ) {
-			if ( !$this->isNonLeadParagraph( $xPath, $node ) ) {
+			if ( !$this->isNonLeadParagraph( $node ) ) {
 				return false;
 			}
 			$node = $node->previousSibling;
@@ -302,7 +291,7 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	}
 
 	/**
-	 * Finds all infoboxes which are one or more levels deep in $xPath content. When at least one
+	 * Finds all infoboxes which are one or more levels deep in content. When at least one
 	 * element is found - log the page title and revision
 	 *
 	 * @see https://phabricator.wikimedia.org/T149884

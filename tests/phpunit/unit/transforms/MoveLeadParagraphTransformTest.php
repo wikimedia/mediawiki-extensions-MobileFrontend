@@ -17,7 +17,6 @@ class MoveLeadParagraphTransformTest extends \MediaWikiUnitTestCase {
 	public function testIdentifyInfoboxElement( string $html, ?string $expected, string $msg ) {
 		$bodyNode = Utils::createBody( $html );
 		$doc = $bodyNode->ownerDocument;
-		$xPath = new DOMXPath( $doc );
 
 		$wrappedInfobox = $doc->createElement( 'table' );
 		$wrappedInfobox->setAttribute( 'class', 'infobox' );
@@ -36,7 +35,7 @@ class MoveLeadParagraphTransformTest extends \MediaWikiUnitTestCase {
 			new MoveLeadParagraphTransform( 'DummyTitle', 1 )
 		);
 
-		$infobox = $transform->identifyInfoboxElement( $xPath, $bodyNode );
+		$infobox = $transform->identifyInfoboxElement( $bodyNode );
 
 		$this->assertEquals(
 			$expected,
