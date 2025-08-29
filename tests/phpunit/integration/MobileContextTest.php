@@ -442,28 +442,9 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 			[ 'Main Page', '/wiki/Main_Page?useformat=mobile', $mobileUrlCallback, '' ],
 			[ 'Main Page', '/wiki/Main_Page?useformat=desktop', null, '' ],
 			[ 'Main Page', '/wiki/Main_Page?useformat=desktop', $mobileUrlCallback, '' ],
-			[ 'Foo', '/?mobileaction=toggle_view_desktop', null, '' ],
-			[ 'Foo', '/?mobileaction=toggle_view_mobile', null, '' ],
-			[ 'Page', '/wiki/Page?mobileaction=toggle_view_desktop', null, '' ],
-			/*
-			FIXME: works locally but fails in Jerkins
-			[ 'Main Page', '/?mobileaction=toggle_view_desktop',
-				$mobileUrlCallback, 'http://en.wikipedia.org/wiki/Main_Page' ],
-			[ 'Main Page', '/?mobileaction=toggle_view_mobile',
-				$mobileUrlCallback, 'http://en.m.wikipedia.org/wiki/Main_Page' ],
-			[ 'Page', '/wiki/Page?mobileaction=toggle_view_mobile',
-				$mobileUrlCallback, 'http://en.m.wikipedia.org/wiki/Page' ],
-			[ 'Page', '/wiki/Page?mobileaction=toggle_view_desktop',
-				$mobileUrlCallback, 'http://en.wikipedia.org/wiki/Page' ],
-			[ 'Special:Foo', '/wiki/index.php?title=Special:Foo&bar=baz&mobileaction=toggle_view_desktop',
-				$mobileUrlCallback, 'http://en.wikipedia.org/w/index.php?title=Special:Foo&bar=baz' ],
-			[ 'Special:Foo', '/wiki/index.php?title=Special%3AFoo&bar=baz&mobileaction=toggle_view_mobile',
-				$mobileUrlCallback, 'http://en.m.wikipedia.org/w/index.php?title=Special:Foo&bar=baz' ],
-			[ 'Page', '/wiki/index.php?title=Page&mobileaction=toggle_view_desktop',
-				$mobileUrlCallback, 'http://en.wikipedia.org/wiki/Page', ],
-			[ 'Page', '/wiki/index.php?title=Page&mobileaction=toggle_view_mobile',
-				$mobileUrlCallback, 'http://en.m.wikipedia.org/wiki/Page', ],
-			*/
+			[ 'Foo', '/?mobileaction=toggle_view_desktop', null, 'http://en.wikipedia.org/wiki/Foo' ],
+			[ 'Foo', '/?mobileaction=toggle_view_mobile', null, 'http://en.wikipedia.org/wiki/Foo' ],
+			[ 'Page', '/wiki/Page?mobileaction=toggle_view_desktop', null, 'http://en.wikipedia.org/wiki/Page' ],
 		];
 	}
 

@@ -645,16 +645,14 @@ class MobileContext extends ContextSource {
 	 * When a user requests a particular view (e.g. click 'Desktop view' on a mobile page),
 	 * - apply the requested view to this particular request
 	 * - set a cookie to keep them on that view for subsequent requests
-	 * - (optionally, if there is a mobile domain) strip off the 'mobileaction' parameter,
-	 *   and redirect to the other domain (either from mobile to canonical, or vice versa)
+	 * - redirect to strip off the 'mobileaction' parameter,
+	 *   to avoid issues with CDN caching or URL sharing (T401595)
 	 *
 	 * @param string $view User requested particular view
 	 */
 	private function toggleView( $view ) {
 		$this->viewChange = $view;
-		if ( !$this->hasMobileDomain() ) {
-			$this->useFormat = $view;
-		}
+		$this->useFormat = $view;
 	}
 
 	/**
@@ -683,38 +681,24 @@ class MobileContext extends ContextSource {
 			// remove old desktop opt-in choice (if any)
 			$this->unsetStopMobileRedirectCookie();
 
-			if ( !$this->hasMobileDomain() ) {
-				// current pageview will use mobile based on useFormat
-				// preserve mobile opt-in choice for future pageviews via same-domain cookie
-				$this->setUseFormatCookie();
-			} else {
-				// We're already on the mobile domain, since "Mobile view" points to
-				// canonical.example/w/index.php?title=Banana&mobileaction=toggle_view_desktop
-				//
-				// Redirect here is not entirely no-op. It strips off the 'mobileaction' param.
-				$mobileUrl = $this->getMobileUrl( $url );
-				$this->getOutput()->redirect( $mobileUrl, 301 );
-			}
+			// preserve mobile opt-in choice for future pageviews via same-domain cookie
+			$this->setUseFormatCookie();
+
+			// redirect to strip 'mobileaction' param (T401595)
+			$mobileUrl = $this->getMobileUrl( $url );
+			$this->getOutput()->redirect( $mobileUrl, 301 );
 		} elseif ( $this->viewChange === 'desktop' ) {
 			// remove old mobile opt-in choice (if any)
 			if ( $this->getUseFormatCookie() === 'true' ) {
 				$this->unsetUseFormatCookie();
 			}
 
-			// current pageview could use desktop based on useFormat,
-			// but toggleView() doesn't set useFormat unless !hasMobileDomain
-
 			// preserve desktop opt-in choice for future pageviews via same-domain cookie
 			$this->setStopMobileRedirectCookie();
 
-			if ( $this->hasMobileDomain() ) {
-				// We're already on the desktop domain, since "Desktop view" points to
-				// canonical.example/w/index.php?title=Banana&mobileaction=toggle_view_desktop
-				//
-				// Redirect here is not entirely no-op. It strips off the 'mobileaction' param.
-				$desktopUrl = $this->getDesktopUrl( $url );
-				$this->getOutput()->redirect( $desktopUrl, 301 );
-			}
+			// redirect to strip 'mobileaction' param (T401595)
+			$desktopUrl = $this->getDesktopUrl( $url );
+			$this->getOutput()->redirect( $desktopUrl, 301 );
 		}
 	}
 
