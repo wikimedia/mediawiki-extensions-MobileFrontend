@@ -12,7 +12,7 @@
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Fut kodin e konfirmimit",
-	"mobile-frontend-copyright": "Përmbajtja është e disponueshme nën $1 përveç nëse shënohet ndryshe.",
+	"mobile-frontend-copyright": "Përmbajtja ofrohet nën $1 përveç nëse shënohet ndryshe.",
 	"mobile-frontend-desc": "Ndihmon në përmirësimin e pranisë celulare të një instance MediaWiki",
 	"mobile-frontend-editor-anon": "Redakto pa hyrë në llogari",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Hyr",
