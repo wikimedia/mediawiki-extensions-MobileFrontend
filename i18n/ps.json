@@ -149,6 +149,8 @@
 	"mobile-frontend-user-page-desired-action": "دلته سمون راوستل يا  د دې مخ جوړول بايد د $1 له خوا ترسره شي",
 	"mobile-frontend-user-page-create-owner-page-link-label": "خپل مو جوړ کړئ",
 	"mobile-frontend-user-page-create-user-page-link-label": "د $1 په نوم مخ جوړول",
+	"mobile.css": "/* دلته ليکل شوی سي‌اېس‌اېس به د ټولو موبايل وېبځي کارنانو لپاره بار شي */",
+	"mobile.js": "/* دلته ليکل شوی جاواسکريپټ به د ټولو موبايل وېبځي کارنانو لپاره بار شي */",
 	"tag-mobile_edit": "موبايل سمون",
 	"tag-mobile_edit-description": "سمون د موبايل له لارې (جال يا کاريال)",
 	"tag-advanced_mobile_edit": "پرمختللی موبايل سمون",
