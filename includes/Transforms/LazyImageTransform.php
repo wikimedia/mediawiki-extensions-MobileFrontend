@@ -225,7 +225,6 @@ class LazyImageTransform implements IMobileTransform {
 	 * @param string[] $enabled list of enabled styles to be copied
 	 * @param array $additional key-value array of styles to be added/overriden unconditionally
 	 *   at the beginning of string
-	 *
 	 */
 	private function copyStyles( $from, $to, array $enabled, array $additional ) {
 		$styles = HtmlStyleUtils::parseStyleString(

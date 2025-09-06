@@ -5,7 +5,6 @@ use MediaWiki\SpecialPage\UnlistedSpecialPage;
 /**
  * Redirect from Special:MobileLanguages to the article
  *
- * @file
  * @ingroup SpecialPage
  * @codeCoverageIgnore
  */
