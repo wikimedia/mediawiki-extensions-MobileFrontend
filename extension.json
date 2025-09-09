@@ -211,7 +211,7 @@
 			],
 			"scripts": [
 				{
-					"name": "mobile.config.js",
+					"name": "resources/dist/mobile.config.js",
 					"callback": "MobileFrontend\\ResourceLoaderModules\\MobileConfig::makeScript"
 				},
 				"resources/dist/mobile.startup.runtime.js",
