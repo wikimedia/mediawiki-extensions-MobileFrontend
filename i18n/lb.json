@@ -7,7 +7,8 @@
 			"Robby",
 			"Soued031",
 			"Volvox",
-			"Zoranzoki21"
+			"Zoranzoki21",
+			"GilPe"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ob e Benotzer de mobillen Interface benotzt fir z'änneren oder net ($1)",
@@ -63,7 +64,7 @@
 	"mobile-frontend-editor-save": "Späicheren",
 	"mobile-frontend-editor-summary-placeholder": "Beispill: Tippfeeler verbessert, Inhalt derbäigesat",
 	"mobile-frontend-editor-summary-request": "Wéi hutt Dir d'Säit verbessert?",
-	"mobile-frontend-editor-summary": "Resumé:",
+	"mobile-frontend-editor-summary": "Resümmee:",
 	"mobile-frontend-editor-switch-editor": "Editeur wiesselen",
 	"mobile-frontend-editor-switch-visual-editor": "Op visuellt Änneren ëmschalten",
 	"mobile-frontend-editor-uploadenable": "Luet wgl. fir d'éischt eng Foto erop fir d'Änneren z'erméiglechen.",
@@ -135,7 +136,7 @@
 	"mobile-frontend-view-desktop": "Desktop",
 	"mobile-frontend-watchlist-a-z-empty-howto": "Dir iwwerwaacht elo keng Säiten. Är Iwwerwaachungslëscht hëlleft Iech Säiten un deenen Dir interesséiert sidd am Aen ze behalen. Iwwerwaacht Säiten andeems Dir op d'Icone mam Stär klickt.",
 	"mobile-frontend-watchlist-a-z-empty-howto-alt": "Klickt op de Stär",
-	"mobile-frontend-watchlist-back-home": "Zréck op d'Haaptsäit",
+	"mobile-frontend-watchlist-back-home": "Zeréck op d'Haaptsäit",
 	"mobile-frontend-watchlist-cta-button-login": "Aloggen",
 	"mobile-frontend-watchlist-cta-button-signup": "Mellt Iech un",
 	"mobile-frontend-watchlist-feed-empty": "Et gëtt keng Säite mat rezenten Ännerungen",
