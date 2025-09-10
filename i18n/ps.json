@@ -106,7 +106,7 @@
 	"mobile-frontend-last-modified-with-user-months": "[$4 وروستی ځل {{PLURAL:$3|$3 مياشت|$3 مياشتې}} مخکې] د {{PLURAL:$5|[$6 $2]|0=يو ورکنومي کارن}} له خوا  {{GENDER:$1|سم شوی}}",
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 وروستی ځل {{PLURAL:$3|$3 ثانيه|$3 ثانيې}} مخکې] د {{PLURAL:$5|[$6 $2]|0=يو ورک‌نومي کارن}} له خوا {{GENDER:$1|سم شوی}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 وروستی ځل {{PLURAL:$3|$3 کال|$3 کالونه}} مخکې] د {{PLURAL:$5|[$6 $2]|0=يو ورک‌نومي کارن}} له خوا  {{GENDER:$1|سم شوی}}",
-	"mobile-frontend-main-menu": "ارنۍ غورنۍ",
+	"mobile-frontend-main-menu": "ارنۍ غوره‌نۍ",
 	"mobile-frontend-main-menu-settings-heading": "اوڼنې",
 	"mobile-frontend-media-details": "سپيناوي",
 	"mobile-frontend-media-license-link": "د منښتليک مالومات",
