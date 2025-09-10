@@ -209,10 +209,6 @@
 			"styles": [
 				"resources/mobile.startup/mobile.startup.less"
 			],
-			"skinStyles": {
-				"vector": "skinStyles/mobile.startup/vector.less",
-				"vector-2022": "skinStyles/mobile.startup/vector.less"
-			},
 			"scripts": [
 				{
 					"name": "mobile.config.js",

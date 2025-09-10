@@ -108,18 +108,6 @@ class Toggler {
 		mw.requestIdleCallback( () => {
 			/**
 			 * Global event emitted after a section has been toggled
-			 *
-			 * @event ~section-toggled
-			 * @type {ToggledEvent}
-			 * @memberof module:mobile.startup~Toggler
-			 * @ignore
-			 */
-
-			this.eventBus.emit( 'section-toggled', {
-				expanded: wasExpanded,
-				$heading
-			} );
-			/**
 			 * Internal for use inside ExternalGuidance.
 			 *
 			 * @event ~'mobileFrontend.section-toggled'
