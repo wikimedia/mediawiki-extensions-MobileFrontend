@@ -120,7 +120,7 @@
 	"mobile-frontend-editor-loading": "Загрузка редактора…",
 	"mobile-frontend-editor-loadingtooslow": "Медленное соединение?",
 	"mobile-frontend-editor-loadbasiceditor": "Переключиться в редактор кода",
-	"mobile-frontend-editor-toload": "Редактор скоро загрузится. Если через несколько секунд вы будете по-прежнему видеть это сообщение, пожалуйста, [$1 перезагрузите страницу].",
+	"mobile-frontend-editor-toload": "Редактор скоро загрузится. Если через несколько секунд вы будете по-прежнему видеть это сообщение, пожалуйста, [$1 обновите страницу].",
 	"mf-expand-sections-description": "Всегда раскрывать на страницах разделы с содержанием по умолчанию.",
 	"mf-expand-sections-name": "Раскрыть все разделы",
 	"mf-expand-sections-0-label": "Свернуть по умолчанию",

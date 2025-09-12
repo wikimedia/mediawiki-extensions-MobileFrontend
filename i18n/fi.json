@@ -92,7 +92,7 @@
 	"mobile-frontend-editor-loading": "Ladataan muokkainta...",
 	"mobile-frontend-editor-loadingtooslow": "Hidas yhteys?",
 	"mobile-frontend-editor-loadbasiceditor": "Vaihda wikitekstimuokkaimeen",
-	"mobile-frontend-editor-toload": "Muokkain latautuu. Jos näet tämän ilmoituksen vielä muutaman sekunnin päästä, [$1 lataa sivu uudelleen].",
+	"mobile-frontend-editor-toload": "Muokkain latautuu. Jos näet tämän ilmoituksen vielä muutaman sekunnin päästä, [$1 päivitä sivu].",
 	"mf-expand-sections-description": "Laajenna aina sisältösivujen osiot oletuksena.",
 	"mf-expand-sections-name": "Laajenna kaikki osiot",
 	"mf-expand-sections-0-label": "Kutista oletuksena",

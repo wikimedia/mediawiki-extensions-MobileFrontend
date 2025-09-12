@@ -85,7 +85,7 @@
 	"mobile-frontend-editor-loading": "טעינת העורך...",
 	"mobile-frontend-editor-loadingtooslow": "חיבור איטי?",
 	"mobile-frontend-editor-loadbasiceditor": "לעבור לעורך קוד מקור",
-	"mobile-frontend-editor-toload": "העורך ייטען עכשיו. אם ההודעה הזאת עדיין מוצגת לאחר כמה שניות, אפשר [$1 לטעון את הדף מחדש].",
+	"mobile-frontend-editor-toload": "העורך ייטען עכשיו. אם ההודעה הזאת עדיין מוצגת לאחר כמה שניות, אפשר [$1 לרענן את הדף].",
 	"mf-expand-sections-description": "תמיד להציג מייד פרקים של דפי תוכן במלואם.",
 	"mf-expand-sections-name": "להציג את כל הפרקים",
 	"mf-expand-sections-0-label": "להסתיר כברירת מחדל",
