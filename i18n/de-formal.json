@@ -11,6 +11,5 @@
 	"mobile-frontend-editor-success": "Erfolgreich! Ihre Bearbeitung wurde gespeichert.",
 	"mobile-frontend-editor-success-landmark-1": "Herzlichen Glückwunsch! Sie sind jetzt ein {{SITENAME}}-Autor!",
 	"mobile-frontend-opt-in-explain": "Durch die Teilnahme am Beta-Test erhalten Sie Zugriff auf experimentelle Funktionen, die allerdings auch Probleme und Fehler verursachen können.",
-	"mobile-frontend-talk-add-overlay-content-placeholder": "Was ist Ihr Anliegen?",
-	"mobile-frontend-view": "Mobile Ansicht"
+	"mobile-frontend-talk-add-overlay-content-placeholder": "Was ist Ihr Anliegen?"
 }
