@@ -77,7 +77,7 @@
 	"mobile-frontend-editor-loading": "Cargando o editor…",
 	"mobile-frontend-editor-loadingtooslow": "Tes unha conexión lenta?",
 	"mobile-frontend-editor-loadbasiceditor": "Cambiar ao editor de fonte",
-	"mobile-frontend-editor-toload": "O editor estase a cargar nestes momentos. Se aínda ves esta mensaxe tras uns poucos segundos, [$1 recarga a páxina].",
+	"mobile-frontend-editor-toload": "O editor estase a cargar nestes momentos. Se aínda ves esta mensaxe tras uns poucos segundos, [$1 actualiza a páxina].",
 	"mf-expand-sections-description": "Despregar sempre as seccións ao explorar as páxinas de contido.",
 	"mf-expand-sections-name": "Despregar todas as seccións",
 	"mf-expand-sections-0-label": "Encartar por defecto",

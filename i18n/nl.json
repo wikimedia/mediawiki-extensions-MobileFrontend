@@ -103,7 +103,7 @@
 	"mobile-frontend-editor-loading": "Editor aan het laden...",
 	"mobile-frontend-editor-loadingtooslow": "Langzame verbinding?",
 	"mobile-frontend-editor-loadbasiceditor": "Overschakelen naar brontekst bewerken",
-	"mobile-frontend-editor-toload": "De editor wordt nu geladen. Als u dit bericht na een paar seconden nog ziet, kunt u [$1 de pagina opnieuw laden].",
+	"mobile-frontend-editor-toload": "De editor wordt nu geladen. Als u dit bericht na een paar seconden nog ziet, kunt u [$1 de pagina vernieuwen].",
 	"mf-expand-sections-description": "Standaard altijd secties van inhoudspagina's uitvouwen.",
 	"mf-expand-sections-name": "Alle secties uitvouwen",
 	"mf-expand-sections-0-label": "Standaard inklappen",

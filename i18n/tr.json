@@ -107,7 +107,7 @@
 	"mobile-frontend-editor-loading": "Düzenleyici yükleniyor…",
 	"mobile-frontend-editor-loadingtooslow": "Bağlantı yavaş mı?",
 	"mobile-frontend-editor-loadbasiceditor": "Kaynak düzenleyiciye geç",
-	"mobile-frontend-editor-toload": "Düzenleyici şimdi yüklenecek. Birkaç saniye sonra bu iletiyi görmeye devam ediyorsanız, lütfen [$1 sayfayı yeniden yükleyin].",
+	"mobile-frontend-editor-toload": "Düzenleyici şimdi yüklenecek. Birkaç saniye sonra bu iletiyi görmeye devam ediyorsanız, lütfen [$1 sayfayı yenileyin].",
 	"mf-expand-sections-description": "Varsayılan olarak her zaman içerik sayfalarının bölümlerini genişletin.",
 	"mf-expand-sections-name": "Tüm bölümleri genişlet",
 	"mf-expand-sections-0-label": "Varsayılan olarak daralt",

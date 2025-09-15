@@ -104,7 +104,7 @@
 	"mobile-frontend-editor-loading": "جارٍ تحميل المحرر...",
 	"mobile-frontend-editor-loadingtooslow": "اتصال بطيء؟",
 	"mobile-frontend-editor-loadbasiceditor": "التبديل إلى محرر المصدر",
-	"mobile-frontend-editor-toload": "سيتم الآن تحميل المحرر، إذا استمر ظهور هذه الرسالة بعد بضع ثوانٍ، فتُرجَى [$1 إعادة تحميل الصفحة].",
+	"mobile-frontend-editor-toload": "سيتم تحميل المحرر الآن. إذا استمرت هذه الرسالة بالظهور بعد ثوانٍ قليلة، يُرجى [$1 تحديث الصفحة].",
 	"mf-expand-sections-description": "قم دائمًا بتوسيع أقسام صفحات المحتوى افتراضيًا.",
 	"mf-expand-sections-name": "أظهر كل الأقسام",
 	"mf-expand-sections-0-label": "انهيار افتراضيا",

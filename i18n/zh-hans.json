@@ -142,7 +142,7 @@
 	"mobile-frontend-editor-loading": "编辑器加载中……",
 	"mobile-frontend-editor-loadingtooslow": "连接太慢？",
 	"mobile-frontend-editor-loadbasiceditor": "切换到源代码编辑器",
-	"mobile-frontend-editor-toload": "现在将加载编辑器。如果您在几秒钟后仍然看见这条消息，请[$1 重新加载]页面。",
+	"mobile-frontend-editor-toload": "现在将加载编辑器。如果您在几秒钟后仍然看见这条消息，请[$1 刷新页面]。",
 	"mf-expand-sections-description": "默认总是展开内容页面的章节。",
 	"mf-expand-sections-name": "展开所有章节",
 	"mf-expand-sections-0-label": "默认折叠",
