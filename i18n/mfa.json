@@ -1,11 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Lam Takuma"
+			"Lam Takuma",
+			"EmpAhmadK"
 		]
 	},
-	"mobile-frontend-copyright": "Isi nyo age nga $1 kacawoli kalu rroyak mugo laéng.",
-	"mobile-frontend-terms-text": "Syarak-syarak Pegunoe",
+	"mobile-frontend-copyright": "Isi nyo agae nga $1 kacawoli kalu rroyak mugo laéng.",
+	"mobile-frontend-terms-text": "Syarak-syarak Pegunoae",
 	"mobile-frontend-view": "Muko mudoh aléh",
 	"mobile-frontend-view-desktop": "Atah mejo"
 }

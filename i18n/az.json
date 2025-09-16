@@ -26,7 +26,7 @@
 	"mobile-frontend-edit-signup-action": "<strong>{{SITENAME}} layihəsinin inkişafına kömək edin.</strong><br />Redaktə etmək üçün qeydiyyatdan keçin.",
 	"mobile-frontend-editor-anon": "Daxil olmadan redaktə et",
 	"mobile-frontend-editor-anonwarning": "<strong>Diqqət:</strong> Siz sistemə daxil olmamısınız. Hər hansı dəyişiklik etsəniz, sizin IP ünvanınız hər kəsə görünəcək. Əgər <strong>daxil olsanız</strong> və ya <strong>hesab yaratsanız</strong>, redaktələriniz sizin istifadəçi adınıza yazılacaq və başqa üstünlüklər də qazanacaqsınız.",
-	"mobile-frontend-editor-autocreatewarning": "<strong>Xəbərdarlıq:</strong> Siz daxil olmamısınız. Redaktə etdikdən sonra sizin üçün müvəqqəti hesab yaradılacaq. [[$1|Ətraflı məlumat]]. Bu hesabın müddəti bitdikdən sonra bildirişləri almağa davam etmək və digər funksiyalara daxil olmaq üçün <strong>daxil olun</strong> və ya <strong>hesab yaradın</strong> .",
+	"mobile-frontend-editor-autocreatewarning": "<strong>Xəbərdarlıq:</strong> Siz daxil olmamısınız. Redaktə etdikdən sonra sizin üçün müvəqqəti hesab yaradılacaq. [[$1|Ətraflı məlumat]]. Bu hesabın müddəti bitdikdən sonra bildirişləri almağa davam etmək və digər funksiyalara daxil olmaq üçün <strong>daxil olun</strong> və ya <strong>hesab yaradın</strong>.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Daxil ol",
 	"mobile-frontend-drawer-arrow-label": "Bağla",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "Oldu",
