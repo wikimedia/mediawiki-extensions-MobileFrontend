@@ -1,7 +1,5 @@
 <?php
 
-// phpcs:disable MediaWiki.NamingConventions.LowerCamelFunctionsName.FunctionName
-
 namespace MobileFrontend\Amc;
 
 use MediaWiki\ChangeTags\Hook\ChangeTagsListActiveHook;
