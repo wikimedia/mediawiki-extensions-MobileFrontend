@@ -2,13 +2,31 @@
 	"@metadata": {
 		"authors": [
 			"LesVisages",
+			"Ne",
 			"Robin van der Vliet",
 			"Tamzin"
 		]
 	},
 	"mobile-frontend-copyright": "lipu li toki ante ala la, sina ken kepeken lipu ni tan lawa $1",
+	"mobile-frontend-editor-publish": "o pana",
+	"mobile-frontend-editor-save": "o awen",
+	"mf-font-size-name": "suli sitelen",
+	"mf-font-size-description": "o ante e sitelen tawa ni: sina ken lukin pona e ona.",
+	"mf-font-size-small-label": "nasin",
+	"mf-font-size-regular-label": "suli lili",
+	"mf-font-size-large-label": "suli",
+	"mobile-frontend-language-heading": "<strong>toki</strong>",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "toki ante",
+	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "o alasa e toki",
+	"mobile-frontend-languages-structured-overlay-no-results": "toki ni li lon ala",
+	"mobile-frontend-languages-structured-overlay-no-results-body": "toki pi alasa sina li lon ala.",
+	"mobile-frontend-main-menu-settings-heading": "ante",
+	"mobile-frontend-missing-image": "sitelen",
+	"mobile-frontend-save-settings": "o awen",
 	"mobile-frontend-terms-text": "lawa kepeken",
 	"mobile-frontend-view": "lipu pi ilo lili",
-	"mobile-frontend-view-desktop": "lipu pi ilo suli"
+	"mobile-frontend-view-desktop": "lipu pi ilo suli",
+	"mobile-frontend-watchlist-filter-articles": "lipu",
+	"mobile-frontend-watchlist-filter-other": "ante",
+	"mobile-frontend-watchlist-filter-talk": "toki"
 }

@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Als-Holder",
+			"Ameisenigel",
 			"Brettchenweber",
 			"ChrisiPK",
 			"Creepario",
@@ -160,7 +161,7 @@
 	"mobile-frontend-user-page-no-page-yet": "Keine Benutzerseite für $1",
 	"mobile-frontend-user-page-describe-yourself": "Du kannst dich auf deiner Benutzerseite beschreiben, um dich mit $1 anzufreunden",
 	"mobile-frontend-user-page-describe-yourself-editors": "Autoren",
-	"mobile-frontend-user-page-desired-action": "Diese Seite sollte erstellt und von $1 bearbeitet werden",
+	"mobile-frontend-user-page-desired-action": "Diese Seite sollte von $1 erstellt und bearbeitet werden",
 	"mobile-frontend-user-page-create-owner-page-link-label": "Erstelle deine eigene",
 	"mobile-frontend-user-page-create-user-page-link-label": "Erstelle eine Seite mit dem Namen $1",
 	"mobile.css": "/* Das CSS hier wird für die Benutzer der mobilen Website geladen. */",
