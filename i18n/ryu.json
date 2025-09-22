@@ -2,12 +2,14 @@
 	"@metadata": {
 		"authors": [
 			"ChoiChong",
+			"さきじょーぐー",
 			"春春眠眠"
 		]
 	},
+	"mobile-frontend-copyright": "コンテンツぉーぬーがな書ちねーらんだれー、$1ぬむーとぅ使らりやびーん。",
 	"mobile-frontend-terms-text": "利用規約",
 	"mobile-frontend-view": "モバイルビュー",
 	"mobile-frontend-view-desktop": "デスクトップ",
-	"tag-mobile_edit": "モバイル直すん",
-	"tag-mobile_web_edit": "モバイルウェブぬ直すん"
+	"tag-mobile_edit": "モバイル編集",
+	"tag-mobile_web_edit": "モバイルウェブ編集"
 }

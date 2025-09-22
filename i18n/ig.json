@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Epiphanus Jidechukwu",
+			"Iwuala Lucy",
 			"Mbachuvm",
 			"Pasjoesscc",
 			"Tochiprecious",
@@ -71,7 +72,7 @@
 	"mobile-frontend-editor-loading": "Na-achighari nchịkọta akụkọ…",
 	"mobile-frontend-editor-loadingtooslow": "Njikọ ọ dị nwayọọ?",
 	"mobile-frontend-editor-loadbasiceditor": "Gbanwee banye na ndezi ebe osi",
-	"mobile-frontend-editor-toload": "Onye ndezi ga-ebughari ugbu a. Ọ bụrụ na ị ka na-ahụ ozi a ka nwa tịnkọm tịnkọm ole na ole gachara, biko [$1 bugharịa ibe ahụ].",
+	"mobile-frontend-editor-toload": "Onye ndezi ga-ebughari ugbu a. Ọ bụrụ na ị ka na-ahụ ozi a ka nwa tịnkọm tịnkọm ole na ole gachara, biko [$1 megharịa ibe ahụ].",
 	"mf-expand-sections-description": "Na agbasanwanye akụkụ nke ibe ọdịnaya site na ndabara.",
 	"mf-expand-sections-name": "Gbasaa ngalaba niile",
 	"mf-expand-sections-0-label": "Nkwada site na ndabara",
