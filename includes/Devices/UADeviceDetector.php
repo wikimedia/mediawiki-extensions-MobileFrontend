@@ -90,7 +90,8 @@ class UADeviceDetector implements DeviceDetector {
 			'playstation',
 			'portalmmm',
 			'sagem-',
-			'samsung',
+			// T405279: Match legacy device tokens like "SAMSUNG-S8000" but not "SamsungBrowser".
+			'samsung-',
 			'sanyo',
 			'sec-',
 			'sendo',
@@ -111,10 +112,8 @@ class UADeviceDetector implements DeviceDetector {
 			'pg-',
 		];
 		$regex = '/^(' . implode( '|', $patternsStart ) . ')|(' . implode( '|', $patterns ) . ')/i';
-		$exceptionRegex = '/SMART-TV.*SamsungBrowser/';
 
-		return preg_match( $regex, $userAgent )
-			&& !preg_match( $exceptionRegex, $userAgent );
+		return preg_match( $regex, $userAgent );
 	}
 
 	/**
