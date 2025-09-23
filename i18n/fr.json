@@ -57,7 +57,8 @@
 			"Mahabarata",
 			"Rayquachu",
 			"Niridya",
-			"Escargot bleu"
+			"Escargot bleu",
+			"Lhanars"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si un utilisateur est ou non en cours de modification via l’interface mobile ($1)",
@@ -70,7 +71,7 @@
 	"mobile-frontend-edit-signup-action": "<strong>Aider à améliorer {{SITENAME}}.</strong><br />Se connecter pour modifier.",
 	"mobile-frontend-editor-anon": "Modifier sans se connecter",
 	"mobile-frontend-editor-anonwarning": "<strong>Attention :</strong> vous êtes déconnecté(e). Votre adresse IP sera affichée publiquement si vous modifiez quoi que ce soit. Si vous <strong>vous connectez</strong> ou <strong>créez un compte</strong>, vos modifications seront associées à votre nom d’utilisateur, parmi d’autres avantages.",
-	"mobile-frontend-editor-autocreatewarning": "<strong>Attention :</strong> vous n’êtes pas connecté(e). Votre modification sera attribuée à un compte personnel temporaire. [[$1|En savoir plus]]. <strong>Connectez-vous</strong> ou <strong>créez un compte</strong> pour continuer à recevoir des notifications quand ce compte aura expiré et pouvoir accéder à d'autres fonctionnalités.",
+	"mobile-frontend-editor-autocreatewarning": "<strong>Atencion:</strong> non sètz pas connectat. Vòstra modificacion serà atribuïda a un compte personal temporari. [[$1|Saber-ne mai]]. <strong>Connectatz</strong> o <strong>creatz un compte</strong> per contunhar a recebre de notificacions quand aquel compte aurà expirat e poder accedir a d'autras foncionalitats.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Se connecter",
 	"mobile-frontend-drawer-arrow-label": "Fermer",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "OK",
