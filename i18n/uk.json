@@ -94,7 +94,7 @@
 	"mobile-frontend-editor-loading": "Завантаження редактора…",
 	"mobile-frontend-editor-loadingtooslow": "Повільне з'єднання?",
 	"mobile-frontend-editor-loadbasiceditor": "Перемкнути на редактор вікірозмітки",
-	"mobile-frontend-editor-toload": "Зараз завантажиться редактор. Якщо через кілька секунд ви все ще бачитимете це повідомлення, будь ласка, [$1 перезавантажте сторінку].",
+	"mobile-frontend-editor-toload": "Зараз завантажиться редактор. Якщо через кілька секунд ви все ще бачитимете це повідомлення, будь ласка, [$1 оновіть сторінку].",
 	"mf-expand-sections-description": "Завжди розгортати розділи контентових сторінок за замовчуванням.",
 	"mf-expand-sections-name": "Розгорнути всі розділи",
 	"mf-expand-sections-0-label": "Згорнути за замовчуванням",
