@@ -2,9 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Abdul Fatawu 352",
-			"Hasslaebetch"
+			"Hasslaebetch",
+			"Nurul deen"
 		]
 	},
+	"mobile-frontend-copyright": "N-la kpihi bɔrɛ yɛ $1 ka ta nyɛli ka kpihi",
+	"mobile-frontend-terms-text": "N-nyɛliŋ kpihi yɛla",
 	"mobile-frontend-view": "Nnaŋmɛn gbalɛ biɛb ni phone",
 	"mobile-frontend-view-desktop": "Nnaŋmɛn gbalɛ biɛb ni computer"
 }

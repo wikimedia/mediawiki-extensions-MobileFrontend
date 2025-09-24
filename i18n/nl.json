@@ -45,7 +45,7 @@
 	"abusefilter-edit-builder-vars-user-mobile": "Of een gebruiker wel of niet via de mobiele interface bewerkt ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "Bevestigingscode invoeren",
 	"mobile-frontend-clear-search": "Wissen",
-	"mobile-frontend-copyright": "De inhoud is, tenzij anders aangegeven, beschikbaar onder $1",
+	"mobile-frontend-copyright": "De inhoud is beschikbaar onder de licentie $1 tenzij anders aangegeven.",
 	"mobile-frontend-desc": "Helpt de mobiele aanwezigheid van een MediaWiki-installatie te verbeteren",
 	"mobile-frontend-edit-login-action": "<strong>Help mee met het verbeteren van {{SITENAME}}.</strong><br />Meld u aan om te bewerken.",
 	"mobile-frontend-edit-signup-action": "<strong>Help mee met het verbeteren van {{SITENAME}}.</strong><br />Schrijf u in om te kunnen bewerken.",
