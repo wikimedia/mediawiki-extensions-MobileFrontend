@@ -67,7 +67,7 @@
 	"mobile-frontend-editor-loading": "Ielādē redaktoru…",
 	"mobile-frontend-editor-loadingtooslow": "Lēns savienojums?",
 	"mobile-frontend-editor-loadbasiceditor": "Pārslēgties uz vikikoda redaktoru",
-	"mobile-frontend-editor-toload": "Tagad ielādēsies redaktors. Ja pēc pāris sekundēm joprojām redzi šo paziņojumu, lūdzu, [$1 vēlreiz ielādē lapu].",
+	"mobile-frontend-editor-toload": "Tagad ielādēsies redaktors. Ja pēc pāris sekundēm joprojām redzi šo paziņojumu, lūdzu, [$1 atsvaidzini lapu].",
 	"mf-expand-sections-description": "Pēc noklusējuma vienmēr izvērst satura lapu sadaļas.",
 	"mf-expand-sections-name": "Atvērt visas sadaļas",
 	"mf-expand-sections-0-label": "Sakļaut pēc noklusējuma",
