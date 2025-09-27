@@ -403,7 +403,7 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 				return;
 			}
 
-			$latestUser = $this->getUser()->getInstanceForUpdate();
+			$latestUser = $this->getUser()->getInstanceFromPrimary();
 			if ( $latestUser === null || !$latestUser->isNamed() ) {
 				// The user is anon, temp user or could not be loaded from the database.
 				return;
@@ -424,7 +424,7 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 					$enableAMC ? UserMode::OPTION_ENABLED : UserMode::OPTION_DISABLED
 				);
 			}
-			$latestUser->saveSettings();
+			$this->userOptionsManager->saveOptions( $latestUser );
 		}, DeferredUpdates::PRESEND );
 
 		$this->getOutput()->redirect( $this->getRedirectUrl( $request ) );
