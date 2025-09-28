@@ -3,7 +3,6 @@
 use MediaWiki\FileRepo\RepoGroup;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\Html\Html;
-use MediaWiki\Language\Language;
 use MediaWiki\MainConfigNames;
 use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\Specials\SpecialEditWatchlist;
@@ -148,33 +147,27 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 	/**
 	 * Get the HTML needed to show if a user doesn't watch any page, show information
 	 * how to watch pages where no pages have been watched.
-	 * @param bool $feed Render as feed (true) or list (false) view?
-	 * @param Language $lang The language of the current mode
 	 * @return string
 	 */
-	private function getEmptyListHtml( $feed, $lang ) {
-		$dir = $lang->isRTL() ? 'rtl' : 'ltr';
+	private function getEmptyListHtml() {
+		$dir = $this->getLanguage()->isRTL() ? 'rtl' : 'ltr';
 
 		$imgUrl = $this->getConfig()->get( MainConfigNames::ExtensionAssetsPath ) .
 			"/MobileFrontend/images/emptywatchlist-page-actions-$dir.png";
 
-		if ( $feed ) {
-			$msg = Html::element( 'p', [], wfMessage( 'mobile-frontend-watchlist-feed-empty' )->plain() );
-		} else {
-			$msg = Html::element( 'p', [],
-				wfMessage( 'mobile-frontend-watchlist-a-z-empty-howto' )->plain()
-			);
-			$msg .= Html::element( 'img', [
-				'src' => $imgUrl,
-				'alt' => wfMessage( 'mobile-frontend-watchlist-a-z-empty-howto-alt' )->plain(),
-			] );
-		}
+		$msg = Html::element( 'p', [],
+			$this->msg( 'mobile-frontend-watchlist-a-z-empty-howto' )->plain()
+		);
+		$msg .= Html::element( 'img', [
+			'src' => $imgUrl,
+			'alt' => $this->msg( 'mobile-frontend-watchlist-a-z-empty-howto-alt' )->plain(),
+		] );
 
 		return Html::openElement( 'div', [ 'class' => 'info empty-page' ] ) .
 			$msg .
 			Html::element( 'a',
 				[ 'class' => 'button', 'href' => Title::newMainPage()->getLocalURL() ],
-				wfMessage( 'mobile-frontend-watchlist-back-home' )->plain()
+				$this->msg( 'mobile-frontend-watchlist-back-home' )->plain()
 			) .
 			Html::closeElement( 'div' );
 	}
@@ -242,7 +235,7 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 		}
 
 		if ( $mobilePages->isEmpty() ) {
-			$html = $this->getEmptyListHtml( false, $this->getLanguage() );
+			$html = $this->getEmptyListHtml();
 		} else {
 			$html = $this->getViewHtml( $mobilePages );
 		}
