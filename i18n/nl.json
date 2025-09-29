@@ -48,7 +48,7 @@
 	"mobile-frontend-cite-error-title": "Fout bij laden van citaties",
 	"mobile-frontend-cite-none-available": "Er zijn geen citaties beschikbaar voor deze pagina",
 	"mobile-frontend-clear-search": "Wissen",
-	"mobile-frontend-copyright": "De inhoud is, tenzij anders aangegeven, beschikbaar onder $1",
+	"mobile-frontend-copyright": "De inhoud is beschikbaar onder de licentie $1 tenzij anders aangegeven.",
 	"mobile-frontend-desc": "Mobiele website",
 	"mobile-frontend-diffview-404-desc": "De ID voor de revisie die u heeft aangevraagd, bestaat niet. <br/> Dit wordt meestal veroorzaakt door het volgen van een verouderde diff-link naar een pagina die is verwijderd of een diff-link die ongeldige tekens bevat.",
 	"mobile-frontend-diffview-404-title": "Onjuiste versie",
