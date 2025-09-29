@@ -2,8 +2,9 @@
 	"private": true,
 	"scripts": {
 		"coverage": "cross-env NODE_ENV=test nyc npm -s run test:unit",
-		"start": "webpack -w --mode=development",
-		"build": "webpack --mode=production",
+		"webpack": "NODE_OPTIONS=--openssl-legacy-provider webpack",
+		"start": "npm run webpack -- -w --mode=development",
+		"build": "npm run webpack -- --mode=production",
 		"precommit": "npm -s run lint:frontend && npm -s run coverage && npm -s run test:bundle && composer test",
 		"test:unit": "mw-node-qunit --require @babel/register \"tests/node-qunit/**/*.test.js\"",
 		"lint": "npm -s run lint:i18n && npm -s run lint:frontend",
@@ -105,5 +106,8 @@
 			"path": "resources/dist/mobile.talk.overlays.js",
 			"maxSize": "2.6KB"
 		}
-	]
+	],
+	"dependencies": {
+		"nan": "^2.23.0"
+	}
 }
