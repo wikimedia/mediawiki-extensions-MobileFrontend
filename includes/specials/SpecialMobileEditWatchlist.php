@@ -24,18 +24,13 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 	private const LIMIT = 50;
 
 	/** @var string The name of the title to begin listing the watchlist from */
-	protected $offsetTitle;
-
-	private HookContainer $hookContainer;
-	private RepoGroup $repoGroup;
+	protected readonly string $offsetTitle;
 
 	public function __construct(
-		HookContainer $hookContainer,
-		RepoGroup $repoGroup,
-		WatchedItemStoreInterface $watchStoreItem
+		private readonly HookContainer $hookContainer,
+		private readonly RepoGroup $repoGroup,
+		WatchedItemStoreInterface $watchStoreItem,
 	) {
-		$this->hookContainer = $hookContainer;
-		$this->repoGroup = $repoGroup;
 		$req = $this->getRequest();
 		$this->offsetTitle = $req->getVal( 'from', '' );
 		parent::__construct( $watchStoreItem );

@@ -17,7 +17,6 @@ class MobilePage {
 	public const SMALL_IMAGE_WIDTH = 220;
 	public const TINY_IMAGE_WIDTH = 120;
 
-	private Title $title;
 	/**
 	 * @var RevisionRecord|bool|null
 	 */
@@ -35,8 +34,10 @@ class MobilePage {
 	 * @param Title $title Page title
 	 * @param File|false $file Page image file
 	 */
-	public function __construct( Title $title, $file = false ) {
-		$this->title = $title;
+	public function __construct(
+		private readonly Title $title,
+		$file = false,
+	) {
 		$this->file = $file;
 	}
 

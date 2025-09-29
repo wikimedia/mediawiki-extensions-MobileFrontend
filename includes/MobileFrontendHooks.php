@@ -121,35 +121,19 @@ class MobileFrontendHooks implements
 	// in mediawiki.skin.variables.less
 	private const DEVICE_WIDTH_TABLET = '640px';
 
-	private HookContainer $hookContainer;
-	private Config $config;
-	private SkinFactory $skinFactory;
-	private UserOptionsLookup $userOptionsLookup;
-	private WatchlistManager $watchlistManager;
-	private MobileContext $mobileContext;
-	private FeaturesManager $featuresManager;
-	private ?GadgetRepo $gadgetRepo;
-	private MobileFrontendSkinHooks $skinHooks;
+	private readonly MobileFrontendSkinHooks $skinHooks;
 
 	public function __construct(
-		HookContainer $hookContainer,
-		Config $config,
-		SkinFactory $skinFactory,
+		private readonly HookContainer $hookContainer,
+		private readonly Config $config,
+		private readonly SkinFactory $skinFactory,
 		UrlUtils $urlUtils,
-		UserOptionsLookup $userOptionsLookup,
-		WatchlistManager $watchlistManager,
-		MobileContext $mobileContext,
-		FeaturesManager $featuresManager,
-		?GadgetRepo $gadgetRepo
+		private readonly UserOptionsLookup $userOptionsLookup,
+		private readonly WatchlistManager $watchlistManager,
+		private readonly MobileContext $mobileContext,
+		private readonly FeaturesManager $featuresManager,
+		private readonly ?GadgetRepo $gadgetRepo,
 	) {
-		$this->hookContainer = $hookContainer;
-		$this->config = $config;
-		$this->skinFactory = $skinFactory;
-		$this->userOptionsLookup = $userOptionsLookup;
-		$this->watchlistManager = $watchlistManager;
-		$this->mobileContext = $mobileContext;
-		$this->featuresManager = $featuresManager;
-		$this->gadgetRepo = $gadgetRepo;
 		$this->skinHooks = new MobileFrontendSkinHooks( $urlUtils );
 	}
 

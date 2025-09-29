@@ -80,8 +80,6 @@ class MobileContext extends ContextSource {
 	 */
 	private ?bool $hasMobileUrl = null;
 
-	private Config $config;
-
 	/**
 	 * Returns the actual MobileContext Instance or create a new if no exists
 	 * @deprecated use MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
@@ -104,9 +102,11 @@ class MobileContext extends ContextSource {
 		self::$instance = null;
 	}
 
-	protected function __construct( IContextSource $context, Config $config ) {
+	protected function __construct(
+		IContextSource $context,
+		private readonly Config $config,
+	) {
 		$this->setContext( $context );
-		$this->config = $config;
 	}
 
 	/**

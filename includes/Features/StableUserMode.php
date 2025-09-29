@@ -10,10 +10,9 @@ use MobileContext;
  */
 class StableUserMode implements IUserMode {
 
-	private MobileContext $context;
-
-	public function __construct( MobileContext $context ) {
-		$this->context = $context;
+	public function __construct(
+		private readonly MobileContext $context,
+	) {
 	}
 
 	/**

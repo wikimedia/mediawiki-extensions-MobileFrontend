@@ -42,15 +42,11 @@ class DeviceDetectorService implements DeviceDetector {
 	}
 
 	/**
-	 * @var DeviceDetector[]
-	 */
-	private array $children;
-
-	/**
 	 * @param DeviceDetector[] $children
 	 */
-	public function __construct( array $children ) {
-		$this->children = $children;
+	public function __construct(
+		private readonly array $children,
+	) {
 	}
 
 	/**

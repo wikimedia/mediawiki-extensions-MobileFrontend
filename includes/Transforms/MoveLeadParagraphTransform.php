@@ -15,15 +15,16 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	 * @var Title|string
 	 */
 	private $title;
-	private int $revId;
 
 	/**
 	 * @param Title|string $title for logging purposes
 	 * @param int $revId for logging purposes
 	 */
-	public function __construct( $title, $revId ) {
+	public function __construct(
+		$title,
+		private readonly int $revId,
+	) {
 		$this->title = $title;
-		$this->revId = $revId;
 	}
 
 	/**

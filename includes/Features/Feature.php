@@ -9,22 +9,16 @@ class Feature implements IFeature {
 
 	private const DEFAULT_ENABLED_MODE = false;
 
-	private string $name;
-	/**
-	 * Feature group (mobile-frontend, minerva, ...)
-	 */
-	private string $group;
-	private array $options;
-
 	/**
 	 * @param string $name feature name (used as an ID)
-	 * @param string $group feature group (used as a translation prefix)
+	 * @param string $group feature group (mobile-frontend, minerva, ..., used as a translation prefix)
 	 * @param array $options Feature options
 	 */
-	public function __construct( $name, $group = 'mobile-frontend', array $options = [] ) {
-		$this->name = $name;
-		$this->group = $group;
-		$this->options = $options;
+	public function __construct(
+		private readonly string $name,
+		private readonly string $group = 'mobile-frontend',
+		private readonly array $options = [],
+	) {
 	}
 
 	/**

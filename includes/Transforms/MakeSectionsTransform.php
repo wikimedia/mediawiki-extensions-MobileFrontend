@@ -30,26 +30,13 @@ class MakeSectionsTransform implements IMobileTransform {
 	public const STYLE_COLLAPSIBLE_SECTION_CLASS = 'collapsible-block';
 
 	/**
-	 * Whether scripts can be added in the output.
-	 */
-	private bool $scriptsEnabled;
-
-	/**
-	 * List of tags that could be considered as section headers.
-	 * @var string[]
-	 */
-	private array $topHeadingTags;
-
-	/**
-	 * @param string[] $topHeadingTags list of tags could be considered as sections
-	 * @param bool $scriptsEnabled whether scripts are enabled
+	 * @param string[] $topHeadingTags List of tags that could be considered as section headers.
+	 * @param bool $scriptsEnabled Whether scripts can be added in the output.
 	 */
 	public function __construct(
-		array $topHeadingTags,
-		bool $scriptsEnabled
+		private readonly array $topHeadingTags,
+		private readonly bool $scriptsEnabled,
 	) {
-		$this->topHeadingTags = $topHeadingTags;
-		$this->scriptsEnabled = $scriptsEnabled;
 	}
 
 	/**

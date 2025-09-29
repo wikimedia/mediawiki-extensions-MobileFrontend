@@ -21,16 +21,11 @@ class LazyImageTransform implements IMobileTransform {
 	private const SMALL_IMAGE_DIMENSION_THRESHOLD_IN_EX = 10;
 
 	/**
-	 * Whether to skip the loading of small images
-	 * @var bool
+	 * @param bool $skipSmall whether small images should be excluded from lazy loading
 	 */
-	protected $skipSmall;
-
-	/**
-	 * @param bool $skipSmallImages whether small images should be excluded from lazy loading
-	 */
-	public function __construct( $skipSmallImages = false ) {
-		$this->skipSmall = $skipSmallImages;
+	public function __construct(
+		protected readonly bool $skipSmall = false,
+	) {
 	}
 
 	/**

@@ -15,21 +15,14 @@ use MediaWiki\Utils\UrlUtils;
  */
 class ApiWebappManifest extends ApiBase {
 
-	private Language $contentLanguage;
-	private HttpRequestFactory $httpRequestFactory;
-	private UrlUtils $urlUtils;
-
 	public function __construct(
 		ApiMain $main,
 		string $action,
-		Language $contentLanguage,
-		HttpRequestFactory $httpRequestFactory,
-		UrlUtils $urlUtils
+		private readonly Language $contentLanguage,
+		private readonly HttpRequestFactory $httpRequestFactory,
+		private readonly UrlUtils $urlUtils,
 	) {
 		parent::__construct( $main, $action );
-		$this->contentLanguage = $contentLanguage;
-		$this->httpRequestFactory = $httpRequestFactory;
-		$this->urlUtils = $urlUtils;
 	}
 
 	/**

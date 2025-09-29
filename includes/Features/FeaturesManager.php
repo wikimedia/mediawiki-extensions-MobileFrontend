@@ -24,15 +24,10 @@ class FeaturesManager {
 	 */
 	private array $features = [];
 
-	private HookContainer $hookContainer;
-	private UserModes $userModes;
-
 	public function __construct(
-		HookContainer $hookContainer,
-		UserModes $userModes
+		private readonly HookContainer $hookContainer,
+		private readonly UserModes $userModes,
 	) {
-		$this->hookContainer = $hookContainer;
-		$this->userModes = $userModes;
 	}
 
 	/**

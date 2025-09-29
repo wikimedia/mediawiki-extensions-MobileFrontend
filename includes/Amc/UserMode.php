@@ -23,18 +23,11 @@ class UserMode implements IUserMode, IUserSelectableMode {
 	 */
 	public const OPTION_DISABLED = '0';
 
-	private UserIdentity $userIdentity;
-	private Manager $amc;
-	private UserOptionsManager $userOptionsManager;
-
 	public function __construct(
-		Manager $amcManager,
-		UserIdentity $userIdentity,
-		UserOptionsManager $userOptionsManager
+		private readonly Manager $amc,
+		private readonly UserIdentity $userIdentity,
+		private readonly UserOptionsManager $userOptionsManager,
 	) {
-		$this->amc = $amcManager;
-		$this->userIdentity = $userIdentity;
-		$this->userOptionsManager = $userOptionsManager;
 	}
 
 	/**

@@ -7,14 +7,12 @@ use Wikimedia\Parsoid\Utils\DOMCompat;
 
 class RemovableClassesTransform implements IMobileTransform {
 
-	/** @var string[] */
-	private array $removableClasses;
-
 	/**
 	 * @param string[] $removableClasses List of slectors denoting elements to be removed
 	 */
-	public function __construct( array $removableClasses ) {
-		$this->removableClasses = $removableClasses;
+	public function __construct(
+		private readonly array $removableClasses,
+	) {
 	}
 
 	/**

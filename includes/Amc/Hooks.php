@@ -28,12 +28,9 @@ final class Hooks implements
 	UserGetDefaultOptionsHook,
 	ManualLogEntryBeforePublishHook
 {
-	private UserFactory $userFactory;
-
 	public function __construct(
-		UserFactory $userFactory
+		private readonly UserFactory $userFactory,
 	) {
-		$this->userFactory = $userFactory;
 	}
 
 	/**

@@ -6,12 +6,9 @@ use MediaWiki\Title\Title;
 use MediaWiki\Utils\UrlUtils;
 
 class MobileFrontendSkinHooks {
-	private UrlUtils $urlUtils;
-
 	public function __construct(
-		UrlUtils $urlUtils
+		private readonly UrlUtils $urlUtils,
 	) {
-		$this->urlUtils = $urlUtils;
 	}
 
 	/**

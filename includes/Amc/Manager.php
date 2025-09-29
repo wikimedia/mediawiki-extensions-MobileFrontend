@@ -28,19 +28,10 @@ final class Manager {
 	 */
 	public const AMC_EDIT_TAG = 'advanced mobile edit';
 
-	/**
-	 * MobileContext used to retrieve shouldDisplayMobileView and user information
-	 */
-	private MobileContext $mobileContext;
-
-	/**
-	 * System config
-	 */
-	private Config $config;
-
-	public function __construct( Config $config, MobileContext $mobileContext ) {
-		$this->config = $config;
-		$this->mobileContext = $mobileContext;
+	public function __construct(
+		private readonly Config $config,
+		private readonly MobileContext $mobileContext,
+	) {
 	}
 
 	/**

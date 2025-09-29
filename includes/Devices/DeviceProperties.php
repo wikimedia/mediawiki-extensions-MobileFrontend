@@ -29,12 +29,10 @@ namespace MobileFrontend\Devices;
  */
 class DeviceProperties {
 
-	private bool $isMobileDevice;
-	private bool $isTabletDevice;
-
-	public function __construct( bool $isMobileDevice, bool $isTabletDevice ) {
-		$this->isMobileDevice = $isMobileDevice;
-		$this->isTabletDevice = $isTabletDevice;
+	public function __construct(
+		private readonly bool $isMobileDevice,
+		private readonly bool $isTabletDevice,
+	) {
 	}
 
 	/**
