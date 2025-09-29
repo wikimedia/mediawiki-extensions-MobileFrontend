@@ -208,8 +208,8 @@ QUnit.test( '#getThumbnail', ( assert ) => {
 	assert.notStrictEqual( thumbUseLang, null, 'Thumbnail found if valid.' );
 	assert.strictEqual( thumbUseLang.getFileName(), 'File:Design_portal_logo.jpg', 'Thumbnail found if valid.' );
 
-	// Valid anchor with legacy URL
-	const $containerLegacy = util.parseHTML( '<div><a href="/w/index.php?debug=1&title=File:Design_portal_logo.jpg&uselang=fa" class="image"><span class="lazy-image-placeholder" style="width: 28px;height: 28px;" data-src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Design_portal_logo.jpg/28px-Design_portal_logo.jpg" data-alt="icon" data-width="28" data-height="28" data-class="thumbimage">&nbsp;</span></a></div>' );
+	// Valid anchor with index.php URL
+	const $containerLegacy = util.parseHTML( '<div><a href="/w/index.php?title=File:Design_portal_logo.jpg&uselang=fa" class="image"><span class="lazy-image-placeholder" style="width: 28px;height: 28px;" data-src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Design_portal_logo.jpg/28px-Design_portal_logo.jpg" data-alt="icon" data-width="28" data-height="28" data-class="thumbimage">&nbsp;</span></a></div>' );
 	const parserLegacy = new PageHTMLParser( $containerLegacy );
 	const thumbLegacy = parserLegacy.getThumbnail( $containerLegacy.find( PageHTMLParser.THUMB_SELECTOR ) );
 	assert.notStrictEqual( thumbLegacy, null, 'Thumbnail found if valid.' );
