@@ -9,7 +9,7 @@
 			"ⵕⴰⵊⵉ"
 		]
 	},
-	"abusefilter-edit-builder-vars-user-mobile": "ⵎⴽ ⴷⴰ ⵉⵙⵏⴼⴰⵍ ⵓⵙⵙⵎⵔⵙ ⴳ ⵓⴳⵔⵓⴷⵎ ⵏ ⵓⵎⵓⴱⴰⵢⵍ",
+	"abusefilter-edit-builder-vars-user-mobile": "ⵎⴽ ⴷⴰ {{GENDER:ⵉⵙⵏⴼⴰⵍ ⵓⵏⵙⵙⵎⵔⵙ|ⵜⵙⵏⴼⴰⵍ ⵜⵏⵙⵙⵎⵔⵙⵜ}} ⵙⴳ ⵓⴳⵔⵓⴷⵎ ⵏ ⵓⵎⵓⴱⴰⵢⵍ ⵏⵖ ⵓⵀⵓ ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "ⵙⴽⵛⵎ ⵜⴰⴳⴰⵍⵜ ⵏ ⵓⵙⵖⵥⵏ",
 	"mobile-frontend-changeslist-nocomment": "ⵡⴰⵍⵓ ⴰⵙⴳⵣⵍ ⵏ ⵓⵙⵏⴼⵍ",
 	"mobile-frontend-clear-search": "ⵙⴼⴹ",
@@ -58,8 +58,8 @@
 	"mobile-frontend-editor-wait": "ⴰⴼⵙⴰⵔ ⵏ ⵓⵙⵏⴼⵍ, ⵎⴽ ⵜⵓⴼⵉⴷ, ⵇⵇⵍ.",
 	"mobile-frontend-editor-loading": "ⴰⵣⴷⴰⵎ ⵏ ⵓⵎⵙⵏⴼⵍ...",
 	"mf-font-size-name": "ⵜⵉⴷⴷⵉ ⵏ ⵓⵙⴽⴽⵉⵍ",
-	"mf-font-size-small-label": "ⴰⵎⵥⵥⴰⵏ",
-	"mf-font-size-regular-label": "ⴰⵏⵎⵢⵓⵔ",
+	"mf-font-size-small-label": "ⴰⵏⴰⵡⴰⵢ",
+	"mf-font-size-regular-label": "ⴰⵏⴰⵎⵎⴰⵙ",
 	"mf-font-size-large-label": "ⴰⵎⵇⵇⵔⴰⵏ",
 	"mobile-frontend-generic-404-title": "ⵜⴰⵣⴳⵍⵜ - ⵓⵔ ⵜⴻⵜⵜⵢⴰⴼⴰ ⵜⴰⵙⵏⴰ",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} ⵙⴽⵔⵏ ⵜ ⵉⵡⴷⴰⵏ ⴰⵎ ⴽⵢⵢ/ⴽⵎⵎ.</strong><br />ⴽⵛⵎ ⵃⵎⴰ ⴰⴷ ⵜⴰⵎⵓⵜ.",
