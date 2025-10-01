@@ -15,6 +15,7 @@
 	"mobile-frontend-copyright": "ಪ್ರತ್ಯೇಕವಾದ್ ಉಲ್ಲೇಕ ಮಲ್ಪಂದೆ ಇತ್ತ್ಂಡ, ವಿಸಯ \"$1\" ದ ಅಡಿಟ್ ಲಬ್ಯ ಉಂಡು.",
 	"mobile-frontend-editor-blocked-drawer-title-partial": "ಈ ಪುಟ ಸಂಪಾದಿಕೆಗ್ ಇರೆನ್ ತಡೆತುದುಂಡು.",
 	"mobile-frontend-editor-disabled-anon": "ಈ ಪುಟೊನು ಸಂಪಾದಿಯೆರೆ ಈರ್ ಪ್ರವೇಶ ಮಲ್ಪೊಡು.",
+	"mobile-frontend-editor-licensing-with-terms": "ಬದಲಾವನೆಲೆನ್ ಪ್ರಕಟ ಮಲ್ಪುನಗ, ಈರ್ $1 ಗ್ ಒಪ್ಪಿಗೆ ಕೊರ್ಪರ್ ಬೊಕ್ಕ ನಿಕ್ಲೆನ ಕೊಡುಗೆನ್ $2 {{PLURAL:$3|ಲೈಸೆನ್ಸ್‌|ಲೈಸೆನ್ಸ್‌}}ದ ಅಡಿಟ್ ಬುಡುಗಡೆ ಮಲ್ಪೆರೆ ಒಪ್ಪಿಗೆ ಕೊರ್ಪರ್.",
 	"mobile-frontend-editor-summary-request": "ಈರ್ ಪುಟೊನ್ ವಾ ನಮೂಡೆಡ್ ಎಡ್ಡೆ ಮಲ್ತರ್?",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|Joined}} ಇತ್ತೆ",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|Joined}} {{PLURAL:$2|$2 minute|$2 ಮಿನಿಟ್ಗ್}} ದುಂಬು",
