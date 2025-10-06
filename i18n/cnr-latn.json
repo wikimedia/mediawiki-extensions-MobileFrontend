@@ -1,9 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"Bellatrix10"
+			"Bellatrix10",
+			"ITZQing"
 		]
 	},
+	"mobile-frontend-copyright": "Sadržaj je dostupan pod uslovima $1, ako nije drugačije navedeno.",
+	"mobile-frontend-terms-text": "Uslovi korišćenja",
+	"mobile-frontend-view": "Mobilni prikaz",
+	"mobile-frontend-view-desktop": "Računarski",
 	"tag-mobile_edit": "Uređivanje učinjeno sa mobilnog uređaja (putem weba ili aplikacije)",
 	"tag-mobile_web_edit": "Uređivanje napravljeno iz aplikacije za mobilne uređaje"
 }
