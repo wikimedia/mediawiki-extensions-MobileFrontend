@@ -30,7 +30,7 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Nhập mã xác nhận",
 	"mobile-frontend-clear-search": "Tẩy trống",
 	"mobile-frontend-copyright": "Nội dung được phát hành theo $1, ngoại trừ khi có ghi chú khác.",
-	"mobile-frontend-desc": "Giúp cải thiện trang MediaWiki cho người dùng di động",
+	"mobile-frontend-desc": "Giúp cải thiện giao diện MediaWiki cho người dùng di động",
 	"mobile-frontend-edit-login-action": "<strong>Giúp cải thiện {{SITENAME}}.</strong><br />\nHãy đăng nhập để sửa đổi.",
 	"mobile-frontend-edit-signup-action": "<strong>Giúp cải thiện {{SITENAME}}.</strong><br />Mở tài khoản để sửa đổi.",
 	"mobile-frontend-editor-anon": "Sửa đổi ẩn danh (không đăng nhập)",
