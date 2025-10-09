@@ -40,20 +40,6 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 	}
 
 	/**
-	 * Helper function to verify that passed $node matched tagName and has set required classname
-	 * @param Element $node Node to verify
-	 * @param string|bool $requiredTagName Required tag name, has to be lowercase
-	 *   if false it is ignored and requiredClass is used.
-	 * @param string $requiredClass Regular expression with required class name
-	 * @return bool
-	 */
-	private static function matchElement( Element $node, $requiredTagName, $requiredClass ) {
-		$classes = iterator_to_array( DOMCompat::getClassList( $node ) );
-		return ( $requiredTagName === false || DOMUtils::nodeName( $node ) === $requiredTagName )
-			&& preg_grep( $requiredClass, $classes );
-	}
-
-	/**
 	 * Iterate up the DOM tree until find a parent node which has the parent $parent
 	 * @param Node $node
 	 * @param Node $parent
@@ -88,10 +74,11 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 		if ( $infobox instanceof Element ) {
 			// Check if the infobox is inside a container
 			$node = $infobox;
-			$wrapperClass = '/^(mw-stack|collapsible)$/';
 			// Traverse up
 			while ( $node->parentNode ) {
-				if ( self::matchElement( $node, false, $wrapperClass ) ) {
+				$classList = DOMCompat::getClassList( $node );
+				if ( $classList->contains( 'mw-stack' ) ||
+					 $classList->contains( 'collapsible' ) ) {
 					$infobox = $node;
 				}
 				$node = $node->parentNode;

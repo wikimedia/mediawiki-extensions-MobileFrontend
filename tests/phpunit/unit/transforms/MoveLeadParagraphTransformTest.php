@@ -11,7 +11,6 @@ use Wikimedia\TestingAccessWrapper;
 class MoveLeadParagraphTransformTest extends \MediaWikiUnitTestCase {
 	/**
 	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::identifyInfoboxElement
-	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::matchElement
 	 * @dataProvider provideIdentifyInfoboxElement
 	 */
 	public function testIdentifyInfoboxElement( string $html, ?string $expected, string $msg ) {
