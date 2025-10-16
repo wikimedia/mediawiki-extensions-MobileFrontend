@@ -165,19 +165,10 @@ class EditorOverlayBase extends Overlay {
 <div class="overlay-content">
 	<div class="panels">
 		<div class="save-panel panel hideable hidden">
-			<div id="error-notice-container"></div>
-			<h2 class="summary-request">{{{summaryRequestMsg}}}</h2>
-			<div class="summary-input"></div>
-			{{#licenseMsg}}<div class="license">{{{licenseMsg}}}</div>{{/licenseMsg}}
+			${ this.getSavePanelTemplateSource() }
 		</div>
 		<div class="captcha-panel panel hideable hidden">
-			<div class="captcha-box">
-				<img id="image" src="">
-				<div id="question"></div>
-				<div class="cdx-text-input">
-					<input class="captcha-word cdx-text-input__input" placeholder="{{captchaMsg}}" />
-				</div>
-			</div>
+			${ this.getCaptchaPanelTemplateSource() }
 		</div>
 	</div>
 	{{>content}}
@@ -186,6 +177,42 @@ class EditorOverlayBase extends Overlay {
 	{{>footer}}
 </div>
 	` );
+	}
+
+	/**
+	 * Provides the template code to be used for the save panel, where the user
+	 * is asked for an edit summary.
+	 *
+	 * This method is called by template(), and provided so that extending
+	 * classes can change the HTML provided here.
+	 *
+	 * @returns {string}
+	 */
+	getSavePanelTemplateSource() {
+		return `<div id="error-notice-container"></div>
+			<h2 class="summary-request">{{{summaryRequestMsg}}}</h2>
+			<div class="summary-input"></div>
+			{{#licenseMsg}}
+			<div class="license">{{{licenseMsg}}}</div>
+			{{/licenseMsg}}`;
+	}
+
+	/**
+	 * Provides the template code to be used for the captcha step.
+	 *
+	 * This method is called by template(), and provided so that extending
+	 * classes can change the HTML provided here.
+	 *
+	 * @returns {string}
+	 */
+	getCaptchaPanelTemplateSource() {
+		return `<div class="captcha-box">
+			<img id="image" src="">
+			<div id="question"></div>
+			<div class="cdx-text-input">
+				<input class="captcha-word cdx-text-input__input" placeholder="{{captchaMsg}}" />
+			</div>
+		</div>`;
 	}
 
 	fakeToolbar() {
