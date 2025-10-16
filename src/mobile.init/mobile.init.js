@@ -100,11 +100,6 @@ if ( window.console && window.console.log && window.console.log.apply &&
 }
 /* eslint-enable no-console */
 
-// Setup editor, if supported for the current page view
-if ( mw.config.get( 'wgMFIsSupportedEditRequest' ) ) {
-	editor( currentPage, currentPageHTMLParser, skin );
-}
-
 function migrateXLargeToLarge() {
 	if ( document.documentElement.classList.contains( 'mf-font-size-clientpref-xlarge' ) ) {
 		if ( mw.user.isAnon() ) {
@@ -127,6 +122,7 @@ function migrateLegacyExpandAllSectionsToggle() {
 	}
 }
 
+editor( currentPage, currentPageHTMLParser, skin );
 migrateXLargeToLarge();
 migrateLegacyExpandAllSectionsToggle();
 toggling();

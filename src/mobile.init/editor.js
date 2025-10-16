@@ -577,6 +577,10 @@ function bindEditLinksSorryToast( msg, router ) {
 }
 
 module.exports = function ( currentPage, currentPageHTMLParser, skin ) {
+	// If not supported, do not setup.
+	if ( !mw.config.get( 'wgMFIsSupportedEditRequest' ) ) {
+		return;
+	}
 	const router = __non_webpack_require__( 'mediawiki.router' );
 
 	if ( currentPage.inNamespace( 'file' ) && currentPage.id === 0 ) {
