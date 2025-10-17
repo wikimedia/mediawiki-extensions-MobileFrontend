@@ -229,6 +229,7 @@ function mfTempOpenSection( id ) {
 	// class to flip the collapse arrow icon.
 	// <h[1-6]>heading</h[1-6]><div id="mf-section-[1-9]+"></div>
 	block.previousSibling.className += " open-block";
+	block.previousSibling.firstChild.className += " mf-icon-rotate-flip";
 }
 JAVASCRIPT;
 		return Html::inlineScript(

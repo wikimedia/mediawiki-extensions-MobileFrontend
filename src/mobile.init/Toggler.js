@@ -184,7 +184,8 @@ class Toggler {
 			// Be sure there is a `section` wrapping the section content.
 			// Otherwise, collapsible sections for this page is not enabled.
 			if ( $heading.next().is( 'section' ) ) {
-				const $content = $heading.next( 'section' );
+				const $content = $heading.next( 'section' ),
+					isExpanded = $heading.hasClass( 'open-block' );
 				$heading
 					.addClass( 'collapsible-heading ' )
 					.data( 'section-number', i )
@@ -204,10 +205,10 @@ class Toggler {
 						tabindex: 0,
 						role: 'button',
 						'aria-controls': id,
-						'aria-expanded': 'false'
+						'aria-expanded': isExpanded
 					} );
 
-				arrowOptions.rotation = !this.isCollapsedByDefault() ? 180 : 0;
+				arrowOptions.rotation = ( isExpanded || !this.isCollapsedByDefault() ) ? 180 : 0;
 				const indicator = new Icon( arrowOptions );
 				if ( $indicator.length ) {
 					// replace the existing indicator
@@ -218,7 +219,6 @@ class Toggler {
 				$heading.data( 'indicator', indicator.$el );
 				$content
 					.addClass( 'collapsible-block' )
-					.eq( 0 )
 					.attr( {
 						// We need to give each content block a unique id as that's
 						// the only way we can tell screen readers what element we're
@@ -226,8 +226,10 @@ class Toggler {
 						id
 					} )
 					.on( 'beforematch', () => this.toggle( $heading ) )
-					.addClass( 'collapsible-block-js' )
-					.get( 0 ).setAttribute( 'hidden', 'until-found' );
+					.addClass( 'collapsible-block-js' );
+				if ( !isExpanded ) {
+					$content.get( 0 ).setAttribute( 'hidden', 'until-found' );
+				}
 
 				enableKeyboardActions( this, $heading );
 
