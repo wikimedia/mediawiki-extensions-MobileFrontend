@@ -611,22 +611,33 @@ class EditorOverlayBase extends Overlay {
 					label: mw.msg( 'mobile-frontend-editor-anon' ),
 					block: true,
 					additionalClassNames: 'anonymous progressive',
-					progressive: true
+					progressive: true,
+					eventname: 'anonwarning-edit'
 				} ),
 				new Button( {
 					block: true,
 					href: mw.util.getUrl( 'Special:UserLogin', params ),
-					label: mw.msg( 'mobile-frontend-watchlist-cta-button-login' )
+					label: mw.msg( 'mobile-frontend-watchlist-cta-button-login' ),
+					eventname: 'anonwarning-login'
 				} ),
 				new Button( {
 					block: true,
 					href: mw.util.getUrl( 'Special:UserLogin', util.extend( params, signupParams ) ),
-					label: mw.msg( 'mobile-frontend-watchlist-cta-button-signup' )
+					label: mw.msg( 'mobile-frontend-watchlist-cta-button-signup' ),
+					eventname: 'anonwarning-signup'
 				} )
 			];
 
 		$actions.append(
-			anonymousEditorActions.map( ( action ) => action.$el )
+			anonymousEditorActions.map( ( action ) => {
+				if ( action.options.eventname ) {
+					// These have stopPropagation called on them elsewhere:
+					action.$el.on( 'click', () => {
+						mw.track( 'webuiactions_log.click', action.options.eventname );
+					} );
+				}
+				return action.$el;
+			} )
 		);
 
 		return $anonWarning;
