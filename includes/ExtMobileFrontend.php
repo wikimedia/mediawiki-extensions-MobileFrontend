@@ -34,7 +34,7 @@ class ExtMobileFrontend {
 	 * @param Title $title
 	 * @return string that is empty if the transform does not apply.
 	 */
-	public static function blankUserPageHTML( OutputPage $out, Title $title ) {
+	public static function blankUserPageHTML( OutputPage $out, Title $title ): string {
 		$pageUser = self::buildPageUserObject( $title );
 		$isHidden = $pageUser && $pageUser->isHidden();
 		$canViewHidden = !$isHidden || $out->getAuthority()->isAllowed( 'hideuser' );
@@ -65,7 +65,7 @@ class ExtMobileFrontend {
 		IContentProvider $provider,
 		OutputPage $out,
 		$mobileFormatHtml = true
-	) {
+	): string {
 		$html = $provider->getHTML();
 
 		// If we're not running the formatter we can exit earlier
@@ -85,7 +85,7 @@ class ExtMobileFrontend {
 	 *
 	 * @return string
 	 */
-	public static function domParseMobile( IContextSource $out, $html = '' ) {
+	public static function domParseMobile( IContextSource $out, $html = '' ): string {
 		$services = MediaWikiServices::getInstance();
 		/** @var FeaturesManager $featuresManager */
 		$featuresManager = $services->getService( 'MobileFrontend.FeaturesManager' );
@@ -120,7 +120,7 @@ class ExtMobileFrontend {
 
 		// https://phabricator.wikimedia.org/T232690
 		if ( !$formatter->canApply( $config->get( 'MFMobileFormatterOptions' ) ) ) {
-			// In future we might want to prepend a message feeding
+			// In the future, we might want to prepend a message feeding
 			// back to the user that the page is not mobile friendly.
 			return $html;
 		}
@@ -182,7 +182,7 @@ class ExtMobileFrontend {
 	 * @param Title $title
 	 * @return User|null
 	 */
-	private static function buildPageUserObject( Title $title ) {
+	private static function buildPageUserObject( Title $title ): ?User {
 		$titleText = $title->getText();
 
 		$usernameUtils = MediaWikiServices::getInstance()->getUserNameUtils();
@@ -208,7 +208,7 @@ class ExtMobileFrontend {
 	 */
 	protected static function getUserPageContent( IContextSource $output,
 		User $pageUser, Title $title
-	) {
+	): string {
 		/** @var MobileContext $context */
 		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
 		$pageUsername = $pageUser->getName();
@@ -250,7 +250,7 @@ class ExtMobileFrontend {
 	 * @param string $item Wikibase id of the page
 	 * @return string|null
 	 */
-	public static function getWikibaseDescription( $item ) {
+	public static function getWikibaseDescription( $item ): ?string {
 		if ( !ExtensionRegistry::getInstance()->isLoaded( 'WikibaseClient' ) ) {
 			return null;
 		}

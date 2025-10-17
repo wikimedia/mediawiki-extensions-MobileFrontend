@@ -2,6 +2,7 @@
 
 namespace MobileFrontend\Transforms;
 
+use DomException;
 use LogicException;
 use MediaWiki\Html\Html;
 use MediaWiki\ResourceLoader\ResourceLoader;
@@ -40,8 +41,8 @@ class MakeSectionsTransform implements IMobileTransform {
 	private array $topHeadingTags;
 
 	/**
-	 * @param string[] $topHeadingTags list of tags could ne cosidered as sections
-	 * @param bool $scriptsEnabled wheather scripts are enabled
+	 * @param string[] $topHeadingTags list of tags could be considered as sections
+	 * @param bool $scriptsEnabled whether scripts are enabled
 	 */
 	public function __construct(
 		array $topHeadingTags,
@@ -55,7 +56,7 @@ class MakeSectionsTransform implements IMobileTransform {
 	 * @param Node|null $node
 	 * @return string|false Heading tag name if the node is a heading
 	 */
-	private function getHeadingName( $node ) {
+	private function getHeadingName( $node ): bool|string {
 		if ( !( $node instanceof Element ) ) {
 			return false;
 		}
@@ -79,8 +80,9 @@ class MakeSectionsTransform implements IMobileTransform {
 	 * @param Element[] $headingWrappers The headings (or wrappers) returned by getTopHeadings():
 	 *  `<h1>` to `<h6>` nodes, or `<div class="mw-heading">` nodes wrapping them.
 	 *  In the future `<div class="mw-heading">` will be required (T13555).
+	 * @throws DomException
 	 */
-	private function makeSections( Element $body, array $headingWrappers ) {
+	private function makeSections( Element $body, array $headingWrappers ): void {
 		$ownerDocument = $body->ownerDocument;
 		if ( $ownerDocument === null ) {
 			return;
@@ -143,10 +145,11 @@ class MakeSectionsTransform implements IMobileTransform {
 	 * @param Element $heading
 	 * @param int $sectionNumber
 	 * @param bool $isCollapsible
+	 * @throws DOMException
 	 */
 	private function prepareHeading(
 		Document $doc, Element $heading, $sectionNumber, $isCollapsible
-	) {
+	): void {
 		$className = $heading->hasAttribute( 'class' ) ? $heading->getAttribute( 'class' ) . ' ' : '';
 		$heading->setAttribute( 'class', $className . 'section-heading' );
 		if ( $isCollapsible ) {
@@ -167,8 +170,9 @@ class MakeSectionsTransform implements IMobileTransform {
 	 * @param bool $isCollapsible
 	 *
 	 * @return Element
+	 * @throws DOMException
 	 */
-	private function createSectionBodyElement( Document $doc, $sectionNumber, $isCollapsible ) {
+	private function createSectionBodyElement( Document $doc, $sectionNumber, $isCollapsible ): Element {
 		$sectionClass = 'mf-section-' . $sectionNumber;
 		if ( $isCollapsible ) {
 			// TODO: Probably good to rename this to the more generic 'section'.
@@ -228,7 +232,7 @@ class MakeSectionsTransform implements IMobileTransform {
 	 *
 	 * @return string The JavaScript code to add event handlers to the skin
 	 */
-	public static function interimTogglingSupport() {
+	public static function interimTogglingSupport(): string {
 		$js = <<<JAVASCRIPT
 function mfTempOpenSection( id ) {
 	var block = document.getElementById( "mf-section-" + id );
@@ -250,8 +254,9 @@ JAVASCRIPT;
 	 * sections demarcated by the $headings elements. Also moves the first paragraph
 	 * in the lead section above the infobox.
 	 * @param Element $node to be transformed
+	 * @throws DomException
 	 */
-	public function apply( Element $node ) {
+	public function apply( Element $node ): void {
 		$this->makeSections( $node, $this->getTopHeadings( $node ) );
 	}
 }
