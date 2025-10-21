@@ -389,27 +389,6 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
-	 * @covers MobileContext::isBetaGroupMember
-	 * @dataProvider optInProvider
-	 */
-	public function testOptIn( array $cookies, $isBeta, $enabledInSettings ) {
-		$this->overrideConfigValue( 'MFEnableBeta', $enabledInSettings );
-		$mobileContext = $this->makeContext( '/', $cookies );
-		$this->assertEquals( $isBeta, $mobileContext->isBetaGroupMember() );
-	}
-
-	public static function optInProvider() {
-		return [
-			[ [], false, true ],
-			[ [ MobileContext::OPTIN_COOKIE_NAME => MobileContext::MODE_BETA ], true, true ],
-			[ [ MobileContext::OPTIN_COOKIE_NAME => 'foobar' ], false, true ],
-			[ [], false, false ],
-			[ [ MobileContext::OPTIN_COOKIE_NAME => MobileContext::MODE_BETA ], false, false ],
-			[ [ MobileContext::OPTIN_COOKIE_NAME => 'foobar' ], false, false ],
-		];
-	}
-
-	/**
 	 * @covers MobileContext::checkToggleView
 	 * @covers MobileContext::doToggling
 	 * @dataProvider provideToggleView

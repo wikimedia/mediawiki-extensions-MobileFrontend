@@ -11,7 +11,6 @@ use MediaWiki\User\Options\UserOptionsManager;
 use MobileFrontend\Amc\Manager;
 use MobileFrontend\Amc\UserMode;
 use MobileFrontend\Features\FeaturesManager;
-use MobileFrontend\Features\IFeature;
 use Wikimedia\Rdbms\ReadOnlyMode;
 
 /**
@@ -174,7 +173,6 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 				'id' => 'mobile-user-pref',
 			]
 		);
-
 		$userPreferences->appendContent( new OOUI\HtmlSnippet(
 			Html::openElement( 'ul', [ 'class' => 'hlist option-links' ] ) .
 			Html::openElement( 'li' ) .
@@ -235,77 +233,6 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 			$fields[] = $this->buildAMCToggle();
 		}
 
-		// beta settings
-		$isInBeta = $this->mobileContext->isBetaGroupMember();
-		if ( $this->config->get( 'MFEnableBeta' ) ) {
-			$input = new OOUI\CheckboxInputWidget( [
-				'name' => 'enableBeta',
-				'infusable' => true,
-				'selected' => $isInBeta,
-				'id' => 'enable-beta-toggle',
-				'value' => '1',
-			] );
-			$fields[] = new OOUI\FieldLayout(
-				$input,
-				[
-					'label' => new OOUI\LabelWidget( [
-						'input' => $input,
-						'label' => new OOUI\HtmlSnippet(
-							Html::openElement( 'div' ) .
-							Html::rawElement( 'strong', [],
-								$this->msg( 'mobile-frontend-settings-beta' )->parse() ) .
-							Html::rawElement( 'div', [ 'class' => 'option-description' ],
-								$this->msg( 'mobile-frontend-opt-in-explain' )->parse()
-							) .
-							Html::closeElement( 'div' )
-						)
-					] ),
-					'id' => 'beta-field',
-				]
-			);
-
-			// TODO The userMode should know how to retrieve features assigned to that mode,
-			// we shouldn't do any special logic like this in anywhere else in the code
-			$features = array_diff(
-				$this->featuresManager->getAvailableForMode(
-					$this->featuresManager->getMode( IFeature::CONFIG_BETA )
-				),
-				$this->featuresManager->getAvailableForMode(
-					$this->featuresManager->getMode( IFeature::CONFIG_STABLE )
-				)
-			);
-
-			$classNames = [ 'mobile-options-beta-feature' ];
-			if ( $isInBeta ) {
-				$classNames[] = 'is-enabled';
-				$icon = 'check';
-			} else {
-				$icon = 'lock';
-			}
-			/** @var IFeature $feature */
-			foreach ( $features as $feature ) {
-				$fields[] = new OOUI\FieldLayout(
-					new OOUI\IconWidget( [
-						'icon' => $icon,
-						'title' => $this->msg( 'mobile-frontend-beta-only' )->text(),
-					] ),
-					[
-						'classes' => $classNames,
-						'label' => new OOUI\LabelWidget( [
-							'label' => new OOUI\HtmlSnippet(
-								Html::rawElement( 'div', [],
-									Html::element( 'strong', [],
-										$this->msg( $feature->getNameKey() )->text() ) .
-									Html::element( 'div', [ 'class' => 'option-description' ],
-										$this->msg( $feature->getDescriptionKey() )->text() )
-								)
-							),
-						] )
-					]
-				);
-			}
-		}
-
 		$fields[] = new OOUI\ButtonInputWidget( [
 			'id' => 'mw-mf-settings-save',
 			'infusable' => true,
@@ -320,20 +247,6 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 				'value' => $user->getEditToken() ] );
 			// Special:Preferences link (https://phabricator.wikimedia.org/T327506)
 			$fields[] = $this->buildMobileUserPreferences();
-		}
-
-		$feedbackLink = $this->getConfig()->get( 'MFBetaFeedbackLink' );
-		if ( $feedbackLink && $isInBeta ) {
-			$fields[] = new OOUI\ButtonWidget( [
-				'framed' => false,
-				'href' => $feedbackLink,
-				'icon' => 'feedback',
-				'flags' => [
-					'progressive',
-				],
-				'classes' => [ 'mobile-options-feedback' ],
-				'label' => $this->msg( 'mobile-frontend-send-feedback' )->text(),
-			] );
 		}
 
 		$form->appendContent(
@@ -380,25 +293,13 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 			return;
 		}
 
-		// We must treat forms that only update a single field specially because if we
-		// don't, all the other options will be clobbered with default values
-		$updateSingleOption = $request->getRawVal( 'updateSingleOption' );
 		$enableAMC = $request->getBool( 'enableAMC' );
-		$enableBetaMode = $request->getBool( 'enableBeta' );
-		$mobileMode = $enableBetaMode ? MobileContext::MODE_BETA : '';
 
-		if ( $updateSingleOption !== 'enableAMC' ) {
-			$this->mobileContext->setMobileMode( $mobileMode );
-		}
-
-		if ( $this->amc->isAvailable() && $updateSingleOption !== 'enableBeta' ) {
+		if ( $this->amc->isAvailable() ) {
 			$this->userMode->setEnabled( $enableAMC );
 		}
 
-		DeferredUpdates::addCallableUpdate( function () use (
-			$updateSingleOption,
-			$mobileMode,
-			$enableAMC ) {
+		DeferredUpdates::addCallableUpdate( function () use ( $enableAMC ) {
 			if ( $this->readOnlyMode->isReadOnly() ) {
 				return;
 			}
@@ -409,15 +310,7 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 				return;
 			}
 
-			if ( $updateSingleOption !== 'enableAMC' ) {
-				$this->userOptionsManager->setOption(
-					$latestUser,
-					MobileContext::USER_MODE_PREFERENCE_NAME,
-					$mobileMode
-				);
-			}
-
-			if ( $this->amc->isAvailable() && $updateSingleOption !== 'enableBeta' ) {
+			if ( $this->amc->isAvailable() ) {
 				$this->userOptionsManager->setOption(
 					$latestUser,
 					UserMode::USER_OPTION_MODE_AMC,

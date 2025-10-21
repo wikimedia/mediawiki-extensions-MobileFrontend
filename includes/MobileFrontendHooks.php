@@ -199,7 +199,7 @@ class MobileFrontendHooks implements
 			}
 		}
 
-		// log whether user is using beta/stable
+		// log whether user is using AMC mode
 		$mobileContext->logMobileMode();
 
 		// Allow overriding of skin by useskin e.g. useskin=vector&useformat=mobile or by
@@ -532,23 +532,13 @@ class MobileFrontendHooks implements
 		$cookies[] = MobileContext::USEFORMAT_COOKIE_NAME;
 		// Don't redirect to mobile if user had explicitly opted out of it
 		$cookies[] = MobileContext::STOP_MOBILE_REDIRECT_COOKIE_NAME;
-
-		if (
-			$this->mobileContext->shouldDisplayMobileView() ||
-			!$this->mobileContext->hasMobileDomain()
-		) {
-			// beta cookie
-			$cookies[] = MobileContext::OPTIN_COOKIE_NAME;
-		}
 	}
 
 	/**
 	 * Generate config for usage inside MobileFrontend
 	 * This should be used for variables which:
 	 *  - vary with the html
-	 *  - variables that should work cross skin including anonymous users
-	 *  - used for both, stable and beta mode (don't use
-	 *    MobileContext::isBetaGroupMember in this function - T127860)
+	 *  - should work cross skin including anonymous users.
 	 *
 	 * @return array
 	 */
@@ -963,7 +953,6 @@ class MobileFrontendHooks implements
 			'type' => 'api',
 			'default' => '',
 		];
-		$preferences[MobileContext::USER_MODE_PREFERENCE_NAME] = $definition;
 		$preferences[self::MOBILE_PREFERENCES_EDITOR] = $definition;
 		$preferences[self::MOBILE_PREFERENCES_FONTSIZE] = $definition;
 		$preferences[self::MOBILE_PREFERENCES_EXPAND_SECTIONS] = $definition;
@@ -1146,7 +1135,7 @@ class MobileFrontendHooks implements
 			/** @var \MobileFrontend\Amc\Outreach $outreach */
 			$outreach = $services->getService( 'MobileFrontend.AMC.Outreach' );
 			unset( $vars['wgCategories'] );
-			$vars['wgMFMode'] = $context->isBetaGroupMember() ? 'beta' : 'stable';
+			$vars['wgMFMode'] = 'stable';
 			$vars['wgMFAmc'] = $userMode->isEnabled();
 			$vars['wgMFAmcOutreachActive'] = $outreach->isCampaignActive();
 			$vars['wgMFAmcOutreachUserEligible'] = $outreach->isUserEligible();

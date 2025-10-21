@@ -146,7 +146,6 @@ mobile preferences option.
 ```php
   [
     'base' => false,
-    'beta' => false,
     // Enable desktop version of watchlist page when AMC is enabled
     'amc' => true,
   ]
@@ -238,8 +237,6 @@ item will be stripped from the page.
 * Default:
 ```php
 [
-  // These rules will be used for all transformations in the beta channel of the site
-	"beta": [],
   // These rules will be used for all transformations
 	"base": [
 		".navbox",
@@ -259,8 +256,6 @@ viewport.
 * Default:
 ```php
   [
-    // These will enable lazy loading images in beta mode
-    'beta' => true,
     // These will enable lazy loading images in all modes
     'base' => true,
   ]
@@ -377,13 +372,6 @@ include the preceding `.` (e.g. yes: `.wikipedia.org`, **no**: `wikipedia.org`)
 * Type: `String|null`
 * Default: `null`
 
-#### $wgMFEnableBeta
-
-Whether beta mode is enabled.
-
-* Type: `Boolean`
-* Default: `true`
-
 #### $wgMFAdvancedMobileContributions
 
 Whether Advanced mode is available for users.
@@ -404,13 +392,6 @@ When Amc Outreach is enabled, this option sets the minimum number of edits a use
 
 * Type: `Number`
 * Default: 100
-
-#### $wgMFBetaFeedbackLink
-
-Link to feedback page for beta features. If false no feedback link will be shown.
-
-* Type: `String|false`
-* Default: `false`
 
 #### $wgDefaultMobileSkin
 
@@ -455,7 +436,6 @@ in the UI in the environment they have been told to target.
 * Default:
 ```php
   [
-    'beta' => true,
     'base' => false,
   ]
 ```
@@ -534,8 +514,7 @@ Enable the font-size options for users.
 * Default:
 ```php
 [
-	"base" => true,
-	"beta" => true
+	"base" => true
 ]
 ```
 
@@ -589,7 +568,6 @@ Move first paragraph in articles to before infobox.
 * Default:
 ```php
 [
-	"base" => true,
-	"beta" => true
+	"base" => true
 ]
 ```

@@ -127,16 +127,9 @@ function infuseToggles( toggleObjects, $form ) {
  */
 function initMobileOptions() {
 	const $form = $( '#mobile-options' ),
-		$betaToggle = $( '#enable-beta-toggle' ),
 		$amcToggle = $( '#enable-amc-toggle' ),
 		toggles = [];
 
-	if ( $betaToggle.length ) {
-		toggles.push( {
-			$el: $betaToggle,
-			onToggle: () => {}
-		} );
-	}
 	if ( $amcToggle.length ) {
 		toggles.push( {
 			$el: $amcToggle,

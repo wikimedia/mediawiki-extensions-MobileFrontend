@@ -522,8 +522,7 @@
 		},
 		"MFEnableFontChanger": {
 			"value": {
-				"base": true,
-				"beta": true
+				"base": true
 			}
 		},
 		"MFEnableMobilePreferences": {
@@ -532,7 +531,6 @@
 		"MFUseDesktopSpecialEditWatchlistPage": {
 			"value": {
 				"base": false,
-				"beta": false,
 				"amc": true
 			}
 		},
@@ -582,7 +580,6 @@
 		"MFRemovableClasses": {
 			"description": "Selectors for elements to be removed from the HTML in content namespaces (defined in wgContentNamespaces) to save bandwidth.",
 			"value": {
-				"beta": [],
 				"base": [
 					".navbox",
 					".vertical-navbox",
@@ -592,8 +589,7 @@
 		},
 		"MFShowFirstParagraphBeforeInfobox": {
 			"value": {
-				"base": true,
-				"beta": true
+				"base": true
 			}
 		},
 		"MFNamespacesWithLeadParagraphs": {
@@ -604,8 +600,7 @@
 		},
 		"MFLazyLoadImages": {
 			"value": {
-				"base": true,
-				"beta": true
+				"base": true
 			}
 		},
 		"MFLazyLoadSkipSmallImages": {
@@ -647,12 +642,6 @@
 		"MFStopRedirectCookieHost": {
 			"value": null
 		},
-		"MFEnableBeta": {
-			"value": false
-		},
-		"MFBetaFeedbackLink": {
-			"value": false
-		},
 		"DefaultMobileSkin": {
 			"value": "minerva"
 		},
@@ -669,8 +658,7 @@
 		},
 		"MFEnableWikidataDescriptions": {
 			"value": {
-				"base": false,
-				"beta": true
+				"base": false
 			}
 		},
 		"MFDisplayWikibaseDescriptions": {

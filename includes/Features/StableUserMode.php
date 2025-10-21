@@ -5,15 +5,7 @@ namespace MobileFrontend\Features;
 use MobileContext;
 
 /**
- * Temporary class to provide a bridge between old stable mode handling and new Feature management
- * system.
- *
- * Beta mode will be refactored properly in T212802, for now we need an easy way to retrieve
- * information about beta mode.
- *
- * IMPORTANT: This class provides read-only state, if you want to enable/disable beta mode
- * please use MobileContext classes
- *
+ * This class defines the "stable" user mode for theMobileFrontend feature
  * @package MobileFrontend\Features
  */
 class StableUserMode implements IUserMode {
@@ -28,7 +20,7 @@ class StableUserMode implements IUserMode {
 	 * @inheritDoc
 	 */
 	public function isEnabled() {
-		return !$this->context->isBetaGroupMember();
+		return true;
 	}
 
 	/**

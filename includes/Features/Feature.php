@@ -55,17 +55,4 @@ class Feature implements IFeature {
 		return $this->group;
 	}
 
-	/**
-	 * @inheritDoc
-	 */
-	public function getNameKey() {
-		return $this->group . '-mobile-option-' . $this->name;
-	}
-
-	/**
-	 * @inheritDoc
-	 */
-	public function getDescriptionKey() {
-		return $this->group . '-mobile-option-' . $this->name . '-description';
-	}
 }

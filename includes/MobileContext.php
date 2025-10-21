@@ -14,23 +14,12 @@ use MobileFrontend\WMFBaseDomainExtractor;
  * Provide various request-dependant methods to use in mobile context
  */
 class MobileContext extends ContextSource {
-	public const MODE_BETA = 'beta';
-	public const MODE_STABLE = 'stable';
-	public const OPTIN_COOKIE_NAME = 'optin';
 	public const STOP_MOBILE_REDIRECT_COOKIE_NAME = 'stopMobileRedirect';
 	public const USEFORMAT_COOKIE_NAME = 'mf_useformat';
-	public const USER_MODE_PREFERENCE_NAME = 'mfMode';
-
 	// Keep in sync with https://wikitech.wikimedia.org/wiki/X-Analytics.
 	private const ANALYTICS_HEADER_KEY = 'mf-m';
 	private const ANALYTICS_HEADER_DELIMITER = ',';
-	private const ANALYTICS_HEADER_VALUE_BETA = 'b';
 	private const ANALYTICS_HEADER_VALUE_AMC = 'amc';
-
-	/**
-	 * Saves the testing mode user has opted in: 'beta' or 'stable'
-	 */
-	protected ?string $mobileMode = null;
 
 	/**
 	 * Save explicitly requested format
@@ -162,89 +151,6 @@ class MobileContext extends ContextSource {
 	 */
 	public function setForceMobileView( $value ) {
 		$this->forceMobileView = $value;
-	}
-
-	/**
-	 * Sets the value of $this->mobileMode property to the value of the 'optin' cookie.
-	 * If the cookie is not set the value will be an empty string.
-	 */
-	private function loadMobileModeCookie() {
-		$this->mobileMode = $this->getRequest()->getCookie( self::OPTIN_COOKIE_NAME, '' );
-	}
-
-	/**
-	 * Returns the testing mode user has opted in: 'beta' or any other value for stable
-	 * @return string
-	 */
-	private function getMobileMode() {
-		if ( !$this->config->get( 'MFEnableBeta' ) ) {
-			return '';
-		}
-
-		if ( $this->mobileMode !== null ) {
-			return $this->mobileMode;
-		}
-
-		$mobileAction = $this->getMobileAction();
-		if ( $mobileAction === self::MODE_BETA || $mobileAction === self::MODE_STABLE ) {
-			$this->mobileMode = $mobileAction;
-		} else {
-			$user = $this->getUser();
-			if ( !$user->isRegistered() ) {
-				$this->loadMobileModeCookie();
-			} else {
-				$userOptionManager = MediaWikiServices::getInstance()->getUserOptionsManager();
-				$mode = $userOptionManager->getOption( $user, self::USER_MODE_PREFERENCE_NAME );
-				$this->mobileMode = $mode;
-				// Edge case where preferences are corrupt or the user opted
-				// in before change.
-				if ( $mode === null ) {
-					// Should we set the user option here?
-					$this->loadMobileModeCookie();
-				}
-			}
-		}
-
-		return $this->mobileMode;
-	}
-
-	/**
-	 * Sets testing group membership, both cookie and this class variables
-	 *
-	 * WARNING: Does not persist the updated user preference to the database.
-	 * The caller must handle this by calling User::saveSettings() after all
-	 * preference updates associated with this web request are made.
-	 *
-	 * @param string $mode Mode to set
-	 */
-	public function setMobileMode( $mode ) {
-		if ( $mode !== self::MODE_BETA ) {
-			$mode = '';
-		}
-		$this->mobileMode = $mode;
-
-		$user = $this->getUser();
-		if ( $user->getId() ) {
-			$userOptionsManager = MediaWikiServices::getInstance()->getUserOptionsManager();
-			$userOptionsManager->setOption(
-				$user,
-				self::USER_MODE_PREFERENCE_NAME,
-				$mode
-			);
-		}
-
-		$this->getRequest()->response()->setCookie( self::OPTIN_COOKIE_NAME, $mode, 0, [
-			'prefix' => '',
-			'domain' => $this->getCookieDomain()
-		] );
-	}
-
-	/**
-	 * Whether user is Beta group member
-	 * @return bool
-	 */
-	public function isBetaGroupMember() {
-		return $this->getMobileMode() === self::MODE_BETA;
 	}
 
 	/**
@@ -804,9 +710,6 @@ class MobileContext extends ContextSource {
 	 * documentation for the X-Analytics header: https://wikitech.wikimedia.org/wiki/X-Analytics
 	 */
 	public function logMobileMode() {
-		if ( $this->isBetaGroupMember() ) {
-			$this->addAnalyticsLogItem( self::ANALYTICS_HEADER_KEY, self::ANALYTICS_HEADER_VALUE_BETA );
-		}
 		if ( self::isAmcUser() ) {
 			$this->addAnalyticsLogItem( self::ANALYTICS_HEADER_KEY, self::ANALYTICS_HEADER_VALUE_AMC );
 		}

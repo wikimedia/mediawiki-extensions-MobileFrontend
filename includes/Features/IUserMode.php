@@ -4,7 +4,6 @@ namespace MobileFrontend\Features;
 
 /**
  * Interface represents user mobile mode.
- * As example: Beta Mode
  *
  * @package MobileFrontend\Features
  * @codeCoverageIgnore

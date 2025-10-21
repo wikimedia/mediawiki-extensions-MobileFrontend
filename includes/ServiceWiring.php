@@ -2,7 +2,6 @@
 
 use MediaWiki\Config\Config;
 use MediaWiki\MediaWikiServices;
-use MobileFrontend\Features\BetaUserMode;
 use MobileFrontend\Features\Feature;
 use MobileFrontend\Features\FeaturesManager;
 use MobileFrontend\Features\LoggedInUserMode;
@@ -51,24 +50,12 @@ return [
 		// and register it here, it would be nice to have something like
 		// $services->getAllByPrefix('MobileFrontend.Feature')
 
-		// Generates the following messages:
-		// * mobile-frontend-mobile-option-MFEnableWikidataDescriptions
-		// * mobile-frontend-mobile-option-MFEnableWikidataDescriptions-description
 		$manager->registerFeature( new Feature( 'MFEnableWikidataDescriptions', 'mobile-frontend',
 			$config->get( 'MFEnableWikidataDescriptions' ) ) );
-		// Generates the following messages:
-		// * mobile-frontend-mobile-option-MFLazyLoadImages
-		// * mobile-frontend-mobile-option-MFLazyLoadImages-description
 		$manager->registerFeature( new Feature( 'MFLazyLoadImages', 'mobile-frontend',
 			$config->get( 'MFLazyLoadImages' ) ) );
-		// Generates the following messages:
-		// * mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox
-		// * mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox-description
 		$manager->registerFeature( new Feature( 'MFShowFirstParagraphBeforeInfobox', 'mobile-frontend',
 			$config->get( 'MFShowFirstParagraphBeforeInfobox' ) ) );
-		// Generates the following messages:
-		// * mobile-frontend-mobile-option-MFEnableFontChanger
-		// * mobile-frontend-mobile-option-MFEnableFontChanger-description
 		$manager->registerFeature( new Feature( 'MFEnableFontChanger', 'mobile-frontend',
 			$config->get( 'MFEnableFontChanger' ) ) );
 		$manager->registerFeature( new Feature( 'MFUseDesktopSpecialEditWatchlistPage', 'mobile-frontend',
@@ -81,7 +68,6 @@ return [
 		/** @var MobileContext $context */
 		$context = $services->getService( 'MobileFrontend.Context' );
 		$modes->registerMode( new StableUserMode( $context ) );
-		$modes->registerMode( new BetaUserMode( $context ) );
 		$modes->registerMode( new LoggedInUserMode( $context->getUser() ) );
 		$modes->registerMode( $services->getService( 'MobileFrontend.AMC.UserMode' ) );
 		return $modes;

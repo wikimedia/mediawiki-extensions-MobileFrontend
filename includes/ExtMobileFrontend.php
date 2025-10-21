@@ -138,11 +138,6 @@ class ExtMobileFrontend {
 		if ( in_array( $title->getNamespace(), $config->get( 'ContentNamespaces' ), true ) ) {
 			$mfRemovableClasses = $config->get( 'MFRemovableClasses' );
 			$removableClasses = $mfRemovableClasses['base'];
-			if ( $context->isBetaGroupMember() ) {
-				$removableClasses = array_unique(
-					array_merge( $removableClasses, $mfRemovableClasses['beta'] )
-				);
-			}
 
 			$transforms[] = new RemovableClassesTransform( $removableClasses );
 		}
