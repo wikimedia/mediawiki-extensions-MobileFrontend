@@ -56,6 +56,70 @@ function toggle( content, heading, icon ) {
 }
 
 /**
+ * Prepares a heading wrapper element for collapsible functionality.
+ *
+ * @method
+ * @param {HTMLElement} wrapper The heading wrapper element
+ * @param {HTMLElement} content The content element associated with this heading
+ * @return {HTMLElement} The created icon element
+ * @ignore
+ */
+function prepareHeadingWrapper( wrapper, content ) {
+	wrapper.classList.add( 'mf-collapsible-heading' );
+	content.classList.add( 'mf-collapsible-content' );
+
+	// Update the heading wrapper to account for semantics of collapsing sections
+	wrapper.setAttribute( 'tabindex', '0' );
+	wrapper.setAttribute( 'role', 'button' );
+	wrapper.setAttribute( 'aria-controls', content.id );
+
+	// Create the dropdown arrow icon
+	const icon = document.createElement( 'span' );
+	icon.classList.add( 'mf-icon', 'mf-icon--small', 'mf-collapsible-icon' );
+	icon.setAttribute( 'aria-hidden', true );
+	wrapper.prepend( icon );
+
+	return icon;
+}
+
+/**
+ * Attaches event listeners to a heading wrapper for collapsible functionality.
+ *
+ * @method
+ * @param {HTMLElement} wrapper The heading wrapper element
+ * @param {HTMLElement} content The content element associated with this heading
+ * @param {HTMLElement} icon The icon element
+ * @ignore
+ */
+function attachEventListeners( wrapper, content, icon ) {
+	// T389820 toggle the icon by expanding the heading on match.
+	content.addEventListener( 'beforematch', () => {
+		setCollapsedHeadingState( wrapper, icon, false );
+	} );
+
+	// Register the click handler
+	wrapper.addEventListener( 'click', ( ev ) => {
+		// Only toggle if a non-link was clicked.
+		// We don't want sections to collapse if the edit link is clicked for example.
+		const clickedLink = ev.target.closest( 'a' );
+		if ( !clickedLink ) {
+			toggle( content, wrapper, icon );
+		}
+	} );
+
+	// Register the keypress handler
+	wrapper.addEventListener( 'keypress', ( ev ) => {
+		// Only toggle if a non-link was clicked.
+		// We don't want sections to collapse if the edit link is clicked for example.
+		const clickedLink = ev.target.closest( 'a' );
+		// Only handle keypresses on the "Enter" or "Space" keys
+		if ( !clickedLink && ( ev.which === 13 || ev.which === 32 ) ) {
+			toggle( content, wrapper, icon );
+		}
+	} );
+}
+
+/**
  * Initialises collapsing code.
  *
  * @method
@@ -63,65 +127,28 @@ function toggle( content, heading, icon ) {
  * @ignore
  */
 function init( container ) {
-	let isCollapsed;
 	// These classes override site settings and user preferences. For example:
 	// * ...-collapsed used on talk pages by DiscussionTools. (T321618, T322628)
 	// * ...-expanded used in previews (T336572)
+	let isCollapsed;
 	const override = container.closest( '.collapsible-headings-collapsed, .collapsible-headings-expanded' );
 	if ( override ) {
 		isCollapsed = override.classList.contains( 'collapsible-headings-collapsed' );
 	} else {
-		// Check site config
+		// Check site config and user preferences
 		isCollapsed = isCollapsedByDefault();
 	}
 
-	const headingWrappers = Array.from( container.querySelectorAll( '.mw-parser-output > section > .mw-heading' ) );
+	const headingWrappers = Array.from(
+		container.querySelectorAll( '.mw-parser-output > section > .mw-heading' )
+	);
+
 	headingWrappers.forEach( ( wrapper ) => {
-		wrapper.classList.add( 'mf-collapsible-heading' );
-
-		// Add class to collapsible content
-		// Used in CSS before hidden attribute is added
 		const content = wrapper.nextElementSibling;
-		content.classList.add( 'mf-collapsible-content' );
+		const icon = prepareHeadingWrapper( wrapper, content );
 
-		// Update the heading wrapper to account for semantics of collapsing sections
-		wrapper.setAttribute( 'tabindex', '0' );
-		wrapper.setAttribute( 'role', 'button' );
-		wrapper.setAttribute( 'aria-controls', content.id );
-
-		// Create the dropdown arrow
-		const icon = document.createElement( 'span' );
-		icon.classList.add( 'mf-icon', 'mf-icon--small', 'mf-collapsible-icon' );
-		icon.setAttribute( 'aria-hidden', true );
-		wrapper.prepend( icon );
-
-		// T389820 toggle the icon by expanding the heading on match.
-		content.addEventListener( 'beforematch', () => {
-			setCollapsedHeadingState( wrapper, icon, false );
-		} );
-
+		attachEventListeners( wrapper, content, icon );
 		setCollapsedState( content, wrapper, icon, isCollapsed );
-
-		// Register the click handlers
-		wrapper.addEventListener( 'click', ( ev ) => {
-			// Only toggle if a non-link was clicked.
-			// We don't want sections to collapse if the edit link is clicked for
-			// example.
-			const clickedLink = ev.target.closest( 'a' );
-			if ( !clickedLink ) {
-				toggle( content, wrapper, icon );
-			}
-		} );
-		wrapper.addEventListener( 'keypress', ( ev ) => {
-			// Only toggle if a non-link was clicked.
-			// We don't want sections to collapse if the edit link is clicked for
-			// example.
-			const clickedLink = ev.target.closest( 'a' );
-			// Only handle keypresses on the "Enter" or "Space" keys
-			if ( !clickedLink && ( ev.which === 13 || ev.which === 32 ) ) {
-				toggle( content, wrapper, icon );
-			}
-		} );
 	} );
 }
 
