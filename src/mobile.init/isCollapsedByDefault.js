@@ -1,4 +1,4 @@
-const browser = require( './Browser' ).getSingleton();
+const browser = require( '../mobile.startup/Browser' ).getSingleton();
 
 /**
  * Checks if sections should be collapsed by default.

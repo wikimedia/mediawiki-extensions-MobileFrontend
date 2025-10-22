@@ -11,7 +11,7 @@ QUnit.module( 'MobileFrontend sectionCollapsing.js', {
 		sandbox = sinon.createSandbox();
 		dom.setUp( sandbox, global );
 		jQuery.setUp( sandbox, global );
-		sectionCollapsing = require( '../../../src/mobile.startup/sectionCollapsing' );
+		sectionCollapsing = require( '../../../src/mobile.init/sectionCollapsing' );
 		browser = require( '../../../src/mobile.startup/Browser' ).getSingleton();
 	},
 	afterEach: function () {

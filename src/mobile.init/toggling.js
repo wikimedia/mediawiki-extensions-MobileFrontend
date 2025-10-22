@@ -1,8 +1,8 @@
 module.exports = function () {
 	const
 		currentPage = require( '../mobile.startup/currentPage' )(),
-		Toggler = require( '../mobile.startup/Toggler' ),
-		sectionCollapsing = require( '../mobile.startup/sectionCollapsing' ),
+		Toggler = require( './Toggler' ),
+		sectionCollapsing = require( './sectionCollapsing' ),
 		eventBus = require( '../mobile.startup/eventBusSingleton' );
 
 	/**
