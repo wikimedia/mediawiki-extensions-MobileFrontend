@@ -8,6 +8,7 @@ const mobile = require( 'mobile.startup' ),
 	MessageBox = mobile.class.MessageBox,
 	setPreferredEditor = require( './setPreferredEditor.js' ),
 	VisualEditorOverlay = require( './VisualEditorOverlay.js' ),
+	SourceEditorSaveEventHookPayload = require( './SourceEditorSaveEventHookPayload.js' ),
 	currentPage = mobile.currentPage;
 
 /**
@@ -59,7 +60,18 @@ class SourceEditorOverlay extends EditorOverlayBase {
 		}
 		options.previewingMsg = mw.msg( 'mobile-frontend-editor-previewing-page', options.title );
 		this.sectionLine = '';
-		super.initialize( options );
+
+		// If there are additional modules registered by other extensions, let
+		// them load before calling the base initialization procedure. Otherwise,
+		// call the base initialization procedure immediately (i.e. synchronously),
+		// since that is required for QUnit tests to work.
+		if ( this._hasAdditionalModules() ) {
+			this._loadAdditionalModules().then(
+				() => super.initialize( options )
+			);
+		} else {
+			super.initialize( options );
+		}
 	}
 
 	get editor() {
@@ -86,6 +98,35 @@ class SourceEditorOverlay extends EditorOverlayBase {
 	/**
 	 * @inheritdoc
 	 */
+	get defaults() {
+		let defaults = util.extend( {}, super.defaults );
+
+		const hookCallData = {
+			currentPage: this.currentPage,
+			readOnly: this.readOnly,
+			defaults,
+
+			/**
+			 * Allows hook handlers to change the default values returned by this
+			 * getter that are then used by templates, allowing to pass additional
+			 * data to templates set by other hooks triggered by this class.
+			 *
+			 * @param {Object} newDefaults New template code
+			 */
+			setDefaults: ( newDefaults ) => {
+				defaults = newDefaults;
+			}
+		};
+
+		mw.hook( 'mobileFrontend.sourceEditor.getDefaultOptions' )
+			.fire( hookCallData );
+
+		return defaults;
+	}
+
+	/**
+	 * @inheritdoc
+	 */
 	show() {
 		super.show();
 		// Ensure we do this after showing the overlay, otherwise it doesn't work.
@@ -107,6 +148,15 @@ class SourceEditorOverlay extends EditorOverlayBase {
 	onClickBack() {
 		super.onClickBack();
 		this._hidePreview();
+	}
+
+	preRender() {
+		super.preRender();
+
+		mw.hook( 'mobileFrontend.sourceEditor.preRenderFinished' ).fire( {
+			currentPage: this.currentPage,
+			readOnly: this.readOnly
+		} );
 	}
 
 	/**
@@ -216,6 +266,11 @@ class SourceEditorOverlay extends EditorOverlayBase {
 		);
 
 		this._loadContent();
+
+		mw.hook( 'mobileFrontend.sourceEditor.postRenderFinished' ).fire( {
+			currentPage: this.currentPage,
+			readOnly: this.readOnly
+		} );
 	}
 
 	/**
@@ -481,6 +536,42 @@ class SourceEditorOverlay extends EditorOverlayBase {
 	}
 
 	/**
+	 * Extends the parent method in order to allow extensions to include
+	 * additional HTML code or replace the default HTML provided by the
+	 * MobileFrontend for the save panel.
+	 *
+	 * @returns {string}
+	 */
+	getSavePanelTemplateSource() {
+		const setter = this._getTemplateSetterForHook(
+			super.getSavePanelTemplateSource()
+		);
+
+		mw.hook( 'mobileFrontend.sourceEditor.getSavePanelTemplateSource' )
+			.fire( setter.hookCallData );
+
+		return setter.getTemplate();
+	}
+
+	/**
+	 * Extends the HTML provided by the parent class in order to *not* include
+	 * the default captcha code in case hCaptcha is enabled (since hCaptcha is
+	 * rendered within the Edit Summary step).
+	 *
+	 * @returns {string}
+	 */
+	getCaptchaPanelTemplateSource() {
+		const setter = this._getTemplateSetterForHook(
+			super.getCaptchaPanelTemplateSource()
+		);
+
+		mw.hook( 'mobileFrontend.sourceEditor.getCaptchaPanelTemplateSource' )
+			.fire( setter.hookCallData );
+
+		return setter.getTemplate();
+	}
+
+	/**
 	 * Executed when the editor clicks the save/publish button. Handles logging and submitting
 	 * the save action to the editor API.
 	 *
@@ -503,6 +594,30 @@ class SourceEditorOverlay extends EditorOverlayBase {
 			options.captchaWord = this.$el.find( '.captcha-word' ).val();
 		}
 
+		const payload = new SourceEditorSaveEventHookPayload(
+			this.currentPage,
+			this.readOnly,
+			options,
+			this._performSaveRequest.bind( this )
+		);
+
+		mw.hook( 'mobileFrontend.sourceEditor.saveBegin' ).fire( payload );
+
+		if ( payload.isStopped() ) {
+			return;
+		}
+
+		this._performSaveRequest( payload.options );
+	}
+
+	/**
+	 * Performs an API request to save the new content.
+	 *
+	 * @param {Object} options Configuration options for the API request
+	 * @returns {void}
+	 * @private
+	 */
+	_performSaveRequest( options ) {
 		this.showHidden( '.saving-header' );
 
 		this.gateway.save( options )
@@ -606,6 +721,80 @@ class SourceEditorOverlay extends EditorOverlayBase {
 	 */
 	hasChanged() {
 		return this.gateway.hasChanged;
+	}
+
+	/**
+	 * @param {string} defaultTemplate
+	 * @private
+	 */
+	_getTemplateSetterForHook( defaultTemplate ) {
+		let template = defaultTemplate;
+
+		const hookCallData = {
+			currentPage: this.currentPage,
+			readOnly: this.readOnly,
+
+			/**
+			 * Allows hook handlers to change the template returned by getter
+			 * method by either appending new code or replacing the default code
+			 * as well as any code that was previously set by other hook
+			 * handlers.
+			 *
+			 * @param {string} newTemplate New template code
+			 * @param {bool} append If true, appends code to the current template.
+			 */
+			setTemplate: ( newTemplate, append = true ) => {
+				if ( append ) {
+					template += newTemplate;
+				} else {
+					template = newTemplate;
+				}
+			}
+		};
+
+		return {
+			getTemplate: () => template,
+			hookCallData
+		};
+	}
+
+	/**
+	 * @returns {boolean}
+	 * @private
+	 */
+	_hasAdditionalModules() {
+		const requiredModules = mw.config.get(
+			'wgMobileFrontendSourceEditorInitializeModules',
+			[]
+		);
+
+		return Array.isArray( requiredModules ) &&
+			requiredModules.length > 0;
+	}
+
+	/**
+	 * @returns {void}
+	 * @private
+	 */
+	_loadAdditionalModules() {
+		const requiredModules = mw.config.get(
+			'wgMobileFrontendSourceEditorInitializeModules',
+			[]
+		);
+
+		const dependencies = [];
+		if ( Array.isArray( requiredModules ) ) {
+			for ( const moduleName of requiredModules ) {
+				if ( mw.loader.getState( moduleName ) === null ) {
+					// Skip modules that are not known by the resource loader
+					continue;
+				}
+
+				dependencies.push( mw.loader.using( moduleName ) );
+			}
+		}
+
+		return Promise.all( dependencies );
 	}
 }
 

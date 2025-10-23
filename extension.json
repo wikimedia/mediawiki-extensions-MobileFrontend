@@ -236,6 +236,7 @@
 				"src/mobile.editor.overlay/saveFailureMessage.js",
 				"src/mobile.editor.overlay/setPreferredEditor.js",
 				"src/mobile.editor.overlay/SourceEditorOverlay.js",
+				"src/mobile.editor.overlay/SourceEditorSaveEventHookPayload.js",
 				"src/mobile.editor.overlay/VisualEditorOverlay.js",
 				{
 					"name": "src/mobile.editor.overlay/contLangMessages.json",
