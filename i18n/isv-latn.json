@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"IJzeren Jan"
+			"IJzeren Jan",
+			"SaldırganSincap"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Vvedite kod za potvrdženje",
@@ -11,7 +12,7 @@
 	"mobile-frontend-edit-login-action": "<strong>Pomožite ulěpšiti projekt {{SITENAME}}.</strong><br />Prijavite se, da byste načeli praviti.",
 	"mobile-frontend-edit-signup-action": "<strong>Pomožite ulěpšiti projekt {{SITENAME}}.</strong><br />Registrujte se, da byste načeli praviti.",
 	"mobile-frontend-editor-anon": "Praviti bez prijavjenja se",
-	"mobile-frontend-editor-anonwarning": "<strong>Čuvanje:</strong> vy ne jeste prijavjeni. Ako zapišete kakekoli pravky, vaš IP-adres bude publično vidimy v historiji versij tutoj stranice. Ako <strong>prijavite se</strong> ili stvorite konto</strong>, vaše pravky budut pripisyvane vašemu koristničskomu imeni, zajedno s drugymi prědnostami.",
+	"mobile-frontend-editor-anonwarning": "<strong>Čuvanje:</strong> vy ne jeste prijavjeni. Ako zapišete kakekoli pravky, vaš IP-adres bude publično vidimy v historiji versij tutoj stranice. Ako <strong>prijavite se</strong> ili stvorite konto, vaše pravky budut pripisyvane vašemu koristničskomu imeni, zajedno s drugymi prědnostami.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Prijaviti se",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "OK",
 	"mobile-frontend-editor-blocked-drawer-action-randompage": "Prějdti na drugu stranicu",

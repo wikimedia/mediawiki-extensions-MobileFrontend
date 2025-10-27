@@ -10,7 +10,8 @@
 			"ਪ੍ਰਚਾਰਕ",
 			"Nikki",
 			"Kuldeepburjbhalaike",
-			"Cabal"
+			"Cabal",
+			"SaldırganSincap"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "ਕੀ ਕੋਈ ਵਰਤੋਂਕਾਰ ਮੋਬਾਈਲ ਇੰਟਰਫੇਸ ਰਾਹੀਂ ਸੋਧ ਕਰ ਰਿਹਾ ਹੈ ਜਾਂ ਨਹੀਂ",
@@ -61,7 +62,7 @@
 	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|ਕੀ ਤੁਸੀਂ ਯਕੀਨਨ {{SITENAME}} 'ਤੇ ਇੱਕ ਨਵਾਂ ਵਰਕਾ ਬਣਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ}}?",
 	"mobile-frontend-editor-placeholder": "ਇਹ ਭਾਗ ਖਾਲੀ ਹੈ। ਇਸ ਨੂੰ ਵਧਾਉਣ ਵਾਲੇ ਪਹਿਲੇ ਵਿਅਕਤੀ ਬਣੋ!",
 	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1| ਤੁਸੀਂ {{SITENAME}} 'ਤੇ ਇੱਕ ਨਵਾਂ ਵਰਕਾ ਬਣਾ ਰਹੇ ਹੋ}}!",
-	"mobile-frontend-editor-previewing-page": "<span>$1</strong> ਦੀ ਝਲਕ ਵੇਖਾ ਰਿਹਾ ਐ</strong></span>",
+	"mobile-frontend-editor-previewing-page": "<span>$1 <strong>ਦੀ ਝਲਕ ਵੇਖਾ ਰਿਹਾ ਐ</strong></span>",
 	"mobile-frontend-editor-publish": "ਛਾਪੋ",
 	"mobile-frontend-editor-save": "ਸਾਂਭੋ",
 	"mobile-frontend-editor-success": "ਸਫ਼ਲਤਾ! ਤੁਹਾਡੀ ਸੋਧ ਪ੍ਰਕਾਸ਼ਿਤ ਹੋਈ ਸੀ।",
