@@ -2,7 +2,6 @@
 /* See T354224 for information on the @wikimedia/mediawiki.skins.clientpreferences module. */
 const clientPrefs = require( '@wikimedia/mediawiki.skins.clientpreferences' ),
 	toast = require( './mobile.startup/showOnPageReload' ),
-	amcOutreach = require( './mobile.startup/amcOutreach/amcOutreach' ),
 	EXPAND_SECTIONS_KEY = 'mf-expand-sections',
 	msg = mw.msg,
 	USER_FONT_SIZE_SMALL = 'small',
@@ -132,14 +131,7 @@ function initMobileOptions() {
 
 	if ( $amcToggle.length ) {
 		toggles.push( {
-			$el: $amcToggle,
-			onToggle: ( value ) => {
-				if ( !value && amcOutreach.loadCampaign().isCampaignActive() ) {
-					// Make all amc outreach actions ineligible so the user doesn't have
-					// to see the outreach drawer again
-					amcOutreach.loadCampaign().makeAllActionsIneligible();
-				}
-			}
+			$el: $amcToggle
 		} );
 	}
 	infuseToggles( toggles, $form );

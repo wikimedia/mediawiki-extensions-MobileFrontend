@@ -204,17 +204,10 @@
 				"mobile-frontend-editor-terms-link",
 				"watch",
 				"unwatch",
-				"mobile-frontend-language-heading",
-				"mobile-frontend-amc-outreach-intro",
-				"mobile-frontend-amc-outreach-description",
-				"mobile-frontend-amc-outreach-enable",
-				"mobile-frontend-amc-outreach-no-thanks",
-				"mobile-frontend-amc-outreach-enabled-message",
-				"mobile-frontend-amc-outreach-dismissed-message"
+				"mobile-frontend-language-heading"
 			],
 			"styles": [
-				"resources/mobile.startup/mobile.startup.less",
-				"resources/mobile.startup/amcOutreach/amcOutreachDrawer.less"
+				"resources/mobile.startup/mobile.startup.less"
 			],
 			"skinStyles": {
 				"vector": "skinStyles/mobile.startup/vector.less",
@@ -688,12 +681,6 @@
 		},
 		"MFAdvancedMobileContributions": {
 			"value": true
-		},
-		"MFAmcOutreach": {
-			"value": false
-		},
-		"MFAmcOutreachMinEditCount": {
-			"value": 100
 		},
 		"MFTrackBlockNotices": {
 			"value": false

@@ -1132,13 +1132,9 @@ class MobileFrontendHooks implements
 		// If the device is a mobile, Remove the category entry.
 		$context = $this->mobileContext;
 		if ( $context->shouldDisplayMobileView() ) {
-			/** @var \MobileFrontend\Amc\Outreach $outreach */
-			$outreach = $services->getService( 'MobileFrontend.AMC.Outreach' );
 			unset( $vars['wgCategories'] );
 			$vars['wgMFMode'] = 'stable';
 			$vars['wgMFAmc'] = $userMode->isEnabled();
-			$vars['wgMFAmcOutreachActive'] = $outreach->isCampaignActive();
-			$vars['wgMFAmcOutreachUserEligible'] = $outreach->isUserEligible();
 			$vars['wgMFLazyLoadImages'] =
 				$this->featuresManager->isFeatureAvailableForCurrentUser( 'MFLazyLoadImages' );
 			$vars['wgMFEditNoticesFeatureConflict'] = $this->hasEditNoticesFeatureConflict(

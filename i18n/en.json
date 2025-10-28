@@ -196,12 +196,6 @@
 	"mobile-frontend-user-pref-option": "User preferences",
 	"mobile-frontend-user-pref-description": "Change your preferences, including password, website appearance, notification settings, and more.",
 	"mobile-frontend-user-pref-link": "Open preferences",
-	"mobile-frontend-amc-outreach-intro": "Introducing Advanced Mode",
-	"mobile-frontend-amc-outreach-description": "Advanced mode provides expanded functionality of History pages, Watchlist pages, Recent changes, and other editor tools on mobile.",
-	"mobile-frontend-amc-outreach-enable": "Enable advanced mode",
-	"mobile-frontend-amc-outreach-no-thanks": "No thanks",
-	"mobile-frontend-amc-outreach-enabled-message": "Advanced mode is now enabled. You can turn it off in your settings.",
-	"mobile-frontend-amc-outreach-dismissed-message": "You can enable Advanced mode at any time in your Settings.",
 	"mobile-frontend-console-recruit": "Learn more about how we build our mobile site @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Optimize and simplify special pages when on mobile (recommended)",
 	"prefs-mobile": "Mobile preferences"

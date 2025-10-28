@@ -204,12 +204,6 @@
 	"mobile-frontend-user-pref-option": "Header that appears in Special:MobileOptions that provides a link to user preferences",
 	"mobile-frontend-user-pref-description": "Description of the user preferences link in Special:MobileOptions page",
 	"mobile-frontend-user-pref-link": "Link in Special:MobileOptions that opens user preferences page",
-	"mobile-frontend-amc-outreach-intro": "AMC feature intro displayed on AMC outreach drawer\n{{Identical|Introducing Advanced Mode}}",
-	"mobile-frontend-amc-outreach-description": "AMC feature description displayed on AMC outreach drawer",
-	"mobile-frontend-amc-outreach-enable": "A button on the AMC outreach drawer to enable AMC\n{{Identical|Enable advanced mode}}",
-	"mobile-frontend-amc-outreach-no-thanks": "An anchor on the user on the AMC outreach drawer to dismiss the drawer\n{{Identical|No thanks}}",
-	"mobile-frontend-amc-outreach-enabled-message": "A toast that displays after user enables AMC from the outreach form",
-	"mobile-frontend-amc-outreach-dismissed-message": "A toast that displays after the user dismisses AMC drawer. \"Settings\" should be consistent with {{msg-mw|Mobile-frontend-main-menu-settings-heading}}.",
 	"mobile-frontend-console-recruit": "Message that will shown in the JavaScript console to developers. Can be overridden on wiki.",
 	"mobile-frontend-special-pages-pref": "This preference allows editors to disable special page optimisations in mobile. It is enabled by default.",
 	"prefs-mobile": "Header for mobile section of user preferences"

@@ -20,7 +20,6 @@ const mediaViewer = {
 };
 const languageInfoOverlay = require( './languageOverlay/languageInfoOverlay' );
 const languageOverlay = require( './languageOverlay/languageOverlay' );
-const amcOutreach = require( './amcOutreach/amcOutreach' );
 const util = require( './util.js' );
 const actionParams = require( './actionParams.js' );
 const Icon = require( './Icon.js' );
@@ -52,14 +51,6 @@ module.exports = {
 	 * @private
 	 */
 	util,
-	/**
-	 * Internal for use inside Minerva only
-	 *
-	 * @memberof module:mobile.startup
-	 * @type module:mobile.startup/AmcOutreach
-	 */
-
-	amcOutreach,
 	/**
 	 * @private for use inside MobileFrontend only.
 	 */

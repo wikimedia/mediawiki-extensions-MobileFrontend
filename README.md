@@ -379,20 +379,6 @@ Whether Advanced mode is available for users.
 * Type: `Boolean`
 * Default: `true`
 
-#### $wgMFAmcOutreach
-
-Whether the AMC Outreach feature is available for users.
-
-* Type: `Boolean`
-* Default: `false`
-
-#### $wgMFAmcOutreachMinEditCount
-
-When Amc Outreach is enabled, this option sets the minimum number of edits a user must make before they are eligible to see the AMC Outreach feature.
-
-* Type: `Number`
-* Default: 100
-
 #### $wgDefaultMobileSkin
 
 The default skin for MobileFrontend.

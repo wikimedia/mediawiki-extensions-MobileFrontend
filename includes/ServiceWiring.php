@@ -16,14 +16,6 @@ return [
 			$services->getService( 'MobileFrontend.Context' )
 		);
 	},
-	'MobileFrontend.AMC.Outreach' => static function ( MediaWikiServices $services ): MobileFrontend\Amc\Outreach {
-		return new MobileFrontend\Amc\Outreach(
-			$services->getService( 'MobileFrontend.AMC.UserMode' ),
-			$services->getService( 'MobileFrontend.AMC.Manager' ),
-			$services->getService( 'MobileFrontend.Context' )->getUser(),
-			$services->getService( 'MobileFrontend.Config' )
-		);
-	},
 	'MobileFrontend.AMC.UserMode' => static function ( MediaWikiServices $services ): MobileFrontend\Amc\UserMode {
 		return new MobileFrontend\Amc\UserMode(
 			$services->getService( 'MobileFrontend.AMC.Manager' ),
