@@ -129,6 +129,17 @@ class Toggler {
 				expanded: wasExpanded,
 				$heading
 			} );
+
+			/**
+			 * Internal for use inside ReaderExperiments
+			 *
+			 * @event ~'readerExperiments.section-toggled'
+			 * @memberof Hooks
+			 */
+			mw.hook( 'readerExperiments.section-toggled' ).fire( {
+				heading: $heading.get( 0 ),
+				isExpanded: !wasExpanded
+			} );
 		} );
 
 		return true;

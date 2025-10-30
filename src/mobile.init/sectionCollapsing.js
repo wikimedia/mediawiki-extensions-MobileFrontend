@@ -20,6 +20,17 @@ function setCollapsedHeadingState( heading, icon, isCollapsed ) {
 		icon.classList.add( 'mf-icon-collapse' );
 		icon.classList.remove( 'mf-icon-expand' );
 	}
+
+	/**
+	 * Internal for use inside ReaderExperiments
+	 *
+	 * @event ~'readerExperiments.section-toggled'
+	 * @memberof Hooks
+	 */
+	mw.hook( 'readerExperiments.section-toggled' ).fire( {
+		heading,
+		isExpanded: !isCollapsed
+	} );
 }
 
 /**
