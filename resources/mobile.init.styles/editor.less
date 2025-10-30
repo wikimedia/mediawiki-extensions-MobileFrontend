@@ -38,7 +38,8 @@
 		visibility: hidden;
 	}
 
-	[ aria-expanded='true' ] .mw-editsection {
+	[ aria-expanded='true' ] .mw-editsection,
+	[ aria-expanded='true' ] ~ .mf-collapsible-content section .mw-editsection {
 		visibility: visible;
 	}
 }
