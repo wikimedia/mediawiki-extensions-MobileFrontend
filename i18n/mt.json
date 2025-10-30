@@ -17,10 +17,8 @@
 	"mobile-frontend-main-menu": "Menu Prinċipali",
 	"mobile-frontend-main-menu-settings-heading": "Konfigurazzjoni għas-sit għall-mowbajl",
 	"mobile-frontend-missing-image": "Stampa",
-	"mobile-frontend-opt-in-explain": "Billi tipparteċipa fil-verżjoni beta, se jkollok aċċess il-funzjonalità sperimentali, bir-riskju li tiltaqa' ma' żbalji u problemi.",
 	"mobile-frontend-privacy-link-text": "Privatezza",
 	"mobile-frontend-save-settings": "Salva",
-	"mobile-frontend-settings-beta": "Beta",
 	"mobile-frontend-terms-text": "Termini tal-użu",
 	"mobile-frontend-view": "Verżjoni għall-mowbajl",
 	"mobile-frontend-view-desktop": "Desktop",
@@ -29,6 +27,5 @@
 	"mobile-frontend-watchlist-filter-other": "Oħrajn",
 	"mobile-frontend-watchlist-filter-talk": "Diskussjoni",
 	"tag-mobile_edit": "Modifika bil-mowbajl",
-	"tag-mobile_web_edit": "Modifika mill-web għall-mowbajl",
-	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "Paragrafu prinċipali"
+	"tag-mobile_web_edit": "Modifika mill-web għall-mowbajl"
 }

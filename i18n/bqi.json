@@ -43,7 +43,6 @@
 	"mobile-frontend-references-citation": "جادیار کردن",
 	"mobile-frontend-requires-title": "بٱلگاْ میٛن دٱسرس نی",
 	"mobile-frontend-save-settings": "کۊ کردن",
-	"mobile-frontend-settings-beta": "{{SITENAME}} بتا",
 	"mobile-frontend-settings-save": "میزونکاری کۊ ڤابیڌ.",
 	"mobile-frontend-terms-text": "ڤاجإیل ب کارگرهڌني",
 	"mobile-frontend-view": "دیئن موڤایلی",
@@ -66,8 +65,5 @@
 	"tag-advanced_mobile_edit": "آلشدکاری پیشکرداْ موبایلی",
 	"tag-mobile_web_edit": "ڤيرایشت تیارگه موبایلی",
 	"mobile-frontend-loading-message": "ب هال و بال سوڤار كرد...",
-	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions": "تۉزی داسوݩ",
-	"mobile-frontend-mobile-option-MFShowFirstParagraphBeforeInfobox": "پاراگراف ٱسلی",
-	"mobile-frontend-mobile-option-MFEnableFontChanger": "ٱندازاْ فونت",
 	"mobile-frontend-mobile-option-amc-learn-more": "بیشتر یاڌ بگرین"
 }

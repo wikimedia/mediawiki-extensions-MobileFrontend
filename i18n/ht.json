@@ -80,14 +80,12 @@
 	"mobile-frontend-media-load-fail-message": "Te gen yon erè pandan w ap chaje imaj sa a.",
 	"mobile-frontend-media-load-fail-retry": "Rafrechi",
 	"mobile-frontend-missing-image": "Imaj",
-	"mobile-frontend-opt-in-explain": "{{SITENAME}} βeta se yon fason pou w eseye fonksyon eksperimantal sa yo epi ba nou bonjan fidbak.",
 	"mobile-frontend-overlay-close": "Fèmen",
 	"mobile-frontend-privacy-link-text": "Konfidansyalite",
 	"mobile-frontend-references-citation": "Sitasyon",
 	"mobile-frontend-requires-title": "Paj pa disponib",
 	"mobile-frontend-save-settings": "Anrejistre",
 	"mobile-frontend-settings-tagline": "Preferans lekti",
-	"mobile-frontend-settings-beta": "{{SITENAME}} βeta",
 	"mobile-frontend-terms-text": "Kondisyon itilizasyon",
 	"mobile-frontend-view": "Vèsyon mobil",
 	"mobile-frontend-view-desktop": "Vèsyon òdinatè",
@@ -103,7 +101,6 @@
 	"tag-mobile_edit": "Modifikasyon mobil",
 	"tag-mobile_web_edit": "Modifikasyon nan sitwèb mobil",
 	"mobile-frontend-loading-message": "Ap chaje...",
-	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions": "Deskripsyon tit yo",
 	"mw-mf-amc-name": "Mòd avanse",
 	"prefs-mobile": "Preferans yo pou mobil"
 }

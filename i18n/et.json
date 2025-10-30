@@ -99,7 +99,6 @@
 	"mobile-frontend-media-next": "Näita järgmist pilti",
 	"mobile-frontend-media-prev": "Näita eelmist pilti",
 	"mobile-frontend-missing-image": "Pilt",
-	"mobile-frontend-opt-in-explain": "βeta on lahendus, mis võimaldab sul proovida neid katsefunktsioone ja anda meile väärtuslikku tagasisidet.",
 	"mobile-frontend-overlay-close": "Sule",
 	"mobile-frontend-privacy-link-text": "Andmekaitse",
 	"mobile-frontend-references-citation": "Viide",
@@ -108,7 +107,6 @@
 	"mobile-frontend-save-error": "Tõrge eelistuste salvestamisel. Palun veendu, et sul on küpsised lubatud.",
 	"mobile-frontend-save-settings": "Salvesta",
 	"mobile-frontend-settings-tagline": "Lugemiseelistused",
-	"mobile-frontend-settings-beta": "βeta",
 	"mobile-frontend-settings-save": "Eelistused salvestati.",
 	"mobile-frontend-terms-text": "Kasutustingimused",
 	"mobile-frontend-view": "Mobiilivaade",
@@ -142,8 +140,6 @@
 	"tag-mobile_web_edit": "Mobiiliveebi kaudu",
 	"tag-mobile_web_edit-description": "Mobiili veebisaidi kaudu tehtud muudatus",
 	"mobile-frontend-loading-message": "Laadimine…",
-	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions": "Pealkirjade kirjeldused",
-	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions-description": "Näita pealkirja all lühikirjeldust, et teemast ülevaade saada.",
 	"mw-mf-amc-name": "Täiustatud režiim",
 	"mw-mf-amc-description": "Täiustatud režiim võimaldab lihtsat juurdepääsu arutelu- ja ajaloolehekülgedele, kasutaja tööriistadele ning muudele redigeerimisvahenditele.",
 	"mobile-frontend-mobile-option-amc-learn-more": "Lisateave",
@@ -156,6 +152,5 @@
 	"mobile-frontend-amc-outreach-enable": "Luba täiustatud režiim",
 	"mobile-frontend-amc-outreach-no-thanks": "Ei, aiäth",
 	"mobile-frontend-amc-outreach-enabled-message": "Täiustatud režiim on nüüd lubatud. Saad selle välja lülitada enda eelistustes.",
-	"mobile-frontend-amc-outreach-dismissed-message": "Saad lubada täiustatud režiimi igal ajal enda eelistustes.",
-	"mobile-frontend-beta-only": "Funktsioon saadaval ainult beetarežiimis"
+	"mobile-frontend-amc-outreach-dismissed-message": "Saad lubada täiustatud režiimi igal ajal enda eelistustes."
 }

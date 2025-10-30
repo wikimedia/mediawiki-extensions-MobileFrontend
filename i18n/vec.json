@@ -37,10 +37,8 @@
 	"mobile-frontend-last-modified-date": "Ultimo canbiamento el $1, a le $2",
 	"mobile-frontend-main-menu-settings-heading": "Inpostasion del sito par celulari",
 	"mobile-frontend-missing-image": "Imaxene",
-	"mobile-frontend-opt-in-explain": "{{SITENAME}} βeta el xe on modo par provare ste funsionalità sperimentaƚi e fornirne on to comento.",
 	"mobile-frontend-privacy-link-text": "Privacy",
 	"mobile-frontend-save-settings": "Salva",
-	"mobile-frontend-settings-beta": "Beta",
 	"mobile-frontend-terms-text": "Condision de dòpara",
 	"mobile-frontend-view": "Version mobiłe",
 	"mobile-frontend-view-desktop": "Desktop",
@@ -59,6 +57,5 @@
 	"tag-mobile_edit-description": "Modifega fata dal sito pa' dispoxitivi mobiƚi",
 	"tag-advanced_mobile_edit": "Canbio vansà da dispoxidivo mòbiłe",
 	"tag-mobile_web_edit": "Modìfega da web par dispoxidivi mobiłi",
-	"mobile-frontend-loading-message": "Cargamento...",
-	"mobile-frontend-mobile-option-MFEnableFontChanger": "Grandesa łétare"
+	"mobile-frontend-loading-message": "Cargamento..."
 }

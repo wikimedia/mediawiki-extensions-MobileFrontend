@@ -82,14 +82,12 @@
 	"mobile-frontend-media-details": "तपशील",
 	"mobile-frontend-media-license-link": "परवाना माहिती",
 	"mobile-frontend-missing-image": "चित्र",
-	"mobile-frontend-opt-in-explain": "बीटा सुरु करून तुम्हाला चाचणी स्थितीचा उपयोग करता येईल, अर्थात, गणकदोष (बग्स) आणि इतर अवघड स्थिती अनुभवण्याची मानसिक तयारी ठेवावी.",
 	"mobile-frontend-overlay-close": "बंद",
 	"mobile-frontend-privacy-link-text": "गुप्तता",
 	"mobile-frontend-requires-title": "पृष्ठ अनुपलब्ध",
 	"mobile-frontend-save-error": "मांडणी जतन करण्यात त्रुटी. कृपया खात्री करा की, कूकीज सक्षम केल्या आहेत.",
 	"mobile-frontend-save-settings": "जतन करा",
 	"mobile-frontend-settings-tagline": "वाचन पसंती",
-	"mobile-frontend-settings-beta": "{{SITENAME}} बीटा",
 	"mobile-frontend-settings-save": "सेटिंग्ज जतन केल्या.",
 	"mobile-frontend-terms-text": "वापरण्याच्या अटी",
 	"mobile-frontend-view": "भ्रमणध्वनी-दृश्य",
@@ -119,8 +117,5 @@
 	"tag-mobile_web_edit": "मोबाईल वेब संपादन",
 	"tag-mobile_web_edit-description": "मोबाईल संकेतस्थळाकडून संपादन झाले",
 	"mobile-frontend-loading-message": "भारण करीत आहे...",
-	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions-description": "पृष्ठाविषयीची माहिती त्याखालील थोडक्यात लिहिलेलं वर्णन वाचून जाणून घ्यावी",
-	"mobile-frontend-mobile-option-MFLazyLoadImages-description": "जेव्हा गरज असेल तेव्हाच फोटो लोड करावेत",
-	"mobile-frontend-mobile-option-MFEnableFontChanger": "टंकाचा आकार",
 	"prefs-mobile": "मोबाइल पसंती"
 }

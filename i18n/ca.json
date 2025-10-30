@@ -100,7 +100,6 @@
 	"mobile-frontend-media-details": "Detalls",
 	"mobile-frontend-media-license-link": "Informació sobre la llicència",
 	"mobile-frontend-missing-image": "Imatge",
-	"mobile-frontend-opt-in-explain": "{{SITENAME}} βeta és una manera de provar aquestes funcions experimentals i proporcionar-nos comentaris valuosos",
 	"mobile-frontend-overlay-close": "Tanca",
 	"mobile-frontend-privacy-link-text": "Privadesa",
 	"mobile-frontend-references-citation": "Referència",
@@ -109,7 +108,6 @@
 	"mobile-frontend-requires-title": "Pàgina no disponible",
 	"mobile-frontend-save-error": "Error en desar la configuració. Assegureu-vos que teniu les galetes activades.",
 	"mobile-frontend-save-settings": "Desa",
-	"mobile-frontend-settings-beta": "{{SITENAME}}, versió beta",
 	"mobile-frontend-terms-text": "Condicions d'ús",
 	"mobile-frontend-view": "Versió per a mòbils",
 	"mobile-frontend-view-desktop": "Escriptori",
@@ -140,6 +138,5 @@
 	"tag-mobile_web_edit": "Edició web per a mòbils",
 	"tag-mobile_web_edit-description": "Modificació feta des de lloc web per a mòbils",
 	"mobile-frontend-loading-message": "S’està carregant…",
-	"mobile-frontend-mobile-option-MFEnableFontChanger": "Mida del text",
 	"mobile-frontend-mobile-option-amc-learn-more": "Informeu-vos-en"
 }

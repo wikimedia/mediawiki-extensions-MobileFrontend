@@ -35,13 +35,11 @@
 	"mobile-frontend-overlay-close": "Itxi",
 	"mobile-frontend-privacy-link-text": "Pribatutasuna",
 	"mobile-frontend-save-settings": "Gorde",
-	"mobile-frontend-settings-beta": "{{SITENAME}} βeta",
 	"mobile-frontend-terms-text": "Erabilera-baldintzak",
 	"mobile-frontend-view": "Mugikorreko bista",
 	"mobile-frontend-view-desktop": "Idazmahaia",
 	"mobile-frontend-watchlist-more": "gehiago",
 	"tag-mobile_edit": "Mugikor edizioa",
 	"tag-mobile_web_edit": "Mugikor web edizioa",
-	"mobile-frontend-loading-message": "Kargatzen...",
-	"mobile-frontend-mobile-option-MFEnableFontChanger": "Letra-tamaina"
+	"mobile-frontend-loading-message": "Kargatzen..."
 }

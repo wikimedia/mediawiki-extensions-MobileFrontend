@@ -94,12 +94,10 @@
 	"mobile-frontend-media-load-fail-message": "មានបញ្ហាក្នុងការផ្ទុករូបភាពនេះ។",
 	"mobile-frontend-media-load-fail-retry": "ផ្ទុកឡើងវិញ",
 	"mobile-frontend-missing-image": "រូបភាព",
-	"mobile-frontend-opt-in-explain": "ដោយ​ចូលរួម​កម្មវិធី​បេតា អ្នក​នឹងមាន​លទ្ធភាព​ប្រើ​មុខងា​រដែល​កំពុង​ស្ថិតនៅក្រោម​ការពិសោធន៍​នៅឡើយ ដែល​អាចធ្វើ​អោយ​អ្នកប្រឈមមុខ​នឹង​បញ្ហា​តូចតាច​មួយចំនួន។",
 	"mobile-frontend-overlay-close": "បិទ",
 	"mobile-frontend-privacy-link-text": "ភាព​ឯកជន",
 	"mobile-frontend-save-settings": "រក្សា​ទុក​",
 	"mobile-frontend-settings-tagline": "ចំណង់ចំណូលចិត្តអំណាន",
-	"mobile-frontend-settings-beta": "{{SITENAME}}បេតា",
 	"mobile-frontend-settings-save": "កាត់កំណត់ត្រូវបានរក្សាទុក។",
 	"mobile-frontend-terms-text": "លក្ខខណ្ឌប្រើប្រាស់",
 	"mobile-frontend-view": "អានលើឧបករណ៍ចល័ត",
@@ -120,9 +118,6 @@
 	"tag-mobile_web_edit": "កំណែប្រែពីអ៊ីនធើណិតចល័ត",
 	"tag-mobile_web_edit-description": "ការ​កែ​ប្រែ​ធ្វើ​ពីវិបសាយចល័ត",
 	"mobile-frontend-loading-message": "កំពុង​ផ្ទុក…",
-	"mobile-frontend-mobile-option-MFEnableFontChanger": "ទំហំអក្សរ",
-	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "ចាត់ចែងទំហំអក្សរសម្រាប់អាន",
 	"mobile-frontend-amc-outreach-no-thanks": "ទេ, អរគុណហើយ",
-	"mobile-frontend-beta-only": "មុខងារពិសេសសម្រាប់តែមុខងារបេតា",
 	"mobile-frontend-console-recruit": "ស្វែងយល់បន្ថែមអំពីវិធីដែលយើងខ្ញុំស្ថាបនាវិបសាយចល័ត @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend"
 }

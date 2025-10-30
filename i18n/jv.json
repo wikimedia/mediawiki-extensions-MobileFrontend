@@ -90,7 +90,6 @@
 	"mobile-frontend-media-license-link": "Katerangan lisènsi",
 	"mobile-frontend-media-load-fail-message": "Ana masalah nalika ngamot gambar iki.",
 	"mobile-frontend-missing-image": "Gambar",
-	"mobile-frontend-opt-in-explain": "{{SITENAME}} βeta iku sarana kowé njajal fitur-fitur kang isih kagrambyang iki lan mènèhi pamrayoga kang migunani.",
 	"mobile-frontend-overlay-close": "Tutup",
 	"mobile-frontend-privacy-link-text": "Priangga",
 	"mobile-frontend-references-citation": "Sitiran",
@@ -99,7 +98,6 @@
 	"mobile-frontend-requires-title": "Kaca ora ana",
 	"mobile-frontend-save-error": "Ana masalah nalika nyimpen setèlan. Kowé kudu ngurubaké kuki.",
 	"mobile-frontend-save-settings": "Simpen",
-	"mobile-frontend-settings-beta": "{{SITENAME}} βeta",
 	"mobile-frontend-terms-text": "Bebakuning Panganggo",
 	"mobile-frontend-view": "Praèn punsèl",
 	"mobile-frontend-view-desktop": "Dhèstop",
@@ -129,6 +127,5 @@
 	"tag-mobile_web_edit": "Besutan wèb punsèl",
 	"tag-mobile_web_edit-description": "Besutan saka situs wèb punsèl",
 	"mobile-frontend-loading-message": "Ngamot…",
-	"mobile-frontend-send-feedback": "Kirimi pamrayoga",
-	"mobile-frontend-mobile-option-MFLazyLoadImages-description": "Mot gambar mung nalika butuh."
+	"mobile-frontend-send-feedback": "Kirimi pamrayoga"
 }
