@@ -132,8 +132,5 @@
 	"mw-mf-amc-description": "Разширеният режим предоставя лесен достъп до беседи, история на страници, потребителски инструменти и други инструменти за редактиране.",
 	"mobile-frontend-mobile-option-amc-learn-more": "Научете повече",
 	"mobile-frontend-mobile-option-amc-send-feedback": "Изпращане на обратна връзка",
-	"mobile-frontend-amc-outreach-no-thanks": "Не, благодаря",
-	"mobile-frontend-amc-outreach-enabled-message": "Разширеният режим е активиран. Можете да го деактивирате от настройките си.",
-	"mobile-frontend-amc-outreach-dismissed-message": "Можете да активирате Разширения режим по всяко време във вашите Настройки.",
 	"mobile-frontend-console-recruit": "Научете повече за това как изграждаме мобилния сайт на https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend"
 }

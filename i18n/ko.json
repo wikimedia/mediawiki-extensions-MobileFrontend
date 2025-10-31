@@ -181,12 +181,6 @@
 	"mobile-frontend-user-pref-option": "사용자 환경 설정",
 	"mobile-frontend-user-pref-description": "비밀번호, 웹사이트 표시, 알림 설정 등을 포함한 환경 설정을 변경합니다.",
 	"mobile-frontend-user-pref-link": "환경 설정 열기",
-	"mobile-frontend-amc-outreach-intro": "고급 모드 소개",
-	"mobile-frontend-amc-outreach-description": "고급 모드는 모바일에서 역사 문서, 주시문서 목록 문서, 최근 바뀜 및 기타 편집기 도구의 확장된 기능을 제공합니다.",
-	"mobile-frontend-amc-outreach-enable": "고급 모드 활성화",
-	"mobile-frontend-amc-outreach-no-thanks": "괜찮습니다",
-	"mobile-frontend-amc-outreach-enabled-message": "고급 모드가 활성화되었습니다. 설정에서 다시 비활성화하실 수 있습니다.",
-	"mobile-frontend-amc-outreach-dismissed-message": "내 설정에서 언제든지 고급 모드를 활성화할 수 있습니다.",
 	"mobile-frontend-console-recruit": "저희가 모바일 사이트를 어떻게 만들어나가는지 더 알아보세요 @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "모바일일 때 특수 문서를 최적화하고 단순화 (권장)",
 	"prefs-mobile": "모바일 환경 설정"

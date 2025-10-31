@@ -162,12 +162,6 @@
 	"mobile-frontend-user-pref-option": "Preferentias de usator",
 	"mobile-frontend-user-pref-description": "Cambia tu preferentias, incluse le contrasigno, apparentia del sito web, parametros de notification, e plus.",
 	"mobile-frontend-user-pref-link": "Aperir preferentias",
-	"mobile-frontend-amc-outreach-intro": "Introduction al modo avantiate",
-	"mobile-frontend-amc-outreach-description": "Le modo avantiate forni un functionalitate expandite de paginas de historia, del observatorio, del modificationes recente, e altere utensiles de modification sur mobile.",
-	"mobile-frontend-amc-outreach-enable": "Activar le modo avantiate",
-	"mobile-frontend-amc-outreach-no-thanks": "No, gratias",
-	"mobile-frontend-amc-outreach-enabled-message": "Le modo avantiate es ora active. Tu pote disactivar lo in tu parametros.",
-	"mobile-frontend-amc-outreach-dismissed-message": "Tu pote activar le modo avantiate a omne momento in tu parametros.",
 	"mobile-frontend-console-recruit": "Leger plus sur como nos construe nostre sito mobile → https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Optimisar e simplificar paginas special sur apparatos mobile (recommendate)",
 	"prefs-mobile": "Preferentias mobile"

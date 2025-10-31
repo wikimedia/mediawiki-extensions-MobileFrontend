@@ -146,11 +146,5 @@
 	"mobile-frontend-mobile-option-amc-send-feedback": "Saada tagasisidet",
 	"mobile-frontend-user-pref-option": "Kasutaja eelistused",
 	"mobile-frontend-user-pref-description": "Muuda enda eelistusi, parooli, veebisaidi ilmet, teavituste sätteid ja muud.",
-	"mobile-frontend-user-pref-link": "Ava eelistused",
-	"mobile-frontend-amc-outreach-intro": "Tutvustame täiustatud režiimi",
-	"mobile-frontend-amc-outreach-description": "Täiustatud režiimis on ajaloo-, jälgimis- ja viimaste muudatuste loendi ning teiste toimetamistööriistade kasutamisel mobiilis rohkem võimalusi.",
-	"mobile-frontend-amc-outreach-enable": "Luba täiustatud režiim",
-	"mobile-frontend-amc-outreach-no-thanks": "Ei, aiäth",
-	"mobile-frontend-amc-outreach-enabled-message": "Täiustatud režiim on nüüd lubatud. Saad selle välja lülitada enda eelistustes.",
-	"mobile-frontend-amc-outreach-dismissed-message": "Saad lubada täiustatud režiimi igal ajal enda eelistustes."
+	"mobile-frontend-user-pref-link": "Ava eelistused"
 }

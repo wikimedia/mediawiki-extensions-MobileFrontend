@@ -168,12 +168,6 @@
 	"mobile-frontend-user-pref-option": "Používateľské nastavenia",
 	"mobile-frontend-user-pref-description": "Zmeňte svoje nastavenia, vrátane hesla, vzhľadu stránky, nastavení oznámení atď.",
 	"mobile-frontend-user-pref-link": "Otvoriť nastavenia",
-	"mobile-frontend-amc-outreach-intro": "Predstavujeme Pokročilý režim",
-	"mobile-frontend-amc-outreach-description": "Pokročilý režim poskytuje rozšírenú funkcionalitu histórie stránok, zoznamu sledovaných stránok, posledných zmien a ďalších editačných nástrojov na mobiloch.",
-	"mobile-frontend-amc-outreach-enable": "Zapnúť Pokročilý režim",
-	"mobile-frontend-amc-outreach-no-thanks": "Nie, vďaka",
-	"mobile-frontend-amc-outreach-enabled-message": "Pokročilý režim je teraz zapnutý. Vypnúť ho môžete vo svojom nastavení.",
-	"mobile-frontend-amc-outreach-dismissed-message": "Pokročilý režim môžete kedykoľvek zapnúť vo svojom nastavení.",
 	"mobile-frontend-console-recruit": "Zistite viac, ako budujeme náš mobilný web, na https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Optimalizovať a zjednodušiť špeciálne stránky na mobile (odporúčané)",
 	"prefs-mobile": "Mobilné nastavenia"

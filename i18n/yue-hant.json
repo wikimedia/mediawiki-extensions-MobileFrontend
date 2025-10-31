@@ -163,12 +163,6 @@
 	"mobile-frontend-user-pref-option": "用戶喜好",
 	"mobile-frontend-user-pref-description": "改你嘅喜好設定，包括密碼、網站外觀、通知設定等等。",
 	"mobile-frontend-user-pref-link": "開喜好設定",
-	"mobile-frontend-amc-outreach-intro": "介紹進階模式",
-	"mobile-frontend-amc-outreach-description": "進階模式喺流動版上面可以擴展歷史頁、監視清單、最近修改同其他編輯架撐嘅功能。",
-	"mobile-frontend-amc-outreach-enable": "開着進階模式",
-	"mobile-frontend-amc-outreach-no-thanks": "唔使喇，唔該",
-	"mobile-frontend-amc-outreach-enabled-message": "進階模式開咗。你可以喺設定度閂咗佢。",
-	"mobile-frontend-amc-outreach-dismissed-message": "你可以隨時喺設定度開進階模式。",
 	"mobile-frontend-console-recruit": "喺呢度了解多啲我哋係點樣起流動版網站： https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "喺流動版優化同簡化特殊頁面（建議）",
 	"prefs-mobile": "流動版喜好設定"

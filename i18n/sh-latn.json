@@ -143,12 +143,6 @@
 	"mw-mf-amc-description": "Nudi lak pristup stranicama za razgovor, stranicama historije, korisničkim alatkama i drugim alatkama za uređivanje.",
 	"mobile-frontend-mobile-option-amc-learn-more": "Detaljnije",
 	"mobile-frontend-mobile-option-amc-send-feedback": "Povratne informacije",
-	"mobile-frontend-amc-outreach-intro": "Predstavljamo Napredni režim",
-	"mobile-frontend-amc-outreach-description": "Napredni režim omogućava veću funkcionalnost stranica o historiji, praćenjima, nedavnim promjenama i drugim uređivačkim alatima na mobilnim uređajima.",
-	"mobile-frontend-amc-outreach-enable": "Uključi napredni režim",
-	"mobile-frontend-amc-outreach-no-thanks": "Ne, hvala",
-	"mobile-frontend-amc-outreach-enabled-message": "Napredni režim je omogućen. Možete ga isključiti u Vašim postavkama.",
-	"mobile-frontend-amc-outreach-dismissed-message": "U svakom času možete omogućiti napredni režim u Vašim postavkama.",
 	"mobile-frontend-console-recruit": "Saznajte više o tome kao izgrađujemo naš mobilni portal @ https://www.mediawiki.org/wiki/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Optimiziraj i pojednostavi posebne stranice kad pristupam mobilnim uređajima (preporučeno)",
 	"prefs-mobile": "Mobilne postavke"

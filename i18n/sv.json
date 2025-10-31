@@ -178,12 +178,6 @@
 	"mobile-frontend-user-pref-option": "Användarinställningar",
 	"mobile-frontend-user-pref-description": "Ändra dina inställningar, inklusive lösenord, webbplatsens utseende, aviseringsinställningar och mer.",
 	"mobile-frontend-user-pref-link": "Öppna inställningarna",
-	"mobile-frontend-amc-outreach-intro": "Introducerar avancerat läge",
-	"mobile-frontend-amc-outreach-description": "Avancerat läge tillhandahåller utökad funktionalitet för historiksidor, sidor i bevakningslistan, senaste ändringar och andra redigeringsverktyg på mobilen.",
-	"mobile-frontend-amc-outreach-enable": "Aktivera avancerat läge",
-	"mobile-frontend-amc-outreach-no-thanks": "Nej tack",
-	"mobile-frontend-amc-outreach-enabled-message": "Avancerat läge är nu aktiverat. Du kan inaktiverat det i dina inställningar.",
-	"mobile-frontend-amc-outreach-dismissed-message": "Du kan aktivera avancerat läge när som helst i dina inställningar.",
 	"mobile-frontend-console-recruit": "Läs mer om hur vi bygger vår mobila webbplats på https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Optimera och förenkla specialsidor för mobiler (rekommenderas)",
 	"prefs-mobile": "Mobilinställningar"

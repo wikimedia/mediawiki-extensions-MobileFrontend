@@ -178,12 +178,6 @@
 	"mobile-frontend-user-pref-option": "Brukerinnstillinger",
 	"mobile-frontend-user-pref-description": "Endre innstillingene dine, inkludert passord, nettstedets utseende, varselsinnstillinger og mer.",
 	"mobile-frontend-user-pref-link": "Åpne innstillingene",
-	"mobile-frontend-amc-outreach-intro": "Vi introduserer avansert modus",
-	"mobile-frontend-amc-outreach-description": "Avansert modus gir utvidet funksjonalitet for historikksider, overvåkningslisten, siste endringer og andre redigeringsverktøy på mobil.",
-	"mobile-frontend-amc-outreach-enable": "Slå på avansert modus",
-	"mobile-frontend-amc-outreach-no-thanks": "Nei takk",
-	"mobile-frontend-amc-outreach-enabled-message": "Avansert modus er nå slått på. Du kan slå den av i innstillingene dine.",
-	"mobile-frontend-amc-outreach-dismissed-message": "Du kan slå på avansert modus når som helst i innstillingene dine.",
 	"mobile-frontend-console-recruit": "Lær mer om hvordan vi bygger den mobile nettsiden vår på https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Optimer og forenkle spesialsider på mobil (anbefalt)",
 	"prefs-mobile": "Mobilinnstillinger"

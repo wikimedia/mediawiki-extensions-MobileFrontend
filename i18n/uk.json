@@ -190,12 +190,6 @@
 	"mobile-frontend-user-pref-option": "Налаштування користувача",
 	"mobile-frontend-user-pref-description": "Можна змінити свої налаштування, зокрема пароль, вигляд вебсайту, налаштування сповіщень тощо.",
 	"mobile-frontend-user-pref-link": "Відкрити налаштування",
-	"mobile-frontend-amc-outreach-intro": "Представляємо розширений режим",
-	"mobile-frontend-amc-outreach-description": "Розширений режим забезпечує покращений функціонал сторінок перегляду історії редагувань, списку спостережень, нових редагувань, та інших редакторських інструментів у мобільній версії.",
-	"mobile-frontend-amc-outreach-enable": "Увімкнути розширений режим",
-	"mobile-frontend-amc-outreach-no-thanks": "Ні, дякую",
-	"mobile-frontend-amc-outreach-enabled-message": "Розширений режим увімкнено. Ви можете вимкнути його у своїх налаштуваннях.",
-	"mobile-frontend-amc-outreach-dismissed-message": "Ви можете увімкнути розширений режим будь-коли у своїх налаштуваннях.",
 	"mobile-frontend-console-recruit": "Дізнайтесь більше як ми створюємо мобільний сайт на https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Оптимізувати і спрощувати спеціальні сторінки, коли використовується мобільна версія (рекомендовано)",
 	"prefs-mobile": "Мобільні налаштування"

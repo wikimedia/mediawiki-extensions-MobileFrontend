@@ -158,12 +158,6 @@
 	"mobile-frontend-user-pref-option": "Налады ўдзельніка",
 	"mobile-frontend-user-pref-description": "Змяніце свае перавагі, у тым ліку пароль, выгляд пляцоўкі, налады апавяшчэнняў і іншае.",
 	"mobile-frontend-user-pref-link": "Адкрыць налады",
-	"mobile-frontend-amc-outreach-intro": "Прадстаўляем Пашыраны рэжым",
-	"mobile-frontend-amc-outreach-description": "Пашыраны рэжым забяспечвае забяспечвае большыя магчымасці старонак гісторыі, старонках спіса назірання, апошніх зменах і іншых інструментаў праўкі ў мабільнай версіі.",
-	"mobile-frontend-amc-outreach-enable": "Уключыць пашыраны рэжым",
-	"mobile-frontend-amc-outreach-no-thanks": "Не, дзякуй",
-	"mobile-frontend-amc-outreach-enabled-message": "Пашыраны рэжым цяпер уключаны. Вы можаце адключыць яго ў наладах.",
-	"mobile-frontend-amc-outreach-dismissed-message": "Вы можаце ўключыць Пашыраны рэжым у любы час у вашых Наладах.",
 	"mobile-frontend-console-recruit": "Даведайцеся болей пра тое, як мы робім наш мабільны сайт @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Аптымізацыя і спрашчэнне спецыяльных старонак на мабільным тэлефоне (рэкамендуецца)",
 	"prefs-mobile": "Мабільныя налады"

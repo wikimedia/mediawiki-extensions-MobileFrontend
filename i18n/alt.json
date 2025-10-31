@@ -155,12 +155,6 @@
 	"mobile-frontend-user-pref-option": "Туружаачыныҥ јазалталары",
 	"mobile-frontend-user-pref-description": "Бойыгардыҥ јазалталарды солыгар, јажыт сӧсти катай, сайттыҥ тыш-бӱдӱмин, јетирӱлерди ле оноҥ до ӧскӧзин.",
 	"mobile-frontend-user-pref-link": "Јазалталарды ачар",
-	"mobile-frontend-amc-outreach-intro": "Элбедилген режимди кӧргӱзедис",
-	"mobile-frontend-amc-outreach-description": "Элбедилген режим тӱӱки бӱктердиҥ, ширтениҥ тизимин, калганчы солынтылардыҥ элбеткен функционалды ла оноҥ до ӧскӧ јепселдерди мобильный тӱзедӱлер эдерге аргалар берет.",
-	"mobile-frontend-amc-outreach-enable": "Элбедилген режимди иштедер",
-	"mobile-frontend-amc-outreach-no-thanks": "Јок, быйан болзын",
-	"mobile-frontend-amc-outreach-enabled-message": "Элбедилген режим иштейт. Оны слер јазалталарда токтодып салар аргалу.",
-	"mobile-frontend-amc-outreach-dismissed-message": "Слер мобильный режимди кандый да болзо ӧйдӧ бойыгардыҥ јазалталарда солыыр аргалу.",
 	"mobile-frontend-console-recruit": "Бистиҥ сайттыҥ мобильный версиязын канайып јазап турганыс керегинде кӧптӧдӧ билерге @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend адресте кӧрӧр",
 	"mobile-frontend-special-pages-pref": "Мобильный устройстволордо аҥылу бӱктерди эптештирери ле јеҥилтери (кӱӱнзедилет)",
 	"prefs-mobile": "Мобильный јазалталар"

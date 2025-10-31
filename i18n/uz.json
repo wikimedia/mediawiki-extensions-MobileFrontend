@@ -142,12 +142,6 @@
 	"mobile-frontend-mobile-option-amc-send-feedback": "Fikr-mulohaza yuborish",
 	"mobile-frontend-user-pref-option": "Foydalanuvchi moslamalari",
 	"mobile-frontend-user-pref-link": "Moslamalarni ochish",
-	"mobile-frontend-amc-outreach-intro": "Yetuk rejim bilan tanishuv",
-	"mobile-frontend-amc-outreach-description": "Yetuk rejim mobil qurilmangizda sahifa tarixlari, kuzatuv roʻyxati sahifalari, yangi oʻzgarishlar va boshqa muharrir asboblarining kengaytirilgan funksiyalarini taqdim etadi.",
-	"mobile-frontend-amc-outreach-enable": "Kengaytirilgan rejimni yoqish",
-	"mobile-frontend-amc-outreach-no-thanks": "Yoʻq, rahmat",
-	"mobile-frontend-amc-outreach-enabled-message": "Kengaytirilgan rejim hozirda yoqilgan. Uni oʻchirib qoʻyishni istasangiz, moslamalaringizga oʻting.",
-	"mobile-frontend-amc-outreach-dismissed-message": "Siz istalgan vaqtda Moslamalaringizga oʻtish orqali Yetuk rejimni yoqishingiz mumkin.",
 	"mobile-frontend-console-recruit": "Mobil saytimizni qanday barpo etganimizni bilmoqchi bo'lsangiz, qarang: @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Mobil qurilmalardagi maxsus sahifalarni optimallashtirish va soddalashtirish (tavsiya etiladi)",
 	"prefs-mobile": "Mobil moslamalar"

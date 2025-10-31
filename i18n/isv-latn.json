@@ -160,12 +160,6 @@
 	"mobile-frontend-user-pref-option": "Nastavjenja koristnika",
 	"mobile-frontend-user-pref-description": "Vy možete izměniti svoje nastavjenja, vključno s paroloju, izgledom sajta, nastavjenjami za uvědomjenja i tako dalje.",
 	"mobile-frontend-user-pref-link": "Otvoriti nastavjenja",
-	"mobile-frontend-amc-outreach-intro": "Prědstavjajemo razširjeny režim",
-	"mobile-frontend-amc-outreach-description": "Razširjeny režim davaje razširjenu funkcionalnost stranic historije, slědovanyh stranic, poslědnjih izměn, a takože druge orudja za pravjenje s mobilnogo aparata.",
-	"mobile-frontend-amc-outreach-enable": "Vključiti razširjeny režim",
-	"mobile-frontend-amc-outreach-no-thanks": "Ne, hvala.",
-	"mobile-frontend-amc-outreach-enabled-message": "Tutčas razširjeny režim jest vključeny. Vy možete go izključiti v svojih nastavjenjah.",
-	"mobile-frontend-amc-outreach-dismissed-message": "Vsegda vy možete vključiti razširjeny režim v svojih nastavjenjah.",
 	"mobile-frontend-console-recruit": "Doznajte se veče o tom, kako my tvorimo naš mobilny sajt na @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Optimalizacija i uproščenje specialnyh stranic, kogda upotrěbjaje se mobilna versija (prěporučeno)",
 	"prefs-mobile": "Mobilne nastavjenja"

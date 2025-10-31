@@ -171,12 +171,6 @@
 	"mobile-frontend-user-pref-option": "การตั้งค่าผู้ใช้",
 	"mobile-frontend-user-pref-description": "เปลี่ยนแปลงการตั้งค่าของคุณ รวมทั้งรหัสผ่าน หน้าตาของเว็บไซต์ การตั้งค่าการแจ้งเตือน และอื่น ๆ",
 	"mobile-frontend-user-pref-link": "เปิดการตั้งค่า",
-	"mobile-frontend-amc-outreach-intro": "แนะนำโหมดขั้นสูง",
-	"mobile-frontend-amc-outreach-description": "โหมดขั้นสูงมีฟังก์ชันการทำงานเพิ่มเติมของหน้าประวัติ หน้ารายการเฝ้าดู การเปลี่ยนแปลงล่าสุด และเครื่องมือแก้ไขอื่น ๆ บนอุปกรณ์เคลื่อนที่",
-	"mobile-frontend-amc-outreach-enable": "เปิดใช้งานโหมดขั้นสูง",
-	"mobile-frontend-amc-outreach-no-thanks": "ไม่ขอบคุณ",
-	"mobile-frontend-amc-outreach-enabled-message": "เปิดใช้งานโหมดขั้นสูงแล้ว คุณสามารถปิดใช้งานในการตั้งค่าของคุณ",
-	"mobile-frontend-amc-outreach-dismissed-message": "คุณสามารถเปิดใช้งานโหมดขั้นสูงตอนไหนก็ได้ในการตั้งค่าของคุณ",
 	"mobile-frontend-console-recruit": "เรียนรู้เพิ่มเติมเกี่ยวกับวิธีที่เราสร้างไซต์มือถือของเราที่ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"prefs-mobile": "การตั้งค่าอุปกรณ์เคลื่อนที่"
 }

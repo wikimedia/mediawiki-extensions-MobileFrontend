@@ -162,12 +162,6 @@
 	"mobile-frontend-user-pref-option": "Naudotojo nustatymai",
 	"mobile-frontend-user-pref-description": "Pakeiskite savo nuostatas, įskaitant slaptažodį, svetainės išvaizdą, pranešimų nustatymus ir kt.",
 	"mobile-frontend-user-pref-link": "Atverti nuostatas",
-	"mobile-frontend-amc-outreach-intro": "Pristatome išplėstinį režimą",
-	"mobile-frontend-amc-outreach-description": "Išplėstinis režimas suteikia išplėstas istorijos, stebimųjų, naujausių keitimų puslapių ir kitų redagavimo įrankių mobiliuosiuose įrenginiuose funkcijas.",
-	"mobile-frontend-amc-outreach-enable": "Įgalinti išplėstinį režimą",
-	"mobile-frontend-amc-outreach-no-thanks": "Ne, ačiū",
-	"mobile-frontend-amc-outreach-enabled-message": "Išplėstinis režimas dabar įjungtas. Jį galite išjungti nustatymuose.",
-	"mobile-frontend-amc-outreach-dismissed-message": "Išplėstinį režimą galite bet kada įjungti savo nustatymuose.",
 	"mobile-frontend-console-recruit": "Sužinokite daugiau apie tai, kaip buvo sukurtas mūsų puslapis mobiliesiems @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Optimizuoti ir supaprastinti specialius puslapius mobiliajame įrenginyje (rekomenduojama)",
 	"prefs-mobile": "Mobiliųjų įrenginių nuostatos"

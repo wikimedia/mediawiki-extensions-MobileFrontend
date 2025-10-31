@@ -167,12 +167,6 @@
 	"mobile-frontend-user-pref-option": "Suradničke postavke",
 	"mobile-frontend-user-pref-description": "Promijenite postavke, uključujući lozinku, izgled mrežne stranice, postavke obavijesti i drugo.",
 	"mobile-frontend-user-pref-link": "Otvori postavke",
-	"mobile-frontend-amc-outreach-intro": "Predstavljamo unaprijeđeni modus",
-	"mobile-frontend-amc-outreach-description": "Unaprijeđeni modus omogućava veću funkcionalnost stranica povijesti izmjena, stranica na popisu praćenja, nedavnim promjenama i drugim uređivačkim alatima na mobilnim uređajima.",
-	"mobile-frontend-amc-outreach-enable": "Omogući unaprijeđeni modus",
-	"mobile-frontend-amc-outreach-no-thanks": "Ne, hvala",
-	"mobile-frontend-amc-outreach-enabled-message": "Unaprijeđeni modus upravo Vam je omogućen. Možete ga isključiti u Vašim postavkama.",
-	"mobile-frontend-amc-outreach-dismissed-message": "U svakom času možete omogućiti unaprijeđeni modus u Vašim postavkama.",
 	"mobile-frontend-console-recruit": "Saznajte više o tome na koji je način izvedena naša mobilna inačica mrežnoga mjesta @ https://www.mediawiki.org/wiki/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Optimiziraj i pojednostavi posebne stranice kad pristupam mobilnim uređajima (preporučeno)",
 	"prefs-mobile": "Mobilne postavke"

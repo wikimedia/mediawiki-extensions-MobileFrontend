@@ -151,12 +151,6 @@
 	"mobile-frontend-user-pref-option": "Штелованє опцийох хаснователя",
 	"mobile-frontend-user-pref-description": "Пременце свойо штелованя, уключуюци лозинку, випатрунок вебсайта, елементи обвисцованя и друге.",
 	"mobile-frontend-user-pref-link": "Отвор штелованє опцийох",
-	"mobile-frontend-amc-outreach-intro": "Представянє напредного режиму",
-	"mobile-frontend-amc-outreach-description": "Напредни режим оможлївює лєгчейши приступ ґу боком за розгварку, ґу боком историї пременкох, ґу нєдавним пременком и ґу другим ушорйовацким опцийом на мобилним апарату.",
-	"mobile-frontend-amc-outreach-enable": "Оможлївиц  напредни режим",
-	"mobile-frontend-amc-outreach-no-thanks": "Нє, дзекуєм",
-	"mobile-frontend-amc-outreach-enabled-message": "Тєраз оможлївени напредни режим. Можеце го онєможлївиц у вашим намесцаню опцийох.",
-	"mobile-frontend-amc-outreach-dismissed-message": "Ви можеце було кеди оможлївиц напредни режим у намесцаню опцийох.",
 	"mobile-frontend-console-recruit": "Дознайце вецей о тим як конструуєме сайт за мобилни апарати @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Оптимизуй и поєдностав окремни боки на мобилним апарату (препоручує ше)",
 	"prefs-mobile": "Намесцанє за мобилни апарати"

@@ -173,12 +173,6 @@
 	"mobile-frontend-user-pref-option": "İstifadəçi nizamlamaları",
 	"mobile-frontend-user-pref-description": "Parol, veb-sayt görünüşü, bildiriş parametrləri və s. daxil olmaqla nizamlamalarınızı dəyişdirin.",
 	"mobile-frontend-user-pref-link": "Nizamlamaları aç",
-	"mobile-frontend-amc-outreach-intro": "Qabaqcıl Rejimi təqdim edirik",
-	"mobile-frontend-amc-outreach-description": "Qabaqcıl rejim mobildə tarixçə səhifələrinin, izləmə siyahısı səhifələrinin, son dəyişikliklərin və digər redaktor alətlərinin genişləndirilmiş funksionallığını təmin edir.",
-	"mobile-frontend-amc-outreach-enable": "Qabaqcıl rejimi aktivləşdir",
-	"mobile-frontend-amc-outreach-no-thanks": "Xeyr, təşəkkürlər",
-	"mobile-frontend-amc-outreach-enabled-message": "Qabaqcıl rejim indi aktivdir. Siz onu parametrlərinizdə söndürə bilərsiniz.",
-	"mobile-frontend-amc-outreach-dismissed-message": "Siz istənilən vaxt parametrlərinizdə Qabaqcıl rejimi aktivləşdirə bilərsiniz.",
 	"mobile-frontend-console-recruit": "Mobil saytımızı necə qurduğumuz haqqında ətraflı məlumat əldə edin @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Mobil istifadə edərkən xüsusi səhifələri optimallaşdırın və sadələşdirin (tövsiyə olunur)",
 	"prefs-mobile": "Mobil nizamlamalar"

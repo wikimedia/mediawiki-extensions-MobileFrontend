@@ -186,12 +186,6 @@
 	"mobile-frontend-user-pref-option": "Käyttäjäasetukset",
 	"mobile-frontend-user-pref-description": "Muuta asetuksiasi, kuten salasanaa, verkkosivuston ulkoasua, ilmoitusasetuksia ja paljon muuta.",
 	"mobile-frontend-user-pref-link": "Avaa asetukset",
-	"mobile-frontend-amc-outreach-intro": "Esittelyssä laajennettu tila",
-	"mobile-frontend-amc-outreach-description": "Kehittynyt tila tarjoaa laajennettuja toiminnallisuuksia historiasivuilla, tarkkailulistasivuilla, tuoreissa muutoksissa ja muissa muokkaustyökaluissa mobiililaiteilla.",
-	"mobile-frontend-amc-outreach-enable": "Ota käyttöön laajennettu tila",
-	"mobile-frontend-amc-outreach-no-thanks": "Ei kiitos",
-	"mobile-frontend-amc-outreach-enabled-message": "Laajennettu tila on nyt käytössä. Voit kytkeä sen pois asetuksista.",
-	"mobile-frontend-amc-outreach-dismissed-message": "Voit kytkeä laajennetun tilan käyttöön koska tahansa asetuksista.",
 	"mobile-frontend-console-recruit": "Lisätietoja siitä, miten rakensimme mobiilisivustomme @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Optimoi ja yksinkertaista toimintosivuja mobiilitilassa (suositus)",
 	"prefs-mobile": "Mobiiliasetukset"

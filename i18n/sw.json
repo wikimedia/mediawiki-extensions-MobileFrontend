@@ -168,12 +168,6 @@
 	"mobile-frontend-user-pref-option": "Mapendeleo ya mtumiaji",
 	"mobile-frontend-user-pref-description": "Badilisha mapendekezo yako, ukijumuisha nenosiri, mwonekano wa tovuti, mipangilio ya arifa na zaidi.",
 	"mobile-frontend-user-pref-link": "Mapendekezo ya wazi",
-	"mobile-frontend-amc-outreach-intro": "Tunakuletea Hali ya juu",
-	"mobile-frontend-amc-outreach-description": "Hali ya hali ya juu hutoa utendaji uliopanuliwa wa kurasa za Historia, kurasa za Orodha ya Ufuatiliaji, Mabadiliko ya Hivi majuzi na zana zingine za kuhariri kwenye simu ya mkononi.",
-	"mobile-frontend-amc-outreach-enable": "Wezesha hali ya juu",
-	"mobile-frontend-amc-outreach-no-thanks": "Hapana, asante lakini!",
-	"mobile-frontend-amc-outreach-enabled-message": "Hali ya juu sasa imeamilishwa. Unaweza kuizima katika mipangilio yako.",
-	"mobile-frontend-amc-outreach-dismissed-message": "Unaweza kuezesha hali ya juu wakati wowote katika mipangilio yako.",
 	"mobile-frontend-console-recruit": "Pata maelezo zaidi kuhusu jinsi tunavyounda tovuti yetu ya rununu @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Boresha na kurahisisha kurasa maalum ukiwa kwenye simu (inapendekezwa)",
 	"prefs-mobile": "Mapendeleo ya rununu"

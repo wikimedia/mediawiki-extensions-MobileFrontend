@@ -68,9 +68,5 @@
 	"tag-advanced_mobile_edit": "Avancata redakto per posh-telefonilo",
 	"tag-mobile_web_edit": "Redaktita per informatikoprogramo \"app\"",
 	"tag-mobile_web_edit-description": "Redakturo kreita de mobila retopagino",
-	"mobile-frontend-loading-message": "Karganta...",
-	"mobile-frontend-amc-outreach-intro": "Prizentado di avancita modo",
-	"mobile-frontend-amc-outreach-description": "L`avancita modo provizas plusa resursi pri kronologio en la pagini, listo di pagini vigilata, recenta modifikuri, ed altra utensili por smartfoni*.",
-	"mobile-frontend-amc-outreach-enable": "Permisez avancata funcioni",
-	"mobile-frontend-amc-outreach-enabled-message": "Avancita modo nun esas uzebla. Vu povas nekapabligar ol en vua ajusti."
+	"mobile-frontend-loading-message": "Karganta..."
 }

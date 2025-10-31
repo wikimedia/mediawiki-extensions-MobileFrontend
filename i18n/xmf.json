@@ -158,12 +158,6 @@
 	"mobile-frontend-user-pref-option": "მახვარებუშ პარამეტრეფი",
 	"mobile-frontend-user-pref-description": "გოთირეთ თქვანი პარამეტრეფი, თინეფს შქას პაროლი, ვებ-ხასჷლაშ მიოჯინი, გინაფეფი დო ანდა შხვა.",
 	"mobile-frontend-user-pref-link": "პარამეტრეფიშ გონწყუმა",
-	"mobile-frontend-amc-outreach-intro": "წჷმოირინუანთ გაუჯგუშაფილ რეჟიმს",
-	"mobile-frontend-amc-outreach-description": "მობილური რედაქტორიშ გაუჯგუშებული რეჟიმი იკათუანს ხასჷლაშ ისტორიაშ, კონტროლიშ ერკებულიშ, ასეიანი თირუეფიშ დო რედაქტირაფაშ შხვა ხეჭკუდეფიშ გაუჯგუშებულ ფუნქციურ შილებუანობეფს.",
-	"mobile-frontend-amc-outreach-enable": "გაუჯგუშებული რეჟიმიშ ჩართება",
-	"mobile-frontend-amc-outreach-no-thanks": "ვარი, მარდი",
-	"mobile-frontend-amc-outreach-enabled-message": "გაუჯგუშებული რეჟიმი ასე ჩართებული რე. თქვა შეილებჷნა თიში გოთიშუა პარამეტრეშე.",
-	"mobile-frontend-amc-outreach-dismissed-message": "გაუჯგუშებული რეჟიმიშ ჩარება პარამეტრეფშე ირო შეილებჷნა.",
 	"mobile-frontend-console-recruit": "ქიგეგით უმოსი, დო მუჭო გუთმუოჭყანთ-და ჩქინი საიტიშ მობილურ ვერსიასჷნ — https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "მობილურ მონწყილობეფს სპეციალური ხასჷლეფიშ ოპტიმიზაფა დო გაანდულება (რეკომენდებული)",
 	"prefs-mobile": "მობილური პარამეტრეფი"

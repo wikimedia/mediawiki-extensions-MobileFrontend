@@ -165,12 +165,6 @@
 	"mobile-frontend-user-pref-option": "Geavaheaddji ásahusat",
 	"mobile-frontend-user-pref-description": "Molsso iežat ásahusaid, sihke beassansáni, neahttasiiddu hámi, almmuhusásahusaid ja eambbo.",
 	"mobile-frontend-user-pref-link": "Raba ásahusaid",
-	"mobile-frontend-amc-outreach-intro": "Ovdánahttojuvvon vuohki fállojuvvo",
-	"mobile-frontend-amc-outreach-description": "Aiddostahttojuvvon modus addá viiddiduvvon doaibmanfunkšuvnnaid historjásiidduin, čuovvunlisttun, ođđaseamos rievdadusain ja eará rievdadanprográmmain mobiillain.",
-	"mobile-frontend-amc-outreach-enable": "Bija váttes modusa",
-	"mobile-frontend-amc-outreach-no-thanks": "Giitu, muhto aa",
-	"mobile-frontend-amc-outreach-enabled-message": "Dal leat bidjan váttes modusa. Sáhtát eret váldit iežat ásahusain.",
-	"mobile-frontend-amc-outreach-dismissed-message": "Don sáhtát váttes modusa vaikko goas bidjat iežat ásahusain.",
 	"mobile-frontend-console-recruit": "Loga eambbo movt mii hukset telefuvdna neahttasiiddu https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Optimere ja álkidahtte doaibmisiidu go telefuvnnas anát. (Ávžžuhuvvo)",
 	"prefs-mobile": "Telefuvndaásahusat"

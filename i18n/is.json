@@ -154,12 +154,6 @@
 	"mw-mf-amc-description": "Ítarlegur hamur veitir greiðan aðgang að spjallsíðum, breytingaskrám, notendaverkfærum og öðrum ritstjórnarverkfærum.",
 	"mobile-frontend-mobile-option-amc-learn-more": "Kanna nánar",
 	"mobile-frontend-mobile-option-amc-send-feedback": "Senda ábendingu",
-	"mobile-frontend-amc-outreach-intro": "Við kynnum ítarlegan ham",
-	"mobile-frontend-amc-outreach-description": "Ítarlegri hamur er með fleiri eiginleika til að meðhöndla breytingaskrár, vöktunarlista, nýlegar breytingar og ýmislegt annað til breytinga í snjalltækjum.",
-	"mobile-frontend-amc-outreach-enable": "Virkja ítarlegri ham",
-	"mobile-frontend-amc-outreach-no-thanks": "Nei, takk",
-	"mobile-frontend-amc-outreach-enabled-message": "Ítarlegri hamur er núna virkur. Þú getur slökkt á honum í stillingunum þínum.",
-	"mobile-frontend-amc-outreach-dismissed-message": "Þú getur hvenær sem er virkjað ítarlegri ham í stillingunum þínum.",
 	"mobile-frontend-console-recruit": "Sjáðu meira um hvernig við byggjum farsímavefsvæðið okkar á https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Besta og einfalda kerfissíður þegar verið er á snjalltækjum (mælt með þessu)",
 	"prefs-mobile": "Kjörstillingar snjallsímavefs"

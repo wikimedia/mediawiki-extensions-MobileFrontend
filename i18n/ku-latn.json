@@ -156,12 +156,6 @@
 	"mobile-frontend-user-pref-option": "Tercîhên bikarhêner",
 	"mobile-frontend-user-pref-description": "Tercihên xwe yên wekî şîfre, xuyakirina malperê, eyarên agahdariyê û yên din biguhêre",
 	"mobile-frontend-user-pref-link": "Tercîhan biguhêre",
-	"mobile-frontend-amc-outreach-intro": "Danasîna Moda Pêşketî",
-	"mobile-frontend-amc-outreach-description": "Moda Pêşketî fonksiyonên rûpelên Dîrokê, rûpelên Şopandinê, Guhartinên dawî, û amûrên din ên edîtorê li ser mobîlê berfirehtir dike.",
-	"mobile-frontend-amc-outreach-enable": "Moda pêşketî çalak bike",
-	"mobile-frontend-amc-outreach-no-thanks": "Na spas",
-	"mobile-frontend-amc-outreach-enabled-message": "Moda pêşketî niha çalak e. Hûn dikarin wê di eyarên xwe de bigirin.",
-	"mobile-frontend-amc-outreach-dismissed-message": "Hûn dikarin di her kêliyê de di eyarên xwe de moda Pêşketî çalak bikin.",
 	"mobile-frontend-console-recruit": "Zêdetir hîn bibin ka em çawa malpera xwe ya mobîl ava dikin @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Dema ku hûn li ser mobîlê ne, rûpelên taybetî xweş û hêsan bikin (tê pêşniyazkirin)",
 	"prefs-mobile": "Tercîhên mobîlê"

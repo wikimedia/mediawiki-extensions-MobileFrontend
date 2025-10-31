@@ -179,12 +179,6 @@
 	"mobile-frontend-user-pref-option": "העדפות המשתמש",
 	"mobile-frontend-user-pref-description": "שינוי ההעדפות שלך, כולל סיסמה, מראה אתר, הגדרות התראות, ועוד.",
 	"mobile-frontend-user-pref-link": "פתיחת העדפות המשתמש",
-	"mobile-frontend-amc-outreach-intro": "אנחנו מציגים את המצב המתקדם",
-	"mobile-frontend-amc-outreach-description": "המצב המתקדם מספק אפשרויות מורחבות של דפי היסטוריה, דפי רשימת מעקב, שינויים אחרונים וכלי עריכה אחרים במכשירים ניידים.",
-	"mobile-frontend-amc-outreach-enable": "הפעלת המצב המתקדם",
-	"mobile-frontend-amc-outreach-no-thanks": "לא, תודה",
-	"mobile-frontend-amc-outreach-enabled-message": "המצב המתקדם מופעל עכשיו. אפשר לכבות אותו בהגדרות שלך.",
-	"mobile-frontend-amc-outreach-dismissed-message": "עכשיו אפשר להפעיל את המצב המתקדם בכל עת בהגדרות שלך.",
 	"mobile-frontend-console-recruit": "יש מידע נוסף על איך אנחנו בונים את האתר הנייד שלנו באתר https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "מיטוב ופישוט של דפים מיוחדים בגלישה ניידת (מומלץ)",
 	"prefs-mobile": "העדפות ניידות"

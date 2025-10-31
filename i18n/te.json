@@ -151,12 +151,6 @@
 	"mobile-frontend-mobile-option-amc-learn-more": "మరింత తెలుసుకోండి",
 	"mobile-frontend-mobile-option-amc-send-feedback": "ఫీడ్‌బ్యాకును పంపండి",
 	"mobile-frontend-user-pref-option": "వాడుకరి అభిరుచులు",
-	"mobile-frontend-amc-outreach-intro": "ఉన్నత మోడ్ పరిచయం",
-	"mobile-frontend-amc-outreach-description": "ఉన్నత మోడ్‌లో చర్చ పేజీలకు, చరిత్ర పేజీలు, వీక్షణ జాబితా పేజీలకు, ఇటీవలి మార్పులకు, ఇతర దిద్దుబాటు పరికరాలకూ మొబైల్లో మరింత ఉపయోగిత కలుగుతుంది.",
-	"mobile-frontend-amc-outreach-enable": "ఉన్నత మోడ్‌ను చేతనం చెయ్యి",
-	"mobile-frontend-amc-outreach-no-thanks": "వద్దులే",
-	"mobile-frontend-amc-outreach-enabled-message": "ఉన్నత మోడ్ చేతనమైంది. దాన్ని మీ సెట్టింగుల్లో ఆఫ్ చేసుకోవచ్చు.",
-	"mobile-frontend-amc-outreach-dismissed-message": "ఉన్నత మోడ్‌ను మీ సెట్టింగుల్లో ఎప్పుడైనా చేతనం చేసుకోవచ్చు.",
 	"mobile-frontend-console-recruit": "మా మొబైల్ సైటును ఎలా నిర్మిస్తామో తెలుసుకోండి @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "మొబైల్లో ఉండగా ప్రత్యేక పేజీలను ఆప్టిమైజు చేసుకోండి, సరళీఖరించుకోండి (చెయ్యడం మంచిది)",
 	"prefs-mobile": "మొబైలు అభిరుచులు"

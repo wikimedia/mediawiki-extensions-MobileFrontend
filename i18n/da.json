@@ -176,12 +176,6 @@
 	"mobile-frontend-user-pref-option": "Brugerindstillinger",
 	"mobile-frontend-user-pref-description": "Ændr dine indstillinger, herunder adgangskode, webstedets udseende, meddelelsesindstillinger og mere.",
 	"mobile-frontend-user-pref-link": "Åbn indstillingerne",
-	"mobile-frontend-amc-outreach-intro": "Om avanceret indstilling",
-	"mobile-frontend-amc-outreach-description": "Avanceret tilstand giver udvidet funktionalitet for historik, overvågningsliste, seneste ændringer og andre redigeringsværktøjer på mobil.",
-	"mobile-frontend-amc-outreach-enable": "Aktiver avanceret redigering",
-	"mobile-frontend-amc-outreach-no-thanks": "Nej tak",
-	"mobile-frontend-amc-outreach-enabled-message": "Avanceret tilstand er nu aktiveret. Du kan slå det fra i dine indstillinger.",
-	"mobile-frontend-amc-outreach-dismissed-message": "Du kan aktivere Avanceret redigering når som helst i dine Indstillinger",
 	"mobile-frontend-console-recruit": "Lær mere om, hvordan vi bygger vores mobilside @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Optimer og forenkle specialsider, når du er på mobil (anbefales)",
 	"prefs-mobile": "Mobilindstillinger"

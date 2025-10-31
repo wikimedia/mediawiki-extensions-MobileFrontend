@@ -160,12 +160,6 @@
 	"mobile-frontend-user-pref-option": "Декъашхочун гӀирс нисбар",
 	"mobile-frontend-user-pref-description": "Хийца хьайн нисдаран гӀирс, цу йукъахь пароль а, сайтан куц-кеп а, хаамаш а, кхин а.",
 	"mobile-frontend-user-pref-link": "Нисдаран гӀирс схьабелла",
-	"mobile-frontend-amc-outreach-intro": "Кхиаме раж йовзийтар",
-	"mobile-frontend-amc-outreach-description": "Кхиаме рожо ло лакхайаьккхина функционал историн агӀонашна, тергаман могӀамна, тӀаьхьарчу хийцамашна, кхин а мобилан хийцаран гӀирсашна.",
-	"mobile-frontend-amc-outreach-enable": "Кхиаме раж дӀахӀоттайе",
-	"mobile-frontend-amc-outreach-no-thanks": "ХӀан-хӀа, баркалла",
-	"mobile-frontend-amc-outreach-enabled-message": "Кхиаме раж дӀахӀоттийна йу. Нисдаран гӀирсехь дӀайайъа мегар ду иза.",
-	"mobile-frontend-amc-outreach-dismissed-message": "Хьайн нисдаран гӀирсехь муьлххачу хенахь а дӀахӀотто йиш йу хьан Кхиаме раж.",
 	"mobile-frontend-console-recruit": "Кхин дӀа а хаа, оха тхан сайтан мобилан верси муха кхуллу адресца https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Мобилан аппараташ тӀехь белхан агӀонаш оптимизаци йан а, аттачу йаха а (рекомендаци йу)",
 	"prefs-mobile": "Мобилан нисдаран гӀирс"

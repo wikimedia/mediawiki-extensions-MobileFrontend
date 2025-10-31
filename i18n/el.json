@@ -168,12 +168,6 @@
 	"mobile-frontend-user-pref-option": "Προτιμήσεις χρήστη",
 	"mobile-frontend-user-pref-description": "Αλλάξτε τις προτιμήσεις σας, συμπεριλαμβανομένου του κωδικού πρόσβασης, της εμφάνισης ιστοτόπου, τις ρυθμίσεις ειδοποιήσεων και άλλα.",
 	"mobile-frontend-user-pref-link": "Ανοίξτε τις προτιμήσεις",
-	"mobile-frontend-amc-outreach-intro": "Παρουσίαση της προηγμένης λειτουργίας",
-	"mobile-frontend-amc-outreach-description": "Η προηγμένη λειτουργία παρέχει εκτεταμένη λειτουργικότητα σελίδων ιστορικού, σελίδων λίστας παρακολούθησης, πρόσφατων αλλαγών και άλλων εργαλείων επεξεργασίας σε κινητά.",
-	"mobile-frontend-amc-outreach-enable": "Ενεργοποίηση προηγμένης λειτουργίας",
-	"mobile-frontend-amc-outreach-no-thanks": "Όχι ευχαριστώ",
-	"mobile-frontend-amc-outreach-enabled-message": "Η προηγμένη λειτουργία ενεργοποιήθηκε. Μπορείτε να το απενεργοποιήσετε από τις ρυθμίσεις σας.",
-	"mobile-frontend-amc-outreach-dismissed-message": "Μπορείτε να ενεργοποιήσετε την προηγμένη λειτουργία ανά πάσα στιγμή στις ρυθμίσεις σας.",
 	"mobile-frontend-console-recruit": "Μάθετε περισσότερα σχετικά με τον τρόπο δημιουργίας του ιστότοπού μας για κινητά @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Βελτιστοποίηση και απλούστευση ειδικών σελίδων για κινητά τηλέφωνα (συνιστάται)",
 	"prefs-mobile": "Προτιμήσεις κινητού"

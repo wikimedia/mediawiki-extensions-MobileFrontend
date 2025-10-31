@@ -164,12 +164,6 @@
 	"mobile-frontend-user-pref-option": "Preférénsi anganggé",
 	"mobile-frontend-user-pref-description": "Gentos préférénsi ragané, minakadi kruna sandi, tampilan situs wéb, setélan pakéling, miwah sané lianan.",
 	"mobile-frontend-user-pref-link": "Buka preférénsi",
-	"mobile-frontend-amc-outreach-intro": "Ngenalang Mode Lanturan",
-	"mobile-frontend-amc-outreach-description": "Mode lanturan nyadiayang kawigunaan sané kajimbarang saking kaca Babad, kaca Lis Pangawasan, Uahan sané Mangkin, miwah piranti panguahan liayan ring sélulér.",
-	"mobile-frontend-amc-outreach-enable": "Uripang mode lanturan",
-	"mobile-frontend-amc-outreach-no-thanks": "Nénten, suksma",
-	"mobile-frontend-amc-outreach-enabled-message": "Mode lanturan mangkin kauripang. Ida prasida ngamademang ring setélan Ida.",
-	"mobile-frontend-amc-outreach-dismissed-message": "Ida prasida nguripang mode Lanturan makapidan ring Pangaturan Ida.",
 	"mobile-frontend-console-recruit": "Plajahin salanturné sapunapi iraga ngawangun situs sélulér @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Optimalang miwah saderhanayang kaca kusus ri kala nganggén sélulér (kanikayang)",
 	"prefs-mobile": "Préférénsi sélulér"

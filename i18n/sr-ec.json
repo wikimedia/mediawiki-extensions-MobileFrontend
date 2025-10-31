@@ -176,12 +176,6 @@
 	"mobile-frontend-user-pref-option": "Корисничка подешавања",
 	"mobile-frontend-user-pref-description": "Уредите Ваша подешавања укључујући лозинке, приказ веб-сајта, обавештења итд.",
 	"mobile-frontend-user-pref-link": "Отвори подешавања",
-	"mobile-frontend-amc-outreach-intro": "Представљање напредног режима",
-	"mobile-frontend-amc-outreach-description": "Напредни режим омогућава лакши приступ страницама за разговор, страницама историје измена, скорашњим изменама и осталим уређивачким алаткама на мобилном уређају.",
-	"mobile-frontend-amc-outreach-enable": "Омогући напредни режим",
-	"mobile-frontend-amc-outreach-no-thanks": "Не, хвала",
-	"mobile-frontend-amc-outreach-enabled-message": "Напредни мод је сада омогућен. Можете га онемогућити у Вашим подешавањима.",
-	"mobile-frontend-amc-outreach-dismissed-message": "Можете омогућити напредни мод у било које време у Вашим подешавањима.",
 	"mobile-frontend-console-recruit": "Сазнајте више о томе како изграђујемо сајт за мобилне уређаје @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Оптимизуј и поједностави посебне странице на мобилном уређају (препоручује се)",
 	"prefs-mobile": "Подешавања за мобилне уређаје"

@@ -173,12 +173,6 @@
 	"mobile-frontend-user-pref-option": "प्रयोगकर्ता अभिरुचिहरू",
 	"mobile-frontend-user-pref-description": "प्रवेश शब्द, वेबसाइट उपस्थिति, सूचना अभिरुचिहरू, र थप सहित आफ्नो प्राथमिकताहरू परिवर्तन गर्नुहोस्।",
 	"mobile-frontend-user-pref-link": "अभिरुचिहरू खोल्नुहोस्",
-	"mobile-frontend-amc-outreach-intro": "उन्नत रितीको परिचय गर्दै",
-	"mobile-frontend-amc-outreach-description": "उन्नत मोडले इतिहास पृष्ठहरू, वाचलिस्ट पृष्ठहरू, भर्खरका परिवर्तनहरू, र मोबाइलमा अन्य सम्पादक उपकरणहरूको विस्तारित कार्यक्षमता प्रदान गर्दछ।",
-	"mobile-frontend-amc-outreach-enable": "उन्नत रिती सक्षम गर्नुहोस्",
-	"mobile-frontend-amc-outreach-no-thanks": "पर्दैन, धन्यवाद",
-	"mobile-frontend-amc-outreach-enabled-message": "उन्नत रिती सक्षम भएको छ। तपाई यसलाई सेटिङ्गमा गई बन्द गर्न सक्नुहुनेछ।",
-	"mobile-frontend-amc-outreach-dismissed-message": "तपाई कुनैपनि समय सेटिङ्गमा गई उन्नत रिती सक्षम गर्न सक्नुहुनेछ।",
 	"mobile-frontend-console-recruit": "हामीले हाम्रो मोबाइल साइट @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend कसरी निर्माण गर्छ भन्ने बारे थप जान्नुहोस्",
 	"mobile-frontend-special-pages-pref": "मोबाइलमा हुँदा विशेष पृष्ठहरू अप्टिमाइज र सरल बनाउनुहोस् (सिफारिस गरिएको)",
 	"prefs-mobile": "मोबाइल अभिरूचिहरू"

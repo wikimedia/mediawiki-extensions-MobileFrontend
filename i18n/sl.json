@@ -164,12 +164,6 @@
 	"mobile-frontend-user-pref-option": "Uporabniške nastavitve",
 	"mobile-frontend-user-pref-description": "Spremenite svoje nastavitve, vključno z geslom, videzom spletnega mesta, načinom obveščanja in drugim.",
 	"mobile-frontend-user-pref-link": "Odpri nastavitve",
-	"mobile-frontend-amc-outreach-intro": "Predstavljamo napredni način",
-	"mobile-frontend-amc-outreach-description": "Napredni način omogoča razširjeno funkcionalnost strani z zgodovino, nadzornim seznamom, zadnjimi spremembami in drugimi orodji za mobilno urejanje.",
-	"mobile-frontend-amc-outreach-enable": "Omogoči napredni način",
-	"mobile-frontend-amc-outreach-no-thanks": "Ne, hvala",
-	"mobile-frontend-amc-outreach-enabled-message": "Zdaj je omogočen napredni način. Izklopite ga lahko v svojih nastavitvah.",
-	"mobile-frontend-amc-outreach-dismissed-message": "Kadar koli lahko v vaših nastavitvah omogočite napredni način.",
 	"mobile-frontend-console-recruit": "Podrobneje se seznanite s tem, kako gradimo naše mobilno spletno mesto @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "V mobilni napravi optimiziraj in poenostavi posebne strani (priporočljivo)",
 	"prefs-mobile": "Mobilne nastavitve"

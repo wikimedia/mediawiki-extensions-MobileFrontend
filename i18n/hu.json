@@ -173,12 +173,6 @@
 	"mobile-frontend-user-pref-option": "Felhasználói beállítások",
 	"mobile-frontend-user-pref-description": "A beállításaid módosítása, beleértve a jelszavadat, a wiki megjelenését, az értesítési beállításaidat és sok mást.",
 	"mobile-frontend-user-pref-link": "Beállítások megnyitása",
-	"mobile-frontend-amc-outreach-intro": "Bemutatkozik a haladó mód",
-	"mobile-frontend-amc-outreach-description": "A haladó mód több funkciót biztosít a laptörténetekben, a figyelőlistán, a friss változtatások listáján és egyéb szerkesztési eszközökben mobilon.",
-	"mobile-frontend-amc-outreach-enable": "Haladó mód engedélyezése",
-	"mobile-frontend-amc-outreach-no-thanks": "Köszönöm, nem",
-	"mobile-frontend-amc-outreach-enabled-message": "A haladó mód engedélyezve lett. A beállításaidnál tudod kikapcsolni.",
-	"mobile-frontend-amc-outreach-dismissed-message": "Bármikor engedélyezni tudod a haladó módot a beállításaidnál.",
 	"mobile-frontend-console-recruit": "Tudj meg többet, hogy miképp építjük mobil oldalunkat: https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "A speciális lapok optimalizálása és egyszerűsítése mobilon (ajánlott)",
 	"prefs-mobile": "Mobil beállítások"

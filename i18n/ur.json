@@ -160,12 +160,6 @@
 	"mobile-frontend-user-pref-option": "صارف کی ترجیحات",
 	"mobile-frontend-user-pref-description": "اپنی ترجیحات، پاس ورڈ، ویب گاہ کا حلیہ، اطلاع ناموں کی ترتیبات وغیرہ تبدیل کریں۔",
 	"mobile-frontend-user-pref-link": "ترجیحات کھولیں",
-	"mobile-frontend-amc-outreach-intro": "ایڈوانسڈ موڈ پیش خدمت ہے",
-	"mobile-frontend-amc-outreach-description": "ایڈوانسڈ موڈ سے موبائل پر تبادلہ خیال صفحات، تاریخچہ صفحات، حالیہ تبدیلیوں اور دیگر ترمیمی آلات تک رسائی آسانی سے ہوتی ہے۔",
-	"mobile-frontend-amc-outreach-enable": "ایڈوانسڈ موڈ فعال کیجیے",
-	"mobile-frontend-amc-outreach-no-thanks": "نہیں شکریہ",
-	"mobile-frontend-amc-outreach-enabled-message": "ایڈوانسڈ موڈ اب فعال ہوگیا ہے۔ آپ اپنی ترتیبات سے اسے بند بھی کر سکتے ہیں۔",
-	"mobile-frontend-amc-outreach-dismissed-message": "آپ اپنی ترتیبات سے کسی بھی وقت ایڈوانسڈ موڈ فعال کرسکتے ہیں۔",
 	"mobile-frontend-console-recruit": "ہماری موبائل ویب سائٹ کی تعمیر و ترقی کے متعلق مزید معلومات https://www.mediawiki.org/wiki/Extension:MobileFrontend پر حاصل کریں",
 	"mobile-frontend-special-pages-pref": "جب موبائل پر ہوں تو خاص صفحات کو بہتر اور آسان بنائیں (تجویز کردہ)",
 	"prefs-mobile": "موبائل ترجیحات"

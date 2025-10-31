@@ -185,12 +185,6 @@
 	"mobile-frontend-user-pref-option": "Preferensi pengguna",
 	"mobile-frontend-user-pref-description": "Ubah preferensi Anda, termasuk kata sandi, tampilan situs, pengaturan pemberitahuan, dan banyak lagi.",
 	"mobile-frontend-user-pref-link": "Buka preferensi",
-	"mobile-frontend-amc-outreach-intro": "Memperkenalkan Mode Lanjutan",
-	"mobile-frontend-amc-outreach-description": "Mode lanjutan menyediakan fungsionalitas yang diperluas untuk halaman Riwayat, halaman Daftar Pantauan, Perubahan terbaru, dan peralatan penyunting lainnya yang tersedia.",
-	"mobile-frontend-amc-outreach-enable": "Aktifkan mode lanjutan",
-	"mobile-frontend-amc-outreach-no-thanks": "Tidak, terima kasih",
-	"mobile-frontend-amc-outreach-enabled-message": "Mode lanjutan sekarang diaktifkan. Anda bisa mematikannya di pengaturan Anda.",
-	"mobile-frontend-amc-outreach-dismissed-message": "Anda bisa mengaktifkan Mode lanjutan kapan pun di Pengaturan Anda.",
 	"mobile-frontend-console-recruit": "Pelajari lebih lanjut bagaimana kami membangun situs seluler @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Optimalkan dan sederhanakan halaman istimewa saat berada di peranti bergerak (disarankan)",
 	"prefs-mobile": "Preferensi seluler"

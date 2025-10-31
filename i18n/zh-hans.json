@@ -238,12 +238,6 @@
 	"mobile-frontend-user-pref-option": "用户参数设置",
 	"mobile-frontend-user-pref-description": "更改您的参数设置，包括密码、网站外观、通知设置等。",
 	"mobile-frontend-user-pref-link": "打开参数设置",
-	"mobile-frontend-amc-outreach-intro": "介绍高级模式",
-	"mobile-frontend-amc-outreach-description": "高级模式提供了历史页面、监视列表、最近更改和其他手机上的编辑工具的扩展功能。",
-	"mobile-frontend-amc-outreach-enable": "开启高级模式",
-	"mobile-frontend-amc-outreach-no-thanks": "不用了，谢谢",
-	"mobile-frontend-amc-outreach-enabled-message": "高级模式现在已经开启。 你可以在设置中关闭该功能。",
-	"mobile-frontend-amc-outreach-dismissed-message": "任何时候你都可以在设置中开启高级模式。",
 	"mobile-frontend-console-recruit": "了解有关我们如何搭建移动版网站的更多详情，请参见：https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "优化并简化移动端的特殊页面（推荐）",
 	"prefs-mobile": "移动版参数设置"

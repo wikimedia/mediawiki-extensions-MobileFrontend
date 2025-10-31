@@ -181,12 +181,6 @@
 	"mobile-frontend-user-pref-option": "Benutzereinstellungen",
 	"mobile-frontend-user-pref-description": "Ändere deine Einstellungen, einschließlich Passwort, Aussehen der Website, Benachrichtigungseinstellungen und mehr.",
 	"mobile-frontend-user-pref-link": "Einstellungen öffnen",
-	"mobile-frontend-amc-outreach-intro": "Einführung in den erweiterten Modus",
-	"mobile-frontend-amc-outreach-description": "Der erweiterte Modus bietet eine erweiterte Funktionalität von Versionsgeschichten, Beobachtungslisten, letzte Änderungen und anderen Bearbeitungswerkzeugen auf einem mobilen Gerät.",
-	"mobile-frontend-amc-outreach-enable": "Erweiterten Modus aktivieren",
-	"mobile-frontend-amc-outreach-no-thanks": "Nein danke",
-	"mobile-frontend-amc-outreach-enabled-message": "Der erweiterte Modus ist nun aktiviert. Du kannst ihn in deinen Einstellungen abschalten.",
-	"mobile-frontend-amc-outreach-dismissed-message": "Du kannst den erweiterten Modus jederzeit in deinen Einstellungen aktivieren.",
 	"mobile-frontend-console-recruit": "Erfahre mehr darüber, wie wir unsere mobile Website erstellen unter https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Spezialseiten auf Mobilgeräten optimieren und vereinfachen (empfohlen)",
 	"prefs-mobile": "Mobileinstellungen"

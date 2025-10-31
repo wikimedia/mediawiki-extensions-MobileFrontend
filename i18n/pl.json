@@ -199,12 +199,6 @@
 	"mobile-frontend-user-pref-option": "Preferencje użytkownika",
 	"mobile-frontend-user-pref-description": "Zmień swoje preferencje, np. hasło, wygląd strony, ustawienia powiadomień i nie tylko.",
 	"mobile-frontend-user-pref-link": "Otwórz preferencje",
-	"mobile-frontend-amc-outreach-intro": "Przedstawiamy tryb zaawansowany",
-	"mobile-frontend-amc-outreach-description": "Tryb zaawansowany rozszerza funkcje stron historii, list obserwowanych, ostatnich zmian i innych narzędzi edycyjnych podczas korzystania z urządzeń mobilnych.",
-	"mobile-frontend-amc-outreach-enable": "Włącz tryb zaawansowany",
-	"mobile-frontend-amc-outreach-no-thanks": "Nie, dziękuję",
-	"mobile-frontend-amc-outreach-enabled-message": "Tryb zaawansowany jest teraz włączony. Możesz go wyłączyć w ustawieniach.",
-	"mobile-frontend-amc-outreach-dismissed-message": "Możesz włączyć tryb zaawansowany później w ustawieniach.",
 	"mobile-frontend-console-recruit": "Przeczytaj więcej o tym, w jaki sposób budujemy naszą mobilną witrynę @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Optymalizuj i upraszczaj strony specjalne podczas korzystania z urządzeń mobilnych (zalecane)",
 	"prefs-mobile": "Preferencje mobilne"

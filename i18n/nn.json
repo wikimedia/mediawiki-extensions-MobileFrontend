@@ -122,9 +122,5 @@
 	"mw-mf-amc-description": "Avansert modus gjev lett tilgang til diskusjonssider, historikksider, brukarverktøy og andre endringsverktøy.",
 	"mobile-frontend-mobile-option-amc-learn-more": "Lær meir",
 	"mobile-frontend-user-pref-option": "Brukarinnstillingar",
-	"mobile-frontend-user-pref-description": "Endra innstillingane dine, inkludert passord, utsjånaden til nettstaden, varselinnstillingar og meir.",
-	"mobile-frontend-amc-outreach-intro": "Avansert modus er her",
-	"mobile-frontend-amc-outreach-enable": "Slå på avansert modus",
-	"mobile-frontend-amc-outreach-enabled-message": "Avansert modus er no påslegen. Du kan slå han av i innstillingane dine.",
-	"mobile-frontend-amc-outreach-dismissed-message": "Du kan slå på avansert modus kva tid som helst i innstillingane dine."
+	"mobile-frontend-user-pref-description": "Endra innstillingane dine, inkludert passord, utsjånaden til nettstaden, varselinnstillingar og meir."
 }

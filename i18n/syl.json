@@ -149,12 +149,6 @@
 	"mobile-frontend-user-pref-option": "ꠛꠦꠛꠀꠞꠇꠞ꠆ꠞꠣꠞ ꠌꠄꠎꠣꠁꠘ",
 	"mobile-frontend-user-pref-description": "ꠀꠙꠘꠣꠞ ꠙꠍꠘ꠆ꠖꠉꠥꠁꠘ ꠛꠖꠟꠣꠁꠘ ꠨ ꠎꠣꠞ ꠝꠣꠎꠦ ꠙꠣꠍꠅꠀꠒ ꠨ ꠅꠦꠛꠍꠣꠁꠐꠞ ꠀꠃꠐꠟꠥꠇ ꠨ ꠘꠐꠤꠚꠤꠇꠦꠡꠘ ꠍꠦꠐꠤꠋꠍ ꠀꠞ ꠀꠞꠅ ꠛꠃꠔ꠆ꠔꠣ ꠢꠣꠞꠣꠁꠟ ꠀꠍꠦ ⁕",
 	"mobile-frontend-user-pref-link": "ꠌꠄꠎꠣꠁꠘ ꠛꠣꠞ ꠇꠞꠃꠇ꠆ꠇꠣ",
-	"mobile-frontend-amc-outreach-intro": "ꠄꠒꠜꠣꠘ꠆ꠌ ꠝꠥꠒꠞꠟꠉꠦ ꠙꠞꠤꠌꠄ",
-	"mobile-frontend-amc-outreach-description": "ꠄꠒꠜꠣꠘ꠆ꠍꠒ ꠝꠥꠒ ꠝꠥꠛꠣꠁꠟꠅ ꠁꠔꠤꠢꠣꠡ ꠙꠣꠔꠣ ꠨ ꠈꠤꠀꠟꠞꠣꠈꠣꠞ ꠟꠤꠡ꠆ꠐꠤ ꠙꠣꠔꠣ ꠨ ꠁꠖꠣꠘꠤꠋꠇꠥꠞ ꠛꠖꠟꠣꠘꠤ ꠀꠞ ꠅꠂꠘ꠆ꠘꠣꠁꠘ꠆ꠘ ꠄꠒꠤꠐꠞ ꠐꠥꠟꠞ ꠛꠠꠀꠇꠣꠞꠦ ꠇꠣꠝꠞꠎꠥꠈꠣ ꠇꠤꠘꠣ ꠖꠦꠈꠣꠄ ⁕",
-	"mobile-frontend-amc-outreach-enable": "ꠄꠒꠜꠣꠘ꠆ꠌ ꠝꠥꠒ ꠀꠘꠃꠇ꠆ꠇꠣ",
-	"mobile-frontend-amc-outreach-no-thanks": "ꠘꠣ ꠗꠁꠘ꠆ꠘꠛꠣꠖ",
-	"mobile-frontend-amc-outreach-enabled-message": "ꠅꠈꠘ ꠄꠒꠜꠣꠘ꠆ꠍ ꠝꠥꠒ ꠡꠇ꠆ꠞꠤꠅ ꠅꠁꠍꠦ ⁕ ꠀꠙꠘꠦ ꠁꠐꠣ ꠀꠙꠘꠣꠞ ꠍꠦꠐꠤꠋꠍꠅ ꠛꠘ ꠇꠞꠔꠣ ꠙꠣꠞꠂꠘ ⁕",
-	"mobile-frontend-amc-outreach-dismissed-message": "ꠀꠙꠘꠦ ꠎꠦꠍꠣ ꠡꠝꠄ ꠀꠙꠘꠣꠞ ꠍꠦꠐꠤꠋꠍꠅ ꠄꠒꠜꠣꠘ꠆ꠍ ꠝꠥꠒ ꠡꠇ꠆ꠞꠤꠅ ꠇꠞꠔꠣ ꠙꠣꠞꠂꠘ ⁕",
 	"mobile-frontend-console-recruit": "ꠀꠝꠞꠣꠞ ꠝꠥꠛꠣꠁꠟ ꠍꠣꠁꠐ ꠇꠤꠟꠣꠘ ꠔꠂꠀꠞꠤ ꠇꠞꠣ ꠅꠄ ꠨ ꠢꠤꠔꠣ ꠟꠂꠀ ꠀꠞꠅ ꠎꠣꠘꠂꠘ @ [https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend](https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend) ⁕",
 	"mobile-frontend-special-pages-pref": "ꠝꠥꠛꠣꠁꠟꠞ ꠃꠙꠞꠦ ꠁꠍ꠆ꠙꠦꠡꠤꠀꠟ ꠙꠦꠁꠎꠁꠉꠥꠁꠘ ꠅꠙꠐꠤꠝꠣꠁꠎ ꠀꠞ ꠡꠥꠎꠣꠡꠣꠎꠣ ꠇꠞꠂꠘ ( ꠌꠣꠟ꠆ꠟꠣꠖꠦꠅꠀ ) ⁕",
 	"prefs-mobile": "ꠝꠥꠛꠣꠁꠟꠞ ꠌꠄꠎꠣꠁꠘ"

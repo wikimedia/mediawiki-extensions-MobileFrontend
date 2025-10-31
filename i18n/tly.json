@@ -156,12 +156,6 @@
 	"mobile-frontend-user-pref-option": "Ištirokəkə səbəro",
 	"mobile-frontend-user-pref-description": "Yštə səbəro ovaxte, həm paroli, veb-sajti bešemonə vine, xəbədoon ijən čo cijon.",
 	"mobile-frontend-user-pref-link": "Səbəro okarde",
-	"mobile-frontend-amc-outreach-intro": "Hovužə režimi edaštejdəmon",
-	"mobile-frontend-amc-outreach-description": "Hovužə režim hovužə funksionalə šəroit dojdə ce səhifon tarixon, rymuzə sijohi, oxonə ovaxtətijon ijən čo sərost karde diləgon bo mobil sərost karde.",
-	"mobile-frontend-amc-outreach-enable": "Hovužə režimi pekarde",
-	"mobile-frontend-amc-outreach-no-thanks": "Ne, səǧbi",
-	"mobile-frontend-amc-outreach-enabled-message": "Hovužə režim pekardə byə. Šymə bəznejon əj okyšte səbəroədə.",
-	"mobile-frontend-amc-outreach-dismissed-message": "Šymə har vaxtədə Hovužə režimi yžtə səbəroədə pekarde bəzynejon.",
 	"mobile-frontend-console-recruit": "Cerə əmə soxtejdəmon cəmə sajti mobil versijə hənijən ve umute ijo @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Mobil diləgonədə xydmətə səhifon hoston ijən təkmil karde (tovsijə)",
 	"prefs-mobile": "Mobil səbəro"

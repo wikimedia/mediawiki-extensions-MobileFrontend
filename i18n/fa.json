@@ -198,12 +198,6 @@
 	"mobile-frontend-user-pref-option": "ترجیحات کاربری",
 	"mobile-frontend-user-pref-description": "ترجیحات خود از جمله گذرواژه، نحوهٔ نمایش وبگاه، تنظیمات آگاه‌سازی‌ها و بسیاری موارد دیگر را تغییر دهید.",
 	"mobile-frontend-user-pref-link": "گشودن ترجیحات",
-	"mobile-frontend-amc-outreach-intro": "معرفی حالت پیشرفته",
-	"mobile-frontend-amc-outreach-description": "حالت پیشرفته موجب گسترش عملکرد صفحه‌های تاریخچه، صفحه‌های پی‌گیری، تغییرات اخیر و سایر ابزارهای ویرایش در نمایش موبایل می‌شود.",
-	"mobile-frontend-amc-outreach-enable": "فعال‌سازی حالت پیشرفته",
-	"mobile-frontend-amc-outreach-no-thanks": "نه؛ سپاس!",
-	"mobile-frontend-amc-outreach-enabled-message": "حالت پیشرفته فعال است. شما می‌توانید آن را در تنظیمات خودتان خاموش کنید.",
-	"mobile-frontend-amc-outreach-dismissed-message": "شما می‌توانید در هر زمانی در تنظیمات خودتان حالت پیشرفته را فعال کنید.",
 	"mobile-frontend-console-recruit": "دربارۀ چگونگی ایجاد سایت موبایل ما @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend بیشتر یاد بگیرید.",
 	"mobile-frontend-special-pages-pref": "بهینه و ساده‌سازی صفحات ویژه برای نمایش در تلفن همراه (پیشنهاد می‌شود)",
 	"prefs-mobile": "ترجیحات همراه"

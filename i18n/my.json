@@ -141,12 +141,6 @@
 	"mobile-frontend-mobile-option-amc-send-feedback": "အကြံပြုချက် ပို့ရန်",
 	"mobile-frontend-user-pref-option": "အသုံးပြုသူ ရွေးချယ်စရာများ",
 	"mobile-frontend-user-pref-link": "​ရွေး​ချယ်​စ​ရာ​များ​ကို ဖွင့်ရန်",
-	"mobile-frontend-amc-outreach-intro": "အဆင့်မြင့်မုဒ်အား မိတ်ဆက်ခြင်း",
-	"mobile-frontend-amc-outreach-description": "အဆင့်မြင့်မုဒ်သည် ချဲ့ကားထားသော စာမျက်နှာရာဇဝင်၏ လုပ်ဆောင်နိုင်မှု၊ စောင့်ကြည့်စာမျက်နှာများ၊ လတ်တလောအပြောင်းအလဲများနှင့် မိုလ်ဘိုင်းပေါ်ရှိ အခြားတည်းဖြတ်ခလုတ်များကို ထောက်ပံ့ပေးထားပါသည်။",
-	"mobile-frontend-amc-outreach-enable": "အဆင့်မြင့်မုဒ်အား ခွင့်ပြုမည်",
-	"mobile-frontend-amc-outreach-no-thanks": "မလိုပါ၊ ကျေးဇူးတင်ပါသည်။",
-	"mobile-frontend-amc-outreach-enabled-message": "အဆင့်မြင့်မုဒ်ကို ယခု ခွင့်ပြုလိုက်ပါပြီ။ သင်၏အပြင်အဆင်များထဲတွင် ပြန်လည်ပယ်ဖျက်နိုင်ပါသည်။",
-	"mobile-frontend-amc-outreach-dismissed-message": "သင်၏အပြင်အဆင်များထဲတွင် မည်သည့်အချိန်မဆို ပြန်လည်ခွင့်ပြုနိုင်ပါသည်။",
 	"mobile-frontend-console-recruit": "ကျွန်ုပ်တို့၏ မိုလ်ဘိုင်းဆိုဒ်ကို ဘယ်လိုတည်ဆောက်သလဲ ပိုမိုလေ့လာပါ  @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"prefs-mobile": "မိုလ်ဘိုင်း ရွေးချယ်စရာများ"
 }

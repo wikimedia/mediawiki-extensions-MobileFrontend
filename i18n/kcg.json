@@ -149,12 +149,6 @@
 	"mw-mf-amc-1-label": "Khwuk",
 	"mobile-frontend-mobile-option-amc-learn-more": "Myiam nkyang njhyang",
 	"mobile-frontend-mobile-option-amc-send-feedback": "Ta̱m ma̱ng a̱di̱dam",
-	"mobile-frontend-amc-outreach-intro": "Á̱son Á̱lyiat A̱gba̱ndang Sangak",
-	"mobile-frontend-amc-outreach-description": "Si̱sak-á̱zanson ji ni̱ ngaat nta̱m Ngwat nkhang na, Ngwat lyulyoot tyei-a̱ghyi, A̱ka̱shai mmam nani, ma̱ng nkyangta̱m a̱tyujhyuk njhyang di̱ jet a̱bwoi.",
-	"mobile-frontend-amc-outreach-enable": "Khwuk a̱gba̱ndang sangak",
-	"mobile-frontend-amc-outreach-no-thanks": "Kaai, a̱gwai",
-	"mobile-frontend-amc-outreach-enabled-message": "Á̱ tyia̱ a̱gba̱ndang sangak wu di̱n ta̱m ma̱nini. A maai a hyat nggu ma̱ a̱yaaseti ang ba.",
-	"mobile-frontend-amc-outreach-dismissed-message": "A maai a khwuk a̱gba̱ndang sangak wu kuzang jen ma̱ A̱yaaseti ang ba.",
 	"mobile-frontend-console-recruit": "Myiam nkyang njhyang tazwa si̱sak ji nang zi̱ nok a̱ma̱ntei jet a̱bwoi nzi̱t wu mi̱ @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Mak yet a̱tsatsak a nwuak ngwat khwo na hyohyoot ka̱nang a shyia̱ jet a̱bwoi ja (á̱ nwuak shim)",
 	"prefs-mobile": "Ndan-cat jet a̱bwoi"

@@ -179,11 +179,5 @@
 	"mobile-frontend-mobile-option-amc-send-feedback": "Invia commento",
 	"mobile-frontend-user-pref-option": "Preferenze dell'utente",
 	"mobile-frontend-user-pref-description": "Modifica le tue preferenze, tra cui password, aspetto, impostazioni di notifica e altro.",
-	"mobile-frontend-user-pref-link": "Apri preferenze",
-	"mobile-frontend-amc-outreach-intro": "Introduzione alla modalità avanzata",
-	"mobile-frontend-amc-outreach-description": "La modalità avanzata fornisce funzionalità estese a cronologie, osservati speciali, ultime modifiche e altri strumenti di modifica su dispositivi mobili.",
-	"mobile-frontend-amc-outreach-enable": "Abilita modalità avanzata",
-	"mobile-frontend-amc-outreach-no-thanks": "No, grazie",
-	"mobile-frontend-amc-outreach-enabled-message": "La modalità avanzata è ora attiva. Puoi disabilitarla nelle tue impostazioni.",
-	"mobile-frontend-amc-outreach-dismissed-message": "Puoi abilitare la modalità avanzata in qualsiasi momento nelle tue impostazioni."
+	"mobile-frontend-user-pref-link": "Apri preferenze"
 }

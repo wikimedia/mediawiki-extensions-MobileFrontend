@@ -201,12 +201,6 @@
 	"mobile-frontend-user-pref-option": "Kullanıcı tercihleri",
 	"mobile-frontend-user-pref-description": "Parola, web sitesi görünümü, bildirim ayarları ve daha fazlası dahil olmak üzere tercihlerinizi değiştirin.",
 	"mobile-frontend-user-pref-link": "Tercihleri aç",
-	"mobile-frontend-amc-outreach-intro": "Gelişmiş Mod ile Tanıtım",
-	"mobile-frontend-amc-outreach-description": "Gelişmiş mod, mobil cihazlarda Geçmiş sayfalarının, İzleme listesi sayfalarının, Son değişikliklerin ve diğer düzenleyici araçlarının genişletilmiş işlevselliğini sağlar.",
-	"mobile-frontend-amc-outreach-enable": "Gelişmiş modunu etkinleştir",
-	"mobile-frontend-amc-outreach-no-thanks": "Hayır teşekkürler",
-	"mobile-frontend-amc-outreach-enabled-message": "Gelişmiş mod etkinleştirildi. Ayarlarınızdan kapatabilirsiniz.",
-	"mobile-frontend-amc-outreach-dismissed-message": "Gelişmiş modu istediğiniz zaman Ayarlarınızdan etkinleştirebilirsiniz.",
 	"mobile-frontend-console-recruit": "Mobil sitemizi nasıl oluşturduğumuz hakkında daha fazla bilgi edinin @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Mobildeyken özel sayfaları optimize edin ve basitleştirin (önerilir)",
 	"prefs-mobile": "Mobil tercihleri"

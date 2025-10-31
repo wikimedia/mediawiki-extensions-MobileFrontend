@@ -108,10 +108,5 @@
 	"mobile-frontend-mobile-option-amc-learn-more": "Mëso më shumë",
 	"mobile-frontend-mobile-option-amc-send-feedback": "Dërgo vlerësim",
 	"mobile-frontend-user-pref-option": "Parapëlqimet e përdoruesit",
-	"mobile-frontend-user-pref-link": "Hap parapëlqimet",
-	"mobile-frontend-amc-outreach-intro": "Duke prezantuar modalitetin e avancuar",
-	"mobile-frontend-amc-outreach-description": "Modaliteti i përparuar ofron funksionalitet të zgjeruar të faqeve të historikut, faqeve të listës së vëzhgimit, ndryshimeve të fundit dhe mjeteve të tjera të redaktimit në celular.",
-	"mobile-frontend-amc-outreach-enable": "Aktivizo modalitetin e përparuar",
-	"mobile-frontend-amc-outreach-enabled-message": "Modaliteti i përparuar është aktivizuar tani. Mund ta çaktivizosh te cilësimet.",
-	"mobile-frontend-amc-outreach-dismissed-message": "Mund ta aktivizosh modalitetin e përparuar në çdo kohë te cilësimet e tua."
+	"mobile-frontend-user-pref-link": "Hap parapëlqimet"
 }

@@ -161,12 +161,6 @@
 	"mobile-frontend-user-pref-option": "Lietotāja iestatījumi",
 	"mobile-frontend-user-pref-description": "Maini savas preferences, tostarp paroli, vietnes izskatu, paziņojumu iestatījumus un daudz ko citu.",
 	"mobile-frontend-user-pref-link": "Atvērt iestatījumus",
-	"mobile-frontend-amc-outreach-intro": "Ieviešam uzlaboto režīmu",
-	"mobile-frontend-amc-outreach-description": "Uzlabotais režīms nodrošina paplašinātu funkcionalitāti kā vēstures lapas, uzraugāmo rakstu sarakstu, pēdējās izmaiņas un citus redaktoru rīkus mobilajā versijā.",
-	"mobile-frontend-amc-outreach-enable": "Iespējot uzlaboto režīmu",
-	"mobile-frontend-amc-outreach-no-thanks": "Nē, paldies",
-	"mobile-frontend-amc-outreach-enabled-message": "Uzlabotais režīms ir iespējots. Tu vari to atspējot savos iestatījumos.",
-	"mobile-frontend-amc-outreach-dismissed-message": "Tu vari jebkurā laikā iespējot uzlaboto režīmu savos iestatījumos.",
 	"mobile-frontend-console-recruit": "Uzzini vairāk par to, kā mēs veidojam savu mobilo vietni https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Optimizēt un vienkāršot īpašas lapas mobilajā versijā (ieteicams)",
 	"prefs-mobile": "Mobilās versijas izvēles"

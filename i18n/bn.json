@@ -169,12 +169,6 @@
 	"mobile-frontend-user-pref-option": "ব্যবহারকারীর পছন্দ",
 	"mobile-frontend-user-pref-description": "আপনার পাসওয়ার্ড, ওয়েবসাইটের অবয়ব, বিজ্ঞপ্তি সেটিং ও আরও অনেক কিছু পরিবর্তন করুন।",
 	"mobile-frontend-user-pref-link": "পছন্দসমূহ খুলুন",
-	"mobile-frontend-amc-outreach-intro": "পরিচিত হোন উচ্চতর মোডের সাথে",
-	"mobile-frontend-amc-outreach-description": "উচ্চতর মোড মোবাইলে আলাপের পৃষ্ঠাগুলি, ইতিহাসের পৃষ্ঠাগুলি, সাম্প্রতিক পরিবর্তন এবং অন্যান্য সম্পাদক সরঞ্জামগুলির প্রসারিত কার্যকারিতা প্রদান করে।",
-	"mobile-frontend-amc-outreach-enable": "উচ্চতর মোড সক্রিয় করুন",
-	"mobile-frontend-amc-outreach-no-thanks": "না ধন্যবাদ",
-	"mobile-frontend-amc-outreach-enabled-message": "উচ্চতর মোড এখন সক্রিয়। আপনি আপনার সেটিং থেকে এটি বন্ধ করতে পারেন।",
-	"mobile-frontend-amc-outreach-dismissed-message": "আপনি আপনার সেটিং থেকে যে কোনও সময় উচ্চতর মোড সক্ষম করতে পারবেন।",
 	"mobile-frontend-console-recruit": "কিভাবে আমরা আমাদের মোবাইল সাইট নির্মাণ করি সেই সম্পর্কে আরও জানুন @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "মোবাইলে বিশেষ পৃষ্ঠাগুলি অনুকূল করে এবং সহজ করে (সুপারিশকৃত)",
 	"prefs-mobile": "মোবাইল পছন্দসমূহ"

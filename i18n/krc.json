@@ -163,12 +163,6 @@
 	"mobile-frontend-user-pref-option": "Хайырланыучуну джарашдырыулары",
 	"mobile-frontend-user-pref-description": "Пароль, веб сайтны кёрнюую, билдириу джарашдырыула эмда андан да аслам ючюн джарашдырыуларыгъызны тюрлендиригиз.",
 	"mobile-frontend-user-pref-link": "Джарашдырыуланы ач",
-	"mobile-frontend-amc-outreach-intro": "Кенгерилген Режим бла танышыу",
-	"mobile-frontend-amc-outreach-description": "Кенгерилген режим, мобил гаджатледе тарих бетлени, Кёздеги тизме бетлени, Ахыр тюзетиулени эмда башха тюзетиучю адырланы кенгерилген функционалын теджер.",
-	"mobile-frontend-amc-outreach-enable": "Кенгерилген режимни джандыр",
-	"mobile-frontend-amc-outreach-no-thanks": "Огъай, сау болугъуз",
-	"mobile-frontend-amc-outreach-enabled-message": "Кенгерилген режим джандырылгъанды. Аны джарашдырыуларыгъзда джукълатыргъа боллукъсуз.",
-	"mobile-frontend-amc-outreach-dismissed-message": "Кенгерилген режимни излеген заманыгъызда джарашдырыуларыгъызда джандырыргъа боллукъсуз.",
 	"mobile-frontend-console-recruit": "Мобил сайтыбызны къалай болдурдугъубузну юсюнден аслам хапарлы болугъуз @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Мобилде энчи бетлени оптимизация эмда тынч хайырланырча эт (тыйыншлышысы)",
 	"prefs-mobile": "Мобил джарашдырыула"

@@ -184,12 +184,6 @@
 	"mobile-frontend-user-pref-option": "Tùy chọn người dùng",
 	"mobile-frontend-user-pref-description": "Thay đổi tùy chọn của bạn, bao gồm mật khẩu, giao diện trang web, cài đặt thông báo, v.v.",
 	"mobile-frontend-user-pref-link": "Mở tùy chọn",
-	"mobile-frontend-amc-outreach-intro": "Giới thiệu về Chế độ Nâng cao",
-	"mobile-frontend-amc-outreach-description": "Chế độ Nâng cao bổ sung nhiều tính năng cho Lịch sử sửa đổi, Danh sách theo dõi, Thay đổi gần đây, và các công cụ biên soạn khác trên di động.",
-	"mobile-frontend-amc-outreach-enable": "Bật chế độ nâng cao",
-	"mobile-frontend-amc-outreach-no-thanks": "Không cảm ơn",
-	"mobile-frontend-amc-outreach-enabled-message": "Đã bật Chế độ Nâng cao. Bạn có thể tắt nó trong thiết lập của bạn.",
-	"mobile-frontend-amc-outreach-dismissed-message": "Bạn có thể bật Chế độ Nâng cao vào bất cứ khi nào tại Thiết lập của bạn.",
 	"mobile-frontend-console-recruit": "Tìm hiểu thêm về cách chúng tôi xây dựng trang di động @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Tối ưu hóa và đơn giản hóa các trang đặc biệt trên thiết bị di động (khuyến khích)",
 	"prefs-mobile": "Tùy chọn di động"

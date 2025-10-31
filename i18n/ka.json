@@ -155,12 +155,6 @@
 	"mw-mf-amc-description": "გაფართოებული რეჟიმი უზრუნველყოფს ადვილად წვდომას განხილვისა და ისტორიის გვერდებზე, მომხმარებლისა და რედაქტირების სხვა ხელსაწყოებზე.",
 	"mobile-frontend-mobile-option-amc-learn-more": "გაიგეთ მეტი",
 	"mobile-frontend-mobile-option-amc-send-feedback": "უკუკავშირის გაგზავნა",
-	"mobile-frontend-amc-outreach-intro": "წარმოგიდგენთ გაფართოებულ რეჟიმს",
-	"mobile-frontend-amc-outreach-description": "მობილური რედაქტორის გაფართოებული რეჟიმი მოიცავს გვერდის ისტორიის, კონტროლის სიის, ბოლო ცვლილებებისა და რედაქტირების სხვა ხელსაწყოების გაფართოებულ ფუნქციურ შესაძლებლობებს.",
-	"mobile-frontend-amc-outreach-enable": "გაფართოებული რეჟიმის ჩართვა",
-	"mobile-frontend-amc-outreach-no-thanks": "არა, გმადლობთ",
-	"mobile-frontend-amc-outreach-enabled-message": "გაფართოებული რეჟიმი ახლა ჩართულია. თქვენ შეგიძლიათ მისი გამორთვა პარამეტრებიდან.",
-	"mobile-frontend-amc-outreach-dismissed-message": "გაფართოებული რეჟიმის ჩართვა პარამეტრებიდან ყოველთვის შეგიძლიათ.",
 	"mobile-frontend-console-recruit": "გაიგეთ მეტი, თუ როგორ ვქმნით ჩვენი საიტის მობილურ ვერსიას — https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "მობილურ მოწყობილობებში სპეციალური გვერდების ოპტიმიზება და გამარტივება (რეკომენდებული)",
 	"prefs-mobile": "მობილური კონფიგურაცია"

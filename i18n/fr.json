@@ -218,12 +218,6 @@
 	"mobile-frontend-user-pref-option": "Préférences de l’utilisateur",
 	"mobile-frontend-user-pref-description": "Modifiez vos préférences, y compris le mot de passe, l’apparence du site Web, les paramètres de notification, etc.",
 	"mobile-frontend-user-pref-link": "Ouvrir les préférences",
-	"mobile-frontend-amc-outreach-intro": "Introduction au mode avancé",
-	"mobile-frontend-amc-outreach-description": "Le mode avancé fournit des fonctionnalités étendues pour les pages d’historique, les pages de liste de suivi, les modifications récentes, ainsi que d’autres outils de modification sur mobile.",
-	"mobile-frontend-amc-outreach-enable": "Activer le mode avancé",
-	"mobile-frontend-amc-outreach-no-thanks": "Non merci",
-	"mobile-frontend-amc-outreach-enabled-message": "Le mode avancé est maintenant activé. Vous pouvez le désactiver dans vos préférences.",
-	"mobile-frontend-amc-outreach-dismissed-message": "Vous pouvez activer le mode avancé à tout moment dans vos paramètres.",
 	"mobile-frontend-console-recruit": "Pour en savoir plus sur la manière dont nous construisons notre site mobile, voir https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Optimiser et simplifier les pages spéciales sur les mobiles (recommandé)",
 	"prefs-mobile": "Préférences sur mobile"

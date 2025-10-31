@@ -201,12 +201,6 @@
 	"mobile-frontend-user-pref-option": "使用者偏好設定",
 	"mobile-frontend-user-pref-description": "更改您的偏好設定，包括密碼、網站外觀、通知設定等。",
 	"mobile-frontend-user-pref-link": "開啟偏好設定",
-	"mobile-frontend-amc-outreach-intro": "進階模式介紹",
-	"mobile-frontend-amc-outreach-description": "進階模式提供歷史頁面的擴充功能、監視清單頁面、最近修改，以及在手機上的其它編輯工具。",
-	"mobile-frontend-amc-outreach-enable": "啟用進階模式",
-	"mobile-frontend-amc-outreach-no-thanks": "不用了，謝謝",
-	"mobile-frontend-amc-outreach-enabled-message": "進階模式現已啟用，若要停用您可以在您的設定裡關閉。",
-	"mobile-frontend-amc-outreach-dismissed-message": "您可以在任何時刻在您的設定裡啟用進階模式。",
 	"mobile-frontend-console-recruit": "瞭解更多有關我們如何構造移動網站的詳情，請參見：https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "在手機上最佳化且簡化特殊頁面（建議）",
 	"prefs-mobile": "行動版偏好設定"

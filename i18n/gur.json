@@ -157,12 +157,6 @@
 	"mobile-frontend-user-pref-option": "Tuna n loe sɛla",
 	"mobile-frontend-user-pref-description": "Tee fu loosego ta pa'asɛ la 'password website' nimbia lasebaarɛ Baŋa maalegɔ, la zo'e zo'e.",
 	"mobile-frontend-user-pref-link": "Yu'e loosego",
-	"mobile-frontend-amc-outreach-intro": "Dikera la 'advanced mode' pa'ala",
-	"mobile-frontend-amc-outreach-description": "'Advance mode' bo'ori la 'functionality' n de tuusum pɛgera, Abiŋe bisa pɛgera, nananawa teere, la demesego lɔgerɔ asi'a n boi mobaale puan.",
-	"mobile-frontend-amc-outreach-enable": "Yu'e 'advanced mode'",
-	"mobile-frontend-amc-outreach-no-thanks": "Aai n pu'use ya",
-	"mobile-frontend-amc-outreach-enabled-message": "'advanced mode' nyaa yu'e ya. Fu ta'am yu' lebese fu maalegɔ saŋa",
-	"mobile-frontend-amc-outreach-dismissed-message": "Fu ta'am yu'e 'advanced mode' sansɛka woo ti fu bɔna bini ita maalegɔ",
 	"mobile-frontend-console-recruit": "Zamesɛ zo'e zo'e yɛsera tu mobaale 'site'  @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "'Optimize' gee basɛ ti pɛgezura dɛna naana fu san bɔna mobaale puan (recommended)",
 	"prefs-mobile": "Mobaale loosego"

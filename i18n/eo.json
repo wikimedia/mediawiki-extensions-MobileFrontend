@@ -169,12 +169,6 @@
 	"mobile-frontend-user-pref-option": "Agordoj de uzanto",
 	"mobile-frontend-user-pref-description": "Ŝanĝu viajn preferojn, inkluzive la pasvorton, retejo-aspekton, agordojn pri sciigoj, kaj pli.",
 	"mobile-frontend-user-pref-link": "Malfermi preferojn",
-	"mobile-frontend-amc-outreach-intro": "Enkondukante Altnivelan Reĝimon",
-	"mobile-frontend-amc-outreach-description": "Altnivela reĝimo provizas pliampleksigitan funkciaron por Historio-paĝoj, paĝoj de Atentaro, Lastaj ŝanĝoj kaj aliaj redaktaj iloj en poŝaparatoj.",
-	"mobile-frontend-amc-outreach-enable": "Ŝalti altnivelan reĝimon",
-	"mobile-frontend-amc-outreach-no-thanks": "Ne, dankon",
-	"mobile-frontend-amc-outreach-enabled-message": "Altnivela reĝimo estas nun ŝaltita. Vi povas malŝalti ĝin en via agordejo.",
-	"mobile-frontend-amc-outreach-dismissed-message": "Vi povas ŝalti Altnivelan reĝimon ĉiam en via Agordejo.",
 	"mobile-frontend-console-recruit": "Eksciu pli pri kiel ni konstruas nian poŝtelefonan retejon ĉe https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Optimumigi kaj simpligi specialajn poŝtelefonajn paĝojn (rekomendita)",
 	"prefs-mobile": "Preferoj por la versio por porteblaj aparatoj"

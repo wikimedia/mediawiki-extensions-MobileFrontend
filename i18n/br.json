@@ -165,12 +165,6 @@
 	"mobile-frontend-user-pref-option": "Penndibaboù implijer",
 	"mobile-frontend-user-pref-description": "Kemmit ho penndibaboù, en o zouesk ger-tremen, neuz al lec’hienn, arventennoù kemenn, hag all.",
 	"mobile-frontend-user-pref-link": "Digeriñ penndibaboù",
-	"mobile-frontend-amc-outreach-intro": "O kinnig ar mod araoket",
-	"mobile-frontend-amc-outreach-description": "Pourveziñ a ra ar mod araoket arc’hweladurioù ouzhpenn e pajennoù istor, pajennoù roll evezhiañ, kemmoù diwezhañ, ha benvegioù aozañ all dre an hezoug.",
-	"mobile-frontend-amc-outreach-enable": "Gweredekaat mod araoket",
-	"mobile-frontend-amc-outreach-no-thanks": "Ket, trugarez",
-	"mobile-frontend-amc-outreach-enabled-message": "Gweredekaet eo ar mod araoket bremañ. Gallout a rit diweredekaat anezhañ en ho penndibaboù.",
-	"mobile-frontend-amc-outreach-dismissed-message": "Gallout a rit gweredekaat ar mod araoket pa garit en ho penndibaboù.",
 	"mobile-frontend-console-recruit": "Gouzout hiroc'h war ar mod m'eo bet savet hol lec'hienn hezoug @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Gwellekaat ha simplaat pajennoù ispisial pa reer gant an hezoug (erbedet)",
 	"prefs-mobile": "Penndibaboù hezoug"

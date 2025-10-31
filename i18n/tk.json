@@ -149,12 +149,6 @@
 	"mobile-frontend-user-pref-option": "Ulanyjy ileri tutmalary",
 	"mobile-frontend-user-pref-description": "Parol, web sahypasynyň daşky görnüşi, bildiriş sazlamalary we ş.m. ýaly islegleriňizi üýtgediň.",
 	"mobile-frontend-user-pref-link": "Saýlamalary açyň",
-	"mobile-frontend-amc-outreach-intro": "Giňişleýin tertip bilen tanyşdyrmak",
-	"mobile-frontend-amc-outreach-description": "Ösen Taryh sahypalarynyň, Gözegçilik sanawynyň sahypalarynyň, Soňky üýtgeşmeleriň we ykjamdaky beýleki redaktor gurallarynyň giňeldilen işleýşini üpjün edýär.",
-	"mobile-frontend-amc-outreach-enable": "Ösen tertibi açyň",
-	"mobile-frontend-amc-outreach-no-thanks": "Ýok sag boluň",
-	"mobile-frontend-amc-outreach-enabled-message": "Öňdebaryjy mod açyk. Sazlamalaryňyzda öçürip bilersiňiz.",
-	"mobile-frontend-amc-outreach-dismissed-message": "Sazlamalaryňyzda islän wagtyňyz Öňdebaryjy mod işledip bilersiňiz.",
 	"mobile-frontend-console-recruit": "Jübi sahypamyzy nädip gurýandygymyz barada has giňişleýin öwreniň @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Jübi telefonynda ýörite sahypalary optimizirläň we ýönekeýleşdiriň (maslahat berilýär)",
 	"prefs-mobile": "Jübi islegleri"

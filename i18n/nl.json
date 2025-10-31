@@ -197,12 +197,6 @@
 	"mobile-frontend-user-pref-option": "Gebruikersvoorkeuren",
 	"mobile-frontend-user-pref-description": "Wijzig uw voorkeuren, waaronder uw wachtwoord, het uiterlijk van de website, meldingsinstellingen en nog meer.",
 	"mobile-frontend-user-pref-link": "Voorkeuren openen",
-	"mobile-frontend-amc-outreach-intro": "Introductie geavanceerde modus",
-	"mobile-frontend-amc-outreach-description": "De geavanceerde modus biedt uitgebreide functionaliteit voor geschiedenispagina’s, volglijstpagina’s, recente wijzigingen en andere redactietools op mobiel.",
-	"mobile-frontend-amc-outreach-enable": "Geavanceerde modus inschakelen",
-	"mobile-frontend-amc-outreach-no-thanks": "Nee, bedankt",
-	"mobile-frontend-amc-outreach-enabled-message": "Geavanceerde modes is geactiveerd. U kunt dit uitschakelen in Instellingen.",
-	"mobile-frontend-amc-outreach-dismissed-message": "U kunt de geavanceerde modes elk moment inschakelen in Instellingen.",
 	"mobile-frontend-console-recruit": "Leer meer over hoe we onze mobiele website bouwen op https://www.mediawiki.org/wiki/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Optimizer en versimpel speciale pagina's in mobile weergave (aanbevolen)",
 	"prefs-mobile": "Mobiele instellingen"

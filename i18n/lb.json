@@ -161,11 +161,5 @@
 	"mobile-frontend-user-pref-option": "Benotzerastellungen",
 	"mobile-frontend-user-pref-description": "Ännert Är Astellungen, dorënner d'Passwuert, d'Ausgesi vun der Websäit, Notifikatiounsastellungen an nach méi.",
 	"mobile-frontend-user-pref-link": "Astellungen opmaachen",
-	"mobile-frontend-amc-outreach-intro": "Mir presentéieren den erweiderte Modus",
-	"mobile-frontend-amc-outreach-description": "Den erweiderte Modus bitt eng erweidert Funktionalitéit fir Historiquessäiten, Iwwerwaachungslëschten, rezent Ännerungen an anert Ännerungsgeschier op mobillen Apparater.",
-	"mobile-frontend-amc-outreach-enable": "Erweiderte Modus aktivéieren",
-	"mobile-frontend-amc-outreach-no-thanks": "Nee, merci",
-	"mobile-frontend-amc-outreach-enabled-message": "Den erweiderte Modus ass elo aktivéiert. Dir kënnt en an Ären Astellungen desaktivéieren.",
-	"mobile-frontend-amc-outreach-dismissed-message": "Dir kënnt den erweiderte Modus zu all Moment an Ären Astellungen aktivéieren.",
 	"prefs-mobile": "Mobil Astellungen"
 }

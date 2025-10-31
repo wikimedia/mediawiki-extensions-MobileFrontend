@@ -173,12 +173,6 @@
 	"mobile-frontend-user-pref-option": "Қолданушы баптаулары",
 	"mobile-frontend-user-pref-description": "Кілтсөз, вебсайттың сыртқы көрінісі, хабарландыру сияқты баптауларыңызды өзгертіңіз.",
 	"mobile-frontend-user-pref-link": "Баптауларды ашу",
-	"mobile-frontend-amc-outreach-intro": "Кеңейтілген режимді таныстыру",
-	"mobile-frontend-amc-outreach-description": "Кеңейтілген режим мобильді өңдеу үшін тарих, бақылау тізімі беттерінің, жуықтағы өзгерістердің және өзге де өңдеу құралдарының кеңейтілген функционалдық мүмкіндіктерін ұсынады.",
-	"mobile-frontend-amc-outreach-enable": "Кеңейтілген режимді қосу",
-	"mobile-frontend-amc-outreach-no-thanks": "Жоқ, рақмет",
-	"mobile-frontend-amc-outreach-enabled-message": "Кеңейтілген режим енді қосылды. Оны баптауларда өшіруге болады.",
-	"mobile-frontend-amc-outreach-dismissed-message": "Кеңейтілген режимді баптауларда кез келген уақытта іске қоса аласыз.",
 	"mobile-frontend-console-recruit": "Сайтымыздың мобильді нұсқасы қалай жасалатыны жайлы көбірек біліңіз @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Мобильді құрылғыдағы арнайы беттерді оңтайландыру және ықшамдау (ұсынылған)",
 	"prefs-mobile": "Мобильді баптаулар"

@@ -159,12 +159,6 @@
 	"mobile-frontend-user-pref-option": "सदस्स प्राथमिकता",
 	"mobile-frontend-user-pref-description": "कूटशब्द, जालस्थान उपस्थिति, अधिसूचना सेटिङ्ग्स् आउ अधिक सहित अपन प्राथमिकताके बदली ।",
 	"mobile-frontend-user-pref-link": "प्राथमिकता खोली",
-	"mobile-frontend-amc-outreach-intro": "उन्नत योजना आ गेलहे",
-	"mobile-frontend-amc-outreach-description": "उन्नत योजना से दूरभाषपर इतिहासपन्ना, ध्यानसूचीपन्ना, हालमे होएल बदलाव, आउ दोसर सम्पादन उपकरण नियन ढेर सुविधा उपलब्ध होवहे ।",
-	"mobile-frontend-amc-outreach-enable": "उन्नत योजना सक्षम करी",
-	"mobile-frontend-amc-outreach-no-thanks": "न, धन्यबाद",
-	"mobile-frontend-amc-outreach-enabled-message": "उन्नत योजना अखनि सक्षम हे । अपने एकरा अपन सेटिङ्ग्स मे अक्षम कर सकही ।",
-	"mobile-frontend-amc-outreach-dismissed-message": "अपने कौनो समय अपन सेटिङ्ग्स से उन्नत योजनाके सक्षम कर सकही ।",
 	"mobile-frontend-console-recruit": "https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend पर अधिक जानी जे हमनी अपन जालस्थान कैसे बनावही",
 	"mobile-frontend-special-pages-pref": "दूरभाष पर पढ़ैत खन्नि पन्नाके सरल रूपमे देखावी (अनुशंसित)",
 	"prefs-mobile": "दूरभाष प्राथमिकता"
