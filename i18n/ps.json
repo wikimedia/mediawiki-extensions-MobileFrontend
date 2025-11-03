@@ -61,7 +61,7 @@
 	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|ايا تاسو باوري ياست}} چې تاسو په {{SITENAME}} کې نوې ليکنه جوړوئ؟",
 	"mobile-frontend-editor-placeholder": "دا برخه تشه ده. غځولو کې يې لومړيتوب وکړئ!",
 	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|تاسو}} په {{SITENAME}} کې نوې ليکنه جوړوئ!",
-	"mobile-frontend-editor-previewing-page": "<span>د $1</span><strong/>مخليدنه</strong>",
+	"mobile-frontend-editor-previewing-page": "<span>د $1 <strong>مخليدنه</strong></span>",
 	"mobile-frontend-editor-publish": "خپرول",
 	"mobile-frontend-editor-save": "خوندي کول",
 	"mobile-frontend-editor-success": "بريال! سمون مو خوندي شو.",
