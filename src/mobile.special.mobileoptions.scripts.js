@@ -3,6 +3,7 @@
 const clientPrefs = require( '@wikimedia/mediawiki.skins.clientpreferences' ),
 	toast = require( './mobile.startup/showOnPageReload' ),
 	EXPAND_SECTIONS_KEY = 'mf-expand-sections',
+	WP25_EASTER_EGGS_KEY = 'wp25eastereggs-enable',
 	msg = mw.msg,
 	USER_FONT_SIZE_SMALL = 'small',
 	USER_FONT_SIZE_REGULAR = 'regular',
@@ -166,6 +167,18 @@ function initMobileOptions() {
 		callback: notify
 	};
 
+	if ( skin === 'minerva' ) {
+		clientPreferences[ WP25_EASTER_EGGS_KEY ] = {
+			options: [
+				'0',
+				'1'
+			],
+			type: 'switch',
+			preferenceKey: WP25_EASTER_EGGS_KEY,
+			callback: notify
+		};
+	}
+
 	if ( !mw.user.isAnon() ) {
 		clientPreferences[ 'mw-mf-amc' ] = {
 			options: [
@@ -202,6 +215,7 @@ function initMobileOptions() {
 		// Move the links from the server side preference into the row.
 		$( '#amc-field .option-links' ).appendTo( '#skin-client-prefs-mw-mf-amc' );
 		modifyToggleSwitch( $( '#skin-client-prefs-mf-expand-sections' ) );
+		modifyToggleSwitch( $( '#skin-client-prefs-wp25eastereggs-enable' ) );
 		modifyToggleSwitch( $( '#skin-client-prefs-mw-mf-amc' ) );
 		// Remove the server side rendered OOUI field.
 		$( '#amc-field' ).remove();
