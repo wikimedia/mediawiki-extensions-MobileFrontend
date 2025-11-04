@@ -213,7 +213,7 @@
 	"mobile-frontend-mobile-option-MFEnableFontChanger": "Article font size feature name",
 	"mobile-frontend-mobile-option-MFEnableFontChanger-description": "Font size feature description",
 	"mw-mf-amc-name": "Header that appears in Special:MobileOptions for a feature that provides tooling for advanced editors.",
-	"mw-mf-amc-description": "Description of the {{msg-mw|mobile-frontend-mobile-option-amc}} feature.",
+	"mw-mf-amc-description": "Description of the AMC feature.",
 	"mw-mf-amc-0-label": "Label for disabled state.",
 	"mw-mf-amc-1-label": "Label for enabled state.",
 	"mobile-frontend-mobile-option-amc-learn-more": "Learn more link title\n{{Identical|Learn more}}",
