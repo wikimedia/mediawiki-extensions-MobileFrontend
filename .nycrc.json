@@ -8,7 +8,7 @@
 	"reporter": [
 		"lcov", "text"
 	],
-	"report-dir": "docs",
+	"report-dir": "coverage",
 
 	"//include": "Ignore files in vendor/, resources/, and elsewhere.",
 	"include": [ "src/**/*.js" ],
@@ -16,6 +16,7 @@
 	"//exclude": "Exclude files that are entry points that wire things up and have side effects",
 	"exclude": [
 		"docs/",
+		"coverage/",
 		"vendor/",
 		"src/mobile.amcOutreachDrawer/mobile.amcOutreachDrawer.js",
 		"src/mobile.editor.overlay/mobile.editor.overlay.js",
