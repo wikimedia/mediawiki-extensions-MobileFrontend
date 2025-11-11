@@ -43,14 +43,15 @@
 			"Watermelon juice",
 			"Zolgoyo",
 			"Wooze",
-			"Gadir"
+			"Gadir",
+			"Eleman"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Bir kullanıcının mobil arayüz üzerinden değişiklik yapıp yapmadığı ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "Onay kodunu girin",
 	"mobile-frontend-changeslist-nocomment": "düzenleme özeti yok",
 	"mobile-frontend-clear-search": "Temizle",
-	"mobile-frontend-copyright": "Aksi belirtilmedikçe içeriğin kullanımı $1 lisansı kapsamında uygundur.",
+	"mobile-frontend-copyright": "Aksi belirtilmedikçe içerik $1 lisansı altında kullanılabilir.",
 	"mobile-frontend-desc": "MediaWiki örneğinin mobil görünüşünün iyileştirilmesine yardımcı olur",
 	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}} sitesine geliştirmemize yardımcı olun.</strong><br />Düzenlemek için oturum açın.",
 	"mobile-frontend-edit-signup-action": "<strong>{{SITENAME}} sitesine geliştirmemize yardımcı olun.</strong><br />Düzenlemek için kayıt olun.",
