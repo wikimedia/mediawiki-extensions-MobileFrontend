@@ -18,7 +18,7 @@
 	"license-name": "GPL-2.0-or-later",
 	"type": "other",
 	"requires": {
-		"MediaWiki": ">= 1.45"
+		"MediaWiki": ">= 1.46"
 	},
 	"ConfigRegistry": {
 		"mobilefrontend": "MediaWiki\\Config\\GlobalVarConfig::newInstance"
