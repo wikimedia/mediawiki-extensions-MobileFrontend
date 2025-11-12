@@ -43,7 +43,8 @@
 			"TayfunEt.",
 			"Zolgoyo",
 			"Wooze",
-			"Gadir"
+			"Gadir",
+			"Eleman"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Bir kullanıcının mobil arayüz üzerinden değişiklik yapıp yapmadığı",
@@ -53,7 +54,7 @@
 	"mobile-frontend-cite-error": "Hatalı bir revizyon tanımlayıcısı nedeniyle kaynakça yüklenmeye çalışırken bir sorun oluştu.",
 	"mobile-frontend-cite-none-available": "Bu sayfa için hiçbir kaynak yok.",
 	"mobile-frontend-clear-search": "Temizle",
-	"mobile-frontend-copyright": "Aksi belirtilmedikçe içeriğin kullanımı $1 lisansı kapsamında uygundur.",
+	"mobile-frontend-copyright": "Aksi belirtilmedikçe içerik $1 lisansı altında kullanılabilir.",
 	"mobile-frontend-desc": "Mobil Arayüz",
 	"mobile-frontend-diffview-404-desc": "İstediğiniz revizyonun kimliği mevcut değil.<br />Bunun nedeni genellikle silinmiş bir sayfaya güncel olmayan bir fark bağlantısını veya geçersiz karakterler içeren bir fark bağlantısını takip etmektir.",
 	"mobile-frontend-diffview-404-title": "Yanlış revizyon",

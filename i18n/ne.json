@@ -78,7 +78,7 @@
 	"mobile-frontend-editor-placeholder": "यो खण्ड खाली छ। यसलाई विस्तार गर्ने पहिलो व्यक्ति बन्नुहोस्।",
 	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|तपाई}} {{SITENAME}}मा नयाँ पृष्ठ बनाउँदै हुनुहुन्छ।",
 	"mobile-frontend-editor-previewing-page": "<span><strong>पूर्वावलोकन</strong> $1</span>",
-	"mobile-frontend-editor-publish": "प्रकाशन गर्नुहोस्",
+	"mobile-frontend-editor-publish": "प्रकाशित गर्नुहोस्",
 	"mobile-frontend-editor-save": "सङ्ग्रह गर्नुहोस्",
 	"mobile-frontend-editor-success": "तपाईको सम्पादन सङ्ग्रह गरिएको छ।",
 	"mobile-frontend-editor-success-landmark-1": "बधाई छ, तपाई {{SITENAME}} सम्पादक बन्नु भएको छ!",

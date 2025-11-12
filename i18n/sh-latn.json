@@ -82,7 +82,7 @@
 	"mobile-frontend-featured-article": "Današnji izabrani sadržaj",
 	"mobile-frontend-generic-404-desc": "Nisam pronašao stranicu koju tražite.",
 	"mobile-frontend-generic-404-title": "Greška — nisam pronašao stranicu",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} je tvorba ljudi poput Vas.</strong><br />Prijavite se i doprinosite.",
+	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} je djelo ljudi poput vas.</strong><br />Prijavite se da biste doprinosili.",
 	"mobile-frontend-history-404-desc": "Ne mogu prikazati stranicu s historijom koja ne postoji. Moguće je da je obrisana ili da ste kliknuli na pokvareni link.",
 	"mobile-frontend-history-404-title": "Nema takve stranice",
 	"mobile-frontend-history-no-results": "Nema historije što se podudara izabranom filteru.",

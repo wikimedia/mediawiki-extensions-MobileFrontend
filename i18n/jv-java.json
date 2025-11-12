@@ -1,8 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Sumbukompor"
+			"Sumbukompor",
+			"Bennylin"
 		]
 	},
+	"mobile-frontend-copyright": "ꦲꦶꦱꦶ​ꦕꦸꦩꦼꦥꦏ꧀ꦏꦤ꧀ꦛꦶ​ꦥꦔꦪꦺꦴꦩ꧀ꦩꦤ꧀$1꧈ꦏꦗꦧ​ꦲꦤ​ꦏꦠꦼꦫꦁꦔꦤ꧀ꦭꦶꦪꦤꦺ꧉",
+	"mobile-frontend-terms-text": "ꦧꦼꦧꦏꦸꦤꦶꦁ​ꦥꦔꦁꦒꦺꦴ",
+	"mobile-frontend-view": "ꦥꦿꦲꦺꦤ꧀ꦥꦸꦤ꧀ꦱꦺꦭ꧀",
 	"mobile-frontend-view-desktop": "ꦝꦺꦱ꧀ꦠꦺꦴꦥ꧀"
 }
