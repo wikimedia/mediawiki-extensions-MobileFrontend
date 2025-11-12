@@ -140,7 +140,7 @@
 	"mobile-frontend-last-modified-with-user-months": "[$4 آخر تعديل لهذه الصفحة {{GENDER:$1|قام|قامت}} به]  {{PLURAL:$5|[$6 $2]|0=مستخدم مجهول}} منذ {{PLURAL:$3|شهر واحد|شهرين|$3 أشهر|$3شهراً|$3 شهر}}",
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 آخر تعديل لهذه الصفحة {{GENDER:$1|قام|قامت}} به]  {{PLURAL:$5|[$6 $2]|0=مستخدم مجهول}} منذ {{PLURAL:$3|ثانية واحدة|ثانيتين|$3 ثوان|$3 ثانية}}",
 	"mobile-frontend-last-modified-with-user-years": "[$4 آخر تعديل لهذه الصفحة {{GENDER:$1|قام|قامت}} به]  {{PLURAL:$5|[$6 $2]|0=مستخدم مجهول}} منذ {{PLURAL:$3|سنة|سنتين|$3 سنوات|$3 سنة}}",
-	"mobile-frontend-main-menu": "القائمة الرئيسية",
+	"mobile-frontend-main-menu": "القائمة الرئيسة",
 	"mobile-frontend-main-menu-settings-heading": "الإعدادات",
 	"mobile-frontend-media-details": "تفاصيل",
 	"mobile-frontend-media-license-link": "معلومات الترخيص",

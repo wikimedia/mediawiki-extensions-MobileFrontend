@@ -27,7 +27,8 @@
 			"Polyethylen",
 			"SandroHc",
 			"Ti4goc",
-			"Vitorvicentevalente"
+			"Vitorvicentevalente",
+			"MrNinja"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Se o utilizador está ou não a editar através da interface móvel ($1)",
@@ -151,9 +152,9 @@
 	"mobile-frontend-settings-tagline": "Preferências de leitura",
 	"mobile-frontend-settings-beta": "βeta de {{SITENAME}}",
 	"mobile-frontend-settings-save": "As configurações foram gravadas.",
-	"mobile-frontend-terms-text": "Condições de Utilização",
-	"mobile-frontend-view": "Versão de dispositivo móvel",
-	"mobile-frontend-view-desktop": "Versão de PC",
+	"mobile-frontend-terms-text": "Condições de utilização",
+	"mobile-frontend-view": "Versão móvel",
+	"mobile-frontend-view-desktop": "Versão desktop",
 	"mobile-frontend-watchlist-a-z-empty-howto": "De momento, não está a vigiar quaisquer páginas. A sua lista de páginas vigiadas ajuda-o a acompanhar as páginas que lhe interessam. Adicione páginas à sua lista clicando o ícone em forma de estrela.",
 	"mobile-frontend-watchlist-a-z-empty-howto-alt": "Clique o ícone da estrela",
 	"mobile-frontend-watchlist-back-home": "Voltar ao início",
