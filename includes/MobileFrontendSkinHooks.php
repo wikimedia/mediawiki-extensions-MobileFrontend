@@ -43,17 +43,24 @@ class MobileFrontendSkinHooks {
 	public function getDesktopViewLink( Skin $skin, MobileContext $context ) {
 		$url = $skin->getOutput()->getProperty( 'desktopUrl' );
 		$req = $skin->getRequest();
+
 		if ( $url ) {
 			$url = wfAppendQuery( $url, 'mobileaction=toggle_view_desktop' );
 		} else {
 			$title = $skin->getTitle() ?? Title::newMainPage();
-			$url = $title->getLocalURL(
-				$req->appendQueryValue( 'mobileaction', 'toggle_view_desktop' )
-			);
+			// Manipulate the query params array to remove mobile-specific
+			// params, and add one for toggle_view_desktop; also removes
+			// any redundant "title" param that may be present
+			$queryValues = $req->getQueryValues();
+			$queryValues['mobileaction'] = 'toggle_view_desktop';
+			unset( $queryValues['title'] );
+			unset( $queryValues['mfnotify'] );
+			$url = $title->getLocalURL( $queryValues );
 		}
-		$desktopUrl = $context->getDesktopUrl( $this->urlUtils->expand( $url, PROTO_RELATIVE ) ?? '' );
 
+		$desktopUrl = $context->getDesktopUrl( $this->urlUtils->expand( $url, PROTO_RELATIVE ) ?? '' );
 		$desktop = $context->msg( 'mobile-frontend-view-desktop' )->text();
+
 		return Html::element( 'a',
 			[ 'id' => 'mw-mf-display-toggle', 'href' => $desktopUrl,
 				'data-event-name' => 'switch_to_desktop' ], $desktop );
