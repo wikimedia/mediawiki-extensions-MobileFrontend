@@ -3,7 +3,8 @@
 		"authors": [
 			"Boulaur",
 			"Cedric31",
-			"Lhanars"
+			"Lhanars",
+			"Rayquachu"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Entratz lo còdi de confirmacion",
@@ -11,6 +12,7 @@
 	"mobile-frontend-desc": "Afichatge mobil",
 	"mobile-frontend-editor-anon": "Edicion sens obrir una session",
 	"mobile-frontend-editor-anonwarning": "<strong>Atencion:</strong> Non avètz obèrt cap de session. Vòstra adreça IP serà visibla publicament se fasètz quina que siá modificacion. Se <strong>vos connectatz</strong> o <strong>creatz un compte</strong>, vòstras modificacions seràn atribuidas a vòstre nom d'utilizator, amb d'autres avantatges.",
+	"mobile-frontend-editor-autocreatewarning": "<strong>Atencion:</strong> non sètz pas connectat. Vòstra modificacion serà atribuïda a un compte personal temporari. [[$1|Saber-ne mai]]. <strong>Connectatz</strong> o <strong>creatz un compte</strong> per contunhar a recebre de notificacions quand aquel compte aurà expirat e poder accedir a d'autras foncionalitats.",
 	"mobile-frontend-editor-placeholder-new-page": "Sètz vam de crear una nòva pagina sul projècte {{SITENAME}}!",
 	"mf-expand-sections-name": "Desvolopar totas las seccions",
 	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} es realizat per de gents coma vos.</strong><br />Registratz-vos per contribuir-i.",
