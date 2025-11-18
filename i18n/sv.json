@@ -84,7 +84,7 @@
 	"mobile-frontend-editor-loading": "Läser in redigerare…",
 	"mobile-frontend-editor-loadingtooslow": "Långsam uppkoppling?",
 	"mobile-frontend-editor-loadbasiceditor": "Växla till wikitextredigerare",
-	"mobile-frontend-editor-toload": "Editorn kommer nu laddas. Prova att [$1 ladda om sidan] om du fortfarande ser det här meddelandet efter några sekunder.",
+	"mobile-frontend-editor-toload": "Redigeraren kommer nu att läsas in. Prova att [$1 ladda om sidan] om du fortfarande ser det här meddelandet efter några sekunder.",
 	"mf-expand-sections-description": "Expandera alltid avsnitt för innehållssidor som standard.",
 	"mf-expand-sections-name": "Expandera alla avsnitt",
 	"mf-expand-sections-0-label": "Dölj som standard",
