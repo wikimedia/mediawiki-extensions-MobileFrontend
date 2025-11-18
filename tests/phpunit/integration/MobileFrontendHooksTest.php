@@ -124,7 +124,6 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 		$isAlternateCanonical, $isXAnalytics, $mfVaryHeaderSet
 	) {
 		$this->overrideConfigValues( [
-			'MFEnableManifest' => false,
 			'MobileUrlCallback' => $useMobileUrl ? [ Utils::class, 'mobileUrlCallback' ] : null,
 			'MFNoindexPages' => $mfNoindexPages,
 			'MFEnableXAnalyticsLogging' => $mfEnableXAnalyticsLogging,
@@ -140,11 +139,16 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 		// run the test
 		$this->newMobileFrontendHooks()->onBeforePageDisplay( $out, $skin );
 
-		// test, if alternate or canonical link is added, but not both
-		$links = $out->getLinkTags();
+		// test that either alternate or canonical link is added, but not both
+		$links = array_filter(
+			$out->getLinkTags(),
+			static function ( $link ) {;
+				return in_array( $link['rel'], [ 'alternate', 'canonical' ], true );
+			}
+		);
 		$this->assertCount( $isAlternateCanonical, $links,
-			'test, if alternate or canonical link is added, but not both' );
-		// if there should be an alternate or canonical link, check, if it's the correct one
+			'test that either alternate or canonical link is added, but not both' );
+		// if there should be an alternate or canonical link, check if it's the correct one
 		if ( $isAlternateCanonical ) {
 			// should be canonical link, not alternate in mobile view
 			$this->assertSame( 'canonical', $links[0]['rel'],
@@ -255,7 +259,6 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 		$this->overrideConfigValues( [
 			'Server' => '//en.example.org',
 			'MFAutodetectMobileView' => false,
-			'MFEnableManifest' => false,
 			'MFEnableXAnalyticsLogging' => false,
 			'MFMobileHeader' => null,
 			'MFVaryOnUA' => false,

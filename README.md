@@ -504,13 +504,6 @@ Enable the font-size options for users.
 ]
 ```
 
-#### $wgMFEnableManifest
-
-Add a webapp-manifest link to mobile view output.
-
-* Type: `Boolean`
-* Default: `true`
-
 #### $wgMFEnableVEWikitextEditor
 
 Eanble VisualEditor's wikitext editor as a replacement for MobileFrontend's source editor.

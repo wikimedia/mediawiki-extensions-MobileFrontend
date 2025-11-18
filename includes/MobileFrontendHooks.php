@@ -867,17 +867,15 @@ class MobileFrontendHooks implements
 			// in mobile view: always add vary header
 			$out->addVaryHeader( 'Cookie' );
 
-			if ( $this->config->get( 'MFEnableManifest' ) ) {
-				$out->addLink(
-					[
-						'rel' => 'manifest',
-						'href' => wfAppendQuery(
-							wfScript( 'api' ),
-							[ 'action' => 'webapp-manifest' ]
-						)
-					]
-				);
-			}
+			$out->addLink(
+				[
+					'rel' => 'manifest',
+					'href' => wfAppendQuery(
+						wfScript( 'api' ),
+						[ 'action' => 'webapp-manifest' ]
+					)
+				]
+			);
 
 			// In mobile mode, MediaWiki:Common.css/MediaWiki:Common.js is not loaded.
 			// We load MediaWiki:Mobile.css/js instead

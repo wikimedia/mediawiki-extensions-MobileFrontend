@@ -660,9 +660,6 @@
 		"MFRSSFeedLink": {
 			"value": false
 		},
-		"MFEnableManifest": {
-			"value": true
-		},
 		"MFManifestThemeColor": {
 			"value": "#eaecf0"
 		},
