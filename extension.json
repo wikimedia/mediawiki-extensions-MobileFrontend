@@ -657,9 +657,6 @@
 				"tagline": false
 			}
 		},
-		"MFRSSFeedLink": {
-			"value": false
-		},
 		"MFManifestThemeColor": {
 			"value": "#eaecf0"
 		},

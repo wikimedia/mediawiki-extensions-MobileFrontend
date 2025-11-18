@@ -284,12 +284,6 @@ via the API. Only applies to Special:EditWatchlist
 * Type: `Array`
 * Default: `['pageprops']`
 
-#### $wgMFRSSFeedLink
-
-Sets RSS feed `<link>` being outputted or not while on mobile version.
-
-* Type: `Boolean`
-* Default: `false`
 
 #### $wgMFAutodetectMobileView
 

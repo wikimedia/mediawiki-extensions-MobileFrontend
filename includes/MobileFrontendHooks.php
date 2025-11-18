@@ -918,10 +918,7 @@ class MobileFrontendHooks implements
 	 * @param array &$tags Added feed links
 	 */
 	public function onAfterBuildFeedLinks( &$tags ) {
-		if (
-			$this->mobileContext->shouldDisplayMobileView() &&
-			!$this->config->get( 'MFRSSFeedLink' )
-		) {
+		if ( $this->mobileContext->shouldDisplayMobileView() ) {
 			$tags = [];
 		}
 	}
