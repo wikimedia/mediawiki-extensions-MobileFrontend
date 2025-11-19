@@ -220,6 +220,20 @@ function initMobileOptions() {
 		// Remove the server side rendered OOUI field.
 		$( '#amc-field' ).remove();
 
+		// For the purposes of ReaderExperiments StickyHeaders prototype only:
+		// - This code toggles on and disables the expand section setting for enrolled users T409485
+		// - Please remove code after the stickyHeaders A/B experiment is complete T410754
+		if ( mw.config.get(
+			'wgReaderExperimentsStickyHeaders' ) &&
+			mw.config.get( 'wgReaderExperimentsStickyHeaders' ) === 'enrolled'
+		) {
+			const $toggleSwitch = $( '#skin-client-prefs-mf-expand-sections input' );
+
+			if ( $toggleSwitch ) {
+				$toggleSwitch.prop( 'checked', true );
+				$toggleSwitch.prop( 'disabled', true );
+			}
+		}
 	} );
 }
 
