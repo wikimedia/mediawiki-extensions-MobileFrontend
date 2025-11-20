@@ -204,7 +204,8 @@ class VisualEditorOverlay extends EditorOverlayBase {
 			currentPageHTMLParser = this.options.currentPageHTMLParser,
 			fakeScroll = this.options.fakeScroll,
 			$window = $( window ),
-			section = this.target.section,
+			section = this.target.section !== null ?
+				this.target.section : this.target.visibleSection,
 			surface = this.target.getSurface(),
 			mode = surface.getMode();
 
