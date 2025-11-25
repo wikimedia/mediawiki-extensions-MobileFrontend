@@ -1,6 +1,8 @@
 <?php
 
+use MediaWiki\Exception\BadTitleError;
 use MediaWiki\SpecialPage\UnlistedSpecialPage;
+use MediaWiki\Title\Title;
 
 /**
  * Redirect from Special:MobileLanguages to the article
@@ -17,7 +19,13 @@ class SpecialMobileLanguages extends UnlistedSpecialPage {
 	 * @inheritDoc
 	 */
 	public function execute( $subpage ) {
-		$url = wfAppendQuery( wfScript( 'index' ), [ 'title' => $subpage ] );
-		$this->getOutput()->redirect( $url . '#p-lang', '301' );
+		$title = Title::newFromText( $subpage );
+		if ( !$title || !$title->canExist() ) {
+			// Reject invalid titles
+			// Reject non-wikipage destinations (e.g. Special or Media).
+			throw new BadTitleError();
+		}
+		$url = $title->getLocalURL() . '#p-lang';
+		$this->getOutput()->redirect( $url, '301' );
 	}
 }
