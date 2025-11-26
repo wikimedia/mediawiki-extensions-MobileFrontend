@@ -304,20 +304,20 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 				return;
 			}
 
-			$latestUser = $this->getUser()->getInstanceFromPrimary();
-			if ( $latestUser === null || !$latestUser->isNamed() ) {
+			$user = $this->getUser();
+			if ( !$user->isNamed() ) {
 				// The user is anon, temp user or could not be loaded from the database.
 				return;
 			}
 
 			if ( $this->amc->isAvailable() ) {
 				$this->userOptionsManager->setOption(
-					$latestUser,
+					$user,
 					UserMode::USER_OPTION_MODE_AMC,
 					$enableAMC ? UserMode::OPTION_ENABLED : UserMode::OPTION_DISABLED
 				);
 			}
-			$this->userOptionsManager->saveOptions( $latestUser );
+			$this->userOptionsManager->saveOptions( $user );
 		}, DeferredUpdates::PRESEND );
 
 		$this->getOutput()->redirect( $this->getRedirectUrl( $request ) );
