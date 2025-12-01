@@ -54,7 +54,7 @@ module.exports = function extendSearchParams( feature ) {
 	result.prop = result.prop.concat( mw.config.get( 'wgMFQueryPropModules' ) );
 
 	if ( displayWikibaseDescriptions[feature] ) {
-		if ( result.prop.indexOf( 'description' ) === -1 ) {
+		if ( !result.prop.includes( 'description' ) ) {
 			result.prop.push( 'description' );
 		}
 	}

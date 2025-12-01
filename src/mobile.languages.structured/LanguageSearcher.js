@@ -198,9 +198,9 @@ class LanguageSearcher extends View {
 			this.options.languages.forEach( ( language ) => {
 				const langname = language.langname;
 				// search by language code or language name
-				if ( language.autonym.toLowerCase().indexOf( searchQuery ) > -1 ||
-						( langname && langname.toLowerCase().indexOf( searchQuery ) > -1 ) ||
-						language.lang.toLowerCase().indexOf( searchQuery ) > -1
+				if ( language.autonym.toLowerCase().includes( searchQuery ) ||
+						( langname && langname.toLowerCase().includes( searchQuery ) ) ||
+						language.lang.toLowerCase().includes( searchQuery )
 				) {
 					filteredList.push( language.lang );
 				}
@@ -209,8 +209,8 @@ class LanguageSearcher extends View {
 			if ( this.options.variants ) {
 				this.options.variants.forEach( ( variant ) => {
 					// search by variant code or variant name
-					if ( variant.autonym.toLowerCase().indexOf( searchQuery ) > -1 ||
-						variant.lang.toLowerCase().indexOf( searchQuery ) > -1
+					if ( variant.autonym.toLowerCase().includes( searchQuery ) ||
+						variant.lang.toLowerCase().includes( searchQuery )
 					) {
 						filteredList.push( variant.lang );
 					}

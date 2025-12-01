@@ -90,7 +90,7 @@ module.exports = {
 	 * @return {Object} language with 'lang' key and new 'dir' key.
 	 */
 	getDir( language ) {
-		const dir = rtlLanguages.indexOf( language.lang ) > -1 ? 'rtl' : 'ltr';
+		const dir = rtlLanguages.includes( language.lang ) ? 'rtl' : 'ltr';
 		return mfUtils.extend( {}, language, { dir } );
 	},
 

@@ -115,7 +115,7 @@ class Page {
 		const config = mw.config.get( 'wgVisualEditorConfig' );
 		const visualEditorNamespaces = config.namespaces || [];
 
-		return visualEditorNamespaces.indexOf( mw.config.get( 'wgNamespaceNumber' ) ) !== -1;
+		return visualEditorNamespaces.includes( mw.config.get( 'wgNamespaceNumber' ) );
 	}
 
 	/**

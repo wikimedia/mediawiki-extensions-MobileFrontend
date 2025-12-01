@@ -42,7 +42,7 @@ module.exports = function parseBlockInfo( blockinfo ) {
 		).getUrl();
 	}
 
-	if ( [ 'infinite', 'indefinite', 'infinity', 'never' ].indexOf( blockinfo.blockexpiry ) === -1 ) {
+	if ( !( [ 'infinite', 'indefinite', 'infinity', 'never' ].includes( blockinfo.blockexpiry ) ) ) {
 		blockInfo.expiry = mw.message( 'parentheses', blockinfo.blockexpiryformatted ).escaped();
 		blockInfo.duration = blockinfo.blockexpiryrelative;
 	}

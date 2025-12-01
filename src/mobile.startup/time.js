@@ -43,7 +43,7 @@ function getTimeAgoDelta( timestamp ) {
  * @return {boolean}
  */
 function isRecent( delta ) {
-	return [ 'seconds', 'minutes', 'hours' ].indexOf( delta.unit ) > -1;
+	return [ 'seconds', 'minutes', 'hours' ].includes( delta.unit );
 }
 
 /**

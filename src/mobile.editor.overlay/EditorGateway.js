@@ -46,7 +46,7 @@ class EditorGateway {
 			Array.isArray( pageObj.actions.edit )
 		) {
 			pageObj.actions.edit.some( ( error ) => {
-				if ( [ 'blocked', 'autoblocked' ].indexOf( error.code ) !== -1 ) {
+				if ( [ 'blocked', 'autoblocked' ].includes( error.code ) ) {
 					blockedError = error;
 					return true;
 				}
