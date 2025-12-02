@@ -66,56 +66,54 @@ function addClientPreferencesToForm( $form, clientPreferences ) {
  * Additionally it applies all known hacks to make it mobile friendly
  *
  * @private
- * @param {Object[]} toggleObjects an array of toggle objects to infuse
+ * @param {Object} toggleObject a toggle object to infuse
  * @param {jQuery.Object} $form form to submit when there is interaction with toggle
  */
-function infuseToggles( toggleObjects, $form ) {
-	toggleObjects.forEach( ( toggleObject ) => {
-		const $toggleElement = toggleObject.$el;
-		const enableToggle = OO.ui.infuse( $toggleElement );
-		const $checkbox = enableToggle.$element;
-		const toggleSwitch = new OO.ui.ToggleSwitchWidget( {
-			value: enableToggle.isSelected()
-		} );
+function infuseToggle( toggleObject, $form ) {
+	const $toggleElement = toggleObject.$el;
+	const enableToggle = OO.ui.infuse( $toggleElement );
+	const $checkbox = enableToggle.$element;
+	const toggleSwitch = new OO.ui.ToggleSwitchWidget( {
+		value: enableToggle.isSelected()
+	} );
 
-		// Strangely the ToggleSwitchWidget does not behave as an input so any change
-		// to it is not reflected in the form. (see T182466)
-		// Ideally we'd replaceWith here and not have to hide the original element.
-		toggleSwitch.$element.insertAfter( $checkbox );
-		// although the checkbox is hidden already, that is done via visibility
-		// as a result, it still takes up space. We don't want it to any more now that the
-		// new toggle switch has been added.
-		$checkbox.hide();
+	// Strangely the ToggleSwitchWidget does not behave as an input so any change
+	// to it is not reflected in the form. (see T182466)
+	// Ideally we'd replaceWith here and not have to hide the original element.
+	toggleSwitch.$element.insertAfter( $checkbox );
+	// although the checkbox is hidden already, that is done via visibility
+	// as a result, it still takes up space. We don't want it to any more now that the
+	// new toggle switch has been added.
+	$checkbox.hide();
 
-		// listening on checkbox change is required to make the clicking on label working.
-		// Otherwise clicking on label changes the checkbox "checked" state
-		// but it's not reflected in the toggle switch
-		$checkbox.on( 'change', () => {
-			// disable checkbox as submit is delayed by 0.25s
-			$checkbox.attr( 'disabled', true );
-			toggleSwitch.setValue( enableToggle.isSelected() );
-		} );
-		toggleSwitch.on( 'change', ( value ) => {
-			// execute callback
-			toggleObject.onToggle( value );
+	// listening on checkbox change is required to make the clicking on label working.
+	// Otherwise clicking on label changes the checkbox "checked" state
+	// but it's not reflected in the toggle switch
+	$checkbox.on( 'change', () => {
+		// disable checkbox as submit is delayed by 0.25s
+		$checkbox.attr( 'disabled', true );
+		toggleSwitch.setValue( enableToggle.isSelected() );
+	} );
+	toggleSwitch.on( 'change', ( value ) => {
+		// execute callback
+		toggleObject.onToggle( value );
 
-			// ugly hack, we're delaying submit form by 0.25s
-			// and we want to disable registering clicks
-			// we want to disable the toggleSwitch
-			// but we cannot use setDisabled(true) as it makes button gray
-			toggleSwitch.setValue = function () {};
+		// ugly hack, we're delaying submit form by 0.25s
+		// and we want to disable registering clicks
+		// we want to disable the toggleSwitch
+		// but we cannot use setDisabled(true) as it makes button gray
+		toggleSwitch.setValue = function () {};
 
-			$checkbox.find( 'input' )
-				.prop( 'checked', value );
-			notify( true );
-			// On some Android devices animation gets stuck in the middle as browser
-			// starts submitting the form.
-			// Let's call submit on the form after toggle button transition is done
-			// (0.25s, defined in OOUI)
-			setTimeout( () => {
-				$form.trigger( 'submit' );
-			}, 250 );
-		} );
+		$checkbox.find( 'input' )
+			.prop( 'checked', value );
+		notify( true );
+		// On some Android devices animation gets stuck in the middle as browser
+		// starts submitting the form.
+		// Let's call submit on the form after toggle button transition is done
+		// (0.25s, defined in OOUI)
+		setTimeout( () => {
+			$form.trigger( 'submit' );
+		}, 250 );
 	} );
 }
 
@@ -127,15 +125,11 @@ function infuseToggles( toggleObjects, $form ) {
  */
 function initMobileOptions() {
 	const $form = $( '#mobile-options' ),
-		$amcToggle = $( '#enable-amc-toggle' ),
-		toggles = [];
+		$amcToggle = $( '#enable-amc-toggle' );
 
 	if ( $amcToggle.length ) {
-		toggles.push( {
-			$el: $amcToggle
-		} );
+		infuseToggle( { $el: $amcToggle }, $form );
 	}
-	infuseToggles( toggles, $form );
 
 	const clientPreferences = {};
 
