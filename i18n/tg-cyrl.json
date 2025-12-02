@@ -6,10 +6,11 @@
 			"TayfunEt.",
 			"ToJack",
 			"Vashgird",
-			"Zolgoyo"
+			"Zolgoyo",
+			"ZulfiqorF"
 		]
 	},
-	"mobile-frontend-copyright": "Муҳтаво таҳти иҷозатномаи $1 ва ё дигар дастрас аст.",
+	"mobile-frontend-copyright": "Муҳтаво таҳти иҷозатномаи $1 дар дастрас аст, магар ин ки хилофаш зикр шуда бошад.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Вуруд",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "Таъйид",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "Сабаб",
@@ -34,9 +35,9 @@
 	"mobile-frontend-privacy-link-text": "Ҳарими хусусӣ",
 	"mobile-frontend-references-citation": "Иқтибос",
 	"mobile-frontend-save-settings": "Захира",
-	"mobile-frontend-terms-text": "Шартҳои Истифода",
-	"mobile-frontend-view": "Намуди мобилӣ",
-	"mobile-frontend-view-desktop": "Компютер",
+	"mobile-frontend-terms-text": "Шароити истифода",
+	"mobile-frontend-view": "Намои мобилӣ",
+	"mobile-frontend-view-desktop": "Намои роёна",
 	"mobile-frontend-watchlist-cta-button-login": "Вуруд",
 	"mobile-frontend-watchlist-cta-button-signup": "Номнависӣ",
 	"mobile-frontend-watchlist-filter-all": "Ҳама",
