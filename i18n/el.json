@@ -17,7 +17,8 @@
 			"Stam.nikos",
 			"SucreRouge",
 			"ZaDiak",
-			"Ανώνυμος Βικιπαιδιστής"
+			"Ανώνυμος Βικιπαιδιστής",
+			"Jimkats"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Είτε ένας χρήστης επεξεργάζεται είτε όχι μέσω της διεπαφής για κινητά",
@@ -83,10 +84,10 @@
 	"mobile-frontend-editor-toload": "Ο επεξεργαστής θα φορτώσει τώρα. Αν εξακολουθείτε να βλέπετε αυτό το μήνυμα μετά από λίγα δευτερόλεπτα, παρακαλούμε να [$1 επαναλάβετε τη φόρτωση της σελίδας].",
 	"mf-expand-sections-description": "Πάντα να επεκτείνετε τις ενότητες των σελίδων περιεχομένου από προεπιλογή.",
 	"mf-expand-sections-name": "Επέκταση όλων των ενοτήτων",
-	"mf-font-size-name": "Μέγεθος γραμματοσειράς",
-	"mf-font-size-description": "Προσαρμογή μεγέθους κειμένου για εύκολη ανάγνωση.",
-	"mf-font-size-small-label": "Μικρά",
-	"mf-font-size-regular-label": "Κανονικά",
+	"mf-font-size-name": "Κείμενο",
+	"mf-font-size-description": "Προσαρμόστε το κείμενο για καλύτερη ανάγνωση.",
+	"mf-font-size-small-label": "Κανονικό",
+	"mf-font-size-regular-label": "Μέτριο",
 	"mf-font-size-large-label": "Μεγάλα",
 	"mobile-frontend-generic-404-desc": "Η σελίδα που ψάχνατε δεν βρέθηκε.",
 	"mobile-frontend-generic-404-title": "Σφάλμα - Η σελίδα δεν βρέθηκε",
