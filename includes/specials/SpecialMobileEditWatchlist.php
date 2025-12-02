@@ -272,12 +272,6 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 		] );
 		$out->addHTML( $html );
 		$out->addModules( 'mobile.special.watchlist.scripts' );
-		$out->addModuleStyles(
-			[
-				'mobile.pagelist.styles',
-				'mobile.pagesummary.styles'
-			]
-		);
 	}
 
 	/**

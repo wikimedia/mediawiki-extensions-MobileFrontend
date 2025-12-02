@@ -11,7 +11,7 @@ on mobile devices; insertion of mobile / desktop view links at bottom of page;
 support for web manifests; PHP redirect classes for historical special pages.
 
 * Since: Sept 2025
-* Files: 
+* Files:
   - /includes/Api/ApiWebappManifest.php
   - /includes/BaseDomainExtractorInterface.php
   - /includes/MobileContext.php
@@ -24,7 +24,7 @@ support for web manifests; PHP redirect classes for historical special pages.
   - /tests/phpunit/integration/WMFBaseDomainExtractorTest.php
   - /tests/phpunit/structure/OwnersStructureTest.php
   - includes/ResourceLoaderModules/MobileConfig.php
-* Folders: 
+* Folders:
   - /includes/ContentProviders
   - /includes/Devices
   - /includes/Features
@@ -48,7 +48,7 @@ incompatible content (via `.nomobile` class); injection of Wikidata descriptions
 into articles; and modifications to user pages.
 
 * Since: Sept 2025
-* Files: 
+* Files:
   - /includes/Api/ApiParseExtender.php
   - /includes/ExtMobileFrontend.php
   - /includes/MobileFormatter.php
@@ -65,7 +65,7 @@ into articles; and modifications to user pages.
   - /tests/phpunit/integration/api/ApiParseExtenderTest.php
   - /tests/phpunit/integration/context/MobileContextShouldDisplayMobileViewIntegrationTest.php
   - /tests/phpunit/integration/context/MobileContextWikibaseDescriptionsTest.php
-* Folders: 
+* Folders:
   - /includes/Transforms
   - /resources/mobile.init.styles
   - /resources/mobile.init.styles
@@ -88,7 +88,7 @@ into articles; and modifications to user pages.
 Disables MediaWiki:Common.js from running on mobile site.
 
 * Since: Sept 2025
-* Files: 
+* Files:
   - /includes/ResourceLoaderModules
   - /tests/phpunit/integration/rlmodules
 * Contact: [Reader Growth][1]
@@ -99,9 +99,9 @@ Disables MediaWiki:Common.js from running on mobile site.
 Provides an advanced mode for logged in users and encourages logged in users to use.
 
 * Since: Sept 2025
-* Files: 
+* Files:
   - /resources/mobile.startup/amcOutreach/amcOutreachDrawer.less
-* Folders: 
+* Folders:
   - /includes/Amc
   - /src/mobile.startup/amcOutreach
   - /src/mobile.startup/promoCampaign
@@ -123,7 +123,7 @@ decomissioned in favor of Codex and upstreaming useful utility functionality to
 MediaWiki core.
 
 * Since: Sept 2025
-* Files: 
+* Files:
   - /resources/dist/mobile.common.js
   - /resources/dist/mobile.config.js
   - /resources/dist/mobile.startup.js
@@ -177,7 +177,7 @@ MediaWiki core.
   - /tests/node-qunit/mobile.startup/util.test.js
   - /tests/node-qunit/webpackRequire.stub.js
   - /tests/phpunit/structure/MobileFrontendBundleSizeTest.php
-* Folders: 
+* Folders:
   - /src/mobile.startup/package
   - /tests/node-qunit/utils
 * Contact: [Readers Growth][1]
@@ -201,7 +201,7 @@ should be handled by Extension:Popups or Extension:Cite.
 The editor.
 
 * Since: Sept 2025
-* Files: 
+* Files:
   - /includes/MobileFrontendEditorHooks.php
   - /src/mobile.init/editor.js
   - /src/mobile.init/editorLoadingOverlay.js
@@ -210,7 +210,7 @@ The editor.
   - /tests/node-qunit/mobile.startup/Section.test.js
   - /tests/phpunit/integration/MobileFrontendHooksTest.php
   - src/mobile.init/fakeToolbar.js
-* Folders: 
+* Folders:
   - /resources/mobile.editor.overlay/editor.less
   - /src/mobile.editor.overlay
   - /tests/node-qunit/mobile.editor.overlay/
@@ -225,10 +225,10 @@ The image lightbox for mobile. Please do not make changes in this part of the
 codebase without consulting the Readers Growth team.
 
 * Since: Sept 2025
-* Files: 
+* Files:
   - /resources/dist/mobile.mediaViewer.js
   - /src/mobile.startup/Thumbnail.js
-* Folders: 
+* Folders:
   - /resources/mobile.mediaViewer
   - /src/mobile.mediaViewer
   - /src/mobile.startup/mediaViewer
@@ -244,10 +244,10 @@ Please do not make changes in this part of the codebase without consulting the
 language team.
 
 * Since: Sept 2025
-* Files: 
+* Files:
   - /resources/dist/mobile.languages.structured.js
   - /src/mobile.startup/LanguageInfo.js
-* Folders: 
+* Folders:
   - /resources/mobile.languages.structured
   - /src/mobile.languages.structured
   - /src/mobile.startup/languageOverlay
@@ -261,13 +261,17 @@ language team.
 To be removed once the reading list feature is ready.
 
 * Since: Sept 2025
-* Files: 
+* Files:
   - /includes/specials/SpecialMobileEditWatchlist.php
   - /resources/dist/mobile.special.watchlist.scripts.js
-* Folders: 
+  - /resources/mobile.special.styles/ajax-loader.gif
+  - /resources/mobile.special.styles/editwatchlist.less
+  - /resources/mobile.special.styles/icons.less
+  - /resources/mobile.special.styles/pagelist.less
+  - /resources/mobile.special.styles/pagesummary.less
+  - /resources/mobile.special.styles/watchstar.less
+* Folders:
   - /includes/Models
-  - /resources/mobile.pagelist.styles
-  - /resources/mobile.pagesummary.styles
   - /src/mobile.special.watchlist.scripts
   - /tests/node-qunit/mobile.special.watchlist.scripts/
   - /tests/phpunit/integration/models
@@ -279,12 +283,12 @@ To be removed once the reading list feature is ready.
 Provides client side settings and user preference setting.
 
 * Since: Sept 2025
-* Files: 
+* Files:
   - /resources/dist/mobile.special.mobileoptions.scripts.js
   - /src/mobile.special.mobileoptions.scripts.js
   - /tests/node-qunit/mobile.special.mobileoptions.test.js
   - /includes/specials/SpecialMobileOptions.php
-* Folders: 
+* Folders:
   - /resources/mobile.special.mobileoptions.styles
 * Contact: [Reader Experience][4]
 * Phabricator: https://phabricator.wikimedia.org/project/view/8167/
@@ -297,11 +301,12 @@ mobile friendly and is an artifact of the past. Automatically checks "remember
 my login" for mobile users.
 
 * Since: Sept 2025
-* Files: 
+* Files:
   - /resources/dist/mobile.special.userlogin.scripts.js
   - /src/mobile.special.userlogin.scripts.js
-* Folders: 
-  - /resources/mobile.special.styles
+  - /resources/mobile.special.styles/common.less
+  - /resources/mobile.special.styles/forms.less
+  - /resources/mobile.special.styles/login.less
 * Contact: [Reader Growth][1]
 * Phabricator: https://phabricator.wikimedia.org/project/view/3707/
 

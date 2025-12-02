@@ -32,20 +32,12 @@
 		"maxSize": "3.1KB"
 	},
 	{
-		"resourceModule": "mobile.pagelist.styles",
-		"maxSize": "0.9KB"
-	},
-	{
-		"resourceModule": "mobile.pagesummary.styles",
-		"maxSize": "0.5KB"
-	},
-	{
 		"resourceModule": "mobile.userpage.styles",
 		"maxSize": "0.5KB"
 	},
 	{
 		"resourceModule": "mobile.special.styles",
-		"maxSize": "1.4KB"
+		"maxSize": "2.8KB"
 	},
 	{
 		"resourceModule": "mobile.special.mobileoptions.styles",

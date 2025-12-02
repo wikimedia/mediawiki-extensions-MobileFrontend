@@ -90,16 +90,6 @@
 		"MobileFrontend\\Tests\\": "tests/phpunit/"
 	},
 	"ResourceModules": {
-		"mobile.pagelist.styles": {
-			"styles": [
-				"resources/mobile.pagelist.styles/pagelist.less"
-			]
-		},
-		"mobile.pagesummary.styles": {
-			"styles": [
-				"resources/mobile.pagesummary.styles/pagesummary.less"
-			]
-		},
 		"mobile.userpage.styles": {
 			"styles": [
 				"resources/mobile.userpage.styles/userpage.less"
@@ -160,7 +150,6 @@
 				"mediawiki.template.mustache",
 				"mobile.init.styles",
 				"mediawiki.Title",
-				"mobile.pagesummary.styles",
 				"mediawiki.language",
 				"mediawiki.jqueryMsg",
 				"mediawiki.user",
