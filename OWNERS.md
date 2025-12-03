@@ -24,18 +24,18 @@ support for web manifests; PHP redirect classes for historical special pages.
   - /tests/phpunit/integration/WMFBaseDomainExtractorTest.php
   - /tests/phpunit/structure/OwnersStructureTest.php
   - includes/ResourceLoaderModules/MobileConfig.php
+  - /includes/specials/SpecialMobileDiff.php
+  - /includes/specials/SpecialMobileHistory.php
+  - /includes/specials/SpecialMobileLanguages.php
+  - /includes/specials/SpecialUploads.php
+  - /tests/phpunit/unit/HookRunnerTest.php
 * Folders:
   - /includes/ContentProviders
   - /includes/Devices
   - /includes/Features
   - /includes/Hooks
-  - /includes/specials/SpecialMobileDiff.php
-  - /includes/specials/SpecialMobileHistory.php
-  - /includes/specials/SpecialMobileLanguages.php
-  - /includes/specials/SpecialUploads.php
   - /tests/phpunit/integration/devices/
   - /tests/phpunit/integration/specials
-  - /tests/phpunit/unit/HookRunnerTest.php
   - /tests/phpunit/unit/content-providers
   - /tests/phpunit/unit/devices/
 * Contact: [Reader Growth][1]
@@ -65,20 +65,19 @@ into articles; and modifications to user pages.
   - /tests/phpunit/integration/api/ApiParseExtenderTest.php
   - /tests/phpunit/integration/context/MobileContextShouldDisplayMobileViewIntegrationTest.php
   - /tests/phpunit/integration/context/MobileContextWikibaseDescriptionsTest.php
-* Folders:
-  - /includes/Transforms
-  - /resources/mobile.init.styles
-  - /resources/mobile.init.styles
-  - /resources/mobile.userpage.styles
   - /src/mobile.init/isCollapsedByDefault.js
   - /src/mobile.init/lazyLoadedImages.js
   - /src/mobile.init/mobile.init.js
   - /src/mobile.init/sectionCollapsing.js
   - /src/mobile.init/toggling.js
-  - /src/mobile.startup/lazyImages
+  - /resources/mobile.init.styles/main.less
   - /tests/node-qunit/mobile.init/lazyLoadedImages.test.js
-  - /tests/node-qunit/mobile.startup/lazyImages
   - /tests/phpunit/unit/MobileFormatterUnitTest.php
+* Folders:
+  - /includes/Transforms
+  - /resources/mobile.userpage.styles
+  - /src/mobile.startup/lazyImages
+  - /tests/node-qunit/mobile.startup/lazyImages
   - /tests/phpunit/unit/transforms
 * Contact: [Reader Growth][1]
 * Phabricator: https://phabricator.wikimedia.org/project/view/8173/
@@ -210,11 +209,14 @@ The editor.
   - /tests/node-qunit/mobile.startup/Section.test.js
   - /tests/phpunit/integration/MobileFrontendHooksTest.php
   - src/mobile.init/fakeToolbar.js
-* Folders:
   - /resources/mobile.editor.overlay/editor.less
+  - /tests/node-qunit/mobile.init/editorLoadingOverlay.test.js
+  - resources/mobile.init.styles/editButtons.less
+  - resources/mobile.init/fakeToolbar.less
+  - resources/mobile.init/editor.less
+* Folders:
   - /src/mobile.editor.overlay
   - /tests/node-qunit/mobile.editor.overlay/
-  - /tests/node-qunit/mobile.init/editorLoadingOverlay.test.js
 * Contact: [Editing Team][2]
 * Phabricator: https://phabricator.wikimedia.org/project/view/5654/
 

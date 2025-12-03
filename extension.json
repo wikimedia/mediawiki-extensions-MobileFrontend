@@ -125,8 +125,8 @@
 			],
 			"skinStyles": {
 				"minerva": [
-					"resources/mobile.init.styles/fakeToolbar.less",
-					"resources/mobile.init.styles/editor.less"
+					"resources/mobile.init/fakeToolbar.less",
+					"resources/mobile.init/editor.less"
 				]
 			},
 			"scripts": [
