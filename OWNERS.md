@@ -211,9 +211,8 @@ The editor.
   - src/mobile.init/fakeToolbar.js
   - /resources/mobile.editor.overlay/editor.less
   - /tests/node-qunit/mobile.init/editorLoadingOverlay.test.js
-  - resources/mobile.init.styles/editButtons.less
+  - resources/mobile.init.styles/editor.less
   - resources/mobile.init/fakeToolbar.less
-  - resources/mobile.init/editor.less
 * Folders:
   - /src/mobile.editor.overlay
   - /tests/node-qunit/mobile.editor.overlay/

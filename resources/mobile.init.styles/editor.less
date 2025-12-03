@@ -36,6 +36,7 @@
 
 /** In parsoid */
 .mw-parser-output[ data-mw-parsoid-version ] {
+	// Hide edit buttons until expanded (T384408), and while page is loading (T411601)
 	.mw-editsection {
 		visibility: visible;
 	}
@@ -44,6 +45,7 @@
 		visibility: hidden;
 	}
 
+	// Show edit buttons when expanded
 	.mf-collapsible-heading[ aria-expanded='true' ] .mw-editsection,
 	.mf-collapsible-heading[ aria-expanded='true' ] ~ .mf-collapsible-content section .mw-editsection {
 		visibility: visible;

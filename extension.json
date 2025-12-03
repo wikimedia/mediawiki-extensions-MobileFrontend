@@ -98,7 +98,8 @@
 		"mobile.init.styles": {
 			"class": "MediaWiki\\ResourceLoader\\LessVarFileModule",
 			"styles": [
-				"resources/mobile.init.styles/main.less"
+				"resources/mobile.init.styles/main.less",
+				"resources/mobile.init.styles/editor.less"
 			]
 		},
 		"mobile.init": {
@@ -125,8 +126,7 @@
 			],
 			"skinStyles": {
 				"minerva": [
-					"resources/mobile.init/fakeToolbar.less",
-					"resources/mobile.init/editor.less"
+					"resources/mobile.init/fakeToolbar.less"
 				]
 			},
 			"scripts": [
