@@ -209,7 +209,6 @@ $specialPageAliases['lb'] = [
 	'Uploads' => [ 'Eropgeluede_Fichieren' ],
 	'MobileDiff' => [ 'Mobilen_Ënnerscheed' ],
 	'MobileLanguages' => [ 'Mobil_Sproochen' ],
-	'Nearby' => [ 'Nobäi' ],
 ];
 
 /** Northern Luri (لۊری شومالی) */
