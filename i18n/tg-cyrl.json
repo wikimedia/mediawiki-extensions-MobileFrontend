@@ -6,11 +6,12 @@
 			"ToJack",
 			"Vashgird",
 			"TayfunEt.",
-			"Zolgoyo"
+			"Zolgoyo",
+			"ZulfiqorF"
 		]
 	},
 	"mobile-frontend-changeslist-nocomment": "хулосаи таҳрир нест",
-	"mobile-frontend-copyright": "Муҳтаво таҳти иҷозатномаи $1 ва ё дигар дастрас аст.",
+	"mobile-frontend-copyright": "Муҳтаво таҳти иҷозатномаи $1 дар дастрас аст, магар ин ки хилофаш зикр шуда бошад.",
 	"mobile-frontend-diffview-bytesadded": "$1 {{PLURAL:$1|байт}} илова карда шуд",
 	"mobile-frontend-diffview-bytesnochange": "Тағйир дар андоза",
 	"mobile-frontend-diffview-bytesremoved": "$1 {{PLURAL:$1|байт}} хориҷ карда шуд",
@@ -43,9 +44,9 @@
 	"mobile-frontend-save-settings": "Захира",
 	"mobile-frontend-talk-add-overlay-subject-placeholder": "Олот",
 	"mobile-frontend-talk-reply": "Посух додан",
-	"mobile-frontend-terms-text": "Шартҳои Истифода",
-	"mobile-frontend-view": "Намуди мобилӣ",
-	"mobile-frontend-view-desktop": "Компютер",
+	"mobile-frontend-terms-text": "Шароити истифода",
+	"mobile-frontend-view": "Намои мобилӣ",
+	"mobile-frontend-view-desktop": "Намои роёна",
 	"mobile-frontend-watchlist-a-z": "Рӯйхат",
 	"mobile-frontend-watchlist-cta-button-login": "Вуруд",
 	"mobile-frontend-watchlist-cta-button-signup": "Номнависӣ",
