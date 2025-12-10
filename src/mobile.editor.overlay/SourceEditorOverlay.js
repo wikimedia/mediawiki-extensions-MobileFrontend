@@ -548,6 +548,7 @@ class SourceEditorOverlay extends EditorOverlayBase {
 	 * @inheritdoc
 	 */
 	showSaveCompleteMsg( action, tempUserCreated ) {
+		mw.config.set( 'wgPostEdit', action );
 		require( 'mediawiki.action.view.postEdit' ).fireHookOnPageReload( action, tempUserCreated );
 	}
 

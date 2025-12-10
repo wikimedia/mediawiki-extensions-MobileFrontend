@@ -322,6 +322,7 @@ class EditorOverlayBase extends Overlay {
 	 * @param {boolean} [tempUserCreated] Whether a temporary user was created
 	 */
 	showSaveCompleteMsg( action, tempUserCreated ) {
+		mw.config.set( 'wgPostEdit', action );
 		require( 'mediawiki.action.view.postEdit' ).fireHook( action, tempUserCreated );
 	}
 
