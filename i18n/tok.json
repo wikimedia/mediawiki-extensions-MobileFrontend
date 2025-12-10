@@ -28,5 +28,7 @@
 	"mobile-frontend-view-desktop": "lipu pi ilo suli",
 	"mobile-frontend-watchlist-filter-articles": "lipu",
 	"mobile-frontend-watchlist-filter-other": "ante",
-	"mobile-frontend-watchlist-filter-talk": "toki"
+	"mobile-frontend-watchlist-filter-talk": "toki",
+	"tag-mobile_edit": "kepeken ilo pali lili",
+	"tag-mobile_web_edit": "kepeken ilo Web lon ilo pali lili"
 }
