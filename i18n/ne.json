@@ -54,7 +54,7 @@
 	"mobile-frontend-editor-blocked-drawer-body-login-createaccount-partial": "प्रवेश गर्ने वा खाता सिर्जना गर्ने प्रयास गर्नुहोस्, वा अर्को पृष्ठ सम्पादन गर्ने प्रयास गर्नुहोस्।",
 	"mobile-frontend-editor-blocked-drawer-body-link": "थप हेर्नुहोस्",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "कारण",
-	"mobile-frontend-editor-blocked-drawer-creator-header": "द्वारा {{GENDER:$1|अवरुद्ध}}",
+	"mobile-frontend-editor-blocked-drawer-creator-header": "द्वारा {{GENDER:$1|निषेधित}}",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "प्रतिबन्ध समाप्त हुन्छ",
 	"mobile-frontend-editor-blocked-drawer-help": "विवरण हेर्नुहोस्",
 	"mobile-frontend-editor-generic-block-reason": "अज्ञात कारण",
