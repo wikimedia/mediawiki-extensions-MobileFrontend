@@ -493,10 +493,14 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 
 	public static function provideArticleParserOptions() {
 		return [
-			[ false, false, false ],
-			[ false, true, false ],
-			[ true, false, false ],
-			[ true, true, true ],
+			'desktop, no parsoid' => [ false, false, NS_MAIN, false ],
+			'desktop, parsoid enabled' => [ false, true, NS_MAIN, false ],
+			'mobile, no parsoid' => [ true, false, NS_MAIN, false ],
+			'mobile, parsoid, main namespace' => [ true, true, NS_MAIN, true ],
+			'mobile, parsoid, file namespace' => [ true, true, NS_FILE, false ],
+			'mobile, parsoid, category namespace' => [ true, true, NS_CATEGORY, false ],
+			'mobile, parsoid, special namespace' => [ true, true, NS_SPECIAL, false ],
+			'mobile, parsoid, media namespace' => [ true, true, NS_MEDIA, false ],
 		];
 	}
 
@@ -504,14 +508,18 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 	 * @covers MobileFrontendHooks::onArticleParserOptions
 	 * @dataProvider provideArticleParserOptions
 	 */
-	public function testArticleParserOptions( bool $isMobile, bool $isParsoid, bool $expected ) {
+	public function testArticleParserOptions( bool $isMobile, bool $isParsoid, int $namespace, bool $expected ) {
 		// this section of the code depends on the ParserMigration extension being loaded
 		$this->markTestSkippedIfExtensionNotLoaded( 'ParserMigration' );
 
 		MobileContext::singleton()->setForceMobileView( $isMobile );
 		$this->overrideConfigValue( 'ParserMigrationEnableParsoidArticlePages', $isParsoid );
 
-		$article = new Article( Title::newMainPage() );
+		// Create a title in the specified namespace
+		$title = $namespace === NS_MAIN
+			? Title::newMainPage()
+			: Title::makeTitle( $namespace, 'Test' );
+		$article = new Article( $title );
 		$parserOptions = ParserOptions::newFromAnon();
 
 		$this->newMobileFrontendHooks()->onArticleParserOptions( $article, $parserOptions );

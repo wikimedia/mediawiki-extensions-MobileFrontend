@@ -368,6 +368,23 @@ class MobileFrontendHooks implements
 			// access html and body) and gadgets have something to check for.
 			// @stable added in 1.38
 			$bodyAttrs['class'] .= ' mw-mf';
+
+			// Add a class to the body to indicate whether collapsible sections
+			// are enabled on this namespace page.
+			// @stable added in 1.46
+			$title = $out->getTitle();
+			if ( $title ) {
+				$namespace = $title->getNamespace();
+				$namespacesWithoutCollapsibleSections = $this->config->get( 'MFNamespacesWithoutCollapsibleSections' );
+				$isCollapsibleSections = !in_array( $namespace, $namespacesWithoutCollapsibleSections );
+
+				if ( $isCollapsibleSections ) {
+					$bodyAttrs['class'] .= ' mf-collapsible-sections';
+				// FIXME: Remove the `else` block when cache has been cleared after 2 weeks.
+				} else {
+					$bodyAttrs['class'] .= ' mf-collapsible-sections-disabled';
+				}
+			}
 		}
 	}
 
@@ -1055,7 +1072,14 @@ class MobileFrontendHooks implements
 			// set the collapsible sections parser flag so that section content is wrapped in a div for easier targeting
 			// only if we're in mobile view and parsoid is enabled
 			if ( $context->shouldDisplayMobileView() && $shouldUseParsoid ) {
-				$parserOptions->setCollapsibleSections();
+				$title = $article->getTitle();
+				$namespace = $title->getNamespace();
+				$namespacesWithoutCollapsibleSections = $this->config->get( 'MFNamespacesWithoutCollapsibleSections' );
+
+				// Don't enable collapsible sections for certain namespaces
+				if ( !in_array( $namespace, $namespacesWithoutCollapsibleSections ) ) {
+					$parserOptions->setCollapsibleSections();
+				}
 			}
 		}
 	}

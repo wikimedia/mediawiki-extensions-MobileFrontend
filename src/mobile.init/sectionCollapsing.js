@@ -156,6 +156,9 @@ function init( container ) {
 
 	headingWrappers.forEach( ( wrapper ) => {
 		const content = wrapper.nextElementSibling;
+		if ( content.tagName !== 'DIV' ) {
+			return;
+		}
 		const icon = prepareHeadingWrapper( wrapper, content );
 
 		attachEventListeners( wrapper, content, icon );

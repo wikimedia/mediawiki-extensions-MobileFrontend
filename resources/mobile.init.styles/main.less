@@ -21,7 +21,13 @@
 		display: block;
 	}
 
-	@{selector-parsoid-top-heading}:not( .mf-collapsible-heading )::before {
+	// Check if collapsible sections are enabled via `mf-collapsible-sections`
+	// body class. If enabled, reserve space for the icon. If disabled, do not
+	// show a visible gap before the section heading title. Some pages are
+	// excluded from section collapsing via MFNamespacesWithoutCollapsibleSections.
+	// FIXME: Drop not selector when cache has been cleared after 2 weeks. Targets the cached HTML for backwards compatibility.
+	body:not( .mf-collapsible-sections ):not( .mf-collapsible-sections-disabled ) @{selector-parsoid-top-heading}:not( .mf-collapsible-heading ),
+	body.mf-collapsible-sections @{selector-parsoid-top-heading}:not( .mf-collapsible-heading )::before {
 		// Reserve the correct space for the collapsible heading icon (T381655)
 		content: '';
 		display: block;
@@ -31,11 +37,16 @@
 	}
 
 	@{selector-parsoid-top-heading} {
-		cursor: pointer;
 		border-bottom: @border-width-base @border-style-base @border-color-muted;
 		display: flex;
 		// Vertically center toggle and edit icons in the case of long, multiline headings
 		align-items: center;
+	}
+
+	// FIXME: Drop not selector when cache has been cleared after 2 weeks. Targets the cached HTML for backwards compatibility.
+	body:not( .mf-collapsible-sections ):not( .mf-collapsible-sections-disabled ) @{selector-parsoid-top-heading},
+	body.mf-collapsible-sections @{selector-parsoid-top-heading} {
+		cursor: pointer;
 
 		.mf-collapsible-icon {
 			margin-right: 6px;
