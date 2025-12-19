@@ -29,11 +29,33 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 	public function __construct(
 		private readonly HookContainer $hookContainer,
 		private readonly RepoGroup $repoGroup,
-		WatchedItemStoreInterface $watchStoreItem,
+		WatchedItemStoreInterface $watchedItemStore,
 	) {
 		$req = $this->getRequest();
 		$this->offsetTitle = $req->getVal( 'from', '' );
-		parent::__construct( $watchStoreItem );
+		parent::__construct( $watchedItemStore );
+	}
+
+	/**
+	 * Get a paged list of titles on a user's watchlist, excluding talk pages,
+	 * and return as a two-dimensional array with namespace and title.
+	 *
+	 * @return array
+	 */
+	protected function getWatchlistInfo(): array {
+		$titles = [];
+		$lb = $this->linkBatchFactory->newLinkBatch();
+
+		$this->pager->doQuery();
+		$watchedItems = $this->pager->getOrderedResult();
+
+		foreach ( $watchedItems as $item ) {
+			$titles[$item->wl_namespace][$item->wl_title] = $item->expiry;
+			$lb->add( $item->wl_namespace, $item->wl_title );
+		}
+
+		$lb->execute();
+		return $titles;
 	}
 
 	/**
