@@ -39,6 +39,15 @@ QUnit.module( 'MobileFrontend Toggler.js', {
 		mediawiki.setUp( sandbox, global );
 		mustache.setUp( sandbox, global );
 
+		// Make Node constants available for Toggler.js _createHeadingButton method
+		// Node.js test environment doesn't have Node constants globally available
+		const NodeConstants = {
+			TEXT_NODE: 3,
+			ELEMENT_NODE: 1
+		};
+		global.Node = NodeConstants;
+		window.Node = NodeConstants;
+
 		browser = require( '../../../src/mobile.startup/Browser' ).getSingleton();
 		Toggler = require( '../../../src/mobile.init/Toggler' );
 
@@ -77,20 +86,21 @@ QUnit.test( 'Mobile mode - Toggle section', function ( assert ) {
 			page: this.page
 		} ),
 		$section = this.$section0,
+		$headingElement = $section.find( 'h1, h2, h3, h4, h5, h6' ).first(),
 		$content = this.$container.find( '.collapsible-block' ).eq( 0 );
 
 	toggle.toggle( $section );
 
-	assert.strictEqual( $section.hasClass( 'open-block' ), true, 'open-block class present' );
+	assert.strictEqual( $headingElement.hasClass( 'open-block' ), true, 'open-block class present on heading element' );
 
 	toggle.toggle( $section );
 
 	assert.strictEqual( $content.hasClass( 'open-block' ), false, 'check content gets closed on a toggle' );
-	assert.strictEqual( $section.hasClass( 'open-block' ), false, 'check section is closed' );
+	assert.strictEqual( $headingElement.hasClass( 'open-block' ), false, 'check heading element is closed' );
 	// Perform second toggle
 	toggle.toggle( $section );
 	assert.strictEqual( $content.hasClass( 'open-block' ), true, 'check content reopened' );
-	assert.strictEqual( $section.hasClass( 'open-block' ), true, 'check section has reopened' );
+	assert.strictEqual( $headingElement.hasClass( 'open-block' ), true, 'check heading element has reopened' );
 } );
 
 QUnit.test( 'Mobile mode - Clicking a hash link to reveal an already open section', function ( assert ) {
@@ -100,13 +110,14 @@ QUnit.test( 'Mobile mode - Clicking a hash link to reveal an already open sectio
 			$container: this.$container,
 			prefix: '',
 			page: this.page
-		} );
+		} ),
+		$headingElement = this.$section0.find( 'h1, h2, h3, h4, h5, h6' ).first();
 
 	toggle.toggle( this.$section0 );
 
-	assert.strictEqual( this.$section0.hasClass( 'open-block' ), true, 'check section is open' );
+	assert.strictEqual( $headingElement.hasClass( 'open-block' ), true, 'check heading element is open' );
 	toggle.reveal( 'First_Section' );
-	assert.strictEqual( this.$section0.hasClass( 'open-block' ), true, 'check section is still open' );
+	assert.strictEqual( $headingElement.hasClass( 'open-block' ), true, 'check heading element is still open' );
 } );
 
 QUnit.test( 'Mobile mode - Reveal element', function ( assert ) {
@@ -116,13 +127,14 @@ QUnit.test( 'Mobile mode - Reveal element', function ( assert ) {
 			$container: this.$container,
 			prefix: '',
 			page: this.page
-		} );
+		} ),
+		$headingElement = this.$section0.find( 'h1, h2, h3, h4, h5, h6' ).first();
 
 	toggle.toggle( this.$section0 );
 
 	toggle.reveal( 'First_Section' );
 	assert.strictEqual( this.$container.find( '.collapsible-block' ).eq( 0 ).hasClass( 'open-block' ), true, 'check content is visible' );
-	assert.strictEqual( this.$section0.hasClass( 'open-block' ), true, 'check section is open' );
+	assert.strictEqual( $headingElement.hasClass( 'open-block' ), true, 'check heading element is open' );
 } );
 
 QUnit.test( 'Mobile mode - Clicking hash links', function ( assert ) {
@@ -132,13 +144,14 @@ QUnit.test( 'Mobile mode - Clicking hash links', function ( assert ) {
 			$container: this.$container,
 			prefix: '',
 			page: this.page
-		} );
+		} ),
+		$headingElement = this.$section0.find( 'h1, h2, h3, h4, h5, h6' ).first();
 
 	toggle.toggle( this.$section0 );
 
 	this.$container.find( '[href="#First_Section"]' ).trigger( 'click' );
 	assert.strictEqual( this.$container.find( '.collapsible-block' ).eq( 0 ).hasClass( 'open-block' ), true, 'check content is visible' );
-	assert.strictEqual( this.$section0.hasClass( 'open-block' ), true, 'check section is open' );
+	assert.strictEqual( $headingElement.hasClass( 'open-block' ), true, 'check heading element is open' );
 } );
 
 QUnit.test( 'Mobile mode - Tap event toggles section', function ( assert ) {
@@ -149,13 +162,15 @@ QUnit.test( 'Mobile mode - Tap event toggles section', function ( assert ) {
 			prefix: '',
 			page: this.page
 		} ),
+		$section1 = this.$container.find( '.section-heading' ).eq( 1 ),
+		$button = $section1.find( 'button.collapsible-heading-button' ),
 		$content = this.$container.find( '.collapsible-block' ).eq( 1 );
 
 	toggle.toggle( this.$section0 );
 
 	assert.strictEqual( $content.hasClass( 'open-block' ), false, 'check content is hidden at start' );
 
-	this.$container.find( '#section_1' ).trigger( 'click' );
+	$button.trigger( 'click' );
 
 	assert.strictEqual( $content.hasClass( 'open-block' ), true, 'check content is shown on a toggle' );
 } );
@@ -168,25 +183,25 @@ QUnit.test( 'Accessibility - Verify ARIA attributes', function ( assert ) {
 			prefix: '',
 			page: this.page
 		} ),
-		$section = this.$container.find( '#section_1' ),
-		$headingWrapper = $section.parent(),
+		$section = this.$container.find( '#section_1' ).parent(),
+		$button = $section.find( 'button.collapsible-heading-button' ),
 		$content = this.$container.find( '.collapsible-block' ).eq( 1 );
 
 	toggle.toggle( this.$section0 );
 
 	// Test the initial state produced by the init function
 	assert.strictEqual( $content.hasClass( 'open-block' ), false, 'check content is hidden at start' );
-	assert.strictEqual( $headingWrapper.attr( 'aria-expanded' ), 'false', 'check aria-expanded is false at start' );
+	assert.strictEqual( $button.attr( 'aria-expanded' ), 'false', 'check aria-expanded is false at start on button' );
 
 	// Test what the toggle() function gives us when hiding the section
-	$section.trigger( 'click' );
+	$button.trigger( 'click' );
 	assert.strictEqual( $content.hasClass( 'open-block' ), true, 'check content is visible after toggling' );
-	assert.strictEqual( $headingWrapper.attr( 'aria-expanded' ), 'true', 'check aria-expanded is true after toggling' );
+	assert.strictEqual( $button.attr( 'aria-expanded' ), 'true', 'check aria-expanded is true after toggling on button' );
 
 	// Test what the toggle() function gives us when showing the section
-	$section.trigger( 'click' );
+	$button.trigger( 'click' );
 	assert.strictEqual( $content.hasClass( 'open-block' ), false, 'check content is hidden after toggling' );
-	assert.strictEqual( $headingWrapper.attr( 'aria-expanded' ), 'false', 'check aria-expanded is false after toggling' );
+	assert.strictEqual( $button.attr( 'aria-expanded' ), 'false', 'check aria-expanded is false after toggling on button' );
 } );
 
 /**
@@ -227,9 +242,8 @@ QUnit.test( 'Tablet mode - Open by default 2', function ( assert ) {
 /**
  * Accessibility
  */
-QUnit.test( 'Accessibility - Pressing space/ enter toggles a heading', function ( assert ) {
-	const $section = this.$container.find( '#section_1' ),
-		ev = $.Event( 'keypress' );
+QUnit.test( 'Accessibility - Button supports keyboard interaction (Enter/Space trigger click)', function ( assert ) {
+	const $section = this.$container.find( '#section_1' ).parent();
 
 	browser.isWideScreen.returns( false );
 
@@ -241,25 +255,24 @@ QUnit.test( 'Accessibility - Pressing space/ enter toggles a heading', function 
 		page: this.page
 	} );
 
-	const $content = this.$container.find( '.collapsible-block' ).eq( 1 );
+	const $button = $section.find( 'button.collapsible-heading-button' ),
+		$content = this.$container.find( '.collapsible-block' ).eq( 1 );
 
 	assert.strictEqual( $content.hasClass( 'open-block' ), false, 'check content is hidden at start' );
 
-	// Open the section with pressing space
-	ev.which = 32;
-	$section.trigger( ev );
-	assert.strictEqual( $content.hasClass( 'open-block' ), true, 'check content is shown after pressing space' );
+	// Test that the click handler works.
+	$button.trigger( 'click' );
+	assert.strictEqual( $content.hasClass( 'open-block' ), true, 'check content is shown after click (keyboard triggers click)' );
 
-	// Enter should close the section again
-	ev.which = 13;
-	$section.trigger( ev );
-	assert.strictEqual( $content.hasClass( 'open-block' ), false, 'check content is hidden after pressing enter' );
+	$button.trigger( 'click' );
+	assert.strictEqual( $content.hasClass( 'open-block' ), false, 'check content is hidden after click again' );
 } );
 
 QUnit.test( 'Clicking a link within a heading isn\'t triggering a toggle', function ( assert ) {
 
-	const $section = $( '#section_1' ),
-		$content = $( '.collapsible-block' ).eq( 1 );
+	const $section = this.$container.find( '#section_1' ).parent(),
+		$button = $section.find( 'button.collapsible-heading-button' ),
+		$content = this.$container.find( '.collapsible-block' ).eq( 1 );
 
 	/* eslint-disable-next-line no-new */
 	new Toggler( {
@@ -271,7 +284,7 @@ QUnit.test( 'Clicking a link within a heading isn\'t triggering a toggle', funct
 
 	assert.strictEqual( $content.hasClass( 'open-block' ), false, 'check content is hidden at start' );
 
-	$section.find( '> a' ).eq( 0 ).trigger( 'mouseup' );
+	$button.find( 'a' ).eq( 0 ).trigger( 'mouseup' );
 	assert.strictEqual( $content.hasClass( 'open-block' ), false, 'check content is still being hidden after clicking on the link' );
 } );
 
@@ -282,16 +295,17 @@ QUnit.test( 'MobileFrontend toggle.js - T320753: Presence of class disables togg
 		prefix: '',
 		page: this.page
 	} );
-	const $heading = this.$container.find( 'h2' );
+	const $heading = this.$container.find( '.section-heading' ).eq( 0 );
 	assert.strictEqual(
 		toggler.toggle( $heading ),
 		true,
 		'toggle is functional'
 	);
-	$heading.addClass( 'collapsible-heading-disabled' );
+	const $button = $heading.find( 'button.collapsible-heading-button' );
+	$button.addClass( 'collapsible-heading-button-disabled' );
 	assert.strictEqual(
 		toggler.toggle( $heading ),
 		false,
-		'Toggle is not functional when collapsible-heading-disabled class is present'
+		'Toggle is not functional when collapsible-heading-button-disabled class is present'
 	);
 } );

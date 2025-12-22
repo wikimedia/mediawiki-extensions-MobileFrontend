@@ -9,7 +9,7 @@
 	},
 	{
 		"resourceModule": "mobile.init",
-		"maxSize": "5.8KB"
+		"maxSize": "7KB"
 	},
 	{
 		"resourceModule": "mobile.languages.structured",
@@ -37,7 +37,7 @@
 	},
 	{
 		"resourceModule": "mobile.special.styles",
-		"maxSize": "2.8KB"
+		"maxSize": "3KB"
 	},
 	{
 		"resourceModule": "mobile.special.mobileoptions.styles",

@@ -1,14 +1,33 @@
+@import 'mediawiki.skin.variables.less';
+
 .client-js {
-	.collapsible-heading {
-		cursor: pointer;
+	.collapsible-heading-button {
+		cursor: @cursor-base;
+		// Reset button defaults (only applies when on button element)
+		border: 0;
+		border-radius: @border-radius-base;
+		background: none;
+		padding: 0;
+		// Margin is already null'd in normalize.less.
+		font: inherit;
+		text-align: inherit;
+		color: inherit;
+		// Make button a flex container to maintain layout
+		display: flex;
+		align-items: center;
+		width: @size-full;
+
+		& :focus {
+			outline: @border-width-thick @border-style-base @outline-base--focus;
+			outline-offset: @spacing-12;
+		}
 	}
 
-	.collapsible-heading-disabled {
-		cursor: default;
-
-		.indicator {
-			opacity: 0.5;
-		}
+	// TODO: Remove after 14 days
+	// Backward compatibility: Old cached HTML has .collapsible-heading on wrapper div
+	// Old structure: <div class="section-heading collapsible-heading" role="button">...</div>
+	.section-heading.collapsible-heading {
+		cursor: pointer;
 	}
 
 	// Vertically center toggle buttons in the case of long, multiline headings
@@ -16,15 +35,33 @@
 	.section-heading {
 		display: flex;
 		align-items: center;
+	}
+
+	.indicator {
+		max-height: 32px;
+	}
+
+	.collapsible-heading-button-disabled {
+		cursor: default;
 
 		.indicator {
-			max-height: 32px;
+			opacity: 0.5;
+		}
+	}
+
+	// TODO: Remove after 14 days
+	// Backward compatibility: Old cached HTML may have collapsible-heading-disabled
+	.collapsible-heading-disabled {
+		cursor: default;
+
+		.indicator {
+			opacity: 0.5;
 		}
 	}
 }
 
 @media print {
-	.collapsible-heading .indicator {
+	.indicator {
 		display: none;
 	}
 
