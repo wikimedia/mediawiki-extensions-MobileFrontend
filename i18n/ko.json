@@ -33,7 +33,9 @@
 			"Ykhwong",
 			"관인생략",
 			"밝은소년",
-			"아라"
+			"아라",
+			"Bisang",
+			"YeBoy371"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "사용자가 모바일 인터페이스를 통해 편집하고 있는지 여부 ($1)",
@@ -71,10 +73,10 @@
 	"mobile-frontend-editor-disabled-anon": "이 문서를 편집하려면 로그인해야 합니다.",
 	"mobile-frontend-editor-editing": "편집 중",
 	"mobile-frontend-editor-editing-page": "<span>$1 <strong>편집 중</strong></span>",
-	"mobile-frontend-editor-error": "오류: 편집이 게시되지 않았습니다.",
+	"mobile-frontend-editor-error": "오류, 편집이 게시되지 않았습니다.",
 	"mobile-frontend-editor-error-conflict": "오류, 다른 사용자가 이 문서를 편집했습니다.",
-	"mobile-frontend-editor-error-loading": "오류: 편집기를 불러올 수 없습니다.",
-	"mobile-frontend-editor-error-preview": "미리 보기를 불러올 때 예상치 못한 오류가 발생했습니다. 닫은 다음 다시 시도해 주십시오.",
+	"mobile-frontend-editor-error-loading": "오류, 편집기를 불러올 수 없습니다.",
+	"mobile-frontend-editor-error-preview": "오류, 미리 보기를 불러올 때 예상치 못한 문제가 발생했습니다. 닫은 다음 다시 시도해 주십시오.",
 	"mobile-frontend-editor-keep-editing": "편집 계속",
 	"mobile-frontend-editor-licensing": "변경사항을 게시하게 되면 $1 {{PLURAL:$2|라이선스}}에 따라 이 기여를 배포하는 데 동의함을 뜻합니다.",
 	"mobile-frontend-editor-licensing-with-terms": "변경사항을 게시하게 되면 $1에 동의하고 $2 {{PLURAL:$3|라이선스}}에 따라 이 기여를 배포하는 데 동의함을 뜻합니다.",
@@ -94,7 +96,7 @@
 	"mobile-frontend-editor-viewing-source-page": "<span>$1 </span><strong>문서의 원본을 보는 중</strong>",
 	"mobile-frontend-editor-wait": "편집을 게시하고 있으니 기다려 주십시오.",
 	"mobile-frontend-editor-loading": "편집기를 불러오는 중...",
-	"mobile-frontend-editor-toload": "편집기가 지금 로드됩니다. 몇 초 후에도 이 메시지가 여전히 보이면, [$1 문서를 다시 로드]해 주십시오.",
+	"mobile-frontend-editor-toload": "이제 편집기가 불러오게 됩니다. 몇 초 후에도 이 메시지가 계속 표시되면 [$1 문서를 새로 고침]해 주십시오.",
 	"mf-expand-sections-description": "기본적으로 콘텐츠 문서의 문단을 무조건 펼칩니다.",
 	"mf-expand-sections-name": "모든 문단 확장",
 	"mf-font-size-name": "텍스트",
