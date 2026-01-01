@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Bencemac",
+			"Boro",
 			"BáthoryPéter",
 			"Csega",
 			"Csigabi",
@@ -133,7 +134,7 @@
 	"mobile-frontend-settings-save": "Beállítások elmentve.",
 	"mobile-frontend-terms-text": "Felhasználási feltételek",
 	"mobile-frontend-view": "Mobil nézet",
-	"mobile-frontend-view-desktop": "Asztali",
+	"mobile-frontend-view-desktop": "Asztali nézet",
 	"mobile-frontend-watchlist-a-z-empty-howto": "Jelenleg nem figyelsz egy lapot sem. A figyelőlistád segít követni az érdeklődési körödbe tartozó lapokazt. Egy lap figyeléséhez koppints a csillag ikonra.",
 	"mobile-frontend-watchlist-a-z-empty-howto-alt": "Kattints a csillag ikonra",
 	"mobile-frontend-watchlist-back-home": "Vissza a kezdőlapra",
