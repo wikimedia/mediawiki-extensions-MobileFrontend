@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Dhondup",
 			"TayfunEt.",
 			"Tenzin Thoesam",
 			"Zolgoyo",
@@ -13,5 +14,5 @@
 	"mobile-frontend-editor-save": "ཉར་བ།",
 	"mobile-frontend-terms-text": "སྤྱོད་ལམ་ཁྲིམས་ལུགས།",
 	"mobile-frontend-view": "ཁ་པར་ལྟ་རྣམ།",
-	"mobile-frontend-view-desktop": "འཇགས་རིས་"
+	"mobile-frontend-view-desktop": "འཆར་ངོས་སྟོན།"
 }

@@ -26,6 +26,7 @@
 			"Opraco",
 			"Pierpao",
 			"Polyethylen",
+			"RogueScholar",
 			"SandroHc",
 			"Ti4goc",
 			"Vitorvicentevalente"
@@ -148,7 +149,7 @@
 	"mobile-frontend-settings-save": "As configurações foram gravadas.",
 	"mobile-frontend-terms-text": "Condições de utilização",
 	"mobile-frontend-view": "Versão móvel",
-	"mobile-frontend-view-desktop": "Versão desktop",
+	"mobile-frontend-view-desktop": "Visualização para computadores",
 	"mobile-frontend-watchlist-a-z-empty-howto": "De momento, não está a vigiar quaisquer páginas. A sua lista de páginas vigiadas ajuda-o a acompanhar as páginas que lhe interessam. Adicione páginas à sua lista clicando o ícone em forma de estrela.",
 	"mobile-frontend-watchlist-a-z-empty-howto-alt": "Clique o ícone da estrela",
 	"mobile-frontend-watchlist-back-home": "Voltar ao início",
