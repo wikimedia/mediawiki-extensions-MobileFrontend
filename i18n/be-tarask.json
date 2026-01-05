@@ -7,7 +7,8 @@
 			"Renessaince",
 			"Wizardist",
 			"Zedlik",
-			"Jarash"
+			"Jarash",
+			"Ucukor"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ці рэдагуе ўдзельнік праз мабільны інтэрфэйс",
@@ -77,7 +78,7 @@
 	"mobile-frontend-privacy-link-text": "Прыватнасьць",
 	"mobile-frontend-save-settings": "Захаваць",
 	"mobile-frontend-settings-beta": "{{SITENAME}} βeta",
-	"mobile-frontend-terms-text": "Умовы выкарыстаньня",
+	"mobile-frontend-terms-text": "Умовы ўжываньня",
 	"mobile-frontend-view": "Мабільная вэрсія",
 	"mobile-frontend-view-desktop": "Стацыянарны",
 	"mobile-frontend-watchlist-a-z": "Сьпіс",
