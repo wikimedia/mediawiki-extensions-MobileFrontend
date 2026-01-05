@@ -489,7 +489,7 @@ class SourceEditorOverlay extends EditorOverlayBase {
 				}
 
 				if ( this.gateway.fromModified ) {
-					// Trigger intial EditorGateway#setContent and update save button
+					// Trigger initial EditorGateway#setContent and update save button
 					this.onInputWikitextEditor();
 				}
 
