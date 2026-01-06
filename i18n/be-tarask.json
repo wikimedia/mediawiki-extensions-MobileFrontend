@@ -7,7 +7,8 @@
 			"Red Winged Duck",
 			"Renessaince",
 			"Wizardist",
-			"Zedlik"
+			"Zedlik",
+			"Ucukor"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ці рэдагуе ўдзельнік праз мабільны інтэрфэйс ($1)",
@@ -55,7 +56,7 @@
 	"mobile-frontend-privacy-link-text": "Прыватнасьць",
 	"mobile-frontend-save-settings": "Захаваць",
 	"mobile-frontend-settings-beta": "{{SITENAME}} βeta",
-	"mobile-frontend-terms-text": "Умовы выкарыстаньня",
+	"mobile-frontend-terms-text": "Умовы ўжываньня",
 	"mobile-frontend-view": "Мабільная вэрсія",
 	"mobile-frontend-view-desktop": "Стацыянарны",
 	"mobile-frontend-watchlist-a-z-empty-howto-alt": "Націсьніце на выяву з зоркай",
