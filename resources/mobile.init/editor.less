@@ -36,13 +36,16 @@
 
 /** In parsoid */
 .mw-parser-output[ data-mw-parsoid-version ] {
-	/* hide edit buttons until expanded (T384408) */
 	.mw-editsection {
+		visibility: visible;
+	}
+
+	.mf-collapsible-heading[ aria-expanded='false' ] .mw-editsection {
 		visibility: hidden;
 	}
 
-	[ aria-expanded='true' ] .mw-editsection,
-	[ aria-expanded='true' ] ~ .mf-collapsible-content section .mw-editsection {
+	.mf-collapsible-heading[ aria-expanded='true' ] .mw-editsection,
+	.mf-collapsible-heading[ aria-expanded='true' ] ~ .mf-collapsible-content section .mw-editsection {
 		visibility: visible;
 	}
 }
