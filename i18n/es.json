@@ -49,7 +49,8 @@
 			"Tusca",
 			"VegaDark",
 			"Vivaelcelta",
-			"WikiiiTranslator"
+			"WikiiiTranslator",
+			"Tecbs"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si un usuario está editando o no a través de la interfaz móvil ( $1 )",
