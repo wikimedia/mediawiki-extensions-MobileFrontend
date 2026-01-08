@@ -106,17 +106,6 @@ class Toggler {
 		Currently costly reflow-inducing viewport size computation is being done for lazy-loaded
 		images by the main listener to this event. */
 		mw.requestIdleCallback( () => {
-			/**
-			 * Global event emitted after a section has been toggled
-			 * Internal for use inside ExternalGuidance.
-			 *
-			 * @event ~'mobileFrontend.section-toggled'
-			 * @memberof Hooks
-			 */
-			mw.hook( 'mobileFrontend.section-toggled' ).fire( {
-				expanded: wasExpanded,
-				$heading
-			} );
 
 			/**
 			 * Internal for use inside ReaderExperiments
