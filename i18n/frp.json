@@ -14,11 +14,13 @@
 	"mobile-frontend-save-settings": "Encartar la configuracion",
 	"mobile-frontend-terms-text": "Condicions d’usâjo",
 	"mobile-frontend-view": "Vèrsion mobila",
-	"mobile-frontend-view-desktop": "Vèrsion de burô",
+	"mobile-frontend-view-desktop": "Viua de burô",
 	"mobile-frontend-watchlist-filter-all": "Totes",
 	"mobile-frontend-watchlist-filter-articles": "Articllos",
 	"mobile-frontend-watchlist-filter-other": "Ôtres",
 	"mobile-frontend-watchlist-filter-talk": "Discussion",
+	"mobile.css": "/* Tot CSS betâ ique serat chargiê por los utilisators du seto mobilo */",
+	"mobile.js": "/* Tot code JavaScript betâ ique serat chargiê por los utilisators du seto mobilo */",
 	"tag-mobile_edit": "Changement per enfatâblo",
 	"tag-mobile_web_edit": "Changement per lo seto enfatâblo"
 }

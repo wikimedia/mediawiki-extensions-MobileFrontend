@@ -66,7 +66,7 @@
 	"mobile-frontend-editor-loading": "Včityvanje redaktora...",
 	"mobile-frontend-editor-loadingtooslow": "Medla svez?",
 	"mobile-frontend-editor-loadbasiceditor": "Prěključiti na redaktor izvornogo koda",
-	"mobile-frontend-editor-toload": "Redaktor skoro včitaje se. Ako poslě několikyh sekund ješče uvidite tuto soobčenje, [$1 otvorite stranicu ponovno].",
+	"mobile-frontend-editor-toload": "Redaktor skoro včitaje se. Ako poslě několikyh sekund ješče uvidite tuto soobčenje, [$1 osvěžite stranicu].",
 	"mf-expand-sections-description": "Vsegda razvivati razděly člankov standardno.",
 	"mf-expand-sections-name": "Razvinuti vse razděly",
 	"mf-expand-sections-0-label": "Standardno svivati",
