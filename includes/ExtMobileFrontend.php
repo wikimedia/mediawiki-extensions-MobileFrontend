@@ -227,7 +227,7 @@ class ExtMobileFrontend {
 			$context->msg(
 				'mobile-frontend-user-page-create-user-page-link-label',
 				$pageUser->getUserPage()->getBaseTitle()
-			)->parse();
+			)->text();
 		// Mobile editor has trouble when section is not specified.
 		// It doesn't matter here since the page doesn't exist.
 		$data['editUrl'] = $title->getLinkURL( [ 'action' => 'edit', 'section' => 0 ] );
