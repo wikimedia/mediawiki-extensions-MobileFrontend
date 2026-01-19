@@ -14,6 +14,7 @@
 			"Minisarm",
 			"NGC 54",
 			"Paloi Sciurala",
+			"SZ475",
 			"Strainu",
 			"Wintereu"
 		]
@@ -123,7 +124,7 @@
 	"mobile-frontend-settings-save": "Setările au fost salvate.",
 	"mobile-frontend-terms-text": "Termeni de utilizare",
 	"mobile-frontend-view": "Versiune mobilă",
-	"mobile-frontend-view-desktop": "Desktop",
+	"mobile-frontend-view-desktop": "Vizualizare desktop",
 	"mobile-frontend-watchlist-a-z-empty-howto": "Actualmente nu urmăriți nicio pagină. Lista de pagini urmărite vă ajută să țineți evidența paginilor care vă interesează. Adăugați pagini în această listă apăsând pictograma „stea”.",
 	"mobile-frontend-watchlist-a-z-empty-howto-alt": "Faceți clic pe pictograma stea",
 	"mobile-frontend-watchlist-back-home": "Înapoi acasă",

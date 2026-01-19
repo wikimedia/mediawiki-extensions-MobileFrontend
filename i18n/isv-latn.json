@@ -13,7 +13,7 @@
 	"mobile-frontend-edit-signup-action": "<strong>Pomožite ulěpšiti projekt {{SITENAME}}.</strong><br />Registrujte se, da byste načeli praviti.",
 	"mobile-frontend-editor-anon": "Praviti bez prijavjenja se",
 	"mobile-frontend-editor-anonwarning": "<strong>Čuvanje:</strong> vy ne jeste prijavjeni. Ako zapišete kakekoli pravky, vaš IP-adres bude publično vidimy v historiji versij tutoj stranice. Ako <strong>prijavite se</strong> ili stvorite konto, vaše pravky budut pripisyvane vašemu koristničskomu imeni, zajedno s drugymi prědnostami.",
-	"mobile-frontend-editor-autocreatewarning": "<strong>Čuvanje:</strong> vy ne jeste prijavjeni. Kogda sdělajete pravku, stvorjeno bude za vas vrěmenno koristničsko konto. [[$1|Veče informacij]]. <strong>Prijavite se</strong> ili <strong>stvorite koristničsko konto</strong>, da byste dalje dostavali uvědomjenja poslě iztečenja tutogo konta i takože iměli dostup k drugym funkcijam.",
+	"mobile-frontend-editor-autocreatewarning": "<strong>Čuvanje:</strong> vy ne jeste prijavjeni. Kogda sdělajete pravku, stvorjeno bude za vas začasno koristničsko konto. [[$1|Veče informacij]]. <strong>Prijavite se</strong> ili <strong>stvorite koristničsko konto</strong>, da byste dalje dostavali uvědomjenja poslě iztečenja tutogo konta i takože iměli dostup k drugym funkcijam.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Prijaviti se",
 	"mobile-frontend-drawer-arrow-label": "Zatvoriti",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "OK",
