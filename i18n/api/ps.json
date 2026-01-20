@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"شاه زمان پټان"
+		]
+	},
+	"apihelp-parse-param-mobileformat": "د تجزيې بهرلېږنه په هغه بڼه بېرته راگرځي چې د موبايل وسيلو لپاره مناسبه وي.",
+	"apihelp-parse-param-noimages": "د موبايل بهرلېږونه کې انځورونه ناچارنول.",
+	"apihelp-parse-param-mainpage": "د موبايل ار مخ اړونې پلې‌کول.",
+	"apihelp-webapp-manifest-summary": "وېب‌کاريال څرگندتيا بېرته راگرځوي"
+}
