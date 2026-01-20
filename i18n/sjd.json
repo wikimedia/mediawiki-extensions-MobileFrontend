@@ -17,8 +17,10 @@
 	"mobile-frontend-editor-publish": "Элмсаһтӭ",
 	"mobile-frontend-editor-save": "Пынне",
 	"mobile-frontend-editor-summary": "Воа̄йхэзэ баяс:",
+	"mobile-frontend-editor-switch-editor": "Мэ̄ннлэ е̄ресь редактрэ",
 	"mobile-frontend-editor-viewing-source-page": "<strong>Ка̄йв текст кӣһчмушш:</strong><span> $1</span>",
 	"mobile-frontend-editor-loading": "Редактэр лоа̄дтмушш...",
+	"mf-expand-sections-name": "Ле̄вхэ пугк лыст поа̄ҋкэтҍ",
 	"mf-font-size-name": "Текст",
 	"mobile-frontend-joined-just-now": "Еськ {{GENDER:$1|се̄брэ}}",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|Се̄брэ}} {{PLURAL:$2|$2 секунда|$2 секунда|$2 секундэдтӭ}} маӈас",
@@ -42,6 +44,7 @@
 	"tag-advanced_mobile_edit": "пэ̄йель ко̄ммтна мобильнэ режим",
 	"tag-mobile_web_edit": "воа̄йхэсс мобильнэ ве̄рсьясьт",
 	"mobile-frontend-loading-message": "Лоа̄дтмушш...",
+	"mobile-frontend-mobile-option-amc-learn-more": "Е̄намп тӣдҍсэ",
 	"mobile-frontend-user-pref-option": "Оаннӭй оа̄ссмуж",
 	"mobile-frontend-user-pref-link": "А̄ввьдэ оа̄ссмужэтҍ",
 	"prefs-mobile": "Мобильнэ оа̄ссмуж"
