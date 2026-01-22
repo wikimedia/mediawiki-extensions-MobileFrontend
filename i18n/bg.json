@@ -86,7 +86,7 @@
 	"mobile-frontend-last-modified-date": "Последна промяна в $2, на $1",
 	"mobile-frontend-last-modified-with-user-days": "[$4 Последно {{GENDER:$1|променена}} преди {{PLURAL:$3|$3 ден|$3 дена}}] от {{PLURAL:$5|[$6 $2]|0=анонимен потребител}}",
 	"mobile-frontend-last-modified-with-user-hours": "[$4 Последно {{GENDER:$1|променена}} преди {{PLURAL:$3|$3 час|$3 часа}}] от {{PLURAL:$5|[$6 $2]|0=анонимен потребител}}",
-	"mobile-frontend-last-modified-with-user-just-now": "[$3 Току що {{GENDER:$1|променена}}] от {{PLURAL:$4|[$5 $2]|0=анонимен потребител}}",
+	"mobile-frontend-last-modified-with-user-just-now": "[$3 Току-що {{GENDER:$1|променена}}] от {{PLURAL:$4|[$5 $2]|0=анонимен потребител}}",
 	"mobile-frontend-last-modified-with-user-minutes": "[$4 Последно {{GENDER:$1|променена}} преди {{PLURAL:$3|$3 минута|$3 минути}}] от {{PLURAL:$5|[$6 $2]|0=анонимен потребител}}",
 	"mobile-frontend-last-modified-with-user-months": "[$4 Последно {{GENDER:$1|променена}} преди {{PLURAL:$3|$3 месец|$3 месеца}}] от {{PLURAL:$5|[$6 $2]|0=анонимен потребител}}",
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 Последно {{GENDER:$1|променена}} преди {{PLURAL:$3|$3 секунда|$3 секунди}}] от {{PLURAL:$5|[$6 $2]|0=анонимен потребител}}",
