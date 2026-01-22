@@ -21,9 +21,8 @@ const isCollapsedByDefault = require( './isCollapsedByDefault.js' );
 /**
  * A class for enabling toggling
  *
- * Toggling can be disabled on a specific heading by adding the
- * collapsible-heading-button-disabled class (or collapsible-heading-disabled
- * for backward compatibility).
+ * Toggling can be disabled on a sepcific heading by adding the
+ * collapsible-heading-disabled class.
  */
 class Toggler {
 	/**
@@ -63,18 +62,6 @@ class Toggler {
 	}
 
 	/**
-	 * Gets the heading element (h1-h6) if it exists, otherwise returns the wrapper
-	 *
-	 * @private
-	 * @param {HTMLElement} wrapperElement The wrapper element
-	 * @return {HTMLElement} The heading element or wrapper
-	 */
-	_getHeadingTarget( wrapperElement ) {
-		const headingElement = wrapperElement.querySelector( 'h1, h2, h3, h4, h5, h6' );
-		return headingElement || wrapperElement;
-	}
-
-	/**
 	 * Given a heading, toggle it and any of its children
 	 *
 	 * @memberof Toggler
@@ -84,38 +71,23 @@ class Toggler {
 	 * @return {boolean}
 	 */
 	toggle( $heading, fromSaved ) {
-		let $button = $heading.data( 'button' ) || $heading.find( 'button.collapsible-heading-button' );
-		if ( !$button.length ) {
-			// TODO: Remove after 14 days
-			// Backward compatibility: Old cached HTML has collapsible-heading on wrapper div
-			// Fallback for headings without button (old structure)
-			$button = $heading;
-		}
-
-		// TODO: Remove after 14 days
-		// Backward compatibility: Old cached HTML may have collapsible-heading-disabled
-		if ( !fromSaved && ( $button.hasClass( 'collapsible-heading-button-disabled' ) || $button.hasClass( 'collapsible-heading-disabled' ) ) ) {
+		if ( !fromSaved && $heading.hasClass( 'collapsible-heading-disabled' ) ) {
 			return false;
 		}
 
-		// Get the target element (heading element or wrapper for backward compatibility)
-		const target = this._getHeadingTarget( $heading[0] );
+		const wasExpanded = $heading.is( '.open-block' );
 
-		const wasExpanded = target.classList.contains( 'open-block' );
-
-		target.classList.toggle( 'open-block' );
-		// Ensure collapsible-heading class is present on heading element
-		target.classList.add( 'collapsible-heading' );
+		$heading.toggleClass( 'open-block' );
 
 		arrowOptions.rotation = wasExpanded ? 0 : 180;
 		const newIndicator = new Icon( arrowOptions );
-		const $indicatorElement = $heading.data( 'indicator' ) || $button.find( '.indicator' );
-		if ( $indicatorElement && $indicatorElement.length ) {
+		const $indicatorElement = $heading.data( 'indicator' );
+		if ( $indicatorElement ) {
 			$indicatorElement.replaceWith( newIndicator.$el );
 			$heading.data( 'indicator', newIndicator.$el );
 		}
 
-		$button.attr( 'aria-expanded', !wasExpanded ? 'true' : 'false' );
+		$heading.attr( 'aria-expanded', !wasExpanded );
 
 		const $content = $heading.next();
 		if ( $content.hasClass( 'open-block' ) ) {
@@ -168,85 +140,19 @@ class Toggler {
 			return false;
 		}
 
-		// TODO: Remove after 14 days
-		// Backward compatibility: Old cached HTML has .collapsible-heading on wrapper div
-		// Old structure: <div class="section-heading collapsible-heading">...</div>
-		let $heading = $target.parents( '.collapsible-heading, .section-heading' );
-
+		let $heading = $target.parents( '.collapsible-heading' );
 		// The heading is not a section heading, check if in a content block!
 		if ( !$heading.length ) {
-			$heading = $target.parents( '.collapsible-block' ).prev( '.section-heading' );
+			$heading = $target.parents( '.collapsible-block' ).prev( '.collapsible-heading' );
 		}
-		if ( $heading.length ) {
-			const $button = $heading.data( 'button' ) || $heading.find( 'button.collapsible-heading-button' );
-			// TODO: Remove after 14 days
-			// Backward compatibility: Old cached HTML - check heading directly if no button
-			if ( $button.length ) {
-				const headingTarget = this._getHeadingTarget( $heading[0] );
-				if ( !headingTarget.classList.contains( 'open-block' ) ) {
-					this.toggle( $heading );
-				}
-			} else if ( $heading.hasClass( 'collapsible-heading' ) && !$heading.hasClass( 'open-block' ) ) {
-				// Old structure: heading has collapsible-heading class directly
-				this.toggle( $heading );
-			}
+		if ( $heading.length && !$heading.hasClass( 'open-block' ) ) {
+			this.toggle( $heading );
 		}
 		if ( $heading.length ) {
 			// scroll again after opening section (opening section makes the page longer)
 			window.scrollTo( 0, $target.offset().top );
 		}
 		return true;
-	}
-
-	/**
-	 * Creates a button element inside a heading to preserve heading semantics.
-	 * Following W3C ARIA accordion pattern: https://www.w3.org/WAI/ARIA/apg/patterns/accordion/examples/accordion/
-	 *
-	 * @private
-	 * @param {HTMLElement} wrapperElement The wrapper element
-	 * @param {string} id The ID for aria-controls
-	 * @param {boolean} initiallyCollapsed Whether the section starts collapsed
-	 * @param {jQuery.Object} $serverIndicator Optional server-rendered indicator to reuse
-	 * @return {HTMLElement} The created button element
-	 */
-	_createHeadingButton( wrapperElement, id, initiallyCollapsed, $serverIndicator ) {
-		// Find the actual heading element (h1-h6) inside the wrapper using _getHeadingTarget
-		const headingElement = this._getHeadingTarget( wrapperElement );
-		// If _getHeadingTarget returned the wrapper itself, no heading element exists
-		if ( headingElement === wrapperElement ) {
-			return null;
-		}
-
-		const button = document.createElement( 'button' );
-		button.classList.add( 'collapsible-heading-button' );
-		button.type = 'button';
-		button.setAttribute( 'aria-controls', id );
-		button.setAttribute( 'aria-expanded', initiallyCollapsed ? 'false' : 'true' );
-
-		// Create indicator with correct rotation state
-		arrowOptions.rotation = !initiallyCollapsed ? 180 : 0;
-		const indicator = new Icon( arrowOptions );
-
-		if ( $serverIndicator && $serverIndicator.length ) {
-			// Replace server-rendered indicator with new Icon instance
-			$serverIndicator.replaceWith( indicator.$el );
-		}
-		button.insertBefore( indicator.$el[0], button.firstChild );
-
-		Array.from( headingElement.childNodes ).forEach( ( node ) => {
-			if ( node.nodeType === Node.TEXT_NODE ) {
-				button.appendChild( document.createTextNode( node.textContent ) );
-			} else if ( node.nodeType === Node.ELEMENT_NODE ) {
-				if ( node.tagName === 'A' ) {
-					button.appendChild( node );
-				} else if ( !node.classList.contains( 'indicator' ) ) {
-					button.appendChild( node );
-				}
-			}
-		} );
-		headingElement.innerHTML = '';
-		headingElement.appendChild( button );
-		return button;
 	}
 
 	/**
@@ -267,56 +173,39 @@ class Toggler {
 			// Be sure there is a `section` wrapping the section content.
 			// Otherwise, collapsible sections for this page is not enabled.
 			if ( $heading.next().is( 'section' ) ) {
-				const $content = $heading.next( 'section' );
-				const initiallyCollapsed = this.isCollapsedByDefault();
-
-				let $button = $heading.find( 'button.collapsible-heading-button' );
-				// Get the target element (heading element or wrapper for backward compatibility)
-				const target = this._getHeadingTarget( $heading[0] );
-				// Check if content or heading element is already expanded from cached HTML
-				const isExpanded = $content.hasClass( 'open-block' ) || target.classList.contains( 'open-block' );
-
-				if ( !$button.length ) {
-					// Use existing expanded state if available, otherwise use default
-					const shouldBeCollapsed = isExpanded ? false : initiallyCollapsed;
-					this._createHeadingButton( $heading[0], id, shouldBeCollapsed, $indicator );
-					$button = $heading.find( 'button.collapsible-heading-button' );
-				} else {
-					// Button already exists (from previous run or cached HTML)
-					// Clean up any duplicate server-rendered indicators outside the button
-					const $buttonIndicator = $button.find( '.indicator' ).first();
-					if ( $buttonIndicator.length ) {
-						$heading.find( '.indicator' ).not( $buttonIndicator ).remove();
-					}
-				}
-
-				target.classList.add( 'collapsible-heading' );
-
+				const $content = $heading.next( 'section' ),
+					isExpanded = $heading.hasClass( 'open-block' );
 				$heading
+					.addClass( 'collapsible-heading ' )
 					.data( 'section-number', i )
-					.data( 'button', $button );
+					.on( 'click', ( ev ) => {
+						// don't toggle, if the click target was a link
+						// (a link in a section heading)
+						// See T117880
+						const clickedLink = ev.target.closest( 'a' );
+						if ( !clickedLink || !clickedLink.href ) {
+							// prevent taps/clicks on edit button after toggling (T58209)
+							ev.preventDefault();
+							this.toggle( $heading );
+						}
+					} );
+				$heading
+					.attr( {
+						tabindex: 0,
+						role: 'button',
+						'aria-controls': id,
+						'aria-expanded': isExpanded
+					} );
 
-				// TODO: Remove after 14 days
-				// Backward compatibility: Old cached HTML has click handler on wrapper div
-				// If no button found, use wrapper div (old structure)
-				if ( !$button.length && $heading.hasClass( 'collapsible-heading' ) ) {
-					$button = $heading;
+				arrowOptions.rotation = ( isExpanded || !this.isCollapsedByDefault() ) ? 180 : 0;
+				const indicator = new Icon( arrowOptions );
+				if ( $indicator.length ) {
+					// replace the existing indicator
+					$indicator.replaceWith( indicator.$el );
+				} else {
+					indicator.prependTo( $heading );
 				}
-
-				$button.on( 'click', ( ev ) => {
-					// Don't toggle if clicking a link.
-					// Headings with links are still collapsible - click elsewhere to toggle.
-					// See T117880
-					const clickedLink = ev.target.closest( 'a' );
-					if ( !clickedLink ) {
-						// prevent taps/clicks on edit button after toggling (T58209)
-						ev.preventDefault();
-						this.toggle( $heading );
-					}
-				} );
-
-				const $indicatorElement = $button.find( '.indicator' ).first();
-				$heading.data( 'indicator', $indicatorElement );
+				$heading.data( 'indicator', indicator.$el );
 				$content
 					.addClass( 'collapsible-block' )
 					.attr( {
@@ -327,20 +216,19 @@ class Toggler {
 					} )
 					.on( 'beforematch', () => this.toggle( $heading ) )
 					.addClass( 'collapsible-block-js' );
-
-				// Respect existing expanded state from cached HTML
-				if ( isExpanded ) {
-					target.classList.add( 'open-block' );
-					$content.addClass( 'open-block' );
-					$content.removeAttr( 'hidden' );
-				} else if ( initiallyCollapsed ) {
+				if ( !isExpanded ) {
 					$content.get( 0 ).setAttribute( 'hidden', 'until-found' );
-				} else {
-					target.classList.add( 'open-block' );
-					$content.addClass( 'open-block' );
 				}
 
-				$button.attr( 'aria-expanded', ( isExpanded || !initiallyCollapsed ) ? 'true' : 'false' );
+				enableKeyboardActions( this, $heading );
+
+				if ( !this.isCollapsedByDefault() ) {
+					// Expand sections by default on wide screen devices
+					// or if the expand sections setting is set.
+					// The wide screen logic for determining whether to collapse sections initially
+					// should be kept in sync with mobileoptions#initLocalStorageElements().
+					this.toggle( $heading );
+				}
 			}
 		} );
 
@@ -386,6 +274,22 @@ class Toggler {
 
 		util.getWindow().on( 'hashchange', () => checkHash() );
 	}
+}
+
+/**
+ * Enables toggling via enter and space keys
+ *
+ * @param {Toggler} toggler instance.
+ * @param {jQuery.Object} $heading
+ * @ignore
+ */
+function enableKeyboardActions( toggler, $heading ) {
+	$heading.on( 'keypress', ( ev ) => {
+		if ( ev.which === 13 || ev.which === 32 ) {
+			// Only handle keypresses on the "Enter" or "Space" keys
+			toggler.toggle( $heading );
+		}
+	} ).find( 'a' ).on( 'keypress mouseup', ( ev ) => ev.stopPropagation() );
 }
 
 module.exports = Toggler;
