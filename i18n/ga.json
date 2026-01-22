@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Aindriu80",
 			"Kscanne",
 			"MinecraftAustralia",
 			"Smirkybec",
@@ -28,7 +29,7 @@
 	"mobile-frontend-save-settings": "Sábháil",
 	"mobile-frontend-terms-text": "Téarmaí Úsáide",
 	"mobile-frontend-view": "Amharc móibíleach",
-	"mobile-frontend-view-desktop": "Leagan deisce",
+	"mobile-frontend-view-desktop": "Radharc deisce",
 	"mobile-frontend-watchlist-cta-button-login": "Logáil isteach",
 	"mobile-frontend-watchlist-cta-button-signup": "Cláraigh",
 	"mobile-frontend-watchlist-filter-articles": "Leathanaigh",
