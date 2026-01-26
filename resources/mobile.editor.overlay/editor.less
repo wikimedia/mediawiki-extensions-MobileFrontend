@@ -76,7 +76,80 @@
 		}
 	}
 
-	&-ve .overlay-footer-container + *:not( .ve-mobile-fakeToolbar-container ) {
+	.anonwarning-soft {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		max-width: 28rem;
+		margin: 0 auto;
+		padding-left: @spacing-150;
+		padding-right: @spacing-150;
+
+		.description {
+			font-size: @font-size-medium;
+			margin-bottom: @spacing-75;
+			line-height: @line-height-small;
+		}
+
+		.cdx-button { /* stylelint-disable-line no-descending-specificity */
+			width: 100%;
+			// Override .overlay .cdx-button rule from Overlay.less
+			border-radius: 2px;
+
+			&.login {
+				margin-top: @spacing-75;
+			}
+
+			&.anonymous {
+				margin-bottom: @spacing-50;
+			}
+		}
+
+		.publish-description {
+			margin-top: 0;
+			color: @color-subtle;
+			align-self: stretch;
+			line-height: @line-height-small;
+			font-size: @font-size-small;
+			// HACK in order to reuse the existing message for the anonwarning (not autocreated)
+			// but without bold text. Only necessary during experiment, T415160
+			strong {
+				font-weight: @font-weight-normal;
+			}
+		}
+
+		.separator {
+			display: flex;
+			align-items: center; /* Vertically center lines and text */
+			gap: @spacing-100;
+			width: 100%;
+			margin-top: @spacing-150;
+			margin-bottom: @spacing-150;
+
+			&::before {
+				content: '';
+				flex: 1; /* Take remaining space (pushes text to center) */
+				height: 1px;
+				background: @border-color-base; /* Line color */
+			}
+
+			&::after {
+				content: '';
+				flex: 1;
+				height: 1px;
+				background: @border-color-base;
+			}
+
+			span {
+				white-space: nowrap; /* Prevent text from wrapping */
+			}
+		}
+	}
+
+	&-ve .overlay-footer-container + *:not( .ve-mobile-fakeToolbar-container, .anonwarning-soft ) {
 		// Any extra messages (e.g. .minerva-anon-talk-message or .anonwarning)
 		// should leave space for the toolbar above the first message.
 		margin-top: 4em;

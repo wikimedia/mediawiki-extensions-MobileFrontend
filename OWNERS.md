@@ -311,7 +311,23 @@ my login" for mobile users.
 * Contact: [Reader Growth][1]
 * Phabricator: https://phabricator.wikimedia.org/project/view/3707/
 
+## Mobile editing anon warning experiment (T408484)
+
+AB test code for a redesigned experience for the editing anon warning
+that seeks to improve account and signup conversion rates. After experiment
+results are analyzed a single experience for the anon warning should remain.
+
+* Since: Jan 2026
+* Files:
+  - resources/mobile.editor.overlay/editor.less
+  - src/mobile.editor.overlay/EditorOverlayBase.js
+  - src/mobile.editor.overlay/SourceEditorOverlay.js
+  - src/mobile.editor.overlay/VisualEditorOverlay.js
+* Contact: [Growth][5]
+* Phabricator: https://phabricator.wikimedia.org/project/view/1114/
+
 [1]: https://www.mediawiki.org/wiki/Readers/Reader_Growth
 [2]: https://www.mediawiki.org/wiki/Editing_team
 [3]: https://www.mediawiki.org/wiki/Wikimedia_Language_and_Product_Localization
 [4]: https://www.mediawiki.org/wiki/Readers/Reader_Experience
+[5]: https://www.mediawiki.org/wiki/Growth

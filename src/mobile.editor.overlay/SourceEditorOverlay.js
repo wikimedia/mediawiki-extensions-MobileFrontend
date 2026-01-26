@@ -374,13 +374,22 @@ class SourceEditorOverlay extends EditorOverlayBase {
 				const showAnonWarning = options.isAnon && !options.switched;
 
 				if ( showAnonWarning ) {
-					this.$anonWarning = this.createAnonWarning( options );
-					this.$anonTalkWarning = this.createAnonTalkWarning();
-					this.$el.find( '.editor-container' ).append( [ this.$anonTalkWarning, this.$anonWarning ] );
-					this.$content.hide();
-					// the user has to click login, signup or edit without login,
-					// disable "Next" button on top right
-					this.$anonHiddenButtons = this.$el.find( '.overlay-header .continue' ).hide();
+					mw.loader.using( 'ext.testKitchen' ).then( () => {
+						const experiment = mw.testKitchen.getExperiment(
+							'growthexperiments-editattempt-anonwarning'
+						);
+						if ( experiment.isAssignedGroup( 'treatment' ) ) {
+							this.$anonWarning = this.createAnonWarningSoft( options );
+						} else {
+							this.$anonWarning = this.createAnonWarning( options );
+						}
+						this.$anonTalkWarning = this.createAnonTalkWarning();
+						this.$el.find( '.editor-container' ).append( [ this.$anonTalkWarning, this.$anonWarning ] );
+						this.$content.hide();
+						// the user has to click login, signup or edit without login,
+						// disable "Next" button on top right
+						this.$anonHiddenButtons = this.$el.find( '.overlay-header .continue' ).hide();
+					} );
 				}
 
 				if ( this.gateway.fromModified ) {

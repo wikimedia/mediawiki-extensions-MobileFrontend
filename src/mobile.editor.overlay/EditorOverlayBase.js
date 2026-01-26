@@ -609,6 +609,65 @@ class EditorOverlayBase extends Overlay {
 	 * @param {Object} options
 	 * @return {jQuery.Element}
 	 */
+	createAnonWarningSoft( options ) {
+		const $anonWarning = $( '<div>' ).addClass( 'anonwarning-soft' ),
+			$topDescription = $( '<p>' ).addClass( 'description' )
+				.text( mw.msg( 'mobile-frontend-editor-anonwarning-soft-description' ) ),
+			params = util.extend( {
+				returnto: options.returnTo || (
+					// use wgPageName as this includes the namespace if outside Main
+					mw.config.get( 'wgPageName' ) + '#/editor/' + ( options.sectionId || 'all' )
+				)
+			}, options.queryParams ),
+			signupParams = util.extend( { type: 'signup' }, options.signupQueryParams ),
+			signupButton = new Button( {
+				label: mw.msg( 'mobile-frontend-watchlist-cta-button-createaccount' ),
+				block: true,
+				progressive: true,
+				additionalClassNames: 'signup cdx-button--size-large',
+				href: mw.util.getUrl( 'Special:CreateAccount', signupParams )
+			} ),
+			loginButton = new Button( {
+				label: mw.msg( 'mobile-frontend-watchlist-cta-button-login' ),
+				block: true,
+				additionalClassNames: 'login cdx-button--size-large',
+				href: mw.util.getUrl( 'Special:UserLogin', params )
+			} ),
+			publishAnon = new Button( {
+				label: mw.msg( 'mobile-frontend-editor-anon' ),
+				block: true,
+				additionalClassNames: 'anonymous cdx-button--size-large'
+			} ),
+			publishAnonDescription = this.gateway.wouldautocreate ?
+				'mobile-frontend-editor-autocreatewarning-soft-publish-description' :
+				'mobile-frontend-editor-anonwarning';
+
+		$anonWarning.append( [
+			$topDescription,
+			signupButton.$el,
+			loginButton.$el,
+			$( '<div>' )
+				.addClass( 'separator' )
+				.append( $( '<span>' ).text( mw.msg( 'mobile-frontend-editor-anonwarning-soft-separator' ) ) ),
+			publishAnon.$el,
+			$( '<p>' )
+				.addClass( 'publish-description' )
+				.html(
+					// eslint-disable-next-line mediawiki/msg-doc
+					mw.message( publishAnonDescription, contLangMessages[ 'tempuser-helppage' ] )
+						.parse()
+				)
+		] );
+
+		return $anonWarning;
+	}
+
+	/**
+	 * Sets additional values used for anonymous editing warning.
+	 *
+	 * @param {Object} options
+	 * @return {jQuery.Element}
+	 */
 	createAnonWarning( options ) {
 		const $actions = $( '<div>' ).addClass( 'actions' ),
 			msg = this.gateway.wouldautocreate ?

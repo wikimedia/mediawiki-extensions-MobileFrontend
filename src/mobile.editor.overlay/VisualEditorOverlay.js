@@ -166,12 +166,19 @@ class VisualEditorOverlay extends EditorOverlayBase {
 		if ( !showAnonWarning ) {
 			this.targetInit();
 		} else {
-			this.$anonWarning = this.createAnonWarning( this.options );
-			this.$anonTalkWarning = this.createAnonTalkWarning();
-			this.$el.append( [ this.$anonTalkWarning, this.$anonWarning ] );
-			this.$el.find( '.overlay-content' ).hide();
-			// De-select the surface so most tools are disabled (T336437)
-			this.target.getSurface().getModel().setNullSelection();
+			mw.loader.using( 'ext.testKitchen' ).then( () => {
+				const experiment = mw.testKitchen.getExperiment( 'growthexperiments-editattempt-anonwarning' );
+				if ( experiment.isAssignedGroup( 'treatment' ) ) {
+					this.$anonWarning = this.createAnonWarningSoft( this.options );
+				} else {
+					this.$anonWarning = this.createAnonWarning( this.options );
+				}
+				this.$anonTalkWarning = this.createAnonTalkWarning();
+				this.$el.append( [ this.$anonTalkWarning, this.$anonWarning ] );
+				this.$el.find( '.overlay-content' ).hide();
+				// De-select the surface so most tools are disabled (T336437)
+				this.target.getSurface().getModel().setNullSelection();
+			} );
 		}
 
 		this.emit( 'editor-loaded' );
