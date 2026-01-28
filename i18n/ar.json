@@ -68,7 +68,7 @@
 	"mobile-frontend-editor-blocked-drawer-body-login-createaccount-partial": "حاول تسجيل الدخول أو إنشاء حساب، أو حاول تحرير صفحة أخرى.",
 	"mobile-frontend-editor-blocked-drawer-body-link": "انظر المزيد",
 	"mobile-frontend-editor-blocked-drawer-reason-header": "السبب",
-	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|تم المنع}} بواسطة",
+	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|منعه|منعته}}",
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "ستنتهي صلاحية المنع في",
 	"mobile-frontend-editor-blocked-drawer-help": "انظر التفاصيل",
 	"mobile-frontend-editor-generic-block-reason": "سبب غير معلوم",

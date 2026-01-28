@@ -9,6 +9,8 @@
 	"mobile-frontend-drawer-arrow-label": "Ка̄һтӭ",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "ОК",
 	"mobile-frontend-editor-blocked-drawer-title": "То̄нн ля̄к бло̄һкта я эгк вуэй {{SITENAME}} лыстэтҍ воа̄йхэ.",
+	"mobile-frontend-editor-blocked-drawer-body-link": "Е̄намп тӣдҍсэ",
+	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Бло̄кһтма}} оаннҍенҍ",
 	"mobile-frontend-editor-cancel": "Е̄ссктэ",
 	"mobile-frontend-editor-editing": "Вуайхэмушш",
 	"mobile-frontend-editor-editing-page": "<span><strong>Вуайхэмушш</strong> $1</span>",
