@@ -15,6 +15,7 @@ QUnit.module( 'mobile.special.mobileoptions.scripts', {
 		mediaWiki.setUp( sandbox, global );
 		mw.requestIdleCallback = ( callback ) => callback();
 		mw.message = () => ( {
+			parse: () => 'parsed:msg',
 			text: () => 'msg',
 			exists: () => true
 		} );
