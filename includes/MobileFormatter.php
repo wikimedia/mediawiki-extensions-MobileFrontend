@@ -1,9 +1,9 @@
 <?php
 
 use MobileFrontend\Transforms\IMobileTransform;
+use Wikimedia\Parsoid\Core\DOMCompat;
 use Wikimedia\Parsoid\DOM\Element;
-use Wikimedia\Parsoid\Utils\DOMCompat;
-use Wikimedia\Parsoid\Utils\DOMUtils;
+use Wikimedia\Parsoid\Ext\DOMUtils;
 use Wikimedia\Parsoid\Wt2Html\XHtmlSerializer;
 
 /**

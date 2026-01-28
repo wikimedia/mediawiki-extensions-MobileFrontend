@@ -2,8 +2,8 @@
 
 namespace MobileFrontend\Transforms;
 
+use Wikimedia\Parsoid\Core\DOMCompat;
 use Wikimedia\Parsoid\DOM\Element;
-use Wikimedia\Parsoid\Utils\DOMCompat;
 
 class RemovableClassesTransform implements IMobileTransform {
 

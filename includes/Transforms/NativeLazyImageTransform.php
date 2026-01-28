@@ -2,9 +2,9 @@
 
 namespace MobileFrontend\Transforms;
 
+use Wikimedia\Parsoid\Core\DOMCompat;
 use Wikimedia\Parsoid\DOM\Document;
 use Wikimedia\Parsoid\DOM\Element;
-use Wikimedia\Parsoid\Utils\DOMCompat;
 
 /**
  * Transforms Parsoid content so that it works with lazy loaded images.

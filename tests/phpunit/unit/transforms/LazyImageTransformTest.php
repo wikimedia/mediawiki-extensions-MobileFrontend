@@ -2,7 +2,7 @@
 
 use MobileFrontend\Tests\Utils;
 use MobileFrontend\Transforms\LazyImageTransform;
-use Wikimedia\Parsoid\Utils\DOMCompat;
+use Wikimedia\Parsoid\Core\DOMCompat;
 
 /**
  * @group MobileFrontend

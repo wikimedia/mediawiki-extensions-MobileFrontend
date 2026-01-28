@@ -2,7 +2,7 @@
 
 use MobileFrontend\Tests\Utils;
 use MobileFrontend\Transforms\MoveLeadParagraphTransform;
-use Wikimedia\Parsoid\Utils\DOMCompat;
+use Wikimedia\Parsoid\Core\DOMCompat;
 use Wikimedia\TestingAccessWrapper;
 
 /**

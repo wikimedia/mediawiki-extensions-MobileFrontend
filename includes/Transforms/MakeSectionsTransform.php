@@ -6,10 +6,10 @@ use DomException;
 use LogicException;
 use MediaWiki\Html\Html;
 use MediaWiki\ResourceLoader\ResourceLoader;
+use Wikimedia\Parsoid\Core\DOMCompat;
 use Wikimedia\Parsoid\DOM\Document;
 use Wikimedia\Parsoid\DOM\Element;
 use Wikimedia\Parsoid\DOM\Node;
-use Wikimedia\Parsoid\Utils\DOMCompat;
 
 /**
  * Implements IMobileTransform, that splits the body of the document into
