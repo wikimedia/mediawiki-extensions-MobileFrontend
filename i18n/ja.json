@@ -40,6 +40,7 @@
 			"そらたこ",
 			"つぶあん派",
 			"ネイ",
+			"ブラックチャック",
 			"珍庵",
 			"組曲師"
 		]
@@ -161,7 +162,7 @@
 	"mobile-frontend-settings-save": "設定を保存しました。",
 	"mobile-frontend-terms-text": "利用規約",
 	"mobile-frontend-view": "モバイルビュー",
-	"mobile-frontend-view-desktop": "デスクトップ",
+	"mobile-frontend-view-desktop": "デスクトップ表示",
 	"mobile-frontend-watchlist-a-z-empty-howto": "現在、どのページもウォッチしていません。ウォッチリストは、あなたが興味を持ったページを追跡しやすくします。ページをウォッチリストに追加するには、星アイコンをタップしてください。",
 	"mobile-frontend-watchlist-a-z-empty-howto-alt": "星アイコンをクリック",
 	"mobile-frontend-watchlist-back-home": "ホームに戻る",
