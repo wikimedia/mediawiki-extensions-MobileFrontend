@@ -22,7 +22,7 @@ class SpecialMobileDiff extends RedirectSpecialPage {
 	 */
 	public function getRedirect( $subPage ) {
 		// If called without a subpage, redirect to the form at Special:Diff
-		if ( $subPage == null ) {
+		if ( $subPage === null || $subPage === '' ) {
 			return SpecialPage::getTitleFor( 'Diff' );
 		}
 

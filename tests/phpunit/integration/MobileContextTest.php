@@ -254,7 +254,7 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 		$this->overrideConfigValue( 'MobileFrontendFormatCookieExpiry', 60 );
 		$mfCookieExpected = $startTime + 60;
 		$this->assertTrue(
-			$mfCookieExpected == $getUseFormatCookieExpiry->invokeArgs(
+			$mfCookieExpected === $getUseFormatCookieExpiry->invokeArgs(
 				$context,
 				[ $startTime ]
 			),
@@ -265,7 +265,7 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 		$defaultMWCookieExpected = $startTime +
 			$this->getServiceContainer()->getMainConfig()->get( MainConfigNames::CookieExpiration );
 		$this->assertTrue(
-			$defaultMWCookieExpected == $getUseFormatCookieExpiry->invokeArgs(
+			$defaultMWCookieExpected === $getUseFormatCookieExpiry->invokeArgs(
 				$context,
 				[ $startTime ]
 			),

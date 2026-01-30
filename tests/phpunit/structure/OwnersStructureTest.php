@@ -194,7 +194,7 @@ class OwnersStructureTest extends \PHPUnit\Framework\TestCase {
 		$entry = readdir( $handle );
 		while ( $entry ) {
 			$path = $folder . '/' . $entry;
-			if ( $entry != '.' && $entry != '..' ) {
+			if ( $entry !== '.' && $entry !== '..' ) {
 				$files[] = $path;
 			}
 			$entry = readdir( $handle );

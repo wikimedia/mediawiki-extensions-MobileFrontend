@@ -177,12 +177,11 @@ class MobileContext extends ContextSource {
 	 * @return bool
 	 */
 	public function shouldDisplayMobileView() {
-		if ( $this->mobileView !== null ) {
-			return $this->mobileView;
+		if ( $this->mobileView === null ) {
+			// Compute viewChange, to toggle between mobile/desktop view
+			$this->checkToggleView();
+			$this->mobileView = $this->shouldDisplayMobileViewInternal();
 		}
-		// Compute viewChange, to toggle between mobile/desktop view
-		$this->checkToggleView();
-		$this->mobileView = $this->shouldDisplayMobileViewInternal();
 		return $this->mobileView;
 	}
 
@@ -198,9 +197,9 @@ class MobileContext extends ContextSource {
 
 		// always display the desktop or mobile view if it's explicitly requested
 		$useFormat = $this->getUseFormat();
-		if ( $useFormat == 'desktop' ) {
+		if ( $useFormat === 'desktop' ) {
 			return false;
-		} elseif ( $useFormat == 'mobile' ) {
+		} elseif ( $useFormat === 'mobile' ) {
 			return true;
 		}
 
@@ -220,11 +219,11 @@ class MobileContext extends ContextSource {
 
 		// check cookies for what to display
 		$useMobileFormat = $this->getUseFormatCookie();
-		if ( $useMobileFormat == 'true' ) {
+		if ( $useMobileFormat === 'true' ) {
 			return true;
 		}
 		$stopMobileRedirect = $this->getStopMobileRedirectCookie();
-		if ( $stopMobileRedirect == 'true' ) {
+		if ( $stopMobileRedirect === 'true' ) {
 			return false;
 		}
 

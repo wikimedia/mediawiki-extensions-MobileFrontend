@@ -108,7 +108,7 @@ class ExtMobileFrontend {
 		$enableSections = (
 			// Don't collapse sections e.g. on JS pages
 			$title->canExist()
-			&& $title->getContentModel() == CONTENT_MODEL_WIKITEXT
+			&& $title->hasContentModel( CONTENT_MODEL_WIKITEXT )
 			// And not in certain namespaces
 			&& !in_array( $ns, $config->get( 'MFNamespacesWithoutCollapsibleSections' ) )
 			// And not when what's shown is not actually article text

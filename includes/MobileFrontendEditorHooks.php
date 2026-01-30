@@ -147,7 +147,7 @@ class MobileFrontendEditorHooks implements
 		if ( $title->inNamespace( NS_SPECIAL ) ) {
 			return false;
 		}
-		if ( $title->getContentModel() !== 'wikitext' ) {
+		if ( !$title->hasContentModel( CONTENT_MODEL_WIKITEXT ) ) {
 			// Only load the wikitext editor on wikitext. Otherwise we'll rely on the fallback behaviour
 			// (You can test this on MediaWiki:Common.css) ?action=edit url (T173800)
 			return false;
