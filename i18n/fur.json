@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Klenje",
 			"Tocaibon"
 		]
 	},
@@ -9,7 +10,7 @@
 	"mobile-frontend-privacy-link-text": "Privacy",
 	"mobile-frontend-terms-text": "Cundizions pal ûs",
 	"mobile-frontend-view": "Visuâl da mobil",
-	"mobile-frontend-view-desktop": "Desktop",
+	"mobile-frontend-view-desktop": "Viodude desktop",
 	"tag-mobile_edit": "Modifiche da mobil",
 	"tag-mobile_web_edit": "Modifiche dal web pal mobil"
 }

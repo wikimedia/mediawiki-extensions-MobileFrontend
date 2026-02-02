@@ -2,10 +2,15 @@
 	"@metadata": {
 		"authors": [
 			"Arsenekoumyk",
-			"ArslanX"
+			"ArslanX",
+			"Кумнац"
 		]
 	},
+	"mobile-frontend-copyright": "Башгъа зат гёрсетилмеген буса, контент $1 да учюз багьагъа бериле.",
 	"mobile-frontend-editor-publish": "Басмаламакъ",
+	"mobile-frontend-terms-text": "Эксплуатацияны условиялары",
+	"mobile-frontend-view": "Мобил тюс",
+	"mobile-frontend-view-desktop": "Ишлейген столдан къарамакъ",
 	"tag-mobile_edit": "Мобил тюзлев",
 	"tag-mobile_web_edit": "Мобил веб тюзлев"
 }
