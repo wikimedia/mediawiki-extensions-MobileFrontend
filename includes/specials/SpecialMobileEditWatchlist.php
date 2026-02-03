@@ -59,13 +59,6 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 	}
 
 	/**
-	 * Renders the subheader.
-	 */
-	protected function outputSubtitle() {
-		$user = $this->getUser();
-	}
-
-	/**
 	 * Gets the HTML fragment for a watched page. The client uses a very different
 	 * structure for client-rendered items in PageListItem.hogan.
 	 *
