@@ -131,6 +131,120 @@ function attachEventListeners( wrapper, content, icon ) {
 }
 
 /**
+ * Queries for an element by its ID within a container.
+ *
+ * @method
+ * @param {HTMLElement} container The container element
+ * @param {string} id The element ID to search for
+ * @return {HTMLElement|null} The found element, or null
+ * @ignore
+ */
+function queryById( container, id ) {
+	try {
+		return container.querySelector( '#' + CSS.escape( id ) );
+	} catch ( e ) {
+		return null;
+	}
+}
+
+/**
+ * Finds the element targeted by the current URL hash fragment.
+ * Tries the raw fragment first, then the percent-decoded fragment per the
+ * HTML spec: https://html.spec.whatwg.org/multipage/browsing-the-web.html#target-element
+ *
+ * @method
+ * @param {HTMLElement} container The container element
+ * @return {HTMLElement|null} The target element, or null
+ * @ignore
+ */
+function findFragmentTarget( container ) {
+	// eslint-disable-next-line no-restricted-properties
+	const hash = window.location.hash;
+	if ( hash.indexOf( '#' ) !== 0 ) {
+		return null;
+	}
+	const id = hash.slice( 1 );
+	const target = queryById( container, id );
+	if ( target ) {
+		return target;
+	}
+	const decodedId = mw.util.percentDecodeFragment( id );
+	if ( decodedId ) {
+		return queryById( container, decodedId );
+	}
+	return null;
+}
+
+/**
+ * Expands the section containing the given target element.
+ * Adapted from reveal() in Toggler.js (used with Legacy parser).
+ *
+ * @method
+ * @param {HTMLElement} target The target element to reveal
+ * @ignore
+ */
+function expandSectionForTarget( target ) {
+	// Find the collapsible heading - first check if target is inside a collapsible heading
+	let heading = target.closest( '.mf-collapsible-heading' );
+
+	// If not in heading, check if it's in collapsible content
+	if ( !heading ) {
+		const content = target.closest( '.mf-collapsible-content' );
+		if ( content ) {
+			heading = content.previousElementSibling;
+			if ( heading && !heading.classList.contains( 'mf-collapsible-heading' ) ) {
+				heading = null;
+			}
+		}
+	}
+
+	// If we found a heading and it's collapsed, expand it
+	if ( heading && heading.getAttribute( 'aria-expanded' ) === 'false' ) {
+		const content = heading.nextElementSibling;
+		const icon = heading.querySelector( '.mf-collapsible-icon' );
+		if ( content && icon ) {
+			setCollapsedState( content, heading, icon, false );
+		}
+	}
+
+	// Scroll to target after expanding (expanding makes page longer)
+	setTimeout( () => {
+		target.scrollIntoView();
+	}, 250 );
+}
+
+/**
+ * Checks the current URL hash and expands any section containing the fragment.
+ *
+ * @method
+ * @param {HTMLElement} container The container element
+ * @ignore
+ */
+function checkHash( container ) {
+	const target = findFragmentTarget( container );
+	if ( target ) {
+		expandSectionForTarget( target );
+	}
+}
+
+/**
+ * Checks the value of wgInternalRedirectTargetUrl and sets the hash if present.
+ * checkHash() will expand the collapsed section that contains it afterwards.
+ *
+ * @method
+ * @ignore
+ */
+function checkInternalRedirectAndHash() {
+	const internalRedirect = mw.config.get( 'wgInternalRedirectTargetUrl' );
+	const internalRedirectHash = internalRedirect ? internalRedirect.split( '#' )[ 1 ] : false;
+
+	if ( internalRedirectHash ) {
+		// eslint-disable-next-line no-restricted-properties
+		window.location.hash = internalRedirectHash;
+	}
+}
+
+/**
  * Initialises collapsing code.
  *
  * @method
@@ -154,6 +268,13 @@ function init( container ) {
 		container.querySelectorAll( '.mw-parser-output > section > .mw-heading' )
 	);
 
+	// Handle internal redirect hash before collapsing so we know the final hash.
+	checkInternalRedirectAndHash();
+	// Find the fragment target to avoid collapsing the section that contains it.
+	// This works together with the CSS :has(:target) rule in main.less to
+	// ensure the targeted section is visible from first paint without a flash.
+	const fragmentTarget = findFragmentTarget( container );
+
 	headingWrappers.forEach( ( wrapper ) => {
 		const content = wrapper.nextElementSibling;
 		if ( content.tagName !== 'DIV' ) {
@@ -162,8 +283,14 @@ function init( container ) {
 		const icon = prepareHeadingWrapper( wrapper, content );
 
 		attachEventListeners( wrapper, content, icon );
-		setCollapsedState( content, wrapper, icon, isCollapsed );
+		// Skip collapsing if this section contains the fragment target
+		const shouldCollapse = isCollapsed &&
+			!( fragmentTarget &&
+				( content.contains( fragmentTarget ) || wrapper.contains( fragmentTarget ) ) );
+		setCollapsedState( content, wrapper, icon, shouldCollapse );
 	} );
+
+	window.addEventListener( 'hashchange', () => checkHash( container ) );
 }
 
 module.exports = { init };

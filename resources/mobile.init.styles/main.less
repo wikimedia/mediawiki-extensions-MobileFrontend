@@ -15,6 +15,19 @@
 		}
 	}
 
+	// Keep the section containing the URL fragment target visible before JS
+	// runs, preventing a flash of the targeted section being briefly hidden.
+	// :has(:target) on the heading handles e.g. #Section_Title (target is the <h2>),
+	// :has(:target) on the content div handles targets inside section content.
+	// Once JS runs, init() skips collapsing this section so they stay in sync.
+	&.mf-expand-sections-clientpref-0 @{selector-parsoid-top-heading}:has( :target ) + div:not( .mf-collapsible-content ),
+	&.mf-expand-sections-clientpref-0 @{selector-parsoid-top-heading} + div:not( .mf-collapsible-content ):has( :target ) {
+		@media all and ( max-width: @max-width-breakpoint-mobile ) {
+			display: block;
+			content-visibility: visible;
+		}
+	}
+
 	// Interim toggling support, see mfTempOpenSection() in MakeSectionsTransform
 	// (duplicate class to provide higher specificity than the previous rule)
 	.collapsible-block.open-block.open-block {

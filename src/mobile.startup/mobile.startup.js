@@ -52,7 +52,7 @@ module.exports = {
 	 */
 	util,
 	/**
-	 * @private for use inside MobileFrontend only.
+	 * @private
 	 */
 	headers,
 	// Internal for use inside GrowthExperiments only.
