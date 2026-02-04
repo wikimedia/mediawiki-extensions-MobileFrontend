@@ -1,6 +1,8 @@
 {
 	"@metadata": {
-		"authors": []
+		"authors": [
+			"Ayaat123"
+		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "تَصدیٖقی کوڈ کٔرِو دَرٕج",
 	"mobile-frontend-clear-search": "خٲلی کٔرِو",
@@ -63,8 +65,8 @@
 	"mobile-frontend-joined-days": "{{GENDER:$1|مُنسَلِق}} {{PLURAL:$2|$2 دۄہ}} پؠٹھٕ",
 	"mobile-frontend-joined-months": " {{GENDER:$1|مُنسَلِق}} {{PLURAL:$2|$2 رؠتھ}} پؠٹھٕ",
 	"mobile-frontend-joined-years": "{{GENDER:$1|مُنسَلِق}}  {{PLURAL:$2|$2 ؤری}} پؠٹھٕ",
-	"mobile-frontend-language-heading": "<strong>زَبانٕ</strong>",
-	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "تجویٖز دِنہٕ آمَثہٕ زبانہٕ",
+	"mobile-frontend-language-heading": "<strong>زَبانہٕ</strong>",
+	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "تَجویٖز دِنہٕ آمژٕ زَبانہٕ",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "باقی زَبانہٕ",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "زَبان کٔرِو تَلاش",
 	"mobile-frontend-languages-structured-overlay-no-results": "زَبان چھَنہٕ دٕستِیاب",
