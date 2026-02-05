@@ -33,4 +33,15 @@
 		display: block;
 		content-visibility: visible;
 	}
+
+	// T416065: Expand collapsed Parsoid sections when printing.
+	// Override hidden='until-found' attribute set by sectionCollapsing.js.
+	.client-js .mf-collapsible-content[ hidden ] {
+		display: block;
+		content-visibility: visible;
+	}
+
+	.mf-collapsible-icon {
+		display: none;
+	}
 }
