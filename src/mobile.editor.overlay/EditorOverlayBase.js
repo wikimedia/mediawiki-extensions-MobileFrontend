@@ -627,12 +627,10 @@ class EditorOverlayBase extends Overlay {
 				returnto: options.returnTo || (
 					// use wgPageName as this includes the namespace if outside Main
 					mw.config.get( 'wgPageName' ) + '#/editor/' + ( options.sectionId || 'all' )
-				),
-				warning: 'mobile-frontend-edit-login-action'
+				)
 			}, options.queryParams ),
 			signupParams = util.extend( {
-				type: 'signup',
-				warning: 'mobile-frontend-edit-signup-action'
+				type: 'signup'
 			}, options.signupQueryParams ),
 			anonymousEditorActions = [
 				new Button( {

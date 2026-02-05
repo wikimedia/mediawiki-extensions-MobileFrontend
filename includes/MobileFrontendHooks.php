@@ -1108,10 +1108,6 @@ class MobileFrontendHooks implements
 				'mobile-frontend-watchlist-signup-action',
 				// Watchlist and watchstar sign in CTA
 				'mobile-frontend-watchlist-purpose',
-				// Edit button sign in CTA
-				'mobile-frontend-edit-login-action',
-				// Edit button sign-up CTA
-				'mobile-frontend-edit-signup-action',
 				'mobile-frontend-donate-image-login-action',
 				// default message
 				'mobile-frontend-generic-login-new',
