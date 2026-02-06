@@ -132,6 +132,19 @@ function initMobileOptions() {
 	}
 
 	const clientPreferences = {};
+	const skin = mw.config.get( 'skin' );
+
+	if ( skin === 'minerva' ) {
+		clientPreferences[ WP25_EASTER_EGGS_KEY ] = {
+			options: [
+				'0',
+				'1'
+			],
+			type: 'switch',
+			preferenceKey: WP25_EASTER_EGGS_KEY,
+			callback: notify
+		};
+	}
 
 	if ( mw.config.get( 'wgMFEnableFontChanger' ) ) {
 		clientPreferences[ FONT_SIZE_KEY ] = {
@@ -145,7 +158,6 @@ function initMobileOptions() {
 		};
 	}
 
-	const skin = mw.config.get( 'skin' );
 	clientPreferences[ THEME ] = {
 		options: [ 'day', 'night', 'os' ],
 		preferenceKey: `${ skin }-theme`
@@ -160,18 +172,6 @@ function initMobileOptions() {
 		preferenceKey: EXPAND_SECTIONS_KEY,
 		callback: notify
 	};
-
-	if ( skin === 'minerva' ) {
-		clientPreferences[ WP25_EASTER_EGGS_KEY ] = {
-			options: [
-				'0',
-				'1'
-			],
-			type: 'switch',
-			preferenceKey: WP25_EASTER_EGGS_KEY,
-			callback: notify
-		};
-	}
 
 	if ( !mw.user.isAnon() ) {
 		clientPreferences[ 'mw-mf-amc' ] = {
