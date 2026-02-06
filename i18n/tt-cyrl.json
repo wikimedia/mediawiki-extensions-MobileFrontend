@@ -14,8 +14,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Раслау кодын кертегез",
 	"mobile-frontend-copyright": "Мәгълүмат $1 буенча таратыла (әгәр башкасы күрсәтелмәсә).",
 	"mobile-frontend-desc": "Проектның Mediawiki программ тәэминаты ярдәмендә мобиль җайланмаларда эшчәнлеген яхшыртырга булыша",
-	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}} сайтын яхшыртырга булышыгыз.</strong><br />Керегез һәм үзгәртүләрне башлагыз.",
-	"mobile-frontend-edit-signup-action": "<strong>{{SITENAME}} сайтын яхшыртырга булышыгыз.</strong><br />Теркәлегез һәм үзгәртүләрне башлагыз.",
 	"mobile-frontend-editor-anon": "Кермичә үзгәртү",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Керү",
 	"mobile-frontend-drawer-arrow-label": "Яп",

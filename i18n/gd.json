@@ -9,8 +9,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Cuir còd dearbhaidh a-steach",
 	"mobile-frontend-copyright": "Tha an t-susbaint seo ri fhaighinn fo $1 mur eil an caochladh 'ga innse.",
 	"mobile-frontend-desc": "Eadar-aghaidh inneil-làimhe",
-	"mobile-frontend-edit-login-action": "<strong>Cuidich gus piseach a thoirt air {{SITENAME}}.</strong><br />Log a-steach airson deasachadh.",
-	"mobile-frontend-edit-signup-action": "<strong>Cuidich gus piseach a thoirt air {{SITENAME}}.</strong><br />Clàraich airson deasachadh.",
 	"mobile-frontend-editor-anon": "Deasaich gun logadh a-steach",
 	"mobile-frontend-editor-anonwarning": "<strong>Rabhadh:</strong> Chan eil thu air logadh a-steach. Chithear an seòladh IP agad gu poblach ma nì thu deasachadh sam bith. Ma nì thu <strong>logadh a-steach</strong> no ma <strong>chruthaicheas tu cunntas</strong>, thèid d' ainm a chur ris na dheasaich thu 's gheibh thu buannachd a bharrachd às cuideachd.",
 	"mobile-frontend-editor-cancel": "Sguir dheth",

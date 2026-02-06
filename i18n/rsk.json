@@ -9,8 +9,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Унєсце код за потвердзенє",
 	"mobile-frontend-copyright": "Змист  доступни под лиценцу $1 окрем кед нє наведзене иншак.",
 	"mobile-frontend-desc": "Унапредзує мобилну вариянту Медиявики",
-	"mobile-frontend-edit-login-action": "<strong>Помогнїце злєпшац сайт{{SITENAME}}.</strong><br />Приявце ше пре ушорйованє.",
-	"mobile-frontend-edit-signup-action": "<strong>Помогнїце злєпшац сайт{{SITENAME}}.</strong><br />Приявиц ше пре ушорйованє.",
 	"mobile-frontend-editor-anon": "Ушорюй без приявйованя до системи",
 	"mobile-frontend-editor-anonwarning": "<strong>Увага:</strong> Ви нє приявени. Вашу IP адресу ше годно явно видзиц кед ушорице або направице нови бок.<strong>[Приявце ше]</strong> або <strong>[отворце налоґ]</strong>. З тим вашо доприношеня буду  уписовани ґу вашому хасновательскому мену хторе виберец и так здобудзеце вецей вигодносци.",
 	"mobile-frontend-editor-autocreatewarning": "<strong>Спозоренє:</strong> Ви нє приявени. Ваша пременка будзе придодата ґу автоматски ґенерованому мену. [[$1|Дознайце вецей]]. <strong>Приявце ше</strong> або <strong>отворце налог</strong>. На тот способ Вашо доприношеня буду приписовани ґу хасновательскому мену хторе вибереце.",

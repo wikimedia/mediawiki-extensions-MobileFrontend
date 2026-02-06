@@ -14,8 +14,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Tik bevestigingkode",
 	"mobile-frontend-copyright": "Inhoud is onderhewig aan $1, tensy anders vermeld.",
 	"mobile-frontend-desc": "Help om die mobiele teenwoordigheid van 'n MediaWiki-instansie te verbeter",
-	"mobile-frontend-edit-login-action": "<strong>Help om {{SITENAME}} te verbeter.</strong><br /> Meld aan om te wysig.",
-	"mobile-frontend-edit-signup-action": "<strong>Help om {{SITENAME}} te verbeter.</strong><br />Meld aan om te redigeer.",
 	"mobile-frontend-editor-anon": "Wysig sonder aanmelding",
 	"mobile-frontend-editor-anonwarning": "<strong>Waarskuwing</strong>: U is nie aangemeld nie. U IP-adres sal sigbaar wees indien u veranderinge maak. As u <strong>aanmeld</strong> of <strong>'n rekening skep</strong> verskyn u wysigings onder u gebruikersnaam, naas ander voordele.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Meld aan",

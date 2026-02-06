@@ -47,8 +47,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "أدخل رمز التأكيد",
 	"mobile-frontend-copyright": "المحتوى متاح وفق $1 ما لم يرد خلاف ذلك.",
 	"mobile-frontend-desc": "يساعد على تحسين الوجود المحمول لنسخة MediaWiki",
-	"mobile-frontend-edit-login-action": "<strong>ساعد في تحسين {{SITENAME}}.</strong><br />سجل دخولك للتحرير",
-	"mobile-frontend-edit-signup-action": "<strong>ساعد في تحسين {{SITENAME}}.</strong><br /> أنشأ حسابا للتحرير.",
 	"mobile-frontend-editor-anon": "حرر بلا تسجيل الدخول",
 	"mobile-frontend-editor-anonwarning": "<strong>تحذير</strong>: لمُ تُسجِّل الدخول. سيظهر عنوان بروتوكول الإنترنت الخاص بك علناً بعد قيامك بأي تعديل. إذا <strong>سجلت دخولك</strong> أو <strong>أنشأت حسابًا</strong>، فتعديلاتك ستنسب لاسم المستخدم الخاص بك، مع العديد من الميزات الأخرى.",
 	"mobile-frontend-editor-autocreatewarning": "<strong>تحذير:</strong> لم تقم بتسجيل الدخول. بمجرد إجراء أي تعديل، سيتم إنشاء حساب مؤقت لك. [[$1|تعرف على المزيد]]. <strong>قم بتسجيل الدخول</strong> أو <strong>إنشاء حساب</strong> لمواصلة تلقي الإشعارات بعد انتهاء صلاحية هذا الحساب، وللوصول إلى ميزات أخرى.",

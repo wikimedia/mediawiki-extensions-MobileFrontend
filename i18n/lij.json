@@ -10,8 +10,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Scrîvi o còdice de confèrma",
 	"mobile-frontend-copyright": "O contegnûo o l'é disponìbile in sciâ bâze da licénsa $1, se o no l'é diversaménte specificòu.",
 	"mobile-frontend-desc": "Agiùtta a megioâ a prezénsa mòbile de 'n'istànsa MediaWiki",
-	"mobile-frontend-edit-login-action": "<strong>Agiàtta a megioâ {{SITENAME}}.</strong><br />Ìntra pe modificâ.",
-	"mobile-frontend-edit-signup-action": "<strong>Agiùtta a megioâ {{SITENAME}}.</strong><br />Regìstrite pe modificâ.",
 	"mobile-frontend-editor-anon": "Modìfica sénsa intrâ",
 	"mobile-frontend-editor-anonwarning": "<strong>Atençión:</strong> Ti noo t'ê intròu. Se ti fæ di càngi o tò indirìsso IP o saiâ vixìbile pubricaménte. Se <strong>ti t'ìntri</strong> ò <strong>ti crêi 'n'uténsa</strong>, e tò modìfiche saiàn atriboîe a-o tò nómme uténte, insémme a di âtri benefìççi.",
 	"mobile-frontend-editor-autocreatewarning": "<strong>Atençión:</strong> ti no t'ê intròu. Cómme ti ti faiæ 'na modìfica saiâ creòu 'n'uténsa tenporània pe ti. [[$1|Ciù informaçioìn]]. <strong>[$1 Ìntra]</strong> ò <strong>crêa 'n'uténsa</strong> pe continoâ a riçéive de notìfiche dòppo che quest'uténsa a descaziâ, tra i âtri benefìççi.",

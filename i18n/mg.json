@@ -9,8 +9,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Ampidiro ny kaody fanamarinana",
 	"mobile-frontend-copyright": "Mitondra ny lisansa $1 ny votoatiny raha tsy misy zava-kafa ambara.",
 	"mobile-frontend-desc": "Manampy amin'ny fampihatsarana ny fisiana amim-pinday ny ohatra MediaWiki",
-	"mobile-frontend-edit-login-action": "<strong>Hanampy hampihatsara an'i {{SITENAME}}.</strong><br />Midira hahafahanao manova.",
-	"mobile-frontend-edit-signup-action": "<strong>Hanampy hampihatsara an'i {{SITENAME}}.</strong><br />Misorata anarana hahafahanao manova.",
 	"mobile-frontend-editor-anon": "Hanova tsy miditra",
 	"mobile-frontend-editor-anonwarning": "<strong>Fampitandremana :</strong> Tsy niditra tamin'ny kaontinao ianao. Ho hitan'ny vahoaka ny adiresy IP-nao raha manova inona na inona ianao. Raha <strong>[$1 miditra amin'ny kaontinao]</strong> ianao dia ho anisan'ny tombontsoa anananao ny fanaovana fanomezana toky ny fanovana ataonao amin'ny anaran'ny solonanaranao.",
 	"mobile-frontend-editor-autocreatewarning": "<strong>Fampitandremana:</strong> Tsy tafiditra ianao. Rehefa manao fanitsiana ianao dia hisy kaonty vonjimaika hatsangana ho anao. [[{{MediaWiki:tempuser-helppage}}|Hahafantatra bebe kokoa]]. <strong>Midira</strong> na <strong>mamorona kaonty</strong> hanohizana ny fandraisana fampandrenesana rehefa tapitra ity kaonty ity, ary hidirana amin'ireo endri-javatra hafa.",

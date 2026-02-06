@@ -10,8 +10,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Tassyklanan kody giriziň",
 	"mobile-frontend-copyright": "Başga görkezilmedik bolsa, mazmun $1 esasynda elýeterlidir.",
 	"mobile-frontend-desc": "Jübi telefony",
-	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}} gowulaşdyrmaga kömek ediň.</strong><br />Redaktirlemek üçin giriň.",
-	"mobile-frontend-edit-signup-action": "<strong>{{SITENAME}} gowulaşdyrmaga kömek ediň.</strong><br />Redaktirlemek üçin ýazylyň.",
 	"mobile-frontend-editor-anon": "Hasaba girmän düzet",
 	"mobile-frontend-editor-anonwarning": "<strong>Duýduryş:</strong> Hasaba girmänsiňiz. Şonuň üçin hem IP adresiňiz bu sahypanyň özgerdişler geçmişine ýazylyp alynar. <strong>Hasaba giriň</strong> ýa-da <strong>Hasap dörediň</strong>, düzetmeleriňiz, beýleki peýdalar bilen birlikde ulanyjy adyňyz bilen baglanyşykly bolar.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Hasaba gir",

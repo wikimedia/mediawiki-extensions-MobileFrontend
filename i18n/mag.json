@@ -8,8 +8,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "पुष्टीकरण कोड डाली",
 	"mobile-frontend-copyright": "सामग्री $1 के अन्तर्गत उपलब्ध हे जखनितक अलिगेसे बतावल न जाइत ।",
 	"mobile-frontend-desc": "मीडियाविकि उदाहरणके दूरभाष उपस्थितिमे सुधार करेमे सहायता करहे",
-	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}} के निमन बनावेमे सहायता करी</strong><br />सम्पादित करेलागि प्रवेश करी ।",
-	"mobile-frontend-edit-signup-action": "<strong>{{SITENAME}} के निमन बनावेमे सहायता करी</strong><br />सम्पादित करेलागि खाता बनावी ।",
 	"mobile-frontend-editor-anon": "बिन खातामे प्रवेशके सम्पादन करी",
 	"mobile-frontend-editor-anonwarning": "<strong>सावधान:</strong> अपने प्रवेश न कैलही । यदि अपने सम्पादन करही त ई पन्नाके सम्पादन इतिहासमे अपनेके IP पता दृश्य होतै । यदि अपने <strong>प्रवेश</strong> करही अथवा <strong>खाता बनावही</strong> त दोसर सुविधाके साथे-साथे अपनेके सम्पादनोका श्रेय अपनेके सदस्सनाम पर देल जैतै ।",
 	"mobile-frontend-editor-autocreatewarning": "<strong>चेतावनी:</strong> अपने सम्प्रवेशित न ही । एक बेर जखन अपने सम्पादन कर लेबी त अपनेलागि एगो अस्थायी खाता बनावल जैतै । [[$1|आउ जानी]] । ई खाताके समाप्त होवेके बाद सूचना प्राप्त कैल जारी रखे आउ अन्य सुविधातक पहुँचेलागि <strong>प्रवेश करी</strong> अथवा <strong>एगो खाता बनावी</strong> ।",

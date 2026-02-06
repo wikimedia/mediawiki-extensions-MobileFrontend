@@ -23,8 +23,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "येथे कन्फर्मेशन कोड टाका",
 	"mobile-frontend-copyright": "इतर काही नोंद केली नसल्यास,येथील मजकूर $1च्या अंतर्गत उपलब्ध आहे.",
 	"mobile-frontend-desc": "दूरभाष फ्रंटएंड",
-	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}} सुधरविण्यास मदत करा.</strong><br />संपादन करण्यास प्रवेश करा.",
-	"mobile-frontend-edit-signup-action": "<strong>{{SITENAME}} सुधरविण्यास मदत करा.</strong><br />संपादनासाठी नोंदणी करा.",
 	"mobile-frontend-editor-anon": "लॉग इन न करता संपादित करा",
 	"mobile-frontend-editor-blocked-drawer-action-login": "लॉग इन",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "हा",

@@ -11,8 +11,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Kpɛn'esim yɛlsida safɔbiis",
 	"mobile-frontend-copyright": "Malisim bɛnɛ $1 ni ya'a ka'a nɛ yɛlsi'a paasɛ",
 	"mobile-frontend-desc": "Foon tuon",
-	"mobile-frontend-edit-login-action": "<strong>sʋŋim tɔlisi li {{SITENAME}}.</strong><br />kpɛ'ɛm maalig pʋʋgin.",
-	"mobile-frontend-edit-signup-action": "<strong>Help improve {{SITENAME\n}}.</strong><br />yɔɔgim kpe' maali li",
 	"mobile-frontend-editor-anon": "Maligim maal ka da kpe' pʋʋgin nɛ",
 	"mobile-frontend-editor-anonwarning": "<strong>Warning:</strong> Fʋ nan pʋ kpɛn'ɛɛ. Fʋ ya'a maal dɛmisa, fʋ IP zin'ig la na nie pa'al nidib woo. Ka fʋ <strong> log in</strong> or <strong> ya'a maali fʋ akaunt</strong>, dɛmisa banɛ ka fʋ maal la wʋsa na bɛnɛ fʋ tʋʋma yʋ'ʋrin nɛ nyɔɔd kanɛ wʋsa ka fʋ na paam.",
 	"mobile-frontend-editor-autocreatewarning": "<strong>Warning:</strong> Fʋ pʋ kpe' li pʋʋgin nɛ. Fʋn kʋdin maliŋi maal la, akaunt na n yɛ'ɔgi tisif. [[$1|Learn more]]. <strong>Log in</strong> or <strong>create an account</strong> n ken tuoni paamid tɛnsig akaunt la kpiib nyaŋɔɔ, ka n ye suor nɛ sieba.",

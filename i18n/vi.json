@@ -31,8 +31,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Nhập mã xác nhận",
 	"mobile-frontend-copyright": "Nội dung được phát hành theo $1, ngoại trừ khi có ghi chú khác.",
 	"mobile-frontend-desc": "Giúp cải thiện giao diện MediaWiki cho người dùng di động",
-	"mobile-frontend-edit-login-action": "<strong>Giúp cải thiện {{SITENAME}}.</strong><br />\nHãy đăng nhập để sửa đổi.",
-	"mobile-frontend-edit-signup-action": "<strong>Giúp cải thiện {{SITENAME}}.</strong><br />Mở tài khoản để sửa đổi.",
 	"mobile-frontend-editor-anon": "Sửa đổi ẩn danh (không đăng nhập)",
 	"mobile-frontend-editor-anonwarning": "<strong>Cảnh báo:</strong> Bạn chưa đăng nhập. Địa chỉ IP của bạn sẽ bị hiển thị công khai nếu bạn thực hiện bất kỳ sửa đổi nào. Nếu bạn <strong>đăng nhập</strong> hoặc <strong>mở tài khoản</strong>, sửa đổi của bạn sẽ được gắn với tên đăng nhập của bạn, cùng nhiều lợi ích khác.",
 	"mobile-frontend-editor-autocreatewarning": "<strong>Cảnh báo:</strong> Bạn chưa đăng nhập. Khi bạn sửa đổi, một tài khoản tạm thời sẽ được tạo cho bạn. [[$1|Tìm hiểu thêm]]. Hãy <strong>đăng nhập</strong> hoặc <strong>tạo tài khoản</strong> để tiếp tục nhận thông báo sau khi tài khoản này hết hạn và để truy cập các chức năng khác.",

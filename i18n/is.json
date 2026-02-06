@@ -16,8 +16,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Sláðu inn staðfestingarkóða",
 	"mobile-frontend-copyright": "Efnið er aðgengilegt undir $1 nema annað komi fram.",
 	"mobile-frontend-desc": "Hjálpar til við að bæta framsetningu MediaWiki-tilviks á farsímum",
-	"mobile-frontend-edit-login-action": "<strong>Hjálpaðu við að bæta {{SITENAME}}.</strong><br />Skráðu þig inn til að gera breytingar.",
-	"mobile-frontend-edit-signup-action": "Stofnaðu aðgang til að gera breytingar.",
 	"mobile-frontend-editor-anon": "Gera breytingar án þess að skrá inn",
 	"mobile-frontend-editor-anonwarning": "<strong>Aðvörun:</strong> Þú ert ekki skráð(ur) inn. IP-staðfangið þitt verður sýnilegt almenningi ef þú gerir einhverjar breytingar. Ef þú <strong>skráir þig inn</strong> eða <strong>býrð til aðgang</strong> munu breytingarnar þínar vera eignaðar notandanafninu þínu, ásamt öðrum fríðindum.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Skrá inn",

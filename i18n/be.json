@@ -19,8 +19,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Увядзіце код пацвярджэння",
 	"mobile-frontend-copyright": "Матэрыял даступны на ўмовах $1, калі не пазначана іншае.",
 	"mobile-frontend-desc": "Мабільны інтэрфейс",
-	"mobile-frontend-edit-login-action": "<strong>Дапамажыце палепшыць праект {{SITENAME}}.</strong><br />Увайдзіце, каб правіць.",
-	"mobile-frontend-edit-signup-action": "<strong>Дапамажыце палепшыць праект {{SITENAME}}.</strong><br />Стварыце ўліковы запіс, каб правіць.",
 	"mobile-frontend-editor-anon": "Правіць без уваходу",
 	"mobile-frontend-editor-anonwarning": "<strong>Папярэджанне</strong>: вы не ўвайшлі ў сістэму. Ваш IP-адрас будзе бачны ўсім, калі вы зробіце якія-небудзь праўкі. Калі вы <strong>ўвойдзеце</strong> або <strong>створыце ўліковы запіс</strong>, вашыя праўкі будуць звязаны з вашым імем удзельніка, а таксама вам будуць даступны дадатковыя перавагі.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Увайсці",

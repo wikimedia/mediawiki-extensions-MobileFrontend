@@ -11,8 +11,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Asupkeun kodeu konfirmasi",
 	"mobile-frontend-copyright": "Eusi nu nyangkaruk ditangtayungan ku $1 iwal lamun disebutkeun béda.",
 	"mobile-frontend-desc": "Mobile Frontend",
-	"mobile-frontend-edit-login-action": "<strong>Bantuan kami ngaropéa {{SITENAME}}.</strong><br />Asup log pikeun ngédit.",
-	"mobile-frontend-edit-signup-action": "<strong>Bantuan kami ngaropéa {{SITENAME}}.</strong><br />Jieun akun pikeun ngédit.",
 	"mobile-frontend-editor-anon": "Édit tanpa asup log",
 	"mobile-frontend-editor-anonwarning": "<strong>Mangkahadé</strong>: Anjeun can asup log. IP anjeun bakal katémbong ku balaréa mun anjeun ngédit. Saupamana anjeun <strong>asup log</strong> mah atawa <strong>nyieun akun</strong>, éditan anjeun bakal napel kana ngaran pamaké anjeun, di handap ieu kauntungan lianna.",
 	"mobile-frontend-editor-cancel": "Bolay",

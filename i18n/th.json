@@ -19,8 +19,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "กรอกรหัสยืนยัน",
 	"mobile-frontend-copyright": "เนื้อหาอนุญาตให้เผยแพร่ภายใต้ $1 เว้นแต่ระบุไว้เป็นอื่น",
 	"mobile-frontend-desc": "ช่วยปรับปรุงการแสดงผลบนอุปกรณ์เคลื่อนที่ของมีเดียวิกิให้ดีขึ้น",
-	"mobile-frontend-edit-login-action": "<strong>ร่วมปรับปรุง {{SITENAME}}</strong><br />เข้าสู่ระบบเพื่อแก้ไข",
-	"mobile-frontend-edit-signup-action": "<strong>ช่วยปรับปรุง {{SITENAME}}</strong><br />สร้างบัญชีเพื่อร่วมแก้ไข",
 	"mobile-frontend-editor-anon": "แก้ไขโดยไม่เข้าสู่ระบบ",
 	"mobile-frontend-editor-anonwarning": "<strong>คำเตือน:</strong> คุณไม่ได้เข้าสู่ระบบ สาธารณะจะเห็นเลขที่อยู่ไอพีของคุณถ้าคุณแก้ไข หากคุณ<strong>เข้าสู่ระบบ</strong>หรือ<strong>สร้างบัญชี</strong> การแก้ไขของคุณจะถือว่าเป็นของชื่อผู้ใช้ของคุณ พร้อมทั้งอาจได้รับประโยชน์อื่น ๆ ด้วย",
 	"mobile-frontend-editor-autocreatewarning": "<strong>คำเตือน:</strong> คุณยังไม่ได้เข้าสู่ระบบ เมื่อคุณทำการแก้ไข ระบบจะสร้างบัญชีชั่วคราวให้คุณ [[$1|เรียนรู้เพิ่มเติม]] โปรด<strong>เข้าสู่ระบบ</strong>หรือ<strong>สร้างบัญชี</strong>เพื่อรับการแจ้งเตือนต่อไปหลังจากบัญชีนี้หมดอายุ และเพื่อเข้าถึงคุณลักษณะอื่น ๆ",

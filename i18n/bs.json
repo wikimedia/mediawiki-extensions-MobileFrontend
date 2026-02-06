@@ -21,8 +21,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Unesite kod za potvrdu",
 	"mobile-frontend-copyright": "Sadržaj je dostupan pod licencom $1 osim ako nije drugačije navedeno.",
 	"mobile-frontend-desc": "Korisnički interfejs za mobilne uređaje",
-	"mobile-frontend-edit-login-action": "<strong>Unaprijedite {{GRAMMAR:akuzativ|{{SITENAME}}}}.</strong><br />Prijavite se da biste uređivali.",
-	"mobile-frontend-edit-signup-action": "<strong>Unaprijedite {{GRAMMAR:akuzativ|{{SITENAME}}}}.</strong><br />Pridružite se da biste uređivali.",
 	"mobile-frontend-editor-anon": "Uredi bez prijave",
 	"mobile-frontend-editor-anonwarning": "<strong>Upozorenje</strong>: Niste prijavljeni. Ako napravite bilo kakve izmjene, Vaša IP adresa bit će javno vidljiva. Ako se <strong>prijavite</strong> ili <strong>napravite korisnički račun</strong>, sve izmjene koje napravite bit će pripisane vašem korisničkom imenu uz sve druge pogodnosti.",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "U redu",

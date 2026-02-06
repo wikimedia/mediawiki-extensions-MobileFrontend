@@ -17,8 +17,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Mewnosodwch y cod cadarnhau",
 	"mobile-frontend-copyright": "Rhoddir testun y dudalen ar gael ar delerau'r drwydded $1, heblaw ei fod wedi nodi'n wahanol.",
 	"mobile-frontend-desc": "Rhaglen pen blaen i declynnau symudol",
-	"mobile-frontend-edit-login-action": "<strong>Rydyn ni angen eich help i wella {{SITENAME}}.</strong><br />Mewngofnodwch i olygu.",
-	"mobile-frontend-edit-signup-action": "<strong>Rydyn ni angen eich help i wella {{SITENAME}}.</strong><br />Cofrestrwch i olygu.",
 	"mobile-frontend-editor-anon": "Golygu heb fewngofnodi",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Mewngofnodi",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "Iawn",

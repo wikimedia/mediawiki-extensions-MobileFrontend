@@ -13,8 +13,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Isinen kodhe konfirmasi",
 	"mobile-frontend-copyright": "Isi cumepak kanthi pangayoman $1, kajaba ana katerangan liyané.",
 	"mobile-frontend-desc": "Mukantara Punsèl",
-	"mobile-frontend-edit-login-action": "<strong>Éwangi ndandani {{SITENAME}}.</strong><br />Mlebua log saperlu ndandani.",
-	"mobile-frontend-edit-signup-action": "<strong>Éwangi ndandani {{SITENAME}}.</strong><br />Ndhaftara saperlu ndandani.",
 	"mobile-frontend-editor-anon": "Besut tanpa mlebu log",
 	"mobile-frontend-editor-anonwarning": "<strong>Pélik</strong>: Kowé durung mlebu log. Alamat IP-mu bakal katon marang wong akèh manawa kowé mbesut. Yèn kowé <strong>mlebu log</strong> utawa <strong>nggawé akun</strong>, besutanmu bakal dadi darbéné akunmu lan uga ana piguna liyané.",
 	"mobile-frontend-editor-blocked-drawer-title": "Kowé kablokir saka mbesut {{SITENAME}}",

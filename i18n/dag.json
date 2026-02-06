@@ -10,8 +10,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Kpɛhimi koodi shɛli din wuhi ni bɛ saɣiti",
 	"mobile-frontend-copyright": "Lahabali be yaɣili ŋɔ $1 gbaa yihi bɛ yi ti a tibili",
 	"mobile-frontend-desc": "Nucheebaŋ tooni",
-	"mobile-frontend-edit-login-action": "<strong>Help improve {{SITENAME}}.</strong><br />kpɛmi ka niŋ maliniŋ.",
-	"mobile-frontend-edit-signup-action": "<strong>Help improve {{SITENAME\n}}.</strong><br />bɔmi soli kpe ka maliniŋ.",
 	"mobile-frontend-editor-anon": "Maliniŋ ka di pala kpɛmi",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Kpɛma",
 	"mobile-frontend-drawer-arrow-label": "Kparima",

@@ -18,8 +18,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "تصدیقی کوڈ درج کریں",
 	"mobile-frontend-copyright": "تمام مواد $1 کے تحت میسر ہے، جب تک اس کی مخالفت مذکور نہ ہو۔",
 	"mobile-frontend-desc": "موبائل پیشدید",
-	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}} کی ترقی میں معاونت فرمائیں۔</strong><br />ترمیم کرنے کے لیے داخل ہوں۔",
-	"mobile-frontend-edit-signup-action": "<strong>{{SITENAME}} کی ترقی میں معاونت فرمائیں۔</strong><br />ترمیم کرنے کے لیے کھاتہ بنائیں۔",
 	"mobile-frontend-editor-anon": "ترمیم بدون داخل نوشتگی",
 	"mobile-frontend-editor-anonwarning": "<strong>انتباہ</strong>: آپ لاگ ان نہیں ہیں۔ چناں چہ اگر آپ کوئی ترمیم کرتے ہیں تو آپ کا آئی پی پتہ عوامی طور پر نظر آئے گا۔\nتاہم اگر آپ<strong>لاگ ان</strong> یا <strong>کھاتہ بنا لیتے ہیں</strong> تو دیگر فوائد کے ساتھ ساتھ آپ کی ترامیم آپ کے صارف نام سے منسوب ہوگی۔",
 	"mobile-frontend-editor-blocked-drawer-action-login": "داخل ہوں",

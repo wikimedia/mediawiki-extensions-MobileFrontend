@@ -49,8 +49,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "کد امنیتی را وارد کنید",
 	"mobile-frontend-copyright": "محتوا تحت $1 در دسترس است، مگر اینکه خلافش ذکر شده باشد.",
 	"mobile-frontend-desc": "ظاهر تلفن همراه",
-	"mobile-frontend-edit-login-action": "<strong>به بهبود {{SITENAME}} کمک کنید.</strong><br />ورود برای ویرایش.",
-	"mobile-frontend-edit-signup-action": "<strong>به بهبود {{SITENAME}} کمک کنید.</strong><br />ثبت‌نام برای ویرایش.",
 	"mobile-frontend-editor-anon": "ویرایش بدون ورود",
 	"mobile-frontend-editor-anonwarning": "<strong>هشدار:</strong> شما وارد نشده‌اید. اگر هر تغییری ایجاد کنید، نشانی آی‌پی شما برای عموم قابل مشاهده خواهد بود. اگر <strong>وارد شوید</strong> یا <strong>یک حساب بسازید</strong>، ویرایش‌هایتان با نام کاربری‌تان ثبت خواهد شد و قابلیت‌های دیگری نیز به همراه خواهد داشت.",
 	"mobile-frontend-editor-autocreatewarning": "<strong>هشدار:</strong> شما به سامانه وارد نشده‌اید. ویرایش شما، به‌واسطهٔ افزودن یک کوکی به مرورگر شما به یک <strong>[[$1|نام تولیدشده به‌صورت خودکار]]</strong> منتسب خواهد شد. نشانی آی‌پی شما برای کاربران مورد اطمینان قابل مشاهده خواهد بود. اگر <strong>به سامانه وارد شوید</strong> یا <strong>یک حساب کاربری بسازید</strong>، ویرایش‌های شما به نام مورد انتخاب خودتان منتسب خواهد شد و از مزایای دیگری هم بهره‌مند خواهید شد.",

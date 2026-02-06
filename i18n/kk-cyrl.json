@@ -20,8 +20,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Құптау кодын енгізіңіз",
 	"mobile-frontend-copyright": "Мәлімет $1 лицензиясы аясында қолжетімді (басқа шарттар көрсетілмеген жағдайда).",
 	"mobile-frontend-desc": "MediaWiki-дің мобильді көрінісін жақсартуға көмектеседі",
-	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}} сайтын жетілдіруге көмектесіңіз.</strong><br />Өңдеу үшін кіріңіз.",
-	"mobile-frontend-edit-signup-action": "<strong>{{SITENAME}} сайтын жетілдіруге көмектесіңіз.</strong><br />Өңдеу үшін тіркеліңіз.",
 	"mobile-frontend-editor-anon": "Кірмей-ақ өңдеу",
 	"mobile-frontend-editor-anonwarning": "<strong>Ескерту:</strong> сіз кірмегенсіз. Өңдеме жасасаңыз, IP мекенжайыңыз жария болады. <strong>Кірсеңіз</strong> немесе <strong> тіркелсеңіз</strong>, өңдемелеріңіз қатысушы атыңызға жазылады және мұның басқа да артықшылықтары бар.",
 	"mobile-frontend-editor-autocreatewarning": "<strong>Ескерту:</strong> сіз жүйеге кірмегенсіз. Өңдеу жасаған соң сізге уақытша тіркелгі жасалады. [[$1|Толық ақпарат]]. Уақытша тіркелгіңіздің мерзімі біткен соң хабар ала беріп, басқа да мүмкіндіктерге қол жеткізу үшін <strong>жүйеге кіріңіз</strong> немесе жаңа <strong>тіркелгі жасаңыз</strong>.",

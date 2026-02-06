@@ -12,8 +12,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Inserir el còdaze de conferma",
 	"mobile-frontend-copyright": "El contegnùo el xe disponibile soto $1, almanco che no ghe sia scrito difarente.",
 	"mobile-frontend-desc": "Interfacia mobiłe",
-	"mobile-frontend-edit-login-action": "<strong>Juta a mejorar {{SITENAME}}.</strong><br />Łòghite par modifegar.",
-	"mobile-frontend-edit-signup-action": "<strong>Juta a mejorar {{SITENAME}}.</strong><br />Nòtate par modifegar.",
 	"mobile-frontend-editor-anon": "Sèvita a modìfegare sensa ver faxesto l'entrada",
 	"mobile-frontend-editor-anonwarning": "<strong>Ocio!:</strong> no te si ndà drento a el to profiło utente. El to indiriso IP el sarà publego se te fè calche modifega. Se te te <strong>loghi</strong> o te te<strong>noti</strong>, łe to contribusion łe vegnarà atribuìe al nome del to profiło utente, oltre che vère altri vantaji.",
 	"mobile-frontend-editor-editing": "Cànbia",

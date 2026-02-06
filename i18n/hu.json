@@ -21,8 +21,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Írd be a megerősítő kódot",
 	"mobile-frontend-copyright": "A lap szövege $1 alatt érhető el, ha nincs külön jelölve.",
 	"mobile-frontend-desc": "Segít javítani gy MediaWiki-példány mobilos megjelenését",
-	"mobile-frontend-edit-login-action": "<strong>Segíts a(z) {{SITENAME}} javításában!</strong><br />Jelentkezz be a szerkesztéshez.",
-	"mobile-frontend-edit-signup-action": "<strong>Segíts a(z) {{SITENAME}} javításában!</strong><br />Regisztrálj a szerkesztéshez.",
 	"mobile-frontend-editor-anon": "Szerkesztés bejelentkezés nélkül",
 	"mobile-frontend-editor-anonwarning": "<strong>Figyelem:</strong> Nem vagy bejelentkezve. Ha szerkesztesz, az IP-címed nyilvánosan látható lesz a laptörténetben. Ha <strong>bejelentkezel</strong> vagy <strong>regisztrálsz</strong>, a szerkesztéseid a felhasználónevedhez lesznek társítva, egyéb hasznos dolgok mellett.",
 	"mobile-frontend-editor-autocreatewarning": "<strong>Figyelem:</strong> Nem vagy bejelentkezve. Amikor először szerkesztesz, egy ideiglenes fiók jön létre neked ([[{{MediaWiki:tempuser-helppage}}|további információk]]). Ha <strong>[$1 bejelentkezel]</strong> vagy <strong>[$2 regisztrálsz]</strong>, akkor az ideiglenes fiók lejárta után is meg fogod kapni az értesítéseket, egyéb hasznos funkciók mellett.",

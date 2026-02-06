@@ -46,8 +46,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Bevestigingscode invoeren",
 	"mobile-frontend-copyright": "De inhoud is beschikbaar onder de licentie $1 tenzij anders aangegeven.",
 	"mobile-frontend-desc": "Helpt de mobiele aanwezigheid van een MediaWiki-installatie te verbeteren",
-	"mobile-frontend-edit-login-action": "<strong>Help mee met het verbeteren van {{SITENAME}}.</strong><br />Meld u aan om te bewerken.",
-	"mobile-frontend-edit-signup-action": "<strong>Help mee met het verbeteren van {{SITENAME}}.</strong><br />Schrijf u in om te kunnen bewerken.",
 	"mobile-frontend-editor-anon": "Bewerken zonder aan te melden",
 	"mobile-frontend-editor-anonwarning": "<strong>Waarschuwing:</strong> U bent niet aangemeld.\nUw IP-adres zal voor iedereen zichtbaar zijn als u wijzigingen aanbrengt. Als u <strong>zich aanmeldt</strong> of <strong>een account aanmaakt</strong>, worden uw bewerkingen aan uw gebruikersnaam toegeschreven. Er zijn ook nog andere voordelen.",
 	"mobile-frontend-editor-autocreatewarning": "<strong>Waarschuwing:</strong> u bent niet aangemeld. Nadat u een wijziging hebt aangebracht, wordt er een tijdelijk account voor u aangemaakt. [[$1|Meer informatie]]. <strong>Meld u aan</strong> of <strong>maak een account aan</strong> om meldingen te blijven ontvangen nadat dit account verloopt, en om toegang te krijgen tot andere functies.",

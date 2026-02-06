@@ -10,8 +10,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Bɔ ngyentomu coodu",
 	"mobile-frontend-copyright": "Nsɛm a wɔwɔ ha yi bo nndu $1 gye dɛ wɔkyerɛ dɛ bo no yɛ fofor",
 	"mobile-frontend-desc": "Mobile Frontend",
-	"mobile-frontend-edit-login-action": "<strong>Mboa ma yentu npɔn {{SITENAME}}.\n</strong><br/>Kɔ mu na hyɛase yɛ nsiesie.",
-	"mobile-frontend-edit-signup-action": "<strong>Boa ma yentu mpɔn {{SITENAME}}.</strong><br /> Fa wo dzin hyɛ mu na hyɛase dzi dzuma",
 	"mobile-frontend-editor-anon": "Dzi dwuma ber a nnkyerɛ wo dzin na wo kukuam ahyensudzi",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Kɔ mu",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "Nyoo",

@@ -12,8 +12,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Ievadiet apstiprinājuma kodu",
 	"mobile-frontend-copyright": "Saturs ir pieejams saskaņā ar $1, ja vien nav norādīts citādi.",
 	"mobile-frontend-desc": "Palīdz uzlabot MediaWiki instances darbību mobilajās ierīcēs",
-	"mobile-frontend-edit-login-action": "<strong>Palīdzi uzlabot Vikipēdiju.</strong><br />Pieslēdzies, lai labotu.",
-	"mobile-frontend-edit-signup-action": "<strong>Palīdzi uzlabot Vikipēdiju.</strong><br />Reģistrējies, lai labotu.",
 	"mobile-frontend-editor-anon": "Labot bez pieslēgšanās",
 	"mobile-frontend-editor-anonwarning": "<strong>Brīdinājums:</strong> Tu neesi pieslēdzies. Ja tu veiksi kādus labojumus, tava IP adrese būs publiski redzama. Ja tu <strong>pieslēgsies</strong> vai <strong>izveidosi kontu</strong>, tavi labojumi tiks piesaistīti tavam lietotājvārdam; būs arī citi ieguvumi.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Pieslēgties",

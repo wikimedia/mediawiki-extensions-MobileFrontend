@@ -14,8 +14,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Xavfsizlik matnini kiriting",
 	"mobile-frontend-copyright": "Matndan $1 litsenziyasi boʻyicha foydalanish mumkin (agar aksi koʻrsatilmagan boʻlsa).",
 	"mobile-frontend-desc": "Mobil interfeys",
-	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}}ni yaxshilashda koʻmaklashing.</strong><br />Tahrir qilish uchun tizimga kiring.",
-	"mobile-frontend-edit-signup-action": "Tahrirlash uchun roʻyxatdan oʻting.",
 	"mobile-frontend-editor-anon": "Kirmasdan turib tahrirlash",
 	"mobile-frontend-editor-anonwarning": "<strong>Ogohlantirish:</strong> Siz tizimga kirmagansiz. Agarda siz tahrir amalga oshirsangiz, sizning IP manzilingizni barcha koʻrishi mumkin boʻladi. Agar siz <strong>tizimga kirsangiz</strong> yoki <strong>hisob yaratsangiz</strong>, siz tomoningizdan amalga oshirilgan tahrirlar foydalanuvchi nomingizga tegishli boʻladi (boshqa qoʻshimcha imtiyozlar ham mavjuddir)",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Kirish",

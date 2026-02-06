@@ -10,8 +10,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Unesite kôd za potvrdu",
 	"mobile-frontend-copyright": "Sadržaj je dostupan pod licencom $1 ako nije drugačije naznačeno.",
 	"mobile-frontend-desc": "Poboljšava mobilnu varijantu softvera MediaWiki",
-	"mobile-frontend-edit-login-action": "<strong>Pomozite nam da unaprijedimo stranicu {{GRAMMAR:akuzativ|{{SITENAME}}}}.</strong><br />Prijavite se da biste uređivali.",
-	"mobile-frontend-edit-signup-action": "<strong>Pomozite nam da unaprijedimo stranicu {{GRAMMAR:akuzativ|{{SITENAME}}}}.</strong><br />Registritajte se da biste uređivali.",
 	"mobile-frontend-editor-anon": "Uredi bez prijave",
 	"mobile-frontend-editor-anonwarning": "<strong>Upozorenje:</strong> Niste prijavljeni. \nVaša IP adresa će biti javno vidljiva ako uređujete. Ako <strong>se prijavite</strong> ili <strong>otvorite račun</strong>, tada izmjene će se pripisuju vašem korisničkom imenu, zajedno sa drugima pogodnostima.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Prijavi se",

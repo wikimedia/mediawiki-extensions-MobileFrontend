@@ -8,8 +8,6 @@
 	"abusefilter-edit-builder-vars-user-mobile": "ကေားသုင်ꩻသားယိုနဝ်ꩻ ခြပ်ချော်ꩻအီတောမ်ႏ မိုဗုဲင်းဖိုန်း မွေးနဲ့/မွေးတဝ်းနဲ့",
 	"mobile-frontend-account-create-captcha-placeholder": "သွင်ꩻသော့ꩻ စဲစ်ထွားကိုဒ်",
 	"mobile-frontend-copyright": "အကျောင်ꩻခရာႏဖုံႏယို မုဲင်တောင်ꩻသေꩻချက်အလင် မိဉ်ႏအဝ်ႏတဝ်းနဝ်ꩻ လꩻနွောင်ꩻဒျာႏ $1 ဆꩻလ့ကိုသွူ။",
-	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}}ဖေႏကထင်ႏထို စွဲးကမ်းဖေႏပါသွော့သြ။</strong><br />အီႏခြပ်ချော်ꩻတာႏ နွို့သွော့အကောက်သြ။",
-	"mobile-frontend-edit-signup-action": "<strong>{{SITENAME}}ဖေႏကထင်ႏထို စွဲးကမ်းဖေႏပါသွော့သြ။<br />အီႏခြပ်ချော်ꩻတာႏ ဒင်ႏသွော့မတ်ပိုင်တိဉ်သြ။",
 	"mobile-frontend-editor-anon": "အီႏခြပ်ချော်ꩻတာႏ နွို့နေးတဝ်းအကောက်",
 	"mobile-frontend-editor-anonwarning": "<strong>ဖေႏသꩻတိꩻချက်: </strong> နာꩻနဝ်ꩻ နွို့ခါꩻတဝ်းအကောက်သွူ။ နာꩻမိဉ်ႏမာꩻ <strong>[ ခြပ်ချော်ꩻမုꩻနဝ်ꩻ]</strong> လိုꩻလင်ဖိုင်ႏ <strong>[ အီႏထီႏနွောင်ꩻ ]</strong>နာꩻအုဲင်ပီလိပ်စာသွူ။",
 	"mobile-frontend-editor-blocked-drawer-action-login": "နွို့အကောက်",

@@ -37,8 +37,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Введіть код підтвердження",
 	"mobile-frontend-copyright": "Вміст доступний на умовах $1, якщо не вказано інше.",
 	"mobile-frontend-desc": "Допомагає покращити мобільну присутність проєкту на MediaWiki",
-	"mobile-frontend-edit-login-action": "<strong>Допоможіть покращити {{GRAMMAR:Accusative|{{SITENAME}}}}.</strong><br />Увійдіть, щоб редагувати.",
-	"mobile-frontend-edit-signup-action": "<strong>Допоможіть покращити {{GRAMMAR:Accusative|{{SITENAME}}}}.</strong><br />Зареєструйтеся для редагування.",
 	"mobile-frontend-editor-anon": "Редагувати без автентифікації",
 	"mobile-frontend-editor-anonwarning": "<strong>Увага:</strong> ви не авторизовані. Ваша IP-адреса буде публічно видима, якщо ви зробите якісь редагування. Якщо ви <strong>авторизуєтеся</strong> чи <strong>створите обліковий запис</strong>, ваші редагування позначатимуться вашим іменем користувача і ви отримаєте інші переваги.",
 	"mobile-frontend-editor-autocreatewarning": "<strong>Увага:</strong> Ви не ввійшли до системи. Коли ви зробите редагування, для вас буде створено тимчасовий обліковий запис. [[$1|Дізнатися більше]]. <strong>Увійдіть в систему</strong> або <strong>створіть обліковий запис</strong>, щоб продовжити отримувати сповіщення після того, як вийде термін дії цього облікового запису, й отримати доступ до інших функцій.",

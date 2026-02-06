@@ -13,8 +13,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Юнматон кодэз пыртэ",
 	"mobile-frontend-copyright": "Пушкесэз $1 лицензияя кутымон луэ (мукетыз возьматэмын ӧвӧл ке).",
 	"mobile-frontend-desc": "Мобил Азьпал",
-	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}} умоятыны юрттэ.</strong><br />Тупатон понна пырелэ.",
-	"mobile-frontend-edit-signup-action": "<strong>{{SITENAME}} умоятыны юрттэ.</strong><br />Тупатон понна итӥське",
 	"mobile-frontend-editor-anon": "Пыриськытэк тупатоно",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Эрикрадъяськоно",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "Ярам",

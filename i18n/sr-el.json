@@ -15,8 +15,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Unesite potvrdni kod",
 	"mobile-frontend-copyright": "Sadržaj je dostupan pod licencom $1 osim ako je drugačije navedeno.",
 	"mobile-frontend-desc": "Unapređuje mobilnu varijantu Medijavikija",
-	"mobile-frontend-edit-login-action": "<strong>Unapredite {{GRAMMAR:dativ|{{SITENAME}}}}.</strong><br />Prijavite se da biste uređivali.",
-	"mobile-frontend-edit-signup-action": "<strong>Unapredite {{GRAMMAR:dativ|{{SITENAME}}}}.</strong><br />Registrujte se da bi uređivali.",
 	"mobile-frontend-editor-anon": "Uredi bez prijave",
 	"mobile-frontend-editor-anonwarning": "<strong>Upozorenje:</strong> Niste prijavljeni. Vaša IP adresa biće javno vidljiva ako uredite ili napravite neku stranicu. <strong>Prijavite se</strong> ili <strong>otvorite nalog</strong>. Time će vaši doprinosi biti pripisivani korisničkom imenu koje odaberete i steći ćete mnoge pogodnosti.",
 	"mobile-frontend-editor-autocreatewarning": "<strong>Upozorenje:</strong> Niste prijavljeni. Vaša izmena će biti pripisana automatski generisanom imenu. [[$1|Saznajte više]]. <strong>Prijavite se</strong> ili <strong>otvorite nalog</strong>. Time će Vaši doprinosi biti pripisivani korisničkom imenu koje odaberete.",

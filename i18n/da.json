@@ -27,8 +27,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Indtast bekræftelseskode",
 	"mobile-frontend-copyright": "Indholdet er udgivet under $1 medmindre andet er angivet.",
 	"mobile-frontend-desc": "Hjælper med at forbedre den mobile tilstedeværelse af en MediaWiki-instans",
-	"mobile-frontend-edit-login-action": "<strong>Hjælp med at forbedre {{SITENAME}}.</strong><br />Log ind for at redigere.",
-	"mobile-frontend-edit-signup-action": "<strong>Hjælp med at forbedre {{SITENAME}}.</strong><br />Tilmeld dig for at redigere.",
 	"mobile-frontend-editor-anon": "Rediger uden at logge på",
 	"mobile-frontend-editor-anonwarning": "<strong>Advarsel:</strong> Du er ikke logget på. Din IP-adresse vil blive vist offentligt, hvis du foretager nogen ændringer. Hvis du <strong>logger på</strong> eller <strong>opretter en konto</strong>, vil dine redigeringer blive tilskrevet dit brugernavn, sammen med andre fordele.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Log ind",

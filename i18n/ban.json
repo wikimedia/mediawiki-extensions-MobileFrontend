@@ -11,8 +11,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Manjingin kode konfirmasi",
 	"mobile-frontend-copyright": "Daging kasayagayang ring sor $1 ritatkala nénten wénten uahan.",
 	"mobile-frontend-desc": "Ngwantu nincapang kawéntenan sélulér saking instansi MediaWiki",
-	"mobile-frontend-edit-login-action": "<strong>Wantu iraga ngabecikang {{SITENAME}}.</strong><br />Manjing log antuk uahin.",
-	"mobile-frontend-edit-signup-action": "<strong>Wantu iraga ngabecikang {{SITENAME}}.</strong><br />Ngadaptar antuk nguahin.",
 	"mobile-frontend-editor-anon": "Uahan tanpa manjing log",
 	"mobile-frontend-editor-anonwarning": "<strong>Pingetan:</strong> Ida dané nénten kacutet manjing log. Alamat IP ida dané jagi kasinahang ring publik pinaka ida wénten nguahin. Yening ida dane <strong>manjing log</strong> utawi <strong>ngardi satunggal akun</strong>, uahan ida pacang kakaitin ring wastan sang anganggé ida, sareng antuk kabecikan tiosan.",
 	"mobile-frontend-editor-autocreatewarning": "<strong>Paingetan:</strong> Ragané nénten manjing log. Acepok ragané nguahin, akun sauntara pacang kakardi antuk ragané. [[$1|pelajahin malih]]. <strong>Manjing log</strong> utawi <strong>ngardi akun</strong> antuk ngalanturang nampi pakéling sesampun akun kadaluwarsa, lan antuk ngambil makudang kawigunan liyanan.",

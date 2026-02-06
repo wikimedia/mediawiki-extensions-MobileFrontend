@@ -18,8 +18,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Escribe el código de confirmación",
 	"mobile-frontend-copyright": "Le ba'axo'ob ku taasik yáan ichil u pajtalil $1, wa ku ya'alal wa mae'.",
 	"mobile-frontend-desc": "ku yáantik u ma'alo'obkíinsa'al u yaantal jump'éel kúuchil ti' móvil ti' jump'éel kúuchil MediaWiki",
-	"mobile-frontend-edit-login-action": "<strong> ku yáantik u ma'alo'obkíinsa'al {{SITENAME}}.</strong><br /> kajal Wokol utia'al u editar.",
-	"mobile-frontend-edit-signup-action": "<strong>ku áantaj u ma'alo'obkíinsik {{SITENAME}}.</strong><br /> ts'íibt a k'aaba' utia'al a editar.",
 	"mobile-frontend-editor-anon": "Editar kex  xma' wokol ichil",
 	"mobile-frontend-editor-anonwarning": "<strong>A'almaj t'aan:</strong> Ma' táan a wokol. A dirección IP yaan u yila'al tumen tuláakal máak wa ka beetik je'el ba'alak k'eexilo'ob. Wa ka <strong> wokol ichil </strong> wa <strong> ka beetik jump'éel yíila'áj </strong>, a k'eexo'obe' yaan u ts'a'abal ti' a k'aaba', yéetel uláak' untsilo'ob.",
 	"mobile-frontend-editor-autocreatewarning": "<strong>Advertencia:</strong> Ma' táan a wokol. Le ken a beet jump'éel edición, yaan u beeta'al jump'éel yilaje' temporal utia'al tech. [[ $1 |Kaambal asab]]. <strong>Wokol</strong> wa <strong>beet jump'éel yilaje'</strong> uti'al a k'amik notificaciones ken ts'o'okok le yilaje', yéetel utia'al a tsáabaltio'ob áantaj uláak' ba'alo'ob.",

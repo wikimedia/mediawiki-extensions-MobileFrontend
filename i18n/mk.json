@@ -9,8 +9,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Внесете го потврдниот код",
 	"mobile-frontend-copyright": "Содржината е достапна под $1 освен ако не е поинаку наведено.",
 	"mobile-frontend-desc": "Помага во подобрувањето на мобилното присуство на примерок на МедијаВики",
-	"mobile-frontend-edit-login-action": "<strong>Помогнете ни да ја подобриме страницата {{SITENAME}}.</strong><br />Најавете се за да уредувате.",
-	"mobile-frontend-edit-signup-action": "<strong>Помогнете ни да ја подобриме страницата {{SITENAME}}.</strong><br />Зачленете се за да уредувате.",
 	"mobile-frontend-editor-anon": "Уреди без најава",
 	"mobile-frontend-editor-anonwarning": "<strong>Предупредување:</strong> Не сте најавени. Вашата IP-адреса ќе биде јавно видлива ако уредувате. Ако <strong>се најавите</strong> или <strong>направите сметка</strong>, тогаш уредувањата ќе се припишуваат на вашето корисничко име, покрај другите погодности.",
 	"mobile-frontend-editor-autocreatewarning": "<strong>Предупредување:</strong> Не сте најавени. Кога ќе направите уредување, ќе ви биде направена привремена сметка. [[$1|Дознајте повеќе]]. <strong>Најавете се</strong> или <strong>направете своја сметка</strong> за да продолжите да добивате известувања откако привремената ќе истече, но и за да добиете повеќе можности.",

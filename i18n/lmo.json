@@ -9,8 +9,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Met dent el codes de conferma",
 	"mobile-frontend-copyright": "El contegnud a l'è disponibil sota la licenza $1, se l'è minga indicad diversament.",
 	"mobile-frontend-desc": "Interfacia in dispositiv portabil",
-	"mobile-frontend-edit-login-action": "<strong>Ajuta a migliorà {{SITENAME}}.</strong><br />Va dent per modifegà.",
-	"mobile-frontend-edit-signup-action": "<strong>Aiuta a migliorà {{SITENAME}}.</strong><br />Registress per modifegà.",
 	"mobile-frontend-editor-anon": "Modifega senza andà dent come utent registrad",
 	"mobile-frontend-editor-anonwarning": "<strong>Ocio:</strong> te see minga anda dent come un utent registrad. Se te faret di modifeghe el to adress IP el sarà a la papala de tucc. Se <strong>te vee dent</strong> o <strong>te creet un cunt</strong>, i to modifiche i sarann atribuide al to nom de utent, insema de alter benefizzi.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Và dent",

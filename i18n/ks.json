@@ -7,8 +7,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "تَصدیٖقی کوڈ کٔرِو دَرٕج",
 	"mobile-frontend-copyright": "تَمام مَواد چھُ $1 تَحَت دٕستِیاب، اَگر کانٛہہ باقٕے اِجازَت نامہٕ چھُ نہٕ موجوٗد.",
 	"mobile-frontend-desc": "موبایِل طرٕز",
-	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}} ہٕنٛز تَرقی مَنٛز کٔرِو مَدَتھ۔</strong><br />اؠڈِٹ کَرنہٕ خٲطرٕ گٔژھِو دٲخٕل۔",
-	"mobile-frontend-edit-signup-action": "<strong>{{SITENAME}} ہٕنٛز تَرقی مَنٛز کٔرِو مَدَتھ۔</strong><br />اؠڈِٹ کَرنہٕ خٲطرٕ بَنٲوِو کھاتہٕ۔",
 	"mobile-frontend-editor-anon": "دٲخِل گَژھنہٕ وَرٲے کٔرِو اؠڈِٹ",
 	"mobile-frontend-editor-anonwarning": "<strong>حَبردار:</strong> تُہؠ چھِ نہٕ دٲخِل گٔمِتؠ. تُہُنٛد آی پی پَتا ییہِ عَوٲمی طور شایع کَرنہٕ اَگر تُہؠ کانٛہہ اؠڈِٹ کٔرِو. اَگر تُہؠ گٔژھِو <strong>دٲخِل</strong> یا <strong>بَنٲوِو کھاتہٕ</strong>، تُہُنٛد اؠڈِٹ ییَن تَتھ رُکُن ناوَس سٟتؠ مُنسَلِق کَرنہٕ.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "دٲخِل گَژھُن",

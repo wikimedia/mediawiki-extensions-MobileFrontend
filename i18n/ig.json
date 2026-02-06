@@ -15,8 +15,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Tinye koodu Nkwenye",
 	"mobile-frontend-copyright": "Ọdịnaya dị n'okpuru $1 belụsọ na edere ya otú ọzọ.",
 	"mobile-frontend-desc": "Na-enyere aka imeziwanye ọnụnọ ekwentị nke ìhè atụ MediaWiki",
-	"mobile-frontend-edit-login-action": "<strong>Nyere aka melite {{SITENAME}}.</strong><br /> Banye ka idezie.",
-	"mobile-frontend-edit-signup-action": "<strong>Nyere aka melite {{SITENAME}}.</strong><br /> Debanye aha ka idezie.",
 	"mobile-frontend-editor-anon": "Dezie na-abanyeghị",
 	"mobile-frontend-editor-anonwarning": "<strong>Idọakanantị:</strong> Ị banyebeghị. Onye ọbụla ga-ahụ akara IP gị ma ọbụrụ na-ime ndezi n'ebe a. IJiri <strong>aha banye </strong> m'ọbụ <strong>kepụta akanụtụ</strong>, ndezi niile i ga-eme gosi n'aha gi, tinyere ihe nrite ndị ọzọ.",
 	"mobile-frontend-editor-autocreatewarning": "<strong>Ịdọ aka ná ntị:</strong> Ị banyebeghị. Ozugbo ịmere ndezi, a ga-emepụtara gi akaụntụ na ano nwa oge. [[$1|Matakwuo]]. <strong>Banye</strong> ma ọ bụ <strong>mepụta akaụntụ</strong> ka ị gaa n'ihu na-anata amamọkwa mgbe akaụntụ a mebiri, yana ịnweta atụmatụ ndị ọzọ.",

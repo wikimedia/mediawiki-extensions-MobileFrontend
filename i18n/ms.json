@@ -17,8 +17,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Masukkan kod pengesahan",
 	"mobile-frontend-copyright": "Kandungan disediakan dengan $1 kecuali jika dinyatakan sebaliknya.",
 	"mobile-frontend-desc": "Membantu meningkatkan kehadiran mudah alih untuk sesuatu contoh MediaWiki",
-	"mobile-frontend-edit-login-action": "<strong>Bantu baiki {{SITENAME}}.</strong><br />Log masuk untuk menyunting.",
-	"mobile-frontend-edit-signup-action": "<strong>Bantu baiki {{SITENAME}}.</strong><br/>Log masuk untuk menyunting.",
 	"mobile-frontend-editor-anon": "Sunting tanpa log masuk dahulu",
 	"mobile-frontend-editor-anonwarning": "<strong>Amaran:</strong> Anda tidak log masuk. Alamat IP anda akan disiarkan kepada umum juka anda membuat sebarang suntingan. Jika anda <strong>log masuk</strong> atau <strong>membuka akaun</strong>, maka suntingan anda akan diatribusikan kepada nama pengguna anda di samping manfaat-manfaat lain.",
 	"mobile-frontend-editor-autocreatewarning": "<strong>Amaran:</strong> Anda belum melog masuk. Sebaik sahaja anda membuat penyuntingan, akaun sementara akan dicipta untuk anda. [[$1|Ketahui lebih lanjut]]. <strong>Sila log masuk</strong> atau <strong>cipta akaun peribadi anda</strong> untuk terus menerima pemberitahuan selepas akaun ini tamat tempoh, dan untuk mengakses ciri lain.",

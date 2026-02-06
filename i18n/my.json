@@ -13,8 +13,6 @@
 	"abusefilter-edit-builder-vars-user-mobile": "အသုံးပြုသူသည် မိုလ်ဘိုင်း မျက်နှာသွင်ပြင်မှ တည်းဖြတ်ခြင်း ဟုတ်/မဟုတ်",
 	"mobile-frontend-account-create-captcha-placeholder": "စိစစ်မှု ကုဒ်ထည့်သွင်းရန်",
 	"mobile-frontend-copyright": "အကြောင်းအရာများကို အခြားမှတ်ချက်မရှိပါက $1 အောက်တွင် ရရှိနိုင်ပါသည်။",
-	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}}ကို တိုးတက်အောင် ကူညီပေးပါ။</strong><br />တည်းဖြတ်ရန်အတွက် ဝင်ရောက်ပါ။",
-	"mobile-frontend-edit-signup-action": "<strong>{{SITENAME}}ကို တိုးတက်အောင် ကူညီပေးပါ။<br />တည်းဖြတ်ရန်အတွက် မှတ်ပုံတင်ပါ။",
 	"mobile-frontend-editor-anon": "အကောင့်ထဲမဝင်ဘဲ တည်းဖြတ်ရန်",
 	"mobile-frontend-editor-anonwarning": "<strong>သတိပေးချက် - </strong> သင်သည် လော့ဂ်အင် ဝင်မထားပါ။ သင်တည်းဖြတ်မှု ပြုလုပ်ပါက သင့်အိုင်ပီလိပ်စာကို မည်သူမဆို တွေ့မြင်နိုင်မည်။ အကယ်၍ သင် <strong>[လော့ဂ်အင်ဝင်]</strong> သို့မဟုတ် <strong>[ အကောင့်တစ်ခု ဖန်တီး]</strong>ပါက၊ သင့်တည်းဖြတ်မှုများသည် သင့်အမည်နှင့် တွဲဖက်မှတ်သားမည် ဖြစ်သည်။",
 	"mobile-frontend-editor-blocked-drawer-action-login": "အကောင့်ထဲဝင်ရန်",

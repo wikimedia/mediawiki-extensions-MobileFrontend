@@ -9,8 +9,6 @@
 	"abusefilter-edit-builder-vars-user-mobile": "Si yon itilizatè ap modifye atravè aparèy mobil",
 	"mobile-frontend-account-create-captcha-placeholder": "Antre kod konfimasyon an",
 	"mobile-frontend-copyright": "Kontni disponib selon lisans $1 sof si gen lòt endikasyon.",
-	"mobile-frontend-edit-login-action": "<strong>Ede amelyore {{SITENAME}}.</strong><br />Konekte ou pou modifye.",
-	"mobile-frontend-edit-signup-action": "<strong>Ede amelyore {{SITENAME}}.</strong><br />Enskri ou pou modifye.",
 	"mobile-frontend-editor-anon": "Modifye san konekte ou",
 	"mobile-frontend-editor-anonwarning": "<strong>Avètisman :</strong> Ou pa konekte. Adrès IP ou a pral vizib piblikman si ou fè nenpòt modifikasyon. Si ou <strong>konekte</strong> oswa <strong>kreye yon kont</strong>, modifikasyon ou yo pral atribiye a non itilizatè ou, ansanm ak lòt avantaj.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Konekte ou",

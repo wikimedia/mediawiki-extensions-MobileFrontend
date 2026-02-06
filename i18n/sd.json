@@ -15,8 +15,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "تصديقي ڪوڊ داخل ڪريو",
 	"mobile-frontend-copyright": "مواد $1 تحت موجود آھي جيسيتائين ٻي صورت واضع نہ ڪئي وڃي.",
 	"mobile-frontend-desc": "ميڊياوڪي انسٽانس جي موبائل موجودگي کي بھتر بنائڻ ۾ مدد ڪري ٿو",
-	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}} کي بھتر ڪرڻ ۾ مدد ڪريو.</strong><br/> سنوارڻ لاءِ داخل ٿيو.",
-	"mobile-frontend-edit-signup-action": "<strong>{{SITENAME}} کي بھتر ڪرڻ ۾ مدد ڪريو.</strong><br /> سنوارڻ لاءِ کاتو کوليو.",
 	"mobile-frontend-editor-anon": "داخل ٿيڻ بغير سنواريو",
 	"mobile-frontend-editor-anonwarning": "<strong>چِتاءُ:</strong> توهان داخل ٿيل نہ آهيو. جيڪڏهن اوهان سنوار ڪئي، تہ اوهانجو آئپي پتو عوامي طور ظاهر ٿيندو. جيڪڏهن توهان <strong>داخل ٿيو</strong> يا <strong>کاتو کوليو</strong>، تہ ٻين فائدن سان گڏ توهان جو سنوارون توهان جي واپرائيندڙ-نانءَ سان منسوب ڪيون وينديون.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "داخل ٿيو",

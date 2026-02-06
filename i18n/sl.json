@@ -15,8 +15,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Vnesite potrditveno kodo",
 	"mobile-frontend-copyright": "Vsebina je na voljo pod licenco $1, razen če je navedeno drugače.",
 	"mobile-frontend-desc": "Pomaga izboljšati mobilno prisotnost primerka MediaWikija",
-	"mobile-frontend-edit-login-action": "<strong>Pomagajte izboljšati {{GRAMMAR:tožilnik|{{SITENAME}}}}.</strong><br />Prijavite se za urejanje.",
-	"mobile-frontend-edit-signup-action": "<strong>Pomagajte izboljšati {{GRAMMAR:tožilnik|{{SITENAME}}}}.</strong><br />Registrirajte se za urejanje.",
 	"mobile-frontend-editor-anon": "Urejanje brez prijave",
 	"mobile-frontend-editor-anonwarning": "<strong>Opozorilo:</strong> Niste prijavljeni. Če boste opravili kakršno koli urejanje, bo vaš IP-naslov javno viden. Če se boste <strong>prijavili</strong> ali če si boste <strong>ustvarili račun</strong>, bodo poleg drugih prednosti vaša urejanja pripisana vašemu uporabniškemu imenu.",
 	"mobile-frontend-editor-autocreatewarning": "<strong>Opozorilo:</strong> Niste prijavljeni. Ko boste opravili urejanje, bo za vas ustvarjen začasen račun. [[$1|Izvedite več o tem]]. Za nadaljnje prejemanje obvestil po preteku tega računa in dostop do drugih možnosti <strong>se prijavite</strong> ali si <strong>ustvarite račun</strong>.",

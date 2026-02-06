@@ -9,8 +9,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Йазйе бакъдаран код",
 	"mobile-frontend-copyright": "Чулацам лело мега $1 лицензица (кхениг билгалйина йацахь).",
 	"mobile-frontend-desc": "ГӀо до MediaWiki бух тӀехь йолчу проектан мобилан верси тойан",
-	"mobile-frontend-edit-login-action": "<strong>ГӀодеша сайт дика йан {{SITENAME}}.</strong><br />Тайан чугӀо.",
-	"mobile-frontend-edit-signup-action": "<strong>ГӀо-деша сайт дика йан {{SITENAME}}.</strong><br />Тадарш дан дӀайаздло.",
 	"mobile-frontend-editor-anon": "Системи чу а ца волуш тайан",
 	"mobile-frontend-editor-anonwarning": "<strong>Тидам!</strong> Ахьа сайтан тӀехь авторизаци йина йац. Хьан IP-адрес массо а стагана гуш хир ду, нагахь ахьа хийцамаш бахь. Нагахь санна ахьа <strong>авторизаци йахь</strong> йа <strong>аккаунт кхоллахь</strong>, хийцамаш хьан декъашхочун цӀарца боьзна хир бу, кхин а аьттонаш хир бу хьан.",
 	"mobile-frontend-editor-autocreatewarning": "<strong>Тидам!</strong> Ахьа сайтан тӀехь авторизаци йина йац. Ахьа хьайн хийцам Ӏалашбича, ханна аккаунт кхуллур йу хьуна. [[$1|Хьажа кхин а дӀа]]. Нагахь санна ахьа <strong>авторизаци йахь</strong> йа <strong>аккаунт кхоллахь</strong>, хьан хийцамаш боьзна хир бу ахьа хаьржинчу цӀарца, хьуна хир бу тайп-тайпана кхин а аьттонаш.",

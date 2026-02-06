@@ -16,7 +16,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "کۆدی پشتڕاستکردنەوە تێ بخە",
 	"mobile-frontend-copyright": "ناوەرۆک لەبەردەستە لەژێر $1دا، مەگەر پێچەوانەی وترابێ.",
 	"mobile-frontend-desc": "پاشڕووکاری مۆبایل",
-	"mobile-frontend-edit-login-action": "<strong>یارمەتیی چاککردنی {{SITENAME}} بدە.</strong><br />بچۆ ژوورەوە تا دەستکاری بکەیت.",
 	"mobile-frontend-editor-anon": "دەستکاریکردن بەبێ چوونەژوورەوە",
 	"mobile-frontend-editor-blocked-drawer-action-login": "بچۆ ژوورەوە",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "باشە",

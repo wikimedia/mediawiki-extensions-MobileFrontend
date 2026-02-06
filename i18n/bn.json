@@ -20,8 +20,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "নিশ্চিতকরণ কোড লিখুন",
 	"mobile-frontend-copyright": "বিষয়বস্তু $1-এর আওতায় প্রকাশিত যদি না অন্য কিছু নির্ধারিত থাকে।",
 	"mobile-frontend-desc": "মোবাইল ফ্রন্টএন্ড",
-	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}} উন্নত করতে সাহায্য করুন।</strong><br />সম্পাদনা করতে প্রবেশ করুন।",
-	"mobile-frontend-edit-signup-action": "<strong>{{SITENAME}} উন্নত করতে সাহায্য করুন।</strong><br />সম্পাদনা করতে নিবন্ধন করুন।",
 	"mobile-frontend-editor-anon": "প্রবেশ ছাড়াই সম্পাদনা করুন",
 	"mobile-frontend-editor-anonwarning": "<strong>সতর্কতা:</strong> আপনি প্রবেশ করেননি। আপনি যদি কোন সম্পাদনা করেন, তবে আপনার আইপি ঠিকানা সার্বজনীনভাবে দেখা যাবে। আপনি যদি <strong>প্রবেশ করেন</strong> বা <strong>একটি অ্যাকাউন্ট তৈরি করেন</strong>, তাহলে আপনি আপনার আইপি ঠিকানা গোপন রাখতে পারবেন ও আরও অনেক সুবিধা পাবেন।",
 	"mobile-frontend-editor-blocked-drawer-action-login": "প্রবেশ করুন",

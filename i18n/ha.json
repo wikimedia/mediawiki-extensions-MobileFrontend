@@ -13,8 +13,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Shigar da kod din tabbaci",
 	"mobile-frontend-copyright": "Akwai ƙunshiyar a ƙarƙashin $1 har sai an sanar da akasin haka.",
 	"mobile-frontend-desc": "Yana taimakawa wajen inganta kasancewar wayar hannu ta misali MediaWiki",
-	"mobile-frontend-edit-login-action": "<strong>Taimaka inganta {{SITENAME}}.</strong><br />Shiga ciki zuwa gyara.",
-	"mobile-frontend-edit-signup-action": "<strong>Taimaka inganta {{SITENAME}}.</strong><br />Yi rijista dan fara gyara.",
 	"mobile-frontend-editor-anon": "Yi gyara ba tare da kun shiga ba",
 	"mobile-frontend-editor-anonwarning": "<strong>Gargadi:</strong> Ba ku shiga ba. Adireshin IP din ku zai zama a bayyane idan kuka yi gyara. Idan ku ka <strong>shiga</strong> ko <strong>kirkira asusu</strong>, gyararrakin ku za'a hade su zuwa sunanku, tare da wasu amfani.",
 	"mobile-frontend-editor-autocreatewarning": "<strong>Gargadi:</strong> Ba'a shiga asusu ba. Za'a danganta gyaran ku zuwa <strong>[[ $1 |sunan da ya aka samu]]</strong> ta hanyar ƙara kuki zuwa mazuruftan ku. Adireshin IP ɗin ku zai bayyana ga amintattun masu amfani. Idan ka <strong>shiga</strong> ko <strong>ƙirƙirar asusu</strong>, za'a dangana gyare-gyarenku zuwa sunan da kuka zaɓa, tare da wasu fa'idoji.",

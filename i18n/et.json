@@ -11,8 +11,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Sisesta kinnituskood",
 	"mobile-frontend-copyright": "Sisu on kasutatav litsentsi $1 tingimustel, kui pole öeldud teisiti.",
 	"mobile-frontend-desc": "Aitab teha MediaWiki tarkvara paremini mobiilis kasutatavaks.",
-	"mobile-frontend-edit-login-action": "<strong>Aita {{GRAMMAR:partitive|{{SITENAME}}}} täiendada.</strong><br />Logi sisse, et redigeerida.",
-	"mobile-frontend-edit-signup-action": "<strong>Aita {{GRAMMAR:partitive|{{SITENAME}}}} täiendada.</strong><br />Registreeru, et redigeerida.",
 	"mobile-frontend-editor-anon": "Redigeeri sisse logimata",
 	"mobile-frontend-editor-anonwarning": "<strong>Hoiatus</strong>: Sa pole sisse logitud. Kui teed muudatusi, on sinu IP-aadress kõigile avalikult nähtav. Kui <strong>logid sisse</strong> või <strong>lood konto</strong>, omistatakse muudatused sulle kasutajanime järgi, seda lisaks muudele eelistele.",
 	"mobile-frontend-editor-autocreatewarning": "<strong>Hoiatus:</strong> Sa pole sisse logitud. Kui teed muudatuse, luuakse sulle ajutine konto. [[$1|Loe veel]]. <strong>Logi sisse</strong> või <strong>loo konto</strong>, et saada teavitusi ka pärast selle konto aegumist ja et pääseda juurde teistele funktsioonidele.",

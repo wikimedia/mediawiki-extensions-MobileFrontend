@@ -49,8 +49,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "輸入確認碼",
 	"mobile-frontend-copyright": "除非另有註明，否則頁面內容均以$1條款授權。",
 	"mobile-frontend-desc": "協助改善 MediaWiki 實例的行動裝置呈現",
-	"mobile-frontend-edit-login-action": "<strong>協助改進{{SITENAME}}。</strong><br />登入以編輯。",
-	"mobile-frontend-edit-signup-action": "<strong>協助改進{{SITENAME}}。</strong><br />註冊以編輯。",
 	"mobile-frontend-editor-anon": "不登入編輯",
 	"mobile-frontend-editor-anonwarning": "<strong>警告</strong>：您尚未登入。若您進行任何編輯，您的 IP 位址將會被公開。若您<strong>登入</strong>或<strong>建立帳號</strong>，您的編輯將會以您的使用者名稱標示，並能擁有另外的益處。",
 	"mobile-frontend-editor-autocreatewarning": "<strong>警告：</strong>您尚未登入，此時一旦作出編輯，便會為您建立一個臨時帳號。[[$1|深入了解]]。<strong>登入</strong>或<strong>建立帳號</strong>後，即可在臨時帳號過期後繼續收到通知，並使用更多功能。",

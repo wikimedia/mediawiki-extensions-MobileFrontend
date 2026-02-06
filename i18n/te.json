@@ -14,8 +14,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "ఒక ధృవీకరణ కోడ్‌ను ఇవ్వండి",
 	"mobile-frontend-copyright": "అదనంగా సూచించని పక్షంలో పాఠ్యం $1 క్రింద లభ్యం",
 	"mobile-frontend-desc": "మొబైల్ ఫ్రంట్‌ఎండ్",
-	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}} ను మెరుగు పరచండి.</strong><br />దిద్దుబాట్లు చేసేందుకు లాగినవండి.",
-	"mobile-frontend-edit-signup-action": "<strong>{{SITENAME}} ను మెరుగు పరచండి.</strong><br />దిద్దుబాట్లు చేసేందుకు నమోదవండి.",
 	"mobile-frontend-editor-anon": "లాగినవకుండా దిద్దుబాట్లు చెయ్యండి",
 	"mobile-frontend-editor-anonwarning": "<strong>హెచ్చరిక:</strong> మీరు లాగినవలేదు. మీరు ఏమైనా మార్పులు చేస్తే మీ ఐపీ చిరునామా బహిరంగంగా అందరికీ కనిపిస్తుంది. మీరు <strong>లాగిన్ ఐనా</strong> లేక <strong>ఖాతా సృష్టించుకున్నా</strong> మీ మార్పులు మీ పేరుతో ఉండటమే కాకుండా, మరెన్నో సదుపాయాలుంటాయి.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "లాగినవండి",

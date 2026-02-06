@@ -27,8 +27,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Zadejte potvrzovací kód",
 	"mobile-frontend-copyright": "Text je dostupný pod $1, pokud není uvedeno jinak.",
 	"mobile-frontend-desc": "Mobilní rozhraní",
-	"mobile-frontend-edit-login-action": "<strong>Pomozte vylepšit {{grammar:4sg|{{SITENAME}}}}.</strong><br />Pro editování se přihlaste.",
-	"mobile-frontend-edit-signup-action": "<strong>Pomozte vylepšit {{grammar:4sg|{{SITENAME}}}}.</strong><br />Pro editování se zaregistrujte.",
 	"mobile-frontend-editor-anon": "Editovat bez přihlášení",
 	"mobile-frontend-editor-anonwarning": "<strong>Varování:</strong> Nejste přihlášen(a). Pokud uložíte jakoukoli editaci, bude vaše IP adresa veřejně viditelná. Pokud se <strong>přihlásíte</strong> nebo si <strong>vytvoříte účet</strong>, budou vaše editace připsány vašemu uživatelskému jménu a získáte i další výhody.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Přihlásit se",

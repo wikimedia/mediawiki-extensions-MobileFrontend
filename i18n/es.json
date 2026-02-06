@@ -57,8 +57,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Escribe el código de confirmación",
 	"mobile-frontend-copyright": "El contenido está disponible bajo la licencia $1, salvo que se indique lo contrario.",
 	"mobile-frontend-desc": "Ayuda a mejorar la presencia móvil de una instancia de MediaWiki",
-	"mobile-frontend-edit-login-action": "<strong>Ayuda a mejorar {{SITENAME}}.</strong><br />Inicia sesión para editar.",
-	"mobile-frontend-edit-signup-action": "<strong>Ayuda a mejorar {{SITENAME}}.</strong><br />Regístrate para editar.",
 	"mobile-frontend-editor-anon": "Editar sin iniciar sesión",
 	"mobile-frontend-editor-anonwarning": "<strong>Advertencia:</strong> no has iniciado sesión. Tu dirección IP será visible públicamente si haces cualquier edición. Si <strong>inicias sesión</strong> o <strong>creas una cuenta</strong>, tus ediciones se atribuirán a tu nombre de usuario, junto con otros beneficios.",
 	"mobile-frontend-editor-autocreatewarning": "<strong>Advertencia:</strong> no has iniciado sesión. Una vez que hagas una edición, se creará una cuenta temporal para ti. [[$1|Más información]]. <strong>Accede</strong> o <strong>cree una cuenta</strong> para continuar recibiendo notificaciones después de que expire esta cuenta, y también para acceder a otras funciones.",

@@ -25,8 +25,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Skriv inn bekreftelseskode",
 	"mobile-frontend-copyright": "Innholdet er tilgjengelig under $1 hvis ikke annet er angitt.",
 	"mobile-frontend-desc": "Hjelper til å forbedre den mobile tilstedeværelsen for en MediaWiki-instans",
-	"mobile-frontend-edit-login-action": "<strong>Hjelp til med å forbedre {{SITENAME}}.</strong><br />Logg inn for å redigere.",
-	"mobile-frontend-edit-signup-action": "<strong>Hjelp til med å forbedre {{SITENAME}}.</strong><br />Registrer deg for å redigere.",
 	"mobile-frontend-editor-anon": "Rediger uten å logge inn",
 	"mobile-frontend-editor-anonwarning": "<strong>Advarsel:</strong> Du er ikke innlogget. IP-adressen din vil bli offentlig synlig hvis du utfører redigeringer. Hvis du <strong>logger inn</strong> eller <strong>oppretter en konto</strong>, vil redigeringene dine i stedet bli kreditert brukernavnet ditt.",
 	"mobile-frontend-editor-autocreatewarning": "<strong>Advarsel:</strong> Du er ikke logget inn. Når du gjør en redigering blir en midlertidig konto opprettet for deg. [[$1|Lær mer]]. <strong>Logg inn</strong> eller <strong>opprett en konto</strong> for å fortsette å motta varsler etter at denne kontoen utløper, og for å få tilgang til andre funksjoner.",

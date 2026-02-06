@@ -12,6 +12,7 @@
 	"mobile-frontend-copyright": "لکھت $1 لسنس تھلے ہیگا اے۔",
 	"mobile-frontend-desc": "موبائل وکھالہ",
 	"mobile-frontend-editor-anonwarning": "'''خبردار''': تسی اندر نہیں آئے\nتواڈا ''آئی پی'' پتہ فائل وچ لکھیا جائے گا تے ساریاں نوں دسے گا۔ اگر تسیں $1 اندر آؤ یا $2 کھاتہ کھولو تے تواڈیاں لکھتاں تواڈے ورتن ناں نال جڑیاں ہون گئیاں۔",
+	"mobile-frontend-editor-anonwarning-soft-separator": "یا",
 	"mobile-frontend-editor-blocked-drawer-action-login": "لاگ ان",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "اوکے",
 	"mobile-frontend-editor-blocked-drawer-body-link": "ہور دیکھو",

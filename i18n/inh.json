@@ -7,8 +7,6 @@
 		]
 	},
 	"mobile-frontend-copyright": "Чударá тIакхоачилга $1  яхача лицензе бокъонашца да, нагахьа санна кхыдар белгалдаь деце.",
-	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}} мáзаоагӀув дегӀайоалае гӀо де.</strong><br />Чувала чистема чу хувцамаш дергдолаш.",
-	"mobile-frontend-edit-signup-action": "<strong>ГӀо де {{SITENAME}} дегӀайоалае.</strong><br />Аккаунт хьакхолла хувцамаш дергдолаш.",
 	"mobile-frontend-editor-anon": "Системача чу ца воалаш хувцамаш де",
 	"mobile-frontend-editor-anonwarning": "<strong>Теркам!</strong> Хьо система чу ваьннавац. Хьа IP-цӀай массанена гуш хургда Ӏа оагӀонаш тӀа моллагӀа хувцамаш деча хана. Нагахьа санна хьо хьай акаунта чу гӀолла<strong>чувоале</strong> е (хьайга аккаунт хӀанза а еце) Ӏа <strong>хьай аккаунт хьакхолле</strong>, хьа хувцамаш хьа цӀераца дувзаденна хургда. Цул совгӀа, кхыйола бокъонаш а хургья хьога.",
 	"mobile-frontend-editor-blocked-drawer-body-link": "ДукхагӀа хá",

@@ -12,8 +12,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Təsdyǧi kodi bynyvyštən",
 	"mobile-frontend-copyright": "Əgəm cymi əks ǧeyd byəni, ym məzmun $1 cərcivədə nišo dojdə.",
 	"mobile-frontend-desc": "Mobil iterfejs",
-	"mobile-frontend-edit-login-action": "<strong>Sajti hənijən cok karde dastək bybən {{SITENAME}}.</strong><br />Dəšən bo sərost kardej.",
-	"mobile-frontend-edit-signup-action": "<strong>Sajti hənijən cok karde dastək bybən {{SITENAME}}.</strong><br />Ǧejd bybən bo sərost kardejro.",
 	"mobile-frontend-editor-anon": "Bə sistem nydəše ijən sərost karde",
 	"mobile-frontend-editor-anonwarning": "<strong>Cocašin!</strong> Šymə bə sajt dəšənijon. Šymə IP-adresi vinde bəbe, əgəm šymə cicsə sərost bykəjon. Əgəm šymə <strong>dəbəšejon</strong> ja <strong>bəsoxtejon səhifə</strong>, šymə ovaxtətijon de šymə nomi əloǧə bəben ijən šymə čo cijon bəznejon karde.",
 	"mobile-frontend-editor-autocreatewarning": "<strong>Cocašin!</strong> Šymə dəšənijon. Šymə ovaxtə cij əloǧə hestyše de <strong>[[$1|avtomatik soxtə byə nomi]]</strong> de cookie fajlon əlovə karde bə šymə brauzer. Šymə IP-adresi uspur byə okoədon vinde bəzynen. Əgəm šymə <strong>dəbəšejon</strong> ja <strong>akkaunt bəsoxtejon</strong>, šymə ovaxtə cijon bə šymə vyžnijə nomi dəcoknijə bəben, ijən bə čo sanginətijon.",

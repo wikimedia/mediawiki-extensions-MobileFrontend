@@ -10,8 +10,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Kàn wekun alọkẹyi tọn",
 	"mobile-frontend-copyright": "Nuhe tin tofi lẹpo tin to $1 glọ adavo eyin mí dọdọ e ma yinmọ.",
 	"mobile-frontend-desc": "Awusọhia tọn",
-	"mobile-frontend-edit-login-action": "<strong>Nọ gọalọ nado hẹn {{SITENAME}} yọn ganji dogọ.</strong><br />Hùn adà towe nado basi vọjlado.",
-	"mobile-frontend-edit-signup-action": "<strong>Nọ gọalọ nado hẹn {{SITENAME}} yọn ganji dogọ.</strong><br />Hùn adà yọyọ dé nado basi vọjlado.",
 	"mobile-frontend-editor-anon": "Basi vọjlado eyin a ma tlẹ hùn adà towe",
 	"mobile-frontend-editor-anonwarning": "<strong>Avase:</strong> A ma ko hùn adà towe. Adlẹsi IP tọn towe na sọawuhia eyin a basi vọjlado depope. Eyin a <strong> hùn adà towe</strong> kavi <strong>hùn adà yọyọ dé</strong>, vọjlado towe lẹ na yin zizepla do tẹnmẹyinkọ towe go, he zọnpọ po alè devo lẹ po.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Hùn adà towe",

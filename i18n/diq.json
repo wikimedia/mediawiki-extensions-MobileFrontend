@@ -15,8 +15,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Kodê tesdiqi cı de",
 	"mobile-frontend-copyright": "Zerrekê cı bınê $1 de qeyd biyo.",
 	"mobile-frontend-desc": "Vergılo mobil",
-	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}}'i vıraşten rë marë desteg bë.</strong><br />Qandë vurnayışi cı kewë",
-	"mobile-frontend-edit-signup-action": "<strong>{{SITENAME}}'i vıraşten rë marë desteg bë.</strong><br />Qandë vurnayışi qeyd bë",
 	"mobile-frontend-editor-blocked-drawer-title": "Sıma vurnayışê {{SITENAME}} ra asteng biyê",
 	"mobile-frontend-editor-blocked-drawer-title-partial": "Sıma vurnayışê na pela ra asteng biyê",
 	"mobile-frontend-editor-blocked-drawer-creator-header": "{{GENDER:$1|Bloqe kerdoğ }}",

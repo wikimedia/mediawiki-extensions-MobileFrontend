@@ -20,8 +20,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Unesite kôd za potvrdu",
 	"mobile-frontend-copyright": "Sadržaji se koriste u skladu s $1 osim ako nije drukčije navedeno.",
 	"mobile-frontend-desc": "Sučelje za mobilne uređaje",
-	"mobile-frontend-edit-login-action": "<strong>Pomozite poboljšati projekt {{SITENAME}}.</strong><br />Prijavite se da biste uređivali.",
-	"mobile-frontend-edit-signup-action": "<strong>Pomozite poboljšavanju projekta {{SITENAME}}.</strong><br />Pridružite se da biste uređivali.",
 	"mobile-frontend-editor-anon": "Uređivanje bez prijave",
 	"mobile-frontend-editor-anonwarning": "<strong>Upozorenje:</strong> niste prijavljeni. Vaša IP adresa bit će javno vidljiva u Vašim uređivanjima. Ako se <strong>prijavite</strong> ili <strong>stvorite suradnički račun</strong>, Vaša uređivanja bit će objavljena pod Vašim suradničkim imenom, uz ostale pogodnosti.",
 	"mobile-frontend-editor-autocreatewarning": "<strong>Upozorenje:</strong> Niste prijavljeni. Vaše će uređivanje biti pripisano <strong>[[$1|automatski generiranom imenu]]</strong> dodavanjem kolačića u Vaš preglednik. Vaša IP adresa bit će vidljiva suradnicima s posebnim pravima. Ako se <strong>prijavite</strong> ili <strong>stvorite račun</strong>, Vaša će se uređivanja pripisati imenu koje odaberete, uz dodatne pogodnosti.",

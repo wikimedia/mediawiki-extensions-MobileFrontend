@@ -39,8 +39,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Inserisci il codice di conferma",
 	"mobile-frontend-copyright": "Il contenuto è disponibile in base alla licenza $1, se non diversamente specificato.",
 	"mobile-frontend-desc": "Aiuta a migliorare la presenza mobile di un'istanza MediaWiki",
-	"mobile-frontend-edit-login-action": "<strong>Aiuta a migliorare {{SITENAME}}.</strong><br />Accedi per modificare.",
-	"mobile-frontend-edit-signup-action": "<strong>Aiuta a migliorare {{SITENAME}}.</strong><br />Registrati per modificare.",
 	"mobile-frontend-editor-anon": "Modifica senza effettuare l'accesso",
 	"mobile-frontend-editor-anonwarning": "<strong>Attenzione:</strong> accesso non effettuato. Se effettuerai delle modifiche il tuo indirizzo IP sarà visibile pubblicamente. Se <strong>accedi</strong> o <strong>crei un'utenza</strong>, le tue modifiche saranno attribuite al tuo nome utente, insieme ad altri benefici.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Entra",

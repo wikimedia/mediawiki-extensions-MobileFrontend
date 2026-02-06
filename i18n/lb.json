@@ -15,8 +15,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Confirmatiouns-Code aginn",
 	"mobile-frontend-copyright": "Den Text ass ënner der $1 disponibel wann et net anescht uginn ass.",
 	"mobile-frontend-desc": "Hëlleft déi mobil Presenz vun enger MediaWiki-Instanz ze verbesseren",
-	"mobile-frontend-edit-login-action": "<strong>Hëlleft {{SITENAME}} verbesseren.</strong><br />\nAlogge fir z'änneren.",
-	"mobile-frontend-edit-signup-action": "<strong>Hëlleft {{SITENAME}} verbesseren.</strong><br />\nSchreift Iech a fir z'änneren.",
 	"mobile-frontend-editor-anon": "Änneren ouni anzeloggen",
 	"mobile-frontend-editor-anonwarning": "<strong>Opgepasst:</strong> Dir sidd net ageloggt. Är IP-Adress gëtt ëffentlech siichtbar, wann Dir Ännerunge maacht. Wann Dir Iech <strong>aloggt</strong> oder <strong>e Benotzerkont uleet</strong>, ginn Är Ännerungen Ärem Benotzernumm zougesprach an Dir profitéiert och vun anere Virdeeler.",
 	"mobile-frontend-editor-autocreatewarning": "<strong>Opgepasst:</strong> Dir sidd net ageloggt. Soubal Dir eng Ännerung maacht, gëtt en temporäre Benotzerkont fir Iech ugeluecht. [[$1|Gitt méi gewuer]]. <strong>Loggt Iech an</strong> oder <strong>leet e Benotzerkont u</strong> fir och dann nach Notifikatiounen ze kréien, wann dëse Kont ofgelaf ass, a fir Zougrëff op weider Funktiounen ze kréien.",

@@ -11,8 +11,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "کد امنیتی را وارد کنید",
 	"mobile-frontend-copyright": " محتوایۀل هانإ ژئرنظر اجازه‌نامهٔ $1 مۀگۀر یۀگإ خلاف یۀ بوشرئ/ذکر بو",
 	"mobile-frontend-desc": "ظاهر تلفن همراه",
-	"mobile-frontend-edit-login-action": "<strong>به بهبود {{SITENAME}} کمک کنید.</strong><br />ورود برای ویرایش.",
-	"mobile-frontend-edit-signup-action": "<strong>به بهبود {{SITENAME}} کمک کنید.</strong><br />ثبت‌نام برای ویرایش.",
 	"mobile-frontend-editor-anon": "ویرایش بدون ورود",
 	"mobile-frontend-editor-anonwarning": "<strong>هشدار</strong>: شما وارد نشده‌اید. اگر هر تغییری ایجاد کنید، نشانی آی‌پی شما برای عموم قابل مشاهده خواهد بود. اگر <strong>وارد شوید</strong> یا <strong>یک حساب بسازیدد</strong>، ویرایش‌هایتان به نام کاربری‌تان ثبت خواهد شد و قابلیت‌های دیگری نیز به همراه خواهد داشت.",
 	"mobile-frontend-editor-cancel": "ئآهووسانن/لغو",

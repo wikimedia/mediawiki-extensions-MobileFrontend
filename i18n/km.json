@@ -10,8 +10,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "បញ្ចូល​លេខកូដបញ្ជាក់",
 	"mobile-frontend-copyright": "ខ្លឹមសារអត្ថបទប្រើប្រាស់បានក្រោមអាជ្ញាបណ្ឌ$1 លើកលែងតែមានបញ្ជាក់ផ្សេងពីនោះ។",
 	"mobile-frontend-desc": "ឧបករណ៍ចល័ត",
-	"mobile-frontend-edit-login-action": "<strong>សូមជួយកែលម្អ{{SITENAME}}។ </strong><br />សូមកត់ឈ្មោះចូលដើម្បីកែប្រែ។",
-	"mobile-frontend-edit-signup-action": "<strong>សូមជួយកែលម្អ{{SITENAME}}។ </strong><br />សូមចុះឈ្មោះចូលដើម្បីកែប្រែ។",
 	"mobile-frontend-editor-anon": "កែប្រែដោយមិនបាច់កត់ឈ្មោះចូល",
 	"mobile-frontend-editor-anonwarning": "<strong>ប្រយ័ត្ន ៖</strong> អ្នកមិនបានកត់ឈ្មោះចូល​ទេ។ អាសយដ្ឋានIPរបស់អ្នក​នឹងត្រូវបង្ហាញជាសាធារណៈបើសិនជាអ្នកធ្វើកំណែប្រែណាមួយ។ បើសិនជាអ្នក <strong>កត់ឈ្មោះចូល</strong> ឬ <strong>បង្កើតគណនី</strong> នោះការកែប្រែរបស់អ្នកនឹងត្រូវភ្ចាប់ជាមួយអត្តនាមរបស់អ្នកផង និងមានផលប្រយោជន៍ផ្សេងទៀតផង។",
 	"mobile-frontend-editor-blocked-drawer-action-login": "កត់ឈ្មោះចូល",

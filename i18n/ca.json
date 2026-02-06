@@ -27,8 +27,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Introduïu el codi de confirmació",
 	"mobile-frontend-copyright": "El contingut està disponible sota la llicència $1 si no s'indica el contrari.",
 	"mobile-frontend-desc": "Interfície mòbil",
-	"mobile-frontend-edit-login-action": "<strong>Ajudeu a millorar el projecte {{SITENAME}}.</strong><br />Inicieu sessió per editar.",
-	"mobile-frontend-edit-signup-action": "<strong>Ajudeu a millorar el projecte {{SITENAME}}.</strong><br />Creeu un compte per editar.",
 	"mobile-frontend-editor-anon": "Edició sense iniciar sessió",
 	"mobile-frontend-editor-anonwarning": "<strong>Atenció</strong>: No heu iniciat cap sessió. La vostra adreça IP serà visible públicament si feu qualsevol modificació. Si <strong>inicieu una sessió</strong> o <strong>creeu un compte</strong>, les vostres edicions s'atribuiran al vostre nom d'usuari, juntament amb altres beneficis.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Inicia la sessió",

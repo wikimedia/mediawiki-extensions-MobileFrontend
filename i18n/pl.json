@@ -47,8 +47,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Wprowadź kod potwierdzenia",
 	"mobile-frontend-copyright": "Treść udostępniana na licencji $1, jeśli nie podano inaczej.",
 	"mobile-frontend-desc": "Poprawia wygląd i zachowanie MediaWiki na urządzeniach mobilnych",
-	"mobile-frontend-edit-login-action": "<strong>Pomóż w rozwoju projektu {{SITENAME}}.</strong><br />Zaloguj się, aby edytować.",
-	"mobile-frontend-edit-signup-action": "<strong>Pomóż w rozwoju projektu {{SITENAME}}.</strong><br />Zarejestruj się, aby edytować.",
 	"mobile-frontend-editor-anon": "Edytuj bez logowania",
 	"mobile-frontend-editor-anonwarning": "<strong>Uwaga:</strong> Nie jesteś zalogowany. Jeśli zrobisz jakąkolwiek zmianę, Twój adres IP będzie widoczny publicznie. Jeśli <strong>zalogujesz się</strong> lub <strong>utworzysz konto</strong>, wówczas twoje zmiany zostaną przypisane do konta, wraz z innymi korzyściami.",
 	"mobile-frontend-editor-autocreatewarning": "<strong>Uwaga:</strong> Nie jesteś zalogowany(a). Kiedy wykonasz pierwszą edycję, zostanie dla Ciebie utworzone konto tymczasowe ([[$1|dowiedz się więcej]]). <strong>Zaloguj się</strong> lub <strong>zarejestruj</strong>, aby otrzymywać powiadomienia, nawet kiedy to tymczasowe konto wygaśnie. Będziesz mieć wtedy dostęp również do pozostałych funkcji konta.",

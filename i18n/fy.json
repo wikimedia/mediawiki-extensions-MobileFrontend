@@ -12,8 +12,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Jou de befêstigingskoade",
 	"mobile-frontend-copyright": "Ynhâld is beskikber ûnder $1, at net oars neamd wurdt.",
 	"mobile-frontend-desc": "Mobile websteewerjefte",
-	"mobile-frontend-edit-login-action": "<strong>Help {{GRAMMAR:lidw|{{SITENAME}}}} foarút.</strong><br />Meld jo oan om te bewurkjen.",
-	"mobile-frontend-edit-signup-action": "<strong>Help {{GRAMMAR:lidw|{{SITENAME}}}} foarút.</strong><br />Skriuw jo yn om te bewurkjen.",
 	"mobile-frontend-editor-anon": "Bewurkje sûnder oanmelden",
 	"mobile-frontend-editor-anonwarning": "<strong>Warskôging:</strong> Jo binne net oanmeld. By it fêstlizzen wurdt jo YP-adres opnaam yn 'e sideskiednis. At jo jo <strong>oanmelde</strong> of <strong>in akkount oanmeitsje</strong> ferskine jo bewurkings ûnder jo meidochnamme, njonken oare foardielen.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Oanmelde",

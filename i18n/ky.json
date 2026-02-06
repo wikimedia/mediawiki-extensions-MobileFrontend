@@ -13,8 +13,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Ырастоо кодун киргизиңиз",
 	"mobile-frontend-copyright": "Башкача белгиленбесе, мазмун $1 лицензиясы боюнча жеткиликтүү.",
 	"mobile-frontend-desc": "Мобилдик интерфейс",
-	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}} сайтын жакшыртууга жардам бериңиз.</strong><br /> Түзөтүү үчүн кириңиз.",
-	"mobile-frontend-edit-signup-action": "<strong>{{SITENAME}} сайтын жакшыртууга жардам бериңиз.</strong><br /> Түзөтүү үчүн катталуу.",
 	"mobile-frontend-editor-anon": "Аккаунтка кирбестен түзөтүү",
 	"mobile-frontend-editor-anonwarning": "<strong>Эскертме:</strong> Аккаунтка кирген жоксуз. Эгер кандайдыр бир түзөтүү кылсаңыз, IP дарегиңиз жалпыга көрүнөт. Эгер <strong>аккаунтка кирип, түзөтсөңүз</strong>, түзөтүүлөрүңүз колдонуучу атыңызга таандык болот жана башка артыкчылыктарга ээ болосуз.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Кирүү",

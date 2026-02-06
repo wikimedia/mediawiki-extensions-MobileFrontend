@@ -9,8 +9,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "𑄇𑄧𑄚𑄴𑄜𑄢𑄴𑄟𑄬𑄥𑄧𑄚𑄴 𑄇𑄮𑄓𑄴 𑄣𑄬𑄇𑄴",
 	"mobile-frontend-copyright": "𑄇𑄧𑄚𑄴𑄑𑄬𑄚𑄴𑄑𑄴 $1 𑄖 𑄃𑄚𑄴𑄎𑄟𑄬 𑄚𑄨𑄊𑄨𑄣𑄴𑄬 𑄡𑄪𑄚𑄨 𑄎𑄪𑄘𑄮 𑄇𑄨𑄏𑄪 𑄚𑄧 𑄗𑄠𑄴𑅁",
 	"mobile-frontend-desc": "𑄟𑄨𑄓𑄨𑄠𑄅𑄄𑄇𑄨 𑄃𑄨𑄚𑄴𑄃𑄬𑄥𑄴𑄑𑄬𑄚𑄴𑄥𑄬𑄢𑄴 𑄟𑄮𑄝𑄭𑄣𑄴 𑄦𑄏𑄨𑄣𑄴 𑄉𑄧𑄟𑄴𑄉𑄧𑄖𑄴𑄬 𑄝𑄧𑄣𑄴 𑄘𑄬",
-	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}} 𑄄𑄟𑄴𑄛𑄳𑄢𑄪𑄞𑄴 𑄉𑄧𑄖𑄴𑄬 𑄝𑄧𑄣𑄴 𑄘𑄬𑅁</strong><br />𑄃𑄬𑄓𑄨𑄑𑄴 𑄉𑄧𑄖𑄴𑄬 𑄣𑄧𑄉𑄴 𑄃𑄨𑄚𑄴 𑄉𑄧𑄢𑄴𑅁",
-	"mobile-frontend-edit-signup-action": "<strong>{{SITENAME}} 𑄉𑄧𑄟𑄴 𑄉𑄧𑄖𑄴𑄬 𑄝𑄧𑄣𑄴 𑄘𑄬𑅁</strong><br />𑄃𑄬𑄓𑄨𑄑𑄴 𑄉𑄧𑄖𑄴𑄬 𑄥𑄭𑄚𑄴 𑄃𑄛𑄴 𑄉𑄧𑄢𑄴𑅁",
 	"mobile-frontend-editor-anon": "𑄣𑄧𑄉𑄴 𑄃𑄨𑄚𑄴 𑄉𑄧 𑄉𑄮𑄌𑄴𑄬 𑄉𑄧𑄢𑄨 𑄃𑄬𑄓𑄨𑄑𑄴 𑄉𑄧𑄢𑄴",
 	"mobile-frontend-editor-anonwarning": "<strong>𑄃𑄮𑄠𑄢𑄴𑄚𑄨𑄁:</strong> 𑄖𑄪𑄭 𑄣𑄧𑄉𑄴 𑄚𑄧 𑄉𑄧𑄢𑄧𑄌𑄴𑅁 𑄖𑄧𑄢𑄴 𑄃𑄭𑄛𑄨 𑄒𑄨𑄊𑄚 𑄝𑄬𑄇𑄴𑄪𑄚𑄬 𑄘𑄬𑄊𑄨𑄝𑄇𑄴, 𑄡𑄪𑄚𑄨 𑄖𑄪𑄭 𑄣𑄬𑄊𑄊𑄚𑄨 𑄥𑄮𑄢𑄴 𑄉𑄧𑄢𑄧𑄌𑄴𑅁 𑄡𑄪𑄚𑄨 𑄖𑄪𑄭 <strong>𑄣𑄧𑄉𑄴 𑄃𑄨𑄚𑄴</strong> 𑄃𑅅 <strong>𑄃𑄨𑄇𑄴𑄮 𑄃𑄬𑄇𑄃𑄪𑄚𑄴𑄑𑄴 𑄝𑄚</strong>, 𑄖𑄧 𑄣𑄬𑄊𑄊𑄚𑄨 𑄃𑄬𑄑𑄳𑄢𑄨𑄝𑄨𑄅𑄑𑄬𑄓𑄴 𑄖𑄧 𑄣𑄢𑄴𑄌𑄢𑄧𑄢𑄴 𑄚𑄋𑄬 𑄞𑄣𑄧𑄇𑄴𑄳𑄦𑄚𑄨 𑄥𑄪𑄝𑄨𑄙𑄬 𑄛𑄬𑄝𑄬𑅁",
 	"mobile-frontend-editor-autocreatewarning": "<strong>𑄃𑄮𑄠𑄢𑄴𑄚𑄨𑄁:</strong> 𑄖𑄪𑄭 𑄣𑄧𑄉𑄴 𑄚𑄧 𑄉𑄧𑄢𑄧𑄌𑄴𑅁 𑄃𑄬𑄇𑄴𑄬𑄛𑄴 𑄖𑄪𑄭 𑄃𑄬𑄇𑄴𑄳𑄦𑄚𑄴 𑄥𑄮𑄢𑄴 𑄉𑄧𑄢𑄨𑄣𑄬, 𑄖𑄧𑄖𑄴𑄬 𑄃𑄨𑄇𑄴𑄮 𑄑𑄬𑄟𑄴𑄛𑄮𑄢𑄢𑄨 𑄃𑄬𑄇𑄅𑄚𑄴𑄑𑄴 𑄝𑄚 𑄦𑄧𑄝𑄧𑅁 [[$1|𑄃𑄢𑄧 𑄝𑄬𑄌𑄴𑄉𑄧𑄢𑄨 𑄎𑄚𑄨𑄝𑄖𑄴𑄬]]𑅁 <strong>𑄣𑄧𑄉𑄴 𑄃𑄨𑄚𑄴</strong> 𑄃𑅅 <strong>𑄃𑄨𑄇𑄴𑄮 𑄃𑄬𑄇𑄅𑄚𑄴𑄑𑄴 𑄝𑄚</strong> 𑄃𑄬𑄭 𑄃𑄬𑄇𑄅𑄚𑄴𑄑𑄮𑄢 𑄃𑄠𑄪 𑄗𑄪𑄟𑄴 𑄦𑄧𑄝𑄢𑄴 𑄡𑄬𑄢𑄬𑄘𑄨𑄃𑄮 𑄚𑄮𑄑𑄨𑄜𑄨𑄇𑄬𑄥𑄧𑄚𑄴 𑄛𑄬𑄝𑄖𑄴𑄬 𑄃𑅅 𑄎𑄪𑄘𑄮 𑄜𑄨𑄌𑄢𑄴 𑄃𑄬𑄇𑄴𑄥𑄬𑄥𑄴 𑄉𑄧𑄢𑄨𑄝𑄖𑄴𑄬𑅁",

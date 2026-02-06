@@ -34,8 +34,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Digite o código de confirmação",
 	"mobile-frontend-copyright": "Conteúdo disponível sob $1, salvo indicação em contrário.",
 	"mobile-frontend-desc": "Interface para dispositivos móveis",
-	"mobile-frontend-edit-login-action": "<strong>Ajude a melhorar {{SITENAME}}.</strong> <br />Faça login para editar.",
-	"mobile-frontend-edit-signup-action": "<strong>Ajude a melhorar {{SITENAME}}.</strong> <br />Registre-se para editar.",
 	"mobile-frontend-editor-anon": "Edite sem iniciar sessão",
 	"mobile-frontend-editor-anonwarning": "<strong>Atenção:</strong> Você não entrou. Seu endereço IP estará visível ao público se você fizer alguma edição. Se você <strong>entrar</strong> ou <strong>criar uma conta</strong>, suas edições serão atribuídas ao seu nome de usuário, além de outros benefícios.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Entrar",

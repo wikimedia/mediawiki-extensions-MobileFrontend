@@ -10,8 +10,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "suliten malucekay a banggu",
 	"mobile-frontend-copyright": "anu izaw ku zuma buhci tu kamu, kasabelih aazihen a lacul i labu, pisaungay hamin $1 sapabeli tu kinli a ceding.",
 	"mobile-frontend-desc": "baziyoung nu mobaylu(zikecan a dinwa) nuayawan",
-	"mobile-frontend-edit-login-action": "<strong>miedap misakapah {{SITENAME}}.</strong><br />patalabu tu mikawaway-kalumyiti.",
-	"mobile-frontend-edit-signup-action": "<strong>miedap misakapah {{SITENAME}}.</strong><br />pangangan tu mikawaway-kalumyiti",
 	"mobile-frontend-editor-anon": "caay patalabu mikawaway-kalumyiti",
 	"mobile-frontend-editor-anonwarning": "<strong> patalaw </strong>: caay henay kisu patalabu. amahica kisu miteka amahicahica mikawaway-kalumyiti, IP puenengan nu misu amapabinawlan. amahica kisu <strong>patalabu</strong> saca <strong>panganganen ku canghaw</strong>, mikawaway-kalumyiti nu misu asacuzu’ misaungayay a kalungangan nu misu atu izaw ku zuma a kapahay.",
 	"mobile-frontend-editor-cancel": "palawpes",

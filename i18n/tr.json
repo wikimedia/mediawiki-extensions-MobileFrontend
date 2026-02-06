@@ -51,8 +51,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Onay kodunu girin",
 	"mobile-frontend-copyright": "Aksi belirtilmedikçe içerik $1 lisansı altında kullanılabilir.",
 	"mobile-frontend-desc": "MediaWiki örneğinin mobil görünüşünün iyileştirilmesine yardımcı olur",
-	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}} sitesine geliştirmemize yardımcı olun.</strong><br />Düzenlemek için oturum açın.",
-	"mobile-frontend-edit-signup-action": "<strong>{{SITENAME}} sitesine geliştirmemize yardımcı olun.</strong><br />Düzenlemek için kayıt olun.",
 	"mobile-frontend-editor-anon": "Oturum açmadan düzenle",
 	"mobile-frontend-editor-anonwarning": "<strong>Uyarı:</strong> Oturum açmadınız. Herhangi bir düzenleme yaparsanız IP adresiniz herkes tarafından görülebilir. <strong>Oturum açarsanız</strong> veya <strong>bir hesap oluşturursanız</strong>, düzenlemeleriniz diğer avantajların yanı sıra kullanıcı adınızla da ilişkilendirilir.",
 	"mobile-frontend-editor-autocreatewarning": "<strong>Uyarı:</strong> Oturum açmadınız. Bir düzenleme yaptığınızda, sizin için geçici bir hesap oluşturulur. [[$1|Daha fazla bilgi]]. Bu hesabın süresi dolduğunda bildirimler almaya devam etmek ve diğer özelliklere erişmek için <strong>oturum açın</strong> ya da <strong>hesap oluşturun</strong>.",

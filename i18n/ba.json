@@ -26,8 +26,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Раҫлау кодын индерергә",
 	"mobile-frontend-copyright": "Башҡа шарт булмаһа, $1 лицензияһына ярашлы, эстәлек менән һәр кем файҙалана ала.",
 	"mobile-frontend-desc": "Мобиль интерфейс",
-	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}} сайтын яҡшыртырға ярҙам итегеҙ.</strong><br /> Мөхәррирләү өсөн танылығыҙ.",
-	"mobile-frontend-edit-signup-action": "<strong>{{SITENAME}} сайтын яҡшыртырға ярҙам итегеҙ.</strong><br />Мөхәррирләү өсөн танылығыҙ.",
 	"mobile-frontend-editor-anon": "Системаға инмәйенсә мөхәррирләргә",
 	"mobile-frontend-editor-anonwarning": "<strong>Иҫкәрмә!</strong> Һеҙ сайтта танылманығыҙ. Әгәр ниндәй ҙә булһа төҙәтеүҙәр  йәки үҙгәртеүҙәр индерһәгеҙ, IP-адресығыҙҙы башҡалар ҙа күрәсәк. Сайтҡа <strong>керһәгеҙ</strong> йәки <strong>ҡатнашыусы яҙмаһын төҙөһәгеҙ</strong>, индергән үҙгәртеүҙәрегеҙ ҡатнашыусы яҙмағыҙға бәйләнгән була, шулай уҡ башҡа мөмкинлектәр ҙә асыла.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Танылыу",

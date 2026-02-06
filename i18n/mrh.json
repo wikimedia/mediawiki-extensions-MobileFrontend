@@ -12,8 +12,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Apyna châ khô teh",
 	"mobile-frontend-copyright": "A tlôhpa cha $1 ry liata â hmô.",
 	"mobile-frontend-desc": "Mobile Frontend",
-	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}} he a kiathy thei n'awpa ta bao teh.</strong><br /> mopado awpa ta angia teh.",
-	"mobile-frontend-edit-signup-action": "<strong>{{SITENAME}} he a kiathy thei n'awpa ta bao teh.<br /> mopado awpa ta a pangia teh.",
 	"mobile-frontend-editor-anon": "Angia leipa ta taopathi teh",
 	"mobile-frontend-editor-anonwarning": "<strong>Pahnosana:</strong> Pangiapa châ mâh va chi. Keih hawhpa taopathina na taopa chhao rai ta,  na IP address cha zawpi ta hmô aw veih ei. Nâ<strong>ngia</strong> cvk <strong>account sâ kha na tao</strong> khiah cha, nâma taopathinazy cha mo hropazy pahnaina châta na moh a pypa a châ aw.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "A ngia",

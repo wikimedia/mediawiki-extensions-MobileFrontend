@@ -23,8 +23,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Introduceți codul de confirmare",
 	"mobile-frontend-copyright": "Conținutul este disponibil sub $1, exceptând cazurile în care se specifică altfel.",
 	"mobile-frontend-desc": "Interfața mobilă",
-	"mobile-frontend-edit-login-action": "<strong>Ajutați-ne să îmbunătățim {{SITENAME}}.</strong><br />Autentificați-vă pentru a putea modifica.",
-	"mobile-frontend-edit-signup-action": "<strong>Ajutați-ne să îmbunătățim {{SITENAME}}.</strong><br />Înregistrați-vă pentru a putea modifica.",
 	"mobile-frontend-editor-anon": "Modificare fără autentificare",
 	"mobile-frontend-editor-anonwarning": "<strong>Atenție:</strong> Nu sunteți autentificat(ă). Adresa dumneavoastră IP va fi vizibilă în mod public dacă efectuați modificări. Dacă vă <strong>autentificați</strong> sau vă <strong>creați un cont</strong>, modificările dumneavoastră vor fi asociate numelui de utilizator, pe lângă alte beneficii.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Autentificare",

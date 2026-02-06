@@ -13,8 +13,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Бигэргэтии куодун суруй",
 	"mobile-frontend-copyright": "Маны туһанары $1 лиссиэнсийэ көҥүллүүр (атын ыйыллыбытах буоллаҕына).",
 	"mobile-frontend-desc": "Мобильнай интерфейс",
-	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}} тупсарыгар көмөлөс.</strong><br />Уларытарга киир.",
-	"mobile-frontend-edit-signup-action": "<strong>{{SITENAME}} тупсарыгар көмөлөс.</strong><br />Уларытарга бэлиэтэн.",
 	"mobile-frontend-editor-anon": "Киирбэккэ эрэ уларытыы",
 	"mobile-frontend-editor-anonwarning": "<strong>Болҕой:</strong> Киирбэтэххин. Онон тугу эрэ уларытар түгэҥҥэр аатыҥ оннугар IP аадырыһыҥ барыларыгар көстүө. Өскөтө <strong>киирдэххинэ</strong> эбэтэр <strong>бэлиэтэннэххинэ</strong> уларытыыларыҥ Эн тус ааккын кытта ситимнэниэхтэрэ, ону таһынан ол атын да көдьүүстэрдээх буолуоҕа.",
 	"mobile-frontend-editor-blocked-drawer-title": "{{SITENAME}} ситим-сири уларытар Эн бэлиэ-ааккар хааччахтаммыт",

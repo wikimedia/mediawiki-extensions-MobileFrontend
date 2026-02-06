@@ -22,8 +22,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Entajpu konfirman kodon",
 	"mobile-frontend-copyright": "La enhavo estas disponebla laŭ $1, se ne estas alia indiko.",
 	"mobile-frontend-desc": "Poŝtelefona fasado",
-	"mobile-frontend-edit-login-action": "<strong>Helpu plibonigi  {{SITENAME}}.</strong><br />Ensalutu por redakti.",
-	"mobile-frontend-edit-signup-action": "<strong>Helpu plibonigi  {{SITENAME}}.</strong><br />Registriĝu por redakti.",
 	"mobile-frontend-editor-anon": "Redakti sen esti ensalutinta",
 	"mobile-frontend-editor-anonwarning": "<strong>Averto:</strong> vi ne estas ensalutinta.\nVia IP-adreso estos publike videbla se vi redaktas. Se vi <strong>ensalutas</strong> aŭ <strong>kreas konton</strong>, viaj redaktoj estos atribuitaj al via uzantnomo, kune kun aliaj avantaĝoj.",
 	"mobile-frontend-editor-autocreatewarning": "<strong>Averto:</strong> Vi ne estas ensalutinta. Post kiam vi redaktos, portempa konto estos kreita por vi. [[$1||Lernu pli]]. <strong>[$1 Ensalutu]</strong> aŭ <strong>kreu konton</strong> por daŭre ricevi sciigojn post kiam ĉi tiu konto eksvalidiĝos, kaj por akiri aliajn funkciojn.",

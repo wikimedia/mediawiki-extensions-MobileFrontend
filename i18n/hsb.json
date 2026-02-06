@@ -9,8 +9,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Wobkrućenski kod zapodać",
 	"mobile-frontend-copyright": "Wobsah pod $1 k dispoziciji steji, jeli njeje so hinak podało.",
 	"mobile-frontend-desc": "Zmóžnja lěpše předstajenje stronow za mobilne nastroje",
-	"mobile-frontend-edit-login-action": "<strong>Pomhaj nam, projekt {{SITENAME}} polěpšić.</strong><br />Přizjew so za wobdźěłanje.",
-	"mobile-frontend-edit-signup-action": "Załož wužiwarske konto za wobdźěłowanje.",
 	"mobile-frontend-editor-anon": "Bjez přizjewjenja wobdźěłać",
 	"mobile-frontend-editor-anonwarning": "<strong>Kedźbu:</strong> Njejsy přizjewjeny. Twoja IP-adresa budźe zjawnje widźomna, hdyž něšto wobdźěłaš. Jeli <strong>so přizjewiš</strong> abo <strong>konto załožiš</strong>, so twoje změny twojemu wužiwarskemu mjenu připokazaja.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Přizjewić so",

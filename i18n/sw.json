@@ -16,8 +16,6 @@
 	"abusefilter-edit-builder-vars-user-mobile": "Ikiwa mtumiaji anahariri au la kupitia kiolesura cha simu ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "Weka kanuni ya kuthibitisha",
 	"mobile-frontend-copyright": "Maudhui yanapatikana kwa chini ya $1 isipokuwa iwe imebainishwa vinginevyo.",
-	"mobile-frontend-edit-login-action": "<strong>Saidia kuboresha {{SITENAME}}.</strong><br />Ingia ili kuhariri.",
-	"mobile-frontend-edit-signup-action": "<strong>Saidia kuboresha {{SITENAME}}.</strong><br />Jisajili ili kuhariri.",
 	"mobile-frontend-editor-anon": "Hariri bila kuingia",
 	"mobile-frontend-editor-anonwarning": "<strong>Ilani:</strong> Wewe hujaingia rasmi kwenye tovuti. Anwani ya IP ya tarakilishi itaonekana na umma. Uki <strong>kuingia</strong> au <strong>ufungue akaunti</strong>, hariri zako zitahusishwa na jina lako la mtumiaji pamoja na manufaa mengine.",
 	"mobile-frontend-editor-autocreatewarning": "<strong>Onyo:</strong> Hujaingia. Mara tu unapofanya uhariri, akaunti ya muda itaundwa kwa ajili yako. [[$1|Pata maelezo zaidi]]. <strong>Ingia</strong> au <strong>ufungue akaunti</strong> ili kuendelea kupokea arifa baada ya akaunti hii kuisha muda wake, na kufikia vipengele vingine.",

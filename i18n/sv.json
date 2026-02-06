@@ -28,8 +28,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Ange bekräftelsekod",
 	"mobile-frontend-copyright": "Innehållet är tillgängligt under $1 om ingenting annat anges.",
 	"mobile-frontend-desc": "Hjälper till att förbättra den mobila närvaron av en MediaWiki-instans",
-	"mobile-frontend-edit-login-action": "<strong>Hjälp till att förbättra {{SITENAME}}.</strong><br />Logga in för att redigera.",
-	"mobile-frontend-edit-signup-action": "<strong>Hjälp till att förbättra {{SITENAME}}.</strong><br />Registrera för att redigera.",
 	"mobile-frontend-editor-anon": "Redigera utan att logga in",
 	"mobile-frontend-editor-anonwarning": "<strong>Varning:</strong> Du är inte inloggad. Din IP-adress kommer synas offentligt om du gör redigeringar. Om du <strong>loggar in</strong> eller <strong>skapar ett konto</strong>, kommer dina redigeringar att tillskrivas ditt användarnamn, tillsammans med andra fördelar.",
 	"mobile-frontend-editor-autocreatewarning": "<strong>Varning:</strong> Du är inte inloggad. När du gör en redigering skapas ett temporärt konto åt dig. [[$1|Läs mer]]. <strong>Logga in</strong> eller <strong>skapa ett konto</strong> för att fortsätta få aviseringar efter att kontot upphör och få tillgång till andra funktioner.",

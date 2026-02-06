@@ -21,8 +21,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Įvesti patvirtinimo kodą",
 	"mobile-frontend-copyright": "Turinys pateikiamas pagal $1 jei nėra nurodyta kitaip.",
 	"mobile-frontend-desc": "Mobiliojo naudotojo sąsaja",
-	"mobile-frontend-edit-login-action": "<strong>Padėkite pagerinti {{SITENAME}}.</strong><br />Prisijunkite, kad galėtumėte redaguoti.",
-	"mobile-frontend-edit-signup-action": "<strong>Padėkite pagerinti {{SITENAME}}.</strong><br />Susikurkite paskyrą, kad galėtumėte redaguoti.",
 	"mobile-frontend-editor-anon": "Redaguoti neprisijungus",
 	"mobile-frontend-editor-anonwarning": "<strong>Įspėjimas</strong>: Jūs nesate prisijungę. Jūsų IP adresas bus viešai matomas, jeigu atliksite pakeitimų. Jeigu <strong>prisijungsite</strong> arba <strong>susikursite paskyrą</strong>, jūsų pakeitimai bus priskiriami jūsų naudotojo vardui, kartu su kitais privalumais.",
 	"mobile-frontend-editor-autocreatewarning": "<strong>Įspėjimas</strong>: Jūs nesate prisijungę. Jūsų keitimas bus priskirtas <strong>[[$1|automatiškai sugeneruotam vardui]]</strong> pridedant slapuką jūsų naršyklėje. Jūsų IP adresas bus matomas patikimiems naudotojams. Jeigu <strong>prisijungsite</strong> arba <strong>susikursite paskyrą</strong>, jūsų pakeitimai bus priskiriami jūsų naudotojo vardui, kartu su kitais privalumais.",

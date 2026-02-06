@@ -19,8 +19,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Zadajte potvrdzovací kód",
 	"mobile-frontend-copyright": "Obsah je dostupný pod licenciou $1, pokiaľ nie je uvedené inak.",
 	"mobile-frontend-desc": "Zlepšuje mobilnú verziu tohto projektu MediaWiki",
-	"mobile-frontend-edit-login-action": "<strong>Pomôžte vylepšiť {{grammar:4sg|{{SITENAME}}}}.</strong><br />Pre editáciu sa prihláste.",
-	"mobile-frontend-edit-signup-action": "<strong>Pomôžte vylepšiť {{grammar:4sg|{{SITENAME}}}}.</strong><br />Pre editáciu sa zaregistrujte.",
 	"mobile-frontend-editor-anon": "Editovať bez prihlásenia",
 	"mobile-frontend-editor-anonwarning": "<strong>Varovanie</strong>: Nie ste prihlásený/á. Ak uložíte akúkoľvek úpravu, vaša IP adresa bude zverejnená v histórii tejto stránky. Ak sa <strong>prihlásite</strong> alebo si <strong>vytvoríte účet</strong>, vaše úpravy budú priradené k vášmu používateľskému menu a získate i ďalšie výhody.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Prihlásiť sa",

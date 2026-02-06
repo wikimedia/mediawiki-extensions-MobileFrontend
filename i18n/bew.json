@@ -8,8 +8,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Masukin kode isbat",
 	"mobile-frontend-copyright": "Isi derak di bawah $1, kecuali ada catetan tambahan.",
 	"mobile-frontend-desc": "Bagèan Depan Pesawat",
-	"mobile-frontend-edit-login-action": "<strong>Bantu kita merbaikin {{SITENAME}}.</strong><br />Masup bakal mermak.",
-	"mobile-frontend-edit-signup-action": "<strong>Bantu kita merbaikin {{SITENAME}}.</strong><br />Daptar bakal mermak.",
 	"mobile-frontend-editor-anon": "Permak sonder masup",
 	"mobile-frontend-editor-anonwarning": "<strong>Wanti-wanti:</strong> Lu kaga' lagi masup. Lu punya aderès IP bakal kiatan ama orang banyak kalo lu banyak bikin permakan. Kalo lu  <strong>masup</strong> atawa <strong>ngeja rèkening</strong>, lu punya permakan bakal dinisbatin ke lu punya nama pemaké, beserènta macem-macem keuntungan laènnya.",
 	"mobile-frontend-editor-autocreatewarning": "<strong>Wanti-wanti:</strong> Lu belon masup. Mancan lu bikin permakan, entar langsung dapet rèkening sementara. [[$1|Belajarin lebi lanjut]]. <strong>Masup</strong> atawa <strong>keja rèkening</strong> bakal tulus ngedapetin ma'lumat abisnya ni rèkening bonto, èn bakal masup maké keboléan laènnya.",

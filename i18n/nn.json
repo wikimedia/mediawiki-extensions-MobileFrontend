@@ -11,8 +11,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Skriv inn stadfestingskode",
 	"mobile-frontend-copyright": "Teksten er tilgjengeleg under $1 om ikkje anna er oppgjeve.",
 	"mobile-frontend-desc": "Mobilgrensesnitt",
-	"mobile-frontend-edit-login-action": "<strong>Hjelp til med å betra {{SITENAME}}.</strong><br />Logg inn for å endra.",
-	"mobile-frontend-edit-signup-action": "<strong>Hjelp til å betra {{SITENAME}}.</strong><br />Registrer deg for å endra.",
 	"mobile-frontend-editor-anon": "Endre utan å logge inn",
 	"mobile-frontend-editor-anonwarning": "<strong>Åtvaring</strong>: Du er ikkje innlogga. IP-adressa di vert synleg for alle om du gjer endringar. Om du <strong>loggar inn</strong> eller <strong>opprettar ein konto</strong> vil endringane dine verte tilskrivne brukarnamnet ditt, i lag med andre fordelar.",
 	"mobile-frontend-drawer-arrow-label": "Lat att",

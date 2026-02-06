@@ -17,8 +17,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "შეიყვანეთ დადასტურების კოდი",
 	"mobile-frontend-copyright": "შინაარსი წარმოდგენილია შემდეგი ლიცენზიით (თუ სხვა არ არის მითითებული): $1.",
 	"mobile-frontend-desc": "მობილური ინტერფეისი",
-	"mobile-frontend-edit-login-action": "<strong>დაგვახმარეთ {{GRAMMAR:ნათესაობითი|{{SITENAME}}}} დახვეწაში.</strong><br />რედაქტირების განსახორციელებლად, შედით ანგარიშზე.",
-	"mobile-frontend-edit-signup-action": "<strong>დაგვახმარეთ {{GRAMMAR:ნათესაობითი|{{SITENAME}}}} დახვეწაში.</strong><br />რედაქტირების განსახორციელებლად, დარეგისტრირდით.",
 	"mobile-frontend-editor-anon": "რედაქტირება ანგარიშზე შესვლის გარეშე",
 	"mobile-frontend-editor-anonwarning": "<strong>გაფრთხილება:</strong> თქვენ არ ხართ ავტორიზირებული. თქვენი IP-მისამართი საჯაროდ ხილული იქნება, თუკი განახორციელებთ რედაქტირებას. თუ თქვენ გაივლით <strong>ავტორიზაციას</strong> ან <strong>შექმნით ანგარიშს</strong>, სხვა უპირატესობებთან ერთად, თქვენი რედაქტირებები დაუკავშირდება თქვენს მომხმარებლის სახელს.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "შესვლა",

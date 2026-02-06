@@ -10,8 +10,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Ki'isɛ sakerɛ koote",
 	"mobile-frontend-copyright": "Gulesegɔ boi la $1 sãn dagena la ba daalɛ mɛ",
 	"mobile-frontend-desc": "Mobile Frontend",
-	"mobile-frontend-edit-login-action": "<strong>Help improve {{SITENAME}}.</strong><br />Lɔɔgɛ kɛ ta demese",
-	"mobile-frontend-edit-signup-action": "<strong>Help improve {{SITENAME}}.</strong><br />pa'asɛ bini demese",
 	"mobile-frontend-editor-anon": "Ka Lɔɔgɛ kɛ gee demese",
 	"mobile-frontend-editor-anonwarning": "<strong>Warning:</strong> Fu ka lɔɔgɛ kɛ. Fu IP zia la wan niɛ pa’alɛ nɛra woo fu san iŋɛ demesego woo. fu <strong>log in> or</strong> or <strong>create an account</strong>, fu demesego la wan naɛ la fu tuna yu’urɛ,la sɛla za’a ti fu wan dɔkɛ la.",
 	"mobile-frontend-editor-autocreatewarning": "<strong>Warning:</strong> You are not logged in. Fu san diŋɛ iŋɛ demesego, yu'urɛ n ka yue ti ba maalɛ bo fu. [[$1|Learn more]]. <strong>Log in</strong> or <strong>create an account</strong> fu san bɔta ti fu kelum tɔ'ɔsa lasebaarɛ sansɛka ti yudina wa saŋa ta tole, gee kelum yɔ'ɔ paara yɛla asi'a .",

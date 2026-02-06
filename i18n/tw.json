@@ -13,8 +13,6 @@
 	"abusefilter-edit-builder-vars-user-mobile": "Sɛ obi redi dwuma wɔ ahomatrofoɔ so anaa onni dwuma ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "Bɔ confirmation code",
 	"mobile-frontend-copyright": "Nsɛm a ɛwɔ ha yi bo nnu $1 gye sɛ wɔkyerɛ sɛ bo no yɛ foforo.",
-	"mobile-frontend-edit-login-action": "<strong>Boa ma yɛntu mpɔn {{SITENAME}}.</strong><br />Bɔ wo din ne wo password na fi ase di dwuma.",
-	"mobile-frontend-edit-signup-action": "<strong>Boa ma yɛntu mpɔn {{SITENAME}}.</strong><br />Fa wodin hyɛ ase na fi ase di dwuma.",
 	"mobile-frontend-editor-anon": "Di dwuma bere a wonkyerɛ wo din ne wo password",
 	"mobile-frontend-editor-anonwarning": "<strong>Kɔkɔbɔ:</strong> Wonbɔɔ wo din ne wo password. Obibiara betumi ahu wo IP address a wode bedi dwuma. Sɛ wode <strong>wo din ne wo password di dwuma</strong> anaa <strong>wo creati account a  </strong>, wunwumadi ahorow bɛkɔ wo din mu, ne nneɛma pa biara a ɔka ho.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Bue",

@@ -38,8 +38,6 @@
 	"mobile-frontend-account-create-captcha-placeholder": "Masukkan kode konfirmasi",
 	"mobile-frontend-copyright": "Konten tersedia di bawah $1 kecuali dinyatakan lain.",
 	"mobile-frontend-desc": "Membantu tampilan ponsel situs web MediaWiki",
-	"mobile-frontend-edit-login-action": "<strong>Bantu kami meperbaiki {{SITENAME}}.</strong><br />Masuk log untuk menyunting.",
-	"mobile-frontend-edit-signup-action": "<strong>Bantu kami meperbaiki {{SITENAME}}.</strong><br />Mendaftarlah untuk menyunting.",
 	"mobile-frontend-editor-anon": "Sunting tanpa masuk log",
 	"mobile-frontend-editor-anonwarning": "<strong>Peringatan:</strong> Anda belum masuk log. IP Anda akan terlihat secara publik jika Anda membuat suntingan. Jika Anda <strong>masuk log</strong> atau <strong>membuat akun</strong>, suntingan Anda akan melekat pada nama pengguna Anda, berikut keuntungan lainnya.",
 	"mobile-frontend-editor-autocreatewarning": "<strong>Peringatan:</strong> Anda belum masuk log. Suntingan Anda akan tercatat ke <strong>[[$1|nama yang diciptakan otomatis]]</strong> dengan menambahkan kuki ke peramban Anda. Alamat IP Anda akan terlihat oleh pengguna terpercaya. Bila Anda <strong>masuk log</strong> atau <strong> membuat akun</strong>, suntingan Anda akan tercatat ke nama yang Anda pilih, sekaligus berbagai manfaat lainnya.",
