@@ -610,8 +610,7 @@ class EditorOverlayBase extends Overlay {
 	 * @return {jQuery.Element}
 	 */
 	createAnonWarningSoft( options ) {
-		const $anonWarning = $( '<div>' ).addClass( 'anonwarning-soft' ),
-			$topDescription = $( '<p>' ).addClass( 'description' )
+		const $topDescription = $( '<p>' ).addClass( 'description' )
 				.text( mw.msg( 'mobile-frontend-editor-anonwarning-soft-description' ) ),
 			params = util.extend( {
 				returnto: options.returnTo || (
@@ -640,26 +639,25 @@ class EditorOverlayBase extends Overlay {
 			} ),
 			publishAnonDescription = this.gateway.wouldautocreate ?
 				'mobile-frontend-editor-autocreatewarning-soft-publish-description' :
-				'mobile-frontend-editor-anonwarning';
+				'mobile-frontend-editor-anonwarning',
+			$actions = $( '<div>' ).addClass( 'actions' ).append( [
+				$topDescription,
+				signupButton.$el,
+				loginButton.$el,
+				$( '<div>' )
+					.addClass( 'separator' )
+					.append( $( '<span>' ).text( mw.msg( 'mobile-frontend-editor-anonwarning-soft-separator' ) ) ),
+				publishAnon.$el,
+				$( '<p>' )
+					.addClass( 'publish-description anon-msg' )
+					.html(
+						// eslint-disable-next-line mediawiki/msg-doc
+						mw.message( publishAnonDescription, contLangMessages[ 'tempuser-helppage' ] )
+							.parse()
+					)
+			] );
 
-		$anonWarning.append( [
-			$topDescription,
-			signupButton.$el,
-			loginButton.$el,
-			$( '<div>' )
-				.addClass( 'separator' )
-				.append( $( '<span>' ).text( mw.msg( 'mobile-frontend-editor-anonwarning-soft-separator' ) ) ),
-			publishAnon.$el,
-			$( '<p>' )
-				.addClass( 'publish-description' )
-				.html(
-					// eslint-disable-next-line mediawiki/msg-doc
-					mw.message( publishAnonDescription, contLangMessages[ 'tempuser-helppage' ] )
-						.parse()
-				)
-		] );
-
-		return $anonWarning;
+		return $( '<div>' ).addClass( 'anonwarning-soft' ).append( $actions );
 	}
 
 	/**
@@ -703,12 +701,14 @@ class EditorOverlayBase extends Overlay {
 					block: true,
 					href: mw.util.getUrl( 'Special:UserLogin', params ),
 					label: mw.msg( 'mobile-frontend-watchlist-cta-button-login' ),
+					additionalClassNames: 'login',
 					eventname: 'anonwarning-login'
 				} ),
 				new Button( {
 					block: true,
 					href: mw.util.getUrl( 'Special:UserLogin', util.extend( params, signupParams ) ),
 					label: mw.msg( 'mobile-frontend-watchlist-cta-button-signup' ),
+					additionalClassNames: 'signup',
 					eventname: 'anonwarning-signup'
 				} )
 			];
