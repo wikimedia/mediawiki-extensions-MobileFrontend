@@ -31,6 +31,7 @@
 	"mobile-frontend-desc": "עוזרת לשפר את הנוכחות הניידת של התקנה של מדיה־ויקי",
 	"mobile-frontend-editor-anon": "לערוך ללא כניסה לחשבון",
 	"mobile-frontend-editor-anonwarning": "<strong>אזהרה:</strong> לא נכנסת לחשבון. כתובת ה־IP שלך תוצג לציבור אם תעשה עריכות כלשהן. <strong>כניסה</strong> או <strong>יצירת חשבון</strong> יאפשרו ייחוס של העריכות שלך לשם המשתמש שלך ויתרונות נוספים.",
+	"mobile-frontend-editor-anonwarning-soft-description": "אפשרות להשתמש בכלים מועילים, לראות את ההשפעה שלך ולהצטרף לקהילה תוססת.",
 	"mobile-frontend-editor-anonwarning-soft-separator": "או",
 	"mobile-frontend-editor-autocreatewarning-soft-publish-description": "לאחר הפרסום, ייווצר עבורך [[$1|חשבון חולף]].",
 	"mobile-frontend-editor-autocreatewarning": "<strong>לא נכנסת לחשבון.</strong> לאחר עריכה, ייווצר בשבילך חשבון חולף. אפשר לקרוא על זה [[$1|מידע נוסף]]. יש <strong>להיכנס לחשבון</strong> או <strong>ליצור חשבון</strong> כדי לקבל התראה כשמישהו משיב לאחר שהחשבון הזה חולף, וכדי לגשת לתכונות אחרות.",

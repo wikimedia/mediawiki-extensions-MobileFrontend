@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"David Wadie Fisher-Freberg",
+			"Harditaher",
 			"Iwan Novirion",
 			"Muhraz",
 			"Naval Scene"
@@ -40,7 +41,7 @@
 	"mobile-frontend-save-settings": "Simpan",
 	"mobile-frontend-terms-text": "Katantuan Panggunoan",
 	"mobile-frontend-view": "Tampilan seluler",
-	"mobile-frontend-view-desktop": "Tampilan PC",
+	"mobile-frontend-view-desktop": "Panampilan komputer",
 	"mobile-frontend-watchlist-back-home": "Baliak ka palanta",
 	"mobile-frontend-watchlist-cta-button-login": "Masuak log",
 	"mobile-frontend-watchlist-cta-button-signup": "Daftar",
