@@ -26,8 +26,6 @@
 		"@babel/core": "7.23.7",
 		"@babel/preset-env": "7.23.8",
 		"@babel/register": "7.23.7",
-		"@wikimedia/codex": "1.0.1",
-		"@wikimedia/codex-icons": "1.0.1",
 		"@wikimedia/mediawiki.skins.clientpreferences": "1.4.0",
 		"@wikimedia/mw-node-qunit": "7.2.0",
 		"babel-loader": "9.1.3",
