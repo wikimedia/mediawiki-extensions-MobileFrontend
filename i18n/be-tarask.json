@@ -45,6 +45,7 @@
 	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|Вы сапраўды хочаце стварыць}} новую старонку ў {{SITENAME}}?",
 	"mobile-frontend-editor-save": "Захаваць",
 	"mobile-frontend-editor-uploadenable": "Калі ласка, спачатку загрузіце фота, каб мець магчымасьць рэдагаваць.",
+	"mobile-frontend-editor-loading": "Ладаваньне рэдактару...",
 	"mf-font-size-large-label": "Вялікі",
 	"mobile-frontend-last-modified-date": "Апошняе рэдагаваньне ў $2 $1",
 	"mobile-frontend-last-modified-with-user-just-now": "[$3 Апошні раз {{GENDER:$1|рэдагавалася}} толькі што] {{PLURAL:$4|[$5 $2]|0=ананімным удзельнікам}}",
@@ -70,5 +71,6 @@
 	"tag-advanced_mobile_edit-description": "Рэдагаваньні зробленыя ўдзельнікам у пашыраным рэжыме",
 	"tag-mobile_web_edit": "Праўка праз мабільную вэрсію сайту",
 	"tag-mobile_web_edit-description": "Рэдагаваньне, зробленае з мабільнай вэрсіі сайту",
+	"mobile-frontend-loading-message": "Ладаваньне...",
 	"mobile-frontend-console-recruit": "Даведайцеся болей пра тое, як мы робім наш мабільны сайт @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend"
 }
