@@ -19,7 +19,7 @@
 		"doc": "npm run jsdoc && npm run coverage"
 	},
 	"engines": {
-		"node": "20.19.1"
+		"node": "20.19.5"
 	},
 	"pre-commit": "precommit",
 	"devDependencies": {
