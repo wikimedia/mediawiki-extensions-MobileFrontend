@@ -909,8 +909,66 @@ class MobileFrontendHooks implements
 
 		if ( $displayMobileView ) {
 			// Adds inline script to allow opening of sections while JS is still loading
-			$out->prependHTML( MakeSectionsTransform::interimTogglingSupport() );
+			if ( $this->shouldUseParsoid( $out->getTitle() ) ) {
+				$out->prependHTML( self::interimTogglingSupportForParsoid() );
+			} else {
+				$out->prependHTML( MakeSectionsTransform::interimTogglingSupport() );
+			}
 		}
+	}
+
+	private static function interimTogglingSupportForParsoid(): string {
+		$js = <<<JAVASCRIPT
+// Sections in the Parsoid raw output need to be tweaked for proper collapsible section display.
+// Handle this in a scroll handler to pick up anything new that comes up "under the fold" as the
+// user scrolls through while loading.
+window.mfTempScrollHandler = ( ev ) => {
+	for ( const headingWrapper of document.querySelectorAll( 'section > .mw-heading2' ) ) {
+		const content = headingWrapper.nextSibling;
+		if ( content ) {
+			// This should be kept in sync with sectionCollapsing.js's prepareHeadingWrapper()
+			let icon = headingWrapper.querySelector( '.mf-icon' );
+			if ( !icon ) {
+				headingWrapper.classList.add( 'mf-collapsible-heading' );
+				content.classList.add( 'mf-collapsible-content' );
+
+				// Update the heading wrapper to account for semantics of collapsing sections
+				headingWrapper.setAttribute( 'tabindex', '0' );
+				headingWrapper.setAttribute( 'role', 'button' );
+				headingWrapper.setAttribute( 'aria-controls', content.id );
+
+				// Create the dropdown arrow icon
+				icon = document.createElement( 'span' );
+				icon.classList.add( 'mf-icon', 'mf-icon--small', 'mf-collapsible-icon', 'mf-icon-expand' );
+				icon.setAttribute( 'aria-hidden', true );
+				headingWrapper.prepend( icon );
+
+				content.hidden = 'until-found';
+			}
+		}
+	}
+}
+document.addEventListener( 'scroll', window.mfTempScrollHandler );
+window.mfTempScrollHandler();
+
+window.mfTempClickHandler = ( ev ) => {
+	const heading = ev.target.closest( '.mw-heading' );
+	const content = heading.nextSibling;
+	if ( heading && content ) {
+		// Only handle expansions during load to match legacy parser behavior.
+		// This should be kept in sync with sectionCollapsing.js's setCollapsedHeadingState()
+		content.hidden = false;
+		heading.setAttribute( 'aria-expanded', 'true' );
+		const icon = heading.querySelector( '.mf-icon' );
+		icon.classList.add( 'mf-icon-collapse' );
+		icon.classList.remove( 'mf-icon-expand' );
+	}
+}
+document.addEventListener( 'click', window.mfTempClickHandler );
+JAVASCRIPT;
+		return Html::inlineScript(
+			ResourceLoader::filter( 'minify-js', $js )
+		);
 	}
 
 	/**
@@ -1061,27 +1119,30 @@ class MobileFrontendHooks implements
 	 * @param ParserOptions $parserOptions
 	 */
 	public function onArticleParserOptions( Article $article, ParserOptions $parserOptions ) {
+		// set the collapsible sections parser flag so that section content is wrapped in a div for easier targeting
+		// only if we're in mobile view and parsoid is enabled
+		if ( $this->mobileContext->shouldDisplayMobileView() && $this->shouldUseParsoid( $article->getTitle() ) ) {
+			$title = $article->getTitle();
+			$namespace = $title->getNamespace();
+			$namespacesWithoutCollapsibleSections = $this->config->get( 'MFNamespacesWithoutCollapsibleSections' );
+
+			// Don't enable collapsible sections for certain namespaces
+			if ( !in_array( $namespace, $namespacesWithoutCollapsibleSections ) ) {
+				$parserOptions->setCollapsibleSections();
+			}
+		}
+	}
+
+	private function shouldUseParsoid( Title $title ): bool {
 		// while the parser is actively being migrated, we rely on the ParserMigration extension for using Parsoid
 		if ( ExtensionRegistry::getInstance()->isLoaded( 'ParserMigration' ) ) {
 			$context = $this->mobileContext;
 			$oracle = MediaWikiServices::getInstance()->getService( 'ParserMigration.Oracle' );
 
-			$shouldUseParsoid =
-				$oracle->shouldUseParsoid( $context->getUser(), $context->getRequest(), $article->getTitle() );
+			return $oracle->shouldUseParsoid( $context->getUser(), $context->getRequest(), $title );
 
-			// set the collapsible sections parser flag so that section content is wrapped in a div for easier targeting
-			// only if we're in mobile view and parsoid is enabled
-			if ( $context->shouldDisplayMobileView() && $shouldUseParsoid ) {
-				$title = $article->getTitle();
-				$namespace = $title->getNamespace();
-				$namespacesWithoutCollapsibleSections = $this->config->get( 'MFNamespacesWithoutCollapsibleSections' );
-
-				// Don't enable collapsible sections for certain namespaces
-				if ( !in_array( $namespace, $namespacesWithoutCollapsibleSections ) ) {
-					$parserOptions->setCollapsibleSections();
-				}
-			}
 		}
+		return false;
 	}
 
 	/**

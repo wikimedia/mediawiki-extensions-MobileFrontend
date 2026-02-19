@@ -2,6 +2,7 @@ const isCollapsedByDefault = require( './isCollapsedByDefault' );
 
 /**
  * Sets attributes on collapsible header based on collapsed state
+ * This should be kept in sync with MobileFrontendHooks::interimTogglingSupportForParsoid()
  *
  * @method
  * @param {HTMLElement} heading span element containing heading text
@@ -68,6 +69,7 @@ function toggle( content, heading, icon ) {
 
 /**
  * Prepares a heading wrapper element for collapsible functionality.
+ * This should be kept in sync with MobileFrontendHooks::interimTogglingSupportForParsoid()
  *
  * @method
  * @param {HTMLElement} wrapper The heading wrapper element
@@ -76,19 +78,24 @@ function toggle( content, heading, icon ) {
  * @ignore
  */
 function prepareHeadingWrapper( wrapper, content ) {
-	wrapper.classList.add( 'mf-collapsible-heading' );
-	content.classList.add( 'mf-collapsible-content' );
+	// Beware that the temporary handler may have set up some sections
+	// during load-time scroll-and-click activity.
+	let icon = wrapper.querySelector( '.mf-icon' );
+	if ( !icon ) {
+		wrapper.classList.add( 'mf-collapsible-heading' );
+		content.classList.add( 'mf-collapsible-content' );
 
-	// Update the heading wrapper to account for semantics of collapsing sections
-	wrapper.setAttribute( 'tabindex', '0' );
-	wrapper.setAttribute( 'role', 'button' );
-	wrapper.setAttribute( 'aria-controls', content.id );
+		// Update the heading wrapper to account for semantics of collapsing sections
+		wrapper.setAttribute( 'tabindex', '0' );
+		wrapper.setAttribute( 'role', 'button' );
+		wrapper.setAttribute( 'aria-controls', content.id );
 
-	// Create the dropdown arrow icon
-	const icon = document.createElement( 'span' );
-	icon.classList.add( 'mf-icon', 'mf-icon--small', 'mf-collapsible-icon' );
-	icon.setAttribute( 'aria-hidden', true );
-	wrapper.prepend( icon );
+		// Create the dropdown arrow icon
+		icon = document.createElement( 'span' );
+		icon.classList.add( 'mf-icon', 'mf-icon--small', 'mf-collapsible-icon' );
+		icon.setAttribute( 'aria-hidden', true );
+		wrapper.prepend( icon );
+	}
 
 	return icon;
 }
@@ -280,17 +287,32 @@ function init( container ) {
 		if ( content.tagName !== 'DIV' ) {
 			return;
 		}
+		const wasExpanded =
+			content.classList.contains( 'mf-collapsible-content' ) &&
+			!content.getAttribute( 'hidden' );
 		const icon = prepareHeadingWrapper( wrapper, content );
 
 		attachEventListeners( wrapper, content, icon );
 		// Skip collapsing if this section contains the fragment target
+		// or if it was opened during slow loading.
 		const shouldCollapse = isCollapsed &&
+			!wasExpanded &&
 			!( fragmentTarget &&
 				( content.contains( fragmentTarget ) || wrapper.contains( fragmentTarget ) ) );
 		setCollapsedState( content, wrapper, icon, shouldCollapse );
 	} );
 
 	window.addEventListener( 'hashchange', () => checkHash( container ) );
+
+	// Remove the temporary open handler used during slow page loading:
+	if ( window.mfTempScrollHandler !== undefined ) {
+		document.removeEventListener( 'scroll', window.mfTempScrollHandler );
+		delete window.mfTempScrollHandler;
+	}
+	if ( window.mfTempClickHandler !== undefined ) {
+		document.removeEventListener( 'click', window.mfTempClickHandler );
+		delete window.mfTempClickHandler;
+	}
 }
 
 module.exports = { init };
