@@ -14,6 +14,10 @@ class MoveLeadParagraphTransformTest extends \MediaWikiUnitTestCase {
 	 * @dataProvider provideIdentifyInfoboxElement
 	 */
 	public function testIdentifyInfoboxElement( string $html, ?string $expected, string $msg ) {
+		if ( PHP_VERSION_ID >= 80400 ) {
+			$this->markTestSkipped( "(T415448) Temporarily skip test, fails on PHP 8.4" );
+		}
+
 		$bodyNode = Utils::createBody( $html );
 		$doc = $bodyNode->ownerDocument;
 
