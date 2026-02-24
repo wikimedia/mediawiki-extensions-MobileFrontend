@@ -156,6 +156,7 @@
 	"mobile-frontend-watchlist-back-home": "대문으로 돌아가기",
 	"mobile-frontend-watchlist-cta-button-login": "로그인",
 	"mobile-frontend-watchlist-cta-button-signup": "가입하기",
+	"mobile-frontend-watchlist-cta-button-createaccount": "계정 만들기",
 	"mobile-frontend-watchlist-feed-empty": "최근 바뀐 문서가 없습니다",
 	"mobile-frontend-watchlist-filter-all": "모두",
 	"mobile-frontend-watchlist-filter-articles": "문서",

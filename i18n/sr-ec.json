@@ -25,6 +25,7 @@
 	"mobile-frontend-desc": "Унапређује мобилну варијанту Медијавикија",
 	"mobile-frontend-editor-anon": "Уреди без пријаве",
 	"mobile-frontend-editor-anonwarning": "<strong>Упозорење:</strong> Нисте пријављени. Ваша IP адреса биће јавно видљива ако уредите или направите неку страницу. <strong>Пријавите се</strong> или <strong>отворите налог</strong>, тиме ће ваши доприноси бити приписивани корисничком имену које одаберете и стећи ћете многе погодности.",
+	"mobile-frontend-editor-anonwarning-soft-description": "Имајте приступ разним алаткама, пратите своје доприносе и будите део заједнице.",
 	"mobile-frontend-editor-anonwarning-soft-separator": "или",
 	"mobile-frontend-editor-autocreatewarning-soft-publish-description": "Објављивањем, [[$1|привремени налог]] ће бити направљен.",
 	"mobile-frontend-editor-autocreatewarning": "<strong>Упозорење:</strong> Нисте пријављени. Ваша измена ће бити приписана аутоматски генерисаном имену. [[$1|Сазнајте више]]. <strong>Пријавите се</strong> или <strong>отворите налог</strong>, тиме ће Ваши доприноси бити приписивани корисничком имену које одаберете.",

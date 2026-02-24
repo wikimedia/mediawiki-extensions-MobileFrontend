@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Christian Yakubu"
+			"Christian Yakubu",
+			"Yambutigra"
 		]
 	},
 	"mobile-frontend-terms-text": "Sɔya ni zalinsi",
 	"mobile-frontend-view": "Nuchɛni-baŋ guabu",
-	"mobile-frontend-view-desktop": "Desktop"
+	"mobile-frontend-view-desktop": "Komputa wan yari  di shaam"
 }

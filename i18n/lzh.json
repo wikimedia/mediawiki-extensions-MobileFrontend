@@ -2,9 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Au0727",
+			"Dream Star.cn",
 			"Itsmine",
 			"Jason924tw",
 			"LNDDYL",
+			"Ouclie",
 			"SolidBlock",
 			"StephDC",
 			"Suchichi02",
@@ -15,7 +17,9 @@
 	"mobile-frontend-account-create-captcha-placeholder": "告核符",
 	"mobile-frontend-copyright": "若無側註，諸文皆奉$1以行。",
 	"mobile-frontend-editor-anon": "無名而纂",
-	"mobile-frontend-editor-anonwarning": "<strong>警示</strong>：子未登簿，若纂，IP將誌。苟<strong>登簿</strong>或<strong>造冊</strong>，是纂將存以子名，及他效。",
+	"mobile-frontend-editor-anonwarning": "<strong>警</strong>：子未登簿。若纂，IP誌焉。苟<strong>登簿</strong>或<strong>造冊</strong>，是纂將存以子名，及他效。",
+	"mobile-frontend-editor-anonwarning-soft-separator": "或",
+	"mobile-frontend-editor-autocreatewarning-soft-publish-description": "当爾發時，一[[$1|過客]]将為爾立。",
 	"mobile-frontend-editor-autocreatewarning": "<strong>警告：</strong>子未登簿，若纂，草簿將立[[$1|願聞其詳]]。苟<strong>登簿</strong>或<strong>造冊</strong>，此簿雖毀而書信不斷，功用不失。",
 	"mobile-frontend-editor-blocked-drawer-action-login": "登簿",
 	"mobile-frontend-drawer-arrow-label": "閉",

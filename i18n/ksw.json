@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
+			"SawEKP",
 			"SawJaemin"
 		]
 	},
+	"mobile-frontend-editor-anonwarning-soft-separator": "မ့ၢ်တမ့ၢ်",
 	"mobile-frontend-media-load-fail-retry": "မၤသီထီၣ်",
 	"mobile-frontend-terms-text": "တၢ်သူတၢ် အတၢ်ကတိၤတဘီ",
 	"mobile-frontend-view": "မိးဘဲ တၢ်ကွၢ်ကီ",

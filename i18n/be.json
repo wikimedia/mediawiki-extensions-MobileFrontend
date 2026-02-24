@@ -10,6 +10,7 @@
 			"No Sleep till Krupki",
 			"Plaga med",
 			"Tomato Cream",
+			"Ucukor",
 			"ZlyiLev",
 			"Дзяніс Тутэйшы",
 			"Чаховіч Уладзіслаў"
@@ -39,7 +40,7 @@
 	"mobile-frontend-editor-blocked-drawer-expiry-header": "Блакаванне скончыцца",
 	"mobile-frontend-editor-blocked-drawer-help": "Глядзець падрабязнасці",
 	"mobile-frontend-editor-generic-block-reason": "Невядомая прычына",
-	"mobile-frontend-editor-cancel": "Адмена",
+	"mobile-frontend-editor-cancel": "Скасаваць",
 	"mobile-frontend-editor-cancel-confirm": "Вы сапраўды хочаце адмовіцца ад сваіх змяненняў?",
 	"mobile-frontend-editor-captcha-try-again": "Няправільны код, паспрабуйце зноўку.",
 	"mobile-frontend-editor-continue": "Далей",

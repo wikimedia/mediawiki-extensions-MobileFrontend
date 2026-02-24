@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Khanmarat",
-			"Sorbat"
+			"Sorbat",
+			"Арбыуын"
 		]
 	},
 	"mobile-frontend-copyright": "Мәғлүмәтне $1-та ҡарап пулаты (әгәр пашҡасы күрсәтелмәсә).",
@@ -10,7 +11,7 @@
 	"mobile-frontend-privacy-link-text": "Серне саҡлау",
 	"mobile-frontend-terms-text": "Ошланыуның шартлары",
 	"mobile-frontend-view": "Мобиль аңыш",
-	"mobile-frontend-view-desktop": "Эшләү өстәл",
+	"mobile-frontend-view-desktop": "ПК вверсиясы",
 	"tag-mobile_edit": "Мобиль ҡоралтан төсәтеү",
 	"tag-mobile_web_edit": "Мобиль версиятан төсәткәле"
 }

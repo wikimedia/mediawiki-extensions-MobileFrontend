@@ -5,6 +5,7 @@
 			"Dicto23456",
 			"Gazeb",
 			"KHMELNYTSKYIA",
+			"Oujon",
 			"Tkalyn"
 		]
 	},
@@ -34,7 +35,7 @@
 	"mobile-frontend-save-settings": "Уложыти наставлїня",
 	"mobile-frontend-terms-text": "Условія хоснованя",
 	"mobile-frontend-view": "Мобілна верзія",
-	"mobile-frontend-view-desktop": "Десктоп",
+	"mobile-frontend-view-desktop": "Десктоп нагляд",
 	"tag-mobile_edit": "Едітованя з мобілного пристроя",
 	"tag-mobile_web_edit": "Едітованя через мобілну верзію"
 }
