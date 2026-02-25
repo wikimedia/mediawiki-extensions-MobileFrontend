@@ -2,9 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Peter57770",
-			"R12ntech"
+			"R12ntech",
+			"Tuwewanzi"
 		]
 	},
+	"mobile-frontend-view": "Omas'apȟe owáƞyaƞke",
+	"mobile-frontend-view-desktop": "Wágnawowapi owáƞyaƞke",
 	"mobile-frontend-watchlist-cta-button-login": "Čhaž’óigwa",
 	"tag-mobile_edit": "omás’apȟela wóyutȟokča",
 	"tag-mobile_web_edit": "omás’apȟela wóyutȟokča"
