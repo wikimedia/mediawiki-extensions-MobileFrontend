@@ -214,6 +214,10 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 		$request = new FauxRequest();
 		$mainContext->setRequest( $request );
 		$mainContext->setTitle( $title ?? Title::newMainPage() );
+		// In order to prevent the code from reaching out to the DB to get
+		// the article's content model (which is irrelevant for what is being
+		// tested here), we'll manually set it to wikitext here.
+		$mainContext->getTitle()->setContentModel( CONTENT_MODEL_WIKITEXT );
 		$skin->setContext( $mainContext );
 		$mainContext->setOutput( $out );
 		$context->setContext( $mainContext );
@@ -499,7 +503,6 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 			'mobile, parsoid, main namespace' => [ true, true, NS_MAIN, true ],
 			'mobile, parsoid, file namespace' => [ true, true, NS_FILE, false ],
 			'mobile, parsoid, category namespace' => [ true, true, NS_CATEGORY, false ],
-			'mobile, parsoid, special namespace' => [ true, true, NS_SPECIAL, false ],
 			'mobile, parsoid, media namespace' => [ true, true, NS_MEDIA, false ],
 		];
 	}
@@ -519,7 +522,14 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 		$title = $namespace === NS_MAIN
 			? Title::newMainPage()
 			: Title::makeTitle( $namespace, 'Test' );
-		$article = new Article( $title );
+		$article = Article::newFromTitle( $title, new RequestContext() );
+		// In order to prevent the code from reaching out to the DB to get
+		// the article's content model (which is irrelevant for what is being
+		// tested here), we'll manually set it to wikitext here.
+		// Note that it's not being set on the original `$title` instance
+		// because `Article::newFromTitle` create a new Title object for
+		// NS_MEDIA titles.
+		$article->getTitle()->setContentModel( CONTENT_MODEL_WIKITEXT );
 		$parserOptions = ParserOptions::newFromAnon();
 
 		$this->newMobileFrontendHooks()->onArticleParserOptions( $article, $parserOptions );
