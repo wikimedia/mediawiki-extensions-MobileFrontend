@@ -50,7 +50,8 @@
 			"VegaDark",
 			"Vivaelcelta",
 			"WikiiiTranslator",
-			"Tecbs"
+			"Tecbs",
+			"IZapico (WMF)"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si un usuario está editando o no a través de la interfaz móvil ( $1 )",
@@ -114,7 +115,7 @@
 	"mobile-frontend-editor-loading": "Cargando el editor…",
 	"mobile-frontend-editor-loadingtooslow": "¿Tu conexión es lenta?",
 	"mobile-frontend-editor-loadbasiceditor": "Cambia al editor de código",
-	"mobile-frontend-editor-toload": "El editor se está cargando. Si sigues viendo este mensaje pasados unos segundos [$1 recarga la página].",
+	"mobile-frontend-editor-toload": "El editor se está cargando. Si sigues viendo este mensaje pasados unos segundos [$1 refresca la página].",
 	"mf-expand-sections-description": "Ampliar siempre todas las secciones de todas las páginas de contenido de manera predeterminada",
 	"mf-expand-sections-name": "Expandir todas las secciones",
 	"mf-expand-sections-0-label": "Contraer por defecto",
