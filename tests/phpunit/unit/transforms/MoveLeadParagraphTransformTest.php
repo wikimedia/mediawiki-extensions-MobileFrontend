@@ -14,37 +14,22 @@ class MoveLeadParagraphTransformTest extends \MediaWikiUnitTestCase {
 	 * @dataProvider provideIdentifyInfoboxElement
 	 */
 	public function testIdentifyInfoboxElement( string $html, ?string $expected, string $msg ) {
-		if ( PHP_VERSION_ID >= 80400 ) {
-			$this->markTestSkipped( "(T415448) Temporarily skip test, fails on PHP 8.4" );
-		}
-
-		$bodyNode = Utils::createBody( $html );
-		$doc = $bodyNode->ownerDocument;
-
-		$wrappedInfobox = $doc->createElement( 'table' );
-		$wrappedInfobox->setAttribute( 'class', 'infobox' );
-		$stack = $doc->createElement( 'div' );
-		$stack->setAttribute( 'class', 'mw-stack' );
-		$stack->appendChild( $wrappedInfobox );
-		$pNode = $doc->createElement( 'p' );
-		$infobox = $doc->createElement( 'table' );
-		$infobox->setAttribute( 'class', 'infobox' );
-		$anotherInfobox = $doc->createElement( 'table' );
-		$anotherInfobox->setAttribute( 'class', 'infobox' );
-		$section = $doc->createElement( 'div' );
-		$section->appendChild( $anotherInfobox );
-
 		$transform = TestingAccessWrapper::newFromObject(
 			new MoveLeadParagraphTransform( 'DummyTitle', 1 )
 		);
 
+		$bodyNode = Utils::createBody( $html );
 		$infobox = $transform->identifyInfoboxElement( $bodyNode );
 
-		$this->assertEquals(
-			$expected,
-			$infobox ? $infobox->getNodePath() : null,
-			$msg
-		);
+		if ( !$expected ) {
+			$this->assertNull( $infobox, $msg );
+		} else {
+			$this->assertEquals(
+				DOMCompat::querySelector( $bodyNode->ownerDocument, $expected ),
+				$infobox,
+				$msg
+			);
+		}
 	}
 
 	public static function provideIdentifyInfoboxElement(): array {
@@ -56,27 +41,27 @@ class MoveLeadParagraphTransformTest extends \MediaWikiUnitTestCase {
 			],
 			[
 				'html' => '<p></p><div class="infobox"></div>',
-				'expected' => '/html/body/div',
+				'expected' => 'html > body > div',
 				'msg' => 'Simple infobox'
 			],
 			[
 				'html' => '<p></p><div class="mw-stack"><table class="infobox"></table></div>',
-				'expected' => '/html/body/div',
+				'expected' => 'html > body > div',
 				'msg' => 'Infobox wrapped in an known container'
 			],
 			[
 				'html' => '<p></p><div><table class="infobox"></table></div>',
-				'expected' => '/html/body/div/table',
+				'expected' => 'html > body > div > table',
 				'msg' => 'Infobox wrapped in an unknown container'
 			],
 			[
 				'html' => '<p></p><div class="thumb tright"></div>',
-				'expected' => '/html/body/div',
+				'expected' => 'html > body > div',
 				'msg' => 'Thumbnail'
 			],
 			[
 				'html' => '<p></p><figure></figure>',
-				'expected' => '/html/body/figure',
+				'expected' => 'html > body > figure',
 				'msg' => 'Thumbnail (Parsoid)'
 			],
 		];
