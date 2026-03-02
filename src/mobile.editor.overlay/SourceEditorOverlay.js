@@ -536,6 +536,7 @@ class SourceEditorOverlay extends EditorOverlayBase {
 	 */
 	onSaveComplete( newRevId, redirectUrl, tempUserCreated ) {
 		super.onSaveComplete( newRevId, redirectUrl, tempUserCreated );
+		mw.hook( 'mobileFrontend.sourceEditor.saveComplete' ).fire( newRevId );
 
 		// The parent class changes the location hash in a setTimeout, so wait
 		// for that to happen before reloading.

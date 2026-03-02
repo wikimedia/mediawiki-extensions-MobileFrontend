@@ -82,11 +82,17 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		height: 100%;
+		// SourceEditorOverlay does only expands its overlay height to the added content, avoid modifying
+		// its height which could affect other overlays. 3em is the editor's header height
+		height: calc( 100vh - 3em );
 		max-width: 28rem;
 		margin: 0 auto;
 		padding-left: @spacing-150;
 		padding-right: @spacing-150;
+
+		.editor-overlay-ve .overlay-content && {
+			padding-top: 3em;
+		}
 
 		.description {
 			font-size: @font-size-medium;
@@ -94,10 +100,10 @@
 			line-height: @line-height-small;
 		}
 
-		.cdx-button { /* stylelint-disable-line no-descending-specificity */
+		.cdx-button {
 			width: 100%;
 			// Override .overlay .cdx-button rule from Overlay.less
-			border-radius: 2px;
+			border-radius: @border-radius-base;
 
 			&.login {
 				margin-top: @spacing-75;

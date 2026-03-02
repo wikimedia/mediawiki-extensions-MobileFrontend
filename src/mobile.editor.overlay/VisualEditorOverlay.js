@@ -174,6 +174,7 @@ class VisualEditorOverlay extends EditorOverlayBase {
 
 		if ( !showAnonWarning ) {
 			this.targetInit();
+			this.emit( 'editor-loaded' );
 		} else {
 			mw.loader.using( 'ext.testKitchen' ).then( () => {
 				const experiment = mw.testKitchen.getExperiment( 'growthexperiments-editattempt-anonwarning' );
@@ -186,10 +187,8 @@ class VisualEditorOverlay extends EditorOverlayBase {
 			}, () => {
 				this.$anonWarning = this.createAnonWarning( this.options );
 				renderWarnings();
-			} );
+			} ).then( () => this.emit( 'editor-loaded' ) );
 		}
-
-		this.emit( 'editor-loaded' );
 	}
 
 	/**
