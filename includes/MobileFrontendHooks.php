@@ -58,6 +58,7 @@ use MediaWiki\SpecialPage\Hook\AuthChangeFormFieldsHook;
 use MediaWiki\SpecialPage\Hook\SpecialPage_initListHook;
 use MediaWiki\SpecialPage\Hook\SpecialPageBeforeExecuteHook;
 use MediaWiki\SpecialPage\SpecialPage;
+use MediaWiki\Specials\Helpers\LoginHelper;
 use MediaWiki\Title\Title;
 use MediaWiki\User\Hook\UserGetDefaultOptionsHook;
 use MediaWiki\User\Options\UserOptionsLookup;
@@ -1219,11 +1220,13 @@ class MobileFrontendHooks implements
 	) {
 		$logos = RL\SkinModule::getAvailableLogos( $this->config );
 		$mfLogo = $logos['icon'] ?? false;
+		$loginHelper = new LoginHelper( $this->mobileContext );
 
-		// do nothing in desktop mode
+		// do nothing in desktop mode or popup mode
 		if (
 			$this->mobileContext->shouldDisplayMobileView() && $mfLogo
 			&& in_array( $action, [ AuthManager::ACTION_LOGIN, AuthManager::ACTION_CREATE ], true )
+			&& !$loginHelper->isDisplayModePopup()
 		) {
 			$logoHtml = Html::rawElement( 'div', [ 'class' => 'mw-mf-watermark' ],
 				Html::element( 'img', [ 'src' => $mfLogo, 'alt' => '' ] ) );
