@@ -3,13 +3,17 @@
 		"authors": [
 			"Quintino Lopes Castro Tavares",
 			"Waldir",
-			"Waldyrious"
+			"Waldyrious",
+			"GrogeXaKaba",
+			"Letra.berdi"
 		]
 	},
+	"mobile-frontend-copyright": "Kuntiúdu dispunibilizadu na térmus di $1, isétu si ndikadu ukontrári.",
+	"mobile-frontend-editor-summary": "Razumu:",
 	"mobile-frontend-privacy-link-text": "Privasidadi",
-	"mobile-frontend-terms-text": "Kondisons di uzu",
-	"mobile-frontend-view": "Vizon móvel",
+	"mobile-frontend-terms-text": "Térmus di Uzu",
+	"mobile-frontend-view": "Verson móvel",
 	"mobile-frontend-view-desktop": "Versãu desktop",
-	"tag-mobile_edit": "Mudansa fetu na móvel",
-	"tag-mobile_web_edit": "Edison fetu na site móvel"
+	"tag-mobile_edit": "Idison fetu na tilimóvel",
+	"tag-mobile_web_edit": "Idison fetu na site móvel"
 }

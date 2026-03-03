@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"DaSupremo"
+			"DaSupremo",
+			"Yaw tuba"
 		]
 	},
+	"mobile-frontend-copyright": "Content be available under $1 unless otherwise noted.",
 	"mobile-frontend-terms-text": "Terms of Use",
 	"mobile-frontend-view": "Mobile view",
 	"mobile-frontend-view-desktop": "Desktop"
