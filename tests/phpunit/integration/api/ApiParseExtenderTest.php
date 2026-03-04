@@ -36,7 +36,7 @@ class ApiParseExtenderTest extends MediaWikiIntegrationTestCase {
 			'wrapoutputclass' => '',
 			'useskin' => 'fallback',
 			// TODO: These tests only work for legacy parser & need to be updated to support Parsoid
-			'useparsoid' => 0,
+			'parser' => 'legacy',
 		];
 
 		$request = new FauxRequest( $params );
