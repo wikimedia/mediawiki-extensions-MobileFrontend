@@ -7,14 +7,15 @@
 			"Sembuk",
 			"TayfunEt.",
 			"Wisdom",
-			"Zolgoyo"
+			"Zolgoyo",
+			"Zorigt"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Хэрэглэгч гар утасны интерфейсээр дамжуулан засварлаж байгаа эсэх",
 	"mobile-frontend-copyright": "Тусгай тайлбар байхгүй бол энэ агуулгыг $1 лицензийн дагуу хэрэглэх боломжтой.",
 	"mobile-frontend-editor-anon": "Логингүй засвар хийх",
 	"mobile-frontend-editor-disabled": "Энэ хуудсыг эвдэн сүйтгэхээс сэргийлэх үүднээс хамгаалсан байна. [ $1 Кодоор харах]",
-	"mobile-frontend-editor-publish": "Хэвлэх",
+	"mobile-frontend-editor-publish": "Нийтлэх",
 	"mobile-frontend-editor-save": "Хадгалах",
 	"mobile-frontend-editor-summary-request": "Та хуудсыг хэрхэн сайжруулсан бэ?",
 	"mobile-frontend-editor-summary": "Товч агуулга:",
