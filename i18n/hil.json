@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Billie bb",
+			"Exec8",
 			"Kai theos en ho logos",
 			"Pare Mo",
 			"Redhotchili23"
@@ -10,7 +11,7 @@
 	"mobile-frontend-copyright": "Ang kaundan matigayon sa idalom sang $1 luwas kon may iban nga ginsambit.",
 	"mobile-frontend-terms-text": "Mga Tulumanon kag Kilinahanglanon sa Paggamit",
 	"mobile-frontend-view": "Pagtan-aw sa mobile",
-	"mobile-frontend-view-desktop": "Desktop",
+	"mobile-frontend-view-desktop": "Desktop nga pagtan-aw",
 	"tag-mobile_edit": "Pagdumalang mobil",
 	"tag-mobile_web_edit": "Pagdumalang mobil sa web"
 }
