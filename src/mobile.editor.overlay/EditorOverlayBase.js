@@ -624,7 +624,7 @@ class EditorOverlayBase extends Overlay {
 				block: true,
 				progressive: true,
 				additionalClassNames: 'signup cdx-button--size-large',
-				href: mw.util.getUrl( 'Special:CreateAccount', signupParams )
+				href: mw.util.getUrl( 'Special:CreateAccount', util.extend( params, signupParams ) )
 			} ),
 			loginButton = new Button( {
 				label: mw.msg( 'mobile-frontend-watchlist-cta-button-login' ),
