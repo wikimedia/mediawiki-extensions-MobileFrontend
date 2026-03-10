@@ -158,6 +158,8 @@ class EditorGateway {
 	 * captcha.
 	 * @param {string} [options.captchaWord] If CAPTCHA was requested, term
 	 * displayed in the CAPTCHA.
+	 * @param {string} [options.editorinterface] Optional name of the editor
+	 * interface used for making the edit.
 	 * @return {jQuery.Deferred} On failure callback is passed an object with
 	 * `type` and `details` properties. `type` is a string describing the type
 	 * of error, `details` can be any object (usually error message).
@@ -193,6 +195,10 @@ class EditorGateway {
 
 			if ( this.sectionId ) {
 				apiOptions.section = this.sectionId;
+			}
+
+			if ( Object.keys( options ).includes( 'editorinterface' ) ) {
+				apiOptions.editorinterface = options.editorinterface;
 			}
 
 			// TODO: When `wouldautocreate` is true, we should also set up:

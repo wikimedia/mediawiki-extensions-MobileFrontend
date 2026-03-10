@@ -409,7 +409,10 @@
 		"remoteExtPath": "MobileFrontend"
 	},
 	"Hooks": {
-		"APIGetAllowedParams": "ApiParse",
+		"APIGetAllowedParams": [
+			"ApiEditPageExtender",
+			"ApiParse"
+		],
 		"APIQuerySiteInfoGeneralInfo": "MobileFrontendHooks",
 		"ApiBeforeMain": "MobileFrontendHooks",
 		"AuthChangeFormFields": "MobileFrontendHooks",
@@ -494,6 +497,9 @@
 			"services": [
 				"UserFactory"
 			]
+		},
+		"ApiEditPageExtender": {
+			"class": "MobileFrontend\\Api\\ApiEditPageExtender"
 		},
 		"ApiParse": {
 			"class": "MobileFrontend\\Api\\ApiParseExtender"

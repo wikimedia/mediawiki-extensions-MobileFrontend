@@ -8,6 +8,7 @@
 			"Max Semenik"
 		]
 	},
+	"apihelp-edit-param-editorinterface": "Name of the editor interface used (such as MobileFrontend-SourceEditor)",
 	"apihelp-parse-param-mobileformat": "Return parse output in a format suitable for mobile devices.",
 	"apihelp-parse-param-noimages": "Disable images in mobile output.",
 	"apihelp-parse-param-mainpage": "Apply mobile main page transformations.",

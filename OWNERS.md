@@ -201,6 +201,7 @@ The editor.
 
 * Since: Sept 2025
 * Files:
+  - /includes/Api/ApiEditPageExtender.php
   - /includes/MobileFrontendEditorHooks.php
   - /src/mobile.init/editor.js
   - /src/mobile.init/editorLoadingOverlay.js

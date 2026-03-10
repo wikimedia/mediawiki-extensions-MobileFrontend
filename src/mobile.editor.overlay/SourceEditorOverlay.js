@@ -620,6 +620,12 @@ class SourceEditorOverlay extends EditorOverlayBase {
 	_performSaveRequest( options ) {
 		this.showHidden( '.saving-header' );
 
+		// Set a default value in the request for the editor interface
+		// used unless the caller provided its own value.
+		if ( !Object.keys( options ).includes( 'editorinterface' ) ) {
+			options.editorinterface = 'MobileFrontend-SourceEditor';
+		}
+
 		this.gateway.save( options )
 			.then( ( newRevId, redirectUrl, tempUserCreated ) => {
 				const title = this.options.title;

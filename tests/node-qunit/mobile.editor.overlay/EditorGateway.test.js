@@ -310,6 +310,32 @@ QUnit.test( '#save, success', ( assert ) => {
 	} );
 } );
 
+QUnit.test( '#save, success with editor interface', ( assert ) => {
+	const gateway = new EditorGateway( {
+		api: apiHappy,
+		title: 'test',
+		sectionId: '1'
+	} );
+
+	return gateway.getContent().then( () => {
+		gateway.setContent( 'section 1' );
+		assert.strictEqual( gateway.hasChanged, true, 'hasChanged is true' );
+		return gateway.save( {
+			summary: 'summary',
+			editorinterface: 'EditorGateway-test'
+		} );
+	} ).then( () => {
+		assert.strictEqual( gateway.hasChanged, false, 'reset hasChanged' );
+		assert.strictEqual( postStub.calledWithMatch( 'csrf', util.extend( {}, API_REQUEST_DATA, {
+			section: '1',
+			text: 'section 1',
+			basetimestamp: '2013-05-15T00:30:26Z',
+			starttimestamp: '2013-05-15T00:30:26Z',
+			editorinterface: 'EditorGateway-test'
+		} ) ), true, 'save first section' );
+	} );
+} );
+
 QUnit.test( '#save, new page', ( assert ) => {
 	const gateway = new EditorGateway( {
 		api: apiMissingPage,
