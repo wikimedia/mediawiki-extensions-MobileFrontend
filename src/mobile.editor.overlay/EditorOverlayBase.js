@@ -600,7 +600,7 @@ class EditorOverlayBase extends Overlay {
 		 * @event ~'mobileFrontend.editorClosed'
 		 * @memberof Hooks
 		 */
-		mw.hook( 'mobileFrontend.editorClosed' ).fire( this.switching );
+		mw.hook( 'mobileFrontend.editorClosed' ).fire( !!this.switching );
 	}
 
 	/**
