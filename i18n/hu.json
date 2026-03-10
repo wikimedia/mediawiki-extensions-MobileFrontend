@@ -14,7 +14,8 @@
 			"Misibacsi",
 			"Tacsipacsi",
 			"ViDam",
-			"Boro"
+			"Boro",
+			"Bean49"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Egy felhasználó a mobil felületen keresztül fordít-e ($1)",
@@ -27,7 +28,7 @@
 	"mobile-frontend-edit-signup-action": "<strong>Segíts a(z) {{SITENAME}} javításában!</strong><br />Regisztrálj a szerkesztéshez.",
 	"mobile-frontend-editor-anon": "Szerkesztés bejelentkezés nélkül",
 	"mobile-frontend-editor-anonwarning": "<strong>Figyelem:</strong> Nem vagy bejelentkezve. Ha szerkesztesz, az IP-címed nyilvánosan látható lesz a laptörténetben. Ha <strong>bejelentkezel</strong> vagy <strong>regisztrálsz</strong>, a szerkesztéseid a felhasználónevedhez lesznek társítva, egyéb hasznos dolgok mellett.",
-	"mobile-frontend-editor-autocreatewarning": "<strong>Figyelem:</strong> Nem vagy bejelentkezve. Amikor először szerkesztesz, egy ideiglenes fiók jön létre neked ([[{{MediaWiki:tempuser-helppage}}|további információk]]). Ha <strong>[$1 bejelentkezel]</strong> vagy <strong>[$2 regisztrálsz]</strong>, akkor az ideiglenes fiók lejárta után is meg fogod kapni az értesítéseket, egyéb hasznos funkciók mellett.",
+	"mobile-frontend-editor-autocreatewarning": "<strong>Figyelem:</strong> Nem vagy bejelentkezve. Amikor először szerkesztesz, egy ideiglenes fiók jön létre neked ([[$1|további információk]]). Ha <strong>bejelentkezel</strong> vagy <strong>regisztrálsz</strong>, akkor az ideiglenes fiók lejárta után is meg fogod kapni az értesítéseket, egyéb hasznos funkciók mellett.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Bejelentkezés",
 	"mobile-frontend-drawer-arrow-label": "Bezárás",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "OK",
