@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Kaszeba",
-			"Kirsan"
+			"Kirsan",
+			"Orbitminis"
 		]
 	},
 	"mobile-frontend-copyright": "Zamkłosc ùprzëstãpnianô na licencëje $1, jeżlë nie pòdóno jinaczi.",
@@ -14,7 +15,7 @@
 	"mobile-frontend-privacy-link-text": "Pòlitika priwatnotë",
 	"mobile-frontend-terms-text": "Warënczi kòrzëstaniô",
 	"mobile-frontend-view": "Mòbilnô wersëjô.",
-	"mobile-frontend-view-desktop": "Klasycznô",
+	"mobile-frontend-view-desktop": "Sztandardowô wersjô",
 	"mobile-frontend-watchlist-cta-button-login": "Wlogùj mie",
 	"mobile-frontend-watchlist-cta-button-signup": "Założë nowé kònto",
 	"mobile-frontend-watchlist-purpose": "<strong>Lësta ùzéraniô pòmôgô twòrzëc załóżczi do starnów i szlachòwac za zjinakama na nich.</strong><br />Wlogùj sã, abë to òbaczëc.",
