@@ -117,7 +117,7 @@
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Ehdotetut kielet",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Muut kielet",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Etsi kieltä",
-	"mobile-frontend-languages-structured-overlay-no-results": "Kieli ei ole saatavilla.",
+	"mobile-frontend-languages-structured-overlay-no-results": "Kieli ei ole saatavilla",
 	"mobile-frontend-languages-structured-overlay-error": "Tapahtui virhe ladatessa tämän sivun kieliversioita.",
 	"mobile-frontend-languages-structured-overlay-no-results-body": "Etsimäsi kieli ei ole saatavilla.",
 	"mobile-frontend-last-modified-date": "Sivua on viimeksi muokattu $1 kello $2",
