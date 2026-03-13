@@ -4,10 +4,6 @@
 		"maxSize": "17.3KB"
 	},
 	{
-		"resourceModule": "mobile.editor.overlay",
-		"maxSize": "14.9KB"
-	},
-	{
 		"resourceModule": "mobile.init",
 		"maxSize": "6KB"
 	},
