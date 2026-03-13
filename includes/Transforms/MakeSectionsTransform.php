@@ -220,18 +220,7 @@ class MakeSectionsTransform implements IMobileTransform {
 	 * @return string The JavaScript code to add event handlers to the skin
 	 */
 	public static function interimTogglingSupport(): string {
-		$js = <<<JAVASCRIPT
-function mfTempOpenSection( id ) {
-	var block = document.getElementById( "mf-section-" + id );
-	block.className += " open-block";
-	// The previous sibling to the content block is guaranteed to be the
-	// associated heading due to mobileformatter. We need to add the same
-	// class to flip the collapse arrow icon.
-	// <h[1-6]>heading</h[1-6]><div id="mf-section-[1-9]+"></div>
-	block.previousSibling.className += " open-block";
-	block.previousSibling.firstChild.className += " mf-icon-rotate-flip";
-}
-JAVASCRIPT;
+		$js = file_get_contents( __DIR__ . '/../../resources/inline/interim-toggling-legacy.js' );
 		return Html::inlineScript(
 			ResourceLoader::filter( 'minify-js', $js )
 		);

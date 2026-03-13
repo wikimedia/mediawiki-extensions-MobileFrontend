@@ -909,8 +909,19 @@ class MobileFrontendHooks implements
 
 		if ( $displayMobileView ) {
 			// Adds inline script to allow opening of sections while JS is still loading
-			$out->prependHTML( MakeSectionsTransform::interimTogglingSupport() );
+			if ( $this->shouldUseParsoid( $out->getTitle() ) ) {
+				$out->prependHTML( self::interimTogglingSupportForParsoid() );
+			} else {
+				$out->prependHTML( MakeSectionsTransform::interimTogglingSupport() );
+			}
 		}
+	}
+
+	private static function interimTogglingSupportForParsoid(): string {
+		$js = file_get_contents( __DIR__ . '/../resources/inline/interim-toggling-parsoid.js' );
+		return Html::inlineScript(
+			ResourceLoader::filter( 'minify-js', $js )
+		);
 	}
 
 	/**
@@ -1061,27 +1072,30 @@ class MobileFrontendHooks implements
 	 * @param ParserOptions $parserOptions
 	 */
 	public function onArticleParserOptions( Article $article, ParserOptions $parserOptions ) {
+		// set the collapsible sections parser flag so that section content is wrapped in a div for easier targeting
+		// only if we're in mobile view and parsoid is enabled
+		if ( $this->mobileContext->shouldDisplayMobileView() && $this->shouldUseParsoid( $article->getTitle() ) ) {
+			$title = $article->getTitle();
+			$namespace = $title->getNamespace();
+			$namespacesWithoutCollapsibleSections = $this->config->get( 'MFNamespacesWithoutCollapsibleSections' );
+
+			// Don't enable collapsible sections for certain namespaces
+			if ( !in_array( $namespace, $namespacesWithoutCollapsibleSections ) ) {
+				$parserOptions->setCollapsibleSections();
+			}
+		}
+	}
+
+	private function shouldUseParsoid( Title $title ): bool {
 		// while the parser is actively being migrated, we rely on the ParserMigration extension for using Parsoid
 		if ( ExtensionRegistry::getInstance()->isLoaded( 'ParserMigration' ) ) {
 			$context = $this->mobileContext;
 			$oracle = MediaWikiServices::getInstance()->getService( 'ParserMigration.Oracle' );
 
-			$shouldUseParsoid =
-				$oracle->shouldUseParsoid( $context->getUser(), $context->getRequest(), $article->getTitle() );
+			return $oracle->shouldUseParsoid( $context->getUser(), $context->getRequest(), $title );
 
-			// set the collapsible sections parser flag so that section content is wrapped in a div for easier targeting
-			// only if we're in mobile view and parsoid is enabled
-			if ( $context->shouldDisplayMobileView() && $shouldUseParsoid ) {
-				$title = $article->getTitle();
-				$namespace = $title->getNamespace();
-				$namespacesWithoutCollapsibleSections = $this->config->get( 'MFNamespacesWithoutCollapsibleSections' );
-
-				// Don't enable collapsible sections for certain namespaces
-				if ( !in_array( $namespace, $namespacesWithoutCollapsibleSections ) ) {
-					$parserOptions->setCollapsibleSections();
-				}
-			}
 		}
+		return false;
 	}
 
 	/**
