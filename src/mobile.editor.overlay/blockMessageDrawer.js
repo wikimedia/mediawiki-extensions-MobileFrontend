@@ -86,7 +86,6 @@ module.exports = function blockMessageDrawer( props ) {
 		},
 		onShow: () => {
 			const $drawer = blockDrawer.$el.find( '.drawer.block-message' );
-			const $seeMore = $drawer.find( '.block-message-see-more' );
 			const wiki = mw.config.get( 'wgDBname' );
 
 			// Delay the UI update a little bit until the component heights are
@@ -97,28 +96,19 @@ module.exports = function blockMessageDrawer( props ) {
 			eventListener = () => repositionDrawer( $drawer );
 			window.addEventListener( 'resize', eventListener );
 
-			$seeMore.on( 'click', () => {
-				const $reason = $drawer.find( '.block-message-reason' );
-				$reason.show();
-				$seeMore.hide();
-
-				repositionDrawer( $drawer );
-
-				if ( mw.config.get( 'wgMFTrackBlockNotices' ) ) {
-					mw.track( 'counter.MediaWiki.BlockNotices.' + wiki + '.MobileFrontend.reasonShown', 1 );
-					mw.track( 'stats.mediawiki_block_notices_total', 1, {
-						source: 'MobileFrontend',
-						action: 'reasonShown',
-						wiki
-					} );
-				}
-			} );
-
 			if ( mw.config.get( 'wgMFTrackBlockNotices' ) ) {
 				mw.track( 'counter.MediaWiki.BlockNotices.' + wiki + '.MobileFrontend.shown', 1 );
 				mw.track( 'stats.mediawiki_block_notices_total', 1, {
 					source: 'MobileFrontend',
 					action: 'shown',
+					wiki
+				} );
+				// This was previously behind a "show more" link, and has been
+				// kept for stats-consistency:
+				mw.track( 'counter.MediaWiki.BlockNotices.' + wiki + '.MobileFrontend.reasonShown', 1 );
+				mw.track( 'stats.mediawiki_block_notices_total', 1, {
+					source: 'MobileFrontend',
+					action: 'reasonShown',
 					wiki
 				} );
 			}

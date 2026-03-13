@@ -160,7 +160,6 @@ class BlockMessageDetails extends View {
       <div class="block-message-item">
         <p>
           {{ createBody }}
-          <a class ="block-message-see-more" href="#">{{ seeMoreLink }}</a>
         </p>
       </div>
       <div class="block-message-item block-message-creator">
