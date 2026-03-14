@@ -225,6 +225,7 @@ class LazyImageTransform implements IMobileTransform {
 	 */
 	private function copyStyles( $from, $to, array $enabled, array $additional ) {
 		$styles = HtmlStyleUtils::parseStyleString(
+			// @phan-suppress-next-line PhanTypeMismatchArgumentNullable Okay with hasAttribute
 			$from->hasAttribute( 'style' ) ? $from->getAttribute( 'style' ) : ''
 		);
 
@@ -242,6 +243,7 @@ class LazyImageTransform implements IMobileTransform {
 	 */
 	private function copyClasses( $from, $to, array $enabled, array $additional ) {
 		$styles = HtmlClassUtils::parseClassString(
+			// @phan-suppress-next-line PhanTypeMismatchArgumentNullable Okay with hasAttribute
 			$from->hasAttribute( 'class' ) ? $from->getAttribute( 'class' ) : ''
 		);
 

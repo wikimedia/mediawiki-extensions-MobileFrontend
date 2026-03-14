@@ -245,7 +245,7 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 		$form->appendContent(
 			...$fields
 		);
-		$out->addHTML( $form );
+		$out->addHTML( (string)$form );
 	}
 
 	/**
