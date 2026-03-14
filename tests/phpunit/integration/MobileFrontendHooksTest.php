@@ -327,7 +327,7 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 		] );
 		$title = Title::newFromText( 'PurgeTest' );
 
-		$htmlCacheUpdater = $this->getServiceContainer()->getHtmlCacheUpdater();
+		$htmlCacheUpdater = $this->getServiceContainer()->getHTMLCacheUpdater();
 		$urls = $htmlCacheUpdater->getUrls( $title );
 
 		$expected = [
