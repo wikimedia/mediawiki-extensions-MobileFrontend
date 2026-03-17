@@ -111,7 +111,7 @@
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "दूसरी भाषाएँ",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "भाषा खोजें",
 	"mobile-frontend-languages-structured-overlay-no-results": "भाषा उपलब्ध नहीं है",
-	"mobile-frontend-languages-structured-overlay-no-results-body": "जो भाषा आप ढूँढ़ रहे हैं वह उपलब्ध नहीं है।",
+	"mobile-frontend-languages-structured-overlay-no-results-body": "जो भाषा आप खोज रहे हैं वह उपलब्ध नहीं है।",
 	"mobile-frontend-last-modified-date": "अंतिम बार $1 को $2 बजे संपादित किया गया",
 	"mobile-frontend-last-modified-with-user-days": "[$4 अंतिम बार {{PLURAL:$3|$3 दिन}} पहले] {{PLURAL:$5|[$6 $2]|0=एक गुमनाम सदस्य}} द्वारा {{GENDER:$1|संपादित किया}} गया",
 	"mobile-frontend-last-modified-with-user-hours": "[$4 अंतिम बार {{PLURAL:$3|$3 घंटे}} पहले] {{PLURAL:$5|[$6 $2]|0=एक गुमनाम सदस्य}} द्वारा {{GENDER:$1|संपादित किया}} गया",
