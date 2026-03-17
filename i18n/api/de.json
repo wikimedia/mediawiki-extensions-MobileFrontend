@@ -9,6 +9,7 @@
 			"Predatorix"
 		]
 	},
+	"apihelp-edit-param-editorinterface": "Name der verwendeten Bearbeitungs-Oberfläche (z. B. MobileFrontend-SourceEditor)",
 	"apihelp-parse-param-mobileformat": "Gibt die Verarbeitungsausgabe in einem für Mobilgeräte tauglichen Format aus.",
 	"apihelp-parse-param-noimages": "Bilder in der mobilen Ansicht deaktivieren.",
 	"apihelp-parse-param-mainpage": "Wendet mobile Umwandlungen der Hauptseite an.",
