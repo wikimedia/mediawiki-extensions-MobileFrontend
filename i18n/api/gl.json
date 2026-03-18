@@ -3,9 +3,11 @@
 		"authors": [
 			"Banjo",
 			"Elisardojm",
-			"Fisterraeomar"
+			"Fisterraeomar",
+			"Toliño"
 		]
 	},
+	"apihelp-edit-param-editorinterface": "Nome da interface empregada para o editor (como «MobileFrontend-SourceEditor»)",
 	"apihelp-parse-param-mobileformat": "Devolver a análise de saída nun formato axeitado para dispositivos móbiles.",
 	"apihelp-parse-param-noimages": "Desactiva as imaxes na saída móbil.",
 	"apihelp-parse-param-mainpage": "Aplicar as transformacións móbiles á páxina principal.",
