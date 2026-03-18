@@ -284,7 +284,10 @@ function init( container ) {
 
 	headingWrappers.forEach( ( wrapper ) => {
 		const content = wrapper.nextElementSibling;
-		if ( content.tagName !== 'DIV' ) {
+		if ( !content || content.tagName !== 'DIV' ) {
+			// Under unclear circumstances a heading for an empty section gets
+			// output with no section content div. Seen during testing on eg:
+			// https://it.wikipedia.org/w/index.php?title=File:Assalto_di_Piazza_Nicosia.jpg&oldid=124040867
 			return;
 		}
 		const wasExpanded =
