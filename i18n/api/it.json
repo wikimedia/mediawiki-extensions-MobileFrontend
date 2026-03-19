@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"FL2226"
+		]
+	},
+	"apihelp-edit-param-editorinterface": "Nome dell'interfaccia dell'editor utilizzata (ad esempio MobileFrontend-SourceEditor)"
+}
