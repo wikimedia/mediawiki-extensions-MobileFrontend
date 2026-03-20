@@ -7,6 +7,7 @@
 			"Sjoerddebruin"
 		]
 	},
+	"apihelp-edit-param-editorinterface": "Naam van de gebruikte tekstverwerkersinterface (bijvoorbeeld MobileFrontend-SourceEditor)",
 	"apihelp-parse-param-mobileformat": "Verwerkte uitvoer retourneren in een formaat dat geschikt is voor mobiele apparaten.",
 	"apihelp-parse-param-noimages": "Afbeeldingen uitschakelen in de mobiele uitvoer.",
 	"apihelp-parse-param-mainpage": "Mobiele hoofdpagina-transformaties toepassen.",
