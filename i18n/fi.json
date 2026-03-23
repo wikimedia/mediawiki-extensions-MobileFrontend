@@ -40,7 +40,7 @@
 	"mobile-frontend-editor-anonwarning-soft-description": "Ota käyttöön hyödyllisiä työkaluja, seuraa vaikutustasi ja liity mukaan yhteisöön.",
 	"mobile-frontend-editor-anonwarning-soft-separator": "tai",
 	"mobile-frontend-editor-autocreatewarning-soft-publish-description": "Kun julkaiset muokkauksen, sinulle luodaan [[$1|tilapäinen tunnus]].",
-	"mobile-frontend-editor-autocreatewarning": "<strong>Varoitus:</strong> Et ole kirjautunut sisään. Kun teet muokkauksen, sinulle luodaan tilapäinen tunnus. [[$1|Lisätietoja]]. <strong>Kirjaudu sisään</strong> tai <strong>luo käyttäjätunnus</strong> jatkaaksesi ilmoitusten saamista tämän tunnuksen vanhenemisen jälkeen sekä päästäksesi käyttämään lisäominaisuuksia.",
+	"mobile-frontend-editor-autocreatewarning": "<strong>Varoitus:</strong> Et ole kirjautunut sisään. Kun teet muokkauksen, sinulle luodaan tilapäinen tunnus. [[$1|Lisätietoja]]. <strong>Kirjaudu sisään</strong> tai <strong>luo käyttäjätunnus</strong> jatkaaksesi ilmoitusten saamista tunnuksen vanhenemisen jälkeen sekä päästäksesi käyttämään lisäominaisuuksia.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Kirjaudu sisään",
 	"mobile-frontend-drawer-arrow-label": "Sulje",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "OK",
