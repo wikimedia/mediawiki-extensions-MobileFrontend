@@ -381,7 +381,6 @@ class MobileFrontendHooks implements
 
 				if ( $isCollapsibleSections ) {
 					$bodyAttrs['class'] .= ' mf-collapsible-sections';
-				// FIXME: Remove the `else` block when cache has been cleared after 2 weeks.
 				} else {
 					$bodyAttrs['class'] .= ' mf-collapsible-sections-disabled';
 				}
