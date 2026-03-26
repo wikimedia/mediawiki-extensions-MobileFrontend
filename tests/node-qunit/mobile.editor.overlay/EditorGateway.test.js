@@ -1,4 +1,5 @@
-let sandbox, EditorGateway, spy, postStub, missingPostStub, apiReject, apiHappy,
+let sandbox, EditorGateway, spy, postStub, missingPostStub, acquireTempUserNameStub,
+	apiReject, apiHappy,
 	apiMissingPage, apiRvNoSection,
 	apiCaptchaFail, apiAbuseFilterDisallow, apiAbuseFilterWarning, apiAbuseFilterOther,
 	apiTestError, apiReadOnly, apiExpiredToken, apiWithSectionLine, apiHappyTestContent,
@@ -43,8 +44,8 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/EditorGateway', {
 		jQuery.setUp( sandbox, global );
 		oo.setUp( sandbox, global );
 		mediaWiki.setUp( sandbox, global );
-		// FIXME: can be replaced with a stub when https://github.com/wikimedia/mw-node-qunit/pull/34 is resolved.
-		mw.user.acquireTempUserName = () => global.$.Deferred().resolve();
+		acquireTempUserNameStub = sandbox.stub().returns( global.$.Deferred().resolve() );
+		mw.user.acquireTempUserName = acquireTempUserNameStub;
 		EditorGateway = require( '../../../src/mobile.editor.overlay/EditorGateway' );
 		happyResponse = util.Deferred().resolve( {
 			query: {
@@ -333,6 +334,77 @@ QUnit.test( '#save, success with editor interface', ( assert ) => {
 			starttimestamp: '2013-05-15T00:30:26Z',
 			editorinterface: 'EditorGateway-test'
 		} ) ), true, 'save first section' );
+	} );
+} );
+
+QUnit.test( '#save, isRespondingToForcedCaptcha true', ( assert ) => {
+	const gateway = new EditorGateway( {
+		api: apiHappy,
+		title: 'test',
+		sectionId: '1'
+	} );
+
+	return gateway.getContent().then( () => {
+		gateway.setContent( 'section 1' );
+		return gateway.save( {
+			summary: 'summary',
+			isRespondingToForcedCaptcha: true
+		} );
+	} ).then( () => {
+		assert.strictEqual( gateway.hasChanged, false, 'reset hasChanged' );
+		assert.strictEqual( postStub.calledWithMatch( 'csrf', util.extend( {}, API_REQUEST_DATA, {
+			section: '1',
+			text: 'section 1',
+			basetimestamp: '2013-05-15T00:30:26Z',
+			starttimestamp: '2013-05-15T00:30:26Z',
+			wgConfirmEditForceShowCaptcha: true
+		} ) ), true, 'save first section' );
+	} );
+} );
+
+QUnit.test( '#save, isRespondingToForcedCaptcha false', ( assert ) => {
+	const gateway = new EditorGateway( {
+		api: apiHappy,
+		title: 'test',
+		sectionId: '1'
+	} );
+
+	return gateway.getContent().then( () => {
+		gateway.setContent( 'section 1' );
+		return gateway.save( {
+			summary: 'summary',
+			isRespondingToForcedCaptcha: false
+		} );
+	} ).then( () => {
+		assert.strictEqual( gateway.hasChanged, false, 'reset hasChanged' );
+		assert.strictEqual( postStub.calledWithMatch( 'csrf', util.extend( {}, API_REQUEST_DATA, {
+			section: '1',
+			text: 'section 1',
+			basetimestamp: '2013-05-15T00:30:26Z',
+			starttimestamp: '2013-05-15T00:30:26Z',
+			wgConfirmEditForceShowCaptcha: false
+		} ) ), true, 'save first section' );
+	} );
+} );
+
+QUnit.test( '#save, isRespondingToForcedCaptcha absent', ( assert ) => {
+	const gateway = new EditorGateway( {
+		api: apiHappy,
+		title: 'test',
+		sectionId: '1'
+	} );
+
+	return gateway.getContent().then( () => {
+		gateway.setContent( 'section 1' );
+		return gateway.save( {
+			summary: 'summary'
+		} );
+	} ).then( () => {
+		assert.strictEqual(
+			postStub.lastCall.args[ 1 ].wgConfirmEditForceShowCaptcha,
+			undefined,
+			'wgConfirmEditForceShowCaptcha not sent when key absent'
+		);
 	} );
 } );
 

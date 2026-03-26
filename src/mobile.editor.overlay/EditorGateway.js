@@ -197,8 +197,13 @@ class EditorGateway {
 				apiOptions.section = this.sectionId;
 			}
 
-			if ( Object.keys( options ).includes( 'editorinterface' ) ) {
+			if ( 'editorinterface' in options ) {
 				apiOptions.editorinterface = options.editorinterface;
+			}
+
+			if ( 'isRespondingToForcedCaptcha' in options ) {
+				apiOptions.wgConfirmEditForceShowCaptcha =
+					!!options.isRespondingToForcedCaptcha;
 			}
 
 			// TODO: When `wouldautocreate` is true, we should also set up:

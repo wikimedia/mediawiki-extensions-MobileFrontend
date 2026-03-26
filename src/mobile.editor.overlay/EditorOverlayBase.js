@@ -332,8 +332,11 @@ class EditorOverlayBase extends Overlay {
 	 * should display error messages as appropriate.
 	 *
 	 * @param {Object} data API response
+	 * @param {Object} [saveOptions] Options from the save request that failed
 	 */
-	onSaveFailure( data ) {
+	// eslint-disable-next-line no-unused-vars
+	onSaveFailure( data, saveOptions ) {
+
 		let code = data && data.errors && data.errors[0] && data.errors[0].code;
 
 		const
@@ -845,8 +848,10 @@ class EditorOverlayBase extends Overlay {
 	 * Handles a failed save due to a CAPTCHA provided by ConfirmEdit extension.
 	 *
 	 * @param {Object} details Details returned from the api.
+	 * @param {Object} [saveOptions] Options from the save request that failed
 	 */
-	handleCaptcha( details ) {
+	// eslint-disable-next-line no-unused-vars
+	handleCaptcha( details, saveOptions ) {
 		const $input = this.$el.find( '.captcha-word' );
 
 		if ( this.captchaShown ) {

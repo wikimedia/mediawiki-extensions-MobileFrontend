@@ -1,5 +1,5 @@
 let sandbox, messageStub, getContentStub, previewResolve,
-	BlockMessageDetails, EditorGateway, SourceEditorOverlay;
+	BlockMessageDetails, EditorGateway, EditorOverlayBase, SourceEditorOverlay;
 const
 	testUrl = '/w/index.php?title=User:Test',
 	jQuery = require( '../utils/jQuery' ),
@@ -27,6 +27,7 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/SourceEditorOverlay', {
 		};
 
 		EditorGateway = require( '../../../src/mobile.editor.overlay/EditorGateway' );
+		EditorOverlayBase = require( '../../../src/mobile.editor.overlay/EditorOverlayBase' );
 		SourceEditorOverlay = require( '../../../src/mobile.editor.overlay/SourceEditorOverlay' );
 		BlockMessageDetails = require( '../../../src/mobile.editor.overlay/BlockMessageDetails' );
 
@@ -198,4 +199,81 @@ QUnit.test( '#initialize, as anonymous Growth experiment treatment group', ( ass
 			assert.true( editorOverlay.$el.find( '.anonymous' ).length > 0, 'Continue login has a second class.' );
 			assert.true( editorOverlay.$anonWarning.find( '.description' ).length > 0, 'New treatment group text is shown' );
 		} );
+} );
+
+QUnit.test( '#handleCaptcha, falls through to super when hook not stopped', ( assert ) => {
+	const editorOverlay = new SourceEditorOverlay( { title: 'test', sectionId: '0' } );
+	const superStub = sandbox.stub( EditorOverlayBase.prototype, 'handleCaptcha' );
+	const details = { type: 'image', mime: 'image/png', id: '123', url: '/captcha' };
+	const saveOptions = { summary: 'test' };
+
+	editorOverlay.handleCaptcha( details, saveOptions );
+
+	assert.true( superStub.calledWith( details, saveOptions ), 'calls super.handleCaptcha' );
+} );
+
+QUnit.test( '#handleCaptcha, does not fall through to super when hook stopped', ( assert ) => {
+	const editorOverlay = new SourceEditorOverlay( { title: 'test', sectionId: '0' } );
+	const superStub = sandbox.stub( EditorOverlayBase.prototype, 'handleCaptcha' );
+	sandbox.stub( mw, 'hook' ).returns( {
+		fire: ( payload ) => {
+			payload.stop();
+		},
+		add: () => {}
+	} );
+
+	editorOverlay.handleCaptcha( {}, {} );
+
+	assert.false( superStub.called, 'does not call super.handleCaptcha' );
+} );
+
+QUnit.test( '#handleCaptcha, resume updates save options and retries save', ( assert ) => {
+	const editorOverlay = new SourceEditorOverlay( { title: 'test', sectionId: '0' } );
+	const performSaveStub = sandbox.stub( editorOverlay, '_performSaveRequest' );
+	sandbox.stub( EditorOverlayBase.prototype, 'handleCaptcha' );
+
+	let capturedPayload;
+	sandbox.stub( mw, 'hook' ).returns( {
+		fire: ( payload ) => {
+			payload.stop();
+			capturedPayload = payload;
+		},
+		add: () => {}
+	} );
+
+	const saveOptions = { summary: 'test' };
+	editorOverlay.handleCaptcha( {}, saveOptions );
+	capturedPayload.resume( { captchaWord: 'abc' } );
+
+	assert.true( performSaveStub.calledOnce, 'retried save once' );
+
+	const retriedOptions = performSaveStub.firstCall.args[ 0 ];
+	assert.deepEqual(
+		retriedOptions,
+		{
+			summary: 'test',
+			captchaWord: 'abc',
+			isRespondingToForcedCaptcha: true
+		},
+		'retried save with updated options'
+	);
+} );
+
+QUnit.test( '#handleCaptcha, calls afterRender callback when hook sets template', ( assert ) => {
+	const editorOverlay = new SourceEditorOverlay( { title: 'test', sectionId: '0' } );
+	sandbox.stub( EditorOverlayBase.prototype, 'handleCaptcha' );
+	const afterRender = sandbox.spy();
+
+	sandbox.stub( mw, 'hook' ).returns( {
+		fire: ( payload ) => {
+			payload.stop();
+			sandbox.stub( util, 'template' ).returns( { render: () => '<div/>' } );
+			payload.setTemplate( 'captcha-panel', '<div/>', {}, afterRender );
+		},
+		add: () => {}
+	} );
+
+	editorOverlay.handleCaptcha( {}, {} );
+
+	assert.true( afterRender.calledOnce, 'afterRender callback called after template render' );
 } );

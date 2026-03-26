@@ -9,7 +9,24 @@ const mobile = require( 'mobile.startup' ),
 	setPreferredEditor = require( './setPreferredEditor.js' ),
 	VisualEditorOverlay = require( './VisualEditorOverlay.js' ),
 	SourceEditorSaveEventHookPayload = require( './SourceEditorSaveEventHookPayload.js' ),
-	currentPage = mobile.currentPage;
+	currentPage = mobile.currentPage,
+	CAPTCHA_PANEL = 'captcha-panel';
+
+/**
+ * @ignore
+ * @typedef {Object} SaveFailureCaptcha
+ * @property {string} type Captcha type identifier (e.g. 'hcaptcha')
+ * @property {string} mime MIME type of the captcha
+ * @property {string} key Site key for rendering the captcha widget
+ * @property {string|null} error Error code from the last captcha attempt
+ */
+
+/**
+ * @ignore
+ * @typedef {Object} SaveFailureData
+ * @property {{ captcha: SaveFailureCaptcha, result: string }} [edit]
+ * @property {Array<{ code: string }>} [errors]
+ */
 
 /**
  * Overlay that shows an editor
@@ -646,7 +663,7 @@ class SourceEditorOverlay extends EditorOverlayBase {
 					window.location.href = redirectUrl;
 				}
 			}, ( data ) => {
-				this.onSaveFailure( data );
+				this.onSaveFailure( data, options );
 			} );
 	}
 
@@ -697,21 +714,22 @@ class SourceEditorOverlay extends EditorOverlayBase {
 	 * passes logging duties to the parent.
 	 *
 	 * @inheritdoc
+	 *
+	 * @param {SaveFailureData} data Data returned from the failed save API request
+	 * @param {Object} saveOptions Options for the save request that failed
 	 */
-	onSaveFailure( data ) {
-		let msg, noRetry;
-
+	onSaveFailure( data, saveOptions ) {
 		if ( data.edit && data.edit.captcha ) {
 			this.captchaId = data.edit.captcha.id;
-			this.handleCaptcha( data.edit.captcha );
+			this.handleCaptcha( data.edit.captcha, saveOptions );
 		} else {
-			msg = saveFailureMessage( data );
+			const msg = saveFailureMessage( data );
 			this.reportError( msg );
 			this.showHidden( '.save-header, .save-panel' );
 
 			// Some errors may be temporary, but for others we know for sure that the save will
 			// never succeed, so don't confuse the user by giving them the option to retry.
-			noRetry = data.errors && data.errors.some( ( error ) => error.code === 'abusefilter-disallowed' );
+			const noRetry = data.errors && data.errors.some( ( error ) => error.code === 'abusefilter-disallowed' );
 
 			if ( noRetry ) {
 				// disable continue and save buttons, reenabled when user changes content
@@ -719,7 +737,33 @@ class SourceEditorOverlay extends EditorOverlayBase {
 			}
 		}
 
-		super.onSaveFailure( data );
+		super.onSaveFailure( data, saveOptions );
+	}
+
+	/**
+	 * @inheritdoc
+	 */
+	handleCaptcha( details, saveOptions ) {
+		// This is called from onSaveFailure if the backend response is asking
+		// to solve a captcha before saving the edit.
+		const payload = new SourceEditorSaveEventHookPayload(
+			this.currentPage,
+			this.readOnly,
+			details,
+			( resumeArgs ) => {
+				this.captchaWord = resumeArgs.captchaWord;
+				this._performSaveRequest( Object.assign( {}, saveOptions, {
+					captchaWord: resumeArgs.captchaWord,
+					isRespondingToForcedCaptcha: true
+				} ) );
+			}
+		);
+
+		if ( this._runHandleCaptchaHook( payload, details ) ) {
+			// No extension requested to stop handling the edit, so we defer
+			// handling the captcha to the parent class.
+			super.handleCaptcha( details, saveOptions );
+		}
 	}
 
 	/**
@@ -803,6 +847,55 @@ class SourceEditorOverlay extends EditorOverlayBase {
 		}
 
 		return Promise.all( dependencies );
+	}
+
+	/**
+	 * Fires the handleCaptcha hook. Returns true if no handler stopped the flow
+	 * (meaning the caller should fall back to default captcha handling).
+	 *
+	 * @param {SourceEditorSaveEventHookPayload} payload
+	 * @param {Object} details
+	 * @returns {boolean}
+	 * @private
+	 */
+	_runHandleCaptchaHook( payload, details ) {
+		mw.hook( 'mobileFrontend.sourceEditor.handleCaptcha' ).fire( payload, details, this.$el );
+
+		if ( !payload.isStopped() ) {
+			return true;
+		}
+
+		this._applyCaptchaPanelFromPayload( payload );
+		return false;
+	}
+
+	/**
+	 * Renders a custom captcha panel template from the hook payload (if any)
+	 * and runs its post-render callback.
+	 *
+	 * @param {SourceEditorSaveEventHookPayload} payload
+	 * @private
+	 */
+	_applyCaptchaPanelFromPayload( payload ) {
+		const newTemplateCode = payload.getTemplate( CAPTCHA_PANEL );
+
+		if ( newTemplateCode ) {
+			const $captchaPanel = this.$el.find( '.overlay-content .panels .captcha-panel' );
+			$captchaPanel.removeClass( 'hidden' );
+			$captchaPanel.html(
+				util.template( newTemplateCode ).render(
+					payload.getTemplateArgs( CAPTCHA_PANEL )
+				)
+			);
+		}
+
+		// Run any callback provided by extensions. This is typically used in
+		// order to run code that requires to first update the captcha-panel
+		// with a new template provided through the hook payload.
+		const afterRender = payload.getTemplateRenderedCallback( CAPTCHA_PANEL );
+		if ( afterRender ) {
+			afterRender();
+		}
 	}
 }
 
