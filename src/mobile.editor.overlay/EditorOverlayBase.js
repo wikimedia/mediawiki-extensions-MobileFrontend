@@ -110,7 +110,8 @@ class EditorOverlayBase extends Overlay {
 	 */
 	initialize( options ) {
 		this.isNewPage = options.isNewPage;
-		this.sectionId = options.sectionId;
+		this.sectionId = ''; // set to the HTML 'id' on preview
+		this.sectionNumber = options.sectionId;
 		this.overlayManager = options.overlayManager;
 		super.initialize( options );
 	}

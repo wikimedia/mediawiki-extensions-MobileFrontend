@@ -582,8 +582,10 @@ class SourceEditorOverlay extends EditorOverlayBase {
 			summary: this.getEditSummary()
 		};
 
-		if ( this.sectionLine !== '' ) {
-			options.summary = '/* ' + this.sectionLine + ' */' + options.summary;
+		if ( this.sectionNumber === '0' ) {
+			options.summary = '/* */ ' + options.summary;
+		} else if ( this.sectionLine !== '' ) {
+			options.summary = '/* ' + this.sectionLine + ' */ ' + options.summary;
 		}
 		super.onSaveBegin();
 		if ( this.confirmAborted ) {
