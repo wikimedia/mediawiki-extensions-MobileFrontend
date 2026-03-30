@@ -4,6 +4,7 @@
 			"McDutchie"
 		]
 	},
+	"apihelp-edit-param-editorinterface": "Nomine del interfacie de editor usate (p.ex. MobileFrontend-SourceEditor)",
 	"apihelp-parse-param-mobileformat": "Retornar le resultato del analyse syntactic in un formato apte pro apparatos mobile.",
 	"apihelp-parse-param-noimages": "Disactivar imagines in le rendition mobile.",
 	"apihelp-parse-param-mainpage": "Applicar transformationes del pagina principal pro apparatos mobile.",
