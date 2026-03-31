@@ -6,25 +6,13 @@ use MediaWiki\MainConfigNames;
 use MediaWiki\Request\FauxRequest;
 use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\Title\Title;
-use MediaWiki\Utils\UrlUtils;
 use MobileFrontend\Tests\Utils;
+use Wikimedia\TestingAccessWrapper;
 
 /**
  * @group MobileFrontend
  */
 class MobileContextTest extends MediaWikiIntegrationTestCase {
-	/**
-	 * Helper wrapper for Reflection
-	 *
-	 * @param string $name
-	 * @return ReflectionMethod
-	 */
-	protected static function getMethod( $name ) {
-		$class = new ReflectionClass( MobileContext::class );
-		$method = $class->getMethod( $name );
-
-		return $method;
-	}
 
 	protected function tearDown(): void {
 		parent::tearDown();
@@ -147,20 +135,16 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
-	 * @covers MobileContext::updateDesktopUrlQuery
-	 * @dataProvider updateDesktopUrlQueryProvider
+	 * @covers MobileContext
+	 * @dataProvider provideUpdateDesktopUrlQuery
 	 */
-	public function testUpdateDesktopUrlQuery( $mobile, $desktop ) {
-		$updateDesktopUrlQuery = self::getMethod( "updateDesktopUrlQuery" );
-		$urlUtils = $this->getServiceContainer()->getUrlUtils();
-		$parsedUrl = $urlUtils->parse( $mobile );
-		$updateDesktopUrlQuery->invokeArgs( $this->makeContext(), [ &$parsedUrl ] );
-		$url = UrlUtils::assemble( $parsedUrl );
-		$this->assertEquals( $desktop, $url );
+	public function testGetDesktopUrlQuery( $mobile, $expectedDesktop ) {
+		$context = $this->makeContext();
+		$this->assertEquals( $expectedDesktop, $context->getDesktopUrl( $mobile ) );
 	}
 
-	public static function updateDesktopUrlQueryProvider() {
-		$baseUrl = 'http://en.m.wikipedia.org/wiki/Gustavus_Airport';
+	public static function provideUpdateDesktopUrlQuery() {
+		$baseUrl = 'http://some.thing.example.org/page/Gustavus_Airport';
 
 		return [
 			[
@@ -171,24 +155,19 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
-	 * @covers MobileContext::updateDesktopUrlHost
-	 * @dataProvider updateDesktopUrlHostProvider
+	 * @covers MobileContext
+	 * @dataProvider provideUpdateDesktopUrlHost
 	 */
-	public function testUpdateDesktopUrlHost( $mobile, $desktop, $server ) {
-		$updateDesktopUrlHost = self::getMethod( "updateDesktopUrlHost" );
+	public function testGetDesktopUrlHost( $mobile, $expectedDesktop, $server ) {
 		$this->overrideConfigValues( [
 			MainConfigNames::Server => $server,
 			'MobileUrlCallback' => [ Utils::class, 'mobileUrlCallback' ],
 		] );
-		$urlUtils = $this->getServiceContainer()->getUrlUtils();
-		$parsedUrl = $urlUtils->parse( $mobile );
-		$updateDesktopUrlHost->invokeArgs(
-			$this->makeContext(),
-			[ &$parsedUrl ] );
-		$this->assertEquals( $desktop, UrlUtils::assemble( $parsedUrl ) );
+		$context = $this->makeContext();
+		$this->assertEquals( $expectedDesktop, $context->getDesktopUrl( $mobile ) );
 	}
 
-	public static function updateDesktopUrlHostProvider() {
+	public static function provideUpdateDesktopUrlHost() {
 		return [
 			[
 				'http://bm.m.wikipedia.org/wiki/' . urlencode( 'Nyɛ_fɔlɔ' ),
@@ -247,17 +226,12 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 	 * @covers MobileContext::getUseFormatCookieExpiry
 	 */
 	public function testGetUseFormatCookieExpiry() {
-		$getUseFormatCookieExpiry = self::getMethod( 'getUseFormatCookieExpiry' );
-
-		$context = $this->makeContext();
+		$context = TestingAccessWrapper::newFromObject( $this->makeContext() );
 		$startTime = time();
 		$this->overrideConfigValue( 'MobileFrontendFormatCookieExpiry', 60 );
 		$mfCookieExpected = $startTime + 60;
 		$this->assertTrue(
-			$mfCookieExpected === $getUseFormatCookieExpiry->invokeArgs(
-				$context,
-				[ $startTime ]
-			),
+			$mfCookieExpected === $context->getUseFormatCookieExpiry( $startTime ),
 			'Using MobileFrontend expiry.'
 		);
 
@@ -265,10 +239,7 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 		$defaultMWCookieExpected = $startTime +
 			$this->getServiceContainer()->getMainConfig()->get( MainConfigNames::CookieExpiration );
 		$this->assertTrue(
-			$defaultMWCookieExpected === $getUseFormatCookieExpiry->invokeArgs(
-				$context,
-				[ $startTime ]
-			),
+			$defaultMWCookieExpected === $context->getUseFormatCookieExpiry( $startTime ),
 			'Using default MediaWiki cookie expiry.'
 		);
 	}
