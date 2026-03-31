@@ -4,6 +4,7 @@
 			"Bjankuloski06"
 		]
 	},
+	"apihelp-edit-param-editorinterface": "Име на користениот уредувачки посредник (како MobileFrontend-SourceEditor)",
 	"apihelp-parse-param-mobileformat": "Дај расчленувачки извод во формат погоден за мобилни уреди.",
 	"apihelp-parse-param-noimages": "Оневозможи слики во мобилниот извод.",
 	"apihelp-parse-param-mainpage": "Примени преобразби на главната мобилна страница.",
