@@ -18,7 +18,6 @@ use MediaWiki\Skin\SkinTemplate;
 use MediaWiki\Title\Title;
 use MediaWiki\User\Options\UserOptionsLookup;
 use MediaWiki\User\User;
-use MobileFrontend\Tests\Utils;
 use Psr\Container\ContainerInterface;
 use Wikimedia\ObjectFactory\ObjectFactory;
 
@@ -124,7 +123,10 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 		$isAlternateCanonical, $isXAnalytics, $mfVaryHeaderSet
 	) {
 		$this->overrideConfigValues( [
-			'MobileUrlCallback' => $useMobileUrl ? [ Utils::class, 'mobileUrlCallback' ] : null,
+			MainConfigNames::Server => 'http://en.example.org',
+			'MobileUrlCallback' => $useMobileUrl
+				? ( static fn ( $domain ) => $domain === 'en.example.org' ? 'en.m.example.org' : $domain )
+				: null,
 			'MFNoindexPages' => $mfNoindexPages,
 			'MFEnableXAnalyticsLogging' => $mfEnableXAnalyticsLogging,
 			'MFAutodetectMobileView' => $mfAutoDetectMobileView,
@@ -319,8 +321,8 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 	 */
 	public function testOnTitleSquidURLs() {
 		$this->overrideConfigValues( [
-			'MobileUrlCallback' => [ Utils::class, 'mobileUrlCallback' ],
-			MainConfigNames::Server => 'http://en.wikipedia.org',
+			'MobileUrlCallback' => static fn ( $domain ) => $domain === 'en.example.org' ? 'en.m.example.org' : $domain,
+			MainConfigNames::Server => 'http://en.example.org',
 			MainConfigNames::ArticlePath => '/wiki/$1',
 			MainConfigNames::ScriptPath => '/w',
 			MainConfigNames::Script => '/w/index.php',
@@ -331,10 +333,10 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 		$urls = $htmlCacheUpdater->getUrls( $title );
 
 		$expected = [
-			'http://en.wikipedia.org/wiki/PurgeTest',
-			'http://en.wikipedia.org/w/index.php?title=PurgeTest&action=history',
-			'http://en.m.wikipedia.org/w/index.php?title=PurgeTest&action=history',
-			'http://en.m.wikipedia.org/wiki/PurgeTest',
+			'http://en.example.org/wiki/PurgeTest',
+			'http://en.example.org/w/index.php?title=PurgeTest&action=history',
+			'http://en.m.example.org/w/index.php?title=PurgeTest&action=history',
+			'http://en.m.example.org/wiki/PurgeTest',
 		];
 
 		$this->assertArrayEquals( $expected, $urls );
