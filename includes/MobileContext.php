@@ -512,36 +512,37 @@ class MobileContext extends ContextSource {
 	public function getDesktopUrl( $url ) {
 		$urlUtils = MediaWikiServices::getInstance()->getUrlUtils();
 		$parsedUrl = $urlUtils->parse( $url ) ?? [];
-		$this->updateDesktopUrlHost( $parsedUrl );
-		$this->updateDesktopUrlQuery( $parsedUrl );
+		$parsedUrl = $this->updateDesktopUrlHost( $parsedUrl );
+		$parsedUrl = $this->updateDesktopUrlQuery( $parsedUrl );
 
 		return UrlUtils::assemble( $parsedUrl );
 	}
 
 	/**
-	 * Update the host of a given URL to strip out any mobile tokens
-	 * @param array &$parsedUrl Result of parseUrl() or UrlUtils::parse()
+	 * Change the host field of a URL to wgServer
+	 * @param array $parsedUrl Result of UrlUtils::parse()
+	 * @return array
 	 */
-	protected function updateDesktopUrlHost( array &$parsedUrl ) {
-		if ( !$this->hasMobileDomain() ) {
-			return;
+	protected function updateDesktopUrlHost( array $parsedUrl ): array {
+		if ( $this->hasMobileDomain() ) {
+			$parsedUrl['host'] = parse_url( $this->getConfig()->get( 'Server' ), PHP_URL_HOST, ) ?: '';
 		}
 
-		$parsedWgServer = MediaWikiServices::getInstance()->getUrlUtils()
-			->parse( $this->getConfig()->get( 'Server' ) );
-		$parsedUrl['host'] = $parsedWgServer['host'] ?? '';
+		return $parsedUrl;
 	}
 
 	/**
-	 * Update the query portion of a given URL to remove any 'useformat' params
-	 * @param array &$parsedUrl Result of parseUrl() or UrlUtils::parse()
+	 * Change the query parameters of a URL to remove any 'useformat' param
+	 * @param array $parsedUrl Result of UrlUtils::parse()
+	 * @return array
 	 */
-	protected function updateDesktopUrlQuery( array &$parsedUrl ) {
+	protected function updateDesktopUrlQuery( array $parsedUrl ): array {
 		if ( isset( $parsedUrl['query'] ) && strpos( $parsedUrl['query'], 'useformat' ) !== false ) {
 			$query = wfCgiToArray( $parsedUrl['query'] );
 			unset( $query['useformat'] );
 			$parsedUrl['query'] = wfArrayToCgi( $query );
 		}
+		return $parsedUrl;
 	}
 
 	/**
