@@ -34,7 +34,7 @@
 	"mobile-frontend-editor-disabled-anon": "Duhet të hysh në llogari për të redaktuar këtë faqe.",
 	"mobile-frontend-editor-editing": "Duke redaktuar",
 	"mobile-frontend-editor-keep-editing": "Vazhdo redaktimin",
-	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|Je duke krijaur}} një faqe të re në {{SITENAME}}!",
+	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|Po krijon}} një faqe të re në {{SITENAME}}!",
 	"mobile-frontend-editor-publish": "Publiko",
 	"mobile-frontend-editor-save": "Ruaj",
 	"mobile-frontend-editor-summary-placeholder": "Shembull: Rregullova gabimet drejtshkrimore, shtova përmbajtje",
