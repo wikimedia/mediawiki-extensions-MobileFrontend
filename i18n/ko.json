@@ -125,6 +125,7 @@
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "언어 검색",
 	"mobile-frontend-languages-structured-overlay-no-results": "지원하지 않는 언어",
 	"mobile-frontend-languages-structured-overlay-error": "이 문서에 대한 언어를 불러오는 도중 오류가 발생했습니다.",
+	"mobile-frontend-languages-structured-overlay-no-results-body": "찾으시는 언어는 사용할 수 없습니다.",
 	"mobile-frontend-last-modified-date": "$1 $2에 마지막으로 편집됨",
 	"mobile-frontend-last-modified-with-user-days": "{{PLURAL:$5|[$6 $2]님이|0=익명 사용자가}} [$4 {{PLURAL:$3|$3일}} 전에 마지막으로 {{GENDER:$1|편집함}}]",
 	"mobile-frontend-last-modified-with-user-hours": "{{PLURAL:$5|[$6 $2]님이|0=익명 사용자가}} [$4 {{PLURAL:$3|$3시간}} 전에 마지막으로 {{GENDER:$1|편집함}}]",
