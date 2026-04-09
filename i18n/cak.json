@@ -1,9 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
+			"CeciMagi",
 			"Chocoj"
 		]
 	},
+	"mobile-frontend-copyright": "Ri rupam re okib'äl re' chajin ruma ri etokib'äl $1, xa xe we man ke ri' ta xtiya'ox rutzijol.",
+	"mobile-frontend-terms-text": "rub'eyal rokisaxik",
+	"mobile-frontend-view": "rokisaxik pan oyonib'äl",
+	"mobile-frontend-view-desktop": "rokisaxik pa kematz'ib'",
 	"tag-mobile_edit": "Tanuk'u' pa awoyonib'al",
 	"tag-mobile_web_edit": "Runuk'ik pa oyonib'al pa k'amaya'l"
 }
