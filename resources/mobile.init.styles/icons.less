@@ -81,5 +81,17 @@
 }
 
 .mf-icon-spinner {
-	background-image: url( ajax-loader.gif );
+	background-image: url( spinner.svg );
+	transform-origin: 50% 50%;
+	animation: mf-icon-spinner-rotate 1.2s steps( 12, end ) infinite;
+}
+
+@keyframes mf-icon-spinner-rotate {
+	from {
+		transform: rotate( 0deg );
+	}
+
+	to {
+		transform: rotate( 360deg );
+	}
 }
