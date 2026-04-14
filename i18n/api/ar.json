@@ -11,6 +11,7 @@
 			"علاء"
 		]
 	},
+	"apihelp-edit-param-editorinterface": "اسم واجهة المحرر المستخدمة (مثل MobileFrontend-SourceEditor)",
 	"apihelp-parse-param-mobileformat": "أرجع خرج محلل بصيغة مناسبة للأجهزة المحمولة.",
 	"apihelp-parse-param-noimages": "تعطيل الصور في خرج المحمول.",
 	"apihelp-parse-param-mainpage": "تطبيق تحويلات المحمول الخاصة بالصفحة الرئيسية",

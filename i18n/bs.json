@@ -23,6 +23,7 @@
 	"mobile-frontend-desc": "Korisnički interfejs za mobilne uređaje",
 	"mobile-frontend-editor-anon": "Uredi bez prijave",
 	"mobile-frontend-editor-anonwarning": "<strong>Upozorenje</strong>: Niste prijavljeni. Ako napravite bilo kakve izmjene, Vaša IP adresa bit će javno vidljiva. Ako se <strong>prijavite</strong> ili <strong>napravite korisnički račun</strong>, sve izmjene koje napravite bit će pripisane vašem korisničkom imenu uz sve druge pogodnosti.",
+	"mobile-frontend-editor-autocreatewarning": "<strong>Upozorenje:</strong> Niste prijavljeni. Nakon što objavite izmjenu, automatski će Vam biti napravljen privremeni račun. [[$1|Detaljnije]]. <strong>Prijavite se</strong> ili <strong>napravite račun</strong> da biste nastavili primati obavještenja i imali pristup drugim mogućnostima nakon što ovaj račun istekne.",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "U redu",
 	"mobile-frontend-editor-blocked-drawer-title": "Blokirani ste na {{GRAMMAR:lokativ|{{SITENAME}}}}",
 	"mobile-frontend-editor-blocked-drawer-title-partial": "Blokirano Vam je uređivanje stranice",
