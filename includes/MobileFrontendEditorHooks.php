@@ -1,8 +1,8 @@
 <?php
 
+use MediaWiki\Actions\Hook\CustomEditorHook;
 use MediaWiki\Config\Config;
 use MediaWiki\Context\IContextSource;
-use MediaWiki\Hook\CustomEditorHook;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Output\Hook\MakeGlobalVariablesScriptHook;
 use MediaWiki\Output\OutputPage;

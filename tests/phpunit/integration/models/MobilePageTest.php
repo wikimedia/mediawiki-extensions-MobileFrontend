@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\FileRepo\File\File;
+use MediaWiki\Media\ThumbnailImage;
 use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Revision\RevisionStore;
 use MediaWiki\Title\Title;
