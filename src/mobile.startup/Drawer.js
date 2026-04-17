@@ -61,7 +61,7 @@ class Drawer extends View {
 	 * @memberof module:mobile.startup/Drawer
 	 * @instance
 	 * @method
-	 * @return {jQuery.Promise} which is used by GrowthExperiments
+	 * @return {jQuery.Promise} Resolves after onShow is called. Used in tests / GrowthExperiments.
 	 */
 	show() {
 		const d = util.Deferred();
@@ -87,20 +87,28 @@ class Drawer extends View {
 
 	/**
 	 * Hides panel
+	 *
+	 * @memberof module:mobile.startup/Drawer
+	 * @instance
+	 * @method
+	 * @return {jQuery.Promise} Resolves after finished hiding. Used in tests.
 	 */
 	hide() {
+		const d = util.Deferred();
 		const $drawer = this.$el.find( '.drawer' );
 		$drawer.removeClass( 'visible' );
 		this.$mask.removeClass( 'drawer-container__mask--visible' );
-		// Should really use 'transitionend' event here, but as the
-		// parent $drawer element is often detatched as well, this
-		// might not fire until the next show animation.
-		setTimeout( () => {
-			this.$mask.detach();
-		}, 100 );
 		requestAnimationFrame( () => {
 			this.options.onBeforeHide( this );
+			// Should really use 'transitionend' event here, but as the
+			// parent $drawer element is often detatched as well, this
+			// might not fire until the next show animation.
+			setTimeout( () => {
+				this.$mask.detach();
+				d.resolve();
+			}, 100 );
 		} );
+		return d.promise();
 	}
 
 	/**
