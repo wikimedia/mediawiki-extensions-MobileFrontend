@@ -15,6 +15,7 @@ const mobile = require( 'mobile.startup' ),
 	Button = mobile.class.Button,
 	IconButton = mobile.class.IconButton,
 	blockMessageDrawer = require( './blockMessageDrawer.js' ),
+	abandonSurvey = require( './abandonSurvey.js' ),
 	MessageBox = mobile.class.MessageBox,
 	mwUser = mw.user;
 
@@ -605,6 +606,14 @@ class EditorOverlayBase extends Overlay {
 		 * @memberof Hooks
 		 */
 		mw.hook( 'mobileFrontend.editorClosed' ).fire( !!this.switching );
+
+		if ( !this.switching ) {
+			const survey = abandonSurvey( this );
+			if ( survey ) {
+				document.body.appendChild( survey.$el[ 0 ] );
+				survey.show();
+			}
+		}
 	}
 
 	/**

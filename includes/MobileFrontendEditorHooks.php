@@ -50,6 +50,7 @@ class MobileFrontendEditorHooks implements
 			'wgMFDefaultEditor' => $config->get( 'MFDefaultEditor' ),
 			'wgMFFallbackEditor' => $config->get( 'MFFallbackEditor' ),
 			'wgMFEnableVEWikitextEditor' => $config->get( 'MFEnableVEWikitextEditor' ),
+			'wgMFEnableAbandonSurvey' => $config->get( 'MFEnableAbandonSurvey' ),
 		];
 	}
 

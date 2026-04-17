@@ -238,6 +238,7 @@
 				"src/mobile.editor.overlay/SourceEditorOverlay.js",
 				"src/mobile.editor.overlay/SourceEditorSaveEventHookPayload.js",
 				"src/mobile.editor.overlay/VisualEditorOverlay.js",
+				"src/mobile.editor.overlay/abandonSurvey.js",
 				{
 					"name": "src/mobile.editor.overlay/contLangMessages.json",
 					"callback": "MobileFrontendEditorHooks::getContentLanguageMessages",
@@ -540,6 +541,10 @@
 		},
 		"MFEnableVEWikitextEditor": {
 			"description": "Enable VisualEditor's wikitext editor as a replacement for MobileFrontend's source editor.",
+			"value": false
+		},
+		"MFEnableAbandonSurvey": {
+			"description": "Enable the editor-abandon survey.",
 			"value": false
 		},
 		"MFEnableJSConsoleRecruitment": {
