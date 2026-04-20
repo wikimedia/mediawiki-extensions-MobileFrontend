@@ -5,10 +5,12 @@
 			"Daramlagon",
 			"Filipinayzd",
 			"Geopoet",
+			"ShiminUfesoj",
 			"ShimunUfesoj"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Ikaag an tekstong panseguridad",
+	"mobile-frontend-copyright": "An laog makukua sa irarom nin $1 apwera kun iba an sinasabi.",
 	"mobile-frontend-desc": "Magíwas na pangenotang-huri",
 	"mobile-frontend-editor-blocked-drawer-help": "Mga detalye",
 	"mobile-frontend-editor-cancel": "Kanselaron",
@@ -55,7 +57,7 @@
 	"mobile-frontend-save-settings": "Ipagtagama",
 	"mobile-frontend-terms-text": "Mga Panundon sa Paggamit",
 	"mobile-frontend-view": "Bersyong pan-mobile",
-	"mobile-frontend-view-desktop": "Desktop",
+	"mobile-frontend-view-desktop": "Paghiling sa Desktop",
 	"mobile-frontend-watchlist-a-z-empty-howto": "Ika sa ngunyan mayong binabantayan na arinmang mga pahina. An saimong bantay-listahan makakatabang saimo na baybayon an mga pahina na ika interesadong gayo. Bantayan an mga pahina sa paagi nin pagdutdot kan ikonong bitoon.",
 	"mobile-frontend-watchlist-a-z-empty-howto-alt": "I-klik an bitoon sa ibabaw kan pahina",
 	"mobile-frontend-watchlist-back-home": "Bumalik sa ginikanan",
