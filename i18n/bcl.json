@@ -5,12 +5,14 @@
 			"Daramlagon",
 			"Filipinayzd",
 			"Geopoet",
-			"ShimunUfesoj"
+			"ShimunUfesoj",
+			"ShiminUfesoj"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "Ikaag an tekstong panseguridad",
 	"mobile-frontend-changeslist-nocomment": "Mayong sumaryo nin pagliwat",
 	"mobile-frontend-clear-search": "Malinaw",
+	"mobile-frontend-copyright": "An laog makukua sa irarom nin $1 apwera kun iba an sinasabi.",
 	"mobile-frontend-desc": "Magíwas na pangenotang-huri",
 	"mobile-frontend-editor-blocked-drawer-help": "Mga detalye",
 	"mobile-frontend-editor-cancel": "Kanselaron",
