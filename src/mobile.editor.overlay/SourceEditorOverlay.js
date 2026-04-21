@@ -12,6 +12,8 @@ const mobile = require( 'mobile.startup' ),
 	currentPage = mobile.currentPage,
 	CAPTCHA_PANEL = 'captcha-panel';
 
+const INTERFACE_NAME = 'mobilefrontend-editor';
+
 /**
  * @ignore
  * @typedef {Object} SaveFailureCaptcha
@@ -26,6 +28,12 @@ const mobile = require( 'mobile.startup' ),
  * @typedef {Object} SaveFailureData
  * @property {{ captcha: SaveFailureCaptcha, result: string }} [edit]
  * @property {Array<{ code: string }>} [errors]
+ */
+
+/**
+ * @ignore
+ * @typedef {Object} CaptchaChallengeEventData
+ * @property {string} sourceInterfaceName Name of the interface the captcha is rendered in.
  */
 
 /**
@@ -89,6 +97,31 @@ class SourceEditorOverlay extends EditorOverlayBase {
 		} else {
 			super.initialize( options );
 		}
+
+		/**
+		 * Controls whether we are solving a captcha triggered by an Abuse
+		 * Filter.
+		 *
+		 * @type {boolean}
+		 */
+		this.solvingAbuseFilterCaptcha = false;
+
+		/**
+		 * Reference to the function used to handle the challengeClosed hook.
+		 *
+		 * @type {Function}
+		 */
+		this.challengeClosedHook = this._onCaptchaChallengeClosed.bind( this );
+
+		mw.hook( 'confirmEdit.hCaptcha.challengeClosed' )
+			.add( this.challengeClosedHook );
+	}
+
+	onExit() {
+		mw.hook( 'confirmEdit.hCaptcha.challengeClosed' )
+			.remove( this.challengeClosedHook );
+
+		super.onExit();
 	}
 
 	get editor() {
@@ -763,6 +796,8 @@ class SourceEditorOverlay extends EditorOverlayBase {
 			// No extension requested to stop handling the edit, so we defer
 			// handling the captcha to the parent class.
 			super.handleCaptcha( details, saveOptions );
+		} else {
+			this.solvingAbuseFilterCaptcha = true;
 		}
 	}
 
@@ -895,6 +930,27 @@ class SourceEditorOverlay extends EditorOverlayBase {
 		const afterRender = payload.getTemplateRenderedCallback( CAPTCHA_PANEL );
 		if ( afterRender ) {
 			afterRender();
+		}
+	}
+
+	/**
+	 * Handler fired when a captcha challenge is closed.
+	 *
+	 * @param {CaptchaChallengeEventData} payload Data associated with the closed event
+	 *
+	 * @returns {void}
+	 * @private
+	 */
+	_onCaptchaChallengeClosed( payload ) {
+		const { sourceInterfaceName } = payload;
+
+		if ( sourceInterfaceName !== INTERFACE_NAME ) {
+			return;
+		}
+
+		if ( this.solvingAbuseFilterCaptcha ) {
+			this.solvingAbuseFilterCaptcha = false;
+			this.onStageChanges();
 		}
 	}
 }

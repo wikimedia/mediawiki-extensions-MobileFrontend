@@ -7,6 +7,7 @@ const
 	util = require( '../../../src/mobile.startup/util' ),
 	oo = require( '../utils/oo' ),
 	dom = require( '../utils/dom' ),
+	makeFakeHookRegistry = require( '../utils/makeFakeHookRegistry' ),
 	mediaWiki = require( '../utils/mw' ),
 	mustache = require( '../utils/mustache' );
 
@@ -80,11 +81,13 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/SourceEditorOverlay', {
 				} )
 			}
 		};
+		this.originalHookFactory = mw.hook;
 	},
 	afterEach: function () {
 		jQuery.tearDown();
 		sandbox.restore();
 		mw.testKitchen = undefined;
+		mw.hook = this.originalHookFactory;
 	}
 } );
 
@@ -280,4 +283,60 @@ QUnit.test( '#handleCaptcha, calls afterRender callback when hook sets template'
 	editorOverlay.handleCaptcha( {}, {} );
 
 	assert.true( afterRender.calledOnce, 'afterRender callback called after template render' );
+} );
+
+QUnit.test( 'When AF filter prevents an edit the UI goes back to the summary screen', ( assert ) => {
+	mw.hook = makeFakeHookRegistry();
+
+	const editorOverlay = new SourceEditorOverlay( {
+		title: 'test',
+		sectionId: '0'
+	} );
+
+	mw.hook( 'mobileFrontend.sourceEditor.handleCaptcha' )
+		.add( ( payload ) => payload.stop() );
+
+	const onStageChangesSpy = sandbox.spy( editorOverlay, 'onStageChanges' );
+
+	editorOverlay.onSaveFailure( {
+		edit: {
+			captcha: {
+				id: '123',
+				type: 'hcaptcha'
+			}
+		}
+	}, {} );
+
+	assert.true(
+		editorOverlay.solvingAbuseFilterCaptcha,
+		'solvingAbuseFilterCaptcha should be set after AF captcha'
+	);
+
+	mw.hook( 'confirmEdit.hCaptcha.challengeClosed' ).fire( {
+		sourceInterfaceName: 'mobilefrontend-editor'
+	} );
+	assert.true(
+		onStageChangesSpy.calledOnce,
+		'onStageChanges should be called when AF captcha is closed unsolved'
+	);
+} );
+
+QUnit.test( 'Closing a non-AF captcha does not return to the summary screen', ( assert ) => {
+	mw.hook = makeFakeHookRegistry();
+
+	const editorOverlay = new SourceEditorOverlay( {
+		title: 'test',
+		sectionId: '0'
+	} );
+
+	const onStageChangesSpy = sandbox.spy( editorOverlay, 'onStageChanges' );
+
+	mw.hook( 'confirmEdit.hCaptcha.challengeClosed' ).fire( {
+		sourceInterfaceName: 'mobilefrontend-editor'
+	} );
+
+	assert.false(
+		onStageChangesSpy.called,
+		'onStageChanges should not be called when a non-AF captcha is dismissed'
+	);
 } );
