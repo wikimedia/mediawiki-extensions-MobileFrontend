@@ -74,9 +74,11 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/SourceEditorOverlay', {
 		// defined, which is true as mw-node-qunit does not define it. What's the pattern for
 		// mocking mw.* optional props provided by extensions?
 		mw.testKitchen = {
-			getExperiment: () => ( {
-				isAssignedGroup: () => false
-			} )
+			compat: {
+				getExperiment: () => ( {
+					isAssignedGroup: () => false
+				} )
+			}
 		};
 	},
 	afterEach: function () {
@@ -183,9 +185,11 @@ QUnit.test( '#initialize, as anonymous', ( assert ) => {
 // TODO remove after anonwarning experiment concludes (T408484)
 QUnit.test( '#initialize, as anonymous Growth experiment treatment group', ( assert ) => {
 	mw.testKitchen = {
-		getExperiment: () => ( {
-			isAssignedGroup: () => true
-		} )
+		compat: {
+			getExperiment: () => ( {
+				isAssignedGroup: () => true
+			} )
+		}
 	};
 	const editorOverlay = new SourceEditorOverlay( {
 		title: 'Main_page',

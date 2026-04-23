@@ -177,7 +177,7 @@ class VisualEditorOverlay extends EditorOverlayBase {
 			this.emit( 'editor-loaded' );
 		} else {
 			mw.loader.using( 'ext.testKitchen' ).then( () => {
-				const experiment = mw.testKitchen.getExperiment( 'growthexperiments-editattempt-anonwarning' );
+				const experiment = mw.testKitchen.compat.getExperiment( 'growthexperiments-editattempt-anonwarning' );
 				if ( experiment.isAssignedGroup( 'treatment' ) ) {
 					this.$anonWarning = this.createAnonWarningSoft( this.options );
 				} else {

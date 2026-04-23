@@ -456,7 +456,7 @@ class SourceEditorOverlay extends EditorOverlayBase {
 
 				if ( showAnonWarning ) {
 					mw.loader.using( 'ext.testKitchen' ).then( () => {
-						const experiment = mw.testKitchen.getExperiment(
+						const experiment = mw.testKitchen.compat.getExperiment(
 							'growthexperiments-editattempt-anonwarning'
 						);
 						if ( experiment.isAssignedGroup( 'treatment' ) ) {
