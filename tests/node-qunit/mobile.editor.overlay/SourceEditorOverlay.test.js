@@ -236,8 +236,7 @@ QUnit.test( '#handleCaptcha, does not fall through to super when hook stopped', 
 
 QUnit.test( '#handleCaptcha, resume updates save options and retries save', ( assert ) => {
 	const editorOverlay = new SourceEditorOverlay( { title: 'test', sectionId: '0' } );
-	const performSaveStub = sandbox.stub( editorOverlay, '_performSaveRequest' );
-	sandbox.stub( EditorOverlayBase.prototype, 'handleCaptcha' );
+	const saveStub = sandbox.stub( editorOverlay.gateway, 'save' ).returns( util.Deferred().promise() );
 
 	let capturedPayload;
 	sandbox.stub( mw, 'hook' ).returns( {
@@ -252,17 +251,46 @@ QUnit.test( '#handleCaptcha, resume updates save options and retries save', ( as
 	editorOverlay.handleCaptcha( {}, saveOptions );
 	capturedPayload.resume( { captchaWord: 'abc' } );
 
-	assert.true( performSaveStub.calledOnce, 'retried save once' );
+	assert.true( saveStub.calledOnce, 'retried save once' );
 
-	const retriedOptions = performSaveStub.firstCall.args[ 0 ];
+	const retriedOptions = saveStub.firstCall.args[ 0 ];
 	assert.deepEqual(
 		retriedOptions,
 		{
 			summary: 'test',
 			captchaWord: 'abc',
-			isRespondingToForcedCaptcha: true
+			isRespondingToForcedCaptcha: true,
+			editorinterface: 'MobileFrontend-SourceEditor'
 		},
 		'retried save with updated options'
+	);
+} );
+
+QUnit.test( '#handleCaptcha, sets solvingAbuseFilterCaptcha flag when hook stopped', ( assert ) => {
+	mw.hook = makeFakeHookRegistry();
+
+	const editorOverlay = new SourceEditorOverlay( {
+		title: 'test',
+		sectionId: '0'
+	} );
+
+	const saveStub = sandbox.stub( editorOverlay.gateway, 'save' ).returns( util.Deferred().promise() );
+
+	sandbox.stub( EditorOverlayBase.prototype, 'handleCaptcha' );
+	sandbox.stub( mw, 'hook' ).returns( {
+		fire: ( payload ) => payload.stop(),
+		add: () => {}
+	} );
+
+	editorOverlay.handleCaptcha( {}, { summary: 'test' } );
+
+	assert.false(
+		saveStub.called,
+		'should not retry save when hook stopped without resume'
+	);
+	assert.true(
+		editorOverlay.solvingAbuseFilterCaptcha,
+		'solvingAbuseFilterCaptcha should be set when hook stopped'
 	);
 } );
 
@@ -293,6 +321,11 @@ QUnit.test( 'When AF filter prevents an edit the UI goes back to the summary scr
 		sectionId: '0'
 	} );
 
+	editorOverlay.$el.append(
+		'<div class="header-action"><button class="save">Save</button></div>' +
+		'<div class="header-cancel"><button class="back">Back</button></div>'
+	);
+
 	mw.hook( 'mobileFrontend.sourceEditor.handleCaptcha' )
 		.add( ( payload ) => payload.stop() );
 
@@ -307,17 +340,35 @@ QUnit.test( 'When AF filter prevents an edit the UI goes back to the summary scr
 		}
 	}, {} );
 
+	// Simulate buttons being disabled (as onSaveBegin would have done)
+	editorOverlay._setSubmitButtonsDisabledProperty( true );
+
 	assert.true(
 		editorOverlay.solvingAbuseFilterCaptcha,
 		'solvingAbuseFilterCaptcha should be set after AF captcha'
 	);
 
+	// Buttons must remain disabled while the captcha is open
+	const areButtonsDisabled = () => editorOverlay.$el
+		.find( '.header-action button.save, .header-cancel button.back' )
+		.toArray().every( ( btn ) => btn.disabled );
+
+	assert.true(
+		areButtonsDisabled(),
+		'buttons stay disabled while captcha is pending'
+	);
+
 	mw.hook( 'confirmEdit.hCaptcha.challengeClosed' ).fire( {
 		sourceInterfaceName: 'mobilefrontend-editor'
 	} );
+
 	assert.true(
 		onStageChangesSpy.calledOnce,
 		'onStageChanges should be called when AF captcha is closed unsolved'
+	);
+	assert.false(
+		areButtonsDisabled(),
+		'buttons re-enabled after challenge closed'
 	);
 } );
 

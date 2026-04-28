@@ -628,38 +628,55 @@ class SourceEditorOverlay extends EditorOverlayBase {
 	 * @inheritdoc
 	 */
 	onSaveBegin() {
-		const options = {
-			summary: this.getEditSummary()
-		};
+		this._setSubmitButtonsDisabledProperty( true );
 
-		if ( this.sectionNumber === '0' ) {
-			options.summary = '/* */ ' + options.summary;
-		} else if ( this.sectionLine !== '' ) {
-			options.summary = '/* ' + this.sectionLine + ' */ ' + options.summary;
+		let saveCalled = false;
+		let wasStopped = false;
+
+		try {
+			const options = {
+				summary: this.getEditSummary()
+			};
+
+			if ( this.sectionNumber === '0' ) {
+				options.summary = '/* */ ' + options.summary;
+			} else if ( this.sectionLine !== '' ) {
+				options.summary = '/* ' + this.sectionLine + ' */ ' + options.summary;
+			}
+			super.onSaveBegin();
+			if ( this.confirmAborted ) {
+				return;
+			}
+			if ( this.captchaId ) {
+				options.captchaId = this.captchaId;
+				options.captchaWord = this.$el.find( '.captcha-word' ).val();
+			}
+
+			const payload = new SourceEditorSaveEventHookPayload(
+				this.currentPage,
+				this.readOnly,
+				options,
+				this._performSaveRequest.bind( this )
+			);
+
+			mw.hook( 'mobileFrontend.sourceEditor.saveBegin' ).fire( payload );
+
+			if ( payload.isStopped() ) {
+				wasStopped = true;
+				return;
+			}
+
+			saveCalled = true;
+			this._performSaveRequest( payload.options );
+		} finally {
+			// Don't re-enable the buttons if saving was stopped due to a filter
+			// being triggered or if the save API request is already in-flight.
+			// If a filter is showing a captcha, onCaptchaChallengeClosed will
+			// re-enable the buttons if the user closes it.
+			if ( !saveCalled && !wasStopped ) {
+				this._setSubmitButtonsDisabledProperty( false );
+			}
 		}
-		super.onSaveBegin();
-		if ( this.confirmAborted ) {
-			return;
-		}
-		if ( this.captchaId ) {
-			options.captchaId = this.captchaId;
-			options.captchaWord = this.$el.find( '.captcha-word' ).val();
-		}
-
-		const payload = new SourceEditorSaveEventHookPayload(
-			this.currentPage,
-			this.readOnly,
-			options,
-			this._performSaveRequest.bind( this )
-		);
-
-		mw.hook( 'mobileFrontend.sourceEditor.saveBegin' ).fire( payload );
-
-		if ( payload.isStopped() ) {
-			return;
-		}
-
-		this._performSaveRequest( payload.options );
 	}
 
 	/**
@@ -753,6 +770,8 @@ class SourceEditorOverlay extends EditorOverlayBase {
 	 */
 	onSaveFailure( data, saveOptions ) {
 		if ( data.edit && data.edit.captcha ) {
+			this._setSubmitButtonsDisabledProperty( false );
+
 			this.captchaId = data.edit.captcha.id;
 			this.handleCaptcha( data.edit.captcha, saveOptions );
 		} else {
@@ -948,10 +967,25 @@ class SourceEditorOverlay extends EditorOverlayBase {
 			return;
 		}
 
+		this._setSubmitButtonsDisabledProperty( false );
+
 		if ( this.solvingAbuseFilterCaptcha ) {
 			this.solvingAbuseFilterCaptcha = false;
 			this.onStageChanges();
 		}
+	}
+
+	/**
+	 * Disables or enables the submit buttons.
+	 *
+	 * @param {bool} disabled Whether to disable or enable the buttons
+	 *
+	 * @returns {void}
+	 * @private
+	 */
+	_setSubmitButtonsDisabledProperty( disabled ) {
+		this.$el.find( '.header-action button.save, .header-cancel button.back' )
+			.prop( 'disabled', disabled );
 	}
 }
 
