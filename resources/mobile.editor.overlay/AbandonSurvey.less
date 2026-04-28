@@ -1,21 +1,25 @@
 @import 'mediawiki.skin.variables.less';
 
 .abandon-survey {
+	background-color: var( --background-color-base );
 	text-align: left;
+	max-height: 100%;
 
 	&-close {
 		float: right;
-		margin-right: 0;
+		margin-top: @size-50;
+		margin-right: @size-50;
 	}
 
 	h5 {
 		font-weight: @font-weight-bold;
 		margin: 0;
 		line-height: @size-icon-medium;
+		font-size: @font-size-large;
 	}
 
 	form {
-		padding: @spacing-75;
+		padding: @spacing-100;
 
 		.oo-ui-buttonWidget {
 			display: block;
