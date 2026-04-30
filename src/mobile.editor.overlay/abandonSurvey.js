@@ -67,7 +67,7 @@ module.exports = function abandonSurvey( editor ) {
 	if ( !mw.config.get( 'wgMFEnableAbandonSurvey' ) ) {
 		return false;
 	}
-	if ( mw.config.get( 'wgUserEditCount', 0 ) > 100000 ) {
+	if ( mw.config.get( 'wgUserEditCount', 0 ) > 100 ) {
 		return false;
 	}
 
