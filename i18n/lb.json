@@ -44,7 +44,7 @@
 	"mobile-frontend-editor-captcha-try-again": "Falsche Code, probéiert nach eng Kéier.",
 	"mobile-frontend-editor-continue": "Weider",
 	"mobile-frontend-editor-disabled": "Dës Säit ass geschützt fir Vandalismus ze verhënneren. [$1 Quell weisen]",
-	"mobile-frontend-editor-disabled-anon": "Dir musst Iech alogge fir dës Säit z'änneren",
+	"mobile-frontend-editor-disabled-anon": "Dir musst Iech aloggen, fir dës Säit z'änneren",
 	"mobile-frontend-editor-editing": "Änneren",
 	"mobile-frontend-editor-editing-page": "<span><strong>Ännere</strong> vu(n) $1</span>",
 	"mobile-frontend-editor-error": "Feeler, Ännerung net verëffentlecht.",
