@@ -305,6 +305,11 @@ function init( container ) {
 		setCollapsedState( content, wrapper, icon, shouldCollapse );
 	} );
 
+	// If the fragment target was found, expand and scroll to it.
+	if ( fragmentTarget ) {
+		expandSectionForTarget( fragmentTarget );
+	}
+
 	window.addEventListener( 'hashchange', () => checkHash( container ) );
 
 	// Remove the temporary open handler used during slow page loading:
