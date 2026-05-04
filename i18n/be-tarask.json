@@ -14,7 +14,7 @@
 	"abusefilter-edit-builder-vars-user-mobile": "Ці рэдагуе ўдзельнік праз мабільны інтэрфэйс ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "Увядзіце код пацьверджаньня",
 	"mobile-frontend-copyright": "Зьмест даступны на ўмовах $1, калі не пазначанае іншае.",
-	"mobile-frontend-desc": "Дапамагае палепшыць мабільную прысутнасьць існасьці MediaWiki",
+	"mobile-frontend-desc": "Дапамагае палепшыць мабільную наяўнасьць існасьці MediaWiki",
 	"mobile-frontend-editor-anon": "Рэдагаваць без уваходу",
 	"mobile-frontend-editor-anonwarning": "<strong>Папярэджаньне</strong>: вы не ўвайшлі ў сыстэму. Калі вы адрэдагуеце старонку, ваш IP-адрас будзе бачны ўсім. Калі вы <strong>ўвойдзеце</strong> або <strong>створыце рахунак</strong>, вашыя рэдагаваньні будуць зьвязаныя з вашым імем карыстальніка, а таксама вам будуць даступныя дадатковыя перавагі.",
 	"mobile-frontend-editor-blocked-drawer-title": "Вам была заблякаваная магчымасьць рэдагаваць {{GRAMMAR:вінавальны|{{SITENAME}}}}.",
