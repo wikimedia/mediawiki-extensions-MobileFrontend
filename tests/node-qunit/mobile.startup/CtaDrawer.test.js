@@ -76,6 +76,13 @@ QUnit.module( 'MobileFrontend CtaDrawer.js', {
 				type: 'signup'
 			} );
 		} );
+
+		// For Account Creation CTA experiment, account-creation-reading-list-cta. See T425372.
+		QUnit.test( 'user in Account Creation CTA experiment control group', ( assert ) => {
+			const subject = CtaDrawer.prototype.test.signUpParams;
+			sandbox.stub( global.mw.config, 'get' ).withArgs( 'wgMFInAccountCreationCTAControl' ).returns( true );
+			assert.propEqual( subject( {} ), { type: 'signup', returntoquery: 'readingListsAccountCreationCta=1' } );
+		} );
 	} );
 
 	QUnit.module( 'HTML', () => {

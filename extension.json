@@ -487,7 +487,8 @@
 				"MobileFrontend.FeaturesManager"
 			],
 			"optional_services": [
-				"GadgetsRepo"
+				"GadgetsRepo",
+				"TestKitchen.ExperimentManager"
 			]
 		},
 		"MobileFrontendEditorHooks": {

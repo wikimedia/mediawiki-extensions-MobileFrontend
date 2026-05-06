@@ -794,9 +794,9 @@ class MobileFrontendHooks implements
 
 		// The user came from one of the drawers that prompted them to login.
 		// We must watch the article per their original intent.
-		if ( $campaign === 'mobile_watchPageActionCta' ||
-			wfArrayToCgi( $returnToQuery ) === 'article_action=watch'
-		) {
+		$shouldWatchArticle = array_key_exists( 'article_action', $returnToQuery ) &&
+			$returnToQuery[ 'article_action' ] === 'watch';
+		if ( $campaign === 'mobile_watchPageActionCta' || $shouldWatchArticle ) {
 			$title = Title::newFromText( $returnTo );
 			// protect against watching special pages (these cannot be watched!)
 			if ( $title !== null && !$title->isSpecialPage() ) {
@@ -914,6 +914,17 @@ class MobileFrontendHooks implements
 				$out->prependHTML( self::interimTogglingSupportForParsoid() );
 			} else {
 				$out->prependHTML( MakeSectionsTransform::interimTogglingSupport() );
+			}
+		}
+
+		// For Account Creation CTA experiment. See T425372.
+		// Add a JS config var rather than loading the ext.testKitchen module on the client side to
+		// avoid introducing async behavior to the CtaDrawer.
+		if ( ExtensionRegistry::getInstance()->isLoaded( 'TestKitchen' ) ) {
+			$experimentManager = MediaWikiServices::getInstance()->getService( 'TestKitchen.ExperimentManager' );
+			$experiment = $experimentManager->getExperiment( 'account-creation-reading-list-cta' );
+			if ( $experiment && $experiment->isAssignedGroup( 'control' ) ) {
+				$out->addJsConfigVars( [ 'wgMFInAccountCreationCTAControl' => true ] );
 			}
 		}
 	}

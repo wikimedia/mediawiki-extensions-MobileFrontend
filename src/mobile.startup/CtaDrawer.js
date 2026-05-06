@@ -90,7 +90,21 @@ function redirectParams( params, redirectURL ) {
  */
 function signUpParams() {
 	[].push.call( arguments, { type: 'signup' } );
-	return util.extend.apply( util, arguments );
+	const createAccountParams = util.extend.apply( util, arguments );
+
+	// For Account Creation CTA experiment, account-creation-reading-list-cta. See T425372.
+	// Add a query string indicating that the user is part of the experiment control group so we
+	// can track account creations from the watchstar CTA.
+	if ( mw.config.get( 'wgMFInAccountCreationCTAControl' ) ) {
+		const queryString = 'readingListsAccountCreationCta=1';
+		if ( createAccountParams.returntoquery ) {
+			createAccountParams.returntoquery += `&${ queryString }`;
+		} else {
+			createAccountParams.returntoquery = queryString;
+		}
+	}
+
+	return createAccountParams;
 }
 
 CtaDrawer.prototype.test = {
