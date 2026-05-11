@@ -219,6 +219,46 @@ QUnit.test( '#handleCaptcha, falls through to super when hook not stopped', ( as
 	assert.true( superStub.calledWith( details, saveOptions ), 'calls super.handleCaptcha' );
 } );
 
+QUnit.test( '#handleCaptcha, restores default captcha panel DOM when .captcha-word is absent', ( assert ) => {
+	// Simulates an extension having blanked the captcha panel at init time
+	// (e.g. hCaptcha), then the backend falling back to a standard captcha type.
+	const editorOverlay = new SourceEditorOverlay( { title: 'test', sectionId: '0' } );
+	sandbox.stub( EditorOverlayBase.prototype, 'handleCaptcha' );
+
+	editorOverlay.$el.find( '.captcha-panel' ).empty();
+	assert.strictEqual(
+		editorOverlay.$el.find( '.captcha-word' ).length, 0,
+		'precondition: .captcha-word is absent before handleCaptcha'
+	);
+
+	editorOverlay.handleCaptcha( { type: 'simple', mime: 'text/plain', id: '123', question: '19+3' }, {} );
+
+	assert.strictEqual(
+		editorOverlay.$el.find( '.captcha-word' ).length, 1,
+		'restores .captcha-word input after handleCaptcha'
+	);
+} );
+
+QUnit.test( '#handleCaptcha, does not re-render the captcha panel when .captcha-word is already present', ( assert ) => {
+	const editorOverlay = new SourceEditorOverlay( { title: 'test', sectionId: '0' } );
+	sandbox.stub( EditorOverlayBase.prototype, 'handleCaptcha' );
+
+	const $panel = editorOverlay.$el.find( '.captcha-panel' );
+	const originalHtml = $panel.html();
+
+	assert.strictEqual(
+		editorOverlay.$el.find( '.captcha-word' ).length, 1,
+		'precondition: .captcha-word is present before handleCaptcha'
+	);
+
+	editorOverlay.handleCaptcha( { type: 'simple', mime: 'text/plain', id: '123', question: '19+3' }, {} );
+
+	assert.strictEqual(
+		$panel.html(), originalHtml,
+		'captcha panel HTML is unchanged when .captcha-word was already present'
+	);
+} );
+
 QUnit.test( '#handleCaptcha, does not fall through to super when hook stopped', ( assert ) => {
 	const editorOverlay = new SourceEditorOverlay( { title: 'test', sectionId: '0' } );
 	const superStub = sandbox.stub( EditorOverlayBase.prototype, 'handleCaptcha' );

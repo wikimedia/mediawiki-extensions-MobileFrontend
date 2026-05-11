@@ -208,6 +208,16 @@ class EditorOverlayBase extends Overlay {
 	 * @returns {string}
 	 */
 	getCaptchaPanelTemplateSource() {
+		return EditorOverlayBase.DEFAULT_CAPTCHA_PANEL_TEMPLATE;
+	}
+
+	/**
+	 * Default Mustache template for the captcha panel. Exposed as static so
+	 * subclasses can restore the panel DOM if an extension replaced it.
+	 *
+	 * @type {string}
+	 */
+	static get DEFAULT_CAPTCHA_PANEL_TEMPLATE() {
 		return `<div class="captcha-box">
 			<img id="image" src="">
 			<div id="question"></div>

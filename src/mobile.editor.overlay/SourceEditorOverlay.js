@@ -814,6 +814,17 @@ class SourceEditorOverlay extends EditorOverlayBase {
 		if ( this._runHandleCaptchaHook( payload, details ) ) {
 			// No extension requested to stop handling the edit, so we defer
 			// handling the captcha to the parent class.
+			// An extension may have blanked the captcha panel at init time to
+			// render its own widget elsewhere. If the backend then falls back to
+			// a standard captcha type, restore the default panel HTML so the
+			// parent can find the expected DOM elements.
+			if ( !this.$el.find( '.captcha-word' ).length ) {
+				this.$el.find( '.captcha-panel' ).html(
+					util.template(
+						EditorOverlayBase.DEFAULT_CAPTCHA_PANEL_TEMPLATE
+					).render( this.options )
+				);
+			}
 			super.handleCaptcha( details, saveOptions );
 		} else {
 			this.solvingAbuseFilterCaptcha = true;
