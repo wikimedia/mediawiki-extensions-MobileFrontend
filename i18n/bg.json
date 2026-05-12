@@ -23,7 +23,7 @@
 			"පසිඳු කාවින්ද"
 		]
 	},
-	"abusefilter-edit-builder-vars-user-mobile": "Редактира ли потребителя от мобилен интерфейс",
+	"abusefilter-edit-builder-vars-user-mobile": "Редактира ли потребителя от мобилен интерфейс ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "Въведете код за потвърждение",
 	"mobile-frontend-changeslist-nocomment": "редакция без резюме",
 	"mobile-frontend-clear-search": "Изчистване",
