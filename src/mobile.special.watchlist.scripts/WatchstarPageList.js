@@ -48,7 +48,7 @@ class WatchstarPageList extends PageList {
 
 		super.postRender();
 
-		const $items = this.queryUnitializedItems();
+		const $items = this.queryUninitializedItems();
 		const pages = this.parsePagesFromItems( $items );
 
 		Object.keys( pages ).forEach( ( title ) => {
@@ -73,7 +73,7 @@ class WatchstarPageList extends PageList {
 	 * @param {WatchStatusMap} statuses
 	 * @ignore
 	 */
-	queryUnitializedItems() {
+	queryUninitializedItems() {
 		return this.$el.find( 'li:not(.with-watchstar)' );
 	}
 

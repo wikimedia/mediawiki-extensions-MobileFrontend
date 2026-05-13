@@ -202,7 +202,7 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 
 	/**
 	 * Checks if paragraph contains visible content and so
-	 * could be considered the lead paragraph of the aricle.
+	 * could be considered the lead paragraph of the article.
 	 *
 	 * Keep in sync with mobile.init/identifyLeadParagraph.js.
 	 *
@@ -215,7 +215,7 @@ class MoveLeadParagraphTransform implements IMobileTransform {
 			DOMUtils::nodeName( $node ) === 'p' &&
 			$this->isNotEmptyNode( $node )
 		) {
-			// Clone the node so we can modifiy it
+			// Clone the node so we can modify it
 			$node = $node->cloneNode( true );
 			// @var Element $node
 			'@phan-var Element $node';

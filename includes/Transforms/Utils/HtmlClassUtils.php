@@ -21,7 +21,7 @@ class HtmlClassUtils {
 
 	/**
 	 * Forms raw html `class` string from set of classes. Set is a key-value array where
-	 * key is class name and value is boolean that determines wheather this class should be
+	 * key is class name and value is boolean that determines whether this class should be
 	 * included to string or not.
 	 *
 	 *

@@ -5,7 +5,7 @@ const
 
 /**
  * A wrapper for creating a button.
- * FIXME: T343036 This file should be combined with IconButton, all gadgets/extentions
+ * FIXME: T343036 This file should be combined with IconButton, all gadgets/extensions
  * using Button.js and IconButton.js will need to be updated to reflect this
  *
  * @private

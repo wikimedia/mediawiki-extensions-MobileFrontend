@@ -500,7 +500,7 @@ Enable the font-size options for users.
 
 #### $wgMFEnableVEWikitextEditor
 
-Eanble VisualEditor's wikitext editor as a replacement for MobileFrontend's source editor.
+Enable VisualEditor's wikitext editor as a replacement for MobileFrontend's source editor.
 
 * Type: `Boolean`
 * Default: `false`

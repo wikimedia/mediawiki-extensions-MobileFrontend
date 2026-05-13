@@ -5,7 +5,7 @@ use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\Title\Title;
 
 /**
- * Formerly a special page to show the difference between two revisions of a page - decomissioned in T358293
+ * Formerly a special page to show the difference between two revisions of a page - decommissioned in T358293
  * Now redirects to the core diff functionality; or, if called without a subpage, to the form at Special:Diff
  */
 class SpecialMobileDiff extends RedirectSpecialPage {

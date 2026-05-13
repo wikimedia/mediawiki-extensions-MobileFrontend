@@ -338,7 +338,7 @@ QUnit.test( 'preventDefault called when you cancel an exit request', ( assert ) 
 		'Prevent default was called when the user attempted to go back, preventing an address bar change.' );
 } );
 
-QUnit.test( 'Browser back can be overidden', ( assert ) => {
+QUnit.test( 'Browser back can be overridden', ( assert ) => {
 	const escapableOverlay = new Overlay( {} ),
 		done = assert.async(),
 		$container = util.parseHTML( '<div>' ),
@@ -368,7 +368,7 @@ QUnit.test( 'Browser back can be overidden', ( assert ) => {
 			assert.strictEqual( $container.find( cannotGoBackOverlay.$el ).length, 1,
 				'cannot go back overlay is still the overlay on display (cannot exit!)' );
 			assert.strictEqual( $container.find( escapableOverlay.$el ).length, 0,
-				'Escapeable overlay is not displayed' );
+				'Escapable overlay is not displayed' );
 			assert.strictEqual( manager.stack[0].overlay, cannotGoBackOverlay,
 				'Cannot go back overlay remains on the top of the stack' );
 			done();

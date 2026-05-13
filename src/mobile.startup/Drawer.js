@@ -101,7 +101,7 @@ class Drawer extends View {
 		requestAnimationFrame( () => {
 			this.options.onBeforeHide( this );
 			// Should really use 'transitionend' event here, but as the
-			// parent $drawer element is often detatched as well, this
+			// parent $drawer element is often detached as well, this
 			// might not fire until the next show animation.
 			setTimeout( () => {
 				this.$mask.detach();

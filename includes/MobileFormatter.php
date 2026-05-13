@@ -25,7 +25,7 @@ class MobileFormatter {
 	/**
 	 * Performs various transformations to the content to make it appropriate for mobile devices.
 	 *
-	 * @param array<IMobileTransform> $transforms lit of transforms to be sequentually applied
+	 * @param array<IMobileTransform> $transforms lit of transforms to be sequentially applied
 	 *   to html DOM
 	 */
 	public function applyTransforms( array $transforms ): void {

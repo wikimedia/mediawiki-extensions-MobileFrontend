@@ -110,7 +110,7 @@ class UADeviceDetectorTest extends \MediaWikiUnitTestCase {
 			'Mozilla/5.0 (compatible; YandexBot/3.0)',
 			// T127021: Samsung Internet on SMART-TV, identifies as desktop Linux
 			'Mozilla/5.0 (SMART-TV; Linux; Tizen 2.3) AppleWebkit/538.1 (KHTML, like Gecko) SamsungBrowser/1.0 TV Safari/538.1',
-			// T405279: Samsung Internet on Android after clicking "Desktop site", identifes as desktop Linux
+			// T405279: Samsung Internet on Android after clicking "Desktop site", identifies as desktop Linux
 			'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/28.0 Chrome/130.0.0.0 Safari/537.36',
 		] );
 		// phpcs:enable

@@ -220,7 +220,7 @@ class LazyImageTransform implements IMobileTransform {
 	 * @param Element|Document $from html element styles to be copied from
 	 * @param Element|Document $to html element styles to be copied to
 	 * @param string[] $enabled list of enabled styles to be copied
-	 * @param array $additional key-value array of styles to be added/overriden unconditionally
+	 * @param array $additional key-value array of styles to be added/overridden unconditionally
 	 *   at the beginning of string
 	 */
 	private function copyStyles( $from, $to, array $enabled, array $additional ) {
@@ -238,7 +238,7 @@ class LazyImageTransform implements IMobileTransform {
 	 * @param Element|Document $from html element classes to be copied from
 	 * @param Element|Document $to html element classes to be copied to
 	 * @param string[] $enabled array of enabled classes to be copied
-	 * @param string[] $additional array of classes to be added/overriden unconditionally
+	 * @param string[] $additional array of classes to be added/overridden unconditionally
 	 *   to the beginning
 	 */
 	private function copyClasses( $from, $to, array $enabled, array $additional ) {

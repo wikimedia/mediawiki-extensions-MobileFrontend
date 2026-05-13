@@ -93,7 +93,7 @@ class Icon extends View {
 	 * @property {boolean} defaults.rotation will rotate the icon by a certain number
 	 *  of degrees. Must be ±90, 0 or ±180 or will throw exception.
 	 * @property {boolean} defaults.isSmall If icon is small.
-	 * @property {string} defaults.addtionalClassNames Additional classes to be added to the icon.
+	 * @property {string} defaults.additionalClassNames Additional classes to be added to the icon.
 	 */
 	get defaults() {
 		return {

@@ -90,7 +90,7 @@ QUnit.module( 'MobileFrontend PageHTMLParser.js', {
 						<h3>1.2</h3>
 					</div>
 					<div class="ambox">a1.1</div>
-				</secttion>
+				</section>
 
 				<div class="mw-heading section-heading">
 					<h2>2</h2>

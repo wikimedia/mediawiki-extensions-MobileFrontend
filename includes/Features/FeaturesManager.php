@@ -10,7 +10,7 @@ use MobileFrontend\Hooks\HookRunner;
  *
  * FeaturesManager takes care about all available user modes and features
  * It handles relations between mode and features (one to many relation)
- * and allows an easy acecss to single mode/feature so there is no need
+ * and allows an easy access to single mode/feature so there is no need
  * to retrieve objects from the MediaWikiServices.
  *
  * @package MobileFrontend\Features

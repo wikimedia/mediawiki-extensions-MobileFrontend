@@ -60,7 +60,7 @@ class WatchList extends WatchstarPageList {
 		// Skip a level from WatchstarPageList directly to PageList.
 		PageList.prototype.postRender.apply( this );
 
-		const $items = this.queryUnitializedItems();
+		const $items = this.queryUninitializedItems();
 
 		// WatchList requests list of watched pages. The list contains only
 		// watched pages so it's safe to transform the title map to a status map

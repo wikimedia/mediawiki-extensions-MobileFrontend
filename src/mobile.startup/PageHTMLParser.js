@@ -8,7 +8,7 @@ const
 	).join( ',' );
 
 /**
- * Parses an article and converts it into a queriable object.
+ * Parses an article and converts it into a queryable object.
  */
 class PageHTMLParser {
 	/**
@@ -26,7 +26,7 @@ class PageHTMLParser {
 	/**
 	 * Find the heading in the page.
 	 * This has the benefit of excluding any additional h2s and h3s that may
-	 * have been added programatically.
+	 * have been added programmatically.
 	 *
 	 * @param {number} sectionIndex as defined by the PHP parser.
 	 *  It should correspond to the section id

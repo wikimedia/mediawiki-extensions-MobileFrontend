@@ -21,7 +21,7 @@ const isCollapsedByDefault = require( './isCollapsedByDefault.js' );
 /**
  * A class for enabling toggling
  *
- * Toggling can be disabled on a sepcific heading by adding the
+ * Toggling can be disabled on a specific heading by adding the
  * collapsible-heading-disabled class.
  */
 class Toggler {

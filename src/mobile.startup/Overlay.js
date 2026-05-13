@@ -176,7 +176,7 @@ class Overlay extends View {
 
 	/**
 	 * Detach the overlay from the current view
-	 * Should not be overriden as soon to be deprecated.
+	 * Should not be overridden as soon to be deprecated.
 	 *
 	 * @memberof module:mobile.startup/Overlay
 	 * @instance

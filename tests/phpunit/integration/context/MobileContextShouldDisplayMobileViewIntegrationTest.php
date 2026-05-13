@@ -7,7 +7,7 @@ use MobileContext;
 
 /**
  * This suite of tests cases tests the behaviour of
- * `MobileContext#shouldDisplayMobileView` and `#shoudDisplayMobileViewInternal`
+ * `MobileContext#shouldDisplayMobileView` and `#shouldDisplayMobileViewInternal`
  * with no stubbed dependencies.
  *
  * @group MobileFrontend
@@ -27,7 +27,7 @@ class MobileContextShouldDisplayMobileViewIntegrationTest extends MediaWikiInteg
 	/**
 	 * @covers MobileContext::shouldDisplayMobileView
 	 */
-	public function testItCanBeOverriden() {
+	public function testItCanBeOverridden() {
 		$this->context->setForceMobileView( true );
 
 		$this->assertTrue( $this->context->shouldDisplayMobileView() );

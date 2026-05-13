@@ -9,7 +9,7 @@ use Wikimedia\ParamValidator\ParamValidator;
 /**
  * Adds the `mobileformat` param to API calls which use ApiParse.
  *
- * The param should be used in conjunction with the `useskin` paramater (to
+ * The param should be used in conjunction with the `useskin` parameter (to
  * ensure ApiParse is in skin mode), and will cause MobileFrontend's
  * onOutputPageBeforeHTML to apply mobile-specific page transformations.
  */
