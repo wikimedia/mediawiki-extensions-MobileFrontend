@@ -160,7 +160,7 @@
 	"mobile-frontend-user-page-no-page-yet": "$1 нема корисничку страницу.",
 	"mobile-frontend-user-page-describe-yourself": "Можете се представити колегама-$1 на корисничкој страници.",
 	"mobile-frontend-user-page-describe-yourself-editors": "уредницима",
-	"mobile-frontend-user-page-desired-action": "Ову страницу треба направити и уређивати $1.",
+	"mobile-frontend-user-page-desired-action": "Ову страницу треба да направи и уређује $1",
 	"mobile-frontend-user-page-create-owner-page-link-label": "Направите сопствену",
 	"mobile-frontend-user-page-create-user-page-link-label": "Направите страницу $1",
 	"mobile.css": "/* CSS постављен овде учитаће се свим корисницима мобилне верзије сајта */",
