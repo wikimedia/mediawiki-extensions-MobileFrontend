@@ -1,23 +1,25 @@
 const isCollapsedByDefault = require( './isCollapsedByDefault' );
 
 /**
- * Sets attributes on collapsible header based on collapsed state
+ * Sets attributes on collapsible toggle icon button based on collapsed state
  * This should be kept in sync with MobileFrontendHooks::interimTogglingSupportForParsoid()
  *
  * @method
- * @param {HTMLElement} heading span element containing heading text
- * @param {HTMLElement} icon span element for icon
+ * @param {HTMLElement} heading wrapper div element containing heading text,
+ * toggle icon button and edit section link
+ * @param {HTMLElement} button button element for the toggle icon
  * @param {boolean} isCollapsed collapsed state to set
  * @ignore
  */
-function setCollapsedHeadingState( heading, icon, isCollapsed ) {
+function setCollapsedHeadingState( heading, button, isCollapsed ) {
 	// update the dropdown state based on the content visibility
+	const icon = button.querySelector( '.mf-collapsible-icon' );
 	if ( isCollapsed ) {
-		heading.setAttribute( 'aria-expanded', 'false' );
+		button.setAttribute( 'aria-expanded', 'false' );
 		icon.classList.add( 'mf-icon-expand' );
 		icon.classList.remove( 'mf-icon-collapse' );
 	} else {
-		heading.setAttribute( 'aria-expanded', 'true' );
+		button.setAttribute( 'aria-expanded', 'true' );
 		icon.classList.add( 'mf-icon-collapse' );
 		icon.classList.remove( 'mf-icon-expand' );
 	}
@@ -35,20 +37,27 @@ function setCollapsedHeadingState( heading, icon, isCollapsed ) {
 }
 
 /**
- * Sets attributes on collapsible elements based on collapsed state
+ * Sets attributes on collapsible elements based on collapsed state.
+ *
+ * This should be kept in sync with MobileFrontendHooks::interimTogglingSupportForParsoid()
+ * If a user taps a heading before this module loads, that inline script
+ * sets `content.hidden = false`. init() then detects that via
+ * `wasExpanded` and we keep the section open. Any change to how we hide
+ * the content must use`content.hidden`.
  *
  * @method
  * @param {HTMLElement} content div element containing collapsible content
- * @param {HTMLElement} heading div element containing heading text
- * @param {HTMLElement} icon span element for icon
+ * @param {HTMLElement} heading wrapper div element containing heading text,
+ * toggle icon button and edit section link
+ * @param {HTMLElement} button button element for the toggle icon
  * @param {boolean} isCollapsed collapsed state to set
  * @ignore
  */
-function setCollapsedState( content, heading, icon, isCollapsed ) {
+function setCollapsedState( content, heading, button, isCollapsed ) {
 	// show the content if hidden, hide if shown (until found so find in page works)
 	content.hidden = isCollapsed ? 'until-found' : false;
 
-	setCollapsedHeadingState( heading, icon, isCollapsed );
+	setCollapsedHeadingState( heading, button, isCollapsed );
 }
 
 /**
@@ -56,13 +65,14 @@ function setCollapsedState( content, heading, icon, isCollapsed ) {
  *
  * @method
  * @param {HTMLElement} content div element containing collapsible content
- * @param {HTMLElement} heading div element containing heading text
- * @param {HTMLElement} icon span element for icon
+ * @param {HTMLElement} heading wrapper div element containing heading text,
+ * toggle icon button and edit section link
+ * @param {HTMLElement} button button element for the toggle icon
  * @ignore
  */
-function toggle( content, heading, icon ) {
+function toggle( content, heading, button ) {
 	const currentlyHidden = content.hidden;
-	setCollapsedState( content, heading, icon,
+	setCollapsedState( content, heading, button,
 		// This should reflect **new** collapsed state
 		!currentlyHidden );
 }
@@ -74,30 +84,40 @@ function toggle( content, heading, icon ) {
  * @method
  * @param {HTMLElement} wrapper The heading wrapper element
  * @param {HTMLElement} content The content element associated with this heading
- * @return {HTMLElement} The created icon element
+ * @return {HTMLElement|null} The toggle button element, or null if the wrapper has no heading
  * @ignore
  */
 function prepareHeadingWrapper( wrapper, content ) {
 	// Beware that the temporary handler may have set up some sections
 	// during load-time scroll-and-click activity.
-	let icon = wrapper.querySelector( '.mf-icon' );
-	if ( !icon ) {
+	let button = wrapper.querySelector( 'button.mf-collapsible-toggle' );
+	if ( !button ) {
+		const heading = wrapper.querySelector( 'h1, h2, h3, h4, h5, h6' );
+		if ( !heading ) {
+			return null;
+		}
+
 		wrapper.classList.add( 'mf-collapsible-heading' );
 		content.classList.add( 'mf-collapsible-content' );
+		if ( !content.id ) {
+			content.id = heading.id + '-collapsible-content';
+		}
 
-		// Update the heading wrapper to account for semantics of collapsing sections
-		wrapper.setAttribute( 'tabindex', '0' );
-		wrapper.setAttribute( 'role', 'button' );
-		wrapper.setAttribute( 'aria-controls', content.id );
+		button = document.createElement( 'button' );
+		button.type = 'button';
+		button.classList.add( 'mf-collapsible-toggle' );
+		button.setAttribute( 'aria-controls', content.id );
+		button.setAttribute( 'aria-labelledby', heading.id );
 
-		// Create the dropdown arrow icon
-		icon = document.createElement( 'span' );
+		const icon = document.createElement( 'span' );
 		icon.classList.add( 'mf-icon', 'mf-icon--small', 'mf-collapsible-icon' );
-		icon.setAttribute( 'aria-hidden', true );
-		wrapper.prepend( icon );
+		icon.setAttribute( 'aria-hidden', 'true' );
+		button.appendChild( icon );
+
+		heading.after( button );
 	}
 
-	return icon;
+	return button;
 }
 
 /**
@@ -106,33 +126,22 @@ function prepareHeadingWrapper( wrapper, content ) {
  * @method
  * @param {HTMLElement} wrapper The heading wrapper element
  * @param {HTMLElement} content The content element associated with this heading
- * @param {HTMLElement} icon The icon element
+ * @param {HTMLElement} button The toggle button element
  * @ignore
  */
-function attachEventListeners( wrapper, content, icon ) {
+function attachEventListeners( wrapper, content, button ) {
 	// T389820 toggle the icon by expanding the heading on match.
 	content.addEventListener( 'beforematch', () => {
-		setCollapsedHeadingState( wrapper, icon, false );
+		setCollapsedHeadingState( wrapper, button, false );
 	} );
 
-	// Register the click handler
+	// Delegated click handler on the wrapper. Clicks on the button bubble here.
 	wrapper.addEventListener( 'click', ( ev ) => {
 		// Only toggle if a non-link was clicked.
 		// We don't want sections to collapse if the edit link is clicked for example.
 		const clickedLink = ev.target.closest( 'a' );
 		if ( !clickedLink ) {
-			toggle( content, wrapper, icon );
-		}
-	} );
-
-	// Register the keypress handler
-	wrapper.addEventListener( 'keypress', ( ev ) => {
-		// Only toggle if a non-link was clicked.
-		// We don't want sections to collapse if the edit link is clicked for example.
-		const clickedLink = ev.target.closest( 'a' );
-		// Only handle keypresses on the "Enter" or "Space" keys
-		if ( !clickedLink && ( ev.which === 13 || ev.which === 32 ) ) {
-			toggle( content, wrapper, icon );
+			toggle( content, wrapper, button );
 		}
 	} );
 }
@@ -205,12 +214,14 @@ function expandSectionForTarget( target ) {
 		}
 	}
 
-	// If we found a heading and it's collapsed, expand it
-	if ( heading && heading.getAttribute( 'aria-expanded' ) === 'false' ) {
-		const content = heading.nextElementSibling;
-		const icon = heading.querySelector( '.mf-collapsible-icon' );
-		if ( content && icon ) {
-			setCollapsedState( content, heading, icon, false );
+	// If we found a heading and it's collapsed, expand it.
+	if ( heading ) {
+		const button = heading.querySelector( 'button.mf-collapsible-toggle' );
+		if ( button && button.getAttribute( 'aria-expanded' ) === 'false' ) {
+			const content = heading.nextElementSibling;
+			if ( content ) {
+				setCollapsedState( content, heading, button, false );
+			}
 		}
 	}
 
@@ -293,16 +304,19 @@ function init( container ) {
 		const wasExpanded =
 			content.classList.contains( 'mf-collapsible-content' ) &&
 			!content.getAttribute( 'hidden' );
-		const icon = prepareHeadingWrapper( wrapper, content );
+		const button = prepareHeadingWrapper( wrapper, content );
+		if ( !button ) {
+			return;
+		}
 
-		attachEventListeners( wrapper, content, icon );
+		attachEventListeners( wrapper, content, button );
 		// Skip collapsing if this section contains the fragment target
 		// or if it was opened during slow loading.
 		const shouldCollapse = isCollapsed &&
 			!wasExpanded &&
 			!( fragmentTarget &&
 				( content.contains( fragmentTarget ) || wrapper.contains( fragmentTarget ) ) );
-		setCollapsedState( content, wrapper, icon, shouldCollapse );
+		setCollapsedState( content, wrapper, button, shouldCollapse );
 	} );
 
 	// If the fragment target was found, expand and scroll to it.

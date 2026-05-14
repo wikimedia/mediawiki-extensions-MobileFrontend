@@ -7,15 +7,27 @@
 	// (and loading the editor is probably going to take >500ms anyway).
 	@timing: 400ms 100ms;
 
-	// The first one is for the old parser, and the next two are for Parsoid
-	.content .section-heading .indicator,
-	.content section .mf-icon-expand,
-	.content section .mf-icon-collapse {
+	// For the old parser
+	.content .section-heading .indicator {
 		transition: width @timing, min-width @timing, margin @timing, opacity @timing;
 		width: 0;
 		min-width: 0 !important;
 		margin-right: 0 !important;
 		opacity: 0;
+	}
+
+	// For Parsoid
+	.content section .mf-collapsible-toggle {
+		transition: margin @timing;
+		margin-right: 0 !important;
+
+		.mf-icon-expand,
+		.mf-icon-collapse {
+			transition: width @timing, min-width @timing, opacity @timing;
+			width: 0;
+			min-width: 0 !important;
+			opacity: 0;
+		}
 	}
 
 	.mw-editsection {
@@ -41,13 +53,13 @@
 		visibility: visible;
 	}
 
-	.mf-collapsible-heading[ aria-expanded='false' ] .mw-editsection {
+	.mf-collapsible-heading:has( [ aria-expanded='false' ] ) .mw-editsection {
 		visibility: hidden;
 	}
 
 	// Show edit buttons when expanded
-	.mf-collapsible-heading[ aria-expanded='true' ] .mw-editsection,
-	.mf-collapsible-heading[ aria-expanded='true' ] ~ .mf-collapsible-content section .mw-editsection {
+	.mf-collapsible-heading:has( [ aria-expanded='true' ] ) .mw-editsection,
+	.mf-collapsible-heading:has( [ aria-expanded='true' ] ) ~ .mf-collapsible-content section .mw-editsection {
 		visibility: visible;
 	}
 }

@@ -911,7 +911,8 @@ class MobileFrontendHooks implements
 		if ( $displayMobileView ) {
 			// Adds inline script to allow opening of sections while JS is still loading
 			if ( $this->shouldUseParsoid( $out->getTitle() ) ) {
-				$out->prependHTML( self::interimTogglingSupportForParsoid() );
+				// Append so this runs after any copy embedded in HTML from MobileFrontendContentProvider.
+				$out->addHTML( self::interimTogglingSupportForParsoid() );
 			} else {
 				$out->prependHTML( MakeSectionsTransform::interimTogglingSupport() );
 			}

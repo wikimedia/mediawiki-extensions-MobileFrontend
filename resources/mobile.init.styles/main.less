@@ -57,10 +57,28 @@
 	body.mf-collapsible-sections @{selector-parsoid-top-heading} {
 		cursor: pointer;
 
-		.mf-collapsible-icon {
+		.mf-collapsible-toggle {
 			margin-right: 6px;
 			max-height: 32px;
+			// Keep the toggle visually on the left of the heading title.
+			order: -1;
+			border: 0;
+			padding: 0;
+			cursor: pointer;
+			background: inherit;
+
+			// Focus ring is drawn on the wrapper.
+			&:focus {
+				outline: 0;
+			}
 		}
+	}
+
+	// Draw the keyboard-focus ring on the `.mw-heading` wrapper when the
+	// toggle button is focus-visible.
+	@{selector-parsoid-top-heading}:has( > .mf-collapsible-toggle:focus-visible ) {
+		outline: @border-width-thick @border-style-base @outline-color-progressive--focus;
+		outline-offset: @spacing-12;
 	}
 }
 

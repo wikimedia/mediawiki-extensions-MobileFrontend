@@ -58,9 +58,9 @@ QUnit.test( 'init() - article pages', ( assert ) => {
 		'section body marked as collapsible'
 	);
 	assert.strictEqual(
-		container.querySelectorAll( '.mf-icon' ).length,
+		container.querySelectorAll( 'button.mf-collapsible-toggle' ).length,
 		1,
-		'An icon was added to the heading'
+		'A toggle button was added to the heading'
 	);
 	assert.strictEqual(
 		container.querySelector( 'h2' ).textContent,
@@ -68,11 +68,44 @@ QUnit.test( 'init() - article pages', ( assert ) => {
 		'The heading text was was not changed'
 	);
 	const heading = container.querySelector( '.mw-heading' );
-	assert.strictEqual( heading.getAttribute( 'aria-expanded' ), 'false', 'collasped by default' );
+	const button = heading.querySelector( 'button.mf-collapsible-toggle' );
+
+	assert.strictEqual( heading.getAttribute( 'role' ), null, 'wrapper has no role' );
+	assert.strictEqual( heading.getAttribute( 'tabindex' ), null, 'wrapper has no tabindex' );
+	assert.strictEqual( heading.getAttribute( 'aria-controls' ), null, 'wrapper has no aria-controls' );
+	assert.strictEqual( heading.getAttribute( 'aria-expanded' ), null, 'wrapper has no aria-expanded' );
+
+	assert.strictEqual( button.type, 'button', 'button has type="button"' );
+	const icon = button.querySelector( 'span.mf-collapsible-icon' );
+	assert.notStrictEqual( icon, null, 'button contains icon span' );
+	assert.true( icon.classList.contains( 'mf-icon' ), 'icon span has mf-icon class' );
+	assert.true( icon.classList.contains( 'mf-icon--small' ), 'icon span has mf-icon--small class' );
+	assert.strictEqual( icon.getAttribute( 'aria-hidden' ), 'true', 'icon span is decorative' );
+	assert.strictEqual( button.getAttribute( 'aria-controls' ), 'b', 'button aria-controls points at content id' );
+	assert.strictEqual( button.getAttribute( 'aria-labelledby' ), 'History', 'button aria-labelledby points at heading id' );
+	assert.strictEqual( button.getAttribute( 'aria-expanded' ), 'false', 'button is collapsed by default' );
+
 	heading.dispatchEvent( new Event( 'click', {
 		bubbles: true
 	} ) );
-	assert.strictEqual( heading.getAttribute( 'aria-expanded' ), 'true', 'section is now expanded' );
+	assert.strictEqual( button.getAttribute( 'aria-expanded' ), 'true', 'section is now expanded' );
+} );
+
+QUnit.test( 'init() - button click toggles section', ( assert ) => {
+	sandbox.stub( browser, 'isWideScreen' ).returns( false );
+	const container = document.createElement( 'div' );
+	container.innerHTML = ARTICLE_HTML;
+	sectionCollapsing.init( container );
+	const button = container.querySelector( 'button.mf-collapsible-toggle' );
+	assert.strictEqual( button.getAttribute( 'aria-expanded' ), 'false', 'button starts collapsed' );
+	button.dispatchEvent( new Event( 'click', {
+		bubbles: true
+	} ) );
+	assert.strictEqual( button.getAttribute( 'aria-expanded' ), 'true', 'clicking the button expands the section' );
+	button.dispatchEvent( new Event( 'click', {
+		bubbles: true
+	} ) );
+	assert.strictEqual( button.getAttribute( 'aria-expanded' ), 'false', 'clicking again collapses the section' );
 } );
 
 QUnit.test( 'init() - article pages on tablet page', ( assert ) => {
@@ -84,8 +117,8 @@ QUnit.test( 'init() - article pages on tablet page', ( assert ) => {
 		container.querySelector( '#b' ).classList.contains( 'mf-collapsible-content' ),
 		'section body marked as collapsible'
 	);
-	const heading = container.querySelector( '.mw-heading' );
-	assert.strictEqual( heading.getAttribute( 'aria-expanded' ), 'true', 'expanded by default' );
+	const button = container.querySelector( 'button.mf-collapsible-toggle' );
+	assert.strictEqual( button.getAttribute( 'aria-expanded' ), 'true', 'expanded by default' );
 } );
 
 QUnit.test( 'init() - talk pages', ( assert ) => {
@@ -118,17 +151,18 @@ QUnit.test( 'init() - talk pages', ( assert ) => {
 		'span[data-mw-comment-start] and span[data-mw-comment-end] are preserved'
 	);
 	assert.strictEqual(
-		container.querySelectorAll( 'span.mf-icon' ).length,
+		container.querySelectorAll( 'button.mf-collapsible-toggle' ).length,
 		1,
-		'Icon is added'
+		'Toggle button is added'
 	);
 
 	const heading = container.querySelector( '.mw-heading' );
-	assert.strictEqual( heading.getAttribute( 'aria-expanded' ), 'false', 'collapsed by default' );
+	const button = heading.querySelector( 'button.mf-collapsible-toggle' );
+	assert.strictEqual( button.getAttribute( 'aria-expanded' ), 'false', 'collapsed by default' );
 	container.querySelector( '.mw-editsection a' ).dispatchEvent( new Event( 'click', {
 		bubbles: true
 	} ) );
-	assert.strictEqual( heading.getAttribute( 'aria-expanded' ), 'false', 'was not impacted by click' );
+	assert.strictEqual( button.getAttribute( 'aria-expanded' ), 'false', 'was not impacted by click' );
 } );
 
 const ARTICLE_WITH_FRAGMENT_TARGET = `<div class="mw-parser-output">
@@ -159,16 +193,16 @@ QUnit.test( 'init() - expands section when hash fragment targets element inside'
 	container.innerHTML = ARTICLE_WITH_FRAGMENT_TARGET;
 	sectionCollapsing.init( container );
 
-	const firstHeading = container.querySelector( '#section-heading-1' );
-	const secondHeading = container.querySelector( '#section-heading-2' );
+	const firstButton = container.querySelector( '#section-heading-1 button.mf-collapsible-toggle' );
+	const secondButton = container.querySelector( '#section-heading-2 button.mf-collapsible-toggle' );
 
 	assert.strictEqual(
-		firstHeading.getAttribute( 'aria-expanded' ),
+		firstButton.getAttribute( 'aria-expanded' ),
 		'true',
 		'section containing target is expanded'
 	);
 	assert.strictEqual(
-		secondHeading.getAttribute( 'aria-expanded' ),
+		secondButton.getAttribute( 'aria-expanded' ),
 		'false',
 		'other section remains collapsed'
 	);
@@ -186,10 +220,10 @@ QUnit.test( 'init() - expands section when hash fragment targets heading', ( ass
 	container.innerHTML = ARTICLE_WITH_FRAGMENT_TARGET;
 	sectionCollapsing.init( container );
 
-	const firstHeading = container.querySelector( '#section-heading-1' );
+	const firstButton = container.querySelector( '#section-heading-1 button.mf-collapsible-toggle' );
 
 	assert.strictEqual(
-		firstHeading.getAttribute( 'aria-expanded' ),
+		firstButton.getAttribute( 'aria-expanded' ),
 		'true',
 		'section with targeted heading is expanded'
 	);
@@ -207,10 +241,10 @@ QUnit.test( 'init() - responds to hashchange events', ( assert ) => {
 	container.innerHTML = ARTICLE_WITH_FRAGMENT_TARGET;
 	sectionCollapsing.init( container );
 
-	const firstHeading = container.querySelector( '#section-heading-1' );
+	const firstButton = container.querySelector( '#section-heading-1 button.mf-collapsible-toggle' );
 
 	assert.strictEqual(
-		firstHeading.getAttribute( 'aria-expanded' ),
+		firstButton.getAttribute( 'aria-expanded' ),
 		'false',
 		'section starts collapsed'
 	);
@@ -220,7 +254,7 @@ QUnit.test( 'init() - responds to hashchange events', ( assert ) => {
 	window.dispatchEvent( new Event( 'hashchange' ) );
 
 	assert.strictEqual(
-		firstHeading.getAttribute( 'aria-expanded' ),
+		firstButton.getAttribute( 'aria-expanded' ),
 		'true',
 		'section expands after hashchange'
 	);
@@ -239,9 +273,9 @@ QUnit.test( 'init() - no errors when hash targets non-existent element', ( asser
 	// Should not throw
 	sectionCollapsing.init( container );
 
-	const firstHeading = container.querySelector( '#section-heading-1' );
+	const firstButton = container.querySelector( '#section-heading-1 button.mf-collapsible-toggle' );
 	assert.strictEqual(
-		firstHeading.getAttribute( 'aria-expanded' ),
+		firstButton.getAttribute( 'aria-expanded' ),
 		'false',
 		'sections remain collapsed when target not found'
 	);

@@ -5,11 +5,11 @@
 	},
 	{
 		"resourceModule": "mobile.init",
-		"maxSize": "6KB"
+		"maxSize": "6.4KB"
 	},
 	{
 		"resourceModule": "mobile.languages.structured",
-		"maxSize": "2.7KB"
+		"maxSize": "2.8KB"
 	},
 	{
 		"resourceModule": "mobile.mediaViewer",
