@@ -80,7 +80,7 @@ class MoveLeadParagraphTransformTest extends \MediaWikiUnitTestCase {
 	public function testApplySectionSecondSectionShouldBeIgnored() {
 		$infobox = '<table class="infobox"><tbody><tr><td>1</td></tr></tbody></table>';
 		$paragraph = '<p><b>First paragraph</b> <span> with info that links to a '
-			. PHP_EOL . ' <a href="">Page</a></span> and some more content</p>';
+			. "\n" . ' <a href="">Page</a></span> and some more content</p>';
 
 		$transform = new MoveLeadParagraphTransform( 'A', 1 );
 		$body = Utils::createBody( Utils::wrapSection( 'First' ) . Utils::wrapSection( $infobox . $paragraph ) );
@@ -138,12 +138,12 @@ class MoveLeadParagraphTransformTest extends \MediaWikiUnitTestCase {
 		$emptypelt = '<p class="mw-empty-elt"></p>';
 		$multiStackInfobox = "<div class=\"mw-stack\">$infobox$anotherInfobox</div>";
 		$paragraph = '<p><b>First paragraph</b> <span> with info that links to a '
-			. PHP_EOL . ' <a href="">Page</a></span> and some more content</p>';
+			. "\n" . ' <a href="">Page</a></span> and some more content</p>';
 		$emptyP = '<p></p>';
 		// The $paragraphWithWhitespacesOnly has not only whitespaces (space,new line,tab)
 		// , but also contains a span with whitespaces
 		$paragraphWithWhitespacesOnly = '<p class="someParagraphClass">  	'
-			. PHP_EOL . "<span> 	\n</span></p>";
+			. "\n" . "<span> 	\n</span></p>";
 		$collapsibleInfobox = '<table class="collapsible"><tbody><tr><td>'
 			. '<table class="infobox"></table></td></tr></tbody></table>';
 		$collapsibleNotInfobox = '<table class="collapsible"><tbody><tr><td>'
