@@ -51,33 +51,6 @@
 	}
 
 	.anonwarning {
-		margin-top: 16px;
-
-		.cdx-message {
-			margin-bottom: 16px;
-		}
-
-		.anonmsg {
-			margin-bottom: 19px;
-		}
-
-		.cdx-button { /* stylelint-disable-line no-descending-specificity */
-			margin-bottom: 15px;
-			width: @size-full;
-		}
-
-		.actions {
-			text-align: center;
-		}
-
-		> p {
-			text-align: center;
-			font-style: italic;
-			font-size: 0.875em;
-		}
-	}
-
-	.anonwarning-soft {
 		text-align: center;
 		display: flex;
 		flex-direction: column;
@@ -156,7 +129,7 @@
 		}
 	}
 
-	&-ve .overlay-footer-container + *:not( .ve-mobile-fakeToolbar-container, .anonwarning-soft ) {
+	&-ve .overlay-footer-container + *:not( .ve-mobile-fakeToolbar-container, .anonwarning ) {
 		// Any extra messages (e.g. .minerva-anon-talk-message or .anonwarning)
 		// should leave space for the toolbar above the first message.
 		margin-top: 4em;

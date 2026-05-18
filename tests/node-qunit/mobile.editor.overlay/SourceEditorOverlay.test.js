@@ -69,24 +69,11 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/SourceEditorOverlay', {
 		previewResolve = util.Deferred().resolve( { text: '\npreviewtest' } );
 		sandbox.stub( EditorGateway.prototype, 'getPreview' )
 			.returns( previewResolve );
-		// TODO remove after anonwarning experiment concludes (T408484)
-		sandbox.stub( mw.loader, 'using' ).withArgs( 'ext.testKitchen' ).returns( util.Deferred().resolve() );
-		// HACK sandbox.stub( mw, 'testKitchen' ) complains about testKitchen prop not being
-		// defined, which is true as mw-node-qunit does not define it. What's the pattern for
-		// mocking mw.* optional props provided by extensions?
-		mw.testKitchen = {
-			compat: {
-				getExperiment: () => ( {
-					isAssignedGroup: () => false
-				} )
-			}
-		};
 		this.originalHookFactory = mw.hook;
 	},
 	afterEach: function () {
 		jQuery.tearDown();
 		sandbox.restore();
-		mw.testKitchen = undefined;
 		mw.hook = this.originalHookFactory;
 	}
 } );
@@ -178,29 +165,6 @@ QUnit.test( '#initialize, as anonymous', ( assert ) => {
 	} );
 
 	return editorOverlay.getLoadingPromise()
-		.then( () => mw.loader.using( 'ext.testKitchen' ) )
-		.then( () => {
-			assert.true( editorOverlay.$anonWarning.length > 0, 'Editorwarning (IP will be saved) visible.' );
-			assert.true( editorOverlay.$el.find( '.anonymous' ).length > 0, 'Continue login has a second class.' );
-		} );
-} );
-
-// TODO remove after anonwarning experiment concludes (T408484)
-QUnit.test( '#initialize, as anonymous Growth experiment treatment group', ( assert ) => {
-	mw.testKitchen = {
-		compat: {
-			getExperiment: () => ( {
-				isAssignedGroup: () => true
-			} )
-		}
-	};
-	const editorOverlay = new SourceEditorOverlay( {
-		title: 'Main_page',
-		isAnon: true
-	} );
-
-	return editorOverlay.getLoadingPromise()
-		.then( () => mw.loader.using( 'ext.testKitchen' ) )
 		.then( () => {
 			assert.true( editorOverlay.$anonWarning.length > 0, 'Editorwarning (IP will be saved) visible.' );
 			assert.true( editorOverlay.$el.find( '.anonymous' ).length > 0, 'Continue login has a second class.' );
