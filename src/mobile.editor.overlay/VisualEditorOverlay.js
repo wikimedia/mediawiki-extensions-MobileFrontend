@@ -162,33 +162,18 @@ class VisualEditorOverlay extends EditorOverlayBase {
 		// log edit attempt
 		this.log( { action: 'ready' } );
 		this.log( { action: 'loaded' } );
-		// FIXME extracted function to support success/error callbacks, remove
-		//  after T408484 experiment concludes
-		const renderWarnings = () => {
+
+		if ( !showAnonWarning ) {
+			this.targetInit();
+		} else {
+			this.$anonWarning = this.createAnonWarning( this.options );
 			this.$anonTalkWarning = this.createAnonTalkWarning();
 			this.$el.append( [ this.$anonTalkWarning, this.$anonWarning ] );
 			this.$el.find( '.overlay-content' ).hide();
 			// De-select the surface so most tools are disabled (T336437)
 			this.target.getSurface().getModel().setNullSelection();
-		};
-
-		if ( !showAnonWarning ) {
-			this.targetInit();
-			this.emit( 'editor-loaded' );
-		} else {
-			mw.loader.using( 'ext.testKitchen' ).then( () => {
-				const experiment = mw.testKitchen.compat.getExperiment( 'growthexperiments-editattempt-anonwarning' );
-				if ( experiment.isAssignedGroup( 'treatment' ) ) {
-					this.$anonWarning = this.createAnonWarningSoft( this.options );
-				} else {
-					this.$anonWarning = this.createAnonWarning( this.options );
-				}
-				renderWarnings();
-			}, () => {
-				this.$anonWarning = this.createAnonWarning( this.options );
-				renderWarnings();
-			} ).then( () => this.emit( 'editor-loaded' ) );
 		}
+		this.emit( 'editor-loaded' );
 	}
 
 	/**

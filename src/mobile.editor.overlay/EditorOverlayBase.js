@@ -632,7 +632,7 @@ class EditorOverlayBase extends Overlay {
 	 * @param {Object} options
 	 * @return {jQuery.Element}
 	 */
-	createAnonWarningSoft( options ) {
+	createAnonWarning( options ) {
 		const $topDescription = $( '<p>' ).addClass( 'description' )
 				.text( mw.msg( 'mobile-frontend-editor-anonwarning-soft-description' ) ),
 			params = util.extend( {
@@ -680,75 +680,7 @@ class EditorOverlayBase extends Overlay {
 					)
 			] );
 
-		return $( '<div>' ).addClass( 'anonwarning-soft' ).append( $actions );
-	}
-
-	/**
-	 * Sets additional values used for anonymous editing warning.
-	 *
-	 * @param {Object} options
-	 * @return {jQuery.Element}
-	 */
-	createAnonWarning( options ) {
-		const $actions = $( '<div>' ).addClass( 'actions' ),
-			msg = this.gateway.wouldautocreate ?
-				'mobile-frontend-editor-autocreatewarning' :
-				'mobile-frontend-editor-anonwarning',
-			$anonWarning = $( '<div>' ).addClass( 'anonwarning content' ).append(
-				new MessageBox( {
-					type: 'notice',
-					className: 'anon-msg',
-					// eslint-disable-next-line mediawiki/msg-doc
-					msg: mw.message( msg, contLangMessages[ 'tempuser-helppage' ] ).parse()
-				} ).$el,
-				$actions
-			),
-			params = util.extend( {
-				returnto: options.returnTo || (
-					// use wgPageName as this includes the namespace if outside Main
-					mw.config.get( 'wgPageName' ) + '#/editor/' + ( options.sectionId || 'all' )
-				)
-			}, options.queryParams ),
-			signupParams = util.extend( {
-				type: 'signup'
-			}, options.signupQueryParams ),
-			anonymousEditorActions = [
-				new Button( {
-					label: mw.msg( 'mobile-frontend-editor-anon' ),
-					block: true,
-					additionalClassNames: 'anonymous progressive',
-					progressive: true,
-					eventname: 'anonwarning-edit'
-				} ),
-				new Button( {
-					block: true,
-					href: mw.util.getUrl( 'Special:UserLogin', params ),
-					label: mw.msg( 'mobile-frontend-watchlist-cta-button-login' ),
-					additionalClassNames: 'login',
-					eventname: 'anonwarning-login'
-				} ),
-				new Button( {
-					block: true,
-					href: mw.util.getUrl( 'Special:UserLogin', util.extend( params, signupParams ) ),
-					label: mw.msg( 'mobile-frontend-watchlist-cta-button-signup' ),
-					additionalClassNames: 'signup',
-					eventname: 'anonwarning-signup'
-				} )
-			];
-
-		$actions.append(
-			anonymousEditorActions.map( ( action ) => {
-				if ( action.options.eventname ) {
-					// These have stopPropagation called on them elsewhere:
-					action.$el.on( 'click', () => {
-						mw.track( 'webuiactions_log.click', action.options.eventname );
-					} );
-				}
-				return action.$el;
-			} )
-		);
-
-		return $anonWarning;
+		return $( '<div>' ).addClass( 'anonwarning' ).append( $actions );
 	}
 
 	/**
