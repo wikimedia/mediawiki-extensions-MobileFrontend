@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"ChoiChong",
+			"Smaugryu",
 			"さきじょーぐー",
 			"春春眠眠"
 		]
@@ -9,7 +10,7 @@
 	"mobile-frontend-copyright": "コンテンツぉーぬーがな書ちねーらんだれー、$1ぬむーとぅ使らりやびーん。",
 	"mobile-frontend-terms-text": "利用規約",
 	"mobile-frontend-view": "モバイルビュー",
-	"mobile-frontend-view-desktop": "デスクトップ",
+	"mobile-frontend-view-desktop": "デスクタープ表示",
 	"tag-mobile_edit": "モバイル編集",
 	"tag-mobile_web_edit": "モバイルウェブ編集"
 }
