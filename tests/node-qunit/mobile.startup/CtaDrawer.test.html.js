@@ -11,7 +11,7 @@ module.exports = {
 			</a>
 			<div class="cta-drawer__anchors">
 				<a href="signUp" class="mw-mf-anchor mw-mf-anchor-progressive ">
-					mobile-frontend-watchlist-cta-button-signup
+					mobile-frontend-watchlist-cta-button-createaccount
 				</a>
 			</div>
 		</div>

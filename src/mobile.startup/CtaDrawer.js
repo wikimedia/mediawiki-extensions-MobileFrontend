@@ -58,7 +58,7 @@ function CtaDrawer( options = {} ) {
 							'Special:UserLogin', signUpParams( params, options.signupQueryParams )
 						),
 						progressive: true,
-						label: mw.msg( 'mobile-frontend-watchlist-cta-button-signup' )
+						label: mw.msg( 'mobile-frontend-watchlist-cta-button-createaccount' )
 					}, options.actionAnchor ) ).$el
 				)
 			]
