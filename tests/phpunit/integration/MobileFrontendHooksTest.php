@@ -399,9 +399,15 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 		$user->method( 'isSafeToLoad' )->willReturn( true );
 		if ( !$isAnon ) {
 			$userOptLookup = $this->createMock( UserOptionsLookup::class );
-			$userOptLookup->method( 'getOption' )
-				->with( $user, MobileFrontendHooks::MOBILE_PREFERENCES_SPECIAL_PAGES )
-				->willReturn( $userpref ?: $this->returnArgument( 2 ) );
+			if ( $userpref ) {
+				$userOptLookup->method( 'getOption' )
+					->with( $user, MobileFrontendHooks::MOBILE_PREFERENCES_SPECIAL_PAGES )
+					->willReturn( $userpref );
+			} else {
+				$userOptLookup->method( 'getOption' )
+					->with( $user, MobileFrontendHooks::MOBILE_PREFERENCES_SPECIAL_PAGES )
+					->willReturnArgument( 2 );
+			}
 		} else {
 			$userOptLookup = $services->getUserOptionsLookup();
 		}
