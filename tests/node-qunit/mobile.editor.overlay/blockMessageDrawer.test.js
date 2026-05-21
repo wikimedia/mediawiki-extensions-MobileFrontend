@@ -45,6 +45,12 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/blockMessageDrawer', {
 		// requestAnimationFrame doesn't exist in Node
 		global.requestAnimationFrame = setTimeout;
 
+		// mw.loader.getState is not provided by mw-node-qunit; define it so that
+		// sandbox.stub() can wrap it, then stub it to return null by default.
+		this.loader = mw.loader;
+		mw.loader.getState = function () {};
+
+		sandbox.stub( mw.loader, 'getState' ).returns( null );
 		sandbox.stub( window, 'scrollTo' );
 		sandbox.stub( mw.util, 'getUrl' ).returns( '/w/index.php?title=User:Test' );
 		sandbox.stub( mw.config, 'get' )
@@ -86,6 +92,7 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/blockMessageDrawer', {
 		Drawer = undefined;
 		jQuery.tearDown();
 		sandbox.restore();
+		mw.loader = this.loader;
 	}
 } );
 
@@ -106,6 +113,61 @@ QUnit.test( 'blockMessageDrawer', async ( assert ) => {
 
 	await drawer.hide();
 	assertHidden( drawer );
+} );
+
+QUnit.test( 'blockMessageDrawer loads additional modules when configured and module is known', async ( assert ) => {
+	mw.config.get.withArgs( 'wgMobileFrontendSourceEditorInitializeModules', [] )
+		.returns( [ 'ext.confirmEdit.hCaptcha' ] );
+	mw.loader.getState.returns( 'ready' );
+	const usingSpy = sandbox.stub( mw.loader, 'using' ).resolves();
+
+	const drawer = blockMessageDrawer( {
+		parsedReason: util.Deferred().resolve( '' ).promise()
+	} );
+	await drawer.show();
+
+	assert.true( usingSpy.calledOnce, 'mw.loader.using called once' );
+	assert.true( usingSpy.calledWith( 'ext.confirmEdit.hCaptcha' ), 'mw.loader.using called with the configured module' );
+} );
+
+QUnit.test.each(
+	'blockMessageDrawer skips additional modules with a null or missing loader state',
+	{
+		'null state': { state: null },
+		'missing state': { state: 'missing' }
+	},
+	async ( assert, testCase ) => {
+		mw.config.get
+			.withArgs( 'wgMobileFrontendSourceEditorInitializeModules', [] )
+			.returns( [ 'ext.confirmEdit.hCaptcha' ] );
+
+		mw.loader.getState.returns( testCase.state );
+
+		const usingSpy = sandbox.stub( mw.loader, 'using' ).resolves();
+
+		const drawer = blockMessageDrawer( {
+			parsedReason: util.Deferred().resolve( '' ).promise()
+		} );
+		await drawer.show();
+
+		assert.true(
+			usingSpy.notCalled,
+			'mw.loader.using not called for a module with null state'
+		);
+	}
+);
+
+QUnit.test( 'blockMessageDrawer does not call loadAdditionalModules when no modules are configured', async ( assert ) => {
+	// wgMobileFrontendSourceEditorInitializeModules returns undefined from the default stub,
+	// so hasAdditionalModules() returns false.
+	const usingSpy = sandbox.stub( mw.loader, 'using' ).resolves();
+
+	const drawer = blockMessageDrawer( {
+		parsedReason: util.Deferred().resolve( '' ).promise()
+	} );
+	await drawer.show();
+
+	assert.true( usingSpy.notCalled, 'mw.loader.using not called when no modules are configured' );
 } );
 
 function assertVisible( drawer ) {

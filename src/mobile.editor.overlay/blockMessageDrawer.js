@@ -36,6 +36,44 @@ module.exports = function blockMessageDrawer( props ) {
 		$drawer.css( 'top', newTop > 0 ? `${ newTop }px` : 0 );
 	};
 
+	/**
+	 * @returns {boolean}
+	 */
+	const hasAdditionalModules = () => {
+		const requiredModules = mw.config.get(
+			'wgMobileFrontendSourceEditorInitializeModules',
+			[]
+		);
+
+		return Array.isArray( requiredModules ) &&
+			requiredModules.length > 0;
+	};
+
+	/**
+	 * @returns {Promise<void>}
+	 */
+	const loadAdditionalModules = () => {
+		const requiredModules = mw.config.get(
+			'wgMobileFrontendSourceEditorInitializeModules',
+			[]
+		);
+
+		const dependencies = [];
+		if ( Array.isArray( requiredModules ) ) {
+			for ( const moduleName of requiredModules ) {
+				const state = mw.loader.getState( moduleName );
+				if ( state === null || state === 'missing' ) {
+					// Skip modules that are not known by the resource loader
+					continue;
+				}
+
+				dependencies.push( mw.loader.using( moduleName ) );
+			}
+		}
+
+		return Promise.all( dependencies );
+	};
+
 	const blockDrawer = new Drawer( {
 		className: 'drawer block-message',
 		onBeforeHide: ( drawer ) => {
@@ -83,6 +121,10 @@ module.exports = function blockMessageDrawer( props ) {
 					action: 'shown',
 					wiki
 				} );
+			}
+
+			if ( hasAdditionalModules() ) {
+				loadAdditionalModules();
 			}
 		},
 		children: [
