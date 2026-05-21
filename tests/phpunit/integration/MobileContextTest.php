@@ -68,7 +68,37 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 		$this->assertFalse( $this->makeContext()->hasMobileDomain() );
 	}
 
-	public function testGetMobileUrl() {
+	public function testGetMobileUrl_NoCallback() {
+		$this->overrideConfigValues( [
+			MainConfigNames::Server => '//en.example.org',
+			'MobileUrlCallback' => null,
+		] );
+		$context = $this->makeContext();
+
+		$this->assertEquals(
+			'https://en.example.org/wiki/Article',
+			$context->getMobileUrl( 'https://en.example.org/wiki/Article' )
+		);
+		$this->assertEquals(
+			'https://en.example.org/wiki/Article',
+			$context->getMobileUrl( 'http://en.example.org/wiki/Article', forceHttps: true ),
+			'The mobile URL should use HTTPS if forceHttps is true'
+		);
+		$this->assertEquals(
+			'http://en.example.org/wiki/Article',
+			$context->getMobileUrl( 'http://en.example.org/wiki/Article' )
+		);
+		$this->assertEquals(
+			'//en.example.org/wiki/Article',
+			$context->getMobileUrl( '//en.example.org/wiki/Article' )
+		);
+		$this->assertEquals(
+			'/wiki/Article',
+			$context->getMobileUrl( '/wiki/Article' )
+		);
+	}
+
+	public function testGetMobileUrl_WithCallback() {
 		$this->overrideConfigValues( [
 			'MFMobileHeader' => 'X-Subdomain',
 			MainConfigNames::Server => '//en.example.org',

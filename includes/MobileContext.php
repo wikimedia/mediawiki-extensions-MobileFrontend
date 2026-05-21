@@ -458,6 +458,14 @@ class MobileContext extends ContextSource {
 	 * @return string|bool
 	 */
 	public function getMobileUrl( $url, $forceHttps = false ) {
+		$mobileUrlCallback = $this->getMobileUrlCallback();
+
+		if ( !$mobileUrlCallback && !$forceHttps ) {
+			// Optimization: Return original URL instead of parsing and reassembling it if we don't have a
+			// reason to modify it
+			return $url;
+		}
+
 		$urlUtils = MediaWikiServices::getInstance()->getUrlUtils();
 		$parsedUrl = $urlUtils->parse( $url );
 		// if parsing failed, maybe it's a local Url, try to expand and reparse it - task T107505
@@ -471,7 +479,6 @@ class MobileContext extends ContextSource {
 			}
 		}
 
-		$mobileUrlCallback = $this->getMobileUrlCallback();
 		if ( $mobileUrlCallback ) {
 			$parsedUrl['host'] = $mobileUrlCallback( $parsedUrl['host'] );
 		}
