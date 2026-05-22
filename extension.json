@@ -297,6 +297,18 @@
 				"mobile-frontend-editor-generic-block-reason",
 				"mobile-frontend-editor-viewing-source-page",
 				"mobile-frontend-editor-anon",
+				"mobile-editor-abandon-survey-title",
+				"mobile-editor-abandon-survey-description",
+				"mobile-editor-abandon-survey-error",
+				"mobile-editor-abandon-survey-success",
+				"mobile-editor-abandon-survey-submit",
+				"mobile-editor-abandon-survey-answer-exploring",
+				"mobile-editor-abandon-survey-answer-notsure",
+				"mobile-editor-abandon-survey-answer-worried-mistake",
+				"mobile-editor-abandon-survey-answer-complicated",
+				"mobile-editor-abandon-survey-answer-accident",
+				"mobile-editor-abandon-survey-answer-error",
+				"mobile-editor-abandon-survey-answer-other",
 				"parentheses"
 			]
 		},

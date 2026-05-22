@@ -208,5 +208,17 @@
 	"mobile-frontend-user-pref-link": "Link in Special:MobileOptions that opens user preferences page",
 	"mobile-frontend-console-recruit": "Message that will shown in the JavaScript console to developers. Can be overridden on wiki.",
 	"mobile-frontend-special-pages-pref": "This preference allows editors to disable special page optimisations in mobile. It is enabled by default.",
-	"prefs-mobile": "Header for mobile section of user preferences"
+	"prefs-mobile": "Header for mobile section of user preferences",
+	"mobile-editor-abandon-survey-title": "Title for the editor abandonment survey",
+	"mobile-editor-abandon-survey-description": "Description prompt for the editor abandonment survey",
+	"mobile-editor-abandon-survey-error": "Error when not selecting an answer for the editor abandonment survey",
+	"mobile-editor-abandon-survey-success": "Success notice for the editor abandonment survey",
+	"mobile-editor-abandon-survey-submit": "Submit button label for the editor abandonment survey",
+	"mobile-editor-abandon-survey-answer-exploring": "Answer for the editor abandonment survey",
+	"mobile-editor-abandon-survey-answer-notsure": "Answer for the editor abandonment survey",
+	"mobile-editor-abandon-survey-answer-worried-mistake": "Answer for the editor abandonment survey",
+	"mobile-editor-abandon-survey-answer-complicated": "Answer for the editor abandonment survey",
+	"mobile-editor-abandon-survey-answer-accident": "Answer for the editor abandonment survey",
+	"mobile-editor-abandon-survey-answer-error": "Answer for the editor abandonment survey",
+	"mobile-editor-abandon-survey-answer-other": "Answer for the editor abandonment survey"
 }

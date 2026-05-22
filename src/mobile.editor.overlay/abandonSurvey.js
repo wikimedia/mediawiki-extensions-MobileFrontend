@@ -36,7 +36,7 @@ class Survey extends View {
 		} );
 
 		this.submitButton = new OO.ui.ButtonWidget( {
-			label: 'Submit feedback',
+			label: mw.msg( 'mobile-editor-abandon-survey-submit' ),
 			flags: [ 'progressive', 'primary' ]
 		} );
 		this.$el.append( this.submitButton.$element );
@@ -79,27 +79,27 @@ module.exports = function abandonSurvey( editor ) {
 	const questions = [
 		{
 			key: 'exploring',
-			label: 'Just exploring'
+			label: mw.msg( 'mobile-editor-abandon-survey-answer-exploring' )
 		},
 		{
 			key: 'notsure',
-			label: 'Not sure how to start editing'
+			label: mw.msg( 'mobile-editor-abandon-survey-answer-notsure' )
 		},
 		{
 			key: 'worried-mistake',
-			label: 'Worried about making a mistake'
+			label: mw.msg( 'mobile-editor-abandon-survey-answer-worried-mistake' )
 		},
 		{
 			key: 'complicated',
-			label: 'Interface felt too complicated'
+			label: mw.msg( 'mobile-editor-abandon-survey-answer-complicated' )
 		},
 		{
 			key: 'accident',
-			label: 'Tapped edit by accident'
+			label: mw.msg( 'mobile-editor-abandon-survey-answer-accident' )
 		},
 		{
 			key: 'error',
-			label: 'Ran into a technical issue'
+			label: mw.msg( 'mobile-editor-abandon-survey-answer-error' )
 		}
 	];
 	// Shuffle questions to avoid biasing answers based on order
@@ -107,12 +107,12 @@ module.exports = function abandonSurvey( editor ) {
 
 	questions.push( {
 		key: 'other',
-		label: 'Something else'
+		label: mw.msg( 'mobile-editor-abandon-survey-answer-other' )
 	} );
 
 	const survey = new Survey( {
-		title: 'What stopped you from editing this article?',
-		description: 'Your anonymous feedback will help us improve editing',
+		title: mw.msg( 'mobile-editor-abandon-survey-title' ),
+		description: mw.msg( 'mobile-editor-abandon-survey-description' ),
 		questions
 	} );
 	const drawer = new Drawer( {
@@ -135,14 +135,14 @@ module.exports = function abandonSurvey( editor ) {
 				const selectedItem = survey.radioSelect.findSelectedItem();
 				const response = selectedItem && selectedItem.getData();
 				if ( !response ) {
-					survey.responseField.setErrors( [ 'Please select a reason' ] );
+					survey.responseField.setErrors( [ mw.msg( 'mobile-editor-abandon-survey-error' ) ] );
 					return;
 				}
 				editor.logFeatureUse( {
 					feature: 'abandon-survey',
 					action: 'response-' + response
 				} );
-				mw.notify( 'Thank you for helping to improve the editing experience!', { type: 'success' } );
+				mw.notify( mw.msg( 'mobile-editor-abandon-survey-success' ), { type: 'success' } );
 				drawer.$el.remove();
 			} );
 		},

@@ -73,9 +73,6 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/abandonSurvey', {
 			};
 			this.findSelectedItem = () => this.selectedItem;
 		};
-		sandbox.stub( mw, 'msg' ).withArgs( 'mobile-frontend-editor-continue' ).returns( 'Continue' )
-			.withArgs( 'mobile-frontend-editor-save' ).returns( 'Save' )
-			.withArgs( 'mobile-frontend-editor-publish' ).returns( 'Publish' );
 
 		EditorGateway = require( '../../../src/mobile.editor.overlay/EditorGateway' );
 		SourceEditorOverlay = require( '../../../src/mobile.editor.overlay/SourceEditorOverlay' );
@@ -164,7 +161,7 @@ QUnit.test( 'abandonSurvey', async ( assert ) => {
 	assert.strictEqual( drawer.$el.find( '.oo-ui-fieldLayout-messages' ).text(), '', 'Error is initially hidden' );
 
 	drawer.$el.find( '.oo-ui-buttonElement-button' ).click();
-	assert.strictEqual( drawer.$el.find( '.oo-ui-fieldLayout-messages' ).text(), 'Please select a reason', 'Error is shown' );
+	assert.strictEqual( drawer.$el.find( '.oo-ui-fieldLayout-messages' ).text(), mw.msg( 'mobile-editor-abandon-survey-error' ), 'Error is shown' );
 
 	drawer.$el.find( '.oo-ui-radioInputWidget input' ).first().trigger( 'click' ).trigger( 'change' );
 	assert.strictEqual( drawer.$el.find( '.oo-ui-fieldLayout-messages' ).text(), '', 'Error is cleared after a selection' );
