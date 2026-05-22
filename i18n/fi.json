@@ -87,7 +87,7 @@
 	"mobile-frontend-editor-summary": "Yhteenveto:",
 	"mobile-frontend-editor-switch-editor": "Vaihda muokkainta",
 	"mobile-frontend-editor-switch-visual-editor": "Vaihda visuaaliseen muokkaimeen",
-	"mobile-frontend-editor-uploadenable": "Tallenna ensin kuva mahdollistaaksesi muokkaamisen.",
+	"mobile-frontend-editor-uploadenable": "Tallenna ensin kuva mahdollistaaksesi sivun muokkaamisen.",
 	"mobile-frontend-editor-viewing-source-page": "<strong>Näytetään wikiteksti sivusta</strong><span> $1</span>",
 	"mobile-frontend-editor-wait": "Julkaistaan muokkausta. Odota.",
 	"mobile-frontend-editor-loading": "Ladataan muokkainta...",
