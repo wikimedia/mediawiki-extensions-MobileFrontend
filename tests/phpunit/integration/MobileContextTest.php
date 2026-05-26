@@ -80,11 +80,6 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 			$context->getMobileUrl( 'https://en.example.org/wiki/Article' )
 		);
 		$this->assertEquals(
-			'https://en.example.org/wiki/Article',
-			$context->getMobileUrl( 'http://en.example.org/wiki/Article', forceHttps: true ),
-			'The mobile URL should use HTTPS if forceHttps is true'
-		);
-		$this->assertEquals(
 			'http://en.example.org/wiki/Article',
 			$context->getMobileUrl( 'http://en.example.org/wiki/Article' )
 		);

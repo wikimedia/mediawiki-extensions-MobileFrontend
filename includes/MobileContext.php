@@ -450,17 +450,15 @@ class MobileContext extends ContextSource {
 	 * $wgMobileUrlCallback can convert its domain (so e.g. interwiki links can be
 	 * converted). If the domain is already a mobile domain, or not recognized by
 	 * $wgMobileUrlCallback, or the wiki does not use mobile domains, and so
-	 * $wgMobileUrlCallback is not set, the URL will be returned unchanged (except
-	 * $forceHttps will still be applied).
+	 * $wgMobileUrlCallback is not set, the URL will be returned unchanged.
 	 *
 	 * @param string $url URL to convert
-	 * @param bool $forceHttps Force HTTPS, even if the original URL used HTTP
 	 * @return string|bool
 	 */
-	public function getMobileUrl( $url, $forceHttps = false ) {
+	public function getMobileUrl( $url ) {
 		$mobileUrlCallback = $this->getMobileUrlCallback();
 
-		if ( !$mobileUrlCallback && !$forceHttps ) {
+		if ( !$mobileUrlCallback ) {
 			// Optimization: Return original URL instead of parsing and reassembling it if we don't have a
 			// reason to modify it
 			return $url;
@@ -479,13 +477,7 @@ class MobileContext extends ContextSource {
 			}
 		}
 
-		if ( $mobileUrlCallback ) {
-			$parsedUrl['host'] = $mobileUrlCallback( $parsedUrl['host'] );
-		}
-		if ( $forceHttps ) {
-			$parsedUrl['scheme'] = 'https';
-			$parsedUrl['delimiter'] = '://';
-		}
+		$parsedUrl['host'] = $mobileUrlCallback( $parsedUrl['host'] );
 
 		return UrlUtils::assemble( $parsedUrl );
 	}
