@@ -164,5 +164,17 @@
 	"mobile-frontend-user-pref-option": "Benotzerastellungen",
 	"mobile-frontend-user-pref-description": "Ännert Är Astellungen, dorënner d'Passwuert, d'Ausgesi vun der Websäit, Notifikatiounsastellungen an nach méi.",
 	"mobile-frontend-user-pref-link": "Astellungen opmaachen",
-	"prefs-mobile": "Mobil Astellungen"
+	"prefs-mobile": "Mobil Astellungen",
+	"mobile-editor-abandon-survey-title": "Wat huet Iech dovun ofgehalen, dësen Artikel z'änneren?",
+	"mobile-editor-abandon-survey-description": "Ären anonymme Feedback hëlleft eis, fir d'Ännerungserfarung ze verbesseren",
+	"mobile-editor-abandon-survey-error": "Wielt wgl. e Grond aus",
+	"mobile-editor-abandon-survey-success": "Merci, datt Dir eis hëlleft, fir d'Ännerungserfarung ze verbesseren!",
+	"mobile-editor-abandon-survey-submit": "Feedback ofschécken",
+	"mobile-editor-abandon-survey-answer-exploring": "Ech war just am Ausprobéieren",
+	"mobile-editor-abandon-survey-answer-notsure": "Ech si mer net sécher, wéi ech ufänke soll mat änneren",
+	"mobile-editor-abandon-survey-answer-worried-mistake": "Ech hat Angscht, e Feeler ze maachen",
+	"mobile-editor-abandon-survey-answer-complicated": "D'Benotzeruewerfläch wierkt ze komplizéiert",
+	"mobile-editor-abandon-survey-answer-accident": "Ech hunn aus Versinn op „Änneren“ getippt",
+	"mobile-editor-abandon-survey-answer-error": "Ech sinn op en technesche Problem gestouss",
+	"mobile-editor-abandon-survey-answer-other": "Eppes anescht"
 }

@@ -177,5 +177,17 @@
 	"mobile-frontend-user-pref-link": "Nizamlamaları aç",
 	"mobile-frontend-console-recruit": "Mobil saytımızı necə qurduğumuz haqqında ətraflı məlumat əldə edin @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Mobil istifadə edərkən xüsusi səhifələri optimallaşdırın və sadələşdirin (tövsiyə olunur)",
-	"prefs-mobile": "Mobil nizamlamalar"
+	"prefs-mobile": "Mobil nizamlamalar",
+	"mobile-editor-abandon-survey-title": "Bu məqaləni redaktə etməyi dayandırmağınıza səbəb nə oldu?",
+	"mobile-editor-abandon-survey-description": "Anonim rəyiniz bizə redaktə etməni inkişaf etdirməyə kömək edəcək",
+	"mobile-editor-abandon-survey-error": "ZƏhmət olmasa, bir səbəb seçin",
+	"mobile-editor-abandon-survey-success": "Redaktə təcrübəsini yaxşılaşdırmağa kömək etdiyiniz üçün təşəkkür edirik!",
+	"mobile-editor-abandon-survey-submit": "Rəyi göndər",
+	"mobile-editor-abandon-survey-answer-exploring": "Sadəcə baxırdım",
+	"mobile-editor-abandon-survey-answer-notsure": "Redaktəyə necə başlayacağımı bilmirəm",
+	"mobile-editor-abandon-survey-answer-worried-mistake": "Səhv etməkdən çəkinirəm",
+	"mobile-editor-abandon-survey-answer-complicated": "İnterfeys çox qarışıqdır",
+	"mobile-editor-abandon-survey-answer-accident": "Redaktə düyməsinə səhvən basmışam",
+	"mobile-editor-abandon-survey-answer-error": "Texniki problemlə qarşılaşmışam",
+	"mobile-editor-abandon-survey-answer-other": "Digər"
 }

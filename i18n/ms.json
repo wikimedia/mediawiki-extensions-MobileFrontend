@@ -172,5 +172,17 @@
 	"mobile-frontend-user-pref-link": "Buka keutamaan",
 	"mobile-frontend-console-recruit": "Ketahui lebih lanjut tentang cara kami membina laman web mudah alih kami di https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Optimum dan permudahkan laman khas apabila menggunakan mudah alih (disyorkan)",
-	"prefs-mobile": "Keutamaan mudah alih"
+	"prefs-mobile": "Keutamaan mudah alih",
+	"mobile-editor-abandon-survey-title": "Ada apa-apa yang halang anda daripada menyunting rencana ini?",
+	"mobile-editor-abandon-survey-description": "Maklum balas awanama anda akan membantu kami memperbaikkan proses penyuntingan",
+	"mobile-editor-abandon-survey-error": "Sila pilih satu alasan",
+	"mobile-editor-abandon-survey-success": "Terima kasih kerana membantu meningkatkan pengalaman penyuntingan!",
+	"mobile-editor-abandon-survey-submit": "Hantar maklum balas",
+	"mobile-editor-abandon-survey-answer-exploring": "Sekadar meneroka sahaja",
+	"mobile-editor-abandon-survey-answer-notsure": "Tak pasti macam mana hendak mula menyunting",
+	"mobile-editor-abandon-survey-answer-worried-mistake": "Risau untuk melakukan kesilapan",
+	"mobile-editor-abandon-survey-answer-complicated": "Antara muka terlalu rumit",
+	"mobile-editor-abandon-survey-answer-accident": "Tekan sunting secara tidak sengaja",
+	"mobile-editor-abandon-survey-answer-error": "Berhadapan dengan isu teknikal",
+	"mobile-editor-abandon-survey-answer-other": "Lain-lain"
 }

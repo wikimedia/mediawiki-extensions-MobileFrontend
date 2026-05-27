@@ -190,5 +190,17 @@
 	"mobile-frontend-user-pref-link": "Avaa asetukset",
 	"mobile-frontend-console-recruit": "Lisätietoja siitä, miten rakensimme mobiilisivustomme @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Optimoi ja yksinkertaista toimintosivuja mobiilitilassa (suositus)",
-	"prefs-mobile": "Mobiiliasetukset"
+	"prefs-mobile": "Mobiiliasetukset",
+	"mobile-editor-abandon-survey-title": "Mistä syystä lopetit tämän artikkelin muokkaamisen?",
+	"mobile-editor-abandon-survey-description": "Anonyymi palautteesi auttaa meitä parantamaan artikkelien muokkausta",
+	"mobile-editor-abandon-survey-error": "Valitse syy",
+	"mobile-editor-abandon-survey-success": "Kiitos, kun autoit meitä parantamaan muokkauskokemusta!",
+	"mobile-editor-abandon-survey-submit": "Lähetä palaute",
+	"mobile-editor-abandon-survey-answer-exploring": "Olin vain tutkimassa",
+	"mobile-editor-abandon-survey-answer-notsure": "En tiedä, miten aloittaa muokkaamisen",
+	"mobile-editor-abandon-survey-answer-worried-mistake": "Pelkäsin tekeväni virheen",
+	"mobile-editor-abandon-survey-answer-complicated": "Käyttöliittymä tuntui liian monimutkaiselta",
+	"mobile-editor-abandon-survey-answer-accident": "Painoin muokkauspainiketta vahingossa",
+	"mobile-editor-abandon-survey-answer-error": "Kohtasin teknisen ongelman",
+	"mobile-editor-abandon-survey-answer-other": "Jokin muu syy"
 }

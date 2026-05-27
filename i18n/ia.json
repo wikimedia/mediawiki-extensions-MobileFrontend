@@ -166,5 +166,17 @@
 	"mobile-frontend-user-pref-link": "Aperir preferentias",
 	"mobile-frontend-console-recruit": "Leger plus sur como nos construe nostre sito mobile → https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Optimisar e simplificar paginas special sur apparatos mobile (recommendate)",
-	"prefs-mobile": "Preferentias mobile"
+	"prefs-mobile": "Preferentias mobile",
+	"mobile-editor-abandon-survey-title": "Que te ha impedite de modificar iste articulo?",
+	"mobile-editor-abandon-survey-description": "Tu retroaction anonyme nos adjutara a meliorar le modification",
+	"mobile-editor-abandon-survey-error": "Per favor selige un ration",
+	"mobile-editor-abandon-survey-success": "Gratias pro adjutar a meliorar le experientia de modification!",
+	"mobile-editor-abandon-survey-submit": "Inviar retroaction",
+	"mobile-editor-abandon-survey-answer-exploring": "Io vole solmente explorar",
+	"mobile-editor-abandon-survey-answer-notsure": "Io non es secur como comenciar a modificar",
+	"mobile-editor-abandon-survey-answer-worried-mistake": "Io me preoccupa de facer un error",
+	"mobile-editor-abandon-survey-answer-complicated": "Le interfacie me sembla troppo complexe",
+	"mobile-editor-abandon-survey-answer-accident": "Io ha toccate “Modificar” per accidente",
+	"mobile-editor-abandon-survey-answer-error": "Io ha incontrate un problema technic",
+	"mobile-editor-abandon-survey-answer-other": "Altere cosa"
 }

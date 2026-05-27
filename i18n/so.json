@@ -166,5 +166,17 @@
 	"mobile-frontend-user-pref-link": "Fur dookhyada",
 	"mobile-frontend-console-recruit": "Baro wax badan oo ku saabsan sida aan u dhisno boggayaga mobilka @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Hagaaji oo fududee bogagga gaarka ah marka la isticmaalayo mobilka (lagu talinayo)",
-	"prefs-mobile": "Dookhyada mobilka"
+	"prefs-mobile": "Dookhyada mobilka",
+	"mobile-editor-abandon-survey-title": "Maxaa kaa hor istaagay inaad wax ka beddesho maqaalkan?",
+	"mobile-editor-abandon-survey-description": "Ra’yi-celintaada aan la aqoonsan doonin waxay naga caawin doontaa inaan hagaajino wax ka beddelka",
+	"mobile-editor-abandon-survey-error": "Fadlan dooro sabab",
+	"mobile-editor-abandon-survey-success": "Waad ku mahadsan tahay inaad ka caawisay hagaajinta khibradda wax ka beddelka!",
+	"mobile-editor-abandon-survey-submit": "Gudbi ra'yi-celin",
+	"mobile-editor-abandon-survey-answer-exploring": "Kaliya waan sahminayay",
+	"mobile-editor-abandon-survey-answer-notsure": "Ma hubo sida loo bilaabo wax ka beddelka",
+	"mobile-editor-abandon-survey-answer-worried-mistake": "Ka walwalsan in la sameeyo khalad",
+	"mobile-editor-abandon-survey-answer-complicated": "Is-dhexgalka ayaa u muuqday mid aad u adag",
+	"mobile-editor-abandon-survey-answer-accident": "Waxaan si lama filaan ah u taabtay wax ka beddelka",
+	"mobile-editor-abandon-survey-answer-error": "Waxaan la kulannay dhibaato farsamo",
+	"mobile-editor-abandon-survey-answer-other": "Wax kale"
 }

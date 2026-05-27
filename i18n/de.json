@@ -185,5 +185,17 @@
 	"mobile-frontend-user-pref-link": "Einstellungen öffnen",
 	"mobile-frontend-console-recruit": "Erfahre mehr darüber, wie wir unsere mobile Website erstellen unter https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Spezialseiten auf Mobilgeräten optimieren und vereinfachen (empfohlen)",
-	"prefs-mobile": "Mobileinstellungen"
+	"prefs-mobile": "Mobileinstellungen",
+	"mobile-editor-abandon-survey-title": "Was hat dich daran gehindert, diesen Artikel zu bearbeiten?",
+	"mobile-editor-abandon-survey-description": "Dein anonymes Feedback hilft uns, die Beabeitungsmöglichkeiten zu verbessern.",
+	"mobile-editor-abandon-survey-error": "Bitte wähle einen Grund aus.",
+	"mobile-editor-abandon-survey-success": "Vielen Dank für deine Hilfe bei der Verbesserung des Bearbeitungserlebnisses!",
+	"mobile-editor-abandon-survey-submit": "Feedback senden",
+	"mobile-editor-abandon-survey-answer-exploring": "Einfach mal erkunden",
+	"mobile-editor-abandon-survey-answer-notsure": "Ich bin mir nicht sicher, wie ich mit dem Bearbeiten anfangen soll.",
+	"mobile-editor-abandon-survey-answer-worried-mistake": "Ich mache mir Sorgen, dass ich einen Fehler mache.",
+	"mobile-editor-abandon-survey-answer-complicated": "Die Benutzeroberfläche wirkte zu kompliziert.",
+	"mobile-editor-abandon-survey-answer-accident": "Versehentlich auf „Bearbeiten“ getippt.",
+	"mobile-editor-abandon-survey-answer-error": "Ich bin auf ein technisches Problem gestoßen.",
+	"mobile-editor-abandon-survey-answer-other": "Etwas anderes"
 }

@@ -201,5 +201,17 @@
 	"mobile-frontend-user-pref-link": "환경 설정 열기",
 	"mobile-frontend-console-recruit": "저희가 모바일 사이트를 어떻게 만들어나가는지 더 알아보세요 @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "모바일일 때 특수 문서를 최적화하고 단순화 (권장)",
-	"prefs-mobile": "모바일 환경 설정"
+	"prefs-mobile": "모바일 환경 설정",
+	"mobile-editor-abandon-survey-title": "이 문서의 편집을 그만두게 된 이유는 무엇인가요?",
+	"mobile-editor-abandon-survey-description": "여러분의 익명 피드백은 편집을 개선하는데 도움이 될 것입니다",
+	"mobile-editor-abandon-survey-error": "이유를 선택해 주세요",
+	"mobile-editor-abandon-survey-success": "편집 경험을 개선하는 데 도움이 되어 주셔서 감사합니다!",
+	"mobile-editor-abandon-survey-submit": "피드백 제출",
+	"mobile-editor-abandon-survey-answer-exploring": "그냥 확인해 본 것입니다",
+	"mobile-editor-abandon-survey-answer-notsure": "편집을 어떻게 시작해야 할지 모르겠습니다",
+	"mobile-editor-abandon-survey-answer-worried-mistake": "실수를 할까봐 걱정됩니다",
+	"mobile-editor-abandon-survey-answer-complicated": "인터페이스가 너무 복잡하게 느껴집니다",
+	"mobile-editor-abandon-survey-answer-accident": "실수로 편집하기를 눌렀습니다",
+	"mobile-editor-abandon-survey-answer-error": "기술적인 이슈를 접했습니다",
+	"mobile-editor-abandon-survey-answer-other": "그 외"
 }
