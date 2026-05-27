@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"AhmedG612"
+		]
+	},
+	"apihelp-parse-param-mobileformat": "Soo celi natiijada parsing-ka qaab ku habboon aaladaha mobilka.",
+	"apihelp-parse-param-noimages": "Demi sawirrada ku jira natiijada mobilka.",
+	"apihelp-parse-param-mainpage": "Codso isbeddellada bogga hore ee mobilka.",
+	"apihelp-webapp-manifest-summary": "Waxay soo celisaa muuqaalka webapp-ka."
+}
