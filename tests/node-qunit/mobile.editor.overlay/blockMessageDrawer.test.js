@@ -170,6 +170,29 @@ QUnit.test( 'blockMessageDrawer does not call loadAdditionalModules when no modu
 	assert.true( usingSpy.notCalled, 'mw.loader.using not called when no modules are configured' );
 } );
 
+QUnit.test( 'blockMessageDrawer fires hook with no payload', async ( assert ) => {
+	const hookFireSpy = sinon.spy();
+	sandbox.stub( mw, 'hook' )
+		.callThrough()
+		.withArgs( 'mobileFrontend.blockMessageDrawer.onShow' )
+		.returns( { fire: hookFireSpy, add: sinon.stub() } );
+	mw.config.get.withArgs( 'wgMobileFrontendSourceEditorInitializeModules', [] )
+		.returns( [ 'ext.confirmEdit.hCaptcha' ] );
+
+	const drawer = blockMessageDrawer( {
+		parsedReason: util.Deferred().resolve( '' ).promise()
+	} );
+
+	await drawer.show();
+
+	assert.true( hookFireSpy.calledOnce, 'hook was fired once' );
+	assert.strictEqual(
+		hookFireSpy.firstCall.args.length,
+		0,
+		'hook was fired with no arguments'
+	);
+} );
+
 function assertVisible( drawer ) {
 	sinon.assert.match( drawer.$el.find( '.drawer' )[ 0 ].className, /.*\bvisible\b.*/ );
 }

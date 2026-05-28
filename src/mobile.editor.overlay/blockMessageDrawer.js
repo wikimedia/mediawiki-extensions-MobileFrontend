@@ -124,7 +124,9 @@ module.exports = function blockMessageDrawer( props ) {
 			}
 
 			if ( hasAdditionalModules() ) {
-				loadAdditionalModules();
+				loadAdditionalModules().then(
+					() => mw.hook( 'mobileFrontend.blockMessageDrawer.onShow' ).fire()
+				);
 			}
 		},
 		children: [
