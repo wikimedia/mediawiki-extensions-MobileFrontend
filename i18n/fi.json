@@ -105,7 +105,7 @@
 	"mf-font-size-large-label": "Suuri",
 	"mobile-frontend-generic-404-desc": "Etsimääsi sivua ei löytynyt.",
 	"mobile-frontend-generic-404-title": "Virhe - sivua ei löydy",
-	"mobile-frontend-generic-login-new": "<strong>{{GRAMMAR:partitive|{{SITENAME}}}} rakentavat sinun kaltaisesi ihmiset.</strong><br />Aloita artikkelin muokkaaminen kirjautumalla sisään.",
+	"mobile-frontend-generic-login-new": "<strong>{{GRAMMAR:partitive|{{SITENAME}}}} rakentavat sinun kaltaisesi ihmiset.</strong><br />Aloita muokkaaminen kirjautumalla sisään.",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|Liittyi}} juuri nyt",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|Liittyi}} {{PLURAL:$2|$2 sekunti|$2 sekuntia}} sitten",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|Liittyi}} {{PLURAL:$2|$2 minuutti|$2 minuuttia}} sitten",
