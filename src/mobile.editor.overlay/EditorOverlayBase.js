@@ -634,7 +634,7 @@ class EditorOverlayBase extends Overlay {
 	 */
 	createAnonWarning( options ) {
 		const $topDescription = $( '<p>' ).addClass( 'description' )
-				.text( mw.msg( 'mobile-frontend-editor-anonwarning-soft-description' ) ),
+				.text( mw.msg( 'mobile-frontend-editor-anonwarning-description' ) ),
 			params = util.extend( {
 				returnto: options.returnTo || (
 					// use wgPageName as this includes the namespace if outside Main
@@ -669,7 +669,7 @@ class EditorOverlayBase extends Overlay {
 				loginButton.$el,
 				$( '<div>' )
 					.addClass( 'separator' )
-					.append( $( '<span>' ).text( mw.msg( 'mobile-frontend-editor-anonwarning-soft-separator' ) ) ),
+					.append( $( '<span>' ).text( mw.msg( 'mobile-frontend-editor-anonwarning-separator' ) ) ),
 				publishAnon.$el,
 				$( '<p>' )
 					.addClass( 'publish-description anon-msg' )
