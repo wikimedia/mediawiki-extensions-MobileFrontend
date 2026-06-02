@@ -167,5 +167,7 @@
 	"mobile-frontend-user-pref-link": "غوره توبونه پرانيستل",
 	"mobile-frontend-console-recruit": "دا چې موږ خپل موبايل وېبپاڼه څنگه جوړوو، نور مالومات په @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend کې ترلاسه کړئ.",
 	"mobile-frontend-special-pages-pref": "کله چې موبايل کې ياست؛ نو ځانگړي مخونه سم او ساده کړئ (سپارښتنه شوې)",
-	"prefs-mobile": "موبايل غوره‌توبونه"
+	"prefs-mobile": "موبايل غوره‌توبونه",
+	"mobile-editor-abandon-survey-submit": "غبرگون سپارل",
+	"mobile-editor-abandon-survey-answer-exploring": "يوازې سپړل"
 }

@@ -202,5 +202,17 @@
 	"mobile-frontend-user-pref-link": "Voorkeuren openen",
 	"mobile-frontend-console-recruit": "Leer meer over hoe we onze mobiele website bouwen op https://www.mediawiki.org/wiki/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Optimizer en versimpel speciale pagina's in mobile weergave (aanbevolen)",
-	"prefs-mobile": "Mobiele instellingen"
+	"prefs-mobile": "Mobiele instellingen",
+	"mobile-editor-abandon-survey-title": "Waarom hebt u deze pagina niet bewerkt?",
+	"mobile-editor-abandon-survey-description": "Uw anonieme terugkoppeling helpt ons de bewerkingservaring te verbeteren.",
+	"mobile-editor-abandon-survey-error": "Selecteer een reden",
+	"mobile-editor-abandon-survey-success": "Bedankt voor uw bijdrage aan het verbeteren van de bewerkingservaring!",
+	"mobile-editor-abandon-survey-submit": "Terugkoppeling verzenden",
+	"mobile-editor-abandon-survey-answer-exploring": "Ik ben alleen aan het verkennen",
+	"mobile-editor-abandon-survey-answer-notsure": "Ik weet niet hoe ik moet beginnen met bewerken",
+	"mobile-editor-abandon-survey-answer-worried-mistake": "Ik ben bang om fouten te maken",
+	"mobile-editor-abandon-survey-answer-complicated": "Het leek me te ingewikkeld om te doen",
+	"mobile-editor-abandon-survey-answer-accident": "Ik heb per ongeluk op bewerken geklikt",
+	"mobile-editor-abandon-survey-answer-error": "Ik ben tegen een technisch probleem aangelopen",
+	"mobile-editor-abandon-survey-answer-other": "Iets anders"
 }
