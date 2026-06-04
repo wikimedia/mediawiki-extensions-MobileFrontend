@@ -13,7 +13,7 @@
 	"mobile-frontend-desc": "E ta djuda na midjoria di verson móvel di sáiti MídiaUiki",
 	"mobile-frontend-editor-anon": "Idita sin kuneta",
 	"mobile-frontend-editor-anonwarning": "<strong>Abizu:</strong> Bu ka sta kunetadu. Di es manera, bu nderésu di IP ta fika vizívi publikamenti si bu fasi kolker idison. Si bu <strong>kuneta</strong> o <strong>kiria un kónta</strong>, bus idison ta ser markadu so ku bu nómi di uzuári, i bu inda podi purbeta otus binifísi.",
-	"mobile-frontend-editor-anonwarning-soft-separator": "o",
+	"mobile-frontend-editor-anonwarning-separator": "o",
 	"mobile-frontend-editor-autocreatewarning-soft-publish-description": "Si bu publika, un [[$1|kónta tenpurári]] ta ser kiriadu pa bo.",
 	"mobile-frontend-editor-autocreatewarning": "<strong>Abizu:</strong> Bu ka sta kunetadu. Si bu fasi un idison, un kónta tenpurári ta ser kiriadu pa bo. [[$1|Sabe más]]. <strong>Kuneta</strong> o <strong>kiria un kónta</strong> pa bu kuntinua ta rasibi nutifikasons dispos ki kónta tenpurári spira, i pa asesa otus funsonalidadi.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Kuneta",

@@ -35,7 +35,7 @@
 	"mobile-frontend-desc": "मीडियाविकि उदाहरण की मोबाइल पर उपस्थिति को बेहतर बनाने में मदद करता है",
 	"mobile-frontend-editor-anon": "लॉग-इन किए बिना सम्पादित करें",
 	"mobile-frontend-editor-anonwarning": "<strong>चेतावनी:</strong> आपने लॉग-इन नहीं किया है। अगर आप सम्पादन करते हैं तो इस पृष्ठ के संपादन इतिहास में आपका IP पता दृश्य होगा। अगर आप <strong>लॉग-इन</strong> करते हैं या <strong>खाता बनाते हैं</strong> तो दूसरे सुविधाओं के साथ-साथ आपके सम्पादनों का श्रेय आपके सदस्यनाम पर दिया जाएगा।",
-	"mobile-frontend-editor-anonwarning-soft-separator": "या",
+	"mobile-frontend-editor-anonwarning-separator": "या",
 	"mobile-frontend-editor-autocreatewarning-soft-publish-description": "एक बार प्रकाशित करने के बाद आपके लिए एक [[$1|अस्थायी खाता]] बना दिया जाएगा।",
 	"mobile-frontend-editor-autocreatewarning": "<strong>चेतावनी:</strong> आपने लॉग-इन नहीं किया हुआ है। कोई भी सम्पादन करने पर आपके लिए एक अस्थायी खाता बना दिया जाएगा। [[$1|अधिक जानें]]। इस खाते के समाप्त हो जाने के बाद भी अधिसूचनाएँ प्राप्त करते रहने और दूसरी सुविधाओं तक पहुँचने के लिए <strong>लॉग-इन करें</strong> या फिर <strong>एक खाता बनाएँ</strong>।",
 	"mobile-frontend-editor-blocked-drawer-action-login": "लॉग-इन करें",
