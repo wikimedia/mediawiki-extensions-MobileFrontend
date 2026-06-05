@@ -363,7 +363,7 @@ QUnit.test( 'When AF filter prevents an edit the UI goes back to the summary scr
 	);
 
 	mw.hook( 'confirmEdit.hCaptcha.challengeClosed' ).fire( {
-		sourceInterfaceName: 'mobilefrontend-editor'
+		sourceInterfaceName: 'mobilefrontendeditor'
 	} );
 
 	assert.true(
@@ -387,7 +387,7 @@ QUnit.test( 'Closing a non-AF captcha does not return to the summary screen', ( 
 	const onStageChangesSpy = sandbox.spy( editorOverlay, 'onStageChanges' );
 
 	mw.hook( 'confirmEdit.hCaptcha.challengeClosed' ).fire( {
-		sourceInterfaceName: 'mobilefrontend-editor'
+		sourceInterfaceName: 'mobilefrontendeditor'
 	} );
 
 	assert.false(

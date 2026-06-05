@@ -12,7 +12,7 @@ const mobile = require( 'mobile.startup' ),
 	currentPage = mobile.currentPage,
 	CAPTCHA_PANEL = 'captcha-panel';
 
-const INTERFACE_NAME = 'mobilefrontend-editor';
+const INTERFACE_NAME = 'mobilefrontendeditor';
 
 /**
  * @ignore
