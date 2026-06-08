@@ -166,5 +166,17 @@
 	"mobile-frontend-user-pref-link": "Отвори нагодувања",
 	"mobile-frontend-console-recruit": "Дознајте повеќе за тоа како го градиме нашиот мобилен портал на https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Оптимизирај и упрости ги службените страници од мобилен уред (препорачано)",
-	"prefs-mobile": "Мобилни нагодувања"
+	"prefs-mobile": "Мобилни нагодувања",
+	"mobile-editor-abandon-survey-title": "Што ве спречи да ја уредите статијава?",
+	"mobile-editor-abandon-survey-description": "Вашите анонимни мислења ни помагаат да го подобриме уредувањето",
+	"mobile-editor-abandon-survey-error": "Изберете причина",
+	"mobile-editor-abandon-survey-success": "Ви благодариме што ни помагате да го подобриме уредувањето!",
+	"mobile-editor-abandon-survey-submit": "Поднеси мислење",
+	"mobile-editor-abandon-survey-answer-exploring": "Само разгледувам",
+	"mobile-editor-abandon-survey-answer-notsure": "Не знам како да почнам со уредување",
+	"mobile-editor-abandon-survey-answer-worried-mistake": "Се плашам дека ќе направам грешка",
+	"mobile-editor-abandon-survey-answer-complicated": "Посредникот делува многу сложено",
+	"mobile-editor-abandon-survey-answer-accident": "Случајно допрев на „Уреди“",
+	"mobile-editor-abandon-survey-answer-error": "Наидов на технички проблем",
+	"mobile-editor-abandon-survey-answer-other": "Нешто друго"
 }

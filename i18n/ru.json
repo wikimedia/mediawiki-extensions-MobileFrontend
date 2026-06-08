@@ -148,7 +148,7 @@
 	"mobile-frontend-language-heading": "<strong>Языки</strong>",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Предлагаемые языки",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Другие языки",
-	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Искать язык",
+	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Найти язык",
 	"mobile-frontend-languages-structured-overlay-no-results": "Язык недоступен",
 	"mobile-frontend-languages-structured-overlay-error": "Произошла ошибка при загрузке языков на этой странице.",
 	"mobile-frontend-languages-structured-overlay-no-results-body": "Язык, который вы ищете, недоступен.",
