@@ -205,5 +205,17 @@
 	"mobile-frontend-user-pref-link": "افتح التفضيلات",
 	"mobile-frontend-console-recruit": "مزيد من المعلومات حول كيفية إنشاء موقع للجوال @\nhttps://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "تحسين وتبسيط الصفحات الخاصة عند استخدام المحمول (موصى به)",
-	"prefs-mobile": "تفضيلات المحمول"
+	"prefs-mobile": "تفضيلات المحمول",
+	"mobile-editor-abandon-survey-title": "ما الذي منعك من تعديل هذه المقالة؟",
+	"mobile-editor-abandon-survey-description": "ستساعدنا ملاحظاتك المجهولة على تحسين عملية التحرير.",
+	"mobile-editor-abandon-survey-error": "الرجاء تحديد سبب.",
+	"mobile-editor-abandon-survey-success": "نشكرك على مساعدتنا في تحسين تجربة التحرير!",
+	"mobile-editor-abandon-survey-submit": "إرسال الملاحظات.",
+	"mobile-editor-abandon-survey-answer-exploring": "أستكشف المقالات فحسب.",
+	"mobile-editor-abandon-survey-answer-notsure": "لست متأكداً من كيفية بدء التحرير.",
+	"mobile-editor-abandon-survey-answer-worried-mistake": "أخشى ارتكاب خطأ.",
+	"mobile-editor-abandon-survey-answer-complicated": "واجهة المستخدم معقدة للغاية.",
+	"mobile-editor-abandon-survey-answer-accident": "ضغطت على زر التحرير بالخطأ.",
+	"mobile-editor-abandon-survey-answer-error": "واجهت مشكلة تقنية.",
+	"mobile-editor-abandon-survey-answer-other": "سبب آخر."
 }

@@ -215,5 +215,17 @@
 	"mobile-frontend-user-pref-link": "Configurar preferencias",
 	"mobile-frontend-console-recruit": "Para saber más sobre cómo hemos creado nuestro sitio para móviles: https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Optimiza y simplifica páginas especiales en dispositivos móviles (recomendado)",
-	"prefs-mobile": "Preferencias móviles"
+	"prefs-mobile": "Preferencias móviles",
+	"mobile-editor-abandon-survey-title": "¿Qué te ha impedido editar este artículo?",
+	"mobile-editor-abandon-survey-description": "Tu comentario anónimo nos ayudará a mejorar la edición",
+	"mobile-editor-abandon-survey-error": "Selecciona un motivo",
+	"mobile-editor-abandon-survey-success": "¡Gracias por ayudar a mejorar la experiencia de edición!",
+	"mobile-editor-abandon-survey-submit": "Enviar comentarios",
+	"mobile-editor-abandon-survey-answer-exploring": "Solo estaba explorando",
+	"mobile-editor-abandon-survey-answer-notsure": "No sé cómo empezar a editar",
+	"mobile-editor-abandon-survey-answer-worried-mistake": "Me da miedo cometer un error",
+	"mobile-editor-abandon-survey-answer-complicated": "La interfaz me ha parecido demasiado complicada",
+	"mobile-editor-abandon-survey-answer-accident": "He pulsado editar por accidente",
+	"mobile-editor-abandon-survey-answer-error": "He tenido un problema técnico",
+	"mobile-editor-abandon-survey-answer-other": "Otro motivo"
 }

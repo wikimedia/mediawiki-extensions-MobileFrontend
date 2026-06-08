@@ -207,5 +207,17 @@
 	"mobile-frontend-user-pref-link": "開啟偏好設定",
 	"mobile-frontend-console-recruit": "瞭解更多有關我們如何構造移動網站的詳情，請參見：https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "在手機上最佳化且簡化特殊頁面（建議）",
-	"prefs-mobile": "行動版偏好設定"
+	"prefs-mobile": "行動版偏好設定",
+	"mobile-editor-abandon-survey-title": "是什麼原因讓您沒有編輯這篇文章？",
+	"mobile-editor-abandon-survey-description": "您匿名提供的意見回饋將協助我們改善編輯體驗",
+	"mobile-editor-abandon-survey-error": "請選擇原因",
+	"mobile-editor-abandon-survey-success": "感謝您協助改善編輯體驗！",
+	"mobile-editor-abandon-survey-submit": "送出回饋",
+	"mobile-editor-abandon-survey-answer-exploring": "只是隨便看看",
+	"mobile-editor-abandon-survey-answer-notsure": "不確定怎麼開始編輯",
+	"mobile-editor-abandon-survey-answer-worried-mistake": "擔心會出錯",
+	"mobile-editor-abandon-survey-answer-complicated": "覺得介面太複雜",
+	"mobile-editor-abandon-survey-answer-accident": "不小心點到編輯",
+	"mobile-editor-abandon-survey-answer-error": "遇到技術問題",
+	"mobile-editor-abandon-survey-answer-other": "其他原因"
 }

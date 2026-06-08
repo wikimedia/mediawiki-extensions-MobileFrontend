@@ -188,5 +188,17 @@
 	"mobile-frontend-user-pref-link": "Mở tùy chọn",
 	"mobile-frontend-console-recruit": "Tìm hiểu thêm về cách chúng tôi xây dựng trang di động @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Tối ưu hóa và đơn giản hóa các trang đặc biệt trên thiết bị di động (khuyến khích)",
-	"prefs-mobile": "Tùy chọn di động"
+	"prefs-mobile": "Tùy chọn di động",
+	"mobile-editor-abandon-survey-title": "Điều gì đã ngăn bạn chỉnh sửa bài viết này?",
+	"mobile-editor-abandon-survey-description": "Phản hồi ẩn danh của bạn sẽ giúp chúng tôi cải thiện quá trình chỉnh sửa",
+	"mobile-editor-abandon-survey-error": "Vui lòng chọn lý do",
+	"mobile-editor-abandon-survey-success": "Cảm ơn bạn đã giúp chúng tôi cải thiện trải nghiệm chỉnh sửa!",
+	"mobile-editor-abandon-survey-submit": "Gửi phản hồi",
+	"mobile-editor-abandon-survey-answer-exploring": "Chỉ đang khám phá",
+	"mobile-editor-abandon-survey-answer-notsure": "Không biết cách nào để bắt đầu chỉnh sửa",
+	"mobile-editor-abandon-survey-answer-worried-mistake": "Lo lắng về việc mắc lỗi",
+	"mobile-editor-abandon-survey-answer-complicated": "Cảm thấy giao diện quá phức tạp",
+	"mobile-editor-abandon-survey-answer-accident": "Nhấn nhầm vào nút chỉnh sửa",
+	"mobile-editor-abandon-survey-answer-error": "Gặp sự cố kỹ thuật",
+	"mobile-editor-abandon-survey-answer-other": "Lý do khác"
 }

@@ -203,5 +203,17 @@
 	"mobile-frontend-user-pref-link": "個人設定を開く",
 	"mobile-frontend-console-recruit": "モバイルサイトの構築方法の詳細については、https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend をご覧ください。",
 	"mobile-frontend-special-pages-pref": "モバイル端末の時、特別ページを最適化・簡素化します（推奨）",
-	"prefs-mobile": "モバイル設定"
+	"prefs-mobile": "モバイル設定",
+	"mobile-editor-abandon-survey-title": "この記事の編集をやめた理由は何ですか？",
+	"mobile-editor-abandon-survey-description": "匿名でのご意見は編集機能の改善に役立ちます",
+	"mobile-editor-abandon-survey-error": "理由を選択してください",
+	"mobile-editor-abandon-survey-success": "編集体験の向上にご協力いただきありがとうございます！",
+	"mobile-editor-abandon-survey-submit": "フィードバックを送信",
+	"mobile-editor-abandon-survey-answer-exploring": "ただ見ていただけ",
+	"mobile-editor-abandon-survey-answer-notsure": "編集の始め方が分からなかった",
+	"mobile-editor-abandon-survey-answer-worried-mistake": "間違えるのが不安だった",
+	"mobile-editor-abandon-survey-answer-complicated": "インターフェースが複雑すぎた",
+	"mobile-editor-abandon-survey-answer-accident": "誤って「編集」をタップしてしまった",
+	"mobile-editor-abandon-survey-answer-error": "技術的な問題が発生した",
+	"mobile-editor-abandon-survey-answer-other": "その他"
 }
