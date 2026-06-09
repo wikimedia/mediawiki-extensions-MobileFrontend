@@ -334,6 +334,7 @@ QUnit.test( 'When AF filter prevents an edit the UI goes back to the summary scr
 		.add( ( payload ) => payload.stop() );
 
 	const onStageChangesSpy = sandbox.spy( editorOverlay, 'onStageChanges' );
+	const showHiddenSpy = sandbox.spy( editorOverlay, 'showHidden' );
 
 	editorOverlay.onSaveFailure( {
 		edit: {
@@ -369,6 +370,11 @@ QUnit.test( 'When AF filter prevents an edit the UI goes back to the summary scr
 	assert.true(
 		onStageChangesSpy.calledOnce,
 		'onStageChanges should be called when AF captcha is closed unsolved'
+	);
+	assert.strictEqual(
+		showHiddenSpy.lastCall.args[ 0 ],
+		'.save-header, .save-panel, .captcha-panel',
+		'showHidden should be called with the captcha panel specified'
 	);
 	assert.false(
 		areButtonsDisabled(),
