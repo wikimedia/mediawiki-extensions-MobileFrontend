@@ -967,6 +967,7 @@ class SourceEditorOverlay extends EditorOverlayBase {
 		if ( this.solvingAbuseFilterCaptcha ) {
 			this.solvingAbuseFilterCaptcha = false;
 			this.onStageChanges();
+			this.showHidden( '.save-header, .save-panel, .captcha-panel' );
 		}
 	}
 
