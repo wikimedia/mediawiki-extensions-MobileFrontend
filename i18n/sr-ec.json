@@ -180,5 +180,9 @@
 	"mobile-frontend-user-pref-link": "Отвори подешавања",
 	"mobile-frontend-console-recruit": "Сазнајте више о томе како изграђујемо сајт за мобилне уређаје @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Оптимизуј и поједностави посебне странице на мобилном уређају (препоручује се)",
-	"prefs-mobile": "Подешавања за мобилне уређаје"
+	"prefs-mobile": "Подешавања за мобилне уређаје",
+	"mobile-editor-abandon-survey-error": "Изаберите разлог",
+	"mobile-editor-abandon-survey-submit": "Проследи повратне информације",
+	"mobile-editor-abandon-survey-answer-exploring": "Само разгледам",
+	"mobile-editor-abandon-survey-answer-other": "Нешто друго"
 }

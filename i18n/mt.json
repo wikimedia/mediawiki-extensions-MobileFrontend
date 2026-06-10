@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Chrisportelli",
+			"JiodoJ",
 			"Leli Forte",
 			"MTSap",
 			"ToniSant"
@@ -21,7 +22,7 @@
 	"mobile-frontend-save-settings": "Salva",
 	"mobile-frontend-terms-text": "Termini tal-użu",
 	"mobile-frontend-view": "Verżjoni għall-mowbajl",
-	"mobile-frontend-view-desktop": "Desktop",
+	"mobile-frontend-view-desktop": "Veduta Desktop",
 	"mobile-frontend-watchlist-filter-all": "Kollha",
 	"mobile-frontend-watchlist-filter-articles": "Artikli",
 	"mobile-frontend-watchlist-filter-other": "Oħrajn",
