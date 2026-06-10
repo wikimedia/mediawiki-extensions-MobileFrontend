@@ -23,7 +23,7 @@
 	"mobile-frontend-edit-login-action": "<strong>Pomôžte vylepšiť {{grammar:4sg|{{SITENAME}}}}.</strong><br />Pre editáciu sa prihláste.",
 	"mobile-frontend-edit-signup-action": "<strong>Pomôžte vylepšiť {{grammar:4sg|{{SITENAME}}}}.</strong><br />Pre editáciu sa zaregistrujte.",
 	"mobile-frontend-editor-anon": "Editovať bez prihlásenia",
-	"mobile-frontend-editor-anonwarning": "<strong>Varovanie</strong>: Nie ste prihlásený/á. Ak uložíte akúkoľvek úpravu, vaša IP adresa bude zverejnená v histórii tejto stránky. Ak sa <strong>prihlásite</strong> alebo si <strong>vytvoríte účet</strong>, vaše úpravy budú priradené k vášmu používateľskému menu a získate i ďalšie výhody.",
+	"mobile-frontend-editor-anonwarning": "<strong>Upozornenie:</strong> Nie ste prihlásený/á. Ak vykonáte akékoľvek úpravy, vaša IP adresa bude verejne viditeľná. Ak sa <strong>prihlásite</strong> alebo si <strong>vytvoríte účet</strong>, vaše úpravy budú priradené k vášmu používateľskému menu a získate aj ďalšie výhody.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Prihlásiť sa",
 	"mobile-frontend-drawer-arrow-label": "Zatvoriť",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "OK",

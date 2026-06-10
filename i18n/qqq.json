@@ -42,7 +42,8 @@
 			"Wellwisher",
 			"Yekrats",
 			"Ата",
-			"아라"
+			"아라",
+			"Stjn"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "AbuseFilter extension rule variable that allows distinguishing edits based on if they have been made using the editor of MobileFrontend or not.\n\nParameters:\n* $1 - text that will be inserted into the filter code editor",
@@ -131,7 +132,7 @@
 	"mobile-frontend-language-heading": "The title for the list of languages for a page.\n{{Identical|Language}}",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Title of the suggested languages in the structured language overlay. The text will be upper-cased with JS and CSS.\nSee also {{msg-wm|uls-uls-common-languages}}",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Title of all languages in the structured language overlay. The text will be upper-cased with JS and CSS.",
-	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Instructional text for the language overlay search input box",
+	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Instructional text for the language overlay search input box. ''Search'' is a verb here.\n\n{{Identical|Search languages}}",
 	"mobile-frontend-languages-structured-overlay-no-results": "Shown when language search failed to find any matching languages",
 	"mobile-frontend-languages-structured-overlay-error": "Error shown to user when languages fail to load through no fault of their own.",
 	"mobile-frontend-languages-structured-overlay-no-results-body": "Explanation message shown when language search failed to find any matching languages",
