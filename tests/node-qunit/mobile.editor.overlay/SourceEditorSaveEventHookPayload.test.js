@@ -1,4 +1,5 @@
-const SourceEditorSaveEventHookPayload = require( '../../../src/mobile.editor.overlay/SourceEditorSaveEventHookPayload' );
+const SourceEditorSaveEventHookPayload = require( '../../../src/mobile.editor.overlay/SourceEditorSaveEventHookPayload' ),
+	sinon = require( 'sinon' );
 
 QUnit.test( 'SourceEditorSaveEventHookPayload', async ( assert ) => {
 	const options = { captchaId: 'foo' };
@@ -6,6 +7,8 @@ QUnit.test( 'SourceEditorSaveEventHookPayload', async ( assert ) => {
 
 	let resumeCalled = false;
 	let newOptions = {};
+	let abortCalled = false;
+	let actualAbortMessage = '';
 
 	const payload = new SourceEditorSaveEventHookPayload(
 		{ id: '123' },
@@ -14,12 +17,17 @@ QUnit.test( 'SourceEditorSaveEventHookPayload', async ( assert ) => {
 		( param ) => {
 			newOptions = param;
 			resumeCalled = true;
+		},
+		( abortMessage ) => {
+			actualAbortMessage = abortMessage;
+			abortCalled = true;
 		}
 	);
 
 	assert.deepEqual( payload.currentPage, { id: '123' } );
 	assert.strictEqual( payload.readOnly, true );
 	assert.strictEqual( payload.isStopped(), false );
+	assert.strictEqual( payload.isAborted(), false );
 	assert.strictEqual( payload.options, options );
 	assert.strictEqual( resumeCalled, false );
 
@@ -28,6 +36,7 @@ QUnit.test( 'SourceEditorSaveEventHookPayload', async ( assert ) => {
 	assert.deepEqual( payload.currentPage, { id: '123' } );
 	assert.strictEqual( payload.readOnly, true );
 	assert.strictEqual( payload.isStopped(), true );
+	assert.strictEqual( payload.isAborted(), false );
 	assert.strictEqual( payload.options, options );
 	assert.strictEqual( resumeCalled, false );
 
@@ -36,8 +45,51 @@ QUnit.test( 'SourceEditorSaveEventHookPayload', async ( assert ) => {
 	assert.deepEqual( payload.currentPage, { id: '123' } );
 	assert.strictEqual( payload.readOnly, true );
 	assert.strictEqual( payload.isStopped(), false );
+	assert.strictEqual( payload.isAborted(), false );
 	assert.strictEqual( newOptions, expectedNewOptions );
 	assert.strictEqual( resumeCalled, true );
+
+	payload.abort( 'Abort message' );
+
+	assert.deepEqual( payload.currentPage, { id: '123' } );
+	assert.strictEqual( payload.readOnly, true );
+	assert.strictEqual( payload.isStopped(), false );
+	assert.strictEqual( payload.isAborted(), true );
+	assert.strictEqual( actualAbortMessage, 'Abort message' );
+	assert.strictEqual( abortCalled, true );
+} );
+
+QUnit.test( 'resume and abort are a no-op if abort has already been called', async ( assert ) => {
+	const sandbox = sinon.createSandbox();
+
+	const resumeStub = sandbox.stub();
+	const abortStub = sandbox.stub();
+
+	const payload = new SourceEditorSaveEventHookPayload(
+		{ id: '123' },
+		true,
+		{},
+		resumeStub,
+		abortStub
+	);
+
+	assert.strictEqual( payload.isStopped(), false );
+	assert.strictEqual( payload.isAborted(), false );
+
+	payload.abort( 'Test' );
+	payload.abort( 'Test2' );
+	payload.resume( {} );
+
+	assert.strictEqual( payload.isStopped(), false );
+	assert.strictEqual( payload.isAborted(), true );
+	assert.true(
+		abortStub.calledOnce,
+		'Abort callback should have been called once'
+	);
+	assert.true(
+		resumeStub.notCalled,
+		'Resume callback should have not been called'
+	);
 } );
 
 QUnit.test( 'SourceEditorSaveEventHookPayload#setTemplate stores template, args and callback', ( assert ) => {
