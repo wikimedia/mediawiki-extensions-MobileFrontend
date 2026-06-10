@@ -640,12 +640,13 @@ class SourceEditorOverlay extends EditorOverlayBase {
 				this.currentPage,
 				this.readOnly,
 				options,
-				this._performSaveRequest.bind( this )
+				this._performSaveRequest.bind( this ),
+				this.onSaveAbort.bind( this )
 			);
 
 			mw.hook( 'mobileFrontend.sourceEditor.saveBegin' ).fire( payload );
 
-			if ( payload.isStopped() ) {
+			if ( payload.isStopped() || payload.isAborted() ) {
 				wasStopped = true;
 				return;
 			}
@@ -777,6 +778,19 @@ class SourceEditorOverlay extends EditorOverlayBase {
 	}
 
 	/**
+	 * Handles an aborted save, which happens when an error is encountered before submission of the
+	 * edit and that requires the user to press "Save changes" again to restart their edit
+	 *
+	 * @param {string} abortMessage HTML to be displayed as an error to the user
+	 * @return {void}
+	 */
+	onSaveAbort( abortMessage ) {
+		this._setSubmitButtonsDisabledProperty( false );
+		this.reportError( abortMessage );
+		this.showHidden( '.save-header, .save-panel' );
+	}
+
+	/**
 	 * @inheritdoc
 	 */
 	handleCaptcha( details, saveOptions ) {
@@ -792,7 +806,8 @@ class SourceEditorOverlay extends EditorOverlayBase {
 					captchaWord: resumeArgs.captchaWord,
 					isRespondingToForcedCaptcha: true
 				} ) );
-			}
+			},
+			this.onSaveAbort.bind( this )
 		);
 
 		if ( this._runHandleCaptchaHook( payload, details ) ) {
@@ -910,7 +925,7 @@ class SourceEditorOverlay extends EditorOverlayBase {
 	_runHandleCaptchaHook( payload, details ) {
 		mw.hook( 'mobileFrontend.sourceEditor.handleCaptcha' ).fire( payload, details, this.$el );
 
-		if ( !payload.isStopped() ) {
+		if ( !payload.isStopped() && !payload.isAborted() ) {
 			return true;
 		}
 

@@ -317,6 +317,27 @@ QUnit.test( '#handleCaptcha, calls afterRender callback when hook sets template'
 	assert.true( afterRender.calledOnce, 'afterRender callback called after template render' );
 } );
 
+QUnit.test( '#onSaveAbort hides the saving panel and shows the error', ( assert ) => {
+	const editorOverlay = new SourceEditorOverlay( { title: 'test', sectionId: '0' } );
+	const reportErrorStub = sandbox.stub( EditorOverlayBase.prototype, 'reportError' );
+	const showHiddenStub = sandbox.stub( EditorOverlayBase.prototype, 'showHidden' );
+
+	editorOverlay.onSaveAbort( 'Testing error' );
+
+	assert.true( reportErrorStub.calledOnce, 'reportError should be called by onSaveAbort' );
+	assert.strictEqual(
+		reportErrorStub.firstCall.args[ 0 ],
+		'Testing error',
+		'reportError call should have been provided the abort error message'
+	);
+	assert.true( showHiddenStub.calledOnce, 'showHidden should be called by onSaveAbort' );
+	assert.strictEqual(
+		showHiddenStub.firstCall.args[ 0 ],
+		'.save-header, .save-panel',
+		'showHidden should show the non-saving state'
+	);
+} );
+
 QUnit.test( 'When AF filter prevents an edit the UI goes back to the summary screen', ( assert ) => {
 	mw.hook = makeFakeHookRegistry();
 

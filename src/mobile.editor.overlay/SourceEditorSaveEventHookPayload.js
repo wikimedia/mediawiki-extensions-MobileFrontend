@@ -13,13 +13,16 @@ class SourceEditorSaveEventHookPayload {
 	 * @param {boolean} readOnly
 	 * @param {Object} options
 	 * @param {callback} resumeCallback
+	 * @param {callback} abortCallback
 	 */
-	constructor( currentPage, readOnly, options, resumeCallback ) {
+	constructor( currentPage, readOnly, options, resumeCallback, abortCallback ) {
 		this._stopped = false;
+		this._aborted = false;
 		this.currentPage = currentPage;
 		this.readOnly = readOnly;
 		this.options = options;
 		this.resumeCallback = resumeCallback;
+		this.abortCallback = abortCallback;
 		this.templates = {};
 		this.templateRenderedCallback = {};
 		this.templateArgs = {};
@@ -52,9 +55,39 @@ class SourceEditorSaveEventHookPayload {
 	 * @returns {void}
 	 */
 	resume( newOptions ) {
+		if ( this._aborted ) {
+			return;
+		}
+
 		this._stopped = false;
 
 		this.resumeCallback( newOptions );
+	}
+
+	/**
+	 * Returns whether the save has been aborted
+	 *
+	 * @return {boolean}
+	 */
+	isAborted() {
+		return this._aborted;
+	}
+
+	/**
+	 * This method is used by hook handlers to abort the save flow, which means that
+	 * the user will need to press "Save changes" again to proceed with the edit
+	 *
+	 * @param {string} abortMessage HTML text to be used as an error to describe
+	 *   why the save was aborted
+	 * @return {void}
+	 */
+	abort( abortMessage ) {
+		if ( this._aborted ) {
+			return;
+		}
+
+		this._aborted = true;
+		this.abortCallback( abortMessage );
 	}
 
 	/**
