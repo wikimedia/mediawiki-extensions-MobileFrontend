@@ -246,5 +246,17 @@
 	"mobile-frontend-user-pref-link": "打开参数设置",
 	"mobile-frontend-console-recruit": "了解有关我们如何搭建移动版网站的更多详情，请参见：https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "优化并简化移动端的特殊页面（推荐）",
-	"prefs-mobile": "移动版参数设置"
+	"prefs-mobile": "移动版参数设置",
+	"mobile-editor-abandon-survey-title": "是什么原因让您没有编辑此条目？",
+	"mobile-editor-abandon-survey-description": "您的匿名反馈将帮助我们改进编辑体验",
+	"mobile-editor-abandon-survey-error": "请选择原因",
+	"mobile-editor-abandon-survey-success": "感谢您帮助改善编辑体验！",
+	"mobile-editor-abandon-survey-submit": "提交反馈",
+	"mobile-editor-abandon-survey-answer-exploring": "只是随便看看",
+	"mobile-editor-abandon-survey-answer-notsure": "不确定怎么开始编辑",
+	"mobile-editor-abandon-survey-answer-worried-mistake": "担心会出错",
+	"mobile-editor-abandon-survey-answer-complicated": "感觉界面太复杂",
+	"mobile-editor-abandon-survey-answer-accident": "不小心点到编辑",
+	"mobile-editor-abandon-survey-answer-error": "遇到技术问题",
+	"mobile-editor-abandon-survey-answer-other": "其他原因"
 }
