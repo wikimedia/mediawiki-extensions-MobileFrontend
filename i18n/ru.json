@@ -59,7 +59,8 @@
 			"Дмитрий",
 			"Vonavy",
 			"Engineer56",
-			"Etonkovidova"
+			"Etonkovidova",
+			"Mitte27"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Редактирует ли участник через мобильный интерфейс ($1)",
@@ -146,7 +147,7 @@
 	"mobile-frontend-language-heading": "<strong>Языки</strong>",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Предлагаемые языки",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Другие языки",
-	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Поиск языка",
+	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Найти язык",
 	"mobile-frontend-languages-structured-overlay-no-results": "Язык недоступен",
 	"mobile-frontend-languages-structured-overlay-error": "Произошла ошибка при загрузке языков на этой странице.",
 	"mobile-frontend-languages-structured-overlay-no-results-body": "Язык, который вы ищете, недоступен.",
