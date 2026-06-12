@@ -42,7 +42,8 @@
 			"ネイ",
 			"ブラックチャック",
 			"珍庵",
-			"組曲師"
+			"組曲師",
+			"Tensama0415"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "利用者が携帯機器版インターフェイスで編集しているかどうか（$1）",
@@ -104,7 +105,7 @@
 	"mobile-frontend-editor-loading": "エディタの読み込み中...",
 	"mobile-frontend-editor-loadingtooslow": "接続が遅いですか？",
 	"mobile-frontend-editor-loadbasiceditor": "ソースエディターに切り替える",
-	"mobile-frontend-editor-toload": "エディターを読み込んでいます。このメッセージが引き続き表示される場合、[$1 ページを再読み込み]してください。",
+	"mobile-frontend-editor-toload": "エディターを読み込んでいます。このメッセージが引き続き表示される場合、[$1 ページを更新]してください。",
 	"mf-expand-sections-description": "未設定状態ではコンテンツページの節を常に展開する。",
 	"mf-expand-sections-name": "すべての節を展開",
 	"mf-expand-sections-0-label": "既定で折りたたむ",

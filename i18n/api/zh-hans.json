@@ -4,9 +4,11 @@
 			"D41D8CD98F",
 			"Hudafu",
 			"Liuxinyu970226",
-			"Xzonn"
+			"Xzonn",
+			"GuoPC"
 		]
 	},
+	"apihelp-edit-param-editorinterface": "所用编辑器界面的名称（例如MobileFrontend-SourceEditor）",
 	"apihelp-parse-param-mobileformat": "以适配移动设备的格式返回解析输出。",
 	"apihelp-parse-param-noimages": "在移动输出中禁用图片。",
 	"apihelp-parse-param-mainpage": "应用移动首页转换。",

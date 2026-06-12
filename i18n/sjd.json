@@ -33,6 +33,7 @@
 	"mobile-frontend-joined-months": "{{GENDER:$1|Се̄брэ}} {{PLURAL:$2|$2 ма̄нн|$2 ма̄н|$2 ма̄ннэ}} маӈас",
 	"mobile-frontend-joined-years": "{{GENDER:$1|Се̄брэ}} {{PLURAL:$2|$2 ыгкь|$2 ыгь|$2 ыгке}} маӈас",
 	"mobile-frontend-language-heading": "Кӣл",
+	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Этткма кӣл",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Мудта кӣл",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "О̄дзэ кӣл",
 	"mobile-frontend-last-modified-date": "Лысст маӈьмусс вуэр воа̄йхувэ $1 $2 ч.",
