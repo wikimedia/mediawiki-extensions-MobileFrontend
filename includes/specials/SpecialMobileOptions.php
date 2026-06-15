@@ -171,7 +171,7 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 			Html::openElement( 'li' ) .
 			Html::rawElement(
 				'a',
-				[ 'href' => Title::newFromText( 'Special:Preferences' )->getLocalURL() ],
+				[ 'href' => Title::makeTitle( NS_SPECIAL, 'Preferences' )->getLocalURL() ],
 				$this->msg( 'mobile-frontend-user-pref-link' )->parse()
 			) .
 			Html::closeElement( 'li' ) .

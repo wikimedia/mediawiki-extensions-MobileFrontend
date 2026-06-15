@@ -135,7 +135,7 @@ class MobilePageTest extends MediaWikiIntegrationTestCase {
 	 * @return Title
 	 */
 	private function createTestTitle() {
-		return Title::newFromText( 'Image', NS_MAIN );
+		return Title::makeTitle( NS_MAIN, 'Image' );
 	}
 
 	/**

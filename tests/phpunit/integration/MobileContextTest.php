@@ -360,7 +360,7 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 			MainConfigNames::ScriptPath => '/w',
 		] );
 		$context = $this->makeContext( $url );
-		$context->getContext()->setTitle( Title::newFromText( $page ) );
+		$context->getContext()->setTitle( Title::makeTitle( NS_MAIN, $page ) );
 		$context->checkToggleView();
 		$context->doToggling();
 		$location = $context->getOutput()->getRedirect();

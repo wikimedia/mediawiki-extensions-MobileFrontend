@@ -43,8 +43,9 @@ class MobileCollectionTest extends MediaWikiIntegrationTestCase {
 	 * @covers ::getIterator
 	 */
 	public function testGetIterator() {
+		$expected = Title::makeTitle( NS_MAIN, 'Page_test' );
 		$mobilePage = new MobilePage(
-			Title::newFromText( 'Page_test', NS_MAIN ), false
+			$expected, false
 		);
 
 		$mobileCollection = new MobileCollection();
@@ -57,9 +58,6 @@ class MobileCollectionTest extends MediaWikiIntegrationTestCase {
 
 		$actual = $mobileCollection->count();
 		$this->assertSame( 3, $actual );
-
-		// Create a page of type Title and assert on it.
-		$expected = Title::newFromText( 'Page_test', NS_MAIN );
 
 		foreach ( $mobileCollection as $mbPage ) {
 			$actual = $mbPage->getTitle();

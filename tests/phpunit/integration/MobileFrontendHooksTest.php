@@ -327,7 +327,7 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 			MainConfigNames::ScriptPath => '/w',
 			MainConfigNames::Script => '/w/index.php',
 		] );
-		$title = Title::newFromText( 'PurgeTest' );
+		$title = Title::makeTitle( NS_MAIN, 'PurgeTest' );
 
 		$htmlCacheUpdater = $this->getServiceContainer()->getHTMLCacheUpdater();
 		$urls = $htmlCacheUpdater->getUrls( $title );
