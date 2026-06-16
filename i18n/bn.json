@@ -17,12 +17,12 @@
 			"Tanbiruzzaman"
 		]
 	},
-	"abusefilter-edit-builder-vars-user-mobile": "একজন ব্যবহারকারী মোবাইল ইন্টারফেসের মাধ্যমে সম্পাদনা করছে বা করছে না",
+	"abusefilter-edit-builder-vars-user-mobile": "একজন ব্যবহারকারী মোবাইল ইন্টারফেসের মাধ্যমে সম্পাদনা করছে বা করছে না ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "নিশ্চিতকরণ কোড লিখুন",
 	"mobile-frontend-changeslist-nocomment": "সম্পাদনা সারাংশ নেই",
 	"mobile-frontend-clear-search": "পরিষ্কার",
 	"mobile-frontend-copyright": "বিষয়বস্তু $1-এর আওতায় প্রকাশিত যদি না অন্য কিছু নির্ধারিত থাকে।",
-	"mobile-frontend-desc": "মোবাইল ফ্রন্টএন্ড",
+	"mobile-frontend-desc": "একটি মিডিয়াউইকি সাইটের মোবাইল উপস্থিতি ও ব্যবহারযোগ্যতা উন্নত করতে সহায়তা করে",
 	"mobile-frontend-edit-login-action": "<strong>{{SITENAME}} উন্নত করতে সাহায্য করুন।</strong><br />সম্পাদনা করতে প্রবেশ করুন।",
 	"mobile-frontend-edit-signup-action": "<strong>{{SITENAME}} উন্নত করতে সাহায্য করুন।</strong><br />সম্পাদনা করতে নিবন্ধন করুন।",
 	"mobile-frontend-editor-anon": "প্রবেশ ছাড়াই সম্পাদনা করুন",
@@ -83,6 +83,8 @@
 	"mobile-frontend-editor-toload": "সম্পাদকটি এখন লোড হবে। আপনি যদি কয়েক সেকেন্ড পরেও এই বার্তাটি দেখতে পান, তাহলে দয়া করে [$1 পাতাটি পুনঃলোড করুন]।",
 	"mf-expand-sections-description": "পূর্বনির্ধারিতভাবে সর্বদা পাতার সকল অনুচ্ছেদ প্রসারিত করুন।",
 	"mf-expand-sections-name": "সব অনুচ্ছেদ বিস্তৃত করুন",
+	"mf-expand-sections-0-label": "পূর্বনির্ধারিতরূপে সংকুচিত রাখুন",
+	"mf-expand-sections-1-label": "পূর্বনির্ধারিতরূপে প্রসারিত রাখুন",
 	"mf-font-size-name": "পাঠ্য",
 	"mf-font-size-description": "ভালো পঠনযোগ্যতার জন্য পাঠ্য সামঞ্জস্য করুন।",
 	"mf-font-size-small-label": "মানক",
