@@ -973,7 +973,7 @@ class SourceEditorOverlay extends EditorOverlayBase {
 	_onCaptchaChallengeClosed( payload ) {
 		const { sourceInterfaceName } = payload;
 
-		if ( sourceInterfaceName !== INTERFACE_NAME ) {
+		if ( sourceInterfaceName !== INTERFACE_NAME || !this.$el ) {
 			return;
 		}
 

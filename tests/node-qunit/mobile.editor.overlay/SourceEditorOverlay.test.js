@@ -422,3 +422,29 @@ QUnit.test( 'Closing a non-AF captcha does not return to the summary screen', ( 
 		'onStageChanges should not be called when a non-AF captcha is dismissed'
 	);
 } );
+
+QUnit.test( 'Challenge closed handler is no-op if challenge closed hook fired before overlay created', ( assert ) => {
+	mw.hook = makeFakeHookRegistry();
+
+	const editorOverlay = new SourceEditorOverlay( {
+		title: 'test',
+		sectionId: '0'
+	} );
+
+	return editorOverlay.getLoadingPromise().then( () => {
+		// We wouldn't be able to spy on the relevant methods if we fired the hook before
+		// creating the object under test, so simulate this by making the $el element undefined
+		// once construction finished
+		const setSubmitButtonsDisabledPropertyStub = sandbox.stub( editorOverlay, '_setSubmitButtonsDisabledProperty' );
+		editorOverlay.$el = undefined;
+
+		mw.hook( 'confirmEdit.hCaptcha.challengeClosed' ).fire( {
+			sourceInterfaceName: 'mobilefrontendeditor'
+		} );
+
+		assert.false(
+			setSubmitButtonsDisabledPropertyStub.called,
+			'Challenge close handler should be a no-op if the dismiss occurred before the overlay was open'
+		);
+	} );
+} );
