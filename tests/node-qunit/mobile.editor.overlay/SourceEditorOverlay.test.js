@@ -158,6 +158,38 @@ QUnit.test( '#preview', ( assert ) => {
 	} );
 } );
 
+QUnit.test( '#onStageChanges, shows captcha panel when captcha panel has content', ( assert ) => {
+	const editorOverlay = new SourceEditorOverlay( {
+		title: 'test',
+		sectionId: '0'
+	} );
+	const showHiddenSpy = sandbox.spy( editorOverlay, 'showHidden' );
+
+	editorOverlay.$el.find( '.captcha-panel' ).html( '<div class="captcha-widget"></div>' );
+	editorOverlay.onStageChanges();
+
+	assert.true(
+		showHiddenSpy.calledWith( '.save-header, .save-panel, .captcha-panel' ),
+		'shows the captcha panel when it has content'
+	);
+} );
+
+QUnit.test( '#onStageChanges, does not show captcha panel when captcha panel has no content', ( assert ) => {
+	const editorOverlay = new SourceEditorOverlay( {
+		title: 'test',
+		sectionId: '0'
+	} );
+	const showHiddenSpy = sandbox.spy( editorOverlay, 'showHidden' );
+
+	editorOverlay.$el.find( '.captcha-panel' ).empty();
+	editorOverlay.onStageChanges();
+
+	assert.false(
+		showHiddenSpy.calledWith( '.save-header, .save-panel, .captcha-panel' ),
+		'does not show the captcha panel when it has no content'
+	);
+} );
+
 QUnit.test( '#initialize, as anonymous', ( assert ) => {
 	const editorOverlay = new SourceEditorOverlay( {
 		title: 'Main_page',
