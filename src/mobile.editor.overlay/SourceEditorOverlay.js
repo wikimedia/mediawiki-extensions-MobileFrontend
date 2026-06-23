@@ -385,12 +385,6 @@ class SourceEditorOverlay extends EditorOverlayBase {
 		} );
 
 		super.onStageChanges();
-
-		// Also show the CAPTCHA panel if it has content (which occurs if the user
-		// previously opened the preview dialog and saw a CAPTCHA)
-		if ( this.$el.find( '.captcha-panel' ).children().length ) {
-			this.showHidden( '.save-header, .save-panel, .captcha-panel' );
-		}
 	}
 
 	/**
