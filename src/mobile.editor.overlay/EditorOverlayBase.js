@@ -617,7 +617,7 @@ class EditorOverlayBase extends Overlay {
 		 */
 		mw.hook( 'mobileFrontend.editorClosed' ).fire( !!this.switching );
 
-		if ( !this.switching ) {
+		if ( !this.switching && !this.saved ) {
 			const survey = abandonSurvey( this );
 			if ( survey ) {
 				document.body.appendChild( survey.$el[ 0 ] );
