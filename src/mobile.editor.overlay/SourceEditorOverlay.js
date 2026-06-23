@@ -713,6 +713,13 @@ class SourceEditorOverlay extends EditorOverlayBase {
 		super.onSaveComplete( newRevId, redirectUrl, tempUserCreated );
 		mw.hook( 'mobileFrontend.sourceEditor.saveComplete' ).fire( newRevId );
 
+		if ( this.options.returnToApp ) {
+			// Redirect to the app instead of reloading; nothing else triggers
+			// the exit handler on this path.
+			this.redirectToApp();
+			return;
+		}
+
 		// The parent class changes the location hash in a setTimeout, so wait
 		// for that to happen before reloading.
 		setTimeout( function () {

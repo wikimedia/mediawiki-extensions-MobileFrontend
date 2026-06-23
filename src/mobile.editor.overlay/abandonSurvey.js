@@ -64,6 +64,9 @@ class Survey extends View {
  * @return {module:mobile.startup/Drawer|false}
  */
 module.exports = function abandonSurvey( editor ) {
+	if ( editor.options.returnToApp ) {
+		return false;
+	}
 	if ( !mw.config.get( 'wgMFEnableAbandonSurvey' ) ) {
 		return false;
 	}

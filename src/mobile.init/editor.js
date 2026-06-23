@@ -142,6 +142,7 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 				isAnon: user.isAnon(),
 				isNewPage,
 				oldId: mw.util.getParamValue( 'oldid' ),
+				returnToApp: mw.util.getParamValue( 'returntoapp' ) !== null,
 				contentLang: $contentText.attr( 'lang' ),
 				contentDir: $contentText.attr( 'dir' ),
 				// Arrange preload content if we're on a page with those URL parameters

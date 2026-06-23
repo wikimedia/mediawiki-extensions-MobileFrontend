@@ -138,6 +138,7 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/abandonSurvey', {
 QUnit.test( 'abandonSurvey', async ( assert ) => {
 	let lastLoggedData = null;
 	const drawer = abandonSurvey( {
+		options: {},
 		logFeatureUse: ( data ) => {
 			lastLoggedData = data;
 		}

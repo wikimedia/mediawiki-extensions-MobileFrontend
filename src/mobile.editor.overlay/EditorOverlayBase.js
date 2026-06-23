@@ -282,6 +282,7 @@ class EditorOverlayBase extends Overlay {
 	 */
 	onSaveComplete( newRevId, redirectUrl, tempUserCreated ) {
 		this.saved = true;
+		this.savedRevId = newRevId;
 
 		if ( newRevId ) {
 			let action;
@@ -303,6 +304,10 @@ class EditorOverlayBase extends Overlay {
 		} );
 		if ( tempUserCreated && redirectUrl ) {
 			// The caller handles this redirect, either in SourceEditorOverlay or in VE's ArticleTarget
+			return;
+		}
+		if ( this.options.returnToApp ) {
+			// The exit handler will redirect for this
 			return;
 		}
 		setTimeout( () => {
@@ -502,6 +507,7 @@ class EditorOverlayBase extends Overlay {
 		} );
 
 		this.saved = false;
+		this.savedRevId = null;
 		super.show();
 
 		// Inform other interested code that the editor has loaded
@@ -583,7 +589,9 @@ class EditorOverlayBase extends Overlay {
 		}
 		this.onExit();
 		exit();
-		if ( mw.config.get( 'wgAction' ) === 'edit' ) {
+		if ( this.options.returnToApp ) {
+			this.redirectToApp();
+		} else if ( mw.config.get( 'wgAction' ) === 'edit' ) {
 			// We got into the overlay via directly visiting an action=edit
 			// URL, which has been taken over. As such, depending on
 			// how we got here, the normal overlay process isn't going to
@@ -602,6 +610,18 @@ class EditorOverlayBase extends Overlay {
 				}
 			}, 100 );
 		}
+	}
+
+	/**
+	 * Redirect to the native app that launched the editor (returntoapp mode),
+	 * passing the save result and revision id.
+	 */
+	redirectToApp() {
+		let appHref = `wikipedia://${ mw.config.get( 'wgServerName' ) }${ mw.util.getUrl() }?saved=${ this.saved ? 'true' : 'false' }`;
+		if ( this.savedRevId ) {
+			appHref += `&revision=${ this.savedRevId }`;
+		}
+		location.href = appHref;
 	}
 
 	onExit() {
