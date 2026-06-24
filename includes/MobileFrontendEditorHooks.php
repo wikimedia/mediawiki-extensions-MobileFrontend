@@ -65,7 +65,6 @@ class MobileFrontendEditorHooks implements
 	public function onMakeGlobalVariablesScript( &$vars, $out ): void {
 		/** @var MobileContext $mobileContext */
 		$mobileContext = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
-		$config = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Config' );
 
 		if ( $mobileContext->shouldDisplayMobileView() ) {
 			// mobile.init
@@ -91,7 +90,6 @@ class MobileFrontendEditorHooks implements
 			$params = $req->getValues();
 			$params['mfnoscript'] = '1';
 			$url = wfScript() . '?' . wfArrayToCgi( $params );
-			$escapedUrl = htmlspecialchars( $url );
 
 			$out = $article->getContext()->getOutput();
 			$titleMsg = $title->exists() ? 'editing' : 'creating';

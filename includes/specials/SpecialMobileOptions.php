@@ -1,6 +1,5 @@
 <?php
 
-use MediaWiki\Config\Config;
 use MediaWiki\Deferred\DeferredUpdates;
 use MediaWiki\Html\Html;
 use MediaWiki\MediaWikiServices;
@@ -31,7 +30,6 @@ class SpecialMobileOptions extends UnlistedSpecialPage {
 	public function __construct(
 		private readonly UserOptionsManager $userOptionsManager,
 		private readonly ReadOnlyMode $readOnlyMode,
-		private readonly Config $config,
 	) {
 		parent::__construct( 'MobileOptions' );
 		$services = MediaWikiServices::getInstance();

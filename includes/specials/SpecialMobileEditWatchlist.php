@@ -78,7 +78,6 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 			);
 		}
 		$timestamp = $mp->getLatestTimestamp();
-		$user = $this->getUser();
 		$titleText = $title->getPrefixedText();
 		if ( $timestamp ) {
 			$className = 'title';

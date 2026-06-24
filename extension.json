@@ -36,8 +36,7 @@
 			"class": "SpecialMobileOptions",
 			"services": [
 				"UserOptionsManager",
-				"ReadOnlyMode",
-				"MobileFrontend.Config"
+				"ReadOnlyMode"
 			]
 		},
 		"MobileLanguages": "SpecialMobileLanguages",
