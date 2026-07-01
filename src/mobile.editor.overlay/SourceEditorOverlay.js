@@ -754,9 +754,9 @@ class SourceEditorOverlay extends EditorOverlayBase {
 	 * @param {Object} saveOptions Options for the save request that failed
 	 */
 	onSaveFailure( data, saveOptions ) {
-		if ( data.edit && data.edit.captcha ) {
-			this._setSubmitButtonsDisabledProperty( false );
+		this._setSubmitButtonsDisabledProperty( false );
 
+		if ( data.edit && data.edit.captcha ) {
 			this.captchaId = data.edit.captcha.id;
 			this.handleCaptcha( data.edit.captcha, saveOptions );
 		} else {
