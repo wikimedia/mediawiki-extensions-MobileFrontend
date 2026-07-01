@@ -403,6 +403,62 @@ QUnit.test( 'When AF filter prevents an edit the UI goes back to the summary scr
 	);
 } );
 
+QUnit.test( 'A retryable save failure re-enables the publish and back buttons', ( assert ) => {
+	const editorOverlay = new SourceEditorOverlay( { title: 'test', sectionId: '0' } );
+	sandbox.stub( EditorOverlayBase.prototype, 'reportError' );
+	sandbox.stub( EditorOverlayBase.prototype, 'showHidden' );
+
+	editorOverlay.$el.append(
+		'<div class="header-action"><button class="save submit">Save</button></div>' +
+		'<div class="header-cancel"><button class="back">Back</button></div>'
+	);
+
+	editorOverlay._setSubmitButtonsDisabledProperty( true );
+
+	editorOverlay.onSaveFailure( {
+		edit: {
+			code: 'abusefilter-warning',
+			warning: 'You tripped a filter',
+			result: 'Failure'
+		}
+	}, {} );
+
+	const buttonsDisabled = editorOverlay.$el
+		.find( '.header-action button.save, .header-cancel button.back' )
+		.toArray().some( ( btn ) => btn.disabled );
+
+	assert.false(
+		buttonsDisabled,
+		'publish and back buttons are re-enabled after a retryable (AbuseFilter warn) failure'
+	);
+} );
+
+QUnit.test( 'A non-retryable save failure keeps submit disabled but re-enables back', ( assert ) => {
+	const editorOverlay = new SourceEditorOverlay( { title: 'test', sectionId: '0' } );
+	sandbox.stub( EditorOverlayBase.prototype, 'reportError' );
+	sandbox.stub( EditorOverlayBase.prototype, 'showHidden' );
+
+	editorOverlay.$el.append(
+		'<div class="header-action"><button class="save submit">Save</button></div>' +
+		'<div class="header-cancel"><button class="back">Back</button></div>'
+	);
+
+	editorOverlay._setSubmitButtonsDisabledProperty( true );
+
+	editorOverlay.onSaveFailure( {
+		errors: [ { code: 'abusefilter-disallowed', html: 'Nope' } ]
+	}, {} );
+
+	assert.true(
+		editorOverlay.$el.find( '.submit' ).prop( 'disabled' ),
+		'submit stays disabled for a non-retryable failure'
+	);
+	assert.false(
+		editorOverlay.$el.find( '.back' ).prop( 'disabled' ),
+		'back is re-enabled so the user can leave'
+	);
+} );
+
 QUnit.test( 'Closing a non-AF captcha does not return to the summary screen', ( assert ) => {
 	mw.hook = makeFakeHookRegistry();
 
