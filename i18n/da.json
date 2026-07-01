@@ -32,6 +32,7 @@
 	"mobile-frontend-edit-signup-action": "<strong>Hjælp med at forbedre {{SITENAME}}.</strong><br />Tilmeld dig for at redigere.",
 	"mobile-frontend-editor-anon": "Rediger uden at logge på",
 	"mobile-frontend-editor-anonwarning": "<strong>Advarsel:</strong> Du er ikke logget på. Din IP-adresse vil blive vist offentligt, hvis du foretager nogen ændringer. Hvis du <strong>logger på</strong> eller <strong>opretter en konto</strong>, vil dine redigeringer blive tilskrevet dit brugernavn, sammen med andre fordele.",
+	"mobile-frontend-editor-autocreatewarning": "<strong>Advarsel:</strong> Du er ikke logget ind. Når du har foretaget en redigering, oprettes der en midlertidig konto til dig. [[$1|Læs mere]]. <strong>Log ind</strong> eller <strong>opret en konto</strong> for at fortsætte med at modtage notifikationer, efter at denne konto udløber, og for at få adgang til andre funktioner.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Log ind",
 	"mobile-frontend-drawer-arrow-label": "Luk",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "OK",
