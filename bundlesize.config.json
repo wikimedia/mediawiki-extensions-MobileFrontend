@@ -8,6 +8,15 @@
 		"maxSize": "6.4KB"
 	},
 	{
+		"resourceModule": "mobile.codex.styles",
+		"@note": "Output controlled by Codex releases.",
+		"maxSize": null
+	},
+	{
+		"resourceModule": "mobile.init.styles",
+		"maxSize": "2.6KB"
+	},
+	{
 		"resourceModule": "mobile.languages.structured",
 		"maxSize": "2.8KB"
 	},
