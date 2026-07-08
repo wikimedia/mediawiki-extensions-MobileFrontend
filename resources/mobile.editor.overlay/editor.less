@@ -57,16 +57,17 @@
 		align-items: center;
 		justify-content: center;
 		// SourceEditorOverlay does only expands its overlay height to the added content, avoid modifying
-		// its height which could affect other overlays. 3em is the editor's header height
+		// its height which could affect other overlays. 3em is the editor's header height.
+		// Use dvh (dynamic viewport height) so the panel tracks the *visible* viewport: on mobile
+		// 100vh is the large viewport (URL bar retracted), which is taller than the visible area and
+		// makes the panel overflow the fold, causing an unexpected page scroll (T428412). The 100vh
+		// line is kept as a fallback for browsers without dvh support.
 		height: calc( 100vh - 3em );
+		height: calc( 100dvh - 3em );
 		max-width: 28rem;
 		margin: 0 auto;
 		padding-left: @spacing-150;
 		padding-right: @spacing-150;
-
-		.editor-overlay-ve .overlay-content && {
-			padding-top: 3em;
-		}
 
 		.description {
 			font-size: @font-size-medium;
@@ -127,6 +128,14 @@
 				white-space: nowrap; /* Prevent text from wrapping */
 			}
 		}
+	}
+
+	&-ve .anonwarning {
+		// In the VE overlay the .anonwarning is appended to the overlay root rather than
+		// inside the header-offset .overlay-content, so it sits at the top under the fixed
+		// 3em header. Pushing it down by the header height keeps the flex-centered content
+		// vertically centered in the visible area below the header (T428412).
+		padding-top: 3em;
 	}
 
 	&-ve .overlay-footer-container + *:not( .ve-mobile-fakeToolbar-container, .anonwarning ) {
