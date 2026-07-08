@@ -157,7 +157,6 @@
 	"mobile-frontend-watchlist-a-z-empty-howto-alt": "Клацніть значок зірочки",
 	"mobile-frontend-watchlist-back-home": "Додому",
 	"mobile-frontend-watchlist-cta-button-login": "Увійти",
-	"mobile-frontend-watchlist-cta-button-signup": "Зареєструватися",
 	"mobile-frontend-watchlist-cta-button-createaccount": "Створити обліковий запис",
 	"mobile-frontend-watchlist-feed-empty": "Немає сторінок з недавніми змінами",
 	"mobile-frontend-watchlist-filter-all": "Усі",
@@ -195,5 +194,10 @@
 	"mobile-frontend-user-pref-link": "Відкрити налаштування",
 	"mobile-frontend-console-recruit": "Дізнайтесь більше як ми створюємо мобільний сайт на https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Оптимізувати і спрощувати спеціальні сторінки, коли використовується мобільна версія (рекомендовано)",
-	"prefs-mobile": "Мобільні налаштування"
+	"prefs-mobile": "Мобільні налаштування",
+	"mobile-editor-abandon-survey-description": "Ваш анонімний відгук допоможе нам покращити редагування",
+	"mobile-editor-abandon-survey-error": "Будь ласка, виберіть причину",
+	"mobile-editor-abandon-survey-submit": "Надіслати відгук",
+	"mobile-editor-abandon-survey-answer-notsure": "Не знаю, як почати редагувати",
+	"mobile-editor-abandon-survey-answer-other": "Щось інше"
 }

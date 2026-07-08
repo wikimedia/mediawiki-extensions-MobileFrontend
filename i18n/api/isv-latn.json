@@ -4,6 +4,7 @@
 			"IJzeren Jan"
 		]
 	},
+	"apihelp-edit-param-editorinterface": "Nazva koristanogo interfejsa redaktora (napriklad: MobileFrontend-SourceEditor)",
 	"apihelp-parse-param-mobileformat": "Vrnuti izhod parsera v formatu podhodečem mobilnym aparatam.",
 	"apihelp-parse-param-noimages": "Unemožniti izobraženje obrazkov v mobilnom izhodu.",
 	"apihelp-parse-param-mainpage": "Priměniti mobilne prěobraženja za glavnu stranicu.",
