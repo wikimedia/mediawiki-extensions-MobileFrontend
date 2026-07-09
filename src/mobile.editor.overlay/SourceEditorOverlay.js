@@ -55,9 +55,9 @@ class SourceEditorOverlay extends EditorOverlayBase {
 			options.readOnly = true;
 			options.editingMsg = mw.message( 'mobile-frontend-editor-viewing-source-page', options.title ).parse();
 		} else {
-			options.editingMsg = mw.msg( 'mobile-frontend-editor-editing-page', options.title );
+			options.editingMsg = mw.message( 'mobile-frontend-editor-editing-page', options.title ).parse();
 		}
-		options.previewingMsg = mw.msg( 'mobile-frontend-editor-previewing-page', options.title );
+		options.previewingMsg = mw.message( 'mobile-frontend-editor-previewing-page', options.title ).parse();
 		this.sectionLine = '';
 		super.initialize( options );
 	}

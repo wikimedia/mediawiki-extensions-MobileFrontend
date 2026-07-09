@@ -166,7 +166,7 @@ class EditorOverlayBase extends Overlay {
 	<div class="panels">
 		<div class="save-panel panel hideable hidden">
 			<div id="error-notice-container"></div>
-			<h2 class="summary-request">{{{summaryRequestMsg}}}</h2>
+			<h2 class="summary-request">{{summaryRequestMsg}}</h2>
 			<div class="summary-input"></div>
 			{{#licenseMsg}}<div class="license">{{{licenseMsg}}}</div>{{/licenseMsg}}
 		</div>
@@ -433,7 +433,7 @@ class EditorOverlayBase extends Overlay {
 				'initial-header'
 			),
 			headers.saveHeader( options.previewingMsg, 'save-header hidden' ),
-			headers.savingHeader( mw.msg( 'mobile-frontend-editor-wait' ) )
+			headers.savingHeader( mw.message( 'mobile-frontend-editor-wait' ).escaped() )
 		];
 	}
 
