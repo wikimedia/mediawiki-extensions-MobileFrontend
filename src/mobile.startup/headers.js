@@ -82,7 +82,7 @@ function formHeader( formHTMLOrView, headerActions, headerCancel, additionalClas
  * Creates a header with a form
  *
  * @ignore
- * @param {string} heading of the header
+ * @param {string} heading (HTML allowed)
  * @param {string} additionalClassNames of the header
  * @return {Element}
  */
@@ -106,7 +106,7 @@ function saveHeader( heading, additionalClassNames ) {
  * Creates a header with a form
  *
  * @ignore
- * @param {string} heading of the header
+ * @param {string} heading (HTML allowed)
  * @param {string} additionalClassNames of the header
  * @return {Element}
  */
