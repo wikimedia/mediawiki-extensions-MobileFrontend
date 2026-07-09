@@ -207,7 +207,7 @@ class EditorOverlayBase extends Overlay {
 	 */
 	getSavePanelTemplateSource() {
 		return `<div id="error-notice-container"></div>
-			<h2 class="summary-request">{{{summaryRequestMsg}}}</h2>
+			<h2 class="summary-request">{{summaryRequestMsg}}</h2>
 			<div class="summary-input"></div>
 			{{#licenseMsg}}
 			<div class="license">{{{licenseMsg}}}</div>
@@ -488,7 +488,7 @@ class EditorOverlayBase extends Overlay {
 				'initial-header'
 			),
 			headers.saveHeader( options.previewingMsg, 'save-header hidden' ),
-			headers.savingHeader( mw.msg( 'mobile-frontend-editor-wait' ) )
+			headers.savingHeader( mw.message( 'mobile-frontend-editor-wait' ).escaped() )
 		];
 	}
 
