@@ -14,7 +14,8 @@
 			"Zaheen",
 			"আজিজ",
 			"আফতাবুজ্জামান",
-			"খাত্তাব হাসান"
+			"খাত্তাব হাসান",
+			"Bodhisattwa"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "একজন ব্যবহারকারী মোবাইল ইন্টারফেসের মাধ্যমে সম্পাদনা করছে বা করছে না ($1)",
@@ -159,13 +160,13 @@
 	"mobile.js": "/* এখানের সকল জাভাস্ক্রিপ্ট মোবাইল সাইট ব্যবহারকারীদের জন্য লোড হবে */",
 	"tag-mobile_edit": "মোবাইল সম্পাদনা",
 	"tag-mobile_edit-description": "মোবাইল থেকে সম্পাদনা করা হয়েছে (ওয়েব বা অ্যাপ)",
-	"tag-advanced_mobile_edit": "উচ্চতর মোবাইল সম্পাদনা",
+	"tag-advanced_mobile_edit": "উন্নত মোবাইল সম্পাদনা",
 	"tag-advanced_mobile_edit-description": "উচ্চতর মোডসহ ব্যবহারকারী দ্বারা সম্পাদিত",
 	"tag-mobile_web_edit": "মোবাইল ওয়েব সম্পাদনা",
 	"tag-mobile_web_edit-description": "মোবাইল ওয়েব সাইট থেকে সম্পাদনা করা হয়েছে",
 	"mobile-frontend-loading-message": "লোড হচ্ছে...",
 	"mobile-frontend-send-feedback": "প্রতিক্রিয়া জানান",
-	"mw-mf-amc-name": "উচ্চতর মোড",
+	"mw-mf-amc-name": "উন্নত মোড",
 	"mw-mf-amc-description": "উচ্চতর মোড আলাপের পৃষ্ঠাগুলিতে, ইতিহাসের পৃষ্ঠাগুলিতে, ব্যবহারকারী সরঞ্জামে এবং অন্যান্য সম্পাদক সরঞ্জামগুলিতে প্রবেশযোগ্যতা সহজ করে তোলে।",
 	"mw-mf-amc-0-label": "নিস্ক্রিয় করা হয়েছে",
 	"mw-mf-amc-1-label": "সক্রিয়",
