@@ -31,7 +31,8 @@
 			"William Surya Permana",
 			"WillsonEP09",
 			"Penyuwangi",
-			"HyperAnd"
+			"HyperAnd",
+			"Bayahiu"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Menentukan apakah pengguna menyunting melalui antarmuka seluler atau tidak ($1)",
@@ -103,7 +104,7 @@
 	"mf-font-size-name": "Teks",
 	"mf-font-size-description": "Sesuaikan ukuran fon agar dapat dibaca.",
 	"mf-font-size-small-label": "Standar",
-	"mf-font-size-regular-label": "Normal",
+	"mf-font-size-regular-label": "Sedang",
 	"mf-font-size-large-label": "Besar",
 	"mobile-frontend-generic-404-desc": "Halaman yang Anda cari tidak ditemukan.",
 	"mobile-frontend-generic-404-title": "Galat - Halaman tidak ditemukan",
@@ -116,7 +117,7 @@
 	"mobile-frontend-joined-months": "{{GENDER:$1|Terdaftar}} {{PLURAL:$2|$2 bulan}} yang lalu",
 	"mobile-frontend-joined-years": "{{GENDER:$1|Terdaftar}} {{PLURAL:$2|$2 tahun}} yang lalu",
 	"mobile-frontend-language-heading": "<strong>Bahasa</strong>",
-	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Bahasa yang disarankan",
+	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Saran bahasa",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Bahasa lain",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Cari bahasa",
 	"mobile-frontend-languages-structured-overlay-no-results": "Bahasa tidak tersedia",
