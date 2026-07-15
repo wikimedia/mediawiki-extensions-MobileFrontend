@@ -3,18 +3,19 @@
 		"authors": [
 			"Kaszeba",
 			"Kirsan",
-			"Orbitminis"
+			"Orbitminis",
+			"Terrus38"
 		]
 	},
-	"mobile-frontend-copyright": "Zamkłosc ùprzëstãpnianô na licencëje $1, jeżlë nie pòdóno jinaczi.",
+	"mobile-frontend-copyright": "Zamkłosc ùprzëstãpniwónô na licencje $1, jeżlë nie òstało pòdoné jinaczi.",
 	"mobile-frontend-language-heading": "<strong>Jãzëczi</strong>",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Bédowóné jãzëczi",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Wszëtczé jãzëczi",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Szëkba jãzëka",
 	"mobile-frontend-last-modified-date": "Slédnô edicëjô: $1, $2",
 	"mobile-frontend-privacy-link-text": "Pòlitika priwatnotë",
-	"mobile-frontend-terms-text": "Warënczi kòrzëstaniô",
-	"mobile-frontend-view": "Mòbilnô wersëjô.",
+	"mobile-frontend-terms-text": "Warënczi kòrzistaniô",
+	"mobile-frontend-view": "Mòbilnô wersjô.",
 	"mobile-frontend-view-desktop": "Klasycznô",
 	"mobile-frontend-watchlist-cta-button-login": "Wlogùj mie",
 	"mobile-frontend-watchlist-cta-button-signup": "Założë nowé kònto",
