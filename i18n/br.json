@@ -168,5 +168,17 @@
 	"mobile-frontend-user-pref-link": "Digeriñ penndibaboù",
 	"mobile-frontend-console-recruit": "Gouzout hiroc'h war ar mod m'eo bet savet hol lec'hienn hezoug @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Gwellekaat ha simplaat pajennoù ispisial pa reer gant an hezoug (erbedet)",
-	"prefs-mobile": "Penndibaboù hezoug"
+	"prefs-mobile": "Penndibaboù hezoug",
+	"mobile-editor-abandon-survey-title": "Perak hoc’h eus paouezet da gemmañ ar pennad-mañ?",
+	"mobile-editor-abandon-survey-description": "Hoc’h evezhiadennoù dizanv a sikouro ac'hanomp da wellaat ar c'hemmañ",
+	"mobile-editor-abandon-survey-error": "Dibabit an abeg mar plij",
+	"mobile-editor-abandon-survey-success": "Trugarez deoc'h da vezañ sikouret da wellaat an doare da gemmañ !",
+	"mobile-editor-abandon-survey-submit": "Kas evezhiadennoù",
+	"mobile-editor-abandon-survey-answer-exploring": "Edon oc’h ergerzhout ha netra ken",
+	"mobile-editor-abandon-survey-answer-notsure": "N'ouzon ket penaos kregiñ da gemmañ",
+	"mobile-editor-abandon-survey-answer-worried-mistake": "Aon am eus e c’hallfen ober ur fazi",
+	"mobile-editor-abandon-survey-answer-complicated": "Re gemplezh e oa an etrefas",
+	"mobile-editor-abandon-survey-answer-accident": "Pouezet war kemmañ dre fazi",
+	"mobile-editor-abandon-survey-answer-error": "Ur gudenn deknikel am eus bet",
+	"mobile-editor-abandon-survey-answer-other": "Un dra bennak all"
 }
