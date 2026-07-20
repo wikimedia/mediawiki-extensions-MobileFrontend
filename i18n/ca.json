@@ -67,6 +67,7 @@
 	"mobile-frontend-editor-switch-visual-editor": "Canvia a edició visual",
 	"mobile-frontend-editor-viewing-source-page": "<strong>Codi font de</strong><span> $1</span>",
 	"mobile-frontend-editor-wait": "S'està publicant l'edició, espereu.",
+	"mobile-frontend-editor-loading": "S'està carregant l'editor…",
 	"mf-expand-sections-description": "Expandir sempre totes les seccions de totes les pàgines per defecte.",
 	"mf-expand-sections-name": "Expandir totes les seccions",
 	"mf-font-size-name": "Text",
