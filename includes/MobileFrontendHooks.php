@@ -4,8 +4,6 @@ use MediaWiki\Actions\ActionEntryPoint;
 use MediaWiki\Api\ApiMain;
 use MediaWiki\Api\ApiQuerySiteinfo;
 use MediaWiki\Api\Hook\APIQuerySiteInfoGeneralInfoHook;
-use MediaWiki\Auth\AuthenticationRequest;
-use MediaWiki\Auth\AuthManager;
 use MediaWiki\Cache\Hook\HTMLFileCache__useFileCacheHook;
 use MediaWiki\ChangeTags\Hook\ChangeTagsListActiveHook;
 use MediaWiki\ChangeTags\Hook\ListDefinedTagsHook;
@@ -53,11 +51,9 @@ use MediaWiki\Skin\Hook\SkinAfterBottomScriptsHook;
 use MediaWiki\Skin\Skin;
 use MediaWiki\Skin\SkinException;
 use MediaWiki\Skin\SkinFactory;
-use MediaWiki\SpecialPage\Hook\AuthChangeFormFieldsHook;
 use MediaWiki\SpecialPage\Hook\SpecialPage_initListHook;
 use MediaWiki\SpecialPage\Hook\SpecialPageBeforeExecuteHook;
 use MediaWiki\SpecialPage\SpecialPage;
-use MediaWiki\Specials\Helpers\LoginHelper;
 use MediaWiki\Specials\Hook\LoginFormValidErrorMessagesHook;
 use MediaWiki\Specials\Hook\PostLoginRedirectHook;
 use MediaWiki\Title\Title;
@@ -82,7 +78,6 @@ use MobileFrontend\Transforms\MakeSectionsTransform;
 class MobileFrontendHooks implements
 	APIQuerySiteInfoGeneralInfoHook,
 	ApiBeforeMainHook,
-	AuthChangeFormFieldsHook,
 	RequestContextCreateSkinHook,
 	BeforeDisplayNoArticleTextHook,
 	OutputPageBeforeHTMLHook,
@@ -1136,8 +1131,6 @@ class MobileFrontendHooks implements
 				// Watchlist and watchstar sign in CTA
 				'mobile-frontend-watchlist-purpose',
 				'mobile-frontend-donate-image-login-action',
-				// default message
-				'mobile-frontend-generic-login-new',
 			]
 		);
 	}
@@ -1216,39 +1209,6 @@ class MobileFrontendHooks implements
 			if ( $newUrl !== false && $newUrl !== $url ) {
 				$urls[] = $newUrl;
 			}
-		}
-	}
-
-	/**
-	 * Handler for the AuthChangeFormFields hook to add a logo on top of
-	 * the login screen. This is the AuthManager equivalent of changeUserLoginCreateForm.
-	 * @param AuthenticationRequest[] $requests AuthenticationRequest objects array
-	 * @param array $fieldInfo Field description as given by AuthenticationRequest::mergeFieldInfo
-	 * @param array &$formDescriptor A form descriptor suitable for the HTMLForm constructor
-	 * @param string $action One of the AuthManager::ACTION_* constants
-	 */
-	public function onAuthChangeFormFields(
-		$requests, $fieldInfo, &$formDescriptor, $action
-	) {
-		$logos = RL\SkinModule::getAvailableLogos( $this->config );
-		$mfLogo = $logos['icon'] ?? false;
-		$loginHelper = new LoginHelper( $this->mobileContext );
-
-		// do nothing in desktop mode or popup mode
-		if (
-			$this->mobileContext->shouldDisplayMobileView() && $mfLogo
-			&& in_array( $action, [ AuthManager::ACTION_LOGIN, AuthManager::ACTION_CREATE ], true )
-			&& !$loginHelper->isDisplayModePopup()
-		) {
-			$logoHtml = Html::rawElement( 'div', [ 'class' => 'mw-mf-watermark' ],
-				Html::element( 'img', [ 'src' => $mfLogo, 'alt' => '' ] ) );
-			$formDescriptor = [
-				'mfLogo' => [
-					'type' => 'info',
-					'default' => $logoHtml,
-					'raw' => true,
-				],
-			] + $formDescriptor;
 		}
 	}
 

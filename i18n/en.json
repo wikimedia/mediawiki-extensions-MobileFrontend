@@ -112,7 +112,6 @@
 	"mf-font-size-large-label": "Large",
 	"mobile-frontend-generic-404-desc": "The page you are looking for could not be found.",
 	"mobile-frontend-generic-404-title": "Error - Page not found",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} is made by people like you.</strong><br />Log in to contribute.",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|Joined}} just now",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|Joined}} {{PLURAL:$2|$2 second|$2 seconds}} ago",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|Joined}} {{PLURAL:$2|$2 minute|$2 minutes}} ago",
