@@ -1,7 +1,7 @@
 {
 	"private": true,
 	"scripts": {
-		"coverage": "nyc npm -s run test:unit",
+		"coverage": "c8 npm -s run test:unit",
 		"precommit": "npm -s run lint:frontend && npm -s run coverage && composer test",
 		"test:unit": "mw-node-qunit \"tests/node-qunit/**/*.test.js\"",
 		"lint": "npm -s run lint:i18n && npm -s run lint:frontend",
@@ -19,6 +19,7 @@
 	"devDependencies": {
 		"@wikimedia/mw-node-qunit": "7.11.0",
 		"browserslist-config-wikimedia": "0.7.0",
+		"c8": "12.0.0",
 		"eslint-config-wikimedia": "0.32.3",
 		"grunt-banana-checker": "0.13.0",
 		"jquery": "3.7.1",
@@ -28,7 +29,6 @@
 		"mobile.returnToApp": "file:./src/mobile.returnToApp/package",
 		"mobile.startup": "file:./src/mobile.startup/package",
 		"mustache": "3.0.1",
-		"nyc": "15.0.0",
 		"oojs": "7.0.1",
 		"oojs-ui": "0.48.3",
 		"pre-commit": "1.2.2",

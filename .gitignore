@@ -15,7 +15,6 @@ dev-scripts/remotes
 tests/report
 .bundle/
 /coverage/
-/.nyc_output/
 /.eslintcache
 .vscode
 /.stylelintcache

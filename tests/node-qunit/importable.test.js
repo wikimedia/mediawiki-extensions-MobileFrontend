@@ -2,11 +2,11 @@
 // This tests the importable nature of the MobileFrontend code library.
 // It also ensures we add test coverage for files without any
 // (loosely inspired by https://github.com/istanbuljs/nyc/issues/594)
-// If a module cannot be tested with Node.js it needs to be added to .nyrc.json
+// If a module cannot be tested with Node.js it needs to be added to .c8rc.json
 let sandbox;
 const fakeRouter = require( 'mediawiki.router' );
 const path = require( 'path' ),
-	config = require( '../../.nycrc.json' ),
+	config = require( '../../.c8rc.json' ),
 	glob = require( 'glob' ),
 	sinon = require( 'sinon' ),
 	util = require( '../../src/mobile.startup/util' ),
