@@ -22,7 +22,6 @@
 	"mf-font-size-name": "Tekst",
 	"mf-font-size-description": "Jaqsıraq oqıw ushın tekst ólshemin sazlaw.",
 	"mf-font-size-regular-label": "Ortasha",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} siz sıyaqlı adamlar tárepinen bayıtıladı.</strong><br />Úles qosıw ushın sistemaǵa kiriń.",
 	"mobile-frontend-joined-seconds": "{{PLURAL:$2|$2 sekund}} burın {{GENDER:$1|qosılǵan}}",
 	"mobile-frontend-joined-hours": "{{PLURAL:$2|$2 saat|$2 saat}} burın {{GENDER:$1|qosıldı}}",
 	"mobile-frontend-joined-months": "{{PLURAL:$2|$2 ay}} burın {{GENDER:$1|qosılǵan}}",

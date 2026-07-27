@@ -23,7 +23,6 @@
 	"mobile-frontend-editor-switch-visual-editor": "Swichar a visuala redaktado",
 	"mobile-frontend-editor-viewing-source-page": "<strong>Vidanta fonto di</strong><span> $1</span>",
 	"mobile-frontend-editor-loading": "Karganta redaktilo...",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} facesas da personi quale vu.</strong><br />Enirez por kontributar.",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|Eniris}} {{PLURAL:$2|$2 minuto|$2 minuti}} ante nun",
 	"mobile-frontend-joined-hours": "{{GENDER:$1|Eniris}} {{PLURAL:$2|$2 horo|$2 hori}} ante nun",
 	"mobile-frontend-joined-days": "{{GENDER:$1|Eniris}} {{PLURAL:$2|$2 dio|$2 dii}} ante nun",

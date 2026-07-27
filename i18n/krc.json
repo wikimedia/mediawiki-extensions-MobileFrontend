@@ -79,7 +79,6 @@
 	"mf-font-size-large-label": "Уллу",
 	"mobile-frontend-generic-404-desc": "Сиз излеген бет табылалмады.",
 	"mobile-frontend-generic-404-title": "Халат- Бет табылмады",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} сизни кибик адамла къурагъандыла.</strong><br />Къошум этер ючюн киригиз.",
 	"mobile-frontend-joined-just-now": "Энди {{GENDER:$1|къошулду}}",
 	"mobile-frontend-joined-seconds": "{{PLURAL:$2|$2 секунд}} мындан алгъа {{GENDER:$1|къошулду}}",
 	"mobile-frontend-joined-minutes": "{{PLURAL:$2|$2 минут}} мындан {{GENDER:$1|къошулду}}",

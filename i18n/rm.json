@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Albinfo",
 			"Gion-andri",
 			"Kazu89",
 			"Terfili"
@@ -10,6 +11,6 @@
 	"mobile-frontend-privacy-link-text": "Protecziun da datas",
 	"mobile-frontend-terms-text": "Cundiziuns d'utilisaziun",
 	"mobile-frontend-view": "Versiun mobila",
-	"mobile-frontend-view-desktop": "desktop",
+	"mobile-frontend-view-desktop": "Desktop",
 	"tag-mobile_edit": "Modificaziun mobila"
 }

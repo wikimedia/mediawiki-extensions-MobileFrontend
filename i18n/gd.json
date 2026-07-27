@@ -45,7 +45,6 @@
 	"mf-font-size-description": "Meudaich no lùghdaich meud an teacsa gus a leughadh gun duilgheadas.",
 	"mobile-frontend-generic-404-desc": "Cha deach an duilleag a tha thu a' sireadh a lorg.",
 	"mobile-frontend-generic-404-title": "Mearachd - Cha deach an duilleag a lorg",
-	"mobile-frontend-generic-login-new": "<strong>Tha {{SITENAME}} 'ga chruthachadh le daoine mar thusa fhèin.</strong><br />Log a-steach gus taic a thoirt dhuinn.",
 	"mobile-frontend-language-heading": "<strong>Cànain</strong>",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "A h-uile cànan",
 	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Lorg cànan",

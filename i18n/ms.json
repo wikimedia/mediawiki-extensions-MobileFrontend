@@ -87,7 +87,6 @@
 	"mf-font-size-large-label": "Besar",
 	"mobile-frontend-generic-404-desc": "Laman yang anda cari tidak dapat dijumpai.",
 	"mobile-frontend-generic-404-title": "Ralat - Halaman tidak dijumpai",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} dijayakan oleh orang ramai seperti anda.</strong><br />Log masuk untuk menyumbang.",
 	"mobile-frontend-joined-just-now": "Baru sahaja {{GENDER:$1|berdaftar}}",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|Berdaftar}} {{PLURAL:$2|$2 saat}} yang lalu",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|Berdaftar}} {{PLURAL:$2|$2 minit}} yang lalu",

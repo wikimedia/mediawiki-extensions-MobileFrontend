@@ -58,7 +58,6 @@
 	"mf-font-size-large-label": "I madh",
 	"mobile-frontend-generic-404-desc": "Faqja që je duke kërkuar nuk mund të gjendej.",
 	"mobile-frontend-generic-404-title": "Gabim - Faqja nuk u gjet",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} është krijuar nga njerëz si ti.</strong><br />Hyr në llogari për të kontribuar.",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|U bashkua}} tani",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|U bashkua}} {{PLURAL:$2|$2 sekondë| $2 sekonda}} më parë",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|U bashkua}} {{PLURAL:$2|$2 minutë| $2 minuta}} më parë",

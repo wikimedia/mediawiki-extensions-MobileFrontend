@@ -61,7 +61,6 @@
 	"mf-font-size-large-label": "Бөдөҥ",
 	"mobile-frontend-generic-404-desc": "Көрдүүр сирэйгин булар табыллыбата.",
 	"mobile-frontend-generic-404-title": "Алҕас: Сирэй көстүбэтэ",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} бырайыагы Эн курдук дьон оҥороллор.</strong><br />Киир уонна суруй.",
 	"mobile-frontend-joined-just-now": "Сип-билигин {{GENDER:$1|кыттыста}}",
 	"mobile-frontend-joined-seconds": "{{PLURAL:$2|сөкүүндэ}} ынараа өттүгэр {{GENDER:$1|кыттыста}}",
 	"mobile-frontend-joined-minutes": "{{PLURAL:$2|мүнүүтэ}} ынараа өттүгэр {{GENDER:$1|кыттыста}}",

@@ -120,7 +120,6 @@
 	"mf-font-size-large-label": "大",
 	"mobile-frontend-generic-404-desc": "查無您要搜尋的頁面。",
 	"mobile-frontend-generic-404-title": "錯誤 - 查無頁面",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} 是由像您一樣的人構築的。</strong><br />登入以貢獻。",
 	"mobile-frontend-joined-just-now": "剛剛{{GENDER:$1|已加入}}",
 	"mobile-frontend-joined-seconds": "已於 {{PLURAL:$2|$2 秒}}前{{GENDER:$1|加入}}",
 	"mobile-frontend-joined-minutes": "已於 {{PLURAL:$2|$2 分鐘}}前{{GENDER:$1|加入}}",

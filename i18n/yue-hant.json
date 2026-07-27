@@ -79,7 +79,6 @@
 	"mf-font-size-large-label": "大",
 	"mobile-frontend-generic-404-desc": "你想搵嘅版搵唔到。",
 	"mobile-frontend-generic-404-title": "錯誤 - 搵唔到呢版",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}}係由你同第啲好似你噉嘅人貢獻出嚟嘅。</strong><br />簽到之後就可以貢獻。",
 	"mobile-frontend-joined-just-now": "啱啱{{GENDER:$1|加入咗}}",
 	"mobile-frontend-joined-seconds": "響{{PLURAL:$2|$2秒}}前{{GENDER:$1|加入}}",
 	"mobile-frontend-joined-minutes": "響{{PLURAL:$2|$2分鐘}}前{{GENDER:$1|加入}}",

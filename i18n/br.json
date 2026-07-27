@@ -84,7 +84,6 @@
 	"mf-font-size-large-label": "Bras",
 	"mobile-frontend-generic-404-desc": "N'eus ket bet gallet kavout ar bajenn emaoc'h o klask.",
 	"mobile-frontend-generic-404-title": "Fazi - N'eo ket bet kavet ar bajenn",
-	"mobile-frontend-generic-login-new": "Aozet eo <strong>{{SITENAME}} gant tud eveldoc’h.</strong><br />Kevreit evit degas kemmoù.",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|Kont}} krouet bremaik",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|Kont}} krouet {{PLURAL:$2|$2 eilenn}} zo",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|Kont}} krouet {{PLURAL:$2|$2 vunutenn|$2 munutenn}} zo",

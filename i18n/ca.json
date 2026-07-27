@@ -75,7 +75,6 @@
 	"mf-font-size-small-label": "Estàndard",
 	"mobile-frontend-generic-404-desc": "No s'ha pogut trobar la pàgina que esteu buscant.",
 	"mobile-frontend-generic-404-title": "Error - Pàgina no trobada",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} està fet per gent com tu.</strong><br />Registreu-vos per a contribuir-hi.",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|S'hi ha unit}} ara mateix",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|S'hi ha unit}} fa {{PLURAL:$2|$2 segon|$2 segons}}",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|S'hi ha unit}} fa {{PLURAL:$2|$2 minut|$2 minuts}}",

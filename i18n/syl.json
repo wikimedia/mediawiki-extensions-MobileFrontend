@@ -70,7 +70,6 @@
 	"mf-font-size-regular-label": "ꠝꠣꠁꠎꠟꠣ",
 	"mf-font-size-large-label": "ꠛꠠꠅ",
 	"mobile-frontend-generic-404-title": "ꠉꠟꠖ - ꠙꠣꠔꠣ ꠝꠤꠟꠍꠦ ꠘꠣ",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}}  ꠀꠙꠘꠣꠞ ꠝꠔꠘ ꠝꠣꠁꠘꠡꠦ ꠔꠂꠀꠞꠤ ꠇꠞꠍꠂꠘ ⁕</strong><br />ꠁꠘꠅ ꠅꠛꠖꠣꠘ ꠞꠣꠈꠔꠦ ꠟꠉ ꠁꠘ ꠇꠞꠂꠘ ⁕",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|ꠎꠄꠘ ꠇꠞꠍꠂꠘ}} ꠅꠃ ꠅꠘꠦ",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|ꠎꠄꠘ ꠇꠞꠍꠂꠘ}} {{PLURAL:$2|$2 ꠍꠦꠇꠦꠘ꠆ꠒ}} ꠀꠉꠦ",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|ꠎꠄꠘ ꠇꠞꠍꠂꠘ}} {{PLURAL:$2|$2 ꠝꠤꠘꠤꠐ}} ꠀꠉꠦ",

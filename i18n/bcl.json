@@ -43,7 +43,6 @@
 	"mf-font-size-regular-label": "Tama lang",
 	"mf-font-size-large-label": "Dakula",
 	"mobile-frontend-generic-404-title": "Kasalaan - Dae madukayan an pahina",
-	"mobile-frontend-generic-login-new": "<strong>Piggibo an {{SITENAME}} kan mga tawo na arog mo.</strong><br />Maglaog tanganing makakontribuwer.",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|Nagbali}} ngunyan lang",
 	"mobile-frontend-language-heading": "<strong>Mga tataramon</strong>",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Sa ibang mga lengguwahe/tataramon",

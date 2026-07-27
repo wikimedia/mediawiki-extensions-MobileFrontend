@@ -60,7 +60,6 @@
 	"mf-font-size-large-label": "Grande",
 	"mobile-frontend-generic-404-desc": "Nun pudo alcontrase la páxina que busques.",
 	"mobile-frontend-generic-404-title": "Error - Nun s'alcuentra la páxina",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} failo la xente como tu.</strong><br />Rexístrate pa collaborar.",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|Xunióse}} recién",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|Xunióse}} hai {{PLURAL:$2|$2 segundu|$2 segundos}}",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|Xunióse}} hai {{PLURAL:$2|$2 minutu|$2 minutos}}",

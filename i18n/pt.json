@@ -108,7 +108,6 @@
 	"mf-font-size-large-label": "Grande",
 	"mobile-frontend-generic-404-desc": "Não foi possível encontrar a página que procura.",
 	"mobile-frontend-generic-404-title": "Erro - Página não encontrada",
-	"mobile-frontend-generic-login-new": "<strong>A wiki {{SITENAME}} é feita por pessoas como você.</strong><br />Inicie uma sessão para colaborar.",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|Registou-se}} agora mesmo",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|Registou-se}} há {{PLURAL:$2|$2 segundo|$2 segundos}}",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|Registou-se}} há {{PLURAL:$2|$2 minuto|$2 minutos}}",

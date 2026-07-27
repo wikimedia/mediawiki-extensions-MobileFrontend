@@ -78,7 +78,6 @@
 	"mf-font-size-large-label": "Ageng",
 	"mobile-frontend-generic-404-desc": "Kaca sané ida rereh nénten katemu.",
 	"mobile-frontend-generic-404-title": "Galat - Kaca nénten katemu",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} kakardi olih jadma-jadma sekadi ragané.</strong><br />Manjing log antuk mapituut.",
 	"mobile-frontend-joined-just-now": "Wawu {{GENDER:$1|nyarengin}}",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|Nyarengin}} {{PLURAL:$2|$2 detik}} sané ungkur",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|Nyarengin}} {{PLURAL:$2|$2 menit}} sané ungkur",

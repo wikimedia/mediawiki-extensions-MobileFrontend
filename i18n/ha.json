@@ -74,7 +74,6 @@
 	"mf-font-size-large-label": "Maigirma",
 	"mobile-frontend-generic-404-desc": "Shafin da kuke nema ba'a same shi ba.",
 	"mobile-frontend-generic-404-title": "Kure - Ba'a ga shafin ba",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} mutane ne kamar ku suke haɗawa.</strong><br />Kuyi login dan ku bada gudunmawa.",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|Shigowar}} yanzun nan",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|Shigowa}} {{PLURAL:$2|$2 second|$2 seconds}} da ya wuce",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|Shigowa}} {{PLURAL:$2|$2 minute|$2 minutes}} da ya wuce",

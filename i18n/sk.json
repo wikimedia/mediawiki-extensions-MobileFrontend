@@ -85,7 +85,6 @@
 	"mf-font-size-large-label": "Veľké",
 	"mobile-frontend-generic-404-desc": "Požadovanú stránku sa nepodarilo nájsť.",
 	"mobile-frontend-generic-404-title": "Chyba – Stránka nenájdená",
-	"mobile-frontend-generic-login-new": "<strong>{{GRAMMAR:akuzatív|{{SITENAME}}}} tvoria ľudia ako vy.</strong><br />Prihláste sa a prispievajte.",
 	"mobile-frontend-joined-just-now": "Práve sa {{GENDER:$1|pridal|pridala}}",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|Pridal|Pridala}} sa pred {{PLURAL:$2|sekundou|$2 sekundami}}",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|Pridal|Pridala}} sa pred {{PLURAL:$2|minútou|$2 minútami}}",

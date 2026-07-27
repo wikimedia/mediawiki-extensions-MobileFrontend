@@ -159,7 +159,6 @@
 	"mf-font-size-large-label": "大",
 	"mobile-frontend-generic-404-desc": "找不到您正在寻找的页面。",
 	"mobile-frontend-generic-404-title": "错误 - 找不到页面",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}}是由同您一样的人们构筑的。</strong><br />登录即可贡献。",
 	"mobile-frontend-joined-just-now": "刚刚{{GENDER:$1|加入}}",
 	"mobile-frontend-joined-seconds": "于{{PLURAL:$2|$2秒}}前{{GENDER:$1|加入}}",
 	"mobile-frontend-joined-minutes": "于{{PLURAL:$2|$2分钟}}前{{GENDER:$1|加入}}",

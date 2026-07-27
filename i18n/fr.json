@@ -137,7 +137,6 @@
 	"mf-font-size-large-label": "Grande",
 	"mobile-frontend-generic-404-desc": "La page que vous recherchez n’a pas pu être trouvée.",
 	"mobile-frontend-generic-404-title": "Erreur : page non trouvée",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} est réalisé par des gens comme vous.</strong><br />Connectez-vous pour contribuer.",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|}}A rejoint à l’instant",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|}}A rejoint il y a $2 seconde{{PLURAL:$2||s}}",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|}}A rejoint il y a $2 minute{{PLURAL:$2||s}}",

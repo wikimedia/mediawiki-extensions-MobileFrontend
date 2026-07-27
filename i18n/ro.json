@@ -83,7 +83,6 @@
 	"mf-font-size-large-label": "Mare",
 	"mobile-frontend-generic-404-desc": "Pagina pe care o căutați nu a fost găsită.",
 	"mobile-frontend-generic-404-title": "Eroare — Pagina nu a fost găsită",
-	"mobile-frontend-generic-login-new": "<strong>Proiectul {{SITENAME}} este creat de oameni ca dumnevoastră.</strong><br />Autentificați-vă pentru a contribui.",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|Alăturat|Alăturată|Alăturat}} chiar acum",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|Alăturat|Alăturată|Alăturat}} acum {{PLURAL:$2|$2 secundă|$2 secunde}}",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|Alăturat|Alăturată|Alăturat}} acum {{PLURAL:$2|$2 minut|$2 minute}}",

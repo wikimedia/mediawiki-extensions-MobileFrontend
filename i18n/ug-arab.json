@@ -47,7 +47,6 @@
 	"mf-font-size-large-label": "چوڭ",
 	"mobile-frontend-generic-404-desc": "سىز ئىزدەۋاتقان بەت تېپىلمىدى.",
 	"mobile-frontend-generic-404-title": "خاتالىق - بەت تېپىلمىدى",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} سىزگە ئوخشاش كىشىلەر تەرىپىدىن ياسالغان.</strong><br />تۆھپە قوشۇڭ.",
 	"mobile-frontend-joined-just-now": "ھازىر {{GENDER:$1|قوشۇلدى}}",
 	"mobile-frontend-joined-seconds": "{{PLURAL:$2|$2 سېكۇنت}} بۇرۇن {{GENDER:$1|قوشۇلدى}}",
 	"mobile-frontend-joined-minutes": "{{PLURAL:$2|$2 مىنۇت}} بۇرۇن {{GENDER:$1|قوشۇلدى}}",

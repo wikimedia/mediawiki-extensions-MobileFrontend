@@ -77,7 +77,6 @@
 	"mf-font-size-large-label": "Grànde",
 	"mobile-frontend-generic-404-desc": "A pàgina che ti çèrchi a no l'é stæta trovâ.",
 	"mobile-frontend-generic-404-title": "Erô - Pàgina no trovâ",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} a l'é fæta da persónn-e cómme ti.</strong><br />Ìntra pe contriboî.",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|Inscrîto|Inscrîta|Inscrîto/a}} pròpio òua",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|Inscrîto|Inscrîta|Inscrîto/a}} {{PLURAL:$2|$2 segóndo|$2 segóndi}} fa",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|Inscrîto|Inscrîta|Inscrîto/a}} {{PLURAL:$2|$2 menûto|$2 menûti}} fa",

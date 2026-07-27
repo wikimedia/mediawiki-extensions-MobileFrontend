@@ -76,7 +76,6 @@
 	"mf-font-size-large-label": "Bɛdir",
 	"mobile-frontend-generic-404-desc": "Lakir kanɛ ka fʋ ied la ti pʋ nyee lii.",
 	"mobile-frontend-generic-404-title": "Gbɛliŋ - lakir kai.",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} nidib wʋʋ fʋnnɛ maal.</strong><br />kpɛ'ɛm pʋʋgini sʋŋ.",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|Joined}} Nananna yim",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|Joined}} {{PLURAL:$2|$2 saŋa|$2 seconds}} kanɛ n gaad",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|Joined}} {{PLURAL:$2|$2 mit|$2 minutes}} kanɛ n gaad",

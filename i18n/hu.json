@@ -89,7 +89,6 @@
 	"mf-font-size-large-label": "Nagy",
 	"mobile-frontend-generic-404-desc": "A keresett oldal nem található.",
 	"mobile-frontend-generic-404-title": "Hiba – Az oldal nem található",
-	"mobile-frontend-generic-login-new": "<strong>A(z) {{SITENAME}} wikit hozzád hasonló emberek készítik.</strong><br />Jelentkezz be a közreműkodéshez.",
 	"mobile-frontend-joined-just-now": "Épp most {{GENDER:$1|csatlakozott}}",
 	"mobile-frontend-joined-seconds": "$2 {{PLURAL:$2|másodperce}} {{GENDER:$1|csatlakozott}}",
 	"mobile-frontend-joined-minutes": "$2 {{PLURAL:$2|perce}} {{GENDER:$1|csatlakozott}}",

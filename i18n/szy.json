@@ -45,7 +45,6 @@
 	"mf-font-size-description": "saka madayum miasip, tabakien saca wada’en ku hacica-tabaki nu sulit.",
 	"mobile-frontend-generic-404-desc": "cay katepa kasabelih nu kilim nu misu.",
 	"mobile-frontend-generic-404-title": "mungangaw - caay katepa ku kasabelih",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} nay mahiza kisuay a tademaw sapatizeng. </strong><br /> patalabu apaanin.",
 	"mobile-frontend-joined-seconds": "namakayza {{PLURAL:$2|$2 beti}} ayaw {{GENDER:$1|micunus}}",
 	"mobile-frontend-joined-minutes": "mahiyatu i{{PLURAL:$2|$2 widi}} ayaw {{GENDER:$1|micunus}}",
 	"mobile-frontend-joined-hours": "mahiya tu i {{PLURAL:$2|$2 tuki}}ayaw{{GENDER:$1|micunus}}",

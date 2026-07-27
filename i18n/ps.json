@@ -84,7 +84,6 @@
 	"mf-font-size-large-label": "لوی",
 	"mobile-frontend-generic-404-desc": "هغه مخ چې تاسو یې په لټه کې یاست ونه موندل شو.",
 	"mobile-frontend-generic-404-title": "تېروتنه -مخ ونه موندل شو",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} ستاسې په څېر خلکو جوړه کړې.</strong><br />د گډون لپاره ورننوځئ.",
 	"mobile-frontend-joined-just-now": "سملاسي يې {{GENDER:$1|غړیتوب}} ترلاسه کړ",
 	"mobile-frontend-joined-seconds": "{{PLURAL:$2|$2 ثانیه|$2 ثانيې}} مخکې يې {{GENDER:$1|غړيتوب ترلاسه کړ}}",
 	"mobile-frontend-joined-minutes": "{{PLURAL:$2|$2 دقیقه|$2 دقیقې}} مخکې يې \n{{GENDER:$1|غړيتوب ترلاسه کړ}}",

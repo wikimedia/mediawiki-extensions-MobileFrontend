@@ -76,7 +76,6 @@
 	"mf-font-size-large-label": "Йоккха",
 	"mobile-frontend-generic-404-desc": "Ахьа лоьху агӀо цакарий",
 	"mobile-frontend-generic-404-title": "ГӀалат: АгӀо цакарий",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} хьо санна болчу наха йеш йу.</strong><br />Чувала, хьайн дакъа лаца.",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|ДӀахӀоьттина}} хӀинцца",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|ДӀахӀоьттина}} {{PLURAL:$2|$2 секунд}} хьалха",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|ДӀахӀоьттина}} {{PLURAL:$2|$2 минот}} хьалха",

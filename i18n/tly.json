@@ -74,7 +74,6 @@
 	"mf-font-size-large-label": "Dyžd",
 	"mobile-frontend-generic-404-desc": "Nəvə səhifə pəjdo kardə nybe.",
 	"mobile-frontend-generic-404-title": "Xəto - Səhifə pəjdo nybe",
-	"mobile-frontend-generic-login-new": "<strong>Projekti {{SITENAME}} bənə šymə odəmon soxtejdən </strong><br />Dəšən bo yštə tohfə dəǧande.",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|Əlovə be}} ysət",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|Əlovə be}} {{PLURAL:$2|$2 sanijə}} bə nav",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|Əlovə be}} {{PLURAL:$2|$2 dəǧiǧə}} bə nav",

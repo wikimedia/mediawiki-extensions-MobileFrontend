@@ -117,7 +117,6 @@
 	"mf-font-size-large-label": "Groot",
 	"mobile-frontend-generic-404-desc": "De pagina die u zoekt kan niet worden gevonden.",
 	"mobile-frontend-generic-404-title": "Foutmelding - Pagina niet gevonden",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} wordt gemaakt door mensen zoals u.</strong><br>Meld u aan om bij te dragen.",
 	"mobile-frontend-joined-just-now": "Zojuist ingeschreven{{GENDER:$1|}}",
 	"mobile-frontend-joined-seconds": "$2 seconde{{PLURAL:$2||n}} geleden ingeschreven{{GENDER:$1|}}",
 	"mobile-frontend-joined-minutes": "$2 minu{{PLURAL:$2|ut|ten}} geleden ingeschreven{{GENDER:$1|}}",

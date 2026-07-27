@@ -118,7 +118,6 @@
 	"mf-font-size-large-label": "كبير",
 	"mobile-frontend-generic-404-desc": "لم يتم العثور على الصفحة التي تبحث عنها",
 	"mobile-frontend-generic-404-title": "خطأ - الصفحة غير موجودة",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} موقع يساهم فيه أشخاص مثلك. سجل دخولك لتساهم.</strong>",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|اشترك|اشتركت}} حالا",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|اشترك|اشتركت}} منذ {{PLURAL:$2|$2 ثانية|ثانية واحدة|ثانيتين|$2 ثوانٍ|$2 ثانية}}",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|اشترك|اشتركت}} منذ {{PLURAL:$2|$2 دقيقة}}",

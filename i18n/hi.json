@@ -102,7 +102,6 @@
 	"mf-font-size-large-label": "बड़ा",
 	"mobile-frontend-generic-404-desc": "जिस पृष्ठ को आप खोज रहे हैं वह नहीं मिला।",
 	"mobile-frontend-generic-404-title": "त्रुटि - पृष्ठ नहीं मिला",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} को आप जैसे लोगों ने बनाया है।</strong><br />योगदान करने के लिए लॉग-इन करें।",
 	"mobile-frontend-joined-just-now": "अभी-अभी शामिल {{GENDER:$1|हुए|हुईं}}",
 	"mobile-frontend-joined-seconds": "{{PLURAL:$2|$2 सेकंड}} पहले शामिल {{GENDER:$1|हुए|हुईं}}",
 	"mobile-frontend-joined-minutes": "{{PLURAL:$2|$2 मिनट}} पहले शामिल {{GENDER:$1|हुए|हुईं}}",

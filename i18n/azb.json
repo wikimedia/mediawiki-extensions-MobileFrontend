@@ -13,7 +13,6 @@
 	"mobile-frontend-editor-editing-page": "<span><strong>$1 </strong> دَییشدیریلیر</span>",
 	"mobile-frontend-editor-switch-editor": "دییشدیریجینی دَییش",
 	"mf-font-size-name": "فوْنت سایزی",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} سیزین کیمی آدام‌لارین الی ایله یارانیب‌دیر.</strong><br /> قاتیلماق اوچون حسابینیزا گیرین.",
 	"mobile-frontend-joined-seconds": "{{PLURAL:$2|$2 ثانیه|$2 ثانیه}} قاباق {{GENDER:$1|عوضو اولدو}}",
 	"mobile-frontend-joined-minutes": "{{PLURAL:$2|$2 دقیقه|$2 دقیقه}} قاباق {{GENDER:$1|عوضو اولدو}}",
 	"mobile-frontend-joined-hours": "{{PLURAL:$2|$2 ساعات|$2 ساعات}} قاباق {{GENDER:$1|عوضو اولدو}}",

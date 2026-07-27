@@ -81,7 +81,6 @@
 	"mf-font-size-large-label": "Liels",
 	"mobile-frontend-generic-404-desc": "Tevis meklētā lapa nav atrodama.",
 	"mobile-frontend-generic-404-title": "Kļūda - Lapa nav atrasta",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} top no tādu pašu cilvēku kā tu labojumiem.</strong><br />Pieslēdzies, lai dotu ieguldījumu.",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|Pievienojies|Pievienojusies}} nupat",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|Pievienojies|Pievienojusies}} pirms {{PLURAL:$2|$2 sekundēm|$2 sekundes|$2 sekundēm}}",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|Pievienojies|Pievienojusies}} pirms {{PLURAL:$2|$2 minūtēm|$2 minūtes|$2 minūtēm}}",

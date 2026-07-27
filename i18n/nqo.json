@@ -78,7 +78,6 @@
 	"mf-font-size-large-label": "ߘߐߥߛߊ߬ߣߍ߲",
 	"mobile-frontend-generic-404-desc": "ߌ ߦߋ߫ ߞߐߜߍ ߡߍ߲ ߢߌߣߌ߲ ߞߊ߲߬߸ ߊ߬ ߕߍ߫ ߣߊ߫ ߛߐ߬ߘߐ߲߬ ߠߊ߫.",
 	"mobile-frontend-generic-404-title": "ߝߎ߬ߕߎ߲߬ߕߌ - ߞߐߜߍ ߡߊ߫ ߛߐ߬ߘߐ߲߫",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} ߛߌ߲ߘߌߣߍ߲߫ ߦߴߌ ߢߐ߲߱ ߡߐ߱ ߟߎ߬ ߟߋ߬ ߓߟߏ߫.</strong><br/>ߌ ߜߊ߲߬ߞߎ߲߫ ߞߊ߬ ߓߟߏߡߊߜߍ߲ ߞߍ߫.",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|ߕߘߍ߬ߣߍ߲߬ ߦߴߊ߬ ߘߐ߫}} ߌߞߘߐߣߌ߲߬ ߠߋ߬",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|ߕߐ߮ ߛߓߍ߫ ߘߊ߫}} {{PLURAL:$2|ߝߌ߬ߟߊ߲߫ $2|ߝߌ߬ߟߊ߲ $2 ߠߎ߬}} ߖߊ߬ߕߋ߫ ߟߋ߬ ߟߊ߫",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|ߕߐ߮ ߛߓߍ߫ ߘߊ߫}} {{PLURAL:$2|ߝߌ߬ߟߊ߲߫ $2|ߡߌ߬ߛߍ߲߬ $2 ߠߎ߫}} ߖߊ߬ߕߋ߫ ߟߋ߬ ߟߊ߫.",

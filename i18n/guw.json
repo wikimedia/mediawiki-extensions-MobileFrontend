@@ -69,7 +69,6 @@
 	"mf-font-size-large-label": "Daho",
 	"mobile-frontend-generic-404-desc": "Weda he dín a te ma sọgan yin mimọ.",
 	"mobile-frontend-generic-404-title": "Nuṣiwa - Weda ma yin mimọ",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} yin awuwlena gbọn gbẹtọ hiẹ n'kọ lẹ dali.</strong><br />Hùn adà towe nado sọgan basi yidogọ.",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|kọnawudopọ to}} din tlolo",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|kọnawudopọ to}} {{PLURAL:$2|$2 nukunwhiwhe-daa|$2 nukunwhiwhe-daa lẹ}} godo",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|kọnawudopọ to}} {{PLURAL:$2|$2 nukunwhiwhe|$2 nukunwhiwhe lẹ}} godo",

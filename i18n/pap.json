@@ -80,7 +80,6 @@
 	"mf-font-size-large-label": "Grandi",
 	"mobile-frontend-generic-404-desc": "E página ku bo ta listra pe no por a wòrdu hañá.",
 	"mobile-frontend-generic-404-title": "Eror - Pagina no hañá",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} ta trahá dor di hende manera abo.</strong><br>Inisiá un seshon pa kontribuí.",
 	"mobile-frontend-joined-just-now": "A kab'i {{GENDER:$1|djòin}} aworat'ei",
 	"mobile-frontend-joined-seconds": "A kab'i {{GENDER:$1|djòin}} {{PLURAL:$2|$2 sèkonde}} pasá",
 	"mobile-frontend-joined-minutes": "A kab'i {{GENDER:$1|djòin}} {{PLURAL:$2|$2 minüt}} pasá",

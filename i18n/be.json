@@ -81,7 +81,6 @@
 	"mf-font-size-large-label": "Вялікі",
 	"mobile-frontend-generic-404-desc": "Старонку, якую вы шукаеце, не было магчыма знайсці.",
 	"mobile-frontend-generic-404-title": "Памылка: старонка не знойдзена",
-	"mobile-frontend-generic-login-new": "<strong>Такія, як вы, будуюць пляцоўку {{SITENAME}}.</strong><br />Увайдзіце, каб унесці свой уклад.<br>",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|Далучыўся|Далучылася}} толькі што",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|Далучыўся|Далучылася}} $2 {{PLURAL:$2|секунду|секунды|секундаў}} таму",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|Далучыўся|Далучылася}} $2 {{PLURAL:$2|хвіліну|хвіліны|хвілінаў}} таму",

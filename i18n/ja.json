@@ -117,7 +117,6 @@
 	"mf-font-size-large-label": "大",
 	"mobile-frontend-generic-404-desc": "お探しのページが見つかりませんでした。",
 	"mobile-frontend-generic-404-title": "エラー - ページが見つかりません",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}}は、あなたのような人々によって作られています。</strong><br />ログインして寄稿しましょう。",
 	"mobile-frontend-joined-just-now": "たった今{{GENDER:$1|登録}}",
 	"mobile-frontend-joined-seconds": "{{PLURAL:$2|$2秒}}前に{{GENDER:$1|登録}}",
 	"mobile-frontend-joined-minutes": "{{PLURAL:$2|$2分}}前に{{GENDER:$1|登録}}",

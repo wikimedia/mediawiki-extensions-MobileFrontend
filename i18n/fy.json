@@ -72,7 +72,6 @@
 	"mf-font-size-large-label": "Grut",
 	"mobile-frontend-generic-404-desc": "De side dy't jo sykje kin net fûn wurde.",
 	"mobile-frontend-generic-404-title": "Flater - Side net fûn",
-	"mobile-frontend-generic-login-new": "<strong>{{GRAMMAR:Lidw|{{SITENAME}}}} is makke troch minsken krekt as jo.</strong><br />Meld jo oan om mei te dwaan.",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|Derby}} sûnt sakrekt",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|Derby}} sûnt {{PLURAL:$2|$2 sekonde|$2 sekonden}}",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|Derby}} sûnt {{PLURAL:$2|$2 minút|$2 minuten}}",

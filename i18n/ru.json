@@ -137,7 +137,6 @@
 	"mf-font-size-large-label": "Большой",
 	"mobile-frontend-generic-404-desc": "Не удалось найти страницу, которую вы ищете.",
 	"mobile-frontend-generic-404-title": "Ошибка — Страница не найдена",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} делается такими же людьми, как и вы.</strong><br />Войдите, чтобы внести свой вклад.",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|Присоединился|Присоединилась}} только что",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|Присоединился|Присоединилась}} {{PLURAL:$2|$2 секунду|$2 секунды|$2 секунд}} назад",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|Присоединился|Присоединилась}} {{PLURAL:$2|$2 минуту|$2 минуты}} назад",

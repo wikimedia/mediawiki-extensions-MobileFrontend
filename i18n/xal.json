@@ -45,7 +45,6 @@
 	"mf-font-size-small-label": "Бичкн",
 	"mobile-frontend-generic-404-desc": "Тана хәәсн халхиг олҗ чадсн уга.",
 	"mobile-frontend-generic-404-title": "Эндү — Халхнь олдсн уга",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} Танла әдлхн күмсәр кегдҗәнә.</strong><br />Хүв-немрән орулхин төлә, невтртн.",
 	"mobile-frontend-joined-just-now": "Мөн ода{{GENDER:$1|Негдв}}",
 	"mobile-frontend-language-heading": "<strong>Келмүд</strong>",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Сана оркҗах келмүд",

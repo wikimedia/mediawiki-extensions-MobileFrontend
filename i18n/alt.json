@@ -73,7 +73,6 @@
 	"mf-font-size-large-label": "Јаан",
 	"mobile-frontend-generic-404-desc": "Слердиҥ бедреген бӱк табылбады.",
 	"mobile-frontend-generic-404-title": "Јастырыш - Бӱк табылбады",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}}-ны слердий ле улус эдип турган.</strong><br />Бойыгардыҥ кожултаны эдерге кирер.",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|Коштонды}} јаҥыла",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|Коштонды}} {{PLURAL:$2|$2 секунда}} кайра",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|Коштонды}} {{PLURAL:$2|$2 минута}} кайра",

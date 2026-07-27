@@ -90,7 +90,6 @@
 	"mf-font-size-large-label": "Grande",
 	"mobile-frontend-generic-404-desc": "Non se puido atopar a páxina que procurabas.",
 	"mobile-frontend-generic-404-title": "Erro: Non se atopou a páxina",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} está feito por xente coma ti.</strong><br />Rexístrate para contribuíres.",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|Uniuse}} hai un intre",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|Uniuse}} hai {{PLURAL:$2|$2 segundo|$2 segundos}}",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|Uniuse}} hai {{PLURAL:$2|$2 minuto|$2 minutos}}",

@@ -72,7 +72,6 @@
 	"mf-font-size-large-label": "Lai",
 	"mobile-frontend-generic-404-desc": "Na tlua haipa hmia hmôpa châ vei.",
 	"mobile-frontend-generic-404-title": "Pâna - Hmia hmô leipa",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} he nâma hawhpa chyhsazy ta ama tao.</strong><br />deichhy awpa ta angia teh.",
 	"mobile-frontend-joined-just-now": "Tahmâ tlai {{GENDER:$1|A vaw ngiapa}}",
 	"mobile-frontend-joined-seconds": "{{PLURAL:$2|$2 sekâ|}} nato {{GENDER:$1|â vaw ngia}}",
 	"mobile-frontend-joined-minutes": "{{PLURAL:$2|$2 mini|}} nota {{GENDER:$1|â vaw ngia}}",

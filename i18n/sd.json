@@ -76,7 +76,6 @@
 	"mf-font-size-large-label": "وڏا",
 	"mobile-frontend-generic-404-desc": "جنھن صفحي لاءِ ڏسو پيا اھو نہ لڀي سگهيو.",
 	"mobile-frontend-generic-404-title": "چُڪَ - صفحو نہ لڌو",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} کي اوهان جھڙن ماڻھن ٺاھيو آهي. </strong><br/>ڀاڱيداري ڪرڻ لاءِ داخل ٿيو.",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|ھاڻي ھاڻي شامل ٿيو}}",
 	"mobile-frontend-joined-seconds": "{{PLURAL:$2|$2 سيڪنڊ|$2 سيڪنڊَ}} {{GENDER:$1|اڳ شامل ٿيو}}",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1}} {{PLURAL:$2|$2 منٽ|$2 منٽَ}} اڳ شامل ٿيو",

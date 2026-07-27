@@ -87,7 +87,6 @@
 	"mf-font-size-large-label": "Μεγάλα",
 	"mobile-frontend-generic-404-desc": "Η σελίδα που ψάχνατε δεν βρέθηκε.",
 	"mobile-frontend-generic-404-title": "Σφάλμα - Η σελίδα δεν βρέθηκε",
-	"mobile-frontend-generic-login-new": "Η <strong>{{SITENAME}} δημιουργείται από ανθρώπους σαν κι εσάς.</strong><br />Συνδεθείτε για να συνεισφέρετε.",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1| Έγινε μέλος}} μόλις τώρα",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1| Έγινε μέλος}} {{PLURAL:$2| $2 δευτερόλεπτο| $2 δευτερόλεπτα}} πριν",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1| Έγινε μέλος}} {{PLURAL:$2| $2 λεπτό| $2 λεπτά}} πριν",

@@ -102,7 +102,6 @@
 	"mf-font-size-large-label": "Grande",
 	"mobile-frontend-generic-404-desc": "La pagina che stai cercando non è stata trovata.",
 	"mobile-frontend-generic-404-title": "Errore - pagina non trovata",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} è fatta da persone come te.</strong><br />Accedi per contribuire.",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|Iscritto|Iscritta|Iscritto/a}} proprio adesso",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|Iscritto|Iscritta|Iscritto/a}} {{PLURAL:$2|$2 secondo|$2 secondi}} fa",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|Iscritto|Iscritta|Iscritto/a}} {{PLURAL:$2|$2 minuto|$2 minuti}} fa",

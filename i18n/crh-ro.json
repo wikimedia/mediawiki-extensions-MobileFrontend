@@ -46,7 +46,6 @@
 	"mf-font-size-large-label": "Balaban",
 	"mobile-frontend-generic-404-desc": "Kîdîrganîñîz sayipa tapîlmadî.",
 	"mobile-frontend-generic-404-title": "Hata - Sayipa tapîlmadî",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} sízíñ kíbí insanlar tarapîndan yasala.</strong><br />Katkîda tapîlmak úşún kíríş etíñíz.",
 	"mobile-frontend-joined-just-now": "Şímdí {{GENDER:$1|katnaşkan}}",
 	"mobile-frontend-joined-seconds": "{{PLURAL:$2|$2 saniye}} ewel {{GENDER:$1|katnaşkan}}",
 	"mobile-frontend-joined-minutes": "{{PLURAL:$2|$2 dakka}} ewel {{GENDER:$1|katnaşkan}}",

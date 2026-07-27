@@ -80,7 +80,6 @@
 	"mf-font-size-large-label": "Velika",
 	"mobile-frontend-generic-404-desc": "Strani, ki jo iščete, ni bilo mogoče najti.",
 	"mobile-frontend-generic-404-title": "Napaka – strani ni bilo mogoče najti",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} ustvarjajo ljudje, kot ste vi.</strong><br /> Prijavite se za prispevanje.",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|Pravkar se je pridružil|Pravkar se je pridružila|Pravkar se je pridružil_a}}",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|Pridružen|Pridružena|Pridružitev}} pred {{PLURAL:$2|$2 sekundo|$2 sekundama|$2 sekundami}}",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|Pridružen|Pridružena|Pridružitev}} pred {{PLURAL:$2|$2 minuto|$2 minutama|$2 minutami}}",

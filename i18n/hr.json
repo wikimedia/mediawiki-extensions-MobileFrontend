@@ -85,7 +85,6 @@
 	"mf-font-size-large-label": "Najveća",
 	"mobile-frontend-generic-404-desc": "Stranica koju tražite nije pronađena.",
 	"mobile-frontend-generic-404-title": "Pogreška: stranica nije pronađena",
-	"mobile-frontend-generic-login-new": "Projekt <strong>{{SITENAME}} načinili su ljudi poput Vas.</strong><br />Prijavite se da biste doprinosili.",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|Pridružio|Pridružila|Pridružio/pridružila}} se upravo sada",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|Pridružio|Pridružila|Pridružio/pridružila}} se prije {{PLURAL:$2|$2 sekundu|$2 sekunde|$2 sekundi}}",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|Pridružio|Pridružila|Pridružio/pridružila}} se prije {{PLURAL:$2|$2 minute|$2 minute|$2 minuta}}",

@@ -48,7 +48,6 @@
 	"mf-font-size-description": "Badagan atawa leutikan ukuran téks ngarah bisa dibaca.",
 	"mobile-frontend-generic-404-desc": "Kaca nu keur ditéangan ku anjeun teu bisa kapanggih.",
 	"mobile-frontend-generic-404-title": "Kasalahan - Kaca teu kapanggih",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} dijieun ku jalma siga anjeun.</strong><br />Asup log pikeun ngontribusi.",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|Geus aub}} bieu pisan",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|geus aub}} {{PLURAL:$2|$2 detik}} ka tukang",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|geus aub}} {{PLURAL:$2|$2 menit}} ka tukang",

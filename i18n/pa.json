@@ -85,7 +85,6 @@
 	"mf-font-size-large-label": "ਵੱਡਾ",
 	"mobile-frontend-generic-404-desc": "ਜੋ ਸਫ਼ਾ ਤੁਸੀਂ ਭਾਲ ਰਹੇ ਹੋ ਲੱਭਿਆ ਨਹੀਂ ਜਾ ਸਕਿਆ।",
 	"mobile-frontend-generic-404-title": "ਗਲਤੀ-ਸਫ਼ਾ ਨਹੀਂ ਲੱਭਿਆ",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} ਤੁਹਾਡੇ ਵਰਗੇ ਲੋਕਾਂ ਦੁਆਰਾ ਬਣਾਇਆ ਗਿਆ ਹੈ।</strong><br /> ਯੋਗਦਾਨ ਪਾਉਣ ਲਈ ਦਾਖਲ ਹੋਵੋ।",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|Joined}} ਹੁਣੇ",
 	"mobile-frontend-joined-seconds": "{{PLURAL:$2|$2 ਸਕਿੰਟ}} ਪਹਿਲਾਂ {{GENDER:$1|ਸ਼ਾਮਲ ਹੋਏ}}",
 	"mobile-frontend-joined-minutes": "{{PLURAL:$2|$2 ਮਿੰਟ}} ਪਹਿਲਾਂ {{GENDER:$1|ਸ਼ਾਮਲ ਹੋਏ}}",

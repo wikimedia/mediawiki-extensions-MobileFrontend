@@ -92,7 +92,6 @@
 	"mf-font-size-large-label": "বড়",
 	"mobile-frontend-generic-404-desc": "যে পাতাটি আপনি খুঁজছেন তা পাওয়া যায়নি।",
 	"mobile-frontend-generic-404-title": "ত্রুটি - পাতাটি খুঁজে পাওয়া যায়নি",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} আপনার মত লোকের দ্বারাই তৈরি।</strong><br />অবদান রাখতে প্রবেশ করুন।",
 	"mobile-frontend-joined-just-now": "এইমাত্র {{GENDER:$1|যোগ দিয়েছেন}}",
 	"mobile-frontend-joined-seconds": "{{PLURAL:$2|$2 সেকেন্ড}} আগে {{GENDER:$1|যোগ দিয়েছেন}}",
 	"mobile-frontend-joined-minutes": "{{PLURAL:$2|$2 মিনিট}} আগে {{GENDER:$1|যোগ দিয়েছেন}}",

@@ -64,7 +64,6 @@
 	"mf-font-size-large-label": "Kinini",
 	"mobile-frontend-generic-404-desc": "Urupapuro urimo gushaka ntirushoboye kuboneka.",
 	"mobile-frontend-generic-404-title": "Ikosa - Urupapuro ntiruboneka",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} ikorwa n'abantu nkawe.</strong><br />Injira kugirango utange umusanzu.",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|Yinjiye}} ubu",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|Yinjiye}} {{PLURAL:$2|isegonda $2 rishize|amasegonda $2 ashize}}",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|Yinjiye}} {{PLURAL:$2|umunota $2 ushize|iminota $2 ishize}}",

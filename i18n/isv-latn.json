@@ -76,7 +76,6 @@
 	"mf-font-size-large-label": "Veliky",
 	"mobile-frontend-generic-404-desc": "Stranica, ktoru iščete, ne najdena.",
 	"mobile-frontend-generic-404-title": "Pogrěška – stranica ne najdena",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} jest tvorjeny takymi ljudami, kako vy.</strong><br />Prijavite se, da byste vnesli svoj vklad.",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|Pristupil|pristupila}} prěd hviljeju",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|Pristupil|pristupila}} prěd {{PLURAL:$2|$2 sekundoju|$2 sekundami}}",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|Pristupil|pristupila}} prěd {{PLURAL:$2|$2 minutoju|$2 minutami}}",

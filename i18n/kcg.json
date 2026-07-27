@@ -70,7 +70,6 @@
 	"mf-font-size-large-label": "A̱mgbii",
 	"mobile-frontend-generic-404-desc": "Á̱ si̱ mi̱n shyia̱ wat hu nang a cat a̱ni.",
 	"mobile-frontend-generic-404-title": "Ghyuap - Á̱ si̱ mi̱n shyia̱ wat hu",
-	"mobile-frontend-generic-login-new": "Á̱niet nang nwan a̱ni bibya jhyi <strong>{{SITENAME}} </strong><br />Nwuo a nwuak meang.",
 	"mobile-frontend-joined-just-now": "A sii {{GENDER:$1|shyia̱ nwuai}} hu ma̱ninika",
 	"mobile-frontend-joined-seconds": "A ku {{GENDER:$1|shyia̱ nwuai}} hu mi̱ da̱ {{PLURAL:$2|a̱da̱dei mbwak $2 ka̱|a̱cyuang mbwak $2 na̱}} sii swak a̱ni",
 	"mobile-frontend-joined-minutes": "A ku {{GENDER:$1|shyia̱ nwuo}} hu mi̱ di̱ {{PLURAL:$2|miti $2 ku|mmiti $2 na̱}} sii swak a̱ni",

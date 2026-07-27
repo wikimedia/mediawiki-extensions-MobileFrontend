@@ -81,7 +81,6 @@
 	"mf-font-size-large-label": "Weyn",
 	"mobile-frontend-generic-404-desc": "Bogga aad raadinayso lama helin.",
 	"mobile-frontend-generic-404-title": "Qalad - Bogga lama helin",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} waxaa sameeya dad adiga oo kale ah.</strong><br />Soo gal si aad wax ugu darto.",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1|Ku biiray}} hada",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|Ku biiray}} {{PLURAL:$2|$2 ilbiriqsi|$2 ilbiriqsiyo}} ka hor",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|Ku biiray}} {{PLURAL:$2|$2 daqiiqo|$2 daqiiqadood}} ka hor",

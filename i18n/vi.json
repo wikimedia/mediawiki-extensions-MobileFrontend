@@ -101,7 +101,6 @@
 	"mf-font-size-large-label": "Lớn",
 	"mobile-frontend-generic-404-desc": "Không tìm thấy trang bạn muốn xem.",
 	"mobile-frontend-generic-404-title": "Lỗi – Không tìm thấy trang",
-	"mobile-frontend-generic-login-new": "<strong>{{SITENAME}} do những người như bạn làm nên.</strong><br />Hãy đăng nhập để đóng góp.",
 	"mobile-frontend-joined-just-now": "{{GENDER:$1}}Vừa tham gia",
 	"mobile-frontend-joined-seconds": "{{GENDER:$1|Tham gia}} cách đây {{PLURAL:$2|$2 giây}}",
 	"mobile-frontend-joined-minutes": "{{GENDER:$1|Tham gia}} cách đây {{PLURAL:$2|$2 phút}}",
