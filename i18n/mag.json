@@ -173,7 +173,7 @@
 	"mobile-frontend-mobile-option-amc-learn-more": "अधिक जानथिन",
 	"mobile-frontend-mobile-option-amc-send-feedback": "प्रतिक्रिया भेजथिन",
 	"mobile-frontend-user-pref-option": "प्रयोगकर्ता प्राथमिकता",
-	"mobile-frontend-user-pref-description": "कूटशब्द, जालस्थान उपस्थिति, अधिसूचना सेटिङ्ग्स आउ अधिक सहित अपन प्राथमिकताके बदलथिन ।",
+	"mobile-frontend-user-pref-description": "कूटशब्द, जालस्थल उपस्थिति, अधिसूचना सेटिङ्ग आउ अधिक सहित अपन प्राथमिकताके बदलथिन ।",
 	"mobile-frontend-user-pref-link": "प्राथमिकता खोलथिन",
 	"mobile-frontend-amc-outreach-intro": "उन्नत योजना आ गेलहे",
 	"mobile-frontend-amc-outreach-description": "उन्नत योजना से दूरभाषपर इतिहासपन्ना, ध्यानसूचीपन्ना, हालमे होएल बदलाव, आउ दोसर सम्पादन उपकरण नियन ढेर सुविधा उपलब्ध होवहे ।",
@@ -182,7 +182,7 @@
 	"mobile-frontend-amc-outreach-enabled-message": "उन्नत योजना अखनि सक्षम हे । अपने एकरा अपन सेटिङ्ग्स मे अक्षम कर सकही ।",
 	"mobile-frontend-amc-outreach-dismissed-message": "अपने कौनो समय अपन सेटिङ्ग्स से उन्नत योजनाके सक्षम कर सकही ।",
 	"mobile-frontend-beta-only": "सुविधा खाली बीटा योजनामे उपलब्ध हे",
-	"mobile-frontend-console-recruit": "https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend पर अधिक जानथिन जे हमनी अपन जालस्थान कैसे बनाव ही",
+	"mobile-frontend-console-recruit": "https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend पर अधिक जानथिन जे हमनी अपन जालस्थल कैसे बनाव ही",
 	"mobile-frontend-special-pages-pref": "दूरभाष पर पढ़ैत खनि पन्नाके सरल रूपमे देखावथिन (अनुशंसित)",
 	"prefs-mobile": "दूरभाष प्राथमिकता"
 }
