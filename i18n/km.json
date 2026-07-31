@@ -3,7 +3,8 @@
 		"authors": [
 			"Evannak",
 			"គីមស៊្រុន",
-			"វ័ណថារិទ្ធ"
+			"វ័ណថារិទ្ធ",
+			"MeahNunh"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "ថាតើអ្នកប្រើប្រាស់ម្នាក់កំពុងកែប្រែតាមអន្តរមុខចល័តឬអត់",
@@ -99,7 +100,7 @@
 	"mobile-frontend-settings-save": "កាត់កំណត់ត្រូវបានរក្សាទុក។",
 	"mobile-frontend-terms-text": "លក្ខខណ្ឌប្រើប្រាស់",
 	"mobile-frontend-view": "អានលើឧបករណ៍ចល័ត",
-	"mobile-frontend-view-desktop": "អានលើកុំព្យូទ័រ",
+	"mobile-frontend-view-desktop": "ទិដ្ឋភាពជាកុំព្យូទ័រ",
 	"mobile-frontend-watchlist-a-z-empty-howto-alt": "ចុចលើសញ្ញាផ្កាយ",
 	"mobile-frontend-watchlist-back-home": "ត្រឡប់​ទៅ​ទំព័រដើម",
 	"mobile-frontend-watchlist-cta-button-login": "កត់ឈ្មោះចូល",
