@@ -1,11 +1,4 @@
-const
-	Thumbnail = require( './Thumbnail' ),
-	HEADING_SELECTOR = '.mw-heading',
-	EXCLUDE_THUMBNAIL_CLASS_SELECTORS = [ 'noviewer', 'metadata' ],
-	NOT_SELECTORS = EXCLUDE_THUMBNAIL_CLASS_SELECTORS.map( ( excludeSelector ) => `:not(.${ excludeSelector })` ).join( '' ),
-	THUMB_SELECTOR = [ 'a.image', 'a.thumbimage, a.mw-file-description' ].map(
-		( selector ) => `${ selector }${ NOT_SELECTORS }`
-	).join( ',' );
+const HEADING_SELECTOR = '.mw-heading';
 
 /**
  * Parses an article and converts it into a queryable object.
@@ -153,67 +146,6 @@ class PageHTMLParser {
 	}
 
 	/**
-	 * Returns a Thumbnail object from an anchor element containing an image or
-	 * null if not valid.
-	 *
-	 * @param {jQuery} $a Anchor element that contains the image.
-	 * @return {Thumbnail|null}
-	 */
-	getThumbnail( $a ) {
-		const notSelector = '.' + EXCLUDE_THUMBNAIL_CLASS_SELECTORS.join( ',.' ),
-			href = $a.attr( 'href' ),
-			url = href && new URL( href, location.href ),
-			legacyTitle = url && url.searchParams.get( 'title' ),
-			match = url && url.pathname.match( /[^/]+$/ );
-
-		// Parents need to be checked as well.
-		const valid = $a.parents( notSelector ).length === 0 &&
-			$a.find( notSelector ).length === 0;
-
-		if ( valid && ( legacyTitle !== null || match ) ) {
-			return new Thumbnail( {
-				el: $a,
-				filename: mw.util.percentDecodeFragment(
-					legacyTitle !== null ? legacyTitle : match[0]
-				)
-			} );
-		}
-
-		return null;
-	}
-
-	/**
-	 * Return all the thumbnails in the article.
-	 * Images which have a class or link container (.image|.thumbimage)
-	 * that matches one of the items of the constant EXCLUDE_THUMBNAIL_CLASS_SELECTORS
-	 * will be excluded.
-	 * A thumbnail nested inside one of these classes will still be returned.
-	 * e.g. `<div class="noviewer"><a class="image"><img></a></div>` is not a valid thumbnail
-	 * `<a class="image noviewer"><img></a>` is not a valid thumbnail
-	 * `<a class="image"><img class="noviewer"></a>` is not a valid thumbnail
-	 *
-	 * @param {jQuery} [$el] Container to search, defaults to this.$el.
-	 * @return {Thumbnail[]}
-	 */
-	getThumbnails( $el ) {
-		const thumbs = [];
-
-		$el = $el || this.$el;
-
-		const $thumbs = $el.find( THUMB_SELECTOR );
-
-		$thumbs.each( ( i, thumbEl ) => {
-			const $a = $el.find( thumbEl );
-			const thumb = this.getThumbnail( $a );
-
-			if ( thumb ) {
-				thumbs.push( thumb );
-			}
-		} );
-		return thumbs;
-	}
-
-	/**
 	 * Returns a jQuery object representing all redlinks on the page.
 	 *
 	 * @return {jQuery.Object}
@@ -224,13 +156,9 @@ class PageHTMLParser {
 }
 
 /**
- * Selector for matching headings
+ * Selector for matching headings.
+ * @internal for use in  Minerva only.
  */
 PageHTMLParser.HEADING_SELECTOR = HEADING_SELECTOR;
-
-/**
- * Selector for thumbnails.
- */
-PageHTMLParser.THUMB_SELECTOR = THUMB_SELECTOR;
 
 module.exports = PageHTMLParser;

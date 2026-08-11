@@ -21,7 +21,6 @@
 		"src/mobile.amcOutreachDrawer/mobile.amcOutreachDrawer.js",
 		"src/mobile.editor.overlay/mobile.editor.overlay.js",
 		"src/mobile.init/mobile.init.js",
-		"src/mobile.mediaViewer/mobile.mediaViewer.js",
 		"src/mobile.special.uploads.scripts/mobile.special.uploads.scripts.js",
 		"src/mobile.special.watchlist.scripts/mobile.special.watchlist.scripts.js",
 		"src/mobile.special.mobilediff.scripts.js",

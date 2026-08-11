@@ -147,8 +147,6 @@ MediaWiki core.
   - /src/mobile.startup/headers.js
   - /src/mobile.startup/icons.js
   - /src/mobile.startup/mobile.startup.js
-  - /src/mobile.startup/moduleLoader.js
-  - /src/mobile.startup/moduleLoaderSingleton.js
   - /src/mobile.startup/promisedView.js
   - /src/mobile.startup/showOnPageReload.js
   - /src/mobile.startup/time.js
@@ -218,24 +216,6 @@ The editor.
   - /tests/node-qunit/mobile.editor.overlay/
 * Contact: [Editing Team][2]
 * Phabricator: https://phabricator.wikimedia.org/project/view/5654/
-
-
-## MobileFrontend image carousel (media viewer)
-
-The image lightbox for mobile. Please do not make changes in this part of the
-codebase without consulting the Readers Growth team.
-
-* Since: Sept 2025
-* Files:
-  - /resources/dist/mobile.mediaViewer.js
-  - /src/mobile.startup/Thumbnail.js
-* Folders:
-  - /resources/mobile.mediaViewer
-  - /src/mobile.mediaViewer
-  - /src/mobile.startup/mediaViewer
-  - /tests/node-qunit/mobile.mediaViewer
-* Contact: [Readers Growth][1]
-* Phabricator: https://phabricator.wikimedia.org/project/view/8170/
 
 ## Special:EditWatchlist reading list feature
 

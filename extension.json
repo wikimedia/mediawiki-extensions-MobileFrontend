@@ -347,26 +347,6 @@
 				"parentheses"
 			]
 		},
-		"mobile.mediaViewer": {
-			"dependencies": [
-				"mobile.startup",
-				"mediawiki.router"
-			],
-			"styles": [
-				"resources/mobile.mediaViewer/ImageCarousel.less"
-			],
-			"scripts": [
-				"resources/dist/mobile.mediaViewer.js"
-			],
-			"messages": [
-				"mobile-frontend-media-details",
-				"mobile-frontend-media-license-link",
-				"mobile-frontend-media-load-fail-message",
-				"mobile-frontend-media-load-fail-retry",
-				"mobile-frontend-media-next",
-				"mobile-frontend-media-prev"
-			]
-		},
 		"mobile.special.styles": {
 			"styles": [
 				"resources/mobile.special.styles/common.less",

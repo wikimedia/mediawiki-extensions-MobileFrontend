@@ -1,7 +1,7 @@
 [
 	{
 		"resourceModule": "mobile.startup",
-		"maxSize": "14.4KB"
+		"maxSize": "13.7KB"
 	},
 	{
 		"resourceModule": "mobile.init",
@@ -15,10 +15,6 @@
 	{
 		"resourceModule": "mobile.init.styles",
 		"maxSize": "2.6KB"
-	},
-	{
-		"resourceModule": "mobile.mediaViewer",
-		"maxSize": "3.2KB"
 	},
 	{
 		"resourceModule": "mobile.special.mobileoptions.scripts",

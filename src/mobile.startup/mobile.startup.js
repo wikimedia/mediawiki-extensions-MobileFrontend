@@ -13,9 +13,6 @@ const references = require( './references/references' );
 const promisedView = require( './promisedView' );
 const headers = require( './headers' );
 const Skin = require( './Skin' );
-const mediaViewer = {
-	overlay: require( './mediaViewer/overlay' )
-};
 const util = require( './util.js' );
 const actionParams = require( './actionParams.js' );
 const Icon = require( './Icon.js' );
@@ -129,13 +126,6 @@ module.exports = {
 	 * @private
 	 */
 	cancelIcon: icons.cancel,
-	/**
-	 * Internal for use inside Minerva only.
-	 *
-	 * @memberof module:mobile.startup
-	 * @type module:mobile.startup/mediaViewer
-	 */
-	mediaViewer,
 	/**
 	 * Internal for use inside Minerva only.
 	 *

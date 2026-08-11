@@ -10,8 +10,6 @@ const
 	srcMapExt = '.map.json',
 	ENTRIES = {
 		startup: 'mobile.startup',
-		languages: 'mobile.languages.structured',
-		mediaViewer: 'mobile.mediaViewer',
 		mobileInit: 'mobile.init',
 		mobileOptions: 'mobile.special.mobileoptions.scripts',
 		userLogin: 'mobile.special.userlogin.scripts',
@@ -51,7 +49,6 @@ module.exports = ( env, argv ) => ( {
 		// If we utilize webpack lazy loading instead of resource loader lazy
 		// loading, we won't be required to explicitly create this new chunk and
 		// this can be removed.
-		[ENTRIES.mediaViewer]: './src/mobile.mediaViewer/mobile.mediaViewer.js',
 		// all mobile skins,
 		[ENTRIES.mobileInit]: './src/mobile.init/mobile.init.js',
 		// T212823 Make a chunk for each mobile special page
@@ -117,12 +114,8 @@ module.exports = ( env, argv ) => ( {
 					// Only consider splitting chunks off of these whitelisted entry names
 					chunks: ( chunk ) => [
 						ENTRIES.startup,
-						ENTRIES.categories,
 						ENTRIES.editor,
-						ENTRIES.languages,
-						ENTRIES.mediaViewer,
 						ENTRIES.mobileInit,
-						ENTRIES.mobileDiff,
 						ENTRIES.mobileOptions,
 						ENTRIES.userLogin,
 						ENTRIES.watchlist
