@@ -238,26 +238,6 @@ codebase without consulting the Readers Growth team.
 * Contact: [Readers Growth][1]
 * Phabricator: https://phabricator.wikimedia.org/project/view/8170/
 
-
-## MobileFrontend language overlay
-
-The language overlay on mobile. Language team will investigate UBN bugs only.
-Please do not make changes in this part of the codebase without consulting the
-language team.
-
-* Since: Sept 2025
-* Files:
-  - /resources/dist/mobile.languages.structured.js
-  - /src/mobile.startup/LanguageInfo.js
-* Folders:
-  - /resources/mobile.languages.structured
-  - /src/mobile.languages.structured
-  - /src/mobile.startup/languageOverlay
-  - /tests/node-qunit/mobile.languages.structured/
-  - /tests/node-qunit/mobile.startup/languageOverlay
-* Contact: [Language and Product Localization][2]
-* Phabricator: https://phabricator.wikimedia.org/project/view/8169/
-
 ## Special:EditWatchlist reading list feature
 
 To be removed once the reading list feature is ready.

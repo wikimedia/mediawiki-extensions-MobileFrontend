@@ -16,7 +16,7 @@ const mobile = require( 'mobile.startup' ),
 	IconButton = mobile.class.IconButton,
 	blockMessageDrawer = require( './blockMessageDrawer.js' ),
 	abandonSurvey = require( './abandonSurvey.js' ),
-	MessageBox = mobile.class.MessageBox,
+	MessageBox = require( './MessageBox.js' ),
 	mwUser = mw.user;
 
 /**

@@ -1,11 +1,11 @@
 [
 	{
 		"resourceModule": "mobile.startup",
-		"maxSize": "17.3KB"
+		"maxSize": "14.5KB"
 	},
 	{
 		"resourceModule": "mobile.init",
-		"maxSize": "6.4KB"
+		"maxSize": "6.1KB"
 	},
 	{
 		"resourceModule": "mobile.codex.styles",
@@ -15,10 +15,6 @@
 	{
 		"resourceModule": "mobile.init.styles",
 		"maxSize": "2.6KB"
-	},
-	{
-		"resourceModule": "mobile.languages.structured",
-		"maxSize": "2.8KB"
 	},
 	{
 		"resourceModule": "mobile.mediaViewer",

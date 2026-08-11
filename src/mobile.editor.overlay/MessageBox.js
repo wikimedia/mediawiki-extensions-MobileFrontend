@@ -1,6 +1,6 @@
-const
-	View = require( './View' ),
-	util = require( './util' );
+const mobile = require( 'mobile.startup' );
+const View = mobile.class.View;
+const util = mobile.util;
 
 /**
  * Render CSS version of Codex message component.

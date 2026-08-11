@@ -231,6 +231,7 @@
 				"src/mobile.editor.overlay/EditorOverlayBase.js",
 				"src/mobile.editor.overlay/identifyLeadParagraph.js",
 				"src/mobile.editor.overlay/parseBlockInfo.js",
+				"src/mobile.editor.overlay/MessageBox.js",
 				"src/mobile.editor.overlay/saveFailureMessage.js",
 				"src/mobile.editor.overlay/setPreferredEditor.js",
 				"src/mobile.editor.overlay/SourceEditorOverlay.js",
@@ -327,25 +328,6 @@
 				"mobile-frontend-media-load-fail-retry",
 				"mobile-frontend-media-next",
 				"mobile-frontend-media-prev"
-			]
-		},
-		"mobile.languages.structured": {
-			"dependencies": [
-				"mediawiki.storage",
-				"mobile.startup"
-			],
-			"scripts": [
-				"resources/dist/mobile.languages.structured.js"
-			],
-			"styles": [
-				"resources/mobile.languages.structured/LanguageSearcher.less"
-			],
-			"messages": [
-				"mobile-frontend-languages-structured-overlay-suggested-languages-header",
-				"mobile-frontend-languages-structured-overlay-all-languages-header",
-				"mobile-frontend-languages-structured-overlay-search-input-placeholder",
-				"mobile-frontend-languages-structured-overlay-no-results",
-				"mobile-frontend-languages-structured-overlay-no-results-body"
 			]
 		},
 		"mobile.special.styles": {

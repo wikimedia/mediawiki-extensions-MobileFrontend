@@ -1,6 +1,5 @@
 const currentPageHTMLParser = require( './currentPageHTMLParser' );
 const time = require( './time' );
-const LanguageInfo = require( './LanguageInfo' );
 const currentPage = require( './currentPage' );
 const Drawer = require( './Drawer' );
 const CtaDrawer = require( './CtaDrawer' );
@@ -18,13 +17,10 @@ const Skin = require( './Skin' );
 const mediaViewer = {
 	overlay: require( './mediaViewer/overlay' )
 };
-const languageInfoOverlay = require( './languageOverlay/languageInfoOverlay' );
-const languageOverlay = require( './languageOverlay/languageOverlay' );
 const util = require( './util.js' );
 const actionParams = require( './actionParams.js' );
 const Icon = require( './Icon.js' );
 const IconButton = require( './IconButton.js' );
-const MessageBox = require( './MessageBox.js' );
 const Section = require( './Section.js' );
 const Button = require( './Button.js' );
 
@@ -73,7 +69,6 @@ module.exports = {
 		View,
 		Overlay,
 		Section,
-		MessageBox,
 		Icon,
 		IconButton,
 		Button
@@ -184,30 +179,5 @@ module.exports = {
 	license() {
 		const skin = Skin.getSingleton();
 		return skin.getLicenseMsg();
-	},
-	/**
-	 * Internal for use inside Minerva. See {@link module:mobile.startup} for access.
-	 *
-	 * @module mobile.startup/languages
-	 */
-	/**
-	 * Access to language overlays for usage inside Minerva only.
-	 *
-	 * @memberof module:mobile.startup
-	 * @type module:mobile.startup/languages
-	 */
-	languages: {
-		languageOverlay,
-		/**
-		 * Shows information about suggested languages.
-		 *
-		 * @memberof module:mobile.startup/languages
-		 * @param {mw.Api} api
-		 * @param {boolean} showSuggestedLanguage If the suggested languages section
-		 * should be rendered.
-		 */
-		languageInfoOverlay( api, showSuggestedLanguage ) {
-			return languageInfoOverlay( new LanguageInfo( api ), showSuggestedLanguage );
-		}
 	}
 };

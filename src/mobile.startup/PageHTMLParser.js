@@ -230,43 +230,6 @@ class PageHTMLParser {
 	getRedLinks() {
 		return this.$el.find( '.new' );
 	}
-
-	/**
-	 * Returns an object consistent with MediaWiki API representing languages
-	 * associated with the page in the user's current language.
-	 *
-	 * @param {string} pageTitle to fallback to if none found
-	 * @return {Object} containing langlinks
-	 *   and variant links as defined @ https://en.m.wikipedia.org/w/api.php?action=help&modules=query%2Blanglinks
-	 */
-	getLanguages( pageTitle ) {
-		const mapLinkToLanguageObj = ( node ) => {
-			// Name of language (e.g. עברית for Hebrew)
-			const autonym = node.textContent;
-			// The name of the language in the current language
-			// e.g. for english this would be Hebrew
-			const langname = node.getAttribute( 'data-language-local-name' ) || autonym;
-			const title = node.getAttribute( 'data-title' ) || pageTitle;
-
-			return {
-				lang: node.getAttribute( 'hreflang' ),
-				autonym,
-				langname,
-				title,
-				url: node.getAttribute( 'href' )
-			};
-		};
-		return {
-			languages: Array.prototype.map.call(
-				document.querySelectorAll( '#p-lang .interlanguage-link a' ),
-				mapLinkToLanguageObj
-			),
-			variants: Array.prototype.map.call(
-				document.querySelectorAll( '#p-variants li a' ),
-				mapLinkToLanguageObj
-			)
-		};
-	}
 }
 
 /**
