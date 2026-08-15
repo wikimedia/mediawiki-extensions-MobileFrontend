@@ -206,11 +206,18 @@ class EditorGateway {
 					!!options.isRespondingToForcedCaptcha;
 			}
 
+			if ( options.returntoquery ) {
+				// Creating a temporary account sends the browser to an opaque
+				// URL, so anything we want on the page it comes back to must be
+				// set up before the save.
+				apiOptions.returntoquery = options.returntoquery;
+			}
+
 			// TODO: When `wouldautocreate` is true, we should also set up:
 			// - apiOptions.returntofragment to be the URL fragment to link to the section
 			//   (but we don't know what it is; `sectionId` here is the number)
-			// - apiOptions.returntoquery to be 'redirect=no' if we're saving a redirect
-			//   (but we have can't figure that out, unless we parse the wikitext)
+			// - 'redirect=no' in apiOptions.returntoquery if we're saving a redirect
+			//   (but we can't figure that out, unless we parse the wikitext)
 
 			this.api.postWithToken( 'csrf', apiOptions ).then( ( data ) => {
 				if ( data && data.edit && data.edit.result === 'Success' ) {

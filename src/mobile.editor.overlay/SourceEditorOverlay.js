@@ -7,6 +7,7 @@ const mobile = require( 'mobile.startup' ),
 	EditorGateway = require( './EditorGateway.js' ),
 	MessageBox = require( './MessageBox.js' ),
 	setPreferredEditor = require( './setPreferredEditor.js' ),
+	returnToApp = require( 'mobile.returnToApp' ),
 	VisualEditorOverlay = require( './VisualEditorOverlay.js' ),
 	SourceEditorSaveEventHookPayload = require( './SourceEditorSaveEventHookPayload.js' ),
 	currentPage = mobile.currentPage,
@@ -680,6 +681,10 @@ class SourceEditorOverlay extends EditorOverlayBase {
 			options.editorinterface = 'MobileFrontend-SourceEditor';
 		}
 
+		if ( this.options.returnToApp ) {
+			options.returntoquery = returnToApp.savedQuery();
+		}
+
 		this.gateway.save( options )
 			.then( ( newRevId, redirectUrl, tempUserCreated ) => {
 				const title = this.options.title;
@@ -713,9 +718,10 @@ class SourceEditorOverlay extends EditorOverlayBase {
 		super.onSaveComplete( newRevId, redirectUrl, tempUserCreated );
 		mw.hook( 'mobileFrontend.sourceEditor.saveComplete' ).fire( newRevId );
 
-		if ( this.options.returnToApp ) {
+		if ( this.options.returnToApp && !( tempUserCreated && redirectUrl ) ) {
 			// Redirect to the app instead of reloading; nothing else triggers
-			// the exit handler on this path.
+			// the exit handler on this path. A temporary account redirect goes
+			// first if there is one, and the page it lands on does the handover.
 			this.redirectToApp();
 			return;
 		}

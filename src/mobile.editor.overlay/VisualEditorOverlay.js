@@ -4,6 +4,7 @@ const mobile = require( 'mobile.startup' ),
 	EditorGateway = require( './EditorGateway.js' ),
 	identifyLeadParagraph = require( './identifyLeadParagraph.js' ),
 	setPreferredEditor = require( './setPreferredEditor.js' ),
+	returnToApp = require( 'mobile.returnToApp' ),
 	util = mobile.util,
 	overlayManager = mobile.getOverlayManager(),
 	currentPageFn = mobile.currentPage;
@@ -81,6 +82,9 @@ class VisualEditorOverlay extends EditorOverlayBase {
 			// If source is passed in without being in modes, it'll just fall back to visual
 			defaultMode: this.options.mode === 'source' ? 'source' : 'visual'
 		} );
+		if ( this.options.returnToApp ) {
+			this.target.saveFields.returntoquery = () => returnToApp.savedQuery();
+		}
 		this.target.once( 'surfaceReady', () => {
 			surfaceReady.resolve();
 

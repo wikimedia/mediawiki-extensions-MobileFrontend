@@ -1,4 +1,4 @@
-let sandbox, messageStub, getContentStub, previewResolve,
+let sandbox, messageStub, getContentStub, previewResolve, sessionStore,
 	BlockMessageDetails, EditorGateway, EditorOverlayBase, SourceEditorOverlay;
 const
 	testUrl = '/w/index.php?title=User:Test',
@@ -21,6 +21,13 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/SourceEditorOverlay', {
 		mediaWiki.setUp( sandbox, global );
 		mustache.setUp( sandbox, global );
 		oo.setUp( sandbox, global );
+		// mw-node-qunit mocks mw.storage, but not the session variant of it
+		sessionStore = {
+			get: sandbox.stub().returns( null ),
+			set: sandbox.stub(),
+			remove: sandbox.stub()
+		};
+		mw.storage.session = sessionStore;
 		global.OO.ui.MultilineTextInputWidget = function () {
 			return {
 				$element: global.$( '<div>' )
@@ -51,7 +58,8 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/SourceEditorOverlay', {
 			.withArgs( 'wgIsMainPage' ).returns( false )
 			.withArgs( 'wgFormattedNamespaces' ).returns( { 2: 'User' } )
 			.withArgs( 'wgNamespaceIds' ).returns( { user: 2 } )
-			.withArgs( 'wgVisualEditorConfig' ).returns( { namespaces: [ 1, 2 ] } );
+			.withArgs( 'wgVisualEditorConfig' ).returns( { namespaces: [ 1, 2 ] } )
+			.withArgs( 'wgMFReturnToAppScheme' ).returns( 'wikipedia' );
 		const stubTitle = {
 			getUrl: function () {
 				return '/w/index.php?title=User:Test';
@@ -169,7 +177,111 @@ QUnit.test( '#initialize, as anonymous', ( assert ) => {
 			assert.true( editorOverlay.$anonWarning.length > 0, 'Editorwarning (IP will be saved) visible.' );
 			assert.true( editorOverlay.$el.find( '.anonymous' ).length > 0, 'Continue login has a second class.' );
 			assert.true( editorOverlay.$anonWarning.find( '.description' ).length > 0, 'New treatment group text is shown' );
+			assert.strictEqual(
+				mw.util.getUrl.getCalls().find(
+					( call ) => call.args[ 0 ] === 'Special:UserLogin'
+				).args[ 1 ].returntoquery,
+				undefined,
+				'No returntoquery is added without returnToApp.'
+			);
 		} );
+} );
+
+QUnit.test( '#initialize, as anonymous with returnToApp', ( assert ) => {
+	const editorOverlay = new SourceEditorOverlay( {
+		title: 'Main_page',
+		isAnon: true,
+		returnToApp: 'android&x'
+	} );
+
+	return editorOverlay.getLoadingPromise()
+		.then( () => {
+			const findCall = ( page ) => mw.util.getUrl.getCalls().find(
+				( call ) => call.args[ 0 ] === page
+			);
+			assert.strictEqual(
+				findCall( 'Special:UserLogin' ).args[ 1 ].returntoquery,
+				'returntoapp=android%26x',
+				'Login link keeps the app handover, value encoded.'
+			);
+			assert.strictEqual(
+				findCall( 'Special:CreateAccount' ).args[ 1 ].returntoquery,
+				'returntoapp=android%26x',
+				'Create account link keeps the app handover.'
+			);
+		} );
+} );
+
+QUnit.test( '#initialize, as anonymous with a valueless returnToApp', ( assert ) => {
+	const editorOverlay = new SourceEditorOverlay( {
+		title: 'Main_page',
+		isAnon: true,
+		returnToApp: ''
+	} );
+
+	return editorOverlay.getLoadingPromise()
+		.then( () => {
+			assert.strictEqual(
+				mw.util.getUrl.getCalls().find(
+					( call ) => call.args[ 0 ] === 'Special:UserLogin'
+				).args[ 1 ].returntoquery,
+				undefined,
+				'An empty value is treated as no value at all.'
+			);
+		} );
+} );
+
+QUnit.test( '#initialize, returnToApp needs an app to hand over to', ( assert ) => {
+	mw.config.get.withArgs( 'wgMFReturnToAppScheme' ).returns( '' );
+	const editorOverlay = new SourceEditorOverlay( {
+		title: 'Main_page',
+		isAnon: true,
+		returnToApp: 'android'
+	} );
+
+	return editorOverlay.getLoadingPromise()
+		.then( () => {
+			assert.strictEqual( editorOverlay.options.returnToApp, null,
+				'The parameter is dropped when the wiki has no app configured.' );
+			assert.strictEqual(
+				mw.util.getUrl.getCalls().find(
+					( call ) => call.args[ 0 ] === 'Special:UserLogin'
+				).args[ 1 ].returntoquery,
+				undefined,
+				'So nothing downstream acts on it.'
+			);
+		} );
+} );
+
+QUnit.test( '#onSaveComplete, returnToApp defers to a temporary account redirect', ( assert ) => {
+	const editorOverlay = new SourceEditorOverlay( {
+		title: 'Main_page',
+		returnToApp: 'android'
+	} );
+	const redirectStub = sandbox.stub( editorOverlay, 'redirectToApp' );
+	sandbox.stub( editorOverlay, 'showSaveCompleteMsg' );
+
+	editorOverlay.onSaveComplete( 123, 'http://example.test/opaque', true );
+	assert.strictEqual( redirectStub.callCount, 0,
+		'The temporary account redirect runs instead, and the page it lands on takes over.' );
+	assert.deepEqual(
+		sessionStore.set.args[ 0 ].slice( 0, 2 ),
+		[ 'mobileFrontend/returnToAppRevId', '123' ],
+		'The revision id is left where that page can find it.'
+	);
+
+	editorOverlay.onSaveComplete( 123, undefined, false );
+	assert.strictEqual( redirectStub.callCount, 1,
+		'Without one, the app redirect happens here as before.' );
+	assert.strictEqual( sessionStore.set.callCount, 1,
+		'Nothing is stored when the editor does the handover itself.' );
+
+	editorOverlay.onSaveComplete( undefined, 'http://example.test/opaque', true );
+	assert.deepEqual(
+		sessionStore.set.args[ 1 ].slice( 0, 2 ),
+		[ 'mobileFrontend/returnToAppRevId', '' ],
+		'A null edit makes no revision, but the handover is still recorded.'
+	);
 } );
 
 QUnit.test( '#handleCaptcha, falls through to super when hook not stopped', ( assert ) => {

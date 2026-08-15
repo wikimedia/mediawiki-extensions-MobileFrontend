@@ -216,6 +216,8 @@ The editor.
   - resources/mobile.init/fakeToolbar.less
 * Folders:
   - /src/mobile.editor.overlay
+  - /src/mobile.returnToApp
+  - /tests/node-qunit/mobile.returnToApp
   - /tests/node-qunit/mobile.editor.overlay/
 * Contact: [Editing Team][2]
 * Phabricator: https://phabricator.wikimedia.org/project/view/5654/

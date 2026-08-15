@@ -16,6 +16,7 @@ const mobile = require( 'mobile.startup' ),
 	IconButton = mobile.class.IconButton,
 	blockMessageDrawer = require( './blockMessageDrawer.js' ),
 	abandonSurvey = require( './abandonSurvey.js' ),
+	returnToApp = require( 'mobile.returnToApp' ),
 	MessageBox = require( './MessageBox.js' ),
 	mwUser = mw.user;
 
@@ -102,6 +103,11 @@ class EditorOverlayBase extends Overlay {
 		// change the message to request a summary when not in article namespace
 		if ( mw.config.get( 'wgNamespaceNumber' ) !== 0 ) {
 			options.summaryRequestMsg = mw.msg( 'mobile-frontend-editor-summary' );
+		}
+		if ( options.returnToApp && !returnToApp.isEnabled() ) {
+			// This wiki has no app to hand over to, so the parameter means nothing.
+			// Drop it here, where all the editors get it.
+			options.returnToApp = null;
 		}
 		super( options );
 	}
@@ -303,6 +309,9 @@ class EditorOverlayBase extends Overlay {
 			revision_id: newRevId
 		} );
 		if ( tempUserCreated && redirectUrl ) {
+			if ( this.options.returnToApp ) {
+				returnToApp.setPendingHandover( newRevId );
+			}
 			// The caller handles this redirect, either in SourceEditorOverlay or in VE's ArticleTarget
 			return;
 		}
@@ -617,11 +626,7 @@ class EditorOverlayBase extends Overlay {
 	 * passing the save result and revision id.
 	 */
 	redirectToApp() {
-		let appHref = `wikipedia://${ mw.config.get( 'wgServerName' ) }${ mw.util.getUrl() }?saved=${ this.saved ? 'true' : 'false' }`;
-		if ( this.savedRevId ) {
-			appHref += `&revision=${ this.savedRevId }`;
-		}
-		location.href = appHref;
+		returnToApp.redirectToApp( !!this.saved, this.savedRevId );
 	}
 
 	onExit() {
@@ -653,6 +658,15 @@ class EditorOverlayBase extends Overlay {
 	 * @return {jQuery.Element}
 	 */
 	createAnonWarning( options ) {
+		const queryParams = util.extend( {}, options.queryParams );
+		if ( options.returnToApp ) {
+			// Carry the parameter through the login flow, so that the editor
+			// still redirects to the app when it is exited.
+			queryParams.returntoquery = [
+				queryParams.returntoquery,
+				'returntoapp=' + encodeURIComponent( options.returnToApp )
+			].filter( Boolean ).join( '&' );
+		}
 		const $topDescription = $( '<p>' ).addClass( 'description' )
 				.text( mw.msg( 'mobile-frontend-editor-anonwarning-description' ) ),
 			params = util.extend( {
@@ -660,7 +674,7 @@ class EditorOverlayBase extends Overlay {
 					// use wgPageName as this includes the namespace if outside Main
 					mw.config.get( 'wgPageName' ) + '#/editor/' + ( options.sectionId || 'all' )
 				)
-			}, options.queryParams ),
+			}, queryParams ),
 			signupParams = util.extend( { type: 'signup' }, options.signupQueryParams ),
 			signupButton = new Button( {
 				label: mw.msg( 'mobile-frontend-watchlist-cta-button-createaccount' ),

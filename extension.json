@@ -208,6 +208,16 @@
 				"resources/mobile.startup/exports.js"
 			]
 		},
+		"mobile.returnToApp": {
+			"dependencies": [
+				"mediawiki.storage",
+				"mediawiki.util",
+				"mobile.startup"
+			],
+			"packageFiles": [
+				"src/mobile.returnToApp/returnToApp.js"
+			]
+		},
 		"mobile.editor.overlay": {
 			"dependencies": [
 				"oojs-ui.styles.icons-editing-core",
@@ -218,6 +228,7 @@
 				"user.options",
 				"oojs-ui",
 				"mobile.startup",
+				"mobile.returnToApp",
 				"mediawiki.user",
 				"mediawiki.confirmCloseWindow",
 				"mediawiki.jqueryMsg",
@@ -537,6 +548,10 @@
 		"MFEnableAbandonSurvey": {
 			"description": "Enable the editor-abandon survey.",
 			"value": false
+		},
+		"MFReturnToAppScheme": {
+			"description": "URL scheme of the native app which the editor hands back to when it is opened with a returntoapp parameter, for example \"wikipedia\". An empty string turns the handover off.",
+			"value": ""
 		},
 		"MFEnableJSConsoleRecruitment": {
 			"value": false

@@ -72,6 +72,11 @@ $window
 		}, 200 )
 	) );
 
+// Read the flag before the block below hides it.
+// The parameter name is repeated from mobile.returnToApp, which keeps that
+// module off page loads which are not a handover.
+const returnToAppSaved = mw.util.getParamValue( 'returntoappsaved' );
+
 // Hide URL flags used to pass state through reloads
 // venotify is normally handled in ve.init.mw.DesktopArticleTarget.init.js
 // but that's not loaded on mobile
@@ -79,12 +84,26 @@ $window
 if ( window.history && history.pushState ) {
 	// eslint-disable-next-line no-restricted-properties
 	url = new URL( window.location.href );
-	if ( url.searchParams.has( 'venotify' ) || url.searchParams.has( 'mfnotify' ) ) {
+	if ( url.searchParams.has( 'venotify' ) || url.searchParams.has( 'mfnotify' ) ||
+		url.searchParams.has( 'returntoappsaved' ) ) {
 		url.searchParams.delete( 'venotify' );
 		url.searchParams.delete( 'mfnotify' );
+		// Otherwise a reload, a back navigation, or a shared URL starts the
+		// handover again, when the revision it needs is already used
+		url.searchParams.delete( 'returntoappsaved' );
 		// eslint-disable-next-line no-restricted-properties
 		window.history.replaceState( null, document.title, url.toString() );
 	}
+}
+
+// Saving created a temporary account, which sent the browser away to an opaque
+// URL and back. The editor is gone, so finish the handover to the app here.
+if ( returnToAppSaved ) {
+	mw.loader.using( 'mobile.returnToApp' ).then( () => {
+		// Use MediaWiki ResourceLoader require(), not Webpack require()
+		const returnToApp = __non_webpack_require__( 'mobile.returnToApp' );
+		returnToApp.finishHandover();
+	} );
 }
 
 // Recruit volunteers through the console
