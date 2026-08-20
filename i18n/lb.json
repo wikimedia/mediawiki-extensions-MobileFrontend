@@ -13,7 +13,7 @@
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ob e Benotzer de mobillen Interface benotzt fir z'änneren oder net ($1)",
 	"mobile-frontend-account-create-captcha-placeholder": "Confirmatiouns-Code aginn",
-	"mobile-frontend-copyright": "Den Text ass ënner der $1 disponibel wann et net anescht uginn ass.",
+	"mobile-frontend-copyright": "Den Inhalt ass ënner der $1 disponibel, wann et net anescht uginn ass.",
 	"mobile-frontend-desc": "Hëlleft déi mobil Presenz vun enger MediaWiki-Instanz ze verbesseren",
 	"mobile-frontend-edit-login-action": "<strong>Hëlleft {{SITENAME}} verbesseren.</strong><br />\nAlogge fir z'änneren.",
 	"mobile-frontend-edit-signup-action": "<strong>Hëlleft {{SITENAME}} verbesseren.</strong><br />\nSchreift Iech a fir z'änneren.",
