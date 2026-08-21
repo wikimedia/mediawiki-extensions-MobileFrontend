@@ -16,7 +16,8 @@
 			"Paloi Sciurala",
 			"SZ475",
 			"Strainu",
-			"Wintereu"
+			"Wintereu",
+			"Blaséd"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Dacă un utilizator modifică sau nu prin intermediul interfeței mobile",
@@ -110,7 +111,7 @@
 	"mobile-frontend-media-load-fail-message": "A apărut o eroare la încărcarea acestei imagini.",
 	"mobile-frontend-media-load-fail-retry": "Reîncarcă",
 	"mobile-frontend-missing-image": "Imagine",
-	"mobile-frontend-overlay-close": "Închidere",
+	"mobile-frontend-overlay-close": "Închide",
 	"mobile-frontend-privacy-link-text": "Confidențialitate",
 	"mobile-frontend-references-citation": "Referințe",
 	"mobile-frontend-references-citation-error": "A apărut o eroare care a făcut imposibilă încărcarea acestei referințe.",
