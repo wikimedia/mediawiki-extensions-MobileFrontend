@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Wizzard"
+		]
+	},
+	"apihelp-edit-param-editorinterface": "Názov použitého rozhrania editora (napríklad MobileFrontend-SourceEditor)",
+	"apihelp-parse-param-mobileformat": "Vrátiť výstup spracovania vo formáte vhodnom pre mobilné zariadenia.",
+	"apihelp-parse-param-noimages": "Vypnúť obrázky v mobilnom výstupe.",
+	"apihelp-parse-param-mainpage": "Použiť transformácie mobilnej hlavnej stránky.",
+	"apihelp-webapp-manifest-summary": "Vráti manifest webovej aplikácie."
+}
