@@ -46,6 +46,8 @@ return [
 			$config->get( 'MFEnableWikidataDescriptions' ) ) );
 		$manager->registerFeature( new Feature( 'MFShowFirstParagraphBeforeInfobox', 'mobile-frontend',
 			$config->get( 'MFShowFirstParagraphBeforeInfobox' ) ) );
+		$manager->registerFeature( new Feature( 'MFQuickFacts', 'mobile-frontend',
+			$config->get( 'MFQuickFacts' ) ) );
 		$manager->registerFeature( new Feature( 'MFEnableFontChanger', 'mobile-frontend',
 			$config->get( 'MFEnableFontChanger' ) ) );
 		$manager->registerFeature( new Feature( 'MFUseDesktopSpecialEditWatchlistPage', 'mobile-frontend',

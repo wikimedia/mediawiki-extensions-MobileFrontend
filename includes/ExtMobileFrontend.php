@@ -13,6 +13,7 @@ use MobileFrontend\Features\FeaturesManager;
 use MobileFrontend\Hooks\HookRunner;
 use MobileFrontend\Transforms\MakeSectionsTransform;
 use MobileFrontend\Transforms\MoveLeadParagraphTransform;
+use MobileFrontend\Transforms\QuickFactsTransform;
 use MobileFrontend\Transforms\RemovableClassesTransform;
 use Wikibase\Client\WikibaseClient;
 use Wikibase\DataModel\Entity\ItemId;
@@ -78,12 +79,12 @@ class ExtMobileFrontend {
 	 * Transforms content to be mobile friendly version.
 	 * Filters out various elements and runs the MobileFormatter.
 	 *
-	 * @param IContextSource $out
+	 * @param OutputPage $out
 	 * @param string $html to render.
 	 *
 	 * @return string
 	 */
-	public static function domParseMobile( IContextSource $out, $html = '' ): string {
+	public static function domParseMobile( OutputPage $out, $html = '' ): string {
 		$services = MediaWikiServices::getInstance();
 		/** @var FeaturesManager $featuresManager */
 		$featuresManager = $services->getService( 'MobileFrontend.FeaturesManager' );
@@ -129,6 +130,9 @@ class ExtMobileFrontend {
 		$leadParagraphEnabled = in_array( $ns, $config->get( 'MFNamespacesWithLeadParagraphs' ) );
 		$showFirstParagraphBeforeInfobox = $leadParagraphEnabled &&
 			$featuresManager->isFeatureAvailableForCurrentUser( 'MFShowFirstParagraphBeforeInfobox' );
+		$quickFactsEnabled = $featuresManager->isFeatureAvailableForCurrentUser( 'MFQuickFacts' )
+			// Temporary QA aid for preview links: force enable via ?quickfacts=1.
+			|| $context->getRequest()->getBool( 'quickfacts' );
 
 		$transforms = [];
 		// Remove specified content in content namespaces
@@ -149,7 +153,10 @@ class ExtMobileFrontend {
 			);
 		}
 
-		if ( $showFirstParagraphBeforeInfobox ) {
+		if ( $quickFactsEnabled ) {
+			$transforms[] = new QuickFactsTransform( $out->msg( 'mobile-frontend-quick-facts' )->text() );
+			$out->addModuleStyles( 'mobile.quickFacts.styles' );
+		} elseif ( $showFirstParagraphBeforeInfobox ) {
 			$transforms[] = new MoveLeadParagraphTransform( $title, $title->getLatestRevID() );
 		}
 

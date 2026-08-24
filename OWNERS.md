@@ -73,6 +73,7 @@ into articles; and modifications to user pages.
   - /tests/phpunit/unit/MobileFormatterUnitTest.php
 * Folders:
   - /includes/Transforms
+  - /resources/mobile.quickFacts
   - /resources/mobile.userpage.styles
   - /tests/phpunit/unit/transforms
 * Contact: [Reader Growth][1]

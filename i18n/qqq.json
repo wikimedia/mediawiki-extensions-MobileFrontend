@@ -219,5 +219,6 @@
 	"mobile-editor-abandon-survey-answer-complicated": "Answer for the editor abandonment survey",
 	"mobile-editor-abandon-survey-answer-accident": "Answer for the editor abandonment survey",
 	"mobile-editor-abandon-survey-answer-error": "Answer for the editor abandonment survey",
-	"mobile-editor-abandon-survey-answer-other": "Answer for the editor abandonment survey"
+	"mobile-editor-abandon-survey-answer-other": "Answer for the editor abandonment survey",
+	"mobile-frontend-quick-facts": "Heading label for the section that holds the article infobox when the Quick facts feature is enabled."
 }

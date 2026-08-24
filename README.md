@@ -521,3 +521,15 @@ Move first paragraph in articles to before infobox.
 	"base" => true
 ]
 ```
+
+#### $wgMFQuickFacts
+
+Whether to collapse the lead infobox of an article page into a "Quick facts" section.
+
+* Type: `Array`
+* Default:
+```php
+[
+	"base" => false
+]
+```

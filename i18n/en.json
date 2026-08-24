@@ -210,5 +210,6 @@
 	"mobile-editor-abandon-survey-answer-complicated": "Interface felt too complicated",
 	"mobile-editor-abandon-survey-answer-accident": "Tapped edit by accident",
 	"mobile-editor-abandon-survey-answer-error": "Ran into a technical issue",
-	"mobile-editor-abandon-survey-answer-other": "Something else"
+	"mobile-editor-abandon-survey-answer-other": "Something else",
+	"mobile-frontend-quick-facts": "Quick facts"
 }

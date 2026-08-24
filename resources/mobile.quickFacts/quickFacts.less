@@ -1,0 +1,35 @@
+// The infobox's own TemplateStyles float it right by default, which would let
+// it escape the Quick facts section and spill alongside the following section
+// headings. Unsetting the float keeps it contained and centered instead.
+// The max-width mirrors WikimediaMessages' infobox.less, which otherwise only
+// applies below 640px.
+
+@import 'mediawiki.skin.variables.less';
+
+.mf-quick-facts {
+	&__content {
+		.infobox {
+			& caption.infobox-title,
+			& .infobox-subheader,
+			& tr td:only-child {
+				text-align: center;
+			}
+		}
+	}
+
+	.mw-parser-output & &__content table.infobox {
+		// override styles from ext.wikimediamessages.styles/infobox.less
+		width: @size-full !important;
+		max-width: @size-full !important;
+		margin: @spacing-100 auto !important;
+		float: none !important;
+		clear: unset !important;
+		box-sizing: @box-sizing-base;
+		display: table;
+
+		// Spacing between lead infoboxes in quick facts section
+		&:nth-child( n + 2 ) {
+			margin-top: @spacing-200 !important;
+		}
+	}
+}
