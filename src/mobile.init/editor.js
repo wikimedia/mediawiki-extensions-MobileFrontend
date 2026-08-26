@@ -143,6 +143,7 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 				isNewPage,
 				oldId: mw.util.getParamValue( 'oldid' ),
 				returnToApp: mw.util.getParamValue( 'returntoapp' ),
+				appInstallId: mw.util.getParamValue( 'appinstallid' ),
 				contentLang: $contentText.attr( 'lang' ),
 				contentDir: $contentText.attr( 'dir' ),
 				// Arrange preload content if we're on a page with those URL parameters

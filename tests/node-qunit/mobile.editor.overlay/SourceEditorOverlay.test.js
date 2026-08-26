@@ -253,6 +253,92 @@ QUnit.test( '#initialize, returnToApp needs an app to hand over to', ( assert ) 
 		} );
 } );
 
+QUnit.test( '#initialize, as anonymous with appInstallId', ( assert ) => {
+	const editorOverlay = new SourceEditorOverlay( {
+		title: 'Main_page',
+		isAnon: true,
+		appInstallId: 'install&1'
+	} );
+
+	return editorOverlay.getLoadingPromise()
+		.then( () => {
+			const findCall = ( page ) => mw.util.getUrl.getCalls().find(
+				( call ) => call.args[ 0 ] === page
+			);
+			assert.strictEqual(
+				findCall( 'Special:UserLogin' ).args[ 1 ].returntoquery,
+				'appinstallid=install%261',
+				'Login link keeps the app install id, value encoded.'
+			);
+			assert.strictEqual(
+				findCall( 'Special:CreateAccount' ).args[ 1 ].returntoquery,
+				'appinstallid=install%261',
+				'Create account link keeps the app install id.'
+			);
+		} );
+} );
+
+QUnit.test( '#initialize, as anonymous with returnToApp and appInstallId', ( assert ) => {
+	const editorOverlay = new SourceEditorOverlay( {
+		title: 'Main_page',
+		isAnon: true,
+		returnToApp: 'android',
+		appInstallId: 'install1'
+	} );
+
+	return editorOverlay.getLoadingPromise()
+		.then( () => {
+			assert.strictEqual(
+				mw.util.getUrl.getCalls().find(
+					( call ) => call.args[ 0 ] === 'Special:UserLogin'
+				).args[ 1 ].returntoquery,
+				'returntoapp=android&appinstallid=install1',
+				'Both parameters are carried, joined into one query.'
+			);
+		} );
+} );
+
+QUnit.test( '#initialize, as anonymous with a valueless appInstallId', ( assert ) => {
+	const editorOverlay = new SourceEditorOverlay( {
+		title: 'Main_page',
+		isAnon: true,
+		appInstallId: ''
+	} );
+
+	return editorOverlay.getLoadingPromise()
+		.then( () => {
+			assert.strictEqual(
+				mw.util.getUrl.getCalls().find(
+					( call ) => call.args[ 0 ] === 'Special:UserLogin'
+				).args[ 1 ].returntoquery,
+				undefined,
+				'An empty value is treated as no value at all.'
+			);
+		} );
+} );
+
+QUnit.test( '#initialize, appInstallId needs no app to hand over to', ( assert ) => {
+	mw.config.get.withArgs( 'wgMFReturnToAppScheme' ).returns( '' );
+	const editorOverlay = new SourceEditorOverlay( {
+		title: 'Main_page',
+		isAnon: true,
+		returnToApp: 'android',
+		appInstallId: 'install1'
+	} );
+
+	return editorOverlay.getLoadingPromise()
+		.then( () => {
+			assert.strictEqual(
+				mw.util.getUrl.getCalls().find(
+					( call ) => call.args[ 0 ] === 'Special:UserLogin'
+				).args[ 1 ].returntoquery,
+				'appinstallid=install1',
+				'The install id is for tracking, so it survives without an app. ' +
+					'The dropped handover leaves nothing behind.'
+			);
+		} );
+} );
+
 QUnit.test( '#onSaveComplete, returnToApp defers to a temporary account redirect', ( assert ) => {
 	const editorOverlay = new SourceEditorOverlay( {
 		title: 'Main_page',

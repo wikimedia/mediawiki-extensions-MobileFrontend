@@ -659,13 +659,20 @@ class EditorOverlayBase extends Overlay {
 	 */
 	createAnonWarning( options ) {
 		const queryParams = util.extend( {}, options.queryParams );
-		if ( options.returnToApp ) {
-			// Carry the parameter through the login flow, so that the editor
-			// still redirects to the app when it is exited.
-			queryParams.returntoquery = [
-				queryParams.returntoquery,
-				'returntoapp=' + encodeURIComponent( options.returnToApp )
-			].filter( Boolean ).join( '&' );
+		// Carry these parameters through the login flow
+		const carried = {
+			// Whether to return to the app after an edit is done
+			returnToApp: 'returntoapp',
+			// App install id for WikimediaEvents to use in logging
+			appInstallId: 'appinstallid'
+		};
+		for ( const [ option, parameter ] of Object.entries( carried ) ) {
+			if ( options[ option ] ) {
+				queryParams.returntoquery = [
+					queryParams.returntoquery,
+					parameter + '=' + encodeURIComponent( options[ option ] )
+				].filter( Boolean ).join( '&' );
+			}
 		}
 		const $topDescription = $( '<p>' ).addClass( 'description' )
 				.text( mw.msg( 'mobile-frontend-editor-anonwarning-description' ) ),
