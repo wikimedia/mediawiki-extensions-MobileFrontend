@@ -25,10 +25,6 @@
 		"maxSize": "0.3KB"
 	},
 	{
-		"resourceModule": "mobile.special.watchlist.scripts",
-		"maxSize": "3.1KB"
-	},
-	{
 		"resourceModule": "mobile.userpage.styles",
 		"maxSize": "0.5KB"
 	},

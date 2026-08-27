@@ -12,8 +12,7 @@ const
 		startup: 'mobile.startup',
 		mobileInit: 'mobile.init',
 		mobileOptions: 'mobile.special.mobileoptions.scripts',
-		userLogin: 'mobile.special.userlogin.scripts',
-		watchlist: 'mobile.special.watchlist.scripts'
+		userLogin: 'mobile.special.userlogin.scripts'
 	};
 
 module.exports = ( env, argv ) => ( {
@@ -53,8 +52,7 @@ module.exports = ( env, argv ) => ( {
 		[ENTRIES.mobileInit]: './src/mobile.init/mobile.init.js',
 		// T212823 Make a chunk for each mobile special page
 		[ENTRIES.mobileOptions]: './src/mobile.special.mobileoptions.scripts.js',
-		[ENTRIES.userLogin]: './src/mobile.special.userlogin.scripts.js',
-		[ENTRIES.watchlist]: './src/mobile.special.watchlist.scripts/mobile.special.watchlist.scripts.js'
+		[ENTRIES.userLogin]: './src/mobile.special.userlogin.scripts.js'
 	},
 
 	resolve: {
@@ -117,8 +115,7 @@ module.exports = ( env, argv ) => ( {
 						ENTRIES.editor,
 						ENTRIES.mobileInit,
 						ENTRIES.mobileOptions,
-						ENTRIES.userLogin,
-						ENTRIES.watchlist
+						ENTRIES.userLogin
 					].includes( chunk.name )
 				}
 			}

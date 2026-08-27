@@ -14,7 +14,6 @@ const promisedView = require( './promisedView' );
 const headers = require( './headers' );
 const Skin = require( './Skin' );
 const util = require( './util.js' );
-const actionParams = require( './actionParams.js' );
 const Icon = require( './Icon.js' );
 const IconButton = require( './IconButton.js' );
 const Section = require( './Section.js' );
@@ -29,12 +28,6 @@ const Button = require( './Button.js' );
  * @module mobile.startup
  */
 module.exports = {
-	/**
-	 * Internal, strictly for use inside MobileFrontend only
-	 *
-	 * @private
-	 */
-	actionParams,
 	/**
 	 * Internal, strictly for use inside MobileFrontend only
 	 *

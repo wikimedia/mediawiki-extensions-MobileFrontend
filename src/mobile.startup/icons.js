@@ -97,34 +97,6 @@ const icons = {
 			icon: 'alert-invert',
 			additionalClassNames: 'load-fail-msg-icon'
 		} );
-	},
-	/**
-	 * Gets a non-filled watch star icon.
-	 *
-	 * @param {Object} props
-	 * @return {IconButton}
-	 */
-	watch( props = {} ) {
-		props.additionalClassNames = props.additionalClassNames || '';
-		props.additionalClassNames += ' watch-this-article';
-
-		return new icons.IconButton( Object.assign( {
-			icon: 'star-subtle'
-		}, props ) );
-	},
-	/**
-	 * Gets a filled watch star icon.
-	 *
-	 * @param {Object} props
-	 * @return {IconButton}
-	 */
-	watched( props = {} ) {
-		props.additionalClassNames = props.additionalClassNames || '';
-		props.additionalClassNames += ' watch-this-article watched';
-
-		return new icons.IconButton( Object.assign( {
-			icon: 'unStar-progressive'
-		}, props ) );
 	}
 };
 

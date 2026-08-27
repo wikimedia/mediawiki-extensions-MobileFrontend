@@ -128,29 +128,6 @@ use this editor. Set to `source` or `visual`.
 * Type: `string`
 * Default: `visual`
 
-#### $wgMFEnableMobilePreferences
-
-Enable mobile preferences in Special:Preferences (currently only accessible in desktop). Currently this allows users to disable many of mobile's special page optimisations.
-
-* Type: `Boolean`
-* Default: `false`
-
-#### $wgMFUseDesktopSpecialEditWatchlistPage
-
-Enables the desktop version of the Special:EditWatchlist page if set to `true`. If set to
-`false`, the mobile version will be enabled but can still be overridden by the user's
-mobile preferences option.
-
-* Type: `Array`
-* Default:
-```php
-  [
-    'base' => false,
-    // Enable desktop version of watchlist page when AMC is enabled
-    'amc' => true,
-  ]
-```
-
 #### $wgMFEnableJSConsoleRecruitment
 
 Controls whether a message should be logged to the console to attempt to
@@ -240,30 +217,6 @@ item will be stripped from the page.
 		".nomobile"
 	]
 ]
-```
-#### $wgMFSearchAPIParams
-
-[DEPRECATED]
-Define a set of params that should be passed in every gateway query. Only applies to Special:EditWatchlist.
-
-* Type: `Array`
-* Default:
-```php
-  [
-    // See https://phabricator.wikimedia.org/T115646
-    'ppprop' => 'displaytitle',
-  ]
-```
-
-#### $wgMFQueryPropModules
-
-[DEPRECATED]
-Define a set of page props that should be associated with requests for pages
-via the API. Only applies to Special:EditWatchlist
-
-* Type: `Array`
-* Default: `['pageprops']`
-
 
 #### $wgMFAutodetectMobileView
 
@@ -402,36 +355,15 @@ in the UI in the environment they have been told to target.
 
 #### $wgMFDisplayWikibaseDescriptions
 
-Set which features will use Wikibase descriptions, e.g.
-
-```php
-$wgMFDisplayWikibaseDescriptions = [
-  'search' => true,
-  'watchlist' => false,
-  'tagline' => true,
-];
-```
+Set which features will use Wikibase descriptions.
 
 * Type: `Array`
 * Default:
 ```php
   [
-    'search' => false,
-    'watchlist' => false,
     'tagline' => false,
   ]
 ```
-#### $wgMFSpecialPageTaglines
-Set taglines for special pages
-
-```php
-$wgMFSpecialPageTaglines = [
-  "SpecialPageName" => "valid-message-key",
-];
-```
-
-* Type: `Array`
-* Default: `[]`
 
 #### $wgMFNamespacesWithLeadParagraphs
 

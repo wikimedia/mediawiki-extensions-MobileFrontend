@@ -134,7 +134,6 @@ MediaWiki core.
   - /src/mobile.startup/PageHTMLParser.js
   - /src/mobile.startup/Skin.js
   - /src/mobile.startup/View.js
-  - /src/mobile.startup/actionParams.js
   - /src/mobile.startup/currentPage.js
   - /src/mobile.startup/currentPageHTMLParser.js
   - /src/mobile.startup/eventBusSingleton.js
@@ -210,28 +209,6 @@ The editor.
   - /tests/node-qunit/mobile.editor.overlay/
 * Contact: [Editing Team][2]
 * Phabricator: https://phabricator.wikimedia.org/project/view/5654/
-
-## Special:EditWatchlist reading list feature
-
-To be removed once the reading list feature is ready.
-
-* Since: Sept 2025
-* Files:
-  - /includes/specials/SpecialMobileEditWatchlist.php
-  - /resources/dist/mobile.special.watchlist.scripts.js
-  - /resources/mobile.special.styles/ajax-loader.gif
-  - /resources/mobile.special.styles/editwatchlist.less
-  - /resources/mobile.special.styles/icons.less
-  - /resources/mobile.special.styles/pagelist.less
-  - /resources/mobile.special.styles/pagesummary.less
-  - /resources/mobile.special.styles/watchstar.less
-* Folders:
-  - /includes/Models
-  - /src/mobile.special.watchlist.scripts
-  - /tests/node-qunit/mobile.special.watchlist.scripts/
-  - /tests/phpunit/integration/models
-* Contact: [Reader Experience][4]
-* Phabricator: https://phabricator.wikimedia.org/project/view/8168/
 
 ## Special:MobileOptions
 

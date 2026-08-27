@@ -4,7 +4,6 @@
 
 namespace MobileFrontend\Hooks;
 
-use MediaWiki\Context\IContextSource;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\Output\OutputPage;
 use MediaWiki\Skin\Skin;
@@ -21,8 +20,7 @@ class HookRunner implements
 	MobileFrontendBeforeDOMHook,
 	MobileFrontendContentProviderHook,
 	MobileFrontendFeaturesRegistrationHook,
-	RequestContextCreateSkinMobileHook,
-	SpecialMobileEditWatchlistImagesHook
+	RequestContextCreateSkinMobileHook
 {
 	public function __construct(
 		private readonly HookContainer $hookContainer,
@@ -66,16 +64,6 @@ class HookRunner implements
 		return $this->hookContainer->run(
 			'RequestContextCreateSkinMobile',
 			[ $mobileContext, $skin ]
-		);
-	}
-
-	/**
-	 * @inheritDoc
-	 */
-	public function onSpecialMobileEditWatchlist__images( IContextSource $context, array &$watchlist, array &$images ) {
-		return $this->hookContainer->run(
-			'SpecialMobileEditWatchlist::images',
-			[ $context, &$watchlist, &$images ]
 		);
 	}
 }

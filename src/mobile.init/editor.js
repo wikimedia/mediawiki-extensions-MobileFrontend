@@ -579,10 +579,7 @@ function bindEditLinksLoginDrawer( router ) {
 	function showLoginDrawer() {
 		if ( !drawer ) {
 			drawer = new CtaDrawer( {
-				content: mw.msg( 'mobile-frontend-editor-disabled-anon' ),
-				signupQueryParams: {
-					warning: 'mobile-frontend-watchlist-signup-action'
-				}
+				content: mw.msg( 'mobile-frontend-editor-disabled-anon' )
 			} );
 			document.body.appendChild( drawer.$el[ 0 ] );
 		}

@@ -27,7 +27,6 @@ class Page {
 	 * @param {string} [options.relevantTitle] associated with page.
 	 *  For example Special:WhatLinksHere/Foo would be associated with the page `Foo`.
 	 * @param {number} options.revId  Revision ID. See `wgRevisionId`.
-	 * @param {boolean} options.isWatched Whether the page is being watched
 	 * @param {Object} options.thumbnail thumbnail definition corresponding to page image
 	 * @param {boolean} options.thumbnail.isLandscape whether the image is in
 	 *  landscape format
@@ -54,7 +53,6 @@ class Page {
 				options.isMissing : options.id === 0,
 			anchor: options.anchor,
 			revId: options.revId,
-			_isWatched: options.isWatched,
 			thumbnail: ( Object.prototype.hasOwnProperty.call( options, 'thumbnail' ) ) ?
 				options.thumbnail : false
 		} );
@@ -135,15 +133,6 @@ class Page {
 	 */
 	isMainPage() {
 		return this._isMainPage;
-	}
-
-	/**
-	 * Checks whether the current page is watched
-	 *
-	 * @return {boolean}
-	 */
-	isWatched() {
-		return this._isWatched;
 	}
 
 	/**
