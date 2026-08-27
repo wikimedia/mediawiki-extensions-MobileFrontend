@@ -82,7 +82,6 @@
 		"SpecialMobileHistory": "includes/specials/SpecialMobileHistory.php",
 		"SpecialMobileDiff": "includes/specials/SpecialMobileDiff.php",
 		"SpecialMobileOptions": "includes/specials/SpecialMobileOptions.php",
-		"SpecialMobileEditWatchlist": "includes/specials/SpecialMobileEditWatchlist.php",
 		"SpecialMobileLanguages": "includes/specials/SpecialMobileLanguages.php"
 	},
 	"TestAutoloadNamespaces": {
@@ -266,6 +265,7 @@
 				"src/mobile.editor.overlay/BlockMessageDetails.js",
 				"src/mobile.editor.overlay/blockMessageDrawer.js",
 				"src/mobile.editor.overlay/EditorGateway.js",
+				"src/mobile.editor.overlay/actionParams.js",
 				"src/mobile.editor.overlay/EditorOverlayBase.js",
 				"src/mobile.editor.overlay/identifyLeadParagraph.js",
 				"src/mobile.editor.overlay/parseBlockInfo.js",
@@ -355,16 +355,6 @@
 				"resources/mobile.special.styles/login.less"
 			]
 		},
-		"mobile.special.watchlist.scripts": {
-			"dependencies": [
-				"mediawiki.api",
-				"mobile.startup",
-				"user.options"
-			],
-			"scripts": [
-				"resources/dist/mobile.special.watchlist.scripts.js"
-			]
-		},
 		"mobile.special.codex.styles": {
 			"class": "MediaWiki\\ResourceLoader\\CodexModule",
 			"codexStyleOnly": "true",
@@ -436,7 +426,6 @@
 		"BeforePageRedirect": "MobileFrontendHooks",
 		"MediaWikiPerformAction": "MobileFrontendHooks",
 		"GetCacheVaryCookies": "MobileFrontendHooks",
-		"SpecialPage_initList": "MobileFrontendHooks",
 		"ListDefinedTags": [
 			"MobileFrontendHooks",
 			"Amc"
@@ -471,7 +460,6 @@
 		],
 		"TitleSquidURLs": "MobileFrontendHooks",
 		"UserGetDefaultOptions": [
-			"MobileFrontendHooks",
 			"Amc"
 		],
 		"ManualLogEntryBeforePublish": [
@@ -488,7 +476,6 @@
 				"SkinFactory",
 				"UrlUtils",
 				"UserOptionsLookup",
-				"WatchlistManager",
 				"MobileFrontend.Context",
 				"MobileFrontend.FeaturesManager"
 			],
@@ -520,15 +507,6 @@
 		"MFEnableFontChanger": {
 			"value": {
 				"base": true
-			}
-		},
-		"MFEnableMobilePreferences": {
-			"value": false
-		},
-		"MFUseDesktopSpecialEditWatchlistPage": {
-			"value": {
-				"base": false,
-				"amc": true
 			}
 		},
 		"MFScriptPath": {
@@ -617,21 +595,6 @@
 			],
 			"merge_strategy": "provide_default"
 		},
-		"MFSpecialPageTaglines": {
-			"value": []
-		},
-		"MFSearchAPIParams": {
-			"description": "Configuration flag for Special:EditWatchlist.",
-			"value": {
-				"ppprop": "displaytitle"
-			}
-		},
-		"MFQueryPropModules": {
-			"description": "Configuration flag for Special:EditWatchlist.",
-			"value": [
-				"pageprops"
-			]
-		},
 		"MFAutodetectMobileView": {
 			"value": true
 		},
@@ -674,8 +637,6 @@
 		},
 		"MFDisplayWikibaseDescriptions": {
 			"value": {
-				"search": false,
-				"watchlist": false,
 				"tagline": false
 			}
 		},

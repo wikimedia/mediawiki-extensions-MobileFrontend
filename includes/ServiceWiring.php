@@ -50,8 +50,6 @@ return [
 			$config->get( 'MFQuickFacts' ) ) );
 		$manager->registerFeature( new Feature( 'MFEnableFontChanger', 'mobile-frontend',
 			$config->get( 'MFEnableFontChanger' ) ) );
-		$manager->registerFeature( new Feature( 'MFUseDesktopSpecialEditWatchlistPage', 'mobile-frontend',
-			$config->get( 'MFUseDesktopSpecialEditWatchlistPage' ) ) );
 		$manager->useHookToRegisterExtensionOrSkinFeatures();
 		return $manager;
 	},

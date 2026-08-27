@@ -1,4 +1,3 @@
-/* global $ */
 const
 	Page = require( './Page' );
 
@@ -35,8 +34,6 @@ function loadCurrentPage() {
 		},
 		revId: mw.config.get( 'wgRevisionId' ),
 		isMainPage: mw.config.get( 'wgIsMainPage' ),
-		isWatched: $( '#ca-watch' ).hasClass( 'watched' ),
-		isMissing: mw.config.get( 'wgArticleId' ) === 0,
 		id: mw.config.get( 'wgArticleId' ),
 		namespaceNumber: mw.config.get( 'wgNamespaceNumber' )
 	} );

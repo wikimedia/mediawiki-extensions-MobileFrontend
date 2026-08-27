@@ -1,8 +1,9 @@
-const util = require( './util' ),
-	defaultParams = {
-		action: 'query',
-		formatversion: 2
-	};
+const mobile = require( 'mobile.startup' );
+const util = mobile.util;
+const defaultParams = {
+	action: 'query',
+	formatversion: 2
+};
 
 /**
  * Extends the default params for an action query with otherParams

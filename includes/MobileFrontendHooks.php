@@ -50,16 +50,13 @@ use MediaWiki\Skin\Hook\SkinAddFooterLinksHook;
 use MediaWiki\Skin\Skin;
 use MediaWiki\Skin\SkinException;
 use MediaWiki\Skin\SkinFactory;
-use MediaWiki\SpecialPage\Hook\SpecialPage_initListHook;
 use MediaWiki\SpecialPage\Hook\SpecialPageBeforeExecuteHook;
 use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\Specials\Hook\LoginFormValidErrorMessagesHook;
 use MediaWiki\Title\Title;
-use MediaWiki\User\Hook\UserGetDefaultOptionsHook;
 use MediaWiki\User\Options\UserOptionsLookup;
 use MediaWiki\User\User;
 use MediaWiki\Utils\UrlUtils;
-use MediaWiki\Watchlist\WatchlistManager;
 use MobileFrontend\Api\ApiParseExtender;
 use MobileFrontend\ContentProviders\DefaultContentProvider;
 use MobileFrontend\Features\FeaturesManager;
@@ -86,7 +83,6 @@ class MobileFrontendHooks implements
 	BeforePageRedirectHook,
 	MediaWikiPerformActionHook,
 	GetCacheVaryCookiesHook,
-	SpecialPage_initListHook,
 	ListDefinedTagsHook,
 	ChangeTagsListActiveHook,
 	RecentChange_saveHook,
@@ -100,15 +96,11 @@ class MobileFrontendHooks implements
 	AfterBuildFeedLinksHook,
 	MakeGlobalVariablesScriptHook,
 	TitleSquidURLsHook,
-	UserGetDefaultOptionsHook,
 	ManualLogEntryBeforePublishHook
 {
-	private const MOBILE_PREFERENCES_SECTION = 'rendering/mobile';
-	public const MOBILE_PREFERENCES_SPECIAL_PAGES = 'mobile-specialpages';
 	public const MOBILE_PREFERENCES_EDITOR = 'mobile-editor';
 	public const MOBILE_PREFERENCES_FONTSIZE = 'mf-font-size';
 	public const MOBILE_PREFERENCES_EXPAND_SECTIONS = 'mf-expand-sections';
-	private const ENABLE_SPECIAL_PAGE_OPTIMISATIONS = '1';
 	// This should always be kept in sync with Codex `@min-width-breakpoint-tablet`
 	// in mediawiki.skin.variables.less
 	private const DEVICE_WIDTH_TABLET = '640px';
@@ -121,7 +113,6 @@ class MobileFrontendHooks implements
 		private readonly SkinFactory $skinFactory,
 		UrlUtils $urlUtils,
 		private readonly UserOptionsLookup $userOptionsLookup,
-		private readonly WatchlistManager $watchlistManager,
 		private readonly MobileContext $mobileContext,
 		private readonly FeaturesManager $featuresManager,
 		private readonly ?GadgetRepo $gadgetRepo,
@@ -527,87 +518,6 @@ class MobileFrontendHooks implements
 	}
 
 	/**
-	 * @param MobileContext $context
-	 * @return array
-	 */
-	private function getWikibaseStaticConfigVars(
-		MobileContext $context
-	) {
-		$features = array_keys( $this->config->get( 'MFDisplayWikibaseDescriptions' ) );
-		$result = [ 'wgMFDisplayWikibaseDescriptions' => [] ];
-		$descriptionsEnabled = $this->featuresManager->isFeatureAvailableForCurrentUser(
-			'MFEnableWikidataDescriptions'
-		);
-
-		foreach ( $features as $feature ) {
-			$result['wgMFDisplayWikibaseDescriptions'][$feature] = $descriptionsEnabled &&
-				$context->shouldShowWikibaseDescriptions( $feature, $this->config );
-		}
-
-		return $result;
-	}
-
-	/**
-	 * Should special pages be replaced with mobile formatted equivalents?
-	 *
-	 * @internal
-	 * @param User $user for which we need to make the decision based on user prefs
-	 * @return bool whether special pages should be substituted with
-	 *   mobile friendly equivalents
-	 */
-	public function shouldMobileFormatSpecialPages( $user ) {
-		$enabled = $this->config->get( 'MFEnableMobilePreferences' );
-
-		if ( !$enabled ) {
-			return true;
-		}
-		if ( !$user->isSafeToLoad() ) {
-			// if not isSafeToLoad
-			// assume an anonymous session
-			// (see I2a6ef640d328106c88331da7c53785486e16a353)
-			return true;
-		}
-
-		$userOption = $this->userOptionsLookup->getOption(
-			$user,
-			self::MOBILE_PREFERENCES_SPECIAL_PAGES,
-			self::ENABLE_SPECIAL_PAGE_OPTIMISATIONS
-		);
-
-		return $userOption === self::ENABLE_SPECIAL_PAGE_OPTIMISATIONS;
-	}
-
-	/**
-	 * Hook for SpecialPage_initList in SpecialPageFactory.
-	 *
-	 * @param array &$list list of special page classes
-	 */
-	public function onSpecialPage_initList( &$list ) {
-		$user = $this->mobileContext->getUser();
-
-		// Perform substitutions of pages that are unsuitable for mobile
-		// FIXME: Upstream these changes to core.
-		if (
-			$this->mobileContext->shouldDisplayMobileView() &&
-			$this->shouldMobileFormatSpecialPages( $user ) &&
-			$user->isSafeToLoad()
-		) {
-			if (
-				!$this->featuresManager->isFeatureAvailableForCurrentUser( 'MFUseDesktopSpecialEditWatchlistPage' )
-			) {
-				$list['EditWatchlist'] = [
-					'class' => SpecialMobileEditWatchlist::class,
-					'services' => [
-						'HookContainer',
-						'RepoGroup',
-						'WatchedItemStore',
-					],
-				];
-			}
-		}
-	}
-
-	/**
 	 * ListDefinedTags hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/ListDefinedTags
 	 *
@@ -721,7 +631,6 @@ class MobileFrontendHooks implements
 	 */
 	public function onSpecialPageBeforeExecute( $special, $subpage ) {
 		$isMobileView = $this->mobileContext->shouldDisplayMobileView();
-		$taglines = $this->mobileContext->getConfig()->get( 'MFSpecialPageTaglines' );
 		$name = $special->getName();
 
 		if ( $isMobileView ) {
@@ -733,9 +642,6 @@ class MobileFrontendHooks implements
 			// FIXME: Should be moved to MediaWiki core module.
 			if ( $name === 'Userlogin' || $name === 'CreateAccount' ) {
 				$out->addModules( 'mobile.special.userlogin.scripts' );
-			}
-			if ( array_key_exists( $name, $taglines ) ) {
-				self::setTagline( $out, $out->msg( $taglines[$name] )->parse() );
 			}
 		}
 	}
@@ -881,19 +787,6 @@ class MobileFrontendHooks implements
 	}
 
 	/**
-	 * Register default preferences for MobileFrontend
-	 *
-	 * @param array &$defaultUserOptions Reference to default options array
-	 */
-	public function onUserGetDefaultOptions( &$defaultUserOptions ) {
-		if ( $this->config->get( 'MFEnableMobilePreferences' ) ) {
-			$defaultUserOptions += [
-				self::MOBILE_PREFERENCES_SPECIAL_PAGES => self::ENABLE_SPECIAL_PAGE_OPTIMISATIONS,
-			];
-		}
-	}
-
-	/**
 	 * GetPreferences hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/GetPreferences
 	 *
@@ -908,17 +801,6 @@ class MobileFrontendHooks implements
 		$preferences[self::MOBILE_PREFERENCES_EDITOR] = $definition;
 		$preferences[self::MOBILE_PREFERENCES_FONTSIZE] = $definition;
 		$preferences[self::MOBILE_PREFERENCES_EXPAND_SECTIONS] = $definition;
-
-		if ( $this->config->get( 'MFEnableMobilePreferences' ) ) {
-			$preferences[ self::MOBILE_PREFERENCES_SPECIAL_PAGES ] = [
-				'type' => 'check',
-				'label-message' => 'mobile-frontend-special-pages-pref',
-				'help-message' => 'mobile-frontend-special-pages-pref',
-				// The following messages are generated here:
-				// * prefs-mobile
-				'section' => self::MOBILE_PREFERENCES_SECTION
-			];
-		}
 	}
 
 	/**
@@ -1093,11 +975,6 @@ class MobileFrontendHooks implements
 				$this->config, $context->getUser()
 			);
 		}
-		// Needed by mobile.startup and mobile.special.watchlist.scripts.
-		// Needs to know if in beta mode or not and needs to load for Minerva desktop as well.
-		// Ideally this would be inside ResourceLoaderFileModuleWithMFConfig but
-		// sessions are not allowed there.
-		$vars += $this->getWikibaseStaticConfigVars( $context );
 	}
 
 	/**

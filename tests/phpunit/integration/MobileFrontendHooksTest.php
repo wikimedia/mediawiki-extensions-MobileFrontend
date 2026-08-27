@@ -40,7 +40,6 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 			$services->getSkinFactory(),
 			$services->getUrlUtils(),
 			$services->getUserOptionsLookup(),
-			$services->getWatchlistManager(),
 			$services->getService( 'MobileFrontend.Context' ),
 			$services->getService( 'MobileFrontend.FeaturesManager' ),
 			null
@@ -328,91 +327,6 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 		$this->assertArrayEquals( $expected, $urls );
 	}
 
-	public static function provideShouldMobileFormatSpecialPages() {
-		return [
-			[
-				// should format
-				true,
-				// anon
-				true,
-				// feature disabled
-				false
-			],
-			[
-				// should format
-				true,
-				// anon
-				true,
-				// feature enabled
-				true
-			],
-			[
-				// should format
-				true,
-				// logged in user
-				false,
-				// feature enabled
-				true
-			],
-			[
-				// should not format
-				false,
-				// logged in user
-				false,
-				// feature enabled
-				true,
-				// preference enabled
-				true
-			]
-		];
-	}
-
-	/**
-	 * @dataProvider provideShouldMobileFormatSpecialPages
-	 */
-	public function testShouldMobileFormatSpecialPages(
-		$expected,
-		$isAnon,
-		$enabled,
-		$userpref = false
-	) {
-		$services = $this->getServiceContainer();
-		$this->overrideConfigValue( 'MFEnableMobilePreferences', $enabled );
-
-		$user = $this->createMock( User::class );
-		$user->method( 'isRegistered' )->willReturn( !$isAnon );
-		$user->method( 'isSafeToLoad' )->willReturn( true );
-		if ( !$isAnon ) {
-			$userOptLookup = $this->createMock( UserOptionsLookup::class );
-			if ( $userpref ) {
-				$userOptLookup->method( 'getOption' )
-					->with( $user, MobileFrontendHooks::MOBILE_PREFERENCES_SPECIAL_PAGES )
-					->willReturn( $userpref );
-			} else {
-				$userOptLookup->method( 'getOption' )
-					->with( $user, MobileFrontendHooks::MOBILE_PREFERENCES_SPECIAL_PAGES )
-					->willReturnArgument( 2 );
-			}
-		} else {
-			$userOptLookup = $services->getUserOptionsLookup();
-		}
-		$mobileFrontendHooks = new MobileFrontendHooks(
-			$services->getHookContainer(),
-			$services->getService( 'MobileFrontend.Config' ),
-			$services->getSkinFactory(),
-			$services->getUrlUtils(),
-			$userOptLookup,
-			$services->getWatchlistManager(),
-			$services->getService( 'MobileFrontend.Context' ),
-			$services->getService( 'MobileFrontend.FeaturesManager' ),
-			null
-		);
-		$this->assertSame(
-			$expected,
-			$mobileFrontendHooks->shouldMobileFormatSpecialPages( $user )
-		);
-	}
-
 	/**
 	 * @dataProvider provideDefaultMobileSkin
 	 */
@@ -455,7 +369,6 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 		$config = new HashConfig( [
 			'DefaultMobileSkin' => $fakeMobileSkin,
 			MainConfigNames::DefaultSkin => $fakeDefaultSkin,
-			'MFEnableMobilePreferences' => false,
 		] );
 
 		$this->setService( 'SkinFactory', $skinFactory );
@@ -470,7 +383,6 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 			$skinFactory,
 			$services->getUrlUtils(),
 			$userOptionLookup,
-			$services->getWatchlistManager(),
 			$services->getService( 'MobileFrontend.Context' ),
 			$services->getService( 'MobileFrontend.FeaturesManager' ),
 			null

@@ -1,6 +1,6 @@
 const mobile = require( 'mobile.startup' );
 const util = mobile.util;
-const actionParams = mobile.actionParams;
+const actionParams = require( './actionParams.js' );
 
 /**
  * API that helps save and retrieve page content
