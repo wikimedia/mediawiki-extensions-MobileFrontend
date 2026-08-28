@@ -287,6 +287,43 @@ QUnit.test( '#getBlockInfo', ( assert ) => {
 	assert.strictEqual( blockinfo, gateway.getBlockInfo( pageObj ) );
 } );
 
+QUnit.test( '#getPermissionError', ( assert ) => {
+	const gateway = new EditorGateway( {
+		api: apiHappy,
+		title: 'test'
+	} );
+
+	assert.strictEqual(
+		gateway.getPermissionError( { actions: { edit: [] } } ),
+		null,
+		'The user can edit, so there is no reason to show.'
+	);
+	assert.strictEqual(
+		gateway.getPermissionError( {} ),
+		null,
+		'The API did not report the actions.'
+	);
+	assert.strictEqual(
+		gateway.getPermissionError( {
+			actions: { edit: [ { code: 'protectedpage', html: '<p>Protected <b>page</b></p>' } ] }
+		} ),
+		'<p>Protected <b>page</b></p>',
+		'The parsed message is used as it is.'
+	);
+	assert.strictEqual(
+		gateway.getPermissionError( { actions: { edit: [ { code: 'protectedpage' } ] } } ),
+		'protectedpage',
+		'The code stands in for a missing message.'
+	);
+	assert.strictEqual(
+		gateway.getPermissionError( {
+			actions: { edit: [ { code: 'a', html: '<p>one</p>' }, { code: 'b', html: '<p>two</p>' } ] }
+		} ),
+		'<p>one</p><p>two</p>',
+		'Every reason is shown.'
+	);
+} );
+
 QUnit.test( '#save, success', ( assert ) => {
 	const gateway = new EditorGateway( {
 		api: apiHappy,

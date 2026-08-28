@@ -3,7 +3,6 @@ const mobile = require( 'mobile.startup' ),
 	EditorOverlayBase = require( './EditorOverlayBase.js' ),
 	EditorGateway = require( './EditorGateway.js' ),
 	identifyLeadParagraph = require( './identifyLeadParagraph.js' ),
-	setPreferredEditor = require( './setPreferredEditor.js' ),
 	returnToApp = require( 'mobile.returnToApp' ),
 	util = mobile.util,
 	overlayManager = mobile.getOverlayManager(),
@@ -94,7 +93,9 @@ class VisualEditorOverlay extends EditorOverlayBase {
 		} );
 		let firstLoad = true;
 		this.target.on( 'surfaceReady', () => {
-			setPreferredEditor( this.target.getDefaultMode() === 'source' ? 'SourceEditor' : 'VisualEditor' );
+			this.rememberPreferredEditor(
+				this.target.getDefaultMode() === 'source' ? 'SourceEditor' : 'VisualEditor'
+			);
 			// On first surfaceReady we wait for any dialogs to be closed before running targetInit.
 			// On subsequent surfaceReady's (i.e. edit mode switch) we can initialize immediately.
 			if ( !firstLoad ) {
@@ -292,8 +293,7 @@ class VisualEditorOverlay extends EditorOverlayBase {
 			action: 'source-mobile'
 		} );
 
-		// Save a user setting indicating that this user prefers using the SourceEditor
-		setPreferredEditor( 'SourceEditor' );
+		this.rememberPreferredEditor( 'SourceEditor' );
 
 		this.$el.addClass( 'switching' );
 		this.$el.find( '.overlay-header-container' ).hide();

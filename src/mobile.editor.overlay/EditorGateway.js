@@ -62,6 +62,27 @@ class EditorGateway {
 	}
 
 	/**
+	 * Get the reason why the user cannot edit the page, if there is one.
+	 *
+	 * The intro messages warn about protection, but they do not say that the user
+	 * cannot edit. The API gives the reason in the result of the actions test.
+	 *
+	 * @param {Object} pageObj Page object
+	 * @return {string|null} HTML, or null if the user can edit
+	 */
+	getPermissionError( pageObj ) {
+		const errors = pageObj.actions && pageObj.actions.edit;
+		if ( !Array.isArray( errors ) || !errors.length ) {
+			return null;
+		}
+		// The request asks for errorformat=html. If a message is missing, fall back to
+		// the code, which the API always gives.
+		return errors.map(
+			( error ) => error.html || mw.html.escape( error.code )
+		).join( '' );
+	}
+
+	/**
 	 * Get the content of a page.
 	 *
 	 * @instance
@@ -80,6 +101,12 @@ class EditorGateway {
 			return resolve();
 		} else {
 			options = actionParams( {
+				// Ask for parsed messages, so that the permission error reads the same
+				// as it does in VisualEditor. errorsuselocal picks up the wiki's own
+				// text, which is where the useful detail is.
+				errorformat: 'html',
+				errorlang: mw.config.get( 'wgUserLanguage' ),
+				errorsuselocal: 1,
 				prop: [ 'revisions', 'info' ],
 				rvprop: [ 'content', 'timestamp' ],
 				inprop: [ 'preloadcontent', 'editintro' ],
@@ -102,8 +129,12 @@ class EditorGateway {
 				options.rvsection = this.sectionId;
 			}
 			return this.api.get( options ).then( ( resp ) => {
-				if ( resp.error ) {
-					return util.Deferred().reject( resp.error.code );
+				// mw.Api rejects an API error before this runs, so this is a safety
+				// net. It knows both shapes: errorformat=html gives a list.
+				if ( resp.error || resp.errors ) {
+					return util.Deferred().reject(
+						resp.error ? resp.error.code : resp.errors[ 0 ].code
+					);
 				}
 
 				const pageObj = resp.query.pages[0];
@@ -126,6 +157,14 @@ class EditorGateway {
 				this.blockinfo = this.getBlockInfo( pageObj );
 				this.wouldautocreate = pageObj.wouldautocreate && pageObj.wouldautocreate.edit;
 				this.notices = pageObj.editintro;
+				const permissionError = this.getPermissionError( pageObj );
+				if ( permissionError ) {
+					// Use the key that the VisualEditor API uses, so that both editors
+					// show the reason in the same way.
+					this.notices = util.extend( {}, this.notices, {
+						'permissions-error': permissionError
+					} );
+				}
 
 				return resolve();
 			} );

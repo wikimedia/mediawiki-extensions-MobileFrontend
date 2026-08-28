@@ -109,23 +109,38 @@ function getPreferredEditor() {
  * @param {Skin} skin
  * @param {module:mobile.startup/PageHTMLParser} currentPageHTMLParser
  * @param {Router} router
+ * @param {boolean} [readOnly] Open the editor in read-only mode, and leave the edit
+ *  links alone. The caller binds its own handler to them.
  */
-function setupEditor( page, skin, currentPageHTMLParser, router ) {
+function setupEditor( page, skin, currentPageHTMLParser, router, readOnly ) {
 	const
 		overlayManager = OverlayManager.getSingleton(),
-		isNewPage = page.id === 0;
+		isNewPage = page.id === 0,
+		// Read before these parameters are stripped from the URL below.
+		veaction = mw.util.getParamValue( 'veaction' ),
+		urlSection = mw.util.getParamValue( 'section' );
 
-	$editTab.add( '.edit-link' ).on( 'click.mfeditlink', function ( ev ) {
-		onEditLinkClick( this, ev, overlayManager.router );
-	} );
-	mw.hook( 'wikipage.content' ).add( ( $content ) => {
-		// make sure that any .edit-link links in here don't get double-handled
-		$content.find( EDITSECTION_SELECTOR ).off( 'click.mfeditlink' ).on( 'click.mfeditlink', function ( ev ) {
+	if ( !readOnly ) {
+		// A tap on an edit link asks to edit, which the user cannot do. init() binds a
+		// message to the links instead.
+		$editTab.add( '.edit-link' ).on( 'click.mfeditlink', function ( ev ) {
 			onEditLinkClick( this, ev, overlayManager.router );
 		} );
-	} );
+		mw.hook( 'wikipage.content' ).add( ( $content ) => {
+			// make sure that any .edit-link links in here don't get double-handled
+			$content.find( EDITSECTION_SELECTOR ).off( 'click.mfeditlink' ).on( 'click.mfeditlink', function ( ev ) {
+				onEditLinkClick( this, ev, overlayManager.router );
+			} );
+		} );
+	}
 
 	overlayManager.add( editorPath, ( sectionId ) => {
+		if ( readOnly && !veaction ) {
+			// "View source" shows the wikitext. Nobody asked for a specific editor, so
+			// keep the user's editing preference out of it. editorOverride is temporary,
+			// which also keeps this out of the preference itself.
+			editorOverride = 'SourceEditor';
+		}
 		const
 			scrollTop = window.pageYOffset,
 			$contentText = $( '#mw-content-text' ),
@@ -141,6 +156,8 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 				titleObj: page.titleObj,
 				isAnon: user.isAnon(),
 				isNewPage,
+				readOnly: !!readOnly,
+				veaction,
 				oldId: mw.util.getParamValue( 'oldid' ),
 				returnToApp: mw.util.getParamValue( 'returntoapp' ),
 				appInstallId: mw.util.getParamValue( 'appinstallid' ),
@@ -431,24 +448,34 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 		return loadingOverlay;
 	} );
 
-	$( '#ca-edit a, a#ca-edit, #ca-editsource a, a#ca-editsource' ).prop( 'href', ( i, href ) => {
-		const editUrl = new URL( href, location.href );
-		// By default the editor opens section 0 (lead section), rather than the whole article.
-		// This might be changed in the future (T210659).
-		editUrl.searchParams.set( 'section', '0' );
-		return editUrl.toString();
-	} );
+	if ( !readOnly ) {
+		// "View source" shows the whole page, so leave that link alone.
+		$( '#ca-edit a, a#ca-edit, #ca-editsource a, a#ca-editsource' ).prop( 'href', ( i, href ) => {
+			const editUrl = new URL( href, location.href );
+			// By default the editor opens section 0 (lead section), rather than the whole article.
+			// This might be changed in the future (T210659).
+			editUrl.searchParams.set( 'section', '0' );
+			return editUrl.toString();
+		} );
+	}
 
 	// We use wgAction instead of getParamValue('action') as the former can be
 	// overridden by hooks to stop the editor loading automatically.
-	if ( !router.getPath() && ( mw.util.getParamValue( 'veaction' ) || mw.config.get( 'wgAction' ) === 'edit' ) ) {
-		if ( mw.util.getParamValue( 'veaction' ) === 'edit' ) {
+	// The route is already set when the log-in flow returns to the editor, because
+	// createAnonWarning carries veaction through it. Any other route belongs to a
+	// different overlay, so leave the request alone.
+	const path = router.getPath();
+	if (
+		( veaction || mw.config.get( 'wgAction' ) === 'edit' ) &&
+		( !path || editorPath.test( path ) )
+	) {
+		if ( veaction === 'edit' ) {
 			editorOverride = 'VisualEditor';
-		} else if ( mw.util.getParamValue( 'veaction' ) === 'editsource' ) {
+		} else if ( veaction === 'editsource' ) {
 			editorOverride = 'SourceEditor';
 		}
 		// else: action=edit, for which we allow the default to take effect
-		const fragment = '#/editor/' + ( mw.util.getParamValue( 'section' ) || ( mw.config.get( 'wgAction' ) === 'edit' ? 'all' : '0' ) );
+
 		// eslint-disable-next-line no-restricted-properties
 		if ( window.history && history.pushState ) {
 			// We're reformatting the action=edit URL into a view URL and
@@ -464,9 +491,13 @@ function setupEditor( page, skin, currentPageHTMLParser, router ) {
 			url.searchParams.delete( 'section' );
 			history.replaceState( null, document.title, url );
 		}
-		util.docReady( () => {
-			router.navigate( fragment );
-		} );
+
+		if ( !path ) {
+			const fragment = '#/editor/' + ( urlSection || ( mw.config.get( 'wgAction' ) === 'edit' ? 'all' : '0' ) );
+			util.docReady( () => {
+				router.navigate( fragment );
+			} );
+		}
 	}
 }
 
@@ -530,7 +561,7 @@ function bindEditLinksLoginDrawer( router ) {
  * @param {Router} router
  */
 function init( currentPage, currentPageHTMLParser, skin, router ) {
-	let editErrorMessage, editRestrictions;
+	let editRestrictions;
 	// see: https://www.mediawiki.org/wiki/Manual:Interface/JavaScript#Page-specific
 	const isReadOnly = mw.config.get( 'wgMinervaReadOnly' );
 	const isEditable = !isReadOnly && mw.config.get( 'wgIsProbablyEditable' );
@@ -542,11 +573,19 @@ function init( currentPage, currentPageHTMLParser, skin, router ) {
 		hideSectionEditIcons( currentPageHTMLParser );
 		editRestrictions = mw.config.get( 'wgRestrictionEdit' );
 		if ( mw.user.isAnon() && Array.isArray( editRestrictions ) && !editRestrictions.length ) {
+			// Nothing restricts the page, so the user only has to log in
 			bindEditLinksLoginDrawer( router );
+		} else if ( isReadOnly ) {
+			bindEditLinksSorryToast( mw.msg( 'apierror-readonly' ), router );
 		} else {
+			// The user cannot edit this page, usually because it is protected. A tap on
+			// an edit link says so. A URL that asks for an editor gets one, read-only,
+			// as the desktop site does.
 			const $link = $( '<a>' ).attr( 'href', mw.util.getUrl( mw.config.get( 'wgPageName' ), { action: 'edit' } ) );
-			editErrorMessage = isReadOnly ? mw.msg( 'apierror-readonly' ) : mw.message( 'mobile-frontend-editor-disabled', $link ).parseDom();
-			bindEditLinksSorryToast( editErrorMessage, router );
+			bindEditLinksSorryToast(
+				mw.message( 'mobile-frontend-editor-disabled', $link ).parseDom()
+			);
+			setupEditor( currentPage, skin, currentPageHTMLParser, router, true );
 		}
 	}
 }
@@ -559,7 +598,8 @@ function init( currentPage, currentPageHTMLParser, skin, router ) {
  * @method
  * @ignore
  * @param {string} msg Message for sorry message
- * @param {Router} router
+ * @param {Router} [router] Also show the message on the editor route. Leave this out
+ *  when an editor answers that route.
  */
 function bindEditLinksSorryToast( msg, router ) {
 	$editTab.on( 'click', ( ev ) => {
@@ -572,10 +612,12 @@ function bindEditLinksSorryToast( msg, router ) {
 			ev.preventDefault();
 		} );
 	} );
-	router.addRoute( editorPath, () => {
-		mw.notify( msg );
-	} );
-	router.checkRoute();
+	if ( router ) {
+		router.addRoute( editorPath, () => {
+			mw.notify( msg );
+		} );
+		router.checkRoute();
+	}
 }
 
 module.exports = function ( currentPage, currentPageHTMLParser, skin ) {

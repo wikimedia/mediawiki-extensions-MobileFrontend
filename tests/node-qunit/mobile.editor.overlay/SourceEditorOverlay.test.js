@@ -702,3 +702,79 @@ QUnit.test( 'Challenge closed handler is no-op if challenge closed hook fired be
 		);
 	} );
 } );
+
+QUnit.test( '#initialize, read-only because the page is protected', ( assert ) => {
+	const editorOverlay = new SourceEditorOverlay( {
+		title: 'test',
+		readOnly: true
+	} );
+
+	return editorOverlay.getLoadingPromise().then( () => {
+		assert.true( editorOverlay.readOnly, 'The overlay is in read-only mode.' );
+		assert.true( editorOverlay.$content.prop( 'readonly' ), 'The textarea cannot be edited.' );
+		assert.strictEqual(
+			editorOverlay.$el.find( '.continue' ).length,
+			0,
+			'There is no button to continue to the save screen.'
+		);
+	} );
+} );
+
+QUnit.test( '#initialize, as anonymous with veaction', ( assert ) => {
+	const editorOverlay = new SourceEditorOverlay( {
+		title: 'test',
+		isAnon: true,
+		readOnly: true,
+		veaction: 'editsource'
+	} );
+
+	return editorOverlay.getLoadingPromise().then( () => {
+		assert.strictEqual(
+			mw.util.getUrl.getCalls().find(
+				( call ) => call.args[ 0 ] === 'Special:UserLogin'
+			).args[ 1 ].returntoquery,
+			'veaction=editsource',
+			'The login link keeps the requested editor.'
+		);
+	} );
+} );
+
+QUnit.test( '#showEditNotices, the permission error is always shown', ( assert ) => {
+	// The dialog opens at the end of a chain of promises that the test cannot reach.
+	// Wait for the dialog itself instead.
+	const shown = util.Deferred();
+	const alertStub = sandbox.stub().callsFake( ( $container ) => shown.resolve( $container ) );
+	global.OO.ui.alert = alertStub;
+	sandbox.stub( mw.loader, 'using' ).returns( util.Deferred().resolve() );
+	// An already recorded notice, to show that the suppression does not apply to it
+	sandbox.stub( mw.storage, 'get' ).returns( '1' );
+
+	const editorOverlay = new SourceEditorOverlay( {
+		title: 'test',
+		readOnly: true
+	}, util.Deferred().resolve( {
+		text: 'section 0',
+		notices: {
+			'editnotice-0': '<p>seen before</p>',
+			'editnotice-notext': '<p>blank</p>',
+			talkpagetext: '<p>not an edit notice</p>',
+			semiprotectedpagewarning: '<p>only some users can edit</p>',
+			'permissions-error': '<p>you cannot edit this page</p>'
+		}
+	} ) );
+
+	assert.timeout( 5000 );
+	return shown.then( ( $container ) => {
+		const text = $container.text();
+		assert.true( editorOverlay.readOnly, 'The overlay is in read-only mode.' );
+		assert.true( alertStub.calledOnce, 'A notice dialog is shown.' );
+		assert.true( text.includes( 'you cannot edit this page' ), 'The reason is shown.' );
+		assert.false( text.includes( 'seen before' ), 'A recorded edit notice stays hidden.' );
+		assert.false( text.includes( 'blank' ), 'The empty notice is filtered out.' );
+		assert.false( text.includes( 'not an edit notice' ), 'Other intro messages are filtered out.' );
+		assert.false(
+			text.includes( 'only some users can edit' ),
+			'The protection warning is for users who can edit, so it stays filtered out.'
+		);
+	} );
+} );

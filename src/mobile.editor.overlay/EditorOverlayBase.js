@@ -15,10 +15,19 @@ const mobile = require( 'mobile.startup' ),
 	Button = mobile.class.Button,
 	IconButton = mobile.class.IconButton,
 	blockMessageDrawer = require( './blockMessageDrawer.js' ),
+	setPreferredEditor = require( './setPreferredEditor.js' ),
 	abandonSurvey = require( './abandonSurvey.js' ),
 	returnToApp = require( 'mobile.returnToApp' ),
 	MessageBox = require( './MessageBox.js' ),
 	mwUser = mw.user;
+
+/**
+ * Notice key that tells the user why they cannot edit the page. Both editors use it:
+ * VisualEditor gets it from its own API, the source editor from EditorGateway.
+ *
+ * @private
+ */
+const PERMISSION_NOTICE = 'permissions-error';
 
 /**
  * 'Edit' button
@@ -664,7 +673,9 @@ class EditorOverlayBase extends Overlay {
 			// Whether to return to the app after an edit is done
 			returnToApp: 'returntoapp',
 			// App install id for WikimediaEvents to use in logging
-			appInstallId: 'appinstallid'
+			appInstallId: 'appinstallid',
+			// Which editor the user asked for, so that they get it again after logging in
+			veaction: 'veaction'
 		};
 		for ( const [ option, parameter ] of Object.entries( carried ) ) {
 			if ( options[ option ] ) {
@@ -734,6 +745,19 @@ class EditorOverlayBase extends Overlay {
 	}
 
 	/**
+	 * Remember which editor the user chose, so that they get it again next time.
+	 *
+	 * A read-only editor is not a choice about how to edit, so it records nothing.
+	 *
+	 * @param {string} editor 'VisualEditor' or 'SourceEditor'
+	 */
+	rememberPreferredEditor( editor ) {
+		if ( !this.options.readOnly ) {
+			setPreferredEditor( editor );
+		}
+	}
+
+	/**
 	 * Get an options object not containing any defaults or editor
 	 * specific options, so that it can be used to construct a
 	 * different editor for switching.
@@ -755,6 +779,7 @@ class EditorOverlayBase extends Overlay {
 			isAnon: this.options.isAnon,
 			isNewPage: this.options.isNewPage,
 			oldId: this.options.oldId,
+			readOnly: this.options.readOnly,
 			contentLang: this.options.contentLang,
 			contentDir: this.options.contentDir,
 			sectionId: this.options.sectionId
@@ -793,6 +818,10 @@ class EditorOverlayBase extends Overlay {
 		this.getLoadingPromise().then( ( data ) => {
 			if ( data.notices ) {
 				const editNotices = Object.keys( data.notices ).filter( ( key ) => {
+					if ( key === PERMISSION_NOTICE ) {
+						// Show this on every visit, not once a day like the edit notices
+						return true;
+					}
 					if ( key.indexOf( 'editnotice' ) !== 0 ) {
 						return false;
 					}

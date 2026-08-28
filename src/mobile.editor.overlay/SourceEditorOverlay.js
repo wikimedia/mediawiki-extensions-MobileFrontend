@@ -6,7 +6,6 @@ const mobile = require( 'mobile.startup' ),
 	saveFailureMessage = require( './saveFailureMessage.js' ),
 	EditorGateway = require( './EditorGateway.js' ),
 	MessageBox = require( './MessageBox.js' ),
-	setPreferredEditor = require( './setPreferredEditor.js' ),
 	returnToApp = require( 'mobile.returnToApp' ),
 	VisualEditorOverlay = require( './VisualEditorOverlay.js' ),
 	SourceEditorSaveEventHookPayload = require( './SourceEditorSaveEventHookPayload.js' ),
@@ -72,7 +71,8 @@ class SourceEditorOverlay extends EditorOverlayBase {
 			preloadparams: options.preloadparams,
 			editintro: options.editintro
 		} );
-		this.readOnly = !!options.oldId; // If old revision, readOnly mode
+		// An old revision and a page the user cannot edit are both read-only
+		this.readOnly = !!options.oldId || !!options.readOnly;
 		this.dataPromise = options.dataPromise || this.gateway.getContent();
 		this.currentPage = currentPage();
 		if ( this.currentPage.isVEVisualAvailable() ) {
@@ -516,8 +516,7 @@ class SourceEditorOverlay extends EditorOverlayBase {
 			action: 'visual-mobile'
 		} );
 
-		// Save a user setting indicating that this user prefers using the VisualEditor
-		setPreferredEditor( 'VisualEditor' );
+		this.rememberPreferredEditor( 'VisualEditor' );
 
 		this.$el.addClass( 'switching' );
 		this.$el.find( '.overlay-header-container' ).hide();
