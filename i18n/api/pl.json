@@ -2,9 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Chrumps",
+			"PanWor",
 			"Rail"
 		]
 	},
+	"apihelp-edit-param-editorinterface": "Nazwa używanego edytora (np. MobileFrontend-SourceEditor)",
 	"apihelp-parse-param-mobileformat": "Zwróć wyjście parsera w formacie właściwym dla urządzeń mobilnych.",
 	"apihelp-parse-param-noimages": "Wyłącz wyświetlanie grafik w wersji mobilnej.",
 	"apihelp-parse-param-mainpage": "Zastosuj mobilne przekształcenia strony głównej.",
