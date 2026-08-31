@@ -1,7 +1,7 @@
 [
 	{
 		"resourceModule": "mobile.startup",
-		"maxSize": "14.5KB"
+		"maxSize": "14.4KB"
 	},
 	{
 		"resourceModule": "mobile.init",

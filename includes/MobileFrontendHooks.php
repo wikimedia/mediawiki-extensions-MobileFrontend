@@ -47,7 +47,6 @@ use MediaWiki\ResourceLoader\Hook\ResourceLoaderSiteModulePagesHook;
 use MediaWiki\ResourceLoader\Hook\ResourceLoaderSiteStylesModulePagesHook;
 use MediaWiki\ResourceLoader\ResourceLoader;
 use MediaWiki\Skin\Hook\SkinAddFooterLinksHook;
-use MediaWiki\Skin\Hook\SkinAfterBottomScriptsHook;
 use MediaWiki\Skin\Skin;
 use MediaWiki\Skin\SkinException;
 use MediaWiki\Skin\SkinFactory;
@@ -66,7 +65,6 @@ use MobileFrontend\Api\ApiParseExtender;
 use MobileFrontend\ContentProviders\DefaultContentProvider;
 use MobileFrontend\Features\FeaturesManager;
 use MobileFrontend\Hooks\HookRunner;
-use MobileFrontend\Transforms\LazyImageTransform;
 use MobileFrontend\Transforms\MakeSectionsTransform;
 
 /**
@@ -85,7 +83,6 @@ class MobileFrontendHooks implements
 	ResourceLoaderBeforeResponseHook,
 	ResourceLoaderSiteStylesModulePagesHook,
 	ResourceLoaderSiteModulePagesHook,
-	SkinAfterBottomScriptsHook,
 	SkinAddFooterLinksHook,
 	BeforePageRedirectHook,
 	MediaWikiPerformActionHook,
@@ -224,29 +221,6 @@ class MobileFrontendHooks implements
 				$footerLinks['mobileview'] =
 					$this->skinHooks->getMobileViewLink( $skin, $context );
 			}
-		}
-	}
-
-	/**
-	 * SkinAfterBottomScripts hook handler
-	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/SkinAfterBottomScripts
-	 *
-	 * Adds an inline script for lazy loading the images in Grade C browsers.
-	 *
-	 * @param Skin $skin
-	 * @param string &$html bottomScripts text. Append to $text to add additional
-	 *                      text/scripts after the stock bottom scripts.
-	 */
-	public function onSkinAfterBottomScripts( $skin, &$html ) {
-		// TODO: We may want to enable the following script on Desktop Minerva...
-		// ... when Minerva is widely used.
-		if (
-			$this->mobileContext->shouldDisplayMobileView() &&
-			$this->featuresManager->isFeatureAvailableForCurrentUser( 'MFLazyLoadImages' )
-		) {
-			$html .= Html::inlineScript( ResourceLoader::filter( 'minify-js',
-				LazyImageTransform::gradeCImageSupport()
-			) );
 		}
 	}
 
@@ -874,9 +848,6 @@ class MobileFrontendHooks implements
 				]
 			);
 
-			// In mobile mode, MediaWiki:Common.css/MediaWiki:Common.js is not loaded.
-			// We load MediaWiki:Mobile.css/js instead
-			// We load mobile.init so that lazy loading images works on all skins
 			$out->addModules( [ 'mobile.init' ] );
 			$out->addModuleStyles( [ 'mobile.init.styles' ] );
 
@@ -1154,8 +1125,6 @@ class MobileFrontendHooks implements
 			unset( $vars['wgCategories'] );
 			$vars['wgMFMode'] = 'stable';
 			$vars['wgMFAmc'] = $userMode->isEnabled();
-			$vars['wgMFLazyLoadImages'] =
-				$this->featuresManager->isFeatureAvailableForCurrentUser( 'MFLazyLoadImages' );
 			$vars['wgMFEditNoticesFeatureConflict'] = $this->hasEditNoticesFeatureConflict(
 				$this->config, $context->getUser()
 			);

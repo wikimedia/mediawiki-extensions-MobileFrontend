@@ -161,23 +161,14 @@ class PageHTMLParser {
 	 */
 	getThumbnail( $a ) {
 		const notSelector = '.' + EXCLUDE_THUMBNAIL_CLASS_SELECTORS.join( ',.' ),
-			$lazyImage = $a.find( '.lazy-image-placeholder' ),
 			href = $a.attr( 'href' ),
 			url = href && new URL( href, location.href ),
 			legacyTitle = url && url.searchParams.get( 'title' ),
 			match = url && url.pathname.match( /[^/]+$/ );
 
 		// Parents need to be checked as well.
-		let valid = $a.parents( notSelector ).length === 0 &&
+		const valid = $a.parents( notSelector ).length === 0 &&
 			$a.find( notSelector ).length === 0;
-
-		// filter out invalid lazy loaded images if so far image is valid
-		if ( $lazyImage.length && valid ) {
-			// if the regex matches it means the image has one of the classes
-			// thus we must invert the result
-			valid = !new RegExp( '\\b(' + EXCLUDE_THUMBNAIL_CLASS_SELECTORS.join( '|' ) + ')\\b' )
-				.test( $lazyImage.data( 'class' ) );
-		}
 
 		if ( valid && ( legacyTitle !== null || match ) ) {
 			return new Thumbnail( {

@@ -9,7 +9,6 @@ let url;
 
 const
 	toggling = require( './toggling' ),
-	lazyLoadedImages = require( './lazyLoadedImages' ),
 	editor = require( './editor' ),
 	currentPage = require( '../mobile.startup/currentPage' )(),
 	currentPageHTMLParser = require( '../mobile.startup/currentPageHTMLParser' )(),
@@ -20,6 +19,31 @@ const
 
 const skin = Skin.getSingleton();
 
+/**
+ * Temporary compatibility code for pages that use the legacy parser to
+ * generate lazy-image-placeholder elements. This can be removed in 2
+ * weeks from its introduction. Images are not guaranteed to be lazy in this mode,
+ * the goal is only to make them accessible.
+ * @ignore
+ */
+function fixLegacyParserImagesIfNeeded() {
+	const legacyImages = document.querySelectorAll( '.lazy-image-placeholder' );
+	if ( legacyImages.length ) {
+		Array.from( legacyImages ).forEach( ( node ) => {
+			const dataset = node.dataset;
+			const img = document.createElement( 'img' );
+			img.loading = 'lazy';
+			img.src = dataset.mwSrc;
+			img.setAttribute( 'class', dataset.class );
+			if ( dataset.mwSrcSet ) {
+				img.srcset = dataset.mwSrcSet;
+			}
+			img.width = dataset.width;
+			img.height = dataset.height;
+			node.replaceWith( img );
+		} );
+	}
+}
 /**
  * Given 2 functions, it returns a function that will run both with it's
  * context and parameters and return the results combined
@@ -117,4 +141,4 @@ if ( window.console && window.console.log && window.console.log.apply &&
 
 editor( currentPage, currentPageHTMLParser, skin );
 toggling();
-lazyLoadedImages();
+fixLegacyParserImagesIfNeeded();

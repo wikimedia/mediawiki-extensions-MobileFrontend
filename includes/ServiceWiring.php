@@ -44,8 +44,6 @@ return [
 
 		$manager->registerFeature( new Feature( 'MFEnableWikidataDescriptions', 'mobile-frontend',
 			$config->get( 'MFEnableWikidataDescriptions' ) ) );
-		$manager->registerFeature( new Feature( 'MFLazyLoadImages', 'mobile-frontend',
-			$config->get( 'MFLazyLoadImages' ) ) );
 		$manager->registerFeature( new Feature( 'MFShowFirstParagraphBeforeInfobox', 'mobile-frontend',
 			$config->get( 'MFShowFirstParagraphBeforeInfobox' ) ) );
 		$manager->registerFeature( new Feature( 'MFEnableFontChanger', 'mobile-frontend',

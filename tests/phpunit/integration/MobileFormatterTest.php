@@ -1,7 +1,6 @@
 <?php
 
 use MediaWiki\Title\Title;
-use MobileFrontend\Transforms\LazyImageTransform;
 use MobileFrontend\Transforms\MakeSectionsTransform;
 use MobileFrontend\Transforms\MoveLeadParagraphTransform;
 use MobileFrontend\Transforms\RemovableClassesTransform;
@@ -56,16 +55,14 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 	/**
 	 * @param string $input
 	 * @param string $expected
-	 * @param bool $skipSmallImages
-	 * @covers \MobileFrontend\Transforms\LazyImageTransform
 	 * @dataProvider provideHtmlTransform
 	 */
-	public function testHtmlTransform( $input, $expected, $skipSmallImages = false ) {
+	public function testHtmlTransform( $input, $expected ) {
 		$title = Title::makeTitle( NS_MAIN, __METHOD__ );
 
 		$formatter = new MobileFormatter( $input );
 
-		$transforms = self::buildTransforms( $title, $skipSmallImages );
+		$transforms = self::buildTransforms( $title );
 		$formatter->applyTransforms( $transforms );
 
 		$html = $formatter->getHtml();
@@ -76,14 +73,6 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 		$longLine = "\n" . str_repeat( 'A', 5000 );
 		$originalImage = '<img alt="foo" src="foo.jpg" width="100" '
 			. 'height="100" srcset="foo-1.5x.jpg 1.5x, foo-2x.jpg 2x"/>';
-		$placeholder = '<span class="lazy-image-placeholder" '
-			. 'style="width: 100px;height: 100px;" '
-			. 'data-mw-src="foo.jpg" data-alt="foo" data-width="100" data-height="100" '
-			. 'data-mw-srcset="foo-1.5x.jpg 1.5x, foo-2x.jpg 2x">'
-			. "\u{00A0}"
-			. '</span>';
-		$noscript = '<noscript><img alt="foo" src="foo.jpg" width="100" height="100"/></noscript>';
-		$smallPic = '<img src="smallPicture.jpg" style="width: 4.4ex; height:3.34ex;"/>';
 
 		return [
 			// Nested headings are not wrapped
@@ -97,38 +86,6 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 					. self::makeSectionHeading( 'h2', 'test' )
 					. self::makeSectionHtml( 1, '<p>more text</p>' ),
 			],
-			// # Lazy loading images
-			// Lead section images not impacted
-			[
-				'<p>' . $originalImage . '</p><h2>heading 1</h2><p>text</p>'
-					. '<h2>heading 2</h2>abc',
-				self::makeSectionHtml( 0, '<p>' . $originalImage . '</p>' )
-					. self::makeSectionHeading( 'h2', 'heading 1' )
-					. self::makeSectionHtml( 1, '<p>text</p>' )
-					. self::makeSectionHeading( 'h2', 'heading 2', 2 )
-					. self::makeSectionHtml( 2, 'abc' ),
-			],
-			// Small images not impacted when configured
-			[
-				'<p>text</p><h2>heading 1</h2>' . $smallPic,
-				self::makeSectionHtml( 0, '<p>text</p>' )
-					. self::makeSectionHeading( 'h2', 'heading 1' )
-					. self::makeSectionHtml( 1, $smallPic ),
-				// Skip small images
-				true
-			],
-			// Test lazy loading of images outside the lead section
-			[
-				'<p>text</p><h2>heading 1</h2><p>text</p>' . $originalImage
-					. '<h2>heading 2</h2>abc',
-					self::makeSectionHtml( 0, '<p>text</p>' )
-					. self::makeSectionHeading( 'h2', 'heading 1' )
-					. self::makeSectionHtml( 1,
-						'<p>text</p>' . $noscript . $placeholder
-					)
-					. self::makeSectionHeading( 'h2', 'heading 2', 2 )
-					. self::makeSectionHtml( 2, 'abc' ),
-			],
 			// https://phabricator.wikimedia.org/T130025, last section filtered
 			[
 				'<p>text</p><h2>heading 1</h2><p>text</p>' . $originalImage
@@ -136,10 +93,10 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 				self::makeSectionHtml( 0, '<p>text</p>' )
 					. self::makeSectionHeading( 'h2', 'heading 1' )
 					. self::makeSectionHtml( 1,
-						'<p>text</p>' . $noscript . $placeholder
+						'<p>text</p>' . $originalImage
 					)
 					. self::makeSectionHeading( 'h2', 'heading 2', 2 )
-					. self::makeSectionHtml( 2, $noscript . $placeholder ),
+					. self::makeSectionHtml( 2, $originalImage ),
 			],
 
 			// # Section wrapping
@@ -508,10 +465,6 @@ class MobileFormatterTest extends MediaWikiIntegrationTestCase {
 		$transforms[] = new RemovableClassesTransform( [ '.nomobile', '.navbox' ] );
 
 		$transforms[] = new MakeSectionsTransform( $topHeadingTags, true );
-
-		if ( $shouldLazyTransformImages ) {
-			$transforms[] = new LazyImageTransform( $lazyLoadSkipSmallImages );
-		}
 
 		if ( $showFirstParagraphBeforeInfobox ) {
 			$transforms[] = new MoveLeadParagraphTransform(

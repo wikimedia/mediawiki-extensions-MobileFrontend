@@ -3,7 +3,6 @@ const time = require( './time' );
 const currentPage = require( './currentPage' );
 const Drawer = require( './Drawer' );
 const CtaDrawer = require( './CtaDrawer' );
-const lazyImageLoader = require( './lazyImages/lazyImageLoader' );
 const icons = require( './icons' );
 const PageHTMLParser = require( './PageHTMLParser' );
 const showOnPageReload = require( './showOnPageReload' );
@@ -159,9 +158,11 @@ module.exports = {
 	 * @memberof module:mobile.startup
 	 * @return {jQuery.Deferred}
 	 */
-	loadAllImagesInPage: () => lazyImageLoader.loadImages(
-		lazyImageLoader.queryPlaceholders( document.getElementById( 'content' ) )
-	),
+	loadAllImagesInPage: () => {
+		mw.log.deprecated(
+			'[1.47.0] deprecated. Please rewrite loading attribute of all images in page'
+		);
+	},
 	/**
 	 * Show a notification on page reload, internal for Minerva
 	 *

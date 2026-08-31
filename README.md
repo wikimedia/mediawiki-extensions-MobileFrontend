@@ -245,22 +245,6 @@ item will be stripped from the page.
 	]
 ]
 ```
-
-#### $wgMFLazyLoadImages
-
-Do load images in pages lazily. Currently it doesn't affect HTML-only clients
-(only JS capable ones) and it lazy loads images when they come close to the
-viewport.
-
-* Type: `Array`
-* Default:
-```php
-  [
-    // These will enable lazy loading images in all modes
-    'base' => true,
-  ]
-```
-
 #### $wgMFSearchAPIParams
 
 [DEPRECATED]
@@ -501,13 +485,6 @@ Enable the font-size options for users.
 #### $wgMFEnableVEWikitextEditor
 
 Enable VisualEditor's wikitext editor as a replacement for MobileFrontend's source editor.
-
-* Type: `Boolean`
-* Default: `false`
-
-#### $wgMFLazyLoadSkipSmallImages
-
-Skip lazy-loading transform on small-dimension images.
 
 * Type: `Boolean`
 * Default: `false`

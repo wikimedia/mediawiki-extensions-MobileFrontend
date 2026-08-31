@@ -195,33 +195,25 @@ QUnit.test( '#findInSectionLead', ( assert ) => {
 
 QUnit.test( '#getThumbnail', ( assert ) => {
 	// Valid anchor.
-	const $container = util.parseHTML( '<div><a href="/wiki/File:Design_portal_logo.jpg" class="image"><span class="lazy-image-placeholder" style="width: 28px;height: 28px;" data-src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Design_portal_logo.jpg/28px-Design_portal_logo.jpg" data-alt="icon" data-width="28" data-height="28" data-class="thumbimage">&nbsp;</span></a></div>' );
+	const $container = util.parseHTML( '<div><a href="/wiki/File:Design_portal_logo.jpg" class="image"><img loading="lazy" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Design_portal_logo.jpg/28px-Design_portal_logo.jpg" alt="icon" width="28" height="28" class="thumbimage"></a></div>' );
 	const parser = new PageHTMLParser( $container );
 	const thumb = parser.getThumbnail( $container.find( PageHTMLParser.THUMB_SELECTOR ) );
 	assert.notStrictEqual( thumb, null, 'Thumbnail found if valid.' );
 	assert.strictEqual( thumb.getFileName(), 'File:Design_portal_logo.jpg', 'Thumbnail found if valid.' );
 
 	// Valid anchor with ?uselang=fa
-	const $containerUseLang = util.parseHTML( '<div><a href="/wiki/File:Design_portal_logo.jpg?uselang=fa" class="image"><span class="lazy-image-placeholder" style="width: 28px;height: 28px;" data-src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Design_portal_logo.jpg/28px-Design_portal_logo.jpg" data-alt="icon" data-width="28" data-height="28" data-class="thumbimage">&nbsp;</span></a></div>' );
+	const $containerUseLang = util.parseHTML( '<div><a href="/wiki/File:Design_portal_logo.jpg?uselang=fa" class="image"><img loading="lazy" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Design_portal_logo.jpg/28px-Design_portal_logo.jpg" alt="icon" width="28" height="28" class="thumbimage"></a></div>' );
 	const parserUseLang = new PageHTMLParser( $containerUseLang );
 	const thumbUseLang = parserUseLang.getThumbnail( $containerUseLang.find( PageHTMLParser.THUMB_SELECTOR ) );
 	assert.notStrictEqual( thumbUseLang, null, 'Thumbnail found if valid.' );
 	assert.strictEqual( thumbUseLang.getFileName(), 'File:Design_portal_logo.jpg', 'Thumbnail found if valid.' );
 
 	// Valid anchor with index.php URL
-	const $containerLegacy = util.parseHTML( '<div><a href="/w/index.php?title=File:Design_portal_logo.jpg&uselang=fa" class="image"><span class="lazy-image-placeholder" style="width: 28px;height: 28px;" data-src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Design_portal_logo.jpg/28px-Design_portal_logo.jpg" data-alt="icon" data-width="28" data-height="28" data-class="thumbimage">&nbsp;</span></a></div>' );
+	const $containerLegacy = util.parseHTML( '<div><a href="/w/index.php?title=File:Design_portal_logo.jpg&uselang=fa" class="image"><img loading="lazy" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Design_portal_logo.jpg/28px-Design_portal_logo.jpg" alt="icon" width="28" height="28" class="thumbimage"></a></div>' );
 	const parserLegacy = new PageHTMLParser( $containerLegacy );
 	const thumbLegacy = parserLegacy.getThumbnail( $containerLegacy.find( PageHTMLParser.THUMB_SELECTOR ) );
 	assert.notStrictEqual( thumbLegacy, null, 'Thumbnail found if valid.' );
 	assert.strictEqual( thumbLegacy.getFileName(), 'File:Design_portal_logo.jpg', 'Thumbnail found if valid.' );
-
-	// Anchor with 'metadata' class should be excluded.
-	const $containerMetadata = util.parseHTML( '<div><a href="/wiki/File:Design_portal_logo.jpg" class="image"><span class="lazy-image-placeholder" style="width: 28px;height: 28px;" data-src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Design_portal_logo.jpg/28px-Design_portal_logo.jpg" data-alt="icon" data-width="28" data-height="28" data-class="thumbimage noviewer">&nbsp;</span></a></div>' );
-	const parserMetadata = new PageHTMLParser( $containerMetadata );
-	const thumbMetadata = parserMetadata.getThumbnail(
-		$containerMetadata.find( PageHTMLParser.THUMB_SELECTOR )
-	);
-	assert.strictEqual( thumbMetadata, null, 'Thumbnail not found if invalid.' );
 } );
 
 QUnit.test( '#getThumbnails', ( assert ) => {
@@ -245,14 +237,8 @@ QUnit.test( '#getThumbnails', ( assert ) => {
 	const pMetadataNested = new PageHTMLParser(
 		util.parseHTML( '<div class="noviewer"><a href="/wikpa/index.php?title=File:Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg" class="image view-border-box"><img alt="Cyanolimnas cerverai by Allan Brooks cropped.jpg" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg/300px-Cyanolimnas_cerverai_by_Allan_Brooks_cropped.jpg" width="300" height="303" data-file-width="454" data-file-height="459"></a></div>' )
 	);
-	const pLazyImages = new PageHTMLParser(
-		util.parseHTML( '<div><a href="/wiki/File:Design_portal_logo.jpg" class="image"><span class="lazy-image-placeholder" style="width: 28px;height: 28px;" data-src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Design_portal_logo.jpg/28px-Design_portal_logo.jpg" data-alt="icon" data-width="28" data-height="28" data-class="noviewer">&nbsp;</span></a></div>' )
-	);
-	const pLazyImagesTypo = new PageHTMLParser(
-		util.parseHTML( '<div><a href="/wiki/File:Design_portal_logo.jpg" class="image"><span class="lazy-image-placeholder" style="width: 28px;height: 28px;" data-src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Design_portal_logo.jpg/28px-Design_portal_logo.jpg" data-alt="icon" data-width="28" data-height="28" data-class="wot noviewerz bar">&nbsp;</span></a></div>' )
-	);
 	const metadataTable = new PageHTMLParser(
-		util.parseHTML( '<div><table class="plainlinks metadata ambox ambox-content ambox-Unreferenced" role="presentation"><tr><td class="mbox-image"><div style="width:52px"><a href="/wiki/File:Question_book-new.svg" class="image"><span class="lazy-image-placeholder" style="width: 50px;height: 39px;" data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" data-alt="" data-width="50" data-height="39" data-srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x"> </span></a></div></td></tr></table>' )
+		util.parseHTML( '<div><table class="plainlinks metadata ambox ambox-content ambox-Unreferenced" role="presentation"><tr><td class="mbox-image"><div style="width:52px"><a href="/wiki/File:Question_book-new.svg" class="image"><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Question_book-new.svg/50px-Question_book-new.svg.png" data-alt="" data-width="50" data-height="39" data-srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Question_book-new.svg/75px-Question_book-new.svg.png 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Question_book-new.svg/100px-Question_book-new.svg.png 2x"></a></div></td></tr></table>' )
 	);
 
 	assert.strictEqual( thumbs.length, 1, 'Found expected number of thumbnails.' );
@@ -277,15 +263,7 @@ QUnit.test( '#getThumbnails', ( assert ) => {
 	assert.strictEqual( thumbs.length, 0,
 		'Images inside a container with the class are not included. Images inside tables for example.' );
 
-	thumbs = pLazyImages.getThumbnails();
-	assert.strictEqual( thumbs.length, 0,
-		'Consider whether the class is on an image which has not been lazy loaded.' );
-
 	thumbs = metadataTable.getThumbnails();
 	assert.strictEqual( thumbs.length, 0,
 		'Consider whether the lazy loaded image is inside a .metadata container.' );
-
-	thumbs = pLazyImagesTypo.getThumbnails();
-	assert.strictEqual( thumbs.length, 1,
-		'Thumbnail found if there is a typo.' );
 } );

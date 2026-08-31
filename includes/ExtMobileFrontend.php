@@ -11,10 +11,8 @@ use MobileFrontend\Api\ApiParseExtender;
 use MobileFrontend\ContentProviders\IContentProvider;
 use MobileFrontend\Features\FeaturesManager;
 use MobileFrontend\Hooks\HookRunner;
-use MobileFrontend\Transforms\LazyImageTransform;
 use MobileFrontend\Transforms\MakeSectionsTransform;
 use MobileFrontend\Transforms\MoveLeadParagraphTransform;
-use MobileFrontend\Transforms\NativeLazyImageTransform;
 use MobileFrontend\Transforms\RemovableClassesTransform;
 use Wikibase\Client\WikibaseClient;
 use Wikibase\DataModel\Entity\ItemId;
@@ -128,7 +126,6 @@ class ExtMobileFrontend {
 		$hookRunner = new HookRunner( $services->getHookContainer() );
 		$hookRunner->onMobileFrontendBeforeDOM( $context, $formatter );
 
-		$shouldLazyTransformImages = $featuresManager->isFeatureAvailableForCurrentUser( 'MFLazyLoadImages' );
 		$leadParagraphEnabled = in_array( $ns, $config->get( 'MFNamespacesWithLeadParagraphs' ) );
 		$showFirstParagraphBeforeInfobox = $leadParagraphEnabled &&
 			$featuresManager->isFeatureAvailableForCurrentUser( 'MFShowFirstParagraphBeforeInfobox' );
@@ -150,14 +147,6 @@ class ExtMobileFrontend {
 				$topHeadingTags,
 				true
 			);
-		}
-
-		if ( $shouldLazyTransformImages ) {
-			if ( $shouldUseParsoid ) {
-				$transforms[] = new NativeLazyImageTransform();
-			} else {
-				$transforms[] = new LazyImageTransform( $config->get( 'MFLazyLoadSkipSmallImages' ) );
-			}
 		}
 
 		if ( $showFirstParagraphBeforeInfobox ) {

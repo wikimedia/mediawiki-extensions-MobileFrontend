@@ -425,7 +425,6 @@
 		"ResourceLoaderBeforeResponse": "MobileFrontendHooks",
 		"ResourceLoaderSiteStylesModulePages": "MobileFrontendHooks",
 		"ResourceLoaderSiteModulePages": "MobileFrontendHooks",
-		"SkinAfterBottomScripts": "MobileFrontendHooks",
 		"SkinAddFooterLinks": "MobileFrontendHooks",
 		"BeforePageRedirect": "MobileFrontendHooks",
 		"MediaWikiPerformAction": "MobileFrontendHooks",
@@ -597,14 +596,6 @@
 				0
 			],
 			"merge_strategy": "provide_default"
-		},
-		"MFLazyLoadImages": {
-			"value": {
-				"base": true
-			}
-		},
-		"MFLazyLoadSkipSmallImages": {
-			"value": false
 		},
 		"MFSpecialPageTaglines": {
 			"value": []

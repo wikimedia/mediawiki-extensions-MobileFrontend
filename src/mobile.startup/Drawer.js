@@ -72,9 +72,6 @@ class Drawer extends View {
 		this.$mask.addClass( 'drawer-container__mask--visible' );
 		if ( !$drawer.hasClass( 'visible' ) ) {
 			$drawer.addClass( 'visible' );
-			// IntersectionObserver doesn't fire for content
-			// in drawers, so trigger manually (T361212)
-			mw.hook( 'mobileFrontend.loadLazyImages' ).fire( this.$el );
 			if ( this.options.onShow ) {
 				this.options.onShow( d );
 			}

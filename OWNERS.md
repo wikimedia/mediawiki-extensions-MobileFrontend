@@ -66,18 +66,14 @@ into articles; and modifications to user pages.
   - /tests/phpunit/integration/context/MobileContextShouldDisplayMobileViewIntegrationTest.php
   - /tests/phpunit/integration/context/MobileContextWikibaseDescriptionsTest.php
   - /src/mobile.init/isCollapsedByDefault.js
-  - /src/mobile.init/lazyLoadedImages.js
   - /src/mobile.init/mobile.init.js
   - /src/mobile.init/sectionCollapsing.js
   - /src/mobile.init/toggling.js
   - /resources/mobile.init.styles/main.less
-  - /tests/node-qunit/mobile.init/lazyLoadedImages.test.js
   - /tests/phpunit/unit/MobileFormatterUnitTest.php
 * Folders:
   - /includes/Transforms
   - /resources/mobile.userpage.styles
-  - /src/mobile.startup/lazyImages
-  - /tests/node-qunit/mobile.startup/lazyImages
   - /tests/phpunit/unit/transforms
 * Contact: [Reader Growth][1]
 * Phabricator: https://phabricator.wikimedia.org/project/view/8173/
