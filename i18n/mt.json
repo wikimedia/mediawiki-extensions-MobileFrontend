@@ -8,7 +8,7 @@
 			"ToniSant"
 		]
 	},
-	"mobile-frontend-copyright": "Il-kontenut huwa disponibbli taħt il-liċenzja $1 sakemm mhux indikat mod ieħor.",
+	"mobile-frontend-copyright": "Il-kontenut huwa disponibbli taħt il-liċenzja $1 sakemm mhux indikat altru.",
 	"mobile-frontend-desc": "Interfaċċa għall-mowbajl",
 	"mobile-frontend-editor-disabled": "M'intix permess li timmodifika din il-paġna.",
 	"mobile-frontend-editor-summary-placeholder": "Eżempju: Irranġajt typo, żidt kontenut",
@@ -20,9 +20,9 @@
 	"mobile-frontend-missing-image": "Stampa",
 	"mobile-frontend-privacy-link-text": "Privatezza",
 	"mobile-frontend-save-settings": "Salva",
-	"mobile-frontend-terms-text": "Termini tal-użu",
-	"mobile-frontend-view": "Verżjoni għall-mowbajl",
-	"mobile-frontend-view-desktop": "Veduta Desktop",
+	"mobile-frontend-terms-text": "Termini tal-Użu",
+	"mobile-frontend-view": "Verżjoni mobbli",
+	"mobile-frontend-view-desktop": "Veduta desktop",
 	"mobile-frontend-watchlist-filter-all": "Kollha",
 	"mobile-frontend-watchlist-filter-articles": "Artikli",
 	"mobile-frontend-watchlist-filter-other": "Oħrajn",
