@@ -154,7 +154,15 @@ class ExtMobileFrontend {
 		}
 
 		if ( $quickFactsEnabled ) {
-			$transforms[] = new QuickFactsTransform( $out->msg( 'mobile-frontend-quick-facts' )->text() );
+			// Position matters for legacy parser output. By now MakeSectionsTransform
+			// has split the page into sections and numbered them, so the lead is
+			// there to pull infoboxes out of, and the Quick facts section can be
+			// added without shifting assigned numbers that edit links point at.
+			// Parsoid output is already pre-sectioned and skips that transform.
+			$transforms[] = new QuickFactsTransform(
+				$out->msg( 'mobile-frontend-quick-facts' )->text(),
+				$shouldUseParsoid
+			);
 			$out->addModuleStyles( 'mobile.quickFacts.styles' );
 		} elseif ( $showFirstParagraphBeforeInfobox ) {
 			$transforms[] = new MoveLeadParagraphTransform( $title, $title->getLatestRevID() );
