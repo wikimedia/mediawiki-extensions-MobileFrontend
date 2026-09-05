@@ -79,12 +79,12 @@ class ExtMobileFrontend {
 	 * Transforms content to be mobile friendly version.
 	 * Filters out various elements and runs the MobileFormatter.
 	 *
-	 * @param OutputPage $out
+	 * @param IContextSource $out
 	 * @param string $html to render.
 	 *
 	 * @return string
 	 */
-	public static function domParseMobile( OutputPage $out, $html = '' ): string {
+	public static function domParseMobile( IContextSource $out, $html = '' ): string {
 		$services = MediaWikiServices::getInstance();
 		/** @var FeaturesManager $featuresManager */
 		$featuresManager = $services->getService( 'MobileFrontend.FeaturesManager' );
@@ -163,7 +163,13 @@ class ExtMobileFrontend {
 				$out->msg( 'mobile-frontend-quick-facts' )->text(),
 				$shouldUseParsoid
 			);
-			$out->addModuleStyles( 'mobile.quickFacts.styles' );
+			// Registering RL modules needs a real OutputPage, but $out only
+			// needs to be an IContextSource otherwise. This guard lets callers
+			// that only need the HTML, such as DiscussionTools' tests, skip
+			// providing one.
+			if ( $out instanceof OutputPage ) {
+				$out->addModuleStyles( 'mobile.quickFacts.styles' );
+			}
 		} elseif ( $showFirstParagraphBeforeInfobox ) {
 			$transforms[] = new MoveLeadParagraphTransform( $title, $title->getLatestRevID() );
 		}
