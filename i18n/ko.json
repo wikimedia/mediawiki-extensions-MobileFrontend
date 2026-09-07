@@ -211,5 +211,6 @@
 	"mobile-editor-abandon-survey-answer-complicated": "인터페이스가 너무 복잡하게 느껴집니다",
 	"mobile-editor-abandon-survey-answer-accident": "실수로 편집하기를 눌렀습니다",
 	"mobile-editor-abandon-survey-answer-error": "기술적인 이슈를 접했습니다",
-	"mobile-editor-abandon-survey-answer-other": "그 외"
+	"mobile-editor-abandon-survey-answer-other": "그 외",
+	"mobile-frontend-quick-facts": "간략 정보"
 }

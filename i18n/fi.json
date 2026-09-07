@@ -200,5 +200,6 @@
 	"mobile-editor-abandon-survey-answer-complicated": "Käyttöliittymä tuntui liian monimutkaiselta",
 	"mobile-editor-abandon-survey-answer-accident": "Painoin muokkauspainiketta vahingossa",
 	"mobile-editor-abandon-survey-answer-error": "Kohtasin teknisen ongelman",
-	"mobile-editor-abandon-survey-answer-other": "Jokin muu syy"
+	"mobile-editor-abandon-survey-answer-other": "Jokin muu syy",
+	"mobile-frontend-quick-facts": "Pikafaktoja"
 }

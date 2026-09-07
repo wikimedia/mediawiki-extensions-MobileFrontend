@@ -195,5 +195,6 @@
 	"mobile-editor-abandon-survey-answer-complicated": "Die Benutzeroberfläche wirkte zu kompliziert.",
 	"mobile-editor-abandon-survey-answer-accident": "Versehentlich auf „Bearbeiten“ getippt.",
 	"mobile-editor-abandon-survey-answer-error": "Ich bin auf ein technisches Problem gestoßen.",
-	"mobile-editor-abandon-survey-answer-other": "Etwas anderes"
+	"mobile-editor-abandon-survey-answer-other": "Etwas anderes",
+	"mobile-frontend-quick-facts": "Schnelle Fakten"
 }

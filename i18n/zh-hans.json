@@ -256,5 +256,6 @@
 	"mobile-editor-abandon-survey-answer-complicated": "感觉界面太复杂",
 	"mobile-editor-abandon-survey-answer-accident": "不小心点到编辑",
 	"mobile-editor-abandon-survey-answer-error": "遇到技术问题",
-	"mobile-editor-abandon-survey-answer-other": "其他原因"
+	"mobile-editor-abandon-survey-answer-other": "其他原因",
+	"mobile-frontend-quick-facts": "速览"
 }

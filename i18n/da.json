@@ -192,5 +192,6 @@
 	"mobile-editor-abandon-survey-answer-complicated": "Brugerfladen føltes for kompliceret",
 	"mobile-editor-abandon-survey-answer-accident": "Trykkede på rediger ved et uheld",
 	"mobile-editor-abandon-survey-answer-error": "Løb ind i et teknisk problem",
-	"mobile-editor-abandon-survey-answer-other": "Noget andet"
+	"mobile-editor-abandon-survey-answer-other": "Noget andet",
+	"mobile-frontend-quick-facts": "Hurtige fakta"
 }
