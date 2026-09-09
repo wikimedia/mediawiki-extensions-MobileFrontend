@@ -785,7 +785,7 @@ class MobileFrontendHooks implements
 		$context = $this->mobileContext;
 		$mfEnableXAnalyticsLogging = $this->config->get( 'MFEnableXAnalyticsLogging' );
 		$mfNoIndexPages = $this->config->get( 'MFNoindexPages' );
-		$isCanonicalLinkHandledByCore = $this->config->get( 'EnableCanonicalServerLink' );
+		$isCanonicalLinkHandledByCore = $this->config->get( MainConfigNames::EnableCanonicalServerLink );
 		$hasMobileUrl = $context->hasMobileDomain();
 		$displayMobileView = $context->shouldDisplayMobileView();
 
@@ -966,7 +966,7 @@ class MobileFrontendHooks implements
 	public static function onCentralAuthLoginRedirectData( $centralUser, &$data ) {
 		/** @var MobileContext $context */
 		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
-		$server = $context->getConfig()->get( 'Server' );
+		$server = $context->getConfig()->get( MainConfigNames::Server );
 		if ( $context->shouldDisplayMobileView() ) {
 			$data['mobileServer'] = $context->getMobileUrl( $server );
 		}

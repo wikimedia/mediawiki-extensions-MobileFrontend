@@ -263,7 +263,7 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 	 */
 	public function testIndexPhpVaryHeader() {
 		$this->overrideConfigValues( [
-			'Server' => '//en.example.org',
+			MainConfigNames::Server => '//en.example.org',
 			'MFAutodetectMobileView' => false,
 			'MFEnableXAnalyticsLogging' => false,
 			'MFMobileHeader' => null,

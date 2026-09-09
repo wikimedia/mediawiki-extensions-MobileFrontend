@@ -2,6 +2,7 @@
 
 use MediaWiki\Context\IContextSource;
 use MediaWiki\Html\TemplateParser;
+use MediaWiki\MainConfigNames;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Output\OutputPage;
 use MediaWiki\Registration\ExtensionRegistry;
@@ -129,7 +130,7 @@ class ExtMobileFrontend {
 
 		$transforms = [];
 		// Remove specified content in content namespaces
-		if ( in_array( $title->getNamespace(), $config->get( 'ContentNamespaces' ), true ) ) {
+		if ( $title->inNamespaces( $config->get( MainConfigNames::ContentNamespaces ) ) ) {
 			$mfRemovableClasses = $config->get( 'MFRemovableClasses' );
 			$removableClasses = $mfRemovableClasses['base'];
 

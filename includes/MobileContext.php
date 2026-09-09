@@ -4,6 +4,7 @@ use MediaWiki\Config\Config;
 use MediaWiki\Context\ContextSource;
 use MediaWiki\Context\IContextSource;
 use MediaWiki\Context\RequestContext;
+use MediaWiki\MainConfigNames;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Utils\UrlUtils;
 use MobileFrontend\Amc\UserMode;
@@ -312,7 +313,7 @@ class MobileContext extends ContextSource {
 	 * @return string|null
 	 */
 	public function getCookieDomain() {
-		return ( new WMFBaseDomainExtractor() )->getCookieDomain( $this->config->get( 'Server' ) );
+		return ( new WMFBaseDomainExtractor() )->getCookieDomain( $this->config->get( MainConfigNames::Server ) );
 	}
 
 	/**
@@ -406,7 +407,7 @@ class MobileContext extends ContextSource {
 
 		return ( abs( (int)$mobileFrontendFormatCookieExpiry ) > 0 )
 			? $mobileFrontendFormatCookieExpiry
-			: $this->getConfig()->get( 'CookieExpiration' );
+			: $this->getConfig()->get( MainConfigNames::CookieExpiration );
 	}
 
 	/**
@@ -431,7 +432,7 @@ class MobileContext extends ContextSource {
 		$mobileUrlCallback = $this->getMobileUrlCallback();
 		if ( $mobileUrlCallback ) {
 			$urlUtils = MediaWikiServices::getInstance()->getUrlUtils();
-			$server = $urlUtils->expand( $this->getConfig()->get( 'Server' ), PROTO_CANONICAL ) ?? '';
+			$server = $urlUtils->expand( $this->getConfig()->get( MainConfigNames::Server ), PROTO_CANONICAL ) ?? '';
 			$host = $urlUtils->parse( $server )['host'] ?? '';
 			$mobileDomain = $mobileUrlCallback( $host );
 			$this->hasMobileUrl = $mobileDomain !== $host;
@@ -524,7 +525,7 @@ class MobileContext extends ContextSource {
 	 */
 	protected function updateDesktopUrlHost( array $parsedUrl ): array {
 		if ( $this->hasMobileDomain() ) {
-			$parsedUrl['host'] = parse_url( $this->getConfig()->get( 'Server' ), PHP_URL_HOST, ) ?: '';
+			$parsedUrl['host'] = parse_url( $this->getConfig()->get( MainConfigNames::Server ), PHP_URL_HOST, ) ?: '';
 		}
 
 		return $parsedUrl;
@@ -631,7 +632,7 @@ class MobileContext extends ContextSource {
 	public function isLocalUrl( $url ) {
 		$urlUtils = MediaWikiServices::getInstance()->getUrlUtils();
 		$parsedTargetHost = $urlUtils->parse( $url )['host'] ?? '';
-		$parsedServerHost = $urlUtils->parse( $this->config->get( 'Server' ) )['host'] ?? '';
+		$parsedServerHost = $urlUtils->parse( $this->config->get( MainConfigNames::Server ) )['host'] ?? '';
 		return $parsedTargetHost === $parsedServerHost;
 	}
 

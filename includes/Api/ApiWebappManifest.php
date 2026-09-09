@@ -7,6 +7,7 @@ use MediaWiki\Api\ApiFormatJson;
 use MediaWiki\Api\ApiMain;
 use MediaWiki\Http\HttpRequestFactory;
 use MediaWiki\Language\Language;
+use MediaWiki\MainConfigNames;
 use MediaWiki\Title\Title;
 use MediaWiki\Utils\UrlUtils;
 
@@ -31,10 +32,10 @@ class ApiWebappManifest extends ApiBase {
 	public function execute() {
 		$config = $this->getConfig();
 		$resultObj = $this->getResult();
-		$resultObj->addValue( null, 'name', $config->get( 'Sitename' ) );
+		$resultObj->addValue( null, 'name', $config->get( MainConfigNames::Sitename ) );
 		$resultObj->addValue( null, 'orientation', 'portrait' );
 		$resultObj->addValue( null, 'dir', $this->contentLanguage->getDir() );
-		$resultObj->addValue( null, 'lang', $config->get( 'LanguageCode' ) );
+		$resultObj->addValue( null, 'lang', $config->get( MainConfigNames::LanguageCode ) );
 		$resultObj->addValue( null, 'display', 'minimal-ui' );
 		$resultObj->addValue( null, 'theme_color', $config->get( 'MFManifestThemeColor' ) );
 		$resultObj->addValue( null, 'background_color', $config->get( 'MFManifestBackgroundColor' ) );
@@ -42,7 +43,7 @@ class ApiWebappManifest extends ApiBase {
 
 		$icons = [];
 
-		$appleTouchIcon = $config->get( 'AppleTouchIcon' );
+		$appleTouchIcon = $config->get( MainConfigNames::AppleTouchIcon );
 		if ( $appleTouchIcon !== false ) {
 			$appleTouchIconUrl = $this->urlUtils->expand( $appleTouchIcon, PROTO_CURRENT ) ?? '';
 			$request = $this->httpRequestFactory->create( $appleTouchIconUrl, [], __METHOD__ );
