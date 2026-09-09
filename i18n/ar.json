@@ -215,5 +215,6 @@
 	"mobile-editor-abandon-survey-answer-complicated": "واجهة المستخدم معقدة للغاية.",
 	"mobile-editor-abandon-survey-answer-accident": "ضغطت على زر التحرير بالخطأ.",
 	"mobile-editor-abandon-survey-answer-error": "واجهت مشكلة تقنية.",
-	"mobile-editor-abandon-survey-answer-other": "سبب آخر."
+	"mobile-editor-abandon-survey-answer-other": "سبب آخر.",
+	"mobile-frontend-quick-facts": "حقائق سريعة"
 }
