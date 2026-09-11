@@ -524,7 +524,10 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 		$this->markTestSkippedIfExtensionNotLoaded( 'ParserMigration' );
 
 		MobileContext::singleton()->setForceMobileView( $isMobile );
-		$this->overrideConfigValue( 'ParserMigrationEnableParsoidArticlePages', $isParsoid );
+		$this->overrideConfigValues( [
+			'ParserMigrationEnableParsoidArticlePages' => $isParsoid,
+			'ParserMigrationEnableParsoidMobileArticlePages' => $isParsoid,
+		] );
 
 		// Create a title in the specified namespace
 		$title = $namespace === NS_MAIN
