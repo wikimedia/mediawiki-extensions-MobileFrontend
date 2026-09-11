@@ -84,6 +84,38 @@ class VisualEditorOverlay extends EditorOverlayBase {
 		if ( this.options.returnToApp ) {
 			this.target.saveFields.returntoquery = () => returnToApp.savedQuery();
 		}
+		if ( this.options.appInstallId ) {
+			const checkPlatform = () => {
+				// Very limited: android, ios, or other
+				// Client Hints API (currently: Chromium-based Android browsers)
+				if ( navigator.userAgentData && navigator.userAgentData.platform ) {
+					const platform = navigator.userAgentData.platform.toLowerCase();
+					if ( platform.includes( 'android' ) ) {
+						return 'android';
+					}
+					if ( platform.includes( 'ios' ) ) {
+						return 'ios';
+					}
+				}
+				// UserAgent fallback for iOS (Safari, Chrome on iOS) and other browsers
+				const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+				if ( /android/i.test( userAgent ) ) {
+					return 'android';
+				}
+				// Covers iPad, iPhone, and iPod
+				if ( /iPad|iPhone|iPod/.test( userAgent ) && !window.MSStream ) {
+					return 'ios';
+				}
+				// 3. Special iPadOS fix (Modern iPads mock macOS user agent strings)
+				if ( navigator.maxTouchPoints && navigator.maxTouchPoints > 2 && /Macintosh/.test( userAgent ) ) {
+					return 'ios';
+				}
+
+				return 'other';
+			};
+			// See MobileApp extension where these tags are defined:
+			this.target.addSaveTag( `app web edit ${ checkPlatform() }` );
+		}
 		this.target.once( 'surfaceReady', () => {
 			surfaceReady.resolve();
 
