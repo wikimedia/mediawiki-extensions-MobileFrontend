@@ -780,6 +780,7 @@ class EditorOverlayBase extends Overlay {
 			isNewPage: this.options.isNewPage,
 			oldId: this.options.oldId,
 			readOnly: this.options.readOnly,
+			isVESourceAvailable: this.options.isVESourceAvailable,
 			contentLang: this.options.contentLang,
 			contentDir: this.options.contentDir,
 			sectionId: this.options.sectionId

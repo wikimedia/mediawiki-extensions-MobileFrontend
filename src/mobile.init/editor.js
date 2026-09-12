@@ -118,7 +118,12 @@ function setupEditor( page, skin, currentPageHTMLParser, router, readOnly ) {
 		isNewPage = page.id === 0,
 		// Read before these parameters are stripped from the URL below.
 		veaction = mw.util.getParamValue( 'veaction' ),
-		urlSection = mw.util.getParamValue( 'section' );
+		urlSection = mw.util.getParamValue( 'section' ),
+		// A veaction=editsource URL asks for the wikitext editor of VisualEditor.
+		// Give it, whatever the site configuration says. The desktop site does the
+		// same against the equivalent user preference (T239796).
+		isVESourceAvailable = page.isVESourceAvailable() ||
+			( page.isVEAvailable() && veaction === 'editsource' );
 
 	if ( !readOnly ) {
 		// A tap on an edit link asks to edit, which the user cannot do. init() binds a
@@ -158,6 +163,7 @@ function setupEditor( page, skin, currentPageHTMLParser, router, readOnly ) {
 				isNewPage,
 				readOnly: !!readOnly,
 				veaction,
+				isVESourceAvailable,
 				oldId: mw.util.getParamValue( 'oldid' ),
 				returnToApp: mw.util.getParamValue( 'returntoapp' ),
 				appInstallId: mw.util.getParamValue( 'appinstallid' ),
@@ -289,7 +295,7 @@ function setupEditor( page, skin, currentPageHTMLParser, router, readOnly ) {
 		function shouldLoadVisualEditor() {
 			const preferredEditor = getPreferredEditor();
 
-			return page.isVESourceAvailable() || (
+			return isVESourceAvailable || (
 				page.isVEVisualAvailable() &&
 				// If the user prefers visual mode or the user has no preference and
 				// the visual mode is the default editor for this wiki
@@ -341,7 +347,7 @@ function setupEditor( page, skin, currentPageHTMLParser, router, readOnly ) {
 			 */
 			mw.hook( 'mobileFrontend.editorOpening' ).fire();
 
-			editorOptions.mode = mw.config.get( 'wgMFEnableVEWikitextEditor' ) && getPreferredEditor() === 'SourceEditor' ?
+			editorOptions.mode = isVESourceAvailable && getPreferredEditor() === 'SourceEditor' ?
 				'source' :
 				'visual';
 			editorOptions.dataPromise = mw.loader.using( 'ext.visualEditor.targetLoader' ).then( () => {
@@ -369,7 +375,7 @@ function setupEditor( page, skin, currentPageHTMLParser, router, readOnly ) {
 					// editor, we can display it without waiting for the visual code
 					() => mw.loader.using( 'mobile.editor.overlay' ).then( () => {
 						mw.libs.ve.targetLoader.addPlugin( 'ext.visualEditor.mobileArticleTarget' );
-						if ( mw.config.get( 'wgMFEnableVEWikitextEditor' ) ) {
+						if ( isVESourceAvailable ) {
 							// Target loader only loads wikitext editor if the desktop
 							// preference is set.
 							// TODO: Have a cleaner API for this instead of duplicating

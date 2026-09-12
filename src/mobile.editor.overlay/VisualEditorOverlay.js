@@ -69,7 +69,9 @@ class VisualEditorOverlay extends EditorOverlayBase {
 		if ( currentPage.isVEVisualAvailable() ) {
 			modes.push( 'visual' );
 		}
-		if ( currentPage.isVESourceAvailable() ) {
+		// editor.js decides this, because a veaction=editsource URL can force the
+		// source mode on.
+		if ( options.isVESourceAvailable ) {
 			modes.push( 'source' );
 		}
 
