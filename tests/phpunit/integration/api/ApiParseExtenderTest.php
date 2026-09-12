@@ -37,6 +37,12 @@ class ApiParseExtenderTest extends MediaWikiIntegrationTestCase {
 			'useskin' => 'fallback',
 			// TODO: These tests only work for legacy parser & need to be updated to support Parsoid
 			'parser' => 'legacy',
+			// The 'parser' param above only controls ApiParse's output. It has
+			// no effect on ParserMigration's Oracle, which decides Parsoid
+			// usage from wiki config (ParserMigrationEnableParsoidMobileArticlePages)
+			// unless overridden here. Force it to the legacy parser so these
+			// tests don't depend on that config.
+			'useparsoid' => '0',
 		];
 
 		$request = new FauxRequest( $params );

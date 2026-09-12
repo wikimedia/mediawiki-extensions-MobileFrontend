@@ -524,10 +524,13 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 		$this->markTestSkippedIfExtensionNotLoaded( 'ParserMigration' );
 
 		MobileContext::singleton()->setForceMobileView( $isMobile );
-		$this->overrideConfigValues( [
-			'ParserMigrationEnableParsoidArticlePages' => $isParsoid,
-			'ParserMigrationEnableParsoidMobileArticlePages' => $isParsoid,
-		] );
+		// Oracle::isParsoidDefaultFor() reads a separate config key for mobile
+		// versus desktop views, so the override must target whichever one it
+		// will actually consult.
+		$this->overrideConfigValue(
+			$isMobile ? 'ParserMigrationEnableParsoidMobileArticlePages' : 'ParserMigrationEnableParsoidArticlePages',
+			$isParsoid
+		);
 
 		// Create a title in the specified namespace
 		$title = $namespace === NS_MAIN
