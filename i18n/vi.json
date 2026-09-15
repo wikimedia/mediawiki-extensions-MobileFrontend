@@ -198,5 +198,6 @@
 	"mobile-editor-abandon-survey-answer-complicated": "Cảm thấy giao diện quá phức tạp",
 	"mobile-editor-abandon-survey-answer-accident": "Nhấn nhầm vào nút chỉnh sửa",
 	"mobile-editor-abandon-survey-answer-error": "Gặp sự cố kỹ thuật",
-	"mobile-editor-abandon-survey-answer-other": "Lý do khác"
+	"mobile-editor-abandon-survey-answer-other": "Lý do khác",
+	"mobile-frontend-quick-facts": "Thông tin nhanh"
 }
