@@ -1,6 +1,5 @@
 module.exports = function () {
 	const
-		currentPage = require( '../mobile.startup/currentPage' )(),
 		Toggler = require( './Toggler' ),
 		sectionCollapsing = require( './sectionCollapsing' ),
 		eventBus = require( '../mobile.startup/eventBusSingleton' );
@@ -11,10 +10,9 @@ module.exports = function () {
 	 * @method
 	 * @param {jQuery.Object} $container to enable toggling on
 	 * @param {string} prefix a prefix to use for the id.
-	 * @param {Page} page The current page
 	 * @ignore
 	 */
-	function init( $container, prefix, page ) {
+	function init( $container, prefix ) {
 		const isParsoidEnabled = !!document.querySelector( '.mw-parser-output[data-mw-parsoid-version]' );
 		if ( isParsoidEnabled ) {
 			sectionCollapsing.init( $container[0] );
@@ -31,7 +29,6 @@ module.exports = function () {
 			new Toggler( {
 				$container,
 				prefix,
-				page,
 				eventBus
 			} );
 		}
@@ -39,7 +36,7 @@ module.exports = function () {
 
 	if (
 		// Avoid this running on Watchlist.
-		!currentPage.inNamespace( 'special' ) &&
+		mw.config.get( 'wgNamespaceNumber' ) !== mw.config.get( 'wgNamespaceIds' ).special &&
 		(
 			mw.config.get( 'wgAction' ) === 'view' ||
 			mw.config.get( 'wgAction' ) === 'edit'
@@ -51,7 +48,7 @@ module.exports = function () {
 			if ( $contentContainer.length === 0 ) {
 				$contentContainer = $container;
 			}
-			init( $contentContainer, 'content-', currentPage );
+			init( $contentContainer, 'content-' );
 		} );
 	}
 };

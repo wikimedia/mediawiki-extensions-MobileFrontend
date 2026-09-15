@@ -30,13 +30,11 @@ class Toggler {
 	 * @param {OO.EventEmitter} options.eventBus Object used to emit section-toggled events.
 	 * @param {jQuery.Object} options.$container to apply toggling to
 	 * @param {string} options.prefix a prefix to use for the id.
-	 * @param {Page} options.page to allow storage of session for future visits
 	 */
 	constructor( options ) {
 		this.eventBus = options.eventBus;
 		this.$container = options.$container;
 		this.prefix = options.prefix;
-		this.page = options.page;
 		this._enable();
 	}
 

@@ -45,10 +45,8 @@ QUnit.module( 'MobileFrontend Toggler.js', {
 		sandbox.stub( browser, 'isWideScreen' ).returns( false );
 		sandbox.stub( window, 'scrollTo' );
 
-		this.page = { title: 'Toggle test' };
 		this.$container = $( '<article>' ).html( sectionTemplate );
 		this.$section0 = this.$container.find( '.section-heading' ).eq( 0 );
-		this.title = this.page.title;
 		this.headline = this.$section0.find( 'span' ).attr( 'id' );
 		this._session = mw.storage.session;
 		mw.storage.session = {
@@ -73,8 +71,7 @@ QUnit.test( 'Mobile mode - Toggle section', function ( assert ) {
 		toggle = new Toggler( {
 			eventBus: new OO.EventEmitter(),
 			$container: this.$container,
-			prefix: '',
-			page: this.page
+			prefix: ''
 		} ),
 		$section = this.$section0,
 		$content = this.$container.find( '.collapsible-block' ).eq( 0 );
@@ -98,8 +95,7 @@ QUnit.test( 'Mobile mode - Clicking a hash link to reveal an already open sectio
 		toggle = new Toggler( {
 			eventBus: new OO.EventEmitter(),
 			$container: this.$container,
-			prefix: '',
-			page: this.page
+			prefix: ''
 		} );
 
 	toggle.toggle( this.$section0 );
@@ -114,8 +110,7 @@ QUnit.test( 'Mobile mode - Reveal element', function ( assert ) {
 		toggle = new Toggler( {
 			eventBus: new OO.EventEmitter(),
 			$container: this.$container,
-			prefix: '',
-			page: this.page
+			prefix: ''
 		} );
 
 	toggle.toggle( this.$section0 );
@@ -130,8 +125,7 @@ QUnit.test( 'Mobile mode - Clicking hash links', function ( assert ) {
 		toggle = new Toggler( {
 			eventBus: new OO.EventEmitter(),
 			$container: this.$container,
-			prefix: '',
-			page: this.page
+			prefix: ''
 		} );
 
 	toggle.toggle( this.$section0 );
@@ -146,8 +140,7 @@ QUnit.test( 'Mobile mode - Tap event toggles section', function ( assert ) {
 		toggle = new Toggler( {
 			eventBus: new OO.EventEmitter(),
 			$container: this.$container,
-			prefix: '',
-			page: this.page
+			prefix: ''
 		} ),
 		$content = this.$container.find( '.collapsible-block' ).eq( 1 );
 
@@ -165,8 +158,7 @@ QUnit.test( 'Accessibility - Verify ARIA attributes', function ( assert ) {
 		toggle = new Toggler( {
 			eventBus: new OO.EventEmitter(),
 			$container: this.$container,
-			prefix: '',
-			page: this.page
+			prefix: ''
 		} ),
 		$section = this.$container.find( '#section_1' ),
 		$headingWrapper = $section.parent(),
@@ -199,8 +191,7 @@ QUnit.test( 'Tablet mode - Open by default', function ( assert ) {
 	new Toggler( {
 		eventBus: new OO.EventEmitter(),
 		$container: this.$container,
-		prefix: '',
-		page: this.page
+		prefix: ''
 	} );
 
 	assert.strictEqual( this.$container.find( '.collapsible-block' ).eq( 1 ).hasClass( 'open-block' ),
@@ -217,8 +208,7 @@ QUnit.test( 'Tablet mode - Open by default 2', function ( assert ) {
 	new Toggler( {
 		eventBus: new OO.EventEmitter(),
 		$container: this.$container,
-		prefix: '',
-		page: this.page
+		prefix: ''
 	} );
 
 	assert.strictEqual( this.$container.find( '.collapsible-block' ).eq( 1 ).hasClass( 'open-block' ), true, 'check section is visible at start' );
@@ -237,8 +227,7 @@ QUnit.test( 'Accessibility - Pressing space/ enter toggles a heading', function 
 	new Toggler( {
 		eventBus: new OO.EventEmitter(),
 		$container: this.$container,
-		prefix: '',
-		page: this.page
+		prefix: ''
 	} );
 
 	const $content = this.$container.find( '.collapsible-block' ).eq( 1 );
@@ -265,8 +254,7 @@ QUnit.test( 'Clicking a link within a heading isn\'t triggering a toggle', funct
 	new Toggler( {
 		eventBus: new OO.EventEmitter(),
 		$container: this.$container,
-		prefix: '',
-		page: this.page
+		prefix: ''
 	} );
 
 	assert.strictEqual( $content.hasClass( 'open-block' ), false, 'check content is hidden at start' );
@@ -279,8 +267,7 @@ QUnit.test( 'MobileFrontend toggle.js - T320753: Presence of class disables togg
 	const toggler = new Toggler( {
 		eventBus: new OO.EventEmitter(),
 		$container: this.$container,
-		prefix: '',
-		page: this.page
+		prefix: ''
 	} );
 	const $heading = this.$container.find( 'h2' );
 	assert.strictEqual(

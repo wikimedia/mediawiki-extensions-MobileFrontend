@@ -1,5 +1,6 @@
 /* global $ */
 const
+	currentPageId = mw.config.get( 'wgArticleId' ),
 	util = require( '../mobile.startup/util' ),
 	fakeToolbar = require( './fakeToolbar' ),
 	editorLoadingOverlay = require( './editorLoadingOverlay' ),
@@ -101,29 +102,80 @@ function getPreferredEditor() {
 }
 
 /**
+ * Determine if the content model of the current page is wikitext.
+ *
+ * @method
+ * @ignore
+ * @return {boolean}
+ */
+function isWikiText() {
+	return mw.config.get( 'wgPageContentModel' ) === 'wikitext';
+}
+
+/**
+ * Check if the visual editor is available on the current page.
+ *
+ * @method
+ * @ignore
+ * @return {boolean}
+ */
+function isVEAvailable() {
+	return !!veConfig &&
+		!mw.config.get( 'wgVisualEditorDisabledByHook' ) &&
+		isWikiText();
+}
+
+/**
+ * Check if the visual editor in visual mode is available on the current page.
+ *
+ * @method
+ * @ignore
+ * @return {boolean}
+ */
+function isVEVisualAvailable() {
+	if ( !isVEAvailable() ) {
+		return false;
+	}
+	const visualEditorNamespaces = veConfig.namespaces || [];
+	return visualEditorNamespaces.includes( mw.config.get( 'wgNamespaceNumber' ) );
+}
+
+/**
+ * Check if the visual editor in source mode is available on the current page.
+ *
+ * @method
+ * @ignore
+ * @return {boolean}
+ */
+function isVESourceAvailable() {
+	return isVEAvailable() &&
+		mw.config.get( 'wgMFEnableVEWikitextEditor' );
+}
+
+/**
  * Initialize the edit button so that it launches the editor interface when clicked.
  *
  * @method
  * @ignore
- * @param {Page} page The page to edit.
  * @param {Skin} skin
  * @param {module:mobile.startup/PageHTMLParser} currentPageHTMLParser
  * @param {Router} router
  * @param {boolean} [readOnly] Open the editor in read-only mode, and leave the edit
  *  links alone. The caller binds its own handler to them.
  */
-function setupEditor( page, skin, currentPageHTMLParser, router, readOnly ) {
+function setupEditor( skin, currentPageHTMLParser, router, readOnly ) {
 	const
+		titleObj = mw.Title.newFromText( mw.config.get( 'wgPageName' ) ),
 		overlayManager = OverlayManager.getSingleton(),
-		isNewPage = page.id === 0,
+		isNewPage = currentPageId === 0,
 		// Read before these parameters are stripped from the URL below.
 		veaction = mw.util.getParamValue( 'veaction' ),
 		urlSection = mw.util.getParamValue( 'section' ),
 		// A veaction=editsource URL asks for the wikitext editor of VisualEditor.
 		// Give it, whatever the site configuration says. The desktop site does the
 		// same against the equivalent user preference (T239796).
-		isVESourceAvailable = page.isVESourceAvailable() ||
-			( page.isVEAvailable() && veaction === 'editsource' );
+		veSourceEnabled = isVESourceAvailable() ||
+			( isVEAvailable() && veaction === 'editsource' );
 
 	if ( !readOnly ) {
 		// A tap on an edit link asks to edit, which the user cannot do. init() binds a
@@ -156,14 +208,15 @@ function setupEditor( page, skin, currentPageHTMLParser, router, readOnly ) {
 				currentPageHTMLParser,
 				fakeScroll: 0,
 				api: new mw.Api(),
+				isVEVisualAvailable: isVEVisualAvailable(),
 				licenseMsg: skin.getLicenseMsg(),
-				title: page.title,
-				titleObj: page.titleObj,
+				title: titleObj.getPrefixedText(),
+				titleObj,
 				isAnon: user.isAnon(),
 				isNewPage,
 				readOnly: !!readOnly,
 				veaction,
-				isVESourceAvailable,
+				isVESourceAvailable: veSourceEnabled,
 				oldId: mw.util.getParamValue( 'oldid' ),
 				returnToApp: mw.util.getParamValue( 'returntoapp' ),
 				appInstallId: mw.util.getParamValue( 'appinstallid' ),
@@ -182,7 +235,7 @@ function setupEditor( page, skin, currentPageHTMLParser, router, readOnly ) {
 			initMechanism = mw.util.getParamValue( 'redlink' ) ? 'new' : 'click';
 
 		if ( sectionId !== 'all' ) {
-			editorOptions.sectionId = page.isWikiText() ? sectionId : undefined;
+			editorOptions.sectionId = isWikiText() ? sectionId : undefined;
 		}
 
 		function showLoading() {
@@ -295,8 +348,8 @@ function setupEditor( page, skin, currentPageHTMLParser, router, readOnly ) {
 		function shouldLoadVisualEditor() {
 			const preferredEditor = getPreferredEditor();
 
-			return isVESourceAvailable || (
-				page.isVEVisualAvailable() &&
+			return veSourceEnabled || (
+				isVEVisualAvailable() &&
 				// If the user prefers visual mode or the user has no preference and
 				// the visual mode is the default editor for this wiki
 				preferredEditor === 'VisualEditor'
@@ -347,7 +400,7 @@ function setupEditor( page, skin, currentPageHTMLParser, router, readOnly ) {
 			 */
 			mw.hook( 'mobileFrontend.editorOpening' ).fire();
 
-			editorOptions.mode = isVESourceAvailable && getPreferredEditor() === 'SourceEditor' ?
+			editorOptions.mode = veSourceEnabled && getPreferredEditor() === 'SourceEditor' ?
 				'source' :
 				'visual';
 			editorOptions.dataPromise = mw.loader.using( 'ext.visualEditor.targetLoader' ).then( () => {
@@ -375,7 +428,7 @@ function setupEditor( page, skin, currentPageHTMLParser, router, readOnly ) {
 					// editor, we can display it without waiting for the visual code
 					() => mw.loader.using( 'mobile.editor.overlay' ).then( () => {
 						mw.libs.ve.targetLoader.addPlugin( 'ext.visualEditor.mobileArticleTarget' );
-						if ( isVESourceAvailable ) {
+						if ( veSourceEnabled ) {
 							// Target loader only loads wikitext editor if the desktop
 							// preference is set.
 							// TODO: Have a cleaner API for this instead of duplicating
@@ -561,12 +614,11 @@ function bindEditLinksLoginDrawer( router ) {
  *
  * @method
  * @ignore
- * @param {Page} currentPage
  * @param {module:mobile.startup/PageHTMLParser} currentPageHTMLParser
  * @param {Skin} skin
  * @param {Router} router
  */
-function init( currentPage, currentPageHTMLParser, skin, router ) {
+function init( currentPageHTMLParser, skin, router ) {
 	let editRestrictions;
 	// see: https://www.mediawiki.org/wiki/Manual:Interface/JavaScript#Page-specific
 	const isReadOnly = mw.config.get( 'wgMinervaReadOnly' );
@@ -574,7 +626,7 @@ function init( currentPage, currentPageHTMLParser, skin, router ) {
 
 	if ( isEditable ) {
 		// Edit button updated in setupEditor.
-		setupEditor( currentPage, skin, currentPageHTMLParser, router );
+		setupEditor( skin, currentPageHTMLParser, router );
 	} else {
 		hideSectionEditIcons( currentPageHTMLParser );
 		editRestrictions = mw.config.get( 'wgRestrictionEdit' );
@@ -591,7 +643,7 @@ function init( currentPage, currentPageHTMLParser, skin, router ) {
 			bindEditLinksSorryToast(
 				mw.message( 'mobile-frontend-editor-disabled', $link ).parseDom()
 			);
-			setupEditor( currentPage, skin, currentPageHTMLParser, router, true );
+			setupEditor( skin, currentPageHTMLParser, router, true );
 		}
 	}
 }
@@ -626,18 +678,18 @@ function bindEditLinksSorryToast( msg, router ) {
 	}
 }
 
-module.exports = function ( currentPage, currentPageHTMLParser, skin ) {
+module.exports = function ( currentPageHTMLParser, skin ) {
 	// If not supported, do not setup.
 	if ( !mw.config.get( 'wgMFIsSupportedEditRequest' ) ) {
 		return;
 	}
 	const router = __non_webpack_require__( 'mediawiki.router' );
 
-	if ( currentPage.inNamespace( 'file' ) && currentPage.id === 0 ) {
+	if ( mw.config.get( 'wgNamespaceNumber' ) === mw.config.get( 'wgNamespaceIds' ).file && currentPageId === 0 ) {
 		// Is a new file page (enable upload image only) T60311
 		bindEditLinksSorryToast( mw.msg( 'mobile-frontend-editor-uploadenable' ), router );
 	} else {
 		// Edit button is currently hidden. A call to init() will update it as needed.
-		init( currentPage, currentPageHTMLParser, skin, router );
+		init( currentPageHTMLParser, skin, router );
 	}
 };

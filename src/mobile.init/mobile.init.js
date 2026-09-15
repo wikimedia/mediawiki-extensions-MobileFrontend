@@ -10,7 +10,6 @@ let url;
 const
 	toggling = require( './toggling' ),
 	editor = require( './editor' ),
-	currentPage = require( '../mobile.startup/currentPage' )(),
 	currentPageHTMLParser = require( '../mobile.startup/currentPageHTMLParser' )(),
 	mfUtil = require( '../mobile.startup/util' ),
 	$window = mfUtil.getWindow(),
@@ -139,6 +138,6 @@ if ( window.console && window.console.log && window.console.log.apply &&
 }
 /* eslint-enable no-console */
 
-editor( currentPage, currentPageHTMLParser, skin );
+editor( currentPageHTMLParser, skin );
 toggling();
 fixLegacyParserImagesIfNeeded();
