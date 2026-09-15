@@ -181,5 +181,6 @@
 	"mobile-editor-abandon-survey-answer-complicated": "د مخبڼې بڼه ډېره پېچلی ښکاري",
 	"mobile-editor-abandon-survey-answer-accident": "په ناڅاپي ډول دا سمون وټاپل شو",
 	"mobile-editor-abandon-survey-answer-error": "تخنيکي ستونزې سره مخ شو",
-	"mobile-editor-abandon-survey-answer-other": "بل څه"
+	"mobile-editor-abandon-survey-answer-other": "بل څه",
+	"mobile-frontend-quick-facts": "چټک مالومات"
 }
