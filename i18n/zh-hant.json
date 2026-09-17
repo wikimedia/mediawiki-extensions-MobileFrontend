@@ -15,6 +15,7 @@
 			"H78c67c",
 			"Hello903hello",
 			"Itsmine",
+			"Jdlrobson",
 			"Kly",
 			"LNDDYL",
 			"Lauhenry",
@@ -217,5 +218,6 @@
 	"mobile-editor-abandon-survey-answer-complicated": "覺得介面太複雜",
 	"mobile-editor-abandon-survey-answer-accident": "不小心點到編輯",
 	"mobile-editor-abandon-survey-answer-error": "遇到技術問題",
-	"mobile-editor-abandon-survey-answer-other": "其他原因"
+	"mobile-editor-abandon-survey-answer-other": "其他原因",
+	"mobile-frontend-quick-facts": "快速事實"
 }

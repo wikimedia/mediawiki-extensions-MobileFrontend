@@ -20,6 +20,7 @@
 			"Ilham",
 			"Ilham151096",
 			"Iwan Novirion",
+			"Jdlrobson",
 			"Joseagush",
 			"Kenrick95",
 			"Mahali syarifuddin",
@@ -199,5 +200,6 @@
 	"mobile-editor-abandon-survey-answer-complicated": "Antarmuka terasa terlalu rumit",
 	"mobile-editor-abandon-survey-answer-accident": "Tak sengaja menekan tombol sunting",
 	"mobile-editor-abandon-survey-answer-error": "Mengalami masalah teknis",
-	"mobile-editor-abandon-survey-answer-other": "Alasan lain"
+	"mobile-editor-abandon-survey-answer-other": "Alasan lain",
+	"mobile-frontend-quick-facts": "Fakta singkat"
 }
