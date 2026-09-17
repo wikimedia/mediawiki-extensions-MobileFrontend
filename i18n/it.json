@@ -13,6 +13,7 @@
 			"Giuseppe Forte",
 			"Gloria sah",
 			"Ignazio Cannata",
+			"Jdlrobson",
 			"Kaspo",
 			"LACLARETTA",
 			"Macofe",
@@ -179,5 +180,6 @@
 	"mobile-frontend-mobile-option-amc-send-feedback": "Invia commento",
 	"mobile-frontend-user-pref-option": "Preferenze dell'utente",
 	"mobile-frontend-user-pref-description": "Modifica le tue preferenze, tra cui password, aspetto, impostazioni di notifica e altro.",
-	"mobile-frontend-user-pref-link": "Apri preferenze"
+	"mobile-frontend-user-pref-link": "Apri preferenze",
+	"mobile-frontend-quick-facts": "Informazioni rapide"
 }

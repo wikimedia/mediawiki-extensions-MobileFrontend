@@ -9,6 +9,7 @@
 			"Chqaz",
 			"Dragoniez",
 			"Fryed-peach",
+			"Jdlrobson",
 			"Kkairri",
 			"Kokage si",
 			"LaMagiaaa",
@@ -213,5 +214,6 @@
 	"mobile-editor-abandon-survey-answer-complicated": "インターフェースが複雑すぎた",
 	"mobile-editor-abandon-survey-answer-accident": "誤って「編集」をタップしてしまった",
 	"mobile-editor-abandon-survey-answer-error": "技術的な問題が発生した",
-	"mobile-editor-abandon-survey-answer-other": "その他"
+	"mobile-editor-abandon-survey-answer-other": "その他",
+	"mobile-frontend-quick-facts": "概要"
 }
