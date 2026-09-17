@@ -16,6 +16,7 @@
 			"IZapico (WMF)",
 			"Imperadeiro90",
 			"Imperadeiro98",
+			"Jdlrobson",
 			"João Sousa",
 			"Ldacosta",
 			"Luckas",
@@ -193,5 +194,6 @@
 	"mobile-frontend-user-pref-link": "Abrir as preferências",
 	"mobile-frontend-console-recruit": "Saiba mais sobre a forma como construímos o nosso sítio móvel @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
 	"mobile-frontend-special-pages-pref": "Otimizar e simplificar as páginas especiais quando estiver em dispositivos móveis (recomendado)",
-	"prefs-mobile": "Preferências em dispositivos móveis"
+	"prefs-mobile": "Preferências em dispositivos móveis",
+	"mobile-frontend-quick-facts": "Factos rápidos"
 }

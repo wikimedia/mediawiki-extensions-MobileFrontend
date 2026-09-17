@@ -225,5 +225,6 @@
 	"mobile-editor-abandon-survey-answer-complicated": "La interfaz me ha parecido demasiado complicada",
 	"mobile-editor-abandon-survey-answer-accident": "He pulsado editar por accidente",
 	"mobile-editor-abandon-survey-answer-error": "He tenido un problema técnico",
-	"mobile-editor-abandon-survey-answer-other": "Otro motivo"
+	"mobile-editor-abandon-survey-answer-other": "Otro motivo",
+	"mobile-frontend-quick-facts": "Datos rápidos"
 }

@@ -20,6 +20,7 @@
 			"Hashar",
 			"Hello71",
 			"Hercule",
+			"Jdlrobson",
 			"Jean-Frédéric",
 			"Lhanars",
 			"Linedwell",
@@ -234,5 +235,6 @@
 	"mobile-editor-abandon-survey-answer-complicated": "L'interface semblait trop compliquée",
 	"mobile-editor-abandon-survey-answer-accident": "J'ai cliqué par accident sur «Modifier»",
 	"mobile-editor-abandon-survey-answer-error": "J'ai rencontré un problème technique",
-	"mobile-editor-abandon-survey-answer-other": "Autre chose"
+	"mobile-editor-abandon-survey-answer-other": "Autre chose",
+	"mobile-frontend-quick-facts": "Informations essentielles"
 }
