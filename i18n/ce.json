@@ -16,7 +16,7 @@
 	"mobile-frontend-editor-anon": "Системи чу а ца волуш тайан",
 	"mobile-frontend-editor-anonwarning": "<strong>Тидам!</strong> Ахьа сайтан тӀехь авторизаци йина йац. Хьан IP-адрес массо а стагана гуш хир ду, нагахь ахьа хийцамаш бахь. Нагахь санна ахьа <strong>авторизаци йахь</strong> йа <strong>аккаунт кхоллахь</strong>, хийцамаш хьан декъашхочун цӀарца боьзна хир бу, кхин а аьттонаш хир бу хьан.",
 	"mobile-frontend-editor-autocreatewarning": "<strong>Тидам!</strong> Ахьа сайтан тӀехь авторизаци йина йац. Ахьа хьайн хийцам Ӏалашбича, ханна аккаунт кхуллур йу хьуна. [[$1|Хьажа кхин а дӀа]]. Нагахь санна ахьа <strong>авторизаци йахь</strong> йа <strong>аккаунт кхоллахь</strong>, хьан хийцамаш боьзна хир бу ахьа хаьржинчу цӀарца, хьуна хир бу тайп-тайпана кхин а аьттонаш.",
-	"mobile-frontend-editor-blocked-drawer-action-login": "Чувала",
+	"mobile-frontend-editor-blocked-drawer-action-login": "Чу",
 	"mobile-frontend-drawer-arrow-label": "ДӀачӀагӀа",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "ОК",
 	"mobile-frontend-editor-blocked-drawer-action-randompage": "Схьайелла суна кхийолу агӀо",

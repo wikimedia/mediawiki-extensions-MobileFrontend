@@ -28,7 +28,8 @@
 			"Tuliouel",
 			"YuriNikolai",
 			"EGobi",
-			"NenhumaFênix"
+			"NenhumaFênix",
+			"Aquila Leite"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Se um usuário está ou não editando através da interface móvel",
@@ -150,7 +151,7 @@
 	"mobile-frontend-settings-tagline": "Preferências de leitura",
 	"mobile-frontend-settings-beta": "βeta de {{SITENAME}}",
 	"mobile-frontend-settings-save": "As configurações foram salvas.",
-	"mobile-frontend-terms-text": "Termos de uso",
+	"mobile-frontend-terms-text": "Termos de Uso",
 	"mobile-frontend-view": "Versão móvel",
 	"mobile-frontend-view-desktop": "Versão desktop",
 	"mobile-frontend-watchlist-a-z-empty-howto": "Você não tem nenhuma página vigiada. Sua lista de páginas vigiadas te ajuda a monitorar as páginas que você tem interesse. Vigie páginas clicando no ícone de estrela.",
