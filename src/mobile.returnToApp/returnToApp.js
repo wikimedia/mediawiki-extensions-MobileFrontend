@@ -7,6 +7,8 @@
  *
  * @module mobile.returnToApp
  */
+const { attachReturnToAppBanner } = require( './returnToAppBanner.js' );
+const config = require( './config.json' );
 
 // Set before the temporary account redirect, and taken by the page that the
 // redirect lands on. Its presence is what proves that a handover is waiting,
@@ -17,7 +19,7 @@ const pendingKey = 'mobileFrontend/returnToAppRevId';
 const savedParam = 'returntoappsaved';
 // The wiki tells us which app registers a URL scheme. Without one there is no
 // app to hand over to.
-const schemeConfig = 'wgMFReturnToAppScheme';
+const schemeConfig = 'MFReturnToAppScheme';
 
 /**
  * Whether this wiki has a native app to hand over to.
@@ -26,7 +28,7 @@ const schemeConfig = 'wgMFReturnToAppScheme';
  * @return {boolean}
  */
 function isEnabled() {
-	return !!mw.config.get( schemeConfig );
+	return !!config[schemeConfig];
 }
 
 /**
@@ -39,12 +41,12 @@ function isEnabled() {
  * @param {number} [revId] Id of the new revision, if one was created
  */
 function redirectToApp( saved, revId ) {
-	const scheme = mw.config.get( schemeConfig );
+	const scheme = config[schemeConfig];
 	if ( !scheme ) {
 		// Callers test isEnabled first. Do not navigate to a nonsense scheme.
 		return;
 	}
-	let appHref = `${ scheme }://${ mw.config.get( 'wgServerName' ) }${ mw.util.getUrl() }?saved=${ saved ? 'true' : 'false' }`;
+	let appHref = `${ scheme }://${ config.ServerName }${ mw.util.getUrl() }?saved=${ saved ? 'true' : 'false' }`;
 	if ( revId ) {
 		appHref += `&revision=${ revId }`;
 	}
@@ -100,6 +102,13 @@ function finishHandover() {
 }
 
 module.exports = {
+	// attachReturnToAppBanner is a temporary export so that the banner can be
+	// exercised manually in dev tools with:
+	//
+	// mw.loader.using( 'mobile.returnToApp').then(( require ) => require( 'mobile.returnToApp' ).attachReturnToAppBanner( 'https://somewhere' ));
+	//
+	// This will be dropped when banner display behavior is restored.
+	attachReturnToAppBanner,
 	finishHandover,
 	isEnabled,
 	redirectToApp,

@@ -1,0 +1,48 @@
+@import 'mediawiki.skin.variables.less';
+@import '../../mobile.less/mobile.variables.less';
+
+.mw-mf-return-to-app-banner {
+	background-color: @background-color-progressive;
+	position: sticky;
+	top: 0;
+	z-index: @z-indexOverlay;
+
+	// Add a transparent border at the bottom of the banner so that it becomes
+	// visible in high-contrast mode, but doesn't affect layout. If there's a
+	// border on the banner itself, it adds 1px to the container height, which
+	// slightly misaligns the contents vertically.
+
+	&::after {
+		border-bottom: 1px solid transparent;
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 1px;
+	}
+}
+
+.mw-mf-return-to-app-banner-content {
+	align-items: stretch;
+	display: flex;
+	height: unit( (40 / 16), rem );
+	justify-content: space-between;
+}
+
+a.mw-mf-return-to-app-link {
+	font-size: @font-size-small;
+
+	& .cdx-button__icon {
+		.cdx-mixin-css-icon( @cdx-icon-next, @param-is-button-icon: true );
+	}
+}
+
+.mw-mf-return-to-app-close .cdx-button__icon {
+	.cdx-mixin-css-icon( @cdx-icon-close, @param-is-button-icon: true );
+}
+
+.mw-mf-return-to-app-icon {
+	height: 24px;
+	width: 24px;
+}

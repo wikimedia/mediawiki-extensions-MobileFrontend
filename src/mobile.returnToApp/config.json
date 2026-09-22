@@ -1,0 +1,8 @@
+{
+	"MFReturnToAppScheme": "wikipedia",
+	"MFReturnToAppBannerIcons": {
+		"android": "test-android-icon",
+		"ios": "test-ios-icon"
+	},
+	"ServerName": "en.wikipedia.org"
+}

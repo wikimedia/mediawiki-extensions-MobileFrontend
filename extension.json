@@ -219,8 +219,29 @@
 				"mediawiki.util",
 				"mobile.startup"
 			],
+			"messages": [
+				"mobile-frontend-return-to-app-close",
+				"mobile-frontend-return-to-app-return-link"
+			],
 			"packageFiles": [
-				"src/mobile.returnToApp/returnToApp.js"
+				"src/mobile.returnToApp/returnToApp.js",
+				"src/mobile.returnToApp/returnToAppBanner.js",
+				{
+					"name": "src/mobile.returnToApp/config.json",
+					"config": [
+						"MFReturnToAppScheme",
+						"MFReturnToAppBannerIcons",
+						"ServerName"
+					]
+				}
+			],
+			"skinStyles": {
+				"minerva": [
+					"resources/mobile.returnToApp.styles/minerva.less"
+				]
+			},
+			"styles": [
+				"resources/mobile.returnToApp.styles/mobile.returnToApp.less"
 			]
 		},
 		"mobile.editor.overlay": {
@@ -552,6 +573,13 @@
 		"MFEnableAbandonSurvey": {
 			"description": "Enable the editor-abandon survey.",
 			"value": false
+		},
+		"MFReturnToAppBannerIcons": {
+			"description": "Controls what app icons are shown when MFReturnToAppBehavior is set to 'banner'. These images must have a square aspect ratio.",
+			"value": {
+				"android": false,
+				"ios": false
+			}
 		},
 		"MFReturnToAppScheme": {
 			"description": "URL scheme of the native app which the editor hands back to when it is opened with a returntoapp parameter, for example \"wikipedia\". An empty string turns the handover off.",

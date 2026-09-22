@@ -149,6 +149,8 @@
 	"mobile-frontend-references-citation-error": "An error occurred and it was not possible to load this citation.",
 	"mobile-frontend-requires-mobile": "This page is not available on desktop. Please click the mobile view link at the bottom of the page.",
 	"mobile-frontend-requires-title": "Page unavailable",
+	"mobile-frontend-return-to-app-close": "Close",
+	"mobile-frontend-return-to-app-return-link": "Back to the app",
 	"mobile-frontend-save-error": "Error saving settings. Please make sure that you have cookies enabled.",
 	"mobile-frontend-save-settings": "Save",
 	"mobile-frontend-settings-tagline": "Reading preferences",

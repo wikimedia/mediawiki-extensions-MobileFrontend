@@ -529,3 +529,29 @@ Whether to collapse the lead infobox of an article page into a "Quick facts" sec
 	"base" => false
 ]
 ```
+
+#### $wgMFReturnToAppScheme
+
+If set, exiting the visual editor will send the user to a URL with this URL
+scheme, indicating to an external application that the edit is complete. This
+value should have no colons or slashes at the end. See `src/mobile.returnToApp/`
+for how URLs are constructed.
+
+* Type: `string`
+* Default: unset
+
+#### $wgMFReturnToAppBannerIcons
+
+This sets the icon shown to the user in the banner beside the link to return to
+the app. The value for each platform should be an absolute URL. Setting a value
+to `false` causes the icon to be hidden entirely. Icons will be displayed at
+24x24 pixel dimensions in the banner and must have a square aspect ratio.
+
+* Type: `Array`
+* Default:
+```php
+[
+	'android' => false,
+  'ios' => false
+]
+```

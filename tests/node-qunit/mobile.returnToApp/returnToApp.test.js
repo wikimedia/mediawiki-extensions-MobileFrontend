@@ -1,4 +1,5 @@
 const
+	config = require( '../../../src/mobile.returnToApp/config.json' ),
 	mediaWiki = require( '../utils/mw' ),
 	sinon = require( 'sinon' );
 let sandbox, returnToApp, store, originalLocation;
@@ -20,15 +21,13 @@ QUnit.module( 'MobileFrontend returnToApp.js', {
 			}
 		};
 
-		sandbox.stub( mw.config, 'get' )
-			.withArgs( 'wgServerName' ).returns( 'en.wikipedia.org' )
-			.withArgs( 'wgMFReturnToAppScheme' ).returns( 'wikipedia' );
 		sandbox.stub( mw.util, 'getUrl' ).returns( '/wiki/Cat' );
 
 		// Stand in for the real thing, which would try to navigate
 		originalLocation = global.location;
 		global.location = { href: '' };
-
+		config.MFReturnToAppScheme = 'wikipedia';
+		config.ServerName = 'en.wikipedia.org';
 		returnToApp = require( '../../../src/mobile.returnToApp/returnToApp' );
 	},
 	afterEach: function () {
@@ -43,9 +42,10 @@ QUnit.module( 'MobileFrontend returnToApp.js', {
 } );
 
 QUnit.test( '#isEnabled', ( assert ) => {
+	config.MFReturnToAppScheme = 'test-scheme';
 	assert.true( returnToApp.isEnabled(), 'A configured scheme names an app.' );
 
-	mw.config.get.withArgs( 'wgMFReturnToAppScheme' ).returns( '' );
+	config.MFReturnToAppScheme = '';
 	assert.false( returnToApp.isEnabled(), 'Without one there is no app.' );
 } );
 
@@ -73,7 +73,7 @@ QUnit.test( '#redirectToApp', ( assert ) => {
 } );
 
 QUnit.test( '#redirectToApp, with no app configured', ( assert ) => {
-	mw.config.get.withArgs( 'wgMFReturnToAppScheme' ).returns( '' );
+	config.MFReturnToAppScheme = '';
 
 	returnToApp.redirectToApp( true, 1234 );
 	assert.strictEqual( global.location.href, '',

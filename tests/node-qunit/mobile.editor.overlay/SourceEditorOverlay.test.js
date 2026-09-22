@@ -9,7 +9,8 @@ const
 	dom = require( '../utils/dom' ),
 	makeFakeHookRegistry = require( '../utils/makeFakeHookRegistry' ),
 	mediaWiki = require( '../utils/mw' ),
-	mustache = require( '../utils/mustache' );
+	mustache = require( '../utils/mustache' ),
+	returnToAppConfig = require( '../../../src/mobile.returnToApp/config.json' );
 
 QUnit.module( 'MobileFrontend mobile.editor.overlay/SourceEditorOverlay', {
 	beforeEach: function () {
@@ -49,6 +50,7 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/SourceEditorOverlay', {
 		} );
 		sandbox.stub( window, 'scrollTo' );
 		sandbox.stub( mw.util, 'getUrl' ).returns( '/w/index.php?title=User:Test' );
+		returnToAppConfig.MFReturnToAppScheme = 'wikipedia';
 		sandbox.stub( mw.config, 'get' )
 			.withArgs( 'wgPageName' ).returns( 'User:Test' )
 			.withArgs( 'wgRelevantPageName' ).returns( 'User:Test' )
@@ -58,8 +60,7 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/SourceEditorOverlay', {
 			.withArgs( 'wgIsMainPage' ).returns( false )
 			.withArgs( 'wgFormattedNamespaces' ).returns( { 2: 'User' } )
 			.withArgs( 'wgNamespaceIds' ).returns( { user: 2 } )
-			.withArgs( 'wgVisualEditorConfig' ).returns( { namespaces: [ 1, 2 ] } )
-			.withArgs( 'wgMFReturnToAppScheme' ).returns( 'wikipedia' );
+			.withArgs( 'wgVisualEditorConfig' ).returns( { namespaces: [ 1, 2 ] } );
 		const stubTitle = {
 			getUrl: function () {
 				return '/w/index.php?title=User:Test';
@@ -232,7 +233,7 @@ QUnit.test( '#initialize, as anonymous with a valueless returnToApp', ( assert )
 } );
 
 QUnit.test( '#initialize, returnToApp needs an app to hand over to', ( assert ) => {
-	mw.config.get.withArgs( 'wgMFReturnToAppScheme' ).returns( '' );
+	returnToAppConfig.MFReturnToAppScheme = '';
 	const editorOverlay = new SourceEditorOverlay( {
 		title: 'Main_page',
 		isAnon: true,
@@ -318,7 +319,7 @@ QUnit.test( '#initialize, as anonymous with a valueless appInstallId', ( assert 
 } );
 
 QUnit.test( '#initialize, appInstallId needs no app to hand over to', ( assert ) => {
-	mw.config.get.withArgs( 'wgMFReturnToAppScheme' ).returns( '' );
+	returnToAppConfig.MFReturnToAppScheme = '';
 	const editorOverlay = new SourceEditorOverlay( {
 		title: 'Main_page',
 		isAnon: true,
