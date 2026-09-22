@@ -245,6 +245,10 @@ class EditorGateway {
 					!!options.isRespondingToForcedCaptcha;
 			}
 
+			if ( 'checkuserclienthints' in options ) {
+				apiOptions.checkuserclienthints = options.checkuserclienthints;
+			}
+
 			if ( options.returntoquery ) {
 				// Creating a temporary account sends the browser to an opaque
 				// URL, so anything we want on the page it comes back to must be
