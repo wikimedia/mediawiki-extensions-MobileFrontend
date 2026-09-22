@@ -231,6 +231,7 @@
 					"config": [
 						"MFReturnToAppScheme",
 						"MFReturnToAppBannerIcons",
+						"MFReturnToAppBehavior",
 						"ServerName"
 					]
 				}
@@ -560,6 +561,10 @@
 				"android": false,
 				"ios": false
 			}
+		},
+		"MFReturnToAppBehavior": {
+			"description": "Controls how a return to a native app is handled. Valid values are 'immediate' and 'banner'.",
+			"value": "immediate"
 		},
 		"MFReturnToAppScheme": {
 			"description": "URL scheme of the native app which the editor hands back to when it is opened with a returntoapp parameter, for example \"wikipedia\". An empty string turns the handover off.",

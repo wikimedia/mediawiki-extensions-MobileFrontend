@@ -119,13 +119,13 @@ if ( window.history && history.pushState ) {
 	}
 }
 
-// Saving created a temporary account, which sent the browser away to an opaque
-// URL and back. The editor is gone, so finish the handover to the app here.
-if ( returnToAppSaved ) {
+// If URL params reference return-to-app, initialize it.
+
+if ( returnToAppSaved || url.searchParams.has( 'returntoapp' ) ) {
 	mw.loader.using( 'mobile.returnToApp' ).then( () => {
 		// Use MediaWiki ResourceLoader require(), not Webpack require()
 		const returnToApp = __non_webpack_require__( 'mobile.returnToApp' );
-		returnToApp.finishHandover();
+		returnToApp.init();
 	} );
 }
 

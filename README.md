@@ -555,3 +555,16 @@ to `false` causes the icon to be hidden entirely. Icons will be displayed at
   'ios' => false
 ]
 ```
+
+#### $wgMFReturnToAppBehavior
+
+When `$wgMFReturnToAppScheme` is set, this controls how the return-to-app
+connection is presented to the user. Possible values:
+
+- `"banner"`: show a banner at the top of the page
+- `"immediate"`: redirect the browser immediately, with no user interaction
+
+If unset, `immediate` is used.
+
+* Type: `string`
+* Default: `"immediate"`

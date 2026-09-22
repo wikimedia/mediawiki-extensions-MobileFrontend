@@ -10,6 +10,7 @@ const
 	makeFakeHookRegistry = require( '../utils/makeFakeHookRegistry' ),
 	mediaWiki = require( '../utils/mw' ),
 	mustache = require( '../utils/mustache' ),
+	returnToApp = require( '../../../src/mobile.returnToApp/returnToApp' ),
 	returnToAppConfig = require( '../../../src/mobile.returnToApp/config.json' );
 
 QUnit.module( 'MobileFrontend mobile.editor.overlay/SourceEditorOverlay', {
@@ -340,39 +341,57 @@ QUnit.test( '#initialize, appInstallId needs no app to hand over to', ( assert )
 		} );
 } );
 
-QUnit.test( '#onSaveComplete, returnToApp defers to a temporary account redirect', ( assert ) => {
-	const editorOverlay = new SourceEditorOverlay( {
-		title: 'Main_page',
-		returnToApp: 'android'
+QUnit.test.each( '#onSaveBegin',
+	{
+		'returnToApp option set': { returnToAppOption: true, returntoquery: returnToApp.savedQuery() },
+		'returnToApp option unset': { returnToAppOption: false, returntoquery: undefined }
+	},
+	( assert, { returnToAppOption, returntoquery } ) => {
+		const editorOverlay = new SourceEditorOverlay( { returnToApp: returnToAppOption, title: 'Main_page' } );
+		const saveStub = sandbox.stub( EditorGateway.prototype, 'save' ).returns( util.Deferred().resolve() );
+
+		sandbox.stub( editorOverlay, 'getEditSummary' ).returns( '' );
+		// onSaveComplete calls setTimeout to redirect the browser, which isn't
+		// needed for this test.
+		sandbox.stub( global, 'setTimeout' );
+		editorOverlay.onSaveBegin();
+		assert.strictEqual( saveStub.callCount, 1, 'EditorGateway.save() is called once.' );
+		assert.strictEqual(
+			saveStub.getCalls()[0].args[0].returntoquery,
+			returntoquery,
+			'The returntoquery property is set when needed for returnToApp when appropriate.'
+		);
 	} );
-	const redirectStub = sandbox.stub( editorOverlay, 'redirectToApp' );
-	sandbox.stub( editorOverlay, 'showSaveCompleteMsg' );
-	// onSaveComplete calls setTimeout to redirect the browser, which isn't
-	// needed for this test.
-	sandbox.stub( global, 'setTimeout' );
 
-	editorOverlay.onSaveComplete( 123, 'http://example.test/opaque', true );
-	assert.strictEqual( redirectStub.callCount, 0,
-		'The temporary account redirect runs instead, and the page it lands on takes over.' );
-	assert.deepEqual(
-		sessionStore.set.args[ 0 ].slice( 0, 2 ),
-		[ 'mobileFrontend/returnToAppRevId', '123' ],
-		'The revision id is left where that page can find it.'
-	);
+QUnit.test.each(
+	'#onSaveComplete',
+	{
+		'revision ID only': [ 123, null, false ],
+		'revision ID and temp user created': [ 123, null, true ],
+		'revision ID and redirect URL': [ 123, 'http://example.test/opaque', false ],
+		'revision ID, redirect URL, and temp user created': [ 123, 'http://example.test/opaque', true ]
+	},
+	( assert, args ) => {
+		const editorOverlay = new SourceEditorOverlay( { title: 'Main_page' } );
+		const hookListener = sandbox.spy();
+		const superStub = sandbox.stub( EditorOverlayBase.prototype, 'onSaveComplete' );
 
-	editorOverlay.onSaveComplete( 123, undefined, false );
-	assert.strictEqual( redirectStub.callCount, 1,
-		'Without one, the app redirect happens here as before.' );
-	assert.strictEqual( sessionStore.set.callCount, 1,
-		'Nothing is stored when the editor does the handover itself.' );
-
-	editorOverlay.onSaveComplete( undefined, 'http://example.test/opaque', true );
-	assert.deepEqual(
-		sessionStore.set.args[ 1 ].slice( 0, 2 ),
-		[ 'mobileFrontend/returnToAppRevId', '' ],
-		'A null edit makes no revision, but the handover is still recorded.'
-	);
-} );
+		sandbox.stub( editorOverlay, 'showSaveCompleteMsg' );
+		// onSaveComplete calls setTimeout to redirect the browser, which isn't
+		// needed for this test.
+		sandbox.stub( global, 'setTimeout' );
+		mw.hook = makeFakeHookRegistry();
+		mw.hook( 'mobileFrontend.sourceEditor.saveComplete' ).add( hookListener );
+		editorOverlay.onSaveComplete( ...args );
+		assert.true(
+			superStub.calledOnceWithExactly( ...args ),
+			'The superclass onSaveComplete is called exactly once with the same args.'
+		);
+		assert.true(
+			hookListener.calledOnceWithExactly( ...args ),
+			'The mobileFrontend.sourceEditor.saveComplete hook is fired exactly once with the revision ID, redirect URL, and temp account creation flag.'
+		);
+	} );
 
 QUnit.test( '#handleCaptcha, falls through to super when hook not stopped', ( assert ) => {
 	const editorOverlay = new SourceEditorOverlay( { title: 'test', sectionId: '0' } );

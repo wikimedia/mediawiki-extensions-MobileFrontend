@@ -4,5 +4,6 @@
 		"android": "test-android-icon",
 		"ios": "test-ios-icon"
 	},
+	"MFReturnToAppBehavior": "immediate",
 	"ServerName": "en.wikipedia.org"
 }

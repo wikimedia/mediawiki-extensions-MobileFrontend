@@ -190,6 +190,22 @@ class VisualEditorOverlay extends EditorOverlayBase {
 
 	/**
 	 * @inheritdoc
+	 * @param {number|null} newRevId ID of the newly created revision, or null if it was a
+	 * null edit.
+	 * @param {string} [redirectUrl] URL to redirect to, if different than the current URL.
+	 * @param {boolean} [tempUserCreated] Whether a temporary user was created
+	 */
+	onSaveComplete( newRevId, redirectUrl, tempUserCreated ) {
+		// The purpose of this is solely to fire a hook like SourceEditorOverlay
+		// does. The hook name is different here so that consumers can
+		// distinguish which editor is active, since each editor behaves
+		// differently post-save, but hook params are exactly the same.
+		super.onSaveComplete( newRevId, redirectUrl, tempUserCreated );
+		mw.hook( 'mobileFrontend.visualEditor.saveComplete' ).fire( newRevId, redirectUrl, tempUserCreated );
+	}
+
+	/**
+	 * @inheritdoc
 	 */
 	show() {
 		const

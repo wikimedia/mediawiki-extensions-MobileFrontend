@@ -20,3 +20,7 @@ installed locally, you may not see any visible change when the return-to-app
 behavior activates or you click the link in the banner. Look in the developer
 console of your browser for a message like "The scheme does not have a
 registered handler."
+
+Also see the main README's explanation of the `$wgMFReturnToAppBehavior` and
+`$wgMFReturnToAppBannerIcons` settings for more config you'll probably want to
+set.

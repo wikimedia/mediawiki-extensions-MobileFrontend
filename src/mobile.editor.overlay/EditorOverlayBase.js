@@ -317,17 +317,6 @@ class EditorOverlayBase extends Overlay {
 			// eslint-disable-next-line camelcase
 			revision_id: newRevId
 		} );
-		if ( tempUserCreated && redirectUrl ) {
-			if ( this.options.returnToApp ) {
-				returnToApp.setPendingHandover( newRevId );
-			}
-			// The caller handles this redirect, either in SourceEditorOverlay or in VE's ArticleTarget
-			return;
-		}
-		if ( this.options.returnToApp ) {
-			// The exit handler will redirect for this
-			return;
-		}
 		setTimeout( () => {
 			// Wait for any other teardown navigation to happen (e.g. router.back())
 			// before setting our final location.
@@ -607,9 +596,7 @@ class EditorOverlayBase extends Overlay {
 		}
 		this.onExit();
 		exit();
-		if ( this.options.returnToApp ) {
-			this.redirectToApp();
-		} else if ( mw.config.get( 'wgAction' ) === 'edit' ) {
+		if ( mw.config.get( 'wgAction' ) === 'edit' ) {
 			// We got into the overlay via directly visiting an action=edit
 			// URL, which has been taken over. As such, depending on
 			// how we got here, the normal overlay process isn't going to
@@ -630,14 +617,6 @@ class EditorOverlayBase extends Overlay {
 		}
 	}
 
-	/**
-	 * Redirect to the native app that launched the editor (returntoapp mode),
-	 * passing the save result and revision id.
-	 */
-	redirectToApp() {
-		returnToApp.redirectToApp( !!this.saved, this.savedRevId );
-	}
-
 	onExit() {
 		// May not be set if overlay has not been previously shown
 		if ( this.allowCloseWindow ) {
@@ -649,7 +628,7 @@ class EditorOverlayBase extends Overlay {
 		 * @event ~'mobileFrontend.editorClosed'
 		 * @memberof Hooks
 		 */
-		mw.hook( 'mobileFrontend.editorClosed' ).fire( !!this.switching );
+		mw.hook( 'mobileFrontend.editorClosed' ).fire( !!this.switching, !!this.saved );
 
 		if ( !this.switching && !this.saved ) {
 			const survey = abandonSurvey( this );

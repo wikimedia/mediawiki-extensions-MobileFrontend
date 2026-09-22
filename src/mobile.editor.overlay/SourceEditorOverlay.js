@@ -715,15 +715,7 @@ class SourceEditorOverlay extends EditorOverlayBase {
 	 */
 	onSaveComplete( newRevId, redirectUrl, tempUserCreated ) {
 		super.onSaveComplete( newRevId, redirectUrl, tempUserCreated );
-		mw.hook( 'mobileFrontend.sourceEditor.saveComplete' ).fire( newRevId );
-
-		if ( this.options.returnToApp && !( tempUserCreated && redirectUrl ) ) {
-			// Redirect to the app instead of reloading; nothing else triggers
-			// the exit handler on this path. A temporary account redirect goes
-			// first if there is one, and the page it lands on does the handover.
-			this.redirectToApp();
-			return;
-		}
+		mw.hook( 'mobileFrontend.sourceEditor.saveComplete' ).fire( newRevId, redirectUrl, tempUserCreated );
 
 		// The parent class changes the location hash in a setTimeout, so wait
 		// for that to happen before reloading.
