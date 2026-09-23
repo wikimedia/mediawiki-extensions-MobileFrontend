@@ -95,14 +95,8 @@ Disables MediaWiki:Common.js from running on mobile site.
 Provides an advanced mode for logged in users and encourages logged in users to use.
 
 * Since: Sept 2025
-* Files:
-  - /resources/mobile.startup/amcOutreach/amcOutreachDrawer.less
 * Folders:
   - /includes/Amc
-  - /src/mobile.startup/amcOutreach
-  - /src/mobile.startup/promoCampaign
-  - /tests/node-qunit/mobile.startup/amcOutreach
-  - /tests/node-qunit/mobile.startup/promoCampaign
   - /tests/phpunit/integration/amc/
   - /tests/phpunit/integration/features/
   - /tests/phpunit/integration/transforms
