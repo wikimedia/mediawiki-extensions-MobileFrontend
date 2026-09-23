@@ -347,6 +347,9 @@ QUnit.test( '#onSaveComplete, returnToApp defers to a temporary account redirect
 	} );
 	const redirectStub = sandbox.stub( editorOverlay, 'redirectToApp' );
 	sandbox.stub( editorOverlay, 'showSaveCompleteMsg' );
+	// onSaveComplete calls setTimeout to redirect the browser, which isn't
+	// needed for this test.
+	sandbox.stub( global, 'setTimeout' );
 
 	editorOverlay.onSaveComplete( 123, 'http://example.test/opaque', true );
 	assert.strictEqual( redirectStub.callCount, 0,
