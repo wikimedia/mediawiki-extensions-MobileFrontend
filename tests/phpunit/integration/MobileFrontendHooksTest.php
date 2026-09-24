@@ -20,6 +20,8 @@ use MediaWiki\User\Options\UserOptionsLookup;
 use MediaWiki\User\User;
 use Psr\Container\ContainerInterface;
 use Wikimedia\ObjectFactory\ObjectFactory;
+use Wikimedia\Parsoid\Core\SectionMetadata;
+use Wikimedia\TestingAccessWrapper;
 
 /**
  * @group MobileFrontend
@@ -101,6 +103,48 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 		$this->assertSame(
 			'Hello world',
 			MobileFrontendHooks::findTagline( $poWithBoth, $fallback )
+		);
+	}
+
+	/**
+	 * Test findTagline when output has no wikibase elements
+	 */
+	public function testShouldCollapseSectionsByDefault() {
+		$hooks = TestingAccessWrapper::newFromClass( MobileFrontendHooks::class );
+		$this->assertFalse(
+			$hooks->shouldCollapseSectionsByDefault( NS_MAIN )
+		);
+		$this->assertTrue(
+			$hooks->shouldCollapseSectionsByDefault( NS_SPECIAL )
+		);
+		$this->assertFalse(
+			$hooks->shouldCollapseSectionsByDefault( NS_MAIN, [] )
+		);
+		$this->assertFalse(
+			$hooks->shouldCollapseSectionsByDefault(
+				NS_MAIN,
+				[
+					new SectionMetadata( 1, 2, 'line', '', '', null, null, 'x', 'y' )
+				]
+			)
+		);
+		$this->assertFalse(
+			$hooks->shouldCollapseSectionsByDefault(
+				NS_MAIN,
+				[
+					new SectionMetadata( 1, 2, '1.1', '', '', null, null, 'x', 'y' ),
+					new SectionMetadata( 2, 2, '1.1.1', '', '', null, null, 'x', 'y' )
+				]
+			)
+		);
+		$this->assertTrue(
+			$hooks->shouldCollapseSectionsByDefault(
+				NS_MAIN,
+				[
+					new SectionMetadata( 1, 2, 'A', '', '', null, null, 'x', 'y' ),
+					new SectionMetadata( 1, 2, '', '', '', null, null, 'x', 'y' )
+				]
+			)
 		);
 	}
 

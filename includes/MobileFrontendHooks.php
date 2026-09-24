@@ -624,6 +624,28 @@ class MobileFrontendHooks implements
 	}
 
 	/**
+	 * Check whether the sections should be expanded by default or collapsed.
+	 *
+	 * @internal
+	 * @param int $ns
+	 * @param Wikimedia\Parsoid\Core\SectionMetadata[] $sections
+	 * @return bool
+	 */
+	private static function shouldCollapseSectionsByDefault( $ns, $sections = [] ): bool {
+		$numSections = $sections ? count(
+			array_filter( $sections, static function ( $item ) {
+				return $item->tocLevel === 1;
+			} )
+		) : 0;
+
+		// Only enable section collapsing/expanding on pages with more than
+		// one section (T435668)
+		// The namespace check is necessary to ensure that Special:MobileOptions
+		// has the class, since it relies on this for rendering the setting
+		return $numSections > 1 || $ns === NS_SPECIAL;
+	}
+
+	/**
 	 * BeforePageDisplay hook handler
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/BeforePageDisplay
 	 *
@@ -711,10 +733,22 @@ class MobileFrontendHooks implements
 			$userMode = MediaWikiServices::getInstance()->getService( 'MobileFrontend.AMC.UserMode' );
 			$amc = !$userMode->isEnabled() ? '0' : '1';
 			$context->getOutput()->addHtmlClasses( [
-				'mf-expand-sections-clientpref-' . $expandSections,
 				'mf-font-size-clientpref-' . $fontSize,
 				'mw-mf-amc-clientpref-' . $amc
 			] );
+			$tocData = $out->getTOCData();
+			if ( self::shouldCollapseSectionsByDefault(
+				$title->getNamespace(),
+				$tocData ? $tocData->getSections() : [] )
+			) {
+				$out->addHtmlClasses(
+					'mf-expand-sections-clientpref-' . $expandSections
+				);
+			} else {
+				// given mf-expand-sections-clientpref-0 is omitted
+				// avoid a flash of unstyled content.
+				$out->addHtmlClasses( 'collapsible-headings-expanded' );
+			}
 		}
 
 		// T204691
