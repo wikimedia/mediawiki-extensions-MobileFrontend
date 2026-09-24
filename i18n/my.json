@@ -63,6 +63,7 @@
 	"mobile-frontend-editor-uploadenable": "တည်းဖြတ်မှုပြုလုပ်နိုင်ရန် ဓါတ်ပုံတစ်ခု အရင်ဆုံး အပ်ပလုဒ်တင်ပေးပါ။",
 	"mobile-frontend-editor-viewing-source-page": "<span> $1</span> ၏ <strong>ရင်းမြစ်ကို ကြည့်နေသည်</strong>",
 	"mobile-frontend-editor-wait": "တည်းဖြတ်မှုကို လွှင့်တင်နေသည်၊ ခေတ္တခဏစောင့်ပါ။",
+	"mobile-frontend-editor-toload": "အယ်ဒီတာ ယခု တင်ပါလိမ့်မည်။ စက္ကန့်အနည်းငယ်ကြာပြီးနောက် ဤမက်ဆေ့ချ်ကို သင်မြင်နေရဆဲဖြစ်ပါက [ $1 စာမျက်နှာကို refresh လုပ်ပါ]။",
 	"mf-expand-sections-name": "အပိုင်းအားလုံး ချဲ့ကားရန်",
 	"mf-font-size-name": "စာသား",
 	"mf-font-size-description": "ပိုမိုကောင်းမွန်စွာ ဖတ်ရှုနိုင်စေရန် စာသားကို ချိန်ညှိပါ။",
