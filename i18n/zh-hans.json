@@ -196,6 +196,8 @@
 	"mobile-frontend-references-citation-error": "发生错误，无法加载该引文。",
 	"mobile-frontend-requires-mobile": "该页面在桌面端不可用。请点击页面底部的手机版视图链接。",
 	"mobile-frontend-requires-title": "页面不可用",
+	"mobile-frontend-return-to-app-close": "关闭",
+	"mobile-frontend-return-to-app-return-link": "返回应用",
 	"mobile-frontend-save-error": "保存设置出错。请确保您已启用cookie。",
 	"mobile-frontend-save-settings": "保存",
 	"mobile-frontend-settings-tagline": "阅读参数设置",

@@ -135,6 +135,8 @@
 	"mobile-frontend-references-citation-error": "Es ist ein Fehler aufgetreten und es war nicht möglich, diesen Einzelnachweis zu laden.",
 	"mobile-frontend-requires-mobile": "Diese Seite ist für Desktoprechner nicht verfügbar. Bitte wähle am Seitenende den Link für die mobile Ansicht.",
 	"mobile-frontend-requires-title": "Seite nicht verfügbar",
+	"mobile-frontend-return-to-app-close": "Schließen",
+	"mobile-frontend-return-to-app-return-link": "Zurück zur App",
 	"mobile-frontend-save-error": "Fehler beim Speichern der Einstellungen. Stelle sicher, dass Cookies aktiviert sind.",
 	"mobile-frontend-save-settings": "Speichern",
 	"mobile-frontend-settings-tagline": "Leseeinstellungen",

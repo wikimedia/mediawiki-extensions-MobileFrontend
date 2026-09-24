@@ -127,6 +127,8 @@
 	"mobile-frontend-references-citation-error": "Xəta baş verdi və bu istinadı yükləmək mümkün olmadı.",
 	"mobile-frontend-requires-mobile": "Bu səhifə masaüstündə mövcud deyil. Səhifənin altındakı mobil versiya linkinə klikləyin.",
 	"mobile-frontend-requires-title": "Səhifə əlçatan deyil",
+	"mobile-frontend-return-to-app-close": "Bağla",
+	"mobile-frontend-return-to-app-return-link": "Tətbiqə qayıt",
 	"mobile-frontend-save-error": "Parametrləri yadda saxlama xətası. Kukilərin aktiv olduğundan əmin olun.",
 	"mobile-frontend-save-settings": "Yadda saxla",
 	"mobile-frontend-settings-tagline": "Oxu seçimləri",

@@ -134,6 +134,8 @@
 	"mobile-frontend-references-citation-error": "Der opstod en fejl, og det var ikke muligt at indlæse dette citat.",
 	"mobile-frontend-requires-mobile": "Denne side er ikke tilgængelig på skrivebordet. Klik venligst på mobilvisningshenvisningen nederst på siden.",
 	"mobile-frontend-requires-title": "Side ikke tilgængelig",
+	"mobile-frontend-return-to-app-close": "Luk",
+	"mobile-frontend-return-to-app-return-link": "Tilbage til appen",
 	"mobile-frontend-save-error": "Fejl under lagring af indstillinger. Sørg for, at du har aktiveret cookies.",
 	"mobile-frontend-save-settings": "Gem",
 	"mobile-frontend-settings-tagline": "Læsepræferencer",

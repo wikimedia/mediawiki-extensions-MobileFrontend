@@ -142,6 +142,8 @@
 	"mobile-frontend-references-citation-error": "Tapahtui virhe, eikä tätä viitettä voitu ladata.",
 	"mobile-frontend-requires-mobile": "Sivua ei ole saatavilla työpöytänäkymänä. Valitse sivun alalaidasta mobiilinäkymä.",
 	"mobile-frontend-requires-title": "Sivu ei ole saatavissa",
+	"mobile-frontend-return-to-app-close": "Sulje",
+	"mobile-frontend-return-to-app-return-link": "Takaisin sovellukseen",
 	"mobile-frontend-save-error": "Asetuksien tallentaminen epäonnistui. Varmista, että selaimen evästeet ovat käytössä.",
 	"mobile-frontend-save-settings": "Tallenna",
 	"mobile-frontend-settings-tagline": "Lukemisasetukset",

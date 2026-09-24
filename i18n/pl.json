@@ -156,6 +156,8 @@
 	"mobile-frontend-references-citation-error": "Podczas wczytywania przypisu wystąpił błąd.",
 	"mobile-frontend-requires-mobile": "Ta strona nie jest dostępna w wersji standardowej. Kliknij link „wersja mobilna” na dole strony.",
 	"mobile-frontend-requires-title": "Strona niedostępna",
+	"mobile-frontend-return-to-app-close": "Zamknij",
+	"mobile-frontend-return-to-app-return-link": "Wróć do aplikacji",
 	"mobile-frontend-save-error": "Wystąpił błąd podczas zapisywania ustawień. Upewnij się, że masz włączoną obsługę ciasteczek.",
 	"mobile-frontend-save-settings": "Zapisz",
 	"mobile-frontend-settings-tagline": "Preferencje czytania",
