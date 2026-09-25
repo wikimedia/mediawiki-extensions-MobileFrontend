@@ -7,7 +7,7 @@ use MobileFrontend\Transforms\RemovableClassesTransform;
 
 /**
  * @group MobileFrontend
- * @covers MobileFormatter
+ * @covers \MobileFormatter
  * @covers \MobileFrontend\Transforms\MakeSectionsTransform
  * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform
  * @covers \MobileFrontend\Transforms\RemovableClassesTransform

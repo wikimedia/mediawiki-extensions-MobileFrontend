@@ -46,7 +46,7 @@ class MobileSpecialMobileDiffTest extends MediaWikiIntegrationTestCase {
 	 * @param string $subPage
 	 * @param array $params
 	 * @param string $expectedUrl
-	 * @covers SpecialMobileDiff
+	 * @covers \SpecialMobileDiff
 	 * @dataProvider mobileDiffProvider
 	 */
 	public function testMobileDiff( $subPage, array $params, $expectedUrl ) {

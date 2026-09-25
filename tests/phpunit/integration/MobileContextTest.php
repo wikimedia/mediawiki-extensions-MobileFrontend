@@ -10,7 +10,7 @@ use Wikimedia\TestingAccessWrapper;
 
 /**
  * @group MobileFrontend
- * @covers MobileContext
+ * @covers \MobileContext
  */
 class MobileContextTest extends MediaWikiIntegrationTestCase {
 
@@ -135,7 +135,7 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
-	 * @covers MobileContext
+	 * @covers \MobileContext
 	 * @dataProvider provideUpdateDesktopUrlQuery
 	 */
 	public function testGetDesktopUrlQuery( $mobile, $expectedDesktop ) {
@@ -196,7 +196,7 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
-	 * @covers MobileContext::getMobileAction
+	 * @covers \MobileContext::getMobileAction
 	 * @dataProvider getMobileActionProvider
 	 */
 	public function testGetMobileAction( $mobileaction = null ) {
@@ -219,7 +219,7 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
-	 * @covers MobileContext::getUseFormatCookieExpiry
+	 * @covers \MobileContext::getUseFormatCookieExpiry
 	 */
 	public function testGetUseFormatCookieExpiry() {
 		$context = TestingAccessWrapper::newFromObject( $this->makeContext() );

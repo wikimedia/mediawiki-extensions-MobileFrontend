@@ -33,7 +33,7 @@ class MobileContextWikibaseDescriptionsTest extends MediaWikiIntegrationTestCase
 	}
 
 	/**
-	 * @covers MobileContext::shouldShowWikibaseDescriptions
+	 * @covers \MobileContext::shouldShowWikibaseDescriptions
 	 */
 	public function testShowingDescriptionsIsDisabledByDefault() {
 		$this->assertTrue(
@@ -42,7 +42,7 @@ class MobileContextWikibaseDescriptionsTest extends MediaWikiIntegrationTestCase
 	}
 
 	/**
-	 * @covers MobileContext::shouldShowWikibaseDescriptions
+	 * @covers \MobileContext::shouldShowWikibaseDescriptions
 	 */
 	public function testShowingDescriptionsCanBeEnabled() {
 		$this->assertTrue(
@@ -63,7 +63,7 @@ class MobileContextWikibaseDescriptionsTest extends MediaWikiIntegrationTestCase
 	}
 
 	/**
-	 * @covers MobileContext::shouldShowWikibaseDescriptions
+	 * @covers \MobileContext::shouldShowWikibaseDescriptions
 	 * @dataProvider invalidFeatureProvider
 	 */
 	public function testItThrowsAnExceptionIfFailureIsInvalid( $feature ) {

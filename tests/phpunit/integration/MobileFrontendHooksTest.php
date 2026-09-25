@@ -49,7 +49,7 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 	/**
 	 * Test findTagline when output has no wikibase elements
 	 *
-	 * @covers MobileFrontendHooks::findTagline
+	 * @covers \MobileFrontendHooks::findTagline
 	 */
 	public function testFindTaglineWhenNoElementsPresent() {
 		$po = new ParserOutput();
@@ -62,7 +62,7 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 	/**
 	 * Test findTagline when output has no wikibase elements
 	 *
-	 * @covers MobileFrontendHooks::findTagline
+	 * @covers \MobileFrontendHooks::findTagline
 	 */
 	public function testFindTaglineWhenItemIsNotPresent() {
 		$poWithDesc = new ParserOutput();
@@ -77,7 +77,7 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 	/**
 	 * Test findTagline when output has no wikibase elements
 	 *
-	 * @covers MobileFrontendHooks::findTagline
+	 * @covers \MobileFrontendHooks::findTagline
 	 */
 	public function testFindTaglineWhenOnlyItemIsPresent() {
 		$fallback = function ( $item ) {
@@ -96,7 +96,7 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 	/**
 	 * Test findTagline when output has no wikibase elements
 	 *
-	 * @covers MobileFrontendHooks::findTagline
+	 * @covers \MobileFrontendHooks::findTagline
 	 */
 	public function testFindTaglineWhenWikibaseAttrsArePresent() {
 		$fallback = function () {
@@ -115,7 +115,7 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 	/**
 	 * Test headers and alternate/canonical links to be set or not
 	 *
-	 * @covers MobileFrontendHooks::onBeforePageDisplay
+	 * @covers \MobileFrontendHooks::onBeforePageDisplay
 	 * @dataProvider onBeforePageDisplayDataProvider
 	 */
 	public function testOnBeforePageDisplay( $useMobileUrl, $mfNoindexPages,
@@ -259,7 +259,7 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
-	 * @covers MobileFrontendHooks
+	 * @covers \MobileFrontendHooks
 	 */
 	public function testIndexPhpVaryHeader() {
 		$this->overrideConfigValues( [
@@ -317,7 +317,7 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
-	 * @covers MobileFrontendHooks::onTitleSquidURLs
+	 * @covers \MobileFrontendHooks::onTitleSquidURLs
 	 */
 	public function testOnTitleSquidURLs() {
 		$this->overrideConfigValues( [
@@ -382,7 +382,7 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
-	 * @covers MobileFrontendHooks::shouldMobileFormatSpecialPages
+	 * @covers \MobileFrontendHooks::shouldMobileFormatSpecialPages
 	 * @dataProvider provideShouldMobileFormatSpecialPages
 	 */
 	public function testShouldMobileFormatSpecialPages(
@@ -429,7 +429,7 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
-	 * @covers MobileFrontendHooks::onRequestContextCreateSkin
+	 * @covers \MobileFrontendHooks::onRequestContextCreateSkin
 	 * @dataProvider provideDefaultMobileSkin
 	 */
 	public function testGetDefaultMobileSkin(
@@ -516,7 +516,7 @@ class MobileFrontendHooksTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
-	 * @covers MobileFrontendHooks::onArticleParserOptions
+	 * @covers \MobileFrontendHooks::onArticleParserOptions
 	 * @dataProvider provideArticleParserOptions
 	 */
 	public function testArticleParserOptions( bool $isMobile, bool $isParsoid, int $namespace, bool $expected ) {
