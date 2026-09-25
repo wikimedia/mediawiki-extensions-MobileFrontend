@@ -67,39 +67,29 @@ class SpecialMobileEditWatchlist extends SpecialEditWatchlist {
 	 * @return string
 	 */
 	protected function getLineHtml( MobilePage $mp ) {
-		$thumb = $mp->getSmallThumbnailHtml( true );
 		$title = $mp->getTitle();
-		if ( !$thumb ) {
-			$thumb = Html::rawElement( 'div', [
-				'class' => 'list-thumb list-thumb-placeholder'
-				], Html::element( 'span', [
-					'class' => 'mf-icon-image'
-				] )
-			);
-		}
-		$timestamp = $mp->getLatestTimestamp();
 		$titleText = $title->getPrefixedText();
-		if ( $timestamp ) {
-			$className = 'title';
-		} else {
-			$className = 'title new';
-		}
 
-		$html =
-			Html::openElement( 'li', [
+		$thumb = $mp->getSmallThumbnailHtml( true ) ?:
+			Html::rawElement( 'div',
+				[ 'class' => 'list-thumb list-thumb-placeholder' ],
+				Html::element( 'span', [ 'class' => 'mf-icon-image' ] )
+			);
+
+		return Html::rawElement( 'li',
+			[
 				'class' => 'page-summary',
 				'title' => $titleText,
-				'data-id' => $title->getArticleID()
-			] ) .
-			Html::openElement( 'a', [ 'href' => $title->getLocalURL(), 'class' => $className ] );
-		$html .= $thumb;
-		$html .=
-			Html::element( 'h3', [], $titleText );
-
-		$html .= Html::closeElement( 'a' ) .
-			Html::closeElement( 'li' );
-
-		return $html;
+				'data-id' => $title->getArticleID(),
+			],
+			Html::rawElement( 'a',
+				[
+					'href' => $title->getLocalURL(),
+					'class' => $mp->getLatestTimestamp() ? 'title' : 'title new',
+				],
+				$thumb . Html::element( 'h3', [], $titleText )
+			)
+		);
 	}
 
 	/**

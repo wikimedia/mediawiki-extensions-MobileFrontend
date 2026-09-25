@@ -25,15 +25,10 @@ class UADeviceDetectorTest extends \MediaWikiUnitTestCase {
 	 * provider from a list of UAs.
 	 *
 	 * @param string[] $userAgents
-	 * @return array
+	 * @return string[][]
 	 */
 	private static function provideUserAgents( $userAgents ) {
-		return array_map(
-			static function ( $userAgent ) {
-				return [ $userAgent ];
-			},
-			$userAgents
-		);
+		return array_map( static fn ( $string ) => [ $string ], $userAgents );
 	}
 
 	public static function provideMobileUserAgents() {

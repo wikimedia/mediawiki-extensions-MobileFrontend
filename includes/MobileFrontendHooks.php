@@ -988,9 +988,9 @@ class MobileFrontendHooks implements
 	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/OutputPageParserOutput
 	 *
 	 * @param OutputPage $outputPage the OutputPage object to which wikitext is added
-	 * @param ParserOutput $po
+	 * @param ParserOutput $parserOutput
 	 */
-	public function onOutputPageParserOutput( $outputPage, $po ): void {
+	public function onOutputPageParserOutput( $outputPage, $parserOutput ): void {
 		$title = $outputPage->getTitle();
 		$descriptionsEnabled = !$title->isMainPage() &&
 			$title->getNamespace() === NS_MAIN &&
@@ -1000,9 +1000,7 @@ class MobileFrontendHooks implements
 
 		// Only set the tagline if the feature has been enabled and the article is in the main namespace
 		if ( $this->mobileContext->shouldDisplayMobileView() && $descriptionsEnabled ) {
-			$desc = self::findTagline( $po, static function ( $item ) {
-				return ExtMobileFrontend::getWikibaseDescription( $item );
-			} );
+			$desc = self::findTagline( $parserOutput, ExtMobileFrontend::getWikibaseDescription( ... ) );
 			if ( $desc ) {
 				self::setTagline( $outputPage, $desc );
 			}

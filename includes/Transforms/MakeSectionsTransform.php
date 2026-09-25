@@ -89,7 +89,7 @@ class MakeSectionsTransform implements IMobileTransform {
 		}
 
 		$containerChild = $container->firstChild;
-		$firstHeading = reset( $headingWrappers );
+		$firstHeading = array_first( $headingWrappers );
 		$firstHeadingName = $this->getHeadingName( $firstHeading );
 		$sectionNumber = 0;
 		$sectionBody = $this->createSectionBodyElement( $ownerDocument, $sectionNumber, false );
