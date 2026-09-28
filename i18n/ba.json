@@ -78,8 +78,6 @@
 	"mobile-frontend-last-modified-with-user-years": "[$4 Һуңғы {{GENDER:$1|төҙәтеү}} {{PLURAL:$3|$3 йыл элек}}] {{PLURAL:$5|ҡатнашыусы[$6 $2]|0=аноним ҡатнашыусы}} тарафынан яһалды",
 	"mobile-frontend-main-menu": "Төп меню",
 	"mobile-frontend-main-menu-settings-heading": "Көйләүҙәр",
-	"mobile-frontend-media-details": "Ентеклерәк",
-	"mobile-frontend-media-license-link": "Лицензия тураһында мәғлүмәт",
 	"mobile-frontend-missing-image": "Рәсем",
 	"mobile-frontend-overlay-close": "Ябырға",
 	"mobile-frontend-privacy-link-text": "Сер һаҡлау",

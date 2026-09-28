@@ -77,8 +77,6 @@
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 शेवटचा {{GENDER:$1|बदल}} {{PLURAL:$3|$3 सेकंदा|$3 सेकंदां}}पूर्वी] {{PLURAL:$5|[$6 $2]|0=अनामिक सदस्या}} कडून",
 	"mobile-frontend-last-modified-with-user-years": "[$4 शेवटचा {{GENDER:$1|बदल}} {{PLURAL:$3|$3 वर्षा|$3 वर्षाँ}}पूर्वी] {{PLURAL:$5|[$6 $2]|0=अनामिक सदस्या}} कडून",
 	"mobile-frontend-main-menu-settings-heading": "मांडण्या",
-	"mobile-frontend-media-details": "तपशील",
-	"mobile-frontend-media-license-link": "परवाना माहिती",
 	"mobile-frontend-missing-image": "चित्र",
 	"mobile-frontend-overlay-close": "बंद",
 	"mobile-frontend-privacy-link-text": "गुप्तता",

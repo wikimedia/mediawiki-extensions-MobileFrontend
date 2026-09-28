@@ -49,8 +49,6 @@
 	"mobile-frontend-last-modified-with-user-years": "[$4 Ùrtimu {{GENDER:$1|canciamentu}} {{PLURAL:$3|$3 annu|$3 anni}} fa] di {{PLURAL:$5|[$6 $2]|0=n'utenti anònimu}}",
 	"mobile-frontend-main-menu": "Menu principali",
 	"mobile-frontend-main-menu-settings-heading": "Mpustazzioni",
-	"mobile-frontend-media-details": "Dittagghî",
-	"mobile-frontend-media-license-link": "Nfurmazzioni supra la licenza",
 	"mobile-frontend-missing-image": "Mmàggini",
 	"mobile-frontend-overlay-close": "Chiudi",
 	"mobile-frontend-privacy-link-text": "Cunfidinzialitati",

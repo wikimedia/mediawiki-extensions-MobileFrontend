@@ -16,7 +16,6 @@
 	"mobile-frontend-last-modified-with-user-months": "{{PLURAL:$5|[$6 $2]|0=匿名用户}}[$4 阿末趟{{GENDER:$1|编辑}}来拉{{PLURAL:$3|$3个号头}}前]",
 	"mobile-frontend-last-modified-with-user-seconds": "{{PLURAL:$5|[$6 $2]|0=匿名用户}}[$4 阿末趟{{GENDER:$1|编辑}}来拉{{PLURAL:$3|$3秒}}前]",
 	"mobile-frontend-last-modified-with-user-years": "{{PLURAL:$5|[$6 $2]|0=匿名用户}}[$4 阿末趟{{GENDER:$1|编辑}}来拉{{PLURAL:$3|$3年}}前]",
-	"mobile-frontend-media-details": "零零碎碎",
 	"mobile-frontend-privacy-link-text": "隐私",
 	"mobile-frontend-terms-text": "使用条款",
 	"mobile-frontend-view": "手机版视图",

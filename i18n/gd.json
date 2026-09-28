@@ -58,8 +58,6 @@
 	"mobile-frontend-last-modified-with-user-years": "[$4 {{GENDER:$1|Air a dheasachadh}} o chionn $3 {{PLURAL:$3|bhliadhna|bhliadhna|bliadhnaichean|bliadhna}}] le {{PLURAL:$5|[$6 $2]|cleachdaiche|cleachdaichean}} gun ainm turas mu dheireadh",
 	"mobile-frontend-main-menu": "Prìomh clàr-taice",
 	"mobile-frontend-main-menu-settings-heading": "Roghainnean",
-	"mobile-frontend-media-details": "Fiosrachadh",
-	"mobile-frontend-media-license-link": "Fiosrachadh a' cheadachais",
 	"mobile-frontend-missing-image": "Dealbh",
 	"mobile-frontend-overlay-close": "Dùin",
 	"mobile-frontend-privacy-link-text": "Prìobhaideachd",
