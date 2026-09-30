@@ -8,16 +8,6 @@
  */
 module.exports = {
 	/**
-	 * Obtains the correct label for the save button which is project specific. It's either
-	 * "save" or "publish"
-	 *
-	 * @return {string}
-	 */
-	saveButtonMessage() {
-		return mw.config.get( 'wgEditSubmitButtonLabelPublish' ) ?
-			mw.msg( 'mobile-frontend-editor-publish' ) : mw.msg( 'mobile-frontend-editor-save' );
-	},
-	/**
 	 * Wrapper class for Promises
 	 *
 	 * @memberof util

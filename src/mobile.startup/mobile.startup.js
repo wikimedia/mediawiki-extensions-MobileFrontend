@@ -12,11 +12,9 @@ const Overlay = require( './Overlay' );
 const references = require( './references/references' );
 const promisedView = require( './promisedView' );
 const headers = require( './headers' );
-const Skin = require( './Skin' );
 const util = require( './util.js' );
 const Icon = require( './Icon.js' );
 const IconButton = require( './IconButton.js' );
-const Section = require( './Section.js' );
 const Button = require( './Button.js' );
 
 // Expose chunk to temporary variable which will be deleted and exported via ResourceLoader
@@ -57,7 +55,6 @@ module.exports = {
 	class: {
 		View,
 		Overlay,
-		Section,
 		Icon,
 		IconButton,
 		Button
@@ -161,7 +158,8 @@ module.exports = {
 	 * @return {string|undefined}
 	 */
 	license() {
-		const skin = Skin.getSingleton();
-		return skin.getLicenseMsg();
+		mw.log.warn( `[deprecated] Please update your call to
+			require('mobile.editor.overlay').getLicenseMessage` );
+		return require( '../mobile.editor.overlay/getLicenseMessage.js' )();
 	}
 };

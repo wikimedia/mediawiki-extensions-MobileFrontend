@@ -20,22 +20,6 @@ const icons = {
 	Icon,
 	IconButton,
 	/**
-	 * Gets a back icon
-	 *
-	 * The icon should be used to inform the user that the front-end is
-	 * communicating with the back-end.
-	 *
-	 * @return {IconButton}
-	 */
-	back() {
-		return new icons.IconButton( {
-			tagName: 'button',
-			icon: 'previous',
-			additionalClassNames: 'back',
-			label: mw.msg( 'mobile-frontend-overlay-close' )
-		} );
-	},
-	/**
 	 * Gets a cancel icon
 	 *
 	 * The icon should be used to inform the user that the front-end is

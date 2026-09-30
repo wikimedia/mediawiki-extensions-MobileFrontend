@@ -1,5 +1,4 @@
 const util = require( './util' ),
-	Button = require( './Button' ),
 	icons = require( './icons' );
 
 /**
@@ -64,68 +63,7 @@ function header( heading, headerActions, headerCancel, additionalClassNames ) {
 	return makeHeader( heading, headerActions, headerCancel, additionalClassNames );
 }
 
-/**
- * Creates a header with a form
- *
- * @ignore
- * @param {string|View} formHTMLOrView of the header
- * @param {View[]} headerActions
- * @param {module:mobile.startup/View} [headerCancel] defaults to cancel button
- * @param {string} [additionalClassNames] (should be escaped)
- * @return {Element}
- */
-function formHeader( formHTMLOrView, headerActions, headerCancel, additionalClassNames ) {
-	return makeHeader( formHTMLOrView, headerActions, headerCancel, additionalClassNames );
-}
-
-/**
- * Creates a header with a form
- *
- * @ignore
- * @param {string} heading (HTML allowed)
- * @param {string} additionalClassNames of the header
- * @return {Element}
- */
-function saveHeader( heading, additionalClassNames ) {
-	return header(
-		heading,
-		[
-			new Button( {
-				tagName: 'button',
-				additionalClassNames: 'save submit',
-				disabled: true,
-				label: util.saveButtonMessage(),
-				size: 'large'
-			} )
-		],
-		icons.back(),
-		additionalClassNames
-	);
-}
-/**
- * Creates a header with a form
- *
- * @ignore
- * @param {string} heading (HTML allowed)
- * @param {string} additionalClassNames of the header
- * @return {Element}
- */
-function savingHeader( heading ) {
-	return header(
-		heading,
-		[
-			icons.spinner( {
-				additionalClassNames: 'savespinner loading'
-			} )
-		],
-		icons.cancel(),
-		'saving-header hidden'
-	);
-}
-
 module.exports = {
-	savingHeader,
-	saveHeader,
-	formHeader,
+	makeHeader,
 	header
 };

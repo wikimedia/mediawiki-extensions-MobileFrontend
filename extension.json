@@ -259,6 +259,9 @@
 			],
 			"packageFiles": [
 				"src/mobile.editor.overlay/mobile.editor.overlay.js",
+				"src/mobile.editor.overlay/headers.js",
+				"src/mobile.editor.overlay/Section.js",
+				"src/mobile.editor.overlay/getLicenseMessage.js",
 				"src/mobile.editor.overlay/BlockMessageDetails.js",
 				"src/mobile.editor.overlay/blockMessageDrawer.js",
 				"src/mobile.editor.overlay/EditorGateway.js",

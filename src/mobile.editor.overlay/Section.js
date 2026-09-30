@@ -1,5 +1,6 @@
-const util = require( './util.js' ),
-	View = require( './View' );
+const mobile = require( 'mobile.startup' );
+const util = mobile.util;
+const View = mobile.class.View;
 
 /**
  * Builds a section of a page

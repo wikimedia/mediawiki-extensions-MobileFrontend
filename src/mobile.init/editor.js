@@ -157,12 +157,11 @@ function isVESourceAvailable() {
  *
  * @method
  * @ignore
- * @param {Skin} skin
  * @param {module:mobile.startup/PageHTMLParser} currentPageHTMLParser
  * @param {Router} router
  * @param {boolean} [readOnly] Open the editor in read-only mode
  */
-function setupEditor( skin, currentPageHTMLParser, router, readOnly ) {
+function setupEditor( currentPageHTMLParser, router, readOnly ) {
 	const
 		titleObj = mw.Title.newFromText( mw.config.get( 'wgPageName' ) ),
 		overlayManager = OverlayManager.getSingleton(),
@@ -204,7 +203,6 @@ function setupEditor( skin, currentPageHTMLParser, router, readOnly ) {
 				fakeScroll: 0,
 				api: new mw.Api(),
 				isVEVisualAvailable: isVEVisualAvailable(),
-				licenseMsg: skin.getLicenseMsg(),
 				title: titleObj.getPrefixedText(),
 				titleObj,
 				isAnon: user.isAnon(),
@@ -607,10 +605,9 @@ function bindEditLinksLoginDrawer( router ) {
  * @method
  * @ignore
  * @param {module:mobile.startup/PageHTMLParser} currentPageHTMLParser
- * @param {Skin} skin
  * @param {Router} router
  */
-function init( currentPageHTMLParser, skin, router ) {
+function init( currentPageHTMLParser, router ) {
 	let editRestrictions;
 	// see: https://www.mediawiki.org/wiki/Manual:Interface/JavaScript#Page-specific
 	const isReadOnly = mw.config.get( 'wgMinervaReadOnly' );
@@ -618,7 +615,7 @@ function init( currentPageHTMLParser, skin, router ) {
 
 	if ( isEditable ) {
 		// Edit button updated in setupEditor.
-		setupEditor( skin, currentPageHTMLParser, router );
+		setupEditor( currentPageHTMLParser, router );
 	} else {
 		hideSectionEditIcons( currentPageHTMLParser );
 		editRestrictions = mw.config.get( 'wgRestrictionEdit' );
@@ -631,7 +628,7 @@ function init( currentPageHTMLParser, skin, router ) {
 			// The user cannot edit this page, usually because it is protected. Open the
 			// editor read-only, as the desktop site does. It explains why the page
 			// cannot be edited.
-			setupEditor( skin, currentPageHTMLParser, router, true );
+			setupEditor( currentPageHTMLParser, router, true );
 		}
 	}
 }
@@ -666,7 +663,7 @@ function bindEditLinksSorryToast( msg, router ) {
 	}
 }
 
-module.exports = function ( currentPageHTMLParser, skin ) {
+module.exports = function ( currentPageHTMLParser ) {
 	// If not supported, do not setup.
 	if ( !mw.config.get( 'wgMFIsSupportedEditRequest' ) ) {
 		return;
@@ -678,6 +675,6 @@ module.exports = function ( currentPageHTMLParser, skin ) {
 		bindEditLinksSorryToast( mw.msg( 'mobile-frontend-editor-uploadenable' ), router );
 	} else {
 		// Edit button is currently hidden. A call to init() will update it as needed.
-		init( currentPageHTMLParser, skin, router );
+		init( currentPageHTMLParser, router );
 	}
 };

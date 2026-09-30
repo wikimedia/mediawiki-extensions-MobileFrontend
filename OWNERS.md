@@ -128,7 +128,6 @@ MediaWiki core.
   - /src/mobile.startup/OverlayManager.js
   - /src/mobile.startup/Page.js
   - /src/mobile.startup/PageHTMLParser.js
-  - /src/mobile.startup/Skin.js
   - /src/mobile.startup/View.js
   - /src/mobile.startup/currentPage.js
   - /src/mobile.startup/currentPageHTMLParser.js
@@ -186,8 +185,6 @@ The editor.
   - /includes/MobileFrontendEditorHooks.php
   - /src/mobile.init/editor.js
   - /src/mobile.init/editorLoadingOverlay.js
-  - /src/mobile.startup/Section.js
-  - /tests/node-qunit/mobile.startup/Section.test.js
   - /tests/phpunit/integration/MobileFrontendHooksTest.php
   - src/mobile.init/fakeToolbar.js
   - /resources/mobile.editor.overlay/editor.less

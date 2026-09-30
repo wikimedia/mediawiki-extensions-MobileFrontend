@@ -10,10 +10,7 @@ let url;
 const
 	toggling = require( './toggling' ),
 	editor = require( './editor' ),
-	currentPageHTMLParser = require( '../mobile.startup/currentPageHTMLParser' )(),
-	Skin = require( '../mobile.startup/Skin' );
-
-const skin = Skin.getSingleton();
+	currentPageHTMLParser = require( '../mobile.startup/currentPageHTMLParser' )();
 
 /**
  * Temporary compatibility code for pages that use the legacy parser to
@@ -84,6 +81,6 @@ if ( window.console && window.console.log && window.console.log.apply &&
 }
 /* eslint-enable no-console */
 
-editor( currentPageHTMLParser, skin );
+editor( currentPageHTMLParser );
 toggling();
 fixLegacyParserImagesIfNeeded();

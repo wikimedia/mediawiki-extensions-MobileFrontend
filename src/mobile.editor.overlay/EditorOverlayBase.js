@@ -11,7 +11,7 @@ const mobile = require( 'mobile.startup' ),
 	),
 	util = mobile.util,
 	parseBlockInfo = require( './parseBlockInfo.js' ),
-	headers = mobile.headers,
+	{ makeHeader, saveHeader, savingHeader } = require( './headers.js' ),
 	Button = mobile.class.Button,
 	IconButton = mobile.class.IconButton,
 	blockMessageDrawer = require( './blockMessageDrawer.js' ),
@@ -169,7 +169,7 @@ class EditorOverlayBase extends Overlay {
 			captchaTryAgainMsg: mw.msg( 'mobile-frontend-editor-captcha-try-again' ),
 			switchMsg: mw.msg( 'mobile-frontend-editor-switch-editor' ),
 			confirmMsg: mw.msg( 'mobile-frontend-editor-cancel-confirm' ),
-			licenseMsg: undefined
+			licenseMsg: require( './getLicenseMessage.js' )()
 		} );
 	}
 
@@ -457,7 +457,7 @@ class EditorOverlayBase extends Overlay {
 		const options = this.options;
 
 		this.options.headers = [
-			headers.formHeader(
+			makeHeader(
 				util.template( `
 {{^hasToolbar}}
 <div class="overlay-title">
@@ -488,8 +488,8 @@ class EditorOverlayBase extends Overlay {
 				mobile.cancelIcon(),
 				'initial-header'
 			),
-			headers.saveHeader( options.previewingMsg, 'save-header hidden' ),
-			headers.savingHeader( mw.message( 'mobile-frontend-editor-wait' ).escaped() )
+			saveHeader( options.previewingMsg, 'save-header hidden' ),
+			savingHeader( mw.message( 'mobile-frontend-editor-wait' ).escaped() )
 		];
 	}
 
