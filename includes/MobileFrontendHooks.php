@@ -54,7 +54,6 @@ use MediaWiki\SpecialPage\Hook\SpecialPage_initListHook;
 use MediaWiki\SpecialPage\Hook\SpecialPageBeforeExecuteHook;
 use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\Specials\Hook\LoginFormValidErrorMessagesHook;
-use MediaWiki\Specials\Hook\PostLoginRedirectHook;
 use MediaWiki\Title\Title;
 use MediaWiki\User\Hook\UserGetDefaultOptionsHook;
 use MediaWiki\User\Options\UserOptionsLookup;
@@ -92,7 +91,6 @@ class MobileFrontendHooks implements
 	ChangeTagsListActiveHook,
 	RecentChange_saveHook,
 	SpecialPageBeforeExecuteHook,
-	PostLoginRedirectHook,
 	BeforePageDisplayHook,
 	GetPreferencesHook,
 	OutputPageParserOutputHook,
@@ -738,38 +736,6 @@ class MobileFrontendHooks implements
 			}
 			if ( array_key_exists( $name, $taglines ) ) {
 				self::setTagline( $out, $out->msg( $taglines[$name] )->parse() );
-			}
-		}
-	}
-
-	/**
-	 * PostLoginRedirect hook handler
-	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/PostLoginRedirect
-	 *
-	 * Used here to handle watchlist actions made by anons to be handled after
-	 * login or account creation redirect.
-	 *
-	 * @inheritDoc
-	 */
-	public function onPostLoginRedirect( &$returnTo, &$returnToQuery, &$type ) {
-		$context = $this->mobileContext;
-
-		if ( !$context->shouldDisplayMobileView() ) {
-			return;
-		}
-
-		// If 'watch' is set from the login form, watch the requested article
-		$campaign = $context->getRequest()->getRawVal( 'campaign' );
-
-		// The user came from one of the drawers that prompted them to login.
-		// We must watch the article per their original intent.
-		$shouldWatchArticle = array_key_exists( 'article_action', $returnToQuery ) &&
-			$returnToQuery[ 'article_action' ] === 'watch';
-		if ( $campaign === 'mobile_watchPageActionCta' || $shouldWatchArticle ) {
-			$title = Title::newFromText( $returnTo );
-			// protect against watching special pages (these cannot be watched!)
-			if ( $title !== null && !$title->isSpecialPage() ) {
-				$this->watchlistManager->addWatch( $context->getAuthority(), $title );
 			}
 		}
 	}
