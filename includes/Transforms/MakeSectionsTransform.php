@@ -42,7 +42,6 @@ class MakeSectionsTransform implements IMobileTransform {
 	private $topHeadingTags;
 
 	/**
-	 *
 	 * @param array $topHeadingTags list of tags could ne cosidered as sections
 	 * @param bool $scriptsEnabled wheather scripts are enabled
 	 */
