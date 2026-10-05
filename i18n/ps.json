@@ -115,6 +115,8 @@
 	"mobile-frontend-references-citation-error": "يوه تېروتنه رامنځته شوه چې د دې سرچينې برسېرول يې ناشوني کړل.",
 	"mobile-frontend-requires-mobile": "دا مخ په ډېسکټاپ د لاسرسي وړ نه دی. مهرباني وکړئ، د مخ لاندې برخه کې په موبايل بڼې باندې وټوکئ.",
 	"mobile-frontend-requires-title": "مخ د لاسرسي وړ نه دی",
+	"mobile-frontend-return-to-app-close": "تړل",
+	"mobile-frontend-return-to-app-return-link": "بېرته کاريال ته",
 	"mobile-frontend-save-error": "اوڼنو خوندي کولو کې تېروتنه. مهرباني وکړئ، ځان ډاډه کړئ چې کوکيز مو چارن کړې دي.",
 	"mobile-frontend-save-settings": "خوندي کول",
 	"mobile-frontend-settings-tagline": "د لوستلو غوره توبونه",
