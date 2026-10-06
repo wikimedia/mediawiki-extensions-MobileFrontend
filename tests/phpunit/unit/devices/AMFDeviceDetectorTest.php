@@ -7,6 +7,8 @@ use MobileFrontend\Devices\AMFDeviceDetector;
 
 /**
  * @group MobileFrontend
+ * @covers \MobileFrontend\Devices\AMFDeviceDetector
+ * @covers \MobileFrontend\Devices\DeviceProperties
  */
 class AMFDeviceDetectorTest extends \MediaWikiUnitTestCase {
 
@@ -21,8 +23,6 @@ class AMFDeviceDetectorTest extends \MediaWikiUnitTestCase {
 	}
 
 	/**
-	 * @covers \MobileFrontend\Devices\AMFDeviceDetector::detectDeviceProperties
-	 * @covers \MobileFrontend\Devices\DeviceProperties::isMobileDevice
 	 * @dataProvider provideIsMobileDevice
 	 */
 	public function testIsMobileDevice( $server, $expectedIsMobileDevice ) {
@@ -47,8 +47,6 @@ class AMFDeviceDetectorTest extends \MediaWikiUnitTestCase {
 	}
 
 	/**
-	 * @covers \MobileFrontend\Devices\AMFDeviceDetector::detectDeviceProperties
-	 * @covers \MobileFrontend\Devices\DeviceProperties::isTabletDevice
 	 * @dataProvider provideIsTabletDevice
 	 */
 	public function testIsTabletDevice( $server, $expectedIsTabletDevice ) {
@@ -72,9 +70,6 @@ class AMFDeviceDetectorTest extends \MediaWikiUnitTestCase {
 		];
 	}
 
-	/**
-	 * @covers \MobileFrontend\Devices\AMFDeviceDetector::detectDeviceProperties
-	 */
 	public function testItShouldHandleNoAMFEnvironmentVariables() {
 		$this->assertNull(
 			$this->detector->detectDeviceProperties( $this->request, [] )

@@ -7,10 +7,10 @@ use Wikimedia\TestingAccessWrapper;
 
 /**
  * @group MobileFrontend
+ * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform
  */
 class MoveLeadParagraphTransformTest extends \MediaWikiUnitTestCase {
 	/**
-	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::identifyInfoboxElement
 	 * @dataProvider provideIdentifyInfoboxElement
 	 */
 	public function testIdentifyInfoboxElement( string $html, ?string $expected, string $msg ) {
@@ -67,16 +67,6 @@ class MoveLeadParagraphTransformTest extends \MediaWikiUnitTestCase {
 		];
 	}
 
-	/**
-	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::apply
-	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::moveFirstParagraphBeforeInfobox
-	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::hasNoNonEmptyPrecedingParagraphs
-	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::identifyInfoboxElement
-	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::identifyLeadParagraph
-	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::isNotEmptyNode
-	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::isNonLeadParagraph
-	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::isPreviousSibling
-	 */
 	public function testApplySectionSecondSectionShouldBeIgnored() {
 		$infobox = '<table class="infobox"><tbody><tr><td>1</td></tr></tbody></table>';
 		$paragraph = '<p><b>First paragraph</b> <span> with info that links to a '
@@ -96,14 +86,6 @@ class MoveLeadParagraphTransformTest extends \MediaWikiUnitTestCase {
 	 * @param string $html
 	 * @param string $expected
 	 * @param string $reason
-	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::apply
-	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::moveFirstParagraphBeforeInfobox
-	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::hasNoNonEmptyPrecedingParagraphs
-	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::identifyInfoboxElement
-	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::identifyLeadParagraph
-	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::isNotEmptyNode
-	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::isNonLeadParagraph
-	 * @covers \MobileFrontend\Transforms\MoveLeadParagraphTransform::isPreviousSibling
 	 * @dataProvider provideTransform
 	 */
 	public function testTransform(

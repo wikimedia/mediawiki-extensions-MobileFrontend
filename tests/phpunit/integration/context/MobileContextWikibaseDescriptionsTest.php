@@ -4,6 +4,7 @@ use MediaWiki\Config\Config;
 
 /**
  * @group MobileFrontend
+ * @covers MobileContext
  */
 class MobileContextWikibaseDescriptionsTest extends MediaWikiIntegrationTestCase {
 
@@ -32,18 +33,12 @@ class MobileContextWikibaseDescriptionsTest extends MediaWikiIntegrationTestCase
 		$this->config = $services->getService( 'MobileFrontend.Config' );
 	}
 
-	/**
-	 * @covers \MobileContext::shouldShowWikibaseDescriptions
-	 */
 	public function testShowingDescriptionsIsDisabledByDefault() {
 		$this->assertTrue(
 			$this->context->shouldShowWikibaseDescriptions( 'search', $this->config )
 		);
 	}
 
-	/**
-	 * @covers \MobileContext::shouldShowWikibaseDescriptions
-	 */
 	public function testShowingDescriptionsCanBeEnabled() {
 		$this->assertTrue(
 			$this->context->shouldShowWikibaseDescriptions( 'search', $this->config ),
@@ -63,7 +58,6 @@ class MobileContextWikibaseDescriptionsTest extends MediaWikiIntegrationTestCase
 	}
 
 	/**
-	 * @covers \MobileContext::shouldShowWikibaseDescriptions
 	 * @dataProvider invalidFeatureProvider
 	 */
 	public function testItThrowsAnExceptionIfFailureIsInvalid( $feature ) {

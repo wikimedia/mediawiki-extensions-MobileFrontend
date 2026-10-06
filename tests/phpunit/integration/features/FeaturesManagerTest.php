@@ -6,8 +6,7 @@ use MobileFrontend\Features\UserModes;
 
 /**
  * @group MobileFrontend
- * @coversDefaultClass \MobileFrontend\Features\FeaturesManager
- * @covers ::__construct
+ * @covers \MobileFrontend\Features\FeaturesManager
  */
 class FeaturesManagerTest extends MediaWikiIntegrationTestCase {
 
@@ -36,7 +35,6 @@ class FeaturesManagerTest extends MediaWikiIntegrationTestCase {
 
 	/**
 	 * Test that hook is used to allow extensions/skins to register features.
-	 * @covers ::useHookToRegisterExtensionOrSkinFeatures
 	 */
 	public function testFeaturesManagerUsesHooks() {
 		$called = false;
@@ -53,9 +51,6 @@ class FeaturesManagerTest extends MediaWikiIntegrationTestCase {
 			'The MobileFrontendFeaturesRegistration wasn\'t executed' );
 	}
 
-	/**
-	 * @covers ::registerFeature
-	 */
 	public function testCannotRegisterSameFeatureTwice() {
 		$featureA =
 			$this->makeFeature( 'featureA',
@@ -69,9 +64,6 @@ class FeaturesManagerTest extends MediaWikiIntegrationTestCase {
 		$manager->registerFeature( $featureA );
 	}
 
-	/**
-	 * @covers ::getFeature
-	 */
 	public function testGetFeatureReturnsExactlySameObject() {
 		$featureA =
 			$this->makeFeature( 'featureA',
@@ -86,9 +78,6 @@ class FeaturesManagerTest extends MediaWikiIntegrationTestCase {
 		$this->assertEquals( $featureA, $actual );
 	}
 
-	/**
-	 * @covers ::getFeature
-	 */
 	public function testGetFeatureThrowsExceptionWhenFeatureNotFound() {
 		$userModes = new UserModes();
 		$manager = $this->newInstance( $userModes );
@@ -96,10 +85,6 @@ class FeaturesManagerTest extends MediaWikiIntegrationTestCase {
 		$manager->getFeature( 'featureA' );
 	}
 
-	/**
-	 * @covers ::registerFeature
-	 * @covers ::getAvailableForMode
-	 */
 	public function testGetAvailableForMode() {
 		$modeAMock = $this->getTestMode( 'modeA' );
 		$modeBMock = $this->getTestMode( 'modeB' );
@@ -137,9 +122,6 @@ class FeaturesManagerTest extends MediaWikiIntegrationTestCase {
 		$this->assertCount( 0, $featuresInC, 'ModeC should have no features available' );
 	}
 
-	/**
-	 * @covers ::isFeatureAvailableForCurrentUser
-	 */
 	public function testModeDisabledSoFeatureNotAvailableForUser() {
 		// There is one feature, but modeA is not enabled by user
 		$modeAMock = $this->getTestMode( 'modeA', false );
@@ -153,9 +135,6 @@ class FeaturesManagerTest extends MediaWikiIntegrationTestCase {
 		$this->assertFalse( $manager->isFeatureAvailableForCurrentUser( 'featureA' ) );
 	}
 
-	/**
-	 * @covers ::isFeatureAvailableForCurrentUser
-	 */
 	public function testFeatureAvailableInTwoModesButOnlyOneEnabledByUser() {
 		// There is one feature, but modeA is not enabled by user
 		$modeAMock = $this->getTestMode( 'modeA', false );
@@ -172,9 +151,6 @@ class FeaturesManagerTest extends MediaWikiIntegrationTestCase {
 		$this->assertTrue( $manager->isFeatureAvailableForCurrentUser( 'featureA' ) );
 	}
 
-	/**
-	 * @covers ::getMode
-	 */
 	public function testGetModeUsesModesToRetrieveData() {
 		$modeMock = $this->getTestMode( 'testMode' );
 

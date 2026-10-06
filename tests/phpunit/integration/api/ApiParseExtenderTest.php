@@ -7,6 +7,7 @@ use MediaWiki\Request\FauxRequest;
 /**
  * @group MobileFrontend
  * @group Database
+ * @covers \MobileFrontend\Api\ApiParseExtender
  */
 class ApiParseExtenderTest extends MediaWikiIntegrationTestCase {
 
@@ -17,7 +18,6 @@ class ApiParseExtenderTest extends MediaWikiIntegrationTestCase {
 
 	/**
 	 * @dataProvider provideData
-	 * @covers \MobileFrontend\Api\ApiParseExtender::onAPIGetAllowedParams
 	 */
 	public function testApi( array $params, array $expected ) {
 		$this->overrideConfigValue( 'MFRemovableClasses',

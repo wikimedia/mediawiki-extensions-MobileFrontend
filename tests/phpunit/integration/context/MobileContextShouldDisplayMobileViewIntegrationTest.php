@@ -12,6 +12,7 @@ use MobileContext;
  *
  * @group MobileFrontend
  * @group integration
+ * @covers \MobileContext
  */
 class MobileContextShouldDisplayMobileViewIntegrationTest extends MediaWikiIntegrationTestCase {
 
@@ -24,9 +25,6 @@ class MobileContextShouldDisplayMobileViewIntegrationTest extends MediaWikiInteg
 		$this->context = $this->getServiceContainer()->getService( 'MobileFrontend.Context' );
 	}
 
-	/**
-	 * @covers \MobileContext::shouldDisplayMobileView
-	 */
 	public function testItCanBeOverridden() {
 		$this->context->setForceMobileView( true );
 
@@ -34,7 +32,6 @@ class MobileContextShouldDisplayMobileViewIntegrationTest extends MediaWikiInteg
 	}
 
 	/**
-	 * @covers \MobileContext::shouldDisplayMobileView
 	 * @dataProvider shouldDisplayMobileViewProvider
 	 */
 	public function testShouldDisplayMobileView(

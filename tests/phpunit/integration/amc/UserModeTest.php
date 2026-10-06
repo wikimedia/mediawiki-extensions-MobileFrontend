@@ -8,20 +8,11 @@ use MobileFrontend\Amc\Manager;
 use MobileFrontend\Amc\UserMode;
 
 /**
- * @coversDefaultClass \MobileFrontend\Amc\UserMode
  * @group MobileFrontend
+ * @covers \MobileFrontend\Amc\UserMode
  */
 class UserModeTest extends MediaWikiIntegrationTestCase {
 
-	/**
-	 * @param bool $mfAmcConfig
-	 * @param bool $shouldDisplayMV
-	 * @param bool $isAnon
-	 * @param string $userOpt
-	 * @param bool $useWorkingUserOptionsManager
-	 *
-	 * @return UserMode
-	 */
 	private function createUserMode(
 		bool $mfAmcConfig = true,
 		bool $shouldDisplayMV = true,
@@ -71,9 +62,6 @@ class UserModeTest extends MediaWikiIntegrationTestCase {
 		);
 	}
 
-	/**
-	 * @covers ::getModeIdentifier
-	 */
 	public function testGetModeIdentifier() {
 		$userMode = $this->createUserMode();
 		$modeIdentifier = $userMode->getModeIdentifier();
@@ -100,9 +88,7 @@ class UserModeTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
-	 * @covers ::isEnabled
 	 * @dataProvider provideIsEnabledData
-	 *
 	 * @param bool $mfAmcConfig
 	 * @param bool $shouldDisplayMV
 	 * @param bool $isAnon
@@ -122,8 +108,6 @@ class UserModeTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
-	 * @covers ::setEnabled
-	 * @covers ::isEnabled
 	 * @dataProvider provideSetEnabledData
 	 */
 	public function testSetEnabled( $isEnabled ) {
@@ -153,7 +137,6 @@ class UserModeTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
-	 * @covers ::setEnabled
 	 * @dataProvider provideIsAvailableThrowsData
 	 */
 	public function testSetEnabledThrowsIsEnabledTrue( $mfAmcConfig, $shouldDisplayMobileView, $isAnon ) {
@@ -164,7 +147,6 @@ class UserModeTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
-	 * @covers ::setEnabled
 	 * @dataProvider provideIsAvailableThrowsData
 	 */
 	public function testSetEnabledThrowsIsEnabledFalse( $mfAmcConfig, $shouldDisplayMobileView, $isAnon ) {
@@ -174,10 +156,6 @@ class UserModeTest extends MediaWikiIntegrationTestCase {
 		$userMode->setEnabled( false );
 	}
 
-	/**
-	 * @covers ::__construct
-	 * @covers ::newForUser
-	 */
 	public function testNewForUser() {
 		$mockUserIdentity = $this->createNoOpMock( UserIdentity::class );
 		$userMode = UserMode::newForUser( $mockUserIdentity );

@@ -4,12 +4,10 @@ use MobileFrontend\ContentProviders\DefaultContentProvider;
 
 /**
  * @group MobileFrontend
- * @coversDefaultClass \MobileFrontend\ContentProviders\DefaultContentProvider
- * @covers ::__construct
+ * @covers \MobileFrontend\ContentProviders\DefaultContentProvider
  */
 class DefaultContentProviderTest extends \MediaWikiUnitTestCase {
 	/**
-	 * @covers ::getHTML
 	 * @dataProvider getHtmlDataProvider
 	 */
 	public function testGetHtml( string $expected ) {
@@ -19,9 +17,6 @@ class DefaultContentProviderTest extends \MediaWikiUnitTestCase {
 		$this->assertSame( $expected, $actual );
 	}
 
-	/**
-	 * Data provider for testGetHtml()
-	 */
 	public static function getHtmlDataProvider() {
 		return [
 			[ "<a>anchor</a>" ],

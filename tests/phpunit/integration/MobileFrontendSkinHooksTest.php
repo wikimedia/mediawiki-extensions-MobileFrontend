@@ -5,7 +5,7 @@ use MediaWiki\Message\Message;
 
 /**
  * @group MobileFrontend
- * @coversDefaultClass \MobileFrontendSkinHooks
+ * @covers \MobileFrontendSkinHooks
  */
 class MobileFrontendSkinHooksTest extends MediaWikiLangTestCase {
 	private function getInstance(): MobileFrontendSkinHooks {
@@ -15,7 +15,6 @@ class MobileFrontendSkinHooksTest extends MediaWikiLangTestCase {
 	}
 
 	/**
-	 * @covers ::getTermsLink
 	 * @dataProvider provideGetTermsLinkData
 	 */
 	public function testGetTermsLink( $isDisabled, $expected ) {

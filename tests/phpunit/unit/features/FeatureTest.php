@@ -4,8 +4,7 @@ use MobileFrontend\Features\Feature;
 
 /**
  * @group MobileFrontend
- * @coversDefaultClass \MobileFrontend\Features\Feature
- * @covers ::__construct()
+ * @covers \MobileFrontend\Features\Feature
  */
 class FeatureTest extends \MediaWikiUnitTestCase {
 
@@ -18,9 +17,6 @@ class FeatureTest extends \MediaWikiUnitTestCase {
 		];
 	}
 
-	/**
-	 * @covers ::isAvailable
-	 */
 	public function testIsAvailableDefault() {
 		$modeMock = $this->createMock( \MobileFrontend\Features\IUserMode::class );
 		$modeMock->method( 'getModeIdentifier' )
@@ -34,9 +30,6 @@ class FeatureTest extends \MediaWikiUnitTestCase {
 		$this->assertFalse( $actual );
 	}
 
-	/**
-	 * @covers ::isAvailable
-	 */
 	public function testIsAvailable() {
 		$stableMock = $this->createMock( \MobileFrontend\Features\IUserMode::class );
 		$stableMock->method( 'getModeIdentifier' )
@@ -49,9 +42,6 @@ class FeatureTest extends \MediaWikiUnitTestCase {
 		$this->assertTrue( $actual );
 	}
 
-	/**
-	 * @covers ::getId
-	 */
 	public function testGetId() {
 		$feature = new Feature(
 			'TestName', 'test-group', $this->madeUpConfigVariable
@@ -61,9 +51,6 @@ class FeatureTest extends \MediaWikiUnitTestCase {
 		$this->assertSame( 'TestName', $actual );
 	}
 
-	/**
-	 * @covers ::__toString
-	 */
 	public function testToString() {
 		$feature = new Feature(
 			'TestName', 'test-group', $this->madeUpConfigVariable
@@ -73,9 +60,6 @@ class FeatureTest extends \MediaWikiUnitTestCase {
 		$this->assertSame( 'TestName', $actual );
 	}
 
-	/**
-	 * @covers ::getGroup
-	 */
 	public function testGetGroup() {
 		$feature = new Feature(
 			'TestName', 'test-group', $this->madeUpConfigVariable

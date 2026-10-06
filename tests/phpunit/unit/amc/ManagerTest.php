@@ -5,7 +5,7 @@ use MediaWiki\User\User;
 use MobileFrontend\Amc\Manager;
 
 /**
- * @coversDefaultClass \MobileFrontend\Amc\Manager
+ * @covers \MobileFrontend\Amc\Manager
  * @group MobileFrontend
  */
 class ManagerTest extends MediaWikiUnitTestCase {
@@ -47,8 +47,6 @@ class ManagerTest extends MediaWikiUnitTestCase {
 	}
 
 	/**
-	 * @covers ::__construct
-	 * @covers ::isAvailable
 	 * @dataProvider provideIsAvailable
 	 */
 	public function testIsAvailable( $mfAmcConfig, $shouldDisplayMobileView, $userIsAnon, $expected ) {
@@ -57,9 +55,6 @@ class ManagerTest extends MediaWikiUnitTestCase {
 		$this->assertSame( $expected, $manager->isAvailable() );
 	}
 
-	/**
-	 * @covers ::getModeIdentifier
-	 */
 	public function testGetModeIdentifier() {
 		$manager = $this->createManager( true, true, false );
 

@@ -10,6 +10,8 @@ use MobileFrontend\Devices\DeviceProperties;
 
 /**
  * @group MobileFrontend
+ * @covers \MobileFrontend\Devices\DeviceDetectorService
+ * @covers \MobileFrontend\Devices\DeviceProperties
  */
 class DeviceDetectorServiceTest extends \MediaWikiUnitTestCase {
 	private readonly FauxRequest $request;
@@ -35,11 +37,6 @@ class DeviceDetectorServiceTest extends \MediaWikiUnitTestCase {
 		return new DeviceDetectorService( array_map( $childFactory, $results ) );
 	}
 
-	/**
-	 * @covers \MobileFrontend\Devices\DeviceDetectorService::detectDeviceProperties
-	 * @covers \MobileFrontend\Devices\DeviceDetectorService::__construct
-	 * @covers \MobileFrontend\Devices\DeviceProperties::__construct
-	 */
 	public function testItShouldHandleOneChild() {
 		$expectedProperties = new DeviceProperties( true, false );
 		$detector = $this->createDetector( [ $expectedProperties ] );
@@ -49,11 +46,6 @@ class DeviceDetectorServiceTest extends \MediaWikiUnitTestCase {
 		$this->assertSame( $expectedProperties, $properties );
 	}
 
-	/**
-	 * @covers \MobileFrontend\Devices\DeviceDetectorService::detectDeviceProperties
-	 * @covers \MobileFrontend\Devices\DeviceDetectorService::__construct
-	 * @covers \MobileFrontend\Devices\DeviceProperties::__construct
-	 */
 	public function testItShouldHandleManyChildren() {
 		$expectedProperties = new DeviceProperties( true, false );
 		$detector = $this->createDetector( [
@@ -67,10 +59,6 @@ class DeviceDetectorServiceTest extends \MediaWikiUnitTestCase {
 		$this->assertSame( $expectedProperties, $properties );
 	}
 
-	/**
-	 * @covers \MobileFrontend\Devices\DeviceDetectorService::detectDeviceProperties
-	 * @covers \MobileFrontend\Devices\DeviceDetectorService::__construct
-	 */
 	public function testItShouldHandleZeroChildren() {
 		$detector = $this->createDetector( [] );
 

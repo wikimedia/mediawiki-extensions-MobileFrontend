@@ -135,7 +135,6 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
-	 * @covers \MobileContext
 	 * @dataProvider provideUpdateDesktopUrlQuery
 	 */
 	public function testGetDesktopUrlQuery( $mobile, $expectedDesktop ) {
@@ -196,7 +195,6 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
-	 * @covers \MobileContext::getMobileAction
 	 * @dataProvider getMobileActionProvider
 	 */
 	public function testGetMobileAction( $mobileaction = null ) {
@@ -218,9 +216,6 @@ class MobileContextTest extends MediaWikiIntegrationTestCase {
 		];
 	}
 
-	/**
-	 * @covers \MobileContext::getUseFormatCookieExpiry
-	 */
 	public function testGetUseFormatCookieExpiry() {
 		$context = TestingAccessWrapper::newFromObject( $this->makeContext() );
 		$startTime = time();

@@ -11,8 +11,7 @@ use MobileFrontend\Models\MobilePage;
 
 /**
  * @group MobileFrontend
- * @coversDefaultClass \MobileFrontend\Models\MobilePage
- * @covers ::__construct()
+ * @covers \MobileFrontend\Models\MobilePage
  */
 class MobilePageTest extends MediaWikiIntegrationTestCase {
 	// Timestamp from MW format to Unix format
@@ -138,9 +137,6 @@ class MobilePageTest extends MediaWikiIntegrationTestCase {
 		return Title::makeTitle( NS_MAIN, 'Image' );
 	}
 
-	/**
-	 * @covers ::getLatestTimestamp
-	 */
 	public function testLatestTimestampWithNullTitle() {
 		$title = $this->createTestTitle();
 		$mock = $this->mockRevisionStoreWithTitleReturnNullRevision( $title );
@@ -152,9 +148,6 @@ class MobilePageTest extends MediaWikiIntegrationTestCase {
 		$this->assertFalse( $actual );
 	}
 
-	/**
-	 * @covers ::getLatestTimestamp
-	 */
 	public function testLatestTimestampWhenNoRevision() {
 		$title = $this->createTestTitle();
 
@@ -167,10 +160,6 @@ class MobilePageTest extends MediaWikiIntegrationTestCase {
 		$this->assertSame( self::TS_MW, $actual );
 	}
 
-	/**
-	 * @covers ::getRevision
-	 * @covers ::getLatestEdit
-	 */
 	public function testGetLatestEdit() {
 		$title = $this->createTestTitle();
 		$user = new UserIdentityValue( 42, 'foo' );
@@ -189,10 +178,6 @@ class MobilePageTest extends MediaWikiIntegrationTestCase {
 		$this->assertSame( 'unknown', $actual['gender'] );
 	}
 
-	/**
-	 * @covers ::getRevision
-	 * @covers ::getLatestEdit
-	 */
 	public function testGetLatestEditWithTitleReturnNullRevision() {
 		$title = $this->createTestTitle();
 		$revMock = $this->mockRevisionStoreWithTitleReturnNullRevision( $title );
@@ -209,9 +194,6 @@ class MobilePageTest extends MediaWikiIntegrationTestCase {
 		$this->assertSame( '', $actual['gender'] );
 	}
 
-	/**
-	 * @covers ::getTitle
-	 */
 	public function testGetTitle() {
 		$title = $this->createTestTitle();
 		$mPageWithNoFile = new MobilePage( $title, false );
@@ -221,8 +203,6 @@ class MobilePageTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
-	 * @covers ::getPageImageHtml
-	 * @covers ::getSmallThumbnailHtml
 	 * @dataProvider getSmallThumbnailHtmlWidthLessThanHeightDataProvider
 	 */
 	public function testGetSmallThumbnailHtmlWidthLessThanHeight( $useBackgroundImage, $expected ) {
@@ -241,8 +221,6 @@ class MobilePageTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
-	 * @covers ::getPageImageHtml
-	 * @covers ::getSmallThumbnailHtml
 	 * @dataProvider getSmallThumbnailHtmlWidthGreaterThanHeightDataProvider
 	 */
 	public function testGetSmallThumbnailHtmlWidthGreaterThanHeight(
@@ -260,8 +238,7 @@ class MobilePageTest extends MediaWikiIntegrationTestCase {
 
 	/**
 	 * When no file is provided, always return an empty string.
-	 * @covers ::getSmallThumbnailHtml
-	 * @covers ::getPageImageHtml
+	 *
 	 * @dataProvider getSmallThumbnailHtmlWithNoFileDataProvider
 	 */
 	public function testGetSmallThumbnailHtmlWithNoFile( $useBackgroundImage, $expected ) {
@@ -274,8 +251,7 @@ class MobilePageTest extends MediaWikiIntegrationTestCase {
 	/**
 	 * When file is provided but thumb couldn't be generated upon
 	 * calling $thumb->transform(). So we don't have a thumb here.
-	 * @covers ::getSmallThumbnailHtml
-	 * @covers ::getPageImageHtml
+	 *
 	 * @dataProvider getSmallThumbnailHtmlWithNoThumbDataProvider
 	 */
 	public function testGetSmallThumbnailHtmlWithNoThumb( $useBackgroundImage, $expected ) {

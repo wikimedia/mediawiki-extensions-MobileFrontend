@@ -6,12 +6,9 @@ use MobileFrontend\Models\MobilePage;
 
 /**
  * @group MobileFrontend
- * @coversDefaultClass \MobileFrontend\Models\MobileCollection
+ * @covers \MobileFrontend\Models\MobileCollection
  */
 class MobileCollectionTest extends MediaWikiIntegrationTestCase {
-	/**
-	 * @covers ::count
-	 */
 	public function testCountZeroPages() {
 		$mobileCollection = new MobileCollection();
 
@@ -21,10 +18,6 @@ class MobileCollectionTest extends MediaWikiIntegrationTestCase {
 		$this->assertSame( 0, $actual );
 	}
 
-	/**
-	 * @covers ::count
-	 * @covers ::add
-	 */
 	public function testAddAndCountPages() {
 		$mobileCollection = new MobileCollection();
 		$mobilePage = new MobilePage( Title::newMainPage(), false );
@@ -39,9 +32,6 @@ class MobileCollectionTest extends MediaWikiIntegrationTestCase {
 		$this->assertSame( 2, $actual );
 	}
 
-	/**
-	 * @covers ::getIterator
-	 */
 	public function testGetIterator() {
 		$expected = Title::makeTitle( NS_MAIN, 'Page_test' );
 		$mobilePage = new MobilePage(

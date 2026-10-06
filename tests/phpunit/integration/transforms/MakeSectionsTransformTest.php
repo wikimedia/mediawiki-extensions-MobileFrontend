@@ -4,7 +4,7 @@ use MobileFrontend\Tests\Utils;
 use MobileFrontend\Transforms\MakeSectionsTransform;
 
 /**
- * @coversDefaultClass MobileFrontend\Transforms\MakeSectionsTransform
+ * @covers MobileFrontend\Transforms\MakeSectionsTransform
  *
  * @group MobileFrontend
  */
@@ -12,19 +12,7 @@ class MakeSectionsTransformTest extends MediaWikiIntegrationTestCase {
 	private const SECTION_INDICATOR = '<span class="indicator mf-icon mf-icon-expand mf-icon--small"></span>';
 
 	/**
-	 * @covers ::apply
-	 * @covers ::makeSections
-	 * @covers ::createSectionBodyElement
-	 * @covers ::getTopHeadings
-	 * @covers ::prepareHeading
-	 * @covers ::__construct
-	 *
 	 * @dataProvider provideTransform
-	 *
-	 * @param string $html
-	 * @param bool $scriptsEnabled
-	 * @param string $expected
-	 * @param string $reason this is being asserted
 	 */
 	public function testTransform(
 		string $html,
@@ -110,9 +98,6 @@ class MakeSectionsTransformTest extends MediaWikiIntegrationTestCase {
 			. ">$contentHtml</section>";
 	}
 
-	/**
-	 * @covers ::interimTogglingSupport
-	 */
 	public function testInterimTogglingSupport() {
 		$js = MakeSectionsTransform::interimTogglingSupport();
 

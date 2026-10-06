@@ -7,6 +7,7 @@ use MobileFrontend\Devices\UADeviceDetector;
 
 /**
  * @group MobileFrontend
+ * @covers \MobileFrontend\Devices\UADeviceDetector
  */
 class UADeviceDetectorTest extends \MediaWikiUnitTestCase {
 
@@ -141,8 +142,6 @@ class UADeviceDetectorTest extends \MediaWikiUnitTestCase {
 	}
 
 	/**
-	 * @covers \MobileFrontend\Devices\UADeviceDetector::detectDeviceProperties
-	 * @covers \MobileFrontend\Devices\UADeviceDetector::detectMobileDevice
 	 * @dataProvider provideMobileUserAgents
 	 */
 	public function testItClassifiesMobileUAsAsMobileDevices( $userAgent ) {
@@ -153,7 +152,6 @@ class UADeviceDetectorTest extends \MediaWikiUnitTestCase {
 	}
 
 	/**
-	 * @covers \MobileFrontend\Devices\UADeviceDetector::detectDeviceProperties
 	 * @dataProvider provideDesktopUserAgents
 	 */
 	public function testItDoesntClassifyDesktopUAsAsMobileDevices( $userAgent ) {
@@ -164,8 +162,6 @@ class UADeviceDetectorTest extends \MediaWikiUnitTestCase {
 	}
 
 	/**
-	 * @covers \MobileFrontend\Devices\UADeviceDetector::detectDeviceProperties
-	 * @covers \MobileFrontend\Devices\UADeviceDetector::detectTabletDevice
 	 * @dataProvider provideMobileUserAgents
 	 */
 	public function testItDoesntClassifyMobileUAsAsTablets( $userAgent ) {
@@ -176,8 +172,6 @@ class UADeviceDetectorTest extends \MediaWikiUnitTestCase {
 	}
 
 	/**
-	 * @covers \MobileFrontend\Devices\UADeviceDetector::detectDeviceProperties
-	 * @covers \MobileFrontend\Devices\UADeviceDetector::detectTabletDevice
 	 * @dataProvider provideTabletUserAgents
 	 */
 	public function testItClassifiesTabletUAsAsTablets( $userAgent ) {

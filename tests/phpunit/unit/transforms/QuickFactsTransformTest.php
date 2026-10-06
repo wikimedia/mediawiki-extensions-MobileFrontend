@@ -7,6 +7,7 @@ use Wikimedia\Parsoid\DOM\Element;
 
 /**
  * @group MobileFrontend
+ * @covers \MobileFrontend\Transforms\QuickFactsTransform
  */
 class QuickFactsTransformTest extends \MediaWikiUnitTestCase {
 
@@ -25,13 +26,6 @@ class QuickFactsTransformTest extends \MediaWikiUnitTestCase {
 		</section>
 HTML;
 
-	/**
-	 * @covers \MobileFrontend\Transforms\QuickFactsTransform::apply
-	 * @covers \MobileFrontend\Transforms\QuickFactsTransform::identifyInfoboxes
-	 * @covers \MobileFrontend\Transforms\QuickFactsTransform::buildSection
-	 * @covers \MobileFrontend\Transforms\QuickFactsTransform::buildHeading
-	 * @covers \MobileFrontend\Transforms\QuickFactsTransform::buildContent
-	 */
 	public function testMovesInfoboxIntoQuickFactsSection() {
 		$body = $this->parseBody( self::LEAD_WITH_INFOBOX );
 		( new QuickFactsTransform( 'Quick facts', true ) )->apply( $body );
@@ -75,13 +69,6 @@ HTML;
 		</section>
 HTML;
 
-	/**
-	 * @covers \MobileFrontend\Transforms\QuickFactsTransform::apply
-	 * @covers \MobileFrontend\Transforms\QuickFactsTransform::identifyInfoboxes
-	 * @covers \MobileFrontend\Transforms\QuickFactsTransform::buildSection
-	 * @covers \MobileFrontend\Transforms\QuickFactsTransform::buildHeading
-	 * @covers \MobileFrontend\Transforms\QuickFactsTransform::buildContent
-	 */
 	public function testMovesInfoboxIntoQuickFactsSectionWithLegacyParser() {
 		$body = $this->parseBody( self::LEGACY_LEAD_WITH_INFOBOX );
 		( new QuickFactsTransform( 'Quick facts', false ) )->apply( $body );
@@ -126,10 +113,6 @@ HTML;
 	/**
 	 * Claiming an `mf-section-N` number would renumber every section after it, and
 	 * with them the section numbers that edit links point at.
-	 *
-	 * @covers \MobileFrontend\Transforms\QuickFactsTransform::apply
-	 * @covers \MobileFrontend\Transforms\QuickFactsTransform::buildSection
-	 * @covers \MobileFrontend\Transforms\QuickFactsTransform::buildHeading
 	 */
 	public function testLegacyQuickFactsSectionTakesNoSectionNumber() {
 		$body = $this->parseBody( self::LEGACY_LEAD_WITH_INFOBOX );
@@ -169,10 +152,6 @@ HTML;
 		</section>
 HTML;
 
-	/**
-	 * @covers \MobileFrontend\Transforms\QuickFactsTransform::apply
-	 * @covers \MobileFrontend\Transforms\QuickFactsTransform::identifyInfoboxes
-	 */
 	public function testMovesWrapperContainingInfobox() {
 		$body = $this->parseBody( self::LEAD_WITH_WRAPPED_INFOBOX );
 		( new QuickFactsTransform( 'Quick facts', true ) )->apply( $body );
@@ -205,11 +184,6 @@ HTML;
 		</section>
 HTML;
 
-	/**
-	 * @covers \MobileFrontend\Transforms\QuickFactsTransform::apply
-	 * @covers \MobileFrontend\Transforms\QuickFactsTransform::identifyInfoboxes
-	 * @covers \MobileFrontend\Transforms\QuickFactsTransform::buildContent
-	 */
 	public function testMovesEveryInfoboxInTheLead() {
 		$body = $this->parseBody( self::LEAD_WITH_TWO_INFOBOXES );
 		( new QuickFactsTransform( 'Quick facts', true ) )->apply( $body );
@@ -242,10 +216,6 @@ HTML;
 		</section>
 HTML;
 
-	/**
-	 * @covers \MobileFrontend\Transforms\QuickFactsTransform::apply
-	 * @covers \MobileFrontend\Transforms\QuickFactsTransform::identifyInfoboxes
-	 */
 	public function testInfoboxesSharingAWrapperMoveOnce() {
 		$body = $this->parseBody( self::LEAD_WITH_SHARED_WRAPPER );
 		( new QuickFactsTransform( 'Quick facts', true ) )->apply( $body );
@@ -270,10 +240,6 @@ HTML;
 		</section>
 HTML;
 
-	/**
-	 * @covers \MobileFrontend\Transforms\QuickFactsTransform::apply
-	 * @covers \MobileFrontend\Transforms\QuickFactsTransform::identifyInfoboxes
-	 */
 	public function testInfoboxOutsideTheLeadIsUntouched() {
 		$body = $this->parseBody( self::INFOBOX_OUTSIDE_LEAD );
 		( new QuickFactsTransform( 'Quick facts', true ) )->apply( $body );
@@ -288,9 +254,6 @@ HTML;
 			'An infobox outside the lead stays exactly where it was.' );
 	}
 
-	/**
-	 * @covers \MobileFrontend\Transforms\QuickFactsTransform::apply
-	 */
 	public function testNoOpWhenNoInfobox() {
 		$html = '<section data-mw-section-id="0"><p>Some text.</p></section>';
 		$body = $this->parseBody( $html );
@@ -318,7 +281,6 @@ HTML;
 	 * for a Quick facts section to do so either.
 	 *
 	 * @dataProvider provideParserModes
-	 * @covers \MobileFrontend\Transforms\QuickFactsTransform::apply
 	 */
 	public function testNoOpWhenContentIsNotSectioned( bool $isParsoidOutput ) {
 		// Fixture is a flat DOM, no <section> wrappers from either parser.
