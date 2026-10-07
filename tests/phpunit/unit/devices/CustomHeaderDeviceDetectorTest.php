@@ -37,7 +37,7 @@ class CustomHeaderDeviceDetectorTest extends \MediaWikiUnitTestCase {
 
 		$properties = $this->detector->detectDeviceProperties( $this->request, [] );
 
-		$this->assertTrue( $properties->isMobileDevice() );
-		$this->assertFalse( $properties->isTabletDevice() );
+		$this->assertTrue( $properties->isMobileDevice );
+		$this->assertFalse( $properties->isTabletDevice );
 	}
 }

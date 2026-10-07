@@ -30,22 +30,9 @@ namespace MobileFrontend\Devices;
 class DeviceProperties {
 
 	public function __construct(
-		private readonly bool $isMobileDevice,
-		private readonly bool $isTabletDevice,
+		public readonly bool $isMobileDevice,
+		public readonly bool $isTabletDevice,
 	) {
 	}
 
-	/**
-	 * Is the device a mobile device?
-	 */
-	public function isMobileDevice(): bool {
-		return $this->isMobileDevice;
-	}
-
-	/**
-	 * Is the device a tablet device?
-	 */
-	public function isTabletDevice(): bool {
-		return $this->isTabletDevice;
-	}
 }

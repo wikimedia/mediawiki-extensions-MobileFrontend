@@ -61,15 +61,15 @@ class DeviceDetectorServiceIntegrationTest extends MediaWikiIntegrationTestCase 
 
 		$properties = $this->detectDeviceProperties();
 
-		$this->assertTrue( $properties->isMobileDevice() );
-		$this->assertFalse( $properties->isTabletDevice() );
+		$this->assertTrue( $properties->isMobileDevice );
+		$this->assertFalse( $properties->isTabletDevice );
 	}
 
 	public function testItShouldHandleARequestFromDesktopBrowsers() {
 		$properties = $this->detectDeviceProperties();
 
-		$this->assertFalse( $properties->isMobileDevice() );
-		$this->assertFalse( $properties->isTabletDevice() );
+		$this->assertFalse( $properties->isMobileDevice );
+		$this->assertFalse( $properties->isTabletDevice );
 	}
 
 	public function testItShouldPrioritizeTheCustomRequestHeader() {
@@ -80,8 +80,8 @@ class DeviceDetectorServiceIntegrationTest extends MediaWikiIntegrationTestCase 
 
 		$properties = $this->detectDeviceProperties();
 
-		$this->assertTrue( $properties->isMobileDevice() );
-		$this->assertFalse( $properties->isTabletDevice() );
+		$this->assertTrue( $properties->isMobileDevice );
+		$this->assertFalse( $properties->isTabletDevice );
 	}
 
 	/**
@@ -94,11 +94,10 @@ class DeviceDetectorServiceIntegrationTest extends MediaWikiIntegrationTestCase 
 
 		$properties = $this->detectDeviceProperties();
 
-		$this->assertFalse(
-			$properties->isMobileDevice(),
+		$this->assertFalse( $properties->isMobileDevice,
 			'Apache Mobile Filter environment variables are prioritized above the custom request header.'
 		);
-		$this->assertTrue( $properties->isTabletDevice() );
+		$this->assertTrue( $properties->isTabletDevice );
 	}
 
 	public function testItShouldHandleDeviceDetectionBeingDisabled() {

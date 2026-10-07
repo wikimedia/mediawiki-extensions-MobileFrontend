@@ -25,12 +25,10 @@ class AMFDeviceDetectorTest extends \MediaWikiUnitTestCase {
 	/**
 	 * @dataProvider provideIsMobileDevice
 	 */
-	public function testIsMobileDevice( $server, $expectedIsMobileDevice ) {
-		$isMobileDevice =
-			$this->detector->detectDeviceProperties( $this->request, $server )
-				->isMobileDevice();
+	public function testIsMobileDevice( array $server, bool $expected ) {
+		$properties = $this->detector->detectDeviceProperties( $this->request, $server );
 
-		$this->assertEquals( $expectedIsMobileDevice, $isMobileDevice );
+		$this->assertSame( $expected, $properties->isMobileDevice );
 	}
 
 	public static function provideIsMobileDevice() {
@@ -49,12 +47,10 @@ class AMFDeviceDetectorTest extends \MediaWikiUnitTestCase {
 	/**
 	 * @dataProvider provideIsTabletDevice
 	 */
-	public function testIsTabletDevice( $server, $expectedIsTabletDevice ) {
-		$isTabletDevice =
-			$this->detector->detectDeviceProperties( $this->request, $server )
-				->isTabletDevice();
+	public function testIsTabletDevice( array $server, bool $expected ) {
+		$properties = $this->detector->detectDeviceProperties( $this->request, $server );
 
-		$this->assertEquals( $expectedIsTabletDevice, $isTabletDevice );
+		$this->assertSame( $expected, $properties->isTabletDevice );
 	}
 
 	public static function provideIsTabletDevice() {

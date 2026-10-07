@@ -3,6 +3,7 @@
 namespace Tests\MobileFrontend\Devices;
 
 use MediaWiki\Request\FauxRequest;
+use MobileFrontend\Devices\DeviceProperties;
 use MobileFrontend\Devices\UADeviceDetector;
 
 /**
@@ -135,7 +136,7 @@ class UADeviceDetectorTest extends \MediaWikiUnitTestCase {
 		// phpcs:enable
 	}
 
-	private function detectDeviceProperties( $userAgent ) {
+	private function detectDeviceProperties( string $userAgent ): DeviceProperties {
 		$this->request->setHeader( 'User-Agent', $userAgent );
 
 		return $this->detector->detectDeviceProperties( $this->request, [] );
@@ -144,40 +145,30 @@ class UADeviceDetectorTest extends \MediaWikiUnitTestCase {
 	/**
 	 * @dataProvider provideMobileUserAgents
 	 */
-	public function testItClassifiesMobileUAsAsMobileDevices( $userAgent ) {
-		$this->assertTrue(
-			$this->detectDeviceProperties( $userAgent )
-				->isMobileDevice()
-		);
+	public function testItClassifiesMobileUAsAsMobileDevices( string $userAgent ) {
+		$properties = $this->detectDeviceProperties( $userAgent );
+
+		$this->assertTrue( $properties->isMobileDevice );
+		$this->assertFalse( $properties->isTabletDevice );
 	}
 
 	/**
 	 * @dataProvider provideDesktopUserAgents
 	 */
-	public function testItDoesntClassifyDesktopUAsAsMobileDevices( $userAgent ) {
-		$this->assertFalse(
-			$this->detectDeviceProperties( $userAgent )
-				->isMobileDevice()
-		);
-	}
+	public function testItDoesntClassifyDesktopUAsAsMobileDevices( string $userAgent ) {
+		$properties = $this->detectDeviceProperties( $userAgent );
 
-	/**
-	 * @dataProvider provideMobileUserAgents
-	 */
-	public function testItDoesntClassifyMobileUAsAsTablets( $userAgent ) {
-		$this->assertFalse(
-			$this->detectDeviceProperties( $userAgent )
-				->isTabletDevice()
-		);
+		$this->assertFalse( $properties->isMobileDevice );
+		$this->assertFalse( $properties->isTabletDevice );
 	}
 
 	/**
 	 * @dataProvider provideTabletUserAgents
 	 */
-	public function testItClassifiesTabletUAsAsTablets( $userAgent ) {
-		$this->assertTrue(
-			$this->detectDeviceProperties( $userAgent )
-				->isTabletDevice()
-		);
+	public function testItClassifiesTabletUAsAsTablets( string $userAgent ) {
+		$properties = $this->detectDeviceProperties( $userAgent );
+
+		$this->assertTrue( $properties->isMobileDevice );
+		$this->assertTrue( $properties->isTabletDevice );
 	}
 }

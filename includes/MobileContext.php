@@ -136,11 +136,8 @@ class MobileContext extends ContextSource {
 			->detectDeviceProperties( $this->getRequest(), $_SERVER );
 
 		if ( $properties ) {
-			$showMobileViewToTablets = $this->config->get( 'MFShowMobileViewToTablets' );
-
-			$this->isMobileDevice =
-				$properties->isMobileDevice()
-				|| ( $properties->isTabletDevice() && $showMobileViewToTablets );
+			$this->isMobileDevice = $properties->isMobileDevice ||
+				( $properties->isTabletDevice && $this->config->get( 'MFShowMobileViewToTablets' ) );
 		}
 
 		return $this->isMobileDevice;
