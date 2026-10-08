@@ -101,7 +101,7 @@
 	"mobile-frontend-last-modified-with-user-seconds": "[$4 अन्तिम बेर {{PLURAL:$3|$3 सेकेण्ड्}} पहिले] {{PLURAL:$5|[$6 $2]|0=एगो अज्ञात प्रयोगकर्ता}} द्वारा {{GENDER:$1|सम्पादित कैल}} गेलै",
 	"mobile-frontend-last-modified-with-user-years": "[$4 अन्तिम बेर {{PLURAL:$3|$3 बरिस}} पहिले] {{PLURAL:$5|[$6 $2]|0=एगो अज्ञात प्रयोगकर्ता}} द्वारा {{GENDER:$1|सम्पादित कैल}} गेलै",
 	"mobile-frontend-main-menu": "मुख्य मेनू",
-	"mobile-frontend-main-menu-settings-heading": "सेटिङ्ग्स",
+	"mobile-frontend-main-menu-settings-heading": "सेटिङ्ग",
 	"mobile-frontend-media-details": "विवरण",
 	"mobile-frontend-media-license-link": "लाइसेन्स जानकारी",
 	"mobile-frontend-media-load-fail-message": "ई चित्रके लोड करैत खनि एगो त्रुटि भेलै ।",

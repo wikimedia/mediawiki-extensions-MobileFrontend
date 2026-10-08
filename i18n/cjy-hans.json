@@ -1,8 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"MotdAlpha"
+			"MotdAlpha",
+			"Villager-bloc-h"
 		]
 	},
-	"mobile-frontend-editor-publish": "发出去"
+	"mobile-frontend-copyright": "除非另有说明，内容依据$1提供。",
+	"mobile-frontend-editor-publish": "发出去",
+	"mobile-frontend-terms-text": "使用条款",
+	"mobile-frontend-view": "移动版视图"
 }
