@@ -16,7 +16,7 @@
 	"mobile-frontend-editor-new-page-confirm": "{{GENDER:$1|Ar ye shuir that ye want tae mak}} ae new page on {{SITENAME}}?",
 	"mobile-frontend-editor-placeholder-new-page": "{{GENDER:$1|Ye}} {{GENDER:$1|ar cræftin}} ae new page oan {{SITENAME}}!",
 	"mobile-frontend-editor-switch-editor": "Switch eediter",
-	"mobile-frontend-last-modified-date": "Last eeditit on $1, at $2",
+	"mobile-frontend-last-modified-date": "Last editit on $1, at $2",
 	"mobile-frontend-privacy-link-text": "Privacy",
 	"mobile-frontend-requires-mobile": "This page isna available oan desktap. Please clap the mobile luik-at airtin at the bottom o the page.",
 	"mobile-frontend-requires-title": "Page naw available",
