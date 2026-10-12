@@ -36,9 +36,12 @@
 	"mobile-frontend-generic-404-desc": "Oyúblaye oyále kiŋ iyéwaya owákihi šni.",
 	"mobile-frontend-language-heading": "<strong>Iyápi</strong>",
 	"mobile-frontend-languages-structured-overlay-all-languages-header": "Tȟog’íyapi kiŋ",
+	"mobile-frontend-languages-structured-overlay-search-input-placeholder": "Iyápi olé",
+	"mobile-frontend-main-menu-settings-heading": "Wóigluštaŋ",
 	"mobile-frontend-missing-image": "Itówapi",
 	"mobile-frontend-overlay-close": "Ečhél iyéya",
 	"mobile-frontend-privacy-link-text": "Wayúȟaŋiŋpi-šni",
+	"mobile-frontend-return-to-app-close": "Ečhél iyéya",
 	"mobile-frontend-save-settings": "Égnaka",
 	"mobile-frontend-terms-text": "Úƞpi-wóopȟe",
 	"mobile-frontend-view": "Omas'apȟe owáƞyaƞke",
@@ -60,5 +63,6 @@
 	"mobile-frontend-mobile-option-amc-learn-more": "Táku sáŋpȟa uŋspéič’iya",
 	"mobile-editor-abandon-survey-error": "Tákuwe waŋ kaȟniǧa",
 	"mobile-editor-abandon-survey-success": "Yutȟókečapi wičhoȟ'aŋ kiŋ duwášte. Wóphila uŋkéničiyapi!",
-	"mobile-editor-abandon-survey-answer-other": "Táku uŋmá"
+	"mobile-editor-abandon-survey-answer-other": "Táku uŋmá",
+	"mobile-frontend-quick-facts": "Ináȟni-wóslolye"
 }
