@@ -460,8 +460,6 @@
 			"MobileFrontendHooks",
 			"Amc"
 		],
-		"CentralAuthLoginRedirectData": "MobileFrontendHooks::onCentralAuthLoginRedirectData",
-		"CentralAuthSilentLoginRedirect": "MobileFrontendHooks::onCentralAuthSilentLoginRedirect",
 		"CustomEditor": "MobileFrontendEditorHooks",
 		"OutputPageParserOutput": "MobileFrontendHooks",
 		"ArticleParserOptions": "MobileFrontendHooks",

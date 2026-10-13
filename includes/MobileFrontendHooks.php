@@ -922,41 +922,6 @@ class MobileFrontendHooks implements
 	}
 
 	/**
-	 * CentralAuthLoginRedirectData hook handler
-	 * Saves mobile host so that the CentralAuth wiki could redirect back properly
-	 *
-	 * @see CentralAuthHooks::doCentralLoginRedirect in CentralAuth extension
-	 * @param \MediaWiki\Extension\CentralAuth\User\CentralAuthUser $centralUser
-	 * @param array &$data Redirect data
-	 */
-	public static function onCentralAuthLoginRedirectData( $centralUser, &$data ) {
-		/** @var MobileContext $context */
-		$context = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Context' );
-		$server = $context->getConfig()->get( MainConfigNames::Server );
-		if ( $context->shouldDisplayMobileView() ) {
-			$data['mobileServer'] = $context->getMobileUrl( $server );
-		}
-	}
-
-	/**
-	 * CentralAuthSilentLoginRedirect hook handler
-	 * Points redirects from CentralAuth wiki to mobile domain if user has logged in from it
-	 * @see SpecialCentralLogin in CentralAuth extension
-	 * @param \MediaWiki\Extension\CentralAuth\User\CentralAuthUser $centralUser
-	 * @param string &$url to redirect to
-	 * @param array $info token information
-	 */
-	public static function onCentralAuthSilentLoginRedirect( $centralUser, &$url, $info ) {
-		if ( isset( $info['mobileServer'] ) ) {
-			$urlUtils = MediaWikiServices::getInstance()->getUrlUtils();
-			$mobileUrlParsed = $urlUtils->parse( $info['mobileServer'] );
-			$urlParsed = $urlUtils->parse( $url );
-			$urlParsed['host'] = $mobileUrlParsed['host'] ?? '';
-			$url = UrlUtils::assemble( $urlParsed );
-		}
-	}
-
-	/**
 	 * Sets a tagline for a given page that can be displayed by the skin.
 	 *
 	 * @param OutputPage $outputPage
