@@ -381,7 +381,7 @@ class SourceEditorOverlay extends EditorOverlayBase {
 			this.$preview.replaceWith(
 				new MessageBox( {
 					type: 'error',
-					msg: mw.msg( 'mobile-frontend-editor-error-preview' )
+					msg: mw.message( 'mobile-frontend-editor-error-preview' ).escaped()
 				} ).$el
 			);
 			hideSpinnerAndShowPreview();
