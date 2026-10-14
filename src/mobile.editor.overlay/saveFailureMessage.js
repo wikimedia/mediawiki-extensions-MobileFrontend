@@ -12,7 +12,7 @@ module.exports = function saveFailureMessage( data ) {
 	const code = data && data.errors && data.errors[0] && data.errors[0].code;
 
 	if ( code === 'editconflict' ) {
-		return mw.msg( 'mobile-frontend-editor-error-conflict' );
+		return mw.message( 'mobile-frontend-editor-error-conflict' ).escaped();
 	}
 
 	if ( code === 'readonly' ) {
