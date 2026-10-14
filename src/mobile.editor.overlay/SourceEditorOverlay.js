@@ -71,7 +71,7 @@ class SourceEditorOverlay extends EditorOverlayBase {
 		}
 		if ( this.readOnly ) {
 			options.readOnly = true;
-			options.editingMsg = mw.msg( 'mobile-frontend-editor-viewing-source-page', options.title );
+			options.editingMsg = mw.message( 'mobile-frontend-editor-viewing-source-page', options.title ).parse();
 		} else {
 			options.editingMsg = mw.msg( 'mobile-frontend-editor-editing-page', options.title );
 		}
@@ -345,7 +345,7 @@ class SourceEditorOverlay extends EditorOverlayBase {
 			this.$preview.replaceWith(
 				new MessageBox( {
 					type: 'error',
-					msg: mw.msg( 'mobile-frontend-editor-error-preview' )
+					msg: mw.message( 'mobile-frontend-editor-error-preview' ).escaped()
 				} ).$el
 			);
 			hideSpinnerAndShowPreview();
