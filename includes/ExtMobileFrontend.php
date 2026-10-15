@@ -124,9 +124,7 @@ class ExtMobileFrontend {
 		$leadParagraphEnabled = in_array( $ns, $config->get( 'MFNamespacesWithLeadParagraphs' ) );
 		$showFirstParagraphBeforeInfobox = $leadParagraphEnabled &&
 			$featuresManager->isFeatureAvailableForCurrentUser( 'MFShowFirstParagraphBeforeInfobox' );
-		$quickFactsEnabled = $featuresManager->isFeatureAvailableForCurrentUser( 'MFQuickFacts' )
-			// Temporary QA aid for preview links: force enable via ?quickfacts=1.
-			|| $context->getRequest()->getBool( 'quickfacts' );
+		$quickFactsEnabled = $featuresManager->isFeatureAvailableForCurrentUser( 'MFQuickFacts' );
 
 		$transforms = [];
 		// Remove specified content in content namespaces
