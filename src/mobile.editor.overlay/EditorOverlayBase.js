@@ -130,6 +130,7 @@ class EditorOverlayBase extends Overlay {
 		this.sectionNumber = options.sectionId;
 		this.overlayManager = options.overlayManager;
 		super.initialize( options );
+		this.$el.toggleClass( 'editor-overlay-readonly', !!options.readOnly );
 	}
 
 	/**
@@ -664,15 +665,50 @@ class EditorOverlayBase extends Overlay {
 				].filter( Boolean ).join( '&' );
 			}
 		}
-		const $topDescription = $( '<p>' ).addClass( 'description' )
-				.text( mw.msg( 'mobile-frontend-editor-anonwarning-description' ) ),
-			params = util.extend( {
+		const params = util.extend( {
 				returnto: options.returnTo || (
 					// use wgPageName as this includes the namespace if outside Main
 					mw.config.get( 'wgPageName' ) + '#/editor/' + ( options.sectionId || 'all' )
 				)
 			}, queryParams ),
 			signupParams = util.extend( { type: 'signup' }, options.signupQueryParams ),
+			$separator = $( '<div>' )
+				.addClass( 'separator' )
+				.append( $( '<span>' ).text( mw.msg( 'mobile-frontend-editor-anonwarning-separator' ) ) );
+
+		if ( options.readOnly ) {
+			return $( '<div>' ).addClass( 'anonwarning anonwarning--readonly' ).append(
+				$( '<div>' ).addClass( 'actions' ).append( [
+					$( '<p>' )
+						.addClass( 'readonly-title' )
+						.text( mw.msg( 'mobile-frontend-editor-anonwarning-readonly-title' ) ),
+					new Button( {
+						label: mw.msg( 'mobile-frontend-editor-anonwarning-viewsource' ),
+						block: true,
+						additionalClassNames: 'anonymous cdx-button--size-large'
+					} ).$el,
+					$separator,
+					new Button( {
+						label: mw.msg( 'mobile-frontend-editor-anonwarning-login-to-edit' ),
+						block: true,
+						additionalClassNames: 'login cdx-button--size-large',
+						href: mw.util.getUrl( 'Special:UserLogin', params )
+					} ).$el,
+					$( '<p>' )
+						.addClass( 'publish-description' )
+						.text( mw.msg( 'mobile-frontend-editor-anonwarning-readonly-description' ) ),
+					new Button( {
+						label: mw.msg( 'mobile-frontend-watchlist-cta-button-createaccount' ),
+						quiet: true,
+						additionalClassNames: 'signup',
+						href: mw.util.getUrl( 'Special:CreateAccount', util.extend( {}, params, signupParams ) )
+					} ).$el
+				] )
+			);
+		}
+
+		const $topDescription = $( '<p>' ).addClass( 'description' )
+				.text( mw.msg( 'mobile-frontend-editor-anonwarning-description' ) ),
 			signupButton = new Button( {
 				label: mw.msg( 'mobile-frontend-watchlist-cta-button-createaccount' ),
 				block: true,
@@ -698,9 +734,7 @@ class EditorOverlayBase extends Overlay {
 				$topDescription,
 				signupButton.$el,
 				loginButton.$el,
-				$( '<div>' )
-					.addClass( 'separator' )
-					.append( $( '<span>' ).text( mw.msg( 'mobile-frontend-editor-anonwarning-separator' ) ) ),
+				$separator,
 				publishAnon.$el,
 				$( '<p>' )
 					.addClass( 'publish-description anon-msg' )

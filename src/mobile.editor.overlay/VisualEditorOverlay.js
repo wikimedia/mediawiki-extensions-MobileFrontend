@@ -311,6 +311,10 @@ class VisualEditorOverlay extends EditorOverlayBase {
 	 * @inheritdoc
 	 */
 	onClickAnonymous() {
+		if ( this.options.readOnly ) {
+			this.switchToSourceEditor( undefined, false );
+			return;
+		}
 		this.$anonWarning.hide();
 		this.$anonTalkWarning.hide();
 		this.$el.find( '.overlay-content' ).show();
@@ -329,21 +333,24 @@ class VisualEditorOverlay extends EditorOverlayBase {
 	 * Loads an {SourceEditorOverlay} and replaces the existing {VisualEditorOverlay}
 	 *
 	 * @param {jQuery.Promise} [dataPromise] Optional promise for loading content
+	 * @param {boolean} [doLog=true] Log the switch and remember the preferred editor
 	 */
-	switchToSourceEditor( dataPromise ) {
+	switchToSourceEditor( dataPromise, doLog = true ) {
 		const SourceEditorOverlay = this.SourceEditorOverlay,
 			options = this.getOptionsForSwitch();
-		this.log( {
-			action: 'abort',
-			type: 'switchnochange',
-			mechanism: 'navigate'
-		} );
-		this.logFeatureUse( {
-			feature: 'editor-switch',
-			action: 'source-mobile'
-		} );
+		if ( doLog ) {
+			this.log( {
+				action: 'abort',
+				type: 'switchnochange',
+				mechanism: 'navigate'
+			} );
+			this.logFeatureUse( {
+				feature: 'editor-switch',
+				action: 'source-mobile'
+			} );
 
-		this.rememberPreferredEditor( 'SourceEditor' );
+			this.rememberPreferredEditor( 'SourceEditor' );
+		}
 
 		this.$el.addClass( 'switching' );
 		this.$el.find( '.overlay-header-container' ).hide();

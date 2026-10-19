@@ -160,8 +160,7 @@ function isVESourceAvailable() {
  * @param {Skin} skin
  * @param {module:mobile.startup/PageHTMLParser} currentPageHTMLParser
  * @param {Router} router
- * @param {boolean} [readOnly] Open the editor in read-only mode, and leave the edit
- *  links alone. The caller binds its own handler to them.
+ * @param {boolean} [readOnly] Open the editor in read-only mode
  */
 function setupEditor( skin, currentPageHTMLParser, router, readOnly ) {
 	const
@@ -177,19 +176,15 @@ function setupEditor( skin, currentPageHTMLParser, router, readOnly ) {
 		veSourceEnabled = isVESourceAvailable() ||
 			( isVEAvailable() && veaction === 'editsource' );
 
-	if ( !readOnly ) {
-		// A tap on an edit link asks to edit, which the user cannot do. init() binds a
-		// message to the links instead.
-		$editTab.add( '.edit-link' ).on( 'click.mfeditlink', function ( ev ) {
+	$editTab.add( '.edit-link' ).on( 'click.mfeditlink', function ( ev ) {
+		onEditLinkClick( this, ev, overlayManager.router );
+	} );
+	mw.hook( 'wikipage.content' ).add( ( $content ) => {
+		// make sure that any .edit-link links in here don't get double-handled
+		$content.find( EDITSECTION_SELECTOR ).off( 'click.mfeditlink' ).on( 'click.mfeditlink', function ( ev ) {
 			onEditLinkClick( this, ev, overlayManager.router );
 		} );
-		mw.hook( 'wikipage.content' ).add( ( $content ) => {
-			// make sure that any .edit-link links in here don't get double-handled
-			$content.find( EDITSECTION_SELECTOR ).off( 'click.mfeditlink' ).on( 'click.mfeditlink', function ( ev ) {
-				onEditLinkClick( this, ev, overlayManager.router );
-			} );
-		} );
-	}
+	} );
 
 	overlayManager.add( editorPath, ( sectionId ) => {
 		if ( readOnly && !veaction ) {
@@ -636,13 +631,9 @@ function init( currentPageHTMLParser, skin, router ) {
 		} else if ( isReadOnly ) {
 			bindEditLinksSorryToast( mw.msg( 'apierror-readonly' ), router );
 		} else {
-			// The user cannot edit this page, usually because it is protected. A tap on
-			// an edit link says so. A URL that asks for an editor gets one, read-only,
-			// as the desktop site does.
-			const $link = $( '<a>' ).attr( 'href', mw.util.getUrl( mw.config.get( 'wgPageName' ), { action: 'edit' } ) );
-			bindEditLinksSorryToast(
-				mw.message( 'mobile-frontend-editor-disabled', $link ).parseDom()
-			);
+			// The user cannot edit this page, usually because it is protected. Open the
+			// editor read-only, as the desktop site does. It explains why the page
+			// cannot be edited.
 			setupEditor( skin, currentPageHTMLParser, router, true );
 		}
 	}

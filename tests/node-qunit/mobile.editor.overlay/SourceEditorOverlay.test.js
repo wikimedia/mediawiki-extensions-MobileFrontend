@@ -743,6 +743,79 @@ QUnit.test( '#initialize, read-only because the page is protected', ( assert ) =
 	} );
 } );
 
+QUnit.test( '#initialize, read-only has no editor switcher', ( assert ) => {
+	const Page = require( '../../../src/mobile.startup/Page' );
+	sandbox.stub( Page.prototype, 'isVEVisualAvailable' ).returns( true );
+	const editorOverlay = new SourceEditorOverlay( {
+		title: 'test',
+		readOnly: true
+	} );
+
+	return editorOverlay.getLoadingPromise().then( () => {
+		assert.strictEqual(
+			editorOverlay.$el.find( '.switcher-container' ).length,
+			0,
+			'There is no switcher, as there is nothing to switch to.'
+		);
+	} );
+} );
+
+QUnit.test( '#initialize, as anonymous, read-only because the page is protected', ( assert ) => {
+	const editorOverlay = new SourceEditorOverlay( {
+		title: 'test',
+		isAnon: true,
+		readOnly: true
+	} );
+
+	return editorOverlay.getLoadingPromise().then( () => {
+		const $warning = editorOverlay.$anonWarning;
+		assert.true( $warning.hasClass( 'anonwarning--readonly' ), 'The read-only warning is shown.' );
+		assert.strictEqual(
+			$warning.find( '.readonly-title' ).text(),
+			'mobile-frontend-editor-anonwarning-readonly-title',
+			'The warning says why the page cannot be edited.'
+		);
+		assert.strictEqual(
+			$warning.find( '.anonymous' ).text().trim(),
+			'mobile-frontend-editor-anonwarning-viewsource',
+			'The user can view the source instead of editing without logging in.'
+		);
+		assert.strictEqual(
+			$warning.find( '.login' ).text().trim(),
+			'mobile-frontend-editor-anonwarning-login-to-edit',
+			'The log in button says logging in is needed to edit.'
+		);
+		assert.strictEqual(
+			$warning.find( '.publish-description' ).text(),
+			'mobile-frontend-editor-anonwarning-readonly-description',
+			'Logging in might not be enough.'
+		);
+		assert.true( $warning.find( '.signup' ).hasClass( 'cdx-button--weight-quiet' ), 'Creating an account is deprioritized.' );
+		assert.strictEqual( $warning.find( '.description' ).length, 0, 'There is no pitch for creating an account.' );
+		assert.strictEqual(
+			$warning.find( '.anon-msg' ).length,
+			0,
+			'There is no warning about the IP address, as nothing can be published.'
+		);
+	} );
+} );
+
+QUnit.test( '#initialize, as anonymous, edit notices wait for the warning', ( assert ) => {
+	const showEditNoticesSpy = sandbox.spy( SourceEditorOverlay.prototype, 'showEditNotices' );
+	const editorOverlay = new SourceEditorOverlay( {
+		title: 'test',
+		isAnon: true,
+		readOnly: true
+	} );
+
+	return editorOverlay.getLoadingPromise().then( () => {
+		assert.true( showEditNoticesSpy.notCalled, 'No edit notice covers the warning.' );
+		editorOverlay.$anonWarning.find( '.anonymous' ).trigger( 'click' );
+		assert.true( showEditNoticesSpy.calledOnce, 'Edit notices are shown once the user gets past the warning.' );
+		assert.notStrictEqual( editorOverlay.$content.css( 'display' ), 'none', 'The source is shown.' );
+	} );
+} );
+
 QUnit.test( '#initialize, as anonymous with veaction', ( assert ) => {
 	const editorOverlay = new SourceEditorOverlay( {
 		title: 'test',

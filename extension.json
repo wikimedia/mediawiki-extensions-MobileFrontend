@@ -115,7 +115,6 @@
 			"messages": [
 				"mobile-frontend-editor-loading",
 				"mobile-frontend-editor-error-loading",
-				"mobile-frontend-editor-disabled",
 				"mobile-frontend-editor-disabled-anon",
 				"mobile-frontend-editor-uploadenable",
 				"mobile-frontend-editor-loadingtooslow",
@@ -311,6 +310,10 @@
 				"mobile-frontend-editor-anonwarning",
 				"mobile-frontend-editor-anonwarning-description",
 				"mobile-frontend-editor-anonwarning-separator",
+				"mobile-frontend-editor-anonwarning-readonly-title",
+				"mobile-frontend-editor-anonwarning-viewsource",
+				"mobile-frontend-editor-anonwarning-login-to-edit",
+				"mobile-frontend-editor-anonwarning-readonly-description",
 				"mobile-frontend-editor-autocreatewarning-soft-publish-description",
 				"mobile-frontend-editor-editing",
 				"mobile-frontend-editor-blocked-drawer-action-login",

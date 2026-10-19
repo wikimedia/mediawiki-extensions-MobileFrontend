@@ -50,6 +50,16 @@
 		}
 	}
 
+	// Nothing can be saved
+	&.editor-overlay-readonly .ve-ui-toolbar-group-save {
+		display: none;
+	}
+
+	// Read-only source, once it is visible (i.e. past the spinner and anonwarning)
+	&.editor-overlay-readonly.editor-overlay-loaded {
+		background-color: @background-color-neutral-subtle;
+	}
+
 	.anonwarning {
 		text-align: center;
 		display: flex;
@@ -128,6 +138,33 @@
 				white-space: nowrap; /* Prevent text from wrapping */
 			}
 		}
+
+		&--readonly {
+			.readonly-title {
+				font-size: @font-size-large;
+				font-weight: @font-weight-bold;
+				line-height: @line-height-small;
+				margin-bottom: @spacing-150;
+			}
+
+			.cdx-button.anonymous {
+				margin-bottom: 0;
+			}
+
+			.cdx-button.login {
+				margin-top: 0;
+			}
+
+			.publish-description {
+				margin-top: @spacing-50;
+				text-align: center;
+			}
+
+			.cdx-button.signup {
+				width: auto;
+				margin-top: @spacing-75;
+			}
+		}
 	}
 
 	&-ve .anonwarning {
@@ -191,6 +228,10 @@
 
 		&:focus {
 			outline: 0;
+		}
+
+		&[ readonly ] {
+			background-color: transparent;
 		}
 	}
 

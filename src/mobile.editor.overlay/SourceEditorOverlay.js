@@ -75,7 +75,7 @@ class SourceEditorOverlay extends EditorOverlayBase {
 		this.readOnly = !!options.oldId || !!options.readOnly;
 		this.dataPromise = options.dataPromise || this.gateway.getContent();
 		this.currentPage = currentPage();
-		if ( this.currentPage.isVEVisualAvailable() ) {
+		if ( this.currentPage.isVEVisualAvailable() && !this.readOnly ) {
 			options.editSwitcher = true;
 		}
 		if ( this.readOnly ) {
@@ -218,7 +218,7 @@ class SourceEditorOverlay extends EditorOverlayBase {
 		this.log( { action: 'ready' } );
 		this.log( { action: 'loaded' } );
 
-		if ( this.currentPage.isVEVisualAvailable() ) {
+		if ( this.options.editSwitcher ) {
 			mw.loader.using( 'ext.visualEditor.switching' ).then( () => {
 				const toolFactory = new OO.ui.ToolFactory(),
 					toolGroupFactory = new OO.ui.ToolGroupFactory();
@@ -332,10 +332,12 @@ class SourceEditorOverlay extends EditorOverlayBase {
 	onClickAnonymous() {
 		this.$anonWarning.hide();
 		this.$anonTalkWarning.hide();
+		this.$el.addClass( 'editor-overlay-loaded' );
 		// reenable "Next" button
 		this.$anonHiddenButtons.show();
 		this.$content.show();
 		this._resizeEditor();
+		this.showEditNotices();
 	}
 
 	/**
@@ -494,7 +496,11 @@ class SourceEditorOverlay extends EditorOverlayBase {
 					this.onInputWikitextEditor();
 				}
 
-				this.showEditNotices();
+				if ( !showAnonWarning ) {
+					// Otherwise shown once the user gets past the warning (#onClickAnonymous)
+					this.$el.addClass( 'editor-overlay-loaded' );
+					this.showEditNotices();
+				}
 			} );
 	}
 
