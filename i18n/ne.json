@@ -31,7 +31,7 @@
 	"mobile-frontend-editor-autocreatewarning": "<strong>चेतावनी:</strong> तपाई प्रवेश हुनुभएको छैन। तपाईले सम्पादन गरेपछि, तपाईका लागि अस्थायी खाता सिर्जना गरिनेछ। [[$1|अधिक जान्नुहोस्]]। यो <strong>खाताको</strong> म्याद समाप्त भएपछि सूचनाहरू प्राप्त गर्न जारी राख्न र अन्य सुविधाहरू पहुँच गर्न <strong>प्रवेश</strong> गर्नुहोस् वा खाता सिर्जना गर्नुहोस्।",
 	"mobile-frontend-editor-blocked-drawer-action-login": "प्रवेश गर्नुहोस्",
 	"mobile-frontend-drawer-arrow-label": "बन्द गर्नुहोस्",
-	"mobile-frontend-editor-blocked-drawer-action-ok": "हुन्छ",
+	"mobile-frontend-editor-blocked-drawer-action-ok": "ठीक छ",
 	"mobile-frontend-editor-blocked-drawer-action-randompage": "मलाई अर्को पृष्ठमा लैजानुहोस्",
 	"mobile-frontend-editor-blocked-drawer-title": "तपाईलाई {{SITENAME}}मा सम्पादन गर्नबाट रोक लगाइएको छ।",
 	"mobile-frontend-editor-blocked-drawer-title-partial": "तपाईलाई यो पृष्ठ सम्पादन गर्नबाट प्रतिबन्ध लगाइएको छ।",
