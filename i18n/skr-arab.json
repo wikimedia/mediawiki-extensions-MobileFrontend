@@ -3,11 +3,13 @@
 		"authors": [
 			"Engr.ismailbhutta",
 			"Kaleem Bhatti",
-			"Saraiki"
+			"Saraiki",
+			"Tauqeerkhansurani"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "بھانویں ورتݨ آلا موبائل انٹرفیس دے ذریعے ترمیم کرے یا نہ کرے",
 	"mobile-frontend-account-create-captcha-placeholder": "تصدیقی کوڈ لکھو",
+	"mobile-frontend-copyright": "مواد $1 دے تحت دستیاب ہے، جے تائیں ٻیا کجھ نہ آکھیا ڳیا ہووے۔",
 	"mobile-frontend-editor-blocked-drawer-action-login": "لاگ ان تھیوو",
 	"mobile-frontend-drawer-arrow-label": "بند کرو",
 	"mobile-frontend-editor-blocked-drawer-action-ok": "ٹھیک ہے",
@@ -56,7 +58,7 @@
 	"mobile-frontend-settings-save": "ترتیباں محفوظ تھیاں۔",
 	"mobile-frontend-terms-text": "ورتݨ شرطاں",
 	"mobile-frontend-view": "موبائل سائٹ",
-	"mobile-frontend-view-desktop": "ڈیسک ٹاپ",
+	"mobile-frontend-view-desktop": "ڈیسک ٹاپ نظارہ",
 	"mobile-frontend-watchlist-cta-button-login": "لاگ ان تھیوو",
 	"mobile-frontend-watchlist-cta-button-signup": "کھاتہ بناؤ",
 	"mobile-frontend-watchlist-filter-all": "یکے",

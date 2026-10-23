@@ -58,7 +58,7 @@
 	"mobile-frontend-editor-error-conflict": "Σφάλμα, ένας άλλος χρήστης έχει επεξεργαστεί αυτή τη σελίδα.",
 	"mobile-frontend-editor-error-loading": "Σφάλμα, δεν μπορεί να φορτωθεί ο επεξεργαστής.",
 	"mobile-frontend-editor-error-preview": "Σφάλμα, κάτι αναπάντεχο συνέβη κατά την φόρτωση της προεπισκόπησης. Παρακαλούμε κλείστε και προσπαθήστε ξανά.",
-	"mobile-frontend-editor-keep-editing": "Συνέχεια επεξεργασίας",
+	"mobile-frontend-editor-keep-editing": "Συνέχιση επεξεργασίας",
 	"mobile-frontend-editor-licensing": "Με τη δημοσίευση αλλαγών, συμφωνείτε να δημοσιεύσετε τη συνεισφορά σας κάτω από το $1 {{PLURAL:$2| άδεια|άδειες}}.",
 	"mobile-frontend-editor-licensing-with-terms": "Με τη δημοσίευση αλλαγών, συμφωνείτε στο $1 και συμφωνείτε να δημοσιεύσετε τη συνεισφορά σας υπό $2 {{PLURAL:$3|άδεια|άδειες}}.",
 	"mobile-frontend-editor-terms-link": "[$1 Όροι Χρήσης]",
