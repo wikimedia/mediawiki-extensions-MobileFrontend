@@ -446,11 +446,14 @@ function setupEditor( currentPageHTMLParser, router, readOnly ) {
 				}, () => loadSourceEditor() );
 		}
 
+		const loadsVisualEditor = shouldLoadVisualEditor();
 		// showLoading() has to run after the overlay has opened, which disables page scrolling.
 		// clearLoading() has to run after the loading overlay is hidden in any way
 		// (either when loading is aborted, or when the editor overlay is shown instead).
 		const loadingOverlay = editorLoadingOverlay(
-			showLoading, clearLoading, shouldLoadVisualEditor() ? loadBasicEditor : null
+			showLoading, clearLoading,
+			loadsVisualEditor ? loadBasicEditor : null,
+			!loadsVisualEditor
 		);
 
 		if ( shouldLoadVisualEditor() ) {

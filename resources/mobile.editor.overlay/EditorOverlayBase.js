@@ -240,8 +240,8 @@ class EditorOverlayBase extends Overlay {
 		</div>`;
 	}
 
-	fakeToolbar() {
-		return this.options.fakeToolbar;
+	fakeToolbar( options = {} ) {
+		return this.options.fakeToolbar( options );
 	}
 
 	/**
@@ -782,6 +782,7 @@ class EditorOverlayBase extends Overlay {
 			overlayManager: this.options.overlayManager,
 			currentPageHTMLParser: this.options.currentPageHTMLParser,
 			fakeScroll: this.options.fakeScroll,
+			fakeToolbar: this.options.fakeToolbar,
 			api: this.options.api,
 			licenseMsg: this.options.licenseMsg,
 			title: this.options.title,

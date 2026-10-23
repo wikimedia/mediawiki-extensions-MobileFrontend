@@ -136,6 +136,7 @@ The editor.
   - /includes/MobileFrontendEditorHooks.php
   - /tests/phpunit/integration/MobileFrontendHooksTest.php
   - /tests/node-qunit/mobile.init/editorLoadingOverlay.test.js
+  - /tests/node-qunit/mobile.init/fakeToolbar.test.js
   - resources/mobile.init.styles/editor.less
 * Folders:
   - /resources/mobile.editor.overlay

@@ -30,8 +30,17 @@
 	> button {
 		border-right: @border-width-base @border-style-base @background-color-neutral !important;
 	}
+}
 
-	> .loading > .mf-icon {
+.ve-mobile-fakeToolbar-loading {
+	display: flex;
+	align-items: center;
+
+	> .spinner {
 		margin-left: 1em;
 	}
+}
+
+.ve-mobile-fakeToolbar-loading-label {
+	margin-left: 0.5em;
 }

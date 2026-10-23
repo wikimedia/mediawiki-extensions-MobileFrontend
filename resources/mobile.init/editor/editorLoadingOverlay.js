@@ -11,12 +11,14 @@ const mobile = require( 'mobile.startup' ),
  * @param {Function} afterShow Callback which runs after overlay is shown
  * @param {Function} afterHide Callback which runs after overlay is hidden
  * @param {Function} [loadBasicEditor] Callback for the "Use basic editor" button
+ * @param {boolean} [isSourceMode] Indicates the source editor is being loaded
  * @return {module:mobile.startup/Overlay}
  */
-module.exports = function editorLoadingOverlay( afterShow, afterHide, loadBasicEditor ) {
+module.exports = function editorLoadingOverlay( afterShow, afterHide, loadBasicEditor,
+	isSourceMode = false ) {
 	let timeout;
 	const
-		$fakeToolbar = fakeToolbar(),
+		$fakeToolbar = fakeToolbar( { isSourceMode } ),
 		$loadBasicWrapper = $( '<div>' ).addClass( 've-loadbasiceditor' ),
 		loadBasicButton = new IconButton( {
 			label: mw.msg( 'mobile-frontend-editor-loadbasiceditor' ),

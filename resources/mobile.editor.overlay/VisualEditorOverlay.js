@@ -354,7 +354,7 @@ class VisualEditorOverlay extends EditorOverlayBase {
 
 		this.$el.addClass( 'switching' );
 		this.$el.find( '.overlay-header-container' ).hide();
-		this.$el.append( this.fakeToolbar() );
+		this.$el.append( this.fakeToolbar( { isSourceMode: true } ) );
 		this.target.getSurface().setReadOnly( true );
 
 		if ( dataPromise ) {
