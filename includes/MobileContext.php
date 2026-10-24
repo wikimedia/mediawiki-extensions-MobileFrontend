@@ -351,8 +351,6 @@ class MobileContext extends ContextSource {
 				'httpOnly' => true,
 			]
 		);
-		$stats = MediaWikiServices::getInstance()->getStatsdDataFactory();
-		$stats->updateCount( 'mobile.useformat_' . $cookieFormat . '_cookie_set', 1 );
 	}
 
 	/**
