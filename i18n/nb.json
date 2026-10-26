@@ -51,7 +51,6 @@
 	"mobile-frontend-editor-cancel-confirm": "Er du sikker på at du ønsker å avbryte redigeringen?",
 	"mobile-frontend-editor-captcha-try-again": "Feil kode, prøv igjen.",
 	"mobile-frontend-editor-continue": "Neste",
-	"mobile-frontend-editor-disabled": "Denne siden er beskyttet for å forhindre vandalisme. [$1 Vis kilden]",
 	"mobile-frontend-editor-disabled-anon": "Du må logge inn for å redigere denne siden.",
 	"mobile-frontend-editor-editing": "Redigerer",
 	"mobile-frontend-editor-editing-page": "<span><strong>Redigerer</strong> $1</span>",

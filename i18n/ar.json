@@ -77,7 +77,6 @@
 	"mobile-frontend-editor-cancel-confirm": "أتريد حقا أن تهجر تعديلاتك؟",
 	"mobile-frontend-editor-captcha-try-again": "لقد قمت بإدخال رموز خاطئة، الرجاء المحاولة مرة أخرى",
 	"mobile-frontend-editor-continue": "التالي",
-	"mobile-frontend-editor-disabled": "هذه الصفحة محمية لمنع التخريب. [$1 عرض المصدر]",
 	"mobile-frontend-editor-disabled-anon": "يجب عليك تسجيل الدخول لتحرير هذه الصفحة.",
 	"mobile-frontend-editor-editing": "قيد التحرير",
 	"mobile-frontend-editor-editing-page": "<span><strong>تعديل</strong> $1</span>",

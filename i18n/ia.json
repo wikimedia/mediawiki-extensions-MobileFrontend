@@ -38,7 +38,6 @@
 	"mobile-frontend-editor-cancel-confirm": "Es tu secur de voler abandonar tu modification?",
 	"mobile-frontend-editor-captcha-try-again": "Codice incorrecte. Proba de novo.",
 	"mobile-frontend-editor-continue": "Sequente",
-	"mobile-frontend-editor-disabled": "Iste pagina es protegite pro impedir le vandalismo. [$1 Vider texto fonte]",
 	"mobile-frontend-editor-disabled-anon": "Tu debe aperir session pro modificar iste pagina.",
 	"mobile-frontend-editor-editing": "Modifica",
 	"mobile-frontend-editor-editing-page": "<span><strong>Modification</strong> de<span> $1</span>",

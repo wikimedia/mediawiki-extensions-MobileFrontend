@@ -51,7 +51,6 @@
 	"mobile-frontend-editor-cancel-confirm": "আপনি কি সত্যিই আপনার সম্পাদনা পরিত্যাগ করতে চান?",
 	"mobile-frontend-editor-captcha-try-again": "ভুল কোড, আবার চেষ্টা করুন।",
 	"mobile-frontend-editor-continue": "পরবর্তী",
-	"mobile-frontend-editor-disabled": "ধ্বংসপ্রবণতা রোধে এই পাতাটি সুরক্ষিত করা হয়েছে। [$1 উৎস দেখুন]",
 	"mobile-frontend-editor-disabled-anon": "এই পাতাটি সম্পাদনা করতে আপনাকে প্রবেশ করতে হবে।",
 	"mobile-frontend-editor-editing": "সম্পাদনা করছেন",
 	"mobile-frontend-editor-editing-page": "<span><strong>সম্পাদনা করছেন</strong> $1</span>",

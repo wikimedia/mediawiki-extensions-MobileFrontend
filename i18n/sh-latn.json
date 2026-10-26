@@ -34,7 +34,6 @@
 	"mobile-frontend-editor-cancel-confirm": "Zaista želite napustiti izmjenu?",
 	"mobile-frontend-editor-captcha-try-again": "Pogrešan kôd. Pokušajte ponovo.",
 	"mobile-frontend-editor-continue": "Sljedeće",
-	"mobile-frontend-editor-disabled": "Ova stranica je zaštićena radi sprečavanja vandalizma. [$1 Izvorni kod]",
 	"mobile-frontend-editor-disabled-anon": "Će treba da se prijavite da biste uređuivali ovu stranicu.",
 	"mobile-frontend-editor-editing": "Uređivanje",
 	"mobile-frontend-editor-editing-page": "<span><strong>Uređujete stranicu</strong> $1</span>",

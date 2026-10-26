@@ -87,7 +87,6 @@
 	"mobile-frontend-editor-cancel-confirm": "¿Estás seguro de abandonar tu edición?",
 	"mobile-frontend-editor-captcha-try-again": "Código incorrecto, inténtalo de nuevo.",
 	"mobile-frontend-editor-continue": "Siguiente",
-	"mobile-frontend-editor-disabled": "Esta página está protegida para evitar el vandalismo. [$1 Ver código]",
 	"mobile-frontend-editor-disabled-anon": "Necesitas iniciar sesión para editar esta página.",
 	"mobile-frontend-editor-editing": "Editando",
 	"mobile-frontend-editor-editing-page": "<span><strong>Edición</strong> de «$1»</span>",

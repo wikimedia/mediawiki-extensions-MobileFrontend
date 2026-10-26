@@ -66,7 +66,6 @@
 	"mobile-frontend-editor-cancel-confirm": "Apakah Anda benar-benar ingin meninggalkan suntingan Anda?",
 	"mobile-frontend-editor-captcha-try-again": "Kode salah, coba lagi.",
 	"mobile-frontend-editor-continue": "Berikutnya",
-	"mobile-frontend-editor-disabled": "Halaman ini dilindungi untuk mencegah vandalisme. [$1 Lihat sumber]",
 	"mobile-frontend-editor-disabled-anon": "Anda harus masuk log untuk menyunting halaman ini.",
 	"mobile-frontend-editor-editing": "Penyuntingan",
 	"mobile-frontend-editor-editing-page": "<span><strong>Menyunting</strong> $1</span>",

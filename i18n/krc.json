@@ -38,7 +38,6 @@
 	"mobile-frontend-editor-cancel-confirm": "Этген тюзетиуюгюзню кертиден къоюб кетергеми излейсиз?",
 	"mobile-frontend-editor-captcha-try-again": "Джангылыч код, джангыдан кёр.",
 	"mobile-frontend-editor-continue": "Эндиги",
-	"mobile-frontend-editor-disabled": "Бу бет вандализмни аллын тыяр ючюн къорууланыбды.  [$1 Къайнакъны кёр]",
 	"mobile-frontend-editor-disabled-anon": "Бу бетни тюзетир ючюн кирирге керексиз.",
 	"mobile-frontend-editor-editing": "Тюзетиу",
 	"mobile-frontend-editor-editing-page": "<span>$1</span> <strong>бет тюзетиледи</strong>",

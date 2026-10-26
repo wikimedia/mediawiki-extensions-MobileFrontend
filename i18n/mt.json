@@ -10,7 +10,7 @@
 	},
 	"mobile-frontend-copyright": "Il-kontenut huwa disponibbli taħt il-liċenzja $1 sakemm mhux indikat altru.",
 	"mobile-frontend-desc": "Interfaċċa għall-mowbajl",
-	"mobile-frontend-editor-disabled": "M'intix permess li timmodifika din il-paġna.",
+	"mobile-frontend-editor-anonwarning-viewsource": "Ara s-sors",
 	"mobile-frontend-editor-summary-placeholder": "Eżempju: Irranġajt typo, żidt kontenut",
 	"mobile-frontend-language-heading": "<strong>Lingwi</strong>",
 	"mobile-frontend-languages-structured-overlay-suggested-languages-header": "Lingwi ssuġġeriti",

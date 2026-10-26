@@ -34,7 +34,6 @@
 	"mobile-frontend-editor-cancel-confirm": "Слер чындап бойыгардыҥ солынтылараҥ кереестенип ийерге бе?",
 	"mobile-frontend-editor-captcha-try-again": "Јастыра код, јаҥынаҥ умзанар.",
 	"mobile-frontend-editor-continue": "Ээчий",
-	"mobile-frontend-editor-disabled": "Вандализм болбозын деп бу бӱк коруда. [$1 бӱктиҥ кодын кӧрӧр]",
 	"mobile-frontend-editor-disabled-anon": "Бу бӱкти тӱзедерге слерге кирер керек.",
 	"mobile-frontend-editor-editing": "Тӱзедиш",
 	"mobile-frontend-editor-editing-page": "<span><strong>Тӱзедиш</strong> $1</span>",

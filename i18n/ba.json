@@ -35,7 +35,6 @@
 	"mobile-frontend-editor-cancel-confirm": "Һеҙ ысынлап үҙегеҙҙең үҙгәртеүҙәрҙән баш тартырға теләйһегеҙме?",
 	"mobile-frontend-editor-captcha-try-again": "Код дөрөҫ түгел, тағы ҡабатлап ҡарағыҙ.",
 	"mobile-frontend-editor-continue": "Киләһе",
-	"mobile-frontend-editor-disabled": "Был бит вандаллыҡтан һаҡланған. [$1 Биттең кодын ҡарарға]",
 	"mobile-frontend-editor-editing": "Мөхәррирләү",
 	"mobile-frontend-editor-editing-page": "<span><strong>Мөхәррирләү</strong> $1</span>",
 	"mobile-frontend-editor-error": "Хата, үҙгәртеү һаҡланманы.",

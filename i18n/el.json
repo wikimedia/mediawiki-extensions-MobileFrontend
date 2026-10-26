@@ -50,7 +50,6 @@
 	"mobile-frontend-editor-cancel-confirm": "Θέλετε πραγματικά να εγκαταλείψετε την επεξεργασία σας;",
 	"mobile-frontend-editor-captcha-try-again": "Λάθος κωδικός, προσπαθήστε ξανά.",
 	"mobile-frontend-editor-continue": "Επόμενο",
-	"mobile-frontend-editor-disabled": "Αυτή η σελίδα είναι προστατευμένη για την αποτροπή βανδαλισμού. [$1 Προβολή πηγής]",
 	"mobile-frontend-editor-disabled-anon": "Πρέπει να συνδεθείτε για να επεξεργαστείτε αυτή τη σελίδα.",
 	"mobile-frontend-editor-editing": "Επεξεργασία",
 	"mobile-frontend-editor-editing-page": " <span><strong>Επεξεργασία</strong>$1</span>",

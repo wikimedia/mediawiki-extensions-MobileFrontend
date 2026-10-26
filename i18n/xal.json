@@ -21,7 +21,6 @@
 	"mobile-frontend-editor-cancel": "Цуцлх",
 	"mobile-frontend-editor-captcha-try-again": "Буру код, дәкн орлдтн",
 	"mobile-frontend-editor-continue": "Цааранднь",
-	"mobile-frontend-editor-disabled": "Эн халхиг эвдхәс сергәлх үүднәс хамһалсн бәәнә. [ $1 Кодар үзх]",
 	"mobile-frontend-editor-disabled-anon": "Эн халхиг ясврлхин төлә, Та невтрх кергтәт.",
 	"mobile-frontend-editor-editing": "Ясвр",
 	"mobile-frontend-editor-error": "Эндү һарв, ясврнь ниитлгдәд уга.",

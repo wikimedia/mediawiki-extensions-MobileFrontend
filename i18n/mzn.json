@@ -38,7 +38,6 @@
 	"mobile-frontend-editor-cancel-confirm": "راس‌راسی خانی شه إتندچی بنویشته ره رها هاکنی؟",
 	"mobile-frontend-editor-captcha-try-again": "کد إشتىفا هسته، أی تلاش هاکن.",
 	"mobile-frontend-editor-continue": "پیش‌ته",
-	"mobile-frontend-editor-disabled": "این صفحه سر قفل دینگونه که خرابکاری نووشه. [$1 ونه منبع ره هارشین]",
 	"mobile-frontend-editor-disabled-anon": "این صفحه‌ی دچی‌ین وسه لازم هسته که کاروری حىساب دارین.",
 	"mobile-frontend-editor-editing": "دَچی‌ین",
 	"mobile-frontend-editor-editing-page": "<span>$1 ره <strong>دچی‌ین </strong> </span>",

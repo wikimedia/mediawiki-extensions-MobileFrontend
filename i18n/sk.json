@@ -44,7 +44,6 @@
 	"mobile-frontend-editor-cancel-confirm": "Naozaj chcete zahodiť svoje úpravy?",
 	"mobile-frontend-editor-captcha-try-again": "Nesprávny kód, skúste to znovu.",
 	"mobile-frontend-editor-continue": "Ďalej",
-	"mobile-frontend-editor-disabled": "Na predídenie vandalizmu je táto stránka zamknutá. [$1 Zobraziť zdroj]",
 	"mobile-frontend-editor-disabled-anon": "Pre editáciu tejto stránky sa musíte prihlásiť.",
 	"mobile-frontend-editor-editing": "Editácia",
 	"mobile-frontend-editor-editing-page": "<span><strong>Editácia stránky</strong> $1</span>",

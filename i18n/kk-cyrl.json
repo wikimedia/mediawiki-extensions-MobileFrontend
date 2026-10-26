@@ -47,7 +47,6 @@
 	"mobile-frontend-editor-cancel-confirm": "Өңдемеңізді қалырып кетуді шынымен қалайсыз ба?",
 	"mobile-frontend-editor-captcha-try-again": "Қате код, қайта байқап көріңіз.",
 	"mobile-frontend-editor-continue": "Келесі",
-	"mobile-frontend-editor-disabled": "Бұл бет вандализмнің алдын алу үшін қорғалған. [$1 Кодын көру]",
 	"mobile-frontend-editor-disabled-anon": "Осы бетті өңдеу үшін жүйеге кіруіңіз керек.",
 	"mobile-frontend-editor-editing": "Өңдеу",
 	"mobile-frontend-editor-editing-page": "<span>$1 <strong>бетін өңдеп жатырсыз</strong></span>",

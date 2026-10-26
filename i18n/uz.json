@@ -32,7 +32,6 @@
 	"mobile-frontend-editor-cancel-confirm": "Tahriringizdan chindan ham voz kechmoqchimisiz?",
 	"mobile-frontend-editor-captcha-try-again": "Kod xato, qayta urining.",
 	"mobile-frontend-editor-continue": "Keyingi",
-	"mobile-frontend-editor-disabled": "Ushbu sahifa vandalizm sababli himoyalangan. [$1 Manbasini koʻrish]",
 	"mobile-frontend-editor-disabled-anon": "Siz bu sahifani tahrirlash uchun tizimga kirishingiz lozim.",
 	"mobile-frontend-editor-editing": "Tahrirlash",
 	"mobile-frontend-editor-editing-page": "<span><strong>Tahrirlash</strong> $1</span>",

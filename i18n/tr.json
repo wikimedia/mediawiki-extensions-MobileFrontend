@@ -80,7 +80,6 @@
 	"mobile-frontend-editor-cancel-confirm": "Yaptığınız düzenlemeleri gerçekten terk etmek istiyor musunuz?",
 	"mobile-frontend-editor-captcha-try-again": "Yanlış kod, tekrar deneyin.",
 	"mobile-frontend-editor-continue": "Sonraki",
-	"mobile-frontend-editor-disabled": "Bu sayfa vandalizmi önlemek için korunmaktadır.  [$1 Kaynağı gör]",
 	"mobile-frontend-editor-disabled-anon": "Bu sayfayı düzenlemek için oturum açmalısınız.",
 	"mobile-frontend-editor-editing": "Değiştiriliyor",
 	"mobile-frontend-editor-editing-page": "<span>$1</span> <strong>sayfası düzenleniyor</strong>",

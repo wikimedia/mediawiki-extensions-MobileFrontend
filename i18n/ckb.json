@@ -38,7 +38,6 @@
 	"mobile-frontend-editor-cancel-confirm": "دڵنیایت کە دەتەوێت دەست لە دەستکاریکردنەکەت ھەڵبگریت؟",
 	"mobile-frontend-editor-captcha-try-again": "کۆدێکی ھەڵەیە، دووبارە ھەوڵ بدەرەوە.",
 	"mobile-frontend-editor-continue": "دواتر",
-	"mobile-frontend-editor-disabled": "ئەم پەڕەیە پارێزراوە بۆ پارێزگاریکردن لە خراپکاری. [$1 سەرچاوە ببینە]",
 	"mobile-frontend-editor-disabled-anon": "بۆ دەستکاریکردنی ئەم پەڕە پێویستە بچیتە ژوورەوە.",
 	"mobile-frontend-editor-editing": "دەستکاریکردنی",
 	"mobile-frontend-editor-editing-page": "<span><strong>دەستکاریکردنی</strong> $1</span>",

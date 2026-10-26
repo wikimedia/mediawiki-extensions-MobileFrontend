@@ -15,7 +15,6 @@
 	"mobile-frontend-editor-cancel-confirm": "Aradanşîkmak ístiy mísíñíz?",
 	"mobile-frontend-editor-captcha-try-again": "Yañgîş çifre, kaytardan deneñíz.",
 	"mobile-frontend-editor-continue": "Soñrakî",
-	"mobile-frontend-editor-disabled": "Sayipadî vandalismden kollamak úşún kítlengen. [$1 Membadî kór]",
 	"mobile-frontend-editor-disabled-anon": "Bo sayipanî deñíştírmek úşún kíríş etmek kerek.",
 	"mobile-frontend-editor-editing": "Deñíştíríle",
 	"mobile-frontend-editor-editing-page": "<span>$1 <strong>sayipasî deñíştíríle</strong></span>",

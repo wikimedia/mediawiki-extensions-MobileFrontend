@@ -40,7 +40,6 @@
 	"mobile-frontend-editor-cancel-confirm": "کیا واقعی آپ اس ترمیم کو چھوڑ دینا چاہتے ہیں؟",
 	"mobile-frontend-editor-captcha-try-again": "غلط کوڈ، دوبارہ کوشش کریں۔",
 	"mobile-frontend-editor-continue": "آگے جائیں",
-	"mobile-frontend-editor-disabled": "تخریب کاری سے بچنے کے لیے اس صفحہ کو محفوظ کردیا گیا ہے۔ [$1 مسودہ دیکھیں]",
 	"mobile-frontend-editor-disabled-anon": "اس صفحے میں ترمیم کرنے کے لیے اپنے کھاتے سے داخل ہونا ضروری ہے۔",
 	"mobile-frontend-editor-editing": "زیر ترمیم",
 	"mobile-frontend-editor-editing-page": "<span><strong>زیر ترمیم</strong> $1 </span>",

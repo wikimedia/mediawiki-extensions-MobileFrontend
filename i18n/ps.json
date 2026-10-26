@@ -43,7 +43,6 @@
 	"mobile-frontend-editor-cancel-confirm": "ایا تاسو ډاډه یاست چې تاسو خپل سمونونه پرېښودل غواړئ؟",
 	"mobile-frontend-editor-captcha-try-again": "ناسم کوډ، بيا هڅه وکړئ.",
 	"mobile-frontend-editor-continue": "راتلونکی",
-	"mobile-frontend-editor-disabled": "دا مخ د ورانکارۍ د مخنيوي په موخه ژغورل شوی. [$1 سرچينه کتل]",
 	"mobile-frontend-editor-disabled-anon": "ستاسو ننوتلو ته اړتيا ده؛ ترڅو دا مخ سم کړئ.",
 	"mobile-frontend-editor-editing": "سمېږي",
 	"mobile-frontend-editor-editing-page": "<span><strong>سمېږي</strong> $1</span>",

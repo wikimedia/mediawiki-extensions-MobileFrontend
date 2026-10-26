@@ -35,7 +35,6 @@
 	"mobile-frontend-editor-cancel-confirm": "Hočete li zaisto odstupiti od svojej pravky?",
 	"mobile-frontend-editor-captcha-try-again": "Nepravilny kod, poprobujte ponovno.",
 	"mobile-frontend-editor-continue": "Dalje",
-	"mobile-frontend-editor-disabled": "Tuta stranica jest zaščičena za izběganje vandalizma [$1 Uviděti izvorny kod]",
 	"mobile-frontend-editor-disabled-anon": "Za pravjenje tutoj stranice trěba, že se prijavite.",
 	"mobile-frontend-editor-editing": "Pravjenje",
 	"mobile-frontend-editor-editing-page": "<span><strong>Pravjenje stranice</strong> $1</span>",

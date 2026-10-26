@@ -38,7 +38,6 @@
 	"mobile-frontend-editor-cancel-confirm": "Сиз чын эле түзөтүүлөрүңүздөн баш тарткыңыз келеби?",
 	"mobile-frontend-editor-captcha-try-again": "Код туура эмес, кайра аракет кылыңыз.",
 	"mobile-frontend-editor-continue": "Кийинки",
-	"mobile-frontend-editor-disabled": "Вандализмдин алдын алуу үчүн бул барак корголгон. [$1 Булакты көрүү]",
 	"mobile-frontend-editor-disabled-anon": "Бул баракты түзөтүү үчүн аккаунтка киришиңиз керек.",
 	"mobile-frontend-editor-editing": "Түзөтүү",
 	"mobile-frontend-editor-editing-page": "<span>\"‎$1\" <strong>түзөтүлүүдө</strong></span>",

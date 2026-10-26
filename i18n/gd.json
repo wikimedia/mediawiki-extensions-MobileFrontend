@@ -15,7 +15,6 @@
 	"mobile-frontend-editor-cancel-confirm": "A bheil thu cinnteach gu bheil thu airson an deasachadh agad a leigeil seachad?",
 	"mobile-frontend-editor-captcha-try-again": "Seo còd cearr, feuch ris a-rithist.",
 	"mobile-frontend-editor-continue": "Air adhart",
-	"mobile-frontend-editor-disabled": "Chaidh an duilleag seo a dhìon gus bhandalachd a bhacadh.",
 	"mobile-frontend-editor-editing": "A' deasachadh",
 	"mobile-frontend-editor-editing-page": "<span><strong>A' deasachadh</strong> $1</span>",
 	"mobile-frontend-editor-error": "Mearachd, cha deach an deasachadh a shàbhaladh.",

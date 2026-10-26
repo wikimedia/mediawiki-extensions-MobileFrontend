@@ -31,7 +31,6 @@
 	"mobile-frontend-editor-cancel-confirm": "Tsy tianao ho atao indray ve ny fiovana ataonao?",
 	"mobile-frontend-editor-captcha-try-again": "Diso ny kaody, andramo indray.",
 	"mobile-frontend-editor-continue": "Manaraka",
-	"mobile-frontend-editor-disabled": "Voaaro mba hisorohana ny fanimana ity pejy ity. [$1 Hijery ny fango]",
 	"mobile-frontend-editor-disabled-anon": "Mila tafiditra amin'ny kaontinao ianao raha te hanova ity pejy ity.",
 	"mobile-frontend-editor-editing": "Manova",
 	"mobile-frontend-editor-editing-page": "<span><strong>Manova</strong> $1</span>",

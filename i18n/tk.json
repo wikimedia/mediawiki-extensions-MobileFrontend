@@ -34,7 +34,6 @@
 	"mobile-frontend-editor-cancel-confirm": "Hakykatdanam redaktirlemekden ýüz öwürmek isleýärsiňizmi?",
 	"mobile-frontend-editor-captcha-try-again": "Nädogry kod, gaýtadan synanyşyň.",
 	"mobile-frontend-editor-continue": "Indiki",
-	"mobile-frontend-editor-disabled": "Bu sahypa wandalizmiň öňüni almak üçin goralýar. [$1 Çeşmäni gör]",
 	"mobile-frontend-editor-disabled-anon": "Bu sahypany redaktirlemek üçin girmeli.",
 	"mobile-frontend-editor-editing": "Düzedilýär",
 	"mobile-frontend-editor-editing-page": "<span>$1 <strong>sahypasyny düzet</strong></span>",

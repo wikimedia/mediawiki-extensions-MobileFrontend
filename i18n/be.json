@@ -45,7 +45,6 @@
 	"mobile-frontend-editor-cancel-confirm": "Вы сапраўды хочаце адмовіцца ад сваіх змяненняў?",
 	"mobile-frontend-editor-captcha-try-again": "Няправільны код, паспрабуйце зноўку.",
 	"mobile-frontend-editor-continue": "Далей",
-	"mobile-frontend-editor-disabled": "Гэтая старонка пад аховай, каб пазбегнуць вандалізму. [$1 Паглядзець код]",
 	"mobile-frontend-editor-disabled-anon": "Каб правіць гэтую старонку, вам трэба ўвайсці.",
 	"mobile-frontend-editor-editing": "Праўка",
 	"mobile-frontend-editor-editing-page": "<span><strong>Праўка</strong> $1</span>",

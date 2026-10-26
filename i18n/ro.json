@@ -54,7 +54,6 @@
 	"mobile-frontend-editor-cancel-confirm": "Doriți, într-adevăr, să vă abandonați modificarea?",
 	"mobile-frontend-editor-captcha-try-again": "Cod eronat; reîncercați.",
 	"mobile-frontend-editor-continue": "Înainte",
-	"mobile-frontend-editor-disabled": "Această pagină este protejată pentru a preveni vandalismul. [$1 Vezi sursă]",
 	"mobile-frontend-editor-disabled-anon": "Trebuie să vă autentificați pentru a edita această pagină.",
 	"mobile-frontend-editor-editing": "Se editează",
 	"mobile-frontend-editor-editing-page": "<span><strong>Se modifică</strong> $1</span>",

@@ -36,7 +36,6 @@
 	"mobile-frontend-editor-cancel-confirm": "Fu sirum boti fu basɛ fu demesego la mɛ?",
 	"mobile-frontend-editor-captcha-try-again": "'code' dagi ma'a, le maan iŋɛ",
 	"mobile-frontend-editor-continue": "Sɛla n tagelɛ",
-	"mobile-frontend-editor-disabled": "Ba gu pɛgedina wa mɛ ti sageŋɔ da paɛ. [$1 View source]",
 	"mobile-frontend-editor-disabled-anon": "See ti fu Lɔɔgɛ kɛ ta'am demese pɛgedina",
 	"mobile-frontend-editor-editing": "Demesego",
 	"mobile-frontend-editor-editing-page": "<span><strong>Editing</strong> $1</span>",

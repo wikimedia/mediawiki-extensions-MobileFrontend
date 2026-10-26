@@ -40,7 +40,6 @@
 	"mobile-frontend-editor-cancel-confirm": "താങ്കളുടെ തിരുത്ത് ഉപേക്ഷിക്കണം എന്നുറപ്പാണോ?",
 	"mobile-frontend-editor-captcha-try-again": "കോഡ് തെറ്റാണ്, വീണ്ടും ശ്രമിക്കുക.",
 	"mobile-frontend-editor-continue": "അടുത്തത്",
-	"mobile-frontend-editor-disabled": "നശീകരണ പ്രവർത്തനങ്ങൾ തടയുന്നതിനായി ഈ പേജ് പരിരക്ഷിക്കപ്പെട്ടിരിക്കുന്നു. [$1 ഉറവിടം കാണുക]",
 	"mobile-frontend-editor-disabled-anon": "ഈ താൾ തിരുത്താൻ താങ്കൾ പ്രവേശിച്ചിരിക്കണം.",
 	"mobile-frontend-editor-editing": "തിരുത്തുന്നു",
 	"mobile-frontend-editor-editing-page": "<span>$1 <strong>തിരുത്തുന്നു</strong></span>",

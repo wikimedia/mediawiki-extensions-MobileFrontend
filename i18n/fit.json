@@ -14,7 +14,6 @@
 	"mobile-frontend-editor-cancel-confirm": "Halvaakko todella hylätä tekemäsi mookkauksen?",
 	"mobile-frontend-editor-captcha-try-again": "Väärä kooti. Yritä uuesti.",
 	"mobile-frontend-editor-continue": "Seuraava",
-	"mobile-frontend-editor-disabled": "Tämä sivu oon suojattu ilkivallan estämiseksi.",
 	"mobile-frontend-editor-disabled-anon": "Tämän sivun mookkaaminen edellyttää lokkaamista.",
 	"mobile-frontend-editor-editing": "Mookathaan",
 	"mobile-frontend-editor-editing-page": "<span><strong>Mookathaan</strong> sivua $1</span>",

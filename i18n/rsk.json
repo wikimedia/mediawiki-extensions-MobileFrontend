@@ -34,7 +34,6 @@
 	"mobile-frontend-editor-cancel-confirm": "Чи ви наисце жадаце напущиц вашо ушорйованє?",
 	"mobile-frontend-editor-captcha-try-again": "Погришни код, пробуйце ознва",
 	"mobile-frontend-editor-continue": "Шлїдуюце",
-	"mobile-frontend-editor-disabled": "Тот бок защицени пре онєможлївйованє вандализма.[$1Опатриц жридлови код]",
 	"mobile-frontend-editor-disabled-anon": "Треба же би сце ше приявели кед жадаце ушорйовац тот бок.",
 	"mobile-frontend-editor-editing": "Ушорйованє",
 	"mobile-frontend-editor-editing-page": "<span><strong>Ушорюєце бок</strong> $1</span>",

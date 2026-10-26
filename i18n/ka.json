@@ -42,7 +42,6 @@
 	"mobile-frontend-editor-cancel-confirm": "დარწმუნებული ხართ, რომ გსურთ თქვენი ცვლილებების უარყოფა?",
 	"mobile-frontend-editor-captcha-try-again": "არასწორი კოდი, თავიდან სცადეთ.",
 	"mobile-frontend-editor-continue": "შემდეგი",
-	"mobile-frontend-editor-disabled": "ეს გვერდი დაცულია რედაქტირებისგან ვანდალიზმთან გამკლავების მიზნით. [$1 წყაროს ნახვა]",
 	"mobile-frontend-editor-disabled-anon": "ამ გვერდის რედაქტირებისათვის, საჭიროა ავტორიზაციის გავლა.",
 	"mobile-frontend-editor-editing": "რედაქტირება",
 	"mobile-frontend-editor-editing-page": "<span><strong>არედაქტირებთ</strong> გვერდს „$1“</span>",

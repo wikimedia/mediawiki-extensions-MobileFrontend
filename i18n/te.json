@@ -38,7 +38,6 @@
 	"mobile-frontend-editor-cancel-confirm": "మీ దిద్దుబాటును మధ్యలోనే వదిలెయ్యాలని నిజంగానే అనుకుంటున్నారా?",
 	"mobile-frontend-editor-captcha-try-again": "తప్పు కోడ్, మళ్ళీ ప్రయత్నించండి.",
 	"mobile-frontend-editor-continue": "తదుపరి",
-	"mobile-frontend-editor-disabled": "దుశ్చర్యలను నివారించేందుకు గాను, ఈ పేజీని సంరక్షించారు. [$1 సోర్సు చూడండి]",
 	"mobile-frontend-editor-disabled-anon": "ఈ పేజీలో దిద్దిబాట్లు చెయ్యాలంటే మీరు లాగినవ్వాలి.",
 	"mobile-frontend-editor-editing": "దిద్దుతున్నారు",
 	"mobile-frontend-editor-editing-page": "<span>$1</span> పేజీని <strong>దిద్దుతున్నారు</strong>",

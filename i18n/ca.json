@@ -57,7 +57,6 @@
 	"mobile-frontend-editor-cancel-confirm": "Segur que voleu abandonar la'edició?",
 	"mobile-frontend-editor-captcha-try-again": "Codi incorrecte, proveu-ho un altre cop.",
 	"mobile-frontend-editor-continue": "Següent",
-	"mobile-frontend-editor-disabled": "Aquesta pàgina està protegida per a evitar el vandalisme. [$1 Veure la font]",
 	"mobile-frontend-editor-disabled-anon": "Cal que iniciïs sessió per editar aquesta pàgina",
 	"mobile-frontend-editor-editing": "Edició de la pàgina",
 	"mobile-frontend-editor-editing-page": "<span><strong>Modificant</strong> $1</span>",

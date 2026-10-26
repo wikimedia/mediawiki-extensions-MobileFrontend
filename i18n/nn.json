@@ -26,7 +26,6 @@
 	"mobile-frontend-editor-cancel-confirm": "Er du viss på at du ynskjer å kasta endringa di?",
 	"mobile-frontend-editor-captcha-try-again": "Feil kode, prøv igjen.",
 	"mobile-frontend-editor-continue": "Neste",
-	"mobile-frontend-editor-disabled": "Denne sida er verna for å hindra hærverk.",
 	"mobile-frontend-editor-disabled-anon": "Du lyt logga inn for å endra denne sida.",
 	"mobile-frontend-editor-editing": "Endrar",
 	"mobile-frontend-editor-editing-page": "<span><strong>Endrar</strong> $1</span>",

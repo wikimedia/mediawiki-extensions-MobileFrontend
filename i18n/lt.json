@@ -47,7 +47,6 @@
 	"mobile-frontend-editor-cancel-confirm": "Ar tikrai norite atsisakyti savo pakeitimų?",
 	"mobile-frontend-editor-captcha-try-again": "Neteisingas kodas, bandykite dar kartą.",
 	"mobile-frontend-editor-continue": "Toliau",
-	"mobile-frontend-editor-disabled": "Šis puslapis yra apsaugotas, kad būtų išvengta vandalizmo. [$1 Žiūrėti šaltinį]",
 	"mobile-frontend-editor-disabled-anon": "Norėdami redaguoti šį puslapį, turite prisijungti.",
 	"mobile-frontend-editor-editing": "Redaguojama",
 	"mobile-frontend-editor-editing-page": "<span><strong>Redaguojamas</strong> $1</span>",

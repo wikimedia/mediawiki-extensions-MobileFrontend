@@ -46,7 +46,6 @@
 	"mobile-frontend-editor-cancel-confirm": "तुम्हाला खरोखर संपादन रद्द करायचे आहे?",
 	"mobile-frontend-editor-captcha-try-again": "चुकीचा कोड, पुन्हा प्रयत्न करा.",
 	"mobile-frontend-editor-continue": "पुढील",
-	"mobile-frontend-editor-disabled": "तोडफोड रोखण्यासाठी हे पृष्ठ संरक्षित केले आहे. [$1 स्त्रोत पहा]",
 	"mobile-frontend-editor-disabled-anon": "हा विकि वापरण्यास आपण आल्याची नोंद करणे आवश्यक आहे",
 	"mobile-frontend-editor-editing": "संपादन",
 	"mobile-frontend-editor-editing-page": "<span><strong>संपादन</strong>$1</span>",

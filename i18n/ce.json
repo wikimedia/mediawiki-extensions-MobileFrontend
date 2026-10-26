@@ -35,7 +35,6 @@
 	"mobile-frontend-editor-cancel-confirm": "Хьуна бакъалла а лаьий хьайн хийцамаш ца тига?",
 	"mobile-frontend-editor-captcha-try-again": "Нийса йоцу код, йуха гӀорта.",
 	"mobile-frontend-editor-continue": "Кхин дӀа",
-	"mobile-frontend-editor-disabled": "ХӀара агӀо вандализм ца йайта ларйина йу. [$1 Хьажа агӀонан код]",
 	"mobile-frontend-editor-disabled-anon": "ХӀара агӀо тайан системин чугӀо.",
 	"mobile-frontend-editor-editing": "Хийцам",
 	"mobile-frontend-editor-editing-page": "<span><strong>Тадар</strong> $1</span>",

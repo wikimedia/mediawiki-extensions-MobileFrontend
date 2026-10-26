@@ -35,7 +35,6 @@
 	"mobile-frontend-editor-cancel-confirm": "დორწუმებული რეთი, ნამჷ-და  გონებჷნა თქვანი თირუეფიშ ვარება?",
 	"mobile-frontend-editor-captcha-try-again": "ჩილათერი კოდი, დუდშე ქოცადით.",
 	"mobile-frontend-editor-continue": "უკული",
-	"mobile-frontend-editor-disabled": "ათე ხასჷლა თხილერი რე რედაქტირაფაშე ვანდალიზმიშე გოთხილუაშ სამანჯელით. [$1 წყუშ ძირაფა]",
 	"mobile-frontend-editor-disabled-anon": "ათე ხასჷლაშ რედაქტირაფაშო ოხვილური რე, გემკორთათ ავტორიზაცია",
 	"mobile-frontend-editor-editing": "რედაქტირაფა",
 	"mobile-frontend-editor-editing-page": "<span><strong>არედაქტირენთ</strong> ხასჷლას „$1“</span>",

@@ -44,7 +44,6 @@
 	"mobile-frontend-editor-cancel-confirm": "ਕੀ ਤੁਸੀਂ ਸੱਚਮੁੱਚ ਆਪਣੇ ਸੰਪਾਦਨ ਨੂੰ ਛੱਡਣਾ ਚਾਹੁੰਦੇ ਹੋ?",
 	"mobile-frontend-editor-captcha-try-again": "ਗਲਤ ਕੋਡ, ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
 	"mobile-frontend-editor-continue": "ਅਗਲਾ",
-	"mobile-frontend-editor-disabled": "ਇਹ ਸਫ਼ਾ ਬਰਬਾਦੀ ਨੂੰ ਰੋਕਣ ਲਈ ਸੁਰੱਖਿਅਤ ਕੀਤਾ ਗਿਆ ਹੈ। [ $1 ਸਰੋਤ ਦੇਖੋ]",
 	"mobile-frontend-editor-disabled-anon": "ਤੁਹਾਨੂੰ ਇਸ ਸਫ਼ੇ ਨੂੰ ਸੋਧਣ ਲਈ ਦਾਖਲ ਹੋਣ ਦੀ ਲੋੜ ਐ।",
 	"mobile-frontend-editor-editing": "ਸੋਧਣਾ ਜਾਰੀ",
 	"mobile-frontend-editor-editing-page": "<span><strong>ਸੋਧਿਆ ਜਾ ਰਿਹਾ</strong> $1</span>",

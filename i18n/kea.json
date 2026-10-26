@@ -38,7 +38,6 @@
 	"mobile-frontend-editor-cancel": "Kansela",
 	"mobile-frontend-editor-cancel-confirm": "Ten sertésa ma bu kre bandona es idison ki ka gardadu?",
 	"mobile-frontend-editor-captcha-try-again": "Kódi eradu, tenta otu bes.",
-	"mobile-frontend-editor-disabled": "Es pájina sta purtejidu pa npidi bandalismu. [$1 Udja fonti]",
 	"mobile-frontend-editor-disabled-anon": "Bu debi kuneta pa idita es pájina.",
 	"mobile-frontend-editor-editing-page": "<span><strong>Sa-ta iditadu</strong> $1</span>",
 	"mobile-frontend-editor-terms-link": "[$1 Térmus di Uzu]",

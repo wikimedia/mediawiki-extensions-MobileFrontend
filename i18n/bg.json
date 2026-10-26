@@ -40,7 +40,6 @@
 	"mobile-frontend-editor-cancel-confirm": "Наистина ли искате да се откажете от редакцията си?",
 	"mobile-frontend-editor-captcha-try-again": "Грешен код, опитайте отново.",
 	"mobile-frontend-editor-continue": "Следваща",
-	"mobile-frontend-editor-disabled": "Тази страница е защитена с цел предотвратяване на вандализми. [$1 Преглед на кода]",
 	"mobile-frontend-editor-disabled-anon": "Трябва да влезете, за да редактирате тази страница.",
 	"mobile-frontend-editor-editing": "Редактиране",
 	"mobile-frontend-editor-error": "Грешка, редакцията не е публикувана.",

@@ -48,7 +48,6 @@
 	"mobile-frontend-editor-cancel-confirm": "के तपाई आफ्नो सम्पादन त्याग्न चाहनुहुन्छ?",
 	"mobile-frontend-editor-captcha-try-again": "गलत अङ्क, पुनः प्रयास गर्नुहोस्।",
 	"mobile-frontend-editor-continue": "अर्को",
-	"mobile-frontend-editor-disabled": "यो पृष्ठ बर्बरता रोक्नका लागि सुरक्षित गरिएको छ। [$1 स्रोत हेर्नुहोस्]",
 	"mobile-frontend-editor-disabled-anon": "पृष्ठ सम्पादन गर्नको लागि प्रवेश जरुरी छ।",
 	"mobile-frontend-editor-editing": "सम्पादन गरिँदै",
 	"mobile-frontend-editor-editing-page": "<span>$1 <strong>सम्पादन गर्दै</strong></span>",

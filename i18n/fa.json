@@ -79,7 +79,6 @@
 	"mobile-frontend-editor-cancel-confirm": "واقعاً می‌خواهید ویرایش خود را رها کنید؟",
 	"mobile-frontend-editor-captcha-try-again": "کد اشتباه، مجدداً تلاش کنید.",
 	"mobile-frontend-editor-continue": "بعدی",
-	"mobile-frontend-editor-disabled": "این صفحه برای جلوگیری از خرابکاری محافظت شده است. [$1 مشاهدهٔ مبدأ]",
 	"mobile-frontend-editor-disabled-anon": "برای ویرایش در این صفحه نیاز است که به سامانه وارد شوید.",
 	"mobile-frontend-editor-editing": "در حال ویرایش",
 	"mobile-frontend-editor-editing-page": "<span><strong>در حال ویرایش </strong> $1</span>",

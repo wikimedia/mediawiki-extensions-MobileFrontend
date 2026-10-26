@@ -29,7 +29,6 @@
 	"mobile-frontend-editor-cancel-confirm": "Dëshiron vërtet ta braktisësh redaktimin tënd?",
 	"mobile-frontend-editor-captcha-try-again": "Kod i gabuar, provo përsëri.",
 	"mobile-frontend-editor-continue": "Tjetra",
-	"mobile-frontend-editor-disabled": "Kjo faqe është e mbrojtur për të parandaluar vandalizmin. [$1 Shih burimin]",
 	"mobile-frontend-editor-disabled-anon": "Duhet të hysh në llogari për të redaktuar këtë faqe.",
 	"mobile-frontend-editor-editing": "Duke redaktuar",
 	"mobile-frontend-editor-keep-editing": "Vazhdo redaktimin",

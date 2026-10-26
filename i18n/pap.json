@@ -39,7 +39,6 @@
 	"mobile-frontend-editor-cancel-confirm": "Bo ke ègt bandoná bo adaptashon?",
 	"mobile-frontend-editor-captcha-try-again": "Kódigo robes, purba atrobe.",
 	"mobile-frontend-editor-continue": "Siguiente",
-	"mobile-frontend-editor-disabled": "E página aki ta protehá pa prevení vandalismo. [$1 Wak e fuente]",
 	"mobile-frontend-editor-disabled-anon": "Bo mester inisiá un seshon pa editá e página aki.",
 	"mobile-frontend-editor-editing": "Editá",
 	"mobile-frontend-editor-editing-page": "<span><strong>Adaptá</strong> $1</span>",

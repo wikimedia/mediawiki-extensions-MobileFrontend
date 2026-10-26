@@ -61,7 +61,6 @@
 	"mobile-frontend-editor-cancel-confirm": "क्या आप सच में अपना बदलाव त्यागना चाहते हैं?",
 	"mobile-frontend-editor-captcha-try-again": "कोड गलत है, पुनः प्रयास करें।",
 	"mobile-frontend-editor-continue": "अगला",
-	"mobile-frontend-editor-disabled": "इस पृष्ठ को बर्बरता से रोकने के लिए सुरक्षित किया गया है। [$1 स्रोत देखें]",
 	"mobile-frontend-editor-disabled-anon": "इस पृष्ठ को संपादित करने के लिए आपको लॉग-इन करना होगा।",
 	"mobile-frontend-editor-editing": "संपादन",
 	"mobile-frontend-editor-editing-page": "<span>$1 का <strong>संपादन</strong></span>",

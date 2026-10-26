@@ -41,7 +41,6 @@
 	"mobile-frontend-editor-cancel-confirm": "Vilt þú í raun yfirgefa breytinguna þína?",
 	"mobile-frontend-editor-captcha-try-again": "Rangur kóði, reyndu aftur.",
 	"mobile-frontend-editor-continue": "Áfram",
-	"mobile-frontend-editor-disabled": "Þessa síða er varin til að koma í veg fyrir skemmdarverk. [$1 Skoða uppruna]",
 	"mobile-frontend-editor-disabled-anon": "Þú þarft að skrá þig inn til að breyta þessari síðu.",
 	"mobile-frontend-editor-editing": "Breyti",
 	"mobile-frontend-editor-editing-page": "<span><strong>Breyti</strong> $1</span>",

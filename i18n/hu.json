@@ -48,7 +48,6 @@
 	"mobile-frontend-editor-cancel-confirm": "Biztos abba akarod hagyni a szerkesztést?",
 	"mobile-frontend-editor-captcha-try-again": "Hibás kód, próbáld újra.",
 	"mobile-frontend-editor-continue": "Következő",
-	"mobile-frontend-editor-disabled": "Ez a lap a vandalizmus megelőzése érdekében védett. [$1 Forráskód megtekintése]",
 	"mobile-frontend-editor-disabled-anon": "Az oldal szerkesztéséhez be kell jelentkezned.",
 	"mobile-frontend-editor-editing": "Szerkesztés",
 	"mobile-frontend-editor-editing-page": "<span>$1 <strong>szerkesztése</strong></span>",

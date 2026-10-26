@@ -42,7 +42,6 @@
 	"mobile-frontend-editor-cancel-confirm": "Ị chọrọ n'ezie ịgbahapụ ndezi Ị mere?",
 	"mobile-frontend-editor-captcha-try-again": "Koodu n'ezighi ezi, nwaa ọzọ.",
 	"mobile-frontend-editor-continue": "Nkeọzọ",
-	"mobile-frontend-editor-disabled": "A na-echekwa ibe a iji gbochie mmebi ihe. [$1 Lee Ebe e si nweta ya]",
 	"mobile-frontend-editor-disabled-anon": "Ị ga-abanye iji dezie ibe a.",
 	"mobile-frontend-editor-editing": "Na-edezi",
 	"mobile-frontend-editor-editing-page": "<span><strong>Na-edezi</strong> $1</span>",

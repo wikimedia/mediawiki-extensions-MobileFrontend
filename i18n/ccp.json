@@ -35,7 +35,6 @@
 	"mobile-frontend-editor-cancel-confirm": "𑄖𑄪𑄭 𑄇𑄨 𑄉𑄬𑄌𑄴𑄬𑄇𑄴 𑄉𑄧𑄢𑄨 𑄖𑄧𑄢𑄴 𑄃𑄬𑄓𑄨𑄑𑄴 𑄉𑄧𑄢𑄚 𑄖𑄳𑄠𑄉𑄴 𑄉𑄧𑄢𑄨𑄝𑄢𑄴 𑄥𑄌𑄴𑅃",
 	"mobile-frontend-editor-captcha-try-again": "𑄞𑄫𑄣𑄴 𑄇𑄮𑄓𑄴, 𑄃𑄢𑄧𑄇𑄴𑄬𑄛𑄴 𑄌𑄬𑄢𑄬𑄖𑄴𑄳𑄦 𑄉𑄧𑄢𑄴",
 	"mobile-frontend-editor-continue": "𑄡𑄬𑄢𑄬𑄘𑄨",
-	"mobile-frontend-editor-disabled": "𑄞𑄨𑄙𑄬𑄝𑄧𑄁𑄥𑄧𑄖𑄴𑄪𑄚𑄴 𑄢𑄮𑄇𑄴𑄬 𑄛𑄬𑄝𑄖𑄴𑄬 𑄃𑄬𑄭 𑄛𑄘𑄊𑄚𑄴 𑄉𑄧𑄟𑄬 𑄢𑄮𑄇𑄴𑄬 𑄉𑄧𑄢 𑄦𑄮𑄠𑄬𑅁 [$1 𑄥𑄮𑄢𑄴𑄥𑄴 𑄢𑄬𑄚𑄨 𑄌𑄧]",
 	"mobile-frontend-editor-disabled-anon": "𑄃𑄬𑄭 𑄛𑄘𑄊𑄚𑄴 𑄃𑄬𑄓𑄨𑄑𑄴 𑄉𑄧𑄢𑄨𑄝𑄖𑄴𑄬 𑄖𑄧𑄢𑄴 𑄣𑄨𑄉𑄴 𑄃𑄨𑄚𑄴 𑄉𑄧𑄢 𑄛𑄧𑄢𑄨𑄝𑄮𑅁",
 	"mobile-frontend-editor-editing": "𑄃𑄬𑄓𑄨𑄑𑄨𑄁",
 	"mobile-frontend-editor-editing-page": "<span><strong>𑄃𑄬𑄓𑄨𑄑𑄨𑄁</strong> $1</span>",

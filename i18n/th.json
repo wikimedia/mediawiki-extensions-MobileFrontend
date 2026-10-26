@@ -45,7 +45,6 @@
 	"mobile-frontend-editor-cancel-confirm": "คุณต้องการละทิ้งการแก้ไขของคุณหรือไม่?",
 	"mobile-frontend-editor-captcha-try-again": "รหัสไม่ถูกต้อง ลองใหม่อีกครั้ง",
 	"mobile-frontend-editor-continue": "ถัดไป",
-	"mobile-frontend-editor-disabled": "หน้านี้ถูกป้องกันเพื่อขัดขวางการก่อกวน [$1 ดูต้นฉบับ]",
 	"mobile-frontend-editor-disabled-anon": "คุณจำเป็นต้องเข้าสู่ระบบเพื่อแก้ไขหน้านี้",
 	"mobile-frontend-editor-editing": "กำลังแก้ไข",
 	"mobile-frontend-editor-editing-page": "<span><strong>กำลังแก้ไข</strong> $1</span>",

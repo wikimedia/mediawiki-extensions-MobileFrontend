@@ -44,7 +44,6 @@
 	"mobile-frontend-editor-cancel-confirm": "Sur oc’h e fell deoc’h dilezel ho kemm ?",
 	"mobile-frontend-editor-captcha-try-again": "Kod direizh, klaskit en-dro.",
 	"mobile-frontend-editor-continue": "War-lerc'h",
-	"mobile-frontend-editor-disabled": "Gwarezet eo ar bajenn-mañ evit herzel ouzh ar vandalerezh. [$1 Gwelet an tarzh]",
 	"mobile-frontend-editor-disabled-anon": "Ret eo deoc'h kevreañ evit gallout kemmañ ar bajenn-mañ.",
 	"mobile-frontend-editor-editing": "O kemmañ",
 	"mobile-frontend-editor-editing-page": "<span><strong>O kemmañ</strong> $1</span>",

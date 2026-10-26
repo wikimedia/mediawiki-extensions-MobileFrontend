@@ -37,7 +37,6 @@
 	"mobile-frontend-editor-cancel-confirm": "कि अपने वास्तवमे अपन बदलाव त्यागेला चाह हथिन ?",
 	"mobile-frontend-editor-captcha-try-again": "सङ्केत गलत हे, पुनः प्रयास करथिन ।",
 	"mobile-frontend-editor-continue": "अगला",
-	"mobile-frontend-editor-disabled": "ई पन्नाके बर्बरतासे रोकेला सुरक्षित कैल गेलै हे । [$1 स्रोत देखथिन]",
 	"mobile-frontend-editor-disabled-anon": "ई पन्नाके सम्पादित करेला अपनेके प्रवेश करे पड़तै ।",
 	"mobile-frontend-editor-editing": "सम्पादन",
 	"mobile-frontend-editor-editing-page": "<span>$1 <strong>सम्पादित होवैत</strong></span>",

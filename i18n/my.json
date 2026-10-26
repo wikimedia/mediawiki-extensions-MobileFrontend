@@ -37,7 +37,6 @@
 	"mobile-frontend-editor-cancel-confirm": "သင်၏တည်းဖြတ်မှုကို အမှန်တကယ် စွန့်ခွာလိုပါသလား?",
 	"mobile-frontend-editor-captcha-try-again": "မှားယွင်းသောကုဒ်၊ ထပ်မံကြိုးစားပါ။",
 	"mobile-frontend-editor-continue": "ရှေ့",
-	"mobile-frontend-editor-disabled": "ဖျက်လိုဖျက်ဆီးလုပ်ဆောင်ခြင်းကိုတားဆီးရန် ဤစာမျက်နှာအား ကာကွယ်ထားပါသည်။ [$1 ရင်းမြစ်ကြည့်ရန်]",
 	"mobile-frontend-editor-disabled-anon": "ဤစာမျက်နှာကို တည်းဖြတ်ရန် အကောင့်ထဲဝင်ဖို့ လိုအပ်သည်",
 	"mobile-frontend-editor-editing": "တည်းဖြတ်ခြင်း",
 	"mobile-frontend-editor-editing-page": "<span>$1 ကို <strong>တည်းဖြတ်နေသည်</strong></span>",

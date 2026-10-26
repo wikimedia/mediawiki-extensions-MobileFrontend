@@ -37,7 +37,6 @@
 	"mobile-frontend-editor-cancel-confirm": "Šymə dyryst pidəjone šymə ovaxtətijon ohašte?",
 	"mobile-frontend-editor-captcha-try-again": "Kod sərost ni, sənibəton dəvinə bykənən.",
 	"mobile-frontend-editor-continue": "Dumotono šə",
-	"mobile-frontend-editor-disabled": "Ym səhifə ce vandalizmiku mydofijə kardə byə. [$1 Mənbə dijəkən]",
 	"mobile-frontend-editor-disabled-anon": "Šymə bəpe dəšən ym səhifə sərost kardejro.",
 	"mobile-frontend-editor-editing": "Sərost karde",
 	"mobile-frontend-editor-editing-page": "<span><strong>Sərost karde</strong> $1</span>",
