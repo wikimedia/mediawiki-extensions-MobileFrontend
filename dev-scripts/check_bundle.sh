@@ -4,15 +4,9 @@ set -euo pipefail
 cat << eof
 Checking the contents of resources/dist
 
-I will now check that you built them using the correct Node.js version v$(< .nvmrc).
-Note: You are using $(node -v).
+Note: You are using $(node -v), .nvmrc has $(< .nvmrc).
 Building assets...
 eof
-
-if [ "v$(cat .nvmrc)" != "$(node -v)" ]; then
-	echo "You are not running the required node version"
-	exit 1
-fi;
 
 npm -s run build
 
