@@ -17,7 +17,7 @@ class WMFBaseDomainExtractor implements BaseDomainExtractorInterface {
 	/**
 	 * @var string[]
 	 */
-	private array $wmfWikiHosts = [
+	private const WMF_WIKI_HOSTS = [
 		'wikipedia.org',
 		'wikibooks.org',
 		'wikiversity.org',
@@ -34,7 +34,7 @@ class WMFBaseDomainExtractor implements BaseDomainExtractorInterface {
 	/**
 	 * @var string[]
 	 */
-	private array $wmfMultiDomainWikiHosts = [
+	private const WMF_MULTI_DOMAIN_WIKI_HOSTS = [
 		// commons, office, meta, outreach, wikimania, incubator, etc...
 		'.wikimedia.org',
 		// beta cluster
@@ -63,12 +63,12 @@ class WMFBaseDomainExtractor implements BaseDomainExtractorInterface {
 		$urlUtils = $services->getUrlUtils();
 		$host = $urlUtils->parse( (string)$server )['host'] ?? '';
 
-		$wikiHost = $this->matchBaseHostname( $host, $this->wmfWikiHosts );
+		$wikiHost = $this->matchBaseHostname( $host, self::WMF_WIKI_HOSTS );
 		if ( $wikiHost !== false ) {
 			return '.' . $wikiHost;
 		}
 
-		$multiWikiHost = $this->matchBaseHostname( $host, $this->wmfMultiDomainWikiHosts );
+		$multiWikiHost = $this->matchBaseHostname( $host, self::WMF_MULTI_DOMAIN_WIKI_HOSTS );
 		if ( $multiWikiHost !== false ) {
 			return '.' . $this->extractSubdomain( $host, $multiWikiHost );
 		}
