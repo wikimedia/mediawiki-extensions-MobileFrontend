@@ -176,5 +176,7 @@
 	"mobile-frontend-amc-outreach-enabled-message": "Den erweiderte Modus ass elo aktivéiert. Dir kënnt en an Ären Astellungen desaktivéieren.",
 	"mobile-frontend-amc-outreach-dismissed-message": "Dir kënnt den erweiderte Modus zu all Moment an Ären Astellungen aktivéieren.",
 	"mobile-frontend-beta-only": "Funktioun nëmmen am Beta-Modus disponibel",
+	"mobile-frontend-console-recruit": "Gitt méi doriwwer gewuer, wéi mir eise mobille Site opbauen, ënner https\n://\nwww.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
+	"mobile-frontend-special-pages-pref": "Spezialsäiten op mobillen Apparaten optiméieren a vereinfachen (recommandéiert)",
 	"prefs-mobile": "Mobil Astellungen"
 }
