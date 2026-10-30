@@ -164,5 +164,7 @@
 	"mobile-frontend-user-pref-option": "Benotzerastellungen",
 	"mobile-frontend-user-pref-description": "Ännert Är Astellungen, dorënner d'Passwuert, d'Ausgesi vun der Websäit, Notifikatiounsastellungen an nach méi.",
 	"mobile-frontend-user-pref-link": "Astellungen opmaachen",
+	"mobile-frontend-console-recruit": "Gitt méi doriwwer gewuer, wéi mir eise mobille Site opbauen, ënner https\n://\nwww.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
+	"mobile-frontend-special-pages-pref": "Spezialsäiten op mobillen Apparaten optiméieren a vereinfachen (recommandéiert)",
 	"prefs-mobile": "Mobil Astellungen"
 }
