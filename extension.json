@@ -108,7 +108,6 @@
 				"mediawiki.jqueryMsg",
 				"mediawiki.router",
 				"mediawiki.storage",
-				"web2017-polyfills",
 				"mobile.startup"
 			],
 			"messages": [
