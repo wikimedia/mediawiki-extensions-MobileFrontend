@@ -236,9 +236,8 @@ my login" for mobile users.
 * Files:
   - /resources/dist/mobile.special.userlogin.scripts.js
   - /src/mobile.special.userlogin.scripts.js
-  - /resources/mobile.special.styles/common.less
-  - /resources/mobile.special.styles/forms.less
-  - /resources/mobile.special.styles/login.less
+* Folders:
+  - /resources/mobile.special.styles/
 * Contact: [Reader Growth][1]
 * Phabricator: https://phabricator.wikimedia.org/project/view/3707/
 
