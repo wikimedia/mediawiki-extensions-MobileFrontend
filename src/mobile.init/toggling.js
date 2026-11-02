@@ -1,8 +1,7 @@
 module.exports = function () {
 	const
 		Toggler = require( './Toggler' ),
-		sectionCollapsing = require( './sectionCollapsing' ),
-		eventBus = require( '../mobile.startup/eventBusSingleton' );
+		sectionCollapsing = require( './sectionCollapsing' );
 
 	/**
 	 * Initialises toggling code.
@@ -28,8 +27,7 @@ module.exports = function () {
 			// eslint-disable-next-line no-new
 			new Toggler( {
 				$container,
-				prefix,
-				eventBus
+				prefix
 			} );
 		}
 	}

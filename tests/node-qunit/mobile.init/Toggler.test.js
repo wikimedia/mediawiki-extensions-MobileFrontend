@@ -69,7 +69,6 @@ QUnit.module( 'MobileFrontend Toggler.js', {
 QUnit.test( 'Mobile mode - Toggle section', function ( assert ) {
 	const
 		toggle = new Toggler( {
-			eventBus: new OO.EventEmitter(),
 			$container: this.$container,
 			prefix: ''
 		} ),
@@ -93,7 +92,6 @@ QUnit.test( 'Mobile mode - Toggle section', function ( assert ) {
 QUnit.test( 'Mobile mode - Clicking a hash link to reveal an already open section', function ( assert ) {
 	const
 		toggle = new Toggler( {
-			eventBus: new OO.EventEmitter(),
 			$container: this.$container,
 			prefix: ''
 		} );
@@ -108,7 +106,6 @@ QUnit.test( 'Mobile mode - Clicking a hash link to reveal an already open sectio
 QUnit.test( 'Mobile mode - Reveal element', function ( assert ) {
 	const
 		toggle = new Toggler( {
-			eventBus: new OO.EventEmitter(),
 			$container: this.$container,
 			prefix: ''
 		} );
@@ -123,7 +120,6 @@ QUnit.test( 'Mobile mode - Reveal element', function ( assert ) {
 QUnit.test( 'Mobile mode - Clicking hash links', function ( assert ) {
 	const
 		toggle = new Toggler( {
-			eventBus: new OO.EventEmitter(),
 			$container: this.$container,
 			prefix: ''
 		} );
@@ -138,7 +134,6 @@ QUnit.test( 'Mobile mode - Clicking hash links', function ( assert ) {
 QUnit.test( 'Mobile mode - Tap event toggles section', function ( assert ) {
 	const
 		toggle = new Toggler( {
-			eventBus: new OO.EventEmitter(),
 			$container: this.$container,
 			prefix: ''
 		} ),
@@ -156,7 +151,6 @@ QUnit.test( 'Mobile mode - Tap event toggles section', function ( assert ) {
 QUnit.test( 'Accessibility - Verify ARIA attributes', function ( assert ) {
 	const
 		toggle = new Toggler( {
-			eventBus: new OO.EventEmitter(),
 			$container: this.$container,
 			prefix: ''
 		} ),
@@ -189,7 +183,6 @@ QUnit.test( 'Tablet mode - Open by default', function ( assert ) {
 
 	/* eslint-disable-next-line no-new */
 	new Toggler( {
-		eventBus: new OO.EventEmitter(),
 		$container: this.$container,
 		prefix: ''
 	} );
@@ -206,7 +199,6 @@ QUnit.test( 'Tablet mode - Open by default 2', function ( assert ) {
 
 	/* eslint-disable-next-line no-new */
 	new Toggler( {
-		eventBus: new OO.EventEmitter(),
 		$container: this.$container,
 		prefix: ''
 	} );
@@ -225,7 +217,6 @@ QUnit.test( 'Accessibility - Pressing space/ enter toggles a heading', function 
 
 	/* eslint-disable-next-line no-new */
 	new Toggler( {
-		eventBus: new OO.EventEmitter(),
 		$container: this.$container,
 		prefix: ''
 	} );
@@ -252,7 +243,6 @@ QUnit.test( 'Clicking a link within a heading isn\'t triggering a toggle', funct
 
 	/* eslint-disable-next-line no-new */
 	new Toggler( {
-		eventBus: new OO.EventEmitter(),
 		$container: this.$container,
 		prefix: ''
 	} );
@@ -265,7 +255,6 @@ QUnit.test( 'Clicking a link within a heading isn\'t triggering a toggle', funct
 
 QUnit.test( 'MobileFrontend toggle.js - T320753: Presence of class disables toggling.', function ( assert ) {
 	const toggler = new Toggler( {
-		eventBus: new OO.EventEmitter(),
 		$container: this.$container,
 		prefix: ''
 	} );

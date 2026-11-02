@@ -136,7 +136,6 @@ MediaWiki core.
   - /src/mobile.startup/View.js
   - /src/mobile.startup/currentPage.js
   - /src/mobile.startup/currentPageHTMLParser.js
-  - /src/mobile.startup/eventBusSingleton.js
   - /src/mobile.startup/headers.js
   - /src/mobile.startup/icons.js
   - /src/mobile.startup/mobile.startup.js

@@ -11,10 +11,7 @@ const
 	toggling = require( './toggling' ),
 	editor = require( './editor' ),
 	currentPageHTMLParser = require( '../mobile.startup/currentPageHTMLParser' )(),
-	mfUtil = require( '../mobile.startup/util' ),
-	$window = mfUtil.getWindow(),
-	Skin = require( '../mobile.startup/Skin' ),
-	eventBus = require( '../mobile.startup/eventBusSingleton' );
+	Skin = require( '../mobile.startup/Skin' );
 
 const skin = Skin.getSingleton();
 
@@ -43,57 +40,6 @@ function fixLegacyParserImagesIfNeeded() {
 		} );
 	}
 }
-/**
- * Given 2 functions, it returns a function that will run both with it's
- * context and parameters and return the results combined
- *
- * @private
- * @param {Function} fn1
- * @param {Function} fn2
- * @return {Function} which returns void
- */
-function apply2( fn1, fn2 ) {
-	return function () {
-		fn1.apply( this, arguments );
-		fn2.apply( this, arguments );
-	};
-}
-
-/**
- * The `window`'s resize event debounced at 100 ms.
- * The `resize:throttled` event is the `window`'s
- * resize event throttled to 200 ms.
- *
- * @event resize
- * @memberof window
- */
-
-/**
- * The `window`'s scroll event debounced at 100 ms.
- * The `scroll:throttled` event is the `window`'s
- * scroll event throttled to 200 ms.
- *
- * @event scroll
- * @memberof window
- */
-
-$window
-	.on( 'resize', apply2(
-		mw.util.debounce( () => {
-			eventBus.emit( 'resize' );
-		}, 100 ),
-		mw.util.throttle( () => {
-			eventBus.emit( 'resize:throttled' );
-		}, 200 )
-	) )
-	.on( 'scroll', apply2(
-		mw.util.debounce( () => {
-			eventBus.emit( 'scroll' );
-		}, 100 ),
-		mw.util.throttle( () => {
-			eventBus.emit( 'scroll:throttled' );
-		}, 200 )
-	) );
 
 // Read the flag before the block below hides it.
 // The parameter name is repeated from mobile.returnToApp, which keeps that

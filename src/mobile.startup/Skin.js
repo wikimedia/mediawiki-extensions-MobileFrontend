@@ -1,8 +1,7 @@
 const browser = require( './Browser' ).getSingleton(),
 	View = require( './View' ),
 	util = require( './util' ),
-	currentPage = require( './currentPage' ),
-	eventBus = require( './eventBusSingleton' );
+	currentPage = require( './currentPage' );
 
 let skin;
 
@@ -16,9 +15,7 @@ let skin;
 class Skin extends View {
 	/**
 	 * @param {Object} params Configuration options
-	 * @param {OO.EventEmitter} params.eventBus Object used to listen for
 	 * @param {Page} params.page
-	 * scroll:throttled, resize:throttled, and section-toggled events
 	 */
 	constructor( params ) {
 		const options = util.extend( {
@@ -27,7 +24,6 @@ class Skin extends View {
 		super( options );
 		this.page = options.page;
 		this.name = options.name;
-		this.eventBus = options.eventBus;
 	}
 
 	/**
@@ -126,8 +122,7 @@ Skin.getSingleton = function () {
 	if ( !skin ) {
 		skin = new Skin( {
 			el: 'body',
-			page: currentPage(),
-			eventBus
+			page: currentPage()
 		} );
 	}
 	return skin;

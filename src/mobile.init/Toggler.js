@@ -27,12 +27,10 @@ const isCollapsedByDefault = require( './isCollapsedByDefault.js' );
 class Toggler {
 	/**
 	 * @param {Object} options
-	 * @param {OO.EventEmitter} options.eventBus Object used to emit section-toggled events.
 	 * @param {jQuery.Object} options.$container to apply toggling to
 	 * @param {string} options.prefix a prefix to use for the id.
 	 */
 	constructor( options ) {
-		this.eventBus = options.eventBus;
 		this.$container = options.$container;
 		this.prefix = options.prefix;
 		this._enable();
