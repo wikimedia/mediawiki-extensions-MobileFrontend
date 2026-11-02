@@ -8,9 +8,9 @@
 let url;
 
 const
-	toggling = require( './toggling' ),
-	editor = require( './editor' ),
-	currentPageHTMLParser = require( '../mobile.startup/currentPageHTMLParser' )();
+	toggling = require( './toggling.js' ),
+	editor = require( './editor/editor.js' ),
+	currentPageHTMLParser = require( 'mobile.startup' ).currentPageHTMLParser();
 
 /**
  * Temporary compatibility code for pages that use the legacy parser to
@@ -67,7 +67,7 @@ if ( window.history && history.pushState ) {
 if ( returnToAppSaved || url.searchParams.has( 'returntoapp' ) ) {
 	mw.loader.using( 'mobile.returnToApp' ).then( () => {
 		// Use MediaWiki ResourceLoader require(), not Webpack require()
-		const returnToApp = __non_webpack_require__( 'mobile.returnToApp' );
+		const returnToApp = require( 'mobile.returnToApp' );
 		returnToApp.init();
 	} );
 }

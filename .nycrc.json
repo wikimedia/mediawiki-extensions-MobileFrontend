@@ -10,16 +10,15 @@
 	],
 	"report-dir": "coverage",
 
-	"//include": "Ignore files in vendor/, resources/, and elsewhere.",
-	"include": [ "src/**/*.js" ],
-
-	"//exclude": "Exclude files that are entry points that wire things up and have side effects",
+	"include": [ "src/**/*.js", "resources/**/*.js" ],
 	"exclude": [
 		"docs/",
 		"coverage/",
 		"vendor/",
+		"resources/lib",
+		"resources/dist",
 		"src/mobile.editor.overlay/mobile.editor.overlay.js",
-		"src/mobile.init/mobile.init.js",
+		"resources/mobile.init/mobile.init.js",
 		"src/mobile.special.mobilediff.scripts.js",
 		"src/mobile.special.mobileoptions.scripts.js",
 		"src/mobile.special.userlogin.scripts.js"

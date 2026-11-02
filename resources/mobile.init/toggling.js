@@ -1,7 +1,7 @@
 module.exports = function () {
 	const
-		Toggler = require( './Toggler' ),
-		sectionCollapsing = require( './sectionCollapsing' );
+		Toggler = require( './Toggler.js' ),
+		sectionCollapsing = require( './sectionCollapsing.js' );
 
 	/**
 	 * Initialises toggling code.

@@ -24,7 +24,7 @@ QUnit.module( 'MobileFrontend editorLoadingOverlay.js', {
 		sandbox.stub( global.window, 'scrollTo' );
 
 		// These must be loaded here and not earlier because they depend on the globals we fake
-		editorLoadingOverlay = require( '../../../src/mobile.init/editorLoadingOverlay' );
+		editorLoadingOverlay = require( '../../../resources/mobile.init/editor/editorLoadingOverlay' );
 		OverlayManager = require( '../../../src/mobile.startup/OverlayManager' );
 
 		fakeRouter = new OO.EventEmitter();

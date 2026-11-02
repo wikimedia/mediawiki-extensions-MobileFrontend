@@ -1,7 +1,6 @@
-const
-	fakeToolbar = require( './fakeToolbar' ),
-	IconButton = require( '../mobile.startup/IconButton' ),
-	Overlay = require( '../mobile.startup/Overlay' );
+const mobile = require( 'mobile.startup' ),
+	fakeToolbar = require( './fakeToolbar.js' ),
+	{ IconButton, Overlay } = mobile.class;
 
 /* global $ */
 

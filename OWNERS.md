@@ -53,9 +53,6 @@ into articles; and modifications to user pages.
   - /includes/ExtMobileFrontend.php
   - /includes/MobileFormatter.php
   - /includes/templates/UserPageCta.mustache
-  - /resources/dist/mobile.config.js
-  - /resources/dist/mobile.init.js
-  - /src/mobile.init/Toggler.js
   - /tests/node-qunit/mobile.init/Toggler.test.js
   - /tests/node-qunit/mobile.init/sectionCollapsing.test.js
   - /tests/phpunit/integration/MobileContextTest.php
@@ -63,13 +60,10 @@ into articles; and modifications to user pages.
   - /tests/phpunit/integration/api/ApiParseExtenderTest.php
   - /tests/phpunit/integration/context/MobileContextShouldDisplayMobileViewIntegrationTest.php
   - /tests/phpunit/integration/context/MobileContextWikibaseDescriptionsTest.php
-  - /src/mobile.init/isCollapsedByDefault.js
-  - /src/mobile.init/mobile.init.js
-  - /src/mobile.init/sectionCollapsing.js
-  - /src/mobile.init/toggling.js
   - /resources/mobile.init.styles/main.less
 * Folders:
   - /includes/Transforms
+  - /resources/mobile.init/
   - /resources/mobile.quickFacts
   - /resources/mobile.userpage.styles
   - /tests/phpunit/unit/transforms
@@ -111,7 +105,6 @@ MediaWiki core.
 
 * Since: Sept 2025
 * Files:
-  - /resources/dist/mobile.common.js
   - /resources/dist/mobile.config.js
   - /resources/dist/mobile.startup.js
   - /resources/dist/mobile.startup.runtime.js
@@ -183,17 +176,14 @@ The editor.
 * Files:
   - /includes/Api/ApiEditPageExtender.php
   - /includes/MobileFrontendEditorHooks.php
-  - /src/mobile.init/editor.js
-  - /src/mobile.init/editorLoadingOverlay.js
   - /tests/phpunit/integration/MobileFrontendHooksTest.php
-  - src/mobile.init/fakeToolbar.js
   - /resources/mobile.editor.overlay/editor.less
   - /tests/node-qunit/mobile.init/editorLoadingOverlay.test.js
   - resources/mobile.init.styles/editor.less
-  - resources/mobile.init/fakeToolbar.less
 * Folders:
   - /src/mobile.editor.overlay
   - /src/mobile.returnToApp
+  - /resources/mobile.init/editor
   - /tests/node-qunit/mobile.returnToApp
   - /tests/node-qunit/mobile.editor.overlay/
 * Contact: [Editing Team][2]

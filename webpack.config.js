@@ -9,8 +9,7 @@ const
 	// The extension used for source map files.
 	srcMapExt = '.map.json',
 	ENTRIES = {
-		startup: 'mobile.startup',
-		mobileInit: 'mobile.init'
+		startup: 'mobile.startup'
 	};
 
 module.exports = ( env, argv ) => ( {
@@ -41,13 +40,7 @@ module.exports = ( env, argv ) => ( {
 		// each entry which is inefficient. This chunk should only change when Webpack or this
 		// configuration changes.
 
-		[ENTRIES.startup]: './src/mobile.startup/mobile.startup.js',
-		// Make some chunks which will be lazy loaded by resource loader.
-		// If we utilize webpack lazy loading instead of resource loader lazy
-		// loading, we won't be required to explicitly create this new chunk and
-		// this can be removed.
-		// all mobile skins,
-		[ENTRIES.mobileInit]: './src/mobile.init/mobile.init.js'
+		[ENTRIES.startup]: './src/mobile.startup/mobile.startup.js'
 	},
 
 	resolve: {
@@ -106,9 +99,7 @@ module.exports = ( env, argv ) => ( {
 					enforce: true,
 					// Only consider splitting chunks off of these whitelisted entry names
 					chunks: ( chunk ) => [
-						ENTRIES.startup,
-						ENTRIES.editor,
-						ENTRIES.mobileInit
+						ENTRIES.startup
 					].includes( chunk.name )
 				}
 			}

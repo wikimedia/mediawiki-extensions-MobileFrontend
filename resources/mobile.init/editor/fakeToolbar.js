@@ -1,11 +1,11 @@
-const icons = require( '../mobile.startup/icons' );
+const { cancelIcon, spinner } = require( 'mobile.startup' );
 
 /* global $ */
 module.exports = function fakeToolbar() {
-	const $goBack = icons.cancel().$el;
+	const $goBack = cancelIcon().$el;
 
 	// FIXME: Should not be a button, instead should be an icon with text
-	const $loadingMessage = icons.spinner( {
+	const $loadingMessage = spinner( {
 		tagName: 'span',
 		isIconOnly: false,
 		label: mw.msg( 'mobile-frontend-editor-loading' )

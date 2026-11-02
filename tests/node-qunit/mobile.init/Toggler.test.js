@@ -40,7 +40,7 @@ QUnit.module( 'MobileFrontend Toggler.js', {
 		mustache.setUp( sandbox, global );
 
 		browser = require( '../../../src/mobile.startup/Browser' ).getSingleton();
-		Toggler = require( '../../../src/mobile.init/Toggler' );
+		Toggler = require( '../../../resources/mobile.init/Toggler' );
 
 		sandbox.stub( browser, 'isWideScreen' ).returns( false );
 		sandbox.stub( window, 'scrollTo' );

@@ -122,11 +122,18 @@
 			],
 			"skinStyles": {
 				"minerva": [
-					"resources/mobile.init/fakeToolbar.less"
+					"resources/mobile.init/editor/fakeToolbar.less"
 				]
 			},
-			"scripts": [
-				"resources/dist/mobile.init.js"
+			"packageFiles": [
+				"resources/mobile.init/mobile.init.js",
+				"resources/mobile.init/editor/editor.js",
+				"resources/mobile.init/editor/editorLoadingOverlay.js",
+				"resources/mobile.init/editor/fakeToolbar.js",
+				"resources/mobile.init/isCollapsedByDefault.js",
+				"resources/mobile.init/sectionCollapsing.js",
+				"resources/mobile.init/Toggler.js",
+				"resources/mobile.init/toggling.js"
 			]
 		},
 		"mobile.quickFacts.styles": {
@@ -204,7 +211,6 @@
 					"callback": "MobileFrontend\\ResourceLoaderModules\\MobileConfig::makeScript"
 				},
 				"resources/dist/mobile.startup.runtime.js",
-				"resources/dist/mobile.common.js",
 				"resources/dist/mobile.startup.js",
 				"resources/mobile.startup/exports.js"
 			]

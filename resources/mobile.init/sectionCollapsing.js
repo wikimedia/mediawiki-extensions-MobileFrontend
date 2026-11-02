@@ -1,4 +1,4 @@
-const isCollapsedByDefault = require( './isCollapsedByDefault' );
+const isCollapsedByDefault = require( './isCollapsedByDefault.js' );
 
 /**
  * Sets attributes on collapsible toggle icon button based on collapsed state

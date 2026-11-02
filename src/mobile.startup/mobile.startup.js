@@ -3,6 +3,7 @@ const time = require( './time' );
 const currentPage = require( './currentPage' );
 const Drawer = require( './Drawer' );
 const CtaDrawer = require( './CtaDrawer' );
+const Browser = require( './Browser' );
 const icons = require( './icons' );
 const PageHTMLParser = require( './PageHTMLParser' );
 const { showOnPageReload } = require( './showOnPageReload' );
@@ -143,6 +144,10 @@ module.exports = {
 			'[1.47.0] deprecated. Please rewrite loading attribute of all images in page'
 		);
 	},
+	/**
+	 * Internal. Only for use in MobileFrontend.
+	 */
+	getBrowser: () => Browser.getSingleton(),
 	/**
 	 * Show a notification on page reload, internal for Minerva
 	 *

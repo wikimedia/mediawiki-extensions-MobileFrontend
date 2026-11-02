@@ -1,12 +1,12 @@
-const
-	util = require( '../mobile.startup/util' ),
+const mobile = require( 'mobile.startup' ),
+	{ util } = mobile,
 	escapeSelector = util.escapeSelector,
 	arrowOptions = {
 		icon: 'expand',
 		isSmall: true,
 		additionalClassNames: 'indicator'
 	},
-	Icon = require( '../mobile.startup/Icon' );
+	{ Icon } = mobile.class;
 const isCollapsedByDefault = require( './isCollapsedByDefault.js' );
 
 /**

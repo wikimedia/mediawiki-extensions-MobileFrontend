@@ -27,7 +27,7 @@ QUnit.module( 'MobileFrontend sectionCollapsing.js', {
 		};
 		// Mock scrollIntoView (not implemented in jsdom)
 		global.window.Element.prototype.scrollIntoView = function () {};
-		sectionCollapsing = require( '../../../src/mobile.init/sectionCollapsing' );
+		sectionCollapsing = require( '../../../resources/mobile.init/sectionCollapsing' );
 		browser = require( '../../../src/mobile.startup/Browser' ).getSingleton();
 	},
 	afterEach: function () {

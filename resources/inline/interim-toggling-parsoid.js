@@ -2,7 +2,7 @@
 // so should stick to ES5-compatible syntax and guard modern web APIs.
 //
 // This prepended script is part of the toggling contract; the runtime
-// half lives in src/mobile.init/sectionCollapsing.js. They share three
+// half lives in resources/mobile.init/sectionCollapsing.js. They share three
 // invariants that must be keep in sync:
 //   1. The heading wrapper is selected as `.mw-heading`.
 //   2. The content element gets the `mf-collapsible-content` class.

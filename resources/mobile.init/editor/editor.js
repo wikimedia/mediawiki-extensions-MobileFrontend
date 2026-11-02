@@ -1,10 +1,9 @@
 /* global $ */
-const
+const mobile = require( 'mobile.startup' ),
 	currentPageId = mw.config.get( 'wgArticleId' ),
-	util = require( '../mobile.startup/util' ),
-	fakeToolbar = require( './fakeToolbar' ),
-	editorLoadingOverlay = require( './editorLoadingOverlay' ),
-	OverlayManager = require( '../mobile.startup/OverlayManager' ),
+	util = mobile.util,
+	fakeToolbar = require( './fakeToolbar.js' ),
+	editorLoadingOverlay = require( './editorLoadingOverlay.js' ),
 	// #ca-edit, .mw-editsection are standard MediaWiki elements
 	// .edit-link can be added to links anywhere to trigger the editor (e.g. MobileFrontend
 	// user page creation CTA, edit-full-page overflow menu item)
@@ -13,7 +12,7 @@ const
 	hasTwoEditIcons = $editTab.length > 1,
 	EDITSECTION_SELECTOR = '.mw-editsection a, .edit-link',
 	user = mw.user,
-	CtaDrawer = require( '../mobile.startup/CtaDrawer' ),
+	CtaDrawer = mobile.CtaDrawer,
 	veConfig = mw.config.get( 'wgVisualEditorConfig' ),
 	editorPath = /^\/editor\/(\d+|T-\d+|all)$/;
 
@@ -164,7 +163,7 @@ function isVESourceAvailable() {
 function setupEditor( currentPageHTMLParser, router, readOnly ) {
 	const
 		titleObj = mw.Title.newFromText( mw.config.get( 'wgPageName' ) ),
-		overlayManager = OverlayManager.getSingleton(),
+		overlayManager = mobile.getOverlayManager(),
 		isNewPage = currentPageId === 0,
 		// Read before these parameters are stripped from the URL below.
 		veaction = mw.util.getParamValue( 'veaction' ),
@@ -369,7 +368,7 @@ function setupEditor( currentPageHTMLParser, router, readOnly ) {
 			mw.hook( 'mobileFrontend.editorOpening' ).fire();
 
 			return mw.loader.using( 'mobile.editor.overlay' ).then( () => {
-				const SourceEditorOverlay = __non_webpack_require__( 'mobile.editor.overlay' ).SourceEditorOverlay;
+				const SourceEditorOverlay = require( 'mobile.editor.overlay' ).SourceEditorOverlay;
 				return new SourceEditorOverlay( editorOptions );
 			} );
 		}
@@ -439,7 +438,7 @@ function setupEditor( currentPageHTMLParser, router, readOnly ) {
 
 			return visualPromise
 				.then( () => {
-					const editorOverlays = __non_webpack_require__( 'mobile.editor.overlay' );
+					const editorOverlays = require( 'mobile.editor.overlay' );
 					const VisualEditorOverlay = editorOverlays.VisualEditorOverlay;
 					const SourceEditorOverlay = editorOverlays.SourceEditorOverlay;
 					editorOptions.SourceEditorOverlay = SourceEditorOverlay;
@@ -668,7 +667,7 @@ module.exports = function ( currentPageHTMLParser ) {
 	if ( !mw.config.get( 'wgMFIsSupportedEditRequest' ) ) {
 		return;
 	}
-	const router = __non_webpack_require__( 'mediawiki.router' );
+	const router = require( 'mediawiki.router' );
 
 	if ( mw.config.get( 'wgNamespaceNumber' ) === mw.config.get( 'wgNamespaceIds' ).file && currentPageId === 0 ) {
 		// Is a new file page (enable upload image only) T60311
