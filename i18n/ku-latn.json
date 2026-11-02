@@ -111,16 +111,7 @@
 	"mobile-frontend-terms-text": "Mercên Bikaranînê",
 	"mobile-frontend-view": "Xuyakirina mobîl",
 	"mobile-frontend-view-desktop": "Xuyakirina sermaseyê",
-	"mobile-frontend-watchlist-a-z-empty-howto": "Tu niha ti sahîfeyan naşopînî. Lîsteya şopandinê ji te re dibe alîkar ku sahîfeyên ku pê re eleqedar dibî bişopînî. Bi tikandina îkona stêrkê sahîfeyan bişopîne.",
-	"mobile-frontend-watchlist-a-z-empty-howto-alt": "Îkona stêrkê bitikîne",
-	"mobile-frontend-watchlist-back-home": "Vegere Destpêkê",
 	"mobile-frontend-watchlist-cta-button-login": "Têkeve",
-	"mobile-frontend-watchlist-feed-empty": "Rûpelên bi guhartinên dawî tine ye.",
-	"mobile-frontend-watchlist-filter-all": "Hemû",
-	"mobile-frontend-watchlist-filter-articles": "Rûpel",
-	"mobile-frontend-watchlist-filter-other": "Yên din",
-	"mobile-frontend-watchlist-filter-talk": "Gotûbêj",
-	"mobile-frontend-watchlist-more": "bêhtir",
 	"mobile-frontend-watchlist-purpose": "<strong>Lîsteya şopandinê ji bo sahîfeyan nîşan bikî û guhartinên li ser wan bişopînî ji te re dibe alîkar.</strong><br /> Ji bo dîtinê têkeve.",
 	"mobile-frontend-watchlist-signup-action": "<strong>Lîsteya şopandinê ji bo sahîfeyan nîşan bikî û guhartinên li ser wan bişopînî ji te re dibe alîkar.</strong><br /> Hesabekî çêke da ku yekî bidî destpêkirin.",
 	"mobile-frontend-user-page-no-owner-page-yet": "Hîn sahîfeya te ya bikarhêneriyê tine",
@@ -148,6 +139,5 @@
 	"mobile-frontend-user-pref-description": "Tercihên xwe yên wekî şîfre, xuyakirina websîteyê, eyarên agahdariyê û yên din biguhêre",
 	"mobile-frontend-user-pref-link": "Tercîhan biguhêre",
 	"mobile-frontend-console-recruit": "Zêdetir hîn bibin ka em çawa sîteya xwe ya mobîl ava dikin @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
-	"mobile-frontend-special-pages-pref": "Dema ku hûn li ser mobîlê ne, rûpelên xisûsî xweş û hêsan bikin (tê tewsiyekirin)",
 	"prefs-mobile": "Tercîhên mobîlê"
 }

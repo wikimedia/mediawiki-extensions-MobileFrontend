@@ -106,16 +106,7 @@
 	"mobile-frontend-terms-text": "Nka̱nda̱n Nyian Ta̱m",
 	"mobile-frontend-view": "Jet a̱bwoi",
 	"mobile-frontend-view-desktop": "Nwuan a̱zatyii",
-	"mobile-frontend-watchlist-a-z-empty-howto": "Mi̱ di̱ yong huni a tyia̱-a̱ghyi tazwa ku wat nyiung bah. Lyulyoot tyei-a̱ghyi ang hu ni̱ beang ang di̱ tyei-a̱ghyi tazwa ngwat di̱dang ang na. Tyia̱-a̱ghyi tazwa ngwat di̱n vak byiam a̱baghwughwu a̱ta̱ngwat ka.",
-	"mobile-frontend-watchlist-a-z-empty-howto-alt": "Nyap a̱baghwughwu a̱ta̱ngwat ka",
-	"mobile-frontend-watchlist-back-home": "Bwuok a̱mali",
 	"mobile-frontend-watchlist-cta-button-login": "Nwuo",
-	"mobile-frontend-watchlist-feed-empty": "Ngwat na̱ byia̱ a̱ka̱shai mmam nani nwai nshyia̱.",
-	"mobile-frontend-watchlist-filter-all": "A̱mgba̱m",
-	"mobile-frontend-watchlist-filter-articles": "Ngwat",
-	"mobile-frontend-watchlist-filter-other": "A̱ghyang",
-	"mobile-frontend-watchlist-filter-talk": "A̱lyiat",
-	"mobile-frontend-watchlist-more": "nkyang njhyang",
 	"mobile-frontend-watchlist-purpose": "<strong>Lyulyoot tyei-a̱ghyi ni̱ beang ang di̱ cak ngwat nkwaa̱mbwat a ka tyia̱-a̱ghyi tazwa a̱ka̱shai nang á̱ nyian nna ndyo a̱ni.</strong><br />Nwuo a li.",
 	"mobile-frontend-watchlist-signup-action": "<strong>Lyulyoot nsaai-a̱ghyi ni̱ beang ang di̱ cak ngwat nkwaa̱mbwat a ka sak a̱ghyi tazwa a̱ka̱shai nang á̱ nyian nna ndyo a̱ni.</strong><br />Shyia̱ nwuai a tsa nyiung ma̱ninika.",
 	"mobile-frontend-user-page-no-owner-page-yet": "A sang wat a̱tyunta̱m",
@@ -141,6 +132,5 @@
 	"mobile-frontend-mobile-option-amc-learn-more": "Myiam nkyang njhyang",
 	"mobile-frontend-mobile-option-amc-send-feedback": "Ta̱m ma̱ng a̱di̱dam",
 	"mobile-frontend-console-recruit": "Myiam nkyang njhyang tazwa si̱sak ji nang zi̱ nok a̱ma̱ntei jet a̱bwoi nzi̱t wu mi̱ @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
-	"mobile-frontend-special-pages-pref": "Mak yet a̱tsatsak a nwuak ngwat khwo na hyohyoot ka̱nang a shyia̱ jet a̱bwoi ja (á̱ nwuak shim)",
 	"prefs-mobile": "Ndan-cat jet a̱bwoi"
 }

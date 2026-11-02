@@ -98,13 +98,7 @@
 	"mobile-frontend-terms-text": "Колдонуу шарттары",
 	"mobile-frontend-view": "Мобилдик көрүнүш",
 	"mobile-frontend-view-desktop": "Компьютердик көрүнүш",
-	"mobile-frontend-watchlist-back-home": "Башкы бетке кайтуу",
 	"mobile-frontend-watchlist-cta-button-login": "Кирүү",
-	"mobile-frontend-watchlist-filter-all": "Баары",
-	"mobile-frontend-watchlist-filter-articles": "Барактар",
-	"mobile-frontend-watchlist-filter-other": "Башка",
-	"mobile-frontend-watchlist-filter-talk": "Талкуулар",
-	"mobile-frontend-watchlist-more": "көбүрөөк",
 	"mobile-frontend-user-page-describe-yourself-editors": "түзөтүүчүлөр",
 	"mobile-frontend-user-page-create-owner-page-link-label": "Өздүк барагымды түзүү",
 	"mobile-frontend-user-page-create-user-page-link-label": "«‎$1» деп аталган баракты түзүү",
@@ -114,6 +108,5 @@
 	"mobile-frontend-loading-message": "Жүктөлүүдө…",
 	"mobile-frontend-send-feedback": "Пикир жөнөтүү",
 	"mobile-frontend-mobile-option-amc-learn-more": "Толук маалымат",
-	"mobile-frontend-mobile-option-amc-send-feedback": "Пикир жөнөтүү",
-	"mobile-frontend-special-pages-pref": "Мобилдик түзмөктө атайын барактарды оптималдаштыруу жана жөнөкөйлөтүү (сунушталат)"
+	"mobile-frontend-mobile-option-amc-send-feedback": "Пикир жөнөтүү"
 }

@@ -115,16 +115,7 @@
 	"mobile-frontend-terms-text": "استعمال کے شرائط",
 	"mobile-frontend-view": "موبائل سائٹ",
 	"mobile-frontend-view-desktop": "ڈیسک ٹاپ",
-	"mobile-frontend-watchlist-a-z-empty-howto": "آپ کی زیر نظر فہرست میں کوئی بھی صفحہ موجود نہیں ہے۔ اس فہرست کی مدد سے آپ اپنے پسندیدہ صفحات کی تبدیلی پر نظر رکھ سکتے ہیں۔ صفحات کو زیر نظر فہرست میں شامل کرنے کے لیے ستارہ کی علامت پر کلک کریں۔",
-	"mobile-frontend-watchlist-a-z-empty-howto-alt": "ستارہ کی علامت پر کلک کریں",
-	"mobile-frontend-watchlist-back-home": "صفحۂ اول پر واپس جائیں",
 	"mobile-frontend-watchlist-cta-button-login": "داخل ہوں",
-	"mobile-frontend-watchlist-feed-empty": "ابھی تازہ تبدیلیوں والے صفحات موجود نہیں۔",
-	"mobile-frontend-watchlist-filter-all": "تمام",
-	"mobile-frontend-watchlist-filter-articles": "صفحات",
-	"mobile-frontend-watchlist-filter-other": "دیگر",
-	"mobile-frontend-watchlist-filter-talk": "تبادلۂ خیال",
-	"mobile-frontend-watchlist-more": "مزید",
 	"mobile-frontend-watchlist-purpose": "<strong>زیر نظر فہرست کی مدد سے آپ اپنے پسندیدہ صفحات کو نشان زد اور بعد ازاں ان میں ہونے والی تبدیلیوں پر نظر رکھ سکتے ہیں۔</strong><br /> اسے استعمال کرنے کے لیے لاگ ان ہوں۔",
 	"mobile-frontend-watchlist-signup-action": "<strong>زیر نظر فہرست کی مدد سے آپ اپنے پسندیدہ صفحات کو نشان زد اور بعد ازاں ان میں ہونے والی تبدیلیوں پر نظر رکھ سکتے ہیں۔</strong><br /> اسے استعمال کرنے کے لیے یہاں اپنا کھاتہ بنائیں۔",
 	"mobile-frontend-user-page-no-owner-page-yet": "آپ کا ابھی تک صارف صفحہ موجود نہیں",
@@ -152,6 +143,5 @@
 	"mobile-frontend-user-pref-description": "اپنی ترجیحات، پاس ورڈ، ویب گاہ کا حلیہ، اطلاع ناموں کی ترتیبات وغیرہ تبدیل کریں۔",
 	"mobile-frontend-user-pref-link": "ترجیحات کھولیں",
 	"mobile-frontend-console-recruit": "ہماری موبائل ویب سائٹ کی تعمیر و ترقی کے متعلق مزید معلومات https://www.mediawiki.org/wiki/Extension:MobileFrontend پر حاصل کریں",
-	"mobile-frontend-special-pages-pref": "جب موبائل پر ہوں تو خاص صفحات کو بہتر اور آسان بنائیں (تجویز کردہ)",
 	"prefs-mobile": "موبائل ترجیحات"
 }

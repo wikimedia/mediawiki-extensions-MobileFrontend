@@ -96,16 +96,7 @@
 	"mobile-frontend-terms-text": "Wužiwanske wuměnjenja",
 	"mobile-frontend-view": "Mobilny napohlad",
 	"mobile-frontend-view-desktop": "Desktopowy napohlad",
-	"mobile-frontend-watchlist-a-z-empty-howto": "Tuchwilu njewobkedźbuješ žane strony. Twoje wobkedźbowanki ći při tym pomhaja, strony slědować, za kotrež so zajimuješ. Za wobkedźbowanje stronow tłóč na symbol hwěžki.",
-	"mobile-frontend-watchlist-a-z-empty-howto-alt": "Tłóč na symbol hwěžki",
-	"mobile-frontend-watchlist-back-home": "Wróćo k hłownej stronje",
 	"mobile-frontend-watchlist-cta-button-login": "Přizjewić",
-	"mobile-frontend-watchlist-feed-empty": "Njejsu žane strony z nowymi změnami",
-	"mobile-frontend-watchlist-filter-all": "Wšě",
-	"mobile-frontend-watchlist-filter-articles": "Strony",
-	"mobile-frontend-watchlist-filter-other": "Druhe",
-	"mobile-frontend-watchlist-filter-talk": "Diskusija",
-	"mobile-frontend-watchlist-more": "wjace",
 	"mobile-frontend-watchlist-purpose": "<strong>Lisćina wobkedźbowankow pomha ći při spomjatkowanju stronow a slědowanju změnow na nich.</strong><br />Přizjew so, zo by ju widźał(a).",
 	"mobile-frontend-watchlist-signup-action": "<strong>Lisćina wobkedźbowankow pomha ći při spomjatkowanju stronow a slědowanju změnow na nich.</strong><br />Wutwor wužiwarske konto, zo by swójsku załožił(a).",
 	"mobile-frontend-user-page-no-owner-page-yet": "Hišće nimaš wužiwarsku stronu",
@@ -130,6 +121,5 @@
 	"mobile-frontend-mobile-option-amc-learn-more": "Wjace zhonić",
 	"mobile-frontend-mobile-option-amc-send-feedback": "Feedback pósłać",
 	"mobile-frontend-console-recruit": "Dalše informacije wo tym, kak swoju mobilnu webstronu wuhotujemy pod https://www.mediawiki.org/wiki/Extension:MobileFrontend",
-	"mobile-frontend-special-pages-pref": "Specialne strony na mobilnych nastrojach polěpšić a zjednorić (doporučene)",
 	"prefs-mobile": "Mobilne nastajenja"
 }

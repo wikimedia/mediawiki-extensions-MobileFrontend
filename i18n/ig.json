@@ -120,16 +120,7 @@
 	"mobile-frontend-terms-text": "Iwu njirụ ọrụ",
 	"mobile-frontend-view": "nlegharị anya nke ekwenti",
 	"mobile-frontend-view-desktop": "Desktọpụ",
-	"mobile-frontend-watchlist-a-z-empty-howto": "Ị naghị ekiri ibe ọ bụla ugbu a. Ndepụta nlele gị na-enyere gị aka isochi ibe ndị ị nwere mmasị na ya azụ. Lelee ibe site na ịpị akara kpakpando aka.",
-	"mobile-frontend-watchlist-a-z-empty-howto-alt": "Pịa akara kpakpando aka",
-	"mobile-frontend-watchlist-back-home": "Laghachi n'ụlọ",
 	"mobile-frontend-watchlist-cta-button-login": "Banye",
-	"mobile-frontend-watchlist-feed-empty": "Enweghị ibe nwere mgbanwe na nso nso a.",
-	"mobile-frontend-watchlist-filter-all": "Ha niile",
-	"mobile-frontend-watchlist-filter-articles": "Ibe",
-	"mobile-frontend-watchlist-filter-other": "Nke ọzọ",
-	"mobile-frontend-watchlist-filter-talk": "Nkàta",
-	"mobile-frontend-watchlist-more": "Ọzọ",
 	"mobile-frontend-watchlist-purpose": "<strong>Ndepụta nleba anya na-enyere gị aka ịhụba ibe ama ma sochie mgbanwe ha azụ.</strong><br />Banye ka ịhụ ya.",
 	"mobile-frontend-watchlist-signup-action": "<strong>Ndepụta nleba anya na-enyere gị aka ịhụba ibe ama ma sochie mgbanwe ha azụ.</strong><br /> Debanye aha iji malite otu ugbu a.",
 	"mobile-frontend-user-page-no-owner-page-yet": "Ị nwebeghị ibe onye ọrụ",
@@ -159,6 +150,5 @@
 	"mobile-frontend-user-pref-description": "Gbanwee mmasị gị, gụnyere paswọọdụ, ọdịdị weebụsaịtị, ntọala ọkwa, na ihe ndị ọzọ.",
 	"mobile-frontend-user-pref-link": "Mepee mmasị",
 	"mobile-frontend-console-recruit": "Mụtakwuo maka otu anyị si arụ saịtị mkpanaka anyị na https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
-	"mobile-frontend-special-pages-pref": "Melite ma mee ka ibe pụrụ iche dị mfe mgbe ị nọ na mkpanaka (akwadoro)",
 	"prefs-mobile": "Nhọrọ mkpanaaka"
 }

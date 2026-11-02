@@ -122,16 +122,7 @@
 	"mobile-frontend-terms-text": "Uvjeti uporabe",
 	"mobile-frontend-view": "Prikaz za mobilne uređaje",
 	"mobile-frontend-view-desktop": "Klasični prikaz",
-	"mobile-frontend-watchlist-a-z-empty-howto": "Trenutačno ne pratite niti jednu stranicu. Popis praćenja pomaže u praćenju stranica koje su od Vašeg interesa. Dodajte stranicu na popis praćenja pritiskom na ikonu zvjezdice.",
-	"mobile-frontend-watchlist-a-z-empty-howto-alt": "Kliknite na sličicu zvjezdice",
-	"mobile-frontend-watchlist-back-home": "Povratak na glavnu stranicu",
 	"mobile-frontend-watchlist-cta-button-login": "Prijavi se",
-	"mobile-frontend-watchlist-feed-empty": "Nema stranica s nedavnim promjenama.",
-	"mobile-frontend-watchlist-filter-all": "Sve",
-	"mobile-frontend-watchlist-filter-articles": "Članci",
-	"mobile-frontend-watchlist-filter-other": "Ostalo",
-	"mobile-frontend-watchlist-filter-talk": "Razgovor",
-	"mobile-frontend-watchlist-more": "više",
 	"mobile-frontend-watchlist-purpose": "<strong>Popis praćenja omogućava Vam obilježavanje stranica te praćenje izmjena na njima.</strong><br />Prijavite se da biste ga vidjeli.",
 	"mobile-frontend-watchlist-signup-action": "<strong>Popis praćenja omogućava Vam obilježavanje stranica te praćenje izmjena na njima.</strong><br />Prijavite se da biste ga počeli rabiti.",
 	"mobile-frontend-user-page-no-owner-page-yet": "Još uvijek nemate suradničku stranicu",
@@ -157,6 +148,5 @@
 	"mobile-frontend-user-pref-description": "Promijenite postavke, uključujući lozinku, izgled mrežne stranice, postavke obavijesti i drugo.",
 	"mobile-frontend-user-pref-link": "Otvori postavke",
 	"mobile-frontend-console-recruit": "Saznajte više o tome na koji je način izvedena naša mobilna inačica mrežnoga mjesta @ https://www.mediawiki.org/wiki/Extension:MobileFrontend",
-	"mobile-frontend-special-pages-pref": "Optimiziraj i pojednostavi posebne stranice kad pristupam mobilnim uređajima (preporučeno)",
 	"prefs-mobile": "Mobilne postavke"
 }

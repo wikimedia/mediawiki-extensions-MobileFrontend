@@ -114,16 +114,7 @@
 	"mobile-frontend-terms-text": "გამოყენების პირობები",
 	"mobile-frontend-view": "მობილური ვერსია",
 	"mobile-frontend-view-desktop": "დესკტოპი",
-	"mobile-frontend-watchlist-a-z-empty-howto": "თქვენ ახლა არცერთ გვერდს არ ადევნებთ თვალს. კონტროლის სია გეხმარებათ თვალი ადევნოთ იმ გვერდებს, რომლებიც გაინტერესებთ. გვერდის ჩასანიშნად, დააჭირეთ ვარსკვლავის ხატულას.",
-	"mobile-frontend-watchlist-a-z-empty-howto-alt": "დააჭირეთ ვარსკვლავის ხატულას",
-	"mobile-frontend-watchlist-back-home": "მთავარზე დაბრუნება",
 	"mobile-frontend-watchlist-cta-button-login": "შესვლა",
-	"mobile-frontend-watchlist-feed-empty": "ბოლოს შეცვლილი გვერდები არ არის",
-	"mobile-frontend-watchlist-filter-all": "ყველა",
-	"mobile-frontend-watchlist-filter-articles": "გვერდები",
-	"mobile-frontend-watchlist-filter-other": "სხვა",
-	"mobile-frontend-watchlist-filter-talk": "განხილვა",
-	"mobile-frontend-watchlist-more": "მეტი",
 	"mobile-frontend-watchlist-purpose": "<strong>კონტროლის სია საშუალებას გაძლევთ ჩაინიშნოთ გვერდები და თვალი ადევნოთ მათ ცვლილებებს</strong><br />შედით ანხარიშზე, რათა ნახოთ ის.",
 	"mobile-frontend-watchlist-signup-action": "<strong>კონტროლის სია საშუალებას გაძლევთ ჩაინიშნოთ გვერდები და თვალი ადევნოთ მათ ცვლილებებს</strong><br />დარეგისტრირდით, რათა თავად შეძლოთ მისი გამოყენება.",
 	"mobile-frontend-user-page-no-owner-page-yet": "თქვენ ჯერ კიდევ არ გაქვთ მომხმარებლის გვერდი",
@@ -148,6 +139,5 @@
 	"mobile-frontend-mobile-option-amc-learn-more": "გაიგეთ მეტი",
 	"mobile-frontend-mobile-option-amc-send-feedback": "უკუკავშირის გაგზავნა",
 	"mobile-frontend-console-recruit": "გაიგეთ მეტი, თუ როგორ ვქმნით ჩვენი საიტის მობილურ ვერსიას — https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
-	"mobile-frontend-special-pages-pref": "მობილურ მოწყობილობებში სპეციალური გვერდების ოპტიმიზება და გამარტივება (რეკომენდებული)",
 	"prefs-mobile": "მობილური კონფიგურაცია"
 }

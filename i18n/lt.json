@@ -120,16 +120,7 @@
 	"mobile-frontend-terms-text": "Naudojimo sąlygos",
 	"mobile-frontend-view": "Mobili peržiūra",
 	"mobile-frontend-view-desktop": "Kompiuterio rodinys",
-	"mobile-frontend-watchlist-a-z-empty-howto": "Jūs kol kas nestebite jokių puslapių. Jūsų stebimų puslapių sąrašas padeda sekti jums įdomius puslapius. Stebėkite puslapius paspausdami žvaigždutės piktogramą.",
-	"mobile-frontend-watchlist-a-z-empty-howto-alt": "Paspauskite žvaigždutės ikoną",
-	"mobile-frontend-watchlist-back-home": "Grįžti į pradžią",
 	"mobile-frontend-watchlist-cta-button-login": "Prisijungti",
-	"mobile-frontend-watchlist-feed-empty": "Nėra puslapių su pastaraisiais pakeitimais.",
-	"mobile-frontend-watchlist-filter-all": "Visi",
-	"mobile-frontend-watchlist-filter-articles": "Puslapiai",
-	"mobile-frontend-watchlist-filter-other": "Kita",
-	"mobile-frontend-watchlist-filter-talk": "Aptarimas",
-	"mobile-frontend-watchlist-more": "daugiau",
 	"mobile-frontend-watchlist-purpose": "<strong>Stebimų puslapių sąrašas padeda pasižymėti puslapius ir sekti jų kitimą.</strong><br />Prisijunkite, norėdami jį pamatyti.",
 	"mobile-frontend-watchlist-signup-action": "<strong>Stebimų puslapių sąrašas padeda pasižymėti puslapius ir sekti jų kitimą.</strong><br />Susikurkite paskyrą, norėdami dabar jį pradėti.",
 	"mobile-frontend-user-page-no-owner-page-yet": "Jūs dar neturite naudotojo puslapio",
@@ -155,6 +146,5 @@
 	"mobile-frontend-user-pref-description": "Pakeiskite savo nuostatas, įskaitant slaptažodį, svetainės išvaizdą, pranešimų nustatymus ir kt.",
 	"mobile-frontend-user-pref-link": "Atverti nuostatas",
 	"mobile-frontend-console-recruit": "Sužinokite daugiau apie tai, kaip buvo sukurtas mūsų puslapis mobiliesiems @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
-	"mobile-frontend-special-pages-pref": "Optimizuoti ir supaprastinti specialius puslapius mobiliajame įrenginyje (rekomenduojama)",
 	"prefs-mobile": "Mobiliųjų įrenginių nuostatos"
 }

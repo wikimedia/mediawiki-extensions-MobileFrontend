@@ -116,16 +116,7 @@
 	"mobile-frontend-terms-text": "使用條款",
 	"mobile-frontend-view": "睇流動版",
 	"mobile-frontend-view-desktop": "睇電腦版",
-	"mobile-frontend-watchlist-a-z-empty-howto": "你而家冇監視緊任何頁面。你嘅監視清單可以幫你跟住自己有興趣嘅頁面。撳落星形圖示就可以監視頁面。",
-	"mobile-frontend-watchlist-a-z-empty-howto-alt": "撳個星形圖示",
-	"mobile-frontend-watchlist-back-home": "返屋企",
 	"mobile-frontend-watchlist-cta-button-login": "簽到",
-	"mobile-frontend-watchlist-feed-empty": "冇任何頁面有最新改動。",
-	"mobile-frontend-watchlist-filter-all": "全部",
-	"mobile-frontend-watchlist-filter-articles": "版",
-	"mobile-frontend-watchlist-filter-other": "其他",
-	"mobile-frontend-watchlist-filter-talk": "傾偈",
-	"mobile-frontend-watchlist-more": "多啲",
 	"mobile-frontend-watchlist-purpose": "<strong>監視清單可以幫你將頁面加書籤，亦方便你跟進嗰啲頁面嘅改動。</strong><br />簽到就可以睇到。",
 	"mobile-frontend-watchlist-signup-action": "<strong>監視清單可以幫你將頁面加書籤，亦方便你跟進嗰啲頁面嘅改動。</strong><br />即刻開戶口就可以開啟一個。",
 	"mobile-frontend-user-page-no-owner-page-yet": "你未有用戶版",
@@ -153,6 +144,5 @@
 	"mobile-frontend-user-pref-description": "改你嘅喜好設定，包括密碼、網站外觀、通知設定等等。",
 	"mobile-frontend-user-pref-link": "開喜好設定",
 	"mobile-frontend-console-recruit": "喺呢度了解多啲我哋係點樣起流動版網站： https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
-	"mobile-frontend-special-pages-pref": "喺流動版優化同簡化特殊頁面（建議）",
 	"prefs-mobile": "流動版喜好設定"
 }

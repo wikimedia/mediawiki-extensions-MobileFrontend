@@ -106,16 +106,7 @@
 	"mobile-frontend-terms-text": "Ulanyş şertleri",
 	"mobile-frontend-view": "Mobil görnüş",
 	"mobile-frontend-view-desktop": "Iş stoly",
-	"mobile-frontend-watchlist-a-z-empty-howto": "Häzirki wagtda haýsydyr bir sahypany görmeýärsiňiz. Gözegçilik sanawyňyz, sizi gyzyklandyrýan sahypalary yzarlamaga kömek edýär. Staryldyz nyşanyna basyp sahypalary görüň.",
-	"mobile-frontend-watchlist-a-z-empty-howto-alt": "Ýyldyz nyşanyna basyň",
-	"mobile-frontend-watchlist-back-home": "Öýe dolan",
 	"mobile-frontend-watchlist-cta-button-login": "Hasaba giriň",
-	"mobile-frontend-watchlist-feed-empty": "Soňky üýtgeşmeler bilen sahypa ýok.",
-	"mobile-frontend-watchlist-filter-all": "Ählisi",
-	"mobile-frontend-watchlist-filter-articles": "Sahypalar",
-	"mobile-frontend-watchlist-filter-other": "Başga",
-	"mobile-frontend-watchlist-filter-talk": "Gürleşme",
-	"mobile-frontend-watchlist-more": "has köp",
 	"mobile-frontend-watchlist-purpose": "<strong>Gözegçilik sanawy sahypalary belliklemäge we olara girizilen üýtgeşmeleri yzarlamaga kömek edýär.</strong><br />Görmek üçin giriň.",
 	"mobile-frontend-watchlist-signup-action": "<strong>Gözegçilik sanawy sahypalary belliklemäge we olara girizilen üýtgeşmeleri yzarlamaga kömek edýär.</strong><br />Indi başlamak üçin ýazylyň.",
 	"mobile-frontend-user-page-no-owner-page-yet": "Entek ulanyjy sahypaňyz ýok",
@@ -141,6 +132,5 @@
 	"mobile-frontend-user-pref-description": "Parol, web sahypasynyň daşky görnüşi, bildiriş sazlamalary we ş.m. ýaly islegleriňizi üýtgediň.",
 	"mobile-frontend-user-pref-link": "Saýlamalary açyň",
 	"mobile-frontend-console-recruit": "Jübi sahypamyzy nädip gurýandygymyz barada has giňişleýin öwreniň @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
-	"mobile-frontend-special-pages-pref": "Jübi telefonynda ýörite sahypalary optimizirläň we ýönekeýleşdiriň (maslahat berilýär)",
 	"prefs-mobile": "Jübi islegleri"
 }

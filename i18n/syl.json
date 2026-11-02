@@ -104,16 +104,7 @@
 	"mobile-frontend-terms-text": "ꠛꠦꠛꠀꠞꠧꠞ ꠘꠤꠅꠝ",
 	"mobile-frontend-view": "ꠝꠥꠛꠣꠁꠟꠅ ꠎꠦꠟꠣꠘ",
 	"mobile-frontend-view-desktop": "ꠒꠦꠇꠍ꠆ꠐꠙ",
-	"mobile-frontend-watchlist-a-z-empty-howto": "ꠀꠙꠘꠦ ꠅꠘꠇꠥ ꠇꠥꠘꠥ ꠙꠣꠔꠣ ꠈꠤꠀꠟ ꠞꠣꠈꠍꠂꠘ ꠘꠣ ⁕ ꠀꠙꠘꠣꠞ ꠈꠤꠀꠟꠞꠣꠈꠣꠞ ꠟꠤꠡ꠆ꠐꠤ ꠀꠙꠘꠣꠞꠦ ꠎꠦꠡꠛ ꠙꠣꠔꠣꠞ ꠙꠔꠤ ꠀꠉ꠆ꠞꠁ ꠨ ꠢꠤꠉꠥꠁꠘ ꠐ꠆ꠞꠦꠇ ꠇꠞꠔꠦ ꠡꠣꠁꠎ꠆ꠎ ꠇꠞꠦ ⁕ ꠙꠣꠔꠣ ꠈꠤꠀꠟ ꠇꠞꠔꠦ ꠁꠡ꠆ꠐꠣꠞ ꠀꠁꠇꠘꠅ ꠐꠦꠙ ꠇꠞꠂꠘ ⁕",
-	"mobile-frontend-watchlist-a-z-empty-howto-alt": "ꠁꠍꠐꠣꠞ ꠀꠁꠇꠘꠅ ꠇꠤꠟꠤꠇ ꠝꠣꠞꠂꠘ",
-	"mobile-frontend-watchlist-back-home": "ꠇꠞꠦꠖꠤ",
 	"mobile-frontend-watchlist-cta-button-login": "ꠢꠣꠝꠣꠘꠤ",
-	"mobile-frontend-watchlist-feed-empty": "ꠁꠖꠣꠘꠤꠋꠅꠞ ꠛꠖꠟꠣꠘꠤꠔꠣ ꠡꠅ ꠇꠥꠘꠥ ꠙꠣꠔꠣ ꠘꠣꠁ ⁕",
-	"mobile-frontend-watchlist-filter-all": "ꠢꠇ꠆ꠇꠟ",
-	"mobile-frontend-watchlist-filter-articles": "ꠙꠣꠔꠣꠁꠘ",
-	"mobile-frontend-watchlist-filter-other": "ꠀꠞꠔꠣ",
-	"mobile-frontend-watchlist-filter-talk": "ꠇꠕꠣ",
-	"mobile-frontend-watchlist-more": "ꠀꠞꠅ",
 	"mobile-frontend-watchlist-purpose": "<strong>ꠄꠉꠥ ꠈꠤꠀꠟꠞꠣꠈꠣꠞ ꠟꠤꠡ꠆ꠐꠤ ꠀꠙꠘꠣꠞꠦ ꠙꠦꠁꠎꠣꠁꠘ ꠛꠥꠇꠝꠣꠞ꠆ꠇ ꠇꠞꠔꠦ ꠀꠞ ꠢꠤꠉꠥꠁꠘ꠆ꠔꠞ ꠙꠞꠤꠛꠞ꠆ꠔꠘ ꠐ꠆ꠞꠦꠇ ꠇꠞꠔꠦ ꠡꠣꠁꠎ꠆ꠎ ꠇꠞꠛꠅ ⁕</strong><br />ꠁꠐꠣ ꠖꠦꠈꠔꠦ ꠟꠉ ꠁꠘ ꠇꠞꠂꠘ ⁕",
 	"mobile-frontend-watchlist-signup-action": "<strong>ꠄꠉꠥ ꠈꠤꠀꠟꠞꠣꠈꠣꠞ ꠟꠤꠡ꠆ꠐꠤ ꠀꠙꠘꠣꠞꠦ ꠙꠦꠁꠎꠣꠁꠘ ꠛꠥꠇꠝꠣꠞ꠆ꠇ ꠇꠞꠔꠦ ꠀꠞ ꠢꠤꠉꠥꠁꠘ꠆ꠔꠞ ꠙꠞꠤꠛꠞ꠆ꠔꠘ ꠐ꠆ꠞꠦꠇ ꠇꠞꠔꠦ ꠡꠣꠁꠎ꠆ꠎ ꠇꠞꠛꠅ ⁕</strong><br />ꠅꠈꠘ ꠄꠉꠥ ꠡꠥꠞꠥ ꠇꠞꠔꠦ ꠍꠣꠁꠘ ꠀꠙ ꠇꠞꠂꠘ ⁕",
 	"mobile-frontend-user-page-no-owner-page-yet": "ꠀꠙꠘꠣꠞ ꠀꠛꠅ ꠇꠥꠘꠥ ꠛꠦꠛꠀꠞꠇꠞ꠆ꠞꠣ ꠙꠣꠔꠣ ꠘꠣꠄ",
@@ -140,6 +131,5 @@
 	"mobile-frontend-user-pref-description": "ꠀꠙꠘꠣꠞ ꠙꠍꠘ꠆ꠖꠉꠥꠁꠘ ꠛꠖꠟꠣꠁꠘ ꠨ ꠎꠣꠞ ꠝꠣꠎꠦ ꠙꠣꠍꠅꠀꠒ ꠨ ꠅꠦꠛꠍꠣꠁꠐꠞ ꠀꠃꠐꠟꠥꠇ ꠨ ꠘꠐꠤꠚꠤꠇꠦꠡꠘ ꠍꠦꠐꠤꠋꠍ ꠀꠞ ꠀꠞꠅ ꠛꠃꠔ꠆ꠔꠣ ꠢꠣꠞꠣꠁꠟ ꠀꠍꠦ ⁕",
 	"mobile-frontend-user-pref-link": "ꠌꠄꠎꠣꠁꠘ ꠛꠣꠞ ꠇꠞꠃꠇ꠆ꠇꠣ",
 	"mobile-frontend-console-recruit": "ꠀꠝꠞꠣꠞ ꠝꠥꠛꠣꠁꠟ ꠍꠣꠁꠐ ꠇꠤꠟꠣꠘ ꠔꠂꠀꠞꠤ ꠇꠞꠣ ꠅꠄ ꠨ ꠢꠤꠔꠣ ꠟꠂꠀ ꠀꠞꠅ ꠎꠣꠘꠂꠘ @ [https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend](https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend) ⁕",
-	"mobile-frontend-special-pages-pref": "ꠝꠥꠛꠣꠁꠟꠞ ꠃꠙꠞꠦ ꠁꠍ꠆ꠙꠦꠡꠤꠀꠟ ꠙꠦꠁꠎꠁꠉꠥꠁꠘ ꠅꠙꠐꠤꠝꠣꠁꠎ ꠀꠞ ꠡꠥꠎꠣꠡꠣꠎꠣ ꠇꠞꠂꠘ ( ꠌꠣꠟ꠆ꠟꠣꠖꠦꠅꠀ ) ⁕",
 	"prefs-mobile": "ꠝꠥꠛꠣꠁꠟꠞ ꠌꠄꠎꠣꠁꠘ"
 }

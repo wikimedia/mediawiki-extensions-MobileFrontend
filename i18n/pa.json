@@ -121,15 +121,7 @@
 	"mobile-frontend-terms-text": "ਵਰਤੋਂ ਦੀਆਂ ਸ਼ਰਤਾਂ",
 	"mobile-frontend-view": "ਮੋਬਾਈਲੀ ਦਿੱਖ",
 	"mobile-frontend-view-desktop": "ਕਾਰਜ-ਦਿੱਖ",
-	"mobile-frontend-watchlist-a-z-empty-howto-alt": "ਸਿਤਾਰੇ ਦੇ ਚਿੰਨ੍ਹ ਨੂੰ ਨੱਪੋ",
-	"mobile-frontend-watchlist-back-home": "ਘਰ ਵਾਪਿਸ",
 	"mobile-frontend-watchlist-cta-button-login": "ਦਾਖਲ",
-	"mobile-frontend-watchlist-feed-empty": "ਹਾਲੀਆ ਤਬਦੀਲੀਆਂ ਵਾਲੇ ਕੋਈ ਸਫ਼ੇ ਨਹੀਂ ਹਨ।",
-	"mobile-frontend-watchlist-filter-all": "ਸਾਰੇ",
-	"mobile-frontend-watchlist-filter-articles": "ਸਫ਼ੇ",
-	"mobile-frontend-watchlist-filter-other": "ਹੋਰ",
-	"mobile-frontend-watchlist-filter-talk": "ਗੱਲ-ਬਾਤ",
-	"mobile-frontend-watchlist-more": "ਹੋਰ",
 	"mobile-frontend-user-page-no-owner-page-yet": "ਤੁਹਾਡੇ ਕੋਲ ਹਾਲੇ ਵਰਤੋਂਕਾਰ ਸਫ਼ਾ ਨਹੀਂ ਹੈ",
 	"mobile-frontend-user-page-no-page-yet": "$1 ਲਈ ਕੋਈ ਵਰਤੋਂਕਾਰ ਸਫ਼ਾ ਨਹੀਂ ਹੈ",
 	"mobile-frontend-user-page-describe-yourself": "ਤੁਸੀਂ ਆਪਣੇ ਵਰਤੋਂਕਾਰ ਵਰਕੇ 'ਤੇ ਸਾਥੀ $1 ਨੂੰ ਆਪਣੇ ਬਾਰੇ ਦੱਸ ਸਕਦੇ ਹੋ।",
@@ -153,6 +145,5 @@
 	"mobile-frontend-user-pref-option": "ਵਰਤੋਂਕਾਰ ਤਰਜੀਹਾਂ",
 	"mobile-frontend-user-pref-link": "ਤਰਜੀਹਾਂ ਖੋਲ੍ਹੋ",
 	"mobile-frontend-console-recruit": "ਇਸ ਬਾਰੇ ਹੋਰ ਜਾਣੋ ਕਿ ਅਸੀਂ ਆਪਣੀ ਮੋਬਾਈਲ ਸਾਈਟ ਕਿਵੇਂ ਬਣਾਉਂਦੇ ਹਾਂ @https://www.mediawiki.org/wiki/Special: MyLangage/Extension: MobileFrontend",
-	"mobile-frontend-special-pages-pref": "ਮੋਬਾਈਲ ਉੱਤੇ ਹੋਣ ਸਮੇਂ ਖਾਸ ਸਫ਼ਿਆਂ ਨੂੰ ਅਨੁਕੂਲ ਅਤੇ ਸਰਲ ਬਣਾਓ (ਸਿਫਾਰਸ਼ ਕੀਤੀ ਗਈ)",
 	"prefs-mobile": "ਮੋਬਾਈਲੀ ਤਰਜੀਹਾਂ"
 }

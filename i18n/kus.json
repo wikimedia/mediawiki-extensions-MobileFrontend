@@ -113,16 +113,7 @@
 	"mobile-frontend-terms-text": "Azaŋi tʋm wada",
 	"mobile-frontend-view": "Tangalnwiing gɔsʋg",
 	"mobile-frontend-view-desktop": "Teebulzug",
-	"mobile-frontend-watchlist-a-z-empty-howto": "Fʋ pʋ n gɔsid lakir sia nananna. Fʋ gɔsʋg la'ad sʋŋidif ka fʋ baŋid lakir banɛ ka fʋ mɔr bɔɔdim nɛ ba. Parigim staa siig la n gɔs lakir nam.",
-	"mobile-frontend-watchlist-a-z-empty-howto-alt": "Diim pin'ilʋg nindaan la",
-	"mobile-frontend-watchlist-back-home": "Lɛm yim",
 	"mobile-frontend-watchlist-cta-button-login": "Kpɛn'ɛm",
-	"mobile-frontend-watchlist-feed-empty": "Lakir nam kai zaŋi ken nananna tiasa ni.",
-	"mobile-frontend-watchlist-filter-all": "Wʋsa",
-	"mobile-frontend-watchlist-filter-articles": "lakirnam",
-	"mobile-frontend-watchlist-filter-other": "Sieba",
-	"mobile-frontend-watchlist-filter-talk": "Pian'am",
-	"mobile-frontend-watchlist-more": "Bɛdigʋ",
 	"mobile-frontend-watchlist-purpose": "<strong>gɔsʋg la'asʋg sʋŋidi fʋ 'bookmark' lakir nam ka gɔsid tiasa tisi ba.</strong><br />kpe'em pʋʋgini gɔsi li.",
 	"mobile-frontend-watchlist-signup-action": "<strong>gɔsʋg la'asʋg sʋŋidi fʋ 'bookmark' lakir nam ka gɔsid tiasa tisi ba.</strong><br />yɔɔgin yir ka  pin'il yinne nananna.",
 	"mobile-frontend-user-page-no-owner-page-yet": "Fʋ pʋ mɔr tʋm-tʋm lakir nannɛ",
@@ -148,6 +139,5 @@
 	"mobile-frontend-user-pref-description": "Tiakimi fʋ bɔɔdim nam, paas nɛ fʋ yɔɔsʋg nwiig, 'website' niesim, tɛn'ɛsʋg dɛmisʋg, nɛ bɛdegʋ.",
 	"mobile-frontend-user-pref-link": "Yɔɔgim bɔɔdim nam",
 	"mobile-frontend-console-recruit": "Zamisim bɛdegʋ zaŋi ken tinamɛ mɛ'ɛdi ti foon 'site' @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
-	"mobile-frontend-special-pages-pref": "Fʋ ya'a bɛ foon ni, maalim lakir sʋma nɛ linɛ bɛɛ li gʋnnɛ ('recommended)",
 	"prefs-mobile": "Foon bɔɔdim nam"
 }

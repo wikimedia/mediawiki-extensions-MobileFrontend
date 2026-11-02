@@ -118,16 +118,7 @@
 	"mobile-frontend-terms-text": "Geavahaneavttut",
 	"mobile-frontend-view": "Mobiilaoainnus",
 	"mobile-frontend-view-desktop": "Bargobeavdi",
-	"mobile-frontend-watchlist-a-z-empty-howto": "Juste dál it gozit makkárge siidduid. Du gozihanlistu veahkeha du doallat ortnegis daid siidduid main beroštat. Deaddel nástemearkka vai gozihat siidduid.",
-	"mobile-frontend-watchlist-a-z-empty-howto-alt": "Deaddil nástegovaža",
-	"mobile-frontend-watchlist-back-home": "Ruovttoluotta váldosiidui",
 	"mobile-frontend-watchlist-cta-button-login": "Čálit sisa",
-	"mobile-frontend-watchlist-feed-empty": "Eai leat siiddut mat maŋemus áiggi leat rievdaduvvon.",
-	"mobile-frontend-watchlist-filter-all": "Buot",
-	"mobile-frontend-watchlist-filter-articles": "Siiddut",
-	"mobile-frontend-watchlist-filter-other": "Eará",
-	"mobile-frontend-watchlist-filter-talk": "Ságastallan",
-	"mobile-frontend-watchlist-more": "eambbo",
 	"mobile-frontend-watchlist-purpose": "<strong>Čuovvunlisttu veahkeha du merket siidduid ja čuovvut rievdadusaid.</strong>Registrere vai beasat geahččalit.",
 	"mobile-frontend-watchlist-signup-action": "<strong>Čuovvunlisttu veahkeha du merket siidduid ja čuovvut rievdadusaid.</strong>Registrere vai beasat geahččalit.",
 	"mobile-frontend-user-page-no-owner-page-yet": "Dus ii leat vel geavaheaddjisiidu.",
@@ -155,6 +146,5 @@
 	"mobile-frontend-user-pref-description": "Molsso iežat ásahusaid, sihke beassansáni, neahttasiiddu hámi, almmuhusásahusaid ja eambbo.",
 	"mobile-frontend-user-pref-link": "Raba ásahusaid",
 	"mobile-frontend-console-recruit": "Loga eambbo movt mii hukset telefuvdna neahttasiiddu https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
-	"mobile-frontend-special-pages-pref": "Optimere ja álkidahtte doaibmisiidu go telefuvnnas anát. (Ávžžuhuvvo)",
 	"prefs-mobile": "Telefuvndaásahusat"
 }

@@ -124,16 +124,7 @@
 	"mobile-frontend-terms-text": "Uzkondiĉoj",
 	"mobile-frontend-view": "Poŝtelefona vido",
 	"mobile-frontend-view-desktop": "Labortablo",
-	"mobile-frontend-watchlist-a-z-empty-howto": "Vi ne estas nuntempe rigardanta ajnajn paĝojn. Via atentado helpos vin atenti la paĝojn pri kiuj vi interesiĝas. Ekatentadu paĝojn tuŝetante la stelan bildsimbolon.",
-	"mobile-frontend-watchlist-a-z-empty-howto-alt": "Alklaku la stelan bildsimbolon",
-	"mobile-frontend-watchlist-back-home": "Reen al la ĉefpaĝo",
 	"mobile-frontend-watchlist-cta-button-login": "Ensaluti",
-	"mobile-frontend-watchlist-feed-empty": "Estas neniuj paĝoj kun lastaj ŝanĝoj.",
-	"mobile-frontend-watchlist-filter-all": "Ĉiuj",
-	"mobile-frontend-watchlist-filter-articles": "Paĝoj",
-	"mobile-frontend-watchlist-filter-other": "Alia",
-	"mobile-frontend-watchlist-filter-talk": "Diskuto",
-	"mobile-frontend-watchlist-more": "pli",
 	"mobile-frontend-watchlist-purpose": "<strong>Atentado helpas vin krei legosignojn por paĝoj kaj atenti ŝanĝojn faritaj je ilI.</strong><br />Ensalutu por vidi tion.",
 	"mobile-frontend-watchlist-signup-action": "<strong>Atentado helpas vin krei legosignojn por paĝoj kaj atenti ŝanĝojn faritaj je ilI.</strong><br />Registriĝu por krei unu nun.",
 	"mobile-frontend-user-page-no-owner-page-yet": "Vi ankoraŭ ne havas uzantopaĝon",
@@ -159,6 +150,5 @@
 	"mobile-frontend-user-pref-description": "Ŝanĝu viajn preferojn, inkluzive la pasvorton, retejo-aspekton, agordojn pri sciigoj, kaj pli.",
 	"mobile-frontend-user-pref-link": "Malfermi preferojn",
 	"mobile-frontend-console-recruit": "Eksciu pli pri kiel ni konstruas nian poŝtelefonan retejon ĉe https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
-	"mobile-frontend-special-pages-pref": "Optimumigi kaj simpligi specialajn poŝtelefonajn paĝojn (rekomendita)",
 	"prefs-mobile": "Preferoj por la versio por porteblaj aparatoj"
 }
