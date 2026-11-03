@@ -26,6 +26,7 @@
 	"mobile-frontend-editor-anonwarning": "<strong>সতর্কতা:</strong> আপনি প্রবেশ করেননি। আপনি যদি কোন সম্পাদনা করেন, তবে আপনার আইপি ঠিকানা সার্বজনীনভাবে দেখা যাবে। আপনি যদি <strong>প্রবেশ করেন</strong> বা <strong>একটি অ্যাকাউন্ট তৈরি করেন</strong>, তাহলে আপনি আপনার আইপি ঠিকানা গোপন রাখতে পারবেন ও আরও অনেক সুবিধা পাবেন।",
 	"mobile-frontend-editor-anonwarning-description": "সহায়ক সরঞ্জাম ব্যবহার করুন, আপনার অবদান দেখুন এবং একটি প্রাণবন্ত সম্প্রদায়ের অংশ হোন।",
 	"mobile-frontend-editor-anonwarning-separator": "বা",
+	"mobile-frontend-editor-anonwarning-viewsource": "উৎস দেখুন",
 	"mobile-frontend-editor-autocreatewarning-soft-publish-description": "আপনি প্রকাশ করার পর, আপনার জন্য একটি [[$1|অস্থায়ী অ্যাকাউন্ট]] তৈরি করা হবে।",
 	"mobile-frontend-editor-autocreatewarning": "<strong>সতর্কতা:</strong> আপনি এখনও প্রবেশ করেননি। আপনি কোনো সম্পাদনা করলে আপনার জন্য একটি অস্থায়ী অ্যাকাউন্ট তৈরি করা হবে। [[$1|আরও জানুন]]। প্রতিনিয়ত বিজ্ঞপ্তি পাওয়া চালিয়ে যেতে এবং আরও অনেক সুবিধা পেতে <strong>প্রবেশ করুন</strong> বা <strong>একটি অ্যাকাউন্ট তৈরি করুন</strong>।",
 	"mobile-frontend-editor-blocked-drawer-action-login": "প্রবেশ করুন",
