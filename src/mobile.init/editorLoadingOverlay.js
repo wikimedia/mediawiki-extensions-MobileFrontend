@@ -6,7 +6,7 @@ const
 /* global $ */
 
 /**
- * Like loadingOverlay(), but with a fake editor toolbar instead of the spinner.
+ * Loading overlay with a fake editor toolbar.
  *
  * @private
  * @param {Function} afterShow Callback which runs after overlay is shown

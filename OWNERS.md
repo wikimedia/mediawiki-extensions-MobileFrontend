@@ -194,7 +194,6 @@ The editor.
   - /src/mobile.init/editor.js
   - /src/mobile.init/editorLoadingOverlay.js
   - /src/mobile.startup/Section.js
-  - /src/mobile.startup/loadingOverlay.js
   - /tests/node-qunit/mobile.startup/Section.test.js
   - /tests/phpunit/integration/MobileFrontendHooksTest.php
   - src/mobile.init/fakeToolbar.js
