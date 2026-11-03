@@ -159,8 +159,7 @@
 				"user.options",
 				"mediawiki.util",
 				"mediawiki.api",
-				"mediawiki.router",
-				"web2017-polyfills"
+				"mediawiki.router"
 			],
 			"messages": [
 				"mobile-frontend-drawer-arrow-label",
