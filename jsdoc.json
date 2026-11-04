@@ -11,7 +11,7 @@
 		"node_modules/jsdoc-wmf-theme/plugins/default"
 	],
 	"source": {
-		"include": [ "resources", "src" ],
+		"include": [ "resources" ],
 		"exclude": [ "resources/lib" ]
 	},
 	"templates": {

@@ -27,9 +27,9 @@ QUnit.module( 'MobileFrontend CtaDrawer.js', {
 		sandbox.stub( global.mw.util, 'getUrl' ).callsFake( ( pageName, params ) => params.type ? 'signUp' : 'logIn' );
 
 		// Dynamically import Views to use fresh sandboxed dependencies.
-		Anchor = require( '../../../src/mobile.startup/Anchor' );
-		Button = require( '../../../src/mobile.startup/Button' );
-		CtaDrawer = require( '../../../src/mobile.startup/CtaDrawer' );
+		Anchor = require( '../../../resources/mobile.startup/Anchor' );
+		Button = require( '../../../resources/mobile.startup/Button' );
+		CtaDrawer = require( '../../../resources/mobile.startup/CtaDrawer' );
 	},
 
 	afterEach: function () {

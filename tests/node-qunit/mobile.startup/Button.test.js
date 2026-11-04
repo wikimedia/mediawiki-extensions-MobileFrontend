@@ -17,7 +17,7 @@ QUnit.module( 'MobileFrontend Button.js', {
 		oo.setUp( sandbox, global );
 		mediaWiki.setUp( sandbox, global );
 		mustache.setUp( sandbox, global );
-		Button = require( '../../../src/mobile.startup/Button' );
+		Button = require( '../../../resources/mobile.startup/Button' );
 	},
 	afterEach: function () {
 		jQuery.tearDown();

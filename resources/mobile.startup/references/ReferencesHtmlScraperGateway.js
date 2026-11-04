@@ -1,5 +1,5 @@
 const ReferencesGateway = require( './ReferencesGateway.js' ),
-	util = require( './../util.js' );
+	util = require( '../util.js' );
 
 /**
  * Gateway for retrieving references via the content of the Page

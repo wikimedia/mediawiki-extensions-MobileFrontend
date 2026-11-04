@@ -1,6 +1,6 @@
 /* global $ */
 /* See T354224 for information on the @wikimedia/mediawiki.skins.clientpreferences module. */
-const clientPrefs = require( '../resources/lib/mediawiki.skins.clientpreferences/clientPreferences.js' ),
+const clientPrefs = require( './lib/mediawiki.skins.clientpreferences/clientPreferences.js' ),
 	notifyOnPageReload = require( 'mobile.startup' ).notifyOnPageReload,
 	EXPAND_SECTIONS_KEY = 'mf-expand-sections',
 	WP25_EASTER_EGGS_KEY = 'wp25eastereggs-enable',

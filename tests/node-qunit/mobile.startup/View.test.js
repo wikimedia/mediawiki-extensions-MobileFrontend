@@ -4,7 +4,7 @@ const
 	mustache = require( '../utils/mustache' ),
 	jQuery = require( '../utils/jQuery' ),
 	dom = require( '../utils/dom' ),
-	util = require( '../../../src/mobile.startup/util' ),
+	util = require( '../../../resources/mobile.startup/util' ),
 	oo = require( '../utils/oo' ),
 	sinon = require( 'sinon' );
 let
@@ -20,7 +20,7 @@ QUnit.module( 'MobileFrontend mobile.startup/View', {
 		mw.setUp( sandbox, global );
 		mustache.setUp( sandbox, global );
 
-		View = require( '../../../src/mobile.startup/View' );
+		View = require( '../../../resources/mobile.startup/View' );
 	},
 	afterEach: function () {
 		jQuery.tearDown();

@@ -12,7 +12,7 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/identifyLeadParagraph', {
 		sandbox = sinon.createSandbox();
 		dom.setUp( sandbox, global );
 		jQuery.setUp( sandbox, global );
-		identifyLeadParagraph = require( '../../../src/mobile.editor.overlay/identifyLeadParagraph' );
+		identifyLeadParagraph = require( '../../../resources/mobile.editor.overlay/identifyLeadParagraph' );
 	},
 	afterEach: function () {
 		jQuery.tearDown();

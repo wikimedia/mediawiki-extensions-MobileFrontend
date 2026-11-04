@@ -2,9 +2,9 @@ let page, pageHTMLParser, referencesGateway,
 	sandbox, Page, PageHTMLParser, ReferencesHtmlScraperGateway;
 const
 	sinon = require( 'sinon' ),
-	ReferencesGateway = require( './../../../../src/mobile.startup/references/ReferencesGateway' ),
+	ReferencesGateway = require( './../../../../resources/mobile.startup/references/ReferencesGateway' ),
 	referencesPage = require( '../../utils/PageInputs.html' ).referencesPage,
-	util = require( '../../../../src/mobile.startup/util' ),
+	util = require( '../../../../resources/mobile.startup/util' ),
 	oo = require( '../../utils/oo' ),
 	dom = require( '../../utils/dom' ),
 	jQuery = require( '../../utils/jQuery' ),
@@ -17,9 +17,9 @@ QUnit.module( 'MobileFrontend ReferencesHtmlScraperGateway.test.js', {
 		jQuery.setUp( sandbox, global );
 		oo.setUp( sandbox, global );
 		mediaWiki.setUp( sandbox, global );
-		Page = require( '../../../../src/mobile.startup/Page' );
-		PageHTMLParser = require( '../../../../src/mobile.startup/PageHTMLParser' );
-		ReferencesHtmlScraperGateway = require( './../../../../src/mobile.startup/references/ReferencesHtmlScraperGateway' );
+		Page = require( '../../../../resources/mobile.startup/Page' );
+		PageHTMLParser = require( '../../../../resources/mobile.startup/PageHTMLParser' );
+		ReferencesHtmlScraperGateway = require( './../../../../resources/mobile.startup/references/ReferencesHtmlScraperGateway' );
 		page = new Page( {
 			title: 'Reftest'
 		} );

@@ -1,6 +1,6 @@
 const
 	jQuery = require( '../utils/jQuery' ),
-	util = require( '../../../src/mobile.startup/util' ),
+	util = require( '../../../resources/mobile.startup/util' ),
 	oo = require( '../utils/oo' ),
 	dom = require( '../utils/dom' ),
 	mediaWiki = require( '../utils/mw' ),
@@ -16,7 +16,7 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/parseBlockInfo', {
 		oo.setUp( sandbox, global );
 		mediaWiki.setUp( sandbox, global );
 		jQuery.setUp( sandbox, global );
-		parseBlockInfo = require( '../../../src/mobile.editor.overlay/parseBlockInfo' );
+		parseBlockInfo = require( '../../../resources/mobile.editor.overlay/parseBlockInfo' );
 
 		const stubTitle = {
 			getUrl: function () {

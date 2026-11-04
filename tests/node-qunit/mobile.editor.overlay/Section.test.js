@@ -15,7 +15,7 @@ QUnit.module( 'MobileFrontend Section.js', {
 		jQuery.setUp( sandbox, global );
 		mustache.setUp( sandbox, global );
 		oo.setUp( sandbox, global );
-		Section = require( '../../../src/mobile.editor.overlay/Section' );
+		Section = require( '../../../resources/mobile.editor.overlay/Section' );
 	},
 	afterEach: function () {
 		jQuery.tearDown();

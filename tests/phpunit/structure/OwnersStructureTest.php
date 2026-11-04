@@ -19,6 +19,6 @@ class OwnersStructureTest extends OwnersStructureTestBase {
 	 * @inheritDoc
 	 */
 	public function getFolders(): array {
-		return [ 'tests', 'includes', 'src' ];
+		return [ 'tests', 'includes' ];
 	}
 }

@@ -30,7 +30,7 @@ QUnit.module( 'MobileFrontend Drawer.js', {
 		mustache.setUp( sandbox, global );
 
 		// Dynamically import Drawer to use fresh sandboxed dependencies.
-		Drawer = require( '../../../src/mobile.startup/Drawer' );
+		Drawer = require( '../../../resources/mobile.startup/Drawer' );
 	},
 
 	afterEach: function () {

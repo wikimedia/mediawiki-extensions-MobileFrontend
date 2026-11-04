@@ -16,8 +16,8 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/EditorOverlayBase', {
 		mediaWiki.setUp( sandbox, global );
 		mustache.setUp( sandbox, global );
 		oo.setUp( sandbox, global );
-		EditorOverlayBase = require( '../../../src/mobile.editor.overlay/EditorOverlayBase' );
-		returnToApp = require( '../../../src/mobile.returnToApp/returnToApp' );
+		EditorOverlayBase = require( '../../../resources/mobile.editor.overlay/EditorOverlayBase' );
+		returnToApp = require( '../../../resources/mobile.returnToApp/returnToApp' );
 		this.originalHookFactory = mw.hook;
 	},
 	afterEach: function () {

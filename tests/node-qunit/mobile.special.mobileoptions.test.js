@@ -48,7 +48,7 @@ QUnit.module( 'mobile.special.mobileoptions.scripts', {
 			return l;
 		};
 		mw.util.debounce = ( callback ) => () => callback();
-		mobileoptions = require( '../../src/mobile.special.mobileoptions.scripts.js' );
+		mobileoptions = require( '../../resources/mobile.special.mobileoptions.scripts.js' );
 	},
 	afterEach: function () {
 		jQuery.tearDown();

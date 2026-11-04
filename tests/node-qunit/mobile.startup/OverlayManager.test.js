@@ -5,7 +5,7 @@ const
 	dom = require( '../utils/dom' ),
 	jQuery = require( '../utils/jQuery' ),
 	oo = require( '../utils/oo' ),
-	util = require( '../../../src/mobile.startup/util' ),
+	util = require( '../../../resources/mobile.startup/util' ),
 	mediaWiki = require( '../utils/mw' ),
 	mustache = require( '../utils/mustache' );
 let
@@ -27,8 +27,8 @@ QUnit.module( 'MobileFrontend mobile.startup/OverlayManager', {
 		// window.scrollTo
 		sandbox.stub( global.window, 'scrollTo' );
 
-		OverlayManager = require( '../../../src/mobile.startup/OverlayManager' );
-		Overlay = require( '../../../src/mobile.startup/Overlay' );
+		OverlayManager = require( '../../../resources/mobile.startup/OverlayManager' );
+		Overlay = require( '../../../resources/mobile.startup/Overlay' );
 		routeEvent = function ( data ) {
 			return $.Event( 'route', data );
 		};

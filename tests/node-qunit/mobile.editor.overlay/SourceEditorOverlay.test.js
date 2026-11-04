@@ -4,14 +4,14 @@ const
 	testUrl = '/w/index.php?title=User:Test',
 	jQuery = require( '../utils/jQuery' ),
 	sinon = require( 'sinon' ),
-	util = require( '../../../src/mobile.startup/util' ),
+	util = require( '../../../resources/mobile.startup/util' ),
 	oo = require( '../utils/oo' ),
 	dom = require( '../utils/dom' ),
 	makeFakeHookRegistry = require( '../utils/makeFakeHookRegistry' ),
 	mediaWiki = require( '../utils/mw' ),
 	mustache = require( '../utils/mustache' ),
-	returnToApp = require( '../../../src/mobile.returnToApp/returnToApp' ),
-	returnToAppConfig = require( '../../../src/mobile.returnToApp/config.json' );
+	returnToApp = require( '../../../resources/mobile.returnToApp/returnToApp' ),
+	returnToAppConfig = require( '../../../resources/mobile.returnToApp/config.json' );
 
 QUnit.module( 'MobileFrontend mobile.editor.overlay/SourceEditorOverlay', {
 	beforeEach: function () {
@@ -34,10 +34,10 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/SourceEditorOverlay', {
 			};
 		};
 
-		EditorGateway = require( '../../../src/mobile.editor.overlay/EditorGateway' );
-		EditorOverlayBase = require( '../../../src/mobile.editor.overlay/EditorOverlayBase' );
-		SourceEditorOverlay = require( '../../../src/mobile.editor.overlay/SourceEditorOverlay' );
-		BlockMessageDetails = require( '../../../src/mobile.editor.overlay/BlockMessageDetails' );
+		EditorGateway = require( '../../../resources/mobile.editor.overlay/EditorGateway' );
+		EditorOverlayBase = require( '../../../resources/mobile.editor.overlay/EditorOverlayBase' );
+		SourceEditorOverlay = require( '../../../resources/mobile.editor.overlay/SourceEditorOverlay' );
+		BlockMessageDetails = require( '../../../resources/mobile.editor.overlay/BlockMessageDetails' );
 
 		// prevent event logging requests
 		sandbox.stub( SourceEditorOverlay.prototype, 'log' ).returns( util.Deferred().resolve() );
@@ -742,7 +742,7 @@ QUnit.test( '#initialize, read-only because the page is protected', ( assert ) =
 } );
 
 QUnit.test( '#initialize, read-only has no editor switcher', ( assert ) => {
-	const Page = require( '../../../src/mobile.startup/Page' );
+	const Page = require( '../../../resources/mobile.startup/Page' );
 	sandbox.stub( Page.prototype, 'isVEVisualAvailable' ).returns( true );
 	const editorOverlay = new SourceEditorOverlay( {
 		title: 'test',

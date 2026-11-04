@@ -39,7 +39,7 @@ QUnit.module( 'MobileFrontend Toggler.js', {
 		mediawiki.setUp( sandbox, global );
 		mustache.setUp( sandbox, global );
 
-		browser = require( '../../../src/mobile.startup/Browser' ).getSingleton();
+		browser = require( '../../../resources/mobile.startup/Browser' ).getSingleton();
 		Toggler = require( '../../../resources/mobile.init/Toggler' );
 
 		sandbox.stub( browser, 'isWideScreen' ).returns( false );

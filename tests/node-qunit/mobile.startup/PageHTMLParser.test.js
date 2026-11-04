@@ -12,9 +12,9 @@ let fixture,
 
 /** @type {sinon.SinonSandbox} */ let sandbox;
 /* eslint-disable jsdoc/valid-types */
-/** @type {typeof import('../../../src/mobile.startup/Page')} */ let stubPage;
-/** @type {typeof import('../../../src/mobile.startup/Page')} */ let mobileTocPage;
-/** @type {typeof import('../../../src/mobile.startup/Page')} */ let sectionPage;
+/** @type {typeof import('../../../resources/mobile.startup/Page')} */ let stubPage;
+/** @type {typeof import('../../../resources/mobile.startup/Page')} */ let mobileTocPage;
+/** @type {typeof import('../../../resources/mobile.startup/Page')} */ let sectionPage;
 /* eslint-enable jsdoc/valid-types */
 
 QUnit.module( 'MobileFrontend PageHTMLParser.js', {
@@ -29,8 +29,8 @@ QUnit.module( 'MobileFrontend PageHTMLParser.js', {
 		jQuery.setUp( sandbox, global );
 		oo.setUp( sandbox, global );
 
-		PageHTMLParser = require( '../../../src/mobile.startup/PageHTMLParser' );
-		util = require( '../../../src/mobile.startup/util' );
+		PageHTMLParser = require( '../../../resources/mobile.startup/PageHTMLParser' );
+		util = require( '../../../resources/mobile.startup/util' );
 
 		global.mw.util.percentDecodeFragment = function ( decoded ) {
 			// We're not testing percentDecodeFragment here, so only test with decoded values

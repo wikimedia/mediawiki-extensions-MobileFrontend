@@ -15,7 +15,7 @@ QUnit.module( 'MobileFrontend util.js', {
 		mw.setUp( sandbox, global );
 		jQuery.setUp( sandbox, global );
 		oo.setUp( sandbox, global );
-		util = require( '../../../src/mobile.startup/util' );
+		util = require( '../../../resources/mobile.startup/util' );
 	},
 	afterEach: function () {
 		jQuery.tearDown();

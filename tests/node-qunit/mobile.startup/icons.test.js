@@ -15,7 +15,7 @@ QUnit.module( 'MobileFrontend icons.js', {
 		oo.setUp( sandbox, global );
 		mediaWiki.setUp( sandbox, global );
 		mustache.setUp( sandbox, global );
-		icons = require( '../../../src/mobile.startup/icons' );
+		icons = require( '../../../resources/mobile.startup/icons' );
 		spy = sandbox.spy( icons, 'IconButton' );
 	},
 	afterEach: function () {

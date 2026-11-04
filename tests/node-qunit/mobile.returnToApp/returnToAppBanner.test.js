@@ -1,6 +1,6 @@
 const
 	bannerUtil = require( './util' ),
-	config = require( '../../../src/mobile.returnToApp/config.json' ),
+	config = require( '../../../resources/mobile.returnToApp/config.json' ),
 	dom = require( '../utils/dom' ),
 	jQuery = require( '../utils/jQuery' ),
 	mediaWiki = require( '../utils/mw' ),
@@ -26,7 +26,7 @@ QUnit.module( 'MobileFrontend returnToAppBanner.js', {
 		jQuery.setUp( sandbox, global );
 		mediaWiki.setUp( sandbox, global );
 		config.MFReturnToAppBannerIcons = testIconConfig;
-		returnToAppBanner = require( '../../../src/mobile.returnToApp/returnToAppBanner' );
+		returnToAppBanner = require( '../../../resources/mobile.returnToApp/returnToAppBanner' );
 	},
 	afterEach: function () {
 		jQuery.tearDown();

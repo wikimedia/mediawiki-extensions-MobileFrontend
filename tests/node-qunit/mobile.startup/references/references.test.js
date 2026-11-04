@@ -7,8 +7,8 @@ const
 	jQuery = require( '../../utils/jQuery' ),
 	mediaWiki = require( '../../utils/mw' ),
 	mustache = require( '../../utils/mustache' ),
-	util = require( '../../../../src/mobile.startup/util' ),
-	ReferencesGateway = require( '../../../../src/mobile.startup/references/ReferencesGateway' );
+	util = require( '../../../../resources/mobile.startup/util' ),
+	ReferencesGateway = require( '../../../../resources/mobile.startup/references/ReferencesGateway' );
 
 QUnit.module( 'MobileFrontend: references', {
 	beforeEach: function () {
@@ -18,10 +18,10 @@ QUnit.module( 'MobileFrontend: references', {
 		oo.setUp( sandbox, global );
 		mediaWiki.setUp( sandbox, global );
 		mustache.setUp( sandbox, global );
-		Page = require( '../../../../src/mobile.startup/Page' );
-		PageHTMLParser = require( '../../../../src/mobile.startup/PageHTMLParser' );
-		Drawer = require( '../../../../src/mobile.startup/Drawer' );
-		references = require( '../../../../src/mobile.startup/references/references.js' );
+		Page = require( '../../../../resources/mobile.startup/Page' );
+		PageHTMLParser = require( '../../../../resources/mobile.startup/PageHTMLParser' );
+		Drawer = require( '../../../../resources/mobile.startup/Drawer' );
+		references = require( '../../../../resources/mobile.startup/references/references.js' );
 		gateway = {
 			getReference: function () {}
 		};

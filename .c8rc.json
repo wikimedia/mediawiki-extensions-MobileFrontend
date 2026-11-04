@@ -7,18 +7,16 @@
 	],
 	"report-dir": "coverage",
 
-	"include": [ "src/**/*.js", "resources/**/*.js" ],
+	"include": [ "resources/**/*.js" ],
 	"exclude": [
 		"docs/",
 		"coverage/",
 		"vendor/",
 		"resources/lib",
-		"resources/dist",
-		"src/mobile.editor.overlay/mobile.editor.overlay.js",
+		"resources/mobile.editor.overlay/mobile.editor.overlay.js",
 		"resources/mobile.init/mobile.init.js",
-		"src/mobile.special.mobilediff.scripts.js",
-		"src/mobile.special.mobileoptions.scripts.js",
-		"src/mobile.special.userlogin.scripts.js"
+		"resources/mobile.startup/index.js",
+		"resources/mobile.special.userlogin.scripts.js"
 	],
 
 	"// coverage note": "Set the coverage percentage by category thresholds. Round down to nearest 1%",

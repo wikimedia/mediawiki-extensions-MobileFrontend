@@ -3,7 +3,7 @@ let sandbox, getContentStub, previewResolve,
 const
 	jQuery = require( '../utils/jQuery' ),
 	sinon = require( 'sinon' ),
-	util = require( '../../../src/mobile.startup/util' ),
+	util = require( '../../../resources/mobile.startup/util' ),
 	oo = require( '../utils/oo' ),
 	dom = require( '../utils/dom' ),
 	mediaWiki = require( '../utils/mw' ),
@@ -72,8 +72,8 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/abandonSurvey', {
 			this.findSelectedItem = () => this.selectedItem;
 		};
 
-		EditorGateway = require( '../../../src/mobile.editor.overlay/EditorGateway' );
-		SourceEditorOverlay = require( '../../../src/mobile.editor.overlay/SourceEditorOverlay' );
+		EditorGateway = require( '../../../resources/mobile.editor.overlay/EditorGateway' );
+		SourceEditorOverlay = require( '../../../resources/mobile.editor.overlay/SourceEditorOverlay' );
 
 		// prevent event logging requests
 		sandbox.stub( SourceEditorOverlay.prototype, 'log' ).returns( util.Deferred().resolve() );
@@ -119,11 +119,11 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/abandonSurvey', {
 			.returns( previewResolve );
 
 		abandonSurvey = require(
-			'../../../src/mobile.editor.overlay/abandonSurvey'
+			'../../../resources/mobile.editor.overlay/abandonSurvey'
 		);
 
 		// Dynamically import Drawer to use fresh sandboxed dependencies.
-		Drawer = require( '../../../src/mobile.startup/Drawer' );
+		Drawer = require( '../../../resources/mobile.startup/Drawer' );
 	},
 	afterEach: function () {
 		Drawer = undefined;

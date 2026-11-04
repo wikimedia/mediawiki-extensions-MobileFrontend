@@ -2,14 +2,14 @@ const
 	jQuery = require( '../utils/jQuery' ),
 	dom = require( '../utils/dom' ),
 	sinon = require( 'sinon' ),
-	util = require( '../../../src/mobile.startup/util' );
+	util = require( '../../../resources/mobile.startup/util' );
 
 QUnit.module( 'MobileFrontend mobile.editor.overlay/BlockMessageDetails', {
 	beforeEach: function () {
 		this.sandbox = sinon.createSandbox();
 		dom.setUp( this.sandbox, global );
 		jQuery.setUp( this.sandbox, global );
-		this.BlockMessageDetails = require( '../../../src/mobile.editor.overlay/BlockMessageDetails' );
+		this.BlockMessageDetails = require( '../../../resources/mobile.editor.overlay/BlockMessageDetails' );
 	},
 	afterEach: function () {
 		this.sandbox.restore();

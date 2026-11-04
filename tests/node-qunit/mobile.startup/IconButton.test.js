@@ -17,7 +17,7 @@ QUnit.module( 'MobileFrontend IconButton.js', {
 		oo.setUp( sandbox, global );
 		mediaWiki.setUp( sandbox, global );
 		mustache.setUp( sandbox, global );
-		IconButton = require( '../../../src/mobile.startup/IconButton' );
+		IconButton = require( '../../../resources/mobile.startup/IconButton' );
 	},
 	afterEach: function () {
 		jQuery.tearDown();

@@ -6,7 +6,7 @@ let sandbox, EditorGateway, spy, postStub, missingPostStub, acquireTempUserNameS
 	apiEmptySuccessResponse, apiNoSectionLine, apiRejectHttp,
 	happyResponse, missingPageResponse, happyPostResponse;
 const
-	util = require( '../../../src/mobile.startup/util' ),
+	util = require( '../../../resources/mobile.startup/util' ),
 	API_REQUEST_DATA = {
 		title: 'test',
 		action: 'edit',
@@ -46,7 +46,7 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/EditorGateway', {
 		mediaWiki.setUp( sandbox, global );
 		acquireTempUserNameStub = sandbox.stub().returns( global.$.Deferred().resolve() );
 		mw.user.acquireTempUserName = acquireTempUserNameStub;
-		EditorGateway = require( '../../../src/mobile.editor.overlay/EditorGateway' );
+		EditorGateway = require( '../../../resources/mobile.editor.overlay/EditorGateway' );
 		happyResponse = util.Deferred().resolve( {
 			query: {
 				pages: [

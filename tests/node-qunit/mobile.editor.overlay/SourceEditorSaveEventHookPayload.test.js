@@ -1,4 +1,4 @@
-const SourceEditorSaveEventHookPayload = require( '../../../src/mobile.editor.overlay/SourceEditorSaveEventHookPayload' ),
+const SourceEditorSaveEventHookPayload = require( '../../../resources/mobile.editor.overlay/SourceEditorSaveEventHookPayload' ),
 	sinon = require( 'sinon' );
 
 QUnit.test( 'SourceEditorSaveEventHookPayload', async ( assert ) => {

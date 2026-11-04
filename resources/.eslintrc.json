@@ -3,5 +3,20 @@
 	"extends": [
 		"wikimedia/client",
 		"../.eslintshared.js"
-	]
+	],
+	"env": {
+		"browser": true,
+		"commonjs": true
+	},
+	"rules": {
+		"no-shadow": "warn",
+		"object-shorthand": "warn",
+		"prefer-arrow-callback": "warn",
+		"jsdoc/check-tag-names": "off",
+		"jsdoc/no-undefined-types": "off",
+		"jsdoc/require-returns": "off",
+		"jsdoc/require-property-type": "off",
+		"jsdoc/valid-types": "off",
+		"unicorn/prefer-includes": "warn"
+	}
 }

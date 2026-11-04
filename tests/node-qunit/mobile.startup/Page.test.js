@@ -20,7 +20,7 @@ QUnit.module( 'MobileFrontend Page.js', {
 		jQuery.setUp( sandbox, global );
 		oo.setUp( sandbox, global );
 
-		Page = require( '../../../src/mobile.startup/Page' );
+		Page = require( '../../../resources/mobile.startup/Page' );
 	},
 	afterEach: function () {
 		jQuery.tearDown();

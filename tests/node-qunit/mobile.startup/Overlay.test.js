@@ -5,7 +5,7 @@ const
 	mediaWiki = require( '../utils/mw' ),
 	mustache = require( '../utils/mustache' ),
 	oo = require( '../utils/oo' ),
-	util = require( '../../../src/mobile.startup/util' );
+	util = require( '../../../resources/mobile.startup/util' );
 let
 	Overlay,
 	sandbox;
@@ -19,7 +19,7 @@ QUnit.module( 'MobileFrontend: Overlay.js', {
 		oo.setUp( sandbox, global );
 		mediaWiki.setUp( sandbox, global );
 		mustache.setUp( sandbox, global );
-		Overlay = require( '../../../src/mobile.startup/Overlay' );
+		Overlay = require( '../../../resources/mobile.startup/Overlay' );
 
 		// jsdom will throw "Not implemented" errors if we don't stub
 		// window.scrollTo

@@ -470,7 +470,7 @@ Whether to collapse the lead infobox of an article page into a "Quick facts" sec
 
 If set, exiting the visual editor will send the user to a URL with this URL
 scheme, indicating to an external application that the edit is complete. This
-value should have no colons or slashes at the end. See `src/mobile.returnToApp/`
+value should have no colons or slashes at the end. See `resources/mobile.returnToApp/`
 for how URLs are constructed.
 
 * Type: `string`

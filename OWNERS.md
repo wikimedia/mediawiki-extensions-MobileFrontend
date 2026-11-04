@@ -104,50 +104,12 @@ Codex and upstreaming useful utility functionality to MediaWiki core.
 
 * Since: Sept 2025
 * Files:
-  - /resources/mobile.startup/mobile.startup.less
-  - /src/mobile.startup/Anchor.js
-  - /src/mobile.startup/Browser.js
-  - /src/mobile.startup/Button.js
-  - /src/mobile.startup/CtaDrawer.js
-  - /src/mobile.startup/Drawer.js
-  - /src/mobile.startup/Icon.js
-  - /src/mobile.startup/IconButton.js
-  - /src/mobile.startup/Overlay.js
-  - /src/mobile.startup/OverlayManager.js
-  - /src/mobile.startup/Page.js
-  - /src/mobile.startup/PageHTMLParser.js
-  - /src/mobile.startup/View.js
-  - /src/mobile.startup/currentPage.js
-  - /src/mobile.startup/currentPageHTMLParser.js
-  - /src/mobile.startup/headers.js
-  - /src/mobile.startup/icons.js
-  - /src/mobile.startup/index.js
-  - /src/mobile.startup/mobile.startup.js
-  - /src/mobile.startup/promisedView.js
-  - /src/mobile.startup/showOnPageReload.js
-  - /src/mobile.startup/time.js
-  - /src/mobile.startup/util.js
   - /tests/node-qunit/importable.test.js
-  - /tests/node-qunit/mobile.startup/Browser.test.js
-  - /tests/node-qunit/mobile.startup/Button.test.js
-  - /tests/node-qunit/mobile.startup/CtaDrawer.test.html.js
-  - /tests/node-qunit/mobile.startup/CtaDrawer.test.js
-  - /tests/node-qunit/mobile.startup/Drawer.test.js
-  - /tests/node-qunit/mobile.startup/Icon.test.js
-  - /tests/node-qunit/mobile.startup/IconButton.test.js
-  - /tests/node-qunit/mobile.startup/Overlay.test.js
-  - /tests/node-qunit/mobile.startup/OverlayManager.test.js
-  - /tests/node-qunit/mobile.startup/Page.test.js
-  - /tests/node-qunit/mobile.startup/PageHTMLParser.test.js
-  - /tests/node-qunit/mobile.startup/View.test.js
-  - /tests/node-qunit/mobile.startup/icons.test.js
-  - /tests/node-qunit/mobile.startup/promisedView.test.js
-  - /tests/node-qunit/mobile.startup/time.test.js
-  - /tests/node-qunit/mobile.startup/util.test.js
   - /tests/phpunit/structure/MobileFrontendBundleSizeTest.php
 * Folders:
-  - /src/mobile.startup/package
   - /tests/node-qunit/utils
+  - /resources/mobile.startup
+  - /tests/node-qunit/mobile.startup
 * Contact: [Readers Growth][1]
 * Phabricator: https://phabricator.wikimedia.org/project/view/8172/
 
@@ -158,7 +120,7 @@ should be handled by Extension:Popups or Extension:Cite.
 
 * Since: Sept 2025
 * Folders:
-  - /src/mobile.startup/references
+  - /resources/mobile.startup/references
   - /tests/node-qunit/mobile.startup/references
 * Contact: [Readers Growth][1]
 * Phabricator: https://phabricator.wikimedia.org/project/view/8171/
@@ -173,12 +135,11 @@ The editor.
   - /includes/Api/ApiEditPageExtender.php
   - /includes/MobileFrontendEditorHooks.php
   - /tests/phpunit/integration/MobileFrontendHooksTest.php
-  - /resources/mobile.editor.overlay/editor.less
   - /tests/node-qunit/mobile.init/editorLoadingOverlay.test.js
   - resources/mobile.init.styles/editor.less
 * Folders:
-  - /src/mobile.editor.overlay
-  - /src/mobile.returnToApp
+  - /resources/mobile.editor.overlay
+  - /resources/mobile.returnToApp
   - /resources/mobile.init/editor
   - /tests/node-qunit/mobile.returnToApp
   - /tests/node-qunit/mobile.editor.overlay/
@@ -191,7 +152,7 @@ Provides client side settings and user preference setting.
 
 * Since: Sept 2025
 * Files:
-  - /src/mobile.special.mobileoptions.scripts.js
+  - /resources/mobile.special.mobileoptions.scripts.js
   - /tests/node-qunit/mobile.special.mobileoptions.test.js
   - /includes/specials/SpecialMobileOptions.php
 * Folders:
@@ -209,7 +170,7 @@ my login" for mobile users.
 
 * Since: Sept 2025
 * Files:
-  - /src/mobile.special.userlogin.scripts.js
+  - /resources/mobile.special.userlogin.scripts.js
 * Folders:
   - /resources/mobile.special.styles/
 * Contact: [Reader Growth][1]
@@ -224,9 +185,9 @@ results are analyzed a single experience for the anon warning should remain.
 * Since: Jan 2026
 * Files:
   - resources/mobile.editor.overlay/editor.less
-  - src/mobile.editor.overlay/EditorOverlayBase.js
-  - src/mobile.editor.overlay/SourceEditorOverlay.js
-  - src/mobile.editor.overlay/VisualEditorOverlay.js
+  - resources/mobile.editor.overlay/EditorOverlayBase.js
+  - resources/mobile.editor.overlay/SourceEditorOverlay.js
+  - resources/mobile.editor.overlay/VisualEditorOverlay.js
 * Contact: [Growth][5]
 * Phabricator: https://phabricator.wikimedia.org/project/view/1114/
 

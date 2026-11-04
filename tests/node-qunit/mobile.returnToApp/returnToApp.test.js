@@ -1,6 +1,6 @@
 const
 	bannerUtil = require( './util' ),
-	config = require( '../../../src/mobile.returnToApp/config.json' ),
+	config = require( '../../../resources/mobile.returnToApp/config.json' ),
 	dom = require( '../utils/dom' ),
 	jQuery = require( '../utils/jQuery' ),
 	makeFakeHookRegistry = require( '../utils/makeFakeHookRegistry' ),
@@ -47,7 +47,7 @@ QUnit.module( 'MobileFrontend returnToApp.js', {
 		config.MFReturnToAppBehavior = 'immediate';
 		config.MFReturnToAppScheme = 'wikipedia';
 		config.ServerName = 'en.wikipedia.org';
-		returnToApp = require( '../../../src/mobile.returnToApp/returnToApp' );
+		returnToApp = require( '../../../resources/mobile.returnToApp/returnToApp' );
 	},
 	afterEach: function () {
 		mw.hook = originalHookFactory;

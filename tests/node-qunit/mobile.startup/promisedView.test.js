@@ -1,7 +1,7 @@
 let promisedView, View,
 	sandbox, happyView;
 const
-	util = require( '../../../src/mobile.startup/util' ),
+	util = require( '../../../resources/mobile.startup/util' ),
 	jQuery = require( '../utils/jQuery' ),
 	dom = require( '../utils/dom' ),
 	oo = require( '../utils/oo' ),
@@ -17,8 +17,8 @@ QUnit.module( 'MobileFrontend promisedView.js', {
 		oo.setUp( sandbox, global );
 		mediaWiki.setUp( sandbox, global );
 		mustache.setUp( sandbox, global );
-		View = require( './../../../src/mobile.startup/View' );
-		promisedView = require( './../../../src/mobile.startup/promisedView' );
+		View = require( './../../../resources/mobile.startup/View' );
+		promisedView = require( './../../../resources/mobile.startup/promisedView' );
 		happyView = new View( {
 			isBorderBox: false,
 			className: 'test'

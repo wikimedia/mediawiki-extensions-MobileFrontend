@@ -220,30 +220,30 @@
 				"resources/mobile.startup/mobile.startup.less"
 			],
 			"packageFiles": [
-				"src/mobile.startup/mobile.startup.js",
-				"src/mobile.startup/Anchor.js",
-				"src/mobile.startup/Browser.js",
-				"src/mobile.startup/Button.js",
-				"src/mobile.startup/CtaDrawer.js",
-				"src/mobile.startup/Drawer.js",
-				"src/mobile.startup/Icon.js",
-				"src/mobile.startup/IconButton.js",
-				"src/mobile.startup/Overlay.js",
-				"src/mobile.startup/OverlayManager.js",
-				"src/mobile.startup/Page.js",
-				"src/mobile.startup/PageHTMLParser.js",
-				"src/mobile.startup/View.js",
-				"src/mobile.startup/currentPage.js",
-				"src/mobile.startup/currentPageHTMLParser.js",
-				"src/mobile.startup/headers.js",
-				"src/mobile.startup/icons.js",
-				"src/mobile.startup/promisedView.js",
-				"src/mobile.startup/references/ReferencesGateway.js",
-				"src/mobile.startup/references/ReferencesHtmlScraperGateway.js",
-				"src/mobile.startup/references/references.js",
-				"src/mobile.startup/showOnPageReload.js",
-				"src/mobile.startup/time.js",
-				"src/mobile.startup/util.js"
+				"resources/mobile.startup/mobile.startup.js",
+				"resources/mobile.startup/Anchor.js",
+				"resources/mobile.startup/Browser.js",
+				"resources/mobile.startup/Button.js",
+				"resources/mobile.startup/CtaDrawer.js",
+				"resources/mobile.startup/Drawer.js",
+				"resources/mobile.startup/Icon.js",
+				"resources/mobile.startup/IconButton.js",
+				"resources/mobile.startup/Overlay.js",
+				"resources/mobile.startup/OverlayManager.js",
+				"resources/mobile.startup/Page.js",
+				"resources/mobile.startup/PageHTMLParser.js",
+				"resources/mobile.startup/View.js",
+				"resources/mobile.startup/currentPage.js",
+				"resources/mobile.startup/currentPageHTMLParser.js",
+				"resources/mobile.startup/headers.js",
+				"resources/mobile.startup/icons.js",
+				"resources/mobile.startup/promisedView.js",
+				"resources/mobile.startup/references/ReferencesGateway.js",
+				"resources/mobile.startup/references/ReferencesHtmlScraperGateway.js",
+				"resources/mobile.startup/references/references.js",
+				"resources/mobile.startup/showOnPageReload.js",
+				"resources/mobile.startup/time.js",
+				"resources/mobile.startup/util.js"
 			]
 		},
 		"mobile.returnToApp": {
@@ -257,10 +257,10 @@
 				"mobile-frontend-return-to-app-return-link"
 			],
 			"packageFiles": [
-				"src/mobile.returnToApp/returnToApp.js",
-				"src/mobile.returnToApp/returnToAppBanner.js",
+				"resources/mobile.returnToApp/returnToApp.js",
+				"resources/mobile.returnToApp/returnToAppBanner.js",
 				{
-					"name": "src/mobile.returnToApp/config.json",
+					"name": "resources/mobile.returnToApp/config.json",
 					"config": [
 						"MFReturnToAppScheme",
 						"MFReturnToAppBannerIcons",
@@ -295,33 +295,33 @@
 				"mediawiki.widgets.AbandonEditDialog"
 			],
 			"packageFiles": [
-				"src/mobile.editor.overlay/mobile.editor.overlay.js",
-				"src/mobile.editor.overlay/headers.js",
-				"src/mobile.editor.overlay/Section.js",
-				"src/mobile.editor.overlay/getLicenseMessage.js",
-				"src/mobile.editor.overlay/BlockMessageDetails.js",
-				"src/mobile.editor.overlay/blockMessageDrawer.js",
-				"src/mobile.editor.overlay/EditorGateway.js",
-				"src/mobile.editor.overlay/actionParams.js",
-				"src/mobile.editor.overlay/EditorOverlayBase.js",
-				"src/mobile.editor.overlay/identifyLeadParagraph.js",
-				"src/mobile.editor.overlay/parseBlockInfo.js",
-				"src/mobile.editor.overlay/MessageBox.js",
-				"src/mobile.editor.overlay/saveFailureMessage.js",
-				"src/mobile.editor.overlay/setPreferredEditor.js",
-				"src/mobile.editor.overlay/SourceEditorOverlay.js",
-				"src/mobile.editor.overlay/SourceEditorSaveEventHookPayload.js",
-				"src/mobile.editor.overlay/VisualEditorOverlay.js",
-				"src/mobile.editor.overlay/abandonSurvey.js",
+				"resources/mobile.editor.overlay/mobile.editor.overlay.js",
+				"resources/mobile.editor.overlay/headers.js",
+				"resources/mobile.editor.overlay/Section.js",
+				"resources/mobile.editor.overlay/getLicenseMessage.js",
+				"resources/mobile.editor.overlay/BlockMessageDetails.js",
+				"resources/mobile.editor.overlay/blockMessageDrawer.js",
+				"resources/mobile.editor.overlay/EditorGateway.js",
+				"resources/mobile.editor.overlay/actionParams.js",
+				"resources/mobile.editor.overlay/EditorOverlayBase.js",
+				"resources/mobile.editor.overlay/identifyLeadParagraph.js",
+				"resources/mobile.editor.overlay/parseBlockInfo.js",
+				"resources/mobile.editor.overlay/MessageBox.js",
+				"resources/mobile.editor.overlay/saveFailureMessage.js",
+				"resources/mobile.editor.overlay/setPreferredEditor.js",
+				"resources/mobile.editor.overlay/SourceEditorOverlay.js",
+				"resources/mobile.editor.overlay/SourceEditorSaveEventHookPayload.js",
+				"resources/mobile.editor.overlay/VisualEditorOverlay.js",
+				"resources/mobile.editor.overlay/abandonSurvey.js",
 				{
-					"name": "src/mobile.editor.overlay/config.json",
+					"name": "resources/mobile.editor.overlay/config.json",
 					"config": [
 						"MFTrackBlockNotices",
 						"MFEnableAbandonSurvey"
 					]
 				},
 				{
-					"name": "src/mobile.editor.overlay/contLangMessages.json",
+					"name": "resources/mobile.editor.overlay/contLangMessages.json",
 					"callback": "MobileFrontendEditorHooks::getContentLanguageMessages",
 					"callbackParam": [
 						"tempuser-helppage"
@@ -420,7 +420,7 @@
 				"mobile.startup"
 			],
 			"packageFiles": [
-				"src/mobile.special.mobileoptions.scripts.js",
+				"resources/mobile.special.mobileoptions.scripts.js",
 				"resources/lib/mediawiki.skins.clientpreferences/clientPreferences.js"
 			],
 			"messages": [
@@ -448,7 +448,7 @@
 		},
 		"mobile.special.userlogin.scripts": {
 			"scripts": [
-				"src/mobile.special.userlogin.scripts.js"
+				"resources/mobile.special.userlogin.scripts.js"
 			]
 		}
 	},

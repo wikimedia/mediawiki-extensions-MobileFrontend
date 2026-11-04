@@ -1,6 +1,6 @@
 /* global $ */
 const
-	Browser = require( '../../../src/mobile.startup/Browser' ),
+	Browser = require( '../../../resources/mobile.startup/Browser' ),
 	dom = require( '../utils/dom' ),
 	jQuery = require( '../utils/jQuery' ),
 	sinon = require( 'sinon' ),

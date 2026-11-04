@@ -6,7 +6,7 @@ const
 	mustache = require( '../utils/mustache' ),
 	mediaWiki = require( '../utils/mw' ),
 	oo = require( '../utils/oo' ),
-	returnToApp = require( '../../../src/mobile.returnToApp/returnToApp' ),
+	returnToApp = require( '../../../resources/mobile.returnToApp/returnToApp' ),
 	sinon = require( 'sinon' );
 
 QUnit.module( 'MobileFrontend mobile.editor.overlay/VisualEditorOverlay', {
@@ -17,11 +17,11 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/VisualEditorOverlay', {
 		mediaWiki.setUp( sandbox, global );
 		mustache.setUp( sandbox, global );
 		oo.setUp( sandbox, global );
-		mobile = require( '../../../src/mobile.startup/mobile.startup' );
+		mobile = require( '../../../resources/mobile.startup/mobile.startup' );
 		sandbox.stub( mobile, 'currentPage' ).returns( { isVEVisualAvailable: sandbox.stub().returns( true ) } );
 		this.originalHookFactory = mw.hook;
-		EditorOverlayBase = require( '../../../src/mobile.editor.overlay/EditorOverlayBase' );
-		VisualEditorOverlay = require( '../../../src/mobile.editor.overlay/VisualEditorOverlay' );
+		EditorOverlayBase = require( '../../../resources/mobile.editor.overlay/EditorOverlayBase' );
+		VisualEditorOverlay = require( '../../../resources/mobile.editor.overlay/VisualEditorOverlay' );
 		// This is a very brittle stub that allows VisualEditorOverlay to be
 		// exercised in this test, but probably won't behave correctly
 		// otherwise.
