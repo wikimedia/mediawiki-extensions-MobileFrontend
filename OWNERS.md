@@ -214,11 +214,11 @@ Provides client side settings and user preference setting.
 
 * Since: Sept 2025
 * Files:
-  - /resources/dist/mobile.special.mobileoptions.scripts.js
   - /src/mobile.special.mobileoptions.scripts.js
   - /tests/node-qunit/mobile.special.mobileoptions.test.js
   - /includes/specials/SpecialMobileOptions.php
 * Folders:
+  - /resources/lib/mediawiki.skins.clientpreferences
   - /resources/mobile.special.mobileoptions.styles
 * Contact: [Reader Experience][4]
 * Phabricator: https://phabricator.wikimedia.org/project/view/8167/

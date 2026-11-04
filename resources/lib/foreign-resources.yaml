@@ -1,0 +1,20 @@
+# See https://www.mediawiki.org/wiki/Foreign_resources and
+# <mediawiki>/resources/lib/foreign-resources.yaml for the format of this file.
+#
+# To update a library, bump "version" and "src", then run:
+#
+#   php maintenance/run.php manageForeignResources --extension MobileFrontend make-sri <name>
+#   php maintenance/run.php manageForeignResources --extension MobileFrontend update <name>
+
+mediawiki.skins.clientpreferences:
+  license: GPL-2.0-or-later
+  homepage: https://www.npmjs.com/package/@wikimedia/mediawiki.skins.clientpreferences
+  authors: Wikimedia Foundation
+  version: 1.4.0
+  purl: pkg:npm/%40wikimedia/mediawiki.skins.clientpreferences@1.4.0
+  type: tar
+  src: https://registry.npmjs.org/@wikimedia/mediawiki.skins.clientpreferences/-/mediawiki.skins.clientpreferences-1.4.0.tgz
+  integrity: sha384-NIlNjwyFM/xfv3d+xspD8P4RJ/wa6eMcB+Z9BjgmIiMJIqK9xPy3gQCi7BReHqEt
+  dest:
+    package/clientPreferences.js:
+    package/README.md:

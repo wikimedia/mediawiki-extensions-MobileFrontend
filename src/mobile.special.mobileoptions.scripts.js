@@ -1,7 +1,7 @@
 /* global $ */
 /* See T354224 for information on the @wikimedia/mediawiki.skins.clientpreferences module. */
-const clientPrefs = require( '@wikimedia/mediawiki.skins.clientpreferences' ),
-	toast = require( './mobile.startup/showOnPageReload' ),
+const clientPrefs = require( '../resources/lib/mediawiki.skins.clientpreferences/clientPreferences.js' ),
+	notifyOnPageReload = require( 'mobile.startup' ).notifyOnPageReload,
 	EXPAND_SECTIONS_KEY = 'mf-expand-sections',
 	WP25_EASTER_EGGS_KEY = 'wp25eastereggs-enable',
 	msg = mw.msg,
@@ -10,11 +10,8 @@ const clientPrefs = require( '@wikimedia/mediawiki.skins.clientpreferences' ),
 	USER_FONT_SIZE_LARGE = 'large',
 	THEME = 'skin-theme',
 	// FIXME: This value should be synced between back-end and front-end code,
-	// but it's currently hard-coded because ResourceLoader virtual imports
-	// i.e. require( './config.json') are incompatible with the
-	// Webpack build. Requires updating to Webpack 5 and common.js magic comments.
-	// https://webpack.js.org/configuration/module/#moduleparserjavascriptcommonjsmagiccomments
-	// e.g: require(/* webpackIgnore: true */ './config.json');
+	// e.g. via a ResourceLoader packageFiles virtual config.json file,
+	// but it's currently hard-coded.
 	FONT_SIZE_KEY = 'mf-font-size';
 
 /**
@@ -25,7 +22,7 @@ const clientPrefs = require( '@wikimedia/mediawiki.skins.clientpreferences' ),
  */
 function notify( isPending ) {
 	if ( isPending ) {
-		toast.showOnPageReload( msg( 'mobile-frontend-settings-save' ) );
+		notifyOnPageReload( msg( 'mobile-frontend-settings-save' ) );
 	} else {
 		mw.notify( msg( 'mobile-frontend-settings-save' ) );
 	}

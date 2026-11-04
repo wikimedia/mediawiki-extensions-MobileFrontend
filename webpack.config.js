@@ -10,8 +10,7 @@ const
 	srcMapExt = '.map.json',
 	ENTRIES = {
 		startup: 'mobile.startup',
-		mobileInit: 'mobile.init',
-		mobileOptions: 'mobile.special.mobileoptions.scripts'
+		mobileInit: 'mobile.init'
 	};
 
 module.exports = ( env, argv ) => ( {
@@ -48,9 +47,7 @@ module.exports = ( env, argv ) => ( {
 		// loading, we won't be required to explicitly create this new chunk and
 		// this can be removed.
 		// all mobile skins,
-		[ENTRIES.mobileInit]: './src/mobile.init/mobile.init.js',
-		// T212823 Make a chunk for each mobile special page
-		[ENTRIES.mobileOptions]: './src/mobile.special.mobileoptions.scripts.js'
+		[ENTRIES.mobileInit]: './src/mobile.init/mobile.init.js'
 	},
 
 	resolve: {
@@ -111,8 +108,7 @@ module.exports = ( env, argv ) => ( {
 					chunks: ( chunk ) => [
 						ENTRIES.startup,
 						ENTRIES.editor,
-						ENTRIES.mobileInit,
-						ENTRIES.mobileOptions
+						ENTRIES.mobileInit
 					].includes( chunk.name )
 				}
 			}

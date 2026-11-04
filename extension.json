@@ -372,8 +372,9 @@
 			"dependencies": [
 				"mobile.startup"
 			],
-			"scripts": [
-				"resources/dist/mobile.special.mobileoptions.scripts.js"
+			"packageFiles": [
+				"src/mobile.special.mobileoptions.scripts.js",
+				"resources/lib/mediawiki.skins.clientpreferences/clientPreferences.js"
 			],
 			"messages": [
 				"mobile-frontend-settings-save",
@@ -404,6 +405,7 @@
 			]
 		}
 	},
+	"ForeignResourcesDir": "resources/lib",
 	"ResourceFileModulePaths": {
 		"localBasePath": "",
 		"remoteExtPath": "MobileFrontend"
