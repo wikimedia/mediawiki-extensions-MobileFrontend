@@ -1,25 +1,22 @@
-const currentPageHTMLParser = require( './currentPageHTMLParser' );
-const time = require( './time' );
-const currentPage = require( './currentPage' );
-const Drawer = require( './Drawer' );
-const CtaDrawer = require( './CtaDrawer' );
-const Browser = require( './Browser' );
-const icons = require( './icons' );
-const PageHTMLParser = require( './PageHTMLParser' );
-const { showOnPageReload } = require( './showOnPageReload' );
-const OverlayManager = require( './OverlayManager' );
-const View = require( './View' );
-const Overlay = require( './Overlay' );
-const references = require( './references/references' );
-const promisedView = require( './promisedView' );
-const headers = require( './headers' );
+const currentPageHTMLParser = require( './currentPageHTMLParser.js' );
+const time = require( './time.js' );
+const currentPage = require( './currentPage.js' );
+const Drawer = require( './Drawer.js' );
+const CtaDrawer = require( './CtaDrawer.js' );
+const Browser = require( './Browser.js' );
+const icons = require( './icons.js' );
+const PageHTMLParser = require( './PageHTMLParser.js' );
+const { showOnPageReload } = require( './showOnPageReload.js' );
+const OverlayManager = require( './OverlayManager.js' );
+const View = require( './View.js' );
+const Overlay = require( './Overlay.js' );
+const references = require( './references/references.js' );
+const promisedView = require( './promisedView.js' );
+const headers = require( './headers.js' );
 const util = require( './util.js' );
 const Icon = require( './Icon.js' );
 const IconButton = require( './IconButton.js' );
 const Button = require( './Button.js' );
-
-// Expose chunk to temporary variable which will be deleted and exported via ResourceLoader
-// package inside mobile.startup.exports.
 
 /**
  * The main library for accessing MobileFrontend's stable APIs.
@@ -155,16 +152,5 @@ module.exports = {
 	 * @param {string} msg
 	 * @return {jQuery.Deferred}
 	 */
-	notifyOnPageReload: ( msg ) => showOnPageReload( msg ),
-	/**
-	 * Internal for use inside VisualEditor
-	 *
-	 * @memberof module:mobile.startup
-	 * @return {string|undefined}
-	 */
-	license() {
-		mw.log.warn( `[deprecated] Please update your call to
-			require('mobile.editor.overlay').getLicenseMessage` );
-		return require( '../mobile.editor.overlay/getLicenseMessage.js' )();
-	}
+	notifyOnPageReload: ( msg ) => showOnPageReload( msg )
 };

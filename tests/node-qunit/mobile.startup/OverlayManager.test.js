@@ -1,6 +1,7 @@
 /* global $ */
 const
 	sinon = require( 'sinon' ),
+	fakeRouter = require( 'mediawiki.router' ),
 	dom = require( '../utils/dom' ),
 	jQuery = require( '../utils/jQuery' ),
 	oo = require( '../utils/oo' ),
@@ -9,7 +10,6 @@ const
 	mustache = require( '../utils/mustache' );
 let
 	OverlayManager, Overlay,
-	fakeRouter,
 	overlayManager,
 	routeEvent,
 	sandbox;
@@ -46,19 +46,17 @@ QUnit.module( 'MobileFrontend mobile.startup/OverlayManager', {
 			return fakeOverlay;
 		};
 
-		fakeRouter = new OO.EventEmitter();
-		fakeRouter.getPath = () => '';
 		fakeRouter.back = sandbox.spy();
-		const requireStub = sandbox.stub();
-		/* eslint-disable-next-line camelcase */
-		global.__non_webpack_require__ = requireStub;
-		requireStub.withArgs( 'mediawiki.router' ).returns( fakeRouter );
 		overlayManager = new OverlayManager( fakeRouter, document.body );
 		OverlayManager.test.__clearCache();
 	},
 	afterEach: function () {
 		jQuery.tearDown();
 		sandbox.restore();
+		// fakeRouter is a shared singleton (see tests/node-qunit/utils/mediawiki.router.js),
+		// so OverlayManager instances created by earlier tests stay subscribed to it unless
+		// we clear their listeners here.
+		fakeRouter.off( 'route' );
 	}
 } );
 
@@ -116,7 +114,7 @@ QUnit.test( '#add, with current path', function ( assert ) {
 	const
 		fakeOverlay = this.createFakeOverlay(),
 		deferred = util.Deferred();
-	fakeRouter.getPath = sandbox.stub().returns( 'baha' );
+	sandbox.stub( fakeRouter, 'getPath' ).returns( 'baha' );
 
 	overlayManager.add( /^baha$/, () => fakeOverlay );
 

@@ -1,6 +1,6 @@
 const
-	icons = require( './icons' ),
-	View = require( './View' );
+	icons = require( './icons.js' ),
+	View = require( './View.js' );
 
 /**
  * Internal for use inside Echo, GrowthExperiments only.

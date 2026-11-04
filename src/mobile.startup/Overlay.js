@@ -1,9 +1,9 @@
 const
-	View = require( './View' ),
-	header = require( './headers' ).header,
-	Anchor = require( './Anchor' ),
-	util = require( './util' ),
-	browser = require( './Browser' ).getSingleton();
+	View = require( './View.js' ),
+	header = require( './headers.js' ).header,
+	Anchor = require( './Anchor.js' ),
+	util = require( './util.js' ),
+	browser = require( './Browser.js' ).getSingleton();
 
 /**
  * Mobile modal window

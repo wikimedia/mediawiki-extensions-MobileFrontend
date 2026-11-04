@@ -219,10 +219,31 @@
 			"styles": [
 				"resources/mobile.startup/mobile.startup.less"
 			],
-			"scripts": [
-				"resources/dist/mobile.startup.runtime.js",
-				"resources/dist/mobile.startup.js",
-				"resources/mobile.startup/exports.js"
+			"packageFiles": [
+				"src/mobile.startup/mobile.startup.js",
+				"src/mobile.startup/Anchor.js",
+				"src/mobile.startup/Browser.js",
+				"src/mobile.startup/Button.js",
+				"src/mobile.startup/CtaDrawer.js",
+				"src/mobile.startup/Drawer.js",
+				"src/mobile.startup/Icon.js",
+				"src/mobile.startup/IconButton.js",
+				"src/mobile.startup/Overlay.js",
+				"src/mobile.startup/OverlayManager.js",
+				"src/mobile.startup/Page.js",
+				"src/mobile.startup/PageHTMLParser.js",
+				"src/mobile.startup/View.js",
+				"src/mobile.startup/currentPage.js",
+				"src/mobile.startup/currentPageHTMLParser.js",
+				"src/mobile.startup/headers.js",
+				"src/mobile.startup/icons.js",
+				"src/mobile.startup/promisedView.js",
+				"src/mobile.startup/references/ReferencesGateway.js",
+				"src/mobile.startup/references/ReferencesHtmlScraperGateway.js",
+				"src/mobile.startup/references/references.js",
+				"src/mobile.startup/showOnPageReload.js",
+				"src/mobile.startup/time.js",
+				"src/mobile.startup/util.js"
 			]
 		},
 		"mobile.returnToApp": {

@@ -1,10 +1,10 @@
-const Drawer = require( '../Drawer' ),
-	util = require( '../util' ),
-	icons = require( '../icons' ),
-	ReferencesGateway = require( './ReferencesGateway' ),
-	Icon = require( '../Icon' ),
-	ReferencesHtmlScraperGateway = require( './ReferencesHtmlScraperGateway' ),
-	IconButton = require( '../IconButton' );
+const Drawer = require( '../Drawer.js' ),
+	util = require( '../util.js' ),
+	icons = require( '../icons.js' ),
+	ReferencesGateway = require( './ReferencesGateway.js' ),
+	Icon = require( '../Icon.js' ),
+	ReferencesHtmlScraperGateway = require( './ReferencesHtmlScraperGateway.js' ),
+	IconButton = require( '../IconButton.js' );
 
 /**
  * Create a callback for clicking references

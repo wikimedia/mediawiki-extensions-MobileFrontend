@@ -5,10 +5,7 @@
  */
 const mobile = require( 'mobile.startup' ),
 	Overlay = mobile.class.Overlay,
-	// Use MediaWiki ResourceLoader require(), not Webpack require()
-	contLangMessages = (
-		require( './contLangMessages.json' )
-	),
+	contLangMessages = require( './contLangMessages.json' ),
 	util = mobile.util,
 	parseBlockInfo = require( './parseBlockInfo.js' ),
 	{ makeHeader, saveHeader, savingHeader } = require( './headers.js' ),

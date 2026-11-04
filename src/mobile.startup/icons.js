@@ -1,7 +1,7 @@
 const
 	CANCEL_GLYPH = 'close',
-	Icon = require( './Icon' ),
-	IconButton = require( './IconButton' );
+	Icon = require( './Icon.js' ),
+	IconButton = require( './IconButton.js' );
 
 /**
  * A set of shared icons.

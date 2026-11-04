@@ -2,9 +2,7 @@
 	"private": true,
 	"scripts": {
 		"coverage": "cross-env NODE_ENV=test nyc npm -s run test:unit",
-		"start": "webpack -w --mode=development",
-		"build": "webpack --mode=production",
-		"precommit": "npm -s run lint:frontend && npm -s run coverage && npm -s run test:bundle && composer test",
+		"precommit": "npm -s run lint:frontend && npm -s run coverage && composer test",
 		"test:unit": "mw-node-qunit --require @babel/register \"tests/node-qunit/**/*.test.js\"",
 		"lint": "npm -s run lint:i18n && npm -s run lint:frontend",
 		"lint:frontend": "npm -s run lint:js && npm -s run lint:css",
@@ -13,13 +11,9 @@
 		"lint:i18n": "banana-checker --requireLowerCase=0 i18n/",
 		"minify": "npm -s run minify:svg",
 		"minify:svg": "svgo --config=.svgo.config.js --quiet --recursive --folder resources/",
-		"test": "npm -s run lint && bash ./dev-scripts/svg_check.sh && npm -s run coverage && npm -s run test:bundle && npm -s run jsdoc",
-		"test:bundle": "bash ./dev-scripts/check_bundle.sh",
+		"test": "npm -s run lint && bash ./dev-scripts/svg_check.sh && npm -s run coverage && npm -s run jsdoc",
 		"jsdoc": "jsdoc -c jsdoc.json",
 		"doc": "npm run jsdoc && npm run coverage"
-	},
-	"engines": {
-		"node": "26.12.1"
 	},
 	"pre-commit": "precommit",
 	"devDependencies": {
@@ -27,10 +21,8 @@
 		"@babel/preset-env": "7.23.8",
 		"@babel/register": "7.23.7",
 		"@wikimedia/mw-node-qunit": "7.11.0",
-		"babel-loader": "9.1.3",
 		"babel-plugin-istanbul": "5.2.0",
 		"browserslist-config-wikimedia": "0.7.0",
-		"clean-webpack-plugin": "0.1.19",
 		"cross-env": "5.2.1",
 		"eslint-config-wikimedia": "0.32.3",
 		"grunt-banana-checker": "0.13.0",
@@ -38,8 +30,7 @@
 		"jsdoc": "4.0.3",
 		"jsdoc-wmf-theme": "1.2.0",
 		"jsdom": "12.2.0",
-		"less": "3.8.1",
-		"less-loader": "11.1.4",
+		"mediawiki.router": "file:./tests/node-qunit/utils/mediawiki.router.js",
 		"mobile.returnToApp": "file:./src/mobile.returnToApp/package",
 		"mobile.startup": "file:./src/mobile.startup/package",
 		"mustache": "3.0.1",
@@ -50,8 +41,6 @@
 		"qunit": "2.24.1",
 		"sinon": "12.0.1",
 		"stylelint-config-wikimedia": "0.18.0",
-		"svgo": "3.2.0",
-		"webpack": "5.89.0",
-		"webpack-cli": "5.1.4"
+		"svgo": "3.2.0"
 	}
 }

@@ -1,6 +1,6 @@
 const
-	View = require( './View' ),
-	util = require( './util' );
+	View = require( './View.js' ),
+	util = require( './util.js' );
 
 /**
  * A wrapper for creating an anchor.

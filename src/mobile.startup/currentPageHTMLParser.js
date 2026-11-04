@@ -1,6 +1,6 @@
 /* global $ */
 const
-	PageHTMLParser = require( './PageHTMLParser' );
+	PageHTMLParser = require( './PageHTMLParser.js' );
 
 let pageHTMLParser;
 

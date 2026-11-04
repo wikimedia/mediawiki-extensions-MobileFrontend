@@ -1,7 +1,7 @@
 const
-	View = require( './View' ),
-	util = require( './util' ),
-	IconButton = require( './IconButton' );
+	View = require( './View.js' ),
+	util = require( './util.js' ),
+	IconButton = require( './IconButton.js' );
 
 /**
  * A {@link View} that pops up from the bottom of the screen.

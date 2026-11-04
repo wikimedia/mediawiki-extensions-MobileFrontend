@@ -1,6 +1,6 @@
 const
-	util = require( './util' ),
-	View = require( './View' );
+	util = require( './util.js' ),
+	View = require( './View.js' );
 
 /**
  * A wrapper for creating an icon.

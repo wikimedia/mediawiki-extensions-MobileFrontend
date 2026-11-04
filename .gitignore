@@ -14,7 +14,6 @@ dev-scripts/remotes
 .DS_Store
 tests/report
 .bundle/
-resources/dist/
 /coverage/
 /.nyc_output/
 /.eslintcache

@@ -1,5 +1,5 @@
 const
-	Page = require( './Page' );
+	Page = require( './Page.js' );
 
 let page;
 

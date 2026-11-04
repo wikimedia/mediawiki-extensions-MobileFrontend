@@ -1,8 +1,8 @@
 const
-	Drawer = require( './Drawer' ),
-	util = require( './util' ),
-	Button = require( './Button' ),
-	Anchor = require( './Anchor' );
+	Drawer = require( './Drawer.js' ),
+	util = require( './util.js' ),
+	Button = require( './Button.js' ),
+	Anchor = require( './Anchor.js' );
 
 /**
  * Represents a query string value.

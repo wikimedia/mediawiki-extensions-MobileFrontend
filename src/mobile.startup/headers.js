@@ -1,5 +1,5 @@
-const util = require( './util' ),
-	icons = require( './icons' );
+const util = require( './util.js' ),
+	icons = require( './icons.js' );
 
 /**
  * Creates a header

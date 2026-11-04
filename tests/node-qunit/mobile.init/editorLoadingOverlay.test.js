@@ -1,5 +1,6 @@
 const
 	sinon = require( 'sinon' ),
+	fakeRouter = require( 'mediawiki.router' ),
 	dom = require( '../utils/dom' ),
 	jQuery = require( '../utils/jQuery' ),
 	oo = require( '../utils/oo' ),
@@ -7,7 +8,7 @@ const
 	mustache = require( '../utils/mustache' );
 let
 	editorLoadingOverlay, OverlayManager,
-	sandbox, fakeRouter, overlayManager;
+	sandbox, overlayManager;
 
 QUnit.module( 'MobileFrontend editorLoadingOverlay.js', {
 	beforeEach: function () {
@@ -27,10 +28,7 @@ QUnit.module( 'MobileFrontend editorLoadingOverlay.js', {
 		editorLoadingOverlay = require( '../../../resources/mobile.init/editor/editorLoadingOverlay' );
 		OverlayManager = require( '../../../src/mobile.startup/OverlayManager' );
 
-		fakeRouter = new OO.EventEmitter();
-		fakeRouter.getPath = sandbox.stub().returns( '' );
 		fakeRouter.back = sandbox.spy();
-		sandbox.stub( mw.loader, 'require' ).withArgs( 'mediawiki.router' ).returns( fakeRouter );
 		overlayManager = new OverlayManager( fakeRouter, document.body );
 	},
 	afterEach: function () {

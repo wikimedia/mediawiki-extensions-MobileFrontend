@@ -14,7 +14,7 @@ Development
 ### Directory structure
 
 - resources/: Files for PHP consumption.
-- src/: Files to be processed by Webpack.
+- src/: JavaScript served by ResourceLoader via packageFiles.
 
 ### Coding conventions
 
@@ -35,15 +35,19 @@ If you are not running Vagrant, be sure to set your `MEDIAWIKI_URL` env
 variable to your local index path, e.g.
 `MEDIAWIKI_URL=http://localhost/index.php/`
 
-### Development Server (JS/CSS Changes)
+### JS/CSS Changes
 
-1. **Install Dependencies**:
-   ```bash
-   npm install
-2. **Start the Dev Server**:
-   ```bash
-   npm run start
-This watches and auto-reloads changes.
+JavaScript is served directly from `src/` by ResourceLoader using
+[packageFiles](https://www.mediawiki.org/wiki/ResourceLoader/Package_files);
+there is no build step. When adding a new file, register it in the relevant
+module's `packageFiles` list in `extension.json`.
+
+Code in one ResourceLoader module cannot `require()` a file from another
+module by relative path. Use the other module's public exports instead, e.g.
+`require( 'mobile.startup' ).util`.
+
+Third-party libraries are kept in `resources/lib/` and managed with
+`maintenance/manageForeignResources.php --extension MobileFrontend`.
 
 ### Committing
 

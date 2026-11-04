@@ -1,7 +1,7 @@
 const
-	util = require( './util' ),
-	View = require( './View' ),
-	IconButton = require( './IconButton' );
+	util = require( './util.js' ),
+	View = require( './View.js' ),
+	IconButton = require( './IconButton.js' );
 
 /**
  * A wrapper for creating a button.

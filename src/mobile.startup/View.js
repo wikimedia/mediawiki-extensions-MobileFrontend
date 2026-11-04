@@ -1,5 +1,5 @@
 /* global $ */
-const util = require( './util' ),
+const util = require( './util.js' ),
 	// Cached regex to split keys for `delegate`.
 	delegateEventSplitter = /^(\S+)\s*(.*)$/;
 
@@ -86,7 +86,7 @@ function uniqueId( prefix ) {
  *       }
  *       View.call( this, util.extends( {}, defaultOptions, options ) );
  *     }
- *     View = require( './View' );
+ *     View = require( './View.js' );
  *     class Section extends View {
  *       get template() {
  *         return mw.template.compile( "&lt;h2&gt;{{title}}&lt;/h2&gt;" ),

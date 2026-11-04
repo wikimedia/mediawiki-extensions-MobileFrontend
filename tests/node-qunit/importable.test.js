@@ -3,7 +3,8 @@
 // It also ensures we add test coverage for files without any
 // (loosely inspired by https://github.com/istanbuljs/nyc/issues/594)
 // If a module cannot be tested with Node.js it needs to be added to .nyrc.json
-let sandbox, fakeRouter;
+let sandbox;
+const fakeRouter = require( 'mediawiki.router' );
 const path = require( 'path' ),
 	config = require( '../../.nycrc.json' ),
 	glob = require( 'glob' ),
@@ -17,18 +18,6 @@ const path = require( 'path' ),
 
 QUnit.module( 'MobileFrontend imports', {
 	beforeEach: function () {
-		/* eslint-disable-next-line camelcase */
-		global.__non_webpack_require__ = ( module ) => {
-			switch ( module ) {
-				case 'mediawiki.router':
-					return {
-						on: () => {},
-						getPath: () => {}
-					};
-				default:
-					return {};
-			}
-		};
 		sandbox = sinon.createSandbox();
 		dom.setUp( sandbox, global );
 		jQuery.setUp( sandbox, global );
@@ -43,10 +32,7 @@ QUnit.module( 'MobileFrontend imports', {
 			}
 		};
 		global.location = new URL( 'https://example.com' );
-		fakeRouter = new OO.EventEmitter();
-		fakeRouter.getPath = sandbox.stub().returns( '' );
 		fakeRouter.back = sandbox.spy();
-		sandbox.stub( mw.loader, 'require' ).withArgs( 'mediawiki.router' ).returns( fakeRouter );
 		// Several modules load ext.eventLogging - we will simulate this failing.
 		sandbox.stub( mw.loader, 'using' ).returns( util.Deferred().reject() );
 	},

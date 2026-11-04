@@ -1,5 +1,5 @@
 const units = [ 'seconds', 'minutes', 'hours', 'days', 'months', 'years' ],
-	util = require( './util' ),
+	util = require( './util.js' ),
 	limits = [ 1, 60, 3600, 86400, 2592000, 31536000 ];
 
 /**

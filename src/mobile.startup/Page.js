@@ -1,6 +1,6 @@
 const
 	HTML = mw.html,
-	util = require( './util' );
+	util = require( './util.js' );
 
 /**
  * Mobile page view object

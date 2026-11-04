@@ -1,4 +1,4 @@
-const util = require( './util' );
+const util = require( './util.js' );
 
 let overlayManager = null;
 
@@ -352,7 +352,7 @@ class OverlayManager {
 	static getSingleton() {
 		if ( !overlayManager ) {
 			const
-				router = __non_webpack_require__( 'mediawiki.router' ),
+				router = require( 'mediawiki.router' ),
 				container = document.createElement( 'div' ),
 				// Note getPath returns hash minus the '#' character:
 				hash = router.getPath(),
