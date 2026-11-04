@@ -126,16 +126,7 @@
 	"mobile-frontend-terms-text": "Қолдану шарты",
 	"mobile-frontend-view": "Мобильді көрініс",
 	"mobile-frontend-view-desktop": "Компьютерлік көрініс",
-	"mobile-frontend-watchlist-a-z-empty-howto": "Қазір ешқандай бетті бақылап жүрген жоқсыз. Бақылау тізімі өзіңіз қызыққан беттегі өзгерістерді қадағалап отыруға мүмкіндік береді. Жұлдызша белгішесін басу арқылы беттерді бақылаңыз.",
-	"mobile-frontend-watchlist-a-z-empty-howto-alt": "Жұлдызшаны басыңыз",
-	"mobile-frontend-watchlist-back-home": "Артқа",
 	"mobile-frontend-watchlist-cta-button-login": "Кіру",
-	"mobile-frontend-watchlist-feed-empty": "Жуықта өзгеріс жасалған бет жоқ.",
-	"mobile-frontend-watchlist-filter-all": "Барлығы",
-	"mobile-frontend-watchlist-filter-articles": "Беттер",
-	"mobile-frontend-watchlist-filter-other": "Басқа",
-	"mobile-frontend-watchlist-filter-talk": "Талқылауы",
-	"mobile-frontend-watchlist-more": "көбірек",
 	"mobile-frontend-watchlist-purpose": "<strong>Бақылау тізімі беттерге белгі қоюға және ондағы өзгерістерді қадағалауға көмектеседі.</strong><br />Тізіміңізді көру үшін кіріңіз.",
 	"mobile-frontend-watchlist-signup-action": "<strong>Бақылау тізімі беттерге бетбелгі қоюға және олардағы өзгерістерді қадағалауға көмектеседі.</strong><br />Тізіміңізді бастау үшін тіркеліңіз.",
 	"mobile-frontend-user-page-no-owner-page-yet": "Сізде әлі қатысушы беті жоқ",
@@ -165,6 +156,5 @@
 	"mobile-frontend-user-pref-description": "Кілтсөз, вебсайттың сыртқы көрінісі, хабарландыру сияқты баптауларыңызды өзгертіңіз.",
 	"mobile-frontend-user-pref-link": "Баптауларды ашу",
 	"mobile-frontend-console-recruit": "Сайтымыздың мобильді нұсқасы қалай жасалатыны жайлы көбірек біліңіз @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
-	"mobile-frontend-special-pages-pref": "Мобильді құрылғыдағы арнайы беттерді оңтайландыру және ықшамдау (ұсынылған)",
 	"prefs-mobile": "Мобильді баптаулар"
 }

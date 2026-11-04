@@ -95,16 +95,7 @@
 	"mobile-frontend-terms-text": "Condiciones d'usu",
 	"mobile-frontend-view": "Vista pa móvil",
 	"mobile-frontend-view-desktop": "Escritoriu",
-	"mobile-frontend-watchlist-a-z-empty-howto": "Anguaño nun ta vixilando nenguna páxina. La llista de vixilancia ayuda-y a facer el siguimientu de les páxines que-y interesen. Vixile les páxines calcando nel iconu de la estrella.",
-	"mobile-frontend-watchlist-a-z-empty-howto-alt": "Pulsia nel iconu de la estrella",
-	"mobile-frontend-watchlist-back-home": "Volver al aniciu",
 	"mobile-frontend-watchlist-cta-button-login": "Entrar",
-	"mobile-frontend-watchlist-feed-empty": "Nun hai páxines con cambeos recientes",
-	"mobile-frontend-watchlist-filter-all": "Toes",
-	"mobile-frontend-watchlist-filter-articles": "Páxines",
-	"mobile-frontend-watchlist-filter-other": "Otres",
-	"mobile-frontend-watchlist-filter-talk": "Alderique",
-	"mobile-frontend-watchlist-more": "más",
 	"mobile-frontend-watchlist-purpose": "<strong>Una llista de vixilancia ayúdate a tener marcadores de páxines y siguir los cambios n'elles.</strong><br />Anicia sesión pa vela.",
 	"mobile-frontend-watchlist-signup-action": "<strong>Una llista de vixilancia ayúdate a tener marcadores de páxines y siguir los cambios n'elles.</strong><br />Date d'alta p'aniciar una agora.",
 	"mobile-frontend-user-page-no-owner-page-yet": "Entá nun tienes una páxina d'usuariu",
@@ -127,6 +118,5 @@
 	"mobile-frontend-mobile-option-amc-learn-more": "Más información",
 	"mobile-frontend-mobile-option-amc-send-feedback": "Unviar opiniones",
 	"mobile-frontend-console-recruit": "Saber más sobre cómo construímos el sitiu móvil @ https://www.mediawiki.org/wiki/Extension:MobileFrontend",
-	"mobile-frontend-special-pages-pref": "Optimizar y simplificar les páxines especiales pa la versión móvil (recomendao)",
 	"prefs-mobile": "Preferencies pa móviles"
 }

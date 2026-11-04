@@ -111,16 +111,7 @@
 	"mobile-frontend-terms-text": "వాడుక నియమాలు",
 	"mobile-frontend-view": "మొబైల్ వీక్షణ",
 	"mobile-frontend-view-desktop": "డెస్కుటాప్ వీక్షణ",
-	"mobile-frontend-watchlist-a-z-empty-howto": "ప్రస్తుతం మీరు పేజీలు వేటినీ వీక్షించడం లేదు. మీకు ఆసక్తి ఉన్న పేజీలను గమనిస్తూ ఉండేందుకు వీక్షణ జాబితా తోడ్పడుతుంది. నక్షత్రం గుర్తుపై నొక్కి పేజీని మీ వీక్షణ జాబితా లోకి చేర్చండి.",
-	"mobile-frontend-watchlist-a-z-empty-howto-alt": "నక్షత్రం గుర్తును నొక్కండి",
-	"mobile-frontend-watchlist-back-home": "తిరిగి హోమ్‌కు",
 	"mobile-frontend-watchlist-cta-button-login": "లాగినవండి",
-	"mobile-frontend-watchlist-feed-empty": "ఇటీవలి మార్పుల గల పేజీలు ఏమీ లేవు.",
-	"mobile-frontend-watchlist-filter-all": "అన్నీ",
-	"mobile-frontend-watchlist-filter-articles": "పేజీలు",
-	"mobile-frontend-watchlist-filter-other": "ఇతర",
-	"mobile-frontend-watchlist-filter-talk": "చర్చ",
-	"mobile-frontend-watchlist-more": "మరిన్ని",
 	"mobile-frontend-watchlist-purpose": "<strong>వీక్షణ జాబితా వలన పేజీలను బుక్‌మార్కు చేసుకుని, వాటిలో జరిగే మార్పులను గమనిస్తూ ఉండవచ్చు.</strong><br />దాన్ని చూసేందుకు లాగినవండి.",
 	"mobile-frontend-watchlist-signup-action": "<strong>వీక్షణ జాబితా వలన పేజీలను బుక్‌మార్కు చేసుకుని, వాటిలో జరిగే మార్పులను గమనిస్తూ ఉండవచ్చు.</strong><br />దాన్ని మొదలుపెట్టేందుకు నమోదు చేసుకోండి.",
 	"mobile-frontend-user-page-no-owner-page-yet": "మీకింకా వాడుకరి పేజీ లేదు",
@@ -144,6 +135,5 @@
 	"mobile-frontend-mobile-option-amc-send-feedback": "ఫీడ్‌బ్యాకును పంపండి",
 	"mobile-frontend-user-pref-option": "వాడుకరి అభిరుచులు",
 	"mobile-frontend-console-recruit": "మా మొబైల్ సైటును ఎలా నిర్మిస్తామో తెలుసుకోండి @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
-	"mobile-frontend-special-pages-pref": "మొబైల్లో ఉండగా ప్రత్యేక పేజీలను ఆప్టిమైజు చేసుకోండి, సరళీఖరించుకోండి (చెయ్యడం మంచిది)",
 	"prefs-mobile": "మొబైలు అభిరుచులు"
 }

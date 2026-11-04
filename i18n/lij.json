@@ -115,16 +115,7 @@
 	"mobile-frontend-terms-text": "Condiçioìn d'Ûzo",
 	"mobile-frontend-view": "Versción mòbile",
 	"mobile-frontend-view-desktop": "Versción desktop",
-	"mobile-frontend-watchlist-a-z-empty-howto": "Pò-u moménto no gh'é de pàgine tra i tò òservæ speciâli. A lìsta di òservæ speciâli a t'agiùtta a tegnî tràccia de vôxe che t'interèssan. Ti peu azónzighene sciacàndo in sce l'icónn-a a fórma de stélla.",
-	"mobile-frontend-watchlist-a-z-empty-howto-alt": "Sciàcca in sce l'icónn-a a stélla",
-	"mobile-frontend-watchlist-back-home": "Tórna a-a pàgina prinçipâ",
 	"mobile-frontend-watchlist-cta-button-login": "Ìntra",
-	"mobile-frontend-watchlist-feed-empty": "No gh'é de pàgine con de modìfiche recénti.",
-	"mobile-frontend-watchlist-filter-all": "Tùtte",
-	"mobile-frontend-watchlist-filter-articles": "Pàgine",
-	"mobile-frontend-watchlist-filter-other": "Âtro",
-	"mobile-frontend-watchlist-filter-talk": "Discuscioìn",
-	"mobile-frontend-watchlist-more": "âtro",
 	"mobile-frontend-watchlist-purpose": "<strong>A lìsta di òservæ speciâli a t'agiùtta a marcâ e pàgine e a tegnî tràccia de sò modìfiche.</strong> Ìntra pe véddila.",
 	"mobile-frontend-watchlist-signup-action": "<strong>A lìsta di òservæ speciâli a t'agiùtta a marcâ e pàgine e a tegnî tràccia de sò modìfiche.</strong> Regìstrite pe insâne unn-a òua.",
 	"mobile-frontend-user-page-no-owner-page-yet": "No ti gh'æ ancón de pàgina uténte",
@@ -152,6 +143,5 @@
 	"mobile-frontend-user-pref-description": "Modìfica e tò preferénse, conpréizo a pòula segrétta, a câa do scîto, e inpostaçioìn de notìfica e âtro.",
 	"mobile-frontend-user-pref-link": "Àrvi e preferénse",
 	"mobile-frontend-console-recruit": "Pe savéine de ciù in sciâ costruçión do nòstro scîto pe-i apægi mòbili vànni a https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
-	"mobile-frontend-special-pages-pref": "Òtimìzza e senplìfica e pàgine speciâli quànde ti dêuvi di apægi mòbili (consegiòu)",
 	"prefs-mobile": "Preferénse pe mòbile"
 }

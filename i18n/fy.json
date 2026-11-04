@@ -109,16 +109,7 @@
 	"mobile-frontend-terms-text": "Gebrûksbetingsten",
 	"mobile-frontend-view": "Mobile werjefte",
 	"mobile-frontend-view-desktop": "Buroblêd-werjefte",
-	"mobile-frontend-watchlist-a-z-empty-howto": "Jo folgje op it stuit gjin siden. Jo folchlist helpt jo mei it byhâlden fan siden dy't jo nijsgjirrich fine. Folgje siden troch it oantikjen fan it stjer-ikoan.",
-	"mobile-frontend-watchlist-a-z-empty-howto-alt": "Klik op it stjer-ikoan",
-	"mobile-frontend-watchlist-back-home": "Werom nei it begjin",
 	"mobile-frontend-watchlist-cta-button-login": "Oanmelde",
-	"mobile-frontend-watchlist-feed-empty": "Der binne gjin siden mei wizigings fan koartlyn.",
-	"mobile-frontend-watchlist-filter-all": "Alles",
-	"mobile-frontend-watchlist-filter-articles": "Siden",
-	"mobile-frontend-watchlist-filter-other": "Oar",
-	"mobile-frontend-watchlist-filter-talk": "Oerlis",
-	"mobile-frontend-watchlist-more": "mear",
 	"mobile-frontend-watchlist-purpose": "<strong>Jo folchlist kin blêdwizers foar siden bewarje en wizigings deroan byhâlde.</strong><br />Meld jo oan om it te besjen.",
 	"mobile-frontend-watchlist-signup-action": "<strong>Jo folchlist kin blêdwizers foar siden bewarje en wizigings deroan byhâlde.</strong><br />Skriuw jo yn om ien te meitsjen.",
 	"mobile-frontend-user-page-no-owner-page-yet": "Jo hawwe noch gjin meidoggerside",
@@ -146,6 +137,5 @@
 	"mobile-frontend-user-pref-description": "Jo foarkarren feroarje, dêrûnder it wachtwurd, webstee-oansjoch, meldingsynstellings en mear.",
 	"mobile-frontend-user-pref-link": "Foarkarren iepenje",
 	"mobile-frontend-console-recruit": "Mear witte oer hoe't wy ús mobile webstee bouwe: https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
-	"mobile-frontend-special-pages-pref": "Bysûndere siden op mobyl optimaal en ienfâldich meitsje (oanbefelle)",
 	"prefs-mobile": "Mobile foarkarren"
 }

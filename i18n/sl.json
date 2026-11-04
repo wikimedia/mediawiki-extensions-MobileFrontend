@@ -118,16 +118,7 @@
 	"mobile-frontend-terms-text": "Pogoji uporabe",
 	"mobile-frontend-view": "Mobilni pogled",
 	"mobile-frontend-view-desktop": "Namizni pogled",
-	"mobile-frontend-watchlist-a-z-empty-howto": "Trenutno ne opazujete nobene strani. Vaš nadzorni seznam vam pomaga slediti strani, ki vas zanimajo. Strani lahko opazujete s pritiskom na zvezdico.",
-	"mobile-frontend-watchlist-a-z-empty-howto-alt": "Kliknite zvezdico",
-	"mobile-frontend-watchlist-back-home": "Nazaj domov",
 	"mobile-frontend-watchlist-cta-button-login": "Prijava",
-	"mobile-frontend-watchlist-feed-empty": "Ni strani z nedavnimi spremembami.",
-	"mobile-frontend-watchlist-filter-all": "Vse",
-	"mobile-frontend-watchlist-filter-articles": "Strani",
-	"mobile-frontend-watchlist-filter-other": "Drugo",
-	"mobile-frontend-watchlist-filter-talk": "Pogovor",
-	"mobile-frontend-watchlist-more": "več",
 	"mobile-frontend-watchlist-purpose": "<strong>Nadzorni seznam vam pomaga pri dodajanju strani med zaznamke in sledenju njihovih sprememb.</strong><br />Za ogled se prijavite.",
 	"mobile-frontend-watchlist-signup-action": "<strong>Nadzorni seznam vam pomaga pri dodajanju strani med zaznamke in sledenju njihovim spremembam.</strong><br />Registrirajte se, da ga ustvarite.",
 	"mobile-frontend-user-page-no-owner-page-yet": "Uporabniške strani še nimate",
@@ -155,6 +146,5 @@
 	"mobile-frontend-user-pref-description": "Spremenite svoje nastavitve, vključno z geslom, videzom spletnega mesta, načinom obveščanja in drugim.",
 	"mobile-frontend-user-pref-link": "Odpri nastavitve",
 	"mobile-frontend-console-recruit": "Podrobneje se seznanite s tem, kako gradimo naše mobilno spletno mesto @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
-	"mobile-frontend-special-pages-pref": "V mobilni napravi optimiziraj in poenostavi posebne strani (priporočljivo)",
 	"prefs-mobile": "Mobilne nastavitve"
 }

@@ -113,16 +113,7 @@
 	"mobile-frontend-terms-text": "Bãngre tʋʋma",
 	"mobile-frontend-view": "Nugẽ bãnga geese",
 	"mobile-frontend-view-desktop": "Ordinateere",
-	"mobile-frontend-watchlist-a-z-empty-howto": "Yãmb pa geta nense-ramba masa. Y gesg-sõdga na sõng-y tɩ mi bũmb nins yãmb sẽn baod nensa pʋge.Ges-y nensa ne star ĩcona rɩɩbu.",
-	"mobile-frontend-watchlist-a-z-empty-howto-alt": "Klik ãdsã iconã",
-	"mobile-frontend-watchlist-back-home": "Lebg-y yiri",
 	"mobile-frontend-watchlist-cta-button-login": "Kẽ",
-	"mobile-frontend-watchlist-feed-empty": "Nense ka be ne masa tekre-ramba yẽ",
-	"mobile-frontend-watchlist-filter-all": "Fãa",
-	"mobile-frontend-watchlist-filter-articles": "nense",
-	"mobile-frontend-watchlist-filter-other": "Dẽn-dãmb",
-	"mobile-frontend-watchlist-filter-talk": "Gom-y",
-	"mobile-frontend-watchlist-more": "Paase",
 	"mobile-frontend-watchlist-purpose": "<strong>Y sã n dat n ges bũmb ning b sẽn maan tɩ kɩt tɩ y tõe n tall n bãng bũmb ning b sã n toeemẽ, y tõe n paama sõngre.</strong> Log-y n ges-a.<br/>",
 	"mobile-frontend-watchlist-signup-action": "<strong>Y sã n dat n ges bũmb ning b sẽn maan tɩ kɩt tɩ y tõe n tall n bãng bũmb ning b sã n toeemẽ, y tõe n paama sõngre.</strong> Sõng-y n sɩng n sɩng bũmbu.<br/>",
 	"mobile-frontend-user-page-no-owner-page-yet": "Fo ka tar tʋmtʋmde neng ye",
@@ -148,6 +139,5 @@
 	"mobile-frontend-user-pref-description": "Tek f yɛl-ratma,n paas y pãawɛɛd,wɛbsĩte n yi-to-to, wilgre malgr-ramba la n paas",
 	"mobile-frontend-user-pref-link": "Pak-y yɛl-ratm-ramba",
 	"mobile-frontend-console-recruit": "Zãms-y wʋsg ne tond sẽn me id pogtãble site wã @\nhttps://www.mediawki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
-	"mobile-frontend-special-pages-pref": "Yãk-y n tool-y neda Yãk n tool-yãk-y y sõssã",
 	"prefs-mobile": "Tẽns fãa sẽn dat n maan bũmb ninsã"
 }

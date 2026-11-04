@@ -116,16 +116,7 @@
 	"mobile-frontend-terms-text": "ߟߊ߬ߓߊ߰ߙߊ߬ߟߌ ߛߙߊߕߌ",
 	"mobile-frontend-view": "ߜߋߟߋ߲ߜߋߟߋ߲ ߦߋߗߏ߯",
 	"mobile-frontend-view-desktop": "ߕߟߋ߬ߓߊ߮",
-	"mobile-frontend-watchlist-a-z-empty-howto": "ߌ ߕߍ߫ ߞߐߜߍ߫ ߛߌ߫ ߘߐߜߍ ߞߊ߲߬ ߥߊ߯ߕߌߣߍ߲ ߣߌ߲߬ ߠߊ߫ ߕߊ߲߬. ߌ ߟߊ߫ ߜߋ߬ߟߎ߲߬ߠߌ߲߬ ߛߙߍߘߍ ߦߴߌ ߘߍ߬ߡߍ߲߬ ߠߊ߫ ߞߐߜߍ߫ ߟߎ߫ ߜߙߋ߬ߓߐ߫ ߟߊ߫ ߌ ߘߐ߱ߘߏ߲߬ߣߍ߲߫ ߦߋ߫ ߡߍ߲ ߠߎ߬ ߟߊ߫. ߞߐߜߍ ߟߎ߬ ߜߋ߬ߟߎ߲߬ ߟߏ߬ߟߏ ߛߌ߲ߞߐ߲ ߛߐ߲߬ߞߌ߲ ߠߊ߫.",
-	"mobile-frontend-watchlist-a-z-empty-howto-alt": "ߟߏ߬ߟߏ ߛߌ߲ߞߐ߲ ߛߐ߲߬ߞߌ߲߫",
-	"mobile-frontend-watchlist-back-home": "ߌ ߞߐߛߊ߬ߦߌ߫ ߛߏ߫",
 	"mobile-frontend-watchlist-cta-button-login": "ߌ ߜߊ߲߬ߞߎ߲߬",
-	"mobile-frontend-watchlist-feed-empty": "ߞߐߜߍ߫ ߛߌ߫ ߕߍ߫ ߡߊ߬ߦߟߍ߬ߡߊ߲߬ߠߌ߲߬ ߞߎߘߊ ߟߎ߬ ߘߐ߫.",
-	"mobile-frontend-watchlist-filter-all": "ߊ߬ ߓߍ߯",
-	"mobile-frontend-watchlist-filter-articles": "ߞߐߜߍ ߟߎ߬",
-	"mobile-frontend-watchlist-filter-other": "ߘߏ߫ ߜߘߍ߫",
-	"mobile-frontend-watchlist-filter-talk": "ߞߎߡߊ߫",
-	"mobile-frontend-watchlist-more": "ߡߊ߬ߞߊ߬ߝߏ߬ ߜߘߍ ߟߎ߬",
 	"mobile-frontend-watchlist-purpose": "<strong>ߜߋ߬ߟߎ߲߬ߠߌ߲߬ ߛߙߍߘߍ ߦߴߌ ߘߍ߬ߡߍ߲߬ ߠߊ߫ ߟߊ߬ߡߊ ߓߌ߬ߟߊ߬ ߟߊ߫ ߞߐߜߍ ߟߎ߬ ߡߊ߬߸ ߊ߬ ߣߌ߫ ߞߊ߬ ߕߏ߫ ߊ߬ߟߎ߫ ߡߊ߬ߦߟߍ߬ߡߊ߲߬ߠߌ߲ ߠߎ߬ ߜߋ߬ߙߋ ߞߊ߲߬.</strong>ߌ ߜߊ߲߬ߞߎ߲߫ ߞߵߏ߬ ߦߋ߫.",
 	"mobile-frontend-watchlist-signup-action": "<strong>ߜߋ߬ߟߎ߲߬ߠߌ߲߬ ߛߙߍߘߍ ߦߴߌ ߘߍ߬ߡߍ߲߬ ߠߊ߫ ߟߊ߬ߡߊ ߓߌ߬ߟߊ߬ ߟߊ߫ ߞߐߜߍ ߟߎ߬ ߡߊ߬߸ ߊ߬ ߣߌ߫ ߞߊ߬ ߕߏ߫ ߊ߬ߟߎ߫ ߡߊ߬ߦߟߍ߬ߡߊ߲߬ߠߌ߲ ߠߎ߬ ߜߙߋ߬ ߟߊ߫.</strong>ߌ ߘߌ߫ ߛߋ߫ ߖߊ߬ߕߋ߬ߘߊ ߘߏ߫ ߟߊߞߊ߬ ߟߊ߫ ߞߵߊ߬ ߘߊߡߌ߬ߣߊ߬ ߌߞߘߐ߫.",
 	"mobile-frontend-user-page-no-owner-page-yet": "ߟߊ߬ߓߊ߰ߙߊ߬ߟߌ߬ ߞߐߜߍ߫ ߕߴߌ ߓߟߏ߫ ߡߎߣߎ߲߬",
@@ -153,6 +144,5 @@
 	"mobile-frontend-user-pref-description": "ߌ ߟߊ߫ ߦߟߌߡߊߛߙߋ ߟߎ߬ ߡߊߦߟߍ߬ߡߊ߲߫߸ ߊ߬ ߣߌ߫ ߕߊ߬ߡߌ߲߬ߞߊ߲߸ ߓߟߐߟߐ߫ ߞߐߜߍ ߟߊ߲ߞߣߍߡߊߟߌ߸ ߖߊ߲߬ߓߌ߬ߟߊ߬ߟߌ ߟߊ߬ߓߍ߲߬ߢߐ߲߰ߡߦߊ߬ߘߊ ߟߎ߫߸ ߊ߬ ߣߌ߫ ߘߏ߫ ߜߘߍ߫ ߟߎ߫.",
 	"mobile-frontend-user-pref-link": "ߦߟߌߡߊߛߙߋ ߟߎ߬ ߘߊߦߍ߬ߟߍ߫",
 	"mobile-frontend-console-recruit": "ߛߌߦߊߡߊ߲߫ ߠߎ߫ ߘߐߞߊ߬ߙߊ߲߬ ߊ߲ ߠߊ߫ ߜߋߟߋ߲ߜߋߟߋ߲ ߞߍߦߙߐ ߟߐ߬ ߢߊ ߘߐ߫ @ Https://www.mediawiki.org/wiki/special:My language/Extension:Mobile Frontend",
-	"mobile-frontend-special-pages-pref": "ߞߐߜߍ߫ ߞߙߍߞߙߍߣߍ߲ ߠߎ߬ ߟߊߓߘߍ߬ߦߊ߫ ߊ߬ ߣߌ߫ ߞߵߊ߬ ߟߊߣߐ߰ߦߊ߫ ߜߋߟߋ߲ߜߋߟߋ߲ ߠߊ߫ (ߡߊߢߌ߬ߣߌ߲߬ߞߊ߬ߣߍ߲߫)",
 	"prefs-mobile": "ߜߋߟߋ߲ߜߋߟߋ߲ ߝߌ߬ߛߊ߬ߡߊ߲߬ߒߕߋ ߟߎ߫"
 }

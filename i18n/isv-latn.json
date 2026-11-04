@@ -114,16 +114,7 @@
 	"mobile-frontend-terms-text": "Uslovja upotrěbjanja",
 	"mobile-frontend-view": "Mobilna versija",
 	"mobile-frontend-view-desktop": "Kompjuterna versija",
-	"mobile-frontend-watchlist-a-z-empty-howto": "Vy nyně ne slědujete nijednu stranicu. Vaš spisok slědovanyh stranic pomože vam nadzirati stranice, ktore vas interesujut. Vy možete načeti slědovati stranicu kliknenjem na ikonku zvězdky.",
-	"mobile-frontend-watchlist-a-z-empty-howto-alt": "Nakliknite ikonku zvězdky",
-	"mobile-frontend-watchlist-back-home": "Nazad na glavnu stranicu",
 	"mobile-frontend-watchlist-cta-button-login": "Prijaviti se",
-	"mobile-frontend-watchlist-feed-empty": "Nemaje stranic s nedavnymi pravkami.",
-	"mobile-frontend-watchlist-filter-all": "Vse",
-	"mobile-frontend-watchlist-filter-articles": "Stranice",
-	"mobile-frontend-watchlist-filter-other": "Ostale",
-	"mobile-frontend-watchlist-filter-talk": "Besěda",
-	"mobile-frontend-watchlist-more": "veče",
 	"mobile-frontend-watchlist-purpose": "<strong>Spisok slědovanyh stranic pomože vam označiti stranice i slěditi za izměnami sdělanymi na njih.</strong><br />Prijavite se, da byste to uviděli.",
 	"mobile-frontend-watchlist-signup-action": "<strong>Spisok slědovanyh stranic pomože vam označiti stranice i slěditi za izměnami sdělanymi na njih.</strong><br />Registrujte se, da byste založili svoj.",
 	"mobile-frontend-user-page-no-owner-page-yet": "Vy ješče ne imajete koristničsku stranicu",
@@ -151,6 +142,5 @@
 	"mobile-frontend-user-pref-description": "Vy možete izměniti svoje nastavjenja, vključno s paroloju, izgledom sajta, nastavjenjami za uvědomjenja i tako dalje.",
 	"mobile-frontend-user-pref-link": "Otvoriti nastavjenja",
 	"mobile-frontend-console-recruit": "Doznajte se veče o tom, kako my tvorimo naš mobilny sajt na @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
-	"mobile-frontend-special-pages-pref": "Optimalizacija i uproščenje specialnyh stranic, kogda upotrěbjaje se mobilna versija (prěporučeno)",
 	"prefs-mobile": "Mobilne nastavjenja"
 }

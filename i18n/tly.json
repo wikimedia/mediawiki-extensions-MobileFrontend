@@ -112,16 +112,7 @@
 	"mobile-frontend-terms-text": "Oko doj šərton",
 	"mobile-frontend-view": "Mobil versija",
 	"mobile-frontend-view-desktop": "Mizə koj vyrə",
-	"mobile-frontend-watchlist-a-z-empty-howto": "Ysət šymə hic gylə səhifə dumo rymuz kardənijon. Šymə sijohi dastək kardə səhifon dumo dijə karde, komon maraǧinin bo šymə. Səhifon dumo dijə bykənən ijən bə šikili de astovə egətən.",
-	"mobile-frontend-watchlist-a-z-empty-howto-alt": "Bə astovə-nyšonə egətən",
-	"mobile-frontend-watchlist-back-home": "Bə kə",
 	"mobile-frontend-watchlist-cta-button-login": "Dəše",
-	"mobile-frontend-watchlist-feed-empty": "De oxonə ovaxtətijon səhifon nin",
-	"mobile-frontend-watchlist-filter-all": "Həmmə",
-	"mobile-frontend-watchlist-filter-articles": "Səhifon",
-	"mobile-frontend-watchlist-filter-other": "Čo",
-	"mobile-frontend-watchlist-filter-talk": "No-pegət",
-	"mobile-frontend-watchlist-more": "hənijən",
 	"mobile-frontend-watchlist-purpose": "<strong>Dijə kardə byə sijohi dastək kardə bə šymə gyləvyžon ogəte bə səhifon ijən cəvon ovaxtətijon.</strong><br />Dəšən, bəj  dijə karde.",
 	"mobile-frontend-watchlist-signup-action": "<strong>Rymuzə sijohi dastək kardejdə bo šymə səhifon nyšonə karde ijən cəvon dylədə ovaxtətijon rymuz karde.</strong><br />Ǧejd bybən bo ysət bino karde.",
 	"mobile-frontend-user-page-no-owner-page-yet": "Šyməku hələ xysusijə səhifə ni",
@@ -147,6 +138,5 @@
 	"mobile-frontend-user-pref-description": "Yštə səbəro ovaxte, həm paroli, veb-sajti bešemonə vine, xəbədoon ijən čo cijon.",
 	"mobile-frontend-user-pref-link": "Səbəro okarde",
 	"mobile-frontend-console-recruit": "Cerə əmə soxtejdəmon cəmə sajti mobil versijə hənijən ve umute ijo @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
-	"mobile-frontend-special-pages-pref": "Mobil diləgonədə xydmətə səhifon hoston ijən təkmil karde (tovsijə)",
 	"prefs-mobile": "Mobil səbəro"
 }

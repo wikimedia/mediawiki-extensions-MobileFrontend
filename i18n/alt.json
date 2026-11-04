@@ -111,16 +111,7 @@
 	"mobile-frontend-terms-text": "Эдинетен ээжилери",
 	"mobile-frontend-view": "Мобильный версиязы",
 	"mobile-frontend-view-desktop": "Настольный версиязы",
-	"mobile-frontend-watchlist-a-z-empty-howto": "Эмдиги ӧйдӧ слер бир де бӱкти ширтебей турганар. Слердиҥ ширтениҥ тизими, слерге соныркадылу бӱктерди ширтеерге болужын јетирет. Чолмон былчууны базып бӱктерди ширтегер.",
-	"mobile-frontend-watchlist-a-z-empty-howto-alt": "Чолмон былчууны базар",
-	"mobile-frontend-watchlist-back-home": "Јанар",
 	"mobile-frontend-watchlist-cta-button-login": "Кирер",
-	"mobile-frontend-watchlist-feed-empty": "Удабаган солынтыларлу бӱктер јок.",
-	"mobile-frontend-watchlist-filter-all": "Ончо",
-	"mobile-frontend-watchlist-filter-articles": "Бӱктер",
-	"mobile-frontend-watchlist-filter-other": "Ӧскӧ",
-	"mobile-frontend-watchlist-filter-talk": "Шӱӱжӱ",
-	"mobile-frontend-watchlist-more": "кӧптӧдӧ",
 	"mobile-frontend-watchlist-purpose": "<strong>Ширтениҥ тизими бӱктердеги солынтыларды билип турарга болужат.</strong><br />Ол оныҥ ижин кӧрӧргӧ кирип алар.",
 	"mobile-frontend-watchlist-signup-action": "<strong>Ширтениҥ тизими бӱктердеги солынтыларды билип турарга болужат.</strong><br />Бойыгарга ширтениҥ тизимин эдерге регистрацияны ӧдӧр.",
 	"mobile-frontend-user-page-no-owner-page-yet": "Слерде туружаачыныҥ бӱги јок",
@@ -146,6 +137,5 @@
 	"mobile-frontend-user-pref-description": "Бойыгардыҥ јазалталарды солыгар, јажыт сӧсти катай, сайттыҥ тыш-бӱдӱмин, јетирӱлерди ле оноҥ до ӧскӧзин.",
 	"mobile-frontend-user-pref-link": "Јазалталарды ачар",
 	"mobile-frontend-console-recruit": "Бистиҥ сайттыҥ мобильный версиязын канайып јазап турганыс керегинде кӧптӧдӧ билерге @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend адресте кӧрӧр",
-	"mobile-frontend-special-pages-pref": "Мобильный устройстволордо аҥылу бӱктерди эптештирери ле јеҥилтери (кӱӱнзедилет)",
 	"prefs-mobile": "Мобильный јазалталар"
 }

@@ -113,16 +113,7 @@
 	"mobile-frontend-terms-text": "Adikɛ-tum wara",
 	"mobile-frontend-view": "Tangaleŋa zuo bisega",
 	"mobile-frontend-view-desktop": "Kɔmpita zuo",
-	"mobile-frontend-watchlist-a-z-empty-howto": "Nananawa fu ka biseri pɛgese'ere. Fu adikɛbiŋe bisera suŋeri mɛ ti fu baŋera sɛla n iti fu pɛgerɛ la puan ti fu bɔta. Di'e ŋmarebila 'icon' ta'am bisera pɛgera",
-	"mobile-frontend-watchlist-a-z-empty-howto-alt": "Di'e ŋmarebila 'icon' la",
-	"mobile-frontend-watchlist-back-home": "Lebe yire",
 	"mobile-frontend-watchlist-cta-button-login": "Lɔɔge kɛ̃",
-	"mobile-frontend-watchlist-feed-empty": "Pɛgera ka boi nanana teedina puan",
-	"mobile-frontend-watchlist-filter-all": "Za'a",
-	"mobile-frontend-watchlist-filter-articles": "Pɛgera",
-	"mobile-frontend-watchlist-filter-other": "Sɛba",
-	"mobile-frontend-watchlist-filter-talk": "Tɔgɛ",
-	"mobile-frontend-watchlist-more": "Zo'e zo'e",
 	"mobile-frontend-watchlist-purpose": "<strong>A watchlist helps you bookmark pages and keep track of changes to them.</strong><br />Lɔɔgɛ kɛ ta bisɛ",
 	"mobile-frontend-watchlist-signup-action": "<strong>Abiŋe bisera suŋeri fu dãala fu pɛgera gee baŋera yelese'ere n iti si puan.</strong><br />kɛ ta'am pɔsɛ.",
 	"mobile-frontend-user-page-no-owner-page-yet": "Fu man ka tari tuntuna pɛgerɛ",
@@ -148,6 +139,5 @@
 	"mobile-frontend-user-pref-description": "Tee fu loosego ta pa'asɛ la 'password website' nimbia lasebaarɛ Baŋa maalegɔ, la zo'e zo'e.",
 	"mobile-frontend-user-pref-link": "Yu'e loosego",
 	"mobile-frontend-console-recruit": "Zamesɛ zo'e zo'e yɛsera tu mobaale 'site'  @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
-	"mobile-frontend-special-pages-pref": "'Optimize' gee basɛ ti pɛgezura dɛna naana fu san bɔna mobaale puan (recommended)",
 	"prefs-mobile": "Mobaale loosego"
 }

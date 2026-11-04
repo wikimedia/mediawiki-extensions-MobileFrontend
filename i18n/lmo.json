@@ -106,16 +106,7 @@
 	"mobile-frontend-terms-text": "Condizzion d'utilizazzion",
 	"mobile-frontend-view": "Version mobil",
 	"mobile-frontend-view-desktop": "Desktop",
-	"mobile-frontend-watchlist-a-z-empty-howto": "Al moment te see 'dree a tegnì d'oeugg nissuna pagina. I pagine che te tegnet d'oeugg te juten a insegnà i vos che te interessen. Te podet sgiontai cont el toca un'imagin a forma de stella.",
-	"mobile-frontend-watchlist-a-z-empty-howto-alt": "Clica su in su l'imagin a forma de stella",
-	"mobile-frontend-watchlist-back-home": "Torna a la pagina principal",
 	"mobile-frontend-watchlist-cta-button-login": "Và dent",
-	"mobile-frontend-watchlist-feed-empty": "A ghe'n è minga de pagine con modifiche recente.",
-	"mobile-frontend-watchlist-filter-all": "Tute",
-	"mobile-frontend-watchlist-filter-articles": "Pagine",
-	"mobile-frontend-watchlist-filter-other": "Alter",
-	"mobile-frontend-watchlist-filter-talk": "Ciciarada",
-	"mobile-frontend-watchlist-more": "e poeu",
 	"mobile-frontend-watchlist-purpose": "<strong>I pagine tegnude d'oeugg i te permeten de salvà i pagine e seguì i modifiche fade ai pagine medesime.</strong><br />Và dent per vedei.",
 	"mobile-frontend-watchlist-signup-action": "<strong>I pagine che te tegnet d'oeugg i te permeten de salvà i pagine e seguì i modifiche fade ai pagine medesime.</strong><br />Registres per comenzà adess.",
 	"mobile-frontend-user-page-no-owner-page-yet": "Te gh'heet nananmò una pagina de utent",
@@ -138,6 +129,5 @@
 	"mobile-frontend-mobile-option-amc-learn-more": "Per savenn pussee",
 	"mobile-frontend-mobile-option-amc-send-feedback": "Spediss un coment",
 	"mobile-frontend-console-recruit": "Per savenn pussee sora come nunn costruissom el noster sit per i dispoitiv mobil varda https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
-	"mobile-frontend-special-pages-pref": "Otimizza e fà pussee sempliz i pagine speciai quant che drovet on dispositiv mobil (racomandad)",
 	"prefs-mobile": "Preferenze del dispositiv mobil"
 }

@@ -114,16 +114,7 @@
 	"mobile-frontend-terms-text": "Лелоран биллам",
 	"mobile-frontend-view": "Мобиле верси",
 	"mobile-frontend-view-desktop": "Стоьлан верси",
-	"mobile-frontend-watchlist-a-z-empty-howto": "Ахьа карарчу хенахь цхьана а агӀо зуьйш йац. Хьан тергаме могӀамо гӀо до хьуна хьайна товш йолу агӀонашна терго йан. АгӀонашна терго йе, седарчийн-нуьйдин тӀе а таӀийна.",
-	"mobile-frontend-watchlist-a-z-empty-howto-alt": "Седа-нуьйдин тӀетаӀайе",
-	"mobile-frontend-watchlist-back-home": "ЦӀа",
 	"mobile-frontend-watchlist-cta-button-login": "ЧугӀо",
-	"mobile-frontend-watchlist-feed-empty": "Кеста хийцамаш бина агӀонаш йац.",
-	"mobile-frontend-watchlist-filter-all": "Массо",
-	"mobile-frontend-watchlist-filter-articles": "АгӀонаш",
-	"mobile-frontend-watchlist-filter-other": "Кхийерш",
-	"mobile-frontend-watchlist-filter-talk": "Дийцарш",
-	"mobile-frontend-watchlist-more": "кхин дӀа",
 	"mobile-frontend-watchlist-purpose": "<strong>Тергаме могӀамо гӀо до агӀонаш билгалйаха, царна тӀехь беш болу хийцамашна терго йан.</strong><br />ЧугӀо, муха болх бо хьажархьама.",
 	"mobile-frontend-watchlist-signup-action": "<strong>Тергаме могӀамо гӀо до агӀонаш билгалйаха, царна тӀехь беш болу хийцамашна терго йан.</strong><br />ДӀайазло хьайн тергаме могӀам дӀаболо.",
 	"mobile-frontend-user-page-no-owner-page-yet": "Цкъачунна долара агӀо йац хьан",
@@ -151,6 +142,5 @@
 	"mobile-frontend-user-pref-description": "Хийца хьайн нисдаран гӀирс, цу йукъахь пароль а, сайтан куц-кеп а, хаамаш а, кхин а.",
 	"mobile-frontend-user-pref-link": "Нисдаран гӀирс схьабелла",
 	"mobile-frontend-console-recruit": "Кхин дӀа а хаа, оха тхан сайтан мобилан верси муха кхуллу адресца https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
-	"mobile-frontend-special-pages-pref": "Мобилан аппараташ тӀехь белхан агӀонаш оптимизаци йан а, аттачу йаха а (рекомендаци йу)",
 	"prefs-mobile": "Мобилан нисдаран гӀирс"
 }

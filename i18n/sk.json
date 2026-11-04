@@ -123,16 +123,7 @@
 	"mobile-frontend-terms-text": "Podmienky použitia",
 	"mobile-frontend-view": "Mobilné zobrazenie",
 	"mobile-frontend-view-desktop": "Zobrazenie na počítači",
-	"mobile-frontend-watchlist-a-z-empty-howto": "Momentálne nesledujete žiadne stránky. Zoznam sledovaných stránok vám pomáha kontrolovať stránky, ktoré vás zaujímajú. Stránky môžete sledovať kliknutím na ikonu hviezdičky.",
-	"mobile-frontend-watchlist-a-z-empty-howto-alt": "Kliknete na ikonu s hviezdičkou",
-	"mobile-frontend-watchlist-back-home": "Späť domov",
 	"mobile-frontend-watchlist-cta-button-login": "Prihlásiť sa",
-	"mobile-frontend-watchlist-feed-empty": "Neexistujú žiadne stránky s nedávnymi zmenami.",
-	"mobile-frontend-watchlist-filter-all": "Všetko",
-	"mobile-frontend-watchlist-filter-articles": "Stránky",
-	"mobile-frontend-watchlist-filter-other": "Ostatné",
-	"mobile-frontend-watchlist-filter-talk": "Diskusia",
-	"mobile-frontend-watchlist-more": "viac",
 	"mobile-frontend-watchlist-purpose": "<strong>Zoznam sledovaných stránok vám umožňuje označiť stránky a mať prehľad o ich zmenách.</strong><br />Prihláste sa a uvidíte.",
 	"mobile-frontend-watchlist-signup-action": "<strong>Zoznam sledovaných stránok vám umožňuje mať prehľad o zmenách stránok, ktoré vás zaujímajú.</strong> Zaregistrujte sa, aby se si ho mohli založiť.",
 	"mobile-frontend-user-page-no-owner-page-yet": "Zatiaľ nemáte používateľskú stránku",
@@ -160,6 +151,5 @@
 	"mobile-frontend-user-pref-description": "Zmeňte svoje nastavenia, vrátane hesla, vzhľadu stránky, nastavení oznámení atď.",
 	"mobile-frontend-user-pref-link": "Otvoriť nastavenia",
 	"mobile-frontend-console-recruit": "Zistite viac, ako budujeme náš mobilný web, na https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
-	"mobile-frontend-special-pages-pref": "Optimalizovať a zjednodušiť špeciálne stránky na mobile (odporúčané)",
 	"prefs-mobile": "Mobilné nastavenia"
 }

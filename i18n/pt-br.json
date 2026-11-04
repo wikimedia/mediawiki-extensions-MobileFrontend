@@ -138,16 +138,7 @@
 	"mobile-frontend-terms-text": "Termos de Uso",
 	"mobile-frontend-view": "Versão móvel",
 	"mobile-frontend-view-desktop": "Visualização em desktop",
-	"mobile-frontend-watchlist-a-z-empty-howto": "Você não tem nenhuma página vigiada. Sua lista de páginas vigiadas te ajuda a monitorar as páginas que você tem interesse. Vigie páginas clicando no ícone de estrela.",
-	"mobile-frontend-watchlist-a-z-empty-howto-alt": "Clique no ícone de estrela",
-	"mobile-frontend-watchlist-back-home": "Voltar ao início",
 	"mobile-frontend-watchlist-cta-button-login": "Entrar",
-	"mobile-frontend-watchlist-feed-empty": "Não existem páginas com mudanças recentes.",
-	"mobile-frontend-watchlist-filter-all": "Todas",
-	"mobile-frontend-watchlist-filter-articles": "Páginas",
-	"mobile-frontend-watchlist-filter-other": "Outros",
-	"mobile-frontend-watchlist-filter-talk": "Discussão",
-	"mobile-frontend-watchlist-more": "mais",
 	"mobile-frontend-watchlist-purpose": "<strong>Uma lista de páginas vigiadas ajuda você a marcar páginas e acompanhar as alterações delas.</strong> <br /> Entre para ver.",
 	"mobile-frontend-watchlist-signup-action": "<strong>Uma lista de páginas vigiadas ajuda você a marcar páginas e acompanhar as alterações delas.</strong> <br /> Crie uma conta para começar uma agora.",
 	"mobile-frontend-user-page-no-owner-page-yet": "Você ainda não possui uma página de usuário",
@@ -177,6 +168,5 @@
 	"mobile-frontend-user-pref-description": "Altere as suas preferências, incluindo a senha, a aparência do ''site'', a configuração das notificações e muito mais.",
 	"mobile-frontend-user-pref-link": "Abrir as preferências",
 	"mobile-frontend-console-recruit": "Saiba mais sobre como construímos o nosso site móvel @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
-	"mobile-frontend-special-pages-pref": "Otimizar e simplificar as páginas especiais quando estiver em dispositivos móveis (recomendado)",
 	"prefs-mobile": "Preferências em dispositivos móveis"
 }

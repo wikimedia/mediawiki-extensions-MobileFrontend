@@ -113,16 +113,7 @@
 	"mobile-frontend-terms-text": "استعمال جا اصول",
 	"mobile-frontend-view": "موبائل ڏيک",
 	"mobile-frontend-view-desktop": "ڊيسڪٽاپ ڏيک",
-	"mobile-frontend-watchlist-a-z-empty-howto": "اوهان جي نظر ۾ ڪو صفحو ناهي. نظر۾فھرست ذريعي اوهان پسنديده صفحن جو جائزو وٺي سگهو ٿا. نظر ۾ صفحا وجهڻ لاءِ تاري جي نشان کي دٻايو.",
-	"mobile-frontend-watchlist-a-z-empty-howto-alt": "تاري جي نشان تي ڪلڪ ڪيو",
-	"mobile-frontend-watchlist-back-home": "مُک صفحي ڏانھن واپس",
 	"mobile-frontend-watchlist-cta-button-login": "داخل ٿيو",
-	"mobile-frontend-watchlist-feed-empty": "تازين تبديلين وارا ڪي بہ صفحا ناھن.",
-	"mobile-frontend-watchlist-filter-all": "سڀ",
-	"mobile-frontend-watchlist-filter-articles": "صفحا",
-	"mobile-frontend-watchlist-filter-other": "ٻيو",
-	"mobile-frontend-watchlist-filter-talk": "بحث",
-	"mobile-frontend-watchlist-more": "وڌيڪ",
 	"mobile-frontend-watchlist-purpose": "<strong>نظر۾فھرست جي ذريعي اوهان صفحي کي ۽ ان ۾ ٿيندڙ بدلاءَ ڏسي سگهو ٿا.</strong><br /> اھو ڏسڻ لاءِ داخل ٿيو.",
 	"mobile-frontend-watchlist-signup-action": "<strong>نظر۾فھرست جي ذريعي اوهان صفحي کي ۽ ان ۾ ٿيندڙ بدلاءَ کي ڏسي سگهو ٿا.</strong><br /> کاتو کولي هڪ هاڻي ئي شروع ڪريو.",
 	"mobile-frontend-user-page-no-owner-page-yet": "اڃا اوهان وٽ واپرائندڙ صفحو ناهي",
@@ -148,6 +139,5 @@
 	"mobile-frontend-user-pref-description": "پنھنجي ترجيحن کي تبديل ڪريو، بشمول ڳجهولفظ، ويب سائيٽ جي ظاهريت، اطلاع ترتيبون، ۽ وڌيڪ.",
 	"mobile-frontend-user-pref-link": "ترجيحون کوليو",
 	"mobile-frontend-console-recruit": "وڌيڪ ڏسو اسان موبائل سائيٽ ڪيئن جوڙي آهي @\nhttps://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
-	"mobile-frontend-special-pages-pref": "جڏھن موبائل تي ھجو تہ خاص صفحن کي آپٽيمائيز ڪريو ۽ سادي صورت ۾ آڻيو (سفارش ڪيل)",
 	"prefs-mobile": "موبائل ترجيحون"
 }

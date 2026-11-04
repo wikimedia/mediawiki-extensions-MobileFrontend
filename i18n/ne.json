@@ -128,16 +128,7 @@
 	"mobile-frontend-terms-text": "प्रयोगका सर्तहरू",
 	"mobile-frontend-view": "मोवाइल संस्करण",
 	"mobile-frontend-view-desktop": "डेस्कटप स्वरूप",
-	"mobile-frontend-watchlist-a-z-empty-howto": "तपाई हाल कुनैपनि पृष्ठहरूलाई निगरानी गरिरहनु भएको छैन। तपाईको अवलोकनसूचीले तपाईलाई रुचि लाग्ने पृष्ठहरू पछ्याइराख्न मद्दत गर्दछ। ताराको प्रतिमामा थिचि पृष्ठहरूलाई अवलोकनसूचीमा हाल्न सक्नुहुनेछ।",
-	"mobile-frontend-watchlist-a-z-empty-howto-alt": "तारा आइकनमा क्लिक गर्नुहोस्",
-	"mobile-frontend-watchlist-back-home": "गृहपृष्ठमा फर्कनुहोस्",
 	"mobile-frontend-watchlist-cta-button-login": "प्रवेश गर्नुहोस्",
-	"mobile-frontend-watchlist-feed-empty": "हालैका परिवर्तनहरूसँग कुनै पृष्ठहरू छैनन्।",
-	"mobile-frontend-watchlist-filter-all": "सबै",
-	"mobile-frontend-watchlist-filter-articles": "पृष्ठहरू",
-	"mobile-frontend-watchlist-filter-other": "अन्य",
-	"mobile-frontend-watchlist-filter-talk": "वार्ता",
-	"mobile-frontend-watchlist-more": "थप",
 	"mobile-frontend-watchlist-purpose": "<strong>अवलोकनसूचीले तपाईंलाई पृष्ठहरू बुकमार्क गर्न र तिनीहरूमा भएका परिवर्तनहरूको ट्र्याक राख्न मद्दत गर्दछ।</strong><br />यसलाई हेर्न प्रवेश गर्नुहोस्।",
 	"mobile-frontend-watchlist-signup-action": "<strong>अवलोकनसूचीले तपाईंलाई पृष्ठहरू बुकमार्क गर्न र तिनीहरूमा भएका परिवर्तनहरूको ट्र्याक राख्न मद्दत गर्दछ।</strong><br />अहिले एउटा सुरु गर्न आफ्नो खाता खोल्नुहोस्।",
 	"mobile-frontend-user-page-no-owner-page-yet": "तपाईंले प्रयोगकर्ता पृष्ठ सिर्जना गर्नुभएको छैन",
@@ -165,6 +156,5 @@
 	"mobile-frontend-user-pref-description": "प्रवेश शब्द, वेबसाइट उपस्थिति, सूचना अभिरुचिहरू, र थप सहित आफ्नो प्राथमिकताहरू परिवर्तन गर्नुहोस्।",
 	"mobile-frontend-user-pref-link": "अभिरुचिहरू खोल्नुहोस्",
 	"mobile-frontend-console-recruit": "हामीले हाम्रो मोबाइल साइट @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend कसरी निर्माण गर्छ भन्ने बारे थप जान्नुहोस्",
-	"mobile-frontend-special-pages-pref": "मोबाइलमा हुँदा विशेष पृष्ठहरू अप्टिमाइज र सरल बनाउनुहोस् (सिफारिस गरिएको)",
 	"prefs-mobile": "मोबाइल अभिरूचिहरू"
 }

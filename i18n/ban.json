@@ -116,16 +116,7 @@
 	"mobile-frontend-terms-text": "Katentuan pawigunaan",
 	"mobile-frontend-view": "Cingakan sélulér",
 	"mobile-frontend-view-desktop": "Tampilan désktop",
-	"mobile-frontend-watchlist-a-z-empty-howto": "Ida sané mangkin nénten ngawasin kaca dija kémanten. Lis pangawasan Ida ngawantu Ida nilik kaca sané Ida senengin. Awasin kaca antuk ngecek cihna bintang.",
-	"mobile-frontend-watchlist-a-z-empty-howto-alt": "Teken cihna bintang",
-	"mobile-frontend-watchlist-back-home": "Mawali nuju beranda",
 	"mobile-frontend-watchlist-cta-button-login": "Manjing log",
-	"mobile-frontend-watchlist-feed-empty": "Nénten wénten kaca antuk pauahan pinih anyar",
-	"mobile-frontend-watchlist-filter-all": "Sinamian",
-	"mobile-frontend-watchlist-filter-articles": "Kaca",
-	"mobile-frontend-watchlist-filter-other": "Lianan",
-	"mobile-frontend-watchlist-filter-talk": "Pabligbagan",
-	"mobile-frontend-watchlist-more": "malih",
 	"mobile-frontend-watchlist-purpose": "<strong>Lis pangawasan ngawantu Ida ngacihna kaca miwah ngalacak pauahan.</strong><br />Manjing antuk nyingakin.",
 	"mobile-frontend-watchlist-signup-action": "<strong>Lis pangawasan ngawantu Ida ngacihna kaca miwah ngalacak pauahan nyané.</strong><br />Lis antuk ngawitin mangkin.",
 	"mobile-frontend-user-page-no-owner-page-yet": "Ida durung ngardi kaca sang anganggé",
@@ -155,6 +146,5 @@
 	"mobile-frontend-user-pref-description": "Gentos préférénsi ragané, minakadi kruna sandi, tampilan situs wéb, setélan pakéling, miwah sané lianan.",
 	"mobile-frontend-user-pref-link": "Buka preférénsi",
 	"mobile-frontend-console-recruit": "Plajahin salanturné sapunapi iraga ngawangun situs sélulér @ https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MobileFrontend",
-	"mobile-frontend-special-pages-pref": "Optimalang miwah saderhanayang kaca kusus ri kala nganggén sélulér (kanikayang)",
 	"prefs-mobile": "Préférénsi sélulér"
 }
