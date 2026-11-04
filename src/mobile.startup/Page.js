@@ -117,16 +117,6 @@ class Page {
 	}
 
 	/**
-	 * Check if the visual editor in source mode is available on this page
-	 *
-	 * @return {boolean}
-	 */
-	isVESourceAvailable() {
-		return this.isVEAvailable() &&
-			mw.config.get( 'wgMFEnableVEWikitextEditor' );
-	}
-
-	/**
 	 * Checks whether the current page is the main page
 	 *
 	 * @return {boolean}

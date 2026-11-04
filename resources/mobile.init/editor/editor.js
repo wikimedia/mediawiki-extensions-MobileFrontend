@@ -1,5 +1,6 @@
 /* global $ */
 const mobile = require( 'mobile.startup' ),
+	{ MFDefaultEditor, MFFallbackEditor, MFEnableVEWikitextEditor } = require( './config.json' ),
 	currentPageId = mw.config.get( 'wgArticleId' ),
 	util = mobile.util,
 	fakeToolbar = require( './fakeToolbar.js' ),
@@ -80,7 +81,7 @@ function getPreferredEditor() {
 	if ( preferredEditor ) {
 		return preferredEditor;
 	}
-	switch ( mw.config.get( 'wgMFDefaultEditor' ) ) {
+	switch ( MFDefaultEditor ) {
 		case 'source':
 			return 'SourceEditor';
 		case 'visual':
@@ -93,7 +94,7 @@ function getPreferredEditor() {
 				return mw.user.options.get( 'visualeditor-editor' ) === 'visualeditor' ? 'VisualEditor' : 'SourceEditor';
 			} else {
 				// When there is no desktop preference, we use MFFallbackEditor.
-				return mw.config.get( 'wgMFFallbackEditor' ) === 'visual' ? 'VisualEditor' : 'SourceEditor';
+				return MFFallbackEditor === 'visual' ? 'VisualEditor' : 'SourceEditor';
 			}
 	}
 	// In the event of misconfiguration, fall back to source
@@ -147,8 +148,7 @@ function isVEVisualAvailable() {
  * @return {boolean}
  */
 function isVESourceAvailable() {
-	return isVEAvailable() &&
-		mw.config.get( 'wgMFEnableVEWikitextEditor' );
+	return isVEAvailable() && MFEnableVEWikitextEditor;
 }
 
 /**

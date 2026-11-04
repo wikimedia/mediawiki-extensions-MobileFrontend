@@ -127,7 +127,21 @@
 			},
 			"packageFiles": [
 				"resources/mobile.init/mobile.init.js",
+				{
+					"name": "resources/mobile.init/config.json",
+					"config": [
+						"MFEnableJSConsoleRecruitment"
+					]
+				},
 				"resources/mobile.init/editor/editor.js",
+				{
+					"name": "resources/mobile.init/editor/config.json",
+					"config": [
+						"MFDefaultEditor",
+						"MFFallbackEditor",
+						"MFEnableVEWikitextEditor"
+					]
+				},
 				"resources/mobile.init/editor/editorLoadingOverlay.js",
 				"resources/mobile.init/editor/fakeToolbar.js",
 				"resources/mobile.init/isCollapsedByDefault.js",
@@ -206,10 +220,6 @@
 				"resources/mobile.startup/mobile.startup.less"
 			],
 			"scripts": [
-				{
-					"name": "resources/dist/mobile.config.js",
-					"callback": "MobileFrontend\\ResourceLoaderModules\\MobileConfig::makeScript"
-				},
 				"resources/dist/mobile.startup.runtime.js",
 				"resources/dist/mobile.startup.js",
 				"resources/mobile.startup/exports.js"
@@ -282,6 +292,13 @@
 				"src/mobile.editor.overlay/SourceEditorSaveEventHookPayload.js",
 				"src/mobile.editor.overlay/VisualEditorOverlay.js",
 				"src/mobile.editor.overlay/abandonSurvey.js",
+				{
+					"name": "src/mobile.editor.overlay/config.json",
+					"config": [
+						"MFTrackBlockNotices",
+						"MFEnableAbandonSurvey"
+					]
+				},
 				{
 					"name": "src/mobile.editor.overlay/contLangMessages.json",
 					"callback": "MobileFrontendEditorHooks::getContentLanguageMessages",

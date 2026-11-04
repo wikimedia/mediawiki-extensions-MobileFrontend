@@ -80,7 +80,8 @@ class Browser {
 		 * @return {boolean}
 		 */
 		this.isWideScreen = memoize( () => {
-			const val = parseInt( mw.config.get( 'wgMFDeviceWidthTablet' ), 10 );
+			// Please keep in sync with MobileFrontendHooks::DEVICE_WIDTH_TABLET
+			const val = 640;
 			// Check viewport width to determine mobile vs tablet.
 			// Note: Mobile devices held in landscape mode might receive tablet treatment.
 			return window.innerWidth >= val;

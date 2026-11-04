@@ -1,4 +1,5 @@
 const mobile = require( 'mobile.startup' );
+const { MFEnableAbandonSurvey } = require( './config.json' );
 const View = mobile.class.View,
 	util = mobile.util,
 	Drawer = mobile.Drawer;
@@ -61,13 +62,14 @@ class Survey extends View {
  *
  * @private
  * @param {EditorOverlay} editor
+ * @param {boolean} isEnabled Whether the abandon survey is enabled by configuration.
  * @return {module:mobile.startup/Drawer|false}
  */
-module.exports = function abandonSurvey( editor ) {
+module.exports = function abandonSurvey( editor, isEnabled = MFEnableAbandonSurvey ) {
 	if ( editor.options.returnToApp ) {
 		return false;
 	}
-	if ( !mw.config.get( 'wgMFEnableAbandonSurvey' ) ) {
+	if ( !isEnabled ) {
 		return false;
 	}
 	if ( mw.config.get( 'wgUserEditCount', 0 ) > 100 ) {

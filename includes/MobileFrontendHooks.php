@@ -102,7 +102,7 @@ class MobileFrontendHooks implements
 	public const MOBILE_PREFERENCES_FONTSIZE = 'mf-font-size';
 	public const MOBILE_PREFERENCES_EXPAND_SECTIONS = 'mf-expand-sections';
 	// This should always be kept in sync with Codex `@min-width-breakpoint-tablet`
-	// in mediawiki.skin.variables.less
+	// in mediawiki.skin.variables.less and Browser in mobile.startup module.
 	private const DEVICE_WIDTH_TABLET = '640px';
 
 	private readonly MobileFrontendSkinHooks $skinHooks;
@@ -492,29 +492,6 @@ class MobileFrontendHooks implements
 		$cookies[] = MobileContext::USEFORMAT_COOKIE_NAME;
 		// Don't redirect to mobile if user had explicitly opted out of it
 		$cookies[] = MobileContext::STOP_MOBILE_REDIRECT_COOKIE_NAME;
-	}
-
-	/**
-	 * Generate config for usage inside MobileFrontend
-	 * This should be used for variables which:
-	 *  - vary with the html
-	 *  - should work cross skin including anonymous users.
-	 *
-	 * @return array
-	 */
-	public static function getResourceLoaderMFConfigVars() {
-		$vars = [];
-		$config = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Config' );
-
-		// Get the licensing agreement that is displayed in the uploading interface.
-		$vars += [
-			'wgMFEnableJSConsoleRecruitment' => $config->get( 'MFEnableJSConsoleRecruitment' ),
-			// Browser.js
-			'wgMFDeviceWidthTablet' => self::DEVICE_WIDTH_TABLET,
-			// src/mobile.editor.overlay
-			'wgMFTrackBlockNotices' => $config->get( 'MFTrackBlockNotices' ),
-		];
-		return $vars;
 	}
 
 	/**

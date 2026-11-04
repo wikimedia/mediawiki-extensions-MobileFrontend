@@ -99,8 +99,7 @@ QUnit.module( 'MobileFrontend mobile.editor.overlay/abandonSurvey', {
 			.withArgs( 'wgIsMainPage' ).returns( false )
 			.withArgs( 'wgFormattedNamespaces' ).returns( { 2: 'User' } )
 			.withArgs( 'wgNamespaceIds' ).returns( { user: 2 } )
-			.withArgs( 'wgVisualEditorConfig' ).returns( { namespaces: [ 1, 2 ] } )
-			.withArgs( 'wgMFEnableAbandonSurvey' ).returns( true );
+			.withArgs( 'wgVisualEditorConfig' ).returns( { namespaces: [ 1, 2 ] } );
 		const stubTitle = {
 			getUrl: function () {
 				return '/w/index.php?title=User:Test';
@@ -140,7 +139,7 @@ QUnit.test( 'abandonSurvey', async ( assert ) => {
 		logFeatureUse: ( data ) => {
 			lastLoggedData = data;
 		}
-	} );
+	}, true );
 
 	// Assert the factory method returns a Drawer with listeners set-up
 	// for the show and hide events that reposition the popup.

@@ -8,6 +8,7 @@
 let url;
 
 const
+	{ MFEnableJSConsoleRecruitment } = require( './config.json' ),
 	toggling = require( './toggling.js' ),
 	editor = require( './editor/editor.js' ),
 	currentPageHTMLParser = require( 'mobile.startup' ).currentPageHTMLParser();
@@ -76,7 +77,7 @@ if ( returnToAppSaved || url.searchParams.has( 'returntoapp' ) ) {
 // (note console.log may not be a function so check via apply)
 /* eslint-disable no-console */
 if ( window.console && window.console.log && window.console.log.apply &&
-		mw.config.get( 'wgMFEnableJSConsoleRecruitment' ) ) {
+		MFEnableJSConsoleRecruitment ) {
 	console.log( mw.msg( 'mobile-frontend-console-recruit' ) );
 }
 /* eslint-enable no-console */

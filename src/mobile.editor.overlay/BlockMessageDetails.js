@@ -1,6 +1,8 @@
 'use strict';
 const mobile = require( 'mobile.startup' );
+const { MFTrackBlockNotices } = require( './config.json' );
 const Button = mobile.class.Button,
+
 	View = mobile.class.View,
 	Icon = mobile.class.Icon,
 	util = mobile.util;
@@ -106,7 +108,7 @@ class BlockMessageDetails extends View {
 			cta = false;
 		}
 
-		if ( cta && mw.config.get( 'wgMFTrackBlockNotices' ) ) {
+		if ( cta && MFTrackBlockNotices ) {
 			mw.track( 'counter.MediaWiki.BlockNotices.' + wiki + '.MobileFrontend.ctaShown', 1 );
 			mw.track( 'stats.mediawiki_block_notices_total', 1, {
 				source: 'MobileFrontend',

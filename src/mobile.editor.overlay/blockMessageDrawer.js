@@ -1,6 +1,7 @@
 const BlockMessageDetails = require( './BlockMessageDetails.js' );
 const mobile = require( 'mobile.startup' );
 const Drawer = mobile.Drawer;
+const { MFTrackBlockNotices } = require( './config.json' );
 
 /**
  * @private
@@ -96,7 +97,7 @@ module.exports = function blockMessageDrawer( props ) {
 			eventListener = () => repositionDrawer( $drawer );
 			window.addEventListener( 'resize', eventListener );
 
-			if ( mw.config.get( 'wgMFTrackBlockNotices' ) ) {
+			if ( MFTrackBlockNotices ) {
 				mw.track( 'counter.MediaWiki.BlockNotices.' + wiki + '.MobileFrontend.shown', 1 );
 				mw.track( 'stats.mediawiki_block_notices_total', 1, {
 					source: 'MobileFrontend',

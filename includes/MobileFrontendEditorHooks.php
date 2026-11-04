@@ -36,25 +36,6 @@ class MobileFrontendEditorHooks implements
 	}
 
 	/**
-	 * Generate config for usage inside MobileFrontend
-	 * This should be used for variables which:
-	 *  - vary with the html
-	 *  - should work cross skin including anonymous users.
-	 *
-	 * @return array
-	 */
-	public static function getResourceLoaderMFConfigVars() {
-		$config = MediaWikiServices::getInstance()->getService( 'MobileFrontend.Config' );
-
-		return [
-			'wgMFDefaultEditor' => $config->get( 'MFDefaultEditor' ),
-			'wgMFFallbackEditor' => $config->get( 'MFFallbackEditor' ),
-			'wgMFEnableVEWikitextEditor' => $config->get( 'MFEnableVEWikitextEditor' ),
-			'wgMFEnableAbandonSurvey' => $config->get( 'MFEnableAbandonSurvey' ),
-		];
-	}
-
-	/**
 	 * Handler for MakeGlobalVariablesScript hook.
 	 * For values that depend on the current page, user or request state.
 	 *

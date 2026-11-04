@@ -105,7 +105,6 @@ MediaWiki core.
 
 * Since: Sept 2025
 * Files:
-  - /resources/dist/mobile.config.js
   - /resources/dist/mobile.startup.js
   - /resources/dist/mobile.startup.runtime.js
   - /resources/mobile.startup/exports.js
