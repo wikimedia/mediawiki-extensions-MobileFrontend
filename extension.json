@@ -400,7 +400,7 @@
 		},
 		"mobile.special.userlogin.scripts": {
 			"scripts": [
-				"resources/dist/mobile.special.userlogin.scripts.js"
+				"src/mobile.special.userlogin.scripts.js"
 			]
 		}
 	},

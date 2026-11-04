@@ -233,7 +233,6 @@ my login" for mobile users.
 
 * Since: Sept 2025
 * Files:
-  - /resources/dist/mobile.special.userlogin.scripts.js
   - /src/mobile.special.userlogin.scripts.js
 * Folders:
   - /resources/mobile.special.styles/
