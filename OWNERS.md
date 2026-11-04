@@ -58,8 +58,6 @@ into articles; and modifications to user pages.
   - /src/mobile.init/Toggler.js
   - /tests/node-qunit/mobile.init/Toggler.test.js
   - /tests/node-qunit/mobile.init/sectionCollapsing.test.js
-  - /tests/node-qunit/mobile.startup/Toggler.test.js
-  - /tests/node-qunit/mobile.startup/sectionCollapsing.test.js
   - /tests/phpunit/integration/MobileContextTest.php
   - /tests/phpunit/integration/MobileFormatterTest.php
   - /tests/phpunit/integration/api/ApiParseExtenderTest.php
@@ -70,7 +68,6 @@ into articles; and modifications to user pages.
   - /src/mobile.init/sectionCollapsing.js
   - /src/mobile.init/toggling.js
   - /resources/mobile.init.styles/main.less
-  - /tests/phpunit/unit/MobileFormatterUnitTest.php
 * Folders:
   - /includes/Transforms
   - /resources/mobile.quickFacts
@@ -84,7 +81,7 @@ into articles; and modifications to user pages.
 Disables MediaWiki:Common.js from running on mobile site.
 
 * Since: Sept 2025
-* Files:
+* Folders:
   - /includes/ResourceLoaderModules
   - /tests/phpunit/integration/rlmodules
 * Contact: [Reader Growth][1]
@@ -127,7 +124,6 @@ MediaWiki core.
   - /src/mobile.startup/Drawer.js
   - /src/mobile.startup/Icon.js
   - /src/mobile.startup/IconButton.js
-  - /src/mobile.startup/MessageBox.js
   - /src/mobile.startup/Overlay.js
   - /src/mobile.startup/OverlayManager.js
   - /src/mobile.startup/Page.js
@@ -157,11 +153,9 @@ MediaWiki core.
   - /tests/node-qunit/mobile.startup/PageHTMLParser.test.js
   - /tests/node-qunit/mobile.startup/View.test.js
   - /tests/node-qunit/mobile.startup/icons.test.js
-  - /tests/node-qunit/mobile.startup/moduleLoader.test.js
   - /tests/node-qunit/mobile.startup/promisedView.test.js
   - /tests/node-qunit/mobile.startup/time.test.js
   - /tests/node-qunit/mobile.startup/util.test.js
-  - /tests/node-qunit/webpackRequire.stub.js
   - /tests/phpunit/structure/MobileFrontendBundleSizeTest.php
 * Folders:
   - /src/mobile.startup/package
