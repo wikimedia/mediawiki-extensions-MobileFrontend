@@ -11,8 +11,6 @@ const
 
 QUnit.module( 'MobileFrontend mobile.editor.overlay/VisualEditorOverlay', {
 	beforeEach() {
-		// eslint-disable-next-line camelcase
-		global.__non_webpack_require__ = require( '../webpackRequire.stub' );
 		sandbox = sinon.createSandbox();
 		dom.setUp( sandbox, global );
 		jQuery.setUp( sandbox, global );
