@@ -2,9 +2,6 @@
 	"// todo": "todo: enable caching. There are too many other issues to verify that",
 	"cache": false,
 	"all": true,
-	"require": [
-		"@babel/register"
-	],
 	"reporter": [
 		"lcov", "text"
 	],
@@ -30,8 +27,5 @@
 	"functions": 62,
 	"lines": 65,
 
-	"check-coverage": true,
-
-	"sourceMap": false,
-	"instrument": false
+	"check-coverage": true
 }
