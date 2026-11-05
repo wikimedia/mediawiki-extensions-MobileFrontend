@@ -26,7 +26,7 @@ QUnit.module( 'MobileFrontend imports', {
 		mustache.setUp( sandbox, global );
 		global.OO.ui = {
 			TextInputWidget: () => {},
-			Tool: () => {},
+			Tool: function () {},
 			mixin: {
 				LookupElement: () => {}
 			}
@@ -47,9 +47,8 @@ QUnit.module( 'MobileFrontend imports', {
 QUnit.test( 'All our code is importable in headless Node.js', ( assert ) => {
 	const
 		errors = [],
-		includes = config.include.join( ',' ),
 		ignore = config.exclude;
-	for ( const moduleFileName of glob.sync( includes, { ignore } ) ) {
+	for ( const moduleFileName of config.include.flatMap( ( pattern ) => glob.sync( pattern, { ignore } ) ) ) {
 		const importPath = path.resolve( __dirname, '../../', moduleFileName );
 		try {
 			require( importPath );

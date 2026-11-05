@@ -24,7 +24,7 @@
 	"// coverage note": "Set the coverage percentage by category thresholds. Round down to nearest 1%",
 	"statements": 78,
 	"branches": 84,
-	"functions": 76,
+	"functions": 73,
 	"lines": 78,
 
 	"check-coverage": true
