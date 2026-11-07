@@ -350,7 +350,7 @@ class SourceEditorOverlay extends EditorOverlayBase {
 			text: this.getContent()
 		};
 
-		this.scrollTop = util.getDocument().find( 'body' ).scrollTop();
+		this.scrollTop = window.scrollY;
 		this.$content.hide();
 		this.showSpinner();
 
@@ -403,8 +403,9 @@ class SourceEditorOverlay extends EditorOverlayBase {
 			'cdx-message--error'
 		).hide();
 		this.$content.show();
-		window.scrollTo( 0, this.scrollTop );
+		// The save panel is above the textarea. Hide it before you restore the scroll position.
 		this.showHidden( '.initial-header' );
+		window.scrollTo( 0, this.scrollTop );
 	}
 
 	/**
