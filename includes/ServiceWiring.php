@@ -57,7 +57,7 @@ return [
 		$modes = new UserModes();
 		/** @var MobileContext $context */
 		$context = $services->getService( 'MobileFrontend.Context' );
-		$modes->registerMode( new StableUserMode( $context ) );
+		$modes->registerMode( new StableUserMode() );
 		$modes->registerMode( new LoggedInUserMode( $context->getUser() ) );
 		$modes->registerMode( $services->getService( 'MobileFrontend.AMC.UserMode' ) );
 		return $modes;
