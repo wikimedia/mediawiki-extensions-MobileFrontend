@@ -67,7 +67,6 @@ if ( window.history && history.pushState ) {
 
 if ( returnToAppSaved || url.searchParams.has( 'returntoapp' ) ) {
 	mw.loader.using( 'mobile.returnToApp' ).then( () => {
-		// Use MediaWiki ResourceLoader require(), not Webpack require()
 		const returnToApp = require( 'mobile.returnToApp' );
 		returnToApp.init();
 	} );
