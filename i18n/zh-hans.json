@@ -148,7 +148,7 @@
 	"mobile-frontend-editor-uploadenable": "请先上传一张照片以开始编辑。",
 	"mobile-frontend-editor-viewing-source-page": "<strong>查看</strong><span>$1</span><strong>的源代码</strong>",
 	"mobile-frontend-editor-wait": "正在发布编辑，请稍候。",
-	"mobile-frontend-editor-loading": "编辑器加载中……",
+	"mobile-frontend-editor-loading": "编辑器加载中…",
 	"mobile-frontend-editor-loadingtooslow": "连接太慢？",
 	"mobile-frontend-editor-loadbasiceditor": "切换到源代码编辑器",
 	"mobile-frontend-editor-toload": "现在将加载编辑器。如果您在几秒钟后仍然看见这条消息，请[$1 刷新页面]。",
