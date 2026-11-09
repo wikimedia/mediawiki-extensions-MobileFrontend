@@ -315,12 +315,13 @@ function setupEditor( currentPageHTMLParser, router, readOnly ) {
 		 * @private
 		 * @ignore
 		 * @param {string} editor name e.g. wikitext or visualeditor
+		 * @param {string} [sectionId] section number or undefined if full-page
 		 * @method
 		 */
-		function logInit( editor ) {
+		function logInit( editor, sectionId ) {
 			mw.track( 'editAttemptStep', {
 				action: 'init',
-				type: 'section',
+				type: sectionId ? 'section' : 'page',
 				mechanism: initMechanism,
 				integration: 'page',
 				/* eslint-disable camelcase */
@@ -357,7 +358,7 @@ function setupEditor( currentPageHTMLParser, router, readOnly ) {
 		 * @fires mobileFrontend.editorOpening
 		 */
 		function loadSourceEditor() {
-			logInit( 'wikitext' );
+			logInit( 'wikitext', editorOptions.sectionId );
 			// Inform other interested code that we're loading the editor
 			/**
 			 * Internal for use in GrowthExperiments only.
@@ -382,7 +383,7 @@ function setupEditor( currentPageHTMLParser, router, readOnly ) {
 		 * @return {jQuery.Promise} Promise resolved with the editor overlay
 		 */
 		function loadVisualEditorMaybe() {
-			logInit( 'visualeditor' );
+			logInit( 'visualeditor', editorOptions.sectionId );
 			// Inform other interested code that we're loading the editor
 			/**
 			 * Internal for use in GrowthExperiments only.
