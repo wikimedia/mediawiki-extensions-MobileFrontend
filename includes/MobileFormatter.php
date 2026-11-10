@@ -14,9 +14,6 @@ class MobileFormatter {
 	/** @var Element */
 	private $body;
 
-	/**
-	 * @inheritDoc
-	 */
 	public function __construct( string $html ) {
 		$doc = DOMUtils::parseHTML( $html );
 		$this->body = DOMCompat::getBody( $doc );
