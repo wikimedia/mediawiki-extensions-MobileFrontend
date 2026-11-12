@@ -33,7 +33,8 @@
 			"Penyuwangi",
 			"HyperAnd",
 			"Bayahiu",
-			"Jdlrobson"
+			"Jdlrobson",
+			"Exploraz"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Menentukan apakah pengguna menyunting melalui antarmuka seluler atau tidak ($1)",
@@ -98,8 +99,8 @@
 	"mobile-frontend-editor-loadingtooslow": "Sambungan lambat?",
 	"mobile-frontend-editor-loadbasiceditor": "Beralih ke penyuntingan sumber",
 	"mobile-frontend-editor-toload": "Penyunting akan segera dimuat. Bila Anda masih melihat pesan ini setelah beberapa detik, silakan [$1 muat ulang halaman ini].",
-	"mf-expand-sections-description": "Selalu kembangkan bagian konten halaman secara baku.",
-	"mf-expand-sections-name": "Kembangkan semua bagian",
+	"mf-expand-sections-description": "Selalu luaskan bagian konten halaman secara bawaan.",
+	"mf-expand-sections-name": "Perluas semua bagian",
 	"mf-font-size-name": "Teks",
 	"mf-font-size-description": "Sesuaikan ukuran fon agar dapat dibaca.",
 	"mf-font-size-small-label": "Standar",
