@@ -27,6 +27,9 @@
 	"mobile-frontend-editor-anonwarning": "<strong>Упозорење:</strong> Нисте пријављени. Ваша IP адреса биће јавно видљива ако уредите или направите неку страницу. <strong>Пријавите се</strong> или <strong>отворите налог</strong>, тиме ће ваши доприноси бити приписивани корисничком имену које одаберете и стећи ћете многе погодности.",
 	"mobile-frontend-editor-anonwarning-description": "Имајте приступ разним алаткама, пратите своје доприносе и будите део заједнице.",
 	"mobile-frontend-editor-anonwarning-separator": "или",
+	"mobile-frontend-editor-anonwarning-readonly-title": "Ова страница је зашитићена ради вандализма",
+	"mobile-frontend-editor-anonwarning-viewsource": "Извор",
+	"mobile-frontend-editor-anonwarning-login-to-edit": "Пријавите се да уређујете",
 	"mobile-frontend-editor-autocreatewarning-soft-publish-description": "Објављивањем, [[$1|привремени налог]] ће бити направљен.",
 	"mobile-frontend-editor-autocreatewarning": "<strong>Упозорење:</strong> Нисте пријављени. Ваша измена ће бити приписана аутоматски генерисаном имену. [[$1|Сазнајте више]]. <strong>Пријавите се</strong> или <strong>отворите налог</strong>, тиме ће Ваши доприноси бити приписивани корисничком имену које одаберете.",
 	"mobile-frontend-editor-blocked-drawer-action-login": "Пријави ме",
@@ -123,6 +126,8 @@
 	"mobile-frontend-references-citation-error": "Дошло је до грешке. Није могуће учитати ову референцу.",
 	"mobile-frontend-requires-mobile": "Ова страница није доступна у рачунарском приказу. Кликните на линк за мобилни приказ на дну странице.",
 	"mobile-frontend-requires-title": "Недоступна страница",
+	"mobile-frontend-return-to-app-close": "Затвори",
+	"mobile-frontend-return-to-app-return-link": "Назад на апликацију",
 	"mobile-frontend-save-error": "Грешка при чувању подешавања. Уверите се да имате омогућене колачиће.",
 	"mobile-frontend-save-settings": "Сачувај",
 	"mobile-frontend-settings-tagline": "Подешавања читања",
@@ -165,5 +170,6 @@
 	"mobile-editor-abandon-survey-error": "Изаберите разлог",
 	"mobile-editor-abandon-survey-submit": "Проследи повратне информације",
 	"mobile-editor-abandon-survey-answer-exploring": "Само разгледам",
-	"mobile-editor-abandon-survey-answer-other": "Нешто друго"
+	"mobile-editor-abandon-survey-answer-other": "Нешто друго",
+	"mobile-frontend-quick-facts": "Укратко"
 }
