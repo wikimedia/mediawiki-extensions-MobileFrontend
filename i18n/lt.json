@@ -15,7 +15,8 @@
 			"Robotukas11",
 			"Tomasdd",
 			"Vogone",
-			"Zygimantus"
+			"Zygimantus",
+			"Babellini"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ar naudotojas redaguoja naudodamas mobilųjį įskiepį",
@@ -152,7 +153,7 @@
 	"tag-advanced_mobile_edit-description": "Redagavo naudotojas naudojant išplėstinį režimą",
 	"tag-mobile_web_edit": "Keitimas įskiepiu mobiliesiems",
 	"tag-mobile_web_edit-description": "Pakeitimas atliktas naudojant mobiliojo tinklapį",
-	"mobile-frontend-loading-message": "Kraunasi...",
+	"mobile-frontend-loading-message": "Įkeliama...",
 	"mobile-frontend-send-feedback": "Siųsti atsiliepimą",
 	"mw-mf-amc-name": "Išplėstinis režimas",
 	"mw-mf-amc-description": "Išplėstinis režimas suteikia lengvą prieigą prie aptarimų puslapių, istorijos, naudotojo ir kitų redagavimo įrankių.",

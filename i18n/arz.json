@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ghaly"
+			"Ghaly",
+			"Meno25"
 		]
 	},
 	"mobile-frontend-copyright": "الكلام و الصور منشورين حسب   $1 ماعدا الحالات إللى مكتوب عندها حاجه تانيه.",
@@ -9,7 +10,7 @@
 	"mobile-frontend-privacy-link-text": "الخصوصية",
 	"mobile-frontend-terms-text": "شروط الاستخدام",
 	"mobile-frontend-view": "نسخة المحمول",
-	"mobile-frontend-view-desktop": "ديسكتوب",
+	"mobile-frontend-view-desktop": "عرض ديسكتوب",
 	"tag-mobile_edit": "تعديل من المحمول",
 	"tag-mobile_web_edit": "تعديل ويب محمول"
 }

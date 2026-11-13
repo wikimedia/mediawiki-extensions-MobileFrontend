@@ -24,7 +24,8 @@
 			"Trần Nguyễn Minh Huy",
 			"Vinhtantran",
 			"Withoutaname",
-			"පසිඳු කාවින්ද"
+			"පසිඳු කාවින්ද",
+			"HungKhanh0106"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Người dùng có sửa đổi thông qua giao diện di động hay không ($1)",
@@ -144,8 +145,8 @@
 	"mobile-frontend-settings-tagline": "Tùy chọn đọc",
 	"mobile-frontend-settings-save": "Đã lưu các tùy chọn.",
 	"mobile-frontend-terms-text": "Điều khoản sử dụng",
-	"mobile-frontend-view": "Phiên bản di động",
-	"mobile-frontend-view-desktop": "Phiên bản máy tính",
+	"mobile-frontend-view": "Giao diện di động",
+	"mobile-frontend-view-desktop": "Giao diện máy tính",
 	"mobile-frontend-watchlist-a-z-empty-howto": "Bạn hiện không có theo dõi trang nào. Với danh sách theo dõi, bạn có thể theo dõi các trang bạn quan tâm. Hãy chạm hình ngôi sao để theo dõi các trang.",
 	"mobile-frontend-watchlist-a-z-empty-howto-alt": "Nhấn hình ngôi sao",
 	"mobile-frontend-watchlist-back-home": "Quay lại nhà",
