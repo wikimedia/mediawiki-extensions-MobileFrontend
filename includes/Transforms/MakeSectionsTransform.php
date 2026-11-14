@@ -2,7 +2,7 @@
 
 namespace MobileFrontend\Transforms;
 
-use DomException;
+use DOMException;
 use LogicException;
 use MediaWiki\Html\Html;
 use MediaWiki\ResourceLoader\ResourceLoader;
@@ -67,7 +67,7 @@ class MakeSectionsTransform implements IMobileTransform {
 	 * @param Element[] $headingWrappers The headings (or wrappers) returned by getTopHeadings():
 	 *  `<h1>` to `<h6>` nodes, or `<div class="mw-heading">` nodes wrapping them.
 	 *  In the future `<div class="mw-heading">` will be required (T13555).
-	 * @throws DomException
+	 * @throws DOMException
 	 */
 	private function makeSections( Element $body, array $headingWrappers ): void {
 		$ownerDocument = $body->ownerDocument;
@@ -231,7 +231,7 @@ class MakeSectionsTransform implements IMobileTransform {
 	 * sections demarcated by the $headings elements. Also moves the first paragraph
 	 * in the lead section above the infobox.
 	 * @param Element $node to be transformed
-	 * @throws DomException
+	 * @throws DOMException
 	 */
 	public function apply( Element $node ): void {
 		$this->makeSections( $node, $this->getTopHeadings( $node ) );
