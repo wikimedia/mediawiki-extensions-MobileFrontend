@@ -112,7 +112,7 @@
 	"mobile-frontend-editor-loading": "Text that displays while the mobile visual editor is loading.",
 	"mobile-frontend-editor-loadingtooslow": "Text shown when the mobile visual editor is slow to load, after several seconds. Followed by {{msg-mw|mobile-frontend-editor-loadbasiceditor}}.",
 	"mobile-frontend-editor-loadbasiceditor": "Label of a button used to load the mobile wikitext editor, shown when the visual editor is slow to load. Preceded by {{msg-mw|mobile-frontend-editor-loadingtooslow}}.",
-	"mobile-frontend-editor-toload": "Text shown to the user in place of the wikitext editor on action=edit/submit when the MobileFrontend editor is expected to load.\n\nParameters:\n* $1 is the URL which points to a page with a fallback to the wikitext editor if necessary.",
+	"mobile-frontend-editor-toload": "Text shown to the user in place of the wikitext editor on action=edit/submit when the MobileFrontend editor is expected to load.\n\nParameters:\n* $1 is the URL of the same edit page without the JavaScript editor, i.e. the basic wikitext editor. Refreshing the page would not lead there, so the link text should describe opening that editor.",
 	"mf-expand-sections-description": "On settings page description for turning on/off expansion of all sections on page load.\n\nSee also:\n* {{msg-mw|Mobile-frontend-expand-sections-status}}",
 	"mf-expand-sections-name": "On settings page label for turning on/off expansion of all sections on page load.\n\nSee also:\n* {{msg-mw|Mobile-frontend-expand-sections-description}}",
 	"mf-expand-sections-0-label": "On settings page, collapse all sections by default label.",
