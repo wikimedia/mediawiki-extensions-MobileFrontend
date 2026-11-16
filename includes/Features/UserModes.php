@@ -11,6 +11,7 @@ use Traversable;
  *
  * This class exists to provide a safe collection of IUserModes
  * @package MobileFrontend\Features
+ * @implements IteratorAggregate<string,IUserMode>
  */
 class UserModes implements IteratorAggregate {
 
@@ -40,7 +41,7 @@ class UserModes implements IteratorAggregate {
 	}
 
 	/**
-	 * @return ArrayIterator
+	 * @return ArrayIterator<string,IUserMode>
 	 */
 	public function getIterator(): Traversable {
 		return new ArrayIterator( $this->modes );
