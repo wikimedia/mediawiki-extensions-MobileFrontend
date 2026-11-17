@@ -15,7 +15,8 @@
 			"Tomasdd",
 			"Vogone",
 			"Zygimantus",
-			"Garas"
+			"Garas",
+			"Babellini"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Ar naudotojas redaguoja naudodamas mobilųjį įskiepį",
@@ -161,7 +162,7 @@
 	"tag-advanced_mobile_edit-description": "Redagavo naudotojas naudojant išplėstinį režimą",
 	"tag-mobile_web_edit": "Keitimas įskiepiu mobiliesiems",
 	"tag-mobile_web_edit-description": "Pakeitimas atliktas naudojant mobiliojo tinklapį",
-	"mobile-frontend-loading-message": "Kraunasi...",
+	"mobile-frontend-loading-message": "Įkeliama...",
 	"mobile-frontend-search-feedback-link-text": "Pateikite mums savo atsiliepimą.",
 	"mobile-frontend-search-feedback-prompt": "Nepavyko rasti, ko ieškojote?",
 	"mobile-frontend-mobile-option-MFEnableWikidataDescriptions": "Pavadinimų aprašymai",
