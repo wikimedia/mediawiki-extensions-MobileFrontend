@@ -101,7 +101,7 @@
 	"mobile-frontend-editor-loading": "편집기를 불러오는 중...",
 	"mobile-frontend-editor-loadingtooslow": "연결이 느린가요?",
 	"mobile-frontend-editor-loadbasiceditor": "소스 편집기로 전환하기",
-	"mobile-frontend-editor-toload": "이제 편집기가 불러오게 됩니다. 몇 초 후에도 이 메시지가 계속 표시되면 [$1 문서를 새로 고침]해 주십시오.",
+	"mobile-frontend-editor-toload": "이제 편집기가 불러오게 됩니다. 몇 초 후에도 이 메시지가 계속 표시되면 [$1 기본 편집기를 사용]해 주십시오.",
 	"mf-expand-sections-description": "기본적으로 콘텐츠 문서의 문단을 무조건 펼칩니다.",
 	"mf-expand-sections-name": "모든 문단 확장",
 	"mf-expand-sections-0-label": "기본적으로 접기",

@@ -81,7 +81,7 @@
 	"mobile-frontend-editor-loading": "Redaktor yüklənir…",
 	"mobile-frontend-editor-loadingtooslow": "Bağlantı zəifdir?",
 	"mobile-frontend-editor-loadbasiceditor": "Mənbə redaktoruna keç",
-	"mobile-frontend-editor-toload": "Redaktor indi yüklənəcək. Əgər bu mesajı bir neçə saniyədən sonra hələ də görürsünüzsə, zəhmət olmasa, [$1 səhifəni yeniləyin].",
+	"mobile-frontend-editor-toload": "Redaktor indi yüklənəcək. Bir neçə saniyədən sonra bu mesajı hələ də görürsünüzsə, bunun yerinə [$1 sadə redaktordan istifadə edin].",
 	"mf-expand-sections-description": "Defolt olaraq hər zaman bütün məqalələrin bölmələrini genişlət.",
 	"mf-expand-sections-name": "Bütün bölmələri genişlət",
 	"mf-expand-sections-0-label": "Defolt olaraq bağlı saxla",
