@@ -5,7 +5,8 @@
 			"Caliburn",
 			"CiphriusKane",
 			"John Reid",
-			"MinecraftAustralia"
+			"MinecraftAustralia",
+			"Monospaced"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Whether or nae a uiser is eeditin throu the mobile interface",
@@ -22,7 +23,7 @@
 	"mobile-frontend-requires-title": "Page naw available",
 	"mobile-frontend-terms-text": "Terms o Uiss",
 	"mobile-frontend-view": "Mobile view",
-	"mobile-frontend-view-desktop": "Desktap",
+	"mobile-frontend-view-desktop": "Desktap view",
 	"tag-mobile_edit": "Mobile eedit",
 	"tag-mobile_web_edit": "Mobile wab eedit"
 }

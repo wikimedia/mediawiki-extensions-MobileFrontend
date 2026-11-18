@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ayaat123"
+			"Ayaat123",
+			"Iflaq"
 		]
 	},
 	"mobile-frontend-account-create-captcha-placeholder": "تَصدیٖقی کوڈ کٔرِو دَرٕج",
@@ -85,7 +86,7 @@
 	"mobile-frontend-settings-save": "طَرٕز آو مَحفوٗظ کَرنہٕ.",
 	"mobile-frontend-terms-text": "اِستِمالٕک شَرٕط",
 	"mobile-frontend-view": "موبایل سایِٹ",
-	"mobile-frontend-view-desktop": "ڈیسک ٹاپ",
+	"mobile-frontend-view-desktop": "ڈیسک ٹاپ ویو",
 	"mobile-frontend-watchlist-cta-button-login": "دٲخِل گَژھُن",
 	"mobile-frontend-user-page-no-owner-page-yet": "تۄہہِ چھُنہٕ وُنہِ اکھ رُکُن صَفہٕ موجوٗد",
 	"mobile-frontend-user-page-no-page-yet": "$1 سُنٛد صٲرِف صَفہٕ چھُ نہٕ موجوٗد",

@@ -124,6 +124,8 @@
 	"mobile-frontend-references-citation-error": "Дошло је до грешке. Није могуће учитати ову референцу.",
 	"mobile-frontend-requires-mobile": "Ова страница није доступна у рачунарском приказу. Кликните на линк за мобилни приказ на дну странице.",
 	"mobile-frontend-requires-title": "Недоступна страница",
+	"mobile-frontend-return-to-app-close": "Затвори",
+	"mobile-frontend-return-to-app-return-link": "Назад на апликацију",
 	"mobile-frontend-save-error": "Грешка при чувању подешавања. Уверите се да имате омогућене колачиће.",
 	"mobile-frontend-save-settings": "Сачувај",
 	"mobile-frontend-settings-tagline": "Подешавања читања",
@@ -166,5 +168,6 @@
 	"mobile-editor-abandon-survey-error": "Изаберите разлог",
 	"mobile-editor-abandon-survey-submit": "Проследи повратне информације",
 	"mobile-editor-abandon-survey-answer-exploring": "Само разгледам",
-	"mobile-editor-abandon-survey-answer-other": "Нешто друго"
+	"mobile-editor-abandon-survey-answer-other": "Нешто друго",
+	"mobile-frontend-quick-facts": "Укратко"
 }
