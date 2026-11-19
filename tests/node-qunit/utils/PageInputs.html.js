@@ -1,4 +1,3 @@
-/* eslint-env es6 */
 const referencesPage = `<div id="mfe-test-references">
 <sup id="cite_ref-1" class="reference">
 	<a href="#cite_note-1">[1]</a>
