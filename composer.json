@@ -23,6 +23,11 @@
 	"config": {
 		"allow-plugins": {
 			"dealerdirect/phpcodesniffer-composer-installer": true
+		},
+		"policy": {
+			"advisories": {
+				"block": false
+			}
 		}
 	}
 }
