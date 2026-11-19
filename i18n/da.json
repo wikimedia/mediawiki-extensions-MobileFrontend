@@ -88,7 +88,7 @@
 	"mobile-frontend-editor-loading": "Indlæser editor...",
 	"mobile-frontend-editor-loadingtooslow": "Langsom forbindelse?",
 	"mobile-frontend-editor-loadbasiceditor": "Skift til kilderedigering",
-	"mobile-frontend-editor-toload": "Redigeringsværktøjet indlæses nu. Hvis du stadig ser denne besked efter et par sekunder, skal du venligst [$1 genindlæse siden].",
+	"mobile-frontend-editor-toload": "Redigeringsværktøjet indlæses nu. Hvis du stadig ser denne besked efter et par sekunder, skal du venligst [$1 bruge den grundlæggende redigeringsværktøj] i stedet.",
 	"mf-expand-sections-description": "Udvid altid afsnit af indholdssider som standard.",
 	"mf-expand-sections-name": "Udvid alle afsnit",
 	"mf-expand-sections-0-label": "Skjul som standard",
