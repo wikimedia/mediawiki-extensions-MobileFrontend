@@ -142,7 +142,7 @@
 	"mobile-frontend-watchlist-filter-talk": "Diskussioun",
 	"mobile-frontend-watchlist-more": "méi",
 	"mobile-frontend-user-page-no-owner-page-yet": "Dir hutt nach keng Benotzersäit",
-	"mobile-frontend-user-page-no-page-yet": "Keng Benotzersäit fir {{GENDER:$1:de(n) $1|d'$1|de Benotzer $1}}",
+	"mobile-frontend-user-page-no-page-yet": "Keng Benotzersäit fir {{GENDER:$1|de(n) $1|d'$1|de Benotzer $1}}",
 	"mobile-frontend-user-page-describe-yourself": "Dir kënnt Iech selwer beschreiwe fir Iech aneren $1 op Ärer Benotzersäit virzestellen",
 	"mobile-frontend-user-page-describe-yourself-editors": "Auteuren",
 	"mobile-frontend-user-page-desired-action": "Dës Säit sollt vum $1 ugeluecht a geännert ginn",
