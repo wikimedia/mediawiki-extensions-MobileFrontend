@@ -9,10 +9,6 @@ Note: You are using $(node -v).
 Building assets...
 eof
 
-	if [ "v$(cat .nvmrc)" != "$(node -v)" ]; then
-			echo "You are not running the required node version"
-			exit 1
-	fi;
 	npm -s run build
 	git diff --name-status --exit-code resources/dist || {
 			cat << 'eof'
