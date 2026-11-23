@@ -109,7 +109,7 @@
 	"mobile-frontend-editor-loading": "Ładowanie edytora…",
 	"mobile-frontend-editor-loadingtooslow": "Wolne połączenie?",
 	"mobile-frontend-editor-loadbasiceditor": "Przełącz na edytor kodu źródłowego",
-	"mobile-frontend-editor-toload": "Edytor wkrótce zostanie załadowany. Jeśli po upływie kilku sekund nadal widzisz ten komunikat, spróbuj [$1 odświeżyć stronę].",
+	"mobile-frontend-editor-toload": "Edytor zostanie wkrótce załadowany. Jeśli po upływie kilku sekund nadal widzisz ten komunikat, spróbuj [$1 skorzystać z podstawowego edytora kodu źródłowego].",
 	"mf-expand-sections-description": "Zawsze domyślnie rozwijaj sekcje artykułów.",
 	"mf-expand-sections-name": "Rozwiń wszystkie sekcje",
 	"mf-expand-sections-0-label": "Domyślnie zwijaj",

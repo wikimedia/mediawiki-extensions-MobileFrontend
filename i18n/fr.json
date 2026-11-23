@@ -62,6 +62,7 @@
 			"Wyz",
 			"Yann.fauche",
 			"Yasten",
+			"Zamburger",
 			"عبد الحق فارح"
 		]
 	},
@@ -100,7 +101,7 @@
 	"mobile-frontend-editor-continue": "Suivant",
 	"mobile-frontend-editor-disabled-anon": "Vous devez vous connecter pour modifier cette page.",
 	"mobile-frontend-editor-editing": "Modification",
-	"mobile-frontend-editor-editing-page": "<span><strong>Modification</strong> de<span> $1</span>",
+	"mobile-frontend-editor-editing-page": "<span><strong>Modification</strong> de $1</span>",
 	"mobile-frontend-editor-error": "Erreur, la modification n’a pas été publiée.",
 	"mobile-frontend-editor-error-conflict": "Erreur, un autre utilisateur a modifié cette page.",
 	"mobile-frontend-editor-error-loading": "Erreur, l’éditeur n’a pas pu être chargé.",
