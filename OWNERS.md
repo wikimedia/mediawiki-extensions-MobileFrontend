@@ -23,7 +23,6 @@ support for web manifests; PHP redirect classes for historical special pages.
   - /tests/phpunit/integration/MobileFrontendSkinHooksTest.php
   - /tests/phpunit/integration/WMFBaseDomainExtractorTest.php
   - /tests/phpunit/structure/OwnersStructureTest.php
-  - includes/ResourceLoaderModules/MobileConfig.php
   - /includes/specials/SpecialMobileDiff.php
   - /includes/specials/SpecialMobileHistory.php
   - /includes/specials/SpecialMobileLanguages.php
