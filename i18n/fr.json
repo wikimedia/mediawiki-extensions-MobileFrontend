@@ -62,7 +62,8 @@
 			"Wyz",
 			"Yann.fauche",
 			"Yasten",
-			"عبد الحق فارح"
+			"عبد الحق فارح",
+			"Zamburger"
 		]
 	},
 	"abusefilter-edit-builder-vars-user-mobile": "Si un utilisateur est ou non en cours de modification via l’interface mobile ($1)",
@@ -101,7 +102,7 @@
 	"mobile-frontend-editor-disabled": "Cette page est protégée pour empêcher le vandalisme. [$1 Afficher la source]",
 	"mobile-frontend-editor-disabled-anon": "Vous devez vous connecter pour modifier cette page.",
 	"mobile-frontend-editor-editing": "Modification",
-	"mobile-frontend-editor-editing-page": "<span><strong>Modification</strong> de<span> $1</span>",
+	"mobile-frontend-editor-editing-page": "<span><strong>Modification</strong> de $1</span>",
 	"mobile-frontend-editor-error": "Erreur, la modification n’a pas été publiée.",
 	"mobile-frontend-editor-error-conflict": "Erreur, un autre utilisateur a modifié cette page.",
 	"mobile-frontend-editor-error-loading": "Erreur, l’éditeur n’a pas pu être chargé.",
