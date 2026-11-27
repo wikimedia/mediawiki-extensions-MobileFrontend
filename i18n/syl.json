@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Amirhusenjihed",
 			"এম আবু সাঈদ",
 			"ꠢꠣꠍꠘ ꠞꠣꠎꠣ"
 		]
@@ -103,7 +104,7 @@
 	"mobile-frontend-settings-save": "ꠍꠦꠐꠤꠋꠍ ꠡꠋꠞꠇ꠆ꠇꠤꠔꠅ ꠅꠁꠍꠦ ⁕",
 	"mobile-frontend-terms-text": "ꠛꠦꠛꠀꠞꠧꠞ ꠘꠤꠅꠝ",
 	"mobile-frontend-view": "ꠝꠥꠛꠣꠁꠟꠅ ꠎꠦꠟꠣꠘ",
-	"mobile-frontend-view-desktop": "ꠒꠦꠇꠍ꠆ꠐꠙ",
+	"mobile-frontend-view-desktop": "ꠒꠦꠡ꠆ꠇꠐꠙ ꠜꠤꠃ",
 	"mobile-frontend-watchlist-cta-button-login": "ꠢꠣꠝꠣꠘꠤ",
 	"mobile-frontend-watchlist-purpose": "<strong>ꠄꠉꠥ ꠈꠤꠀꠟꠞꠣꠈꠣꠞ ꠟꠤꠡ꠆ꠐꠤ ꠀꠙꠘꠣꠞꠦ ꠙꠦꠁꠎꠣꠁꠘ ꠛꠥꠇꠝꠣꠞ꠆ꠇ ꠇꠞꠔꠦ ꠀꠞ ꠢꠤꠉꠥꠁꠘ꠆ꠔꠞ ꠙꠞꠤꠛꠞ꠆ꠔꠘ ꠐ꠆ꠞꠦꠇ ꠇꠞꠔꠦ ꠡꠣꠁꠎ꠆ꠎ ꠇꠞꠛꠅ ⁕</strong><br />ꠁꠐꠣ ꠖꠦꠈꠔꠦ ꠟꠉ ꠁꠘ ꠇꠞꠂꠘ ⁕",
 	"mobile-frontend-watchlist-signup-action": "<strong>ꠄꠉꠥ ꠈꠤꠀꠟꠞꠣꠈꠣꠞ ꠟꠤꠡ꠆ꠐꠤ ꠀꠙꠘꠣꠞꠦ ꠙꠦꠁꠎꠣꠁꠘ ꠛꠥꠇꠝꠣꠞ꠆ꠇ ꠇꠞꠔꠦ ꠀꠞ ꠢꠤꠉꠥꠁꠘ꠆ꠔꠞ ꠙꠞꠤꠛꠞ꠆ꠔꠘ ꠐ꠆ꠞꠦꠇ ꠇꠞꠔꠦ ꠡꠣꠁꠎ꠆ꠎ ꠇꠞꠛꠅ ⁕</strong><br />ꠅꠈꠘ ꠄꠉꠥ ꠡꠥꠞꠥ ꠇꠞꠔꠦ ꠍꠣꠁꠘ ꠀꠙ ꠇꠞꠂꠘ ⁕",
